@@ -4,7 +4,7 @@
 
 Row 0 = the primes 2, 3, 5, 7, ...; row r+1 = absolute differences of consecutive entries of row r.
 Gilbreath's conjecture: every row starts with 1. On the sublattice {0, 2} the rule |a - b| is XOR (in
-units of 2), i.e. Rule 90 = Pascal's triangle mod 2, and |1 - a| = 1 for a in {0, 2}: so once a row is
+units of 2), i.e. Pascal's triangle mod 2 in the difference orientation (new[i] = a[i] XOR a[i+1], elementary rule 102/60; a first draft said Rule 90), and |1 - a| = 1 for a in {0, 2}: so once a row is
 (1, then only 0s and 2s) the leading 1 persists forever. The only threat is a 'defect' (an entry >= 4)
 travelling leftward one cell per row through the 0/2 sea, shrinking by 2 each time it meets a 2.
 This script computes the triangle for the primes below P, and records per row: the leading entry, the

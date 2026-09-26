@@ -1,0 +1,191 @@
+collatz_oscillation_gilbreath_20260926_audit.py -- independent audit of collatz_oscillation_gilbreath_20260926.md (2026-09-26)
+====================================================================================================
+1. Proposition 1 (shell-visit reformulation) and 2. the probe table -- exact re-implementation
+   record orbit of 63728127 under T: 592 steps to 1, maximum 483308017730 = 2^38.81 (< 2^53: True)
+   definitions used (THM-4506 section 0): X = 2^L, k = L, dipper i <= M-k with y_i <= X and y_(i+s) 2^D < y_i for some 1 <= s <= k,
+   landing index = least such i+s; m(j) = #dippers landing at j; ND = eligible non-dippers; E = indices with y <= X and i > M-k.
+   Prop 1(a) test: m(j) == #{ i in [j-k, j-1] : i <= M-k, y_i <= X, 2^D y_j < y_i <= 2^(D+1) y_j, and y_t 2^D >= y_i for all i < t < j }
+   (a visit is an INDEX; "odd-separated" is automatic inside one dyadic shell, see below); runs = maximal runs of window indices in S_j
+   (the script's "shell runs", which counts non-dipper visits too), runs_dip = maximal runs among the dippers themselves.
+
+   L  D  segment                 tot   ND  Dip  land  mean   heaviest [(m, runs_script, runs_dip, shell idx, non-dip, j)]      ratio_script ratio_full  N(X) N(X2^-D) E
+  24  5  3n+1 record 63728127     150   97   53    22   2.41  (6,5,5,6,0,542) (6,4,4,6,0,475) (6,4,4,6,0,474)              1.39   1.32    174   132  24
+         Prop1a True LemmaS True LemmaO True halving-into-j True landing<X2^-D True float==exact True | landing points with runs_script<m: 5, >m: 6; non-dipper shell visits: 18
+         vs shells.out (150, 97, 53, 22, 2.41, '(6,5) (6,4) (6,4)', 1.39): MATCH  partition N(X)=E+ND+Dip True (E=24<=k)
+  24  5  5n+1 from 7               80   77    3     2   1.50  (2,2,2,2,0,60) (1,1,1,1,0,59)                                1.70   1.70     80    47   0
+         Prop1a True LemmaS True LemmaO True halving-into-j True landing<X2^-D True float==exact True | landing points with runs_script<m: 0, >m: 0; non-dipper shell visits: 0
+         vs shells.out (80, 77, 3, 2, 1.5, '(2,2) (1,1)', 1.7): MATCH  partition N(X)=E+ND+Dip True (E=0<=k)
+  24  5  3n+1 from 2^L-1          142   97   45    16   2.81  (7,5,4,8,1,218) (6,5,5,6,0,214) (5,3,3,5,0,286)              1.21   1.18    166   141  24
+         Prop1a True LemmaS True LemmaO True halving-into-j True landing<X2^-D True float==exact True | landing points with runs_script<m: 5, >m: 4; non-dipper shell visits: 8
+         vs shells.out (142, 97, 45, 16, 2.81, '(7,5) (6,5) (5,3)', 1.21): MATCH  partition N(X)=E+ND+Dip True (E=24<=k)
+  32  6  3n+1 record 63728127     304  195  109    33   3.30  (8,5,5,8,0,475) (7,5,5,7,0,476) (7,5,5,7,0,422)              1.91   1.76    336   191  32
+         Prop1a True LemmaS True LemmaO True halving-into-j True landing<X2^-D True float==exact True | landing points with runs_script<m: 11, >m: 11; non-dipper shell visits: 32
+         vs shells.out (304, 195, 109, 33, 3.3, '(8,5) (7,5) (7,5)', 1.91): MATCH  partition N(X)=E+ND+Dip True (E=32<=k)
+  32  6  5n+1 from 7              142  140    2     2   1.00  (1,1,1,1,0,60) (1,1,1,1,0,59)                                1.43   1.43    142    99   0
+         Prop1a True LemmaS True LemmaO True halving-into-j True landing<X2^-D True float==exact True | landing points with runs_script<m: 0, >m: 0; non-dipper shell visits: 0
+         vs shells.out (142, 140, 2, 2, 1.0, '(1,1) (1,1)', 1.43): MATCH  partition N(X)=E+ND+Dip True (E=0<=k)
+  32  6  3n+1 from 2^L-1          146   65   81    27   3.00  (8,7,7,8,0,156) (7,5,5,7,0,216) (7,5,5,7,0,155)              1.35   1.27    178   140  32
+         Prop1a True LemmaS True LemmaO True halving-into-j True landing<X2^-D True float==exact True | landing points with runs_script<m: 11, >m: 7; non-dipper shell visits: 22
+         vs shells.out (146, 65, 81, 27, 3.0, '(8,7) (7,5) (7,5)', 1.35): MATCH  partition N(X)=E+ND+Dip True (E=32<=k)
+  48  6  3n+1 record 63728127     545  370  175    34   5.15  (12,8,8,12,0,475) (12,8,8,12,0,383) (12,10,10,12,0,287)      1.00   1.00    593   593  48
+         Prop1a True LemmaS True LemmaO True halving-into-j True landing<X2^-D True float==exact True | landing points with runs_script<m: 16, >m: 9; non-dipper shell visits: 39
+         vs shells.out (545, 370, 175, 34, 5.15, '(12,8) (12,8) (12,10)', 1.0): MATCH  partition N(X)=E+ND+Dip True (E=48<=k)
+  48  6  5n+1 from 7              293  267   26    10   2.60  (6,6,6,6,0,269) (5,5,5,5,0,270) (4,4,4,4,0,271)              1.47   1.47    293   200   0
+         Prop1a True LemmaS True LemmaO True halving-into-j True landing<X2^-D True float==exact True | landing points with runs_script<m: 0, >m: 2; non-dipper shell visits: 3
+         vs shells.out (293, 267, 26, 10, 2.6, '(6,6) (5,5) (4,4)', 1.47): MATCH  partition N(X)=E+ND+Dip True (E=0<=k)
+  48  6  3n+1 from 2^L-1          165   39  126    40   3.15  (10,7,7,10,0,285) (10,8,8,10,0,267) (8,7,7,9,1,284)          1.67   1.45    213   147  48
+         Prop1a True LemmaS True LemmaO True halving-into-j True landing<X2^-D True float==exact True | landing points with runs_script<m: 9, >m: 18; non-dipper shell visits: 70
+         vs shells.out (165, 39, 126, 40, 3.15, '(10,7) (10,8) (8,7)', 1.67): MATCH  partition N(X)=E+ND+Dip True (E=48<=k)
+  64  7  3n+1 record 63728127     529  356  173    30   5.77  (15,10,10,15,0,287) (13,9,9,13,0,476) (12,8,8,12,0,286)      1.00   1.00    593   593  64
+         Prop1a True LemmaS True LemmaO True halving-into-j True landing<X2^-D True float==exact True | landing points with runs_script<m: 13, >m: 9; non-dipper shell visits: 50
+         vs shells.out (529, 356, 173, 30, 5.77, '(15,10) (13,9) (12,8)', 1.0): MATCH  partition N(X)=E+ND+Dip True (E=64<=k)
+  64  7  5n+1 from 7              530  460   70    20   3.50  (7,7,7,7,0,267) (6,6,6,6,0,275) (6,6,6,6,0,270)              1.09   1.09    530   487   0
+         Prop1a True LemmaS True LemmaO True halving-into-j True landing<X2^-D True float==exact True | landing points with runs_script<m: 0, >m: 3; non-dipper shell visits: 4
+         vs shells.out (530, 460, 70, 20, 3.5, '(7,7) (6,6) (6,6)', 1.09): MATCH  partition N(X)=E+ND+Dip True (E=0<=k)
+  64  7  3n+1 from 2^L-1          290   51  239    65   3.68  (18,12,12,18,0,433) (16,13,13,16,0,432) (14,10,10,14,0,307)   1.05   1.04    354   340  64
+         Prop1a True LemmaS True LemmaO True halving-into-j True landing<X2^-D True float==exact True | landing points with runs_script<m: 23, >m: 19; non-dipper shell visits: 69
+         vs shells.out (290, 51, 239, 65, 3.68, '(18,12) (16,13) (14,10)', 1.05): MATCH  partition N(X)=E+ND+Dip True (E=64<=k)
+
+   All Prop 1(a)/Lemma S/Lemma O/halving/landing/partition checks passed: True; table mismatches against shells.out: 0
+   Note on "visits": inside S_j = (2^D y_j, 2^(D+1) y_j] a halving leaves the shell (y/2 <= 2^D y_j) and two odd steps leave it
+   ((3/2)^2 > 2), so any two indices of the orbit in S_j are automatically separated by an odd letter and a maximal run in S_j has
+   at most 2 indices (THM-4506 Prop. C(a)). Hence m(j) = number of qualifying INDICES; the script's "shell runs" both undercount
+   (a run holding 2 dippers) and overcount (window visits to S_j cut off by an earlier drop are not dippers of j).
+   Regularity form: N(X) = #E + #Dip + #ND with #E <= k (0 for an infinite orbit). Averaged form => N(X) <= C L^mu N(X2^-D) + #ND + C L^2 + k;
+   the note's "+1" (an extra N(X 2^-D)) and the absorbed k only weaken it. Converse: #Dip = N(X) - #ND - #E <= (C L^mu + 1) N(X2^-D) + C L^2,
+   i.e. the averaged form with C -> C + 1. Both directions hold up to constants; the note's "both directions are the definitions" is right.
+   Ratio definition: the script's N(X)/N(X 2^-D) restricts BOTH counts to indices with a full window (i <= M-k); the unrestricted ratio
+   differs (e.g. 1.32 vs 1.39, 1.76 vs 1.91 on the record orbit at L = 24, 32). For the record orbit at L = 48, 64 every value is below
+   X 2^-D (max 2^38.8 < 2^42), so ratio = 1.00 is vacuous there, not evidence of regularity.
+====================================================================================================
+3. Gilbreath's difference triangle
+   (a) rule algebra, new[i] = |row[i] - row[i+1]|:
+       |a-b| = 2*(a/2 XOR b/2) on {0,2}: True; |1-a| = 1 for a in {0,2}: True
+       defect d >= 4 at p with 0/2 neighbours: new[p-1] = d - row[p-1] (left neighbour) in all 20000 trials: True;
+       ALSO new[p] = d - row[p+1] (a stationary copy, right neighbour) in all trials: True; two rows later cell p-1 is back in {0,2}: 20000/20000.
+       So "moves one cell to the left per row, shrinks by 2 when the cell to its left is 2" is exact for the leftmost FRONT only;
+       the seed also leaves a stationary copy that can re-emit fronts (a light cone with left speed 1 and right speed 0).
+   (b) primes below 200000: 17984 primes, 17983 rows computed in 2.7 s; leading entry == 1 in every row: True
+       row:           1       2       5      10      50     100     500    1000    5000   10000   17000
+       F(r):          3       8      25      59    2763   17884   17484   16984   12984    7984     984
+       max:          86      82      68      60      12       2       2       2       2       2       2
+       note quotes F = 3, 8, 25, 59 (rows 1, 2, 5, 10), 2763 (row 50), then F = row length: True
+       FIRST row with maximum entry <= 2: r* = 65 (note: "about row 100"); rows with an entry >= 4: 64 (rows 1..64); max over rows >= r*: 2;
+       entries >= 4 re-appearing after r*: 0 (closure of {1} x {0,2} under the rule makes this automatic).
+       frontier sequence r: F/value/cell-to-its-left for rows 1..64 (value = first entry >= 4; "left" = the 0/2 cell at F-1, which decides
+       the next row's front: it continues at F-1 with value - left iff value - left >= 4):
+         1:3/4/2  2:8/4/2  3:14/4/2  4:14/4/2  5:25/8/0  6:24/8/2  7:23/6/2  8:22/4/2
+         9:25/4/2  10:59/4/2  11:98/4/0  12:97/4/2  13:98/4/0  14:97/4/2  15:174/4/2  16:176/4/2
+         17:176/4/2  18:176/4/2  19:176/4/2  20:291/6/0  21:290/6/2  22:289/4/2  23:740/4/2  24:874/6/0
+         25:873/6/2  26:872/4/2  27:873/6/2  28:872/4/0  29:871/4/0  30:870/4/0  31:869/4/0  32:868/4/0
+         33:867/4/0  34:866/4/2  35:2180/4/0  36:2179/4/0  37:2178/4/0  38:2177/4/2  39:2771/10/2  40:2770/8/0
+         41:2769/8/0  42:2768/8/0  43:2767/8/2  44:2766/6/0  45:2765/6/2  46:2764/4/0  47:2763/4/2  48:2763/4/2
+         49:2763/4/2  50:2763/4/2  51:3366/4/2  52:4208/4/0  53:4207/4/0  54:4206/4/0  55:4205/4/0  56:4204/4/2
+         57:5943/4/2  58:5944/6/2  59:5943/4/0  60:5942/4/0  61:5941/4/0  62:5940/4/2  63:5940/4/2  64:5940/4/2
+       rows whose frontier equals the previous row's (a stationary copy re-emitting a dead front): 9; rows continuing a front (F-1): 35.
+       script-region zero-"triangle" histogram (rows 2..5999 of the kept block, columns < 160), script's detector re-run:
+         1:118983  2:59228  3:29388  4:14652  5:7326  6:3603  7:1774  8:867  9:421  10:214  11:110  12:57  13:32  14:13  15:2
+         note quotes 118983, 59228, 29388: True
+         plain maximal zero runs bordered by 2/1 and 2 (no triangle check): 1:118983  2:59228  3:29391  4:14657  5:7329  6:3604  7:1774  8:867  9:421  10:214  11:110  12:57  13:32  14:13  15:2
+         same, restricted to runs whose triangle fits inside the kept block (r0 + t - 1 < R): identical to the detector: True
+         => the "triangle check" is vacuous except at the block's bottom edge: a zero run bordered by 2s forces the shrinking rows below.
+         The detector counts a zero run in EVERY row, so a triangle of side t is counted once per row as sizes t, t-1, ..., 1.
+       full sea (all 17917 rows >= r*, all columns): maximal zero runs by length:
+         1:20064340  2:10031199  3:5016903  4:2508720  5:1254858  6:626883  7:312948  8:156013  9:78122  10:39115  11:19602  12:9808  13:4900  14:2473  15:1264  16:628  17:330  18:164  19:81  20:39  21:25  22:14  23:9  24:4
+         ratios count(t)/count(t+1): 2.000 1.999 2.000 1.999 2.002 2.003 2.006 1.997 1.997 1.995 1.999 2.002 1.981 1.956 2.013 1.903 2.012 2.025
+       full sea, TRUE triangle sides (tops: a maximal run of t+1 twos not touching the right end -> side t):
+         1:10031027  2:5013216  3:2507563  4:1253587  5:627809  6:313848  7:156896  8:77865  9:39000  10:19507  11:9791  12:4907  13:2425  14:1209  15:636  16:298  17:166  18:83  19:42  20:14  21:11  22:5  23:5  24:1
+         ratios: 2.001 1.999 2.000 1.997 2.000 2.000 2.015 1.997 1.999 1.992 1.995 2.024 2.006 1.901 2.134 1.795 2.000 1.976
+         largest side present: 26 (the note's "sizes 1..15" is the 160-column window; the geometric law is the substantive point).
+       defect samples as the script defines them (rows < 3000, F < 159): (row, size, F, travel) = [(1, 4, 3, 0), (2, 4, 8, 0), (3, 4, 14, 0), (4, 4, 14, 0), (5, 8, 25, 3), (6, 8, 24, 2), (7, 6, 23, 1), (8, 4, 22, 0), (9, 4, 25, 0), (10, 4, 59, 0), (11, 4, 98, 1), (12, 4, 97, 0), (13, 4, 98, 1), (14, 4, 97, 0)]
+         size 4: count 11, mean F 48.6, mean travel 0.18, max 1   (note: size 4 -> 11, 48.6, 0.18, 1; size 8 -> max 3)
+         size 6: count 1, mean F 23.0, mean travel 1.00, max 1   (note: size 4 -> 11, 48.6, 0.18, 1; size 8 -> max 3)
+         size 8: count 2, mean F 24.5, mean travel 2.50, max 3   (note: size 4 -> 11, 48.6, 0.18, 1; size 8 -> max 3)
+       de-duplicated (a sample is dropped when it is the previous row's frontier defect one column further left): [(1, 4, 3, 0), (2, 4, 8, 0), (3, 4, 14, 0), (4, 4, 14, 0), (5, 8, 25, 3), (9, 4, 25, 0), (10, 4, 59, 0), (11, 4, 98, 1), (13, 4, 98, 1)]
+         fresh fronts: 9, of size 4: 8 with travels [0, 0, 0, 0, 0, 0, 1, 1] (mean 0.25; random model: P(>= 1 row) = 1/2, mean 1.0); the size-8 front of row 5
+         (F = 25) accounts for the "size 8 x2", "size 6 x1" and one "size 4" sample (rows 5-8: 8, 8, 6, 4). Rows 3-4 (F = 14) and 11-14 (F = 98, 97,
+         98, 97) are one stationary copy re-emitting fronts. The "0.18 rows" statistic double counts; the qualitative claim (fronts die in
+         0-3 rows, the longest observed travel is 3 rows) is reproduced.
+   (c) single seed (one 2 in a zero row behind a leading 1, 64 rows = Pascal mod 2):
+         the script's detector reports sizes [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61]
+         true triangle sides (tops): [(1, 81), (3, 27), (7, 9), (15, 3), (31, 1), (63, 1)] -> only 2^k - 1: True
+         => the committed statistic cannot separate the Sierpinski case from the primes' rows (from a single seed it also shows every size,
+            in dyadic blocks with equal counts); the conclusion "sizes geometric, not 2^k-1" is nevertheless right for TRUE sides (tops above).
+       random 0/2 row (20000 cells, 3000 rows): runs 1:6936790  2:3466426  3:1733506  4:867164  5:433707  6:216576  7:108225  8:54324  9:27140  10:13622  11:6880  12:3452  13:1726  14:867  15:438  16:218
+         run ratios: 2.001 2.000 1.999 1.999 2.003 2.001 1.992 2.002 1.992 1.980 1.993 2.000 ; side (tops) ratios: 2.002 2.000 1.999 1.997 2.004 2.010 1.983 2.010 2.006 1.966 1.988 2.008
+         => every size occurs with geometric frequency (ratio 2), for runs and for true sides alike; the primes' sea matches this.
+   (d) random model (i.i.d. 0/2 sea, leading 1, one defect 2j at column F): P(leading 1 ever lost) by Monte Carlo (100000 trials),
+       P(single front reaches column 1 with value >= 4), the note's formula sum_(i<j) C(F,i) 2^-F, and the exact single-front value
+       sum_(t<=j-2) C(F-1,t) 2^-(F-1) (the front meets F-1 sea cells on its way from column F to column 1 and must keep 2j - 2t >= 4):
+         (j=2, F= 3): P(any) 0.25356  P(front) 0.25356  note 0.50000  exact-front 0.25000  unresolved 0
+         (j=2, F= 4): P(any) 0.12684  P(front) 0.12684  note 0.31250  exact-front 0.12500  unresolved 0
+         (j=2, F= 6): P(any) 0.03054  P(front) 0.03054  note 0.10938  exact-front 0.03125  unresolved 0
+         (j=2, F=10): P(any) 0.00200  P(front) 0.00200  note 0.01074  exact-front 0.00195  unresolved 0
+         (j=3, F= 4): P(any) 0.53111  P(front) 0.49972  note 0.68750  exact-front 0.50000  unresolved 0
+         (j=3, F= 6): P(any) 0.20273  P(front) 0.18880  note 0.34375  exact-front 0.18750  unresolved 0
+         (j=3, F=10): P(any) 0.02092  P(front) 0.01944  note 0.05469  exact-front 0.01953  unresolved 0
+         (j=4, F= 8): P(any) 0.24197  P(front) 0.22461  note 0.36328  exact-front 0.22656  unresolved 0
+         (j=4, F=12): P(any) 0.03384  P(front) 0.03200  note 0.07300  exact-front 0.03271  unresolved 0
+         (j=5, F=10): P(any) 0.26396  P(front) 0.25057  note 0.37695  exact-front 0.25391  unresolved 0
+         (j=5, F=16): P(any) 0.01860  P(front) 0.01742  note 0.03841  exact-front 0.01758  unresolved 0
+       => the note's tail is off by one in both j and F (it overstates the single-front probability by a factor 2-5 for small j), and the
+          stationary copy adds a few per cent (j >= 3) through re-emitted fronts. The threshold j/F -> 0 and the exponential-in-F decay are right.
+          Meeting a 2 always shrinks the front by exactly 2 while its left neighbour is in {0,2}; the leftmost defect never meets a 4 on its left
+          (everything left of the frontier is 0/2 by definition), so the "4 or larger" case only concerns collisions between two defects.
+====================================================================================================
+4. Base-6 locality (section 3 of the note)
+   carry table floor((3d + c)/6), d = 0..5, c = 0, 1, 2: [[0, 0, 0], [0, 0, 0], [1, 1, 1], [1, 1, 1], [2, 2, 2], [2, 2, 2]] -> independent of c: True
+   maximal carry: floor((15 + 2)/6) = 2, and with the +1 at digit 0: floor((3 x_0 + 1)/6) = [0, 1, 2] for x_0 = 1, 3, 5 versus floor(3 x_0/6) = [0, 1, 2]; 3 x_0 + 1 mod 6 = [4, 4, 4] (always 4)
+   explicit radius-1 rule digit_i(T x) = f(parity(x_0), x_(i-1), x_i, x_(i+1)) checked EXHAUSTIVELY for x < 6^7 (279935 values, digits 0..8): mismatches 0
+   random 40-digit x (20000 values, all 41 digits): mismatches 0
+   odd branch depends on x_(i-1): True, on x_(i+1): True; even branch (halving) reads x_(i+1) mod 2: True -> radius exactly 1 on both branches; the parity
+   bit x_0 mod 2 is the one global datum (6 is even, so x mod 2 = x_0 mod 2). The note's rule table (x_(i-1) = 0) reproduced: True
+   Citation: Cloney, Goles, Vichniac, "The 3x+1 problem: a quasi cellular automaton", Complex Systems 1 (1987) 349-360 -- verified online
+   (complex-systems.com abstract): it studies the iterates "in base two as a quasi cellular automaton". It is NOT a base-6 paper: the note
+   attributes the base-6 radius-1 statement to it, which is wrong (base 6 is where the map becomes a genuine local rule; the standard
+   references for base-6 locality are Korec 1992 (generalized Pascal triangles) and Kari 2012 (multiplication by 3/2 in base 6)).
+====================================================================================================
+5. Thresholds and THM-4487's curve (section 4 of the note)
+   E(gamma) = h(max(1/2, gamma/alpha)) on (0, 1]: minimum 0.949956 at gamma = 1.000, maximum 1.000000 (flat = 1 for gamma <= log_4 3 = 0.7925).
+   THM-4476's depth theta enters as rho = (1 - theta)/alpha: theta -> 0 gives rho = 0.6309, h = 0.949956 = h* = E(1); theta = 1 - alpha/2 = 0.2075 gives rho = 1/2, h = 1.
+   So "the theta -> 0 end" IS the "gamma = 1 end" (the same point, the Collatz end); the curve never leaves [h*, 1] = [0.95, 1] and has no
+   entropy-0 end. The Gilbreath tail sum_(i<j) C(F,i) = 2^(F h(j/F) + o(F)) with j/F -> 0 lives at the p -> 0 end of the binary entropy
+   FUNCTION h(p) (a lower tail below 1/2), which is not part of THM-4487's curve (an upper-tail count with p in [1/2, log_3 2]).
+   The sentence "Gilbreath is the theta -> 0 end of the entropy curve of THM-4487, Collatz the gamma = 1 end" is therefore wrong as written;
+   the honest statement is: both heuristics are one-sided binomial tails, at p -> 0 (Gilbreath) and at p = log_3 2 (Collatz), of h(p).
+   Gilbreath tail j=2 F= 10: sum_(i<j) C(F,i) 2^-F = 1.074e-02 =       11 x 2^-F  (polynomial factor ~ F^(j-1)/(j-1)!, not 1);  2^(-F(1-h(j/F))) = 1.455e-01
+   Gilbreath tail j=2 F= 25: sum_(i<j) C(F,i) 2^-F = 7.749e-07 =       26 x 2^-F  (polynomial factor ~ F^(j-1)/(j-1)!, not 1);  2^(-F(1-h(j/F))) = 3.169e-05
+   Gilbreath tail j=2 F= 50: sum_(i<j) C(F,i) 2^-F = 4.530e-14 =       51 x 2^-F  (polynomial factor ~ F^(j-1)/(j-1)!, not 1);  2^(-F(1-h(j/F))) = 3.939e-12
+   Gilbreath tail j=3 F= 25: sum_(i<j) C(F,i) 2^-F = 9.716e-06 =      326 x 2^-F  (polynomial factor ~ F^(j-1)/(j-1)!, not 1);  2^(-F(1-h(j/F))) = 2.871e-04
+   Gilbreath tail j=3 F= 50: sum_(i<j) C(F,i) 2^-F = 1.133e-12 =     1276 x 2^-F  (polynomial factor ~ F^(j-1)/(j-1)!, not 1);  2^(-F(1-h(j/F))) = 7.534e-11
+   Gilbreath tail j=4 F= 50: sum_(i<j) C(F,i) 2^-F = 1.854e-11 =    20876 x 2^-F  (polynomial factor ~ F^(j-1)/(j-1)!, not 1);  2^(-F(1-h(j/F))) = 1.004e-09
+   Gilbreath tail j=2 F=100: sum_(i<j) C(F,i) 2^-F = 7.967e-29 =      101 x 2^-F  (polynomial factor ~ F^(j-1)/(j-1)!, not 1);  2^(-F(1-h(j/F))) = 1.428e-26
+   Collatz: h* = 0.949956, W_k/2^k = Theta(2^(-(1-h*)k) k^(-3/2)) with 1 - h* = 0.050044 (THM-4495): "bad words die like 2^(-0.05k)" is right.
+====================================================================================================
+6. Text checks on the note and scripts
+   status line: **Status: REASSESSMENT with PROVED small statements (the shell-visit reformulation, the base-6 locality, the Gilbreath persistence mechanism), FINITE-EXACT probes (orbit segments; the Gilbreath triangle of the primes below `200000`), and SPECULATION marked. No Collatz claim, no Gilbreath claim. Session `collatz-oscillation-20260
+   "PROVED" occurrences: 2; "SPECULATION"/"Speculation" markers: 2; "FINITE-EXACT": 4; "No Collatz claim": 1
+   "about row 100" present: True (exact first all-0/2 row is 65); "Cloney, Goles, Vichniac 1987" present: True (a base-two "quasi" CA paper, see 4.);
+   "Odlyzko 1993" present: True (Iterated absolute values of differences of consecutive primes, Math. Comp. 61 (1993) 373-380; the persistence
+   argument is his and is cited); "theta -> 0" sentence present: True; "precise sense" claim present: True.
+   gilbreath script docstring says "Rule 90": True -- new[i] = row[i] XOR row[i+1] is Wolfram rule 102 (or 60), not 90 (a_(i-1) XOR a_(i+1)); cosmetic.
+   "the conjecture is trivially true for this range beyond that row": correct from row 65 on (closure of {1} x {0,2}); "from about row 100" understates it.
+   "So on actual segments the shell form holds with mu = 0 and a small constant": a finite observation on orbits that reach 1 (the landing note
+   says such orbits "illustrate but do not test the hypothesis for divergent orbits"); acceptable under the FINITE-EXACT label, not as evidence.
+   "mean multiplicity 2.4-5.8": the 3n+1 rows of shells.out span 2.29-5.77 and the 5n+1 rows 1.00-4.00.
+====================================================================================================
+SUMMARY
+  1(a) CONFIRMED with a precision GAP: m(j) equals the count of shell INDICES in the window whose first 2^D-drop is j (exact on every landing point);
+      "odd-separated visits" is automatic inside one shell, and the script's "shell runs" is a different count (both under- and over-counts).
+  1(b) CONFIRMED: averaged <=> shell <=> regularity, up to constants (the "+1" and the absorbed k are harmless; converse holds with C -> C+1).
+  2    CONFIRMED: every entry of shells.out reproduced exactly (0 mismatches); float dip test == exact on all cells; the ratio is restricted to
+      full-window indices (differs from the unrestricted N(X)/N(X2^-D)) and is vacuously 1.00 for the record orbit at L = 48, 64.
+  3(a) CONFIRMED for the leftmost front (left neighbour shrinks it); GAP: the seed also leaves a stationary copy (right speed 0) that re-emits fronts.
+  3(b) CONFIRMED numbers (F table, 118983/59228/29388, defect samples); ERROR of detail: the first all-0/2 row is 65, not "about 100";
+      GAP: the "triangle" histogram is a per-row zero-run histogram (check vacuous), and the defect statistic double counts one front per row.
+  3(c) GAP: the script's detector shows all sizes from a single seed too; the conclusion (geometric, not 2^k-1) holds for TRUE sides (tops).
+  3(d) GAP: the tail is off by one in j and in F (factor 2-5 for small j) and ignores re-emitted fronts (a few per cent); threshold -> 0 right.
+  4    CONFIRMED (explicit rule, exhaustive to 6^7, 0 mismatches); ERROR in attribution: Cloney-Goles-Vichniac 1987 is a base-two quasi-CA paper.
+  5    ERROR: theta -> 0 is the gamma = 1 end of THM-4487's curve, which lives in [h*, 1]; the entropy-0 end is not on that curve.
+  6    Status line honest (PROVED = classical restatements, cited); "trivially true beyond that row" CONFIRMED from row 65; speculation marked.
+  runtime 12.1 s

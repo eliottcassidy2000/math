@@ -40,6 +40,13 @@ Format per entry:
 Proofs, exact witnesses and source-preserving alternatives are in the
 [forest board](../05-knowledge/results/forest_20260926_board.md) and
 [Gilbreath audit](../05-knowledge/results/forest_20260926_gilbreath.md).
+## 2026-09-26 Gilbreath/oscillation note (opus S9): a curve endpoint misplaced, a citation attributed by title
+
+- **What was written.** That Gilbreath's defect-survival tail is "the `theta -> 0` end of the entropy curve of THM-4487" while Collatz is its `gamma = 1` end.
+- **Why it was wrong.** THM-4487's curve `E(gamma) = h(max(1/2, gamma/log_2 3))` takes values in `[h*, 1]`, and THM-4476's `theta` enters as `rho = (1 - theta)/log_2 3`, so `theta -> 0` *is* `gamma = 1`: both names denote the Collatz end. Gilbreath's tail (density `t/F -> 0`, entropy `-> 0`) lies at the `p -> 0` end of the binary entropy function itself, which the curve never visits. The honest statement is "the same function `h(p)` at densities `0` and `0.63`", not two ends of one curve.
+- **Second slip.** The base-6 radius-1 form of the Collatz automaton was attributed to Cloney-Goles-Vichniac (1987) from the title; that paper works in base two ("quasi cellular automaton"). Also: defect samples counted one surviving front per row (mean travel `0.18` was `8` fresh fronts of size `4` with travels `0,0,0,0,0,0,1,1`), the survival tail was off by one in both parameters, and a zero-run histogram was called a triangle-size histogram.
+- **Third slip (caught by the forest lane, entry above).** "A reduction of Collatz to Gilbreath would have to encode a non-additive automaton's behaviour into an additive one's edge, which additivity forbids" is false: over `F_2` the Pascal edge transform is self-inverse, so every binary trace is the edge of some (infinite) seed, and the positive binomial transform does the same for nonnegative traces. The true obstruction is seed arithmetic and resource control. Corrected in the note and in the S9 close-out letter before publication.
+- **Mechanism to remember.** Name the endpoint of a curve by the parameter that defines the curve, and check where a second parameter maps before identifying ends. Do not cite a paper for a statement it does not contain because its title fits; when sampling a moving object per row, de-duplicate before averaging.
 
 ## 2026-09-26 crossings note (opus S8): Benford in base 2 is not Benford in base 10, and a reversed reciprocal-sum inequality
 
