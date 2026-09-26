@@ -1,6 +1,6 @@
 # The 223 recovery: private certificates and shared Boolean ownership
 
-Status: **DRAFT PROOF, exact computation reproduced**. This note proves a
+Status: **PROVED, root-audited, exact computation reproduced**. This note proves a
 finite and asymptotic compatibility statement, not Collatz, an LRC result, or
 a lower bound comparing global and private edit prices.
 

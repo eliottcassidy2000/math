@@ -11,4 +11,3 @@
 {"feasible_six_bit_assignments": 6, "affine_packets_checked": 1000, "matching_edges_at_100000": 24999, "disjoint_extra_edges_at_100000": 1852, "proved_lower_density": "29/108"}
 {"global_P4_surgery": "unflip only pair23 in free-zero P2 member", "finite_sources_needed_for_global_audit": [3, 46], "only_delayed_path": [30, 45, 68, 34, 17], "extra_cut_hostile_bits": {"17": 0, "23": 0}}
 ALL CHECKS PASSED
-NORMAL AND OPTIMIZED OUTPUTS IDENTICAL

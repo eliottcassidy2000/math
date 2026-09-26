@@ -1,6 +1,6 @@
 # A charge that counts actual flipped pairs: a strict two-step density bound
 
-Status: **DRAFT PROOF + FINITE-EXACT independent checks**. This concerns
+Status: **PROVED, root-audited + FINITE-EXACT independent checks; THM-4491**. This concerns
 global two-step descent in the pairing family. It does not prove Collatz,
 an asymptotic optimum for two-step pairings, or a bound for longer horizons.
 

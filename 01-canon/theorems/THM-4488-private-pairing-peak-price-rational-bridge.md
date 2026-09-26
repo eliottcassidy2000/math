@@ -1,6 +1,6 @@
 ---
 id: THM-4488
-title: "Private pairing price is polynomially comparable to peak-discounted bad paths; rational bridges give the sharp q=3 constant with O(log L) error"
+title: "Private q=3 pairing price is polynomially peak-discounted; rational connectors give sharp O(log L) peak asymptotics for every fixed odd multiplier"
 status: "PROVED + INDEPENDENTLY AUDITED; FINITE-EXACT controls and separately labelled VERIFIED numerical probes"
 source: "crossroads223-20260926; root sine/bridge proofs, independent flow and automata audits"
 depends_on:
@@ -9,6 +9,7 @@ depends_on:
 proofs:
   - 05-knowledge/results/crossroads223_20260926_robin.md
   - 05-knowledge/results/crossroads223_20260926_bridge.md
+  - 05-knowledge/results/crossroads223_20260926_general_peak.md
 audit: 05-knowledge/results/crossroads223_20260926_bridge_audit.md
 scripts:
   - 04-computation/experiments/crossroads223_20260926_robin.py
@@ -100,8 +101,42 @@ needed for this q=3 refinement of THM-4480.
 - A trace bridge controls paths, not the simultaneous ownership of flips.
   No globally consistent delta_L upper bound follows.
 - For q>=5 the endpoint tilt has the opposite sign. The closed-bridge
-  argument above alone does not give the sharp general-q constant.
+  argument above alone does not give the sharp general-q constant;
+  the additional connector theorem below supplies it.
 - All exact scripts pass normally and with `-O`. Root checks include
   60,648 transfer minors and direct enumeration through L=14; an independent
   audit exhausts 147 binary TP2 matrices and 108 bridge universes.
   Transcendental numerical probes are not presented as exact proof.
+
+## Every fixed odd q: endpoint connectors and sharp peak asymptotics
+
+**PROVED + independently audited by root and flow.** Fix odd q>=3. Put
+c_q=log_q2, d_q=1-c_q, lambda_q=d_q/c_q,
+D_q=2^(-(1-H_2(c_q))), z_q=q/max(1,lambda_q), and
+
+    kappa_q=(3/2)(pi^2*c_q*d_q)^(1/3)(log z_q)^(2/3).
+
+Then the q-version of the peak density and the arbitrary-edit price obey
+
+    log rho_peak,q(L)=L log D_q-kappa_q L^(1/3)+O_q(log L),
+    log epsilon_L(q)=L log D_q-kappa_q L^(1/3)+O_q(log L).
+
+The [complete general-q proof](../../05-knowledge/results/crossroads223_20260926_general_peak.md)
+uses a hard-wall sine supersolution for the upper bound, valid for any
+c in (0,1), and [the audited connector lemma, section 5](../../05-knowledge/results/crossroads223_20260926_bridge_audit.md)
+for the lower bound. A connector of length K of order M^2/log M and
+width of order M changes the mean by O(M/K). Its exact relative-entropy
+cost is exp(-O_q(M^2/K)), a reciprocal polynomial. Two guarded connectors
+around a long trace bridge preserve all phases and end near the top when
+lambda_q>1. Thus the terminal reward lambda_q^M is retained. Optimization
+at M of order L^(1/3) proves the claimed constant and logarithmic error.
+
+This removes Mogul'skii from this particular two-valued-walk calculation
+for all fixed odd multipliers. Constants are not uniform when q varies
+with L. It does not extend the private pairing assertion to q>=5, and
+has no convergence or divergence conclusion for the unmodified map.
+
+Independent incoming work at `f9b97e9c5` supplies a different q=3 proof,
+[procgen Robin note](../../05-knowledge/results/procgen_robin_20260926_robin_inequality.md),
+with shift two and factor (m+2)^17. That result and the present shift-five
+bound are complementary estimates; neither proves uniform Conjecture R.

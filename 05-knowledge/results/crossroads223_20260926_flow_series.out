@@ -1,0 +1,22 @@
+{"depth": 1, "residues": 2, "exact_toll_sum": 1, "partial_decimal": 0.1111111111111111}
+{"depth": 2, "residues": 4, "exact_toll_sum": 1, "partial_decimal": 0.14814814814814814}
+{"depth": 3, "residues": 8, "exact_toll_sum": 4, "partial_decimal": 0.19753086419753085}
+{"depth": 4, "residues": 16, "exact_toll_sum": 7, "partial_decimal": 0.22633744855967078}
+{"depth": 5, "residues": 32, "exact_toll_sum": 16, "partial_decimal": 0.24828532235939643}
+{"depth": 6, "residues": 64, "exact_toll_sum": 31, "partial_decimal": 0.26245999085505256}
+{"depth": 7, "residues": 128, "exact_toll_sum": 62, "partial_decimal": 0.2719097698521567}
+{"depth": 8, "residues": 256, "exact_toll_sum": 125, "partial_decimal": 0.27826042778031806}
+{"depth": 9, "residues": 512, "exact_toll_sum": 242, "partial_decimal": 0.2823587190299582}
+{"depth": 10, "residues": 1024, "exact_toll_sum": 504, "partial_decimal": 0.28520381378177445}
+{"depth": 11, "residues": 2048, "exact_toll_sum": 985, "partial_decimal": 0.287057265058586}
+{"depth": 12, "residues": 4096, "exact_toll_sum": 2014, "partial_decimal": 0.28832049716400004}
+{"depth": 13, "residues": 8192, "exact_toll_sum": 4004, "partial_decimal": 0.2891576340971476}
+{"depth": 14, "residues": 16384, "exact_toll_sum": 8106, "partial_decimal": 0.28972255517441153}
+{"depth": 15, "residues": 32768, "exact_toll_sum": 16183, "partial_decimal": 0.29009849553930017}
+{"depth": 16, "residues": 65536, "exact_toll_sum": 32437, "partial_decimal": 0.2903496722394566}
+{"depth": 17, "residues": 131072, "exact_toll_sum": 65039, "partial_decimal": 0.29051754926673484}
+{"depth": 18, "residues": 262144, "exact_toll_sum": 129976, "partial_decimal": 0.2906293795249774}
+{"depth": 19, "residues": 524288, "exact_toll_sum": 260488, "partial_decimal": 0.2907040867537712}
+{"depth": 20, "residues": 1048576, "exact_toll_sum": 521302, "partial_decimal": 0.2907539227382626}
+{"independent_full_tree_cases": 254, "partial_exact": "3041388727/10460353203", "tail_bound_exact": "48234496/10460353203", "limit_interval_exact": ["3041388727/10460353203", "3089623223/10460353203"], "limit_interval_decimal": [0.2907539227382626, 0.29536509552219564]}
+ALL CHECKS PASSED

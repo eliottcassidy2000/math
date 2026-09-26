@@ -1,9 +1,9 @@
 # Sine supersolutions for the reflected Collatz barrier
 
-**Status: PROVED + INDEPENDENTLY AUDITED by the flow and automata lanes.** No canon ID reserved.
+**Status: PROVED + INDEPENDENTLY AUDITED by the flow and automata lanes; THM-4488.**
 The proposed finite bound is elementary apart from the classical sine
-product. The matching private-price constant uses the inherited CITED
-Mogul'skii lower bound, through THM-4480. Collatz and the globally
+product. The companion rational-bridge theorem now supplies an elementary
+matching lower bound and a polynomial private-price comparison. Collatz and the globally
 consistent pairing-price question remain OPEN.
 
 ## 1. Inheritance and the actual bridge
@@ -132,15 +132,21 @@ then give
 
     log pi_L = L log D-kappa L^(1/3)+o(L^(1/3)).        (11)
 
-Only this matching lower bound invokes Mogul'skii, in the form of
+The initial derivation of this matching lower bound invoked Mogul'skii, in the form of
 [Gantert--Hu--Shi 2011, Lemma 2.1](https://www.numdam.org/item/10.1214/10-AIHP362.pdf),
 already used and audited in THM-4480. The present finite upper bound
-does not require a uniform Robin/Dirichlet ratio.
+does not require a uniform Robin/Dirichlet ratio. The stronger
+[rational-bridge theorem](crossroads223_20260926_bridge.md) now proves
+the matching lower bound with O(log L) error and the polynomial comparison,
+without this cited input. Its
+[endpoint-connector extension](crossroads223_20260926_general_peak.md)
+also gives the sharp peak asymptotic for every fixed odd q>=3.
 
 ## 5. Boundaries and decisive tests
 
 - (10) alone does not prove pi_L<=poly(L)rho_L^peak: the inherited
-  asymptotic lower bound has an o(L^(1/3)) remainder, not O(log L).
+  asymptotic lower bound had an o(L^(1/3)) remainder, not O(log L).
+  The companion bridge supplies the missing stronger bound.
 - No inference about one globally consistent pairing follows from private
   certificates. The companion flow lane finds explicit incompatibilities.
 - This does not prove HYP-9142's uniform K=1 Robin comparison.

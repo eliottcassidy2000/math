@@ -3,7 +3,9 @@ id: THM-4480
 title: "The price of fixed-horizon provability is the peak-discounted undecided density: rho^peak_L/M*_L <= eps_L(q) <= rho^peak_L for every odd q, so the exponent is 1 - H(log_q 2) for every multiplier (0.013911 for 5n+1, whose undecided density does not tend to 0), and for q = 3 the price is rho_L exp(-Theta(L^(1/3))), answering THM-4478's P1 negatively for arbitrary edits"
 status: >
   PROVED + INDEPENDENTLY AUDITED (Theorems 1-3); PROVED modulo one CITED
-  theorem (Theorem 4, Mogul'skii 1974); FINITE-EXACT; EMPIRICAL (pairing).
+  theorem (original Theorem 4 proof, Mogul'skii 1974); FINITE-EXACT;
+  EMPIRICAL (pairing). THM-4488 now supplies an elementary sharper
+  O_q(log L) proof of the peak asymptotic for every fixed odd q>=3.
   Let q be odd, T(n) = n/2 or (qn+1)/2, and c = log_q 2. For a parity word
   u put w_j(u) = q^(e_j)/2^j. Bad_L is the set of words with w_j > 1 for
   1 <= j <= L, and rho_L = |Bad_L|/2^L. Let eps_L(q) be the least density of
@@ -36,6 +38,11 @@ status: >
   independently by the crossroads223 bridge note and by the robin lane
   (procgen_robin_20260926_robin_inequality.md, Corollary 5; sine sub- and
   supersolutions of the letter walk in a strip).
+  FURTHER UPDATE: THM-4488's guarded rational-bridge connectors preserve
+  the top-endpoint tilt when q>=5 and give the same O_q(log L) remainder
+  for every fixed odd q>=3, and hence for eps_L(q). Complete proof:
+  crossroads223_20260926_general_peak.md. The original cited proof is
+  retained as lineage; the private pairing result still concerns q=3 only.
   EMPIRICAL: in the pairing family a partner-isolated peak catch tracks
   2 rho^peak within a factor 1.2-1.5 for L = 8..32, and every n <= 10^6
   descends. Whether delta_L (pairing) <= poly(L) rho^peak_L is OPEN.

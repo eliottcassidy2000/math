@@ -70,9 +70,17 @@ def main():
         witness = None
         p_bound = 96 ** (n * (n - 1) // 2)
         a_bound = factorial_inverse_strict(p_bound)
+        critical_cutoff = (3 ** n).bit_length() + 1
+        radius = n * (n - 1) // 2
+        p_critical = 2 ** ((n - 1) * critical_cutoff - radius) * 3 ** radius
+        budget_counts = {"2N": 0, "critical": 0}
         for total in range(n, 3 * n + 1):
             for word in compositions(total, n):
                 count += 1
+                if total <= 2 * n:
+                    budget_counts["2N"] += 1
+                if total <= critical_cutoff:
+                    budget_counts["critical"] += 1
                 carries = {}
                 for i in range(n):
                     for j in range(i + 1, n):
@@ -99,6 +107,10 @@ def main():
                     assert weighted_halvings <= (n - 1) * 3 * n
                     assert weighted_distances <= n * (n - 1) // 2
                     assert product < p_bound
+                    if total <= 2 * n:
+                        assert product < 24 ** radius
+                    if total <= critical_cutoff:
+                        assert product < p_critical
                     assert factorial(len(factors)) <= product
                     assert len(factors) <= a_bound
                     assert not factors.intersection({2, 3})
@@ -106,8 +118,11 @@ def main():
                         largest_bank = len(factors)
                         witness = word, i, sorted(factors)
         assert count == comb(3 * n, n)
+        assert budget_counts["2N"] == comb(2 * n, n)
+        assert budget_counts["critical"] == comb(critical_cutoff, n)
         print("N", n, "WORDS", count, "MAX_INCIDENT_CARRY_PRIMES", largest_bank,
               "FACTORIAL_BOUND", a_bound, "WITNESS", witness)
+        print("CONDITIONED_BUDGETS", budget_counts, "CRITICAL_CUTOFF", critical_cutoff)
 
     print("EXACT TERRAS TAIL UNIVERSE: all odd residues modulo2^(L+1),N=1..5,L=2N,3N")
     for n in range(1, 6):
@@ -136,6 +151,16 @@ def main():
     print("exception_power_beta", (5 + alpha) / 8)
     print("largest_constant_from_this_bound", 1 / sqrt(8 * (5 + alpha)))
     print("tail_ratio", "27/32", "tail_rate_bits", 5 - 3 * alpha)
+    print("conditioned_power_2N", (3 + alpha) / 8)
+    print("conditioned_power_critical_cutoff", (3 * alpha - 1) / 8)
+    print("UNBOUNDED-HEIGHT NONINJECTIVE HOSTILE: n_a=(4^a-1)/3 ->1->1")
+    for a in [2, 3, 4, 8, 16, 64, 256]:
+        source = (4 ** a - 1) // 3
+        assert 3 * source + 1 == 4 ** a
+        assert sum_valuations(source, 3) == 2 * a + 4
+        print("a", a, "SOURCE_BITS", source.bit_length(),
+              "FIRST3_VALUATION_SUM", 2 * a + 4,
+              "DUPLICATE_PAIR", "(-3,4)")
     print("SCOPE: density one uniformly over source intervals; no single-orbit conclusion.")
 
 

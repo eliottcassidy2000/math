@@ -332,6 +332,45 @@ condition therefore does not remove the leading no-descent entropy
 count. This is a comparison of explicitly different predicates, not
 a new descent theorem.
 
+**Sharper asymptotic cutoff.** Put K_N=ceil(alpha N)+1. The same reasoning
+gives an exact alternative to (11). Define
+
+```
+P_(N,K)=2^((N-1)K-N(N-1)/2) 3^(N(N-1)/2),
+a_(N,K)=max{a : a!<P_(N,K)},
+E_(N,K)=binom(K,N) binom(N,2) 2^(16a_(N,K)+40).
+```
+
+For every N>=2, the rank-deficient sources in D(X) number at most
+
+```
+2^(K_N+1)+E_(N,K_N).                                   (13)
+```
+
+Indeed discard n<2^(K_N+1). The no-descent window includes time K_N.
+If S_N>K_N, the first K_N half-steps contain at most N odd letters,
+so their multiplier is at most 3^N/2^K_N<=1/2. Their carry is less
+than (3/2)^K_N<=2^K_N<=n/2. This forces strict descent, a contradiction.
+Thus S_N<=K_N. The same incident-bank proof, with that exact integer
+budget, gives the displayed P and E.
+
+Since K_N=alpha N+O(1),
+
+```
+log_2 P_(N,K_N)=((3alpha-1)/2)N^2+O(N).
+```
+
+At the growing horizon (9), (13) is consequently
+
+```
+X^((3log_2 3-1)/8+o(1)) = X^(0.46936093770...+o(1)).     (14)
+```
+
+Both (13) and (14) are proved without the lower bound of THM-4487.
+Only the interpretation as a vanishing fraction of its entropy-sized
+no-descent set uses that comparison. The script computes K_N exactly
+as `bit_length(3^N)+1`, rather than rounding a floating-point logarithm.
+
 ## 5. Checks, interpretation, and stopping boundary
 
 **FINITE-EXACT controls.** The script enumerates all 3,597 positive
@@ -366,6 +405,22 @@ convergent Collatz dynamics from such hostile maps.
 The remaining OPEN target is a uniform chronological obstruction to
 an actual dependent trajectory, or an additional consequence of full
 rank that controls integer height. Neither is supplied by (10).
+
+An explicit hostile shows why the all-words height quantifier cannot
+be silently strengthened. For every integer a>=2,
+
+```
+n_a=(4^a-1)/3 -> 1 -> 1
+```
+
+is an actual positive odd trajectory. Its first three transition pairs
+include two copies of (-3,4), so their rank is deficient at arbitrarily
+large starting heights. The first valuation 2a grows, and the first
+three valuations sum to 2a+4; these sources eventually enter the tail
+discarded in (7). This is not a counterexample to injective-orbit G2.
+It is a sharp warning that fixed-word finiteness and statistical
+independence cannot be replaced by independence for every sufficiently
+large start across all words.
 
 For literature context, fixed-translates multiplicative independence
 already has a developed theory: Dubickas--Sha, *Multiplicative

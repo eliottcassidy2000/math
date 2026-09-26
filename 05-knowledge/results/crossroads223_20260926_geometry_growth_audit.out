@@ -1,0 +1,5 @@
+FINITE-EXACT cylinders 594 realizations 1782 pair identities 9711 collision controls 19
+FINITE-EXACT Terras normalizations 4; translated interval gates 36
+FINITE-EXACT no-dip sources below65536 2903 eligible cutoff gates 18686
+Hostile n=1,N=5 violates cutoff without the source-size condition
+PASS: local banks, factorial inverse, odd normalization, uniformity, no-dip direction

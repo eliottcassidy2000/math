@@ -3,7 +3,8 @@
 **Status: PROVED + INDEPENDENTLY AUDITED by the flow and automata lanes.** This strengthens
 the companion [Robin estimate](crossroads223_20260926_robin.md). Collatz,
 the globally consistent pairing price, and the uniform one-unit Robin
-comparison remain OPEN. No canon ID is yet reserved.
+comparison remain OPEN. Canon: THM-4488,
+`01-canon/theorems/THM-4488-private-pairing-peak-price-rational-bridge.md`.
 
 ## 1. Objects and theorem
 
@@ -174,8 +175,11 @@ phase-return condition pL in Z.
 For q>=5, c=log_q2<1/2 and the tilted endpoint weight exceeds one.
 The trace bridge ends near the bottom and does not supply the top-end
 reward needed for the inherited sharp general-q constant. A bottom-to-top
-killed-kernel lower bound would be a new requirement. The present sharp
-statement is restricted to q=3.
+killed-kernel lower bound is an additional requirement. The present
+closed-bridge proof is restricted to q=3. The subsequent
+[polynomial-cost connector construction](crossroads223_20260926_general_peak.md)
+supplies that requirement and proves the general-q peak asymptotic;
+the private pairing comparison remains restricted to q=3.
 
 Classical identity: [DLMF 4.22.1](https://dlmf.nist.gov/4.22.E1).
 The remaining matrix and path arguments are proved above. No literature

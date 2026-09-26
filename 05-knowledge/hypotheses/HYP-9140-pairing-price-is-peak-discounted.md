@@ -4,7 +4,7 @@ title: "The pairing family also catches at the peak: delta_L = rho^peak_L L^(O(1
 status: >
   OPEN HYPOTHESIS for the consistent price delta_L; EMPIRICAL support for L = 8..64.
   UPDATE 2026-09-26 (later): the PRIVATE version, pi_L <= poly(L) rho^peak_L,
-  is PROVED independently by crossroads223 (bridge note, THM-4488 reserved)
+  is PROVED independently by crossroads223 (bridge note, THM-4488 promoted)
   and by our robin lane (Corollary 4). Our proof rests on the pairpeak
   note's Theorems B-C. The consistent price delta_L (interference between
   sources) remains OPEN.

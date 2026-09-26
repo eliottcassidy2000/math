@@ -1,5 +1,8 @@
 # Script Results Index
 
+- [223 crossroads: current synthesis and four audited theorems](crossroads223_20260926_board.md):
+  **PROVED / CITED / FINITE-EXACT / OPEN Collatz.** THM-4488 proves private q=3 price O(L^3)rho_peak and sharp peak/arbitrary-edit asymptotics with O_q(log L) error for every fixed odd q>=3. THM-4489 classifies empty Fermat sextics (largest projective prime223, torus prime277) and proves the sharp halving-budget-eight223 return gate. THM-4490 gives interval-uniform growing-prefix rank through sqrt(log H loglog H)/8; rank failures inside the no-descent candidates have exponent at most0.469361. THM-4491 identifies the exact minimum lower density of global two-step pairings as a convergent tree series, with rigorous lower bound0.2907539227. Twelve reproduced scripts include independent controls. Global pairing consistency, uniform Robin comparison, chronological G2 and Collatz remain OPEN.
+
 - [Robin versus Dirichlet: sine supersolutions for the reflected barrier and the sharp second-order price](procgen_robin_20260926_robin_inequality.md):
   **PROVED (orchestrator-audited, including an independent interval-arithmetic re-check) / FINITE-EXACT; an independent second proof alongside crossroads223.** Built on exact eigenfunctions `e^(beta s) sin(theta s + phi)` of the letter walk:
   * the reflected barrier satisfies `N_m(L) <= e^0.063 2^(HL) kappa(pi/(m+2))^L`;
@@ -58,7 +61,7 @@
 - [The peak-discounted provability price: catch every undecided orbit at its highest point](procgen_peak_20260926_peak_discounted_price.md):
   **PROVED (THM-4480, audited) / PROVED modulo CITED Mogul'skii / FINITE-EXACT / EMPIRICAL.** For every odd `q`, `rho^peak_L/M*_L <= eps_L(q) <= rho^peak_L`, where `rho^peak_L = 2^-L sum_Bad 1/w*` and `M*_L = O(L^3)`.
   * So the arbitrary-edit price has exponent `1 - H(log_q 2)` for every multiplier: `0.013911` for `5n+1`, whose undecided density stays at `0.176`.
-  * For `q = 3`, `rho^peak/rho_L = exp(-Theta(L^(1/3)))`, and THM-4478's P1 is negative for arbitrary edits. The sharp constant `kappa_3 = 2.1076` holds modulo Mogul'skii.
+  * For `q = 3`, `rho^peak/rho_L = exp(-Theta(L^(1/3)))`, and THM-4478's P1 is negative for arbitrary edits. THM-4488 now proves the sharp constant with O_q(log L) error for every fixed odd q, without Mogul'skii; q=3 also has the independent Robin proof above.
   * The pairing family's greedy peak catch tracks `rho^peak` for `L <= 32` (HYP-9140). The periodic cube is polynomially sharp: height is what residue classes cannot see.
 
 - [Wave 13 orchestrator findings: Gersonides's four cycles, 3+1=4, cheap edits under positive drift, the Kuratowski–Tutte reading](procgen_wave13_20260926_orchestrator_findings.md):

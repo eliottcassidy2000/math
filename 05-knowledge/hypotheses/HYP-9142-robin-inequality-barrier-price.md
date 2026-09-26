@@ -5,7 +5,7 @@ status: >
   PROVED UP TO A POLYNOMIAL FACTOR (2026-09-26), independently by two
   sessions; OPEN with a constant K_0.
   (a) codex crossroads223 (crossroads223_20260926_robin.md and _bridge.md;
-  THM-4488 reserved): N_m(L) <= 4e(m+3) L A_(m+5)(L).
+  THM-4488, promoted): N_m(L) <= 4e(m+3) L A_(m+5)(L).
   (b) collatz-procgen robin lane (procgen_robin_20260926_robin_inequality.md;
   orchestrator-audited, including an independent interval-arithmetic
   re-check): N_m(L) <= (m+2)^17 A_(m+2)(L). This is Theorem 1 (a sine
@@ -35,5 +35,10 @@ depends_on:
 * `N_m(L)` counts the survivors of the reflected barrier `Pi^(m)`. This construction flips every odd point of its own orbit at slope level `>= m - 1`, so the top boundary is partially absorbing: in the tilted measure a zone visit has weight `2(1-c) = 0.738`.
 
 **Conjecture.** `sup_(L >= 1, m >= 1) N_m(L)/A_(m+1)(L) < infinity`.
+
+**Current proved scope.** [THM-4488](../../01-canon/theorems/THM-4488-private-pairing-peak-price-rational-bridge.md)
+gives the explicit private bound O(L^3)rho_peak and, with additional
+endpoint connectors, sharp peak asymptotics for every fixed odd multiplier.
+The constant one-unit comparison stated above remains OPEN.
 
 **Reading.** A reflected (Robin-type) top boundary costs at most a constant compared with a hard wall one unit higher. This is a discrete boundary-value comparison for a random walk in a strip, of the kind whose continuum analogue compares Robin and Dirichlet principal eigenvalues. It isolates the analytic core of the private pairing price. The consistent price `delta_L` (HYP-9140) additionally needs interference control.

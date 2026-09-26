@@ -1,0 +1,290 @@
+{
+  "status": "REPRODUCTION VERIFIED; mathematical scopes remain those of the proof notes",
+  "generated_utc": "2026-09-26T15:17:43.812528+00:00",
+  "python": "3.13.14",
+  "hash_basis": "raw UTF-8 LF bytes",
+  "cases": [
+    {
+      "source": "04-computation/experiments/crossroads223_20260926_automata.py",
+      "args": [],
+      "output": "05-knowledge/results/crossroads223_20260926_automata.out",
+      "normal_equals_optimized": true
+    },
+    {
+      "source": "04-computation/experiments/crossroads223_20260926_boundary_audit.py",
+      "args": [],
+      "output": "05-knowledge/results/crossroads223_20260926_boundary_audit.out",
+      "normal_equals_optimized": true
+    },
+    {
+      "source": "04-computation/experiments/crossroads223_20260926_bridge.py",
+      "args": [],
+      "output": "05-knowledge/results/crossroads223_20260926_bridge.out",
+      "normal_equals_optimized": true
+    },
+    {
+      "source": "04-computation/experiments/crossroads223_20260926_bridge_audit.py",
+      "args": [],
+      "output": "05-knowledge/results/crossroads223_20260926_bridge_audit.out",
+      "normal_equals_optimized": true
+    },
+    {
+      "source": "04-computation/experiments/crossroads223_20260926_flow.py",
+      "args": [],
+      "output": "05-knowledge/results/crossroads223_20260926_flow.out",
+      "normal_equals_optimized": true
+    },
+    {
+      "source": "04-computation/experiments/crossroads223_20260926_flow_global.py",
+      "args": [],
+      "output": "05-knowledge/results/crossroads223_20260926_flow_global.out",
+      "normal_equals_optimized": true
+    },
+    {
+      "source": "04-computation/experiments/crossroads223_20260926_flow_series.py",
+      "args": [],
+      "output": "05-knowledge/results/crossroads223_20260926_flow_series.out",
+      "normal_equals_optimized": true
+    },
+    {
+      "source": "04-computation/experiments/crossroads223_20260926_geometry.py",
+      "args": [
+        "--rank"
+      ],
+      "output": "05-knowledge/results/crossroads223_20260926_geometry.out",
+      "normal_equals_optimized": true
+    },
+    {
+      "source": "04-computation/experiments/crossroads223_20260926_geometry_growth.py",
+      "args": [],
+      "output": "05-knowledge/results/crossroads223_20260926_geometry_growth.out",
+      "normal_equals_optimized": true
+    },
+    {
+      "source": "04-computation/experiments/crossroads223_20260926_geometry_growth_audit.py",
+      "args": [],
+      "output": "05-knowledge/results/crossroads223_20260926_geometry_growth_audit.out",
+      "normal_equals_optimized": true
+    },
+    {
+      "source": "04-computation/experiments/crossroads223_20260926_robin.py",
+      "args": [],
+      "output": "05-knowledge/results/crossroads223_20260926_robin.out",
+      "normal_equals_optimized": true
+    },
+    {
+      "source": "04-computation/experiments/crossroads223_20260926_sextic_audit.py",
+      "args": [],
+      "output": "05-knowledge/results/crossroads223_20260926_sextic_audit.out",
+      "normal_equals_optimized": true
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "01-canon/theorems/THM-4488-private-pairing-peak-price-rational-bridge.md",
+      "sha256": "d264732f9dc05b45e415519ec8eeb29364b30f0da042ef1729058d0b8b482f9e",
+      "bytes": 7101
+    },
+    {
+      "path": "01-canon/theorems/THM-4489-fermat-sextic-223-collatz-return-budget.md",
+      "sha256": "7fc7694cc127ad877f5cbdc44200472bf367b0bbbdf64626b9e2a666c35c19a9",
+      "bytes": 4043
+    },
+    {
+      "path": "01-canon/theorems/THM-4490-collatz-affine-word-sunit-specialization.md",
+      "sha256": "313709937dfc564f5f4dcd2b6a2700415e94e1c9d1fba716ba4cd3729989954a",
+      "bytes": 6519
+    },
+    {
+      "path": "01-canon/theorems/THM-4491-pairing-two-step-tree-extra-density.md",
+      "sha256": "0736331708b8515da8941687415b7bdddbbbe881dcdecb0999174aea47bc778b",
+      "bytes": 5272
+    },
+    {
+      "path": "04-computation/experiments/crossroads223_20260926_automata.py",
+      "sha256": "002abf4310f8aae58decc9340f660bcd508da4d4ad386eb5be14d3e716eb32e3",
+      "bytes": 13775
+    },
+    {
+      "path": "04-computation/experiments/crossroads223_20260926_boundary_audit.py",
+      "sha256": "f72f83b0e0b0ec72a1c82eaa960f4c5e4b7f7556ce182d4408d2eca86601d223",
+      "bytes": 2501
+    },
+    {
+      "path": "04-computation/experiments/crossroads223_20260926_bridge.py",
+      "sha256": "ab91260d1bf0452b2caac908b8373b75b7e36fa839900aaccda4e7567f14bc7f",
+      "bytes": 8034
+    },
+    {
+      "path": "04-computation/experiments/crossroads223_20260926_bridge_audit.py",
+      "sha256": "e32c99eea448b9b9f2e4b9d1d926b73f8e5131cf8638ec08c9fe3529dc2b2fd7",
+      "bytes": 8732
+    },
+    {
+      "path": "04-computation/experiments/crossroads223_20260926_flow.py",
+      "sha256": "de25da8b4f9d0faad170922a78ac43a58c55e385d47d2acfba3c5d85ce767956",
+      "bytes": 6066
+    },
+    {
+      "path": "04-computation/experiments/crossroads223_20260926_flow_global.py",
+      "sha256": "836a83edb2cc86b3d3531732c02220086bb8c30d04c617efc8f616462b41e0c4",
+      "bytes": 5692
+    },
+    {
+      "path": "04-computation/experiments/crossroads223_20260926_flow_series.py",
+      "sha256": "03e715893fcc548e1cc77fe44ab611290fa1b966014d6573001dbd9c4bdd7f81",
+      "bytes": 2059
+    },
+    {
+      "path": "04-computation/experiments/crossroads223_20260926_geometry.py",
+      "sha256": "bd16b080226f974315dee5876078a85d714cc89d1d2d62cef31a506e79b4a115",
+      "bytes": 12544
+    },
+    {
+      "path": "04-computation/experiments/crossroads223_20260926_geometry_growth.py",
+      "sha256": "27cfb087bb8bd682868617154c69a4abb3eba841b5e3496ff857a8c592325561",
+      "bytes": 6448
+    },
+    {
+      "path": "04-computation/experiments/crossroads223_20260926_geometry_growth_audit.py",
+      "sha256": "32452ac001728b8f523128913f83c015a7ad2727ddc5d1b0f53999d60a34d54c",
+      "bytes": 6180
+    },
+    {
+      "path": "04-computation/experiments/crossroads223_20260926_robin.py",
+      "sha256": "afc9b2d6e9a5c454445c1894658081222a16a72e752022f886e9b117159c43a1",
+      "bytes": 6876
+    },
+    {
+      "path": "04-computation/experiments/crossroads223_20260926_sextic_audit.py",
+      "sha256": "5531978196570afb75f26e7aae8b99c4ac326023922cd821488ec3f4396bba78",
+      "bytes": 1817
+    },
+    {
+      "path": "04-computation/experiments/crossroads223_20260926_verify.py",
+      "sha256": "1bac62666fe63412e7e3dcb1e25b086c243d22d1c5870275b57b39cf5a332d97",
+      "bytes": 3596
+    },
+    {
+      "path": "05-knowledge/results/crossroads223_20260926_automata.md",
+      "sha256": "373ab0fe2f6cc14ce7763c98f9f0c434007de3f5a35c766218767625ab1f5430",
+      "bytes": 17678
+    },
+    {
+      "path": "05-knowledge/results/crossroads223_20260926_automata.out",
+      "sha256": "a0b4ab843a8dabd63ebf05d478f8b88d5e34bfb3decc17c507dcfde8ee03e02e",
+      "bytes": 1422
+    },
+    {
+      "path": "05-knowledge/results/crossroads223_20260926_board.md",
+      "sha256": "8a6485ae9e2a8d269ae7c0f144b27e12ab7485b5b0e53fd52e73f37bde40df0e",
+      "bytes": 10875
+    },
+    {
+      "path": "05-knowledge/results/crossroads223_20260926_boundary_audit.out",
+      "sha256": "36f609f7324b33c93bd892d9d8c5bb16df31fa5b404784a8719509b950774aed",
+      "bytes": 336
+    },
+    {
+      "path": "05-knowledge/results/crossroads223_20260926_bridge.md",
+      "sha256": "c71bdbf5e0ecd7ace4827017cfabad65c4b8c88a6fc3f59f04d041600607d194",
+      "bytes": 8673
+    },
+    {
+      "path": "05-knowledge/results/crossroads223_20260926_bridge.out",
+      "sha256": "adeded060d525813d2c2de49042d2fc633ec1f6cbefc965f6bea0139c2d5e0ef",
+      "bytes": 745
+    },
+    {
+      "path": "05-knowledge/results/crossroads223_20260926_bridge_audit.md",
+      "sha256": "5d9f83d2218d357ac21565f8e05bb09a88b8f333aa678a5650d8587e6db00f12",
+      "bytes": 17741
+    },
+    {
+      "path": "05-knowledge/results/crossroads223_20260926_bridge_audit.out",
+      "sha256": "065a448e1cb2aaf197326652bf4d1fde9a3b9f26aef81778dec2e4ac85011d4f",
+      "bytes": 629
+    },
+    {
+      "path": "05-knowledge/results/crossroads223_20260926_flow.md",
+      "sha256": "dc58680d2e176c6ba5ca6d0cea2192b1927fe3f8e5e67e3ae64d0a45542d9fd9",
+      "bytes": 11694
+    },
+    {
+      "path": "05-knowledge/results/crossroads223_20260926_flow.out",
+      "sha256": "cce0fed8222d85d4de7994b2af66bca2d3d3d878eb806f2b3812bf09b38afbd0",
+      "bytes": 2127
+    },
+    {
+      "path": "05-knowledge/results/crossroads223_20260926_flow_global.md",
+      "sha256": "c03145617c69f236caad3f60747c292c6599ec3f3afb7b0f25d6e3d20a9c8576",
+      "bytes": 9461
+    },
+    {
+      "path": "05-knowledge/results/crossroads223_20260926_flow_global.out",
+      "sha256": "0757c4a22c12fda66f87edf4f67cef4b0ab974092dcf0750253d802b21bb13e7",
+      "bytes": 1523
+    },
+    {
+      "path": "05-knowledge/results/crossroads223_20260926_flow_series.md",
+      "sha256": "b9fc08b17d9128f67a3bdb1d2ca554e3b08c832c6a1819a9a20b7cd2509335f9",
+      "bytes": 7399
+    },
+    {
+      "path": "05-knowledge/results/crossroads223_20260926_flow_series.out",
+      "sha256": "b56d609b6670598f84c73f91ef94e857231b7a1c0dc875755e10adfde2aa5d57",
+      "bytes": 2171
+    },
+    {
+      "path": "05-knowledge/results/crossroads223_20260926_general_peak.md",
+      "sha256": "f1a8008ddc28ee24224258ec56de523807512cea694e1f1c140eafa8ae11f0dd",
+      "bytes": 6044
+    },
+    {
+      "path": "05-knowledge/results/crossroads223_20260926_geometry.md",
+      "sha256": "e14b700713a0254c4e64702937ff7c60a24ec23f158c3dd5e27316795234846d",
+      "bytes": 19619
+    },
+    {
+      "path": "05-knowledge/results/crossroads223_20260926_geometry.out",
+      "sha256": "f203ff9b4e1cd2b9a6849684cae53c7e09559dc707abef90e39bed11abe711ca",
+      "bytes": 9218
+    },
+    {
+      "path": "05-knowledge/results/crossroads223_20260926_geometry_growth.md",
+      "sha256": "bacdf7f195d51abfc8b83ffa6569e9a701490fcf6c7731a1a96b6fe919a58e82",
+      "bytes": 16948
+    },
+    {
+      "path": "05-knowledge/results/crossroads223_20260926_geometry_growth.out",
+      "sha256": "4447de581a2353e258a1dc16dfba0956954e676024439330ea482fef8177af48",
+      "bytes": 2679
+    },
+    {
+      "path": "05-knowledge/results/crossroads223_20260926_geometry_growth_audit.md",
+      "sha256": "91a7c23d6054a7494fbaecf3931c31a4f6906ad53ef26d8ffee6af39ec6b6bad",
+      "bytes": 6735
+    },
+    {
+      "path": "05-knowledge/results/crossroads223_20260926_geometry_growth_audit.out",
+      "sha256": "606929b61c5476d9a83c8e0cd01cf06ad0c0242698e4bc1e104c403fe40545a8",
+      "bytes": 379
+    },
+    {
+      "path": "05-knowledge/results/crossroads223_20260926_robin.md",
+      "sha256": "4d3c16c7d98c004a7956691c29b33b86d1bc6739d6bb2799cca4f50c0b9d7df2",
+      "bytes": 7137
+    },
+    {
+      "path": "05-knowledge/results/crossroads223_20260926_robin.out",
+      "sha256": "4b8e1e23fc8b1489268c810039873cb7ba8897ccaed9c1e593f60c8c0703807c",
+      "bytes": 1340
+    },
+    {
+      "path": "05-knowledge/results/crossroads223_20260926_sextic_audit.out",
+      "sha256": "337dab3fe63220f2ce567515b6e83bf244e3fab3bdf66582e203a127435f2d5a",
+      "bytes": 458
+    }
+  ],
+  "documentation_hashes_refreshed_utc": "2026-09-26T15:27:08.695236+00:00"
+}
