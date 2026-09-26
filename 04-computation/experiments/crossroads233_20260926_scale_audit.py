@@ -1,5 +1,6 @@
 """Independent controls for the two-cutoff P2 obstruction. Stdlib only."""
 from fractions import Fraction
+from array import array
 from functools import lru_cache
 from itertools import product
 import json
@@ -110,6 +111,35 @@ def main():
     print(json.dumps({'beta20': str(beta20), 'alpha_upper': str(alpha_upper),
                       'forced_limsup': str(oscillating_upper_floor),
                       'forced_oscillation': str(oscillating_upper_floor-alpha_upper)}))
+    # Independent full-cost arrays, never using the lane's difference/toll
+    # recurrence. Their total has the same telescoping fringe certificate.
+    kernel = [128, 192, 288, 432, 648, 972, 1458, 2187]
+    normalizer = sum((Fraction(a)*Fraction(2, 3)**j for j, a in enumerate(kernel)), Fraction(0))
+    require(normalizer == 1024, 'eight-cutoff normalization')
+    zeros, ones = array('q', [0]), array('q', [kernel[0]])
+    for depth in range(1, 21):
+        modulus = len(zeros)
+        weight = sum(kernel[:depth+1])
+        next_zero, next_one = array('q'), array('q')
+        for address in range(2*modulus):
+            if address % 2 == 0:
+                child = (3*address//2) % modulus
+                zero, one = ones[child], weight+zeros[child]
+            else:
+                left = ((3*address-1)//2) % modulus
+                right = ((3*address+1)//2) % modulus
+                zero = zeros[left]+min(zeros[right], ones[right])
+                one = weight+min(zeros[left], ones[left])+ones[right]
+            next_zero.append(zero); next_one.append(one)
+        zeros, ones = next_zero, next_one
+    aggregate = sum(min(a, b) for a, b in zip(zeros, ones))
+    best = Fraction(aggregate, 3**21*1024)
+    require(aggregate == 3286041555236, 'full-cost aggregate certificate')
+    require(best == Fraction(821510388809, 2677850419968), 'eight-cutoff lower bound')
+    require(best > beta20, 'eight-cutoff strict improvement')
+    print(json.dumps({'independent_full_cost_depth': 20, 'residue_types': len(zeros),
+                      'aggregate': aggregate, 'kernel_normalizer': str(normalizer),
+                      'upper_density_lower': str(best), 'decimal': float(best)}))
     print('ALL INDEPENDENT SCALE CHECKS PASSED')
 
 

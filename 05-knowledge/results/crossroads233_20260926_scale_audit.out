@@ -5,4 +5,5 @@
 {"large_cutoff": 10000, "small_cutoff": 4444, "joint_optimum": 4343, "normalized": 0.3006784824148435}
 {"large_cutoff": 100000, "small_cutoff": 44444, "joint_optimum": 43395, "normalized": 0.30042784747029994}
 {"beta20": "4538724347/15109399071", "alpha_upper": "3089623223/10460353203", "forced_limsup": "13417603/43046721", "forced_oscillation": "170854306/10460353203"}
+{"independent_full_cost_depth": 20, "residue_types": 1048576, "aggregate": 3286041555236, "kernel_normalizer": "1024", "upper_density_lower": "821510388809/2677850419968", "decimal": 0.30677978974599224}
 ALL INDEPENDENT SCALE CHECKS PASSED
