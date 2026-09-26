@@ -268,6 +268,33 @@ expected order is `X^(E(gamma)) (log X)^(-1/2)` (a zero-drift walk pinned at
 the end but free at the start). The constants `0.26` and `545` are not
 sharp: the observed window of `W_k k^(3/2) 2^(-hk)` is `[9.6648, 11.0517]`.
 
+## 4b. Remark (post-audit): the identity for every Conway map
+
+The proof of Theorem A uses only that no nonempty segment of a word has
+zero weight. For a Conway map `g(x) = (p_i x + q_i)/m` (Theorem 4 of the
+dip-spectrum note) with letter weights `log_m(p_i/m)`, this holds whenever
+no nonempty product `prod (p_i/m)^(c_i)` equals `1`, e.g. for the `m = 3` map
+`x/3, (2x+1)/3, (4x+1)/3` (weights `-1, log_3 2 - 1, 2 log_3 2 - 1`; a segment
+sum is `s log_3 2 - j` with `s = #1 + 2#2`, nonzero for `j >= 1`). Then
+`k W_k = sum_n B_n W_(k-n)` with `B_n` the trinomial tail
+`#{words of length n : 2^(#1 + 2#2) > 3^n}`, and the convolution argument
+gives `W_k = Theta(m^(k E_g(1)) k^(-3/2))` with `E_g(1) = 1 - I(g)` once the
+multinomial tail `B_n m^(-n E_g(1))` is `Theta(n^(-1/2))` (the same local
+computation with the tilted law). Control
+(`collatz_nodescent_order_20260926_m3.py` -> `.out`): the identity holds
+exactly (DP to `k = 120`, integral recurrence to `k = 400`),
+`E_g(1) = 0.748700` agrees with Theorem 4's table and with `I(g) = 0.2513` of
+the thin-divergence note's control (C2), and `W_k k^(3/2) 3^(-k E_g(1))` stays
+in `[1.5, 2.4]` for `10 <= k <= 400`:
+
+```text
+m = 3 map x/3, (2x+1)/3, (4x+1)/3: Spitzer identity k W_k = sum B_n W_(k-n): DP == recurrence for k <= 120: True; integral to k = 400
+   W_1..W_15: [1, 1, 2, 3, 7, 12, 18, 42, 74, 181, 338, 556, 1340, 2489, 6202]
+   B_1..B_15: [1, 1, 4, 5, 21, 28, 36, 157, 211, 891, 1233, 1664, 7203, 9948, 42129]
+   E_g(1) = log_3 min_lambda Z(lambda) = 0.748700 (Theorem 4; thin-divergence exponent 1 - I(g), I(g) = 0.2513)
+   W_k k^1.5 3^(-kE): k=10: 1.533  k=20: 1.676  k=50: 1.724  k=100: 2.063  k=200: 2.312  k=300: 2.124  k=400: 2.327
+```
+
 ## 5. Controls (FINITE-EXACT)
 
 ```text
