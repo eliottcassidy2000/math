@@ -68,9 +68,10 @@ audit: >
   * p0 = 0.2270922, with log_23 2 < p0 < log_21 2;
   * no class-(i) strategy exists for q = 7 or q = 23 at k = 2, 3, 4
     (exhaustive).
-  A rerun of the lane's full pipeline (DRIFT_KMAX=19, about 25 min) was in
-  progress at promotion; it will be recorded in a follow-up. Script
-  hashes match the note's section 10.
+  The lane's full pipeline was re-run (DRIFT_KMAX=19; 1235 s, 280 MB). Its
+  output is identical to the committed .out except for timing fields; this
+  includes the RC2 lower bound delta_8(5) >= 44 and every certificate to
+  k = 19. Script hashes match the note's section 10.
 ---
 
 # THM-4481 -- an entropy law for sign flips
