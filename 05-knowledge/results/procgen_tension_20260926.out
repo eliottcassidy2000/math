@@ -1,0 +1,118 @@
+procgen_tension_20260926 -- ranks = certificates, Christoffel maximizers, rigidity, negation duality
+python 3.10.0, numpy 2.2.6, scipy 1.15.3, ortools 9.15.6755, arm64
+sha256 4f77ca9906e019273a37f5d1a06034b8805b248d2013258ae57928cee009fc3d  procgen_tension_20260926_lib.py
+sha256 3afb8dd826245eeecf86f7b78871b30bf04f92ed8a714cee7ec23d2f74ba7e24  procgen_tension_20260926_q1.py
+sha256 4c40f2bd9206f8f6644b4c2bb678302ec5ed2937be9ccf0d3ac6def4f8c8c518  procgen_tension_20260926_q2.py
+sha256 89eb4b5249d8025b2ffee40d15a3a56f45c7b3f81bc76ce65b86a164e7241dbd  procgen_tension_20260926_q3.py
+sha256 d2cb8a58f2d6d417c326486db5c03d9101defc5862612a2e222ff7f32bd15233  procgen_tension_20260926_q4.py
+sha256 b717e18ea089fcba87243c10ed6902fdf2fac975c26ea36f84cfe5c59f535f7d  procgen_tension_20260926_mip.py
+sha256 1e87325490781d3bfbd805a98edaea2377247053afdf1a98f4b618221ad2767a  procgen_tension_20260926_run.py
+
+A. (a) class (i)  <=>  (c) integer potential below c  <=>  (b) periodic rank; witnesses
+  ok: level 2: 1 class-(i) strategies carry an integer potential at F = rho_max (every edge checked); all 3 non-(i) strategies have no potential at F_{2^k} = 1/2 and an integer witness n > 10^12 with T^p(n) = n mod 2^k and T^p(n) > n
+  ok: level 3: 1 class-(i) strategies carry an integer potential at F = rho_max (every edge checked); all 15 non-(i) strategies have no potential at F_{2^k} = 5/8 and an integer witness n > 10^12 with T^p(n) = n mod 2^k and T^p(n) > n
+  ok: level 4: 16 class-(i) strategies carry an integer potential at F = rho_max (every edge checked); all 240 non-(i) strategies have no potential at F_{2^k} = 5/8 and an integer witness n > 10^12 with T^p(n) = n mod 2^k and T^p(n) > n
+  ok: level 5: 1052 class-(i) strategies carry an integer potential at F = rho_max (every edge checked); 3000 sampled non-(i) strategies have no potential at F_{2^k} = 17/27 and an integer witness n > 10^12 with T^p(n) = n mod 2^k and T^p(n) > n
+  ok: sigma_8, sigma_10, sigma_12 (rho_max = 5/8): the rank log n + (log 3/8) psi(n mod 2^k) descends by |mu|/2 = 0.00326 at every step on 2000 consecutive integers above n_1 (floating point)
+  ok: level 6: 60 random strategies with sigma(1)=+, sigma(-1)=-: potential at rho_max always exists; 0 class (i); every other one has an expanding tight cycle with an integer witness
+  ok: level 7: 60 random strategies with sigma(1)=+, sigma(-1)=-: potential at rho_max always exists; 0 class (i); every other one has an expanding tight cycle with an integer witness
+  ok: level 8: 60 random strategies with sigma(1)=+, sigma(-1)=-: potential at rho_max always exists; 0 class (i); every other one has an expanding tight cycle with an integer witness
+B. the rank defect: min over periodic h of the worst step = max cycle mean; Collatz = log(3/2) at -1
+  ok: levels 2-4, all 276 strategies: the optimal periodic correction h = (log 3/r) psi attains max over edges of (w(s) + h(t) - h(s)) = rho_max log 3 - log 2, with equality on a cycle of density rho_max
+  ok: Collatz, k = 2..16: node 2^k - 1 carries the self-loop (density 1); the least potential at F = 1 is psi = 0, so h = 0 is an optimal periodic correction and the least achievable defect is exactly log(3/2) (rho_max = 1 re-derived by exact Karp for k <= 8)
+  ok: the Bernoulli-boundary witnesses n_H = 2^H - 1 stay on the node -1 (mod 2^k) for H - k + 1 consecutive steps (k = 2..11, H = k..k+39): they are the integer shadow of the expanding self-loop
+B'. finite banks of dyadic counters plus any periodic correction cannot pay for every expanding orbit
+  ok: for a bank of 20 rational centers (incl. -1, -5, -17, -13/9, 1 - 2(4/3)^d, d <= 7) and any h mod 2^12: the Collatz orbits of 1^(L-1)0, L = 5, 7, 9, 13, 23, avoid the bank and have integer shadows n with T^L(n) > n and identical h-values and counters at n and T^L(n); so every rank a log n + h(n mod 2^12) + sum c_i v2(n - beta_i), a > 0, increases over one period
+    (L, max counter along the orbit, bits of the witness) = [(5, 8, 47), (7, 9, 50), (9, 11, 54), (13, 15, 62), (23, 25, 82)]
+C. the flow side: circulations, the Haar circulation, LP duality
+  ok: levels 2-4 (all 276 strategies): the uniform edge flow is a circulation iff sigma is constant (Collatz or 3n-1); in-degrees always lie in {1,2,3}; Collatz is 2-in/2-out at k = 2..14, so its Haar circulation exists and has odd density exactly 1/2 (half of the nodes are odd)
+  ok: levels 2-4 (276 strategies): the LP maximum of the odd density over normalized circulations equals the exact Karp rho_max (max deviation 1.1e-16; HiGHS, floating point)
+  [Q1 wall 6.5 s]
+
+Q2. maximum-density cycles of G_(sigma_k)
+  ok: rho_max(sigma_k) = F_k for k = 2..18 (edge-checked integer potential at F_k plus the realized upper-Christoffel cycle; exact Karp agrees for k <= 13)
+    k : F_k : #blocks by length : Christoffel block : #balanced among length-d blocks
+     2 : 1/2 : {2: 1} : 10 : 1
+     3 : 1/2 : {2: 1} : 10 : 1
+     4 : 1/2 : {2: 1, 4: 1} : 10 : 1
+     5 : 3/5 : {5: 2} : 11010 : 1
+     7 : 3/5 : {5: 2} : 11010 : 1
+     8 : 5/8 : {8: 7} : 11011010 : 1
+    16 : 5/8 : {8: 7, 16: 476} : 11011010 : 1
+    24 : 5/8 : {8: 7, 16: 476, 24: 51033} : 11011010 : 1
+    26 : 5/8 : {8: 7, 16: 476, 24: 51033} : 11011010 : 1
+    27 : 17/27 : {27: 312455} : 110110110101101101011011010 : 1
+    30 : 17/27 : {27: 312455} : 110110110101101101011011010 : 1
+  ok: k = 2..30: the density-F_k first-descent blocks of length d (F_k = a/d) are one per necklace (C(d,a)/d of them, cycle lemma); the upper Christoffel word is among them, is the unique balanced one, and has the pointwise lowest lattice path; longer blocks (length m d <= k, m >= 2) exist from k = 16 on
+  ok: k = 2..18: brute force over all words of each length confirms that the density-F_k first-descent words of length <= k are exactly the strictly-above words (Theorem M(ii))
+  ok: k = 2..14: every density-F_k first-descent block of length <= k is the word of a cycle of G_(sigma_k) (its Collatz periodic orbit, read mod 2^k, is a closed walk of G_(sigma_k))
+    k : #max-density simple cycles : their canonical words (count)
+    2 : 2 : [('10', 2)]
+    3 : 3 : [('10', 2), ('1010', 1)]
+    4 : 8 : [('10', 2), ('1010', 1), ('1100', 1), ('110010', 2), ('11001010', 2)]
+    5 : 3 : [('11010', 1), ('11100', 1), ('1110011010', 1)]
+    6 : 3 : [('11010', 1), ('11100', 1), ('1110011010', 1)]
+    7 : 3 : [('11010', 1), ('11100', 1), ('1110011010', 1)]
+  ok: k = 2..7: every simple cycle of the tight subgraph has density F_k and factors into first-descent blocks of density F_k (and flip blocks 10, only when F_k = 1/2); for k = 2, 3 all of them carry the Christoffel word 10, while for k = 4..7 non-Christoffel maximizers occur (1100 at k = 4, 11100 at k = 5..7)
+    k : Perron root of the tight subgraph : root of sum_blocks z^-|w| = 1 (k >= 5)
+     4 : 1.553774 : (flip blocks 10 also tight)
+     5 : 1.148698 : 1.148698
+     6 : 1.148698 : 1.148698
+     7 : 1.148698 : 1.148698
+     8 : 1.275373 : 1.275373
+     9 : 1.275373 : 1.275373
+    10 : 1.275373 : 1.275373
+    11 : 1.275373 : 1.275373
+  ok: k = 4..11: the maximizing set has positive entropy; for k >= 5 the Perron root of the tight subgraph equals the growth rate of block concatenations (numerical, 1e-6): e.g. 2^(1/5) = 1.1487 for k = 5..7, 7^(1/8) = 1.2754 for k = 8..11
+    level 4: M_k = 3/5, 8 optimal strategies, max-cycle words ['11100'], Christoffel 11010 absent
+    level 5: M_k = 5/8, 220 optimal strategies, max-cycle words ['11100110', '11101100', '11110010', '11111000'], Christoffel 11011010 absent
+  ok: the class-(i) strategies of largest rho_max at levels 4 and 5 (M_4 = 3/5, M_5 = 5/8) have no Christoffel maximizer at all: their maximal cycles carry 11100 (k=4) and 11100110, 11111000, 11101100, 11110010 (k=5)
+  [Q2 wall 27.1 s]
+
+Q3. Christoffel rigidity: is rho_max(sigma) <= F_k on class (i)?
+    level 2: F_k = 1/2; class-(i) rho_max values [(Fraction(1, 2), 1)]; M_k = 1/2; 0 strategies exceed F_k
+    level 3: F_k = 1/2; class-(i) rho_max values [(Fraction(1, 2), 1)]; M_k = 1/2; 0 strategies exceed F_k
+    level 4: F_k = 1/2; class-(i) rho_max values [(Fraction(1, 2), 8), (Fraction(3, 5), 8)]; M_k = 3/5; 8 strategies exceed F_k
+    level 5: F_k = 3/5; class-(i) rho_max values [(Fraction(1, 2), 128), (Fraction(5, 9), 32), (Fraction(4, 7), 104), (Fraction(3, 5), 568), (Fraction(5, 8), 220)]; M_k = 5/8; 220 strategies exceed F_k
+  ok: exhaustive (all 65,812 strategies of levels 2-5, exact Karp): M_2 = M_3 = 1/2, M_4 = 3/5 > F_4 = 1/2, M_5 = 5/8 > F_5 = 3/5; rho_max <= F_k fails for 8 strategies at level 4 and 220 at level 5 (REFUTED)
+  ok: every strategy of levels 3-5 (65,808) has rho_max = a/p with p - a <= 2^(k-3) (fails at level 6, below)
+  ok: sibling splitting: in 2897 simple cycles of class-(i) strategies (k <= 4) containing a sibling pair, both chords exist and split the cycle into two cycles on the same nodes
+  ok: numerator bound (Corollary S): G_(2^(k-2)) = 1/2, 1/2, 3/5, 5/8, 5/8, 29/46, 41/65, 94/149 for k = 2..9; it is attained for k = 2..6 by chi_(-4), chi_(-4), the level-4 optimum (mask 152), the level-5 optimum (mask 37000) and its lift (exact Karp): M_k = G_(2^(k-2)) for k <= 6 (PROVED)
+  ok: level 6: CP-SAT independently confirms that no class-(i) strategy has a cycle of density > 5/8 (75 s)
+    level 6 value set V_6 (16 of 42 candidate fractions in [1/2, 5/8] with denominator <= 32): ['1/2', '8/15', '7/13', '6/11', '5/9', '9/16', '4/7', '11/19', '7/12', '10/17', '13/22', '3/5', '11/18', '8/13', '13/21', '5/8']
+  ok: REFUTED guesses at level 6: 13/22 (9 even nodes > 2^(k-3) = 8) is a value of rho_max; the values 11/18, 11/19, 13/21, 13/22 have denominators > 2^(k-2) + 1 = 17 while 9/17 is absent
+  ok: level 6: the rho_max values of class-(i) strategies are exactly 16 fractions, max denominator 22 (each realized value re-verified by exact Karp on the returned strategy; each absent one solver-certified)
+  ok: level 7: an explicit class-(i) strategy (mask 12481914054424834826) has rho_max = 17/27 exactly (exact Karp + edge-checked integer potential at 17/27), so M_7 >= 17/27 = F_27 while F_7 = 3/5
+  ok: sibling-splitting bound: a maximum-density cycle has length <= 2^(k-1) = 64 at level 7, and the only fraction in (17/27, log_3 2) with denominator <= 64 is 29/46; so M_7 is 17/27 or 29/46
+  [Q3 wall 204.6 s]
+
+MIP cross-check (flow formulation, HiGHS)
+  ok: level 4: a class-(i) strategy with a cycle of density > 1/2 exists (re-verified by exact Karp) (flow MIP, 0.0 s)
+  ok: level 4: a class-(i) strategy with a cycle of density > 3/5 does not exist (flow MIP, 0.2 s)
+  ok: level 5: a class-(i) strategy with a cycle of density > 3/5 exists (re-verified by exact Karp) (flow MIP, 0.4 s)
+  ok: level 5: a class-(i) strategy with a cycle of density > 5/8 does not exist (flow MIP, 0.8 s)
+  ok: level 6: a class-(i) strategy with a cycle of density > 3/5 exists (re-verified by exact Karp) (flow MIP, 1.2 s)
+  [MIP wall 2.6 s]
+
+Q4. the negation duality on the strategy cube
+    level 2: class (i) 1 = 1 self-dual + 0 pairs; rho_max self-dual [(Fraction(1, 2), 1)]; paired []
+             components under single flips: 1 (largest [1]), 1 contain a self-dual, 1 are nu-invariant; distance to the nearest self-dual class-(i) strategy: [(0, 1)]; symmetric core class (i): 1/1
+    level 3: class (i) 1 = 1 self-dual + 0 pairs; rho_max self-dual [(Fraction(1, 2), 1)]; paired []
+             components under single flips: 1 (largest [1]), 1 contain a self-dual, 1 are nu-invariant; distance to the nearest self-dual class-(i) strategy: [(0, 1)]; symmetric core class (i): 1/1
+    level 4: class (i) 16 = 2 self-dual + 7 pairs; rho_max self-dual [(Fraction(1, 2), 2)]; paired [(Fraction(1, 2), 3), (Fraction(3, 5), 4)]
+             components under single flips: 1 (largest [16]), 1 contain a self-dual, 1 are nu-invariant; distance to the nearest self-dual class-(i) strategy: [(0, 2), (1, 6), (2, 6), (3, 2)]; symmetric core class (i): 16/16
+    level 5: class (i) 1052 = 12 self-dual + 520 pairs; rho_max self-dual [(Fraction(1, 2), 8), (Fraction(3, 5), 4)]; paired [(Fraction(1, 2), 60), (Fraction(5, 9), 16), (Fraction(4, 7), 52), (Fraction(3, 5), 282), (Fraction(5, 8), 110)]
+             components under single flips: 1 (largest [1052]), 1 contain a self-dual, 1 are nu-invariant; distance to the nearest self-dual class-(i) strategy: [(0, 12), (1, 82), (2, 222), (3, 314), (4, 258), (5, 126), (6, 34), (7, 4)]; symmetric core class (i): 972/1052
+  ok: class (i) = self-dual + pairs: 1 = 1 + 0 (k=2), 1 = 1 + 0 (k=3), 16 = 2 + 2*7 (k=4), 1052 = 12 + 2*520 (k=5); rho_max is nu-invariant on all 65,812 strategies of levels 2..5
+  ok: class (i) is a single component of the single-flip graph at each level 2..5 (so it contains chi_(-4) and every self-dual class-(i) strategy); at level 5 every class-(i) strategy is within 7 flips of a self-dual class-(i) one
+  ok: REFUTED guesses: turning one u into d leaves class (i) in 4 of 30 moves (k=4) and 380 of 4794 (k=5); the symmetric core U cap -U is class (i) for 16/16 (k=4) but only 972/1052 (k=5)
+  ok: u/d coordinates: U(nu sigma) = -U(sigma) and sigma is self-dual iff its u-set is symmetric (checked on all strategies k <= 4, a 1/31 sample at k = 5); every one of the 2^(2^(k-2)) self-dual strategies is at Hamming distance exactly 2^(k-2) (Haar 1/2) from Collatz and from 3n-1
+  ok: k = 2..5: the nearest self-dual class-(i) strategy to sigma_k is chi_{-4} (all-d), at distance 2^(k-2) - |Bad_k|
+  ok: every class-(i) strategy of levels 2..5 puts a minus sign on an odd point of each of the 3n+1 cycles {-1}, {-5,-7,-10}, {-17,...,-34} and a plus sign on an odd point of each 3n-1 cycle {1}, {5,7,10}, {17,...,34}
+    level 6: 927 of the 65536 self-dual strategies are class (i); rho_max distribution [(Fraction(1, 2), 256), (Fraction(5, 9), 34), (Fraction(4, 7), 214), (Fraction(3, 5), 276), (Fraction(5, 8), 147)]
+  ok: level 6 (exhaustive over the 2^16 self-dual strategies, exact Karp): 927 self-dual class-(i) strategies; their largest rho_max is 5/8
+  [Q4 wall 4.1 s]
+
+  ok: peak RSS of the runner 327 MB (< 700 MB)
+total wall 244.9 s
+ALL CHECKS PASSED

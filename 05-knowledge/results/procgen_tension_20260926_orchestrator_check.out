@@ -1,0 +1,14 @@
+1. Theorem D(ii): least rank defect = max cycle mean
+  ok: LP minimum of max_edge[w + dh] = rho_max log 3 - log 2 on 316 strategies (all of levels 2-4, 40 random at level 5)
+  ok: Collatz at level 6: least defect log(3/2) (the loop at -1)
+2. Corollary K: finite dyadic banks fail
+   L=5: V=4, R(T^L n) - R(n) = 0.928713 = log(T^L n/n) -> log(3^(L-1)/2^L) = 0.928713
+   L=7: V=2, R(T^L n) - R(n) = 1.739643 = log(T^L n/n) -> log(3^(L-1)/2^L) = 1.739643
+   L=9: V=4, R(T^L n) - R(n) = 2.550574 = log(T^L n/n) -> log(3^(L-1)/2^L) = 2.550574
+  ok: for L = 5, 7, 9 the integer shadow of the orbit of 1^(L-1)0 increases every such rank over one period
+3. Theorem M(v): non-Christoffel maximizers of sigma_k
+  ok: 1100 is a maximal cycle of sigma_4 (density 1/2), 11100 of sigma_5..sigma_7 (density 3/5); neither is Christoffel
+4. max rho_max over class (i): exceeds F_k (Q3 refuted)
+   k=3: 1 class-(i) strategies, max rho_max = 1/2, F_k = 1/2, G_(2^(k-2)) = 1/2
+   k=4: 16 class-(i) strategies, max rho_max = 3/5, F_k = 1/2, G_(2^(k-2)) = 3/5
+  ok: level 4: a class-(i) strategy has rho_max = 3/5 > F_4 = 1/2 (= G_2, the numerator bound)

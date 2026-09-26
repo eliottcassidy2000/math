@@ -1,5 +1,11 @@
 # Script Results Index
 
+- [Tensions, ranks and Christoffel words in the strategy cube](procgen_tension_20260926_ranks_christoffel_duality.md):
+  **PROVED (THM-4482, audited) / FINITE-EXACT / REFUTED / OPEN.** Class (i) holds iff a rank `a log n + h(n mod 2^k)` decreases by a margin, iff a bounded-correction rank never increases, iff a Lemma P certificate exists. The least rank defect is the maximum cycle mean (LP duality between tensions and circulations).
+  * Collatz's defect is `log(3/2)` (the loop at `-1`), so no periodic or bounded correction beats `log n`. Finite banks of 2-adic valuation counters also fail; this contains the reframe's §5 and explains the Bernoulli-boundary obstruction.
+  * The maximizers of `sigma_k` form a positive-entropy family, of which Christoffel is only the balanced one.
+  * REFUTED: `rho_max <= F_k` for provable strategies. The exact maxima are `1/2, 1/2, 3/5, 5/8, 5/8` (`k = 2..6`) under the numerator bound. The negation census and the typed Kuratowski–Tutte dictionary are in the note.
+
 - [Positive drift and provability in the strategy cube: an entropy law for sign flips](procgen_drift_20260926_positive_drift_provability.md):
   **PROVED (THM-4481, audited) / FINITE-EXACT / VERIFIED / OPEN.** For every stationary law of every `qn±1` sign strategy: `pi(odd) = 1/2 - sum_R pi(s) g(s)` (gain identity), and `1 - h(pi(odd)) <= merge entropy <= pi(R ∪ R*) <= pi(odd)` (entropy/merge law).
   * Consequences: `rho_max >= 0.2270922` always, so no provable sign strategy exists for odd `q >= 23`. Provable 5n±1 strategies need flip mass `> 0.01391`, so 5n+1's Haar distance tends to 0 only if invariant densities concentrate on the flips (HYP-9141).

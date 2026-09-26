@@ -25,6 +25,11 @@ status: >
   5n+1's exact distance at k = 7 is 29/64; whether it tends to 0 is OPEN.
   Collatz itself stays in class (iv) at every level. Nothing here bears on
   its truth.
+  UPDATE 2026-09-26 (THM-4482): the upper Christoffel word is one maximizer
+  of sigma_k, not the only one. The maximal cycles are all periodic
+  concatenations of density-F_k first-descent blocks, a positive-entropy
+  family for k >= 4. Other provable level-k strategies can exceed F_k
+  (e.g. 3/5 at level 4), up to the numerator bound G_(2^(k-2)).
 source: collatz-procgen-20260922 session, cube-distance lane (2026-09-25), proving the session's HYP-9138; audited and promoted by the session orchestrator 2026-09-26
 depends_on:
   - 01-canon/theorems/THM-4474-strategy-cube-provability-by-cycle-densities.md
