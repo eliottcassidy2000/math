@@ -298,6 +298,75 @@ as `theta -> 0`, `N(X) = O_eps(X^(h*+eps))` for every `eps > 0`, with a
 constant depending only on `eps` and `|b|`. Summing over the at most
 `|b|/3 + 2` one-signed segments proves the theorem. ∎
 
+### 1.6b Addendum (2026-09-26, opus, post-audit): the `eps` is a power of the logarithm
+
+**Theorem (polylog form).** Let `rho* = log_3 2`, `h* = h(rho*)`,
+`lambda* = log_2(rho*/(1-rho*))/alpha = 0.488077`, and
+`a* = 1 + lambda*/h* = 1.513789`. For every `a > a*` there is
+`K = K(a, |b|)` such that every `T_b`-orbit that is not eventually periodic
+satisfies
+
+```text
+N(X) = #{ i : |x_i| <= X } <= K X^(h*) (log_2 X)^a      for all X >= 2,
+```
+
+and the same holds for every `T_b`-invariant set on which `T_b` is injective
+(Corollary 4's setting: its proof in 1.7 uses the same recursion (R)).
+
+*Proof.* As in 1.1 it suffices to treat one positive one-signed segment
+(the sum over at most `|b|/3 + 2` segments multiplies `K`). Put
+`theta_1 = theta_0/2 = 0.10376`. For `theta in (0, theta_1]` one has
+`rho = (1-theta)/alpha in [0.5655, rho*)`, so `rho k - 2 > k/2` for `k >= 31`
+and `A(theta) = 2(rho/(1-rho))^2 <= 2(rho*/(1-rho*))^2 = 5.85`: the recursion
+(R) of 1.5 holds for every `theta in (0, theta_1]` and `X >= 2^31` with the
+uniform constants `k_0 = 31`, `A = 5.85`. Concavity of `h` gives, with
+`rho - rho* = -theta/alpha` and `h'(rho*) = log_2((1-rho*)/rho*) = -alpha lambda*`,
+
+```text
+h(rho) <= h* + h'(rho*)(rho - rho*) = h* + lambda* theta.
+```
+
+Fix `a > a*`, put `eta = (a - a*)/(2a*)`, `c_1 = (1 + eta)/h*`, and for
+`X >= 2` let `L = log_2 X` and `theta_X = c_1 (log_2 L)/L`. Choose `X_2 = X_2(eta)`
+with `theta_X <= theta_1`, `X >= 2^31` and `L + 2|b| X^(0.585 + theta_X) <= X^(h*)`
+for `X >= X_2` (possible since `theta_X -> 0` and `0.585 < h*`). For such `X`,
+(R) with `theta = theta_X` reads
+
+```text
+N(X) <= X^(h*) + L N(X L^(-c_1)) + 11.7 X^(h*) L^(1 + lambda* c_1),
+```
+
+because `X^(1 - theta_X) = X 2^(-theta_X L) = X L^(-c_1)` and
+`X^(h(rho)) <= X^(h*) 2^(lambda* theta_X L) = X^(h*) L^(lambda* c_1)`.
+Now `c_1 h* = 1 + eta`, and `1 + lambda* c_1 = a* + eta lambda*/h* <= a*(1 + eta) <= a - eta`
+(the last step is `a - a* >= eta(1 + a*)`, true for `eta = (a - a*)/(2a*)`
+since `1 + a* <= 2a*`). Claim: `N(X) <= K X^(h*) L^a` for all `X >= 2`,
+with `K = max(X_3, 12)` where `X_3 >= X_2` is such that `2 L^(-eta) + L^(-a) <= 1`
+for `X >= X_3`. Base: for `2 <= X < X_3`, `N(X) <= X < K <= K X^(h*) L^a`.
+Step: for `X >= X_3`, assuming the claim below `X`,
+
+```text
+L N(X L^(-c_1)) <= L K X^(h*) L^(-c_1 h*) L^a = K X^(h*) L^(a - eta),
+N(X) <= X^(h*) L^a [ L^(-a) + K L^(-eta) + 11.7 L^(-eta) ] <= K X^(h*) L^a,
+```
+
+using `log_2(X L^(-c_1)) <= L`, `11.7 <= K` and `2 L^(-eta) + L^(-a) <= 1`. ∎
+
+*Remarks.* (i) Nothing new enters: the counting lemma of 1.4 is used with
+a `theta` that shrinks like `log log X/log X`, and the loss `X^(lambda* theta)`
+of the entropy exponent is exactly a power of `log X`; the exponent `a*`
+is `1` (from the `k` dippers per landing point) plus `lambda*/h*` (from the
+tilt `lambda* = -E'(1)` of THM-4487 against the bootstrap rate `h*`).
+(ii) THM-4495 proves that the `theta = 0` count has the ballot factor
+`(log X)^(-3/2)`; if the same factor held uniformly for the moving barrier
+`theta_X` (a walk staying above the line `-theta_X L` on a window of
+length `L`), the exponent would drop to `a* - 3/2 = 0.014`: that uniform
+ballot estimate at a moving barrier is the open piece, and this addendum
+does not claim it. (iii) The statement is still far from the expected
+`N(X) = O(log X)` of an actual divergent orbit, for the reason of section
+4: one window per element, with no use of the fact that consecutive
+windows are shifts of one word.
+
 ### 1.7 Proofs of the corollaries
 
 *Corollary 1.* By Abel summation, `sum_(|x_i| <= Y) 1/|x_i| = N_T(Y)/Y + int_1^Y N_T(X) X^(-2) dX`,
@@ -501,6 +570,7 @@ Further controls (`collatz_thin_20260925_controls2.py` / `.out`):
    family, or can a second constraint (the windows of one orbit are shifts
    of one sequence) lower it?
    **Update 2026-09-26 (THM-4487):** the counting lemma is sharp, `#F_b(X, theta) = X^(h(rho)+o(1))`, so no improvement of the lemma lowers `h*`; a second constraint would have to reach beyond one `log_2 X` window.
+   **Update 2026-09-26b (addendum 1.6b):** the `eps` is a power of the logarithm, `N(X) <= K X^(h*) (log_2 X)^a` for every `a > 1 + lambda*/h* = 1.5138`; a uniform ballot factor at a moving barrier (THM-4495's `log^(-3/2)` for `theta -> 0`) would lower `a` to about `0.014`.
 2. The union question: bound `#{n <= X : the orbit of n diverges}`. The
    branching of the inverse tree defeats the pigeonhole; Krasikov–Lagarias
    difference inequalities are the natural tool.
