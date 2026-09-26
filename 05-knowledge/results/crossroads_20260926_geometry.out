@@ -1,0 +1,53 @@
+GEOMETRY CROSSROADS: exact finite controls, not a Collatz proof
+source_sha256 29cfdb7ae53aeb17a3c16ac98eb7b17903ff16b5bf1983fcee1bed4f36c13518
+BALANCED: length, source_bits, visits_[n,3n], max_dyadic_shell_visits
+8 33 9 8
+16 63 17 16
+32 121 33 32
+64 237 65 64
+128 467 129 129
+256 927 257 256
+512 1846 513 512
+CENSUS: q sign starts max_path capped max_shell_count witness(start,shell)
+3 1 50000 130 0 24 (53529, 32768)
+first_descent_length_per_bit_max 37/5 27 37
+same_witness_exact_harmonic_mass_n_times_sum 6896107372072777516799396686725042767722231866837243373156235889428889073/979242814206548456823262412766887118428622723463269400529345757081871075
+same_witness_mass_integer_bounds 7 8
+3 -1 50000 126 0 25 (9351, 8192)
+5 1 500 2000 444 29 (597, 1842755090244893238399196572748178169393027939656465052918069482541808673043041431682679065028153695088607604995490158642466105776330465152617887818082371115063181312)
+TRANSITION-RANK: source, distinct edges, rank, deficiency
+7 5 5 0
+27 41 41 0
+31 39 39 0
+97 43 43 0
+871 65 65 0
+6171 96 96 0
+9351 37 37 0
+53529 55 55 0
+77031 129 129 0
+FULL_TRANSITION_RANK_HYPOTHESIS 1000 paths 0 failures []
+INDEPENDENT PRICE AUDIT: b, ceil(b log_3 2), good_rotated_words, binomial
+1 1 1 1
+2 2 1 1
+3 2 1 3
+4 3 2 4
+5 4 3 5
+6 4 3 15
+7 5 7 21
+8 6 12 28
+9 6 12 84
+10 7 30 120
+11 7 30 330
+12 8 85 495
+13 9 173 715
+14 9 173 2002
+actual_hub_degree 4 2 0 0 5
+actual_hub_degree 4 4 625 2 10
+actual_hub_degree 4 16 937 4 15
+actual_hub_degree 8 2 0 0 15
+actual_hub_degree 8 4 78 3 30
+actual_hub_degree 8 16 331 7 45
+actual_hub_degree 12 2 0 0 30
+actual_hub_degree 12 4 9 2 60
+actual_hub_degree 12 16 216 9 90
+ALL EXACT CHECKS PASSED

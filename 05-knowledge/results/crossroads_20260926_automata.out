@@ -1,0 +1,11 @@
+section_law_checks 24552
+exact_distinct_sections_depth_1_to_18 [2, 4, 7, 12, 21, 38, 69, 127, 235, 438, 819, 1535, 2883, 5425, 10218, 19275, 36403, 68835]
+state_carry_only_hostile {'depth': 3, 'sources': [1, 4], 'states': [(2, 2), (1, 2)]}
+Pade_defect_first_nonzero [(6, 2), (8, -2), (10, 2), (14, -2)]
+Pade_value_and_height_checks 54
+Bernstein_product_bridges_and_independent_dynamics 150
+block_certificate {'q': 3, 'length': 10, 'ones': 9, 'rho': '1024/19683', 'sufficient_inequality': True}
+block_certificate {'q': 5, 'length': 5, 'ones': 4, 'rho': '32/625', 'sufficient_inequality': True}
+block_certificate {'q': 5, 'length': 10, 'ones': 9, 'rho': '1024/1953125', 'sufficient_inequality': False}
+block_certificate {'q': 7, 'length': 3, 'ones': 2, 'rho': '8/49', 'sufficient_inequality': True}
+PASS: finite exact checks; infinite irrationality and nonfinite-state claims use proofs in note.

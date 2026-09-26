@@ -1,0 +1,82 @@
+Exact incidence, not a random-orbit model. Badness is the slope-prefix predicate.
+Direct pointwise energy audits: 3258
+Affine/cycle controls: {"3n+1": "-1", "3n-1": "1", "5n+1": "-1/3"}
+Independent inverse multiplicity audit: {"admissible_ancestors_checked": 376, "groups_checked": 376, "hubs_per_sheet": 128, "largest_count_over_bound": "1", "max_depth": 18}
+SHEET 3 1
+{"L": 1, "bad_classes": 1, "bound": "1/2", "cells": 1, "energy_over_L2_rho": 1.0, "mean": "1/2", "rho": "1/2", "second": "1/2"}
+{"L": 2, "bad_classes": 1, "bound": "1/14", "cells": 2, "energy_over_L2_rho": 0.875, "mean": "1/2", "rho": "1/4", "second": "7/8"}
+{"L": 3, "bad_classes": 2, "bound": "1/31", "cells": 6, "energy_over_L2_rho": 0.8611111111111112, "mean": "3/4", "rho": "1/4", "second": "31/16"}
+{"L": 4, "bad_classes": 3, "bound": "1/74", "cells": 12, "energy_over_L2_rho": 0.8671875, "mean": "3/4", "rho": "3/16", "second": "333/128"}
+{"L": 5, "bad_classes": 4, "bound": "1/180", "cells": 20, "energy_over_L2_rho": 0.9, "mean": "5/8", "rho": "1/8", "second": "45/16"}
+{"L": 6, "bad_classes": 8, "bound": "8/2113", "cells": 48, "energy_over_L2_rho": 0.9171006944444444, "mean": "3/4", "rho": "1/8", "second": "2113/512"}
+{"L": 7, "bad_classes": 13, "bound": "169/79318", "cells": 91, "energy_over_L2_rho": 0.9727972919937206, "mean": "91/128", "rho": "13/128", "second": "39659/8192"}
+{"L": 8, "bad_classes": 19, "bound": "361/329586", "cells": 152, "energy_over_L2_rho": 1.058754368832237, "mean": "19/32", "rho": "19/256", "second": "164793/32768"}
+{"L": 9, "bad_classes": 38, "bound": "361/444269", "cells": 342, "energy_over_L2_rho": 1.1276320865821963, "mean": "171/256", "rho": "19/256", "second": "444269/65536"}
+{"L": 10, "bad_classes": 64, "bound": "512/1005725", "cells": 640, "energy_over_L2_rho": 1.227691650390625, "mean": "5/8", "rho": "1/16", "second": "1005725/131072"}
+{"L": 11, "bad_classes": 128, "bound": "2048/5142651", "cells": 1408, "energy_over_L2_rho": 1.2970351542323089, "mean": "11/16", "rho": "1/16", "second": "5142651/524288"}
+{"L": 12, "bad_classes": 226, "bound": "12769/46567658", "cells": 2712, "energy_over_L2_rho": 1.3973767365912304, "mean": "339/512", "rho": "113/2048", "second": "23283829/2097152"}
+{"L": 13, "bad_classes": 367, "bound": "134689/779073374", "cells": 4771, "energy_over_L2_rho": 1.5333300586009928, "mean": "4771/8192", "rho": "367/8192", "second": "389536687/33554432"}
+{"L": 14, "bad_classes": 734, "bound": "134689/945280621", "cells": 10276, "energy_over_L2_rho": 1.6041636657629992, "mean": "2569/4096", "rho": "367/8192", "second": "945280621/67108864"}
+SHEET 3 -1
+{"L": 1, "bad_classes": 1, "bound": "1/2", "cells": 1, "energy_over_L2_rho": 1.0, "mean": "1/2", "rho": "1/2", "second": "1/2"}
+{"L": 2, "bad_classes": 1, "bound": "1/14", "cells": 2, "energy_over_L2_rho": 0.875, "mean": "1/2", "rho": "1/4", "second": "7/8"}
+{"L": 3, "bad_classes": 2, "bound": "1/31", "cells": 6, "energy_over_L2_rho": 0.8611111111111112, "mean": "3/4", "rho": "1/4", "second": "31/16"}
+{"L": 4, "bad_classes": 3, "bound": "1/74", "cells": 12, "energy_over_L2_rho": 0.8671875, "mean": "3/4", "rho": "3/16", "second": "333/128"}
+{"L": 5, "bad_classes": 4, "bound": "1/180", "cells": 20, "energy_over_L2_rho": 0.9, "mean": "5/8", "rho": "1/8", "second": "45/16"}
+{"L": 6, "bad_classes": 8, "bound": "8/2113", "cells": 48, "energy_over_L2_rho": 0.9171006944444444, "mean": "3/4", "rho": "1/8", "second": "2113/512"}
+{"L": 7, "bad_classes": 13, "bound": "169/79318", "cells": 91, "energy_over_L2_rho": 0.9727972919937206, "mean": "91/128", "rho": "13/128", "second": "39659/8192"}
+{"L": 8, "bad_classes": 19, "bound": "361/329586", "cells": 152, "energy_over_L2_rho": 1.058754368832237, "mean": "19/32", "rho": "19/256", "second": "164793/32768"}
+{"L": 9, "bad_classes": 38, "bound": "361/444269", "cells": 342, "energy_over_L2_rho": 1.1276320865821963, "mean": "171/256", "rho": "19/256", "second": "444269/65536"}
+{"L": 10, "bad_classes": 64, "bound": "512/1005725", "cells": 640, "energy_over_L2_rho": 1.227691650390625, "mean": "5/8", "rho": "1/16", "second": "1005725/131072"}
+SHEET 5 1
+{"L": 1, "bad_classes": 1, "bound": "1/2", "cells": 1, "energy_over_L2_rho": 1.0, "mean": "1/2", "rho": "1/2", "second": "1/2"}
+{"L": 2, "bad_classes": 2, "bound": "1/9", "cells": 4, "energy_over_L2_rho": 1.125, "mean": "1", "rho": "1/2", "second": "9/4"}
+{"L": 3, "bad_classes": 3, "bound": "9/302", "cells": 9, "energy_over_L2_rho": 1.3981481481481481, "mean": "9/8", "rho": "3/8", "second": "151/32"}
+{"L": 4, "bad_classes": 6, "bound": "9/665", "cells": 24, "energy_over_L2_rho": 1.7317708333333333, "mean": "3/2", "rho": "3/8", "second": "665/64"}
+{"L": 5, "bad_classes": 10, "bound": "1/183", "cells": 50, "energy_over_L2_rho": 2.2875, "mean": "25/16", "rho": "5/16", "second": "4575/256"}
+{"L": 6, "bad_classes": 20, "bound": "10/3319", "cells": 120, "energy_over_L2_rho": 2.881076388888889, "mean": "15/8", "rho": "5/16", "second": "16595/512"}
+{"L": 7, "bad_classes": 35, "bound": "245/170642", "cells": 245, "energy_over_L2_rho": 3.886707361516035, "mean": "245/128", "rho": "35/128", "second": "426605/8192"}
+{"L": 8, "bad_classes": 70, "bound": "245/284387", "cells": 560, "energy_over_L2_rho": 4.959315708705357, "mean": "35/16", "rho": "35/128", "second": "1421935/16384"}
+{"L": 9, "bad_classes": 140, "bound": "490/918959", "cells": 1260, "energy_over_L2_rho": 6.331011629188713, "mean": "315/128", "rho": "35/128", "second": "4594795/32768"}
+{"L": 10, "bad_classes": 266, "bound": "17689/57321882", "cells": 2660, "energy_over_L2_rho": 8.417804570018797, "mean": "665/256", "rho": "133/512", "second": "28660941/131072"}
+Joint-incidence harmonic dual:
+{"L": 1, "decimal": 0.5, "distinct_maxima": 1, "endpoint_period": 2, "harmonic": "1/2", "over_CS": 1.0, "source_period": 2}
+{"L": 2, "decimal": 0.12222222222222222, "distinct_maxima": 2, "endpoint_period": 12, "harmonic": "11/90", "over_CS": 1.711111111111111, "source_period": 24}
+{"L": 3, "decimal": 0.07602339181286549, "distinct_maxima": 3, "endpoint_period": 72, "harmonic": "13/171", "over_CS": 2.3567251461988303, "source_period": 288}
+{"L": 4, "decimal": 0.04349477682811016, "distinct_maxima": 5, "endpoint_period": 432, "harmonic": "229/5265", "over_CS": 3.218613485280152, "source_period": 3456}
+{"L": 5, "decimal": 0.021658433008893044, "distinct_maxima": 11, "endpoint_period": 2592, "harmonic": "3703484723/170995044816", "over_CS": 3.898517941600748, "source_period": 41472}
+{"L": 6, "decimal": 0.018274172788456097, "distinct_maxima": 17, "endpoint_period": 15552, "harmonic": "1716856777532455/93949903911218544", "over_CS": 4.826665887750967, "source_period": 497664}
+Tilted diagonal obstruction:
+{"L": 2, "last_diagonal_lower": 0.375, "tilted_survival": 0.75}
+{"L": 8, "last_diagonal_lower": 0.229888916015625, "tilted_survival": 0.45977783203125}
+{"L": 16, "last_diagonal_lower": 0.20504388632252812, "tilted_survival": 0.41008777264505625}
+{"L": 32, "last_diagonal_lower": 0.19420779396891014, "tilted_survival": 0.3884155879378203}
+{"L": 64, "last_diagonal_lower": 0.19063599176555082, "tilted_survival": 0.38127198353110164}
+{"L": 128, "last_diagonal_lower": 0.19005205291098204, "tilted_survival": 0.3801041058219641}
+{"L": 256, "last_diagonal_lower": 0.19002547826729566, "tilted_survival": 0.3800509565345913}
+Trimmed slope tube and affine-offset capacity:
+{"L": 6, "bad_classes": 0, "bound": "0", "cap": 2, "capacity_price_bound": "0", "cells": 0, "energy_over_L2_rho": 0, "mean": "0", "rho": "0", "second": "0", "uniform_capacity_bound": 18}
+{"L": 8, "bad_classes": 0, "bound": "0", "cap": 2, "capacity_price_bound": "0", "cells": 0, "energy_over_L2_rho": 0, "mean": "0", "rho": "0", "second": "0", "uniform_capacity_bound": 30}
+{"L": 10, "bad_classes": 0, "bound": "0", "cap": 2, "capacity_price_bound": "0", "cells": 0, "energy_over_L2_rho": 0, "mean": "0", "rho": "0", "second": "0", "uniform_capacity_bound": 44}
+{"L": 12, "bad_classes": 0, "bound": "0", "cap": 2, "capacity_price_bound": "0", "cells": 0, "energy_over_L2_rho": 0, "mean": "0", "rho": "0", "second": "0", "uniform_capacity_bound": 60}
+{"L": 14, "bad_classes": 0, "bound": "0", "cap": 2, "capacity_price_bound": "0", "cells": 0, "energy_over_L2_rho": 0, "mean": "0", "rho": "0", "second": "0", "uniform_capacity_bound": 80}
+{"L": 6, "bad_classes": 4, "bound": "1/271", "cap": 4, "capacity_price_bound": "1/1152", "cells": 24, "energy_over_L2_rho": 0.4704861111111111, "mean": "3/8", "rho": "1/16", "second": "271/256", "uniform_capacity_bound": 72}
+{"L": 8, "bad_classes": 4, "bound": "4/5533", "cap": 4, "capacity_price_bound": "1/7680", "cells": 32, "energy_over_L2_rho": 0.33770751953125, "mean": "1/8", "rho": "1/64", "second": "5533/16384", "uniform_capacity_bound": 120}
+{"L": 10, "bad_classes": 4, "bound": "1/5550", "cap": 4, "capacity_price_bound": "1/45056", "cells": 40, "energy_over_L2_rho": 0.216796875, "mean": "5/128", "rho": "1/256", "second": "2775/32768", "uniform_capacity_bound": 176}
+{"L": 12, "bad_classes": 8, "bound": "2/27181", "cap": 4, "capacity_price_bound": "1/122880", "cells": 96, "energy_over_L2_rho": 0.1843329535590278, "mean": "3/128", "rho": "1/512", "second": "27181/524288", "uniform_capacity_bound": 240}
+{"L": 14, "bad_classes": 16, "bound": "8/254699", "cap": 4, "capacity_price_bound": "1/327680", "cells": 224, "energy_over_L2_rho": 0.1586285026705995, "mean": "7/512", "rho": "1/1024", "second": "254699/8388608", "uniform_capacity_bound": 320}
+{"L": 6, "bad_classes": 7, "bound": "49/12070", "cap": 8, "capacity_price_bound": "7/9216", "cells": 42, "energy_over_L2_rho": 0.7483878968253969, "mean": "21/32", "rho": "7/64", "second": "6035/2048", "uniform_capacity_bound": 144}
+{"L": 8, "bad_classes": 11, "bound": "121/99686", "cap": 8, "capacity_price_bound": "11/61440", "cells": 88, "energy_over_L2_rho": 0.5531227805397727, "mean": "11/32", "rho": "11/256", "second": "49843/32768", "uniform_capacity_bound": 240}
+{"L": 10, "bad_classes": 33, "bound": "121/191050", "cap": 8, "capacity_price_bound": "3/32768", "cells": 330, "energy_over_L2_rho": 0.5088334517045454, "mean": "165/512", "rho": "33/1024", "second": "859725/524288", "uniform_capacity_bound": 352}
+{"L": 12, "bad_classes": 88, "bound": "968/2684845", "cap": 8, "capacity_price_bound": "11/245760", "cells": 1056, "energy_over_L2_rho": 0.41381296485361424, "mean": "33/128", "rho": "11/512", "second": "2684845/2097152", "uniform_capacity_bound": 480}
+{"L": 14, "bad_classes": 209, "bound": "2299/12601542", "cap": 8, "capacity_price_bound": "209/10485760", "cells": 2926, "energy_over_L2_rho": 0.3567426182564645, "mean": "1463/8192", "rho": "209/16384", "second": "119714649/134217728", "uniform_capacity_bound": 640}
+{"L": 6, "bad_classes": 8, "bound": "8/2113", "cap": 16, "capacity_price_bound": "1/3456", "cells": 48, "energy_over_L2_rho": 0.9171006944444444, "mean": "3/4", "rho": "1/8", "second": "2113/512", "uniform_capacity_bound": 432}
+{"L": 8, "bad_classes": 17, "bound": "289/234014", "cap": 16, "capacity_price_bound": "17/184320", "cells": 136, "energy_over_L2_rho": 0.8401812385110294, "mean": "17/32", "rho": "17/256", "second": "117007/32768", "uniform_capacity_bound": 720}
+{"L": 10, "bad_classes": 51, "bound": "2601/4244342", "cap": 16, "capacity_price_bound": "17/360448", "cells": 510, "energy_over_L2_rho": 0.8127186734068628, "mean": "255/512", "rho": "51/1024", "second": "2122171/524288", "uniform_capacity_bound": 1056}
+{"L": 12, "bad_classes": 175, "bound": "30625/83215074", "cap": 16, "capacity_price_bound": "35/1179648", "cells": 2100, "energy_over_L2_rho": 0.8061976260230654, "mean": "525/1024", "rho": "175/4096", "second": "41607537/8388608", "uniform_capacity_bound": 1440}
+{"L": 14, "bad_classes": 496, "bound": "15376/72148489", "cap": 16, "capacity_price_bound": "31/1966080", "cells": 6944, "energy_over_L2_rho": 0.724752188827585, "mean": "217/512", "rho": "31/1024", "second": "72148489/16777216", "uniform_capacity_bound": 1920}
+{"L": 6, "bad_classes": 8, "bound": "8/2113", "cap": 32, "capacity_price_bound": "1/9216", "cells": 48, "energy_over_L2_rho": 0.9171006944444444, "mean": "3/4", "rho": "1/8", "second": "2113/512", "uniform_capacity_bound": 1152}
+{"L": 8, "bad_classes": 19, "bound": "361/329586", "cap": 32, "capacity_price_bound": "19/491520", "cells": 152, "energy_over_L2_rho": 1.058754368832237, "mean": "19/32", "rho": "19/256", "second": "164793/32768", "uniform_capacity_bound": 1920}
+{"L": 10, "bad_classes": 62, "bound": "961/1755630", "cap": 32, "capacity_price_bound": "31/1441792", "cells": 620, "energy_over_L2_rho": 1.1061176915322581, "mean": "155/256", "rho": "31/512", "second": "877815/131072", "uniform_capacity_bound": 2816}
+{"L": 12, "bad_classes": 211, "bound": "44521/140740586", "cap": 32, "capacity_price_bound": "211/15728640", "cells": 2532, "energy_over_L2_rho": 1.1308746257538917, "mean": "633/1024", "rho": "211/4096", "second": "70370293/8388608", "uniform_capacity_bound": 3840}
+{"L": 14, "bad_classes": 635, "bound": "403225/2162178586", "cap": 32, "capacity_price_bound": "127/16777216", "cells": 8890, "energy_over_L2_rho": 1.0603318964881412, "mean": "4445/8192", "rho": "635/16384", "second": "1081089293/134217728", "uniform_capacity_bound": 5120}
