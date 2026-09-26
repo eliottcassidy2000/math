@@ -1,0 +1,15 @@
+collision N: source=2134446157293545680116155684904813624866473205075599455753325089128447; hub=1544714368800273392784179563875656116569530364984522231576309181404945461; private certificates=153/153; raw gcd dominance=152/153
+collision M: source=2134446157293545680116155684904813624866473205075599455753325089128443; hub=1544714368800273392784179563875656116569530364984522231576309181404945461; private certificates=153/153; raw gcd dominance=153/153
+block digit test: 2046 words through 10 blocks; exactly 2 per carry class; 126 actual positive replays
+gcd lemma universe: 8835 tuples, 1832 sufficient certificates, 5645 dependent tuples all have divisibility witness
+H_2=2
+H_3=108
+H_4=39366
+H_5=86093442
+incident bound formulas: 4950 exact ratios through N=100
+fixed-word cutoff: 1364 exact valuation words, N=2..6, k_i=1..4
+no-dip universe: odd sources 3..100000, N=2..5; 66405 prefixes; 51339 above-threshold certificates including 29 high controls through N=30
+no-descent horizon sidecar: 12007 exact guarded cases, N=2..4
+hostiles: arbitrarily high immediate descent repeats 1; (6,10,15) defeats necessity; (2,3,6) defeats unique-relation/Hamiltonian inference; (2,4) defeats gcd-kernel rank
+asymptotic all-source no-dip coefficient: 0.960047311978290 (strictly smaller c required)
+PASS: all checks exact except final displayed asymptotic decimal; Collatz and G2 remain open

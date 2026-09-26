@@ -1,0 +1,7 @@
+metric_controls={"C4_metric": "all triangles degenerate, no compatible line order", "equilateral_K3": "triangle inequality with graph cycle"}
+fixed_spine_exhaustive_census=[{"free_chords": 0, "n": 2, "tournaments": 1}, {"free_chords": 1, "n": 3, "tournaments": 2}, {"free_chords": 3, "n": 4, "tournaments": 8}, {"free_chords": 6, "n": 5, "tournaments": 64}, {"free_chords": 10, "n": 6, "tournaments": 1024}, {"free_chords": 15, "n": 7, "tournaments": 32768}]
+consecutive_triangle_hostile={"n": 4, "only_backward_chord": [0, 3]}
+THM316_recovery=[{"Hamilton_paths": 1, "k": 1, "n": 2}, {"Hamilton_paths": 5, "k": 2, "n": 4}, {"Hamilton_paths": 29, "k": 3, "n": 6}, {"Hamilton_paths": 233, "k": 4, "n": 8}, {"Hamilton_paths": 2489, "k": 5, "n": 10}]
+affine_word_census={"exponents": [1, 4], "lengths": [1, 5], "max_component_change_events": 4, "positive_real_chambers_checked": 8324, "words": 1364}
+recovered_231_to_233={"carry": 1441352971, "contact": "1441352971/5077565", "cylinder_modulus": 268435456, "nodes": [231, 347, 521, 391, 587, 881, 661, 31, 47, 71, 107, 161, 121, 91, 137, 103, 155, 233], "only_finite_cut": 7, "sampled_realizations": [{"endpoint": 233, "scc_sizes": [18], "source": 231, "t": 0}, {"endpoint": 258280559, "scc_sizes": [7, 11], "source": 268435687, "t": 1}, {"endpoint": 516560885, "scc_sizes": [7, 11], "source": 536871143, "t": 2}, {"endpoint": 774841211, "scc_sizes": [7, 11], "source": 805306599, "t": 3}], "word": [1, 1, 2, 1, 1, 2, 6, 1, 1, 1, 1, 2, 2, 1, 2, 1, 1]}
+STATUS=PASS; elementary proofs are in the companion note; no Collatz closure
