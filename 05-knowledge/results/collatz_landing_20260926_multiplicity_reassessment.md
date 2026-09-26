@@ -1,8 +1,19 @@
 # The landing multiplicity `L` of the thin-divergence recursion: what it costs, why no orbit-blind count removes it, what would, and what the strip entropy already buys
 
 **Status: REASSESSMENT (stepping back, as asked) with PROVED small
-statements, FINITE-EXACT probes, and one new hypothesis (HYP-9161). No
+statements, FINITE-EXACT probes, and HYP-9161, now REFUTED in its literal
+arbitrary-segment formulation; endpoint-corrected versions remain OPEN. No
 Collatz claim. Session `collatz-landing-20260926` (opus), 2026-09-26.**
+
+**Correction, crossroads-poset-20260926.** The [fixed-integer audit,
+sections 5–6](crossroads_poset_20260926_integer.md) gives actual distinct
+positive orbit segments with average landing multiplicity Omega(log X)
+at theta log X=O(loglog X). This refutes the endpoint-free finite-segment
+version of HYP-9161, not THM-4476 or THM-4499. An O(k) endpoint allowance
+absorbs the examples. Section 8's peak proof is repaired below by applying
+the carry bound to each suffix ending at the large peak, rather than
+dividing by an uncontrolled old window start. Original finite probes are
+retained as evidence about their specified samples, not universal bounds.
 
 Scripts: `04-computation/experiments/collatz_landing_20260926_probe.py`
 -> `.out` (strip entropies, landing multiplicities on actual segments);
@@ -39,7 +50,8 @@ count itself (THM-4495). Nothing in this direction changes the exponent
 ## 1. How large the multiplicity can be (corrected after the audit)
 
 **Lemma (one-bit band; found by the audit).** Let `j` be a landing point
-with `theta L >= 1` and `y > |b|` along the segment. The step into `j` is a
+with `theta L >= 1`. Assume b>0, or that every value in the relevant window
+exceeds `5|b|`. The step into `j` is a
 halving (`y_j < y_(j-1)`), so `y_j = y_(j-1)/2`, and a dipper `i` of `j` has
 `y_i 2^(-theta L) in (y_j, y_(j-1)]`, i.e.
 
@@ -49,9 +61,15 @@ y_i in ( 2^(theta L) y_j,  2^(theta L + 1) y_j ] :   every dipper of j lies in o
 
 At most two of any three consecutive orbit values lie in a band `(a, 2a]`:
 a halving leaves it, and two odd steps multiply by `(9y + 5b)/(4y) > 2`
-(for `b = -1` once `y > 5`). Hence the multiplicity of every landing point
-is at most `2 ceil(k/3) <= 2k/3 + 4/3`, for every orbit. So THM-4476's
-`k` can be replaced by `2k/3 + 4/3`; this changes constants, not `beta`.
+(for b<0 the stated height cutoff guarantees this). Hence the multiplicity
+is at most `2 ceil(k/3) <= 2k/3 + 4/3` under these hypotheses, in particular
+for ordinary positive Collatz. The original condition `y>|b|` was too weak
+for the three-point argument: for b=-3, `7,9,12` are three consecutive
+values in `(6,12]`. On a distinct positive orbit at most `5|b|` states lie
+in the excluded finite core, so at most `5|b|(k+1)` starting windows meet it.
+These may be charged separately as O_b(k) boundary/core terms. Thus the
+general thinness exponent is unchanged, but an unconditional every-orbit
+per-landing bound must not be inferred from this proof.
 
 **What residue classes realise.** A first draft of this section claimed
 that a climb followed by a drop, or a hover followed by a drop, gives one
@@ -68,6 +86,21 @@ multiplicity found is `13 = 0.54 L` at `L = 24` (a `20`-step hover in
 one 1-bit band). So multiplicity a constant fraction of `L` is realised
 (`beta = 1`), but by hovers in a narrow band, not by climbs, and never
 above the lemma's `2k/3 + O(1)`.
+
+The original hover/drop and climb/drop cartoons overclaimed that all
+sources have the same first landing: their source-dependent thresholds
+need not agree. Here is a rigorous replacement, stronger in the averaged
+sense needed below. Choose a length-m prefix with odd counts
+`o_j=ceil(j log_3 2)`, append `D=ceil(log_2 m)+6` zeroes, and set
+`K=m+D`, `n=2^(4K)+r_K`, `X=2^(4K+3)`, `theta log_2 X=D-3`.
+Here r_K is the exact least parity residue. All K steps are actual,
+positive, and distinct. The hover values lie in [n,4n), and its m sources
+plus three drop sources first land among at most five terminal positions.
+Thus the average is at least (m+3)/5=Omega(log X). Full proof and exact
+controls are in [the integer audit, section 5](crossroads_poset_20260926_integer.md).
+This establishes tightness on actual arbitrary truncated segments, not
+just formally realizable windows. Its full size is O(k), so it leaves the
+endpoint-corrected recursion open.
 
 On actual orbit segments the multiplicities are small: with `L = 20` and
 `theta = 0.05, 0.1, 0.2`, the mean multiplicity is `2.0`-`2.8` and the
@@ -86,10 +119,9 @@ bootstrap's own `theta_X = 1.05 log_2 L/L` and `L = 20, 30, 40, 60, 80`, on
 located the maximal landing points: they are not produced by the initial
 climb of `2^L - 1` (which leaves `[1, X]` at step `1`) but by later
 stretches in which many window points sit in one 1-bit band, exactly the
-lemma's configuration, and random starts show the same `max/L`. So the
-*average* is `O(theta L) = O(log L)` as the heuristic says, and the
-*maximum* is a constant fraction of `L`: HYP-9161 must be stated for the
-average, and it is the average that the recursion uses.
+lemma's configuration, and random starts show the same `max/L`.. The recursion uses the average, but
+the actual construction above refutes a uniform endpoint-free average
+bound as well. These finite samples leave the endpoint-stable version open.
 
 ```text
 L  theta   thetaL | segment                         total    ND     D   landing  maxmult  mean  mean/(thetaL)  max/L
@@ -170,17 +202,19 @@ shorter than that, which is where the multiplicity lives.
 
 ## 4. The hypothesis (HYP-9161) and what it would give
 
-**HYP-9161 (landing multiplicity is polylogarithmic).** For every `T_b`
+**Original HYP-9161 (REFUTED for arbitrary finite segments).** For every `T_b`
 orbit, every `X` and every `theta` with `theta log_2 X >= 1`, the sum of
 the landing multiplicities is at most `C (log_2 X)^beta` times the number
 of landing points, with some `beta < 1` (conjecturally, `C (theta log_2 X)`
-suffices, i.e. `beta = 0` at the bootstrap's `theta_X`).
+suffices, giving a subpolynomial factor in L at the bootstrap's theta_X,
+so every fixed beta>0 is available asymptotically, not literally O(1)).
 
-If HYP-9161 holds with exponent `beta`, THM-4499's proof gives
+If a suitable endpoint-stable replacement holds with exponent `beta`, THM-4499's proof gives
 `N(X) <= K X^(h*) (log_2 X)^a` for every `a > beta lambda*/h* - 3/2`; with
-`beta = 0`, `a > -3/2`, the ballot floor. The hypothesis is about the
-orbit's oscillation, not about words: it fails for no residue class
-(section 1) and holds on every actual segment probed (section 1).
+`beta = 0`, `a > -3/2`, the ballot floor. The original finite probes all
+satisfied the proposed average estimate; the later actual hover/drop
+segments refute its universal arbitrary-segment formulation. Preserve an
+O(k) boundary term or state a whole-injective-orbit hypothesis explicitly.
 
 ## 5. Reassessment of the angle of approach
 
@@ -280,26 +314,28 @@ numbers of leaders and of peaks with `y_i <= X` are each
 `y_(i+s) > y_i` and the carry bound `|beta_s| <= |b|(3/2)^s <= y_i/2` give
 `M_s > 1/2`, i.e. the `k`-word of `y_i` has all partial sums `> -1`; such
 classes number `M_k(1)`, each with at most two representatives below `X`,
-and `M_k(1) <= D_s 2^(hk) k^(-3/2) 2^(lambda*) e^(s)` (Lemma M). Peaks: for
-a peak `i >= k` with `y_i >= Y_0`, the element `z = y_(i-k)` has, in its
-`k`-word, `M_k z + beta_k = y_i > y_(i-k+s) = M_s z + beta_s` for all
-`s < k`. Since `|beta_s|, |beta_k| <= |b|(3/2)^k <= Y_0/2 <= y_i/2`,
-`M_k z = y_i - beta_k >= y_i/2` and `M_s z = y_(i-k+s) - beta_s < 3 y_i/2`, so
-`M_k/M_s > 1/3 > 2^(-1.6)` for every `0 <= s < k`, with no condition on `z`
-(a first draft divided by `z`, which is not bounded below; the audit
-supplied this form). So `S_k - S_s > -1.585` for all `s < k`: the reversed
-word (THM-4495, Step 2) has all partial sums `> -1.6`, and is counted by
-`M_k(1.6)`; `z` is an integer `<= X` in one of those classes. Leaders and
-peaks with fewer than `k` successors or predecessors in the segment number
-at most `k` each. Peaks with
-`i < k` number at most `k`. ∎
+and `M_k(1) <= D_s 2^(hk) k^(-3/2) 2^(lambda*) e^(s)` (Lemma M). The last
+k indices of a finite segment require an additional O(k) boundary term.
+Peaks: put v=y_i>=Y_0. For each available suffix of s<=k steps from
+u=y_(i-s), write `v=P_s u+beta'_s`. Its own carry bound gives
+`|beta'_s|<=|b|((3/2)^s-1)<v/2`, hence `P_s>v/(2u)>1/2`, since u<v.
+These suffix products are precisely the prefix products of the reversed
+k-word. It therefore stays above the -1-bit barrier, and is counted by
+M_k(1), a stronger bound than M_k(1.6). The window start y_(i-k)<v<=X
+belongs to a class whose reversed word is counted by M_k(1); distinct terms make
+these starts distinct. Each class has at most two representatives below X.
+Peaks with i<k number at most k. These O(k) boundary terms are absorbed
+by the displayed asymptotic bound for X>=2. The old proof divided carry
+by y_(i-k) without a lower bound on that value; this suffix proof uses
+the endpoint where the size hypothesis actually holds. ∎
 
 So the extremal elements of any orbit (its records in either direction)
 sit exactly on the ballot floor `X^(h*) (log X)^(-3/2)` of THM-4495,
 whatever the orbit does; THM-4499's `(log X)^(0.514)` excess concerns only
 the elements that are neither, i.e. the interiors of excursions between
-consecutive leaders, and HYP-9161 is the statement that those interiors
-are not much longer than the number of their leaders times a polylog. The
+consecutive leaders. A suitable endpoint-stable oscillation inequality
+would control these interiors; the literal HYP-9161 segment statement is
+refuted as recorded above. The
 same argument bounds the *y-approximate* records (within `y` bits of a
 running extremum) by `O(X^(h*) L^(-3/2) 2^(lambda* y) e^(sy))`.
 
@@ -320,7 +356,8 @@ attribution of probe2's maxima to the initial climbs; the peak proof's
 division by `z`; the display "`- 1.038 log_2 log_2 L`" in the corollary (the
 coefficient is every value below `1.038`); the phrase "at the noise floor"
 for the Zeckendorf probe. ADDED by the audit: the one-bit band lemma
-(multiplicity `<= 2 ceil(k/3)` for every orbit). Cosmetic: the synthetic
+(multiplicity `<= 2 ceil(k/3)` for b>0 or windows above `5|b|`; the later
+crossroads audit supplied this negative-b scope correction). Cosmetic: the synthetic
 hover of probe (A) is built in `[-1.49, 0]`, not `[-1, 0]`; for 5n+1 the
 Proposition's `Y_0` exceeds `X`, so it asserts nothing there. Verdicts:
 Proposition HAS GAPS (repaired above); corollary SOUND (display fixed).

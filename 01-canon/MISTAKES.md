@@ -9,9 +9,60 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-26 poset crossroads: source laws, endpoint multiplicity, and peak carry
+
+- **HYP-9161's endpoint-free finite-segment average is false.** Exact
+  positive distinct hover/drop segments have m+3 dippers into at most five
+  landing positions, L=4(m+ceil(log2 m)+6)+3, and theta L=ceil(log2 m)+3.
+  Thus average multiplicity is Omega(L), not O(L^beta), beta<1, or
+  O(theta L). The m=96 witness has99 dippers and4 landings. The first
+  failed implication was extrapolating a few low-average actual segments
+  to every arbitrary truncation. The whole construction is O(k) long, so
+  an O(k) endpoint allowance absorbs it; an endpoint-stable or whole-orbit
+  oscillation inequality remains OPEN. This does not refute thin-divergence
+  canon. Earlier same-landing cartoons also ignored source-dependent
+  thresholds; the replacement controls at most five landing positions.
+- **A large peak does not make its old window start large.** The original
+  record proof divided carry by y_(i-k) without bounding that denominator.
+  Apply the carry estimate directly to each suffix ending at the large
+  peak v instead: v=P_s u+beta_s, |beta_s|<v/2, u<v gives P_s>1/2.
+  The reversed word has barrier -1 bit, improving the former -1.6 claim.
+  Keep O(k) missing-window terms at both segment ends.
+- **Height conditioning can destroy a poset probability law.** The four
+  six-letter expanding words have source residues27,39,47,31. Cutting at31
+  selects the two extreme insertion positions, not the extension set of
+  any poset on the same six labels. The XYZ covariance becomes +1/4
+  instead of -5/32, and support is nonconvex. Keep source weights/carry;
+  many full residue periods give the exact TV repair in THM-4503.
+- **The one-bit band proof needs its negative-b height cutoff.** For
+  b=-3 the actual consecutive values7,9,12 all lie in(6,12], although
+  each exceeds|b|. Two odd steps expand by more than2 only above5|b|.
+  The multiplicity bound holds for b>0 or high windows; a distinct orbit
+  has O(|b|) low-core states and thus O_b(k) windows meeting them. Keep
+  this additive cost in the general signed-map reduction.
+- **Incoming Moran claims needed event, scale, and model corrections.**
+  At k=1,W=2 there is no threshold hit, so division by its probability is
+  undefined; the undivided stopping identity remains valid. The computable
+  greedy word with M in[1,3) has supremum3 but never hits3, so the supremum
+  event is not the asserted open hitting set. The count2^(k-m)W_m has
+  height exponent1-c(1-h) at m~ck, not alwaysh. THM-4504 and its note now
+  retain these repairs and label full-orbit/tree predictions as model or
+  finite evidence. The [integration audit](../05-knowledge/results/crossroads_poset_20260926_moran_audit.md)
+  gives the exact witnesses and strongest surviving forms.
+- **Computability and density do not preserve an individual atom.** Fixed
+  integer addresses already stabilize; this does not prove descent. Haar
+  density and Abel normalization erase each fixed integer. The exact
+  atomic mass Z_k retains it, but its decay remains equivalent to the
+  unproved first-descent assertion. Z2=Z3 rules out strict tickwise decrease.
+
+Proofs, strongest survivors, and new questions:
+[fixed-integer audit](../05-knowledge/results/crossroads_poset_20260926_integer.md),
+[THM-4503, poset height selection](theorems/THM-4503-collatz-poset-bridge-height-selection.md),
+[current synthesis](../05-knowledge/results/crossroads_poset_20260926_board.md).
+
 ## 2026-09-26 landing-multiplicity reassessment (opus S7): four slips caught by the independent audit
 
-- **Climb-then-drop does not give multiplicity ~ L.** Claimed as PROVED that an odd run followed by a drop makes every climb index a dipper of one landing point. False: the thresholds `y_i 2^(-theta L)` are `0.585` bits apart while each halving of the drop crosses one bit, so each halving lands about `1.7` indices and a landing point receives at most `2` (word `1^12 0^11`, `L = 34`: `12` indices on `7` points). Hovers realise at most about `2L/3` (`0.54 L` found). The correct general statement is the one-bit band lemma: every dipper of `j` lies in `(2^(theta L) y_j, 2^(theta L + 1) y_j]`, and at most two of three consecutive orbit values share a 1-bit band, so multiplicity `<= 2 ceil(k/3)`.
+- **Climb-then-drop does not give multiplicity ~ L.** Claimed as PROVED that an odd run followed by a drop makes every climb index a dipper of one landing point. False: the thresholds `y_i 2^(-theta L)` are `0.585` bits apart while each halving of the drop crosses one bit, so each halving lands about `1.7` indices and a landing point receives at most `2` (word `1^12 0^11`, `L = 34`: `12` indices on `7` points). Hovers realise at most about `2L/3` (`0.54 L` found). For b>0 or windows above5|b|, the corrected statement is the one-bit band lemma: every dipper of `j` lies in `(2^(theta L) y_j, 2^(theta L + 1) y_j]`, and at most two of three consecutive orbit values share a 1-bit band, so multiplicity `<= 2 ceil(k/3)`.
 - **A proof that divides by an unbounded quantity.** The peak half of the records Proposition bounded `(|beta_k| + |beta_s|)/z` with `z = y_(i-k)`, which `y_i >= Y_0` does not bound below. Repair: compare `M_k z = y_i - beta_k >= y_i/2` with `M_s z = y_(i-k+s) - beta_s < 3y_i/2`, so `M_k/M_s > 1/3` with no condition on `z`.
 - **A limit written as an attained value.** `min Delta_l <= -1.0527 log_2 L - 1.038 log_2 log_2 L + O(1)` is not what THM-4499 gives; the coefficient is every value below `1.038` (`a > a*` strictly). Fixed in the note and in THM-4499's status.
 - **"At the noise floor" for a statistically significant but negligible dependence.** The Zeckendorf-length colour against `v_2(3n+1) mod 3` has `0.00027` bits of mutual information, nine times the null expectation at `N = 200000` (`p = 1.4e-7`); negligible in magnitude, but "noise" was the wrong word. Say "detectable but negligible".

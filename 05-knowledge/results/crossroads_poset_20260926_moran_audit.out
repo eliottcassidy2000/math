@@ -1,0 +1,4 @@
+Hostile k=1 W=2: probability=0 eps=1 conditional_mean=undefined
+Exact finite stopping cases 50 including empty hit cases 17
+Greedy rotation invariant checked for2000 prefixes with no threshold3 hit
+PASS: finite controls only; infinite nonattainment uses the written irrational-rotation proof

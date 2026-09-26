@@ -1,0 +1,15 @@
+naturally labelled posets 2 2
+naturally labelled posets 3 7
+naturally labelled posets 4 40
+naturally labelled posets 5 357
+naturally labelled posets 6 4824
+small-poset exact controls {'posets': 5230, 'extensions': 252265, 'maximal_triples': 4376, 'variance_triangles': 1089374, 'ideal_cuts': 91196, 'antichains': 96426}
+Fibonacci m 2 center pair 0.25 max displacement 0.375 normalized L1 0.2
+Fibonacci m 5 center pair 0.2777777777777778 max displacement 0.3819444444444444 normalized L1 0.1111111111111111
+Fibonacci m 20 center pair 0.27639320150351365 max displacement 0.38196601125010515 normalized L1 0.03014799926913941
+Fibonacci m 100 center pair 0.276393202250021 max displacement 0.38196601125010515 normalized L1 0.0061495919278596505
+Fibonacci m 250 center pair 0.276393202250021 max displacement 0.38196601125010515 normalized L1 0.0024672015518957878
+Fibonacci direct count/moment controls 168 boundary controls 63000
+rigid triple gluing exact controls 289
+Case D exact rational feasible grid 1230 appendix grid 101
+PASS: exact finite controls only; no claimed verification of cited upstream theorems or global epsilon numeral

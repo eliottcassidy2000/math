@@ -1,0 +1,35 @@
+STATUS FINITE-EXACT; the attached asymptotic claim remains UNDER REVIEW
+naturally_labelled_posets n=1: 1
+naturally_labelled_posets n=2: 2
+naturally_labelled_posets n=3: 7
+naturally_labelled_posets n=4: 40
+naturally_labelled_posets n=5: 357
+naturally_labelled_posets n=6: 4824
+finite_poset_lemma_census: {'antichain_bounds': 96427, 'ideal_height_bounds': 96427, 'linear_extensions': 252266, 'pair_window_bounds': 76193, 'posets': 5231, 'xyz_triples': 601302}
+exact_insertor t=1: extensions=2, TV_from_uniform_orders=0
+exact_insertor t=2: extensions=3, TV_from_uniform_orders=1/2
+exact_insertor t=3: extensions=4, TV_from_uniform_orders=5/6
+exact_insertor t=4: extensions=5, TV_from_uniform_orders=23/24
+exact_insertor t=5: extensions=6, TV_from_uniform_orders=119/120
+exact_insertor t=6: extensions=7, TV_from_uniform_orders=719/720
+antichain_restriction hostile: P(a before b | a<c,b isolated)= 2/3
+parity_inverse/direct_checks: 8190
+conditional_good_words L=1: count=1, TV_from_next_level_projection=0
+conditional_good_words L=2: count=1, TV_from_next_level_projection=0
+conditional_good_words L=3: count=2, TV_from_next_level_projection=1/6
+conditional_good_words L=4: count=3, TV_from_next_level_projection=1/6
+conditional_good_words L=5: count=4, TV_from_next_level_projection=0
+conditional_good_words L=6: count=8, TV_from_next_level_projection=15/104
+conditional_good_words L=7: count=13, TV_from_next_level_projection=42/247
+conditional_good_words L=8: count=19, TV_from_next_level_projection=0
+conditional_good_words L=9: count=38, TV_from_next_level_projection=39/304
+conditional_good_words L=10: count=64, TV_from_next_level_projection=0
+conditional_good_words L=11: count=128, TV_from_next_level_projection=735/7232
+height_fibre_minimality_universe: L<=6, all endpoint counts, least-residue initial cuts; tests= 8
+height_fibre_rows: [(27, '110111'), (31, '111110'), (39, '111011'), (47, '111101')]
+height_fibre_selected: n<=31 gives27,31; unanimous_poset_completion_count= 4
+height_fibre_XYZ rank units: 1/4 ; full-four-order control: -5/32
+height_fibre_XYZ original unit coordinates: 1/196
+height_fibre_nonconvex_support: two strict chamber points have midpoint in missing chamber
+many_period_uniformity_direct_integer_checks: 151
+PASS: all exact checks completed; no assertion-disabled checks

@@ -1,48 +1,17 @@
 ---
 id: THM-4504
-title: "One Moran function governs the families of 27: g(s) = 2^-s + (1/3)(3/2)^s, the growth function of the inverse-tree recursion A <- 2A, (2A-1)/3; its roots s = 1, 2 give tree growth and the exact rise law 2/(3W) < P(rise >= W) <= 1/W (optional stopping of the AM-fair martingale 3^o/2^j); its minimum gives the fractal dimension h(log_3 2) = the exact occurrence exponent of long glides; its tangent from 0 gives the delay constant 41.6776"
+title: "Moran pressure, fair-word rise bounds, finite integer windows, and model families of 27"
 status: >
-  PROVED + INDEPENDENTLY AUDITED (Proposition M, Theorems R, R', S, G, D,
-  Proposition B); CITED (Lagarias-Weiss 1992, Kontorovich-Lagarias; the
-  model statements); FINITE-EXACT (every n <= 2^32; OEIS record b-files);
-  EMPIRICAL (full-orbit rates).
-  T(n) = n/2 or (3n+1)/2; M_j = 3^(o_j)/2^j for the parity word; t(n) is the
-  maximum of the orbit; h = h(log_3 2) = 0.9499555.
-  (M) g(s) = 2^-s + (1/3)(3/2)^s is the Moran function of the owner's
-  inverse-tree recursion, with g(s) = phi(s-1) (Lagarias-Weiss duality).
-  g(1) = g(2) = 1. The minimum is 2^-(1-h), at s = 1 + lambda*, where
-  lambda* = 0.488077. beta = max_s -ln g(s)/s = 0.0239937, and
-  1/beta = 41.677648 is the delay-record constant.
-  (R) Exact rise law. M_j is a martingale because (3/2 + 1/2)/2 = 1, the
-  AM-fairness 3 + 1 = 4. Optional stopping gives
-  P(tau <= k) = (1 - eps_k)/E[M_tau | tau <= k], with
-  W <= E[M_tau | ...] < 3W/2. Hence 2/(3W) < P(sup M >= W) <= 1/W, and
-  W P(W) is about 0.83.
-  (R') On integers, each dyadic block's count is sandwiched between exact
-  word counts. For every W, the lower density of {n : t(n) >= W n} is at
-  least P(W) > 2/(3W). The matching upper bound is OPEN; it would give
-  density zero for the divergent integers.
-  (S) The window rise spectrum is 2 - beta for 1 < beta <= 1.1887, then
-  h(beta/log_2 3). The line 2 - beta is the slope -1 tangent to THM-4487's
-  dip-spectrum curve.
-  (G, D) Occurrence rate = covering number = dimension.
-  #{n in [2^k, 2^(k+1)) : glide(n) >= L} = 2^(k-L+1) W_(L-1) exactly for
-  L - 1 <= k log_3 2, where W_m is the number of classes mod 2^m meeting
-  the exceptional set Bad. So the long-glide family's exponent is
-  dim Bad = h = 1 + log_2 min g. The divergent 2-adic set R_inf has Haar
-  measure 0 and Hausdorff dimension h.
-  (B) A backward-closed family of counting exponent s has class-2-mod-3
-  fraction kappa with 2^-s + kappa (3/2)^s = 1, so s = 1 forces
-  kappa = 1/3.
-  FINITE-EXACT and EMPIRICAL.
-  27 maximises ln t(n)/ln n (2.56) over all 3 <= n <= 2^32 and all 98
-  known path records. 27's branch (the backward tree of 3077, the integers
-  that join 27's orbit before its peak) has density 0.3927 in every block
-  2^24..2^31; that is 87 times the averaged-model value. The owner's 4x
-  recursion is exact for sets but not for densities: a tree's density is
-  governed by the smallest numbers it contains, i.e. the second root
-  again. 104 of the 148 delay records lie in 27's branch.
-  Collatz is OPEN.
+  PROVED WITH STATED HYPOTHESES (M, repaired R, R', S for
+  1<beta<log_2 3, G, D with the open hitting-set definition, B under
+  regular variation and a limiting residue fraction). CITED MODEL
+  (Lagarias-Weiss and Kontorovich-Lagarias). FINITE-EXACT attributed to
+  the incoming exhaustive run through 2^32; that scan was not rerun in
+  the poset session. EMPIRICAL for full-orbit and individual-tree rates.
+  Correction 2026-09-26: finite conditional means require positive hit
+  probability; a supremum need not be attained; prefix-cover and integer
+  height exponents differ by the scale conversion. Actual backward-tree
+  densities and actual record asymptotics remain OPEN.
 source: collatz-procgen-20260922 session, family27 lane (2026-09-26), answering the owner's question about numbers beyond 27 and how their occurrence rate governs fractal recursion; audited and promoted by the session orchestrator 2026-09-26
 depends_on:
   - 01-canon/theorems/THM-4487-dip-spectrum-entropy-curve-and-sharpness-of-thin-divergence.md
@@ -60,6 +29,8 @@ output_audit: 05-knowledge/results/procgen_family27_20260926_orchestrator_check.
 output_sha256: 19c8ea0f09fd33fe9e693fbbdf547145236ae132b62b7f0d2c50e58439783365
 hash_basis: raw bytes
 audit: >
+  The following records the incoming orchestrator audit before the scoped
+  2026-09-26 corrections documented in the body and correction audit.
   The orchestrator read Proposition M, Theorems R, R', S, G, D and
   Proposition B and found them sound. Theorem R is optional stopping for
   the AM-fair martingale; R' is the affine sandwich
@@ -82,30 +53,81 @@ audit: >
   with the generic user agent.
 ---
 
-# THM-4504 -- the families of 27 and the Moran function of the inverse tree
+# THM-4504 — Moran pressure and the scoped families of 27
 
-**PROVED + INDEPENDENTLY AUDITED.** Full note: [procgen_family27_20260926_long_orbit_families](../../05-knowledge/results/procgen_family27_20260926_long_orbit_families.md).
+**Correction lineage, 2026-09-26.** The incoming proof and scan are retained,
+with the finite-horizon, topology, scale and model qualifications below.
+These repairs do not retract the fair-word martingale argument or its
+finite-window integer transfer. See the [full note](../../05-knowledge/results/procgen_family27_20260926_long_orbit_families.md)
+and [independent correction audit](../../05-knowledge/results/crossroads_poset_20260926_moran_audit.md).
 
-## 1. The owner's recursion has a growth function
+## 1. Exact identities and their domains
 
-The inverse tree grows by `A <- 2A` (always) and `A <- (2A-1)/3` (when `A = 2 mod 3`, probability `1/3`). Weighting children by their size ratios gives the Moran function `g(s) = 2^-s + (1/3)(3/2)^s`. Every rate of every "family of 27" is read off `g`:
+For the shortcut map, write M_j=3^(o_j)/2^j. The averaged branching function
+is g(s)=2^(-s)+(1/3)(3/2)^s=phi(s-1), where
+phi(t)=((3/2)^t+(1/2)^t)/2. Its roots g(s)=1 are s=1,2;
+its minimum is 2^(-(1-h)), h=h(log_3 2). The tangent optimization is
+max_(s>0) -ln g(s)/s=0.0239937..., whose reciprocal 41.677648... is a
+**model constant**, not a proved upper bound on actual stopping times.
+The legality weight 1/3 is a model average, not the conditional law of
+branches in a prescribed integer's inverse tree.
 
-| feature of `g` | value | family | rate |
-|---|---|---|---|
-| root `s = 1` | `g(1) = 1/2 + 1/2` | backward trees | counting exponent 1 |
-| root `s = 2` | `g(2) = 1/4 + 3/4` (`3 + 1 = 4`) | orbits rising by `W` | density `~0.83/W`, exactly in `(2/(3W), 1/W]`; path records `~2 ln X` |
-| minimum | `2^-(1-h)` | long glides | exponent `h = 0.95` = dimension of the exceptional fractal |
-| tangent from 0 | `1/beta = 41.6776` | delay records | `sigma(n) <= 41.68 ln n` (the Lagarias–Weiss constant) |
+For fair independent parity letters, M_j is a martingale. For W>1 let
+ tau=min{j:M_j>=W}, eps_k=E[M_k;tau>k]. For every finite k,
 
-## 2. What "numbers beyond 27 in the same family" are
+    E[M_tau;tau<=k]=1-eps_k.
 
-* **Delays.** Mostly 27's relatives in the backward tree: 104 of the 148 delay records, and 73% of long-delay integers, lie in 27's branch, against 39% of all integers.
-* **Heights.** Path records, occurring at the rate of the second root: `2 ln X` of them up to `X`. 27 is the unique maximiser of `ln t(n)/ln n` known.
-* **Glides.** A family whose occurrence count is exactly a covering number of the exceptional fractal (Theorem G), so its exponent is that fractal's dimension.
-* **Parity words.** 27's word is a typical critical excursion (THM-4480's critical band).
+Only when P(tau<=k)>0 may one divide by its conditional mean; then
+W<=E[M_tau|tau<=k]<3W/2. When no hit is possible, eps_k=1 and the
+conditional mean is undefined. In the infinite fair-word law,
 
-## 3. Rate and fractal recursion: what is exact
+    2/(3W)<P(W):=P(exists j:M_j>=W)<=1/W.
 
-* **Exact, by Theorem G.** The occurrence exponent of long glides equals the fractal dimension.
-* **Exact, by Theorem R.** The rise density's exponent `-1` is `1 - s2`.
-* **The owner's 4x ladder** (`A`, `4A+1`, ... rungs) holds exactly as a decomposition of sets. Densities of individual trees are not the averaged `1/4 : 3/4`: a tree's density is set by the smallest numbers it contains, e.g. 27's branch at `0.39`. This is the second root again: a small number inside a large number's tree is the backward image of a large rise, which has probability `~0.83/W`.
+The hitting set is open. It agrees almost surely, but not pointwise,
+with {sup_j M_j>=W}. The infinite-riser set {sup_j M_j=infinity}
+has Haar measure zero and Hausdorff dimension h. No ordinary-integer
+exclusion follows from this Haar-null statement.
+
+## 2. What transfers to integers
+
+Theorem R' gives the exact dyadic-block sandwich for j<=k using the
+carry error (3/4)^k. Hence the **window** densities tend to P(W).
+For complete trajectories only the lower natural-density bound
+
+    lower_density{n:t(n)>=Wn}>=P(W)>2/(3W)
+
+is proved here; the matching upper bound and density equality are OPEN.
+Theorem S's window rise exponent is 2-beta for 1<beta<=3log_2(3)/4,
+and h(beta/log_2 3) afterwards, with beta<log_2 3 throughout.
+
+Theorem G gives, for m=L-1<=k log_3 2,
+
+    #{n in [2^k,2^(k+1)):glide(n)>m}=2^(k-m) W_m.
+
+W_m is the number of length-m cylinders meeting the positive-slope set Bad,
+and log_2 W_m/m tends to h. Thus if m~ck, the integer-height counting
+exponent is **1-c(1-h)**, while the prefix-cover exponent is h.
+For c=log_3 2 these exponents differ. The separate c=1 conclusion needs
+the cited THM-4495 argument, outside Theorem G's exact window.
+
+Proposition B is conditional: for a backward-closed set with only finitely
+many missing forward-image roots, a regularly varying count of index s>0,
+and limiting class-2-mod-3 fraction kappa, one has
+2^(-s)+kappa(3/2)^s=1. It does not establish those hypotheses for a tree.
+
+## 3. What remains a model or finite observation
+
+| statement | retained status |
+|---|---|
+| exponent 1 for backward-tree growth from the averaged function | cited model; actual tree regular variation is not proved |
+| fair-word hitting probability approximately 0.83/W | numerical/model asymptotic; actual full-orbit equality is open |
+| path-record count approximately 2 ln X | proved in the stated independent Frechet model; empirical for Collatz |
+| delay constant 41.677648 | cited stochastic-model constant; no actual stopping-time bound asserted |
+| 27-branch fraction approximately 0.3927 | incoming finite block counts, not an established natural density |
+| 104 of 148 scanned delay records in 27's branch | incoming finite exact census |
+| 27 maximizes ln t(n)/ln n through 2^32 and among the listed records | incoming finite exact universe only |
+
+The inverse-tree ladder identities are exact set identities. Their averaged
+weights do not determine densities of individual trees. The numerical and
+heuristic claim that small members explain a tree's density is not promoted
+to a density theorem. Collatz remains OPEN.

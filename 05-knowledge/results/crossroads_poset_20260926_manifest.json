@@ -1,0 +1,97 @@
+{
+  "hash_basis": "UTF-8 file bytes with CRLF normalized to LF",
+  "files": [
+    {
+      "path": "01-canon/theorems/THM-4502-collatz-41-tail-growth-family.md",
+      "sha256": "1f01ae286a82a26aa7137cebaa42182b403998f527ab093da7f42789a4ebf8ef"
+    },
+    {
+      "path": "01-canon/theorems/THM-4503-collatz-poset-bridge-height-selection.md",
+      "sha256": "511da62fe656fefb2f374115498568ceae577e09616bb29f44e63912cd93ec03"
+    },
+    {
+      "path": "01-canon/theorems/THM-4504-families-of-27-moran-function-of-the-inverse-tree.md",
+      "sha256": "2f4460b2eb0ad652fbc0228e0533fc65396104074670fe865811653206072bef"
+    },
+    {
+      "path": "04-computation/experiments/crossroads_poset_20260926_audit.py",
+      "sha256": "66f8e16f9d3bc53a9831f652eed9b5ae9014c09e125d5842d0974030322da346"
+    },
+    {
+      "path": "04-computation/experiments/crossroads_poset_20260926_barrier.py",
+      "sha256": "9ead644cec13530a6f9062232d7273e6fae42c753f58955836605d58b3625683"
+    },
+    {
+      "path": "04-computation/experiments/crossroads_poset_20260926_bridge.py",
+      "sha256": "b611a914ebc602805e9ff671386c0d2a48c34e4344127d94766d78be12274271"
+    },
+    {
+      "path": "04-computation/experiments/crossroads_poset_20260926_integer.py",
+      "sha256": "9e6f3297d2c66ce02c29cb09538caa3d1834bb403ac51ce0dfe7472b7a47cfb0"
+    },
+    {
+      "path": "04-computation/experiments/crossroads_poset_20260926_moran_audit.py",
+      "sha256": "13f0f7f54f180b89c27d187f82a552077d7c6fff18f1d443abcd85ff2e30ea00"
+    },
+    {
+      "path": "04-computation/experiments/crossroads_poset_20260926_width.py",
+      "sha256": "714049122e392ec0ba5a21dd706e22f8ce8ff6739ea4f1322baae7c244028f1d"
+    },
+    {
+      "path": "05-knowledge/hypotheses/HYP-9161-landing-multiplicity-polylog.md",
+      "sha256": "0111b3a2e2f2e1a2c98ab297043d97e1619b062caea253cadc9c8c12c5bcb91e"
+    },
+    {
+      "path": "05-knowledge/results/crossroads_poset_20260926_audit.md",
+      "sha256": "019566f09faa79a7aecbd187f3acaa67cddbc59f0c54c28814445f9016a6c8a9"
+    },
+    {
+      "path": "05-knowledge/results/crossroads_poset_20260926_barrier.md",
+      "sha256": "b53b5a460f786cc9d68a4f38a204abae6863c24485a197dffd072a03a72179d7"
+    },
+    {
+      "path": "05-knowledge/results/crossroads_poset_20260926_barrier.out",
+      "sha256": "368c2f41b27d9423a25ced0afd357c9fe3af6a3c610253b9fe8d6b118f8d80fc"
+    },
+    {
+      "path": "05-knowledge/results/crossroads_poset_20260926_board.md",
+      "sha256": "aac0194982ef2fc57090818dde8894b4ed6ec0127fef3927aec2db8ded27b6ff"
+    },
+    {
+      "path": "05-knowledge/results/crossroads_poset_20260926_bridge.md",
+      "sha256": "b7e24f7cef1735c8d55c590cbe660c6bd1b14d317de16034d535174b2f5d7be0"
+    },
+    {
+      "path": "05-knowledge/results/crossroads_poset_20260926_bridge.out",
+      "sha256": "9b6413626102387bfd9a0ed05a49cb9f7e87547b9354f2b72f34e564c72154d9"
+    },
+    {
+      "path": "05-knowledge/results/crossroads_poset_20260926_integer.md",
+      "sha256": "b94261a0683d8d37bf2d9383dd4417c5256d4112a7e035fa2e92dea421e1e44f"
+    },
+    {
+      "path": "05-knowledge/results/crossroads_poset_20260926_integer.out",
+      "sha256": "e96bddceeaf54b863aaac572f001f23fe48d2230bec5dc12b34dd9f863040f07"
+    },
+    {
+      "path": "05-knowledge/results/crossroads_poset_20260926_moran_audit.md",
+      "sha256": "b1acba9d790e2a1b3695f34ea0505d7ec95842e9aa656f21bba2d8634dcad1fd"
+    },
+    {
+      "path": "05-knowledge/results/crossroads_poset_20260926_moran_audit.out",
+      "sha256": "f9da851a1121b8e95b6ee50a21fce8ab8b5fe7909bcd2a6a6a4bc0825c6e9e36"
+    },
+    {
+      "path": "05-knowledge/results/crossroads_poset_20260926_width.md",
+      "sha256": "d098c7c2472a805476042562853587a1e2387b2a05900c23ea99037c6497de49"
+    },
+    {
+      "path": "05-knowledge/results/crossroads_poset_20260926_width.out",
+      "sha256": "c2f1ad54be3e6bc809e4baa65de222511693f3a29adc862b9b6e0f03cb2fd2c9"
+    },
+    {
+      "path": "05-knowledge/results/procgen_family27_20260926_long_orbit_families.md",
+      "sha256": "a9ec54ec00e46952386307d77e3e37c4491044b1fa89f7de1410862ac1dab19b"
+    }
+  ]
+}

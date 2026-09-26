@@ -47,13 +47,13 @@ status: >
   -1.0527 log_2 L - c log_2 log_2 L + O(1) for every c < 1.038 (audited
   SOUND; a first display wrote c = 1.038). REASSESSMENT (2026-09-26,
   collatz_landing_20260926_multiplicity_reassessment.md): the remaining
-  (log X)^(0.514) is the landing multiplicity; every dipper of a landing
-  point lies in one 1-bit band, so the multiplicity is <= 2k/3 + O(1) for
-  every orbit (audit lemma), and hovers realise 0.54 L, so the exponent
-  beta = 1 is not improvable by counting; an oscillation lemma for one orbit
-  is needed (HYP-9161, average multiplicity O(theta log X)); records
-  (leaders and peaks) of any orbit are already O(X^(h*) (log X)^(-3/2))
-  (audited: statement confirmed, proof repaired).
+  (log X)^(0.514) is the landing multiplicity; it is tight on residue
+  classes (hover then drop) and needs an oscillation lemma for one
+  orbit. CORRECTION (crossroads-poset-20260926): literal endpoint-free
+  finite-segment HYP-9161 is REFUTED; an O(k) endpoint repair or whole-orbit
+  version remains OPEN. Records remain O(X^(h*) (log X)^(-3/2)); the peak
+  proof now uses direct suffix carry bounds at the large endpoint. This
+  correction does not affect the theorem or its proved dependencies.
 source: collatz-exponent-atlas-20260926 session (opus), 2026-09-26; found by asking whether THM-4495's ballot factor survives the moving barrier of THM-4476's recursion. No priority claimed.
 depends_on:
   - 01-canon/theorems/THM-4476-thin-divergent-orbits-reciprocal-sums-finite.md (reductions, Terras bijection, carry bound, recursion (R), Cor. 4)

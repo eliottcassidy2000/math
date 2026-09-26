@@ -302,10 +302,13 @@ all heights (THM-1289, published), δ ineffective.
   invariant set has `N(X) <= K X^(h*) (log_2 X)^a` for every `a > lambda*/h* - 3/2 = -0.9862`:
   the Terras exponent is not attained.
   **Reassessment (opus, 2026-09-26):** the remaining `(log X)^(0.514)` is the
-  landing multiplicity `L`; it is at most `2k/3 + O(1)` (one-bit band lemma)
-  and `0.54 L` is realised by hovers, so it needs an oscillation lemma for
-  one orbit (HYP-9161); records (leaders and peaks) of any orbit are
-  already at the ballot floor `O(X^(h*) (log X)^(-3/2))` (audited).
+  landing multiplicity `L`; it is tight on residue classes and needs an
+  endpoint-stable oscillation lemma: literal finite-segment HYP-9161 is
+  REFUTED by [actual hover/drop segments](../05-knowledge/results/crossroads_poset_20260926_integer.md).
+  Records retain the ballot floor by a repaired suffix-carry proof.
+  [THM-4502/4503 and atomic mass](../05-knowledge/results/crossroads_poset_20260926_board.md)
+  give certified growth families and an exact poset/height bridge; pointwise
+  decay of the full-support mass remains equivalent to OPEN Collatz.
 - **Erdős Problem 592** [DEEP — $1000 problem] — the p=2 Schur-seam theorem (THM-469),
   R(n,2)=2n+1 linear conjecture, Chang-tower m=3 open; 21 scripts, a survey draft.
 - **{7,21} forbidden H-spectrum** [DEEP, repo-signature] — permanent exclusions by

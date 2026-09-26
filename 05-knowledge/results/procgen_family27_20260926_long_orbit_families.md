@@ -1,13 +1,23 @@
-# Numbers beyond 27: five families, the rates at which they occur, and the one Moran function of the owner's backward recursion that governs them
+# Numbers beyond 27: exact word and window laws, model rates, and finite family data
+
+
+> **Correction overlay, 2026-09-26 (poset-session independent audit).**
+> Finite conditional means below require a positive hit probability. The open
+> rise set is the hitting set, which differs pointwise from a supremum event.
+> Prefix-cover dimension h and integer-height counting exponents require the
+> explicit factor 2^(k-m). Individual-tree densities and full-orbit record
+> rates remain model/empirical claims. The incoming 2^32 scan is attributed
+> to its original runner and was not repeated in this correction session.
+> Exact witnesses and proofs: [correction audit](crossroads_poset_20260926_moran_audit.md).
 
 **Status.**
 * **PROVED** (full hand proofs in §§1, 3, 4; every finite ingredient is re-checked by the runner):
-  1. **Proposition M (one function).** The Moran (Malthusian) function of the owner's backward recursion `A <- 2A`, `A <- (2A-1)/3` is `g(s) = 2^-s + (1/3)(3/2)^s`, and `g(s) = phi(s-1)` with `phi(t) = ((3/2)^t + (1/2)^t)/2` the pressure of the forward parity walk (this identity is Lagarias-Weiss's duality `M_BP(t) = M_RRW(t+1)`, CITED). `g` is convex and `g = 1` exactly at `s = 1, 2`; `-g'(1) = ln(2/sqrt 3)`, `g'(2) = (3/4)ln 3 - ln 2`; `min g = 2^-(1-h)` at `s = 1 + lambda*`; and `beta := max_s (-ln g(s))/s` equals `ln 2 - p* ln 3` where `p*` is the unique root of `H(p) = p ln 3` on `(1/2, 1)`. Numerically `1/beta = 41.6776476556544`, `p* = 0.6090898`.
-  2. **Theorem R (rise law, words).** For the fair parity walk and `M_j = 3^(o_j)/2^j`, `tau = min{j : M_j >= W}`, every `k` and `W > 1`: `P(tau <= k) = (1 - eps_k(W)) / E[M_tau | tau <= k]` exactly, with `W <= E[M_tau | tau <= k] < 3W/2` and `eps_k(W) = E[M_k; tau > k] <= min_(0<=t<=1) W^(1-t) phi(t)^k`. Hence `2/(3W) < P(W) := P(sup_j M_j >= W) <= 1/W`. The exponent `-1` is the root `t = 1` of `phi`, i.e. the second root `s2 = 2` of `g`: AM-fairness `3 + 1 = 4`.
+  1. **Proposition M (one function).** The Moran (Malthusian) function of the owner's backward recursion `A <- 2A`, `A <- (2A-1)/3` is `g(s) = 2^-s + (1/3)(3/2)^s`, and `g(s) = phi(s-1)` with `phi(t) = ((3/2)^t + (1/2)^t)/2` the pressure of the forward parity walk (this identity is Lagarias-Weiss's duality `M_BP(t) = M_RRW(t+1)`, CITED). `g` is convex and `g = 1` exactly at `s = 1, 2`; `-g'(1) = ln(2/sqrt 3)`, `g'(2) = (3/4)ln 3 - ln 2`; `min g = 2^-(1-h)` at `s = 1 + lambda*`; and `beta := max_(s>0) (-ln g(s))/s` equals `ln 2 - p* ln 3` where `p*` is the unique root of `H(p) = p ln 3` on `(1/2, 1)`. Numerically `1/beta = 41.6776476556544`, `p* = 0.6090898`.
+  2. **Theorem R (rise law, words).** For the fair parity walk and `M_j = 3^(o_j)/2^j`, `tau = min{j : M_j >= W}`, every `k` and `W > 1` with positive hitting probability: `P(tau <= k) = (1 - eps_k(W)) / E[M_tau | tau <= k]` exactly, with `W <= E[M_tau | tau <= k] < 3W/2` and `eps_k(W) = E[M_k; tau > k] <= min_(0<=t<=1) W^(1-t) phi(t)^k`. Hence `2/(3W) < P(W) := P(sup_j M_j >= W) <= 1/W`. The exponent `-1` is the root `t = 1` of `phi`, i.e. the second root `s2 = 2` of `g`: AM-fairness `3 + 1 = 4`.
   3. **Theorem R' (rise law, integers).** For every block `[2^k, 2^(k+1))` and `W > 1`: `N_k(W) <= #{n : max_(j<=k) T^j n >= W n} <= N_k(W - (3/4)^k)`, `N_k` the exact word count; the block density tends to `P(W)`. **Corollary:** for every `W > 1` the set `{n : t(n) >= W n}` (`t(n)` = trajectory maximum) has **lower density `>= P(W) > 2/(3W)`**.
-  4. **Theorem S (window rise spectrum).** `#{n in [2^k, 2^(k+1)) : max_(j<=k) T^j n >= n^beta} = 2^(k E_win(beta) + o(k))` with `E_win(beta) = 2 - beta` on `[1, 1 + zeta]` and `h(beta/log_2 3)` on `[1 + zeta, log_2 3]`, `zeta = (3/4)log_2 3 - 1 = 1 - h(3/4) = 0.188722`. The line `2 - beta` is the **slope -1 tangent** to the dip-spectrum curve `F(x) = h(x/log_2 3)` of THM-4487, touching at `x = (3/4)log_2 3` and hitting `0` at `beta = 2` (the Lagarias-Weiss path-record exponent).
+  4. **Theorem S (window rise spectrum).** `#{n in [2^k, 2^(k+1)) : max_(j<=k) T^j n >= n^beta} = 2^(k E_win(beta) + o(k))` with `E_win(beta) = 2 - beta` on `[1, 1 + zeta]` and `h(beta/log_2 3)` on `[1 + zeta, log_2 3)`, `zeta = (3/4)log_2 3 - 1 = 1 - h(3/4) = 0.188722`. The line `2 - beta` is the **slope -1 tangent** to the dip-spectrum curve `F(x) = h(x/log_2 3)` of THM-4487, touching at `x = (3/4)log_2 3` and hitting `0` at `beta = 2` (the Lagarias-Weiss path-record exponent).
   5. **Theorem G (glide, exact).** For `L - 1 <= k log_3 2`: `#{n in [2^k, 2^(k+1)) : glide_T(n) >= L} = 2^(k-L+1) W_(L-1)` exactly, `W_m = |Bad_m|`.
-  6. **Theorem D (rate = covering number = dimension).** The number of residue classes mod `2^m` meeting the closed exceptional set `Bad = {x in Z_2 : 3^(o_j) > 2^j for all j}` is exactly `W_m`; with Theorem G, the block count of the long-glide family is `2^(k-m)` times the `2^(-m)`-covering number of `Bad`, so its occurrence exponent is `dim_B Bad = dim_H Bad = h(log_3 2) = 0.949956 = 1 + log_2 min g`. The W-riser set `{sup_j M_j >= W}` has Haar measure `P(W)`, and the infinite-riser set `{sup_j M_j = infinity}` has measure 0 and Hausdorff dimension `h(log_3 2)`.
+  6. **Theorem D (rate = covering number = dimension).** The number of residue classes mod `2^m` meeting the closed exceptional set `Bad = {x in Z_2 : 3^(o_j) > 2^j for all j}` is exactly `W_m`; with Theorem G, the block count of the long-glide family is `2^(k-m)` times the `2^(-m)`-covering number of `Bad`, so its prefix-cover exponent is `dim_B Bad = dim_H Bad = h(log_3 2) = 0.949956 = 1 + log_2 min g`; for `m~ck` the integer-height exponent is `1-c(1-h)`. The W-riser set `{sup_j M_j >= W}` has Haar measure `P(W)`, and the infinite-riser set `{sup_j M_j = infinity}` has measure 0 and Hausdorff dimension `h(log_3 2)`.
   7. **Proposition B (exponent-branching identity).** If a backward-invariant set of integers (e.g. any backward tree) has a regularly varying counting function of index `s > 0` and a limiting fraction `kappa` of members `= 2 mod 3`, then `2^-s + kappa (3/2)^s = 1`; so `kappa = 1/3` forces `s in {1, 2}` and `s = 1` forces `kappa = 1/3`.
   8. **Proposition F (record count in the Frechet-scale model).** If `t(n)` are independent with `P(t(n) <= y) = exp(-C n^theta y^-theta)`, then `P(n is a record) = n^theta / sum_(m<=n) m^theta`; for `theta = 1` the expected number of records up to `X` is `2(H_(X+1) - 1)`, **independent of `C`**.
 * **FINITE-EXACT** (all `n <= 2^32` by an exhaustive C scan validated against an independent brute-force Python reference; all OEIS b-file terms by exact big-integer orbits):
@@ -16,7 +26,7 @@
   * Theorem R' checked in all 597 (block `k <= 31`, `W = 2^(i/2)`) cases: the block count **equals** the exact word count every time; Theorem G checked in all 327 admissible (block, `L`) cases up to `k = 31`;
   * **27's branch** `B27 = {n : trajectory of n meets 27's trajectory before its peak} = Pred*(3077)` has block densities in `(0.3925, 0.3929)` for every block from `2^24` to `2^31` (overall `0.392660` at `2^32`; an independent plain-Python Monte Carlo of 20000 random `n` in `[2^31, 2^32)` gives `0.3941 +- 0.0035` against the scan's `0.392634` for that block), 87 times the Haar-model value `2R/3077 = 0.0045`; its members are equidistributed mod 3 to `3e-4`; densities of the nested trees along 27's orbit, of the owner's `4x` ladder rungs and of the trunk `(4^j-1)/3` (e.g. `Pred*(5)` has density `0.9379`, `Pred*(16)` `0.0621`);
   * of the OEIS records, 104/148 delay records, 36/98 path records and 13/35 glide records lie in `B27`.
-* **EMPIRICAL:** the full-orbit W-riser density equals `P(W)` within 0.3% at `2^31` for `W <= 2^10` (the window alone gives only 20% there); numbers with delays like 27's (`sigma_T >= 21.24 ln n`) grow with exponent `0.656` (Lagarias-Weiss model `0.6688`); path records number 98 up to `2.36e21` against `2(H - 1) = 97.6`; glide records satisfy `glide/L* in [0.80, 1.16]` against the exact `W_k` model (27 is the outlier, 3.7 times its model value); the conditioned glide excursion is Brownian (`E u = sqrt(pi/2) - 0.885/sqrt L`) and 27's is typical; 27's branch holds 66-73% of the numbers with `sigma_T(n) >= 8..24 ln n` although it has density 39%.
+* **EMPIRICAL:** the full-orbit W-riser density equals `P(W)` within 0.3% at `2^31` for `W <= 2^10` (the window alone gives only 20% there); numbers with delays like 27's (`sigma_T >= 21.24 ln n`) grow with exponent `0.656` (Lagarias-Weiss model `0.6688`); path records number 98 up to `2.36e21` against `2(H - 1) = 97.6`; glide records satisfy `glide/L* in [0.80, 1.16]` against the exact `W_k` model (27 is the outlier, 3.7 times its model value); the conditioned glide excursion is Brownian (`E u = sqrt(pi/2) - 0.885/sqrt L`) and 27's is typical; 27's branch holds 66-73% of the numbers with `sigma_T(n) >= 8..24 ln n` against a finite-scan fraction about39%.
 * **VERIFIED** (numerical reproduction of cited constants from `g` alone): K-L's `41.677647`, `beta_BP = 0.02399`, ones-ratio `0.609091`, typical slope `6.95212`, time-to-peak slope `7.645`; THM-4487's tilt `0.488077` and `1 - h = 0.050044`; the Brownian excursion maximum's mean `sqrt(pi/2)` and second moment `pi^2/6`.
 * **CITED:** Lagarias-Weiss 1992 and Kontorovich-Lagarias 2009/10 (arXiv 0910.1944, read in full: the RRW and branching-random-walk models, `gamma = 41.677647`, `rho = 2`, the spectra `x^(1 - a g(1/a))` and `x^(2-beta)`, the duality); OEIS A006877, A006878, A006884, A006885, A060412, A060413, A217934 (b-files, sha256 in the .out); Terras 1976 (parity bijection); Chung 1976 / Kennedy 1976 (Brownian excursion maximum); Nevzorov's `F^alpha`-scheme (independent record indicators; from memory); the renewal theorem for the existence of `lim W P(W)`; in-repo THM-4476, THM-4480, THM-4487, THM-4495 and the choice-ladder and inverse-tree notes.
 * **OPEN:** an upper bound `#{n <= X : t(n) >= Wn} <= (P(W) + o(1)) X` (it would give density zero to the divergent integers); the existence of the density of any single backward tree, including `B27`; the limsup constants `rho = 2`, `gamma = 41.68`, glide `19.98 log_2 n` (model predictions, not theorems).
@@ -37,12 +47,12 @@ Throughout `T(x) = x/2` (even), `(3x+1)/2` (odd), trajectories stop at 1; `sigma
 | family | 27's place | how often it occurs | status | feature of `g` |
 |---|---|---|---|---|
 | (a) delay records `A006877`; "delays like 27": `sigma_T(n) >= 21.24 ln n` | 9th record; the big jump (23 -> 111 standard steps) | records `~3.4` per unit of `ln X`; the like-27 family `X^(0.669+o(1))` | model CITED; exponent `0.656` measured at `2^32` | `beta = max_s (-ln g(s))/s = 1/41.6776` |
-| (b) path records `A006884`; "rises like 27": `t(n) >= 171 n`; "super-quadratic": `t(n) > n^2` | 6th record; `rho(27) = 2.560` is the maximum of `rho` over `3 <= n <= 2^32` | like-27 risers: density `P(171) = 0.00486`; records `2 ln X`; `t > n^2`: 21 numbers up to `2^32`, in 3 tree clusters | density: lower bound PROVED, equality EMPIRICAL; record count model PROVED + EMPIRICAL | the second root `s2 = 2` |
+| (b) path records `A006884`; "rises like 27": `t(n) >= 171 n`; "super-quadratic": `t(n) > n^2` | 6th record; `rho(27) = 2.560` is the maximum of `rho` over `3 <= n <= 2^32` | like-27 risers: lower density at least `P(171)`, numerically about0.00486; independent-model records `2 ln X`; `t > n^2`: 21 numbers up to `2^32`, in 3 tree clusters | density: lower bound PROVED, equality EMPIRICAL; record count model PROVED + EMPIRICAL | the second root `s2 = 2` |
 | (c) glide records `A060412`; "glides like 27": `glide_T >= 12.41 log_2 n` | 4th record; 3.7 times the model's expected record at 27 | `2^(k-m) W_m` exactly in the window (PROVED); records follow `W_k` | PROVED + EMPIRICAL | `min g = 2^-(1-h)`: dimension `h` |
-| (d) 27's branch `B27 = Pred*(3077)` | the family itself | density `0.3927`, exponent 1, one third in each class mod 3 | FINITE-EXACT; identity PROVED | the first root `s1 = 1` |
+| (d) 27's branch `B27 = Pred*(3077)` | the family itself | measured block fraction `0.3927`, finite growth ratio near exponent1, and class fractions near1/3 | FINITE-EXACT; asymptotic density and regular variation OPEN | the first root `s1 = 1` |
 | (e) near-critical words (long glides) | a typical long glide: normalised height at the 72nd percentile | as (c) | EMPIRICAL (shape), PROVED (counts) | the Chernoff tilt `lambda*` |
 
-**The precise sense in which the rate governs the fractal recursion** (§4.4): each family is a large-deviation family of the parity walk, its occurrence exponent is a Legendre-type transform of `ln g`, and `g` is the Moran function of the owner's recursion. Four statements are proved: the long-glide family's block counts are `2^(k-m)` times the covering numbers of the exceptional fractal, so its exponent is that fractal's dimension `h = 1 + log_2 min g` (Theorems G, D); the W-riser density `P(W)` lies in `(2/(3W), 1/W]` because `g(2) = 1` (Theorem R); the window rise spectrum is the slope -1 tangent (slope = `1 - s2`) to the dip-spectrum curve (Theorem S); a backward tree of exponent `s` has a fraction `kappa = (1 - 2^-s)(2/3)^s` of members `= 2 mod 3` (Proposition B). The owner's `4x` recursion is exact as a decomposition of sets, but the densities of individual trees are **not** governed by the averaged recursion: they are dominated by the smallest numbers the tree contains (§4.3).
+**The precise, scope-dependent sense in which rate relates to fractal recursion** (§4.4): the word families and stochastic-model analogues are large-deviation families of the parity walk, the corresponding word/model exponents are Legendre-type transforms of `ln g`, and `g` is the Moran function of the owner's recursion. Four statements are proved: the long-glide family's block counts are `2^(k-m)` times the covering numbers of the exceptional fractal, with prefix-cover exponent `h = 1 + log_2 min g` and integer-height exponent `1-c(1-h)` when m~ck (Theorems G, D); the fair-word hitting probability `P(W)` lies in `(2/(3W), 1/W]` because `g(2) = 1` (Theorem R); the window rise spectrum is the slope -1 tangent (slope = `1 - s2`) to the dip-spectrum curve (Theorem S); under Proposition B's regular-variation and limiting-residue hypotheses, a backward tree of exponent `s` has a fraction `kappa = (1 - 2^-s)(2/3)^s` of members `= 2 mod 3` (Proposition B). The owner's `4x` recursion is exact as a decomposition of sets, but the densities of individual trees are **not** governed by the averaged recursion: they are dominated by the smallest numbers the tree contains (§4.3).
 
 ## 1. One function: the Moran function of the backward recursion
 
@@ -60,12 +70,12 @@ the Lagarias-Weiss branching-process moment function `M_BP(-s)`.
 
 | feature of `g` | value | what it governs | status of the interpretation |
 |---|---|---|---|
-| root `s1 = 1` | `g(1) = 1` | a backward tree has counting exponent 1 | model theorem (K-L Thm 6.5), K-L's `x^0.84` CITED; Prop. B |
-| residue at `s1` | `R1 = 1/ln(2/sqrt3) = 6.952119` | typical `sigma_T(n) = 6.952 ln n`; Haar tree density `cR1/a` | CITED (K-L), inverse-tree note Prop. 10 |
-| root `s2 = 2` (`phi(1) = 1`) | `3 + 1 = 4` | W-riser density `P(W) ~ C/W`; `rho = 2`; path-record count `2 ln X` | Theorem R, R' (PROVED); `rho = 2` CITED model; Prop. F |
+| root `s1 = 1` | `g(1) = 1` | averaged branching model has counting exponent1; actual-tree identity is conditional | model theorem (K-L Thm 6.5), K-L's `x^0.84` CITED; Prop. B |
+| residue at `s1` | `R1 = 1/ln(2/sqrt3) = 6.952119` | model typical delay `6.952 ln n` and model tree density `cR1/a` | CITED (K-L), inverse-tree note Prop. 10 |
+| root `s2 = 2` (`phi(1) = 1`) | `3 + 1 = 4` | fair-word hitting probability `P(W)~C/W`; model `rho=2` and path-record count `2 ln X` | Theorem R, R' (PROVED); `rho = 2` CITED model; Prop. F |
 | residue at `s2` | `R2 = 1/g'(2) = 7.644557` | time to reach the peak per unit of `ln(t/n)` | CITED (K-L §4.3: 7.645); EMPIRICAL median 7.07, mean 7.28 on 84 path records |
 | minimum | `2^-(1-h)`, `1-h = 0.050044`, at `1 + lambda*` | dimension `h` of the exceptional fractal; glide records `log_2 n /(1-h) = 19.98 log_2 n` | Theorem D (PROVED); record constant heuristic |
-| tangent from 0 | `beta = 0.0239937`, `1/beta = 41.677648` | delay records `sigma_T <= 41.68 ln n`; ones-ratio `p* = 0.609090` | CITED (Lagarias-Weiss / K-L conjecture 4.1) |
+| tangent from 0 | `beta = 0.0239937`, `1/beta = 41.677648` | model delay constant `41.677648` and model ones-ratio `p*=0.609090`; no actual stopping-time bound | CITED (Lagarias-Weiss / K-L conjecture 4.1) |
 | `phi'(1)/ln 2` | `zeta = 0.188722` | the window rise spectrum switches from the tangent to the curve at `beta = 1 + zeta` | Theorem S (PROVED) |
 
 The three computations of the delay constant (the tangent, the entropy root, and the Lagarias-Weiss fixed point `gamma g_LW(1/gamma) = 1`) agree to `1e-20`. They reproduce K-L's `41.677647`, `beta_BP = 0.02399` and ones-ratio `0.609091` (ours: `0.6090898`), which fixes K-L's convention: `gamma` counts `T`-steps.
@@ -80,7 +90,7 @@ All statistics below are for `T`; the standard map counts an odd step twice.
 
 **(c) Glide records** (`A060412`; glides `A060413` in `T`-steps and `A217934` standard; b-file 35 terms to `2.6e18`): `2, 3, 7, 27, 703, 10087, 35655, 270271, ...`. Up to `2^32` the `T`-glide and standard-glide records have the same 23 starting values.
 
-**(d) 27's branch.** The integers whose trajectory meets 27's trajectory before 27's peak `4616` (standard `9232`) are those meeting one of `27, 41, 62, ..., 2051, 3077`; since every earlier orbit point flows into `3077`, this is the backward tree `B27 = Pred*(3077)` (the odd point `3077` is the same in both maps). More generally the merge index `mu(n)` = first point of 27's orbit on the orbit of `n` classifies all integers; `Pred*(T^j 27) = {n : mu(n) <= j}`.
+**(d) 27's branch.** The integers whose trajectory meets 27's trajectory before 27's peak `4616` (standard `9232`) are those meeting one of `27, 41, 62, ..., 2051, 3077`; since every earlier orbit point flows into `3077`, this is the backward tree `B27 = Pred*(3077)` (the odd point `3077` is the same in both maps). For integers whose orbit meets27's orbit, the merge index `mu(n)` is the first such point; outside that basin it is undefined, and `Pred*(T^j 27) = {n : mu(n) <= j}`.
 
 **(e) Near-critical words.** 27's word stays above the critical line for 59 steps: its walk `S_j = ln(T^j 27/27)` climbs to `5.14` and returns. The family is `{n : glide_T(n) >= L}`; the critical band of THM-4480 (walks confined to a tube of height `~L^(1/3)`) is its thin core. §3.5 shows that 27 is a typical member.
 
@@ -88,11 +98,30 @@ All statistics below are for `T`; the standard map counts an odd step twice.
 
 ### 3.1 Risers: the exact rise law
 
-**Theorem R.** Let `u` be uniform on `{0,1}^k`, `M_j = 3^(o_j)/2^j`, `W > 1`, `tau = min{j <= k : M_j >= W}` (`infinity` if none), `eps_k(W) = E[M_k ; tau > k]`. Then
-`P(tau <= k) = (1 - eps_k(W)) / E[M_tau | tau <= k]`,  `W <= E[M_tau | tau <= k] < (3/2) W`,  `eps_k(W) <= min_(0<=t<=1) W^(1-t) phi(t)^k`,
-so `(2/3)(1 - eps_k)/W < P(tau <= k) <= (1 - eps_k)/W`, and `2/(3W) < P(W) := P(sup_j M_j >= W) <= 1/W`.
+**Theorem R (finite conditioning repaired).** Let u be uniform on the k-bit
+words, M_j=3^(o_j)/2^j, W>1, tau the first hit of M_j>=W (infinity if
+there is none), and eps_k=E[M_k;tau>k]. For every k, including zero-hit cases,
 
-*Proof.* `M_(j+1) = M_j (3/2)` or `M_j/2` with probability `1/2` each, so `(M_j)` is a martingale: `E[M_(j+1) | F_j] = M_j (3/2 + 1/2)/2 = M_j` (AM-fairness, `3 + 1 = 4`, i.e. `phi(1) = 1`). Optional stopping at the bounded time `tau ∧ k` gives `1 = E[M_(tau∧k)] = E[M_tau ; tau <= k] + eps_k`, i.e. `E[M_tau; tau <= k] = 1 - eps_k`, which is the identity. At `tau` we have `M_tau >= W > M_(tau-1)` (`tau >= 1` since `M_0 = 1 < W`) and `M_tau <= (3/2)M_(tau-1) < (3/2)W`. On `{tau > k}`, `M_k < W`, so `M_k = M_k^t M_k^(1-t) <= M_k^t W^(1-t)` and `E[M_k^t] = phi(t)^k`. For `t in (0,1)`, `phi(t) < 1` by strict convexity, so `eps_k -> 0`. Letting `k -> infinity` (monotone convergence) gives `E[M_tau ; tau < infinity] = 1`, i.e. `P(W) = P(tau < infinity) = 1/E[M_tau | tau < infinity]`, and `W <= E[M_tau | tau < infinity] < 3W/2` gives `2/(3W) < P(W) <= 1/W`. ∎
+    E[M_tau;tau<=k]=1-eps_k,
+    eps_k<=min_(0<=t<=1) W^(1-t) phi(t)^k.
+
+If P(tau<=k)>0, its conditional mean is defined and
+
+    P(tau<=k)=(1-eps_k)/E[M_tau|tau<=k],
+    W<=E[M_tau|tau<=k]<3W/2,
+    (2/3)(1-eps_k)/W<P(tau<=k)<=(1-eps_k)/W.
+
+Otherwise P(tau<=k)=0 and eps_k=1; no conditional mean or strict finite
+lower bound is asserted. In infinite horizon,
+`2/(3W)<P(W):=P(exists j:M_j>=W)<=1/W`.
+
+*Proof.* `M_(j+1) = M_j (3/2)` or `M_j/2` with probability `1/2` each, so `(M_j)` is a martingale: `E[M_(j+1) | F_j] = M_j (3/2 + 1/2)/2 = M_j` (AM-fairness, `3 + 1 = 4`, i.e. `phi(1) = 1`). Optional stopping at the bounded time `tau ∧ k` gives `1 = E[M_(tau∧k)] = E[M_tau ; tau <= k] + eps_k`, i.e. `E[M_tau; tau <= k] = 1 - eps_k`, which is the identity. At `tau` we have `M_tau >= W > M_(tau-1)` (`tau >= 1` since `M_0 = 1 < W`) and `M_tau <= (3/2)M_(tau-1) < (3/2)W`. On `{tau > k}`, `M_k < W`, so `M_k = M_k^t M_k^(1-t) <= M_k^t W^(1-t)` and `E[M_k^t] = phi(t)^k`. For `t in (0,1)`, `phi(t) < 1` by strict convexity, so `eps_k -> 0`. Letting `k -> infinity` (monotone convergence) gives `E[M_tau ; tau < infinity] = 1`, i.e. `P_hit(W) = P(tau < infinity) = 1/E[M_tau | tau < infinity]`, and `W <= E[M_tau | tau < infinity] < 3W/2` gives `2/(3W) < P(W) <= 1/W`. ∎
+
+The fair walk has `M_j->0` almost surely by the strong law and negative
+mean log increment. Thus its supremum is attained almost surely, and the
+hitting probability `P_hit(W)` equals `P(sup_j M_j>=W)` as a probability.
+This is not a pointwise equivalence on all dyadic addresses. For k=1,W=2,
+no hit occurs; the conditional expectation above is undefined.
 
 **Theorem R'.** For `k >= 1` and `W > 1`, with `N_k(V) = #{u in {0,1}^k : max_(0<=j<=k) M_j(u) >= V}`:
 `N_k(W) <= #{n in [2^k, 2^(k+1)) : max_(0<=j<=k) T^j(n) >= W n} <= N_k(W - (3/4)^k)`,
@@ -100,7 +129,7 @@ and `2^-k` times the middle term tends to `P(W)`.
 
 *Proof.* The block is a complete residue system mod `2^k`, so `n -> (parity word of length k)` is a bijection onto `{0,1}^k` (Terras). By induction `T^j(n) = M_j n + c_j` with `0 <= c_j <= (3/2)^j - 1` (odd step: `c -> (3/2)c + 1/2`; even step: `c -> c/2`). For `n >= 2^k` and `j <= k`, `M_j <= T^j(n)/n < M_j + (3/4)^k`, which gives the two inclusions. `N_k(W)/2^k = P(tau <= k)` increases to `P(W)`; `N_k(W - (3/4)^k)/2^k <= P(W - (3/4)^k)`, which decreases to `P(W)` as `k -> infinity` by continuity of `P(sup M >= V)` from the left in `V`. ∎
 
-**Corollary (PROVED).** For every `W > 1`, `liminf_X X^-1 #{n <= X : t(n) >= W n} >= P(W) > 2/(3W)`: at least a `2/(3W)` fraction of all integers rise by a factor `W`. *Proof.* Fix `k`. Any `2^k` consecutive positive integers form a complete residue system mod `2^k` and so realise every word of length `k` once; since `c_j >= 0`, each `n` whose word has `max_(j<=k) M_j >= W` satisfies `t(n) >= max_j T^j n >= W n`. `[1, X]` contains `floor(X/2^k)` such runs, so the count is at least `floor(X/2^k) N_k(W)`, and the liminf is at least `N_k(W)/2^k = P(tau <= k)` for every `k`; let `k -> infinity`. ∎ The matching upper bound is OPEN: it would imply that the integers with divergent trajectories have density zero, which THM-4476 explicitly does not give.
+**Corollary (PROVED).** For every `W > 1`, `liminf_X X^-1 #{n <= X : t(n) >= W n} >= P(W) > 2/(3W)`: at least a `2/(3W)` fraction of all integers rise by a factor `W`. *Proof.* Fix `k`. Any `2^k` consecutive positive integers form a complete residue system mod `2^k` and so realise every word of length `k` once; since `c_j >= 0`, each `n>=2` whose word has `max_(j<=k) M_j >= W` satisfies `t(n) >= max_j T^j n >= W n`. `[1, X]` contains `floor(X/2^k)` such runs, so the count is at least `floor(X/2^k) N_k(W)-1` (the finite exception n=1 accounts for the convention that trajectories stop there), and the liminf is at least `N_k(W)/2^k = P(tau <= k)` for every `k`; let `k -> infinity`. ∎ The matching upper bound is OPEN: it would imply that the integers with divergent trajectories have density zero, which THM-4476 explicitly does not give.
 
 **Data** (`.out` §B, §E):
 
@@ -115,8 +144,8 @@ and `2^-k` times the middle term tends to `P(W)`.
 
 * `P(W)` is bracketed to relative width `1e-9` (pruned DP plus a Ville tail bound) for `W = 2^(i/2)`, `i <= 120`; `2/3 < W P(W) <= 1` in all cases, and `W P(W) in [0.8274, 0.8366]` for `W in [2^20, 2^60]`. The Cramer-Lundberg constant `C = lim W P(W)` (it exists by the renewal theorem, since `ln 3/ln 2` is irrational) is therefore about `0.83`; the slow oscillation comes from the convergents of `log_2 3`.
 * Theorem R' was checked in all 597 cases (`k <= 31`, `W = 2^(i/2)`, `i <= 1.17k + 1`). The lower bound is attained **every time**: at these `W` the block counts are the exact word counts.
-* The window captures only 20% of the 1024-risers, yet the full-orbit density equals `P(W)` to 0.3% (EMPIRICAL). The rise usually takes `~ R2 ln W = 53` steps, far beyond `log_2 n = 31`; the actual trajectory keeps behaving like the fair walk there.
-* **27's rise:** `t(n) >= (4616/27) n` holds for a fraction `0.004857` of the top block, against `P(170.96) = 0.004858` (ratio `0.9999`; window alone `0.00205`). The "numbers rising like 27" are a positive-density family.
+* The window captures only 20% of the 1024-risers, yet the full-orbit density equals `P(W)` to 0.3% (EMPIRICAL). The measured rise time is compatible with the model estimate `R2 ln W~53`, beyond the31-step residue window; this finite agreement does not establish a fair-word law there.
+* **27's rise:** `t(n) >= (4616/27) n` holds for a fraction `0.004857` of the top block, against `P(170.96) = 0.004858` (ratio `0.9999`; window alone `0.00205`). The "numbers rising like27" have positive lower natural density; existence of their density is not proved here.
 
 ### 3.2 The window rise spectrum and its relation to the dip spectrum
 
@@ -129,7 +158,7 @@ with `E_win(beta) = 2 - beta` for `beta <= 1 + zeta` and `h(beta/alpha)` for `be
 *Lower bound.* If `b < zeta`: take a prefix of length `j = ceil(t* k)` with `o = ceil((j + (k+1)b)/alpha)` odd letters (`o/j -> 3/4`), in any order, followed by `k - j` free letters. This gives `C(j,o) 2^(k-j) = 2^(k(1-b) - O(log k))` words with `M_j >= 2^((k+1)b)`, and their integers satisfy `T^j n >= M_j n >= n^beta`. If `b >= zeta`: take all `k` letters with `o = ceil((k + (k+1)b)/alpha)` odd letters, giving `2^(k h(beta/alpha) - O(log k))` words (for `beta < alpha`). ∎
 
 **Reading.** Let `F(x) = h(x/alpha)` be THM-4487's dip-spectrum curve (`F(gamma)` = exponent of the `n` staying above `n^gamma` through the window, `gamma <= 1`). Its tangent of slope `-1` touches at `x = 3alpha/4 = 1 + zeta` and is the line `2 - x`, which passes through `(1,1)` and `(2,0)`. So:
-* the **window** rise spectrum is this tangent on `[1, 1+zeta]` followed by the curve `F` itself on `[1+zeta, alpha]`;
+* the **window** rise spectrum is this tangent on `[1, 1+zeta]` followed by the curve `F` itself on `[1+zeta, alpha)`;
 * the **Lagarias-Weiss full-orbit** spectrum `x^(2-beta)` (K-L Thm 4.4, model) is the same tangent continued to `beta = 2`, where it hits 0. That is the path-record exponent `rho = 2`.
 
 The slope `-1` is the Cramer root `theta = 1 = s2 - 1`. Every rise rate in this note is a point of the dip-spectrum curve or of its slope `-1` tangent. The glide spectrum `1 - (1 - F(1)) c` of §3.3 uses the same curve through its value `F(1) = h`.
@@ -154,7 +183,7 @@ Lagarias-Weiss's model (K-L Thm 4.2) gives `E #{n <= x : sigma_T(n) >= a ln n} =
 
 ### 3.5 The near-critical family: 27 is a typical long glide
 
-Conditioned on `glide_T = L`, the walk `S_j = ln(T^j n/n)` is an excursion of the walk tilted to zero drift (odd frequency `log_3 2`, the Chernoff tilt `lambda*`), with step variance `sigma^2 = log_3 2 (1 - log_3 2)(ln 3)^2`, `sigma = 0.530138`. Its normalised height `u = max_j S_j/(sigma sqrt L)` should tend to the Brownian excursion maximum: `P(M <= x) = 1 + 2 sum_k (1 - 4k^2x^2) e^(-2k^2x^2)` (Chung, Kennedy, CITED), whose mean `sqrt(pi/2)` and second moment `pi^2/6` we verified numerically. Over all odd `n <= 2^32` with `glide >= 20` (EMPIRICAL, `.out` §E7): `E u = sqrt(pi/2) - (0.885 +- 0.015)/sqrt L` uniformly for `20 <= L < 200` (offsets `0.899, 0.890, 0.886, 0.882, 0.872, 0.884, 0.876, 0.876` in the eight bins, each with at least 94000 samples), i.e. Brownian plus a constant discrete offset. **27** has `u = ln(4616/27)/(sigma sqrt 59) = 1.2626`: the 55.6th percentile of the Brownian law and the 72nd percentile of the actual `u` of all `n <= 2^32` with glide in `[40,60)`. 27's famous peak is simply the typical height of a 59-step critical excursion. THM-4480's peak discount `1/w*` weights exactly these excursions down, and its critical band (height `~L^(1/3)`) is their thin core.
+**Heuristic model comparison:** conditioning on `glide_T=L` motivates comparing the actual walk `S_j=ln(T^j n/n)` with an excursion of the parity walk tilted to zero drift (odd frequency `log_3 2`, the Chernoff tilt `lambda*`), with step variance `sigma^2 = log_3 2 (1 - log_3 2)(ln 3)^2`, `sigma = 0.530138`. Its normalised height `u = max_j S_j/(sigma sqrt L)` should tend to the Brownian excursion maximum: `P(M <= x) = 1 + 2 sum_k (1 - 4k^2x^2) e^(-2k^2x^2)` (Chung, Kennedy, CITED), whose mean `sqrt(pi/2)` and second moment `pi^2/6` we verified numerically. Over all odd `n <= 2^32` with `glide >= 20` (EMPIRICAL, `.out` §E7): `E u = sqrt(pi/2) - (0.885 +- 0.015)/sqrt L` uniformly for `20 <= L < 200` (offsets `0.899, 0.890, 0.886, 0.882, 0.872, 0.884, 0.876, 0.876` in the eight bins, each with at least 94000 samples), i.e. Brownian plus a constant discrete offset. **27** has `u = ln(4616/27)/(sigma sqrt 59) = 1.2626`: the 55.6th percentile of the Brownian law and the 72nd percentile of the actual `u` of all `n <= 2^32` with glide in `[40,60)`. 27's peak is typical within this empirical/model comparison; no limiting law for height-conditioned actual integers is proved. THM-4480's peak discount `1/w*` weights exactly these excursions down, and its critical band (height `~L^(1/3)`) is their thin core.
 
 ### 3.6 Path records: the count law `2 ln X`, and the clusters
 
@@ -167,7 +196,7 @@ The Cramer law `P(t(n)/n >= w) ~ C/w` makes the extreme tail of `t(n)` Frechet w
 | path records `<= X` | 10 | 25 | 44 | 61 | 73 | 87 | 94 | 98 |
 | `2(H_(X+1) - 1)` | 13.0 | 26.8 | 40.6 | 54.4 | 68.2 | 82.0 | 95.9 | 97.6 |
 
-Over all 98 records the largest deviation is `|z| = 1.34` standard deviations, and the least-squares slope of the count against `ln n` is `2.10` (`.out` §D). **The occurrence rate of path records (`2/n`) is the second Moran root `s2 = 2`.**
+Over all 98 records the largest deviation is `|z| = 1.34` standard deviations, and the least-squares slope of the count against `ln n` is `2.10` (`.out` §D). **In the stated independent Frechet model**, the record probability is `2/(n+1)`, associated with the second Moran root `s2=2`; no actual Collatz record-rate theorem is asserted.
 
 The model gets the count right and the values wrong. Records have median `t/n^2 = 0.07`, while independent Frechet records would sit at `t/n^2 ~ C/(2E)`, about `0.6`. The reason is clustering. Every `n` whose trajectory joins a champion's trajectory before the champion's peak shares that peak. So the super-quadratic family `{n : t(n) > n^2}` is the union, over peak values `P`, of the finite pieces `{n < sqrt P : t(n) = P}` of the backward trees `Pred*(P)`: up to `2^32` it consists of 21 numbers in 3 clusters (`.out` §E2):
 `{27, 31, 41, 47, 54, 55, 62, 63}` (peak 4616; this is exactly `B27 cap [1, sqrt 4616]`),
@@ -179,7 +208,7 @@ The expected count `C ln X ~ 18` at `2^32` matches (21); the number of independe
 
 ### 4.1 Occurrence rate = covering number = dimension
 
-**Theorem D.** Let `Bad = {x in Z_2 : 3^(o_j(x)) > 2^j for all j >= 1}` (closed), `R_W = {x : sup_j M_j(x) >= W}` (open), `R_inf = {x : sup_j M_j(x) = infinity}`.
+**Theorem D.** Let `Bad = {x in Z_2 : 3^(o_j(x)) > 2^j for all j >= 1}` (closed), `R_W = {x : exists j, M_j(x) >= W}` (open hitting set), `R_inf = {x : sup_j M_j(x) = infinity}`.
 1. For every `m`, the number of classes mod `2^m` meeting `Bad` is exactly `W_m`. Hence `dim_B Bad = lim m^-1 log_2 W_m = h(log_3 2)` (THM-4495), and `dim_H Bad = h(log_3 2)` (choice-ladder note, Besicovitch-Eggleston).
 2. `mu_Haar(R_W) = P(W) in (2/(3W), 1/W]`; `mu(R_inf) = 0`; `dim_H R_inf = h(log_3 2)`.
 
@@ -187,7 +216,7 @@ The expected count `C ln X ~ 18` at `2^32` matches (21); the number of independe
 
 **The exact identity asked for in T3.** For `m = floor(k log_3 2)` and `L = m + 1`, Theorem G gives
 `#{n in [2^k, 2^(k+1)) : glide_T(n) > m} = 2^(k-m) N_(2^-m)(Bad)`.
-The occurrence count of the long-glide family is, exactly, a covering number of the exceptional fractal. So its counting exponent is `dim Bad = h = 1 + log_2 min g`. The rise family is the dual case: its density `P(W) ~ 0.83/W` decays with the exponent of the second root `s2 = 2`, while its limit fractal `R_inf` has the same dimension `h`. Both are read off `g`: one at a root, the other at the minimum.
+The occurrence count of the long-glide family is exactly `2^(k-m)` times a covering number of the exceptional fractal. At this stated scale its integer-height exponent is `1-(1-h)log_3 2`; its prefix-cover exponent is `dim Bad=h`. Equality of the numerical exponents requires m~k and the separate THM-4495 argument, not Theorem G alone. The fair-word rise family is the dual case: its hitting probability `P(W)~0.83/W` decays with the exponent of the second root `s2 = 2`, while its limit fractal `R_inf` has the same dimension `h`. Both are read off `g`: one at a root, the other at the minimum.
 
 ### 4.2 The exponent-branching identity, tested on 27's branch
 
@@ -195,7 +224,7 @@ The occurrence count of the long-glide family is, exactly, a covering number of 
 
 *Proof.* `T^-1(F) = D(F) ⊔ E(F cap G)` (images of `D` even, of `E` odd; both injective), so `N(X) = O(1) + N(X/2) + N_2((3X+1)/2)`. Divide by `N(X)`; regular variation gives `N(X/2)/N(X) -> 2^-s` and `N_2((3X+1)/2)/N(X) -> kappa (3/2)^s`. ∎
 
-With `kappa = 1/3` the identity reads `g(s) = 1`, so `s in {1, 2}`, and `s = 1` since `N(X) <= X`. **Test on 27's branch** (`.out` §E5): local exponents `log_2(N(2^(b+1))/N(2^b))` lie in `[0.9999, 1.0002]` for `b = 24..30`, the class fractions are `1/3` within `3e-4`, and `|2^-s + kappa(3/2)^s - 1| < 3e-3`. So `B27` is a family of exponent `s1 = 1` in branching balance. A tree growing like `x^0.84` (Krasikov-Lagarias's proved lower bound) would have to carry `kappa = 0.314`: the identity turns an exponent into a checkable class statistic.
+With `kappa = 1/3` the identity reads `g(s) = 1`, so `s in {1, 2}`, and `s = 1` since `N(X) <= X`. **Test on 27's branch** (`.out` §E5): local exponents `log_2(N(2^(b+1))/N(2^b))` lie in `[0.9999, 1.0002]` for `b = 24..30`, the class fractions are `1/3` within `3e-4`, and `|2^-s + kappa(3/2)^s - 1| < 3e-3`. This is finite evidence consistent with exponent `s1=1`; regular variation of B27 is not proved. A tree growing like `x^0.84` (Krasikov-Lagarias's proved lower bound) would have to carry `kappa = 0.314`: the identity turns an exponent into a checkable class statistic.
 
 ### 4.3 The owner's 4x recursion: exact for sets, not for densities
 
@@ -203,7 +232,7 @@ For `x = 2 mod 3` (inverse-tree note, Prop. 11), `Pred*(x) = {x 2^i} ⊔ ⋃_(j>
 
 **Actual trees are not averaged** (FINITE-EXACT at `2^32`):
 
-| tree | density | Haar `c R1/a` |
+| tree | observed fraction through2^32 | Haar-model `c R1/a` |
 |---|---|---|
 | `Pred*(41)` | `0.0566` | `0.339` |
 | `Pred*(47)` | `0.1864` | `0.296` |
@@ -214,28 +243,28 @@ For `x = 2 mod 3` (inverse-tree note, Prop. 11), `Pred*(x) = {x 2^i} ⊔ ⋃_(j>
 | `Pred*(20)` | `0.9379` | `0.695` |
 | `Pred*(5)` | `0.9379` | `2.78` |
 
-* Along 27's orbit the densities increase (the trees are nested) from 0 at 27 (a multiple of 3: its tree is a doubling chain) to 1 at the root.
+* Along27's orbit the observed finite fractions increase (the trees are nested) from a vanishing fraction at27 (a multiple of 3: its tree is a doubling chain) to 1 at the root.
 * Rung 0 (`2051`) carries `0.9998` of `3077`'s tree, against `3/4` in the model.
 * At the root the owner's split `Pred*(8) = {8} ⊔ Pred*(16) ⊔ Pred*(5)` is `0.062 : 0.938`, against `1/4 : 3/4`.
 * The rung densities `4^j delta` of the trunk scatter over `0.3 .. 9.7`.
 
-**The reason is the second root again.** The tree of `3077` contains `27`, which is 114 times smaller. The Haar tree of a root `a` has few nodes below `a/K`: the pole of `F(s) = 1/(1 - g(s))` at `s2 = 2` (residue `R2`) suggests about `(R2/2) K^-2` of them (a Tauberian heuristic on the small side, not proved here), i.e. about `3e-4` for `K = 114`. A tree containing such a node is the backward image of a large rise: 27's orbit climbs by a factor 114 from 27 to 3077 and by 171 to its peak, and forward a rise by 171 has probability `0.83/171`. Such a tree inherits the fat trees of the small numbers on the rising orbit (`31, 41, 47, 62, 71, ...`). **The density of a single tree is governed by the smallest numbers it contains, not by the averaged recursion.** That is why 27's branch has density `0.39` instead of `0.0045`.
+**Heuristic interpretation involving the second root.** The tree of `3077` contains `27`, which is 114 times smaller. The Haar tree of a root `a` has few nodes below `a/K`: the pole of `F(s) = 1/(1 - g(s))` at `s2 = 2` (residue `R2`) suggests about `(R2/2) K^-2` of them (a Tauberian heuristic on the small side, not proved here), i.e. about `3e-4` for `K = 114`. A tree containing such a node is the backward image of a large rise: 27's orbit climbs by a factor 114 from 27 to 3077 and by 171 to its peak, and the fair-word probability of a rise by171 is approximately `0.83/171`; only the stated lower-density transfer is proved for full integer orbits. Such a tree inherits the fat trees of the small numbers on the rising orbit (`31, 41, 47, 62, 71, ...`). **Heuristic interpretation:** the smallest members may strongly influence the observed finite tree fractions; no existence or formula for an individual tree's natural density is proved here. This motivates investigating the observed fraction near0.39 versus the model value0.0045; it is not a proof of a density law.
 
 ### 4.4 The precise answer to "the rate governs fractal recursion"
 
-1. **(PROVED)** The family "no descent for `m` steps" occurs in every dyadic block with count exactly `2^(k-m)` times the `2^-m`-covering number `W_m` of the exceptional fractal `Bad`, for `m <= k log_3 2` (Theorems G, D). Its rate exponent is the fractal's dimension `h(log_3 2) = 1 + log_2 min g`.
-2. **(PROVED)** The family "rises by a factor `W`" occurs with density between `2/(3W)` and `1/W` in the window, and with lower density `>= P(W)` for full trajectories. The exponent `-1` is `1 - s2`, where `s2 = 2` is the second root of the owner's Moran function (`g(2) = 1/4 + 3/4`, AM-fairness). The window spectrum of rises beyond `n^beta` is the slope `1 - s2 = -1` tangent to the dip-spectrum curve, then the curve itself (Theorem S).
-3. **(PROVED identity + FINITE-EXACT test)** A backward-closed family of exponent `s` has branch fraction `kappa = (1 - 2^-s)(2/3)^s`; 27's branch has `s = 1`, `kappa = 1/3`.
+1. **(PROVED)** The family "no descent for `m` steps" occurs in every dyadic block with count exactly `2^(k-m)` times the `2^-m`-covering number `W_m` of the exceptional fractal `Bad`, for `m <= k log_3 2` (Theorems G, D). Its prefix-cover exponent is `h(log_3 2)=1+log_2 min g`; its integer-height exponent for m~ck is `1-c(1-h)`.
+2. **(PROVED)** The family "rises by a factor `W`" occurs with limiting dyadic-window fraction between `2/(3W)` and `1/W`, and with lower density `>= P(W)` for full trajectories. The exponent `-1` is `1 - s2`, where `s2 = 2` is the second root of the owner's Moran function (`g(2) = 1/4 + 3/4`, AM-fairness). The window spectrum of rises beyond `n^beta` is the slope `1 - s2 = -1` tangent to the dip-spectrum curve, then the curve itself (Theorem S).
+3. **(PROVED identity + FINITE-EXACT test)** A backward-closed family of exponent `s` has branch fraction `kappa = (1 - 2^-s)(2/3)^s`; 27's branch is numerically consistent with `s=1`, `kappa=1/3` in the stated finite blocks; the asymptotic hypotheses are unproved.
 4. **(Model PROVED, EMPIRICAL match)** Records of the rise family occur at rate `s2/n = 2/n`: 98 path records up to `2.36e21` against `97.6`.
 5. **(CORRECTED)** The averaged recursion does **not** fix the density of an individual family such as 27's branch. The owner's `4x` self-similarity holds for sets and on average over 3-adic classes, not for single trees.
 
 ## 5. What "numbers beyond 27 in the same family" are (T4)
 
-* **In the delay sense** they are, overwhelmingly, **27's relatives in the backward tree**. Of the 148 delay records, 104 lie in `B27`, as do 73% of all `n in [2^20, 2^32]` with `sigma_T(n) >= 16 ln n`, against 39% of all integers (`.out` §E8). Joining 27's trajectory early buys 27's long tail: from `31` or `47`, 66 or 67 more steps remain, against 6 from `20`. Delay records are decided by margins of a few steps. The numbers as long-lived as 27 relative to their size (`sigma_T >= 21.24 ln n`) occur at rate `X^0.67`.
-* **In the height sense** they are the champions of a family occurring at the critical rate: `t(n) > n^2` holds for 21 integers up to `2^32`, in 3 tree clusters, and the path records number `2 ln X`, the second Moran root. 27 is the unique maximiser of `ln t(n)/ln n` up to `2^32` and among all 98 known path records. Rising by 27's factor 171 is common: the measured density is `0.486%`, and the lower density is PROVED to be at least `P(170.96) = 0.486%` (at least `2/(3 x 170.96) = 0.39%` in closed form).
+* **In the delay sense** they are, overwhelmingly, **27's relatives in the backward tree**. Of the 148 delay records, 104 lie in `B27`, as do 73% of all `n in [2^20, 2^32]` with `sigma_T(n) >= 16 ln n`, against39% in the same finite scan (`.out` §E8). Joining 27's trajectory early buys 27's long tail: from `31` or `47`, 66 or 67 more steps remain, against 6 from `20`. Delay records are decided by margins of a few steps. For numbers as long-lived as27 relative to their size (`sigma_T>=21.24 ln n`), `X^0.67` is a model prediction supported by finite data, not an actual asymptotic theorem.
+* **In the height sense** they are the champions of a family occurring at the critical rate: `t(n) > n^2` holds for 21 integers up to `2^32`, in 3 tree clusters, and the path records are numerically consistent with the independent-model count `2 ln X`, associated with the second Moran root. 27 is the unique maximiser of `ln t(n)/ln n` up to `2^32` and among all 98 known path records. Rising by 27's factor 171 is common: the measured density is `0.486%`, and the lower density is PROVED to be at least `P(170.96)`, numerically about0.486% (at least `2/(3 x 170.96) = 0.39%` in closed form).
 * **In the glide sense** 27 is the largest outlier relative to the exact `W_k` model (3.7 times its expected record). Later glide records sit within 16% of the model, with an exact window theory (Theorem G) and a fractal of dimension `h` behind it.
-* **In the parity-word sense** 27 is a typical critical excursion.
-* **As a set**, 27's branch is a positive-density family: 39.27% of all integers join 27's trajectory before its peak.
+* **In the parity-word comparison** 27 is typical relative to the stated model and finite conditioned sample; this is not a proved law of actual integer trajectories.
+* **Finite observation:** 27's branch occupies about 39.27% of the specified large blocks. Its natural density, including positivity of that density, is not proved here.
 
 ## 6. Failures and corrections
 
