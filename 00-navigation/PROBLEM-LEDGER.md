@@ -298,6 +298,9 @@ all heights (THM-1289, published), δ ineffective.
   turns THM-4476's `X^(h*+eps)` into `X^(h*) (log_2 X)^a`, `a > 0.0138`.
   **THM-4498 (polynomial orders, PROVED):** `D_b(X, gamma) = Theta(X^(E(gamma)) (log X)^(-1/2))`
   for `log_4 3 < gamma < 1`, `Theta(X)` for `gamma <= log_4 3`, `Theta(X^(h*) (log X)^(-3/2))` at `gamma = 1`.
+  **THM-4499 (o(X^(h*)), PROVED):** every divergent orbit and every injective
+  invariant set has `N(X) <= K X^(h*) (log_2 X)^a` for every `a > lambda*/h* - 3/2 = -0.9862`:
+  the Terras exponent is not attained.
 - **Erdős Problem 592** [DEEP — $1000 problem] — the p=2 Schur-seam theorem (THM-469),
   R(n,2)=2n+1 linear conjecture, Chang-tower m=3 open; 21 scripts, a survey draft.
 - **{7,21} forbidden H-spectrum** [DEEP, repo-signature] — permanent exclusions by

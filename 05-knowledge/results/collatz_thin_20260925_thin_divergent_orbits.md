@@ -327,6 +327,12 @@ constant depending only on `eps` and `|b|`. Summing over the at most
 
 ### 1.6b Addendum (2026-09-26, opus, post-audit): the `eps` is a power of the logarithm, and a small one
 
+**Superseded (same day) by THM-4499** (`a > lambda*/h* - 3/2 = -0.9862`, so
+`N(X) = o(X^(h*))`): the moving-barrier count carries the ballot factor
+`(log X)^(-3/2)` of THM-4495, proved in
+[collatz_thin_20260926_little_o_thin_divergence](collatz_thin_20260926_little_o_thin_divergence.md).
+The addendum below is kept as the intermediate step (geometric tail only).
+
 **Theorem (polylog form).** Let `rho* = log_3 2`, `h* = h(rho*)`,
 `lambda* = log_2(rho*/(1-rho*))/alpha = 0.488077` (the tilt `-E'(1)` of
 THM-4487), and
@@ -612,6 +618,7 @@ Further controls (`collatz_thin_20260925_controls2.py` / `.out`):
    of one sequence) lower it?
    **Update 2026-09-26 (THM-4487):** the counting lemma is sharp, `#F_b(X, theta) = X^(h(rho)+o(1))`, so no improvement of the lemma lowers `h*`; a second constraint would have to reach beyond one `log_2 X` window.
    **Update 2026-09-26b (Lemma 1.4b, addendum 1.6b):** the `eps` is a power of the logarithm, `N(X) <= K X^(h*) (log_2 X)^a` for every `a > lambda*/h* - 1/2 = 0.0138`; a uniform ballot factor at a moving barrier (THM-4495's `log^(-3/2)` for `theta -> 0`) would make it `o(X^(h*))`.
+   **Update 2026-09-26c (THM-4499):** done: the moving-barrier ballot bound holds, and `N(X) <= K X^(h*) (log_2 X)^a` for every `a > lambda*/h* - 3/2 = -0.9862`, so `N(X) = o(X^(h*))`.
 2. The union question: bound `#{n <= X : the orbit of n diverges}`. The
    branching of the inverse tree defeats the pigeonhole; Krasikov–Lagarias
    difference inequalities are the natural tool.

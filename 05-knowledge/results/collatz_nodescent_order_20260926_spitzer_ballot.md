@@ -2,7 +2,8 @@
 
 **Status: PROVED (self-contained, elementary) + FINITE-EXACT (identity
 checked against a ballot DP to `k = 300`, integrality of the recurrence
-and all bounds to `k = 3000`). Session `collatz-exponent-atlas-20260926`
+and all bounds to `k = 3000`) + INDEPENDENTLY AUDITED (SOUND, 2026-09-26;
+cosmetic corrections applied, section 6). Session `collatz-exponent-atlas-20260926`
 (opus), 2026-09-26. Integrates the procgen lane's THM-4479 / THM-4485 (the
 exponent `1 - h` of the distance to provability, sandwiched between a
 necklace count and `|Bad_k|`) with THM-4487 (the dip spectrum, whose
@@ -167,7 +168,8 @@ checked exactly against a direct ballot DP for `k <= 300` and is integral
 *Binomial tails.* Let `j_0 = floor(n rho) + 1`, `p = j_0/n in (rho, rho + 1/n]`.
 For `j >= j_0`, `C(n, j+1)/C(n, j) = (n-j)/(j+1) < (1-rho)/rho`, so
 `C(n, j_0) <= B_n <= (rho/(2 rho - 1)) C(n, j_0) = 2.4094 C(n, j_0)`. The standard
-Stirling bounds (`n >= 3`, so that `p < 1`)
+Stirling bounds (MacWilliams and Sloane, *The Theory of Error-Correcting
+Codes*, Ch. 10, Lemma 7; `n >= 3`, so that `p < 1`)
 
 ```text
 2^(n h(p)) / sqrt(8 n p(1-p))  <=  C(n, pn)  <=  2^(n h(p)) / sqrt(2 pi n p(1-p))
@@ -179,9 +181,11 @@ and `h(p) <= h(rho)` (as `p > rho > 1/2` and `h` decreases on `[1/2, 1]`) give
 and `b_n n^(1/2) <= 1.983` for `1 <= n < 30` by direct evaluation (the
 control's maximum over all `n <= 3000`); so `b_n <= 2.05 n^(-1/2)` for all
 `n >= 1`. For the lower bound, `h(j_0/k) >= h - 1.4415/k` for `k >= 10`
-(`|h'| <= log_2(0.7309/0.2691) = 1.4415` on `[rho, rho + 0.1]`, as in THM-4479)
-and `p(1-p) <= 1/4`, so `C(k, j_0) >= 2^(hk) 2^(-1.4415)/sqrt(2k) = 0.2603 * 2^(hk) k^(-1/2)`
-for `k >= 10`; the cases `k < 10` are read off the table. Since every
+(`|h'| <= log_2(0.7309/0.2691) = 1.44175` on `[rho, rho + 0.1]`, as in THM-4479)
+and `p(1-p) <= 1/4`, so `C(k, j_0) >= 2^(hk) 2^(-1.44175)/sqrt(2k) = 0.2603 * 2^(hk) k^(-1/2)`
+for `k >= 10`; for `k < 10` the normalised `C(k, j_0)`, `B_k` and `N_k` are
+at least `0.379`, `0.379` and `0.518` (audit output), so the bounds hold for
+every `k >= 1`. Since every
 necklace with `j` ones has at most `k` rotations, `N_k >= C(k, j_0)/k`.
 
 *Lower bound for `W_k`.* The recurrence has nonnegative terms, and its
@@ -212,7 +216,7 @@ w_k <= C k^(-3/2) sum_(m>=1) (2^(3/2) sigma)^(m-1)/(m-1)! = C e^(2 sqrt2 sigma) 
 
 *Oscillation.* `B_k k^(1/2) 2^(-hk) = sum_(i>=0) C(k, j_0 + i) k^(1/2) 2^(-hk)`,
 and with `theta = j_0 - k rho in (0, 1]`, `k h(j_0/k) = hk + h'(rho) theta + O(1/k)`,
-`h'(rho) = log_2((1-rho)/rho) = -0.7731`, and `C(k, j_0+i)/C(k, j_0) -> ((1-rho)/rho)^i`,
+`h'(rho) = log_2((1-rho)/rho) = -0.7736`, and `C(k, j_0+i)/C(k, j_0) -> ((1-rho)/rho)^i`,
 one gets `B_k k^(1/2) 2^(-hk) = (2 pi rho(1-rho))^(-1/2) (rho/(2rho-1)) ((1-rho)/rho)^theta (1 + o(1))`,
 a function of `theta` alone whose values fill `(1.166, 1.992]`; since
 `k rho mod 1` is equidistributed, the normalised `B_k` has no limit, and
@@ -244,10 +248,16 @@ all `j`, i.e. `w` positive: `D_-(X, 1) <= sum_(t <= log_2 X) W_t`. *Minus
 sheet, lower bound:* for `w` positive of length `t - 2` and `n` in the class
 of `11w`, `M_1 = 3/2`, `M_2 = 9/4`, `M_j = (9/4) 2^(S_(j-2)(w)) > 9/4` for `j > 2`,
 so `T_-^j(n) >= (3/2) n - (3/2)^t >= n` once `2^(t-1) >= (3/2)^t` (`t >= 3`):
-`D_-(X, 1) >= sum_(3 <= t <= log_2 X - 1) W_(t-2)`. In all four cases Theorem B
-and the geometric growth `W_(t+1)/W_t -> 2^h` give `D_b(X, 1) = Theta(X^h (log X)^(-3/2))`.
+`D_-(X, 1) >= sum_(3 <= t <= log_2 X - 1) W_(t-2)`. In all four cases the two-sided
+bounds of Theorem B, summed over `t <= log_2 X`, give `D_b(X, 1) = Theta(X^h (log X)^(-3/2))`.
 (FINITE-EXACT: the counts of THM-4487's control at `gamma = 1` are
-`367698` on both sheets at `X = 2^24`; `sum_(t < 24) W_t = 367698`.)
+`367698` on both sheets at `X = 2^24`, over `2 <= n < 2^24`; `sum_(1 <= t < 24) W_t = 367698`,
+and `n = 1` is the trivial `W_0` term. The independent audit checked block
+by block for `t < 18` that the plus-sheet block count equals `W_t` exactly
+(no non-positive word is a non-dipper there) and likewise on the minus
+sheet; it also observed that the plus-sheet equality is provable for
+`12 <= t <= 3000` from the note's own argument, since the negative partial
+sum closest to `0` exceeds `2(3/4)^t` in absolute value there.)
 
 *What is not claimed.* Nothing about Collatz orbits; THM-4476's `X^(h+eps)`
 keeps its `eps` (it comes from the dichotomy bootstrap, not from the
@@ -292,7 +302,35 @@ rho = log_3 2 = 0.6309297536, h = h(rho) = 0.9499555272, 1 - h = 0.0500444728, l
 ```
 
 Read: (S) the identity holds exactly; (B) the four inequalities behind the
-constants hold at every `n <= 3000`; (O) the three normalised counts stay in
+constants hold at every `n <= 3000` (the printed "explicit upper constant
+525.64" uses `C = 1.99`, which is only numerically justified to `n = 3000`;
+the theorem's `545` uses the proved `C = 2.05`); (O) the three normalised counts stay in
 bounded windows, `W_k/N_k` stays between about `5.6` and `7.7`
 (THM-4479's sandwich for `delta_k` is a constant-width window), and the
 fractional part of `k log_3 2` drives the oscillation of `B_k` and `N_k`.
+
+## 6. Independent audit (2026-09-26)
+
+Auditor subagent, blind re-implementation with exact partial-sum
+comparisons (`sign(3^o 2^(j') - 3^(o') 2^j)`) and mpmath at 50 digits:
+`04-computation/experiments/collatz_nodescent_order_20260926_audit.py` ->
+`05-knowledge/results/collatz_nodescent_order_20260926_audit.out` (65 checks,
+0 failures). Theorem A: every step verified word by word (Steps 1-3 for
+`n <= 12`/`14`; Step 4's claims (a)-(d) for every word with positive total
+and every rotation, `n <= 12`; an exact series logarithm gives
+`[t^n] log W = B_n/n` to `n = 40`); own `W_k` (ballot DP = brute force
+`k <= 18` = THM-4479's residue simulation `k <= 16` = its table) and own
+`B_n` satisfy the recurrence exactly to `k = 3000`; THM-4479's `Bad_k` is
+the same set (strict `M_j > 1`, its code tests `3^a > 2^j`). Theorem B: the
+geometric tail, the Stirling bounds (all `1 <= j <= n-1`, `n <= 3000`; Robbins
+derivation; citation supplied), `h(j_0/n) < h`, `b_n <= 2.05/sqrt n`, the
+convolution induction (numerically within the bound, and the series
+reproduces `W_k 2^(-hk)` to `1e-15`), `sigma = 1.898923`, `545 = 544.86`, the
+lower constant (with `max|h'| = 1.44175`, harmless), the `theta`-window
+(ratio `0.991`-`0.996` at `k = 2000..3000`) and `|N_k - B_k/k| <= 2^(k/2)`.
+C3: the carry bound and all four cases; `D_(+-)(2^T, 1) = sum_(1 <= t < T) W_t`
+exactly to `T = 20` on both sheets, block by block. C1/C2: the sandwiches
+quoted from THM-4479/4485. Cosmetic corrections (applied above): the
+`n = 1`/`W_0` convention of the FINITE-EXACT sums; the stray
+"`W_(t+1)/W_t -> 2^h`"; `h'(rho) = -0.7736`; the `.out`'s `525.64`; the
+Stirling citation. Verdict: SOUND.

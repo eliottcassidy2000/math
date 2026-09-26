@@ -46,6 +46,11 @@ status: >
   concavity bound h(rho) <= h* + lambda* theta, and the counting lemma with
   a geometric binomial tail (factor (log_2 X)^(-1/2) instead of log_2 X + 1);
   same for injective invariant sets (Cor. 4).
+  UPDATE 2026-09-26 (THM-4499, opus): superseded by N(X) <= K X^(h*) (log_2 X)^a
+  for every a > lambda*/h* - 3/2 = -0.9862, i.e. N(X) = o(X^(h*)): the
+  no-dip count at the moving barrier carries THM-4495's ballot factor
+  (log X)^(-3/2) (weighted Spitzer identity), which the recursion turns
+  into the exponent a*. Divergent orbits remain not excluded.
 source: collatz-squares-doubles-20260925 session (opus), 2026-09-25; the owner asked to prove HYP-9160 for discrepancy O(log l). Mechanism: the in-house no-bounded-strip theorem's Terras stopping-time count (collatz_guards_20260921_discrepancy.md, section 2a) plus a pigeonhole on landing points that replaces the strip hypothesis. No priority claimed.
 depends_on:
   - 05-knowledge/results/collatz_sqdbl_20260925_squares_doubles_foundry.md (Proposition 6: the orbitwise two-place identity)

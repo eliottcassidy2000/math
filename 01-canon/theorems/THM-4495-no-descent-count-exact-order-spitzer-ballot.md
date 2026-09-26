@@ -2,7 +2,8 @@
 id: THM-4495
 title: "The no-descent residue count W_k = |Bad_k| of Collatz has exact order 2^(hk) k^(-3/2): a self-contained Spitzer identity k W_k = sum_n B_n W_(k-n) (binomial tails B_n) plus an elementary convolution bound; hence the strategy-cube distance delta_k (THM-4479), the periodic-deletion price and its chain (THM-4485), the expanding-necklace count, and the gamma = 1 dip count of THM-4487 are all Theta(2^(hk) k^(-3/2))"
 status: >
-  PROVED (self-contained, elementary) + FINITE-EXACT. Setting: T the
+  PROVED (self-contained, elementary) + FINITE-EXACT + INDEPENDENTLY
+  AUDITED (SOUND, 2026-09-26; cosmetic corrections applied). Setting: T the
   Collatz shortcut, h = h(log_3 2) = 0.9499555, rho = log_3 2; for a residue
   r mod 2^k with parity word w and odd counts o_j, M_j = 3^(o_j)/2^j.
   W_k = #{w in {0,1}^k : 3^(o_j) > 2^j for all 1 <= j <= k} (= |Bad_k| of
@@ -36,8 +37,10 @@ status: >
   closes at its lower end (plus sheet: positive words are non-dippers and
   the rest inject into positive words by prepending two odd letters; minus
   sheet: non-dippers are positive words, and 11w is a non-dipper).
-  FINITE-EXACT: sum_(t<T) W_t = 281, 2903, 31730, 367698 for T = 12, 16, 20, 24
-  are exactly THM-4487's brute-force counts D_+-(2^T, 1) on both sheets.
+  FINITE-EXACT: sum_(1<=t<T) W_t = 281, 2903, 31730, 367698 for T = 12, 16,
+  20, 24 are exactly THM-4487's brute-force counts of non-dippers
+  2 <= n < 2^T on both sheets (n = 1 is the trivial W_0 term); the audit
+  verified the equality block by block to t < 18.
   NOT claimed: anything about Collatz orbits; THM-4476's X^(h+eps) keeps its
   eps; the polynomial factor at gamma < 1 (expected (log X)^(-1/2)); sharp
   constants (observed W_k k^(3/2) 2^(-hk) is about 10-11, N_k's about 1.1-2).
@@ -62,12 +65,39 @@ audit: >
   binomial bounds, the geometric tail and h(j_0/n) <= h checked at every
   n <= 3000; the convolution induction re-checked; the dip-count corollary
   checked against THM-4487's brute-force counts to 2^24 (exact equality).
-  Independent audit not yet performed.
+  Independent adversarial audit (separate agent, 2026-09-26; script
+  04-computation/experiments/collatz_nodescent_order_20260926_audit.py sha256
+  09c463ae7110657ecdee0a303134ee6c8ab100144fac19c820728e4a16bbcdd1, output
+  05-knowledge/results/collatz_nodescent_order_20260926_audit.out sha256
+  c6b19bf180a6c7b5226aaa820e77fc310e307aedc9b88f13b071276372d577d3, LF bytes;
+  65 checks, 0 failures; written blind to the control script, all partial-sum
+  comparisons exact). Theorem A: the four steps re-derived and verified word
+  by word (Steps 1-3 for n <= 12/14; Step 4's claims (a)-(d) for every word
+  with positive total and every rotation, n <= 12); an independent
+  first-passage DP gives W = 1/(1-L) to k = 300, an exact series logarithm
+  gives [t^n] log W = B_n/n to n = 40, and own W (ballot DP = brute force
+  k <= 18 = THM-4479's residue simulation k <= 16 = its table k <= 11;
+  definitions identical, strict M_j > 1) with own B_n satisfy
+  k W_k = sum B_n W_(k-n) exactly to k = 3000. Theorem B: geometric tail,
+  Stirling bounds (all 1 <= j <= n-1, n <= 3000; Robbins derivation;
+  MacWilliams-Sloane Ch. 10 Lemma 7), h(j0/n) < h, b_n <= 2.05/sqrt n (max
+  1.9827 at n = 2677; analytic 2.0354 for n >= 30), the convolution
+  induction, sigma = 1.898923, 545 (= 544.86), the lower constant 0.2603
+  (true max|h'| = 1.44175, not 1.4415: harmless), the theta-window (ratio
+  0.991-0.996 at k = 2000..3000) and |N_k - B_k/k| <= 2^(k/2) all confirmed;
+  k < 10 listed. C3: carry bound and all four cases correct;
+  D_+-(2^T, 1) = sum_(1<=t<T) W_t exactly to T = 20 on both sheets, block by
+  block (no non-positive non-dipper, no positive dipper). C1/C2 quoted from
+  THM-4479/4485. Cosmetic corrections (applied): the FINITE-EXACT sums omit
+  n = 1 (W_0 = 1) relative to the n <= X definition; "W_(t+1)/W_t -> 2^h"
+  was unproven and unneeded; h'(rho) = -0.7736; the .out's 525.64 uses
+  C = 1.99 (only numeric); Stirling bounds now cited. Reproduction of the
+  control output byte-exact (48.6 s); hashes match. Verdict: SOUND.
 ---
 
 # THM-4495 -- the no-descent count has exact order 2^(hk) k^(-3/2)
 
-**PROVED (self-contained) + FINITE-EXACT.** Full note:
+**PROVED (self-contained) + FINITE-EXACT + INDEPENDENTLY AUDITED (SOUND).** Full note:
 [collatz_nodescent_order_20260926_spitzer_ballot](../../05-knowledge/results/collatz_nodescent_order_20260926_spitzer_ballot.md).
 
 ## 1. Statement

@@ -1,0 +1,170 @@
+collatz_nodescent_order_20260926_audit.py: independent audit of THM-4495 (KMAX = 3000, TFULL = 18, TCOUNT = 20)
+rho = log_3 2 = 0.630929753571457, h(rho) = 0.949955527188331, log_2 3 = 1.58496250072116 (mpmath, 50 digits)
+== 1. setup: no ties, definitions, reversal formula ==
+  [PASS] 3^a = 2^b only at a = b = 0 (a < 200, b < 320): no two partial sums of any word coincide, none vanishes
+  [PASS] exact comparator: 0 coinciding pairs among S_0..S_n over all words of length <= 12
+  [PASS] reversal formula S_i(w^R) = S_m(w) - S_(m-i)(w) holds for all words of length <= 10 and all 0 <= i <= m
+  definitions used below: positive = S_j > 0 for 1 <= j <= n; first-passage = S_j < 0 for 1 <= j < m and S_m > 0;
+  ends-at-max = S_n > S_j for 0 <= j < n; min-ending = S_j > S_n for 1 <= j < n (index j = 0 excluded, as positivity forces).
+== 2. Theorem A Step 1: minimum decomposition W_k = sum_m P_m W_(k-m) ==
+  [PASS] forward: every positive w of length k <= 12 splits at its minimum index m in [1,k] into a positive min-ending a and a positive (possibly empty) b
+  [PASS] converse: for every positive min-ending a and positive b, ab is positive with minimum index exactly |a|
+  [PASS] the two maps are mutually inverse (the set of pairs (a,b) from splitting equals PM_m x POS_(k-m) over m), so the decomposition is unique
+  [PASS] W_k = sum_(m=1)^k P_m W_(k-m) with W_0 = 1 (empty b allowed, m = k term) for k <= 12
+  W_k direct, k = 1..12: [1, 1, 2, 3, 4, 8, 13, 19, 38, 64, 128, 226]
+  P_m direct (positive min-ending), m = 1..12: [1, 0, 1, 0, 0, 2, 0, 0, 7, 0, 30, 0]
+== 3. Theorem A Step 2: reversal, P_m = L_m ==
+  [PASS] {a^R : a positive min-ending of length m} == {first-passage words of length m} for m <= 12 (both directions)
+  L_m direct (first-passage), m = 1..12: [1, 0, 1, 0, 0, 2, 0, 0, 7, 0, 30, 0]
+== 4. Theorem A Step 3: ladder blocks, E_(n,r) = [t^n] L(t)^r ==
+  [PASS] a word ends at its maximum iff n is a ladder epoch, and then the blocks between consecutive ladder epochs are all first-passage (n <= 14)
+  [PASS] E_(n,r) (direct count of words ending at max with r ladder epochs) == [t^n] L(t)^r for all n <= 14, r <= n
+  [PASS] converse: every concatenation of r first-passage words ends at its maximum with exactly r ladder epochs (n <= 10, all tuples)
+  sum_r E_(n,r)/r for n = 1..14: ['1', '1/2', '4/3', '5/4', '6/5', '11/3', '29/7', '37/8', '130/9', '88/5', '562/11', '397/6', '1093/13', '3473/14']
+== 5. Theorem A Step 4: rotation averaging (the crux) ==
+  [PASS] (a) for every x with S_n(x) > 0, n <= 12: records of the periodic extension exist and j is a record iff j + n is
+  [PASS]     record test over the window [j-n, j) agrees with the window [j-3n, j) (the reduction to one period is sound)
+  [PASS] (b) rot_i(x) ends at its maximum iff i is a record residue (checked for every i, every x)
+  [PASS] (c) for record i, the ladder epochs of rot_i(x) are exactly the l in [1,n] with i + l a record; their number is r(x)
+  [PASS] (d) sum_i [rot_i x ends at max]/r(rot_i x) = 1 for every x; hence B_n = n sum_r E_(n,r)/r exactly (Fraction) for n <= 12
+  words with positive total examined: 1767
+== 6. independent W_k, B_n and the recurrence ==
+  [PASS] own ballot DP == brute-force enumeration of positive words for k <= 18: [1, 1, 2, 3, 4, 8, 13, 19, 38, 64, 128, 226, 367, 734, 1295, 2114, 4228, 7495]
+  [PASS] own ballot DP == THM-4479's residue simulation |{r mod 2^k : M_j(r) > 1, j = 1..k}| for k <= 16: [1, 1, 2, 3, 4, 8, 13, 19, 38, 64, 128, 226, 367, 734, 1295, 2114]
+  [PASS] W = 1/(1 - L) with L from an independent first-passage DP reproduces W_k for k <= 300 (Steps 1-2 at scale)
+  [PASS] W_k == THM-4479's |Bad_k| table for k = 2..11 (1,2,3,4,8,13,19,38,64,128); W_1 = 1 = |Bad_1| = |{1 mod 2}|
+  THM-4479 defines Bad_k = {r mod 2^k : M_j(r) > 1 for j = 1..k}, M_j = 3^(a_j)/2^j (strict; equality never occurs);
+  its code tests `mul ** a > 2 ** j` (procgen_cubedist_20260925_lib.py) and `3 ** a2 > 2 ** j` (orchestrator ballot DP)
+  over representatives 0..2^k-1: identical to W_k's definition 3^(o_j) > 2^j. Definitions AGREE.
+  [PASS] k W_k == sum_(n=1)^k B_n W_(k-n) EXACTLY (own W by DP, own B by binomial tails) for all k <= 250
+  [PASS] ... and for all 251 <= k <= 3000
+  W_k, k = 1..20: [1, 1, 2, 3, 4, 8, 13, 19, 38, 64, 128, 226, 367, 734, 1295, 2114, 4228, 7495, 14990, 27328]
+  B_n, n = 1..20: [1, 1, 4, 5, 6, 22, 29, 37, 130, 176, 562, 794, 1093, 3473, 4944, 6885, 21778, 31180, 94184, 137980]
+  j0(n) = least j with 3^j > 2^n, n = 1..20: [1, 2, 2, 3, 4, 4, 5, 6, 6, 7, 7, 8, 9, 9, 10, 11, 11, 12, 12, 13]
+  [PASS] [t^n] log W(t) == B_n/n exactly for n <= 40 (series log of the DP generating function)
+== 7. Theorem B ==
+  rho = 0.630929753571, h = 0.949955527188, (1-rho)/rho = 0.5849625007, rho/(2rho-1) = 2.40942084
+  [PASS] (a) j0(n) = floor(n rho) + 1 for all n <= 3000 (least j with 3^j > 2^n)
+  [PASS] (a) j0 <= n - 1 for n >= 3 (p < 1); j0 = n for n = 1, 2
+  [PASS] (a) max_n B_n/C(n,j0) = 2.4006617 <= rho/(2rho-1) = 2.4094208 (ratio to the bound 0.996365); C(n,j0) <= B_n trivially
+  [PASS] (a) C(n,j+1)/C(n,j) = (n-j)/(j+1) < (1-rho)/rho for all j >= j0, n <= 3000 (algebra: iff j > rho(n+1)-1, and j0 > n rho > rho(n+1)-1)
+  [PASS] (b) lower Stirling bound C(n,pn) >= 2^(nh(p))/sqrt(8np(1-p)): min margin 0.000000 bits at (n,j) = (2, 1) over ALL 1 <= j <= n-1, n <= 3000 (equality at n = 2, j = 1)
+  [PASS] (b) upper Stirling bound C(n,pn) <= 2^(nh(p))/sqrt(2 pi np(1-p)): max margin -0.000120 bits at (n,j) = (3000, 1500) over ALL 1 <= j <= n-1, n <= 3000
+      at the j = j0(n) that occur (n >= 3): min(log2 C - lower) = 0.0376, max(log2 C - upper) = -0.000132 (note: 0.0376 and 0.0000)
+  [PASS] (b) Robbins derivation: 1/(12n+1) - 1/(12j) - 1/(12(n-j)) >= -0.09797 > ln sqrt(pi/4) = -0.12078 for n >= 3 (so the lower bound follows from n! = sqrt(2 pi n)(n/e)^n e^(r_n), 1/(12n+1) < r_n < 1/(12n)); the upper bound follows from 1/(12j+1) > 1/(12n) for j <= n-1. Source: MacWilliams-Sloane, Theory of Error-Correcting Codes, Ch. 10 Lemma 7; Gallager 1968 Problem 5.8
+  [PASS] (c) h(j0/n) < h(rho) for all 3 <= n <= 3000: max difference -2.916e-8 (j0/n > rho > 1/2, h decreasing on [1/2,1])
+      max_n b_n sqrt(n) = 1.98274 at n = 2677; max over n >= 30 = 1.98274; analytic constant for n >= 30: rho/(2rho-1)/sqrt(2 pi p(1-p)) with p = rho + 1/30 = 0.664263, p(1-p) = 0.223018, constant = 2.03542
+  [PASS] (d) b_n <= 2.05 n^(-1/2): numerically for n <= 3000 (max 1.9827 < 1.983 claimed? True) and analytically for n >= 30 (constant 2.0354 <= 2.05)
+  [PASS] (e) induction step 2^(3/2)(C s^m + C m (2^(3/2) s)^(m-1) s) <= C(m+1)(2^(3/2) s)^m reduces to 2^(3/2) <= 2^(3m/2), true for m >= 1 (checked m <= 40)
+      convolution lemma: split at i = k/2; i <= k/2 gives b_(k-i) <= B (k/2)^(-3/2) and sums to <= B alpha (k/2)^(-3/2); i > k/2 symmetric with A beta: correct.
+  [PASS] (e) numerically (g^(*m))_k <= C m (2^(3/2) sigma)^(m-1) k^(-3/2) for m <= 6, k <= 1500 (max ratio to the bound 0.9619)
+  [PASS] (e) w_k = sum_(m<=40) (g^(*m))_k/m! reproduces W_k 2^(-hk) in floats for k <= 1500 (max relative error 7.70e-16): the exponential form is consistent
+      sigma_3000 = sum_(n<=3000) b_n/n = 1.8989229 (note: 1.8989); tail bound sum_(n>3000) 2.05 n^(-3/2) <= 2*2.05/sqrt(3000) = 0.074855 (note: 0.0749; integral test);
+      2.05 exp(2 sqrt2 (sigma + tail)) = 544.859 (theorem: 545); the .out's 525.64 uses C = 1.99 (only numerically justified to n <= 3000): recomputed 525.645
+  [PASS] (f) sigma = 1.898923 reproduced; 2.05 e^(2 sqrt2 (sigma + tail)) = 544.859 <= 545
+  [PASS]     W_k k^(3/2) 2^(-hk) in [0.51765 (k = 1), 11.0517] for 1 <= k <= 3000: inside [0.26, 545]
+      max |h'| on [rho, rho+0.1] = |log2((1-p)/p)| at p = rho + 0.1 = 1.44175 (note and THM-4479: 1.4415, from rounding 0.7309/0.2691); 2^(-1.4415)/sqrt2 = 0.260346 (note: 0.2603); 2^(-1.44175)/sqrt2 = 0.260301
+  [PASS] (g) |h'| <= 1.4415 is slightly FALSE at the right end (true max 1.44175), but 2^(-1.4417)/sqrt2 = 0.2603 still >= 0.26: harmless rounding
+  [PASS] (g) k (h - h(j0/k)) <= max|h'| for all 10 <= k <= 3000 (mean value theorem on [rho, rho + 1/k] subset [rho, rho+0.1]); with the note's 1.4415: True
+  [PASS] (g) p(1-p) < 1/4 for p = j0/k (p > rho > 1/2), so sqrt(8kp(1-p)) < sqrt(2k)
+      k < 10 (not all in the note's table): k, j0, C(k,j0), B_k, N_k, C k^.5 2^-hk, B_k k^.5 2^-hk, N_k k^1.5 2^-hk
+         (1, 1, 1, 1, 1, '0.51765', '0.51765', '0.51765')
+         (2, 2, 1, 1, 1, '0.37895', '0.37895', '0.75791')
+         (3, 2, 3, 4, 2, '0.72075', '0.961', '1.4415')
+         (4, 3, 4, 5, 2, '0.57442', '0.71803', '1.1488')
+         (5, 4, 5, 6, 2, '0.41556', '0.49867', '0.83111')
+         (6, 4, 15, 22, 5, '0.70693', '1.0368', '1.4139')
+         (7, 5, 21, 29, 5, '0.55337', '0.76417', '0.92228')
+         (8, 6, 28, 37, 6, '0.4083', '0.53954', '0.69995')
+         (9, 6, 84, 130, 16, '0.67253', '1.0408', '1.1529')
+  [PASS] (g) C(k,j0) k^(1/2) 2^(-hk) >= 0.37895, B_k k^(1/2) 2^(-hk) >= 0.37895 (k <= 3000), N_k k^(3/2) 2^(-hk) >= 0.51765 (k <= 400): all >= 0.26, every k >= 1
+  [PASS] (g) C(k,j0) >= 2^(hk - max|h'|)/sqrt(2k) for all 10 <= k <= 3000
+  [PASS] (g) own Burnside necklace count == direct enumeration for k <= 16; N_k >= C(k,j0)/k since a necklace has at most k rotations
+  [PASS] (g) N_k >= B_k/k for k <= 400 (so also N_k >= C(k,j0)/k)
+      h'(rho) = log2((1-rho)/rho) = -0.773584 (note: -0.7731); window ends A = 1.99195 (theta -> 0) and A (1-rho)/rho = 1.16521 (theta = 1) (note: 1.992, 1.166); ratio rho/(1-rho) = 1.70951
+  [PASS] (h) B_k k^(1/2) 2^(-hk) / [A ((1-rho)/rho)^theta] in [0.99095, 0.99627] for 2000 <= k <= 3000: the theta-window is the right asymptotic form (1 + o(1))
+  [PASS] (h) |N_k - B_k/k| <= 2^(k/2) for k <= 400 (Burnside: the d >= 2 terms total at most (1/k) sum_(d|k) phi(d) 2^(k/2) = 2^(k/2)); the note's O(k 2^(k/2)) is weaker and correct
+      note: the window [1.1652, 1.9919] is asymptotic; the observed B_k k^0.5 2^-hk minimum 1.1355 (k <= 3000) lies below A q = 1.1652 by the finite-k correction (ratio bound (n-j)/(j+1) < q strict).
+== 8. Corollary C3: carry bound, four cases, brute-force dip counts ==
+  [PASS] T_b^j(r) == (3^(o_j) r + b c_j)/2^j exactly for all r < 2^12, j <= 12, both sheets (c_j = 3 c_(j-1) + 2^(j-1) at odd steps): sign(beta_j) = b
+  [PASS] |beta_j| = c_j/2^j <= (3/2)^j - 1 for all words of length <= 16, equality iff the first j letters are all 1; beta_j = 0 iff no odd step (induction: c_j <= 3(3^(j-1) - 2^(j-1)) + 2^(j-1))
+  [PASS] plus/upper: log2(1-x) >= -2x on [0, 1/2] (concave, chord through (0,0),(1/2,-1)); (3/4)^t <= 1/2 iff t >= 3; so S_j > -2(3/4)^t >= -0.844 > -1 for t >= 3
+  [PASS] minus/lower: 2^(t-1) >= (3/2)^t iff t >= 3 (fails at t = 2); then n >= 2^t gives n/2 >= (3/2)^t, i.e. (3/2)n - (3/2)^t >= n
+      plus/upper chain: (1 - M_j) n <= beta_j <= (3/2)^j - 1 < (3/2)^t and n >= 2^t give 1 - 2^(S_j) < (3/4)^t, S_j > log2(1 - (3/4)^t) >= -2(3/4)^t;
+      11w then has partial sums 0.585, 1.170, 1.170 + S_j(w) > 0.17: positive; w -> 11w injective: correct.
+      minus/upper: beta_j <= 0 so T_-^j(n) <= M_j n; non-dipper forces M_j >= 1, hence M_j > 1 (no ties): w positive. correct.
+      minus/lower: 11w with w positive has M_1 = 3/2, M_2 = 9/4, M_j = (9/4) 2^(S_(j-2)(w)) > 9/4 (j > 2), so M_j >= 3/2 for all j >= 1 and T_-^j(n) >= (3/2) n - ((3/2)^t - 1) > n for n >= 2^t, t >= 3. correct.
+      remark: min over j <= t of the negative S_j closest to 0 exceeds 2(3/4)^t from t = 12 on (holds for all 12 <= t <= 3000), so on the plus sheet the note's own argument
+      makes every non-dipper in [2^t, 2^(t+1)) a positive word for 12 <= t <= 3000; the exact equality D_+ = sum W_t is then a finite check below t = 12.
+      per dyadic block [2^t, 2^(t+1)), t < 18: t, W_t | plus: non-dippers, of which non-positive word | minus: non-dippers, positive words that dip, 11w-classes (w positive) that are non-dippers, W_(t-2)
+        t= 0 W_t=      1 | plus:       1 nd, 0 non-positive | minus:       1 nd, 0 positive dippers, 11w nd 0 of 0 (W_(t-2) = -); min S_j over plus non-dippers 0.0000 vs -2(3/4)^t = -2.0000
+        t= 1 W_t=      1 | plus:       1 nd, 0 non-positive | minus:       1 nd, 0 positive dippers, 11w nd 0 of 0 (W_(t-2) = -); min S_j over plus non-dippers 0.0000 vs -2(3/4)^t = -1.5000
+        t= 2 W_t=      1 | plus:       1 nd, 0 non-positive | minus:       1 nd, 0 positive dippers, 11w nd 1 of 1 (W_(t-2) = 1); min S_j over plus non-dippers 0.0000 vs -2(3/4)^t = -1.1250
+        t= 3 W_t=      2 | plus:       2 nd, 0 non-positive | minus:       2 nd, 0 positive dippers, 11w nd 1 of 1 (W_(t-2) = 1); min S_j over plus non-dippers 0.0000 vs -2(3/4)^t = -0.8438
+        t= 4 W_t=      3 | plus:       3 nd, 0 non-positive | minus:       3 nd, 0 positive dippers, 11w nd 1 of 1 (W_(t-2) = 1); min S_j over plus non-dippers 0.0000 vs -2(3/4)^t = -0.6328
+        t= 5 W_t=      4 | plus:       4 nd, 0 non-positive | minus:       4 nd, 0 positive dippers, 11w nd 2 of 2 (W_(t-2) = 2); min S_j over plus non-dippers 0.0000 vs -2(3/4)^t = -0.4746
+        t= 6 W_t=      8 | plus:       8 nd, 0 non-positive | minus:       8 nd, 0 positive dippers, 11w nd 3 of 3 (W_(t-2) = 3); min S_j over plus non-dippers 0.0000 vs -2(3/4)^t = -0.3560
+        t= 7 W_t=     13 | plus:      13 nd, 0 non-positive | minus:      13 nd, 0 positive dippers, 11w nd 4 of 4 (W_(t-2) = 4); min S_j over plus non-dippers 0.0000 vs -2(3/4)^t = -0.2670
+        t= 8 W_t=     19 | plus:      19 nd, 0 non-positive | minus:      19 nd, 0 positive dippers, 11w nd 8 of 8 (W_(t-2) = 8); min S_j over plus non-dippers 0.0000 vs -2(3/4)^t = -0.2002
+        t= 9 W_t=     38 | plus:      38 nd, 0 non-positive | minus:      38 nd, 0 positive dippers, 11w nd 13 of 13 (W_(t-2) = 13); min S_j over plus non-dippers 0.0000 vs -2(3/4)^t = -0.1502
+        t=10 W_t=     64 | plus:      64 nd, 0 non-positive | minus:      64 nd, 0 positive dippers, 11w nd 19 of 19 (W_(t-2) = 19); min S_j over plus non-dippers 0.0000 vs -2(3/4)^t = -0.1126
+        t=11 W_t=    128 | plus:     128 nd, 0 non-positive | minus:     128 nd, 0 positive dippers, 11w nd 38 of 38 (W_(t-2) = 38); min S_j over plus non-dippers 0.0000 vs -2(3/4)^t = -0.0845
+        t=12 W_t=    226 | plus:     226 nd, 0 non-positive | minus:     226 nd, 0 positive dippers, 11w nd 64 of 64 (W_(t-2) = 64); min S_j over plus non-dippers 0.0000 vs -2(3/4)^t = -0.0634
+        t=13 W_t=    367 | plus:     367 nd, 0 non-positive | minus:     367 nd, 0 positive dippers, 11w nd 128 of 128 (W_(t-2) = 128); min S_j over plus non-dippers 0.0000 vs -2(3/4)^t = -0.0475
+        t=14 W_t=    734 | plus:     734 nd, 0 non-positive | minus:     734 nd, 0 positive dippers, 11w nd 226 of 226 (W_(t-2) = 226); min S_j over plus non-dippers 0.0000 vs -2(3/4)^t = -0.0356
+        t=15 W_t=   1295 | plus:    1295 nd, 0 non-positive | minus:    1295 nd, 0 positive dippers, 11w nd 367 of 367 (W_(t-2) = 367); min S_j over plus non-dippers 0.0000 vs -2(3/4)^t = -0.0267
+        t=16 W_t=   2114 | plus:    2114 nd, 0 non-positive | minus:    2114 nd, 0 positive dippers, 11w nd 734 of 734 (W_(t-2) = 734); min S_j over plus non-dippers 0.0000 vs -2(3/4)^t = -0.0200
+        t=17 W_t=   4228 | plus:    4228 nd, 0 non-positive | minus:    4228 nd, 0 positive dippers, 11w nd 1295 of 1295 (W_(t-2) = 1295); min S_j over plus non-dippers 0.0000 vs -2(3/4)^t = -0.0150
+  [PASS] plus sheet: #non-dippers in [2^t, 2^(t+1)) == W_t for 1 <= t < 18 (no non-positive non-dipper occurs), and all their S_j > -2(3/4)^t
+  [PASS] minus sheet: #non-dippers in [2^t, 2^(t+1)) == W_t for 1 <= t < 18 (every positive word is a non-dipper, none dips)
+  [PASS] minus sheet: every class 11w with w positive (length t-2) is a non-dipper for 3 <= t < 18, and there are exactly W_(t-2) of them
+      sheet +1, T = 8: D_b(2^T - 1, 1) over n >= 1 = 33, over n >= 2 = 32; sum_(1<=t<T) W_t = 32, sum_(0<=t<T) W_t = 33
+  [PASS]       D_b(2^8, 1) (n >= 2, THM-4487's script convention) == sum_(1<=t<8) W_t = 32; with n = 1 it is 33 = sum_(0<=t<8) W_t (the theorem's 'sum_(t<T) W_t' omits W_0 = 1)
+      sheet +1, T = 12: D_b(2^T - 1, 1) over n >= 1 = 282, over n >= 2 = 281; sum_(1<=t<T) W_t = 281, sum_(0<=t<T) W_t = 282
+  [PASS]       D_b(2^12, 1) (n >= 2, THM-4487's script convention) == sum_(1<=t<12) W_t = 281; with n = 1 it is 282 = sum_(0<=t<12) W_t (the theorem's 'sum_(t<T) W_t' omits W_0 = 1)
+      sheet +1, T = 16: D_b(2^T - 1, 1) over n >= 1 = 2904, over n >= 2 = 2903; sum_(1<=t<T) W_t = 2903, sum_(0<=t<T) W_t = 2904
+  [PASS]       D_b(2^16, 1) (n >= 2, THM-4487's script convention) == sum_(1<=t<16) W_t = 2903; with n = 1 it is 2904 = sum_(0<=t<16) W_t (the theorem's 'sum_(t<T) W_t' omits W_0 = 1)
+      sheet +1, T = 18: D_b(2^T - 1, 1) over n >= 1 = 9246, over n >= 2 = 9245; sum_(1<=t<T) W_t = 9245, sum_(0<=t<T) W_t = 9246
+  [PASS]       D_b(2^18, 1) (n >= 2, THM-4487's script convention) == sum_(1<=t<18) W_t = 9245; with n = 1 it is 9246 = sum_(0<=t<18) W_t (the theorem's 'sum_(t<T) W_t' omits W_0 = 1)
+      sheet -1, T = 8: D_b(2^T - 1, 1) over n >= 1 = 33, over n >= 2 = 32; sum_(1<=t<T) W_t = 32, sum_(0<=t<T) W_t = 33
+  [PASS]       D_b(2^8, 1) (n >= 2, THM-4487's script convention) == sum_(1<=t<8) W_t = 32; with n = 1 it is 33 = sum_(0<=t<8) W_t (the theorem's 'sum_(t<T) W_t' omits W_0 = 1)
+      sheet -1, T = 12: D_b(2^T - 1, 1) over n >= 1 = 282, over n >= 2 = 281; sum_(1<=t<T) W_t = 281, sum_(0<=t<T) W_t = 282
+  [PASS]       D_b(2^12, 1) (n >= 2, THM-4487's script convention) == sum_(1<=t<12) W_t = 281; with n = 1 it is 282 = sum_(0<=t<12) W_t (the theorem's 'sum_(t<T) W_t' omits W_0 = 1)
+      sheet -1, T = 16: D_b(2^T - 1, 1) over n >= 1 = 2904, over n >= 2 = 2903; sum_(1<=t<T) W_t = 2903, sum_(0<=t<T) W_t = 2904
+  [PASS]       D_b(2^16, 1) (n >= 2, THM-4487's script convention) == sum_(1<=t<16) W_t = 2903; with n = 1 it is 2904 = sum_(0<=t<16) W_t (the theorem's 'sum_(t<T) W_t' omits W_0 = 1)
+      sheet -1, T = 18: D_b(2^T - 1, 1) over n >= 1 = 9246, over n >= 2 = 9245; sum_(1<=t<T) W_t = 9245, sum_(0<=t<T) W_t = 9246
+  [PASS]       D_b(2^18, 1) (n >= 2, THM-4487's script convention) == sum_(1<=t<18) W_t = 9245; with n = 1 it is 9246 = sum_(0<=t<18) W_t (the theorem's 'sum_(t<T) W_t' omits W_0 = 1)
+  [PASS]       sheet +1: brute-force D_b(2^20, 1) over n >= 2 = 31730 == sum_(1<=t<20) W_t = 31730 (THM-4487's .out: 31730)
+  [PASS]       sheet -1: brute-force D_b(2^20, 1) over n >= 2 = 31730 == sum_(1<=t<20) W_t = 31730 (THM-4487's .out: 31730)
+      sum_(1<=t<T) W_t for T = 8, 12, 16, 20, 24: [32, 281, 2903, 31730, 367698] (THM-4487's gamma = 1 column: 281, 2903, 31730, 367698 on both sheets, n in [2, 2^T])
+== 9. Corollaries C1/C2: the sandwich lines as stated upstream ==
+      THM-4479-strategy-cube-distance-to-provability-sharp.md:15: below itself within k steps. Hence delta_k <= |Bad_k| <= 2^(hk), with
+      THM-4479-strategy-cube-distance-to-provability-sharp.md:17: (2) delta_k >= N_k >= 2^(hk)/(3k^2), where N_k counts the binary
+      THM-4479-strategy-cube-distance-to-provability-sharp.md:107: * **The undecided residues.** Let `a_j(x)` be the number of odd terms among `x, Tx, ..., T^(j-1)x` (Collatz `T`) and `M_j(x) = 3^(a_j(x))/2^j`. The first `k` parities depend only on `x mod 2^k` (Terras), and `Bad_k = {r mod 2^k : M_j(r) > 1 for j = 1..k}`. For `k >= 2`, `Bad_k` lies in `3 (mod 4)`. For `x` outside `Bad_k`, `d(x) = min{j <= k : M_j(x) < 1}`; equality `M_j = 1` never occurs.
+      THM-4485-periodic-edit-price-feedback-sets.md:24: (4) Chain: delta_k (sign flips) >= FVS^odd >= FVS >= nu (cycle packing)
+      THM-4485-periodic-edit-price-feedback-sets.md:25: >= N (expanding necklaces).
+      THM-4487-dip-spectrum-entropy-curve-and-sharpness-of-thin-divergence.md:8: D_b(X, gamma) = #{n <= X : T_b^i(n) >= n^gamma for all 0 <= i <= floor(log_2 n)}.
+      THM-4487-dip-spectrum-entropy-curve-and-sharpness-of-thin-divergence.md:85: reproduced (the script omits n = 1; the "0.792" column is gamma = 0.7925). Cosmetic items
+      collatz_dipspectrum_20260926.py:51: for n in range(2, Xmax + 1):
+      collatz_dipspectrum_20260926.out:5: X=2^12 D:         1659     1367     1161      896      670      521      350      281
+      collatz_dipspectrum_20260926.out:7: X=2^16 D:        26700    21709    17971    13358    10361     6479     4394     2903
+      collatz_dipspectrum_20260926.out:9: X=2^20 D:       432355   353655   271543   215550   149967    95636    56262    31730
+      collatz_dipspectrum_20260926.out:11: X=2^24 D:      6991365  5701356  4302718  3188718  2166439  1376462   675317   367698
+      collatz_dipspectrum_20260926.out:31: X=2^12 D:         1646     1374     1154      891      668      518      349      281
+      collatz_dipspectrum_20260926.out:33: X=2^16 D:        26691    21702    17975    13345    10364     6474     4396     2903
+      collatz_dipspectrum_20260926.out:35: X=2^20 D:       432293   353635   271447   215557   149954    95586    56252    31730
+      collatz_dipspectrum_20260926.out:37: X=2^24 D:      6991232  5701160  4302522  3188730  2166364  1376381   675303   367698
+      procgen_cubedist_20260925_lib.py:73: if not mul ** a > 2 ** j:
+      procgen_cubedist_20260925_orchestrator_check.py:130: if 3 ** a2 > 2 ** j:
+      procgen_cubedist_20260925_orchestrator_check.py:159: BAD_TABLE = {2: 1, 3: 2, 4: 3, 5: 4, 6: 8, 7: 13, 8: 19, 9: 38, 10: 64, 11: 128,
+      read: THM-4479 states delta_k <= |Bad_k| (Theorem 1(d)) and delta_k >= N_k (Theorem 2), both for k >= 2; THM-4485 states the chain
+      delta_k >= FVS^odd >= FVS >= nu >= N (item (4)); THM-4487 defines D_b with n <= X and 0 <= i <= floor(log_2 n), its script counts n in [2, 2^T].
+== 10. provenance ==
+      script: raw sha256 9e3d674295ae19206c7ff5a3c9e053b372e9dc25273c4e8015f787299a1b148a, LF-normalised 9e3d674295ae19206c7ff5a3c9e053b372e9dc25273c4e8015f787299a1b148a, CRLF count 0; header claims 9e3d674295ae19206c7ff5a3c9e053b372e9dc25273c4e8015f787299a1b148a
+  [PASS]       script sha256 (LF bytes) matches the theorem header
+      output: raw sha256 9f70677d1971708c6952ea21ada16abfb67a896cc243ba4e83104e06fa45a7e1, LF-normalised 9f70677d1971708c6952ea21ada16abfb67a896cc243ba4e83104e06fa45a7e1, CRLF count 0; header claims 9f70677d1971708c6952ea21ada16abfb67a896cc243ba4e83104e06fa45a7e1
+  [PASS]       output sha256 (LF bytes) matches the theorem header
+      this audit script: raw sha256 09c463ae7110657ecdee0a303134ee6c8ab100144fac19c820728e4a16bbcdd1 (CRLF count 0)
+== summary ==
+  all checks passed
+  elapsed 28.7 s

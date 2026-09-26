@@ -473,7 +473,7 @@ def section6(KMAX):
     N = 40
     c = [Fraction(0)] * (N + 1)
     for n in range(1, N + 1):
-        c[n] = Fraction(W[n]) - sum(m * c[m] * W[n - m] for m in range(1, n)) / n
+        c[n] = Fraction(W[n]) - sum((m * c[m] * W[n - m] for m in range(1, n)), Fraction(0)) / n
     check(all(c[n] == Fraction(B[n], n) for n in range(1, N + 1)), "[t^n] log W(t) == B_n/n exactly for n <= %d (series log of the DP generating function)" % N)
     return W, B, J0
 
@@ -806,7 +806,7 @@ def section8(W, TFULL, TCOUNT):
                         nondip = False
                     if not pos_tab[(o, j)]:
                         positive = False
-                    if j >= 3 and not pos_tab[(o - 2, j - 2)]:
+                    if j >= 3 and w1 and w2 and not pos_tab[(o - 2, j - 2)]:
                         tailpos = False
                     s = o * float(LOG2_3) - j
                     if s < minS:
