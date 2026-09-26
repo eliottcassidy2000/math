@@ -36,25 +36,38 @@ So the whole prize of the multiplicity attack is `(log X)^(0.514)`: from
 count itself (THM-4495). Nothing in this direction changes the exponent
 `h*`, and nothing here excludes divergent orbits.
 
-## 1. Multiplicity `~ L` is realized by integers (PROVED)
+## 1. How large the multiplicity can be (corrected after the audit)
 
-Two configurations give a landing point `L` dippers.
+**Lemma (one-bit band; found by the audit).** Let `j` be a landing point
+with `theta L >= 1` and `y > |b|` along the segment. The step into `j` is a
+halving (`y_j < y_(j-1)`), so `y_j = y_(j-1)/2`, and a dipper `i` of `j` has
+`y_i 2^(-theta L) in (y_j, y_(j-1)]`, i.e.
 
-* **Hover then drop.** A segment whose word keeps all partial sums in
-  `[-W, 0]` for `m` steps (the orbit stays in a band of width `W` bits
-  below its start) and then descends by `theta L` bits in `~ theta L`
-  halvings: every index of the hover is a dipper whose first landing is the
-  end of the drop, so that landing point has multiplicity `m + O(theta L)`.
-* **Climb then drop.** An all-odd (or odd-dense) run of `m` steps followed
-  by a drop by `theta L + 0.585 m` bits: again every index of the climb
-  lands at the same point.
+```text
+y_i in ( 2^(theta L) y_j,  2^(theta L + 1) y_j ] :   every dipper of j lies in one half-open 1-bit band.
+```
 
-By the Terras bijection every finite parity word is the word of a residue
-class modulo `2^(length)`, so for every `L` and `m <= L` there are integers
-below `2^(2L)` whose orbit segment realises either configuration
-(the control script builds one). Hence **no bound that treats windows as
-independent objects can lower the multiplicity below `~ L`**: the
-pigeonhole is tight on segments.
+At most two of any three consecutive orbit values lie in a band `(a, 2a]`:
+a halving leaves it, and two odd steps multiply by `(9y + 5b)/(4y) > 2`
+(for `b = -1` once `y > 5`). Hence the multiplicity of every landing point
+is at most `2 ceil(k/3) <= 2k/3 + 4/3`, for every orbit. So THM-4476's
+`k` can be replaced by `2k/3 + 4/3`; this changes constants, not `beta`.
+
+**What residue classes realise.** A first draft of this section claimed
+that a climb followed by a drop, or a hover followed by a drop, gives one
+landing point `~ L` dippers. The audit refuted both as stated: in a climb
+the thresholds `y_i 2^(-theta L)` are `0.585` bits apart while the drop
+crosses one bit per halving, so each halving lands about `1.7` climb
+indices and a landing point receives at most `2` of them (word
+`1^12 0^11`, `L = 34`: the `12` climb indices land on `7` points); a hover
+in `[-W, 0]` spreads its indices over several landing points, and the
+exhaustive search at `L = 24`, `theta = 0.15` over all hovers of length `12`
+in `[-2, 0]` finds at most `9` dippers on one point. The largest
+multiplicity found is `13 = 0.54 L` at `L = 24` (a `20`-step hover in
+`[-3, 0]` followed by four halvings, `y_0 = 6654596`, all `13` dippers in
+one 1-bit band). So multiplicity a constant fraction of `L` is realised
+(`beta = 1`), but by hovers in a narrow band, not by climbs, and never
+above the lemma's `2k/3 + O(1)`.
 
 On actual orbit segments the multiplicities are small: with `L = 20` and
 `theta = 0.05, 0.1, 0.2`, the mean multiplicity is `2.0`-`2.8` and the
@@ -69,13 +82,14 @@ descent, of order `theta L/0.2075 = 5 theta L`, i.e. `O(log L)` at the
 bootstrap's own `theta_X = 1.05 log_2 L/L` and `L = 20, 30, 40, 60, 80`, on
 3n+1 segments from `2^L - 1`, `2^(L-1) + 1` and random odd starts, and on
 5n+1 orbits, the mean multiplicity is `0.4`-`0.8` times `theta_X L`
-(i.e. `2`-`5`), while the maximum is `0.04`-`0.35` times `L` (the climbs
-built into the starts `2^L - 1` and `2^(L-1)+1` produce one landing point
-with `~0.25 L` dippers, section 1's climb-then-drop). So the *average* is
-`O(theta L) = O(log L)` as the heuristic says, and the *maximum* is a
-constant fraction of `L` whenever the segment contains a long climb:
-HYP-9161 must be stated for the average, and it is the average that the
-recursion uses.
+(i.e. `2`-`5`), while the maximum is `0.04`-`0.35` times `L`. The audit
+located the maximal landing points: they are not produced by the initial
+climb of `2^L - 1` (which leaves `[1, X]` at step `1`) but by later
+stretches in which many window points sit in one 1-bit band, exactly the
+lemma's configuration, and random starts show the same `max/L`. So the
+*average* is `O(theta L) = O(log L)` as the heuristic says, and the
+*maximum* is a constant fraction of `L`: HYP-9161 must be stated for the
+average, and it is the average that the recursion uses.
 
 ```text
 L  theta   thetaL | segment                         total    ND     D   landing  maxmult  mean  mean/(thetaL)  max/L
@@ -241,7 +255,7 @@ cZ_diag(n) -> cZ_diag(3n+1) for odd n, row-normalised:
    colour 2: 0.344  0.329  0.327   (n=11062)
 ```
 
-Reading: all mutual informations are at the noise floor (the largest, 0.00027 bits between the number of Zeckendorf terms mod 3 and v_2(3n+1) mod 3, is 0.02 percent of the target entropy); the transition matrices of the diagonal colouring under T and under n -> 3n+1 are uniform to within 2 percent. At this resolution the Zeckendorf colourings and the odd-prime count are independent of the Collatz step; the only three-colouring the map sees is n mod 3 (multiples of 3 have no odd preimage), and even that carries no information about descent or stopping time.
+Reading (corrected after the audit): every mutual information is below `0.0003` bits, i.e. below `0.02` percent of the target entropy, and the colour transition matrices under `T` and under `n -> 3n+1` are uniform to within `2.2` points. Two of these deviations are statistically significant at `N = 200000` (the number of Zeckendorf terms mod 3 against `v_2(3n+1) mod 3`: `0.00027` bits, about nine times the null expectation, `p = 1.4e-7`; the `n -> 3n+1` matrix, `p = 2e-8`), so the dependence is detectable but negligible in magnitude: there is no usable interlock between the Zeckendorf colourings, the odd-prime count and the Collatz step at this resolution. The only three-colouring the map sees structurally is `n mod 3` (multiples of `3` have no odd preimage), and even that carries no information about descent or stopping time.
 
 The parity algebra the owner describes is the map's own shape: `3n` keeps
 `n`'s parity, `+1` flips it, and the halvings remove the even part that
@@ -269,13 +283,15 @@ classes number `M_k(1)`, each with at most two representatives below `X`,
 and `M_k(1) <= D_s 2^(hk) k^(-3/2) 2^(lambda*) e^(s)` (Lemma M). Peaks: for
 a peak `i >= k` with `y_i >= Y_0`, the element `z = y_(i-k)` has, in its
 `k`-word, `M_k z + beta_k = y_i > y_(i-k+s) = M_s z + beta_s` for all
-`s < k`, so `M_k > M_s - (|beta_k| + |beta_s|)/z >= M_s - 1`, and also (the
-case `s = 0`) `M_k z + beta_k > z`, so `M_k > 1/2`. Hence `M_k/M_s > 1/3` for
-every `s < k`: if `M_s >= 3/2` then `M_k/M_s > 1 - 1/M_s >= 1/3`, and if
-`M_s < 3/2` then `M_k/M_s > (1/2)/(3/2) = 1/3`. So `S_k - S_s > -log_2 3 = -1.585`
-for all `s < k`: the reversed word (THM-4495, Step 2) has all partial sums
-`> -1.6`, and is counted by `M_k(1.6)`; `z` is an integer `<= X` in one of
-those classes. Peaks with
+`s < k`. Since `|beta_s|, |beta_k| <= |b|(3/2)^k <= Y_0/2 <= y_i/2`,
+`M_k z = y_i - beta_k >= y_i/2` and `M_s z = y_(i-k+s) - beta_s < 3 y_i/2`, so
+`M_k/M_s > 1/3 > 2^(-1.6)` for every `0 <= s < k`, with no condition on `z`
+(a first draft divided by `z`, which is not bounded below; the audit
+supplied this form). So `S_k - S_s > -1.585` for all `s < k`: the reversed
+word (THM-4495, Step 2) has all partial sums `> -1.6`, and is counted by
+`M_k(1.6)`; `z` is an integer `<= X` in one of those classes. Leaders and
+peaks with fewer than `k` successors or predecessors in the segment number
+at most `k` each. Peaks with
 `i < k` number at most `k`. ∎
 
 So the extremal elements of any orbit (its records in either direction)
@@ -286,3 +302,25 @@ consecutive leaders, and HYP-9161 is the statement that those interiors
 are not much longer than the number of their leaders times a polylog. The
 same argument bounds the *y-approximate* records (within `y` bits of a
 running extremum) by `O(X^(h*) L^(-3/2) 2^(lambda* y) e^(sy))`.
+
+## 9. Independent audit (2026-09-26)
+
+Auditor subagent: `04-computation/experiments/collatz_landing_20260926_audit.py`
+-> `05-knowledge/results/collatz_landing_20260926_audit.out` (61 checks, 0
+failures; exact partial-sum comparisons). CONFIRMED: section 0's `a*(beta)`
+and its arithmetic; the single-step factor; the strip entropies (to four
+decimals; the `150 -> 300` rates are finite-size estimates, within `0.003`
+of the `300 -> 600` rates); the statements of the Proposition (zero
+violations on the orbits of `2^40 - 1`, random 40- and 80-bit starts, `27`,
+and the 5n+1 orbit of `7`, at `L = 30, 40, 64`); the discrepancy corollary
+(exact identity checks on three orbits). REFUTED and corrected: the first
+draft of section 1 (climb-then-drop gives at most `2` dippers per landing
+point; hovers give at most about `2L/3`, best found `0.54 L`); the
+attribution of probe2's maxima to the initial climbs; the peak proof's
+division by `z`; the display "`- 1.038 log_2 log_2 L`" in the corollary (the
+coefficient is every value below `1.038`); the phrase "at the noise floor"
+for the Zeckendorf probe. ADDED by the audit: the one-bit band lemma
+(multiplicity `<= 2 ceil(k/3)` for every orbit). Cosmetic: the synthetic
+hover of probe (A) is built in `[-1.49, 0]`, not `[-1, 0]`; for 5n+1 the
+Proposition's `Y_0` exceeds `X`, so it asserts nothing there. Verdicts:
+Proposition HAS GAPS (repaired above); corollary SOUND (display fixed).

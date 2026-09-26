@@ -77,7 +77,7 @@ def landing_stats(ys, L, theta):
 
 
 def synthetic_hover(L, K):
-    """an integer < 2^(L+K+8) whose word hovers (partial sums in [-1,0]) for K steps then has L/4 zeros:
+    """an integer whose word keeps its partial sums in [-1.49, 0] for K steps (a strict [-1, 0] hover of length >= 3 is impossible) and then has L/4 zeros and L/4 ones:
     built by choosing the parity word and solving for the residue (Terras)."""
     word = []
     S = 0.0

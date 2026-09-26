@@ -1,7 +1,7 @@
 ---
 id: HYP-9161
 title: "Landing multiplicity is polylogarithmic: in THM-4476's recursion, the dippers charged to one landing point number O((log X)^beta) on average with beta < 1 (conjecturally O(theta log X)); this would lower THM-4499's exponent from lambda*/h* - 3/2 = -0.986 to beta lambda*/h* - 3/2, i.e. to the ballot floor -3/2"
-status: OPEN (formulated 2026-09-26, opus collatz-landing-20260926). FINITE-EXACT: mean multiplicity 2.0-2.8 and maximum 5-8 on actual orbit segments at L = 20; multiplicity ~ L is realised by residue classes (hover-then-drop, climb-then-drop), so the hypothesis is about a single orbit's oscillation and cannot be proved by counting residue classes alone.
+status: OPEN (formulated 2026-09-26, opus collatz-landing-20260926). FINITE-EXACT: mean multiplicity 0.4-0.8 times theta L on actual orbit segments (L = 20..80), maximum up to 0.35 L; multiplicity 0.54 L is realised by residue classes (hovers in a 1-bit band; audited), and the audit's one-bit band lemma bounds it by 2k/3 + 4/3 for every orbit, so the hypothesis is about a single orbit's oscillation and cannot be proved by counting residue classes alone.
 source: collatz-landing-20260926 session (opus); the reassessment note collatz_landing_20260926_multiplicity_reassessment.md, sections 0-4.
 depends_on:
   - 01-canon/theorems/THM-4476-thin-divergent-orbits-reciprocal-sums-finite.md
@@ -35,7 +35,12 @@ is `2`-`3` (probe). The random-walk heuristic gives `O(theta L)`.
 **What it gives.** With THM-4499's proof unchanged except `c_1 h* = beta + eta`,
 `N(X) <= K X^(h*) (log_2 X)^a` for every `a > beta lambda*/h* - 3/2`.
 
-**Hostile.** A hypothetical divergent orbit that hovers in a band of `4`
-bits for `0.2 L` steps before each descent would have multiplicity `0.2 L`
-at every landing point; the strip entropy (`h_4 = 0.752`) shows such hovers
-are rare among integers but does not exclude them on one orbit.
+**Hostile (corrected after the audit).** Every dipper of a landing point
+lies in one 1-bit band above `2^(theta L) y_j`, and at most two of three
+consecutive orbit values share such a band, so the multiplicity is at most
+`2k/3 + 4/3` for every orbit; hovers in a narrow band realise `0.54 L`
+(`L = 24`, exhaustive search), climbs realise only `2`. A hypothetical
+divergent orbit whose window points repeatedly crowd into 1-bit bands
+before each descent would have multiplicity a constant fraction of `L` at
+every landing point; the strip entropy shows such stretches are rare among
+integers but does not exclude them on one orbit.

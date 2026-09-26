@@ -1,0 +1,269 @@
+====================================================================================================
+AUDIT collatz_landing_20260926 (reassessment note sections 0/1/3/7/8; THM-4499 note section 3b)
+h* = 0.9499555  lambda* = 0.488077  lambda*/h* = 0.513789  1/h* = 1.052681
+====================================================================================================
+
+[1] Section 0: a*(beta) = beta lambda*/h* - 3/2
+  [PASS] a*(1.0) = -0.986211 (note: -0.986)
+  [PASS] a*(0.5) = -1.243105 (note: -1.243)
+  [PASS] a*(0.0) = -1.500000 (note: -1.500)
+  [PASS] beta=1.0: L^beta * L^(-c1 h*) = L^(-eta) and (ND) exponent <= a*(beta) + eta(lambda*/h* + 1)  -- ND exponent -0.971073, a*(beta) + 1.514 eta = -0.971073
+  [PASS] beta=0.5: L^beta * L^(-c1 h*) = L^(-eta) and (ND) exponent <= a*(beta) + eta(lambda*/h* + 1)  -- ND exponent -1.227967, a*(beta) + 1.514 eta = -1.227967
+  [PASS] beta=0.0: L^beta * L^(-c1 h*) = L^(-eta) and (ND) exponent <= a*(beta) + eta(lambda*/h* + 1)  -- ND exponent -1.493343, a*(beta) + 1.514 eta = -1.484862
+  Verdict: the only change to THM-4499 section 3 is c_1 h* = beta + eta (theta_X = c_1 log_2 L/L); the (D) term
+  L^beta N(X L^(-c_1)) <= 2^|a| K X^(h*) L^(a-eta), the (ND) term X^(h*) L^(lambda* c_1 - 3/2 + eta); a*(beta) as stated.
+  HYP-9161's average form suffices: #(D) = sum of multiplicities <= C L^beta * #landing points <= C L^beta N(X^(1-theta)).
+  [CLAIM OK] section 0: a*(beta) = beta lambda*/h* - 3/2; a*(1) = -0.986, a*(1/2) = -1.243, a*(0) = -3/2; bootstrap changed only by c_1 h* = beta + eta
+
+[2] Section 1: residue classes and the landing multiplicity (L = 24, theta = 0.15, theta L = 3.6 = 18/5)
+  [PASS] single step: T(y)/y in [1/2, 2] for 1 <= y < 2^16 (min 0.5000, max 2.0000; odd: 3/2 + 1/(2y))
+  hence y_(i+s) >= y_i 2^(-s); a dipper (y_(i+s) < y_i 2^(-theta L)) has s > theta L: distance >= floor(theta L) + 1 = 4 here.
+  words of length 12 with all partial sums in [-2, 0]: 8
+  best over all [-2,0]-hover words (m = 12) and drop lengths D = 4..12: max multiplicity of one landing point = 9
+    word = 010101101101 + 0^4, y_0 = 16753986 (< 2^56), landing points of the hover indices: {15: [0], 16: [1, 2, 4, 6, 7, 9, 10], 18: [3, 8, 11], 28: [5]}
+    hover indices are split over 3..4 consecutive landing points (min..max over the words); max multiplicity per word: [7, 8, 9]
+  [CLAIM FALSE] section 1, hover-then-drop (W = 2, m = 12): "that landing point has multiplicity m + O(theta L)", i.e. some landing point receives >= m = 12 dippers  -- the maximum is 9 (7 hover indices + 2 drop indices); the m hover indices are shared by the halvings of the drop, one 1-bit sub-band each
+  climb-then-drop 1^12 0^11 at L = 34, theta L = 3.6: y_0 = 5312511; climb indices -> landing points {17: 2, 18: 2, 19: 1, 20: 2, 21: 2, 22: 1, 23: 2}
+  [CLAIM FALSE] section 1, climb-then-drop 1^12 0^11: "every index of the climb lands at the same point"  -- the 12 climb indices land at 7 distinct points, at most 2 per point (thresholds spaced 0.585 bits, the drop crosses 1 bit per step)
+  climb-then-drop 1^12 0^12 at L = 34, theta L = 3.6: y_0 = 5312511; climb indices -> landing points {17: 2, 18: 2, 19: 1, 20: 2, 21: 2, 22: 1, 23: 2}
+  [CLAIM FALSE] section 1, climb-then-drop 1^12 0^12: "every index of the climb lands at the same point"  -- the 12 climb indices land at 7 distinct points, at most 2 per point (thresholds spaced 0.585 bits, the drop crosses 1 bit per step)
+  maximum landing multiplicity at L = 24, theta L = 3.6, over words = hover(m, W) + 0^(24-m):
+    hover length 20 in [-3,0] (  4260 words): max multiplicity 13 = 0.54 L; best word 00101011011010110111, y_0 = 6654596, landing {25: [2, 3, 5, 7, 8, 10, 11, 13, 15, 16, 18, 19, 21]}
+    hover length 18 in [-4,0] ( 10008 words): max multiplicity 12 = 0.50 L; best word 001011011010110111, y_0 = 13379556, landing {23: [1, 3, 5, 6, 8, 9, 11, 13, 14, 16, 17, 19]}
+    hover length 16 in [-4,0] (  3528 words): max multiplicity 11 = 0.46 L; best word 0011011010110111, y_0 = 10034668, landing {21: [1, 3, 4, 6, 7, 9, 11, 12, 14, 15, 17]}
+    hover length 20 in [-4,0] ( 21942 words): max multiplicity 13 = 0.54 L; best word 00101011011010110111, y_0 = 6654596, landing {25: [2, 3, 5, 7, 8, 10, 11, 13, 15, 16, 18, 19, 21]}
+  [PASS] no three consecutive orbit values lie in one half-open 1-bit band (x, 2x] (3002 starts, 60 steps each)
+  [PASS] all 13 dippers of the best landing point j=25 lie in the 1-bit band (2^3.6 y_j, 2^4.6 y_j] and y_j = y_(j-1)/2
+  => multiplicity of a landing point j <= #{i in [j-k, j): y_i in (2^(theta L) y_j, 2^(theta L + 1) y_j]} <= 2 ceil(k/3) <= 2k/3 + 4/3
+     (y_j < y_(j-1) forces y_j = y_(j-1)/2, so y_i 2^(-theta L) in (y_j, 2 y_j]; at most two of three consecutive indices are in the band).
+     So "multiplicity ~ L" holds with a constant in [0.54, 0.67]: the observed maximum at L = 24 is 0.54 L; THM-4476's k is improvable to 2k/3 + O(1), no more.
+  [CLAIM OK] section 1: "multiplicity ~ L is realised by integers / the pigeonhole is tight on segments" (qualitatively, up to the constant 2/3)  -- max 13 = 0.54 L at L = 24 from a 20-step hover in [-3, 0]; upper bound 2k/3 + 4/3
+  [CLAIM OK] section 1: a single step multiplies by a factor in [1/2, 3/2 + o(1)] (b = 1: 3/2 + 1/(2y) <= 2), so a dipper at distance s has s > theta L
+  reproduction of probe (B) [collatz_landing_20260926_probe.out], L = 20 (independent code, exact thresholds):
+    probe.py synthetic_hover(20, 15): docstring says partial sums in [-1, 0]; actual minimum partial sum of the 15-step hover = -1.490 (band width 1.49 bits)
+  [PASS] probe (B): all 15 rows (total, ND, D, landing, top-8 multiplicities) reproduced exactly
+  reproduction of probe2 [collatz_landing_20260926_probe2.out] (seed 20260926, same call order, float threshold as in the script):
+  [PASS] probe2: all 30 rows (total, ND, D, landing, maxmult) reproduced exactly
+  where is the maximal-multiplicity landing point on the "climb" starts? (note attributes max ~0.25 L to the built-in climb)
+    L=40 2^L-1     : first index with y <= X is 0 (the climb of 2^L-1 leaves [1, X] at step 1); max landing point j=185, its 11 dippers at indices [149, 152, 154, 155, 157, 158, 160, 161, 169, 176, 177],
+               log_2(y_i / y_j) of the dippers: [5.89, 6.06, 5.64, 6.23, 5.81, 6.4, 5.98, 6.57, 6.49, 5.83, 6.42] (all inside one 1-bit band (theta L, theta L + 1] = (5.59, 6.59], as the band bound says)
+  [CLAIM FALSE] probe2 reading, L=40 2^L-1: "the climbs built into the starts produce one landing point with ~0.25 L dippers" (its dippers would have to be the initial climb)  -- the maximal landing point j=185 is far from the start; its dippers (indices >= 149) are a later hover in one 1-bit band; random starts show the same max/L
+    L=40 2^(L-1)+1 : first index with y <= X is 0 (the climb of 2^L-1 leaves [1, X] at step 1); max landing point j=56, its 9 dippers at indices [32, 34, 36, 37, 39, 40, 42, 44, 45],
+               log_2(y_i / y_j) of the dippers: [6.57, 6.15, 5.74, 6.32, 5.91, 6.49, 6.08, 5.66, 6.25] (all inside one 1-bit band (theta L, theta L + 1] = (5.59, 6.59], as the band bound says)
+  [CLAIM FALSE] probe2 reading, L=40 2^(L-1)+1: "the climbs built into the starts produce one landing point with ~0.25 L dippers" (its dippers would have to be the initial climb)  -- the maximal landing point j=56 is far from the start; its dippers (indices >= 32) are a later hover in one 1-bit band; random starts show the same max/L
+    L=60 2^L-1     : first index with y <= X is 0 (the climb of 2^L-1 leaves [1, X] at step 1); max landing point j=428, its 16 dippers at indices [369, 382, 383, 385, 386, 388, 390, 391, 393, 396, 399, 401, 402, 405, 415, 417],
+               log_2(y_i / y_j) of the dippers: [6.7, 6.38, 6.96, 6.55, 7.13, 6.72, 6.3, 6.89, 6.47, 6.64, 6.81, 6.4, 6.98, 7.15, 6.66, 6.25] (all inside one 1-bit band (theta L, theta L + 1] = (6.20, 7.20], as the band bound says)
+  [CLAIM FALSE] probe2 reading, L=60 2^L-1: "the climbs built into the starts produce one landing point with ~0.25 L dippers" (its dippers would have to be the initial climb)  -- the maximal landing point j=428 is far from the start; its dippers (indices >= 369) are a later hover in one 1-bit band; random starts show the same max/L
+    L=60 2^(L-1)+1 : first index with y <= X is 0 (the climb of 2^L-1 leaves [1, X] at step 1); max landing point j=113, its 21 dippers at indices [54, 56, 57, 59, 60, 62, 65, 67, 68, 70, 71, 78, 79, 81, 84, 86, 87, 89, 102, 103, 105],
+               log_2(y_i / y_j) of the dippers: [6.7, 6.28, 6.87, 6.45, 7.04, 6.62, 6.79, 6.38, 6.96, 6.55, 7.13, 6.47, 7.06, 6.64, 6.81, 6.4, 6.98, 6.57, 6.25, 6.83, 6.42] (all inside one 1-bit band (theta L, theta L + 1] = (6.20, 7.20], as the band bound says)
+  [CLAIM FALSE] probe2 reading, L=60 2^(L-1)+1: "the climbs built into the starts produce one landing point with ~0.25 L dippers" (its dippers would have to be the initial climb)  -- the maximal landing point j=113 is far from the start; its dippers (indices >= 54) are a later hover in one 1-bit band; random starts show the same max/L
+
+[3] Section 3: strip entropies by an independent exact DP
+  W = 1 counts for m = 1..6: [1, 1, 0, 0, 0, 0]
+  [PASS] W = 1 admits no word of length >= 3 (steps -1 and +0.585 span 1.585 > 1)
+  W   h_W(150->300)  note   log2 count(300)  note   | h_W(300->600)  (1-h*)/(1-h_W)  note threshold
+   2   0.2600        0.2600     79.00           79.00 | 0.2600         0.068          
+   3   0.6165        0.6165    184.87          184.87 | 0.6154         0.130          
+   4   0.7520        0.7520    224.88          224.88 | 0.7491         0.202          0.2
+   6   0.8542        0.8542    256.04          256.04 | 0.8542         0.343          
+   8   0.8933        0.8933    268.03          268.03 | 0.8941         0.469          0.47
+  12   0.9244        0.9244    277.81          277.81 | 0.9240         0.662          
+  16   0.9347        0.9347    282.08          282.08 | 0.9351         0.766          0.77
+  [PASS] h_W table (150 -> 300) and the log2 counts at m = 300 reproduced to 4 decimals
+  [PASS] thresholds (1-h*)/(1-h_W): 0.20 (W=4), 0.47 (W=8), 0.77 (W=16)
+  [CLAIM OK] section 3: h_W table (exact DP, tie rule S_j = -j in [-W,0] iff j <= W), W = 1 empty for m >= 3, thresholds 0.20/0.47/0.77 L  -- the 4-decimal values are 150->300 growth rates; the 300->600 rates differ by up to 0.0029, so "PROVED numerically" means +-0.003
+  the "one-sided 0.94996" entry is the limit h*, not a 150->300 growth rate (which would be h* - 1.5*log2(2)/150 = 0.9400): cosmetic.
+  consequence check: #words with a [-W,0]-hover of length m <= L is 2^(h_W m + o(m)); each is one class mod 2^m with <= X/2^m + 1 elements in [1, X];
+  so the count is <= X 2^(-(1-h_W) m + o(m)) for m <= L, and it is <= X^(h* + o(1)) once m >= (1-h*)/(1-h_W) L. Elementary; the exponent o(1) is omitted in the note.
+
+[4] Section 8 (leaders and peaks)
+  [PASS] carry beta_s has the sign of b and |beta_s| <= |b|((3/2)^s - 1) (exhaustive, s <= 12, b in {1,-1,3,-5})
+  (i) leaders: y_(i+s) = M_s y_i + beta_s > y_i with |beta_s| <= |b|(3/2)^k <= Y_0/2 <= y_i/2 gives M_s > 1 - |beta_s|/y_i >= 1/2: direction right.
+  [CLAIM OK] section 8 (i): leaders, M_s > 1 - |beta_s|/y_i >= 1/2, all partial sums > -1, counted by M_k(1)
+  (ii) peaks. Version at commit 3987cf42b (the text this audit was commissioned on): "M_k > M_s (1 - o(1)), i.e. the word ends within
+       0.01 bits of its strict maximum": NOT what y_i >= Y_0 gives (see the witness below); the count then used M_k(1.6), inconsistent with 0.01.
+       Version at commit ab9ef18b4 (revised during this audit, now in the worktree): "M_k > M_s - (|beta_k| + |beta_s|)/z >= M_s - 1" and
+       "(s = 0) M_k z + beta_k > z, so M_k > 1/2", then the two cases M_s >= 3/2 / M_s < 3/2 give M_k/M_s > 1/3. The step ">= M_s - 1"
+       needs z = y_(i-k) >= |beta_k| + |beta_s|, and "M_k > 1/2" by that route needs z >= 2|beta_k|; the hypothesis is y_i >= Y_0, which
+       bounds nothing about z (z < y_i is all that is known). Neither inequality is derived: a gap in the proof as written.
+       Correct argument needing only y_i >= Y_0: M_k z = y_i - beta_k >= y_i - Y_0/2 >= y_i/2 and M_s z = y_(i-k+s) - beta_s < y_i + Y_0/2 <= (3/2) y_i,
+       so M_k/M_s > 1/3 = 0.3333 > 2^(-1.6) = 0.3299, i.e. S_k - S_s > -log_2 3 = -1.585 > -1.6 for every 0 <= s < k (s = 0 gives M_k > 1/2).
+       With the carry sign: b > 0 gives M_s z <= y_(i-k+s) < y_i and M_k/M_s > 1/2 (S_k - S_s > -1); b < 0 gives the ratio > 2/3.
+       z cancels; no condition on z or on the intermediate values is needed. The count by M_k(1.6) stands (1.6 is the right constant: 1/3 > 2^-1.6).
+       (Alternative repair of the z-route: peaks with y_(i-k) < Y_0 number at most Y_0 since i -> y_(i-k) is injective; assume z >= Y_0 for the rest.)
+       search: 16008 peaks at index k (k = 8..16, z < 2^15, y_k >= Y_0): peaks with z < |beta_k| + |beta_s| for some s: 0; violations of M_k > M_s - 1: 0
+       (so the revised chain is not refuted by examples; it is unproved as written. Note for b = 1 it can be proved differently: a violation
+       M_k <= M_s - 1 with y_k >= Y_0 forces z > (3/2)^(k-s) while the peak condition forces the suffix carry gamma > z, but gamma <= (3/2)^(k-s) - 1.)
+  [CLAIM FALSE] section 8 (ii): the displayed justification of M_k/M_s > 1/3 is complete as written (either version)  -- 3987cf42b: "(1 - o(1))/0.01 bits" false at the threshold; ab9ef18b4: divides by z without a lower bound on z
+  [CLAIM OK] section 8: Proposition statement (leaders and peaks <= X are O(X^(h*) L^(-3/2)) + 2|b| X^0.585 + k)  -- with the y_i-comparison closing the peak case
+       witness: all-odd word, b = 1, y_i = Y_0 = 2(3/2)^k: (y_i - beta_k)/y_i = 0.5002 (= 1/2 + o(1)), so M_k z is only y_i/2: "1 - o(1)" fails at the stated threshold.
+  (iv) leaders/peaks on long segments, k = L, X = 2^L (window form: y_(i+s) > y_i resp. y_(i-s) < y_i for 1 <= s <= k, which
+       is what the proof uses and covers all records of all sub-segments); exact checks: leaders 2 q^(o_s) > 2^s; peaks q^(5(o_k-o_s)) 2^8 > 2^(5(k-s)).
+  [PASS] 3n+1 orbit of 2^40-1: 344 terms, all distinct, max = 2^63.4
+    3n+1 orbit of 2^40-1, L=30: Y_0 = 2(3/2)^k = 2^18.5 (<= X)
+        leaders <= X with k successors: 4 (>= Y_0: 0); min partial sum: all 0.020, >= Y_0 n/a; violations of "> -1": 0 (of which >= Y_0: 0) []
+        peaks <= X with i >= k: 0 (>= Y_0: 0); min (S_k - max_s S_s): all n/a, >= Y_0 n/a; violations of "> -1.6": 0 (of which >= Y_0: 0) []
+  [PASS] 3n+1 orbit of 2^40-1 L=30: no violation among records with y_i >= Y_0 (the Proposition's hypothesis)
+  [PASS] 3n+1 orbit of 2^40-1 L=30: no violation at all (leaders > -1: 0; peaks > -1.6: 0)
+    3n+1 orbit of 2^40-1, L=40: Y_0 = 2(3/2)^k = 2^24.4 (<= X)
+        leaders <= X with k successors: 4 (>= Y_0: 3); min partial sum: all 0.170, >= Y_0 0.170; violations of "> -1": 0 (of which >= Y_0: 0) []
+        peaks <= X with i >= k: 0 (>= Y_0: 0); min (S_k - max_s S_s): all n/a, >= Y_0 n/a; violations of "> -1.6": 0 (of which >= Y_0: 0) []
+  [PASS] 3n+1 orbit of 2^40-1 L=40: no violation among records with y_i >= Y_0 (the Proposition's hypothesis)
+  [PASS] 3n+1 orbit of 2^40-1 L=40: no violation at all (leaders > -1: 0; peaks > -1.6: 0)
+    3n+1 orbit of 2^40-1, L=64: Y_0 = 2(3/2)^k = 2^38.4 (<= X)
+        leaders <= X with k successors: 21 (>= Y_0: 21); min partial sum: all 0.059, >= Y_0 0.059; violations of "> -1": 0 (of which >= Y_0: 0) []
+        peaks <= X with i >= k: 0 (>= Y_0: 0); min (S_k - max_s S_s): all n/a, >= Y_0 n/a; violations of "> -1.6": 0 (of which >= Y_0: 0) []
+  [PASS] 3n+1 orbit of 2^40-1 L=64: no violation among records with y_i >= Y_0 (the Proposition's hypothesis)
+  [PASS] 3n+1 orbit of 2^40-1 L=64: no violation at all (leaders > -1: 0; peaks > -1.6: 0)
+  [PASS] 3n+1 orbit of random 40-bit odd 597313593787: 267 terms, all distinct, max = 2^40.5
+    3n+1 orbit of random 40-bit odd 597313593787, L=30: Y_0 = 2(3/2)^k = 2^18.5 (<= X)
+        leaders <= X with k successors: 19 (>= Y_0: 17); min partial sum: all 0.095, >= Y_0 0.095; violations of "> -1": 0 (of which >= Y_0: 0) []
+        peaks <= X with i >= k: 20 (>= Y_0: 20); min (S_k - max_s S_s): all 0.095, >= Y_0 0.095; violations of "> -1.6": 0 (of which >= Y_0: 0) []
+  [PASS] 3n+1 orbit of random 40-bit odd 597313593787 L=30: no violation among records with y_i >= Y_0 (the Proposition's hypothesis)
+  [PASS] 3n+1 orbit of random 40-bit odd 597313593787 L=30: no violation at all (leaders > -1: 0; peaks > -1.6: 0)
+    3n+1 orbit of random 40-bit odd 597313593787, L=40: Y_0 = 2(3/2)^k = 2^24.4 (<= X)
+        leaders <= X with k successors: 17 (>= Y_0: 7); min partial sum: all 0.095, >= Y_0 0.095; violations of "> -1": 0 (of which >= Y_0: 0) []
+        peaks <= X with i >= k: 17 (>= Y_0: 17); min (S_k - max_s S_s): all 0.095, >= Y_0 0.095; violations of "> -1.6": 0 (of which >= Y_0: 0) []
+  [PASS] 3n+1 orbit of random 40-bit odd 597313593787 L=40: no violation among records with y_i >= Y_0 (the Proposition's hypothesis)
+  [PASS] 3n+1 orbit of random 40-bit odd 597313593787 L=40: no violation at all (leaders > -1: 0; peaks > -1.6: 0)
+    3n+1 orbit of random 40-bit odd 597313593787, L=64: Y_0 = 2(3/2)^k = 2^38.4 (<= X)
+        leaders <= X with k successors: 14 (>= Y_0: 0); min partial sum: all 0.095, >= Y_0 n/a; violations of "> -1": 0 (of which >= Y_0: 0) []
+        peaks <= X with i >= k: 9 (>= Y_0: 0); min (S_k - max_s S_s): all 0.095, >= Y_0 n/a; violations of "> -1.6": 0 (of which >= Y_0: 0) []
+  [PASS] 3n+1 orbit of random 40-bit odd 597313593787 L=64: no violation among records with y_i >= Y_0 (the Proposition's hypothesis)
+  [PASS] 3n+1 orbit of random 40-bit odd 597313593787 L=64: no violation at all (leaders > -1: 0; peaks > -1.6: 0)
+  [PASS] 3n+1 orbit of random 80-bit odd 881359353457117336724757: 469 terms, all distinct, max = 2^80.1
+    3n+1 orbit of random 80-bit odd 881359353457117336724757, L=30: Y_0 = 2(3/2)^k = 2^18.5 (<= X)
+        leaders <= X with k successors: 0 (>= Y_0: 0); min partial sum: all n/a, >= Y_0 n/a; violations of "> -1": 0 (of which >= Y_0: 0) []
+        peaks <= X with i >= k: 0 (>= Y_0: 0); min (S_k - max_s S_s): all n/a, >= Y_0 n/a; violations of "> -1.6": 0 (of which >= Y_0: 0) []
+  [PASS] 3n+1 orbit of random 80-bit odd 881359353457117336724757 L=30: no violation among records with y_i >= Y_0 (the Proposition's hypothesis)
+  [PASS] 3n+1 orbit of random 80-bit odd 881359353457117336724757 L=30: no violation at all (leaders > -1: 0; peaks > -1.6: 0)
+    3n+1 orbit of random 80-bit odd 881359353457117336724757, L=40: Y_0 = 2(3/2)^k = 2^24.4 (<= X)
+        leaders <= X with k successors: 3 (>= Y_0: 3); min partial sum: all 0.170, >= Y_0 0.170; violations of "> -1": 0 (of which >= Y_0: 0) []
+        peaks <= X with i >= k: 0 (>= Y_0: 0); min (S_k - max_s S_s): all n/a, >= Y_0 n/a; violations of "> -1.6": 0 (of which >= Y_0: 0) []
+  [PASS] 3n+1 orbit of random 80-bit odd 881359353457117336724757 L=40: no violation among records with y_i >= Y_0 (the Proposition's hypothesis)
+  [PASS] 3n+1 orbit of random 80-bit odd 881359353457117336724757 L=40: no violation at all (leaders > -1: 0; peaks > -1.6: 0)
+    3n+1 orbit of random 80-bit odd 881359353457117336724757, L=64: Y_0 = 2(3/2)^k = 2^38.4 (<= X)
+        leaders <= X with k successors: 0 (>= Y_0: 0); min partial sum: all n/a, >= Y_0 n/a; violations of "> -1": 0 (of which >= Y_0: 0) []
+        peaks <= X with i >= k: 0 (>= Y_0: 0); min (S_k - max_s S_s): all n/a, >= Y_0 n/a; violations of "> -1.6": 0 (of which >= Y_0: 0) []
+  [PASS] 3n+1 orbit of random 80-bit odd 881359353457117336724757 L=64: no violation among records with y_i >= Y_0 (the Proposition's hypothesis)
+  [PASS] 3n+1 orbit of random 80-bit odd 881359353457117336724757 L=64: no violation at all (leaders > -1: 0; peaks > -1.6: 0)
+  [PASS] 3n+1 orbit of 27: 71 terms, all distinct, max = 2^12.2
+    3n+1 orbit of 27, L=12: Y_0 = 2(3/2)^k = 2^8.0 (<= X)
+        leaders <= X with k successors: 13 (>= Y_0: 4); min partial sum: all 0.095, >= Y_0 0.170; violations of "> -1": 0 (of which >= Y_0: 0) []
+        peaks <= X with i >= k: 9 (>= Y_0: 9); min (S_k - max_s S_s): all 0.095, >= Y_0 0.095; violations of "> -1.6": 0 (of which >= Y_0: 0) []
+  [PASS] 3n+1 orbit of 27 L=12: no violation among records with y_i >= Y_0 (the Proposition's hypothesis)
+  [PASS] 3n+1 orbit of 27 L=12: no violation at all (leaders > -1: 0; peaks > -1.6: 0)
+    3n+1 orbit of 27, L=20: Y_0 = 2(3/2)^k = 2^12.7 (<= X)
+        leaders <= X with k successors: 11 (>= Y_0: 0); min partial sum: all 0.020, >= Y_0 n/a; violations of "> -1": 0 (of which >= Y_0: 0) []
+        peaks <= X with i >= k: 8 (>= Y_0: 0); min (S_k - max_s S_s): all 0.170, >= Y_0 n/a; violations of "> -1.6": 0 (of which >= Y_0: 0) []
+  [PASS] 3n+1 orbit of 27 L=20: no violation among records with y_i >= Y_0 (the Proposition's hypothesis)
+  [PASS] 3n+1 orbit of 27 L=20: no violation at all (leaders > -1: 0; peaks > -1.6: 0)
+  [PASS] 5n+1 orbit of 7 to 2^60: 488 terms, all distinct, max = 2^59.2
+    5n+1 orbit of 7 to 2^60, L=30: Y_0 = 2(5/2)^k = 2^40.7 (> X)
+        leaders <= X with k successors: 38 (>= Y_0: 0); min partial sum: all 0.288, >= Y_0 n/a; violations of "> -1": 0 (of which >= Y_0: 0) []
+        peaks <= X with i >= k: 12 (>= Y_0: 0); min (S_k - max_s S_s): all 0.185, >= Y_0 n/a; violations of "> -1.6": 0 (of which >= Y_0: 0) []
+  [PASS] 5n+1 orbit of 7 to 2^60 L=30: no violation among records with y_i >= Y_0 (the Proposition's hypothesis)
+  [PASS] 5n+1 orbit of 7 to 2^60 L=30: no violation at all (leaders > -1: 0; peaks > -1.6: 0)
+    5n+1 orbit of 7 to 2^60, L=40: Y_0 = 2(5/2)^k = 2^53.9 (> X)
+        leaders <= X with k successors: 54 (>= Y_0: 0); min partial sum: all 0.288, >= Y_0 n/a; violations of "> -1": 0 (of which >= Y_0: 0) []
+        peaks <= X with i >= k: 22 (>= Y_0: 0); min (S_k - max_s S_s): all 0.185, >= Y_0 n/a; violations of "> -1.6": 0 (of which >= Y_0: 0) []
+  [PASS] 5n+1 orbit of 7 to 2^60 L=40: no violation among records with y_i >= Y_0 (the Proposition's hypothesis)
+  [PASS] 5n+1 orbit of 7 to 2^60 L=40: no violation at all (leaders > -1: 0; peaks > -1.6: 0)
+  note: for 5n+1 the Proposition's threshold Y_0 = 2(5/2)^k exceeds X, so it asserts nothing there; the words still pass because the actual
+  carries are bounded by the orbit's reciprocal sum (Proposition 6: y_(i+s) = M_s y_i prod(1 + 1/(5 y_j))), not by the worst case (5/2)^s.
+  (iii) counting: each k-word is one class mod 2^k, 2^k > X/2 so <= 2 representatives in [1, X]; M_k(1), M_k(1.6) <= D_s 2^(hk) k^(-3/2) 2^(1.6 lambda*) e^(1.6 s)
+  (Lemma M); peaks with i < k number <= k; leaders with fewer than k successors (finite segment) number <= k -- the note omits this (E)-type term for leaders.
+  [CLAIM OK] section 8 (iii): the counting (two representatives per class, Lemma M at y = 1 and 1.6, the i < k peaks, O(X^(h*) L^(-3/2)))  -- cosmetic: the leaders of a finite segment with fewer than k successors (at most k) are not mentioned
+  [CLAIM OK] section 8 (iv): every leader k-word has all partial sums > -1 and every peak backward k-word ends within 1.6 bits of its maximum on the tested segments
+
+[5] Section 3b of the THM-4499 note (discrepancy corollary)
+  1/h* = 1.0527 (note 1.0527), a*/h* = -1.0382 (note -1.038): displayed coefficient of log_2 log_2 L is a/h* = (a* + eps)/h* = -1.0382 + eps/h*.
+  [PASS] 1/h* = 1.0527 and a*/h* = -1.038 to the displayed precision
+  [PASS] 3n+1, m_0 = 27: Proposition 6 identity m_l 2^(d_l)/q^l = m_0 prod_(j<l)(1 + b/(q m_j)) exact for l <= 41
+    argmax m_l = 32, argmin Delta_l = 32; log_2 max m_l = 11.5873, log_2 m_0 - min Delta_l = 11.4737, difference 0.1136 in [0, log_2 P_max = 0.2616]
+  [PASS] 3n+1, m_0 = 27: log_2 max m_l - (log_2 m_0 - min Delta_l) in [0, max log_2 P] (sign convention m_l = m_0 2^(-Delta_l) P_l)
+  [PASS] 3n+1, m_0 = 2^40-1: Proposition 6 identity m_l 2^(d_l)/q^l = m_0 prod_(j<l)(1 + b/(q m_j)) exact for l <= 150
+    argmax m_l = 39, argmin Delta_l = 39; log_2 max m_l = 62.8135, log_2 m_0 - min Delta_l = 62.8135, difference 0.0000 in [0, log_2 P_max = 0.0000]
+  [PASS] 3n+1, m_0 = 2^40-1: log_2 max m_l - (log_2 m_0 - min Delta_l) in [0, max log_2 P] (sign convention m_l = m_0 2^(-Delta_l) P_l)
+  [PASS] 5n+1, m_0 = 7: Proposition 6 identity m_l 2^(d_l)/q^l = m_0 prod_(j<l)(1 + b/(q m_j)) exact for l <= 80
+    argmax m_l = 80, argmin Delta_l = 80; log_2 max m_l = 35.6642, log_2 m_0 - min Delta_l = 35.5616, difference 0.1026 in [0, log_2 P_max = 0.1026]
+  [PASS] 5n+1, m_0 = 7: log_2 max m_l - (log_2 m_0 - min Delta_l) in [0, max log_2 P] (sign convention m_l = m_0 2^(-Delta_l) P_l)
+  (i) L+1 distinct odd iterates <= X = max m_l: CONFIRMED (odd iterates are T-orbit terms; distinct since not eventually periodic).
+  (ii) log_2 X = log_2 m_0 - min Delta_l + O(1): CONFIRMED; 1 <= P_l <= exp((1/3) sum 1/m_j) <= e^(K/3) by THM-4476 Cor. 6 (sum over all orbit terms).
+  (iii) from L+1 <= K X^(h*) Lam^a (Lam = log_2 X, a < 0): h* Lam >= log_2 L + |a| log_2 Lam - O(1); dropping |a| log_2 Lam >= 0 gives
+       Lam >= (1/h*) log_2 L - O(1), so log_2 Lam >= log_2 log_2 L - O(1); re-inserting: -min Delta_l >= (1/h*) log_2 L + (|a|/h*) log_2 log_2 L - O(1),
+       i.e. min Delta_l <= -(1/h*) log_2 L + (a/h*) log_2 log_2 L + O(1). Only the LOWER bound on Lam is needed (a < 0): CONFIRMED.
+       Caveat: with a = a* + eps the coefficient is -(1.038 - eps/h*); the displayed "-1.038 log_2 log_2 L" holds for every coefficient
+       below 1.038, not with 1.038 itself (that would need a = a*, which THM-4499 does not give).
+  (iv) THM-4476 Cor. 3 (no m_j <= K j^a, a < 1/h*) follows: max_(l<=L) m_l >= c L^(1/h*) (log_2 L)^(1.038 - eps): consistent and stronger.
+  [CLAIM OK] section 3b: min_(l<=L) Delta_l <= -(1/h*) log_2 L + (a/h*) log_2 log_2 L + O(1) for every a > a* (statement and proof)
+  [CLAIM FALSE] section 3b displayed instantiation "with a = a* + eps: ... - 1.038 log_2 log_2 L + O(1)" (also in THM-4499's status and the commit message)  -- the proved coefficient is -(1.038 - eps/h*); exactly 1.038 would need a = a*, which THM-4499 does not give
+
+[6] Provenance and the interlock probe
+  worktree HEAD at audit time: ab9ef18b4 2026-09-26 13:03:59 -0600 opus S7 collatz-landing-20260926: records proposition -- peak argument com
+  previous: 3987cf42b 2026-09-26 13:01:17 -0600 opus S7 collatz-landing-20260926: multiplicity scaling probe (mean 0.4-0.8
+  NOTE: the reassessment note was revised during this audit (ab9ef18b4, section 8 peak argument); hashes below are of the revised text.
+  sha256 (raw bytes as checked out | LF-normalised | git HEAD blob):
+    04-computation/experiments/collatz_landing_20260926_probe.py
+      raw 4b1eb123cad7b84f98671f3104118bb282a38e18ed738d8f8e556a6662e01256  LF 4b1eb123cad7b84f98671f3104118bb282a38e18ed738d8f8e556a6662e01256  HEAD 4b1eb123cad7b84f  (CRLF lines in checkout: 0)
+    04-computation/experiments/collatz_landing_20260926_probe.out
+      raw 82e82b4c6dc827fb3ecb2f9ba3119b5ff11c067b02842ba7683aa57fc00ef1fc  LF 82e82b4c6dc827fb3ecb2f9ba3119b5ff11c067b02842ba7683aa57fc00ef1fc  HEAD 82e82b4c6dc827fb  (CRLF lines in checkout: 0)
+    04-computation/experiments/collatz_landing_20260926_probe2.py
+      raw 3a16d8066d5e414d1b34829e6aa927b36cb4a78d710f21bd187da773d1eba159  LF 3a16d8066d5e414d1b34829e6aa927b36cb4a78d710f21bd187da773d1eba159  HEAD 3a16d8066d5e414d  (CRLF lines in checkout: 0)
+    04-computation/experiments/collatz_landing_20260926_probe2.out
+      raw e4246791898467218a3c10d36fec8a277be42f5a2e83a3035d318112d4846975  LF e4246791898467218a3c10d36fec8a277be42f5a2e83a3035d318112d4846975  HEAD e424679189846721  (CRLF lines in checkout: 0)
+    04-computation/experiments/collatz_zeckendorf_20260926_interlock_probe.py
+      raw dff8235feb325874412dca29d8479764e1c2ee478a9dcb0fb64a25593908aeaa  LF dff8235feb325874412dca29d8479764e1c2ee478a9dcb0fb64a25593908aeaa  HEAD dff8235feb325874  (CRLF lines in checkout: 0)
+    04-computation/experiments/collatz_zeckendorf_20260926_interlock_probe.out
+      raw 46d85a8f05b61db07dcda5ae226b9035de78798438d408d5789ec1b6455321ba  LF 46d85a8f05b61db07dcda5ae226b9035de78798438d408d5789ec1b6455321ba  HEAD 46d85a8f05b61db0  (CRLF lines in checkout: 0)
+    05-knowledge/results/collatz_landing_20260926_multiplicity_reassessment.md
+      raw 4fc69678a2809cb0919db4d44d59c6560d8b28a078f206ba6320bd7637829d31  LF 4fc69678a2809cb0919db4d44d59c6560d8b28a078f206ba6320bd7637829d31  HEAD 4fc69678a2809cb0  (CRLF lines in checkout: 0)
+    05-knowledge/results/collatz_thin_20260926_little_o_thin_divergence.md
+      raw 39a16bac64fb8042897306dd75111b8eb2e7391881448aea4beff0a703c15434  LF 39a16bac64fb8042897306dd75111b8eb2e7391881448aea4beff0a703c15434  HEAD 39a16bac64fb8042  (CRLF lines in checkout: 0)
+    04-computation/experiments/collatz_thin_20260926_movingbarrier.py
+      raw da2d12874ab368dbff10136fea23e780687633e27b92c38eaf3d3963df05722e  LF da2d12874ab368dbff10136fea23e780687633e27b92c38eaf3d3963df05722e  HEAD da2d12874ab368db  (CRLF lines in checkout: 0)
+    04-computation/experiments/collatz_thin_20260926_movingbarrier.out
+      raw 0b2c11a427dd218cf4edef6a21d0823aa9ad9c41303dbe91383380c8584878b6  LF 0b2c11a427dd218cf4edef6a21d0823aa9ad9c41303dbe91383380c8584878b6  HEAD 0b2c11a427dd218c  (CRLF lines in checkout: 0)
+    04-computation/experiments/collatz_thin_20260926_movingbarrier_audit.py
+      raw 9af70c922047ce0a5dd2bb8aeadcc471cebb5da95802a00a7ccad6acd7bbbd08  LF 9af70c922047ce0a5dd2bb8aeadcc471cebb5da95802a00a7ccad6acd7bbbd08  HEAD 9af70c922047ce0a  (CRLF lines in checkout: 0)
+    05-knowledge/results/collatz_thin_20260926_movingbarrier_audit.out
+      raw 645ef0d39fab9b85441bf05650ba0ce788baa46a0c07152d0390290fcd7cbee3  LF 645ef0d39fab9b85441bf05650ba0ce788baa46a0c07152d0390290fcd7cbee3  HEAD 645ef0d39fab9b85  (CRLF lines in checkout: 0)
+  [PASS] THM-4499 recorded sha256 matches LF bytes of collatz_thin_20260926_movingbarrier.py
+  [PASS] THM-4499 recorded sha256 matches LF bytes of collatz_thin_20260926_movingbarrier.out
+  [PASS] THM-4499 recorded sha256 matches LF bytes of collatz_thin_20260926_movingbarrier_audit.py
+  [PASS] THM-4499 recorded sha256 matches LF bytes of collatz_thin_20260926_movingbarrier_audit.out
+  the reassessment note and the probe scripts carry NO hashes (scripts cited by name only).
+  [CLAIM OK] THM-4499 canon file: recorded script/output/audit hashes match the LF bytes in the worktree
+  [CLAIM OK] section 7: the Zeckendorf conclusion is qualified by "At this resolution"  -- stated in section 7; the commit message a810b9bb4 ("no interlock with the Collatz step") and the status line of HYP-9161 carry no such qualifier
+  [CLAIM FALSE] status lines: section 1 "(PROVED)" label  -- the climb-then-drop bullet is false and the hover bullet overstates by a factor ~W+1; the qualitative claim survives
+  [CLAIM FALSE] status lines: section 8 "(PROVED)" label  -- statement true, proof text incomplete in both versions (see [4](ii)); a corrected proof is supplied above
+  [CLAIM FALSE] status lines: THM-4499 status "tight on residue classes (hover/climb then drop)"  -- climb-then-drop gives multiplicity <= 2; hover gives ~ (2/3) L at best
+  cZ_diag under T: max |entry - 1/3| = 0.006 (0.6 points), chi-square vs uniform rows = 18.3 on 6 dof, p = 5.6e-03
+  cZ_diag(n) -> cZ_diag(3n+1), odd n: max |entry - 1/3| = 0.022 (2.2 points), chi-square vs uniform rows = 46.6 on 6 dof, p = 2.3e-08
+  [CLAIM FALSE] section 7: transition matrices "uniform to within 2 percent" (3n+1 matrix)  -- 2.2 points off 1/3 and highly significant (p ~ 1e-8); negligible in magnitude but not noise
+  [PASS] probe zeck(n) agrees with the hand Zeckendorf representations of n = 2..13
+  [PASS] hand contingency table (cZ_len, parity) for n = 2..13 equals the probe-derived one
+  [PASS] probe mutual_info on n = 2..13 = hand value 0.095437 bits (probe 0.095437, H(parity) = 1.000)
+  independent I(cZ_len; v2(3n+1) mod 3) over odd n <= 200000: 0.00027 bits (probe 0.00027); null expectation (r-1)(c-1)/(2N ln2) = 2.9e-05 bits;
+  G-statistic 2N ln2 I = 37.5 on 4 dof, p = 1.4e-07: ~9x the noise floor and statistically significant, though 0.02% of H(target).
+  [PASS] reported 0.00027 reproduced
+  [CLAIM FALSE] section 7: "all mutual informations are at the noise floor" (cZ_len vs v2(3n+1) mod 3: 9.4x the null expectation, p = 1e-07)  -- false for this entry; the note's "at this resolution" qualifier (stated in section 7) is what saves the conclusion
+
+====================================================================================================
+internal/reproduction checks: 61, failures: 0 (must be 0)
+note claims tested: 25, refuted: 14
+  CLAIM FALSE: section 1, hover-then-drop (W = 2, m = 12): "that landing point has multiplicity m + O(theta L)", i.e. some landing point receives >= m = 12 dippers
+  CLAIM FALSE: section 1, climb-then-drop 1^12 0^11: "every index of the climb lands at the same point"
+  CLAIM FALSE: section 1, climb-then-drop 1^12 0^12: "every index of the climb lands at the same point"
+  CLAIM FALSE: probe2 reading, L=40 2^L-1: "the climbs built into the starts produce one landing point with ~0.25 L dippers" (its dippers would have to be the initial climb)
+  CLAIM FALSE: probe2 reading, L=40 2^(L-1)+1: "the climbs built into the starts produce one landing point with ~0.25 L dippers" (its dippers would have to be the initial climb)
+  CLAIM FALSE: probe2 reading, L=60 2^L-1: "the climbs built into the starts produce one landing point with ~0.25 L dippers" (its dippers would have to be the initial climb)
+  CLAIM FALSE: probe2 reading, L=60 2^(L-1)+1: "the climbs built into the starts produce one landing point with ~0.25 L dippers" (its dippers would have to be the initial climb)
+  CLAIM FALSE: section 8 (ii): the displayed justification of M_k/M_s > 1/3 is complete as written (either version)
+  CLAIM FALSE: section 3b displayed instantiation "with a = a* + eps: ... - 1.038 log_2 log_2 L + O(1)" (also in THM-4499's status and the commit message)
+  CLAIM FALSE: status lines: section 1 "(PROVED)" label
+  CLAIM FALSE: status lines: section 8 "(PROVED)" label
+  CLAIM FALSE: status lines: THM-4499 status "tight on residue classes (hover/climb then drop)"
+  CLAIM FALSE: section 7: transition matrices "uniform to within 2 percent" (3n+1 matrix)
+  CLAIM FALSE: section 7: "all mutual informations are at the noise floor" (cZ_len vs v2(3n+1) mod 3: 9.4x the null expectation, p = 1e-07)
+====================================================================================================

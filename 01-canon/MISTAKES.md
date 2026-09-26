@@ -9,6 +9,14 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-26 landing-multiplicity reassessment (opus S7): four slips caught by the independent audit
+
+- **Climb-then-drop does not give multiplicity ~ L.** Claimed as PROVED that an odd run followed by a drop makes every climb index a dipper of one landing point. False: the thresholds `y_i 2^(-theta L)` are `0.585` bits apart while each halving of the drop crosses one bit, so each halving lands about `1.7` indices and a landing point receives at most `2` (word `1^12 0^11`, `L = 34`: `12` indices on `7` points). Hovers realise at most about `2L/3` (`0.54 L` found). The correct general statement is the one-bit band lemma: every dipper of `j` lies in `(2^(theta L) y_j, 2^(theta L + 1) y_j]`, and at most two of three consecutive orbit values share a 1-bit band, so multiplicity `<= 2 ceil(k/3)`.
+- **A proof that divides by an unbounded quantity.** The peak half of the records Proposition bounded `(|beta_k| + |beta_s|)/z` with `z = y_(i-k)`, which `y_i >= Y_0` does not bound below. Repair: compare `M_k z = y_i - beta_k >= y_i/2` with `M_s z = y_(i-k+s) - beta_s < 3y_i/2`, so `M_k/M_s > 1/3` with no condition on `z`.
+- **A limit written as an attained value.** `min Delta_l <= -1.0527 log_2 L - 1.038 log_2 log_2 L + O(1)` is not what THM-4499 gives; the coefficient is every value below `1.038` (`a > a*` strictly). Fixed in the note and in THM-4499's status.
+- **"At the noise floor" for a statistically significant but negligible dependence.** The Zeckendorf-length colour against `v_2(3n+1) mod 3` has `0.00027` bits of mutual information, nine times the null expectation at `N = 200000` (`p = 1.4e-7`); negligible in magnitude, but "noise" was the wrong word. Say "detectable but negligible".
+- **Mechanism to remember.** Two of the four are the same reflex as earlier entries: transporting an inequality (here a threshold spacing, earlier a block endpoint) without re-deriving which quantity is bounded; and a bound that silently needs a lower bound on a denominator. Run the auditor before recording "PROVED" on a five-line proof.
+
 ## 2026-09-26 family crossroads: direct policy patches, missing degree caps, and closure frequency
 
 - **Directly patching optimal bit sequences is illegal.** The slow-phase selector applied directly to stationary pairing bits gives `(0,0)` at indices26 and39, violating the complement clause. The first failed implication is that locally good policies agree at edges crossing their selection regions. THM-4500 instead applies the selector to free choices and recomputes all bits recursively; `(26,39)` becomes `(0,1)`. Phase stability and reset estimates prove that the necessary repairs have vanishing density. Choosing Haar representatives or making abrupt height-band switches does not supply this proof.

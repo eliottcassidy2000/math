@@ -250,7 +250,8 @@ all large `L`,
 min_(l <= L) Delta_l  <=  -(1/h*) log_2 L  +  (a/h*) log_2 log_2 L  +  O(1),
 ```
 
-i.e. with `a = a* + eps`: `min_(l <= L) Delta_l <= -1.0527 log_2 L - 1.038 log_2 log_2 L + O(1)`.
+i.e. for every `c < -a*/h* = 1.038` (the coefficient is `-(a*+eps)/h* = 1.038 - eps/h*`, not `1.038` itself; the audit caught the display):
+`min_(l <= L) Delta_l <= -1.0527 log_2 L - c log_2 log_2 L + O(1)`.
 
 *Proof.* Put `X = max_(l <= L) m_l`. The `L + 1` odd iterates `m_0..m_L` are
 distinct orbit elements `<= X`, so `L + 1 <= N(X) <= K X^(h*) (log_2 X)^a`.

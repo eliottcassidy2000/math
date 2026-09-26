@@ -61,6 +61,11 @@ status: >
   the induction CONFIRMED; presentation gaps recorded in the note
   (induction on floor(X); Cor. 4's recursion has #F_b + #F_(-b), so 27 -> 54;
   K is not effective). Verdict: SOUND.
+  UPDATE 2026-09-26 (one-bit band lemma, found by the audit of the landing
+  reassessment): every dipper of a landing point j has y_i in
+  (2^(theta L) y_j, 2^(theta L + 1) y_j], and at most two of three consecutive
+  orbit values lie in a 1-bit band, so the landing multiplicity in (D) is at
+  most 2 ceil(k/3) rather than k; constants only.
 source: collatz-squares-doubles-20260925 session (opus), 2026-09-25; the owner asked to prove HYP-9160 for discrepancy O(log l). Mechanism: the in-house no-bounded-strip theorem's Terras stopping-time count (collatz_guards_20260921_discrepancy.md, section 2a) plus a pigeonhole on landing points that replaces the strip hypothesis. No priority claimed.
 depends_on:
   - 05-knowledge/results/collatz_sqdbl_20260925_squares_doubles_foundry.md (Proposition 6: the orbitwise two-place identity)
