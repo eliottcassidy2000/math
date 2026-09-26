@@ -146,6 +146,146 @@ def phase_zero_bands(X):
     return bands
 
 
+def parent(i):
+    if i % 3 == 0:
+        return 2*i//3
+    if i % 3 == 1:
+        return (2*i+1)//3
+    return (2*i-1)//3
+
+
+def children(i):
+    return [3*i//2] if i % 2 == 0 else [(3*i-1)//2, (3*i+1)//2]
+
+
+def harmonic_forest(Y, X, removed=frozenset(), prefix=None, weights=None, C=1):
+    """Exact forest optimum above Y, optionally retaining a prescribed prefix."""
+    zero, one = {}, {}
+    for i in range(X, Y, -1):
+        a, b = Fraction(0), Fraction(1, i) if weights is None else weights[i]
+        if i % 2 == 0:
+            j = 3*i//2
+            if j <= X and (i, j) not in removed:
+                a += one[j]
+                b += zero[j]
+        else:
+            j, k = (3*i-1)//2, (3*i+1)//2
+            if j <= X and (i, j) not in removed:
+                a += zero[j]
+                b += min(zero[j], one[j])
+            if k <= X and (i, k) not in removed:
+                a += min(zero[k], one[k])
+                b += one[k]
+        zero[i], one[i] = a, b
+        require(abs(b-a) <= Fraction(3*C, i-1), 'pruned harmonic gap')
+    total = Fraction(0)
+    for i in range(Y+1, X+1):
+        p = parent(i)
+        if p > Y and (p, i) not in removed:
+            continue
+        allowed = [0, 1]
+        if p <= Y and prefix is not None:
+            if p % 2 == 0:
+                allowed = [1-prefix[p]]
+            elif i == (3*p-1)//2 and prefix[p] == 0:
+                allowed = [0]
+            elif i == (3*p+1)//2 and prefix[p] == 1:
+                allowed = [1]
+        total += min((zero[i], one[i])[b] for b in allowed)
+    return total, {i: one[i]-zero[i] for i in zero}
+
+
+def exact_phase_colors(X, seeds):
+    """Boundary seeds in [1,3/2) represent exact rational geometric boundaries."""
+    R = Fraction(3, 2)
+    require(seeds == sorted(set(seeds)) and seeds[0] == 1 and seeds[-1] < R, 'phase seeds')
+    colors, scale = {}, Fraction(1)
+    for i in range(1, X+1):
+        while scale*R <= i:
+            scale *= R
+        z = Fraction(i)/scale
+        colors[i] = max(q for q, seed in enumerate(seeds) if seed <= z)
+    return colors
+
+
+def audit_phase_cuts():
+    rows = []
+    for Y, X, Q in [(11, 233, 2), (11, 233, 10), (100, 2000, 10)]:
+        seeds = [Fraction(1)+Fraction(q, 2*Q) for q in range(Q)]
+        colors = exact_phase_colors(X, seeds)
+        cuts = {(i, j) for i in range(Y+1, X+1) for j in children(i)
+                if j <= X and colors[i] != colors[j]}
+        full, _ = harmonic_forest(Y, X)
+        decoupled, _ = harmonic_forest(Y, X, cuts)
+        gap_budget = sum((Fraction(3, j-1) for _, j in cuts), Fraction(0))
+        envelope = Fraction(18*Q, Y-1)
+        require(0 <= full-decoupled <= gap_budget <= envelope, 'phase-cut uniform bound')
+        restored = 0
+        if X == 233 and Q == 10:
+            remaining = set(cuts)
+            old, old_gaps = harmonic_forest(Y, X, remaining)
+            for edge in sorted(cuts, key=lambda edge: edge[1], reverse=True):
+                child_gap = abs(old_gaps[edge[1]])
+                remaining.remove(edge)
+                new, new_gaps = harmonic_forest(Y, X, remaining)
+                require(0 <= new-old <= child_gap, 'whole-component reconnection')
+                old, old_gaps = new, new_gaps
+                restored += 1
+            require(old == full, 'restoration recovered full optimum')
+        rows.append({'Y': Y, 'X': X, 'phase_cells': Q, 'cut_edges': len(cuts),
+                     'cost_increase_decimal': float(full-decoupled),
+                     'exact_root_gap_budget_decimal': float(gap_budget),
+                     'uniform_envelope': str(envelope), 'edges_restored_individually': restored})
+    # Freezing the descendants after flipping just a root can be illegal.
+    cut_cost, gaps = harmonic_forest(2, 8, {(3, 5)}, {2: 0})
+    full_cost, _ = harmonic_forest(2, 8, prefix={2: 0})
+    require(cut_cost == Fraction(1, 2) and full_cost == Fraction(33, 40), 'propagation hostile costs')
+    require(gaps[5] == Fraction(13, 40), 'entire child component must be reoptimized')
+    frozen = {2: 0, 3: 1, 4: 0, 5: 1, 6: 1, 7: 0, 8: 0}
+    require(frozen[5] > frozen[8], 'naive root-only flip must violate a descendant clause')
+    print(json.dumps({'phase_cut_controls': rows,
+                      'propagation_hostile': {'cut_edge': [3, 5], 'fixed_bit2': 0,
+                                              'cut_cost': str(cut_cost), 'restored_cost': str(full_cost),
+                                              'whole_component_gap': str(gaps[5]),
+                                              'naive_root_flip_violates': 'epsilon_5<=epsilon_8'}}))
+
+
+def audit_shell_comparison():
+    R = Fraction(3, 2)
+    splits = []
+    for Y, X in [(2, 8), (11, 233), (100, 512)]:
+        lower, upper = harmonic_optimum(Y), harmonic_optimum(X)
+        shell, _ = harmonic_forest(Y, X)
+        defect = upper-lower-shell
+        require(0 <= defect <= 3, 'harmonic interval quasi-additivity')
+        splits.append({'Y': Y, 'X': X, 'join_defect_decimal': float(defect)})
+    shifts = []
+    m, X = 3, Fraction(233)
+    a, b = int(X//R**m), int(X)
+    kernel = [R**k/Fraction(m) for k in range(m)]
+    for ratio in [Fraction(1), Fraction(5, 4), Fraction(3, 2)]:
+        Z = ratio*X
+        c, d = int(Z//R**m), int(Z)
+        weights = {}
+        for i in range(a+1, d+1):
+            power = Fraction(1)
+            while power*R <= Z/i:
+                power *= R
+            weights[i] = R*power/((R-1)*Z)
+            require(Fraction(2, i) <= weights[i] <= Fraction(3, i), 'exact phase price range')
+        fixed, _ = harmonic_forest(a, b, weights=weights, C=3)
+        moved, _ = harmonic_forest(c, d, weights=weights, C=3)
+        require(abs(fixed-moved) <= 12, 'same-price shifted-shell comparison')
+        f = cost_from_cutoffs(d, [(int(Z//R**k), w) for k, w in enumerate(kernel)])/Z
+        require(moved <= m*f+2, 'normalized uniform objective to leading shell')
+        require(fixed <= m*f+14, 'closure shell upper bound')
+        shifts.append({'scale_ratio': str(ratio), 'fixed_shell': [a, b], 'moved_shell': [c, d],
+                       'same_price_difference_decimal': float(fixed-moved),
+                       'fixed_shell_minus_m_f_decimal': float(fixed-m*f)})
+    print(json.dumps({'exact_shell_split_controls': splits, 'exact_shift_price_controls': shifts,
+                      'all_comparisons_exact_fractions': True}))
+
+
 def main():
     # Ten vertices are pair indices 2,...,11, with genuine P2 legal edges.
     X = 11
@@ -216,7 +356,7 @@ def main():
     require(cert[-1] == Fraction(821510388809, 2677850419968), 'logarithmic-density certificate')
     print(json.dumps({'inherited_eight_scale_depth': 20, 'direct_full_cost_sum': totals[-1],
                       'lower_logarithmic_density_bound': str(cert[-1]),
-                      'decimal': float(cert[-1]), 'global_realization_claimed': False}))
+                      'decimal': float(cert[-1]), 'natural_density_realization_claimed': False}))
 
     # All sixteen legal ten-vertex prefixes, harmonic extension to cutoff 233.
     small_harmonic = min(sum((Fraction(b[i], i) for i in range(2, 12)), Fraction(0)) for b in feasible)
@@ -250,6 +390,13 @@ def main():
                       'phase_hostile_log_density': '1/2',
                       'membership_method': 'integer squares, not floating logarithms',
                       'finite_controls': phase_rows}))
+    audit_phase_cuts()
+    audit_shell_comparison()
+    print(json.dumps({'audited_companion_theorem': 'B_star is the attained minimum existing logarithmic density',
+                      'finite_harmonic_optimum_limit': 'H(X)/log(X) -> B_star',
+                      'numerical_certificate_is_only_a_lower_bound': True,
+                      'natural_density_attainment_claimed': False,
+                      'collatz_proof_claimed': False}))
     print('ALL CHECKS PASSED')
 
 

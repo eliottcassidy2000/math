@@ -340,6 +340,16 @@ def main():
     check(rank(valuation_rows((5, 75)).values(), 2) == 2, "raw-node scaling hostile")
     check(rank(valuation_rows((15, 225)).values(), 2) == 1, "common factor3 must be retained")
     print("scale hostile: (5,75) has rank2, but (15,225) has rank1; coefficient3 is load-bearing")
+    same_orbit = [507, 761, 571, 857, 643, 965, 181, 17, 13]
+    check(odd_orbit(507, 9) == same_orbit, "same-orbit scaling hostile source replay")
+    check(factor(507) == {3: 1, 13: 2} and 3 * 507 == (3 * 13) ** 2,
+          "same-orbit scaling hostile arithmetic")
+    check(rank(valuation_rows((507, 13)).values(), 2) == 2 and
+          rank(valuation_rows((1521, 39)).values(), 2) == 1,
+          "same-orbit raw/scaled rank boundary")
+    check(graph_reduce(paired_rows([507, 13]), 2)[0] == 2, "second coordinate repairs selected pair")
+    print(f"actual same-orbit scale hostile: {same_orbit}; raw(507,13) rank2; "
+          "first slots(1521,39) rank1 since1521=39^2; paired rank2")
     print("PASS: exact graph compression and factor-free sufficient carrier; no finite-modulus Collatz proof")
 
 

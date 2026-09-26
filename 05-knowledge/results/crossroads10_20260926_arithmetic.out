@@ -14,4 +14,5 @@ first actual odd-component example: (199, [199, 299, 449, 337, 253, 95, 143, 215
 first actual no-dip odd-component example: (4347, [4347, 6521, 4891, 7337, 5503, 8255, 12383, 18575, 27863, 41795], 8, [(0, 3), (0, 6), (3, 6), (3, 8), (5, 9)])
 unweighted miss: first slots117,39 have atom rows{3: [2, 1], 13: [1, 1]}; exact rank2 despite one unweighted edge
 scale hostile: (5,75) has rank2, but (15,225) has rank1; coefficient3 is load-bearing
+actual same-orbit scale hostile: [507, 761, 571, 857, 643, 965, 181, 17, 13]; raw(507,13) rank2; first slots(1521,39) rank1 since1521=39^2; paired rank2
 PASS: exact graph compression and factor-free sufficient carrier; no finite-modulus Collatz proof

@@ -68,6 +68,39 @@ def contract(adj, block):
     return out
 
 
+def contract_blocks(adj, blocks):
+    used = [v for block in blocks for v in block]
+    check(len(set(used)) == len(used), "disjoint contraction blocks")
+    pieces = [tuple(block) for block in blocks]
+    pieces += [(v,) for v in range(len(adj)) if v not in used]
+    out = [0] * len(pieces)
+    for i, first in enumerate(pieces):
+        for j, second in enumerate(pieces):
+            if i != j and adj[first[-1]] & (1 << second[0]):
+                out[i] |= 1 << j
+    return out
+
+
+def mixed_difference(adj, selected):
+    total = 0
+    for bits in range(1 << len(selected)):
+        signs = -1 if (len(selected) - bits.bit_count()) % 2 else 1
+        total += signs * hp(flip(adj, [e for i, e in enumerate(selected) if bits & (1 << i)]))
+    return total
+
+
+def forest_contraction_sum(adj, reference_blocks):
+    """Reference paths need not be coherently directed in the base tournament."""
+    m = sum(len(block) - 1 for block in reference_blocks)
+    total = 0
+    for reverse in product((False, True), repeat=len(reference_blocks)):
+        blocks = [tuple(reversed(block)) if rev else tuple(block)
+                  for block, rev in zip(reference_blocks, reverse)]
+        flips = sum(not bool(adj[u] & (1 << v)) for block in blocks for u, v in zip(block, block[1:]))
+        total += (-1 if (m - flips) % 2 else 1) * hp(contract_blocks(adj, blocks))
+    return total
+
+
 def brute_paths(adj):
     return [p for p in permutations(range(len(adj)))
             if all(adj[u] & (1 << v) for u, v in zip(p, p[1:]))]
@@ -145,7 +178,7 @@ def mixed_response_audit():
             graphs.append(adj)
             cache.append(hp(adj))
         index = {edge: i for i, edge in enumerate(edges)}
-        tests = 0
+        tests, star_tests, triangle_tests = 0, 0, 0
         for mask, adj in enumerate(graphs):
             for v in range(n):
                 for u, w in combinations([i for i in range(n) if i != v], 2):
@@ -162,7 +195,26 @@ def mixed_response_audit():
                     predicted = hp(contract(adj, (first, v, last))) + hp(contract(adj, (last, v, first)))
                     check(actual == predicted and actual >= 0, "conditional two-edge path curvature")
                     tests += 1
-        rows.append({"n": n, "all_labelled_tournaments": len(graphs), "directed_wedge_tests": tests})
+            nonforests = []
+            for center in range(n):
+                for leaves in combinations([i for i in range(n) if i != center], 3):
+                    nonforests.append(("star", [(center, v) for v in leaves]))
+            for vertices in combinations(range(n), 3):
+                nonforests.append(("triangle", list(combinations(vertices, 2))))
+            for kind, selected in nonforests:
+                edge_bits = [1 << index[tuple(sorted(e))] for e in selected]
+                mixed = 0
+                for subset in range(8):
+                    target = mask
+                    for i, bit in enumerate(edge_bits):
+                        if subset & (1 << i):
+                            target ^= bit
+                    mixed += (-1 if (3 - subset.bit_count()) % 2 else 1) * cache[target]
+                check(mixed == 0, "non-linear-forest response vanishes")
+                star_tests += kind == "star"
+                triangle_tests += kind == "triangle"
+        rows.append({"n": n, "all_labelled_tournaments": len(graphs), "directed_wedge_tests": tests,
+                     "three_edge_star_zero_tests": star_tests, "triangle_zero_tests": triangle_tests})
     emit("mixed_response_exhaustive", rows)
 
 
@@ -202,6 +254,28 @@ def main():
         values = [hp(varied), hp(flip(varied, [e])), hp(flip(varied, [f])), hp(flip(varied, [e, f]))]
         check(values[3] - values[1] - values[2] + values[0] == 42, "middle-neighborhood blindness")
     emit("middle_neighborhood_controls", {"orientations": 32, "same_curvature": 42})
+
+    forest_rows = []
+    for label, adj, blocks in [
+        ("odd directed path", base, [(0, 3, 2, 5)]),
+        ("odd reversed path", flip(base, [(0, 3), (3, 2), (2, 5)]), [(5, 2, 3, 0)]),
+        ("two even directed paths", base, [(0, 3, 2), (4, 7, 6)]),
+        ("partially oriented even reference path", corners[1], [(0, 3, 2)]),
+    ]:
+        selected = [edge for block in blocks for edge in zip(block, block[1:])]
+        direct = mixed_difference(adj, selected)
+        contracted = forest_contraction_sum(adj, blocks)
+        check(direct == contracted, "general conditional linear-forest identity")
+        if label in ("odd directed path", "odd reversed path"):
+            forward, backward = hp(contract_blocks(adj, blocks)), hp(contract_blocks(adj, [tuple(reversed(blocks[0]))]))
+            check(direct == backward - forward, "odd path has a signed difference")
+            check(direct == (4 if label == "odd directed path" else -4), "odd-path opposite signs")
+        if label == "two even directed paths":
+            check(direct >= 0, "coherently directed even paths are nonnegative")
+        if label == "partially oriented even reference path":
+            check(direct == -42, "partial orientation reverses curvature sign")
+        forest_rows.append({"control": label, "blocks": blocks, "mixed_difference": direct})
+    emit("linear_forest_controls", forest_rows)
 
     padded = []
     for a in (base, corners[-1]):

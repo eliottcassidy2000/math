@@ -1,0 +1,7 @@
+graph: normal = optimized = retained output
+arithmetic: normal = optimized = retained output
+flow: normal = optimized = retained output
+independent response square: [233, 291, 123, 223]
+orbit-27 prime triangle determinant: -4
+ten-bit legal assignments: 16 costs: [3, 1, 4, 5]
+all independent controls PASS

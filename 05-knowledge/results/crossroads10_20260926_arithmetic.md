@@ -1,7 +1,7 @@
 # Ten arithmetic vertices: prime-incidence cycles and exact rank compression
 
-**Status: elementary PROOF CANDIDATE, independent audit pending; FINITE-EXACT
-controls.** The two arithmetic inputs are actual integer values and their
+**Status: PROVED, independently audited by the root coordinator and geometry
+lane; FINITE-EXACT controls in the explicitly stated universes.** The two arithmetic inputs are actual integer values and their
 multiplicative relations. The finite graph retains unbounded integer labels;
 it is not a reduction to a fixed residue modulus. Collatz and G2 remain open.
 
@@ -211,6 +211,16 @@ The factor3 itself cannot be dropped without a sidecar: the raw positive odd
 tuple `(5,75)` has rank2, while its scaled first slots `(15,225)` have rank1
 because `225=15^2`. This is a typing hostile, not a claim that5 and75 are
 consecutive Collatz nodes. The implementation retains3 in every first slot.
+
+A stronger hostile is realized on a single actual orbit:
+
+    507 -> 761 -> 571 -> 857 -> 643 -> 965 -> 181 -> 17 -> 13.
+
+The selected raw odd nodes `507=3*13^2` and13 have rank2, but their first
+slots are `1521=39^2` and39, of rank1. The script directly replays all eight
+odd transitions, checks the arithmetic identity and both ranks, and confirms
+that the two actual *pairs* still have rank2. Thus this is an actual failure
+of raw-node-to-first-slot rank transfer, not a G2 counterexample.
 
 For Collatz, every prime common to m_i,m_j divides the exact subword carry
 `C_(i,j)` from THM-4493. Thus the graph edges also have an arithmetic

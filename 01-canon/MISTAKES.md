@@ -9,6 +9,39 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-26 ten-vertex crossroads: interactions, weights and phase repair
+
+- **Triangle totals lose global path counts.** The staircase with233 paths
+  and its two-edge neighbor with223 have the same triangle and disjoint
+  triangle-pair counts. Their five- and seven-cycle counts and disjoint3+5
+  compatibility differ. Omitting the3+5 term predicts minus14 instead of
+  minus10. The mixed edge response42 is the sum31+11 of two contracted
+  triple-path counts; single-edge changes alone do not determine it.
+- **Unweighted arithmetic graphs lose exponent consistency.** The same
+  C10 incidence graph has rank9 with unit edge exponents and rank10 after
+  changing one exponent. Common factor3 also matters on an actual orbit:
+  raw nodes507 and13 are independent, but first slots1521=39^2 and39 are
+  dependent. Keep endpoint exponents, higher-support rows and both paired
+  coordinates. THM-4497 gives the exact kernel-preserving repair.
+- **A finite-scale gain may be rounding alone.** At cutoff11 the nested
+  two-cutoff objective costs4 while the fused convolution costs5 because
+  its last floor is2 instead of1. Cutoffs486,216,96 remove that discrepancy
+  and retain a genuine common-assignment penalty306>210+94. Also exact
+  kernel shift invariance becomes a depth delay after finite truncation.
+- **Reconnecting a constraint can change descendants.** With bit2 fixed0
+  and cutoff8, restoring3->5 costs13/40, including the change at8 forced
+  by5<=8. Flipping only the child root is invalid. Reoptimize the whole
+  child component; the root-gap bound pays exactly this propagation.
+- **Compactness does not remove a shared phase.** A compact band family
+  has every grid-kernel value sqrt(6)-2 and logarithmic density1/2. A
+  sharpness theorem needs an actual constraint-repair argument, beyond
+  averaging scalar certificates. The pairing tree admits such quantitative
+  phase repairs; the phase-band counterexample does not inherit them.
+
+Proofs and controls: [ten-vertex synthesis](../05-knowledge/results/crossroads10_20260926_board.md),
+[THM-4496](theorems/THM-4496-pairing-kernel-convolution-and-log-density.md),
+[THM-4497](theorems/THM-4497-coprime-graph-rank-compression.md).
+
 ## 2026-09-26 THM-4494: exact binomial factors are not monotone in N (opus S6; caught by the independent audit)
 
 - **What was claimed.** In the exact-ratio lemma of THM-4494 (AMM 12592, `C* <= 197/125`), that each factor `(A_0 + j)/(R_0 - j)` of `P_r = C(A_0+r-1, r)/C(R_0, r)` decreases in `N`, so that the exact products at `N_A = 4096` bound `P_r(N)` for all `N >= N_A`; the script used `theta = P_1(N_A) = 0.952946`.

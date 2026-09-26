@@ -1,6 +1,8 @@
 # Finite scale certificates form a convolution calculus
 
-Status: **PROOF CANDIDATE under root audit; finite-exact controls retained.**
+Status: **PROVED and independently audited. Root audited the full proof;
+geometry independently audited the kernel, phase-cut, and closure steps.
+Finite-exact controls retained and reproduced normally and with `-O`.**
 This extends the exact global two-step pairing tree, not the original
 Collatz map or longer-horizon pairing constraints.
 
@@ -51,7 +53,8 @@ Conversely a finite rational probability vector gives `a_k=p_k r^(-k)`,
 so the map loses only multiplication of all original prices by a positive
 constant. It retains all scale locations and the common assignment.
 Passing from the functional to its scalar value loses the minimizing
-assignments; no subsequent global realization claim is made.
+assignments. Section 10 supplies a separate construction for logarithmic
+density; the scalar map itself supplies no global assignment.
 
 ## 2. Concavity, translation, and convolution
 
@@ -146,8 +149,8 @@ at every consecutive value of `m`.
 The integer representative of `u_m` is precisely
 `a_k=3^k 2^(m-1-k)` for `0<=k<m`. Thus the previously empirical adjacent-
 scale family is a complete family for the entire finite positive-kernel
-method. Completeness concerns certificates, not globally realizable
-assignments or attainment of their supremum.
+method. This completeness proposition concerns certificates alone;
+attainment of their supremum requires the later phase and assembly proof.
 
 ## 4. Lower logarithmic density also obeys every certificate
 
@@ -187,8 +190,9 @@ bound is the inherited eight-scale, depth-twenty certificate, independently
 recomputed here using full fixed-root cost arrays.
 
 This strengthens the density consequence of the finite-scale method.
-It does not prove `B_*` is the minimum logarithmic, natural, or upper
-density: each equality would require a matching globally legal construction.
+This proposition alone does not identify a minimum. The logarithmic
+sharpness question is resolved in Section 10;
+the natural and upper natural density questions remain open.
 
 ## 5. Finite depth has a precise delay, not shift invariance
 
@@ -267,13 +271,14 @@ or with `-O`. The [output](crossroads10_20260926_flow.out) also records exact
 finite convolution checks for cutoffs 1 through 1,000, finite-depth shift
 and convolution controls, uniform-window total-variation checks, and the
 independent inherited rational certificate. This is structural progress
-in the finite positive-certificate method; its global realization gap and
-the longer-horizon legal-constraint carrier remain open.
+in the finite positive-certificate method. Section 10 addresses its
+logarithmic realization gap. Natural-density realization and the
+longer-horizon legal-constraint carrier remain open.
 
 ## 7. The minimum lower logarithmic density is attained by a global pairing
 
-This is an attainment theorem for a precisely defined constant `h`, not
-an identification of `h` with `B_*`. Work at integer cutoffs and set the
+This proposition gives attainment for a precisely defined constant `h`;
+Section 10 subsequently identifies `h=B_*`. Work at integer cutoffs and set the
 unconstrained bit `epsilon_1=0`; changing that single bit affects harmonic
 cost by at most one and no asymptotic density. Define
 
@@ -293,7 +298,9 @@ H(X) + sum_(2<=i<=Y) epsilon_i/i + 3
 
 Consequently a global two-step pairing attains lower logarithmic density
 `h`, and every global two-step pairing has lower logarithmic density at
-least `h`. In particular `h>=B_*`; the reverse inequality remains open.
+least `h`. In particular `h>=B_*`. The reverse inequality was the remaining
+obligation here; its earlier OPEN status is superseded by the audited
+proof in Section 10.
 
 **Proof of the extension bound.** In the finite tree cut at `X`, assign
 weight `1/i` to vertex `i`. Let `Delta_i` be the difference of the optimum
@@ -344,8 +351,8 @@ to `h`; the universal lower bound gives equality of the liminf. Integer
 and real cutoffs have the same asymptotics by rounding.
 
 Thus global lower-logarithmic attainment needs no additional minimax
-assumption. The remaining sharpness question has become the concrete
-finite-optimization obligation
+assumption. The remaining sharpness question at this stage becomes the
+concrete finite-optimization obligation (addressed in Section 10)
 
 ```
 liminf_X H(X)/log X <= B_*.
@@ -409,7 +416,316 @@ sup_(finite kernels) B(p)=sqrt(6)-2 < 1/2
 The lost coordinate is a common phase within a multiplicative period.
 Translations by whole scale steps cannot observe it. This is a hostile
 family for a proposed generic inference, not a counterexample within the
-two-step pairing tree. To prove `h=B_*` for that tree one must exploit its
-specific freedom to assemble assignments across such phases, or otherwise
-prove the remaining harmonic-optimum bound. Replacing that obligation by
-compactness or by a finite-kernel minimax slogan would leave the same gap.
+two-step pairing tree. Section 10 proves `h=B_*` by exploiting that tree's
+specific freedom to repair phase cuts and assemble assignments. Replacing
+this argument by compactness or by a finite-kernel minimax slogan would
+leave the same gap exposed by the hostile family.
+
+## 9. Finite phase cuts have a uniform harmonic repair budget
+
+**PROVED; independently geometry-audited.** Let integers `X>Y>=2`
+be fixed. Give vertices `Y<i<=X` any nonnegative weights
+`w_i<=C/i`, where `C>=0`. Optionally prescribe one legal prefix through
+`Y`, retaining all constraints it places on the roots above `Y`.
+Choose `Q>=1` boundaries on the circle of logarithmic phases
+`fractional_part(log_R i)`, with `R=3/2`, and partition that circle into
+the corresponding half-open cells. Delete exactly the edges above `Y`
+whose parent and child have different phase cells. Let `OPT` and `CUT`
+be the optimum costs before and after deletion, using the same prescribed
+prefix if one was specified, and excluding its constant cost. Then
+
+```
+0 <= OPT-CUT <= sum_(deleted parent->j) 3C/(j-1)
+              <= 18 C Q/(Y-1).
+```
+
+The bound is uniform in the final cutoff, the boundary angles, the
+individual weights, and the fixed legal prefix. This is an exact
+finite-horizon statement; it does not assume an infinite subtree optimum.
+
+**Root-gap and reconnection proof.** The induction in Section 7 applies
+unchanged to every pruned component and to these weights: its two root
+costs differ by at most `3C/(i-1)`. Restore the deleted edges in decreasing
+order of child index. Just before restoring an edge `i->j`, the child
+component is a rooted tree at `j`, with all its previously restored
+descendant constraints incorporated into its optimum. Keep an optimal
+assignment of the parent component fixed, and choose the allowed bit at
+`j` that gives the smaller cost for the *whole child component*. Each
+parent bit allows at least one child bit; choosing that bit costs at most
+the child's root gap above its unrestricted optimum. The already legal
+descendant constraints remain satisfied because the component is
+reoptimized, not frozen. The graph is a forest, so merging these two
+components creates no second interface or cycle. The prefix restrictions
+are confined to the ancestor component, since `j>i>Y`.
+
+Thus each restored edge raises the global optimum by a number between
+zero and `3C/(j-1)`. Telescoping gives the first inequality. The argument
+also works for arbitrary edge deletions, with the corresponding sum of
+root-gap budgets; the geometric bound next is specific to phase cuts.
+
+**Geometric charging proof.** Each original child has
+`j=Ri+sigma/2`, with `sigma` in `{-1,0,1}`. Multiplication by `R`
+preserves phase. Therefore a changed phase cell requires a boundary
+
+```
+b=R^(n+theta_q)
+```
+
+between `Ri` and `j`; in particular `|Ri-b|<=1/2` and `|j-b|<=1/2`.
+For a fixed boundary `b`, the possible parent integers lie in an interval
+of length `1/R=2/3`, so there is at most one parent and at most two child
+edges. Charge each deleted edge to one such crossed boundary. Since
+`j>=Y+1`, any charged boundary satisfies `b>=Y+1/2` and
+
+```
+1/(j-1) <= 1/(b-3/2)
+          <= [(Y+1/2)/(Y-1)] / b.
+```
+
+For one phase boundary, the reciprocal sum of the geometric progression
+over `b>=Y+1/2` is at most `3/(Y+1/2)`. Multiplying by at most two edges,
+the root-gap factor `3C`, and the `Q` boundary families gives precisely
+`18 C Q/(Y-1)`. Charging nonexistent or out-of-range boundaries only
+enlarges this upper bound. In particular no factor `log X` is needed.
+
+**Propagation hostile control.** Fix `epsilon_2=0`, take cutoff eight,
+and temporarily delete `3->5`. The cost above two is `1/2`; the child
+component at five has its free optimum at bits five, seven, eight all
+zero. Restoring the edge forces bit five to one. Flipping only that root
+would violate `epsilon_5<=epsilon_8`. Reoptimizing the whole component
+also changes bit eight, at additional cost
+`1/5+1/8=13/40`, giving total `33/40`. The exact root gap is `13/40`,
+so the reconnection bound accounts for the propagation. This is a control
+for the general reconnection lemma, not a claim that this single deleted
+edge is the complete phase-cut set for a specified partition.
+
+The script uses exact rational geometric boundaries, checks the bound for
+two and ten phase cells, and restores every cut individually in the
+ten-cell cutoff-233 case, verifying the cost increase against the actual
+current child-component gap at every step. It also checks the displayed
+propagation witness. No floating logarithm decides phase membership.
+
+**What this still does not transfer.** For the normalized uniform kernel
+`u_m`, a vertex in `X/R^m<i<=X` has, with
+`theta=fractional_part(log_R(X/i))`, the exact objective coefficient
+
+```
+R^(1-theta) / [m(R-1)i] - 1/[m(R-1)X].
+```
+
+Below that interval the coefficient is constant. The bottom cap and the
+displayed correction each have total cost at most `1/[m(R-1)]=2/m`,
+uniformly over assignments. The leading interior weight retains a
+positive factor depending on phase. The phase-cut lemma decouples the
+constraint cost between finitely many cells, but does not establish that
+their optimal harmonic costs are equal or transform homogeneously under
+shifting the entire cutoff window. This lemma alone does not remove that
+phase factor or prove `h=B_*`. Section 10 supplies the missing comparison
+by moving and averaging whole cutoff windows, rather than assuming
+homogeneous phase-specific optima.
+
+## 10. Phase repair closes the logarithmic certificate gap
+
+**PROVED; independently audited by the root and geometry lanes.**
+With all definitions as above,
+
+```
+lim_(X->infinity) H(X)/log X = h = B_*
+    = lim_(m->infinity) B(u_m).
+```
+
+Thus the finite positive-kernel method exactly determines the minimum
+lower logarithmic density in the global two-step pairing family. The
+construction at the end of this section additionally attains this value
+as an existing logarithmic density. Neither statement concerns existence
+or optimality of natural density.
+
+### A. Interval costs and a bounded cost for moving a window
+
+For integers `b>a>=2`, let `E_w(a,b)` be the free forest optimum on
+vertices `a<i<=b`, with weights `0<=w_i<=C/i`, retaining only edges whose
+two endpoints belong to the interval. There are no imposed bits at its
+inner boundary. The root-gap argument gives, for `a<c<b`,
+
+```
+0<=E_w(a,b)-E_w(a,c)-E_w(c,b)<=3C.                 (10.1)
+```
+
+The lower bound follows by removing constraints and minimizing the two
+pieces separately. For the upper bound, keep the lower piece fixed and
+reoptimize each upper component with the root bit required by its parent.
+The frontier gap sum is at most `9C/4<3C`, exactly as in Section 7.
+The same statement applies with the lower piece being the whole legal
+prefix through `c`.
+
+Fix an integer `m>=2`, a large real `X`, and `0<=t<=1`. Put
+
+```
+I_X=(floor(X/R^m),floor X],
+I_(R^t X)=(floor(R^t X/R^m),floor(R^t X)],
+R=3/2,       ell=log R.
+```
+
+These intervals overlap once their lower cutoffs are at least two. Each
+extra end band has harmonic mass less than one: if its integer endpoints
+are `a,c`, then `c/a<=R(1+1/a)<=9/4` and
+`sum_(a<i<=c)1/i<=log(c/a)<1`. By (10.1), each of the two interval
+optima lies between the common-overlap optimum and that optimum plus
+`C+3C`. For the SAME weights on both intervals, therefore,
+
+```
+|E_w(I_X)-E_w(I_(R^t X))|<=4C.                    (10.2)
+```
+
+This comparison includes all inner-boundary compatibility costs. It does
+not presume that an arbitrary free shell assignment extends unchanged
+through a lower prefix.
+
+### B. Uniform kernels control phase-weighted shell optima
+
+Write `B_m=B(u_m)` and
+
+```
+f_m(Z) = (1/Z) min_F sum_(k=0)^(m-1) (R^k/m) A_F(floor(Z/R^k)).
+```
+
+The normalizer here is exactly one; THM-4492 gives `f_m(Z)->B_m` for
+each fixed `m`. For `Z/R^m<i<=Z`, the coefficient of bit `i` in
+`m f_m(Z)` is
+
+```
+c_Z(i)/i - 1/[(R-1)Z],
+c_Z(i)=R^(1-frac(log_R(Z/i)))/(R-1),       2<=c_Z(i)<=3.
+```
+
+The coefficient below that shell is nonnegative. Dropping this bottom
+cost and bounding the negative correction by `1/(R-1)=2` gives
+
+```
+E_(c_Z/i)(I_Z) <= m f_m(Z)+2.                     (10.3)
+```
+
+The direction is essential: every global assignment restricts to a legal
+shell assignment, so its leading shell cost is at least the free shell
+minimum. No extension claim is needed for (10.3).
+
+Take `Z=R^t X`. Apply (10.2) with weights `c_Z(i)/i` and `C=3`:
+
+```
+E_(c_(R^t X)/i)(I_X) <= m f_m(R^t X)+14.          (10.4)
+```
+
+All phase-weighted objectives now live on ONE fixed shell `I_X`.
+
+### C. Finite phase averaging removes the phase factor
+
+Partition `psi=frac(log_R(X/i))` into `Q` equal half-open cells and let
+`D_q` be the free harmonic optimum in cell `q` after deleting the
+cross-cell edges. Reflection of the phase circle changes only the
+half-open endpoint convention; the boundary charging proof in Section 9
+applies verbatim. With `Y=floor(X/R^m)`, that lemma gives
+
+```
+D_m(X):=E_(1/i)(I_X) <= sum_q D_q +18Q/(Y-1).      (10.5)
+```
+
+Choose shifts `t_j=j/Q`, `0<=j<Q`. All jumps of all functions
+`c_(R^t_j X)` align with cell boundaries. On each cell each function
+decreases by at most the factor `R^(1/Q)` between its maximum and its
+infimum. For EVERY cell the average over `j` of these infima is exactly
+
+```
+a_Q = [1/Q] sum_(l=1)^Q R^(1-l/Q)/(R-1)
+    = 1/[Q(R^(1/Q)-1)]  -> 1/ell.
+```
+
+Any legal weighted shell assignment restricts to a legal assignment in
+each phase cell. Nonnegative weights and the cell infima therefore give
+
+```
+(1/Q) sum_j E_(c_(R^t_j X)/i)(I_X) >= a_Q sum_q D_q.    (10.6)
+```
+
+This is a finite sum of lower bounds for genuine minima. It does NOT
+interchange an integral with a minimum. Combining (10.4)--(10.6) gives
+
+```
+D_m(X) <= [m (1/Q) sum_j f_m(R^t_j X)+14]/a_Q
+           +18Q/(Y-1).
+```
+
+First fix `m,Q` and send `X` to infinity. Only finitely many shifts occur,
+so each `f_m(R^t_j X)` tends to `B_m`, while the repair term vanishes.
+Then send `Q` to infinity. This proves
+
+```
+limsup_(X->infinity) D_m(X)/(m ell) <= B_m+14/m.    (10.7)
+```
+
+There is no assumption that the separate cell optima are equal. Their
+positive coefficients become equal after the explicit finite average.
+
+### D. Assemble shells and identify the limit
+
+Use cutoffs `N_k=floor(R^(mk) X_0)` with `X_0` large. Their successive
+shells are exactly of the form in (10.7), including the rounded lower
+cutoff. By (10.1), or the fixed-prefix repair bound,
+
+```
+H(N_k) <= H(N_(k-1))+D_m(R^(mk)X_0)+3.
+```
+
+For each fixed `m`, sum this inequality and apply (10.7). Since
+`log N_k~km ell`,
+
+```
+limsup_k H(N_k)/log N_k <= B_m+14/m+3/(m ell).
+```
+
+The finite optimum `H(X)` is nondecreasing. Between two consecutive
+cutoffs, `log N_(k+1)/log N_k->1`, so the same upper bound holds for all
+integer `X`. Now send `m` to infinity and use uniform completeness from
+Section 3. We obtain `limsup H(X)/log X<=B_*`. Sections 4 and 7 already
+give `liminf H(X)/log X=h>=B_*`. Hence the limit exists and equals `B_*`.
+
+This is the P2-specific comparison absent in the shared-phase hostile
+family. That family has no vanishing-cost phase repair property, so it
+does not contradict the result.
+
+### E. A global pairing with an actual logarithmic density
+
+For clarity this is an additional constructive corollary, not merely a
+change from liminf notation. Let a fixed legal prefix through `Y` have
+harmonic cost `C(Y)`. Keeping its bits fixed and repairing the interfaces
+to a free optimum on `(Y,X]` gives
+
+```
+C(X) <= C(Y)+E_(1/i)(Y,X)+3.
+```
+
+On the other hand restriction of an optimum through `X` gives
+`H(X)>=H(Y)+E_(1/i)(Y,X)`. Thus a legal extension exists with
+
+```
+C(X)-H(X) <= C(Y)-H(Y)+3.                          (10.8)
+```
+
+At the integer cutoffs `X_n=2^(n^2)`, successively choose such extensions.
+The resulting nested prefixes define one global legal pairing, and
+`C(X_n)<=H(X_n)+3n+O(1)`. Since `H(X)/log X->B_*`, its harmonic ratios
+at these cutoffs tend to `B_*`. For any intermediate `X`, monotonicity of
+the actual accumulated harmonic cost and
+`log X_(n+1)/log X_n=(n+1)^2/n^2->1` give the same upper limit. The
+pointwise bound `C(X)>=H(X)` gives the matching lower limit. This global
+pairing therefore has an existing logarithmic density exactly `B_*`.
+
+Accordingly the minimum lower, upper, and existing logarithmic densities
+all coincide with the finite-kernel supremum. This does not identify its
+numerical value beyond certified bounds, prove a natural-density
+attainment statement, or settle longer-horizon pairing or Collatz.
+
+The retained script adds exact interval-splitting controls, and same-price
+shifted-shell controls for rational scale ratios `1,5/4,3/2`. The phase
+prices in these controls are computed as rational powers selected by exact
+comparisons, not floating logarithms. These computations check the finite
+inequalities; the limiting and assembly arguments above supply the theorem.

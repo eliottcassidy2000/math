@@ -1,0 +1,79 @@
+{
+  "session": "crossroads10-20260926",
+  "reservation_commit": "3130458ce",
+  "hash_basis": "Exact Git index blobs, including Git text normalization; verify against committed blobs. Manifest excludes itself and shared navigation.",
+  "reproduction": "python -B 04-computation/experiments/crossroads10_20260926_audit.py",
+  "validation": "Three lane programs: normal = -O = retained stdout; independent root controls and check_docs pass. Root and separate agents audited proof statements.",
+  "artifacts": [
+    {
+      "path": "04-computation/experiments/crossroads10_20260926_arithmetic.py",
+      "sha256": "9a84e2e92b4acdd56d906abc83acea7d9b973c40db8be1b7f2b659d9bd8385c2",
+      "bytes": 15368
+    },
+    {
+      "path": "05-knowledge/results/crossroads10_20260926_arithmetic.out",
+      "sha256": "7d5515a828ce88c26dd085a344fb89c7dbf5ecbafdf1c61c4e1068eb21454ff6",
+      "bytes": 2081
+    },
+    {
+      "path": "04-computation/experiments/crossroads10_20260926_flow.py",
+      "sha256": "05f9193793271eb8cd0431c6cc1c54b955fd21f89126da6f070372b1dd7ae829",
+      "bytes": 17622
+    },
+    {
+      "path": "05-knowledge/results/crossroads10_20260926_flow.out",
+      "sha256": "9667db08d61a79e05873f01662d27bd26964510c8dd1a850d65e09211b2a133d",
+      "bytes": 3730
+    },
+    {
+      "path": "04-computation/experiments/crossroads10_20260926_graph.py",
+      "sha256": "a4f8be164b1470143d19e0861e27bc9b3ee9dafbb9002d30c46165e1e85166f6",
+      "bytes": 12806
+    },
+    {
+      "path": "05-knowledge/results/crossroads10_20260926_graph.out",
+      "sha256": "8c1f09a7e91c7be96312899cc79120d0b985c434fa5394b38f4b7cf0be16f623",
+      "bytes": 2966
+    },
+    {
+      "path": "04-computation/experiments/crossroads10_20260926_audit.py",
+      "sha256": "40e835cb6e0470e906f10d3325a5d5133c6a8807437685d5037eff0bf8505030",
+      "bytes": 2787
+    },
+    {
+      "path": "05-knowledge/results/crossroads10_20260926_audit.out",
+      "sha256": "2bda6f5b2c8e062a00e5a2bfdae3c99874cfae9dc5f7b86ba55a62415f36b045",
+      "bytes": 306
+    },
+    {
+      "path": "05-knowledge/results/crossroads10_20260926_arithmetic.md",
+      "sha256": "19f24323d31b6526c5426718638769a164e70c7f1057390be9b4e653d218f5ed",
+      "bytes": 15397
+    },
+    {
+      "path": "05-knowledge/results/crossroads10_20260926_flow.md",
+      "sha256": "f512f22ca1b676fa6c81de33a645e9870b319d82e60af49af9fb0ac1757aba4f",
+      "bytes": 29612
+    },
+    {
+      "path": "05-knowledge/results/crossroads10_20260926_graph.md",
+      "sha256": "d421baef9097d3669a46ac37bded271ee07a38058f60a122e4411f2569838848",
+      "bytes": 14761
+    },
+    {
+      "path": "05-knowledge/results/crossroads10_20260926_board.md",
+      "sha256": "db5bc1de6239bc34a0aed6262f5e5d7224e4c8ccc65e38a2134d0841e284ce6d",
+      "bytes": 12485
+    },
+    {
+      "path": "01-canon/theorems/THM-4496-pairing-kernel-convolution-and-log-density.md",
+      "sha256": "39d5b37e60cad766a66c86873aea72f4ca1169308fbe540b84ce771f6fc66ab8",
+      "bytes": 6996
+    },
+    {
+      "path": "01-canon/theorems/THM-4497-coprime-graph-rank-compression.md",
+      "sha256": "caa791521a8eb75a6b442ee7b0c0a8db918570984be17d108e018c7af54ed450",
+      "bytes": 4810
+    }
+  ]
+}

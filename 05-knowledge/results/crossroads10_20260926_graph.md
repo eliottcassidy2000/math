@@ -124,6 +124,65 @@ The proposition is also checked exhaustively on every labelled tournament
 on three, four and five vertices: 12, 384 and 15,360 directed-wedge tests.
 The proof supplies the all-order quantifier; the finite checks do not.
 
+### General selected-edge form: only linear forests survive
+
+For a set E of distinct **underlying undirected** edges, define the full
+conditional mixed difference
+
+```
+D_E H(T)=sum_(F subset E) (-1)^(|E|-|F|) H(T with F reversed).
+```
+
+**Proposition (elementary block-contraction generalization).** If E is not
+a linear forest, then `D_E H(T)=0`. If its nontrivial components are paths,
+choose a reference ordering of each path. For each choice sigma of one of
+the two directions on every path, let F_sigma be exactly the selected edges
+whose orientation in T must be reversed to follow those directions. Let
+`C_sigma(T)` contract all selected path blocks simultaneously. Then
+
+```
+D_E H(T)=sum_sigma (-1)^(|E|-|F_sigma|) H(C_sigma(T)).       (3)
+```
+
+The chosen reference paths need not be directed in T. This is why the
+sign in (3) must retain the actual set F_sigma. In a simultaneous contraction,
+an arc from block A to block B exists iff the original last vertex of A
+points to the original first vertex of B. Isolated vertices remain ordinary
+vertices. These carriers can have both or neither arc between a pair, so
+the contraction is in the category of directed graphs, not tournaments.
+
+Proof: for each vertex permutation, the alternating sum vanishes unless
+its undirected adjacency path contains every edge of E. Such a subset must
+be a linear forest; degree-three branching or a cycle is impossible. In
+the surviving case each nontrivial component appears contiguously in one
+of its two directions. Exactly the corner F_sigma supplies the required
+selected orientations, with the sign in (3). Contracting all these blocks
+is a bijection with paths of the stated carrier. This proves both claims.
+
+If the selected components are already directed paths in T, with lengths
+`l_1,...,l_c` measured in edges, the sign in (3) simplifies to
+`(-1)^(sum of lengths of blocks kept forward)`. In particular a single
+directed path of r edges has response
+
+```
+D_E H(T)=(-1)^r H(forward contraction)+H(reverse contraction).
+```
+
+When every selected directed path has even length, all terms are
+nonnegative. With an odd-length component, or incoherent initial
+orientations, no such general sign claim follows. In the staircase, the
+directed path `[0,3,2,5]` has response `+4`; reversing all its edges and
+using the reverse path gives `-4`. The disjoint directed paths
+`[0,3,2]` and `[4,7,6]` give `12`. A one-edge reversal in the original
+two-edge reference path changes its response to `-42`.
+
+These controls are exact. The script also exhausts all three-edge stars
+and selected triangles in every labelled tournament through five vertices:
+20,736 star tests and 10,504 triangle tests, all zero. The general identity
+is inherited in mechanism from block contraction; no priority claim is
+made. Unlike an averaged edge statistic, it retains the entire external
+directed context through the contracted graphs.
+
 ## 4. Why the difference is ten: full odd-cycle information
 
 The inherited [THM-002 odd-cycle collection formula](../../01-canon/theorems/THM-002-ocf.md)
@@ -237,6 +296,7 @@ python -B -O 04-computation/experiments/crossroads10_20260926_graph.py
 The [output](crossroads10_20260926_graph.out) retains all 28 one-flip counts,
 the complete two-flip hits, all four cycle packets, literal block counts,
 32 middle-neighborhood controls, ten-vertex lifts, six family rows, and the
-complete small-order mixed-response audit. Integer checks remain active
+complete small-order mixed-response audit, including non-forest and signed
+path controls. Integer checks remain active
 under optimization; no floating-point calculation or imported counting
 engine is used.
