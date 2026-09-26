@@ -1,0 +1,17 @@
+prime 223: ord2=37; ord3=222; log3(2)=180; index<2>=6; chi(2,3,-1)=(1, 222, 222)
+prime 233: ord2=29; ord3=232; log3(2)=72; index<2>=8; chi(2,3,-1)=(1, 232, 1)
+ten-node C10: rank=9; pair edges=10; private=0; sign-forced=0; free graph components=1
+ten-node twisted C10: rank=10; pair edges=10; private=0; sign-forced=0; free graph components=0
+ten-node Petersen: rank=10; pair edges=15; private=0; sign-forced=10; free graph components=0
+orbit27 actual ten selected (odd index,value): [(1, 41), (2, 31), (3, 47), (4, 71), (5, 107), (7, 121), (8, 91), (9, 137), (13, 175), (35, 325)]
+orbit27 carrier: private=7; pair edges=[(6, 8), (6, 9), (8, 9)]; odd components=1; rank=10
+orbit27 triangle: 91=7*13, 175=5^2*7, 325=5^2*13; no private prime; every gcd dominance equality
+complete small universe: 8835 multisets, graph certificate=2578; 15488 gcd splits; atom/prime/compressed rank all pass
+consecutive ten-node census, odd sources3..20000: {'all_private': 6487, 'direct_audits': 885, 'full_paired_rank': 9446, 'full_rank': 9350, 'graph_full': 8481, 'graph_gain': 1994, 'injective_prefixes': 9446, 'nodip': 793, 'nodip_odd_component': 2, 'odd_component': 45, 'peel_full': 9061}
+first-slot rank histogram: {7: 1, 8: 4, 9: 91, 10: 9350}
+first actual graph-gain example: (31, [31, 47, 71, 107, 161, 121, 91, 137, 103, 155], 9, [(0, 9), (4, 6)])
+first actual odd-component example: (199, [199, 299, 449, 337, 253, 95, 143, 215, 323, 485], 6, [(1, 4), (1, 6), (4, 6), (5, 8)])
+first actual no-dip odd-component example: (4347, [4347, 6521, 4891, 7337, 5503, 8255, 12383, 18575, 27863, 41795], 8, [(0, 3), (0, 6), (3, 6), (3, 8), (5, 9)])
+unweighted miss: first slots117,39 have atom rows{3: [2, 1], 13: [1, 1]}; exact rank2 despite one unweighted edge
+scale hostile: (5,75) has rank2, but (15,225) has rank1; coefficient3 is load-bearing
+PASS: exact graph compression and factor-free sufficient carrier; no finite-modulus Collatz proof
