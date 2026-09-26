@@ -270,6 +270,14 @@ all heights (THM-1289, published), δ ineffective.
   [0,1] at every modulus. THM-4475: provable trees approximate Collatz at flip
   density <= 2^(1-0.05L) (HYP-9136 proved). THM-4471 refutes arXiv 2502.20642's
   fixed-point "proof".
+  **Squares/doubles transport (2026-09-25, opus).** The
+  [squares/doubles foundry](../05-knowledge/results/collatz_sqdbl_20260925_squares_doubles_foundry.md)
+  types 128 transport cells; its only sheet- and drift-aware cell is the
+  orbitwise two-place identity `m_L 2^(d_L)/3^L = n prod(1 + b/(3 m_l))`,
+  giving `R(d) <= n` on every `3n-1` orbit and HYP-9160 (no slow
+  divergence). The parity graph mod `2^16` is the `+-sqrt` graph on
+  `F_65537^*`; the multiplicative Collatz `sqrt X / rad(X) X^3` is Collatz on
+  the diagonal `m^e` and provably divergent off it.
 - **Erdős Problem 592** [DEEP — $1000 problem] — the p=2 Schur-seam theorem (THM-469),
   R(n,2)=2n+1 linear conjecture, Chang-tower m=3 open; 21 scripts, a survey draft.
 - **{7,21} forbidden H-spectrum** [DEEP, repo-signature] — permanent exclusions by

@@ -1,0 +1,47 @@
+== P1 multiplicative Collatz M(X) = sqrt(X) [square] else rad(X)*X^3, X <= 100000 ==
+   run on exponent vectors (gate = all exponents even); sign=+1 is 3e+1, sign=-1 is 3e-1
+   sign=+1: outcome x (all exponents equal?) counts: [(('diverge', False), 38949), (('ones', True), 61050)]
+   sign=+1: violations of Theorem 2 prediction: 0 []
+   sign=-1: outcome x (all exponents equal?) counts: [(('cycle', True), 15), (('diverge', False), 38949), (('ones', True), 61035)]
+   sign=-1: violations of Theorem 2 prediction: 0 []
+   X=32 exps={2: 5} -> ('ones', 5)
+   X=18 exps={2: 1, 3: 2} -> ('diverge', 12)
+   X=72 exps={2: 3, 3: 2} -> ('diverge', 12)
+   X=216 exps={2: 3, 3: 3} -> ('ones', 7)
+   X=12 exps={2: 2, 3: 1} -> ('diverge', 12)
+== P2 Fermat-prime realisation of the parity graph (Lemma 1) ==
+   p=17, k=4, g=3: parity graph mod 2^4 == +-sqrt graph on F_p^* under dlog_g: True (32 edges)
+      loop at 0 (y=1): True ; loop at -1 (y=g^-1): True
+   p=257, k=8, g=3: parity graph mod 2^8 == +-sqrt graph on F_p^* under dlog_g: True (512 edges)
+      loop at 0 (y=1): True ; loop at -1 (y=g^-1): True
+   p=65537, k=16, g=3: parity graph mod 2^16 == +-sqrt graph on F_p^* under dlog_g: True (131072 edges)
+      loop at 0 (y=1): True ; loop at -1 (y=g^-1): True
+   hostile control: g=2 mod 17 is not a primitive root -> dlog table fails, as it must
+== P3 quadratic characters and the first two bits of v_2(3n+s), odd n < 1048576 ==
+   v_2(3n+s) >= 2  <=>  s = chi_{-4}(n): True
+   v_2(3n+s) >= 3  <=>  s = chi_{-4}(n) and chi_8(n) = -1: True
+   level-2 strategies (sigma(1 mod 4), sigma(3 mod 4)) -> behaviour of odd n < 10^5 (steps <= 3000):
+      Collatz   descend-below-start: 49999/49999, cycle minima met: [], no descent within 3000 steps or > 10^30: 0
+      chi_{-4}  descend-below-start: 49999/49999, cycle minima met: [], no descent within 3000 steps or > 10^30: 0
+      -chi_{-4} descend-below-start: 0/49999, cycle minima met: [], no descent within 3000 steps or > 10^30: 49999
+      3n-1      descend-below-start: 49997/49999, cycle minima met: [5, 17], no descent within 3000 steps or > 10^30: 0
+== P4 Jacobi law along Syracuse orbits, odd n < 200000, 12 odd steps ==
+   3n+1: law holds 1100000, fails 0; the other law (control) fails 541506
+   3n-1: law holds 1100000, fails 0; the other law (control) fails 556151
+   5n+1: law holds 1100000, fails 0; the other law (control) fails 550402
+   5n-1: law holds 1100000, fails 0; the other law (control) fails 549712
+== P5 odd squares in the Syracuse orbit (Lemma 5), odd s <= 2000000 ==
+   s with (3s^2+1)/4 a square: [(1, 1), (15, 13), (209, 181), (2911, 2521), (40545, 35113), (564719, 489061)]
+   Pell y_j (j odd), x^2-3y^2=1: [1, 15, 209, 2911, 40545, 564719] -> match: True
+   length-3 chains (u again a hit): [(1, 1)]
+   odd iterate m is a 2-adic square (m = 1 mod 8) iff v_next = 2: True
+   odd iterate m is a 3-adic square unit (m = 1 mod 3) iff v_prev even: True
+== P6 real Bernstein value R(d) = sum 2^{d_l}/q^{l+1} versus the orbit product (Proposition 6) ==
+   3n-1 on positive odd n <= 2000: identity R_L = n(1 - prod_{l<L}(1 - 1/(3 m_l))) exact: True; R_L <= n: True
+   orbits entering a cycle: closed-form R(d) == n for 1000 of 1000 (mismatches: [])
+   3n+1 on positive odd n <= 2000: identity R_L = n(prod_{l<L}(1 + 1/(3 m_l)) - 1) exact: True
+   5n+1, n=37: orbit exceeds 10^400 after 3936 odd steps; c_L = m_L 2^{d_L}/5^L at L=[(10, 37.3527937024), (100, 37.37437384803849), (1000, 37.3743738502072), (3936, 37.3743738502072)] ; sum 1/m_l = 0.050424
+   5n+1, n=47: orbit exceeds 10^400 after 3938 odd steps; c_L = m_L 2^{d_L}/5^L at L=[(10, 47.8016438272), (100, 47.839198525375195), (1000, 47.839198528265214), (3938, 47.839198528265214)] ; sum 1/m_l = 0.088649
+   5n-1, n=9: orbit exceeds 10^400 after 3910 odd steps; c_L = m_L 2^{d_L}/5^L at L=[(10, 8.5286977536), (100, 8.528366852036006), (1000, 8.528366852034727), (3910, 8.528366852034727)] ; sum 1/m_l = 0.266879
+   5n-1, n=11: orbit exceeds 10^400 after 3909 odd steps; c_L = m_L 2^{d_L}/5^L at L=[(10, 10.6606624768), (100, 10.660458565044982), (1000, 10.66045856504341), (3909, 10.66045856504341)] ; sum 1/m_l = 0.155768
+   (c_L is monotone: increasing on the plus sheet, decreasing and >= 0 on the minus sheet; a positive limit = full-rate divergence)

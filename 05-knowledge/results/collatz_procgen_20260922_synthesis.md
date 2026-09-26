@@ -31,6 +31,8 @@ Althöfer's game remain OPEN.**
 
 **Wave 11 (2026-09-25), summarized in section 2i.** **THM-4474**: in the strategy cube, bounded-lookahead provability holds iff every parity-graph cycle has odd density `< log_3 2`. Collatz's window is `[0,1]` at every level, and the OPEN fraction is about 0.435, which is the random-sign no-extra-cycle probability. **THM-4475** (HYP-9136 PROVED): explicit provable trees exist at flip density `<= 2^(1-0.05L)`; the sharp exponent is HYP-9137, and the cube analogue is HYP-9138. Cycle-gate equidistribution fails off the critical line, and a sheet-aware random model repairs the heuristic.
 
+**Wave 12 (2026-09-25, opus session), summarized in section 2j.** The owner's seed "multiplication : squares :: addition : doubles" was run as a transport axis (128 cells, 47 cards). PROVED: the parity graph mod `2^k` is the `+-sqrt` graph on `F_p^*` for Fermat primes; the multiplicative Collatz `sqrt X / rad(X) X^3` is Collatz on the diagonal `m^e` and divergent off it; `chi_{-4}` is the unique level-2 provable strategy; the orbitwise two-place identity `m_L 2^(d_L)/3^L = n prod(1 + b/(3 m_l))` gives `R(d) <= n` on every `3n-1` orbit. **HYP-9160** (no slow divergence) is the one statement it leaves open; no new mechanism.
+
 **Wave 10 (2026-09-25), summarized in section 2h.** Codex's incoming work was audited (20 checks, no errors), and the square-sum graph turns out to be planar iff `N ≤ 24`, a Kuratowski event at 25. Kohl's Collatz group is a Tait-coloured graph: its Kempe chains are the doubling orbits and the rising runs, and its only closed chain is `{−1, −2}`. In the strategy square, Collatz is the only open corner among four sign strategies. The exact triple shape is Tutte's "dual pair + self-dual" `{F_7, F_7*, U_{2,4}}`. Natural boundary is KNOWN (Bell–Lagarias 2015); the Mahler/harmonic bridges are blocked by the controls.
 
 **Wave 9 (2026-09-24), summarized in section 2g.** arXiv 2502.20642 (a claimed fixed-point proof of Collatz) is invalid (**THM-4471**): its general theorem fails on `x -> x+1`, and its table also "proves" `3n−1`. The owner's triangle sandwich is its Lemma 2.1, and the sign law is exactly the sandwich's two equality cases with `0` in the middle. The correct fixed-point theorem is Banach in `Z_2`: one gate per word, and 18 integral points for `p ≤ 24`. **THM-4472**: the owner's converse 4-tournaments are forward map versus inverse tree (time reversal), not the sheets. **THM-4473**: Collatz's digit chains are exact Markov laws (mod 10 entries `2^j/15`, `3 -> 5` certain, `9 -> 9 = 8/15`), unlike the vanishing prime-digit bias. Repunit primes are the prime fixed points of digit rotation, and `Q` has the new odd 2-cycle `{−1/5, 5/7}`.
@@ -650,6 +652,52 @@ What this gives:
 * in the pairing family, the price of provability is the undecided density `2^(−0.05L)` (THM-4475).
 
 Collatz sits exactly on that boundary. It has the widest possible window, it is approachable by provable trees at vanishing cost, and it is equally approachable by divergent ones.
+
+## 2j. Wave 12 (2026-09-25, opus session `collatz-squares-doubles-20260925`): the squares/doubles transport axis
+
+Full note: [squares/doubles foundry](collatz_sqdbl_20260925_squares_doubles_foundry.md).
+The owner's seed "multiplication : squares :: addition : doubles" was used as
+a transport axis (exponential, discrete log, monoid extension, polarization,
+quadratic characters, Jacobi symbols, local and global squares, Hilbert
+symbols, the real value of the digit series, cubic theta polarization,
+GM-fairness, heights, sums of squares) against eight Collatz ingredients:
+128 cells, 47 curated cards.
+
+* **Exact model of THM-4474 (PROVED, FINITE-EXACT).** For a Fermat prime
+  `p = 2^k + 1` the parity graph mod `2^k` is the `+-sqrt` graph on `F_p^*`
+  (`y -> +-sqrt y` on squares, `y -> +-sqrt(g y^3)` on non-squares); checked
+  for `p = 17, 257, 65537`. The two Collatz loops are `y = 1` and `y = g^-1`.
+* **Multiplicative Collatz (PROVED, FINITE-EXACT to `10^5`).**
+  `M(X) = sqrt X` if `X` is a square, else `rad(X) X^3`, returns `X` to its
+  radical iff `X = m^e` with `m` squarefree and `e` Collatz-convergent, and
+  diverges off that diagonal (parity desynchronisation plus Terras
+  injectivity). The square gate is a synchronisation constraint, not a
+  mechanism.
+* **Residue laws (PROVED).** `v_2(3n+s) >= 2` iff `s = chi_{-4}(n)`, `>= 3`
+  iff also `chi_8(n) = -1`; hence `chi_{-4}` and `-chi_{-4}` are THM-4474's
+  unique level-2 class-(i) and class-(ii) strategies. `(3/m_i) = (-1)^(v_i + [v_(i+1) = 1])`
+  on both sheets (the reciprocity sign couples adjacent valuations);
+  `(5/m_i) = (-1)^(v_i)`. Odd squares `(2t+1)^2` map to `3t(t+1)+1`, again a
+  square iff `2t+1 = y_j` (`j` odd) of `x^2 - 3y^2 = 1`; no length-3 chains.
+* **Two places, orbitwise (PROVED; the one sheet- and drift-aware cell).**
+  `m_L 2^(d_L)/3^L = n prod_(l<L)(1 + b/(3 m_l))`, so the real value of the
+  Bernstein series is `R(d) = b n (prod (1 + b/(3 m_l)) - 1)`. On the minus
+  sheet `R(d) <= n` for every positive orbit, with equality iff
+  `sum 1/m_l = infinity`; on the plus sheet `R(d) < infinity` iff the orbit
+  diverges with summable reciprocals. The sign enters the divergence half
+  exactly once, as this inequality. This extends Proposition T (hard-class
+  lane) and the Eliahou identity (S4) from cycles and bounded-discrepancy
+  words to every orbit.
+* **HYP-9160 (OPEN).** No slow divergence: every divergent orbit has
+  `sum 1/m_l < infinity`; equivalently the real and 2-adic values of a
+  non-periodic word never coincide at a positive integer. It isolates the
+  only corner of the divergence half where the real place gives an equality.
+* **Verdict.** No winning reframe in the sense of a proof route. The
+  transport axis produced one exact reformulation, one hypothesis of the
+  right size, one exact model, one new object with a theorem, and residue
+  laws that need not be regenerated (cosmetic, degenerate and blocked cells
+  are recorded, including the cubic theta polarization already excluded by
+  HYP-9127's unipotent Mahler obstruction).
 
 ## 2b. The approach deck: every approach generated or considered, with its disposition
 
