@@ -1,7 +1,8 @@
 # Thin divergence: every non-periodic orbit of x -> x/2, (3x+b)/2 has at most X^(0.95+eps) elements below X; reciprocal sums converge (HYP-9160 proved); the real value of the Bernstein series is strictly below the integer
 
-**Status: PROVED (elementary; full proof below; self-audited, independent
-audit recorded in the theorem file THM-4476; a first draft's extension to
+**Status: PROVED (elementary; full proof below; self-audited; independent
+adversarial audit by a separate agent, verdict SOUND, recorded in the theorem
+file THM-4476 with its own script and output; a first draft's extension to
 non-constant sign strategies was withdrawn during self-audit, see Corollary 4) with FINITE-EXACT controls of
 the two counting lemmas. No priority claim: the ingredients are Terras's
 stopping-time count and an injectivity pigeonhole; the single-orbit
@@ -106,18 +107,23 @@ two-sided, in which consecutive terms are related by `T_b`.
 **Corollary 8 (harmonic reformulation).** For every `n in Z \ {0}` and odd
 `b`, the orbit of `n` under `T_b` is eventually periodic **iff**
 `sum_(i>=0) 1/|T_b^i(n)| = infinity` (with the convention that an orbit
-reaching `0` counts as eventually periodic). Hence the Collatz conjecture is
+reaching `0` counts as eventually periodic). Hence the **no-divergence half**
+of the Collatz conjecture (every positive orbit is eventually periodic) is
 equivalent to: `sum_(i>=0) 1/T^i(n) = infinity` for every positive integer
-`n`; the `3n-1` no-divergence statement and Lagarias's Periodicity
-Conjecture for rationals with odd denominators have the same harmonic form.
+`n`. It says nothing about the cycle half: a hypothetical nontrivial cycle
+also has a divergent reciprocal sum (audit finding 13). The `3n-1`
+no-divergence statement and Lagarias's Periodicity Conjecture for rationals
+with odd denominators, which are no-divergence statements, have the same
+harmonic form.
 Moreover the Dirichlet series `sum_i |x_i|^(-s)` of a non-eventually-periodic
 orbit converges for every `s > h*`: its abscissa of convergence is at most
 `h(log_3 2)`.
 
 **Corollary 8' (a uniform criterion).** With `K = K(b)` from Corollary 6: an
 orbit is eventually periodic iff some partial sum `sum_(i<=N) 1/|x_i|` exceeds
-`K`. So Collatz is equivalent to: for every `n >= 1` the partial reciprocal
-sums of the orbit of `n` eventually exceed the absolute constant `K(1)`.
+`K`. So the no-divergence half of Collatz is equivalent to: for every
+`n >= 1` the partial reciprocal sums of the orbit of `n` eventually exceed
+the absolute constant `K(1)`.
 (The proof makes `K` explicit in principle but astronomically large.)
 
 **Hostile control for the union question.** For the level-2 strategy
@@ -239,15 +245,18 @@ elements `y >= Y_0` of `F_b` number at most
 
 The exact binomial sums are compared with the entropy bound in the control
 script (`(L1)`), and the sets `F_(+-1)(X, theta)` are enumerated for
-`X <= 2^20` (`(L2)`): at `theta = 0.03` their size grows like `X^0.78` on
-both sheets, well below the bound `X^0.9635`.
+`X <= 2^20` (`(L2)`) and `2^24`: at `theta = 0.03` the value `log #F / log X`
+is `0.78` at `2^20` and `0.80` at `2^24` on both sheets, but the local
+doubling slopes are `0.92`-`0.96`, i.e. at the lemma's exponent `0.9635`; the
+counting lemma is essentially sharp for `F` up to logarithmic factors
+(audit finding 16).
 
 ### 1.5 The dichotomy and the recursion
 
 Fix `theta in (0, theta_0)`, `X >= 2^(k_0)`, `k = floor(log_2 X)`. Every
 index `i <= M` with `y_i <= X` is of one of three kinds:
 
-* **(E)** `i > M - k` (only when `M < infinity`): fewer than `k` indices;
+* **(E)** `i > M - k` (only when `M < infinity`): at most `k` indices;
 * **(D)** `i <= M - k` and `y_(i+s) < y_i X^(-theta)` for some `1 <= s <= k`;
 * **(ND)** `i <= M - k` and `y_(i+s) >= y_i X^(-theta)` for all `0 <= s <= k`.
 
@@ -255,10 +264,11 @@ index `i <= M` with `y_i <= X` is of one of three kinds:
 `y_(i+s) < X^(1-theta)`, and the pair `(i+s, s)` determines `i`. So
 `#(D) <= k N(X^(1-theta))`: the dipping points land on the segment's own
 points below `X^(1-theta)`, and each landing point serves at most `k`
-dippers. This is where distinctness of the orbit is used.
+dippers. This index count does not use distinctness.
 
 **(ND) is the counting lemma.** An (ND)-index has `y_i in F_b(X, theta)`,
-and distinct indices have distinct `y_i`. So `#(ND) <= #F_b(X, theta)`.
+and distinct indices have distinct `y_i`: this, with section 1.1, is where
+distinctness of the orbit is used. So `#(ND) <= #F_b(X, theta)`.
 
 Therefore, for `X >= 2^(k_0)`,
 
@@ -299,7 +309,9 @@ and `N_T(X) <= C X^gamma` with `gamma < 1` makes the right side bounded. ∎
 So `R_2(d) = r` rational with odd denominator `D` means that `d` is the
 `T_(-1)`-word of `r`, equivalently the `T_(-D)`-word of the integer `rD`,
 which is not eventually periodic. By Corollary 1 its terms `m_l` satisfy
-`sum 1/|m_l| < infinity`, and no term is `1/3` (that orbit reaches `0`), so
+`sum 1/|m_l| < infinity`; no term is `1/3` (that orbit reaches `0` and its
+word ends), and a factor `1 - 1/(3 m_l)` is negative only for `0 < m_l < 1/3`,
+which happens finitely often along the distinct integer orbit `D m_l`; so
 the product `prod_l (1 - 1/(3 m_l))` converges to a finite nonzero limit,
 and the algebraic identity `R_L(d) = r (1 - prod_(l<L)(1 - 1/(3 m_l)))`
 (Proposition 6(3), valid for every sign) shows that `R(d)` converges. If
@@ -321,11 +333,12 @@ the set. For an invariant set `A` on which `T_b` is injective, define
 `N_A(X) = #{n in A : |n| <= X}` and repeat section 1.5 with the dichotomy
 applied to every `n in A`, `|n| <= X`: a dipper `n` has `z = T_b^s(n) in A`
 with `|z| < X^(1-theta)` and least `s <= k`, and `(z, s)` determines `n`
-because `T_b^s` is injective on `A`; non-dippers lie in `F_b(X, theta)`
-(after the sign reduction of 1.1, applied to the at most `|b|/3 + 2`
-one-signed pieces cut by the finite crossing set `S`). So
-`N_A(X) <= k N_A(X^(1-theta)) + #F_b(X,theta) + O(|b| k)`, and the bootstrap
-of 1.6 applies. The periodic points form such a set: a periodic point has a
+because `T_b^s` is injective on `A`. Signs: discard the elements `n` with
+`n in S` or `T_b^s(n) in S` for some `s <= k`, at most `(k+1)|S|` of them by
+injectivity; every remaining window is one-signed, the positive non-dippers
+lie in `F_b(X, theta)` and the negated negative ones in `F_(-b)(X, theta)`.
+So `N_A(X) <= k N_A(X^(1-theta)) + #F_b(X,theta) + #F_(-b)(X,theta) + (k+1)(|b|/3 + 1)`,
+with base case `N_A(X) <= 2X`, and the bootstrap of 1.6 applies unchanged. The periodic points form such a set: a periodic point has a
 unique periodic preimage. ∎
 
 *Corollary 5.* `R(d) = (1/3) sum_l 2^(Delta_l)` by definition, and
@@ -364,8 +377,11 @@ so `N(X) >= X^(1/max(1,a) - o(1))`, contradicting thinness since
 `m_j = 2^(-Delta_j) c_j <= r j^(a+o(1))` gives the same contradiction when
 `a > 1`, while for `a <= 1` the series `sum 2^(Delta_j) >= sum j^(-a-o(1))`
 diverges, contradicting `sum_j 2^(Delta_j) = 3R(d) <= 3r` (Proposition 6(4)).
-Both cases need the sign-change reduction of 1.1 when `|r| < 1`, which only
-discards a finite prefix. ∎
+The plus-sheet case uses `sum_(i<j) 2^(Delta_i) <= 3R(d) < infinity`, which is
+Corollary 5. A sign change needs a visit to `(0, 1/3)`, which happens at
+most once (it can happen from `r > 1`: `8/5 -> 4/5 -> 2/5 -> 1/5 -> -1/5`);
+after it the orbit is a positive plus-sheet orbit of the negated tail with
+the discrepancy shifted by a constant, so the plus-sheet case applies. ∎
 
 ## 1.8 The same proof for every contracting Collatz-like map (Matthews–Watts framework)
 
@@ -453,8 +469,8 @@ From `collatz_thin_20260925_counts.out`:
 | plus-sheet log-band threshold `(1/h* - 1)/2` | `0.02634` |
 | un-bootstrapped exponent (`1 - theta = h(rho(theta))`) | `0.96538` at `theta = 0.03462` |
 | `(L1)` exact `sum_(o >= rho k - 2) C(k,o)` vs `2^(k h(rho))`, `k <= 320` | ratio below `k+1` in every case |
-| `(L2)` `#F_(+-1)(2^20, 0.03)` | `46612` / `46611`, growth exponent `0.775` (bound `0.9635`) |
-| `(L2)` `#F_(+-1)(2^20, 0.10)` | `157652` / `157648`, growth exponent `0.863` (bound `0.9867`) |
+| `(L2)` `#F_(+-1)(2^20, 0.03)` | `46612` / `46611`; `log F/log X = 0.775`; local doubling slopes `0.92`-`0.96` up to `2^24`, at the bound exponent `0.9635` |
+| `(L2)` `#F_(+-1)(2^20, 0.10)` | `157652` / `157648`; `log F/log X = 0.863`; local slopes `0.99`-`1.02` (bound exponent `0.9867`); at `2^20` the threshold `X^(-0.1) = 1/4` is exact and about 7,500 boundary elements with `T^i(y) = y/4` are counted |
 
 The two sheets differ by at most four elements at every size, as the
 sheet-blind class count predicts.
@@ -467,7 +483,7 @@ Further controls (`collatz_thin_20260925_controls2.py` / `.out`):
 | (C2) contracting `m = 3` map `x/3, (2x+1)/3, (4x+1)/3` (`prod p = 8 < 27`, `max p = 4 < 9`) | residue-word bijection mod `3^k` exact for `k <= 7`; Chernoff rate `I(g) = 0.2513`; no-dip counts at `X = 3^12` grow like `X^0.57` (`theta = 0.03`) and `X^0.70` (`theta = 0.10`) against bounds `X^0.79`, `X^0.87` |
 | (C3) parity-word map mod `2^k` | a bijection for `T_(+1)` and `T_(-1)` for all `k <= 12`; for the strategy `-chi_(-4)` only `k + 1` distinct words among `2^k` residues (`k <= 10`), the witness for the withdrawn corollary |
 | (C4) the log-drift word `d_j = floor(j log_2 3 - 1.03 log_2 j)` (excluded by Corollary 9) | every prefix of length `k <= 18` is realised by an odd integer, the least one being `9, 41, 169, 681, 8873, ..., 5743273` for `k = 2, 4, 6, 8, 11, ..., 18`, growing like `2^(d_k)`; no odd `n < 2^24` realises the prefix of length 19 |
-| the no-dip count at `X = 2^24`, `theta = 0.03` | `0.7754, 0.7893, 0.8001` at `2^20, 2^22, 2^24` (`theta = 0.03`) and `0.8633, 0.8753, 0.8850` (`theta = 0.10`), rising slowly, both sheets within four elements; bounds `0.9635` and `0.9867` (`collatz_thin_20260925_counts_to_2_24.out`) |
+| the no-dip count to `X = 2^24` | `log F/log X = 0.7754, 0.7893, 0.8001` at `2^20, 2^22, 2^24` (`theta = 0.03`) and `0.8633, 0.8753, 0.8850` (`theta = 0.10`), both sheets within four elements; these are not slopes: the local slopes sit at the lemma exponents `0.9635` and `0.9867` (`collatz_thin_20260925_counts_to_2_24.out`) |
 
 ## 4. Frontier
 

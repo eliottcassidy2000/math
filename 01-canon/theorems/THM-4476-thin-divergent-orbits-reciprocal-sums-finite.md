@@ -2,8 +2,8 @@
 id: THM-4476
 title: "Thin divergence: every orbit of x -> x/2, (3x+b)/2 (b odd) that is not eventually periodic has at most C X^(h*+eps) elements below X, h* = h(log_3 2) = 0.94996; hence its reciprocal sum converges (HYP-9160 PROVED), every divergent Collatz orbit is full-rate, and the real value of the Bernstein series of a non-periodic word is strictly below its 2-adic integer value"
 status: >
-  PROVED (elementary, full proof in the companion note; self-audited;
-  independent audit status in the audit field) + FINITE-EXACT controls of both
+  PROVED + INDEPENDENTLY AUDITED (elementary, full proof in the
+  companion note; audit details in the audit field) + FINITE-EXACT controls of both
   counting lemmas. For odd b let T_b(x) = x/2 (x even), (3x+b)/2 (x odd) on
   Z, and let (x_i) be a T_b-orbit in Z\{0} that is not eventually periodic.
   Then for every eps > 0, #{i : |x_i| <= X} <= C(eps,|b|) X^(h*+eps) for all
@@ -21,16 +21,17 @@ status: >
   no-bounded-strip theorem is recovered); (4) the union of all cycles of T_b, and more
   generally every T_b-invariant set on which T_b is injective, is thin in
   the same sense (a cycle with maximum M has at most C M^(h*+eps)
-  elements); NOT for non-constant sign strategies, where the parity map is
-  not a bijection (witness -chi_{-4}); (5) for every divergent positive 3n+1
+  elements); not proved for non-constant sign strategies by this method
+  (the parity map is not a bijection there; witness -chi_{-4}); (5) for every divergent positive 3n+1
   orbit sum_l 2^(d_l)/3^l < infinity, so its discrepancy d_l - l log_2 3
   tends to -infinity; (6) all constants are uniform over orbits: sum 1/|x_i|
   <= K(b), hence c <= e^(K/3) n on the plus sheet and c >= kappa n on the
   minus sheet, i.e. |R(d)| <= K' |R_2(d)| with an absolute K'; (7) every
   infinite branch of the inverse tree is thin in the same sense; (8) an
-  orbit is eventually periodic iff its reciprocal sum diverges, so Collatz
-  is equivalent to sum_i 1/T^i(n) = infinity for every n >= 1, and the
-  Dirichlet series of a divergent orbit has abscissa <= h*. The same proof gives, for every Conway/Matthews-Watts map
+  orbit is eventually periodic iff its reciprocal sum diverges, so the
+  no-divergence half of Collatz (not the cycle half) is equivalent to
+  sum_i 1/T^i(n) = infinity for every n >= 1, and the Dirichlet series of a
+  divergent orbit has abscissa <= h*. The same proof gives, for every Conway/Matthews-Watts map
   g(x) = (p_i x + q_i)/m with p_i coprime to m, prod p_i < m^m and
   max p_i < m^2, the exponent max(1 - I(g), log_m max p_i/m) with I(g) the
   Chernoff rate of the multipliers (section 1.8 of the note). It does NOT
@@ -45,7 +46,7 @@ related:
   - 05-knowledge/results/collatz_guards_20260921_discrepancy.md (no bounded strip; recovered as Corollary 3)
   - 05-knowledge/results/collatz_procgen_20260922_hard_class.md (Proposition T, two places for bounded-discrepancy words)
   - 05-knowledge/results/collatz_procgen_20260922_choice_ladder.md (dimension h(log_3 2) of the exceptional set)
-  - 01-canon/theorems/THM-4474-strategy-cube-provability-by-cycle-densities.md (its strategy -chi_{-4} is the witness that the theorem does not extend to non-constant shifts, and that unions of thin orbits can have positive density)
+  - 01-canon/theorems/THM-4474-strategy-cube-provability-by-cycle-densities.md (its strategy -chi_{-4} is the witness that the METHOD does not extend to non-constant shifts, and that unions of thin orbits can have positive density)
 script: 04-computation/experiments/collatz_thin_20260925_counts.py
 output: 05-knowledge/results/collatz_thin_20260925_counts.out
 script_sha256: 721b2213ac70e3c2dd8d1e6fb109fd7c2c03a8d7918dcb1464d460c164d133b1
@@ -59,9 +60,25 @@ output_counts_to_2_24_sha256: e344d992f821fe2f801eba960b25992859ba587821ccef613a
 hash_basis: raw LF bytes
 audit: >
   Self-audit complete (every step re-derived; both counting lemmas
-  checked numerically). An independent adversarial audit by a separate
-  agent was launched at the time of this commit; its result is recorded
-  here in the following commit.
+  checked numerically; a first draft's extension to non-constant sign
+  strategies withdrawn, see MISTAKES 2026-09-25).
+  Independent adversarial audit (separate agent, same day; script
+  04-computation/experiments/collatz_thin_20260925_audit.py, output
+  05-knowledge/results/collatz_thin_20260925_audit.out): verdict SOUND.
+  Independent adversarial audit (separate agent, 2026-09-25; collatz_thin_20260925_audit.py/.out,
+  written blind to counts.py). Theorem (1.1-1.6) and Cor. 1-3: SOUND. Every step re-derived; Terras
+  bijection, carry bound, entropy step (exact binomial sums k<=400), E/D/ND partition,
+  #(D)<=k N(X^(1-theta)), #(ND)<=#F checked on real segments (b=1,-1,5,-7); #F_{+-1}(2^20,theta)
+  reproduced exactly; Prop. 6 identities exact for odd n<=300, both sheets. Cosmetic: (E) has at most
+  k indices; distinctness is used in (ND) and 1.1, not (D). First-draft Cor. 4 (sign strategies) was
+  WRONG and is withdrawn: the parity map is a bijection only for constant b (level-2 witnesses (+,-):
+  word 11 unattained; (-,+): #F >= X/2). New Cor. 4 (injective invariant sets), 5, 6, 7, 9: sound
+  (Cor. 4 needs #F_b + #F_{-b} and discards the <=(k+1)|S| points whose window meets S). Cor. 8
+  OVERCLAIMED: sum_i 1/T^i(n)=infinity for all n is equivalent to "no divergent orbit", not to
+  Collatz (a nontrivial cycle also has a divergent reciprocal sum). Controls: "growth exponents
+  0.775/0.863" were log F/log X, not slopes; local slopes are 0.92-0.96 and 0.99-1.02, AT the bound.
+  All three items were corrected in the text after the audit (same day); section 1.8 (general
+  Matthews-Watts form) was spot-checked only, not audited line by line.
 ---
 
 # THM-4476 -- thin divergence
@@ -92,9 +109,9 @@ eventually periodic). With `h* = h(log_3 2) = 0.949956...`:
    `y_i X^(-theta)` within `k` steps or lies in the set of step 2.
 4. **Pigeonhole.** A dipper lands on a point of the *same* orbit below
    `X^(1-theta)`, and each landing point serves at most `k` dippers, so the
-   dippers number at most `k N(X^(1-theta))`. This is where distinctness of
-   the orbit is used, and why the argument does not extend to unions of
-   orbits.
+   dippers number at most `k N(X^(1-theta))`. Injectivity within the set
+   is what this pigeonhole needs, which is why the argument does not extend
+   to unions of orbits that merge.
 5. **Bootstrap.** `N(X) <= k + k N(X^(1-theta)) + O(X^(h(rho)) log X)` gives
    `N(X) <= C X^gamma` for every `gamma > h(rho(theta))` by strong induction;
    `theta -> 0` gives `h*`. Sign changes happen only at odd `|x| <= |b|/3`,
@@ -114,8 +131,9 @@ eventually periodic). With `h* = h(log_3 2) = 0.949956...`:
   bounded strip; no plus-sheet log-band with `C < 0.02634`; no minus-sheet
   log-band with `C < 1.05268`.
 * **Periodic points.** The union of all cycles of `T_b` is thin, and so
-  is every invariant set on which `T_b` is injective. Not for non-constant
-  sign strategies: for `-chi_(-4)` all odd numbers share one word.
+  is every invariant set on which `T_b` is injective. Not proved for
+  non-constant sign strategies: for `-chi_(-4)` all odd numbers share one
+  word, so the counting lemma fails there.
 * **Irrationality.** `R_2(d)` is irrational for every non-periodic word with
   `Delta_j >= -a log_2 j - O(1)`, `a < 1.05268` (bounded discrepancy and
   Sturmian words included).
@@ -130,8 +148,9 @@ eventually periodic). With `h* = h(log_3 2) = 0.949956...`:
 * **Contracting Collatz-like maps.** Same statement and proof for every
   `g(x) = (p_i x + q_i)/m` with `p_i` coprime to `m`, `prod p_i < m^m`,
   `max p_i < m^2`; exponent `max(1 - I(g), log_m(max p_i/m))`.
-* **Harmonic form.** Eventually periodic iff `sum 1/|x_i| = infinity`:
-  Collatz says `sum_i 1/T^i(n) = infinity` for every `n >= 1`. The union
+* **Harmonic form.** Eventually periodic iff `sum 1/|x_i| = infinity`: the
+  no-divergence half of Collatz says `sum_i 1/T^i(n) = infinity` for every
+  `n >= 1` (a nontrivial cycle would satisfy it too). The union
   of thin orbits can have positive density (strategy `-chi_(-4)`), so the
   theorem does not bound the density of divergent integers; it does bound
   the density of periodic points.
@@ -140,8 +159,10 @@ eventually periodic). With `h* = h(log_3 2) = 0.949956...`:
 
 `collatz_thin_20260925_counts.py`: exact binomial sums against `2^(k h(rho))`
 for `k <= 320`; direct enumeration of the no-dip sets `F_(+-1)(X, theta)`
-for `X <= 2^20`, growth exponents `0.775` (`theta = 0.03`) and `0.863`
-(`theta = 0.10`) against the bounds `0.9635` and `0.9867`; the two sheets
+for `X <= 2^20` and `2^24`: `log F/log X = 0.775` (`theta = 0.03`) and `0.863`
+(`theta = 0.10`) at `2^20`, with local doubling slopes `0.92`-`0.96` and
+`0.99`-`1.02`, so the lemma's exponents `0.9635` and `0.9867` are essentially
+attained by `F`; the two sheets
 differ by at most four elements at every size. `collatz_thin_20260925_controls2.py`: the union of all
 cycles of twelve maps `3n+b` (at most 86 periodic points below `2*10^5`); a
 contracting `m = 3` Conway map (bijection mod `3^k`, rate `0.2513`, counts

@@ -9,6 +9,12 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-25 Thin divergence (THM-4476) -- a bijection lemma was transferred to residue-dependent shifts without re-checking injectivity
+
+- **What was assumed.** The first pushed draft of THM-4476 (opus, `collatz-squares-doubles-20260925`) stated as item (4) that the thinness bound `N(X) = O(X^(h*+eps))` holds for every level-`k` sign strategy `T_sigma` of THM-4474, on the grounds that the parity map `Z/2^k -> {0,1}^k` "is still a bijection" for any odd shift `b(x)` determined by `x mod 2^(k_0)`.
+- **Why it was wrong.** Injectivity needs `3y + b(y) = 3y' + b(y') (mod 2^K)` to force `y = y'`; when `b` takes both values on odd residues, `y' - y = +-2 * 3^(-1) (mod 2^K)` gives collisions. Witness: for `sigma = -chi_(-4)` every odd `n` has `v_2(3n + sigma(n)) = 1`, so all odd residues share the all-ones word (`k + 1` words among `2^k` residues, checked to `k = 10` in `collatz_thin_20260925_controls2.py`), and the no-dip count is `X/2`, not `X^0.95`.
+- **The correct framing.** The theorem holds for constant shifts `b` (both sheets, every odd `b`, hence all rational orbits) and for every `T_b`-invariant set on which `T_b` is injective; for non-constant strategies it is unproved by this method, and each single orbit of `-chi_(-4)` is thin only because it grows like `(3/2)^i`. Caught by self-audit about an hour after the first push and corrected in the same session, before anything depended on it ([note](../05-knowledge/results/collatz_thin_20260925_thin_divergent_orbits.md), Corollary 4). Mechanism to remember: a residue-level bijection is a property of the specific affine map, not of the "Collatz-like" shape; re-derive injectivity whenever the shift depends on the residue.
+
 ## 2026-09-25 Bernoulli boundary probes -- endpoint atoms and bounded rank corrections
 
 - **Failed candidate, not a retraction.** A rank `a log n+h(n)`, with `a>0` and globally bounded h, cannot decrease at every positive odd Collatz step: `2^H-1` has H-1 rises with an unbounded endpoint/start ratio. Finite periodic Bernoulli corrections therefore cannot provide that rank. This does not exclude unbounded scale sums, adaptive centers, nonlinear couplings, or later-time descent.
