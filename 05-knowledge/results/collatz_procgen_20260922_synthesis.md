@@ -701,8 +701,10 @@ GM-fairness, heights, sums of squares) against eight Collatz ingredients:
   bootstrap. Consequences: HYP-9160 holds on both sheets and for rationals;
   every divergent orbit is full-rate; `R(d) < n` strictly; `m_j > j^a`
   infinitely often for `a < 1.05268`; the in-house no-bounded-strip theorem
-  is recovered and extended to log-bands `C < 0.02634`; all THM-4474
-  strategies. Not a divergence exclusion. See
+  is recovered and extended to log-bands `C < 0.02634`; the union of all
+  cycles is thin; `R_2(d)` is irrational for log-drift words with
+  `a < 1.05268`. Not for non-constant sign strategies (`-chi_(-4)` is the
+  witness: the parity map is not a bijection). Not a divergence exclusion. See
   [thin divergence](collatz_thin_20260925_thin_divergent_orbits.md).
 * **Verdict.** No winning reframe in the sense of a proof route. The
   transport axis produced one exact reformulation, one hypothesis of the

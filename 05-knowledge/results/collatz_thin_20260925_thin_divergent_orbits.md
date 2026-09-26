@@ -1,7 +1,8 @@
 # Thin divergence: every non-periodic orbit of x -> x/2, (3x+b)/2 has at most X^(0.95+eps) elements below X; reciprocal sums converge (HYP-9160 proved); the real value of the Bernstein series is strictly below the integer
 
 **Status: PROVED (elementary; full proof below; self-audited, independent
-audit recorded in the theorem file THM-4476) with FINITE-EXACT controls of
+audit recorded in the theorem file THM-4476; a first draft's extension to
+non-constant sign strategies was withdrawn during self-audit, see Corollary 4) with FINITE-EXACT controls of
 the two counting lemmas. No priority claim: the ingredients are Terras's
 stopping-time count and an injectivity pigeonhole; the single-orbit
 statement may exist in the literature under another name. Collatz, the
@@ -61,10 +62,87 @@ positive orbit of `T_(+-1)` with odd iterates `m_j` and every `a < 1/h* = 1.0526
   on the minus sheet none has `|delta_j| <= C log_2 j` with `C < 1.05268`;
 * no such orbit has bounded discrepancy (the in-house theorem is recovered).
 
-**Corollary 4 (sign strategies).** The theorem holds verbatim for every
-level-`k` sign strategy `T_sigma` of THM-4474 and for every map
-`x -> x/2, (3x + b(x))/2` with `b(x)` odd and depending only on
-`x mod 2^(k_0)`.
+**Corollary 4 (the union of all cycles, and injective invariant sets).**
+Let `A` be a subset of `Z \ {0}` with `T_b(A)` contained in `A` on which `T_b`
+is injective (each element of `A` has at most one preimage in `A`). Then
+`#{n in A : |n| <= X} <= C(eps,|b|) X^(h*+eps)`. In particular the set of
+all periodic points of `T_b` (the union of all its cycles) is thin, and a
+single cycle of `T_b` with maximum `M` has at most `C M^(h*+eps)` elements.
+
+**Withdrawn claim (recorded as a hostile).** An earlier draft asserted the
+theorem for the level-`k` sign strategies `T_sigma` of THM-4474. That is
+unproved and the method fails for them: the parity map `Z/2^k -> {0,1}^k`
+is a bijection only when the odd shift `b` is constant (injectivity needs
+`3y + b(y) = 3y' + b(y') mod 2^K` to force `y = y'`, which fails as soon as
+`b` takes both values on odd residues). Witness: for `sigma = -chi_(-4)`
+every odd `n` has the all-ones word, so the no-dip count is `X/2`, not
+`X^0.95`. Each single orbit of that strategy happens to be thin (it grows
+like `(3/2)^i`), but no bound follows from this method for any
+non-constant strategy.
+
+**Corollary 5 (the word of a divergent plus-sheet orbit).** Let `(m_l)` be a
+divergent positive `3n+1` orbit with halving word `d` and discrepancy
+`Delta_l = d_l - l log_2 3`. Then `sum_l 2^(Delta_l) = 3 R(d) < infinity`; in
+particular `Delta_l -> -infinity`, `2^(d_l)/3^l -> 0`, and
+`m_l 2^(d_l)/3^l -> c in (n, infinity)`. On the minus sheet
+`sum_l 2^(delta_l) = 3 R(d) < 3n` for every divergent positive orbit.
+
+**Corollary 6 (uniformity).** The constant `C(eps, |b|)` does not depend on
+the orbit. Hence for each odd `b` there is `K = K(b)` such that every
+`T_b`-orbit with distinct terms satisfies `sum_i 1/|x_i| <= K`. For `b = +-1`
+and positive orbits this gives absolute constants in the two-place
+identity: on the plus sheet `n < c <= e^(K/3) n` and `R(d) <= (e^(K/3) - 1) n`;
+on the minus sheet `c >= kappa n` with `kappa = exp(-K/3 - K^2/9) > 0`, so
+`R(d) <= (1 - kappa) n`. So `|R(d)| <= K' |R_2(d)|` for every non-eventually-
+periodic word whose 2-adic value is a nonzero integer, with `K'` absolute.
+
+**Corollary 7 (branches of the inverse tree).** Every infinite branch
+`x_0, x_1, x_2, ...` of the inverse tree (`T_b(x_(i+1)) = x_i`, terms
+distinct) satisfies `#{i : |x_i| <= X} <= C(eps,|b|) X^(h*+eps)`. More
+generally the theorem holds for every injective sequence, one- or
+two-sided, in which consecutive terms are related by `T_b`.
+
+**Corollary 8 (harmonic reformulation).** For every `n in Z \ {0}` and odd
+`b`, the orbit of `n` under `T_b` is eventually periodic **iff**
+`sum_(i>=0) 1/|T_b^i(n)| = infinity` (with the convention that an orbit
+reaching `0` counts as eventually periodic). Hence the Collatz conjecture is
+equivalent to: `sum_(i>=0) 1/T^i(n) = infinity` for every positive integer
+`n`; the `3n-1` no-divergence statement and Lagarias's Periodicity
+Conjecture for rationals with odd denominators have the same harmonic form.
+Moreover the Dirichlet series `sum_i |x_i|^(-s)` of a non-eventually-periodic
+orbit converges for every `s > h*`: its abscissa of convergence is at most
+`h(log_3 2)`.
+
+**Hostile control for the union question.** For the level-2 strategy
+`-chi_(-4)` of THM-4474 every odd `n` satisfies `v_2(3n + sigma(n)) = 1`, so
+every odd orbit increases forever; each orbit is thin (exponential growth,
+`N(X)` of order `log X`), yet their union is all odd integers. So the
+single-orbit theorem cannot be summed over orbits, and any bound on the
+density of divergent integers needs a different mechanism.
+
+**Corollary 9 (2-adic irrationality of log-drift words).** Let `d` be a
+halving word that is not eventually periodic, with discrepancy
+`Delta_j = d_j - j log_2 3`. If `Delta_j >= -a log_2 j - O(1)` for all large
+`j` with some `a < 1/h* = 1.052681`, then the 2-adic number
+`R_2(d) = sum_l 2^(d_l) 3^(-l-1)` is irrational. This covers every word
+with bounded discrepancy (recovering Proposition B of the transversality
+foundry, including the Sturmian words of Theorem S, by a counting proof
+instead of a Padé argument) and the words `d_j = floor(j log_2 3 - a log_2 j) + O(1)`
+with `a < 1.05268`.
+
+**The exponent ladder.** For a word `d` and a positive integer `n`, write
+`m_j(n) = 2^(-Delta_j)(n + (1/3) sum_(i<j) 2^(Delta_i))` for the formal
+plus-sheet orbit and let `a(d)` be its growth exponent
+(`limsup log m_j / log j`). Distinctness of orbit points alone excludes
+`a(d) < 1`; THM-4476 excludes `a(d) < 1/h* = 1.05268`; the Periodicity
+Conjecture asserts that every non-eventually-periodic word is excluded.
+Words with `Delta_j = -a log_2 j + O(1)` have `a(d) = max(1, a)`, so the new
+region is exactly `1 <= a < 1.05268`; words with `Delta_j = o(log j)`
+(including `Delta_j -> +infinity` slowly, and all sub-logarithmic drifts)
+have `a(d) = 1` and are excluded. Using the 3-adic (backward) residue
+classes instead of, or together with, the 2-adic ones does not lower the
+exponent: each place costs the same `0.05` bits per bit of modulus, and the
+total modulus cannot exceed `X`.
 
 ## 1. Proof of the theorem
 
@@ -230,10 +308,57 @@ The `-r = n` case is the plus sheet with `c = n prod (1 + 1/(3 m_l)) < infinity`
 `1 + 2C' < 1/h*`. On the minus sheet `m_j = 2^(-delta_j) c_j <= n j^(C')`,
 excluded when `C' < 1/h*`. A bounded strip is the case `C' = 0`. ∎
 
-*Corollary 4.* Sections 1.2 and 1.3 only use that the odd step is
-`(3x + b(x))/2` with `b(x)` odd and determined by `x mod 2^(k_0)`: the word
-of length `k >= k_0` is then determined by `x mod 2^k` and the parity map is
-still a bijection, and `|beta_i| <= max|b| ((3/2)^i - 1)`. ∎
+*Corollary 4.* Sections 1.4 and 1.5 use only two properties of the
+sequence: distinct terms, and that the forward window of each term lies in
+the set. For an invariant set `A` on which `T_b` is injective, define
+`N_A(X) = #{n in A : |n| <= X}` and repeat section 1.5 with the dichotomy
+applied to every `n in A`, `|n| <= X`: a dipper `n` has `z = T_b^s(n) in A`
+with `|z| < X^(1-theta)` and least `s <= k`, and `(z, s)` determines `n`
+because `T_b^s` is injective on `A`; non-dippers lie in `F_b(X, theta)`
+(after the sign reduction of 1.1, applied to the at most `|b|/3 + 2`
+one-signed pieces cut by the finite crossing set `S`). So
+`N_A(X) <= k N_A(X^(1-theta)) + #F_b(X,theta) + O(|b| k)`, and the bootstrap
+of 1.6 applies. The periodic points form such a set: a periodic point has a
+unique periodic preimage. ∎
+
+*Corollary 5.* `R(d) = (1/3) sum_l 2^(Delta_l)` by definition, and
+`R(d) < infinity` by Corollary 2 (or directly: `R(d) = n(prod(1 + 1/(3m_l)) - 1)`
+with `sum 1/m_l < infinity`). Then `Delta_l = log_2 c_l - log_2 m_l` with
+`c_l -> c` finite and `m_l -> infinity`. The minus-sheet statement is
+Proposition 6(4) with the strictness of Corollary 2. ∎
+
+*Corollary 6.* The constants `X_1`, `A(theta)`, `k_0(theta)` and `C` in
+sections 1.4 and 1.6 depend on `theta`, `gamma` and `|b|` only, and the number
+of one-signed segments is at most `|b|/3 + 2`. Abel summation gives
+`sum_(|x_i| <= Y) 1/|x_i| = N_T(Y)/Y + int_1^Y N_T(X) X^(-2) dX <= C(1 + 1/(1-gamma)) =: K`.
+For the products use `log(1+x) <= x` and, for `0 < x <= 1/3`,
+`log(1-x) >= -x - x^2`, with `sum x_l = (1/3) sum 1/m_l <= K/3` and
+`sum x_l^2 <= (sum x_l)^2`. ∎
+
+*Corollary 7.* The proof of section 1.5 uses only that the sequence is
+injective and that the `k` terms following each term (in the forward
+direction of `T_b`) belong to the sequence. For a backward branch the
+forward window of `x_i` is `x_(i-1), ..., x_(i-k)`, inside the branch for
+`i >= k`; the fewer than `k` remaining indices are the (E) class. ∎
+
+*Corollary 8.* An eventually periodic orbit repeats a positive term
+infinitely often, so its reciprocal sum diverges; a non-eventually-periodic
+orbit has distinct terms and Corollary 1 applies. For the Dirichlet series,
+`sum_i |x_i|^(-s) = int_1^infinity X^(-s) dN_T(X)` converges when
+`N_T(X) = O(X^gamma)` with `gamma < s`. ∎
+
+*Corollary 9.* If `R_2(d) = r` is rational (necessarily with odd
+denominator, as `r in Z_2`), then `d` is the `T_(+1)`-word of `-r` and the
+`T_(-1)`-word of `r` (Proposition 6(6)), and `-r` has a non-eventually-
+periodic orbit, thin by the theorem applied to `T_(+-D)` with `D` the
+denominator. If `-r > 0` its orbit is `m_j = 2^(-Delta_j)(|r| + (1/3) sum_(i<j) 2^(Delta_i)) <= K j^(max(1,a)+o(1))`,
+so `N(X) >= X^(1/max(1,a) - o(1))`, contradicting thinness since
+`1/max(1,a) > h*`. If `r > 0` the orbit is on the minus sheet, where
+`m_j = 2^(-Delta_j) c_j <= r j^(a+o(1))` gives the same contradiction when
+`a > 1`, while for `a <= 1` the series `sum 2^(Delta_j) >= sum j^(-a-o(1))`
+diverges, contradicting `sum_j 2^(Delta_j) = 3R(d) <= 3r` (Proposition 6(4)).
+Both cases need the sign-change reduction of 1.1 when `|r| < 1`, which only
+discards a finite prefix. ∎
 
 ## 2. What the theorem says and does not say
 

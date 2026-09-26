@@ -18,8 +18,19 @@ status: >
   such orbit has m_j <= K j^a for all j with a < 1/h* = 1.05268, hence no
   plus-sheet log-band |Delta_j| <= C log_2 j with C < 0.02634, no
   minus-sheet log-band with C < 1.05268, and no bounded strip (the in-house
-  no-bounded-strip theorem is recovered); (4) the same holds for every
-  level-k sign strategy of THM-4474. It does NOT exclude divergent orbits
+  no-bounded-strip theorem is recovered); (4) the union of all cycles of T_b, and more
+  generally every T_b-invariant set on which T_b is injective, is thin in
+  the same sense (a cycle with maximum M has at most C M^(h*+eps)
+  elements); NOT for non-constant sign strategies, where the parity map is
+  not a bijection (witness -chi_{-4}); (5) for every divergent positive 3n+1
+  orbit sum_l 2^(d_l)/3^l < infinity, so its discrepancy d_l - l log_2 3
+  tends to -infinity; (6) all constants are uniform over orbits: sum 1/|x_i|
+  <= K(b), hence c <= e^(K/3) n on the plus sheet and c >= kappa n on the
+  minus sheet, i.e. |R(d)| <= K' |R_2(d)| with an absolute K'; (7) every
+  infinite branch of the inverse tree is thin in the same sense; (8) an
+  orbit is eventually periodic iff its reciprocal sum diverges, so Collatz
+  is equivalent to sum_i 1/T^i(n) = infinity for every n >= 1, and the
+  Dirichlet series of a divergent orbit has abscissa <= h*. It does NOT exclude divergent orbits
   (expected to have N(X) of order log X) and does not bound the density of
   the union of divergent orbits.
 source: collatz-squares-doubles-20260925 session (opus), 2026-09-25; the owner asked to prove HYP-9160 for discrepancy O(log l). Mechanism: the in-house no-bounded-strip theorem's Terras stopping-time count (collatz_guards_20260921_discrepancy.md, section 2a) plus a pigeonhole on landing points that replaces the strip hypothesis. No priority claimed.
@@ -30,7 +41,7 @@ related:
   - 05-knowledge/results/collatz_guards_20260921_discrepancy.md (no bounded strip; recovered as Corollary 3)
   - 05-knowledge/results/collatz_procgen_20260922_hard_class.md (Proposition T, two places for bounded-discrepancy words)
   - 05-knowledge/results/collatz_procgen_20260922_choice_ladder.md (dimension h(log_3 2) of the exceptional set)
-  - 01-canon/theorems/THM-4474-strategy-cube-provability-by-cycle-densities.md (Corollary 4 applies to its strategies)
+  - 01-canon/theorems/THM-4474-strategy-cube-provability-by-cycle-densities.md (its strategy -chi_{-4} is the witness that the theorem does not extend to non-constant shifts, and that unions of thin orbits can have positive density)
 script: 04-computation/experiments/collatz_thin_20260925_counts.py
 output: 05-knowledge/results/collatz_thin_20260925_counts.out
 script_sha256: 721b2213ac70e3c2dd8d1e6fb109fd7c2c03a8d7918dcb1464d460c164d133b1
@@ -92,8 +103,25 @@ eventually periodic). With `h* = h(log_3 2) = 0.949956...`:
 * **Growth.** `m_j > j^a` infinitely often for every `a < 1.05268`; no
   bounded strip; no plus-sheet log-band with `C < 0.02634`; no minus-sheet
   log-band with `C < 1.05268`.
-* **Strategies.** Same for every residue-determined odd shift `b(x)`, in
-  particular all strategies of THM-4474.
+* **Periodic points.** The union of all cycles of `T_b` is thin, and so
+  is every invariant set on which `T_b` is injective. Not for non-constant
+  sign strategies: for `-chi_(-4)` all odd numbers share one word.
+* **Irrationality.** `R_2(d)` is irrational for every non-periodic word with
+  `Delta_j >= -a log_2 j - O(1)`, `a < 1.05268` (bounded discrepancy and
+  Sturmian words included).
+* **Word of a divergent orbit.** `sum_l 2^(d_l)/3^l = 3R(d) < infinity` on
+  the plus sheet: the leading factors are summable and the discrepancy tends
+  to `-infinity`.
+* **Uniformity.** `sum_i 1/|x_i| <= K(b)` for every orbit with distinct
+  terms; so `n < c <= e^(K/3) n` (plus) and `kappa n <= c < n` (minus) with
+  absolute constants, i.e. `|R(d)| <= K'|R_2(d)|`.
+* **Inverse tree.** Every infinite branch of the inverse tree is thin; the
+  proof only needs an injective `T_b`-chain.
+* **Harmonic form.** Eventually periodic iff `sum 1/|x_i| = infinity`:
+  Collatz says `sum_i 1/T^i(n) = infinity` for every `n >= 1`. The union
+  of thin orbits can have positive density (strategy `-chi_(-4)`), so the
+  theorem does not bound the density of divergent integers; it does bound
+  the density of periodic points.
 
 ## 4. Controls
 

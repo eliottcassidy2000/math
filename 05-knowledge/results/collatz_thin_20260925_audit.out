@@ -1,0 +1,130 @@
+========================================================================
+A. constants
+========================================================================
+log_2 3      = 1.584962501
+log_3 2      = 0.630929754
+h*           = h(log_3 2) = 0.949955527
+1/h*         = 1.052680859
+theta_0      = 1 - log_2(3)/2 = 0.207518750
+(1/h*-1)/2   = 0.026340429   (plus-sheet log-band threshold, Cor. 3)
+1/h*         = 1.052680859   (minus-sheet log-band threshold, Cor. 3)
+log_2(3/2)   = 0.584962501
+theta=0.03: rho=0.612002  h(rho)=0.963496  k_0(theta)=18  A(theta)=2(rho/(1-rho))^2=4.9760  log2(3/2)+theta=0.6150
+theta=0.10: rho=0.567837  h(rho)=0.986681  k_0(theta)=30  A(theta)=2(rho/(1-rho))^2=3.4529  log2(3/2)+theta=0.6850
+root of 1-theta = h(rho(theta)): theta=0.034616, exponent 1-theta=0.965384
+monotonicity check: h decreasing on [1/2,1]: True
+|h'(p)| = |log2((1-p)/p)| <= log2(rho/(1-rho)) on [1/2,rho] for rho=rho(0.03): True
+
+========================================================================
+B. entropy step: S(k) = sum_{o >= rho k - 2} C(k,o) vs bounds
+   bound1 = (k+1) 2^{k h(rho - 2/k)} (valid once rho k - 2 > k/2)
+   bound2 = (k+1) (rho/(1-rho))^2 2^{k h(rho)}  (what the lemma uses)
+   also: C(k,o) <= 2^{k h(o/k)} for all o (standard)
+========================================================================
+C(k,o) <= 2^{k h(o/k)} for all k<=400, o: True
+theta=0.03 (rho=0.61200, k_0=18): max S/bound1 over k in [k_0,400] = 0.0250, failures []
+            max S/bound2 = 0.0163, failures []
+            note's (L1) claim S <= (k+1) 2^{k h(rho)} for ALL k<=400: max ratio S/((k+1)2^{kh}) = 0.5128, failures []
+theta=0.10 (rho=0.56784, k_0=30): max S/bound1 over k in [k_0,400] = 0.0156, failures []
+            max S/bound2 = 0.0120, failures []
+            note's (L1) claim S <= (k+1) 2^{k h(rho)} for ALL k<=400: max ratio S/((k+1)2^{kh}) = 0.5046, failures []
+
+========================================================================
+C. no-dip sets F_b(X,theta) = {y in [1,X]: T_b^i(y) >= y X^{-theta}, 0<=i<=k}, k=floor(log2 X)
+========================================================================
+theta=0.03  rho=0.61200  h(rho)=0.96350  k_0=18 (lemma asserted only for X >= 2^18)
+  X        k      #F_{+1}   #F_{-1}   bound          ratio+    expo+    
+  2^12    12     274       273       195907.5       0.00140              robust(+-1e-9): yes
+  2^14    14     1206      1202      858889.6       0.00140   1.0690     robust(+-1e-9): yes
+  2^16    16     3989      3987      3699960.3      0.00108   0.8629     robust(+-1e-9): yes
+  2^18    18     12339     12337     15721264.2     0.00078   0.8146     robust(+-1e-9): yes
+  2^20    20     46612     46611     66066727.5     0.00071   0.9587     robust(+-1e-9): yes
+  sheet difference |#F_{+1} - #F_{-1}| max over X: 4
+  lemma bound exponent h(rho)=0.9635 ; empirical exponent from 2^18->2^20: 0.9587
+theta=0.10  rho=0.56784  h(rho)=0.98668  k_0=30 (lemma asserted only for X >= 2^30)
+  X        k      #F_{+1}   #F_{-1}   bound          ratio+    expo+    
+  2^12    12     736       734       165174.0       0.00446              robust(+-1e-9): yes
+  2^14    14     2774      2771      747234.2       0.00371   0.9571     robust(+-1e-9): yes
+  2^16    16     9657      9654      3322614.0      0.00291   0.8998     robust(+-1e-9): yes
+  2^18    18     38146     38142     14575102.6     0.00262   0.9909     robust(+-1e-9): yes
+  2^20    20     157652    157648    63240359.4     0.00249   1.0236     robust(+-1e-9): NO [157652, 157652, 150156] [157648, 157648, 150153]
+  sheet difference |#F_{+1} - #F_{-1}| max over X: 4
+  lemma bound exponent h(rho)=0.9867 ; empirical exponent from 2^18->2^20: 1.0236
+
+========================================================================
+D. Proposition 6 identities with exact fractions
+========================================================================
+minus sheet (3n-1), odd n<=300, L<=60: identity m_L 2^{d_L}/3^L = n prod_{l<L}(1-1/(3m_l)) and R_L(d)=n(1-prod): failures = 0 of 9150 checks
+  every factor 1-1/(3 m_l) in [2/3, 33212/33213] = [0.666667, 0.999970] (all in (0,1))
+plus sheet (3n+1), odd n<=300, j<=60: identity m_j 2^{d_j}/3^j = n + (1/3) sum_{i<j} 2^{d_i}/3^i: failures = 0
+minus sheet, odd n<=300, c_400 = m_400 2^{d_400}/3^400: max = 7.705e+00 (all orbits enter a cycle, c -> 0, R(d) -> n)
+rational examples for the factor 1 - 1/(3m):
+   m=   1/3 : 1-1/(3m) = 0
+   m=   1/5 : 1-1/(3m) = -2/3
+   m=  -1/5 : 1-1/(3m) = 8/3
+   m=  3/11 : 1-1/(3m) = -2/9
+   m=  -3/7 : 1-1/(3m) = 16/9
+   m=     1 : 1-1/(3m) = 2/3
+   m=    -1 : 1-1/(3m) = 4/3
+  T_{-1} orbit of 1/3: (3*(1/3)-1)/2 = 0 -> word ends in 0s, not a halving word (factor 0 excluded)
+  T_{-1} odd iterates of 1/5: ['1/5', '-1/5', '-1/5', '-1/5', '-1/5', '-1/5', '-1/5']  (eventually periodic; a negative factor occurs)
+
+========================================================================
+E. section 1.1 sign changes, 1.2 Terras bijection, 1.5 dichotomy/pigeonhole on real segments
+========================================================================
+sign changes only at odd |x|<=|b|/3 (b in -31..31 odd, |x0|<=500, until repeat): violations = 0
+max #sign changes vs |b|/3+1: ['b=-31:1<=11.33', 'b=-29:1<=10.67', 'b=-27:1<=10.00', 'b=-25:1<=9.33', 'b=-23:1<=8.67', 'b=-21:1<=8.00', 'b=-19:1<=7.33', 'b=-17:1<=6.67', 'b=-15:1<=6.00', 'b=-13:1<=5.33', 'b=-11:1<=4.67', 'b=-9:1<=4.00']
+bound |S| <= |b|/3+1 respected for all b: True
+Terras bijection Z/2^k -> {0,1}^k for constant odd b (b in a sample, k<=12): True
+carry bound: max |beta_k| / (|b|((3/2)^k-1)) over residues mod 2^12, b in {1,-1,5,-7}: 1.0000 (<= 1)
+  b=  1 segment start=     27 len=  71  X=2^12 th=0.1: N=70 = E 12 + D 27 + ND 31 ; k N(X^(1-th)) = 768 ; #F=736 ; max dippers per landing = 5
+  b=  1 segment start=  17647 len= 177  X=2^12 th=0.1: N=96 = E 12 + D 52 + ND 32 ; k N(X^(1-th)) = 936 ; #F=736 ; max dippers per landing = 6
+  b= -1 segment start=  18273 len= 187  X=2^12 th=0.1: N=56 = E 12 + D 35 + ND 9 ; k N(X^(1-th)) = 468 ; #F=734 ; max dippers per landing = 6
+  b=  5 segment start=  11523 len= 170  X=2^12 th=0.1: N=43 = E 12 + D 17 + ND 14 ; k N(X^(1-th)) = 348 ; #F=742 ; max dippers per landing = 6
+  b= -7 segment start=  17219 len= 177  X=2^12 th=0.1: N=78 = E 12 + D 51 + ND 15 ; k N(X^(1-th)) = 804 ; #F=729 ; max dippers per landing = 6
+partition N=E+D+ND, E<=k, D<=k N(X^(1-theta)), ND<=#F, <=k dippers per landing point, on all tested segments: True
+
+========================================================================
+F. Corollary 4: level-2 sign strategies (THM-4474): sigma(1 mod 4), sigma(3 mod 4) in {+1,-1}
+========================================================================
+strategy sigma(1)=+1 sigma(3)=+1:
+   k= 2: distinct words     4 of     4, max fibre (classes mod 2^k per word) 1, word (1,1,...) attained: True
+   k= 3: distinct words     8 of     8, max fibre (classes mod 2^k per word) 1, word (1,1,...) attained: True
+   k= 4: distinct words    16 of    16, max fibre (classes mod 2^k per word) 1, word (1,1,...) attained: True
+   k= 8: distinct words   256 of   256, max fibre (classes mod 2^k per word) 1, word (1,1,...) attained: True
+   k=12: distinct words  4096 of  4096, max fibre (classes mod 2^k per word) 1, word (1,1,...) attained: True
+   parity of T(x) for odd x: x=1 mod 4 -> 0, x=3 mod 4 -> 1 (consistent over 1,3,5,7,9,11: True )
+strategy sigma(1)=-1 sigma(3)=-1:
+   k= 2: distinct words     4 of     4, max fibre (classes mod 2^k per word) 1, word (1,1,...) attained: True
+   k= 3: distinct words     8 of     8, max fibre (classes mod 2^k per word) 1, word (1,1,...) attained: True
+   k= 4: distinct words    16 of    16, max fibre (classes mod 2^k per word) 1, word (1,1,...) attained: True
+   k= 8: distinct words   256 of   256, max fibre (classes mod 2^k per word) 1, word (1,1,...) attained: True
+   k=12: distinct words  4096 of  4096, max fibre (classes mod 2^k per word) 1, word (1,1,...) attained: True
+   parity of T(x) for odd x: x=1 mod 4 -> 1, x=3 mod 4 -> 0 (consistent over 1,3,5,7,9,11: True )
+strategy sigma(1)=+1 sigma(3)=-1:
+   k= 2: distinct words     3 of     4, max fibre (classes mod 2^k per word) 2, word (1,1,...) attained: False
+   k= 3: distinct words     5 of     8, max fibre (classes mod 2^k per word) 2, word (1,1,...) attained: False
+   k= 4: distinct words     8 of    16, max fibre (classes mod 2^k per word) 4, word (1,1,...) attained: False
+   k= 8: distinct words    55 of   256, max fibre (classes mod 2^k per word) 16, word (1,1,...) attained: False
+   k=12: distinct words   377 of  4096, max fibre (classes mod 2^k per word) 64, word (1,1,...) attained: False
+   parity of T(x) for odd x: x=1 mod 4 -> 0, x=3 mod 4 -> 0 (consistent over 1,3,5,7,9,11: True )
+strategy sigma(1)=-1 sigma(3)=+1:
+   k= 2: distinct words     3 of     4, max fibre (classes mod 2^k per word) 2, word (1,1,...) attained: True
+   k= 3: distinct words     4 of     8, max fibre (classes mod 2^k per word) 4, word (1,1,...) attained: True
+   k= 4: distinct words     5 of    16, max fibre (classes mod 2^k per word) 8, word (1,1,...) attained: True
+   k= 8: distinct words     9 of   256, max fibre (classes mod 2^k per word) 128, word (1,1,...) attained: True
+   k=12: distinct words    13 of  4096, max fibre (classes mod 2^k per word) 2048, word (1,1,...) attained: True
+   parity of T(x) for odd x: x=1 mod 4 -> 1, x=3 mod 4 -> 1 (consistent over 1,3,5,7,9,11: True )
+all-odd strategy sigma(1)=-1, sigma(3)=+1: T(x) odd and >= x for every odd x >= 1, so every odd y<=X is in F(X,theta).
+   X=2^12 theta=0.03: #F = 2048 (= X/2 + 0), lemma bound with |b|=1: 1.959e+05, ratio #F/X = 0.500 (bound/X = 47.829 -> 0)
+   X=2^12 theta=0.10: #F = 3072 (= X/2 + 1024), lemma bound with |b|=1: 1.652e+05, ratio #F/X = 0.750 (bound/X = 40.326 -> 0)
+   X=2^16 theta=0.03: #F = 32768 (= X/2 + 0), lemma bound with |b|=1: 3.700e+06, ratio #F/X = 0.500 (bound/X = 56.457 -> 0)
+   X=2^16 theta=0.10: #F = 49152 (= X/2 + 16384), lemma bound with |b|=1: 3.323e+06, ratio #F/X = 0.750 (bound/X = 50.699 -> 0)
+   X=2^20 theta=0.03: #F = 524288 (= X/2 + 0), lemma bound with |b|=1: 6.607e+07, ratio #F/X = 0.500 (bound/X = 63.006 -> 0)
+   X=2^20 theta=0.10: #F = 917504 (= X/2 + 393216), lemma bound with |b|=1: 6.324e+07, ratio #F/X = 0.875 (bound/X = 60.311 -> 0)
+   theta=0.03: X/2 exceeds the lemma bound from k = 319 on (X = 2^319): the counting lemma is FALSE for this strategy for all X >= 2^319
+   theta=0.10: X/2 exceeds the lemma bound from k = 953 on (X = 2^953): the counting lemma is FALSE for this strategy for all X >= 2^953
+all orbits of that strategy are eventually increasing odd sequences (x -> (3x+-1)/2), so N(X)=O(log X): the THEOREM's conclusion holds there trivially,
+but sections 1.2 and 1.4 do not survive, contrary to the proof of Corollary 4.
+
+done.
