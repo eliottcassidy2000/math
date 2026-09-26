@@ -238,6 +238,30 @@ bootstrap applies with `4 D_s` replaced by `8 D_s` and the `O(k)` absorbed
 in `X^(h*)`. The constant `K` is not effective (`X_3` is of the order
 `2^(2^(1/eta))`); the theorem is asymptotic in `X` for each fixed `a`.
 
+## 3b. Corollary (the discrepancy form, the owner's original question)
+
+Let `(m_l)` be the odd iterates of a divergent positive 3n+1 orbit, `d_l`
+the cumulative halving count, and `Delta_l = d_l - l log_2 3` the
+discrepancy of THM-4476 / HYP-9160 (so `m_l = m_0 2^(-Delta_l) prod(1 + 1/(3m_j))`,
+Proposition 6 of the squares/doubles note). Then for every `a > a*` and
+all large `L`,
+
+```text
+min_(l <= L) Delta_l  <=  -(1/h*) log_2 L  +  (a/h*) log_2 log_2 L  +  O(1),
+```
+
+i.e. with `a = a* + eps`: `min_(l <= L) Delta_l <= -1.0527 log_2 L - 1.038 log_2 log_2 L + O(1)`.
+
+*Proof.* Put `X = max_(l <= L) m_l`. The `L + 1` odd iterates `m_0..m_L` are
+distinct orbit elements `<= X`, so `L + 1 <= N(X) <= K X^(h*) (log_2 X)^a`.
+Since `log_2 X = log_2 m_0 - min_(l<=L) Delta_l + O(1)` (the carry product is
+bounded, THM-4476 Cor. 6), solving for `-min Delta_l` gives the claim. ∎
+
+THM-4476's Corollary 3 excluded every log-band `m_j <= K j^a` with
+`a < 1/h*`; this adds the `log log` term and, through THM-4499, replaces
+"for some `eps`" by an explicit second-order coefficient. Nothing here
+bears on whether divergent orbits exist.
+
 ## 4. Remarks
 
 * **Where the exponent comes from.** `-3/2` is the ballot factor of a

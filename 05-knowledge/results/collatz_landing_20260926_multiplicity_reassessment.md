@@ -65,6 +65,52 @@ dippers are the indices spent above `y_j 2^(theta L)` before the final
 descent, of order `theta L/0.2075 = 5 theta L`, i.e. `O(log L)` at the
 `theta_X` of the bootstrap: polylogarithmic, not `L`.
 
+**Scaling probe** (`collatz_landing_20260926_probe2.py` -> `.out`): at the
+bootstrap's own `theta_X = 1.05 log_2 L/L` and `L = 20, 30, 40, 60, 80`, on
+3n+1 segments from `2^L - 1`, `2^(L-1) + 1` and random odd starts, and on
+5n+1 orbits, the mean multiplicity is `0.4`-`0.8` times `theta_X L`
+(i.e. `2`-`5`), while the maximum is `0.04`-`0.35` times `L` (the climbs
+built into the starts `2^L - 1` and `2^(L-1)+1` produce one landing point
+with `~0.25 L` dippers, section 1's climb-then-drop). So the *average* is
+`O(theta L) = O(log L)` as the heuristic says, and the *maximum* is a
+constant fraction of `L` whenever the segment contains a long climb:
+HYP-9161 must be stated for the average, and it is the average that the
+recursion uses.
+
+```text
+L  theta   thetaL | segment                         total    ND     D   landing  maxmult  mean  mean/(thetaL)  max/L
+20  0.227   4.54 | 3n+1 from 2^L-1                    43     6    37      18       4   2.06      0.45   0.200
+20  0.227   4.54 | 3n+1 from 2^(L-1)+1                51    30    21       7       6   3.00      0.66   0.300
+20  0.227   4.54 | 3n+1 from random odd ~2^L         114    61    53      18       6   2.94      0.65   0.300
+20  0.227   4.54 | 3n+1 from random odd ~2^(L-3)     121    74    47      18       5   2.61      0.58   0.250
+20  0.227   4.54 | 5n+1 from 7 (climbs)               53    53     0       0       0   0.00      0.00   0.000
+20  0.227   4.54 | 5n+1 from random odd ~2^(L/2)      94    77    17       9       3   1.89      0.42   0.150
+30  0.172   5.15 | 3n+1 from 2^L-1                   134    58    76      26       7   2.92      0.57   0.233
+30  0.172   5.15 | 3n+1 from 2^(L-1)+1                97    26    71      23       9   3.09      0.60   0.300
+30  0.172   5.15 | 3n+1 from random odd ~2^L         117    55    62      27       9   2.30      0.45   0.300
+30  0.172   5.15 | 3n+1 from random odd ~2^(L-3)     115    54    61      28       7   2.18      0.42   0.233
+30  0.172   5.15 | 5n+1 from 7 (climbs)              130   125     5       3       2   1.67      0.32   0.067
+30  0.172   5.15 | 5n+1 from random odd ~2^(L/2)      80    75     5       2       4   2.50      0.49   0.133
+40  0.140   5.59 | 3n+1 from 2^L-1                   184    47   137      31      11   4.42      0.79   0.275
+40  0.140   5.59 | 3n+1 from 2^(L-1)+1                70     0    70      26       9   2.69      0.48   0.225
+40  0.140   5.59 | 3n+1 from random odd ~2^L         137    28   109      37      11   2.95      0.53   0.275
+40  0.140   5.59 | 3n+1 from random odd ~2^(L-3)     137    25   112      33       8   3.39      0.61   0.200
+40  0.140   5.59 | 5n+1 from 7 (climbs)              181   177     4       3       2   1.33      0.24   0.050
+40  0.140   5.59 | 5n+1 from random odd ~2^(L/2)     100    96     4       3       2   1.33      0.24   0.050
+60  0.103   6.20 | 3n+1 from 2^L-1                   287    52   235      65      16   3.62      0.58   0.267
+60  0.103   6.20 | 3n+1 from 2^(L-1)+1               303    37   266      66      21   4.03      0.65   0.350
+60  0.103   6.20 | 3n+1 from random odd ~2^L         163     0   163      52      12   3.13      0.51   0.200
+60  0.103   6.20 | 3n+1 from random odd ~2^(L-3)     326    43   283      65      14   4.35      0.70   0.233
+60  0.103   6.20 | 5n+1 from 7 (climbs)              508   443    65      20       7   3.25      0.52   0.117
+60  0.103   6.20 | 5n+1 from random odd ~2^(L/2)     230   198    32      14       4   2.29      0.37   0.067
+80  0.083   6.64 | 3n+1 from 2^L-1                   294     1   293      85      18   3.45      0.52   0.225
+80  0.083   6.64 | 3n+1 from 2^(L-1)+1               303     1   302      93      11   3.25      0.49   0.138
+80  0.083   6.64 | 3n+1 from random odd ~2^L         427     0   427      90      16   4.74      0.71   0.200
+80  0.083   6.64 | 3n+1 from random odd ~2^(L-3)     353     4   349      86      18   4.06      0.61   0.225
+80  0.083   6.64 | 5n+1 from 7 (climbs)              563   468    95      25      11   3.80      0.57   0.138
+80  0.083   6.64 | 5n+1 from random odd ~2^(L/2)     191   188     3       1       3   3.00      0.45   0.037
+```
+
 ## 2. Why the shift structure does not turn into a bound by counting
 
 Consecutive windows are shifts of one word, so the `m` dippers of a landing

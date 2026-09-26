@@ -24,7 +24,10 @@ landing point is the number of dippers charged to it.
 `C L^beta` times the number of landing points. Conjecturally `C theta L`
 suffices (`beta = 0` at the bootstrap's `theta_X = O(log L/L)`).
 
-**What is known.** The trivial bound is `k` (THM-4476, section 1.5). Residue
+**What is known.** The trivial bound is `k` (THM-4476, section 1.5). Scaling
+probe (`collatz_landing_20260926_probe2.py`, `L = 20..80` at `theta_X`): mean
+multiplicity `0.4`-`0.8` times `theta L`; maximum up to `0.35 L` on segments
+with a built-in climb, so only the average can be polylogarithmic. Residue
 classes realise multiplicity `k` (hover-then-drop, climb-then-drop; Terras),
 so no orbit-blind count proves the hypothesis. On actual segments the mean
 is `2`-`3` (probe). The random-walk heuristic gives `O(theta L)`.

@@ -41,6 +41,15 @@ status: >
   N(X) = O(log X) (expected for an actual divergent orbit) is far away,
   since the method uses one free window per element and a landing
   multiplicity L; a multiplicity L^(1/2) would give a* = lambda*/(2h*) - 3/2.
+  COROLLARY (discrepancy form, note 3b, post-audit): for a divergent
+  positive orbit, min_(l<=L) Delta_l <= -(1/h*) log_2 L + (a/h*) log_2 log_2 L + O(1)
+  for every a > a*, i.e. the running minimum of the discrepancy is below
+  -1.0527 log_2 L - 1.038 log_2 log_2 L + O(1). REASSESSMENT (2026-09-26,
+  collatz_landing_20260926_multiplicity_reassessment.md): the remaining
+  (log X)^(0.514) is the landing multiplicity; it is tight on residue
+  classes (hover/climb then drop) and needs an oscillation lemma for one
+  orbit (HYP-9161, average multiplicity O(theta log X)); records (leaders
+  and peaks) of any orbit are already O(X^(h*) (log X)^(-3/2)).
 source: collatz-exponent-atlas-20260926 session (opus), 2026-09-26; found by asking whether THM-4495's ballot factor survives the moving barrier of THM-4476's recursion. No priority claimed.
 depends_on:
   - 01-canon/theorems/THM-4476-thin-divergent-orbits-reciprocal-sums-finite.md (reductions, Terras bijection, carry bound, recursion (R), Cor. 4)
