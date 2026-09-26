@@ -1,0 +1,100 @@
+== A. audit of (1)-(5) ==
+[OK] A4 per-face inequality a <= mu P_kappa sqrt(a) + 2 rho (kappa-3) on [0,1] for kappa=3..400 (+ all kappa>=7 via P_kappa>2 sqrt(pi)) :: equality only at a=1, kappa in [4, 5]; slack at kappa=3: 0.088573 (mu P_3 = 1.08857 > 1), kappa=6: 0.0235309
+[OK] A5 constants :: P5=3.811935278 mu=0.2387737693 rho=0.02245246133 lambda<= (6-P5)/(8-P5)=0.5224524613
+[OK] A1-A3 junction inequality, angle identity (every face, 1e-30), global identity 2C=sum(k-alpha)+2H+2c_o, Corner Lemma identity and sum(kappa_f-3)<=n-3, sum P_f + P_o = 2n, on 26 exact configurations :: grids, polyominoes (incl. an enclosed cell), brick wall, X junction, Y junction (Q(sqrt3)), nested component, bridge, pinched faces, 2 components
+[OK] A6 n=6 record reproduced (pentagon of unit sides + unit chord) and audited :: A=1.47585295983; fields 1 (kappa=5) + 0.47585296 (kappa=4); sum(kappa-3)=3=n-3
+[OK] A7 Corner Lemma is attained (sum(kappa_f-3)=n-3) by the unit square and the n=5 and n=6 records :: tight on: grid 1x1; n=5 record: square + chord (0,3/5)-(4/5,0); square + two chords; square + mid chord; n=6 record (reproduced, 50 digits)
+   configuration table (name | n | C | H | c_o | kappa_o | sum(kappa-3) | A | fields<=1 | junction types):
+   grid 1x1                                             |   4 |   1 | 0 | 1 |  0 |   1 |         1.0 | True | {'L': 4}
+   grid 1x2                                             |   7 |   2 | 0 | 1 |  0 |   2 |         2.0 | True | {'L': 4, 'e3t0r1': 2}
+   grid 2x2                                             |  12 |   4 | 0 | 1 |  0 |   4 |         4.0 | True | {'L': 4, 'e3t0r1': 4, 'e4t0r0': 1}
+   grid 2x3                                             |  17 |   6 | 0 | 1 |  0 |   6 |         6.0 | True | {'L': 4, 'e3t0r1': 6, 'e4t0r0': 2}
+   grid 3x3                                             |  24 |   9 | 0 | 1 |  0 |   9 |         9.0 | True | {'L': 4, 'e3t0r1': 8, 'e4t0r0': 4}
+   grid 3x4                                             |  31 |  12 | 0 | 1 |  0 |  12 |        12.0 | True | {'L': 4, 'e3t0r1': 10, 'e4t0r0': 6}
+   grid 4x4                                             |  40 |  16 | 0 | 1 |  0 |  16 |        16.0 | True | {'L': 4, 'e3t0r1': 12, 'e4t0r0': 9}
+   quasi-square 3-omino                                 |  10 |   3 | 0 | 1 |  1 |   3 |         3.0 | True | {'L': 5, 'e3t0r1': 2, 'e4t0r0': 1}
+   quasi-square 5-omino                                 |  15 |   5 | 0 | 1 |  1 |   5 |         5.0 | True | {'L': 5, 'e3t0r1': 4, 'e4t0r0': 2}
+   quasi-square 7-omino                                 |  20 |   7 | 0 | 1 |  1 |   7 |         7.0 | True | {'L': 5, 'e3t0r1': 6, 'e4t0r0': 3}
+   quasi-square 10-omino                                |  27 |  10 | 0 | 1 |  1 |  10 |        10.0 | True | {'L': 5, 'e3t0r1': 8, 'e4t0r0': 5}
+   quasi-square 13-omino                                |  34 |  13 | 0 | 1 |  1 |  13 |        13.0 | True | {'L': 5, 'e3t0r1': 10, 'e4t0r0': 7}
+   L-tromino                                            |  10 |   3 | 0 | 1 |  1 |   3 |         3.0 | True | {'L': 5, 'e3t0r1': 2, 'e4t0r0': 1}
+   S-tetromino                                          |  13 |   4 | 0 | 1 |  2 |   4 |         4.0 | True | {'L': 6, 'e3t0r1': 2, 'e4t0r0': 2}
+   ring of 8 cells (enclosed centre)                    |  24 |   9 | 0 | 1 |  0 |   9 |         9.0 | True | {'L': 4, 'e3t0r1': 8, 'e4t0r0': 4}
+   n=5 record: square + chord (0,3/5)-(4/5,0)           |   5 |   2 | 0 | 1 |  0 |   2 |         1.0 | True | {'L': 4, 'T': 2}
+   square + two chords                                  |   6 |   3 | 0 | 1 |  0 |   3 |         1.0 | True | {'L': 4, 'T': 4}
+   square + mid chord                                   |   5 |   2 | 0 | 1 |  0 |   2 |         1.0 | True | {'L': 4, 'T': 2}
+   1x2 rectangle with an X junction                     |   9 |   4 | 0 | 1 |  0 |   4 |         2.0 | True | {'L': 4, 'e3t0r1': 2, 'T': 2, 'X': 1}
+   brick wall (running bond, 3 rows)                    |  25 |  10 | 0 | 1 |  0 |  10 |         9.0 | True | {'L': 4, 'e3t0r1': 12, 'T': 6}
+   hexagon + 3 spokes (Y junctions), Q(sqrt3)           |   9 |   3 | 0 | 1 |  0 |   3 |  2.59807621 | True | {'e3t0r1': 3, 'L': 3, 'Y': 1}
+   nested: unit triangle inside unit square, Q(sqrt3)   |   7 |   2 | 1 | 1 |  0 |   1 |         1.0 | True | {'L': 7}
+   two squares + bridge fence                           |   9 |   2 | 0 | 1 |  4 |   2 |         2.0 | True | {'L': 8, 'T': 2}
+   two squares sharing a corner (pinched outer face)    |   8 |   2 | 0 | 1 |  2 |   2 |         2.0 | True | {'L': 6, 'e4t0r0': 1}
+   figure-8 component inside a 4x4 frame (pinched hole) |  24 |   3 | 1 | 1 |  0 |   5 |        16.0 | False | {'L': 10, 'e2t0r2': 12, 'e4t0r0': 1}
+   two disjoint components                              |   8 |   2 | 0 | 2 |  0 |   2 |         2.0 | True | {'L': 8}
+   n=6 record (reproduced, 50 digits)                   |   6 |   2 | 0 | 1 |  0 |   3 |  1.47585296 | True | {'L': 5, 'T': 2}
+[OK] A8 every record n=3..50 on the Friedman page satisfies the new finite bound B(n) :: B(4)=1.07677 B(12)=4.36608 B(50)=22.0163; min B(n)-record = 0.0767732 at n=4
+[OK] A9 B(n) < U(n) (previous lane) for every n=3..50 :: B(n)/U(n) from 0.8967 to 0.9457
+   n | record | B(n) | U(n) | record/B
+    3 |   0.43301 | 0.7162799 | 0.7988081 | 0.6045
+    4 |   1.00000 |  1.076773 |  1.173484 | 0.9287
+    5 |   1.00000 |   1.45615 |  1.568536 | 0.6867
+    6 |   1.47585 |  1.849031 |  1.978534 | 0.7982
+    7 |   2.00000 |  2.252189 |  2.400101 | 0.888
+    8 |   2.10306 |  2.663508 |  2.830968 | 0.7896
+    9 |   2.63630 |  3.081512 |  3.269524 | 0.8555
+   10 |   3.04687 |  3.505124 |  3.714573 | 0.8693
+   11 |   3.53721 |  3.933526 |  4.165203 | 0.8992
+   12 |   4.00000 |  4.366083 |  4.620695 | 0.9162
+   13 |   4.16199 |  4.802288 |  5.080474 | 0.8667
+   14 |   4.74494 |  5.241731 |  5.544069 | 0.9052
+   15 |   5.06345 |  5.684071 |  6.011091 | 0.8908
+   16 |   5.53706 |  6.129026 |  6.481211 | 0.9034
+   17 |   6.01086 |  6.576355 |  6.954151 | 0.914
+   18 |   6.24791 |  7.025852 |   7.42967 | 0.8893
+   19 |   6.87498 |   7.47734 |  7.907563 | 0.9194
+   20 |   7.14732 |  7.930663 |  8.387648 | 0.9012
+   21 |   7.72489 |  8.385688 |  8.869766 | 0.9212
+   22 |   8.07384 |  8.842293 |  9.353776 | 0.9131
+   23 |   8.53463 |  9.300373 |  9.839554 | 0.9177
+   24 |   9.02394 |  9.759832 |  10.32699 | 0.9246
+   25 |   9.30077 |  10.22059 |  10.81597 | 0.91
+   26 |   9.89324 |  10.68256 |  11.30643 | 0.9261
+   27 |  10.16136 |  11.14568 |  11.79826 | 0.9117
+   28 |  10.73270 |  11.60989 |   12.2914 | 0.9244
+   29 |  11.08218 |  12.07512 |  12.78578 | 0.9178
+   30 |  11.53492 |  12.54133 |  13.28133 | 0.9198
+   31 |  12.03575 |  13.00847 |    13.778 | 0.9252
+   32 |  12.43064 |  13.47649 |  14.27574 | 0.9224
+   33 |  13.01887 |  13.94535 |   14.7745 | 0.9336
+   34 |  13.28913 |  14.41502 |  15.27422 | 0.9219
+   35 |  13.90296 |  14.88545 |  15.77488 | 0.934
+   36 |  14.18217 |  15.35662 |  16.27642 | 0.9235
+   37 |  14.76529 |   15.8285 |  16.77882 | 0.9328
+   38 |  15.08152 |  16.30105 |  17.28204 | 0.9252
+   39 |  15.53725 |  16.77426 |  17.78604 | 0.9263
+   40 |  16.04172 |  17.24809 |  18.29081 | 0.9301
+   41 |  16.44841 |  17.72252 |   18.7963 | 0.9281
+   42 |  17.02275 |  18.19754 |   19.3025 | 0.9354
+   43 |  17.34095 |  18.67311 |  19.80938 | 0.9287
+   44 |  17.91952 |  19.14923 |  20.31691 | 0.9358
+   45 |  18.17998 |  19.62586 |  20.82508 | 0.9263
+   46 |  18.82057 |  20.10301 |  21.33386 | 0.9362
+   47 |  19.15056 |  20.58064 |  21.84324 | 0.9305
+   48 |  19.75072 |  21.05875 |  22.35318 | 0.9379
+   49 |  20.07383 |  21.53731 |  22.86369 | 0.932
+   50 |  20.55829 |  22.01632 |  23.37474 | 0.9338
+== B. angle-potential certificates ==
+[OK] B1 every angle-potential certificate has 2(mu+rho) >= (8-P6)/(12-P6) = (4-12^(1/4))/(6-12^(1/4)) (5 constraints: T(60,120), T(90,90), unit square, regular hexagon of area 1, tiny equilateral triangle) :: stall value 0.5167670107; optimal mu = 2/(12-P6) = 0.24161649, rho = (1-4mu)/2 = 0.01676701
+[OK] B2 sampled potential LP (6 deg grid, torus, convex fields, T/X/Y/fans) = stall value; primal = regular hexagons + unit squares + tiny triangles :: LP value 0.51676716 (35 rounds); junctions T(60,120) and T(90,90); faces 120^6 (area 1, P6=3.72242), 90^4, 60^3 (area -> 0)
+[OK] B3 PROVED (computer-assisted): if every field has a convex outer boundary then A <= mu(2n - P_o) + 2 rho n with 2(mu+rho) = 0.5168084 :: piecewise-linear Phi on a 2-degree grid, 1885 LP rows; slacks: fan=2.2e-08, conv=7.2e-08, refl=6.2e-03, major=2.0e-09, A<=rho=1.9e-03, Jtail=2.0e-07, O=2.0e-09, Ftail=2.8e-08, mu_min=1.8e-02, F0=6.0e-09, F1=2.3e-08
+[OK] B4 EMPIRICAL: with non-convex fields bounded through their convex hull (P >= P_kappa sqrt(a)), the potential LP returns to the kappa-LP value :: LP value 0.5225297 (kappa-LP 0.5224525); binding primal: "star" fields with 72-degree tips and reflex corners
+[OK] B6 EMPIRICAL: with the exact hull-angle bound for non-convex fields (<= 2r pocket ends, linear reflex minorants) the LP still returns ~ the kappa-LP; binding field = notched regular pentagon :: LP 0.5227722 at 6 deg; notched pentagon: hull 108^5, four 72-degree tips as pocket ends, one exact 108, two 252-degree dents (L junctions)
+[OK] B5 Lhuilier P^2 >= 4 A sum cot(theta_i/2) on 3000 random convex polygons (CITED, sanity) :: min ratio 0.999999999999 (equality for polygons with an incircle, e.g. every triangle)
+== C. constructions and obstructions ==
+[OK] C1 PROVED: a field with at most 4 convex corners has a <= P/4 (P_3, P_4 >= 4), so if every field has <= 4 convex corners then A <= (2n - P_o)/4 < n/2 :: P_3 = 4.55901, P_4 = 4.00000; beating 1/2 needs fields with >= 5 convex corners
+[OK] C2 Cairo tiling (X at (0,0),(1,1), period 2, a=(3+sqrt3)/6): pentagons of area 1, angles 90/120, P = 3.86370 < 4, but a through line Y-X-Y has length 1.633 > 1 :: XY edge 0.81650, YY edge 0.59772, perimeter 3.86370: no fence decomposition of this geometry
+[OK] C3 least perimeter of an area-1 pentagon with u sides of length 1 (cyclic-polygon theorem, CITED) :: u=3: 3.92288, u=2: 3.87306, u=1: 3.83819, u=0: 3.81194
+[OK] C4 EMPIRICAL relaxation: unit-side mean field (tight junctions, convex fields; Y-corners force whole-fence sides) still exceeds 1/2 :: value 0.51048 with 0.4057 P(3Y,2T) + 0.0839 P(2Y,3T) pentagons + 0.0210 unit squares per fence (angles ignored)
+[OK] C5 EMPIRICAL: Cairo-balanced typed pentagons (3 Y + 2 T corners, Y angles summing to 360, T angles to 180, the 3 forced whole-fence sides of length 1, area <= 1) never beat the square: max a/P = 1/4 :: YYTYT(0, 0): 0.250000; YYTYT(0, 1): 0.249458; YYTYT(1, 0): 0.250000; YYTYT(1, 1): 0.250000; YYYTT(0, 0): 0.000000; YYYTT(1, 0): 0.000000; YYYTT(1, 1): 0.000000
+[OK] C6 PROVED: Pythagorean fence tilings (squares a, 1-a; all junctions T; 2 fences, 2 fields per period) have density (a^2+(1-a)^2)/2 < 1/2, and Corner Lemma equality sum(kappa-3) = n on the torus :: a=3/5: 0.2600; per period: 4 T junctions, sum(3alpha-k)/2 = 2 = n = F
+== done in 20.1s; failures: 0 ==

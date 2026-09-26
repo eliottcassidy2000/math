@@ -61,7 +61,7 @@ status: >
   are the gaps |2^q - 3^b|, the same numbers as Collatz cycle denominators
   (ANALOGY: no map). Hamiltonian paths are tabulated for n <= 2200.
   OPEN:
-  - whether lambda = 1/2 (wave 19 fence lane);
+  - whether lambda = 1/2 (THM-4509 narrows it to [1/2, 0.5224525]);
   - [CLOSED, see UPDATE below: s = 2 is the unique positive solution of
     the simultaneous Pell system (CITED, Anglin 1996)];
   - which n in each window W_a admit a Hamiltonian path of C_n;

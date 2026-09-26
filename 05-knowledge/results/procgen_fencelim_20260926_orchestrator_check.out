@@ -1,0 +1,15 @@
+  ok: junction inequality e + t + r >= 3 holds for every junction type; tight exactly for ['L', 'T', 'X', 'Y']
+    unit square: n=4 C=1 H=0 c_o=1 sum(kappa-3)=1 (n-3=1) A=1 types={'L': 4}
+    square + mid chord: n=5 C=2 H=0 c_o=1 sum(kappa-3)=2 (n-3=2) A=1 types={'L': 4, 'T': 2}
+    n=5 record: square + chord (0,3/5)-(4/5,0): n=5 C=2 H=0 c_o=1 sum(kappa-3)=2 (n-3=2) A=1 types={'T': 2, 'L': 4}
+    grid 1x2: n=7 C=2 H=0 c_o=1 sum(kappa-3)=2 (n-3=4) A=2 types={'e3t0r1': 2, 'L': 4}
+    grid 2x2: n=12 C=4 H=0 c_o=1 sum(kappa-3)=4 (n-3=9) A=4 types={'e3t0r1': 4, 'e4t0r0': 1, 'L': 4}
+    Y junction + parallelogram (n=7): n=7 C=2 H=0 c_o=1 sum(kappa-3)=2 (n-3=4) A=9/5 types={'L': 4, 'e3t0r1': 1, 'Y': 1}
+    X junction: 2x1 rectangle, middle vertical fence with two stems at its midpoint: n=9 C=4 H=0 c_o=1 sum(kappa-3)=4 (n-3=6) A=2 types={'L': 4, 'T': 2, 'X': 1, 'e3t0r1': 2}
+    nested: unit square inside a 3x3 frame (hole): n=16 C=2 H=1 c_o=1 sum(kappa-3)=2 (n-3=13) A=10 types={'L': 8, 'e2t0r2': 8}
+    two disjoint squares: n=8 C=2 H=0 c_o=2 sum(kappa-3)=2 (n-3=5) A=2 types={'L': 8}
+  ok: exact plane-graph identities (global corner identity, Corner Lemma, #fields = n + c - V0) on 9 configurations incl. Y, X, T, L, a hole and two components; Corner Lemma tight on: ['unit square', 'square + mid chord', 'n=5 record: square + chord (0,3/5)-(4/5,0)']
+  ok: finite bound B(n) (independent evaluation): B(4) = 1.076773, B(12) = 4.366083, B(50) = 22.01632; all 16 records quoted in THM-4505 satisfy it; lambda <= 0.5224525
+  ok: Theorem B1: the five constraints T(60,120), T(90,90), unit square, regular hexagon of area 1, tiny triangle force 2(mu+rho) >= 0.5167670 = (4 - 12^(1/4))/(6 - 12^(1/4))
+  ok: C1 ingredient: P_3 = 4.55901 and P_4 = 4.00000 >= 4, so a field with <= 4 convex corners has a <= sqrt(a) <= P/4
+  ok: Theorem B3 spot check: the lane's certificate (2(mu+rho) = 0.5168084) passes its own exact reduction and this script's constraints at 200000 random real angle configurations (min junction slack 2.20e-08, min face slack 6.00e-09)
