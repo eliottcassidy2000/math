@@ -1,0 +1,94 @@
+{
+  "session": "crossroads-family-20260926",
+  "reservation_commit": "6d5865d4ed0cfb214e488c167015ef8fe28cd834",
+  "hash_basis": "Exact Git index blobs, including Git text normalization; verify against committed blobs. Excludes itself and shared navigation.",
+  "reproduction": "python -B 04-computation/experiments/crossroads_family_20260926_audit.py",
+  "validation": "Four lanes: normal = optimized = retained stdout. Independent proof audits passed, including natural-density attainment. check_docs passed.",
+  "artifacts": [
+    {
+      "path": "01-canon/theorems/THM-4500-pairing-bellman-contraction-and-natural-density.md",
+      "sha256": "995d970c9479adc3744430e69a0fb068d91c00ccb87f6f59637c964e7c33aff4",
+      "bytes": 5855
+    },
+    {
+      "path": "01-canon/theorems/THM-4501-collatz-recursive-motif-families-and-frequency.md",
+      "sha256": "f70603f8e45baa0fb39eab01998caac46924367215b8db4308ad2c0a67e16cba",
+      "bytes": 5094
+    },
+    {
+      "path": "04-computation/experiments/crossroads_family_20260926_audit.py",
+      "sha256": "9d159ff414cc605cb6ffceabb23d6e5b211d0f20cfe73b034493334970af27bf",
+      "bytes": 1387
+    },
+    {
+      "path": "04-computation/experiments/crossroads_family_20260926_flow.py",
+      "sha256": "fa5e180c1f9b3da9a613f37af30affac11d3363635ed1dd4dacf8451b3ce3b23",
+      "bytes": 12055
+    },
+    {
+      "path": "04-computation/experiments/crossroads_family_20260926_fractal.py",
+      "sha256": "ea0838267dafa98874ea49b07f813caf8b343b64ad431c1f696fb4682c9f2f2e",
+      "bytes": 4454
+    },
+    {
+      "path": "04-computation/experiments/crossroads_family_20260926_orbits.py",
+      "sha256": "f313815d0e8ff317abe8ca6de9689baa378d92120ed8e5ab0a99caf7edd9c6d9",
+      "bytes": 8676
+    },
+    {
+      "path": "04-computation/experiments/crossroads_family_20260926_squares.py",
+      "sha256": "7b2ef7cd5ccd685de2b8efe66dc2b1673ff22f1a7a37c6771ad80959e527542f",
+      "bytes": 9146
+    },
+    {
+      "path": "05-knowledge/results/crossroads_family_20260926_audit.md",
+      "sha256": "56c00c7fa384b3ef6c3c33b32d2eba8f5a2286f8248cf6184c9c40ccb1ba5e35",
+      "bytes": 5033
+    },
+    {
+      "path": "05-knowledge/results/crossroads_family_20260926_board.md",
+      "sha256": "0371105592a28d8346cf1f1fd9936b587945a6a8d6dbeba3f24c133829b6ae16",
+      "bytes": 11672
+    },
+    {
+      "path": "05-knowledge/results/crossroads_family_20260926_flow.md",
+      "sha256": "2cb45ae127d1898e82901986e5d1684875920015a02c76230e4c73b021e409cb",
+      "bytes": 22667
+    },
+    {
+      "path": "05-knowledge/results/crossroads_family_20260926_flow.out",
+      "sha256": "bea8410e0b01bb5cfb35dfc42f49b3a2cedf008b5a819d92f246debb28083f2d",
+      "bytes": 3117
+    },
+    {
+      "path": "05-knowledge/results/crossroads_family_20260926_fractal.md",
+      "sha256": "ee6b0cdb3100123e6b2e01d065b4ea1ca70b268795310285a09235a4ad27bdca",
+      "bytes": 9622
+    },
+    {
+      "path": "05-knowledge/results/crossroads_family_20260926_fractal.out",
+      "sha256": "8913319ce0c1ea2876c9799e88e293f43e15a2fffa41aa405bb404a45151b1ad",
+      "bytes": 1322
+    },
+    {
+      "path": "05-knowledge/results/crossroads_family_20260926_orbits.md",
+      "sha256": "2fb71688be199eea6290ed86f9ed685f15ad19f8d593d1814645055da1493c2f",
+      "bytes": 14666
+    },
+    {
+      "path": "05-knowledge/results/crossroads_family_20260926_orbits.out",
+      "sha256": "33095dc9412a8f756a10385ff0ebfe8e26356aa65a8c435f872eb4d7d26edefe",
+      "bytes": 1609
+    },
+    {
+      "path": "05-knowledge/results/crossroads_family_20260926_squares.md",
+      "sha256": "f15e24e90ddf4dd840f5b85494f1675a5aa6b5b7bc08006654215174b4ccde38",
+      "bytes": 19748
+    },
+    {
+      "path": "05-knowledge/results/crossroads_family_20260926_squares.out",
+      "sha256": "7dc09c44f2aea0f7979581e6158e2b39e7f3a9d00a37a3de4b6e7f4093df99ab",
+      "bytes": 2907
+    }
+  ]
+}

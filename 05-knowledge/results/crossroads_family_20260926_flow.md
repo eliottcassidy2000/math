@@ -1,7 +1,8 @@
 # A contracting Bellman operator computes the logarithmic optimum
 
-Status: **PROOF CANDIDATE; root independently accepted the main derivation.
-Exact finite controls retained; final audit pending.**
+Status: **PROVED + INDEPENDENTLY AUDITED; FINITE-EXACT controls retained.**
+Root and a separate geometry lane audited the Bellman argument and the
+slow phase-sweep construction below.
 
 The global two-step pairing constant `B_*` lies in the certified interval
 
@@ -13,6 +14,8 @@ The global two-step pairing constant `B_*` lies in the certified interval
 
 Its width is less than `0.000030322`. The interval is exact; no displayed
 midpoint or decimal extrapolation is claimed to equal `B_*`.
+One explicitly defined globally legal pairing attains natural density
+`B_*`; the finite policy optima converge to it with certified errors.
 
 ## 1. Inheritance and scope
 
@@ -307,13 +310,13 @@ inf_(global P2 with natural density) natural_density = B_*,
 inf_(global P2) upper_natural_density = B_*.
 ```
 
-The argument through this section alone leaves attainment of either
-infimum OPEN; Section 8 supplies a separate proposed construction. This
-conclusion must not be changed to a minimum by taking a pointwise sign of an almost-everywhere
+The argument through this section alone proves infima; Section 8 proves
+that both are attained by a separate integer-address construction. One
+cannot infer this minimum by taking a pointwise sign of an almost-everywhere
 fixed point: Haar equivalence classes do not determine values at the
 countable set of positive integer addresses. Logarithmic attainment is
-already proved in THM-4496, but does not resolve this natural-density
-boundary.
+already proved in THM-4496; the additional phase-stability and reset
+argument in Section 8 is what resolves the natural-density boundary.
 
 ## 6. Exact computation and controls
 
@@ -364,9 +367,9 @@ comes from the separate universal Bellman certificate.
 
 ## 8. Slow phase sweep gives natural-density attainment
 
-Status of this section: **PROOF CANDIDATE under independent audit.**
-The preceding proved infimum statement is not used as an attainment
-claim. This section constructs a single integer-address policy rather
+Status of this section: **PROVED + independently audited by root and the
+geometry lane.** The preceding infimum statement is not itself used as
+an attainment claim. This section constructs a single integer-address policy rather
 than choosing representatives of an almost-everywhere function.
 
 For each integer `h>=1`, let `P_h` be the sign policy of `d_h`, of period
@@ -415,7 +418,7 @@ efficient numerical convergence claim is intended.
 
 ### 8A. A patched stationary reference already has density B_*
 
-Define `z_n=b_n^(ell(n))`. This reference sequence need not itself be
+Define `z_1=0` and `z_n=b_n^(ell(n))` for `n>=2`. This reference sequence need not itself be
 legal; it will only be a comparison. Fix large real `X`, put
 `T=log_R X`, and restrict first to `sqrt(X)<=n<=X`. The omitted initial
 segment has at most `sqrt(X)` terms. Every selected level belongs to an
@@ -441,6 +444,8 @@ endpoints and applying (8.1) gives total error at most
 O(T M_max^(1-c) X^c)=X^c exp(O(T^(1/3)))=o(X/T^(1/3)).
 ```
 
+Both endpoints exceed `M_max` for sufficiently large `X`, since
+`sqrt(X)>>exp(O(T^(1/3)))`; thus the condition in (8.1) is satisfied.
 All stationary densities used differ from `B_*` by at most
 `exp(-Omega(T^(1/3)))`. Endpoint rounding contributes `O(T)`. Therefore
 the reference count is `B_*X+o(X/T^(1/3))`.
@@ -549,3 +554,17 @@ and the logarithmic phase, and uses the uniform reset estimate to remove
 the remaining ancestry. These are extra coordinates absent from either
 shortcut. Nothing in this construction transfers P2 legality to the
 ordinary, unmodified Collatz map.
+
+The script selects all levels through address 120,000 using only (8.11)
+and integer power comparisons, builds the corresponding variable policy,
+checks every available parent clause, and verifies actual two-step
+descent through source 160,000. It also checks the ancestor error by
+integer cross-multiplication. Its finite patch counts are controls on
+the construction, not numerical evidence for the asymptotic rate. The
+patched reference itself violates the complement clause already at
+indices 26 and 39: both reference bits are zero. The recursively defined
+sweep has bits `(0,1)` there and obeys the clause. This hostile control
+exhibits why the proof compares to stationary bits but never declares
+their direct patching legal. The
+independent geometry audit separately checked 3,660 rational safe-phase
+points and 100,000 integer ancestor cases, in addition to the full proof.

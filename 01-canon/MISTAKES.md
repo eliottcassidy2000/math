@@ -9,6 +9,12 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-26 family crossroads: direct policy patches, missing degree caps, and closure frequency
+
+- **Directly patching optimal bit sequences is illegal.** The slow-phase selector applied directly to stationary pairing bits gives `(0,0)` at indices26 and39, violating the complement clause. The first failed implication is that locally good policies agree at edges crossing their selection regions. THM-4500 instead applies the selector to free choices and recomputes all bits recursively; `(26,39)` becomes `(0,1)`. Phase stability and reset estimates prove that the necessary repairs have vanishing density. Choosing Haar representatives or making abrupt height-band switches does not supply this proof.
+- **The unicyclic endpoint criterion needs the degree cap at the removed edge.** The initial square note's compressed wording mentioned all degree-three vertices but omitted explicitly excluding degree four at a removed-edge endpoint. A cycle vertex bearing two pendant tails is the witness: deleting one cycle edge leaves degree three. The repaired criterion requires both endpoints to have degree at most three and all other vertices at most two. The structural classification, proof and exact3898-graph check already had this restriction. See `05-knowledge/results/crossroads_family_20260926_squares.md`, section2.
+- **Scope controls, not new disproofs of canon.** The prime triangle91/175/325 is exclusive within that selected triple, not all36 odd nodes of27's prefix. The 4347 ten-node triangle is exclusive in all ten. A dyadic closure erases odd CRT conditions: THM-4501's closure Haar measure is4669 times its natural density. A Bellman L1 contraction need not contract L-infinity: the retained modulus-two potentials produce factor4/3 in the latter norm. The repaired statements retain node universe, odd modulus and norm explicitly.
+
 ## 2026-09-26 THM-4498: the dyadic block's worst endpoint flips with the sign of the exponent; float DPs admit exact ties (opus S6; caught by the independent audit)
 
 - **What was written.** In Theorem 5(a)'s lower bound, `M_i(w) >= 4 * 2^((gamma-1)(t+1)) >= 4 n^(gamma-1)` for `n in [2^t, 2^(t+1))`, copied from the upper-bound argument of section 1.2 (where `n < 2^(t+1)` is the right end).

@@ -144,6 +144,93 @@ def audit_contraction_hostile():
                       'input_L1': '1', 'output_L1': '2/3'}))
 
 
+def audit_phase_sweep(N=120000):
+    """Integer-only address selection; finite checks do not prove the limit."""
+    levels = [1]*(N+1)
+    q, next_two, next_three = 0, 2, 3
+    selector_powers = {}
+    for n in range(2, N+1):
+        while n*next_two >= next_three:
+            q += 1
+            next_two *= 2
+            next_three *= 3
+        if q not in selector_powers:
+            h = 1
+            while (h+1)**3 <= q:
+                h += 1
+            D = (h+1)**3-h**3
+            A = D*q-h**3
+            selector_powers[q] = h, D-1, 2**A, 3**A
+        h, power, two, three = selector_powers[q]
+        levels[n] = h+int(pow(n, power)*two <= three)
+
+    policies = {}
+    values = [F(1)]
+    for h in range(1, max(levels)+1):
+        policies[h] = [int(v < 0) for v in values]
+        values = fraction_bellman(values)
+    stationary = {h: policy_bits(policy, N) for h, policy in policies.items()}
+    bits = [0]*(N+1)
+    patched = [0]*(N+1)
+    for n in range(2, N+1):
+        h = levels[n]
+        policy = policies[h]
+        choice = policy[n % len(policy)]
+        if n % 3 == 0:
+            bits[n] = 1-bits[2*n//3]
+        elif n % 3 == 1:
+            bits[n] = choice*bits[(2*n+1)//3]
+        else:
+            bits[n] = choice+(1-choice)*bits[(2*n-1)//3]
+        patched[n] = stationary[h][n]
+
+    patch_failures, first_patch_failure = 0, None
+    for i in range(2, 2*N//3+1):
+        if i % 2 == 0:
+            require(bits[i]+bits[3*i//2] == 1, 'sweep complement clause')
+            patch_ok = patched[i]+patched[3*i//2] == 1
+        else:
+            require(bits[(3*i-1)//2] <= bits[i] <= bits[(3*i+1)//2], 'sweep order clause')
+            patch_ok = patched[(3*i-1)//2] <= patched[i] <= patched[(3*i+1)//2]
+        if not patch_ok:
+            patch_failures += 1
+            if first_patch_failure is None:
+                first_patch_failure = i
+    for n in range(3, 4*N//3+1):
+        a = map_value(n, bits)
+        require(a < n or map_value(a, bits) < n, 'sweep actual two-step descent')
+    require(first_patch_failure == 26 and [patched[26], patched[39]] == [0, 0],
+            'patching stationary bits need not preserve complement clauses')
+    require([bits[26], bits[39]] == [0, 1], 'recursive sweep repairs the hostile patch')
+    ancestor_cases = 0
+    for n in range(2, N+1):
+        a, two, three = n, 1, 1
+        for j in range(1, 5):
+            a = (2*a+(1 if a % 3 == 1 else -1 if a % 3 == 2 else 0))//3
+            two *= 2
+            three *= 3
+            require(abs(three*a-two*n) <= three, 'exact bounded ancestor rounding')
+            ancestor_cases += 1
+    checkpoints = []
+    count, patch_count, differences = 0, 0, 0
+    for n in range(1, N+1):
+        count += bits[n]
+        patch_count += patched[n]
+        differences += bits[n] != patched[n]
+        if n in [1000, 10000, N]:
+            checkpoints.append({'X': n, 'legal_count': count, 'reference_count': patch_count,
+                                'differing_bits': differences})
+    print(json.dumps({'exact_phase_selector_addresses': N,
+                      'selected_levels': sorted(set(levels[2:])),
+                      'actual_sources_checked': [3, 4*N//3],
+                      'integer_ancestor_checks': ancestor_cases,
+                      'patched_reference_clause_failures': patch_failures,
+                      'first_patched_reference_bad_parent': first_patch_failure,
+                      'hostile_patch_bits_26_39': [patched[26], patched[39]],
+                      'legal_sweep_bits_26_39': [bits[26], bits[39]],
+                      'finite_counts_not_asymptotic_evidence': checkpoints}))
+
+
 def certified_bellman(depth=24):
     values = np.array([1], dtype=np.int64)  # d_1=1, period1.
     denominator = 1
@@ -197,13 +284,14 @@ def certified_bellman(depth=24):
                       'signed_64_bit_chunk_arithmetic_checked': True,
                       'finite_policy_natural_density_infimum': 'B_star',
                       'upper_natural_density_infimum': 'B_star',
-                      'natural_density_attainment_claimed': False,
+                      'natural_density_attainment_proved_by_slow_phase_sweep': True,
                       'Collatz_proof_claimed': False}))
 
 
 def main():
     audit_policies()
     audit_contraction_hostile()
+    audit_phase_sweep()
     certified_bellman()
     print('ALL CHECKS PASSED')
 

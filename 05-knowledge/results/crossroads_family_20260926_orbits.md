@@ -22,7 +22,7 @@ Incoming [THM-4495](../../01-canon/theorems/THM-4495-no-descent-count-exact-orde
 gives the audited exact order of the number of slope-positive parity words.
 Incoming [THM-4499](../../01-canon/theorems/THM-4499-thin-divergence-is-little-o-of-x-to-the-h-star.md)
 improves an upper bound for visits by hypothetical divergent orbits; its
-frontmatter currently records a self-audit, not an independent audit. The
+independent SOUND audit arrived on main during this session. The
 new results below do not require THM-4499 and are not claims about a single
 divergent orbit.
 
