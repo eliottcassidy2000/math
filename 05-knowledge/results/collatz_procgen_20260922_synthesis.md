@@ -33,6 +33,15 @@ Althöfer's game remain OPEN.**
 
 **Wave 12 (2026-09-25, opus session), summarized in section 2j.** The owner's seed "multiplication : squares :: addition : doubles" was run as a transport axis (128 cells, 47 cards). PROVED: the parity graph mod `2^k` is the `+-sqrt` graph on `F_p^*` for Fermat primes; the multiplicative Collatz `sqrt X / rad(X) X^3` is Collatz on the diagonal `m^e` and divergent off it; `chi_{-4}` is the unique level-2 provable strategy; the orbitwise two-place identity `m_L 2^(d_L)/3^L = n prod(1 + b/(3 m_l))` gives `R(d) <= n` on every `3n-1` orbit. **HYP-9160** (no slow divergence) was then PROVED by **THM-4476** (thin divergence: every non-periodic orbit has `O(X^(0.95+eps))` elements below `X`; Terras count plus a landing pigeonhole), which also recovers the in-house no-bounded-strip theorem and gives `R(d) < n` strictly; still no divergence exclusion.
 
+**Waves 14–15 (2026-09-26), summarized in section 2l.** Five new audited theorems:
+* **THM-4480.** The price of provability is the peak-discounted undecided density, with exponent `1 - H(log_q 2)` for every `q`. For `q = 3` it is `rho_L exp(-Theta(L^(1/3)))`, so P1 is negative for arbitrary edits.
+* **THM-4481.** An entropy law for sign flips: no provable `qn±1` strategy exists for `q >= 23`, and 5n+1 needs constant flip mass.
+* **THM-4482.** Ranks are tensions: Collatz's rank defect is `log(3/2)`, at `-1`.
+* **THM-4483.** Forced charges on backward trees: no finite-mass 2-adic potential rank exists, and nonnegative ones exist iff Collatz.
+* **THM-4484.** Free and sporadic cycles; the Belaga–Mignotte off-by-one is resolved.
+
+New hypotheses: HYP-9140 (pairing peak price, rationale corrected), HYP-9141 (5n+1 concentration), HYP-9142 (Robin inequality).
+
 **Wave 13 (2026-09-26), summarized in section 2k.** **THM-4479** (HYP-9138 PROVED): flip exactly the undecided residues; the cube distance is `2^(-(1-h)k+O(log k))`, so the exponent is sharp. With the crossroads THM-4478 (HYP-9137), the exponent `1-h(log_3 2)` is now sharp in three settings, by three mechanisms: integer capacity, necklace packing, and moments (the last stopping at `2(1-h)`). Gersonides: four of the five known integer cycles of 3x+1 on Z are forced by `2-1, 3-2, 4-3, 9-8 = 1`, and `-17` is the sporadic one (`139`). `3+1 = 2^2` is at once the pairing ladder, the moment criticality and the trivial cycle. Positive drift makes arbitrary edits exponentially cheap (the peak-discounted price). The owner's Kuratowski–Tutte triple is read as excluded structures, a counting reason, and a sporadic third. Wave 14 lanes: mykk, drift, tension, peak.
 
 **Wave 10 (2026-09-25), summarized in section 2h.** Codex's incoming work was audited (20 checks, no errors), and the square-sum graph turns out to be planar iff `N ≤ 24`, a Kuratowski event at 25. Kohl's Collatz group is a Tait-coloured graph: its Kempe chains are the doubling orbits and the rising runs, and its only closed chain is `{−1, −2}`. In the strategy square, Collatz is the only open corner among four sign strategies. The exact triple shape is Tutte's "dual pair + self-dual" `{F_7, F_7*, U_{2,4}}`. Natural boundary is KNOWN (Bell–Lagarias 2015); the Mahler/harmonic bridges are blocked by the controls.
@@ -807,6 +816,67 @@ GM-fairness, heights, sums of squares) against eight Collatz ingredients:
   * Christoffel maximizers and "Christoffel rigidity" (`rho_max <= F_k` for every provable level-`k` strategy?);
   * the `nu`-duality census.
 * **`peak`.** The peak-discounted price for every `q`, the `L^(1/3)` second-order term, and the pairing family.
+
+## 2l. Waves 14–15 (2026-09-26): the price is peak-discounted, an entropy law for flips, ranks are tensions, forced charges, and free cycles
+
+Six lanes, all audited by independent orchestrator code and pipeline reruns. Five new canon theorems.
+
+**1. THM-4480: the price of provability is peak-discounted** ([peak note](procgen_peak_20260926_peak_discounted_price.md)).
+* **The theorem.** For every odd `q`, `rho^peak_L/M*_L <= eps_L(q) <= rho^peak_L`. Here `rho^peak_L = 2^-L sum_(Bad_L) 1/max_j slope_j`, and `M*_L = O(L^3)`.
+  * The upper bound sends each undecided orbit to 1 at its peak.
+  * The lower bound is a single-scale integer-capacity count.
+* **Consequences.**
+  * **The exponent is `1 - H(log_q 2)` for every multiplier,** whatever the drift sign. For 5n+1 it is `0.013911`, although 5n+1's undecided density stays at `0.176`.
+  * For `q = 3`, `rho^peak/rho_L = exp(-Theta(L^(1/3)))`, a Brownian strip cost with sharp constant `kappa_3 = 2.108` modulo Mogul'skii. So THM-4478's P1 is **negative** for arbitrary edits.
+* **The pairing family (HYP-9140) stays OPEN.**
+  * The pairpeak lane's coupling lemma shows that a single pairing flip re-merges with probability `1/2`. That corrects the hypothesis's rationale.
+  * The private price (per-source flips) is proved peak-discounted. Conjecture R (HYP-9142, a Robin-type barrier inequality) would make it `O(L) rho^peak`.
+  * Consistency between sources is the remaining obstacle.
+
+**2. THM-4481: an entropy law for sign flips** ([drift note](procgen_drift_20260926_positive_drift_provability.md)).
+* **The law.** For every stationary law of every `qn±1` sign strategy: `1 - h(pi(odd)) <= merge entropy <= pi(R ∪ R*) <= pi(odd)`. The chain makes one bit per step; the parity sequence carries only `h(pi(odd))`, and bits are destroyed only where a flip and its partner merge.
+* **Consequences.**
+  * `rho_max >= 0.2271` for every strategy, so **no `qn±1` with odd `q >= 23` has a bounded-lookahead-provable sign strategy at any level**.
+  * Provable 5n±1 strategies need constant flip mass `0.01391`, the same constant as THM-4480's exponent, now as a stationary mass.
+  * 5n+1 is in the Haar closure of the provable class only if invariant densities concentrate on the flips (HYP-9141, OPEN).
+* **Three drift regimes.** Negative drift (`q = 3`): exponentially cheap (THM-4479). Middle positive band (`5..21`): constant stationary cost. `q >= 23`: impossible.
+
+**3. THM-4482: ranks are tensions** ([tension note](procgen_tension_20260926_ranks_christoffel_duality.md)).
+* **The theorem.** A strategy is provable iff a rank `a log n + h` exists, with `h` periodic or merely bounded. The least rank defect is the maximum cycle mean, by LP duality between tensions and circulations.
+* **For Collatz.** The defect is `log(3/2)`, from the loop at `-1`, so **no periodic or bounded correction beats `log n`**. The Bernoulli-boundary obstruction is exactly that loop. Finite banks of 2-adic valuation counters also fail, which contains the reframe's §5.
+* **Corrected premises.** The session's two guesses about `sigma_k` failed:
+  * its maximizers form a positive-entropy family, of which the Christoffel word is only the balanced one;
+  * "Christoffel rigidity" (`rho_max <= F_k` for provable strategies) is REFUTED. It is replaced by a numerator bound that is exact to `k = 6`.
+
+**4. THM-4483: what a Collatz rank must look like** ([rank note](procgen_rank_20260926_two_place_lyapunov.md)).
+* **Forced charges.** Any rank `a log n + bounded h + sum c v_2(n - beta)` with a height-summable bank must charge every point of the backward tree of every expanding cycle `x` with `>= a chi(x)`.
+  * Inside a shadow the counter pays for the height growth.
+  * At the seam the entering point must already carry the charge.
+* **For Collatz.** The tree of `-1` alone has `2^(j-1)` points at depth `j`, so no such bank works. Nonnegative banks need infinite height moment in every open set of `Z_2`.
+* **The converse.** Nonnegative rational-center banks with strict descent exist **iff** Collatz holds: the rank can store each stopping time in the height of a private center. So valuation-bank ranks are exactly as hard as Collatz.
+* **Adaptive centers** fail at seams (resets), never inside shadows.
+* **One fact.** Four rank obstructions — bounded corrections, finite banks, bounded lookahead, and height-summable banks — are one fact: the expanding cycles and their backward trees.
+
+**5. THM-4484: free and sporadic cycles** ([sporadic note](procgen_sporadic_20260926_free_and_sporadic_cycles.md)).
+* **The shift criterion.** A cycle shape of `(qy+d)/2` is free iff `(2^p - q^a) | d`.
+* **Gersonides for every `q`.** `|2^p - q^a| = 1` only for `a = 1` or `3^2 - 2^3`. So the wave-13 classification, four free cycles of 3x+1 plus the sporadic `-17`, is now audited canon.
+* **Belaga–Mignotte.** The gates lane's off-by-one is RESOLVED. Two long primitive cycles lay beyond its scan: `d = 14303`, least element 101, period 2155; and `d = 17021`, least element 5, period 2140. All 11 table entries now match.
+
+**6. The picture after waves 13–15 (discrete ↔ continuous).**
+* **Height is the continuous coordinate the 2-adic world cannot see.**
+  * Arbitrary edits exploit it: peak discount, exponent `1 - H(log_q 2)` for every `q` (THM-4480).
+  * Periodic edits cannot: polynomially sharp for `q = 3` (THM-4479), and a constant entropy cost for `5 <= q <= 21` (THM-4481).
+  * Ranks need it: bounded 2-adic data fails (THM-4482), finite-mass 2-adic potentials fail (THM-4483), and the only working 2-adic potentials encode heights (stopping times).
+* **Every obstruction is an expanding cycle and its backward tree.** For Collatz these are the Gersonides cycles `-1`, `-5` and the sporadic `-17`, plus infinitely many 2-adic rational ones.
+* **Kuratowski–Tutte.** The owner's triple reads as a finite obstruction list forced by an identity, plus a sporadic member. Kuratowski's list is finite; here the obstruction list is infinite, and the finite integral part of it is the `3x-1` cycle conjecture.
+
+**7. Open, with numbers.**
+* HYP-9140: pairing peak price; consistency is the obstacle.
+* HYP-9141: 5n+1 concentration.
+* HYP-9142: Robin inequality.
+* `M_7` (`17/27` or `29/46`).
+* The residual 42757 vs 42765 in Belaga–Mignotte's totals.
+* The mykk lane (periodic deletions and Golomb–Mykkeltveit for expanding cycles) is still running; see the addendum when it lands.
 
 ## 2b. The approach deck: every approach generated or considered, with its disposition
 
