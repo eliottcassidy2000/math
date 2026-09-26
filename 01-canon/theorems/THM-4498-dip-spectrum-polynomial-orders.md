@@ -1,5 +1,5 @@
 ---
-id: THM-4496
+id: THM-4498
 title: "The dip spectrum with its polynomial orders: D_b(X, gamma) = Theta(X^(h(gamma/log_2 3)) (log X)^(-1/2)) for log_4 3 < gamma < 1 and Theta(X^(h*) (log X)^(-3/2)) at gamma = 1"
 status: >
   RESERVED (stub, 2026-09-26, opus collatz-exponent-atlas-20260926): proof
@@ -13,7 +13,7 @@ audit: >
   Not yet audited (stub).
 ---
 
-# THM-4496 -- reserved
+# THM-4498 -- reserved
 
 **RESERVED / UNPROVED EMPTY STUB.** This ID is reserved for the polynomial
 orders of the dip spectrum; the proof is being written in the same session

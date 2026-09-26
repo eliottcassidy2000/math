@@ -53,6 +53,7 @@ Proofs and witnesses: [233 synthesis](../05-knowledge/results/crossroads233_2026
 - **What happened.** `THM-4488` was checked free on `origin/main` minutes before the file was written; the crossroads session created its own `THM-4488` in the same interval, and the checkpoint script rebased and pushed both files with one ID (`agents/check_docs.py` flagged the duplicate only after the push).
 - **Repair.** The AMM 12592 theorem (`C* <= 197/125 < log_2 3`) is renumbered to `THM-4494`; every reference in the author's files, the results INDEX, the ledger, HYP-9129 and the synthesis table is updated; the crossroads `THM-4488` keeps its ID.
 - **Mechanism to remember.** In a day with several Collatz sessions committing hourly, the ID frontier moves faster than a session's write-and-push cycle; reserve by pushing an honest stub first (`RESERVED / UNPROVED EMPTY STUB`), or fetch again in the same command that commits and abort on a new collision. Same mechanism as MISTAKE-346.
+- **Recurrence (same day, THM-4496).** The stub method also lost a race: the crossroads lane created `THM-4496` in the minutes between the fetch and the stub push, and `check_docs` flagged the duplicate only after the push. Renumbered to `THM-4498`. The reservation must be fetch + create + push in one uninterrupted command, and the push output must be checked for the duplicate warning before any further work.
 
 ## 2026-09-26 223 crossroads: endpoint margin, finite lifts, and global ownership
 

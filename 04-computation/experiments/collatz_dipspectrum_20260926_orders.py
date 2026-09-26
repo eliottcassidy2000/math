@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""collatz_dipspectrum_20260926_orders.py -- polynomial orders of the dip spectrum (THM-4496 control;
+"""collatz_dipspectrum_20260926_orders.py -- polynomial orders of the dip spectrum (THM-4498 control;
 session collatz-exponent-atlas-20260926, opus, 2026-09-26).
 
 For gamma in (log_4 3, 1) the claim is D_b(X, gamma) = Theta(X^E (log X)^(-1/2)), E = h(gamma/log_2 3),
