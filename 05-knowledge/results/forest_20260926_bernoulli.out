@@ -1,0 +1,20 @@
+Bernoulli / Fermat / dyadic-carry exact audit
+denom(B_2^1)=6
+denom(B_2^2)=30
+denom(B_2^3)=30
+denom(B_2^4)=510
+denom(B_2^5)=510
+denom(B_2^6)=510
+denom(B_2^7)=510
+denom(B_2^8)=131070
+Constructibility controls: n=3..10000; hostile 17->13
+Exact cyclotomic/B1 projectors: L=1..8; affine words=2046
+Full carry path, Bernoulli formula and inverse decoder: n=0..20000
+Carry-polynomial coefficients: n=0..20000; first moment on 10000 odd sources
+Fibre a=3: Q=173012400; r>=29; S=r+2; K=2r+5
+Fibre a=27: Q=24913785600; r>=37; S=r+4; K=2r+10
+Fibre a=233: Q=1297593000; r>=32; S=r-1; K=2r-5
+Fixed-fibre controls: 195 integers, 36 valuations each
+Summary-rank hostile: 51->77; 1016 padded edges with (S,K)=(8,17)
+Discounted carry budget: 1000 odd sources, 40 steps each
+PASS; no Collatz convergence or Fermat-prime finiteness claim

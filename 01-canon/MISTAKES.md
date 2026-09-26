@@ -9,6 +9,38 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-26 forest: additivity does not forbid trace encoding
+
+- **Failed implication.** The CA comparison asserted that additivity
+  forbids encoding a nonadditive orbit at an edge. Over F2 the Pascal
+  edge transform is self-inverse, so every binary trace has a seed.
+  More strongly, x_i=sum_j binom(i,j)b_j has nonnegative forward
+  differences and absolute-difference edge b_r for any nonnegative b.
+  Setting b_r=T^r(n) gives a computable injective exact Collatz embedding.
+- **Correct boundary.** Its seed is infinite and coordinate j already
+  computes j orbit steps. It does not produce consecutive primes or a
+  cheaper stopping certificate. The obstruction is constrained arithmetic
+  seed/resource control, not additivity by itself.
+- **Parity is weaker than a unit.** Gilbreath's odd edge follows just
+  from2 followed by odd entries. Exact1 needs magnitude. Actual Collatz
+  sources23+32s retain every finite row comparison tournament and parity
+  in a five-state prefix but yield final difference1+2s. Redei parity
+  cannot supply the lost metric bound. The phrase whole row0/2 also
+  excludes its leading1; row0 begins2.
+- **Unbounded totals can still forget depth.** Carry total K is unbounded
+  on fixed polynomial-valuation fibres, but51->77 preserves(s_2,K), as
+  does an arbitrarily high padded family. Positive weighted digit
+  polynomials fail on the same family for every z>1. Preserve ordered
+  positions and do not confuse escaping one obstruction with proving drift.
+- **Concurrent routes can reintroduce corrected claims.** A duplicate
+  crossing index entry and an orphan ledger sentence restored universal
+  balance1/2 and an exact Wythoff decoding after their repair. Removed
+  those stale routes; the scoped corrected entry remains authoritative.
+
+Proofs, exact witnesses and source-preserving alternatives are in the
+[forest board](../05-knowledge/results/forest_20260926_board.md) and
+[Gilbreath audit](../05-knowledge/results/forest_20260926_gilbreath.md).
+
 ## 2026-09-26 crossings note (opus S8): Benford in base 2 is not Benford in base 10, and a reversed reciprocal-sum inequality
 
 - **What was claimed.** That the odd iterates of a divergent orbit "obey Benford's law along the orbit" because `{log_2 m_l} = {log_2 n + l log_2 3 + log_2 C_l}` is an irrational rotation up to a convergent shift.

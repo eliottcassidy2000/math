@@ -1,0 +1,160 @@
+{
+  "word_residue_census": [
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      3,
+      8
+    ],
+    [
+      4,
+      16
+    ],
+    [
+      5,
+      32
+    ],
+    [
+      6,
+      64
+    ],
+    [
+      7,
+      128
+    ],
+    [
+      8,
+      256
+    ],
+    [
+      9,
+      512
+    ],
+    [
+      10,
+      1024
+    ]
+  ],
+  "affine_pair_checks": 3249,
+  "comparator_ties": 81,
+  "forest_counts": {
+    "seeds": 510,
+    "steps": 21123,
+    "open_nodes": 0,
+    "unmatched_down": 3832,
+    "closed_nodes": 6624,
+    "return_down": 5018,
+    "return_up": 1606
+  },
+  "growing_return": {
+    "source": 11,
+    "target": 13,
+    "word": "110",
+    "length": 3,
+    "odd": 2,
+    "carry": 5,
+    "denominator": 8,
+    "curvature": "1/5"
+  },
+  "forest27": {
+    "up": 8,
+    "down": 17,
+    "equal": 0,
+    "first_node": {
+      "start": 0,
+      "end": 3,
+      "parent": null,
+      "children": [],
+      "source": 27,
+      "target": 31,
+      "word": "110",
+      "length": 3,
+      "odd": 2,
+      "carry": 5,
+      "denominator": 8,
+      "map": [
+        "9/8",
+        "5/8"
+      ],
+      "curvature": "1/5",
+      "direction": "up"
+    }
+  },
+  "swap": {
+    "words": [
+      "10110",
+      "11010"
+    ],
+    "sources_mod32": [
+      25,
+      11
+    ]
+  },
+  "local_tiles_p_b_c_q_cnext": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      2,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      0,
+      2
+    ],
+    [
+      1,
+      1,
+      2,
+      1,
+      2
+    ]
+  ],
+  "digit_polynomial_hostile": "61 padded pairs, exact polynomial identity; positive for every real z>1",
+  "weighted_forest_polynomial_controls": 105,
+  "scope": "exact finite forests and algebra; no universal descent or stopping bound"
+}

@@ -62,7 +62,7 @@ beyond THM-4506's saturation theorem.
 ## 2. Gilbreath's difference triangle as a cellular automaton (FINITE-EXACT)
 
 Row `0` is the primes; row `r+1` is the absolute differences of row `r`.
-Gilbreath's conjecture says every row starts with `1`. Three facts make
+Gilbreath's conjecture says every positive-depth row starts with `1`; row0 starts with2. Three facts make
 it a cellular-automaton statement (all classical; Odlyzko 1993):
 
 * On the sublattice `{0, 2}` the rule `|a - b|` is `a XOR b` in units of
@@ -78,9 +78,9 @@ it a cellular-automaton statement (all classical; Odlyzko 1993):
   threshold `i/F` tends to `0`.
 
 For the primes below `200000` (`17983` rows): the leading entry is `1` in
-every row; the frontier `F(r)` (first entry `>= 4`) is `3, 8, 25, 59` at rows
-`1, 2, 5, 10`, `2763` at row `50`, and from about row `100` the entire row is
-`0/2` (`F = row length`, maximum entry `2`), so the triangle is pure
+every positive-depth row; the frontier `F(r)` (first entry `>= 4`) is `3, 8, 25, 59` at rows
+`1, 2, 5, 10`, `2763` at row `50`, and from about row `100` the row after its leading1 is entirely
+`0/2` (`F = row length`, maximum entry `2`), so the triangle to the right of its leading1 is pure
 Pascal-mod-2 below row `100` and the conjecture is trivially true for this
 range beyond that row. Defects at the frontier die at once: size `4`
 defects travel on average `0.18` rows (they meet a `2` immediately), the
@@ -115,33 +115,34 @@ the two-cell cycle `1 <-> 2`.
 
 ## 4. Why neither proves the other
 
-* **Duality of difficulty.** Gilbreath's automaton is additive on the
-  bulk (`XOR`), with all the difficulty in the initial condition (the
-  primes' gaps supply the defects) and a trivial absorbing rule at the
-  edge. The Collatz automaton has a trivial initial condition (any
-  integer) and all the difficulty in the rule, which is not additive in
-  any base (the carry couples digits and the branch bit couples the whole
-  string). A reduction of Collatz to Gilbreath would have to encode a
-  non-additive automaton's global behaviour into an additive one's edge,
-  which additivity forbids; a reduction of Gilbreath to Collatz would
-  have to produce the primes' difference rows from a Collatz orbit, and
-  no orbit quantity in this thread (parity words, valuations, carries
-  `S_l`, the two-place clock) has prime-gap structure.
+* **Encoding and its resource cost (CORRECTED).** Additivity alone does
+  not obstruct an edge encoding. Every binary trace is the edge of a
+  unique additive-difference seed by the self-inverse Pascal transform
+  modulo two. Every nonnegative integer trace is the edge of an absolute-
+  difference seed by the positive binomial transform. Applied to an actual
+  Collatz orbit, these maps preserve the trace while placing its computation
+  in an infinite seed. They do not produce consecutive primes or a
+  finite-input reduction. A useful reduction must constrain seed arithmetic
+  and resources and preserve the target magnitude or stopping predicate.
+  The proofs and actual-source hostile are in the
+  [signed-difference audit](forest_20260926_gilbreath.md). The former phrase
+  "which additivity forbids" was false and has been removed.
 * **Same combinatorics, different thresholds.** Both heuristics are
   one-sided binomial tails: a Gilbreath defect survives distance `F` with
   probability `sum_(i < j) C(F, i) 2^(-F)` (threshold `j/F -> 0`, entropy
   `h -> 0`, so defects die exponentially fast in `F`: `2^(-F)`); a Collatz
   no-descent word of length `k` has probability `W_k/2^k = Theta(2^(-(1-h*)k) k^(-3/2))`
   (threshold `log_3 2`, entropy `h* = 0.95`, so bad words die only like
-  `2^(-0.05 k)`). Gilbreath is the `theta -> 0` end of the entropy curve
-  of THM-4487, Collatz the `gamma = 1` end. That is the precise sense in
-  which they are the same problem at different temperatures, and why one
-  is heuristically easy and the other hard.
-* **Rédei.** The "leading `1`" of Gilbreath and Rédei's odd number of
-  Hamiltonian paths are both parity statements, and Pascal's triangle
-  mod `2` is the additive automaton behind both the `0/2` sea and the
-  parity of binomial coefficients; but no map from difference rows to
-  tournaments is in sight, and I record the resemblance as thematic.
+  `2^(-0.05 k)`). These are heuristic comparisons of binomial-tail shapes.
+  No map identifying the prime initial law with the arithmetic source law,
+  or equating the two conjectures, has been established.
+* **Rédei (scope corrected).** Gilbreath requires the exact leading
+  value1 at every positive depth. Oddness alone follows automatically
+  from the initial2 followed by odd numbers. Redei's theorem gives an
+  odd number of tournament Hamiltonian paths, not exactly one. Thus a
+  parity analogy cannot supply Gilbreath's missing magnitude bound.
+  The family23+32s in the linked audit preserves every row comparison
+  tournament and parity while its final difference grows as1+2s.
 * **What transfers.** Odlyzko's persistence argument (a defect at
   distance `F` needs `F` rows to reach the edge) is exactly the
   carry-bound step of the Terras window (a residue class fixes `k`

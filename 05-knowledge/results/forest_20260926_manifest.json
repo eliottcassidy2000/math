@@ -1,0 +1,18 @@
+{
+  "hash_basis": "UTF-8 LF for text; raw bytes for PNG",
+  "sha256": {
+    "04-computation/experiments/forest_20260926_excursions.py": "7ac007f80d2b6c84b60d336031b804e46a1e48c33e13895c8545395dd686dded",
+    "05-knowledge/results/forest_20260926_excursions.out": "75aa541e8e37d1f42f28ffba005f2c2bc24f5a8200ec02234f14ac470888fe35",
+    "04-computation/experiments/forest_20260926_bernoulli.py": "b50ad5439310e49ef2479349f51ac6b93562d8e7e0c576636747a36598a93f8d",
+    "05-knowledge/results/forest_20260926_bernoulli.out": "aab1f2d2045591933329e726ea16c3623899c5ef7b754b9b4066cbb3dab0134a",
+    "04-computation/experiments/forest_20260926_tilings.py": "17c78ba0525e1ff1a463afe35e353f3390c00d271113b9cbd8a057fc3ddc8d45",
+    "05-knowledge/results/forest_20260926_tilings.out": "bd52e5b75a4c86f2851628d1ea92f55c2c31280c8ae16051d1225ef51802a9f7",
+    "04-computation/experiments/forest_20260926_gilbreath.py": "58510df63db8abb2a663697f9582f4b8fc33d57efa3771fbdb9a4439b9750bea",
+    "05-knowledge/results/forest_20260926_gilbreath.out": "8998b9b74b9e397a682da8e289963e6d07f6f87d1e008ee12b616a3bedae666e",
+    "01-canon/theorems/THM-4507-finite-valuation-collatz-potential-obstruction.md": "afdf74ae12b502b77aa0fb025f65de2323eeeaa8b440dac2b17dd6cd819a8274",
+    "01-canon/theorems/THM-4483-forced-charges-two-place-ranks.md": "2b7edf35ccde483b74e8a8bf94cbb113245c27a1b1cc6d0bb7352ff6a6e4f5cd",
+    "05-knowledge/results/collatz_blueprint_20260921_affine.md": "8dca8bf1ea343220b9fcc64ed5d65d76e681536deb939d723371612c70f32020",
+    "05-knowledge/results/forest_20260926_tilings.svg": "d760dbeed52b61f1a9527ee4e0a327c2d96196fafa53fa80bb565d7f20e5ef62",
+    "05-knowledge/results/forest_20260926_tilings.png": "13869d72b7428804e52680c5391291f2a305b788b3fd8dd70d18f28f04a4ec9c"
+  }
+}

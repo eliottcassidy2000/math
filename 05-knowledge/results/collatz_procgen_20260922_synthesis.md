@@ -1010,8 +1010,17 @@ The owner's request: "keep going on the open problems, especially 7n±1; relate 
 
 ## 2p. Wave 19 (2026-09-26, opus session `collatz-oscillation-20260926`): the oscillation lemma as shell revisits, and Gilbreath's triangle as an automaton
 
-* **Shell form.** With THM-4506's lemma (dippers of a landing point lie in one dyadic shell, odd-separated), HYP-9161's averaged form is *equivalent* to "an orbit revisits one dyadic shell within a `log_2 X`-window, before leaving it by `2^D`, at most `C L^mu` times on average", and to the scale regularity `N(X) <= (C L^mu + 1) N(X/L^1.05) + #ND + C L^2`. Probes on record, climbing, random and `5n+1` segments (`L = 24..64`): mean multiplicity `2.4`-`5.8` (about `D`), heaviest landing points `6`-`18` dippers made of `4`-`13` returns to one shell, scale ratios `1.0`-`2.4`. So the lemma is a no-long-oscillation-in-a-shell statement, true with `mu = 0` on every actual segment, realised false on residue classes, and not reachable by counting or by the two-place clock.
-* **Gilbreath.** The difference triangle is an additive (`XOR`) automaton on the `0/2` sublattice with defects `>= 4` moving left one cell per row and shrinking on `2`s; `|1 - a| = 1` makes the leading `1` absorbing once a row is `0/2`. Primes below `200000`: every row starts with `1`, the frontier is `3, 8, 25, 59, 2763` at rows `1, 2, 5, 10, 50` and the whole triangle is `0/2` from about row `100`; defects die within `0`-`3` rows; zero-triangle sizes are geometric (all sizes `1..15`, counts halving), not the single-seed Sierpinski sizes `2^k - 1`. Collatz is a radius-1 automaton in base `6` (Cloney-Goles-Vichniac; verified by brute force). Both conjectures are edge statements of one-dimensional automata with arithmetic seeds, both heuristics are one-sided binomial tails, at thresholds `0` (Gilbreath: defects die like `2^(-F)`) and `log_3 2` (Collatz: bad words die like `2^(-0.05 k)`); the difficulty is dual (initial condition versus rule), and neither conjecture reduces to the other. The Rédei resemblance (parity statements, Pascal mod 2) is recorded as thematic.
+* **Shell form.** With THM-4506's lemma (dippers of a landing point lie in one dyadic shell, odd-separated), HYP-9161's averaged form is *equivalent* to "an orbit revisits one dyadic shell within a `log_2 X`-window, before leaving it by `2^D`, at most `C L^mu` times on average", and to the scale regularity `N(X) <= (C L^mu + 1) N(X/L^1.05) + #ND + C L^2`. Probes on record, climbing, random and `5n+1` segments (`L = 24..64`): mean multiplicity `2.4`-`5.8` (about `D`), heaviest landing points `6`-`18` dippers made of `4`-`13` returns to one shell, scale ratios `1.0`-`2.4`. So the lemma is a no-long-oscillation-in-a-shell statement, observed with small multiplicities on the tested segments, refuted as a universal finite-segment statement by actual positive shadows, and not reachable by counting or by the two-place clock.
+* **Gilbreath (scope corrected).** The0/2 sublattice is an XOR automaton;
+  a leading1 followed by0/2 entries persists. For primes below200000, the
+  positive-depth rows start1, and the rest of each row is0/2 from about
+  row100. These are finite observations. Additivity does not forbid
+  encoding Collatz: the positive binomial transform embeds every actual
+  value trace in an infinite absolute-difference seed. It does not yield
+  consecutive primes or simplify stopping. Exact1 is stronger than the
+  odd parity that follows from the primes' initial parity pattern. The
+  [forest/signed-difference synthesis](forest_20260926_board.md) gives
+  proofs, metric hostiles, and the corrected reduction boundary.
 
 ## 2b. The approach deck: every approach generated or considered, with its disposition
 
