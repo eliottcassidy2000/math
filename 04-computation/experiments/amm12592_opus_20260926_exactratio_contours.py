@@ -6,12 +6,18 @@ Differences from amm12592_procgen_20260923_hyp9128_contours.py (which is otherwi
   * the bottom-regime constant theta_1 is the EXACT binomial ratio bound. Lemma L0(b) gives
     |[x^r] A| <= C(A0 + r - 1, r) with A0 = K + 2m, and the original certificate bounded
     C(A0+r-1, r)/C(R_0, r) by ((A0 + r - 1)/R_0)^r (largest factor to the r-th power), which
-    forces c > 1.586. The exact ratio is P_r = prod_{j<r} (A0 + j)/(R_0 - j). Each factor is
-    increasing in j and decreasing in N, so with a = 2 - c + 1/8 >= A0/N and b = c - 1 - 1/N_A
-    <= R_0/N, log P_r <= N I(r/N), I(tau) = int_0^tau log((a+s)/(b-s)) ds. I is convex with
-    I(0) = 0, so on [1/N, 3/128] its maximum is at an endpoint: P_1 <= a/b and
-    P_r <= exp(N_A I(3/128)) for r < r_1 = 3N/128 once I(3/128) < 0. The script certifies
-    I(3/128) < 0 with interval arithmetic and uses theta_1 = max(a/b, exp(N_A I(3/128))).
+    forces c > 1.586. The exact ratio is P_r = prod_{j<r} (A0 + j)/(R_0 - j). With the rationals
+    a = 2 - c + 1/8 >= A0/N and b = c - 1 - 1/N_A <= R_0/N (N >= N_A), P_r(N) <= G_r(N) :=
+    prod_{j<r} (aN + j)/(bN - j); each MAJORANT factor is increasing in j and decreasing in N
+    (d/dN = -j(a+b)/(bN-j)^2), so P_r(N) <= G_r(N_A) for r <= r_A = 3N_A/128, and
+    log G_r(N) <= N I(r/N), I(tau) = int_0^tau log((a+s)/(b-s)) ds (left Riemann sum of an
+    increasing integrand). I is convex with I(0) = 0, so once I(3/128) < 0 (certified by interval
+    arithmetic) the chord gives P_r(N) <= exp(r_A I(3/128)/(3/128)) for r_A < r < 3N/128. The script
+    uses theta_1 = max(max_{r<=r_A} G_r(N_A), exp(r_A I(3/128)/(3/128))), and max_r G_r(N_A) = G_1 = a/b.
+    CORRECTION (independent audit, 2026-09-26): the first version used the EXACT products at N_A,
+    claiming the exact factors (A0+j)/(R0-j) decrease in N; they do not (the residue ceil(cN) - cN
+    varies along N = 16*4^k: at c = 197/125, P_1(16384) = 0.953057 > P_1(4096) = 0.952946, with
+    limit a/(c-1) = 0.953125). The majorant factors are monotone; the bound is now uniform in N.
   Everything else (levels, eps_D, eps_T, middle regime) is the original interval certificate,
   re-run at the new c. A PASS means THM-4468's construction (kappa = 1/16, B = 4) works with
   deadlines t_i = min(4N, ceil(c(N+i))) for all N >= N_A, given the finite certificates below N_A.
@@ -226,29 +232,37 @@ def main():
         return x * iv.log(x) - x
     I_tau1 = (prim(a_ex + tau1) - prim(a_ex)) + (prim(b_ex - tau1) - prim(b_ex))
     assert I_tau1.b < 0, f"I(3/128) not certified negative: {I_tau1}"
-    # exact running products at N = N_A for 1 <= r <= r_A = 3 N_A/128 (each factor (A0+j)/(R0-j) is
-    # decreasing in N, so P_r(N) <= P_r(N_A) for N >= N_A and r <= r_A); for r_A < r < 3N/128 the
-    # convexity chord gives P_r(N) <= exp(N I(r/N)) <= exp(r I(tau1)/tau1) <= exp(r_A I(tau1)/tau1).
+    # majorant running products at N = N_A for 1 <= r <= r_A = 3 N_A/128: with a >= A0/N and b <= R_0/N
+    # for N >= N_A, P_r(N) <= G_r(N) := prod_{j<r} (aN + j)/(bN - j), and each majorant factor is
+    # decreasing in N (d/dN = -j(a+b)/(bN-j)^2 <= 0), so P_r(N) <= G_r(N_A).  (The EXACT factors
+    # (A0+j)/(R0-j) are NOT monotone in N because ceil(cN) - cN varies with N: error found by the
+    # independent audit of 2026-09-26; the first version of this script used them.)  For
+    # r_A < r < 3N/128 the convexity chord gives P_r(N) <= exp(N I(r/N)) <= exp(r I(tau1)/tau1)
+    # <= exp(r_A I(tau1)/tau1).
     cN = -((-C.numerator * NA) // C.denominator)          # ceil(c N_A)
     K_A = 2 * NA - cN
     A0 = Fraction(K_A + 2 * (NA // 16))
     R0_A = Fraction(cN - NA - 1)
     rA = (3 * NA) // 128
+    a_fr = 2 - C + Fraction(1, 8)
+    b_fr = C - 1 - Fraction(1, NA)
+    assert A0 <= a_fr * NA and R0_A >= b_fr * NA, "majorant constants must dominate at N_A"
     prod = Fraction(1)
     theta_A = Fraction(0)
     for j in range(rA):
-        prod *= (A0 + j) / (R0_A - j)
+        prod *= (a_fr * NA + j) / (b_fr * NA - j)
         theta_A = max(theta_A, prod)
     theta_chord = float(iv.exp(rA * I_tau1 / tau1).b)
-    theta_one = float(theta_A)
+    theta_one = float(theta_A) * (1 + 2 ** -40)            # rounded up
     theta_r1 = float(iv.exp(NA * I_tau1).b)
     theta1 = max(theta_one, theta_chord, theta_r1)
-    print(f"[exact ratio] N_A = {NA}: K = {K_A}, A0 = K + 2m = {A0}, R_0 = {R0_A}, r_A = {rA}; max_r<=r_A prod = {theta_one:.6f} (at r = 1: {float(A0 / R0_A):.6f}); "
-          f"final product at r_A = {float(prod):.3e}; chord bound for r > r_A: {theta_chord:.3e}")
+    print(f"[exact ratio] N_A = {NA}: K = {K_A}, A0 = K + 2m = {A0}, R_0 = {R0_A}, r_A = {rA}; a = {a_fr} >= A0/N_A, b = {b_fr} <= R_0/N_A; "
+          f"max_r<=r_A majorant product G_r(N_A) = {theta_one:.6f} (G_1 = a/b = {float(a_fr / b_fr):.6f}; the exact P_1(N_A) = {float(A0 / R0_A):.6f} is not uniform in N); "
+          f"G_(r_A) = {float(prod):.3e}; chord bound for r > r_A: {theta_chord:.3e}")
     theta1_crude = (2 - CF + 1 / 8 + r1frac) / (c1 - r1frac - 1.0 / NA)
     s0a, s0b = c1 - 1.0 / NA, c1
     print(f"\n[level 0] r1 = 3N/128;  qbar = {qbar:.5f}, pbar = {pbar:.5f}, g1 = {g1:.6f} (log g1 = {math.log(g1):.5f}), "
-          f"theta1 exact-ratio(N_A) = {theta1:.5f} (r=1 value {theta_one:.5f}, r=r1 value {theta_r1:.3e}; I(3/128) in [{float(I_tau1.a):+.6f},{float(I_tau1.b):+.6f}]; "
+          f"theta1 majorant-ratio(N_A) = {theta1:.5f} (r<=r_A value {theta_one:.5f}, r=r1 value {theta_r1:.3e}; I(3/128) in [{float(I_tau1.a):+.6f},{float(I_tau1.b):+.6f}]; "
           f"crude theta1 would be {theta1_crude:.5f}), sigma0 in [{s0a:.6f}, {s0b:.6f}]")
 
     S0 = iv.mpf([s0a, s0b])

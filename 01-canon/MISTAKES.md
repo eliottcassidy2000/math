@@ -9,6 +9,13 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-26 THM-4494: exact binomial factors are not monotone in N (opus S6; caught by the independent audit)
+
+- **What was claimed.** In the exact-ratio lemma of THM-4494 (AMM 12592, `C* <= 197/125`), that each factor `(A_0 + j)/(R_0 - j)` of `P_r = C(A_0+r-1, r)/C(R_0, r)` decreases in `N`, so that the exact products at `N_A = 4096` bound `P_r(N)` for all `N >= N_A`; the script used `theta = P_1(N_A) = 0.952946`.
+- **Why it was wrong.** `A_0 = 2N - ceil(cN) + N/8` and `R_0 = ceil(cN) - N - 1` depend on the residue `ceil(cN) - cN`, which varies along `N = 16 * 4^k` (`0.704, 0.816, 0.264` at `4096, 16384, 65536` for `c = 197/125`); `P_1(16384) = 0.953057 > P_1(4096)`, with limit `a/(c-1) = 0.953125 > theta`. The derivative argument `d/dN (aN + j)/(bN - 1 - j) < 0` in the note applied to the *majorant* factors, not to the exact ones; the script's docstring even said `theta = max(a/b, ...)` while the code used the exact product.
+- **Repair.** Bound `P_r(N)` by the majorant product `G_r(N) = prod_(j<r)(aN + j)/(bN - j)` with rational `a >= A_0/N`, `b <= R_0/N`; its factors are monotone in `N`, so `P_r(N) <= G_r(N_A)`, maximal at `r = 1`: `theta = a/b = 0.953529`, bottom margin `109.592` (was `110.967`); conclusion intact. Full certificates re-run at both `c`; header output hashes (which matched no committed file) recomputed.
+- **Mechanism to remember.** A quantity defined through `ceil(cN)` is not a smooth function of `N`; monotonicity must be argued for a majorant that is. And a header hash must be computed on the file actually committed, after the last run.
+
 ## 2026-09-26 233 crossroads: common cutoffs, metric types, and carry rank
 
 - **Refuted extension, original theorem intact.** THM-4491's minimum lower
@@ -39,6 +46,7 @@ Format per entry:
 Proofs and witnesses: [233 synthesis](../05-knowledge/results/crossroads233_20260926_board.md),
 [THM-4492](theorems/THM-4492-pairing-two-cutoff-density-separation.md),
 [THM-4493](theorems/THM-4493-collatz-gcd-height-rank-certificate.md).
+
 
 ## 2026-09-26 THM-4488 collision (opus S6) -- a fetch-then-write reservation lost a race of minutes
 

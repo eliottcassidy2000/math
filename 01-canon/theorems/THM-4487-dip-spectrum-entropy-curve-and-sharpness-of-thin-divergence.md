@@ -30,7 +30,17 @@ status: >
   prescribed odd density; lower bounds: the cycle-lemma rotation of THM-4478
   section 4 applied to no-dip prefixes. The q-analogue has rho = gamma/log_2 q
   < 1/2 for all gamma <= 1 once q >= 5, so no dip theorem of this kind exists
-  for 5n+1. Sheet-blind, defect-blind; not a divergence exclusion.
+  for 5n+1. (3) General form (Theorem 4 of the note, PROVED, added after the
+  audit and not covered by it): for every Conway map g(x) = (p_i x + q_i)/m
+  (p_i coprime to m, a_i = p_i/m, max a_i > 1) and every 0 < gamma <= 1, the
+  exponent of the dip count is the constrained maximum entropy
+  E_g(gamma) = max{H_m(pi) : sum pi_i log_m a_i >= gamma - 1}, attained by
+  the tilted law pi_i ~ a_i^lambda; E_g = 1 iff the uniform law meets the
+  constraint, which for 3n+-1 is exactly Korec's log_4 3, and E_g(1) =
+  1 - I(g) is the thin-divergence exponent of THM-4476's general form. Its
+  multiplicative carry estimate (y_j = M_j n (1 + O(n^(-gamma) log n)) along
+  a no-dip orbit) removes the hypothesis gamma > log_2(3/2) from Theorem 1:
+  the statement holds for all gamma in (0, 1]. Sheet-blind, defect-blind; not a divergence exclusion.
 source: collatz-exponent-atlas-20260926 session (opus), 2026-09-26; the owner asked to sharpen the THM-4476 exponent or prove it optimal, and to find recurrent numbers across threads. Mechanism: Terras count (both directions) with the crossroads rotation for the lower bound.
 depends_on:
   - 01-canon/theorems/THM-4476-thin-divergent-orbits-reciprocal-sums-finite.md (Terras bijection, carry bound, the no-dip set F_b)
@@ -132,6 +142,11 @@ For `b = +-1`, `alpha = log_2 3`, `h` the binary entropy:
 * **`5n+1`.** `gamma/log_2 5 < 1/2` for every `gamma <= 1`: the dip count has
   exponent `1` and there is no Korec-type theorem, consistent with the
   expected divergent orbits.
+* **General form.** For every Conway map with `max p_i > m` and every
+  `gamma in (0, 1]` the dip exponent is the constrained maximum entropy of
+  the multiplier law (Theorem 4 of the note, post-audit); Korec's threshold
+  is where the uniform law meets the constraint, the thin-divergence
+  exponent is `E_g(1)`, and Theorem 1's carry condition is unnecessary.
 
 ## 4. Controls
 

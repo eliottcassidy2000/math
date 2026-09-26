@@ -157,12 +157,12 @@ level range v = i/N in [0, 1.538315], sigma = (c-1)(1+v) + eta, eta in [-2/N_A, 
   v in [1.52,1.5300]: circle (+3.7000, 66.5015) rate <= -0.86301 (float -0.86700) extra <= -5.018 pieces  562  log M_i bound at N_A: -3535.01
   v in [1.53,1.5383]: circle (+3.7000, 66.5015) rate <= -0.92294 (float -0.92693) extra <= -5.033 pieces  569  log M_i bound at N_A: -3780.50
   => worst certified rate -0.00134;  max_i M_i <= exp(-2.18) = 1.125e-01 at N = N_A (bound decreasing in N since every rate < 0)
-[exact ratio] N_A = 4096: K = 1736, A0 = K + 2m = 2248, R_0 = 2359, r_A = 96; max_r<=r_A prod = 0.952946 (at r = 1: 0.952946); final product at r_A = 5.133e-01; chord bound for r > r_A: 5.675e-01
+[exact ratio] N_A = 4096: K = 1736, A0 = K + 2m = 2248, R_0 = 2359, r_A = 96; a = 549/1000 >= A0/N_A, b = 294787/512000 <= R_0/N_A; max_r<=r_A majorant product G_r(N_A) = 0.953529 (G_1 = a/b = 0.953529; the exact P_1(N_A) = 0.952946 is not uniform in N); G_(r_A) = 5.443e-01; chord bound for r > r_A: 5.675e-01
 
-[level 0] r1 = 3N/128;  qbar = 0.04242, pbar = 0.04069, g1 = 0.921931 (log g1 = -0.08128), theta1 exact-ratio(N_A) = 0.95295 (r=1 value 0.95295, r=r1 value 5.675e-01; I(3/128) in [-0.000138,-0.000138]; crude theta1 would be 1.03643), sigma0 in [0.575756, 0.576000]
+[level 0] r1 = 3N/128;  qbar = 0.04242, pbar = 0.04069, g1 = 0.921931 (log g1 = -0.08128), theta1 majorant-ratio(N_A) = 0.95353 (r<=r_A value 0.95353, r=r1 value 5.675e-01; I(3/128) in [-0.000138,-0.000138]; crude theta1 would be 1.03643), sigma0 in [0.575756, 0.576000]
 [V2D] D-contour (-0.1997,1.7568): rate <= -0.02802, extra <= 0.122, eps_D <= exp(-114.08)
 [V2T] top-contour (-0.1997,1.7568): rate <= -0.02802, extra <= 2.334, eps_T <= exp(-111.86)
-[bottom] margin >= ((c-1)N_A - 1)(1 - theta1 - eps_D) = 110.967 (need >= 5; increasing in N)
+[bottom] margin >= ((c-1)N_A - 1)(1 - theta1 - eps_D) = 109.592 (need >= 5; increasing in N)
 [top]    margin >= ((c-1)N_A - 1)(1 - eps_T) = 2358.296 (need >= 5); top boundary |u_(0,R0)| <= eps_T = 2.62e-49 <= 1
 
 [V2M] 116 tau-cells of width 0.005 for B_t (t = tau N), plus the tail sum tau_0 (t = R_0)
@@ -287,4 +287,4 @@ level range v = i/N in [0, 1.538315], sigma = (c-1)(1+v) + eta, eta in [-2/N_A, 
   middle-regime worst exponent -0.00404; sqrt(N)(N dt+1) exp(N*exponent) decreasing for N >= 371 (<= N_A: True)
 
 All analytic inequalities certified at N = N_A = 4096; each bound is of the form poly(N) exp(-delta N) with delta >= 0.0013 (levels, tails) and the middle-regime exponent < 0, hence holds for all N >= N_A.
-[90s]
+[86s]

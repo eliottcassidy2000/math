@@ -1,0 +1,154 @@
+=== THM-4494 exact-ratio lemma: independent audit (exact rationals + mpmath 50 digits) ===
+N_A = 4096, tau_1 = 3/128, r_A = 3 N_A/128 = 96
+crude threshold of THM-4468: theta_1 < 1 iff c > 203/128 = 1.5859375; log_2 3 = 1.5849625
+
+[0] identity C(A0+r-1,r)/C(R0,r) == prod_{j<r}(A0+j)/(R0-j) checked at r = 1,2,3,50,r_A (c = 197/125): OK
+
+[1] per-c quantities at N = N_A (exact; floats shown to 6-7 digits)
+
+  c = 158/100 = 1.580000
+    ceil(cN_A) = 6472 (delta = ceil(cN) - cN = 0.320000), K = 1720, m = 256, A_0 = K + 2m = 2232, R_0 = 2375, r_A = 96
+    a = 2 - c + 1/8 = 109/200 = 0.545000 (A_0/N_A = 0.544922 <= a: True); b = c - 1 - 1/N_A = 59367/102400 = 0.579756 (R_0/N_A = 0.579834 >= b: True)
+    exact P_r at N_A: P_1 = 2232/2375 = 0.9397895; max_{r<=r_A} P_r = 0.9397895 at r = 1; min = 1.0531e-01 at r = 72; P_(r_A) = 1.3523e-01
+    crude theta_1 (THM-4468) = 1.021785  [>= 1: crude certificate fails]
+    I(3/128) = -0.000471784900777 (primitive) / -0.000471784900777 (quadrature)  [< 0]
+    chord bound exp(r_A I/tau_1) = 0.14479578; exp(N_A I) = 0.14479578
+    script theta = max(exact P_max, chord, exp(N_A I)) = 0.93978947
+    majorant products at N_A: G_1 = a/b = 0.9400509; max_{r<=r_A} G_r = 0.9400509 at r = 1; G_(r_A) = 1.3888e-01
+    corrected uniform theta = max(G_max, chord) = 0.94005087
+    bottom margin ((c-1)N_A - 1)(1 - theta - eps_D), eps_D = 3.66e-53: script theta -> 142.981; corrected theta -> 142.360 (need >= 5)
+
+  c = 197/125 = 1.576000
+    ceil(cN_A) = 6456 (delta = ceil(cN) - cN = 0.704000), K = 1736, m = 256, A_0 = K + 2m = 2248, R_0 = 2359, r_A = 96
+    a = 2 - c + 1/8 = 549/1000 = 0.549000 (A_0/N_A = 0.548828 <= a: True); b = c - 1 - 1/N_A = 294787/512000 = 0.575756 (R_0/N_A = 0.575928 >= b: True)
+    exact P_r at N_A: P_1 = 2248/2359 = 0.9529462; max_{r<=r_A} P_r = 0.9529462 at r = 1; min = 2.5627e-01 at r = 56; P_(r_A) = 5.1329e-01
+    crude theta_1 (THM-4468) = 1.036427  [>= 1: crude certificate fails]
+    I(3/128) = -0.000138315409351 (primitive) / -0.000138315409351 (quadrature)  [< 0]
+    chord bound exp(r_A I/tau_1) = 0.56748559; exp(N_A I) = 0.56748559
+    script theta = max(exact P_max, chord, exp(N_A I)) = 0.95294616
+    majorant products at N_A: G_1 = a/b = 0.9535292; max_{r<=r_A} G_r = 0.9535292 at r = 1; G_(r_A) = 5.4432e-01
+    corrected uniform theta = max(G_max, chord) = 0.95352916
+    bottom margin ((c-1)N_A - 1)(1 - theta - eps_D), eps_D = 2.86e-50: script theta -> 110.967; corrected theta -> 109.592 (need >= 5)
+
+  c = 203/128 = 1.585938
+    ceil(cN_A) = 6496 (delta = ceil(cN) - cN = 0.000000), K = 1696, m = 256, A_0 = K + 2m = 2208, R_0 = 2399, r_A = 96
+    a = 2 - c + 1/8 = 69/128 = 0.539062 (A_0/N_A = 0.539062 <= a: True); b = c - 1 - 1/N_A = 2399/4096 = 0.585693 (R_0/N_A = 0.585693 >= b: True)
+    exact P_r at N_A: P_1 = 2208/2399 = 0.9203835; max_{r<=r_A} P_r = 0.9203835 at r = 1; min = 1.8279e-02 at r = 96; P_(r_A) = 1.8279e-02
+    crude theta_1 (THM-4468) = 1.000434  [>= 1: crude certificate fails]
+    I(3/128) = -0.000966876839446 (primitive) / -0.000966876839446 (quadrature)  [< 0]
+    chord bound exp(r_A I/tau_1) = 0.019056871; exp(N_A I) = 0.019056871
+    script theta = max(exact P_max, chord, exp(N_A I)) = 0.92038349
+    majorant products at N_A: G_1 = a/b = 0.9203835; max_{r<=r_A} G_r = 0.9203835 at r = 1; G_(r_A) = 1.8279e-02
+    corrected uniform theta = max(G_max, chord) = 0.92038349
+    bottom margin ((c-1)N_A - 1)(1 - theta - eps_D), eps_D = 0.00e+00: script theta -> 191.000; corrected theta -> 191.000 (need >= 5)
+
+  c = 159/100 (= 1.59) = 1.590000
+    ceil(cN_A) = 6513 (delta = ceil(cN) - cN = 0.360000), K = 1679, m = 256, A_0 = K + 2m = 2191, R_0 = 2416, r_A = 96
+    a = 2 - c + 1/8 = 107/200 = 0.535000 (A_0/N_A = 0.534912 <= a: True); b = c - 1 - 1/N_A = 60391/102400 = 0.589756 (R_0/N_A = 0.589844 >= b: True)
+    exact P_r at N_A: P_1 = 2191/2416 = 0.9068709; max_{r<=r_A} P_r = 0.9068709 at r = 1; min = 4.4269e-03 at r = 96; P_(r_A) = 4.4269e-03
+    crude theta_1 (THM-4468) = 0.986084  [< 1]
+    I(3/128) = -0.00130574162537 (primitive) / -0.00130574162537 (quadrature)  [< 0]
+    chord bound exp(r_A I/tau_1) = 0.0047561455; exp(N_A I) = 0.0047561455
+    script theta = max(exact P_max, chord, exp(N_A I)) = 0.90687086
+    majorant products at N_A: G_1 = a/b = 0.9071550; max_{r<=r_A} G_r = 0.9071550 at r = 1; G_(r_A) = 4.5618e-03
+    corrected uniform theta = max(G_max, chord) = 0.90715504
+    bottom margin ((c-1)N_A - 1)(1 - theta - eps_D), eps_D = 0.00e+00: script theta -> 224.966; corrected theta -> 224.280 (need >= 5)
+
+[2] monotonicity of the exact factor (A_0+j)/(R_0-j) in j at N = N_A, j = 0..r_A-1
+  c = 158/100: strictly increasing in j: True; factor_0 = 0.939789, factor_(r_A-1) = 1.020614; first j with factor >= 1: 72 (analytic: j >= (R_0 - A_0)/2 = 71.5); denominators positive (r_A < R_0 = 2375): True
+  c = 197/125: strictly increasing in j: True; factor_0 = 0.952946, factor_(r_A-1) = 1.034894; first j with factor >= 1: 56 (analytic: j >= (R_0 - A_0)/2 = 55.5); denominators positive (r_A < R_0 = 2359): True
+  c = 203/128: strictly increasing in j: True; factor_0 = 0.920383, factor_(r_A-1) = 0.999566; first j with factor >= 1: None (analytic: j >= (R_0 - A_0)/2 = 95.5); denominators positive (r_A < R_0 = 2399): True
+  c = 159/100 (= 1.59): strictly increasing in j: True; factor_0 = 0.906871, factor_(r_A-1) = 0.984920; first j with factor >= 1: None (analytic: j >= (R_0 - A_0)/2 = 112.5); denominators positive (r_A < R_0 = 2416): True
+  (general: numerator A_0 + j increases, denominator R_0 - j decreases and stays positive for j < r_1 < R_0 -> increasing; CONFIRMED)
+
+[3] monotonicity in N of the exact factor f_j(N) = (A_0(N)+j)/(R_0(N)-j) and of the majorant g_j(N) = (aN+j)/(bN-j)
+    (claim 1 of the lemma says f_j decreases in N; the script uses it as P_r(N) <= P_r(N_A) for r <= r_A)
+
+  c = 158/100
+            N admissible    delta        A_0        R_0     f_0=P_1         f_1        f_95         P_2        P_96     g_0=a/b        g_95
+         4096       True   0.3200       2232       2375   0.9397895   0.9406066   1.0206140   0.8839722  1.3523e-01   0.9400509   1.0208977
+         8192      False   0.6400       4464       4751   0.9395917   0.9400000   0.9791667   0.8832162  1.8294e-02   0.9400509   0.9796492
+        16384       True   0.2800       8929       9502   0.9396969   0.9399011   0.9592856   0.8832221  6.8699e-03   0.9400509   0.9596500
+        65536       True   0.1200      35717      38010   0.9396738   0.9397248   0.9445338   0.8830347  3.2610e-03   0.9400509   0.9449138
+       262144       True   0.4800     142868     152043   0.9396552   0.9396680   0.9408679   0.8829639  2.7031e-03   0.9400509   0.9412643
+      1048576       True   0.9200     571473     608174   0.9396538   0.9396570   0.9399568   0.8829522  2.5801e-03   0.9400509   0.9403541
+      4194304       True   0.6800    2285895    2432696   0.9396550   0.9396558   0.9397308   0.8829523  2.5506e-03   0.9400509   0.9401267
+     16777216       True   0.7200    9143582    9730785   0.9396551   0.9396553   0.9396741   0.8829519  2.5433e-03   0.9400509   0.9400698
+     67108864       True   0.8800   36574330   38923141   0.9396552   0.9396552   0.9396599   0.8829519  2.5414e-03   0.9400509   0.9400556
+    exact factor: violations of f_j(N) <= f_j(N_A) at N in [] (0 (N,j) pairs); NONE
+    majorant factor: violations of g_j(N) <= g_j(N_A): 0 (expected 0: d/dN g_j = -(a+b) j/(bN-j)^2 <= 0, = 0 for j = 0)
+    sup_(admissible N <= 2^26) P_1(N) = 0.9397895 at N = 4096; limit a/(c-1) = 0.9396552; uniform bound a/b = 0.9400509; script's theta = 0.93978947
+    => script theta is a valid uniform bound for P_1 over N >= N_A: not contradicted; corrected theta = 0.94005087 >= a/b >= P_1(N) for all N >= N_A: True
+
+  c = 197/125
+            N admissible    delta        A_0        R_0     f_0=P_1         f_1        f_95         P_2        P_96     g_0=a/b        g_95
+         4096       True   0.7040       2248       2359   0.9529462   0.9537744   1.0348940   0.9088956  5.1329e-01   0.9535292   1.0355269
+         8192      False   0.4080       4497       4718   0.9531581   0.9535722   0.9932944   0.9089051  7.2400e-02   0.9535292   0.9936853
+        16384       True   0.8160       8994       9437   0.9530571   0.9532641   0.9729180   0.9085151  2.6632e-02   0.9535292   0.9734030
+        65536       True   0.2640      35979      37748   0.9531366   0.9531883   0.9580644   0.9085187  1.2776e-02   0.9535292   0.9584600
+       262144       True   0.0560     143917     150994   0.9531306   0.9531435   0.9543602   0.9084702  1.0605e-02   0.9535292   0.9547595
+      1048576       True   0.2240     575668     603979   0.9531259   0.9531291   0.9534331   0.9084520  1.0119e-02   0.9535292   0.9538366
+      4194304       True   0.8960    2302672    2415919   0.9531247   0.9531255   0.9532015   0.9084474  1.0001e-02   0.9535292   0.9536060
+     16777216       True   0.5840    9210691    9663676   0.9531250   0.9531252   0.9531442   0.9084474  9.9725e-03   0.9535292   0.9535484
+     67108864       True   0.3360   36842766   38654705   0.9531250   0.9531251   0.9531298   0.9084473  9.9653e-03   0.9535292   0.9535340
+    exact factor: violations of f_j(N) <= f_j(N_A) at N in [8192, 16384, 65536, 262144, 1048576, 4194304, 16777216, 67108864] (8 (N,j) pairs)
+      largest excess: N = 8192, j = 0: f_j(N) - f_j(N_A) = 2.120e-04
+      P_1(N) > P_1(N_A) = 0.9529462 at: [(8192, 0.9531581), (16384, 0.9530571), (65536, 0.9531366), (262144, 0.9531306), (1048576, 0.9531259), (4194304, 0.9531247), (16777216, 0.953125), (67108864, 0.953125)]
+    majorant factor: violations of g_j(N) <= g_j(N_A): 0 (expected 0: d/dN g_j = -(a+b) j/(bN-j)^2 <= 0, = 0 for j = 0)
+    sup_(admissible N <= 2^26) P_1(N) = 0.9531366 at N = 65536; limit a/(c-1) = 0.9531250; uniform bound a/b = 0.9535292; script's theta = 0.95294616
+    => script theta is a valid uniform bound for P_1 over N >= N_A: NO (exceeded by the exact P_1 at a larger admissible N and/or by the limit a/(c-1)); corrected theta = 0.95352916 >= a/b >= P_1(N) for all N >= N_A: True
+
+  c = 203/128
+            N admissible    delta        A_0        R_0     f_0=P_1         f_1        f_95         P_2        P_96     g_0=a/b        g_95
+         4096       True   0.0000       2208       2399   0.9203835   0.9211843   0.9995660   0.8478428  1.8279e-02   0.9203835   0.9995660
+         8192      False   0.0000       4416       4799   0.9201917   0.9205919   0.9589711   0.8471210  2.4718e-03   0.9203835   0.9591750
+        16384       True   0.0000       8832       9599   0.9200958   0.9202959   0.9392887   0.8467604  9.0865e-04   0.9203835   0.9395853
+        65536       True   0.0000      35328      38399   0.9200240   0.9200740   0.9247859   0.8464901  4.2888e-04   0.9203835   0.9251482
+       262144       True   0.0000     141312     153599   0.9200060   0.9200185   0.9211942   0.8464225  3.5548e-04   0.9203835   0.9215725
+      1048576       True   0.0000     565248     614399   0.9200015   0.9200046   0.9202984   0.8464056  3.3918e-04   0.9203835   0.9206806
+      4194304       True   0.0000    2260992    2457599   0.9200004   0.9200012   0.9200746   0.8464014  3.3522e-04   0.9203835   0.9204578
+     16777216       True   0.0000    9043968    9830399   0.9200001   0.9200003   0.9200186   0.8464004  3.3424e-04   0.9203835   0.9204021
+     67108864       True   0.0000   36175872   39321599   0.9200000   0.9200001   0.9200047   0.8464001  3.3399e-04   0.9203835   0.9203881
+    exact factor: violations of f_j(N) <= f_j(N_A) at N in [] (0 (N,j) pairs); NONE
+    majorant factor: violations of g_j(N) <= g_j(N_A): 0 (expected 0: d/dN g_j = -(a+b) j/(bN-j)^2 <= 0, = 0 for j = 0)
+    sup_(admissible N <= 2^26) P_1(N) = 0.9203835 at N = 4096; limit a/(c-1) = 0.9200000; uniform bound a/b = 0.9203835; script's theta = 0.92038349
+    => script theta is a valid uniform bound for P_1 over N >= N_A: not contradicted; corrected theta = 0.92038349 >= a/b >= P_1(N) for all N >= N_A: True
+
+  c = 159/100 (= 1.59)
+            N admissible    delta        A_0        R_0     f_0=P_1         f_1        f_95         P_2        P_96     g_0=a/b        g_95
+         4096       True   0.3600       2191       2416   0.9068709   0.9076605   0.9849203   0.8231308  4.4269e-03   0.9071550   0.9852282
+         8192      False   0.7200       4382       4833   0.9066832   0.9070778   0.9449135   0.8224322  5.9829e-04   0.9071550   0.9454086
+        16384       True   0.4400       8765       9666   0.9067867   0.9069840   0.9257131   0.8224410  2.2448e-04   0.9071550   0.9260919
+        65536       True   0.7600      35061      38666   0.9067656   0.9068149   0.9114620   0.8222686  1.0647e-04   0.9071550   0.9118543
+       262144       True   0.0400     140247     154664   0.9067850   0.9067974   0.9079570   0.8222703  8.8581e-05   0.9071550   0.9083277
+      1048576       True   0.1600     560988     618659   0.9067806   0.9067837   0.9070735   0.8222539  8.4517e-05   0.9071550   0.9074481
+      4194304       True   0.6400    2243952    2474639   0.9067795   0.9067803   0.9068527   0.8222498  8.3531e-05   0.9071550   0.9072283
+     16777216       True   0.5600    8975810    9898557   0.9067796   0.9067798   0.9067979   0.8222495  8.3289e-05   0.9071550   0.9071734
+     67108864       True   0.2400   35903242   39594229   0.9067797   0.9067797   0.9067842   0.8222494  8.3229e-05   0.9071550   0.9071596
+    exact factor: violations of f_j(N) <= f_j(N_A) at N in [] (0 (N,j) pairs); NONE
+    majorant factor: violations of g_j(N) <= g_j(N_A): 0 (expected 0: d/dN g_j = -(a+b) j/(bN-j)^2 <= 0, = 0 for j = 0)
+    sup_(admissible N <= 2^26) P_1(N) = 0.9068709 at N = 4096; limit a/(c-1) = 0.9067797; uniform bound a/b = 0.9071550; script's theta = 0.90687086
+    => script theta is a valid uniform bound for P_1 over N >= N_A: not contradicted; corrected theta = 0.90715504 >= a/b >= P_1(N) for all N >= N_A: True
+
+[4] Riemann-sum inequality log P_r(N) <= N I(r/N) (left sum of the increasing integrand log((a+s)/(b-s)))
+  c = 158/100: holds for all 1 <= r <= r_A at N in (4096, 16384, 65536): True; smallest slack N I(r/N) - log P_r = 0.000428387 at N = 65536, r = 1; majorant sum <= N I(r/N): True
+  c = 197/125: holds for all 1 <= r <= r_A at N in (4096, 16384, 65536): True; smallest slack N I(r/N) - log P_r = 0.000438933 at N = 65536, r = 1; majorant sum <= N I(r/N): True
+  c = 203/128: holds for all 1 <= r <= r_A at N in (4096, 16384, 65536): True; smallest slack N I(r/N) - log P_r = 0.000417891 at N = 65536, r = 1; majorant sum <= N I(r/N): True
+  c = 159/100 (= 1.59): holds for all 1 <= r <= r_A at N in (4096, 16384, 65536): True; smallest slack N I(r/N) - log P_r = 0.00045655 at N = 65536, r = 1; majorant sum <= N I(r/N): True
+  (direction: phi(s) = log((a+s)/(b-s)) is increasing, so (1/N) sum_{j<r} phi(j/N) <= int_0^{r/N} phi; CONFIRMED)
+
+[5] convexity of I and the chord bound I(tau) <= (tau/tau_1) I(tau_1) on (0, tau_1]
+  c = 158/100: I'' = 1/(a+tau) + 1/(b-tau) > 0 on [0, 3/128]: True (a = 0.5450, b - tau_1 = 0.5563); chord holds at tau = k/4096, k = 1..96: True (min slack 0.0 at tau = 3/128); I(3/128) = -0.0004717849; exp(I(tau_1)/tau_1) [chord at r = 1, valid for ALL r >= 1 and ALL N >= N_A] = 0.98007176
+  c = 197/125: I'' = 1/(a+tau) + 1/(b-tau) > 0 on [0, 3/128]: True (a = 0.5490, b - tau_1 = 0.5523); chord holds at tau = k/4096, k = 1..96: True (min slack 0.0 at tau = 3/128); I(3/128) = -0.00013831541; exp(I(tau_1)/tau_1) [chord at r = 1, valid for ALL r >= 1 and ALL N >= N_A] = 0.99411592
+  c = 203/128: I'' = 1/(a+tau) + 1/(b-tau) > 0 on [0, 3/128]: True (a = 0.5391, b - tau_1 = 0.5623); chord holds at tau = k/4096, k = 1..96: True (min slack 0.0 at tau = 3/128); I(3/128) = -0.00096687684; exp(I(tau_1)/tau_1) [chord at r = 1, valid for ALL r >= 1 and ALL N >= N_A] = 0.95958593
+  c = 159/100 (= 1.59): I'' = 1/(a+tau) + 1/(b-tau) > 0 on [0, 3/128]: True (a = 0.5350, b - tau_1 = 0.5663); chord holds at tau = k/4096, k = 1..96: True (min slack 0.0 at tau = 3/128); I(3/128) = -0.0013057416; exp(I(tau_1)/tau_1) [chord at r = 1, valid for ALL r >= 1 and ALL N >= N_A] = 0.94581183
+
+[6] where the exact-ratio lemma stops: root of I(3/128; c) = 0 (N_A = 4096) by bisection
+  I(3/128; c) < 0 iff c > 1.57434082031   (197/125 = 1.576 is above: True; 63/40 = 1.575 is below: False)
+  sanity: at c = 203/128 (crude threshold) I(3/128) = -0.000966877 < 0 and the crude theta_1 = 1.000434
+
+[7] reproduction of the derived script's printed theta values
+  c = 197/125: audit recomputation of the script's theta = 0.9529462; printed in .out: 0.952946; agree to 6 decimals: True
+  c = 158/100: audit recomputation of the script's theta = 0.9397895; printed in .out: 0.939789; agree to 6 decimals: True
+
+=== end of audit ===
