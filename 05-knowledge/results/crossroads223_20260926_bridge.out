@@ -1,0 +1,10 @@
+source_sha256 ab91260d1bf0452b2caac908b8373b75b7e36fa839900aaccda4e7567f14bc7f
+FINITE-EXACT universe: L=3..40, M=2..9; explicit endpoint rounding
+matrices 304 all_2x2_minors 60648 trace_power_checks 912
+direct bridge controls L=3..14; surviving words summed over widths 27274 rotated outputs 2443
+VERIFIED numerical trace/vector probes 304 1368
+largest spectral_lower / trace_probability 0.925186586292
+larger (L,M,log_trace_minus_L_log_mu) [(64, 6, 0.259393656), (128, 7, 0.333183446), (223, 8, 0.39410139), (256, 9, 0.31685615), (512, 11, 0.349893576), (1024, 13, 0.433833405)]
+exact peak trees with VERIFIED analytic-lower comparison [8, 9, 10, 11, 12, 13, 14, 15, 16]
+non-TP2 hostile detected; no inferred theorem from numerical probes
+PASS

@@ -1,0 +1,15 @@
+{"private_optima_checked": 1000, "first_source": 3, "last_source": 3999}
+{"incompatible_optimum_families_checked": 1000, "first_pair": [7, 11], "conflict_pair_index": 6}
+{"exact_cover_matching_audits": 299, "max_pair_index": 300}
+{"pair_index_limit": 112, "bad_source_policies": 56, "minimum_abandoned_optima": 14, "abandoned_fraction": "1/4"}
+{"pair_index_limit": 223, "bad_source_policies": 111, "minimum_abandoned_optima": 28, "abandoned_fraction": "28/111"}
+{"pair_index_limit": 1000, "bad_source_policies": 500, "minimum_abandoned_optima": 125, "abandoned_fraction": "1/4"}
+{"pair_index_limit": 10000, "bad_source_policies": 5000, "minimum_abandoned_optima": 1251, "abandoned_fraction": "1251/5000"}
+{"pair_index_limit": 1000000, "bad_source_policies": 500000, "minimum_abandoned_optima": 125000, "abandoned_fraction": "1/4"}
+{"first_source_outside_bad_class": 1133, "private_conflict_chain": [{"cost": "223/168", "pair": 112, "private_flip": 168, "private_path": [223, 335, 167], "source": 223, "v3_pair": 0}, {"cost": "335/252", "pair": 168, "private_flip": 252, "private_path": [335, 503, 251], "source": 335, "v3_pair": 1}, {"cost": "503/378", "pair": 252, "private_flip": 378, "private_path": [503, 755, 377], "source": 503, "v3_pair": 2}, {"cost": "755/567", "pair": 378, "private_flip": 567, "private_path": [755, 1133, 566], "source": 755, "v3_pair": 3}], "seed": 223}
+{"trace_pair_cutoff": 112, "source_normalizer": 224, "private_mean": 0.3264710277458583, "common_trace_mean": 0.3674320624486866, "asymptotic_private_mean": "1/3", "asymptotic_common_trace_mean": "3/8"}
+{"trace_pair_cutoff": 223, "source_normalizer": 446, "private_mean": 0.3278839733877033, "common_trace_mean": 0.3693187482869481, "asymptotic_private_mean": "1/3", "asymptotic_common_trace_mean": "3/8"}
+{"trace_pair_cutoff": 1000, "source_normalizer": 2000, "private_mean": 0.3322011960950016, "common_trace_mean": 0.3737434979970439, "asymptotic_private_mean": "1/3", "asymptotic_common_trace_mean": "3/8"}
+{"compatible_family_assignment": "epsilon_i=v3(i) mod2", "global_P2_hostile_source": 6, "hostile_path": [6, 9, 14]}
+ALL CHECKS PASSED
+NORMAL AND OPTIMIZED OUTPUTS IDENTICAL

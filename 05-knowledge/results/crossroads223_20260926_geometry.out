@@ -1,0 +1,122 @@
+SCRIPT_SHA256 bd16b080226f974315dee5876078a85d714cc89d1d2d62cef31a506e79b4a115
+FINITE UNIVERSE: all primes <=433, every nonzero sixth-power residue.
+PROJECTIVE_EMPTY [7, 31, 67, 79, 139, 223]
+TORUS_EMPTY [2, 5, 7, 13, 31, 61, 67, 79, 97, 139, 157, 223, 277]
+INDEPENDENT DIRECT CHART CONTROLS (p, projective points, torus points)
+2 3 0
+3 4 4
+5 6 0
+7 0 0
+31 0 0
+67 0 0
+79 0 0
+139 0 0
+223 0 0
+277 18 0
+397 738 720
+401 402 396
+433 414 396
+439 216 216
+CITED Hasse-Weil genus10 excludes projective emptiness for p>=401;
+exact squared margin at401: 1204
+boundary <=18; excludes torus emptiness for p>=439;
+exact squared margin at439: 2484
+ORDERS_223 {2: 37, 3: 222, 5: 222, 7: 37}
+FACTOR_2^37-1 616318177
+H_223 [1, 2, 4, 7, 8, 14, 15, 16, 17, 28, 30, 32, 33, 34, 41, 49, 56, 60, 64, 66, 68, 82, 98, 105, 112, 115, 119, 120, 128, 132, 136, 164, 169, 171, 196, 197, 210]
+SEXTIC_TRANSITION_COUNTS_223
+[5, 4, 7, 6, 8, 7]
+[4, 7, 5, 6, 7, 8]
+[9, 5, 4, 9, 5, 4]
+[5, 6, 7, 8, 4, 7]
+[4, 7, 6, 8, 7, 5]
+[9, 8, 8, 0, 6, 6]
+ONLY_FORBIDDEN_NONZERO_EDGE [(5, 3)]
+TWO_STEP_223_RETURN: impossible, since -3 notin H
+THREE_STEP_RETURN_INTERNAL_EXPONENTS_MOD37 [(10, 1), (15, 5), (21, 3), (19, 11), (8, 23), (24, 12), (9, 32)]
+EXHAUSTIVE positive compositions total halvings S<=9:
+S 1 return_words []
+S 2 return_words []
+S 3 return_words []
+S 4 return_words []
+S 5 return_words []
+S 6 return_words []
+S 7 return_words [((2, 3, 1, 1), 81, 128, 223, 46161, 29213)]
+S 8 return_words [((2, 3, 1, 2), 81, 256, 223, 17617, 5575)]
+S 9 return_words [((1, 1, 1, 1, 2, 1, 1, 1), 6561, 512, 6913, 14495, 185759), ((1, 1, 2, 1, 2, 1, 1), 2187, 512, 2899, 69799, 298151), ((2, 3, 1, 3), 81, 512, 223, 74705, 11819)]
+FIRST EXPANDING RETURN CONTROLS
+(1, 1, 1, 1, 2, 1, 1, 1) [14495, 21743, 32615, 48923, 73385, 55039, 82559, 123839, 185759]
+(1, 1, 2, 1, 2, 1, 1) [69799, 104699, 157049, 117787, 176681, 132511, 198767, 298151]
+RATIONAL_PLUS_CYCLE ['223/47', '179/47', '73/47', '133/47', '223/47']
+INTEGER_3n+47_CYCLE [223, 179, 73, 133, 223]
+CARRY223_DECODER_r1_to5 [(1, None), (2, None), (3, None), (4, (2, 3, 1)), (5, None)]
+SCOPE: local arithmetic-geometric classification and bounded return gate;
+neither orbit termination nor temporal equidistribution is proved.
+G2 HIGH-HEIGHT ROUND: gcd-free exact row space; rank modulo1000000007
+Both coordinate slots retained; first-slot sign torsion is sum(c) mod2.
+Full modular rank certifies rational independence regardless of torsion.
+GENERIC_NONCHRONOLOGICAL_HOSTILE [11, 43, 65, 253, 13, 23, 121, 215] (7, 6, 10)
+TRIVIAL_CYCLE_CONTROLS one_edge (1, 1, 2) two_laps (1, 1, 2)
+INJECTIVE_ORBIT27_CONTROL_NODES 42 TRANSITIONS 41 RANKS (41, 36, 37)
+RANK critical223return r 16 parameter 0 source_bits 35 pair 16 first 16 coprime_bases 23
+RANK critical223return r 16 parameter 1 source_bits 38 pair 16 first 16 coprime_bases 22
+RANK critical223return r 16 parameter 223 source_bits 45 pair 16 first 16 coprime_bases 23
+RANK critical223return r 16 parameter 18446744073709551839 source_bits 101 pair 16 first 16 coprime_bases 24
+RANK critical223return r 16 parameter 115792089237316195423570985008687907853269984665640564039457584007913129640159 source_bits 293 pair 16 first 16 coprime_bases 22
+RANK critical223return r 32 parameter 0 source_bits 65 pair 32 first 32 coprime_bases 42
+RANK critical223return r 32 parameter 1 source_bits 66 pair 32 first 32 coprime_bases 40
+RANK critical223return r 32 parameter 223 source_bits 73 pair 32 first 32 coprime_bases 44
+RANK critical223return r 32 parameter 18446744073709551839 source_bits 129 pair 32 first 32 coprime_bases 43
+RANK critical223return r 32 parameter 115792089237316195423570985008687907853269984665640564039457584007913129640159 source_bits 321 pair 32 first 32 coprime_bases 42
+RANK critical223return r 64 parameter 0 source_bits 121 pair 64 first 64 coprime_bases 85
+RANK critical223return r 64 parameter 1 source_bits 122 pair 64 first 64 coprime_bases 81
+RANK critical223return r 64 parameter 223 source_bits 129 pair 64 first 64 coprime_bases 82
+RANK critical223return r 64 parameter 18446744073709551839 source_bits 185 pair 64 first 64 coprime_bases 86
+RANK critical223return r 64 parameter 115792089237316195423570985008687907853269984665640564039457584007913129640159 source_bits 377 pair 64 first 64 coprime_bases 86
+RANK critical223return r 128 parameter 0 source_bits 232 pair 128 first 128 coprime_bases 155
+RANK critical223return r 128 parameter 1 source_bits 234 pair 128 first 128 coprime_bases 154
+RANK critical223return r 128 parameter 223 source_bits 241 pair 128 first 128 coprime_bases 157
+RANK critical223return r 128 parameter 18446744073709551839 source_bits 297 pair 128 first 128 coprime_bases 158
+RANK critical223return r 128 parameter 115792089237316195423570985008687907853269984665640564039457584007913129640159 source_bits 489 pair 128 first 128 coprime_bases 150
+RANK expanding223return r 16 parameter 0 source_bits 25 pair 16 first 16 coprime_bases 22
+RANK expanding223return r 16 parameter 1 source_bits 28 pair 16 first 16 coprime_bases 23
+RANK expanding223return r 16 parameter 223 source_bits 35 pair 16 first 16 coprime_bases 26
+RANK expanding223return r 16 parameter 18446744073709551839 source_bits 91 pair 16 first 16 coprime_bases 22
+RANK expanding223return r 16 parameter 115792089237316195423570985008687907853269984665640564039457584007913129640159 source_bits 283 pair 16 first 16 coprime_bases 25
+RANK expanding223return r 32 parameter 0 source_bits 45 pair 32 first 32 coprime_bases 45
+RANK expanding223return r 32 parameter 1 source_bits 46 pair 32 first 32 coprime_bases 46
+RANK expanding223return r 32 parameter 223 source_bits 53 pair 32 first 32 coprime_bases 45
+RANK expanding223return r 32 parameter 18446744073709551839 source_bits 109 pair 32 first 32 coprime_bases 44
+RANK expanding223return r 32 parameter 115792089237316195423570985008687907853269984665640564039457584007913129640159 source_bits 301 pair 32 first 32 coprime_bases 46
+RANK expanding223return r 64 parameter 0 source_bits 81 pair 64 first 64 coprime_bases 81
+RANK expanding223return r 64 parameter 1 source_bits 82 pair 64 first 64 coprime_bases 83
+RANK expanding223return r 64 parameter 223 source_bits 89 pair 64 first 64 coprime_bases 84
+RANK expanding223return r 64 parameter 18446744073709551839 source_bits 145 pair 64 first 64 coprime_bases 81
+RANK expanding223return r 64 parameter 115792089237316195423570985008687907853269984665640564039457584007913129640159 source_bits 337 pair 64 first 64 coprime_bases 84
+RANK expanding223return r 128 parameter 0 source_bits 152 pair 128 first 128 coprime_bases 161
+RANK expanding223return r 128 parameter 1 source_bits 154 pair 128 first 128 coprime_bases 160
+RANK expanding223return r 128 parameter 223 source_bits 161 pair 128 first 128 coprime_bases 159
+RANK expanding223return r 128 parameter 18446744073709551839 source_bits 217 pair 128 first 128 coprime_bases 154
+RANK expanding223return r 128 parameter 115792089237316195423570985008687907853269984665640564039457584007913129640159 source_bits 409 pair 128 first 128 coprime_bases 157
+RANK one_run r 32 parameter 0 source_bits 37 pair 32 first 32 coprime_bases 39
+RANK one_run r 32 parameter 1 source_bits 41 pair 32 first 32 coprime_bases 43
+RANK one_run r 32 parameter 223 source_bits 49 pair 32 first 32 coprime_bases 39
+RANK one_run r 32 parameter 18446744073709551839 source_bits 105 pair 32 first 32 coprime_bases 42
+RANK one_run r 32 parameter 115792089237316195423570985008687907853269984665640564039457584007913129640159 source_bits 297 pair 32 first 32 coprime_bases 43
+RANK one_run r 64 parameter 0 source_bits 72 pair 64 first 64 coprime_bases 76
+RANK one_run r 64 parameter 1 source_bits 74 pair 64 first 64 coprime_bases 76
+RANK one_run r 64 parameter 223 source_bits 81 pair 64 first 64 coprime_bases 77
+RANK one_run r 64 parameter 18446744073709551839 source_bits 137 pair 64 first 64 coprime_bases 81
+RANK one_run r 64 parameter 115792089237316195423570985008687907853269984665640564039457584007913129640159 source_bits 329 pair 64 first 64 coprime_bases 76
+RANK one_run r 128 parameter 0 source_bits 133 pair 128 first 128 coprime_bases 144
+RANK one_run r 128 parameter 1 source_bits 137 pair 128 first 128 coprime_bases 150
+RANK one_run r 128 parameter 223 source_bits 145 pair 128 first 128 coprime_bases 149
+RANK one_run r 128 parameter 18446744073709551839 source_bits 201 pair 128 first 128 coprime_bases 151
+RANK one_run r 128 parameter 115792089237316195423570985008687907853269984665640564039457584007913129640159 source_bits 393 pair 128 first 128 coprime_bases 155
+RANK one_run r 222 parameter 0 source_bits 230 pair 222 first 222 coprime_bases 256
+RANK one_run r 222 parameter 1 source_bits 232 pair 222 first 222 coprime_bases 258
+RANK one_run r 222 parameter 223 source_bits 239 pair 222 first 222 coprime_bases 258
+RANK one_run r 222 parameter 18446744073709551839 source_bits 295 pair 222 first 222 coprime_bases 256
+RANK one_run r 222 parameter 115792089237316195423570985008687907853269984665640564039457584007913129640159 source_bits 487 pair 222 first 222 coprime_bases 261
+FULL_RANK_CYLINDERS 60 MAX_NODE_BITS 617
+G2 remains OPEN; these cylinders do not exhaust possible trajectories.

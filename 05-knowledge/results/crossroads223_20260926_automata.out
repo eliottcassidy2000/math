@@ -1,0 +1,32 @@
+223 prime; 2^37-1=223*616318177; ord(2)=37; ord(3)=222; 2=3^180
+Paley covariance checks: 198024 ; even preserves, odd reverses, either sign
+Affine permutation classifications: 1530 (all words lengths 1..8; p=7,31,223)
+First resonance: (21, 6) ; expanding resonances through length 49: [(26, 18), (31, 30)]
+Carry histogram (21, 6) total 54264 zero 231 nonzero range (212, 272)
+Carry histogram (26, 18) total 1562275 zero 7735 nonzero range (6741, 7266)
+Primitive necklaces: zero 270 ; nonzero 59790
+All 715 imprimitive (26,18) words are doubled reflections, hence residue identities
+Fixed-point invariance under word powers: 3048 exact rational checks
+Explicit 1^18 0^8 control: source -77431669/64062325; (v223(C),v223(B-A))
+  before (0,1), after 223 repeats (1,2); finite residue return, same nonintegral source
+Positive controls: horizons 1..128; 37-zero false closure; genuine +3, -3, +5 cycles
+Q7 fixed-adversary exact certificates; level escape value sink_sizes cycle_length
+5 0 1/3 [13] 3
+5 1 3/7 [14] 7
+5 3 1/5 [13] 5
+5 7 1/3 [7] 6
+7 0 1/3 [40] 3
+7 1 2/9 [42] 9
+7 3 3/10 [48] 10
+7 7 1/4 [52] 4
+9 0 1/3 [196] 3
+9 1 4/15 [201] 15
+9 3 9/28 [199] 28
+9 7 1/4 [208] 24
+11 0 1/3 [877] 3
+11 1 8/27 [878] 27
+11 3 5/17 [886] 34
+11 7 11/37 [883] 37
+13 1 12/41 [2571] 41
+Level-7 escape witness in signed representatives: [-32, -16, -8, -4, -2, 63, -36, -18, -9]
+PASS: finite exact arithmetic only; no Collatz convergence claim
