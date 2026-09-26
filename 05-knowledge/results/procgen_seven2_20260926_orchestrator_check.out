@@ -1,0 +1,25 @@
+    q=7 k=8: rho* = 3/7: upper lfp in 18 sweeps (max 9), lower lfp in 10 sweeps (max 21)
+    q=7 k=9: rho* = 3/7: upper lfp in 19 sweeps (max 9), lower lfp in 11 sweeps (max 24)
+    q=7 k=10: rho* = 2/5: upper lfp in 38 sweeps (max 9), lower lfp in 10 sweeps (max 18)
+    q=7 k=11: rho* = 2/5: upper lfp in 44 sweeps (max 9), lower lfp in 13 sweeps (max 20)
+    q=7 k=12: rho* = 2/5: upper lfp in 55 sweeps (max 9), lower lfp in 15 sweeps (max 22)
+    q=7 k=13: rho* = 2/5: upper lfp in 53 sweeps (max 9), lower lfp in 40 sweeps (max 24)
+    q=7 k=14: rho* = 15/38: upper lfp in 347 sweeps (max 97), lower lfp in 47 sweeps (max 195)
+    q=7 k=15: rho* = 15/38: upper lfp in 348 sweeps (max 97), lower lfp in 48 sweeps (max 210)
+    q=7 k=16: rho* = 7/18: upper lfp in 248 sweeps (max 45), lower lfp in 50 sweeps (max 105)
+    q=7 k=17: rho* = 7/18: upper lfp in 206 sweeps (max 43), lower lfp in 60 sweeps (max 112)
+    q=7 k=18: rho* = 19/49: upper lfp in 845 sweeps (max 124), lower lfp in 61 sweeps (max 323)
+    q=7 k=19: rho* = 13/34: upper lfp in 679 sweeps (max 100), lower lfp in 135 sweeps (max 234)
+    q=7 k=20: rho* = 34/89: upper lfp in 2335 sweeps (max 300), lower lfp in 167 sweeps (max 646)
+    q=7 k=21: rho* = 8/21: upper lfp in 175 sweeps (max 46), lower lfp in 150 sweeps (max 160)
+  ok: independent game solver: rho*(7,k) equals the published values at every k = 8..21 (both least fixed points finite at F = rho*)
+  ok: q = 5: rho*(5,13) = rho*(5,14) = 5/12 > 2/5 and rho*(5,15) = rho*(5,16) = 2/5 exactly (both least fixed points finite): level 15 is needed
+  ok: the q = 7, k = 16 least Min potential is an exact Lemma G1 certificate for 7/18
+  ok: q = 5 explicit rule (46 flipped classes, disjoint, negation-closed): rho_max <= 2/5 at k = 15, 16, 17 and the periodic point 1 has density 2/5 (the sporadic cycle 1,3,8,4,2)
+  ok: q = 7 explicit rule (18 flipped classes): rho_max <= 2/5 at k = 10, 12, 14, 16; -9/17 is a periodic point of density (2, 5)
+  ok: the classes of 1/3 and -1/3 mod 32 are 11 and 21
+  ok: Lemma MH: rho_max(MH) <= 1/2 at k = 8, 12, 16 and a periodic point +-1/(q-4) of density 1/2, for q = 5, 7, 9, 11
+  ok: S_inf: exactly 2^n periodic points of period dividing n (n = 1..8, q = 5, 7), all with valuations 2 and |x| <= 1/(q-4)
+  ok: Lemma C(b): 5555 closed walks (length <= 9, k = 6, 7, random strategies, q = 7) each come from a rational periodic point with exactly the walk's residues
+  ok: Lemma F (q = 7): the valuation table and the gain classification hold on 100000 random 2-adic integers; the gaining pattern lies in classes 11, 21 mod 32
+  ok: Lemma F, q = 5 analogue (remark c): the valuation table holds on 100000 random 2-adic integers

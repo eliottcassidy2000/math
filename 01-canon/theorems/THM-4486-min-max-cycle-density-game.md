@@ -38,6 +38,13 @@ status: >
   k <= 18, or for any q >= 7 at k <= 11.
   OPEN: whether lim rho*(7,k) < log_7 2 (proved floor 1/3; at k = 22 still
   0.022 above); a floor above p0 valid for all q.
+  UPDATE 2026-09-26 (seven2 lane, THM-4508; orchestrator-audited): rho*(7,30) = 37/100
+  exactly and 7/19 <= rho*(7,31) <= 37/100, so 7n+-1 has no provable strategy at
+  any level k <= 31. Structure: parity-graph cycles = rational periodic points
+  (level-independent rules); max-halving skeleton S_inf; flip calculus; explicit
+  46-class 5n+-1 rule optimal at every k >= 15 (reproving the upper half of
+  Corollary 5 with one object). An independent numpy solver reproduces
+  rho*(7,k) for k = 8..21 and rho*(5,13..16).
   UPDATE 2026-09-26 (seven lane, procgen_seven_20260926_seven_n_plus_one_provability.md;
   orchestrator-audited):
   (Q) Theorem Q: rho*(9,k) >= 5/16 and rho*(11,k) >= 2/7 at every level,
