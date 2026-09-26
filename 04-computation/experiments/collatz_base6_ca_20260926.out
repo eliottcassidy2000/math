@@ -1,0 +1,12 @@
+radius 0: 1330105 inconsistencies over 200000 samples x 11 digits (0 means digit i of T(x) is a function of the neighbourhood and the parity bit)
+radius 1: 0 inconsistencies over 200000 samples x 11 digits (0 means digit i of T(x) is a function of the neighbourhood and the parity bit)
+radius 2: 0 inconsistencies over 200000 samples x 11 digits (0 means digit i of T(x) is a function of the neighbourhood and the parity bit)
+odd branch, interior digit i of (3x+1)/2 as a function of (x_(i-1), x_i, x_(i+1)): 216 of 216 neighbourhoods seen
+   depends on the lower digit x_(i-1): True; on the upper digit x_(i+1): True
+   rule for x_i = 0..5 with x_(i-1) = 0 and x_(i+1) = 0..5 (rows x_i, columns x_(i+1)):
+     x_i=0: 0 3 0 3 0 3
+     x_i=1: 1 4 1 4 1 4
+     x_i=2: 3 0 3 0 3 0
+     x_i=3: 4 1 4 1 4 1
+     x_i=4: 0 3 0 3 0 3
+     x_i=5: 1 4 1 4 1 4

@@ -85,3 +85,11 @@ most `C (log X)^mu` times the number of future-minimum records inside it,
 plus `O(log X)`. The finite-segment reading is refuted by the hover/drop
 segments above; the whole-orbit form remains OPEN, and every residue-class
 count is blind to it.
+
+**Shell form (opus, collatz-oscillation-20260926, 2026-09-26).** By THM-4506's
+shell lemma the averaged hypothesis is equivalent to: an orbit revisits one
+dyadic shell `(2^D y, 2^(D+1) y]` within a window of length `log_2 X`, before
+leaving it downward by `2^D`, at most `C L^mu` times on average over the
+elements below `X 2^(-D)`; equivalently `N(X) <= (C L^mu + 1) N(X 2^(-D)) + #ND(X, D) + C L^2`.
+Probes (`collatz_oscillation_20260926_shells.py`): mean multiplicity `2`-`6`,
+heaviest landing points `4`-`13` returns to one shell, scale ratios `1.0`-`2.4`.

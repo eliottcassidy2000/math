@@ -1,0 +1,21 @@
+primes below 200000: 17984; rows computed: 17983
+leading entry == 1 in every row: True
+   row      1: frontier F =       3  (first entry >= 4), max entry = 86
+   row      2: frontier F =       8  (first entry >= 4), max entry = 82
+   row      5: frontier F =      25  (first entry >= 4), max entry = 68
+   row     10: frontier F =      59  (first entry >= 4), max entry = 60
+   row     50: frontier F =    2763  (first entry >= 4), max entry = 12
+   row    100: frontier F =   17884  (first entry >= 4), max entry = 2
+   row    500: frontier F =   17484  (first entry >= 4), max entry = 2
+   row   1000: frontier F =   16984  (first entry >= 4), max entry = 2
+   row   5000: frontier F =   12984  (first entry >= 4), max entry = 2
+   row  10000: frontier F =    7984  (first entry >= 4), max entry = 2
+   row  17000: frontier F =     984  (first entry >= 4), max entry = 2
+   min frontier over rows 100..17983: 1 at row 17983; the leading 1 is protected for F more rows by Odlyzko's argument
+maximal inverted zero triangles (bordered by 2s) in rows 1..6000, columns < 160: size -> count
+   1:118983  2:59228  3:29388  4:14652  5:7326  6:3603  7:1774  8:867  9:421  10:214  11:110  12:57  13:32  14:13  15:2
+   sizes that occur: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]; of the form 2^k - 1: [1, 3, 7, 15]
+defects at the frontier (rows < 3000, columns < 160): size -> (count, mean start distance F, mean travel before dropping below 4, max travel)
+    4: (  11,   48.6,  0.18,   1)
+    6: (   1,   23.0,  1.00,   1)
+    8: (   2,   24.5,  2.50,   3)

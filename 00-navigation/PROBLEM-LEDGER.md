@@ -318,6 +318,14 @@ all heights (THM-1289, published), δ ineffective.
   positive-multiplier posets (THM-4503) have varying finite balance constants;
   no uniform1/2 theorem is proved. THM-4507 excludes arbitrary nonlinear
   finite polynomial-valuation corrections to globally decreasing log height.
+  posets (THM-4503) have balance constant `1/2`.
+  **Shell form (opus, 2026-09-26):** HYP-9161's averaged form is the statement
+  that an orbit revisits one dyadic shell within a window at most `C L^mu`
+  times on average (equivalently `N(X) <= (C L^mu + 1) N(X/L^1.05) + #ND + C L^2`);
+  probes give `mu = 0` with small constants. Gilbreath's conjecture is the
+  same one-sided binomial tail at threshold `0` (defects die in `0`-`3`
+  rows); the difficulty is dual (initial data versus rule) and neither
+  conjecture reduces to the other.
 - **Erdős Problem 592** [DEEP — $1000 problem] — the p=2 Schur-seam theorem (THM-469),
   R(n,2)=2n+1 linear conjecture, Chang-tower m=3 open; 21 scripts, a survey draft.
 - **{7,21} forbidden H-spectrum** [DEEP, repo-signature] — permanent exclusions by
