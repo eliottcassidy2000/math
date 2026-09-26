@@ -2,7 +2,11 @@
 id: HYP-9160
 title: "No slow divergence: every divergent Syracuse orbit has summable reciprocals, equivalently the real and 2-adic values of the Bernstein series of a non-periodic word never coincide at a positive integer"
 status: >
-  OPEN HYPOTHESIS. Let m_0 = n, m_(l+1) = (3 m_l + b)/2^(v_(l+1)), b = +-1,
+  SETTLED: PROVED by THM-4476 (thin divergence, 2026-09-25, same session):
+  every non-eventually-periodic orbit has at most C X^(h*+eps) elements
+  below X, so its reciprocal sum converges on both sheets and for all
+  rational orbits with odd denominators. The original statement follows.
+  Original text of the hypothesis: Let m_0 = n, m_(l+1) = (3 m_l + b)/2^(v_(l+1)), b = +-1,
   be a Syracuse orbit on either sheet and of either sign, with halving word
   d_L = v_1 + ... + v_L. Proposition 6 of the companion note gives the exact
   identity m_L 2^(d_L)/3^L = n prod_(l<L) (1 + b/(3 m_l)) and the real
@@ -28,6 +32,12 @@ related:
 ---
 
 # HYP-9160 -- no slow divergence (real and 2-adic values never coincide off periodic words)
+
+**SETTLED 2026-09-25.** Proved as Corollaries 1-2 of
+[THM-4476](../../01-canon/theorems/THM-4476-thin-divergent-orbits-reciprocal-sums-finite.md):
+every divergent orbit is thin (`N(X) = O(X^(0.95+eps))`), hence full-rate,
+and `R(d) < n` strictly on the minus sheet. The text below is the original
+hypothesis, kept for provenance.
 
 **Refutation form.** A divergent Syracuse orbit (on `3n+1` or `3n-1`, of
 either sign) whose odd iterates satisfy `sum_l 1/m_l = infinity`; for example

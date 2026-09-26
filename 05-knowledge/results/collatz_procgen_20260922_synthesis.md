@@ -31,7 +31,7 @@ Althöfer's game remain OPEN.**
 
 **Wave 11 (2026-09-25), summarized in section 2i.** **THM-4474**: in the strategy cube, bounded-lookahead provability holds iff every parity-graph cycle has odd density `< log_3 2`. Collatz's window is `[0,1]` at every level, and the OPEN fraction is about 0.435, which is the random-sign no-extra-cycle probability. **THM-4475** (HYP-9136 PROVED): explicit provable trees exist at flip density `<= 2^(1-0.05L)`; the sharp exponent is HYP-9137, and the cube analogue is HYP-9138. Cycle-gate equidistribution fails off the critical line, and a sheet-aware random model repairs the heuristic.
 
-**Wave 12 (2026-09-25, opus session), summarized in section 2j.** The owner's seed "multiplication : squares :: addition : doubles" was run as a transport axis (128 cells, 47 cards). PROVED: the parity graph mod `2^k` is the `+-sqrt` graph on `F_p^*` for Fermat primes; the multiplicative Collatz `sqrt X / rad(X) X^3` is Collatz on the diagonal `m^e` and divergent off it; `chi_{-4}` is the unique level-2 provable strategy; the orbitwise two-place identity `m_L 2^(d_L)/3^L = n prod(1 + b/(3 m_l))` gives `R(d) <= n` on every `3n-1` orbit. **HYP-9160** (no slow divergence) is the one statement it leaves open; no new mechanism.
+**Wave 12 (2026-09-25, opus session), summarized in section 2j.** The owner's seed "multiplication : squares :: addition : doubles" was run as a transport axis (128 cells, 47 cards). PROVED: the parity graph mod `2^k` is the `+-sqrt` graph on `F_p^*` for Fermat primes; the multiplicative Collatz `sqrt X / rad(X) X^3` is Collatz on the diagonal `m^e` and divergent off it; `chi_{-4}` is the unique level-2 provable strategy; the orbitwise two-place identity `m_L 2^(d_L)/3^L = n prod(1 + b/(3 m_l))` gives `R(d) <= n` on every `3n-1` orbit. **HYP-9160** (no slow divergence) was then PROVED by **THM-4476** (thin divergence: every non-periodic orbit has `O(X^(0.95+eps))` elements below `X`; Terras count plus a landing pigeonhole), which also recovers the in-house no-bounded-strip theorem and gives `R(d) < n` strictly; still no divergence exclusion.
 
 **Wave 10 (2026-09-25), summarized in section 2h.** Codex's incoming work was audited (20 checks, no errors), and the square-sum graph turns out to be planar iff `N ≤ 24`, a Kuratowski event at 25. Kohl's Collatz group is a Tait-coloured graph: its Kempe chains are the doubling orbits and the rising runs, and its only closed chain is `{−1, −2}`. In the strategy square, Collatz is the only open corner among four sign strategies. The exact triple shape is Tutte's "dual pair + self-dual" `{F_7, F_7*, U_{2,4}}`. Natural boundary is KNOWN (Bell–Lagarias 2015); the Mahler/harmonic bridges are blocked by the controls.
 
@@ -692,6 +692,18 @@ GM-fairness, heights, sums of squares) against eight Collatz ingredients:
   `sum 1/m_l < infinity`; equivalently the real and 2-adic values of a
   non-periodic word never coincide at a positive integer. It isolates the
   only corner of the divergence half where the real place gives an equality.
+* **THM-4476 (PROVED, same session, after the owner asked for HYP-9160 at
+  discrepancy `O(log l)`).** Thin divergence: every non-eventually-periodic
+  orbit of `x -> x/2, (3x+b)/2` (`b` odd) has at most `C X^(h*+eps)` elements
+  below `X`, `h* = h(log_3 2) = 0.95`, uniformly. Proof: Terras's class
+  count (no-dip words have at least `rho k` odd letters) plus a pigeonhole
+  (a dipping point lands on the same orbit below `X^(1-theta)`), then a
+  bootstrap. Consequences: HYP-9160 holds on both sheets and for rationals;
+  every divergent orbit is full-rate; `R(d) < n` strictly; `m_j > j^a`
+  infinitely often for `a < 1.05268`; the in-house no-bounded-strip theorem
+  is recovered and extended to log-bands `C < 0.02634`; all THM-4474
+  strategies. Not a divergence exclusion. See
+  [thin divergence](collatz_thin_20260925_thin_divergent_orbits.md).
 * **Verdict.** No winning reframe in the sense of a proof route. The
   transport axis produced one exact reformulation, one hypothesis of the
   right size, one exact model, one new object with a theorem, and residue

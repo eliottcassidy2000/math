@@ -291,6 +291,8 @@ that is sheet-, drift- and defect-aware, which is why it is ranked first.
 
 ### HYP-9160 (no slow divergence; the real and 2-adic values never coincide off periodic words)
 
+**Update, later the same day: PROVED as [THM-4476](../../01-canon/theorems/THM-4476-thin-divergent-orbits-reciprocal-sums-finite.md)** (thin divergence: `N(X) = O(X^(0.95+eps))` for every non-periodic orbit; see [the thin-divergence note](collatz_thin_20260925_thin_divergent_orbits.md)). The text below is the original formulation.
+
 **Statement.** Every divergent Syracuse orbit, on either sheet and of either
 sign, has `sum_l 1/m_l < infinity`. Equivalently on the minus sheet: for a
 word `d` that is not eventually periodic, the real value `R(d)` and the

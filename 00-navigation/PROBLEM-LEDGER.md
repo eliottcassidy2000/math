@@ -277,7 +277,12 @@ all heights (THM-1289, published), δ ineffective.
   giving `R(d) <= n` on every `3n-1` orbit and HYP-9160 (no slow
   divergence). The parity graph mod `2^16` is the `+-sqrt` graph on
   `F_65537^*`; the multiplicative Collatz `sqrt X / rad(X) X^3` is Collatz on
-  the diagonal `m^e` and provably divergent off it.
+  the diagonal `m^e` and provably divergent off it. **THM-4476 (thin
+  divergence, PROVED):** every non-eventually-periodic orbit of
+  `x -> x/2, (3x+b)/2`, `b` odd, has `O(X^(0.95+eps))` elements below `X`
+  (Terras count plus a landing pigeonhole), so HYP-9160 holds: divergent
+  orbits are full-rate, `R(d) < n` strictly, no bounded strip or narrow
+  log-band; divergent orbits are not excluded.
 - **Erdős Problem 592** [DEEP — $1000 problem] — the p=2 Schur-seam theorem (THM-469),
   R(n,2)=2n+1 linear conjecture, Chang-tower m=3 open; 21 scripts, a survey draft.
 - **{7,21} forbidden H-spectrum** [DEEP, repo-signature] — permanent exclusions by
