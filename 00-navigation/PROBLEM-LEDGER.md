@@ -283,6 +283,12 @@ all heights (THM-1289, published), δ ineffective.
   (Terras count plus a landing pigeonhole), so HYP-9160 holds: divergent
   orbits are full-rate, `R(d) < n` strictly, no bounded strip or narrow
   log-band; divergent orbits are not excluded.
+  **THM-4487 (dip spectrum, PROVED):** `#{n <= X : T^i(n) >= n^gamma, i <= log_2 n}`
+  has exponent `h(gamma/log_2 3)` for `gamma in (log_4 3, 1]` (Terras at `1`,
+  Korec at `log_4 3`), and THM-4476's counting lemma is sharp, so its
+  exponent `0.95` is optimal for that method; the Collatz constants `0.95,
+  0.05, 0.7925, 0.2075, 0.488, 1.0527` lie on one entropy curve
+  ([atlas](../05-knowledge/results/constants_atlas_20260926_recurrent_numbers.md)).
 - **Erdős Problem 592** [DEEP — $1000 problem] — the p=2 Schur-seam theorem (THM-469),
   R(n,2)=2n+1 linear conjecture, Chang-tower m=3 open; 21 scripts, a survey draft.
 - **{7,21} forbidden H-spectrum** [DEEP, repo-signature] — permanent exclusions by

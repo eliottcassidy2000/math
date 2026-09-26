@@ -1,5 +1,9 @@
 # Script Results Index
 
+- [The dip spectrum of 3n±1: no dip below n^γ within log₂n steps has exponent h(γ/log₂3); THM-4476's exponent is sharp for its lemma](collatz_dipspectrum_20260926_entropy_curve.md): **PROVED elementary (THM-4487) + FINITE-EXACT to `2^24`; Collatz OPEN.** For `gamma in (log_4 3, 1]`, `#{n <= X: T^i(n) >= n^gamma, i <= log_2 n} = X^(h(gamma/log_2 3)+o(1))` on both sheets (Terras count up, cycle-lemma rotation down); exponent `1` below Korec's `log_4 3`. The no-dip set of THM-4476 has size `X^(h(rho)+o(1))`, so `h(log_3 2)` is optimal for that dichotomy. One curve `E(gamma) = h(max(1/2, gamma/log_2 3))` carries `0.95, 0.05, 0.7925, 0.2075, 0.488, 1.0527`. Records the trap `0.7737` vs `0.7735`.
+
+- [Recurrent numbers across the repository: a typed atlas](constants_atlas_20260926_recurrent_numbers.md): **CENSUS (9,437 files, 291 constants in >= 4 threads) + TYPED VERDICTS; one PROVED unification (THM-4487).** Structural within one problem: the entropy curve of `3n±1`, the golden family of AMM 12592, the LRC rational ladder. Transported by an existing map: Paley `T_7` = Sylvester core (`189`). Small-number coincidences typed as such: `139`, `189`, `168`, `1093 = (3^7-1)/2` (Wieferich, `= 1 mod 13` by an identity), `13`, `507`, `2187`, `1807`. One untested lead: `log_2 3` lies in the AMM window `[1.377, 1.59]`. Scripts `constants_atlas_20260926_{mine,context}.py`.
+
 - [The min-max cycle density of sign strategies: a game, the negative-integer adversary, and 5n+1 settled](procgen_floor_20260926_density_floor.md):
   **PROVED (THM-4486, audited) / FINITE-EXACT / REFUTED.** `rho*(q,k)` is a mean-payoff game value with exact certificates (to `k = 22`).
   * Every sign strategy has a cycle of density `>= log_(q+1) 2`. The adversary plays the negative integers; at `q = 3` this is the pin `1/2`.

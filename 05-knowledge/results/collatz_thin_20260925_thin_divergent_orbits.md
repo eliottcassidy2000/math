@@ -500,6 +500,7 @@ Further controls (`collatz_thin_20260925_controls2.py` / `.out`):
 1. The exponent: is `N(X) = O(X^(h*+eps))` sharp for some map in the
    family, or can a second constraint (the windows of one orbit are shifts
    of one sequence) lower it?
+   **Update 2026-09-26 (THM-4487):** the counting lemma is sharp, `#F_b(X, theta) = X^(h(rho)+o(1))`, so no improvement of the lemma lowers `h*`; a second constraint would have to reach beyond one `log_2 X` window.
 2. The union question: bound `#{n <= X : the orbit of n diverges}`. The
    branching of the inverse tree defeats the pigeonhole; Krasikov–Lagarias
    difference inequalities are the natural tool.

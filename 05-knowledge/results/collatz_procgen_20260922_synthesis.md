@@ -718,6 +718,7 @@ GM-fairness, heights, sums of squares) against eight Collatz ingredients:
   `a < 1.05268`. Not for non-constant sign strategies (`-chi_(-4)` is the
   witness: the parity map is not a bijection). Not a divergence exclusion. See
   [thin divergence](collatz_thin_20260925_thin_divergent_orbits.md).
+* **THM-4487 (2026-09-26, opus).** The dip spectrum: `#{n <= X : T^i(n) >= n^gamma, i <= log_2 n} = X^(h(gamma/log_2 3)+o(1))` for `gamma in (log_4 3, 1]`, exponent `1` below Korec's `log_4 3`; THM-4476's no-dip count is sharp (`X^(h(rho)+o(1))`), so `0.95` is optimal for its dichotomy and the frontier item 1 of the thin-divergence note is settled for the method. The constants `0.95, 0.05, 0.7925, 0.2075, 0.488, 1.0527` are one curve; the repo-wide census of recurrent numbers is typed in [the atlas](constants_atlas_20260926_recurrent_numbers.md).
 * **Verdict.** No winning reframe in the sense of a proof route. The
   transport axis produced one exact reformulation, one hypothesis of the
   right size, one exact model, one new object with a theorem, and residue
