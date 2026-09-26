@@ -1,0 +1,16 @@
+EXACT: ballot DP to 512; brute binary words to 16; Spitzer to 128
+h (display approximation only): 0.949955527188
+block 8 W 19 dimension approx 0.530990939180
+block 16 W 2114 dimension approx 0.690359978836
+block 32 W 41347483 dimension approx 0.790665505412
+block 64 W 27542195013871668 dimension approx 0.853320204060
+block 128 W 23744222584883638495407855640356220 dimension approx 0.892133841778
+block 256 W 37933744616918826336506027646167154052909131283110018145640477926649259 dimension approx 0.915853314203
+block 512 W 216575877842068579252774563873376110060670600279372676877936670935168739015965096487919664140901867108237457933687104032378773550823354554447547 dimension approx 0.929981621355
+EXACT: inverse residues, negative periodic points and block concatenation; 51 words
+two-place 10 real approx -1.410472658301 2-adic agreement bits 10 positive inverse orbit 139
+two-place 20 real approx -1.432894857958 2-adic agreement bits 21 positive inverse orbit 8090
+two-place 40 real approx -1.433405655091 2-adic agreement bits 40 positive inverse orbit 26906975
+two-place 80 real approx -1.433405754327 2-adic agreement bits 81 positive inverse orbit 297519376459246
+EXACT: two-loop IFS partitions every dyadic quotient through 2^12
+PASS. Scope: cover counts and exact controls, not positive-integer exclusion.

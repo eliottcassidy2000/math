@@ -1,0 +1,48 @@
+S1. Independent Hamiltonian census through25, paths up to reversal
+1 paths 1 leaves [] endpoints [(1, 1)]
+2 paths 0 leaves [] endpoints []
+3 paths 0 leaves [1, 3] endpoints []
+4 paths 0 leaves [1, 3] endpoints []
+5 paths 0 leaves [1, 3, 4, 5] endpoints []
+6 paths 0 leaves [1, 4, 5, 6] endpoints []
+7 paths 0 leaves [1, 2, 4, 5, 6, 7] endpoints []
+8 paths 0 leaves [2, 4, 5, 6, 7, 8] endpoints []
+9 paths 0 leaves [2, 4, 5, 6, 8, 9] endpoints []
+10 paths 0 leaves [2, 4, 5, 8, 9, 10] endpoints []
+11 paths 0 leaves [2, 4, 8, 9, 10, 11] endpoints []
+12 paths 0 leaves [2, 8, 9, 10, 11, 12] endpoints []
+13 paths 0 leaves [2, 8, 9, 10, 11] endpoints []
+14 paths 0 leaves [8, 9, 10] endpoints []
+15 paths 1 leaves [8, 9] endpoints [(8, 9)]
+16 paths 1 leaves [8, 16] endpoints [(8, 16)]
+17 paths 1 leaves [16, 17] endpoints [(16, 17)]
+18 paths 0 leaves [16, 17, 18] endpoints []
+19 paths 0 leaves [16, 18] endpoints []
+20 paths 0 leaves [18] endpoints []
+21 paths 0 leaves [18] endpoints []
+22 paths 0 leaves [18] endpoints []
+23 paths 3 leaves [18] endpoints [(2, 18), (9, 18), (18, 22)]
+24 paths 0 leaves [18] endpoints []
+25 paths 10 leaves [18] endpoints [(2, 18), (3, 18), (4, 18), (8, 18), (9, 18), (10, 18), (11, 18), (13, 18), (18, 22), (18, 23)]
+Q15 path (8, 1, 15, 10, 6, 3, 13, 12, 4, 5, 11, 14, 2, 7, 9)
+Q23 degree2 endpoint hostile (18, 7, 9, 16, 20, 5, 11, 14, 2, 23, 13, 12, 4, 21, 15, 10, 6, 19, 17, 8, 1, 3, 22)
+S2. Unicyclic classification, every labelled simple graph on3..6 vertices
+3 connected unicyclic labelled graphs 1
+4 connected unicyclic labelled graphs 15
+5 connected unicyclic labelled graphs 222
+6 connected unicyclic labelled graphs 3660
+unicyclic controls 3898
+S3. Triangle and C4 birth, exact induced universe Q1..Q46
+first triangle (30, [(6, 19, 30)])
+first C4 (46, [(1, 3, 46, 35)])
+complete equal-pair-sum bank for squares4..81 {85: [(4, 81), (36, 49)]}
+S4. First possible Hamiltonian-cycle two-edge switch, Q46
+cycle1 (1, 3, 33, 16, 9, 40, 24, 25, 39, 42, 22, 27, 37, 12, 13, 36, 28, 21, 43, 38, 11, 14, 35, 46, 18, 31, 5, 44, 20, 29, 7, 2, 34, 30, 6, 19, 45, 4, 32, 17, 8, 41, 23, 26, 10, 15)
+cycle2 (1, 35, 14, 11, 38, 43, 21, 28, 36, 13, 12, 37, 27, 22, 42, 39, 25, 24, 40, 9, 16, 33, 3, 46, 18, 31, 5, 44, 20, 29, 7, 2, 34, 30, 6, 19, 45, 4, 32, 17, 8, 41, 23, 26, 10, 15)
+removed [(1, 3), (35, 46)] added [(1, 35), (3, 46)]
+hostile exchange splits6-cycle into two triangles [(1, 5), (1, 6), (2, 3), (2, 4), (3, 4), (5, 6)]
+S5. Label-preserving affine lifts / signless-incidence kernel
+n, bipartite-component kernel dimension [(1, 1), (2, 2), (3, 2), (4, 3), (5, 3), (6, 3), (7, 3), (8, 3), (9, 3), (10, 3), (11, 3), (12, 3), (13, 2), (14, 1), (15, 0), (16, 0), (17, 0), (18, 0), (19, 0)]
+path square-scale4, alternating offset1 (33, 3, 61, 39, 25, 11, 53, 47, 17, 19, 45, 55, 9, 27, 37)
+unused edge1-3 has lifted sum14; original labelled scaled sum16
+ALL CHECKS PASSED
