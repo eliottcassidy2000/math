@@ -29,6 +29,8 @@ Althöfer's game remain OPEN.**
   * The smallest open instance is the explicit cube-swap word `Y3`,
     whose Bernstein number is a cubic 2-adic theta value (HYP-9127).
 
+**Wave 11 (2026-09-25), summarized in section 2i.** **THM-4474**: in the strategy cube, bounded-lookahead provability holds iff every parity-graph cycle has odd density `< log_3 2`. Collatz's window is `[0,1]` at every level, and the OPEN fraction is about 0.435, which is the random-sign no-extra-cycle probability. **THM-4475** (HYP-9136 PROVED): explicit provable trees exist at flip density `<= 2^(1-0.05L)`; the sharp exponent is HYP-9137, and the cube analogue is HYP-9138. Cycle-gate equidistribution fails off the critical line, and a sheet-aware random model repairs the heuristic.
+
 **Wave 10 (2026-09-25), summarized in section 2h.** Codex's incoming work was audited (20 checks, no errors), and the square-sum graph turns out to be planar iff `N ≤ 24`, a Kuratowski event at 25. Kohl's Collatz group is a Tait-coloured graph: its Kempe chains are the doubling orbits and the rising runs, and its only closed chain is `{−1, −2}`. In the strategy square, Collatz is the only open corner among four sign strategies. The exact triple shape is Tutte's "dual pair + self-dual" `{F_7, F_7*, U_{2,4}}`. Natural boundary is KNOWN (Bell–Lagarias 2015); the Mahler/harmonic bridges are blocked by the controls.
 
 **Wave 9 (2026-09-24), summarized in section 2g.** arXiv 2502.20642 (a claimed fixed-point proof of Collatz) is invalid (**THM-4471**): its general theorem fails on `x -> x+1`, and its table also "proves" `3n−1`. The owner's triangle sandwich is its Lemma 2.1, and the sign law is exactly the sandwich's two equality cases with `0` in the middle. The correct fixed-point theorem is Banach in `Z_2`: one gate per word, and 18 integral points for `p ≤ 24`. **THM-4472**: the owner's converse 4-tournaments are forward map versus inverse tree (time reversal), not the sheets. **THM-4473**: Collatz's digit chains are exact Markov laws (mod 10 entries `2^j/15`, `3 -> 5` certain, `9 -> 9 = 8/15`), unlike the vanishing prime-digit bias. Repunit primes are the prime fixed points of digit rotation, and `Q` has the new odd 2-cycle `{−1/5, 5/7}`.
@@ -611,6 +613,43 @@ Three lanes ran, each audited by the orchestrator.
 2. Collatz is literally a connectivity statement about a Tait-coloured cubic graph. Its Kempe chains are the doubling orbits and the rising runs, and the 2-adic point `−1` is the only closed chain.
 3. Every discrete ↔ continuous bridge tested is either already known (natural boundaries) or blind to a control (harmonic, tree and Mahler data).
 4. The creative frontier is where the three controls meet. The strategy square isolates Collatz as the one undecided corner among its nearest neighbours.
+
+## 2i. Wave 11 (2026-09-25): the exact boundary of provability
+
+Three lanes pursued proof angles suggested by wave 10. Each was audited by an independent re-implementation.
+
+**1. The strategy cube (THM-4474)** ([cube note](procgen_cube_20260925_strategy_cube.md)). This extends wave 10's mod-4 strategy square. Each strategy assigns a sign to the odd residues mod `2^k` (Althöfer's 3n±1 with the choice frozen into residues). All 65,814 strategies at levels 1–5 are classified, and three theorems are PROVED:
+* **(A)** A bounded-lookahead descent proof exists iff every cycle of the finite parity graph has odd density `< log_3 2`.
+* **(B)** A residue divergence proof exists iff some closed class has *all* cycles expanding.
+* **(C)** The drift, the quantity every heuristic uses, is sandwiched between the extreme cycle densities.
+
+What this gives:
+* Provability is a property of the extreme cycles, not of the average. Collatz has the maximal window `[0, 1]` at every level, from the loops at `0` and `−1`. So no residue argument of either kind exists, at any modulus.
+* Collatz's distance to the provable class, measured in flips, is `1, 2, 2, 4, 5, 9, 14, 23` for `k = 2..9` (Haar 0.5 → 0.09). Whether it tends to 0 is HYP-9138.
+* **Macrocosm and microcosm.** The OPEN fraction stabilizes at about 0.435. That is exactly the probability of *no extra cycle* in the `k = ∞` random-sign model (extra-cycle counts `{0: 43.5%, 1: 47.6%, 2: 8.5%}`).
+  * In the macrocosm (drift, exceptional dimension, density window), random strategies converge to Collatz's values.
+  * The microcosm, the signs at the smallest integers, decides. 97.8% of the cycle witnesses have minimum `≤ 100`.
+  * So Collatz's cycle-free positive side is typical, not miraculous.
+
+**2. The price of provability (THM-4475; HYP-9136 PROVED)** ([price note](procgen_price_20260925_provability_price.md)).
+* **Construction.** For every `L ≥ 8`, an explicit greedy member of the pairing family descends within `L` steps and is a tree. Its flip density is at most `2ρ_L ≤ 2^(1−0.05L)`, where `ρ_L` is Collatz's undecided density. Each flip is paid for by one Collatz-undecided number; the only delicate rescue sits on the 2-adic neighbourhood of the cycle `−5 → −7 → −10`.
+* **Bounds.** The lower bound `2^(−0.774L)` is proved; the sharp exponent is HYP-9137.
+* **Collatz between two dense regions.** Collatz therefore sits at density zero from *divergent* members (THM-4470) and at density `2^(−0.05L)` from *provable* members.
+* **Audit.** The orchestrator's re-implementation, written from the prose alone, reproduces the flip densities exactly.
+
+**3. Cycle gates and equidistribution** ([gates note](procgen_gates_20260925_gate_equidistribution.md)).
+* **Census.** Exact censuses for `p ≤ 40` find only the known cycles of `3x±1` and `5x+1`.
+* **No equidistribution.** The residues `c_w mod (2^p − 3^a)` are not equidistributed off the critical line.
+* **The naive model fails.** The naive random model predicts `ln P + O(1)` positive cycles. The sheet-aware repair, which counts only cycles with least point `≥ 1`, matches all controls.
+* **Priority.** Polynomial per-clock bounds are classical (Belaga).
+* **Unresolved.** Two Belaga–Mignotte 3x+d counts are off by one.
+* **Ranking.** LOW as a proof angle, but a better heuristic.
+
+**What wave 11 adds.** The boundary of provability is now exact on two ladders, and both are governed by the same `0.95` exponent:
+* in the strategy cube, provability is decided by the extreme cycle densities (THM-4474);
+* in the pairing family, the price of provability is the undecided density `2^(−0.05L)` (THM-4475).
+
+Collatz sits exactly on that boundary. It has the widest possible window, it is approachable by provable trees at vanishing cost, and it is equally approachable by divergent ones.
 
 ## 2b. The approach deck: every approach generated or considered, with its disposition
 

@@ -2,15 +2,16 @@
 id: HYP-9136
 title: "The price of provable descent tends to zero: the minimal flip density delta_L of an L-step-descent pairing near Collatz tends to 0 as L grows"
 status: >
-  OPEN HYPOTHESIS (evidence only). In the pairing family of THM-4470, let
-  P_L be the members in which every n >= 3 falls below itself within L
-  steps. Such members are trees by strong induction. Let delta_L be the
-  least density of flipped pairs, relative to Collatz, over P_L. Known:
-  the landing => down class (L = 2) needs at least 0.2908 of the pairs
-  (exact CP-SAT window optimum on [1, 10^5]; lower bound 1/4 from a vertex
-  cover). Feasible window designs on [1, 3000] flip 14.5% (L = 4) and
-  5.9% (L = 5). A sequential greedy gives 38.8%, 24.2%, 15.7%, 12.4% and
-  9.0% at L = 2, 4, 5, 7, 8. The window designs are not infinite members.
+  SETTLED -- PROVED and promoted as THM-4475 (2026-09-25). For every L >= 8
+  an explicit greedy member G_L of P_L (flipping one free pair per
+  Collatz-undecided n: its own pair, the first 3 (mod 4) up-image below 2n,
+  or the pair of T(n)) is a tree with flip density <= 2 rho_L <=
+  2^(1-(1-h)L), where 1 - h = 0.050044. So delta_L -> 0 at the conjectured
+  rate, as an upper bound. The lower bound delta_L >= 2^(-0.774L) is proved;
+  the sharp exponent is HYP-9137. The secondary claim (delta_2 = 0.2907...
+  as a limit) remains OPEN. Earlier evidence: the landing => down class
+  (L = 2) needs at least 0.2908 (CP-SAT window optimum); window designs
+  flip 14.5% (L = 4) and 5.9% (L = 5).
 source: collatz-procgen-20260922 session, brackets/pairings lane candidates (P1, P2), 2026-09-24
 depends_on:
   - 01-canon/theorems/THM-4470-collatz-pairing-ladder-am-fair-and-defect-blind.md

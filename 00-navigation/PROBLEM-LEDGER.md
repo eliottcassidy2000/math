@@ -264,6 +264,12 @@ all heights (THM-1289, published), δ ineffective.
   the Flatto–Lagarias–Pollington length. So Collatz implies new Mahler-type
   exclusions. Residue types are provably side-blind (`x -> -x` transport), so
   any proof must use the sign law.
+  **Provability boundary (2026-09-25).** THM-4474: for sign strategies (Althöfer
+  3n±1 with the sign frozen into residues), bounded-lookahead provability holds
+  iff every parity-graph cycle has odd density < log_3 2, so Collatz's window is
+  [0,1] at every modulus. THM-4475: provable trees approximate Collatz at flip
+  density <= 2^(1-0.05L) (HYP-9136 proved). THM-4471 refutes arXiv 2502.20642's
+  fixed-point "proof".
 - **Erdős Problem 592** [DEEP — $1000 problem] — the p=2 Schur-seam theorem (THM-469),
   R(n,2)=2n+1 linear conjecture, Chang-tower m=3 open; 21 scripts, a survey draft.
 - **{7,21} forbidden H-spectrum** [DEEP, repo-signature] — permanent exclusions by

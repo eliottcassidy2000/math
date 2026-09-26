@@ -1,0 +1,4 @@
+L=8: rescues {'A': 3299, 'F': 45875, 'B': 1054, 'stuck': 0}; n<=N/2 failing L-step descent: 0; flip density (pairs <= N/4): 0.06806; B-rescues mod 512: [507]
+L=12: rescues {'A': 2199, 'F': 33842, 'B': 400, 'stuck': 0}; n<=N/2 failing L-step descent: 0; flip density (pairs <= N/4): 0.04919; B-rescues mod 512: [507]
+L=16: rescues {'A': 1183, 'F': 19782, 'B': 129, 'stuck': 0}; n<=N/2 failing L-step descent: 0; flip density (pairs <= N/4): 0.02850; B-rescues mod 512: [507]
+ALL CHECKS PASSED

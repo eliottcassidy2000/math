@@ -1,0 +1,237 @@
+====================================================================================================
+PART 1. Exact Collatz-undecided densities rho_L = |Bad_L| / 2^L  (FINITE-EXACT, DP over (k, a_k))
+====================================================================================================
+  p = log_3 2 = 0.6309297536;  h = h(p) = 0.9499555272 bits;  1 - h = 0.0500444728
+  cross-check: |Bad_20| = 27328 (brackets lane / foundry value 27,328);  |Bad_4| = 3 (n = 7,11,15 mod 16)
+   L    |Bad_L|            rho_L          rho_L * L^1.5 * 2^((1-h)L)
+    1               1   0.5000000000   0.51765
+    2               1   0.2500000000   0.75791
+    3               2   0.2500000000   1.44151
+    4               3   0.1875000000   1.72326
+    5               4   0.1250000000   1.66222
+    6               8   0.1250000000   2.26218
+    7              13   0.1015625000   2.39792
+    8              19   0.0742187500   2.21650
+    9              38   0.0742187500   2.73818
+   10              64   0.0625000000   2.79595
+   11             128   0.0625000000   3.33951
+   12             226   0.0551757812   3.47776
+   13             367   0.0447998047   3.29636
+   14             734   0.0447998047   3.81396
+   15            1295   0.0395202637   3.86305
+   16            2114   0.0322570801   3.59619
+   17            4228   0.0322570801   4.07757
+   18            7495   0.0285911560   4.07670
+   19           14990   0.0285911560   4.57715
+   20           27328   0.0260620117   4.66499
+   21           46611   0.0222258568   4.43149
+   22           93222   0.0222258568   4.91949
+   23          168807   0.0201233625   4.92929
+   24          286581   0.0170815587   4.61744
+   25          573162   0.0170815587   5.08229
+   26         1037374   0.0154580772   5.05013
+   27         1762293   0.0131301060   4.69965
+   28         3524586   0.0131301060   5.13833
+   29         6385637   0.0118941758   5.07941
+   30        12771274   0.0118941758   5.53303
+   31        23642078   0.0110092005   5.56942
+   32        41347483   0.0096269611   5.28799
+   33        82694966   0.0096269611   5.73326
+   34       151917636   0.0088427702   5.70181
+   35       263841377   0.0076787947   5.35385
+   36       527682754   0.0076787947   5.78206
+   37       967378591   0.0070386056   5.71729
+   38      1934757182   0.0070386056   6.16067
+   39      3611535862   0.0065693455   6.18942
+   40      6402835000   0.0058233445   5.90008
+  large L (floating DP):   L   rho_L            -log2(rho_L)/L    C_L = rho_L L^1.5 2^((1-h)L)
+                           50   3.316689e-03   0.164721         6.64361
+                          100   2.386783e-04   0.120326         7.66129
+                          200   3.060424e-06   0.091589         8.91875
+                          400   1.158670e-09   0.074212         9.84022
+                          800   4.096331e-16   0.063896         10.44576
+                         1600   1.323424e-28   0.057881         10.75719
+                         3200   3.783089e-53   0.054420         11.04616
+                         4000   2.354366e-65   0.053672         10.82714
+  => rho_L = 2^{-(1-h)L + O(log L)}; the prefactor C_L stays bounded (oscillating with the Beatty
+     pattern of log_3 2), consistent with rho_L = Theta(L^{-3/2} 2^{-(1-h)L}).
+
+  Compression: a flip at the highest point of a bad path serves a progression of density 2^-L / Rmax.
+   L   |Bad_L|    E[1/Rmax]    E[log2 Rmax]   rho_L * E[1/Rmax]
+    4          3   0.31276      1.7549         0.058642
+    5          4   0.25514      2.0899         0.031893
+    8         19   0.16320      2.8077         0.012112
+   10         64   0.13318      3.1348         0.008324
+   12        226   0.11625      3.3789         0.006414
+   16       2114   0.07913      4.0260         0.002553
+   20      27328   0.06386      4.4019         0.001664
+   24     286581   0.04761      4.9073         0.000813
+   28    3524586   0.03848      5.2747         0.000505
+   32   41347483   0.03073      5.6635         0.000296
+   36  527682754   0.02582      5.9684         0.000198
+   40  6402835000   0.02134      6.3027         0.000124
+====================================================================================================
+PART 2. The explicit construction G_L (sequential certification with low rescues), FINITE-EXACT
+====================================================================================================
+  Every n <= N descends within L steps in G_L (independent re-run inside the C program); 'stuck' = n for which the
+  rescue repertoire found no certificate (then G_L would not be a member).  Density = flipped pairs among pairs <= N/2
+  (final: later rescues touch only pairs of larger points).
+
+  COLLATZ SHEET (offset 0, T = 3n+1), N = 10^7
+   L    density(G_L)   rho_L      density/rho_L   stuck   max descent   rescues
+    4   0.213438     0.187500   1.138             0       4          A=123812 B=318384 F=884442 P=212257 dfs=0
+    5   0.126729     0.125000   1.014             0       5          A=70144 B=85273 F=712602 P=56851 dfs=0
+    6   0.126729     0.125000   1.014             0       5          A=70144 B=85273 F=712602 P=56851 dfs=0
+    7   0.096093     0.101562   0.946             0       7          A=50602 B=41725 F=605813 P=6523 dfs=0
+    8   0.068045     0.074219   0.917             0       8          A=32988 B=10525 F=458779 P=0 dfs=0
+   10   0.056410     0.062500   0.903             0      10          A=26085 B=5288 F=386006 P=0 dfs=0
+   12   0.049209     0.055176   0.892             0      12          A=21916 B=3992 F=338605 P=0 dfs=0
+   13   0.039808     0.044800   0.889             0      13          A=17140 B=2332 F=275546 P=0 dfs=0
+   16   0.028467     0.032257   0.883             0      16          A=11728 B=1238 F=198214 P=0 dfs=0
+   20   0.022788     0.026062   0.874             0      20          A=9136 B=898 F=159127 P=0 dfs=0
+   24   0.014876     0.017082   0.871             0      24          A=5745 B=516 F=104278 P=0 dfs=0
+   28   0.011450     0.013130   0.872             0      27          A=4332 B=392 F=80342 P=0 dfs=0
+   32   0.008368     0.009627   0.869             0      32          A=3162 B=280 F=58744 P=0 dfs=0
+   36   0.006634     0.007679   0.864             0      35          A=2494 B=217 F=46708 P=0 dfs=0
+   40   0.004985     0.005823   0.856             0      40          A=1865 B=170 F=35218 P=0 dfs=0
+
+  3n-1 SHEET (offset 1, U = 3n-1) -- SHEET control, N = 10^7
+   L    density(G_L)   rho_L      density/rho_L   stuck   max descent   rescues
+    4   0.211538     0.187500   1.128             0       4          A=0 B=432692 F=865393 P=288456 dfs=0
+    5   0.120793     0.125000   0.966             0       5          A=0 B=121694 F=716645 P=81132 dfs=0
+    6   0.120793     0.125000   0.966             0       5          A=0 B=121694 F=716645 P=81132 dfs=0
+    7   0.090151     0.101562   0.888             0       7          A=0 B=58593 F=621396 P=9156 dfs=0
+    8   0.063260     0.074219   0.852             0       8          A=0 B=14648 F=471562 P=0 dfs=0
+   10   0.052427     0.062500   0.839             0      10          A=0 B=7324 F=396047 P=0 dfs=0
+   12   0.045765     0.055176   0.829             0      12          A=0 B=5492 F=346464 P=0 dfs=0
+   13   0.036959     0.044800   0.825             0      13          A=0 B=3203 F=280962 P=0 dfs=0
+   16   0.026477     0.032257   0.821             0      16          A=0 B=1686 F=201795 P=0 dfs=0
+   20   0.021219     0.026062   0.814             0      20          A=0 B=1218 F=161802 P=0 dfs=0
+   24   0.013886     0.017082   0.813             0      24          A=0 B=698 F=106034 P=0 dfs=0
+   28   0.010658     0.013130   0.812             0      27          A=0 B=508 F=81478 P=0 dfs=0
+   32   0.007781     0.009627   0.808             0      32          A=0 B=351 F=59486 P=0 dfs=0
+   36   0.006252     0.007679   0.814             0      35          A=0 B=272 F=47705 P=0 dfs=0
+   40   0.004753     0.005823   0.816             0      40          A=0 B=204 F=36210 P=0 dfs=0
+
+  Lemma checks (theorem of section 2 of the note: L >= 8), N = 10^7:
+  offset 0, L = 8:
+    LEMMA CHECKS over 502292 rescues: rescued even 0; rescued n off the bad residue mod 4 (3; 1 for 3n-1) 0; rescued n whose base-map path descends within L 0; B with n off 3 mod 8 (5 for 3n-1) 0; B without prefix 110110110 0; flipped index outside (n/2, n] 0
+    partner descent times (partners <= N: 340223):  A/F: 2:333207   B: 7:108 8:6908
+  offset 0, L = 12:
+    LEMMA CHECKS over 364513 rescues: rescued even 0; rescued n off the bad residue mod 4 (3; 1 for 3n-1) 0; rescued n whose base-map path descends within L 0; B with n off 3 mod 8 (5 for 3n-1) 0; B without prefix 110110110 0; flipped index outside (n/2, n] 0
+    partner descent times (partners <= N: 246044):  A/F: 2:243384   B: 7:41 8:2619
+  offset 0, L = 16:
+    LEMMA CHECKS over 211180 rescues: rescued even 0; rescued n off the bad residue mod 4 (3; 1 for 3n-1) 0; rescued n whose base-map path descends within L 0; B with n off 3 mod 8 (5 for 3n-1) 0; B without prefix 110110110 0; flipped index outside (n/2, n] 0
+    partner descent times (partners <= N: 142337):  A/F: 2:141511   B: 7:11 8:815
+  offset 0, L = 24:
+    LEMMA CHECKS over 110539 rescues: rescued even 0; rescued n off the bad residue mod 4 (3; 1 for 3n-1) 0; rescued n whose base-map path descends within L 0; B with n off 3 mod 8 (5 for 3n-1) 0; B without prefix 110110110 0; flipped index outside (n/2, n] 0
+    partner descent times (partners <= N: 74381):  A/F: 2:74035   B: 7:6 8:340
+  offset 0, L = 32:
+    LEMMA CHECKS over 62186 rescues: rescued even 0; rescued n off the bad residue mod 4 (3; 1 for 3n-1) 0; rescued n whose base-map path descends within L 0; B with n off 3 mod 8 (5 for 3n-1) 0; B without prefix 110110110 0; flipped index outside (n/2, n] 0
+    partner descent times (partners <= N: 41838):  A/F: 2:41657   B: 7:5 8:176
+  offset 0, L = 40:
+    LEMMA CHECKS over 37253 rescues: rescued even 0; rescued n off the bad residue mod 4 (3; 1 for 3n-1) 0; rescued n whose base-map path descends within L 0; B with n off 3 mod 8 (5 for 3n-1) 0; B without prefix 110110110 0; flipped index outside (n/2, n] 0
+    partner descent times (partners <= N: 24923):  A/F: 2:24819   B: 7:2 8:102
+  offset 1, L = 8:
+    LEMMA CHECKS over 486210 rescues: rescued even 0; rescued n off the bad residue mod 4 (3; 1 for 3n-1) 0; rescued n whose base-map path descends within L 0; B with n off 3 mod 8 (5 for 3n-1) 0; B without prefix 110110110 0; flipped index outside (n/2, n] 0
+    partner descent times (partners <= N: 316301):  A/F: 2:306535   B: 7:154 8:9612
+  offset 1, L = 12:
+    LEMMA CHECKS over 351956 rescues: rescued even 0; rescued n off the bad residue mod 4 (3; 1 for 3n-1) 0; rescued n whose base-map path descends within L 0; B with n off 3 mod 8 (5 for 3n-1) 0; B without prefix 110110110 0; flipped index outside (n/2, n] 0
+    partner descent times (partners <= N: 228823):  A/F: 2:225161   B: 7:57 8:3605
+  offset 1, L = 16:
+    LEMMA CHECKS over 203481 rescues: rescued even 0; rescued n off the bad residue mod 4 (3; 1 for 3n-1) 0; rescued n whose base-map path descends within L 0; B with n off 3 mod 8 (5 for 3n-1) 0; B without prefix 110110110 0; flipped index outside (n/2, n] 0
+    partner descent times (partners <= N: 132383):  A/F: 2:131264   B: 7:17 8:1102
+  offset 1, L = 24:
+    LEMMA CHECKS over 106732 rescues: rescued even 0; rescued n off the bad residue mod 4 (3; 1 for 3n-1) 0; rescued n whose base-map path descends within L 0; B with n off 3 mod 8 (5 for 3n-1) 0; B without prefix 110110110 0; flipped index outside (n/2, n] 0
+    partner descent times (partners <= N: 69430):  A/F: 2:68958   B: 7:10 8:462
+  offset 1, L = 32:
+    LEMMA CHECKS over 59837 rescues: rescued even 0; rescued n off the bad residue mod 4 (3; 1 for 3n-1) 0; rescued n whose base-map path descends within L 0; B with n off 3 mod 8 (5 for 3n-1) 0; B without prefix 110110110 0; flipped index outside (n/2, n] 0
+    partner descent times (partners <= N: 38905):  A/F: 2:38670   B: 7:3 8:232
+  offset 1, L = 40:
+    LEMMA CHECKS over 36414 rescues: rescued even 0; rescued n off the bad residue mod 4 (3; 1 for 3n-1) 0; rescued n whose base-map path descends within L 0; B with n off 3 mod 8 (5 for 3n-1) 0; B without prefix 110110110 0; flipped index outside (n/2, n] 0
+    partner descent times (partners <= N: 23764):  A/F: 2:23621   B: 7:2 8:141
+
+  full output for L = 16, Collatz sheet:
+  L=16 N=10000000 offset=0 q=3 MAXF=3: flipped pairs <= N/2: 142337  density 0.028467  stuck 0
+    rescues: A=11728 B=1238 F=198214 P=0 dfs=0  hash entries 189
+    re-run: n in [3,N] not descending within 68 steps: 0; max descent time 16; histogram: 1:4999999 2:2836590 4:624888 5:642605 7:239615 8:268318 10:116564 12:75031 13:96357 15:49979 16:50052
+    LEMMA CHECKS over 211180 rescues: rescued even 0; rescued n off the bad residue mod 4 (3; 1 for 3n-1) 0; rescued n whose base-map path descends within L 0; B with n off 3 mod 8 (5 for 3n-1) 0; B without prefix 110110110 0; flipped index outside (n/2, n] 0
+    partner descent times (partners <= N: 142337):  A/F: 2:141511   B: 7:11 8:815
+  
+    pair(1) bit = -1 (offset 0: 0 means {1,2} is the root cycle)
+  
+  DRIFT control: the 5x+1 pairing family (up v -> (5v+[v odd])/2, down v -> floor(v/2)), N = 3*10^5, DFS <= 8 flips
+   L    density(G_L)   beta_L (5x+1 undecided)   density/beta_L   stuck
+    6   0.356860       0.31250                   1.142            6144
+    8   0.265373       0.27344                   0.971            326
+   10   0.227767       0.25977                   0.877            37
+   12   0.196140       0.24609                   0.797            8
+   16   0.171573       0.23376                   0.734            2
+   20   0.149320       0.22212                   0.672            1
+   24   0.138573       0.21298                   0.651            0
+   30   0.130893       0.20573                   0.636            0
+
+====================================================================================================
+PART 3. Provable lower bound for the price; the 111 criterion; the DRIFT undecided density
+====================================================================================================
+  lambda = (3 + sqrt 13)/4 = 1.651388;  log2(lambda) = 0.723679;  1 - h = 0.050044
+  lower-bound exponent (1 - h) + log2(lambda) = 0.773723   (conjectured true exponent: 1 - h)
+   L    rho_L        W*_L bound (sum g)    delta_L >= rho_L / W*_L     -log2(bound)/L
+    2  0.250000             3.00         8.333e-02                1.7925
+    4  0.187500            11.62         1.613e-02                1.4885
+    5  0.125000            20.50         6.098e-03                1.4715
+    8  0.074219            99.33         7.472e-04                1.2983
+   12  0.055176           751.57         7.341e-05                1.1445
+   16  0.032257          5602.32         5.758e-06                1.0879
+   20  0.026062         41677.16         6.253e-07                1.0304
+   24  0.017082        309964.84         5.511e-08                1.0047
+   28  0.013130       2305213.56         5.696e-09                0.9781
+   32  0.009627      17143827.90         5.615e-10                0.9603
+   36  0.007679     127498228.15         6.023e-11                0.9431
+   40  0.005823     948201116.66         6.141e-12                0.9311
+  brute-force check of the tree bound (max over v <= V of sum of 3^a/2^k over backward paths of length < L):
+    L =  6, v <= 20000: max = 32.625 at v = 242;  bound sum g = 35.156
+    L =  8, v <= 20000: max = 80.625 at v = 2186;  bound sum g = 99.328
+    L = 10, v <= 20000: max = 189.199 at v = 19682;  bound sum g = 274.330
+    L = 12, v <= 8000: max = 206.051 at v = 4616;  bound sum g = 751.575
+
+  (b) bad classes avoiding the factor 111 (no low rescue point with a 2-step partner):
+   L    |Bad_L|         no-111 part     fraction     growth (log2 ratio per step, window 10)
+    8              19                1   5.26e-02     
+   12             226                2   8.85e-03     
+   16            2114                3   1.42e-03     
+   20           27328                9   3.29e-04     0.3170
+   24          286581               15   5.23e-05     0.2322
+   30        12771274               59   4.62e-06     0.2713
+   40      6402835000              409   6.39e-08     0.2793
+   60  2216134944775156            40425   1.82e-11     0.3430
+   80                          3316986      -         0.3640
+  100                        285555273      -         0.2946
+   => bad words with no factor 111 at all grow like 2^(0.3 L): on them no F-rescue (low up-image = 3 mod 4 with a
+      2-step partner) ever exists; they contain the 2-adic cycle (110)^inf = -5 -> -7 -> -10.  The construction
+      needs its B-rescue (partner not 2-step) only when also A is blocked, which forces n = -5 mod 2^9 (note, lemma C6).
+
+  (c) DRIFT: undecided density beta_L of 5x+1 (words with a_k > k log_5 2 for all k <= L):
+    L =   4: beta_L = 0.37500
+    L =   8: beta_L = 0.27344
+    L =  12: beta_L = 0.24609
+    L =  16: beta_L = 0.23376
+    L =  20: beta_L = 0.22212
+    L =  24: beta_L = 0.21298
+    L =  30: beta_L = 0.20573
+    L =  40: beta_L = 0.19626
+    L =  60: beta_L = 0.18811
+    L = 100: beta_L = 0.18060
+    L = 200: beta_L = 0.17685
+    L = 400: beta_L = 0.17608
+   => beta_L decreases to a positive limit (about 0.17): for 5x+1 the undecided set does not thin out.
+====================================================================================================
+PART 4. Independent cross-check: pure-Python re-implementation of G_L (offset 0), N = 2*10^5
+====================================================================================================
+  L =  4: Python density 0.213390 (stuck without DFS: 0, re-check failures 0);  C density 0.213390
+  L =  8: Python density 0.068110 (stuck without DFS: 0, re-check failures 0);  C density 0.068110
+  L = 12: Python density 0.049260 (stuck without DFS: 0, re-check failures 0);  C density 0.049260
+  L = 16: Python density 0.028440 (stuck without DFS: 0, re-check failures 0);  C density 0.028440
+  L = 20: Python density 0.022490 (stuck without DFS: 0, re-check failures 0);  C density 0.022490
+
+[total runtime 17 s]

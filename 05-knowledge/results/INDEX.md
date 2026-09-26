@@ -1,5 +1,8 @@
 # Script Results Index
 
+- [The price of provability: explicit L-step-descent trees at flip density <= 2 rho_L](procgen_price_20260925_provability_price.md):
+  **PROVED (THM-4475, audited; HYP-9136 SETTLED) / FINITE-EXACT.** For every `L >= 8`, a greedy member `G_L` of the pairing family (flip A = own pair, F = first `3 (mod 4)` up-image below `2n`, B = pair of `T(n)`) descends within `L` steps and is a tree. Its flip density is `<= 2 rho_L <= 2^(1-0.05L)`. B is needed only near the 2-adic cycle `-5 -> -7 -> -10` (`n = 507 mod 512`). A lower bound `2^(-0.774L)` is proved; the sharp exponent is HYP-9137. The construction also transfers to 3n−1. Orchestrator re-implementation (from prose): no stuck `n`, all descend, densities 0.06806 / 0.02850 at `L = 8 / 16`, equal to the lane's.
+
 - [The strategy cube of 3n±1: provability decided by extreme cycle densities](procgen_cube_20260925_strategy_cube.md):
   **PROVED (THM-4474, audited) / FINITE-EXACT.** All 65,814 sign strategies at levels 1–5 are classified. Theorem A: a bounded-lookahead proof exists iff every cycle of the parity graph has odd density < log_3 2. Theorem B: a residue divergence proof exists iff some closed class has every cycle expanding. Theorem C: the drift lies between the extreme densities. Collatz's window is [0,1] at every level. Its distance to provability is `1, 2, 2, 4, 5, 9, 14, 23` flips (Haar 0.5 to 0.09); whether this tends to 0 is OPEN. The OPEN fraction stabilizes at about 0.435, the no-extra-cycle probability of the random-sign model. The macrocosm matches Collatz; the microcosm (smallest integers) decides.
 
