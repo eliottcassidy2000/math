@@ -1,0 +1,24 @@
+== (1) Lucas + Fermat products ==
+rows 0..127: C(n,j) odd iff j subset n; row value = prod F_i over bits of n: OK
+rows 2^k (value F_k): [(1, 3), (2, 5), (4, 17), (8, 257), (16, 65537), (32, 4294967297)]
+rows 2^k-1 (value 2^(2^k)-1 = prod_(i<k) F_i): [(1, 3), (3, 15), (7, 255), (15, 65535), (31, 4294967295)]
+== (2) constructible odd polygon orders ==
+rows 0..31 as binary numbers = the 32 products of distinct known Fermat primes: [1, 3, 5, 15, 17, 51, 85, 255, 257, 771, 1285, 3855] ... [1431655765, 4294967295]
+row 32 = F_5 = 4294967297 = 641 * 6700417 (composite): the first non-constructible row
+every row n with 32 <= n < 2^33 contains a Fermat factor F_i with 5 <= i <= 32, all known composite
+== (3) single-seed diagram: zero triangles ==
+ top rows n < 32: sides [1, 3, 7, 15, 31] counts [27, 9, 3, 1, 1] predicted [27, 9, 3, 1, 1]
+ top rows n < 128: sides [1, 3, 7, 15, 31, 63, 127] counts [243, 81, 27, 9, 3, 1, 1] predicted [243, 81, 27, 9, 3, 1, 1]
+ top rows n < 512: sides [1, 3, 7, 15, 31, 63, 127, 255, 511] counts [2187, 729, 243, 81, 27, 9, 3, 1, 1] predicted [2187, 729, 243, 81, 27, 9, 3, 1, 1]
+ every zero triangle is edged by ones (vertical left edge, diagonal right edge), every side is a Mersenne number 2^m - 1, and the count formula sum_(n: m trailing ones) 2^(popcount n - m) is exact
+== (4) sea kernel theorem on the prime triangle, primes below 200000 ==
+ first row whose entries after the leading 1 are all in {0,2}: 65
+ frontier F(r) for r = 1, 2, 5, 10, 20, 30, 40, 50, 60, 64: [3, 8, 25, 59, 291, 870, 2770, 2763, 5942, 5940]
+ rows 65+t equal the Lucas-kernel image of row 65 for t in 1..64 and t = 127, 255, 511, 1023, 2047 (69 checks); leading 1 throughout
+ row 10 (frontier F=59, defect 4): all 1653 in-cone cells over t = 1..57 equal the kernel image of the sea word
+== (5) front path = unit-triangular image of the sea bits ==
+ for F = 3..12 the number of sea words whose front path carries exactly w twos is C(F-1, w): the path map is a bijection of F_2^(F-1)
+ hence, front alone, a defect of size 2j at distance F survives to the edge with probability exactly sum_(t<=j-2) C(F-1,t) 2^-(F-1)
+== (6) side probes ==
+ Conway maps (F_k n + 1)/2, drift per odd step log_2 F_k - 2: ['3: -0.4150', '5: +0.3219', '17: +2.0875', '257: +6.0056', '65537: +14.0000']
+ constructible sequence s_n (n<64): leading column of its absolute difference triangle, rows 1..40: [2, 0, 8, 8, 16, 0, 80, 64, 32, 32, 896, 736, 320, 32, 12224, 12160, 5312, 4032, 201472, 164544, 71296, 66944, 2707968, 2702400, 1465088, 1464384, 46275584, 36172928, 14662144, 13001088, 598956032, 594641792, 280140800, 229069824, 10518835200, 8632967296, 3458582528, 3434633216, 131611541504, 131253954816]

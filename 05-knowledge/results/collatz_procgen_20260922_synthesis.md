@@ -1022,6 +1022,36 @@ The owner's request: "keep going on the open problems, especially 7n±1; relate 
   [forest/signed-difference synthesis](forest_20260926_board.md) gives
   proofs, metric hostiles, and the corrected reduction boundary.
 
+## 2q. Wave 20 (2026-09-26, opus session `gilbreath-fermat-platonic-20260926`): the Fermat tower, the two fives, and the wall theorem
+
+Owner's directive: the connection between Gilbreath's conjecture, the five Fermat
+primes and the five Platonic solids. Note
+[`gilbreath_fermat_platonic_20260926.md`](gilbreath_fermat_platonic_20260926.md).
+
+* The `0/2` sea of Gilbreath's triangle evolves by `(1 + x)^t` over `F_2`; the
+  step-`t` kernel is row `t` of Pascal mod `2`, whose binary value is the
+  product of the Fermat numbers `F_i` over the bits of `t` (Lucas). Verified on
+  the primes below `200000` to `t = 2047`. Primality of `F_k` never enters.
+* The five known Fermat primes: rows `0..31` of the single-seed diagram are the
+  `32` constructible odd polygon orders (Gauss-Wantzel; row `32 = F_5`
+  composite); von Staudt-Clausen (forest); THM-871. Single-seed zero triangles
+  have Mersenne sides `2^m - 1`, count `3^(K-1-m)`; the primes' sides are
+  geometric (S9). The skew-Hadamard doubling tower gives doubly regular
+  tournaments of every Mersenne order with `Aut = F_21` for `k = 3..6`
+  (HYP-9162; `T_3` = Paley heptagon, `T_5` not Paley).
+* The five Platonic solids: Schlafli `(p-2)(q-2) < 4` (HYP-3772); rotation
+  groups `PSL(2,3) = A_4`, `PGL(2,3) = S_4`, `PSL(2,5) = PSL(2,4) = A_5` over the
+  Schlafli numbers `{3,4,5} = {F_0, 2^2, F_1}` (verified as permutation groups).
+  The two fives share the set `{3, 5}` and no mechanism. `3 = F_0` is the only
+  Fermat multiplier with negative Collatz drift.
+* THM-4511 (PROVED): a lone size-`4` defect never crosses the first sea `2` on
+  its left, whatever lies to its right (columns look right; column sequences
+  go `{0,4}` then `2` then `{0,2}`); extinction exactly `2^(1-F)`. Exact
+  extinction table for sizes `6`, `8` (re-emissions add `4`-`10` per cent);
+  the prime frontier's random-model risk (`0.258`) sits in rows `1`-`2`.
+* Bearing on Collatz: none beyond the drift sign; the S9 verdict (no
+  reduction either way) stands.
+
 ## 2b. The approach deck: every approach generated or considered, with its disposition
 
 | # | approach (lens + mechanism) | barrier verdict | probe run | outcome |

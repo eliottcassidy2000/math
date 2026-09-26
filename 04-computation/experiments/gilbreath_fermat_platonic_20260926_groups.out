@@ -1,0 +1,19 @@
+== Schlafli ==
+ (p-2)(q-2) < 4: [(3, 3), (3, 4), (3, 5), (4, 3), (5, 3)] -> 5 Platonic solids
+ (p-2)(q-2) = 4: [(3, 6), (4, 4), (6, 3)] -> 3 regular plane tilings
+== projective groups on P^1(F_q) ==
+ PSL(2,2): order 6 on 3 points, all even: False, element orders {1: 1, 2: 3, 3: 2}
+ PSL(2,3): order 12 on 4 points, all even: True, element orders {1: 1, 2: 3, 3: 8}
+ PGL(2,3): order 24 on 4 points, all even: False, element orders {1: 1, 2: 9, 3: 8, 4: 6}
+ SL(2,4): order 60 on 5 points, all even: True, element orders {1: 1, 2: 15, 3: 20, 5: 24}
+ PSL(2,5): order 60 on 6 points, all even: True, element orders {1: 1, 2: 15, 3: 20, 5: 24}
+   PSL(2,5): 15 involutions, 5 Klein four-subgroups
+   conjugation action on the five Klein four-subgroups: faithful (kernel trivial), image of order 60 of even permutations of 5 objects = A_5
+ PSL(2,7): order 168 on 8 points, all even: True, element orders {1: 1, 2: 21, 3: 56, 4: 42, 7: 48}
+ PSL(2,17): order 2448 on 18 points, all even: True, element orders {1: 1, 2: 153, 3: 272, 4: 306, 8: 612, 9: 816, 17: 288}
+== constructibility of the solids that use 5 = F_1 ==
+ icosahedron: 12 vertices, edge 2.000000, every vertex has 5 nearest neighbours; coordinates in Q(sqrt 5)
+ dodecahedron: 20 vertices, edge 1.236068, every vertex has 3 nearest neighbours; coordinates in Q(sqrt 5)
+== the fives ==
+ Fermat primes known: 3, 5, 17, 257, 65537 (F_0..F_4); Schlafli numbers {3,4,5} = {F_0, 2^2, F_1}; PSL fields 3, 4, 5.
+ The only Fermat primes that are Schlafli numbers: 3 and 5. First Fermat prime without a solid: 17 ((17-2)(q-2) >= 15 > 4).

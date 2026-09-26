@@ -373,6 +373,16 @@ all heights (THM-1289, published), δ ineffective.
 - **HYGIENE — SYSTEMIC THM-id collisions:** ~70 THM numbers doubled (THM-1345/1370/1375/1380/1385 all doubles; also 201/260/262/290/338/868/869/922). The MISTAKE-199 pattern at canon scale — a real citation obstacle needing a de-collision pass.
 - HYGIENE: a parallel `PROBLEM-PORTFOLIO-2026-07-20.md` (mac-mini-S140) also exists; this file (PROBLEM-LEDGER.md) remains the canonical one — merge, don't fork.
 
+  **Gilbreath sea, Fermat tower, wall theorem (opus, 2026-09-26, S10):** the 0/2 sea of Gilbreath's
+  triangle is the Frobenius tower of the Fermat numbers (step-t kernel = row t of Pascal mod 2 =
+  prod of F_i over the bits of t, verified to t = 2047 on the primes below 200000); the five Fermat
+  primes enter only through Gauss-Wantzel, von Staudt-Clausen (forest) and THM-871, the five Platonic
+  solids only through {3,4,5} = Schlafli numbers = PSL fields. THM-4511 (PROVED): a lone size-4 defect
+  never crosses the first sea 2 on its left, extinction exactly 2^(1-F); sizes >= 6 and interacting
+  defects remain open (exact table: re-emissions add 4-10 per cent). HYP-9162: the skew-Hadamard doubling
+  tower of doubly regular tournaments on the Mersenne zero-triangle sides keeps exactly the Paley
+  heptagon's F_21. Note: `05-knowledge/results/gilbreath_fermat_platonic_20260926.md`.
+
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`
 (ranks HN > reconstruction > Kakeya/Falconer > sunflower > Caccetta–Häggkvist > … ).
 
