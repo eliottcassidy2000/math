@@ -402,7 +402,7 @@ the divergence half of Collatz, and the sign enters exactly as the sign of
 | HYP-9126 (3/2 wall) | OPEN; `⟹ HYP-9124 ⟹ Q2`; the easy clocks are PROVED given the loops; all 589 generation-1 points with `i <= 300` descend | sweep note §4 |
 | HYP-9127 (cube-swap number) | OPEN. Proved no-go for every natural determinant family (parabola lemma, Theorem NG, exact `e3(n)`); loophole: quartic cyclotomic content | theta round 2 |
 | **HYP-9128** (super-blocks) | **PROVED, THM-4468**: `C* <= 159/100 < 1+log_5(phi^2)` | hyp9128 proof note |
-| HYP-9129 (`C* < 3/2`?) | OPEN. Proved window `[1.377, 197/125]` (THM-4488, opus 2026-09-26: exact ratio in THM-4468's bottom regime); realizable states stall at about `1.567` | same |
+| HYP-9129 (`C* < 3/2`?) | OPEN. Proved window `[1.377, 197/125]` (THM-4494, opus 2026-09-26: exact ratio in THM-4468's bottom regime); realizable states stall at about `1.567` | same |
 | HYP-9130 (cube zero estimate) | OPEN; restricted forms only | theta notes |
 | **HYP-9131** (square swap beyond `phi`) | **PROVED**: 2-adic Hankel (Bézivin) for `mu_bar < 7/4`, and `28/11` and `2.878` via KRVZ; every square swap under `5x+1` and `7x+1` is settled | theta-beyond-phi |
 | HYP-9132 (transcendence of the square-swap number) | OPEN; **degree `>= 3` PROVED** (2-adic KRVZ non-quadraticity, cited inputs) | theta round 2 |

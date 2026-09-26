@@ -9,6 +9,12 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-26 THM-4488 collision (opus S6) -- a fetch-then-write reservation lost a race of minutes
+
+- **What happened.** `THM-4488` was checked free on `origin/main` minutes before the file was written; the crossroads session created its own `THM-4488` in the same interval, and the checkpoint script rebased and pushed both files with one ID (`agents/check_docs.py` flagged the duplicate only after the push).
+- **Repair.** The AMM 12592 theorem (`C* <= 197/125 < log_2 3`) is renumbered to `THM-4494`; every reference in the author's files, the results INDEX, the ledger, HYP-9129 and the synthesis table is updated; the crossroads `THM-4488` keeps its ID.
+- **Mechanism to remember.** In a day with several Collatz sessions committing hourly, the ID frontier moves faster than a session's write-and-push cycle; reserve by pushing an honest stub first (`RESERVED / UNPROVED EMPTY STUB`), or fetch again in the same command that commits and abort on a new collision. Same mechanism as MISTAKE-346.
+
 ## 2026-09-26 223 crossroads: endpoint margin, finite lifts, and global ownership
 
 - **Demonstrated false inequality, repaired theorem.** THM-4487's first

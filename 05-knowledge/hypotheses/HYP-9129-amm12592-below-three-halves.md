@@ -34,7 +34,7 @@ possible?
 * The unrestricted real zero-measure relaxation reaches about `1.50`. But its zeros sit on an arc of `|w| = 1`, and an integer discriminant/Kronecker/parity argument (only sketched) excludes that for integer states.
 * The necessary-condition LP stays feasible down to `1.435` (`B = 4`), so it cannot prove `C* >= 3/2`.
 
-## 2026-09-26 update (opus, THM-4488)
+## 2026-09-26 update (opus, THM-4494)
 * The proved window is `1.377 <= C* <= 197/125 = 1.576`: THM-4468's bottom-regime majorant replaced by the exact binomial ratio, everything else re-run. The certificate of this family stops at about `1.575` (level rates), consistent with the measure-level threshold `1.578`.
 
 Still OPEN.

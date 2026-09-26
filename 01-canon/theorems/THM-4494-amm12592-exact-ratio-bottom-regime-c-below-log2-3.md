@@ -1,5 +1,5 @@
 ---
-id: THM-4488
+id: THM-4494
 title: "AMM 12592: C* <= 197/125 = 1.576 < log_2 3, by replacing the crude bottom-regime majorant of THM-4468 with the exact binomial ratio; the log_2 3 coincidence of the recurrent-numbers atlas is a proof artifact"
 status: >
   PROVED modulo the inherited machinery of THM-4468 (construction, Lemma R,
@@ -52,7 +52,7 @@ audit: >
   the docstrings); outputs retained. Independent audit not yet performed.
 ---
 
-# THM-4488 -- AMM 12592 below log_2 3
+# THM-4494 -- AMM 12592 below log_2 3
 
 **PROVED (modulo THM-4468's machinery).** Full note:
 [amm12592_opus_20260926_exactratio_c158](../../05-knowledge/results/amm12592_opus_20260926_exactratio_c158.md).
