@@ -322,9 +322,11 @@ all heights (THM-1289, published), δ ineffective.
   that an orbit revisits one dyadic shell within a window at most `C L^mu`
   times on average (equivalently `N(X) <= (C L^mu + 1) N(X/L^1.05) + #ND + C L^2`);
   finite probes show small multiplicities. The
-  [carry forest](../05-knowledge/results/forest_20260926_board.md) retains
-  ordered depth. Binomial Gilbreath encoding stores the orbit in an infinite
-  seed. Prime selection and reset control remain open.
+  [carry-defect continuation](../05-knowledge/results/nextforest_20260926_board.md)
+  certifies first descent within104 odd steps for E<=4096 at every height.
+  The27/91/347 family has constant defect36; later members descend in six
+  steps. Signed additive digit ranks fail. Exact precision swaps retain
+  the source, but global reset control and prime selection remain open.
 - **Erdős Problem 592** [DEEP — $1000 problem] — the p=2 Schur-seam theorem (THM-469),
   R(n,2)=2n+1 linear conjecture, Chang-tower m=3 open; 21 scripts, a survey draft.
 - **{7,21} forbidden H-spectrum** [DEEP, repo-signature] — permanent exclusions by

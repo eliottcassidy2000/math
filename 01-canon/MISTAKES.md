@@ -11,6 +11,12 @@ Format per entry:
 
 ## 2026-09-26 forest: additivity does not forbid trace encoding
 
+- **Continuation audit.** A duplicate results-index synopsis still repeated
+  the superseded whole-triangle0/2 and entropy-tail claims after the detailed
+  note and its corrected route were repaired. The nextforest session removed
+  that duplicate; the corrected route and the author's subsequent census
+  audit remain. A repaired detail file does not repair every copied synopsis.
+
 - **Failed implication.** The CA comparison asserted that additivity
   forbids encoding a nonadditive orbit at an edge. Over F2 the Pascal
   edge transform is self-inverse, so every binary trace has a seed.

@@ -1,0 +1,10 @@
+exact triple universe: q odd1..63,u odd1..127,r1..10: {'collision': 2048, 'consume': 16384, 'swap': 2048}
+canonical boundary cases: 256
+actual sources odd3..2047, cap96 U steps: {'canonical_reset_U': 4503, 'collision': 3660, 'consume': 12863, 'swap': 4411}
+within cap reached1: 1023 ; capped: 0 (no inferred eventual collision or termination)
+27 split path: [(1, 5, 9), (3, 3, 7), (9, 2, 11), (27, 1, 17), (13, 1, 81), (61, 1, 39)] then collision121, reset91=(1,6,27)
+samecore9 higher precision: [91, 137, 103, 155, 233]
+unbounded precision-recreation family: k=2..128 checked
+family first six odd iterates: [(1, 7, [11, 17, 13, 5, 1, 1]), (3, 11, [17, 13, 5, 1, 1, 1]), (5, 27, [41, 31, 47, 71, 107, 161]), (7, 91, [137, 103, 155, 233, 175, 263]), (9, 347, [521, 391, 587, 881, 661, 31]), (11, 1371, [2057, 1543, 2315, 3473, 2605, 977]), (13, 5467, [8201, 6151, 9227, 13841, 10381, 3893]), (15, 21851, [32777, 24583, 36875, 55313, 41485, 15557])]
+first descent exactly6 for every odd r>=9 proved; finite identities through r257 checked
+PASS: explicit checks active under -O
