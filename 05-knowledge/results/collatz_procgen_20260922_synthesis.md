@@ -33,6 +33,11 @@ Althöfer's game remain OPEN.**
 
 **Wave 12 (2026-09-25, opus session), summarized in section 2j.** The owner's seed "multiplication : squares :: addition : doubles" was run as a transport axis (128 cells, 47 cards). PROVED: the parity graph mod `2^k` is the `+-sqrt` graph on `F_p^*` for Fermat primes; the multiplicative Collatz `sqrt X / rad(X) X^3` is Collatz on the diagonal `m^e` and divergent off it; `chi_{-4}` is the unique level-2 provable strategy; the orbitwise two-place identity `m_L 2^(d_L)/3^L = n prod(1 + b/(3 m_l))` gives `R(d) <= n` on every `3n-1` orbit. **HYP-9160** (no slow divergence) was then PROVED by **THM-4476** (thin divergence: every non-periodic orbit has `O(X^(0.95+eps))` elements below `X`; Terras count plus a landing pigeonhole), which also recovers the in-house no-bounded-strip theorem and gives `R(d) < n` strictly; still no divergence exclusion.
 
+**Waves 16–17 (2026-09-26), summarized in section 2m.**
+* **THM-4486.** The min-max density of sign strategies is a game value. 5n+1 is settled at `2/5`, fixed by its sporadic cycle, and entropy floors are capped at `1/3`.
+* **Robin inequality.** Proved up to a polynomial factor independently by us and by codex crossroads223. It gives the sharp `L^(1/3)` constant elementarily.
+* **7n±1.** Not provable at `k <= 30`. The all-level floors for `q = 9, 11` fall just short of `log_q 2`.
+
 **Waves 14–15 (2026-09-26), summarized in section 2l.** Five new audited theorems:
 * **THM-4480.** The price of provability is the peak-discounted undecided density, with exponent `1 - H(log_q 2)` for every `q`. For `q = 3` it is `rho_L exp(-Theta(L^(1/3)))`, so P1 is negative for arbitrary edits.
 * **THM-4481.** An entropy law for sign flips: no provable `qn±1` strategy exists for `q >= 23`, and 5n+1 needs constant flip mass.
@@ -911,6 +916,33 @@ Six lanes, all audited by independent orchestrator code and pipeline reruns. Fiv
 * THM-4484's sporadic cycle `-17` with gap `139 = 3^7 - 2^11` is the atlas's `139` row (shape `(11, 7)`, expansion `2187/2048`); the three "small-number coincidences" `139`, `2187/2048`, `1093 = (3^7 - 1)/2` are one pair of powers.
 * The crossroads correction of the tournament note is accepted: interior insertion gaps are `01` transitions, `1 + #10` counts all slots including the ends, and the metric reading of the seed is not equivalent to the tournament axiom.
 * The procgen reflection ("height is the coordinate the 2-adic world cannot see") describes exactly what THM-4476/4487/4495 use: the real place (`n` versus `X`) against the 2-adic word count. Those theorems show how far that combination reaches with the free window `floor(log_2 n)`, and Theorem 4's remark (iii) says why the window cannot be lengthened without new input (the residue word of length `tau t`, `tau > 1`, is not equidistributed among `n < 2^(t+1)`): the same obstruction the reflection names, seen from the counting side.
+
+## 2m. Waves 16–17 (2026-09-26): the min-max density game, the Robin inequality (two independent proofs), and 7n±1 to level 30
+
+**1. THM-4486: provability of sign strategies is a mean-payoff game** ([floor note](procgen_floor_20260926_density_floor.md)).
+* **The game.** `rho*(q,k)`, the least possible densest-cycle density, is the value of a game: Min picks signs, Max picks lifts. Both sides come with exact certificates, which reach level 22.
+* **The negative-integer adversary.** Max always takes the top lift, so the orbit runs through the negative integers. This proves `rho* >= log_(q+1) 2` for every strategy. For `q = 3` it is the pin `1/2` from `{1,2}`, the identity `3 + 1 = 4` again.
+* **5n+1 is settled at every level:** `rho* = 1/2, 3/7, 5/12`, then exactly `2/5` for `k >= 15`. The value `2/5` is the density of the sporadic 5x+1 cycle `(1,3,8,4,2)`, forced through the squared potential `u^2`.
+* **Entropy floors are capped at `1/3`.** The max-halving strategy has stationary odd frequency `1/3` and `rho_max = 1/2`, so the entropy law cannot settle `q <= 7`.
+
+**2. The Robin inequality (HYP-9142), proved up to a polynomial factor by two sessions independently** ([robin note](procgen_robin_20260926_robin_inequality.md); codex [crossroads223 robin](crossroads223_20260926_robin.md) and [bridge](crossroads223_20260926_bridge.md), THM-4488 reserved there).
+* **Mechanism.** Both proofs use exact sine eigenfunctions `e^(beta s) sin(theta s + phi)` of the letter walk in a strip:
+  * a Robin (reflected) supersolution;
+  * a Dirichlet (hard-wall) subsolution plus bridge lemmas.
+* **Consequences.**
+  * The private pairing price is `<= poly(L) rho^peak`.
+  * The sharp second-order term is `ln rho^peak_L = -(1-H)L ln 2 - kappa_3 L^(1/3) + O(log L)`, elementary, without Mogul'skii.
+* **The two versions.** Ours has shift `2` and factor `(m+2)^17`; crossroads223's has shift `5` and factor `4e(m+3)L`. The constant-`K_0` form is OPEN.
+* **The bridge.** This is Brownian strip analysis for a discrete walk: a continuous eigenproblem (Robin versus Dirichlet principal eigenvalues) controls a discrete count exactly up to polynomial factors.
+
+**3. 7n±1 and its neighbours** ([seven note](procgen_seven_20260926_seven_n_plus_one_provability.md); update to THM-4486).
+* **7n±1.** It has no provable sign strategy at any level `k <= 30`; `rho*(7,29) = 13/35`. The guessed limit `3/8` is REFUTED, and the true limit against `log_7 2` is OPEN.
+* **Theorem Q.** All-level floors `5/16` (q = 9) and `2/7` (q = 11), each `0.003` below `log_q 2`.
+* **Proposition S.** The real-sign rule makes every rational cycle contracting. So an all-level impossibility proof cannot rest on finitely many rational cycles; it must use residue collisions.
+
+**4. Incoming (opus S6, collatz-exponent-atlas).**
+* **THM-4487** (dip spectrum). Every recurring constant of the session (`0.9500`, `0.0500`, `0.7925`, `1.0527`, `0.4881`) is a value, slope or reciprocal of one function `E(gamma) = h(max(1/2, gamma/log_2 3))`.
+* **THM-4499** refines thin divergence below `X^(h*)`.
 
 ## 2b. The approach deck: every approach generated or considered, with its disposition
 
