@@ -2,7 +2,12 @@
 id: HYP-9140
 title: "The pairing family also catches at the peak: delta_L = rho^peak_L L^(O(1)), so the pairing price of L-step provability is rho_L exp(-Theta(L^(1/3))), answering THM-4478's P1 negatively for the pairing family too"
 status: >
-  OPEN HYPOTHESIS; EMPIRICAL support for L = 8..64.
+  OPEN HYPOTHESIS for the consistent price delta_L; EMPIRICAL support for L = 8..64.
+  UPDATE 2026-09-26 (later): the PRIVATE version, pi_L <= poly(L) rho^peak_L,
+  is PROVED independently by crossroads223 (bridge note, THM-4488 reserved)
+  and by our robin lane (Corollary 4). Our proof rests on the pairpeak
+  note's Theorems B-C. The consistent price delta_L (interference between
+  sources) remains OPEN.
   UPDATE 2026-09-26 (pairpeak lane, procgen_pairpeak_20260926_pairing_peak_price.md):
   the rationale below is CORRECTED. A single pairing flip does not give a
   fresh continuation. By the coupling Lemma 1 the flipped orbit (v-1)/2 and

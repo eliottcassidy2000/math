@@ -1,5 +1,12 @@
 # Script Results Index
 
+- [Robin versus Dirichlet: sine supersolutions for the reflected barrier and the sharp second-order price](procgen_robin_20260926_robin_inequality.md):
+  **PROVED (orchestrator-audited, including an independent interval-arithmetic re-check) / FINITE-EXACT; an independent second proof alongside crossroads223.** Built on exact eigenfunctions `e^(beta s) sin(theta s + phi)` of the letter walk:
+  * the reflected barrier satisfies `N_m(L) <= e^0.063 2^(HL) kappa(pi/(m+2))^L`;
+  * the hard wall satisfies `A_M(L) >= 2^(HL) kappa(pi/M)^L/P_2(M)`;
+  * hence HYP-9142 holds up to `(m+2)^17` (`K = 2`), the private price is `<= poly(L) rho^peak`, and `ln rho^peak_L = -(1-H)L ln 2 - kappa_3 L^(1/3) + O(log L)` without Mogul'skii.
+  The same results were proved independently by codex crossroads223 (`K = 5`, factor `4e(m+3)L`; THM-4488 reserved there). A constant `K_0` remains OPEN.
+
 - [The dip spectrum of 3n±1: no dip below n^γ within log₂n steps has exponent h(γ/log₂3); THM-4476's exponent is sharp for its lemma](collatz_dipspectrum_20260926_entropy_curve.md): **PROVED elementary (THM-4487) + FINITE-EXACT to `2^24`; Collatz OPEN.** For `gamma in (log_4 3, 1]`, `#{n <= X: T^i(n) >= n^gamma, i <= log_2 n} = X^(h(gamma/log_2 3)+o(1))` on both sheets (Terras count up, cycle-lemma rotation down); exponent `1` below Korec's `log_4 3`. The no-dip set of THM-4476 has size `X^(h(rho)+o(1))`, so `h(log_3 2)` is optimal for that dichotomy. One curve `E(gamma) = h(max(1/2, gamma/log_2 3))` carries `0.95, 0.05, 0.7925, 0.2075, 0.488, 1.0527`. Records the trap `0.7737` vs `0.7735`.
 
 - [Recurrent numbers across the repository: a typed atlas](constants_atlas_20260926_recurrent_numbers.md): **CENSUS (9,437 files, 291 constants in >= 4 threads) + TYPED VERDICTS; one PROVED unification (THM-4487).** Structural within one problem: the entropy curve of `3n±1`, the golden family of AMM 12592, the LRC rational ladder. Transported by an existing map: Paley `T_7` = Sylvester core (`189`). Small-number coincidences typed as such: `139`, `189`, `168`, `1093 = (3^7-1)/2` (Wieferich, `= 1 mod 13` by an identity), `13`, `507`, `2187`, `1807`. One untested lead: `log_2 3` lies in the AMM window `[1.377, 1.59]`. Scripts `constants_atlas_20260926_{mine,context}.py`.

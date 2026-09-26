@@ -1,0 +1,178 @@
+
+====================================================================================================
+0. Constants
+====================================================================================================
+   c = 0.6309297536  sigma^2 = 0.2328573996  lambda = 0.5849625007  H = 0.9499555272 bits  1-H = 0.050044
+   kappa_3 = (3/2)(pi^2 sigma^2)^(1/3)(ln 3)^(2/3) = 2.107580 ; theta* = (pi^2 sigma^2/ln 3)^(1/3) = 1.278935
+   v_up = (2c-1/2)(3/2-2c) = 0.181430 ; end-lemma threshold M1 = 110
+  ok: 1 - H = 0.050044 and kappa_3 = 2.107580
+  ok: kappa_3 = min_theta [theta ln 3 + pi^2 sigma^2/(2 theta^2)], attained at theta*
+  ok: M1 = 110: n(M) >= n_min(M) for all real M in [110, 3000] (interval-safe 1/4-grid); for M >= 3000, n(M) >= (M-2)^2/(8 ln(M-2)) >= 4M >= n_min(M) (checked at M = 3000..3100; both sides monotone)
+[time] section 0: 0.1s elapsed, peak RSS 31 MB
+
+====================================================================================================
+1. Lemma E: f(s) = e^(beta s) sin(theta s + phi) satisfies c f(s+1-c) + (1-c) f(s-c) = kappa(theta) f(s)
+====================================================================================================
+  ok: 300 random (theta in (0, pi/c), phi, s): identity holds to relative error 4.6e-49 (50-digit arithmetic)
+  ok: beta(theta) < 0 on (0, pi/2] (grid of 4000 points; the note's proof: ln(sin x/x) is decreasing)
+  ok: interval arithmetic (1831 boxes): ln kappa(theta) < -0.10 theta^2 on [0.15, u] with u = an outward enclosure of pi/2 (so the closed interval up to pi/2 is covered)
+  ok: -ln(sin x/x) <= x^2/6 + x^4/150 on (0,1] (grid; series with negative coefficients, tail <= x^4/150)
+  ok: on (0, 0.15]: kappa <= 1 - (sigma^2/2 - C4 theta^2) theta^2 with C4 = 0.0034, so ln kappa <= -0.1164 theta^2 <= -0.10 theta^2
+  ok: numerical confirmation of the two Taylor bounds 1 - s2 t^2/2 - s2(2c-1) b1 t^4/2 <= kappa(t) <= 1 - s2 t^2/2 + C4 t^4 on (0, 0.15]
+   (ln kappa(theta) + sigma^2 theta^2/2)/theta^4 at theta = 0.1, 0.03, 0.01: -0.004965 -0.004962 -0.004962
+  ok: ln kappa(theta) = -sigma^2 theta^2/2 - 0.00496 theta^4 + O(theta^6) (EMPIRICAL coefficient)
+[time] section 1: 0.3s elapsed, peak RSS 31 MB
+
+====================================================================================================
+2. Lemma Z: the Robin zone condition F(theta) = kappa sin(2 theta) - 2(1-c) e^(-beta c) sin((2+c) theta) > 0 on (0, pi/4]
+====================================================================================================
+   analytic part: F(theta)/theta >= G0 - G1 theta^2 on (0, 0.15], G0 = 2(c + c^2 - 1) = 0.058004, G1 = 1.647587
+  ok: the dropped theta^4 coefficient (sigma^2/2)(4/3) - 2 eps4 = 0.15119 is >= 0
+  ok: G0 - G1 (0.15)^2 = 0.02093 > 0, so F > 0 on (0, 0.15]
+  ok: interval arithmetic (129 boxes): F(theta) > 0 on [0.15, u], u = an outward enclosure of pi/4; hence the zone condition holds at theta = pi/(m+2) for every m >= 2 (m = 2 included)
+  ok: numerically min F/theta = 0.05800 is attained as theta -> 0 (margin 2.9% of the leading term)
+   width shift of the optimal trigonometric Robin supersolution, delta_R(m) (zone condition at theta = pi/(m+delta)):
+     m=2:0.9927  m=3:1.2117  m=4:1.3517  m=5:1.4466  m=6:1.5137  m=8:1.5996  m=10:1.6502  m=16:1.7189  m=32:1.7614  m=64:1.7739  m=128:1.7773  m=1000:1.7785  m=100000:1.7785
+  ok: delta_R(m) < 2 and increases to 2c(1-c)/(2c-1) = 1.77849
+  ok: |beta(pi/(m+2))|(m-c) <= 0.0411 numerically (m <= 20000) and <= 0.0624 by |beta| <= x^2/6 + x^4/150, x = c pi/(m+2), for all m >= 2
+  ok: |beta(pi/(m+2))|(m+1) <= 0.1128 numerically (0 <= m <= 20000) and <= 0.1701 by the same bound, for all m >= 0 (the constant of the Dirichlet strata bound)
+[time] section 2: 0.3s elapsed, peak RSS 32 MB
+
+====================================================================================================
+3. Theorem 1: N_m(L) <= 2^(HL) e^(|beta|(m-c)) kappa(pi/(m+2))^L
+====================================================================================================
+  ok: exact DP, 1 <= L <= 400, 2 <= m <= 401: ln(N_m(L)/bound) <= -0.6219 < 0 (max at (L,m) = (1, 2))
+  ok: float DP, L = 256, 2 <= m <= 60 and m = 65..120 step 5: ln(N_m(L)/bound) <= -4.177 < 0
+  ok: float DP, L = 512, 2 <= m <= 60 and m = 65..120 step 5: ln(N_m(L)/bound) <= -4.815 < 0
+  ok: float DP, L = 1024, 2 <= m <= 60 and m = 65..120 step 5: ln(N_m(L)/bound) <= -5.389 < 0
+  ok: float DP, L = 2048, 2 <= m <= 60 and m = 65..120 step 5: ln(N_m(L)/bound) <= -5.987 < 0
+  ok: float DP, L = 4096, 2 <= m <= 60 and m = 65..120 step 5: ln(N_m(L)/bound) <= -6.623 < 0
+   comparison at L = 180 and L = 400 (all quantities divided by 2^L):
+      L    m    N_m(L)/2^L       Theorem 1 bound   Theorem A bound (pairpeak)   ln(T1)/ln(exact)
+    180    2   2.0165e-23        3.4362e-09         1.7641e-03                   0.373
+    180    3   1.7313e-11        4.4759e-07         1.8511e-03                   0.590
+    180    4   1.9989e-08        6.0388e-06         1.9423e-03                   0.678
+    180    5   3.6067e-07        2.8567e-05         1.9423e-03                   0.705
+    180    6   1.4759e-06        7.7832e-05         1.9423e-03                   0.705
+    180    8   4.7233e-06        2.5121e-04         1.9423e-03                   0.676
+    180   10   6.6670e-06        4.7300e-04         1.9423e-03                   0.642
+    180   12   7.2475e-06        6.9164e-04         1.9423e-03                   0.615
+    180   16   7.3601e-06        1.0461e-03         1.9423e-03                   0.581
+    400    2   5.3067e-51        1.4842e-19         7.4052e-07                   0.375
+    400    3   5.9951e-24        7.3964e-15         8.5554e-07                   0.609
+    400    4   8.1133e-17        2.4022e-12         8.9773e-07                   0.722
+    400    5   8.8129e-14        7.6111e-11         8.9773e-07                   0.775
+    400    6   3.2656e-12        7.0795e-10         9.4199e-07                   0.797
+    400    8   9.6685e-11        9.6206e-09         9.4199e-07                   0.801
+    400   10   3.9167e-10        3.9438e-08         9.4199e-07                   0.787
+    400   12   7.3621e-10        9.2096e-08         9.4199e-07                   0.770
+    400   16   1.0953e-09        2.3228e-07         9.4199e-07                   0.740
+  ok: at L = 180 and L = 400 Theorem 1 is stronger than Theorem A for every 2 <= m <= 16
+   per-step rates at L = 20000 (second half): ln N_m rate, H ln2 + ln kappa(pi/(m+2)), ln A_(m+2) rate:
+     m= 3  Robin 0.56310628 <= kappa-rate 0.61169995 <= Dirichlet(m+2) 0.61887022
+     m= 5  Robin 0.62414231 <= kappa-rate 0.63480375 <= Dirichlet(m+2) 0.63746128
+     m= 8  Robin 0.64421741 <= kappa-rate 0.64691928 <= Dirichlet(m+2) 0.64784833
+     m=12  Robin 0.65174943 <= kappa-rate 0.65258359 <= Dirichlet(m+2) 0.65292899
+     m=16  Robin 0.65454557 <= kappa-rate 0.65490776 <= Dirichlet(m+2) 0.65507354
+  ok: the Robin growth rate is below H ln 2 + ln kappa(pi/(m+2)), which is below the growth rate of A_(m+2) (EMPIRICAL rates)
+   effective widths W (H ln 2 + ln kappa(pi/W) = measured rate): Robin W_R(m) - m and Dirichlet W_D(m+2) - (m+2):
+     m= 3  W_R - m = 0.5328   W_D(m+2) - (m+2) = 0.4268
+     m= 5  W_R - m = 0.8232   W_D(m+2) - (m+2) = 0.4262
+     m= 8  W_R - m = 1.0060   W_D(m+2) - (m+2) = 0.4268
+     m=12  W_R - m = 1.1029   W_D(m+2) - (m+2) = 0.4297
+     m=16  W_R - m = 1.1480   W_D(m+2) - (m+2) = 0.4349
+  ok: EMPIRICAL effective widths: Robin m + (0.5..1.2, increasing in m), Dirichlet M + 0.42; the trigonometric supersolution uses m + 2
+[time] section 3: 12.4s elapsed, peak RSS 51 MB
+
+====================================================================================================
+4. Theorem 2: A_M(L) >= 2^(HL) kappa(pi/M)^L / P_2(M)
+====================================================================================================
+  ok: C(n,u) >= e^(n H_e(u/n))/(2 sqrt n) for all 1 <= u <= n-1 <= 399 (Robbins' Stirling bounds give the factor 0.675 >= 1/2)
+  ok: D(p||c) <= (p-c)^2/(2 min_{x between p and c} x(1-x)) on p in [1/2, 2c-1/2] (grid)
+  ok: cycle lemma, exhaustive for n <= 10 (52 multisets x thresholds): if the total exceeds -b (b >= 0), at least a fraction 1/n of the arrangements have all partial sums > -b
+  ok: Hoeffding (1963, Thm 4) for sampling without replacement, P(P_k - k mu >= t) <= exp(-2t^2/k): confirmed exhaustively for n <= 12
+  ok: M = 110: n(M) = 431 >= n_min(M) = 428 and 4 n ln(2n) <= (M-2)^2
+  ok: M = 110, n = 431: for 6 starting points y the exact bridge fractions of both phases are >= 1/(2n) (min ratio to 1/(2n): 278.9)
+  ok: M = 110: min over 60 starting points of Q_y(confined 2n steps, S_2n in (0,1]) = 5.358e-16 >= q(M) = 2.504e-25 (the proved bound is crude by a factor e^21)
+  ok: M = 150: n(M) = 748 >= n_min(M) = 581 and 4 n ln(2n) <= (M-2)^2
+  ok: M = 150, n = 748: for 6 starting points y the exact bridge fractions of both phases are >= 1/(2n) (min ratio to 1/(2n): 397.2)
+  ok: M = 150: min over 60 starting points of Q_y(confined 2n steps, S_2n in (0,1]) = 2.746e-17 >= q(M) = 5.384e-27 (the proved bound is crude by a factor e^22)
+  ok: Dirichlet subsolution: P_M psi >= kappa(pi/M) psi at 20000 random (M, s), psi = e^(beta s) sin(pi s/M)
+  ok: Dirichlet supersolution: P_W f <= kappa(pi/(W+1)) f at 20000 random (W, s), f = e^(beta s) sin(pi(s+c)/(W+1))
+  ok: Robin supersolution: P_R g <= kappa(pi/(m+2)) g at 20000 random (m, s), g = e^(beta s) sin(pi(s+c)/(m+2))
+  ok: exact DP, 4 <= M <= 59, 1 <= L <= 400: A_M(L) >= 2^(HL) kappa(pi/M)^L/P_2(M) (min log-margin 2.59 at (8, 4))
+  ok: EMPIRICAL: A_M(L) >= 2^(HL) kappa(pi/M)^L / M^3 for M^2/2 <= L <= 400 (the proved P_2 is crude)
+   P_2(M) (proved):  M=4: e^4.3  M=8: e^7.1  M=16: e^12.1  M=32: e^21.4  M=64: e^39.2  M=108: e^63.4  M=109: e^63.9  M=200: e^70.7  M=1000: e^94.2  M=10000: e^130.0  M=1000000: e^203.7
+  ok: ln P_2(M)/ln M < 17 for M = 1e3..1e8 (asymptotically 16.81 - 7.9 ln(2 ln M)/ln M); P_2 is polynomial
+[time] section 4: 14.7s elapsed, peak RSS 51 MB
+
+====================================================================================================
+5. Corollary 3 (Conjecture R with K = 2, up to a polynomial): N_m(L) <= P(m) A_(m+2)(L)
+====================================================================================================
+  ok: exact, L <= 400, all m: max N_m(L)/A_(m+2)(L) = 1.0000889 at (58, 9), far below the proved P(m)
+  ok: for comparison max N_m(L)/A_(m+1)(L) = 1.003255 at (50, 7) (pairpeak note: 1.003255 at (50,7))
+   behaviour in m and L (exact, L <= 400): max_L N_m/A_(m+K), its argmax, and the value at L = 400
+      m   K=1: max  (argmax L)  at L=400   |  K=2: max  (argmax L)  at L=400
+      3   1.000000 (  1)    1.1198e-06   |  1.0000000 (  1)    5.0214e-10
+      4   1.000773 ( 15)    6.7955e-03   |  1.0000000 (  1)    9.9902e-05
+      5   1.001629 ( 23)    1.0852e-01   |  1.0000000 (  1)    8.7844e-03
+      6   1.003155 ( 39)    3.2550e-01   |  1.0000059 ( 23)    6.6716e-02
+      7   1.003255 ( 50)    5.4000e-01   |  1.0000250 ( 31)    1.9116e-01
+      8   1.003204 ( 69)    6.9923e-01   |  1.0000562 ( 45)    3.4798e-01
+      9   1.002996 ( 88)    8.0614e-01   |  1.0000889 ( 58)    5.0092e-01
+     10   1.002530 (107)    8.7594e-01   |  1.0000705 ( 69)    6.3221e-01
+     12   1.001516 (153)    9.5122e-01   |  1.0000523 (104)    8.1877e-01
+     15   1.000667 (226)    9.9093e-01   |  1.0000186 (142)    9.5269e-01
+     20   1.000150 (351)    1.0001e+00   |  1.0000022 (218)    9.9812e-01
+     30   1.000000 (400)    1.0000e+00   |  1.0000000 (378)    1.0000e+00
+  ok: for fixed m the ratios fall below 1 at large L (eigenvalue gap; e.g. N_3/A_4 = 1.1e-06 at L = 400), and the maxima sit at L ~ m^2
+   proved P(m) = e^(|beta|(m-c)) P_2(m+2):  m=2: e^4.4  m=5: e^6.5  m=10: e^9.7  m=50: e^32.6  m=107: e^63.9  m=200: e^70.9  m=1000: e^94.3  m=10000: e^130.0
+  ok: P(m) <= (m+2)^17 for 2 <= m < 1e5 (max of ln P(m) - 17 ln(m+2) = -15.85), and ln P(m)/ln m -> 16.81
+  ok: numerical confirmation of the analytic bound ln P(m) <= 16.83 ln(m+2) + 1.38 for m + 2 >= 3400 (grid to 1e12); since 16.83 ln M + 1.38 <= 17 ln M for M >= 3400, P(m) <= (m+2)^17 for every m >= 2
+[time] section 5: 20.4s elapsed, peak RSS 51 MB
+
+====================================================================================================
+6. Corollaries 4-5: the private price and the sharp second-order term
+====================================================================================================
+      L     Lambda(L)  -kappa3 L^(1/3)   lower bound   exact ln(2^(eta L) rho^peak)   upper bound   upper bound for ln(2^(eta L) pi_L)
+     100      -9.822      -9.783          -15.238       -10.669                       -5.750         1.118
+     200     -12.356     -12.325          -18.763       -13.575                       -8.196        -0.576
+     400     -15.553     -15.529          -23.156       -17.187                      -11.299        -2.974
+    1000     -21.094     -21.076          -30.678       -23.330                      -16.708        -7.457
+    2000     -26.568     -26.554          -38.043       -29.311                      -22.078       -12.130
+  ok: rigorous bracket: lower bound (Theorem 2) <= ln(2^(eta L) rho^peak_L) <= upper bound (Dirichlet supersolution) at L = 100..2000
+  ok: Lambda(L) = -kappa_3 L^(1/3) + O(L^(-1/3)): |Lambda + kappa_3 L^(1/3)| < 0.05 on L = 100..2000
+  ok: the rigorous bracket has width < 17 ln L (the O(log L) of Corollary 5); at L = 1000 it is [-30.7, -16.7] against the peak note's elementary [-319.9, -2.09]
+  ok: pi_L <= L^25 rho^peak_L on this range (from the two rigorous bounds; Corollary 4 is the general statement)
+     L=1e+04: (Lambda + kappa_3 L^(1/3)) L^(1/3) = -0.18069 ; argmax a / L^(1/3) = 1.27941 (theta* = 1.27893)
+     L=1e+05: (Lambda + kappa_3 L^(1/3)) L^(1/3) = -0.18067 ; argmax a / L^(1/3) = 1.27904 (theta* = 1.27893)
+     L=1e+06: (Lambda + kappa_3 L^(1/3)) L^(1/3) = -0.18066 ; argmax a / L^(1/3) = 1.27896 (theta* = 1.27893)
+     L=1e+07: (Lambda + kappa_3 L^(1/3)) L^(1/3) = -0.18066 ; argmax a / L^(1/3) = 1.27894 (theta* = 1.27893)
+  ok: (Lambda(L) + kappa_3 L^(1/3)) L^(1/3) stays bounded and the maximiser is a ~ theta* L^(1/3)
+   Corollary 4 at L = 1000 (formal): pi_L <= (9 (27 L + 18) max_(m<=L) P(m) + 4L 2^-L) rho^peak_L = e^106.7 rho^peak_L
+[time] section 6: 42.8s elapsed, peak RSS 175 MB
+
+====================================================================================================
+7. Theorem 6 (RM reduction): the sharp Conjecture R follows from V_k(y) - V_k(y+1) <= (2 - 2/C) F_k(y)
+====================================================================================================
+   max over zone points y = z_t - c (z_t = m - {ct}; the first 60 zone times t, t <= 163) and k <= 400 of (V_k(y) - V_k(y+1))/F_k(y):
+     K=1 m= 4: max ratio 0.07692  ->  C_min = 2/(2 - ratio) = 1.0400
+     K=1 m= 6: max ratio 0.25450  ->  C_min = 2/(2 - ratio) = 1.1458
+     K=1 m= 8: max ratio 0.31511  ->  C_min = 2/(2 - ratio) = 1.1870
+     K=1 m=12: max ratio 0.36053  ->  C_min = 2/(2 - ratio) = 1.2199
+     K=1 m=16: max ratio 0.37442  ->  C_min = 2/(2 - ratio) = 1.2303
+     K=1 m=20: max ratio 0.37939  ->  C_min = 2/(2 - ratio) = 1.2341
+     K=2 m= 4: max ratio 0.00000  ->  C_min = 2/(2 - ratio) = 1.0000
+     K=2 m= 6: max ratio 0.02314  ->  C_min = 2/(2 - ratio) = 1.0117
+     K=2 m= 8: max ratio 0.06387  ->  C_min = 2/(2 - ratio) = 1.0330
+     K=2 m=12: max ratio 0.10739  ->  C_min = 2/(2 - ratio) = 1.0567
+     K=2 m=16: max ratio 0.12298  ->  C_min = 2/(2 - ratio) = 1.0655
+     K=2 m=20: max ratio 0.12822  ->  C_min = 2/(2 - ratio) = 1.0685
+  ok: RM(1, C) holds with C = 1.25 and RM(2, C) with C = 1.075 at all tested zone points and k <= 400 (FINITE-EXACT on this set; not a proof of Conjecture R)
+     K=1 m=12: min over 40 zone points and k <= 200 of V_k(y+1)/V_k(y) = 0.864371
+     K=4 m=12: min over 40 zone points and k <= 200 of V_k(y+1)/V_k(y) = 0.998366
+  ok: plain monotonicity fails (min ratio 0.8644 for K = 1 and 0.998366 for K = 4 at m = 12): the F-slack in (RM) is needed
+  ok: exact, 2 <= m < 40, L <= 400: N_m(L) <= 1.25 A_(m+1)(L) - 0.25 F_L(0) (the form produced by Theorem 6)
+[time] section 7: 47.3s elapsed, peak RSS 175 MB
+
+ALL CHECKS PASSED

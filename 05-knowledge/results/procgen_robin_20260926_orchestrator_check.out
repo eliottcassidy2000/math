@@ -1,0 +1,7 @@
+  ok: (a) ln kappa(theta) < -0.1 theta^2 on [0.15, pi/2] (independent interval bisection, 916 boxes)
+  ok: (b) Lemma Z: F(theta) > 0 on [0.15, pi/4] (independent interval bisection, 65 boxes)
+  ok: (c) end lemma: n(M_a) >= n_min(M_a + 1/4) on the grid 110..3000 (step 1/4)
+  ok: Lemma E(i): the eigen-identity holds to 1e-30 at 200 random (theta, phi, s)
+  ok: Theorem 1 against exact N_m(L), m = 2..12, L <= 200 (max ln(N/bound) = -0.025)
+  ok: Theorem 2 (crude constant) against exact A_M(L), M = 4..16, L <= 200 (min log-margin 2.59)
+  ok: Corollary 3: N_m(L) <= (m+2)^17 A_(m+2)(L); observed max N_m/A_(m+2) = 1.0000889 (m <= 10, L <= 160)

@@ -2,7 +2,19 @@
 id: HYP-9142
 title: "Conjecture R (Robin inequality): the survivors of the reflected barrier at slope level m are at most a constant times the undecided words with peak below 3^(m+1), uniformly in L and m; this implies the peak-discounted private pairing price pi_L <= O(L) rho^peak_L"
 status: >
-  OPEN; FINITE-EXACT support. For 1 <= L <= 180 and all m,
+  PROVED UP TO A POLYNOMIAL FACTOR (2026-09-26), independently by two
+  sessions; OPEN with a constant K_0.
+  (a) codex crossroads223 (crossroads223_20260926_robin.md and _bridge.md;
+  THM-4488 reserved): N_m(L) <= 4e(m+3) L A_(m+5)(L).
+  (b) collatz-procgen robin lane (procgen_robin_20260926_robin_inequality.md;
+  orchestrator-audited, including an independent interval-arithmetic
+  re-check): N_m(L) <= (m+2)^17 A_(m+2)(L). This is Theorem 1 (a sine
+  supersolution at width m+2 with the exact eigenvalue kappa(pi/(m+2)))
+  together with Theorem 2 (a sine subsolution plus bridge lemmas).
+  Both give the private pairing price pi_L <= poly(L) rho^peak_L and the
+  sharp second-order term ln rho^peak_L = -(1-H)L ln 2 - kappa_3 L^(1/3)
+  + O(log L), elementary, without Mogul'skii.
+  Earlier status: OPEN; FINITE-EXACT support. For 1 <= L <= 180 and all m,
   max N_m(L)/A_(m+1)(L) = 1.003255 (at (L,m) = (50,7)); with K = 2 the
   maximum is 1.0000889. The ratio is <= 1.0005 at L = 256, 512, 1024
   (m <= 60). So K_0 = 1 is false but K_0 = 1.0033 holds on the range.

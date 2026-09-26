@@ -30,6 +30,12 @@ status: >
   kappa_q L^(1/3)(1+o(1)), where kappa_q = (3/2)(pi^2 c(1-c))^(1/3)
   (ln z_q)^(2/3) and z_q = q min(1, c/(1-c)); kappa_3 = 2.1076,
   kappa_5 = 2.4360, kappa_7 = 2.4104.
+  UPDATE 2026-09-26: for q = 3 the sharp second-order term holds with an
+  elementary O(log L) error, no Mogul'skii needed:
+  ln rho^peak_L = -(1-H)L ln 2 - kappa_3 L^(1/3) + O(log L). This was proved
+  independently by the crossroads223 bridge note and by the robin lane
+  (procgen_robin_20260926_robin_inequality.md, Corollary 5; sine sub- and
+  supersolutions of the letter walk in a strip).
   EMPIRICAL: in the pairing family a partner-isolated peak catch tracks
   2 rho^peak within a factor 1.2-1.5 for L = 8..32, and every n <= 10^6
   descends. Whether delta_L (pairing) <= poly(L) rho^peak_L is OPEN.
