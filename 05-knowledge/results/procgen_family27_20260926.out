@@ -1,0 +1,216 @@
+procgen_family27_20260926_run.py  X = 4294967296  python 3.10.0  mpmath 1.3.0
+  | sha256 83cb891b4b501b926f050d2d6ece82310bee70ae76ea05ba1ba45f04652b049a  procgen_family27_20260926_run.py
+  | sha256 9180a2d746811d077bbaed3eb306d5588bf57bfa66c9aa79ad995db83deced06  procgen_family27_20260926_theory.py
+  | sha256 49c50504d574e2d116dea01ef43ea5dbfde6ec6373cb4ade4f9c13dcda357bc3  procgen_family27_20260926_bfiles.py
+  | sha256 5e6e5c9a8b6fa384d9458e7e838d0f8821ae5d9939cdad87b8bc951980d0dbd5  procgen_family27_20260926_reference.py
+  | sha256 74ef55ba059ffe12ea166c2259d060c0160e6d9cbad7cf3c429f043d09948466  procgen_family27_20260926_scan.c
+
+==== A. The Moran function g(s) = 2^-s + (1/3)(3/2)^s of the backward recursion ====  (t=0.0s)
+[check   1] g(1) = 1/2 + 1/2 = 1 and g(2) = 1/4 + 3/4 = 1 exactly (Fractions)
+[check   2] phi(0) = phi(1) = 1 exactly, phi(t) = ((3/2)^t + (1/2)^t)/2 (AM-fairness 3+1 = 4)
+[check   3] g(s) = phi(s-1) identically (Lagarias-Weiss M_BP(t) = M_RRW(t+1)); max error 9.2e-41 on 60 points
+[check   4] g < 1 exactly on (1,2) and g > 1 on [-2,1) and (2,4] (grid of 350 points): the only roots are s = 1, 2
+[check   5] residue at s=1: R1 = -1/g'(1) = 1/ln(2/sqrt3) = 6.95211899356 (K-L typical total stopping time 6.95212 ln n)
+[check   6] residue at s=2: R2 = 1/g'(2) = 1/((3/4)ln3 - ln2) = 7.64455650281 (K-L time-to-peak slope 7.645)
+[check   7] argmin g = 1 + lambda*, lambda* = log_3(ln2/ln(3/2)) = 0.488077132094 (THM-4487 Chernoff tilt)
+[check   8] min g = 2^-(1-h), h = h(log_3 2) = 0.949955527188: 1 - h = 0.050044473 (glide / dimension exponent)
+[check   9] three forms of the delay constant agree to 2.5e-39: 1/max_s(-ln g(s)/s) = 1/(ln2 - p* ln3) with H(p*) = p* ln3 = LW fixed point gamma gLW(1/gamma) = 1
+[check  10] gamma = 41.6776476557, beta_BP = 0.023993677, ones-ratio p* = 0.60908977 reproduce Lagarias-Weiss / K-L (41.677647, 0.02399, 0.609091)
+[check  11] zeta := (3/4)log2 3 - 1 = 1 - h(3/4) = phi'(1)/ln2 = 0.188721875541 (junction of the window rise spectrum)
+[check  12] delay spectrum 1 - a gLW(1/a) = a(H(p) - p ln3) at a = 8: 0.995293199
+[check  13] delay spectrum 1 - a gLW(1/a) = a(H(p) - p ln3) at a = 12: 0.9270499947
+[check  14] delay spectrum 1 - a gLW(1/a) = a(H(p) - p ln3) at a = 16: 0.8239326664
+[check  15] delay spectrum 1 - a gLW(1/a) = a(H(p) - p ln3) at a = 21.2389: 0.6687832528
+[check  16] delay spectrum 1 - a gLW(1/a) = a(H(p) - p ln3) at a = 30: 0.3887551183
+[check  17] delay spectrum 1 - a gLW(1/a) = a(H(p) - p ln3) at a = 40: 0.05643177765
+[check  18] delay spectrum equals 1 at the typical ratio R1 and 0 at gamma (records at the zero)
+[check  19] glide-record constant 1/(1-h) = 19.98222668 T-steps per log2 n (standard map (1+log_3 2)/(1-h) = 32.58960804)
+[check  20] Brownian excursion maximum law P(M<=x) = 1 + 2 sum (1-4k^2x^2)e^(-2k^2x^2): mean 1.253314137 = sqrt(pi/2), E M^2 = 1.64493407 = pi^2/6
+
+==== B. Exact rise law on words (Ville / optional stopping) and the window rise spectrum ====  (t=3.2s)
+[check  21] Theorem R on words, all 920 cases k <= 40, W = 2^(i/2), i <= 40: P(tau<=k) = (1-eps_k)/E[M_tau|tau<=k] EXACTLY, W <= E[M_tau|tau<=k] < 3W/2, hence (2/3)(1-eps)/W < P <= (1-eps)/W
+[check  22] window rise spectrum at beta=1.02: closed form 0.98 = max_t[1 - t + t h((t+b)/(t log2 3))] 0.98
+[check  23] window rise spectrum at beta=1.08: closed form 0.92 = max_t[1 - t + t h((t+b)/(t log2 3))] 0.92
+[check  24] window rise spectrum at beta=1.15: closed form 0.85 = max_t[1 - t + t h((t+b)/(t log2 3))] 0.85
+[check  25] window rise spectrum at beta=1.18: closed form 0.82 = max_t[1 - t + t h((t+b)/(t log2 3))] 0.82
+[check  26] window rise spectrum at beta=1.20: closed form 0.799804 = max_t[1 - t + t h((t+b)/(t log2 3))] 0.799804
+[check  27] window rise spectrum at beta=1.25: closed form 0.7440321 = max_t[1 - t + t h((t+b)/(t log2 3))] 0.7440321
+[check  28] window rise spectrum at beta=1.30: closed form 0.6796203 = max_t[1 - t + t h((t+b)/(t log2 3))] 0.6796203
+[check  29] window rise spectrum at beta=1.40: closed form 0.5197953 = max_t[1 - t + t h((t+b)/(t log2 3))] 0.5197953
+[check  30] window rise spectrum at beta=1.50: closed form 0.3015192 = max_t[1 - t + t h((t+b)/(t log2 3))] 0.3015192
+[check  31] window rise spectrum at beta=1.55: closed form 0.1528495 = max_t[1 - t + t h((t+b)/(t log2 3))] 0.1528495
+[check  32] P(W) = P(sup_j 3^(o_j)/2^j >= W) bracketed to relative width < 1e-9 for W = 2^(i/2), i = 1..120, and 2/3 < W P(W) <= 1 in all 120 cases
+[check  33] W P(W) for W in [2^20, 2^60] lies in [0.8274, 0.8366]: the Cramer-Lundberg constant C = lim W P(W) (non-lattice walk) is about 0.83
+  | W = 2^1     P(W) = 4.2736920694e-01   W P(W) = 0.854738
+  | W = 2^2     P(W) = 2.0343769773e-01   W P(W) = 0.813751
+  | W = 2^4     P(W) = 5.3272795046e-02   W P(W) = 0.852365
+  | W = 2^7     P(W) = 6.5109904945e-03   W P(W) = 0.833407
+  | W = 2^10    P(W) = 8.1222443537e-04   W P(W) = 0.831718
+  | W = 2^20    P(W) = 7.9783673113e-07   W P(W) = 0.836592
+  | W = 2^40    P(W) = 7.5660142266e-13   W P(W) = 0.831892
+  | W = 2^60    P(W) = 7.1958350491e-19   W P(W) = 0.829623
+
+==== C. W_k = |Bad_k| (no-descent words) exactly ====  (t=14.5s)
+[check  34] W_1..W_11 = 1,1,2,3,4,8,13,19,38,64,128 (THM-4479 table)
+[check  35] sum_{1<=t<T} W_t = 281, 2903, 31730, 367698 for T = 12,16,20,24 (THM-4495 / THM-4487 brute-force counts)
+[check  36] W_k k^(3/2) 2^(-hk) in [9.6648, 10.8051] for 500 <= k <= 1100 (THM-4495 window [9.6648, 11.0517])
+
+==== D. OEIS record sequences headed by 27 (b-files, exact re-derivation) ====  (t=15.0s)
+  | A060413.json sha256 23f95ec99b61e4207b25c989411c6e574d28b6a7215515166c0810d8b71f5f21
+  | A217934.json sha256 eacff9195988507969c6731e372c2295779cdda3225a75e98f07fcd722a8a72b
+  | b006877.txt sha256 4bdd9c264ffb33f6252adad6716f8f0ad55c84687d4300a9bfbe646a1a81327f
+  | b006878.txt sha256 1aebb537ac7cbb0290e8614b8e58e879efa24843277c0c437a72672f965233ac
+  | b006884.txt sha256 657ec2fbc0ade279ce052005ae11234ea795c47b0fdaf9add6fff5d4f214de86
+  | b006885.txt sha256 7007b273e50fc2d51afba6e740b201ae61e3ae4f8b5898e3880bb6c5156bf053
+  | b060412.txt sha256 38fc2c8dffae81a0b73b3ada24fd4c792476133a97c98ea9cd2ca0b8ee7862d0
+[check  37] all 148 A006877 delay records re-derived: standard delay = A006878 (largest n = 14727207461063895711)
+[check  38] all 97 A006885 path-record maxima re-derived from A006884 (98 terms; the 98th has no A006885 value in the b-file)
+[check  39] all 35 A060412 glide records re-derived: T-glide = A060413, standard glide = A217934
+[check  40] 27: T-delay 70 (41 odd steps, standard 111), T-peak 4616 at T-step 45 (standard 9232), glide 59 T / 96 standard
+[check  41] 27 is the 9th delay record, the 6th path record and the 4th glide record (A006877, A006884, A060412)
+[check  42] path records: #records <= n_k versus 2(H_(n_k+1) - 1) (Frechet-scale model, independent of C): max |z| = 1.34 over all 98 records; at the last record 98 vs 97.58
+  | path records <= 10^3 :  10   2(H_(X+1) - 1) =  12.97
+  | path records <= 10^6 :  25   2(H_(X+1) - 1) =  26.79
+  | path records <= 10^9 :  44   2(H_(X+1) - 1) =  40.60
+  | path records <= 10^12:  61   2(H_(X+1) - 1) =  54.42
+  | path records <= 10^15:  73   2(H_(X+1) - 1) =  68.23
+  | path records <= 10^18:  87   2(H_(X+1) - 1) =  82.05
+  | path records <= 10^21:  94   2(H_(X+1) - 1) =  95.86
+  | path records n > 1e6 (73): median t(n)/n^2 = 0.0711 (independent Frechet records: median C/(2 ln 2) = 0.60 for C = 0.83)
+  | delay records: 148 up to ln X = 44.14, i.e. 3.353 per unit of ln X
+  | path records: 98 up to ln X = 49.21, i.e. 1.991 per unit of ln X
+  | glide records: 35 up to ln X = 42.40, i.e. 0.825 per unit of ln X
+[check  43] least-squares slope of #path records against ln n is 2.096 (theta + 1 = s2 = 2)
+[check  44] path records with t(n) > n^2 (rho > 2): 8 in all of A006884 (27 has r = 6.332); 10709980568908647 (r = 1.528) is not in K-L Table 3
+[check  45] rho(n) = ln t(n)/ln n over all A006884 terms n >= 3 is maximal at n = 27 (2.559982); the runner-up is 2.0987 at n = 319804831
+[check  46] path records n >= 1e4 (84): time-to-peak / ln(t/n) median 7.077 mean 7.281 vs R2 = 7.6446 (heuristic)
+  | glide record 2                      glide_T     1   L*(n)     2   ratio 0.500   glide/log2 n 1.000
+  | glide record 3                      glide_T     4   L*(n)     2   ratio 2.000   glide/log2 n 2.524
+  | glide record 7                      glide_T     7   L*(n)     5   ratio 1.400   glide/log2 n 2.493
+  | glide record 27                     glide_T    59   L*(n)    16   ratio 3.688   glide/log2 n 12.408
+  | glide record 703                    glide_T    81   L*(n)    65   ratio 1.246   glide/log2 n 8.565
+  | glide record 10087                  glide_T   105   L*(n)   119   ratio 0.882   glide/log2 n 7.895
+  | glide record 35655                  glide_T   135   L*(n)   149   ratio 0.906   glide/log2 n 8.927
+  | glide record 270271                 glide_T   164   L*(n)   195   ratio 0.841   glide/log2 n 9.089
+  | glide record 362343                 glide_T   165   L*(n)   203   ratio 0.813   glide/log2 n 8.935
+  | glide record 381727                 glide_T   173   L*(n)   205   ratio 0.844   glide/log2 n 9.330
+  | glide record 626331                 glide_T   176   L*(n)   216   ratio 0.815   glide/log2 n 9.140
+  | glide record 1027431                glide_T   183   L*(n)   229   ratio 0.799   glide/log2 n 9.163
+  | glide record 1126015                glide_T   224   L*(n)   230   ratio 0.974   glide/log2 n 11.143
+  | glide record 8088063                glide_T   246   L*(n)   279   ratio 0.882   glide/log2 n 10.720
+  | glide record 13421671               glide_T   287   L*(n)   294   ratio 0.976   glide/log2 n 12.121
+  | glide record 20638335               glide_T   292   L*(n)   305   ratio 0.957   glide/log2 n 12.017
+  | glide record 26716671               glide_T   298   L*(n)   311   ratio 0.958   glide/log2 n 12.079
+  | glide record 56924955               glide_T   308   L*(n)   330   ratio 0.933   glide/log2 n 11.955
+  | glide record 63728127               glide_T   376   L*(n)   333   ratio 1.129   glide/log2 n 14.503
+  | glide record 217740015              glide_T   395   L*(n)   365   ratio 1.082   glide/log2 n 14.261
+  | glide record 1200991791             glide_T   398   L*(n)   409   ratio 0.973   glide/log2 n 13.196
+  | glide record 1827397567             glide_T   433   L*(n)   421   ratio 1.029   glide/log2 n 14.073
+  | glide record 2788008987             glide_T   447   L*(n)   432   ratio 1.035   glide/log2 n 14.246
+  | glide record 12235060455            glide_T   547   L*(n)   471   ratio 1.161   glide/log2 n 16.323
+  | glide record 898696369947           glide_T   550   L*(n)   585   ratio 0.940   glide/log2 n 13.851
+  | glide record 2081751768559          glide_T   606   L*(n)   609   ratio 0.995   glide/log2 n 14.809
+  | glide record 13179928405231         glide_T   688   L*(n)   658   ratio 1.046   glide/log2 n 15.786
+  | glide record 31835572457967         glide_T   712   L*(n)   682   ratio 1.044   glide/log2 n 15.873
+  | glide record 70665924117439         glide_T   722   L*(n)   704   ratio 1.026   glide/log2 n 15.694
+  | glide record 739448869367967        glide_T   728   L*(n)   768   ratio 0.948   glide/log2 n 14.739
+  | glide record 1008932249296231       glide_T   886   L*(n)   777   ratio 1.140   glide/log2 n 17.776
+  | glide record 118303688851791519     glide_T   902   L*(n)   907   ratio 0.994   glide/log2 n 15.904
+  | glide record 180352746940718527     glide_T   966   L*(n)   918   ratio 1.052   glide/log2 n 16.852
+  | glide record 1236472189813512351    glide_T   990   L*(n)   970   ratio 1.021   glide/log2 n 16.472
+  | glide record 2602714556700227743    glide_T  1005   L*(n)   993   ratio 1.012   glide/log2 n 16.428
+[check  47] glide records n >= 1e4: glide / L*(n) in [0.799, 1.161], L*(n) = max{L : n W_(L-1) 2^-(L-1) >= 1} (exact W_k model)
+[check  48] 27's glide 59 is 3.69 times its model value L*(27) = 16 (the extreme outlier of the table)
+  | records in 27's branch B27 = Pred*(3077): delay 104/148, path 36/98, glide 13/35
+[check  49] records lying in 27's branch: delay 104/148 (70%), path 36/98 (37%), glide 13/35 (37%)
+[check  50] gamma(5649499) = 24.699176 < gamma(3732423) = 24.714906: K-L Table 1 row 10 is a ones-ratio record, not a gamma record
+
+==== E. Exhaustive scan of 1 <= n <= X = 4294967296 (shortcut map T) ====  (t=15.2s)
+[check  51] C scanner (N0 = 2^12, stream path exercised) = brute-force Python reference at X = 2^17: every histogram, record list, rho>2 list and excursion count identical
+[check  52] production build (N0 = 2^24) = build with N0 = 2^20 at X = 2^25: identical reports (memo/stream boundary moved by a factor 16)
+  | scan wall time 561.7 s; peak RSS of child processes 241.9 MB (macOS ru_maxrss bytes)
+[check  53] every child process stayed below 700 MB RSS (peak 241.9 MB)
+[check  54] scan report complete (END marker, X = 4294967296)
+[check  55] every n <= X counted exactly once over the dyadic blocks
+[check  56] standard-delay records n <= X from the scan = A006877 terms <= X (70 records, values = A006878)
+[check  57] path records n <= X from the scan = A006884 terms <= X (45 records, maxima = A006885)
+[check  58] glide records n <= X (T-steps and standard steps give the same 23 starting values) = A060412 terms <= X, values A060413
+[check  59] records of gamma(n) = sigma_T(n)/ln n over odd 3 <= n <= X = K-L Table 1 rows <= X (12 rows, K-L row 5649499 excluded)
+[check  60] rho(n) = ln t(n)/ln n over odd 3 <= n <= X has only the records 3 and 27: rho(27) = 2.559982229 is the maximum over all 3 <= n <= X (even n never exceed their odd part)
+[check  61] glide/log2 n records over odd n <= X: [3, 27, 63728127] (27 held the record from 27 to 63728127)
+  | t(n) > n^2 cluster with peak 4616: [27, 31, 41, 47, 54, 55, 62, 63]
+  | t(n) > n^2 cluster with peak 707118223359971240: [319804831, 379027947, 426406441, 479707247, 568541921, 598957743, 639609662, 639609663, 719560871, 758055894, 758055895]
+  | t(n) > n^2 cluster with peak 3562942561397226080: [1410123943, 1880165257]
+[check  62] n <= X with t(n) > n^2: 21 numbers in 3 clusters (one per peak); the first is {27,31,41,47,54,55,62,63} = (27's branch) cap [1, sqrt 4616]
+[check  63] 27's branch below sqrt(4616) = 67.9 is exactly {27,31,41,47,54,55,62,63}
+[check  64] Theorem R' on integers, all 597 (block k <= 31, W = 2^(i/2)) cases: N_k(W) <= #{n in [2^k,2^(k+1)) : max_{j<=k} T^j n >= W n} <= N_k(W - (3/4)^k)
+[check  65] the lower bound is attained in all 597 cases: block counts equal the exact word counts (no carry effect at these W)
+  | block 31  W = 2^1    window 4.155446e-01  full orbit 4.273789e-01  P(W) 4.273692e-01  full/P = 1.0000  window/P = 0.9723
+  | block 31  W = 2^2    window 1.902822e-01  full orbit 2.034132e-01  P(W) 2.034377e-01  full/P = 0.9999  window/P = 0.9353
+  | block 31  W = 2^3    window 9.131340e-02  full orbit 1.042551e-01  P(W) 1.042740e-01  full/P = 0.9998  window/P = 0.8757
+  | block 31  W = 2^4    window 4.212552e-02  full orbit 5.328757e-02  P(W) 5.327280e-02  full/P = 1.0003  window/P = 0.7908
+  | block 31  W = 2^5    window 1.852923e-02  full orbit 2.621314e-02  P(W) 2.623452e-02  full/P = 0.9992  window/P = 0.7063
+  | block 31  W = 2^7    window 3.368521e-03  full orbit 6.507751e-03  P(W) 6.510990e-03  full/P = 0.9995  window/P = 0.5174
+  | block 31  W = 2^10   window 1.643128e-04  full orbit 8.145543e-04  P(W) 8.122244e-04  full/P = 1.0029  window/P = 0.2023
+  | block 31  W = 2^13   window 3.407244e-06  full orbit 1.018043e-04  P(W) 1.016879e-04  full/P = 1.0011  window/P = 0.0335
+  | block 31  W = 2^15   window 6.332994e-08  full orbit 2.458319e-05  P(W) 2.551326e-05  full/P = 0.9635  window/P = 0.0025
+  | block 31  W = 2^20   window 0.000000e+00  full orbit 8.521602e-07  P(W) 7.978367e-07  full/P = 1.0681  window/P = 0.0000
+[check  66] EMPIRICAL: at block 31 the FULL-orbit W-riser density equals P(W) within 0.29% for W <= 2^10, although the window alone gives only 20% of it at W = 2^10
+[check  67] EMPIRICAL: full-orbit W-riser density / P(W) within 6.8% for 2^10 < W <= 2^20 at block 31
+[check  68] Theorem G on integers, all 327 (block k <= 31, L - 1 <= k log_3 2) cases: #{n in [2^k,2^(k+1)) : glide_T(n) >= L} = 2^(k-L+1) W_(L-1) EXACTLY
+  | 27's branch B27 = Pred*(3077): N(X) = 1686461708, density 0.392660; block densities 0.392714 0.392683 0.392729 0.392739 0.392717 0.392685 0.392665 0.392634
+[check  69] FINITE-EXACT: B27 has density in (0.3925, 0.3929) in every block 2^24..2^31 (overall 0.392660 at X): 27's branch is a positive-density family
+[check  70] independent Monte Carlo (20000 random n in [2^31, 2^32), plain Python orbits): B27 fraction 0.3941 +- 0.0035 vs scan 0.392634
+[check  71] the Haar tree-density law cR/a predicts 2R/3077 = 0.00452: the actual branch is 87 times denser (27's orbit carries the fat trees of 31, 41, 47, ...)
+[check  72] class fractions of B27 members mod 3 are 1/3 within 3e-4 in every block 2^24..2^31 (kappa = 1/3)
+[check  73] Proposition B on B27: local exponents s in [0.9999, 1.0002] and kappa = class-2 fraction satisfy |2^-s + kappa (3/2)^s - 1| < 3e-3
+[check  74] densities of the nested trees Pred*(T^j 27) increase along the orbit and reach 1 at the root 1 (every n <= X reaches 1)
+  | orbit index  0  T^j(27) =    27  (class 0)  density of Pred*: 0.000000   Haar cR/a: 0.000000
+  | orbit index  1  T^j(27) =    41  (class 2)  density of Pred*: 0.056604   Haar cR/a: 0.339128
+  | orbit index  3  T^j(27) =    31  (class 1)  density of Pred*: 0.092151   Haar cR/a: 0.224262
+  | orbit index  4  T^j(27) =    47  (class 2)  density of Pred*: 0.186370   Haar cR/a: 0.295835
+  | orbit index 10  T^j(27) =   182  (class 2)  density of Pred*: 0.282948   Haar cR/a: 0.076397
+  | orbit index 12  T^j(27) =   137  (class 2)  density of Pred*: 0.299199   Haar cR/a: 0.101491
+  | orbit index 31  T^j(27) =   425  (class 2)  density of Pred*: 0.358236   Haar cR/a: 0.032716
+  | orbit index 41  T^j(27) =   911  (class 2)  density of Pred*: 0.391907   Haar cR/a: 0.015263
+  | orbit index 43  T^j(27) =  2051  (class 2)  density of Pred*: 0.392579   Haar cR/a: 0.006779
+  | orbit index 44  T^j(27) =  3077  (class 2)  density of Pred*: 0.392660   Haar cR/a: 0.004519
+  | orbit index 45  T^j(27) =  4616  (class 2)  density of Pred*: 0.392726   Haar cR/a: 0.003012
+  | orbit index 47  T^j(27) =  1154  (class 2)  density of Pred*: 0.405133   Haar cR/a: 0.012049
+  | orbit index 57  T^j(27) =    92  (class 2)  density of Pred*: 0.432372   Haar cR/a: 0.151133
+  | orbit index 60  T^j(27) =    35  (class 2)  density of Pred*: 0.449340   Haar cR/a: 0.397264
+  | orbit index 64  T^j(27) =    20  (class 2)  density of Pred*: 0.937909   Haar cR/a: 0.695212
+  | orbit index 66  T^j(27) =     5  (class 2)  density of Pred*: 0.937909   Haar cR/a: 2.780848
+  | orbit index 67  T^j(27) =     8  (class 2)  density of Pred*: 1.000000   Haar cR/a: 1.738030
+[check  75] count identity N_3077(X) = #{3077 2^i <= X} + sum_{j<=6} N_(S^j 2051)(X) + (rungs j >= 7, which have S^j 2051 > 2^24): remainder 1225 >= 0
+[check  76] count identity X = 2 + #{4 2^i <= X} + sum over trunk rungs (4^j-1)/3 <= 5592405 of N_rung(X) + (higher rungs): remainder 2023 >= 0
+  | ladder of 3077: 2051:3.926e-01  8205:4.424e-09  32821:3.550e-05  131285:4.384e-05  525141:3.027e-09  2100565:9.649e-07  8402261:1.646e-07
+  | ladder of trunk: 5:9.379e-01  21:6.519e-09  85:2.367e-02  341:3.782e-02  1365:5.122e-09  5461:7.977e-05  21845:4.857e-04  87381:3.725e-09  349525:3.217e-05  1398101:2.118e-06  5592405:2.328e-09
+  | ladder of 41: 109:4.857e-02  437:6.418e-03  1749:5.122e-09  6997:1.194e-03  27989:4.118e-04  111957:3.725e-09  447829:8.906e-07  1791317:5.422e-06  7165269:2.328e-09
+[check  77] owner's 4x recursion at the root: Pred*(5) carries 0.9379 of N and Pred*(16) 0.0621 (Haar model 3/4 : 1/4); along 27's orbit rung 2051 carries 0.99979 of 3077's tree
+[check  78] numbers rising like 27 (t(n) >= (4616/27) n): block-31 density 4.85742e-03 vs P(170.96) = 4.85804e-03 (EMPIRICAL, ratio 0.9999); window-only density 2.04651e-03
+  | numbers with delays like 27: block counts [259, 395, 700, 1211, 1965, 3588, 5499, 8850, 13943]
+[check  79] numbers with delays like 27 (sigma_T(n) >= 21.2389 ln n): least-squares exponent over blocks 28..31 is 0.656 vs Lagarias-Weiss 1 - a gLW(1/a) = 0.6688
+  | numbers with glides like 27 (glide_T >= 12.408 log2 n): block counts [1, 2, 3, 4, 0, 4, 7]; model at block 31: 4.51
+[check  80] no n in [32, X] has rho(n) >= rho(27) = 2.55998 (FINITE-EXACT)
+  | glide L in [ 20, 30):   71712984 odd n, mean normalised excursion height u = 1.0669, sqrt(L)(sqrt(pi/2) - u) = 0.899
+  | glide L in [ 30, 40):   22869627 odd n, mean normalised excursion height u = 1.1004, sqrt(L)(sqrt(pi/2) - u) = 0.890
+  | glide L in [ 40, 50):   13020449 odd n, mean normalised excursion height u = 1.1185, sqrt(L)(sqrt(pi/2) - u) = 0.886
+  | glide L in [ 50, 60):    6937970 odd n, mean normalised excursion height u = 1.1330, sqrt(L)(sqrt(pi/2) - u) = 0.882
+  | glide L in [ 60, 80):    5219961 odd n, mean normalised excursion height u = 1.1470, sqrt(L)(sqrt(pi/2) - u) = 0.872
+  | glide L in [ 80,100):    1903568 odd n, mean normalised excursion height u = 1.1586, sqrt(L)(sqrt(pi/2) - u) = 0.884
+  | glide L in [100,150):    1024862 odd n, mean normalised excursion height u = 1.1715, sqrt(L)(sqrt(pi/2) - u) = 0.876
+  | glide L in [150,200):      94260 odd n, mean normalised excursion height u = 1.1855, sqrt(L)(sqrt(pi/2) - u) = 0.876
+[check  81] EMPIRICAL: in every glide-length bin with >= 50000 samples (8 bins, 20 <= L < 200) the mean u = max_j ln(T^j n/n)/(sigma sqrt L) equals sqrt(pi/2) - (0.9 +- 0.1)/sqrt L: offsets 0.899 0.890 0.886 0.882 0.872 0.884 0.876 0.876 (Brownian excursion mean plus a constant discrete offset)
+[check  82] 27's glide excursion: u(27) = 1.2626 sits at the 72-th percentile of u over all n <= X with glide in [40,60), and at the 55.6-th percentile of the Brownian excursion law: a typical long glide
+  | n in [2^20, X] with sigma_T(n) >=  0 ln n:  4293918720 numbers, fraction in 27's branch 0.3927
+  | n in [2^20, X] with sigma_T(n) >=  8 ln n:  1198204312 numbers, fraction in 27's branch 0.6605
+  | n in [2^20, X] with sigma_T(n) >= 12 ln n:    79418981 numbers, fraction in 27's branch 0.7106
+  | n in [2^20, X] with sigma_T(n) >= 16 ln n:     3007874 numbers, fraction in 27's branch 0.7289
+  | n in [2^20, X] with sigma_T(n) >= 20 ln n:      108066 numbers, fraction in 27's branch 0.7091
+  | n in [2^20, X] with sigma_T(n) >= 24 ln n:        3315 numbers, fraction in 27's branch 0.7008
+[check  83] EMPIRICAL: the share of 27's branch among long-delay numbers rises from 0.393 (all n) to 0.701 (sigma_T >= 24 ln n): long delays favour orbits that finish along 27's long tail
+
+==== SUMMARY ====  (t=596.1s)
+[check  84] runner peak RSS 33.6 MB < 700 MB (children 241.9 MB)
+ALL 84 CHECKS PASSED   wall time 596.1 s
