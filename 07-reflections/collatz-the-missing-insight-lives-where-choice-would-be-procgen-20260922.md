@@ -320,3 +320,37 @@ size, while prime gaps grow.
 
 Repunit primes are the prime fixed points of digit rotation. In base 2 the
 infinite repunit `...1111 = −1` is Collatz's own hostile fixed point.
+
+## Waves 13–16 (2026-09-26): the obstruction has an exact anatomy, and height is the coordinate the 2-adic world cannot see
+
+After waves 13–16 the obstruction to proving Collatz by the methods this
+session can formalize has an exact anatomy. Every piece is a theorem.
+
+**1. The obstructions are expanding cycles and their backward trees.**
+* **Bounded-lookahead provability** holds iff no expanding cycle exists in the parity graph (THM-4474).
+* **A rank** `a log n + h` with `h` bounded or periodic exists iff the same holds. For Collatz its least defect is `log(3/2)`, from the loop at `-1` (THM-4482).
+* **Valuation ranks.** A rank that adds 2-adic valuation counters must charge every point of the backward tree of every expanding cycle (THM-4483). The tree of `-1` alone has `2^(j-1)` points at depth `j`.
+* **The same list recurs.** The sign strategies' min-max density game (THM-4486) finds the same objects:
+  * for `q = 3`, the free cycle `{1,2}` pins the game at `1/2`;
+  * for `q = 5`, the sporadic cycle `(1,3,8,4,2)` fixes its value at exactly `2/5` for all `k >= 15`.
+
+**2. The integral obstructions are four free cycles and one sporadic.** For 3x+1 on `Z`, four cycles are forced by the identities `2-1`, `3-2`, `4-3` and `9-8 = 1` (Gersonides), and one, `-17`, is sporadic, with gap `139` (THM-4484). This is the owner's Kuratowski–Tutte pattern:
+* a characterization by excluded substructures (Kuratowski ↔ Theorem A);
+* a counting reason (Euler's formula ↔ the entropy `h(log_3 2)`);
+* obstructions forced by an identity, plus a sporadic one.
+
+The correspondence is ANALOGY, but the pattern is exact. Where it stops is exact too: Kuratowski's list is finite, while the expanding cycles form an infinite, necklace-counted family. The finite integral part of that list is the `3x-1` cycle conjecture.
+
+**3. Height is the continuous coordinate that 2-adic methods cannot see.** The price of making every orbit descend within a fixed horizon was measured in three settings:
+* **arbitrary edits** (THM-4478, THM-4480): `2^(-(1-H(log_q 2))L)` for every multiplier, exponentially cheap even for 5n+1. The trick is to catch each orbit at its peak, where edits are sparse by height;
+* **periodic deletions** (THM-4485): the feedback number of the expanding cycles of the de Bruijn graph, which is `~1/k` for 5n+1;
+* **periodic sign flips** (THM-4479, THM-4481): no cheaper than deletions. A flip merges only two orbits, so an entropy law forces constant flip mass for positive drift and makes provability impossible for `q >= 23`.
+
+Periodic modifications are residue classes. They live in `Z_2` and cannot see height, which is why positive drift costs them exponentially more. Ranks show the same thing: the only nonnegative valuation ranks that work are those that store each integer's stopping time in the height of a private center (THM-4483 D). So "2-adic plus real" is necessary and, in that class, exactly as hard as Collatz.
+
+**4. Continuous methods lose exactly what integers keep.**
+* **Moments.** Distribution-only (moment) arguments lose a square (THM-4477). Integer spacing recovers it (THM-4478), and so does periodicity (THM-4479).
+* **Stationary laws.** Uniform-chain stationary laws cannot certify a density floor above `1/3` (THM-4486 F), while the true floors are worst-cycle phenomena. Averages cannot see the cycle that matters.
+* **Strips.** The second-order `L^(1/3)` term of the price is a Brownian-strip constant, obtained by two independent sessions from exact sine eigenfunctions of the letter walk.
+
+**What would count as a new idea.** Every method formalized here reduces Collatz to excluding expanding structures that live on the negative side of `Z_2`: `-1`, `-5`, `-17` and their backward trees, dense in `Z_2`. A proof must therefore use the one thing that separates positive integers from those trees: the sign, i.e. height seen from the real place. It must use it in a form that is not a bounded, periodic or finite-mass 2-adic potential. The theorems above rule those forms out one by one. What is left is an adaptive, unbounded, height-coupled quantity. The only known instance of such a quantity is the stopping time itself.
