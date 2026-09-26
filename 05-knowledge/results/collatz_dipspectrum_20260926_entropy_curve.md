@@ -1,8 +1,10 @@
 # The dip spectrum of 3n±1: the number of integers below X whose orbit never falls below n^γ within log₂n steps is X^{h(γ/log₂3)+o(1)}; the thin-divergence exponent h(log₃2) is sharp for its counting lemma; one entropy curve carries the repo's Collatz constants
 
 **Status: PROVED (elementary; two-sided exponent, both sheets; proofs below;
-self-audited; gamma=1 boundary repaired and independently audited by the
-223 crossroads session) + FINITE-EXACT controls. Consequence for THM-4476: the
+self-audited; the `gamma = 1` boundary was repaired the same day and
+independently audited by the 223 crossroads session, whose one-step buffer is
+the proof of record there; the whole note was independently audited by a
+separate agent, verdict SOUND, recorded in THM-4487) + FINITE-EXACT controls. Consequence for THM-4476: the
 counting lemma behind the thin-divergence exponent `h* = h(log_3 2)` is
 sharp up to `X^(o(1))`, so `h*` cannot be lowered by improving that lemma;
 the exponent of an actual divergent orbit remains OPEN (conjecturally no
@@ -25,17 +27,15 @@ Throughout `b = +-1`, `T_b(x) = x/2` (`x` even), `(3x+b)/2` (`x` odd),
 D_b(X, gamma) = #{ n in [1, X] : T_b^i(n) >= n^gamma for all 0 <= i <= floor(log_2 n) }.
 ```
 
-**Theorem 1 (dip spectrum).** For every `gamma in (log_4 3, 1]`, on both
-sheets,
+**Theorem 1 (dip spectrum).** For every `gamma in (log_4 3, 1]` there are
+constants `c, C > 0` (depending on `gamma`) with, on both sheets,
 
 ```text
-c X^(h(gamma/alpha))/log^3 X <= D_b(X, gamma) <= C X^(h(gamma/alpha)) log^2 X,
+c X^(h(gamma/alpha)) / log^(3/2) X  <=  D_b(X, gamma)  <=  C X^(h(gamma/alpha)) log X;
 ```
 
-including gamma=1 on both sheets, by the one-step buffer in the repaired
-section 1.3. The incoming fixed-block repair already recovered the entropy
-exponent; the buffer restores the polynomial prefactor. In particular
-`log D_b(X, gamma)/log X -> h(gamma/alpha)`;
+including `gamma = 1` on both sheets (the one-step buffer of section 1.3);
+in particular `log D_b(X, gamma)/log X -> h(gamma/alpha)`;
 
 and for `gamma in (log_2(3/2), log_4 3]` the limit is `1`. At `gamma = 1`
 the exponent is `h(log_3 2) = 0.949956` (the Terras undecided count); as
@@ -49,7 +49,7 @@ rises to `1`.
 satisfies
 
 ```text
-c X^(h(rho)) / log^2 X  <=  #F_b(X, theta)  <=  C X^(h(rho)) log^2 X.
+c X^(h(rho)) / log^(3/2) X  <=  #F_b(X, theta)  <=  C X^(h(rho)) log^2 X.
 ```
 
 The upper bound is the lemma of THM-4476 section 1.4; the lower bound is
@@ -64,8 +64,8 @@ Collatz threads:
 | point on the curve | value | where it appears |
 |---|---|---|
 | `E(1) = h(log_3 2)` | `0.949956` | Terras's undecided density `2^(-(1-h)L)`; the exceptional 2-adic dimension (choice ladder); the thin-divergence exponent (THM-4476); `1 - E(1) = 0.050044` is the sharp price exponent in the pairing family, for arbitrary edits and in the strategy cube (THM-4475/4478/4479, synthesis 2k) and the Chernoff rate `I(T)` |
-| `E(log_4 3) = 1` | at `gamma = 0.792481` | The finite-window counting exponent drops below one for `gamma > log_4 3`, matching Korec's sufficient threshold; no necessity claim for the unrestricted orbit is made. `1 - log_4 3 = theta_0 = 0.207519` is the mean drift per `T`-step in bits. |
-| `-E'(1)` | `0.48807` | exactly the Chernoff tilt `lambda*` of the price exponent: `lambda*` minimises `(2^(-lambda) + (3/2)^lambda)/2`, so `3^(lambda*) = 1/log_2(3/2)`, i.e. `lambda* = log_3(1/log_2(3/2)) = -log_2(alpha - 1)/alpha = -h'(log_3 2)/alpha = -E'(1)` (with `h'(log_3 2) = log_2(alpha - 1) = log_2(log_2(3/2)) = -0.77358`); large-deviation duality, tilt = slope of the rate |
+| `E(log_4 3) = 1` | at `gamma = 0.792481` | the finite-window counting exponent drops below `1` exactly for `gamma > log_4 3`, matching Korec's sufficient threshold (no necessity claim for the unrestricted orbit is made); `1 - log_4 3 = theta_0 = 0.207519` is the mean drift per `T`-step in bits and the largest dip exponent the counting sees |
+| `-E'(1)` | `0.48808` | exactly the Chernoff tilt `lambda*` of the price exponent: `lambda*` minimises `(2^(-lambda) + (3/2)^lambda)/2`, so `3^(lambda*) = 1/log_2(3/2)`, i.e. `lambda* = log_3(1/log_2(3/2)) = -log_2(alpha - 1)/alpha = -h'(log_3 2)/alpha = -E'(1)` (with `h'(log_3 2) = log_2(alpha - 1) = log_2(log_2(3/2)) = -0.77358`); large-deviation duality, tilt = slope of the rate |
 | `1/E(1)` | `1.052681` | the growth exponent below which no divergent orbit exists (`m_j > j^a` infinitely often for `a < 1/h*`, THM-4476 Cor. 3) |
 | `1 - alpha/2` | `0.207519` | `theta_0`; the drift; Korec's `1 - log_4 3` |
 | `log_2(3/2) = alpha - 1` | `0.584963` | the carry exponent `(3/2)^(log_2 X) = X^(0.585)`, the lower limit of validity of the dip spectrum, and the ratio `(1 - rho_0)/rho_0` |
@@ -89,7 +89,9 @@ are unrelated.
   on the minus sheet. Write `S_i = i - o_i alpha`, so `3^(o_i)/2^i = 2^(-S_i)`.
 * **Entropy bounds.** `C(t, o) <= 2^(t h(o/t))`; for `rho > 1/2` and
   `t >= t_0(rho)`, `sum_(o >= rho t - c) C(t, o) <= (t+1) 2^(t h(rho)) (rho/(1-rho))^c`;
-  and `C(t, ceil(rho t)) >= 2^(t h(rho))/(t+1)`.
+  and, for fixed `rho in (0,1)`, `C(t, ceil(rho t) + j) >= c_(rho,j) 2^(t h(rho))/sqrt t`
+  for every fixed `j >= 0` (Stirling, and the ratio of consecutive binomials is
+  bounded); the cruder form `2^(t h(rho))/(t+1)` fails for small `t`.
 * **Cycle lemma.** Let `w` be a word of length `t` with partial sums `S_i`
   (any real step values) and let `p` be an index where `S_p` is maximal.
   The rotation of `w` starting after position `p` has all partial sums
@@ -113,12 +115,12 @@ of length `t` with at least `rho t - 2` odd letters is at most
 `(t+1)(rho/(1-rho))^2 2^(t h(rho))` for `t >= t_0`, each word is one class
 modulo `2^t`, and each class has exactly one representative in
 `[2^t, 2^(t+1))`. So the dyadic block contributes at most
-`(t+1)(rho/(1-rho))^2 2^(t h(rho)) + n_0`, and summing over
-`t <= log_2 X` gives `D_b(X, gamma) <= C X^(h(rho)) log^2 X`. ∎
+`(t+1)(rho/(1-rho))^2 2^(t h(rho)) + n_0`, and summing the
+geometric progression over `t <= log_2 X` gives `D_b(X, gamma) <= C X^(h(rho)) log X`. ∎
 
 ### 1.3 Theorem 1, lower bound
 
-First let `gamma in (log_2(3/2), 1)`, put `rho = max(1/2, gamma/alpha)` and
+Let `gamma in (log_2(3/2), 1]`, put `rho = max(1/2, gamma/alpha)` and
 `o = ceil(rho t) + 1`. By the cycle lemma at least `C(t, o)/t` words of
 length `t` with `o` odd letters have all partial sums `S_i <= max(0, S_t)`,
 and `S_t = t - o alpha <= t(1 - rho alpha) - alpha`, so `2^(-S_t) >= 3 * 2^(-t(1 - rho alpha))`.
@@ -129,40 +131,63 @@ the affine form (both sheets) gives
 T_b^i(n) >= n 2^(-S_i) - (3/2)^t >= n 2^(-max(0, S_t)) - n^(log_2(3/2)).
 ```
 
-Since `rho alpha<1`, for sufficiently large t we have S_t>0. The first
-term is then at least `3 n 2^(-t(1 - rho alpha)) >= 3 n^(rho alpha) >= 3 n^gamma`
-(using `2^t <= n`). Thus `T_b^i(n) >= 3 n^gamma - n^(log_2(3/2)) >= n^gamma`
-once `n >= n_1(gamma)`, because `gamma > log_2(3/2)`. Hence the dyadic block
-`[2^t, 2^(t+1))` contributes at least `C(t, o)/t` to `D_b`, and
-`C(t, ceil(rho t) + 1) >= c_rho C(t, ceil(rho t)) >= c'_rho 2^(t h(rho))/sqrt t`
-(the ratio of consecutive binomials is bounded for `rho < 1`, and Stirling).
-Summing the top dyadic block alone, `D_b(X, gamma) >= c X^(h(rho))/log^3 X`
-(the block `[2^t, 2^(t+1))` with `2^(t+1) <= X`, losing a constant `2^(h(rho))`).
-For `gamma <= log_4 3`, `rho = 1/2` and the exponent is `h(1/2) = 1`.
+*Case `gamma < 1`.* Then `rho alpha = gamma < 1` (for `rho = gamma/alpha`) and
+`S_t <= t(1 - gamma) - alpha`, which is positive for `t >= t_1(gamma)`; so
+`max(0, S_t) = S_t` and the first term is at least
+`n 2^(-S_t) >= 3 n 2^(-t(1 - gamma)) >= 3 n^gamma` (using `2^t <= n`). Hence
+`T_b^i(n) >= 3 n^gamma - n^(log_2(3/2)) >= n^gamma` once `n >= n_1(gamma)`,
+because `gamma > log_2(3/2)`. (If `rho = 1/2 > gamma/alpha` the same holds with
+`S_t <= t(1 - alpha/2) - alpha`.)
 
-**Boundary gamma=1 (repair, 223 crossroads).** The preceding argument
-does not apply: S_t<0 only gives a first term n, not 3n. Instead take a
-tail of length t-1 with `o=ceil((t-1)/alpha)+1` odd letters, rotate it at
-a maximum of S, and prepend one odd letter. For all sufficiently large t
-(t>=4 suffices for a nonempty word universe), every positive-time prefix
-of the resulting full word has multiplier at least 3/2. Its representative
-n in `[2^t,2^(t+1))` therefore satisfies, on BOTH sheets,
+*Case `gamma = 1`, plus sheet.* `S_t <= -alpha < 0`, so every rotated partial sum
+is `<= 0` and, the carry being nonnegative, `T_+^i(n) >= n 2^(-S_i) >= n`.
 
-    T_b^i(n) >= (3/2)n-(3/2)^t >= n,  1<=i<=t,
+*Case `gamma = 1`, minus sheet.* Here `max(0, S_t) = 0` and a partial sum
+`S_i < 0` may be arbitrarily close to `0`, while the carry is negative, so
+the rotation alone does not give `T_-^i(n) >= n`. *One-step buffer* (the
+223 crossroads session, same day, independently audited there with an exact
+boundary check of 3,142 rotated inputs and 2,244 sheet realisations through
+length 16, `crossroads223_20260926_boundary_audit.py`; MISTAKES 2026-09-26,
+"223 crossroads: endpoint margin, finite lifts, and global ownership"): take a tail of length `t - 1` with
+`o = ceil((t-1)/alpha) + 1` odd letters, rotate it after a maximum of its
+partial sums (so its partial sums are `<= 0`, its total being `<= -alpha`),
+and prepend one odd letter. Every prefix sum of the full word is then
+`<= 1 - alpha`, i.e. every prefix multiplier is at least `3/2`, so on both
+sheets `T_b^i(n) >= (3/2) n - (3/2)^t >= n` for `n >= 2^t`, `t >= 3`; distinct
+tails give distinct words, and there are at least `C(t-1, o)/(t-1)` of them,
+the same entropy exponent and polynomial prefactor. This is the proof of
+record. Two further repairs are kept for the record. *Tilted rotation*
+(suggested by the audit): take `o = ceil(t/alpha) + 2` and apply the cycle
+lemma to the tilted steps `x_j + alpha/t`, whose partial sums are
+`S'_i = S_i + i alpha/t` and whose total is `S'_t = S_t + alpha <= -alpha < 0`.
+The rotation gives `S'_i <= 0`, i.e. `S_i <= -i alpha/t`, so
+`2^(-S_i) >= 3^(i/t) >= 1 + (i/t) ln 3` and
+`T_-^i(n) >= n + n (i/t) ln 3 - (3/2)^i > n` for `n >= 2^t`, `t >= 3`, every
+`1 <= i <= t`; the count is again `C(t, o)/t`, so the polynomial-log lower
+bound holds on the minus sheet as well. *Block alternative* (the first
+repair, kept for the record): fix `L` and
+let `W_L` be the set of words of length `L` with `o_L = ceil(L/alpha) + 1` odd
+letters and all partial sums `<= 0` (at least `C(L, o_L)/L` of them, by the
+cycle lemma, since their total `S_L <= -alpha < 0`). For `t = jL`, concatenate
+`j` words of `W_L`. A partial sum inside the `r`-th block is at most
+`-(r-1) alpha + 0`; inside the first block it is `< 0` and, since the finitely
+many values `i - o alpha` with `i <= L` are nonzero, at most `-c_L` for some
+`c_L > 0` depending only on `L`. Hence for `n >= n_2(L)`,
+`T_-^i(n) >= n 2^(c_L) - (3/2)^t >= n` in the first block and
+`T_-^i(n) >= 3n - (3/2)^t >= n` afterwards. The number of such words is at
+least `(C(L, o_L)/L)^(t/L) = 2^(t h(o_L/L) - O((t/L) log L))`, and
+`h(o_L/L) -> h(1/alpha) = h*` as `L -> infinity`, which gives
+`D_-(X, 1) >= X^(h* - o(1))`. *Lineage.* The gap (an unjustified `3n` margin at
+`gamma = 1` in the first draft) was found by the author and by the 223
+crossroads session independently on 2026-09-26; the block construction was the
+first repair (`X^(h* - o(1))`), the crossroads buffer and the auditor's tilted
+rotation both restore the polynomial prefactor.
 
-because `(3/4)^t<=1/2`; time zero is equality. Distinct tails give distinct
-full parity words. There are at least `C(t-1,o)/(t-1)` such tails, which
-has the same entropy exponent and polynomial lower bound. This proves
-the claimed endpoint without assuming a uniform gap above slope one.
-The earlier n>=3n inference is withdrawn; the theorem's statement survives.
-See `01-canon/MISTAKES.md`, 2026-09-26 223 boundary repair. ∎
-
-Independent lineage: incoming commit `d6cdca9df` repaired the minus sheet
-by concatenating fixed-length rotated blocks, recovering the entropy
-exponent. The one-step buffer above additionally restores the polynomial
-lower prefactor on both sheets. The targeted exact boundary audit checks
-3,142 rotated inputs and 2,244 actual sheet realizations through length 16;
-see `crossroads223_20260926_boundary_audit.py` and its retained output.
+In every case the top complete dyadic block `[2^t, 2^(t+1))` (`2^t > X/4`)
+contributes at least `C(t, o)/t >= c 2^(t h(rho))/t^(3/2)` to `D_b`, so
+`D_b(X, gamma) >= c' X^(h(rho))/log^(3/2) X`. (When `S_t < 0` in the first
+case the first term is `n >= 3 n^gamma` for `n >= 3^(1/(1-gamma))`.) For
+`gamma <= log_4 3`, `rho = 1/2` and the exponent is `h(1/2) = 1`. ∎
 
 ### 1.4 Proposition 2
 
@@ -172,11 +197,11 @@ and all partial sums `<= max(0, S_(k-1))`, at least `C(k-1, o)/(k-1)` of them. T
 consecutive integers, hence a representative `y` of every such word. For
 `i <= k - 1` the affine form gives `T_b^i(y) >= y 2^(-max(0, S_(k-1))) - (3/2)^k`,
 and `S_(k-1) <= (k-1)(1 - rho alpha) - 2 alpha <= (k-1) theta - 2 alpha`, so
-`T_b^i(y) >= 9 y X^(-theta)/2 - X^(log_2(3/2))` (using `2^(k-1) <= X`); the last
-step `i = k` costs at most a further factor `2` (a halving) and a carry `(3/2)^k`.
-For `X >= X_1(theta)` this is at least `y X^(-theta)` for every `y > X/2` (as
+`T_b^i(y) >= 9 y X^(-theta) - (3/2)^k` for `i <= k - 1` (using `2^(k-1) <= X`), and the
+last step `i = k` is at worst a halving, so `T_b^k(y) >= (9/2) y X^(-theta) - (3/2)^k`.
+For `X >= X_1(theta)` both are at least `y X^(-theta)` for every `y > X/2` (as
 `theta < theta_0 < 1 - log_2(3/2)`). So
-`#F_b(X, theta) >= C(k-1, o)/(k-1) >= c X^(h(rho))/log^2 X`. ∎
+`#F_b(X, theta) >= C(k-1, o)/(k-1) >= c X^(h(rho))/log^(3/2) X`. ∎
 
 **Why the exponent of THM-4476 stops at `h*`.** THM-4476 bounds the orbit
 points below `X` by `k N(X^(1-theta)) + #F_b(X, theta)`. The first term is
@@ -187,6 +212,28 @@ no-dip points beyond their `log_2 X`-window, which means information about
 small integers in residue classes modulo more than `X`: the transversality
 barrier of the synthesis. The auditor's numerics for THM-4476 (local
 slopes at the lemma exponent) are the finite-size face of Proposition 2.
+
+### 1.5 The general form: the dip spectrum is a constrained maximum entropy
+
+For a contracting Conway/Matthews–Watts map `g(x) = (p_i x + q_i)/m` on
+`x = i mod m` (`p_i` coprime to `m`, `a_i = p_i/m`, `prod p_i < m^m`,
+`max p_i < m^2`), the same two proofs give, for the window
+`floor(log_m n)`,
+
+```text
+#{ n <= X : g^j(n) >= n^gamma for all j <= floor(log_m n) } = X^(E_g(gamma) + o(1)),
+E_g(gamma) = max { H_m(pi) : pi a probability law on Z/m with sum_i pi_i log_m a_i >= gamma - 1 },
+```
+
+with `H_m` the entropy in base `m`: the upper bound counts residue words by
+their letter frequencies (multinomial entropy), the lower bound rotates a
+word of the optimal frequency after its maximal partial sum. For `T_(+-1)`
+(`m = 2`, `a = (1/2, 3/2)`) the constraint is `pi(odd) >= gamma/log_2 3` and
+`E_g = h(max(1/2, gamma/alpha))`, Theorem 1. The proof is the one above with
+`2` replaced by `m` and the binomial by the multinomial; it is not written
+out separately here.
+
+**Status of the audit:** SOUND (theorem file, audit field).
 
 ## 2. Controls (FINITE-EXACT)
 
@@ -205,14 +252,20 @@ length jumps at powers of two), so four-doubling slopes are reported.
 | slope `2^20 -> 2^24` | 1.0038 | 1.0027 | 0.9965 | 0.9717 | 0.9632 | 0.9618 | 0.8963 | 0.8837 |
 | `h(rho) - 1/(k ln 2)`, `k = 22` | 0.9344 | 0.9336 | 0.9306 | 0.9256 | 0.9185 | 0.9093 | 0.8979 | 0.8844 |
 
-The counts carry the `1/k` prefactor of ballot-type words (the prefix condition
-costs a factor of order `1/t` at word length `t`, see the cycle lemma), so the
-local slope at `k` steps is expected near `h(rho) - 1/(k ln 2)`; the last two
-rows compare. An earlier version of the control script counted `n < 2^(t+1)` into
+The counts carry a polynomial prefactor (the prefix condition costs a factor
+of order `1/t` at word length `t`, see the cycle lemma), so the local slope at
+`k` steps sits below `h(rho)` by a term of order `1/k`; the last two rows
+compare one such heuristic with the data. An earlier version of the control script counted `n < 2^(t+1)` into
 the row for `2^t`; the corrected counts are the ones shown.
 
-The two sheets agree to within a handful of integers at every size, as the
-sheet-blind class count predicts.
+The two sheets agree to within 196 integers at every size to `2^24` (and
+exactly at `gamma = 1`), as the sheet-blind class count predicts. Conventions
+(audit finding 11): the control script does not count `n = 1`, so its
+values are the exact `D_b` minus one, and the column headed `0.792` is
+`gamma = 0.7925`, slightly above `log_4 3 = 0.792481`. The `1/(k ln 2)`
+correction matches the observed slopes for `gamma >= 0.97` and undershoots
+by `0.04`-`0.07` for smaller `gamma`, where the polynomial prefactor is
+different; it is a heuristic for the top row only.
 
 ## 3. Reading
 

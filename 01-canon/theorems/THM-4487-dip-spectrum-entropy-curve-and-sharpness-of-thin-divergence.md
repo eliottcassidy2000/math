@@ -2,24 +2,26 @@
 id: THM-4487
 title: "The dip spectrum of 3n+-1: #{n <= X : T^i(n) >= n^gamma for i <= log_2 n} = X^(h(gamma/log_2 3)+o(1)) for gamma in (log_4 3, 1] (Terras at gamma = 1, Korec at gamma = log_4 3), and the counting lemma of THM-4476 is sharp, so the thin-divergence exponent h(log_3 2) cannot be lowered by that lemma"
 status: >
-  PROVED (elementary; self-audited; two-sided exponent on both sheets) +
+  PROVED + INDEPENDENTLY AUDITED (elementary; two-sided exponent on both sheets) +
   FINITE-EXACT controls to 2^24. Let b = +-1, T_b(x) = x/2 (x even),
   (3x+b)/2 (x odd), alpha = log_2 3, h the binary entropy, and
   D_b(X, gamma) = #{n <= X : T_b^i(n) >= n^gamma for all 0 <= i <= floor(log_2 n)}.
-  (1) For every gamma in (log_4 3, 1], c X^(h(gamma/alpha))/log^3 X <= D_b(X, gamma)
-  <= C X^(h(gamma/alpha)) log^2 X on both sheets, including gamma=1 by
-  the independently audited prepend-one-step repair. The incoming block
-  construction already recovered the exponent; this restores its polynomial
-  lower prefactor. Thus log D_b/log X -> h(gamma/alpha);
+  (1) For every gamma in (log_4 3, 1], c X^(h(gamma/alpha))/log^(3/2) X <=
+  D_b(X, gamma) <= C X^(h(gamma/alpha)) log X on both sheets (at gamma = 1 the
+  rotation alone gives only S_i <= 0 and the negative minus-sheet carry
+  needs a margin: the proof of record prepends one odd step to a rotated
+  tail, the 223 crossroads repair, independently audited there; a tilted
+  cycle lemma and a block construction are recorded alternatives); so
+  log D_b/log X -> h(gamma/alpha);
   for gamma in (log_2(3/2), log_4 3] the limit is 1. So the exponent is
   h(log_3 2) = 0.949956 at gamma = 1 (Terras's undecided count) and rises to
   1 exactly at Korec's exponent log_4 3 = 0.792481; the constants
-  0.949956, 0.050044, 0.792481, 0.207519, 0.48807 (the Chernoff tilt
+  0.949956, 0.050044, 0.792481, 0.207519, 0.48808 (the Chernoff tilt
   lambda* = log_3(1/log_2(3/2)) = -E'(1) exactly) and 1.052681 (= 1/E(1)) of the procgen, crossroads and opus lanes
   are values, slopes and reciprocals of the one function
   E(gamma) = h(max(1/2, gamma/alpha)).
   (2) The no-dip set F_b(X, theta) of THM-4476 satisfies
-  c X^(h(rho))/log^2 X <= #F_b(X, theta) <= C X^(h(rho)) log^2 X, rho = (1-theta)/alpha,
+  c X^(h(rho))/log^(3/2) X <= #F_b(X, theta) <= C X^(h(rho)) log^2 X, rho = (1-theta)/alpha,
   theta in (0, 1 - alpha/2). Hence the recursion N(X) <= k N(X^(1-theta)) +
   #F_b(X, theta) cannot yield an exponent below h(log_3 2): THM-4476's
   exponent is optimal for its method. The exponent of an actual divergent
@@ -49,11 +51,30 @@ audit: >
   the observed four-doubling slopes sit near h(rho) - 1/(k ln 2)); a
   counting off-by-one in the first control script was found and fixed
   before filing (the earlier rows counted n < 2^(t+1) as n <= 2^t).
-  Independent audit of the gamma=1 lower-bound boundary by the 223 crossroads
-  session repaired an invalid n>=3n inference: prepend an odd step to a
-  rotated tail, giving every positive prefix multiplier at least 3/2 on
-  both sheets. This is a targeted boundary audit, not a full independent
-  audit of all statements.
+  Targeted boundary audit (223 crossroads session, 2026-09-26): the gamma = 1
+  lower bound's first-draft margin (n >= 3n) was invalid; repaired by
+  prepending an odd step to a rotated tail (every positive prefix
+  multiplier >= 3/2 on both sheets), checked on 3,142 rotated inputs and
+  2,244 sheet realizations through length 16
+  (crossroads223_20260926_boundary_audit.py; MISTAKES 2026-09-26). Full
+  independent adversarial audit (separate agent, 2026-09-26; script
+  04-computation/experiments/collatz_dipspectrum_20260926_audit.py, output
+  05-knowledge/results/collatz_dipspectrum_20260926_audit.out): verdict SOUND.
+  Independent adversarial audit (separate agent, 2026-09-26; script and output written blind
+  to the control script): verdict SOUND after the author's same-day repair. Terras bijection,
+  carry bounds, cycle lemma (exhaustive to length 12; good(t,o) >= C(t,o)/t to t = 16), the
+  upper bound (0 violations of o >= rho t - 2 among all counted n <= 2^24, both sheets), the
+  lower bound for gamma < 1 and for gamma = 1 on the plus sheet, and Prop. 2 (both bounds;
+  #F reproduced exactly against the THM-4476 audit; construction 0 failures) all re-derived.
+  A first-draft GAP at gamma = 1 on the minus sheet was confirmed (rotation gives only
+  S_i <= 0; negative carry); the block repair was verified (c_L > 0 by irrationality of
+  log_2 3; 0 failures on all tested concatenations) and the auditor's tilted cycle lemma
+  (steps + alpha/t, o = ceil(t/alpha) + 2, checked t = 8..20) was adopted to restore the
+  polynomial-log lower bound uniformly. Cor. 3 identities exact (lambda* = log_3(1/log_2(3/2))
+  = -E'(1) = 0.488077; 1 - h* is the Chernoff rate). All 64 published counts per sheet
+  reproduced (the script omits n = 1; the "0.792" column is gamma = 0.7925). Cosmetic items
+  (a false crude binomial bound in the tools list, log powers, slack factors, rounding) were
+  corrected in the text after the audit.
 ---
 
 # THM-4487 -- the dip spectrum and the sharpness of the thin-divergence exponent
@@ -79,18 +100,17 @@ For `b = +-1`, `alpha = log_2 3`, `h` the binary entropy:
    `gamma > log_2(3/2)`), i.e. `o >= (gamma/alpha) t - 2` odd letters; such
    words number `2^(t h(gamma/alpha)) poly(t)`, and each is one residue class
    modulo `2^t` (Terras), with one representative per dyadic block.
-2. **Lower bound for gamma<1.** Among the `C(t, o)` words with `o = ceil((gamma/alpha) t) + 1`
+2. **Lower bound.** Among the `C(t, o)` words with `o = ceil((gamma/alpha) t) + 1`
    odd letters, at least `C(t, o)/t` have all partial sums
    `S_i = i - o_i alpha` at most `max(0, S_t)` (rotate after the maximum
    partial sum: THM-4478 section 4). Their representatives in `[2^t, 2^(t+1))`
-   satisfy `T^i(n) >= n 2^(-max(0,S_t)) - n^0.585 >= 3 n^gamma - n^0.585 >= n^gamma`;
-   the count is `C(t, o)/t = X^(h(gamma/alpha))/poly(log X)`.
-   **At gamma=1**, the displayed 3n margin does not follow. Use a rotated
-   tail of length t-1 with `o=ceil((t-1)/alpha)+1`, and prepend one odd
-   step. Every positive prefix multiplier is now >=3/2, so on both sheets
-   `T_b^i(n)>=(3/2)n-(3/2)^t>=n` for large t and n>=2^t. The number of
-   such words has the same entropy exponent. See the full note's repaired
-   section 1.3 and the 2026-09-26 223 entry in MISTAKES.md.
+   satisfy `T^i(n) >= n 2^(-max(0,S_t)) - n^0.585 >= 3 n^gamma - n^0.585 >= n^gamma`
+   for `gamma < 1`; the count is `C(t, o)/t = X^(h(gamma/alpha))/poly(log X)`.
+   At `gamma = 1` the rotation gives only `S_i <= 0`; prepend one odd letter
+   to a rotated tail of length `t - 1` (223 crossroads): every prefix
+   multiplier is then `>= 3/2` and `T_b^i(n) >= (3/2) n - (3/2)^t >= n` on both
+   sheets, with the same count `C(t-1, o)/(t-1)`. (Alternatives: tilted steps
+   `x_j + alpha/t`, or concatenated rotated blocks at the cost of `X^(-o(1))`.)
 3. **Both sheets.** The carry is nonnegative on the plus sheet and
    nonpositive on the minus sheet; both directions only use `|carry| <= (3/2)^t`.
 4. **Sharpness.** The same construction with `theta` in place of `1 - gamma`
@@ -103,7 +123,7 @@ For `b = +-1`, `alpha = log_2 3`, `h` the binary entropy:
 * **One curve.** `E(gamma) = h(max(1/2, gamma/alpha))` carries `0.949956`
   (`E(1)`), `0.050044` (`1 - E(1)`: the sharp price exponent of THM-4475/4478/4479
   and the Chernoff rate), `0.792481` (where `E = 1`: Korec), `0.207519`
-  (`1 - alpha/2`: the drift), `0.48807` (`-E'(1) = log_3(1/log_2(3/2))`: the Chernoff tilt, exactly) and
+  (`1 - alpha/2`: the drift), `0.48808` (`-E'(1) = log_3(1/log_2(3/2))`: the Chernoff tilt, exactly) and
   `1.052681` (`1/E(1)`: THM-4476's growth threshold).
 * **THM-4476 is optimal for its method.** Any lower exponent for a
   divergent orbit needs a constraint on no-dip points beyond one

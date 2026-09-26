@@ -1,0 +1,273 @@
+collatz_dipspectrum_20260926_audit.py  max_t=24  numpy=True mpmath=True
+
+==============================================================================
+A. constants and the Corollary 3 identities
+==============================================================================
+alpha = log_2 3            = 1.58496250072
+log_3 2 = 1/alpha          = 0.630929753571
+h* = h(log_3 2)            = 0.949955527188   (note: 0.949956)
+closed form log2(a)-(1-1/a)log2(a-1) = 0.949955527188   |diff| = 9.86e-32
+1 - h*                     = 0.0500444728117   (note: 0.050044)
+1/h*                       = 1.05268085861   (note: 1.052681)
+log_4 3 = alpha/2          = 0.792481250361   (note: 0.792481)
+theta_0 = 1 - alpha/2      = 0.207518749639   (note: 0.207519)
+log_2(3/2) = alpha - 1     = 0.584962500721   (note: 0.584963)
+h'(1/alpha) = log2(alpha-1)= -0.773583951828   numeric derivative = -0.773583951828   |diff| = 2.06e-20
+   (note now prints -0.77358; the original draft printed -0.77353)
+E'(1) = h'(1/alpha)/alpha  = -0.488077132094 ;  -E'(1) = 0.488077132094   (note now 0.48807; original draft 0.48796)
+lambda* closed form log_3(1/log_2(3/2)) = 0.488077132094
+lambda* numeric minimiser of (2^-l + (3/2)^l)/2 = 0.488077132094   |diff| = 2.14e-31
+identity lambda* = -E'(1):  |lambda* + E'(1)| = 4.93e-32
+min value M(lambda*)       = 0.965906553233 ;  -log2 M = 0.0500444728117 ;  1 - h* = 0.0500444728117 ;  |diff| = 1.17e-31
+numerological trap: (1-h*) + log2((3+sqrt13)/4) = 0.77372344 ; |h'(log_3 2)| = 0.77358395  (note: 0.7737 vs 0.7735; correct rounding 0.7736)
+all Corollary 3 identities exact to working precision: True
+  note prints 0.949956 -> computed 0.9499555 : match
+  note prints 0.050044 -> computed 0.05004447 : match
+  note prints 0.792481 -> computed 0.7924813 : match
+  note prints 0.207519 -> computed 0.2075187 : match
+  note prints 1.052681 -> computed 1.052681 : match
+  note prints 0.48807 -> computed 0.488077 : MISMATCH
+  note prints -0.77358 -> computed -0.773584 : match
+
+==============================================================================
+B. cycle lemma (steps +1 for even letter, 1 - alpha for odd letter)
+==============================================================================
+rotation after a maximal partial sum (first and last maximal index) gives all partial sums <= max(0, S_t):
+  words of length 1..12: 8190 rotations checked, 0 failures 
+count of words with o odd letters and all partial sums <= max(0, S_t), vs C(t,o)/t:
+  t= 8: good counts by o = [1, 7, 20, 30, 23, 7, 12, 6, 1]
+        C(t,o)/t        = [0.12, 1.0, 3.5, 7.0, 8.75, 7.0, 3.5, 1.0, 0.12]
+  t=12: good counts by o = [1, 11, 54, 156, 292, 366, 299, 113, 85, 88, 42, 10, 1]
+        C(t,o)/t        = [0.08, 1.0, 5.5, 18.33, 41.25, 66.0, 77.0, 66.0, 41.25, 18.33, 5.5, 1.0, 0.08]
+  t=16: good counts by o = [1, 15, 104, 442, 1285, 2697, 4193, 4829, 4002, 2127, 525, 961, 730, 320, 88, 14, 1]
+        C(t,o)/t        = [0.06, 1.0, 7.5, 35.0, 113.75, 273.0, 500.5, 715.0, 804.38, 715.0, 500.5, 273.0, 113.75, 35.0, 7.5, 1.0, 0.06]
+  failures of good(t,o) >= C(t,o)/t for t <= 16: none
+  smallest ratio good/(C(t,o)/t): 1.0000 at t=5, o=3 (good=2, C=10)
+
+==============================================================================
+C. exact counts D_b(2^t, gamma) (window floor(log_2 n), n <= 2^t), both sheets
+==============================================================================
+(elapsed 15.0 s)
+
+-- sheet 3n+1 --  (columns: gamma; the column 0.792481 is gamma = log_4 3; counts include n = 1)
+gamma:            0.792000  0.792481  0.792500  0.820000  0.850000  0.880000  0.910000  0.940000  0.970000  1.000000
+h(rho):             1.0000    1.0000    1.0000    0.9991    0.9962    0.9912    0.9841    0.9749    0.9635    0.9500
+X=2^10 D:              416       415       415       345       299       251       178       146       114        90
+X=2^12 D:             1663      1661      1660      1368      1162       897       671       522       351       282
+X=2^14 D:             6649      6635      6634      5464      4623      3486      2720      1725      1196       875
+X=2^16 D:            26758     26703     26701     21710     17972     13359     10362      6480      4395      2904
+X=2^18 D:           107691    107501    107493     87505     68660     54137     39111     24656     16057      9246
+X=2^20 D:           433209    432393    432356    353656    271544    215551    149968     95637     56263     31731
+X=2^22 D:          1742990   1739679   1739486   1421173   1076684    823856    545790    368357    196096    105670
+X=2^24 D:          7005536   6992223   6991366   5701357   4302719   3188719   2166440   1376463    675318    367699
+X=2^10 logD/logX    0.8700    0.8697    0.8697    0.8430    0.8224    0.7972    0.7476    0.7190    0.6833    0.6492
+X=2^12 logD/logX    0.8916    0.8915    0.8914    0.8682    0.8485    0.8174    0.7825    0.7523    0.7046    0.6783
+X=2^14 logD/logX    0.9071    0.9068    0.9068    0.8868    0.8696    0.8405    0.8150    0.7680    0.7303    0.6981
+X=2^16 logD/logX    0.9192    0.9190    0.9190    0.9004    0.8833    0.8566    0.8337    0.7914    0.7564    0.7190
+X=2^18 logD/logX    0.9287    0.9286    0.9285    0.9121    0.8926    0.8736    0.8475    0.8105    0.7762    0.7319
+X=2^20 logD/logX    0.9362    0.9361    0.9361    0.9216    0.9025    0.8859    0.8597    0.8273    0.7890    0.7477
+X=2^22 logD/logX    0.9424    0.9423    0.9423    0.9290    0.9108    0.8933    0.8663    0.8405    0.7991    0.7586
+X=2^24 logD/logX    0.9475    0.9474    0.9474    0.9351    0.9182    0.9002    0.8770    0.8497    0.8069    0.7703
+slope 2^10->2^14    0.9996    0.9997    0.9997    0.9963    0.9877    0.9490    0.9834    0.8906    0.8478    0.8203
+slope 2^12->2^16    1.0020    1.0017    1.0019    0.9971    0.9878    0.9741    0.9872    0.9085    0.9116    0.8411
+slope 2^14->2^18    1.0044    1.0045    1.0046    1.0003    0.9731    0.9892    0.9615    0.9593    0.9367    0.8504
+slope 2^16->2^20    1.0043    1.0043    1.0043    1.0065    0.9793    1.0030    0.9638    0.9709    0.9196    0.8624
+slope 2^18->2^22    1.0041    1.0041    1.0041    1.0054    0.9927    0.9819    0.9507    0.9753    0.9026    0.8786
+slope 2^20->2^24    1.0038    1.0038    1.0038    1.0027    0.9965    0.9717    0.9631    0.9618    0.8963    0.8836
+comparison with the note's published counts (t <= 24, 64 entries), ours - 1 vs note: ALL MATCH
+  D_+(2^20, 1) = 31731 (note: 31730 + the n = 1 that the note's script does not count)
+
+-- sheet 3n-1 --  (columns: gamma; the column 0.792481 is gamma = log_4 3; counts include n = 1)
+gamma:            0.792000  0.792481  0.792500  0.820000  0.850000  0.880000  0.910000  0.940000  0.970000  1.000000
+h(rho):             1.0000    1.0000    1.0000    0.9991    0.9962    0.9912    0.9841    0.9749    0.9635    0.9500
+X=2^10 D:              406       406       406       347       292       248       176       145       113        90
+X=2^12 D:             1651      1647      1647      1375      1155       892       669       519       350       282
+X=2^14 D:             6636      6626      6625      5464      4616      3478      2716      1719      1198       875
+X=2^16 D:            26744     26697     26692     21703     17976     13346     10365      6475      4397      2904
+X=2^18 D:           107668    107486    107476     87495     68612     54134     39113     24647     16054      9246
+X=2^20 D:           433156    432346    432294    353636    271448    215558    149955     95587     56253     31731
+X=2^22 D:          1742975   1739641   1739410   1421042   1076615    823812    545762    368321    196086    105670
+X=2^24 D:          7005559   6992175   6991233   5701161   4302523   3188731   2166365   1376382    675304    367699
+X=2^10 logD/logX    0.8665    0.8665    0.8665    0.8439    0.8190    0.7954    0.7459    0.7180    0.6820    0.6492
+X=2^12 logD/logX    0.8908    0.8905    0.8905    0.8688    0.8478    0.8167    0.7822    0.7516    0.7043    0.6783
+X=2^14 logD/logX    0.9069    0.9067    0.9067    0.8868    0.8695    0.8403    0.8148    0.7677    0.7305    0.6981
+X=2^16 logD/logX    0.9192    0.9190    0.9190    0.9004    0.8834    0.8565    0.8337    0.7913    0.7564    0.7190
+X=2^18 logD/logX    0.9287    0.9285    0.9285    0.9121    0.8926    0.8736    0.8475    0.8105    0.7761    0.7319
+X=2^20 logD/logX    0.9362    0.9361    0.9361    0.9216    0.9025    0.8859    0.8597    0.8272    0.7890    0.7477
+X=2^22 logD/logX    0.9424    0.9423    0.9423    0.9290    0.9108    0.8933    0.8663    0.8405    0.7991    0.7586
+X=2^24 logD/logX    0.9475    0.9474    0.9474    0.9351    0.9182    0.9002    0.8770    0.8497    0.8069    0.7703
+slope 2^10->2^14    1.0077    1.0071    1.0071    0.9942    0.9957    0.9525    0.9870    0.8919    0.8516    0.8203
+slope 2^12->2^16    1.0045    1.0047    1.0046    0.9951    0.9900    0.9758    0.9884    0.9103    0.9128    0.8411
+slope 2^14->2^18    1.0050    1.0050    1.0050    1.0003    0.9734    0.9901    0.9620    0.9604    0.9361    0.8504
+slope 2^16->2^20    1.0044    1.0044    1.0044    1.0066    0.9791    1.0034    0.9637    0.9710    0.9193    0.8624
+slope 2^18->2^22    1.0042    1.0041    1.0041    1.0054    0.9930    0.9819    0.9506    0.9754    0.9026    0.8786
+slope 2^20->2^24    1.0039    1.0039    1.0039    1.0027    0.9966    0.9717    0.9632    0.9620    0.8964    0.8836
+comparison with the note's published counts (t <= 24, 64 entries), ours - 1 vs note: ALL MATCH
+  D_-(2^20, 1) = 31731 (note: 31730 + the n = 1 that the note's script does not count)
+
+max |D_+ - D_-| over t in [10,24] and all gammas: 196 ; at gamma=1: 0
+per-gamma |D_+ - D_-| at 2^24: {0.792: -23, 0.792481250360578: 48, 0.7925: 133, 0.82: 196, 0.85: 196, 0.88: -12, 0.91: 75, 0.94: 81, 0.97: 14, 1.0: 0}
+
+==============================================================================
+D. upper-bound mechanism of 1.2: counted n >= n_0(gamma) must have o_t(n) >= rho t - 2
+==============================================================================
+n_0(gamma) = 2^(1/(gamma - log2(3/2))) is where (3/2)^t <= n^gamma/2 first holds; rho = gamma/alpha
+  b= 1 gamma=0.7920 rho=0.4997 n_0=    28.4 : counted n >= n_0:   7005524 ; violations of o >= rho t - 2: 0 ; of o alpha >= t gamma + gamma - 2: 0
+  b= 1 gamma=0.7925 rho=0.5000 n_0=    28.2 : counted n >= n_0:   6992211 ; violations of o >= rho t - 2: 0 ; of o alpha >= t gamma + gamma - 2: 0
+  b= 1 gamma=0.7925 rho=0.5000 n_0=    28.2 : counted n >= n_0:   6991354 ; violations of o >= rho t - 2: 0 ; of o alpha >= t gamma + gamma - 2: 0
+  b= 1 gamma=0.8200 rho=0.5174 n_0=    19.1 : counted n >= n_0:   5701350 ; violations of o >= rho t - 2: 0 ; of o alpha >= t gamma + gamma - 2: 0
+  b= 1 gamma=0.8500 rho=0.5363 n_0=    13.7 : counted n >= n_0:   4302713 ; violations of o >= rho t - 2: 0 ; of o alpha >= t gamma + gamma - 2: 0
+  b= 1 gamma=0.8800 rho=0.5552 n_0=    10.5 : counted n >= n_0:   3188715 ; violations of o >= rho t - 2: 0 ; of o alpha >= t gamma + gamma - 2: 0
+  b= 1 gamma=0.9100 rho=0.5741 n_0=     8.4 : counted n >= n_0:   2166437 ; violations of o >= rho t - 2: 0 ; of o alpha >= t gamma + gamma - 2: 0
+  b= 1 gamma=0.9400 rho=0.5931 n_0=     7.0 : counted n >= n_0:   1376460 ; violations of o >= rho t - 2: 0 ; of o alpha >= t gamma + gamma - 2: 0
+  b= 1 gamma=0.9700 rho=0.6120 n_0=     6.1 : counted n >= n_0:    675316 ; violations of o >= rho t - 2: 0 ; of o alpha >= t gamma + gamma - 2: 0
+  b= 1 gamma=1.0000 rho=0.6309 n_0=     5.3 : counted n >= n_0:    367697 ; violations of o >= rho t - 2: 0 ; of o alpha >= t gamma + gamma - 2: 0
+  b=-1 gamma=0.7920 rho=0.4997 n_0=    28.4 : counted n >= n_0:   7005548 ; violations of o >= rho t - 2: 0 ; of o alpha >= t gamma + gamma - 2: 0
+  b=-1 gamma=0.7925 rho=0.5000 n_0=    28.2 : counted n >= n_0:   6992164 ; violations of o >= rho t - 2: 0 ; of o alpha >= t gamma + gamma - 2: 0
+  b=-1 gamma=0.7925 rho=0.5000 n_0=    28.2 : counted n >= n_0:   6991222 ; violations of o >= rho t - 2: 0 ; of o alpha >= t gamma + gamma - 2: 0
+  b=-1 gamma=0.8200 rho=0.5174 n_0=    19.1 : counted n >= n_0:   5701153 ; violations of o >= rho t - 2: 0 ; of o alpha >= t gamma + gamma - 2: 0
+  b=-1 gamma=0.8500 rho=0.5363 n_0=    13.7 : counted n >= n_0:   4302518 ; violations of o >= rho t - 2: 0 ; of o alpha >= t gamma + gamma - 2: 0
+  b=-1 gamma=0.8800 rho=0.5552 n_0=    10.5 : counted n >= n_0:   3188727 ; violations of o >= rho t - 2: 0 ; of o alpha >= t gamma + gamma - 2: 0
+  b=-1 gamma=0.9100 rho=0.5741 n_0=     8.4 : counted n >= n_0:   2166362 ; violations of o >= rho t - 2: 0 ; of o alpha >= t gamma + gamma - 2: 0
+  b=-1 gamma=0.9400 rho=0.5931 n_0=     7.0 : counted n >= n_0:   1376379 ; violations of o >= rho t - 2: 0 ; of o alpha >= t gamma + gamma - 2: 0
+  b=-1 gamma=0.9700 rho=0.6120 n_0=     6.1 : counted n >= n_0:    675301 ; violations of o >= rho t - 2: 0 ; of o alpha >= t gamma + gamma - 2: 0
+  b=-1 gamma=1.0000 rho=0.6309 n_0=     5.3 : counted n >= n_0:    367696 ; violations of o >= rho t - 2: 0 ; of o alpha >= t gamma + gamma - 2: 0
+
+==============================================================================
+E. lower-bound construction of 1.3 (rotation): representatives of the good words
+==============================================================================
+o = ceil(rho t) + 1, rho = max(1/2, gamma/alpha); good = all partial sums <= max(0, S_t);
+representative n in [2^t, 2^(t+1)); failure = some i <= t with T_b^i(n) < n^gamma (exact comparison)
+min_{1<=i<=20, 0<=o<=i} |i - o alpha| = 0.019550  (Diophantine margin available at these sizes)
+  gamma=0.85 t= 8 o= 6 S_t= -1.510 C(t,o)=     28 good=     12 (>= C/t=      3.5: True) | b= 1 fails=0 | b=-1 fails=0 | proof needs t(1-gamma) > 2 alpha (t > 21) or n >= 3^(1/(1-gamma)) = 2^10.6
+  gamma=0.85 t=12 o= 8 S_t= -0.680 C(t,o)=    495 good=     85 (>= C/t=     41.2: True) | b= 1 fails=0 | b=-1 fails=0 | proof needs t(1-gamma) > 2 alpha (t > 21) or n >= 3^(1/(1-gamma)) = 2^10.6
+  gamma=0.85 t=16 o=10 S_t=  0.150 C(t,o)=   8008 good=    525 (>= C/t=    500.5: True) | b= 1 fails=0 | b=-1 fails=0 | proof needs t(1-gamma) > 2 alpha (t > 21) or n >= 3^(1/(1-gamma)) = 2^10.6
+  gamma=0.85 t=20 o=12 S_t=  0.980 C(t,o)= 125970 good=  11433 (>= C/t=   6298.5: True) | b= 1 fails=0 | b=-1 fails=0 | proof needs t(1-gamma) > 2 alpha (t > 21) or n >= 3^(1/(1-gamma)) = 2^10.6
+  gamma=0.91 t= 8 o= 6 S_t= -1.510 C(t,o)=     28 good=     12 (>= C/t=      3.5: True) | b= 1 fails=0 | b=-1 fails=0 | proof needs t(1-gamma) > 2 alpha (t > 35) or n >= 3^(1/(1-gamma)) = 2^17.6
+  gamma=0.91 t=12 o= 8 S_t= -0.680 C(t,o)=    495 good=     85 (>= C/t=     41.2: True) | b= 1 fails=0 | b=-1 fails=0 | proof needs t(1-gamma) > 2 alpha (t > 35) or n >= 3^(1/(1-gamma)) = 2^17.6
+  gamma=0.91 t=16 o=11 S_t= -1.435 C(t,o)=   4368 good=    961 (>= C/t=    273.0: True) | b= 1 fails=0 | b=-1 fails=0 | proof needs t(1-gamma) > 2 alpha (t > 35) or n >= 3^(1/(1-gamma)) = 2^17.6
+  gamma=0.91 t=20 o=13 S_t= -0.605 C(t,o)=  77520 good=   8045 (>= C/t=   3876.0: True) | b= 1 fails=0 | b=-1 fails=0 | proof needs t(1-gamma) > 2 alpha (t > 35) or n >= 3^(1/(1-gamma)) = 2^17.6
+  gamma=0.97 t= 8 o= 6 S_t= -1.510 C(t,o)=     28 good=     12 (>= C/t=      3.5: True) | b= 1 fails=0 | b=-1 fails=0 | proof needs t(1-gamma) > 2 alpha (t > 106) or n >= 3^(1/(1-gamma)) = 2^52.8
+  gamma=0.97 t=12 o= 9 S_t= -2.265 C(t,o)=    220 good=     88 (>= C/t=     18.3: True) | b= 1 fails=0 | b=-1 fails=0 | proof needs t(1-gamma) > 2 alpha (t > 106) or n >= 3^(1/(1-gamma)) = 2^52.8
+  gamma=0.97 t=16 o=11 S_t= -1.435 C(t,o)=   4368 good=    961 (>= C/t=    273.0: True) | b= 1 fails=0 | b=-1 fails=0 | proof needs t(1-gamma) > 2 alpha (t > 106) or n >= 3^(1/(1-gamma)) = 2^52.8
+  gamma=0.97 t=20 o=14 S_t= -2.189 C(t,o)=  38760 good=   9592 (>= C/t=   1938.0: True) | b= 1 fails=0 | b=-1 fails=0 | proof needs t(1-gamma) > 2 alpha (t > 106) or n >= 3^(1/(1-gamma)) = 2^52.8
+  gamma=1.00 t= 8 o= 7 S_t= -3.095 C(t,o)=      8 good=      6 (>= C/t=      1.0: True) | b= 1 fails=0 | b=-1 fails=0
+  gamma=1.00 t=12 o= 9 S_t= -2.265 C(t,o)=    220 good=     88 (>= C/t=     18.3: True) | b= 1 fails=0 | b=-1 fails=0
+  gamma=1.00 t=16 o=12 S_t= -3.020 C(t,o)=   1820 good=    730 (>= C/t=    113.8: True) | b= 1 fails=0 | b=-1 fails=0
+  gamma=1.00 t=20 o=14 S_t= -2.189 C(t,o)=  38760 good=   9592 (>= C/t=   1938.0: True) | b= 1 fails=0 | b=-1 fails=0
+note: at gamma = 1 on the minus sheet the rotation argument alone does not PROVE T^i(n) >= n (carry negative,
+      S_i may be within o(1) of 0); the counts above show whether it FAILS at these sizes.
+
+==============================================================================
+E2. optional strengthening (auditor): tilted cycle lemma at gamma = 1 on the minus sheet
+==============================================================================
+steps x_j + alpha/t, o = ceil(t/alpha) + 2 (so S_t <= -2 alpha and the tilted total is <= -alpha < 0); rotate after
+the maximal tilted partial sum; then S'_i <= -i alpha/t for 1 <= i <= t, so 2^(-S'_i) >= 3^(i/t) >= 1 + (i/t) ln 3 and
+T_-^i(n) >= n + n (i/t) ln 3 - (3/2)^i > n for n >= 2^t (margin inequality 2^t (i/t) ln 3 >= (3/2)^i, all 1<=i<=t):
+this would give c X^(h*)/log^(3/2) X on the minus sheet too, with the same C(t,o)/t count.
+  t= 8 o= 8 C(t,o)=      1 distinct rotated words=     1 (>= C/t=     0.1: True) S'_i <= -i alpha/t: asserted; margin inequality: True; minus-sheet no-dip failures: 0
+  t=10 o= 9 C(t,o)=     10 distinct rotated words=     7 (>= C/t=     1.0: True) S'_i <= -i alpha/t: asserted; margin inequality: True; minus-sheet no-dip failures: 0
+  t=12 o=10 C(t,o)=     66 distinct rotated words=    33 (>= C/t=     5.5: True) S'_i <= -i alpha/t: asserted; margin inequality: True; minus-sheet no-dip failures: 0
+  t=14 o=11 C(t,o)=    364 distinct rotated words=   118 (>= C/t=    26.0: True) S'_i <= -i alpha/t: asserted; margin inequality: True; minus-sheet no-dip failures: 0
+  t=16 o=13 C(t,o)=    560 distinct rotated words=   245 (>= C/t=    35.0: True) S'_i <= -i alpha/t: asserted; margin inequality: True; minus-sheet no-dip failures: 0
+  t=18 o=14 C(t,o)=   3060 distinct rotated words=  1020 (>= C/t=   170.0: True) S'_i <= -i alpha/t: asserted; margin inequality: True; minus-sheet no-dip failures: 0
+  t=20 o=15 C(t,o)=  15504 distinct rotated words=  3876 (>= C/t=   775.2: True) S'_i <= -i alpha/t: asserted; margin inequality: True; minus-sheet no-dip failures: 0
+
+==============================================================================
+F. block construction of 1.3 (gamma = 1, minus sheet)
+==============================================================================
+W_L = words of length L, o_L = ceil(L/alpha) + 1 odd letters, all partial sums <= 0;
+c_L(W) = -max over W_L and 1<=i<=L of S_i ; c_L(theory) = min{o alpha - i > 0 : 1<=i<=L, 0<=o<=i};
+n_2(L) = (3/2)^L/(2^c_L - 1) is where n 2^c_L - (3/2)^L >= n starts to hold (first block).
+  L= 3 o_L= 3 S_L= -1.755 C(L,o_L)=    1 |W_L|=    1 (>= C/L=   0.33: True) c_L(W)=0.5850 c_L(theory)=0.1699 n_2(L)=2^2.8 h(o_L/L)=0.0000
+  L= 4 o_L= 4 S_L= -2.340 C(L,o_L)=    1 |W_L|=    1 (>= C/L=   0.25: True) c_L(W)=0.5850 c_L(theory)=0.1699 n_2(L)=2^3.3 h(o_L/L)=0.0000
+  L= 5 o_L= 5 S_L= -2.925 C(L,o_L)=    1 |W_L|=    1 (>= C/L=   0.20: True) c_L(W)=0.5850 c_L(theory)=0.1699 n_2(L)=2^3.9 h(o_L/L)=0.0000
+  L= 6 o_L= 5 S_L= -1.925 C(L,o_L)=    6 |W_L|=    4 (>= C/L=   1.00: True) c_L(W)=0.1699 c_L(theory)=0.1699 n_2(L)=2^6.5 h(o_L/L)=0.6500
+  L= 7 o_L= 6 S_L= -2.510 C(L,o_L)=    7 |W_L|=    5 (>= C/L=   1.00: True) c_L(W)=0.1699 c_L(theory)=0.1699 n_2(L)=2^7.1 h(o_L/L)=0.5917
+  L= 8 o_L= 7 S_L= -3.095 C(L,o_L)=    8 |W_L|=    6 (>= C/L=   1.00: True) c_L(W)=0.1699 c_L(theory)=0.1699 n_2(L)=2^7.7 h(o_L/L)=0.5436
+  L= 9 o_L= 7 S_L= -2.095 C(L,o_L)=   36 |W_L|=   18 (>= C/L=   4.00: True) c_L(W)=0.1699 c_L(theory)=0.1699 n_2(L)=2^8.3 h(o_L/L)=0.7642
+  L=10 o_L= 8 S_L= -2.680 C(L,o_L)=   45 |W_L|=   25 (>= C/L=   4.50: True) c_L(W)=0.1699 c_L(theory)=0.1699 n_2(L)=2^8.8 h(o_L/L)=0.7219
+  L=11 o_L= 8 S_L= -1.680 C(L,o_L)=  165 |W_L|=   55 (>= C/L=  15.00: True) c_L(W)=0.1699 c_L(theory)=0.0947 n_2(L)=2^9.4 h(o_L/L)=0.8454
+  L=12 o_L= 9 S_L= -2.265 C(L,o_L)=  220 |W_L|=   88 (>= C/L=  18.33: True) c_L(W)=0.1699 c_L(theory)=0.0947 n_2(L)=2^10.0 h(o_L/L)=0.8113
+  L=13 o_L=10 S_L= -2.850 C(L,o_L)=  286 |W_L|=  130 (>= C/L=  22.00: True) c_L(W)=0.1699 c_L(theory)=0.0947 n_2(L)=2^10.6 h(o_L/L)=0.7793
+  L=14 o_L=10 S_L= -1.850 C(L,o_L)= 1001 |W_L|=  303 (>= C/L=  71.50: True) c_L(W)=0.0947 c_L(theory)=0.0947 n_2(L)=2^12.1 h(o_L/L)=0.8631
+concatenations of j blocks (t = jL), minus sheet, representative n in [2^t, 2^(t+1)):
+  L= 4 j=3 t=12:      1 words; partial-sum claim failures 0; no-dip failures (T_-^i(n) < n) 0; 2^t >= n_2(L): True
+  L= 4 j=5 t=20:      1 words; partial-sum claim failures 0; no-dip failures (T_-^i(n) < n) 0; 2^t >= n_2(L): True
+  L= 5 j=4 t=20:      1 words; partial-sum claim failures 0; no-dip failures (T_-^i(n) < n) 0; 2^t >= n_2(L): True
+  L= 6 j=2 t=12:     16 words; partial-sum claim failures 0; no-dip failures (T_-^i(n) < n) 0; 2^t >= n_2(L): True
+  L= 6 j=3 t=18:     64 words; partial-sum claim failures 0; no-dip failures (T_-^i(n) < n) 0; 2^t >= n_2(L): True
+  L= 7 j=2 t=14:     25 words; partial-sum claim failures 0; no-dip failures (T_-^i(n) < n) 0; 2^t >= n_2(L): True
+  L= 8 j=2 t=16:     36 words; partial-sum claim failures 0; no-dip failures (T_-^i(n) < n) 0; 2^t >= n_2(L): True
+  L= 9 j=2 t=18:    324 words; partial-sum claim failures 0; no-dip failures (T_-^i(n) < n) 0; 2^t >= n_2(L): True
+  L=10 j=2 t=20:    625 words; partial-sum claim failures 0; no-dip failures (T_-^i(n) < n) 0; 2^t >= n_2(L): True
+exponent of the block lower bound, per letter: e_L = log2(C(L,o_L)/L)/L, vs h(o_L/L) and h* = 0.949956
+  L=   10 o_L/L=0.80000 h(o_L/L)=0.721928 e_L=0.216993 h*-e_L=0.732963
+  L=   20 o_L/L=0.70000 h(o_L/L)=0.881291 e_L=0.546018 h*-e_L=0.403938
+  L=   50 o_L/L=0.66000 h(o_L/L)=0.924819 e_L=0.750380 h*-e_L=0.199575
+  L=  100 o_L/L=0.65000 h(o_L/L)=0.934068 e_L=0.831792 h*-e_L=0.118163
+  L=  200 o_L/L=0.64000 h(o_L/L)=0.942683 e_L=0.884010 h*-e_L=0.065946
+  L=  500 o_L/L=0.63400 h(o_L/L)=0.947551 e_L=0.920108 h*-e_L=0.029847
+  L= 1000 o_L/L=0.63200 h(o_L/L)=0.949124 e_L=0.933901 h*-e_L=0.016054
+  L= 5000 o_L/L=0.63120 h(o_L/L)=0.949746 e_L=0.946005 h*-e_L=0.003950
+
+==============================================================================
+G. Proposition 2: #F_b(X, theta), X = 2^k, window k, both sheets
+==============================================================================
+h((1-theta)/alpha) - (log2(3/2) + theta) on a 999-point grid of (0, theta_0): min = 0.2077 (> 0: the lemma's first term is dominated)
+theta=0.03 rho=0.61200 h(rho)=0.96350
+  k=12 #F_+=     274 #F_-=     273 prior audit (274, 273): match | logF/logX(+)=0.6748 | construction: o= 9 C(k-1,o)=    55 good=    33 (>= C/(k-1)=     5.0: True) fails(+)=0 fails(-)=0
+  k=14 #F_+=    1206 #F_-=    1202 prior audit (1206, 1202): match | logF/logX(+)=0.7311 | construction: o=10 C(k-1,o)=   286 good=   130 (>= C/(k-1)=    22.0: True) fails(+)=0 fails(-)=0
+  k=16 #F_+=    3989 #F_-=    3987 prior audit (3989, 3987): match | logF/logX(+)=0.7476 | construction: o=12 C(k-1,o)=   455 good=   245 (>= C/(k-1)=    30.3: True) fails(+)=0 fails(-)=0
+  k=18 #F_+=   12339 #F_-=   12337 prior audit (12339, 12337): match | logF/logX(+)=0.7551 | construction: o=13 C(k-1,o)=  2380 good=  1050 (>= C/(k-1)=   140.0: True) fails(+)=0 fails(-)=0
+  k=20 #F_+=   46612 #F_-=   46611 prior audit (46612, 46611): match | logF/logX(+)=0.7754 | construction: o=14 C(k-1,o)= 11628 good=  4199 (>= C/(k-1)=   612.0: True) fails(+)=0 fails(-)=0
+theta=0.10 rho=0.56784 h(rho)=0.98668
+  k=12 #F_+=     736 #F_-=     734 prior audit (736, 734): match | logF/logX(+)=0.7936 | construction: o= 9 C(k-1,o)=    55 good=    33 (>= C/(k-1)=     5.0: True) fails(+)=0 fails(-)=0
+  k=14 #F_+=    2774 #F_-=    2771 prior audit (2774, 2771): match | logF/logX(+)=0.8170 | construction: o=10 C(k-1,o)=   286 good=   130 (>= C/(k-1)=    22.0: True) fails(+)=0 fails(-)=0
+  k=16 #F_+=    9657 #F_-=    9654 prior audit (9657, 9654): match | logF/logX(+)=0.8273 | construction: o=11 C(k-1,o)=  1365 good=   485 (>= C/(k-1)=    91.0: True) fails(+)=0 fails(-)=0
+  k=18 #F_+=   38146 #F_-=   38142 prior audit (38146, 38142): match | logF/logX(+)=0.8455 | construction: o=12 C(k-1,o)=  6188 good=  1691 (>= C/(k-1)=   364.0: True) fails(+)=0 fails(-)=0
+  k=20 #F_+=  157652 #F_-=  157648 prior audit (157652, 157648): match | logF/logX(+)=0.8633 | construction: o=13 C(k-1,o)= 27132 good=  5393 (>= C/(k-1)=  1428.0: True) fails(+)=0 fails(-)=0
+
+==============================================================================
+H. entropy and binomial bounds quoted in 1.1 - 1.3
+==============================================================================
+(i) C(t, ceil(rho t)) >= 2^(t h(rho))/(t+1), t <= 2000 (literal 1.1 claim; the exponent is evaluated at rho, not at ceil(rho t)/t)
+   rho=0.50001: failures [2]
+   rho=0.51736: failures [2]
+   rho=0.53629: failures [2]
+   rho=0.55522: failures [2]
+   rho=0.57415: failures [2]
+   rho=0.59307: failures [2]
+   rho=0.61200: failures [2]
+   rho=0.63093: failures [2]
+   rho=0.90000: failures [6, 7, 8, 9, 18, 19, 29]
+   rho=0.95000: failures [14, 15, 16, 17, 18, 19, 37, 38, 39, 58, '...']
+(ii) sum_{o >= rho t - 2} C(t,o) <= (t+1) (rho/(1-rho))^2 2^(t h(rho)) for t in [t_0, 1000], t_0 = min{t : rho t - 2 > t/2}
+   rho=0.50001 t_0=169067: max ratio sum/bound = 0.0000 ; failures none
+   rho=0.51736 t_0=117: max ratio sum/bound = 0.0040 ; failures none
+   rho=0.53629 t_0= 57: max ratio sum/bound = 0.0075 ; failures none
+   rho=0.55522 t_0= 38: max ratio sum/bound = 0.0102 ; failures none
+   rho=0.57415 t_0= 28: max ratio sum/bound = 0.0126 ; failures none
+   rho=0.59307 t_0= 23: max ratio sum/bound = 0.0146 ; failures none
+   rho=0.61200 t_0= 19: max ratio sum/bound = 0.0163 ; failures none
+   rho=0.63093 t_0= 17: max ratio sum/bound = 0.0171 ; failures none
+   rho=0.90000 t_0=  6: max ratio sum/bound = 0.0077 ; failures none
+   rho=0.95000 t_0=  6: max ratio sum/bound = 0.0034 ; failures none
+(iii) ratio C(t, ceil(rho t)+1)/C(t, ceil(rho t)) for t in [20, 2000] (bounded below for rho < 1):
+   rho=0.50001: min 0.7500 max 0.9980 limit (1-rho)/rho = 1.0000
+   rho=0.51736: min 0.7500 max 0.9320 limit (1-rho)/rho = 0.9329
+   rho=0.53629: min 0.6923 max 0.8638 limit (1-rho)/rho = 0.8647
+   rho=0.55522: min 0.6154 max 0.8004 limit (1-rho)/rho = 0.8011
+   rho=0.57415: min 0.5714 max 0.7411 limit (1-rho)/rho = 0.7417
+   rho=0.59307: min 0.5333 max 0.6855 limit (1-rho)/rho = 0.6861
+   rho=0.61200: min 0.5000 max 0.6334 limit (1-rho)/rho = 0.6340
+   rho=0.63093: min 0.4667 max 0.5845 limit (1-rho)/rho = 0.5850
+   rho=0.90000: min 0.0714 max 0.1110 limit (1-rho)/rho = 0.1111
+   rho=0.95000: min 0.0256 max 0.0526 limit (1-rho)/rho = 0.0526
+(iv) log-power bookkeeping: with C(t,o) >= c 2^(t h)/sqrt t the top block gives D >= c X^h/log^(3/2) X (note claims /log^3: valid, weaker);
+     the upper bound sum_{t <= log2 X} (t+1) 2^(t h) <= C X^h log X (note claims log^2: valid, weaker).
+   t=  100: log2(C(t,o)/t) - t h(rho) = -11.816 ; -(3/2) log2 t = -9.966 ; -3 log2 t = -19.932
+   t= 1000: log2(C(t,o)/t) - t h(rho) = -16.054 ; -(3/2) log2 t = -14.949 ; -3 log2 t = -29.897
+   t= 5000: log2(C(t,o)/t) - t h(rho) = -19.752 ; -(3/2) log2 t = -18.432 ; -3 log2 t = -36.863
+
+done.
