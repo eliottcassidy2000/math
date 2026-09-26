@@ -1,0 +1,14 @@
+edge 3->5 weight=2 digit_current=[0, -1, 1, 0]
+edge 4->2 weight=1 digit_current=[0, 1, -1, 0]
+edge 5->8 weight=1 digit_current=[-1, 0, -1, 1]
+edge 6->3 weight=2 digit_current=[1, 0, -1, 0]
+edge 8->4 weight=1 digit_current=[0, 0, 1, -1]
+edge 9->14 weight=1 digit_current=[-1, 1, 1, 0]
+positive weighted current=0; rank=4; all four digit weights forced zero
+power/Mersenne opposite currents: 255 exact pairs through 256 bits
+eventual-to-global lift: 12285 exact ordinary edges/paddings
+six template lifts: 456 exact cases M=5..80
+nonzero actual-vertex boundary={2: 1, 5: 1, 6: -2, 9: -1, 14: 1}
+boundary multiset: 6+6+9 -> 2+5+14; digit inventory agrees
+weighted current of n^2=72, not zero
+PASS: exact certificate, rank, lifts, scale templates and hostile controls

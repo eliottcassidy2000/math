@@ -1,0 +1,9 @@
+nextforest_20260926_automata: exact controls
+source-prefix controls: 8191 at every length 0..12; four tail values each
+distinct residual states at exact depth 0..12: [1, 2, 4, 7, 12, 21, 38, 69, 127, 235, 438, 819, 1535]
+all 2186 non-root states through a=7 reached; each horizontal cycle is complete
+macro minimal-state controls: 1093 initial machines for a=0..6
+reset-word censuses: 27 ; formula max(0, 2^h-3^a+1) exact
+fixed zero-input tails: 16320 exact contractions; original n=1..255
+controls: n=1 at depth 2k has (a,b)=(k,1); n=2^k-1 at depth k has (k,3^k-1), k=1..16
+PASS: all checks are explicit exceptions, active under python -O

@@ -1,0 +1,136 @@
+{
+  "status": "FINITE-EXACT controls; all-height theorem uses written lift proof",
+  "odd_control_count": 131072,
+  "lower_equality_count": 1597,
+  "upper_equality_count": 9,
+  "mantissa_equality_count": 6764,
+  "large_family_count": 398,
+  "defect_bound": 4096,
+  "positive_offset_count": 683,
+  "exception_count": 10977,
+  "maximum_core_steps": 65,
+  "maximum_cutoff": 115,
+  "maximum_selected_horizon": 104,
+  "maximum_large_horizon": 66,
+  "maximum_exception_source_bits": 112,
+  "maximal_exception_witness": [
+    1406,
+    53,
+    104,
+    1339984349786687
+  ],
+  "family_27_first_descent": [
+    [
+      3,
+      27,
+      37,
+      23
+    ],
+    [
+      4,
+      91,
+      28,
+      61
+    ],
+    [
+      5,
+      347,
+      6,
+      31
+    ],
+    [
+      6,
+      1371,
+      6,
+      977
+    ],
+    [
+      7,
+      5467,
+      6,
+      3893
+    ],
+    [
+      8,
+      21851,
+      6,
+      15557
+    ]
+  ],
+  "normalized_near_boundary_growth_controls": 320,
+  "certificate_sha256": "39b700ce5605da00687c028f75e1a68ec0f16d1b1f94227fc556fc6af2c5078a",
+  "example_certificates": [
+    {
+      "d": 2,
+      "core": 1,
+      "initial_valuation": 1,
+      "core_steps": 0,
+      "core_divisions": 0,
+      "appended_unit_steps": 2,
+      "large_steps": 3,
+      "cutoff": 6,
+      "lambda_numerator": 27,
+      "lambda_denominator": 32
+    },
+    {
+      "d": 6,
+      "core": 3,
+      "initial_valuation": 1,
+      "core_steps": 2,
+      "core_divisions": 5,
+      "appended_unit_steps": 0,
+      "large_steps": 3,
+      "cutoff": 7,
+      "lambda_numerator": 27,
+      "lambda_denominator": 64
+    },
+    {
+      "d": 18,
+      "core": 9,
+      "initial_valuation": 1,
+      "core_steps": 6,
+      "core_divisions": 13,
+      "appended_unit_steps": 0,
+      "large_steps": 7,
+      "cutoff": 15,
+      "lambda_numerator": 2187,
+      "lambda_denominator": 16384
+    },
+    {
+      "d": 54,
+      "core": 27,
+      "initial_valuation": 1,
+      "core_steps": 41,
+      "core_divisions": 70,
+      "appended_unit_steps": 0,
+      "large_steps": 42,
+      "cutoff": 72,
+      "lambda_numerator": 109418989131512359209,
+      "lambda_denominator": 2361183241434822606848
+    },
+    {
+      "d": 162,
+      "core": 81,
+      "initial_valuation": 1,
+      "core_steps": 6,
+      "core_divisions": 16,
+      "appended_unit_steps": 0,
+      "large_steps": 7,
+      "cutoff": 18,
+      "lambda_numerator": 2187,
+      "lambda_denominator": 131072
+    },
+    {
+      "d": 2048,
+      "core": 1,
+      "initial_valuation": 11,
+      "core_steps": 0,
+      "core_divisions": 0,
+      "appended_unit_steps": 0,
+      "large_steps": 1,
+      "cutoff": 12,
+      "lambda_numerator": 3,
+      "lambda_denominator": 2048
+    }
+  ]
+}

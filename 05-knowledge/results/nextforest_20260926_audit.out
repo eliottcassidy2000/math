@@ -1,0 +1,7 @@
+independent residue-floor inequality checks=32768, equalities=2583
+offset certificates=684, finite exceptions=10977
+maximum large-input odd horizon=66, finite-exception first descent=104
+independent certificate transcript sha256=507bbeedee52ec7f4d365b67d585c26d08846afbb8135db2c5bfe499af7a29d3
+27-family first descents (k,n,steps)=[[3, 27, 37], [4, 91, 28], [5, 347, 6], [6, 1371, 6], [7, 5467, 6], [8, 21851, 6], [9, 87387, 6], [10, 349531, 6]]
+PASS: all-height certificate E<=4096 -> a smaller odd iterate within104 U steps
+Scope: first descent only; the later orbit can leave the bounded-defect class

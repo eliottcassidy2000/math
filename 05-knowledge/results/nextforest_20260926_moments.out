@@ -1,0 +1,7 @@
+FINITE-EXACT: observer tests; no Collatz termination assertion
+Prouhet horizon/r/gap controls: [(0, 1, 37, 88), (0, 3, 37, 310), (0, 5, 37, 1198), (3, 1, 44, 1198), (3, 3, 44, 1198), (3, 5, 44, 1428), (8, 1, 57, 1428), (8, 3, 57, 1428), (8, 5, 57, 1855), (16, 1, 69, 1855), (16, 3, 69, 1855), (16, 5, 69, 2252)]
+largest tested source bit length: 2252
+block family R=80: digit count324; first moment gain321
+support transport:512 odd and511 even exact polynomial identities
+gates: {'Newton integrality': 5120, 'Newton root count': 1023, 'Newton source roots': 1023, 'Prouhet unbounded ratio bound': 60, 'actual orbit affine blocks': 465, 'carry block separation': 108438, 'even support translation': 511, 'first moment proper': 1023, 'golden ratio collision support': 1, 'growing actual odd edge': 80, 'growing magnitude': 80, 'literal carry block formula': 930, 'minimal low block moment witness': 1, 'nonlinear support degrees': 512, 'nonlinear support full coefficients': 512, 'orbit valuation fibre': 2790, 'paired carry jets': 465, 'paired digit jets': 465, 'rational decode': 5115, 'rational digit admissibility': 46085, 'rational exact denominator': 5115, 'same digit-count fibre': 80, 'signed polynomial leading term control': 6, 'unbounded first moment gain': 80}
+TOTAL 179980 PASS
