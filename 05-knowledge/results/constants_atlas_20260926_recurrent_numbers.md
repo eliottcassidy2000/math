@@ -112,10 +112,10 @@ dynamical content. Verdict: TRANSPORTED by an identity; not a bridge.
 binding fraction `1/phi^2`, `delta = 1/phi`, base `5 = disc(phi)`; the
 golden constant is optimal for separately balanced dyadic blocks (THM-3009)
 and beaten uniformly: `1.377 <= C* <= 159/100 = 1.59` (THM-4467/4468),
-realizable states stalling near `1.567`. **Lead (untested, no map):**
-`log_2 3 = 1.58496` lies inside the window `[1.377, 1.59]`, below the
-best construction by `0.005`. Cheapest test: whether any natural extractor
-family has `T(L)/L -> log_2 3`; if the answer is no, this entry moves to
+realizable states stalling near `1.567`. **Lead, tested and dead (THM-4488, same day):** `log_2 3 = 1.58496` lay
+inside the window `[1.377, 1.59]` only because THM-4468's constant was stuck
+at a crude majorant threshold `203/128 = 1.5859`; the exact binomial ratio
+in the same certificate gives `C* <= 197/125 = 1.576 < log_2 3`. The entry moves to
 section 7. The repo's existing AMM↔Collatz bridge (Bernstein capacity,
 THM-3002/3027 and the procgen bridges note) does not predict `log_2 3`.
 
@@ -151,6 +151,7 @@ Family B.
 |---|---|---|
 | THM-4475's lower-bound exponent vs the slope constant of Family A | `0.7737 = 0.0500 + log_2((3+sqrt13)/4)` vs `0.7736 = |log_2 log_2(3/2)|` | one involves `sqrt 13` from a two-term recurrence, the other the derivative of the entropy at `log_3 2`; they differ in the fourth decimal |
 | AMM golden constant vs the Collatz drift | `1.59799` vs `1.58496` | different problems; the AMM constant is `1 + 2 log_5 phi` |
+| `log_2 3` in the AMM 12592 window `[1.377, 1.59]` | `1.58496` vs the majorant threshold `203/128 = 1.5859` | the window's upper end was a proof artifact; `C* <= 197/125 = 1.576` (THM-4488) |
 | `189` thrice | `h(T_7)`, `1/189` LRC reserve, fragile pair `189` | three factorizations of `7 * 27` |
 | `139` four times | Collatz gap, `139/154`, `3*97*139`, `13*139 = 1807` | one small prime |
 | `13` | LRC(13) vs `2^8 - 3^5` vs `(3^3-1)/2` | a small integer |

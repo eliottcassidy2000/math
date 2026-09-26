@@ -1,0 +1,290 @@
+=== HYP-9128 contour certificates: c = 79/50 = 1.58, kappa = 1/16, B = 4, N_A = 4096 ===
+level range v = i/N in [0, 1.531890], sigma = (c-1)(1+v) + eta, eta in [-2/N_A, 1/N_A]
+
+[V1] 154 v-cells (width 0.01); per cell: circle (x0, rho), certified max rate Psi, log prefactor
+  v in [0.00,0.0100]: circle (+0.3036, 1.3911) rate <= -0.02305 (float -0.02696) extra <= 2.739 pieces   74  log M_i bound at N_A: -90.64
+  v in [0.01,0.0200]: circle (+0.1015, 1.6572) rate <= -0.01770 (float -0.02169) extra <= 2.504 pieces   70  log M_i bound at N_A: -68.80
+  v in [0.02,0.0300]: circle (+0.8419, 1.1026) rate <= -0.01366 (float -0.01760) extra <= 2.474 pieces   83  log M_i bound at N_A: -52.67
+  v in [0.03,0.0400]: circle (+0.8539, 1.1694) rate <= -0.01056 (float -0.01453) extra <= 2.379 pieces   82  log M_i bound at N_A: -40.02
+  v in [0.04,0.0500]: circle (+0.3482, 1.6592) rate <= -0.00877 (float -0.01237) extra <= 2.360 pieces   76  log M_i bound at N_A: -32.37
+  v in [0.05,0.0600]: circle (+0.6527, 1.4745) rate <= -0.00708 (float -0.01106) extra <= 2.198 pieces   75  log M_i bound at N_A: -25.72
+  v in [0.06,0.0700]: circle (+0.8466, 1.3928) rate <= -0.00675 (float -0.01055) extra <= 2.128 pieces   95  log M_i bound at N_A: -24.50
+  v in [0.07,0.0800]: circle (+0.6488, 1.5633) rate <= -0.00689 (float -0.01054) extra <= 2.125 pieces  100  log M_i bound at N_A: -24.97
+  v in [0.08,0.0900]: circle (+0.6608, 1.5633) rate <= -0.00662 (float -0.01061) extra <= 2.087 pieces  204  log M_i bound at N_A: -23.88
+  v in [0.09,0.1000]: circle (+0.6609, 1.5633) rate <= -0.00674 (float -0.01071) extra <= 2.083 pieces  205  log M_i bound at N_A: -24.38
+  v in [0.10,0.1100]: circle (+0.6610, 1.5633) rate <= -0.00682 (float -0.01081) extra <= 2.083 pieces  205  log M_i bound at N_A: -24.72
+  v in [0.11,0.1200]: circle (+0.6610, 1.5633) rate <= -0.00691 (float -0.01091) extra <= 2.083 pieces  207  log M_i bound at N_A: -25.09
+  v in [0.12,0.1300]: circle (+0.6611, 1.5633) rate <= -0.00705 (float -0.01100) extra <= 2.087 pieces  209  log M_i bound at N_A: -25.67
+  v in [0.13,0.1400]: circle (+0.6612, 1.5633) rate <= -0.00712 (float -0.01109) extra <= 2.081 pieces  210  log M_i bound at N_A: -25.95
+  v in [0.14,0.1500]: circle (+0.6613, 1.5633) rate <= -0.00723 (float -0.01118) extra <= 2.101 pieces  209  log M_i bound at N_A: -26.37
+  v in [0.15,0.1600]: circle (+0.6613, 1.5633) rate <= -0.00730 (float -0.01127) extra <= 2.080 pieces  209  log M_i bound at N_A: -26.69
+  v in [0.16,0.1700]: circle (+0.6614, 1.5633) rate <= -0.00741 (float -0.01135) extra <= 2.083 pieces  212  log M_i bound at N_A: -27.14
+  v in [0.17,0.1800]: circle (+0.6615, 1.5633) rate <= -0.00745 (float -0.01144) extra <= 2.082 pieces  212  log M_i bound at N_A: -27.28
+  v in [0.18,0.1900]: circle (+0.6615, 1.5633) rate <= -0.00752 (float -0.01152) extra <= 2.080 pieces  213  log M_i bound at N_A: -27.59
+  v in [0.19,0.2000]: circle (+0.6616, 1.5633) rate <= -0.00761 (float -0.01160) extra <= 2.109 pieces  215  log M_i bound at N_A: -27.92
+  v in [0.20,0.2100]: circle (+0.6617, 1.5633) rate <= -0.00769 (float -0.01168) extra <= 2.080 pieces  216  log M_i bound at N_A: -28.28
+  v in [0.21,0.2200]: circle (+0.6617, 1.5633) rate <= -0.00781 (float -0.01176) extra <= 2.083 pieces  217  log M_i bound at N_A: -28.76
+  v in [0.22,0.2300]: circle (+0.6618, 1.5633) rate <= -0.00785 (float -0.01183) extra <= 2.080 pieces  218  log M_i bound at N_A: -28.95
+  v in [0.23,0.2400]: circle (+0.6619, 1.5633) rate <= -0.00792 (float -0.01191) extra <= 2.088 pieces  218  log M_i bound at N_A: -29.21
+  v in [0.24,0.2500]: circle (+0.6619, 1.5633) rate <= -0.00800 (float -0.01198) extra <= 2.082 pieces  218  log M_i bound at N_A: -29.53
+  v in [0.25,0.2600]: circle (+0.6620, 1.5633) rate <= -0.00811 (float -0.01205) extra <= 2.083 pieces  219  log M_i bound at N_A: -30.01
+  v in [0.26,0.2700]: circle (+0.6621, 1.5633) rate <= -0.00815 (float -0.01212) extra <= 2.087 pieces  219  log M_i bound at N_A: -30.16
+  v in [0.27,0.2800]: circle (+0.6621, 1.5633) rate <= -0.00826 (float -0.01219) extra <= 2.083 pieces  222  log M_i bound at N_A: -30.62
+  v in [0.28,0.2900]: circle (+0.6622, 1.5633) rate <= -0.00831 (float -0.01226) extra <= 2.080 pieces  221  log M_i bound at N_A: -30.83
+  v in [0.29,0.3000]: circle (+0.6623, 1.5633) rate <= -0.00834 (float -0.01233) extra <= 2.080 pieces  222  log M_i bound at N_A: -30.92
+  v in [0.30,0.3100]: circle (+0.6623, 1.5633) rate <= -0.00846 (float -0.01239) extra <= 2.080 pieces  222  log M_i bound at N_A: -31.42
+  v in [0.31,0.3200]: circle (+0.6624, 1.5633) rate <= -0.00847 (float -0.01245) extra <= 2.082 pieces  221  log M_i bound at N_A: -31.48
+  v in [0.32,0.3300]: circle (+0.5483, 1.6572) rate <= -0.00706 (float -0.01100) extra <= 2.078 pieces  245  log M_i bound at N_A: -25.66
+  v in [0.33,0.3400]: circle (+0.5487, 1.6572) rate <= -0.00705 (float -0.01105) extra <= 2.094 pieces  245  log M_i bound at N_A: -25.58
+  v in [0.34,0.3500]: circle (+0.5492, 1.6572) rate <= -0.00711 (float -0.01110) extra <= 2.094 pieces  246  log M_i bound at N_A: -25.84
+  v in [0.35,0.3600]: circle (+0.5496, 1.6572) rate <= -0.00715 (float -0.01114) extra <= 2.067 pieces  246  log M_i bound at N_A: -26.03
+  v in [0.36,0.3700]: circle (+0.5500, 1.6572) rate <= -0.00722 (float -0.01119) extra <= 2.066 pieces  248  log M_i bound at N_A: -26.32
+  v in [0.37,0.3800]: circle (+0.5504, 1.6572) rate <= -0.00725 (float -0.01124) extra <= 2.094 pieces  246  log M_i bound at N_A: -26.38
+  v in [0.38,0.3900]: circle (+0.5507, 1.6572) rate <= -0.00734 (float -0.01129) extra <= 2.094 pieces  247  log M_i bound at N_A: -26.76
+  v in [0.39,0.4000]: circle (+0.5511, 1.6572) rate <= -0.00736 (float -0.01134) extra <= 2.081 pieces  246  log M_i bound at N_A: -26.88
+  v in [0.40,0.4100]: circle (+0.5515, 1.6572) rate <= -0.00741 (float -0.01140) extra <= 2.094 pieces  248  log M_i bound at N_A: -27.07
+  v in [0.41,0.4200]: circle (+0.5518, 1.6572) rate <= -0.00746 (float -0.01145) extra <= 2.075 pieces  246  log M_i bound at N_A: -27.30
+  v in [0.42,0.4300]: circle (+0.5522, 1.6572) rate <= -0.00754 (float -0.01150) extra <= 2.067 pieces  248  log M_i bound at N_A: -27.61
+  v in [0.43,0.4400]: circle (+0.5525, 1.6572) rate <= -0.00758 (float -0.01156) extra <= 2.082 pieces  248  log M_i bound at N_A: -27.77
+  v in [0.44,0.4500]: circle (+0.5529, 1.6572) rate <= -0.00769 (float -0.01161) extra <= 2.067 pieces  248  log M_i bound at N_A: -28.21
+  v in [0.45,0.4600]: circle (+0.5532, 1.6572) rate <= -0.00771 (float -0.01167) extra <= 2.082 pieces  249  log M_i bound at N_A: -28.30
+  v in [0.46,0.4700]: circle (+0.5535, 1.6572) rate <= -0.00783 (float -0.01173) extra <= 2.067 pieces  250  log M_i bound at N_A: -28.82
+  v in [0.47,0.4800]: circle (+0.5539, 1.6572) rate <= -0.00783 (float -0.01178) extra <= 2.094 pieces  248  log M_i bound at N_A: -28.79
+  v in [0.48,0.4900]: circle (+0.5542, 1.6572) rate <= -0.00785 (float -0.01184) extra <= 2.067 pieces  247  log M_i bound at N_A: -28.89
+  v in [0.49,0.5000]: circle (+0.5545, 1.6572) rate <= -0.00792 (float -0.01190) extra <= 2.067 pieces  248  log M_i bound at N_A: -29.19
+  v in [0.50,0.5100]: circle (+0.5548, 1.6572) rate <= -0.00798 (float -0.01195) extra <= 2.101 pieces  248  log M_i bound at N_A: -29.38
+  v in [0.51,0.5200]: circle (+0.5551, 1.6572) rate <= -0.00802 (float -0.01201) extra <= 2.063 pieces  247  log M_i bound at N_A: -29.60
+  v in [0.52,0.5300]: circle (+0.5554, 1.6572) rate <= -0.00814 (float -0.01207) extra <= 2.067 pieces  249  log M_i bound at N_A: -30.07
+  v in [0.53,0.5400]: circle (+0.5556, 1.6572) rate <= -0.00817 (float -0.01213) extra <= 2.063 pieces  249  log M_i bound at N_A: -30.22
+  v in [0.54,0.5500]: circle (+0.5559, 1.6572) rate <= -0.00820 (float -0.01218) extra <= 2.093 pieces  248  log M_i bound at N_A: -30.28
+  v in [0.55,0.5600]: circle (+0.5562, 1.6572) rate <= -0.00828 (float -0.01224) extra <= 2.068 pieces  247  log M_i bound at N_A: -30.65
+  v in [0.56,0.5700]: circle (+0.5565, 1.6572) rate <= -0.00831 (float -0.01230) extra <= 2.082 pieces  247  log M_i bound at N_A: -30.77
+  v in [0.57,0.5800]: circle (+0.5567, 1.6572) rate <= -0.00846 (float -0.01235) extra <= 2.063 pieces  247  log M_i bound at N_A: -31.38
+  v in [0.58,0.5900]: circle (+0.5570, 1.6572) rate <= -0.00851 (float -0.01241) extra <= 2.093 pieces  247  log M_i bound at N_A: -31.57
+  v in [0.59,0.6000]: circle (+0.5572, 1.6572) rate <= -0.00847 (float -0.01247) extra <= 2.079 pieces  245  log M_i bound at N_A: -31.43
+  v in [0.60,0.6100]: circle (+0.5575, 1.6572) rate <= -0.00854 (float -0.01252) extra <= 2.067 pieces  245  log M_i bound at N_A: -31.70
+  v in [0.61,0.6200]: circle (+0.4461, 1.7568) rate <= -0.00637 (float -0.01027) extra <= 2.078 pieces  266  log M_i bound at N_A: -22.76
+  v in [0.62,0.6300]: circle (+0.4466, 1.7568) rate <= -0.00639 (float -0.01039) extra <= 2.078 pieces  263  log M_i bound at N_A: -22.86
+  v in [0.63,0.6400]: circle (+0.4471, 1.7568) rate <= -0.00659 (float -0.01051) extra <= 2.079 pieces  265  log M_i bound at N_A: -23.65
+  v in [0.64,0.6500]: circle (+0.4476, 1.7568) rate <= -0.00667 (float -0.01063) extra <= 2.049 pieces  263  log M_i bound at N_A: -24.03
+  v in [0.65,0.6600]: circle (+0.4481, 1.7568) rate <= -0.00679 (float -0.01074) extra <= 2.100 pieces  262  log M_i bound at N_A: -24.44
+  v in [0.66,0.6700]: circle (+0.4485, 1.7568) rate <= -0.00687 (float -0.01086) extra <= 2.079 pieces  261  log M_i bound at N_A: -24.79
+  v in [0.67,0.6800]: circle (+0.4490, 1.7568) rate <= -0.00708 (float -0.01097) extra <= 2.080 pieces  261  log M_i bound at N_A: -25.67
+  v in [0.68,0.6900]: circle (+0.4494, 1.7568) rate <= -0.00711 (float -0.01109) extra <= 2.051 pieces  259  log M_i bound at N_A: -25.82
+  v in [0.69,0.7000]: circle (+0.4498, 1.7568) rate <= -0.00721 (float -0.01120) extra <= 2.041 pieces  260  log M_i bound at N_A: -26.23
+  v in [0.70,0.7100]: circle (+0.4503, 1.7568) rate <= -0.00741 (float -0.01132) extra <= 2.080 pieces  260  log M_i bound at N_A: -27.03
+  v in [0.71,0.7200]: circle (+0.4507, 1.7568) rate <= -0.00747 (float -0.01143) extra <= 2.080 pieces  258  log M_i bound at N_A: -27.27
+  v in [0.72,0.7300]: circle (+0.4510, 1.7568) rate <= -0.00757 (float -0.01154) extra <= 2.098 pieces  257  log M_i bound at N_A: -27.64
+  v in [0.73,0.7400]: circle (+0.4514, 1.7568) rate <= -0.00767 (float -0.01165) extra <= 2.052 pieces  256  log M_i bound at N_A: -28.10
+  v in [0.74,0.7500]: circle (+0.4518, 1.7568) rate <= -0.00784 (float -0.01176) extra <= 2.053 pieces  255  log M_i bound at N_A: -28.79
+  v in [0.75,0.7600]: circle (+0.4522, 1.7568) rate <= -0.00790 (float -0.01186) extra <= 2.043 pieces  253  log M_i bound at N_A: -29.06
+  v in [0.76,0.7700]: circle (+0.4525, 1.7568) rate <= -0.00797 (float -0.01197) extra <= 2.097 pieces  251  log M_i bound at N_A: -29.30
+  v in [0.77,0.7800]: circle (+0.4529, 1.7568) rate <= -0.00815 (float -0.01208) extra <= 2.053 pieces  252  log M_i bound at N_A: -30.07
+  v in [0.78,0.7900]: circle (+0.4532, 1.7568) rate <= -0.00818 (float -0.01218) extra <= 2.044 pieces  250  log M_i bound at N_A: -30.21
+  v in [0.79,0.8000]: circle (+0.4535, 1.7568) rate <= -0.00828 (float -0.01228) extra <= 2.054 pieces  249  log M_i bound at N_A: -30.62
+  v in [0.80,0.8100]: circle (+0.4539, 1.7568) rate <= -0.00843 (float -0.01238) extra <= 2.054 pieces  249  log M_i bound at N_A: -31.22
+  v in [0.81,0.8200]: circle (+0.4542, 1.7568) rate <= -0.00857 (float -0.01248) extra <= 2.056 pieces  249  log M_i bound at N_A: -31.81
+  v in [0.82,0.8300]: circle (+0.3421, 1.8623) rate <= -0.00731 (float -0.01124) extra <= 1.991 pieces  256  log M_i bound at N_A: -26.64
+  v in [0.83,0.8400]: circle (+0.3426, 1.8623) rate <= -0.00741 (float -0.01141) extra <= 2.039 pieces  253  log M_i bound at N_A: -27.01
+  v in [0.84,0.8500]: circle (+0.3431, 1.8623) rate <= -0.00760 (float -0.01157) extra <= 2.079 pieces  252  log M_i bound at N_A: -27.72
+  v in [0.85,0.8600]: circle (+0.3435, 1.8623) rate <= -0.00775 (float -0.01174) extra <= 2.040 pieces  250  log M_i bound at N_A: -28.39
+  v in [0.86,0.8700]: circle (+0.3439, 1.8623) rate <= -0.00791 (float -0.01190) extra <= 2.100 pieces  251  log M_i bound at N_A: -29.00
+  v in [0.87,0.8800]: circle (+0.3443, 1.8623) rate <= -0.00806 (float -0.01206) extra <= 2.041 pieces  248  log M_i bound at N_A: -29.67
+  v in [0.88,0.8900]: circle (+0.3447, 1.8623) rate <= -0.00830 (float -0.01221) extra <= 2.042 pieces  247  log M_i bound at N_A: -30.66
+  v in [0.89,0.9000]: circle (+0.3451, 1.8623) rate <= -0.00844 (float -0.01236) extra <= 2.027 pieces  245  log M_i bound at N_A: -31.21
+  v in [0.90,0.9100]: circle (+0.3455, 1.8623) rate <= -0.00857 (float -0.01251) extra <= 2.043 pieces  244  log M_i bound at N_A: -31.75
+  v in [0.91,0.9200]: circle (+0.3459, 1.8623) rate <= -0.00868 (float -0.01266) extra <= 2.079 pieces  243  log M_i bound at N_A: -32.18
+  v in [0.92,0.9300]: circle (+0.3462, 1.8623) rate <= -0.00881 (float -0.01281) extra <= 2.044 pieces  241  log M_i bound at N_A: -32.73
+  v in [0.93,0.9400]: circle (+0.3466, 1.8623) rate <= -0.00902 (float -0.01295) extra <= 2.080 pieces  241  log M_i bound at N_A: -33.54
+  v in [0.94,0.9500]: circle (+0.3469, 1.8623) rate <= -0.00909 (float -0.01309) extra <= 2.016 pieces  239  log M_i bound at N_A: -33.92
+  v in [0.95,0.9600]: circle (+0.3473, 1.8623) rate <= -0.00932 (float -0.01323) extra <= 2.081 pieces  238  log M_i bound at N_A: -34.77
+  v in [0.96,0.9700]: circle (+0.3476, 1.8623) rate <= -0.00941 (float -0.01336) extra <= 2.046 pieces  237  log M_i bound at N_A: -35.17
+  v in [0.97,0.9800]: circle (+0.3479, 1.8623) rate <= -0.00959 (float -0.01349) extra <= 2.047 pieces  236  log M_i bound at N_A: -35.93
+  v in [0.98,0.9900]: circle (+0.3482, 1.8623) rate <= -0.00966 (float -0.01362) extra <= 2.103 pieces  233  log M_i bound at N_A: -36.16
+  v in [0.99,1.0000]: circle (+0.3485, 1.8623) rate <= -0.00994 (float -0.01375) extra <= 2.053 pieces  234  log M_i bound at N_A: -37.36
+  v in [1.00,1.0100]: circle (+0.3488, 1.8623) rate <= -0.00988 (float -0.01387) extra <= 2.081 pieces  231  log M_i bound at N_A: -37.06
+  v in [1.01,1.0200]: circle (+0.3491, 1.8623) rate <= -0.01003 (float -0.01400) extra <= 2.035 pieces  229  log M_i bound at N_A: -37.72
+  v in [1.02,1.0300]: circle (+0.3494, 1.8623) rate <= -0.01017 (float -0.01412) extra <= 2.096 pieces  229  log M_i bound at N_A: -38.25
+  v in [1.03,1.0400]: circle (+0.3497, 1.8623) rate <= -0.01036 (float -0.01423) extra <= 2.050 pieces  228  log M_i bound at N_A: -39.06
+  v in [1.04,1.0500]: circle (+0.3500, 1.8623) rate <= -0.01050 (float -0.01435) extra <= 2.050 pieces  227  log M_i bound at N_A: -39.64
+  v in [1.05,1.0600]: circle (-0.1503, 2.3519) rate <= -0.01031 (float -0.01430) extra <= 2.076 pieces  238  log M_i bound at N_A: -38.59
+  v in [1.06,1.0700]: circle (+0.2435, 1.9777) rate <= -0.01071 (float -0.01461) extra <= 2.069 pieces  210  log M_i bound at N_A: -40.42
+  v in [1.07,1.0800]: circle (-0.2550, 2.4935) rate <= -0.01112 (float -0.01509) extra <= 2.014 pieces  222  log M_i bound at N_A: -41.91
+  v in [1.08,1.0900]: circle (-0.6965, 2.9638) rate <= -0.01202 (float -0.01601) extra <= 1.976 pieces  221  log M_i bound at N_A: -45.48
+  v in [1.09,1.1000]: circle (-0.6520, 2.9649) rate <= -0.01333 (float -0.01733) extra <= 1.931 pieces  221  log M_i bound at N_A: -50.90
+  v in [1.10,1.1100]: circle (+0.5571, 1.8623) rate <= -0.01513 (float -0.01906) extra <= 1.880 pieces  226  log M_i bound at N_A: -58.79
+  v in [1.11,1.1200]: circle (+0.6023, 1.8656) rate <= -0.01732 (float -0.02120) extra <= 1.831 pieces  230  log M_i bound at N_A: -67.78
+  v in [1.12,1.1300]: circle (-0.6939, 3.1462) rate <= -0.01973 (float -0.02373) extra <= 1.799 pieces  217  log M_i bound at N_A: -77.19
+  v in [1.13,1.1400]: circle (-0.6518, 3.1548) rate <= -0.02266 (float -0.02666) extra <= 1.734 pieces  216  log M_i bound at N_A: -89.25
+  v in [1.14,1.1500]: circle (-0.5946, 3.1498) rate <= -0.02599 (float -0.02998) extra <= 1.729 pieces  214  log M_i bound at N_A: -102.87
+  v in [1.15,1.1600]: circle (-0.3560, 2.9701) rate <= -0.02970 (float -0.03368) extra <= 1.681 pieces  199  log M_i bound at N_A: -118.21
+  v in [1.16,1.1700]: circle (-0.3039, 2.9736) rate <= -0.03385 (float -0.03778) extra <= 1.636 pieces  203  log M_i bound at N_A: -135.22
+  v in [1.17,1.1800]: circle (+0.2528, 2.4876) rate <= -0.03830 (float -0.04226) extra <= 1.568 pieces  228  log M_i bound at N_A: -153.71
+  v in [1.18,1.1900]: circle (+0.1504, 2.6414) rate <= -0.04314 (float -0.04714) extra <= 1.523 pieces  224  log M_i bound at N_A: -173.50
+  v in [1.19,1.2000]: circle (-0.4997, 3.3342) rate <= -0.04847 (float -0.05240) extra <= 1.505 pieces  203  log M_i bound at N_A: -195.14
+  v in [1.20,1.2100]: circle (-0.2464, 3.1486) rate <= -0.05410 (float -0.05805) extra <= 1.454 pieces  210  log M_i bound at N_A: -218.32
+  v in [1.21,1.2200]: circle (-0.0036, 2.9702) rate <= -0.06011 (float -0.06410) extra <= 1.391 pieces  211  log M_i bound at N_A: -243.03
+  v in [1.22,1.2300]: circle (+0.9495, 2.0919) rate <= -0.06666 (float -0.07054) extra <= 1.358 pieces  212  log M_i bound at N_A: -270.26
+  v in [1.23,1.2400]: circle (-0.0490, 3.1486) rate <= -0.07362 (float -0.07739) extra <= 1.313 pieces  157  log M_i bound at N_A: -298.39
+  v in [1.24,1.2500]: circle (-0.6502, 4.2152) rate <= -0.08227 (float -0.08617) extra <= 1.005 pieces  131  log M_i bound at N_A: -333.83
+  v in [1.25,1.2600]: circle (+0.0993, 3.7509) rate <= -0.09286 (float -0.09681) extra <= 0.837 pieces  125  log M_i bound at N_A: -377.48
+  v in [1.26,1.2700]: circle (-0.3499, 4.4685) rate <= -0.10496 (float -0.10883) extra <= 0.688 pieces  124  log M_i bound at N_A: -427.06
+  v in [1.27,1.2800]: circle (+1.0502, 3.3378) rate <= -0.11828 (float -0.12208) extra <= 0.600 pieces  122  log M_i bound at N_A: -481.96
+  v in [1.28,1.2900]: circle (+0.4511, 4.2152) rate <= -0.13283 (float -0.13651) extra <= 0.444 pieces  113  log M_i bound at N_A: -541.49
+  v in [1.29,1.3000]: circle (+0.7436, 4.2152) rate <= -0.14812 (float -0.15206) extra <= 0.306 pieces  117  log M_i bound at N_A: -604.26
+  v in [1.30,1.3100]: circle (+0.8010, 4.4685) rate <= -0.16482 (float -0.16873) extra <= 0.180 pieces  118  log M_i bound at N_A: -672.75
+  v in [1.31,1.3200]: circle (-0.0404, 5.6431) rate <= -0.18252 (float -0.18651) extra <= 0.052 pieces  119  log M_i bound at N_A: -745.11
+  v in [1.32,1.3300]: circle (+1.4942, 4.4685) rate <= -0.20155 (float -0.20539) extra <= -0.075 pieces  129  log M_i bound at N_A: -823.42
+  v in [1.33,1.3400]: circle (+0.7112, 5.6431) rate <= -0.22179 (float -0.22540) extra <= -0.204 pieces  124  log M_i bound at N_A: -906.24
+  v in [1.34,1.3500]: circle (+0.8011, 5.9822) rate <= -0.24259 (float -0.24655) extra <= -0.275 pieces  127  log M_i bound at N_A: -991.44
+  v in [1.35,1.3600]: circle (-0.2985, 7.5548) rate <= -0.26488 (float -0.26885) extra <= -0.480 pieces  145  log M_i bound at N_A: -1082.72
+  v in [1.36,1.3700]: circle (+0.6548, 7.1266) rate <= -0.28836 (float -0.29236) extra <= -0.618 pieces  141  log M_i bound at N_A: -1179.08
+  v in [1.37,1.3800]: circle (+1.6461, 6.7227) rate <= -0.31340 (float -0.31709) extra <= -0.761 pieces  141  log M_i bound at N_A: -1281.85
+  v in [1.38,1.3900]: circle (+0.5410, 8.4899) rate <= -0.33916 (float -0.34310) extra <= -0.921 pieces  161  log M_i bound at N_A: -1387.28
+  v in [1.39,1.4000]: circle (+1.2942, 8.4899) rate <= -0.36647 (float -0.37044) extra <= -1.082 pieces  168  log M_i bound at N_A: -1499.33
+  v in [1.40,1.4100]: circle (+1.6491, 9.0000) rate <= -0.39523 (float -0.39917) extra <= -1.242 pieces  176  log M_i bound at N_A: -1617.21
+  v in [1.41,1.4200]: circle (+1.7073, 9.9465) rate <= -0.42540 (float -0.42938) extra <= -1.434 pieces  188  log M_i bound at N_A: -1740.86
+  v in [1.42,1.4300]: circle (+1.8433, 10.9926) rate <= -0.45715 (float -0.46115) extra <= -1.631 pieces  199  log M_i bound at N_A: -1871.04
+  v in [1.43,1.4400]: circle (+2.0989, 12.1487) rate <= -0.49060 (float -0.49459) extra <= -1.819 pieces  214  log M_i bound at N_A: -2008.13
+  v in [1.44,1.4500]: circle (+1.8496, 14.1148) rate <= -0.52584 (float -0.52983) extra <= -2.048 pieces  229  log M_i bound at N_A: -2152.57
+  v in [1.45,1.4600]: circle (+2.4985, 15.5993) rate <= -0.56316 (float -0.56703) extra <= -2.291 pieces  246  log M_i bound at N_A: -2305.56
+  v in [1.46,1.4700]: circle (+2.6981, 18.1238) rate <= -0.60257 (float -0.60641) extra <= -2.591 pieces  262  log M_i bound at N_A: -2467.14
+  v in [1.47,1.4800]: circle (+2.2865, 22.1364) rate <= -0.64426 (float -0.64822) extra <= -2.922 pieces  279  log M_i bound at N_A: -2638.00
+  v in [1.48,1.4900]: circle (+2.3703, 27.0375) rate <= -0.68890 (float -0.69283) extra <= -3.294 pieces  305  log M_i bound at N_A: -2821.06
+  v in [1.49,1.5000]: circle (+3.7000, 33.0237) rate <= -0.73684 (float -0.74071) extra <= -3.688 pieces  343  log M_i bound at N_A: -3017.59
+  v in [1.50,1.5100]: circle (+3.7000, 44.5773) rate <= -0.78862 (float -0.79262) extra <= -4.231 pieces  394  log M_i bound at N_A: -3229.92
+  v in [1.51,1.5200]: circle (+3.7000, 66.5015) rate <= -0.84577 (float -0.84976) extra <= -5.033 pieces  560  log M_i bound at N_A: -3464.40
+  v in [1.52,1.5300]: circle (+3.7000, 66.5015) rate <= -0.90587 (float -0.90986) extra <= -5.033 pieces  568  log M_i bound at N_A: -3710.60
+  v in [1.53,1.5319]: circle (+3.7000, 66.5015) rate <= -0.96597 (float -0.96996) extra <= -5.017 pieces  576  log M_i bound at N_A: -3956.75
+  => worst certified rate -0.00637;  max_i M_i <= exp(-22.76) = 1.307e-10 at N = N_A (bound decreasing in N since every rate < 0)
+[exact ratio] N_A = 4096: K = 1720, A0 = K + 2m = 2232, R_0 = 2375, r_A = 96; max_r<=r_A prod = 0.939789 (at r = 1: 0.939789); final product at r_A = 1.352e-01; chord bound for r > r_A: 1.448e-01
+
+[level 0] r1 = 3N/128;  qbar = 0.04211, pbar = 0.04041, g1 = 0.922447 (log g1 = -0.08073), theta1 exact-ratio(N_A) = 0.93979 (r=1 value 0.93979, r=r1 value 1.448e-01; I(3/128) in [-0.000472,-0.000472]; crude theta1 would be 1.02178), sigma0 in [0.579756, 0.580000]
+[V2D] D-contour (-0.3009,1.8625): rate <= -0.02999, extra <= 1.458, eps_D <= exp(-120.74)
+[V2T] top-contour (-0.3009,1.8625): rate <= -0.02999, extra <= 2.887, eps_T <= exp(-119.32)
+[bottom] margin >= ((c-1)N_A - 1)(1 - theta1 - eps_D) = 142.981 (need >= 5; increasing in N)
+[top]    margin >= ((c-1)N_A - 1)(1 - eps_T) = 2374.680 (need >= 5); top boundary |u_(0,R0)| <= eps_T = 1.52e-52 <= 1
+
+[V2M] 116 tau-cells of width 0.005 for B_t (t = tau N), plus the tail sum tau_0 (t = R_0)
+  tau in [0.000,0.005]: circle (-0.0500,0.0550) rate <= -0.64648, pairing 0.0000*log g1, exponent -0.64648; log[(N dt+1) B g1^min] <= -2638.83
+  tau in [0.005,0.010]: circle (-0.1500,0.1601) rate <= -0.62228, pairing 0.0050*log g1, exponent -0.62269; log[(N dt+1) B g1^min] <= -2541.16
+  tau in [0.010,0.015]: circle (-0.2000,0.2152) rate <= -0.60004, pairing 0.0100*log g1, exponent -0.60085; log[(N dt+1) B g1^min] <= -2451.84
+  tau in [0.015,0.020]: circle (-0.1500,0.1704) rate <= -0.58021, pairing 0.0150*log g1, exponent -0.58142; log[(N dt+1) B g1^min] <= -2372.82
+  tau in [0.020,0.025]: circle (-0.0500,0.0757) rate <= -0.56074, pairing 0.0200*log g1, exponent -0.56235; log[(N dt+1) B g1^min] <= -2295.74
+  tau in [0.025,0.030]: circle (-0.1500,0.1810) rate <= -0.54346, pairing 0.0250*log g1, exponent -0.54548; log[(N dt+1) B g1^min] <= -2225.99
+  tau in [0.030,0.035]: circle (-0.4500,0.4863) rate <= -0.52408, pairing 0.0300*log g1, exponent -0.52650; log[(N dt+1) B g1^min] <= -2147.40
+  tau in [0.035,0.040]: circle (-0.2000,0.2417) rate <= -0.50988, pairing 0.0350*log g1, exponent -0.51270; log[(N dt+1) B g1^min] <= -2091.76
+  tau in [0.040,0.045]: circle (-0.5001,0.5473) rate <= -0.49177, pairing 0.0400*log g1, exponent -0.49500; log[(N dt+1) B g1^min] <= -2018.52
+  tau in [0.045,0.050]: circle (-0.1500,0.2027) rate <= -0.47960, pairing 0.0450*log g1, exponent -0.48323; log[(N dt+1) B g1^min] <= -1971.48
+  tau in [0.050,0.055]: circle (-0.3500,0.4083) rate <= -0.46364, pairing 0.0500*log g1, exponent -0.46767; log[(N dt+1) B g1^min] <= -1907.13
+  tau in [0.055,0.060]: circle (-0.3000,0.3639) rate <= -0.45004, pairing 0.0550*log g1, exponent -0.45448; log[(N dt+1) B g1^min] <= -1853.30
+  tau in [0.060,0.065]: circle (-0.0500,0.1197) rate <= -0.43534, pairing 0.0600*log g1, exponent -0.44018; log[(N dt+1) B g1^min] <= -1795.90
+  tau in [0.065,0.070]: circle (+0.0000,0.0754) rate <= -0.42258, pairing 0.0650*log g1, exponent -0.42783; log[(N dt+1) B g1^min] <= -1745.87
+  tau in [0.070,0.075]: circle (-0.1000,0.1813) rate <= -0.40906, pairing 0.0700*log g1, exponent -0.41471; log[(N dt+1) B g1^min] <= -1691.34
+  tau in [0.075,0.080]: circle (-0.4000,0.4872) rate <= -0.39735, pairing 0.0750*log g1, exponent -0.40340; log[(N dt+1) B g1^min] <= -1644.13
+  tau in [0.080,0.085]: circle (-0.2500,0.3432) rate <= -0.38648, pairing 0.0800*log g1, exponent -0.39294; log[(N dt+1) B g1^min] <= -1601.72
+  tau in [0.085,0.090]: circle (+0.0000,0.0992) rate <= -0.37437, pairing 0.0850*log g1, exponent -0.38123; log[(N dt+1) B g1^min] <= -1554.96
+  tau in [0.090,0.095]: circle (-0.2000,0.3053) rate <= -0.36367, pairing 0.0900*log g1, exponent -0.37093; log[(N dt+1) B g1^min] <= -1511.82
+  tau in [0.095,0.100]: circle (-0.0500,0.1615) rate <= -0.35103, pairing 0.0950*log g1, exponent -0.35870; log[(N dt+1) B g1^min] <= -1462.39
+  tau in [0.100,0.105]: circle (-0.4000,0.5178) rate <= -0.34013, pairing 0.1000*log g1, exponent -0.34820; log[(N dt+1) B g1^min] <= -1418.29
+  tau in [0.105,0.110]: circle (-0.2000,0.3241) rate <= -0.33081, pairing 0.1050*log g1, exponent -0.33928; log[(N dt+1) B g1^min] <= -1382.31
+  tau in [0.110,0.115]: circle (-0.0500,0.1805) rate <= -0.31896, pairing 0.1100*log g1, exponent -0.32784; log[(N dt+1) B g1^min] <= -1336.07
+  tau in [0.115,0.120]: circle (-0.3500,0.4870) rate <= -0.30952, pairing 0.1150*log g1, exponent -0.31880; log[(N dt+1) B g1^min] <= -1298.13
+  tau in [0.120,0.125]: circle (-0.2000,0.3435) rate <= -0.30012, pairing 0.1200*log g1, exponent -0.30981; log[(N dt+1) B g1^min] <= -1261.68
+  tau in [0.125,0.130]: circle (+0.0500,0.1002) rate <= -0.29002, pairing 0.1250*log g1, exponent -0.30011; log[(N dt+1) B g1^min] <= -1223.10
+  tau in [0.130,0.135]: circle (+0.0500,0.1069) rate <= -0.28061, pairing 0.1300*log g1, exponent -0.29111; log[(N dt+1) B g1^min] <= -1186.22
+  tau in [0.135,0.140]: circle (-0.2000,0.3637) rate <= -0.27155, pairing 0.1350*log g1, exponent -0.28245; log[(N dt+1) B g1^min] <= -1149.70
+  tau in [0.140,0.145]: circle (+0.0000,0.1706) rate <= -0.26238, pairing 0.1400*log g1, exponent -0.27368; log[(N dt+1) B g1^min] <= -1114.61
+  tau in [0.145,0.150]: circle (-0.0500,0.2276) rate <= -0.25372, pairing 0.1450*log g1, exponent -0.26542; log[(N dt+1) B g1^min] <= -1080.44
+  tau in [0.150,0.155]: circle (+0.0500,0.1346) rate <= -0.24506, pairing 0.1500*log g1, exponent -0.25717; log[(N dt+1) B g1^min] <= -1047.15
+  tau in [0.155,0.160]: circle (-0.0500,0.2418) rate <= -0.23748, pairing 0.1550*log g1, exponent -0.24999; log[(N dt+1) B g1^min] <= -1017.36
+  tau in [0.160,0.165]: circle (-0.3492,0.5483) rate <= -0.22857, pairing 0.1600*log g1, exponent -0.24148; log[(N dt+1) B g1^min] <= -981.74
+  tau in [0.165,0.170]: circle (-0.0500,0.2564) rate <= -0.22116, pairing 0.1650*log g1, exponent -0.23448; log[(N dt+1) B g1^min] <= -953.83
+  tau in [0.170,0.175]: circle (-0.1500,0.3638) rate <= -0.21242, pairing 0.1700*log g1, exponent -0.22614; log[(N dt+1) B g1^min] <= -919.39
+  tau in [0.175,0.180]: circle (-0.0500,0.2714) rate <= -0.20554, pairing 0.1750*log g1, exponent -0.21967; log[(N dt+1) B g1^min] <= -893.22
+  tau in [0.180,0.185]: circle (-0.3502,0.5792) rate <= -0.19757, pairing 0.1800*log g1, exponent -0.21210; log[(N dt+1) B g1^min] <= -861.50
+  tau in [0.185,0.190]: circle (-0.2500,0.4867) rate <= -0.19100, pairing 0.1850*log g1, exponent -0.20593; log[(N dt+1) B g1^min] <= -836.45
+  tau in [0.190,0.195]: circle (-0.1000,0.3446) rate <= -0.18292, pairing 0.1900*log g1, exponent -0.19826; log[(N dt+1) B g1^min] <= -805.39
+  tau in [0.195,0.200]: circle (+0.0500,0.2025) rate <= -0.17594, pairing 0.1950*log g1, exponent -0.19169; log[(N dt+1) B g1^min] <= -779.04
+  tau in [0.200,0.205]: circle (-0.2000,0.4606) rate <= -0.17036, pairing 0.2000*log g1, exponent -0.18650; log[(N dt+1) B g1^min] <= -757.03
+  tau in [0.205,0.210]: circle (+0.1000,0.1688) rate <= -0.16322, pairing 0.2050*log g1, exponent -0.17977; log[(N dt+1) B g1^min] <= -730.50
+  tau in [0.210,0.215]: circle (+0.0500,0.2271) rate <= -0.15680, pairing 0.2100*log g1, exponent -0.17375; log[(N dt+1) B g1^min] <= -705.56
+  tau in [0.215,0.220]: circle (-0.1000,0.3855) rate <= -0.15009, pairing 0.2150*log g1, exponent -0.16745; log[(N dt+1) B g1^min] <= -679.26
+  tau in [0.220,0.225]: circle (-0.0500,0.3440) rate <= -0.14336, pairing 0.2200*log g1, exponent -0.16112; log[(N dt+1) B g1^min] <= -653.50
+  tau in [0.225,0.230]: circle (+0.1000,0.2026) rate <= -0.13758, pairing 0.2250*log g1, exponent -0.15574; log[(N dt+1) B g1^min] <= -632.02
+  tau in [0.230,0.235]: circle (-0.0500,0.3614) rate <= -0.13120, pairing 0.2300*log g1, exponent -0.14977; log[(N dt+1) B g1^min] <= -607.02
+  tau in [0.235,0.240]: circle (+0.0500,0.2703) rate <= -0.12596, pairing 0.2350*log g1, exponent -0.14493; log[(N dt+1) B g1^min] <= -587.51
+  tau in [0.240,0.245]: circle (-0.2500,0.5794) rate <= -0.12006, pairing 0.2400*log g1, exponent -0.13943; log[(N dt+1) B g1^min] <= -564.28
+  tau in [0.245,0.250]: circle (-0.7005,1.0391) rate <= -0.11532, pairing 0.2450*log g1, exponent -0.13510; log[(N dt+1) B g1^min] <= -545.99
+  tau in [0.250,0.255]: circle (-0.2000,0.5479) rate <= -0.11015, pairing 0.2500*log g1, exponent -0.13033; log[(N dt+1) B g1^min] <= -527.13
+  tau in [0.255,0.260]: circle (-0.0500,0.4074) rate <= -0.10583, pairing 0.2550*log g1, exponent -0.12642; log[(N dt+1) B g1^min] <= -511.43
+  tau in [0.260,0.265]: circle (-0.1500,0.5170) rate <= -0.10011, pairing 0.2600*log g1, exponent -0.12109; log[(N dt+1) B g1^min] <= -489.43
+  tau in [0.265,0.270]: circle (-0.3998,0.7766) rate <= -0.09545, pairing 0.2650*log g1, exponent -0.11685; log[(N dt+1) B g1^min] <= -471.65
+  tau in [0.270,0.275]: circle (-0.1000,0.4867) rate <= -0.09057, pairing 0.2700*log g1, exponent -0.11237; log[(N dt+1) B g1^min] <= -453.83
+  tau in [0.275,0.280]: circle (-0.1500,0.5468) rate <= -0.08554, pairing 0.2750*log g1, exponent -0.10774; log[(N dt+1) B g1^min] <= -434.77
+  tau in [0.280,0.285]: circle (+0.1500,0.2570) rate <= -0.07988, pairing 0.2800*log g1, exponent -0.10249; log[(N dt+1) B g1^min] <= -414.01
+  tau in [0.285,0.290]: circle (-0.1000,0.5175) rate <= -0.07666, pairing 0.2850*log g1, exponent -0.09967; log[(N dt+1) B g1^min] <= -401.79
+  tau in [0.290,0.295]: circle (-0.1531,0.5812) rate <= -0.07211, pairing 0.2848*log g1, exponent -0.09509; log[(N dt+1) B g1^min] <= -383.01
+  tau in [0.295,0.300]: circle (-0.6002,1.0391) rate <= -0.06751, pairing 0.2798*log g1, exponent -0.09010; log[(N dt+1) B g1^min] <= -362.00
+  tau in [0.300,0.305]: circle (-0.2025,0.6523) rate <= -0.06347, pairing 0.2748*log g1, exponent -0.08565; log[(N dt+1) B g1^min] <= -344.29
+  tau in [0.305,0.310]: circle (+0.0000,0.4610) rate <= -0.06071, pairing 0.2698*log g1, exponent -0.08249; log[(N dt+1) B g1^min] <= -331.72
+  tau in [0.310,0.315]: circle (-0.3998,0.8722) rate <= -0.05630, pairing 0.2648*log g1, exponent -0.07768; log[(N dt+1) B g1^min] <= -311.39
+  tau in [0.315,0.320]: circle (+0.0500,0.4340) rate <= -0.05289, pairing 0.2598*log g1, exponent -0.07386; log[(N dt+1) B g1^min] <= -296.41
+  tau in [0.320,0.325]: circle (-0.0500,0.5458) rate <= -0.04923, pairing 0.2548*log g1, exponent -0.06980; log[(N dt+1) B g1^min] <= -279.66
+  tau in [0.325,0.330]: circle (+0.1000,0.4078) rate <= -0.04462, pairing 0.2498*log g1, exponent -0.06478; log[(N dt+1) B g1^min] <= -259.36
+  tau in [0.330,0.335]: circle (-0.3518,0.8719) rate <= -0.04224, pairing 0.2448*log g1, exponent -0.06200; log[(N dt+1) B g1^min] <= -247.31
+  tau in [0.335,0.340]: circle (-0.1986,0.7312) rate <= -0.03781, pairing 0.2398*log g1, exponent -0.05716; log[(N dt+1) B g1^min] <= -227.21
+  tau in [0.340,0.345]: circle (-0.0000,0.5454) rate <= -0.03601, pairing 0.2348*log g1, exponent -0.05497; log[(N dt+1) B g1^min] <= -218.97
+  tau in [0.345,0.350]: circle (+0.1500,0.4084) rate <= -0.03332, pairing 0.2298*log g1, exponent -0.05187; log[(N dt+1) B g1^min] <= -206.59
+  tau in [0.350,0.355]: circle (-0.3006,0.8722) rate <= -0.02988, pairing 0.2248*log g1, exponent -0.04803; log[(N dt+1) B g1^min] <= -190.20
+  tau in [0.355,0.360]: circle (+0.2000,0.3853) rate <= -0.02606, pairing 0.2198*log g1, exponent -0.04380; log[(N dt+1) B g1^min] <= -173.75
+  tau in [0.360,0.365]: circle (+0.0502,0.5490) rate <= -0.02515, pairing 0.2148*log g1, exponent -0.04249; log[(N dt+1) B g1^min] <= -168.04
+  tau in [0.365,0.370]: circle (-0.6989,1.3123) rate <= -0.02129, pairing 0.2098*log g1, exponent -0.03822; log[(N dt+1) B g1^min] <= -149.76
+  tau in [0.370,0.375]: circle (-0.1456,0.7734) rate <= -0.01906, pairing 0.2048*log g1, exponent -0.03559; log[(N dt+1) B g1^min] <= -139.51
+  tau in [0.375,0.380]: circle (-0.0470,0.6898) rate <= -0.01731, pairing 0.1998*log g1, exponent -0.03344; log[(N dt+1) B g1^min] <= -130.85
+  tau in [0.380,0.385]: circle (+0.2500,0.4080) rate <= -0.01512, pairing 0.1948*log g1, exponent -0.03084; log[(N dt+1) B g1^min] <= -120.64
+  tau in [0.385,0.390]: circle (-0.1505,0.8241) rate <= -0.01230, pairing 0.1898*log g1, exponent -0.02762; log[(N dt+1) B g1^min] <= -106.86
+  tau in [0.390,0.395]: circle (-0.3495,1.0391) rate <= -0.01035, pairing 0.1848*log g1, exponent -0.02527; log[(N dt+1) B g1^min] <= -97.07
+  tau in [0.395,0.400]: circle (+0.2500,0.4560) rate <= -0.00892, pairing 0.1798*log g1, exponent -0.02343; log[(N dt+1) B g1^min] <= -90.27
+  tau in [0.400,0.405]: circle (-0.0999,0.8228) rate <= -0.00716, pairing 0.1748*log g1, exponent -0.02127; log[(N dt+1) B g1^min] <= -81.00
+  tau in [0.405,0.410]: circle (+0.0498,0.6905) rate <= -0.00577, pairing 0.1698*log g1, exponent -0.01947; log[(N dt+1) B g1^min] <= -73.75
+  tau in [0.410,0.415]: circle (+0.3000,0.4582) rate <= -0.00551, pairing 0.1648*log g1, exponent -0.01881; log[(N dt+1) B g1^min] <= -71.40
+  tau in [0.415,0.420]: circle (+0.0006,0.7760) rate <= -0.00302, pairing 0.1598*log g1, exponent -0.01592; log[(N dt+1) B g1^min] <= -59.15
+  tau in [0.420,0.425]: circle (+0.2502,0.5455) rate <= -0.00169, pairing 0.1548*log g1, exponent -0.01418; log[(N dt+1) B g1^min] <= -52.13
+  tau in [0.425,0.430]: circle (+0.3000,0.5155) rate <= -0.00145, pairing 0.1498*log g1, exponent -0.01354; log[(N dt+1) B g1^min] <= -49.83
+  tau in [0.430,0.435]: circle (-0.4020,1.2379) rate <= +0.00070, pairing 0.1448*log g1, exponent -0.01098; log[(N dt+1) B g1^min] <= -38.65
+  tau in [0.435,0.440]: circle (-0.4551,1.3123) rate <= -0.00057, pairing 0.1398*log g1, exponent -0.01185; log[(N dt+1) B g1^min] <= -42.19
+  tau in [0.440,0.445]: circle (+0.3003,0.5789) rate <= +0.00187, pairing 0.1348*log g1, exponent -0.00901; log[(N dt+1) B g1^min] <= -31.24
+  tau in [0.445,0.450]: circle (-0.1993,1.1015) rate <= +0.00240, pairing 0.1298*log g1, exponent -0.00807; log[(N dt+1) B g1^min] <= -26.94
+  tau in [0.450,0.455]: circle (+0.1503,0.7761) rate <= +0.00318, pairing 0.1248*log g1, exponent -0.00689; log[(N dt+1) B g1^min] <= -22.52
+  tau in [0.455,0.460]: circle (-0.1497,1.1015) rate <= +0.00286, pairing 0.1198*log g1, exponent -0.00681; log[(N dt+1) B g1^min] <= -21.86
+  tau in [0.460,0.465]: circle (+0.4000,0.5787) rate <= +0.00319, pairing 0.1148*log g1, exponent -0.00608; log[(N dt+1) B g1^min] <= -19.54
+  tau in [0.465,0.470]: circle (+0.3550,0.6450) rate <= +0.00359, pairing 0.1098*log g1, exponent -0.00528; log[(N dt+1) B g1^min] <= -16.18
+  tau in [0.470,0.475]: circle (-0.6499,1.6572) rate <= +0.00241, pairing 0.1048*log g1, exponent -0.00605; log[(N dt+1) B g1^min] <= -18.44
+  tau in [0.475,0.480]: circle (-0.1998,1.2379) rate <= +0.00339, pairing 0.0998*log g1, exponent -0.00466; log[(N dt+1) B g1^min] <= -13.08
+  tau in [0.480,0.485]: circle (+0.2006,0.8709) rate <= +0.00302, pairing 0.0948*log g1, exponent -0.00463; log[(N dt+1) B g1^min] <= -13.31
+  tau in [0.485,0.490]: circle (-0.5487,1.6572) rate <= +0.00293, pairing 0.0898*log g1, exponent -0.00432; log[(N dt+1) B g1^min] <= -11.50
+  tau in [0.490,0.495]: circle (+0.0491,1.1015) rate <= +0.00162, pairing 0.0848*log g1, exponent -0.00523; log[(N dt+1) B g1^min] <= -15.62
+  tau in [0.495,0.500]: circle (+0.0997,1.1015) rate <= +0.00176, pairing 0.0798*log g1, exponent -0.00468; log[(N dt+1) B g1^min] <= -13.50
+  tau in [0.500,0.505]: circle (+0.3987,0.8722) rate <= +0.00007, pairing 0.0748*log g1, exponent -0.00596; log[(N dt+1) B g1^min] <= -19.09
+  tau in [0.505,0.510]: circle (+0.4001,0.9802) rate <= -0.00073, pairing 0.0698*log g1, exponent -0.00636; log[(N dt+1) B g1^min] <= -20.68
+  tau in [0.510,0.515]: circle (+0.0006,1.3911) rate <= -0.00240, pairing 0.0648*log g1, exponent -0.00763; log[(N dt+1) B g1^min] <= -25.60
+  tau in [0.515,0.520]: circle (-0.2555,1.6572) rate <= -0.00412, pairing 0.0598*log g1, exponent -0.00894; log[(N dt+1) B g1^min] <= -30.75
+  tau in [0.520,0.525]: circle (-0.4507,1.8623) rate <= -0.00600, pairing 0.0548*log g1, exponent -0.01042; log[(N dt+1) B g1^min] <= -36.77
+  tau in [0.525,0.530]: circle (+0.4008,1.0391) rate <= -0.00756, pairing 0.0498*log g1, exponent -0.01158; log[(N dt+1) B g1^min] <= -42.09
+  tau in [0.530,0.535]: circle (+0.3511,1.1018) rate <= -0.00952, pairing 0.0448*log g1, exponent -0.01313; log[(N dt+1) B g1^min] <= -48.33
+  tau in [0.535,0.540]: circle (+0.2988,1.1677) rate <= -0.01121, pairing 0.0398*log g1, exponent -0.01442; log[(N dt+1) B g1^min] <= -53.57
+  tau in [0.540,0.545]: circle (+0.4491,1.0392) rate <= -0.01310, pairing 0.0348*log g1, exponent -0.01591; log[(N dt+1) B g1^min] <= -59.87
+  tau in [0.545,0.550]: circle (+0.3986,1.1017) rate <= -0.01541, pairing 0.0298*log g1, exponent -0.01781; log[(N dt+1) B g1^min] <= -67.63
+  tau in [0.550,0.555]: circle (+0.5474,0.9802) rate <= -0.01709, pairing 0.0248*log g1, exponent -0.01909; log[(N dt+1) B g1^min] <= -71.97
+  tau in [0.555,0.560]: circle (+0.4993,1.0401) rate <= -0.01933, pairing 0.0198*log g1, exponent -0.02092; log[(N dt+1) B g1^min] <= -80.12
+  tau in [0.560,0.565]: circle (+0.0503,1.4747) rate <= -0.02116, pairing 0.0148*log g1, exponent -0.02235; log[(N dt+1) B g1^min] <= -85.94
+  tau in [0.565,0.570]: circle (+0.6053,0.9789) rate <= -0.02362, pairing 0.0098*log g1, exponent -0.02441; log[(N dt+1) B g1^min] <= -94.81
+  tau in [0.570,0.575]: circle (+0.2517,1.3140) rate <= -0.02547, pairing 0.0048*log g1, exponent -0.02585; log[(N dt+1) B g1^min] <= -100.43
+  tau in [0.575,0.580]: circle (+0.3496,1.2391) rate <= -0.02766, pairing 0.0000*log g1, exponent -0.02766; log[(N dt+1) B g1^min] <= -107.91
+  tail sum tau_0: circle (-0.3009,1.8625) rate <= -0.02999, log bound -119.08
+  => sqrt(2 R0) * sum <= exp(-6.84) = 1.070e-03 (need <= 1/2, then margin >= binom(R0,r)/2 >= 5)
+  middle-regime worst exponent -0.00432; sqrt(N)(N dt+1) exp(N*exponent) decreasing for N >= 347 (<= N_A: True)
+
+All analytic inequalities certified at N = N_A = 4096; each bound is of the form poly(N) exp(-delta N) with delta >= 0.0064 (levels, tails) and the middle-regime exponent < 0, hence holds for all N >= N_A.
+[88s]
