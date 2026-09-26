@@ -1037,8 +1037,8 @@ primes and the five Platonic solids. Note
   composite); von Staudt-Clausen (forest); THM-871. Single-seed zero triangles
   have Mersenne sides `2^m - 1`, count `3^(K-1-m)`; the primes' sides are
   geometric (S9). The skew-Hadamard doubling tower gives doubly regular
-  tournaments of every Mersenne order with `Aut = F_21` for `k = 3..6`
-  (HYP-9162; `T_3` = Paley heptagon, `T_5` not Paley).
+  tournaments of every Mersenne order with `Aut = F_21` for `k = 3..8`
+  (HYP-9162; `T_3` = Paley heptagon, `T_5`, `T_7` not Paley).
 * The five Platonic solids: Schlafli `(p-2)(q-2) < 4` (HYP-3772); rotation
   groups `PSL(2,3) = A_4`, `PGL(2,3) = S_4`, `PSL(2,5) = PSL(2,4) = A_5` over the
   Schlafli numbers `{3,4,5} = {F_0, 2^2, F_1}` (verified as permutation groups).

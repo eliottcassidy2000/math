@@ -23,7 +23,7 @@ and `3^(K-1-m)` count of the single-seed zero triangles; the skew-Hadamard
 doubling tower and the containment `F_21 <= Aut(T_k)`; THM-4511, the wall
 theorem for a lone size-4 defect, with the exact extinction law `2^(1-F)`);
 FINITE-EXACT (all checks on the primes below `200000`, the tower tournaments to
-order `255`, the group identifications, the extinction table to `F = 12` over
+order `255` including their automorphism groups, the group identifications, the extinction table to `F = 12` over
 all `2^(F-1+10)` contexts); CLASSICAL facts cited as such; SPECULATION marked.
 No claim on Gilbreath's conjecture, none on Collatz.** Scripts:
 `04-computation/experiments/gilbreath_fermat_tower_20260926.py`,
@@ -162,11 +162,11 @@ Every automorphism `s` of `T_k` extends to `T_(k+1)` as `(s, s)` fixing `0'`
 `Aut(T_k) <= Aut(T_(k+1))`. Computed (individualization-refinement
 backtracking, verified on `P_7` and `P_31`): `|Aut(T_2)| = 3` (cyclic
 triangle), `|Aut(T_3)| = 21` and `T_3` is isomorphic to the Paley heptagon
-`P_7`, and `|Aut(T_k)| = 21` for `k = 4, 5, 6` (`n = 15, 31, 63`; the run for
-`k = 7, 8` is in the `.out` file). For `T_5`: element orders `{3: 14, 7: 6}`,
+`P_7`, and `|Aut(T_k)| = 21` for `k = 4, 5, 6, 7, 8` (`n = 15, 31, 63, 127, 255`;
+the order-`255` search took `648` s and `35140` nodes). For `T_5`: element orders `{3: 14, 7: 6}`,
 i.e. the Frobenius group `Z_7 x| Z_3` of the heptagon, with orbits of sizes
 `7, 1, 7, 1, 7, 1, 7`. `T_5` is **not** isomorphic to the Paley tournament
-`P_31` (`|Aut(P_31)| = 465`) although its 4-vertex census
+`P_31` (`|Aut(P_31)| = 465`), and `T_7` is not `P_127` (`|Aut(P_127)| = 8001`) although its 4-vertex census
 (`4340` with a source, `13020` strong, `4340` with a sink, `9765` transitive)
 equals `P_31`'s (the census did not separate them; the automorphism
 groups do). So: the zero-triangle sides `2^k - 1` of the sea are exactly the orders
@@ -294,8 +294,8 @@ limitation of every persistence argument (S9).
   nonlinear; the `F_k n + 1` maps for `k >= 1` have positive drift. No
   reduction in either direction (S9 and forest, unchanged).
 * **Tournaments.** The Mersenne orders `2^k - 1` of the sea's zero triangles
-  carry the doubling tower `T_k`, doubly regular with `Aut = F_21` as far as
-  computed; the Paley heptagon is its third level; THM-871's Fermat-rung
+  carry the doubling tower `T_k`, doubly regular with `Aut = F_21` for
+  `k = 3..8`; the Paley heptagon is its third level; THM-871's Fermat-rung
   rigidity is the other face of the same five primes.
 
 ## 7. Speculation, marked

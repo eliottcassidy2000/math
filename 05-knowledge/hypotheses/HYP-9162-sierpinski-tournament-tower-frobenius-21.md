@@ -6,7 +6,7 @@ status: >
   double regularity is the classical skew-Hadamard correspondence, the
   recursion T_(k+1) = T_k + {0'} + T_k' is explicit, and every automorphism of
   T_k extends diagonally, so F_21 <= Aut(T_k) for k >= 3. FINITE-EXACT:
-  |Aut(T_k)| = 3, 21, 21, 21, 21 for k = 2..6 (and see the .out for k = 7, 8),
+  |Aut(T_k)| = 3, 21, 21, 21, 21, 21, 21 for k = 2..8 (orders 3 to 255),
   T_3 = P_7, T_5 not isomorphic to P_31 (|Aut(P_31)| = 465) though both have
   the same 4-vertex census. OPEN: equality Aut(T_k) = F_21 for all k >= 3.
 source: opus-2026-09-26 session gilbreath-fermat-platonic-20260926
@@ -26,10 +26,10 @@ doubly regular (checked to `n = 255`), with the recursion
 T_(k+1) = T_k + {0'} + T_k' (arcs reversed),  i -> i',  i -> j' iff i -> j,  i' -> j iff i -> j,  0' -> T_k,  T_k' -> 0'.
 ```
 
-**Computed.** `|Aut(T_2)| = 3`; `T_3 = P_7`, `|Aut| = 21`; `|Aut(T_4)| =
-|Aut(T_5)| = |Aut(T_6)| = 21`, with `Aut(T_5)` having element orders
+**Computed.** `|Aut(T_2)| = 3`; `T_3 = P_7`, `|Aut| = 21`; `|Aut(T_k)| = 21` for `k = 4, 5, 6, 7, 8` (`n = 15, 31, 63, 127, 255`), with `Aut(T_5)` having element orders
 `{3: 14, 7: 6}` (the Frobenius group `Z_7 x| Z_3`) and orbits of sizes
-`7, 1, 7, 1, 7, 1, 7`. `T_5` is not isomorphic to `P_31`.
+`7, 1, 7, 1, 7, 1, 7`. `T_5` is not isomorphic to `P_31`, and `T_7` is not `P_127`
+(`|Aut(P_127)| = 8001`).
 
 **Conjecture.** `Aut(T_k) = F_21` for every `k >= 3`; equivalently, no
 automorphism of `T_(k+1)` fails to fix `0'` once `k >= 3`. If true, `T_k` is
