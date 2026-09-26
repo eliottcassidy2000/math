@@ -269,10 +269,13 @@ classes number `M_k(1)`, each with at most two representatives below `X`,
 and `M_k(1) <= D_s 2^(hk) k^(-3/2) 2^(lambda*) e^(s)` (Lemma M). Peaks: for
 a peak `i >= k` with `y_i >= Y_0`, the element `z = y_(i-k)` has, in its
 `k`-word, `M_k z + beta_k = y_i > y_(i-k+s) = M_s z + beta_s` for all
-`s < k`, so `M_k > M_s (1 - o(1))`, i.e. the word ends within `0.01` bits of
-its strict maximum: reversed, it is a word with all partial sums `> -1.6`
-(THM-4495, Step 2 / THM-4499, Step 1 with the sign reversed), counted by
-`M_k(1.6)`; `z` is an integer `<= X` in one of those classes. Peaks with
+`s < k`, so `M_k > M_s - (|beta_k| + |beta_s|)/z >= M_s - 1`, and also (the
+case `s = 0`) `M_k z + beta_k > z`, so `M_k > 1/2`. Hence `M_k/M_s > 1/3` for
+every `s < k`: if `M_s >= 3/2` then `M_k/M_s > 1 - 1/M_s >= 1/3`, and if
+`M_s < 3/2` then `M_k/M_s > (1/2)/(3/2) = 1/3`. So `S_k - S_s > -log_2 3 = -1.585`
+for all `s < k`: the reversed word (THM-4495, Step 2) has all partial sums
+`> -1.6`, and is counted by `M_k(1.6)`; `z` is an integer `<= X` in one of
+those classes. Peaks with
 `i < k` number at most `k`. ∎
 
 So the extremal elements of any orbit (its records in either direction)
