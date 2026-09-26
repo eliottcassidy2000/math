@@ -301,6 +301,10 @@ all heights (THM-1289, published), δ ineffective.
   **THM-4499 (o(X^(h*)), PROVED):** every divergent orbit and every injective
   invariant set has `N(X) <= K X^(h*) (log_2 X)^a` for every `a > lambda*/h* - 3/2 = -0.9862`:
   the Terras exponent is not attained.
+  **Reassessment (opus, 2026-09-26):** the remaining `(log X)^(0.514)` is the
+  landing multiplicity `L`; it is tight on residue classes and needs an
+  oscillation lemma for one orbit (HYP-9161); records (leaders and peaks)
+  of any orbit are already at the ballot floor `O(X^(h*) (log X)^(-3/2))`.
 - **Erdős Problem 592** [DEEP — $1000 problem] — the p=2 Schur-seam theorem (THM-469),
   R(n,2)=2n+1 linear conjecture, Chang-tower m=3 open; 21 scripts, a survey draft.
 - **{7,21} forbidden H-spectrum** [DEEP, repo-signature] — permanent exclusions by

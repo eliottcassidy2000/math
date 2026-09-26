@@ -1,0 +1,17 @@
+N = 200000; mutual information I(colour; target) in bits [target entropy in brackets]
+                                    parity    v2(3n+1) mod 3 (odd n)               descent<=20       stopping time mod 3
+cZ_low                     0.00000 [1.000]           0.00000 [1.379]           0.00001 [0.173]           0.00001 [1.585]
+cZ_diag                    0.00001 [1.000]           0.00004 [1.379]           0.00000 [0.173]           0.00001 [1.585]
+cZ_len                     0.00001 [1.000]           0.00027 [1.379]           0.00001 [0.173]           0.00000 [1.585]
+cP_omega(odd)              0.00000 [-0.000]           0.00000 [1.379]           0.00000 [0.294]           0.00001 [1.585]
+n mod 3                    0.00000 [1.000]           0.00000 [1.379]           0.00000 [0.173]           0.00001 [1.585]
+baseline pseudo-random colour vs descent<=20: I = 0.000005  (noise level ~ 5.0e-06)
+cZ_diag transition matrix under T (rows: colour of n; cols: colour of T(n)); row-normalised:
+   colour 0: 0.335  0.328  0.337   (n=55691)
+   colour 1: 0.330  0.339  0.330   (n=55507)
+   colour 2: 0.332  0.332  0.336   (n=55467)
+   marginal colour frequencies: 0.334  0.333  0.333
+cZ_diag(n) -> cZ_diag(3n+1) for odd n, row-normalised:
+   colour 0: 0.320  0.355  0.325   (n=11005)
+   colour 1: 0.341  0.315  0.344   (n=11265)
+   colour 2: 0.344  0.329  0.327   (n=11062)
