@@ -118,6 +118,25 @@ modulo `2^t`, and each class has exactly one representative in
 `(t+1)(rho/(1-rho))^2 2^(t h(rho)) + n_0`, and summing the
 geometric progression over `t <= log_2 X` gives `D_b(X, gamma) <= C X^(h(rho)) log X`. ∎
 
+### 1.2b Sharper polynomial in the upper bound (2026-09-26, post-audit)
+
+The bound `(t+1) max_o C(t, o)` in 1.2 can be replaced by a geometric tail:
+for `o >= o_0 := ceil(rho t - 2)` the ratios `C(t, o+1)/C(t, o) = (t-o)/(o+1)`
+are at most `(1 - rho + 2/t)/(rho - 2/t) < 1 - delta(rho)` for `t >= t_0(rho)`,
+so `sum_(o >= o_0) C(t, o) <= C(t, o_0)/delta <= (rho/(1-rho))^2 2^(t h(rho))/(delta sqrt(2 pi t p(1-p)))`
+(Stirling's upper bound, `p = o_0/t`). Summing the dyadic blocks,
+
+```text
+D_b(X, gamma) <= C(gamma) X^(h(rho)) (log X)^(-1/2)      for every gamma in (log_4 3, 1], both sheets,
+```
+
+so the bracket of Theorem 1 is `[log^(-3/2) X, log^(-1/2) X]`; at `gamma = 1`
+THM-4495 pins it to `Theta(X^h (log X)^(-3/2))`, and for `gamma < 1` the
+expected order is `(log X)^(-1/2)` (the barrier `(gamma - 1) t` recedes from a
+zero-drift walk, which then survives with positive probability), not
+proved here. The same tail is Lemma 1.4b of the thin-divergence note, where
+it turns THM-4476's `eps` into `(log X)^(0.014 + eps)`.
+
 ### 1.3 Theorem 1, lower bound
 
 Let `gamma in (log_2(3/2), 1]`, put `rho = max(1/2, gamma/alpha)` and

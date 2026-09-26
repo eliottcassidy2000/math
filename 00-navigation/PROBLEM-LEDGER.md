@@ -295,7 +295,7 @@ all heights (THM-1289, published), δ ineffective.
   `delta_k`, THM-4485's deletion-price chain, the expanding-necklace count
   and the `gamma = 1` dip count are all of that order: one exponent and one
   polynomial in four settings. Addendum 1.6b of the thin-divergence note
-  turns THM-4476's `X^(h*+eps)` into `X^(h*) (log_2 X)^a`, `a > 1.5138`.
+  turns THM-4476's `X^(h*+eps)` into `X^(h*) (log_2 X)^a`, `a > 0.0138`.
 - **Erdős Problem 592** [DEEP — $1000 problem] — the p=2 Schur-seam theorem (THM-469),
   R(n,2)=2n+1 linear conjecture, Chang-tower m=3 open; 21 scripts, a survey draft.
 - **{7,21} forbidden H-spectrum** [DEEP, repo-signature] — permanent exclusions by
