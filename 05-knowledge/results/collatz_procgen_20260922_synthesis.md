@@ -950,6 +950,63 @@ Six lanes, all audited by independent orchestrator code and pipeline reruns. Fiv
 * **1/3-2/3.** The no-descent words are linear extensions of a width-2 poset (THM-4503's construction, found independently); Linial's theorem applies. New: the balance constant is `1/2` for every large cell (within `0.006`, exhaustive to `k = 20`) and exactly `1/3` in the three-word cells `(5,4)`, `(6,4)`; the extension counts have THM-4495's Spitzer generating function; the `(1-h) k` bits saved by an adaptive order code are THM-4479's distance exponent. The golden section appears in both problems through the same two-chain interleaving count, not through dynamics. Speculation (marked): the analogy points at a poset on the *orbit's* heights, whose balanced pairs would be the oscillation lemma.
 * **Seeds.** The owner's red/black/blue diagonals are the Wythoff classes `AA`, `B`, `AB` (lowest Zeckendorf index `2` / odd / even; densities `phi^-2, phi^-2, phi^-3`; the list's `35` should be `37`); rigid under doubling (`0.37` bits), informationless for descent (`< 1e-5` bits). `{2, 3, 11}` are exactly the primes with `2p` below the next odd square above `p` (`(2j+1)^2/(2j-1)^2 < 2` for `j >= 3`). The pasted log-periodic functions are functions of the phase of Proposition 1; the quadratic maps are integer skeletons of angle doubling. A Pythagorean-tree proof idea (binary Collatz tree with parent `(m-1)/4` or `U(m)`) reduces to the same missing object: a height decreasing along `m -> (3m+1)/2` at `m = 3 mod 4`, i.e. coupled to the whole address.
 
+## 2o. Wave 18 (2026-09-26, this session): numbers beyond 27, small graphs that encode arithmetic, landing multiplicity, and 7n±1 at levels 30–31
+
+The owner's request: "keep going on the open problems, especially 7n±1; relate Friedman's fence problem to the repository; attack landing multiplicity; think about numbers beyond 27 and how the rate at which their family occurs governs fractal recursion; compare the square-sum problem, which first becomes possible at 15 with 8 at one end and 9 at the other."
+
+**1. THM-4504, the families of 27 (Moran function of the inverse tree), with an external scope correction** ([family27 note](procgen_family27_20260926_long_orbit_families.md); [correction audit](crossroads_poset_20260926_moran_audit.md)).
+* **Result.** The owner's inverse-tree recursion `A <- 2A, (2A-1)/3` has the Moran function `g(s) = 2^-s + (1/3)(3/2)^s`.
+  * Its roots `s = 1, 2` give tree growth and the rise law `2/(3W) < P(rise >= W) <= 1/W`, by optional stopping of the AM-fair martingale `3^o/2^j`.
+  * Its minimum gives the long-glide exponent.
+  * Its tangent from 0 gives the model delay constant `41.6776`.
+  * 27's branch (the backward tree of 3077) holds 39.27% of the integers in every scanned block.
+* **What codex crossroads-poset corrected.** Four scope errors, each missed by my audit and now a standing audit item:
+  1. The finite-horizon conditional mean needs `P(tau <= k) > 0`.
+  2. `{sup M >= W}` is not the hitting event (a greedy rotation reaches supremum 3 without ever attaining it).
+  3. The prefix-scale exponent `h` and the integer-height exponent `1 - c(1-h)` differ.
+  4. `41.6776`, the legality weight `1/3` and the 39.27% are model or finite-scan quantities, not proved densities.
+* **Lesson.** Before promoting a probabilistic theorem, check:
+  * finite-horizon conditioning;
+  * supremum versus attainment;
+  * scale conversions;
+  * model constants versus orbit constants.
+
+**2. THM-4505: small graphs that encode arithmetic** ([smallgraph note](procgen_smallgraph_20260926_small_graphs_arithmetic.md)).
+* **Why 15, from 8 to 9.** The square-sum graph first has a Hamiltonian path at 15 because of a degree law: 8 and 9 are the only leaves (`8 + 8 = 16`; 9's only partner is 7), and the one surplus edge is `{1,3}`. This is the `k = 4` case of the **Zigzag Threshold Theorem**: for targets `j^2 + k(4-k)`, the first chain appears at `n = 4k-1`, uniquely, from `2k` to `2k+1`.
+* **The law is Pell, not Catalan.** The zigzag needs `2k+1, 4k, 6k+1` all square, i.e. the simultaneous Pell system `t^2 - 2s^2 = 1`, `u^2 - 6s^2 = 1`. Its unique positive solution is `s = 2` (CITED: Anglin 1996, via Bennett 1998). Equivalently, 1 is the only square that is both triangular and generalized pentagonal. The Catalan reading `9 - 8 = 3^2 - 2^3` (the free cycle `-5,-7,-10`) is NUMEROLOGY for square sums. It is a real mechanism only where 8 and 9 are both targets.
+* **Fences.** A fence configuration is a plane graph:
+  * Euler's formula counts its fields exactly;
+  * isoperimetry bounds its area;
+  * `lambda = lim A(n)/n` lies in `[1/2, 1/sqrt(pi)]`;
+  * complete grids exist iff `2n+1` is composite (Sundaram's sieve).
+  Wave 19 (below) sharpens the upper bound.
+* **The Collatz alphabet `C_n`** (sums are powers of 2 or of 3). It is never Hamiltonian as a cycle, and its admissible windows are cut out by `3^a` and the gaps `|2^p - 3^a|` along the Beatty word of `log_2 3`. Codex's crossroads-family session independently recovered the `n = 15` structure: a five-cycle with two pendant paths, and first switch at 46.
+
+**3. THM-4506: landing multiplicity** ([landing note](procgen_landing_20260926_landing_multiplicity.md); parallel [S7 note](collatz_landing_20260926_multiplicity_reassessment.md), HYP-9161).
+* **Exact worst case.** All dippers of a landing point lie in one dyadic shell, with an odd letter between consecutive ones. So the worst case is exactly `ceil((k-D)/log_2 3)`, about `0.631(k-D)`, not `k`. This sharpens S7's `2 ceil(k/3)`. The bound is attained exhaustively, by constructions to `k = 400`, and by the orbit of 13255.
+* **The method is saturated.** The recursion stops at `a*(mu) = mu lambda*/h* - 3/2`, so the whole prize is `(log X)^0.514`. Three averages leave `mu = 1`:
+  * depth averaging (a factor of at most 0.966);
+  * orbit-blind residue-class splits (Proposition H);
+  * 2-adic data (a word can be hostile at every scale).
+* **What remains.** HYP-9161 in its corrected form, a local-time bound for one orbit. It is an oscillation statement, the same wall as THM-4487's "one free window per element".
+* **Incoming.** Opus S8 (collatz-crossings) restated HYP-9161 in whole-orbit form using THM-4506's averaged hypothesis. In crossing form: a stay below `X` lasts at most `C (log X)^mu` times the number of future-minimum records inside it, plus `O(log X)`.
+
+**4. THM-4508: the structure of optimal sign strategies, and 7n±1 at level 31** ([seven2 note](procgen_seven2_20260926_seven_structure.md)).
+* **Lemma C.** A closed walk of the parity graph is a rational periodic point of the 2-adic map. So a finite sign rule is one map with one `rho_max`, valid at every level.
+* **Lemma MH.** Max-halving's worst cycles form the full 2-shift `S_inf` (all valuations 2) of rationals in `[-1/(q-4), 1/(q-4)]`. Every better rule must break each of them.
+* **Lemma F (flip calculus).** A flip gains halvings only on `(s,2),(s,2)`, which for `q = 7` is the classes of `±1/3`. It is neutral only where the orbit rejoins, and loses elsewhere.
+* **5n±1.** The first profitable flip, at the fixed point 1, already creates the optimum: the sporadic cycle `1, 3, 8, 4, 2` of density `2/5`. An explicit 46-class rule is optimal at every level `k >= 15`. Level 15 separates rationals on conflicting cycles that agree mod `2^14`.
+* **7n±1.** The first profitable flips reach only `2/5` (an explicit 18-class rule). After that, rule sizes explode (46, 300, 508 leaves). `rho*(7,30) = 37/100` and `rho*(7,31) >= 7/19`: still not provable at any `k <= 31`. The limit against `log_7 2` is OPEN; fits land on both sides.
+* **Audit.** An independent numpy solver reproduced `rho*(7,k)` exactly for `k = 8..21`. The level-30/31 certificates rest on the lane's separately written checker.
+
+**5. Wave 19 (launched).**
+* **fencelim.** The orchestrator's *Corner Lemma*, under independent audit:
+  * At every junction, `ends + through + (sectors >= pi) >= 3`, with equality exactly for T, Y and L junctions.
+  * With the face angle identity this gives `sum over fields of (convex corners - 3) <= n - 3`.
+  * With the polygon isoperimetric inequality it gives `A(n) <= 0.52245 n - 0.135`, so `lambda <= (6 - P_5)/(8 - P_5) = 0.52245` (`P_5` = perimeter of the unit-area regular pentagon). This improves `1/sqrt(pi) = 0.5642` and Hales's honeycomb bound `12^(-1/4) = 0.5373`.
+  * The bound is an LP optimum whose extremal mix is regular pentagons plus unit squares. Whether `lambda > 1/2` (pentagon-rich patterns beat grids) is now the sharp question.
+* **sumgraph.** Sum graphs are unions of reflection matchings `x -> t - x`. Two reflections compose to the translation by the gap between their targets, so Hamiltonian paths are single orbits of a reflection action. The lane tests whether this explains `C_n`'s Hamiltonian sub-windows through the Collatz gaps.
+
 ## 2b. The approach deck: every approach generated or considered, with its disposition
 
 | # | approach (lens + mechanism) | barrier verdict | probe run | outcome |

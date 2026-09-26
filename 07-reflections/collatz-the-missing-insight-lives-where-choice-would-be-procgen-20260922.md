@@ -354,3 +354,27 @@ Periodic modifications are residue classes. They live in `Z_2` and cannot see he
 * **Strips.** The second-order `L^(1/3)` term of the price is a Brownian-strip constant, obtained by two independent sessions from exact sine eigenfunctions of the letter walk.
 
 **What would count as a new idea.** Every method formalized here reduces Collatz to excluding expanding structures that live on the negative side of `Z_2`: `-1`, `-5`, `-17` and their backward trees, dense in `Z_2`. A proof must therefore use the one thing that separates positive integers from those trees: the sign, i.e. height seen from the real place. It must use it in a form that is not a bounded, periodic or finite-mass 2-adic potential. The theorems above rule those forms out one by one. What is left is an adaptive, unbounded, height-coupled quantity. The only known instance of such a quantity is the stopping time itself.
+
+## Wave 18 (2026-09-26): methods reach their exact ceilings, and small graphs keep their arithmetic
+
+This wave repeatedly found the *exact ceiling* of a method, not just a bound.
+* **Landing multiplicity (THM-4506).**
+  * The one-window recursion has exactly one input it can still improve, the averaged multiplicity. Its worst case is exactly `ceil((k-D)/log_2 3)`, and the recursion is saturated at `a*(mu)`.
+  * Averages over depths, residue classes and parity words all leave `mu = 1`.
+  * What would help is a local time of one orbit: how often one orbit revisits one dyadic shell before crashing below it. The concurrent crossings session reached the same object from the other side, as the length of a stay below `X` measured against the records inside it.
+* **Sign strategies (THM-4508).**
+  * A finite rule is a single 2-adic map with rational periodic points, so optimality at every level is one finite object.
+  * The flip calculus says that only one local move ever pays: the pattern `(s,2),(s,2)`, the classes of `±1/3` for 7n±1.
+  * For 5n±1 that single move lands on the optimum, the sporadic cycle `1,3,8,4,2`. For 7n±1 it stops at `2/5`, and after that the rules must grow without a visible pattern. Whether they ever reach `log_7 2` is the open question.
+* **Fences (wave 19 lane).** A corner count at the junctions (tight exactly at T, Y and L) is the Euler identity of the problem. Combined with isoperimetry it caps the fence density at `0.5225`. The cap is an LP optimum made of regular pentagons, which do not tile, so the truth lies in `[1/2, 0.5225]`.
+
+The small graphs behaved differently: they kept their arithmetic exactly.
+* The square-sum threshold at 15, with ends 8 and 9, is a degree law plus one Pell identity. By Anglin's theorem that identity has exactly one solution, so the square case of the zigzag happens once.
+* The Catalan identity `9 - 8 = 1`, the same one that forces the free Collatz cycle `-5,-7,-10`, is a coincidence of the pair (8,9) for square sums. It becomes a mechanism only where 8 and 9 are both sum targets.
+* The Collatz alphabet `C_n` (sums that are powers of 2 or of 3) never closes into a Hamiltonian cycle. Its admissible windows are cut by the gaps `|2^p - 3^a|` in the order of the Beatty word of `log_2 3`.
+
+**Discrete and continuous.** In every exact result of this wave, a continuous inequality closes a discrete count exactly, and the extremal case of the continuous inequality names the obstruction:
+* optional stopping for the rise law;
+* Lemma S's single dyadic shell for multiplicity;
+* isoperimetry for fences;
+* the contraction `g_s(y) = (4y - s)/q` for the max-halving skeleton.
