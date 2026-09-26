@@ -1,0 +1,232 @@
+procgen_cubedist_20260925 -- Collatz's distance to provability in the strategy cube (HYP-9138)
+python 3.10.0; engine /private/tmp/math-wt-collatz-procgen-20260922/scratch/procgen_cubedist/engine
+
+====================================================================================================
+A. THE UNDECIDED-RESIDUE CONSTRUCTION (Theorem 1) AND THE NECKLACE LOWER BOUND (Theorem 2)
+====================================================================================================
+B1. Bad_k: enumeration vs ballot DP; the block lemma
+  |Bad_k| enumeration = ballot DP for k = 2..20; every element of Bad_k is 3 (mod 4) (k >= 2)
+  block lemma (no Bad_k point strictly inside a Collatz descent block), all lifts: k = 2..13: 0 violations
+
+B2. class (i) of sigma_k = Collatz with sigma = - on Bad_k
+   k  |Bad_k|  Haar=|Bad|/2^(k-1)  F_k (bound)  Karp rho_max   potential cert (max psi)  first-descent word of F_k
+   2       1  0.50000               1/2         1/2          OK (     1)              10   [0.0s]
+   3       2  0.50000               1/2         1/2          OK (     1)              10   [0.0s]
+   4       3  0.37500               1/2         1/2          OK (     2)              10   [0.0s]
+   5       4  0.25000               3/5         3/5          OK (     6)              11010   [0.0s]
+   6       8  0.25000               3/5         3/5          OK (     6)              11010   [0.0s]
+   7      13  0.20312               3/5         3/5          OK (     8)              11010   [0.0s]
+   8      19  0.14844               5/8         5/8          OK (    15)              11011010   [0.0s]
+   9      38  0.14844               5/8         5/8          OK (    15)              11011010   [0.0s]
+  10      64  0.12500               5/8         5/8          OK (    18)              11011010   [0.0s]
+  11     128  0.12500               5/8         5/8          OK (    18)              11011010   [0.0s]
+  12     226  0.11035               5/8         5/8          OK (    21)              11011010   [0.1s]
+  13     367  0.08960               5/8         5/8          OK (    24)              11011010   [0.3s]
+  14     734  0.08960               5/8         5/8          OK (    24)              11011010   [1.2s]
+  15    1295  0.07904               5/8         5/8          OK (    27)              11011010   [5.1s]
+  16    2114  0.06451               5/8           -          OK (    30)              11011010   [0.1s]
+  17    4228  0.06451               5/8           -          OK (    30)              11011010   [0.1s]
+  18    7495  0.05718               5/8           -          OK (    33)              11011010   [0.2s]
+  19   14990  0.05718               5/8           -          OK (    33)              11011010   [0.4s]
+  20   27328  0.05212               5/8           -          OK (    36)              11011010   [1.0s]
+  every certificate: integer psi with psi(t) <= psi(s) - w(s) on all 2^(k+1) edges, w = (r-q, -q) for F_k = q/r;
+  so every cycle has a/p <= F_k < log_3 2 (class (i)).  The first-descent word of F_k is a Collatz cycle of
+  length <= k avoiding Bad_k, so rho_max = F_k exactly (Karp agrees for k <= 15).
+
+B3. bounded lookahead and transitivity: every n > n_0 descends within k steps; every n <= n_0 reaches 1
+   k   n_0    all n <= n_0 reach 1
+   2      1   yes (and every n in (n_0, n_0 + 20000] descends within 2 steps)
+   3      1   yes (and every n in (n_0, n_0 + 20000] descends within 3 steps)
+   4      1   yes (and every n in (n_0, n_0 + 20000] descends within 4 steps)
+   5      4   yes (and every n in (n_0, n_0 + 20000] descends within 5 steps)
+   6      4   yes (and every n in (n_0, n_0 + 20000] descends within 6 steps)
+   7      4   yes (and every n in (n_0, n_0 + 20000] descends within 7 steps)
+   8     24   yes (and every n in (n_0, n_0 + 20000] descends within 8 steps)
+   9     24   yes (and every n in (n_0, n_0 + 20000] descends within 9 steps)
+  10     24   yes (and every n in (n_0, n_0 + 20000] descends within 10 steps)
+  11     24   yes (and every n in (n_0, n_0 + 20000] descends within 11 steps)
+  12     24   yes (and every n in (n_0, n_0 + 20000] descends within 12 steps)
+  13     24   yes (and every n in (n_0, n_0 + 20000] descends within 13 steps)
+  14     24   yes (and every n in (n_0, n_0 + 20000] descends within 14 steps)
+  15     24   yes (and every n in (n_0, n_0 + 20000] descends within 15 steps)
+  16     24   yes (and every n in (n_0, n_0 + 20000] descends within 16 steps)
+  17     24   yes (and every n in (n_0, n_0 + 20000] descends within 17 steps)
+  18     24   yes (and every n in (n_0, n_0 + 20000] descends within 18 steps)
+  19     24   yes (and every n in (n_0, n_0 + 20000] descends within 19 steps)
+  20     24   yes (and every n in (n_0, n_0 + 20000] descends within 20 steps)
+  n_0(k) from the first-descent-word DP equals the enumerated value for k <= 20
+  k = 2..300: every n <= n_0(k) reaches 1 under T_sigma_k, so (with the descent above n_0) every
+  positive orbit of T_sigma_k reaches 1.  n_0(k) changes only at (k, n_0): [(2, 1), (5, 4), (8, 24), (27, 108), (46, 281), (65, 867), (149, 2419), (233, 4862)]
+  (the jumps sit at the denominators 2, 5, 8, 27, 46, 65, ... of the best lower approximations F_k).
+
+B4. the sandwich N_k <= delta_k <= |Bad_k| (exact integers); h = h(log_3 2)
+  h = 0.9499555272, 1 - h = 0.0500444728
+    k       N_k (lower)        |Bad_k| (upper)     ratio   Haar upper 2|Bad_k|/2^k   N_k k^1.5/2^(hk)  |Bad_k| k^1.5/2^(hk)
+    2                      1                      1   1.000   5.000e-01                0.758            0.758
+    3                      2                      2   1.000   5.000e-01                1.442            1.442
+    4                      2                      3   1.500   3.750e-01                1.149            1.723
+    5                      2                      4   2.000   2.500e-01                0.831            1.662
+    6                      5                      8   1.600   2.500e-01                1.414            2.262
+    7                      5                     13   2.600   2.031e-01                0.922            2.398
+    8                      6                     19   3.167   1.484e-01                0.700            2.216
+    9                     16                     38   2.375   1.484e-01                1.153            2.738
+   10                     19                     64   3.368   1.250e-01                0.830            2.796
+   11                     52                    128   2.462   1.250e-01                1.357            3.340
+   12                     70                    226   3.229   1.104e-01                1.077            3.478
+   13                     85                    367   4.318   8.960e-02                0.763            3.296
+   14                    251                    734   2.924   8.960e-02                1.304            3.814
+   15                    332                   1295   3.901   7.904e-02                0.990            3.863
+   16                    434                   2114   4.871   6.451e-02                0.738            3.596
+   17                   1282                   4228   3.298   6.451e-02                1.236            4.078
+   18                   1743                   7495   4.300   5.718e-02                0.948            4.077
+   19                   4958                  14990   3.023   5.718e-02                1.514            4.577
+   20                   6910                  27328   3.955   5.212e-02                1.180            4.665
+   21                   9454                  46611   4.930   4.445e-02                0.899            4.431
+   22                  27316                  93222   3.413   4.445e-02                1.442            4.919
+   23                  38304                 168807   4.407   4.025e-02                1.119            4.929
+   24                  53024                 286581   5.405   3.416e-02                0.854            4.617
+   25                 154032                 573162   3.721   3.416e-02                1.366            5.082
+   26                 217679                1037374   4.766   3.092e-02                1.060            5.050
+   27                 303438                1762293   5.808   2.626e-02                0.809            4.700
+   28                 886604                3524586   3.975   2.626e-02                1.293            5.138
+   29                1259296                6385637   5.071   2.379e-02                1.002            5.079
+   30                3588061               12771274   3.559   2.379e-02                1.554            5.533
+   31                5182114               23642078   4.562   2.202e-02                1.221            5.569
+   32                7394553               41347483   5.592   1.925e-02                0.946            5.288
+   33               21182770               82694966   3.904   1.925e-02                1.469            5.733
+   34               30684263              151917636   4.951   1.769e-02                1.152            5.702
+   35               43946640              263841377   6.004   1.536e-02                0.892            5.354
+   36              126462094              527682754   4.173   1.536e-02                1.386            5.782
+   37              183632836              967378591   5.268   1.408e-02                1.085            5.717
+   38              518316074             1934757182   3.733   1.408e-02                1.650            6.161
+   39              762109778             3611535862   4.739   1.314e-02                1.306            6.189
+   40             1109004808             6402835000   5.773   1.165e-02                1.022            5.900
+   50           730806473950          3734259929440   5.110   6.633e-03                1.300            6.644
+   60        498579906584460       2216134944775156   4.445   3.844e-03                1.611            7.160
+   80  138392520017926577608  803209913882910595105   5.804   1.329e-03                1.314            7.625
+  100 42067749029004615780762972 302560669500543257546172187   7.192   4.774e-04                1.065            7.661
+  150 6517508058094303863045448845406910179372 36669896893826317415292528305119465918904   5.626   5.139e-05                1.526            8.584
+  200 659588812599032239145199617457285157441797051473519216 4917911213247274697935031643998322726370567793471092895   7.456   6.121e-06                1.196            8.919
+  checks: N_k <= |Bad_k| <= 2^(hk) and N_k >= 2^(hk)/(3k^2) at every listed k
+  fit of the Haar density 2|Bad_k|/2^k of sigma_k over 8 <= k <= 200: log2 = 0.919 -0.0539 k -0.976 log2 k   (theory: -(1-h) = -0.0500 per k; -3/2 up to a slowly varying factor)
+  a pure exponential fit over 8 <= k <= 14 gives slope -0.1365 per k (~2^(-k/7.3)): the
+  small-k decay is dominated by the k^(-3/2) factor
+
+====================================================================================================
+B. EXACT delta_k (implicit hitting set, HiGHS MIP; every optimum re-verified by exact Karp)
+====================================================================================================
+   k  delta_k  N_k  |Bad_k|  Haar delta_k/2^(k-1)  rho_max  iterations  no-goods(seed)  seconds
+   2      1     1       1     0.5000              1/2       1          2(2)     0
+        optimum: [3]
+   3      2     2       2     0.5000              1/2       1          5(4)     0
+        optimum: [3, 7]
+   4      2     2       3     0.2500              3/5       1          7(7)     0
+        optimum: [11, 15]
+   5      4     2       4     0.2500              5/8       1         12(12)     0
+        optimum: [9, 15, 27, 31]
+   6      5     5       8     0.1562              5/8       3         63(26)     0
+        optimum: [7, 15, 27, 59, 63]
+   7      9     5      13     0.1406              5/8       8        206(42)     1
+        optimum: [27, 47, 63, 71, 79, 91, 111, 123, 127]
+   8     14     6      19     0.1094              5/8       8        525(94)     3
+        optimum: [27, 39, 71, 95, 123, 127, 155, 175, 199, 207, 223, 231, 251, 255]
+   9     23    16      38     0.0898              5/8      15        949(158)     62
+        optimum: [71, 83, 95, 127, 155, 183, 223, 231, 251, 287, 295, 303, 327, 359, 383, 411, 415, 423, 455, 479, 487, 507, 511]
+  delta_k for k <= 9 agree with the cube lane's MaxSAT values (independent solver, independent code).
+  10  40 <= delta_10 <= 44 (bounds)  N_k = 19, |Bad_k| = 64; Haar in [0.0781, 0.0859]
+        lower bound: 1949 stored no-goods + 241 seeds, each re-derived as a genuine expanding cycle; the hitting-set MIP with sum x <= 39 is infeasible  [107s]
+        upper bound: a class-(i) set of size 44 (Karp rho_max 5/8; edge-checked certificate): [47, 63, 71, 155, 191, 207, 223, 231, 251, 303, 327, 359, 383, 411, 463, 479, 487, 511, 539, 543, 603, 615, 623, 639, 667, 679, 719, 743, 763, 767, 799, 831, 839, 859, 871, 879, 895, 927, 935, 959, 991, 1007, 1019, 1023]
+  11  52 = N_11 <= delta_11 <= 72 (the pruned set of section C)
+
+  structure of the optima (k = 10: the best known set, not proved optimal; u->d: residue 3 mod 4 flipped;
+  d->u: 1 mod 4 flipped; necklace profile =
+  number of expanding k-necklaces with m flipped rotations, {m: count}; 'off' = flips on non-expanding necklaces)
+  k= 2: 1 flips; in Bad_k 1; u->d 1, d->u 0; -1 flipped: True; -5 flipped: False; necklace profile {1: 1}, off 0
+  k= 3: 2 flips; in Bad_k 2; u->d 2, d->u 0; -1 flipped: True; -5 flipped: True; necklace profile {1: 2}, off 0
+  k= 4: 2 flips; in Bad_k 2; u->d 2, d->u 0; -1 flipped: True; -5 flipped: True; necklace profile {1: 2}, off 0
+  k= 5: 4 flips; in Bad_k 3; u->d 3, d->u 1; -1 flipped: True; -5 flipped: True; necklace profile {1: 1, 3: 1}, off 0
+  k= 6: 5 flips; in Bad_k 5; u->d 5, d->u 0; -1 flipped: True; -5 flipped: True; necklace profile {1: 5}, off 0
+  k= 7: 9 flips; in Bad_k 9; u->d 9, d->u 0; -1 flipped: True; -5 flipped: True; necklace profile {1: 2, 2: 2, 3: 1}, off 0
+  k= 8: 14 flips; in Bad_k 9; u->d 14, d->u 0; -1 flipped: True; -5 flipped: True; necklace profile {1: 3, 2: 3}, off 5
+  k= 9: 23 flips; in Bad_k 18; u->d 23, d->u 0; -1 flipped: True; -5 flipped: True; necklace profile {1: 9, 2: 7}, off 0
+  k=10: 44 flips; in Bad_k 44; u->d 44, d->u 0; -1 flipped: True; -5 flipped: True; necklace profile {1: 3, 2: 9, 3: 5, 4: 2}, off 0
+
+====================================================================================================
+C. SMALLER EXPLICIT SETS INSIDE Bad_k (greedy pruning; upper bounds on delta_k)
+====================================================================================================
+P1. greedy pruning inside Bad_k (upper bounds on delta_k; every set verified class (i))
+   k   N_k  pruned  |Bad_k|  pruned/2^(k-1)  pruned/N_k   rho_max   orders tried -> sizes
+   3     2       2        2   0.50000        1.000       1/2   {'asc': 2, 'desc': 2, 'margin_lo': 2, 'margin_hi': 2, 'rand1': 2, 'rand2': 2}  [0s]
+   4     2       2        3   0.25000        1.000       3/5   {'asc': 2, 'desc': 2, 'margin_lo': 2, 'margin_hi': 2, 'rand1': 2, 'rand2': 2}  [0s]
+   5     2       4        4   0.25000        2.000       3/5   {'asc': 4, 'desc': 4, 'margin_lo': 4, 'margin_hi': 4, 'rand1': 4, 'rand2': 4}  [0s]
+   6     5       5        8   0.15625        1.000       5/8   {'asc': 6, 'desc': 5, 'margin_lo': 6, 'margin_hi': 5, 'rand1': 6, 'rand2': 6}  [0s]
+   7     5       9       13   0.14062        1.800       5/8   {'asc': 10, 'desc': 9, 'margin_lo': 9, 'margin_hi': 9, 'rand1': 9, 'rand2': 10}  [0s]
+   8     6      15       19   0.11719        2.500       5/8   {'asc': 15, 'desc': 15, 'margin_lo': 15, 'margin_hi': 15, 'rand1': 15, 'rand2': 15}  [0s]
+   9    16      25       38   0.09766        1.562       5/8   {'asc': 26, 'desc': 25, 'margin_lo': 26, 'margin_hi': 25, 'rand1': 26, 'rand2': 25}  [1s]
+  10    19      44       64   0.08594        2.316       5/8   {'asc': 44, 'desc': 44, 'margin_lo': 45, 'margin_hi': 44, 'rand1': 44, 'rand2': 45}  [1s]
+  11    52      72      128   0.07031        1.385       5/8   {'asc': 73, 'desc': 74, 'margin_lo': 76, 'margin_hi': 74, 'rand1': 72, 'rand2': 76}  [2s]
+  12    70     131      226   0.06396        1.871       5/8   {'asc': 131, 'desc': 134, 'margin_lo': 131, 'margin_hi': 134, 'rand1': 136, 'rand2': 133}  [4s]
+  13    85     233      367   0.05688        2.741       5/8   {'asc': 241, 'desc': 240, 'margin_lo': 236, 'margin_hi': 246, 'rand1': 237, 'rand2': 233}  [8s]
+  14   251     398      734   0.04858        1.586       5/8   {'asc': 414, 'desc': 414, 'margin_lo': 399, 'margin_hi': 411, 'rand1': 398, 'rand2': 406}  [23s]
+  fit log2(pruned/2^(k-1)) ~ -1.478 -0.2070 k   (pure exponential, k = 8..14)
+  fit log2(pruned/2^(k-1)) ~ 0.685 -0.0596 k -1.102 log2 k   (theory: slope -(1-h) = -0.0500, log-coefficient -1.5)
+
+P2. one flip per expanding necklace (|R| = N_k): lowest / highest ballot rotation -- class (i)?
+  k= 3: |R| = N_k =    2; lowest: class (i); highest: class (i)
+  k= 4: |R| = N_k =    2; lowest: expanding cycle left; highest: class (i)
+  k= 5: |R| = N_k =    2; lowest: expanding cycle left; highest: expanding cycle left
+  k= 6: |R| = N_k =    5; lowest: class (i); highest: expanding cycle left
+  k= 7: |R| = N_k =    5; lowest: expanding cycle left; highest: expanding cycle left
+  k= 8: |R| = N_k =    6; lowest: expanding cycle left; highest: expanding cycle left
+  k= 9: |R| = N_k =   16; lowest: expanding cycle left; highest: expanding cycle left
+  k=10: |R| = N_k =   19; lowest: expanding cycle left; highest: expanding cycle left
+  k=11: |R| = N_k =   52; lowest: expanding cycle left; highest: expanding cycle left
+  k=12: |R| = N_k =   70; lowest: expanding cycle left; highest: expanding cycle left
+  k=13: |R| = N_k =   85; lowest: expanding cycle left; highest: expanding cycle left
+  k=14: |R| = N_k =  251; lowest: expanding cycle left; highest: expanding cycle left
+
+P3. flipping only the long rising runs (the 2-adic neighbourhoods of -1, and of -1 and -5) fails for j >= 3:
+    R_j = {r = -1 mod 2^j}, R'_j = R_j u {r = -5 mod 2^j}; an expanding cycle survives (e.g. (1^(j-1) 0)^inf)
+  k= 8: (j, R_j class (i)?, R'_j class (i)?) true only for [(2, True, True), (3, False, True), (4, False, True)]; R_2 = R'_3 = all residues 3 mod 4
+         (the all-d strategy, Haar 1/2); R'_4 = {11, 15 mod 16} is the lifted level-4 optimum (Haar 1/4)
+  k=10: (j, R_j class (i)?, R'_j class (i)?) true only for [(2, True, True), (3, False, True), (4, False, True)]; R_2 = R'_3 = all residues 3 mod 4
+         (the all-d strategy, Haar 1/2); R'_4 = {11, 15 mod 16} is the lifted level-4 optimum (Haar 1/4)
+  k=12: (j, R_j class (i)?, R'_j class (i)?) true only for [(2, True, True), (3, False, True), (4, False, True)]; R_2 = R'_3 = all residues 3 mod 4
+         (the all-d strategy, Haar 1/2); R'_4 = {11, 15 mod 16} is the lifted level-4 optimum (Haar 1/4)
+
+====================================================================================================
+D. CONTROLS
+====================================================================================================
+S. SHEET control: Collatz vs 3n-1 (nu = negation)
+  k=2: delta(Collatz) = delta(3n-1) = 1 (independent IHS runs, 2 iterations from all-minus); nu(optimum) class (i) with rho_max 1/2; -Bad_k(3n+1) = Bad_k(3n-1) (1 residues), whose flip is class (i) (rho_max 1/2)
+  k=3: delta(Collatz) = delta(3n-1) = 2 (independent IHS runs, 2 iterations from all-minus); nu(optimum) class (i) with rho_max 1/2; -Bad_k(3n+1) = Bad_k(3n-1) (2 residues), whose flip is class (i) (rho_max 1/2)
+  k=4: delta(Collatz) = delta(3n-1) = 2 (independent IHS runs, 2 iterations from all-minus); nu(optimum) class (i) with rho_max 3/5; -Bad_k(3n+1) = Bad_k(3n-1) (3 residues), whose flip is class (i) (rho_max 1/2)
+  k=5: delta(Collatz) = delta(3n-1) = 4 (independent IHS runs, 3 iterations from all-minus); nu(optimum) class (i) with rho_max 5/8; -Bad_k(3n+1) = Bad_k(3n-1) (4 residues), whose flip is class (i) (rho_max 3/5)
+  k=6: delta(Collatz) = delta(3n-1) = 5 (independent IHS runs, 11 iterations from all-minus); nu(optimum) class (i) with rho_max 5/8; -Bad_k(3n+1) = Bad_k(3n-1) (8 residues), whose flip is class (i) (rho_max 3/5)
+  k=7: delta(Collatz) = delta(3n-1) = 9 (independent IHS runs, 17 iterations from all-minus); nu(optimum) class (i) with rho_max 5/8; -Bad_k(3n+1) = Bad_k(3n-1) (13 residues), whose flip is class (i) (rho_max 3/5)
+  k=8: delta(Collatz) = delta(3n-1) = 14 (independent IHS runs, 30 iterations from all-minus); nu(optimum) class (i) with rho_max 5/8; -Bad_k(3n+1) = Bad_k(3n-1) (19 residues), whose flip is class (i) (rho_max 5/8)
+  k=9: delta(Collatz) = delta(3n-1) = 23 (independent IHS runs, 52 iterations from all-minus); nu(optimum) class (i) with rho_max 5/8; -Bad_k(3n+1) = Bad_k(3n-1) (38 residues), whose flip is class (i) (rho_max 5/8)
+
+D. DRIFT control: the 5n+-1 cube (expanding iff 5^a > 2^p; threshold log_5 2 = 0.430677)
+  k=2: class (i) EMPTY -- 5 expanding-cycle no-goods admit no hitting set (MIP infeasible; UNSAT re-confirmed by Glucose4); exhaustive: 0 of 4 strategies in class (i)  [0.1s]
+  k=3: class (i) EMPTY -- 9 expanding-cycle no-goods admit no hitting set (MIP infeasible; UNSAT re-confirmed by Glucose4); exhaustive: 0 of 16 strategies in class (i)  [0.1s]
+  k=4: class (i) EMPTY -- 18 expanding-cycle no-goods admit no hitting set (MIP infeasible; UNSAT re-confirmed by Glucose4); exhaustive: 0 of 256 strategies in class (i)  [0.2s]
+  k=5: class (i) EMPTY -- 38 expanding-cycle no-goods admit no hitting set (MIP infeasible; UNSAT re-confirmed by Glucose4); exhaustive: 0 of 65536 strategies in class (i)  [62.3s]
+  k=6: class (i) EMPTY -- 119 expanding-cycle no-goods admit no hitting set (MIP infeasible; UNSAT re-confirmed by Glucose4)  [0.4s]
+  k=7: class (i) nonempty; distance of 5n+1 = 29 of 64 residues (Haar 0.4531); optimum rho_max 3/7 = 0.4286 [12 iterations, 704 no-goods, 5s]
+        changed residues: [9, 13, 21, 25, 29, 31, 37, 39, 41, 45, 49, 53, 61, 63, 71, 73, 77, 81, 85, 93, 95, 101, 105, 109, 113, 117, 121, 125, 127]
+  => the 5n+-1 provable class is empty at levels 2..6 and nonempty at every level >= 7 (lifting preserves class (i)).
+
+D2. 5n+1: lower bound (necklaces, the proof of Theorem 2 verbatim), heuristic upper bound (greedy pruning
+    of the lifted level-7 optimum, every set verified class (i)), and the stationary flip-mass lemma
+   k   N_k(5) lower  Haar     pruned upper  Haar     k*Haar(upper)  closed classes: min pi(flipped) >= (1/2-log_5 2)/k ?
+   7         10   0.1562         29    0.4531    3.172        1 class(es), min pi(flipped) = 0.1468 >= 0.0099: yes  [0s]
+   8         23   0.1797         50    0.3906    3.125        1 class(es), min pi(flipped) = 0.1430 >= 0.0087: yes  [0s]
+   9         44   0.1719         94    0.3672    3.305        1 class(es), min pi(flipped) = 0.1362 >= 0.0077: yes  [0s]
+  10         67   0.1309        158    0.3086    3.086        1 class(es), min pi(flipped) = 0.1250 >= 0.0069: yes  [1s]
+  11        136   0.1328        297    0.2900    3.190        1 class(es), min pi(flipped) = 0.1190 >= 0.0063: yes  [1s]
+  12        216   0.1055        534    0.2607    3.129        -  [2s]
+  13        448   0.1094       1005    0.2454    3.190        -  [4s]
+  14        714   0.0872       1901    0.2321    3.249        -  [11s]
+
+ALL CHECKS PASSED.  wall time 610 s; peak RSS of this process 424 MB

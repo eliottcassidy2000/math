@@ -26,7 +26,7 @@ depends_on:
 related:
   - 05-knowledge/hypotheses/HYP-9136-provable-pairing-price-tends-to-zero.md (now SETTLED)
   - 05-knowledge/hypotheses/HYP-9137-sharp-provability-price-exponent.md
-  - 01-canon/theorems/THM-4474-strategy-cube-provability-by-cycle-densities.md (the periodic analogue, HYP-9138)
+  - 01-canon/theorems/THM-4474-strategy-cube-provability-by-cycle-densities.md (the periodic analogue, HYP-9138, now PROVED by THM-4479)
   - 05-knowledge/results/collatz_procgen_20260922_choice_ladder.md (|Bad_L| = 2^(hL+O(log L)))
 script: 04-computation/experiments/procgen_price_20260925_greedy.c
 script_audit: 04-computation/experiments/procgen_price_20260925_orchestrator_check.py

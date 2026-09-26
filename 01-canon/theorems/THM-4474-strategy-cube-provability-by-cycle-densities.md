@@ -29,6 +29,9 @@ status: >
   Collatz has rho_min = 0 (the loop at 0) and rho_max = 1 (the loop at -1)
   at every level, hence no residue certificate of either kind.
   Class counts at levels 2..5: (i) 1, 1, 16, 1052 and (ii) 1, 1, 3, 32.
+  UPDATE 2026-09-26: Collatz's flip distance to class (i) tends to 0 at
+  the sharp rate 2^(-(1-h)k) (HYP-9138 PROVED by THM-4479: flip exactly the
+  undecided residues).
   The OPEN fraction stabilizes near 0.435, which is the probability of no
   extra cycle in the k = infinity random-sign model.
 source: collatz-procgen-20260922 session, strategy-cube lane (2026-09-25), extending the Kuratowski lane's strategy square; audited and promoted by the session orchestrator 2026-09-25

@@ -1,0 +1,66 @@
+A. constants
+  log_3 2 = 0.6309297536, h = H2(log_3 2) = 0.9499555272, 1-h = 0.0500444728
+  ok: h = 0.9499555
+  ok: 1-h = 0.0500445
+  [part A: 0.0s]
+B. Bad_k
+  ok: |Bad_k| simulation = ballot DP for k=2..20; equals the note's table; Bad_k in 3 mod 4; -1, -5 in Bad_k, 1 not
+  ok: ballot DP matches |Bad_k| at k=40,100,200 (3 digits); |Bad_k| <= 2^(hk) for k=2..200
+  [part B: 1.0s]
+C. sigma_k class (i)
+  k= 2 F_k=  1/2 potential certificate ok (max psi 1); exact Karp rho_max = 1/2; attained by the period-2 orbit of c/(2^d-3^a) = 1
+  k= 3 F_k=  1/2 potential certificate ok (max psi 1); exact Karp rho_max = 1/2; attained by the period-2 orbit of c/(2^d-3^a) = 1
+  k= 4 F_k=  1/2 potential certificate ok (max psi 2); exact Karp rho_max = 1/2; attained by the period-2 orbit of c/(2^d-3^a) = 1
+  k= 5 F_k=  3/5 potential certificate ok (max psi 6); exact Karp rho_max = 3/5; attained by the period-5 orbit of c/(2^d-3^a) = 23/5
+  k= 6 F_k=  3/5 potential certificate ok (max psi 6); exact Karp rho_max = 3/5; attained by the period-5 orbit of c/(2^d-3^a) = 23/5
+  k= 7 F_k=  3/5 potential certificate ok (max psi 8); exact Karp rho_max = 3/5; attained by the period-5 orbit of c/(2^d-3^a) = 23/5
+  k= 8 F_k=  5/8 potential certificate ok (max psi 15); exact Karp rho_max = 5/8; attained by the period-8 orbit of c/(2^d-3^a) = 319/13
+  k= 9 F_k=  5/8 potential certificate ok (max psi 15); exact Karp rho_max = 5/8; attained by the period-8 orbit of c/(2^d-3^a) = 319/13
+  k=10 F_k=  5/8 potential certificate ok (max psi 18); exact Karp rho_max = 5/8; attained by the period-8 orbit of c/(2^d-3^a) = 319/13
+  k=11 F_k=  5/8 potential certificate ok (max psi 18); exact Karp rho_max = 5/8; attained by the period-8 orbit of c/(2^d-3^a) = 319/13
+  k=12 F_k=  5/8 potential certificate ok (max psi 21); attained by the period-8 orbit of c/(2^d-3^a) = 319/13
+  k=13 F_k=  5/8 potential certificate ok (max psi 24); attained by the period-8 orbit of c/(2^d-3^a) = 319/13
+  k=14 F_k=  5/8 potential certificate ok (max psi 24); attained by the period-8 orbit of c/(2^d-3^a) = 319/13
+  k=15 F_k=  5/8 potential certificate ok (max psi 27); attained by the period-8 orbit of c/(2^d-3^a) = 319/13
+  k=16 F_k=  5/8 potential certificate ok (max psi 30); attained by the period-8 orbit of c/(2^d-3^a) = 319/13
+  ok: sigma_k is class (i) with rho_max <= F_k (k=2..16), = F_k exactly (Karp, k<=11), attained (k<=16)
+  [part C: 0.2s]
+D. integer dynamics of T_(sigma_k), n <= 200000
+  k= 2 n_0=  1  non-descending n in [2,200000]: 0 (max -)
+  k= 3 n_0=  1  non-descending n in [2,200000]: 0 (max -)
+  k= 4 n_0=  1  non-descending n in [2,200000]: 0 (max -)
+  k= 5 n_0=  4  non-descending n in [2,200000]: 0 (max -)
+  k= 6 n_0=  4  non-descending n in [2,200000]: 0 (max -)
+  k= 7 n_0=  4  non-descending n in [2,200000]: 0 (max -)
+  k= 8 n_0= 24  non-descending n in [2,200000]: 0 (max -)
+  k= 9 n_0= 24  non-descending n in [2,200000]: 0 (max -)
+  k=10 n_0= 24  non-descending n in [2,200000]: 0 (max -)
+  k=11 n_0= 24  non-descending n in [2,200000]: 0 (max -)
+  k=12 n_0= 24  non-descending n in [2,200000]: 0 (max -)
+  k=13 n_0= 24  non-descending n in [2,200000]: 0 (max -)
+  k=14 n_0= 24  non-descending n in [2,200000]: 0 (max -)
+  k=15 n_0= 24  non-descending n in [2,200000]: 0 (max -)
+  k=16 n_0= 24  non-descending n in [2,200000]: 0 (max -)
+  k=17 n_0= 24  non-descending n in [2,200000]: 0 (max -)
+  k=18 n_0= 24  non-descending n in [2,200000]: 0 (max -)
+  k=19 n_0= 24  non-descending n in [2,200000]: 0 (max -)
+  k=20 n_0= 24  non-descending n in [2,200000]: 0 (max -)
+  ok: n_0(k) by DFS = 1, 4, 24 at k>=2,5,8 (k<=20); every n in (n_0, N] descends within k; every n <= n_0 reaches 1
+  [part D: 0.9s]
+E. necklaces
+  N_40 = 1.109e+09
+  N_100 = 4.207e+25
+  N_200 = 6.596e+53
+  ok: N_k: enumeration = Burnside (k<=20), equals the note's table; N_k >= 2^(hk)/(3k^2) for k=2..200
+  ok: rotation of parity words is an edge of Collatz's parity graph G_0 (k<=12): necklaces are closed walks
+  [part E: 1.1s]
+F. delta_k exhaustive for k<=6
+  k=2: delta_k = 1 (first optimum found: flips at residues [3])
+  k=3: delta_k = 2 (first optimum found: flips at residues [3, 7])
+  k=4: delta_k = 2 (first optimum found: flips at residues [11, 15])
+  k=5: delta_k = 4 (first optimum found: flips at residues [7, 15, 25, 31])
+  k=6: delta_k = 5 (first optimum found: flips at residues [7, 15, 27, 59, 63])
+  ok: delta_k = 1,2,2,4,5 for k=2..6 by exhaustive search over flip sets of increasing size
+  [part F: 17.1s]
+
+[parts G, H, K (solver re-derivations) were still running at promotion time; their output is appended below when complete]
