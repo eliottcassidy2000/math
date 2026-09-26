@@ -65,7 +65,8 @@ def main():
         print("   %-24s N=%5d  D_N(phase)=%.4f (uniform ~ %.4f)  shift log2 C_l: first %.5f, last %.5f, max-min over last half %.2e" % (
             name, N, discrepancy(ph), 1 / math.sqrt(N), shift[1] if N > 1 else 0, shift[-1], max(shift[N // 2:]) - min(shift[N // 2:])))
     print("(X) crossings of dyadic levels by the odd iterates (record-holder 3n+1 orbits and 5n+1): level 2^t, #odd iterates below, #downcrossings (m_(l-1) > 2^t >= m_l)")
-    for name, (ms, ds) in [("3n+1 from 63728127", odd_iterates(63728127, 3000)), ("3n+1 from 2^60-1", odd_iterates(2 ** 60 - 1, 3000)), ("5n+1 from 7", odd_iterates(7, 2000, q=5))]:
+    for name, (ms, ds), q in [("3n+1 from 63728127", odd_iterates(63728127, 3000), 3), ("3n+1 from 2^60-1", odd_iterates(2 ** 60 - 1, 3000), 3), ("5n+1 from 7", odd_iterates(7, 2000, q=5), 5)]:
+        alpha_q = math.log2(q)
         row = []
         for t in (10, 14, 18, 22, 26, 30):
             Y = 2 ** t
@@ -76,8 +77,8 @@ def main():
         # Diophantine pairs between successive visits of the band (Y/2, Y] for Y = 2^18
         Y = 2 ** 18; vis = [l for l, m in enumerate(ms) if Y // 2 < m <= Y]
         pairs = [(vis[i + 1] - vis[i], ds[vis[i + 1]] - ds[vis[i]]) for i in range(min(8, len(vis) - 1))]
-        print("      band (2^17, 2^18]: visits at l = %s; (M, D) between successive visits: %s; |M alpha - D| = %s" % (
-            vis[:9], pairs, ["%.2f" % abs(M * ALPHA - D) for M, D in pairs]))
+        print("      band (2^17, 2^18]: visits at l = %s; (M, D) between successive visits: %s; |M log2(q) - D| = %s" % (
+            vis[:9], pairs, ["%.2f" % abs(M * alpha_q - D) for M, D in pairs]))
 
 
 if __name__ == '__main__':

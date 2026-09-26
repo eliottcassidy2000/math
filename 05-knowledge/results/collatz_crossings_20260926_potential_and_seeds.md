@@ -1,8 +1,9 @@
 # The orbit-coupled potential on crossings, attacked: the real place of a divergent orbit is rigid (a golden-free rotation), the two-place clock, exits are ballot-thin, and why stays are not; with the 1/3-2/3 analogy made precise and the owner's three seeds decoded
 
-**Status: REASSESSMENT with PROVED small statements (Propositions 1-4,
+**Status: REASSESSMENT with PROVED small statements (Propositions 1-3,
 the exits lemma, the {2,3,11} proposition), FINITE-EXACT probes, SPECULATION
-clearly marked (sections 2.4 and 3.6). No Collatz claim. Session
+clearly marked (sections 2.4 and 3.6), INDEPENDENTLY AUDITED (HAS GAPS ->
+repaired, section 6). No Collatz claim. Session
 `collatz-crossings-20260926` (opus), 2026-09-26.**
 
 Scripts: `04-computation/experiments/collatz_crossings_20260926_phase.py`
@@ -25,15 +26,18 @@ blue  = AB = { floor(floor(k phi^2) phi) } = { n : the lowest Zeckendorf index o
 
 which partition the positive integers (`N = A + B`, `A = AA + AB`), with
 densities `phi^(-2), phi^(-2), phi^(-3)` (`0.382, 0.382, 0.236`). The
-owner's list agrees with this for `n <= 34`; it puts `35` in blue where `AB`
-continues `..., 29, 32, 37, 42, 45, 50` and `35 = 34 + 1` is red (`AA`).
+owner's list (supplied in the prompt of this session, not in the repo)
+agrees with this for `n <= 34`; it puts `35` in blue where `AB` continues
+`..., 29, 32, 37, 42, 45, 50` and `35 = 34 + 1` is red (`AA`).
 The blue gaps `5, 3, 5, 5, 3, 5, 3, 5, 5, ...` are the Fibonacci word. So the
 "couple of bits of parity hiding behind the natural numbers" are exactly
 the two bits (`A`/`B`, then `AA`/`AB`) of the lowest Zeckendorf digit: the
 golden coding of `n`. Under doubling the colours move rigidly (`black ->
 red or black`, `blue -> red or blue`, each `1/2`; `red -> 0.19/0.50/0.31`;
-mutual information `0.369` bits), because the golden coordinate `{n phi}`
-doubles; under the Collatz step they carry nothing: the mutual
+mutual information `0.369` bits), because the colour is a function of the
+golden coordinate `x = {n phi}` (black for `x < phi^(-2)`, red for
+`phi^(-2) < x < 1 - phi^(-3)`, blue above; audit) and `{2n phi} = {2x}`, which
+gives the exact red row `(phi^(-2)/2, 1/2, phi^(-1)/2)`; under the Collatz step they carry nothing: the mutual
 information of the colour of `n` with parity, `v_2(3n+1) mod 3`, descent
 within `20` steps and stopping time `mod 3` is `< 1e-5` bits at
 `N = 300000`, and the colour of the odd part `U(n)` given the colour of `n`
@@ -93,17 +97,21 @@ two extensions has balance `delta >= 1/3`, with Linial's `1/3` attained
 exactly in the three-word cells `(k, o) = (5, 4), (6, 4)` (so his bound is
 sharp on Collatz posets); cells with at least `30` extensions have
 `delta >= 0.441`, with at least `100` extensions `delta >= 0.441`, and for every
-`k` the best cell has `delta` within `0.006` of `1/2` (exactly `1/2` for most
-`k`). So the small Collatz posets sit on Linial's bound and the large ones
-are as balanced as posets can be. (b) The number of linear
+`14 <= k <= 20` the best cell has `delta` within `0.006` of `1/2` (exactly
+`1/2` for `11` of the `17` values of `k`; at `k = 5, 7, 11, 13` the best
+cells have `0.333, 0.429, 0.467, 0.491`, so the approach to `1/2` is not
+monotone). So the small Collatz posets sit on Linial's bound and the
+large ones are as balanced as posets can be. (THM-4503's note checked
+`delta >= 1/3` through `k = 14`; the exact values, the sharpness cells and
+the `0.441` floor are new.) (b) The number of linear
 extensions summed over `o` is `W_k = |Bad_k|`, whose generating function is
 Spitzer's product `sum_k W_k t^k = exp(sum_n B_n t^n/n)` (THM-4495): the
 Collatz posets have a closed-form count that ordinary two-chain posets
 with cross relations do not. (c) Reading: sorting a poset needs about
 `log_2 e(P)` comparisons when balanced pairs exist (Fredman; Kahn-Saks);
-here `log_2 e(P) = h k - (3/2) log_2 k + O(1)`, so the undecided residues
-of level `k` admit an adaptive binary code of that depth by order
-questions "does the `i`-th odd step precede the `j`-th halving", against
+here `log_2 W_k = h k - (3/2) log_2 k + O(1)` summed over the cells (a single
+cell is smaller by about `sqrt k`), so the undecided residues of level `k`
+admit an adaptive binary code of about that depth by order questions "does the `i`-th odd step precede the `j`-th halving", against
 the `k` bits of the residue itself. The `(1 - h) k` saved bits are the
 information that "no descent" carries, and they are exactly THM-4479's
 distance-to-provability exponent.
@@ -152,20 +160,30 @@ squares/doubles note; Bernstein) is
 `R_l = S_(l-1)/3^l` (plus sheet; minus sheet with `-`). Checked exactly with
 rationals on the orbits of `27`, `703`, `26623`.
 
-**3.1 Proposition 1 (the real place is a rotation).** For every orbit
-with `sum_j 1/m_j < infinity`, in particular every orbit that is not
-eventually periodic (THM-4476, Cor. 6), the phases `{log_2 m_l}` are those of
-the irrational rotation `{log_2 n + l alpha}` shifted by the convergent
-sequence `log_2 C_l`; hence they are equidistributed, and the odd iterates
-obey Benford's law along the orbit. *Proof.* `{log_2 m_l} = {log_2 n + l alpha + log_2 C_l}`
+**3.1 Proposition 1 (the real place is a rotation, in base 2).** For
+every orbit with `sum_j 1/m_j < infinity`, in particular every orbit that
+is not eventually periodic (THM-4476, Cor. 6), the phases `{log_2 m_l}` are
+those of the irrational rotation `{log_2 n + l alpha}` shifted by the
+convergent sequence `log_2 C_l`; hence they are equidistributed: the
+base-2 significands of the odd iterates are Benford along the orbit. This
+is a base-2 statement only: `log_10 m_l = log_10 Q_l + l log_10 3 - d_l log_10 2`
+and `d_l log_10 2` is not an integer, so the base-10 phases follow the
+orbit's own path `(l, d_l)` and need not equidistribute (the audit built
+a valuation word confining them to `[0, 0.35]` while the base-2 phases
+stay uniform); whether a divergent orbit can do that is open. *Proof.* `{log_2 m_l} = {log_2 n + l alpha + log_2 C_l}`
 since `d_l` is an integer; `log_2 C_l` converges; a Weyl-equidistributed
 sequence plus a convergent one is equidistributed. ∎ (Along the orbit of
 `2^200 - 1`, `980` odd iterates, the discrepancy of the phases is `0.0046`
-against the uniform-sampling scale `0.032`; the shift converges to `0.32`.
-For `5n+1` the same holds with `log_2 5` and `C_l = prod(1 + 1/(5 m_j))`: the
-shift converges to `0.1026` to `1e-12`.) This is the statistical content
-of the Lagarias-Soundararajan / Kontorovich-Miller Benford results for
-`3x+1`, here as an exact statement about each single divergent orbit.
+against the uniform-sampling scale `0.032`; on these finite `3n+1` orbits
+the shift `log_2 C_l` is `0` to five decimals until the last twenty small
+iterates, where all of its `0.32` accumulates, so convergence is only
+exhibited by the `5n+1` orbit of `7`, where with `log_2 5` and
+`C_l = prod(1 + 1/(5 m_j))` the shift converges to `0.1026` to `1e-12`.)
+This is the deterministic base-2 case of the mechanism behind the
+Lagarias-Soundararajan / Kontorovich-Miller Benford results for `3x+1`
+(which are unconditional, for most seeds, over finite segments, in every
+base); here it is conditional on `sum 1/m < infinity`, single-orbit, base 2,
+and vacuous for `3n+1` if the conjecture holds.
 Its meaning for us: **all the dynamics of an orbit is in the integers
 `d_l`**; the leading bits of `m_l` are a rigid clock, the trailing bits are
 the free address.
@@ -173,10 +191,13 @@ the free address.
 **3.2 Proposition 2 (the two-place clock).** `Q_l := m_l 2^(Delta_l) = n C_l = 2^(d_l) m_l/3^l`
 is increasing in `l`, bounded (`n < Q_l < n e^(K/3)` on the plus sheet,
 THM-4476 Cor. 6; `Q_l < 2n` whenever `R(d) < n`), and has exact valuations
-`|Q_l|_2 = 2^(-d_l)`, `|Q_l|_3 = 3^l`. Its real increments are the carries
-`Q_(l+1) - Q_l = Q_l/(3 m_l)`, so `sum_l 1/m_l <= 3 log(Q_infinity/n)`: the
-reciprocal sum is the total real motion of a quantity whose `2`-adic size
-is the halving count and whose `3`-adic size is the odd-step count. It is
+`|Q_l|_2 = 2^(-d_l)`, `|Q_l|_3 = 3^l` for `l >= 1` (`m_l = 2^(-v) mod 3` is
+never divisible by `3`). Its real increments are the carries
+`Q_(l+1) - Q_l = Q_l/(3 m_l)`, so `3 log(Q_infinity/n) <= sum_l 1/m_l <= 4 log(Q_infinity/n)`
+(from `x/(1+x) <= log(1+x) <= x` with `x = 1/(3m) <= 1/3`; a first draft had
+the first inequality reversed): the reciprocal sum is the total real
+motion of a quantity whose `2`-adic size is the halving count and whose
+`3`-adic size is the odd-step count. It is
 the only orbit-coupled monotone quantity the two-place identity offers,
 and it is too weak for crossings: its real motion is `O(1/m)` per step.
 
@@ -199,20 +220,22 @@ to `5` times while `16` to `172` of them lie below it; the same on
 `2^60 - 1`. So stays below a level are few and long; the number of
 elements is governed by the *length* of stays, not their number. Between
 successive visits of a band `(Y/2, Y]` the pairs `(M, D)` (odd steps,
-halvings) satisfy `|M alpha - D| <= 1 + o(1)`: a balanced segment, one of
-the two `D` values `floor(M alpha)`, `ceil(M alpha)` for each `M`, with no
-further Diophantine constraint.
+halvings) satisfy `|M alpha - D| <= 1 + o(1)` (with `alpha = log_2 q` for
+`qn+1`; a first output used `log_2 3` for the `5n+1` rows): a balanced
+segment, one of the two `D` values `floor(M alpha)`, `ceil(M alpha)` for each
+`M`, with no further Diophantine constraint.
 
-**Exits lemma (PROVED).** The number of stays below `X` of length at least
-`k = floor(log_2 X)` is at most `2 M_k(1.6) = O(X^(h*) (log X)^(-3/2))` for `X >= X_0(b)`
-(Lemma M of THM-4499). *Proof.* A stay that lasts `>= k` steps and then
+**Exits lemma (PROVED).** For an orbit with distinct terms, the number of
+stays below `X` of length at least `k = floor(log_2 X)` is at most
+`2 M_k(1.6) = O(X^(h*) (log X)^(-3/2))` for `X >= X_0(b)` (`X_0(1) = 21`;
+Lemma M of THM-4499; `M_k(0.737)` already suffices, see the proof). *Proof.* A stay that lasts `>= k` steps and then
 exits above `X` has an element `z <= X` exactly `k` steps before the exit;
 `z`'s `k`-word satisfies `M_s z + beta_s <= X < M_k z + beta_k` for `s < k`, so
 with `|beta_s|, |beta_k| <= |b|(3/2)^k <= X/4` once `X >= X_0(b)`, so `M_k z > 3X/4`
-and `M_s z < 5X/4`, hence `M_k/M_s > 3/5 > 2^(-1.6)` for all `s < k` with no
-condition on `z`: reversed, the word has all partial sums `> -1.6`, one of
-`M_k(1.6)` classes with two representatives below `X`; distinct stays have
-distinct `z`. ∎ Stays shorter than `k`
+and `M_s z < 5X/4`, hence `M_k/M_s > 3/5` for all `s < k` with no condition on `z`:
+reversed, the word has all partial sums `> log_2(3/5) = -0.737 > -1.6`, one
+of `M_k(1.6)` classes with two representatives below `X`; distinct stays
+have distinct `z` because the orbit's terms are distinct. ∎ Stays shorter than `k`
 are not controlled by any count: their entries `z in (X/2, X]` with
 `m`-step reversed-positive words number up to `X 2^(-(1-h) m) m^(-3/2)`, which
 is `~ X` for small `m`.
@@ -243,8 +266,9 @@ algorithm on the parameters `(m, n)`. The odd Collatz numbers form a
 binary tree in the same way: every odd `m > 1` has exactly one parent,
 `(m - 1)/4` if `m = 5 mod 8` (a comb step `n -> 4n + 1`, the same
 comb as the `27`/`41` family of THM-4502) and `U(m) = (3m + 1)/2^(v)` with
-`v in {1, 2}` otherwise; and every odd `m` not divisible by `3` has exactly
-two children (its root preimage and `4m + 1`), a multiple of `3` one. The
+`v in {1, 2}` otherwise; and every odd `m > 1` not divisible by `3` has exactly
+two children (its root preimage and `4m + 1`), a multiple of `3` one (and
+`1` has the single child `5`, its root preimage being itself). The
 conjecture is that this graph is a tree rooted at `1`. The analogy says
 what a proof would need: a height `H` on odd numbers that decreases along
 both parent moves. The comb move divides by `4`; the move `U` with `v = 2`
@@ -281,3 +305,28 @@ orbit-coupled quantities are *not* the missing one. The seeds are decoded
 and tested; the Wythoff colouring is a golden-coordinate fact with no
 Collatz content beyond the halving structure; the `{2, 3, 11}` rule is
 proved and has no dynamical content that I can see.
+
+## 6. Independent audit (2026-09-26)
+
+Auditor subagent, independent recomputation with exact arithmetic:
+`04-computation/experiments/collatz_crossings_20260926_audit.py` ->
+`05-knowledge/results/collatz_crossings_20260926_audit.out`. CONFIRMED:
+the Wythoff decoding (`AA/B/AB` = the Zeckendorf rule to `4e5`, the
+densities, the doubling matrix explained by `x = {n phi} -> {2x}`, the
+mutual-information values), the `{2, 3, 11}` proposition to `10^6`, the
+poset bijection (a linear-extension DP equals the word enumeration in
+every cell to `k = 20`, sums to THM-4495's `W_k`), all `67` balance cells,
+Propositions 1-3 (exact rationals on `27`, `703`, `26623`; the
+`3`-adic locality with its closed form), the exits lemma mechanics
+(`X_0(1) = 21`; `M_k(0.737)` suffices), the crossing counts, and the binary
+tree of 3.6 to `10^5`. CORRECTED (applied above): the "within `0.006` of
+`1/2` for every `k`" sentence (true for `14 <= k <= 20` only); the reversed
+reciprocal-sum inequality (`3 log <= sum 1/m <= 4 log`); "Benford's law"
+narrowed to base 2 (the base-10 phases follow `(l, d_l)` and need not
+equidistribute); the attribution to Lagarias-Soundararajan /
+Kontorovich-Miller rephrased; the finite-orbit "shift converges to `0.32`"
+(an artifact of the last twenty iterates); the `5n+1` band pairs of the
+script (`log_2 5`); "Proposition 4" in the status line; the distinct-terms
+hypothesis of the exits lemma; the child count of `1`. Verdict: HAS GAPS,
+repaired; no statement changed its truth value except the two false
+sentences, which were removed.

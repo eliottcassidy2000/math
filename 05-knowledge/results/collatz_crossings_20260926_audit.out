@@ -1,0 +1,182 @@
+collatz_crossings_20260926_audit.py -- independent audit of collatz_crossings_20260926_potential_and_seeds.md (2026-09-26)
+====================================================================================================
+1. Wythoff colouring (note section 1.1)
+   AA, B, AB computed exactly (floor(k phi) = (k + isqrt(5k^2))//2); they partition [1, 2000010]: True
+   Zeckendorf rule (lowest index 2 -> red, odd -> black, even>=4 -> blue) == (AA, B, AB) for n <= 400000: True (mismatches: 0)
+   colours of n = 1..8: red, black, blue, red, black, red, black, blue  (note quotes: red, black, blue, red, black, red, black, blue)
+   colour(35) = red (Zeckendorf 35 = 34 + 1, lowest index 2); colour(37) = blue (37 = 34 + 3, lowest index 4)
+   AB (blue) up to 59: [3, 8, 11, 16, 21, 24, 29, 32, 37, 42, 45, 50, 55, 58]
+   blue gaps: [5, 3, 5, 5, 3, 5, 3, 5, 5, 3, 5, 5, 3]; Fibonacci word (5=a,3=b; a->ab, b->a): [5, 3, 5, 5, 3, 5, 3, 5, 5, 3, 5, 5, 3]; equal: True
+   NOTE: the owner's full 35-term list is not in the repository (only these 8 terms are quoted in the note), so
+         'agrees for n <= 34' cannot be audited independently; the checkable part (n <= 8, 35 red, 37 blue) holds.
+   densities at N = 10^6: red 0.38197 black 0.38197 blue 0.23607; phi^-2 = 0.38197, phi^-3 = 0.23607
+   golden-coordinate rule: x = {n phi}: black iff x < phi^-2 = 0.381966, red iff phi^-2 < x < 1 - phi^-3 = 0.763932, blue iff x > 1 - phi^-3;
+      agrees with (AA, B, AB) for n <= 100000: True (mismatches 0)
+   doubling matrix colour(n) -> colour(2n), N = 10^6, row-normalised (red, black, blue):
+      red    0.19099  0.50000  0.30901
+      black  0.50000  0.50000  0.00000
+      blue   0.50000  0.00000  0.50000
+   exact derivation ({2n phi} = {2x}, x = {n phi} uniform on the colour interval):
+      black x in (0, p2) -> 2x in (0, 2 p2 = 1 - p3): black iff 2x < p2 (half), red otherwise (half), never blue
+      blue  x in (1 - p3, 1) -> 2x mod 1 in (1 - 2 p3, 1): red on (1 - 2 p3, 1 - p3) (half), blue on (1 - p3, 1) (half), never black
+      red   x in (p2, 1 - p3) -> 2x in (1 - p3, 1) [blue] u [1, 1 + p2) [black] u (1 + p2, 2 - 2 p3) [red]:
+            red->red = (phi^-1 - 2 phi^-3)/(2 phi^-2) = phi^-2/2 = 0.19098, red->black = 1/2 = 0.50000, red->blue = phi^-3/(2 phi^-2) = phi^-1/2 = 0.30902
+      exact I(colour(n); colour(2n)) from this matrix = 0.36914 bits (note: 0.369); H(colour) = 1.5524 bits
+   mutual information I(colour(n); target) at N = 100000 [target entropy; plug-in noise floor (r-1)(c-1)/(2 N ln 2)]:
+      parity                     I = 0.000000 bits  [H = 1.000; noise ~ 1.4e-05; n = 99999]
+      v2(3n+1) mod 3 (odd n)     I = 0.000000 bits  [H = 1.379; noise ~ 5.8e-05; n = 49999]
+      descent<=20 T-steps        I = 0.000005 bits  [H = 0.172; noise ~ 1.4e-05; n = 99999]
+      T-steps-to-1 mod 3         I = 0.000006 bits  [H = 1.585; noise ~ 2.9e-05; n = 99999]
+      colour(U(n)) (odd n)       I = 0.005203 bits  [H = 1.552; noise ~ 5.8e-05; n = 49999]
+      colour(2n)                 I = 0.369142 bits  [H = 1.552; noise ~ 2.9e-05; n = 99999]
+      (note claims: < 1e-5 for parity / v2 / descent / stopping mod 3 at N = 300000; 0.005 for colour(U(n)); 0.369 for colour(2n))
+   mutual information I(colour(n); target) at N = 300000 [target entropy; plug-in noise floor (r-1)(c-1)/(2 N ln 2)]:
+      parity                     I = 0.000000 bits  [H = 1.000; noise ~ 4.8e-06; n = 299999]
+      v2(3n+1) mod 3 (odd n)     I = 0.000000 bits  [H = 1.379; noise ~ 1.9e-05; n = 149999]
+      descent<=20 T-steps        I = 0.000008 bits  [H = 0.174; noise ~ 4.8e-06; n = 299999]
+      T-steps-to-1 mod 3         I = 0.000004 bits  [H = 1.585; noise ~ 9.6e-06; n = 299999]
+      colour(U(n)) (odd n)       I = 0.005180 bits  [H = 1.552; noise ~ 1.9e-05; n = 149999]
+      colour(2n)                 I = 0.369142 bits  [H = 1.552; noise ~ 9.6e-06; n = 299999]
+      (note claims: < 1e-5 for parity / v2 / descent / stopping mod 3 at N = 300000; 0.005 for colour(U(n)); 0.369 for colour(2n))
+====================================================================================================
+2. {2, 3, 11}: primes p with 2p below the next odd square above p (note section 1.2)
+   primes p <= 10^6 with 2p < next odd square: [(2, 9), (3, 9), (11, 25)]
+   multiples of p in [2p, square): [(2, [4, 6, 8]), (3, [6]), (11, [22])]
+   algebra: 2(2j-1)^2 < (2j+1)^2  <=>  4j^2 - 12j + 1 < 0; values for j = 1..6: [-7, -7, 1, 17, 41, 73]; roots 0.0858, 2.9142; so j in {1, 2}
+   case j = 1: primes in (1, 9] with 2p < 9: [2, 3]; case j = 2: primes in (9, 25] with 2p < 25: [11]
+   ratio of consecutive odd squares (2j+1)^2/(2j-1)^2 for j = 2, 3, 4: ['2.7778', '1.9600', '1.6531'] (< 2 from j = 3 on)
+   VERDICT: proposition and case analysis correct; the necessary condition 2(2j-1)^2 < (2j+1)^2 is then closed by the finite check in j = 1, 2.
+====================================================================================================
+3. No-descent posets, balance constants (note sections 2.1-2.2)
+   f(j) = least o' with 3^o' > 2^(o'+j): [2, 4, 6, 7, 9, 11, 12, 14, 16, 18, 19, 21]; equals floor(j log_(3/2) 2) + 1 for j <= 60: True (THM-4503's m_j is the same quantity)
+   linear-extension DP on P(o,e) == exact prefix enumeration for every cell, k <= 20: True
+   sum over o of e(P(o,e)) = W_k for k = 1..20: [1, 1, 2, 3, 4, 8, 13, 19, 38, 64, 128, 226, 367, 734, 1295, 2114, 4228, 7495, 14990, 27328]; equals THM-4495's list: True
+   comparison with collatz_poset_20260926_balance.out (cells with >= 2 extensions, 4 <= k <= 20): 67 cells compared, mismatches: none
+   every cell with >= 2 extensions has width 2: True; every such cell has delta >= 1/3: True
+   cells with delta = 1/3 exactly: [(5, 4, 3), (6, 4, 3)]  (note: exactly (5,4) and (6,4), three-word cells)
+   cells with >= 30 extensions: min delta = 0.4412 at (k,o) = (15,10) with 476 extensions  (note: >= 0.441)
+   cells with >= 100 extensions: min delta = 0.4412 at (k,o) = (15,10) with 476 extensions  (note: >= 0.441)
+   best cell per k, distance from 1/2 (note claims 'for every k within 0.006 of 1/2'):
+      k= 4 best delta = 0.5000 (o=3), |1/2 - delta| = 0.0000
+      k= 5 best delta = 0.3333 (o=4), |1/2 - delta| = 0.1667   <-- VIOLATES the 0.006 claim
+      k= 6 best delta = 0.5000 (o=5), |1/2 - delta| = 0.0000
+      k= 7 best delta = 0.4286 (o=5), |1/2 - delta| = 0.0714   <-- VIOLATES the 0.006 claim
+      k= 8 best delta = 0.5000 (o=7), |1/2 - delta| = 0.0000
+      k= 9 best delta = 0.5000 (o=6), |1/2 - delta| = 0.0000
+      k=10 best delta = 0.5000 (o=9), |1/2 - delta| = 0.0000
+      k=11 best delta = 0.4667 (o=7), |1/2 - delta| = 0.0333   <-- VIOLATES the 0.006 claim
+      k=12 best delta = 0.5000 (o=11), |1/2 - delta| = 0.0000
+      k=13 best delta = 0.4913 (o=9), |1/2 - delta| = 0.0087   <-- VIOLATES the 0.006 claim
+      k=14 best delta = 0.5000 (o=13), |1/2 - delta| = 0.0000
+      k=15 best delta = 0.4948 (o=11), |1/2 - delta| = 0.0052
+      k=16 best delta = 0.5000 (o=15), |1/2 - delta| = 0.0000
+      k=17 best delta = 0.5000 (o=13), |1/2 - delta| = 0.0000
+      k=18 best delta = 0.5000 (o=17), |1/2 - delta| = 0.0000
+      k=19 best delta = 0.4985 (o=15), |1/2 - delta| = 0.0015
+      k=20 best delta = 0.5000 (o=19), |1/2 - delta| = 0.0000
+   k with best cell farther than 0.006 from 1/2: [5, 7, 11, 13]
+   cell (5,4) words: ['OOOOH', 'OOOHO', 'OOHOO']
+   cell (6,4) words: ['OOOOHH', 'OOOHOH', 'OOHOOH']
+   section 2.2(c) 'log_2 e(P) = h k - (3/2) log_2 k + O(1)': for the largest cell vs the whole level W_k (k, W_k, max cell, max cell/W_k, log_2 W_k - (hk - 1.5 log_2 k), same for max cell):
+      k= 8  W_k=    19  max cell=    12  ratio=0.632  1.148  0.485  (a single cell is W_k/O(sqrt k) heuristically; the O(1) is loose for one poset)
+      k=12  W_k=   226  max cell=    88  ratio=0.389  1.798  0.437  (a single cell is W_k/O(sqrt k) heuristically; the O(1) is loose for one poset)
+      k=16  W_k=  2114  max cell=   961  ratio=0.455  1.846  0.709  (a single cell is W_k/O(sqrt k) heuristically; the O(1) is loose for one poset)
+      k=20  W_k= 27328  max cell=  9592  ratio=0.351  2.222  0.711  (a single cell is W_k/O(sqrt k) heuristically; the O(1) is loose for one poset)
+   Linial (1984): every finite width-2 poset that is not a chain has an incomparable pair with 1/3 <= P(x<y) <= 2/3; sharp on the 3-element poset a<b, c free (1/3).
+   THM-4503 bridge note section 4 already states the bijection and checked the 1/3 bound in all fixed-count universes through ell = 14;
+   new in the audited note: the exact delta values to k = 20, sharpness at (5,4),(6,4), the 0.441 floor for large cells.
+====================================================================================================
+4. Proposition 1 (phases) -- recomputation and the base question
+   3n+1 from 2^60-1       N =  310 odd iterates: D_N{log_2 m} = 0.0126, D_N{pure rotation log_2 n + l log_2 q} = 0.0053, 1/sqrt(N) = 0.0568, D_N{log_10 m} = 0.0395
+        shift log2 C_l: at l=N/2: 0.00000, at l=0.9N: 0.07159, last: 0.24659; max-min over last half: 2.47e-01; accumulated in the last 20 odd steps: 0.15609; identity vs product: 8.7e-14
+   3n+1 from 2^200-1      N =  980 odd iterates: D_N{log_2 m} = 0.0046, D_N{pure rotation log_2 n + l log_2 q} = 0.0027, 1/sqrt(N) = 0.0319, D_N{log_10 m} = 0.0233
+        shift log2 C_l: at l=N/2: 0.00000, at l=0.9N: 0.00000, last: 0.32171; max-min over last half: 3.22e-01; accumulated in the last 20 odd steps: 0.32061; identity vs product: 3.1e-13
+   3n+1 record 63728127   N =  358 odd iterates: D_N{log_2 m} = 0.0063, D_N{pure rotation log_2 n + l log_2 q} = 0.0038, 1/sqrt(N) = 0.0529, D_N{log_10 m} = 0.0331
+        shift log2 C_l: at l=N/2: 0.00000, at l=0.9N: 0.00090, last: 0.24296; max-min over last half: 2.43e-01; accumulated in the last 20 odd steps: 0.24141; identity vs product: 9.4e-14
+   5n+1 from 7            N = 3001 odd iterates: D_N{log_2 m} = 0.0016, D_N{pure rotation log_2 n + l log_2 q} = 0.0011, 1/sqrt(N) = 0.0183, D_N{log_10 m} = 0.0151
+        shift log2 C_l: at l=N/2: 0.10258, at l=0.9N: 0.10258, last: 0.10258; max-min over last half: 9.09e-13; accumulated in the last 20 odd steps: 0.00000; identity vs product: 1.1e-12
+   reading: for the finite 3n+1 orbits the 'convergence' of the shift is finiteness: it is ~0 while the iterates are huge and accumulates
+   its whole value in the last few dozen odd steps (small m_j); only the (presumed divergent) 5n+1 orbit shows genuine convergence (1e-12).
+   one-line reason for 'Weyl + convergent = equidistributed': for h != 0, |e(h(x_l+y_l)) - e(h(x_l+y))| <= 2 pi |h| |y_l - y| -> 0,
+   so the Weyl sums of x_l + y_l and of the shifted rotation x_l + y have the same Cesaro limit 0.  CONFIRMED (base 2).
+   Base question: log_2 m_l = log_2 Q_l + l alpha - d_l with d_l an INTEGER, so {log_2 m_l} = {log_2 Q_l + l alpha} (pure rotation + convergent).
+   In base 10: log_10 m_l = log_10 Q_l + l log_10 3 - d_l log_10 2, and d_l log_10 2 is NOT an integer: the phase is the linear form
+   l log_10 3 - d_l log_10 2 along the orbit's own path (l, d_l); no rotation argument applies. Synthetic demonstration (a word with v_l in {1,2}
+   chosen greedily, m_l := 3^l 2^(-d_l), exactly the identity's shape with Q constant):
+      N = 5000: D_N{log_2 m} = 0.0014 (equidistributed), D_N{log_10 m} = 0.6500, base-10 phases confined to [0.000, 0.350]
+   So base-2 significand equidistribution (what Prop. 1 proves) does not imply base-10 Benford; whether an actual divergent orbit can
+   choose its valuations like this is unknown -- the note's proof does not address it. 'Benford's law' must be read as 'in base 2'. GAP.
+   Attribution: Kontorovich-Miller (2005) and Lagarias-Soundararajan (2006) prove base-B Benford for the first N iterates of MOST seeds
+   (unconditional, finite segments, the valuations acting as a random walk on the circle); Prop. 1 is a conditional statement about ONE
+   non-eventually-periodic orbit (vacuous for 3n+1 if Collatz holds) in base 2 only, where the valuations drop out. Related but not the same content.
+====================================================================================================
+5. Proposition 2 (the two-place clock Q_l)
+   n=    27 ( 41 odd steps): identity 2^d_l m_l = 3^l n + S_(l-1): True; Q_l = n C_l: True; Q_(l+1)-Q_l = Q_l/(3 m_l): True; Q_l increasing: True;
+        |Q_l|_2 = 2^-d_l and |Q_l|_3 = 3^l (i.e. 3 does not divide m_l) for 1 <= l <= 41: True; at l = 0, |Q_0|_3 = |n|_3 = 3^-3
+        sum_(j<L) 1/m_j = 0.551743; log(Q_L/n) = 0.181362; ratio = 3.0422 (note claims ratio <= 3; correct: 3 < ratio <= 3 + 1/min m_j = 3.2000)
+   n=   703 ( 62 odd steps): identity 2^d_l m_l = 3^l n + S_(l-1): True; Q_l = n C_l: True; Q_(l+1)-Q_l = Q_l/(3 m_l): True; Q_l increasing: True;
+        |Q_l|_2 = 2^-d_l and |Q_l|_3 = 3^l (i.e. 3 does not divide m_l) for 1 <= l <= 62: True; at l = 0, |Q_0|_3 = |n|_3 = 3^-0
+        sum_(j<L) 1/m_j = 0.581786; log(Q_L/n) = 0.190577; ratio = 3.0528 (note claims ratio <= 3; correct: 3 < ratio <= 3 + 1/min m_j = 3.2000)
+   n= 26623 (113 odd steps): identity 2^d_l m_l = 3^l n + S_(l-1): True; Q_l = n C_l: True; Q_(l+1)-Q_l = Q_l/(3 m_l): True; Q_l increasing: True;
+        |Q_l|_2 = 2^-d_l and |Q_l|_3 = 3^l (i.e. 3 does not divide m_l) for 1 <= l <= 113: True; at l = 0, |Q_0|_3 = |n|_3 = 3^-0
+        sum_(j<L) 1/m_j = 0.420534; log(Q_L/n) = 0.137834; ratio = 3.0510 (note claims ratio <= 3; correct: 3 < ratio <= 3 + 1/min m_j = 3.2000)
+   over all odd n <= 4000 (full orbits to 1): sum 1/m_j / log(Q_L/n) in [3.0004, 3.1391]  -- always > 3 (log(1+x) < x), never <= 3
+   correct inequality: x/(1+x) <= log(1+x) <= x with x = 1/(3 m) <= 1/3 gives  3 log(Q_inf/n) <= sum 1/m_l <= (3 + 1/min_l m_l) log(Q_inf/n) <= 4 log(Q_inf/n).
+   The note's 'sum 1/m_l <= 3 log(Q_inf/n)' has the inequality reversed; the universal constant in the stated direction is 4. ERROR (constant), harmless for the use made of it.
+   3 | m_l for some l >= 1 on the orbit of odd n <= 10^5: 0 orbits (algebra: m_l = 2^-v (3 m_(l-1) + 1) = 2^-v mod 3 != 0)
+====================================================================================================
+6. Proposition 3 (the past is the 3-adic address)
+   n=    27: (2^d_l > Q_l) <=> (m_l < 3^l) for all l: True; 2^d_l m_l = S_(l-1) mod 3^l for all l: True; m_l = least positive residue of 2^-d_l S_(l-1) mod 3^l for all 38 indices l >= 4 with 2^d_l > Q_l: True
+   n=   703: (2^d_l > Q_l) <=> (m_l < 3^l) for all l: True; 2^d_l m_l = S_(l-1) mod 3^l for all l: True; m_l = least positive residue of 2^-d_l S_(l-1) mod 3^l for all 55 indices l >= 8 with 2^d_l > Q_l: True
+   n= 26623: (2^d_l > Q_l) <=> (m_l < 3^l) for all l: True; 2^d_l m_l = S_(l-1) mod 3^l for all l: True; m_l = least positive residue of 2^-d_l S_(l-1) mod 3^l for all 100 indices l >= 14 with 2^d_l > Q_l: True
+   locality test: over the orbits of all odd n <= 3000, key = (v_(l-j),...,v_(l-1)) -> set of residues m_l mod 3^j:
+      j=1:    12 distinct valuation windows, windows with more than one residue: 0; closed form m_l = sum_t 3^(t-1) 2^-(v_(l-t)+..+v_(l-1)) mod 3^j: True
+      j=2:    66 distinct valuation windows, windows with more than one residue: 0; closed form m_l = sum_t 3^(t-1) 2^-(v_(l-t)+..+v_(l-1)) mod 3^j: True
+      j=3:   219 distinct valuation windows, windows with more than one residue: 0; closed form m_l = sum_t 3^(t-1) 2^-(v_(l-t)+..+v_(l-1)) mod 3^j: True
+      j=4:   550 distinct valuation windows, windows with more than one residue: 0; closed form m_l = sum_t 3^(t-1) 2^-(v_(l-t)+..+v_(l-1)) mod 3^j: True
+      j=5:  1019 distinct valuation windows, windows with more than one residue: 0; closed form m_l = sum_t 3^(t-1) 2^-(v_(l-t)+..+v_(l-1)) mod 3^j: True
+      j=6:  1508 distinct valuation windows, windows with more than one residue: 0; closed form m_l = sum_t 3^(t-1) 2^-(v_(l-t)+..+v_(l-1)) mod 3^j: True
+   example: orbit 27 at l=4 (m=71, last 4 valuations [1, 2, 1, 1]) and orbit 703 at l=9 (m=6767, last 4 valuations [2, 2, 1, 1]): m mod 27 = 17, 17 (equal); mod 81 = 71, 44 (differ, 4th-last valuation differs)
+   VERDICT: Prop. 3 CONFIRMED (reduce the identity mod 3^l; m_l < 3^l iff Q_l < 2^d_l is immediate from m_l = 3^l Q_l / 2^d_l).
+====================================================================================================
+7. Exits lemma and crossings (note section 3.4)
+   |b|=1: |b|(3/2)^floor(log_2 X) <= X/4 fails exactly for X in [2, 20] (17 values), holds for all X >= 21; with the sharper carry |b|((3/2)^k - 1): holds for X >= 17
+   |b|=3: |b|(3/2)^floor(log_2 X) <= X/4 fails exactly for X in [2, 307] (256 values), holds for all X >= 308; with the sharper carry |b|((3/2)^k - 1): holds for X >= 296
+   |b|=5: |b|(3/2)^floor(log_2 X) <= X/4 fails exactly for X in [2, 1153] (897 values), holds for all X >= 1154; with the sharper carry |b|((3/2)^k - 1): holds for X >= 1134
+   (at X = 2^t the ratio is (3/4)^t |b|, decreasing in t, so the threshold is final: X_0(1) = 21; the 'X^0.585 <= X/4' reading gives X >= 4^(1/0.415) = 28.3.)
+   log_2(3/5) = -0.7370 > -1.6: the derived reversed partial sums are > log_2(3/5), so M_k(0.737) already suffices; M_k(1.6) is a valid but looser count.
+   M_k(log_2(5/3)) and M_k(1.6) for k = 10, 14, 18, 22: [(10, 142, 273), (14, 1386, 3254), (18, 16936, 34544), (22, 184697, 436704)]
+   T-orbit of 63728127: 592 iterates to 1
+      X = 2^10: stays with an exit: 2, of length >= k=10: 1 (bound 2 M_k(log2 5/3) = 284, 2 M_k(1.6) = 546); every long stay's z satisfies M_k/M_s > 3/5 for all s < k: True; distinct z: True
+      X = 2^14: stays with an exit: 2, of length >= k=14: 0 (bound 2 M_k(log2 5/3) = 2772, 2 M_k(1.6) = 6508); every long stay's z satisfies M_k/M_s > 3/5 for all s < k: True; distinct z: True
+      X = 2^18: stays with an exit: 4, of length >= k=18: 1 (bound 2 M_k(log2 5/3) = 33872, 2 M_k(1.6) = 69088); every long stay's z satisfies M_k/M_s > 3/5 for all s < k: True; distinct z: True
+      X = 2^22: stays with an exit: 2, of length >= k=22: 0 (bound 2 M_k(log2 5/3) = 369394, 2 M_k(1.6) = 873408); every long stay's z satisfies M_k/M_s > 3/5 for all s < k: True; distinct z: True
+   T-orbit of 2^60-1: 550 iterates to 1
+      X = 2^10: stays with an exit: 2, of length >= k=10: 1 (bound 2 M_k(log2 5/3) = 284, 2 M_k(1.6) = 546); every long stay's z satisfies M_k/M_s > 3/5 for all s < k: True; distinct z: True
+      X = 2^14: stays with an exit: 4, of length >= k=14: 0 (bound 2 M_k(log2 5/3) = 2772, 2 M_k(1.6) = 6508); every long stay's z satisfies M_k/M_s > 3/5 for all s < k: True; distinct z: True
+      X = 2^18: stays with an exit: 2, of length >= k=18: 0 (bound 2 M_k(log2 5/3) = 33872, 2 M_k(1.6) = 69088); every long stay's z satisfies M_k/M_s > 3/5 for all s < k: True; distinct z: True
+      X = 2^22: stays with an exit: 0, of length >= k=22: 0 (bound 2 M_k(log2 5/3) = 369394, 2 M_k(1.6) = 873408); every long stay's z satisfies M_k/M_s > 3/5 for all s < k: True; distinct z: True
+   Crossing counts on the odd iterates (level 2^t: #odd iterates <= 2^t / #downcrossings m_(l-1) > 2^t >= m_l):
+      63728127   (358 odd iterates incl. start) 2^10: 16/2  2^14: 35/3  2^18: 66/4  2^22: 93/2  2^26: 107/2  2^30: 172/5
+      2^60-1     (310 odd iterates incl. start) 2^10: 36/3  2^14: 54/4  2^18: 65/1  2^22: 65/1  2^26: 72/4  2^30: 107/2
+   5n+1 band (2^17, 2^18] pairs (M, D) = [(3, 7), (9, 21)]: |M log_2 5 - D| = ['0.03', '0.10'] (the session script printed |M log_2 3 - D| = 2.25, 6.74 for these: wrong alpha for 5n+1; harmless, not quoted in the note)
+====================================================================================================
+8. The binary tree on odd numbers (note section 3.6)
+   v_2(3m+1) >= 3 iff m = 5 mod 8, all odd m <= 400001: True (3m+1 = 0 mod 8 iff m = 7 * 3^-1 = 21 = 5 mod 8)
+   parent(m) odd and >= 1 with v in {1,2} in the U-case for all odd 3 <= m <= 400001: True
+   predicted children {4m+1} u {(2^v0 m - 1)/3 : 3 !| m, v0 least admissible} == {m' <= 400001 : parent(m') = m} for all odd m <= 100000: True
+   child counts: 2 for 3 !| m, m > 1; 1 for 3 | m; the root 1 has one child (5; its 'root preimage' (4-1)/3 = 1 is itself): True
+   parent chains from every odd m <= 100000 reach 1 (no cycle): True (cycles found: 0; longest chain 156 edges); with unique parents this is a tree rooted at 1
+   remark: U(4m+1) = U(m) (3(4m+1)+1 = 4(3m+1)), so the parent chain follows the Syracuse orbit with comb descents inserted;
+   'the graph is a tree rooted at 1' is exactly the Collatz conjecture (no divergence, no other cycle), as the note says.  CONFIRMED (marked SPECULATION for the height idea).
+====================================================================================================
+9. Text checks on the note
+   'Proposition N' labels present in the note: ['1', '2', '3', '6']; 'Proposition 4' present: False; status line says 'Propositions 1-4' (sections 3.1-3.3 are Props 1-3; '6' is the cited foundry Prop. 6).
+   'PROVED' labels: 3 occurrences; 'SPECULATION' markers: 2; section 2.4 header: marked; section 3.6 header: marked
+   'Benford' occurrences: 2; the note never names a base; the proof gives base 2 only (section 4 above).
+   'for every k the best cell has delta within 0.006 of 1/2': contradicted by the session's own .out at k = 5, 7, 11, 13 (section 3 above).
+====================================================================================================
+SUMMARY: 1.1 CONFIRMED (colouring, densities, doubling matrix explained by {2x}, MI values reproduced; owner's 35-term list not in repo);
+  1.2 CONFIRMED; 2.1 CONFIRMED (f = THM-4503's m_j; bijection; width 2; W_k list); 2.2 CONFIRMED except the 'every k within 0.006' claim (ERROR: k=5,7,11,13);
+  Prop 1 CONFIRMED in base 2, 'Benford' GAP (base 10 does not follow); Prop 2 CONFIRMED except the reciprocal-sum constant (ERROR: reversed, correct 4 / 3+1/min m);
+  Prop 3 CONFIRMED; exits lemma CONFIRMED (X_0(1) = 21, 1.6 loose, needs distinct terms); crossings CONFIRMED; 3.6 tree CONFIRMED; 'Propositions 1-4' mislabel.

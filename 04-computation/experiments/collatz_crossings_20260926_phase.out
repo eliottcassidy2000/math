@@ -9,8 +9,8 @@
    3n+1 record 63728127     N=  358  D_N(phase)=0.0063 (uniform ~ 0.0529)  shift log2 C_l: first 0.00000, last 0.24296, max-min over last half 2.43e-01
 (X) crossings of dyadic levels by the odd iterates (record-holder 3n+1 orbits and 5n+1): level 2^t, #odd iterates below, #downcrossings (m_(l-1) > 2^t >= m_l)
    3n+1 from 63728127     2^10: 16/2  2^14: 35/3  2^18: 66/4  2^22: 93/2  2^26: 107/2  2^30: 172/5
-      band (2^17, 2^18]: visits at l = [265, 280, 317, 318, 319, 322]; (M, D) between successive visits: [(15, 24), (37, 59), (1, 1), (1, 2), (3, 5)]; |M alpha - D| = ['0.23', '0.36', '0.58', '0.42', '0.25']
+      band (2^17, 2^18]: visits at l = [265, 280, 317, 318, 319, 322]; (M, D) between successive visits: [(15, 24), (37, 59), (1, 1), (1, 2), (3, 5)]; |M log2(q) - D| = ['0.23', '0.36', '0.58', '0.42', '0.25']
    3n+1 from 2^60-1       2^10: 36/3  2^14: 54/4  2^18: 65/1  2^22: 65/1  2^26: 72/4  2^30: 107/2
-      band (2^17, 2^18]: visits at l = [245, 246, 247]; (M, D) between successive visits: [(1, 1), (1, 2)]; |M alpha - D| = ['0.58', '0.42']
+      band (2^17, 2^18]: visits at l = [245, 246, 247]; (M, D) between successive visits: [(1, 1), (1, 2)]; |M log2(q) - D| = ['0.58', '0.42']
    5n+1 from 7            2^10: 8/0  2^14: 14/0  2^18: 25/1  2^22: 37/1  2^26: 56/1  2^30: 70/2
-      band (2^17, 2^18]: visits at l = [20, 23, 32]; (M, D) between successive visits: [(3, 7), (9, 21)]; |M alpha - D| = ['2.25', '6.74']
+      band (2^17, 2^18]: visits at l = [20, 23, 32]; (M, D) between successive visits: [(3, 7), (9, 21)]; |M log2(q) - D| = ['0.03', '0.10']

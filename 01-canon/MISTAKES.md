@@ -9,6 +9,13 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-26 crossings note (opus S8): Benford in base 2 is not Benford in base 10, and a reversed reciprocal-sum inequality
+
+- **What was claimed.** That the odd iterates of a divergent orbit "obey Benford's law along the orbit" because `{log_2 m_l} = {log_2 n + l log_2 3 + log_2 C_l}` is an irrational rotation up to a convergent shift.
+- **Why it overreached.** The rotation uses that the halving count `d_l` is an integer, so it disappears from `{log_2 m_l}`; in base 10 it does not: `log_10 m_l = log_10 Q_l + l log_10 3 - d_l log_10 2`, and `d_l log_10 2` is not an integer, so the base-10 phases follow the orbit's own path `(l, d_l)`. The audit exhibits a valuation word whose base-10 phases stay in `[0, 0.35]` while its base-2 phases are equidistributed. The proved statement is base-2 significand equidistribution.
+- **Second slip.** `sum 1/m_l <= 3 log(Q_inf/n)` was written with the inequality reversed; `log(1+x) < x` gives `sum 1/m_l > 3 log` always, and `x/(1+x) <= log(1+x)` gives the upper bound `4 log`.
+- **Mechanism to remember.** A quantity that is invariant in one base because an integer drops out of a fractional part is not invariant in another base. And check the direction of `log(1+x) <= x` before summing.
+
 ## 2026-09-26 poset crossroads: source laws, endpoint multiplicity, and peak carry
 
 - **HYP-9161's endpoint-free finite-segment average is false.** Exact
