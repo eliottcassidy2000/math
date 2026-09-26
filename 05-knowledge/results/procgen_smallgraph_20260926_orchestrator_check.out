@@ -1,0 +1,4 @@
+  ok: Theorem 1: the leaf table is exact for n <= 300, and min degree >= 2 iff n >= 31
+  ok: Theorem 2: no square-sum path for 2 <= n <= 14; exactly one at n = 15 (up to reversal), ends 8 and 9: [8, 1, 15, 10, 6, 3, 13, 12, 4, 5, 11, 14, 2, 7, 9]
+  ok: Theorem 5: for targets j^2 + k(4-k), the first Hamiltonian path appears at n = 4k-1, unique, with ends 2k and 2k+1 (k = 2..9)
+  ok: Proposition F4: a complete grid with n unit fences exists iff 2n+1 is an odd composite (n <= 2000; Sundaram's sieve)
