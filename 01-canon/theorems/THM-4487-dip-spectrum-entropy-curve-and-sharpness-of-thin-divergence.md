@@ -6,10 +6,11 @@ status: >
   FINITE-EXACT controls to 2^24. Let b = +-1, T_b(x) = x/2 (x even),
   (3x+b)/2 (x odd), alpha = log_2 3, h the binary entropy, and
   D_b(X, gamma) = #{n <= X : T_b^i(n) >= n^gamma for all 0 <= i <= floor(log_2 n)}.
-  (1) For every gamma in (log_4 3, 1], X^(h(gamma/alpha)-o(1)) <= D_b(X, gamma)
-  <= C X^(h(gamma/alpha)) log^2 X, the lower bound being c X^h/log^3 X except
-  at gamma = 1 on the minus sheet (block construction there, because the
-  negative carry needs a margin below n); so log D_b/log X -> h(gamma/alpha);
+  (1) For every gamma in (log_4 3, 1], c X^(h(gamma/alpha))/log^3 X <= D_b(X, gamma)
+  <= C X^(h(gamma/alpha)) log^2 X on both sheets, including gamma=1 by
+  the independently audited prepend-one-step repair. The incoming block
+  construction already recovered the exponent; this restores its polynomial
+  lower prefactor. Thus log D_b/log X -> h(gamma/alpha);
   for gamma in (log_2(3/2), log_4 3] the limit is 1. So the exponent is
   h(log_3 2) = 0.949956 at gamma = 1 (Terras's undecided count) and rises to
   1 exactly at Korec's exponent log_4 3 = 0.792481; the constants
@@ -48,7 +49,11 @@ audit: >
   the observed four-doubling slopes sit near h(rho) - 1/(k ln 2)); a
   counting off-by-one in the first control script was found and fixed
   before filing (the earlier rows counted n < 2^(t+1) as n <= 2^t).
-  Independent audit not yet performed.
+  Independent audit of the gamma=1 lower-bound boundary by the 223 crossroads
+  session repaired an invalid n>=3n inference: prepend an odd step to a
+  rotated tail, giving every positive prefix multiplier at least 3/2 on
+  both sheets. This is a targeted boundary audit, not a full independent
+  audit of all statements.
 ---
 
 # THM-4487 -- the dip spectrum and the sharpness of the thin-divergence exponent
@@ -74,15 +79,18 @@ For `b = +-1`, `alpha = log_2 3`, `h` the binary entropy:
    `gamma > log_2(3/2)`), i.e. `o >= (gamma/alpha) t - 2` odd letters; such
    words number `2^(t h(gamma/alpha)) poly(t)`, and each is one residue class
    modulo `2^t` (Terras), with one representative per dyadic block.
-2. **Lower bound.** Among the `C(t, o)` words with `o = ceil((gamma/alpha) t) + 1`
+2. **Lower bound for gamma<1.** Among the `C(t, o)` words with `o = ceil((gamma/alpha) t) + 1`
    odd letters, at least `C(t, o)/t` have all partial sums
    `S_i = i - o_i alpha` at most `max(0, S_t)` (rotate after the maximum
    partial sum: THM-4478 section 4). Their representatives in `[2^t, 2^(t+1))`
-   satisfy `T^i(n) >= n 2^(-max(0,S_t)) - n^0.585 >= 3 n^gamma - n^0.585 >= n^gamma`
-   for `gamma < 1`; the count is `C(t, o)/t = X^(h(gamma/alpha))/poly(log X)`.
-   At `gamma = 1` the plus sheet has nonnegative carry and `S_i <= 0` suffices;
-   the minus sheet needs `S_i` bounded away from `0`, obtained by concatenating
-   rotated blocks of fixed length `L` (exponent `h(o_L/L) -> h*`).
+   satisfy `T^i(n) >= n 2^(-max(0,S_t)) - n^0.585 >= 3 n^gamma - n^0.585 >= n^gamma`;
+   the count is `C(t, o)/t = X^(h(gamma/alpha))/poly(log X)`.
+   **At gamma=1**, the displayed 3n margin does not follow. Use a rotated
+   tail of length t-1 with `o=ceil((t-1)/alpha)+1`, and prepend one odd
+   step. Every positive prefix multiplier is now >=3/2, so on both sheets
+   `T_b^i(n)>=(3/2)n-(3/2)^t>=n` for large t and n>=2^t. The number of
+   such words has the same entropy exponent. See the full note's repaired
+   section 1.3 and the 2026-09-26 223 entry in MISTAKES.md.
 3. **Both sheets.** The carry is nonnegative on the plus sheet and
    nonpositive on the minus sheet; both directions only use `|carry| <= (3/2)^t`.
 4. **Sharpness.** The same construction with `theta` in place of `1 - gamma`

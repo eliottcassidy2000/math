@@ -1,0 +1,8 @@
+FINITE-EXACT binary 3x3 TP2 matrices 147 trace-power gates 1176
+Non-TP2 hostile [[0,1],[1,0]] has trace 0 and spectral radius 1
+FINITE-EXACT rational bridges 108 closed paths 17313 distinct rotated images summed per universe 1059
+VERIFIED sine/trace comparisons 108 smallest absolute margin 2.7755575615628914e-17
+FINITE-EXACT one-sided connector trace-count gates 15
+VERIFIED phase-compatible connector geometries 48 (q=3,5,7,31; M=32,64; three central heights)
+VERIFIED connector probability lower bounds 48 minimum log margin 41.09208130717039
+PASS: zero patterns, strict survival, grid closure, rotation multiplicity audited

@@ -1,0 +1,14 @@
+{"independent_exhaustive_assignments": 65534, "cutoffs_checked": [2, 16]}
+{"first_prefix_above_matching": 23, "matching": 5, "exact_optimum": 6}
+{"pair_cutoff": 23, "exact_P2_prefix_optimum": 6, "new_explicit_lower_bound": 6, "optimum_fraction": 0.2608695652173913}
+{"pair_cutoff": 33, "exact_P2_prefix_optimum": 10, "new_explicit_lower_bound": 10, "optimum_fraction": 0.30303030303030304}
+{"pair_cutoff": 112, "exact_P2_prefix_optimum": 33, "new_explicit_lower_bound": 30, "optimum_fraction": 0.29464285714285715}
+{"pair_cutoff": 223, "exact_P2_prefix_optimum": 66, "new_explicit_lower_bound": 60, "optimum_fraction": 0.29596412556053814}
+{"pair_cutoff": 1000, "exact_P2_prefix_optimum": 289, "new_explicit_lower_bound": 269, "optimum_fraction": 0.289}
+{"pair_cutoff": 3000, "exact_P2_prefix_optimum": 874, "new_explicit_lower_bound": 806, "optimum_fraction": 0.29133333333333333}
+{"pair_cutoff": 10000, "exact_P2_prefix_optimum": 2907, "new_explicit_lower_bound": 2685, "optimum_fraction": 0.2907}
+{"pair_cutoff": 100000, "exact_P2_prefix_optimum": 29080, "new_explicit_lower_bound": 26851, "optimum_fraction": 0.2908}
+{"feasible_six_bit_assignments": 6, "affine_packets_checked": 1000, "matching_edges_at_100000": 24999, "disjoint_extra_edges_at_100000": 1852, "proved_lower_density": "29/108"}
+{"global_P4_surgery": "unflip only pair23 in free-zero P2 member", "finite_sources_needed_for_global_audit": [3, 46], "only_delayed_path": [30, 45, 68, 34, 17], "extra_cut_hostile_bits": {"17": 0, "23": 0}}
+ALL CHECKS PASSED
+NORMAL AND OPTIMIZED OUTPUTS IDENTICAL

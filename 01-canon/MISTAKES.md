@@ -9,6 +9,33 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-26 223 crossroads: endpoint margin, finite lifts, and global ownership
+
+- **Demonstrated false inequality, repaired theorem.** THM-4487's first
+  lower-bound proof used `n*2^(-max(0,S_t))>=3n` at gamma=1, although
+  S_t<0 makes the left side exactly n. This particularly left the minus
+  sheet without a carry margin. Repair: rotate a length-(t-1) tail with
+  surplus odd count and prepend one odd step. Every positive prefix
+  multiplier is then >=3/2, so `(3/2)n-(3/2)^t>=n` for large t and n>=2^t,
+  on both sheets; the entropy count loses only constant/polynomial factors.
+  The gamma<1 proof uses S_t>0 eventually. The theorem's endpoint survives.
+  [THM-4487 and repaired proof](theorems/THM-4487-dip-spectrum-entropy-curve-and-sharpness-of-thin-divergence.md).
+  The accompanying Korec row now states a sufficient threshold and does
+  not assert an unproved necessity for unrestricted orbits.
+- **Finite residue closure is not integrality.** At the first expanding
+  223 resonance, nonzero translations fail to close after one word but
+  close after 223 repetitions. Their rational fixed-point denominator's
+  223-adic defect persists because numerator and denominator gain the
+  same geometric-sum factor. The valid filter concerns integer or
+  223-integral cycle sources. Complete finite lifts preserve cycle-mean
+  extrema and inherited exponential path growth.
+  [Exact automata proof and controls](../05-knowledge/results/crossroads223_20260926_automata.md).
+- **Private cost is not once-per-pair density.** A 9/8 penalty for executing
+  compatible cheapest private two-step rescues counts a flip again for
+  each source using it. It does not prove a 9/8 gap in global flip density.
+  Positive first-hit covers also lose the required unflipped continuation.
+  [Flow theorem and explicit ownership boundary](../05-knowledge/results/crossroads223_20260926_flow.md).
+
 ## 2026-09-26 Collatz crossroads: tilted moments, pullback periods, and lost chronology
 
 - **Fixed-slope injectivity REFUTED after strong finite support.** All

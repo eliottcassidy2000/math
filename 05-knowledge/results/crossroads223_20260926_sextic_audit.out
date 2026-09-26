@@ -1,0 +1,7 @@
+source_sha256 5531978196570afb75f26e7aae8b99c4ac326023922cd821488ec3f4396bba78
+FINITE-EXACT: 84 primes <=433; 4633895 affine-chart cases
+projective_empty [7, 31, 67, 79, 139, 223]
+torus_empty [2, 5, 7, 13, 31, 61, 67, 79, 97, 139, 157, 223, 277]
+controls (projective,torus) {2: (3, 0), 3: (4, 4), 223: (0, 0), 277: (18, 0), 397: (738, 720), 401: (402, 396), 433: (414, 396)}
+cutoffs verified using integer squares; extension uses CITED genus/Hasse-Weil
+PASS

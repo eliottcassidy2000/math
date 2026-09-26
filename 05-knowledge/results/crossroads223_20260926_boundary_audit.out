@@ -1,0 +1,5 @@
+source_sha256 f72f83b0e0b0ec72a1c82eaa960f4c5e4b7f7556ce182d4408d2eca86601d223
+FINITE-EXACT universe: lengths4..16, prescribed surplus-count tails
+all rotated inputs 3142 distinct full-word sheet realizations 2244
+integer >=3/2 prefix margins and actual no-dip condition: PASS
+This tests the repaired boundary only, not all of THM4487.
