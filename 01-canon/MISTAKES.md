@@ -9,6 +9,13 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-26 THM-4498: the dyadic block's worst endpoint flips with the sign of the exponent; float DPs admit exact ties (opus S6; caught by the independent audit)
+
+- **What was written.** In Theorem 5(a)'s lower bound, `M_i(w) >= 4 * 2^((gamma-1)(t+1)) >= 4 n^(gamma-1)` for `n in [2^t, 2^(t+1))`, copied from the upper-bound argument of section 1.2 (where `n < 2^(t+1)` is the right end).
+- **Why it was wrong.** `gamma - 1 < 0`, so `n^(gamma-1)` is decreasing in `n` and the worst `n` of the block is `2^t`; the inequality is false for every `n` in the block. The theorem survives because the chosen `K` condition `(c + 0.585) K >= delta_0 + c + 2` supplies exactly the missing slack `c`: `S_i(w) >= -ct + c + 2 > -ct + 2`, hence `M_i >= 4 * 2^(-ct) >= 4 n^(gamma-1)` for `n >= 2^t`.
+- **Second finding.** The control DP compared `o alpha - j > (gamma - 1) t` in floating point under the docstring "ties impossible"; for `o = 0` the prefix sum is the integer `-j`, which equals the rational barrier when `(1 - gamma) t` is an integer (e.g. `gamma = 0.82`, `t = 50`, `j = 9`), and the float comparison admitted or rejected such ties arbitrarily; five cells of the printed table were off by up to `1.2%`. Repaired with an exact test at `o = 0` and a regenerated output.
+- **Mechanism to remember.** When an inequality is transported between an upper and a lower bound, re-derive which end of the dyadic block is the worst case for the sign at hand. Irrationality kills ties only where an irrational actually enters; the all-zero prefix has an integer partial sum, and a rational barrier must be compared exactly there.
+
 ## 2026-09-26 ten-vertex crossroads: interactions, weights and phase repair
 
 - **Triangle totals lose global path counts.** The staircase with233 paths

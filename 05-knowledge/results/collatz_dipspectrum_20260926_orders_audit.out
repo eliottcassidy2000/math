@@ -1,0 +1,283 @@
+== (0) constants ==
+   alpha = log_2 3 = 1.584962500721   log_2(3/2) = 0.584962501   log_4 3 = 0.792481250
+   rho* = log_3 2 = 0.630929754   h* = h(rho*) = 0.949955527   (note: 0.9499555)
+   lambda* = log_2(rho*/(1-rho*))/alpha = 0.488077132 = log_3(1/log_2(3/2)) = 0.488077132 = -h'(rho*)/alpha = 0.488077132   (note: 0.488077)
+   a* = lambda*/h* - 1/2 = 0.013789454   (note: 0.013789);  lambda*/h* = 0.513789 (note bounds it by 0.52)
+   theta_0 = 1 - alpha/2 = c_0 = 0.207518750   theta_1 = theta_0/2 = 0.103759375   rho_min = (1-theta_1)/alpha = 0.565464877   (note says rho >= 0.5655: FALSE, it is 0.565465 >= 0.5654 only)
+
+== (1) section 1.2b: geometric tail above o_0 = ceil(rho t - 2), ratio (t-o)/(o+1) <= (1 - rho + 2/t)/(rho - 2/t) ==
+   gamma     rho      r=(1-rho)/rho  1/(1-r)=rho/(2rho-1)   t_0 (ratio<1 needs t > 4/(2rho-1))   asymptotic block constant (rho/(1-rho))^2/((1-r) sqrt(2 pi rho(1-rho)))
+   0.7930   0.500327   0.998692         764.338            6111               611.452
+   0.8000   0.504744   0.981203          53.200             422                44.092
+   0.8200   0.517362   0.932881          14.899             116                13.668
+   0.8500   0.536290   0.864662           7.389              56                 7.906
+   0.8800   0.555218   0.801094           5.027              37                 6.289
+   0.9100   0.574146   0.741717           3.872              27                 5.678
+   0.9400   0.593074   0.686130           3.186              22                 5.496
+   0.9700   0.612002   0.633982           2.732              18                 5.565
+   1.0000   0.630930   0.584963           2.409              16                 5.821
+   -> the constant is uniform on compact subsets of (log_4 3, 1] (t_0 and 1/(1-r) are monotone in rho) and blows up like rho/(2 rho - 1) as gamma -> log_4 3.
+   exact check of the block bound: S(t) = sum_(o >= o_0) C(t, o) versus B(t) = (rho/(1-rho))^2 2^(t h(rho)) / (delta_t sqrt(2 pi t p (1-p))), p = o_0/t, delta_t = 1 - (1-rho+2/t)/(rho-2/t)
+   also the chain's pieces: max_(o>=o_0) (t-o)/(o+1) <= (1-rho+2/t)/(rho-2/t) [ratio ok?], C(t,o_0) <= 2^(t h(p))/sqrt(2 pi t p(1-p)) [Stirling ok?], 2^(t h(p)) <= (rho/(1-rho))^2 2^(t h(rho)) [h' ok?]
+   gamma=0.82 t=  100 o_0=   50: t < t_0(rho) = 116, the ratio bound is 1.0106 >= 1 and 1.2b gives NO bound for this block (the block is covered by the finite n_0 term)
+   gamma=0.82 t=  300 o_0=  154 p=0.51333  S/B = 0.3252  ratio ok: True  Stirling ok: True  h' ok: True
+   gamma=0.82 t= 1000 o_0=  516 p=0.51600  S/B = 0.6140  ratio ok: True  Stirling ok: True  h' ok: True
+   gamma=0.82 t= 3000 o_0= 1551 p=0.51700  S/B = 0.7675  ratio ok: True  Stirling ok: True  h' ok: True
+   gamma=0.91 t=  100 o_0=   56 p=0.56000  S/B = 0.5470  ratio ok: True  Stirling ok: True  h' ok: True
+   gamma=0.91 t=  300 o_0=  171 p=0.57000  S/B = 0.6852  ratio ok: True  Stirling ok: True  h' ok: True
+   gamma=0.91 t= 1000 o_0=  573 p=0.57300  S/B = 0.7375  ratio ok: True  Stirling ok: True  h' ok: True
+   gamma=0.91 t= 3000 o_0= 1721 p=0.57367  S/B = 0.8318  ratio ok: True  Stirling ok: True  h' ok: True
+   gamma=0.97 t=  100 o_0=   60 p=0.60000  S/B = 0.5479  ratio ok: True  Stirling ok: True  h' ok: True
+   gamma=0.97 t=  300 o_0=  182 p=0.60667  S/B = 0.7706  ratio ok: True  Stirling ok: True  h' ok: True
+   gamma=0.97 t= 1000 o_0=  611 p=0.61100  S/B = 0.6190  ratio ok: True  Stirling ok: True  h' ok: True
+   gamma=0.97 t= 3000 o_0= 1835 p=0.61167  S/B = 0.6303  ratio ok: True  Stirling ok: True  h' ok: True
+   gamma=1.00 t=  100 o_0=   62 p=0.62000  S/B = 0.5090  ratio ok: True  Stirling ok: True  h' ok: True
+   gamma=1.00 t=  300 o_0=  188 p=0.62667  S/B = 0.6382  ratio ok: True  Stirling ok: True  h' ok: True
+   gamma=1.00 t= 1000 o_0=  629 p=0.62900  S/B = 0.9445  ratio ok: True  Stirling ok: True  h' ok: True
+   gamma=1.00 t= 3000 o_0= 1891 p=0.63033  S/B = 0.8875  ratio ok: True  Stirling ok: True  h' ok: True
+   Stirling bounds used: 2^(n h(p))/sqrt(8 n p(1-p)) <= C(n,k) <= 2^(n h(p))/sqrt(2 pi n p(1-p)), p = k/n, 1 <= k <= n-1:
+   max over n in [2,400] u {500,1000,2000,3000}, all k, of log2 C(n,k) - log2(upper) = -1.202e-04 (must be <= 0: True); min of log2 C - log2(lower) = 0.000e+00 (must be >= 0: True)
+   [time 0.8s]
+
+== (2) Theorem 5(a) lower bound ==
+   (i) drift: rho alpha - 1 = gamma - 1 = -c: identity.
+   (ii) E Y_i = i j/t' with j = ceil(rho t') <= rho t' + 1, so E Y_i <= rho i + i/t' <= rho i + 1: identity.
+   (iii) Hoeffding (1963, Thm 4 -> Thm 2, values in [0,1]): P(mean dev >= x) <= exp(-2 i x^2); x = c/(2 alpha) gives exp(-c^2 i/(2 alpha^2)): matches the note.
+   (vii) block end: the note claims 4 * 2^((gamma-1)(t+1)) >= 4 n^(gamma-1) for n in [2^t, 2^(t+1)). With gamma - 1 = -c < 0, n^(gamma-1) is DEcreasing in n,
+        so its maximum over the block is at n = 2^t, namely 2^(-ct) > 2^(-c(t+1)). The claimed inequality is FALSE for every n in the block:
+        gamma=0.82 t=100: 4*2^((gamma-1)(t+1)) = 1.346898e-05 < 4 n^(gamma-1) at n = 2^t = 1.525879e-05  (ratio 2^(-c) = 0.8827)
+        gamma=0.85 t=100: 4*2^((gamma-1)(t+1)) = 1.100159e-04 < 4 n^(gamma-1) at n = 2^t = 1.220703e-04  (ratio 2^(-c) = 0.9013)
+        gamma=0.88 t=100: 4*2^((gamma-1)(t+1)) = 8.986208e-04 < 4 n^(gamma-1) at n = 2^t = 9.765625e-04  (ratio 2^(-c) = 0.9202)
+        gamma=0.91 t=100: 4*2^((gamma-1)(t+1)) = 7.340021e-03 < 4 n^(gamma-1) at n = 2^t = 7.812500e-03  (ratio 2^(-c) = 0.9395)
+        gamma=0.94 t=100: 4*2^((gamma-1)(t+1)) = 5.995401e-02 < 4 n^(gamma-1) at n = 2^t = 6.250000e-02  (ratio 2^(-c) = 0.9593)
+        gamma=0.97 t=100: 4*2^((gamma-1)(t+1)) = 4.897101e-01 < 4 n^(gamma-1) at n = 2^t = 5.000000e-01  (ratio 2^(-c) = 0.9794)
+        What is needed for M_i n >= 4 n^gamma on the whole block is S_i(w) >= -ct + 2 (n = 2^t is the worst case).
+        The margin actually available from the stated K, (c + 0.585) K >= delta_0 + c + 2, is S_(K+l)(w) >= (c+0.585)K - ct - delta_0 >= -ct + c + 2 > -ct + 2:
+        the '+c' in the K condition is exactly the slack that repairs the step (or, without it, the weaker M_i n >= 4 * 2^(-c) n^gamma >= 3.5 n^gamma still beats the carry).
+   (viii) carry: 4 n^gamma - (3/2)^t >= n^gamma iff (3/2)^t <= 3 n^gamma; with n >= 2^t this holds for EVERY t when gamma >= log_2(3/2) (no t_0 needed).
+   (vi) margin algebra: 0.585 K - c t' - delta_0 = (c + 0.585) K - c t - delta_0; the note's target -c(t+1) + 2 needs (c+0.585)K >= delta_0 - c + 2, weaker than the stated condition.
+   constants table (3) of the original script recomputed (i_0 = min{i : q^i/(1-q) <= 1/2}, q = exp(-c^2/(2 alpha^2))):
+      gamma=0.82 c=0.18 i_0=   891 delta_0=   521.20 K_0=   685 (K needed for -ct+2:    684); with K_0: S_(K+l) + ct >= 2.798 >= 2 + c = 2.180: True; cost 2^(-K_0 E) = 9.42e-207
+      gamma=0.85 c=0.15 i_0=  1363 delta_0=   797.30 K_0=  1088 (K needed for -ct+2:   1088); with K_0: S_(K+l) + ct >= 2.335 >= 2 + c = 2.150: True; cost 2^(-K_0 E) = 0.00e+00
+      gamma=0.88 c=0.12 i_0=  2286 delta_0=  1337.22 K_0=  1900 (K needed for -ct+2:   1900); with K_0: S_(K+l) + ct >= 2.204 >= 2 + c = 2.120: True; cost 2^(-K_0 E) = 0.00e+00
+      gamma=0.91 c=0.09 i_0=  4419 delta_0=  2584.95 K_0=  3833 (K needed for -ct+2:   3833); with K_0: S_(K+l) + ct >= 2.182 >= 2 + c = 2.090: True; cost 2^(-K_0 E) = 0.00e+00
+      gamma=0.94 c=0.06 i_0= 11074 delta_0=  6477.87 K_0= 10047 (K needed for -ct+2:  10047); with K_0: S_(K+l) + ct >= 2.064 >= 2 + c = 2.060: True; cost 2^(-K_0 E) = 0.00e+00
+      gamma=0.97 c=0.03 i_0= 52032 delta_0= 30436.77 K_0= 49497 (K needed for -ct+2:  49497); with K_0: S_(K+l) + ct >= 2.030 >= 2 + c = 2.030: True; cost 2^(-K_0 E) = 0.00e+00
+   Hoeffding without replacement, exact hypergeometric tails: P(Y_i - E Y_i >= c i/(2 alpha)) / exp(-c^2 i/(2 alpha^2)), Y_i ~ Hyp(t', j, i), j = ceil(rho t'):
+      gamma=0.82 t'=400 j=207: max_i P/bound = 0.5504 at i = 5 (must be <= 1: True)
+      gamma=0.91 t'=400 j=230: max_i P/bound = 0.6149 at i = 3 (must be <= 1: True)
+   |h'(p)| = |log_2((1-p)/p)| on [rho, rho + 1/t']: at rho* + 1/28 = 0.666644 it is 0.99985 (<= 1: True); at rho* + 1/27 it is 1.00845 (> 1): the '|h'| <= 1' step needs t' >= 28.
+   exact fraction of V (words of length t' with j = ceil(rho t') ones) whose final rise F(v) is <= delta:
+      gamma=0.82 t'=1000 j=518:  F<=1.58: 0.6686  F<=3.17: 0.8777  F<=5.00: 0.9607  F<=10.00: 0.9985  F<=20.00: 1.0000  F<=50.00: 1.0000  F<=521.20: 1.0000   (the note needs >= 1/2 at delta_0 = 521.2: trivially true since 0.585 t' < delta_0)
+      gamma=0.91 t'=1000 j=575:  F<=1.58: 0.4277  F<=3.17: 0.6559  F<=5.00: 0.8105  F<=10.00: 0.9673  F<=20.00: 0.9994  F<=50.00: 1.0000  F<=2584.95: 1.0000   (the note needs >= 1/2 at delta_0 = 2584.9: trivially true since 0.585 t' < delta_0)
+   integer check of the sufficient condition (a): words w of length t with min_i S_i(w) in a tight window, S_i = o_i alpha - i; n = the representative in [2^t, 2^(t+1)); no dip = T_b^i(n) >= n^gamma for i <= t:
+      gamma=0.82 t=40 corrected margin  [-ct+2, -ct+2.6]: 2547 words; no-dip on plus sheet 2547/2547, minus sheet 2547/2547
+      gamma=0.82 t=40 the note's margin [-c(t+1)+2, -ct+2): 648 words; no-dip on plus sheet 648/648, minus sheet 648/648
+      gamma=0.82 t=40 below the barrier [-ct-3, -ct-2] (M_i n <= n^gamma/4: must dip): 5502 words; no-dip on plus sheet 0/5502, minus sheet 0/5502
+   [time 6.4s]
+
+== (3) Theorem 5(c) ==
+   (i) uniform drift: alpha/2 - 1 = -0.207519 = -c_0 = -(1 - log_4 3): identity.
+   (ii) reduction: S_(K+l)(w) = 0.585 K + S_l(v) > 0.585 K - c_0 t' - delta' = 0.585K - c_0 t' - (c_0+0.585)K + 2 = -c_0 (t' + K) + 2 = -c_0 t + 2 >= -c t + 2 because c >= c_0 and t > 0: correct direction, and the target -ct + 2 is the RIGHT block end (unlike (a)).
+   (iii) Hoeffding, independent letters: P(alpha Y_i - i >= delta'/2) = P(Y_i/i - 1/2 >= (c_0 i + delta'/2)/(alpha i)) <= exp(-2 (c_0 i + delta'/2)^2/(alpha^2 i)) <= e^(-2 c_0 delta'/alpha^2) e^(-2 c_0^2 i/alpha^2).
+      q = e^(-2 c_0^2/alpha^2) = 0.966296, sum_(i>=1) q^i = q/(1-q) = 28.6700, e^(-2 c_0 delta'/alpha^2) at delta' = 29: 0.008302
+      factorised bound at delta' = 29: 0.23802 (<= 1/4: True); exact sum at delta' = 29: 0.00592
+      smallest integer delta' with the factorised bound <= 1/4: 29; with the exact sum <= 1/4: 17
+      delta' = (c_0 + 0.585) K - 2 >= 29 iff K >= 39.118, i.e. K >= 40 (note: K >= 40: True)
+   (iv) endpoint: P(S_(t')(v) >= E S_(t')(v)) = P(Bin(t',1/2) >= t'/2) >= 1/2 EXACTLY for every t' (binomial symmetry), so the CLT is not needed and the good fraction is >= 1 - 1/4 - 1/2 = 1/4 for all t' >= 1:
+      min over t' <= 400 of P(Bin(t',1/2) >= t'/2) = 0.500000 (>= 1/2: True)
+   (v) multiplicative carry below log_2(3/2): integer check at gamma = 1/2, t = 30 (additive bound useless: (3/2)^30 = 1.92e+05 > n^(1/2) = 2^15 = 32768), words with min_i S_i in [-ct+2, -ct+2.6] = [-13, -12.4]:
+      sheet b=+1: 2111/2111 representatives have no dip below n^(1/2) within 30 steps
+      sheet b=-1: 2111/2111 representatives have no dip below n^(1/2) within 30 steps
+      control, min S_i in [-ct-3, -ct-2] (M_i n <= n^gamma/4), sheet b=+1: 0/306 have no dip (expected 0)
+      control, min S_i in [-ct-3, -ct-2] (M_i n <= n^gamma/4), sheet b=-1: 0/306 have no dip (expected 0)
+   [time 8.1s]
+
+== (4) Remark (i): at Korec's endpoint (c) with c = c_0 gives Theta(X); the brute-force column '0.792' (gamma = 0.7925, plus sheet) normalised by X ==
+   T:         10       12       14       16       18       20       22       24
+   D/X:   0.4043   0.4050   0.4048   0.4074   0.4100   0.4123   0.4147   0.4167   (the script does not count n = 1; gamma = 0.7925 is 0.00002 above log_4 3, where h(rho) - 1 = -4.04e-10)
+
+== (5) exact DP for W_t(gamma) = #{w in {0,1}^t : o_j alpha - j > (gamma - 1) t, 1 <= j <= t}, gamma = p/100 ==
+   exact criterion: o alpha - j > (p/100 - 1) t  <=>  3^(100 o) > 2^E, E = 100 j - (100 - p) t; for E > 0 no tie is possible (alpha irrational),
+   E < 0 admits every o >= 0, and E = 0 is an EXACT TIE at o = 0 (1 > 1 is false, so o = 0 is excluded by the strict inequality).
+   tie flips: (t, gamma) pairs where j = (100-p) t/100 is an integer and the float threshold admits o = 0 at that j:
+      t=   25 gamma=0.88: tie at j=[3] but the float comparison happened to reject o = 0 there (no flip)
+      t=   50 gamma=0.82: tie at j=[9]; threshold (j, exact, float) = [(9, 1, 0)]; W_float - W_exact = 10^10.107 (relative 3.43e-05)
+      t=   50 gamma=0.88: tie at j=[6] but the float comparison happened to reject o = 0 there (no flip)
+      t=   50 gamma=0.94: tie at j=[3]; threshold (j, exact, float) = [(3, 1, 0)]; W_float - W_exact = 10^11.732 (relative 1.21e-02)
+      t=  100 gamma=0.82: tie at j=[18]; threshold (j, exact, float) = [(18, 1, 0)]; W_float - W_exact = 10^21.461 (relative 7.42e-09)
+      t=  100 gamma=0.85: tie at j=[15]; threshold (j, exact, float) = [(15, 1, 0)]; W_float - W_exact = 10^22.312 (relative 8.71e-08)
+      t=  100 gamma=0.88: tie at j=[12] but the float comparison happened to reject o = 0 there (no flip)
+      t=  100 gamma=0.91: tie at j=[9] but the float comparison happened to reject o = 0 there (no flip)
+      t=  100 gamma=0.94: tie at j=[6]; threshold (j, exact, float) = [(6, 1, 0)]; W_float - W_exact = 10^24.808 (relative 3.71e-04)
+      t=  100 gamma=0.97: tie at j=[3]; threshold (j, exact, float) = [(3, 1, 0)]; W_float - W_exact = 10^25.648 (relative 1.08e-02)
+      t=  150 gamma=0.82: tie at j=[27]; threshold (j, exact, float) = [(27, 1, 0)]; W_float - W_exact = 10^32.974 (relative 2.25e-12)
+      t=  150 gamma=0.88: tie at j=[18] but the float comparison happened to reject o = 0 there (no flip)
+      t=  150 gamma=0.94: tie at j=[9]; threshold (j, exact, float) = [(9, 1, 0)]; W_float - W_exact = 10^38.043 (relative 1.48e-05)
+      t=  200 gamma=0.82: tie at j=[36]; threshold (j, exact, float) = [(36, 1, 0)]; W_float - W_exact = 10^44.526 (relative 7.65e-16)
+      t=  200 gamma=0.85: tie at j=[30]; threshold (j, exact, float) = [(30, 1, 0)]; W_float - W_exact = 10^46.214 (relative 8.33e-14)
+      t=  200 gamma=0.88: tie at j=[24] but the float comparison happened to reject o = 0 there (no flip)
+      t=  200 gamma=0.91: tie at j=[18] but the float comparison happened to reject o = 0 there (no flip)
+      t=  200 gamma=0.94: tie at j=[12]; threshold (j, exact, float) = [(12, 1, 0)]; W_float - W_exact = 10^51.319 (relative 6.55e-07)
+      t=  200 gamma=0.97: tie at j=[6]; threshold (j, exact, float) = [(6, 1, 0)]; W_float - W_exact = 10^53.005 (relative 3.11e-04)
+      t=  300 gamma=0.82: tie at j=[54]; threshold (j, exact, float) = [(54, 1, 0)]; W_float - W_exact = 10^67.724 (relative 1.08e-22)
+      t=  300 gamma=0.85: tie at j=[45]; threshold (j, exact, float) = [(45, 1, 0)]; W_float - W_exact = 10^70.300 (relative 1.12e-19)
+      t=  300 gamma=0.88: tie at j=[36] but the float comparison happened to reject o = 0 there (no flip)
+      t=  300 gamma=0.91: tie at j=[27] but the float comparison happened to reject o = 0 there (no flip)
+      t=  300 gamma=0.94: tie at j=[18]; threshold (j, exact, float) = [(18, 1, 0)]; W_float - W_exact = 10^77.955 (relative 1.50e-09)
+      t=  300 gamma=0.97: tie at j=[9]; threshold (j, exact, float) = [(9, 1, 0)]; W_float - W_exact = 10^80.512 (relative 1.15e-05)
+      t=  400 gamma=0.82: tie at j=[72]; threshold (j, exact, float) = [(72, 1, 0)]; W_float - W_exact = 10^91.018 (relative 1.83e-29)
+      t=  400 gamma=0.85: tie at j=[60]; threshold (j, exact, float) = [(60, 1, 0)]; W_float - W_exact = 10^94.428 (relative 1.69e-25)
+      t=  400 gamma=0.88: tie at j=[48] but the float comparison happened to reject o = 0 there (no flip)
+      t=  400 gamma=0.91: tie at j=[36] but the float comparison happened to reject o = 0 there (no flip)
+      t=  400 gamma=0.94: tie at j=[24]; threshold (j, exact, float) = [(24, 1, 0)]; W_float - W_exact = 10^104.647 (relative 3.87e-12)
+      t=  400 gamma=0.97: tie at j=[12]; threshold (j, exact, float) = [(12, 1, 0)]; W_float - W_exact = 10^108.071 (relative 4.73e-07)
+      t=  500 gamma=0.82: tie at j=[90]; threshold (j, exact, float) = [(90, 1, 0)]; W_float - W_exact = 10^114.319 (relative 3.24e-36)
+      t=  500 gamma=0.85: tie at j=[75]; threshold (j, exact, float) = [(75, 1, 0)]; W_float - W_exact = 10^118.580 (relative 2.70e-31)
+      t=  500 gamma=0.88: tie at j=[60] but the float comparison happened to reject o = 0 there (no flip)
+      t=  500 gamma=0.91: tie at j=[45] but the float comparison happened to reject o = 0 there (no flip)
+      t=  500 gamma=0.94: tie at j=[30]; threshold (j, exact, float) = [(30, 1, 0)]; W_float - W_exact = 10^131.401 (relative 1.06e-14)
+      t=  500 gamma=0.97: tie at j=[15]; threshold (j, exact, float) = [(15, 1, 0)]; W_float - W_exact = 10^135.644 (relative 2.06e-08)
+      t=  600 gamma=0.82: tie at j=[108]; threshold (j, exact, float) = [(108, 1, 0)]; W_float - W_exact = 10^137.658 (relative 6.13e-43)
+      t=  600 gamma=0.85: tie at j=[90]; threshold (j, exact, float) = [(90, 1, 0)]; W_float - W_exact = 10^142.791 (relative 4.67e-37)
+      t=  600 gamma=0.88: tie at j=[72] but the float comparison happened to reject o = 0 there (no flip)
+      t=  600 gamma=0.91: tie at j=[54] but the float comparison happened to reject o = 0 there (no flip)
+      t=  600 gamma=0.94: tie at j=[36]; threshold (j, exact, float) = [(36, 1, 0)]; W_float - W_exact = 10^158.172 (relative 3.04e-17)
+      t=  600 gamma=0.97: tie at j=[18]; threshold (j, exact, float) = [(18, 1, 0)]; W_float - W_exact = 10^163.284 (relative 9.37e-10)
+      t=  800 gamma=0.82: tie at j=[144]; threshold (j, exact, float) = [(144, 1, 0)]; W_float - W_exact = 10^184.392 (relative 2.46e-56)
+      t=  800 gamma=0.91: tie at j=[72] but the float comparison happened to reject o = 0 there (no flip)
+      t= 1000 gamma=0.82: tie at j=[180]; threshold (j, exact, float) = [(180, 1, 0)]; W_float - W_exact = 10^231.133 (relative 1.02e-69)
+      t= 1000 gamma=0.91: tie at j=[90] but the float comparison happened to reject o = 0 there (no flip)
+      t= 1500 gamma=0.82: tie at j=[270]; threshold (j, exact, float) = [(270, 1, 0)]; W_float - W_exact = 10^348.109 (relative 4.49e-103)
+      t= 1500 gamma=0.91: tie at j=[135] but the float comparison happened to reject o = 0 there (no flip)
+      t= 2000 gamma=0.82: tie at j=[360]; threshold (j, exact, float) = [(360, 1, 0)]; W_float - W_exact = 10^465.189 (relative 2.41e-136)
+      t= 2000 gamma=0.91: tie at j=[180] but the float comparison happened to reject o = 0 there (no flip)
+      t= 3000 gamma=0.82: tie at j=[540]; threshold (j, exact, float) = [(540, 1, 0)]; W_float - W_exact = 10^699.404 (relative 7.81e-203)
+      t= 3000 gamma=0.91: tie at j=[270] but the float comparison happened to reject o = 0 there (no flip)
+   non-tie safety: min over 1 <= o <= 10000 of the distance of 100 o alpha to the nearest integer:
+      5.769e-05 at o = 800, i.e. |o alpha - (rational with denominator 100)| >= 5.769e-07, far above the double-precision error (~1e-12): non-tie comparisons cannot flip.
+   table (1) recomputed with the EXACT DP: W_t(gamma) t^(1/2) 2^(-tE) [gamma = 1: t^(3/2)]; second number = float DP (= filed); third = filed value from the .out; flag if exact differs from filed by > 0.00005
+   gamma:          0.820    0.850    0.880    0.910    0.940    0.970    1.000
+   E(gamma):      0.9991   0.9962   0.9912   0.9841   0.9749   0.9635   0.9500
+   t=   25: 1.7128/1.7128/1.7128  1.3399/1.3399/1.3399  1.0950/1.0950/1.0950  0.7925/0.7925/0.7925  0.6064/0.6064/0.6064  0.3151/0.3151/0.3151  5.0823/5.0823/5.0823
+   t=   50: 2.4199/2.4199/2.4199  1.8416/1.8416/1.8416  1.3944/1.3944/1.3944  1.0077/1.0077/1.0077  0.6697/0.6778/0.6778!  0.4041/0.4041/0.4041  6.6436/6.6436/6.6436
+   t=  100: 3.2664/3.2664/3.2664  2.4204/2.4204/2.4204  1.7534/1.7534/1.7534  1.2214/1.2214/1.2214  0.7795/0.7798/0.7798!  0.4058/0.4102/0.4102!  7.6613/7.6613/7.6613
+   t=  150: 3.9263/3.9263/3.9263  2.7135/2.7135/2.7135  1.8754/1.8754/1.8754  1.2901/1.2901/1.2901  0.8749/0.8750/0.8750!  0.4436/0.4436/0.4436  8.5838/8.5838/8.5838
+   t=  200: 4.3617/4.3617/4.3617  2.9278/2.9278/2.9278  1.9746/1.9746/1.9746  1.4231/1.4231/1.4231  0.9141/0.9141/0.9141  0.4518/0.4520/0.4520!  8.9188/8.9188/8.9188
+   t=  300: 4.9948/4.9948/4.9948  3.3323/3.3323/3.3323  2.2362/2.2362/2.2362  1.4723/1.4723/1.4723  0.9508/0.9508/0.9508  0.4759/0.4759/0.4759  9.3945/9.3945/9.3945
+   t=  400: 5.6058/5.6058/5.6058  3.5282/3.5282/3.5282  2.2521/2.2521/2.2521  1.5291/1.5291/1.5291  0.9472/0.9472/0.9472  0.4794/0.4794/0.4794  9.8402/9.8402/9.8402
+   t=  500: 5.9506/5.9506/5.9506  3.5986/3.5986/3.5986  2.4220/2.4220/2.4220  1.5218/1.5218/1.5218  0.9839/0.9839/0.9839  0.4558/0.4558/0.4558  10.1281/10.1281/10.1281
+   t=  600: 6.2936/6.2936/6.2936  3.7958/3.7958/3.7958  2.3910/2.3910/2.3910  1.6134/1.6134/1.6134  1.0044/1.0044/1.0044  0.4755/0.4755/0.4755  10.3613/10.3613/10.3613
+   t=  800: 6.8955/6.8955/6.8955  1.6048/1.6048/1.6048  10.4458/10.4458/10.4458
+   t= 1000: 7.1951/7.1951/7.1951  1.6220/1.6220/1.6220  10.6555/10.6555/10.6555
+   t= 1500: 7.7999/7.7999/7.7999  1.6596/1.6596/1.6596  10.6182/10.6182/10.6182
+   t= 2000: 8.3555/8.3555/8.3555  1.6728/1.6728/1.6728  10.9233/10.9233/10.9233
+   t= 3000: 8.8205/8.8205/8.8205  1.7187/1.7187/1.7187  10.8314/10.8314/10.8314
+   local exponent beta(t1,t2) = -[log2(W_(t2) 2^(-t2 E)) - log2(W_(t1) 2^(-t1 E))]/log2(t2/t1)  (Theta(t^(-1/2)) means beta -> 0.5; the -3/2 ballot order means 1.5):
+      gamma=0.82: 25->50: 0.001  50->100: 0.067  100->150: 0.046  150->200: 0.134  200->300: 0.166  300->400: 0.099  400->500: 0.233  500->600: 0.193  600->800: 0.183  800->1000: 0.309  1000->1500: 0.301  1500->2000: 0.261  2000->3000: 0.366
+      gamma=0.85: 25->50: 0.041  50->100: 0.106  100->150: 0.218  150->200: 0.236  200->300: 0.181  300->400: 0.301  400->500: 0.411  500->600: 0.207
+      gamma=0.88: 25->50: 0.151  50->100: 0.169  100->150: 0.334  150->200: 0.321  200->300: 0.193  300->400: 0.475  400->500: 0.174  500->600: 0.571
+      gamma=0.91: 25->50: 0.153  50->100: 0.223  100->150: 0.365  150->200: 0.159  200->300: 0.416  300->400: 0.369  400->500: 0.521  500->600: 0.180  600->800: 0.519  800->1000: 0.452  1000->1500: 0.443  1500->2000: 0.472  2000->3000: 0.433
+      gamma=0.94: 25->50: 0.357  50->100: 0.281  100->150: 0.215  150->200: 0.348  200->300: 0.403  300->400: 0.513  400->500: 0.329  500->600: 0.387
+      gamma=0.97: 25->50: 0.141  50->100: 0.494  100->150: 0.280  150->200: 0.436  200->300: 0.372  300->400: 0.475  400->500: 0.725  500->600: 0.269
+      gamma=1.00: 25->50: 1.114  50->100: 1.294  100->150: 1.220  150->200: 1.367  200->300: 1.372  300->400: 1.339  400->500: 1.371  500->600: 1.375  600->800: 1.472  800->1000: 1.411  1000->1500: 1.509  1500->2000: 1.402  2000->3000: 1.521
+   extension of the exact DP to t = [4000, 6000, 8000, 10000] for gamma in {0.82, 0.91, 0.94, 0.97}: normalised W_t t^(1/2) 2^(-tE), local exponent beta from the previous t, and the exact tail Sigma_t = sum_(o > rho t) C(t,o) normalised the same way, with W_t/Sigma_t:
+      gamma=0.82 rho=0.51736 r=0.93288: asymptotic bound for the normalised tail 1/((1-r) sqrt(2 pi rho(1-rho))) = 11.895; with the extra (rho/(1-rho))^2 of the D_b count (the '13.8' formula) = 13.668
+         t=   600: W_t norm =   6.2936                Sigma_t norm =   6.8813 (finite-t bound 10.389)  W_t/Sigma_t = 0.9146   [12s]
+         t=  1000: W_t norm =   7.1951  beta=0.238    Sigma_t norm =   7.7553 (finite-t bound 10.705)  W_t/Sigma_t = 0.9278   [12s]
+         t=  2000: W_t norm =   8.3555  beta=0.284    Sigma_t norm =   9.1748 (finite-t bound 11.428)  W_t/Sigma_t = 0.9107   [12s]
+         t=  3000: W_t norm =   8.8205  beta=0.366    Sigma_t norm =   9.2315 (finite-t bound 10.877)  W_t/Sigma_t = 0.9555   [12s]
+         t=  4000: W_t norm =   9.2664  beta=0.329    Sigma_t norm =   9.8623 (finite-t bound 11.285)  W_t/Sigma_t = 0.9396   [12s]
+         t=  6000: W_t norm =   9.6012  beta=0.412    Sigma_t norm =  10.0564 (finite-t bound 11.095)  W_t/Sigma_t = 0.9547   [14s]
+         t=  8000: W_t norm =   9.9287  beta=0.383    Sigma_t norm =  10.8750 (finite-t bound 11.764)  W_t/Sigma_t = 0.9130   [19s]
+         t= 10000: W_t norm =  10.1193  beta=0.415    Sigma_t norm =  10.8082 (finite-t bound 11.533)  W_t/Sigma_t = 0.9363   [26s]
+      gamma=0.91 rho=0.57415 r=0.74172: asymptotic bound for the normalised tail 1/((1-r) sqrt(2 pi rho(1-rho))) = 3.124; with the extra (rho/(1-rho))^2 of the D_b count (the '13.8' formula) = 5.678
+         t=   600: W_t norm =   1.6134                Sigma_t norm =   2.5118 (finite-t bound 2.631)  W_t/Sigma_t = 0.6423   [26s]
+         t=  1000: W_t norm =   1.6220  beta=0.490    Sigma_t norm =   2.3123 (finite-t bound 2.382)  W_t/Sigma_t = 0.7015   [26s]
+         t=  2000: W_t norm =   1.6728  beta=0.455    Sigma_t norm =   2.4712 (finite-t bound 2.511)  W_t/Sigma_t = 0.6769   [26s]
+         t=  3000: W_t norm =   1.7187  beta=0.433    Sigma_t norm =   2.6022 (finite-t bound 2.630)  W_t/Sigma_t = 0.6605   [27s]
+         t=  4000: W_t norm =   1.7445  beta=0.448    Sigma_t norm =   2.7294 (finite-t bound 2.752)  W_t/Sigma_t = 0.6391   [27s]
+         t=  6000: W_t norm =   1.7693  beta=0.465    Sigma_t norm =   2.9907 (finite-t bound 3.007)  W_t/Sigma_t = 0.5916   [28s]
+         t=  8000: W_t norm =   1.7016  beta=0.636    Sigma_t norm =   2.4217 (finite-t bound 2.432)  W_t/Sigma_t = 0.7026   [32s]
+         t= 10000: W_t norm =   1.7508  beta=0.372    Sigma_t norm =   2.6469 (finite-t bound 2.656)  W_t/Sigma_t = 0.6615   [37s]
+      gamma=0.94 rho=0.59307 r=0.68613: asymptotic bound for the normalised tail 1/((1-r) sqrt(2 pi rho(1-rho))) = 2.587; with the extra (rho/(1-rho))^2 of the D_b count (the '13.8' formula) = 5.496
+         t=   600: W_t norm =   1.0044                Sigma_t norm =   2.3497 (finite-t bound 2.420)  W_t/Sigma_t = 0.4275   [37s]
+         t=  1000: W_t norm =   0.9797  beta=0.549    Sigma_t norm =   1.7688 (finite-t bound 1.801)  W_t/Sigma_t = 0.5539   [38s]
+         t=  2000: W_t norm =   1.0152  beta=0.449    Sigma_t norm =   1.8476 (finite-t bound 1.865)  W_t/Sigma_t = 0.5495   [38s]
+         t=  3000: W_t norm =   1.0279  beta=0.469    Sigma_t norm =   1.9101 (finite-t bound 1.923)  W_t/Sigma_t = 0.5381   [38s]
+         t=  4000: W_t norm =   1.0298  beta=0.494    Sigma_t norm =   1.9695 (finite-t bound 1.979)  W_t/Sigma_t = 0.5229   [38s]
+         t=  6000: W_t norm =   1.0536  beta=0.444    Sigma_t norm =   2.0882 (finite-t bound 2.095)  W_t/Sigma_t = 0.5046   [39s]
+         t=  8000: W_t norm =   1.0689  beta=0.450    Sigma_t norm =   2.2109 (finite-t bound 2.216)  W_t/Sigma_t = 0.4835   [42s]
+         t= 10000: W_t norm =   1.0579  beta=0.546    Sigma_t norm =   2.3396 (finite-t bound 2.344)  W_t/Sigma_t = 0.4522   [48s]
+      gamma=0.97 rho=0.61200 r=0.63398: asymptotic bound for the normalised tail 1/((1-r) sqrt(2 pi rho(1-rho))) = 2.237; with the extra (rho/(1-rho))^2 of the D_b count (the '13.8' formula) = 5.565
+         t=   600: W_t norm =   0.4755                Sigma_t norm =   1.5008 (finite-t bound 1.530)  W_t/Sigma_t = 0.3168   [48s]
+         t=  1000: W_t norm =   0.4692  beta=0.526    Sigma_t norm =   1.3862 (finite-t bound 1.403)  W_t/Sigma_t = 0.3385   [48s]
+         t=  2000: W_t norm =   0.4769  beta=0.476    Sigma_t norm =   1.4035 (finite-t bound 1.412)  W_t/Sigma_t = 0.3398   [48s]
+         t=  3000: W_t norm =   0.4798  beta=0.485    Sigma_t norm =   1.4102 (finite-t bound 1.416)  W_t/Sigma_t = 0.3402   [48s]
+         t=  4000: W_t norm =   0.4814  beta=0.488    Sigma_t norm =   1.4143 (finite-t bound 1.419)  W_t/Sigma_t = 0.3404   [48s]
+         t=  6000: W_t norm =   0.4829  beta=0.492    Sigma_t norm =   1.4195 (finite-t bound 1.423)  W_t/Sigma_t = 0.3402   [50s]
+         t=  8000: W_t norm =   0.4844  beta=0.490    Sigma_t norm =   1.4234 (finite-t bound 1.426)  W_t/Sigma_t = 0.3403   [52s]
+         t= 10000: W_t norm =   0.4855  beta=0.490    Sigma_t norm =   1.4267 (finite-t bound 1.428)  W_t/Sigma_t = 0.3403   [57s]
+   table (2), THM-4487's brute-force D_+(2^T, gamma) normalised: D T^(1/2)/2^(T E) recomputed from collatz_dipspectrum_20260926.out (plus sheet):
+    gamma:     0.792    0.820    0.850    0.880    0.910    0.940    0.970    1.000
+    T=10:     1.2785   1.0688   0.9449   0.8207   0.6104   0.5330   0.4494   0.3888
+    T=12:     1.4031   1.1645   1.0134   0.8154   0.6469   0.5431   0.4010   0.3603
+    T=14:     1.5148   1.2582   1.0952   0.8670   0.7247   0.5025   0.3889   0.3244
+    T=16:     1.6296   1.3379   1.1441   0.8990   0.7545   0.5226   0.4020   0.3086
+    T=18:     1.7397   1.4317   1.1652   0.9780   0.7721   0.5461   0.4098   0.2794
+    T=20:     1.8440   1.5266   1.2208   1.0388   0.7976   0.5780   0.3980   0.2708
+    T=22:     1.9452   1.6105   1.2759   1.0539   0.7781   0.6044   0.3826   0.2535
+    T=24:     2.0415   1.6891   1.3385   1.0782   0.8244   0.6107   0.3619   0.2469
+    max |recomputed - filed| over table (2) = 4.9e-05
+    local exponent beta(T, T+2) of D 2^(-TE) for the brute-force counts (window-length sawtooth included):
+      gamma=0.792: 10->12: -0.01  12->14: 0.00  14->16: -0.05  16->18: -0.05  18->20: -0.05  20->22: -0.06  22->24: -0.06
+      gamma=0.820: 10->12: 0.03  12->14: -0.00  14->16: 0.04  16->18: -0.08  18->20: -0.11  20->22: -0.06  22->24: -0.05
+      gamma=0.850: 10->12: 0.12  12->14: -0.00  14->16: 0.17  16->18: 0.34  18->20: 0.06  20->22: 0.04  22->24: -0.05
+      gamma=0.880: 10->12: 0.54  12->14: 0.10  14->16: 0.23  16->18: -0.21  18->20: -0.07  20->22: 0.35  22->24: 0.24
+      gamma=0.910: 10->12: 0.18  12->14: -0.24  14->16: 0.20  16->18: 0.30  18->20: 0.19  20->22: 0.76  22->24: -0.17
+      gamma=0.940: 10->12: 0.40  12->14: 1.00  14->16: 0.21  16->18: 0.13  18->20: -0.04  20->22: 0.03  22->24: 0.38
+      gamma=0.970: 10->12: 1.13  12->14: 0.70  14->16: 0.25  16->18: 0.34  18->20: 0.78  20->22: 0.91  22->24: 1.14
+      gamma=1.000: 10->12: 0.92  12->14: 1.18  14->16: 0.87  16->18: 1.35  18->20: 0.79  20->22: 1.19  22->24: 0.80
+   [time 57.1s]
+
+== (6) Lemma 1.4b: theta in (0, theta_1], rho = (1-theta)/alpha in [0.565465, 0.630930), k >= 200, o_0 = ceil(rho k - 2) ==
+   (rho - 1/2) k >= 13 for k >= 200: worst (rho_min - 1/2) * 200 = 13.0930 (>= 13: True)
+   ratio bound (1 - rho + 2/k)/(rho - 2/k) <= 0.81: worst (rho_min, k=200) = 0.80029 (True); 1/(1-0.81) = 5.2632 <= 5.3 (True)
+   p(1-p) >= rho*(1-rho*) = 0.232857 (note: 0.2329; 1/sqrt(2 pi 0.232858) = 0.82673, note uses 0.827: safe True)
+   (rho/(1-rho))^2 < (rho*/(1-rho*))^2 = 2.92243  (note says <= 2.92: False -- the supremum is 2.9224, so the rounded constant should read 2.93)
+   product of the note's rounded constants 5.3 * 2.92 * 0.827 = 12.7987; product of the true suprema (1/0.19) * 2.92243 * 0.82673 = 12.7161; both <= 12.8: True
+   representatives: 2^k > X/2 so a class mod 2^k meets [1, X] in at most 2 integers: factor 2.  k >= log_2 X - 1 >= 0.995 log_2 X iff log_2 X >= 200: given.
+   final constant: 2 * 12.8 / sqrt(0.995) = 25.6642 <= 27: True
+   numerical verification: R(k, theta) = sum_(o >= o_0) C(k, o) * k^(1/2) / 2^(k h(rho)) on theta in {1e-9, 1e-6, 1e-4, 1e-3, 0.005, 0.01, ..., 0.10, theta_1} and every k in [200, 3000] (QUICK: step 25):
+      max R over the grid = 5.8187 at (k, theta) = (2971, 0.10375937481971098)  (<= 12.8: True; <= 13.5 for the two-representative form 2 S <= 27 2^(k h) k^(-1/2): True)
+      max R per theta: 1e-09:5.799  1e-06:5.800  1e-04:5.798  0.001:5.778  0.005:5.743  0.01:5.698  0.02:5.607  0.03:5.538  0.04:5.495  0.05:5.466  0.06:5.462  0.07:5.490  0.08:5.542  0.09:5.625  0.1:5.759  0.1038:5.819
+   [time 58.5s]
+
+== (7) section 1.6b ==
+   (i) concavity: h(rho) <= h* + h'(rho*)(rho - rho*) with rho - rho* = -theta/alpha and h'(rho*) = log_2((1-rho*)/rho*) = -0.773584 = -alpha lambda* (-0.773584): so h(rho) <= h* + lambda* theta.
+      max over theta in (0, theta_1] (10^4 grid) of h(rho) - h* - lambda* theta = -1.328e-10 (must be <= 0: True)
+   (ii) (R'): 1.5 gives N(X) <= k + k N(X^(1-theta)) + #F_b(X, theta) with (E) <= k <= L = log_2 X; 1.4b bounds #F_b for theta <= theta_1 and X >= 2^200 uniformly in theta: (R') follows.
+   (iii) X^(1 - theta_X) = X 2^(-theta_X L) = X 2^(-c_1 log_2 L) = X L^(-c_1); X^(h(rho)) <= X^(h* + lambda* theta_X) = X^(h*) L^(lambda* c_1): identities.
+   (iv) lambda* c_1 - 1/2 = a* + eta lambda*/h* = a* + 0.51379 eta; need <= a - eta = a* + 3 eta (eta = (a-a*)/4): true since 0.51379 <= 3. Checked on a grid of a:
+      a=0.0138 eta=0.000003 c_1=1.052684  lambda* c_1 - 1/2 = 0.013791  a - eta = 0.013797  ok: True
+      a=0.0140 eta=0.000053 c_1=1.052736  lambda* c_1 - 1/2 = 0.013816  a - eta = 0.013947  ok: True
+      a=0.0200 eta=0.001553 c_1=1.054315  lambda* c_1 - 1/2 = 0.014587  a - eta = 0.018447  ok: True
+      a=0.0500 eta=0.009053 c_1=1.062210  lambda* c_1 - 1/2 = 0.018441  a - eta = 0.040947  ok: True
+      a=0.1000 eta=0.021553 c_1=1.075369  lambda* c_1 - 1/2 = 0.024863  a - eta = 0.078447  ok: True
+      a=0.5000 eta=0.121553 c_1=1.180637  lambda* c_1 - 1/2 = 0.076242  a - eta = 0.378447  ok: True
+      a=1.0000 eta=0.246553 c_1=1.312222  lambda* c_1 - 1/2 = 0.140466  a - eta = 0.753447  ok: True
+   (v) the step uses only log_2 Y <= L for Y = X L^(-c_1) (no monotonicity of Y -> Y^(h*) (log_2 Y)^a is needed; it is monotone anyway: d/dY[h* ln Y + a ln log_2 Y] = h*/Y + a/(Y ln Y) > 0 for Y > 1);
+       2 L^(-eta) + L^(-a) <= 1 and 27 <= K close the induction; K = max(X_3, 27) covers the base 2 <= X < X_3 since N(X) <= X.
+   (vi) well-foundedness: N(X) depends only on floor(X), and Y = X L^(-c_1) <= X / 200^(c_1) for X >= 2^200: at eta -> 0, 200^(1/h*) = 264.4, so floor(Y) < floor(X) and the induction on floor(X) is well-founded;
+       the note says 'strong induction' over real X without this remark: a presentational gap, not an error.
+   size of X_3 (2 L^(-eta) + L^(-a) <= 1): log_2 log_2 X_3 for a = 0.02, 0.05, 0.1:
+      a=0.020 eta=0.00155: log_2 L >= 650.5, i.e. X_3 ~ 2^(2^650)
+      a=0.050 eta=0.00905: log_2 L >= 114.0, i.e. X_3 ~ 2^(2^114)
+      a=0.100 eta=0.02155: log_2 L >= 48.9, i.e. X_3 ~ 2^(2^49)
+   (vii) Corollary 4: the recursion in 1.7 is N_A(X) <= k N_A(X^(1-theta)) + #F_b + #F_(-b) + (k+1)(|b|/3+1) with base N_A <= 2X: (R) with a doubled no-dip term and an extra O(k) term, so 27 -> 54 and K adjusts; the polylog argument transfers, but '(R) verbatim' is not literally accurate.
+
+== (8) provenance: sha256 of the THM-4498 script and output (raw bytes) ==
+   collatz_dipspectrum_20260926_orders.py: raw sha256 87f31934e76b6c958038ce46b4d26cd1de111e602c9ec08418d97275d8109225 (header: 87f31934e76b6c958038ce46b4d26cd1de111e602c9ec08418d97275d8109225, match True); CR bytes 0; LF-normalised 87f31934e76b6c958038ce46b4d26cd1de111e602c9ec08418d97275d8109225
+   collatz_dipspectrum_20260926_orders.out: raw sha256 270c93827ae4e7e2da91bcc49e43505093664d6d850540b6fd9bee3727b2873f (header: 270c93827ae4e7e2da91bcc49e43505093664d6d850540b6fd9bee3727b2873f, match True); CR bytes 0; LF-normalised 270c93827ae4e7e2da91bcc49e43505093664d6d850540b6fd9bee3727b2873f
+
+total time 58.5s

@@ -132,9 +132,11 @@ D_b(X, gamma) <= C(gamma) X^(h(rho)) (log X)^(-1/2)      for every gamma in (log
 
 so the bracket of Theorem 1 is `[log^(-3/2) X, log^(-1/2) X]`; at `gamma = 1`
 THM-4495 pins it to `Theta(X^h (log X)^(-3/2))`, and for `gamma < 1` the
-expected order is `(log X)^(-1/2)` (the barrier `(gamma - 1) t` recedes from a
-zero-drift walk, which then survives with positive probability), not
-proved here. The same tail is Lemma 1.4b of the thin-divergence note, where
+order `(log X)^(-1/2)` is proved in section 1.6 (Theorem 5; the barrier
+`(gamma - 1) t` recedes from a zero-drift walk, which survives with
+positive probability). The constant is uniform on compact subsets of
+`(log_4 3, 1]` and blows up like `rho/(2 rho - 1)` as `gamma` decreases to
+`log_4 3`. The same tail is Lemma 1.4b of the thin-divergence note, where
 it turns THM-4476's `eps` into `(log X)^(0.014 + eps)`.
 
 ### 1.3 Theorem 1, lower bound
@@ -418,7 +420,7 @@ field); Theorem 4 was added after the audit and is not covered by it.
 ```text
 (a)  log_4 3 < gamma < 1 :  D_b(X, gamma) = Theta_gamma( X^(h(rho)) (log_2 X)^(-1/2) );
 (b)  gamma = 1           :  D_b(X, 1)     = Theta( X^(h*) (log_2 X)^(-3/2) )          (THM-4495, C3);
-(c)  0 < gamma <= log_4 3:  D_b(X, gamma) = Theta_gamma( X )   (positive density on both sheets).
+(c)  0 < gamma <= log_4 3:  D_b(X, gamma) = Theta_gamma( X )   (positive lower density on both sheets).
 ```
 
 So along the entropy curve the polynomial factor is `1` up to Korec's
@@ -426,6 +428,10 @@ endpoint, `(log X)^(-1/2)` strictly between Korec and Terras, and
 `(log X)^(-3/2)` at Terras's endpoint; the constant in (a) blows up like
 `1/(1 - (1-rho)/rho)` as `gamma` decreases to `log_4 3`, where the geometric
 tail of the binomial stops converging.
+
+*Notation.* In this section `S_i = o_i alpha - i` (the walk of THM-4495,
+positive when the multiplier exceeds `1`), the negative of section 1.1's
+`S_i = i - o_i alpha`.
 
 *Proof of (a), upper bound.* Section 1.2b.
 
@@ -449,16 +455,21 @@ most `0.585 i_0`; so at least half of `V` has `F(v) <= delta_0 := max(alpha, 0.5
 Call these `v` good and choose `K` with `(c + 0.585) K >= delta_0 + c + 2`.
 For good `v` let `w = 1^K v` (`K` odd letters, then `v`), a word of length `t`.
 Its partial sums satisfy `S_i(w) = 0.585 i > 0` for `i <= K` and, for
-`i = K + l`, `S_i(w) = 0.585 K + S_l(v) >= 0.585 K + S_(t')(v) - F(v) >= 0.585 K - c t' - delta_0 >= -c(t + 1) + 2`;
-hence `M_i(w) >= 4 * 2^((gamma - 1)(t + 1)) >= 4 n^(gamma - 1)` for every
-`n in [2^t, 2^(t+1))` and every `1 <= i <= t`. For such `n` in the residue
+`i = K + l`, `S_i(w) = 0.585 K + S_l(v) >= 0.585 K + S_(t')(v) - F(v) >= 0.585 K - c t' - delta_0 = (c + 0.585) K - c t - delta_0 >= -c t + c + 2 > -ct + 2`;
+hence `M_i(w) = 2^(S_i(w)) >= 4 * 2^(-ct) = 4 * 2^((gamma - 1) t) >= 4 n^(gamma - 1)` for every
+`n >= 2^t` (as `gamma - 1 < 0`, the worst `n` of the block `[2^t, 2^(t+1))` is
+`2^t`) and every `1 <= i <= t` (for `i <= K` directly, `M_i = (3/2)^i`).
+(An earlier version of this sentence compared with `2^((gamma-1)(t+1))`,
+the wrong end of the block; the audit caught it, and the stated `K`
+condition supplies exactly the missing slack `c`.) For such `n` in the residue
 class of `w` (one per class in the block), the affine form and the carry
 bound give `T_b^i(n) >= M_i n - (3/2)^t >= 4 n^gamma - (3/2)^t >= n^gamma`
 for `t >= t_0` (as `gamma > log_4 3 > log_2(3/2)`), on both sheets. So the
 block `[2^t, 2^(t+1))` contains at least `C(t', j)/2` non-dippers, and by
 Stirling's lower bound with `j/t' in [rho, rho + 1/t']`,
 `C(t', j)/2 >= 2^(t' h(rho)) 2^(-1)/(2 sqrt(8 t' p(1-p))) >= c_1'(gamma) 2^(t h(rho)) t^(-1/2)`
-(the `2^(-K h(rho))` and the `|h'| <= 1` loss are constants). Summing over
+(the `2^(-K h(rho))` and, for `t' >= 28` where `|h'| <= 1` on
+`[rho, rho + 1/t']`, the `|h'| <= 1` loss are constants). Summing over
 `t <= log_2 X - 1` gives the lower bound of (a). ∎
 
 *Proof of (c).* Upper bound: `D_b(X, gamma) <= X`. Lower bound: put
@@ -470,16 +481,20 @@ This holds when the final rise of `v` is at most `delta'/2` and
 `S_(t')(v) >= -c_0 t' - delta'/2`. By Hoeffding for independent letters,
 `P(terminal block of length i sums to >= delta'/2) <= exp(-2(c_0 i + delta'/2)^2/(alpha^2 i)) <= e^(-2 c_0 delta'/alpha^2) e^(-2 c_0^2 i/alpha^2)`,
 and the sum over `i >= 1` is at most `1/4` once `delta' >= 29`, i.e.
-`K >= 40`. By the central limit theorem `P(S_(t')(v) >= E S_(t')(v)) -> 1/2`,
-so for `t' >= t_1` at least a fifth of all `v` are good, the block contributes
-at least `2^(t')/5` non-dippers, and `D_b(X, gamma) >= c X`. For
+`K >= 40`. Since `P(Bin(t', 1/2) >= t'/2) >= 1/2` for every `t'` (symmetry of the
+binomial about its mean), at least a quarter of all tails `v` are good, the
+block `[2^t, 2^(t+1))` contributes at least `2^(t')/4 = 2^(t-K)/4` non-dippers,
+and `D_b(X, gamma) >= c X`: positive lower density (the fraction proved is
+`2^(-K)/4` with `K >= 40`, far below the observed `0.4` at `gamma = 0.7925`). For
 `gamma <= log_2(3/2)` the additive carry bound is replaced by the
 multiplicative one of Theorem 4 (`y_i = M_i n (1 + O(n^(-gamma) log n))`
 along a no-dip orbit), which needs only `gamma > 0`. ∎
 
-*Remarks.* (i) At `gamma = log_4 3` itself the count is `Theta(X)`: (c)
-applies with `c = c_0`. Korec's theorem is the statement that the density
-drops to `0` immediately above it, and (a) says how: like
+*Remarks.* (i) At `gamma = log_4 3` itself the window count is `Theta(X)`:
+(c) applies with `c = c_0`. Korec's theorem concerns the unrestricted
+orbit, whose exceptional set is a subset of this window count; it is
+consistent with the window density dropping to `0` immediately above
+`log_4 3`, and (a) says how fast the window count drops: like
 `X^(h(rho) - 1) (log X)^(-1/2)`. (ii) The constant `c_1'(gamma)` of (a)
 carries `2^(-K h(rho))` with `K` of order `i_0(c) ~ alpha^2 c^(-2) log(1/c)`:
 the construction is wasteful, and the true constant is the reversed-bridge
@@ -491,7 +506,8 @@ here concerns Collatz orbits; it completes THM-4487's description of the
 no-dip sets of the free window.
 
 **Control (FINITE-EXACT)** (`collatz_dipspectrum_20260926_orders.py`, exact
-DP word counts `W_t(gamma)` with the barrier `(gamma - 1) t`, the brute-force
+DP word counts `W_t(gamma)` with the barrier `(gamma - 1) t` (exact tie test at
+`o = 0` after the audit), the brute-force
 orbit counts of section 2 renormalised, and the constants of the
 construction):
 
@@ -500,10 +516,10 @@ gamma:          0.820    0.850    0.880    0.910    0.940    0.970    1.000
 E(gamma):      0.9991   0.9962   0.9912   0.9841   0.9749   0.9635   0.9500
 (1) exact word counts: W_t(gamma) t^(1/2) 2^(-tE)  [last column gamma = 1 uses t^(3/2)]
    t=   25:    1.7128   1.3399   1.0950   0.7925   0.6064   0.3151   5.0823
-   t=   50:    2.4199   1.8416   1.3944   1.0077   0.6778   0.4041   6.6436
-   t=  100:    3.2664   2.4204   1.7534   1.2214   0.7798   0.4102   7.6613
-   t=  150:    3.9263   2.7135   1.8754   1.2901   0.8750   0.4436   8.5838
-   t=  200:    4.3617   2.9278   1.9746   1.4231   0.9141   0.4520   8.9188
+   t=   50:    2.4199   1.8416   1.3944   1.0077   0.6697   0.4041   6.6436
+   t=  100:    3.2664   2.4204   1.7534   1.2214   0.7795   0.4058   7.6613
+   t=  150:    3.9263   2.7135   1.8754   1.2901   0.8749   0.4436   8.5838
+   t=  200:    4.3617   2.9278   1.9746   1.4231   0.9141   0.4518   8.9188
    t=  300:    4.9948   3.3323   2.2362   1.4723   0.9508   0.4759   9.3945
    t=  400:    5.6058   3.5282   2.2521   1.5291   0.9472   0.4794   9.8402
    t=  500:    5.9506   3.5986   2.4220   1.5218   0.9839   0.4558  10.1281

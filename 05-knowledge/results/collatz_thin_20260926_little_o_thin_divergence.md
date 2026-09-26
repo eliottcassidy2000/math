@@ -224,11 +224,15 @@ N(X)  <= X^(h*) L^a [ L^(-2 eta) + 2^(|a|) K L^(-eta) + 4 D_s L^(-2 eta) ]
 ```
 
 the last step because `K >= 8 D_s + 1 >= (1 + 4 D_s)/3`. The induction is
-over the real variable `X >= 2` and is well founded because every step
-refers to `Y < X` and the base covers `[2, X_3)`. ∎
+on `floor(X)`: `N` depends only on `floor(X)`, and `Y = X L^(-c_1) <= X/264`
+for `X >= 2^200`, so `floor(Y) < floor(X)`; the base covers `[2, X_3)`. ∎
 
-For an injective invariant set (Corollary 4 of THM-4476) the recursion (R)
-holds verbatim (its section 1.7), so the same bootstrap applies.
+For an injective invariant set (Corollary 4 of THM-4476) the recursion of
+its section 1.7 is `N_A(X) <= k N_A(X^(1-theta)) + #F_b + #F_(-b) + (k+1)(|b|/3+1)`
+with base `N_A(X) <= 2X`; Lemma 1.4c bounds both `#F` terms, so the same
+bootstrap applies with `4 D_s` replaced by `8 D_s` and the `O(k)` absorbed
+in `X^(h*)`. The constant `K` is not effective (`X_3` is of the order
+`2^(2^(1/eta))`); the theorem is asymptotic in `X` for each fixed `a`.
 
 ## 4. Remarks
 

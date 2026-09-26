@@ -51,6 +51,16 @@ status: >
   no-dip count at the moving barrier carries THM-4495's ballot factor
   (log X)^(-3/2) (weighted Spitzer identity), which the recursion turns
   into the exponent a*. Divergent orbits remain not excluded.
+  AUDIT of Lemma 1.4b and addendum 1.6b (separate agent, 2026-09-26;
+  collatz_dipspectrum_20260926_orders_audit.py/.out sections (6)-(7)): every
+  constant of 1.4b re-derived (ratio bound 0.8003 <= 0.81, 1/0.19 <= 5.3,
+  p(1-p) >= 0.232858, factor 2, k >= 0.995 log_2 X, 25.66 <= 27; exact tail
+  sums <= 5.82 against the claimed 12.8 for theta in (0, theta_1] and every
+  k in [200, 3000]); two misrounded decimals fixed (rho >= 0.5654,
+  (rho/(1-rho))^2 <= 2.93); 1.6b's concavity step, (R'), the identities and
+  the induction CONFIRMED; presentation gaps recorded in the note
+  (induction on floor(X); Cor. 4's recursion has #F_b + #F_(-b), so 27 -> 54;
+  K is not effective). Verdict: SOUND.
 source: collatz-squares-doubles-20260925 session (opus), 2026-09-25; the owner asked to prove HYP-9160 for discrepancy O(log l). Mechanism: the in-house no-bounded-strip theorem's Terras stopping-time count (collatz_guards_20260921_discrepancy.md, section 2a) plus a pigeonhole on landing points that replaces the strip hypothesis. No priority claimed.
 depends_on:
   - 05-knowledge/results/collatz_sqdbl_20260925_squares_doubles_foundry.md (Proposition 6: the orbitwise two-place identity)

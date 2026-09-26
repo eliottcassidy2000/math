@@ -5,7 +5,7 @@ session collatz-exponent-atlas-20260926, opus, 2026-09-26).
 For gamma in (log_4 3, 1) the claim is D_b(X, gamma) = Theta(X^E (log X)^(-1/2)), E = h(gamma/log_2 3),
 against Theta(X^(h*) (log X)^(-3/2)) at gamma = 1 (THM-4495). Two controls:
  (1) exact word counts  W_t(gamma) = #{ w in {0,1}^t : o_j log_2 3 - j > (gamma - 1) t for all 1 <= j <= t }
-     by a DP on (position, ones), for t up to TMAX: the normalised W_t(gamma) t^(1/2) 2^(-tE) should settle
+     by a DP on (position, ones) with exact tie handling at o = 0, for t up to TMAX: the normalised W_t(gamma) t^(1/2) 2^(-tE) should settle
      in a bounded window (and W_t(1) t^(3/2) 2^(-t h*) likewise, THM-4495);
  (2) the brute-force orbit counts D_+(2^T, gamma) of THM-4487's control (collatz_dipspectrum_20260926.out,
      plus sheet, T = 10..24) normalised by X^E (log_2 X)^(1/2): the same ratios at the sizes where orbits
@@ -14,6 +14,7 @@ Also prints the constants of the lower-bound construction (Hoeffding block K, i_
 Usage: python3 collatz_dipspectrum_20260926_orders.py [TMAX=600]
 """
 import math, os, re, sys
+from fractions import Fraction
 
 ALPHA = math.log2(3)
 
@@ -27,7 +28,12 @@ def E(gamma):
 
 
 def W_dp(t, gamma):
-    """words of length t with all prefix sums o_j*ALPHA - j > (gamma-1)*t (float threshold; ties impossible)."""
+    """words of length t with all prefix sums o_j*ALPHA - j > (gamma-1)*t.
+    Exact tie handling (audit finding, 2026-09-26): for o = 0 the prefix sum is the integer -j and can EQUAL the
+    rational barrier (gamma-1)t (e.g. gamma = 0.82, t = 50, j = 9); compare exactly with the rational gamma.
+    For o >= 1 the prefix sum is irrational, no tie is possible, and the float comparison is exact (the gap
+    |o*ALPHA - j - (gamma-1)t| exceeds 5e-7 on the ranges used; asserted)."""
+    g = Fraction(str(gamma))
     thr = (gamma - 1.0) * t
     cur = {0: 1}
     for j in range(1, t + 1):
@@ -35,7 +41,13 @@ def W_dp(t, gamma):
         for o, c in cur.items():
             for step in (0, 1):
                 o2 = o + step
-                if o2 * ALPHA - j > thr:
+                if o2 == 0:
+                    ok = Fraction(j) < (1 - g) * t
+                else:
+                    v = o2 * ALPHA - j - thr
+                    assert abs(v) > 1e-9, (o2, j, gamma, t)
+                    ok = v > 0
+                if ok:
                     nxt[o2] = nxt.get(o2, 0) + c
         cur = nxt
     return sum(cur.values())

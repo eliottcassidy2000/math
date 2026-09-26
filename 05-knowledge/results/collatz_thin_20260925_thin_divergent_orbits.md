@@ -254,7 +254,7 @@ counting lemma is essentially sharp for `F` up to logarithmic factors
 ### 1.4b Lemma (2026-09-26, opus, post-audit): the counting lemma without the logarithm
 
 For `theta in (0, theta_1]`, `theta_1 = theta_0/2 = 0.10376` (so
-`rho = (1-theta)/alpha in [0.5655, rho*)`, `rho* = log_3 2`) and `X >= 2^200`,
+`rho = (1-theta)/alpha in [0.5654, rho*)`, `rho* = log_3 2`) and `X >= 2^200`,
 
 ```text
 #F_b(X, theta) <= 2|b| X^(log_2(3/2) + theta) + 27 X^(h(rho)) (log_2 X)^(-1/2).
@@ -267,8 +267,9 @@ For `o >= o_0`, `C(k, o+1)/C(k, o) = (k - o)/(o + 1) <= (1 - rho + 2/k)/(rho - 2
 so `sum_(o >= o_0) C(k, o) <= C(k, o_0)/0.19 <= 5.3 C(k, o_0)`. With
 `p = o_0/k in (1/2, rho)`: `C(k, o_0) <= 2^(k h(p))/sqrt(2 pi k p(1-p))`
 (Stirling), `p(1-p) >= rho*(1-rho*) = 0.2329`, and
-`2^(k h(p)) <= (rho/(1-rho))^2 2^(k h(rho)) <= 2.92 * 2^(k h(rho))` (the
-`|h'|` bound of 1.4). Hence `sum_(o >= o_0) C(k, o) <= 12.8 * 2^(k h(rho)) k^(-1/2)`,
+`2^(k h(p)) <= (rho/(1-rho))^2 2^(k h(rho)) <= 2.93 * 2^(k h(rho))` (the
+`|h'|` bound of 1.4; `(rho*/(1-rho*))^2 = 2.9224`). Hence
+`sum_(o >= o_0) C(k, o) <= 5.3 * 2.93 * 0.827 * 2^(k h(rho)) k^(-1/2) <= 12.8 * 2^(k h(rho)) k^(-1/2)`,
 each word is one class modulo `2^k` with at most two representatives in
 `[1, X]`, `2^(k h(rho)) <= X^(h(rho))` and `k >= log_2 X - 1 >= 0.995 log_2 X`. ∎
 
@@ -396,7 +397,16 @@ L N(X L^(-c_1)) <= L K X^(h*) L^(-c_1 h*) L^a = K X^(h*) L^(a - eta),
 N(X) <= X^(h*) L^a [ L^(-a) + K L^(-eta) + 27 L^(-eta) ] <= K X^(h*) L^a,
 ```
 
-using `log_2(X L^(-c_1)) <= L`, `27 <= K` and `2 L^(-eta) + L^(-a) <= 1`. ∎
+using `log_2(X L^(-c_1)) <= L`, `27 <= K` and `2 L^(-eta) + L^(-a) <= 1`. The
+induction is on `floor(X)` (`N` depends only on `floor(X)`, and
+`Y = X L^(-c_1) <= X/264` for `X >= 2^200`, so `floor(Y) < floor(X)`). ∎
+
+*Presentation notes (audit, 2026-09-26).* (i) For Corollary 4's injective
+invariant sets the recursion of 1.7 is `N_A(X) <= k N_A(X^(1-theta)) + #F_b + #F_(-b) + (k+1)(|b|/3+1)`
+with base `N_A(X) <= 2X`, so the argument applies with `27` replaced by
+`54` and the extra `O(k)` absorbed in `X^(h*)`. (ii) The constant `K` is
+not effective: `X_3` is of the order `2^(2^(1/eta))`, astronomically large
+for `a` near `a*`.
 
 *Remarks.* (i) Where the exponent comes from: the `L` dippers per landing
 point cost `c_1 h* = 1 + eta`, which reappears in the no-dip count as
