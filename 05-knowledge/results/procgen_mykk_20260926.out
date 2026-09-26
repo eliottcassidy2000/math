@@ -1,0 +1,341 @@
+procgen_mykk_20260926: expanding-cycle feedback sets in B(2,k) (session collatz-procgen-20260922, lane mykk)
+python 3.10.0, numpy 2.2.6
+
+====================================================================================================
+A. Terras coordinates: the level-k parity graph of T_q is the de Bruijn graph B(2,k)
+====================================================================================================
+  [ok] q=3: for k = 1..12 the residue -> parity-word map is a bijection, preserves parity, and maps the parity graph G_0 (s -> both lifts of T_q(s) mod 2^(k-1)) onto B(2,k)
+  [ok] q=5: for k = 1..12 the residue -> parity-word map is a bijection, preserves parity, and maps the parity graph G_0 (s -> both lifts of T_q(s) mod 2^(k-1)) onto B(2,k)
+  (section time 0.0s)
+
+====================================================================================================
+B. Mykkeltveit's theorem (Golomb's conjecture): minimum FVS of B(2,k) = Z(k); explicit set
+====================================================================================================
+  k= 3  Z(k)=    4  |S*|=    2  zero-weight necklaces=  2  |M_k|=    4  B(2,k)-M_k acyclic: yes  (0.0s)
+  k= 4  Z(k)=    6  |S*|=    3  zero-weight necklaces=  3  |M_k|=    6  B(2,k)-M_k acyclic: yes  (0.0s)
+  k= 5  Z(k)=    8  |S*|=    6  zero-weight necklaces=  2  |M_k|=    8  B(2,k)-M_k acyclic: yes  (0.0s)
+  k= 6  Z(k)=   14  |S*|=    9  zero-weight necklaces=  5  |M_k|=   14  B(2,k)-M_k acyclic: yes  (0.0s)
+  k= 7  Z(k)=   20  |S*|=   18  zero-weight necklaces=  2  |M_k|=   20  B(2,k)-M_k acyclic: yes  (0.0s)
+  k= 8  Z(k)=   36  |S*|=   30  zero-weight necklaces=  6  |M_k|=   36  B(2,k)-M_k acyclic: yes  (0.0s)
+  k= 9  Z(k)=   60  |S*|=   56  zero-weight necklaces=  4  |M_k|=   60  B(2,k)-M_k acyclic: yes  (0.0s)
+  k=10  Z(k)=  108  |S*|=   99  zero-weight necklaces=  9  |M_k|=  108  B(2,k)-M_k acyclic: yes  (0.0s)
+  k=11  Z(k)=  188  |S*|=  186  zero-weight necklaces=  2  |M_k|=  188  B(2,k)-M_k acyclic: yes  (0.0s)
+  k=12  Z(k)=  352  |S*|=  333  zero-weight necklaces= 19  |M_k|=  352  B(2,k)-M_k acyclic: yes  (0.1s)
+  k=13  Z(k)=  632  |S*|=  630  zero-weight necklaces=  2  |M_k|=  632  B(2,k)-M_k acyclic: yes  (0.1s)
+  k=14  Z(k)= 1182  |S*|= 1161  zero-weight necklaces= 21  |M_k|= 1182  B(2,k)-M_k acyclic: yes  (0.4s)
+  k=15  Z(k)= 2192  |S*|= 2182  zero-weight necklaces= 10  |M_k|= 2192  B(2,k)-M_k acyclic: yes  (0.8s)
+  k=16  Z(k)= 4116  |S*|= 4080  zero-weight necklaces= 36  |M_k|= 4116  B(2,k)-M_k acyclic: yes  (1.4s)
+  [ok] for k = 3..16: M_k = S* + one node per zero-weight necklace has Z(k) nodes (one per necklace) and meets every cycle of B(2,k); the crossing lemma holds on every edge; w has mean 0 on sampled closed walks
+  [ok] Z(k) = (1/k) sum_{d|k} phi(d) 2^(k/d) matches enumeration for k <= 16
+  [ok] for prime k in {3,5,7,11,13} the only zero-weight necklaces are 0^k and 1^k
+  [ok] S* is closed under setting the first bit or the last bit to 1 (k = 3..14)
+  longest path (nodes) in B(2,k) - M_k: k=3: 3, k=4: 7, k=5: 11, k=6: 21, k=7: 27, k=8: 43, k=9: 55, k=10: 83, k=11: 89, k=12: 141, k=13: 143, k=14: 215, k=15: 225, k=16: 289
+  [ok] the full Mykkeltveit edit meets every orbit within at most k^3 steps for k <= 16 (any odd q)
+  (section time 4.6s)
+
+====================================================================================================
+C. Necklace counts N_c(k): Burnside/Moebius formulas against enumeration
+====================================================================================================
+  [ok] N_c(k) (Burnside) and N^prim_c(k) (Moebius) equal direct enumeration for k <= 14, c = log_3 2, log_5 2
+  N_{log3 2}(k), k=1..20: [1, 1, 2, 2, 2, 5, 5, 6, 16, 19, 52, 70, 85, 251, 332, 434, 1282, 1743, 4958, 6910]
+  N_{log5 2}(k), k=1..20: [1, 2, 2, 4, 4, 9, 10, 23, 44, 67, 136, 216, 448, 714, 1525, 3178, 5286, 11091, 18660, 39268]
+  [ok] N_k (q=3) = 1,2,2,2,5,5,6,16,19,52,70,85,251 for k=2..14 (as in the cube-distance note)
+  (section time 0.0s)
+
+====================================================================================================
+D. Exact FVS_c(k) and FVS^odd_c(k) for c = log_3 2 and c = log_5 2 (certificates re-verified)
+====================================================================================================
+  q=3 (c = log_3 2 = 0.6309298)
+   k |   N  | nu >= | FVS | FVS^odd | Z(k)-1 | LB by | FVS/2^k   | k*FVS/2^k | FVS/N
+   2 |    1 |     1 |       1 |       1 |      2 | packing | 0.250000 | 0.5000 | 1.000
+   3 |    2 |     2 |       2 |       2 |      3 | packing | 0.250000 | 0.7500 | 1.000
+   4 |    2 |     2 |       2 |       2 |      5 | packing | 0.125000 | 0.5000 | 1.000
+   5 |    2 |     4 |       4 |       4 |      7 | packing | 0.125000 | 0.6250 | 2.000
+   6 |    5 |     5 |       5 |       5 |     13 | packing | 0.078125 | 0.4688 | 1.000
+   7 |    5 |     7 |       8 |       8 |     19 |   rc2 | 0.062500 | 0.4375 | 1.600
+       log3_7: lower bound re-proved by rc2
+       log3odd_7: lower bound re-proved by rc2
+   8 |    6 |    12 |      12 |      12 |     35 | packing | 0.046875 | 0.3750 | 2.000
+   9 |   16 |    18 |      20 |      20 |     59 |   rc2 | 0.039062 | 0.3516 | 1.250
+       log3_9: lower bound re-proved by rc2
+       log3odd_9: lower bound re-proved by rc2
+  10 |   19 |    37 |      37 |      37 |    107 | packing | 0.036133 | 0.3613 | 1.947
+  11 |   52 |    53 |  56..58 |      58 |    187 | bounds | 0.027344 | 0.3008 | 1.077
+       log3_11_bounds (all nodes): UB 58 (a feasible set, Bellman-Ford + potential); LB 56 = max(exact LP-dual packing 55, HiGHS MIP bound 56 within 300 s re-proved here); search LB 57 (HiGHS, longer run)
+       log3odd_11: lower bound re-proved by highs
+  12 |   70 |     0 |       - | 95..102 |    351 | bounds | 0.023193 | 0.2783 | 1.357
+       log3odd_12_bounds (odd nodes): UB 102 (a feasible set, Bellman-Ford + potential); LB 95 = max(exact LP-dual packing 95, HiGHS MIP bound 95 within 300 s re-proved here); search LB 96 (HiGHS, longer run)
+       log3odd_12_bounds: the same cycles give FVS (all nodes) >= 95 (exact LP-dual packing)
+  [ok] q=3: every listed FVS / FVS^odd value re-verified (optimal set: Bellman-Ford + potential; lower bound: disjoint packing, RC2 (k <= 10) or HiGHS re-solve (k >= 11); bounds entries: exact LP-dual packing + MIP bound)
+  q=5 (c = log_5 2 = 0.4306766)
+   k |   N  | nu >= | FVS | FVS^odd | Z(k)-1 | LB by | FVS/2^k   | k*FVS/2^k | FVS/N
+   2 |    2 |     2 |       2 |       2 |      2 | packing | 0.500000 | 1.0000 | 1.000
+   3 |    2 |     3 |       3 |       3 |      3 | packing | 0.375000 | 1.1250 | 1.500
+   4 |    4 |     4 |       4 |       4 |      5 | packing | 0.250000 | 1.0000 | 1.000
+   5 |    4 |     6 |       6 |       6 |      7 | packing | 0.187500 | 0.9375 | 1.500
+   6 |    9 |     9 |       9 |       9 |     13 | packing | 0.140625 | 0.8438 | 1.000
+   7 |   10 |    15 |      15 |      15 |     19 | packing | 0.117188 | 0.8203 | 1.500
+   8 |   23 |    27 |      27 |      27 |     35 | packing | 0.105469 | 0.8438 | 1.174
+   9 |   44 |    44 |      45 |      45 |     59 |   rc2 | 0.087891 | 0.7910 | 1.023
+       log5_9: lower bound re-proved by rc2
+       log5odd_9: lower bound re-proved by rc2
+  10 |   67 |    84 |      84 |      84 |    107 | packing | 0.082031 | 0.8203 | 1.254
+  11 |  136 |     0 | 146..148 |       - |    187 | bounds | 0.071289 | 0.7842 | 1.074
+       log5_11_bounds (all nodes): UB 148 (a feasible set, Bellman-Ford + potential); LB 146 = max(exact LP-dual packing 146, HiGHS MIP bound 146 within 300 s re-proved here); search LB 146 (HiGHS, longer run)
+  [ok] q=5: every listed FVS / FVS^odd value re-verified (optimal set: Bellman-Ford + potential; lower bound: disjoint packing, RC2 (k <= 10) or HiGHS re-solve (k >= 11); bounds entries: exact LP-dual packing + MIP bound)
+  (section time 1024.7s)
+
+====================================================================================================
+E. The exact step function c -> FVS_c(k) on [0,1) against N_c(k) (k <= 9)
+====================================================================================================
+  k=2: FVS_c(k) on [0,1) (segment [lo, hi): value; N_c on the same piece):
+     [0,1/2):2/2  [1/2,1):1/1
+     equality set {c : FVS_c = N_c} = [0,1)   (length 1 = 1.000)
+     max gap FVS_c - N_c = 0;  breakpoints (denominators): [2]
+  k=3: FVS_c(k) on [0,1) (segment [lo, hi): value; N_c on the same piece):
+     [0,1/3):3/3  [1/3,1/2):3/2  [1/2,2/3):2/2  [2/3,1):1/1
+     equality set {c : FVS_c = N_c} = [0,1/3) U [1/2,1)   (length 5/6 = 0.833)
+     max gap FVS_c - N_c = 1;  breakpoints (denominators): [2, 3]
+  k=4: FVS_c(k) on [0,1) (segment [lo, hi): value; N_c on the same piece):
+     [0,1/4):5/5  [1/4,1/3):5/4  [1/3,1/2):4/4  [1/2,3/5):3/2  [3/5,3/4):2/2  [3/4,1):1/1
+     equality set {c : FVS_c = N_c} = [0,1/4) U [1/3,1/2) U [3/5,1)   (length 49/60 = 0.817)
+     max gap FVS_c - N_c = 1;  breakpoints (denominators): [2, 3, 4, 5]
+  k=5: FVS_c(k) on [0,1) (segment [lo, hi): value; N_c on the same piece):
+     [0,1/5):7/7  [1/5,1/3):7/6  [1/3,2/5):6/6  [2/5,1/2):6/4  [1/2,3/5):4/4  [3/5,2/3):4/2  [2/3,4/5):2/2  [4/5,1):1/1
+     equality set {c : FVS_c = N_c} = [0,1/5) U [1/3,2/5) U [1/2,3/5) U [2/3,1)   (length 7/10 = 0.700)
+     max gap FVS_c - N_c = 2;  breakpoints (denominators): [2, 3, 5]
+  k=6: FVS_c(k) on [0,1) (segment [lo, hi): value; N_c on the same piece):
+     [0,1/6):13/13  [1/6,1/4):13/12  [1/4,1/3):12/12  [1/3,2/5):11/9  [2/5,3/7):10/9  [3/7,1/2):9/9  [1/2,4/7):7/5  [4/7,3/5):6/5  [3/5,2/3):5/5  [2/3,5/7):4/2  [5/7,3/4):3/2  [3/4,5/6):2/2  [5/6,1):1/1
+     equality set {c : FVS_c = N_c} = [0,1/6) U [1/4,1/3) U [3/7,1/2) U [3/5,2/3) U [3/4,1)   (length 67/105 = 0.638)
+     max gap FVS_c - N_c = 2;  breakpoints (denominators): [2, 3, 4, 5, 6, 7]
+  k=7: FVS_c(k) on [0,1) (segment [lo, hi): value; N_c on the same piece):
+     [0,1/7):19/19  [1/7,1/4):19/18  [1/4,2/7):18/18  [2/7,1/3):18/15  [1/3,2/5):17/15  [2/5,3/7):15/15  [3/7,1/2):15/10  [1/2,5/9):11/10  [5/9,4/7):10/10  [4/7,3/5):10/5  [3/5,5/8):9/5  [5/8,7/11):8/5  [7/11,2/3):7/5  [2/3,5/7):5/5  [5/7,3/4):5/2  [3/4,7/9):3/2  [7/9,6/7):2/2  [6/7,1):1/1
+     equality set {c : FVS_c = N_c} = [0,1/7) U [1/4,2/7) U [2/5,3/7) U [5/9,4/7) U [2/3,5/7) U [7/9,1)   (length 69/140 = 0.493)
+     max gap FVS_c - N_c = 5;  breakpoints (denominators): [2, 3, 4, 5, 7, 8, 9, 11]
+  k=8: FVS_c(k) on [0,1) (segment [lo, hi): value; N_c on the same piece):
+     [0,1/8):35/35  [1/8,1/5):35/34  [1/5,1/4):34/34  [1/4,1/3):33/30  [1/3,3/8):30/30  [3/8,5/13):30/23  [5/13,2/5):29/23  [2/5,3/7):28/23  [3/7,4/9):27/23  [4/9,5/11):26/23  [5/11,1/2):25/23  [1/2,5/9):20/13  [5/9,4/7):18/13  [4/7,3/5):16/13  [3/5,5/8):13/13  [5/8,2/3):12/6  [2/3,7/10):8/6  [7/10,5/7):7/6  [5/7,3/4):6/6  [3/4,7/9):5/2  [7/9,4/5):3/2  [4/5,7/8):2/2  [7/8,1):1/1
+     equality set {c : FVS_c = N_c} = [0,1/8) U [1/5,1/4) U [1/3,3/8) U [3/5,5/8) U [5/7,3/4) U [4/5,1)   (length 401/840 = 0.477)
+     max gap FVS_c - N_c = 7;  breakpoints (denominators): [2, 3, 4, 5, 7, 8, 9, 10, 11, 13]
+  k=9: FVS_c(k) on [0,1) (segment [lo, hi): value; N_c on the same piece):
+     [0,1/9):59/59  [1/9,1/5):59/58  [1/5,2/9):58/58  [2/9,1/4):58/54  [1/4,2/7):57/54  [2/7,3/10):56/54  [3/10,1/3):55/54  [1/3,2/5):52/44  [2/5,5/12):49/44  [5/12,3/7):48/44  [3/7,4/9):45/44  [4/9,5/11):45/30  [5/11,10/21):43/30  [10/21,1/2):42/30  [1/2,7/13):34/30  [7/13,6/11):33/30  [6/11,5/9):32/30  [5/9,9/16):31/16  [9/16,4/7):30/16  [4/7,3/5):28/16  [3/5,8/13):23/16  [8/13,5/8):21/16  [5/8,7/11):20/16  [7/11,2/3):17/16  [2/3,7/10):14/6  [7/10,8/11):10/6  [8/11,11/15):9/6  [11/15,3/4):8/6  [3/4,7/9):6/6  [7/9,4/5):6/2  [4/5,5/6):3/2  [5/6,8/9):2/2  [8/9,1):1/1
+     equality set {c : FVS_c = N_c} = [0,1/9) U [1/5,2/9) U [3/4,7/9) U [5/6,1)   (length 59/180 = 0.328)
+     max gap FVS_c - N_c = 15;  breakpoints (denominators): [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 21]
+  [ok] step functions verified segment by segment (upper: set R_i with exact rho_max(B-R_i) = segment bottom; lower: minimum hitting set of cycles of density >= segment top, re-proved by RC2 (82 segments) or, when RC2 exceeds 20 s, by HiGHS (8 segments))
+  closed thresholds: FVS(>= j/k) versus N(>= j/k) = #necklaces with >= j ones
+   k=2  1:2/2  2:1/1
+   k=3  1:3/3  2:2/2  3:1/1
+   k=4  1:5/5  2:4/4  3:2/2  4:1/1
+   k=5  1:7/7  2:6/6  3:4/4  4:2/2  5:1/1
+   k=6  1:13/13  2:12/12  3:9/9  4:5/5  5:2/2  6:1/1
+   k=7  1:19/19  2:18/18  3:15/15  4:10/10  5:5/5  6:2/2  7:1/1
+   k=8  1:35/35  2:34/34  3:30/30  4:25/23*  5:13/13  6:6/6  7:2/2  8:1/1
+   k=9  1:59/59  2:58/58  3:55/54*  4:45/44*  5:32/30*  6:17/16*  7:6/6  8:2/2  9:1/1
+   k=10  3:101/101  4:91/89*  5:72/67*  6:45/41*  7:19/19  8:7/7  9:2/2   (separate IHS runs; j = 1, 2 are Theorem 1/Cor. 1.6 and section F)
+   (* = FVS(>= j/k) > N(>= j/k), i.e. no Golomb-type equality even just below j/k)
+  [ok] for k = 3, 5, 7 and 1 <= j <= k-2: FVS just above j/k equals the number of necklaces with >= j ones (crossing j/k does not lower FVS)
+  (section time 802.0s)
+
+====================================================================================================
+F. Closed-threshold Golomb-type equalities: (k-1)/k and (k-2)/k (PROVED), 2/k (FINITE-EXACT), 1/k
+====================================================================================================
+  [ok] k = 3..16: FVS(>= (k-1)/k) = 2, FVS(>= (k-2)/k) = 2 + floor(k/2), FVS(>= 2/k) = Z(k) - 2, FVS(>= 1/k) = Z(k) - 1, each equal to the number of necklaces of density >= the threshold (explicit sets: all-ones + one rotation; ballot rotations ending in 0; negative-axis crossing set; Mykkeltveit)
+  (section time 4.1s)
+
+====================================================================================================
+G. 'FVS_c = N_c' is FALSE: explicit counterexamples, the fractional-packing bound, asymptotics
+====================================================================================================
+  [ok] k=3, every c in [1/3,1/2) (includes log_5 2): cycles (1),(01),(0011) are disjoint, expanding; N_c(3) = 2 < 3 = FVS_c(3) (R = {111,101,110})
+  k=5 packing (periodic words, first letter = parity of the first step): (1), (110), (111100), (111010)
+  [ok] k=5, c = log_3 2: four pairwise disjoint expanding cycles of lengths 1,3,6,6, so FVS_c(5) >= 4 > 2 = N_c(5) (and FVS = 4, section D)
+  fractional packing by the primitive (k+1)-necklaces (weight 1/2 each):  FVS_c(k) >= ceil(Nprim_c(k+1)/2)
+  [ok] k = 2..13: every primitive expanding (k+1)-necklace is a simple cycle of B(2,k) and every node lies on at most two of them (so weights 1/2 form a fractional packing)
+   q=3:  k : N_c(k)  ceil(Nprim(k+1)/2)  [ceil(c(k+1))==ceil(ck)]  ratio
+     2 :            1            1   True   1.000
+     3 :            2            1   False   0.500
+     4 :            2            1   False   0.500
+     5 :            2            2   True   1.000
+     6 :            5            2   False   0.400
+     7 :            5            2   False   0.400
+     8 :            6            7   True   1.167
+     9 :           16            9   False   0.562
+    10 :           19           26   True   1.368
+    11 :           52           32   False   0.615
+    12 :           70           42   False   0.600
+    13 :           85          123   True   1.447
+    14 :          251          165   False   0.657
+    15 :          332          214   False   0.645
+    16 :          434          641   True   1.477
+    17 :         1282          862   False   0.672
+    18 :         1743         2479   True   1.422
+    19 :         4958         3445   False   0.695
+    20 :         6910         4724   False   0.684
+    21 :         9454        13632   True   1.442
+    22 :        27316        19152   False   0.701
+    23 :        38304        26475   False   0.691
+    24 :        53024        77015   True   1.452
+    25 :       154032       108797   False   0.706
+    26 :       217679       151711   False   0.697
+    27 :       303438       443176   True   1.461
+    28 :       886604       629648   False   0.710
+    29 :      1259296      1793855   True   1.424
+    30 :      3588061      2591057   False   0.722
+  [ok] q=3: for every k in [20,60] with ceil(c(k+1)) = ceil(ck) the (k+1)-packing bound exceeds 1.30 N_c(k) (min ratio 1.3993)
+  [ok] q=3, k <= 60: ceil(Nprim(k+1)/2) > N_k exactly for the admissible k >= 8: [8, 10, 13, 16, 18, 21, 24, 27, 29, 32, 35, 37, 40, 43, 46, 48, 51, 54, 56, 59]
+  [ok] asymptotic ratio 1 + (2c-1)/(2(1-c)) = 1.35476 for c = log_3 2
+  [ok] for every k in [61,1000] with ceil(c(k+1)) = ceil(ck): the explicit bound FVS/N >= (T(k+1,a) - 2^(k/2+2))/(2(k+1)) / ((T(k,a) + k 2^(k/2+1))/k) exceeds 1.33 (min 1.3585, max 1.4124)
+  (section time 2.4s)
+
+====================================================================================================
+G2. Min-max: the packing number nu versus FVS (fractional covers certified by exact separation)
+====================================================================================================
+   q  k | FVS | packing found (nu >=) | certified fractional cover (nu <= nu* = tau* <= value) | verdict
+   3  2 |   1 |   1 | 1 = 1.0000 | nu = FVS = 1
+   3  3 |   2 |   2 | 2 = 2.0000 | nu = FVS = 2
+   3  4 |   2 |   2 | 2 = 2.0000 | nu = FVS = 2
+   3  5 |   4 |   4 | 4 = 4.0000 | nu = FVS = 4
+   3  6 |   5 |   5 | 5 = 5.0000 | nu = FVS = 5
+   3  7 |   8 |   7 | 22/3 = 7.3333 | nu = 7 < FVS = 8
+   3  8 |  12 |  12 | 12 = 12.0000 | nu = FVS = 12
+   3  9 |  20 |  18 | 6989/360 = 19.4139 | 18 <= nu <= 19 < FVS = 20
+   5  2 |   2 |   2 | 2 = 2.0000 | nu = FVS = 2
+   5  3 |   3 |   3 | 3 = 3.0000 | nu = FVS = 3
+   5  4 |   4 |   4 | 4 = 4.0000 | nu = FVS = 4
+   5  5 |   6 |   6 | 6 = 6.0000 | nu = FVS = 6
+   5  6 |   9 |   9 | 9 = 9.0000 | nu = FVS = 9
+   5  7 |  15 |  15 | 15 = 15.0000 | nu = FVS = 15
+   5  8 |  27 |  27 | 27 = 27.0000 | nu = FVS = 27
+   5  9 |  45 |  44 | 179/4 = 44.7500 | nu = 44 < FVS = 45
+  [ok] every fractional cover x above satisfies x(C) >= 1 for EVERY expanding cycle C of B(2,k) (exact separation: max-plus dynamic program over the support of x, integer units); hence nu <= floor(value)
+  (section time 2.5s)
+
+====================================================================================================
+G3. Mykkeltveit-type one-node-per-necklace selections (they can only work where FVS = N)
+====================================================================================================
+   q=3 k= 3  N=  2 FVS=2  rules that work: ['S*', 'S**', 'ballot-lexmin', 'ballot-lexmax', 'lexmax']
+   q=3 k= 4  N=  2 FVS=2  rules that work: ['S*', 'ballot-lexmin']
+   q=3 k= 5  N=  2 FVS=4  rules that work: none
+   q=3 k= 6  N=  5 FVS=5  rules that work: ['S**', 'ballot-lexmin']
+   q=3 k= 7  N=  5 FVS=8  rules that work: none
+   q=3 k= 8  N=  6 FVS=12  rules that work: none
+   q=3 k= 9  N= 16 FVS=20  rules that work: none
+   q=3 k=10  N= 19 FVS=37  rules that work: none
+   q=5 k= 3  N=  2 FVS=3  rules that work: none
+   q=5 k= 4  N=  4 FVS=4  rules that work: ['S**', 'ballot-lexmin']
+   q=5 k= 5  N=  4 FVS=6  rules that work: none
+   q=5 k= 6  N=  9 FVS=9  rules that work: none
+   q=5 k= 7  N= 10 FVS=15  rules that work: none
+   q=5 k= 8  N= 23 FVS=27  rules that work: none
+   q=5 k= 9  N= 44 FVS=45  rules that work: none
+   q=5 k=10  N= 67 FVS=84  rules that work: none
+   closed thresholds k=3: 1:S*,S**,ballot-lexmin  2:S*,S**,ballot-lexmin,ballot-lexmax,lexmax
+   closed thresholds k=4: 1:S*,S**,ballot-lexmin  2:S**,ballot-lexmin  3:S*,S**,ballot-lexmin,ballot-lexmax,lexmax
+   closed thresholds k=5: 1:S*,S**  2:S**  3:S**,ballot-lexmin  4:S*,S**,ballot-lexmin,ballot-lexmax,lexmax
+   closed thresholds k=6: 1:S*,S**  2:S**  3:-  4:S**,ballot-lexmin  5:S*,S**,ballot-lexmin,ballot-lexmax,lexmax
+   closed thresholds k=7: 1:S*,S**  2:S**  3:S**  4:-  5:S**,ballot-lexmin  6:S*,S**,ballot-lexmin,ballot-lexmax,lexmax
+   closed thresholds k=8: 1:S*,S**  2:S**  3:-  4:-  5:-  6:ballot-lexmin  7:S*,S**,ballot-lexmin,ballot-lexmax,lexmax
+   closed thresholds k=9: 1:S*,S**  2:S**  3:-  4:-  5:-  6:-  7:ballot-lexmin  8:S*,S**,ballot-lexmin,ballot-lexmax,lexmax
+  [ok] selection rules tested exactly (Bellman-Ford); every working rule occurs where FVS = N
+  (section time 0.2s)
+
+====================================================================================================
+H. Dynamics (Theorem 3): minimal provable periodic edits, lookahead, thresholds, census, witnesses
+====================================================================================================
+  G(n) = 1 on the residue classes of R (R = an optimal odd FVS, Terras-mapped), G = T_q elsewhere
+   q  k |R| | L+1 (max first-descent time, n>n0) | n0 | census bound | cycles reached (min: length)
+   3  2   1 |    2 |      1 |   20001 | {1: 2}  (0.0s)
+   3  3   2 |    2 |      1 |   20001 | {1: 2}  (0.0s)
+   3  4   2 |    8 |     21 |   20021 | {1: 2}  (0.0s)
+   3  5   4 |   16 |     21 |   20021 | {1: 2}  (0.0s)
+   3  6   5 |    8 |     22 |   20022 | {1: 2}  (0.0s)
+   3  7   8 |   92 |    639 |   20639 | {1: 2}  (0.0s)
+   3  8  12 |   65 |    762 |   20762 | {1: 2}  (0.0s)
+   3  9  20 |  181 |   1911 |   21911 | {1: 2}  (0.1s)
+   3 10  37 |  206 |   1964 |   21964 | {1: 2}  (0.3s)
+   3 11  58 |  549 |  45780 |   65780 | {1: 2}  (2.1s)
+   3 12 102 | 1083 |  46585 |   66585 | {1: 2}  (12.4s)
+   5  2   2 |    1 |      0 |   20000 | {1: 1}  (0.0s)
+   5  3   3 |    2 |      0 |   20000 | {1: 2}  (0.0s)
+   5  4   4 |    3 |      0 |   20000 | {1: 1}  (0.0s)
+   5  5   6 |    7 |     17 |   20017 | {1: 5}  (0.0s)
+   5  6   9 |   10 |     17 |   20017 | {1: 5}  (0.0s)
+   5  7  15 |   15 |      1 |   20001 | {1: 5}  (0.0s)
+   5  8  27 |  157 |   1772 |   21772 | {1: 5}  (0.1s)
+   5  9  45 |   23 |     20 |   20020 | {1: 5, 13: 7, 17: 7}  (0.0s)
+   5 10  84 |  252 |   1814 |   21814 | {1: 5, 13: 7, 17: 7}  (0.7s)
+  [ok] for every listed (q,k): every n > n0 has G^i(n) < n for some i <= L+1 (checked up to the census bound; proved in general by Theorem 3), and every n <= census bound reaches one of the listed cycles; by strong induction EVERY positive integer reaches one of them
+  [ok] converse (Theorem 3): for q=3,5, k=4..9 and three nodes r of each optimal set, B(2,k) - (R - r) has an expanding cycle, and the integer n = its ballot periodic point mod 2^(k+40) satisfies G^j(n) > n for j = 1..40 under the edit R - r
+  (section time 16.1s)
+
+====================================================================================================
+I. DRIFT (Theorem 4): the price of provable periodic edits, q = 5 (Theta(1/k)) and q = 3 (2^(-(1-h)k))
+====================================================================================================
+  q=5: c = 0.430677, h(c) = 0.98609.  Bounds: N_c(k)/2^k <= price <= (Z(k)-1)/2^k <= 1/k + 2^(-k/2)
+   k | N_c(k) | exact FVS (if computed) | Z(k)-1 | k*N/2^k | k*FVS/2^k | k*(Z-1)/2^k | 1-2^(-(1-h)k)
+    1 | 1 | None | 1 | 0.5000 | - | 0.5000 | 0.0096
+    2 | 2 | 2 | 2 | 1.0000 | 1.0000 | 1.0000 | 0.0191
+    3 | 2 | 3 | 3 | 0.7500 | 1.1250 | 1.1250 | 0.0285
+    4 | 4 | 4 | 5 | 1.0000 | 1.0000 | 1.2500 | 0.0378
+    5 | 4 | 6 | 7 | 0.6250 | 0.9375 | 1.0938 | 0.0471
+    6 | 9 | 9 | 13 | 0.8438 | 0.8438 | 1.2188 | 0.0562
+    7 | 10 | 15 | 19 | 0.5469 | 0.8203 | 1.0391 | 0.0653
+    8 | 23 | 27 | 35 | 0.7188 | 0.8438 | 1.0938 | 0.0742
+    9 | 44 | 45 | 59 | 0.7734 | 0.7910 | 1.0371 | 0.0831
+   10 | 67 | 84 | 107 | 0.6543 | 0.8203 | 1.0449 | 0.0919
+   11 | 136 | 146..148 | 187 | 0.7305 | 0.784..0.795 | 1.0044 | 0.1006
+   12 | 216 | None | 351 | 0.6328 | - | 1.0283 | 0.1093
+   13 | 448 | None | 631 | 0.7109 | - | 1.0013 | 0.1178
+   14 | 714 | None | 1181 | 0.6101 | - | 1.0092 | 0.1263
+   15 | 1525 | None | 2191 | 0.6981 | - | 1.0030 | 0.1347
+   16 | 3178 | None | 4115 | 0.7759 | - | 1.0046 | 0.1430
+   17 | 5286 | None | 7711 | 0.6856 | - | 1.0001 | 0.1512
+   18 | 11091 | None | 14601 | 0.7616 | - | 1.0026 | 0.1593
+   19 | 18660 | None | 27595 | 0.6762 | - | 1.0000 | 0.1674
+   20 | 39268 | None | 52487 | 0.7490 | - | 1.0011 | 0.1754
+   30 | 29321218 | None | 35792567 | 0.8192 | - | 1.0000 | 0.2512
+   40 | 21583563380 | None | 27487816991 | 0.7852 | - | 1.0000 | 0.3200
+   60 | 16860892555392914 | None | 19215358428046175 | 0.8775 | - | 1.0000 | 0.4393
+  100 | 11451018066348445837330679228 | None | 12676506002282305273966813559 | 0.9033 | - | 1.0000 | 0.6187
+  200 | 7809856527356551885530386751579899322341375513936677209492 | None | 8034690221294951377709810461712151265612156127202437685647 | 0.9720 | - | 1.0000 | 0.8546
+  [ok] q=5: 1/(2k) <= N_c(k)/2^k <= FVS_c(k)/2^k <= (Z(k)-1)/2^k <= 1/k + 2^(-k/2) for all listed k; k*price -> 1
+  [ok] Corollary 1.6 made explicit for c = log_5 2, k = 3..14: Mykkeltveit's set without the non-expanding zero-weight necklaces meets every expanding cycle; sizes [(3, 3), (4, 5), (5, 7), (6, 12), (7, 19), (8, 34), (9, 58), (10, 104), (11, 187), (12, 345), (13, 631), (14, 1172)]
+  q=3: N_k/2^k <= price <= |Bad_k|/2^k <= 2^(-(1-h)k), h = 0.9499555
+   k= 2  N=   1  FVS=   1  |Bad_k|=   1  2^(hk)=3.7   price=0.25000
+   k= 3  N=   2  FVS=   2  |Bad_k|=   2  2^(hk)=7.2   price=0.25000
+   k= 4  N=   2  FVS=   2  |Bad_k|=   3  2^(hk)=13.9   price=0.12500
+   k= 5  N=   2  FVS=   4  |Bad_k|=   4  2^(hk)=26.9   price=0.12500
+   k= 6  N=   5  FVS=   5  |Bad_k|=   8  2^(hk)=52.0   price=0.07812
+   k= 7  N=   5  FVS=   8  |Bad_k|=  13  2^(hk)=100.4   price=0.06250
+   k= 8  N=   6  FVS=  12  |Bad_k|=  19  2^(hk)=194.0   price=0.04688
+   k= 9  N=  16  FVS=  20  |Bad_k|=  38  2^(hk)=374.7   price=0.03906
+   k=10  N=  19  FVS=  37  |Bad_k|=  64  2^(hk)=723.9   price=0.03613
+   k=11  N=  52  FVS=None  |Bad_k|= 128  2^(hk)=1398.4   price=-
+   k=12  N=  70  FVS=None  |Bad_k|= 226  2^(hk)=2701.4   price=-
+  [ok] q=3: Bad_k (words all of whose prefixes are expanding) is an odd FVS; 2^(hk)/(3k^2) <= N_k <= FVS <= |Bad_k| <= 2^(hk) for k <= 12
+  (section time 2.2s)
+
+====================================================================================================
+J. Flips versus deletions (Proposition 5): delta_k >= FVS^odd_c(k) >= FVS_c(k) >= nu_c(k) >= N_c(k)
+====================================================================================================
+   k | delta_k (cube note) | FVS^odd  | FVS      | nu >= | N_k | delta > FVS^odd? | FVS^odd = FVS? | FVS > N?
+   2 |        1 |        1 |        1 |    1 |   1 | no | yes | no
+   3 |        2 |        2 |        2 |    2 |   2 | no | yes | no
+   4 |        2 |        2 |        2 |    2 |   2 | no | yes | no
+   5 |        4 |        4 |        4 |    4 |   2 | no | yes | yes
+   6 |        5 |        5 |        5 |    5 |   5 | no | yes | no
+   7 |        9 |        8 |        8 |    7 |   5 | yes | yes | yes
+   8 |       14 |       12 |       12 |   12 |   6 | yes | yes | yes
+   9 |       23 |       20 |       20 |   18 |  16 | yes | yes | yes
+  10 |    40-44 |       37 |       37 |   37 |  19 | yes | yes | yes
+  11 |    52-72 |       58 |   56..58 |   53 |  52 | ? | ? | yes
+  12 |  unknown |  95..102 |        - |    0 |  70 | ? | ? | ?
+  NEW: delta_11 >= FVS^odd_11 >= 58 (the cube-distance note had delta_11 >= 52)
+  [ok] delta_k >= FVS^odd_k is consistent with every known delta_k; FVS^odd lower bounds improve delta_k where they exceed the old lower bound
+   5n+1:  k | flips (k=7 exact, else pruned upper) | FVS^odd | k*flips/2^(k-1) | k*FVS^odd/2^(k-1) | k*N/2^(k-1)
+           7 |   29 | 15 | 3.172 | 1.641 | 1.094
+           8 |   50 | 27 | 3.125 | 1.688 | 1.438
+           9 |   94 | 45 | 3.305 | 1.582 | 1.547
+          10 |  158 | 84 | 3.086 | 1.641 | 1.309
+  [ok] 5n+1: the odd deletion price is a rigorous floor for the flip distance (delta_7 = 29 >= FVS^odd_7)
+  (section time 0.0s)
+
+ALL CHECKS PASSED.  wall 1858.9s, peak RSS 513 MB

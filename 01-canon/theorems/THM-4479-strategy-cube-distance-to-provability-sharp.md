@@ -25,6 +25,10 @@ status: >
   5n+1's exact distance at k = 7 is 29/64; whether it tends to 0 is OPEN.
   Collatz itself stays in class (iv) at every level. Nothing here bears on
   its truth.
+  UPDATE 2026-09-26 (THM-4485): new lower bounds delta_11 >= FVS^odd_11 = 58
+  (was 52) and delta_12 >= 95 (was N_12 = 70), from exact feedback sets of
+  the expanding cycles; the upper bounds remain 72 (k = 11) and 131 (k = 12,
+  pruned).
   UPDATE 2026-09-26 (THM-4482): the upper Christoffel word is one maximizer
   of sigma_k, not the only one. The maximal cycles are all periodic
   concatenations of density-F_k first-descent blocks, a positive-entropy

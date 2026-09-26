@@ -1,5 +1,12 @@
 # Script Results Index
 
+- [The exact price of periodic Collatz edits: feedback sets for expanding cycles (Golomb–Mykkeltveit fails for thresholds)](procgen_mykk_20260926_expanding_cycle_feedback.md):
+  **PROVED (THM-4485, audited) / FINITE-EXACT / REFUTED.** A periodic edit is provable iff it meets every expanding cycle of `B(2,k)`, so the exact price is `FVS_c(k)/2^k`.
+  * Mykkeltveit (re-derived) gives `FVS <= Z(k) - 1`.
+  * 5n+1 deletion price `~1/k` (`k price -> 1`); 3n+1's is exponential.
+  * The Golomb analogue for density thresholds is REFUTED: explicit counterexamples at `k = 3, 5`, and `FVS/N >= 1.35` on a density-0.369 set of `k` for `log_3 2`.
+  * Exact FVS values to `k = 10` (both `q`). New sign-flip bounds `delta_11 >= 58`, `delta_12 >= 95`.
+
 - [The pairing family at the peak: coupling, barriers and the private price](procgen_pairpeak_20260926_pairing_peak_price.md):
   **PROVED / FINITE-EXACT / EMPIRICAL / OPEN (HYP-9140 still open).**
   * **Coupling Lemma 1.** A single pairing flip re-merges with the unflipped orbit at time `r+3` whenever `T(v)`'s word begins `1^r 00`, i.e. with probability `1/2`. This CORRECTS HYP-9140's freshness rationale.
