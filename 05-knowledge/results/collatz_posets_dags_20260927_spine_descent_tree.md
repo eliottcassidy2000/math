@@ -9,14 +9,16 @@ finishing move."
 (no-descent words of a cell are the linear extensions of a width-2 poset;
 height selection is not a poset operation),
 [THM-4495](../../01-canon/theorems/THM-4495-no-descent-count-exact-order-spitzer-ballot.md)
-(the Spitzer identity; its Step 1 is the ladder decomposition
-`W = 1/(1 - P)` into positive min-ending words, its Step 2 the reversal),
+(the Spitzer identity; its Step 1 is the minimum decomposition
+`W = 1/(1 - P)` into positive min-ending words, its Step 2 the reversal to
+first-passage words, its Step 3 the ladder blocks, which are those
+reversals),
 [THM-4476](../../01-canon/theorems/THM-4476-thin-divergent-orbits-reciprocal-sums-finite.md)
 (thin divergence; `sum 1/m_l < infinity`; no bounded strip, no narrow
 log-band),
 [THM-4506](../../01-canon/theorems/THM-4506-landing-multiplicity-exact-worst-case-and-recursion-saturation.md)
 (dippers of a landing point lie in one dyadic shell),
-[THM-4512](../../01-canon/theorems/THM-4512-collatz-coefficient-descent-classes-certified-thresholds.md)
+[THM-4512](../../01-canon/theorems/THM-4512-coefficient-descent-classes-one-member.md)
 (coefficient-descent classes certified above the threshold `N(w)`; Terras's
 equality `kappa = sigma` for odd `n <= 10^7`),
 the S13 note [`collatz_directions_20260926.md`](collatz_directions_20260926.md)
@@ -41,7 +43,8 @@ exact object is Theorem 3, the tightness of spine blocks) + FINITE-EXACT
 (descent tree to `2 * 10^6`, two-place in-degree formula to `10^5`, cells to
 `a + b <= 12`, block enumeration to length 16 and generating functions to
 length 60, controls) + DIRECTION (section 6, the finishing-move shapes, each
-typed with its obstruction) + AUDIT pending (section 9). Collatz OPEN. Nothing
+typed with its obstruction) + INDEPENDENTLY AUDITED (SOUND WITH CORRECTIONS,
+all applied; section 9). Collatz OPEN. Nothing
 here proves anything about all `n`; the honest content is that every DAG or
 poset finishing move reduces to the same transversality statement, and the
 note says exactly where.** Script
@@ -54,17 +57,21 @@ audit).
 A Collatz orbit carries three natural order structures, and all three say the
 same thing. (1) The **value-time poset** (`i` below `j` iff `i` is earlier and
 larger) has dimension at most two; its minimal elements are the leaders, its
-maximal elements the strict future minima, and a positive-integer orbit has a
-strict future minimum **iff it diverges** (Proposition 1). (2) The
-**excursion forest** (`i` an ancestor of `j` iff the height walk stays above
-`h_i` on `(i, j]`) has the strict lower records (the descent chain `n > D(n)
-> D^2(n) > ...`) as its roots and, on a divergent orbit, exactly one infinite
-tree whose spine is the sequence of strict coefficient future minima; the
-spine is **the orbit's intersection with the no-descent fractal `E_inf`**, so
-a positive integer lies in `E_inf` iff it is the minimum of a divergent orbit,
-and then its orbit meets `E_inf` infinitely often along an increasing chain
-(Proposition 2). (3) The spine cuts the word into **spine blocks** (positive
-min-ending words, THM-4495's ladder blocks), and these are **tight**: a block
+maximal elements the strict future minima, and a positive-integer orbit has
+infinitely many strict future minima **iff it diverges**, and at least one iff
+its global minimum is attained only once (Proposition 1; the `5x+1` orbit of
+`5` has one and is eventually periodic). (2) The **excursion forest** (`i` an
+ancestor of `j` iff the height walk stays above `h_i` on `(i, j]`) has the
+strict lower records of the height walk as its roots (the coefficient-descent
+chain, which is the descent chain `n > D(n) > D^2(n) > ...` exactly when
+Terras's equality holds along it) and, on a divergent orbit, exactly one
+infinite tree whose spine is the sequence of strict coefficient future
+minima; the spine is **the orbit's intersection with the no-descent fractal
+`E_inf`**, so a positive integer in `E_inf` is the minimum of a divergent
+orbit (the converse needs Terras's equality at that minimum), and its orbit
+meets `E_inf` infinitely often along an increasing chain (Proposition 2).
+(3) The spine cuts the word into **spine blocks** (THM-4495's positive
+min-ending words, the reversals of its ladder blocks), and these are **tight**: a block
 of length `l >= 2` starts with an odd step, has exactly `ceil(l log_3 2)` odd
 steps, and has height in `(0, log_2 3 - 1)`; blocks exist only at the lengths
 `l = 1 + floor(b log_2 3/(log_2 3 - 1))`, a shifted Beatty sequence of density
@@ -73,13 +80,14 @@ value by less than `3/2` (plus a carry of at most `3l/4`): a divergent orbit
 would climb its infinite ladder in steps of ratio `2^({a log_2 3})`, the
 rotation by `log_2 3` seen at its smallest positive phases. (4) Reading the
 descent tree `m -> D(m)` (the DAG of stopping times) with both places: `D(m)
-in [m/2, m)`, so the lower records hit every dyadic shell (at least `floor(log_2
-n) + 1` records, equality exactly at powers of two), and each first-descent
+in [m/2, m)`, so on an orbit that reaches `1` the lower records hit every
+dyadic shell (at least `floor(log_2 n) + 1` records, equality exactly at
+powers of two), and each first-descent
 word is an affine bijection from a **2-adic** source class onto a **3-adic**
 landing class `m_0(w) + t 3^(o(w))`; the in-degree of `m` is the number of
 first-descent words whose 3-adic landing class contains `m` (exact to `10^5`,
 modulo Terras's equality which is verified far beyond), with limiting mean
-`c_D = sum_w 3^(-o(w)) in [1.6696, 1.7005]` (Proposition 4). What none of
+`c_D = sum_w 3^(-o(w)) in [1.6720, 1.6983]` (Proposition 4). What none of
 this gives: a rank. The board's "well-founded rank across completed
 excursions" is a function on the spine that must decrease, S13's Proposition 4
 says it cannot be a function of the word prefix, and Theorem 3 sharpens that:
@@ -88,8 +96,9 @@ block sequence is realized by every integer in a residue class, so the rank
 must read the integer, which only `sigma` itself does. The well-quasi-order
 route (Kruskal/Higman, the only termination principle that needs no rank)
 requires the spine of every divergent orbit to be a *bad* sequence, and on the
-`5x+1` control (believed divergent) the spine has Higman-good pairs within at
-most 141 blocks. Compactness gives nothing because `E_inf` is closed, nowhere
+`5x+1` control (believed divergent) 165 of the first 300 spine points acquire
+a Higman-good partner inside the window, after at most 141 blocks.
+Compactness gives nothing because `E_inf` is closed, nowhere
 dense and of measure zero while `Z^+` is dense. The one place where the DAG
 language is more than bookkeeping is HYP-9161's whole-orbit multiplicity:
 the dippers of a landing point at depth `D` form a chain in the
@@ -112,7 +121,7 @@ time).
 | Object | Representation | Predicate / invariant | Operation | What the quotient loses |
 |---|---|---|---|---|
 | Value-time poset `P_val(n)` | `i < j` and `x_i > x_j` (dimension `<= 2`) | maximal = strict future minima; minimal = leaders | intersection of two linear orders | the arithmetic step (any permutation is some poset) |
-| Excursion forest `F(n)` | `i ⊑ j` iff `h_k > h_i` on `(i, j]` | roots = lower records = descent chain; infinite tree iff divergent; spine = strict coefficient future minima | König: infinite locally finite tree has a branch | carries (the forest is a function of the word) |
+| Excursion forest `F(n)` | `i ⊑ j` iff `h_k > h_i` on `(i, j]` | roots = height lower records (= the descent chain under Terras's equality); infinite tree iff divergent; spine = strict coefficient future minima | König: infinite locally finite tree has a branch | carries (the forest is a function of the word) |
 | Spine blocks | positive min-ending words (THM-4495 Step 1) | tight: `ceil(l log_3 2)` ones, height `< log_2 3 - 1`, lengths `1 + floor(b beta)` | free monoid; reversal to first-passage words | which integer realizes the block sequence |
 | Descent tree `D` | `m -> D(m) = T^(sigma(m)) m in [m/2, m)` | spanning tree rooted at 1 iff Collatz; two-place edges | 2-adic source class -> 3-adic landing class (affine bijection per word) | nothing on the class; the threshold `N(w)` at the least residue |
 | Cell lattice `L(a, b)` (THM-4503) | interval `[empty, g]` of Young's lattice | carry `C_w` strictly increasing; least residue not monotone | add a cell = move an odd step one place later | height selection (THM-4503) |
@@ -144,18 +153,25 @@ chain. Its roots are the strict lower records of the height walk. A node `j`
 has infinitely many descendants iff `j` is a strict coefficient future minimum
 (`h_k > h_j` for all `k > j`). If `h_j -> infinity` the forest is locally
 finite (every node has finitely many children), so by König's lemma it has an
-infinite tree iff it has an infinite branch, and every infinite branch is a
-tail of the sequence of strict coefficient future minima (the *spine*).
-(c) For the orbit of a positive integer `n`: a strict value future minimum
-exists iff the orbit diverges, and then there are infinitely many; strict
-coefficient future minima are strict value future minima, and strict value
-lower records are strict height lower records (positive carry); the step out
-of any value future minimum is an odd step (the value rises).
+infinite tree iff it has an infinite branch, and there is then exactly one
+infinite branch: the *spine*, the chain of all strict coefficient future
+minima, rooted at the time of the global minimum of the walk.
+(c) For the orbit of a positive integer `n` under `T` (or under `T_q`, `q`
+odd): a strict value future minimum exists iff the global minimum of the
+orbit is attained only once (equivalently finitely often: a repeated value of
+an orbit repeats for ever), i.e. iff the orbit diverges or is eventually
+periodic with its minimum in the pre-periodic part; there are infinitely
+many iff the orbit diverges; an orbit that reaches `1` has none. (The `5x+1`
+orbit `5, 13, 33, 83, 208, 104, 52, 26, 13, ...` has exactly one, at time
+`0`.) Strict coefficient future minima are strict value future minima, and
+strict value lower records are strict height lower records (positive
+carry); the step out of any value future minimum is an odd step (the value
+rises).
 
 *Proof.* (a) is the definition. (b) Transitivity: if `h > h_i` on `(i, j]`
 and `h > h_j` on `(j, k]` with `h_j > h_i`, then `h > h_i` on `(i, k]`. Chain:
 if `i ⊑ j` and `i' ⊑ j` with `i < i'` then `i' in (i, j]` so `h_(i') > h_i`,
-and `h > h_(i') > h_i` on `(i', j]`, whence `i ⊑ i'`. Roots: `j` is a root iff
+and `(i, i'] ⊆ (i, j]`, whence `i ⊑ i'`. Roots: `j` is a root iff
 no `i < j` has `h > h_i` on `(i, j]`; if `h_j < h_i` for all `i < j` this
 holds (take `k = j`); otherwise the minimum of `h` over `[0, j]` is attained
 at some `i* < j` and `h > h_(i*)` on `(i*, j]`, so `i*` is an ancestor.
@@ -167,11 +183,22 @@ exceeds its own minimum on the tail, attained at the next spine point). The
 branch through a spine point `f` continues through the next spine point (the
 last running minimum of the tail from `f` is the tail's minimum, a spine
 point), and any infinite branch consists of nodes with infinitely many
-descendants, i.e. spine points. (c) If the orbit is eventually periodic its
-global minimum is attained infinitely often, so no time is a strict value
-future minimum. If it diverges, every value is undercut only finitely often;
-the minimum of each tail is attained, at a strict future minimum, and the
-tails' minima tend to infinity, so there are infinitely many. Inclusions:
+descendants, i.e. spine points; spine points are totally ordered by `⊑`
+(`h > h_(f)` on `(f, infinity)`), so the infinite branch is unique, and its
+root is the earliest spine point, the time of the global minimum. (c) A time
+`j` is a strict value future minimum iff `x_j` is the minimum of the tail
+from `j` and is attained there only at `j`. If some strict future minimum
+exists, the global minimum value `m*` is attained at a time `t <= j` (a later
+attainment would contradict strictness at `j`), and then `t` itself is a
+strict future minimum iff `m*` is never attained again; since a repeated
+value of an orbit of a map repeats for ever, this holds iff `m*` is attained
+only once. If the orbit is eventually periodic, every value of the periodic
+part is attained infinitely often, so only pre-periodic times qualify,
+finitely many, and none if the minimum is on the cycle (in particular none
+for an orbit reaching `1`). If it diverges, every value is undercut only
+finitely often; the minimum of each tail is attained, at a strict future
+minimum, and the tails' minima tend to infinity, so there are infinitely
+many. Inclusions:
 `x_k/x_j = 2^(h_k - h_j) C_k/C_j` with `C_k >= C_j` for `k > j`, so
 `h_k > h_j` implies `x_k > x_j`, and `x_j < x_i` with `i < j` implies
 `2^(h_j) < 2^(h_i) C_i/C_j <= 2^(h_i)`. The step out of a value future
@@ -193,7 +220,7 @@ THM-4476) `sum_j 1/x_j < infinity`, `C_infinity < infinity`, `h_j ->
 infinity` and `sum_j 2^(-h_j) < infinity`, and the spine of `n` is infinite;
 (ii) `Z^+ ∩ E_inf = {m : kappa(m) = infinity}` is contained in the set of
 positive integers that are the minimum of a divergent orbit (`sigma(m) =
-infinity` and `m` not a cycle minimum), with equality iff Terras's equality
+infinity` and the orbit of `m` not eventually periodic), with equality iff Terras's equality
 `kappa(m) = sigma(m)` holds at every minimum `m` of a divergent orbit; it is
 closed under the *next-spine-point* map `s(m) = x_(f')` (the next strict
 coefficient future minimum of the orbit of `m`), and `s(m) > m`; (iii) an
@@ -329,10 +356,13 @@ has `sigma(m) < infinity`; the chain `m > D(m) > ...` then reaches `1`).
 
 **Proposition 4.** (a) `D(m) in [ceil(m/2), m - 1]`: the step into the landing
 is a halving of a value `>= m`.
-(b) Every dyadic shell `[2^j, 2^(j+1))`, `0 <= j <= floor(log_2 m)`, contains
-a strict lower record of the orbit of `m`; hence the number of strict lower
-records (the length of the descent chain to `1`) is at least `floor(log_2 m) +
-1`, with equality iff `m` is a power of two.
+(b) If the orbit of `m` reaches `1` (every `m <= 2 * 10^6`; every `m` under
+Collatz), every dyadic shell `[2^j, 2^(j+1))`, `0 <= j <= floor(log_2 m)`,
+contains a strict lower record of the orbit of `m`; hence the number of strict
+lower records (the length of the descent chain to `1`) is at least
+`floor(log_2 m) + 1`, with equality iff `m` is a power of two.
+Unconditionally, if `r` is the last (smallest) record, the count is at least
+`floor(log_2 m) - floor(log_2 r) + 1`.
 (c) *Two-place structure.* Let `w` be a word of length `k` with `o` ones whose
 first coefficient descent is at `k` (`3^(o_j) > 2^j` for `j < k`, `3^o < 2^k`),
 carry `C = C_w`, source residue `r = -C 3^(-o) mod 2^k`, threshold `N(w) =
@@ -357,9 +387,12 @@ where the second term is the Terras-defect count, empty for all landings `m
 `10^7`).
 (d) *Sources per landing.* `#{m' : D(m') <= X}/X -> c_D := sum_w 3^(-o(w)) =
 sum_w 2^(-|w|) 2^(|H(w)|)` as `X -> infinity` (sum over all first-descent
-words; `|H(w)| = k - o log_2 3 in (0, 1)` is the overshoot at the first
-descent), and `1 < c_D < 2`; the partial sum over `|w| <= 26` is `1.669582`,
-the tail is at most `2(1 - 0.984542) = 0.0309`, so `c_D in [1.6696, 1.7005]`.
+words; `|H(w)| = k - o log_2 3` is the overshoot at the first descent, in
+`(0, 1)` for `k >= 2` and equal to `1` for the word `0`), and `3/2 < c_D <
+2`; the partial sum over `|w| <= 26` is `1.669582`, the tail is at most `2(1
+- 0.984542) = 0.0309`, so `c_D in [1.6695, 1.7005]`; the audit's enumeration
+to `|w| <= 28` (`502524` words, partial sums `1.672002` and `0.986870`)
+sharpens this to `c_D in [1.6720, 1.6983]`.
 
 *Proof.* (a) `T^(sigma) m < m <= T^(sigma - 1) m`; an odd step increases the
 value, so the last step is a halving, `D(m) = T^(sigma - 1)(m)/2 >= m/2`.
@@ -384,11 +417,12 @@ be an earlier coefficient descent since the carry is positive); the image of
 `sigma(m') > K`; these lie in no-descent classes mod `2^K` (`kappa > K`) or
 are Terras-defect sources of words of length `<= K` (finitely many per word,
 below `N(w)`), so `R_K(X) <= 2X W_K 2^(-K) + O_K(1)`, and `W_K 2^(-K) -> 0`.
-The series converges because `3^(-o) < 2^(1 - k)` for a first-descent word
-(`3^o > 2^(k-1)` from the no-descent prefix), and the same inequality with
-`3^o < 2^k` gives `2^(-k) < 3^(-o) < 2^(1-k)`, whence `1 = sum_w 2^(-|w|) <
-c_D < 2` (the first equality is the measure-zero of `E_inf`, `W_k 2^(-k) ->
-0`). ∎
+For a first-descent word of length `k >= 2`, `3^o > 2^(k-1)` (no-descent
+prefix) and `3^o < 2^k` give `2^(-k) < 3^(-o) < 2^(1-k)`; the word `0` (`k =
+1`, `o = 0`) contributes exactly `1`. Since `sum_w 2^(-|w|) = 1` (the classes
+of first descent at `k <= K` and the `W_K` no-descent classes partition `Z/2^K`,
+and `W_K 2^(-K) -> 0`), the words of length `>= 2` carry `2^(-|w|)`-mass
+`1/2`, so the series converges and `3/2 < c_D < 2`. ∎
 
 *Numerical face (script, part 3, `T`-map, `2 <= m <= 2 * 10^6`).* `D(m) in
 [m/2, m)` for all `m`; maximal `sigma = 224` at `m = 1126015`; no Terras
@@ -397,20 +431,27 @@ twenty powers of two; in-degrees over landings `1..10^6`: `1: 531332, 2:
 337608, 3: 78502, 4: 28890, 5: 15341, 6: 4769, 7: 2102, 8: 874, 9: 348, 10:
 129, 11: 61, 12: 26, 13: 13, 15: 3, 16: 1, 17: 1`, mean `1.6903`, maximum `17`
 at `m = 293501`; `190069` first-descent words of length `<= 26` (`F_k = 2
-W_(k-1) - W_k` checked); the 3-adic prediction matches the direct in-degree for
-every landing `m <= 10^5` (sources with `sigma > 26` landing there: `2071`,
-reconciled separately); example `w = 11100`: `o = 3`, `C = 19`, `r = 23 mod
-32`, `N = 3.8`, landings `20, 47, 74, 101, 128, 155 = 20 + 27t`.
+W_(k-1) - W_k` checked); the 3-adic prediction from words of length `<= 26`
+matches the direct in-degree from sources with `sigma <= 26` for every landing
+`m <= 10^5` (the `2071` sources with `sigma > 26` landing there are excluded on
+both sides); the audit script checked the full formula, sources of every
+`sigma` (up to `135`), for every landing `m <= 20000`, and found `N(w) <
+2^(|w|)` for all `190069` words (maximum `N = 24.54`), the only least residue
+at or below its threshold being `r = 1` for `w = 10`; example `w = 11100`: `o
+= 3`, `C = 19`, `r = 23 mod 32`, `N = 3.8`, landings `20, 47, 74, 101, 128, 155
+= 20 + 27t`.
 
 *Reading.* The descent tree is a union of affine bijections between 2-adic
 source classes and 3-adic landing classes, one per first-descent word: the
 Terras structure (sources are classes mod `2^k`) has an exact dual on the
 landing side (landings are classes mod `3^o`). This is S8's "the past is the
 3-adic address" (`m_l = 2^(-d_l) S mod 3^l`) evaluated at the landing time.
-It makes obligation 3 of the board ("coverage") literal: Collatz iff every `m
->= 2` lies in some source class above its threshold, i.e. `kappa(m) <
-infinity` (`m not in E_inf`, the transversality) and `m > N(w_m)` (the
-uncertified-representative question of THM-4512, S11).
+It makes obligation 3 of the board ("coverage") literal: Collatz together
+with Terras's equality holds iff every `m >= 2` lies in some source class
+above its threshold, i.e. `kappa(m) < infinity` (`m not in E_inf`, the
+transversality) and `m > N(w_m)` (the uncertified-representative question of
+THM-4512, S11); Collatz alone allows a source below its threshold whose
+actual first descent comes later.
 
 ## 5. THM-4503's cells are intervals of Young's lattice (PROVED, small)
 
@@ -499,9 +540,12 @@ the Sturmian element (section 7) is in `E_inf` and is not an integer for a
 of non-integer points, and the integer points, if any, are the spines.
 
 **6.5 Two-place self-consistency along the spine.** At a spine time `f` with
-`d_f >= log_2(n + 1) + 1`, the value is the least positive residue `x_f =
-(2^(-d_f) S_(f-1) mod 3^f)` (S8), a function of the first `f` letters alone;
-and the tail word from `f` is the parity word of `x_f`. So the word of a
+`2^f > n C_f` (every large `f` on a divergent orbit), the value `x_f = (3^(o_f)
+n + C_(w,f))/2^f` satisfies `x_f ≡ 2^(-f) C_(w,f) (mod 3^(o_f))` and `x_f <
+3^(o_f)`, so it is the least positive residue of `2^(-f) C_(w,f)` modulo
+`3^(o_f)` (S8's `m_l = 2^(-d_l) S_(l-1) mod 3^l` in odd-iterate coordinates),
+a function of the first `f` letters alone; and the tail word from `f` is the
+parity word of `x_f`. So the word of a
 divergent orbit is a fixed point: from some time on, each tail is the word
 of the least residue of the 3-adic address of its past. "No infinite block
 sequence is the word of its own 3-adic least residue" is an exact
@@ -510,21 +554,39 @@ landing of a class is a 3-adic class). Cheapest test: none; it restates the
 conjecture.
 
 **6.6 Where the DAG language is more than bookkeeping: HYP-9161.** Define the
-`D`-coarsened excursion order `i ⊑_D j` iff `i <= j` and `h_k > h_i - D` on
-`(i, j]`. A dipper `i` of a landing point `j` (THM-4506) is exactly a node
-whose `⊑_D`-subtree ends at `j - 1`; two dippers `i < i'` of the same `j`
-satisfy `i ⊑_D i'`. So **the dippers of a landing point form a chain of the
-`D`-coarsened forest, the multiplicity `m(j)` is a chain length**, THM-4506's
-shell lemma says the chain lies in a height window of width one, and its
-odd-letter separation is the statement that consecutive chain elements are
-separated by a rise. HYP-9161's whole-orbit average multiplicity is the mean
-length of these chains along one orbit, a local-time statement (how long the
-walk of one orbit hovers in unit windows before dropping `D`). The forest
-gives the exact bookkeeping and the correct object; it does not give the
-bound, because the chain lengths are realized by residue classes at every
-scale (THM-4506 (H)). Cheapest next probe: compute the chain-length
-distribution of the `D`-coarsened forest on long real orbits and on the
-`5x+1` control and compare with the ballot prediction `sqrt(L)` of S9.
+`D`-coarsened excursion order on values: `i ⊑_D j` iff `i <= j` and `x_k >=
+2^(-D) x_i` on `(i, j]`. A dipper `i` of a landing point `j` (THM-4506: the
+first `j > i` with `x_j < 2^(-D) x_i`) is exactly a node whose
+`⊑_D`-subtree ends at `j - 1`; two dippers `i < i'` of the same `j` satisfy
+`i ⊑_D i'` because `i' in (i, j - 1]`. So **the dippers of a landing point
+form a chain of the `D`-coarsened forest, the multiplicity `m(j)` is a chain
+length**, THM-4506's shell lemma says the chain lies in the value shell
+`(2^D x_j, 2^(D+1) x_j]`, and its odd-letter separation is the statement that
+consecutive chain elements are separated by a rise. HYP-9161's whole-orbit
+average multiplicity is the mean length of these chains along one orbit, a
+local-time statement (how long the walk of one orbit hovers in a unit window
+before dropping `D`). The forest gives the exact bookkeeping and the correct
+object; it does not give the bound, because the chain lengths are realized
+by residue classes at every scale (THM-4506 (H)).
+
+*Probe done* (script `collatz_posets_dags_20260927_chains.py`, output
+`collatz_posets_dags_20260927_chains.out`; whole orbits, no window, shell
+lemma asserted at every landing). On the `5x+1` orbit of `7` over `20000`
+steps (values up to `2^3110`) the mean multiplicity is `2.68, 3.21, 3.55,
+3.92, 4.47, 4.83, 4.90` at depths `D = 1, 2, 3, 4, 6, 8, 12` (maxima `12` to
+`29`), and it does not grow with the scale: per stretch of `2500` steps the
+`D = 2` means are `3.17, 3.29, 3.21, 3.32, 2.94, 3.37, 3.27, 3.12` while
+`log_2` of the values runs from `193` to `2875` (so `sqrt(L)` from `14` to
+`54`). On the eight `3x+1` record orbits the means are `3.4` to `3.8` at `D
+= 1` and `5.9` to `11.1` at `D = 6`, with maxima up to `47` on the two
+largest. Reading: on an orbit with positive drift the local time in a unit
+window is `O(1)`, so the whole-orbit multiplicity is bounded (`mu = 0` in
+HYP-9161's language) at every depth; the regime HYP-9161 must control is
+the opposite one, a hypothetical `3x+1` divergent orbit whose heights grow
+only logarithmically (THM-4476 forces `h_j >= 1.0527 log_2 j` infinitely
+often and no faster growth), where the walk hovers and S9's near-critical
+calibration gives `sqrt(L)`. The drift control therefore does not test the
+hard case; the probe records what an easy divergent orbit looks like.
 
 **Ranked next steps.** (1) 6.6: the `D`-coarsened chain-length statistics on
 one orbit (the only orbit-coupled object here). (2) Theorem 3 (iii) on the
@@ -533,22 +595,30 @@ one orbit (the only orbit-coupled object here). (2) Theorem 3 (iii) on the
 hold); ask whether the phase sequence along a real divergent spine is
 equidistributed on `(0, log_2 q - 1)` in the rotation measure, which would be
 the spine form of the exact Benford law of S8. (3) The Terras-defect term of
-Proposition 4(c): a proof that `N(w) < 2^(|w|)` for every first-descent word
-(THM-4512 has it for `|w| <= 5000` and S11's correction records that the
-all-`j` claim needs an effective cutoff) would make the in-degree formula
-unconditional for every `m`. None of these is a finishing move.
+Proposition 4(c): `N(w) < 2^(|w|)` for every first-descent word (THM-4512
+has it for `o(w) <= 5000`; S11's correction records that the all-`j` claim
+needs an effective cutoff; the audit found it for all words of length `<=
+26`) only confines a defect to the least residue `r_w` of each class; the
+defect term vanishes for every `m` iff `r_w > N(w)` for every first-descent
+word, which is Terras's equality itself (the only failure among words of
+length `<= 26` is `r = 1` for `w = 10`, i.e. `m = 1`). None of these is a
+finishing move.
 
 ## 7. Controls (FINITE-EXACT)
 
 **The Sturmian element of `E_inf`.** The upper mechanical word of slope `log_3
 2` (`o_j = ceil(j log_3 2)`) has heights `h_j = (1 - {j log_3 2}) log_2 3 in
 (0, log_2 3)` (checked to `j = 20000`: minimum `0.000063`, maximum
-`1.584621`). It is in `E_inf` and has **no** strict future minimum (the
-fractional parts are dense), so its spine is empty and Proposition 1(b)'s
-infinite tree does not exist for it; within a window its future minima are
-the one-sided best approximations of `log_3 2`, with block lengths `1, 19,
-84, 569, 1054` up to `20000` (denominators of the convergents `12/19, 53/84,
-665/1054` and the semiconvergent `359/569`); its real series diverges
+`1.584621`). It is in `E_inf`, and its only strict future minimum is time `0`
+(every later height is positive; no later time is one, because the
+fractional parts are dense), so its spine is `{0}`: the tree rooted at `0` is
+infinite (every time is a descendant of `0`) but not locally finite, the
+children of `0` being the running minima `1, 3, 11, 19, 84, 569, 1054, ...`
+of the tail, so König's hypothesis in Proposition 1(b) fails and there is no
+infinite branch; within a window its future minima are the one-sided best
+approximations of `log_3 2`, with block lengths `1, 19, 84, 569, 1054` up to
+`20000` (denominators of the convergents `12/19, 53/84, 665/1054` and the
+semiconvergent `359/569`); its real series diverges
 linearly (every term `2^(-h_j) >= 1/3`), so by THM-4476 it is not a positive
 integer, and by Proposition 2 an integer point of `E_inf` has an infinite
 spine and a convergent series: the bounded-height part and the integer part
@@ -586,9 +656,50 @@ law and the forced ones count; P3 the descent tree to `2 * 10^6`, the
 record-count bound and its equality set, in-degrees, the two-place formula to
 `10^5`; P4 the cells to `a + b <= 12`; P5 the Sturmian point; P6 the `5x+1`
 control with the Higman probe. Every assertion is exact integer arithmetic;
-decimals are display only. Output: `collatz_posets_dags_20260927.out`.
+decimals are display only. Output: `collatz_posets_dags_20260927.out`. The
+whole-orbit chain-length probe of section 6.6 is
+`collatz_posets_dags_20260927_chains.py` with output
+`collatz_posets_dags_20260927_chains.out`.
 
-## 9. Independent audit
+## 9. Independent audit (2026-09-27)
 
-Pending (a blind re-derivation by an auditor subagent with its own script is
-run before the letter; corrections are applied above and listed here).
+Auditor subagent, blind re-derivation from the statements followed by an
+independent exact-integer script written without access to the session
+script: `04-computation/experiments/collatz_posets_dags_20260927_audit.py`
+(sha256 `22bcf7c4...59c39`) with output
+`collatz_posets_dags_20260927_audit.out` (84 checks; the one deliberate
+failure is C6 below) and report `collatz_posets_dags_20260927_audit.md`.
+**Verdict: SOUND WITH CORRECTIONS, all applied above.** CONFIRMED: Proposition
+1(a),(b) (forest order, children, roots), Proposition 2 (i)–(iii) including
+the unconditional inclusion, Theorem 3 (i)–(iii) in full (Beatty/Rayleigh
+equivalences re-derived and verified to `l = 60`; carry bound on all blocks
+of length `<= 20`; the `5x+1` analogue on 510 blocks), Proposition 4(a),(c),(d)
+(the in-degree formula verified for every landing `m <= 20000` with sources of
+every `sigma`, up to `135`), section 5 entirely, and every number in sections
+3, 4 and 7. CORRECTED (the audit's wording is quoted in its report; the
+repaired statements now stand in the text): (C1) Proposition 1(c) claimed "a
+strict value future minimum exists iff the orbit diverges"; false in the
+`T_q` setting (the `5x+1` orbit of `5` has its minimum in the pre-period) and
+unproven for `3x+1`; repaired to "iff the global minimum is attained only
+once", with "infinitely many iff divergent". (C2) Proposition 2(ii)'s
+"`sigma = infinity` and not a cycle minimum" repaired to "and the orbit not
+eventually periodic". (C3) Proposition 4(b) now assumes the orbit reaches
+`1`, with the unconditional form added. (C4) THM-4512's file name corrected.
+(C5) Proposition 4(d): the inequalities `2^(-k) < 3^(-o) < 2^(1-k)` hold for
+`k >= 2` only; the word `0` contributes exactly `1`; the bound is `3/2 < c_D
+< 2`. (C6) The bracket `[1.6696, 1.7005]` rounded the partial sum up;
+replaced by `[1.6695, 1.7005]` and the audit's `[1.6720, 1.6983]`. (C7)
+THM-4495's "ladder blocks" are its Step 3 first-passage words, the reversals
+of the spine blocks; Step 1 is the minimum decomposition. (C8) The Sturmian
+element has spine `{0}` and an infinite, not locally finite, tree. (C9) The
+6.5 formula mixed odd-iterate and `T`-time indices; repaired to `x_f ≡
+2^(-f) C_(w,f) (mod 3^(o_f))`. (C10) Section 0 and the board said "roots =
+lower records = descent chain" and "in `E_inf` iff minimum of a divergent
+orbit"; the roots are the height lower records and the "iff" needs Terras's
+equality. (C11) "Collatz iff every `m` is above its threshold" needs "Collatz
+together with Terras's equality". (C12) `N(w) < 2^(|w|)` alone does not make
+the in-degree formula unconditional. Minor: the chain-of-ancestors proof
+line, the uniqueness of the infinite branch, and the value-based definition
+of `⊑_D` in 6.6. The corresponding MISTAKES entry records the mechanism of
+C1 (an "attained infinitely often" claim that holds for cycles but not for a
+pre-periodic minimum) and of C6 (rounding a lower bound up).

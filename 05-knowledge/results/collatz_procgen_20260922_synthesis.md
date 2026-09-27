@@ -1261,17 +1261,20 @@ angle. Note [`collatz_shadow_error_flp_20260927.md`](collatz_shadow_error_flp_20
 Owner's directive: "consider deeply posets and their directed acyclic
 graphs ... towards a creative Collatz proof finishing move." Note
 [`collatz_posets_dags_20260927_spine_descent_tree.md`](collatz_posets_dags_20260927_spine_descent_tree.md);
-THM-4514 (RESERVED until audit).
+THM-4514 (PROVED, independently audited: SOUND WITH CORRECTIONS, applied).
 
 * **Value-time poset** (`i` below `j` iff earlier and larger): dimension
   `<= 2`; minimal = leaders, maximal = strict future minima; a positive
-  orbit has a strict future minimum iff it diverges. **Excursion forest**
-  (`i` ancestor of `j` iff the height walk stays above `h_i` on `(i, j]`):
-  roots = the lower records = the descent chain `n > D(n) > ...`; on a
-  divergent orbit one infinite tree whose spine (König) is the sequence of
-  strict coefficient future minima = **the orbit's intersection with
-  `E_inf`**. So `Z^+ ∩ E_inf ⊆ {minima of divergent orbits}` (equality =
-  Terras's equality at those minima), closed under the next-spine-point map.
+  orbit has infinitely many strict future minima iff it diverges (one iff
+  its global minimum is attained only once: the `5x+1` orbit of `5` has one
+  and is eventually periodic). **Excursion forest** (`i` ancestor of `j` iff
+  the height walk stays above `h_i` on `(i, j]`): roots = the height lower
+  records (= the descent chain `n > D(n) > ...` under Terras's equality); on
+  a divergent orbit one infinite tree whose unique infinite branch (König)
+  is the spine = the strict coefficient future minima = **the orbit's
+  intersection with `E_inf`**. So `Z^+ ∩ E_inf ⊆ {minima of divergent
+  orbits}` (equality = Terras's equality at those minima), closed under the
+  next-spine-point map.
 * **Spine blocks are tight** (the new exact object): THM-4495's positive
   min-ending words generate the no-descent words freely, `b = 1 - 1/W`; a
   block of length `l >= 2` starts with an odd step, has exactly
@@ -1280,22 +1283,27 @@ THM-4514 (RESERVED until audit).
   17, 19, 22, ...`, density `1 - log_3 2`); each spine step multiplies the
   value by less than `3/2` (plus carry `<= 3l/4`): a divergent orbit climbs
   its ladder at the phases `{a log_2 3} < log_2 3 - 1` of S8's rotation.
-* **Descent tree** `m -> D(m) = T^sigma m`: `D(m) in [m/2, m)`; at least
-  `floor(log_2 m) + 1` lower records, equality iff `m` is a power of two;
-  each first-descent word is an affine bijection from a 2-adic source class
-  onto a 3-adic landing class `m_0 + t 3^o`; exact in-degree formula (checked
-  to `10^5`); sources per landing `c_D = sum_w 3^(-o(w)) in [1.6696, 1.7005]`
-  (mean in-degree `1.6903` to `10^6`, max `17`). THM-4503's cells are
-  intervals of Young's lattice with the carry a strict order embedding.
+* **Descent tree** `m -> D(m) = T^sigma m`: `D(m) in [m/2, m)`; on orbits
+  reaching `1` at least `floor(log_2 m) + 1` lower records, equality iff `m`
+  is a power of two; each first-descent word is an affine bijection from a
+  2-adic source class onto a 3-adic landing class `m_0 + t 3^o`; in-degree
+  formula exact modulo Terras's equality (audit: all landings `<= 20000`,
+  every `sigma`); sources per landing `c_D = sum_w 3^(-o(w)) in [1.6720,
+  1.6983]` (mean in-degree `1.6903` to `10^6`, max `17`). THM-4503's cells
+  are intervals of Young's lattice with the carry a strict order embedding.
 * **Finishing-move shapes, each typed with its obstruction:** rank on the
   spine (S13 Prop 4 + tight blocks: must read the integer); wqo/Kruskal/Higman
-  (the spine must be a bad sequence; the `5x+1` control's spine has
-  Higman-good pairs within 141 blocks); balanced pairs (height selection);
+  (the spine must be a bad sequence; on the `5x+1` control 165 of the first
+  300 spine points get a Higman-good partner within the window, after at
+  most 141 blocks); balanced pairs (height selection);
   König/compactness (`E_inf` closed, nowhere dense, null; `Z^+` dense);
   two-place self-consistency (a restatement). Where the DAG language is more
   than bookkeeping: the dippers of a landing point form a chain of the
   `D`-coarsened excursion order, so HYP-9161's multiplicity is a chain
-  length and the whole-orbit form is a local-time statement.
+  length and the whole-orbit form is a local-time statement; on the drifting
+  `5x+1` orbit of `7` (20000 steps) the whole-orbit mean multiplicity is
+  `O(1)` at every depth (`2.7` to `4.9`), independent of scale, so the hard
+  regime is logarithmic height growth, not drift.
 
 ## 2b. The approach deck: every approach generated or considered, with its disposition
 

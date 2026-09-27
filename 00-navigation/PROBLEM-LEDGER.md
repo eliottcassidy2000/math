@@ -418,6 +418,24 @@ all heights (THM-1289, published), δ ineffective.
   bounded valuations and an interval-map itinerary; HYP-9164 (no divergent orbit has bounded shadow error; minus-sheet cycles do)
   is the intermediate pointwise statement. Note: `collatz_shadow_error_flp_20260927.md`.
 
+  **Posets and DAGs (opus, 2026-09-27, S15):** value-time poset (dimension <= 2; leaders minimal, strict
+  future minima maximal; infinitely many strict future minima iff divergent, one iff the global minimum is
+  attained once); excursion forest (roots = height lower records = the descent chain under Terras equality;
+  one infinite tree on a divergent orbit, its unique infinite branch = spine = strict coefficient future
+  minima = orbit cap E_inf; Z^+ cap E_inf subset of {minima of divergent orbits}, equal under Terras
+  equality there); spine blocks (THM-4495's positive min-ending words) are tight: length >= 2 blocks start
+  with 1, have exactly ceil(l log_3 2) ones, height in (0, log_2 3 - 1), lengths
+  1 + floor(b log_2 3/(log_2 3 - 1)) (density 1 - log_3 2), spine ratio < 3/2 plus carry 3l/4; descent tree
+  D(m) in [m/2, m), on orbits reaching 1 >= floor(log_2 m) + 1 lower records (equality iff power of 2),
+  first-descent words = affine bijections 2-adic source class -> 3-adic landing class, in-degree formula
+  exact modulo Terras equality (audited to 20000, every sigma), c_D = sum_w 3^(-o(w)) in [1.6720, 1.6983];
+  cells of THM-4503 = Young-lattice intervals with the carry a strict order embedding. Every DAG finishing
+  move typed with its obstruction (rank must read the integer; wqo needs a bad spine, 165 of 300 spine
+  points of the 5x+1 control get a Higman-good partner within 141 blocks; compactness useless); dippers of a
+  landing point = a chain of the D-coarsened excursion order (HYP-9161 = mean chain length; O(1) on the
+  drifting 5x+1 control at every depth, so the hard regime is logarithmic height growth). THM-4514
+  (PROVED, audited SOUND WITH CORRECTIONS, applied). Note: `collatz_posets_dags_20260927_spine_descent_tree.md`.
+
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`
 (ranks HN > reconstruction > Kakeya/Falconer > sunflower > Caccetta–Häggkvist > … ).
 

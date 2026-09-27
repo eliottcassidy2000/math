@@ -1,0 +1,155 @@
+== A. two-place identity T^k n = (3^o n + C_w)/2^k (sanity of the carry convention) ==
+  [PASS] T^k n = (3^o n + C_w)/2^k for sample n, k
+
+== B. no-descent counts, block generating function, block enumeration, tightness ==
+  [PASS] W_k by ballot DP == W_k by Spitzer recurrence k W_k = sum B_n W_(k-n), k <= 60
+  [PASS] W_1..W_24 as printed in the note's table
+  [PASS] 1 - 1/W(t) == 1 - exp(-sum B_n t^n/n) coefficientwise to t^60
+  [PASS] all b_l are non-negative integers (l <= 60)
+  [PASS] b_1..b_24 == the note's list -- [1, 0, 1, 0, 0, 2, 0, 0, 7, 0, 30, 0, 0, 113, 0, 0, 525, 0, 2652, 0, 0, 11433, 0, 0]
+  [PASS] brute force over all 2^l words: #no-descent == W_l for l <= 16
+  [PASS] brute force over all 2^l words: #blocks == b_l (from 1 - 1/W) for l <= 16
+  [PASS] DFS: #no-descent words == W_l for l <= 20
+  [PASS] DFS: #blocks == b_l (from 1 - 1/W) for l <= 20 -- b_1..b_20 = [1, 0, 1, 0, 0, 2, 0, 0, 7, 0, 30, 0, 0, 113, 0, 0, 525, 0, 2652, 0]
+  [PASS] every block of length <= 16 found by brute force is no-descent (so the DFS misses none)
+  [PASS] every block of length 2..20 starts with 1
+  [PASS] every block of length 2..20 has exactly a(l) = ceil(l log_3 2) ones
+  [PASS] every block of length 2..20 has 0 < H < log_2 3 - 1
+  [PASS] carry bound C_w < a 3^a / 2 on every block of length <= 20
+  [PASS] l = 1: the unique block is '1' with H = log_2 3 - 1 exactly
+  [PASS] block length l (2..60) iff {l log_3 2} > log_3 2 (exact form 2^(l-1) > 3^(a(l)-1))
+  [PASS] block length l (2..60) iff l - 1 not a Beatty number floor(a log_2 3)
+  [PASS] block length l (2..60) iff l = 1 + floor(b beta) (Rayleigh complement), exact
+  [PASS] 1^a 0^(l-a) is a block at every block length <= 60
+  [PASS] Beatty(log_2 3) and Beatty(beta) partition 1..100 (Rayleigh)
+  [PASS] block lengths <= 60 == note's list -- [1, 3, 6, 9, 11, 14, 17, 19, 22, 25, 28, 30, 33, 36, 38, 41, 44, 47, 49, 52, 55, 57, 60]
+  block-length density on 2..60: 22/59 = 0.3729; 1 - log_3 2 = 0.36907; beta = 2.709511
+  b_l/W_l on block lengths 40..60: min 0.070452 max 0.112406 (note, 4 dp: [0.0705, 0.1124])
+  [PASS] b_l/W_l on block lengths in 40..60: min rounds to 0.0705, max to 0.1124 (4 dp)
+  [PASS] every no-descent word of length <= 14 cuts at its window future minima into blocks
+  [PASS] concatenation of any two blocks of length <= 8 is no-descent with exactly that decomposition
+  [PASS] no-descent words of length <= 16 == words dominating the upper mechanical word o_j = ceil(j log_3 2)
+
+== C. descent tree D(m) = T^sigma(m) m for 2 <= m <= 2000000 ==
+  scan time 0.8 s
+  [PASS] D(m) in [ceil(m/2), m-1] for all 2 <= m <= NMAX
+  [PASS] max sigma = 224 at m = 1126015 -- max sigma 224 at 1126015
+  [PASS] Terras equality kappa = sigma for all 2 <= m <= NMAX (no defect) -- defects []
+  [PASS] kappa <= sigma everywhere
+  [PASS] #lower records >= floor(log_2 m) + 1 for all m <= NMAX
+  [PASS] equality set == powers of two (20 values) -- 20 values
+  [PASS] every shell [2^j, 2^(j+1)), j <= floor(log2 m), contains a lower record (m <= 300000)
+  in-degree distribution over landings 1..1000000: 1:531332, 2:337608, 3:78502, 4:28890, 5:15341, 6:4769, 7:2102, 8:874, 9:348, 10:129, 11:61, 12:26, 13:13, 15:3, 16:1, 17:1
+  total sources landing <= 1000000: 1690291; mean in-degree 1.690291; max 17 at [293501]
+  [PASS] in-degree distribution over landings <= 10^6 == note's table
+  [PASS] mean in-degree 1.6903 (exact 1690291/10^6), max 17 at 293501
+  [PASS] no landing m <= 10^6 has in-degree 0 (2m -> m always) and none has 14
+
+== D. first-descent words |w| <= 26: 2-adic source class -> 3-adic landing class; in-degree formula; c_D ==
+  190069 first-descent words of length <= 26 (0.4 s)
+  [PASS] 190069 first-descent words of length <= 26
+  [PASS] F_k = 2 W_(k-1) - W_k for k <= 26
+  [PASS] sampled words: carry, ones, no-descent prefix, descent at k, last letter 0
+  [PASS] 3^o > 2^(k-1) fails only for w = '0' (equality 1 = 1) -- [(1, 0)]
+  partial sums (exact -> 9 decimals):  K   sum_{|w|<=K} 3^(-o)   sum_{|w|<=K} 2^(-|w|)   1 - W_K/2^K
+     1   1.000000000          0.500000000          0.500000000
+     2   1.333333333          0.750000000          0.750000000
+     3   1.333333333          0.750000000          0.750000000
+     4   1.444444444          0.812500000          0.812500000
+     5   1.518518519          0.875000000          0.875000000
+     6   1.518518519          0.875000000          0.875000000
+     7   1.555555556          0.898437500          0.898437500
+     8   1.584362140          0.925781250          0.925781250
+     9   1.584362140          0.925781250          0.925781250
+    10   1.600823045          0.937500000          0.937500000
+    11   1.600823045          0.937500000          0.937500000
+    12   1.614540466          0.944824219          0.944824219
+    13   1.627495809          0.955200195          0.955200195
+    14   1.627495809          0.955200195          0.955200195
+    15   1.636285119          0.960479736          0.960479736
+    16   1.644346221          0.967742920          0.967742920
+    17   1.644346221          0.967742920          0.967742920
+    18   1.649771094          0.971408844          0.971408844
+    19   1.649771094          0.971408844          0.971408844
+    20   1.654761300          0.973937988          0.973937988
+    21   1.659807329          0.977774143          0.977774143
+    22   1.659807329          0.977774143          0.977774143
+    26   1.669582336          0.984541923          0.984541923
+  [PASS] sum_{|w|<=K} 2^(-|w|) == 1 - W_K/2^K exactly for every K <= 26
+  [PASS] sum_{|w|<=26} 3^(-o(w)) = 1.669582 (6 dp) and sum 2^(-|w|) = 0.984542 (6 dp) -- 1.669582336, 0.984541923
+  exact tail bound 2 W_26/2^26 = 0.030916154; from |w| <= 26 alone: c_D in [1.669582, 1.700498]; W_26 = 1037374
+  [PASS] upper end: 1.669582 + 0.030916 = 1.700498 <= 1.7005
+  [FAIL] lower end as derived in the note: partial sum 1.669582 >= 1.6696 ? (NO: 1.6696 is the partial sum rounded UP)
+  [PASS] |w| <= 28: sum 2^(-|w|) == 1 - W_28/2^28
+  |w| <= 28: 502524 words; sum 3^(-o) = 1.672001839; sum 2^(-|w|) = 0.986869894; rigorous c_D in [1.672002, 1.698262]
+  [PASS] rigorous bracket from |w| <= 28 confirms 1.6696 <= c_D <= 1.7005 (the note's interval is true; its lower end needs |w| = 27)
+  [PASS] 1 < partial sum <= c_D and upper bound < 2
+  [PASS] 2^(-k) < 3^(-o) < 2^(1-k) for every first-descent word with k >= 2
+  max N(w) over |w| <= 26: 24.538; words whose least positive residue r <= N(w): [(2, 1, '1')]
+  [PASS] N(w) < 2^|w| for every first-descent word |w| <= 26 (at most the least residue is uncertified)
+  [PASS] the only least residue r <= N(w) is r = 1 for w = 10 (the fixed point 1 = N(w)), so no Terras-defect source exists for |w| <= 26
+  [PASS] 3-adic class prediction == direct in-degree restricted to sigma <= 26, all landings m <= 100000 -- mismatches []
+  [PASS] sources with sigma > 26 landing <= 100000: 2071 -- 2071
+  [PASS] landing m0(w) + t 3^o is never counted for t < 0 (all sources > N >= 0 are >= r)
+  [PASS] every source m' <= 40000: its own first-descent word puts it in class r mod 2^k above N(w) and D(m') = m0 + t 3^o (full formula, any sigma)
+  [PASS] in-degree of every landing m <= 20000 == #sources m' <= 2m with D(m') = m (sources of m lie in (m, 2m])
+  max sigma among sources <= 40000: 135 (words far longer than 26 enter the full formula)
+  [PASS] example w = 11100: o=3, C=19, r=23, N=3.8, landings 20+27t, t=0..5 -- [20, 47, 74, 101, 128, 155]
+
+== E. cells (a, b) with a + b <= 12: words == partitions e <= g; carry strictly increasing under 'add a cell' ==
+  [PASS] cell (a,b) == {partitions e <= g} for all a+b <= 12; empty iff f(b) > a
+  [PASS] 870 covering pairs, carry strictly larger by exactly 3^(a-i) 2^(i-1) 2^(e_i) -- 870
+  (5,1) residues: {'110111': 27, '111011': 39, '111101': 47, '111110': 31}
+  [PASS] (5,1): residues 27, 39, 47, 31 for 110111, 111011, 111101, 111110 (THM-4503)
+  [PASS] chain 111110 < 111101 < 111011 < 110111 has residues 31, 47, 39, 27 and strictly increasing carries
+  [PASS] f(1) = 2 (the zero of a (5,1) word needs two ones before it)
+
+== F. upper mechanical word of slope log_3 2 (o_j = ceil(j log_3 2)) to j = 20000 ==
+  [PASS] o_j increases by 0 or 1 (a valid word) and all heights h_j > 0 (in E_inf)
+  heights j>=1: min 0.000063 at j=1054, max 1.584621; log2 3 = 1.584963
+  [PASS] min height 0.000063, max 1.584621 (6 dp)
+  [PASS] all heights < log_2 3 (so 2^(-h_j) > 1/3: the real series diverges linearly)
+  window future minima: [0, 1054, 2108, 3162, 4216, 5270] ... [19793, 19877, 19961, 19980, 19999, 20000]; gaps (distinct) [1, 19, 84, 569, 1054]; first gaps [1054, 1054, 1054, 1054, 1054]
+  [PASS] time 0 IS a strict future minimum (h_0 = 0 < all later heights): the spine is {0}, not empty
+  [PASS] window future minima after 0 sit at multiples of 1054, then gaps 569/84/19/1 near the window end; distinct gaps {1,19,84,569,1054}
+  [PASS] 1/1, 2/3, 12/19, 53/84, 359/569, 665/1054 all lie above log_3 2 (one-sided approximations from above)
+  children of the root 0 within the window (running height minima): [1, 3, 11, 19, 84, 569, 1054]
+  [PASS] root 0 has more than 5 children in the window (the tree at 0 is infinite but not locally finite)
+  least residues of the cylinders: k=8: 251 (0.980 2^k), k=16: 23547 (0.359 2^k), k=24: 12475387 (0.744 2^k), k=32: 3384695803 (0.788 2^k), k=40: 737824103419 (0.671 2^k), k=48: 71106568281083 (0.253 2^k), k=56: 352581544991739 (0.005 2^k), k=64: 12466316350106524667 (0.676 2^k)
+  [PASS] cylinder residues k=8..64 at 0.980, 0.359, 0.744, 0.788, 0.671, 0.253, 0.005, 0.676 of 2^k
+  sum_(j<=J) 2^(-h_j) = 12138.8 (> J/3 = 6666.7)
+
+== G. controls ==
+  [PASS] 5x+1: orbit of 5 enters the cycle through 13 (5 -> 13 -> ... -> 13)
+  [PASS] 5x+1: orbit of 5 is eventually periodic, yet time 0 is a strict value future minimum (5 < every later value)
+  5x+1 orbit of 5: [5, 13, 33, 83, 208, 104, 52, 26, 13, 33] ... (cycle min 13 > 5): Prop 1(c) 'iff diverges' fails in the note's own T_b setting
+  5x+1 orbit of 7, 3000 steps: coefficient future minima 512 (incl. 0 and 3000? True, True), value future minima 512
+  [PASS] 5x+1: 512 coefficient future minima == 512 value future minima in the window
+  [PASS] 5x+1: coefficient future minima (window) are value future minima (window)
+  [PASS] 5x+1: the step out of every value future minimum is odd (value rises)
+  block lengths: max 174, mean 5.87, first 20 [2, 1, 2, 1, 1, 2, 1, 1, 1, 2, 2, 2, 2, 1, 9, 6, 2, 22, 1, 1]
+  [PASS] 5x+1: block lengths max 174, mean 5.87
+  value at step 3000: 451 bits (log2 = 450.973)
+  [PASS] value at step 3000 has 451 bits (log2 = 450.97; the .out's '451.0' is log2 rounded) -- 451
+  [PASS] 5x+1: 510 interior blocks: l >= 2 starts with an odd step, has ceil(l log_5 2) odd steps, H < log2 5 - 1
+  [PASS] 5x+1: spine growth 2^H s_i < s_(i+1) < 2^H (s_i + l/2) on every interior block (Theorem 3(iii) shape)
+  Higman-good partners for 165/300 spine points; wait max 141, mean 61.01, #wait=1: 0
+  [PASS] Higman: 165/300, max wait 141, mean 61.0, never 1
+  record orbits (T-map): n, steps, leaders, lower records, bound, forest roots == records, max depth, value future minima in window
+            27: steps   70, leaders 16, records  8, bound  5, roots==records True, depth 17, vfm True, ok=True
+           703: steps  108, leaders 17, records 14, bound 10, roots==records True, depth 15, vfm True, ok=True
+          6171: steps  165, leaders 16, records 20, bound 13, roots==records True, depth 15, vfm True, ok=True
+         77031: steps  221, leaders 15, records 27, bound 17, roots==records True, depth 14, vfm True, ok=True
+        837799: steps  329, leaders 23, records 33, bound 20, roots==records True, depth 23, vfm True, ok=True
+       8400511: steps  429, leaders 27, records 35, bound 24, roots==records True, depth 25, vfm True, ok=True
+      63728127: steps  592, leaders 25, records 38, bound 26, roots==records True, depth 26, vfm True, ok=True
+     670617279: steps  616, leaders 19, records 44, bound 30, roots==records True, depth 25, vfm True, ok=True
+  [PASS] record orbits: all eight lines of section 7 reproduced (records, bound, leaders, roots = records, depth, minimal = leaders, maximal = future minima)
+  [PASS] excursion order from the bare definition: transitive; ancestors of every node form a chain = parent chain; roots = strict height lower records; children = running minima above h_j (orbits 27, 703; 5x+1 orbit of 7, 250 steps)
+  [PASS] orbit of 7: x_f = 2^(-f) C_(w,f) (mod 3^(o_f)) at every f <= 40 and equals the least residue at the 38 times with x_f < 3^(o_f); the literal 'mod 3^f' of section 6.5 gives x_f at no time f >= 4 -- literal formula correct only at f in [3]
+  [PASS] value lower records == height lower records (forest roots) for all 2 <= n <= 10^4
+  [PASS] if a cycle minimum c is odd with c = 2 mod 3 then (2c-1)/3 is an odd integer below c mapping to c (so 'iff diverges' is unproven for 3x+1)
+
+83 checks passed, 1 failed (5.7 s)
+  FAILED: lower end as derived in the note: partial sum 1.669582 >= 1.6696 ? (NO: 1.6696 is the partial sum rounded UP)
+AUDIT SCRIPT DONE
