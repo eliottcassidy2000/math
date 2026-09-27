@@ -9,6 +9,12 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-26 directions note (opus S13): a theorem about prefix ranks applied to a lane whose rank is not a prefix rank, and a closure statement off by the rotation
+
+- **What was written.** That the reset lane's "rank across excursions" lies in the class excluded by Proposition 4 ("the obstruction is a theorem"); that `E_inf` is "the closure of the negative rational cycle points"; that the irrationality of `log_2 3` is "the structural reason" no finite bank tiles the residual; the reciprocal-sum form listed as a new proposition.
+- **Why it was wrong.** Proposition 4 excludes functions of the parity prefix; the lane's controller carries the full integer (`b = (n+5)/2^L`), so its rank is not excluded. Only the height-minimal rotation of a cycle lies in `E_inf` (`-7`, `-25` do not); the correct set is the fixed points of no-descent words. The irrationality remark is a heuristic; the rigorous content (`W_k >= 1`) does not use it. The reciprocal-sum form is THM-4476's Corollary 8.
+- **Mechanism to remember.** Before saying another lane's object is excluded by a theorem, check the theorem's hypotheses against that lane's actual definitions; when describing a closure, name the exact set of generators; label heuristics in the status line and wiring, not only in the section.
+
 ## 2026-09-26 size-6 law and precision note (opus S11, second audit): an asymptotic conjecture written as settled, and a misdescription of neighbouring notes
 
 - **What was written.** "Settled: ... the front-only law `F 2^(1-F)` is asymptotically exact for size `6`", with the excess ratio "`~ 0.7 log_2 F / F`" and the numbers `0.083, 0.100, 0.096, 0.085` attached to that formula; and, in the precision note, that the September braids/seams notes "do not touch the Collatz carry".

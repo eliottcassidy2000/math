@@ -25,47 +25,54 @@ THM-3848, THM-4072, THM-4074, THM-4077, THM-4082), the forest tiling note
 (`forest_20260926_tilings.md`), and the S10 Fermat-tower note.
 
 **Status: PROVED small propositions (the no-descent fractal `E_inf` is closed
-with box dimension `h*` and is the closure of the negative rational cycle
-points; no bounded-precision rank can exist; the lowest-set-bit conjugacy;
-the reciprocal-sum form of the conjecture as a corollary of THM-4476) +
+with box dimension `h*` and is the closure of the fixed points of the
+no-descent words, the height-minimal points of the negative rational cycles;
+no rank that is a function of the parity prefix can decrease at every
+excursion; the lowest-set-bit conjugacy) + CITED (the reciprocal-sum form of
+no-divergence is THM-4476's Corollary 8) +
 FINITE-EXACT (`E_inf` meets the negative integers exactly in `{-1, -5, -17}`
 up to `10^6`; the lowest-set-bit map reaches a power of two for every
 `n <= 10^5`; dimension estimates to `k = 2000`; the lower approximations of
-`log_2 3` and their gaps) + DIRECTIONS marked as such. Collatz OPEN; nothing
-here is a proof.** Script: `04-computation/experiments/collatz_directions_20260926.py`
+`log_2 3` and their gaps) + DIRECTIONS marked as such + INDEPENDENTLY AUDITED
+(HAS GAPS -> repaired, section 7: wording overclaims, no numerical error).
+Collatz OPEN; nothing here is a proof.** Script: `04-computation/experiments/collatz_directions_20260926.py`
 -> `.out`.
 
 ## 0. The answer in one paragraph
 
-The rank the lane is looking for cannot exist as a function of finite
-precision, and this is a one-line theorem, not a limitation of technique
-(section 1, Proposition 4): the set `E_inf` of 2-adic integers whose parity
+No rank that is a function of finite precision can decrease at every
+excursion, and this is a one-line theorem (section 1, Proposition 4); the
+lane's controller carries the full integer in its registers, so it is not in
+that class, and the proposition says what it must use, not that it fails: the set `E_inf` of 2-adic integers whose parity
 word never has a coefficient descent is a closed set of box dimension
 `h* = 0.94996` in `Z_2`, it is the closure of the negative rational cycle
-points (`-1, -5, -17` and the rational fixed points of every other growth
-word), every one of its cylinders contains positive integers, and the
-conjecture is exactly `Z^+ ∩ E_inf = empty`. "Regenerated precision around the
+points at their height-minimal rotation (`-1, -5, -17` and the fixed points
+`x_w` of every other no-descent word; `-7` and `-25` are cycle points outside
+`E_inf`), every one of its cylinders contains positive integers, and the
+conjecture implies `Z^+ ∩ E_inf = empty`, with the converse under Terras's
+equality `sigma = sigma_inf` (Proposition 3). "Regenerated precision around the
 same negative cycle" is the density of cycle points in `E_inf`; "two
 excursions with unbounded combined growth" is the positive dimension. So a
-rank must be a function of the whole integer, never of a prefix, and the
-only such rank we know is the stopping time itself. What is left are global
+rank must use the whole integer, never a prefix alone, and the only such
+rank we know is the stopping time itself. What is left are global
 inputs of three kinds, none of which is a rank: (i) an Archimedean input on
 the real shadow `xi = n C_inf` of a divergent orbit, whose adaptive Mahler
 sequence `xi 3^l / 2^(d_l)` sits within `eta_l >= 1/3` of the odd iterates
 (section 4; the repository's Mahler frontier is stuck at exactly the same
-wall, "couple exact residue classes to an Archimedean or all-depth 2-adic
-obstruction"); (ii) a transversality input distinguishing the finite binary
+wall, "couple the exact residue classes to an Archimedean or genuinely
+all-depth `2`-adic obstruction"); (ii) a transversality input distinguishing the finite binary
 expansions of integers inside `E_inf`, which the lowest-set-bit form
 `r -> 3r + lsb(r)` makes explicit (section 2: the conjecture says this map
 always reaches a power of two); (iii) the two-place series (section 3: the
 conjecture's no-divergence half is "the reciprocal sum of every orbit
-diverges", a corollary of THM-4476). The tiling snippets describe a dyadic,
+diverges", THM-4476's Corollary 8). The tiling snippets describe a dyadic,
 self-similar hierarchy (the Sierpinski selection is the Lucas set of odd
 binomials, the Gilbreath tower of S10); the Collatz hierarchy is the
 continued fraction of `log_2 3`, irrational, with integer cycles only at the
 first three lower approximations `1/1, 3/2, 11/7` (gaps `1, 1, 139`): the
-residual cannot be tiled by finitely many certificate shapes because the
-self-similarity that would close the tiling does not exist (section 5).
+heuristic reading (section 5, marked) is that no finite family of certificate
+shapes tiles the residual because the self-similarity that would close the
+tiling does not exist.
 
 ## 1. The obstruction, exactly (PROVED small propositions)
 
@@ -84,8 +91,11 @@ k^(-3/2))`, so its box-counting dimension in the 2-adic metric is
 `h* = h(log_3 2) = 0.9499555`. *Proof.* Closed: each condition `h_j >= 0` is a
 condition on the first `j` letters, i.e. on a finite union of cylinders. A
 length-`k` word with all prefix heights `>= 0` extends to an infinite such
-word (repeat it: `h_(mk + i) = m h_k + h_i >= 0`), so the cylinders meeting
-`E_inf` are exactly the no-descent words, counted by `W_k`; the dimension is
+word (repeat it: `h_(mk + i) = m h_k + h_i >= 0`), and every infinite parity
+word is the word of exactly one point of `Z_2` (the parity-vector bijection
+of Terras, Lagarias and Bernstein; the finite form is THM-4476 step 1), so
+the cylinders meeting `E_inf` are exactly the no-descent words, counted by
+`W_k`; the dimension is
 `lim log_2 W_k / k = h*`. ∎ Numerically `log_2 W_k / k = 0.8496, 0.9084, 0.9384,
 0.9435` at `k = 60, 200, 1000, 2000`, and `log_2 W_k / k + 1.5 log_2 k / k =
 0.9973, 0.9657, 0.9534, 0.9517`, both converging to `0.94996` at the rate the
@@ -94,12 +104,17 @@ polynomial factor dictates.
 **Proposition 2 (the negative copy is dense).** The rational points of
 `E_inf` include the fixed points `x_w = S_w/(2^A - 3^p)` of every no-descent
 word `w` (all negative), and these are dense in `E_inf`: the cylinder of any
-finite no-descent word `u` contains `x_u` (the word of `x_u` is `u^infinity`,
-no-descent by the extension argument). Among the negative integers the
-members of `E_inf` with `|n| <= 10^6` are exactly `-1, -5, -17` (script part 4;
-for negative integers actual and coefficient descent coincide, since
-`|U(m)| < |m|` iff `v >= 2`), the height-minimal points of the three known
-negative cycles.
+finite no-descent word `u` contains `x_u` (the point with word `u^infinity`
+is fixed by `T^k`, hence equals `x_u`; `u^infinity` is no-descent by the
+extension argument). `E_inf` is therefore the closure of these fixed points,
+which are the height-minimal points of the negative rational cycles; the
+other points of a cycle (`-7`, `-25`, ...) are not in `E_inf`. Among the
+negative integers the members of `E_inf` with `|n| <= 10^6` are exactly
+`-1, -5, -17` (script part 4, by the criterion "the orbit never decreases in
+absolute value"; the audit confirmed the list by the height criterion
+directly). For negative integers a coefficient descent is an actual descent
+(`S_j > 0`), and the converse holds step by step (`|U(m)| < |m|` iff
+`v >= 2`); the multi-step converse was verified for `|n| <= 10^6`, not proved.
 
 **Proposition 3 (the conjecture as transversality).** `Z^+ ∩ E_inf = empty`
 iff every positive integer has finite coefficient stopping time; with
@@ -115,12 +130,22 @@ no-descent word: the words `(1, 1, 2)^N` are no-descent (prefix heights `0.585, 
 0.755` within a period, period height `3 log_2 3 - 4 = +0.755`) with `N`
 complete excursions (two rises, then `v = 2`, a local descent that stays
 above the start), so
-`Phi(empty) >= N` for every `N`. Any rank that pays the original source must
-therefore depend on the whole integer `n`, and for every `K` there are
-`n = n' mod 2^K` with different rank: this is the lane's "regenerated
-precision" and "two excursions with unbounded combined growth" in one
-sentence, and it is why the certificate programme can only ever cover
-residue classes (the density sieve, already optimal in order, S11).
+`Phi(empty) >= N` for every `N`. Precisely, the excluded class is: functions of the finite parity prefix,
+with well-ordered values, strictly decreasing across every rise-then-local-
+descent of every no-descent word. Not excluded (audit): ranks that depend on
+the integer `n` (the lane's controller carries `k, r, b` with `b = (n+5)/2^L`,
+the whole integer, so its rank is of this kind); ranks required to decrease
+only at excursions that return below the *original source*, which are
+vacuous on `E_inf` and are the closest reading of "pays the original source
+threshold"; ranks allowed to increase between excursion ends are excluded.
+If "complete" is read as "returns below its own base", the witness
+`(1, 1, 1, 1, 2, 3)^N` (heights `0.585, 1.170, 1.755, 2.340, 1.925, 0.510`,
+period `+0.510`, fixed point `-697/217`) replaces `(1, 1, 2)^N`. So a prefix
+rank cannot pay the source; a rank on the integer must, and for every `K`
+there are `n = n' mod 2^K` with different rank: this is one reading of the
+lane's "regenerated precision" and "two excursions with unbounded combined
+growth", and it is why prefix certificates can only ever cover residue
+classes (the density sieve, whose residual has THM-4495's order, S11).
 
 ## 2. The lowest-set-bit map (PROVED conjugacy, FINITE-EXACT)
 
@@ -187,13 +212,15 @@ so the real sequence `xi 3^l / 2^(d_l)` sits within `eta_l` of the odd
 integers `m_l`, with the exponents `d_l` chosen by the orbit itself. The
 repository's Mahler frontier is stuck at the same wall as the reset lane:
 THM-4072 (finite-state obstruction), THM-4074 (arbitrarily long reset
-runways after which every finite carry word can be programmed: the exact
-analogue of "regenerated precision"), THM-4077/THM-4082 (a 2-adic tangent
+runways after which every finite carry word beginning in `1` can be
+programmed, in the denominator-19 family: the exact analogue of "regenerated
+precision"), THM-4077/THM-4082 (a 2-adic tangent
 isometry that produces no `Z`-number), and its live task reads "couple the
 exact residue classes to an Archimedean or genuinely all-depth 2-adic
 obstruction". The safe-tail shift there has binary-ultrametric Hausdorff
 dimension `log_2(3/2) = 0.585` (THM-3848); the Collatz no-descent fractal has
-`h* = 0.950`: the Collatz residual is the larger of the two, and Mahler's
+`h* = 0.950`; the two are different objects (THM-3848's shift is not the
+unknown `Z`-language), so the comparison is a loose analogy, and Mahler's
 countability theorem (at most one `Z`-number per unit interval) has no
 Collatz content because the Collatz starting points are already integers.
 The direction: the only all-`n` structural theorems about `xi (3/2)^n` that
@@ -204,29 +231,34 @@ spread of `{eta_l}` or of the shadow error from below along any divergent
 orbit and contradict the convergence `C_l -> C_inf`. I do not know how to do
 it; it is where the lane's rank must be replaced by a global invariant.
 
-## 5. Irrational versus dyadic hierarchies (the tiling snippets)
+## 5. Irrational versus dyadic hierarchies (the tiling snippets; DIRECTION, heuristic)
 
 * The Sierpinski selection `Q = 2Q + {(0,0), (1,0), (0,1)}` is the set of
   `(i, j)` with `i & j = 0`, i.e. the odd binomial coefficients (Lucas), the
   Pascal-mod-2 support: `3^r` centres per `2^r x 2^r` block is the
-  `3^(K-1-m)` count of the Gilbreath tower (S10). "Any finite collection of
-  bounded-radius observations can remain fixed while the distance to the
-  nearest hexagon grows unboundedly" is the tiling form of Proposition 4:
+  `3^(K-1-m)` count of the Gilbreath tower (S10). The owner's phrase "any finite collection of bounded-radius observations
+  can remain fixed while the distance to the nearest hexagon grows
+  unboundedly" (the forest note says it as "any finite family of
+  bounded-radius local features can be fixed while the needed global address
+  information remains unbounded") is the tiling form of Proposition 4:
   local data cannot see the hierarchy. The two-star alphabet `3^6, 3^4.6`
   with unbounded orbit count `k_N` is the tiling form of "two letters
   (`v = 1` rise, `v >= 2` fall) with unbounded global structure".
 * The dyadic hierarchy closes because `2 Q + {...}` is exact
   self-similarity. The Collatz hierarchy is the continued fraction of
   `log_2 3`: best lower approximations `A/p = 1/1, 3/2, 11/7, 19/12, 84/53,
-  569/359`, gaps `3^p - 2^A = 1, 1, 139, 7153, 4.0e22, 2.1e168`. Integer
-  negative cycles exist only at the first three (gap `1` twice, by
-  `3 - 2 = 1` and `9 - 8 = 1`, and the sporadic `139 | S`), none at `19/12`
-  (S12 audit, `p <= 12`), and the shadows of all other lower approximations
-  are rational points of `E_inf` with denominators growing like the gap.
-  Because `log_2 3` is irrational, no depth of the hierarchy repeats the
-  previous one exactly, which is the structural reason a finite certificate
-  bank cannot tile the residual: there is no `Q = 2Q + F` for the Collatz
-  residual, only an infinite sequence of ever-worse rational approximations.
+  569/359`, gaps `3^p - 2^A = 1, 1, 139, 7153, 4.0e22, 2.1e168`. Among words with `p <= 12`, integer negative cycles exist only at the
+  first three (gap `1` twice, by `3 - 2 = 1` and `9 - 8 = 1`, the only
+  solutions of `3^p - 2^A = 1`, and the sporadic `139 | S`), none at `19/12`
+  (S12 audit); whether any exist at `84/53` or beyond is not settled by
+  anything cited here. The shadows of the other lower approximations are
+  rational points of `E_inf` with denominators growing like the gap.
+  Heuristic, not a result: because `log_2 3` is irrational, no depth of the
+  hierarchy repeats the previous one exactly, so no `Q = 2Q + F` describes
+  the Collatz residual, only an infinite sequence of ever-worse rational
+  approximations; the rigorous content behind "no finite bank covers `Z^+`"
+  is only that `W_k >= 1` for every `k` (the word `1^k`), which does not use
+  irrationality.
 * The counts `1, 3, 7, 10` and `F = U + S` (`10, 7, 3, 1`, nested versus
   disjoint) have no Collatz reading I can defend beyond the Mersenne
   coincidence `1, 3, 7`; the `14`-edge refinement graph is a tiling fact.
@@ -245,13 +277,43 @@ it; it is where the lane's rank must be replaced by a global invariant.
 3. **Diophantine inputs** handle cycles (`2^A - 3^p | S`, Steiner,
    Simons-de Weger) and have no divergence analogue: the gap `2^A - 3^p` is
    replaced by a moving target.
-4. **Density and dimension** are done to the constant (THM-4495, THM-4498,
-   THM-4499, THM-4476) and cannot be pushed to the pointwise statement
+4. **Density and dimension** are done up to constant factors (THM-4495,
+   THM-4498, THM-4499, THM-4476) and cannot be pushed to the pointwise statement
    (Propositions 3-4).
 
-The lane's "rank across excursions" belongs to the impossible class by
-Proposition 4; its two-excursion construction is a proof of that
-impossibility, not a gap to be closed. The shell-revisit lemma (HYP-9161)
-remains the one statement in this thread that is pointwise and not obviously
-in that class, because it constrains the orbit of one integer through its
-own address, not through a prefix.
+Proposition 4 says what the lane's "rank across excursions" must be built
+from (the integer, which its controller already carries), not that it fails;
+the owner's two-excursion construction (an external snippet, not in the
+repository) is one instance of the same phenomenon, and the note's own proof
+uses `(1, 1, 2)^N`. The shell-revisit statement of S9/S10 (HYP-9161 is
+REFUTED as stated for arbitrary finite segments; its whole-orbit form is
+OPEN) remains the one statement in this thread that is pointwise and not
+obviously in that class, because it constrains the orbit of one integer
+through its own address, not through a prefix.
+
+## 7. Independent audit (2026-09-26)
+
+Auditor subagent: `04-computation/experiments/collatz_directions_20260926_audit.py`
+(sha256 `020264cee1f5b76a2cde3fe0ec1089ac6782e859b374626509c6a808dd41523b`) ->
+`05-knowledge/results/collatz_directions_20260926_audit.out`
+(sha256 `a67fc04393c71134e9d703c0cae2048fcc37d4e7be3fa10c4b8c51cdaff3fc66`; 53 checks, all pass).
+CONFIRMED: every number (the `W_k` values and dimension estimates, the
+Spitzer identity to `k = 300`, the fixed points of all no-descent words to
+`k = 12`, `E_inf` meets the negative integers in `{-1, -5, -17}` by the height
+criterion, the lowest-set-bit identities, `129` steps at `n = 77031`, the
+lower approximations and gaps, `139 | S` for `-17`, the two-place identities
+to `l = 60` and the exact cycle values, Terras's equality `T`-coded to
+`10^6`); the four propositions under the note's definitions; the citations.
+CORRECTED (applied above): the Terras caveat dropped from section 0 and the
+wiring; the claim that the lane's rank is in the excluded class (its
+controller carries the whole integer; Proposition 4 excludes prefix ranks
+only, and the precise excluded class is now stated); "closure of the
+negative rational cycle points" (only their height-minimal rotations, i.e.
+the fixed points of no-descent words); the two-excursion snippet presented
+as a proof; integer cycles beyond `p <= 12` unsupported; HYP-9161's REFUTED
+status; the reciprocal-sum form relabelled CITED (THM-4476 Corollary 8); the
+dimension comparison with THM-3848's shift labelled a loose analogy; the
+irrationality argument labelled heuristic; `THM-4074` "beginning in `1`";
+two quotations; the "optimal in order" gloss; the parity-bijection citation;
+the multi-step converse for negative integers marked verified, not proved.
+Verdict: HAS GAPS -> repaired; no numerical error.

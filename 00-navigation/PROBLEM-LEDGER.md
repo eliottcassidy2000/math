@@ -404,9 +404,9 @@ all heights (THM-1289, published), δ ineffective.
   Note: `fibonacci_two_copies_collatz_20260926.md`.
 
   **Directions (opus, 2026-09-26, S13):** the no-descent fractal E_inf (closed, box dimension h*,
-  closure of the negative rational cycle points, E_inf cap Z_<0 = {-1,-5,-17} to 10^6); conjecture =
-  Z^+ cap E_inf = empty; no bounded-precision rank can decrease at every excursion (the reset lane's
-  obstruction is a theorem); the lowest-set-bit map r -> 3r + lsb(r); reciprocal-sum form (THM-4476);
+  closure of the no-descent words' fixed points, E_inf cap Z_<0 = {-1,-5,-17} to 10^6); conjecture implies
+  Z^+ cap E_inf = empty (converse under Terras equality); no prefix rank can decrease at every excursion (the
+  lane's rank must use the integer, as it does); the lowest-set-bit map r -> 3r + lsb(r); reciprocal-sum form (THM-4476 Cor. 8);
   Mahler sibling with the Archimedean object xi 3^l/2^(d_l) = m_l + eta_l; irrational (log_2 3) versus
   dyadic (Sierpinski/Lucas) hierarchies. Note: `collatz_directions_20260926.md`.
 

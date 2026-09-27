@@ -1,0 +1,117 @@
+=== (A1) W_k by an own DP, THM-4495 cross-checks, box-dimension digits ===
+  PASS  3^o = 2^j never holds for 1 <= j <= 3000 (so the note's >= equals THM-4495's strict >)
+  W_1..W_20 (own DP): [1, 1, 2, 3, 4, 8, 13, 19, 38, 64, 128, 226, 367, 734, 1295, 2114, 4228, 7495, 14990, 27328]
+  PASS  W_1..W_20 equal THM-4495's published list
+  PASS  Spitzer identity k W_k = sum_n B_n W_(k-n) holds for the own W_k, k <= 300 (independent of the DP)
+  h* = h(log_3 2) = 0.9499555272  (note: 0.9499555 / 0.94996)
+  PASS  h* rounds to 0.9499555 and 0.94996
+  k=   10  digits=   2  log2(W_k)/k=0.600000  +1.5log2(k)/k=1.098289  W_k k^1.5 2^(-h*k)=2.7959
+  k=   20  digits=   5  log2(W_k)/k=0.736905  +1.5log2(k)/k=1.061049  W_k k^1.5 2^(-h*k)=4.6650
+  k=   41  digits=  11  log2(W_k)/k=0.818928  +1.5log2(k)/k=1.014936  W_k k^1.5 2^(-h*k)=6.3388
+  k=   60  digits=  16  log2(W_k)/k=0.849616  +1.5log2(k)/k=0.997288  W_k k^1.5 2^(-h*k)=7.1601
+  PASS  note's digits at k=60: plain 0.8496, corrected 0.9973, 16 digits  [own: 0.8496, 0.9973, 16 digits]
+  k=  100  digits=  27  log2(W_k)/k=0.879674  +1.5log2(k)/k=0.979331  W_k k^1.5 2^(-h*k)=7.6613
+  k=  200  digits=  55  log2(W_k)/k=0.908411  +1.5log2(k)/k=0.965740  W_k k^1.5 2^(-h*k)=8.9188
+  PASS  note's digits at k=200: plain 0.9084, corrected 0.9657, 55 digits  [own: 0.9084, 0.9657, 55 digits]
+  k=  500  digits= 140  log2(W_k)/k=0.929739  +1.5log2(k)/k=0.956636  W_k k^1.5 2^(-h*k)=10.1281
+  k= 1000  digits= 283  log2(W_k)/k=0.938420  +1.5log2(k)/k=0.953369  W_k k^1.5 2^(-h*k)=10.6555
+  PASS  note's digits at k=1000: plain 0.9384, corrected 0.9534, 283 digits  [own: 0.9384, 0.9534, 283 digits]
+  k= 1500  digits= 426  log2(W_k)/k=0.941677  +1.5log2(k)/k=0.952228  W_k k^1.5 2^(-h*k)=10.6182
+  k= 2000  digits= 569  log2(W_k)/k=0.943456  +1.5log2(k)/k=0.951680  W_k k^1.5 2^(-h*k)=10.9233
+  PASS  note's digits at k=2000: plain 0.9435, corrected 0.9517, 569 digits  [own: 0.9435, 0.9517, 569 digits]
+  [0.9s]
+=== (A2) Proposition 2: fixed points of no-descent words; E_inf cap Z_<0 by the height criterion ===
+  PASS  number of no-descent words of length k equals own W_k for k <= 12
+  PASS  fixed points x_u of all no-descent words (k <= 12) are negative
+  PASS  fixed points x_u have odd denominators (lie in Z_2)
+  PASS  parity word of x_u is u^infinity and T^k(x_u) = x_u (2-adic simulation)
+  PASS  u^infinity has all prefix heights >= 0 (extension argument)
+  PASS  x_(1110) = -19/11 (the (1,1,2) word; S12 note agrees)  [-19/11]
+  scan statuses (negative odd |n| <= 10^6): {'cycle+': 3, 'both': 499997}
+  PASS  E_inf cap Z_<0 (height criterion, |n| <= 10^6) = {-1, -5, -17}  [[-1, -5, -17]]
+  PASS  first coefficient-descent step == first actual-descent step for every negative odd |n| <= 10^6  [failures: []]
+  PASS  even negative n are never in E_inf (first letter 0 gives h_1 = -1)
+  n=-7: first coefficient descent at j=2, first actual descent at j=2; heights [0.585, -0.415]
+  n=-25: first coefficient descent at j=10, first actual descent at j=10; heights [0.585, 1.17, 1.755, 0.755, 1.34, 1.925, 2.51, 1.51, 0.51, -0.49]
+  n=-3: first coefficient descent at j=2, first actual descent at j=2; heights [0.585, -0.415]
+  n=-9: first coefficient descent at j=5, first actual descent at j=5; heights [0.585, 1.17, 1.755, 0.755, -0.245]
+  PASS  -7 is excluded (descent at j=2: word 1,0 -> -10 -> -5)
+  PASS  -25 is excluded (descent at j=10, landing on -17)
+  cycle of -1: [-1]; elements in E_inf: [-1]
+  PASS  only the height-minimal rotation of the -1-cycle lies in E_inf
+  cycle of -5: [-5, -7, -10]; elements in E_inf: [-5]
+  PASS  only the height-minimal rotation of the -5-cycle lies in E_inf
+  cycle of -17: [-17, -25, -37, -55, -82, -41, -61, -91, -136, -68, -34]; elements in E_inf: [-17]
+  PASS  only the height-minimal rotation of the -17-cycle lies in E_inf
+  PASS  |U(m)| < |m| iff v >= 2 for all negative odd |m| <= 2*10^5
+  [1.9s]
+=== (A3) Proposition 3: Terras equality sigma = sigma_inf on positive integers ===
+  PASS  sigma(n) = sigma_inf(n) for all 2 <= n <= 10^6 (T-coded; n = 1 is the known exception)  [[]]
+  n = 1: first coefficient descent j=2, first actual descent j=None (never strictly below 1): sigma_inf(1) = 2, sigma(1) = infinity
+  NOTE: Collatz => Z^+ cap E_inf = empty; the converse needs sigma = sigma_inf for ALL n (open; THM-4512 reports it to 10^7).
+  [2.9s]
+=== (A4) Proposition 4: the witness words ===
+  (1,1,2): Syracuse-coded heights [0.585, 1.17, 0.755]; T-coded heights [0.585, 1.17, 1.755, 0.755]; period height 0.755
+  PASS  (1,1,2) prefix heights are 0.585, 1.170, 0.755 (Syracuse coding) and period height +0.755
+  PASS  (1,1,2)^N is no-descent for N <= 200 in both codings
+  (1,1,2): in Syracuse coding no rise-then-fall returns to or below its base (0 -> .755, .585 -> .755); in T coding the base 1.170 -> 1.755 -> 0.755 does
+  (1,1,1,1,2,3): Syracuse-coded heights [0.585, 1.17, 1.755, 2.34, 1.925, 0.51]; T-coded [0.585, 1.17, 1.755, 2.34, 2.925, 1.925, 2.51, 1.51, 0.51]; period height 0.510
+  PASS  (1,1,1,1,2,3)^N is no-descent (N <= 200) with period height +0.510
+  PASS  (1,1,1,1,2,3): the excursion based at height 0.585 rises to 2.925 and ends the period at 0.510 < 0.585 while staying >= 0
+  fixed point of (1,1,1,1,2,3): x = -697/217 (negative rational point of E_inf)
+  [2.9s]
+=== (B1) Section 2: the lowest-set-bit map ===
+  PASS  r_l = 2^(d_l) m_l = 3^l n + S_(l-1) and lsb(rho(r)) = lsb(r) 2^v for odd n <= 2000, l <= 200
+  PASS  every n <= 10^5 reaches a power of two under rho
+  PASS  maximal number of rho-steps for n <= 10^5 is 129  [max 129 at n = 77031]
+  maximal Syracuse (odd) step count for n <= 10^5: 129 at n = 77031; its (3n+1, n/2) total stopping time = 350
+  PASS  rho-step maximum equals the odd-step maximum (129) and the record holder is 77031 with total stopping time 350
+  PASS  27 reaches 2^70 after 41 rho-steps  [reaches 2^70 after 41]
+  PASS  27 has 41 odd steps and 70 halvings
+  [4.9s]
+=== (B2) Section 5: lower approximations of log_2 3, continued fraction, gaps, Catalan ===
+  best lower approximations (A/p records, p <= 700): [(1, 1), (3, 2), (11, 7), (19, 12), (84, 53), (569, 359), (1054, 665)]
+       1/  1 = 1.000000000   gap 3^p - 2^A = 1
+       3/  2 = 1.500000000   gap 3^p - 2^A = 1
+      11/  7 = 1.571428571   gap 3^p - 2^A = 139
+      19/ 12 = 1.583333333   gap 3^p - 2^A = 7153
+      84/ 53 = 1.584905660   gap 3^p - 2^A = 4.0433e+22
+     569/359 = 1.584958217   gap 3^p - 2^A = 2.0607e+168
+    1054/665 = 1.584962406   gap 3^p - 2^A = 8.4266e+312
+  PASS  the note's list 1/1, 3/2, 11/7, 19/12, 84/53, 569/359 is exactly the records for p < 400
+  PASS  gaps 1, 1, 139, 7153 exact
+  PASS  gap at 84/53 = 4.043e22 and at 569/359 = 2.061e168  [4.043e+22, 2.061e+168]
+  PASS  84/53 and 569/359 lie below log_2 3 (2^84 < 3^53, 2^569 < 3^359)
+  PASS  8/5 is an UPPER approximation (2^8 = 256 > 243 = 3^5), correctly absent
+  continued fraction of log_2 3: [1, 1, 1, 2, 2, 3, 1, 5, 2, 23, 2, 2, 1, 1, 55, 1]
+  PASS  CF of log_2 3 begins [1; 1, 1, 2, 2, 3, 1, 5, 2, 23, 2, 2, 1, 1, 55]
+  convergents: [(1, 1), (2, 1), (3, 2), (8, 5), (19, 12), (65, 41), (84, 53), (485, 306), (1054, 665), (24727, 15601), (50508, 31867), (125743, 79335)]
+  lower convergents (2^p < 3^q): [(1, 1), (3, 2), (19, 12), (84, 53), (1054, 665)]; the listed 11/7 and 569/359 are intermediate fractions, not convergents
+  PASS  1/1, 3/2, 19/12, 84/53 are convergents; 11/7 and 569/359 are semiconvergents
+  3^p - 2^A = +1 for p <= 3000: [(1, 1), (2, 3)];  2^A - 3^p = +1: [(1, 2)]
+  PASS  3^p - 2^A = 1 only at (p,A) = (1,1), (2,3) [3-2, 9-8]: the note's 'gap 1 twice' is complete for the lower side
+  PASS  2^A - 3^p = 1 only at (p,A) = (1,2) [4-3], an UPPER approximation irrelevant to negative cycles
+  PASS  -17: T-word 11110111000, p = 7, S = 2363 = 17 * 139, x = S/(2^11 - 3^7) = -17  [p=7 S=2363]
+  [5.0s]
+=== (B3) Section 3: two-place identities, cycle series ===
+  PASS  identities 2^(d_l) m_l/3^l = n C_l, S_(l-1)/3^l = n(C_l - 1), v_2(S_(l-1) + 3^l n) = d_l exact for n=27, l <= 60
+    n=27 real partial sums l=1..5: ['0.3333', '0.5556', '0.8519', '1.0494', '1.1811'] ... l=22,23,24: ['2.0838', '2.1066', '2.1370'] ... l=60: 7628.335850
+  PASS  identities 2^(d_l) m_l/3^l = n C_l, S_(l-1)/3^l = n(C_l - 1), v_2(S_(l-1) + 3^l n) = d_l exact for n=-1, l <= 60
+    n=-1 real partial sums l=1..5: ['0.3333', '0.5556', '0.7037', '0.8025', '0.8683'] ... l=22,23,24: ['0.9999', '0.9999', '0.9999'] ... l=60: 1.000000
+  PASS  identities 2^(d_l) m_l/3^l = n C_l, S_(l-1)/3^l = n(C_l - 1), v_2(S_(l-1) + 3^l n) = d_l exact for n=-5, l <= 60
+    n=-5 real partial sums l=1..5: ['0.3333', '0.5556', '0.8519', '1.0494', '1.3128'] ... l=22,23,24: ['3.6314', '3.7226', '3.7834'] ... l=60: 4.853986
+  PASS  identities 2^(d_l) m_l/3^l = n C_l, S_(l-1)/3^l = n(C_l - 1), v_2(S_(l-1) + 3^l n) = d_l exact for n=-17, l <= 60
+    n=-17 real partial sums l=1..5: ['0.3333', '0.5556', '0.7037', '0.8025', '0.9342'] ... l=22,23,24: ['3.3135', '3.4960', '3.6176'] ... l=60: 7.421485
+  PASS  27: partial sums 0.3333, 0.5556, 0.8519, 1.0494, 1.1811 and 2.1370 at l = 24 (note: 0.33, 0.56, 0.85, ..., 2.14)
+  PASS  the identities hold exactly for 200 random odd n of both signs, l <= 40
+  PASS  real Bernstein series of the cycle point -1 (word (1,)) equals -n = 1 exactly  [1]
+  PASS  real Bernstein series of the cycle point -5 (word (1, 2)) equals -n = 5 exactly  [5]
+  PASS  real Bernstein series of the cycle point -17 (word (1, 1, 1, 2, 1, 1, 4)) equals -n = 17 exactly  [17]
+  (the 2-adic value is -n by v_2(S_(l-1) + 3^l n) = d_l -> infinity, checked above; so real and 2-adic values coincide on cycles)
+  eta_l = m_l (C_inf/C_l - 1) >= m_l * (1/(3 m_l)) = 1/3: the first factor of the tail product; algebraic, no computation needed
+  [5.0s]
+=== hashes of the audited files (raw bytes) ===
+  90efe050d49d2d3267f57b109ffdd87b407b92fd8955bbccca797655802d8d1b  04-computation/experiments/collatz_directions_20260926.py
+  75bc91e7b10c29b1269a1652488c7359be68580f76bb567d9bb476ed82af2ffd  04-computation/experiments/collatz_directions_20260926.out
+  7a95d502d1d17a364eb20daa479f2c29b4afe39a56ff01af111457041d4f43a9  05-knowledge/results/collatz_directions_20260926.md
+=== SUMMARY: 53 PASS, 0 FAIL  [5.0s] ===

@@ -1192,15 +1192,16 @@ tiling results. Note [`collatz_directions_20260926.md`](collatz_directions_20260
 
 * `E_inf = {x in Z_2 : no coefficient descent ever}`: closed, box dimension
   `h* = 0.94996` (its cylinders are THM-4495's `W_k`), the closure of the
-  negative rational cycle points, `E_inf cap Z_<0 = {-1, -5, -17}` to `10^6`;
-  the conjecture is `Z^+ cap E_inf = empty`. No function of finite prefixes
-  can decrease at every complete excursion (`(1,1,2)^N`), so the lane's
-  rank must depend on the whole integer: the obstruction is a theorem.
+  no-descent words' fixed points (height-minimal negative cycle points),
+  `E_inf cap Z_<0 = {-1, -5, -17}` to `10^6`; the conjecture implies
+  `Z^+ cap E_inf = empty`, converse under Terras's equality. No function of
+  finite prefixes can decrease at every complete excursion (`(1,1,2)^N`), so
+  a rank must use the integer, as the lane's controller does.
 * The Collatz map is `r -> 3r + lsb(r)` with `r_l = 2^(d_l) m_l = 3^l n +
   S_(l-1)`; reaching `1` is reaching a power of two; divergence is "`3^l n`
   plus the `3`-weighted sum of its own past lowest bits stays almost a power
   of two for ever".
-* Reciprocal-sum form (corollary of THM-4476): no divergence iff
+* Reciprocal-sum form (THM-4476 Corollary 8, cited): no divergence iff
   `sum 1/m_j = infinity` for every `n`; the Bernstein series then diverges
   in `R` and converges 2-adically to `-n`.
 * Mahler sibling: `xi 3^l/2^(d_l) = m_l + eta_l`, `eta_l >= 1/3`; the Mahler
@@ -1209,7 +1210,8 @@ tiling results. Note [`collatz_directions_20260926.md`](collatz_directions_20260
 * Tilings: the Sierpinski selection is the Lucas set (the S10 tower); the
   Collatz hierarchy is the continued fraction of `log_2 3` (lower
   approximations `1/1, 3/2, 11/7, 19/12, 84/53`, gaps `1, 1, 139, 7153,
-  4e22`), irrational, so no finite certificate bank tiles the residual.
+  4e22`), irrational: the heuristic reason (marked) that no finite certificate bank
+  tiles the residual.
 
 ## 2b. The approach deck: every approach generated or considered, with its disposition
 
