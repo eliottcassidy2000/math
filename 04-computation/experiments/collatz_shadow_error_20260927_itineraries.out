@@ -1,0 +1,11 @@
+== 490 rational starting errors in [1,2) with denominators <= 40, itineraries of length 80 ==
+ all itineraries stay in [1,2): True; growth words over the window: 490 of 490; max |partial Bernstein sum - eta_0| = 3.761e-10 (at eta_0 = 53/38; the tail is < (2/3)^L ~ 8.2e-15 for growth words)
+ frequency of v = 2 along itineraries: min 0.000, mean 0.152, max 0.188 (growth needs < 0.585)
+ itineraries whose exact 2-adic residue rho_K stabilises over K in [40, 80] (would signal an integer point): 0 of 490
+ eta_0 = 1        itinerary 111111111111111111111111 ... growth 23.40, partial sum 1.000000, rho_K for K = 36..40: [137438953471, 274877906943, 549755813887, 1099511627775, 2199023255551]
+ eta_0 = 3/2      itinerary 121111112111111112111121 ... growth 16.40, partial sum 1.499988, rho_K for K = 36..40: [3783387945755, 12579480967963, 30171667012379, 65356039101211, 206093527456539]
+ eta_0 = 211/179  itinerary 111121111211112111121111 ... growth 15.40, partial sum 1.178744, rho_K for K = 36..40: [982803689631, 982803689631, 36167175778463, 36167175778463, 317642152489119]
+ eta_0 = 7/5      itinerary 112111121111211111211121 ... growth 17.40, partial sum 1.399989, rho_K for K = 36..40: [8001098280295, 16797191302503, 16797191302503, 51981563391335, 122350307568999]
+ periodic: R((1, 1, 1, 1, 2)) = 211/179, itinerary reproduces the word: True
+ periodic: R((1, 1, 1, 1, 1, 2)) = 665/601, itinerary reproduces the word: True
+ periodic: R((1, 1, 1, 1, 1, 2, 1, 1, 1, 2)) = 62185/54953, itinerary reproduces the word: True

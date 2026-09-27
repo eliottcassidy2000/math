@@ -13,7 +13,7 @@ status: >
   Mahler-shaped (bounded-cut) case. Not implied by any density statement.
 source: opus-2026-09-27 session collatz-shadow-flp-20260927
 related: [THM-4476 (Bernstein series, two places), HYP-9161 (shell revisits), S13 note collatz_directions_20260926.md (E_inf), the Mahler frontier]
-verification: 04-computation/experiments/collatz_shadow_error_20260927.py -> .out
+verification: 04-computation/experiments/collatz_shadow_error_20260927.py -> .out; collatz_shadow_error_20260927_itineraries.py -> .out (490 sampled itineraries, none with an integer 2-adic point; at least three v = 1 steps after every v = 2)
 ---
 
 # HYP-9164 -- the shadow error of a divergent orbit is unbounded

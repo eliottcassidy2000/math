@@ -19,8 +19,9 @@ memory and not re-derived here.
 on the rational cycle points, on the `−5` shadow families, on both sheets) +
 HYP-9164 (the bounded-shadow conjecture, an intermediate pointwise statement)
 + DIRECTION marked (what a spreading theorem would be). Collatz OPEN; nothing
-here is a proof of anything about all `n`.** Script:
-`04-computation/experiments/collatz_shadow_error_20260927.py` -> `.out`.
+here is a proof of anything about all `n`.** Scripts:
+`04-computation/experiments/collatz_shadow_error_20260927.py` and
+`collatz_shadow_error_20260927_itineraries.py`, with `.out` files.
 
 ## 0. The answer in one paragraph
 
@@ -173,6 +174,23 @@ primitive periodic words with `p <= 10` whose error stays in `[1, 2)` are eight:
 maxima `1.905, 1.809, ..., 1.691`) and `(1^5 2 1^3 2)` (max `1.9994`); in each
 case the itinerary of `f` is the word. Their 2-adic points are rational and
 not integers. The maxima of the family `(1^a 2)` decrease to `5/3`, so
+
+**Proposition 7 (runs in the `B = 2` regime).** Along an `f`-itinerary every
+`v = 2` step is followed by at least three `v = 1` steps: after `v = 2` the error
+lies in `[1, 5/4)`, and `g(eta) = (3 eta − 1)/2` maps `[1, 5/4)` to `[1, 11/8)`,
+then to `[1, 25/16)`, both below `5/3`, so the third image `[1, 1.84)` is the
+first that can reach `5/3`. Hence the frequency of `v = 2` is at most `1/4`,
+every block `(1, 1, 1, 2)` multiplies the value by at least `81/32`, and a
+bounded-shadow (`B = 2`) divergent orbit would grow at least like
+`2^(0.335 l)`: bounded shadow error is a fast-divergence regime, whose
+starting classes are thin (`(1 − h(rho))` with `rho >= 0.8`). Exploration
+(`collatz_shadow_error_20260927_itineraries.py`): for all `490` rational
+starting errors in `[1, 2)` with denominators up to `40`, the exact itineraries
+of length `80` stay in `[1, 2)`, are growth words (frequency of `v = 2` between
+`0` and `0.188`, mean `0.152`), reproduce the starting error as the limit of
+their Bernstein partial sums (deviation `< 4e-10`, the self-consistency of
+Proposition 1), and none has a 2-adic point that stabilises to an integer
+over the second half of the window.
 
 **Trivial spreading bound.** Every integer orbit with convergent series has
 `sup_l eta_l >= 5/3` (all errors below `5/3` force every valuation to be `1`, the
