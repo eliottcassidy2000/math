@@ -410,6 +410,14 @@ all heights (THM-1289, published), δ ineffective.
   Mahler sibling with the Archimedean object xi 3^l/2^(d_l) = m_l + eta_l; irrational (log_2 3) versus
   dyadic (Sierpinski/Lucas) hierarchies. Note: `collatz_directions_20260926.md`.
 
+  **Shadow error / FLP angle (opus, 2026-09-27, S14):** for a divergent orbit xi 3^l/2^(d_l) = m_l + eta_l,
+  eta_l = real Bernstein value of the tail, 2^(v_(l+1)) eta_(l+1) = 3 eta_l - 1 (the 3x-1 copy driven by the
+  orbit's halvings), eta_l >= 1, budget 2^v <= 3 eta - 1, dip bound m_(l+k) >= m_l/(3 eta_l), eta = |x_w| on
+  periodic tails (copies cancel on the negative cycles); FLP carry structure on the integer parts with
+  adaptive shift, but no confinement to refute: the theorem does not transfer. Bounded shadow forces
+  bounded valuations and an interval-map itinerary; HYP-9164 (no integer orbit has bounded shadow error)
+  is the intermediate pointwise statement. Note: `collatz_shadow_error_flp_20260927.md`.
+
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`
 (ranks HN > reconstruction > Kakeya/Falconer > sunflower > Caccetta–Häggkvist > … ).
 

@@ -1,0 +1,47 @@
+== (E4) periodic tails: eta = |x_w| exactly ==
+ w = (1,)                     x_w = -1         eta = R(w^inf) = 1           eta + x_w = 0
+ w = (1, 2)                   x_w = -5         eta = R(w^inf) = 5           eta + x_w = 0
+ w = (2, 1)                   x_w = -7         eta = R(w^inf) = 7           eta + x_w = 0
+ w = (1, 1, 1, 2, 1, 1, 4)    x_w = -17        eta = R(w^inf) = 17          eta + x_w = 0
+ w = (1, 1, 2, 1, 1, 4, 1)    x_w = -25        eta = R(w^inf) = 25          eta + x_w = 0
+ w = (1, 1, 2)                x_w = -19/11     eta = R(w^inf) = 19/11       eta + x_w = 0
+ w = (1, 2, 1, 2, 2, 1)       x_w = -1213/217  eta = R(w^inf) = 1213/217    eta + x_w = 0
+ negative cycle through -1: (m, eta) = [(-1, '1'), (-1, '1'), (-1, '1')] ... m + eta = 0 at every point: True
+ negative cycle through -5: (m, eta) = [(-5, '5'), (-7, '7'), (-5, '5')] ... m + eta = 0 at every point: True
+ negative cycle through -17: (m, eta) = [(-17, '17'), (-25, '25'), (-37, '37')] ... m + eta = 0 at every point: True
+== (E1)-(E3) on truncated tails of finite orbits ==
+ n = 27: K = 41 odd steps; 2^v eta_(l+1) = 3 eta_l - 1 on truncated values: True; 2^v <= 9 eta_l - 3: True; sharp 2^v <= 3 eta_l - 1 (tails >= 30 terms): True; m_(l+k) >= m_l/(3 eta_l) inside the truncation: True; carries c_l = 2^v M_(l+1) - 3 M_l in [-2^v+1, 2]: True (values seen [-8, -6, -5, -3, -2, -1, 0, 1, 2]); eta_0^(K) = 5.3689, max eta = 332.484 at l = 32 (m_l = 3077)
+ n = 703: K = 62 odd steps; 2^v eta_(l+1) = 3 eta_l - 1 on truncated values: True; 2^v <= 9 eta_l - 3: True; sharp 2^v <= 3 eta_l - 1 (tails >= 30 terms): True; m_(l+k) >= m_l/(3 eta_l) inside the truncation: True; carries c_l = 2^v M_(l+1) - 3 M_l in [-2^v+1, 2]: True (values seen [-24, -13, -5, -4, -3, -2, -1, 0, 1, 2]); eta_0^(K) = 147.5929, max eta = 17292.982 at l = 34 (m_l = 83501)
+ n = 871: K = 65 odd steps; 2^v eta_(l+1) = 3 eta_l - 1 on truncated values: True; 2^v <= 9 eta_l - 3: True; sharp 2^v <= 3 eta_l - 1 (tails >= 30 terms): True; m_(l+k) >= m_l/(3 eta_l) inside the truncation: True; carries c_l = 2^v M_(l+1) - 3 M_l in [-2^v+1, 2]: True (values seen [-11, -8, -6, -5, -4, -3, -2, -1, 0, 1, 2]); eta_0^(K) = 137.1101, max eta = 9909.207 at l = 14 (m_l = 63665)
+ n = 6171: K = 96 odd steps; 2^v eta_(l+1) = 3 eta_l - 1 on truncated values: True; 2^v <= 9 eta_l - 3: True; sharp 2^v <= 3 eta_l - 1 (tails >= 30 terms): True; m_(l+k) >= m_l/(3 eta_l) inside the truncation: True; carries c_l = 2^v M_(l+1) - 3 M_l in [-2^v+1, 2]: True (values seen [-13, -8, -6, -5, -4, -3, -2, -1, 0, 1, 2]); eta_0^(K) = 1179.3637, max eta = 61981.267 at l = 32 (m_l = 325133)
+== the -5 shadow families n_k = 4*8^k - 5: eta_0 over the shadow tends to 5 ==
+ k=1 n=27: word (1,2)^1, partial eta_0 over the shadow = 0.555556  (5(1 - (8/9)^k) = 0.555556)
+ k=2 n=251: word (1,2)^2, partial eta_0 over the shadow = 1.049383  (5(1 - (8/9)^k) = 1.049383)
+ k=3 n=2043: word (1,2)^3, partial eta_0 over the shadow = 1.488340  (5(1 - (8/9)^k) = 1.488340)
+ k=4 n=16379: word (1,2)^4, partial eta_0 over the shadow = 1.878525  (5(1 - (8/9)^k) = 1.878525)
+ k=5 n=131067: word (1,2)^5, partial eta_0 over the shadow = 2.225355  (5(1 - (8/9)^k) = 2.225355)
+ k=6 n=1048571: word (1,2)^6, partial eta_0 over the shadow = 2.533649  (5(1 - (8/9)^k) = 2.533649)
+ k=7 n=8388603: word (1,2)^7, partial eta_0 over the shadow = 2.807688  (5(1 - (8/9)^k) = 2.807688)
+ k=8 n=67108859: word (1,2)^8, partial eta_0 over the shadow = 3.051278  (5(1 - (8/9)^k) = 3.051278)
+== (E5) real shadow on 27 with the truncated xi: x_l = m_l + eta_l = xi 3^l/2^(d_l) ==
+ xi = 27 + eta_0 = 32.368923; xi 3^l/2^(d_l) = m_l + eta_l for all l < K: True; l = 10: m = 103, eta = 13.6597, x = 116.6597
+== (E2) the infimum over infinite words is the all-ones value 1; largest partial eta_0 over no-descent words of length 12 ==
+ largest partial eta_0 over no-descent words of length 12: 2.9518 (words hugging the critical line from below); all-ones value: 0.9923
+== bounded-shadow regime: periodic words with all eta in [1, 2) are itineraries of f(eta) = (3 eta - 1)/2 on [1, 5/3), (3 eta - 1)/4 on [5/3, 2) ==
+ 8 primitive periodic words (p <= 10) with all eta in [1,2); itinerary of f equals the word in all cases: True
+   w = (1,)                             eta_0 = 1            max eta = 1.0000
+   w = (1, 1, 1, 1, 2)                  eta_0 = 211/179      max eta = 1.9050
+   w = (1, 1, 1, 1, 1, 2)               eta_0 = 665/601      max eta = 1.8087
+   w = (1, 1, 1, 1, 1, 1, 2)            eta_0 = 2059/1931    max eta = 1.7550
+   w = (1, 1, 1, 1, 1, 1, 1, 2)         eta_0 = 6305/6049    max eta = 1.7231
+   w = (1, 1, 1, 1, 1, 1, 1, 1, 2)      eta_0 = 19171/18659  max eta = 1.7033
+   w = (1, 1, 1, 1, 1, 1, 1, 1, 1, 2)   eta_0 = 58025/57001  max eta = 1.6906
+   w = (1, 1, 1, 1, 1, 2, 1, 1, 1, 2)   eta_0 = 62185/54953  max eta = 1.9994
+ words with all eta < B force valuations <= log2(3B - 1): B = 2 gives v <= 2, B = 5 gives v <= 3, B = 17 gives v <= 5
+== minus sheet (3x-1 map): the same recursion, real shadow x = m - eta, cycles 1, 5, 17 ==
+ 3x-1 cycle through 1: (m, eta) = [(1, '1'), (1, '1'), (1, '1')] ... m - eta = 0 at every point: True
+ 3x-1 cycle through 5: (m, eta) = [(5, '5'), (7, '7'), (5, '5')] ... m - eta = 0 at every point: True
+ 3x-1 cycle through 17: (m, eta) = [(17, '17'), (25, '25'), (37, '37')] ... m - eta = 0 at every point: True
+ 3x-1 orbit of 3 reaches 1 after 1 steps: R(d) = 3 = n: True (eventually periodic word: real value equals the 2-adic value)
+ 3x-1 orbit of 11 reaches 1 after 1 steps: R(d) = 11 = n: True (eventually periodic word: real value equals the 2-adic value)
+ 3x-1 orbit of 29 reaches 1 after 2 steps: R(d) = 29 = n: True (eventually periodic word: real value equals the 2-adic value)
