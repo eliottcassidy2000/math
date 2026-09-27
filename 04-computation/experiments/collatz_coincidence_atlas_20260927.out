@@ -1,0 +1,31 @@
+== (1) the polygonal triangle and its hidden region ==
+ T(n,j) = P_(j+2)(n-j): True
+ edges: P_2(n) = n, P_k(1) = 1, P_k(2) = k: True
+ hidden region P_k(-m) = P_k(m) + (k-4) m: True
+ apex P_5(-1) = 2; hidden pentagonal 2, 7, 15, 26 = visible 1, 5, 12, 22 plus m
+ P_5(n) = sum_(j<n)(3j+1): True ; P_5(-n) = sum_(1<=j<=n)(3j-1): True
+ 24 P_5(n) + 1 = (6n-1)^2, 24 P_5(-n) + 1 = (6n+1)^2: True
+ Syracuse predecessors (2^v m - 1)/3: v odd iff m = 6k-1, v even iff m = 6k+1, none for 3 | m: True
+== (2) Euler's pentagonal theorem and the eta indexing ==
+ prod_(n<=400) (1 - q^n) = sum_k (-1)^k q^(k(3k-1)/2) to order 400: True
+ exponents e with 24e + 1 = m^2, m = 6k -+ 1, and (-1)^k = chi_12(m) (the classical eta(tau) = sum chi_12(m) q^(m^2/24)): True
+ so eta's exponents are indexed by the odd numbers coprime to 3 (the Syracuse core, the nodes with odd predecessors),
+ the two signs of k being the two predecessor classes 6k-1 (v odd) and 6k+1 (v even)
+== (3) golden facts, exact ==
+ phi^n = (L_n + F_n sqrt5)/2 (n < 30): True; round(phi^n) = L_n for 2 <= n < 30: True (phi^0 = 1 vs L_0 = 2, phi vs L_1 = 1: the two reversed)
+ zeta_5 + conj(zeta_5) = 0.618033988750 = 1/phi = phi - 1 = 0.618033988750 (a golden integer; [Q(zeta_5):Q(sqrt5)] = 2)
+ cube edge = phi * dodecahedron edge (pentagon diagonal); volume ratio phi^3 / ((15 + 7 sqrt5)/4) = 1 + -1/5 sqrt5; 2/(2 + phi) = 1 + -1/5 sqrt5; equal: True
+ icosahedron graph: 12 vertices, degree 5, spectrum [5.0, 2.236068, 2.236068, 2.236068, -1.0, -1.0, -1.0, -1.0, -1.0, -2.236068, -2.236068, -2.236068]
+ dodecahedron graph: 20 vertices, degree 3, spectrum [3.0, 2.236068, 2.236068, 2.236068, 1.0, 1.0, 1.0, 1.0, 1.0, -0.0, -0.0, 0.0, 0.0, -2.0, -2.0, -2.0, -2.0, -2.236068, -2.236068, -2.236068]
+ dodecahedron / antipodal: 10 vertices, spectrum [3.0, 1.0, 1.0, 1.0, 1.0, 1.0, -2.0, -2.0, -2.0, -2.0]; Petersen spectrum [3.0, 1.0, 1.0, 1.0, 1.0, 1.0, -2.0, -2.0, -2.0, -2.0]; equal (Petersen is determined by its spectrum): True
+ icosahedron / antipodal: 6 vertices, spectrum [5.0, -1.0, -1.0, -1.0, -1.0, -1.0] = K_6's [5, -1 x5]: True
+ reading: the golden eigenvalues +-sqrt5 (multiplicity 3, the icosahedral 3-dimensional representations) are exactly the part killed by the antipodal quotient
+== (4) the number 139 across the threads ==
+ 3^7 - 2^11 = 139; the -17 cycle: 7 odd steps, 11 halvings, -17 = S/(2^11 - 3^7), S = 2363 = 17 * 139
+ 139 mod 4 = 3: a Paley tournament on 139 vertices exists, |Aut| = 139 * 69 = 9591; 7 mod 4 = 3: the Paley heptagon, |Aut| = 21
+ genus of X_0(7) = 0
+ genus of X_0(11) = 1
+ genus of X_0(139) = 11
+ Ihara quadratic factor of K_n has discriminant 9 - 4n: {3: -3, 4: -7, 5: -11, 7: -19, 13: -43} (Heegner discriminants -3, -7, -11, -19, -43; K_5 gives -11)
+ tournament thread (cited, not recomputed): flip-rank k(7) = 12; the best 11-arc configuration's 2^11 completions reach 454 of the 456 classes and miss the Paley heptagon
+ verdict: 7 and 11 are the cycle's (p, A); 2^11 < 3^7 is a near-miss of log_2 3 (11/7 a semiconvergent); the modular-curve and Paley facts are properties of 7, 11, 139 as integers, not of the Collatz map

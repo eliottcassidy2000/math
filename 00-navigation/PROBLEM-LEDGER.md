@@ -465,6 +465,15 @@ all heights (THM-1289, published), δ ineffective.
   (11, 7)) tested, no content. Independent audit OWED (subagent cut off by a rate limit). Note:
   `collatz_depth_layers_zeta5_preprints_20260927.md`.
 
+  **Coincidence atlas (opus, 2026-09-27, S15 third note):** the owner's triangle is the polygonal numbers by antidiagonals,
+  T(n,j) = P_(j+2)(n-j); its hidden region is the negative-index generalized polygonal numbers P_k(-m) = P_k(m) + (k-4)m
+  with apex P_5(-1) = 2; the pentagonal column is the partial sums of 3j+1 (visible) and 3j-1 (hidden): the two sheets;
+  24P+1 = (6n-+1)^2 and eta(tau)'s support is the Syracuse core 6k+-1 split by predecessor parity (exact dictionary, no
+  dynamics). Dodecahedron/icosahedron fold antipodally to Petersen/K_6 (the golden eigenvalues are the kernel); for
+  Collatz this remains the Kuratowski note's ANALOGY. 139 = 3^7 - 2^11: the -17 cycle's denominator; the S8 Langlands
+  reading of (7, 11) stands; the tournament 3^7 is a score sequence, so that face is a pun. Nothing on the conjecture.
+  Note: `collatz_coincidence_atlas_20260927.md`.
+
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`
 (ranks HN > reconstruction > Kakeya/Falconer > sunflower > Caccetta–Häggkvist > … ).
 
