@@ -1,0 +1,4 @@
+  ok: N_1(L) = 0 for 1 <= L <= 50 (the trivial case m = 1)
+  ok: Theorem R_15 on 2 <= m <= 14, L <= 400: 10000 N_m(L) <= 10039 A_(m+15)(L) exactly (max ratio 1 + 0.00e+00)
+  ok: ratio profile (2 <= m <= 14, L <= 300): c0=1: max 1.0032546 at (m,L)=(7, 50); c0=2: max 1.0000889 at (m,L)=(9, 58); c0=3: max 1.0000020 at (m,L)=(12, 77)
+  ok: Theorem R_small on 2 <= m <= 24, L <= 250 (m <= 14: L <= 400): N_m <= 1.1562 A_(m+1), 1.0474 A_(m+2), 1.0148 A_(m+3)
