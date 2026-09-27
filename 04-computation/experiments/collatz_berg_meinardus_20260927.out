@@ -1,0 +1,9 @@
+== Berg-Meinardus equation h(z^3) = h(z^6) + (1/(3z)) sum_k lambda^k h(lambda^k z^2), truncated at z^240 ==
+ (1) f = 1: residual coefficients above 1e-9: 0 (equation holds: True)
+ (2) control f = (-1)^n: first failing exponent 3 (expected 3: the relation f(1) = f(2) at m = 0 fails)
+ (3) control f = [n odd]: first failing exponent 3 (expected 3: f(1) != f(2))
+ (4) random f: residual = f(2m)-f(m) at z^(6m), f(2m+1)-f(3m+2) at z^(6m+3), 0 elsewhere: True
+ (5) window {1..50}: 9 orbit classes, 1 of them closed (all lie in the class of 1: True), 8 classes exit the window
+ (5) window {1..100}: 18 orbit classes, 1 of them closed (all lie in the class of 1: True), 17 classes exit the window
+ (5) window {1..200}: 34 orbit classes, 1 of them closed (all lie in the class of 1: True), 33 classes exit the window
+ (5) window {1..1000}: 168 orbit classes, 1 of them closed (all lie in the class of 1: True), 167 classes exit the window

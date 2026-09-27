@@ -36,7 +36,7 @@ and the Mahler core-paper sheet
 [`CORE-PAPERS-MAHLER-THREE-HALVES.md`](../reference/CORE-PAPERS-MAHLER-THREE-HALVES.md)
 (Akiyama–Frougny–Sakarovitch rational-base numeration).
 
-**Status: PROVED elementary propositions (Propositions 1–10; the genuinely
+**Status: PROVED elementary propositions (Propositions 1–11; the genuinely
 new exact objects are the base-3/2 tree dictionary of Proposition 1, the
 Apéry-form recurrence of Proposition 3, and the triple criticality of
 Propositions 5, 6, 8 with the Borel–Dwork dichotomy of Proposition 10) +
@@ -495,25 +495,8 @@ finishing move, and this note claims none.
 
 ## 4. Directions (DIRECTION; none proved)
 
-* **D1. A holonomic carrier from the functional equation.** The only
-  Collatz object with a functional equation over `Q(z)` is Berg–Meinardus's
-  generating function of the tree of 1 (synthesis row 22, typed only). Its
-  equation is of Mahler type (`z -> z^3` with cube roots of unity), and
-  Mahler functions have their own arithmetic rigidity theory
-  (Mahler's method; Adamczewski–Bell: an algebraic Mahler function is
-  rational). Whether the tree-of-1 series is a genuine Mahler function, and
-  whether the Pólya–Carlson dichotomy (integer coefficients, radius 1:
-  rational or natural boundary) can be combined with the functional
-  equation, is the one place where shape (C) has a carrier with an
-  equation. Cheapest test: write the Berg–Meinardus equation for the
-  Syracuse tree and check whether it is linear over `Q(z)` in `h(z), h(z^3),
-  h(z^9)`.
-* **D2. `F_n` holonomic implies rational.** Expected: a P-recursive sequence
-  whose terms are powers of 2 with `d_k = O(k)` has asymptotics `rho^k
-  k^alpha (log k)^beta` times periodic factors (Birkhoff–Trjitzinsky), and
-  the ratio `2^(v_(k+1))` lies in a discrete set, so the valuation word is
-  eventually periodic. A proof would make precise that the holonomy-bound
-  method has no carrier in `F_n`. Not attempted.
+* **D1. WITHDRAWN as a direction (same session; see section 7 and the MISTAKES entry).** The Berg–Meinardus route was already typed in the repo's wave-10 note [`procgen_continuous_20260925_natural_boundary_mahler_harmonic.md`](procgen_continuous_20260925_natural_boundary_mahler_harmonic.md): Bell–Lagarias (Acta Arith. 170, 2015) prove Collatz iff the basin series `B(z)` is rational iff D-finite iff it continues across one arc of `|z| = 1`; two pure 2- and 3-Mahler equations would force rationality (Adamczewski–Bell 2017) but the one equation Collatz supplies mixes roots of unity, and that class is provably non-rigid (their Proposition D), sheet-symmetric and drift-symmetric; Opfer's 2011 claim along this route was withdrawn. Nothing here adds to that typing. The synthesis row 22 ("typed only") pointed to it and this note's inheritance pass did not follow the pointer.
+* **D2. Now Proposition 11 (section 7):** `F_n` D-finite implies `F_n` rational implies the word eventually periodic, by Bézivin's extension of Pólya's theorem to holonomic series; so the holonomy-bound method has no carrier in `F_n`.
 * **D3. Digit-append runs and Z-numbers.** Proposition 1 puts Z-numbers
   (digit walks in `{0,1}`) and Collatz orbits (digit walks broken by
   halvings) in one tree. The Mahler frontier's drift control `5/2` and
@@ -539,6 +522,27 @@ finishing move, and this note claims none.
 
 Both run in under two minutes with the standard library only; the
 identities are checked in exact rational arithmetic.
+
+## 7. Addendum (same session): the per-orbit series against the basin series, Proposition 11, and the Berg–Meinardus equation re-derived
+
+**Inheritance correction.** After the first close-out of this note, a search for Opfer/Cobham/Bézivin found the repo's wave-10 note [`procgen_continuous_20260925_natural_boundary_mahler_harmonic.md`](procgen_continuous_20260925_natural_boundary_mahler_harmonic.md), which had already typed the functional-equation route (section 4, D1). This note's own object is different and survives the correction: the wave-10 note and Bell–Lagarias work with the basin series `B(z) = sum_(n in basin(1)) z^n` (0/1 coefficients, radius 1, Pólya–Carlson at the unit circle), this note with the per-orbit word series `F_n(z) = sum_k 2^(d_k(n)) z^k` (power-of-two coefficients, complex radius `R_oo <= 1/2`, 2-adic radius `R_2 >= 2`, Borel–Dwork with the 2-adic place).
+
+| | basin series `B(z)` (Bell–Lagarias 2015; wave-10 note) | word series `F_n(z)` (this note) |
+|---|---|---|
+| coefficients | `0/1`, indicator of the tree of 1 | `2^(d_k(n))`, 2-parts of the Apéry forms |
+| rational iff | Collatz (the set is cofinite) | the orbit of `n` is eventually periodic (Prop. 7, Pólya 1921) |
+| D-finite iff | rational (Bell–Lagarias Thm 1.2; Pólya–Carlson) | rational (Prop. 11, Bézivin 1986) |
+| analytic dichotomy | rational or natural boundary on `|z| = 1` (Pólya–Carlson, Fabry gap) | rational or no meromorphic continuation past `|z| = 2^(-liminf d_k/k)` (Prop. 10, Borel–Dwork) |
+| functional equation | Berg–Meinardus (mixed 2-3 Mahler with cube roots of unity) | none known; `F_n` depends on the word alone |
+| what the integer contributes | membership of `n` in the set | nothing: `F_n` is a function of the word |
+
+**Proposition 11 (`F_n` holonomic implies rational).** Let `x in Z_2` have valuation word `(v_k)` and `F_x(z) = sum 2^(d_k) z^k`. If `F_x` is D-finite (satisfies a linear differential equation with polynomial coefficients), then `F_x` is rational and the word is eventually periodic.
+
+*Proof.* The coefficients lie in the finitely generated multiplicative group `2^Z` of `Q^*`, so `F_x` is a Pólya series in the sense of Bell–Smertnig. Bézivin's theorem (J. reine angew. Math. 364 (1986), 60–68, "Sur un théorème de G. Pólya"; restated in Bell–Chen–Hossain, Algebra & Number Theory 15 (2021) and Bell–Smertnig, arXiv:2202.00415, whose abstracts were read today) says a univariate D-finite series over a field of characteristic 0 whose coefficients lie in a finitely generated subgroup of `K^*` together with 0 is rational. Proposition 7 finishes. ∎ (CITED: the theorem is quoted from the two abstracts, not from Bézivin's paper.)
+
+Consequence for the zeta(5) shape: an arithmetic-holonomy bound (Calegari–Dimitrov–Tang) needs a holonomic function attached to the object; for a single orbit the only natural integer series is `F_n`, and it is holonomic exactly when the periodicity conjecture for `n` already holds. Any holonomy-shaped Collatz argument must therefore start from a different carrier, and the basin series is the only other one on record, with the obstructions the wave-10 note lists.
+
+**The Berg–Meinardus equation, re-derived and checked** (script `collatz_berg_meinardus_20260927.py`, output beside it; the wave-10 note's NB1 had checked the same equation, so this is a redundant independent check). With `T(n) = n/2` (even), `(3n+1)/2` (odd), a function `f` on the positive integers is `T`-invariant iff `f(2m) = f(m)` and `f(2m+1) = f(3m+2)`; with `h(z) = sum f(n) z^n` and `lambda = e^(2 pi i/3)` this is equivalent to `h(z^3) = h(z^6) + (1/(3z)) sum_(k=0..2) lambda^k h(lambda^k z^2)`, because the right side has nonzero coefficients only at exponents `0 mod 3`, with `[z^(6m)] = f(m)` and `[z^(6m+3)] = f(3m+2)` (checked on a random `f` to order 240: the residual is exactly `f(2m) - f(m)` at `z^(6m)` and `f(2m+1) - f(3m+2)` at `z^(6m+3)`, zero elsewhere; `f = 1` solves it; the controls `(-1)^n` and `[n odd]` fail at `z^3`). Inside a window `{1..W}` the equation's solution space has one free value per orbit class of the window; the windows `W = 50, 100, 200, 1000` have `9, 18, 34, 168` classes, exactly one of them closed (the class of 1), the others exiting the window. The conjecture is that all classes merge into the closed one, i.e. that the solution space in `C[[z]]` is one-dimensional; the wave-10 note records why the equation's form does not decide this.
 
 ## 6. Audit status
 

@@ -448,6 +448,8 @@ all heights (THM-1289, published), δ ineffective.
   2^(liminf - limsup) <= 1 (Borel–Dwork-critical), is rational iff the word is eventually periodic (Pólya), and a
   meromorphic continuation past |z| = 2^(-liminf d_k/k) would force PC(n). Real zeta(5): no confirmed proof found;
   the public record is p-adic (Calegari–Dimitrov–Tang, LSZ). Note: `collatz_posets_dags_zeta5_20260927.md`.
+  Addendum: D1 (Berg–Meinardus/Mahler) withdrawn, already typed by wave 10 (MISTAKES entry); Proposition 11: F_n D-finite =>
+  rational (Bézivin 1986), so no holonomic carrier per orbit; F_n is the per-orbit sibling of Bell–Lagarias's basin series.
 
   **Depth, layers, Hankel rank; two zeta(5) preprints (opus, 2026-09-27, S15 second note):** the depth d(n) of the
   rooted component has layers growing like lambda_C^k, lambda_C = (1 + sqrt(7/3))/2 = 1.2638 per Collatz step (measured
