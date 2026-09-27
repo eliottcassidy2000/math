@@ -9,6 +9,31 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-27 incoming THM-4512 audit: exact-word bit, residual set, and effective cutoff
+
+- **Missing bit.** An exact Syracuse valuation word of total A occupies a
+  class modulo2^(A+1), not2^A. Word(1), source1 is the minimal hostile:
+  the formal quotient is2 while U(1)=1. The coarse modulus2^A fixes earlier
+  valuations exactly and the final one only from below. Its endpoint is
+  oddpart(Q)<=Q, so the sufficient threshold survives but the equality does not.
+- **Residual/target conflation.** The old finite bank misses4091, yet its
+  first actual and coefficient descent both occur at8, ending1639. Its
+  complement is not the no-coefficient-descent set. Moving entry into a
+  locally descending region is already unconditional; a root-paying return
+  is a different predicate. Convergent integer orbits are eventually periodic,
+  so they must not be called Haar-generic valuation sequences.
+- **Effective does not mean checked to5000.** An irrationality estimate
+  with explicit constants gives an eventual cutoff; any gap beyond the
+  verified5000 still needs checking. The theorem now retains this finite scope.
+  The word census actually stops at total A=41, not forty additional bits;
+  S_j<=j*3^(j-1) proves its omitted tail harmless for j<=14.
+- **Repair and survivor.** [THM-4512](theorems/THM-4512-coefficient-descent-classes-one-member.md),
+  its note, ledger, synthesis and index are corrected. The
+  [independent audit](../05-knowledge/results/entry_20260927_incoming.md)
+  reproduces the606746 labels, sole threshold exception1, finite5000 gap,
+  and exact density values. Those results remain valid; no global Collatz
+  or all-j conclusion is inferred.
+
 ## 2026-09-26 precision residual note (opus S11): a T-coding exponent transferred to Syracuse coding without the change of clock
 
 - **What was written.** That the Syracuse-coded residual density `D(k)` (odd `n` with no coefficient descent within `k` Syracuse steps) tends to `2^(-(1-h*))` per step, "forced by THM-4495's exponent".

@@ -1,0 +1,91 @@
+{
+  "status": "Independent exact finite audit; global claims separately scoped",
+  "gap": {
+    "jmax": 5000,
+    "largest_ratio": "211/416",
+    "witness": [
+      5,
+      8
+    ],
+    "float_coefficient_cutoffs_independently_checked_through_step": 155
+  },
+  "cylinders": {
+    "controls": 6240,
+    "minimal_hostile": {
+      "word": [
+        1
+      ],
+      "A": 1,
+      "source": 1,
+      "claimed_affine_endpoint": 2,
+      "actual_endpoint": 1
+    }
+  },
+  "census": {
+    "jmax": 14,
+    "labeled_coarse_cylinders": 606746,
+    "exact_word_cylinders": 606746,
+    "coarse_exceptions": [
+      [
+        1,
+        [
+          2
+        ],
+        "1"
+      ]
+    ],
+    "exact_exceptions": [
+      [
+        1,
+        [
+          2
+        ],
+        "1"
+      ]
+    ],
+    "actual_cutoff": "j=1 through totalA40; j>=2 through totalA41",
+    "uniform_omitted_tail": "A>=41 implies N<1 using S<=j*3^(j-1)"
+  },
+  "densities": {
+    "1": {
+      "exact": "1/2",
+      "decimal": 0.5
+    },
+    "2": {
+      "exact": "3/8",
+      "decimal": 0.375
+    },
+    "3": {
+      "exact": "1/4",
+      "decimal": 0.25
+    },
+    "4": {
+      "exact": "13/64",
+      "decimal": 0.203125
+    },
+    "41": {
+      "exact": "1530343662856563/576460752303423488",
+      "decimal": 0.002654723078269616
+    },
+    "60": {
+      "exact": "12185976031772265023015553/19807040628566084398385987584",
+      "decimal": 0.000615234565339227
+    }
+  },
+  "bank_residual": {
+    "source": 4091,
+    "old_bank_member": false,
+    "orbit": [
+      6137,
+      4603,
+      6905,
+      5179,
+      7769,
+      5827,
+      8741,
+      1639
+    ],
+    "first_descent": 8,
+    "first_coefficient_descent": 8
+  }
+}

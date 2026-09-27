@@ -1,74 +1,121 @@
 ---
 id: THM-4512
-title: "Coefficient-descent classes are certified up to at most one member: for a Syracuse valuation word w of length j with first coefficient descent at j (3^j < 2^A, A = v_1+...+v_j), every odd n in the residue class of w modulo 2^A with n > N(w) = S_j/(2^A - 3^j) satisfies U^j(n) < n; N(w) < 2^A for every j <= 5000 (and for all j given an effective irrationality measure for log_2 3), so the only possibly uncertified member of a class is its representative. No class with j <= 14 has an uncertified member except the class of n = 1, and sigma(n) = sigma_inf(n) for every odd 3 <= n <= 10^7."
+title: "Coefficient-descent thresholds on exact-word and coarse cylinders; at most one uncertified coarse representative for j <= 5000"
 status: >
-  PROVED (elementary: U^j(n) = (3^j n + S_j)/2^A with S_j = sum_(t<j) 3^(j-1-t) 2^(A_t) > 0,
-  S_j <= 2^A ((3/2)^j - 1), Terras's inequality sigma >= sigma_inf) + FINITE-EXACT
-  (2^A - 3^j > (3/2)^j - 1 at the minimal A for j <= 5000, worst ratio 0.507 at
-  (j, A) = (5, 8); 606746 first-descent classes with j <= 14 and their representatives
-  rho_w = -S_j 3^-j mod 2^A checked, only rho = 1 uncertified; sigma = sigma_inf for all
-  odd 3 <= n <= 10^7, maximal sigma 155). Terras's conjecture sigma = sigma_inf for all
-  n >= 2 remains open beyond these ranges; this theorem sharpens 'finitely many exceptions
-  per class' to 'at most the representative'. No literature-priority claim.
-source: opus-2026-09-26 session gilbreath6-collatz-precision-20260926
-depends_on: [Terras 1976 (coefficient stopping time; the set of n with stopping time k is a union of residue classes mod 2^k), Lagarias 1985 survey section on stopping times, THM-4495 (exact order of the no-descent counts), reset_20260926_swaplift.md (the lane's certificate bank, for comparison)]
-verification: 04-computation/experiments/collatz_precision_residual_20260926.py -> .out (residual densities D(k), thresholds N(w), exception enumeration for j <= 14); collatz_coefficient_stopping_20260926.py -> .out (sigma versus sigma_inf to 10^7; the gap inequality to j = 5000)
+  PROVED elementary threshold and carry inequalities, SCOPE-CORRECTED:
+  exact valuation words use modulus 2^(A+1); the modulus 2^A cylinder permits
+  extra final divisions and gives an upper bound, not an exact U endpoint.
+  FINITE-EXACT gap inequality for j <= 5000 and first-coefficient-descent
+  representative census for j <= 14. The producer reports sigma=sigma_inf
+  for odd 3 <= n <= 10^7. All-j one-member coverage requires an explicit
+  effective cutoff and the remaining finite verification; it is not supplied
+  merely by citing existence of an irrationality measure. Collatz remains OPEN.
+source: opus-2026-09-26 session gilbreath6-collatz-precision-20260926; scope and cylinder repair codex-2026-09-27
+depends_on: [THM-4495, reset_20260926_swaplift.md]
+verification: 04-computation/experiments/collatz_precision_residual_20260926.py; collatz_coefficient_stopping_20260926.py; independent correction audit entry_20260927_incoming.py
 ---
 
-# THM-4512 -- coefficient-descent classes have at most one uncertified member
+# THM-4512 -- coefficient-descent cylinders and the one-member bound
 
-## Setting
+**Correction lineage, 2026-09-27.** The original statement identified an
+exact valuation-word class with its coarser integrality class. They differ
+by one binary bit. The threshold certificate survives on the coarse class
+as a sufficient inequality, but the endpoint equality does not. The
+all-j claim was also too broad without a specified effective cutoff.
+The [independent correction audit](../../05-knowledge/results/entry_20260927_incoming.md)
+records the precise scope and executable controls. No literature-priority claim.
 
-`U(n) = (3n + 1)/2^v` on odd `n`. For a valuation word `w = (v_1, ..., v_j)`
-put `A_t = v_1 + ... + v_t`, `A = A_j`. The odd `n` whose first `j`
-valuations are `w` form one residue class modulo `2^A` (Terras), with
-representative `rho_w = -S_j 3^(-j) mod 2^A`, where
+## Exact and coarse cylinders
 
-```text
-U^j(n) = (3^j n + S_j) / 2^A,      S_j = sum_(t=0)^(j-1) 3^(j-1-t) 2^(A_t)  > 0   (A_0 = 0).
-```
+Write U(n)=oddpart(3n+1). For a positive valuation word
+w=(v_1,...,v_j), put A_t=v_1+...+v_t, A=A_j, A_0=0, and
 
-*Coefficient descent* at step `j`: `3^j < 2^A`. *Actual descent*: `U^j(n) < n`.
-`sigma_inf(n)` and `sigma(n)` are the first `j` with each property.
+    S_j=sum_(t=0)^(j-1) 3^(j-1-t)*2^(A_t),
+    Q_w(n)=(3^j*n+S_j)/2^A.
 
-## Statement
+The exact word occupies the odd residue class
 
-1. Actual descent at `j` implies coefficient descent at `j` (`S_j > 0`), so
-   `sigma(n) >= sigma_inf(n)` (Terras).
-2. If `3^j < 2^A`, then `U^j(n) < n` for every `n > N(w) := S_j/(2^A - 3^j)`.
-3. `S_j <= 2^A ((3/2)^j - 1)`, hence `N(w)/2^A <= ((3/2)^j - 1)/(2^A - 3^j)`;
-   the right side is `< 1` for every `j <= 5000` at the minimal admissible `A`
-   (hence at every `A`), with maximum `0.507` at `(j, A) = (5, 8)`, so each
-   coefficient-descent class contains at most one member not certified by
-   its coefficient descent, namely its representative `rho_w`, and only if
-   `rho_w <= N(w)`. For `j` beyond `5000` the same follows from any effective
-   irrationality measure for `log_2 3` (`2^A - 3^j >= 3^j j^(-mu)` beats
-   `(3/2)^j` once `2^j > j^mu`).
-4. For `j <= 14` the only class with an uncertified member is the class of
-   `n = 1` (word `(2)`, `N = 1`, `U(1) = 1`). For every odd `3 <= n <= 10^7`,
-   `sigma(n) = sigma_inf(n)` (maximal value `155`).
+    E_w: n=(2^A-S_j)*3^(-j) mod2^(A+1).
 
-## Proof
+For every positive member of E_w, U^j(n)=Q_w(n), which is odd.
+The coarser class
 
-`U^j(n) < n` iff `3^j n + S_j < 2^A n` iff `(2^A - 3^j) n > S_j`; if
-`2^A <= 3^j` this fails, giving 1; if `2^A > 3^j` it holds exactly for
-`n > N(w)`, giving 2. Since every valuation is `>= 1`, `A_t <= A - (j - t)`,
-so `S_j <= 2^A sum_(m=1)^j 3^(m-1) 2^(-m) = 2^A ((3/2)^j - 1)`, giving 3; the
-inequality `2^A - 3^j > (3/2)^j - 1` was checked exactly for `j <= 5000` with
-`A = ceil(j log_2 3)` (the minimal admissible `A`; larger `A` only increase the
-gap). For 4, the classes with `j <= 14` were enumerated for all valuations up
-to `40` beyond the critical one; beyond that range `S_j/2^A <= 2^(-v) *
-2((3/2)^j - 1) < 1 <= rho_w`, so no exception is possible; the direct
-comparison to `10^7` is the script's part 1. ∎
+    C_w: n=-S_j*3^(-j) mod2^A
 
-## Remarks
+has the first j-1 valuations exactly as prescribed and its final valuation
+at least v_j. On C_w, Q_w(n) is a positive integer and
 
-* The obstruction the lane calls "insufficient precision" is therefore not
-  the small members of certified classes (there is at most one, and none
-  below `10^7` except `n = 1`): it is the words *without* coefficient descent,
-  i.e. the no-descent set, whose density among odd integers is `D(k)` after
-  `k` Syracuse steps (`0.0027` at `k = 41`; `0.00062` at `k = 60`) and whose
-  exact order in `T`-coding is THM-4495.
-* Terras's conjecture (`sigma = sigma_inf` for all `n >= 2`) would follow from
-  `rho_w > N(w)` for every first-descent word; the theorem reduces it to a
-  statement about representatives only.
+    U^j(n)=oddpart(Q_w(n)) <= Q_w(n).
+
+These descriptions follow by reversing the guarded affine word; the
+earlier oddness guards require at most A bits, and the final oddness guard
+requires one further bit. For example w=(1) has E_w=3 mod4, while C_w is
+all odd integers. At n=1, Q_w(1)=2 but U(1)=1. This is the minimal witness
+against the original equality on C_w. The exact-word density among odd
+integers is 2^(-A); it is not the density of the coarser C_w.
+
+## Scoped statements
+
+1. For an ACTUAL valuation word, actual descent at j implies coefficient
+   descent 3^j<2^A, because S_j>0. Thus sigma(n)>=sigma_inf(n).
+2. If 3^j<2^A, define N(w)=S_j/(2^A-3^j). On E_w, actual descent at j
+   is equivalent to n>N(w). On C_w the same inequality is sufficient;
+   additional final divisions may cause descent even when this test fails.
+3. If N(w)<2^A, at most the least positive representative of C_w can fail
+   this sufficient threshold test. This holds for every word of length
+   j<=5000 with coefficient descent, by the independently checked integer
+   gap inequality below. It therefore also holds on the exact subcylinder.
+4. For first coefficient descent at j<=14, the finite representative
+   enumeration and the explicit large-final-valuation tail argument leave
+   only n=1 unproved by the threshold, from word(2).
+5. The original producer separately reports sigma(n)=sigma_inf(n) on all
+   odd 3<=n<=10^7, with maximum155. This is a finite computational result,
+   not a universal equality or an all-j one-member proof.
+
+## Proof and finite boundaries
+
+Since each valuation is at least1, A_t<=A-(j-t), giving
+
+    S_j <= 2^A*((3/2)^j-1),
+    N(w)/2^A <= ((3/2)^j-1)/(2^A-3^j).
+
+At the smallest coefficient-descending A=bit_length(3^j), the exact test is
+
+    3^j-2^j < (2^A-3^j)*2^j.
+
+It passes for every 1<=j<=5000; larger A only increase the denominator.
+The largest tested ratio is approximately0.507 at(j,A)=(5,8).
+This proves statement3 on its specified range.
+
+For a word whose first coefficient descent is at j, its earlier sums
+satisfy 2^(A_t)<=3^t. Therefore S_j<=j*3^(j-1). For j<=14 and A>=41,
+
+    N(w) <= j*3^(j-1)/(2^A-3^j) < 1.
+
+Thus no omitted large-A representative can be exceptional. The original
+enumerator stops after total A reaches41, with its length-one branch
+stopping at A=40; it does not enumerate forty extra valuation bits for
+every prefix. The displayed tail bound repairs that description and
+justifies the omitted range. The independent audit uses integer thresholds.
+
+An effective estimate such as 2^A-3^j>=c*3^j*j^(-mu), with explicit
+constants and applicability range, would prove the gap inequality for all
+sufficiently large j. To extend statement3 to ALL j, one must specify that
+cutoff J_0 and verify any remaining range5001..J_0. Existence of an effective
+irrationality measure alone does not certify that J_0<=5000.
+
+## What this does and does not certify
+
+The affine threshold is a useful compiler for root-preserving residue
+certificates. The complement of one particular finite bank is not exactly
+the coefficient-no-descent set:4091 is outside the inherited65-cylinder
+bank but descends after8 U steps. Nor is moving-orbit entry into a local
+descent region equivalent to descent below the original source: entry into
+1 or1 mod4 is already unconditional.
+
+The remaining universal question is ROOT-relative: does every positive
+odd source n>1 eventually acquire a proved smaller actual iterate, or enter a
+region whose entire future is proved to reach1? See the
+[recursive-entry board](../../05-knowledge/results/entry_20260927_board.md).
+The guarded all-k cylinders compress actual source-preserving certificates;
+they do not claim to exceed the general residue sieve's coverage.

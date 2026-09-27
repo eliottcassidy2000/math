@@ -182,7 +182,34 @@ separate structures. HYP-9162's all-level automorphism assertion remains
 a hypothesis. The transfer used here is loss of boundary dependence;
 no graph-size coincidence is substituted for a source-preserving map.
 
-## 6. Next proof obligations, in order
+## 6. Incoming connection: the general residue sieve and one missing bit
+
+A concurrent session added
+[THM-4512, coefficient-descent cylinders](../../01-canon/theorems/THM-4512-coefficient-descent-classes-one-member.md).
+The [integration audit](entry_20260927_incoming.md) independently reproduced
+its finite counts and repaired its dictionary. An exact valuation word
+of total division budget A needs modulus2^(A+1); the coarser modulus2^A
+permits extra final divisions and provides an upper bound. The source
+comparison (2^A-3^j)*n>S remains the correct sufficient certificate.
+
+This supplies a useful comparison within the repository: the general
+coefficient sieve already covers about99.73 per cent of odd integers
+by41 odd steps in density, whereas the selected old bank covers about37.87
+per cent. Our added cylinders improve that compact selected bank, not the
+general sieve. Their useful feature is their explicit unbounded-depth
+grammar and whole-class root comparison. Source4091 demonstrates the
+distinction: outside the old bank, it first descends at step8 to1639.
+A bank failure is not a no-descent theorem.
+
+The concurrent statement equating moving local-region entry with Collatz
+was also corrected: local entry is already unconditional; root repayment
+or convergence-certified entry is the remaining target. The one-member
+threshold bound is independently checked through j=5000. Extending it
+to all j needs specified effective constants and a finite cutoff bridge;
+an existence citation alone cannot fill that interval. These repairs
+leave the useful affine threshold and the exact density computation intact.
+
+## 7. Next proof obligations, in order
 
 1. Enlarge the grammar beyond the type3 guard (B2), using exact type1/type2
    returns while preserving the original root threshold. The new variable

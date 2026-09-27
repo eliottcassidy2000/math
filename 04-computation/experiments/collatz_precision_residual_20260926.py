@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# Historical producer: exact words use modulus 2^(A+1), coarse thresholds use 2^A.
+# The output's "40 beyond critical" label means the actual total-A cap in rec2.
+# Current interpretation and tail proof: entry_20260927_incoming.md and corrected THM-4512.
 """collatz_precision_residual_20260926.py -- the insufficient-precision residual of the classical residue-class sieve
 (session gilbreath6-collatz-precision-20260926, opus, 2026-09-26).
 

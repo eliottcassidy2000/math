@@ -7,4 +7,5 @@ normal/optimized saved-output replay: families PASS
 normal/optimized saved-output replay: recursive PASS
 normal/optimized saved-output replay: wall PASS
 normal/optimized saved-output replay: recursive_review PASS
+normal/optimized saved-output replay: incoming PASS
 PASS: scoped mathematical controls and all frozen outputs; universal coverage remains OPEN

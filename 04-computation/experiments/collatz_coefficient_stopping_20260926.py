@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# Historical finite producer; the all-j extension is not certified by j<=5000 alone.
+# Exact/coarse cylinder scope and independent cutoff audit: entry_20260927_incoming.md.
 """collatz_coefficient_stopping_20260926.py -- coefficient stopping time versus actual stopping time (Syracuse map),
 and the one-member bound for uncertified class members (session gilbreath6-collatz-precision-20260926, opus).
 

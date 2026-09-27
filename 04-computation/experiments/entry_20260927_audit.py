@@ -113,9 +113,7 @@ def normalized(data):
 
 
 def replays():
-    lanes = ('entry','entry_review','families','recursive','wall')
-    if (ROOT/'04-computation/experiments/entry_20260927_recursive_review.py').exists():
-        lanes += ('recursive_review',)
+    lanes = ('entry','entry_review','families','recursive','wall','recursive_review','incoming')
     for lane in lanes:
         script = ROOT/f'04-computation/experiments/entry_20260927_{lane}.py'
         saved = normalized((RESULTS/f'entry_20260927_{lane}.out').read_bytes())

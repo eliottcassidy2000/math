@@ -45,6 +45,15 @@ It also audits the root's three-type controller, with actual coefficient
 transition(k,r,b)->(k-1,r,9b), and the distinction between local descent
 and repayment of the original source.
 
+An additional [incoming-work audit](entry_20260927_incoming.md) independently
+checks the concurrent THM-4512. It reproduces606746 bounded labels, the
+j<=5000 integer gap, exact D(41) and D(60), and6240 exact/coarse-cylinder
+controls. It identified the missing final oddness bit, the distinction
+between the bank residual and coefficient residual, and the unsupported
+all-j cutoff leap. The corrected theorem and note preserve their useful
+sufficient thresholds. The reported10^7 orbit census was not rerun; its
+floating cutoff predicates through step155 were checked against integers.
+
 ## 2. Repairs made before promotion
 
 The tentative /32 two-step bound needed an additional valuation bit;
@@ -76,7 +85,7 @@ uses independent integer valuations and actual U steps for:
 - 4,096 odd inputs for the physical emitted-bit wall clock and unread tail;
 - a complete6,561-exponent period for the target47 depth distribution.
 
-It then runs each of the six lane/review scripts normally and under-O,
+It then runs each of the seven lane/review scripts normally and under-O,
 requires successful completion, and compares actual stdout to its frozen
 output after UTF-8 BOM and newline normalization. No producer assertion
 is removed by optimization. The outputs contain literal stdout only.
@@ -88,9 +97,9 @@ Run from the repository root:
 
     python -X utf8 -B 04-computation/experiments/entry_20260927_audit.py
 
-The [saved audit output](entry_20260927_audit.out) records all six successful
+The [saved audit output](entry_20260927_audit.out) records all seven successful
 normal/optimized replays. The [manifest](entry_20260927_manifest.json)
-freezes the22 new source, note, and output artifacts using SHA256 of
+freezes the25 new source, note, and output artifacts using SHA256 of
 UTF-8 bytes with CRLF normalized to LF; the manifest does not hash itself
 or shared navigation files. Repository documentation checks are separate.
 

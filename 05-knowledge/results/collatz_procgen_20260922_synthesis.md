@@ -1097,7 +1097,7 @@ primes and the five Platonic solids. Note
 * **Why q = 5 closes and q = 7 does not.** For 5n±1, Min's first rejoining flip (at 1) closes the sporadic cycle `1,3,8,4,2`, which Max forces on the negative integers; the bounds meet at `2/5`. For 7n±1 the fixed-point flip closes a cycle of density `1/3`, too good to be forced. The value is set by an unbounded hierarchy of exceptional rational closures.
 * **The limit.** An ergodic-optimization min-max over clopen flip sets. A value below `log_7 2` would be certified by one finite object; a value at or above it needs a uniform certificate. Both remain OPEN.
 
-## 2s. Wave 21 (2026-09-26, opus session `gilbreath6-collatz-precision-20260926`): the precision residual is the no-descent set; THM-4512; the size-6 law
+## 2s. Wave 21 (2026-09-26, opus; corrected 2026-09-27): distinct precision residuals; THM-4512; the size-6 law
 
 Owner's directive: the size-6 extinction law; then "controlling the
 insufficient-precision cases or proving that every unresolved orbit enters
@@ -1105,22 +1105,21 @@ a certified region"; Langlands and loom connections. Notes
 [`collatz_precision_residual_20260926.md`](collatz_precision_residual_20260926.md),
 [`gilbreath_size6_extinction_20260926.md`](gilbreath_size6_extinction_20260926.md).
 
-* Dictionary: precision = 2-adic bits consumed `A = v_1 + ... + v_j`;
-  certified class = residue class mod `2^A` with a coefficient descent;
-  insufficient-precision residual = the no-descent words, density `D(k)`
-  among odd `n` (`D(41) = 0.00265`, `D(60) = 0.00062`; exponent `(1-h*)/rho* = 0.0793` per Syracuse step; `T`-coded counts by THM-4495).
-  The classical sieve certifies `99.73` per cent of odd integers within `41`
-  Syracuse steps; the swaplift bank `37.87` per cent.
-* THM-4512 (PROVED): every member of a coefficient-descent class above
-  `N(w) = S_j/(2^A - 3^j)` descends; `N(w) < 2^A` for all `j <= 5000`, so at
-  most the representative is uncertified; none for `j <= 14` except `n = 1`;
-  `sigma = sigma_inf` for all odd `3 <= n <= 10^7`. The "insufficient
-  precision" obstruction is the no-descent words, not small class members.
-* "Every unresolved orbit enters a certified region": density form trivial
-  (`2^-L`), pointwise form = every `n` has finite stopping time = the
-  conjecture (Terras). No intermediate statement beyond the repository's
-  density results (THM-4495/4498/4499); the shell-revisit lemma stays the
-  one pointwise lever.
+* **Corrected dictionary:** exact valuation words of sum A use modulus2^(A+1)
+  and have density2^(-A) among odd inputs. Coarse modulus2^A permits extra
+  final divisions. The coefficient-no-descent density D(41)=0.00265 is not
+  the finite bank's complement:4091 is outside the bank but descends in8 steps.
+* **THM-4512, scope-corrected:** the affine threshold is exact on the exact
+  cylinder and sufficient on the coarse one. N(w)<2^A is checked for j<=5000;
+  at most the coarse representative fails that sufficient test. The j<=14
+  census leaves only1. The producer reports sigma=sigma_inf through10^7.
+  An all-j extension needs an explicit effective cutoff plus finite gap checks.
+* **Target correction:** ordinary entry into1 or a locally descending1 mod4
+  state is already unconditional. A root-paying return or entry into a fully
+  convergence-certified region is the unresolved target. The
+  [recursive board](entry_20260927_board.md) gives small guarded macro proofs
+  at unbounded depth, retaining that original-source obligation. The2^(-L)
+  moving-window density bound supplies no root repayment.
 * Langlands / loom (speculation, marked): the 2-adic side (Terras bijection,
   Lagarias's conjugacy, Haar measure) is the fully understood analytic
   side; the integers are the arithmetic side; the carry `S_l` is the weft
