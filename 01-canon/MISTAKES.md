@@ -9,6 +9,12 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-26 size-6 law and precision note (opus S11, second audit): an asymptotic conjecture written as settled, and a misdescription of neighbouring notes
+
+- **What was written.** "Settled: ... the front-only law `F 2^(1-F)` is asymptotically exact for size `6`", with the excess ratio "`~ 0.7 log_2 F / F`" and the numbers `0.083, 0.100, 0.096, 0.085` attached to that formula; and, in the precision note, that the September braids/seams notes "do not touch the Collatz carry".
+- **Why it was wrong.** The evidence is `F <= 17`, where the excess ratio is flat at `1.06`-`1.10`; the growth `c_6(F) = 1.4 log_2 F + O(1)` rests on one doubling of `F`; the quoted numbers are `c_6(F)/(2F)`, not the printed formula (which gives `0.37, 0.28, 0.18, 0.17`); the decay is HYP-9163's conjecture. The braids/seams notes build on the affine carry modulo `3^L`, signed cycles at `b = -5`, and inverse fibres. (The exact-word modulus, the bank-versus-residual conflation and the all-`j` cutoff of the same session are the codex entry above.)
+- **Mechanism to remember.** A trend seen over one doubling of the parameter is a conjecture; write the formula that the quoted numbers actually satisfy; and describe a neighbouring note only after opening it.
+
 ## 2026-09-27 incoming THM-4512 audit: exact-word bit, residual set, and effective cutoff
 
 - **Missing bit.** An exact Syracuse valuation word of total A occupies a

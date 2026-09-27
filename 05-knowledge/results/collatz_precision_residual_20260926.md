@@ -197,3 +197,50 @@ correction. The independent integer audit is:
 Global source coverage remains OPEN. Expanding a selected bank is useful
 for a compact proof grammar, but the already strong density sieve does not
 remove the pointwise obligation.
+
+## 8. Second audit (opus subagent, 2026-09-26) and the retained readings
+
+An independent audit of the original session's note ran in parallel with
+the codex correction above and reached the same three repairs (exact
+words use modulus `2^(A+1)`; the finite bank's complement is not the
+classical residual; the all-`j` clause needs an explicit cutoff), plus:
+
+* Density table confirmed by an exact integer DP; the per-odd-step decay
+  measured with the polynomial factor removed over `k` in `[750, 1500]` is
+  `0.94649` against the predicted `2^(-(1-h*)/rho*) = 0.94650`, and the same
+  estimator on `W_k/2^k` gives `0.96597` against THM-4495's `0.96591`.
+* Representative census done rigorously: an uncertified member needs
+  `2^A - 3^j <= S_j`, which for `j <= 14` forces `A <= 25`; over the `68468`
+  first-descent classes on `30085` no-descent prefixes with that stopping
+  rule, the only uncertified representative is `rho = 1` (word `(2)`). The
+  historical script's loop (`v` up to `vcrit + 39`, stopping at `A > 40`) is a
+  different, wider enumeration with the same conclusion.
+* Terras's coefficient-stopping-time conjecture is `T`-coded; the Syracuse
+  equality checked to `10^7` is implied by but weaker than it. The auditor's
+  `T`-coded check gives `tau_T = sigma_T` for every odd `3 <= n <= 10^7`
+  (maximal `sigma_T = 246`).
+* The density form of "orbits enter the certified region" is exactly
+  `2^(1-L) D(k)`, at most `2^(-L)`. The pointwise form is the conjecture only
+  under the reading "the source's own word acquires a descent"; under the
+  orbit-landing reading it is trivially true and useless (some iterate has a
+  valuation `>= 2`), which is the codex note's "entry must retain its
+  target" in other words.
+* Correction of the original note's description of the September
+  braids/seams notes: they *do* touch the Collatz carry
+  (`arithmetic_braids2_20260917_inverse_completion.md` builds on the affine
+  carry `sum 3^(L-1-i) 2^(K_i)` mod `3^L`; `..._signed_cycles.md` has the signed
+  parameters and the nine cycles at `b = -5`; `arithmetic_seams_20260921_operations.md`
+  section 8 and `..._synthesis.md` section 7 treat inverse fibres and what
+  remains useful for Collatz).
+* The Langlands/loom reading of the original note is retained here in its
+  marked-speculation form: the 2-adic side (Terras bijection, Lagarias's
+  conjugacy to the shift, Haar measure and the densities above) is the fully
+  understood analytic side, the integers are the arithmetic side of Haar
+  measure zero, the carry `S_l` of the two-place identity is where the 2-adic
+  and 3-adic threads cross, and the honest analogue is the local-global gap,
+  not functoriality; no bridge is claimed.
+
+Auditor files: `04-computation/experiments/gilbreath_size6_collatz_precision_20260926_audit.py`
+(sha256 `4fb9ad9389589a6a1197bdb817ed651162fa2ff6018bcf04ea175f437c4837e2`),
+`05-knowledge/results/gilbreath_size6_collatz_precision_20260926_audit.out`
+(sha256 `52c57be11ff0fcdf7a5eea8251d7a027f0fb59e97542fa3da7d664e744de1db6`).

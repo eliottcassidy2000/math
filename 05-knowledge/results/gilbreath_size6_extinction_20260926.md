@@ -37,9 +37,13 @@ c_6(F) = sum_z c_z(F),   c_0(F) = (2/3)(1 - 4^-(2^k - 1)),  c_1(F) = c_2(F) = (2
 
 The terms are truncated geometric series whose lengths jump at powers of
 two (the Frobenius tower of the sea), new terms switch on at `z = 2^k`, and
-the total grows like `c_6(F) ~ 1.4 log_2 F`: the excess ratio
-`p_6(F)/(F 2^(1-F)) - 1 ~ 0.7 log_2 F / F` (`0.083` at `F = 3`, `0.100` at `7`,
-`0.096` at `15`, `0.085` at `17`) returns to zero, slowly. For `d = 8` the
+on the computed range the total is `c_6(F) = 1.4 log_2 F + O(1)` (`0.5,
+0.91, 1.41, 1.47, 1.97, 2.37, 2.87` at `F = 3, 5, ..., 15`; the one doubling
+`9 -> 17` adds `1.41`), so the excess ratio `p_6(F)/(F 2^(1-F)) - 1 = c_6(F)/(2F)`
+(`0.083` at `F = 3`, `0.100` at `7`, `0.096` at `15`, `0.085` at `17`) is flat at
+`6`-`10` per cent for `F <= 17`; that it eventually returns to zero like
+`0.7 log_2 F / F` is HYP-9163's conjecture, not a result (the audit removed a
+first draft's "settled"). For `d = 8` the
 exact denominators are `2^m` times products of Fermat numbers
 (`255 = F_0 F_1 F_2`, `65535 = F_0 F_1 F_2 F_3`), the same dyadic geometric
 series in a different dress. A full proof of the size-6 law is not given;
@@ -68,11 +72,13 @@ The chain is small (`30`, `97`, `253`, `669`, `1639`, `3952`, `8795`, `20084`,
 states for `d = 6`, `F = 3..17`); exact rationals by sparse elimination over
 `Q` for `F <= 11`, floating value iteration (to `10^-15`) beyond, the two
 agreeing to nine digits where both exist. All values reproduce the
-finite-context (`R = 10`) numbers of S10 to the digits those had.
+finite-context numbers of S10 (`R = 10`, `R = 9` at `F = 12`, where S10's
+`0.006338` is the truncated value and the chain gives `0.0063395`).
 
 ## 2. Exact values (FINITE-EXACT)
 
-Size `4`, all `F = 3..12`: `p_4(F) = 2^(1-F)` exactly (chain and THM-4511 agree).
+Size `4`, all `F = 3..12`: `p_4(F) = 2^(1-F)` (floating chain values to `10^-15`,
+agreeing with THM-4511's exact law).
 
 Size `6` (`F`, exact `p_6(F)`, excess over `F 2^(1-F)`, `2^F *` excess):
 
@@ -97,7 +103,7 @@ Size `6` (`F`, exact `p_6(F)`, excess over `F 2^(1-F)`, `2^F *` excess):
 Two exact regularities: the excess **halves exactly from every odd `F` to
 `F + 1`** (`2^F *` excess is constant on the pairs `(3,4), (5,6), ..., (15,16)`),
 and it changes only at odd `F`, by the switching-on of new `z`-terms
-(section 3). Ratios `p_6/(F 2^(1-F))`: `1.083, 1.063, 1.091, 1.076, 1.100,
+(section 3). Ratios `p_6/(F 2^(1-F))`: `1.083, 1.0625, 1.091, 1.076, 1.100,
 1.088, 1.081, 1.073, 1.089, 1.082, 1.091, 1.085, 1.096, 1.090, 1.085`
 (`F = 3..17`).
 
@@ -105,7 +111,8 @@ Size `8` (exact, `F = 3..11`): `1`, `29/32`, `703/960`, `16243/30720`,
 `388363/1044480`, `509743/2088960`, `2576519/16711680`, `202620131/2139095040`,
 `64449019483/1099494850560`; excess ratios `1.036`-`1.082` (`F = 4..17`),
 denominators `2^m * 15`, `2^m * 255`, `2^m * 65535` (products of Fermat
-numbers): the size-8 law is a sum of geometric series with ratios `2^-(2^i)`.
+numbers): the denominators suggest that the size-8 law is a sum of geometric
+series with ratios `2^-(2^i)` (not shown).
 
 ## 3. The dyadic anatomy of the size-6 excess (FINITE-EXACT, exact rationals for `F <= 11`)
 
@@ -145,7 +152,8 @@ Read as series:
 
 So `c_6(F) = 2/3 + 4/15 + (1/2 + 3/128 + ...)` plus one new block of about
 `1.4` at each `F = 2^k + 3, 2^k + 5, 2^k + 7` (`z = 2^k, 2^k + 1, 2^k + 2,
-2^k + 4`), i.e. `c_6(F) ~ 1.4 log_2 F`, which is the observed growth
+2^k + 4`), i.e. `c_6(F) = 1.4 log_2 F + O(1)` on the computed range, which is
+the observed growth
 (`0.5, 0.91, 1.41, 1.47, 1.97, 2.37, 2.87` at `F = 3, 5, 7, 9, 11, 13, 15`).
 
 ## 4. Mechanism (PROVED pieces, marked)
@@ -182,9 +190,11 @@ So `c_6(F) = 2/3 + 4/15 + (1/2 + 3/128 + ...)` plus one new block of about
 
 Settled: the size-6 extinction probability is an exact, computable rational
 (Theorem A), and its excess over the front-only tail is a dyadic quantity
-organised by the Frobenius tower, of relative size `0.7 log_2 F / F`, not a
-constant `8` per cent: the front-only law `F 2^(1-F)` is asymptotically exact
-for size `6` as well, with an explicit second-order correction. Open: the
+organised by the Frobenius tower; on the computed range its relative size
+is `c_6(F)/(2F)`, flat at `6`-`10` per cent for `F <= 17`. Whether it decays
+like `0.7 log_2 F / F`, which would make the front-only law `F 2^(1-F)`
+asymptotically exact for size `6`, is HYP-9163's conjecture, supported by
+one doubling of `F` and by the dyadic anatomy, not proved. Open: the
 closed forms of section 3 beyond the computed range (HYP-9163), and the same
 programme for sizes `>= 8` (whose denominators already show the Fermat
 products). For Gilbreath's conjecture itself nothing changes: all sizes
@@ -192,3 +202,23 @@ products). For Gilbreath's conjecture itself nothing changes: all sizes
 statement remains THM-4511's (`0/2/4` rows).
 
 Hypothesis file: [HYP-9163](../hypotheses/HYP-9163-gilbreath-size6-excess-dyadic-law.md).
+
+## 6. Independent audit (2026-09-26)
+
+Auditor subagent (own chain builder, exact values by solving the linear
+system modulo two 61/62-bit primes and by Fraction elimination for `F <= 8`,
+exhaustive full-automaton test of Theorem A over all `2^(F-1+14)` contexts
+for `F <= 7`): `04-computation/experiments/gilbreath_size6_collatz_precision_20260926_audit.py`
+(sha256 `4fb9ad9389589a6a1197bdb817ed651162fa2ff6018bcf04ea175f437c4837e2`) ->
+`05-knowledge/results/gilbreath_size6_collatz_precision_20260926_audit.out`
+(sha256 `52c57be11ff0fcdf7a5eea8251d7a027f0fb59e97542fa3da7d664e744de1db6`). CONFIRMED: Theorem A
+(exact; absorption probability one on every transient state), every exact
+rational `p_6(F)`, `p_8(F)` for `F <= 11`, the `2^F`-excess values, the per-`z`
+table and its closed forms for `F <= 15`, the shift law, the halving, the
+state counts, the size-8 denominators. CORRECTED (applied above): the
+asymptotic statements were presented as settled (the decay of the excess
+ratio is HYP-9163, item 4; the printed formula `0.7 log_2 F / F` evaluates to
+`0.37, 0.28, 0.18, 0.17` at `F = 3, 7, 15, 17`, while the quoted numbers were
+`c_6(F)/(2F)`); `1.063` for `1.0625`; the S10 comparison at `F = 12`; the
+size-`4` chain values are floating; the size-8 geometric-series reading is
+inferred from denominators only. Verdict for this note: HAS GAPS -> repaired.

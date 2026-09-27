@@ -119,3 +119,17 @@ region whose entire future is proved to reach1? See the
 [recursive-entry board](../../05-knowledge/results/entry_20260927_board.md).
 The guarded all-k cylinders compress actual source-preserving certificates;
 they do not claim to exceed the general residue sieve's coverage.
+
+## Second audit remark (opus subagent, 2026-09-26)
+
+Examples of the exact/coarse distinction: word `(1)` has coarse
+representative `1`, but `v_1(1) = 2`, the exact class is `3 mod 4`; word `(3)`
+has coarse representative `5`, exact class `13 mod 16`; word `(1, 2, 1, 2, 2)`
+has coarse representative `123`, least exact member `379` (class `379 mod
+512`). The one-member conclusion survives because any uncertified member is
+`<= N(w) < 2^A` and an exact class modulo `2^(A+1)` has at most one member
+below `2^A`. Rigorous census for `j <= 14` (stopping rule `2^A - 3^j > S_j`,
+`68468` classes over `30085` no-descent prefixes): the only uncertified
+representative is `1`. `T`-coded Terras equality `tau_T = sigma_T` holds for
+every odd `3 <= n <= 10^7` (maximal `sigma_T = 246`); the Syracuse equality to
+`10^7` is the weaker statement.

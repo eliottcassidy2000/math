@@ -1127,8 +1127,8 @@ a certified region"; Langlands and loom connections. Notes
 * Gilbreath size 6: Theorem A (exact finite Markov chain with i.i.d.
   boundary), exact `p_6(F)` to `F = 11`, the excess `2^-F c_6(F)` with
   `c_0 = (2/3)(1 - 4^-(2^k-1))` on `2^k < F <= 2^(k+1)`, `c_1 = c_2 = (2/15)(1 -
-  16^-(2^(k-1)-1))`, shift law, halving; `c_6 ~ 1.4 log_2 F` (HYP-9163); the
-  front-only law is asymptotically exact for size `6`.
+  16^-(2^(k-1)-1))`, shift law, halving; `c_6 = 1.4 log_2 F + O(1)` on the computed range; HYP-9163 conjectures
+  the decay of the excess ratio (flat at `1.06`-`1.10` to `F = 17`).
 
 ## 2t. Wave 22 (2026-09-26, opus session `fibonacci-two-copies-20260926`): the two copies, and growth families as cycle shadows
 
