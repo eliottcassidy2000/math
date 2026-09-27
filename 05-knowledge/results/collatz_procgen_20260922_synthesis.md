@@ -1234,6 +1234,28 @@ tiling results. Note [`collatz_directions_20260926.md`](collatz_directions_20260
 * Robin: exact monotonicity (TP2/FKG) carries the constant.
 * The Collatz alphabet: the residual lives at the scale of the gap `|3^a - 2^k|`. There the only helpful coincidences are the Pillai/Gersonides ones (`2-1`, `4-3`, `9-8`, `32-27`, `256-243`), the same small list that forces the free Collatz cycles (THM-4484), as numbers (ANALOGY).
 
+## 2x. Wave 25 (2026-09-27, opus session `collatz-shadow-flp-20260927`): the shadow error is the 3x−1 copy; the FLP angle
+
+Owner's directive: pursue the Flatto–Lagarias–Pollington digit-spreading
+angle. Note [`collatz_shadow_error_flp_20260927.md`](collatz_shadow_error_flp_20260927.md).
+
+* For a divergent orbit `xi 3^l/2^(d_l) = m_l + eta_l`, `eta_l` the real
+  Bernstein value of the tail word; `2^(v_(l+1)) eta_(l+1) = 3 eta_l − 1`: the
+  error is the `3x−1` copy driven by the orbit's own halvings; `eta_l >= 1`;
+  `2^v <= 3 eta − 1` (a deep halving needs a large error);
+  `m_(l+k) >= m_l/(3 eta_l)`; `eta = |x_w|` on periodic tails and `m + eta = 0`
+  on the negative cycles; the minus sheet has `m − eta`.
+* FLP carry structure: `2^v M_(l+1) = 3 M_l + c_l` on the integer parts of the
+  shadow, carries in `{−2^v + 1, ..., 2}`; but `{eta_l}` is unconfined, so
+  FLP's theorem does not transfer; Mahler's map is the rigid-cut case
+  (`N = (m+1)/2`: the `v = 1` step is `3N/2`).
+* Bounded shadow: `eta < B` forces valuations `<= log_2(3B − 1)`; for `B = 2`
+  the word is the itinerary of an explicit two-branch interval map (eight
+  periodic itineraries with `p <= 10`, non-integer rational points);
+  `sup eta >= 5/3` trivially and sharply. HYP-9164: no integer orbit has
+  bounded shadow error (implied by the conjecture; its bounded-valuation
+  sub-case is Mahler-shaped).
+
 ## 2b. The approach deck: every approach generated or considered, with its disposition
 
 | # | approach (lens + mechanism) | barrier verdict | probe run | outcome |
