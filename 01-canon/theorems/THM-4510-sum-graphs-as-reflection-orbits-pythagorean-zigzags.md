@@ -113,6 +113,37 @@ audit: >
 
 **PROVED + INDEPENDENTLY AUDITED.** Full note: [procgen_sumgraph_20260926_reflection_orbits](../../05-knowledge/results/procgen_sumgraph_20260926_reflection_orbits.md).
 
+**UPDATE 2026-09-27 (cnpos lane, [positive-Hamiltonicity note](../../05-knowledge/results/procgen_cnpos_20260926_positive_hamiltonicity.md); orchestrator-audited): an exact reduction at every level and verified constructions far beyond `W_8`.**
+
+**Theorem F (PROVED; first return).** For every `n` in every window `W_a` (`n != 3^a`), let `T1 < T2` be the two top targets and `m = T2 - T1 = |3^a - 2^k|`.
+- The forced top zigzag returns to the residual `[1, T2 - 1 - n]` as the reflection `phi(x) = T1 - x (mod m)`.
+- So every solution of the *residual problem* (the `phi`-pairs plus a matching by C-edges) lifts to a Hamiltonian path of `C_n`.
+- The reduction is an equivalence in the lower part of every two-power window. Elsewhere Theorem F' allows one binary choice per vertex of `[3^a - P, P]`.
+
+Also PROVED:
+- **Proposition U.** The Gersonides relations `2-1 = 4-3 = 3-2 = 9-8 = 1` make the first zone steps rotations by units mod `m`, hence cycle-free.
+- **Proposition R.** A single rotation solves the residual problem only when `m + 1` or `m + 2` is a target, or two targets differ by `m`. For `a <= 300` (FINITE-EXACT) this happens only at `a = 2, 3, 5`, the Pillai coincidences `4-3 = 9-8`, `9-4 = 32-27`, `16-3 = 256-243`.
+- **Proposition S.** Exchanging two path edges needs a target relation `t1 + t2 = t3 + t4`. Below `2^200` there are exactly four, all through the edges `{1,2}` or `{1,3}`.
+
+FINITE-EXACT, with every path re-verified edge by edge:
+- `C_(T1 - 1)` is Hamiltonian at every level `2 <= a <= 15`, up to `n = 14,348,906`.
+- The window right ends are Hamiltonian for `4 <= a <= 14`: Conjecture B4 through `a = 14`.
+- Every Hamiltonian `n` in `W_3..W_8` has a verified path. Of these, 3 (`n = 5116, 5117, 5248`) come only from the sumgraph solver's search.
+
+OPEN:
+- the residual problem at every level (Conjecture RP), and with it a positive theorem for infinitely many levels;
+- `RP(59, 22)` and `RP(383, 1)` have no solution, so not every residual instance is solvable.
+
+Collatz typing: `m = |3^a - 2^k|` coincides with the cycle denominators as numbers only (ANALOGY).
+
+Audit: the orchestrator's own checker (procgen_cnpos_20260926_orchestrator_check.py, written from the definition of `C_n`; the lane's construction is used only to produce certificates) verified:
+- the constructed paths for the clean `n` at `a = 2..11`, up to `n = 131071`;
+- the window right ends at `a = 6, 7, 8, 9, 10`.
+
+Rerun: the lane's runner in default mode (every 8th `n` of `W_8`; 376 s, peak 352 MB, 13 checks, ALL CHECKS PASSED) is identical to the committed full run (`--full`, 4784 s) up to timing and the sampled `W_8` section.
+
+Resource note: one development run exceeded the lane's 500 MB cap (1.2 GB for about 26 s). The final runner peaks at 316-352 MB.
+
 ## 1. Every sum graph is a union of reflections
 
 For each target `t`, the pairs `{x, t - x}` form a matching, the reflection about `t/2`. Two reflections compose to a translation by the difference of their targets. So along any chain the numbers in even positions, and those in odd positions, move by target gaps.
