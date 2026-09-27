@@ -111,8 +111,10 @@ are indistinguishable from the fractal.
 **Proposition 4 (no bounded-precision rank).** There is no function `Phi` of
 finite parity prefixes, with values in a well-ordered set, that decreases at
 every complete excursion (a rise followed by a local descent) of every
-no-descent word: the words `(1, 1, 2)^N` are no-descent (period height
-`2 log_2 3 - 4 + 1.585 ... = +0.755`) with `N` complete excursions, so
+no-descent word: the words `(1, 1, 2)^N` are no-descent (prefix heights `0.585, 1.170,
+0.755` within a period, period height `3 log_2 3 - 4 = +0.755`) with `N`
+complete excursions (two rises, then `v = 2`, a local descent that stays
+above the start), so
 `Phi(empty) >= N` for every `N`. Any rank that pays the original source must
 therefore depend on the whole integer `n`, and for every `K` there are
 `n = n' mod 2^K` with different rank: this is the lane's "regenerated
