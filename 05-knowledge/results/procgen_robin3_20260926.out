@@ -1,0 +1,70 @@
+
+=== 0. parameters and constants   (t=4.7s)
+c0=3 v0=11/100 m_E=80 m_X=500 v_min=21/200 v_small=2/25 ; c=0.630929753571 d=0.369070246429 mu=0.130929753571
+[OK] interval constant c = log_3 2 has width < 1e-30 and agrees with the float value to 1e-15
+[OK] Robbins constant sqrt(2/pi) e^(-1/6) = 0.6753947 > 0.6753
+
+=== 1. model: robin2 counters vs the orchestrator's independent counters (read-only)   (t=4.7s)
+[OK] N_m(L), A_(m+3)(L) of the robin2 library equal the orchestrator's counters (m = 2, 4, 7; L <= 300)
+
+=== 2. lemma sanity checks (exact or exact-float; not used by the proof)   (t=4.7s)
+[OK] 2a Lemma A: on 384 exhaustive small bridges: join/meet = pointwise max/min of paths (sublattice), E[f] = (n-e)/(e+1), E_C[f] <= E_T[f] <= E[f]/P(T), and |C_(m-1)| <= sum_(C_m) f (injection)
+[OK] 2b Lemma LR (delta >= 2): exact LR_t(i) <= exp(t/n + 1/(6n)) on 3980 hitting configurations (max ratio 0.9586)
+[OK] 2b' Lemma LR-: exact log LR_t(i) >= the lower bound on 2838 random configurations
+[OK] 2c Lemma TOP: exact bridge top-hit probability <= bound on 111 EM/TB bridges (max ratio 0.786)
+[OK] 2c' Lemma TOP-LOW: exact top-hit probability of the bridge after j leading zeros >= lower bound on 18 cases (min exact/bound 1.093)
+[OK] 2d Lemma B' dominates the exact top-hit ratio at sampled phases: m=25: sampled q 0.0746 <= q_B' 0.1402; m=60: sampled q 0.0680 <= q_B' 0.1069; m=150: sampled q 0.0592 <= q_B' 0.0906
+[OK] 2e Lemma DIP: exact bridge dip probability <= sum_s exp(-2(z+vs)^2/s) on 200 bridges
+
+=== 3. EM, exact part: 2 <= m < m_E, all landing Sturmian factors of length n1(m) = ceil((m+1)/v0)   (t=10.4s)
+  m=2:n1=28,12 factors,min 2.6225; m=3:n1=37,15 factors,min 1.9108; m=5:n1=55,22 factors,min 1.4910; m=10:n1=100,38 factors,min 1.2574; m=20:n1=191,72 factors,min 1.1527; m=40:n1=373,139 factors,min 1.1051; m=60:n1=555,206 factors,min 1.0899; m=79:n1=728,270 factors,min 1.0823
+[OK] 3: for 2 <= m < 80 and every landing factor, P_(s,s+n1)(m,1) >= P_(s,s+n1)(m-1,1) > 0 (float-rigorous, relative error <= 1.01 n u; factor sets complete); smallest ratio 1.0823 at m = 79
+
+=== 4. EM, analytic part: m >= m_E (Lemma A + Lemma TOP), interval arithmetic at m_E + monotone terms   (t=16.3s)
+  n1(m_E)=737  Ef<=0.919645  Top<=0.056983 (eta_lo=0.878406, a lower bound)  Late<=1.3708e-03  total<=0.977998  (upper bounds rounded up)
+[OK] 4: for every m >= 80 and landing time s: (n-e)/(e+1) + P_e(TH) <= 0.977998 < 1 (Lemma LR side conditions hold), hence P(m,1) >= P(m-1,1)
+[OK] 4b (consistency) the certified EM total is nonincreasing along m = m_E, 2m_E, 10m_E, 100m_E: 0.977998, 0.972587, 0.969564, 0.968908
+
+=== 5. top-hit bound (TB) on the last k1(m) = n1(m)+1 steps   (t=16.3s)
+  B' (7.1s, rounded up): m=2:0.6461, m=3:0.4084, m=4:0.3499, m=5:0.3039, m=8:0.2288, m=12:0.1904, m=24:0.1386, m=25:0.1403, m=50:0.1111, m=100:0.0956, m=200:0.0873, m=300:0.0835, m=400:0.0824, m=500:0.0804
+[OK] 5a regime B' (exact survival, float-rigorous): q <= 0.14025 for 25 <= m <= 500, q <= 0.64603 for 2 <= m <= 500
+  regime D' at m_X: k_b=3367 k1=4556  Top_L*c/v_min<=0.43058  Phi<=1.3751 (r_lo=0.8960, J=19)  Q_L'<=0.09854  Q_H<=0.13427 (dip<=5.101e-04, z*=20.56)  R_B<=3.509e-04  Delta=0.00425  q_D'<=0.13462 ; regime A: q <= 4/(3*3^c0) = 0.04938
+[OK] 5b regimes A + D' (room-weighted): for every m > 500, start time u >= 1 and 1 <= k <= k1(m): q <= max(0.04939, 0.13463)
+[OK] 5c (consistency) q_D' nonincreasing along m = m_X, 2m_X, 10m_X: 0.13462, 0.13338, 0.13276
+
+=== 6. assembly: Theorem R_3   (t=23.4s)
+  Gamma_3(m) (rounded up): m <= 24: 1.014780 (robin2 Theorem R_small); 25 <= m <= 500: 1.163123 (B'); m > 500: 1.155568 (A + D')
+  Gamma_3 <= 1.163123 ; self-contained (B' also for m <= 24): 2.825040
+[OK] 6: Theorem R_3: N_m(L) <= 1.1632 A_(m+3)(L) for all m >= 2, L >= 1 (constant <= 1.163123; <= 2.8251 without R_small)
+
+=== 7. exact verification of Theorem R_3 on a finite range and the observed ratio   (t=23.4s)
+[OK] 7: N_m(L) <= 1.1632 A_(m+3)(L) exactly for 2 <= m <= 40, L <= 800/500; observed max ratio 1 + 1.985e-06 at (m,L) = (12, 77)
+
+=== 8. Theorem R_2: shift 2 for all m (EM exact + EM**; B' + regimes A, D')   (t=23.6s)
+[OK] 8a EM at shift 2, exact part: for 25 <= m < 150 and every landing factor of length n1(m) = 10(m+1), P(m,1) >= P(m-1,1) > 0 (float-rigorous); smallest ratio 1.0535 at m = 149 (44.6s)
+  EM** at m_E=150: n1=1888 h0<=0.22787  h_1..h_4 >= 0.0923, 0.0585, 0.0371, 0.0234  value <= 0.98059
+[OK] 8b EM at shift 2, analytic part (Proposition EM**): E_T[f] <= 0.98059 < 1 for every m >= 150 and landing time s
+[OK] 8c (consistency) the EM** value is nonincreasing along m = m_E, 2m_E, 10m_E: 0.98059, 0.97073, 0.96310
+  B' at shift 2 (41.4s, rounded up): m=25:0.3904, m=50:0.3199, m=100:0.2848, m=149:0.2768, m=150:0.4367, m=300:0.4232, m=500:0.4157, m=1000:0.4129
+[OK] 8d TB at shift 2, Lemma B': q <= 0.39039 for 25 <= m < 150 (k1 = 10(m+1)+1) and q <= 0.43845 for 150 <= m <= 1000 (k1 = ceil((m+1)/0.08)+1)
+  regime D' at shift 2, m_X=1000: Phi<=1.8681 (r_lo=0.7954)  Q_L'<=0.53016  Q_H<=0.43159  R_B<=2.620e-21  q_D'<=0.53016 ; regime A: 0.14815
+[OK] 8e TB at shift 2, regimes A + D': for every m > 1000, u >= 1, k <= k1(m): q <= max(0.14815, 0.53017)
+[OK] 8f (consistency) q_D' at shift 2 nonincreasing along m = m_X, 2m_X, 10m_X: 0.53016, 0.51263, 0.49948
+  Gamma_2(m) (rounded up): m <= 24: 1.047346 (R_small); 25 <= m < 150: 1.640368, 150 <= m <= 1000: 1.780765 (B'); m > 1000: 2.128393 (A + D')
+[OK] 8g Theorem R_2: N_m(L) <= 2.1285 A_(m+2)(L) for all m >= 2, L >= 1 (constant <= 2.128393)
+[OK] 8h: N_m(L) <= 2.1285 A_(m+2)(L) exactly for 2 <= m <= 40, L <= 800/500; observed max ratio 1 + 8.894e-05 at (m,L) = (9, 58)
+
+=== 9. diagnostics: why the method stops at shift 2 (EMPIRICAL / method statements, float)   (t=109.8s)
+  shift 1: m=10: onset 1.27 desc, eventual ratio 1.0622; m=20: onset 1.91 desc, eventual ratio 1.0270; m=40: onset 2.58 desc, eventual ratio 1.0171; m=80: onset 3.08 desc, eventual ratio 1.0143
+[OK] 9a (EMPIRICAL) shift 1: the EM bridge-crossing onset / descent time grows with m (1.27, 1.91, 2.58, 3.08); the worst-phase eventual ratio V_k(m)/V_k(m-1) is only ~1.01-1.06
+[OK] 9b (method) shift 2: the simple criterion E[f] + e^(-eta y) of Proposition EM* is >= 1.0293 > 1 for every v0 in (0, mu) (grid of 250); shift 2 needs the refined criterion EM** (section 8b)
+[OK] 9c (FINITE-EXACT) shift 0: N_3(L)/A_3(L) = 381.9 at L=1000 and 1.593e+05 at L=2000 (geometric growth; shift 0 is false, EMPIRICAL)
+[OK] 9d (method) shift 1: with the window k1 = ceil((m+1)/0.036)+1 (~3.6 descent times, needed for EM at shift 1) Lemma B' gives q_B' > 1: m=10:3.048, m=20:2.167, m=40:1.908, m=80:1.800
+  9e (heuristic) shift 2 refined EM criterion, iid values: v=0.04:0.9151, v=0.06:0.9267, v=0.08:0.9520, v=0.09:0.9693, v=0.10:0.9897
+
+=== summary   (t=110.5s)
+Theorem R_3: N_m(L) <= 1.1632 A_(m+3)(L) for all m >= 2, L >= 1.
+Theorem R_2: N_m(L) <= 2.1285 A_(m+2)(L) for all m >= 2, L >= 1.
+peak RSS (ru_maxrss, bytes on macOS) = 101089280  (96 MB)
+checks passed: 30   wall time 110.5s
+ALL CHECKS PASSED

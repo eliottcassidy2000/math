@@ -2,10 +2,12 @@
 id: HYP-9142
 title: "Conjecture R (Robin inequality): the survivors of the reflected barrier at slope level m are at most a constant times the undecided words with peak below 3^(m+1), uniformly in L and m; this implies the peak-discounted private pairing price pi_L <= O(L) rho^peak_L"
 status: >
-  PROVED WITH A CONSTANT at shift 15 (THM-4513, 2026-09-26):
-  N_m(L) <= 1.0039 A_(m+15)(L) for all m, L; shift 1 PROVED for 2 <= m <= 24
-  (constant 1.1562); shift 1 for all m OPEN. Earlier: PROVED UP TO A
-  POLYNOMIAL FACTOR (2026-09-26), independently by two sessions.
+  PROVED WITH A CONSTANT at shift 2 (THM-4513 and its robin3 update,
+  2026-09-26): N_m(L) <= 2.1285 A_(m+2)(L) and N_m(L) <= 1.1632 A_(m+3)(L)
+  for all m, L (earlier shift 15, constant 1.0039). Shift 1 PROVED for
+  2 <= m <= 24 (constant 1.1562). Shift 1 for all m (the conjecture as
+  stated) OPEN. Shift 0 is false. Earlier: PROVED UP TO A POLYNOMIAL FACTOR
+  (2026-09-26), independently by two sessions.
   (a) codex crossroads223 (crossroads223_20260926_robin.md and _bridge.md;
   THM-4488, promoted): N_m(L) <= 4e(m+3) L A_(m+5)(L).
   (b) collatz-procgen robin lane (procgen_robin_20260926_robin_inequality.md;

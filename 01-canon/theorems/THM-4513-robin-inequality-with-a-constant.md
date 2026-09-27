@@ -88,6 +88,38 @@ audit: >
 
 **PROVED (computer-assisted finite parts) + INDEPENDENTLY AUDITED.** Full note: [procgen_robin2_20260926_constant_robin](../../05-knowledge/results/procgen_robin2_20260926_constant_robin.md).
 
+**UPDATE 2026-09-26 (robin3 lane, [shift-two note](../../05-knowledge/results/procgen_robin3_20260926_shift_one.md); orchestrator-audited): the shift drops from 15 to 2.**
+
+**Theorem R_2.** For all `m >= 2` and `L >= 1`, `N_m(L) <= 2.1285 A_(m+2)(L)`. The constant is:
+- 1.0473 for `m <= 24`;
+- 1.6404 for 25 to 149;
+- 1.7808 for 150 to 1000;
+- 2.1284 beyond.
+
+**Theorem R_3.** For all `m >= 2` and `L >= 1`, `N_m(L) <= 1.1632 A_(m+3)(L)`.
+
+**Consequence.** With pairpeak Theorem C, `pi_L <= (517.3 L + 344.9 + 4L 2^-L) rho^peak_L`. The coefficient of `L` was `3.9·10^8`.
+
+New tools (PROVED):
+- FKG on the lattice of top-avoiding paths, which removes the `1/P(survive)` factor that forced shift 15;
+- two-sided likelihood-ratio bounds at the hitting time (sharp bridge top-hit bounds, with no union factor);
+- a refined eventual-monotonicity criterion using up to 12 leading zeros;
+- decoupled (exact per `m`) and room-weighted analytic top-hit bounds.
+
+Status of the finite parts: exact computation for small `m`, and interval arithmetic for the analytic constants. All upper bounds are rounded up. A fresh auditor agent rated every item sound in two rounds.
+
+Still OPEN: shift 1 for all `m`. Evidence of the difficulty:
+- the monotonicity onset grows to about 3.4 descent times by `m = 160`;
+- the margin at the worst phase is only about 1%.
+
+Shift 0 is false: `N_3(L)/A_3(L)` grows without bound.
+
+Orchestrator audit (procgen_robin3_20260926_orchestrator_check.py, own exact counters) confirms:
+- `N_m <= 1.0473 A_(m+2)` and `<= 1.1632 A_(m+3)` for `2 <= m <= 24` (L up to 250-400; observed maxima 1.0000889 and 1.0000020);
+- the unbounded shift-0 ratio (1.36, 1.76, 3.27, 10.8 at L = 50, 100, 200, 400).
+
+The lane's runner was re-run (111 s, 30 checks, ALL CHECKS PASSED), identical up to timing fields.
+
 ## 1. What changed
 
 HYP-9142 compares two ways of keeping the letter walk in a strip:
