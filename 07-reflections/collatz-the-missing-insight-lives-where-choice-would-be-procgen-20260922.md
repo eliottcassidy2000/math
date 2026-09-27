@@ -391,3 +391,11 @@ The small graphs behaved differently: they kept their arithmetic exactly.
   * For 7n±1 the corresponding closure (density `1/3`) is too good to be forced. The value is then set by an unbounded hierarchy of rational coincidences that must be separated one level at a time.
   * This is the same shape as the whole program: finitely many forced structures decide `q = 3, 5`, and an infinite exceptional family is what an all-level proof would have to organize.
 * **Fences.** The Corner Lemma gives the fence problem its Euler identity. The LP it spawns proves `lambda <= 0.5225` and cannot prove more by angles alone (0.51677). Whether pentagons can beat squares at all is a question about fence lengths, which no corner count sees.
+
+## Wave 20 (2026-09-26): the continuous method finds the order, a discrete identity finds the constant
+
+The Robin inequality (THM-4513) and the fence density (THM-4509 update) followed the same pattern:
+* **Robin.** Sine eigenfunctions of the strip gave the right exponential order with polynomial losses. A discrete total-positivity (TP2) monotonicity removed the losses.
+* **Fences.** Isoperimetry gave a pentagon LP. Discrete fence-end bookkeeping (every corner has a fence ending there; whole sides against through sides) removed its extremal objects.
+
+So the discrete-continuous bridge the owner asked about runs one way for exponents and the other way for constants. Continuous analysis sees rates. Integer or combinatorial identities fix what is left, and the integers keep exactly that information.

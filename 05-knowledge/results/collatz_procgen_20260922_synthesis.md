@@ -1156,6 +1156,33 @@ a synthesis for Collatz. Note
   the residual is aperiodic (S11); the pointwise question is the
   conjecture.
 
+## 2u. Wave 20 (2026-09-26, this session): the Robin inequality gets a constant, and fences get per-fence structure
+
+**1. THM-4513: the Robin inequality with a constant** ([robin2 note](procgen_robin2_20260926_constant_robin.md); HYP-9142).
+* **Result.** `N_m(L) <= 1.0039 A_(m+15)(L)` for all `m, L`. The reflecting barrier's survivors are at most a constant times the undecided words below a slightly higher wall. Both earlier proofs had polynomial factors.
+* **Mechanism.**
+  * In integer coordinates the two walks share one Sturmian environment and differ at a single site.
+  * An exact telescoping identity charges the difference to a gradient of the hard-wall count.
+  * A TP2 bridge inequality (FKG, a real cycle lemma, Hoeffding) makes that gradient nonpositive after the natural descent time `(m+1)/mu`.
+  * The last window costs `1/(1-q)`, with `q < 0.4%`.
+* **Consequence.** The private pairing price is `O(L) rho^peak_L`. The peak discount of THM-4480 is thus exact up to a linear factor, down from `O(L^3)`.
+* **Still open.** Shift 1 for all `m` (the data say 1.0033). Shift 1 is proved for `m <= 24`.
+* **Audit.** The orchestrator's own exact counters reproduce every ratio.
+
+**2. THM-4509 update: per-fence structure** ([fence2 note](procgen_fence2_20260926_per_fence_accounting.md)).
+* **Proved.**
+  * Every corner of a field has a fence ending there, and a reflex corner has two.
+  * On every boundary walk: #whole sides - #through sides = #double-end convex corners + #reflex corners.
+  * A field with all sides shorter than 1 is a convex pinwheel.
+  * These rule out both extremal objects of the angle-potential LP.
+* **Empirical.** A typed LP on fence pieces gives 0.50116 for convex fields on a coarse grid. The remaining fractional obstruction is a Cairo-like mix.
+* **Still open.** No construction beats the grid, and `lambda = 1/2` remains OPEN (Conjecture D).
+
+**Reading.** Both results complete an exact anatomy left half-finished by the continuous method:
+* Robin: a Brownian-strip eigenfunction argument gave polynomial losses, and a discrete monotonicity (TP2) argument removed them.
+* Fences: isoperimetry gave a pentagon LP, and discrete fence-end bookkeeping removed its two extremal objects.
+In both cases the continuous inequality finds the right order, and a discrete combinatorial identity is needed for the constant.
+
 ## 2b. The approach deck: every approach generated or considered, with its disposition
 
 | # | approach (lens + mechanism) | barrier verdict | probe run | outcome |
