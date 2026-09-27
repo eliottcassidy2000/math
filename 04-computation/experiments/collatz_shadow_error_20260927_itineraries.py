@@ -73,7 +73,7 @@ def main():
             worst_dev = dev; worst_dev_at = q
         n_stable += stable
         freqs.append(w.count(2) / L)
-    print(" all itineraries stay in [1,2): True; growth words over the window: %d of %d; max |partial Bernstein sum - eta_0| = %.3e (at eta_0 = %s; the tail is < (2/3)^L ~ %.1e for growth words)" % (n_growth, len(samples), worst_dev, worst_dev_at, (2 / 3) ** L))
+    print(" all itineraries stay in [1,2): True; growth words over the window: %d of %d; max |partial Bernstein sum - eta_0| = %.3e (at eta_0 = %s; the tail is (2^(d_L)/3^L) eta_L < 2 * 2^(-0.335 L) ~ %.1e by the three-ones rule)" % (n_growth, len(samples), worst_dev, worst_dev_at, 2 * 2 ** (-0.335 * L)))
     print(" frequency of v = 2 along itineraries: min %.3f, mean %.3f, max %.3f (growth needs < 0.585)" % (min(freqs), sum(freqs) / len(freqs), max(freqs)))
     print(" itineraries whose exact 2-adic residue rho_K stabilises over K in [%d, %d] (would signal an integer point): %d of %d" % (L // 2, L, n_stable, len(samples)))
     # show two examples

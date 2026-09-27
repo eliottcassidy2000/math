@@ -1,5 +1,5 @@
 == 490 rational starting errors in [1,2) with denominators <= 40, itineraries of length 80 ==
- all itineraries stay in [1,2): True; growth words over the window: 490 of 490; max |partial Bernstein sum - eta_0| = 3.761e-10 (at eta_0 = 53/38; the tail is < (2/3)^L ~ 8.2e-15 for growth words)
+ all itineraries stay in [1,2): True; growth words over the window: 490 of 490; max |partial Bernstein sum - eta_0| = 3.761e-10 (at eta_0 = 53/38; the tail is (2^(d_L)/3^L) eta_L < 2 * 2^(-0.335 L) ~ 1.7e-08 by the three-ones rule)
  frequency of v = 2 along itineraries: min 0.000, mean 0.152, max 0.188 (growth needs < 0.585)
  itineraries whose exact 2-adic residue rho_K stabilises over K in [40, 80] (would signal an integer point): 0 of 490
  eta_0 = 1        itinerary 111111111111111111111111 ... growth 23.40, partial sum 1.000000, rho_K for K = 36..40: [137438953471, 274877906943, 549755813887, 1099511627775, 2199023255551]

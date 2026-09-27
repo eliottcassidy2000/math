@@ -415,7 +415,7 @@ all heights (THM-1289, published), δ ineffective.
   orbit's halvings), eta_l >= 1, budget 2^v <= 3 eta - 1, dip bound m_(l+k) >= m_l/(3 eta_l), eta = |x_w| on
   periodic tails (copies cancel on the negative cycles); FLP carry structure on the integer parts with
   adaptive shift, but no confinement to refute: the theorem does not transfer. Bounded shadow forces
-  bounded valuations and an interval-map itinerary; HYP-9164 (no integer orbit has bounded shadow error)
+  bounded valuations and an interval-map itinerary; HYP-9164 (no divergent orbit has bounded shadow error; minus-sheet cycles do)
   is the intermediate pointwise statement. Note: `collatz_shadow_error_flp_20260927.md`.
 
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`

@@ -9,6 +9,12 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-27 shadow-error note (opus S14): a hypothesis stated for 'positive integer orbits' that its own Proposition 5 refutes on the minus sheet, and a wrong uniqueness criterion
+
+- **What was written.** HYP-9164 as "no positive integer orbit on either sheet has bounded shadow error", with the eight periodic itineraries "all non-integer" and the spreading bound "for every integer orbit with convergent series"; and, in Proposition 1, that two solutions of `2^v y' = 3y - 1` with bounded ratio to `m_l` coincide.
+- **Why it was wrong.** On the `3x-1` sheet the positive cycles `1`, `5 -> 7`, `17 -> ... -> 91` have convergent tail series with bounded error equal to the cycle point (the note's own Proposition 5 shows `m - eta = 0` there), and `n = 1` is an integer itinerary of the interval map with `eta = 1`; the statement is about divergent orbits only. The general solution of the recursion is `eta_l + lambda m_l/(n C_l)`, so every solution has bounded ratio; uniqueness holds for `y_l = o(m_l)`. Also under-attributed: S13 section 4 (`xi`, `eta >= 1/3`), THM-4476 Corollaries 2, 5, 6, 8, the foundry's Proposition 6; and FLP's carry range is `p + q - 1`, not `p`.
+- **Mechanism to remember.** When a construction lives on two sheets, test every universal statement on the other sheet's cycles before writing it; state the class in which a solution is unique; and search the repository for the identity before calling it new.
+
 ## 2026-09-26 directions note (opus S13): a theorem about prefix ranks applied to a lane whose rank is not a prefix rank, and a closure statement off by the rotation
 
 - **What was written.** That the reset lane's "rank across excursions" lies in the class excluded by Proposition 4 ("the obstruction is a theorem"); that `E_inf` is "the closure of the negative rational cycle points"; that the irrationality of `log_2 3` is "the structural reason" no finite bank tiles the residual; the reciprocal-sum form listed as a new proposition.

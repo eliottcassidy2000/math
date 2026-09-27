@@ -1,0 +1,123 @@
+
+== (A1) Proposition 1: recursion, closed form, shadow, and the uniqueness wording ==
+ [ok] n=27 (K=41): recursion exact; eta_l = m_l(C_K/C_l - 1) exact; xi 3^l/2^(d_l) = m_l + eta_l exact; xi = n C_K = n + eta_0 = 32.368923
+ [ok] n=703 (K=62): recursion exact; eta_l = m_l(C_K/C_l - 1) exact; xi 3^l/2^(d_l) = m_l + eta_l exact; xi = n C_K = n + eta_0 = 850.592872
+ [ok] n=871 (K=65): recursion exact; eta_l = m_l(C_K/C_l - 1) exact; xi 3^l/2^(d_l) = m_l + eta_l exact; xi = n C_K = n + eta_0 = 1008.110071
+ [ok] n=6171 (K=96): recursion exact; eta_l = m_l(C_K/C_l - 1) exact; xi 3^l/2^(d_l) = m_l + eta_l exact; xi = n C_K = n + eta_0 = 7350.363746
+ [ok] general solution y_l = eta_l + lambda 3^l/2^(d_l) (lambda = 7/3) also satisfies 2^v y' = 3y - 1; y_l/m_l ranges in [0.144, 0.285] (bounded, not -> 0): uniqueness needs y_l = o(m_l), 'bounded ratio' is not enough
+
+== (A2) Proposition 2: eta >= 1 with equality iff all later valuations are 1; no-descent maxima ==
+ [ok] eta >= 1 on the exact periodic tails listed, = 1 exactly for (1)^inf, > 1 otherwise
+ [ok] all-ones partial sums are 1 - (2/3)^N exactly (so truncated tails may fall below 1: eta >= 1 is a statement about the exact tail)
+ largest partial eta_0 = sum_(t<L) 2^(d_t)/3^(t+1) over no-descent words of length L (2^(d_j) < 3^j for all j <= L):
+   L= 8:    173 words, max = 2.0346 = 0.254 L (word (1, 2, 1, 2, 1, 2, 2, 1))
+   L=10:    961 words, max = 2.5202 = 0.252 L (word (1, 2, 1, 2, 1, 2, 2, 1, 2, 1))
+   L=12:   8045 words, max = 2.9518 = 0.246 L (word (1, 2, 1, 2, 1, 2, 2, 1, 2, 1, 2, 1))
+ [ok] L = 12 maximum 2.9518 matches the note's 2.95
+   L=14:  51033 words, max = 3.4999 = 0.250 L (word (1, 2, 1, 2, 1, 2, 2, 1, 2, 1, 2, 2, 1, 1))
+   L=16: 312455 words, max = 3.9870 = 0.249 L (word (1, 2, 1, 2, 1, 2, 2, 1, 2, 1, 2, 2, 1, 2, 1, 1))
+
+== (A3) Proposition 3: budget and dip bounds ==
+ [ok] on every rotation of the exact periodic tails: 2^v <= 3 eta - 1 and 2^(d_(l+k)-d_l) <= 3^k eta_l for all k (sharper than the note's 3^(k+1) eta_l)
+ [ok] identities 2^(d_(l+k)-d_l) eta_(l+k) = 3^k eta_l - S_k and 2^(d_(l+k)-d_l) m_(l+k) = 3^k m_l + S_k hold exactly on the orbit of 27 (so x_(l+k) = 3^k x_l/2^(d_(l+k)-d_l))
+   n=27: note's dip bound m_(l+k) >= m_l/(3 eta_l) on truncated data: True; the sharper m_(l+k) >= m_l/eta_l (valid for exact tails, needs eta_(l+k) >= 1) fails at 41 truncated pairs (expected near the truncation); exact-tail budget 2^v <= 3 eta_l - 1 on all truncated values: False (expected to fail near the end), on tails of >= 30 terms: True; the truncation-proof 2^v <= 9 eta_l - 3: True
+   n=703: note's dip bound m_(l+k) >= m_l/(3 eta_l) on truncated data: True; the sharper m_(l+k) >= m_l/eta_l (valid for exact tails, needs eta_(l+k) >= 1) fails at 9 truncated pairs (expected near the truncation); exact-tail budget 2^v <= 3 eta_l - 1 on all truncated values: False (expected to fail near the end), on tails of >= 30 terms: True; the truncation-proof 2^v <= 9 eta_l - 3: True
+   n=871: note's dip bound m_(l+k) >= m_l/(3 eta_l) on truncated data: True; the sharper m_(l+k) >= m_l/eta_l (valid for exact tails, needs eta_(l+k) >= 1) fails at 65 truncated pairs (expected near the truncation); exact-tail budget 2^v <= 3 eta_l - 1 on all truncated values: False (expected to fail near the end), on tails of >= 30 terms: True; the truncation-proof 2^v <= 9 eta_l - 3: True
+   n=6171: note's dip bound m_(l+k) >= m_l/(3 eta_l) on truncated data: True; the sharper m_(l+k) >= m_l/eta_l (valid for exact tails, needs eta_(l+k) >= 1) fails at 96 truncated pairs (expected near the truncation); exact-tail budget 2^v <= 3 eta_l - 1 on all truncated values: False (expected to fail near the end), on tails of >= 30 terms: True; the truncation-proof 2^v <= 9 eta_l - 3: True
+
+== (A4) Proposition 4: periodic tails, eta = |x_w|, real = 2-adic, cancellation on the negative cycles ==
+ [ok] w=(1,): R(w^inf) = 1 (note: 1), x_w = -1, R + x_w = 0, R == R_2 mod 2^200: True
+ [ok] w=(1, 2): R(w^inf) = 5 (note: 5), x_w = -5, R + x_w = 0, R == R_2 mod 2^200: True
+ [ok] w=(2, 1): R(w^inf) = 7 (note: 7), x_w = -7, R + x_w = 0, R == R_2 mod 2^200: True
+ [ok] w=(1, 1, 1, 2, 1, 1, 4): R(w^inf) = 17 (note: 17), x_w = -17, R + x_w = 0, R == R_2 mod 2^200: True
+ [ok] w=(1, 1, 2, 1, 1, 4, 1): R(w^inf) = 25 (note: 25), x_w = -25, R + x_w = 0, R == R_2 mod 2^200: True
+ [ok] w=(1, 1, 2): R(w^inf) = 19/11 (note: 19/11), x_w = -19/11, R + x_w = 0, R == R_2 mod 2^200: True
+ [ok] w=(1, 2, 1, 2, 2, 1): R(w^inf) = 1213/217 (note: 1213/217), x_w = -1213/217, R + x_w = 0, R == R_2 mod 2^200: True
+ [ok] negative cycle through -1: m_l + eta_l = 0 at all 24 points checked (values [-1])
+ [ok] negative cycle through -5: m_l + eta_l = 0 at all 24 points checked (values [-7, -5])
+ [ok] negative cycle through -17: m_l + eta_l = 0 at all 24 points checked (values [-91, -61, -55, -41, -37, -25, -17])
+
+== (A5) Proposition 5: minus sheet ==
+ [ok] 3x-1 cycle through 1 (points [1]): recursion 2^v eta' = 3 eta - 1 exact, x = m - eta obeys 2^v x' = 3x, and m - eta = 0 everywhere
+ [ok] 3x-1 cycle through 5 (points [5, 7]): recursion 2^v eta' = 3 eta - 1 exact, x = m - eta obeys 2^v x' = 3x, and m - eta = 0 everywhere
+ [ok] 3x-1 cycle through 17 (points [17, 25, 37, 41, 55, 61, 91]): recursion 2^v eta' = 3 eta - 1 exact, x = m - eta obeys 2^v x' = 3x, and m - eta = 0 everywhere
+ [ok] 3x-1 orbit of 3: word head [3] then (1)^inf; R(d) = 3 = n
+ [ok] 3x-1 orbit of 11: word head [5] then (1)^inf; R(d) = 11 = n
+ [ok] 3x-1 orbit of 29: word head [1, 7] then (1)^inf; R(d) = 29 = n
+ [ok] hand check n=3: 1/3 + (8/9)/(1-2/3) = 3
+ [ok] R(d) = R_2(d) (mod 2^300, as rationals with odd denominator) for 36 eventually periodic words with convergent real part, integer-valued or not
+ [ok] R(d) = n for every odd n <= 2001 on the minus sheet (all these orbits enter a 3x-1 cycle): equality is the eventually periodic case (foundry Prop. 6(4), not cited by the note)
+ minus-sheet positive integers with BOUNDED shadow error (eventually periodic orbits; eta_l exact):
+   n=    1: sup_(l<60) eta_l = 1           (all eta_l < 2: True)
+   n=    3: sup_(l<60) eta_l = 3           (all eta_l < 2: False)
+   n=    5: sup_(l<60) eta_l = 7           (all eta_l < 2: False)
+   n=    7: sup_(l<60) eta_l = 7           (all eta_l < 2: False)
+   n=   11: sup_(l<60) eta_l = 11          (all eta_l < 2: False)
+   n=   17: sup_(l<60) eta_l = 91          (all eta_l < 2: False)
+   n=   25: sup_(l<60) eta_l = 91          (all eta_l < 2: False)
+   n=   29: sup_(l<60) eta_l = 43          (all eta_l < 2: False)
+   n=   37: sup_(l<60) eta_l = 91          (all eta_l < 2: False)
+   n=   41: sup_(l<60) eta_l = 91          (all eta_l < 2: False)
+   n=   55: sup_(l<60) eta_l = 91          (all eta_l < 2: False)
+   n=   61: sup_(l<60) eta_l = 91          (all eta_l < 2: False)
+   n=   91: sup_(l<60) eta_l = 91          (all eta_l < 2: False)
+   n= 3073: sup_(l<60) eta_l = 118099      (all eta_l < 2: False)
+   n=65537: sup_(l<60) eta_l = 108962011   (all eta_l < 2: False)
+ [ok] n = 1 on the minus sheet: eta_l = 1 for all l -- a positive integer orbit with all eta_l < 2 (the word (1)^inf IS an f-itinerary and its minus-sheet 2-adic point is the positive integer 1)
+ [ok] plus sheet: the 1-cycle word (2)^inf has 2^A = 4 > 3 = 3^p, so eta = infinity for every orbit reaching 1 (the HYP's parenthesis is right on the plus sheet only)
+
+== (A6) FLP carry structure, N-coordinates, Mahler's map ==
+ [ok] n=27: c_l = 3{eta_l} - 2^v{eta_(l+1)} exactly, integer, in {-2^v+1..2}; values seen [-8, -6, -5, -3, -2, -1, 0, 1, 2]; max valuation 5 (so the widest range is {-31..2})
+ [ok] n=703: c_l = 3{eta_l} - 2^v{eta_(l+1)} exactly, integer, in {-2^v+1..2}; values seen [-24, -13, -5, -4, -3, -2, -1, 0, 1, 2]; max valuation 6 (so the widest range is {-63..2})
+ [ok] n=871: c_l = 3{eta_l} - 2^v{eta_(l+1)} exactly, integer, in {-2^v+1..2}; values seen [-11, -8, -6, -5, -4, -3, -2, -1, 0, 1, 2]; max valuation 5 (so the widest range is {-31..2})
+ [ok] n=6171: c_l = 3{eta_l} - 2^v{eta_(l+1)} exactly, integer, in {-2^v+1..2}; values seen [-13, -8, -6, -5, -4, -3, -2, -1, 0, 1, 2]; max valuation 6 (so the widest range is {-63..2})
+ [ok] N = (m+1)/2 -> (3N - 1 + 2^(v-1))/2^v for all odd m <= 200001; v = 1 iff N even and then N' = 3N/2; v = 2 gives (3N+1)/4
+ [ok] Mahler: if {xi(3/2)^n} < 1/2 at two consecutive times then g_(n+1) = ceil(3 g_n/2), with f < 1/3 at even g and f in [1/3, 1/2) at odd g
+ [ok] FLP carry c = p f_n - q f_(n+1) lies in (-q, p): 4 integer values for p/q = 3/2 (the note says 'ranges over p values')
+ [ok] xi (3/2)^l = 2^(e_l)(m_l + eta_l) with e_l = d_l - l >= 0 exactly (so {xi (3/2)^l} = {2^(e_l) eta_l})
+
+== (A7) bounded-shadow regime, the interval map f, the eight itineraries, the 5/3 bound ==
+ [ok] eta < B = 2 forces 2^v <= 3 eta - 1 < 5, i.e. v <= 2
+ [ok] eta < B = 5 forces 2^v <= 3 eta - 1 < 14, i.e. v <= 3
+ [ok] eta < B = 17 forces 2^v <= 3 eta - 1 < 50, i.e. v <= 5
+ [ok] for eta in [1,2) exactly one v keeps eta' in [1,2): v = 1 iff eta < 5/3, v = 2 iff eta >= 5/3; f maps [1,2) into itself (second branch lands in [1,5/4))
+ [ok] independent enumeration: 8 primitive periodic words with p <= 10 over {1,2} with all eta in [1,2); itinerary of f = word in every case
+ [ok] w=(1,) eta_0 = 1 max = 1.0000 (quoted 1, 1.0000); plus-sheet point -1 (integer: True), minus-sheet point 1 (integer: True)
+ [ok] w=(1, 1, 1, 1, 2) eta_0 = 211/179 max = 1.9050 (quoted 211/179, 1.9050); plus-sheet point -211/179 (integer: False), minus-sheet point 211/179 (integer: False)
+ [ok] w=(1, 1, 1, 1, 1, 2) eta_0 = 665/601 max = 1.8087 (quoted 665/601, 1.8090); plus-sheet point -665/601 (integer: False), minus-sheet point 665/601 (integer: False)
+ [ok] w=(1, 1, 1, 1, 1, 1, 2) eta_0 = 2059/1931 max = 1.7550 (quoted 2059/1931, 1.7550); plus-sheet point -2059/1931 (integer: False), minus-sheet point 2059/1931 (integer: False)
+ [ok] w=(1, 1, 1, 1, 1, 1, 1, 2) eta_0 = 6305/6049 max = 1.7231 (quoted 6305/6049, 1.7230); plus-sheet point -6305/6049 (integer: False), minus-sheet point 6305/6049 (integer: False)
+ [ok] w=(1, 1, 1, 1, 1, 1, 1, 1, 2) eta_0 = 19171/18659 max = 1.7033 (quoted 19171/18659, 1.7030); plus-sheet point -19171/18659 (integer: False), minus-sheet point 19171/18659 (integer: False)
+ [ok] w=(1, 1, 1, 1, 1, 1, 1, 1, 1, 2) eta_0 = 58025/57001 max = 1.6906 (quoted 58025/57001, 1.6910); plus-sheet point -58025/57001 (integer: False), minus-sheet point 58025/57001 (integer: False)
+ [ok] w=(1, 1, 1, 1, 1, 2, 1, 1, 1, 2) eta_0 = 62185/54953 max = 1.9994 (quoted 62185/54953, 1.9994); plus-sheet point -62185/54953 (integer: False), minus-sheet point 62185/54953 (integer: False)
+ [ok] allowing the letter 3 in the enumeration adds nothing (8 words): the restriction to {1,2} is justified by 2^v <= 3 eta - 1 < 5
+   with p <= 14 there are 22 such words: [(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2), (1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 2), (1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2), (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2), (1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 2), (1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2), (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2), (1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 2), (1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2), (1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 2), (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2), (1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 2), (1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2), (1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 2)]
+   maxima of the family (1^a 2): a=4: 1.90503  a=5: 1.80865  a=6: 1.75505  a=7: 1.72309  a=8: 1.70325  a=9: 1.69062  a=10: 1.68245  a=11: 1.67710  a=12: 1.67359  a=13: 1.67127  a=14: 1.66973  a=15: 1.66870  
+ [ok] maxima of (1^a 2) strictly decrease and stay above 5/3 for a = 4..15; the limit is 1/3 + 4/3 = 5/3 (value before the 2 with a long run of ones behind it)
+ [ok] every periodic word with p in 2..8 (letters {1,2}, convergent) has max eta >= 5/3; the only word with sup eta < 5/3 is (1)^inf (point -1 on the plus sheet, +1 on the minus sheet)
+
+== (B) quoted numbers: truncated maxima, eta_0, carries, -5 families, xi for 27 ==
+ [ok] n=27: K=41, max truncated eta = 332.484 at l=32, m_l=3077 (note: 332 at m=3077); eta_0^(K) = 5.3689; min of the orbit after l=32 is 5
+ [ok] xi(27, truncated) = 27 + eta_0 = 32.368923 (note: 32.368923)
+ [ok] n=703: K=62, max truncated eta = 17292.982 at l=34, m_l=83501 (note: 17293 at m=83501); eta_0^(K) = 147.5929; min of the orbit after l=34 is 5
+ [ok] n=871: K=65, max truncated eta = 9909.207 at l=14, m_l=63665 (note: 9909 at m=63665); eta_0^(K) = 137.1101; min of the orbit after l=14 is 5
+ [ok] n=6171: K=96, max truncated eta = 61981.267 at l=32, m_l=325133 (note: 61981 at m=325133); eta_0^(K) = 1179.3637; min of the orbit after l=32 is 5
+ [ok] -5 families n_k = 4 8^k - 5, k = 1..8: word (1,2)^k and partial eta_0 = 5(1 - (8/9)^k) exactly
+
+== (A8) Proposition 7: runs in the B = 2 regime; replication of the 490-itinerary exploration ==
+ [ok] after v = 2 the error is in [1, 5/4); g-images [1,11/8), [1,25/16) lie below 5/3, the third image [1,59/32) = [1,1.84375) reaches 5/3: at least three v = 1 after every v = 2
+ [ok] all 22 periodic f-itineraries with p <= 14 obey the three-ones rule and have frequency of 2 at most 1/4
+ [ok] growth exponent log_2 3 - 5/4 = 0.33496 (note: 0.335); a block (1,1,1,2) has 3^4/2^5 = 81/32
+   with frequency of 2 at most 1/4, the parity word has odd-fraction rho = l/d_l >= 4/5 = 0.8; 1 - h(0.8) = 0.2781 (THM-4476's counting-lemma exponent; the note's '(1 - h(rho)) with rho >= 0.8')
+ [ok] rational starting errors in [1,2) with denominators <= 40: 490 = sum_(b<=40) phi(b)
+ [ok] prefix-class formula rho_K = (2^(d_K) - S_K) 3^(-K) mod 2^(d_K+1) verified on the orbit of 27 (all K) and on all odd n < 1000 (K = 12)
+ [ok] 490 itineraries of length 80: frequency of 2 min 0.000 mean 0.1523 max 0.1875 = 15/80 (note: 0, 0.152, 0.188); three-ones rule holds in all; all 490 are growth words
+ [ok] eta_0 - (partial sum) = (2^(d_L)/3^L) eta_L exactly; max 3.761e-10 at eta_0 = 53/38 (note: 3.761e-10 at 53/38); it is < 2 2^(d_L)/3^L <= 2 2^(-0.335 L) = 1.7e-08, NOT < (2/3)^L = 8.2e-15 as the itineraries .out prints
+ [ok] prefix residues rho_K constant over K in [40, 80] (a positive integer point below 2^41 would show up): 0 of 490 (note: 0)
+ [ok] eta_0 = 1 (word 1^inf): rho_40 = 2^41 - 1, i.e. the point is -1: an integer, but negative, so it does not stabilise (the test detects positive integers only)
+
+== summary ==
+ all automated checks passed: True
+ findings that are not automated (see the audit report): the 'bounded-ratio' uniqueness wording (A1),
+ the minus-sheet counterexamples to 'no positive integer orbit on either sheet has sup eta < inf' (A5),
+ the FLP carry count (A6), the 2-adic point -1 / +1 of the itinerary (1) (A7).

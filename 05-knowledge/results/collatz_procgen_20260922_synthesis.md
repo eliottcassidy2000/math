@@ -1252,9 +1252,9 @@ angle. Note [`collatz_shadow_error_flp_20260927.md`](collatz_shadow_error_flp_20
 * Bounded shadow: `eta < B` forces valuations `<= log_2(3B − 1)`; for `B = 2`
   the word is the itinerary of an explicit two-branch interval map (eight
   periodic itineraries with `p <= 10`, non-integer rational points);
-  `sup eta >= 5/3` trivially and sharply. HYP-9164: no integer orbit has
-  bounded shadow error (implied by the conjecture; its bounded-valuation
-  sub-case is Mahler-shaped).
+  `sup eta >= 5/3` trivially and sharply. HYP-9164: no divergent orbit has
+  bounded shadow error (the minus-sheet cycles do; implied by the
+  conjecture; its bounded-valuation sub-case is Mahler-shaped).
 
 ## 2b. The approach deck: every approach generated or considered, with its disposition
 
