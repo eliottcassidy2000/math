@@ -1,0 +1,62 @@
+== (1) the price sheet of a cycle shadow ==
+ cycle, word, x_w, mu = 3^p/2^A, c_w = (p log_2 3 - A)/A bits of growth per bit of precision
+  -1           (1,)                   x_w = -1     mu = 3/2        c_w = +0.58496
+  -5           (1, 2)                 x_w = -5     mu = 9/8        c_w = +0.05664
+  -17          (1, 1, 1, 2, 1, 1, 4)  x_w = -17    mu = 2187/2048  c_w = +0.00861
+  1 (trivial)  (2,)                   x_w = 1      mu = 3/4        c_w = -0.20752
+ exactness U^(pr)(m) - x_w = mu^r (m - x_w) = 3^(pr) 2^(K - Ar) u, word = w^r, for K <= 60, u in {1,3,7}: True
+ (cycle, K, periods r, growth in bits, c_w K, log_2(m + |x_w|)): the growth is at most c_w K and K <= log_2(m + |x_w|)
+   ('-1', 24, 23, 13.454, 14.039, 24.0)
+   ('-1', 60, 59, 34.513, 35.098, 60.0)
+   ('-5', 24, 7, 1.189, 1.359, 24.0)
+   ('-5', 60, 19, 3.229, 3.399, 60.0)
+   ('-17', 24, 2, 0.189, 0.207, 24.0)
+   ('-17', 60, 5, 0.474, 0.517, 60.0)
+   ('1 (trivial)', 24, 11, -4.565, -4.98, 24.0)
+   ('1 (trivial)', 60, 29, -12.036, -12.451, 60.0)
+ reading: the -1 shadow (all ones) attains the universal maximum log_2 3 - 1 = 0.585 growth bits per bit of precision;
+ the -5 and -17 shadows are cheap approaches (0.057 and 0.0086 bits per bit); the trivial cycle charges -0.2075: descent
+== (2) the three-place multiplier identity along a shadow ==
+ for same-word pairs over r periods: real distance x 3^(pr)/2^(Ar), 2-adic distance x 2^(Ar), 3-adic distance x 3^(-pr); product 1: True
+ reading: the Syracuse map expands 2-adically by 2^v, contracts 3-adically by 1/3 (within a valuation class) and the real
+ multiplier 3/2^v is the reciprocal of their product; real growth is exactly the excess of 3-adic contraction over 2-adic expansion
+== (3) regeneration depths along orbits (n < 2*10^5) ==
+ size bound v_2(m_j - x) <= log_2(m_j + |x|) violated: 0 times (a theorem: a positive integer = x mod 2^k with x < 0 is >= 2^k - |x|)
+ x = -1: max depth 17 (at n = 77671); max (depth - log_2 n) = 1.25; P(depth >= 2,4,...,12) = [0.50029, 0.12416, 0.02672, 0.00396, 0.00095, 0.00021] vs the uniform law 2^(1-k) = [0.5, 0.125, 0.03125, 0.00781, 0.00195, 0.00049]
+ x = -5: max depth 18 (at n = 174759); max (depth - log_2 n) = 3.25; P(depth >= 2,4,...,12) = [0.50029, 0.12905, 0.0273, 0.01178, 0.00082, 0.00012] vs the uniform law 2^(1-k) = [0.5, 0.125, 0.03125, 0.00781, 0.00195, 0.00049]
+ x = -17: max depth 18 (at n = 174751); max (depth - log_2 n) = 2.51; P(depth >= 2,4,...,12) = [0.50029, 0.12416, 0.03034, 0.0049, 0.00091, 0.0002] vs the uniform law 2^(1-k) = [0.5, 0.125, 0.03125, 0.00781, 0.00195, 0.00049]
+ reading: approaches to a negative cycle point deeper than log_2 n do occur (regenerated precision), but never deeper than log_2 of the current value
+== (4) growth attribution: share of positive height increments inside shadows of -1, -5, -17 ==
+ shallow (depth >= A + 2: -1 >= 3, -5 >= 5, -17 >= 13): all odd n < 200000, total positive growth 1182635 bits; shares -1: 52.0%, -5: 13.4%, -17: 0.00%
+   n = 27: positive growth 14.0 bits; shares -1: 58.3%, -5: 20.8%, -17: 0.0%
+   n = 703: positive growth 21.6 bits; shares -1: 59.5%, -5: 16.2%, -17: 0.0%
+   n = 6171: positive growth 31.6 bits; shares -1: 55.6%, -5: 16.7%, -17: 0.0%
+   n = 77031: positive growth 44.5 bits; shares -1: 63.2%, -5: 6.6%, -17: 0.0%
+   n = 837799: positive growth 66.7 bits; shares -1: 62.3%, -5: 16.7%, -17: 0.0%
+ deep (-1 >= 8, -5 >= 10, -17 >= 16): all odd n < 200000, total positive growth 1182635 bits; shares -1: 0.8%, -5: 0.2%, -17: 0.00%
+   n = 27: positive growth 14.0 bits; shares -1: 0.0%, -5: 0.0%, -17: 0.0%
+   n = 703: positive growth 21.6 bits; shares -1: 0.0%, -5: 0.0%, -17: 0.0%
+   n = 6171: positive growth 31.6 bits; shares -1: 0.0%, -5: 1.9%, -17: 0.0%
+   n = 77031: positive growth 44.5 bits; shares -1: 3.9%, -5: 0.0%, -17: 0.0%
+   n = 837799: positive growth 66.7 bits; shares -1: 1.8%, -5: 2.6%, -17: 0.0%
+ reading: runs of two or more ones (shallow -1 shadows) carry about half of all growth; deep shadows carry a few percent;
+ the rest is generic no-descent words, which no cycle label prices
+== (5) explicit double-excursion integers: the reset lane's obstruction, priced ==
+ cycle -5: word w^8 + (2, 2) + w^16: least source n has 75.1 bits (class mod 2^77)
+   K_1 = 25, growth_1 = 1.36 bits; bridge dip = -0.83 bits; re-entry depth K_2 = 51 (> K_1: True), growth_2 = 2.72 bits; whole orbit above n: True
+   ledger: dip 0.83 < growth_2 2.72, so log m + (prepaid growth) jumps up at the re-entry; source price c_w (K_1 + K_2) = 4.30 bits against log_2 n = 75.1; total growth 3.25 = 0.043 log_2 n
+ cycle -5: word w^12 + (2, 2, 2) + w^24: least source n has 114.7 bits (class mod 2^115)
+   K_1 = 37, growth_1 = 2.04 bits; bridge dip = -1.25 bits; re-entry depth K_2 = 74 (> K_1: True), growth_2 = 4.08 bits; whole orbit above n: True
+   ledger: dip 1.25 < growth_2 4.08, so log m + (prepaid growth) jumps up at the re-entry; source price c_w (K_1 + K_2) = 6.29 bits against log_2 n = 114.7; total growth 4.87 = 0.042 log_2 n
+ cycle -5: word w^16 + (2, 2, 2) + w^40: least source n has 174.3 bits (class mod 2^175)
+   K_1 = 49, growth_1 = 2.72 bits; bridge dip = -1.25 bits; re-entry depth K_2 = 123 (> K_1: True), growth_2 = 6.80 bits; whole orbit above n: True
+   ledger: dip 1.25 < growth_2 6.80, so log m + (prepaid growth) jumps up at the re-entry; source price c_w (K_1 + K_2) = 9.74 bits against log_2 n = 174.3; total growth 8.27 = 0.047 log_2 n
+ cycle -1: word w^10 + (2, 2) + w^20: least source n has 34.5 bits (class mod 2^35)
+   K_1 = 11, growth_1 = 5.85 bits; bridge dip = -0.83 bits; re-entry depth K_2 = 23 (> K_1: True), growth_2 = 11.70 bits; whole orbit above n: True
+   ledger: dip 0.83 < growth_2 11.70, so log m + (prepaid growth) jumps up at the re-entry; source price c_w (K_1 + K_2) = 19.89 bits against log_2 n = 34.5; total growth 16.72 = 0.485 log_2 n
+ cycle -1: word w^16 + (2, 2, 2) + w^32: least source n has 54.8 bits (class mod 2^55)
+   K_1 = 17, growth_1 = 9.36 bits; bridge dip = -1.25 bits; re-entry depth K_2 = 34 (> K_1: True), growth_2 = 18.72 bits; whole orbit above n: True
+   ledger: dip 1.25 < growth_2 18.72, so log m + (prepaid growth) jumps up at the re-entry; source price c_w (K_1 + K_2) = 29.83 bits against log_2 n = 54.8; total growth 26.83 = 0.490 log_2 n
+ reading: the second approach is deeper than the first (regenerated precision), the dip between them is smaller than the
+ second growth, and the whole orbit stays above the source: no bounded-lookahead potential is monotone on these; every such
+ configuration is bought with a source of size 2^(precision consumed), so the combined growth is at most c_w times log_2 n

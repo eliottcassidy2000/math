@@ -483,6 +483,17 @@ all heights (THM-1289, published), δ ineffective.
   bounded-time coefficient-descent certificates exhaust the integers in density iff q <= 3 (f_inf(5,7,9) = 0.177, 0.301,
   0.386); pointwise uniqueness open both ways. Note: `collatz_hedgehog_family_20260927.md`.
 
+  **Pricing the approaches, D12 (opus, 2026-09-27, S15 fifth note):** every rational cycle is exactly linear on its
+  2-adic neighbourhood, U^(pr)(m) - x_w = mu_w^r (m - x_w) = 3^(pr) 2^(K-Ar) u; growth per bit of precision c_w =
+  (p log_2 3 - A)/A (0.585 for -1 = the universal maximum, 0.0566 for -5, 0.0086 for -17, -0.2075 trivial); precision
+  costs size (K <= log_2(m + |x|)), so one shadow multiplies the value by at most (m+|x|)^(c_w); three-place multiplier
+  |3/2^v|_oo |.|_2 |.|_3 = 1 (3-adic metric contracts by 1/3 within a valuation class). Growth attribution on n < 2*10^5:
+  52% in runs of >= 2 ones, 13% in shallow -5 shadows, ~1% in deep shadows: cycle labels price almost nothing. Explicit
+  double-excursion sources (35-174 bits) reproduce the reset lane's configuration (deeper re-entry, dip < second growth,
+  orbit above the source) and refute bounded-lookahead potentials; their combined growth is <= c_w (2 + c_w) log_2 n.
+  D12 closed as a route: prepaying all future regenerations is the height walk. Residual obstruction D14: E_inf points
+  that are not negative integers are 2-adically approachable by small integers. Note: `collatz_pricing_approaches_20260927.md`.
+
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`
 (ranks HN > reconstruction > Kakeya/Falconer > sunflower > Caccetta–Häggkvist > … ).
 
