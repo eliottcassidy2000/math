@@ -15,6 +15,33 @@ Format per entry:
 - **Why it was wrong.** THM-4495's `W_A = Theta(2^(h* A) A^(-3/2))` counts `T`-coded words of length `A` (map steps); a Syracuse word of `k` odd steps at density `rho` has `A = k/rho` map steps and weight `2^(-A)`, so per Syracuse step the exponent is `(1 - h(rho))/rho`, minimal at `rho* = log_3 2` where it equals `0.0793`: `D(k)^(1/k) -> 2^(-0.0793) = 0.9465`, not `0.9659`. Caught by the author on rereading, one checkpoint after publication; corrected in the note, the index, the ledger and the synthesis.
 - **Mechanism to remember.** Two codings of the same orbit run on different clocks (map steps versus odd steps); an exponent per step must be converted with the density of odd steps, and the conversion changes which density dominates the sum.
 
+## 2026-09-27 recursive-entry audit: root debt, the terminal division, and the moving coefficient
+
+- **Failed inference under audit.** Entry into a region with a smaller next
+  value was liable to be called entry into a certified terminating region.
+  Every positive odd Collatz orbit already reaches1 or1 mod4, but the landing
+  value can exceed the original source. Retain the root comparison or prove
+  termination of the entire destination region. The [entry note](../05-knowledge/results/entry_20260927_entry.md)
+  supplies a divergent abstract grow/drop countermodel and separates the predicates.
+- **Factor-of-two draft error, caught before promotion.** The proposed bound
+  y=3 mod16 => U^2(y)<=(9y+5)/32 fails at19->29->11. The denominator16 is
+  uniform; another congruence bit is needed for32. The repaired
+  [all-k cylinder theorem](../05-knowledge/results/entry_20260927_recursive.md)
+  retains v2(b*9^(k+1)-5) and derives its exact budget before comparing endpoints.
+- **Three-type parser repairs.** A type2 boundary4*b*9^k-5 is7 mod8, not3
+  mod8 (27->41->31 is the smallest family witness). Type3 alone is not the
+  successful cylinder:786427 has that type but fails its guard. Finally,
+  under each canonical (1,2) block the decoded odd coefficient changes
+  b->9b; calling b invariant without retaining an elapsed counter loses the
+  ternary transfer. The [board](../05-knowledge/results/entry_20260927_board.md)
+  now gives the exact transition (k,r,b)->(k-1,r,9b). Independent controls
+  and proof review cover the repaired statements.
+- **Scope of checker failure.** Mersenne rejections alone do not prove
+  unbounded required fuel on known convergent inputs. The
+  [independent review](../05-knowledge/results/entry_20260927_entry_review.md)
+  repairs this with an explicit completed family reaching1. None of these
+  finite-fuel obstructions rules out parameterized macros of unbounded duration.
+
 ## 2026-09-26 Gilbreath wall theorem (opus S10): a hypothesis the proof never used, a PROVED label without a proof, and a heuristic called a consequence
 
 - **What was written.** THM-4511 was stated for a *lone* defect of size `4`, with the remark that "a second `4` arriving at column `F` after the first has died can find column `c` at `0` and cross", and the ledger/index said "interacting defects remain open".

@@ -1,0 +1,9 @@
+entry reduction: odd sources3..32767: {'entry3mod8': 16238, 'terminal_before_rise': 145}
+recursive policy universe:49999 odd sources3..99999, cap1024 decisions; all finite walks completed
+certified by exception fuel: {0: 15045, 1: 18303, 2: 21191, 4: 26218, 8: 32510, 16: 47740, 32: 49982, 64: 49999}
+maximum required fuel in finite universe: 36 ; first source attaining it: 52527
+q1R1 source27 required exception fuel: 13
+bounded interpreter cross-check:2047 sources times8 fuel levels
+Mersenne nonuniformity:65 controls H=65+d; each C_d rejects its source
+abstract local-entry countermodel:100 divergent grow/drop pairs
+PASS: finite counts are not a universal basin-coverage claim

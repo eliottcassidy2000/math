@@ -1,0 +1,220 @@
+{
+  "status": "INDEPENDENT AUDIT PASS; no universal-entry or policy-totality claim",
+  "universes": {
+    "cylinder_k_inclusive": [
+      0,
+      256
+    ],
+    "coefficients_per_k": 9,
+    "old_bank_rows": 171,
+    "fixed27_k_inclusive": [
+      1,
+      512
+    ],
+    "pairwise_odd_gate_indices": 256
+  },
+  "cylinder_controls": 2313,
+  "first20_added_density": "2553380107527241/18446744073709551616",
+  "first20_augmented_density": "6990313556829423891/36893488147419103232",
+  "cylinder_first20": [
+    {
+      "k": 0,
+      "t": 1,
+      "b": 1,
+      "residue": 3,
+      "modulus_power": 4
+    },
+    {
+      "k": 1,
+      "t": 1,
+      "b": 1,
+      "residue": 59,
+      "modulus_power": 7
+    },
+    {
+      "k": 2,
+      "t": 1,
+      "b": 1,
+      "residue": 507,
+      "modulus_power": 10
+    },
+    {
+      "k": 3,
+      "t": 1,
+      "b": 1,
+      "residue": 4091,
+      "modulus_power": 13
+    },
+    {
+      "k": 4,
+      "t": 1,
+      "b": 1,
+      "residue": 32763,
+      "modulus_power": 16
+    },
+    {
+      "k": 5,
+      "t": 2,
+      "b": 1,
+      "residue": 262139,
+      "modulus_power": 20
+    },
+    {
+      "k": 6,
+      "t": 2,
+      "b": 1,
+      "residue": 2097147,
+      "modulus_power": 23
+    },
+    {
+      "k": 7,
+      "t": 2,
+      "b": 1,
+      "residue": 16777211,
+      "modulus_power": 26
+    },
+    {
+      "k": 8,
+      "t": 2,
+      "b": 1,
+      "residue": 134217723,
+      "modulus_power": 29
+    },
+    {
+      "k": 9,
+      "t": 2,
+      "b": 1,
+      "residue": 1073741819,
+      "modulus_power": 32
+    },
+    {
+      "k": 10,
+      "t": 2,
+      "b": 1,
+      "residue": 8589934587,
+      "modulus_power": 35
+    },
+    {
+      "k": 11,
+      "t": 3,
+      "b": 5,
+      "residue": 343597383675,
+      "modulus_power": 39
+    },
+    {
+      "k": 12,
+      "t": 3,
+      "b": 5,
+      "residue": 2748779069435,
+      "modulus_power": 42
+    },
+    {
+      "k": 13,
+      "t": 3,
+      "b": 5,
+      "residue": 21990232555515,
+      "modulus_power": 45
+    },
+    {
+      "k": 14,
+      "t": 3,
+      "b": 5,
+      "residue": 175921860444155,
+      "modulus_power": 48
+    },
+    {
+      "k": 15,
+      "t": 3,
+      "b": 5,
+      "residue": 1407374883553275,
+      "modulus_power": 51
+    },
+    {
+      "k": 16,
+      "t": 3,
+      "b": 5,
+      "residue": 11258999068426235,
+      "modulus_power": 54
+    },
+    {
+      "k": 17,
+      "t": 4,
+      "b": 5,
+      "residue": 90071992547409915,
+      "modulus_power": 58
+    },
+    {
+      "k": 18,
+      "t": 4,
+      "b": 13,
+      "residue": 1873497444986126331,
+      "modulus_power": 61
+    },
+    {
+      "k": 19,
+      "t": 4,
+      "b": 5,
+      "residue": 5764607523034234875,
+      "modulus_power": 64
+    }
+  ],
+  "strict_boundary_hostiles": [
+    {
+      "k": 5,
+      "b": 3,
+      "source": 786427,
+      "endpoint": 797159,
+      "steps": 12
+    },
+    {
+      "k": 11,
+      "b": 1,
+      "source": 68719476731,
+      "endpoint": 70607384119,
+      "steps": 24
+    }
+  ],
+  "successful_next_gates_in_audit": [
+    [
+      3,
+      6,
+      691
+    ]
+  ],
+  "checks": {
+    "all pairwise valuation spacing": 32640,
+    "bank overlap density": 1,
+    "coefficient residue positive odd": 257,
+    "density tail majorant": 257,
+    "entire positive cylinder starts in-domain": 257,
+    "exact augmented density": 1,
+    "exact first descent at2kplus2": 2313,
+    "exact first20 added density": 1,
+    "final exact division exponent": 2313,
+    "first three cylinders exactly old rows": 3,
+    "fixed27 initial rise": 262656,
+    "fixed27 nested a1 rise": 2559,
+    "fixed27 pair endpoint": 512,
+    "hostile actual endpoint": 2,
+    "hostile all preceding values above source": 36,
+    "independent repeated-pair endpoint": 296064,
+    "initial threshold blocks": 1,
+    "least stated sufficient threshold": 257,
+    "literal repeated pair guard": 296064,
+    "low gate exponent always insufficient": 256,
+    "lower threshold hostile endpoint": 2,
+    "next gate exact valuation": 256,
+    "odd-k nested endpoint": 256,
+    "old bank disjoint from minus5mod4096": 171,
+    "old bank explicit table universe": 1,
+    "penultimate step and strict rise": 2313,
+    "quarter-class failed gate": 128,
+    "repeated pair above original source": 296064,
+    "shifted endpoint valuation": 512,
+    "strict comparison at coefficient1": 257,
+    "successful gate necessary exponential budget": 1,
+    "unequal valuation exact spacing": 21845
+  },
+  "total": 1218256,
+  "result": "PASS"
+}

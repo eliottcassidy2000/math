@@ -1,0 +1,405 @@
+{
+  "status": "Exact source-relative certificate controls; policy completeness OPEN",
+  "finite_core_rows": 171,
+  "accepted_loop_controls": 1154,
+  "rejected_illegal_loop_controls": 11122,
+  "negative_controls": [
+    "nested target27 remains unpaid at31",
+    "core9 cannot replace actual27"
+  ],
+  "nested_shadow_controls": 128,
+  "nested_shadow_examples": [
+    [
+      1,
+      27,
+      6,
+      161,
+      2
+    ],
+    [
+      2,
+      251,
+      9,
+      2429,
+      3
+    ],
+    [
+      3,
+      2043,
+      10,
+      14741,
+      6
+    ],
+    [
+      4,
+      16379,
+      14,
+      298889,
+      2
+    ],
+    [
+      5,
+      131067,
+      14,
+      1195721,
+      2
+    ],
+    [
+      6,
+      1048571,
+      17,
+      16142489,
+      2
+    ],
+    [
+      7,
+      8388603,
+      18,
+      96855101,
+      3
+    ],
+    [
+      8,
+      67108859,
+      23,
+      2941974269,
+      3
+    ]
+  ],
+  "two_node_completion_examples": [
+    [
+      1,
+      4,
+      7,
+      3,
+      2
+    ],
+    [
+      2,
+      76,
+      151,
+      5,
+      2
+    ],
+    [
+      3,
+      562,
+      1122,
+      7,
+      2
+    ],
+    [
+      4,
+      4207,
+      8412,
+      9,
+      2
+    ]
+  ],
+  "target47_completion_examples": [
+    {
+      "k": 1,
+      "h": 0,
+      "source_bits": 5,
+      "steps": 37,
+      "top_level_nodes": 3,
+      "total_stored_nodes": 37
+    },
+    {
+      "k": 1,
+      "h": 9,
+      "source_bits": 23,
+      "steps": 3,
+      "top_level_nodes": 2,
+      "total_stored_nodes": 2
+    },
+    {
+      "k": 2,
+      "h": 45,
+      "source_bits": 95,
+      "steps": 5,
+      "top_level_nodes": 2,
+      "total_stored_nodes": 2
+    },
+    {
+      "k": 3,
+      "h": 369,
+      "source_bits": 743,
+      "steps": 7,
+      "top_level_nodes": 2,
+      "total_stored_nodes": 2
+    },
+    {
+      "k": 4,
+      "h": 6201,
+      "source_bits": 12407,
+      "steps": 9,
+      "top_level_nodes": 2,
+      "total_stored_nodes": 2
+    }
+  ],
+  "all_height_return_cylinder_controls": 800,
+  "return_cylinders_first_twenty": [
+    {
+      "k": 0,
+      "t": 1,
+      "b": 1,
+      "K": 4,
+      "residue": 3
+    },
+    {
+      "k": 1,
+      "t": 1,
+      "b": 1,
+      "K": 7,
+      "residue": 59
+    },
+    {
+      "k": 2,
+      "t": 1,
+      "b": 1,
+      "K": 10,
+      "residue": 507
+    },
+    {
+      "k": 3,
+      "t": 1,
+      "b": 1,
+      "K": 13,
+      "residue": 4091
+    },
+    {
+      "k": 4,
+      "t": 1,
+      "b": 1,
+      "K": 16,
+      "residue": 32763
+    },
+    {
+      "k": 5,
+      "t": 2,
+      "b": 1,
+      "K": 20,
+      "residue": 262139
+    },
+    {
+      "k": 6,
+      "t": 2,
+      "b": 1,
+      "K": 23,
+      "residue": 2097147
+    },
+    {
+      "k": 7,
+      "t": 2,
+      "b": 1,
+      "K": 26,
+      "residue": 16777211
+    },
+    {
+      "k": 8,
+      "t": 2,
+      "b": 1,
+      "K": 29,
+      "residue": 134217723
+    },
+    {
+      "k": 9,
+      "t": 2,
+      "b": 1,
+      "K": 32,
+      "residue": 1073741819
+    },
+    {
+      "k": 10,
+      "t": 2,
+      "b": 1,
+      "K": 35,
+      "residue": 8589934587
+    },
+    {
+      "k": 11,
+      "t": 3,
+      "b": 5,
+      "K": 39,
+      "residue": 343597383675
+    },
+    {
+      "k": 12,
+      "t": 3,
+      "b": 5,
+      "K": 42,
+      "residue": 2748779069435
+    },
+    {
+      "k": 13,
+      "t": 3,
+      "b": 5,
+      "K": 45,
+      "residue": 21990232555515
+    },
+    {
+      "k": 14,
+      "t": 3,
+      "b": 5,
+      "K": 48,
+      "residue": 175921860444155
+    },
+    {
+      "k": 15,
+      "t": 3,
+      "b": 5,
+      "K": 51,
+      "residue": 1407374883553275
+    },
+    {
+      "k": 16,
+      "t": 3,
+      "b": 5,
+      "K": 54,
+      "residue": 11258999068426235
+    },
+    {
+      "k": 17,
+      "t": 4,
+      "b": 5,
+      "K": 58,
+      "residue": 90071992547409915
+    },
+    {
+      "k": 18,
+      "t": 4,
+      "b": 13,
+      "K": 61,
+      "residue": 1873497444986126331
+    },
+    {
+      "k": 19,
+      "t": 4,
+      "b": 5,
+      "K": 64,
+      "residue": 5764607523034234875
+    }
+  ],
+  "return_budget_hostiles": [
+    {
+      "k": 5,
+      "b": 3,
+      "t": 1,
+      "source": 786427,
+      "endpoint": 797159,
+      "steps": 12
+    },
+    {
+      "k": 11,
+      "b": 1,
+      "t": 2,
+      "source": 68719476731,
+      "endpoint": 70607384119,
+      "steps": 24
+    }
+  ],
+  "return_cylinder_density_extensions": [
+    {
+      "count": 20,
+      "old_disjoint_rows": 65,
+      "old_density": "6985206796614369409/36893488147419103232",
+      "new_family_density": "1317604471299712073/18446744073709551616",
+      "overlap_density": "73/1024",
+      "added_density": "2553380107527241/18446744073709551616",
+      "augmented_density": "6990313556829423891/36893488147419103232",
+      "augmented_density_decimal": 0.18947282861673337,
+      "wholly_old_k": [
+        0,
+        1,
+        2
+      ],
+      "unlisted_family_tail_density_less_than": "1/97261323672455430408"
+    },
+    {
+      "count": 100,
+      "old_disjoint_rows": 65,
+      "old_density": "6985206796614369409/36893488147419103232",
+      "new_family_density": "19071021815027885781206183436622134528345014349361994164857501904000612934239170569679099433545/266998379490113760299377713271194014325338065294581596243380200977777465722580068752870260867072",
+      "overlap_density": "73/1024",
+      "added_density": "36957652158447791113826924124904991480093678947485838913405545233274069250552387101434352201/266998379490113760299377713271194014325338065294581596243380200977777465722580068752870260867072",
+      "augmented_density": "50588938198075864197688661599100448973293763524104248015048467039056019038376766198681675797065/266998379490113760299377713271194014325338065294581596243380200977777465722580068752870260867072",
+      "augmented_density_decimal": 0.18947282861673337,
+      "wholly_old_k": [
+        0,
+        1,
+        2
+      ],
+      "unlisted_family_tail_density_less_than": "1/2124911911006998154710250576286237014633867621227155967796599693912739927210417463955077592352008"
+    }
+  ],
+  "next_gate_odd_exponents_tested": 1000,
+  "next_gate_successes": [
+    [
+      3,
+      6,
+      691
+    ]
+  ],
+  "next_gate_pairwise_congruence_controls": 8128,
+  "ordinary_source_count": 4095,
+  "maximum_ordinary_macro_nodes": 20,
+  "maximum_ordinary_atomic_steps": 51,
+  "fixed27_family_controls": 128,
+  "maximum_fixed27_macro_nodes": 63,
+  "maximum_fixed27_atomic_steps": 346,
+  "mersenne_controls": 128,
+  "maximum_mersenne_macro_nodes": 196,
+  "maximum_mersenne_atomic_steps": 627,
+  "finite_policy_digest": "891164da234bd6fffe8008ba90da9774286b4811577053f39797ab6df130da07",
+  "family_first_eight": [
+    [
+      1,
+      5,
+      37,
+      18
+    ],
+    [
+      2,
+      6,
+      17,
+      7
+    ],
+    [
+      3,
+      10,
+      11,
+      2
+    ],
+    [
+      4,
+      13,
+      34,
+      12
+    ],
+    [
+      5,
+      16,
+      31,
+      10
+    ],
+    [
+      6,
+      20,
+      27,
+      9
+    ],
+    [
+      7,
+      22,
+      22,
+      4
+    ],
+    [
+      8,
+      25,
+      39,
+      10
+    ]
+  ]
+}

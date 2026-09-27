@@ -1,0 +1,10 @@
+independent three-type decoder:32768 sources; type counts {1: 9362, 2: 4681, 3: 18725}
+independent all-height guard controls: 640 sources, k0..159, lifts up to2^80
+independent carry-clock controls:4096 odd sources; target47 depth period:6561 exponents
+normal/optimized saved-output replay: entry PASS
+normal/optimized saved-output replay: entry_review PASS
+normal/optimized saved-output replay: families PASS
+normal/optimized saved-output replay: recursive PASS
+normal/optimized saved-output replay: wall PASS
+normal/optimized saved-output replay: recursive_review PASS
+PASS: scoped mathematical controls and all frozen outputs; universal coverage remains OPEN

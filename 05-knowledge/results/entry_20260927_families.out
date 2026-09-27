@@ -1,0 +1,347 @@
+{
+  "status": "PROVED scoped family, FINITE-EXACT controls, OPEN universal coverage",
+  "target47_minimal_exponents": [
+    0,
+    45,
+    369,
+    6201,
+    52128,
+    465471,
+    465471,
+    465471,
+    172652355,
+    1722334311,
+    5209118712,
+    193495476366
+  ],
+  "target47_initial_ternary_digits": [
+    0,
+    0,
+    2,
+    1,
+    1,
+    1,
+    2,
+    2,
+    1,
+    2,
+    1,
+    2,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    2
+  ],
+  "exponent_depth_census_through3power8": {
+    "0": 5832,
+    "1": 648,
+    "2": 72,
+    "3": 8,
+    "4": 1
+  },
+  "target47_suffix": [
+    47,
+    71,
+    107,
+    161,
+    121,
+    91,
+    137,
+    103,
+    155,
+    233,
+    175,
+    263,
+    395,
+    593,
+    445,
+    167,
+    251,
+    377,
+    283,
+    425,
+    319,
+    479,
+    719,
+    1079,
+    1619,
+    2429,
+    911,
+    1367,
+    2051,
+    3077,
+    577,
+    433,
+    325,
+    61,
+    23,
+    35,
+    53,
+    5,
+    1
+  ],
+  "family47_controls": [
+    {
+      "k": 1,
+      "t": 0,
+      "h": 0,
+      "terminal_division": 1,
+      "source_bits": 5,
+      "first_descent": 37,
+      "first_source": 27
+    },
+    {
+      "k": 1,
+      "t": 1,
+      "h": 9,
+      "terminal_division": 19,
+      "source_bits": 23,
+      "first_descent": 3,
+      "first_source": 7301195
+    },
+    {
+      "k": 1,
+      "t": 2,
+      "h": 18,
+      "terminal_division": 37,
+      "source_bits": 41,
+      "first_descent": 3,
+      "first_source": 1913964685387
+    },
+    {
+      "k": 2,
+      "t": 0,
+      "h": 45,
+      "terminal_division": 91,
+      "source_bits": 95,
+      "first_descent": 5,
+      "first_source": 30647931178357398081453215355
+    },
+    {
+      "k": 2,
+      "t": 1,
+      "h": 126,
+      "terminal_division": 253,
+      "source_bits": 257,
+      "first_descent": 5,
+      "first_source": null
+    },
+    {
+      "k": 2,
+      "t": 2,
+      "h": 207,
+      "terminal_division": 415,
+      "source_bits": 419,
+      "first_descent": 5,
+      "first_source": null
+    },
+    {
+      "k": 3,
+      "t": 0,
+      "h": 369,
+      "terminal_division": 739,
+      "source_bits": 743,
+      "first_descent": 7,
+      "first_source": null
+    },
+    {
+      "k": 3,
+      "t": 1,
+      "h": 1098,
+      "terminal_division": 2197,
+      "source_bits": 2201,
+      "first_descent": 7,
+      "first_source": null
+    },
+    {
+      "k": 3,
+      "t": 2,
+      "h": 1827,
+      "terminal_division": 3655,
+      "source_bits": 3659,
+      "first_descent": 7,
+      "first_source": null
+    },
+    {
+      "k": 4,
+      "t": 0,
+      "h": 6201,
+      "terminal_division": 12403,
+      "source_bits": 12407,
+      "first_descent": 9,
+      "first_source": null
+    },
+    {
+      "k": 4,
+      "t": 1,
+      "h": 12762,
+      "terminal_division": 25525,
+      "source_bits": 25529,
+      "first_descent": 9,
+      "first_source": null
+    },
+    {
+      "k": 4,
+      "t": 2,
+      "h": 19323,
+      "terminal_division": 38647,
+      "source_bits": 38651,
+      "first_descent": 9,
+      "first_source": null
+    },
+    {
+      "k": 5,
+      "t": 0,
+      "h": 52128,
+      "terminal_division": 104257,
+      "source_bits": 104261,
+      "first_descent": 11,
+      "first_source": null
+    },
+    {
+      "k": 5,
+      "t": 1,
+      "h": 111177,
+      "terminal_division": 222355,
+      "source_bits": 222359,
+      "first_descent": 11,
+      "first_source": null
+    },
+    {
+      "k": 5,
+      "t": 2,
+      "h": 170226,
+      "terminal_division": 340453,
+      "source_bits": 340457,
+      "first_descent": 11,
+      "first_source": null
+    },
+    {
+      "k": 6,
+      "t": 0,
+      "h": 465471,
+      "terminal_division": 930943,
+      "source_bits": 930946,
+      "first_descent": 13,
+      "first_source": null
+    },
+    {
+      "k": 6,
+      "t": 1,
+      "h": 996912,
+      "terminal_division": 1993825,
+      "source_bits": 1993828,
+      "first_descent": 13,
+      "first_source": null
+    },
+    {
+      "k": 6,
+      "t": 2,
+      "h": 1528353,
+      "terminal_division": 3056707,
+      "source_bits": 3056710,
+      "first_descent": 13,
+      "first_source": null
+    }
+  ],
+  "target1_controls": [
+    {
+      "k": 1,
+      "h": 4,
+      "source_bits": 7,
+      "first_descent": 3
+    },
+    {
+      "k": 2,
+      "h": 76,
+      "source_bits": 151,
+      "first_descent": 5
+    },
+    {
+      "k": 3,
+      "h": 562,
+      "source_bits": 1122,
+      "first_descent": 7
+    },
+    {
+      "k": 4,
+      "h": 4207,
+      "source_bits": 8412,
+      "first_descent": 9
+    },
+    {
+      "k": 5,
+      "h": 37012,
+      "source_bits": 74022,
+      "first_descent": 11
+    },
+    {
+      "k": 6,
+      "h": 450355,
+      "source_bits": 900708,
+      "first_descent": 13
+    }
+  ],
+  "mersenne_phase_end_descending_H": [
+    2,
+    4,
+    8
+  ],
+  "universes": {
+    "exponent_lift_depth": 60,
+    "independent_exponent_depth": 8,
+    "actual_family_k": 6,
+    "h_period_offsets": 3,
+    "membership_source_bound": 100000,
+    "exponent_depth_census_period": 6561,
+    "mersenne_valuation_H": 1024,
+    "mersenne_orbit_H": 128
+  },
+  "checks": {
+    "27 finite first descent": 1,
+    "Mersenne actual clock": 128,
+    "Mersenne all-large endpoint hostile": 1016,
+    "Mersenne endpoint finite boundary": 1,
+    "Mersenne exact clipping valuation": 1024,
+    "actual inverse block": 63,
+    "all first phase even steps above source": 63,
+    "all first phase odd steps above source": 63,
+    "complete exponent depth distribution": 1,
+    "direct membership decoding": 18,
+    "elementary lifting coefficient": 61,
+    "exact first descent time": 18,
+    "exact preterminal endpoint": 18,
+    "first half valuation": 63,
+    "fixed coefficient family hostile": 127,
+    "fixed q1 R1 interface": 18,
+    "fixed suffix cap": 38,
+    "fixed47 suffix length": 1,
+    "independent exponent census": 8,
+    "least exponent representative": 72,
+    "lift initial unit": 2,
+    "lift new precision": 72,
+    "lift prior precision": 72,
+    "no earlier terminal1": 18,
+    "ordinary family decoder type": 17,
+    "recursive actual phase boundary": 63,
+    "second half valuation": 63,
+    "small decoder census bounds": 1,
+    "small decoder higher depth excluded": 4,
+    "small-source decoder census": 1,
+    "target1 exact first descent": 6,
+    "target1 positive even coefficient": 6,
+    "terminal division clock": 18,
+    "terminal target47": 18,
+    "ternary index isometry": 4100
+  },
+  "total": 7263,
+  "result": "PASS"
+}

@@ -1,0 +1,16 @@
+Inherited bank independently parsed:171 odd q values; Kmax65; maximum horizon41; every residue excludes -1
+Known-convergent completion N_H=2^H*(2^(3^(H-1))+1)/3^H-1
+H exponent_M source_bits exact_U_steps
+2 3 2 2
+3 9 8 3
+4 27 25 4
+5 81 79 5
+6 243 240 6
+7 729 725 7
+8 2187 2183 8
+9 6561 6556 9
+10 19683 19678 10
+128 modular exact-divisibility controls H2..129; enormous source integers not constructed
+65 known-convergent source formulas,2145 modular policy states: each fuel d rejects N_(d+65)
+Alternative completed47-family mechanism:128 even-coefficient controls, first42 steps all above each source
+PASS: strict C_d omission from the known-convergent basin is proved by explicit completion, not assumed Collatz

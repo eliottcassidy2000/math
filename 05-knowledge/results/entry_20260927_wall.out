@@ -1,0 +1,12 @@
+Spatial carry scans: all binary words of lengths 1..16
+words checked: 131070 ; exactly two nonsynchronizing words at every length
+Physical odd sources: every 1 <= n < 2^18
+sources checked: 131072 ; even/odd wall-index counts: [43691, 87381] ; direct-basin alternating sources: 9 ; maximum a: 18
+Gilbreath control: every tail over {0,2,4} of lengths 1..9
+triangles checked: 29523 ; protected: 13744 ; destroyed: 14757 ; no four: 1022
+Minimal alphabet-six breach: [1, 2, 6] -> [1, 4] -> [3]
+Minimal odd canonical-word phase reversal: 3 (11) -> 5 (101); first walls 1 -> 4
+Abundant-wall hostile: n_k=4*8^k-5, k=1..128
+all controls passed; 3k-1 internal walls and first wall at1 coexist with tau(n_k)>2k
+Exact suffix universality: a=1..64, h=0..255
+16384 branch/tail controls passed; no tail-size inference follows from a fixed wall

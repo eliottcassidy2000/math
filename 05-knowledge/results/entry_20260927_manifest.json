@@ -1,0 +1,27 @@
+{
+  "normalization": "SHA256 of bytes with CRLF replaced by LF; UTF8 BOM retained if present",
+  "artifacts": {
+    "04-computation/experiments/entry_20260927_audit.py": "67f629b2eb4def857220331fd9134b0155c5eb2caf51cf7cdd25cbd84f01e2ba",
+    "04-computation/experiments/entry_20260927_entry.py": "f76c18eda8385f5e5886e1ff0a681881d5ec68d3c3d1936f5c873e24d8e1007a",
+    "04-computation/experiments/entry_20260927_entry_review.py": "cdff254c812737dedf7353e82bc5d31b0ae59102a4a407d76b08eb20006ef8d0",
+    "04-computation/experiments/entry_20260927_families.py": "23edc9a57f56343151b749de7c2ed15461d0161f29b8f2f10d926890c37c1864",
+    "04-computation/experiments/entry_20260927_recursive.py": "bebd48145e753820aad30fdb800f299429a56c84ad18181a43c331b62913787e",
+    "04-computation/experiments/entry_20260927_recursive_review.py": "838969eefa01affa1981172827df20c31732c5a10b6494f13cce5947aa8bbeb6",
+    "04-computation/experiments/entry_20260927_wall.py": "a4068da8ca75c1a474c1024fea29d796791b86235e871c9431d13f40802dd1ec",
+    "05-knowledge/results/entry_20260927_audit.md": "62b83488c3562ccbd7dde6a0cbef40c1b5c6a77495d0eec3ef86f6301fcf0e3c",
+    "05-knowledge/results/entry_20260927_audit.out": "f16dd91de81c036b833faa6069c8d8913bccfd7af620ef6b195cb36ae33fad33",
+    "05-knowledge/results/entry_20260927_board.md": "df61520ea7899cd7705d2a321f6b2349a98f0245e74854affcd2a72a03c4b03c",
+    "05-knowledge/results/entry_20260927_entry.md": "a01bcca72b039c24ecb5a8fd459cf677177e8538e54fa3eb5aec8053c485e5d9",
+    "05-knowledge/results/entry_20260927_entry.out": "14eb696be1bf73c40d93c5511a25e20f5be5d58549b8f3929dddbd8758f93147",
+    "05-knowledge/results/entry_20260927_entry_review.md": "cfe31157fa8488c6fbcb7e017a5631dabf80e31c30ca4534c10b6691967bc51f",
+    "05-knowledge/results/entry_20260927_entry_review.out": "8d3bb19ed04f6232e7787596cc0066b705517620b2d8ada2a4e2f039885df151",
+    "05-knowledge/results/entry_20260927_families.md": "62f04ec0f9579774c26ce211cb628728b2d2081631d20c757741caa754715e77",
+    "05-knowledge/results/entry_20260927_families.out": "bfd924d886c037ad02d100a7ba091d5caf63c90fa718e27530ede89edebfa311",
+    "05-knowledge/results/entry_20260927_recursive.md": "06648204db7214dcd2dfeee61e0d930af2372be807109d69481e709b9cd2d25d",
+    "05-knowledge/results/entry_20260927_recursive.out": "04c08fc5ace3e99976cc700904a1ea06411125d0705a46e7cab2ff110e503fd5",
+    "05-knowledge/results/entry_20260927_recursive_review.md": "c590acca8a20a244ec5a91c15de1105c467d07cb691dbccfa018382d8a8b1aa0",
+    "05-knowledge/results/entry_20260927_recursive_review.out": "b1fa293236d1419b2c0ebdc59293ae465f0611b1f01cc765fbb57e634a80bd6b",
+    "05-knowledge/results/entry_20260927_wall.md": "442a19db6e45a0f5f295235d6d813bcd15d429308adae382ab469e695ef12f26",
+    "05-knowledge/results/entry_20260927_wall.out": "aaeb34d26e554546891ea3245a6698507b52d526bdd5c3e8df00973ac2b6c158"
+  }
+}
