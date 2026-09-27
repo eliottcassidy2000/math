@@ -1,0 +1,26 @@
+== (1) no creeping on N: orbits either enter a cycle or leave every finite window ==
+ 3n+1: of 100000 starts, 100000 enter {1,2}, 0 exceed 10^12 (none)
+ 5n+1 control, orbit of 7 for 20000 steps: 10 visits below 1000, max ~ 2^3110: it leaves the window and (as far as computed) never returns
+ reading: a Collatz orbit on N is trapped (cycle) or escapes with all its statistical time at infinity; the hedgehog's creeping orbits have no counterpart
+== (2) the family T_q: Terras bijection for every odd q, and the no-descent density dichotomy ==
+ n mod 2^k -> parity word of length k is a bijection for q in {1,3,5,7,9,11}, k in {6,10,12}: True
+ fraction of length-k parity words with no coefficient descent (q^o_j > 2^j for all j <= k), exact DP:
+  q, drift (log_2 q - 2)/2, fractions at k = 10, 20, 40, 80, 160, 200
+  q = 1, drift -1.0000: ['0', '0', '0', '0', '0', '0']
+  q = 3, drift -0.2075: ['0.0625', '0.0261', '0.00582', '0.000664', '1.73e-05', '3.06e-06']
+  q = 5, drift +0.1610: ['0.26', '0.222', '0.196', '0.183', '0.178', '0.177']
+  q = 7, drift +0.4037: ['0.33', '0.31', '0.303', '0.301', '0.301', '0.301']
+  q = 9, drift +0.5850: ['0.402', '0.39', '0.387', '0.386', '0.386', '0.386']
+ reading: the density of the no-descent set is 0 exactly for q <= 3 (negative drift: Terras) and positive for q >= 5;
+ among q > 1, Collatz is the unique member with a null no-descent set -- the density-level form of 'the only system'
+== (3) the trivial cycle is exactly linear on its 2-adic neighbourhood ==
+ T^2(x) - 1 = (3/4)(x - 1) for all x = 1 mod 4, x <= 40000: True
+ T^(2j)(m) - 1 = (3/4)^j (m - 1) for m = 1 mod 4^j (j <= 7, 200 values each): True
+ multiplier 3/4 of the cycle map T^2 at its fixed point 1: |3/4|_oo = 0.75 (real contraction), |3/4|_2 = 4 (2-adic expansion), |3/4|_3 = 1/3 (3-adic contraction); product 0.75 * 4 * (1/3) = 1
+ reading: the trivial cycle is linearizable (Koenigs) at the real place -- the opposite of a hedgehog (indifferent, non-linearizable);
+ an integer orbit that passes within 2^(-2j) of 1 two-adically is pulled down by (3/4)^j in value: closeness to the cycle forces descent
+== (4) cycles of T_q with minimum below 20000 (search capped at 1500 steps and 10^40) ==
+ q = 1: cycle minima below 20000: [1]
+ q = 3: cycle minima below 20000: [1]
+ q = 5: cycle minima below 20000: [1, 13, 17]
+ q = 7: cycle minima below 20000: [1]

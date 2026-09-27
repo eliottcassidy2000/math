@@ -474,6 +474,15 @@ all heights (THM-1289, published), δ ineffective.
   reading of (7, 11) stands; the tournament 3^7 is a score sequence, so that face is a pun. Nothing on the conjecture.
   Note: `collatz_coincidence_atlas_20260927.md`.
 
+  **Hedgehogs and the qn+1 family (opus, 2026-09-27, S15 fourth note):** for a self-map of N the invariant probability
+  measures live on cycles, so unique ergodicity (Pérez-Marco's hedgehog theorem, arXiv:2609.28797) transplants to the cycle
+  half; no creeping (finite-set recurrence = periodicity): Collatz = every orbit's empirical measures converge to the
+  {1,2} measure; Z_2 is the anti-hedgehog (Haar ergodic). The trivial cycle is exactly linear, T^2(x) - 1 = (3/4)(x - 1) on
+  1 mod 4, T^(2j)(1 + 4^j t) = 1 + 3^j t, an adelic saddle (real 3/4, 2-adic 4, 3-adic 1/3); positive cycles attract their
+  shadows, negative repel. The distortion-over-returns device transplants to the obstructed excursion rank. Family T_q:
+  bounded-time coefficient-descent certificates exhaust the integers in density iff q <= 3 (f_inf(5,7,9) = 0.177, 0.301,
+  0.386); pointwise uniqueness open both ways. Note: `collatz_hedgehog_family_20260927.md`.
+
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`
 (ranks HN > reconstruction > Kakeya/Falconer > sunflower > Caccetta–Häggkvist > … ).
 
