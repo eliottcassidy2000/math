@@ -1130,6 +1130,32 @@ a certified region"; Langlands and loom connections. Notes
   16^-(2^(k-1)-1))`, shift law, halving; `c_6 ~ 1.4 log_2 F` (HYP-9163); the
   front-only law is asymptotically exact for size `6`.
 
+## 2t. Wave 22 (2026-09-26, opus session `fibonacci-two-copies-20260926`): the two copies, and growth families as cycle shadows
+
+Owner's directive: the zero-removed Fibonacci line with three consecutive
+units, the Zeckendorf tricolor and its negative copy, Binet's formula, and
+a synthesis for Collatz. Note
+[`fibonacci_two_copies_collatz_20260926.md`](fibonacci_two_copies_collatz_20260926.md).
+
+* Fibonacci: `F(x) = (phi^x - cos(pi x) phi^-x)/sqrt 5` interpolates both
+  signs, `F(-x) = -cos(pi x) F(x) + phi^-x sin^2(pi x)/sqrt 5`, smooth Cassini
+  `= cos(pi x)`, all interpolants differ by an invisible `sin(pi x)`
+  component, `F(0) = 0` forced. NegaFibonacci (Knuth) represents every
+  integer; lowest-index classes `phi^-2, phi^-3, phi^-3, phi^-4` for both
+  signs; the two unit classes are independent in density.
+* Collatz: the other copy is the map on negatives. Shadow proposition: a
+  valuation word is a class mod `2^(A+1)`; `x_w = S_w/(2^A - 3^p)` is the
+  2-adic point with word `w^inf`; `n = x_w mod 2^(mA+1)` gives
+  `U^(mp)(n) = (3^p/2^A)^m (n - x_w) + x_w`. The lane's three growth rules
+  are the three integer negative cycles (`-1`, `-5`, `-17`, the only integer
+  fixed points among `120` primitive no-descent words with `p <= 8`); the
+  `27` family `8n + 35` converges to `-5`; `(4^k + 17)/3` converges to `17/3`
+  and descends at step `6` for `k >= 5`. Precision is 2-adic distance to a
+  cycle point; "not repaying the source" is the factor `(3^p/2^A)^m`.
+* Verdict: rules describe the periodic sliver of the no-descent residual;
+  the residual is aperiodic (S11); the pointwise question is the
+  conjecture.
+
 ## 2b. The approach deck: every approach generated or considered, with its disposition
 
 | # | approach (lens + mechanism) | barrier verdict | probe run | outcome |

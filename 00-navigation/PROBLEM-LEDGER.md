@@ -394,6 +394,14 @@ all heights (THM-1289, published), δ ineffective.
   dyadic per-z anatomy, c_6 ~ 1.4 log_2 F (HYP-9163). Notes: `collatz_precision_residual_20260926.md`,
   `gilbreath_size6_extinction_20260926.md`.
 
+  **Two copies and cycle shadows (opus, 2026-09-26, S12):** the zero-removed Fibonacci line (three
+  consecutive units; Zeckendorf right, negaFibonacci left; real Binet function with the twist
+  F(-x) = -cos(pi x)F(x) + ..., F(0) = 0 forced); negaFibonacci classes phi^-2, phi^-3, phi^-3, phi^-4
+  for both signs. Collatz: growth families are 2-adic shadows of negative rational cycle points
+  x_w = S_w/(2^A - 3^p) (shadow proposition, classes mod 2^(A+1)); the three parameterized rules are
+  the three integer negative cycles -1, -5, -17; the 27 family converges to -5, (4^k+17)/3 to 17/3
+  (descends). Note: `fibonacci_two_copies_collatz_20260926.md`.
+
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`
 (ranks HN > reconstruction > Kakeya/Falconer > sunflower > Caccetta–Häggkvist > … ).
 
