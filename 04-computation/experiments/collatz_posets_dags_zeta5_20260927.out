@@ -1,0 +1,22 @@
+== (1) N = (m+1)/2 coordinates ==
+ N even -> 3N/2 with v = 1; N odd -> (U^-(N) + 1)/2 with v >= 2; v = 1 iff N even: True True (odd m < 2*10^6)
+== (2) the AFS base-3/2 tree ==
+ unique finite expansion N = sum (a_i/2)(3/2)^i with digits a_i = 2N_i mod 3, N_(i+1) = floor(2N_i/3): True (N <= 10^5)
+ children (N with floor(2N/3) = parent): {2: [3, 4], 3: [5], 4: [6, 7], 5: [8], 6: [9, 10], 7: [11]} -> N even: {3N/2, 3N/2 + 1}; N odd: {(3N+1)/2}
+ Collatz v = 1 steps are the left-child edges of even nodes (Mahler's map g -> ceil(3g/2) follows left children always)
+== (3) balance of the residual tree: P(next letter odd | uniform no-descent prefix of length k) ==
+ (k, P(next odd)): [(1, 1.0), (2, 1.0), (3, 0.5), (5, 0.75), (8, 0.6842), (13, 0.6158), (21, 0.5863), (34, 0.5443), (55, 0.5), (60, 0.5)]
+ over k = 1..60 the probability stays in [0.5000, 1.0000] (inside [1/3, 2/3]: False); the extension counts weight each prefix by its number of continuations, so this is the balance of the next letter in the no-descent tree
+== (4) Diophantine quality along the orbit of 27 (truncated shadow) ==
+ L   real error |xi - 2^d m/3^L|   mu_L = -log_3(err)/L    2-adic exponent d_L/(L log2 3)
+  5   4.188e+00                 -0.261                   0.757
+ 10   3.790e+00                 -0.121                   0.883
+ 20   3.345e+00                 -0.055                   0.883
+ 30   3.168e+00                 -0.035                   0.883
+ 40   2.023e+00                 -0.016                   1.041
+ the real approximations 2^(d_L) m_L/3^L to xi have exponent well below 1 (Liouville needs > 1, Roth > 2); the 2-adic approximations -S/3^L to -n have exponent d_L/(L log2 3) by construction
+== (5) the reachability order: tree of 1 within the odd numbers <= X ==
+ X = 1000: all 500 odd numbers <= X reach 1 (conjecture verified); Krasikov-Lagarias's proved lower bound for the tree of 1 below X is X^0.84 = 331
+ X = 10000: all 5000 odd numbers <= X reach 1 (conjecture verified); Krasikov-Lagarias's proved lower bound for the tree of 1 below X is X^0.84 = 2.29e+03
+ X = 100000: all 50000 odd numbers <= X reach 1 (conjecture verified); Krasikov-Lagarias's proved lower bound for the tree of 1 below X is X^0.84 = 1.58e+04
+ X = 1000000: all 500000 odd numbers <= X reach 1 (conjecture verified); Krasikov-Lagarias's proved lower bound for the tree of 1 below X is X^0.84 = 1.1e+05

@@ -436,6 +436,19 @@ all heights (THM-1289, published), δ ineffective.
   drifting 5x+1 control at every depth, so the hard regime is logarithmic height growth). THM-4514
   (PROVED, audited SOUND WITH CORRECTIONS, applied). Note: `collatz_posets_dags_20260927_spine_descent_tree.md`.
 
+  **Posets, DAGs and the zeta(5) shape (opus, 2026-09-27, S15):** in N = (m+1)/2 coordinates a v = 1 Syracuse step
+  appends the digit 0 to the base-3/2 (Akiyama–Frougny–Sakarovitch) expansion of N and an odd N steps by the 3x-1
+  Syracuse map shifted back (Mahler's map is the {0,1}-digit walk); the residual DAG branches with P(next odd) =
+  |W_j|/|W_(j+1)| in [1/2, 1], = 1/2 off the threshold steps; the reset lane's (cycle label, precision) state graph
+  has directed cycles, so no rank factors through it. The Apéry-form recurrence A_(L+1) = 3A_L + 2^(v_2(A_L))
+  (A_L = 3^L n + S_(L-1) = 2^(d_L) m_L) makes the orbit's own approximants -S_(L-1)/3^L -> n have 2-adic exponent
+  nu_L with nu_L - 1 = log_2(n C_L/m_L)/(L log_2 3) exactly (exponent > 1 = coefficient descent; rational target;
+  direction inverted against Lai–Sprang–Zudilin's zeta_2(5) approximants, IMRN 2026); |xi - r_L|_oo |r_L|_2 = eta_L/3^L
+  and the three-place product is eta_L (n C_L)^2 H^(-2) (Ridout-critical); F_n(z) = sum 2^(d_k) z^k has R_oo R_2 =
+  2^(liminf - limsup) <= 1 (Borel–Dwork-critical), is rational iff the word is eventually periodic (Pólya), and a
+  meromorphic continuation past |z| = 2^(-liminf d_k/k) would force PC(n). Real zeta(5): no confirmed proof found;
+  the public record is p-adic (Calegari–Dimitrov–Tang, LSZ). Note: `collatz_posets_dags_zeta5_20260927.md`.
+
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`
 (ranks HN > reconstruction > Kakeya/Falconer > sunflower > Caccetta–Häggkvist > … ).
 
