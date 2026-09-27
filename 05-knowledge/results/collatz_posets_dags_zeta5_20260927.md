@@ -19,10 +19,10 @@ series at two places),
 (`|W_k|` of order `2^(h* k) k^(-3/2)`),
 the parallel session's note
 [`collatz_posets_dags_20260927_spine_descent_tree.md`](collatz_posets_dags_20260927_spine_descent_tree.md)
-and its provisional [THM-4514](../../01-canon/theorems/THM-4514-collatz-value-time-poset-spine-blocks-and-two-place-descent-tree.md)
+and its [THM-4514](../../01-canon/theorems/THM-4514-collatz-value-time-poset-spine-blocks-and-two-place-descent-tree.md)
 (value-time poset, excursion forest, spine = orbit ∩ `E_inf`, tight spine
 blocks, the descent tree with both places, and the typing of every DAG
-finishing move as the transversality statement),
+finishing move as the transversality statement; PROVED and audited upstream today),
 the S13 note [`collatz_directions_20260926.md`](collatz_directions_20260926.md)
 (`E_inf`; Proposition 4: no prefix rank),
 the S14 note [`collatz_shadow_error_flp_20260927.md`](collatz_shadow_error_flp_20260927.md)
