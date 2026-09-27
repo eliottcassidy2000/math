@@ -1108,7 +1108,7 @@ a certified region"; Langlands and loom connections. Notes
 * Dictionary: precision = 2-adic bits consumed `A = v_1 + ... + v_j`;
   certified class = residue class mod `2^A` with a coefficient descent;
   insufficient-precision residual = the no-descent words, density `D(k)`
-  among odd `n` (`D(41) = 0.00265`, `D(60) = 0.00062`; exact order THM-4495).
+  among odd `n` (`D(41) = 0.00265`, `D(60) = 0.00062`; exponent `(1-h*)/rho* = 0.0793` per Syracuse step; `T`-coded counts by THM-4495).
   The classical sieve certifies `99.73` per cent of odd integers within `41`
   Syracuse steps; the swaplift bank `37.87` per cent.
 * THM-4512 (PROVED): every member of a coefficient-descent class above

@@ -37,8 +37,11 @@ representative (none at all for `j <= 14` except `n = 1`, and no odd
 whose density among odd integers after `k` Syracuse steps is `D(k)`:
 `D(41) = 0.00265` (the classical sieve certifies `99.73` per cent of odd
 integers within `41` steps, against the swaplift bank's `37.87` per cent),
-`D(60) = 0.00062`, with the exact order `2^(-(1-h*)k) k^(-3/2)` up to
-constants in `T`-coding (THM-4495). Controlling this residual *in density*
+`D(60) = 0.00062`; in `T`-coding the residual counts are THM-4495's `W_k`,
+of exact order `2^(h* k) k^(-3/2)`, and per Syracuse step the residual
+decays with exponent `(1 - h*)/rho* = 0.0793` (`D(k)^(1/k) -> 2^(-0.0793) =
+0.9465`), since a no-descent word of `k` odd steps has about `k/rho*` map
+steps at the critical density. Controlling this residual *in density*
 is therefore done; controlling it *pointwise* is the conjecture: an orbit is
 unresolved at precision `A` iff its `A`-bit word has no descent, "resolving"
 it means extending the word until a descent appears, and "every unresolved
@@ -76,9 +79,12 @@ D(k): 1/2   3/8   1/4   13/64  19/128  1/8   113/1024  367/4096   0.05212   0.03
 D(k): 0.00875  0.00593  0.00427  0.00299  0.00265  0.00156  0.00112  0.00082  0.00062
 ```
 
-`D(k)^(1/k)` rises from `0.865` at `k = 40` to `0.884` at `k = 60`, towards the
-limit `2^(-(1-h*)) = 0.9659` forced by THM-4495's exponent (the `k^(-3/2)`
-factor makes the approach slow). In `T`-coding the corresponding counts are
+`D(k)^(1/k)` rises from `0.865` at `k = 40` to `0.884` at `k = 60`; the limit is
+`2^(-(1-h*)/rho*) = 2^(-0.0793) = 0.9465` (a no-descent word with `k` odd
+steps has `A ~ k/rho` map steps and weight `2^(-A)`, and `(1 - h(rho))/rho` is
+minimal at `rho = rho* = log_3 2`, where it equals `0.0793`); the polynomial
+factor of THM-4495 (`A^(-3/2)` in `T`-coding) is what makes the approach
+slow, and its exact form in Syracuse coding is not derived here. In `T`-coding the corresponding counts are
 `W_k` (`W_41 = 12805670000`, `W_60 = 2216134944775156`, density `W_k/2^k`
 among all integers). The two codings index precision differently (`k`
 Syracuse steps versus `k` map steps) and are not to be compared row by row.

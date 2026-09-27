@@ -9,6 +9,12 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-26 precision residual note (opus S11): a T-coding exponent transferred to Syracuse coding without the change of clock
+
+- **What was written.** That the Syracuse-coded residual density `D(k)` (odd `n` with no coefficient descent within `k` Syracuse steps) tends to `2^(-(1-h*))` per step, "forced by THM-4495's exponent".
+- **Why it was wrong.** THM-4495's `W_A = Theta(2^(h* A) A^(-3/2))` counts `T`-coded words of length `A` (map steps); a Syracuse word of `k` odd steps at density `rho` has `A = k/rho` map steps and weight `2^(-A)`, so per Syracuse step the exponent is `(1 - h(rho))/rho`, minimal at `rho* = log_3 2` where it equals `0.0793`: `D(k)^(1/k) -> 2^(-0.0793) = 0.9465`, not `0.9659`. Caught by the author on rereading, one checkpoint after publication; corrected in the note, the index, the ledger and the synthesis.
+- **Mechanism to remember.** Two codings of the same orbit run on different clocks (map steps versus odd steps); an exponent per step must be converted with the density of odd steps, and the conversion changes which density dominates the sum.
+
 ## 2026-09-26 Gilbreath wall theorem (opus S10): a hypothesis the proof never used, a PROVED label without a proof, and a heuristic called a consequence
 
 - **What was written.** THM-4511 was stated for a *lone* defect of size `4`, with the remark that "a second `4` arriving at column `F` after the first has died can find column `c` at `0` and cross", and the ledger/index said "interacting defects remain open".

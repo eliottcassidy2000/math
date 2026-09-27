@@ -386,7 +386,7 @@ all heights (THM-1289, published), δ ineffective.
 
   **Precision residual and size-6 law (opus, 2026-09-26, S11):** the reset lane's 'insufficient-precision
   residual' is the no-descent set: density D(k) among odd n after k Syracuse steps, D(41) = 0.00265
-  (classical sieve certifies 99.73 per cent within 41 steps; the swaplift bank 37.87 per cent), exact
+  (classical sieve certifies 99.73 per cent within 41 steps; the swaplift bank 37.87 per cent), T-coded
   order by THM-4495. THM-4512 (PROVED): a coefficient-descent class is certified above
   N(w) = S_j/(2^A - 3^j) < 2^A (all j <= 5000), so at most its representative is uncertified; none
   for j <= 14 except n = 1; sigma = sigma_inf for all odd 3 <= n <= 10^7. 'Every unresolved orbit
