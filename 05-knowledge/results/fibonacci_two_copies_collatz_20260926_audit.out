@@ -1,0 +1,190 @@
+
+== A1. symbolic identities (sympy; a = phi^x, c = cos(pi x), s = sin(pi x); cos(pi(x+1)) = -c, phi^(x+1) = phi a) ==
+ [PASS] recurrence F(x+2) = F(x+1) + F(x) for all real x: residual = 0
+ [PASS] twist F(-x) = -cos(pi x) F(x) + phi^-x sin^2(pi x)/sqrt5: residual = 0
+ [PASS] smooth Cassini F(x+1)^2 - F(x) F(x+2) = cos(pi x): residual = 0 (uses phi^2 + phi^-2 = 3)
+ [PASS] F(-n) = F_(-n) = (-1)^(n+1) F_n (symbolic in integer n)
+
+== A2. numeric spot checks at 50 digits ==
+ [PASS] F(n) = F_n for -60 <= n <= 60 (max error 5.3e-38)
+ [PASS] recurrence / twist / Cassini at 40 random x in [-12, 12]: 3.5e-48 1.7e-49 8.5e-47
+ [PASS] F(0) = F(2) - F(1) = 0 is forced by the recurrence at x = 0 for every interpolant
+
+== A3. the interpolant-family claim ('every function satisfying the recurrence with F(n) = F_n is F + r(x) phi^-x sin(pi x), r 1-periodic') ==
+ [PASS] counterexample G = F + sin^2(pi x) phi^x satisfies the recurrence (sin^2 is 1-periodic)
+ [PASS] G(n) = F_n at all integers -60..60
+ [PASS] G - F is NOT r phi^-x sin(pi x) with r 1-periodic: r(1.3)/r(0.3) = -2.618034 (would be 1)
+ [PASS] H = (phi^x - cos^3(pi x) phi^-x)/sqrt5 satisfies the recurrence (cos^3 is antiperiodic)
+ [PASS] H(n) = F_n at all integers -60..60
+  mean oscillation on [-30,-25] (int |F| phi^x dx vs int |H| phi^x dx): 1.423481 vs 0.94901673  (limits 5*2/(pi sqrt5) = 1.4235251, 5*4/(3 pi sqrt5) = 0.94901672)
+ [PASS] H oscillates LESS than Binet's F on the negative axis (mean |.|): Binet is not the unique minimal-oscillation interpolant
+  sup of |.| phi^x sqrt5 on [-30,-29]: F -> 1 and H -> 1 (both attained at the integer, where the values are forced): 'amplitude' does not single out Binet either
+  verdict A3: the claimed family is INCOMPLETE (missing a(x) phi^x, a 1-periodic vanishing at integers) and 'unique minimal oscillation' is only shown for CONSTANT r.
+  correct statement: interpolants = F + a(x) phi^x + r(x) phi^-x sin(pi x), a, r 1-periodic, a(n) = 0; with a = 0 and r constant the family is the note's,
+  and both restrictions follow from an extra hypothesis such as 'entire of exponential type <= pi' (then periodic coefficients are constants), which the note does not state.
+
+== A4. zeros of F on the negative axis (mpmath findroot, 30 digits) ==
+  zeros: ['0.0', '-0.1838023597', '-1.570776468', '-2.47042684', '-3.510851385', '-4.495795335', '-5.501597057', '-6.499388683', '-7.500233313', '-8.499910855', '-9.500034046', '-10.49998699', '-11.50000497']
+ [PASS] note's zero list (4 decimals) reproduced
+  sign changes of F on [-12, 0.5] at step 1e-3: 12 (plus the exact zero at 0): 13 zeros in [-12, 0] as the script found
+ [PASS] zeros converge to the half-integers -(k+1/2): |z_k + k + 1/2| for k = 6..11 = ['0.000611', '0.000233', '8.91e-5', '3.4e-5', '1.3e-5', '4.97e-6']
+  (the zero -1.570776... is NOT -pi/2 = -1.570796...; a coincidence to 4 decimals, not claimed by the note)
+  F_r = F + r phi^-x sin(pi x)/sqrt5: on the negative axis F_r ~ -phi^|x| (cos(pi x) - r sin(pi x))/sqrt5, envelope phi^|x| sqrt(1+r^2)/sqrt5, minimal at r = 0 among CONSTANT r: correct as far as it goes.
+
+== B1. shadow proposition, first statement: odd n with EXACT valuation word w form ONE class mod 2^(A+1) (brute force) ==
+  w = (1,)                   A =  1 S =      1 x_w =         -1  exact class = 3 mod 2^2 (8 members in [-2^4, 2^4)), coarse class mod 2^1 has 16: ok
+  w = (1, 2)                 A =  3 S =      5 x_w =         -5  exact class = 11 mod 2^4 (8 members in [-2^6, 2^6)), coarse class mod 2^3 has 16: ok
+  w = (1, 1, 2)              A =  4 S =     19 x_w =     -19/11  exact class = 7 mod 2^5 (8 members in [-2^7, 2^7)), coarse class mod 2^4 has 16: ok
+  w = (1, 1, 1, 2, 1, 1, 4)  A = 11 S =   2363 x_w =        -17  exact class = 4079 mod 2^12 (8 members in [-2^14, 2^14)), coarse class mod 2^11 has 16: ok
+  w = (2, 1)                 A =  3 S =      7 x_w =         -7  exact class = 9 mod 2^4 (8 members in [-2^6, 2^6)), coarse class mod 2^3 has 16: ok
+  w = (1, 3)                 A =  4 S =      5 x_w =        5/7  exact class = 19 mod 2^5 (8 members in [-2^7, 2^7)), coarse class mod 2^4 has 16: ok
+  w = (2, 2, 1)              A =  5 S =     37 x_w =       37/5  exact class = 33 mod 2^6 (8 members in [-2^8, 2^8)), coarse class mod 2^5 has 16: ok
+  w = (3, 1, 1, 1, 1)        A =  7 S =    601 x_w =   -601/115  exact class = 253 mod 2^8 (8 members in [-2^10, 2^10)), coarse class mod 2^7 has 16: ok
+  w = (1, 1, 1, 1, 4)        A =  8 S =    211 x_w =     211/13  exact class = 95 mod 2^9 (8 members in [-2^11, 2^11)), coarse class mod 2^8 has 16: ok
+  w = (4,)                   A =  4 S =      1 x_w =       1/13  exact class = 5 mod 2^5 (8 members in [-2^7, 2^7)), coarse class mod 2^4 has 16: ok
+  w = (1, 1, 5, 1)           A =  8 S =    185 x_w =      37/35  exact class = 279 mod 2^9 (8 members in [-2^11, 2^11)), coarse class mod 2^8 has 16: ok
+  w = (2, 3, 4)              A =  9 S =     53 x_w =     53/485  exact class = 17 mod 2^10 (8 members in [-2^12, 2^12)), coarse class mod 2^9 has 16: ok
+  w = (1, 1, 4, 3, 2, 2)     A = 13 S =   4673 x_w =  4673/7463  exact class = 1623 mod 2^14 (8 members in [-2^16, 2^16)), coarse class mod 2^13 has 16: ok
+  w = (4, 4, 2, 2, 2)        A = 14 S =   9985 x_w = 9985/16141  exact class = 10949 mod 2^15 (8 members in [-2^17, 2^17)), coarse class mod 2^14 has 16: ok
+  w = (4, 1, 1, 2, 1, 3)     A = 12 S =   4259 x_w =  4259/3367  exact class = 1573 mod 2^13 (8 members in [-2^15, 2^15)), coarse class mod 2^12 has 16: ok
+  w = (3, 4)                 A =  7 S =     11 x_w =     11/119  exact class = 13 mod 2^8 (8 members in [-2^10, 2^10)), coarse class mod 2^7 has 16: ok
+  w = (4, 4, 4, 4, 2, 3)     A = 21 S = 504067 x_w = 29651/123319  exact class = 3690181 mod 2^22 (8 members in [-2^24, 2^24)), coarse class mod 2^21 has 16: ok
+ [PASS] exact word <=> one class mod 2^(A+1) = x_w mod 2^(A+1) = THM-4512's E_w; coarse (last valuation >= v_p) <=> one class mod 2^A = C_w; x_w has word w^inf
+
+== B2. U^(mp)(n) = (3^p/2^A)^m (n - x_w) + x_w for n = x_w mod 2^(mA+1), both signs, exact rationals ==
+ [PASS] shadow formula on 17 words x m = 1,2,3 x 12 random members of each sign
+ [PASS] number of exactly-shadowed periods = floor((v2(n - x_w) - 1)/A) (200 random n per word, 6 words)
+ [PASS] sign: x_w < 0 iff 3^p > 2^A (S_w > 0 always, its t = 0 term is 3^(p-1))
+
+== B3. negative odd cycles of U with |n| <= 10^6: full basin scan ==
+  every odd n in [-10^6, -1] reaches one of 3 cycles; largest |value| met on the way: 26164105327
+  cycle [-1]: word (1,), p = 1, A = 1, S = 1, 3^p - 2^A = 1, x_w = -1, factor 3^p/2^A = 3/2 = 1.50000
+  cycle [-5, -7]: word (1, 2), p = 2, A = 3, S = 5, 3^p - 2^A = 1, x_w = -5, factor 3^p/2^A = 9/8 = 1.12500
+  cycle [-17, -25, -37, -55, -41, -61, -91]: word (1, 1, 1, 2, 1, 1, 4), p = 7, A = 11, S = 2363, 3^p - 2^A = 139, x_w = -17, factor 3^p/2^A = 2187/2048 = 1.06787
+ [PASS] exactly three negative odd cycles meet |n| <= 10^6 (and every such n lies in their basin): [-17, -5, -1]
+ [PASS] 3^7 - 2^11 = 139 (the owner's 139) and x_w = 2363/(-139) = -17
+ [PASS] script residues: -1 mod 4/16/2^11 = 3, 15, 2047; -5 mod 16/2^10/2^31 = 11, 1019, 2147483643; -17 mod 2^12 = 4079
+
+== B4. the '120 primitive no-descent words with p <= 8 up to rotation' ==
+ [PASS] script's rule reproduced: 120
+  no-descent words of length <= 8 (all rotations counted separately): 313
+  primitive growth necklaces (rational negative cycles) with p <= 8: brute force 130, Moebius 130
+  necklaces with at least one no-descent rotation (cycle lemma predicts all): 130
+  necklaces whose LEX-MIN rotation is no-descent (= the script's count): 120
+  necklaces MISSED by the script's rule (min rotation has a coefficient descent although another rotation is no-descent):
+    min rotation (1, 1, 1, 1, 4, 1, 1, 2) (A = 12, 3^p/2^A = 1.6018); no-descent rotation(s) [(1, 1, 2, 1, 1, 1, 1, 4), (1, 2, 1, 1, 1, 1, 4, 1)]; x_w = -10561/2465
+    min rotation (1, 1, 1, 1, 4, 1, 2) (A = 11, 3^p/2^A = 1.0679); no-descent rotation(s) [(1, 2, 1, 1, 1, 1, 4)]; x_w = -3179/139
+    min rotation (1, 1, 1, 2, 3, 1, 1, 2) (A = 12, 3^p/2^A = 1.6018); no-descent rotation(s) [(1, 1, 2, 1, 1, 1, 2, 3), (1, 2, 1, 1, 1, 2, 3, 1)]; x_w = -10993/2465
+    min rotation (1, 1, 1, 2, 3, 1, 2) (A = 11, 3^p/2^A = 1.0679); no-descent rotation(s) [(1, 2, 1, 1, 1, 2, 3)]; x_w = -3323/139
+    min rotation (1, 1, 1, 3, 2, 1, 1, 2) (A = 12, 3^p/2^A = 1.6018); no-descent rotation(s) [(1, 1, 2, 1, 1, 1, 3, 2), (1, 2, 1, 1, 1, 3, 2, 1)]; x_w = -11857/2465
+    min rotation (1, 1, 1, 3, 2, 1, 2) (A = 11, 3^p/2^A = 1.0679); no-descent rotation(s) [(1, 2, 1, 1, 1, 3, 2)]; x_w = -3611/139
+    min rotation (1, 1, 1, 4, 1, 1, 2) (A = 11, 3^p/2^A = 1.0679); no-descent rotation(s) [(1, 1, 2, 1, 1, 1, 4)]; x_w = -4187/139
+    min rotation (1, 1, 2, 1, 3, 1, 2) (A = 11, 3^p/2^A = 1.0679); no-descent rotation(s) [(1, 2, 1, 1, 2, 1, 3)]; x_w = -3539/139
+    min rotation (1, 1, 2, 2, 2, 1, 2) (A = 11, 3^p/2^A = 1.0679); no-descent rotation(s) [(1, 2, 1, 1, 2, 2, 2)]; x_w = -3827/139
+    min rotation (1, 1, 3, 1, 2, 1, 2) (A = 11, 3^p/2^A = 1.0679); no-descent rotation(s) [(1, 2, 1, 2, 1, 1, 3)]; x_w = -4259/139
+ [FAIL] '120' equals the number of primitive growth necklaces with p <= 8: it does not: 130 necklaces; 120 = those whose lexicographically minimal rotation happens to be no-descent
+ [PASS] cycle lemma: every growth necklace has a no-descent rotation
+ [PASS] Moebius count agrees with brute force
+  integer fixed points among ALL 130 primitive growth necklaces p <= 8: [((1,), Fraction(-1, 1)), ((1, 1, 1, 2, 1, 1, 4), Fraction(-17, 1)), ((1, 2), Fraction(-5, 1))]
+ [PASS] exactly (1) -> -1, (1,2) -> -5, (1,1,1,2,1,1,4) -> -17 (rotation-invariant property, so the missed necklaces cannot add any)
+  primitive growth necklaces by period p = 1..12: {1: 1, 2: 1, 3: 1, 4: 3, 5: 4, 6: 13, 7: 47, 8: 60, 9: 222, 10: 298, 11: 1125, 12: 4191} (total 5966)
+ [PASS] integer negative cycle points with primitive period <= 12: only -1, -5, -17
+ [PASS] (1,1,2): x = -19/11, factor 27/16 (note's example)
+
+== B5. the two families ==
+ [PASS] 27 family 4*8^k - 5 = [27, 251, 2043, 16379, 131067, 1048571, 8388603], n_(k+1) = 8 n_k + 35
+ [PASS] v2(n_k + 5) = 3k + 2 exactly (so n_k = -5 mod 2^(3k+2), stronger than the note's mod 2^(3k)); shadowed periods floor((3k+1)/3) = k
+ [PASS] lane's formula U^(2j)(n_k) = 4 9^j 8^(k-j) - 5 for 0 <= j <= k, word (1,2)^j = shadow formula with x = -5
+ [PASS] (4^k+17)/3 = [7, 11, 27, 91, 347, 1371, 5467, 21851], n_(k+1) = 4 n_k - 17, integers
+ [PASS] v2(n_k - 17/3) = 2k (n_k - 17/3 = 4^k/3): 2-adic limit 17/3
+ [PASS] orbit of 17/3 under U: ['17/3', '9', '7', '11', '17', '13', '5', '1']
+ [PASS] first-descent times k = 3..9: [37, 28, 6, 6, 6, 6, 6]; k = 10..30 all 6: True
+ [PASS] word of 17/3 = (1, 2, 1, 1, 2, 3) (A_6 = 10, 3^6 < 2^10: a DESCENT word); U^j(n_k) = (3^j/2^A_j)(n_k - 17/3) + U^j(17/3) for k >= 6, j <= 6
+  hence U^6(n_k) = 243 4^(k-5) + 5 < n_k = (4^k+17)/3 for k >= 6 and the first five iterates 2^(2k-1)+9, 3 2^(2k-3)+7, 9 2^(2k-4)+11, 27 2^(2k-5)+17, 81 2^(2k-7)+13 exceed n_k:
+  exactly the constants 9, 7, 11, 17, 13, 5 of nextforest_20260926_boundary.md section 6 -- the note's '17/3' reading is a correct explanation of that lane's formulas (k = 5 needs the separate check: 2k = 10 < A_6 + 1 = 11).
+
+== B6. D(k) of S11 (density among odd integers of exact no-descent words of length k) and the periodic fraction ==
+ [PASS] D(1..8) = ['1/2', '3/8', '1/4', '13/64', '19/128', '1/8', '113/1024', '367/4096'] (matches the S11 table)
+ [PASS] D(12..60) match S11 to 5 decimals: {12: '0.05212', 16: '0.03092', 20: '0.01925', 24: '0.01314', 28: '0.00875', 32: '0.00593', 36: '0.00427', 40: '0.00299', 41: '0.00265', 48: '0.00156', 52: '0.00112', 56: '0.00082', 60: '0.00062'}
+ [PASS] D(41) = 1530343662856563/2^59 exactly
+  periodic no-descent words (w = u^m, m >= 2; u no-descent <=> u^m no-descent) as a fraction of D(k), upper bound summing over all divisors:
+    k =  4: D(k) = 2.031e-01, periodic part <= 1.406e-01, ratio <= 6.92e-01
+    k =  8: D(k) = 8.960e-02, periodic part <= 1.562e-02, ratio <= 1.74e-01
+    k = 12: D(k) = 5.212e-02, periodic part <= 1.892e-03, ratio <= 3.63e-02
+    k = 16: D(k) = 3.092e-02, periodic part <= 1.329e-04, ratio <= 4.30e-03
+    k = 24: D(k) = 1.314e-02, periodic part <= 1.469e-06, ratio <= 1.12e-04
+    k = 32: D(k) = 5.927e-03, periodic part <= 1.320e-08, ratio <= 2.23e-06
+    k = 40: D(k) = 2.986e-03, periodic part <= 1.545e-10, ratio <= 5.17e-08
+    k = 48: D(k) = 1.559e-03, periodic part <= 1.872e-12, ratio <= 1.20e-09
+    k = 60: D(k) = 6.152e-04, periodic part <= 2.498e-15, ratio <= 4.06e-12
+  the 'aperiodic words dominate by an exponential margin' claim is supported (ratio ~ 2^(-0.4 k)); the note's own evidence (3 2^-K vs D(k)) only concerns the three integer rules.
+  note: the script's 'residual at ~K/1.58 Syracuse steps is of order 10^-2..10^-3' is loose: D(8) = 0.0896 at K = 12 bits.
+
+== B7. what the owner's summary refers to: the codex lane's three rule NODES (entry_20260927_board.md (B1)-(B3)) and its decreasing-parameter family N(k,h) ((B5)-(B6)) ==
+  k = 0, t =  1, b =      1: n = 3, first descent at step 2, word (1, 4)
+  k = 0, t =  1, b =    117: n = 931, first descent at step 2, word (1, 5)
+  k = 1, t =  1, b =      1: n = 59, first descent at step 4, word (1, 2, 1, 4)
+  k = 1, t =  1, b =    145: n = 9275, first descent at step 4, word (1, 2, 1, 4)
+  k = 2, t =  1, b =      1: n = 507, first descent at step 6, word (1, 2, 1, 2, 1, 4)
+  k = 2, t =  1, b =    201: n = 102907, first descent at step 6, word (1, 2, 1, 2, 1, 4)
+  k = 3, t =  1, b =      1: n = 4091, first descent at step 8, word (1, 2, 1, 2, 1, 2, 1, 4)
+  k = 3, t =  1, b =    121: n = 495611, first descent at step 8, word (1, 2, 1, 2, 1, 2, 1, 4)
+  k = 4, t =  1, b =      1: n = 32763, first descent at step 10, word (1, 2, 1, 2, 1, 2, 1, 2, 1, 4)
+  k = 4, t =  1, b =    117: n = 3833851, first descent at step 10, word (1, 2, 1, 2, 1, 2, 1, 2, 1, 5)
+  k = 5, t =  2, b =      1: n = 262139, first descent at step 12, word (1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 4)
+  k = 5, t =  2, b =    265: n = 69468155, first descent at step 12, word (1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 4)
+  k = 6, t =  2, b =      1: n = 2097147, first descent at step 14, word (1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 4)
+  k = 6, t =  2, b =    305: n = 639631355, first descent at step 14, word (1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 4)
+ [PASS] (B2) cylinders: exact first-descent time 2k+2 with word (1,2)^k . 1 . t' = the nodes Repeat12(k), Step, Step: a -5 shadow for k periods, one v = 1 step, one descent step; the -17 word never occurs
+  so the lane's 'three parameterized rules' are three NODES of one certificate grammar for the cylinders b 8^(k+1) - 5, not three growth rules matching the three cycles -1, -5, -17.
+  the owner's 'separate closed family through 27 with a decreasing recursion parameter' is (B5)-(B6): N(k,h) = 2(47 4^h + 7) 8^k / 3^(2k+1) - 5 with 47 4^h = -7 mod 3^(2k+1):
+  k = 1, least h =     0: N = 27 (5 bits), v2(N+5) = 5 (3k+1, or 3k+2 when h = 0), U^2 N = N(k-1,h): True, U N(0,h) = 47: True, first descent at step 37, first 1 at step 41, in the (4^k+17)/3 family: True
+  k = 2, least h =    45: N = (large) (95 bits), v2(N+5) = 7 (3k+1, or 3k+2 when h = 0), U^2 N = N(k-1,h): True, U N(0,h) = 47: True, first descent at step 5, first 1 at step 43, in the (4^k+17)/3 family: False
+  k = 3, least h =   369: N = (large) (743 bits), v2(N+5) = 10 (3k+1, or 3k+2 when h = 0), U^2 N = N(k-1,h): True, U N(0,h) = 47: True, first descent at step 7, first 1 at step 45, in the (4^k+17)/3 family: False
+  k = 4, least h =  6201: N = (large) (12407 bits), v2(N+5) = 13 (3k+1, or 3k+2 when h = 0), U^2 N = N(k-1,h): True, U N(0,h) = 47: True, first descent at step 9, first 1 at step 47, in the (4^k+17)/3 family: False
+  k = 5, least h = 52128: N = (large) (104261 bits), v2(N+5) = 16 (3k+1, or 3k+2 when h = 0), U^2 N = N(k-1,h): True, U N(0,h) = 47: True, first descent at step 11, first 1 at step 49, in the (4^k+17)/3 family: False
+ [PASS] N(k,h): a -5 GROWTH shadow for k periods (N = -5 mod 2^(3k+1), 2k rising steps) exiting to 47 by one large-valuation step (first descent 2k+1 except for 27), first 1 at 2k+39; meets the (4^k+17)/3 family only at 27
+  hence the note's item 3 ('the "decreasing recursion parameter" family is a descent shadow, not a growth one') attaches the owner's phrase to the wrong family;
+  the decreasing parameter k counts the remaining -5 shadow periods, and the family is a growth shadow with a designed exit, the opposite of what the note says.
+
+== C1. negaFibonacci: existence and uniqueness by enumeration (all non-consecutive subsets of {1..30}) ==
+ [PASS] number of subsets = F_32 = 2178309
+ [PASS] sums are exactly the integers of [-1346268, 832040], each once (uniqueness on this range)
+ [PASS] range(m) = [-(F_m - 1), F_(m+1)] (m odd) / [-(F_(m+1) - 1), F_m] (m even) for m <= 24 (and m = 30 above)
+  a subset with largest index k >= 31 has |sum| >= F_k - F_(k-2) = F_(k-1) >= F_30 = 832040 > 10^5 (the opposite-sign terms have indices of the other parity <= k-2 and sum to at most F_(k-2)),
+  so the enumeration with indices <= 30 is complete for |N| <= 10^5: existence and uniqueness there are PROVED by this run.
+ [PASS] interval-greedy representation = enumerated subset for all |N| <= 10^5 (non-consecutive, unique)
+ [PASS] note's small cases 1, -1, 2, -2, 3, -3, 4, -4, 5, 8
+  -8..8: ['-8=F(-6)', '-7=F(-1)+F(-6)', '-6=F(-3)+F(-6)', '-5=F(-1)+F(-3)+F(-6)', '-4=F(-2)+F(-4)', '-3=F(-4)', '-2=F(-1)+F(-4)', '-1=F(-2)', '0=0', '1=F(-1)', '2=F(-3)', '3=F(-1)+F(-3)', '4=F(-2)+F(-5)', '5=F(-5)', '6=F(-1)+F(-5)', '7=F(-3)+F(-5)', '8=F(-1)+F(-3)+F(-5)']
+
+== C2. class densities by lowest index (k = 1: +1, k = 2: -1, odd >= 3, even >= 4), both signs, |N| <= 10^5 and 10^6 ==
+  X = 100000 positive: {'k=1': '0.38197', 'k=2': '0.23607', 'odd>=3': '0.23611', 'even>=4': '0.14585'}  max |dens - phi^-(2,3,3,4)| = 4.80e-05; per index k=1..8: {1: '0.38197', 2: '0.23607', 3: '0.14590', 4: '0.09017', 5: '0.05573', 6: '0.03444', 7: '0.02129', 8: '0.01315'}
+ [PASS] positive |N| <= 10^5: 4-decimal densities 0.3820/0.2361/0.2361/0.1459 (note)
+ [PASS] positive |N| <= 100000: within 1e-4 of phi^-2, phi^-3, phi^-3, phi^-4 (per-index density ~ phi^-(k+1))
+  X = 100000 negative: {'k=1': '0.38196', 'k=2': '0.23608', 'odd>=3': '0.23601', 'even>=4': '0.14595'}  max |dens - phi^-(2,3,3,4)| = 5.80e-05; per index k=1..8: {1: '0.38196', 2: '0.23608', 3: '0.14589', 4: '0.09018', 5: '0.05572', 6: '0.03445', 7: '0.02128', 8: '0.01316'}
+ [PASS] negative |N| <= 10^5: 4-decimal densities 0.3820/0.2361/0.2361/0.1459 (note)
+ [PASS] negative |N| <= 100000: within 1e-4 of phi^-2, phi^-3, phi^-3, phi^-4 (per-index density ~ phi^-(k+1))
+  X = 1000000 positive: {'k=1': '0.38197', 'k=2': '0.23607', 'odd>=3': '0.23608', 'even>=4': '0.14589'}  max |dens - phi^-(2,3,3,4)| = 9.03e-06; per index k=1..8: {1: '0.38197', 2: '0.23607', 3: '0.14590', 4: '0.09017', 5: '0.05573', 6: '0.03444', 7: '0.02129', 8: '0.01316'}
+ [PASS] positive |N| <= 1000000: within 3e-5 of phi^-2, phi^-3, phi^-3, phi^-4 (per-index density ~ phi^-(k+1))
+  X = 1000000 negative: {'k=1': '0.38197', 'k=2': '0.23607', 'odd>=3': '0.23606', 'even>=4': '0.14590'}  max |dens - phi^-(2,3,3,4)| = 4.98e-06; per index k=1..8: {1: '0.38197', 2: '0.23607', 3: '0.14590', 4: '0.09017', 5: '0.05573', 6: '0.03444', 7: '0.02129', 8: '0.01316'}
+ [PASS] negative |N| <= 1000000: within 3e-5 of phi^-2, phi^-3, phi^-3, phi^-4 (per-index density ~ phi^-(k+1))
+
+== C3. Zeckendorf classes on positives and the two unit classes ==
+  Zeckendorf lowest-index classes N <= 10^5: {'even>=4': '0.2361', 'k=2': '0.3820', 'odd>=3': '0.3820'} (phi^-2 = 0.3820, phi^-3 = 0.2361)
+ [PASS] Zeckendorf classes 0.3820, 0.3820, 0.2361 (S8 Wythoff classes)
+  X = 100000: Zeckendorf ends in F_2: 38197 (0.38197), negaFibonacci ends in F_(-1): 38197 (0.38197), both: 14590 (0.145900); phi^-4 X = 14589.80, deviation +0.20
+ [PASS] X = 100000: Zeckendorf ends in F_2  <=>  N+1 is in the upper Wythoff sequence  <=>  {(N+1) phi} < phi^-2   (exact, isqrt arithmetic)
+ [PASS] X = 100000: negaFibonacci ends in F_(-1)  <=>  N = 1 or N-1 is in the upper Wythoff sequence  <=>  {(N-1) phi} < phi^-2
+ [PASS] X = 100000: intersection count is within 2 of phi^-4 X (bounded discrepancy => the density is EXACTLY phi^-4)
+  X = 1000000: Zeckendorf ends in F_2: 381966 (0.38197), negaFibonacci ends in F_(-1): 381967 (0.38197), both: 145899 (0.145899); phi^-4 X = 145898.03, deviation +0.97
+ [PASS] X = 1000000: Zeckendorf ends in F_2  <=>  N+1 is in the upper Wythoff sequence  <=>  {(N+1) phi} < phi^-2   (exact, isqrt arithmetic)
+ [PASS] X = 1000000: negaFibonacci ends in F_(-1)  <=>  N = 1 or N-1 is in the upper Wythoff sequence  <=>  {(N-1) phi} < phi^-2
+ [PASS] X = 1000000: intersection count is within 2 of phi^-4 X (bounded discrepancy => the density is EXACTLY phi^-4)
+  proof of the independence: in u = {N phi}, class B (Zeckendorf ends in F_2) is u in [phi^-2, 2 phi^-2) and class A (nega ends in F_(-1)) is u in [phi^-1, 1);
+  the intersection [phi^-1, 2 phi^-2) has length 2 phi^-2 - phi^-1 = phi^-2 (2 - phi) = phi^-4 exactly (2 - phi = phi^-2). Equidistribution of N phi mod 1 gives the densities.
+ [PASS] R_3 (indices >= 3 only) = {floor(N phi^2): N in Z} on [-10^5, 10^5] (shift by two indices = multiplication by phi^2 minus the golden expansion sum {N phi^2})
+ [PASS] 'negaFibonacci index set = Zeckendorf set shifted by one' holds for exactly N = 1 among N <= 10^5 (note says 'for no N'): [1]
+
+== summary ==
+ failed checks: 1 ["'120' equals the number of primitive growth necklaces with p <= 8"]
+ elapsed 51.4 s

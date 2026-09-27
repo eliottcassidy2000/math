@@ -398,9 +398,10 @@ all heights (THM-1289, published), δ ineffective.
   consecutive units; Zeckendorf right, negaFibonacci left; real Binet function with the twist
   F(-x) = -cos(pi x)F(x) + ..., F(0) = 0 forced); negaFibonacci classes phi^-2, phi^-3, phi^-3, phi^-4
   for both signs. Collatz: growth families are 2-adic shadows of negative rational cycle points
-  x_w = S_w/(2^A - 3^p) (shadow proposition, classes mod 2^(A+1)); the three parameterized rules are
-  the three integer negative cycles -1, -5, -17; the 27 family converges to -5, (4^k+17)/3 to 17/3
-  (descends). Note: `fibonacci_two_copies_collatz_20260926.md`.
+  x_w = S_w/(2^A - 3^p) (shadow proposition, classes mod 2^(A+1)); the three integer cycles -1, -5, -17 are
+  the only integer fixed points (130 growth necklaces, p <= 8); the lanes' certificate families (27 family,
+  codex N(k,h)) are -5 shadows, nextforest's (4^k+17)/3 converges to 17/3 (descends). Audited.
+  Note: `fibonacci_two_copies_collatz_20260926.md`.
 
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`
 (ranks HN > reconstruction > Kakeya/Falconer > sunflower > Caccetta–Häggkvist > … ).

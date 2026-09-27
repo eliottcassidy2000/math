@@ -16,18 +16,26 @@ decreasing value does not repay the original source.
 **Inherits:** the S8 Wythoff/Zeckendorf tricolor
 ([`collatz_crossings_20260926_potential_and_seeds.md`](collatz_crossings_20260926_potential_and_seeds.md)),
 [THM-4507](../../01-canon/theorems/THM-4507-finite-valuation-collatz-potential-obstruction.md)
-(rational shadows), the reset lane's families
-([swaplift](reset_20260926_swaplift.md) sections 3, 6),
+(rational shadows), the lanes' families ([swaplift](reset_20260926_swaplift.md) section 6, the
+`27` family, already read there as finite shadows of the `-5` cycle;
+[nextforest boundary](nextforest_20260926_boundary.md) section 6, the
+constant-defect family `(4^k + 17)/3`; the codex entry board
+[`entry_20260927_board.md`](entry_20260927_board.md) and
+[`entry_20260927_families.md`](entry_20260927_families.md), the three
+parameterized nodes and the family `N(k, h)`),
 [THM-4512](../../01-canon/theorems/THM-4512-coefficient-descent-classes-one-member.md)
 and the S11 precision note, Knuth's negaFibonacci representation, Lagarias
 1985 (periodic parity vectors and rational cycles).
 
 **Status: PROVED elementary identities (the real Binet function's twist and
-Cassini identities, the interpolant family; the shadow proposition) +
-FINITE-EXACT (negaFibonacci uniqueness and class densities to `10^5`; the
+Cassini identities; the shadow proposition) + FINITE-EXACT (negaFibonacci
+uniqueness and class densities to `10^5`, extended to `10^6` by the audit; the
 three integer negative cycles as the only integer fixed points among the
-`120` primitive no-descent words with `p <= 8`; the two families' 2-adic
-limits) + SPECULATION marked (the analogy). Collatz OPEN.** Scripts:
+`130` primitive growth necklaces with `p <= 8`, and among the `5966` with
+`p <= 12` (audit); the families' 2-adic limits) + SPECULATION marked (the
+analogy) + INDEPENDENTLY AUDITED (HAS GAPS -> repaired, section 7: the
+interpolant classification, a rotation-count artifact, and two misreadings
+of the owner's phrases). Collatz OPEN.** Scripts:
 `04-computation/experiments/fibonacci_two_copies_20260926.py`,
 `collatz_cycle_shadows_20260926.py`, with `.out` files.
 
@@ -45,9 +53,10 @@ numbers of both signs, satisfies the recurrence for real `x`, and its
 negative copy is the positive one with the sign twist,
 `F(-x) = -cos(pi x) F(x) + phi^(-x) sin^2(pi x)/sqrt 5`; the information the
 smooth function adds to the integers is exactly this phase `cos(pi x)`
-(and nothing else that the integers can see: every smooth interpolant
-obeying the recurrence differs from Binet's by `r phi^(-x) sin(pi x)`, and
-Binet's is the one with minimal oscillation). No such function is `1` at
+(the integers see nothing else: an interpolant obeying the recurrence
+differs from Binet's by `a(x) phi^x + s(x) phi^(-x) sin(pi x)` with `a`, `s`
+`1`-periodic and `a` vanishing at integers, and Binet's is the one with
+constant coefficients, the minimal-oscillation choice among those). No such function is `1` at
 `0`: `F(0) = F(2) - F(1) = 0` is forced, so "1 at `-1`, `0`, `1`" is a property
 of the zero-removed *sequence*, not of a recurrence-respecting function.
 The tricolor extends: the negaFibonacci classes by lowest index have the
@@ -55,15 +64,20 @@ same densities for positive and for negative integers, `phi^(-2), phi^(-3),
 phi^(-3), phi^(-4)` (four classes: lowest term `+1`, `-1`, other odd, other
 even), and the two "unit classes" on the positives (Zeckendorf ending in
 `F_2`, negaFibonacci ending in `F_(-1)`) are independent in density
-(`phi^(-2) * phi^(-2) = phi^(-4) = 0.1459`, observed `0.1459`). The Collatz
+(`phi^(-2) * phi^(-2) = phi^(-4) = 0.1459`, observed `0.1459`), because both
+are Beatty intervals of the fractional part `{N phi}` (audit). The Collatz
 reading that actually does work is the *other copy of the map*: the
-negative integers, whose three odd cycles `-1`, `-5`, `-17` are exactly the
-three parameterized growth rules, and more generally every no-descent
+negative integers, whose three odd cycles `-1`, `-5`, `-17` are the only
+integer cycle points among the growth words, while every no-descent
 valuation word `w` has a negative rational cycle point `x_w` whose 2-adic
 neighbourhoods are the recognizable growth classes (shadow proposition,
-section 4); the `27` family converges 2-adically to `-5`, the
-`(4^k + 17)/3` family to `17/3`, a positive point whose orbit reaches `1`,
-which is why its large members descend at step `6`. Precision is 2-adic
+section 4). The lanes' certificate families are `-5` shadows: the `27`
+family and the codex family `N(k, h)` (the owner's "three parameterized
+rules" are the three nodes of that one certificate grammar, `k` periods of
+the `-5` word, a rising step and a descent step; the "decreasing recursion
+parameter" is the number of shadow periods left), whereas the nextforest
+family `(4^k + 17)/3` converges to `17/3`, a positive point whose orbit
+reaches `1`, which is why its large members descend at step `6`. Precision is 2-adic
 distance to a cycle point, and "not repaying the source" is the factor
 `(3^p/2^A)^m` of the shadowed periods.
 
@@ -94,16 +108,22 @@ to `10^-12` on a grid, and proved by the same two-line computation each:
   the correction vanishes and this is `F_(-n) = (-1)^(n+1) F_n`.
 * Smooth Cassini: `F(x + 1)^2 - F(x) F(x + 2) = cos(pi x)` for all real `x`
   (using `phi^2 + phi^(-2) = 3`).
-* All interpolants: a function satisfying the recurrence for real `x` and
-  taking the values `F_n` at all integers is `F(x) + r(x) phi^(-x) sin(pi x)`
-  with `r` `1`-periodic; for constant `r`, `F_r(x) = F(x) + r phi^(-x)
-  sin(pi x)/sqrt 5` satisfies the recurrence (checked) and oscillates on the
-  negative axis with amplitude `phi^|x| sqrt(1 + r^2)/sqrt 5`, minimal at
-  `r = 0`: **Binet's formula is the unique minimal-oscillation smooth
-  extension, and the integers cannot see `r`.** That is the precise sense
-  in which the smooth function captures more: the phase `cos(pi x)` (the
-  sign pattern of the negative copy) is forced, the quadrature component
-  `sin(pi x)` is free and invisible.
+* All interpolants (corrected by the audit): the real solutions of
+  `f(x + 2) = f(x + 1) + f(x)` are `P(x) phi^x + (C(x) cos(pi x) + S(x) sin(pi x))
+  phi^(-x)` with `P, C, S` `1`-periodic, so an interpolant of all `F_n` is
+  `F(x) + a(x) phi^x + s(x) phi^(-x) sin(pi x)` with `a, s` `1`-periodic and
+  `a(n) = 0` at integers (the cosine term is absorbed into `s`); the
+  `phi^x` term cannot be dropped (`F + sin^2(pi x) phi^x` interpolates and
+  obeys the recurrence). For constant coefficients, `F_r(x) = F(x) + r
+  phi^(-x) sin(pi x)/sqrt 5` oscillates on the negative axis with amplitude
+  `phi^|x| sqrt(1 + r^2)/sqrt 5`, minimal at `r = 0`; with periodic
+  coefficients smaller mean oscillation is possible (`(phi^x - cos^3(pi x)
+  phi^(-x))/sqrt 5`, audit), so a uniqueness statement needs an extra
+  hypothesis such as exponential type at most `pi`, which forces the
+  coefficients to be constant. The precise sense in which the smooth
+  function captures more is unchanged: the phase `cos(pi x)` (the sign
+  pattern of the negative copy) is forced, everything else the integers
+  cannot see.
 * Zeros on the negative axis: `0, -0.1838, -1.5708, -2.4704, -3.5109,
   -4.4958, -5.5016, -6.4994, -7.5002, ...`, converging to the half-integers
   `-(k + 1/2)` (where `cos(pi x) = 0`): the negative copy is an oscillation
@@ -134,14 +154,21 @@ two unit classes, "Zeckendorf ends in `F_2`" and "negaFibonacci ends in
 `F_(-1)`", have density `phi^(-2)` each and intersect in density `0.1459 =
 phi^(-4) = phi^(-2) phi^(-2)`: independent in density. (A first guess that
 the negaFibonacci index set is the Zeckendorf set shifted by one is false:
-it holds for no `N <= 10^5`.) These are exact-looking observations at
-`10^5`; I have not proved the densities for the negative system.
+it holds only for `N = 1`.) The audit extended the densities to `10^6`
+(within `10^-5` of `phi^(-(k+1))` per lowest index `k`, both signs) and
+explained the independence: Zeckendorf ends in `F_2` iff `{N phi}` lies in
+`[phi^(-2), 2 phi^(-2))` (classical, `N + 1` in the upper Wythoff sequence),
+negaFibonacci ends in `F_(-1)` iff `N = 1` or `{N phi}` lies in `[phi^(-1), 1)`
+(verified exactly to `10^6`, not proved), and the intervals intersect in
+length `2 phi^(-2) - phi^(-1) = phi^(-4)`. The densities for the negative
+system are verified, not proved.
 
 ## 4. The Collatz reading: growth families are 2-adic shadows (PROVED + FINITE-EXACT)
 
 The "other copy" of the Collatz map is the map on negative integers (the
 `3x - 1` map on positives). Its odd cycles with `|n| <= 10^6` are exactly
-three: through `-1` (valuation word `(1)`, `A = 1`, factor `3/2`), through
+three (the script abandons orbits above `5 * 10^7`; the audit's full basin
+scan shows every odd `n` in `[-10^6, -1]` reaches one of them): through `-1` (valuation word `(1)`, `A = 1`, factor `3/2`), through
 `-5` (word `(1, 2)`, `A = 3`, factor `9/8`), through `-17` (word
 `(1, 1, 1, 2, 1, 1, 4)`, `A = 11`, factor `2187/2048`; the owner's `139 = 3^7 -
 2^11` is `3^p - 2^A` here). The general mechanism (Lagarias 1985: periodic
@@ -166,30 +193,51 @@ word of length `A + 1`; the rest is the affine composition and the fixed
 point. ∎ Checked: the three integer cycles for `m = 1, 3, 10` on random
 members of the classes (`n = 3 mod 4`, `15 mod 16`, `2047 mod 2^11`;
 `n = 11 mod 16`, `1019 mod 2^10`, `2147483643 mod 2^31`; `n = 4079 mod 2^12`,
-...), and every one of the `120` primitive no-descent words with `p <= 8`
-(up to rotation) with `m = 2`.
+...), and every one of the `130` primitive growth necklaces with `p <= 8`
+(rotation classes of primitive words with `3^p > 2^A`; each has a no-descent
+rotation by the cycle lemma; the script's lexicographic filter kept only
+`120` of them, an artifact the audit repaired) with `m = 2`.
 
 Consequences for the lane's board:
 
-1. **The three parameterized rules are the three integer cycles.** Among the
-   `120` primitive no-descent words with `p <= 8`, exactly three have an
-   integer fixed point: `(1) -> -1`, `(1, 2) -> -5`, `(1, 1, 1, 2, 1, 1, 4) ->
+1. **The integer cycle points are exactly three.** Among the `130` primitive
+   growth necklaces with `p <= 8` (and the `5966` with `p <= 12`, audit),
+   exactly three have an integer fixed point: `(1) -> -1`, `(1, 2) -> -5`, `(1, 1, 1, 2, 1, 1, 4) ->
    -17`. Every other no-descent word has a negative *rational* cycle point
    and gives a recognizable growth class just the same (for example `(1, 1,
    2)` gives `x = -19/11`, factor `27/16` per three steps, classes `n = -19/11
-   mod 2^(4m+1)`), so there are infinitely many "rules"; the integer ones are
-   the three whose shadowed point belongs to the family itself.
+   mod 2^(4m+1)`), so there are infinitely many possible rules; the integer ones are
+   the three whose shadowed point belongs to the family itself. The owner's
+   "three parameterized rules" is not this list: it is the three nodes
+   (`Repeat12(k)`, `Step`, `Step`) of the codex certificate grammar for the
+   cylinders `n = b 8^(k+1) - 5` (`entry_20260927_board.md`, section 1), i.e.
+   `k` periods of the `-5` word, one rising step and one descent step, with
+   first descent at exactly `2k + 2` (audit, `k <= 6`); only the `-5` word
+   occurs there. A first draft identified the phrase with the three cycles.
 2. **The `27` family.** `n_(k+1) = 8 n_k + 35` (`27, 251, 2043, 16379, ...`)
-   has fixed point `-5`, and `n_k = -5 mod 2^(3k)`: it is the `-5` shadow,
-   growing by `9/8` per period for `k` periods (the lane's `U^(2j)(n_k) = 4 *
-   9^j 8^(k-j) - 5` is the shadow formula with `x = -5`).
-3. **The `(4^k + 17)/3` family** (`7, 11, 27, 91, 347, 1371, ...`,
-   `n_(k+1) = 4 n_k - 17`) converges 2-adically to `17/3`, a *positive*
-   rational whose orbit under `U` is `17/3 -> 9 -> 7 -> 11 -> 17 -> 13 -> 5 ->
-   1`; its members shadow a descending point, and indeed their first-descent
-   times are `37, 28` (for `27, 91`) and then `6, 6, 6, 6, 6` for `k >= 5`. The
-   "decreasing recursion parameter" family is a descent shadow, not a
-   growth one.
+   has fixed point `-5`, and `v_2(n_k + 5) = 3k + 2` exactly, so `n_k = -5 mod
+   2^(3k+1)` and the shadow lasts `k` periods: it is the `-5` shadow, growing
+   by `9/8` per period (the lane's `U^(2j)(n_k) = 4 * 9^j 8^(k-j) - 5` is the
+   shadow formula with `x = -5`). The swaplift note and the reset board
+   already read this family as finite shadows of `-5 -> -7 -> -5` via
+   THM-4507; the proposition restates their mechanism exactly.
+3. **The nextforest constant-defect family `(4^k + 17)/3`** (`7, 11, 27, 91,
+   347, 1371, ...`, `n_(k+1) = 4 n_k - 17`) converges 2-adically to `17/3`, a
+   *positive* rational whose orbit under `U` is `17/3 -> 9 -> 7 -> 11 -> 17 ->
+   13 -> 5 -> 1` (word `(1, 2, 1, 1, 2, 3)`, `A_6 = 10 > log_2 3^6`); its members
+   shadow a descending point, which is why their first-descent times are
+   `37, 28` (for `27, 91`) and then `6, 6, 6, 6, 6` for `k >= 5` (to `k = 30`,
+   audit). The descent at step `6` for `k >= 6` was already proved in
+   `nextforest_20260926_boundary.md` section 6 through the explicit iterates
+   `2^(t-1) + 9, ..., 243 * 2^(t-10) + 5`; the `17/3` reading explains those
+   constants. **The owner's "decreasing recursion parameter" family is a
+   different one**: the codex family `N(k, h) = 2(47 * 4^h + 7) 8^k / 3^(2k+1) -
+   5` with `47 * 4^h = -7 mod 3^(2k+1)` (`entry_20260927_families.md`),
+   `U^2 N(k, h) = N(k - 1, h)`, `U N(0, h) = 47`: a `-5` growth shadow for `k`
+   periods with a designed exit (`v_2(N + 5) = 3k + 1`, first descent at step
+   `2k + 1` to `47`, audit `k <= 5`), the decreasing `k` counting the shadow
+   periods left. A first draft misidentified it with the `(4^k + 17)/3`
+   family (they meet only at `27`).
 4. **Precision is 2-adic distance.** A positive `n` shadows the cycle point
    `x` for exactly `floor((v_2(n - x) - 1)/A)` periods; the certificate
    length of a growth rule is the number of bits `n` shares with `x`. "A
@@ -197,15 +245,15 @@ Consequences for the lane's board:
    still inside the shadow at the checker's precision.
 5. **Not repaying the source.** After `m` shadowed periods the orbit sits at
    `(3^p/2^A)^m (n - x) + x`; the debt is the factor, and it is repaid only
-   if the continuation word has a coefficient descent *relative to `n`*
-   (THM-4512), never by a locally smaller value. This is the exact form of
+   if the full word from `n`, shadow periods included, has a coefficient
+   descent (THM-4512), never by a locally smaller value. This is the exact form of
    the owner's sentence.
 6. **Coverage.** At precision `K` bits the three integer rules cover density
-   `3 * 2^(-K)` of the integers, the union of all rational-cycle shadows at
-   that precision is the set of classes whose `K`-bit word is periodic, and
-   the whole no-descent residual is `D(k) ~ 10^(-2)`-`10^(-3)` (S11):
-   aperiodic no-descent words dominate the residual by an exponential
-   margin. Growth *rules* explain what the residual's periodic sliver looks
+   `3 * 2^(-K)` of the integers, the union of all rational-cycle shadows with at
+   least two full periods is the periodic part of the residual, which the
+   audit computed: at most `0.17, 4e-3, 5e-8, 4e-12` of `D(k)` at `k = 8, 16,
+   40, 60`; the whole residual is `D(k)` (S11): aperiodic no-descent words
+   dominate by an exponential margin. Growth *rules* explain what the residual's periodic sliver looks
    like, not the residual.
 
 ## 5. The analogy (SPECULATION, marked)
@@ -215,7 +263,8 @@ two copies are joined by the 2-adic completion: the negative integers are
 2-adic limits of positive growth families (`-5 = lim 27, 251, 2043, ...`), and
 the twist is the sign of `3^p - 2^A`. The three consecutive units
 `F_(-1), F_1, F_2` have a natural Collatz counterpart in the three trivial
-cycle points `-1, 0, 1` of `T` (`0 -> 0`; `1 -> 2 -> 1`; `-1 -> -2 -> -1`): a
+cycle points `-1, 0, 1` (under `T`: `0 -> 0`, `1 -> 2 -> 1`, `-1 -> -1`; under
+`3n + 1` itself: `1 -> 4 -> 2 -> 1`, `-1 -> -2 -> -1`): a
 symmetric core of three units around `0`, with the two copies on either
 side and the middle one (`0`, the fixed point) used by neither sign. The
 three colours could be read as the three negative integer cycles, the
@@ -230,5 +279,36 @@ about the periodic sliver of the residual; the residual itself is
 aperiodic, and the pointwise question ("does every `n` leave every shadow
 and every aperiodic no-descent stretch") is the conjecture in Terras's
 form (S11). The one open exact question raised here that is not the
-conjecture: prove the negaFibonacci class densities `phi^(-2), phi^(-3),
-phi^(-3), phi^(-4)` and the independence of the two unit classes.
+conjecture: prove the negaFibonacci Beatty characterisation (ends in `F_(-1)` iff
+`{N phi}` in `[phi^(-1), 1)`, `N != 1`) and the class densities `phi^(-2),
+phi^(-3), phi^(-3), phi^(-4)`, which the audit verified to `10^6`.
+
+## 7. Independent audit (2026-09-26)
+
+Auditor subagent: `04-computation/experiments/fibonacci_two_copies_collatz_20260926_audit.py`
+(sha256 `df72bd440cdc5e5f9d5c02e569dfb37b63af0a7494c1430903aefce236b05f29`) ->
+`05-knowledge/results/fibonacci_two_copies_collatz_20260926_audit.out`
+(sha256 `9baaf877cdb676363a5751955e50020024bdeafbf8d65aa40afb02d74c424fc9`; its one deliberate failing
+check is the note's `120` against the true `130`). CONFIRMED: the twist,
+Cassini and recurrence identities (symbolically and to `10^-47`), `F(0) = 0`
+forced, the zero list, negaFibonacci existence and uniqueness for
+`|N| <= 10^5` (proved by enumeration), the densities at `10^5` and `10^6`,
+the shadow proposition in all parts on `17` words including negative `n`,
+the three cycles and their data, the families' values, limits, orbits and
+first-descent times, the `D(k)` citation. CORRECTED (applied above): (1) the
+interpolant classification and the "unique minimal oscillation" claim;
+(2) the rotation-class count (`130`, not `120`; conclusion unchanged); (3)
+the owner's "three parameterized rules" are the codex grammar's three nodes
+on the `-5` word, not the three cycles; (4) the "decreasing recursion
+parameter" family is the codex family `N(k, h)`, a `-5` growth shadow with a
+designed exit, not the `(4^k + 17)/3` family; (5) citations (the `27` family
+is swaplift section 6 and was already read there as a `-5` shadow; the
+`(4^k + 17)/3` family is nextforest's, whose section 6 already proves the
+step-`6` descent); (6) `v_2(n_k + 5) = 3k + 2`, modulus `2^(3k+1)` for `k`
+periods; (7) the shifted-index coincidence holds for `N = 1`; (8)
+"periodic" means at least two periods, with the periodic part of the
+residual now quantified; (9) the `T` versus `3n + 1` conventions in the
+analogy; (10) the independence of the unit classes explained by Beatty
+intervals; (11) the cycle search's cutoff, repaired by the audit's basin
+scan; (12) the THM-4512 wording. Verdict: HAS GAPS -> repaired; the
+mathematics that was proved stands, the two misreadings were mine.
