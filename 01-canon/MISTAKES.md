@@ -9,6 +9,12 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-27 pricing note (opus S15, fifth note): a direction misstated the residual obstruction
+
+- What was done: direction D14 of `collatz_pricing_approaches_20260927.md` said that the points of `E_inf` that are not negative integers are 2-adically approachable by small integers, so that generic growth words carry no size price.
+- Why it was wrong: for any fixed 2-adic point `x` the least positive integer in `x + 2^K Z` is `x mod 2^K`, of size `2^(K - z_K(x))` with `z_K` the run of zero bits of `x` just below position `K`; for the Sturmian point and for fixed points of random no-descent words `z_K` is a geometric fluctuation (computed in the sixth note), so generic points are priced by size up to `O(1)` bits exactly like the cycle points. A small integer `m` approaches deeply only points `x = m mod 2^K`, i.e. points that look like `m`.
+- Correct framing: the size price `K - z_K(x)` is universal; cheap growth is the least-representative phenomenon (an integer below `2^K` following a no-descent word of precision `K` is the least member of its class), whose count is Terras's density theorem and whose pointwise form is the conjecture. The direction is corrected in place and in the sixth note.
+
 ## 2026-09-27 posets/zeta(5) note (opus S15): a direction proposed as new was already typed in the repo
 
 - What was done: the note `collatz_posets_dags_zeta5_20260927.md` offered as direction D1 the Berg–Meinardus functional equation as "the only Collatz carrier with an equation", to be attacked by Mahler-function rigidity (Adamczewski–Bell), and its inheritance pass relied on the synthesis table row 22 ("functional equations (Berg–Meinardus): typed only").

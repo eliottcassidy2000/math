@@ -248,9 +248,13 @@ orbits.
   negative integer. For the rational and irrational points of `E_inf` the
   size bound fails (a positive integer can be 2-adically close to a
   non-integer 2-adic point without being large), which is exactly why the
-  generic words are not priced by size. The obstruction is thus: the points
-  of `E_inf` that are not negative integers are 2-adically approachable by
-  small integers.
+  generic words are not priced by size. **Corrected in the sixth note:** for
+  every fixed 2-adic point `x` the depth-`K` approach class has least positive
+  member `rho_K(x) = x mod 2^K`, so the price is `K - z_K(x)` with `z_K` the
+  zero run of `x`'s bits just below position `K`, a geometric fluctuation for
+  generic points of `E_inf`; a small integer approaches deeply only the
+  points that look like it, so the obstruction is the tautology that an
+  integer's cheap growth is its own word, not a lack of size price.
 * **D15. The `-1` rate as the worst case.** Since every word's growth is at
   most `0.585 d`, and the halvings `d` are the precision consumed, the only
   way to make growth cheap is to consume precision without ones, i.e. to

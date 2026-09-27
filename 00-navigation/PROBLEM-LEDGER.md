@@ -494,6 +494,14 @@ all heights (THM-1289, published), δ ineffective.
   D12 closed as a route: prepaying all future regenerations is the height walk. Residual obstruction D14: E_inf points
   that are not negative integers are 2-adically approachable by small integers. Note: `collatz_pricing_approaches_20260927.md`.
 
+  **D14 and the topological reframe (opus, 2026-09-27, S15 sixth note):** generic growth costs 1.14-1.49 bits of source per
+  bit of net growth along the record excursions (< 10^6), cheaper than the -1 shadow's 1.71; universal size price: a depth-K
+  approach to any 2-adic x costs K - z_K(x) bits (z_K = zero run of x below K; 0 for negative integer cycle points, geometric
+  for generic E_inf points), so D14 is the tautology that an integer's cheap growth is its own word (fifth-note D14 corrected,
+  MISTAKES entry). Necklace/Borsuk-Ulam mechanisms are sheet-blind (the sheet involution conjugates 3n+1 to 3n-1 with its three
+  cycles); rounding = the cycle question; fixed-point theorems have no stage. Fix(T) = {0,-1}; Fix(Q) contains {0} u {-2^j} u
+  {2^j/3} (Q(1/3) = 1/3), 2-cycle {1, -1/3}; a few unidentified persistent residues (D16). Note: `collatz_generic_price_topology_20260927.md`.
+
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`
 (ranks HN > reconstruction > Kakeya/Falconer > sunflower > Caccetta–Häggkvist > … ).
 
