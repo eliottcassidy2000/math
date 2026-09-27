@@ -403,6 +403,13 @@ all heights (THM-1289, published), δ ineffective.
   codex N(k,h)) are -5 shadows, nextforest's (4^k+17)/3 converges to 17/3 (descends). Audited.
   Note: `fibonacci_two_copies_collatz_20260926.md`.
 
+  **Directions (opus, 2026-09-26, S13):** the no-descent fractal E_inf (closed, box dimension h*,
+  closure of the negative rational cycle points, E_inf cap Z_<0 = {-1,-5,-17} to 10^6); conjecture =
+  Z^+ cap E_inf = empty; no bounded-precision rank can decrease at every excursion (the reset lane's
+  obstruction is a theorem); the lowest-set-bit map r -> 3r + lsb(r); reciprocal-sum form (THM-4476);
+  Mahler sibling with the Archimedean object xi 3^l/2^(d_l) = m_l + eta_l; irrational (log_2 3) versus
+  dyadic (Sierpinski/Lucas) hierarchies. Note: `collatz_directions_20260926.md`.
+
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`
 (ranks HN > reconstruction > Kakeya/Falconer > sunflower > Caccetta–Häggkvist > … ).
 
