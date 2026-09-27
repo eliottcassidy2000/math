@@ -1213,6 +1213,27 @@ tiling results. Note [`collatz_directions_20260926.md`](collatz_directions_20260
   4e22`), irrational: the heuristic reason (marked) that no finite certificate bank
   tiles the residual.
 
+## 2w. Wave 21 (2026-09-26/27, this session): the Robin inequality at shift 2, and positive Hamiltonicity of the Collatz alphabet
+
+**1. THM-4513 update: shift 2** ([robin3 note](procgen_robin3_20260926_shift_one.md)).
+* **Result.** `N_m(L) <= 2.1285 A_(m+2)(L)` and `<= 1.1632 A_(m+3)(L)` for all `m, L`. The shift was 15.
+* **What made it possible.** FKG on the lattice of top-avoiding paths removes the `1/P(survive)` factor that had forced the large shift. Two-sided likelihood-ratio bounds at the hitting time give top-hit bounds with no union factor.
+* **Consequence.** The private pairing price is at most `(517.3 L + 345) rho^peak_L`, a practical constant (it was `3.9·10^8 L`).
+* **Still open.** HYP-9142 exactly as conjectured (shift 1, all `m`). The monotonicity onset grows with `m`, and the margin is about 1%. Shift 0 is false.
+
+**2. THM-4510 update: the Collatz alphabet at every scale** ([cnpos note](procgen_cnpos_20260926_positive_hamiltonicity.md)).
+* **Theorem F.** At every `n` of every window, the forced top zigzag returns to the residual as one reflection `x -> T1 - x` modulo `m = |3^a - 2^k|`. A Hamiltonian path is then exactly a solution of a smaller residual problem at the scale of the Collatz gap.
+* **The arithmetic that appears.**
+  * The Gersonides relations make the first residual steps cycle-free.
+  * Single-rotation solutions occur only at the Pillai coincidences `4-3 = 9-8`, `9-4 = 32-27`, `16-3 = 256-243` (checked to `a = 300`).
+  * Two-edge swaps are rigid: they need `t1 + t2 = t3 + t4` among powers of 2 and 3, and only four such relations exist below `2^200`.
+* **Verified.** Constructions give Hamiltonian paths of `C_(T1-1)` at every level `a <= 15` (to `n = 14,348,906`) and of the window right ends through `a = 14`.
+* **Still open.** A theorem for infinitely many levels needs the residual problem at every scale, and the residual has its own zigzag one scale down.
+
+**Reading.** In both lanes the last step is arithmetic.
+* Robin: exact monotonicity (TP2/FKG) carries the constant.
+* The Collatz alphabet: the residual lives at the scale of the gap `|3^a - 2^k|`. There the only helpful coincidences are the Pillai/Gersonides ones (`2-1`, `4-3`, `9-8`, `32-27`, `256-243`), the same small list that forces the free Collatz cycles (THM-4484), as numbers (ANALOGY).
+
 ## 2b. The approach deck: every approach generated or considered, with its disposition
 
 | # | approach (lens + mechanism) | barrier verdict | probe run | outcome |
