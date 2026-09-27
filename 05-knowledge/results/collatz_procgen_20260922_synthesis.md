@@ -1256,6 +1256,47 @@ angle. Note [`collatz_shadow_error_flp_20260927.md`](collatz_shadow_error_flp_20
   bounded shadow error (the minus-sheet cycles do; implied by the
   conjecture; its bounded-valuation sub-case is Mahler-shaped).
 
+## 2y. Wave 26 (2026-09-27, opus session `collatz-poset-dag-20260927`): posets and DAGs of an orbit; tight spine blocks; the two-place descent tree
+
+Owner's directive: "consider deeply posets and their directed acyclic
+graphs ... towards a creative Collatz proof finishing move." Note
+[`collatz_posets_dags_20260927_spine_descent_tree.md`](collatz_posets_dags_20260927_spine_descent_tree.md);
+THM-4514 (RESERVED until audit).
+
+* **Value-time poset** (`i` below `j` iff earlier and larger): dimension
+  `<= 2`; minimal = leaders, maximal = strict future minima; a positive
+  orbit has a strict future minimum iff it diverges. **Excursion forest**
+  (`i` ancestor of `j` iff the height walk stays above `h_i` on `(i, j]`):
+  roots = the lower records = the descent chain `n > D(n) > ...`; on a
+  divergent orbit one infinite tree whose spine (König) is the sequence of
+  strict coefficient future minima = **the orbit's intersection with
+  `E_inf`**. So `Z^+ ∩ E_inf ⊆ {minima of divergent orbits}` (equality =
+  Terras's equality at those minima), closed under the next-spine-point map.
+* **Spine blocks are tight** (the new exact object): THM-4495's positive
+  min-ending words generate the no-descent words freely, `b = 1 - 1/W`; a
+  block of length `l >= 2` starts with an odd step, has exactly
+  `ceil(l log_3 2)` odd steps and height in `(0, log_2 3 - 1)`; blocks exist
+  only at lengths `1 + floor(b log_2 3/(log_2 3 - 1))` (`1, 3, 6, 9, 11, 14,
+  17, 19, 22, ...`, density `1 - log_3 2`); each spine step multiplies the
+  value by less than `3/2` (plus carry `<= 3l/4`): a divergent orbit climbs
+  its ladder at the phases `{a log_2 3} < log_2 3 - 1` of S8's rotation.
+* **Descent tree** `m -> D(m) = T^sigma m`: `D(m) in [m/2, m)`; at least
+  `floor(log_2 m) + 1` lower records, equality iff `m` is a power of two;
+  each first-descent word is an affine bijection from a 2-adic source class
+  onto a 3-adic landing class `m_0 + t 3^o`; exact in-degree formula (checked
+  to `10^5`); sources per landing `c_D = sum_w 3^(-o(w)) in [1.6696, 1.7005]`
+  (mean in-degree `1.6903` to `10^6`, max `17`). THM-4503's cells are
+  intervals of Young's lattice with the carry a strict order embedding.
+* **Finishing-move shapes, each typed with its obstruction:** rank on the
+  spine (S13 Prop 4 + tight blocks: must read the integer); wqo/Kruskal/Higman
+  (the spine must be a bad sequence; the `5x+1` control's spine has
+  Higman-good pairs within 141 blocks); balanced pairs (height selection);
+  König/compactness (`E_inf` closed, nowhere dense, null; `Z^+` dense);
+  two-place self-consistency (a restatement). Where the DAG language is more
+  than bookkeeping: the dippers of a landing point form a chain of the
+  `D`-coarsened excursion order, so HYP-9161's multiplicity is a chain
+  length and the whole-orbit form is a local-time statement.
+
 ## 2b. The approach deck: every approach generated or considered, with its disposition
 
 | # | approach (lens + mechanism) | barrier verdict | probe run | outcome |

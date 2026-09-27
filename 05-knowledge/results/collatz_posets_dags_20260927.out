@@ -1,12 +1,13 @@
 == P1: value-time poset, records, excursion forest on famous orbits ==
-n=        27: steps=   70 peak=          4616 leaders= 16 lower-records=  8 floor(log2 n)+1=  5 coef-future-minima(window)= 1 forest-roots=  8 max-depth= 17
-n=       703: steps=  108 peak=        125252 leaders= 17 lower-records= 14 floor(log2 n)+1= 10 coef-future-minima(window)= 1 forest-roots= 14 max-depth= 15
-n=      6171: steps=  165 peak=        487700 leaders= 16 lower-records= 20 floor(log2 n)+1= 13 coef-future-minima(window)= 1 forest-roots= 20 max-depth= 15
-n=     77031: steps=  221 peak=      10966508 leaders= 15 lower-records= 27 floor(log2 n)+1= 17 coef-future-minima(window)= 1 forest-roots= 27 max-depth= 14
-n=    837799: steps=  329 peak=    1487492288 leaders= 23 lower-records= 33 floor(log2 n)+1= 20 coef-future-minima(window)= 1 forest-roots= 33 max-depth= 23
-n=   8400511: steps=  429 peak=   79712307440 leaders= 27 lower-records= 35 floor(log2 n)+1= 24 coef-future-minima(window)= 1 forest-roots= 35 max-depth= 25
-n=  63728127: steps=  592 peak=  483308017730 leaders= 25 lower-records= 38 floor(log2 n)+1= 26 coef-future-minima(window)= 1 forest-roots= 38 max-depth= 26
-n= 670617279: steps=  616 peak=  483308017730 leaders= 19 lower-records= 44 floor(log2 n)+1= 30 coef-future-minima(window)= 1 forest-roots= 44 max-depth= 25
+n=        27: steps=   70 peak=          4616 leaders= 16 lower-records=  8 floor(log2 n)+1=  5 coef-future-minima(window)= 1 forest-roots=  8 max-depth= 17 value-records==height-records: True
+n=       703: steps=  108 peak=        125252 leaders= 17 lower-records= 14 floor(log2 n)+1= 10 coef-future-minima(window)= 1 forest-roots= 14 max-depth= 15 value-records==height-records: True
+n=      6171: steps=  165 peak=        487700 leaders= 16 lower-records= 20 floor(log2 n)+1= 13 coef-future-minima(window)= 1 forest-roots= 20 max-depth= 15 value-records==height-records: True
+n=     77031: steps=  221 peak=      10966508 leaders= 15 lower-records= 27 floor(log2 n)+1= 17 coef-future-minima(window)= 1 forest-roots= 27 max-depth= 14 value-records==height-records: True
+n=    837799: steps=  329 peak=    1487492288 leaders= 23 lower-records= 33 floor(log2 n)+1= 20 coef-future-minima(window)= 1 forest-roots= 33 max-depth= 23 value-records==height-records: True
+n=   8400511: steps=  429 peak=   79712307440 leaders= 27 lower-records= 35 floor(log2 n)+1= 24 coef-future-minima(window)= 1 forest-roots= 35 max-depth= 25 value-records==height-records: True
+n=  63728127: steps=  592 peak=  483308017730 leaders= 25 lower-records= 38 floor(log2 n)+1= 26 coef-future-minima(window)= 1 forest-roots= 38 max-depth= 26 value-records==height-records: True
+n= 670617279: steps=  616 peak=  483308017730 leaders= 19 lower-records= 44 floor(log2 n)+1= 30 coef-future-minima(window)= 1 forest-roots= 44 max-depth= 25 value-records==height-records: True
+   n <= 10^4: value lower records == height lower records for all but 0 n; value records are always a subset of height records (0 strict)
 
 == P2: spine blocks = positive min-ending words; W = 1/(1-b); b = 1 - exp(-sum B_n t^n/n) ==
    W_k, b_k (spine blocks), B_k for k <= 24:
@@ -65,5 +66,7 @@ n= 670617279: steps=  616 peak=  483308017730 leaders= 19 lower-records= 44 floo
    window 3000 steps: coefficient future minima 512, value future minima 512, inclusion OK;
    block lengths: max 174, mean 5.87, first 20: [2, 1, 2, 1, 1, 2, 1, 1, 1, 2, 2, 2, 2, 1, 9, 6, 2, 22, 1, 1]
    log2 of the value at the end: 451.0
+   5x+1 blocks: forced count of ones ceil(l log_5 2) and height < log2 5 - 1 verified on the window
+   Higman good pairs on the 5x+1 spine (first 300 points): a good partner found for 165/300 points; wait j-i: max 141, mean 61.01, fraction with j-i = 1: 0.00
 
 ALL CHECKS PASSED

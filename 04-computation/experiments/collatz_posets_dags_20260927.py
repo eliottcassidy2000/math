@@ -359,7 +359,21 @@ def part1_orbits():
         print(f"n={n:>10}: steps={len(orb)-1:>5} peak={max(orb):>14} leaders={len(highs):>3} "
               f"lower-records={len(lows):>3} floor(log2 n)+1={int(math.log2(n))+1:>3} "
               f"coef-future-minima(window)={len(cfm):>2} forest-roots={len(roots):>3} "
-              f"max-depth={max_depth(par):>3}")
+              f"max-depth={max_depth(par):>3} value-records==height-records: {lows == roots}")
+    # value lower records vs height lower records (forest roots) for all n <= 10^4
+    differ = 0
+    strict_sub = 0
+    for n in range(2, 10001):
+        orb = t_orbit_to_one(n)
+        lows = strict_lower_records(orb)
+        par = excursion_parent(word_heights(orb))
+        roots = [j for j in range(len(orb)) if par[j] == -1]
+        if lows != roots:
+            differ += 1
+            assert set(lows) <= set(roots)  # value records are height records (positive carry)
+            strict_sub += 1
+    print(f"   n <= 10^4: value lower records == height lower records for all but {differ} n; "
+          f"value records are always a subset of height records ({strict_sub} strict)")
 
 
 def max_depth(par: list[int]) -> int:
@@ -640,6 +654,38 @@ def part6_drift_control(steps: int = 3000):
     print(f"   window {steps} steps: coefficient future minima {len(cfm)}, value future minima {len(vfm)}, inclusion OK;")
     print(f"   block lengths: max {max(gaps)}, mean {sum(gaps)/len(gaps):.2f}, first 20: {gaps[:20]}")
     print(f"   log2 of the value at the end: {math.log2(vals[-1]):.1f}")
+    # block structure for 5x+1: every block of length >= 2 starts with 1, has ceil(l log_5 2) ones,
+    # height in (0, log2 5 - 1)
+    for a_, b_ in zip(cfm, cfm[1:]):
+        l = b_ - a_
+        o1 = hs[b_][0] - hs[a_][0]
+        if l >= 2:
+            a_min = 0
+            while not (5 ** a_min > 2 ** l):
+                a_min += 1
+            assert o1 == a_min, (l, o1, a_min)
+            assert vals[a_ + 1] > vals[a_]
+            assert 5 ** o1 * 2 < 2 ** l * 5  # H < log2 5 - 1  <=>  5^o 2 < 5 2^l ... i.e. o log2 5 - l < log2 5 - 1
+    print("   5x+1 blocks: forced count of ones ceil(l log_5 2) and height < log2 5 - 1 verified on the window")
+    # wqo control (Higman, subsequence order on binary expansions): first good pair after each spine point
+    spine_vals = [vals[j] for j in cfm[:300]]
+
+    def embeds(s: str, t: str) -> bool:
+        it = iter(t)
+        return all(ch in it for ch in s)
+
+    waits = []
+    for i in range(len(spine_vals)):
+        bi = bin(spine_vals[i])[2:]
+        for j in range(i + 1, len(spine_vals)):
+            if embeds(bi, bin(spine_vals[j])[2:]):
+                waits.append(j - i)
+                break
+        else:
+            waits.append(None)
+    found = [w for w in waits if w is not None]
+    print(f"   Higman good pairs on the 5x+1 spine (first 300 points): a good partner found for {len(found)}/{len(waits)} points; "
+          f"wait j-i: max {max(found)}, mean {sum(found)/len(found):.2f}, fraction with j-i = 1: {sum(1 for w in found if w == 1)/len(found):.2f}")
 
 
 if __name__ == "__main__":
