@@ -1097,6 +1097,40 @@ primes and the five Platonic solids. Note
 * **Why q = 5 closes and q = 7 does not.** For 5n±1, Min's first rejoining flip (at 1) closes the sporadic cycle `1,3,8,4,2`, which Max forces on the negative integers; the bounds meet at `2/5`. For 7n±1 the fixed-point flip closes a cycle of density `1/3`, too good to be forced. The value is set by an unbounded hierarchy of exceptional rational closures.
 * **The limit.** An ergodic-optimization min-max over clopen flip sets. A value below `log_7 2` would be certified by one finite object; a value at or above it needs a uniform certificate. Both remain OPEN.
 
+## 2s. Wave 21 (2026-09-26, opus session `gilbreath6-collatz-precision-20260926`): the precision residual is the no-descent set; THM-4512; the size-6 law
+
+Owner's directive: the size-6 extinction law; then "controlling the
+insufficient-precision cases or proving that every unresolved orbit enters
+a certified region"; Langlands and loom connections. Notes
+[`collatz_precision_residual_20260926.md`](collatz_precision_residual_20260926.md),
+[`gilbreath_size6_extinction_20260926.md`](gilbreath_size6_extinction_20260926.md).
+
+* Dictionary: precision = 2-adic bits consumed `A = v_1 + ... + v_j`;
+  certified class = residue class mod `2^A` with a coefficient descent;
+  insufficient-precision residual = the no-descent words, density `D(k)`
+  among odd `n` (`D(41) = 0.00265`, `D(60) = 0.00062`; exact order THM-4495).
+  The classical sieve certifies `99.73` per cent of odd integers within `41`
+  Syracuse steps; the swaplift bank `37.87` per cent.
+* THM-4512 (PROVED): every member of a coefficient-descent class above
+  `N(w) = S_j/(2^A - 3^j)` descends; `N(w) < 2^A` for all `j <= 5000`, so at
+  most the representative is uncertified; none for `j <= 14` except `n = 1`;
+  `sigma = sigma_inf` for all odd `3 <= n <= 10^7`. The "insufficient
+  precision" obstruction is the no-descent words, not small class members.
+* "Every unresolved orbit enters a certified region": density form trivial
+  (`2^-L`), pointwise form = every `n` has finite stopping time = the
+  conjecture (Terras). No intermediate statement beyond the repository's
+  density results (THM-4495/4498/4499); the shell-revisit lemma stays the
+  one pointwise lever.
+* Langlands / loom (speculation, marked): the 2-adic side (Terras bijection,
+  Lagarias's conjugacy, Haar measure) is the fully understood analytic
+  side; the integers are the arithmetic side; the carry `S_l` is the weft
+  joining the 2-adic and 3-adic threads; no reduction.
+* Gilbreath size 6: Theorem A (exact finite Markov chain with i.i.d.
+  boundary), exact `p_6(F)` to `F = 11`, the excess `2^-F c_6(F)` with
+  `c_0 = (2/3)(1 - 4^-(2^k-1))` on `2^k < F <= 2^(k+1)`, `c_1 = c_2 = (2/15)(1 -
+  16^-(2^(k-1)-1))`, shift law, halving; `c_6 ~ 1.4 log_2 F` (HYP-9163); the
+  front-only law is asymptotically exact for size `6`.
+
 ## 2b. The approach deck: every approach generated or considered, with its disposition
 
 | # | approach (lens + mechanism) | barrier verdict | probe run | outcome |

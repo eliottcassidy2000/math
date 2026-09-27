@@ -384,6 +384,17 @@ all heights (THM-1289, published), δ ineffective.
   tower of doubly regular tournaments on the Mersenne zero-triangle sides keeps exactly the Paley
   heptagon's F_21. Note: `05-knowledge/results/gilbreath_fermat_platonic_20260926.md`.
 
+  **Precision residual and size-6 law (opus, 2026-09-26, S11):** the reset lane's 'insufficient-precision
+  residual' is the no-descent set: density D(k) among odd n after k Syracuse steps, D(41) = 0.00265
+  (classical sieve certifies 99.73 per cent within 41 steps; the swaplift bank 37.87 per cent), exact
+  order by THM-4495. THM-4512 (PROVED): a coefficient-descent class is certified above
+  N(w) = S_j/(2^A - 3^j) < 2^A (all j <= 5000), so at most its representative is uncertified; none
+  for j <= 14 except n = 1; sigma = sigma_inf for all odd 3 <= n <= 10^7. 'Every unresolved orbit
+  enters a certified region' is Terras's form of the conjecture (density form trivial, 2^-L).
+  Gilbreath size 6: exact Markov reduction, exact rationals to F = 11, excess = 2^-F c_6(F) with a
+  dyadic per-z anatomy, c_6 ~ 1.4 log_2 F (HYP-9163). Notes: `collatz_precision_residual_20260926.md`,
+  `gilbreath_size6_extinction_20260926.md`.
+
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`
 (ranks HN > reconstruction > Kakeya/Falconer > sunflower > Caccetta–Häggkvist > … ).
 

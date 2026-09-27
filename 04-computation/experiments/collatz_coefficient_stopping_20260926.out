@@ -1,0 +1,6 @@
+== (1) actual versus coefficient stopping time, odd n <= 10000000 (n = 1 has neither; it is handled as sigma = sigma_inf = 1 by the loop since U(1) = 1 is not < 1 ... reported separately) ==
+ n = 1: v = 2, 2^v = 4 > 3 so sigma_inf(1) = 1, but U(1) = 1 is not < 1: sigma(1) is infinite; the unique exception
+ odd n <= 10000000: 4999999 numbers; max actual stopping time 155; sigma != sigma_inf for 0 numbers: []
+== (2) one-member bound ==
+ j <= 5000: 2^A - 3^j > (3/2)^j - 1 at the minimal A fails for: [] ; worst ratio ((3/2)^j - 1)/(2^A - 3^j) = 0.5072 at j = 5, A = 8
+ hence for every coefficient-descent class with j <= 5000 the only possibly uncertified member is its representative; and (1) shows no such member exists below 10000000 except n = 1.

@@ -1,0 +1,45 @@
+== (1) residual density D(k) among odd n: classes with no coefficient descent within k Syracuse steps ==
+ k   D(k) exact (odd n)        D(k) float   D(k)^(1/k)   W_k (T-coding words)  W_k/2^k   2 W_k/2^k
+  1  1/2                        5.000000e-01   0.50000     1                     5.0000e-01  1.0000e+00
+  2  3/8                        3.750000e-01   0.61237     1                     2.5000e-01  5.0000e-01
+  3  1/4                        2.500000e-01   0.62996     2                     2.5000e-01  5.0000e-01
+  4  13/64                      2.031250e-01   0.67134     3                     1.8750e-01  3.7500e-01
+  5  19/128                     1.484375e-01   0.68282     4                     1.2500e-01  2.5000e-01
+  6  1/8                        1.250000e-01   0.70711     8                     1.2500e-01  2.5000e-01
+  7  113/1024                   1.103516e-01   0.72988     13                    1.0156e-01  2.0312e-01
+  8  367/4096                   8.959961e-02   0.73967     19                    7.4219e-02  1.4844e-01
+  9                             7.904053e-02   0.75429     38                    7.4219e-02  1.4844e-01
+ 10                             6.451416e-02   0.76027     64                    6.2500e-02  1.2500e-01
+ 11                             5.718231e-02   0.77095     128                   6.2500e-02  1.2500e-01
+ 12                             5.212402e-02   0.78178     226                   5.5176e-02  1.1035e-01
+ 16                             3.091615e-02   0.80470     2114                  3.2257e-02  6.4514e-02
+ 20                             1.925392e-02   0.82078     27328                 2.6062e-02  5.2124e-02
+ 24                             1.313869e-02   0.83485     286581                1.7082e-02  3.4163e-02
+ 28                             8.753507e-03   0.84432     3524586               1.3130e-02  2.6260e-02
+ 32                             5.927348e-03   0.85193     41347483              9.6270e-03  1.9254e-02
+ 36                             4.271506e-03   0.85938     527682754             7.6788e-03  1.5358e-02
+ 40                             2.986131e-03   0.86472     6402835000            5.8233e-03  1.1647e-02
+ 41                             2.654723e-03   0.86531     12805670000           5.8233e-03  1.1647e-02
+ 44                             2.103189e-03   0.86927     83401400116           4.7408e-03  9.4816e-03
+ 45                             1.969630e-03   0.87071     153993322696          4.3768e-03  8.7535e-03
+ 48                             1.559114e-03   0.87401     995657382851          3.5373e-03  7.0746e-03
+ 51                             1.196029e-03   0.87640     6673600722152         2.9637e-03  5.9273e-03
+ 52                             1.119575e-03   0.87751     13347201444304        2.9637e-03  5.9273e-03
+ 55                             9.096818e-04   0.88045     88076070452702        2.4446e-03  4.8892e-03
+ 56                             8.215585e-04   0.88085     163419240559476       2.2679e-03  4.5358e-03
+ 60                             6.152346e-04   0.88406     2216134944775156      1.9222e-03  3.8444e-03
+ (W_k/2^k is the density among all n of parity words without descent; among odd n it is 2 W_k/2^k.)
+ certified density among odd n after 41 Syracuse steps: 1 - D(41) = 0.997345  (the swaplift bank of 65 classes has 0.378669 among odd n)
+== (2) certification thresholds N(w)/2^A of first-descent classes, max over words with j <= 14, by (j, A) ==
+ 180510 classes examined; the largest N(w)/2^A per (j, A) (only pairs with ratio > 0.05 shown):
+  j= 1 A= 2  2^A/3^j=1.33333  N(w)=1.0  N/2^A=0.2500  worst word (2,)
+  j= 3 A= 5  2^A/3^j=1.18519  N(w)=4.6  N/2^A=0.1437  worst word (1, 2, 2)
+  j= 5 A= 8  2^A/3^j=1.05350  N(w)=24.5  N/2^A=0.0959  worst word (1, 2, 1, 2, 2)
+ the largest thresholds sit at the near-convergent pairs (j, A) = (5, 8), (12, 19) [2^19 < 3^12: no descent], (41, 65) ...
+ bound: N(w)/2^A <= ((3/2)^j - 1)/(2^A - 3^j), since S_j <= 2^A ((3/2)^j - 1); every class has at most one uncertified member (its representative rho_w) once N(w) < 2^A.
+== (2b) actual exceptions: first-descent classes (j <= 14) whose representative rho_w <= N(w) ==
+ 606746 classes checked (all v up to 40 beyond the critical valuation); exceptions (rho, word, N(w), U^j(rho)):
+   (1, (2,), 1.0, 1)
+ every other class is certified in full by its coefficient descent; for the exceptions the actual j-th iterate is listed (it is >= rho, so these are the only members of their classes needing a direct check).
+== (3) trivial window-avoidance bound ==
+ odd n whose first L Syracuse iterates all avoid the k-step certified region (k >= 1) must have v = 1 at each of them: density exactly 2^-L for k = 1; for k >= 2 at most that.
