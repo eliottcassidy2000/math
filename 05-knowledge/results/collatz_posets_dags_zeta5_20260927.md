@@ -540,6 +540,6 @@ finishing move, and this note claims none.
 Both run in under two minutes with the standard library only; the
 identities are checked in exact rational arithmetic.
 
-## 6. Independent audit
+## 6. Audit status
 
-Pending; to be appended.
+**Independent audit: OWED.** The audit subagent launched for this note was terminated by an API rate limit before it reported anything; no independent verdict exists yet, and the labels above are the producer's own. **Self-audit (producer, 2026-09-27, independent re-implementation, not a substitute):** (i) Proposition 9's 2-adic value, `n = -sum_(k<L) 2^(d_k)/3^(k+1) mod 2^(d_L)`, re-checked with separate code for `n = 1, 7, 9, 27, 31, 703` at `L = 3, 10, 25, 60`: holds; (ii) Proposition 1's step formulas (`v = 1 iff N even`, `N -> 3N/2`, `N -> (3N - 1 + 2^(v-1))/2^v` for odd `N`, the `v = 2` case `(3N+1)/4`) re-checked for `N <= 2·10^5`: hold; (iii) Proposition 2's counting identities (`|W_(j+1)| = |W_j| + #{w in W_j : 3^o > 2^(j+1)}` and `#{words of W_(j+1) ending in 1} = |W_j|`) re-checked by brute force over all T-words for `j <= 16`: hold. Not self-checkable and flagged for the owed audit: the exact hypotheses of Borel–Dwork as used in Proposition 10 (holomorphy in the 2-adic disc suffices for the version quoted; the archimedean hypothesis is meromorphy), the precise statement of Pólya's 1921 theorem used in Proposition 7, and the normalization of the three-place product in Proposition 6 (the exponent 2 is normalization-independent, the constant is not).

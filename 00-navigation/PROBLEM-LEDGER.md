@@ -449,6 +449,20 @@ all heights (THM-1289, published), δ ineffective.
   meromorphic continuation past |z| = 2^(-liminf d_k/k) would force PC(n). Real zeta(5): no confirmed proof found;
   the public record is p-adic (Calegari–Dimitrov–Tang, LSZ). Note: `collatz_posets_dags_zeta5_20260927.md`.
 
+  **Depth, layers, Hankel rank; two zeta(5) preprints (opus, 2026-09-27, S15 second note):** the depth d(n) of the
+  rooted component has layers growing like lambda_C^k, lambda_C = (1 + sqrt(7/3))/2 = 1.2638 per Collatz step (measured
+  1.2639 at depth 60; the tree-search 4/3 per Terras step re-timed); the odd-step depth equals the linear complexity of
+  the 2-parts 2^(d_k) of the Apéry forms minus one (odd n <= 3000; Kronecker: PC(n) iff finite Hankel rank); layers are
+  backward 3-adic certificates dual to THM-4512's forward 2-adic cylinders. arXiv:2609.22316 (one of zeta(5),(7),(9)):
+  C_0' = 5.7535 reproduces but its prime window is empty as written (Phi = 1, Lemma 2 reads 5.75 > 9): refuted as
+  written. Zenodo 22826419 (zeta(5) irrational via Hankel determinants): entries are moments of the positive weight
+  u^5 (d/du)^4 [1/(e^(2 pi u) - 1)]/12 (Hermite + Binet, verified to 30 digits); the claim rests on an unchecked p-adic
+  normalization (AUTHOR-CLAIMED). Themes: two rates compete (Collatz margins 0.006-0.04 bits per odd step at first
+  coefficient descent vs generic 0.415); nonvanishing hard there, free here; tails H_j vs zeta(5) shrink, the Collatz
+  remainder (3x-1 copy) does not; no positive moment structure on divergent words. Numerology (139 = 3^7 - 2^11, 37,
+  (11, 7)) tested, no content. Independent audit OWED (subagent cut off by a rate limit). Note:
+  `collatz_depth_layers_zeta5_preprints_20260927.md`.
+
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`
 (ranks HN > reconstruction > Kakeya/Falconer > sunflower > Caccetta–Häggkvist > … ).
 
