@@ -1,0 +1,99 @@
+{
+  "status": "Exact finite controls; all-height formulas proved in accompanying note",
+  "legal_triple_count": 20480,
+  "branches": {
+    "consume": 16384,
+    "swap": 2048,
+    "collision": 2048
+  },
+  "balanced_collision_count": 1078,
+  "maximum_finite_balanced_product_ratio": "32/43",
+  "sharp_family_controls": 80,
+  "sharp_family_examples": [
+    [
+      1,
+      9,
+      "2/3"
+    ],
+    [
+      2,
+      41,
+      "8/11"
+    ],
+    [
+      3,
+      169,
+      "32/43"
+    ],
+    [
+      4,
+      681,
+      "128/171"
+    ],
+    [
+      5,
+      2729,
+      "512/683"
+    ]
+  ],
+  "all_ones_family_controls": 100,
+  "all_ones_examples": [
+    [
+      2,
+      3,
+      1,
+      "1/3"
+    ],
+    [
+      6,
+      63,
+      91,
+      "13/9"
+    ],
+    [
+      10,
+      1023,
+      7381,
+      "671/93"
+    ],
+    [
+      14,
+      16383,
+      597871,
+      "597871/16383"
+    ],
+    [
+      18,
+      262143,
+      48427561,
+      "364117/1971"
+    ]
+  ],
+  "unbalanced_collision_examples": [
+    [
+      3,
+      "12/25"
+    ],
+    [
+      10,
+      "131584/3073"
+    ],
+    [
+      30,
+      "144115188612726784/3221225473"
+    ],
+    [
+      100,
+      "200867255532373784442745261543279150615389488923597456015360/3802951800684688204490109616129"
+    ]
+  ],
+  "finite_episode_count": 2047,
+  "growing_episode_count": 329,
+  "maximum_finite_episode_length": 25,
+  "source27_episode": [
+    27,
+    91,
+    8
+  ],
+  "episode_digest": "ffa8659a8eadcd81cfce561873713df6f06c171006ccb34955137633adc1ac14"
+}

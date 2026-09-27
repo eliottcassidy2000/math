@@ -1,0 +1,9 @@
+inequality: normal = optimized = frozen output
+clock: normal = optimized = frozen output
+colours: normal = optimized = frozen output
+logic: normal = optimized = frozen output
+swaplift: normal = optimized = frozen output
+independent direct replay:64 Mersenne episodes, actual P5 hostile,171 core certificates, 684 lifted sources
+independent27-family prefixes:k1..128, all first2k odd iterates exceed their source
+independent low-bit trie density: 6985206796614369409/36893488147419103232
+PASS: exact finite audit; symbolic proofs and scope separately reviewed

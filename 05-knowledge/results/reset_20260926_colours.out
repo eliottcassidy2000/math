@@ -1,0 +1,15 @@
+authoritative word: RKBRKRKBRKBRKRKBRKRKBRKBRKRKBRKBRKB
+three-unit preferred grammar matches first34; predicted R versus supplied B at35
+all nonadjacent fibres for n1..6764: {2: 2584, 3: 4180}
+exact two charge-preserving sheets at every n; marked sheet kinds: {'B': 4180, 'K': 2584}
+ordinary Zeckendorf expansion gives nested preferred row prefixes through6764
+complete Fibonacci expansion languages throughF9=34: arbitrary B-to-K replacements only
+language counts for atoms indices3..9: [1, 2, 2, 4, 8, 32, 256]
+isolated row35 authoritative word is legal and charge-correct; every row36 has R at35
+row36 supports: [(0, 2, 9), (3, 9)]
+fixed-source decomposition controls: 2096128 triples over odd y3..4095
+exactly one q/u divisible3: 930930 states; floor(y/3) for3-units, zero otherwise
+minimum y with two row representations but all3 precision branch types: 41
+41 witnesses (q,r,u,a): {1: (1, 1, 39, 1), 2: (3, 2, 29, 3), 3: (1, 3, 33, 2)}
+41 row supports: [(0, 2, 5, 9), (3, 5, 9)]
+PASS: explicit checks active under -O

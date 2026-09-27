@@ -1,0 +1,82 @@
+{
+  "status": "FINITE-EXACT coding controls only",
+  "universes": {
+    "roundtrip": 4096,
+    "adjunction_pairs": 4096,
+    "powersets": 32,
+    "containers": 128
+  },
+  "singleton_tower": [
+    {
+      "rank": 0,
+      "integer_bitlength": 0,
+      "graph_nodes": 1
+    },
+    {
+      "rank": 1,
+      "integer_bitlength": 1,
+      "graph_nodes": 2
+    },
+    {
+      "rank": 2,
+      "integer_bitlength": 2,
+      "graph_nodes": 3
+    },
+    {
+      "rank": 3,
+      "integer_bitlength": 3,
+      "graph_nodes": 4
+    },
+    {
+      "rank": 4,
+      "integer_bitlength": 5,
+      "graph_nodes": 5
+    },
+    {
+      "rank": 5,
+      "integer_bitlength": 17,
+      "graph_nodes": 6
+    },
+    {
+      "rank": 6,
+      "integer_bitlength": 65537,
+      "graph_nodes": 7
+    }
+  ],
+  "example_27": {
+    "top_members": [
+      0,
+      1,
+      3,
+      4
+    ],
+    "closure_members": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "closure_code": 31
+  },
+  "checks": {
+    "Ackermann roundtrip": 4096,
+    "Collatz edge is not membership": 1,
+    "Collatz raises HF rank": 1,
+    "TC may raise ordinary integer": 1,
+    "adjunction graph transport": 4096,
+    "closure transitive": 4096,
+    "container contains source": 128,
+    "container not powerset-object closed": 128,
+    "container subset closed": 8256,
+    "container transitive": 8256,
+    "membership numerical descent": 24576,
+    "powerset code grows": 32,
+    "powerset independent path": 32,
+    "singleton tower rank": 7,
+    "singleton tower unbounded depth": 7,
+    "transitive closure independent path": 4096
+  },
+  "total": 57809,
+  "result": "PASS"
+}

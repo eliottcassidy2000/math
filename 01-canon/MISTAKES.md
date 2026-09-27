@@ -16,6 +16,20 @@ Format per entry:
 - **Two more slips.** The `3^(K-1-m)` count of the single-seed zero triangles and the completeness of the triangle decomposition were labelled PROVED with only a `K = 5, 7, 9` check on the page (proof added). The S9 random-model risk numbers for the primes (`0.258`, "the riskiest moment was row `1`") were presented as consequences of the theorem, whose hypothesis fails in rows `1`-`64` (thousands of entries `>= 6`); they are a heuristic, and the row-`1` defect, preceded by `2, 2`, is harmless by the very theorem. Also: "whatever lies to its right" needed "whatever `0/2/4` pattern" (`1 2 4 10` crosses).
 - **Mechanism to remember.** When a proof is finished, reread it to list the hypotheses it actually used, and state the theorem with those, not with the setting of the experiment. Write PROVED only when the derivation is on the page. Never call a random-model number a consequence of a theorem whose hypothesis the data violate.
 
+## 2026-09-26 reset audit: preserving every state is stronger than preserving descent
+
+- **Draft overreach.** The marked-unit note briefly inferred that any successful
+  reset inequality must retain unbounded decomposition registers, from the
+  fact that a fixed y has(y-1)/2 exact split states.
+- **Failed implication.** That pigeonhole counts lossless encodings of ALL
+  decompositions. It does not exclude a canonical selector, a potential of
+  the exact integer y, or a quotient retaining only descent witnesses.
+- **Repair.** The unbounded information requirement is restricted to preserving
+  the full decomposition fibre. Sufficiency of a smaller witness-preserving
+  quotient remains OPEN. The [colour note](../05-knowledge/results/reset_20260926_colours.md)
+  and [audit](../05-knowledge/results/reset_20260926_audit.md) retain the
+  precise scope and independent checks; no numeric result changed.
+
 ## 2026-09-26 forest: additivity does not forbid trace encoding
 
 - **Continuation audit.** A duplicate results-index synopsis still repeated

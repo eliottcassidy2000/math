@@ -1,0 +1,7 @@
+exact universe q odd1..63,u odd1..255,r1..12: {'balanced': 2267, 'balanced_extra_ge2': 1097, 'collision': 4096, 'consume': 40992, 'swap': 4064}
+largest scanned P5 balanced product ratio: 1760/1053
+sharp27/16 family k0..64; first ratio: 104/63
+sharp27/64 family k1..65; first ratio: 2016/4897
+actual canonical-source phases odd3..4095,cap512: {'collision': 2047}
+fixed ternary depths1..6,nine members each: same residues and v3(core)=0, unbounded-symbolic precision
+PASS: all arithmetic uses integers/Fraction; no convergence extrapolation
