@@ -1,0 +1,62 @@
+== whole-orbit landing multiplicities (chain lengths of the D-coarsened excursion order) ==
+-- 3x+1 orbit of 27: 70 steps, log2(max) = 12.2
+   D=1: landings     19  dippers     69  mean mult 3.632  max  11  dist {1: 5, 2: 4, 3: 1, 4: 3, 5: 3, 6: 1, 9: 1, 11: 1}
+   D=2: landings     15  dippers     68  mean mult 4.533  max  14  dist {1: 3, 2: 4, 3: 1, 4: 2, 5: 1, 8: 1, 9: 1, 10: 1, 14: 1}
+   D=3: landings     13  dippers     66  mean mult 5.077  max  11  dist {1: 2, 2: 2, 3: 1, 4: 2, 5: 1, 7: 1, 8: 2, 10: 1, 11: 1}
+   D=4: landings     11  dippers     65  mean mult 5.909  max  14  dist {1: 1, 2: 1, 3: 2, 4: 1, 5: 2, 8: 2, 12: 1, 14: 1}
+   D=6: landings      9  dippers     53  mean mult 5.889  max  14  dist {1: 2, 2: 1, 3: 1, 5: 1, 8: 2, 11: 1, 14: 1}
+-- 3x+1 orbit of 703: 108 steps, log2(max) = 16.9
+   D=1: landings     31  dippers    107  mean mult 3.452  max  10  dist {1: 5, 2: 6, 3: 7, 4: 5, 5: 4, 6: 2, 7: 1, 10: 1}
+   D=2: landings     25  dippers    106  mean mult 4.240  max  14  dist {1: 4, 2: 5, 3: 5, 4: 4, 5: 1, 6: 2, 8: 1, 10: 1, 12: 1, 14: 1}
+   D=3: landings     20  dippers    104  mean mult 5.200  max  17  dist {1: 2, 2: 5, 3: 2, 4: 3, 5: 1, 6: 1, 7: 2, 8: 1, 10: 1, 14: 1, 17: 1}
+   D=4: landings     18  dippers    101  mean mult 5.611  max  20  dist {1: 2, 2: 6, 3: 3, 4: 1, 6: 2, 10: 1, 14: 1, 18: 1, 20: 1}
+   D=6: landings     14  dippers     92  mean mult 6.571  max  21  dist {1: 4, 2: 1, 4: 2, 5: 2, 7: 1, 9: 1, 13: 1, 18: 1, 21: 1}
+-- 3x+1 orbit of 6171: 165 steps, log2(max) = 18.9
+   D=1: landings     45  dippers    164  mean mult 3.644  max  14  dist {1: 11, 2: 8, 3: 7, 4: 6, 5: 7, 6: 1, 8: 1, 9: 2, 11: 1, 14: 1}
+   D=2: landings     32  dippers    163  mean mult 5.094  max  15
+   D=3: landings     28  dippers    161  mean mult 5.750  max  17
+   D=4: landings     26  dippers    160  mean mult 6.154  max  17  dist {1: 4, 2: 2, 3: 4, 5: 5, 6: 2, 7: 2, 9: 2, 11: 1, 14: 2, 15: 1, 17: 1}
+   D=6: landings     21  dippers    151  mean mult 7.190  max  15  dist {1: 2, 2: 3, 3: 3, 4: 2, 6: 2, 8: 1, 9: 1, 10: 1, 14: 3, 15: 3}
+-- 3x+1 orbit of 77031: 221 steps, log2(max) = 23.4
+   D=1: landings     64  dippers    220  mean mult 3.438  max  13  dist {1: 14, 2: 13, 3: 13, 4: 7, 5: 9, 6: 2, 7: 1, 8: 1, 9: 2, 10: 1, 13: 1}
+   D=2: landings     47  dippers    219  mean mult 4.660  max  21
+   D=3: landings     39  dippers    216  mean mult 5.538  max  21
+   D=4: landings     32  dippers    212  mean mult 6.625  max  23
+   D=6: landings     27  dippers    205  mean mult 7.593  max  24
+-- 3x+1 orbit of 837799: 329 steps, log2(max) = 30.5
+   D=1: landings     91  dippers    328  mean mult 3.604  max  12  dist {1: 20, 2: 19, 3: 16, 4: 12, 5: 7, 6: 3, 7: 5, 8: 2, 9: 3, 10: 2, 11: 1, 12: 1}
+   D=2: landings     70  dippers    327  mean mult 4.671  max  22
+   D=3: landings     58  dippers    325  mean mult 5.603  max  26
+   D=4: landings     51  dippers    324  mean mult 6.353  max  27
+   D=6: landings     41  dippers    313  mean mult 7.634  max  29
+-- 3x+1 orbit of 8400511: 429 steps, log2(max) = 36.2
+   D=1: landings    119  dippers    428  mean mult 3.597  max  14  dist {1: 22, 2: 29, 3: 18, 4: 16, 5: 14, 6: 3, 7: 7, 8: 6, 9: 1, 11: 2, 14: 1}
+   D=2: landings     94  dippers    427  mean mult 4.543  max  21
+   D=3: landings     80  dippers    425  mean mult 5.312  max  24
+   D=4: landings     68  dippers    424  mean mult 6.235  max  21
+   D=6: landings     51  dippers    415  mean mult 8.137  max  29
+-- 3x+1 orbit of 63728127: 592 steps, log2(max) = 38.8
+   D=1: landings    154  dippers    591  mean mult 3.838  max  13
+   D=2: landings    116  dippers    590  mean mult 5.086  max  23
+   D=3: landings     84  dippers    588  mean mult 7.000  max  31
+   D=4: landings     70  dippers    585  mean mult 8.357  max  39
+   D=6: landings     53  dippers    578  mean mult 10.906  max  47
+-- 3x+1 orbit of 670617279: 616 steps, log2(max) = 38.8
+   D=1: landings    163  dippers    615  mean mult 3.773  max  13
+   D=2: landings    122  dippers    614  mean mult 5.033  max  23
+   D=3: landings     90  dippers    612  mean mult 6.800  max  31
+   D=4: landings     75  dippers    609  mean mult 8.120  max  39
+   D=6: landings     54  dippers    602  mean mult 11.148  max  47
+-- 5x+1 orbit of 7 (20000 steps): 20000 steps, log2(max) = 3110.5
+   D=1: landings   5078  dippers  13605  mean mult 2.679  max  12  dist {1: 1351, 2: 1129, 3: 1141, 4: 1024, 5: 251, 6: 106, 7: 48, 8: 16, 9: 4, 10: 4, 11: 2, 12: 2}
+   D=2: landings   3422  dippers  11000  mean mult 3.214  max  21
+   D=3: landings   2463  dippers   8742  mean mult 3.549  max  25
+   D=4: landings   1760  dippers   6906  mean mult 3.924  max  29
+   D=6: landings    955  dippers   4267  mean mult 4.468  max  28
+   D=8: landings    523  dippers   2526  mean mult 4.830  max  26
+   D=12: landings    155  dippers    760  mean mult 4.903  max  26
+-- 5x+1 orbit of 7: mean multiplicity per stretch of 2500 steps (D = 2, 4, 8)
+   D=2: [0,2500): L=193 mean=3.17 sqrtL=13.9; [2500,5000): L=572 mean=3.29 sqrtL=23.9; [5000,7500): L=942 mean=3.21 sqrtL=30.7; [7500,10000): L=1328 mean=3.32 sqrtL=36.4; [10000,12500): L=1774 mean=2.94 sqrtL=42.1; [12500,15000): L=2212 mean=3.37 sqrtL=47.0; [15000,17500): L=2561 mean=3.27 sqrtL=50.6; [17500,20000): L=2875 mean=3.12 sqrtL=53.6
+   D=4: [0,2500): L=193 mean=3.81 sqrtL=13.9; [2500,5000): L=572 mean=4.19 sqrtL=23.9; [5000,7500): L=942 mean=3.72 sqrtL=30.7; [7500,10000): L=1328 mean=4.29 sqrtL=36.4; [10000,12500): L=1774 mean=3.07 sqrtL=42.1; [12500,15000): L=2212 mean=4.07 sqrtL=47.0; [15000,17500): L=2561 mean=4.28 sqrtL=50.6; [17500,20000): L=2875 mean=3.90 sqrtL=53.6
+   D=8: [0,2500): L=193 mean=3.89 sqrtL=13.9; [2500,5000): L=572 mean=6.08 sqrtL=23.9; [5000,7500): L=942 mean=3.78 sqrtL=30.7; [7500,10000): L=1328 mean=4.91 sqrtL=36.4; [10000,12500): L=1774 mean=3.27 sqrtL=42.1; [12500,15000): L=2212 mean=3.61 sqrtL=47.0; [15000,17500): L=2561 mean=6.11 sqrtL=50.6; [17500,20000): L=2875 mean=5.89 sqrtL=53.6
+DONE
