@@ -1,0 +1,21 @@
+== Part A: sector lemma, corner types, side lemma, counting identity, pinwheel lemma ==
+[OK] A1: A1-A9 hold on all 26 fencelim configurations (plane; holes, pinches, bridges, X, straight joins); corner totals {'O': 20, 'I': 20, 'E': 531, 'R': 133, 'S0': 18, 'S2': 122}
+[OK] A2: n=6 record (50 digits): A1-A9 hold; its area-1 pentagon has types O,I,E,E,E, 3 whole sides, perimeter 3.984923 < 4 (x = a - P/4 = 0.003769 > 0)
+[OK] A3: Pythagorean torus a=3/5: one pure-O and one pure-I pinwheel, 4 landings, pinwheel pairing verified at all 4 (s + s' = 1 exactly), density 13/50 = (a^2+b^2)/2 < 1/2
+[OK] A3: Pythagorean torus a=4/5: one pure-O and one pure-I pinwheel, 4 landings, pinwheel pairing verified at all 4 (s + s' = 1 exactly), density 17/50 = (a^2+b^2)/2 < 1/2
+[OK] A3: Pythagorean torus a=12/13: one pure-O and one pure-I pinwheel, 4 landings, pinwheel pairing verified at all 4 (s + s' = 1 exactly), density 145/338 = (a^2+b^2)/2 < 1/2
+[OK] A3: Pythagorean torus a=5/13: one pure-O and one pure-I pinwheel, 4 landings, pinwheel pairing verified at all 4 (s + s' = 1 exactly), density 89/338 = (a^2+b^2)/2 < 1/2
+[OK] A4: unit grid torus: 4 E corners, 4 whole sides, no landing (Lambda = 0), density 1/2
+[OK] A5: B1 hexagon of area 1 has side 0.620403 < 1 => pinwheel; pairing with a pinwheel roundabout forces the roundabout side 1 - 0.620403 = 0.379597 (not tiny).  B.4 notched pentagon: sides 0.762387, 0.471181 < 1 but its 2 reflex corners force >= 2 whole sides (>= 1)
+== Part C: constructions ==
+[OK] C1: flipped-square pentagons (sides 1, s, 1, 1-s, 1; s = 1/3, 3/5, 5/13, 7/25): convex, area exactly 1, perimeter exactly 4 (a/P = 1/4)
+[OK] C2: pinwheel pentagon + roundabout family, max(a_P + a_T) at triangle diameter c: c=0.2: 0.806479, c=0.1: 0.901397, c=0.05: 0.950328 (< 1 - c/2, so density (a_P+a_T)/2 < 1/2; EMPIRICAL)
+== Part D: the pinwheel statement (P) ==
+[OK] D1: one-parameter pinwheel certificate g = -k cos(th) l(1-l) fails (P) on pentagons: max violation k=0.2: +0.00327, k=0.25: +0.00277, k=0.3: +0.00434 (EMPIRICAL)
+[OK] D2: pure-pinwheel LP certificate (grid NL=10 NA=9, kappa <= 7): 2(beta+rho) = 0.500072, field violation 7.28e-04, repaired value 0.501042 (the Pythagorean tilings give density -> 1/2 from below)
+== Part B: typed piece-potential LP certificates (EMPIRICAL: field constraints by multistart) ==
+[OK] B-main: procgen_fence2_20260926_cert_main.json: TypedLP2 grid NL=10 NA=9 alphabet OIE kmax 7: 2(beta+rho) = 0.501160; grid families max violation 7.3e-08; field violation (kappa <= 7) 9.81e-04 [EOIIOOI]; tails: conv(e<=12) 0.0e+00, larger fans 0.0e+00, fields kappa<=8 -4.61e-04 [IIOOIIOO]; repaired bound 0.502468 < 0.5168084
+[OK] B-nonconvex: procgen_fence2_20260926_cert_nonconvex.json: TypedLP2 grid NL=10 NA=9 alphabet OIER kmax 6: 2(beta+rho) = 0.501736; grid families max violation 3.9e-15; field violation (kappa <= 6) 2.16e-03 [IIOOIO]; tails: conv(e<=12) 4.9e-17, larger fans 0.0e+00, fields kappa<=8 1.51e-03 [IIIOOIIO]; repaired bound 0.504621 < 0.5168084
+[OK] B-sep: procgen_fence2_20260926_cert_sep.json: TypedLP grid NL=10 NA=9 alphabet OIE kmax 6: 2(beta+rho) = 0.509626; grid families max violation 1.7e-16; field violation (kappa <= 6) 6.42e-04 [IIIIOO]; tails: conv(e<=12) 4.3e-19, larger fans 0.0e+00, fields kappa<=8 2.94e-03 [IIIIIOOO]; repaired bound 0.513541 < 0.5168084
+time 296.7 s
+ALL CHECKS PASSED

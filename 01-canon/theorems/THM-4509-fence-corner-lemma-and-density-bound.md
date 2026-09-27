@@ -101,6 +101,25 @@ audit: >
 
 **PROVED + INDEPENDENTLY AUDITED.** Full note: [procgen_fencelim_20260926_fence_density](../../05-knowledge/results/procgen_fencelim_20260926_fence_density.md).
 
+**UPDATE 2026-09-26 (fence2 lane, [per-fence note](../../05-knowledge/results/procgen_fence2_20260926_per_fence_accounting.md); orchestrator-audited).** Per-fence structure, the ingredient the angle potentials cannot see.
+
+PROVED:
+- **Sector lemma.** Every non-straight corner of a field has an adjacent side whose fence ends there. At a reflex corner both fences end, and reflex corners occur only at junctions with no through fence.
+- **Walk identity.** On every boundary walk of every field, #whole sides - #(through-through) sides = #convex corners where both fences end + #reflex corners.
+  - A *whole side* is one whose fence(s) end at both corners. It has length exactly `j+1`, where `j` counts interior straight joins.
+- **Pinwheel lemma.** A field with all sides shorter than 1 is a convex pinwheel: all corners T or X, one orientation, each side's fence overhanging by `1 - s`, with partner angle `pi - theta`.
+- **Consequences.**
+  - Fence sides decompose into pieces `[1a][0]...[0][1b]` or `[2]`, and pinwheel overhangs pair as `s + s' = 1`.
+  - THM-4509's two extremal objects are impossible: the hexagon roundabouts of B1 and the notched pentagons of B.4.
+
+EMPIRICAL (not a proof):
+- A typed piece-potential LP (weak duality PROVED on the torus without straight joins or holes) lowers the relaxation from 0.5168 to 0.50116 for convex fields on a coarse grid. Heuristically repaired, that is 0.5025; with one reflex corner, 0.5046.
+- The remaining obstruction is a Cairo-like fractional mix of pentagons (two whole sides, perimeter 3.9335), squares and flat hexagons.
+- No periodic pattern beating 1/2 was found. Pinwheel families stay below it.
+- Conjecture D, a typed certificate of value exactly 1/2, is OPEN. `lambda = 1/2` stays OPEN.
+
+Audit: independent code (procgen_fence2_20260926_orchestrator_check.py; the orchestrator's exact half-edge face computation with fence tracking) confirms the sector lemma, the walk identity and whole-side length 1 on all 32 boundary walks of 9 exact configurations. These include T, X, Y and L junctions, a hole, two components and straight joins.
+
 ## 1. The discrete half: corners are counted by Euler's formula
 
 In a fence configuration, fields get corners only where fences end.
