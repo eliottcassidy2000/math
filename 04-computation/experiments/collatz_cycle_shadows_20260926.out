@@ -1,0 +1,25 @@
+== (1) negative odd cycles of U with |n| <= 10^6 ==
+ cycle through -1: length 1, word (1,), A = 1, 3^p/2^A = 1.50000, fixed point S/(2^A-3^p) = -1
+   n = 3 mod 2^2 follows w^1 and U^(1)(n) = (3^p/2^A)^1 (n - x) + x: True
+   n = 15 mod 2^4 follows w^3 and U^(3)(n) = (3^p/2^A)^3 (n - x) + x: True
+   n = 2047 mod 2^11 follows w^10 and U^(10)(n) = (3^p/2^A)^10 (n - x) + x: True
+ cycle through -5: length 2, word (1, 2), A = 3, 3^p/2^A = 1.12500, fixed point S/(2^A-3^p) = -5
+   n = 11 mod 2^4 follows w^1 and U^(2)(n) = (3^p/2^A)^1 (n - x) + x: True
+   n = 1019 mod 2^10 follows w^3 and U^(6)(n) = (3^p/2^A)^3 (n - x) + x: True
+   n = 2147483643 mod 2^31 follows w^10 and U^(20)(n) = (3^p/2^A)^10 (n - x) + x: True
+ cycle through -17: length 7, word (1, 1, 1, 2, 1, 1, 4), A = 11, 3^p/2^A = 1.06787, fixed point S/(2^A-3^p) = -17
+   n = 4079 mod 2^12 follows w^1 and U^(7)(n) = (3^p/2^A)^1 (n - x) + x: True
+   n = 17179869167 mod 2^34 follows w^3 and U^(21)(n) = (3^p/2^A)^3 (n - x) + x: True
+   n = 2596148429267413814265248164610031 mod 2^111 follows w^10 and U^(70)(n) = (3^p/2^A)^10 (n - x) + x: True
+== (2) rational cycles of primitive no-descent words, p <= 8 ==
+ primitive no-descent words up to rotation with p <= 8: 120; all shadow rules verified (m = 2); integer fixed points: [((1,), Fraction(-1, 1)), ((1, 2), Fraction(-5, 1)), ((1, 1, 1, 2, 1, 1, 4), Fraction(-17, 1))]
+== (3) the lane's families ==
+ 8n+35 family: [27, 251, 2043, 16379, 131067, 1048571, 8388603] ; fixed point of n -> 8n+35 is -5; n_k = -5 mod 2^(3k): [True, True, True, True, True, True, True]
+ (4^k+17)/3 family: [7, 11, 27, 91, 347, 1371, 5467, 21851] ; fixed point of n -> 4n-17 is 17/3; 2-adic residues of 17/3 mod 2^(2k) match: [True, True, True, True, True, True, True, True, True, True, True]
+ orbit of 17/3 under U (2-adic parity): ['17/3', '9', '7', '11', '17', '13', '5', '1', '1']
+ first-descent times of (4^k+17)/3 for k = 3..9: [37, 28, 6, 6, 6, 6, 6]
+== (4) density covered by the three integer-cycle rules at precision K ==
+ K = 12 bits: three integer rules cover density 3 * 2^-12 = 7.32e-04 of all integers; the no-descent residual at ~K/1.58 Syracuse steps is of order 10^-2..10^-3 (D(k) table): aperiodic words dominate
+ K = 24 bits: three integer rules cover density 3 * 2^-24 = 1.79e-07 of all integers; the no-descent residual at ~K/1.58 Syracuse steps is of order 10^-2..10^-3 (D(k) table): aperiodic words dominate
+ K = 40 bits: three integer rules cover density 3 * 2^-40 = 2.73e-12 of all integers; the no-descent residual at ~K/1.58 Syracuse steps is of order 10^-2..10^-3 (D(k) table): aperiodic words dominate
+ K = 64 bits: three integer rules cover density 3 * 2^-64 = 1.63e-19 of all integers; the no-descent residual at ~K/1.58 Syracuse steps is of order 10^-2..10^-3 (D(k) table): aperiodic words dominate

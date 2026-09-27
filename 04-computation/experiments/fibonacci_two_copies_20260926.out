@@ -1,0 +1,32 @@
+== (1) real Binet function ==
+ F(n) = F_n for -30 <= n <= 30; F(-1), F(0), F(1), F(2), F(-2) = [1, 0, 1, 1, -1.0]
+ recurrence on reals: max error 2.8e-14; twist identity F(-x) = -cos(pi x)F(x) + phi^-x sin^2(pi x)/sqrt5: 1.4e-14; smooth Cassini F(x+1)^2 - F(x)F(x+2) = cos(pi x): 2.2e-12; recurrence for F_r (r=0.7): 2.8e-14
+ zeros of F on [-12, 1]: [-11.500005, -10.499987, -9.500034, -8.499911, -7.500233, -6.499389, -5.501597, -4.495795, -3.510851, -2.470427, -1.570776, -0.183802, -0.0]
+ amplitude of F_r on the negative axis ~ phi^|x| sqrt(1 + r^2)/sqrt5: r = 0 (Binet) is the minimal-oscillation interpolant; the integers cannot see r.
+== (2) zero-removed sequence g ==
+ g(n) for n = -6..6: [-8.0, 5.0, -3.0, 2.0, -1.0, 1, 1, 1, 2, 3, 5, 8, 13]
+ g(-n) = (-1)^(n+1) g(n-1) for n >= 1: True
+== (3) negaFibonacci representations for |N| <= 100000 ==
+   -8 = F_(-6)=-8
+   -7 = F_(-1)=1 + F_(-6)=-8
+   -6 = F_(-3)=2 + F_(-6)=-8
+   -5 = F_(-1)=1 + F_(-3)=2 + F_(-6)=-8
+   -4 = F_(-2)=-1 + F_(-4)=-3
+   -3 = F_(-4)=-3
+   -2 = F_(-1)=1 + F_(-4)=-3
+   -1 = F_(-2)=-1
+    0 = 0
+    1 = F_(-1)=1
+    2 = F_(-3)=2
+    3 = F_(-1)=1 + F_(-3)=2
+    4 = F_(-2)=-1 + F_(-5)=5
+    5 = F_(-5)=5
+    6 = F_(-1)=1 + F_(-5)=5
+    7 = F_(-3)=2 + F_(-5)=5
+    8 = F_(-1)=1 + F_(-3)=2 + F_(-5)=5
+ positive N: lowest-index classes {'even>=4': '0.1459', 'k=1 (+1)': '0.3820', 'k=2 (-1)': '0.2361', 'odd>=3': '0.2361'}
+ negative N: lowest-index classes {'even>=4': '0.1459', 'k=1 (+1)': '0.3820', 'k=2 (-1)': '0.2361', 'odd>=3': '0.2360'}
+ Zeckendorf classes on positives: {'even>=4': '0.2361', 'k=2 (1)': '0.3820', 'odd>=3': '0.3820'}  (phi^-2 = 0.3820, phi^-3 = 0.2361)
+ positives whose Zeckendorf ends in F_2 = 1: 0.3820; whose negaFibonacci ends in F_(-1) = 1: 0.3820; both: 0.1459
+ positives whose negaFibonacci index set equals the Zeckendorf index set shifted by one (k -> k-1, i.e. F_k -> F_(-(k-1)) = F_k for odd k-1 ... exact only when all Zeckendorf indices are odd): 0.0000
+ positives whose Zeckendorf indices are all odd: 0.0307 (these are exactly the ones whose two representations coincide term by term, since F_(-(k-1)) = F_(k-1)... see note)
