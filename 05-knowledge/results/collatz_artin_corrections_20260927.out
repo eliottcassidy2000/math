@@ -1,0 +1,49 @@
+== P1: Syracuse orbits of all odd n <= 1000000: visit weights w(m) = number of starts visiting m ==
+   distinct odd values visited: 793746; total visits: 23496390; max weight 500000 at m = 1
+   band [2^i, 2^(i+1)): R_w = weighted P(next v=1 | v=1), R_1 = distinct-value version, n_eff = (sum w)^2/sum w^2 over v=1 values, #distinct v=1 values
+   i=10 (    below N): R_w = 0.5749  R_1 = 0.5000  n_eff =         9  distinct =      256  (2 s.e. of R_w ~ 0.3300)
+   i=11 (    below N): R_w = 0.3791  R_1 = 0.5000  n_eff =        12  distinct =      512  (2 s.e. of R_w ~ 0.2914)
+   i=12 (    below N): R_w = 0.5195  R_1 = 0.5000  n_eff =       214  distinct =     1024  (2 s.e. of R_w ~ 0.0683)
+   i=13 (    below N): R_w = 0.5123  R_1 = 0.5000  n_eff =       260  distinct =     2048  (2 s.e. of R_w ~ 0.0620)
+   i=14 (    below N): R_w = 0.4939  R_1 = 0.5000  n_eff =       486  distinct =     4096  (2 s.e. of R_w ~ 0.0454)
+   i=15 (    below N): R_w = 0.4908  R_1 = 0.5000  n_eff =       673  distinct =     8192  (2 s.e. of R_w ~ 0.0385)
+   i=16 (    below N): R_w = 0.4940  R_1 = 0.5000  n_eff =      2063  distinct =    16384  (2 s.e. of R_w ~ 0.0220)
+   i=17 (    below N): R_w = 0.5000  R_1 = 0.5000  n_eff =      3666  distinct =    32768  (2 s.e. of R_w ~ 0.0165)
+   i=18 (    below N): R_w = 0.4921  R_1 = 0.5000  n_eff =      6064  distinct =    65536  (2 s.e. of R_w ~ 0.0128)
+   i=19 (straddles N): R_w = 0.5030  R_1 = 0.5000  n_eff =     11617  distinct =   124608  (2 s.e. of R_w ~ 0.0093)
+   i=20 (    above N): R_w = 0.4962  R_1 = 0.4998  n_eff =      6910  distinct =    73436  (2 s.e. of R_w ~ 0.0120)
+   i=21 (    above N): R_w = 0.4972  R_1 = 0.5011  n_eff =      4861  distinct =    35257  (2 s.e. of R_w ~ 0.0143)
+   i=22 (    above N): R_w = 0.4987  R_1 = 0.4983  n_eff =      2397  distinct =    16922  (2 s.e. of R_w ~ 0.0204)
+   i=23 (    above N): R_w = 0.4975  R_1 = 0.4993  n_eff =      1183  distinct =     7981  (2 s.e. of R_w ~ 0.0291)
+   i=24 (    above N): R_w = 0.5120  R_1 = 0.4973  n_eff =       575  distinct =     3835  (2 s.e. of R_w ~ 0.0417)
+   i=25 (    above N): R_w = 0.4958  R_1 = 0.4965  n_eff =       292  distinct =     1851  (2 s.e. of R_w ~ 0.0586)
+   i=26 (    above N): R_w = 0.5403  R_1 = 0.5028  n_eff =       165  distinct =      901  (2 s.e. of R_w ~ 0.0779)
+   i=27 (    above N): R_w = 0.5425  R_1 = 0.4978  n_eff =       113  distinct =      448  (2 s.e. of R_w ~ 0.0942)
+   i=28 (    above N): R_w = 0.5054  R_1 = 0.5047  n_eff =        62  distinct =      212  (2 s.e. of R_w ~ 0.1271)
+   m <= N: R_w = 0.51921, R_1 = 0.50000 over 250000 distinct v=1 values
+   m > N: R_w = 0.49858, R_1 = 0.49979 over 146691 distinct v=1 values
+   valuation law of visited m > N:  k: weighted / distinct / 2^-k
+      1: 0.4990 / 0.4994 / 0.5000
+      2: 0.2487 / 0.2501 / 0.2500
+      3: 0.1255 / 0.1250 / 0.1250
+      4: 0.0644 / 0.0627 / 0.0625
+      5: 0.0311 / 0.0314 / 0.0312
+      6: 0.0159 / 0.0158 / 0.0156
+      7: 0.0077 / 0.0078 / 0.0078
+      8: 0.0078 / 0.0079 / 0.0039
+   mean step drift log2(3) - v on visited m > N: weighted -0.4201, distinct -0.4175 (Haar -0.4150)
+   distinct visited m > N: marginal mod 8 (odd classes 1,3,5,7): [0.2501, 0.2498, 0.2505, 0.2496]; mod 3 classes 0,1,2: [0.0, 0.1975, 0.8025]; I(m mod 8; m mod 9) = 0.00001 bits
+   values m > N entered by a step of valuation 1: residues mod 8 (1,3,5,7) = [0.25, 0.25, 0.25, 0.25]
+   values m > N entered by a step of valuation 2: residues mod 8 (1,3,5,7) = [0.251, 0.25, 0.251, 0.248]
+   values m > N entered by a step of valuation 3: residues mod 8 (1,3,5,7) = [0.248, 0.253, 0.252, 0.247]
+
+== P2: consecutive-sum identities and their pivots ==
+   n^2 + ... + (n^2+n) = (n^2+n+1) + ... + (n^2+2n): pivot n^2 + n = 2 T_n, checked n <= 40
+   (T_(2n))^2 + ... + (4T_n)^2 = (4T_n+1)^2 + ... + (4T_n+n)^2: start T_(2n) = n(2n+1), pivot 4 T_n, checked n <= 40; n = 1 is 3^2 + 4^2 = 5^2
+   cubes: c with (c)^3 + ... + (c+n)^3 = (c+n+1)^3 + ... + (c+2n)^3, c < 20000: [(1, []), (2, []), (3, []), (4, []), (5, []), (6, [])]
+   square triangular numbers T_n = m^2 from the Pell unit 3 + 2 sqrt 2 (THM-4505's law 3^2 - 2*2^2 = 1): [(1, 1, 1), (8, 6, 36), (49, 35, 1225), (288, 204, 41616), (1681, 1189, 1413721), (9800, 6930, 48024900), (57121, 40391, 1631432881), (332928, 235416, 55420693056)]
+   Schur: sum-free 2-colourings of [1,4]: 2 ([(1, 4), (1, 4)]), of [1,5]: 0 -> S(2) = 4; the colouring is squares {1,4} against {2,3}
+   Pythagorean triples within [1, 7825]: numbers in no triple: 1331; triples containing 7825: 7; 7825 = {5: 2, 313: 1}
+   Artin's constant A = 0.373956; primes < 3*10^5 with primitive root 2: 0.3731; with primitive root 5: 0.3946; A*20/19 = 0.3936 (the entanglement of p = 1 mod 5 with (5/p) = 1)
+
+DONE
