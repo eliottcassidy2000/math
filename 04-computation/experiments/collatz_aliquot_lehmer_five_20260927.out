@@ -1,0 +1,59 @@
+== (1) D21: closed form for cs(D(G)) = omega(D^2(G)) ==
+ omega(D^2(G)) = closed-form 4-part maximum on all labeled graphs with 2 <= n <= 5 (1098 graphs): True
+ ... and on 60 random graphs with n = 6 and 15 with n = 7: True
+== (2) D22: Lehmer conductors against factorials ==
+ factorial hits for |n| <= 60: [(-2, 'f(n)^2 - 1', '5!'), (-1, 'f(n)^2 - 1', '5!'), (0, 'f(n) - 1', '4!'), (1, 'f(n)^2 - 1', '7!')] (the three Brocard cases and nothing else)
+== (3) the Lehmer five and the sequence of 276 ==
+ Lehmer five: [276, 552, 564, 660, 966] factorizations: [{2: 2, 3: 1, 23: 1}, {2: 3, 3: 1, 23: 1}, {2: 2, 3: 1, 47: 1}, {2: 2, 3: 1, 5: 1, 11: 1}, {2: 1, 3: 1, 7: 1, 23: 1}]
+ the sequence of 138 returns to 1 after 177 steps with peak 179931895322 (exponent log(peak)/log(138) = 5.26; Collatz record excursions have exponent below 1.9)
+ Guy-Selfridge driver test (2^a v, v | 2^(a+1)-1, 2^(a-1) | sigma(v)): {2: True, 6: True, 24: True, 28: True, 120: True, 496: True, 672: True, 8128: True, 523776: True}
+ so 4! = 24 and 5! = 120 are drivers; 7! = 5040 = 2^4 * 315 is not (315 does not divide 31)
+ sequence of 276: 401 terms computed in 8 s; last term has 33 digits
+ (index, digits, v_2, odd part of the driver among {3,5,7,11,31}, log_2 growth) at selected indices:
+    (0, 3, 2, 3, 0.521)
+    (16, 5, 2, 7, 0.17)
+    (32, 9, 2, 105, 1.138)
+    (48, 11, 2, 7, 0.007)
+    (64, 13, 2, 7, 0.069)
+    (80, 16, 2, 2835, 1.395)
+    (96, 20, 2, 7, 0.0)
+    (112, 20, 2, 7, 0.076)
+    (128, 24, 2, 7, 0.001)
+    (144, 26, 2, 21, 0.737)
+    (160, 28, 2, 35, 0.624)
+    (176, 28, 1, 1, -0.999)
+    (192, 23, 1, 1, -1.0)
+    (208, 20, 1, 1, -0.898)
+    (224, 16, 1, 31, -0.867)
+    (240, 15, 3, 1, -0.193)
+    (256, 17, 7, 9, 1.07)
+    (272, 21, 4, 33, 0.863)
+    (288, 24, 2, 9, 0.613)
+    (304, 26, 6, 9, 1.012)
+    (320, 31, 4, 245, 0.778)
+    (336, 31, 3, 1, -0.009)
+    (352, 32, 2, 15, 0.848)
+    (368, 33, 4, 11, 0.231)
+    (384, 33, 2, 1, -0.397)
+ fraction of steps keeping the 2-adic valuation: 0.907; mean log_2 growth per step: 0.247; distribution of v_2 along the sequence: {1: 60, 2: 219, 3: 55, 4: 39, 5: 8, 6: 12, 7: 6, 9: 1}
+== (4) the 2-adic contrast, measured ==
+ aliquot: for even n <= 2000000, P(v_2(s(n)) = b | v_2(n) = a) (rows a = 1..6, columns b = 0..6, valuations >= 6 pooled):
+   a = 1: [0.001, 0.895, 0.052, 0.026, 0.013, 0.007, 0.007]  mean log_2(s(n)/n) = -0.348 (n = 499999)
+   a = 2: [0.001, 0.111, 0.747, 0.07, 0.035, 0.018, 0.017]  mean log_2(s(n)/n) = +0.129 (n = 250000)
+   a = 3: [0.002, 0.118, 0.145, 0.566, 0.085, 0.042, 0.042]  mean log_2(s(n)/n) = +0.318 (n = 125000)
+   a = 4: [0.003, 0.125, 0.15, 0.172, 0.382, 0.084, 0.084]  mean log_2(s(n)/n) = +0.404 (n = 62500)
+   a = 5: [0.004, 0.134, 0.154, 0.176, 0.169, 0.235, 0.128]  mean log_2(s(n)/n) = +0.445 (n = 31250)
+   a = 6: [0.01, 0.155, 0.165, 0.184, 0.168, 0.121, 0.198]  mean log_2(s(n)/n) = +0.472 (n = 31250)
+ reading: the 2-adic valuation is sticky (the diagonal dominates for a >= 2) and the drift is negative only for a = 1: drivers persist for free
+ Collatz: P(next valuation = b | current = a) along orbits of odd n < 2*10^5 (rows a = 1..6, columns b = 1..6; Terras: 2^(-b), independent of a):
+   a = 1: [0.52, 0.258, 0.101, 0.061, 0.039, 0.021]  step growth log_2 3 - a = +0.585
+   a = 2: [0.47, 0.23, 0.16, 0.096, 0.019, 0.025]  step growth log_2 3 - a = -0.415
+   a = 3: [0.574, 0.165, 0.09, 0.136, 0.019, 0.016]  step growth log_2 3 - a = -1.415
+   a = 4: [0.4, 0.29, 0.236, 0.04, 0.017, 0.017]  step growth log_2 3 - a = -2.415
+   a = 5: [0.317, 0.149, 0.087, 0.418, 0.016, 0.012]  step growth log_2 3 - a = -3.415
+   a = 6: [0.493, 0.23, 0.181, 0.053, 0.026, 0.017]  step growth log_2 3 - a = -4.415
+ reading: Collatz valuations are memoryless (each row is the geometric law), so a growth pattern must be paid for in advance by the residue; aliquot valuations are not
+== (5) leaves and cycles ==
+ untouchable numbers below 632 (exact scan: preimages m <= n^2 covered): [2, 5, 52, 88, 96, 120, 124, 146, 162, 188, 206, 210] ... count 52, density 0.082 (Erdos: positive density; Collatz's Syracuse leaves, the multiples of 3, have density exactly 1/3)
+ even perfect numbers below 400000: [6, 28, 496, 8128] = triangular numbers T_(2^p - 1) with 2^p - 1 prime: True
+ the same Mersenne indices 2^p - 1 are where the Catalan numbers are odd (seventh note); Euclid-Euler needs 2^p - 1 prime, Kummer needs nothing

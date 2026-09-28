@@ -8,9 +8,12 @@ consider how {4, 5, 7} are the only factorials one less than a square, and
 those squares are {5, 11, 71}, and how these pairs of triples relate
 abstractly with other triples we have studied; get a handle on the
 underlying structure."
-**Interpretation of "the Lehmer 5".** No object of that name exists in the
-repo or in a web search; the reading that fits the owner's numbers is
-**Emma Lehmer's simplest quintic** (Math. Comp. 50, 1988; Schoof–Washington
+**Interpretation of "the Lehmer 5" (CORRECTED in the ninth note).** The owner
+meant the *Lehmer five* `276, 552, 564, 660, 966`, the five smallest numbers
+whose aliquot sequences are not known to terminate or cycle (named after D. H.
+Lehmer); this note's reading as Emma Lehmer's quintic was wrong, and is logged
+in MISTAKES. The coincidence below stands under its own name. The reading
+taken here was **Emma Lehmer's simplest quintic** (Math. Comp. 50, 1988; Schoof–Washington
 1988), the degree-5 member of the simplest-fields ladder, whose conductor
 polynomial `f(n) = n^4 + 5n^3 + 15n^2 + 25n + 25` takes the values `11, 25,
 71` at `n = -1, 0, 1`: exactly the owner's `5, 11, 71` (with `25 = 5^2`).

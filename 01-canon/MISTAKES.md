@@ -9,6 +9,12 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## 2026-09-27 eighth note (opus S15): "the Lehmer 5" misread as Emma Lehmer's quintic
+
+- What was done: the owner asked to "consider the Lehmer 5"; a web search for "Lehmer five" returned nothing, and the note read the phrase as Emma Lehmer's simplest quintic because its conductor polynomial takes the values 11, 25, 71 at n = -1, 0, 1, matching the owner's Brocard squares.
+- Why it was wrong: the *Lehmer five* is a standard name (Wikipedia, aliquot sequence): the five smallest numbers 276, 552, 564, 660, 966 whose aliquot sequences are not known to terminate or enter a cycle, named after D. H. Lehmer. The owner confirmed this in the next directive. The search used the singular phrasing the owner typed and did not try the aliquot context; a second search with "aliquot" would have found it.
+- Correct framing: the eighth note's Brocard-conductor coincidence is an exact numerical fact under its own name (Lehmer's simplest quintic), typed NUMEROLOGY; the ninth note treats the Lehmer five. Lesson: when a named object is not found, search the owner's likely context (here the divergence/termination theme of the whole session) before adopting a reading, and state the reading as a guess in the first line of the reply.
+
 ## 2026-09-27 pricing note (opus S15, fifth note): a direction misstated the residual obstruction
 
 - What was done: direction D14 of `collatz_pricing_approaches_20260927.md` said that the points of `E_inf` that are not negative integers are 2-adically approachable by small integers, so that generic growth words carry no size price.

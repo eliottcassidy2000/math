@@ -519,6 +519,15 @@ all heights (THM-1289, published), δ ineffective.
   without the self-dual point). Wilson readings (5 Wilson prime; 11 half-Wilson at p^2, with 47), supersingular 5, 11, 71,
   4! = |2T|, 5! = |2I|. Fives inventoried: six different sources. Note: `collatz_doubling_tower_brocard_20260927.md`.
 
+  **The Lehmer five and Collatz (opus, 2026-09-27, S15 ninth note; corrects the eighth note's label):** the aliquot map and
+  Collatz are 2-adic-steered multiplicative steps with opposite memory: Collatz valuations are memoryless (Terras) and grow only
+  at v = 1; aliquot valuations are sticky (repeat 0.90/0.75/0.57 from a = 1/2/3) and grow exactly in the sticky classes
+  (drift -0.35 at a = 1, +0.13..+0.47 at a = 2..6). PROVED: s(2^a m) = (2^(a+1)-1) sigma(m) - 2^a m keeps valuation a iff
+  v_2(sigma(m)) > a, and v_2(sigma(m)) >= #odd-exponent prime powers of m -- drivers lock in for free, shadows are priced.
+  276 to 401 terms: driver 2^2*7, a fall 28 -> 15 digits under driver 2, recovery: the reset lane's configuration for free.
+  Cycles = 2^k-minus-something on both sides; perfect numbers at the Mersenne (odd-Catalan) indices; 24 = 4!, 120 = 5! are
+  drivers (numerology). D21 closed (4-part closed form for omega(D^2 G)), D22 closed. Note: `collatz_aliquot_lehmer_five_20260927.md`.
+
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`
 (ranks HN > reconstruction > Kakeya/Falconer > sunflower > Caccetta–Häggkvist > … ).
 
