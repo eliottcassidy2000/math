@@ -351,11 +351,20 @@ def part4(N: int = 10 ** 6, SIEVE: int = 4 * 10 ** 6):
         s = sp(n)
         if s > 0:
             (ev if n % 2 == 0 else od).append(math.log2(s / n))
-    print(f"   mean log2(s'(n)/n): even n {sum(ev)/len(ev):+.3f}, odd n {sum(od)/len(od):+.3f} (aliquot s(n): even -0.048, odd -5.34)")
+    # the aliquot map on the same range, for comparison (s(n) = sigma(n) - n, odd n includes primes with s = 1)
+    ev_s, od_s = [], []
+    for n in range(2, N + 1):
+        s = int(sig[n]) - n
+        if s > 0:
+            (ev_s if n % 2 == 0 else od_s).append(math.log2(s / n))
+    print(f"   mean log2(s'(n)/n): even n {sum(ev)/len(ev):+.3f}, odd composite n {sum(od)/len(od):+.3f}; "
+          f"aliquot s(n) on the same range: even {sum(ev_s)/len(ev_s):+.3f}, odd {sum(od_s)/len(od_s):+.3f}")
     for M in (10 ** 3, 10 ** 4, 10 ** 5, 10 ** 6):
         same = sum(1 for n in range(M, 2 * M) if sp(n) > 0 and sp(n) % 2 == n % 2)
         tot = sum(1 for n in range(M, 2 * M) if sp(n) > 0)
-        print(f"   parity persists under s' in [M, 2M), M = {M}: {same/tot:.5f} (squares' share ~ {1/math.sqrt(M):.5f})")
+        # persisting n are exactly the square-type numbers 2^a k^2 (k odd): count them
+        sq = sum(1 for n in range(M, 2 * M) if is_square(n >> v2(n)))
+        print(f"   parity persists under s' in [M, 2M), M = {M}: {same/tot:.5f}; square-type numbers in the range: {sq} (share {sq/M:.5f}, (2M)^(-1/2) = {1/math.sqrt(2*M):.5f})")
     # odd abundant numbers: the only odd growth
     oa = [n for n in range(1, 100001, 2) if int(sig[n]) > 2 * n + 1]
     print(f"   odd n <= 10^5 with s'(n) > n: {len(oa)}, first {oa[:6]}")

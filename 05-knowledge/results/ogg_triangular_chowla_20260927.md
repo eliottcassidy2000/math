@@ -67,8 +67,9 @@ primes" is the last spherical case (section 3). (3) On the nodal cubic `y^2 =
 x^2(x+1)`, whose points are `(t^2 - 1, t^3 - t)` and whose group is `G_m`, "x
 triangular" is a conic (`u^2 - 8t^2 = -7`, infinitely many: `x = 3, 15, 120,
 528, 4095, 17955, ...`) while "y triangular" is the elliptic curve `Y^2 = X^3
-- 4X + 1` (`X = 2t`), of rank at least one, all of whose eleven integer points
-found are `Z`-combinations of `P = (0, 1)` and `Q = (2, 1)`; its solutions give
+- 4X + 1` (`X = 2t`, conductor `916`), of rank at least two (the audit proved
+`P = (0, 1)` and `Q = (2, 1)` independent), all of whose eleven integer points
+found are `±(nP + mQ)`; its solutions give
 `y = 6, 120, 210, 990, 185136, 258474216` (`T_3, T_15, T_20, T_44, T_608,
 T_22736`), and the only point with both coordinates triangular below `t =
 10^6` is `(3, 6) = (T_2, T_3)`: genus zero versus genus one decides infinite
@@ -84,8 +85,9 @@ and parity flips (Chowla, anti-sticky: persistence `≍ N^(-1/2)`, measured
 ends at `0` (through a prime, `98.2%`) or in a 2-cycle (`1.8%`; eighteen
 betrothed pairs, all of opposite parity, as the theorem forces unless a
 square-type member is present); fixed points must be squares or twice
-squares (the quasiperfect problem: none known, and Cattaneo's "odd squares"
-is the theorem's odd case); the odd step's mean drift is `-2.8` bits. (5)
+squares (the quasiperfect problem: none known; Cattaneo's theorem, "odd
+squares", is strictly stronger, the parity theorem recovers only its
+parity half); the odd step's mean drift is `-2.8` bits. (5)
 The abstract theme is the paper's own: rigidity (a discrete invariant, a
 finite list) against distribution (density, asymptotics). That is the repo's
 discipline in the Collatz thread (density-one theorems never reach the
@@ -142,8 +144,13 @@ distributional law without an explicit bridge.
   "Automorphismes de courbes modulaires", not in the 1974 Bull. SMF paper
   "Hyperelliptic modular curves" cited as [2]. Not checked against the
   sources here.
-* **No new mathematics** is claimed by the paper beyond the distinction;
-  nothing in it is wrong as a statement.
+* **No new mathematics** is claimed by the paper beyond the distinction.
+  Two imprecisions (audit): its Lang–Trotter sentence (`sqrt X/log X`) omits
+  the non-CM hypothesis (CM curves have supersingular reduction at a set of
+  primes of density `1/2`), and "the finiteness of the list follows from the
+  classification of genus-zero modular curves" is a loose justification
+  (finiteness is immediate from `g(X_0(p)^+) >= (p/12 - O(sqrt p log p))/2`).
+  Its Theorem 1 and Proposition 1 are unaffected.
 
 ## 2. Ogg's list, reproduced twice, and the Paley reading (PROVED classical + FINITE-EXACT)
 
@@ -156,8 +163,11 @@ and Riemann–Hurwitz gives `g(X_0(p)^+) = (2g + 2 - f)/4`. With class numbers
 counted as reduced primitive forms, `g(X_0(p)^+) = 0` exactly for the fifteen
 primes among all `p < 120` (script, part 1; the table `p : g, f, g^+` is in
 the output: `11: 1, 4, 0`; `37: 2, 2, 1`; `71: 6, 14, 0`; `73: 5, 4, 2`; `97: 7,
-4, 3`). **Ogg's condition in one line:** `2 g(X_0(p)) + 2 = h(-4p) + h(-p)·[p
-≡ 3 (4)]`.
+4, 3`). **Ogg's condition in one line (`p >= 3`; at `p = 2` the count `f =
+h(-8) + h(-4) = 2` is the convention used above):** `2 g(X_0(p)) + 2 = h(-4p) +
+h(-p)·[p ≡ 3 (4)]`. The audit extended the check to all `p < 1000` (genus zero
+exactly at the fifteen) and confirmed the fixed-point count without class
+numbers: `f = 2·#{supersingular j in F_p}` for all `5 <= p < 200`.
 
 **Supersingular route.** On the Legendre line, `E_lambda: y^2 = x(x-1)(x-
 lambda)` is supersingular iff `H_p(lambda) = sum_(k <= m) C(m,k)^2 lambda^k =
@@ -167,7 +177,9 @@ F_(p^2)` for `5 <= p <= 97`: the number of supersingular `j`-invariants is
 `1, 1, 2, 1, 2, 2, 3, 3, 3, 3, 4, 4, 5, 5, 6, 5, 6, 7, 6, 7, 8, 8, 8` for `p = 5,
 7, ..., 97`, and *all* of them lie in `F_p` exactly for `p in {5, 7, 11, 13, 17,
 19, 23, 29, 31, 41, 47, 59, 71}` (e.g. `p = 37`: 3 supersingular `j`'s, 1 in
-`F_p`; `p = 97`: 8 and 2). This is Ogg's theorem checked on both sides.
+`F_p`; `p = 97`: 8 and 2). This is Ogg's theorem checked on both sides (the
+equivalence of the two routes is verified numerically here, not derived;
+the derivation is `#ss = g + 1` and `#{ss in F_p} = f/2`).
 
 **The Paley reading (Dirichlet, re-verified).** For `p ≡ 3 (mod 4)`, `p > 3`:
 `h(-p) = (1/(2 - (2/p))) sum_(0 < a < p/2) (a/p)`, verified for all such `p <
@@ -178,17 +190,23 @@ vertex `0` into the "first half" `{1, ..., (p-1)/2}`. So for the odd-type
 primes the genus-zero condition reads: `2 g(X_0(p)) + 2 - h(-4p)` equals the
 Paley half-row imbalance divided by `2 - (2/p)`. Values on Ogg's list: `h(-7)
 = h(-11) = h(-19) = 1`, `h(-23) = h(-31) = h(-59) = 3`, `h(-47) = 5`, `h(-71) =
-7`. **Typing:** STRUCTURAL and classical (Dirichlet's class number formula);
-the connection to the repo is that its Paley objects (THM-640, THM-448,
-HYP-3805) carry the class number as a first-half-row statistic. It is not a
-mechanism for LRC or for Collatz; it is a shared object.
+7`. **Typing:** STRUCTURAL and classical (Dirichlet's class number formula;
+verified by the audit for every `p ≡ 3 (mod 4)` in `(3, 2000)`, and false at
+`p = 3`); the connection to the repo is that its Paley objects (THM-640,
+THM-448, and HYP-3805, whose status in the repo's investigation backlog is
+REFUTED-BUT-CLOSE with the corrected formula open) carry the class number
+as a first-half-row statistic. It is not a mechanism for LRC or for Collatz;
+it is a shared object.
 
 **The nodal cubic as the boundary of the same family.** The owner's `y^2 =
-x^2(x+1) = x(x - 0)(x + 1)` is the Legendre curve at `lambda = 0` (after `x ->
--x`): the singular fibre of the family whose supersingular locus is the zero
-set of `H_p`; it has split multiplicative reduction everywhere (`a_p = 1`,
-`#E_ns(F_p) = p - 1`), the opposite extreme from supersingular (`a_p = 0`).
-So the two curves the owner names are the two ends of the Legendre line.
+x^2(x+1)` is the Legendre curve `y^2 = x(x-1)(x-lambda)` at `lambda = 1` after
+`x -> x + 1` (exactly; the fibre at `lambda = 0` is its twist by `-1`, a
+non-split node at `p ≡ 3 (mod 4)`): the singular fibre of the family whose
+supersingular locus is the zero set of `H_p`; it has split multiplicative
+reduction at every odd prime (`a_p = 1`, `#E_ns(F_p) = p - 1`; at `p = 2` the
+node is a cusp, `E_ns = G_a`), the opposite extreme from supersingular (`a_p
+= 0`). So the two curves the owner names are the two ends of the Legendre
+line.
 
 ## 3. Thirty and forty-two: one formula (PROVED, classical)
 
@@ -198,7 +216,7 @@ The snippet's Gauss–Bonnet/Riemann–Hurwitz identity for a triangle group
 spherical cases give the finite rotation groups of orders `2·6 = 12`, `2·12
 = 24`, `2·30 = 60` (S10's `PSL(2,3) = A_4`, `PGL(2,3) = S_4`, `PSL(2,5) =
 A_5`), `q = 6` is Euclidean (the hexagonal lattice, the CM curve `y^2 = x^3 +
-1` with `j = 0`, supersingular exactly at `p ≡ 2 (mod 3)`), and `q = 7` is the
+1` with `j = 0`, supersingular exactly at `p = 3` and at `p ≡ 2 (mod 3)`), and `q = 7` is the
 first hyperbolic case with the minimal deficit `1/42`, whence Hurwitz's `#Aut
 <= 42(2g - 2)` and the orders `168 = 42·4` (`g = 3`, Klein), `504 = 42·12`
 (`g = 7`, Fricke–Macbeath), `1092 = 42·26` (`g = 14`, the first Hurwitz
@@ -230,15 +248,23 @@ T_m` for `m = 0, 2, 5, 15, 32, 90, 189, 527, ...`.
 (c) `y = t^3 - t` is triangular iff `8t^3 - 8t + 1` is a square iff `(X, Y) =
 (2t, 2k + 1)` lies on the elliptic curve `E: Y^2 = X^3 - 4X + 1` (discriminant
 `2^4·229`). `P = (0, 1)` has infinite order (`3P` has `x = -7/4`, so `P` is not
-torsion by Nagell–Lutz), hence `rank E(Q) >= 1`; the integer points with `-2
-<= X <= 10^6` are exactly `(-2, 1), (-1, 2), (0, 1), (2, 1), (3, 4), (4, 7), (10,
-31), (12, 41), (20, 89), (114, 1217), (1274, 45473)`, and every one of them
-is `nP + mQ` with `Q = (2, 1)`: `P + Q, P - Q, P, Q, 2P + Q, 2P, 2P - Q, 2Q, 2P
-+ 2Q, 4P + Q, 2P - 3Q` (no relation with `|n|, |m| <= 12`; the data are
-consistent with rank two, not proved). The even `X` give `t = 1, 2, 5, 6, 10,
-57, 637` and `y = 0, 6, 120, 210, 990, 185136, 258474216 = T_0, T_3, T_15,
-T_20, T_44, T_608, T_22736`; by Siegel the list of `t` is finite, and the
-search to `t = 10^6` found no others.
+torsion by Nagell–Lutz). The integer points with `-2 <= X <= 10^6` (complete
+to `10^7`, audit) are exactly `(-2, 1), (-1, 2), (0, 1), (2, 1), (3, 4), (4, 7),
+(10, 31), (12, 41), (20, 89), (114, 1217), (1274, 45473)`, and with `Q = (2, 1)`
+and the sign of `Y` respected they are `-P - Q, -P + Q, P, Q, -2P - Q, 2P, -2P
++ Q, -2Q, 2P + 2Q, -4P - Q, -2P + 3Q` (the session script compared `|Y|` and
+listed the combinations up to sign). **`P` and `Q` are independent, so `rank
+E(Q) >= 2`** (audit): `E(Q)` has trivial torsion (`gcd(#E(F_3), #E(F_5)) =
+gcd(7, 9) = 1`), so a dependence could be taken as `aP + bQ = O` with `a, b`
+not both even; but in `E(F_37) = Z/2 x Z/22` the reductions of `P`, `Q` and `P
++ Q` all lie outside `2E(F_37)`, which rules out each parity class of `(a,
+b)` (the same at `p = 53, 173, 241`; no relation with `|a|, |b| <= 30` either).
+Whether the rank is exactly two is not settled here (a descent, or a table
+at conductor `916 = 2^2·229`, the conductor found by the audit's Tate
+algorithm: type IV at `2`, `I_1` at `229`, minimal model). The even `X >= 2`
+give `t = 1, 2, 5, 6, 10, 57, 637` and `y = 0, 6, 120, 210, 990, 185136,
+258474216 = T_0, T_3, T_15, T_20, T_44, T_608, T_22736`; by Siegel the list of
+`t` is finite, and the search to `t = 10^6` (audit: `5·10^6`) found no others.
 (d) Both coordinates triangular, `t <= 10^6`: only `(0, 0)` and `(3, 6) = (T_2,
 T_3)`.
 
@@ -263,8 +289,9 @@ content of the section is (a)–(d).
 **Perfect numbers.** `T_(2^p - 1) = 2^(p-1)(2^p - 1)` (HYP-2220) is the
 triangular reading of Euclid–Euler; on the nodal cubic `x = T_m` with `m =
 2^p - 1` needs `2^(p-1)(2^p - 1) + 1` to be a square (`p = 2`: `7`, no; `p =
-3`: `29`, no; none below `p = 31`): the perfect numbers are not on the Pell
-family. No connection.
+3`: `29`, no; none for prime `p <= 100`, audit): the perfect numbers are not
+on the Pell family, although the Euclid-shaped non-prime case `k = 4`, `T_15
+= 120 = 2^3(2^4 - 1)`, is (`121 = 11^2`, the point `t = 11`). No connection.
 
 ## 5. The aliquot map without its unit (PROVED + FINITE-EXACT)
 
@@ -277,9 +304,11 @@ its fixed points the quasiperfect numbers, none known).
 (a) If `n` is even, `n = 2^a m` with `m` odd, then `s'(n)` is odd iff `m` is
 not a perfect square.
 (b) If `n` is odd, then `s'(n)` is even iff `n` is not a perfect square.
-(c) Consequently: a fixed point of `s'` is a square or twice a square (odd
-fixed points are odd squares: Cattaneo's theorem for quasiperfect numbers
-is the odd case); a cycle of odd length contains an element whose odd part
+(c) Consequently: a fixed point of `s'` is a square or twice a square (this
+is only the parity half of Cattaneo's theorem that quasiperfect numbers are
+odd squares, which also excludes `2^a m^2` with `a` odd, since `sigma(n) = 2n
++ 1` would force `m^2 ≡ -1 (mod 2^(a+1) - 1)`, impossible modulo `4`); a cycle
+of odd length contains an element whose odd part
 is a square; a 2-cycle whose two members have the same parity contains
 such an element (so betrothed pairs have opposite parity unless one member
 is of square type); and the proportion of `n <= N` with `s'(n) ≡ n (mod 2)`
@@ -303,12 +332,18 @@ reached: `(48, 75), (140, 195), (1050, 1925), (1575, 1648), (2024, 2295),
 (5775, 6128), (8892, 16587), (9504, 20735), (62744, 75495), (186615, 206504),
 (196664, 219975), (199760, 309135), (266000, 507759), (312620, 549219),
 (526575, 544784), (573560, 817479), (587460, 1057595), (1139144, 1159095)`,
-every one of opposite parity. Mean `log_2(s'(n)/n)`: `-0.048` on even `n`
-(the aliquot value: `s' = s - 1`), `-2.82` on odd composite `n` (against
-`-5.34` for `s` on odd `n`, where primes give `s = 1`); `210` odd `n <= 10^5`
-have `s'(n) > n` (the odd abundant numbers, `945` first). Parity persistence
-in `[M, 2M)`: `0.0254, 0.0079, 0.0025, 0.0008` for `M = 10^3, ..., 10^6`,
-against the square-type share `M^(-1/2)`.
+every one of opposite parity, none containing a square-type member (the
+audit found nine more pairs with smaller member in `(10^6, 2·10^6]`, none
+reached from starts below `10^6`, all of opposite parity). Mean `log_2(s'(n)
+/n)`: `-0.048` on even `n` (the aliquot value: `s' = s - 1`), `-2.82` on odd
+composite `n` (against `-5.26` for `s` on odd `n <= 10^6`, audit, where the
+primes give `s = 1`; the STICKY note's `-5.34` was on `n <= 2·10^6`); `210` odd
+`n <= 10^5` have `s'(n) > n` (the odd abundant numbers, `945` first). Parity
+persistence in `[M, 2M)`: `0.0254, 0.0079, 0.0025, 0.0008` for `M = 10^3, ...,
+10^6`; by the theorem the persisting `n` are exactly the square-type numbers
+`2^a k^2` (`k` odd), `22, 71, 224, 707` of them in those ranges, so the share
+is `(2M)^(-1/2)(1 + o(1))` among all `n` and the measured proportions are
+forced, not an independent statistic.
 
 **The three regimes of one carry (the crossover with STICKY).** The
 aliquot map's driver lock (STICKY note, Theorem 1) is the statement that
@@ -348,7 +383,7 @@ it.
 | `168 = 8·21` | `|PSL(2,7)|`, Klein quartic | `F_21 = Aut(Paley heptagon)`, HYP-3805, THM-448; the memory's `168` | STRUCTURAL (Sylow-7 normalizer) |
 | `13`, `1092` | `PSL(2,13)`, the Hurwitz triplet | `13` in the memory's list; the `-17` cycle's `(7, 11)` reading | NUMEROLOGY |
 | `14` | genus of the Hurwitz triplet | LRC(14) | NUMEROLOGY |
-| `118 = 2·59` | next arithmetic Hurwitz genus | `59` is an Ogg prime | NUMEROLOGY |
+| `118 = 2·59` | genus of the `PSL(2,27)` Hurwitz curve (`9828 = 84·117`), the snippet's "next arithmetic" one; genus `17` (group of order `1344`) lies between, and every Hurwitz curve is a quotient of the arithmetic `(2,3,7)` group, the snippet's "non-arithmetic" meaning "not a congruence quotient" | `59` is an Ogg prime | NUMEROLOGY |
 | `24, 120, 210` | `(x, y)` at `t = 5, 6` on the nodal cubic; cannonball `24`; `5!`, `7#` | the parallel eighth note's `|2I| = 120`, `4!`, `5!`; the Leech chain | NUMEROLOGY (distinct mechanisms) |
 | `189` | Pell index: `T_189 = 134^2 - 1` | memory's `189 = 3^3·7` (a small-number coincidence there too) | NUMEROLOGY |
 | `5, 11, 71` | Ogg primes | the parallel eighth note's Brocard roots | NUMEROLOGY (recorded there) |
@@ -371,18 +406,55 @@ it.
   aliquot family in the typology's convergent corner, and a proof attempt
   would face the same pointwise wall as Collatz. Cheapest test: the
   longest sequences below `10^8`.
-* **The rank of `E: Y^2 = X^3 - 4X + 1`.** Two independent points found;
-  a descent or a table lookup would settle the rank and Siegel's finite list
-  of `t` with `t^3 - t` triangular (the search to `10^6` gives seven).
+* **The rank of `E: Y^2 = X^3 - 4X + 1`.** Rank at least two is proved
+  (section 4); a descent or a table lookup at conductor `916` would settle
+  whether it is exactly two, and Siegel's finite list of `t` with `t^3 - t`
+  triangular (the search to `5·10^6` gives seven).
 * **What does not transfer.** Genus-zero rigidity of `X_0(p)^+` and the
   Collatz problem share only the abstract regime distinction; there is no map
   from modular curves to the Syracuse map here, and none is claimed.
 
-## 8. Independent audit
+## 8. Independent audit (2026-09-27)
 
-Pending (auditor subagent: blind re-derivation of Propositions 1 and 2, the
-genus and class-number formulas, the Paley half-row identity and the
-elliptic-curve group computations; own script).
+Auditor subagent, independent re-derivation of every statement before
+comparison, then an own exact-arithmetic script (930 lines, 19 s):
+`04-computation/experiments/ogg_triangular_chowla_20260927_audit.py`,
+output `ogg_triangular_chowla_20260927_audit.out`, report
+`ogg_triangular_chowla_20260927_audit.md`. **Verdict: SOUND WITH
+CORRECTIONS, all applied above.** CONFIRMED: Proposition 1 (exhaustive to
+`2·10^6`; the persisting set is exactly the square-type numbers); the genus
+formula, the fixed-point count and `g(X_0(p)^+) = 0` exactly at the fifteen
+for all `p < 1000` (class numbers cross-checked against Dirichlet's analytic
+formula on all 305 fundamental discriminants in `(-1000, 0)`); the
+supersingular counts by three methods (point counting, Hasse invariant,
+Legendre roots) with the Eichler–Deuring mass formula; Dirichlet's half-row
+formula for all `p ≡ 3 (mod 4)` in `(3, 2000)`; Proposition 2 with own
+chord-tangent code, the Pell orbits, the integer points complete to `X =
+10^7`, the `t`-list to `5·10^6`, `(3, 6)` alone; the Chowla dynamics with
+identical endings, cycles, basin counts, longest sequence, peak and drifts;
+`|Aut(T_7)| = 21` and the Sylow-7 normalizer of an explicitly constructed
+`PSL(2,7)`; every integer of sections 2, 3, 6; the reading of the paper.
+CORRECTED: (C1) the eleven integer points are `±(nP + mQ)`, the session
+script compared `|Y|`; (C2) the rank is at least two, proved by the audit
+through `E(F_37) ≅ Z/2 × Z/22` and trivial torsion, and relations were not
+tested by the session script; (C3) the nodal cubic is the Legendre fibre at
+`lambda = 1` after `x -> x + 1`, the `lambda = 0` fibre being its `-1` twist;
+(C4) the node is a cusp at `p = 2`; (C5) Proposition 1(c) recovers only the
+parity half of Cattaneo's theorem; (C6) the `118` row: genus `17` lies
+between and every Hurwitz curve is arithmetic; (C7) two imprecisions of the
+paper noted; (C8) the one-line Ogg condition needs `p >= 3`; (C9) "even `X >=
+2`"; (C10) the aliquot odd drift compared on one range (`-5.26` at `10^6`) and
+no longer a hard-coded string in the script; (C11) the persisting set is the
+square-type numbers with share `(2M)^(-1/2)`, so the measured proportions
+are forced; (C12) `j = 0` is also supersingular at `p = 3`; (C13) `T_15 =
+120` is a Euclid-shaped Pell point; (C14) HYP-3805's status carried. ADDED
+by the audit: conductor `916`; `f = 2·#{supersingular j in F_p}` for `5 <= p <
+200`; nine further betrothed pairs in `(10^6, 2·10^6]`. UNVERIFIED
+(recollections, consistent between author and auditor): Ogg 1975 versus
+1974 as the home of the observation; Cattaneo 1951; Hagis–Lord 1977; the
+genus-17 Hurwitz group of order `1344`. OPEN: the exact rank of `E`; the
+completeness of its integer points beyond `10^7`; termination of the Chowla
+map. The mechanisms of C1, C3 and C10 are logged in MISTAKES.
 
 ## 9. Reproduction
 

@@ -1,0 +1,233 @@
+sigma sieve to 10000000: 11.4s
+
+==============================================================================
+A. Proposition 1 (parity alternation of s'(n) = sigma(n) - n - 1) and corollaries
+==============================================================================
+   Blind re-derivation.  sigma is multiplicative; sigma(2^a) = 2^(a+1) - 1 is odd; for an odd prime q,
+   sigma(q^e) = 1 + q + ... + q^e has e + 1 terms, all odd, so sigma(q^e) = e + 1 (mod 2).  Hence
+   sigma(n) odd  <=>  all odd-prime exponents even  <=>  the odd part of n is a square  <=>  n = k^2 or 2k^2.
+   n even: s'(n) = sigma(n) - n - 1 = sigma(n) + 1 (mod 2): s'(n) odd <=> sigma(n) even <=> odd part not a square.
+   n odd : s'(n) = sigma(n) - 1 - 1 = sigma(n)     (mod 2): s'(n) even <=> sigma(n) even <=> n not a square.
+   In both cases  s'(n) = n (mod 2)  <=>  the odd part of n is a square  ('square type').  Prop 1 (a), (b) hold.
+   (c) a fixed point or an odd cycle cannot flip parity at every step (an odd number of flips returns to the
+   opposite parity), so it contains a square-type element; a same-parity 2-cycle has s'(n) = n (mod 2) at both
+   members; #{n <= N square type} = sum_a #{k odd: 2^a k^2 <= N} ~ N^(1/2)/(2 - sqrt 2) = O(N^(1/2)).  All correct.
+   [OK  ] classical fact: sigma(n) odd iff n is a square or twice a square, all 1 <= n <= 2000000
+   [OK  ] Prop 1 (a)+(b) as one statement: s'(n) = n (mod 2) iff odd part of n is a square, all 2 <= n <= 2000000
+   [OK  ] Prop 1 (a): n even, s'(n) odd iff the odd part is not a square
+   [OK  ] Prop 1 (b): n odd, s'(n) even iff n is not a square
+   [OK  ] no fixed point of s' (= quasiperfect number) with n <= 2000000
+   Parity persistence in [M, 2M).  By the theorem the persisting n are EXACTLY the square-type n, so the
+   'measured' proportion is a deterministic count; its asymptotic is sqrt(1/(2M)) among all n (k odd in 2^a k^2).
+   M         #sqtype  share(all n)  share(composites)  sqrt(1/(2M))  sqrt(1/(2M))*M/#comp  note .out
+   1000           22  0.02200       0.02543            0.02236       0.02585               0.02543
+   [OK  ] M = 1000: square-type count by enumeration = 22; persisting composites = square-type composites = 22
+   10000          71  0.00710       0.00792            0.00707       0.00789               0.00792
+   [OK  ] M = 10000: square-type count by enumeration = 71; persisting composites = square-type composites = 71
+   100000        224  0.00224       0.00245            0.00224       0.00244               0.00245
+   [OK  ] M = 100000: square-type count by enumeration = 224; persisting composites = square-type composites = 224
+   1000000       707  0.00071       0.00076            0.00071       0.00076               0.00076
+   [OK  ] M = 1000000: square-type count by enumeration = 707; persisting composites = square-type composites = 707
+   Cattaneo's theorem (quasiperfect => odd square) is STRONGER than Prop 1(c): it also excludes n twice a square.
+   Argument: n = 2^a m^2 (a odd, m odd), sigma(n) = (2^(a+1) - 1) sigma(m^2) = 2^(a+1) m^2 + 1 gives
+   m^2 = -1 (mod 2^(a+1) - 1), but 2^(a+1) - 1 = 3 (mod 4) has a prime factor = 3 (mod 4): impossible.
+   [OK  ] checked a = 1, 3, ..., 39: 2^(a+1) - 1 = 3 (mod 4) and has a prime factor = 3 (mod 4)
+
+==============================================================================
+B. Class numbers, genus of X_0(p), fixed points of w_p, genus of X_0(p)^+
+==============================================================================
+   [OK  ] reduced-form count = analytic class number formula for all 305 fundamental D in (-1000, 0)
+   [OK  ] spot values {-3: 1, -4: 1, -7: 1, -8: 1, -11: 1, -15: 2, -19: 1, -20: 2, -23: 3, -43: 1, -47: 5, -56: 4, -59: 3, -67: 1, -71: 7, -148: 2, -163: 1, -164: 8, -188: 5, -236: 9, -284: 7}
+   [OK  ] order relation h(-4p) = 3h(-p) [p = 3 mod 8], h(-p) [p = 7 mod 8] for 3 < p < 1000
+   nu_2, nu_3 at p = 2: 1, 0; at p = 3: 0, 1
+   [OK  ] g(X_0(p)) integral, = floor((p+1)/12) - [p = 1 mod 12] for p >= 5; 2g + 2 - f = 0 mod 4 for all p < 1000
+   [OK  ] g(X_0(p)) agrees with the standard table for p <= 113
+   [OK  ] g(X_0(p)^+) >= 0 for all p < 1000
+   [OK  ] g(X_0(p)^+) = 0 for p < 1000 exactly at [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 41, 47, 59, 71]
+   p:g,f,g+ for p < 120: 2:0,2,0; 3:0,2,0; 5:0,2,0; 7:0,2,0; 11:1,4,0; 13:0,2,0; 17:1,4,0; 19:1,4,0; 23:2,6,0; 29:2,6,0; 31:2,6,0; 37:2,2,1; 41:3,8,0; 43:3,4,1; 47:4,10,0; 53:4,6,1; 59:5,12,0; 61:4,6,1; 67:5,4,2; 71:6,14,0; 73:5,4,2; 79:6,10,1; 83:7,12,1; 89:7,12,1; 97:7,4,3; 101:8,14,1; 103:8,10,2; 107:9,12,2; 109:8,6,3; 113:9,8,3
+   [OK  ] the note's quoted rows {11: (1, 4, 0), 37: (2, 2, 1), 71: (6, 14, 0), 73: (5, 4, 2), 97: (7, 4, 3)}
+   g(X_0(p)^+) = 1 for p < 200: [37, 43, 53, 61, 79, 83, 89, 101, 131]  (recollection of the standard list: 37, 43, 53, 61, 79, 83, 89, 101, 131)
+   g(X_0(p)^+) = 2 for p < 200: [67, 73, 103, 107, 167, 191]  (recollection: 67, 73, 103, 107, 167, 191)
+   p = 2: naive h(-4p) = h(-8) = 1 != 2 = fixed points of an involution of P^1; h(-8) + h(-4) = 2.  The one-line form 2g + 2 = h(-4p) + h(-p)[p = 3 (4)] therefore needs p >= 3.
+   h(-p) for the p = 3 (mod 4) members of Ogg's list: {3: 1, 7: 1, 11: 1, 19: 1, 23: 3, 31: 3, 47: 5, 59: 3, 71: 7}
+   [OK  ] class numbers 1,1,1,1,3,3,5,3,7 as in the note
+
+==============================================================================
+C. Supersingular j-invariants, 5 <= p <= 97: F_p-count by point counting and Hasse invariant; total by Legendre roots
+==============================================================================
+   p   total  in_Fp(count) in_Fp(Hasse) in_Fp(Legendre)  f/2  formula_total  all_in_Fp
+   5       1           1            1               1     1             1  yes  
+   7       1           1            1               1     1             1  yes  
+   11      2           2            2               2     2             2  yes  
+   13      1           1            1               1     1             1  yes  
+   17      2           2            2               2     2             2  yes  
+   19      2           2            2               2     2             2  yes  
+   23      3           3            3               3     3             3  yes  
+   29      3           3            3               3     3             3  yes  
+   31      3           3            3               3     3             3  yes  
+   37      3           1            1               1     1             3  no   
+   41      4           4            4               4     4             4  yes  
+   43      4           2            2               2     2             4  no   
+   47      5           5            5               5     5             5  yes  
+   53      5           3            3               3     3             5  no   
+   59      6           6            6               6     6             6  yes  
+   61      5           3            3               3     3             5  no   
+   67      6           2            2               2     2             6  no   
+   71      7           7            7               7     7             7  yes  
+   73      6           2            2               2     2             6  no   
+   79      7           5            5               5     5             7  no   
+   83      8           6            6               6     6             8  no   
+   89      8           6            6               6     6             8  no   
+   97      8           2            2               2     2             8  no   
+   [OK  ] for every p: the three F_p-counts agree, H_p has (p-1)/2 simple roots in F_{p^2} (degrees <= 2), total = floor(p/12) + eps(p), Eichler-Deuring mass = (p-1)/12, and #ss j in F_p = f/2 (fixed points of w_p)
+   [OK  ] totals [1, 1, 2, 1, 2, 2, 3, 3, 3, 3, 4, 4, 5, 5, 6, 5, 6, 7, 6, 7, 8, 8, 8] as in the note
+   [OK  ] all supersingular j in F_p exactly for [5, 7, 11, 13, 17, 19, 23, 29, 31, 41, 47, 59, 71]
+   [OK  ] 2 * #{supersingular j in F_p} = h(-4p) + h(-p)[p = 3 (4)] for all 5 <= p < 200 (independent check of the w_p fixed-point formula)
+
+==============================================================================
+D. Dirichlet's half-row formula h(-p) = (sum_{0<a<p/2} (a/p)) / (2 - (2/p)), p = 3 mod 4, p > 3
+==============================================================================
+   [OK  ] formula exact for all 154 primes p = 3 (mod 4), 3 < p < 2000
+   [OK  ] equivalently: half-row sum = h(-p) for p = 7 (mod 8) and = 3 h(-p) for p = 3 (mod 8)
+   p = 3: half-row sum 1, 2 - (2/3) = 3, quotient 1/3 != h(-3) = 1: the hypothesis p > 3 is needed (extra units).
+   p = 7: Paley tournament vertex 0, out - in into {1..3} = 2 - 1 = 1 = 1 * h(-p) = 1 * 1
+   p = 11: Paley tournament vertex 0, out - in into {1..5} = 4 - 1 = 3 = 3 * h(-p) = 3 * 1
+   p = 19: Paley tournament vertex 0, out - in into {1..9} = 6 - 3 = 3 = 3 * h(-p) = 3 * 1
+   p = 23: Paley tournament vertex 0, out - in into {1..11} = 7 - 4 = 3 = 1 * h(-p) = 1 * 3
+   p = 31: Paley tournament vertex 0, out - in into {1..15} = 9 - 6 = 3 = 1 * h(-p) = 1 * 3
+   p = 47: Paley tournament vertex 0, out - in into {1..23} = 14 - 9 = 5 = 1 * h(-p) = 1 * 5
+   p = 59: Paley tournament vertex 0, out - in into {1..29} = 19 - 10 = 9 = 3 * h(-p) = 3 * 3
+   p = 71: Paley tournament vertex 0, out - in into {1..35} = 21 - 14 = 7 = 1 * h(-p) = 1 * 7
+   [OK  ] Paley reading: half-row sum = out-degree minus in-degree of vertex 0 into the first half (checked 8 primes)
+
+==============================================================================
+E. Proposition 2: the nodal cubic, the Pell conic, the elliptic curve E: Y^2 = X^3 - 4X + 1
+==============================================================================
+   [OK  ] (a) chord-tangent law on y^2 = x^2(x+1): (y+x)/(y-x) = (t+1)/(t-1) is multiplicative; parameter of the sum is (1 + t1 t2)/(t1 + t2)
+   [OK  ] integer points of the nodal cubic have x + 1 = t^2 (t integer), y = t^3 - t = 6 C(t+1, 3) [x <= 10^5]
+   nodal cubic mod 2: #nonsingular points incl. infinity = 2 = p (CUSP: additive, not multiplicative)
+   nodal cubic mod 3: #nonsingular points incl. infinity = 2 = p - 1 (split node, a_p = 1)
+   nodal cubic mod 5: #nonsingular points incl. infinity = 4 = p - 1 (split node, a_p = 1)
+   nodal cubic mod 7: #nonsingular points incl. infinity = 6 = p - 1 (split node, a_p = 1)
+   nodal cubic mod 11: #nonsingular points incl. infinity = 10 = p - 1 (split node, a_p = 1)
+   nodal cubic mod 13: #nonsingular points incl. infinity = 12 = p - 1 (split node, a_p = 1)
+   [OK  ] y^2 = x^2(x+1) is a split node at every odd p but a CUSP at p = 2 ((y - x)(y + x) = (y + x)^2 in char 2)
+   Legendre fibre: lambda = 1, x -> x + 1 gives y^2 = (x+1) x^2 EXACTLY; lambda = 0, x -> -x gives y^2 = -x^2(x+1), the -1 twist.
+   (b) t <= 10^6 with x = t^2 - 1 triangular: [1, 2, 4, 11, 23, 64, 134, 373, 781, 2174, 4552, 12671, 26531, 73852, 154634, 430441, 901273]
+       x = [0, 3, 15, 120, 528, 4095, 17955, 139128], m = [0, 2, 5, 15, 32, 90, 189, 527]
+   [OK  ] Pell list as in the note; two interleaved orbits of (u,t) -> (3u + 8t, u + 3t), each t_{k+2} = 6 t_{k+1} - t_k
+   [OK  ] T_189 = 134^2 - 1 = 17955; T_527 = 373^2 - 1
+   [OK  ] discriminant 3664 = 2^4 * 229; v_p(Delta) < 12 for all p, so the model is minimal
+   2P = (Fraction(4, 1), Fraction(7, 1)), 3P = (Fraction(-7, 4), Fraction(13, 8)), 2Q = (Fraction(12, 1), Fraction(-41, 1)), P + Q = (Fraction(-2, 1), Fraction(-1, 1)), P - Q = (Fraction(-1, 1), Fraction(-2, 1))
+   [OK  ] 2P = (4, 7); x(3P) = -7/4 (not integral => P non-torsion by Nagell-Lutz)
+   [OK  ] integer points with -2 <= X <= 10000000 (Y >= 0): [(-2, 1), (-1, 2), (0, 1), (2, 1), (3, 4), (4, 7), (10, 31), (12, 41), (20, 89), (114, 1217), (1274, 45473)]
+   [OK  ] no relation nP + mQ = O with |n|, |m| <= 30 (the note claims <= 12 but its script never tests this)
+   exact combinations (sign-sensitive):
+      (-2, 1) = -1P + -1Q ;  (-2, -1) = 1P + 1Q ;  note says 1P + 1Q, which is (-2, -1)
+      (-1, 2) = -1P + 1Q ;  (-1, -2) = 1P + -1Q ;  note says 1P + -1Q, which is (-1, -2)
+      (0, 1) = 1P + 0Q ;  (0, -1) = -1P + 0Q ;  note says 1P + 0Q, which is (0, +1)
+      (2, 1) = 0P + 1Q ;  (2, -1) = 0P + -1Q ;  note says 0P + 1Q, which is (2, +1)
+      (3, 4) = -2P + -1Q ;  (3, -4) = 2P + 1Q ;  note says 2P + 1Q, which is (3, -4)
+      (4, 7) = 2P + 0Q ;  (4, -7) = -2P + 0Q ;  note says 2P + 0Q, which is (4, +7)
+      (10, 31) = -2P + 1Q ;  (10, -31) = 2P + -1Q ;  note says 2P + -1Q, which is (10, -31)
+      (12, 41) = 0P + -2Q ;  (12, -41) = 0P + 2Q ;  note says 0P + 2Q, which is (12, -41)
+      (20, 89) = 2P + 2Q ;  (20, -89) = -2P + -2Q ;  note says 2P + 2Q, which is (20, +89)
+      (114, 1217) = -4P + -1Q ;  (114, -1217) = 4P + 1Q ;  note says 4P + 1Q, which is (114, -1217)
+      (1274, 45473) = -2P + 3Q ;  (1274, -45473) = 2P + -3Q ;  note says 2P + -3Q, which is (1274, -45473)
+   [OK  ] every integer point (both signs) is an exact Z-combination of P and Q
+   sign discrepancies in the note's list (its script compared |Y| only): 7 of 11: (-2,1) is -(1P+1Q), (-1,2) is -(1P+-1Q), (3,4) is -(2P+1Q), (10,31) is -(2P+-1Q), (12,41) is -(0P+2Q), (114,1217) is -(4P+1Q), (1274,45473) is -(2P+-3Q)
+   #E(F_p): {3: 7, 5: 9, 7: 12, 11: 15, 13: 18, 17: 25, 19: 25, 23: 30}; gcd = 1
+   [OK  ] E(Q)_tors is trivial (torsion injects into E(F_p) for good p >= 3)
+   E(F_p) for good p: |E|, ord P, ord Q, |<P,Q>|, cyclic?
+      p =   3:    7     7    7     7  cyclic
+      p =   5:    9     9    3     9  cyclic
+      p =   7:   12     4   12    12  cyclic
+      p =  11:   15    15    5    15  cyclic
+      p =  13:   18     6   18    18  cyclic
+      p =  17:   25    25   25    25  cyclic
+      p =  19:   25    25    5    25  cyclic
+      p =  23:   30     5    6    30  cyclic
+      p =  29:   22    11   22    22  cyclic
+      p =  31:   30    30   30    30  cyclic
+      p =  37:   44    22   22    44  NOT cyclic
+      p =  41:   32    32    4    32  cyclic
+      p =  43:   49    49   49    49  cyclic
+      p =  47:   42    21   21    21  cyclic
+      p =  53:   48    12   24    48  NOT cyclic
+      p =  59:   74    74   74    74  cyclic
+   [OK  ] P, Q independent in E(F_p)/2E(F_p) = (Z/2)^2 at p = [37, 53, 173, 241, 347, 359]...: with trivial torsion this PROVES rank E(Q) >= 2
+   Tate at 2: model [0,0,2,-4,0] (y -> y+1 moves the singular point to (0,0)); b2=0, b4=-8, b6=4, b8=-16, Delta=3664
+      2 | a3, a4, a6: True
+      2 | b2 (so not multiplicative): True
+      4 | a6 (so not type II): True
+      8 | b8 (so not type III): True
+      8 does NOT divide b6 => type IV: True
+   [OK  ] Kodaira type IV at 2, v_2(Delta) = 4, conductor exponent f_2 = v(Delta) - 2 = 2
+   at 229: v(Delta) = 1 => type I_1, f = 1.  Conductor N = 2^2 * 229 = 916 (own computation, no table lookup).
+   even X give t = [-1, 0, 1, 2, 5, 6, 10, 57, 637] (the note lists only t >= 1, omitting t = -1, 0 which give y = 0)
+   [OK  ] t <= 5000000 with t^3 - t triangular: [1, 2, 5, 6, 10, 57, 637]; y = [0, 6, 120, 210, 990, 185136, 258474216] = T_k, k = [0, 3, 15, 20, 44, 608, 22736]
+   [OK  ] both coordinates triangular (t <= 5000000): t = [1, 2], points [(0, 0), (3, 6)]; (3, 6) = (T_2, T_3)
+   t = 5: (x, y) = (24, 120), 120 = 5! = T_15; t = 6: (35, 210), 210 = 2*3*5*7 = T_20; t = 10: (99, 990), 990 = T_44
+   2^(k-1)(2^k - 1) + 1 square for k <= 100: k = [4] (k = 4: T_15 = 120 = 2^3 * 15, 121 = 11^2, the Pell point t = 11)
+   [OK  ] no PERFECT number T_(2^p - 1) (p prime <= 100) lies on the Pell family; the note's 'none below p = 31' holds for prime p, but the Euclid-shaped T_15 = 120 (k = 4, not prime) does lie on it
+   [OK  ] n < 10^6 with 1^2 + ... + n^2 square: [1, 24] (70^2 = 4900)
+
+==============================================================================
+F. The Chowla map s'(n) = sigma(n) - n - 1 on all n <= 10^6 (sieve to 10^7, sympy beyond)
+==============================================================================
+   endings: {'zero': 982099, 'cycle2': 17900}; longest 48 steps at n = 948375; largest peak/n = 6148079/980100 = 6.273; mean length 9.321; values beyond the 10^7 sieve: 0
+   [OK  ] 982099 sequences end at 0 and 17900 enter a 2-cycle; no fixed point, no longer cycle (as the note states)
+   [OK  ] longest 48 steps (n = 948375); largest peak ratio at n = 980100 = 990^2; mean length 9.32
+   cycles reached (members: starts): [((48, 75), 9724), ((140, 195), 3485), ((1050, 1925), 558), ((1575, 1648), 1971), ((2024, 2295), 963), ((5775, 6128), 408), ((8892, 16587), 441), ((9504, 20735), 226), ((62744, 75495), 72), ((186615, 206504), 6), ((196664, 219975), 7), ((199760, 309135), 14), ((266000, 507759), 5), ((312620, 549219), 3), ((526575, 544784), 12), ((573560, 817479), 3), ((587460, 1057595), 1), ((1139144, 1159095), 1)]
+   [OK  ] exactly the eighteen 2-cycles listed in the note are reached
+   [OK  ] each listed pair is a genuine 2-cycle of s' (sigma via sympy, independent of the sieve)
+   [OK  ] all eighteen pairs have opposite parity
+   [OK  ] no member is of square type (consistent with the parity theorem's forced alternation)
+   all 2-cycles with smaller member <= 2*10^6: [(48, 75), (140, 195), (1050, 1925), (1575, 1648), (2024, 2295), (5775, 6128), (8892, 16587), (9504, 20735), (62744, 75495), (186615, 206504), (196664, 219975), (199760, 309135), (266000, 507759), (312620, 549219), (526575, 544784), (573560, 817479), (587460, 1057595), (1000824, 1902215), (1081184, 1331967), (1139144, 1159095), (1140020, 1763019), (1173704, 1341495), (1208504, 1348935), (1233056, 1524831), (1236536, 1459143), (1279950, 2576945), (1921185, 2226014)]
+   not reached from any start <= 10^6: [(1000824, 1902215), (1081184, 1331967), (1140020, 1763019), (1173704, 1341495), (1208504, 1348935), (1233056, 1524831), (1236536, 1459143), (1279950, 2576945), (1921185, 2226014)]
+   [OK  ] every betrothed pair with smaller member <= 2*10^6 has opposite parity
+   mean log2(s'(n)/n), n <= 10^6: even -0.048, odd composite -2.817; aliquot s(n): even -0.048, odd (incl. primes) -5.256
+   [OK  ] Chowla drifts -0.048 (even) / -2.82 (odd composite) and aliquot even drift -0.048 as in the note
+      aliquot s(n), odd n <= 10000: mean log2(s(n)/n) = -4.533
+      aliquot s(n), odd n <= 100000: mean log2(s(n)/n) = -4.935
+      aliquot s(n), odd n <= 1000000: mean log2(s(n)/n) = -5.256
+      aliquot s(n), odd n <= 10000000: mean log2(s(n)/n) = -5.525
+      aliquot s(n), odd n in [100000, 200000): mean log2(s(n)/n) = -5.142
+      aliquot s(n), odd n in [1000000, 2000000): mean log2(s(n)/n) = -5.429
+      aliquot s(n), odd n in [5000000, 10000000): mean log2(s(n)/n) = -5.600
+   [FAIL] aliquot odd drift -5.34 for n <= 10^6 as quoted in the note (hard-coded in its script, not computed there)
+   [OK  ] odd n <= 10^5 with s'(n) > n: 210, first [945, 1575, 2205, 2835, 3465, 4095]; identical to the odd abundant numbers
+   (parity persistence proportions were recomputed exactly in section A)
+
+==============================================================================
+G. The integers of sections 2, 3 and 6
+==============================================================================
+   [OK  ] sum of Ogg's primes = 378 = T_27 = 2 * 3^3 * 7; primes <= 31 sum 160, the rest 218
+   [OK  ] |M| sopfr = 637 = 7^2 * 13; distinct-prime sum 378
+   [OK  ] primes < 72 missing from the list: 37, 43, 53, 61, 67
+   [OK  ] (2,3,q) excess {3: Fraction(1, 6), 4: Fraction(1, 12), 5: Fraction(1, 30), 6: Fraction(0, 1), 7: Fraction(-1, 42)}
+   [OK  ] spherical group orders 2/excess = 12, 24, 60 (A_4 = PSL(2,3), S_4 = PGL(2,3), A_5 = PSL(2,5))
+   [OK  ] |PSL(2,7)|, |PSL(2,8)|, |PSL(2,13)| = 168, 504, 1092
+   [OK  ] 84(g - 1) for g = 3, 7, 14 and the factorisations 2^3.3.7, 2^3.3^2.7, 2^2.3.7.13
+   Hurwitz genera of PSL(2,q): {7: 3, 8: 7, 13: 14, 27: 118, 29: 146, 41: 411, 43: 474}; the genus-17 Hurwitz group (order 1344 = 84*16) is not a PSL(2,q) and lies between 14 and 118
+   [OK  ] 118 = 2 * 59 is the PSL(2,27) Hurwitz genus, the next PSL(2,q) genus after 14 (not the next Hurwitz genus: 17 precedes it)
+   [OK  ] |Aut(Paley tournament on 7)| = 21, element orders {1: 1, 3: 14, 7: 6}, nonabelian: the Frobenius group F_21 = 7:3
+   [OK  ] |PSL(2,7)| = 168; normaliser of the Sylow 7-subgroup has order 21 (nonabelian, = F_21), index 8; 8 Sylow 7-subgroups
+   [OK  ] 120 = 5! = T_15, 210 = 7# = T_20, 189 = 3^3 * 7
+   [OK  ] Mersenne primes in Ogg's list: 3, 7, 31 (127 is not)
+   j = 0 (y^2 = x^3 + 1) supersingular at p < 100: [2, 3, 5, 11, 17, 23, 29, 41, 47, 53, 59, 71, 83, 89] (= p = 2 (mod 3) for p >= 5; also at p = 2 and p = 3)
+
+==============================================================================
+H. The paper text (for section 1's typing)
+==============================================================================
+   pages: 4; occurrences: 'monster' 0, 'moonshine' 3, 'jack daniels' 0, 'non-cm'/'complex multiplication' 0
+   reference [2] is Ogg, Hyperelliptic modular curves, Bull. SMF 102 (1974): True
+   Lang-Trotter sentence mentions sqrt(X)/log X without a non-CM hypothesis: True
+   Theorem 1 (Ogg) stated with both conditions: True
+
+==============================================================================
+SUMMARY
+==============================================================================
+   failed checks: 1
+   - aliquot odd drift -5.34 for n <= 10^6 as quoted in the note (hard-coded in its script, not computed there)
+   elapsed 18.8s

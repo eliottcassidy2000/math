@@ -1442,8 +1442,11 @@ Note [`ogg_triangular_chowla_20260927.md`](ogg_triangular_chowla_20260927.md).
   half-row imbalance, so the odd-type members are decided by a THM-640
   statistic. The same dichotomy in miniature on the nodal cubic: "`x`
   triangular" is a Pell conic (infinite), "`y` triangular" is the elliptic
-  curve `Y^2 = X^3 - 4X + 1` (rank `>= 1`, seven `t` to `10^6`: `y = 6, 120,
-  210, 990, ...`), only `(3, 6)` has both.
+  curve `Y^2 = X^3 - 4X + 1` (conductor `916`, rank `>= 2` proved by the
+  audit, seven `t` to `5·10^6`: `y = 6, 120, 210, 990, ...`), only `(3, 6)` has
+  both. Audited SOUND WITH CORRECTIONS (fourteen applied: the nodal cubic is
+  the `lambda = 1` fibre, the `lambda = 0` one its twist; points up to sign;
+  Cattaneo's parity half; MISTAKES).
 * **Integers typed:** `30` and `42` are the `(2,3,5)` excess and `(2,3,7)`
   deficit of one formula (STRUCTURAL); `F_21 = Aut(P_7)` is the Sylow-7
   normalizer of the Klein quartic's `PSL(2,7)` (STRUCTURAL); `378 = T_27` (sum

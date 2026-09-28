@@ -44,11 +44,11 @@
    parity theorem checked for n <= 3*10^5: s'(even) is odd unless the odd part is a square; s'(odd) is even unless n is a square
    n <= 1000000: endings {'0': 982099, 'cycle2': 17900}; longest 48 steps (n = 948375); largest peak/n 6.3 (n = 980100); mean length 9.32; values beyond the sieve 3
    cycles reached (members: number of starts): [((48, 75), 9724), ((140, 195), 3485), ((1050, 1925), 558), ((1575, 1648), 1971), ((2024, 2295), 963), ((5775, 6128), 408), ((8892, 16587), 441), ((9504, 20735), 226), ((62744, 75495), 72), ((186615, 206504), 6), ((196664, 219975), 7), ((199760, 309135), 14), ((266000, 507759), 5), ((312620, 549219), 3), ((526575, 544784), 12), ((573560, 817479), 3), ((587460, 1057595), 1), ((1139144, 1159095), 1)]
-   mean log2(s'(n)/n): even n -0.048, odd n -2.817 (aliquot s(n): even -0.048, odd -5.34)
-   parity persists under s' in [M, 2M), M = 1000: 0.02543 (squares' share ~ 0.03162)
-   parity persists under s' in [M, 2M), M = 10000: 0.00792 (squares' share ~ 0.01000)
-   parity persists under s' in [M, 2M), M = 100000: 0.00245 (squares' share ~ 0.00316)
-   parity persists under s' in [M, 2M), M = 1000000: 0.00076 (squares' share ~ 0.00100)
+   mean log2(s'(n)/n): even n -0.048, odd composite n -2.817; aliquot s(n) on the same range: even -0.048, odd -5.256
+   parity persists under s' in [M, 2M), M = 1000: 0.02543; square-type numbers in the range: 22 (share 0.02200, (2M)^(-1/2) = 0.02236)
+   parity persists under s' in [M, 2M), M = 10000: 0.00792; square-type numbers in the range: 71 (share 0.00710, (2M)^(-1/2) = 0.00707)
+   parity persists under s' in [M, 2M), M = 100000: 0.00245; square-type numbers in the range: 224 (share 0.00224, (2M)^(-1/2) = 0.00224)
+   parity persists under s' in [M, 2M), M = 1000000: 0.00076; square-type numbers in the range: 707 (share 0.00071, (2M)^(-1/2) = 0.00071)
    odd n <= 10^5 with s'(n) > n: 210, first [945, 1575, 2205, 2835, 3465, 4095]
 
 == P5: Paley heptagon and PSL(2,7) ==
