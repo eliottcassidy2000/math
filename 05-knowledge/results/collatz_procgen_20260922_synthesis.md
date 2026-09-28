@@ -1364,6 +1364,51 @@ THM-4514 (PROVED, independently audited: SOUND WITH CORRECTIONS, applied).
 * **Addendum (same session).** Direction D1 (Berg–Meinardus as a Mahler-type carrier) WITHDRAWN: wave 10 (section 3 above, the natural-boundary note) had typed it with Bell–Lagarias, Adamczewski–Bell and the roots-of-unity obstruction; MISTAKES entry written. The per-orbit word series `F_n(z) = sum 2^(d_k) z^k` is the sibling of the basin series `B(z)` (table in the note's section 7: 0/1 coefficients and Pólya–Carlson at `|z| = 1` there, powers of two and Borel–Dwork with the 2-adic place here). **Proposition 11 (PROVED given Bézivin 1986, cited via Bell–Chen–Hossain 2021 and Bell–Smertnig 2022 abstracts):** `F_n` D-finite implies rational implies the word eventually periodic, so the holonomy-bound method has no carrier in `F_n`. The Berg–Meinardus equation re-derived and checked to order 240 (`collatz_berg_meinardus_20260927.py`; windows `{1..W}` have `9, 18, 34, 168` orbit classes for `W = 50, 100, 200, 1000`, one closed).
 * **Second note, same session ([`collatz_depth_layers_zeta5_preprints_20260927.md`](collatz_depth_layers_zeta5_preprints_20260927.md)).** The owner's depth `d(n) = min{k : C^k(n) in {1,2,4}}`: layer table reproduced, `d(2n) = d(n) + 1`, layers grow like `lambda_C^k` with `lambda_C = (1 + sqrt(7/3))/2 = 1.2638` per Collatz step (the tree-search `4/3` per Terras step re-timed; measured `1.2639` at depth 60; heuristic, not proved); bigraded `(d, D)` layers to `d = 10` fall below the `3^(-d)` heuristic (the congruence `2^D = S mod 3^d` is triangular in the valuations). **The odd-step depth is a Hankel rank:** `LC(2^(d_k(n)))`, continued along the 1-cycle, equals `d_odd(n) + 1` for all odd `n <= 3000`; Kronecker makes PC(`n`) the finiteness of that rank. Layers = backward 3-adic certificates, THM-4512 cylinders = forward 2-adic ones; coverage = the conjecture. **arXiv:2609.22316** (Suman, `q = 11`, `eta_0 = 3`, `eta_j = 1`): `tau_0` and `C_0' = 5.7535` reproduce; the prime window `h_0 < p <= m_8 = n` is empty (`h_0 = 3n+2`), so `Phi = 1`, `C_2' = 9`, Lemma 2 false as written; best window saves `1.4` of `3.25`: refuted as written. **Zenodo 22826419** (Fauzan): Hankel matrix `[mu_X(D_N^6 t^(i+j)/D_K)]`, `h = 37n`, `X` only in the pole values `j^4(X - H_j) - 1/4 + 1/(2j)`; at `X = zeta(5)` these are Hermite's integral for `zeta(5, j)` and the polynomial values are the Binet integral with a fourth-derivative factor (30 digits), i.e. moments of `u^5 (d/du)^4 [1/(e^(2 pi u) - 1)]/12`: nonvanishing by positivity, decay `exp(-c K^2)` by Heine and log-energy; the p-adic normalization (its sections 3–5) is unchecked: AUTHOR-CLAIMED. **Themes (exact):** two rates compete (Collatz: `d_L/L` against `log_2 3`; margins `0.006–0.04` bits per odd step at the first coefficient descent of the record orbits, generic drift `0.415`); nonvanishing is the hard half of Apéry and the free half of Collatz (`A_L > 0`); partial sums and tails (`H_j` against `zeta(5)`, remainder `~ 0.41/j^2`) are `r_L` against `xi` with the `3x-1` remainder that does not shrink; determinants amplify trivially here; a Collatz Hankel matrix is a moment matrix only for non-decreasing valuations (never on a divergent word); the depth Dirichlet series `Z(s, z)` has the Euler factor `(1 - z 2^(-s))^(-1)` exactly and `Z(s, 1) = zeta(s)` iff Collatz. **Numerology** (`139 = 3^7 - 2^11` against the Zenodo `139/5`; `37`; `q = 11` and seven maxima against the `-17` cycle's `(11, 7)`; `5, 7, 9`) tested: coincidences. Directions D5–D8. Script `collatz_depth_layers_20260927.py`. Independent audit OWED for both notes (subagent cut off by a rate limit; producer self-checks recorded).
 
+## 2aa. Wave 28 (2026-09-27, opus session `collatz-poset-dag-20260927`, S16): STICKY made exact and entered into the atlas
+
+Owner's directive: the parallel session's STICKY proposal (tenth note of
+`collatz-posets-zeta5-20260927`, above) relayed for testing. Note
+[`collatz_sticky_20260927_size_coupled_persistence.md`](collatz_sticky_20260927_size_coupled_persistence.md);
+[atlas](collatz_procgen_20260922_barrier_atlas.md) section 7.
+
+* **Memory is not the coordinate; size-coupling is.** A valuation process
+  with the Collatz marginal and any stationary dependence keeps the slope
+  `log_2 3 - 2 = -0.415` (ergodic theorem; simulated slopes `-0.41..-0.43`
+  at persistence `0..0.99`, maxima `1.3..169`): stickiness inflates
+  fluctuations, not the fate. The aliquot map has **size-coupled**
+  persistence provably (Theorem 1): for `n = 2^a m` the driver is lost iff
+  `v_2(sigma(m)) <= a - 1`, so the loss rate in class `a` is `0.586
+  N^(-1/2)` (`a = 1`, odd squares, exact to every printed digit from `10^3`
+  to `10^6`) and `O((log log N)^(a-2)/log N)` (`a >= 2`; `≈ 1.4/ln N` at `a =
+  2`, measured to `10^9`), with conditional drifts `-0.35` (class 1) and
+  `+0.13..+0.47` (classes `2..6`) under a negative average `-0.048` bits on
+  even `n`. Collatz: `P(next v = 1 | v = 1)` is exactly `1/2` in every `[N,
+  2N)` (`n ≡ 7 mod 8` among `n ≡ 3 mod 4`); the tenth note's `0.52` is a
+  small-number effect (`0.4965` on orbit steps above `10^4`, `0.5334` below).
+* **Size-coupled escape (Proposition B):** a growth state left with
+  probability `p(N)` is held for ever with positive probability iff `sum
+  p(N_0 r^k) < infinity`: the aliquot parity lock (`N^(-1/2)`) is free, the
+  growth-driver locks (`1/ln N`) are lost infinitely often in the model
+  (276's fall at step ~170 is typical, not an exception), and the aliquot
+  fate is a competition of phases of length `~ ln N`, undecided by the model.
+* **Atlas typing (conclusion rule):** Terras/Everett, Korec, Tao
+  **overcome** STICKY (their aliquot analogues fail under Guy–Selfridge; the
+  fixed-horizon part provably by Erdős 1976 with the abundant density);
+  Krasikov–Lagarias predecessor counts **blind** (all primes reach `1`);
+  cycles, conjugacies, rewriting, `F_2[x]`, verification n/a; thin
+  divergence conjecturally blind. Corrections to the proposal: KL is blind,
+  and "word-Lyapunov / local ranks fail" is the transfer reading. Transfer
+  no-go (conditional): an argument using only the engine, the marginal law
+  and the sign of the average drift, insensitive to size-coupling, would
+  prove Catalan–Dickson; a valid argument must use size-free memorylessness
+  (Terras at every scale) pointwise, i.e. the cofactor identity on the runs
+  that begin THM-4514's tight blocks.
+* **Typology re-checked:** every number of the nine-iteration table
+  reproduced (Juggler `-0.334`, parity `0.565`; `6091` Lychrel candidates
+  below `10^5`, `249` below `10^4`; look-and-say `1.30361`; class drifts;
+  abundant density `0.2475`; Erdős persistence `0.81, 0.72, 0.66, 0.62,
+  0.56` for `2..6` increases). Audit: note section 8.
+
 ## 3. The snippet, dispatched
 
 | pasted claim | verdict | where |

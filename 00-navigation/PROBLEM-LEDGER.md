@@ -537,6 +537,17 @@ all heights (THM-1289, published), δ ineffective.
   a control (aliquot witness): any termination argument not using memorylessness would prove Catalan-Dickson.
   Note: `collatz_two_carries_typology_20260927.md`.
 
+  **STICKY made exact (opus, 2026-09-27, S16):** the STICKY proposal tested. Memory with a stationary law is not a
+  fate-changing coordinate (ergodic theorem; simulated); the coordinate is size-coupled persistence: for n = 2^a m the
+  driver 2^a is lost iff v_2(sigma(m)) <= a - 1, so the loss rate in class a is 0.586 N^(-1/2) (a = 1, odd squares) and
+  O((log log N)^(a-2)/log N) (a >= 2; ~1.4/ln N at a = 2, measured to 10^9), conditional drifts -0.35 / +0.13..+0.47,
+  average -0.048 bits on even n; Collatz's growth class has persistence exactly 1/2 in every [N, 2N) (n = 7 mod 8 among
+  n = 3 mod 4; the 0.52 measured along orbits is a small-number effect). Escape dichotomy: the parity lock (N^(-1/2)) is
+  free, the growth-driver locks (1/ln N) are lost infinitely often in the model; the aliquot fate is a competition of
+  phases. Atlas section 7: Terras/Korec/Tao overcome STICKY, Krasikov-Lagarias predecessor counts are blind, the rest n/a;
+  transfer no-go stated as conditional. Nine-iteration typology re-checked (all numbers reproduced). Audit: note
+  section 8. Note: `collatz_sticky_20260927_size_coupled_persistence.md`.
+
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`
 (ranks HN > reconstruction > Kakeya/Falconer > sunflower > Caccetta–Häggkvist > … ).
 
