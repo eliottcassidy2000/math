@@ -551,6 +551,21 @@ all heights (THM-1289, published), δ ineffective.
   tenth note's Prop 1 needs the cumulative-d_j convention and its Prop 3(c) reads "at least J" (MISTAKES).
   Note: `collatz_sticky_20260927_size_coupled_persistence.md`.
 
+  **Ogg primes, nodal cubic, Chowla map (opus, 2026-09-27, S17):** the owner's paper (Valamontes, supersingular primes vs
+  Lang-Trotter) typed: Ogg's theorem correct, regime separation = the repo's density/pointwise discipline, "moonshine-
+  independent complete explanation" explains the list not the Monster coincidence. Ogg's fifteen reproduced by the genus
+  formula (2g + 2 = h(-4p) + h(-p)[p = 3 mod 4]) and by the field of definition of supersingular j (Hasse polynomial,
+  5 <= p <= 97); Dirichlet's h(-p) = (half-row sum of (a/p))/(2 - (2/p)) makes the odd-type members a Paley half-row
+  statistic (THM-640's object). 30 and 42 are the (2,3,5) excess and (2,3,7) deficit of one Gauss-Bonnet formula
+  (orders 60; 168, 504, 1092 = 42 * 4, 12, 26); F_21 = Aut(Paley heptagon) is the Sylow-7 normalizer in PSL(2,7). Nodal
+  cubic y^2 = x^2(x+1) = the Legendre line at lambda = 0: "x triangular" is a Pell conic (infinite), "y triangular" is the
+  elliptic curve Y^2 = X^3 - 4X + 1 (rank >= 1; eleven integer points, all Z-combinations of (0,1) and (2,1); y = 6, 120,
+  210, 990, 185136, 258474216), only (3,6) has both coordinates triangular (t <= 10^6). Chowla map s'(n) = sigma(n) - n - 1
+  ("F = U + S"): PROVED parity alternation (s'(even) odd unless the odd part is a square; s'(odd) even unless a square),
+  so the aliquot driver lock is the divisor 1 (three carry regimes: persist / fresh / alternate); all n <= 10^6 end at 0
+  (98.2%) or in eighteen opposite-parity betrothed pairs; fixed points must be square-type (Cattaneo). Integers typed
+  (378 = T_27 = sum of the fifteen: NUMEROLOGY). Audit: note section 8. Note: `ogg_triangular_chowla_20260927.md`.
+
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`
 (ranks HN > reconstruction > Kakeya/Falconer > sunflower > Caccetta–Häggkvist > … ).
 

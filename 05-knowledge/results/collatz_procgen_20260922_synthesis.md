@@ -1416,6 +1416,40 @@ Owner's directive: the parallel session's STICKY proposal (tenth note of
   the tenth note's Proposition 1 needs the cumulative-`d_j` convention and
   its Proposition 3(c) reads "at least `J`"; MISTAKES entry).
 
+## 2ab. Wave 29 (2026-09-27, opus session `collatz-poset-dag-20260927`, S17): the aliquot map without its unit, and the owner's Ogg/triangular seed
+
+Owner's directive: a paper on Ogg's fifteen supersingular primes, the nodal
+cubic `y^2 = x^2(x+1)` against triangular numbers, the Hurwitz snippet, `30
+= 2·3·5`, and "aliquot sequences with the number itself and `1` discounted".
+Note [`ogg_triangular_chowla_20260927.md`](ogg_triangular_chowla_20260927.md).
+
+* **The third carry regime (PROVED).** `s'(n) = sigma(n) - n - 1` (Chowla's
+  function) alternates parity: `s'(even)` is odd unless the odd part of `n` is
+  a square, `s'(odd)` is even unless `n` is a square. So the aliquot driver
+  lock (STICKY, wave 28) is exactly the divisor `1`: keep it, parity persists
+  (aliquot, sticky, conjecturally divergent); add `+1` on the other side,
+  parity is fresh (Collatz, memoryless); remove it, parity flips (Chowla,
+  anti-sticky, persistence `O(N^(-1/2))`). All `n <= 10^6` end at `0` (`98.2%`,
+  through a prime) or in one of eighteen betrothed 2-cycles, all of opposite
+  parity as the theorem forces; no fixed point (quasiperfect numbers must be
+  square-type: Cattaneo's odd case); odd steps drift `-2.8` bits, even steps
+  `-0.05`. A complement control for STICKY, not a barrier.
+* **Rigidity versus distribution.** The paper's "regime separation" (Ogg's
+  finite list by genus zero of `X_0(p)^+` against the Lang–Trotter
+  asymptotic) is this thread's density-versus-pointwise discipline; Ogg's
+  list reproduced twice (class numbers; supersingular `j` in `F_p` for `5 <= p
+  <= 97`), and for `p ≡ 3 (mod 4)` Dirichlet's `h(-p)` is the Paley
+  half-row imbalance, so the odd-type members are decided by a THM-640
+  statistic. The same dichotomy in miniature on the nodal cubic: "`x`
+  triangular" is a Pell conic (infinite), "`y` triangular" is the elliptic
+  curve `Y^2 = X^3 - 4X + 1` (rank `>= 1`, seven `t` to `10^6`: `y = 6, 120,
+  210, 990, ...`), only `(3, 6)` has both.
+* **Integers typed:** `30` and `42` are the `(2,3,5)` excess and `(2,3,7)`
+  deficit of one formula (STRUCTURAL); `F_21 = Aut(P_7)` is the Sylow-7
+  normalizer of the Klein quartic's `PSL(2,7)` (STRUCTURAL); `378 = T_27` (sum
+  of the fifteen), `637`, `24/120/210`, `189`, genus `14`, `118 = 2·59`:
+  NUMEROLOGY. Audit: note section 8.
+
 ## 3. The snippet, dispatched
 
 | pasted claim | verdict | where |
