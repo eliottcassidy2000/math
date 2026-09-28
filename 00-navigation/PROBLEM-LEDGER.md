@@ -511,6 +511,14 @@ all heights (THM-1289, published), δ ineffective.
   law; exhaustive to n = 6); doubled Paley graphs are far from extremal. Orbit of 27 as a permutation tournament: trans 18.
   Note: `collatz_catalan_ramsey_20260927.md`.
 
+  **Graph tower, Lehmer quintic, Brocard (opus, 2026-09-27, S15 eighth note):** D^k(P_5) has max(omega, alpha) = 3, 4, 6, 8 at
+  orders 10-80, at the bottom of the random range like the tournament tower's 3, 5, 7, 11; the doubling law holds along every
+  tower, cs(D(G)) < cs(G) + sep(G). 'Lehmer 5' = Emma Lehmer's simplest quintic: f(n) = n^4+5n^3+15n^2+25n+25 gives 11, 25, 71
+  at n = -1, 0, 1, so 4!+1, 5!+1, 7!+1 = f(0), f(-1)^2, f(1)^2 (verified: C_5 Galois groups, discriminants); typed NUMEROLOGY.
+  Brocard exact: n! = (m-1)(m+1) is a divisor-involution orbit of diameter 2 around the missing fixed point sqrt(n!) (KT-b
+  without the self-dual point). Wilson readings (5 Wilson prime; 11 half-Wilson at p^2, with 47), supersingular 5, 11, 71,
+  4! = |2T|, 5! = |2I|. Fives inventoried: six different sources. Note: `collatz_doubling_tower_brocard_20260927.md`.
+
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`
 (ranks HN > reconstruction > Kakeya/Falconer > sunflower > Caccetta–Häggkvist > … ).
 

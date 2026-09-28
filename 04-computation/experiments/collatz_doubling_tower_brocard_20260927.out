@@ -1,0 +1,32 @@
+== (1) iterated Seidel doubling D^k(G): (omega, alpha, cs, sep) by brute force at every level ==
+ K_1: (k, order, omega, alpha, cs, sep): [(0, 1, 1, 1, 1, 1), (1, 2, 1, 2, 2, 2), (2, 4, 2, 3, 3, 4), (3, 8, 3, 4, 4, 6), (4, 16, 4, 6, 6, 8), (5, 32, 6, 8, 8, 12)] | law omega(D) = cs, alpha(D) = max(alpha+1, sep) along the tower: True
+ K_2: (k, order, omega, alpha, cs, sep): [(0, 2, 2, 1, 2, 2), (1, 4, 2, 2, 3, 3), (2, 8, 3, 3, 4, 4), (3, 16, 4, 4, 5, 6), (4, 32, 5, 6, 7, 8)] | law omega(D) = cs, alpha(D) = max(alpha+1, sep) along the tower: True
+ C_5 = P_5: (k, order, omega, alpha, cs, sep): [(0, 5, 2, 2, 3, 3), (1, 10, 3, 3, 4, 4), (2, 20, 4, 4, 5, 6), (3, 40, 5, 6, 7, 8), (4, 80, 7, 8, 9, 12)] | law omega(D) = cs, alpha(D) = max(alpha+1, sep) along the tower: True
+ P_13: (k, order, omega, alpha, cs, sep): [(0, 13, 3, 3, 4, 4), (1, 26, 4, 4, 5, 6), (2, 52, 5, 6, 7, 8)] | law omega(D) = cs, alpha(D) = max(alpha+1, sep) along the tower: True
+ tournament tower (THM-455): orders 7, 15, 31, 63 -> trans 3, 5, 7, 11 (increments +2, +2, +4)
+== (2) what cs(D(G)) is made of ==
+ K_3: (omega, alpha, cs, sep) = (3, 1, 3, 3); D: (3, 3, 4, 3); cs(D) against cs + sep = 6 and 2 cs = 6
+ C_5: (omega, alpha, cs, sep) = (2, 2, 3, 3); D: (3, 3, 4, 4); cs(D) against cs + sep = 6 and 2 cs = 6
+ P_13: (omega, alpha, cs, sep) = (3, 3, 4, 4); D: (4, 4, 5, 6); cs(D) against cs + sep = 8 and 2 cs = 8
+== (3) Brocard's problem n! + 1 = m^2 ==
+ solutions with n <= 60: [(4, 5), (5, 11), (7, 71)] (conjecturally all; verified to 10^15 by Matson 2017; finitely many under abc, Overholt 1993)
+  n = 4: n! = 24 = (m-1)(m+1) = 4 * 6; m = 5
+  n = 5: n! = 120 = (m-1)(m+1) = 10 * 12; m = 11
+  n = 7: n! = 5040 = (m-1)(m+1) = 70 * 72; m = 71
+ supersingular primes (Ogg: the primes dividing the Monster's order, X_0(p)+ of genus 0): [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 41, 47, 59, 71] ; 5, 11, 71 all supersingular: True; 71 the largest
+ Wilson readings: 4! + 1 = 5^2 (5 is a Wilson prime, (p-1)! = -1 mod p^2; Wilson primes 5, 13, 563); 5! + 1 = 11^2 with 5 = (11-1)/2
+ (Mordell: ((p-1)/2)! = +-1 mod p for p = 3 mod 4, here -1 mod 11^2); 7! + 1 = 71^2 with 7 = (71-1)/10: no Wilson reading
+ primes p = 3 mod 4 below 2000 with ((p-1)/2)! = -1 mod p^2: [11, 47] (11 is the only one below 2000 besides p = 3? 1! = 1)
+ group orders: 4! = 24 = |2T| (binary tetrahedral, McKay E_6), 5! = 120 = |2I| (binary icosahedral, E_8), 7! = 5040 = |S_7|;
+ the binary octahedral group has order 48 = 2 * 4!, so the exceptional binary polyhedral orders are 4!, 2 * 4!, 5!
+ nearby equations: n! - 1 = m^2 has no solution n <= 60: False; n! + 4 = m^2 -> n = 4 (28? no), listing n! + k square for k in 1..4, n <= 30:
+   k = 1: n in [4, 5, 7]
+   k = 2: n in [2]
+   k = 3: n in [1, 3]
+   k = 4: n in []
+== (4) random-graph benchmark for the graph tower ==
+  G(n,1/2), n =  10: max(omega, alpha) mean 4.30, range [3, 5]; 2 log_2 n = 6.6; tower D^k(P_5): 3
+  G(n,1/2), n =  20: max(omega, alpha) mean 5.73, range [5, 7]; 2 log_2 n = 8.6; tower D^k(P_5): 4
+  G(n,1/2), n =  40: max(omega, alpha) mean 7.20, range [6, 8]; 2 log_2 n = 10.6; tower D^k(P_5): 6
+  G(n,1/2), n =  80: max(omega, alpha) mean 9.00, range [8, 10]; 2 log_2 n = 12.6; tower D^k(P_5): 8
+  reading: like the tournament tower (THM-455), the graph tower stays at or below the best of a dozen random graphs at every order
