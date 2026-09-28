@@ -1,0 +1,53 @@
+== (1) Catalan numbers are the critical spine-block counts (q = 4, slope 1) ==
+ positive min-ending words P_k, k = 1..15: [1, 0, 1, 0, 2, 0, 5, 0, 14, 0, 42, 0, 132, 0, 429]
+ Catalan C_n at k = 2n+1 (odd k), 0 at even k: [1, 0, 1, 0, 2, 0, 5, 0, 14, 0, 42, 0, 132, 0, 429]
+ positive words W_k: [1, 1, 2, 3, 6, 10, 20, 35, 70, 126, 252, 462, 924, 1716, 3432]  central binomials C(k-1, floor((k-1)/2)): [1, 1, 2, 3, 6, 10, 20, 35, 70, 126, 252, 462, 924, 1716, 3432]
+ W = 1/(1 - P) (W_k = sum_j P_j W_(k-j)): True
+ certification density at q = 4: fraction of length-k words that are NOT positive = 1 - C(k-1,floor((k-1)/2))/2^k; the
+ non-certified fraction ~ sqrt(2/(pi k)): [0.123, 0.0398, 0.0126] vs [0.2523, 0.0798, 0.0252]
+ C_n ~ 4^n n^(-3/2)/sqrt(pi): ratio C_n n^(3/2) sqrt(pi)/4^n at n = 10, 100, 500: [0.8978, 0.9889, 0.9978]
+== (2) Catalan parity, Mersenne indices and the ternary condition ==
+ n <= 4000 with C_n odd: [0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047] ... = 2^k - 1: True
+ n <= 4000 with C_n coprime to 6: [0, 1, 3, 31, 255]
+ k <= 200 with 2^k - 1 free of the ternary digit 2 (a sum of distinct powers of 3): [1, 2, 5, 8] -> n = 2^k - 1 = [1, 3, 31, 255]
+ (Kummer: v_3(C_n) = carries of n + n in base 3 minus v_3(n+1); no carries iff no ternary digit 2 in n)
+ Erdos's conjecture concerns the ternary digits of 2^k (no digit 2 only for k = 0, 2, 8); here 2^k - 1, with k = 1, 2, 5, 8 below 200
+== (3) Paley Ramsey rows ==
+ Paley graph P_5: clique = independence number 2 -> R(3,3) > 5
+ Paley graph P_13: clique = independence number 3 -> R(4,4) > 13
+ Paley graph P_17: clique = independence number 3 -> R(4,4) > 17
+ Paley graph P_29: clique = independence number 4 -> R(5,5) > 29
+ Paley graph P_37: clique = independence number 4 -> R(5,5) > 37
+ Paley graph P_41: clique = independence number 5 -> R(6,6) > 41
+ Paley graph P_53: clique = independence number 5 -> R(6,6) > 53
+ Paley graph P_61: clique = independence number 5 -> R(6,6) > 61
+ Paley graph P_73: clique = independence number 5 -> R(6,6) > 73
+ Paley graph P_89: clique = independence number 5 -> R(6,6) > 89
+ Paley graph P_97: clique = independence number 6 -> R(7,7) > 97
+ Paley graph P_101: clique = independence number 5 -> R(6,6) > 101
+ Paley tournament P_7: largest transitive subtournament 3 -> R(4) > 7 (tournament Ramsey)
+ Paley tournament P_11: largest transitive subtournament 4 -> R(5) > 11 (tournament Ramsey)
+ Paley tournament P_19: largest transitive subtournament 5 -> R(6) > 19 (tournament Ramsey)
+ Paley tournament P_23: largest transitive subtournament 5 -> R(6) > 23 (tournament Ramsey)
+ Paley tournament P_31: largest transitive subtournament 7 -> R(8) > 31 (tournament Ramsey)
+ known: R(3,3) = 6, R(4,4) = 18, 43 <= R(5,5) <= 46, 102 <= R(6,6); tournament R(2..6) = 2, 4, 8, 14, 28, 34 <= R(7) <= 47 (THM-455)
+== (4) the Seidel doubling D(G): omega and alpha laws ==
+ all 1024 labeled graphs on 5 vertices: omega(D) - omega: {0: 331, 1: 487, 2: 200, 3: 5, 4: 1}; alpha(D) - alpha: {1: 818, 2: 200, 3: 5, 4: 1}; max(omega,alpha) increment: {0: 126, 1: 878, 2: 20}
+ all 32768 labeled graphs on 6 vertices: omega(D) - omega: {0: 7742, 1: 18314, 2: 6090, 3: 615, 4: 6, 5: 1}; alpha(D) - alpha: {1: 26056, 2: 6090, 3: 615, 4: 6, 5: 1}; max(omega,alpha) increment: {0: 3016, 1: 27282, 2: 2470}
+ Paley P_5: (omega, alpha) = (2, 2); D(P_5) on 10 vertices: (omega, alpha) = (3, 3) -> R(4,4) > 10 from the double
+ Paley P_13: (omega, alpha) = (3, 3); D(P_13) on 26 vertices: (omega, alpha) = (4, 4) -> R(5,5) > 26 from the double
+ Paley P_17: (omega, alpha) = (3, 3); D(P_17) on 34 vertices: (omega, alpha) = (5, 5) -> R(6,6) > 34 from the double
+== (5) the orbit as a permutation tournament: Erdos-Szekeres ==
+ n = 27: 42 odd values; LIS = 18, LDS = 9 (largest transitive subtournament of the permutation tournament = 18); Erdos-Szekeres guarantees a monotone subsequence of length 7
+ n = 703: 63 odd values; LIS = 18, LDS = 17 (largest transitive subtournament of the permutation tournament = 18); Erdos-Szekeres guarantees a monotone subsequence of length 8
+ n = 6171: 97 odd values; LIS = 17, LDS = 21 (largest transitive subtournament of the permutation tournament = 21); Erdos-Szekeres guarantees a monotone subsequence of length 10
+ n = 77031: 130 odd values; LIS = 18, LDS = 32 (largest transitive subtournament of the permutation tournament = 32); Erdos-Szekeres guarantees a monotone subsequence of length 12
+== (6) the exact law for the Seidel doubling: omega(D(G)) = largest induced complete split subgraph, alpha(D(G)) = max(alpha + 1, largest induced clique + independent set with no edges between) ==
+ law verified on all labeled graphs with 3 <= n <= 6 (33864 graphs): True
+ law verified on 300 random graphs with n = 7 and 120 with n = 8: True
+ proof sketch: a clique of D(G) is a clique K of G on the plain copy plus an independent set I of G on the prime copy (the prime copy carries the complement), twins never adjacent, cross pairs adjacent iff adjacent in G; an independent set of D(G) is an independent I on the plain copy plus a clique K on the prime copy, cross pairs non-adjacent iff non-adjacent in G, twins allowed, which forces |K| = 1 whenever K meets I
+ Paley P_5: complete-split number 3 = omega(D(P_5)); separated number 3, alpha(D(P_5)) = max(alpha + 1, sep) = 3 -> the double on 10 vertices gives R(4,4) > 10
+ Paley P_13: complete-split number 4 = omega(D(P_13)); separated number 4, alpha(D(P_13)) = max(alpha + 1, sep) = 4 -> the double on 26 vertices gives R(5,5) > 26
+ Paley P_17: complete-split number 5 = omega(D(P_17)); separated number 5, alpha(D(P_17)) = max(alpha + 1, sep) = 5 -> the double on 34 vertices gives R(6,6) > 34
+ Paley P_29: complete-split number 5 = omega(D(P_29)); separated number 5, alpha(D(P_29)) = max(alpha + 1, sep) = 5 -> the double on 58 vertices gives R(6,6) > 58
+ Paley P_37: complete-split number 7 = omega(D(P_37)); separated number 7, alpha(D(P_37)) = max(alpha + 1, sep) = 7 -> the double on 74 vertices gives R(8,8) > 74

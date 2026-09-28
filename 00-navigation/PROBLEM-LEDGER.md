@@ -502,6 +502,15 @@ all heights (THM-1289, published), δ ineffective.
   cycles); rounding = the cycle question; fixed-point theorems have no stage. Fix(T) = {0,-1}; Fix(Q) contains {0} u {-2^j} u
   {2^j/3} (Q(1/3) = 1/3), 2-cycle {1, -1/3}; a few unidentified persistent residues (D16). Note: `collatz_generic_price_topology_20260927.md`.
 
+  **Catalan, Ramsey rows, Seidel doubling (opus, 2026-09-27, S15 seventh note):** the Catalan numbers 1, 2, 5, 14, 42 are the
+  spine-block counts of the critical map q = 4 (rise + Dyck path; THM-4495's ladder law verbatim; certification density
+  1 - 1/sqrt(2 pi k); the k^(-3/2) exponent shared); C_n odd iff n = 2^k - 1 (tower orders), prime to 6 iff 2^k - 1 has no
+  ternary digit 2 (k = 1, 2, 5, 8 below 200). Repo has no R(5,5) work (classical 43-46); Paley rows computed (R(5,5) > 37 from
+  P_37, R(6,6) > 101 from P_101; tournament trans 3, 4, 5, 5, 7). Theorem: the Seidel doubling D(G) has omega(D(G)) = largest
+  induced complete split subgraph and alpha(D(G)) = max(alpha + 1, largest separated clique + independent set) (graph zigzag
+  law; exhaustive to n = 6); doubled Paley graphs are far from extremal. Orbit of 27 as a permutation tournament: trans 18.
+  Note: `collatz_catalan_ramsey_20260927.md`.
+
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`
 (ranks HN > reconstruction > Kakeya/Falconer > sunflower > Caccetta–Häggkvist > … ).
 
