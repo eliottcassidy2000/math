@@ -1,0 +1,57 @@
+== P1: Ogg's fifteen primes ==
+   primes < 120 with g(X_0(p)^+) = 0 by the genus formula: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 41, 47, 59, 71]
+   p: g(X_0(p)), fixed points of w_p (class numbers), g(X_0^+(p)) for p <= 100:
+   2:0,2,0; 3:0,2,0; 5:0,2,0; 7:0,2,0; 11:1,4,0; 13:0,2,0; 17:1,4,0; 19:1,4,0; 23:2,6,0; 29:2,6,0; 31:2,6,0; 37:2,2,1; 41:3,8,0; 43:3,4,1; 47:4,10,0; 53:4,6,1; 59:5,12,0; 61:4,6,1; 67:5,4,2; 71:6,14,0; 73:5,4,2; 79:6,10,1; 83:7,12,1; 89:7,12,1; 97:7,4,3
+   supersingular j-invariants (p from 5 to 97): all in F_p exactly for [5, 7, 11, 13, 17, 19, 23, 29, 31, 41, 47, 59, 71]
+   counts (p: total, in F_p): 5:1,1, 7:1,1, 11:2,2, 13:1,1, 17:2,2, 19:2,2, 23:3,3, 29:3,3, 31:3,3, 37:3,1, 41:4,4, 43:4,2, 47:5,5, 53:5,3, 59:6,6, 61:5,3, 67:6,2, 71:7,7, 73:6,2, 79:7,5, 83:8,6, 89:8,6, 97:8,2
+   h(-p) = (sum of (a/p), 0 < a < p/2)/(2 - (2/p)) verified for p = 3 mod 4 up to 199 (23 primes)
+   h(-p) for the Ogg primes = 3 mod 4: 7:1, 11:1, 19:1, 23:3, 31:3, 47:5, 59:3, 71:7
+
+== P2: integers around the objects ==
+   sum of Ogg primes = 378 = T_27 = {2: 1, 3: 3, 7: 1}; primes <= 31 sum 160, the four sporadic [41, 47, 59, 71] sum 218
+   |M| prime factors with multiplicity sum to 637 = {7: 2, 13: 1}; distinct-prime sum 378
+   primes < 72 not in the list: [37, 43, 53, 61, 67]; the list = all primes <= 31 plus [41, 47, 59, 71]
+   triangle (2,3,3): 1/2+1/3+1/q - 1 = 1/6; group order 2/x = 12
+   triangle (2,3,4): 1/2+1/3+1/q - 1 = 1/12; group order 2/x = 24
+   triangle (2,3,5): 1/2+1/3+1/q - 1 = 1/30; group order 2/x = 60
+   triangle (2,3,6): 1/2+1/3+1/q - 1 = 0 (Euclidean)
+   triangle (2,3,7): 1/2+1/3+1/q - 1 = -1/42; Hurwitz bound 1/|x| = 42
+   42 = {2: 1, 3: 1, 7: 1}
+   168 = {2: 3, 3: 1, 7: 1}
+   504 = {2: 3, 3: 2, 7: 1}
+   1092 = {2: 2, 3: 1, 7: 1, 13: 1}
+   30 = {2: 1, 3: 1, 5: 1}
+   378 = {2: 1, 3: 3, 7: 1} = T_27
+   24 = {2: 3, 3: 1}
+   120 = {2: 3, 3: 1, 5: 1} = T_15
+   210 = {2: 1, 3: 1, 5: 1, 7: 1} = T_20
+   |PSL(2,7)| = 168
+   |PSL(2,8)| = 504
+   |PSL(2,13)| = 1092
+   Hurwitz genera 3, 7, 14, 17, 118: [{3: 1}, {7: 1}, {2: 1, 7: 1}, {17: 1}, {2: 1, 59: 1}]; 84(g-1) = [168, 504, 1092]
+
+== P3: the nodal cubic y^2 = x^2 (x + 1) and triangular numbers ==
+   rational points: x = t^2 - 1, y = t (t^2 - 1) = 6 C(t+1, 3); group of nonsingular points = G_m via (y+x)/(y-x) = (t+1)/(t-1)
+   t <= 2*10^5 with x = t^2 - 1 triangular (Pell u^2 - 8t^2 = -7): t = [1, 2, 4, 11, 23, 64, 134, 373, 781, 2174, 4552, 12671] ...; x = [0, 3, 15, 120, 528, 4095, 17955, 139128] = T_m, m = [0, 2, 5, 15, 32, 90, 189, 527]
+   t <= 10^6 with y = t(t^2-1) triangular: t = [1, 2, 5, 6, 10, 57, 637]; y = [0, 6, 120, 210, 990, 185136, 258474216] = T_k, k = [0, 3, 15, 20, 44, 608, 22736]
+   both coordinates triangular (t <= 10^6): t = [1, 2], points [(0, 0), (3, 6)]
+   E: Y^2 = X^3 - 4X + 1, discriminant 3664 = {2: 4, 229: 1}; integer points with -2 <= X <= 10^6: [(-2, 1), (-1, 2), (0, 1), (2, 1), (3, 4), (4, 7), (10, 31), (12, 41), (20, 89), (114, 1217), (1274, 45473)]
+   integer points as nP + mQ with P = (0,1), Q = (2,1), |n|,|m| <= 12: {(-2, 1): (1, 1), (-1, 2): (1, -1), (0, 1): (1, 0), (2, 1): (0, 1), (3, 4): (2, 1), (4, 7): (2, 0), (10, 31): (2, -1), (12, 41): (0, 2), (20, 89): (2, 2), (114, 1217): (4, 1), (1274, 45473): (2, -3)}
+   integer multiples of P (n < 40): [(0, 1), (4, 7)]; of Q: [(2, 1), (12, 41)]
+   n <= 10^6 with 1^2 + ... + n^2 a square: [1, 24] (Lucas's cannonball problem; 24 -> 70^2, the Leech vector)
+
+== P4: the Chowla map s'(n) = sigma(n) - n - 1 (aliquot with 1 and n discounted) ==
+   parity theorem checked for n <= 3*10^5: s'(even) is odd unless the odd part is a square; s'(odd) is even unless n is a square
+   n <= 1000000: endings {'0': 982099, 'cycle2': 17900}; longest 48 steps (n = 948375); largest peak/n 6.3 (n = 980100); mean length 9.32; values beyond the sieve 3
+   cycles reached (members: number of starts): [((48, 75), 9724), ((140, 195), 3485), ((1050, 1925), 558), ((1575, 1648), 1971), ((2024, 2295), 963), ((5775, 6128), 408), ((8892, 16587), 441), ((9504, 20735), 226), ((62744, 75495), 72), ((186615, 206504), 6), ((196664, 219975), 7), ((199760, 309135), 14), ((266000, 507759), 5), ((312620, 549219), 3), ((526575, 544784), 12), ((573560, 817479), 3), ((587460, 1057595), 1), ((1139144, 1159095), 1)]
+   mean log2(s'(n)/n): even n -0.048, odd n -2.817 (aliquot s(n): even -0.048, odd -5.34)
+   parity persists under s' in [M, 2M), M = 1000: 0.02543 (squares' share ~ 0.03162)
+   parity persists under s' in [M, 2M), M = 10000: 0.00792 (squares' share ~ 0.01000)
+   parity persists under s' in [M, 2M), M = 100000: 0.00245 (squares' share ~ 0.00316)
+   parity persists under s' in [M, 2M), M = 1000000: 0.00076 (squares' share ~ 0.00100)
+   odd n <= 10^5 with s'(n) > n: 210, first [945, 1575, 2205, 2835, 3465, 4095]
+
+== P5: Paley heptagon and PSL(2,7) ==
+   |Aut(Paley tournament P_7)| = 21 = F_21; |PSL(2,7)| = 168 = 8 * 21; the Klein quartic's group contains the heptagon's as the Sylow-7 normalizer
+
+DONE
