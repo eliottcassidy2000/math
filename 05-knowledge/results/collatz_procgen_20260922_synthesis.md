@@ -1461,27 +1461,38 @@ Heule–Kullmann–Marek's `7825`, Schur's `4`, the summand/multiplicand
 identities and the consecutive-sum identities as brainstorming. Note
 [`collatz_artin_corrections_20260927.md`](collatz_artin_corrections_20260927.md).
 
-* **No 2-adic correction under population measures (PROVED).** The visit
-  weight `w_N(m)` (starts `n <= N` through `m`) is a function of `m`'s 3-adic
-  address (the ancestor tree's shape is determined by `m mod 3^(J+1)`) and of
-  `m`'s size (ancestor sizes are `2^(sum k) m / 3^j` up to rounding), both
-  CRT-independent of `m mod 2^k`: visit-weighted 2-adic statistics are Haar
-  in expectation, with noise set by `n_eff = (sum w)^2/sum w^2`, which the
-  hubs make small (hundreds to thousands). Measured on all odd `n <= 10^6`:
+* **No 2-adic correction indicated under population measures (PROVED
+  structure + MODEL).** The visit weight `w_N(m)` (starts `n <= N` through
+  `m`) is exactly `[m <= N] +` the number of words of the ancestor tree of
+  `m mod 3^(J+1)` whose ancestor `(2^K m - c)/3^j` is at most `N` (carry `c` a
+  function of the word): no direct dependence on `m mod 2^k`. Under the
+  fair-coin model (the 2-adic label independent of the basin weight) the
+  visit-weighted persistence has expectation `1/2` and standard error
+  `1/(2 sqrt n_eff)`, `n_eff = (sum w)^2/sum w^2`, which the hubs make small
+  (hundreds to thousands); the model is consistent with the data (sixteen
+  bands, `max |z| = 1.23`) but is not a theorem: the band values are frozen
+  constants across `N` (the audit's finding), and the CRT step of the first
+  proof is vacuous at the needed depth. Measured on all odd `n <= 10^6`:
   distinct-value persistence `R_1 = 0.5000` in every dyadic band below `N`,
   `0.4998` above; the valuation law of visited values above `N` is `2^(-k)`
   to three decimals; `I(m mod 8; m mod 9) = 10^(-5)` bits. **The STICKY
-  audit's `0.497` is resolved: hub-correlated noise.**
+  audit's `0.497` is identified (visit-weighted, `n_eff` in the thousands) as
+  a frozen hub-structure offset of the allowed size; a `-0.002` offset is
+  neither established nor excluded.**
 * **All entanglement is 3-adic (PROVED, trivial, decisive).** `U(m') ≡
   2^(-v) (mod 3)`: the residue mod `3` of a visited value is the parity of the
   valuation of the step into it; multiples of `3` are leaves. Above the start
   range `80.25%` of visited values are `≡ 2 (mod 3)`, `0%` `≡ 0`, against Haar's
-  `2/3` and uniform `1/3`: climbs are `v = 1`-rich. The thread's correction
-  constants (`c_D = sum_w 3^(-o(w))`, the landing multiplicity, this `0.80`)
-  are all 3-adic and all population-level; the recursion of THM-4476 is
-  unlocked by the single-orbit average multiplicity (HYP-9161), and no
-  population constant transfers to one orbit (THM-4506 (H)): Artin's lesson
-  relocated, not a new mechanism.
+  `2/3` and uniform `1/3`: climbs are `v = 1`-rich, and the audit derived the
+  law from the size profile alone (visited density `~ x^(-alpha)`, `alpha ≈
+  2.06`: `2^alpha/(1 + 2^alpha) = 0.806`, `4/5` at the Haar exponent). The
+  thread's correction constants (`c_D = sum_w 3^(-o(w))`, this `0.80`) are
+  3-adic and population-level; the multiplicity in THM-4476's count (THM-4506
+  (1)'s depth-`D` form) is unlocked only by its single-orbit average
+  (HYP-9161, OPEN; THM-4506 (H) shows no orbit-blind argument gives it):
+  Artin's lesson relocated, not a new mechanism. Audited SOUND WITH
+  CORRECTIONS (the "exactly `1/2` in expectation" was a model, the carry
+  bound was false; MISTAKES).
 * **Seeds decoded:** the consecutive-sum identities pivot at `2T_n` (linear,
   start `n^2`) and `4T_n` (squares, start `T_(2n)`, `n = 1` is `3^2 + 4^2 =
   5^2`), no cube family; square triangular numbers are the orbit of THM-4505's

@@ -25,17 +25,23 @@ Theorem 4.1), THM-4505 (the Zigzag Threshold Theorem; "Pell `3^2 - 2·2^2 =
 correction / Hooley 1967 (from memory), Heule–Kullmann–Marek 2016 and
 Heule's `S(5) = 160` (from memory), Schur 1916.
 
-**Status: PROVED (Proposition 1: the population visit weight is a function
-of the 3-adic address and the size, hence the orbit-weighted 2-adic
-statistics are Haar in expectation; Proposition 2: the residue mod 3 of a
-visited value is the parity of the valuation of the step into it; the
-pivot identities) + FINITE-EXACT (all odd starts `n <= 10^6`, `793746`
-distinct visited values, `2.3·10^7` visits; the seeds' numbers) + CITED +
-DIRECTION. No Collatz proof step. The "technique" extracted is an audit
-method, stated in section 5, and its honest verdict is that population
-measures carry no 2-adic correction at all, so every correction factor
-that could "unlock the recursion" is 3-adic and single-orbit, exactly where
-the thread is already stuck. Independent audit: section 7.** Script
+**Status: PROVED (Proposition 1(a),(b): the population visit weight is a
+function of the 3-adic address and the size, with the carry bound repaired
+by the audit; Proposition 1(c) in its structural form; Proposition 2: the
+residue mod 3 of a visited value is the parity of the valuation of the
+step into it; the pivot identities) + MODEL (the Haar expectation of the
+visit-weighted 2-adic statistics and the `n_eff` scale are a fair-coin
+model, consistent with the data and not a theorem: the band values are
+frozen constants, not noise) + FINITE-EXACT (all odd starts `n <= 10^6`,
+`793746` distinct visited values, `2.3·10^7` visits; the seeds' numbers) +
+CITED + DIRECTION + INDEPENDENTLY AUDITED (SOUND WITH CORRECTIONS, all
+applied; section 7). No Collatz proof step. The "technique" extracted is
+an audit method, stated in section 5, and its honest verdict is that
+population measures show no 2-adic correction beyond the fair-coin model's
+allowance, while every computable correction is 3-adic and, by the audit's
+refinement, derivable from the size profile of the visited set; what
+would "unlock the recursion" is single-orbit, exactly where the thread is
+already stuck.** Script
 `04-computation/experiments/collatz_artin_corrections_20260927.py`, output
 beside it.
 
@@ -51,15 +57,22 @@ the base `2` gives `0.3731` against `0.3740`). Asked for the Collatz analogue,
 the natural candidate is the STICKY audit's unexplained `0.497`: the
 persistence `P(next v = 1 | v = 1)` measured along orbits, weighted by
 visits, against the exact `1/2` under counting measure. The answer is that
-there is no such correction on the 2-adic side, and the reason is a
-proposition: the number of starts `n <= N` whose orbit passes through `m`
-is a function of `m`'s 3-adic address (the shape of its ancestor tree,
-determined by `m mod 3^J`) and of `m`'s size (the sizes of the ancestors,
-`2^(sum k)/3^j` times `m`), and both are independent of `m mod 2^k` by the
-Chinese remainder theorem; so the visit-weighted 2-adic statistics have
-expectation exactly Haar, and their sampling noise is set by an effective
-sample size that the hubs make tiny (hundreds to thousands, not the
-`7·10^5` steps the audit counted). Measured: the distinct-value persistence
+no such correction is indicated on the 2-adic side, for a structural
+reason and a model: the number of starts `n <= N` whose orbit passes
+through `m` is a function of `m`'s 3-adic address (the shape of its
+ancestor tree, determined by `m mod 3^(J+1)`) and of `m`'s size (the sizes
+of the ancestors, `(2^K m - c)/3^j` with the carry `c` a function of the
+word), with no direct dependence on `m mod 2^k` (Proposition 1, PROVED);
+under the model that the 2-adic label of a value is a fair coin
+independent of its basin weight, the visit-weighted persistence has
+expectation `1/2` and standard error `1/(2 sqrt n_eff)` with `n_eff = (sum
+w)^2 / sum w^2`, which the hubs make small (hundreds to thousands, not the
+`7·10^5` steps the audit counted). The model is not a theorem (the audit
+showed the CRT step of my first proof is vacuous at the depth the
+proposition needs, and the band values are frozen across `N = 10^5, 3·10^5,
+10^6`: they are constants of the basin densities, not noise that averages
+out), but the data agree with it: sixteen bands, largest `|z| = 1.23`,
+permutation p-values `0.19`–`0.90`. Measured: the distinct-value persistence
 is `0.5000` in every dyadic band below `N` and `0.4998` above `N`; the
 visit-weighted value wanders between `0.38` and `0.57` in bands with `n_eff
 < 300`; the valuation law of visited values above `N` is `0.4994, 0.2501,
@@ -71,11 +84,15 @@ value mod `3` is the parity of the valuation of the step into it (`2` for
 odd `v`, `1` for even `v`; multiples of `3` are leaves), so values above the
 start range, which are entered by climbs, are `80.25%` `≡ 2 (mod 3)`,
 `19.75%` `≡ 1`, `0%` `≡ 0`, against the uniform `1/3` and the Haar-valuation
-prediction `2/3, 1/3, 0`. This is the same fact as S15's descent tree
-(sources are 2-adic classes, landings are 3-adic classes) and as the
-constant `c_D = sum_w 3^(-o(w))`: **the correction factors of the thread are
-all 3-adic, all population-level, and the recursion they would unlock
-(THM-4476's landing multiplicity) needs them along one orbit, whose 3-adic
+prediction `2/3, 1/3, 0`; and the audit derived the `0.80` from the real
+place alone: the visited set above `N` thins like `x^(-alpha)` with `alpha
+≈ 2.06`, and Proposition 2 then gives `P(≡ 2 mod 3) = 2^alpha/(1 + 2^alpha)
+= 0.806`, exactly `4/5` at `alpha = 2`, the Haar model's Cramér exponent.
+This is the same fact as S15's descent tree (sources are 2-adic classes,
+landings are 3-adic classes) and as the constant `c_D = sum_w 3^(-o(w))`:
+**the correction factors of the thread are all 3-adic, all
+population-level, and the recursion they would unlock (THM-4506's landing
+multiplicity in THM-4476's count) needs them along one orbit, whose 3-adic
 address is its own past.** The other seeds decode exactly: the linear
 consecutive-sum identities pivot at `2T_n` and start at `n^2`, the square
 ones pivot at `4T_n` and start at `T_(2n)` (with `3^2 + 4^2 = 5^2` as `n = 1`;
@@ -94,13 +111,16 @@ a primitive root multiplies, over primes `q`, the probability `1 - 1/(q(q-1))`
 that `q` does not divide the index `[F_p^* : <a>]`, i.e. that not both
 `p ≡ 1 (mod q)` and `a` is a `q`-th power residue. The events at different
 `q` are independent for generic `a`, and the product is Artin's constant
-`A = 0.3739558`. Heilbronn's correction (reported by Lehmer's computations
-for `a = 5`): when the squarefree part `a_0` of `a` is `≡ 1 (mod 4)`, the
-event at `q = 2` ("`a` is a square mod `p`") and the events at the odd `q |
-a_0` are entangled through the field `Q(sqrt(a_0)) ⊂ Q(zeta_(|a_0|))`, and
-the density becomes `A·(1 - mu(|a_0|) prod_(q | a_0) 1/(q^2 - q - 1))`; for
-`a = 5`: `A·(1 + 1/19) = A·20/19`. Hooley proved the corrected conjecture
-under GRH. Recomputed here on the primes below `3·10^5`: base `2`: `0.3731`
+`A = 0.3739558`. The correction (recollection: the Lehmers' computations
+of 1957 exposed the discrepancy at `a = 5`, Artin found the corrected
+factor in a 1958 letter, Heilbronn published it in Cassels–Fröhlich 1967):
+when the squarefree part `a_0` of `a` is `≡ 1 (mod 4)`, the event at `q = 2`
+("`a` is a square mod `p`") and the events at the odd `q | a_0` are
+entangled through the field `Q(sqrt(a_0)) ⊂ Q(zeta_(|a_0|))`, and the
+density becomes `A·(1 - mu(|a_0|) prod_(q | a_0) 1/(q^2 - q - 1))`; for `a =
+5`: `A·(1 + 1/19) = A·20/19` (the owner's "19/20" is its reciprocal). Hooley
+proved the corrected conjecture under GRH (1967). Recomputed here on the
+primes below `3·10^5`: base `2`: `0.3731`
 (`A = 0.3740`); base `5`: `0.3946` (`A·20/19 = 0.3936`). The abstract lesson:
 **a heuristic that assumes independence of local conditions is repaired by
 computing the entanglement of the conditions exactly, and the repaired
@@ -122,30 +142,49 @@ on values `m >= 10^4` and called it unexplained.
 **Proposition 1.** (a) The ancestor tree of `m` (the odd `a` with `U^j(a) =
 m`, together with the valuation words of the paths) is determined by the
 3-adic address of `m`: the set of odd preimages of `m` is `{(2^k m - 1)/3 :
-2^k m ≡ 1 (mod 3)}`, non-empty iff `3` does not divide `m`, with `k` ranging
-over one parity class; and the residue of `(2^k m - 1)/3` modulo `3^J` is a
-function of `m mod 3^(J+1)` and `k`. Hence the tree's shape to depth `J`
-(which paths exist, with which valuations) is a function of `m mod 3^(J+1)`.
-(b) The size of the ancestor at the end of a path with valuations `k_1, ...,
-k_j` is `(2^(k_1 + ... + k_j) m - c)/3^j` with `0 < c < 2^(k_1 + ... + k_j)`,
-so `w_N(m)`, the number of such ancestors of size at most `N`, is a function
-of the tree shape and of `m/N` up to the rounding `c`.
-(c) Consequently `w_N(m) = F_N(m mod 3^J, m)` up to rounding, for `J` of
-order `log N`, and for `m` ranging over an interval the pair `(m mod 2^k,
-m mod 3^J)` is equidistributed on the product (Chinese remainder theorem),
-so the visit-weighted frequency of any 2-adic event `E ⊆ Z/2^k` among the
-`m` of an interval with `v(m) = 1` equals its counting-measure frequency up
-to the sampling fluctuation of the weights: **the expectation of the
-visit-weighted persistence is exactly `1/2`, and its fluctuation is governed
-by `n_eff = (sum w)^2 / sum w^2`, not by the number of visits.**
+k >= 1, 2^k m ≡ 1 (mod 3)}`, non-empty iff `3` does not divide `m`, with `k`
+ranging over one parity class; and the residue of `(2^k m - 1)/3` modulo
+`3^J` is a function of `m mod 3^(J+1)` and `k`. Hence the tree's shape to
+depth `J` (which paths exist, with which valuations) is a function of `m
+mod 3^(J+1)`.
+(b) The ancestor at the end of a path with valuations `k_1, ..., k_j`
+(cumulative `K_l = k_1 + ... + k_l`, `K = K_j`) is `(2^K m - c)/3^j` with the
+carry `c = sum_(l=1)^j 3^(l-1) 2^(K - K_l)`, a function of the word alone,
+satisfying `0 < c < 2^K m` and `c <= 2^K ((3/2)^j - 1)` with equality iff every
+`k_l = 1` (the audit's repair; the bound `c < 2^K` first written here is
+false in `70%` of cases, e.g. the word `(1, 1)` gives `(4m - 5)/9`).
+(c) Consequently, exactly, `w_N(m) = [m <= N] + #{words pi of the tree of `m
+mod 3^(J+1)` : `2^(K_pi) m - c_pi <= 3^(|pi|) N`}`, with `J` the maximal depth of
+the tree below `N`: the weight has no direct dependence on `m mod 2^k`, only
+through the 3-adic address and the size. **Model (not a theorem):** if the
+2-adic label `m mod 8` of a value is a fair coin independent of its basin
+weight, the visit-weighted persistence has expectation `1/2` and standard
+error `1/(2 sqrt n_eff)`, `n_eff = (sum w)^2 / sum w^2` (the right scale under
+the model, since all words landing on one value share its label; the
+finite-population version is about ten per cent smaller).
 
-*Proof.* (a) is the mod-6 lane's word-determination theorem in the
-inverse direction: `2^k m ≡ 1 (mod 3)` depends on `m mod 3` and `k mod 2`;
-`(2^k m - 1)/3 mod 3^J` depends on `2^k m mod 3^(J+1)`, i.e. on `m mod
-3^(J+1)` and `k`. (b) is the affine form of `U^(-j)`. (c): the weight is a
-function of the 3-adic class and the size; the 2-adic class of `m` is
-independent of both over an interval, by CRT for the classes and because
-the size is fixed by the interval. ∎
+*Proof of (a)–(c).* (a): `2^k m ≡ 1 (mod 3)` depends on `m mod 3` and `k mod
+2`; `(2^k m - 1)/3 mod 3^J` depends on `2^k m mod 3^(J+1)`, i.e. on `m mod
+3^(J+1)` and `k` (the same one-line argument as the mod-6 lane's Theorem 4.1
+for the greedy inverse word). (b) is the affine form of `U^(-j)`; the carry
+bounds follow from `c = sum 3^(l-1) 2^(K - K_l) <= 2^K sum 3^(l-1) 2^(-l) =
+2^K((3/2)^j - 1)`. (c) counts the ancestors of size at most `N`. ∎
+
+*Why the model is not a theorem (audit).* My first proof invoked the
+Chinese remainder theorem for `(m mod 2^k, m mod 3^J)` "with `J` of order
+`log N`"; but the depth Proposition 1 needs is the maximal Syracuse depth
+from the starts, `J = 195` at `N = 10^6` (the orbit of `837799`), so `3^(J+1)`
+has 94 digits and every 3-adic class has at most one member per band: the
+equidistribution is vacuous, and there is no probability space on a fixed
+finite population. Indeed the visit-weighted band values are *frozen*
+across `N = 10^5, 3·10^5, 10^6` (band `12`: `0.5228, 0.5202, 0.5195`; band `14`:
+`0.4932, 0.4938, 0.4939`; band `11`: `0.3803, 0.3791, 0.3791`; `n_eff` equally
+stable, `211, 213, 214`): they are constants of the basin densities of the
+values in the band, and they approach `1/2` only as the band index grows
+(`n_eff ~ 2^(0.8 i)`), never with `N`. The only deterministic bound is `|R_w -
+1/2| <= (number of contributing words)/(2 sum w)`, useless at that depth.
+What is proved is the structural statement (c); what is measured is that
+the frozen offsets are of the size the fair-coin model allows.
 
 *FINITE-EXACT (script, part 1; all odd starts `n <= N = 10^6`; `793746`
 distinct visited odd values, `2.35·10^7` visits).* Per dyadic band `[2^i,
@@ -177,19 +216,29 @@ the mean step drift `log_2 3 - v` is `-0.4175` (distinct) and `-0.4201`
 above `N` are `0.2501, 0.2498, 0.2505, 0.2496` on the four odd classes; the
 mutual information between `m mod 8` and `m mod 9` is `0.00001` bits; the
 residues mod `8` of values above `N` entered by a step of valuation `1`, `2`
-or `3` are uniform to three decimals. **The `0.497` is resolved:** it was the
-visit-weighted statistic on a population whose effective size is a few
-thousand (the hubs, values visited by many starts, dominate the weights),
-so the deviation is within noise; the distinct-value statistic is exactly
-`1/2` where every residue is a start and `1/2` within noise above.
+or `3` are uniform to three decimals (for the first entries this is a
+counting identity, since every `m' ≡ 3 (mod 4)` in `((2N - 1)/3, N]` enters;
+for the later entries it is evidence). **The `0.497` is identified and
+sized, not "resolved as noise":** the STICKY audit counted one unit per
+orbit step, so its statistic is the visit-weighted one (its only
+residue-based numbers are the exact `125/250, ...`; it made no
+distinct-value measurement), and on a population whose effective size is
+a few thousand a deviation of `0.003` is inside the fair-coin model's
+allowance `1/(2 sqrt n_eff)`. The deviation is a frozen hub-structure
+offset, not sampling noise that more starts would average away; the sign
+pattern (nine of the ten bands `14`–`23` below `1/2`, two-sided `p = 0.021`,
+but `n_eff`-weighted magnitude `-0.0020 ± 0.0025`) leaves a possible
+offset of order `-0.002` neither established nor excluded. The
+distinct-value statistic is exactly `1/2` where every residue is a start and
+`1/2` within noise above.
 
-*What this rules out.* Any "Artin correction" of the i.i.d. model of the
-2-adic word measured on population visit measures: none exists, in
-expectation, by Proposition 1. This is the strong form of STICKY's
-Proposition 2 (size-free memorylessness): not only is the counting-measure
-law exact at every scale, the orbit-visit law of any population of starts
-is Haar in expectation on the 2-adic side, at every scale, above or below
-the start range.
+*What this says.* No "Artin correction" of the i.i.d. model of the 2-adic
+word is indicated on population visit measures: the structural theorem
+says the weights carry no direct 2-adic dependence, and the data are
+consistent with the fair-coin model at every scale, above or below the
+start range. It is not a proof that the frozen offsets vanish; that would
+need the basin densities `d(m) = lim w_N(m)/N` (empirical, existence open)
+to be uncorrelated with `m mod 8`.
 
 ## 3. All entanglement is 3-adic (PROVED + FINITE-EXACT)
 
@@ -209,13 +258,25 @@ odd) = 2/3`, so a population of values produced by Haar steps is `2/3`
 size conditioning: a value above the start range is entered from below by
 a climb, which is a `v = 1` step (from `m' <= N` only `v = 1` reaches above
 `N`; `(3m'+1)/2 > N` iff `m' > (2N - 1)/3`), and climbs are `v = 1`-rich. **The
-correction factor is real, computable and 3-adic.** It is the same object
-as S15's descent tree, where every first-descent word sends a 2-adic source
-class onto a 3-adic landing class, and as `c_D = sum_w 3^(-o(w))`, the
-sources-per-landing constant; and it is where THM-4506's landing
-multiplicity lives (the dippers of a landing point are separated by odd
-letters, THM-4506 (O), a statement about the word's parity pattern, i.e.
-about 3-adic residues of the intermediate values).
+correction factor is real, computable and 3-adic**, and the audit
+computed it from the real place alone: the first entries are `28.4%` of the
+values above `N` (all `≡ 2`), the rest are still `72.4%` `≡ 2` with `P(v = 1)
+= 0.668`, and the whole arrival law follows from the size profile of the
+visited set: the distinct visited values per dyadic band above `N` fall by
+a factor `0.48` per band (density `~ x^(-alpha)`, `alpha ≈ 2.056`), and if the
+population thins like `x^(-alpha)` then Proposition 2 gives `P(m ≡ 2 (mod 3)
+| visited above N) = 2^alpha/(1 + 2^alpha) = 0.806` (measured `0.8025`;
+exactly `4/5` at `alpha = 2`) and the arrival law `P(v = k) ∝ 2^(-k alpha)`
+per parity class gives `0.7595, 0.1826, 0.0439, 0.0106, 0.0025` against the
+measured `0.7593, 0.1837, 0.0432, 0.0103, 0.0026`; `alpha = 2` is the Haar
+model's Cramér exponent (`3^theta = 2^(theta + 1) - 1` at `theta = 1`), i.e.
+excursion heights with tail `1/h`. It is the same object as S15's descent
+tree, where every first-descent word sends a 2-adic source class onto a
+3-adic landing class, and as `c_D = sum_w 3^(-o(w))`, the sources-per-landing
+constant. (THM-4506 (O), the odd-letter separation of the dippers of a
+landing point, is a statement about the positions of odd letters in the
+2-adic word, which Proposition 2 does not recover: the residue mod `3`
+sees only the parity of a valuation.)
 
 *Reading against Artin.* Artin's entanglement was between two local
 conditions at different primes (`p ≡ 1 mod 5` and `(5/p) = 1`), repaired by
@@ -242,10 +303,13 @@ computed on populations transfers to it; that is the content of THM-4506
   + 14^2` with pivot `12`, `n = 3` has pivot `24`. So "doubling and quadrupling
   the triangular numbers" is exact: the pivots are `2T_n` and `4T_n`. There is
   no cube family: for `n <= 6` no `c < 20000` satisfies the cubic analogue
-  (the sporadic `3^3 + 4^3 + 5^3 = 6^3` has a different shape). In the repo:
-  THM-4505's `15 = 1 + 2 + 3 + 4 + 5` and its `(3, 4, 5)` are the `n = 1` members
-  of the two families; THM-4510's sum graphs are the consecutive-integer
-  chains with equal sums. Typed: PROVED identities, no Collatz content.
+  (audit: no integer `c` for `n <= 300`; the sporadic `3^3 + 4^3 + 5^3 = 6^3`
+  has a different shape). In the repo: THM-4505's `(3, 4, 5)` is the `n = 1`
+  member of the square family (the `n = 1` linear member is `1 + 2 = 3`, and
+  `15` is the common sum of the `n = 2` member `4 + 5 + 6 = 7 + 8`; THM-4505's
+  own `15` is the first square-sum window size, a different `15`); THM-4510's
+  sum graphs are the consecutive-integer chains with equal sums. Typed:
+  PROVED identities, no Collatz content.
 * **Square triangular numbers (PROVED, classical).** `T_n = m^2` iff `(2n +
   1)^2 - 2(2m)^2 = 1`, the Pell equation of THM-4505's law `3^2 - 2·2^2 = 1`;
   the solutions are the powers of the unit `3 + 2 sqrt 2`: `(n, m) = (1, 1),
@@ -282,18 +346,26 @@ computed on populations transfers to it; that is the content of THM-4506
 **The Artin audit.** For every independence heuristic used in the thread,
 compute its entanglement correction under (a) population visit measures
 and (b) the single-orbit measure. This note does (a) for the i.i.d.
-valuation model: the 2-adic correction is exactly zero (Proposition 1),
-the 3-adic correction is explicit (Proposition 2; `0.8025` against `2/3`
-above the start range, `c_D` for the descent tree). For (b), the
+valuation model: no 2-adic correction is indicated (Proposition 1's
+structural theorem plus the fair-coin model, consistent with the data at
+every scale), the 3-adic correction is explicit and derivable from the
+size profile (Proposition 2; `0.8025` against `2/3` above the start range,
+`4/5` at the Haar exponent; `c_D` for the descent tree). For (b), the
 single-orbit measure of a hypothetical divergent orbit, no population
 argument applies: its 2-adic word must have `v = 1`-frequency at least
 `log_3 2`, so it is not Haar-like by definition, and its 3-adic address is
-its own word. The recursion the owner wants unlocked, THM-4476's `N(X) <= L
-· N(X/2^D) + ...`, is unlocked exactly when the landing multiplicity `L` is
-replaced by its single-orbit average (HYP-9161's whole-orbit form); the
-population average of `L` is a computable 3-adic constant of the same kind
-as `c_D`, and THM-4506 (H) shows the single-orbit value can be as large as
-the worst case at every scale. So the Artin lens locates the correction
+its own word. The recursion the owner wants unlocked is THM-4476's count
+`N(X) <= k + k N(X^(1 - theta)) + O(X^(h(rho)) log X)` with the multiplicity
+`k = floor(log_2 X)`, sharpened by THM-4506 (1) to the depth-`D` form with
+multiplicity `ceil((k - D)/log_2 3)`; it is unlocked exactly when that
+multiplicity is replaced by its single-orbit average (HYP-9161's
+whole-orbit form). Whether the population average of the landing
+multiplicity is an explicit 3-adic constant like `c_D` is asserted here and
+not computed (UNVERIFIED); and THM-4506 (H) says only that a residue class
+mod `2^l` can consist of heavy dippers at every scale, so that no
+orbit-blind or parity-word argument gives `mu < 1`: whether one injective
+orbit's averaged multiplicity is worst-case at every scale is the OPEN
+orbit-coupled question itself. So the Artin lens locates the correction
 factors precisely (3-adic, population-level) and confirms that none of
 them transfers to one orbit without a pointwise 3-adic statement. The one
 new pointwise object this suggests: the *3-adic residue sequence* `m_l mod
@@ -314,8 +386,43 @@ python 04-computation/experiments/collatz_artin_corrections_20260927.py > 05-kno
 About four minutes (the `10^6` Syracuse orbits with a successor cache and
 visit counts dominate; sympy for the Artin densities and `n_order`).
 
-## 7. Independent audit
+## 7. Independent audit (2026-09-27)
 
-Pending (auditor subagent: blind re-derivation of Propositions 1 and 2, the
-effective-sample-size reading of the `0.497`, and the seeds' numbers; own
-script).
+Auditor subagent, own exact-integer script (16 s for `N = 10^6`):
+`04-computation/experiments/collatz_artin_corrections_20260927_audit.py`,
+output `collatz_artin_corrections_20260927_audit.out`, report
+`collatz_artin_corrections_20260927_audit.md` (38 itemized claims).
+**Verdict: SOUND WITH CORRECTIONS, all applied above.** CONFIRMED to the
+printed digit: the visit counts, the whole band table including the rows
+omitted from the note (`25, 27, 28`), the aggregates (`m <= N`: `n_eff = 157`;
+`m > N`: `n_eff = 16934`, `z = -0.37`), the STICKY audit's step counts in both
+banding conventions with their `n_eff` (`1283, 11879, 23997`; `|z| < 0.7`
+everywhere), the valuation laws, drifts, the mod-8 marginal, the mutual
+information (`0.000008` bits, chance level `0.000037`), the 3-adic marginal,
+Proposition 2 on all `793745` edges, Proposition 1(a) exactly on all
+`627078` relevant values (children set equals the formula set; `w(m) = [m <=
+N] + sum over children`), the pivot identities symbolically, no cube family
+for `n <= 300`, the square triangular list, Schur `2/0`, the `1331` and `7` by
+two methods, Artin's constant and the two densities. CORRECTED: (1) the
+carry bound `c < 2^K` in Proposition 1(b) was false (`c = sum 3^(l-1)
+2^(K - K_l)`; correct bounds `c < 2^K m`, `c <= 2^K((3/2)^j - 1)`); (2) the
+"expectation exactly `1/2`" was a model, not a theorem: no probability space,
+and the band values are frozen constants across `N`; (3) the CRT step of
+the first proof is vacuous at the required depth (`J = 195` at `N = 10^6`);
+(4) "resolved: noise" is wrong wording: a frozen hub-structure offset of the
+allowed size, consistent with the fair-coin model, a `-0.002` offset neither
+established nor excluded; (5) THM-4506 (O) concerns odd-letter positions,
+not residues mod `3`; (6) THM-4506 (H) is about residue classes, not one
+orbit's average; (7) the "population average of `L` is a computable
+constant" is unverified; (8) THM-4476's recursion cited in the wrong form;
+(9) the `n = 1` members and the two different `15`s; (10) `k >= 1` in the
+preimage set and the Theorem 4.1 citation loosened; (11) the Artin
+attribution sequence (Lehmers 1957, Artin 1958, Heilbronn 1967, Hooley
+1967) and the reciprocal `19/20`; (13) the status line. REFINED by the
+audit: the 3-adic arrival law predicted from the visited-set density
+exponent `alpha ≈ 2.056` (`2^alpha/(1 + 2^alpha) = 0.806`, `4/5` at the Haar
+exponent `alpha = 2`). OPEN: whether the frozen band offsets obey the
+fair-coin model; existence of the basin densities `d(m) = lim w_N(m)/N`;
+the exact visited-density exponent; the population average of the landing
+multiplicity; HYP-9161's whole-orbit form, untouched. The mechanisms of
+corrections (1)–(4) are logged in MISTAKES.

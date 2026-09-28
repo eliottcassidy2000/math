@@ -1,0 +1,157 @@
+audit script start; N = 1000000
+== A. forward pass, all odd starts n <= 1000000 (own code: early-stopping walk + reverse-topological visit weights) ==
+   distinct odd values visited: 793746; total visits (sum of weights): 23496390; max weight 500000 at m = 1; largest visited odd value H = 18997161173 (35 bits)
+   maximal Syracuse depth (odd steps to 1) over starts n <= N: 195 at n = 837799; log_3 N = 12.6; 3^(J+1) with J = 195 has 94 decimal digits
+[    1.9s]
+
+== B. Proposition 1(a): preimage set and the tree recursion, checked on EVERY visited value ==
+   values checked (3 does not divide m): 627078; children(m) from the forward map == formula preimages (k >= 1, one parity class, restricted to visited values): mismatches 0
+   recursion w(m) = [m <= N] + sum over children w(a): failures 0
+   multiples of 3 with a child (should be 0: multiples of 3 are leaves): 0
+   nit: for m = 1 (mod 3) the note's set {(2^k m - 1)/3 : 2^k m = 1 mod 3} without 'k >= 1' would include k = 0, i.e. (m-1)/3, which is EVEN for every such m (224677 of them here), not an odd preimage; the set needs k >= 1
+[    4.3s]
+
+== C. Proposition 1(b): ancestor = (2^K m - c)/3^j with c = sum_{l=1}^{j} 3^(l-1) 2^(K_j - K_l); the note's bound 0 < c < 2^K ==
+   3000 random odd starts, 137841 (start, orbit value) pairs: n = (2^K m_j - c)/3^j exact in every case
+   the note's bound c < 2^K FAILS in 97032 of 137841 pairs (70.4%); first failure: start 421787, j = 3, inverse word begins [1, 2, 1], c = 23 vs 2^K = 16
+   e.g. the inverse word (1, 1): ancestor (4m - 5)/9, c = 5 > 4 (m = 17: 17 <- 11 <- 7). Failures by the first two inverse letters: {(1, 1): 35440, (2, 1): 15800, (1, 2): 14816, (1, 3): 8279, (2, 2): 5501, (3, 1): 4391}
+   correct bounds: c/2^K = sum_l 3^(l-1) 2^(-K_l) <= (3/2)^j - 1 (equality iff all k_l = 1): max observed ratio to that bound 1.0000; and c < 2^K m (positivity of the ancestor): max c/(2^K m) = 0.2018
+   relative threshold shift c/(2^K m) = 1 - 3^j n/(2^K m) (the 'rounding'): median 1.15e-03, 90% 6.43e-02, 99% 1.56e-01, max 0.2018
+   (the shift is a function of the word only, not of m; it is ~ sum over the path of 1/(3 a_l), large only through small intermediate values)
+[    5.7s]
+
+== D. visit-weighted vs distinct-value persistence per dyadic band, N = 1000000 (band by the value m with v(m) = 1; target v(U m) = 1) ==
+   i=10 (    below N): R_w = 0.5749  R_1 = 0.500000 (128/256)  n_eff =        9  sum w =    999597  2 s.e.(iid) = 0.3300  2 s.e.(finite pop.) = 0.3247  z = +0.45
+   i=11 (    below N): R_w = 0.3791  R_1 = 0.500000 (256/512)  n_eff =       12  sum w =    693126  2 s.e.(iid) = 0.2914  2 s.e.(finite pop.) = 0.2883  z = -0.83
+   i=12 (    below N): R_w = 0.5195  R_1 = 0.500000 (512/1024)  n_eff =      214  sum w =    546852  2 s.e.(iid) = 0.0683  2 s.e.(finite pop.) = 0.0608  z = +0.57
+   i=13 (    below N): R_w = 0.5123  R_1 = 0.500000 (1024/2048)  n_eff =      260  sum w =    598774  2 s.e.(iid) = 0.0620  2 s.e.(finite pop.) = 0.0580  z = +0.40
+   i=14 (    below N): R_w = 0.4939  R_1 = 0.500000 (2048/4096)  n_eff =      486  sum w =    565987  2 s.e.(iid) = 0.0454  2 s.e.(finite pop.) = 0.0426  z = -0.27
+   i=15 (    below N): R_w = 0.4908  R_1 = 0.500000 (4096/8192)  n_eff =      673  sum w =    591100  2 s.e.(iid) = 0.0385  2 s.e.(finite pop.) = 0.0369  z = -0.48
+   i=16 (    below N): R_w = 0.4940  R_1 = 0.500000 (8192/16384)  n_eff =     2063  sum w =    569025  2 s.e.(iid) = 0.0220  2 s.e.(finite pop.) = 0.0206  z = -0.55
+   i=17 (    below N): R_w = 0.5000  R_1 = 0.500000 (16384/32768)  n_eff =     3666  sum w =    582683  2 s.e.(iid) = 0.0165  2 s.e.(finite pop.) = 0.0156  z = -0.00
+   i=18 (    below N): R_w = 0.4921  R_1 = 0.500000 (32768/65536)  n_eff =     6064  sum w =    593201  2 s.e.(iid) = 0.0128  2 s.e.(finite pop.) = 0.0122  z = -1.23
+   i=19 (straddles N): R_w = 0.5030  R_1 = 0.499992 (62303/124608)  n_eff =    11617  sum w =    578563  2 s.e.(iid) = 0.0093  2 s.e.(finite pop.) = 0.0088  z = +0.65
+   i=20 (    above N): R_w = 0.4962  R_1 = 0.499823 (36705/73436)  n_eff =     6910  sum w =    332598  2 s.e.(iid) = 0.0120  2 s.e.(finite pop.) = 0.0114  z = -0.63
+   i=21 (    above N): R_w = 0.4972  R_1 = 0.501092 (17667/35257)  n_eff =     4861  sum w =    164782  2 s.e.(iid) = 0.0143  2 s.e.(finite pop.) = 0.0133  z = -0.39
+   i=22 (    above N): R_w = 0.4987  R_1 = 0.498286 (8432/16922)  n_eff =     2397  sum w =     81533  2 s.e.(iid) = 0.0204  2 s.e.(finite pop.) = 0.0189  z = -0.13
+   i=23 (    above N): R_w = 0.4975  R_1 = 0.499311 (3985/7981)  n_eff =     1183  sum w =     39300  2 s.e.(iid) = 0.0291  2 s.e.(finite pop.) = 0.0268  z = -0.18
+   i=24 (    above N): R_w = 0.5120  R_1 = 0.497262 (1907/3835)  n_eff =      575  sum w =     19333  2 s.e.(iid) = 0.0417  2 s.e.(finite pop.) = 0.0384  z = +0.57
+   i=25 (    above N): R_w = 0.4958  R_1 = 0.496488 (919/1851)  n_eff =      292  sum w =     10342  2 s.e.(iid) = 0.0586  2 s.e.(finite pop.) = 0.0538  z = -0.14
+   i=26 (    above N): R_w = 0.5403  R_1 = 0.502775 (453/901)  n_eff =      165  sum w =      5021  2 s.e.(iid) = 0.0779  2 s.e.(finite pop.) = 0.0705  z = +1.04
+   i=27 (    above N): R_w = 0.5425  R_1 = 0.497768 (223/448)  n_eff =      113  sum w =      2647  2 s.e.(iid) = 0.0942  2 s.e.(finite pop.) = 0.0816  z = +0.90
+   i=28 (    above N): R_w = 0.5054  R_1 = 0.504717 (107/212)  n_eff =       62  sum w =      1302  2 s.e.(iid) = 0.1271  2 s.e.(finite pop.) = 0.1072  z = +0.08
+   aggregate m <= N: R_w = 0.51921, R_1 = 125000/250000 = 0.50000, n_eff = 157, sum w = 10819267, 2 s.e.(iid) = 0.0798, z = +0.48
+   aggregate  m > N: R_w = 0.49858, R_1 = 73315/146691 = 0.49979, n_eff = 16934, sum w = 685557, 2 s.e.(iid) = 0.0077, z = -0.37
+   aggregate  all m: R_w = 0.51798, R_1 = 198315/396691 = 0.49992, n_eff = 178, sum w = 11504824, 2 s.e.(iid) = 0.0751, z = +0.48
+   bands with n_eff >= 100: 16; R_w below 1/2 in 10, above in 6; n_eff-weighted mean deviation -0.00136 (s.e. 0.00245, z = -0.55)
+   bands 14..23 (the STICKY audit's range 10^4..10^7): 10 bands, 9 below 1/2; n_eff-weighted mean deviation -0.00203 (s.e. 0.00250, z = -0.81); two-sided sign-test P(>= 9 of 10 on one side) = 0.021
+   z-scores (iid model) of the 16 bands: max |z| = 1.23; mean z = +0.01; sum z^2 / k = 0.37 (1 expected under the model)
+   permutation test of the note's model (labels m mod 8 permuted among the m = 3 mod 4 of the band, weights fixed; 4000 permutations):
+      band 12: R_w = 0.5195, permutation s.d. 0.0306 (model s.e. iid 0.0342, finite pop. 0.0304), two-sided p = 0.525
+      band 16: R_w = 0.4940, permutation s.d. 0.0101 (model s.e. iid 0.0110, finite pop. 0.0103), two-sided p = 0.558
+      band 18: R_w = 0.4921, permutation s.d. 0.0061 (model s.e. iid 0.0064, finite pop. 0.0061), two-sided p = 0.194
+      band 22: R_w = 0.4987, permutation s.d. 0.0095 (model s.e. iid 0.0102, finite pop. 0.0095), two-sided p = 0.896
+      band 24: R_w = 0.5120, permutation s.d. 0.0192 (model s.e. iid 0.0208, finite pop. 0.0192), two-sided p = 0.548
+      band 26: R_w = 0.5403, permutation s.d. 0.0353 (model s.e. iid 0.0390, finite pop. 0.0352), two-sided p = 0.262
+      band 27: R_w = 0.5425, permutation s.d. 0.0404 (model s.e. iid 0.0471, finite pop. 0.0408), two-sided p = 0.294
+[   13.0s]
+
+== D2. the STICKY audit's orbit statistic recovered from the weights (N = 1000000); bands [1,10^4), [10^4,10^5), [10^5,10^6), [10^6,inf) ==
+   banded by the PREDECESSOR m (note's convention):
+          [1,10^4): P_w = 0.5317 on 6940596 steps; n_eff = 65; 2 s.e.(iid) = 0.1242; z = +0.51
+       [10^4,10^5): P_w = 0.4946 on 1931453 steps; n_eff = 1712; 2 s.e.(iid) = 0.0242; z = -0.45
+       [10^5,10^6): P_w = 0.4990 on 1947218 steps; n_eff = 16866; 2 s.e.(iid) = 0.0077; z = -0.27
+        [10^6,inf): P_w = 0.4986 on 685557 steps; n_eff = 16934; 2 s.e.(iid) = 0.0077; z = -0.37
+      at or above 10^4: 0.4971 (4564228 steps), n_eff = 8568, z = -0.54
+   banded by the CURRENT value U(m) (audit's headline):
+          [1,10^4): P_w = 0.5333 on 6589507 steps; n_eff = 58; 2 s.e.(iid) = 0.1308; z = +0.51
+       [10^4,10^5): P_w = 0.4972 on 1947454 steps; n_eff = 1283; 2 s.e.(iid) = 0.0279; z = -0.20
+       [10^5,10^6): P_w = 0.4969 on 1937230 steps; n_eff = 11879; 2 s.e.(iid) = 0.0092; z = -0.67
+        [10^6,inf): P_w = 0.4987 on 1030633 steps; n_eff = 23997; 2 s.e.(iid) = 0.0065; z = -0.39
+      at or above 10^4: 0.4974 (4915317 steps), n_eff = 7284, z = -0.44
+[   13.2s]
+
+== E. Proposition 2 (m = U(m') is 2^(-v) mod 3) and the 3-adic marginal / arrival-valuation law above N = 1000000 ==
+   U(m) = 2 (mod 3) iff v odd, = 1 (mod 3) iff v even: violations on all 793745 visited edges: 0
+   distinct visited values above N: 293746; residues mod 3 (0, 1, 2): 0.0000, 0.1975, 0.8025 (Haar-valuation prediction 0, 1/3, 2/3)
+   distinct values above N with a visited predecessor: 293746 of 293746 (every value above N is entered, none is a start); predecessors of one value all have the same valuation parity: violations 0
+   values above N entered from below N (only by v = 1, m' in ((2N-1)/3, N]): 83334 (0.2837); exact count of m' = 3 (4) in that range: 83334 (U restricted to v = 1 is injective)
+   values above N entered ONLY from above N: 210412; of these = 2 (mod 3) (odd arrival valuation): 0.7243 (Haar 2/3)
+   arrival valuation law                per distinct arrival edge: P(k) for k = 1..6 = [0.7593, 0.1837, 0.0432, 0.0103, 0.0026, 0.0007], P(k odd) = 0.8052 (Haar 1/2, 1/4, ...; 2/3)
+   arrival valuation law       per visit (edge weighted by w(m')): P(k) for k = 1..6 = [0.7501, 0.1876, 0.0469, 0.0112, 0.003, 0.0008], P(k odd) = 0.8004 (Haar 1/2, 1/4, ...; 2/3)
+   arrival valuation law     per distinct edge, both ends above N: P(k) for k = 1..6 = [0.6679, 0.2535, 0.0596, 0.0143, 0.0036, 0.001], P(k odd) = 0.7313 (Haar 1/2, 1/4, ...; 2/3)
+   arrival valuation law             per visit, both ends above N: P(k) for k = 1..6 = [0.6663, 0.2505, 0.0626, 0.0149, 0.004, 0.0011], P(k odd) = 0.7334 (Haar 1/2, 1/4, ...; 2/3)
+   distinct visited values above N per dyadic band 19..27: [11374, 146971, 70510, 33836, 16065, 7695, 3782, 1826, 920]; ratios [12.922, 0.48, 0.48, 0.475, 0.479, 0.491, 0.483, 0.504]
+   density-profile reading: counts per band fall like 2^(-1.056 i) over bands 20..25, i.e. density ~ x^(-2.056); predicted P(x = 2 mod 3 | visited above N) = 2^alpha/(1 + 2^alpha) = 0.8061 (measured 0.8025; Haar alpha = 1: 0.6667; alpha = 2: 0.8000)
+   predicted arrival law per distinct edge P(k), k = 1..6: [0.7595, 0.1826, 0.0439, 0.0106, 0.0025, 0.0006] (measured above); under the Haar model the Cramer exponent of the drift, E[(3/2^v)^theta] = 1, is theta* = 1 exactly (3^theta = 2^(theta+1) - 1), so excursion heights have tail 1/h and the visited density above N falls like x^(-2)
+   out-valuation law of visited m > N, distinct: [0.4994, 0.2501, 0.125, 0.0627, 0.0314, 0.0158, 0.0078]; weighted: [0.499, 0.2487, 0.1255, 0.0644, 0.0311, 0.0159, 0.0077]; 2^-k: [0.5, 0.25, 0.125, 0.0625, 0.0312, 0.0156, 0.0078]
+   mean drift log2(3) - v above N: distinct -0.4175, weighted -0.4201, Haar -0.4150
+   mod 8 marginal (1,3,5,7): [0.2501, 0.2498, 0.2505, 0.2496]; I(m mod 8; m mod 9) = 0.000008 bits; chance level under independence df/(2 n ln 2) = 0.000037 bits (df = 15)
+[   14.3s]
+
+== F. (d) exactness of R_1 = 1/2 below N: counting m = 7 (8) among m = 3 (4) ==
+   band [2^10, 2^11): #m = 3 (4) = 256, #m = 7 (8) = 128, ratio 0.5
+   band [2^12, 2^13): #m = 3 (4) = 1024, #m = 7 (8) = 512, ratio 0.5
+   band [2^14, 2^15): #m = 3 (4) = 4096, #m = 7 (8) = 2048, ratio 0.5
+   band [2^16, 2^17): #m = 3 (4) = 16384, #m = 7 (8) = 8192, ratio 0.5
+   band [2^18, 2^19): #m = 3 (4) = 65536, #m = 7 (8) = 32768, ratio 0.5
+   [1, 1000000]: 125000/250000 = 0.5 (exact because 8 | N); general interval [a, b): ratio = 1/2 + O(1/#): e.g. [1, 10^6 + 4]: 125000/250001
+[   14.3s]
+
+== D3. the same band table for smaller N (does |R_w - 1/2| track 1/sqrt(n_eff)?) ==
+   N = 100000:
+   i=10 (    below N): R_w = 0.5755  R_1 = 0.500000 (128/256)  n_eff =        9  sum w =     99236  2 s.e.(iid) = 0.3275  2 s.e.(finite pop.) = 0.3221  z = +0.46
+   i=11 (    below N): R_w = 0.3803  R_1 = 0.500000 (256/512)  n_eff =       12  sum w =     69281  2 s.e.(iid) = 0.2879  2 s.e.(finite pop.) = 0.2848  z = -0.83
+   i=12 (    below N): R_w = 0.5228  R_1 = 0.500000 (512/1024)  n_eff =      211  sum w =     54268  2 s.e.(iid) = 0.0688  2 s.e.(finite pop.) = 0.0613  z = +0.66
+   i=13 (    below N): R_w = 0.5108  R_1 = 0.500000 (1024/2048)  n_eff =      261  sum w =     60366  2 s.e.(iid) = 0.0619  2 s.e.(finite pop.) = 0.0579  z = +0.35
+   i=14 (    below N): R_w = 0.4932  R_1 = 0.500000 (2048/4096)  n_eff =      489  sum w =     57321  2 s.e.(iid) = 0.0452  2 s.e.(finite pop.) = 0.0425  z = -0.30
+   i=15 (    below N): R_w = 0.4960  R_1 = 0.500000 (4096/8192)  n_eff =      675  sum w =     59857  2 s.e.(iid) = 0.0385  2 s.e.(finite pop.) = 0.0369  z = -0.21
+   i=16 (straddles N): R_w = 0.4890  R_1 = 0.500167 (5977/11950)  n_eff =     1568  sum w =     50072  2 s.e.(iid) = 0.0253  2 s.e.(finite pop.) = 0.0235  z = -0.87
+   i=17 (    above N): R_w = 0.4972  R_1 = 0.500829 (3019/6028)  n_eff =      853  sum w =     25972  2 s.e.(iid) = 0.0342  2 s.e.(finite pop.) = 0.0317  z = -0.16
+   i=18 (    above N): R_w = 0.4678  R_1 = 0.497691 (1401/2815)  n_eff =      393  sum w =     13011  2 s.e.(iid) = 0.0504  2 s.e.(finite pop.) = 0.0468  z = -1.28
+   i=19 (    above N): R_w = 0.5241  R_1 = 0.500372 (673/1345)  n_eff =      206  sum w =      6085  2 s.e.(iid) = 0.0697  2 s.e.(finite pop.) = 0.0642  z = +0.69
+   i=20 (    above N): R_w = 0.4509  R_1 = 0.492980 (316/641)  n_eff =       97  sum w =      3096  2 s.e.(iid) = 0.1014  2 s.e.(finite pop.) = 0.0935  z = -0.97
+   i=21 (    above N): R_w = 0.5166  R_1 = 0.469649 (147/313)  n_eff =       91  sum w =      1268  2 s.e.(iid) = 0.1049  2 s.e.(finite pop.) = 0.0885  z = +0.32
+   bands with n_eff >= 100: 8; max |z| = 1.28; mean z = -0.14; sum z^2 / k = 0.45
+[   14.4s]
+   N = 300000:
+   i=10 (    below N): R_w = 0.5756  R_1 = 0.500000 (128/256)  n_eff =        9  sum w =    299571  2 s.e.(iid) = 0.3295  2 s.e.(finite pop.) = 0.3242  z = +0.46
+   i=11 (    below N): R_w = 0.3791  R_1 = 0.500000 (256/512)  n_eff =       12  sum w =    208348  2 s.e.(iid) = 0.2904  2 s.e.(finite pop.) = 0.2873  z = -0.83
+   i=12 (    below N): R_w = 0.5202  R_1 = 0.500000 (512/1024)  n_eff =      213  sum w =    163319  2 s.e.(iid) = 0.0685  2 s.e.(finite pop.) = 0.0610  z = +0.59
+   i=13 (    below N): R_w = 0.5117  R_1 = 0.500000 (1024/2048)  n_eff =      262  sum w =    179772  2 s.e.(iid) = 0.0618  2 s.e.(finite pop.) = 0.0577  z = +0.38
+   i=14 (    below N): R_w = 0.4938  R_1 = 0.500000 (2048/4096)  n_eff =      492  sum w =    170513  2 s.e.(iid) = 0.0451  2 s.e.(finite pop.) = 0.0423  z = -0.28
+   i=15 (    below N): R_w = 0.4924  R_1 = 0.500000 (4096/8192)  n_eff =      682  sum w =    178010  2 s.e.(iid) = 0.0383  2 s.e.(finite pop.) = 0.0367  z = -0.40
+   i=16 (    below N): R_w = 0.4922  R_1 = 0.500000 (8192/16384)  n_eff =     2031  sum w =    171495  2 s.e.(iid) = 0.0222  2 s.e.(finite pop.) = 0.0208  z = -0.71
+   i=17 (    below N): R_w = 0.4999  R_1 = 0.500000 (16384/32768)  n_eff =     3644  sum w =    175018  2 s.e.(iid) = 0.0166  2 s.e.(finite pop.) = 0.0156  z = -0.01
+   i=18 (straddles N): R_w = 0.4875  R_1 = 0.500191 (14436/28861)  n_eff =     3075  sum w =    122064  2 s.e.(iid) = 0.0180  2 s.e.(finite pop.) = 0.0170  z = -1.39
+   i=19 (    above N): R_w = 0.5071  R_1 = 0.499503 (6528/13069)  n_eff =     1667  sum w =     58645  2 s.e.(iid) = 0.0245  2 s.e.(finite pop.) = 0.0229  z = +0.58
+   i=20 (    above N): R_w = 0.4867  R_1 = 0.504158 (3031/6012)  n_eff =      757  sum w =     29021  2 s.e.(iid) = 0.0363  2 s.e.(finite pop.) = 0.0340  z = -0.73
+   i=21 (    above N): R_w = 0.4924  R_1 = 0.496783 (1467/2953)  n_eff =      595  sum w =     13751  2 s.e.(iid) = 0.0410  2 s.e.(finite pop.) = 0.0366  z = -0.37
+   i=22 (    above N): R_w = 0.5037  R_1 = 0.496479 (705/1420)  n_eff =      279  sum w =      6678  2 s.e.(iid) = 0.0598  2 s.e.(finite pop.) = 0.0537  z = +0.13
+   i=23 (    above N): R_w = 0.4892  R_1 = 0.513433 (344/670)  n_eff =      129  sum w =      3111  2 s.e.(iid) = 0.0881  2 s.e.(finite pop.) = 0.0793  z = -0.24
+   i=24 (    above N): R_w = 0.5181  R_1 = 0.501475 (170/339)  n_eff =       68  sum w =      1600  2 s.e.(iid) = 0.1216  2 s.e.(finite pop.) = 0.1090  z = +0.30
+   bands with n_eff >= 100: 12; max |z| = 1.39; mean z = -0.20; sum z^2 / k = 0.35
+[   14.7s]
+
+== G. section 4's numbers ==
+   symbolic: linear identity difference = 0; square identity (start 2n^2+n) difference = 0
+   general square identity: the starts c with sum_(k<=n) (c+k)^2 = sum_(n<k<=2n) (c+k)^2 are c = [-n, n*(2*n + 1)] (pivot c + n = 4T_n for c = 2n^2 + n)
+   cubic analogue, difference as a polynomial in c: c**3 - 3*c**2*n**2 + c*(-6*n**3 - 3*n**2) - 7*n**4/2 - 3*n**3 - n**2/2
+   numeric: both families and pivots 2T_n, 4T_n and start T_(2n) hold for n <= 40
+   cube family, c < 20000, n <= 6: {1: [], 2: [], 3: [], 4: [], 5: [], 6: []}
+   cube family for ANY integer c (positive or negative), n <= 300: none (largest real root is about 3n^2 + 2n, so c < 20000 already covered n <= 6)
+   sporadic 3^3 + 4^3 + 5^3 = 6^3: True
+   square triangular: brute force n <= 10^4: [(1, 1), (8, 6), (49, 35), (288, 204), (1681, 1189), (9800, 6930)]; Pell orbit of 3 + 2 sqrt 2: [(1, 1), (8, 6), (49, 35), (288, 204), (1681, 1189), (9800, 6930)]; T_n = [1, 36, 1225, 41616, 1413721, 48024900]; agree: True
+   Schur (x + y = z, x = y allowed): sum-free 2-colourings of [1,4]: 2, class of 1: [(1, 4), (1, 4)]; of [1,5]: 0; (with x != y required the counts are 10 and 12: the '2' needs Schur's x = y convention)
+   Pythagorean triples with hypotenuse <= 7825: 9472; numbers in [1, 7825] in no triple: 1331; triples containing 7825: 7 [(625, 7800, 7825), (1584, 7663, 7825), (2191, 7512, 7825), (2784, 7313, 7825), (4180, 6615, 7825), (4695, 6260, 7825), (5180, 5865, 7825)]
+   brute-force cross-check: numbers in no triple: 1331; triples containing 7825: 7; 7825 = 5^2 * 313: True; as a hypotenuse, 7825^2 = a^2 + b^2 has ((2*2+1)(2*1+1) - 1)/2 = 7 representations (313 = 1 mod 4: True)
+[   15.7s]
+
+== H. Artin's constant, the primitive-root densities for 2 and 5, and the 20/19 factor ==
+   A = prod_(p < 10^7) (1 - 1/(p(p-1))) = 0.3739558 (tail < 10^-7); A * 20/19 = 0.39364; A * 19/20 = 0.35526 (the owner's '19/20' is the reciprocal factor)
+   check of the correction: extra mass (1/40) prod_(q not in {2,5}) (1 - 1/(q(q-1))) = A/((1/2)(19/20)(40)) = A/19: 0.0196819 vs A/19 = 0.0196819
+   primes < 300000: base 2 (all odd p): 0.3732; base 2 (note's convention, p != 5): 0.3731; base 5 (p != 2, 5): 0.3946; A = 0.3740, A*20/19 = 0.3936
+   primes < 1000000: base 2 (all odd p): 0.3738; base 2 (note's convention, p != 5): 0.3738; base 5 (p != 2, 5): 0.3934; A = 0.3740, A*20/19 = 0.3936
+[   16.5s]
+
+[   16.5s] DONE

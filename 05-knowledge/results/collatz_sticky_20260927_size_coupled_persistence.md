@@ -524,8 +524,9 @@ Guy–Selfridge); whether size-free memorylessness is the only
 transfer-blocking feature; the Erdős 1976 direction remains a
 recollection. The `0.497` orbit-weighted bias was resolved on 2026-09-27
 (S18, [`collatz_artin_corrections_20260927.md`](collatz_artin_corrections_20260927.md)):
-the visit weight is a function of the 3-adic address and the size, so the
-weighted 2-adic statistics are Haar in expectation, and the `0.497` is
-hub-correlated noise (effective sample sizes of hundreds to thousands);
-the distinct-value persistence is `0.5000` below the start range and
-`0.4998` above.
+the visit weight is a function of the 3-adic address and the size with no
+direct 2-adic dependence, the `0.497` is the visit-weighted statistic on a
+population of effective size in the thousands (a frozen hub-structure
+offset of the size the fair-coin model allows, not a bias; a `-0.002`
+offset neither established nor excluded), and the distinct-value
+persistence is `0.5000` below the start range and `0.4998` above.
