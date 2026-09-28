@@ -1453,6 +1453,43 @@ Note [`ogg_triangular_chowla_20260927.md`](ogg_triangular_chowla_20260927.md).
   of the fifteen), `637`, `24/120/210`, `189`, genus `14`, `118 = 2·59`:
   NUMEROLOGY. Audit: note section 8.
 
+## 2ac. Wave 30 (2026-09-27, opus session `collatz-poset-dag-20260927`, S18): Artin's correction factors and the Collatz visit measure
+
+Owner's directive: "Artin's conjecture and 19/20 and other correction
+factors that may unlock recursion", with square triangular numbers,
+Heule–Kullmann–Marek's `7825`, Schur's `4`, the summand/multiplicand
+identities and the consecutive-sum identities as brainstorming. Note
+[`collatz_artin_corrections_20260927.md`](collatz_artin_corrections_20260927.md).
+
+* **No 2-adic correction under population measures (PROVED).** The visit
+  weight `w_N(m)` (starts `n <= N` through `m`) is a function of `m`'s 3-adic
+  address (the ancestor tree's shape is determined by `m mod 3^(J+1)`) and of
+  `m`'s size (ancestor sizes are `2^(sum k) m / 3^j` up to rounding), both
+  CRT-independent of `m mod 2^k`: visit-weighted 2-adic statistics are Haar
+  in expectation, with noise set by `n_eff = (sum w)^2/sum w^2`, which the
+  hubs make small (hundreds to thousands). Measured on all odd `n <= 10^6`:
+  distinct-value persistence `R_1 = 0.5000` in every dyadic band below `N`,
+  `0.4998` above; the valuation law of visited values above `N` is `2^(-k)`
+  to three decimals; `I(m mod 8; m mod 9) = 10^(-5)` bits. **The STICKY
+  audit's `0.497` is resolved: hub-correlated noise.**
+* **All entanglement is 3-adic (PROVED, trivial, decisive).** `U(m') ≡
+  2^(-v) (mod 3)`: the residue mod `3` of a visited value is the parity of the
+  valuation of the step into it; multiples of `3` are leaves. Above the start
+  range `80.25%` of visited values are `≡ 2 (mod 3)`, `0%` `≡ 0`, against Haar's
+  `2/3` and uniform `1/3`: climbs are `v = 1`-rich. The thread's correction
+  constants (`c_D = sum_w 3^(-o(w))`, the landing multiplicity, this `0.80`)
+  are all 3-adic and all population-level; the recursion of THM-4476 is
+  unlocked by the single-orbit average multiplicity (HYP-9161), and no
+  population constant transfers to one orbit (THM-4506 (H)): Artin's lesson
+  relocated, not a new mechanism.
+* **Seeds decoded:** the consecutive-sum identities pivot at `2T_n` (linear,
+  start `n^2`) and `4T_n` (squares, start `T_(2n)`, `n = 1` is `3^2 + 4^2 =
+  5^2`), no cube family; square triangular numbers are the orbit of THM-4505's
+  Pell unit `3 + 2 sqrt 2`; Schur's `S(2) = 4` has the unique colouring `{1, 4} |
+  {2, 3}` (squares vs non-squares); `7825 = 5^2·313` lies in `7` triples and
+  `1331` numbers below it in none (both reproduced); Artin `A = 0.37396`,
+  base-5 density `0.3946` against `A·20/19 = 0.3936`. Audit: note section 7.
+
 ## 3. The snippet, dispatched
 
 | pasted claim | verdict | where |

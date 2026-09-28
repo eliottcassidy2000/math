@@ -568,6 +568,18 @@ all heights (THM-1289, published), δ ineffective.
   SOUND WITH CORRECTIONS, fourteen applied (lambda = 1 fibre not lambda = 0; points up to sign; MISTAKES).
   Note: `ogg_triangular_chowla_20260927.md`.
 
+  **Artin corrections and the visit measure (opus, 2026-09-27, S18):** the owner's "Artin's conjecture and 19/20 ...
+  correction factors that may unlock recursion". PROVED: the population visit weight w_N(m) is a function of the 3-adic
+  address of m (ancestor tree shape from m mod 3^(J+1)) and of m's size, CRT-independent of m mod 2^k, so visit-weighted
+  2-adic statistics are Haar in expectation with noise governed by n_eff (hubs make it hundreds to thousands): the STICKY
+  audit's 0.497 is hub-correlated noise (distinct-value persistence 0.5000 exactly below N, 0.4998 above; valuation law
+  2^(-k) to three decimals; I(m mod 8; m mod 9) = 10^(-5) bits). All entanglement is 3-adic: U(m') = 2^(-v) mod 3, so the
+  residue mod 3 of a visited value is the parity of its arrival valuation; 80% of values above the start range are 2 mod 3,
+  none 0 mod 3. The thread's correction constants (c_D, landing multiplicity) are 3-adic and population-level; the
+  recursion is unlocked only by the single-orbit average (HYP-9161). Seeds: pivots 2T_n / 4T_n (PROVED), square triangular
+  = THM-4505's Pell unit, Schur {1,4}|{2,3}, HKM 7825 (7 triples, 1331 free numbers) reproduced. Audit: note section 7.
+  Note: `collatz_artin_corrections_20260927.md`.
+
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`
 (ranks HN > reconstruction > Kakeya/Falconer > sunflower > Caccetta–Häggkvist > … ).
 
