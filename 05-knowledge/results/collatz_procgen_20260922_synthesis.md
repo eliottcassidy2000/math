@@ -1380,11 +1380,13 @@ Owner's directive: the parallel session's STICKY proposal (tenth note of
   `v_2(sigma(m)) <= a - 1`, so the loss rate in class `a` is `0.586
   N^(-1/2)` (`a = 1`, odd squares, exact to every printed digit from `10^3`
   to `10^6`) and `O((log log N)^(a-2)/log N)` (`a >= 2`; `≈ 1.4/ln N` at `a =
-  2`, measured to `10^9`), with conditional drifts `-0.35` (class 1) and
-  `+0.13..+0.47` (classes `2..6`) under a negative average `-0.048` bits on
-  even `n`. Collatz: `P(next v = 1 | v = 1)` is exactly `1/2` in every `[N,
-  2N)` (`n ≡ 7 mod 8` among `n ≡ 3 mod 4`); the tenth note's `0.52` is a
-  small-number effect (`0.4965` on orbit steps above `10^4`, `0.5334` below).
+  2`, asymptotically `(pi^2/8)/ln N`, measured to `10^9`), with conditional
+  drifts `-0.35` (class 1) and `+0.13..+0.47` (classes `2..6`) under a
+  measured negative average `-0.048` bits on even `n` (stable to `10^7`;
+  limiting sign unproved). Collatz: `P(next v = 1 | v = 1)` is exactly `1/2`
+  in every `[N, 2N)` under counting measure (`n ≡ 7 mod 8` among `n ≡ 3 mod
+  4`); the tenth note's `0.52` is an orbit-weighting effect concentrated on
+  small values (`0.533` on orbit steps below `10^4`, `0.497` above).
 * **Size-coupled escape (Proposition B):** a growth state left with
   probability `p(N)` is held for ever with positive probability iff `sum
   p(N_0 r^k) < infinity`: the aliquot parity lock (`N^(-1/2)`) is free, the
@@ -1400,14 +1402,19 @@ Owner's directive: the parallel session's STICKY proposal (tenth note of
   and "word-Lyapunov / local ranks fail" is the transfer reading. Transfer
   no-go (conditional): an argument using only the engine, the marginal law
   and the sign of the average drift, insensitive to size-coupling, would
-  prove Catalan–Dickson; a valid argument must use size-free memorylessness
-  (Terras at every scale) pointwise, i.e. the cofactor identity on the runs
-  that begin THM-4514's tight blocks.
+  prove Catalan–Dickson; a valid argument must use some feature the aliquot
+  map lacks, and the one identified (used by the averaging mechanisms) is
+  size-free memorylessness (Terras at every scale) pointwise, i.e. the
+  cofactor identity on the runs that begin THM-4514's tight blocks.
 * **Typology re-checked:** every number of the nine-iteration table
   reproduced (Juggler `-0.334`, parity `0.565`; `6091` Lychrel candidates
   below `10^5`, `249` below `10^4`; look-and-say `1.30361`; class drifts;
   abundant density `0.2475`; Erdős persistence `0.81, 0.72, 0.66, 0.62,
-  0.56` for `2..6` increases). Audit: note section 8.
+  0.56` for `2..6` increases). Independently audited (SOUND WITH
+  CORRECTIONS, applied: the Theorem 1(b) proof step, `N_min` in the parity
+  lock, the no-go's conclusion, hedges on Korec and on the measured drift;
+  the tenth note's Proposition 1 needs the cumulative-`d_j` convention and
+  its Proposition 3(c) reads "at least `J`"; MISTAKES entry).
 
 ## 3. The snippet, dispatched
 

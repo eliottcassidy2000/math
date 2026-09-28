@@ -141,14 +141,18 @@ Searches for "nondeterministic Collatz", "Collatz with choice", "Collatz relatio
 [`collatz_sticky_20260927_size_coupled_persistence.md`](collatz_sticky_20260927_size_coupled_persistence.md)
 (Theorem 1, Propositions A–B, the typing table of its section 4).
 
-* **Control:** the aliquot map `s(n) = sigma(n) - n`. Negative average drift
-  (`-0.048` bits per step on even `n`), no exact invariant, and size-coupled
-  persistence of its growth classes: for `n = 2^a m` the driver `2^a` is
-  lost iff `v_2(sigma(m)) <= a - 1`, so the loss probability in class `a`
-  is `0.586 N^(-1/2)` for `a = 1` (odd squares) and `O((log log N)^(a-2)/log
-  N)` for `a >= 2` (`≈ 1.4/ln N` at `a = 2`), while the conditional drifts
-  are `-0.35` (class 1) and `+0.13 .. +0.47` (classes `2..6`). Collatz's
-  growth class (`v = 1`) has persistence exactly `1/2` in every `[N, 2N)`.
+* **Control:** the aliquot map `s(n) = sigma(n) - n`. Measured negative
+  average drift (`-0.048` bits per step on even `n`, stable in every dyadic
+  range to `10^7`; limiting sign unproved), no exact invariant, and
+  size-coupled persistence of its growth classes: for `n = 2^a m` the
+  driver `2^a` is lost iff `v_2(sigma(m)) <= a - 1`, so the loss probability
+  in class `a` is `0.586 N^(-1/2)` for `a = 1` (odd squares) and `O((log log
+  N)^(a-2)/log N)` for `a >= 2` (sharp; `(pi^2/8)/ln N` asymptotically at `a
+  = 2`, `1.66 .. 1.36` times `1/ln N` from `10^3` to `10^9`), while the
+  conditional drifts are `-0.35` (class 1) and `+0.13 .. +0.47` (classes
+  `2..6`). Collatz's growth class (`v = 1`) has persistence exactly `1/2` in
+  every `[N, 2N)` under counting measure (orbit-weighted `0.533` below `10^4`,
+  `0.497` above).
 * **Failure mode:** divergence by a growth state held with size-increasing
   persistence under negative average drift; conjectural witnesses the
   Lehmer five (Guy–Selfridge). Stationary memory is *not* a failure mode:
@@ -156,17 +160,24 @@ Searches for "nondeterministic Collatz", "Collatz with choice", "Collatz relatio
   `-0.415` (ergodic theorem) and only inflates fluctuations.
 * **Typing (conclusion rule of §0):** Terras/Everett, Korec, Tao
   **overcome** (their aliquot analogues fail under Guy–Selfridge; the
-  fixed-horizon part fails provably by Erdős 1976 with the abundant
-  density); Krasikov–Lagarias predecessor counts **blind** (all primes reach
-  `1`); Kontorovich–Lagarias models, cycle exclusion, conjugacies,
-  rewriting, `F_2[x]`, verification: n/a. Repository: thin divergence
-  (THM-4476/4499) conjecturally blind; word counts n/a.
-* **Transfer no-go:** an argument for termination using only the engine,
-  the marginal law of the driving quantity and the sign of the average
-  drift, insensitive to size-coupling, transfers to the aliquot map and
-  proves Catalan–Dickson. Every valid divergence-half argument must use
-  size-free memorylessness (Terras's bijection at every scale) for the
-  specific integer; its pointwise form is the cofactor identity (tenth note,
-  Proposition 3) on the runs that begin the tight spine blocks of THM-4514.
+  fixed-horizon part fails provably, by the one-sided Erdős 1976 persistence
+  and the elementary positivity of the density of `sigma(n)/n > 2 + 2
+  epsilon`; Korec's horizon grows with `y`, so it carries the same hedge);
+  Krasikov–Lagarias predecessor counts **blind** (all primes reach `1`);
+  Kontorovich–Lagarias models, cycle exclusion, conjugacies, rewriting,
+  `F_2[x]`, verification: n/a. Repository: thin divergence (THM-4476/4499)
+  conjecturally blind; word counts n/a.
+* **Transfer no-go (conditional):** an argument for termination using only
+  the engine, the marginal law of the driving quantity and the sign of the
+  average drift, insensitive to size-coupling, transfers to the aliquot map
+  and proves Catalan–Dickson. Every valid divergence-half argument must
+  therefore use some feature the aliquot map lacks; the feature identified,
+  and the one the averaging mechanisms use, is size-free memorylessness
+  (Terras's bijection at every scale) for the specific integer; its
+  pointwise form is the cofactor identity (tenth note, Proposition 3, with
+  the cumulative-`d_j` convention) on the runs that begin the tight spine
+  blocks of THM-4514. Stationary memory does not block the transfer
+  (Proposition A of the STICKY note). Audited SOUND WITH CORRECTIONS
+  (STICKY note, section 8).
 * Pattern unchanged: every mechanism that overcomes STICKY is a
   residue-averaging mechanism, blind to SHEET and DIM.

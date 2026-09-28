@@ -242,3 +242,25 @@ does not certify the memorylessness the drift computation assumes.
     python3 collatz_two_carries_typology_20260927.py > collatz_two_carries_typology_20260927.out
 
 Needs sympy for the aliquot sample; about eight minutes.
+
+
+## 8. Audit record (opus S16, `collatz-poset-dag-20260927`, 2026-09-27; independent auditor subagent)
+
+Propositions 1–3 were audited as part of the STICKY note
+[`collatz_sticky_20260927_size_coupled_persistence.md`](collatz_sticky_20260927_size_coupled_persistence.md)
+(its section 8; script `collatz_sticky_20260927_audit.py`). Proposition 2
+CONFIRMED on all `10^7` even `n <= 2·10^7`. Proposition 3(a),(b),(d)
+CONFIRMED (`K <= 10`, `t` odd `< 50`, the even-`t` converse; the
+lifting-the-exponent law to `K < 300`; the Mersenne continuation to `K <
+120`). Two corrections: (i) Proposition 1 holds under the cumulative
+convention `d_j = v_1 + ... + v_j` (`A_j = 2^(d_j) m_j`), which this note
+does not state; with per-step valuations the identity `v_2(A_j) = d_j` fails
+on `52814` of `54813` orbit steps of odd `n < 4000` (`n = 7`, `j = 2`: `A_2 =
+68 = 2^2·17`); read `d_j` as cumulative throughout. (ii) Proposition 3(c),
+"the least `m` realizing depth `J` after a run of `K` ones is `2^(K+1) rho_J
+- 1`", holds for "next valuation at least `J`" and fails for "exactly `J`"
+(`K = 1, J = 2`: `m = 3` continues with valuation `4`, the least with exactly
+`2` is `11`; `K = 3`: `15` continues with valuation `5`, the least with exactly
+`2, 3, 4` are `47, 79, 143`). The aside in Proposition 2, "unbounded above
+along iterates", is unverified and unused. Logged in MISTAKES (2026-09-27,
+opus S16).

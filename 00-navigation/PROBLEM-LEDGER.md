@@ -543,10 +543,13 @@ all heights (THM-1289, published), δ ineffective.
   O((log log N)^(a-2)/log N) (a >= 2; ~1.4/ln N at a = 2, measured to 10^9), conditional drifts -0.35 / +0.13..+0.47,
   average -0.048 bits on even n; Collatz's growth class has persistence exactly 1/2 in every [N, 2N) (n = 7 mod 8 among
   n = 3 mod 4; the 0.52 measured along orbits is a small-number effect). Escape dichotomy: the parity lock (N^(-1/2)) is
-  free, the growth-driver locks (1/ln N) are lost infinitely often in the model; the aliquot fate is a competition of
-  phases. Atlas section 7: Terras/Korec/Tao overcome STICKY, Krasikov-Lagarias predecessor counts are blind, the rest n/a;
-  transfer no-go stated as conditional. Nine-iteration typology re-checked (all numbers reproduced). Audit: note
-  section 8. Note: `collatz_sticky_20260927_size_coupled_persistence.md`.
+  free (up to the smallest size reached), the growth-driver locks (1/ln N) are lost infinitely often in the model; the
+  aliquot fate is a competition of phases. Atlas section 7: Terras/Korec/Tao overcome STICKY (fixed horizon provably),
+  Krasikov-Lagarias predecessor counts are blind, the rest n/a; transfer no-go conditional (some feature the aliquot map
+  lacks; size-free memorylessness is the one identified). Nine-iteration typology re-checked (all numbers reproduced;
+  the 0.52 is an orbit-weighting effect: 0.533 below 10^4, 0.497 above). Audited SOUND WITH CORRECTIONS, applied; the
+  tenth note's Prop 1 needs the cumulative-d_j convention and its Prop 3(c) reads "at least J" (MISTAKES).
+  Note: `collatz_sticky_20260927_size_coupled_persistence.md`.
 
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`
 (ranks HN > reconstruction > Kakeya/Falconer > sunflower > Caccetta–Häggkvist > … ).
