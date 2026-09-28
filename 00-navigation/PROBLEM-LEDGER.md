@@ -528,6 +528,15 @@ all heights (THM-1289, published), δ ineffective.
   Cycles = 2^k-minus-something on both sides; perfect numbers at the Mersenne (odd-Catalan) indices; 24 = 4!, 120 = 5! are
   drivers (numerology). D21 closed (4-part closed form for omega(D^2 G)), D22 closed. Note: `collatz_aliquot_lehmer_five_20260927.md`.
 
+  **Two carries, pointwise memorylessness, typology, STICKY (opus, 2026-09-27, S15 tenth note):** Collatz creates its 2-adic
+  content by the carry (d_j = v_2(3^j n + S_(j-1)), v_2(3^j n) = 0: memoryless); the aliquot carry -n caps sigma's content at the
+  driver (sticky). Pointwise: after a run of K ones from m = 2^(K+1) t - 1 the next valuation is 1 + v_2(3^(K+1) t - 1); depth J
+  needs t = 3^(-(K+1)) mod 2^(J-1); the Mersenne number 2^(K+1) - 1 regenerates for free only to depth 3 + v_2(K+1) (K odd) or 2
+  (K even): logarithmic. D25: growth persists 0.52 (Collatz) vs 0.80..0.59 (aliquot, Erdos); dual pointwise obstructions. D26:
+  in-degrees compared. Typology of nine iterations: provability = exact invariant; fate = drift sign x memory. STICKY proposed as
+  a control (aliquot witness): any termination argument not using memorylessness would prove Catalan-Dickson.
+  Note: `collatz_two_carries_typology_20260927.md`.
+
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`
 (ranks HN > reconstruction > Kakeya/Falconer > sunflower > Caccetta–Häggkvist > … ).
 

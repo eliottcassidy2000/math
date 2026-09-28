@@ -1,0 +1,27 @@
+== (1) D24: the valuation after a -1 shadow is a function of the free cofactor ==
+ for m = 2^(K+1) t - 1 (K <= 11, t < 60): word (1)^K, U^K(m) = 2 * 3^K t - 1, next valuation = 1 + v_2(3^(K+1) t - 1): True
+ next valuation >= J iff t = 3^(-(K+1)) mod 2^(J-1) (K < 8, J < 8): True -> the least such m is 2^(K+1) rho_J - 1 with rho_J = 3^(-(K+1)) mod 2^(J-1): regeneration is priced by the cofactor
+ free regeneration after the run of the Mersenne number 2^(K+1) - 1 (cofactor t = 1): next valuation = 2 for K even, 3 + v_2(K+1) for K odd (K < 200): True -- logarithmic in the run length
+ Collatz: d_j = v_2(3^j n + S_(j-1)) with v_2(3^j n) = 0 (odd n < 4000, all steps to 1): True -- the 2-adic content is created by the carry
+ aliquot: v_2(s(2^a m)) = min(a, v_2 sigma(m)) when they differ, >= a+1 when equal (even n <= 60000, 4548 equal cases): True -- the carry -n caps the content
+== (2) D25: persistence of the growth event, both sides ==
+ Collatz: P(v_(j+1) = 1 | v_j = 1) = 0.5204 (Terras: 0.5; the growth event does not persist)
+ aliquot: among 3000 random abundant n <= 10^6, P(s_2 > s_1 > n) = 0.801, P(s_3 > s_2 > s_1 > n) = 0.715, ..., P(six increases) = 0.587
+ (Erdos 1976: for almost all n with s(n) > n the ratio s_(k+1)/s_k stays close to s(n)/n for any fixed number of steps: the growth event persists)
+== (3) D26: in-degrees ==
+ aliquot: in-degree distribution of n in [2, 632] (exact; preimages m <= n^2 scanned): {0: 52, 1: 137, 2: 102, 3: 42, 4: 13, 5: 21, 6: 17, 7: 12, 8: 13, 9: 30, 10: 18, 11: 17, 12: 19, 13: 20, 14: 20, 15: 11, 16: 12, 17: 8, 18: 5, 19: 4, 20: 9, 21: 9, 22: 5, 23: 6, 24: 3, 25: 2, 26: 3, 27: 5, 28: 4, 30: 3, 31: 1, 32: 4, 34: 3, 41: 1}; mean in-degree 7.027
+ Syracuse: in-degree infinite for m not divisible by 3 (predecessors (2^v m - 1)/3), zero for multiples of 3 (density 1/3); descent tree in-degree c_D in [1.67, 1.70] (parallel note)
+== (4) typology: invariant, drift, memory ==
+ Juggler n -> floor(n^(3/2)) (odd) / floor(sqrt n) (even), n <= 1500: a walk on log log n; mean log_2 of the ratio of log-sizes per step -0.323 (fair coin on (3/2, 1/2) would give -0.208), P(parity persists) = 0.559 (memoryless would be 0.5); longest run 80 steps, largest peak 271 digits
+ reverse-and-add, n < 10^5, 200 steps: mean digit growth per step +0.409 (doubling would be log10 2 = 0.301); starts not palindromic within 200 steps: 6091, first [196, 295, 394, 493, 592, 689, 691, 788, 790, 879, 887, 978] (196 is the smallest Lychrel candidate; the delays below 10^5 are at most 55 steps, so these are the candidates)
+ table (drift sign, memory of the driving quantity, exact invariant?, conjectured fate, status):
+    ('Collatz 3n+1', 'negative (-0.415 bits/odd step)', 'memoryless (Terras)', 'none', 'all terminate', 'OPEN; Terras density 1, Tao almost-bounded')
+    ('3n-1', 'negative', 'memoryless', 'none', 'three cycles, all bounded', 'OPEN (bounded conj.)')
+    ('5n+1', 'positive (+0.16)', 'memoryless', 'none', 'most diverge', 'OPEN; no divergence proved')
+    ('aliquot s(n)', 'negative in class 1, positive in classes >= 2', 'sticky (drivers)', 'none', 'many diverge (Guy-Selfridge); Lehmer five', 'OPEN; Catalan-Dickson vs Guy-Selfridge')
+    ('Juggler', 'negative (-0.21 bits/step)', 'memoryless (parity persists ~0.5)', 'none', 'all terminate', 'OPEN')
+    ('reverse-and-add', 'positive (+0.3 digits/step)', 'carries', 'none', 'Lychrel numbers never palindromic', 'OPEN (196)')
+    ('Ducci (length 2^k)', '-', '-', 'linear over GF(2), nilpotent', 'terminates', 'PROVED')
+    ('Kaprekar (fixed digit count)', '-', '-', 'finite state space', 'terminates', 'PROVED')
+    ('look-and-say', "positive (Conway's constant 1.3036)", '-', 'linear over 92 atoms', 'diverges', 'PROVED')
+ reading: provability tracks the presence of an exact invariant (finite state, linear algebra); among the invariant-free maps the conjectured fate tracks the sign of the drift and the memory of the driving quantity
