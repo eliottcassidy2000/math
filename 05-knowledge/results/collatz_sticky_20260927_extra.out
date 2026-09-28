@@ -1,0 +1,14 @@
+unconditional aliquot drift E[log2(s(n)/n)] over n <= 2000000: all -2.695, even -0.048, odd -5.342
+P(s(n) > n) over n <= 2000000: 0.2475
+entry rate P(v2 s(n) >= 2 | v2 n = 1) = P(v2 sigma(m) = 1) for odd m in [M/2, M):
+   M=    1000: 0.1920  x ln M = 1.326
+   M=   10000: 0.1504  x ln M = 1.385
+   M=  100000: 0.1196  x ln M = 1.377
+   M= 1000000: 0.0978  x ln M = 1.351
+   M=10000000: 0.0827  x ln M = 1.332 (sampled)
+   M=100000000: 0.0703  x ln M = 1.295 (sampled)
+   M=1000000000: 0.0623  x ln M = 1.291 (sampled)
+free cofactor: run of exactly K ones, U^K(2^(K+1)t-1) = 2*3^K t - 1, next valuation 1 + v2(3^(K+1) t - 1): 600 cases OK
+LTE: v2(3^(K+1) - 1) = 1 (K+1 odd) or 2 + v2(K+1) (K+1 even) for K < 400: True
+Terras exactness: (v1, v2) of odd n is a function of n mod 8: True
+DONE

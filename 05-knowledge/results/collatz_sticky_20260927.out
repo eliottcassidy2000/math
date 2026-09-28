@@ -1,0 +1,42 @@
+== P1: aliquot driver persistence P(v2 s(n) = a | v2 n = a) and loss P(v2 s(n) < a | v2 n = a) by size ==
+   exact ranges [N, 2N) by sieve; sampled ranges by factorization
+   exact identities checked on 1000000 even n <= 2*10^6 (v2 s = min(a, v2 sigma m) / >= a+1; loss iff v2 sigma(m) <= a-1; a=1 loss iff odd square)
+   N        | a=1 keep  loss (N^-1/2 pred) | a=2 keep  loss  loss*lnN | a=3 keep  loss  loss*lnN/lnlnN | a=4 keep loss
+        1000 | 0.7880  0.02000 (0.02000)  | 0.5760  0.2400  1.658 | 0.3651  0.4444  1.589 | 0.1290 0.7419
+       10000 | 0.8436  0.00600 (0.00600)  | 0.6624  0.1704  1.569 | 0.4656  0.3520  1.460 | 0.2396 0.5879
+      100000 | 0.8786  0.00184 (0.00184)  | 0.7189  0.1293  1.488 | 0.5267  0.2962  1.395 | 0.3331 0.4934
+     1000000 | 0.9016  0.00058 (0.00058)  | 0.7590  0.1044  1.443 | 0.5832  0.2511  1.321 | 0.4012 0.4320
+    10000000 | 0.9153  0.00000 (0.00019)  | 0.7857  0.0908  1.463 | 0.6294  0.2306  1.337 | 0.4522 0.3945
+   100000000 | 0.9249  0.00015 (0.00006)  | 0.8168  0.0765  1.409 | 0.6365  0.2172  1.374 | 0.4915 0.3499
+   1000000000 | 0.9381  0.00000 (0.00002)  | 0.8321  0.0656  1.358 | 0.6757  0.1834  1.254 | 0.5286 0.3081
+
+== P2: Collatz: P(next v = 1 | v = 1) is exactly 1/2 at every size (n = 7 mod 8 among n = 3 mod 4) ==
+   [N, 2N) with N =       1000: #n=3 mod 4: 250, #n=7 mod 8: 125, ratio 0.500000
+   [N, 2N) with N =     100000: #n=3 mod 4: 25000, #n=7 mod 8: 12500, ratio 0.500000
+   [N, 2N) with N =   10000000: #n=3 mod 4: 2500000, #n=7 mod 8: 1250000, ratio 0.500000
+   [N, 2N) with N = 1000000000: #n=3 mod 4: 250000000, #n=7 mod 8: 125000000, ratio 0.500000
+   along orbits of odd n < 2*10^5, steps with current value large(>=10^4): P(next v=1 | v=1) = 0.4965 (708316 steps)
+   along orbits of odd n < 2*10^5, steps with current value small(<10^4): P(next v=1 | v=1) = 0.5334 (1313412 steps)
+
+== P3: random models: stationary memory does not change the fate; size-coupled persistence can ==
+   persistence p=0.00: mean slope -0.4130 bits/step (i.i.d. value log2 3 - 2 = -0.4150); mean max height 1.3; paths ending above start: 0/200
+   persistence p=0.50: mean slope -0.4199 bits/step (i.i.d. value log2 3 - 2 = -0.4150); mean max height 3.1; paths ending above start: 0/200
+   persistence p=0.90: mean slope -0.4265 bits/step (i.i.d. value log2 3 - 2 = -0.4150); mean max height 17.7; paths ending above start: 0/200
+   persistence p=0.99: mean slope -0.4231 bits/step (i.i.d. value log2 3 - 2 = -0.4150); mean max height 169.0; paths ending above start: 16/200
+   growth state with escape c/sqrt(N), c=3: fraction never escaping in 20000 steps from N0 = 2^20: 0.974
+   growth state with escape c/ln N, c=0.6: fraction never escaping in 20000 steps from N0 = 2^20: 0.000
+
+== P4: typology numbers re-checked ==
+   Juggler n <= 2000: all reach 1; mean log2(log m'/log m) per step -0.334 (fair coin -0.208); P(parity persists) 0.565; longest 80 steps; largest 271 digits
+   reverse-and-add n < 10^5, 300 steps: not palindromic: 6091 (first [196, 295, 394, 493, 592, 689, 691, 788, 790, 879, 887, 978]); below 10^4: 249; mean digit growth per step (first 50 steps) +0.403
+   look-and-say: length ratio at 60 steps 1.30361 (Conway 1.30358)
+   Ducci length 8, entries < 4 (4^8 vectors): all reach 0, worst 14 steps
+   Kaprekar 4 digits: every non-repdigit reaches 6174, worst 7 steps
+   aliquot mean log2(s(n)/n) by class a (even n <= 2*10^6): a=1: -0.348, a=2: +0.129, a=3: +0.318, a=4: +0.404, a=5: +0.445, a=6: +0.465
+   abundant density to 2*10^6: 0.2475 (Deleglise: 0.2476..0.2480)
+
+== P5: Erdos persistence: P(k consecutive increases | abundant), abundant n <= 10^6, sieve to 2*10^7 ==
+   k: 1: 1.000 (chains still inside the sieve: 5000), 2: 0.809 (chains still inside the sieve: 5000), 3: 0.720 (chains still inside the sieve: 4046), 4: 0.664 (chains still inside the sieve: 3599), 5: 0.619 (chains still inside the sieve: 3294), 6: 0.562 (chains still inside the sieve: 2978), 7: 0.502 (chains still inside the sieve: 2618), 8: 0.439 (chains still inside the sieve: 2284)
+   (5000 abundant starts; a chain leaving the sieve range counts as not increasing)
+
+DONE
