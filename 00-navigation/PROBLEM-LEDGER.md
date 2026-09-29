@@ -583,6 +583,24 @@ all heights (THM-1289, published), δ ineffective.
   numbers) reproduced. Audited SOUND WITH CORRECTIONS (the carry bound; "exactly 1/2 in expectation" was a model with a
   vacuous CRT step; THM-4506 (O)/(H) glosses; MISTAKES). Note: `collatz_artin_corrections_20260927.md`.
 
+  **Mazur's positive-density theorem digested; the 3-adic Syracuse law's resonances; the seed-1 test (opus, 2026-09-28,
+  S19):** the owner's Mazur PDF (*Explicit Positive-Density Collatz Convergence in Logarithmic Time*, v2, Lean-checked on
+  ProofAtlas, review pending; companion "positive lower density of predecessors of every target" accepted there): CITED,
+  not replayed; P1-P8 elementary components verified at small size; constants c^(-1) > 2^(2^(2^6535)). PROVED (Theorem A):
+  3^n mu_n(y mod 3^n) = sum_(S^n x = y) 3^n 2^(-A_n(x)), the harmonic mass of the depth-n layer of the Syracuse tree of y
+  (Tao's Syracuse random variable = Mazur's reference density = his weighted inverse histories); recursion H_(n+1) =
+  H^(1) + 2 H^(2) by class mod 3; H_1(1) = 1, H_2 = 8/7, H_3 = 1376/1387; class means 2/3 and 4/3. PROVED (Theorem B):
+  every Syracuse cycle is an atom, rho_(km)(y_0) >= (2/3)(3^k/2^A)^m; negative cycles resonate (rho_n(-1) = 0.975 (3/2)^n;
+  exponents 0.369 / 0.054 / 0.009), positive cycles are anti-resonant; the spike profile on the closure of -1 is the path
+  sum 2^(l - A) (D(-1/2) = 1/2, D(-1/4) = 3/4, ...; OBSERVED to four decimals at levels 17-18). PROVED (Theorem C): positive
+  lower density of {tau(x) <= C ln x} for any C forces limsup n^(1/6) 3^n mu_n(1) > 0; the law computed by FFT to level 18
+  (20 GB): H_18(1) = 0.410, every ratio below 1 since level 7, n^(1/6) H_n = 0.66 -- OPEN, the cheapest confrontation with a
+  Lean-checked positive-density claim. 3-adic law: entropy deficit converges, second moment ~ 0.31 n, median 0.50; (2.3) as
+  stated implies absolute continuity (CONDITIONAL). Typing (atlas s8): DRIFT O, STICKY O, SHEET/DEFECT/INTEGRAL/UNIFORM/DIM
+  B. Seeds: inverter = Bernstein conjugacy, the open question = the Periodicity Conjecture, THM-4476 (2)(3)(8) the partial
+  result; Kaprekar = exact invariant (digit multiset); perfect cuboid open. Audit pending at entry time (note s11).
+  Note: `mazur_positive_density_20260928.md`.
+
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`
 (ranks HN > reconstruction > Kakeya/Falconer > sunflower > Caccetta–Häggkvist > … ).
 

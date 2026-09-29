@@ -181,3 +181,51 @@ Searches for "nondeterministic Collatz", "Collatz with choice", "Collatz relatio
   (STICKY note, section 8).
 * Pattern unchanged: every mechanism that overcomes STICKY is a
   residue-averaging mechanism, blind to SHEET and DIM.
+
+## 8. Mazur 2026 (added 2026-09-28, opus S19): positive-density log-time convergence, typed
+
+**Entered** by [`mazur_positive_density_20260928.md`](mazur_positive_density_20260928.md)
+(Theorems A–C; sections 1–2 and 7). Source: M. Mazur, *Explicit
+Positive-Density Collatz Convergence in Logarithmic Time*, v2 (September
+2026), Lean-checked on the ProofAtlas platform, review pending; companion
+*Positive lower density of Collatz predecessors* (accepted formalization
+there). CITED, not replayed by us.
+
+* **Claim:** explicit `c > 0` and `X_0` with `#{n < X : tau(n) <= (523/50)
+  ln n} >= c X` for `X >= X_0` (`c^(-1) > 2^(2^(2^6535))`); companion:
+  every target `a`, `3 ∤ a`, has predecessors of positive lower density
+  (so a single non-convergent integer forces a positive-density
+  non-convergent set, and upper-density-one convergence forces universal
+  convergence).
+* **Mechanism:** residue averaging. Weighted inverse histories `omega(w) =
+  3^d 2^(-A(w))` from a seed (exactly the harmonic mass `3^n mu_n(seed)` of
+  the seed's Syracuse tree layer, Theorem A of the note), transfer operators
+  on `Z/3^t` with `<T_w g> = 2^(-A) <g>`, Tao's fine-scale mixing (2.3) with
+  an explicit coefficient of size `2^(2^6536)`, deterministic residue
+  spread, the seed chosen by averaging over the residue classes of `R_j =
+  (4^j - 1)/3`, source charge `x omega(w) <= M`, time constant `3/log(4/3)
+  = 10.43`.
+* **Typing (conclusion rule of §0):** DRIFT **O** (the conclusion fails for
+  `5x+1`; the proof uses the drift through the central restriction `A ≈
+  2d`); STICKY **O** (the weights are exact inverse-orbit sums at every
+  scale: size-free memorylessness, which the aliquot control lacks; the
+  pattern of §7 holds); SHEET **B** (the conclusion holds for `3x+1` on the
+  negatives; the companion gives every target a positive-density basin, so
+  an extra cycle is invisible); DEFECT **B**; INTEGRAL **B**; UNIFORM **B**
+  (presumably runs unchanged for `3x+k`, `3 ∤ k`; not checked); DIM **B**
+  (no descent certificate; the non-descending set is untouched).
+  Krasikov–Lagarias `x^0.84` row: superseded by positive density *if the
+  result stands*.
+* **Test of the conclusion (Theorem C of the note, PROVED):** positive
+  lower density of `{x : tau(x) <= C ln x}` for any `C` forces
+  `limsup_n n^(1/6) 3^n mu_n(1 mod 3^n) > 0`. The exact sequence `H_n(1)
+  = 3^n mu_n(1)` is `1, 8/7, 1376/1387, 0.928, ..., 0.410` (`n = 18`),
+  falling about `3%` per level for eleven levels, `n^(1/6) H_n = 0.66` at
+  `n = 18`. OPEN whether it stays positive; the cheapest confrontation with
+  a positive-density claim available anywhere.
+* **A control on the reference density, not a failure mode:** the atoms of
+  the 3-adic Syracuse law are the negative cycles (`rho_n(-1) = 0.975
+  (3/2)^n`, exact spike profile on the forward closure of `-1`), so the
+  reference density is unbounded; the mixing estimate is stated in `ell^1`
+  and survives this. Under (2.3) the 3-adic law is absolutely continuous
+  (CONDITIONAL), with a density of median `1/2` that is not in `L^2`.

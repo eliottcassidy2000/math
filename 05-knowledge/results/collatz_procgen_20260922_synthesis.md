@@ -1501,6 +1501,61 @@ identities and the consecutive-sum identities as brainstorming. Note
   `1331` numbers below it in none (both reproduced); Artin `A = 0.37396`,
   base-5 density `0.3946` against `A·20/19 = 0.3936`. Audit: note section 7.
 
+## 2ad. Wave 31 (2026-09-28, opus session `collatz-poset-dag-20260927`, S19): Mazur's positive-density theorem digested; the 3-adic Syracuse law's resonances; the seed-1 test
+
+Owner's directive: digest M. Mazur's *Explicit Positive-Density Collatz
+Convergence in Logarithmic Time* (v2, September 2026; Lean-checked on
+ProofAtlas, review pending) "for any possible connections to our work we
+can leverage or extend towards proofs", with Kaprekar's constants, the
+perfect cuboid and the pasted "inverter" text as further seeds. Note
+[`mazur_positive_density_20260928.md`](mazur_positive_density_20260928.md);
+atlas §8.
+
+* **The paper's object is ours (Theorem A, PROVED).** For odd `y`, `3 ∤ y`:
+  `3^n mu_n(y mod 3^n) = sum_{S^n(x) = y} 3^n 2^(-A_n(x))`, the harmonic
+  mass of the depth-`n` layer of the Syracuse tree of `y` (`mu_n` = Tao's
+  Syracuse random variable's law; Terras classes + the affine identity +
+  sign preservation). Mazur's weighted inverse histories, his reference
+  density `rho_q = (2/3) 3^q mu_q`, his source charge `x omega <= M` and
+  his seed selection are this identity read three ways. Exact recursion
+  `H_{n+1} = H_n^{(1)} + 2 H_n^{(2)}` (class split mod `3`); `H_1(1) = 1`,
+  `H_2 = 8/7`, `H_3 = 1376/1387`; class means `2/3` and `4/3` (the S18
+  `80%` seen from the other side).
+* **Negative cycles are the resonances of the 3-adic law (Theorem B,
+  PROVED).** A cycle of length `k`, valuation `A`, gives `rho_{km}(y_0) >=
+  (2/3)(3^k/2^A)^m`; `(3/2)^n - 1 ≡ -1 mod 3^n`; `rho_n(-1) = 0.975 (3/2)^n`
+  (levels `<= 18`); singularity exponents `0.3691, 0.0536, 0.0086` for the
+  three negative cycles; positive cycles anti-resonant. The relative spike
+  profile on the forward rational closure of `-1` is the path sum `2^(l-A)`:
+  `D(-1/2) = 1/2`, `D(-1/4) = D(1/8) = D(11/16) = 3/4`, `D(-1/8) = 3/8`,
+  `D(-1/16) = 3/16`, reproduced to four decimals (OBSERVED equality, PROVED
+  lower bound).
+* **The seed-1 test (Theorem C, PROVED).** Positive lower density of
+  `{tau(x) <= C ln x}` for any `C` forces `limsup n^(1/6) 3^n mu_n(1) > 0`
+  (partial summation; odd parts; the exact identity `1/x = 3^n 2^(-A)
+  prod(1 + 1/(3 x_j))` with `prod <= e^(1/3) n^(1/6)` by distinctness of
+  the orbit values). The sequence `3^n mu_n(1)` computed by FFT to level 18
+  (`20 GB`): `0.410` at `n = 18`, every ratio below `1` since level 7;
+  `n^(1/6) H_n = 0.66`. OPEN; a positive limit near `0.35` and a slow decay
+  to `0` both fit. First exact sequence that a Lean-checked positive-density
+  claim must dominate.
+* **The 3-adic Syracuse law:** entropy deficit converges (`1.173` at level
+  18; information dimension `1`), second moment grows linearly (`0.31 n`),
+  median density `0.50`, `7%` dead classes; fine-scale distances decrease in
+  `m`. (2.3) as stated is the `L^1`-Cauchy property, hence absolute
+  continuity (CONDITIONAL).
+* **Typing (atlas §8):** DRIFT O, STICKY O, SHEET/DEFECT/INTEGRAL/UNIFORM/DIM
+  B; a residue-averaging mechanism as §7 predicts. Replaces the
+  Krasikov–Lagarias `x^0.84` row if it stands; divergence half untouched.
+* **Seeds:** the "inverter" is Bernstein's 2-adic conjugacy and the pasted
+  open question is the Periodicity Conjecture; THM-4476 (2),(3),(8) is the
+  repo's partial result (aperiodic words of slow growth have no
+  odd-denominator rational value). Kaprekar: exact invariant (digit
+  multiset), the typology's finite extreme; `9 -> 81 -> 63 -> 27 -> 45`,
+  `495`, `6174` reproduced. Perfect cuboid: open; not a Collatz technique.
+* Audit: pending at the time of writing (the note's section 11 will hold
+  the record).
+
 ## 3. The snippet, dispatched
 
 | pasted claim | verdict | where |
