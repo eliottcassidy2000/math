@@ -8,7 +8,10 @@ status: >
   seeds (2 a primitive root mod 3^k; LTE for u = 1). FINITE-EXACT: J-series and
   identity check (relative 10^-13..4 10^-14) at h = 40..1600 with valuation
   truncation A = 40..150; mu_hat_n(1) to n = 1200; the negative family to n = 420
-  (m <= 80) and n = 140 (m <= 160); seed inventory u <= 200, Q <= 700.
+  (m <= 80) and n = 140 (m <= 160); seed inventory u <= 200, Q <= 700. Truncation
+  control: mu_hat_n(1) from A = 60 and A = 120 agree to 6e-14 relative for all
+  n <= 600 (A = 100 vs 120: identical), so the truncated words cancel like the
+  rest; double precision underflows 3^(-n/2) past n ~ 1260, hence no claim past 1200.
   EMPIRICAL: the prefactor law R(h) = |mu_hat_h(2^s*)| h^(3/2) e^(hI) = 4.53,
   5.62, 6.44, 7.84, 8.79, 9.87, 10.42 at h = 200, 300, 400, 600, 800, 1200, 1600
   (R/sqrt h = 0.320, 0.324, 0.322, 0.320, 0.311, 0.285, 0.261; local prefactor
@@ -38,7 +41,7 @@ scripts:
   - 04-computation/experiments/collatz_h1_20260929_remnant.py
   - 04-computation/experiments/collatz_h1_20260929_arrivals.py
   - 04-computation/experiments/collatz_h1_20260929_ridge_inventory.py
-outputs: 05-knowledge/results/collatz_h1_20260929_{jseries_h40_validation, jseries_h40..h1200, mu1_track_n1200, remnant_n140, arrivals_n420, ridge_inventory_u200_Q700}.out
+outputs: 05-knowledge/results/collatz_h1_20260929_{jseries_h40_validation, jseries_h40..h1200, mu1_track_n1200, mu1_trunc_check, remnant_n140, arrivals_n420, ridge_inventory_u200_Q700}.out (script collatz_h1_20260929_mu1_trunc_check.py for the truncation control)
 script_sha256: 718d812623df56e77860262a4ba4755adb5111301014a6bffe2094f8129bd4d8 (jseries), e28d8c07a0cd7e3bdba447d0526da1d3d0a41494ea4e92073282fd2e996a8c08 (mu1_track), 44fae1b567bf02b19dbc9ff56ec9a1c4cdc8fe6ddd1d6fcf0db22c648c705651 (remnant), f864993cb5209556056084d5d527314368b4a31d78a2f4364fdd8ae3c308921c (arrivals), 9db9060775ec5a3c622c71923ddd843206390d5042ff2e6acf8fce1cedb76fff (ridge_inventory)
 hash_basis: raw LF bytes
 audit: NOT independently audited; internal controls: the h = 40 tables reproduce S22 to four digits, the identity sum_J c_J = f_h(s) holds to 4e-14 at every h, the seed counts match the residue-class prediction, and the n = 128 coherent step is the audit's |G_128| = 0.967.

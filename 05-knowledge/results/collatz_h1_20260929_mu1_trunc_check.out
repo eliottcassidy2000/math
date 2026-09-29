@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/private/tmp/claude-501/-Users-e-Documents-GitHub-math/e745fef3-98b2-4020-9acc-f7ba4d8b2eef/scratchpad/h1/mu1_trunc_check.py", line 15, in <module>
+    m60 = mu1_run(600, 60); m100 = mu1_run(600, 100); m120 = np.load('mu1_N1200.npy')[:601]
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/numpy/lib/_npyio_impl.py", line 451, in load
+    fid = stack.enter_context(open(os.fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: 'mu1_N1200.npy'
