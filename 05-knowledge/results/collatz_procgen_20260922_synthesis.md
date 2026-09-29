@@ -1536,10 +1536,11 @@ atlas §8.
   prod(1 + 1/(3 x_j))` with `prod <= e^(1/3) n^(1/6)` by distinctness of
   the orbit values). The sequence `3^n mu_n(1)` computed by FFT to level 18
   (`20 GB`): `0.410` at `n = 18`, every ratio below `1` from level 7 to
-  level 22 (minimum `0.370`), then rising to `0.445` at `n = 38` by the
-  depth decomposition `H_{18+d} = sum_{T_d(1)} W H_18(y)` (pruning loss `<=
-  10^(-2)`, validated against the exact `H_18` at every split); `n^(1/6)
-  H_n = 0.82` at `n = 38`. No decay through `n = 38`; the limit is OPEN.
+  level 22 (minimum `0.370`), then rising to `0.544` at `n = 43` and
+  `0.513` at `n = 48` by the depth decomposition `H_{18+d} = sum_{T_d(1)} W
+  H_18(y)` (walk to depth 30; pruning loss `<= 3·10^(-2)`, validated
+  against the exact `H_18` at every split); `n^(1/6) H_n ≈ 1.0` for `n >=
+  41`. No decay through `n = 48`; the limit is OPEN.
   First exact sequence that a Lean-checked positive-density claim must
   dominate, and it complies so far.
 * **The 3-adic Syracuse law:** entropy deficit converges (`1.173` at level

@@ -1,4 +1,4 @@
-# Mazur's positive-density log-time convergence, digested: the harmonic mass of a Syracuse tree layer is `3^n mu_n(seed)`, the negative cycles are the resonances of the 3-adic Syracuse law (exact spike profile), and the seed-1 mass is a computable test of the theorem (`limsup n^(1/6) H_n(1) > 0` is forced; `H_n(1)` bottoms at `0.370` near `n = 22` and rises to `0.45` by `n = 38`)
+# Mazur's positive-density log-time convergence, digested: the harmonic mass of a Syracuse tree layer is `3^n mu_n(seed)`, the negative cycles are the resonances of the 3-adic Syracuse law (exact spike profile), and the seed-1 mass is a computable test of the theorem (`limsup n^(1/6) H_n(1) > 0` is forced; `H_n(1)` bottoms at `0.370` near `n = 22`, rises to `0.54` by `n = 42` and stays near `0.52` through `n = 48`)
 
 **Session:** opus, `collatz-poset-dag-20260927` (S19 continuation), 2026-09-28.
 **Owner's directive:** "thoroughly digest the attached pdf for any possible
@@ -84,12 +84,14 @@ level as argument), `mazur_seed1_test_20260928.py` (Theorem C's numbers),
    (`n = 1..18`), falling about `3%` per level from level 8 to level 22,
    where it bottoms at `0.370`. Beyond, by the exact depth decomposition
    `H_{18+d}(1) = sum_{y ∈ T_d(1)} 3^d 2^(-A(y)) H_18(y)` (the level-18 law
-   plus a weight-pruned walk of the tree of `1`; loss `<= 10^(-2)`, measured
-   against the exact `H_18` at every split), it *rises*: `0.373, 0.366,
-   0.373, 0.391, 0.411, 0.426, 0.445` at `n = 25, 26, 30, 32, 34, 37, 38`
-   (lower bounds; the exact values exceed them by about the pruned weight),
-   `n^(1/6) H_n = 0.82` at `n = 38`. Decay to `0` is excluded through `n =
-   38`; the limit is OPEN. The paper does not claim anything about the seed
+   plus a weight-pruned walk of the tree of `1` to depth 30; loss `<=
+   3·10^(-2)`, measured against the exact `H_18` at every split), it
+   *rises* to `0.54` at `n = 41–43` and stays near `0.52–0.54` through `n =
+   48` (`0.374, 0.414, 0.452, 0.504, 0.543, 0.540, 0.531, 0.513` at `n =
+   30, 34, 38, 40, 42, 44, 46, 48`, lower bounds; the exact values exceed
+   them by about the pruned weight, `0.03` at `n = 48`), with `n^(1/6) H_n
+   ≈ 1.0` for `n >= 41`. Decay to `0` is excluded through `n = 48`; the
+   limit is OPEN. The paper does not claim anything about the seed
    `1`; its residue averaging is precisely what avoids this quantity. This
    is the sharpest computable stake we have on the theorem's *conclusion*,
    independent of its astronomical constants, and it is passed so far.
@@ -314,10 +316,11 @@ lever on the cycle problem here, but a clean statement of what a cycle
 does to the 3-adic law.
 
 **Numerics (FFT law, levels `<= 18`).** The maximal atom of `rho_n` on the
-units is the class of `-1` at every level (`1.33, 2.10, 3.20, 4.85, 7.32,
-11.0, 16.6, 24.9, ...`, `1441` at `n = 18`), with `rho_n(-1)/(3/2)^n ->
-0.9748` (the loop word contributes exactly `(2/3)(3/2)^n`; the rest is the
-negative tree of `-1`). The atoms of the `{-5,-7}` cycle grow (`rho_18(-5)
+units is the class of `-1` at every level up to 14, where the full scan of
+the atoms stops (`1.33, 2.10, 3.20, 4.85, 7.32, 11.0, 16.6, 24.9, ...`,
+`285` at `n = 14`); `rho_n(-1)` itself is followed to `n = 18` (`1441`),
+with `rho_n(-1)/(3/2)^n -> 0.9748` (the loop word contributes exactly
+`(2/3)(3/2)^n`; the rest is the negative tree of `-1`). The atoms of the `{-5,-7}` cycle grow (`rho_18(-5)
 = 6.3`, `rho_18(-7) = 7.6`, against `1` for a typical unit); `-17` sits at
 `2.0–2.5`.
 
@@ -407,50 +410,71 @@ tested range, and the `n^(1/6)` is a proof convenience, not the truth.
 
 **The data.**
 
-| `n` | 2 | 4 | 6 | 8 | 10 | 12 | 14 | 16 | 18 | 20 | 22 | 24 | 26 | 28 | 30 | 32 | 34 | 36 | 38 |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `H_n(1) = 3^n mu_n(1)` | 1.143 | 0.928 | 0.955 | 0.775 | 0.637 | 0.537 | 0.473 | 0.435 | 0.410 | 0.387 | 0.370 | 0.376 | 0.366 | 0.366 | 0.373 | 0.391 | 0.411 | 0.416 | 0.445 |
-| `n^(1/6) H_n(1)` | 1.28 | 1.17 | 1.29 | 1.10 | 0.94 | 0.81 | 0.73 | 0.69 | 0.66 | 0.64 | 0.62 | 0.64 | 0.63 | 0.64 | 0.66 | 0.70 | 0.74 | 0.76 | 0.82 |
+| `n` | 2 | 4 | 6 | 8 | 10 | 12 | 14 | 16 | 18 | 20 | 22 | 24 | 26 | 28 | 30 | 32 | 34 | 36 | 38 | 40 | 42 | 44 | 46 | 48 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `H_n(1) = 3^n mu_n(1)` | 1.143 | 0.928 | 0.955 | 0.775 | 0.637 | 0.537 | 0.473 | 0.435 | 0.410 | 0.387 | 0.370 | 0.376 | 0.366 | 0.366 | 0.374 | 0.392 | 0.414 | 0.420 | 0.452 | 0.504 | 0.543 | 0.540 | 0.531 | 0.513 |
+| `n^(1/6) H_n(1)` | 1.28 | 1.17 | 1.29 | 1.10 | 0.94 | 0.81 | 0.73 | 0.69 | 0.66 | 0.64 | 0.62 | 0.64 | 0.63 | 0.64 | 0.66 | 0.70 | 0.74 | 0.76 | 0.83 | 0.93 | 1.01 | 1.02 | 1.00 | 0.98 |
 
-(Levels `<= 18`: the FFT law, exact to `10^(-9)`. Levels `19..38`: the
-depth decomposition below, lower bounds whose loss is at most the pruned
-weight, `4·10^(-9)` at `n = 19` growing to `1.0·10^(-2)` at `n = 38`.)
+(Levels `<= 18`: the FFT law, exact to `10^(-9)`. Levels `19..48`: the
+depth decomposition below with the depth-30 walk, lower bounds whose loss
+is at most the pruned weight, `4·10^(-9)` at `n = 19`, `1.8·10^(-4)` at
+`n = 30`, `3.6·10^(-3)` at `n = 38`, `2.9·10^(-2)` at `n = 48`; adding the
+pruned weight, the values for `n = 41..48` are `0.548, 0.553, 0.556, 0.555,
+0.552, 0.551, 0.546, 0.542`.)
 
 Every ratio `H_{n+1}/H_n` from `n = 7` to `n = 21` is below `1` (`0.90` to
-`0.98`); the minimum is `H_22 = 0.3697`; from `n = 22` on the ratios are
-mostly above `1` (`1.001, 1.017, 0.990, 0.981, 0.994, 1.008, 1.002, 1.018,
-1.029, 1.017, 1.034, 1.017, 1.001, 1.012, 1.023, 1.045`). By Corollary A2
-the ratio is `f_n^{(1)} + 2 f_n^{(2)} = 1 + f_n^{(2)} - f_n^{(0)}`, and
-the walk gives the class shares of the layers directly: the leaf share
+`0.98`); the minimum is `H_22 = 0.3697`; from `n = 22` to `n = 43` the
+ratios are mostly above `1` and the sequence climbs to `0.544`; from `n =
+44` to `48` they are slightly below (`0.994, 0.988, 0.994, 0.981, 0.986`;
+the corrected values drift from `0.556` to `0.542`). By Corollary A2 the
+ratio is `f_n^{(1)} + 2 f_n^{(2)} = 1 + f_n^{(2)} - f_n^{(0)}`, and the
+walk gives the class shares of the layers directly: the leaf share
 `f^{(0)}` sits at `0.34–0.35` from depth 6 on, while `f^{(2)}` climbs from
 `0.23` (depth 7) to `0.31–0.32` (depths 17–20) at the expense of `f^{(1)}`
-(`0.45 -> 0.34`): the layers of the tree of `1` approach equidistribution
-mod `3` from a class-`1`-heavy start, and the decline was the transient of
-that approach.
+(`0.45 -> 0.34`), and from depth 22 on all three shares are `1/3 ± 0.02`:
+the layers of the tree of `1` approach equidistribution mod `3` from a
+class-`1`-heavy start, the decline was the transient of that approach, and
+what remains is the martingale-like wandering of the mass. The 3-adic genealogy behind it is explicit at the first
+levels: the class means of `rho_n` over the classes mod `3^k` are `rho_k`
+(consistency of the laws), and `rho_2 = (16, 32, 22, 8, 4, 44)/21` on the
+classes `1, 2, 4, 5, 7, 8 mod 9`; the poor classes `5` and `7 mod 9` are
+exactly those whose dominant child (`a = 1`, resp. `a = 2`, three quarters
+of the offspring weight) is a leaf. The seed `1` (class `1 mod 9`, mean
+`16/21`) sits well below its class mean because its own dominant child is
+itself (weight `3/4`, the anti-resonance of the trivial cycle) and its next
+child `5 ≡ 5 mod 9` is poor (`rho_18(5) = 0.28`); the seed `R_7 = 5461 ≡ 7
+mod 9` is the extreme case (`rho_18 = 0.047`: its `a = 2` child `7281` is a
+leaf).
 
 **The depth decomposition (`mazur_seed1_deep_20260928.py`, PROVED
 identity, FINITE-EXACT evaluation).** Theorem A applied at the depth-`d`
 ancestor gives, for every `d`,
 `H_{m+d}(1) = sum_{y ∈ T_d(1)} 3^d 2^(-A_d(y)) H_m(y)`, `H_m(y) = 3^m mu_m(y mod 3^m)`,
 and `mu_m` for `m <= 18` is the reduction of the level-18 law. The layers
-`T_d(1)` (`d <= 20`) are enumerated by a walk that expands a child only if
-its weight is at least `10^(-8)` (`614353` nodes kept at depth 20; the
-removed geometric tails sum to the "pruned weight"). Validation: with `m +
-d = 18` the identity must return the exact `H_18 = 0.410453`; it returns
-`0.410453, 0.410448, 0.410208, 0.408107, 0.404444` for `d = 2, 5, 10, 15,
-18`, with deficits equal to the pruned weights (`5·10^(-8)`, `5·10^(-6)`,
-`2.5·10^(-4)`, `2.4·10^(-3)`, `6.0·10^(-3)`): the pruned nodes' subtrees
-carry mass about `1` each, so the true values exceed the table by about the
-pruned weight. Two routes (`(d, 18)` and `(d+1, 17)`) agree to `10^(-3)`.
+`T_d(1)` are enumerated by a walk that expands a child only if its weight
+is at least a threshold (the removed geometric tails sum to the "pruned
+weight"): threshold `10^(-8)` to depth 20 (`614353` nodes kept at depth
+20, `mazur_seed1_deep_20260928.out`) and `10^(-9)` to depth 30
+(`9.0·10^6` nodes at depth 30, pruned weight `2.9·10^(-2)`,
+`mazur_seed1_deep30_20260928.out`, the table's source for `n >= 19`).
+Validation: with `m + d = 18` the identity must return the exact `H_18 =
+0.410453`; the coarser run returns `0.410453, 0.410448, 0.410208,
+0.408107, 0.404444` for `d = 2, 5, 10, 15, 18`, with deficits equal to the
+pruned weights (`5·10^(-8)`, `5·10^(-6)`, `2.5·10^(-4)`, `2.4·10^(-3)`,
+`6.0·10^(-3)`): the pruned nodes' subtrees carry mass about `1` each, so
+the true values exceed the table by about the pruned weight. Two routes
+(`(d, 18)` and `(d+1, 17)`) agree to `10^(-3)`, and the two runs agree at
+`n = 38` up to their pruned weights (`0.445` against `0.452`).
 
 The "parents" form `rho_{n+1}(1) = 3 sum_j 4^(-j) rho_n(R_j)` with the
 other seeds' values at level 18 (`R_2 = 5: 0.283`, `R_4 = 85: 0.227`, `R_5 =
 341: 1.160`, `R_7: 0.047`, `R_8: 0.999`) had given the fixed-point
 extrapolation `H_∞(1) ≈ 0.35`, close to the observed floor. **Verdict:
-OPEN, but decay is excluded through `n = 38`.** The sequence has a minimum
-`0.370` at `n = 22` and has risen for sixteen levels since; a limit near
-`0.4` is the natural reading, and what is missing is a proof of `liminf
-H_n(1) > 0`. This is the first point in the thread where a Lean-checked
+OPEN, but decay is excluded through `n = 48`.** The sequence has a minimum
+`0.370` at `n = 22`, rises to `0.544` at `n = 43` and drifts to `0.513`
+(`0.54` with the pruning correction) at `n = 48`; a positive limit of the
+order of `1/2` is the natural reading, and what is missing is a proof of
+`liminf H_n(1) > 0`. This is the first point in the thread where a Lean-checked
 positive-density claim meets an exact sequence it must dominate, and the
 sequence complies.
 
@@ -591,7 +615,8 @@ python 04-computation/experiments/mazur_harmonic_mass_20260928.py      > 05-know
 python 04-computation/experiments/mazur_harmonic_mass_deep_20260928.py 17 > 05-knowledge/results/mazur_harmonic_mass_deep_20260928.out
 python 04-computation/experiments/mazur_harmonic_mass_deep_20260928.py 18 > 05-knowledge/results/mazur_harmonic_mass_deep18_20260928.out   # 20 GB, 2 min
 python 04-computation/experiments/mazur_seed1_test_20260928.py         > 05-knowledge/results/mazur_seed1_test_20260928.out
-python 04-computation/experiments/mazur_seed1_deep_20260928.py         > 05-knowledge/results/mazur_seed1_deep_20260928.out   # 20 GB, 2 min
+python 04-computation/experiments/mazur_seed1_deep_20260928.py         > 05-knowledge/results/mazur_seed1_deep_20260928.out   # 20 GB, 2 min (depth 20, threshold 1e-8)
+python 04-computation/experiments/mazur_seed1_deep_20260928.py 30 1e-9 > 05-knowledge/results/mazur_seed1_deep30_20260928.out # depth 30, 10 min
 python 04-computation/experiments/kaprekar_cuboid_20260928.py          > 05-knowledge/results/kaprekar_cuboid_20260928.out
 ```
 
@@ -603,14 +628,14 @@ python 04-computation/experiments/kaprekar_cuboid_20260928.py          > 05-know
 | Theorem B (cycle resonances; `-1` exact; singularity exponents) | PROVED (lower bounds); OBSERVED growth constant `0.9748` |
 | spike profile `D` on the closure of `-1` | PROVED as lower bound; equality OBSERVED to four decimals (levels 17, 18) |
 | Theorem C (positive-density log-time convergence forces `limsup n^(1/6) H_n(1) > 0`) | PROVED |
-| `lim H_n(1) > 0`? | OPEN; exact to `n = 18` (`0.410`), depth decomposition to `n = 38`: minimum `0.370` at `n = 22`, then rising to `0.445` (pruning loss `<= 10^(-2)`); no decay |
+| `lim H_n(1) > 0`? | OPEN; exact to `n = 18` (`0.410`), depth decomposition to `n = 48`: minimum `0.370` at `n = 22`, rising to `0.544` at `n = 43`, `0.513` at `n = 48` (pruning loss `<= 3·10^(-2)`); no decay |
 | absolute continuity of the 3-adic Syracuse law | CONDITIONAL on (2.3) as stated (Tao Prop. 1.14 per the paper); numerics consistent |
 | second moment linear, entropy deficit convergent, median `0.50` | OBSERVED (levels `<= 18`) |
 | inverter = Bernstein map; open question = Periodicity Conjecture; THM-4476 partial result | CITED + PROVED (repo) |
 | Kaprekar cycles, `9 | image`, digit-multiset invariant; Euler bricks | FINITE-EXACT; perfect cuboid OPEN (CITED, from memory) |
 
-**Next probes.** The depth decomposition to `n ≈ 50` (walk to depth 30
-with pruning `10^(-10)`) or the level-19 law; the exact profile theorem (`D` as the
+**Next probes.** The depth decomposition beyond `n = 48` (pruning by a
+subtree bound instead of the node weight, or the level-19 law); the exact profile theorem (`D` as the
 Green's function of the transfer operator at the `-1` eigen-singularity);
 a proof or refutation of `liminf H_n(1) > 0`, which, by Theorem C, is the
 cheapest possible confrontation with a positive-density claim.

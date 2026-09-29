@@ -221,10 +221,10 @@ there). CITED, not replayed by us.
   `limsup_n n^(1/6) 3^n mu_n(1 mod 3^n) > 0`. The exact sequence `H_n(1)
   = 3^n mu_n(1)` is `1, 8/7, 1376/1387, 0.928, ..., 0.410` (`n = 18`),
   falling about `3%` per level from level 8 to its minimum `0.370` at `n =
-  22`, then rising to `0.445` at `n = 38` (depth decomposition `H_{18+d} =
-  sum_{T_d(1)} W H_18(y)` with the level-18 law; pruning loss `<= 10^(-2)`);
-  `n^(1/6) H_n = 0.82` at `n = 38`. No decay through `n = 38`; the limit is
-  OPEN; the cheapest confrontation with a positive-density claim available
+  22`, then rising to `0.544` at `n = 43` and `0.513` at `n = 48` (depth
+  decomposition `H_{18+d} = sum_{T_d(1)} W H_18(y)` with the level-18 law;
+  pruning loss `<= 3·10^(-2)`); `n^(1/6) H_n ≈ 1.0` for `n >= 41`. No decay
+  through `n = 48`; the limit is OPEN; the cheapest confrontation with a positive-density claim available
   anywhere, passed so far.
 * **A control on the reference density, not a failure mode:** the atoms of
   the 3-adic Syracuse law are the negative cycles (`rho_n(-1) = 0.975

@@ -11,7 +11,7 @@ exact H_18(1) = 0.41046 up to the pruned weight; the deficit measures the prunin
 Reports H_n(1) for n = 19 .. 18 + DMAX with the pruned-weight sums, n^(1/6) H_n, the ratios, and the class split
 (mod 3) of the truncated layers T_d(1) (the recursion H_(d+1) = H^(1) + 2 H^(2)).
 Session: opus, collatz-poset-dag-20260927 (S19), 2026-09-28.
-Run: python 04-computation/experiments/mazur_seed1_deep_20260928.py   (about 20 GB, a few minutes)
+Run: python 04-computation/experiments/mazur_seed1_deep_20260928.py [DMAX] [THETA]   (about 20 GB; DMAX 20 / THETA 1e-8 default; 30 / 1e-9 takes ~10 min)
 """
 from __future__ import annotations
 
@@ -25,8 +25,8 @@ sys.path.insert(0, "04-computation/experiments")
 from mazur_harmonic_mass_deep_20260928 import level_up  # noqa: E402
 
 TOP = 18
-DMAX = 20
-THETA = 1e-8
+DMAX = int(sys.argv[1]) if len(sys.argv) > 1 else 20
+THETA = float(sys.argv[2]) if len(sys.argv) > 2 else 1e-8
 
 if __name__ == "__main__":
     t0 = time.time()
@@ -85,7 +85,7 @@ if __name__ == "__main__":
         n = TOP + d
         val = sum(w * Hm[TOP][y % modT] for y, w in layers[d])
         alt = sum(w * Hm[TOP - 1][y % modT1] for y, w in layers[d + 1]) if d + 1 <= DMAX else float("nan")
-        print(f"   n={n}: H_n(1) = {val:.5f} (via d={d}; via d={d + 1}: {alt:.5f}); n^(1/6) H_n = {n ** (1 / 6) * val:.4f}; ratio {val / prev:.4f}; pruned weight <= {pruned[d]:.1e}")
+        print(f"   n={n}: H_n(1) = {val:.5f} (via d={d}; via d={d + 1}: {alt:.5f}); n^(1/6) H_n = {n ** (1 / 6) * val:.4f}; ratio {val / prev:.4f}; pruned weight {pruned[d]:.1e}; heuristic correction (pruned subtrees of mass ~1): {val + pruned[d]:.4f}")
         prev = val
     # class split of the truncated layers (recursion check)
     print("== class split (mod 3) of the truncated layer weights of the tree of 1 ==")

@@ -594,9 +594,9 @@ all heights (THM-1289, published), δ ineffective.
   exponents 0.369 / 0.054 / 0.009), positive cycles are anti-resonant; the spike profile on the closure of -1 is the path
   sum 2^(l - A) (D(-1/2) = 1/2, D(-1/4) = 3/4, ...; OBSERVED to four decimals at levels 17-18). PROVED (Theorem C): positive
   lower density of {tau(x) <= C ln x} for any C forces limsup n^(1/6) 3^n mu_n(1) > 0; the law computed by FFT to level 18
-  (20 GB): H_18(1) = 0.410, every ratio below 1 from level 7 to the minimum 0.370 at n = 22, then rising to 0.445 at n = 38
-  by the depth decomposition H_(18+d) = sum_(T_d(1)) W H_18(y) (pruning loss <= 10^-2); n^(1/6) H_n = 0.82 at n = 38 -- no
-  decay through n = 38, limit OPEN; the cheapest confrontation with a Lean-checked positive-density claim, passed so far. 3-adic law: entropy deficit converges, second moment ~ 0.31 n, median 0.50; (2.3) as
+  (20 GB): H_18(1) = 0.410, every ratio below 1 from level 7 to the minimum 0.370 at n = 22, then rising to 0.544 at n = 43
+  and 0.513 at n = 48 by the depth decomposition H_(18+d) = sum_(T_d(1)) W H_18(y) (walk to depth 30; pruning loss <= 3 10^-2);
+  n^(1/6) H_n ~ 1.0 for n >= 41 -- no decay through n = 48, limit OPEN; the cheapest confrontation with a Lean-checked positive-density claim, passed so far. 3-adic law: entropy deficit converges, second moment ~ 0.31 n, median 0.50; (2.3) as
   stated implies absolute continuity (CONDITIONAL). Typing (atlas s8): DRIFT O, STICKY O, SHEET/DEFECT/INTEGRAL/UNIFORM/DIM
   B. Seeds: inverter = Bernstein conjugacy, the open question = the Periodicity Conjecture, THM-4476 (2)(3)(8) the partial
   result; Kaprekar = exact invariant (digit multiset); perfect cuboid open. Audit pending at entry time (note s11).
