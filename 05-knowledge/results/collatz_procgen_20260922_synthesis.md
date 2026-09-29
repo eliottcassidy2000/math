@@ -1634,6 +1634,68 @@ exploration and extend past work toward proofs. Note
   mirror overreaches; MISTAKE-549). Section 2b (the powers of two to level
   120) was added after the audit.
 
+## 2af. Wave 33 (2026-09-29, opus session `collatz-poset-dag-20260927`, S22): the renewal structure of the resonant Fourier coefficient; the sharp rate `3^(h*-1)` conditional on square-root cancellation at the negative powers of two
+
+Owner's directive: "keep going with T1 and T2 toward a proof". Section 2d
+of [`collatz_five_mirrors_20260929.md`](collatz_five_mirrors_20260929.md).
+
+* **The exponent walk (PROVED).** Read from the top level down, the phase
+  product `e(2^s Y_h/3^h) = Π_j e((2^(κ_j) mod 3^j)/3^j)` has exponents
+  `κ_j = s - T_j` (`T_j` the suffix cost) performing a downward random walk
+  with i.i.d. geometric steps and no bridge condition. Three regimes:
+  the corridor `0 <= κ_j < j log_2 3 - K` (phase within `2π 2^(-K)` of `1`),
+  the floor (wrapped powers `2^k mod 3^j`, `k > j log_2 3`) and the ceiling
+  (modular inverse powers, `κ_j < 0`). The one-step Gauss sum has a
+  quantitative gap `<= (1+√5)/4 = 0.809` on exactly half the units (Lemma
+  G: `v_2(t) = 1`, or `t` odd with `t ≡ (-1)^(n+1) mod 4`, from the 2-adic
+  reading `(t 2^(-r) mod 3^n)/3^n = t/(2^r 3^n) + (ξ mod 2^r)/2^r`, `ξ = -t
+  3^(-n)`), and can approach `1` only for `t = ±2^v u` small: the corridor
+  is exactly where it does (Proposition 3's `sup -> 1` with the resonant
+  set named). The ceiling family (negative powers of two) is closed under
+  the recursion and sits at the Parseval scale `3^(-n/2)` (VERIFIED to `n =
+  80`, certified against the valuation truncation); the floor family is far
+  larger, `≈ 2^(-d) M(n)` at `k = n log_2 3 + d`, since a word leaves the
+  floor zone in one large first step (OBSERVED).
+* **Lemma R' (renewal bound, PROVED) and the mass law.** With `J(w)` the
+  number of bottom levels above the ceiling, `mu_hat_h(2^s) = Σ_J c_J` and
+  `|c_J| <= mass_h(J) Ñ_(J-1)`, `mass_h(J) = P(T_(J+1) <= s < T_J)`, `Ñ_n =
+  Σ_(m>=1) 2^(-m) |mu_hat_n(2^(-m) mod 3^n)|` (the top part conditions the
+  bottom part, whose phase product is the exponent walk of a shorter word
+  at a negative exponent). Chernoff at the tilt `θ* = ln(2 log_3 2 ... )`,
+  precisely `θ* = ln(2(1 - log_3 2)) = -0.3036`: `mass_h(J) <= e^(-hI)
+  e^(θ*δ) (log_2 3 - 1)^(-J)` at `s = h log_2 3 - δ`, with `e^(-I) =
+  3^(h*-1)` an identity. Term by term VERIFIED at `h = 40, 80` (worst ratio
+  `0.84`); the exact masses grow by `1/(log_2 3 - 1) = 1.7095` per unit of
+  `J` in the limit, damped at finite `h` by a Gaussian window of width
+  `0.61 √h` (the origin of the `√h` carrier width: `J_eff = 10, 14, 19` at
+  `h = 40, 80, 120`).
+* **Theorem C (CONDITIONAL).** If `Ñ_n <= C ρ^n` with `ρ < log_2 3 - 1 =
+  0.585`, then `|mu_hat_h(2^s)| <= C' e^(θ*δ) (3^(h*-1))^h` for all `h` and
+  all `s <= h log_2 3`: the resonant window decays at the no-descent rate
+  with a constant prefactor — the sharp form of the coefficient side of
+  Mazur's (2.3), against the `C* h^(-6409)` of the Fourier–renewal method.
+  The hypothesis is VERIFIED to `n = 80` (rate `0.574`, Parseval scale;
+  the margin is `1.3%`, `3^(-1/2)/(log_2 3 - 1) = 0.987`) and CONJECTURAL
+  beyond: it is square-root cancellation for one explicit character sum
+  over the 2-adic digits of `3^(-n)` (`m = 1`: the parity of the residue
+  `Y_n`), of the `×2 ×3` kind. The bound evaluates to `0.11–0.18 e^(-hI)` at
+  `h = 40..300` against `M(h) = 0.0125 -> 0.0011 e^(-hI)`: the S21 rate
+  bracket `0.947–0.950` is read as `0.9465` with a non-power prefactor, and
+  the "levels `180..300` lean against `M ≍ P_h`" is withdrawn as evidence.
+* **What (T1), (T2) became.** (T1) ceiling part: PROVED absolutely at the
+  scale `e^(-hI)` given H (uniform in `h`; relative to the coefficient it
+  needs `J_0 ≍ 115 ln h`, so the band width is `O(log h)` after the `√h`
+  regime); floor part: OBSERVED negligible (`F = 0` words carry
+  `99.6–100.4%`), no proof. (T2): reduced to one complex constant `Σ_J γ_J
+  ≠ 0`, the limit of the `J`-series whose terms are comparable and rotating
+  (`|c_J|/|full| = 0.26, 0.52, 0.81, 0.26, 0.59, 0.44` for `J = 3..8` at `h
+  = 40`) with per-mass weights `≈ 1/h` (the ballot factor of the top part
+  staying in the corridor), which is how `M ≍ h^(-3/2) e^(-hI) ≍ P_h` would
+  arise. Obligations: prove H in any form (`ρ < 0.585`); compute the limits
+  `γ_J`; extend `Ñ_n` past `80`; the floor part of (T1) as a smoothness
+  statement for the law of the real angle `Σ_j 2^(κ_j - j log_2 3)`.
+  No Collatz step.
+
 ## 3. The snippet, dispatched
 
 | pasted claim | verdict | where |
