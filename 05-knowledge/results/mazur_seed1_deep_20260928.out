@@ -1,0 +1,71 @@
+level-18 law computed [82s]; H_18(1) = 0.410453
+   depth 1: 14 nodes kept, cumulative pruned weight 3.725e-09 [85s]
+   depth 2: 70 nodes kept, cumulative pruned weight 8.754e-08 [85s]
+   depth 3: 259 nodes kept, cumulative pruned weight 3.851e-07 [85s]
+   depth 4: 699 nodes kept, cumulative pruned weight 2.007e-06 [85s]
+   depth 5: 1785 nodes kept, cumulative pruned weight 5.303e-06 [85s]
+   depth 6: 4128 nodes kept, cumulative pruned weight 1.160e-05 [85s]
+   depth 7: 7450 nodes kept, cumulative pruned weight 3.352e-05 [85s]
+   depth 8: 14320 nodes kept, cumulative pruned weight 6.318e-05 [85s]
+   depth 9: 21825 nodes kept, cumulative pruned weight 1.487e-04 [85s]
+   depth 10: 37190 nodes kept, cumulative pruned weight 2.465e-04 [85s]
+   depth 11: 62723 nodes kept, cumulative pruned weight 3.714e-04 [85s]
+   depth 12: 82524 nodes kept, cumulative pruned weight 6.877e-04 [85s]
+   depth 13: 125419 nodes kept, cumulative pruned weight 9.992e-04 [85s]
+   depth 14: 150349 nodes kept, cumulative pruned weight 1.709e-03 [85s]
+   depth 15: 213913 nodes kept, cumulative pruned weight 2.347e-03 [85s]
+   depth 16: 238965 nodes kept, cumulative pruned weight 3.711e-03 [86s]
+   depth 17: 322613 nodes kept, cumulative pruned weight 4.852e-03 [86s]
+   depth 18: 447946 nodes kept, cumulative pruned weight 6.008e-03 [86s]
+   depth 19: 476348 nodes kept, cumulative pruned weight 8.415e-03 [86s]
+   depth 20: 614353 nodes kept, cumulative pruned weight 1.034e-02 [87s]
+== validation: reproduce H_18(1) = 0.410453 from the depth-d layers ==
+   d= 1, m=17: 0.410453  (deficit 3.02e-10; pruned weight 3.73e-09)
+   d= 2, m=16: 0.410453  (deficit 5.37e-08; pruned weight 8.75e-08)
+   d= 5, m=13: 0.410448  (deficit 5.48e-06; pruned weight 5.30e-06)
+   d=10, m= 8: 0.410208  (deficit 2.45e-04; pruned weight 2.47e-04)
+   d=15, m= 3: 0.408107  (deficit 2.35e-03; pruned weight 2.35e-03)
+   d=18, m= 0: 0.404444  (deficit 6.01e-03; pruned weight 6.01e-03)
+== H_n(1) beyond the computed levels ==
+   n=19: H_n(1) = 0.39655 (via d=1; via d=2: 0.39655); n^(1/6) H_n = 0.6478; ratio 0.9661; pruned weight <= 3.7e-09
+   n=20: H_n(1) = 0.38661 (via d=2; via d=3: 0.38661); n^(1/6) H_n = 0.6370; ratio 0.9749; pruned weight <= 8.8e-08
+   n=21: H_n(1) = 0.37690 (via d=3; via d=4: 0.37689); n^(1/6) H_n = 0.6260; ratio 0.9749; pruned weight <= 3.9e-07
+   n=22: H_n(1) = 0.36970 (via d=4; via d=5: 0.36970); n^(1/6) H_n = 0.6189; ratio 0.9809; pruned weight <= 2.0e-06
+   n=23: H_n(1) = 0.36999 (via d=5; via d=6: 0.36998); n^(1/6) H_n = 0.6239; ratio 1.0008; pruned weight <= 5.3e-06
+   n=24: H_n(1) = 0.37612 (via d=6; via d=7: 0.37610); n^(1/6) H_n = 0.6388; ratio 1.0166; pruned weight <= 1.2e-05
+   n=25: H_n(1) = 0.37251 (via d=7; via d=8: 0.37248); n^(1/6) H_n = 0.6370; ratio 0.9904; pruned weight <= 3.4e-05
+   n=26: H_n(1) = 0.36554 (via d=8; via d=9: 0.36546); n^(1/6) H_n = 0.6292; ratio 0.9813; pruned weight <= 6.3e-05
+   n=27: H_n(1) = 0.36323 (via d=9; via d=10: 0.36314); n^(1/6) H_n = 0.6291; ratio 0.9937; pruned weight <= 1.5e-04
+   n=28: H_n(1) = 0.36606 (via d=10; via d=11: 0.36593); n^(1/6) H_n = 0.6379; ratio 1.0078; pruned weight <= 2.5e-04
+   n=29: H_n(1) = 0.36691 (via d=11; via d=12: 0.36659); n^(1/6) H_n = 0.6431; ratio 1.0023; pruned weight <= 3.7e-04
+   n=30: H_n(1) = 0.37335 (via d=12; via d=13: 0.37304); n^(1/6) H_n = 0.6581; ratio 1.0176; pruned weight <= 6.9e-04
+   n=31: H_n(1) = 0.38409 (via d=13; via d=14: 0.38339); n^(1/6) H_n = 0.6808; ratio 1.0288; pruned weight <= 1.0e-03
+   n=32: H_n(1) = 0.39076 (via d=14; via d=15: 0.39013); n^(1/6) H_n = 0.6963; ratio 1.0174; pruned weight <= 1.7e-03
+   n=33: H_n(1) = 0.40395 (via d=15; via d=16: 0.40258); n^(1/6) H_n = 0.7235; ratio 1.0337; pruned weight <= 2.3e-03
+   n=34: H_n(1) = 0.41079 (via d=16; via d=17: 0.40964); n^(1/6) H_n = 0.7394; ratio 1.0169; pruned weight <= 3.7e-03
+   n=35: H_n(1) = 0.41126 (via d=17; via d=18: 0.41009); n^(1/6) H_n = 0.7438; ratio 1.0011; pruned weight <= 4.9e-03
+   n=36: H_n(1) = 0.41622 (via d=18; via d=19: 0.41380); n^(1/6) H_n = 0.7563; ratio 1.0121; pruned weight <= 6.0e-03
+   n=37: H_n(1) = 0.42589 (via d=19; via d=20: 0.42396); n^(1/6) H_n = 0.7774; ratio 1.0232; pruned weight <= 8.4e-03
+   n=38: H_n(1) = 0.44510 (via d=20; via d=21: nan); n^(1/6) H_n = 0.8161; ratio 1.0451; pruned weight <= 1.0e-02
+== class split (mod 3) of the truncated layer weights of the tree of 1 ==
+   d= 1: H_d = 1.00000 (exact 1.00000); shares (0,1,2) = (0.048, 0.762, 0.190); H^(1) + 2H^(2) = 1.14286 = next layer's mass
+   d= 2: H_d = 1.14286 (exact 1.14286); shares (0,1,2) = (0.284, 0.563, 0.152); H^(1) + 2H^(2) = 0.99207 = next layer's mass
+   d= 3: H_d = 0.99207 (exact 0.99207); shares (0,1,2) = (0.281, 0.503, 0.216); H^(1) + 2H^(2) = 0.92763 = next layer's mass
+   d= 4: H_d = 0.92763 (exact 0.92763); shares (0,1,2) = (0.270, 0.420, 0.310); H^(1) + 2H^(2) = 0.96430 = next layer's mass
+   d= 5: H_d = 0.96430 (exact 0.96430); shares (0,1,2) = (0.277, 0.456, 0.268); H^(1) + 2H^(2) = 0.95541 = next layer's mass
+   d= 6: H_d = 0.95541 (exact 0.95542); shares (0,1,2) = (0.331, 0.438, 0.231); H^(1) + 2H^(2) = 0.86035 = next layer's mass
+   d= 7: H_d = 0.86033 (exact 0.86036); shares (0,1,2) = (0.325, 0.451, 0.225); H^(1) + 2H^(2) = 0.77454 = next layer's mass
+   d= 8: H_d = 0.77451 (exact 0.77458); shares (0,1,2) = (0.334, 0.432, 0.234); H^(1) + 2H^(2) = 0.69669 = next layer's mass
+   d= 9: H_d = 0.69661 (exact 0.69675); shares (0,1,2) = (0.332, 0.421, 0.247); H^(1) + 2H^(2) = 0.63731 = next layer's mass
+   d=10: H_d = 0.63721 (exact 0.63746); shares (0,1,2) = (0.338, 0.396, 0.266); H^(1) + 2H^(2) = 0.59117 = next layer's mass
+   d=11: H_d = 0.59105 (exact 0.59142); shares (0,1,2) = (0.354, 0.383, 0.263); H^(1) + 2H^(2) = 0.53699 = next layer's mass
+   d=12: H_d = 0.53668 (exact 0.53737); shares (0,1,2) = (0.351, 0.367, 0.282); H^(1) + 2H^(2) = 0.49946 = next layer's mass
+   d=13: H_d = 0.49915 (exact 0.50015); shares (0,1,2) = (0.349, 0.357, 0.295); H^(1) + 2H^(2) = 0.47224 = next layer's mass
+   d=14: H_d = 0.47153 (exact 0.47324); shares (0,1,2) = (0.340, 0.350, 0.310); H^(1) + 2H^(2) = 0.45715 = next layer's mass
+   d=15: H_d = 0.45651 (exact 0.45886); shares (0,1,2) = (0.348, 0.356, 0.296); H^(1) + 2H^(2) = 0.43282 = next layer's mass
+   d=16: H_d = 0.43145 (exact 0.43516); shares (0,1,2) = (0.342, 0.350, 0.308); H^(1) + 2H^(2) = 0.41708 = next layer's mass
+   d=17: H_d = 0.41594 (exact 0.42079); shares (0,1,2) = (0.341, 0.343, 0.316); H^(1) + 2H^(2) = 0.40560 = next layer's mass
+   d=18: H_d = 0.40444 (exact 0.41045); shares (0,1,2) = (0.345, 0.345, 0.310); H^(1) + 2H^(2) = 0.39054 = next layer's mass
+   d=19: H_d = 0.38813 (exact nan); shares (0,1,2) = (0.342, 0.341, 0.317); H^(1) + 2H^(2) = 0.37819 = next layer's mass
+   d=20: H_d = 0.37627 (exact nan); shares (0,1,2) = (0.339, 0.347, 0.314); H^(1) + 2H^(2) = 0.36655 = next layer's mass
+DONE

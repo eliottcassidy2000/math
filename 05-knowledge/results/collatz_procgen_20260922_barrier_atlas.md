@@ -220,9 +220,12 @@ there). CITED, not replayed by us.
   lower density of `{x : tau(x) <= C ln x}` for any `C` forces
   `limsup_n n^(1/6) 3^n mu_n(1 mod 3^n) > 0`. The exact sequence `H_n(1)
   = 3^n mu_n(1)` is `1, 8/7, 1376/1387, 0.928, ..., 0.410` (`n = 18`),
-  falling about `3%` per level for eleven levels, `n^(1/6) H_n = 0.66` at
-  `n = 18`. OPEN whether it stays positive; the cheapest confrontation with
-  a positive-density claim available anywhere.
+  falling about `3%` per level from level 8 to its minimum `0.370` at `n =
+  22`, then rising to `0.445` at `n = 38` (depth decomposition `H_{18+d} =
+  sum_{T_d(1)} W H_18(y)` with the level-18 law; pruning loss `<= 10^(-2)`);
+  `n^(1/6) H_n = 0.82` at `n = 38`. No decay through `n = 38`; the limit is
+  OPEN; the cheapest confrontation with a positive-density claim available
+  anywhere, passed so far.
 * **A control on the reference density, not a failure mode:** the atoms of
   the 3-adic Syracuse law are the negative cycles (`rho_n(-1) = 0.975
   (3/2)^n`, exact spike profile on the forward closure of `-1`), so the
