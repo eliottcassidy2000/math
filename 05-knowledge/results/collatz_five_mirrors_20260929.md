@@ -298,10 +298,18 @@ from tight (`0.74` against `0.25` at `m = 2`).
 `0.044`), `A = 16: 0.0144` (mass `0.076`), `A = 13: 0.0095`, `A = 15:
 0.0072`, `A = 17: 0.0044`, then `A = 12, 11, 19, 18, 10` below `0.004`;
 `sum_A |.| = 0.0658`, coherent fraction `0.58`. By last valuation: `a = 1:
-0.0225`, `a = 2: 0.0120`, `a = 3: 0.0051`, `a = 4: 0.0019`. So the
-resonance is carried by the words of total cost `A ≈ 1.2h–1.7h` (mean
-`2h`) with small last valuations: exponentially rare (`P(A ≈ 1.35h) ≈
-e^(-0.16 h)`) but phase-coherent. This is the mechanism behind the slow
+0.0225`, `a = 2: 0.0120`, `a = 3: 0.0051`, `a = 4: 0.0019`. At `h = 14`
+(`t = 2^17`, `0.0191`; `collatz_five_mirrors_costsplit14_20260929.out`):
+`A = 21: 0.0083`, `A = 19: 0.0062`, `A = 20: 0.0044`, `A = 22: 0.0043`, `A
+= 23: 0.0034`, coherent fraction `0.56`, `a = 1: 0.0110`, `a = 2: 0.0054`,
+`a = 3: 0.0023`. The contribution-weighted mean of `A/h` is `1.49` at `h
+= 10` and `1.48` at `h = 14`, against the mass-weighted mean `2.00`. So the
+resonance is carried by a fixed family, the words of total cost `A ≈ 1.48
+h` with small last valuations: exponentially rare (the rate function of the
+cost, `I(α) = α H(1/α) - α ln 2` in nats for `A = α h`, `H` the entropy,
+gives `I(1.48) = -0.093`, i.e. mass `e^(-0.093 h)`, ratio `0.91` per
+level) but phase-coherent; the observed sup-norm ratio `0.87` is this rate
+times a coherence loss of about `0.96` per level. This is the mechanism behind the slow
 sup-norm decay and the reason it must be renewal-theoretic (Tao's
 Fourier–renewal method, Mazur's §8.1 "renewal bounds"): no single step has
 a gap (section 4), and the obstruction is a large-deviation family of
