@@ -1,0 +1,9 @@
+h=14: total mass 0.999998 (cost truncation at A <= 62); P(A) mean = 28.000
+   resonant t = 2^17 mod 3^h = 131072: |mu_hat| = 0.01913; generic t = 7: 0.00017; max over units 0.01913
+   sum over A of contributions = 0.01913 (check)
+   largest |contribution| by total cost A: A=21: 0.0083 (mass 0.0370, phase +0.45), A=19: 0.0062 (mass 0.0163, phase -1.02), A=20: 0.0044 (mass 0.0259, phase -0.97), A=22: 0.0043 (mass 0.0485, phase -0.85), A=23: 0.0034 (mass 0.0593, phase +1.66), A=18: 0.0029 (mass 0.0091, phase -1.53), A=24: 0.0012 (mass 0.0682, phase +0.98), A=17: 0.0010 (mass 0.0043, phase -1.23), A=25: 0.0010 (mass 0.0744, phase +1.64), A=16: 0.0005 (mass 0.0016, phase -0.95), A=26: 0.0003 (mass 0.0775, phase -1.00), A=15: 0.0002 (mass 0.0004, phase -0.25)
+   sum_A |contribution| = 0.0341; coherent fraction |sum|/sum|.| = 0.560
+   |contribution|-weighted mean of A/h = 1.481; mass-weighted mean A/h = 2.000
+   by last valuation a: a=1: 0.0110@-0.66, a=2: 0.0054@-0.26, a=3: 0.0023@+0.06, a=4: 0.0009@+0.28, a=5: 0.0003@+0.36, a=6: 0.0001@+0.28, a=7: 0.0000@+0.04, a=8: 0.0000@-0.29, a=9: 0.0000@-0.54, a=10: 0.0000@-0.64, a=11: 0.0000@-0.32, a=12: 0.0000@+0.40
+   sum over a = 0.01913 (equals |mu_hat| up to the a > 39 tail)
+DONE

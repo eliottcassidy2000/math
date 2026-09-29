@@ -38,8 +38,9 @@ Scripts and outputs:
 14, Gauss sums, collisions, reciprocity);
 `collatz_five_mirrors_fourier_deep_20260929.py` → `..._fourier_deep_...out`
 (profile to level 17; `8 GB`, one minute);
-`collatz_five_mirrors_costsplit_20260929.py` → `..._costsplit_...out` (the
-resonant coefficient decomposed by total cost and by last valuation).
+`collatz_five_mirrors_costsplit_20260929.py` → `..._costsplit_...out` and
+`..._costsplit14_...out` (the resonant coefficient decomposed by total
+cost and by last valuation at levels 10 and 14).
 
 ---
 
@@ -79,9 +80,13 @@ resonant coefficient decomposed by total cost and by last valuation).
    the words of total cost `A = 12..17` (`60%` of `|.|` coherent), far below
    the typical cost `2h = 20`, and by the last valuations `1, 2, 3`
    (`0.0225, 0.0120, 0.0051`): the low-cost words, exponentially rare but
-   phase-coherent, are the obstruction to fast sup-norm mixing; the rate
-   `0.87` is a large-deviation rate of the cost distribution against the
-   coherence loss.
+   phase-coherent, are the obstruction to fast sup-norm mixing. At `h = 14`
+   the same decomposition gives the same picture (`A = 19..23`, coherent
+   fraction `0.56`, last valuation `1` carrying `57%`), and the
+   contribution-weighted cost ratio is stable, `A/h = 1.49` at `h = 10`,
+   `1.48` at `h = 14`: the resonance is a fixed large-deviation family,
+   whose mass rate at `A/h = 1.48` is `e^(-0.093 h)` (ratio `0.91` per
+   level); the observed `0.87` is that rate times the coherence loss.
 4. **One-step geometric Gauss sums have no uniform gap (Proposition 3,
    PROVED).** `G_j(t) = c_j sum_r 2^(-r) e(t 2^(-r)/3^j)` satisfies `sup_t
    |G_j(t)| -> 1` (`0.577, 0.582, 0.789, 0.887, 0.944, 0.971, 0.986, 0.994,
@@ -438,6 +443,7 @@ one more way the negative cycles are special objects of the 3-adic law
 python 04-computation/experiments/collatz_five_mirrors_20260929.py              > 05-knowledge/results/collatz_five_mirrors_20260929.out
 python 04-computation/experiments/collatz_five_mirrors_fourier_deep_20260929.py 17 > 05-knowledge/results/collatz_five_mirrors_fourier_deep_20260929.out   # 8 GB, 1 min
 python 04-computation/experiments/collatz_five_mirrors_costsplit_20260929.py 10 > 05-knowledge/results/collatz_five_mirrors_costsplit_20260929.out
+python 04-computation/experiments/collatz_five_mirrors_costsplit_20260929.py 14 > 05-knowledge/results/collatz_five_mirrors_costsplit14_20260929.out   # 5 GB
 ```
 
 | item | status |

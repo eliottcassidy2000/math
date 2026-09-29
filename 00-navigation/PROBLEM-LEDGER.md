@@ -604,6 +604,19 @@ all heights (THM-1289, published), δ ineffective.
   not bounded, author/version, asymptotics relabelled; MISTAKES; note s11).
   Note: `mazur_positive_density_20260928.md`.
 
+  **Five papers as structural mirrors; the Fourier profile of the 3-adic Syracuse law (opus, 2026-09-29, S20):** the
+  owner's five arXiv papers (Viaclovsky S^6, Narode reciprocal polynomials, Merca two-block odd partitions, Dalfo-Fiol-Reyes
+  three-quarters circulants, Lyu compressibility) read for the shape of their hard direction. PROVED: the primitive Fourier
+  profile M(h) = max_u |mu_hat_h(u)| of Tao's Syracuse random variable is level-independent, and Mazur's (2.3) forces
+  M(h) <= C_A (h-1)^-A for every A; FINITE-EXACT to h = 17: 0.577 ... 0.0125, maxima at 2^(h+3), 2^(h+4), ratio rising
+  0.65 -> 0.87 and levelling (OBSERVED: geometric ~0.87, no fixed power law); Fourier mass 0.466 per conductor level =
+  (3/2) x the second-moment slope (Parseval); typical |mu_hat|^2 3^h = 0.70; the resonance carried by words of cost
+  ~1.48 h (stable at h = 10, 14) with last valuations 1-3, mass rate e^(-0.093 h). PROVED: no uniform one-step gap of the
+  geometric Gauss sums (sup -> 1 at t = 2^(j+1); 2-adic reading exact); same-length spread lemma (A + A' <= (n-d) log_2 3 + 1
+  => distinct classes; actual collisions need 29-63); carry reciprocity under word reversal (inclusive-prefix carry), reversal
+  an involution on rational cycles that sends the seven-cycle of -17 to -13801/139. No barrier typed. Audit pending at
+  entry time (note s8). Note: `collatz_five_mirrors_20260929.md`.
+
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`
 (ranks HN > reconstruction > Kakeya/Falconer > sunflower > Caccetta–Häggkvist > … ).
 

@@ -3,6 +3,7 @@ h=10: total mass 0.999997 (cost truncation at A <= 50); P(A) mean = 20.000
    sum over A of contributions = 0.03828 (check)
    largest |contribution| by total cost A: A=14: 0.0168 (mass 0.0436, phase -0.97), A=16: 0.0144 (mass 0.0764, phase +0.70), A=13: 0.0095 (mass 0.0269, phase -1.49), A=15: 0.0072 (mass 0.0611, phase -1.07), A=17: 0.0044 (mass 0.0873, phase -0.73), A=12: 0.0036 (mass 0.0134, phase -1.06), A=11: 0.0023 (mass 0.0049, phase -0.55), A=19: 0.0019 (mass 0.0927, phase +2.65), A=18: 0.0017 (mass 0.0927, phase +2.32), A=10: 0.0010 (mass 0.0010, phase +0.44), A=20: 0.0008 (mass 0.0881, phase +2.95), A=22: 0.0007 (mass 0.0701, phase +1.49)
    sum_A |contribution| = 0.0658; coherent fraction |sum|/sum|.| = 0.581
+   |contribution|-weighted mean of A/h = 1.493; mass-weighted mean A/h = 2.000
    by last valuation a: a=1: 0.0225@-1.04, a=2: 0.0120@-0.49, a=3: 0.0051@-0.03, a=4: 0.0019@+0.32, a=5: 0.0007@+0.56, a=6: 0.0002@+0.71, a=7: 0.0001@+0.64, a=8: 0.0000@+0.06, a=9: 0.0000@-0.53, a=10: 0.0000@-0.78, a=11: 0.0000@-2.09, a=12: 0.0000@+1.71
    sum over a = 0.03828 (equals |mu_hat| up to the a > 39 tail)
 DONE

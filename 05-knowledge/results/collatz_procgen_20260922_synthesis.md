@@ -1565,6 +1565,48 @@ atlas §8.
   version 2.1; asymptotics relabelled OBSERVED; MISTAKES entry). Record in
   the note's section 11.
 
+## 2ae. Wave 32 (2026-09-29, opus session `collatz-poset-dag-20260927`, S20): five papers as structural mirrors; the Fourier profile of the 3-adic Syracuse law
+
+Owner's directive: merge five arXiv papers of 2026-09-26/27 (Viaclovsky
+`S^6`; Narode reciprocal polynomials; Merca two-block odd partitions;
+Dalfó–Fiol–Reyes three-quarters circulants; Lyu compressibility) into the
+exploration and extend past work toward proofs. Note
+[`collatz_five_mirrors_20260929.md`](collatz_five_mirrors_20260929.md).
+
+* **The primitive Fourier profile `M(h)` of Tao's Syracuse random variable
+  (PROVED structure, FINITE-EXACT to `h = 17`).** `mu_hat_n(3^(n-h) u) =
+  mu_hat_h(u)` (consistency), so `M(h) = max_u |mu_hat_h(u)|` is intrinsic;
+  Mazur's (2.3) forces `M(h) <= C_A (h-1)^(-A)` for every `A` (PROVED).
+  Measured: `0.577, 0.378, 0.252, 0.177, 0.129, 0.096, 0.076, 0.061, 0.048,
+  0.038, 0.032, 0.026, 0.022, 0.019, 0.016, 0.014, 0.0125`, maxima at the
+  powers of two `2^(h+3)`, `2^(h+4)`; the ratio rises from `0.65` to `0.87`
+  and levels over `14..17`; a fixed power law is excluded by the
+  steepening, a geometric rate about `0.87` fits `11..17` (OBSERVED). The
+  Fourier mass per conductor level is `0.466` at every level (`(3/2)` times
+  the S19 second-moment slope, PROVED by Parseval); the typical coefficient
+  has `|mu_hat|^2 3^h = 0.70` (square-root cancellation); the resonance at
+  `2^(h+3)` is carried by words of total cost about `1.48 h` (stable at `h
+  = 10` and `14`) with last valuations `1–3`, a large-deviation family of
+  mass rate `e^(-0.093 h)` (ratio `0.91`) whose coherence loss gives the
+  `0.87`.
+* **No one-step gap (PROVED):** the geometric Gauss sums `G_j(t) = c_j
+  sum_r 2^(-r) e(t 2^(-r)/3^j)` have `sup_t |G_j| -> 1` at `t = 2^(j+1)`
+  (mean `0.5430`); their exact 2-adic reading `e(t m_r/2^r + t/(2^r 3^j))`,
+  `m_r = -3^(-j) mod 2^r` (the Merca/Narode other-prime evaluation).
+* **Same-length spread lemma (PROVED):** words of the same length `d` with
+  `A + A' <= (n-d) log_2 3 + 1` land on distinct classes mod `3^n`; actual
+  first collisions in the tree of `1` need cost sums `29–63` (`n = 4..12`):
+  no tiling obstruction, unlike the three-quarters digraphs.
+* **Carry reciprocity (PROVED):** `C_(rev w)(u,v) = u^(d-1) v^A C'_w(1/u,
+  1/v)` (inclusive-prefix carry); reversal is an involution on rational
+  cycles preserving `(k, A)`; it fixes `-1` and `{-5,-7}` and sends the
+  seven-cycle of `-17` to the non-integer `-13801/139`.
+* Viaclovsky (contracting affine lift, monodromy relation, primitivity)
+  and Lyu (local cliques do not bound compressibility; only forests do) are
+  shape-only mirrors of the affine IFS / cycle equation and of the atlas's
+  UNIFORM/DIM lesson.
+* Audit: pending at the time of writing (section 8 of the note).
+
 ## 3. The snippet, dispatched
 
 | pasted claim | verdict | where |

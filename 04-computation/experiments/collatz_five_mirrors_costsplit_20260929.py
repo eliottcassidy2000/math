@@ -25,12 +25,8 @@ if __name__ == "__main__":
         base = (3 * y + 1) % m
         for a in range(1, AMAX + 1):
             inv = pow(2, -a, m)
-            z = (inv * base) % m
-            w = 2.0 ** (-a)
-            # new[z, A + a] += w * joint[y, A]
-            np.add.at(new[:, a:], (z, slice(None)), 0)  # no-op to keep shapes explicit
-            shifted = w * joint[:, : AMAX + 1 - a]
-            np.add.at(new, (z[:, None], np.arange(a, AMAX + 1)[None, :]), shifted)
+            z = (inv * base) % m  # injective in y for fixed a, so a plain fancy-indexed add is exact
+            new[z, a:] += (2.0 ** (-a)) * joint[:, : AMAX + 1 - a]
         joint = new
     mu = joint.sum(axis=1)
     print(f"h={h}: total mass {mu.sum():.6f} (cost truncation at A <= {AMAX}); P(A) mean = {(joint.sum(axis=0) * np.arange(AMAX + 1)).sum():.3f}")
@@ -58,6 +54,9 @@ if __name__ == "__main__":
         inv = pow(2, -a, mod)
         z = (inv * base) % mod
         parts.append((a, (2.0 ** (-a)) * np.exp(-2j * math.pi * t_star * z / mod) @ mu_prev))
+    # resonant cost ratio: |contribution|-weighted mean of A/h
+    wA = np.abs(contrib)
+    print(f"   |contribution|-weighted mean of A/h = {(wA * np.arange(AMAX + 1)).sum() / wA.sum() / h:.3f}; mass-weighted mean A/h = {(joint.sum(axis=0) * np.arange(AMAX + 1)).sum() / h:.3f}")
     print("   by last valuation a: " + ", ".join(f"a={a}: {abs(c):.4f}@{np.angle(c):+.2f}" for a, c in parts[:12]))
     print(f"   sum over a = {abs(sum(c for a, c in parts)):.5f} (equals |mu_hat| up to the a > 39 tail)")
     print("DONE")
