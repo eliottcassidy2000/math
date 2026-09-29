@@ -38,7 +38,7 @@ OBSERVED (the maxima sit at the powers of two `±2^s`, `s - h` growing
 slowly; the decay ratio rises from `0.65` to `0.89` over eighteen levels;
 the Fourier mass per conductor level is `0.46–0.47`; on the powers of two
 the coefficient is `0.44–0.48` times the no-descent probability over the
-levels `20..120`) + CONJECTURAL (`M(h) ≍ P_h`: the maximal primitive coefficient decays at the no-descent rate `3^(h*-1)`, a necessary condition for (2.3), not the mixing estimate itself) + DIRECTION. S22 (section 2d): PROVED — Lemma G (a quantitative one-step gap on half the units, with the resonant set named), the exponent-walk identity, Lemma R' (the renewal bound `|c_J| <= mass_h(J) Ñ_(J-1)`), the Chernoff mass law `mass_h(J) <= e^(-hI) e^(θ*δ) (log_2 3 - 1)^(-J)`; CONDITIONAL — Theorem C: if the weighted negative-power norm `Ñ_n` decays at any rate below `log_2 3 - 1 = 0.585`, the resonant window decays at the rate `3^(h*-1)` with a constant prefactor; VERIFIED — `Ñ_n` at the Parseval scale to level 80 (rate `0.574`), the bound term by term, `J_eff ≈ 1.6 √h`; the hypothesis H is CONJECTURAL and (T2) is reduced to one constant. No Collatz proof step. Audited SOUND WITH CORRECTIONS (eighteen applied; section 8); section 2b, the `3x+k` reversal survey and Proposition 6 were added after the audit's snapshot, and section 2b was then audited separately (fifteen corrections applied; section 8).**
+levels `20..120`) + CONJECTURAL (`M(h) ≍ P_h`: the maximal primitive coefficient decays at the no-descent rate `3^(h*-1)`, a necessary condition for (2.3), not the mixing estimate itself) + DIRECTION. S22 (section 2d): PROVED — Lemma G (a quantitative one-step gap on half the units, with the resonant set named), the exponent-walk identity, Lemma R' (the renewal bound `|c_J| <= mass_h(J) Ñ_(J-1)`), the Chernoff mass law `mass_h(J) <= e^(-hI) e^(θ*δ) (log_2 3 - 1)^(-J)`; CONDITIONAL — Theorem C: if the weighted negative-power norm `Ñ_n` decays at any rate below `log_2 3 - 1 = 0.585`, the resonant window decays at the rate `3^(h*-1)` with a constant prefactor; VERIFIED — `Ñ_n` below the critical rate to level 320 (rate `0.568–0.574`, constant `1.58`), at the Parseval scale up to structured ridges (the multiplier-family coincidences `u · 2^Q ≡ ∓1 mod 3^(n_0)`, OBSERVED, seeds exact), the bound term by term, `J_eff ≈ 1.6 √h`; the hypothesis H is CONJECTURAL and (T2) is reduced to one constant. No Collatz proof step. Audited SOUND WITH CORRECTIONS (eighteen applied; section 8); section 2b, the `3x+k` reversal survey and Proposition 6 were added after the audit's snapshot, and section 2b was then audited separately (fifteen corrections applied; section 8).**
 
 Scripts and outputs:
 `04-computation/experiments/collatz_five_mirrors_20260929.py` →
@@ -52,7 +52,7 @@ cost and by last valuation at levels 10 and 14);
 `collatz_five_mirrors_fourier_deep_20260929.py 18` → `..._fourier_deep18_...out`
 (the profile to level 18); `collatz_five_mirrors_reversal_20260929.py` →
 `..._reversal_...out` (reversal on the integer cycles of `3x+k`);
-`collatz_five_mirrors_tracesum_20260929.py` → `..._tracesum_...out` (the reversal-invariant trace, Proposition 6); S22: `collatz_five_mirrors_gap_20260929.py` → `..._gap_...out` (Lemma G over all units to `n = 9`, the Ramanujan average, the scrambled-level split), `collatz_five_mirrors_renewal_20260929.py` → `..._renewal_...out` (the exponent profile with negative exponents, the negative family, the `J`/`F` decompositions, the Gauss-sum regimes), `collatz_five_mirrors_renewal_bound_20260929.py` → `..._renewal_bound_...out` (Lemma R' term by term, `Ñ_n`, the bound to `h = 300`), `collatz_five_mirrors_renewal_cert_20260929.py` → `..._renewal_cert_...out` (the `a <= 60` certification, `J_eff`, the mass law, the bound to `h = 2000`).
+`collatz_five_mirrors_tracesum_20260929.py` → `..._tracesum_...out` (the reversal-invariant trace, Proposition 6); S22: `collatz_five_mirrors_gap_20260929.py` → `..._gap_...out` (Lemma G over all units to `n = 9`, the Ramanujan average, the scrambled-level split), `collatz_five_mirrors_renewal_20260929.py` → `..._renewal_...out` (the exponent profile with negative exponents, the negative family, the `J`/`F` decompositions, the Gauss-sum regimes), `collatz_five_mirrors_renewal_bound_20260929.py` → `..._renewal_bound_...out` (Lemma R' term by term, `Ñ_n`, the bound to `h = 300`), `collatz_five_mirrors_renewal_cert_20260929.py` → `..._renewal_cert_...out` (the `a <= 60` certification, `J_eff`, the mass law, the bound to `h = 2000`); `collatz_five_mirrors_negfamily160_20260929.py` → `..._negfamily160_...out` (`Ñ_n` to `160`, the bump diagnostic); `collatz_five_mirrors_ridges_20260929.py` → `..._ridges_...out` (the ridge surface to `200` in a `600`-window); `collatz_five_mirrors_ridge_track_20260929.py` → `..._ridge_track_...out` (the dominant ridge to `320`, Gauss sums and digit runs, `Ñ_n` to `320`); `collatz_five_mirrors_gamma_20260929.py` → `..._gamma_...out` (the `J`-terms at the scale `h^(-3/2) e^(-hI)` to `h = 200`).
 
 ---
 
@@ -586,11 +586,7 @@ at `s = hm - δ`. Consequently (Theorem C, CONDITIONAL): if
 e^(θ*δ) e^(-hI)` for every `h` and every `s <= hm` — the resonant window
 of the powers of two decays at least at the no-descent rate `3^(h*-1)`
 with a *constant* prefactor, doubly exponentially better than the
-`C* h^(-6409)` of the Fourier–renewal method. The hypothesis is VERIFIED to
-level `80`: the negative-power coefficients sit at the Parseval scale,
-`Ñ_n 3^(n/2) ∈ [0.12, 1.56]` for `n <= 80` (`<= 1.29` for `n >= 20`), rate
-`0.574` per level over `20..80`, against the critical `0.585`; the margin is
-`1.3%`, since `3^(-1/2)/(m-1) = 0.98699`. Term by term the inequality
+`C* h^(-6409)` of the Fourier–renewal method. The hypothesis is VERIFIED to level `320`: the negative-power coefficients sit at the Parseval scale up to structured ridges (below), `Ñ_n 3^(n/2) ∈ [0.12, 1.56]` for `n <= 80` (`<= 1.29` for `n >= 20`), rate `0.574` per level over `20..80` and `0.568–0.574` over the windows to `320`, against the critical `0.585`; the margin is `1.3%`, since `3^(-1/2)/(m-1) = 0.98699`, and the ridges are the reason it cannot be called safe. Term by term the inequality
 `|c_J| <= mass_h(J) Ñ_(J-1)` holds with worst ratio `0.84` (`h = 40`) and
 `0.81` (`h = 80`), and the bound `Σ_J mass_h(J) Ñ_(J-1)` equals `0.18, 0.14,
 0.11 e^(-hI)` at `h = 40, 100, 300` (`0.08 e^(-hI)` at `h = 2000` under the
@@ -662,10 +658,7 @@ over `k ∈ [-60, nm + 60]` at `n = 20, 40, 60, 80` (renewal output, C1):
 the maximum sits at `k = nm - 5.7, -6.4, -6.1, -6.8`; on the *ceiling side*
 `k ∈ [-60, -1]` the coefficients sit at the Parseval scale `3^(-n/2)` (rms
 `1.3·10^(-10)`–`2.9·10^(-10)` against `3^(-20) = 2.9·10^(-10)` at `n = 40`;
-`1.7`–`2.7·10^(-20)` against `8.2·10^(-20)` at `n = 80`) — the negative
-family is closed under the recursion (exponents only decrease), every
-remaining level is scrambled, and the coefficients are generic; on the
-*floor side* `k = nm + d` they are much larger, `≈ 2^(-d) M(n)` (`7.7·10^(-6),
+`1.7`–`2.7·10^(-20)` against `8.2·10^(-20)` at `n = 80`) — the negative family is closed under the recursion (exponents only decrease) and every remaining level is scrambled, so away from the *ridges* described below the coefficients are generic; on the *floor side* `k = nm + d` they are much larger, `≈ 2^(-d) M(n)` (`7.7·10^(-6),
 2.5·10^(-6), ..., 4.6·10^(-9)` for `d = 1..9` at `n = 80`; `4·10^(-12)`
 at `d ∈ [21, 60]` against `3^(-40) = 8·10^(-20)`), because a word can leave
 the floor zone in one large first step of cost `2^(-d)` and then run the
@@ -727,9 +720,7 @@ near the peak at `h = 80`, steepening further out: `2.5·10^(-13)` rms on
 data say (VERIFIED, not proved): `Ñ_n 3^(n/2) = 1.00, 0.93, 0.92, 0.95,
 0.90, 0.82, 0.56, 0.56, 0.45, 0.28, 0.48, 0.67` for `n = 1..12`, then in
 `[0.12, 1.56]` to `n = 80` (max `1.56` at `n = 16`, `1.29` for `n >= 20`);
-least-squares rate `0.5736` per level over `20..80` (`0.557` over `40..80`),
-below `3^(-1/2) = 0.5774` and below the critical `0.585`; the sup over `m <=
-60` of the single coefficients has `N_n 3^(n/2) ∈ [0.77, 3.5]` for `n <= 80`.
+least-squares rate `0.5736` per level over `20..80` (`0.557` over `40..80`), below `3^(-1/2) = 0.5774` and below the critical `0.585`; the sup over `m <= 60` of the single coefficients has `N_n 3^(n/2) ∈ [0.77, 3.5]` for `n <= 80`. Extended to `n = 320` (`_negfamily160_`, `_ridge_track_` outputs): the rate of `Ñ_n` is `0.5678` over `20..320`, `0.5710` over `160..320`, `0.5744` over `200..320`, and `(log_2 3 - 1)^(-n) Ñ_n <= 1.58` over `20..320` (the maximum at `n = 130`), so H holds numerically with `C = 1.6`, `ρ = 0.585`, to level `320`; but `Ñ_n 3^(n/2)` is *not* uniformly of order one: it drops to `0.002–0.1` on most levels past `140` and spikes to `7.97` at `n = 128` (`N_n 3^(n/2) = 13.4` there, `3.6–13` over `n = 88..130`). The spikes are structured, not noise — the ridges of the next paragraph.
 The negative family was certified against the valuation truncation by an `a
 <= 60` rerun (`Ñ_n` to `1.3·10^(-11)` relative, single coefficients to
 `1.2·10^(-10)`, `n <= 80`), and the tail `m > 60` of `Ñ_n` is at most
@@ -742,6 +733,8 @@ float64 arithmetic only. The bound against the measured maxima
 0.148, 0.120, 0.105, 0.124, 0.110` at `h = 40, 60, 80, 100, 120, 150, 200,
 250, 300`; `M(h)/e^(-hI) = 0.0125 -> 0.0011` over the same levels, a
 prefactor `≈ h^(-1.2)` that the sup-based bound cannot see.
+
+**The ridges of the negative family (OBSERVED; mechanism identified, VERIFIED at the seeds).** In a window of `450–600` negative exponents followed to level `320` (`collatz_five_mirrors_ridges_20260929.py`, `_ridge_track_`), the surface `v_n(m) = 3^(n/2) |mu_hat_n(2^(-m))|` is a generic background of order one crossed by *ridges*: lines `m = m_0 - 1.3 (n - n_0)` along which `v` is `2–30`. The dominant one is born at `n = 11..15` at `m = 414..409` with `v = 3.1, 4.4, 6.1, 8.4, 12.2`, peaks at `29` (`n = 29`), is `8–25` to `n = 96`, `4–6` at `n = 115..125`, `1–2` at `n = 130..160`, `0.3–0.9` at `n = 165..300`, and reaches the small exponents (`m* = 43, 27, 18` at `n = 300, 310, 320`) with `v = 0.05–0.25`; its slope is `-1.33, -1.26, -1.16, -1.42, -1.24, -1.30` per level over the successive fifty-level stretches. Mechanism: along its birth the one-step Gauss sum is `|G_n(2^(-m*))| = 0.981, 0.992, 0.996, 0.994, 0.997` in the class (`t` odd, `ξ ≡ 3 mod 4`, `θ = 0.84..0.94`) and the 2-adic expansion of `3^(-n)` has a run of `11, 13, 14, 16, 17` equal digits starting at positions `413, 411, 410, 408, 407` (upper end fixed at `423`; the control position `m* + 40` has runs of `2–10` and `|G| = 0.37–0.95`). By the duality behind Lemma G this is the statement that the residue `2^(-423) mod 3^n` is the *small negative integer* `-55` for every `n <= 15`: `v_3(55 · 2^423 + 1) = 15` (`2^(-423) ≡ 3^n - 55 mod 3^n` for `n = 9..15`, `≡ 3^15 - 55 mod 3^16` at `n = 16`). So at the exponents `-423 + j` the negative family *is* the multiplier family `-55 · 2^j` of section 2b at the levels `n <= 15`, and the ridge is that family's resonance: the corridor for a multiplier `u` is narrower by `log_2 u` bits, so the shift `δ -> δ + log_2 u` in the mass law predicts an amplitude `≈ M(n) u^(θ*/ln 2) = M(n) u^(-0.438)`, i.e. `0.17 M(15)` for `u = 55` against the observed `12.2 · 3^(-15/2) = 0.20 M(15)`. Once the coincidence ends (the 3-adic digit of `2^(-423) + 55` at position `15` is non-zero) the ridge is a remnant carried along the walk: it decays at `0.5675` per level over `n = 34..300` (`v` from `25` to `0.3`), slightly *faster* than the Parseval rate. The other ridges are the same phenomenon with `u = 1` (the wrapped copies of the pure resonance: `2^(-480) ≡ 2^6 mod 3^6`, `2^(-154) ≡ 2^8 mod 3^5`, from the periods `L_6 = 486`, `L_5 = 162`; the latter continues as `2^(-154) ≡ 13 mod 3^n` for `n <= 7`, `v_3(13 · 2^154 - 1) = 7`, the family `13 · 2^j`) and with other small `u`. The spike of `Ñ_n` at `n = 128` is the level-`5` ridge arriving at `m = 1..10` (its path `m ≈ 155 - 1.3 (n - 5)`: `m* = 63, 48, 24, 11` at `n = 84, 96, 112, 124`) while the levels `112, 116, 120, 124, 128` have coherent small-exponent phases, since `3^(-n) ≡ 1 mod 2^(v_2(n)+2)` gives `v_2(n) + 2` equal leading digits (`9` at `n = 128`) and Lemma G's gap fails there. Reading: a ridge is born whenever `u · 2^Q ≡ ∓1 mod 3^(n_0)` for a small `u`, lives at the family's resonant amplitude `≈ 0.9465^n u^(-0.44)` for `n <= n_0` (growing against the Parseval scale by `1.64` per level), then decays as a remnant; since `v_3(u 2^Q ∓ 1) >= n_0` has frequency about `3^(-n_0)` over the pairs `(u, Q)`, the largest ridge that a window of `W` exponents and multipliers `u <= U` can show has `n_0 ≈ log_3(W U)` and amplitude `≈ (W U)^0.45` times the Parseval scale — polynomial, not exponential, which is why H can survive them: the prediction is `Ñ_n <= C n^(1/2) 3^(-n/2)` or so, and the observed maxima (`1.56` at `n = 16`, `3.5` at `n = 32`, `13.4` at `n = 128`, on the single coefficients) are consistent with a slow polynomial growth. Nothing here is proved; the mechanism is exact at the seeds and the amplitude law is checked at one point.
 
 **What the hypothesis is.** `Ñ_n` is the weighted `ℓ^1` norm of the vector
 `(mu_hat_n(2^(-m)))_(m>=1)`, which evolves by the closed linear maps
@@ -783,9 +776,7 @@ C3). So `M(h) ≈ e^(-hI) · h^(-1/2)` (local CLT) `· h^(-1)` (ballot) `· |Σ_
 γ_J|` with `γ_J` the `J`-terms per unit of that scale, i.e. `M ≍ h^(-3/2)
 e^(-hI) ≍ P_h` iff the series `Σ_J γ_J` converges to a non-zero limit: that
 limit is (T2) in its final form, one complex number. Its convergence is H;
-its non-vanishing is open, and nothing here bounds it below. The S21
-observation `M/P_h ∈ [0.44, 0.58]` is this constant read at finite `h`,
-still drifting because the `J`-window is still widening.
+its non-vanishing is open, and nothing here bounds it below. The S21 observation `M/P_h ∈ [0.44, 0.58]` is this constant read at finite `h`, still drifting because the `J`-window is still widening. Direct test (`collatz_five_mirrors_gamma_20260929.py`, `h = 40, 80, 120, 160, 200`): `P_h / (h^(-3/2) e^(-hI)) = 6.8, 8.1, 9.0, 9.2, 9.2` (the no-descent probability has exactly the `h^(-3/2)` prefactor, constant `≈ 9.2`); `|mu_hat_h(2^s*)|/P_h = 0.463, 0.462, 0.443, 0.462, 0.500`; `|mu_hat_h(2^s*)|/(h^(-3/2) e^(-hI)) = 3.16, 3.76, 3.97, 4.26, 4.60`, still growing slowly; the terms `γ_J(h) = c_J/(h^(-3/2) e^(-hI))` have arguments that settle from `h = 120` on (`J = 5`: `-0.86, -0.67, -0.47, -0.50, -0.54`; `J = 12`: `0.82, 1.04, 1.28, 1.28, 1.27`) and moduli that converge only for `J <= 5` (`J = 5`: `2.56, 2.43, 2.34, 2.28, 2.22`; `J = 4`: `1.63 -> 1.19`), while `J >= 7` keep growing (`J = 8`: `1.38, 2.19, 2.47, 2.61, 2.67`; `J = 17`: `0.015, 0.57, 1.80, 3.24, 4.53`) because the Gaussian window needs `h >> J^2`: the constant `Σ_J γ_J` is not computable from `h <= 200`, only its first terms are.
 
 **What changed for (T1) and (T2).** (T1) *ceiling part*: for every `J_0`,
 the words with at least `J_0` ceiling levels contribute at most `Σ_(J>=J_0)
@@ -804,8 +795,7 @@ Obligations: (1) prove H in any form with `ρ < 0.585` — the first genuinely
 new target, a single closed family, generic frequencies, the 2-adic digits
 of `3^(-n)`; (2) compute the limits `γ_J` (the top-part bridge sums converge
 as `h -> ∞` at fixed `J`) and the constant `Σ_J γ_J` to settle (T2)
-numerically; (3) extend `Ñ_n` past `n = 80` (the recursion with window
-`[-60, 0]` costs seconds per level) to watch the `1.3%` margin; (4) the
+numerically; (3) done to `n = 320` (rate `0.568–0.574`, constant `1.58`); next, the amplitude law `u^(-0.44)` of the multiplier families against the S20 data (`u <= 49`, levels `<= 60`), the ridge inventory as a function of `v_3(u 2^Q ∓ 1)`, and whether the polynomial bound on the ridges can be proved from the mass law of section 2b; (4) the
 floor part of (T1) as a smoothness statement for the law of the real angle.
 
 ## 3. The same-length spread lemma (the Moore mirror)
@@ -1027,6 +1017,10 @@ python 04-computation/experiments/collatz_five_mirrors_gap_20260929.py          
 python 04-computation/experiments/collatz_five_mirrors_renewal_20260929.py        > 05-knowledge/results/collatz_five_mirrors_renewal_20260929.out   # 1 min
 python 04-computation/experiments/collatz_five_mirrors_renewal_bound_20260929.py  > 05-knowledge/results/collatz_five_mirrors_renewal_bound_20260929.out   # 1 min
 python 04-computation/experiments/collatz_five_mirrors_renewal_cert_20260929.py   > 05-knowledge/results/collatz_five_mirrors_renewal_cert_20260929.out   # 1 min
+python 04-computation/experiments/collatz_five_mirrors_negfamily160_20260929.py 160 > 05-knowledge/results/collatz_five_mirrors_negfamily160_20260929.out   # 1 min
+python 04-computation/experiments/collatz_five_mirrors_ridges_20260929.py 200 600  > 05-knowledge/results/collatz_five_mirrors_ridges_20260929.out   # 1 min
+python 04-computation/experiments/collatz_five_mirrors_ridge_track_20260929.py 320 450 > 05-knowledge/results/collatz_five_mirrors_ridge_track_20260929.out   # 1 min
+python 04-computation/experiments/collatz_five_mirrors_gamma_20260929.py 40 80 120 160 200 > 05-knowledge/results/collatz_five_mirrors_gamma_20260929.out   # 4 min
 ```
 
 | item | status |
@@ -1045,7 +1039,9 @@ python 04-computation/experiments/collatz_five_mirrors_renewal_cert_20260929.py 
 | the exponent-walk identity; the real-phase identity for `A <= s`; the Ramanujan average `0` | PROVED (checked at `h = 6`, `n <= 7`) |
 | Lemma R' (`|c_J| <= mass_h(J) Ñ_(J-1)`) and the Chernoff mass law `mass_h(J) <= e^(-hI) e^(θ*δ) (log_2 3 - 1)^(-J)`, `e^(-I) = 3^(h*-1)` | PROVED; term by term VERIFIED at `h = 40, 80` (worst ratio `0.84`) |
 | Theorem C: H (`Ñ_n <= C ρ^n`, `ρ < 0.585`) ⟹ `|mu_hat_h(2^s)| <= C' e^(θ*δ) (3^(h*-1))^h` for all `h`, `s <= h log_2 3` | PROVED given H; H CONJECTURAL |
-| the negative family at the Parseval scale: `Ñ_n 3^(n/2) ∈ [0.12, 1.56]`, rate `0.574` over `20..80`; certified by `a <= 60` | VERIFIED |
+| the negative family: `Ñ_n 3^(n/2) ∈ [0.12, 1.56]` for `n <= 80`, rate `0.574` over `20..80`, certified by `a <= 60`; to `n = 320`: rate `0.568–0.574`, `(log_2 3 - 1)^(-n) Ñ_n <= 1.58`, a spike `7.97` at `n = 128` | VERIFIED |
+| the ridges of the negative family: lines `m = m_0 - 1.3 (n - n_0)` of amplitude `2–30` times the Parseval scale; the dominant one is the multiplier family `-55 · 2^j` (`v_3(55 · 2^423 + 1) = 15`), the others wrapped copies of the pure resonance (`u = 1`) and `13 · 2^j` (`v_3(13 · 2^154 - 1) = 7`); amplitude law `M(n) u^(-0.44)` at one point; remnants decay at `0.5675` per level; polynomial size heuristic | OBSERVED; the seeds VERIFIED (exact residues); the size heuristic CONJECTURAL |
+| `P_h = (9.2 ± 0.1) h^(-3/2) e^(-hI)` at `h = 120..200`; `|mu_hat_h(2^s*)|/P_h = 0.44–0.50` to `h = 200`; the `J`-terms' phases settle from `h = 120`, their moduli converge only for `J <= 5` | VERIFIED; the constant of (T2) not computable at these levels |
 | the bound `Σ_J mass_h(J) Ñ_(J-1) = 0.11–0.18 e^(-hI)` at `h = 40..300`, `M/bound = 0.07 -> 0.01`; `J_eff = 10, 14, 19 ≈ 1.6 √h`; `F = 0` words carry `99.6–100.4%`; per-mass weights `≈ 1/h` | VERIFIED; the readings DIRECTION |
 | the profile asymmetry: ceiling side `3^(-n/2)`, floor side `≈ 2^(-d) M(n)` | OBSERVED |
 | Fourier mass per level `0.462 -> 0.472`, typical `|mu_hat|^2 3^h = 0.70` | VERIFIED; the level-by-level identity with the second-moment increments PROVED (Parseval + Proposition 1) |

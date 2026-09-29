@@ -1,0 +1,151 @@
+(recursion to level 320, window [-450, 0], 21s)
+ridge path from (11, 414): n, m*, v = 3^(n/2)|m_n(-m*)|, |G_n(2^-m*)|, class (v_2 t, xi mod 4, theta), digit run (len@start) in [m*-4, m*+16]; control at m*+40: v, |G|, run
+   n= 11: m*=414 v=  3.10 |G|=0.981 class=(0,3,0.841) run=11@413 | control m=450: v= 1.73 |G|=0.939 run= 7
+   n= 12: m*=413 v=  4.40 |G|=0.992 class=(0,3,0.894) run=13@411 | control m=450: v= 1.59 |G|=0.950 run= 9
+   n= 13: m*=412 v=  6.11 |G|=0.996 class=(0,3,0.929) run=14@410 | control m=450: v= 1.41 |G|=0.953 run=10
+   n= 14: m*=410 v=  8.37 |G|=0.994 class=(0,3,0.906) run=16@408 | control m=450: v= 0.93 |G|=0.578 run= 2
+   n= 15: m*=409 v= 12.20 |G|=0.997 class=(0,3,0.937) run=17@407 | control m=449: v= 0.76 |G|=0.572 run= 4
+   n= 16: m*=407 v= 12.01 |G|=0.610 class=(0,1,0.250) run= 3@403 | control m=447: v= 0.70 |G|=0.367 run= 4
+   n= 17: m*=408 v= 11.60 |G|=0.572 class=(0,3,0.542) run= 3@405 | control m=448: v= 0.18 |G|=0.416 run= 4
+   n= 18: m*=407 v= 13.37 |G|=0.788 class=(0,3,0.694) run= 4@407 | control m=447: v= 0.30 |G|=0.592 run= 5
+   n= 19: m*=406 v= 15.31 |G|=0.885 class=(0,3,0.796) run= 6@405 | control m=446: v= 0.47 |G|=0.799 run= 5
+   n= 20: m*=404 v= 17.21 |G|=0.936 class=(0,3,0.728) run= 7@404 | control m=444: v= 0.84 |G|=0.635 run= 6
+   n= 21: m*=403 v= 22.47 |G|=0.968 class=(0,3,0.819) run= 9@402 | control m=443: v= 0.66 |G|=0.282 run= 7
+   n= 22: m*=401 v= 18.43 |G|=0.656 class=(0,1,0.092) run= 3@399 | control m=441: v= 0.54 |G|=0.547 run= 4
+   n= 23: m*=402 v= 18.32 |G|=0.572 class=(0,3,0.515) run= 4@398 | control m=442: v= 0.20 |G|=0.649 run= 4
+   n= 24: m*=401 v= 19.57 |G|=0.787 class=(0,3,0.677) run= 4@401 | control m=441: v= 0.31 |G|=0.679 run= 6
+   n= 25: m*=399 v= 21.58 |G|=0.852 class=(0,3,0.569) run= 6@399 | control m=439: v= 0.17 |G|=0.658 run= 3
+   n= 26: m*=398 v= 22.61 |G|=0.653 class=(0,1,0.046) run= 5@404 | control m=438: v= 0.11 |G|=0.759 run= 4
+   n= 27: m*=394 v= 22.28 |G|=0.875 class=(4,0,0.246) run= 7@402 | control m=434: v= 1.15 |G|=0.342 run= 6
+   n= 28: m*=393 v= 23.70 |G|=0.622 class=(1,2,0.831) run= 8@401 | control m=433: v= 0.97 |G|=0.367 run= 3
+   n= 29: m*=392 v= 29.40 |G|=0.545 class=(2,0,0.554) run= 3@389 | control m=432: v= 1.01 |G|=0.695 run= 3
+   n= 30: m*=391 v= 20.66 |G|=0.489 class=(0,1,0.702) run= 4@394 | control m=431: v= 0.86 |G|=0.511 run= 4
+   n= 31: m*=389 v= 21.27 |G|=0.745 class=(0,3,0.603) run= 4@389 | control m=429: v= 2.16 |G|=0.536 run= 4
+   n= 32: m*=388 v= 23.33 |G|=0.613 class=(0,1,0.069) run= 4@395 | control m=428: v= 1.56 |G|=0.446 run= 5
+   n= 33: m*=385 v= 18.15 |G|=0.789 class=(3,0,0.184) run= 5@384 | control m=425: v= 0.98 |G|=0.333 run= 7
+   n= 34: m*=384 v= 25.61 |G|=0.898 class=(4,0,0.122) run= 7@382 | control m=424: v= 1.30 |G|=0.188 run= 3
+   n= 35: m*=383 v= 24.06 |G|=0.594 class=(1,2,0.748) run= 4@393 | control m=423: v= 1.34 |G|=0.470 run= 5
+   n= 36: m*=383 v= 17.17 |G|=0.573 class=(0,3,0.583) run= 6@391 | control m=423: v= 0.69 |G|=0.654 run= 5
+   n= 37: m*=379 v= 16.48 |G|=0.768 class=(3,0,0.441) run= 6@390 | control m=419: v= 0.48 |G|=0.510 run= 3
+   n= 38: m*=380 v= 19.56 |G|=0.435 class=(1,2,0.740) run= 3@376 | control m=420: v= 0.75 |G|=0.597 run= 4
+   n= 39: m*=379 v= 22.86 |G|=0.725 class=(2,0,0.493) run= 4@375 | control m=419: v= 0.95 |G|=0.264 run= 4
+   n= 40: m*=378 v= 16.53 |G|=0.470 class=(0,1,0.662) run= 4@389 | control m=418: v= 0.96 |G|=0.630 run= 6
+   n= 45: m*=371 v= 16.72 |G|=0.652 class=(0,1,0.024) run= 5@367 | control m=411: v= 0.44 |G|=0.395 run= 2
+   n= 50: m*=362 v= 13.98 |G|=0.667 class=(0,3,0.194) run= 4@363 | control m=402: v= 0.71 |G|=0.400 run= 2
+   n= 55: m*=355 v= 15.93 |G|=0.672 class=(0,3,0.098) run= 3@353 | control m=395: v= 0.18 |G|=0.610 run= 5
+   n= 60: m*=346 v= 16.33 |G|=0.584 class=(0,3,0.170) run= 5@352 | control m=386: v= 0.43 |G|=0.694 run= 4
+   n= 65: m*=340 v= 12.24 |G|=0.700 class=(0,3,0.238) run= 3@336 | control m=380: v= 0.12 |G|=0.608 run= 4
+   n= 70: m*=336 v= 10.32 |G|=0.410 class=(1,2,0.057) run= 5@333 | control m=376: v= 0.25 |G|=0.699 run= 3
+   n= 75: m*=329 v= 11.17 |G|=0.549 class=(0,3,0.322) run= 3@332 | control m=369: v= 0.15 |G|=0.477 run= 5
+   n= 80: m*=319 v=  8.86 |G|=0.652 class=(2,0,0.715) run= 7@324 | control m=359: v= 0.17 |G|=0.269 run= 3
+   n= 85: m*=314 v= 12.62 |G|=0.670 class=(2,0,0.967) run= 4@311 | control m=354: v= 0.13 |G|=0.228 run= 3
+   n= 90: m*=305 v= 10.13 |G|=0.914 class=(0,3,0.666) run= 7@305 | control m=345: v= 0.19 |G|=0.229 run= 4
+   n= 95: m*=300 v=  8.05 |G|=0.537 class=(0,1,0.224) run= 5@304 | control m=340: v= 0.10 |G|=0.536 run= 6
+   n=100: m*=299 v=  6.05 |G|=0.806 class=(7,0,0.570) run= 7@300 | control m=339: v= 0.08 |G|=0.997 run=14
+   n=105: m*=293 v=  8.68 |G|=0.767 class=(3,0,0.446) run= 4@293 | control m=333: v= 0.10 |G|=0.822 run= 5
+   n=110: m*=287 v= 10.79 |G|=0.852 class=(0,3,0.657) run= 5@287 | control m=327: v= 0.11 |G|=0.647 run= 5
+   n=115: m*=281 v=  5.94 |G|=0.497 class=(0,1,0.062) run= 4@278 | control m=321: v= 0.05 |G|=0.444 run= 3
+   n=120: m*=273 v=  4.01 |G|=0.634 class=(1,2,0.929) run= 6@284 | control m=313: v= 0.06 |G|=0.760 run= 3
+   n=125: m*=270 v=  4.01 |G|=0.710 class=(3,0,0.590) run= 3@271 | control m=310: v= 0.01 |G|=0.424 run= 3
+   n=130: m*=265 v=  1.81 |G|=0.668 class=(2,0,0.028) run= 7@261 | control m=305: v= 0.06 |G|=0.697 run= 4
+   n=135: m*=256 v=  1.91 |G|=0.898 class=(4,0,0.126) run= 6@255 | control m=296: v= 0.04 |G|=0.848 run= 8
+   n=140: m*=251 v=  1.64 |G|=0.173 class=(1,2,0.436) run= 6@253 | control m=291: v= 0.03 |G|=0.280 run= 8
+   n=145: m*=246 v=  1.72 |G|=0.534 class=(2,0,0.634) run= 6@249 | control m=286: v= 0.48 |G|=0.242 run= 3
+   n=150: m*=241 v=  1.52 |G|=0.680 class=(2,0,0.824) run= 5@245 | control m=281: v= 0.75 |G|=0.426 run= 3
+   n=155: m*=236 v=  1.11 |G|=0.569 class=(1,2,0.874) run= 3@239 | control m=276: v= 0.48 |G|=0.668 run= 3
+   n=160: m*=230 v=  1.19 |G|=0.530 class=(0,1,0.070) run= 5@233 | control m=270: v= 0.51 |G|=0.201 run= 3
+   n=165: m*=224 v=  0.65 |G|=0.622 class=(0,1,0.022) run= 5@220 | control m=264: v= 1.37 |G|=0.632 run= 5
+   n=170: m*=212 v=  0.35 |G|=0.654 class=(2,0,0.527) run= 5@224 | control m=252: v= 0.10 |G|=0.684 run= 4
+   n=175: m*=206 v=  0.43 |G|=0.779 class=(0,3,0.579) run= 6@216 | control m=246: v= 0.09 |G|=0.245 run= 4
+   n=180: m*=195 v=  0.49 |G|=0.557 class=(0,3,0.169) run= 6@201 | control m=235: v= 0.01 |G|=0.312 run= 5
+   n=185: m*=193 v=  0.74 |G|=0.820 class=(0,3,0.591) run= 5@193 | control m=233: v= 0.29 |G|=0.599 run= 4
+   n=190: m*=188 v=  0.89 |G|=0.765 class=(3,0,0.506) run= 4@184 | control m=228: v= 0.26 |G|=0.663 run= 5
+   n=195: m*=182 v=  0.76 |G|=0.837 class=(0,3,0.705) run= 5@187 | control m=222: v= 0.22 |G|=0.162 run= 3
+   n=200: m*=170 v=  0.82 |G|=0.948 class=(0,3,0.904) run= 8@168 | control m=210: v= 0.08 |G|=0.801 run= 4
+   n=205: m*=164 v=  0.74 |G|=0.674 class=(0,3,0.300) run= 3@171 | control m=204: v= 0.16 |G|=0.695 run= 4
+   n=210: m*=158 v=  0.38 |G|=0.810 class=(0,3,0.651) run= 4@158 | control m=198: v= 0.17 |G|=0.790 run= 5
+   n=215: m*=151 v=  0.52 |G|=0.787 class=(3,0,0.508) run= 4@147 | control m=191: v= 0.13 |G|=0.556 run= 4
+   n=220: m*=142 v=  0.47 |G|=0.811 class=(3,0,0.444) run= 4@142 | control m=182: v= 0.08 |G|=0.609 run= 5
+   n=225: m*=137 v=  0.64 |G|=0.785 class=(3,0,0.355) run= 4@137 | control m=177: v= 0.03 |G|=0.570 run= 5
+   n=230: m*=130 v=  0.49 |G|=0.597 class=(1,2,0.919) run= 5@134 | control m=170: v= 0.09 |G|=0.679 run= 3
+   n=235: m*=126 v=  0.28 |G|=0.452 class=(0,1,0.822) run= 4@129 | control m=166: v= 0.01 |G|=0.649 run= 3
+   n=240: m*=119 v=  0.31 |G|=0.608 class=(0,3,0.264) run= 4@124 | control m=159: v= 0.04 |G|=0.559 run= 3
+   n=245: m*=114 v=  0.46 |G|=0.779 class=(0,3,0.607) run= 6@120 | control m=154: v= 0.04 |G|=0.397 run= 3
+   n=250: m*=108 v=  0.27 |G|=0.565 class=(0,1,0.131) run= 6@119 | control m=148: v= 0.04 |G|=0.545 run= 4
+   n=255: m*=101 v=  0.33 |G|=0.942 class=(5,0,0.201) run= 7@100 | control m=141: v= 0.00 |G|=0.660 run= 5
+   n=260: m*= 96 v=  0.31 |G|=0.867 class=(4,0,0.356) run= 5@ 96 | control m=136: v= 0.03 |G|=0.505 run= 2
+   n=265: m*= 89 v=  0.19 |G|=0.596 class=(3,0,0.813) run= 5@ 93 | control m=129: v= 0.01 |G|=0.717 run= 4
+   n=270: m*= 84 v=  0.32 |G|=0.906 class=(0,3,0.712) run= 6@ 84 | control m=124: v= 0.01 |G|=0.440 run= 7
+   n=275: m*= 79 v=  0.31 |G|=0.682 class=(0,3,0.090) run= 3@ 77 | control m=119: v= 0.02 |G|=0.278 run= 4
+   n=280: m*= 70 v=  0.23 |G|=0.761 class=(3,0,0.485) run= 4@ 66 | control m=110: v= 0.02 |G|=0.659 run= 3
+   n=285: m*= 66 v=  0.26 |G|=0.603 class=(1,2,0.995) run= 5@ 62 | control m=106: v= 0.02 |G|=0.599 run= 3
+   n=290: m*= 56 v=  0.22 |G|=0.628 class=(1,2,0.974) run= 5@ 52 | control m=96: v= 0.01 |G|=0.772 run= 4
+   n=295: m*= 50 v=  0.44 |G|=0.559 class=(2,0,0.701) run= 4@ 60 | control m=90: v= 0.01 |G|=0.400 run= 5
+   n=300: m*= 43 v=  0.24 |G|=0.633 class=(3,0,0.731) run= 3@ 39 | control m=83: v= 0.00 |G|=0.198 run= 6
+   n=305: m*= 39 v=  0.13 |G|=0.637 class=(2,0,0.986) run= 6@ 49 | control m=79: v= 0.01 |G|=0.555 run= 5
+   n=310: m*= 29 v=  0.07 |G|=0.534 class=(0,3,0.367) run= 4@ 32 | control m=69: v= 0.01 |G|=0.717 run= 3
+   n=315: m*= 27 v=  0.09 |G|=0.802 class=(3,0,0.483) run= 4@ 23 | control m=67: v= 0.02 |G|=0.496 run= 5
+   n=320: m*= 18 v=  0.05 |G|=0.548 class=(2,0,0.673) run= 3@ 21 | control m=58: v= 0.01 |G|=0.689 run= 3
+ridge slope: -1.33 over 11..50, -1.26 over 50..100, -1.16 over 100..150, -1.42 over 150..200, -1.24 over 200..250, -1.30 over 250..300
+Ntilde_n = sum_(m<=60) 2^-m |m_n(-m)| to NMAX, with 3^(n/2) and (log2 3 - 1)^-n normalisations, and N_n = max_(m<=60)
+   n=100: Ntilde 3^(n/2) =   0.084   (log2 3 - 1)^-n Ntilde = 2.259e-02   N_n 3^(n/2) =   5.03 at m = 43   ridge m* = 299
+   n=104: Ntilde 3^(n/2) =   0.247   (log2 3 - 1)^-n Ntilde = 6.331e-02   N_n 3^(n/2) =   4.09 at m = 38   ridge m* = 294
+   n=108: Ntilde 3^(n/2) =   0.123   (log2 3 - 1)^-n Ntilde = 2.993e-02   N_n 3^(n/2) =   3.77 at m = 34   ridge m* = 289
+   n=112: Ntilde 3^(n/2) =   0.031   (log2 3 - 1)^-n Ntilde = 7.154e-03   N_n 3^(n/2) =   7.49 at m = 24   ridge m* = 284
+   n=116: Ntilde 3^(n/2) =   0.097   (log2 3 - 1)^-n Ntilde = 2.131e-02   N_n 3^(n/2) =   9.72 at m = 20   ridge m* = 280
+   n=120: Ntilde 3^(n/2) =   0.298   (log2 3 - 1)^-n Ntilde = 6.183e-02   N_n 3^(n/2) =  10.89 at m = 16   ridge m* = 273
+   n=124: Ntilde 3^(n/2) =   0.896   (log2 3 - 1)^-n Ntilde = 1.765e-01   N_n 3^(n/2) =   8.20 at m = 11   ridge m* = 271
+   n=128: Ntilde 3^(n/2) =   7.965   (log2 3 - 1)^-n Ntilde = 1.489e+00   N_n 3^(n/2) =  13.43 at m = 3   ridge m* = 267
+   n=132: Ntilde 3^(n/2) =   2.377   (log2 3 - 1)^-n Ntilde = 4.218e-01   N_n 3^(n/2) =   2.93 at m = 2   ridge m* = 258
+   n=136: Ntilde 3^(n/2) =   0.354   (log2 3 - 1)^-n Ntilde = 5.964e-02   N_n 3^(n/2) =   0.80 at m = 52   ridge m* = 255
+   n=140: Ntilde 3^(n/2) =   0.109   (log2 3 - 1)^-n Ntilde = 1.742e-02   N_n 3^(n/2) =   0.59 at m = 45   ridge m* = 251
+   n=144: Ntilde 3^(n/2) =   0.106   (log2 3 - 1)^-n Ntilde = 1.607e-02   N_n 3^(n/2) =   0.64 at m = 38   ridge m* = 244
+   n=148: Ntilde 3^(n/2) =   0.047   (log2 3 - 1)^-n Ntilde = 6.722e-03   N_n 3^(n/2) =   0.42 at m = 32   ridge m* = 243
+   n=152: Ntilde 3^(n/2) =   0.052   (log2 3 - 1)^-n Ntilde = 7.110e-03   N_n 3^(n/2) =   0.27 at m = 30   ridge m* = 239
+   n=156: Ntilde 3^(n/2) =   0.036   (log2 3 - 1)^-n Ntilde = 4.724e-03   N_n 3^(n/2) =   0.30 at m = 25   ridge m* = 234
+   n=160: Ntilde 3^(n/2) =   0.086   (log2 3 - 1)^-n Ntilde = 1.057e-02   N_n 3^(n/2) =   0.21 at m = 21   ridge m* = 230
+   n=164: Ntilde 3^(n/2) =   0.020   (log2 3 - 1)^-n Ntilde = 2.338e-03   N_n 3^(n/2) =   0.17 at m = 16   ridge m* = 226
+   n=168: Ntilde 3^(n/2) =   0.014   (log2 3 - 1)^-n Ntilde = 1.495e-03   N_n 3^(n/2) =   0.19 at m = 58   ridge m* = 215
+   n=172: Ntilde 3^(n/2) =   0.058   (log2 3 - 1)^-n Ntilde = 6.078e-03   N_n 3^(n/2) =   0.17 at m = 52   ridge m* = 214
+   n=176: Ntilde 3^(n/2) =   0.046   (log2 3 - 1)^-n Ntilde = 4.589e-03   N_n 3^(n/2) =   0.23 at m = 48   ridge m* = 205
+   n=180: Ntilde 3^(n/2) =   0.062   (log2 3 - 1)^-n Ntilde = 5.909e-03   N_n 3^(n/2) =   0.31 at m = 42   ridge m* = 195
+   n=184: Ntilde 3^(n/2) =   0.124   (log2 3 - 1)^-n Ntilde = 1.109e-02   N_n 3^(n/2) =   0.25 at m = 5   ridge m* = 194
+   n=188: Ntilde 3^(n/2) =   0.165   (log2 3 - 1)^-n Ntilde = 1.410e-02   N_n 3^(n/2) =   0.26 at m = 1   ridge m* = 190
+   n=192: Ntilde 3^(n/2) =   0.022   (log2 3 - 1)^-n Ntilde = 1.785e-03   N_n 3^(n/2) =   0.09 at m = 28   ridge m* = 186
+   n=196: Ntilde 3^(n/2) =   0.009   (log2 3 - 1)^-n Ntilde = 7.108e-04   N_n 3^(n/2) =   0.10 at m = 14   ridge m* = 181
+   n=200: Ntilde 3^(n/2) =   0.031   (log2 3 - 1)^-n Ntilde = 2.278e-03   N_n 3^(n/2) =   0.14 at m = 10   ridge m* = 170
+   n=204: Ntilde 3^(n/2) =   0.021   (log2 3 - 1)^-n Ntilde = 1.467e-03   N_n 3^(n/2) =   0.08 at m = 12   ridge m* = 165
+   n=208: Ntilde 3^(n/2) =   0.055   (log2 3 - 1)^-n Ntilde = 3.594e-03   N_n 3^(n/2) =   0.08 at m = 3   ridge m* = 161
+   n=212: Ntilde 3^(n/2) =   0.041   (log2 3 - 1)^-n Ntilde = 2.553e-03   N_n 3^(n/2) =   0.07 at m = 3   ridge m* = 154
+   n=216: Ntilde 3^(n/2) =   0.017   (log2 3 - 1)^-n Ntilde = 9.847e-04   N_n 3^(n/2) =   0.15 at m = 58   ridge m* = 150
+   n=220: Ntilde 3^(n/2) =   0.008   (log2 3 - 1)^-n Ntilde = 4.503e-04   N_n 3^(n/2) =   0.18 at m = 60   ridge m* = 142
+   n=224: Ntilde 3^(n/2) =   0.003   (log2 3 - 1)^-n Ntilde = 1.464e-04   N_n 3^(n/2) =   0.21 at m = 48   ridge m* = 138
+   n=228: Ntilde 3^(n/2) =   0.006   (log2 3 - 1)^-n Ntilde = 2.921e-04   N_n 3^(n/2) =   0.13 at m = 28   ridge m* = 132
+   n=232: Ntilde 3^(n/2) =   0.002   (log2 3 - 1)^-n Ntilde = 9.362e-05   N_n 3^(n/2) =   0.17 at m = 39   ridge m* = 129
+   n=236: Ntilde 3^(n/2) =   0.006   (log2 3 - 1)^-n Ntilde = 2.780e-04   N_n 3^(n/2) =   0.14 at m = 34   ridge m* = 123
+   n=240: Ntilde 3^(n/2) =   0.005   (log2 3 - 1)^-n Ntilde = 2.263e-04   N_n 3^(n/2) =   0.14 at m = 29   ridge m* = 119
+   n=244: Ntilde 3^(n/2) =   0.019   (log2 3 - 1)^-n Ntilde = 7.978e-04   N_n 3^(n/2) =   0.20 at m = 25   ridge m* = 115
+   n=248: Ntilde 3^(n/2) =   0.021   (log2 3 - 1)^-n Ntilde = 8.250e-04   N_n 3^(n/2) =   0.17 at m = 18   ridge m* = 111
+   n=252: Ntilde 3^(n/2) =   0.009   (log2 3 - 1)^-n Ntilde = 3.383e-04   N_n 3^(n/2) =   0.11 at m = 12   ridge m* = 106
+   n=256: Ntilde 3^(n/2) =   0.024   (log2 3 - 1)^-n Ntilde = 8.254e-04   N_n 3^(n/2) =   0.09 at m = 10   ridge m* = 100
+   n=260: Ntilde 3^(n/2) =   0.054   (log2 3 - 1)^-n Ntilde = 1.801e-03   N_n 3^(n/2) =   0.07 at m = 1   ridge m* = 96
+   n=264: Ntilde 3^(n/2) =   0.021   (log2 3 - 1)^-n Ntilde = 6.567e-04   N_n 3^(n/2) =   0.09 at m = 22   ridge m* = 90
+   n=268: Ntilde 3^(n/2) =   0.016   (log2 3 - 1)^-n Ntilde = 4.912e-04   N_n 3^(n/2) =   0.07 at m = 18   ridge m* = 86
+   n=272: Ntilde 3^(n/2) =   0.005   (log2 3 - 1)^-n Ntilde = 1.328e-04   N_n 3^(n/2) =   0.08 at m = 11   ridge m* = 82
+   n=276: Ntilde 3^(n/2) =   0.016   (log2 3 - 1)^-n Ntilde = 4.173e-04   N_n 3^(n/2) =   0.06 at m = 55   ridge m* = 78
+   n=280: Ntilde 3^(n/2) =   0.030   (log2 3 - 1)^-n Ntilde = 7.623e-04   N_n 3^(n/2) =   0.05 at m = 51   ridge m* = 70
+   n=284: Ntilde 3^(n/2) =   0.019   (log2 3 - 1)^-n Ntilde = 4.485e-04   N_n 3^(n/2) =   0.07 at m = 45   ridge m* = 67
+   n=288: Ntilde 3^(n/2) =   0.006   (log2 3 - 1)^-n Ntilde = 1.494e-04   N_n 3^(n/2) =   0.19 at m = 59   ridge m* = 62
+   n=292: Ntilde 3^(n/2) =   0.003   (log2 3 - 1)^-n Ntilde = 7.051e-05   N_n 3^(n/2) =   0.32 at m = 54   ridge m* = 54
+   n=296: Ntilde 3^(n/2) =   0.008   (log2 3 - 1)^-n Ntilde = 1.749e-04   N_n 3^(n/2) =   0.32 at m = 48   ridge m* = 48
+   n=300: Ntilde 3^(n/2) =   0.020   (log2 3 - 1)^-n Ntilde = 3.899e-04   N_n 3^(n/2) =   0.24 at m = 43   ridge m* = 43
+   n=304: Ntilde 3^(n/2) =   0.013   (log2 3 - 1)^-n Ntilde = 2.449e-04   N_n 3^(n/2) =   0.14 at m = 40   ridge m* = 40
+   n=308: Ntilde 3^(n/2) =   0.016   (log2 3 - 1)^-n Ntilde = 2.890e-04   N_n 3^(n/2) =   0.09 at m = 57   ridge m* = 36
+   n=312: Ntilde 3^(n/2) =   0.009   (log2 3 - 1)^-n Ntilde = 1.481e-04   N_n 3^(n/2) =   0.09 at m = 27   ridge m* = 27
+   n=316: Ntilde 3^(n/2) =   0.004   (log2 3 - 1)^-n Ntilde = 6.532e-05   N_n 3^(n/2) =   0.10 at m = 26   ridge m* = 26
+   n=320: Ntilde 3^(n/2) =   0.021   (log2 3 - 1)^-n Ntilde = 3.205e-04   N_n 3^(n/2) =   0.05 at m = 18   ridge m* = 18
+   rate of Ntilde over 20..320: 0.5678
+   rate of Ntilde over 160..320: 0.5710
+   rate of Ntilde over 200..320: 0.5744
+   max (log2 3 - 1)^-n Ntilde_n over 20..320: 1.580e+00 at n = 130
+DONE
