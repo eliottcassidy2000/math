@@ -1,1 +1,4 @@
 n=19: L=774840978: M(n) = 0.0098157 (S20 FFT nan); Fourier mass per level 0.7089; top: k=387420513 (|m|=0.009816; nearest-zero exponent -387420465, mirror 24); k=24 (|m|=0.009816; nearest-zero exponent 24, mirror -387420465); k=387420514 (|m|=0.009769; nearest-zero exponent -387420464, mirror 25); k=25 (|m|=0.009769; nearest-zero exponent 25, mirror -387420464); k=387420512 (|m|=0.008774; nearest-zero exponent -387420466, mirror 23)   [214s]
+n=20: L=2324522934: M(n) = 0.0088846 (S20 FFT nan); Fourier mass per level 0.7094; top: k=1162261493 (|m|=0.008885; nearest-zero exponent -1162261441, mirror 26); k=26 (|m|=0.008885; nearest-zero exponent 26, mirror -1162261441); k=25 (|m|=0.008380; nearest-zero exponent 25, mirror -1162261442); k=1162261492 (|m|=0.008380; nearest-zero exponent -1162261442, mirror 25); k=1162261494 (|m|=0.008342; nearest-zero exponent -1162261440, mirror 27)   [770s]
+DONE
+exit=0

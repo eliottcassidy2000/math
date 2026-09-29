@@ -1,0 +1,464 @@
+
+====================================================================================================
+E. constants of S22 and the identity e^(-I) 3^(theta*/ln 2) = log_2 3 - 1
+====================================================================================================
+m = log_2 3 = 1.584963, p = log_3 2 = 0.630930, q = 1 - p = 0.369070, theta* = ln(2q) = -0.303621, I = theta* m - ln(m-1) = 0.054979
+e^(-I) = 0.946505 (S22: 3^(h*-1) = 0.946505); theta*/ln 2 = -0.43803 (note: -0.438)
+e^(-I) 3^(theta*/ln 2) = 0.584962500721156; log_2 3 - 1 = 0.584962500721156; difference -1.1e-16
+algebra: 3^(theta*/ln 2) = e^(theta* ln 3/ln 2) = e^(theta* m); e^(-I) = e^(-theta* m) (m-1); product = m - 1.  The identity is the
+         definition of I rewritten (I := theta* m - ln(m-1)); it holds for ANY theta*, not only the tilt -- it carries no information about the law.
+3^(-1/2) = 0.577350; (m-1) = 0.584963; ratio 3^(-1/2)/(m-1) = 0.98699 -> margin 1.30% (note: 1.3%)
+Chernoff extrapolation at u = 3^n: e^(-nI) 3^(n theta*/ln 2) = (m-1)^n = 0.5850^n; Parseval rms scale 3^(-n/2) = 0.5774^n
+3^n (m-1)^(2n) = (1.0265)^n: a family of ~3^n units each of size (m-1)^n would carry a Fourier mass growing like 1.0265^n -- the note's 'Parseval forbids' reading (heuristic: the families u 2^j overlap)
+
+====================================================================================================
+A. the law mu_n on Z/3^n by forward DP, n <= 16 (embedding y -> 3y+1 of level n-1 into level n; gather over a <= 60)
+====================================================================================================
+   level  1: 3^n =         3, total mass 1.000000000000000, mass on non-units 0.0e+00, mu_n(1) = 0.3333333333, mu_n(-1) = 0.6666666667   [     0s]
+   level  2: 3^n =         9, total mass 1.000000000000000, mass on non-units 0.0e+00, mu_n(1) = 0.1269841270, mu_n(-1) = 0.3492063492   [     0s]
+   level  3: 3^n =        27, total mass 1.000000000000000, mass on non-units 0.0e+00, mu_n(1) = 0.0367433042, mu_n(-1) = 0.1776511293   [     0s]
+   level  4: 3^n =        81, total mass 1.000000000000000, mass on non-units 0.0e+00, mu_n(1) = 0.0114521898, mu_n(-1) = 0.0897350455   [     0s]
+   level  5: 3^n =       243, total mass 1.000000000000000, mass on non-units 0.0e+00, mu_n(1) = 0.0039683188, mu_n(-1) = 0.0451760388   [     0s]
+   level  6: 3^n =       729, total mass 1.000000000000000, mass on non-units 0.0e+00, mu_n(1) = 0.0013105898, mu_n(-1) = 0.0226707585   [     0s]
+   level  7: 3^n =      2187, total mass 1.000000000000000, mass on non-units 0.0e+00, mu_n(1) = 0.0003933971, mu_n(-1) = 0.0113619567   [     0s]
+   level  8: 3^n =      6561, total mass 1.000000000000000, mass on non-units 0.0e+00, mu_n(1) = 0.0001180577, mu_n(-1) = 0.0056904130   [     0s]
+   level  9: 3^n =     19683, total mass 1.000000000000000, mass on non-units 0.0e+00, mu_n(1) = 0.0000353988, mu_n(-1) = 0.0028489606   [     0s]
+   level 10: 3^n =     59049, total mass 0.999999999999999, mass on non-units 0.0e+00, mu_n(1) = 0.0000107954, mu_n(-1) = 0.0014255438   [     0s]
+   level 11: 3^n =    177147, total mass 0.999999999999999, mass on non-units 0.0e+00, mu_n(1) = 0.0000033386, mu_n(-1) = 0.0007131899   [     0s]
+   level 12: 3^n =    531441, total mass 0.999999999999999, mass on non-units 0.0e+00, mu_n(1) = 0.0000010111, mu_n(-1) = 0.0003567537   [     1s]
+   level 13: 3^n =   1594323, total mass 0.999999999999999, mass on non-units 0.0e+00, mu_n(1) = 0.0000003137, mu_n(-1) = 0.0001784231   [     3s]
+   level 14: 3^n =   4782969, total mass 0.999999999999999, mass on non-units 0.0e+00, mu_n(1) = 0.0000000989, mu_n(-1) = 0.0000892240   [    13s]
+   level 15: 3^n =  14348907, total mass 0.999999999999999, mass on non-units 0.0e+00, mu_n(1) = 0.0000000320, mu_n(-1) = 0.0000446161   [    43s]
+   level 16: 3^n =  43046721, total mass 0.999999999999999, mass on non-units 0.0e+00, mu_n(1) = 0.0000000101, mu_n(-1) = 0.0000223093   [   105s]
+   exact level 2: mu_2(1) = 8/63 -> H_2(1) = 9 mu_2(1) = 8/7 (note: 8/7); DP gives H_2(1) = 1.142857142857, H_2(-1) = 3.142857142857 (note: 22/7 = 3.142857142857)
+   consistency ||proj mu_2 - mu_1||_1 = 0.0e+00
+   consistency ||proj mu_3 - mu_2||_1 = 1.6e-16
+   consistency ||proj mu_4 - mu_3||_1 = 1.8e-16
+   consistency ||proj mu_5 - mu_4||_1 = 1.7e-16
+   consistency ||proj mu_6 - mu_5||_1 = 1.8e-16
+   consistency ||proj mu_7 - mu_6||_1 = 2.5e-16
+   consistency ||proj mu_8 - mu_7||_1 = 3.2e-16
+   consistency ||proj mu_9 - mu_8||_1 = 3.5e-16
+   consistency ||proj mu_10 - mu_9||_1 = 3.7e-16
+   consistency ||proj mu_11 - mu_10||_1 = 3.8e-16
+   consistency ||proj mu_12 - mu_11||_1 = 3.9e-16
+   consistency ||proj mu_13 - mu_12||_1 = 4.0e-16
+   consistency ||proj mu_14 - mu_13||_1 = 4.1e-16
+   consistency ||proj mu_15 - mu_14||_1 = 4.2e-16
+   consistency ||proj mu_16 - mu_15||_1 = 4.3e-16
+
+====================================================================================================
+B. Theorem 1 (character-spectrum duality, the two increment identities) and the spectrum statistics, from the law
+====================================================================================================
+n= 1 L=        2: (i) max|F - tau S|/3^(n/2) over primitive j = 1.3e-16; |tau|/3^(n/2) in [1.000000000000, 1.000000000000]; imprimitive j: max|F| = 1.0e+00, max|tau| = 1.0e+00, max|S| = 1.000 (S itself does NOT vanish there; it is the lower-level moment; the vanishing of F and tau is for n >= 2)
+      (ii) n = 1: the only primitive character is chi_-3: S_1(chi_-3) = -0.333333 (note: -1/3), parity sum +0.333333 (note: +1/3); rho_1(1) = 0.666667 = 1 - 1/3, rho_1(-1) = 1.333333 = 1 + 1/3; the general formula would give rho_1 - rho_0 = +0.000, so n = 1 is indeed a separate case
+      accumulated: rho_n(1) = 2/3 + sum_(m=2..n) sum_prim S_m = 0.666667 vs law 0.666667 vs S19 0.66667; rho_n(-1) = 4/3 + sum parity = 1.3333 vs law 1.3333 vs S19 1.333; H_n(1) = (3/2) rho_n(1) = 1.000000; T_n = (3/2) sum_prim S_n = -0.5000 (note -0.500); 0.325 (3/2)^n = 0.488
+      spectrum: rms |S| 3^(n/2) = 0.5774 (note nan); rms^2 = 0.3333 = (3/2) sum_units |mu_hat|^2 = 1.0000 [sum_units |mu_hat_n|^2 = 0.6667 = S20's 'mass at level n'; the fullperiod script's 'mass per level' 3^n sum|m|^2/L = 1.0000]
+      P(z > 1, 2, 3) = 0.000, 0.000, 0.000 (Exp(1): 0.368, 0.135, 0.050); max |S| 3^(n/2) = 0.577 (note nan) at j = +1 (note ±-); top 8: 0.58@+1
+      Rayleigh-max reference: rms sqrt(ln L) = 0.48; rms sqrt(ln #prim) = 0.00 (#prim = 1); rms sqrt(ln(#prim/2) + gamma) = 0.00 (conjugate pairs |S_j| = |S_-j|); max/rms = 1.00; n/2 = 0.5
+      parity: mean S odd = -3.3333e-01+0.0e+00i, even = +0.0000e+00+0.0e+00i, sum of means = -3.33e-01; #odd = 1, #even = 0; predicted mean_even ~ (parity sum)/(2 #even) = +1.6667e-01
+n= 2 L=        6: (i) max|F - tau S|/3^(n/2) over primitive j = 9.3e-17; |tau|/3^(n/2) in [1.000000000000, 1.000000000000]; imprimitive j: max|F| = 6.2e-17, max|tau| = 7.0e-16, max|S| = 1.000 (S itself does NOT vanish there; it is the lower-level moment; the vanishing of F and tau is for n >= 2)
+      imprimitive consistency: max_j |S_n(psi_3j') - S_(n-1)(psi_j')| = 2.2e-16 (psi_j primitive iff 3 does not divide j: the induced characters give the lower-level moments)
+      (ii) sum_prim S = +0.095238095+0.0e+00i vs L mu_n(1) - (L/3) mu_(n-1)(1) = +0.095238095 = rho_n(1) - rho_(n-1)(1) = +0.095238095; parity sum = +0.761904762+0.0e+00i vs +0.761904762 = +0.761904762
+      accumulated: rho_n(1) = 2/3 + sum_(m=2..n) sum_prim S_m = 0.761905 vs law 0.761905 vs S19 0.76190; rho_n(-1) = 4/3 + sum parity = 2.0952 vs law 2.0952 vs S19 2.095; H_n(1) = (3/2) rho_n(1) = 1.142857; T_n = (3/2) sum_prim S_n = +0.1429 (note +0.143); 0.325 (3/2)^n = 0.731
+      spectrum: rms |S| 3^(n/2) = 0.8452 (note 0.8452); rms^2 = 0.7143 = (3/2) sum_units |mu_hat|^2 = 0.7143 [sum_units |mu_hat_n|^2 = 0.4762 = S20's 'mass at level n'; the fullperiod script's 'mass per level' 3^n sum|m|^2/L = 0.7143]
+      P(z > 1, 2, 3) = 0.500, 0.000, 0.000 (Exp(1): 0.368, 0.135, 0.050); max |S| 3^(n/2) = 1.000 (note 1.00) at j = +1 (note ±-); top 8: 1.00@+1, 1.00@-1, 0.65@+2=±2^1·1, 0.65@-2=±2^1·1
+      Rayleigh-max reference: rms sqrt(ln L) = 1.13; rms sqrt(ln #prim) = 1.00 (#prim = 4); rms sqrt(ln(#prim/2) + gamma) = 0.95 (conjugate pairs |S_j| = |S_-j|); max/rms = 1.18; n/2 = 1.0
+      parity: mean S odd = -1.6667e-01+0.0e+00i, even = +2.1429e-01+0.0e+00i, sum of means = +4.76e-02; #odd = 2, #even = 2; predicted mean_even ~ (parity sum)/(2 #even) = +1.9048e-01
+n= 3 L=       18: (i) max|F - tau S|/3^(n/2) over primitive j = 1.7e-16; |tau|/3^(n/2) in [1.000000000000, 1.000000000000]; imprimitive j: max|F| = 1.1e-16, max|tau| = 9.8e-16, max|S| = 1.000 (S itself does NOT vanish there; it is the lower-level moment; the vanishing of F and tau is for n >= 2)
+      imprimitive consistency: max_j |S_n(psi_3j') - S_(n-1)(psi_j')| = 2.2e-16 (psi_j primitive iff 3 does not divide j: the induced characters give the lower-level moments)
+      (ii) sum_prim S = -0.100525286+5.6e-17i vs L mu_n(1) - (L/3) mu_(n-1)(1) = -0.100525286 = rho_n(1) - rho_(n-1)(1) = -0.100525286; parity sum = +1.102482233-2.8e-17i vs +1.102482233 = +1.102482233
+      accumulated: rho_n(1) = 2/3 + sum_(m=2..n) sum_prim S_m = 0.661379 vs law 0.661379 vs S19 0.66138; rho_n(-1) = 4/3 + sum parity = 3.1977 vs law 3.1977 vs S19 3.198; H_n(1) = (3/2) rho_n(1) = 0.992069; T_n = (3/2) sum_prim S_n = -0.1508 (note -0.151); 0.325 (3/2)^n = 1.097
+      spectrum: rms |S| 3^(n/2) = 0.8321 (note 0.8321); rms^2 = 0.6924 = (3/2) sum_units |mu_hat|^2 = 0.6924 [sum_units |mu_hat_n|^2 = 0.4616 = S20's 'mass at level n'; the fullperiod script's 'mass per level' 3^n sum|m|^2/L = 0.6924]
+      P(z > 1, 2, 3) = 0.333, 0.167, 0.000 (Exp(1): 0.368, 0.135, 0.050); max |S| 3^(n/2) = 1.411 (note 1.41) at j = +2=±2^1·1 (note ±2); top 8: 1.41@+2=±2^1·1, 1.41@-2=±2^1·1, 1.00@-1, 1.00@+1, 0.69@-7, 0.69@+7, 0.56@+4=±2^2·1, 0.56@-4=±2^2·1
+      Rayleigh-max reference: rms sqrt(ln L) = 1.41; rms sqrt(ln #prim) = 1.31 (#prim = 12); rms sqrt(ln(#prim/2) + gamma) = 1.28 (conjugate pairs |S_j| = |S_-j|); max/rms = 1.70; n/2 = 1.5
+      parity: mean S odd = -1.0025e-01+3.5e-18i, even = +8.3496e-02-1.9e-17i, sum of means = -1.68e-02; #odd = 6, #even = 6; predicted mean_even ~ (parity sum)/(2 #even) = +9.1874e-02
+n= 4 L=       54: (i) max|F - tau S|/3^(n/2) over primitive j = 9.9e-17; |tau|/3^(n/2) in [1.000000000000, 1.000000000000]; imprimitive j: max|F| = 1.5e-16, max|tau| = 4.1e-15, max|S| = 1.000 (S itself does NOT vanish there; it is the lower-level moment; the vanishing of F and tau is for n >= 2)
+      imprimitive consistency: max_j |S_n(psi_3j') - S_(n-1)(psi_j')| = 2.2e-16 (psi_j primitive iff 3 does not divide j: the induced characters give the lower-level moments)
+      (ii) sum_prim S = -0.042961226+1.1e-16i vs L mu_n(1) - (L/3) mu_(n-1)(1) = -0.042961226 = rho_n(1) - rho_(n-1)(1) = -0.042961226; parity sum = +1.647972130+5.6e-17i vs +1.647972130 = +1.647972130
+      accumulated: rho_n(1) = 2/3 + sum_(m=2..n) sum_prim S_m = 0.618418 vs law 0.618418 vs S19 0.61842; rho_n(-1) = 4/3 + sum parity = 4.8457 vs law 4.8457 vs S19 4.846; H_n(1) = (3/2) rho_n(1) = 0.927627; T_n = (3/2) sum_prim S_n = -0.0644 (note -0.064); 0.325 (3/2)^n = 1.645
+      spectrum: rms |S| 3^(n/2) = 0.8345 (note 0.8345); rms^2 = 0.6963 = (3/2) sum_units |mu_hat|^2 = 0.6963 [sum_units |mu_hat_n|^2 = 0.4642 = S20's 'mass at level n'; the fullperiod script's 'mass per level' 3^n sum|m|^2/L = 0.6963]
+      P(z > 1, 2, 3) = 0.333, 0.167, 0.056 (Exp(1): 0.368, 0.135, 0.050); max |S| 3^(n/2) = 1.586 (note 1.59) at j = +2=±2^1·1 (note ±2); top 8: 1.59@+2=±2^1·1, 1.59@-2=±2^1·1, 1.42@-4=±2^2·1, 1.42@+4=±2^2·1, 1.36@+7, 1.36@-7, 1.07@+1, 1.07@-1
+      Rayleigh-max reference: rms sqrt(ln L) = 1.67; rms sqrt(ln #prim) = 1.58 (#prim = 36); rms sqrt(ln(#prim/2) + gamma) = 1.55 (conjugate pairs |S_j| = |S_-j|); max/rms = 1.90; n/2 = 2.0
+      parity: mean S odd = -4.6970e-02+2.3e-18i, even = +4.4584e-02+4.6e-18i, sum of means = -2.39e-03; #odd = 18, #even = 18; predicted mean_even ~ (parity sum)/(2 #even) = +4.5777e-02
+n= 5 L=      162: (i) max|F - tau S|/3^(n/2) over primitive j = 6.9e-17; |tau|/3^(n/2) in [1.000000000000, 1.000000000000]; imprimitive j: max|F| = 1.5e-16, max|tau| = 7.5e-15, max|S| = 1.000 (S itself does NOT vanish there; it is the lower-level moment; the vanishing of F and tau is for n >= 2)
+      imprimitive consistency: max_j |S_n(psi_3j') - S_(n-1)(psi_j')| = 2.2e-16 (psi_j primitive iff 3 does not divide j: the induced characters give the lower-level moments)
+      (ii) sum_prim S = +0.024449396-4.4e-16i vs L mu_n(1) - (L/3) mu_(n-1)(1) = +0.024449396 = rho_n(1) - rho_(n-1)(1) = +0.024449396; parity sum = +2.472825831+0.0e+00i vs +2.472825831 = +2.472825831
+      accumulated: rho_n(1) = 2/3 + sum_(m=2..n) sum_prim S_m = 0.642868 vs law 0.642868 vs S19 0.64287; rho_n(-1) = 4/3 + sum parity = 7.3185 vs law 7.3185 vs S19 7.319; H_n(1) = (3/2) rho_n(1) = 0.964301; T_n = (3/2) sum_prim S_n = +0.0367 (note +0.037); 0.325 (3/2)^n = 2.468
+      spectrum: rms |S| 3^(n/2) = 0.8356 (note 0.8356); rms^2 = 0.6983 = (3/2) sum_units |mu_hat|^2 = 0.6983 [sum_units |mu_hat_n|^2 = 0.4655 = S20's 'mass at level n'; the fullperiod script's 'mass per level' 3^n sum|m|^2/L = 0.6983]
+      P(z > 1, 2, 3) = 0.296, 0.167, 0.074 (Exp(1): 0.368, 0.135, 0.050); max |S| 3^(n/2) = 2.022 (note 2.02) at j = +8=±2^3·1 (note ±8); top 8: 2.02@+8=±2^3·1, 2.02@-8=±2^3·1, 1.60@-4=±2^2·1, 1.60@+4=±2^2·1, 1.54@+2=±2^1·1, 1.54@-2=±2^1·1, 1.53@+5, 1.53@-5
+      Rayleigh-max reference: rms sqrt(ln L) = 1.88; rms sqrt(ln #prim) = 1.81 (#prim = 108); rms sqrt(ln(#prim/2) + gamma) = 1.79 (conjugate pairs |S_j| = |S_-j|); max/rms = 2.42; n/2 = 2.5
+      parity: mean S odd = -2.2670e-02-2.6e-18i, even = +2.3123e-02-1.2e-18i, sum of means = +4.53e-04; #odd = 54, #even = 54; predicted mean_even ~ (parity sum)/(2 #even) = +2.2897e-02
+n= 6 L=      486: (i) max|F - tau S|/3^(n/2) over primitive j = 6.6e-17; |tau|/3^(n/2) in [1.000000000000, 1.000000000000]; imprimitive j: max|F| = 2.2e-16, max|tau| = 2.1e-14, max|S| = 1.000 (S itself does NOT vanish there; it is the lower-level moment; the vanishing of F and tau is for n >= 2)
+      imprimitive consistency: max_j |S_n(psi_3j') - S_(n-1)(psi_j')| = 1.1e-16 (psi_j primitive iff 3 does not divide j: the induced characters give the lower-level moments)
+      (ii) sum_prim S = -0.005921000+0.0e+00i vs L mu_n(1) - (L/3) mu_(n-1)(1) = -0.005921000 = rho_n(1) - rho_(n-1)(1) = -0.005921000; parity sum = +3.699470334-2.2e-16i vs +3.699470334 = +3.699470334
+      accumulated: rho_n(1) = 2/3 + sum_(m=2..n) sum_prim S_m = 0.636947 vs law 0.636947 vs S19 0.63695; rho_n(-1) = 4/3 + sum parity = 11.0180 vs law 11.0180 vs S19 11.02; H_n(1) = (3/2) rho_n(1) = 0.955420; T_n = (3/2) sum_prim S_n = -0.0089 (note -0.009); 0.325 (3/2)^n = 3.702
+      spectrum: rms |S| 3^(n/2) = 0.8362 (note 0.8362); rms^2 = 0.6993 = (3/2) sum_units |mu_hat|^2 = 0.6993 [sum_units |mu_hat_n|^2 = 0.4662 = S20's 'mass at level n'; the fullperiod script's 'mass per level' 3^n sum|m|^2/L = 0.6993]
+      P(z > 1, 2, 3) = 0.296, 0.142, 0.086 (Exp(1): 0.368, 0.135, 0.050); max |S| 3^(n/2) = 2.206 (note 2.21) at j = +2=±2^1·1 (note ±2); top 8: 2.21@+2=±2^1·1, 2.21@-2=±2^1·1, 2.00@+22=±2^1·11, 2.00@-22=±2^1·11, 1.88@+40=±2^3·5, 1.88@-40=±2^3·5, 1.87@+14=±2^1·7, 1.87@-14=±2^1·7
+      Rayleigh-max reference: rms sqrt(ln L) = 2.08; rms sqrt(ln #prim) = 2.01 (#prim = 324); rms sqrt(ln(#prim/2) + gamma) = 1.99 (conjugate pairs |S_j| = |S_-j|); max/rms = 2.64; n/2 = 3.0
+      parity: mean S odd = -1.1436e-02+1.7e-19i, even = +1.1400e-02+0.0e+00i, sum of means = -3.65e-05; #odd = 162, #even = 162; predicted mean_even ~ (parity sum)/(2 #even) = +1.1418e-02
+n= 7 L=     1458: (i) max|F - tau S|/3^(n/2) over primitive j = 5.7e-17; |tau|/3^(n/2) in [1.000000000000, 1.000000000000]; imprimitive j: max|F| = 2.3e-16, max|tau| = 5.6e-14, max|S| = 1.000 (S itself does NOT vanish there; it is the lower-level moment; the vanishing of F and tau is for n >= 2)
+      imprimitive consistency: max_j |S_n(psi_3j') - S_(n-1)(psi_j')| = 2.2e-16 (psi_j primitive iff 3 does not divide j: the induced characters give the lower-level moments)
+      (ii) sum_prim S = -0.063373668-2.2e-16i vs L mu_n(1) - (L/3) mu_(n-1)(1) = -0.063373668 = rho_n(1) - rho_(n-1)(1) = -0.063373668; parity sum = +5.547744265+0.0e+00i vs +5.547744265 = +5.547744265
+      accumulated: rho_n(1) = 2/3 + sum_(m=2..n) sum_prim S_m = 0.573573 vs law 0.573573 vs S19 0.57357; rho_n(-1) = 4/3 + sum parity = 16.5657 vs law 16.5657 vs S19 16.57; H_n(1) = (3/2) rho_n(1) = 0.860359; T_n = (3/2) sum_prim S_n = -0.0951 (note -0.095); 0.325 (3/2)^n = 5.553
+      spectrum: rms |S| 3^(n/2) = 0.8356 (note 0.8356); rms^2 = 0.6982 = (3/2) sum_units |mu_hat|^2 = 0.6982 [sum_units |mu_hat_n|^2 = 0.4655 = S20's 'mass at level n'; the fullperiod script's 'mass per level' 3^n sum|m|^2/L = 0.6982]
+      P(z > 1, 2, 3) = 0.302, 0.136, 0.072 (Exp(1): 0.368, 0.135, 0.050); max |S| 3^(n/2) = 2.823 (note 2.82) at j = -80=±2^4·5 (note ±80); top 8: 2.82@-80=±2^4·5, 2.82@+80=±2^4·5, 2.28@+83, 2.28@-83, 2.26@+74=±2^1·37, 2.26@-74=±2^1·37, 2.25@+19, 2.25@-19
+      Rayleigh-max reference: rms sqrt(ln L) = 2.26; rms sqrt(ln #prim) = 2.19 (#prim = 972); rms sqrt(ln(#prim/2) + gamma) = 2.17 (conjugate pairs |S_j| = |S_-j|); max/rms = 3.38; n/2 = 3.5
+      parity: mean S odd = -5.7728e-03+1.1e-19i, even = +5.6424e-03+2.3e-19i, sum of means = -1.30e-04; #odd = 486, #even = 486; predicted mean_even ~ (parity sum)/(2 #even) = +5.7076e-03
+n= 8 L=     4374: (i) max|F - tau S|/3^(n/2) over primitive j = 3.1e-17; |tau|/3^(n/2) in [1.000000000000, 1.000000000000]; imprimitive j: max|F| = 3.0e-16, max|tau| = 1.7e-13, max|S| = 1.000 (S itself does NOT vanish there; it is the lower-level moment; the vanishing of F and tau is for n >= 2)
+      imprimitive consistency: max_j |S_n(psi_3j') - S_(n-1)(psi_j')| = 1.2e-16 (psi_j primitive iff 3 does not divide j: the induced characters give the lower-level moments)
+      (ii) sum_prim S = -0.057188538+6.7e-16i vs L mu_n(1) - (L/3) mu_(n-1)(1) = -0.057188538 = rho_n(1) - rho_(n-1)(1) = -0.057188538; parity sum = +8.324133606-6.7e-16i vs +8.324133606 = +8.324133606
+      accumulated: rho_n(1) = 2/3 + sum_(m=2..n) sum_prim S_m = 0.516384 vs law 0.516384 vs S19 0.51638; rho_n(-1) = 4/3 + sum parity = 24.8899 vs law 24.8899 vs S19 24.89; H_n(1) = (3/2) rho_n(1) = 0.774577; T_n = (3/2) sum_prim S_n = -0.0858 (note -0.086); 0.325 (3/2)^n = 8.329
+      spectrum: rms |S| 3^(n/2) = 0.8360 (note 0.8360); rms^2 = 0.6989 = (3/2) sum_units |mu_hat|^2 = 0.6989 [sum_units |mu_hat_n|^2 = 0.4659 = S20's 'mass at level n'; the fullperiod script's 'mass per level' 3^n sum|m|^2/L = 0.6989]
+      P(z > 1, 2, 3) = 0.286, 0.134, 0.080 (Exp(1): 0.368, 0.135, 0.050); max |S| 3^(n/2) = 2.945 (note 2.95) at j = +278=±2^1·139 (note ±278); top 8: 2.95@+278=±2^1·139, 2.95@-278=±2^1·139, 2.78@-298=±2^1·149, 2.78@+298=±2^1·149, 2.65@-35, 2.65@+35, 2.58@-52=±2^2·13, 2.58@+52=±2^2·13
+      Rayleigh-max reference: rms sqrt(ln L) = 2.42; rms sqrt(ln #prim) = 2.36 (#prim = 2916); rms sqrt(ln(#prim/2) + gamma) = 2.34 (conjugate pairs |S_j| = |S_-j|); max/rms = 3.52; n/2 = 4.0
+      parity: mean S odd = -2.8743e-03+4.2e-19i, even = +2.8350e-03+1.5e-19i, sum of means = -3.92e-05; #odd = 1458, #even = 1458; predicted mean_even ~ (parity sum)/(2 #even) = +2.8546e-03
+n= 9 L=    13122: (i) max|F - tau S|/3^(n/2) over primitive j = 1.9e-17; |tau|/3^(n/2) in [1.000000000000, 1.000000000000]; imprimitive j: max|F| = 2.5e-16, max|tau| = 5.1e-13, max|S| = 1.000 (S itself does NOT vanish there; it is the lower-level moment; the vanishing of F and tau is for n >= 2)
+      imprimitive consistency: max_j |S_n(psi_3j') - S_(n-1)(psi_j')| = 3.3e-16 (psi_j primitive iff 3 does not divide j: the induced characters give the lower-level moments)
+      (ii) sum_prim S = -0.051881161-4.4e-16i vs L mu_n(1) - (L/3) mu_(n-1)(1) = -0.051881161 = rho_n(1) - rho_(n-1)(1) = -0.051881161; parity sum = +12.494194757+8.9e-16i vs +12.494194757 = +12.494194757
+      accumulated: rho_n(1) = 2/3 + sum_(m=2..n) sum_prim S_m = 0.464503 vs law 0.464503 vs S19 0.46450; rho_n(-1) = 4/3 + sum parity = 37.3841 vs law 37.3841 vs S19 37.38; H_n(1) = (3/2) rho_n(1) = 0.696755; T_n = (3/2) sum_prim S_n = -0.0778 (note -0.078); 0.325 (3/2)^n = 12.494
+      spectrum: rms |S| 3^(n/2) = 0.8367 (note 0.8367); rms^2 = 0.7000 = (3/2) sum_units |mu_hat|^2 = 0.7000 [sum_units |mu_hat_n|^2 = 0.4667 = S20's 'mass at level n'; the fullperiod script's 'mass per level' 3^n sum|m|^2/L = 0.7000]
+      P(z > 1, 2, 3) = 0.284, 0.133, 0.078 (Exp(1): 0.368, 0.135, 0.050); max |S| 3^(n/2) = 3.604 (note 3.60) at j = +521 (note ±521); top 8: 3.60@+521, 3.60@-521, 3.29@-716=±2^2·179, 3.29@+716=±2^2·179, 3.22@+35, 3.22@-35, 3.15@-683, 3.15@+683
+      Rayleigh-max reference: rms sqrt(ln L) = 2.58; rms sqrt(ln #prim) = 2.52 (#prim = 8748); rms sqrt(ln(#prim/2) + gamma) = 2.50 (conjugate pairs |S_j| = |S_-j|); max/rms = 4.31; n/2 = 4.5
+      parity: mean S odd = -1.4342e-03-5.1e-20i, even = +1.4223e-03+0.0e+00i, sum of means = -1.19e-05; #odd = 4374, #even = 4374; predicted mean_even ~ (parity sum)/(2 #even) = +1.4282e-03
+n=10 L=    39366: (i) max|F - tau S|/3^(n/2) over primitive j = 1.3e-17; |tau|/3^(n/2) in [1.000000000000, 1.000000000000]; imprimitive j: max|F| = 3.1e-16, max|tau| = 1.5e-12, max|S| = 1.000 (S itself does NOT vanish there; it is the lower-level moment; the vanishing of F and tau is for n >= 2)
+      imprimitive consistency: max_j |S_n(psi_3j') - S_(n-1)(psi_j')| = 2.2e-16 (psi_j primitive iff 3 does not divide j: the induced characters give the lower-level moments)
+      (ii) sum_prim S = -0.039532179+4.4e-16i vs L mu_n(1) - (L/3) mu_(n-1)(1) = -0.039532179 = rho_n(1) - rho_(n-1)(1) = -0.039532179; parity sum = +18.733896928+4.4e-16i vs +18.733896928 = +18.733896928
+      accumulated: rho_n(1) = 2/3 + sum_(m=2..n) sum_prim S_m = 0.424971 vs law 0.424971 vs S19 0.42497; rho_n(-1) = 4/3 + sum parity = 56.1180 vs law 56.1180 vs S19 56.12; H_n(1) = (3/2) rho_n(1) = 0.637457; T_n = (3/2) sum_prim S_n = -0.0593 (note -0.059); 0.325 (3/2)^n = 18.741
+      spectrum: rms |S| 3^(n/2) = 0.8373 (note 0.8373); rms^2 = 0.7011 = (3/2) sum_units |mu_hat|^2 = 0.7011 [sum_units |mu_hat_n|^2 = 0.4674 = S20's 'mass at level n'; the fullperiod script's 'mass per level' 3^n sum|m|^2/L = 0.7011]
+      P(z > 1, 2, 3) = 0.275, 0.129, 0.075 (Exp(1): 0.368, 0.135, 0.050); max |S| 3^(n/2) = 4.085 (note 4.09) at j = +1193 (note ±1193); top 8: 4.09@+1193, 4.09@-1193, 3.93@+370=±2^1·185, 3.93@-370=±2^1·185, 3.85@+856=±2^3·107, 3.85@-856=±2^3·107, 3.73@+464=±2^4·29, 3.73@-464=±2^4·29
+      Rayleigh-max reference: rms sqrt(ln L) = 2.72; rms sqrt(ln #prim) = 2.67 (#prim = 26244); rms sqrt(ln(#prim/2) + gamma) = 2.66 (conjugate pairs |S_j| = |S_-j|); max/rms = 4.88; n/2 = 5.0
+      parity: mean S odd = -7.1534e-04+0.0e+00i, even = +7.1233e-04-3.4e-20i, sum of means = -3.01e-06; #odd = 13122, #even = 13122; predicted mean_even ~ (parity sum)/(2 #even) = +7.1384e-04
+n=11 L=   118098: (i) max|F - tau S|/3^(n/2) over primitive j = 1.1e-17; |tau|/3^(n/2) in [1.000000000000, 1.000000000000]; imprimitive j: max|F| = 3.1e-16, max|tau| = 4.6e-12, max|S| = 1.000 (S itself does NOT vanish there; it is the lower-level moment; the vanishing of F and tau is for n >= 2)
+      imprimitive consistency: max_j |S_n(psi_3j') - S_(n-1)(psi_j')| = 1.1e-16 (psi_j primitive iff 3 does not divide j: the induced characters give the lower-level moments)
+      (ii) sum_prim S = -0.030691617-8.9e-16i vs L mu_n(1) - (L/3) mu_(n-1)(1) = -0.030691617 = rho_n(1) - rho_(n-1)(1) = -0.030691617; parity sum = +28.108340770+0.0e+00i vs +28.108340770 = +28.108340770
+      accumulated: rho_n(1) = 2/3 + sum_(m=2..n) sum_prim S_m = 0.394279 vs law 0.394279 vs S19 0.39428; rho_n(-1) = 4/3 + sum parity = 84.2263 vs law 84.2263 vs S19 84.23; H_n(1) = (3/2) rho_n(1) = 0.591419; T_n = (3/2) sum_prim S_n = -0.0460 (note -0.046); 0.325 (3/2)^n = 28.112
+      spectrum: rms |S| 3^(n/2) = 0.8380 (note 0.8380); rms^2 = 0.7023 = (3/2) sum_units |mu_hat|^2 = 0.7023 [sum_units |mu_hat_n|^2 = 0.4682 = S20's 'mass at level n'; the fullperiod script's 'mass per level' 3^n sum|m|^2/L = 0.7023]
+      P(z > 1, 2, 3) = 0.275, 0.130, 0.074 (Exp(1): 0.368, 0.135, 0.050); max |S| 3^(n/2) = 4.347 (note 4.35) at j = -1127 (note ±1127); top 8: 4.35@-1127, 4.35@+1127, 4.31@-4094=±2^1·2047, 4.31@+4094=±2^1·2047, 4.19@-3623, 4.19@+3623, 4.05@-718=±2^1·359, 4.05@+718=±2^1·359
+      Rayleigh-max reference: rms sqrt(ln L) = 2.86; rms sqrt(ln #prim) = 2.81 (#prim = 78732); rms sqrt(ln(#prim/2) + gamma) = 2.80 (conjugate pairs |S_j| = |S_-j|); max/rms = 5.19; n/2 = 5.5
+      parity: mean S odd = -3.5740e-04-5.6e-21i, even = +3.5662e-04-2.3e-20i, sum of means = -7.80e-07; #odd = 39366, #even = 39366; predicted mean_even ~ (parity sum)/(2 #even) = +3.5701e-04
+n=12 L=   354294: (i) max|F - tau S|/3^(n/2) over primitive j = 1.4e-17; |tau|/3^(n/2) in [1.000000000000, 1.000000000000]; imprimitive j: max|F| = 3.8e-16, max|tau| = 1.4e-11, max|S| = 1.000 (S itself does NOT vanish there; it is the lower-level moment; the vanishing of F and tau is for n >= 2)
+      imprimitive consistency: max_j |S_n(psi_3j') - S_(n-1)(psi_j')| = 1.1e-16 (psi_j primitive iff 3 does not divide j: the induced characters give the lower-level moments)
+      (ii) sum_prim S = -0.036036085+8.9e-16i vs L mu_n(1) - (L/3) mu_(n-1)(1) = -0.036036085 = rho_n(1) - rho_(n-1)(1) = -0.036036085; parity sum = +42.169412973-3.6e-15i vs +42.169412973 = +42.169412973
+      accumulated: rho_n(1) = 2/3 + sum_(m=2..n) sum_prim S_m = 0.358243 vs law 0.358243 vs S19 0.35824; rho_n(-1) = 4/3 + sum parity = 126.3957 vs law 126.3957 vs S19 126.4; H_n(1) = (3/2) rho_n(1) = 0.537365; T_n = (3/2) sum_prim S_n = -0.0541 (note -0.054); 0.325 (3/2)^n = 42.168
+      spectrum: rms |S| 3^(n/2) = 0.8387 (note 0.8387); rms^2 = 0.7034 = (3/2) sum_units |mu_hat|^2 = 0.7034 [sum_units |mu_hat_n|^2 = 0.4689 = S20's 'mass at level n'; the fullperiod script's 'mass per level' 3^n sum|m|^2/L = 0.7034]
+      P(z > 1, 2, 3) = 0.271, 0.129, 0.073 (Exp(1): 0.368, 0.135, 0.050); max |S| 3^(n/2) = 5.751 (note 5.75) at j = +4219 (note ±4219); top 8: 5.75@+4219, 5.75@-4219, 5.31@+13277, 5.31@-13277, 5.12@+22025, 5.12@-22025, 5.08@+3314=±2^1·1657, 5.08@-3314=±2^1·1657
+      Rayleigh-max reference: rms sqrt(ln L) = 3.00; rms sqrt(ln #prim) = 2.95 (#prim = 236196); rms sqrt(ln(#prim/2) + gamma) = 2.94 (conjugate pairs |S_j| = |S_-j|); max/rms = 6.86; n/2 = 6.0
+      parity: mean S odd = -1.7869e-04+1.9e-20i, even = +1.7838e-04-1.5e-20i, sum of means = -3.05e-07; #odd = 118098, #even = 118098; predicted mean_even ~ (parity sum)/(2 #even) = +1.7854e-04
+n=13 L=  1062882: (i) max|F - tau S|/3^(n/2) over primitive j = 8.5e-18; |tau|/3^(n/2) in [1.000000000000, 1.000000000000]; imprimitive j: max|F| = 3.5e-16, max|tau| = 4.2e-11, max|S| = 1.000 (S itself does NOT vanish there; it is the lower-level moment; the vanishing of F and tau is for n >= 2)
+      imprimitive consistency: max_j |S_n(psi_3j') - S_(n-1)(psi_j')| = 1.8e-16 (psi_j primitive iff 3 does not divide j: the induced characters give the lower-level moments)
+      (ii) sum_prim S = -0.024812355-1.8e-15i vs L mu_n(1) - (L/3) mu_(n-1)(1) = -0.024812355 = rho_n(1) - rho_(n-1)(1) = -0.024812355; parity sum = +63.246961465+1.8e-15i vs +63.246961465 = +63.246961465
+      accumulated: rho_n(1) = 2/3 + sum_(m=2..n) sum_prim S_m = 0.333431 vs law 0.333431 vs S19 0.33343; rho_n(-1) = 4/3 + sum parity = 189.6427 vs law 189.6427 vs S19 189.6; H_n(1) = (3/2) rho_n(1) = 0.500147; T_n = (3/2) sum_prim S_n = -0.0372 (note -0.037); 0.325 (3/2)^n = 63.251
+      spectrum: rms |S| 3^(n/2) = 0.8393 (note 0.8393); rms^2 = 0.7044 = (3/2) sum_units |mu_hat|^2 = 0.7044 [sum_units |mu_hat_n|^2 = 0.4696 = S20's 'mass at level n'; the fullperiod script's 'mass per level' 3^n sum|m|^2/L = 0.7044]
+      P(z > 1, 2, 3) = 0.270, 0.129, 0.074 (Exp(1): 0.368, 0.135, 0.050); max |S| 3^(n/2) = 6.035 (note 6.04) at j = +40162=±2^1·20081 (note ±40162); top 8: 6.04@+40162=±2^1·20081, 6.04@-40162=±2^1·20081, 5.86@+36031, 5.86@-36031, 5.78@+796=±2^2·199, 5.78@-796=±2^2·199, 5.58@-10648=±2^3·1331, 5.58@+10648=±2^3·1331
+      Rayleigh-max reference: rms sqrt(ln L) = 3.13; rms sqrt(ln #prim) = 3.08 (#prim = 708588); rms sqrt(ln(#prim/2) + gamma) = 3.07 (conjugate pairs |S_j| = |S_-j|); max/rms = 7.19; n/2 = 6.5
+      parity: mean S odd = -8.9293e-05-7.5e-21i, even = +8.9223e-05+0.0e+00i, sum of means = -7.00e-08; #odd = 354294, #even = 354294; predicted mean_even ~ (parity sum)/(2 #even) = +8.9258e-05
+n=14 L=  3188646: (i) max|F - tau S|/3^(n/2) over primitive j = 8.2e-18; |tau|/3^(n/2) in [1.000000000000, 1.000000000000]; imprimitive j: max|F| = 3.8e-16, max|tau| = 1.2e-10, max|S| = 1.000 (S itself does NOT vanish there; it is the lower-level moment; the vanishing of F and tau is for n >= 2)
+      imprimitive consistency: max_j |S_n(psi_3j') - S_(n-1)(psi_j')| = 1.1e-16 (psi_j primitive iff 3 does not divide j: the induced characters give the lower-level moments)
+      (ii) sum_prim S = -0.017938759-1.1e-14i vs L mu_n(1) - (L/3) mu_(n-1)(1) = -0.017938759 = rho_n(1) - rho_(n-1)(1) = -0.017938759; parity sum = +94.860954259+7.1e-15i vs +94.860954259 = +94.860954259
+      accumulated: rho_n(1) = 2/3 + sum_(m=2..n) sum_prim S_m = 0.315492 vs law 0.315492 vs S19 0.31549; rho_n(-1) = 4/3 + sum parity = 284.5036 vs law 284.5036 vs S19 284.5; H_n(1) = (3/2) rho_n(1) = 0.473238; T_n = (3/2) sum_prim S_n = -0.0269 (note -0.027); 0.325 (3/2)^n = 94.877
+      spectrum: rms |S| 3^(n/2) = 0.8399 (note 0.8399); rms^2 = 0.7054 = (3/2) sum_units |mu_hat|^2 = 0.7054 [sum_units |mu_hat_n|^2 = 0.4703 = S20's 'mass at level n'; the fullperiod script's 'mass per level' 3^n sum|m|^2/L = 0.7054]
+      P(z > 1, 2, 3) = 0.268, 0.128, 0.074 (Exp(1): 0.368, 0.135, 0.050); max |S| 3^(n/2) = 7.409 (note 7.41) at j = +71333 (note ±71333); top 8: 7.41@+71333, 7.41@-71333, 7.32@-150065, 7.32@+150065, 7.21@+31967, 7.21@-31967, 7.01@+46765, 7.01@-46765
+      Rayleigh-max reference: rms sqrt(ln L) = 3.25; rms sqrt(ln #prim) = 3.21 (#prim = 2125764); rms sqrt(ln(#prim/2) + gamma) = 3.19 (conjugate pairs |S_j| = |S_-j|); max/rms = 8.82; n/2 = 7.0
+      parity: mean S odd = -4.4633e-05-9.2e-21i, even = +4.4616e-05-1.7e-21i, sum of means = -1.69e-08; #odd = 1062882, #even = 1062882; predicted mean_even ~ (parity sum)/(2 #even) = +4.4624e-05
+n=15 L=  9565938: (i) max|F - tau S|/3^(n/2) over primitive j = 8.2e-18; |tau|/3^(n/2) in [1.000000000000, 1.000000000000]; imprimitive j: max|F| = 3.8e-16, max|tau| = 3.7e-10, max|S| = 1.000 (S itself does NOT vanish there; it is the lower-level moment; the vanishing of F and tau is for n >= 2)
+      imprimitive consistency: max_j |S_n(psi_3j') - S_(n-1)(psi_j')| = 1.1e-16 (psi_j primitive iff 3 does not divide j: the induced characters give the lower-level moments)
+      (ii) sum_prim S = -0.009585813+0.0e+00i vs L mu_n(1) - (L/3) mu_(n-1)(1) = -0.009585813 = rho_n(1) - rho_(n-1)(1) = -0.009585813; parity sum = +142.291022145+0.0e+00i vs +142.291022145 = +142.291022145
+      accumulated: rho_n(1) = 2/3 + sum_(m=2..n) sum_prim S_m = 0.305906 vs law 0.305906 vs S19 0.30591; rho_n(-1) = 4/3 + sum parity = 426.7946 vs law 426.7946 vs S19 426.8; H_n(1) = (3/2) rho_n(1) = 0.458860; T_n = (3/2) sum_prim S_n = -0.0144 (note -0.014); 0.325 (3/2)^n = 142.316
+      spectrum: rms |S| 3^(n/2) = 0.8404 (note 0.8404); rms^2 = 0.7062 = (3/2) sum_units |mu_hat|^2 = 0.7062 [sum_units |mu_hat_n|^2 = 0.4708 = S20's 'mass at level n'; the fullperiod script's 'mass per level' 3^n sum|m|^2/L = 0.7062]
+      P(z > 1, 2, 3) = 0.267, 0.128, 0.073 (Exp(1): 0.368, 0.135, 0.050); max |S| 3^(n/2) = 7.786 (note 7.79) at j = -154112=±2^9·301 (note ±154112); top 8: 7.79@-154112=±2^9·301, 7.79@+154112=±2^9·301, 7.16@-431861, 7.16@+431861, 7.06@+3863, 7.06@-3863, 6.97@+377329, 6.97@-377329
+      Rayleigh-max reference: rms sqrt(ln L) = 3.37; rms sqrt(ln #prim) = 3.33 (#prim = 6377292); rms sqrt(ln(#prim/2) + gamma) = 3.31 (conjugate pairs |S_j| = |S_-j|); max/rms = 9.27; n/2 = 7.5
+      parity: mean S odd = -2.2314e-05-5.6e-22i, even = +2.2311e-05+0.0e+00i, sum of means = -3.01e-09; #odd = 3188646, #even = 3188646; predicted mean_even ~ (parity sum)/(2 #even) = +2.2312e-05
+n=16 L= 28697814: (i) max|F - tau S|/3^(n/2) over primitive j = 7.9e-18; |tau|/3^(n/2) in [1.000000000000, 1.000000000000]; imprimitive j: max|F| = 4.1e-16, max|tau| = 1.1e-09, max|S| = 1.000 (S itself does NOT vanish there; it is the lower-level moment; the vanishing of F and tau is for n >= 2)
+      imprimitive consistency: max_j |S_n(psi_3j') - S_(n-1)(psi_j')| = 9.3e-17 (psi_j primitive iff 3 does not divide j: the induced characters give the lower-level moments)
+      (ii) sum_prim S = -0.015796933-1.4e-14i vs L mu_n(1) - (L/3) mu_(n-1)(1) = -0.015796933 = rho_n(1) - rho_(n-1)(1) = -0.015796933; parity sum = +213.433932660+7.1e-15i vs +213.433932660 = +213.433932660
+      accumulated: rho_n(1) = 2/3 + sum_(m=2..n) sum_prim S_m = 0.290110 vs law 0.290110 vs S19 0.29011; rho_n(-1) = 4/3 + sum parity = 640.2286 vs law 640.2286 vs S19 640.2; H_n(1) = (3/2) rho_n(1) = 0.435164; T_n = (3/2) sum_prim S_n = -0.0237 (note -0.024); 0.325 (3/2)^n = 213.473
+      spectrum: rms |S| 3^(n/2) = 0.8408 (note 0.8408); rms^2 = 0.7070 = (3/2) sum_units |mu_hat|^2 = 0.7070 [sum_units |mu_hat_n|^2 = 0.4714 = S20's 'mass at level n'; the fullperiod script's 'mass per level' 3^n sum|m|^2/L = 0.7070]
+      P(z > 1, 2, 3) = 0.266, 0.127, 0.074 (Exp(1): 0.368, 0.135, 0.050); max |S| 3^(n/2) = 9.111 (note 9.11) at j = -1516613 (note ±1516613); top 8: 9.11@-1516613, 9.11@+1516613, 8.90@+1398515, 8.90@-1398515, 8.86@+505708=±2^2·126427, 8.86@-505708=±2^2·126427, 8.86@+335633, 8.86@-335633
+      Rayleigh-max reference: rms sqrt(ln L) = 3.48; rms sqrt(ln #prim) = 3.44 (#prim = 19131876); rms sqrt(ln(#prim/2) + gamma) = 3.43 (conjugate pairs |S_j| = |S_-j|); max/rms = 10.84; n/2 = 8.0
+      parity: mean S odd = -1.1157e-05-3.7e-22i, even = +1.1155e-05+0.0e+00i, sum of means = -1.65e-09; #odd = 9565938, #even = 9565938; predicted mean_even ~ (parity sum)/(2 #even) = +1.1156e-05
+
+Summary of Theorem 1(ii) against S19 (deep18 output):
+   n= 2: rho_n(1) accumulated 0.761905 vs S19 0.76190 [5 digits]; parity increment 0.76190 vs S19 difference 0.762 (S19 prints rho_n(-1) to 4 significant digits: differences known to ~3-4 digits only)
+   n= 3: rho_n(1) accumulated 0.661379 vs S19 0.66138 [5 digits]; parity increment 1.10248 vs S19 difference 1.103 (S19 prints rho_n(-1) to 4 significant digits: differences known to ~3-4 digits only)
+   n= 4: rho_n(1) accumulated 0.618418 vs S19 0.61842 [5 digits]; parity increment 1.64797 vs S19 difference 1.648 (S19 prints rho_n(-1) to 4 significant digits: differences known to ~3-4 digits only)
+   n= 5: rho_n(1) accumulated 0.642868 vs S19 0.64287 [5 digits]; parity increment 2.47283 vs S19 difference 2.473 (S19 prints rho_n(-1) to 4 significant digits: differences known to ~3-4 digits only)
+   n= 6: rho_n(1) accumulated 0.636947 vs S19 0.63695 [5 digits]; parity increment 3.69947 vs S19 difference 3.701 (S19 prints rho_n(-1) to 4 significant digits: differences known to ~3-4 digits only)
+   n= 7: rho_n(1) accumulated 0.573573 vs S19 0.57357 [5 digits]; parity increment 5.54774 vs S19 difference 5.55 (S19 prints rho_n(-1) to 4 significant digits: differences known to ~3-4 digits only)
+   n= 8: rho_n(1) accumulated 0.516384 vs S19 0.51638 [5 digits]; parity increment 8.32413 vs S19 difference 8.32 (S19 prints rho_n(-1) to 4 significant digits: differences known to ~3-4 digits only)
+   n= 9: rho_n(1) accumulated 0.464503 vs S19 0.46450 [5 digits]; parity increment 12.49419 vs S19 difference 12.49 (S19 prints rho_n(-1) to 4 significant digits: differences known to ~3-4 digits only)
+   n=10: rho_n(1) accumulated 0.424971 vs S19 0.42497 [5 digits]; parity increment 18.73390 vs S19 difference 18.74 (S19 prints rho_n(-1) to 4 significant digits: differences known to ~3-4 digits only)
+   n=11: rho_n(1) accumulated 0.394279 vs S19 0.39428 [5 digits]; parity increment 28.10834 vs S19 difference 28.11 (S19 prints rho_n(-1) to 4 significant digits: differences known to ~3-4 digits only)
+   n=12: rho_n(1) accumulated 0.358243 vs S19 0.35824 [5 digits]; parity increment 42.16941 vs S19 difference 42.17 (S19 prints rho_n(-1) to 4 significant digits: differences known to ~3-4 digits only)
+   n=13: rho_n(1) accumulated 0.333431 vs S19 0.33343 [5 digits]; parity increment 63.24696 vs S19 difference 63.2 (S19 prints rho_n(-1) to 4 significant digits: differences known to ~3-4 digits only)
+   n=14: rho_n(1) accumulated 0.315492 vs S19 0.31549 [5 digits]; parity increment 94.86095 vs S19 difference 94.9 (S19 prints rho_n(-1) to 4 significant digits: differences known to ~3-4 digits only)
+   n=15: rho_n(1) accumulated 0.305906 vs S19 0.30591 [5 digits]; parity increment 142.29102 vs S19 difference 142.3 (S19 prints rho_n(-1) to 4 significant digits: differences known to ~3-4 digits only)
+   n=16: rho_n(1) accumulated 0.290110 vs S19 0.29011 [5 digits]; parity increment 213.43393 vs S19 difference 213.4 (S19 prints rho_n(-1) to 4 significant digits: differences known to ~3-4 digits only)
+   the note's 'partial sums 1 + sum_(m<=n) T_m' with T_1 = -1/2: at n = 2 this is 0.6428571428571429 but H_2(1) = 8/7 = 1.1428571428571428 ; the correct partial sum is 1 + sum_(2<=m<=n) T_m (or 3/2 + sum_(1<=m<=n) T_m): 1.1428571428571428
+   random-phase size of sum_prim S_m at m = 16: sqrt(#prim) rms 3^(-m/2) = sqrt((2/3) L_m) 0.84 3^(-m/2) = 0.560 (with L_m in place of the primitive count (2/3) L_m one gets 0.686, the note's 0.69); observed |sum| = 0.0158
+
+====================================================================================================
+C. Proposition 2 (full-period one-pole recursion): sequential Python filter (n <= 10), FFT closed form (n <= NLAW), sequential C to level NREC
+====================================================================================================
+derivation: mu_hat_n(t) = sum_a 2^-a e((t 2^-a mod 3^n)/3^n) mu_hat_(n-1)(t 2^-a mod 3^(n-1)) [condition on the last valuation a;
+  Y_n = 2^-a (3 Y_(n-1) + 1); the inverse of 2 mod 3^n reduces to the inverse mod 3^(n-1)].  With t = 2^k: m_n(k) = sum_(a>=1) 2^-a g(k-a),
+  g(k) = omega_n(k) m_(n-1)(k mod L_(n-1)).  Then m_n(k-1) = sum_(a>=1) 2^-a g(k-1-a) = 2 [m_n(k) - g(k-1)/2], i.e. m_n(k) = (g(k-1) + m_n(k-1))/2.
+  The homogeneous solutions c 2^k are not L-periodic (2^L != 1), so the periodic solution is unique; from any state the error is 2^-(steps).
+n= 1: one recursion step from the law's m_(n-1): FFT closed form max|m_rec - m_law| = 2.5e-16; sequential filter max|m_rec - m_law| = 2.5e-16; M(n) = max_k |m_n(k)| = 0.5773503 (S20 FFT 0.5773503, diff -3.1e-08) at k = 0 (signed 0, mirror 1; S20 argmax 2^0 is one of ±2^k: True); nearest-to-n log2 3 exponent s = 1: s - n log2 3 = -0.58; floor(n log2 3) - 6 = -5
+n= 2: one recursion step from the law's m_(n-1): FFT closed form max|m_rec - m_law| = 2.2e-16; sequential filter max|m_rec - m_law| = 2.0e-16; M(n) = max_k |m_n(k)| = 0.3779236 (S20 FFT 0.3779236, diff +3.2e-08) at k = 2 (signed 2, mirror -1; S20 argmax 2^2 is one of ±2^k: True); nearest-to-n log2 3 exponent s = 2: s - n log2 3 = -1.17; floor(n log2 3) - 6 = -3
+n= 3: one recursion step from the law's m_(n-1): FFT closed form max|m_rec - m_law| = 1.5e-16; sequential filter max|m_rec - m_law| = 1.0e-16; M(n) = max_k |m_n(k)| = 0.2522368 (S20 FFT 0.2522368, diff +3.8e-08) at k = 3 (signed 3, mirror -6; S20 argmax 2^3 is one of ±2^k: True); nearest-to-n log2 3 exponent s = 3: s - n log2 3 = -1.75; floor(n log2 3) - 6 = -2
+n= 4: one recursion step from the law's m_(n-1): FFT closed form max|m_rec - m_law| = 1.6e-16; sequential filter max|m_rec - m_law| = 1.1e-16; M(n) = max_k |m_n(k)| = 0.1769989 (S20 FFT 0.1769989, diff -2.4e-08) at k = 4 (signed 4, mirror -23; S20 argmax 2^4 is one of ±2^k: True); nearest-to-n log2 3 exponent s = 4: s - n log2 3 = -2.34; floor(n log2 3) - 6 = 0
+n= 5: one recursion step from the law's m_(n-1): FFT closed form max|m_rec - m_law| = 1.1e-16; sequential filter max|m_rec - m_law| = 8.8e-17; M(n) = max_k |m_n(k)| = 0.1292736 (S20 FFT 0.1292736, diff -2.9e-08) at k = 86 (signed -76, mirror 5; S20 argmax 2^5 is one of ±2^k: True); nearest-to-n log2 3 exponent s = 5: s - n log2 3 = -2.92; floor(n log2 3) - 6 = 1
+n= 6: one recursion step from the law's m_(n-1): FFT closed form max|m_rec - m_law| = 8.3e-17; sequential filter max|m_rec - m_law| = 7.2e-17; M(n) = max_k |m_n(k)| = 0.0961064 (S20 FFT 0.0961064, diff -8.5e-09) at k = 6 (signed 6, mirror -237; S20 argmax 2^6 is one of ±2^k: True); nearest-to-n log2 3 exponent s = 6: s - n log2 3 = -3.51; floor(n log2 3) - 6 = 3
+n= 7: one recursion step from the law's m_(n-1): FFT closed form max|m_rec - m_law| = 7.5e-17; sequential filter max|m_rec - m_law| = 4.4e-17; M(n) = max_k |m_n(k)| = 0.0758700 (S20 FFT 0.0758700, diff +3.8e-08) at k = 8 (signed 8, mirror -721; S20 argmax 2^8 is one of ±2^k: True); nearest-to-n log2 3 exponent s = 8: s - n log2 3 = -3.09; floor(n log2 3) - 6 = 5
+n= 8: one recursion step from the law's m_(n-1): FFT closed form max|m_rec - m_law| = 3.7e-17; sequential filter max|m_rec - m_law| = 3.1e-17; M(n) = max_k |m_n(k)| = 0.0608907 (S20 FFT 0.0608907, diff +3.9e-08) at k = 2196 (signed -2178, mirror 9; S20 argmax 2^9 is one of ±2^k: True); nearest-to-n log2 3 exponent s = 9: s - n log2 3 = -3.68; floor(n log2 3) - 6 = 6
+n= 9: one recursion step from the law's m_(n-1): FFT closed form max|m_rec - m_law| = 2.3e-17; sequential filter max|m_rec - m_law| = 2.4e-17; M(n) = max_k |m_n(k)| = 0.0480262 (S20 FFT 0.0480262, diff -4.6e-08) at k = 10 (signed 10, mirror -6551; S20 argmax 2^10 is one of ±2^k: True); nearest-to-n log2 3 exponent s = 10: s - n log2 3 = -4.26; floor(n log2 3) - 6 = 8
+n=10: one recursion step from the law's m_(n-1): FFT closed form max|m_rec - m_law| = 2.8e-17; sequential filter max|m_rec - m_law| = 1.9e-17; M(n) = max_k |m_n(k)| = 0.0382783 (S20 FFT 0.0382783, diff +1.7e-08) at k = 12 (signed 12, mirror -19671; S20 argmax 2^12 is one of ±2^k: True); nearest-to-n log2 3 exponent s = 12: s - n log2 3 = -3.85; floor(n log2 3) - 6 = 9
+n=11: one recursion step from the law's m_(n-1): FFT closed form max|m_rec - m_law| = 2.3e-17; M(n) = max_k |m_n(k)| = 0.0319442 (S20 FFT 0.0319442, diff -1.1e-08) at k = 59062 (signed -59036, mirror 13; S20 argmax 2^13 is one of ±2^k: True); nearest-to-n log2 3 exponent s = 13: s - n log2 3 = -4.43; floor(n log2 3) - 6 = 11
+n=12: one recursion step from the law's m_(n-1): FFT closed form max|m_rec - m_law| = 2.1e-17; M(n) = max_k |m_n(k)| = 0.0264582 (S20 FFT 0.0264582, diff -3.1e-08) at k = 177161 (signed -177133, mirror 14; S20 argmax 2^14 is one of ±2^k: True); nearest-to-n log2 3 exponent s = 14: s - n log2 3 = -5.02; floor(n log2 3) - 6 = 13
+n=13: one recursion step from the law's m_(n-1): FFT closed form max|m_rec - m_law| = 9.9e-18; M(n) = max_k |m_n(k)| = 0.0220524 (S20 FFT 0.0220524, diff +2.6e-08) at k = 16 (signed 16, mirror -531425; S20 argmax 2^16 is one of ±2^k: True); nearest-to-n log2 3 exponent s = 16: s - n log2 3 = -4.60; floor(n log2 3) - 6 = 14
+n=14: one recursion step from the law's m_(n-1): FFT closed form max|m_rec - m_law| = 1.2e-17; M(n) = max_k |m_n(k)| = 0.0191280 (S20 FFT 0.0191280, diff -9.3e-09) at k = 17 (signed 17, mirror -1594306; S20 argmax 2^17 is one of ±2^k: True); nearest-to-n log2 3 exponent s = 17: s - n log2 3 = -5.19; floor(n log2 3) - 6 = 16
+n=15: one recursion step from the law's m_(n-1): FFT closed form max|m_rec - m_law| = 1.1e-17; M(n) = max_k |m_n(k)| = 0.0162845 (S20 FFT 0.0162845, diff -1.6e-08) at k = 18 (signed 18, mirror -4782951; S20 argmax 2^18 is one of ±2^k: True); nearest-to-n log2 3 exponent s = 18: s - n log2 3 = -5.77; floor(n log2 3) - 6 = 17
+n=16: one recursion step from the law's m_(n-1): FFT closed form max|m_rec - m_law| = 1.7e-17; M(n) = max_k |m_n(k)| = 0.0144095 (S20 FFT 0.0144095, diff -6.9e-09) at k = 20 (signed 20, mirror -14348887; S20 argmax 2^20 is one of ±2^k: True); nearest-to-n log2 3 exponent s = 20: s - n log2 3 = -5.36; floor(n log2 3) - 6 = 19
+gcc (fp_audit): ok
+n= 1: L=2: M(n) = 0.5773503 at k = 0; Fourier mass 3^n sum|m|^2/L = 1.0000 (sum over units of |mu_hat|^2 = 0.6667); top-5: k=0(|m|=0.5773503; signed 0, mirror 1) k=1(|m|=0.5773503; signed 1, mirror 0) k=0(|m|=0.0000000; signed 0, mirror 1) k=0(|m|=0.0000000; signed 0, mirror 1) k=0(|m|=0.0000000; signed 0, mirror 1)   [0s]
+n= 2: L=6: M(n) = 0.3779236 at k = 2; Fourier mass 3^n sum|m|^2/L = 0.7143 (sum over units of |mu_hat|^2 = 0.4762); top-5: k=2(|m|=0.3779236; signed 2, mirror -1) k=5(|m|=0.3779236; signed -1, mirror 2) k=3(|m|=0.2221462; signed 3, mirror 0) k=0(|m|=0.2221462; signed 0, mirror 3) k=1(|m|=0.2142896; signed 1, mirror -2)   [0s]
+n= 3: L=18: M(n) = 0.2522368 at k = 3; Fourier mass 3^n sum|m|^2/L = 0.6924 (sum over units of |mu_hat|^2 = 0.4616); top-5: k=3(|m|=0.2522368; signed 3, mirror -6) k=12(|m|=0.2522368; signed -6, mirror 3) k=8(|m|=0.1943357; signed 8, mirror -1) k=17(|m|=0.1943357; signed -1, mirror 8) k=16(|m|=0.1747713; signed -2, mirror 7)   [0s]
+n= 4: L=54: M(n) = 0.1769989 at k = 4; Fourier mass 3^n sum|m|^2/L = 0.6963 (sum over units of |mu_hat|^2 = 0.4642); top-5: k=4(|m|=0.1769989; signed 4, mirror -23) k=31(|m|=0.1769989; signed -23, mirror 4) k=13(|m|=0.1347180; signed 13, mirror -14) k=40(|m|=0.1347180; signed -14, mirror 13) k=53(|m|=0.1326137; signed -1, mirror 26)   [0s]
+n= 5: L=162: M(n) = 0.1292736 at k = 5; Fourier mass 3^n sum|m|^2/L = 0.6983 (sum over units of |mu_hat|^2 = 0.4655); top-5: k=5(|m|=0.1292736; signed 5, mirror -76) k=86(|m|=0.1292736; signed -76, mirror 5) k=6(|m|=0.1006288; signed 6, mirror -75) k=87(|m|=0.1006288; signed -75, mirror 6) k=59(|m|=0.0979070; signed 59, mirror -22)   [0s]
+n= 6: L=486: M(n) = 0.0961064 at k = 6; Fourier mass 3^n sum|m|^2/L = 0.6993 (sum over units of |mu_hat|^2 = 0.4662); top-5: k=6(|m|=0.0961064; signed 6, mirror -237) k=249(|m|=0.0961064; signed -237, mirror 6) k=7(|m|=0.0908458; signed 7, mirror -236) k=250(|m|=0.0908458; signed -236, mirror 7) k=330(|m|=0.0724193; signed -156, mirror 87)   [0s]
+n= 7: L=1458: M(n) = 0.0758700 at k = 8; Fourier mass 3^n sum|m|^2/L = 0.6982 (sum over units of |mu_hat|^2 = 0.4655); top-5: k=8(|m|=0.0758700; signed 8, mirror -721) k=737(|m|=0.0758700; signed -721, mirror 8) k=7(|m|=0.0717735; signed 7, mirror -722) k=736(|m|=0.0717735; signed -722, mirror 7) k=980(|m|=0.0572666; signed -478, mirror 251)   [0s]
+n= 8: L=4374: M(n) = 0.0608907 at k = 9; Fourier mass 3^n sum|m|^2/L = 0.6989 (sum over units of |mu_hat|^2 = 0.4659); top-5: k=9(|m|=0.0608907; signed 9, mirror -2178) k=2196(|m|=0.0608907; signed -2178, mirror 9) k=8(|m|=0.0537832; signed 8, mirror -2179) k=2195(|m|=0.0537832; signed -2179, mirror 8) k=10(|m|=0.0509569; signed 10, mirror -2177)   [0s]
+n= 9: L=13122: M(n) = 0.0480262 at k = 10; Fourier mass 3^n sum|m|^2/L = 0.7000 (sum over units of |mu_hat|^2 = 0.4667); top-5: k=10(|m|=0.0480262; signed 10, mirror -6551) k=6571(|m|=0.0480262; signed -6551, mirror 10) k=11(|m|=0.0450833; signed 11, mirror -6550) k=6572(|m|=0.0450833; signed -6550, mirror 11) k=6570(|m|=0.0406229; signed -6552, mirror 9)   [0s]
+n=10: L=39366: M(n) = 0.0382783 at k = 12; Fourier mass 3^n sum|m|^2/L = 0.7011 (sum over units of |mu_hat|^2 = 0.4674); top-5: k=12(|m|=0.0382783; signed 12, mirror -19671) k=19695(|m|=0.0382783; signed -19671, mirror 12) k=11(|m|=0.0377492; signed 11, mirror -19672) k=19694(|m|=0.0377492; signed -19672, mirror 11) k=19693(|m|=0.0309964; signed -19673, mirror 10)   [0s]
+n=11: L=118098: M(n) = 0.0319442 at k = 59062; Fourier mass 3^n sum|m|^2/L = 0.7023 (sum over units of |mu_hat|^2 = 0.4682); top-5: k=59062(|m|=0.0319442; signed -59036, mirror 13) k=13(|m|=0.0319442; signed 13, mirror -59036) k=59061(|m|=0.0297502; signed -59037, mirror 12) k=12(|m|=0.0297502; signed 12, mirror -59037) k=14(|m|=0.0275571; signed 14, mirror -59035)   [0s]
+n=12: L=354294: M(n) = 0.0264582 at k = 177161; Fourier mass 3^n sum|m|^2/L = 0.7034 (sum over units of |mu_hat|^2 = 0.4689); top-5: k=177161(|m|=0.0264582; signed -177133, mirror 14) k=14(|m|=0.0264582; signed 14, mirror -177133) k=15(|m|=0.0249458; signed 15, mirror -177132) k=177162(|m|=0.0249458; signed -177132, mirror 15) k=177160(|m|=0.0234841; signed -177134, mirror 13)   [0s]
+n=13: L=1062882: M(n) = 0.0220524 at k = 531457; Fourier mass 3^n sum|m|^2/L = 0.7044 (sum over units of |mu_hat|^2 = 0.4696); top-5: k=531457(|m|=0.0220524; signed -531425, mirror 16) k=16(|m|=0.0220524; signed 16, mirror -531425) k=531456(|m|=0.0217731; signed -531426, mirror 15) k=15(|m|=0.0217731; signed 15, mirror -531426) k=531458(|m|=0.0188423; signed -531424, mirror 17)   [0s]
+n=14: L=3188646: M(n) = 0.0191280 at k = 1594340; Fourier mass 3^n sum|m|^2/L = 0.7054 (sum over units of |mu_hat|^2 = 0.4703); top-5: k=1594340(|m|=0.0191280; signed -1594306, mirror 17) k=17(|m|=0.0191280; signed 17, mirror -1594306) k=1594339(|m|=0.0177504; signed -1594307, mirror 16) k=16(|m|=0.0177504; signed 16, mirror -1594307) k=1594341(|m|=0.0176849; signed -1594305, mirror 18)   [0s]
+n=15: L=9565938: M(n) = 0.0162845 at k = 4782987; Fourier mass 3^n sum|m|^2/L = 0.7062 (sum over units of |mu_hat|^2 = 0.4708); top-5: k=4782987(|m|=0.0162845; signed -4782951, mirror 18) k=18(|m|=0.0162845; signed 18, mirror -4782951) k=4782988(|m|=0.0161730; signed -4782950, mirror 19) k=19(|m|=0.0161730; signed 19, mirror -4782950) k=4782986(|m|=0.0142895; signed -4782952, mirror 17)   [1s]
+n=16: L=28697814: M(n) = 0.0144095 at k = 14348927; Fourier mass 3^n sum|m|^2/L = 0.7070 (sum over units of |mu_hat|^2 = 0.4714); top-5: k=14348927(|m|=0.0144095; signed -14348887, mirror 20) k=20(|m|=0.0144095; signed 20, mirror -14348887) k=14348926(|m|=0.0135977; signed -14348888, mirror 19) k=19(|m|=0.0135977; signed 19, mirror -14348888) k=14348928(|m|=0.0132264; signed -14348886, mirror 21)   [2s]
+n=17: L=86093442: M(n) = 0.0125107 at k = 43046742; Fourier mass 3^n sum|m|^2/L = 0.7077 (sum over units of |mu_hat|^2 = 0.4718); top-5: k=43046742(|m|=0.0125107; signed -43046700, mirror 21) k=21(|m|=0.0125107; signed 21, mirror -43046700) k=43046743(|m|=0.0123681; signed -43046699, mirror 22) k=22(|m|=0.0123681; signed 22, mirror -43046699) k=43046741(|m|=0.0111359; signed -43046701, mirror 20)   [8s]
+n=18: L=258280326: M(n) = 0.0111873 at k = 129140186; Fourier mass 3^n sum|m|^2/L = 0.7084 (sum over units of |mu_hat|^2 = 0.4722); top-5: k=129140186(|m|=0.0111873; signed -129140140, mirror 23) k=23(|m|=0.0111873; signed 23, mirror -129140140) k=129140185(|m|=0.0105971; signed -129140141, mirror 22) k=22(|m|=0.0105971; signed 22, mirror -129140141) k=129140187(|m|=0.0103608; signed -129140139, mirror 24)   [20s]
+n=19: L=774840978: M(n) = 0.0098157 at k = 387420513; Fourier mass 3^n sum|m|^2/L = 0.7089 (sum over units of |mu_hat|^2 = 0.4726); top-5: k=387420513(|m|=0.0098157; signed -387420465, mirror 24) k=24(|m|=0.0098157; signed 24, mirror -387420465) k=387420514(|m|=0.0097694; signed -387420464, mirror 25) k=25(|m|=0.0097694; signed 25, mirror -387420464) k=387420512(|m|=0.0087743; signed -387420466, mirror 23)   [58s]
+
+   C recursion n= 1: M(n) = 0.5773503 S20 0.5773503 diff +0.0e+00; argmax k = 0 (signed 0, mirror 1); S20 argmax 2^0 is one of ±2^k: True; s = 1: s - n log2 3 = -0.58; floor(n log2 3) - 6 = -5; law max 0.5773503
+   C recursion n= 2: M(n) = 0.3779236 S20 0.3779236 diff +0.0e+00; argmax k = 2 (signed 2, mirror -1); S20 argmax 2^2 is one of ±2^k: True; s = 2: s - n log2 3 = -1.17; floor(n log2 3) - 6 = -3; law max 0.3779236
+   C recursion n= 3: M(n) = 0.2522368 S20 0.2522368 diff +0.0e+00; argmax k = 3 (signed 3, mirror -6); S20 argmax 2^3 is one of ±2^k: True; s = 3: s - n log2 3 = -1.75; floor(n log2 3) - 6 = -2; law max 0.2522368
+   C recursion n= 4: M(n) = 0.1769989 S20 0.1769989 diff +0.0e+00; argmax k = 4 (signed 4, mirror -23); S20 argmax 2^4 is one of ±2^k: True; s = 4: s - n log2 3 = -2.34; floor(n log2 3) - 6 = 0; law max 0.1769989
+   C recursion n= 5: M(n) = 0.1292736 S20 0.1292736 diff +0.0e+00; argmax k = 5 (signed 5, mirror -76); S20 argmax 2^5 is one of ±2^k: True; s = 5: s - n log2 3 = -2.92; floor(n log2 3) - 6 = 1; law max 0.1292736
+   C recursion n= 6: M(n) = 0.0961064 S20 0.0961064 diff +0.0e+00; argmax k = 6 (signed 6, mirror -237); S20 argmax 2^6 is one of ±2^k: True; s = 6: s - n log2 3 = -3.51; floor(n log2 3) - 6 = 3; law max 0.0961064
+   C recursion n= 7: M(n) = 0.0758700 S20 0.0758700 diff +0.0e+00; argmax k = 8 (signed 8, mirror -721); S20 argmax 2^8 is one of ±2^k: True; s = 8: s - n log2 3 = -3.09; floor(n log2 3) - 6 = 5; law max 0.0758700
+   C recursion n= 8: M(n) = 0.0608907 S20 0.0608907 diff +0.0e+00; argmax k = 9 (signed 9, mirror -2178); S20 argmax 2^9 is one of ±2^k: True; s = 9: s - n log2 3 = -3.68; floor(n log2 3) - 6 = 6; law max 0.0608907
+   C recursion n= 9: M(n) = 0.0480262 S20 0.0480262 diff +0.0e+00; argmax k = 10 (signed 10, mirror -6551); S20 argmax 2^10 is one of ±2^k: True; s = 10: s - n log2 3 = -4.26; floor(n log2 3) - 6 = 8; law max 0.0480262
+   C recursion n=10: M(n) = 0.0382783 S20 0.0382783 diff +0.0e+00; argmax k = 12 (signed 12, mirror -19671); S20 argmax 2^12 is one of ±2^k: True; s = 12: s - n log2 3 = -3.85; floor(n log2 3) - 6 = 9; law max 0.0382783
+   C recursion n=11: M(n) = 0.0319442 S20 0.0319442 diff +0.0e+00; argmax k = 59062 (signed -59036, mirror 13); S20 argmax 2^13 is one of ±2^k: True; s = 13: s - n log2 3 = -4.43; floor(n log2 3) - 6 = 11; law max 0.0319442
+   C recursion n=12: M(n) = 0.0264582 S20 0.0264582 diff +0.0e+00; argmax k = 177161 (signed -177133, mirror 14); S20 argmax 2^14 is one of ±2^k: True; s = 14: s - n log2 3 = -5.02; floor(n log2 3) - 6 = 13; law max 0.0264582
+   C recursion n=13: M(n) = 0.0220524 S20 0.0220524 diff +0.0e+00; argmax k = 531457 (signed -531425, mirror 16); S20 argmax 2^16 is one of ±2^k: True; s = 16: s - n log2 3 = -4.60; floor(n log2 3) - 6 = 14; law max 0.0220524
+   C recursion n=14: M(n) = 0.0191280 S20 0.0191280 diff +0.0e+00; argmax k = 1594340 (signed -1594306, mirror 17); S20 argmax 2^17 is one of ±2^k: True; s = 17: s - n log2 3 = -5.19; floor(n log2 3) - 6 = 16; law max 0.0191280
+   C recursion n=15: M(n) = 0.0162845 S20 0.0162845 diff +0.0e+00; argmax k = 4782987 (signed -4782951, mirror 18); S20 argmax 2^18 is one of ±2^k: True; s = 18: s - n log2 3 = -5.77; floor(n log2 3) - 6 = 17; law max 0.0162845
+   C recursion n=16: M(n) = 0.0144095 S20 0.0144095 diff +0.0e+00; argmax k = 14348927 (signed -14348887, mirror 20); S20 argmax 2^20 is one of ±2^k: True; s = 20: s - n log2 3 = -5.36; floor(n log2 3) - 6 = 19; law max 0.0144095
+   C recursion n=17: M(n) = 0.0125107 S20 0.0125107 diff +0.0e+00; argmax k = 43046742 (signed -43046700, mirror 21); S20 argmax 2^21 is one of ±2^k: True; s = 21: s - n log2 3 = -5.94; floor(n log2 3) - 6 = 20
+   C recursion n=18: M(n) = 0.0111873 S20 0.0111873 diff +0.0e+00; argmax k = 129140186 (signed -129140140, mirror 23); S20 argmax 2^23 is one of ±2^k: True; s = 23: s - n log2 3 = -5.53; floor(n log2 3) - 6 = 22
+   C recursion n=19: M(n) = 0.0098157 (beyond S20's FFT range); argmax k = 387420513 (signed -387420465, mirror 24); s = 24: s - n log2 3 = -6.11; floor(n log2 3) - 6 = 24
+   elementwise: C recursion (from level 0, 12 levels of float64 accumulation) vs law-derived m_12: max|diff| = 8.7e-17 over L = 354294
+   elementwise: C recursion (from level 0, 16 levels of float64 accumulation) vs law-derived m_16: max|diff| = 7.5e-17 over L = 28697814
+
+====================================================================================================
+D. the 3-adic zero-line census: depth d(u, Q) = v_3(u 2^Q -+ 1), box A (Python integers) and box B (C, residues mod 3^30)
+====================================================================================================
+null model: u 2^Q is a unit mod 3, so exactly one of u 2^Q - 1, u 2^Q + 1 is 0 mod 3 (never both): depth >= 1 with probability 1 is a
+  tautology; conditionally on the class, P(depth >= d) = 3^-(d-1) if u 2^Q mod 3^d is uniform on its class.  For fixed u the map Q -> u 2^Q mod 3^d
+  is a bijection onto the units every L_d = 2 3^(d-1) consecutive Q: when W >= L_d each u contributes 2 floor(W/L_d) + O(1) lines of depth >= d
+  DETERMINISTICALLY (equidistribution of 2, not randomness); the Poisson model is informative only when L_d > W (d >= 9 for W = 10^4, d >= 8 for W = 2000).
+   L_1 = 2;   L_2 = 6;   L_3 = 18;   L_4 = 54;   L_5 = 162;   L_6 = 486;   L_7 = 1458;   L_8 = 4374;   L_9 = 13122;   L_10 = 39366;   L_11 = 118098;
+exact seed checks (Python integers):
+   v_3(55 2^423 + 1) = 15 (note 15); v_3(55 2^423 - 1) = 0
+   v_3(13 2^154 - 1) = 7 (note 7); v_3(2^486 - 1) = 6 (note 6; LTE: 1 + v_3(486/2) = 6); v_3(2^480 - 1) = 2 (note 2; LTE: 1 + v_3(240) = 2)
+   v_3(1187 2^5031 - 1) = 17 (note: 1187 2^5031 = 1 mod 3^17); v_3(2441 2^8384 + 1) = 16 (note: = -1 mod 3^16)
+   v_3(3025 2^846 - 1) = 15 (note: depth 15)
+   v_3(1685 2^8663 - 1) = 15 (note: depth 15)
+   v_3(55 2^423 + 1) = 15 (note: depth 15)
+   (4639, 4171): v_3(u 2^Q - 1) = 0, v_3(u 2^Q + 1) = 14 (note: depth 14)
+   (4573, 2226): v_3(u 2^Q - 1) = 14, v_3(u 2^Q + 1) = 0 (note: depth 14)
+   (4541, 7132): v_3(u 2^Q - 1) = 0, v_3(u 2^Q + 1) = 14 (note: depth 14)
+   (3853, 9384): v_3(u 2^Q - 1) = 14, v_3(u 2^Q + 1) = 0 (note: depth 14)
+   (3037, 5995): v_3(u 2^Q - 1) = 0, v_3(u 2^Q + 1) = 14 (note: depth 14)
+   (1997, 873): v_3(u 2^Q - 1) = 14, v_3(u 2^Q + 1) = 0 (note: depth 14)
+   (917, 1557): v_3(u 2^Q - 1) = 14, v_3(u 2^Q + 1) = 0 (note: depth 14)
+   (521, 1365): v_3(u 2^Q - 1) = 14, v_3(u 2^Q + 1) = 0 (note: depth 14)
+   (235, 8097): v_3(u 2^Q - 1) = 0, v_3(u 2^Q + 1) = 14 (note: depth 14)
+box A: 333 multipliers u <= 1000, Q <= 2000: N = 666000 pairs
+   d= 1:  444000 exp  444000.00 ratio  1.000 | >= d:  666000 exp 666000.000 Poisson P(X >= obs) = 1
+   d= 2:  148000 exp  148000.00 ratio  1.000 | >= d:  222000 exp 222000.000 Poisson P(X >= obs) = 1
+   d= 3:   49334 exp   49333.33 ratio  1.000 | >= d:   74000 exp 74000.000 Poisson P(X >= obs) = 1
+   d= 4:   16444 exp   16444.44 ratio  1.000 | >= d:   24666 exp 24666.667 Poisson P(X >= obs) = 1
+   d= 5:    5485 exp    5481.48 ratio  1.001 | >= d:    8222 exp  8222.222 Poisson P(X >= obs) = 1
+   d= 6:    1815 exp    1827.16 ratio  0.993 | >= d:    2737 exp  2740.741 Poisson P(X >= obs) = 1
+   d= 7:     614 exp     609.05 ratio  1.008 | >= d:     922 exp   913.580 Poisson P(X >= obs) = 1
+   d= 8:     204 exp     203.02 ratio  1.005 | >= d:     308 exp   304.527 Poisson P(X >= obs) = 0.429
+   d= 9:      74 exp      67.67 ratio  1.093 | >= d:     104 exp   101.509 Poisson P(X >= obs) = 0.415
+   d=10:      22 exp      22.56 ratio  0.975 | >= d:      30 exp    33.836 Poisson P(X >= obs) = 0.768
+   d=11:       2 exp       7.52 ratio  0.266 | >= d:       8 exp    11.279 Poisson P(X >= obs) = 0.874
+   d=12:       2 exp       2.51 ratio  0.798 | >= d:       6 exp     3.760 Poisson P(X >= obs) = 0.179
+   d=13:       1 exp       0.84 ratio  1.197 | >= d:       4 exp     1.253 Poisson P(X >= obs) = 0.0386
+   d=14:       2 exp       0.28 ratio  7.182 | >= d:       3 exp     0.418 Poisson P(X >= obs) = 0.00891
+   d=15:       1 exp       0.09 ratio 10.772 | >= d:       1 exp     0.139 Poisson P(X >= obs) = 0.13
+   lines of depth >= 11: [(15, 55, 423, '+'), (14, 917, 1557, '-'), (14, 521, 1365, '-'), (13, 907, 455, '+'), (12, 301, 124, '-'), (12, 41, 271, '-'), (11, 497, 41, '-'), (11, 413, 1806, '+')]
+   window Q <= 60, depth >= 8: {5: [(8, 205, '+')], 17: [(8, 133, '+')], 27: [(8, 647, '-')], 30: [(8, 901, '-')], 35: [(8, 997, '+')], 41: [(11, 497, '-')], 45: [(8, 379, '+')], 58: [(8, 491, '+')]}
+   note's box-A claims: 3 lines of depth >= 14 vs 0.42 (P = 0.0089); 4 of depth >= 13 vs 1.25 (P = 0.0386)
+gcc (zl_audit): ok
+deep lines (depth >= 13): depth u Q sign
+   15    55    423 +
+   14   235   8097 +
+   13   433   6786 -
+   14   521   1365 -
+   13   907    455 +
+   14   917   1557 -
+   17  1187   5031 -
+   13  1619   7722 +
+   15  1685   8663 -
+   13  1691   3540 +
+   14  1997    873 -
+   13  2143   3603 +
+   13  2309   8830 +
+   16  2441   8384 +
+   13  2551   2674 -
+   13  3023   6201 -
+   15  3025    846 -
+   14  3037   5995 +
+   13  3259   6351 +
+   13  3455   9135 -
+   13  3557   6761 -
+   13  3745   5055 +
+   13  3827   8021 -
+   14  3853   9384 -
+   13  3985   1643 +
+   13  4085   3579 -
+   13  4201   3389 +
+   13  4259   6149 -
+   13  4403   1745 -
+   13  4441   2710 -
+   13  4487   4423 -
+   14  4541   7132 +
+   14  4573   2226 -
+   14  4639   4171 +
+   13  4699   2538 -
+   13  4835   7568 +
+   13  4969   2952 -
+box B: 1667 multipliers u <= 5000, Q <= 10000: N = 16670000 pairs, cap 30
+depth d: observed, expected N (2/3) 3^-(d-1), ratio | cumulative >= d: observed, expected
+   d= 1:  11113333  11113333.333   1.000 | >= d:  16670000 16670000.0000
+   d= 2:   3704445   3704444.444   1.000 | >= d:   5556667 5556666.6667
+   d= 3:   1234814   1234814.815   1.000 | >= d:   1852222 1852222.2222
+   d= 4:    411603    411604.938   1.000 | >= d:    617408  617407.4074
+   d= 5:    137201    137201.646   1.000 | >= d:    205805  205802.4691
+   d= 6:     45735     45733.882   1.000 | >= d:     68604   68600.8230
+   d= 7:     15230     15244.627   0.999 | >= d:     22869   22866.9410
+   d= 8:      5102      5081.542   1.004 | >= d:      7639    7622.3137
+   d= 9:      1690      1693.847   0.998 | >= d:      2537    2540.7712
+   d=10:       571       564.616   1.011 | >= d:       847     846.9237
+   d=11:       179       188.205   0.951 | >= d:       276     282.3079
+   d=12:        60        62.735   0.956 | >= d:        97      94.1026
+   d=13:        23        20.912   1.100 | >= d:        37      31.3675
+   d=14:         9         6.971   1.291 | >= d:        14      10.4558
+   d=15:         3         2.324   1.291 | >= d:         5       3.4853
+   d=16:         1         0.775   1.291 | >= d:         2       1.1618
+   d=17:         1         0.258   3.873 | >= d:         1       0.3873
+   d=18:         0         0.086   0.000 | >= d:         0       0.1291
+   d=19:         0         0.029   0.000 | >= d:         0       0.0430
+   d=20:         0         0.010   0.000 | >= d:         0       0.0143
+   d=21:         0         0.003   0.000 | >= d:         0       0.0048
+   d=22:         0         0.001   0.000 | >= d:         0       0.0016
+   d=23:         0         0.000   0.000 | >= d:         0       0.0005
+   d=24:         0         0.000   0.000 | >= d:         0       0.0002
+   d=25:         0         0.000   0.000 | >= d:         0       0.0001
+   d=26:         0         0.000   0.000 | >= d:         0       0.0000
+   d=27:         0         0.000   0.000 | >= d:         0       0.0000
+   d=28:         0         0.000   0.000 | >= d:         0       0.0000
+   d=29:         0         0.000   0.000 | >= d:         0       0.0000
+   d=30:         0         0.000   0.000 | >= d:         0       0.0000
+per-multiplier count of lines of depth >= 6: mean 41.154 (W 3^-(d-1) = 41.152), variance 0.130 (Poisson would be 41.154; L_d = 486 <= W)
+per-multiplier count of lines of depth >= 9: mean 1.522 (W 3^-(d-1) = 1.524), variance 0.250 (Poisson would be 1.522; L_d = 13122 > W)
+per-multiplier count of lines of depth >= 10: mean 0.508 (W 3^-(d-1) = 0.508), variance 0.250 (Poisson would be 0.508; L_d = 39366 > W)
+
+Poisson tail probabilities P(X >= observed) for the cumulative counts, box B:
+   d >= 10: observed   847, mean  846.9237, P = 1.000
+   d >= 11: observed   276, mean  282.3079, P = 0.654
+   d >= 12: observed    97, mean   94.1026, P = 0.396
+   d >= 13: observed    37, mean   31.3675, P = 0.178
+   d >= 14: observed    14, mean   10.4558, P = 0.171
+   d >= 15: observed     5, mean    3.4853, P = 0.272
+   d >= 16: observed     2, mean    1.1618, P = 0.324
+   d >= 17: observed     1, mean    0.3873, P = 0.321
+   d >= 18: observed     0, mean    0.1291, P = 1.000
+   d >= 19: observed     0, mean    0.0430, P = 1.000
+   d >= 20: observed     0, mean    0.0143, P = 1.000
+   maximum depth in a box of N pairs: E[max] ~ log_3 N + O(1) = 15.1; observed deepest 17
+
+====================================================================================================
+F. the saddle chain of 1 + 4^m, 1729, 17, 137, the -17 cycle
+====================================================================================================
+   T^2(1 + 4^j t) = 1 + 3 4^(j-1) t for j = 1..7, t = 1..199: True  (x = 1 mod 4: T(x) = (3x+1)/2 = 2 + 3 2^(2j-1) t even for j >= 1, T^2 = 1 + 3 4^(j-1) t; induction gives T^(2j)(1 + 4^j t) = 1 + 3^j t)
+   chain 1 + 3^j 4^(m-j) -> 1 + 3^(j+1) 4^(m-j-1) under T^2 for m <= 11: True
+   m = 6 chain 1 + 3^j 4^(6-j): [4097, 3073, 2305, 1729, 1297, 973, 730]; T^2-iterates of 4097: [4097, 3073, 2305, 1729, 1297, 973, 730]; equal: True
+       4097 = {17: 1, 241: 1}, prime: False; mod 3 = 2, mod 4 = 1
+       3073 = {7: 1, 439: 1}, prime: False; mod 3 = 1, mod 4 = 1
+       2305 = {5: 1, 461: 1}, prime: False; mod 3 = 1, mod 4 = 1
+       1729 = {7: 1, 13: 1, 19: 1}, prime: False; mod 3 = 1, mod 4 = 1
+       1297 = {1297: 1}, prime: True; mod 3 = 1, mod 4 = 1
+        973 = {7: 1, 139: 1}, prime: False; mod 3 = 1, mod 4 = 1
+        730 = {2: 1, 5: 1, 73: 1}, prime: False; mod 3 = 1, mod 4 = 2
+   1729 = 1 + 12^3: True; 1 + 3^3 4^3 = 1729; 9^3 + 10^3 = 1729; 3^6 = 729 = 730 - 1: True; 12^3 + 1^3 = 1729
+   1 + 12^m midpoint of the chain of 1 + 4^(2m): m=1: 13 (j=1 point = 13), m=2: 145 (j=2 point = 145), m=3: 1729 (j=3 point = 1729), m=4: 20737 (j=4 point = 20737), m=5: 248833 (j=5 point = 248833), m=6: 2985985 (j=6 point = 2985985), m=7: 35831809 (j=7 point = 35831809) (identical by definition: 1 + 3^m 4^m = 1 + 12^m)
+   T^(2m)(1 + 4^(2m)) = 1 + 12^m for m = 1..8 by iteration: [True, True, True, True, True, True, True, True]
+   Phi_6(x) = x**2 - x + 1; Phi_6(12) = 133 = {7: 1, 19: 1}; 1729 = 13 * 133: 1729; primes of 1729 mod 6: [1, 1, 1]
+   1297 = 6^4 + 1 = 1297, prime: True; 973 = 7 * 139: 973; 139 = 3^7 - 2^11: 139; 4 3^5 + 1 = 973 = 7 (3^7 - 2^11) = 973
+   17 = 1 + 4^2: 17; chain of 17 under T^2: [17, 13, 10] = 1 + 3^j 4^(2-j): [17, 13, 10]; 10 = 3^2 + 1
+   orbit of 1729 under T: 68 steps, max 4616; orbit of 27: 70 steps, max 4616 (9232 under the Collatz map C = 2 * 4616)
+   first common element 137 at position 10 in the orbit of 1729 and 12 in that of 27; orbit of 1729 to it: [1729, 2594, 1297, 1946, 973, 1460, 730, 365, 548, 274, 137]
+   137 = 1 + 8 * 17: 137; T-orbit from 137: [137, 206, 103, 155, 233, 350, 175, 263, 395, 593, 890, 445] ... (the note's '137 -> 103' skips 206 = T(137))
+   T-orbit of -17: [-17, -25, -37, -55, -82, -41, -61, -91, -136, -68, -34, -17]; returns to -17: True; odd steps 7, even steps 4; clock 2^11 - 3^7 = -139; 
+      cycle equation x (2^11 - 3^7) = c gives c = 2363 = 17 * 139: 2363
+   the j = 6 row of the extended-Collatz Theorem 2.3 reads 730, 973, 1297, 1729, 2305, 3073, 1024: the last entry 1024 = (3073 - 1)/3 = 1024 is the backward-greedy shrink (C-preimage), not the chain point 4097 = 1 + 4 * 1024 = 4097
+
+====================================================================================================
+G. basins B(a) = {n : the T-orbit of n passes through a} on [1, 2^30] by an independent bitmask sieve (every target on the orbit is recorded)
+====================================================================================================
+gcc (bs_audit): ok
+range        B(4097)  B(3073)  B(2305)  B(1729)  B(1297)  B(973)   B(730)   B(27)    B(137)  | |B(1729)| vs X^0.84
+[1,2^20]   0.003422 0.003592 0.004244 0.004506 0.004972 0.005886 0.014630 0.000015 0.300699  | 4725 vs 1.1410e+05 ratio 0.0414
+[1,2^21]   0.003391 0.003567 0.004211 0.004463 0.004940 0.005862 0.014592 0.000008 0.300733  | 9359 vs 2.0425e+05 ratio 0.0458
+[1,2^22]   0.003362 0.003537 0.004178 0.004421 0.004907 0.005839 0.014542 0.000004 0.300484  | 18543 vs 3.6562e+05 ratio 0.0507
+[1,2^23]   0.003341 0.003516 0.004160 0.004398 0.004884 0.005814 0.014482 0.000002 0.300084  | 36893 vs 6.5448e+05 ratio 0.0564
+[1,2^24]   0.003329 0.003509 0.004153 0.004388 0.004875 0.005800 0.014438 0.000001 0.299756  | 73617 vs 1.1716e+06 ratio 0.0628
+[1,2^25]   0.003325 0.003508 0.004151 0.004384 0.004870 0.005791 0.014418 0.000001 0.299570  | 147092 vs 2.0972e+06 ratio 0.0701
+[1,2^26]   0.003328 0.003513 0.004154 0.004386 0.004872 0.005788 0.014418 0.000000 0.299437  | 294366 vs 3.7540e+06 ratio 0.0784
+[1,2^27]   0.003332 0.003516 0.004156 0.004389 0.004875 0.005788 0.014427 0.000000 0.299366  | 589015 vs 6.7199e+06 ratio 0.0877
+[1,2^28]   0.003335 0.003519 0.004158 0.004391 0.004878 0.005790 0.014439 0.000000 0.299316  | 1178688 vs 1.2029e+07 ratio 0.0980
+[1,2^29]   0.003337 0.003522 0.004160 0.004393 0.004880 0.005792 0.014450 0.000000 0.299275  | 2358445 vs 2.1532e+07 ratio 0.1095
+[1,2^30]   0.003339 0.003524 0.004163 0.004395 0.004881 0.005795 0.014459 0.000000 0.299245  | 4719191 vs 3.8544e+07 ratio 0.1224
+nestedness violations: chain B(1+3^j 4^(6-j)) not subset of B(next): 0; chain point without 137: 0; 27 without 137: 0
+B(27) = {27,54,108,216,432,864,1728,3456,6912,13824,27648,55296,110592,221184,442368,884736,1769472,3538944,7077888,14155776,28311552,56623104,113246208,226492416,452984832,905969664} : 26 numbers
+top dyadic range [2^29, 2^30): densities 0.003341 0.003526 0.004165 0.004397 0.004883 0.005797 0.014468 0.000000 0.299214
+B(1729) \ B(2305): 249739 (density 0.000233); B(730) \ B(973): 9303565 (density 0.008665)
+
+   [   232s]
+Python bitmask sieve on [1, 2^22]: densities 0.003362 0.003537 0.004178 0.004421 0.004907 0.005839 0.014542 0.000004 0.300484 ; |B(1729)| = 18543; |B(27)| = 18   [   236s]
+   (compare with the C sieve's [1,2^22] line above; the repo's basins output gives 0.003362 0.003537 0.004178 0.004421 0.004907 0.005839 0.014542 0.000004 0.300484 at 2^22)
+
+====================================================================================================
+G'. Krasikov-Lagarias arithmetic at the root 1729
+====================================================================================================
+   |B(1729) ∩ [1, 2^30]| = 4719191 (note: 4,719,191 at 2^30); X^0.84 = 3.8544e+07 (note 3.85e7); ratio 0.1224 (note 12.2%)
+   per doubling the ratio grows by 2^0.16 = 1.1173 if the density is constant; doublings to ratio 1: 18.94 -> X = 2^48.9
+   equivalently X* = dens^(-1/0.16) = 0.004395^(-6.25) = 5.388e+14 = 2^48.94 (note: 2^49.3 ≈ 7e14)
+   2^49.3 = 6.931e+14; 2^48.9 = 5.253e+14; 3 2^53 (Oliveira e Silva 1999, exhaustive check at the time of the theorem) = 2.702e+16 = 2^54.6; 2^68 (Barina) = 2.951e+20
+   the count fails the inequality at X = 2^30: 4719191 < 3.8544e+07: so any X_0(1729) for which |B ∩ [1,X]| >= X^0.84 holds for ALL X >= X_0 satisfies X_0 > 2^30
+   the theorem (Krasikov-Lagarias 2003, Thm 1.1 as recalled): for a != 0 mod 3, pi_a(x) := #{n <= x : T^k(n) = a for some k >= 0} >= x^0.84 for all sufficiently large x.
+   B(a) here = {n >= 1 : T-orbit passes through a} (a itself included, k = 0): the same set for odd a; for the even chain point 730 the Collatz map C
+   also reaches 730 as 3 243 + 1 from 243 = 3^5 (C-basin adds the doubling ray of 243: 23 numbers below 2^30), a density-zero difference.
+
+====================================================================================================
+DONE
+====================================================================================================
+[   236s]

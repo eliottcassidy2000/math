@@ -245,8 +245,7 @@ The first implementation ran two passes for every cycle and inherited a
 the S20 FFT caught it; the corrected values agree with the FFT at every
 level `1..18`: `0.5773503, 0.3779236, ..., 0.0144095 (16), 0.0125107 (17),
 0.0111873 (18)` (fullperiod output; seven digits), and at level 19 `M(19) = 0.0098157` at `k = 24` (`19 log_2 3 - 6.1`; ratio `M(19)/M(18) = 0.877`) with the mirror `-2^24` equal to seven digits and `k = 25` (`0.009769`), `k = 23` next: the maximum over all `774,840,978` units is on `±2^s`
-with `s = floor(19 log_2 3) - 6`, extending the S20 observation by one
-level. Fourier mass per level `0.709` at `n = 19` (S20: `0.462 -> 0.472` was
+with `s = floor(19 log_2 3) - 6`, extending the S20 observation by one level; and in complex64 (`37 GB`, `_fullperiod_max20_` output) `M(20) = 0.0088846` at `k = 26` (`20 log_2 3 - 5.7`; ratio `0.905`) and its mirror, `k = 25` next (`0.008380`): the maximum over all `2,324,522,934` units at level 20 is on `±2^26`. Fourier mass per level `0.709` at `n = 19` (S20: `0.462 -> 0.472` was
 the mass on the *primitive* characters; the all-units figure here includes
 the imprimitive ones and converges to `0.71`).
 
@@ -499,6 +498,7 @@ statuses. **Verdict (report `collatz_necklace_20260929_audit.md`, 38 claims, own
 | Theorem 1 (character-spectrum duality; `sum_prim S_n = rho_n(1) - rho_(n-1)(1)`; parity sum `= rho_n(-1) - rho_(n-1)(-1)`) | PROVED; VERIFIED against the exact law (`n <= 9`, six digits) and against S19's independent values (`n = 10..16`, five digits) |
 | Proposition 2 (full-period one-pole recursion, exact) | PROVED; `M(n)` agrees with the S20 FFT at `n = 1..18` to seven digits |
 | `M(19) = 0.0098157` at `±2^24`, `24 = floor(19 log_2 3) - 6`; the maximum over all `774,840,978` units on `±2^s` | VERIFIED (float64, no truncation; `_fullperiod_max19_` output) |
+| `M(20) = 0.0088846` at `±2^26` (`20 log_2 3 - 5.7`), over all `2,324,522,934` units | VERIFIED (complex64 at level 20, no truncation; `_fullperiod_max20_` output) |
 | the multiplicative spectrum: rms at the Parseval scale, non-Rayleigh, largest moments `≈ n/2` Parseval units, on `psi_(±2), psi_(±8)` at low levels | VERIFIED (`n <= 16`); the reading of `psi_(±2)` as the 3-adic-logarithm character DIRECTION |
 | the Jacobi transfer `E[psi(Y_n)] = G_psi sum_(psi') c(psi, psi') E[psi'(Y_(n-1))]`; `|c| = (#prim')^(-1/2)` on primitive pairs, `c = 0` off them; `rms |G_psi| = 3^(-1/2)`; `corr(|S_n|, |G_psi|) = 0.6–0.8` | recursion PROVED; the constant modulus VERIFIED to `n = 7` (exact to `10^(-6)`), CONJECTURED for all `n`; the shape reading OBSERVED |
 | the 3-adic zero-line census: geometric depth law, Poisson tail, the S22 seed one of five depth-15 lines | FINITE-EXACT (`16.7·10^6` pairs) |
@@ -515,8 +515,7 @@ statuses. **Verdict (report `collatz_necklace_20260929_audit.md`, 38 claims, own
 spike have a second exact expression each, as accumulated primitive
 character sums; the two S19 computations are now cross-validated by a
 different algorithm. (2) The primitive Fourier maximum over all units is
-known one level further (19) by a method whose cost is `O(3^n)` in memory
-only, with no truncation; level 20 is reachable in complex64 (`37 GB`). (3)
+known two levels further (19 and 20) by a method whose cost is `O(3^n)` in memory only, with no truncation. (3)
 The ridge seeds are Poisson; the S22 obligation "the ridge inventory as a
 function of `v_3(u 2^Q ∓ 1)`" is done, and H's margin is identified as the
 gap between two constants. (4) `1729` enters the Collatz thread with an exact
@@ -524,8 +523,7 @@ place (the balanced point of a saddle chain) and a measured basin, and the
 Krasikov–Lagarias threshold for it is bounded below. (5) The `(4,3,17)`
 statement is still without a source.
 
-**Obligations.** (a) The Jacobi transfer is now written and its constant-modulus structure verified to level 7 (section 2); to prove `|c(psi, psi')| = (#prim')^(-1/2)` for all `n` (the prime-power Jacobi-sum evaluation) and to derive the spectrum's tail law from `|G_psi|` and the mixing. (b) Level 20 of the
-full-period recursion in complex64. (c) The growth mechanism of the level-5
+**Obligations.** (a) The Jacobi transfer is now written and its constant-modulus structure verified to level 7 (section 2); to prove `|c(psi, psi')| = (#prim')^(-1/2)` for all `n` (the prime-power Jacobi-sum evaluation) and to derive the spectrum's tail law from `|G_psi|` and the mixing. (b) Level 20 done in complex64 (`M(20) = 0.0088846` at `±2^26`); level 21 would need `110 GB`. (c) The growth mechanism of the level-5
 remnant (S22), untouched here. (d) `dens B(1 + 12^m)` falls by about a decade per unit of `m` (measured to `m = 5`); a law, and the basins of the other chain points `1 + 3^j 4^(m-j)`, remain to be found.
 (e) A source for the `(4,3,17)` statement.
 
@@ -537,6 +535,7 @@ remnant (S22), untouched here. (d) `dens B(1 + 12^m)` falls by about a decade pe
 python 04-computation/experiments/collatz_three_mirrors_character_spectrum_20260929.py 16 > 05-knowledge/results/collatz_three_mirrors_character_spectrum_20260929.out   # 1 min, 5 GB
 python 04-computation/experiments/collatz_three_mirrors_fullperiod_max_20260929.py 18 2   > 05-knowledge/results/collatz_three_mirrors_fullperiod_max_20260929.out   # 2 min, 6 GB
 python 04-computation/experiments/collatz_three_mirrors_fullperiod_max_20260929.py 19 19  > 05-knowledge/results/collatz_three_mirrors_fullperiod_max19_20260929.out   # 10 min, 17 GB
+python 04-computation/experiments/collatz_three_mirrors_fullperiod_max_20260929.py 20 19 20 > 05-knowledge/results/collatz_three_mirrors_fullperiod_max20_20260929.out   # 30 min, 37 GB (complex64 at level 20)
 python 04-computation/experiments/collatz_three_mirrors_jacobi_transfer_20260929.py 7      > 05-knowledge/results/collatz_three_mirrors_jacobi_transfer_20260929.out
 python 04-computation/experiments/collatz_three_mirrors_zero_lines_20260929.py 1000 2000  > 05-knowledge/results/collatz_three_mirrors_zero_lines_20260929.out
 python 04-computation/experiments/collatz_three_mirrors_zero_lines_wide_20260929.py 5000 10000 > 05-knowledge/results/collatz_three_mirrors_zero_lines_wide_20260929.out
