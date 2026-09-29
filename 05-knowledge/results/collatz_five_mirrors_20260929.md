@@ -541,6 +541,23 @@ predicts: twelve random units at `h = 30` give `|mu_hat| = 0.8·10^(-8) ..
 8·10^(-8)`, median `2.3·10^(-8)` against `0.84·3^(-15) = 5.9·10^(-8)`,
 `10^5` below the resonant window (`3.3·10^(-3)`).
 
+*The excursion profile (added after the third audit's snapshot;
+`collatz_five_mirrors_excursion_profile_20260929.py`).* The same dynamic
+programme with the maximal excursion bin `m(w) = max_j floor(P_j - j log_2
+3)` as a state gives the contribution of each bin. At `h = 40, 80, 120`
+the cumulative sum over `m <= 4` reaches `0.98, 0.99, 0.98` of the
+coefficient's magnitude, with vector remainders `0.056, 0.053, 0.195`; the
+per-bin contributions decay with `m` while the bin masses grow (the bin
+`m = 20` holds `1.4, 14, 35` times the strict no-descent mass and
+contributes `3·10^(-4), 3·10^(-3), 2·10^(-2)` of the coefficient), and
+the bins beyond `m = 4` carry a rotating remainder of `5–20%` whose
+cumulative effect decays with `m` non-monotonically (`h = 120`: `0.19,
+0.29, 0.19, 0.13, 0.09, 0.024` at `m = 4, 6, 8, 10, 14, 20`). So the
+carrier of the coefficient is the near-critical band `m <= 4` at every
+level, and the width needed to bring the remainder below `10%` grows
+slowly with `h` (`4, 3, 14`, the criterion being sensitive to the phase
+rotation of the deep bins).
+
 *What this leaves as the proof-shaped targets.* With `s = h log_2 3 -
 6`, the phase of a word at level `j` is `e((2^(s - T_j) mod 3^j)/3^j)`,
 `T_j` the suffix cost, which is near `1` iff the prefix sum `P_(j-1)` lies
@@ -774,6 +791,7 @@ python 04-computation/experiments/collatz_five_mirrors_powers_of_two_20260929.py
 python 04-computation/experiments/collatz_five_mirrors_rate300_20260929.py        > 05-knowledge/results/collatz_five_mirrors_rate300_20260929.out
 python 04-computation/experiments/collatz_five_mirrors_coherent_20260929.py       > 05-knowledge/results/collatz_five_mirrors_coherent_20260929.out   # 10 min
 python 04-computation/experiments/collatz_five_mirrors_coherent120_20260929.py    > 05-knowledge/results/collatz_five_mirrors_coherent120_20260929.out   # 10 min
+python 04-computation/experiments/collatz_five_mirrors_excursion_profile_20260929.py 40 80 120 > 05-knowledge/results/collatz_five_mirrors_excursion_profile_20260929.out   # 15 min
 ```
 
 | item | status |
