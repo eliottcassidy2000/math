@@ -1,0 +1,23 @@
+# Fairness is circulant symmetry, three thieves are a planar walk, and the sheet cap has a number
+
+*mac-mini, session collatz-necklace-20260929. Owner's seed: a Collatz-like cycle with `K` steps and `X` odd steps, the `K` parallel dual edges, orderings of the two-colour run lengths, the stolen-necklace problem, the Krasikov–Lagarias-for-any-root argument against the `3x-1` sheet, and `x^4 + y^3 = z^17`. Provenance only; truth lives in THM-4515/4516/4517, HYP-9165 and the note `collatz_necklace_20260929_fair_splits_power_clocks_basins.md`.*
+
+## What the seed turned into
+
+1. **The two thieves' split carries dynamics after all.** The earlier typing (`collatz_generic_price_topology_20260927.md` §2) tested Alon's `k(q-1)`-cut split on the doubled `-17` word and found shares that are unions of intervals. With two bead types the discrete intermediate value theorem gives two cuts and one arc per thief, and then the thing that fairness *is* — equal shape per arc — makes the composed affine maps a circulant matrix. The DFT diagonalises it, the clock `2^K - q^X` becomes the product of the twisted clocks `2^m - zeta^k q^x`, and THM-4484's integrality congruence splits by CRT along the cut. It is a reformulation, not a new obstruction (say so first), but it is the exact mechanism the owner's dual picture was pointing at: the `K`-bond of the dual is the necklace, and cutting it fairly is a Fourier transform.
+
+2. **How many thieves is a Pólya question.** Counting the fair cut positions of a random word gave an exact expectation `m binom(m,x)^j/binom(jm,jx)`, and the three regimes fell out: two thieves always (1-D, IVT), three thieves with expectation tending to a constant but probability decaying like `1/log m` (the imbalance pair is a planar lattice walk returning to the origin; exact second moment `~ 0.93 log m`), four or more thieves essentially never (transient). The Monte Carlo to `m = 10^5` sits on `P log m ~ 2.2`. The move that found it: ask for the *expected count* before the probability; the count is exact by symmetry, and the gap between count and probability is the whole story.
+
+3. **Perfect-power clocks are Fermat–Catalan.** THM-4484 says a shape is free iff the clock divides `d`; asking when the clock is itself a perfect power turns the free-cycle question into `2^K -+ m^r = q^X`, which is the generalised Fermat equation with a power of two. The census (odd `q <= 10^5`) returns only Catalan, the Pythagorean family, and the three known solutions with a power-of-two term — each of which is now a family of free cycles (`3x-49`, `7x+169`, `13x+343`, `71x-4913`), and `7x+169` even factors over the Eisenstein integers as `(3 - zeta_3)^2`. Beal's conjecture becomes a statement about free shapes. The owner's `(4,3,17)` claim is not in the April 2025 survey and stays UNVERIFIED; its clock shadow is empty, so nothing rests on it.
+
+4. **The pasted argument has a void premise.** "For any root the basin has proportion `> 1/2`" cannot hold for any root-uniform `c > 0`: the trunk-entry basins `B((4^i - 1)/3)` are disjoint. The valid kernel is the sheet cap, and it now has a number: `0.3248` (the five-cycle basin of `3x-1` at `2^32`), not `1/3`. The entry spectra (`93.8%` of `3x+1` orbits through `5`; `e_i = 0` iff `3 | i`) are the loops of the dual — invisible to the necklace, which is why the owner's two pictures are two lanes.
+
+## Cards
+
+* *Type the connection before computing.* Source necklace splitting, target cycle equation, map one-arc-per-thief, preserved shape, destroyed trees, sidecar DFT, test exact identities on real cycles. The typing said "reformulation" before any table did.
+* *Expected count before probability* (candidate card): when existence of a combinatorial coincidence is asked, compute its expected multiplicity exactly by symmetry; the dimension of the underlying walk then predicts always / marginal / never. Evidence: this session (fair cuts); the repo's necklace-packing counts in THM-4495 use the same rotation averaging. Counterindication: coincidences with non-abelian or non-stationary structure.
+* *Sheet control with a number.* Attaching the measured minus-sheet basin to the SHEET control turns a qualitative obstruction into a quantitative one; the same could be done for other sheet-blind mechanisms (Terras densities, KL exponents) — which is exactly what MSG-1833's atlas typing asks for.
+
+## Stopping reasons
+
+The CRT split does not beat Baker: the small factor `2^m - 3^x` at a convergent is exactly the classical Eliahou-type bound in disguise. The `j = 3` upper bound `O(1/log m)` is not proved (planar-walk return structure needed). The basin limits are not proved to exist (HYP-9165).

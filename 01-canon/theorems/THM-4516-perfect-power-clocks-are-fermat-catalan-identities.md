@@ -18,7 +18,8 @@ status: >
   and (13,9,2) [7^3]; (71,7,2) [-17^3]. For q = 3 alone, K <= 3000 adds nothing with X >= 2.
   Hostile extension: all odd q <= 10^4, 2 <= X <= K <= 60: exactly 17 clocks, 13 in the
   Pythagorean family (K = 3..15; Catalan 2^3 + 1 = 3^2 is its K = 3 member) and the four
-  Fermat-Catalan readings (3,5,4), (7,9,3), (13,9,2), (71,7,2). Nothing new.
+  Fermat-Catalan readings (3,5,4), (7,9,3), (13,9,2), (71,7,2). Nothing new; likewise
+  all odd q <= 10^5, K <= 40 (20 clocks = 16 family members K = 3..18 + the same four).
   (3) Free cycles verified: 3x-49 {65,73,85,103,130}; 9x-49 least 11, 13; 7x+169 nine
   primitive 9-cycles (least 67,71,79,85,93,95,109,121,137) plus 169 x {4,2,1}; 13x+343
   least 15, 17, 29 (and one scaled by 7); 71x-4913 least 73, 75, 79; 5x-9 {7,13,28,14};
@@ -48,6 +49,7 @@ outputs:
   - 05-knowledge/results/collatz_necklace_20260929_power_clocks_q201_K400.out
   - 05-knowledge/results/collatz_necklace_20260929_power_clocks_q3_K3000.out
   - 05-knowledge/results/collatz_necklace_20260929_circulant_check_d100.out
+  - 05-knowledge/results/collatz_necklace_20260929_power_clocks_wide_q1e5_K40.out
   - 05-knowledge/results/collatz_necklace_20260929_power_clocks_wide_q1e4_K60.out (script 04-computation/experiments/collatz_necklace_20260929_power_clocks_wide.py)
 extra_sha256: 757328ca911a56e5d31c29fb22edcc0726e87ffeadfff2beb3239fc85c3a2537 (power_clocks_wide.py), 81b10782f3802fda678888d9b2c0902eb2e936a342de5cc7556c5afc927e8b1c (wide_q1e4_K60.out)
 script_sha256: 7dec4393a6248b3be63dd4bd65b28e9988da66c882ae571b7b60f54dc3c95798 (power_clocks), 8e8272b3b2c5027127185721dc99d17ded7f25531eee1aba0542912666108fe0 (circulant_check)
