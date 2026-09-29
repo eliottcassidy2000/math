@@ -436,6 +436,8 @@ def sstar_of(n: int, upper=None):
 
 PC = cost_laws(120, 460)
 SUMMARY_F = {}
+CJ = {}
+MH = {}
 for h in (20, 40, 80, 120):
     if h <= 81:
         s_star, Mh = sstar_of(h)
@@ -467,6 +469,8 @@ for h in (20, 40, 80, 120):
     jeff5s = next((J for J in range(h + 1) if all(rem[J:] < 0.05)), None)
     print(f"      J_eff: first J with remainder < 10%: {jeff10}; stable (< 10% from J on): {jeff10s}; stable 5%: {jeff5s}; 1.6 sqrt(h) = {1.6 * math.sqrt(h):.1f}, h/8 = {h / 8:.1f}, 8.2 ln h - 20 = {8.2 * math.log(h) - 20:.1f}")
     SUMMARY_F[h] = (s_star, Mh, ratio_complete.max(), rhs.sum() / math.exp(-h * IRATE), jeff10, jeff10s, [abs(cJ[J]) / em[J] * h for J in range(2, 11)])
+    CJ[h] = cJ
+    MH[h] = (s_star, full)
     if h in (40, 80):
         cF, mF = walk_dp(h, s_star, "F")
         print(f"      floor counter F (K = 3): mass with F >= 1: {1 - mF[0] / mF.sum():.4f} of the DP mass ({mF.sum():.6f}); |c_(F=0)|/|full| = {abs(cF[0]) / Mh:.4f}; vector remainder |full - c_(F=0)|/|full| = {abs(full - cF[0]) / Mh:.4f}; sum_(F>=1) |c_F| / |full| = {np.abs(cF[1:]).sum() / Mh:.4f}")
@@ -635,4 +639,182 @@ for N, lo, amax in ((40, -10, 25), (60, -6, 20)):
     fl = closed_all(N, lo, 0, amax, keep={N})[N]
     rel = max(abs(complex(hp[i]) - fl[i]) / abs(complex(hp[i])) for i in range(len(hp)))
     print(f"   N={N}, k in [{lo}, 0], a <= {amax}: max relative |float64 - mpmath(30 digits)| = {rel:.1e}; |m_N(-1)| = {abs(complex(hp[-2])):.6e} (mp) vs {abs(fl[-2]):.6e} (float64)  {stamp()}")
+# ----------------------------------------------------------------------------------------------------------------
+hdr("E3. the negative family on the window [-600, 0] to n = 320 (a <= 50): Ntilde_n, the ridge track, the seeds")
+neg320 = closed_all(320, -600, 0, 50)
+NT320 = {n: float(sum(2.0 ** (-m) * abs(neg320[n][600 - m]) for m in range(1, 61))) for n in range(1, 321)}
+for lo, hi in ((20, 320), (160, 320), (200, 320), (20, 80)):
+    ns = np.arange(lo, hi + 1)
+    slope = np.polyfit(ns, [math.log(NT320[n]) for n in ns], 1)[0]
+    print(f"   least-squares rate of Ntilde_n over {lo}..{hi}: {math.exp(slope):.4f} (note: 0.5678 / 0.5710 / 0.5744 for 20..320 / 160..320 / 200..320)")
+cc = {n: NT320[n] / (MM - 1) ** n for n in range(20, 321)}
+vv = {n: NT320[n] * 3 ** (n / 2) for n in range(1, 321)}
+print(f"   max_n (m-1)^(-n) Ntilde_n over 20..320 = {max(cc.values()):.3f} at n = {max(cc, key=cc.get)} (note: 1.58 at n = 130); max_n Ntilde_n 3^(n/2) over 20..320 = {max(vv[n] for n in range(20, 321)):.3f} at n = {max(range(20, 321), key=lambda n: vv[n])} (note: spike 7.97 at n = 128)")
+print("   Ntilde_n 3^(n/2) at n = 124..134: " + " ".join(f"{n}:{vv[n]:.2f}" for n in range(124, 135)))
+past = [vv[n] for n in range(141, 321)]
+print(f"   past n = 140: Ntilde_n 3^(n/2) in [{min(past):.4f}, {max(past):.3f}], fraction of levels below 0.1: {sum(1 for v in past if v < 0.1) / len(past):.2f}, below 0.002: {sum(1 for v in past if v < 0.002) / len(past):.2f}")
+print(f"   agreement with the [-60, 0] run at n <= 160: max relative difference of Ntilde_n = {max(abs(NT320[n] - (NTV[n] if n <= 120 else NT160[n])) / NT320[n] for n in range(1, 161)):.1e}")
+
+
+def v3(x):
+    v = 0
+    while x % 3 == 0:
+        x //= 3
+        v += 1
+    return v
+
+
+print(f"   seeds: v_3(55 * 2^423 + 1) = {v3(55 * 2 ** 423 + 1)} (note 15); v_3(13 * 2^154 - 1) = {v3(13 * 2 ** 154 - 1)} (note 7); 2^-423 = 3^n - 55 mod 3^n for n = 9..15: {all(pow(2, -423, 3 ** n) == 3 ** n - 55 for n in range(9, 16))}; at n = 16: = 3^15 - 55: {pow(2, -423, 3 ** 16) == 3 ** 15 - 55}, = 3^16 - 55: {pow(2, -423, 3 ** 16) == 3 ** 16 - 55}; 2^-154 = 13 mod 3^n for n <= 7: {all(pow(2, -154, 3 ** n) == 13 % 3 ** n for n in range(1, 8))}; 2^-480 = 2^6 mod 3^6: {pow(2, -480, 3 ** 6) == pow(2, 6, 3 ** 6)}; 2^-154 = 2^8 mod 3^5: {pow(2, -154, 3 ** 5) == pow(2, 8, 3 ** 5)}")
+
+
+def vsurf(n):
+    return np.abs(neg320[n][::-1][1:]) * 3 ** (n / 2)   # index i <-> m = i + 1
+
+
+print("   global maximum of v_n(m) = 3^(n/2)|m_n(-m)| over m in [1, 600]: n, m*, v; and the dominant ridge tracked by continuity from (n, m) = (11, 414) (search window [m_prev - 5, m_prev + 1])")
+track = {}
+mprev = 414
+for n in range(11, 321):
+    v = vsurf(n)
+    lo_i, hi_i = max(0, mprev - 6), min(600, mprev + 1)
+    i = lo_i + int(np.argmax(v[lo_i:hi_i]))
+    track[n] = (i + 1, float(v[i]))
+    mprev = i + 1
+for n in (11, 12, 13, 14, 15, 16, 20, 29, 34, 50, 70, 96, 115, 120, 125, 130, 140, 160, 165, 200, 250, 300, 310, 320):
+    v = vsurf(n)
+    print(f"      n={n:3d}: global argmax m = {int(np.argmax(v)) + 1:3d}, v = {v.max():6.2f}; tracked ridge m = {track[n][0]:3d}, v = {track[n][1]:6.2f}")
+ns = np.arange(34, 301)
+slope = np.polyfit(ns, [math.log(track[n][1] * 3 ** (-n / 2)) for n in ns], 1)[0]
+print(f"   remnant decay of |m_n(-m*)| along the tracked ridge over 34..300: {math.exp(slope):.4f} per level (note 0.5675); mean slope of m* per level over 15..300: {(track[300][0] - track[15][0]) / 285:.2f}")
+print("   birth of the dominant ridge: n, m*, v, |G_n(2^-m*)|, class, theta, longest run of equal digits of -3^-n within positions [m*-5, 430]")
+for n in range(9, 18):
+    if n >= 11:
+        mm = track[n][0]
+    else:
+        v = vsurf(n)
+        mm = int(np.argmax(v[380:430])) + 381
+    mod = 3 ** n
+    t = pow(2, -mm, mod)
+    g = abs(G_2adic(n, t))
+    eta = (-pow(3, -n, 2 ** 460)) % 2 ** 460
+    digits = [(eta >> i) & 1 for i in range(460)]
+    best = (0, 0)
+    i = max(0, mm - 6)
+    while i < 431:
+        j = i
+        while j + 1 < 460 and digits[j + 1] == digits[i]:
+            j += 1
+        if j - i + 1 > best[0]:
+            best = (j - i + 1, i + 1)
+        i = j + 1
+    print(f"      n={n:2d}: m* = {mm}, v = {vsurf(n)[mm - 1]:.2f}, |G| = {g:.3f}, xi mod 4 = {(-t * pow(3, -n, 4)) % 4}, t odd: {t % 2 == 1}, theta = {t / mod:.3f}; longest run {best[0]} digits from position {best[1]} (note: 11, 13, 14, 16, 17 from 413, 411, 410, 408, 407 at n = 11..15; |G| = 0.981, 0.992, 0.996, 0.994, 0.997)")
+
+# ----------------------------------------------------------------------------------------------------------------
+hdr("F2. the gamma test: P_h, M(h) and the J-terms at the scale h^(-3/2) e^(-hI), h = 40..200")
+
+
+def no_descent(h):
+    lim = [0] + [int(math.floor(j * LOG23)) for j in range(1, h + 1)]
+    dp = np.zeros(lim[h] + 1)
+    dp[0] = 1.0
+    for j in range(1, h + 1):
+        new = np.zeros_like(dp)
+        for a in range(1, 41):
+            hi = min(lim[j - 1] + a, lim[j])
+            if hi >= a:
+                new[a:hi + 1] += 2.0 ** (-a) * dp[:hi - a + 1]
+        dp = new
+    return float(dp.sum())
+
+
+fam200 = closed_all(200, 240, 320, 50, keep={160, 200})
+for h in (160, 200):
+    arr = fam200[h]
+    i = int(np.argmax(np.abs(arr)))
+    MH[h] = (240 + i, arr[i])
+print("   h : P_h : P_h/(h^-3/2 e^-hI) : s* : |M(h)|/P_h : |M(h)|/(h^-3/2 e^-hI)   (note: 6.8, 8.1, 9.0, 9.2, 9.2; 0.463, 0.462, 0.443, 0.462, 0.500; 3.16, 3.76, 3.97, 4.26, 4.60)")
+for h in (40, 80, 120, 160, 200):
+    Ph = no_descent(h)
+    scale = h ** -1.5 * math.exp(-h * IRATE)
+    s_star, full = MH[h]
+    print(f"   {h:3d}: {Ph:.4e}  {Ph / scale:.2f}  {s_star}  {abs(full) / Ph:.3f}  {abs(full) / scale:.2f}")
+for h in (160, 200):
+    s_star, full = MH[h]
+    cJ, mJ = walk_dp(h, s_star, "J")
+    CJ[h] = cJ
+    print(f"   walk DP h={h}: s* = {s_star}, |sum_J c_J - m_h(s*)|/|m_h(s*)| = {abs(cJ.sum() - full) / abs(full):.1e}, mass {mJ.sum():.8f}  {stamp()}")
+print("   gamma_J(h) = c_J/(h^-3/2 e^-hI): modulus (argument) for J = 4, 5, 8, 12, 17 at h = 40, 80, 120, 160, 200")
+print("   (note: |J=5| 2.56, 2.43, 2.34, 2.28, 2.22; |J=4| 1.63 -> 1.19; |J=8| 1.38, 2.19, 2.47, 2.61, 2.67; |J=17| 0.015, 0.57, 1.80, 3.24, 4.53; arg J=5: -0.86, -0.67, -0.47, -0.50, -0.54; arg J=12: 0.82, 1.04, 1.28, 1.28, 1.27)")
+for J in (4, 5, 8, 12, 17):
+    line = f"      J={J:2d}: "
+    for h in (40, 80, 120, 160, 200):
+        g = CJ[h][J] / (h ** -1.5 * math.exp(-h * IRATE))
+        line += f"h={h}: {abs(g):.3f} ({cmath.phase(g):+.2f})   "
+    print(line)
+
+# ----------------------------------------------------------------------------------------------------------------
+hdr("F3. the floor mechanism: joint (J, floor flag) DP with all phases, and with the top-part phases only")
+
+
+def walk_dp_joint(h, s, K=3, top_only=False, amax=40, Tmax=None):
+    """State (T_j, J, f): J = number of levels with s - T_j < 0; f = 1 iff some level had 0 <= s - T_j and
+    s - T_j > j log2 3 - K (a floor level).  With top_only the phase is applied only at levels with T_j <= s."""
+    if Tmax is None:
+        Tmax = 2 * h + 140
+    W = np.zeros((Tmax + 1, h + 2, 2), dtype=complex)
+    W[0, 0, 0] = 1.0
+    Wm = np.zeros((Tmax + 1, h + 2, 2))
+    Wm[0, 0, 0] = 1.0
+    w = 2.0 ** -np.arange(1, amax + 1)
+    Ts = np.arange(Tmax + 1)
+    for j in range(h, 0, -1):
+        mod = 3 ** j
+        inv2 = pow(2, -1, mod)
+        r = pow(2, s, mod)
+        phs = np.empty(Tmax + 1, dtype=complex)
+        for T in range(Tmax + 1):
+            phs[T] = ph(r, mod)
+            r = (r * inv2) % mod
+        ks = s - Ts
+        crossed = ks < 0
+        floor = (ks >= 0) & (ks > j * LOG23 - K)
+        if top_only:
+            phs = np.where(crossed, 1.0 + 0j, phs)
+        new = np.zeros_like(W)
+        newm = np.zeros_like(Wm)
+        for a in range(1, min(amax, Tmax) + 1):
+            src = W[:Tmax + 1 - a]
+            srcm = Wm[:Tmax + 1 - a]
+            contrib = (w[a - 1] * phs[a:])[:, None, None] * src
+            contribm = w[a - 1] * srcm
+            cr = crossed[a:]
+            fl = floor[a:]
+            plain = ~cr & ~fl
+            tgt = new[a:]
+            tgtm = newm[a:]
+            tgt[plain] += contrib[plain]
+            tgtm[plain] += contribm[plain]
+            tgt[cr, 1:, :] += contrib[cr, :-1, :]
+            tgtm[cr, 1:, :] += contribm[cr, :-1, :]
+            tgt[fl, :, 1] += contrib[fl, :, 0] + contrib[fl, :, 1]
+            tgtm[fl, :, 1] += contribm[fl, :, 0] + contribm[fl, :, 1]
+        W, Wm = new, newm
+    return W.sum(axis=0)[:h + 1], Wm.sum(axis=0)[:h + 1]
+
+
+for h in (40, 80, 120):
+    s_star, full = MH[h]
+    cA, mA = walk_dp_joint(h, s_star, top_only=False)
+    cT, mT = walk_dp_joint(h, s_star, top_only=True)
+    Mh = abs(full)
+    massF = mA.sum(axis=0)
+    WT = cT.sum(axis=0)
+    print(f"   h={h}: s* = {s_star}; joint DP mass {mA.sum():.8f}; |sum c - m_h(s*)|/|m_h(s*)| = {abs(cA.sum() - full) / Mh:.1e}; mass with a floor level {massF[1]:.4f}")
+    print(f"      top-only phases: coherence |W|/mass = {abs(WT[0]) / massF[0]:.3f} (F = 0), {abs(WT[1]) / massF[1]:.4f} (F >= 1)  (note: 0.88, 0.90, 0.83 and 0.077, 0.062, 0.055); |W(F>=1)|/|W(F=0)| = {abs(WT[1]) / abs(WT[0]):.4f} (note 0.002, 0.0015, 0.003)")
+    print(f"      J = 0 class: mass {mA[0].sum():.3e}, of which without a floor level {mA[0, 0]:.3e}; top-only coherence {abs(cT[0].sum()) / mA[0].sum():.4f} (note: 0.016, 0.004, 0.002)")
+    print("      J : (F=0 fraction of the J-class) x h (note 8.1/8.6/7.7, 19.6/23.3/21.8, 27.7/36.3/35.5, 32.5/46.0/47.1 for J = 1..4 at h = 40/80/120) : top-only coherence of (J, F=0) (note J=4: 0.50, 0.34, 0.26) : top-only coherence of (J, F>=1) : full-phase |c(J,F=0)|/|c_J|")
+    for J in range(1, 9):
+        mJ = mA[J].sum()
+        print(f"      {J}: {mA[J, 0] / mJ * h:6.2f}   {abs(cT[J, 0]) / mA[J, 0]:.3f}   {abs(cT[J, 1]) / mA[J, 1]:.4f}   {abs(cA[J, 0]) / abs(cA[J].sum()):.3f}")
+    print(f"      {stamp()}")
 print("DONE " + stamp())

@@ -64,7 +64,7 @@
 == E. the negative family Ntilde_n = sum_(m>=1) 2^-m |m_n(-m)| (window [-60, 0]; m <= 60, tail <= 2^-60) == [   3s]
    recursion with a <= 40 to n = 80 done [   3s]
    recursion with a <= 50 to n = 120 done [   3s]
-   recursion with a <= 60 to n = 80 done [   4s]
+   recursion with a <= 60 to n = 80 done [   3s]
    truncation: max_n |Ntilde(a<=40) - Ntilde(a<=50)|/Ntilde(a<=50) over n <= 80 = 1.3e-11; single coefficients (m <= 60): 1.3e-09
    truncation: max_n |Ntilde(a<=60) - Ntilde(a<=50)|/Ntilde(a<=50) over n <= 80 = 1.3e-14; single coefficients (m <= 60): 1.1e-12
    a priori truncation bound per level 2^-50 = 8.9e-16 against Ntilde_80 = 1.62e-20: NOT self-certifying a priori; certified only by the agreement of the three truncations
@@ -270,7 +270,7 @@
       30: 2.996e-07  7.744e-15  0.532  0.000  +1.80  0.00  0.000
       J_eff: first J with remainder < 10%: 10; stable (< 10% from J on): 10; stable 5%: 10; 1.6 sqrt(h) = 10.1, h/8 = 5.0, 8.2 ln h - 20 = 10.2
       floor counter F (K = 3): mass with F >= 1: 0.0242 of the DP mass (1.000000); |c_(F=0)|/|full| = 1.0041; vector remainder |full - c_(F=0)|/|full| = 0.0042; sum_(F>=1) |c_F| / |full| = 0.0648
-      [   6s]
+      [   5s]
    h=80: s* = 120 (delta = 6.80), |m_h(s*)| = 6.4534e-05; walk DP: |sum_J c_J - m_h(s*)| = 1.07e-16 (1.7e-12 relative), DP mass 0.9999999999, max_J |DP mass - exact mass| = 3.8e-12
       worst |c_J|/(mass_h(J) Ntilde_(J-1)) = 0.904 at J = 64; bound sum_J mass Ntilde = 1.6774e-03 = 0.1364 e^-hI; |full|/bound = 0.0385
       J : exact mass : |c_J| : ratio : |c_J|/|full| : arg c_J : per-mass x h : remainder |full - cum_J|/|full|
@@ -307,7 +307,7 @@
       30: 1.381e-02  3.515e-10  0.523  0.000  +1.88  0.00  0.000
       J_eff: first J with remainder < 10%: 14; stable (< 10% from J on): 17; stable 5%: 18; 1.6 sqrt(h) = 14.3, h/8 = 10.0, 8.2 ln h - 20 = 15.9
       floor counter F (K = 3): mass with F >= 1: 0.0197 of the DP mass (1.000000); |c_(F=0)|/|full| = 0.9965; vector remainder |full - c_(F=0)|/|full| = 0.0038; sum_(F>=1) |c_F| / |full| = 0.0340
-      [   7s]
+      [   6s]
    h=120: s* = 184 (delta = 6.20), |m_h(s*)| = 4.1197e-06; walk DP: |sum_J c_J - m_h(s*)| = 1.07e-17 (2.6e-12 relative), DP mass 0.9999999999, max_J |DP mass - exact mass| = 4.9e-12
       worst |c_J|/(mass_h(J) Ntilde_(J-1)) = 0.913 at J = 64; bound sum_J mass Ntilde = 2.0144e-04 = 0.1477 e^-hI; |full|/bound = 0.0205
       J : exact mass : |c_J| : ratio : |c_J|/|full| : arg c_J : per-mass x h : remainder |full - cum_J|/|full|
@@ -474,4 +474,109 @@
 == J. 30-digit mpmath check of the closed recursion on the negative family (same truncation, float64 rounding only) == [   9s]
    N=40, k in [-10, 0], a <= 25: max relative |float64 - mpmath(30 digits)| = 1.1e-14; |m_N(-1)| = 3.736704e-10 (mp) vs 3.736704e-10 (float64)  [  11s]
    N=60, k in [-6, 0], a <= 20: max relative |float64 - mpmath(30 digits)| = 9.7e-15; |m_N(-1)| = 4.917318e-15 (mp) vs 4.917318e-15 (float64)  [  13s]
-DONE [  13s]
+
+== E3. the negative family on the window [-600, 0] to n = 320 (a <= 50): Ntilde_n, the ridge track, the seeds == [  13s]
+   least-squares rate of Ntilde_n over 20..320: 0.5678 (note: 0.5678 / 0.5710 / 0.5744 for 20..320 / 160..320 / 200..320)
+   least-squares rate of Ntilde_n over 160..320: 0.5710 (note: 0.5678 / 0.5710 / 0.5744 for 20..320 / 160..320 / 200..320)
+   least-squares rate of Ntilde_n over 200..320: 0.5744 (note: 0.5678 / 0.5710 / 0.5744 for 20..320 / 160..320 / 200..320)
+   least-squares rate of Ntilde_n over 20..80: 0.5736 (note: 0.5678 / 0.5710 / 0.5744 for 20..320 / 160..320 / 200..320)
+   max_n (m-1)^(-n) Ntilde_n over 20..320 = 1.580 at n = 130 (note: 1.58 at n = 130); max_n Ntilde_n 3^(n/2) over 20..320 = 8.674 at n = 130 (note: spike 7.97 at n = 128)
+   Ntilde_n 3^(n/2) at n = 124..134: 124:0.90 125:2.06 126:3.37 127:4.44 128:7.96 129:7.47 130:8.67 131:3.76 132:2.38 133:2.38 134:1.80
+   past n = 140: Ntilde_n 3^(n/2) in [0.0014, 0.169], fraction of levels below 0.1: 0.97, below 0.002: 0.01
+   agreement with the [-60, 0] run at n <= 160: max relative difference of Ntilde_n = 0.0e+00
+   seeds: v_3(55 * 2^423 + 1) = 15 (note 15); v_3(13 * 2^154 - 1) = 7 (note 7); 2^-423 = 3^n - 55 mod 3^n for n = 9..15: True; at n = 16: = 3^15 - 55: True, = 3^16 - 55: False; 2^-154 = 13 mod 3^n for n <= 7: True; 2^-480 = 2^6 mod 3^6: True; 2^-154 = 2^8 mod 3^5: True
+   global maximum of v_n(m) = 3^(n/2)|m_n(-m)| over m in [1, 600]: n, m*, v; and the dominant ridge tracked by continuity from (n, m) = (11, 414) (search window [m_prev - 5, m_prev + 1])
+      n= 11: global argmax m = 414, v =   3.10; tracked ridge m = 414, v =   3.10
+      n= 12: global argmax m = 413, v =   4.40; tracked ridge m = 413, v =   4.40
+      n= 13: global argmax m = 412, v =   6.11; tracked ridge m = 412, v =   6.11
+      n= 14: global argmax m = 410, v =   8.37; tracked ridge m = 410, v =   8.37
+      n= 15: global argmax m = 409, v =  12.20; tracked ridge m = 409, v =  12.20
+      n= 16: global argmax m = 407, v =  12.01; tracked ridge m = 407, v =  12.01
+      n= 20: global argmax m = 404, v =  17.21; tracked ridge m = 404, v =  17.21
+      n= 29: global argmax m = 392, v =  29.40; tracked ridge m = 392, v =  29.40
+      n= 34: global argmax m = 384, v =  25.61; tracked ridge m = 384, v =  25.61
+      n= 50: global argmax m = 362, v =  13.98; tracked ridge m = 362, v =  13.98
+      n= 70: global argmax m = 336, v =  10.32; tracked ridge m = 336, v =  10.32
+      n= 96: global argmax m = 303, v =   8.11; tracked ridge m = 299, v =   6.09
+      n=115: global argmax m =  21, v =   9.08; tracked ridge m = 281, v =   5.94
+      n=120: global argmax m =  16, v =  10.89; tracked ridge m = 273, v =   4.01
+      n=125: global argmax m =  10, v =   7.40; tracked ridge m = 270, v =   4.01
+      n=130: global argmax m =   1, v =  13.30; tracked ridge m = 265, v =   1.81
+      n=140: global argmax m = 251, v =   1.64; tracked ridge m = 251, v =   1.64
+      n=160: global argmax m = 230, v =   1.19; tracked ridge m = 230, v =   1.19
+      n=165: global argmax m = 264, v =   1.37; tracked ridge m = 224, v =   0.65
+      n=200: global argmax m = 495, v =   1.15; tracked ridge m = 176, v =   0.61
+      n=250: global argmax m = 224, v =   0.51; tracked ridge m = 108, v =   0.27
+      n=300: global argmax m = 156, v =   0.29; tracked ridge m =  43, v =   0.24
+      n=310: global argmax m = 146, v =   0.37; tracked ridge m =  32, v =   0.06
+      n=320: global argmax m = 129, v =   0.31; tracked ridge m =  12, v =   0.03
+   remnant decay of |m_n(-m*)| along the tracked ridge over 34..300: 0.5666 per level (note 0.5675); mean slope of m* per level over 15..300: -1.28
+   birth of the dominant ridge: n, m*, v, |G_n(2^-m*)|, class, theta, longest run of equal digits of -3^-n within positions [m*-5, 430]
+      n= 9: m* = 394, v = 1.99, |G| = 0.607, xi mod 4 = 3, t odd: True, theta = 0.254; longest run 8 digits from position 416 (note: 11, 13, 14, 16, 17 from 413, 411, 410, 408, 407 at n = 11..15; |G| = 0.981, 0.992, 0.996, 0.994, 0.997)
+      n=10: m* = 393, v = 2.37, |G| = 0.614, xi mod 4 = 0, t odd: False, theta = 0.836; longest run 10 digits from position 414 (note: 11, 13, 14, 16, 17 from 413, 411, 410, 408, 407 at n = 11..15; |G| = 0.981, 0.992, 0.996, 0.994, 0.997)
+      n=11: m* = 414, v = 3.10, |G| = 0.981, xi mod 4 = 3, t odd: True, theta = 0.841; longest run 11 digits from position 413 (note: 11, 13, 14, 16, 17 from 413, 411, 410, 408, 407 at n = 11..15; |G| = 0.981, 0.992, 0.996, 0.994, 0.997)
+      n=12: m* = 413, v = 4.40, |G| = 0.992, xi mod 4 = 3, t odd: True, theta = 0.894; longest run 13 digits from position 411 (note: 11, 13, 14, 16, 17 from 413, 411, 410, 408, 407 at n = 11..15; |G| = 0.981, 0.992, 0.996, 0.994, 0.997)
+      n=13: m* = 412, v = 6.11, |G| = 0.996, xi mod 4 = 3, t odd: True, theta = 0.929; longest run 14 digits from position 410 (note: 11, 13, 14, 16, 17 from 413, 411, 410, 408, 407 at n = 11..15; |G| = 0.981, 0.992, 0.996, 0.994, 0.997)
+      n=14: m* = 410, v = 8.37, |G| = 0.994, xi mod 4 = 3, t odd: True, theta = 0.906; longest run 16 digits from position 408 (note: 11, 13, 14, 16, 17 from 413, 411, 410, 408, 407 at n = 11..15; |G| = 0.981, 0.992, 0.996, 0.994, 0.997)
+      n=15: m* = 409, v = 12.20, |G| = 0.997, xi mod 4 = 3, t odd: True, theta = 0.937; longest run 17 digits from position 407 (note: 11, 13, 14, 16, 17 from 413, 411, 410, 408, 407 at n = 11..15; |G| = 0.981, 0.992, 0.996, 0.994, 0.997)
+      n=16: m* = 407, v = 12.01, |G| = 0.610, xi mod 4 = 1, t odd: True, theta = 0.250; longest run 4 digits from position 402 (note: 11, 13, 14, 16, 17 from 413, 411, 410, 408, 407 at n = 11..15; |G| = 0.981, 0.992, 0.996, 0.994, 0.997)
+      n=17: m* = 408, v = 11.60, |G| = 0.572, xi mod 4 = 3, t odd: True, theta = 0.542; longest run 4 digits from position 431 (note: 11, 13, 14, 16, 17 from 413, 411, 410, 408, 407 at n = 11..15; |G| = 0.981, 0.992, 0.996, 0.994, 0.997)
+
+== F2. the gamma test: P_h, M(h) and the J-terms at the scale h^(-3/2) e^(-hI), h = 40..200 == [  18s]
+   h : P_h : P_h/(h^-3/2 e^-hI) : s* : |M(h)|/P_h : |M(h)|/(h^-3/2 e^-hI)   (note: 6.8, 8.1, 9.0, 9.2, 9.2; 0.463, 0.462, 0.443, 0.462, 0.500; 3.16, 3.76, 3.97, 4.26, 4.60)
+    40: 2.9861e-03  6.81  57  0.463  3.16
+    80: 1.3956e-04  8.12  120  0.462  3.75
+   120: 9.3061e-06  8.97  184  0.443  3.97
+   160: 6.8868e-07  9.22  247  0.462  4.26
+   200: 5.4567e-08  9.20  310  0.500  4.60
+   walk DP h=160: s* = 247, |sum_J c_J - m_h(s*)|/|m_h(s*)| = 3.3e-12, mass 1.00000000  [  22s]
+   walk DP h=200: s* = 310, |sum_J c_J - m_h(s*)|/|m_h(s*)| = 3.8e-12, mass 1.00000000  [  28s]
+   gamma_J(h) = c_J/(h^-3/2 e^-hI): modulus (argument) for J = 4, 5, 8, 12, 17 at h = 40, 80, 120, 160, 200
+   (note: |J=5| 2.56, 2.43, 2.34, 2.28, 2.22; |J=4| 1.63 -> 1.19; |J=8| 1.38, 2.19, 2.47, 2.61, 2.67; |J=17| 0.015, 0.57, 1.80, 3.24, 4.53; arg J=5: -0.86, -0.67, -0.47, -0.50, -0.54; arg J=12: 0.82, 1.04, 1.28, 1.28, 1.27)
+      J= 4: h=40: 1.633 (+1.88)   h=80: 1.383 (+2.07)   h=120: 1.284 (+2.26)   h=160: 1.231 (+2.22)   h=200: 1.190 (+2.18)   
+      J= 5: h=40: 2.563 (-0.86)   h=80: 2.433 (-0.67)   h=120: 2.337 (-0.47)   h=160: 2.279 (-0.50)   h=200: 2.224 (-0.54)   
+      J= 8: h=40: 1.383 (+2.34)   h=80: 2.195 (+2.56)   h=120: 2.473 (+2.78)   h=160: 2.610 (+2.77)   h=200: 2.667 (+2.74)   
+      J=12: h=40: 0.187 (+0.82)   h=80: 0.892 (+1.04)   h=120: 1.433 (+1.28)   h=160: 1.813 (+1.28)   h=200: 2.062 (+1.27)   
+      J=17: h=40: 0.015 (+2.92)   h=80: 0.573 (+3.09)   h=120: 1.804 (-2.95)   h=160: 3.235 (-2.93)   h=200: 4.528 (-2.93)   
+
+== F3. the floor mechanism: joint (J, floor flag) DP with all phases, and with the top-part phases only == [  28s]
+   h=40: s* = 57; joint DP mass 1.00000000; |sum c - m_h(s*)|/|m_h(s*)| = 7.7e-13; mass with a floor level 0.0242
+      top-only phases: coherence |W|/mass = 0.882 (F = 0), 0.0770 (F >= 1)  (note: 0.88, 0.90, 0.83 and 0.077, 0.062, 0.055); |W(F>=1)|/|W(F=0)| = 0.0022 (note 0.002, 0.0015, 0.003)
+      J = 0 class: mass 1.601e-03, of which without a floor level 0.000e+00; top-only coherence 0.0162 (note: 0.016, 0.004, 0.002)
+      J : (F=0 fraction of the J-class) x h (note 8.1/8.6/7.7, 19.6/23.3/21.8, 27.7/36.3/35.5, 32.5/46.0/47.1 for J = 1..4 at h = 40/80/120) : top-only coherence of (J, F=0) (note J=4: 0.50, 0.34, 0.26) : top-only coherence of (J, F>=1) : full-phase |c(J,F=0)|/|c_J|
+      1:   8.10   0.289   0.0195   1.166
+      2:  19.57   0.298   0.0193   1.049
+      3:  27.71   0.385   0.0387   0.993
+      4:  32.49   0.500   0.0583   0.992
+      5:  35.39   0.607   0.0800   0.996
+      6:  37.16   0.696   0.1047   0.998
+      7:  38.25   0.768   0.1328   1.000
+      8:  38.93   0.824   0.1639   1.001
+      [  28s]
+   h=80: s* = 120; joint DP mass 1.00000000; |sum c - m_h(s*)|/|m_h(s*)| = 1.7e-12; mass with a floor level 0.0197
+      top-only phases: coherence |W|/mass = 0.900 (F = 0), 0.0623 (F >= 1)  (note: 0.88, 0.90, 0.83 and 0.077, 0.062, 0.055); |W(F>=1)|/|W(F=0)| = 0.0014 (note 0.002, 0.0015, 0.003)
+      J = 0 class: mass 1.652e-04, of which without a floor level 0.000e+00; top-only coherence 0.0039 (note: 0.016, 0.004, 0.002)
+      J : (F=0 fraction of the J-class) x h (note 8.1/8.6/7.7, 19.6/23.3/21.8, 27.7/36.3/35.5, 32.5/46.0/47.1 for J = 1..4 at h = 40/80/120) : top-only coherence of (J, F=0) (note J=4: 0.50, 0.34, 0.26) : top-only coherence of (J, F>=1) : full-phase |c(J,F=0)|/|c_J|
+      1:   8.61   0.184   0.0060   1.139
+      2:  23.31   0.195   0.0031   1.032
+      3:  36.25   0.260   0.0059   0.985
+      4:  46.04   0.343   0.0092   0.985
+      5:  53.58   0.423   0.0127   0.988
+      6:  59.44   0.494   0.0168   0.991
+      7:  63.99   0.557   0.0215   0.993
+      8:  67.53   0.611   0.0269   0.994
+      [  31s]
+   h=120: s* = 184; joint DP mass 1.00000000; |sum c - m_h(s*)|/|m_h(s*)| = 2.6e-12; mass with a floor level 0.0300
+      top-only phases: coherence |W|/mass = 0.864 (F = 0), 0.0626 (F >= 1)  (note: 0.88, 0.90, 0.83 and 0.077, 0.062, 0.055); |W(F>=1)|/|W(F=0)| = 0.0022 (note 0.002, 0.0015, 0.003)
+      J = 0 class: mass 2.214e-05, of which without a floor level 0.000e+00; top-only coherence 0.0015 (note: 0.016, 0.004, 0.002)
+      J : (F=0 fraction of the J-class) x h (note 8.1/8.6/7.7, 19.6/23.3/21.8, 27.7/36.3/35.5, 32.5/46.0/47.1 for J = 1..4 at h = 40/80/120) : top-only coherence of (J, F=0) (note J=4: 0.50, 0.34, 0.26) : top-only coherence of (J, F>=1) : full-phase |c(J,F=0)|/|c_J|
+      1:   7.65   0.139   0.0025   1.136
+      2:  21.80   0.148   0.0012   1.031
+      3:  35.54   0.198   0.0021   0.985
+      4:  47.13   0.262   0.0033   0.984
+      5:  57.08   0.322   0.0046   0.987
+      6:  65.65   0.376   0.0060   0.989
+      7:  73.04   0.424   0.0077   0.991
+      8:  79.41   0.466   0.0097   0.992
+      [  37s]
+DONE [  37s]
