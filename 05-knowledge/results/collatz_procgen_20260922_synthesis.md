@@ -1688,6 +1688,66 @@ of [`collatz_five_mirrors_20260929.md`](collatz_five_mirrors_20260929.md).
   arise. Direct test to `h = 200`: `P_h = 9.2 h^(-3/2) e^(-hI)`, `|mu_hat_h(2^s*)|/P_h = 0.44–0.50`, the `J`-terms' phases settle from `h = 120` but their moduli converge only for `J <= 5`, so the constant of (T2) is not yet computable. Obligations: prove H in any form (`ρ < 0.585`); the limits `γ_J` at larger `h`; the fine structure of the multiplier families' amplitudes (a `u^(-0.5)` trend with a factor-four scatter); the floor part of (T1) as a smoothness statement for the law of the real angle `Σ_j 2^(κ_j - j log_2 3)`. MISTAKE-550 (the family was first called generic from a narrow window).
   No Collatz step.
 
+## 2ag. Wave 34 (2026-09-29, opus session `collatz-poset-dag-20260927`, S23): three preprints on twisted Bernoulli zeros as mirrors; the character spectrum of the Syracuse law; the full-period recursion; the zero-line census; 1729's saddle chain
+
+Owner's directive: dissect three preprints (Chocian, arXiv:2607.23177,
+2607.27503, 2608.08724 — explicit twisted Hilbert class components from
+circular units, the character Fourier transform of universal projector
+polynomials, and a quasi-linear survey of twisted Bernoulli zeros with
+Poisson statistics) for ideas that merge with the thread; extend past work
+around `x^4 + y^3 = z^17`, `17`, `1729` and the Krasikov–Lagarias `X^0.84`
+bound. Note [`collatz_three_mirrors_20260929.md`](collatz_three_mirrors_20260929.md);
+the parallel mac-mini session `collatz-necklace-20260929` (THM-4515–4517,
+HYP-9165) had already worked the necklace/Fermat–Catalan side of the same
+seed and is cited, complemented and audited, not duplicated.
+
+* **The character spectrum (Theorem 1, PROVED; VERIFIED).** The character
+  Fourier transform of the closed family over the cyclic unit group is a
+  Gauss sum times the multiplicative moment `S_n(psi) = E[psi(Y_n)]`, and
+  the primitive sums telescope to the reference densities at `±1`:
+  `sum_(prim) S_n = rho_n(1) - rho_(n-1)(1)`, `sum_(prim) psi(-1) S_n =
+  rho_n(-1) - rho_(n-1)(-1)` — S19's seed-1 mass (Theorem C) and
+  negative-cycle spike (Theorem B) as accumulated character sums; the
+  values agree with S19's tree computation to five digits at `n = 10..16`
+  (two algorithms certify each other). The spectrum has the Parseval rms
+  `0.84·3^(-n/2)` but a heavy tail (largest moments `≈ n/2` Parseval units,
+  `9.1` at `n = 16` where random phases give `3.5`), at low levels on the
+  3-adic-logarithm characters `psi_(±2), psi_(±8)`.
+* **The full-period recursion (Proposition 2, PROVED).** Since `2`
+  generates the units, the S20 recursion runs on the whole cycle `Z/L_n` as
+  a one-pole filter with no truncation, `O(L_n)` per level: every Fourier
+  coefficient of `mu_n` at every unit, organised by the discrete
+  logarithm. It reproduces the S20 FFT maxima to seven digits at `n <= 18`
+  and gives `M(19) = 0.00982` at `±2^24` (`24 = floor(19 log_2 3) - 6`): the
+  maximum over all units stays on `±2^s` one level beyond S20.
+* **The 3-adic zero lines are Poisson (FINITE-EXACT).** Chocian's census
+  design applied to the ridge seeds of S22: on `16.7·10^6` pairs `(u, Q)`
+  the depth `v_3(u 2^Q ∓ 1)` is geometric to `1%` through depth 12 and
+  Poisson-consistent in the tail (`14, 5, 2, 1` lines of depth `>= 14..17`
+  against `10.5, 3.5, 1.2, 0.4`); the S22 seed `(55, 423)` is one of five
+  depth-15 lines; the deepest is `1187·2^5031 ≡ 1 mod 3^17`. The critical
+  rate of Theorem C is the Chernoff multiplier law extended to `u ≈ 3^n`:
+  `e^(-I) 3^(θ*/ln 2) = log_2 3 - 1` exactly, so H's margin (`0.577`
+  against `0.585`) is the gap between the Parseval scale and that
+  extrapolation, not a fitted number.
+* **1729 and 17 (EXACT / NUMEROLOGY, typed).** `1729 = 1 + 12^3 = 1 + 3^3
+  4^3` is the balanced midpoint of the saddle chain `1 + 3^j 4^(6-j)`
+  (`4097 -> 3073 -> 2305 -> 1729 -> 1297 -> 973 -> 730`, six consecutive
+  `(3x+1)/4` steps, Proposition 4 of the hedgehog note, the `j = 6` row of
+  the extended-Collatz hostile family); `1 + 12^m` is the midpoint for
+  every `m`; `17 = 1 + 4^2` heads `17, 13, 10`; `730 = 3^6 + 1` gives the
+  second taxicab form `1729 = 3^6 + 10^3`; `973 = 7·139` (the `-17` clock)
+  and the merge of the orbits of `1729` and `27` at `137` are NUMEROLOGY.
+  Basins to `2^30`: `dens B(1729) = 0.00440` (nested `0.00334 .. 0.01446`
+  along the chain), `dens B(137) = 0.299`, `B(27)` a doubling ray. The
+  Krasikov–Lagarias count for the root `1729` is `12%` of `X^0.84` at `X =
+  2^30`, so the theorem's threshold `X_0(1729) > 2^30` (PROVED by the
+  count), `≈ 2^49` if the density persists.
+* **`(4,3,17)`**: no source found by a web search (UNVERIFIED, as
+  mac-mini recorded); arXiv:2609.26996 (September 2026) claims the
+  smallest open Beal signature `(3,5,7)` (AUTHOR-CLAIMED). No Collatz
+  step.
+
 ## 3. The snippet, dispatched
 
 | pasted claim | verdict | where |
