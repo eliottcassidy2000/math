@@ -45,7 +45,7 @@ increment identities; Proposition 2, the full-period one-pole recursion is
 exact; the saddle-chain identities; the critical-rate identity `e^(-I)
 3^(θ*/ln 2) = log_2 3 - 1`; the lower bound `X_0(1729) > 2^30` for the
 Krasikov–Lagarias threshold) + VERIFIED (the character spectrum to level 16
-against S19's independent values to five digits at every level `10..16`; the
+against S19's independent values, five digits for `rho_n(1)` at every level `2..16` and the printed three to four digits for the parity differences; the
 primitive maxima over all units to level 18 against the S20 FFT to seven
 digits, extended to level 19) + FINITE-EXACT (the zero-line census on `16.7
 million` pairs; the basins of the saddle chain, of `27` and of `137` to
@@ -56,8 +56,9 @@ at `973`, the `137` at the merge of `1729` and `27`, the exponents `4, 3`
 of the saddle) + UNVERIFIED (the owner's `(4,3,17)` statement: a web search
 on 2026-09-29 found no source; the same search found a September 2026
 preprint claiming the smallest open Beal signature `(3,5,7)`). No Collatz
-proof step. Audit of mac-mini's THM-4515–4517: section 6. Own audit:
-section 8.**
+proof step. Audit of mac-mini's THM-4515–4517: section 6. Own audit (a second
+subagent, `collatz_three_mirrors_20260929_audit.py/.out/.md`): SOUND WITH
+CORRECTIONS, eighteen applied, record in section 8.**
 
 Scripts and outputs: `04-computation/experiments/collatz_three_mirrors_character_spectrum_20260929.py`
 → `05-knowledge/results/collatz_three_mirrors_character_spectrum_20260929.out`
@@ -84,9 +85,7 @@ chain, the merge with 27); `collatz_three_mirrors_basins_20260929.c` →
    psi(-1) S_n(psi) = rho_n(-1) - rho_(n-1)(-1)`: the seed-1 reference
    density of S19 Theorem C is the accumulated sum of the multiplicative
    moments, and the negative-cycle spike of Theorem B is their accumulated
-   parity-twisted sum. Both identities reproduce S19's independently
-   computed values to five digits at every level `10..16` (`rho_16(1) =
-   0.29011` both ways; `rho_16(-1) - rho_15(-1) = 213.43` both ways). The
+   parity-twisted sum. The seed-1 identity reproduces S19's independently computed `rho_n(1)` to five digits at every level `2..16` (`rho_16(1) = 0.29011` both ways); the parity identity reproduces S19's printed differences to the three or four digits S19 prints (`rho_16(-1) - rho_15(-1) = 213.4` there, `213.43` here). The
    multiplicative spectrum has the Parseval rms `0.84·3^(-n/2)` but is not
    Rayleigh: its largest moments grow like `n/2` Parseval units (`9.1` at `n
    = 16`, where random phases would give `3.5`), a heavy tail (`P(z > 3) =
@@ -99,23 +98,27 @@ chain, the merge with 27); `collatz_three_mirrors_basins_20260929.c` →
    every Fourier coefficient of `mu_n` at every unit, organised by the
    discrete logarithm. It reproduces the S20 FFT maxima to seven digits at
    every level `1..18` (`0.0111873` at `18`) and extends them: `M(19) = 0.0098157` at `k = 24` (`= 19 log_2 3 - 6.1`) and its mirror — the maximum
-   over all units is still at `±2^s`, `s = floor(h log_2 3) - 6`.
+   over all units is still at `±2^s`, `s = h log_2 3 - 6 ± 1` (`s = 20, 21,
+   23, 24, 26` at `h = 16..20`; `floor(h log_2 3) - 6` is exact at `h = 19`
+   only).
 3. **The 3-adic zero lines behind the ridges are Poisson (FINITE-EXACT).**
    Chocian's survey design (a `p`-adic coincidence per pair, counted against
    a Poisson null model, with a depth) applied to the ridge seeds of S22: the
    pairs `(u, Q)` with `u·2^Q ≡ ∓1 mod 3^d`, depth `d = v_3(u 2^Q ∓ 1)`. On
    `16.7·10^6` pairs (`u <= 5000` odd prime to 3, `Q <= 10^4`) the depth
-   histogram is geometric to `1%` through depth 12 and the tail is
-   Poisson-consistent at every depth (`14, 5, 2, 1` lines of depth `>= 14,
+   histogram is geometric to `1%` through depth 10 (forced by the
+   equidistribution of the powers of two for `d <= 8`, where `L_d <= W`) and
+   the tail is Poisson-consistent at every depth `>= 10` (`14, 5, 2, 1` lines of depth `>= 14,
    15, 16, 17` against `10.5, 3.5, 1.2, 0.4`). The S22 seed `(55, 423)` is
    one of five depth-15 lines; the deepest is `1187·2^5031 ≡ 1 mod 3^17`. A
    small box (`666,000` pairs) had shown a `1%`-level excess of deep lines,
-   which the wide box dissolves. The critical rate of Theorem C is the
-   Chernoff amplitude law of the multiplier families extended to `u ≈ 3^n`:
-   `e^(-I) 3^(θ*/ln 2) = log_2 3 - 1` exactly, so Parseval forces the
+   which the wide box dissolves. The identity `e^(-I) 3^(θ*/ln 2) = log_2 3 - 1` (the definition of `I`
+   rewritten) reads the critical rate of Theorem C as the Chernoff amplitude
+   law of the multiplier families extended to `u ≈ 3^n` under `M(n) ≈
+   e^(-nI)` (CONJECTURAL); on that reading Parseval would force the
    multiplier exponent to steepen beyond `-0.438` for large `u`, and H's
    margin `0.577` against `0.585` is the margin between the Parseval scale
-   and that extrapolation.
+   and that extrapolation (DIRECTION).
 4. **1729 is the balanced point of a saddle chain (EXACT), and its basin
    (FINITE-EXACT).** `1729 = 1 + 12^3 = 1 + 3^3 4^3` is the midpoint `j = 3`
    of the chain `1 + 3^j 4^(6-j)` (`4097, 3073, 2305, 1729, 1297, 973, 730`)
@@ -157,7 +160,7 @@ them at classically regular primes, and each carries an explicit Kummer
 radical generating an order-`p` Hilbert class component, certified by a
 finite split-prime computation. The second paper isolates the mechanism as a
 character Fourier transform, `sum_t conj(chi)(t) P_m(h_t) = tau(conj chi)
-B_(m,chi)/(m·m!)`, `h_t = zeta_f^t/(zeta_f^t - 1)` — a Gauss sum performs the
+B_(m,chi)/(m·m!)` (odd `m`), `h_t = zeta_f^t/(zeta_f^t - 1)` — a Gauss sum performs the
 transform — and applies it at conductor `5` (eleven lines). The third
 computes the whole spectrum `(b_(chi,j))_j` in quasi-linear time by a
 residue-class weight formula and a Bluestein chirp factorisation, surveys
@@ -244,10 +247,11 @@ The first implementation ran two passes for every cycle and inherited a
 `2^(-2)` transient from level 1 (all maxima `12%` low) — the check against
 the S20 FFT caught it; the corrected values agree with the FFT at every
 level `1..18`: `0.5773503, 0.3779236, ..., 0.0144095 (16), 0.0125107 (17),
-0.0111873 (18)` (fullperiod output; seven digits), and at level 19 `M(19) = 0.0098157` at `k = 24` (`19 log_2 3 - 6.1`; ratio `M(19)/M(18) = 0.877`) with the mirror `-2^24` equal to seven digits and `k = 25` (`0.009769`), `k = 23` next: the maximum over all `774,840,978` units is on `±2^s`
-with `s = floor(19 log_2 3) - 6`, extending the S20 observation by one level; and in complex64 (`37 GB`, `_fullperiod_max20_` output) `M(20) = 0.0088846` at `k = 26` (`20 log_2 3 - 5.7`; ratio `0.905`) and its mirror, `k = 25` next (`0.008380`): the maximum over all `2,324,522,934` units at level 20 is on `±2^26`. Fourier mass per level `0.709` at `n = 19` (S20: `0.462 -> 0.472` was
-the mass on the *primitive* characters; the all-units figure here includes
-the imprimitive ones and converges to `0.71`).
+0.0111873 (18)` (fullperiod output; seven digits), and at level 19 `M(19) = 0.0098157` at `k = 24` (`19 log_2 3 - 6.1`; ratio `M(19)/M(18) = 0.877`; independently reproduced by the audit, mass `0.7089`) with the mirror `-2^24` equal to seven digits and `k = 25` (`0.009769`), `k = 23` next: the maximum over all `774,840,978` units is on `±2^s`
+with `s = floor(19 log_2 3) - 6`, extending the S20 observation by one level; and in complex64 (`37 GB`, `_fullperiod_max20_` output) `M(20) = 0.0088846` at `k = 26` (`20 log_2 3 - 5.7`; ratio `0.905`) and its mirror, `k = 25` next (`0.008380`): the maximum over all `2,324,522,934` units at level 20 is on `±2^26`. Fourier mass per level `0.709` at
+`n = 19` (this is `3^n/L_n = 3/2` times S20's `0.462 -> 0.472`: the same sum
+`sum_(units) |mu_hat_n|^2`, normalised per unit here and as a total there;
+it equals the rms² of the character spectrum).
 
 **The spectrum (VERIFIED to level 16, character-spectrum output).** Per
 level, over the primitive characters: the rms of `|S| 3^(n/2)` is `0.8452,
@@ -260,8 +264,8 @@ not exponential: `P(z > 1, 2, 3) = 0.27, 0.13, 0.074` against `0.37, 0.14,
 largest `|S| 3^(n/2)` grows steadily: `1.00, 1.41, 1.59, 2.02, 2.21, 2.82,
 2.95, 3.60, 4.09, 4.35, 5.75, 6.04, 7.41, 7.79, 9.11` for `n = 2..16`
 (roughly `n/2`), where the maximum of `L_n` independent Rayleigh variables
-would be `0.84 sqrt(ln L_n) = 3.5` at `n = 16`; the top eight at `n = 16`
-are all `8.9–9.1`, a cluster, not an outlier. Which characters: at `n = 3,
+would be `0.84 sqrt(ln L_n) = 3.5` at `n = 16`; the top four conjugate pairs `psi_(±j)`
+at `n = 16` are all `8.9–9.1`, a cluster, not an outlier. Which characters: at `n = 3,
 4, 6` the largest is `psi_(±2)`, at `n = 5` `psi_(±8)`, at `n = 4` `psi_(±4)`
 next, at `n = 7` `psi_(±80)`, at `n = 8` `psi_(±278) = psi_(∓2^12)` (`278 = L_8
 - 4096 = 2(3^7 - 2^11)`); from `n = 9` on the indices are not small and not
@@ -270,8 +274,8 @@ powers of two (`±521, ±1193, ±1127, ±4219, ±40162, ±71333, ±154112 =
 e(±log_2(y)/3^(n-1))` is the 3-adic-logarithm character of the 1-unit
 component of `y` (`log_2(y) = 2 log_4(±y)` on `(Z/3^n)^× = {±1} × (1 +
 3Z)/(1 + 3^n Z)`); since `Y_n = 2^(-a_n)(1 + 3z)` with `z = sum_(i>=1)
-3^(i-1) 2^(-(a_(n-1) + ... + a_(n-i)))`, `psi_(±2)(Y_n) = e(∓a_n/(2·3^(n-1)))
-e(±log_4(1 + 3z)/3^(n-1))`, a phase product over the suffix sums of the walk
+3^(i-1) 2^(-(a_(n-1) + ... + a_(n-i)))`, `psi_(±2)(Y_n) = e(∓a_n/3^(n-1))
+e(±2 log_4(1 + 3z)/3^(n-1))`, a phase product over the suffix sums of the walk
 read 3-adically — the exponent walk of S22 with the roles of `2` and `3`
 exchanged (DIRECTION; the dominance of these characters at low levels is
 OBSERVED, and it does not persist past `n = 8`). The parity split: `mean_odd
@@ -290,7 +294,7 @@ sum `= (2/3)(H_n(-1) - H_(n-1)(-1))` agree to six digits at every level
 (e.g. `n = 5`: `+0.024449` and `+2.472826`; `H_2(1) = 8/7`, `H_2(-1) = 22/7`).
 Against S19's independent tree computation (`mazur_harmonic_mass_deep18`
 output, `rho_n(±1)` for `n = 10..18`): the accumulated primitive sums give
-`rho_n(1) = 0.42497, 0.39428, 0.35825, 0.33343, 0.31549, 0.30591, 0.29011`
+`rho_n(1) = 0.42497, 0.39428, 0.35824, 0.33343, 0.31549, 0.30591, 0.29011`
 for `n = 10..16` against S19's `0.42497, 0.39428, 0.35824, 0.33343, 0.31549,
 0.30591, 0.29011`; the parity sums give `28.108, 42.169, 63.247, 94.861,
 142.291, 213.434` for `n = 11..16` against S19's differences `28.11, 42.2,
@@ -299,12 +303,12 @@ for `n = 10..16` against S19's `0.42497, 0.39428, 0.35824, 0.33343, 0.31549,
 recursion on the unit group) agree to five digits: each certifies the other.
 
 **What this changes (DIRECTION).** Theorem C's question `liminf H_n(1) > 0`
-is the question whether the partial sums `1 + sum_(m<=n) T_m`, `T_m = (3/2)
-sum_(prim mod 3^m) S_m(psi)`, stay away from zero; the `T_m` are `-1/2,
+is the question whether the partial sums `H_n(1) = 1 + sum_(2<=m<=n) T_m`, `T_m = (3/2)
+sum_(prim mod 3^m) S_m(psi)`, stay away from zero (the `m = 1` term `T_1 = -1/2` is already inside `1 = H_1(1)`); the `T_m` are `-1/2,
 +0.143, -0.151, -0.064, +0.037, -0.009, -0.095, -0.086, -0.078, -0.059,
 -0.046, -0.054, -0.037, -0.027, -0.014, -0.024` for `m = 1..16`, each a sum
-of `L_m` moments of size `0.84·3^(-m/2)` whose random-phase size would be
-`0.69` — so the moments' phases cancel almost completely in the sum at `y =
+of `(2/3) L_m` moments of size `0.84·3^(-m/2)` whose random-phase size would be
+`0.56` — so the moments' phases cancel almost completely in the sum at `y =
 1` (the sum *is* the mass at `1`); the identity is a bridge, not a bound.
 The negative-cycle spike, by contrast, is the parity asymmetry of the
 spectrum, and its growth `(3/2)^n` is the statement that odd and even
@@ -330,7 +334,12 @@ multipliers), `Q <= 2000`, `N = 666,000`. Box B: `u <= 5000` (`1667`), `Q <=
 10^4`, `N = 16,670,000`, depth capped at `20` (residues mod `3^20` in int64).
 Box B's depth histogram against `N (2/3) 3^(-(d-1))`: ratios `1.000, 1.000,
 1.000, 1.000, 1.000, 1.000, 0.999, 1.004, 0.998, 1.011, 0.951, 0.956, 1.100,
-1.291, 1.291, 1.291, 3.87` for `d = 1..17`; cumulative counts of depth `>= d`
+1.291, 1.291, 1.291, 3.87` for `d = 1..17` (the ratios at `d <= 8` are
+forced: `L_d = 2·3^(d-1) <= W`, so each multiplier contributes `2W/L_d +
+O(1)` lines of depth `>= d` deterministically by the equidistribution of the
+powers of two — the audit measured a per-multiplier variance `0.13` against a
+Poisson `41` at `d = 6`; the Poisson test begins at `d >= 10` here and at
+`d >= 8` in box A); cumulative counts of depth `>= d`
 against the Poisson mean, with the tail probability `P(X >= observed)`: `d =
 11`: `276` vs `282.3` (`0.65`); `12`: `97` vs `94.1` (`0.40`); `13`: `37` vs
 `31.4` (`0.18`); `14`: `14` vs `10.5` (`0.17`); `15`: `5` vs `3.5` (`0.27`);
@@ -444,23 +453,29 @@ entries `(2^k a - 1)/3`, `k >= 4`: tiny at `1729` (`0.00023`, through `9221,
 36885, ...`), large at `730` (`0.0087`, through `3893 = 1 + 4·973`, the
 saddle point above `973`). `B(27)` is the doubling ray of `27` (`27 ≡ 0 mod
 3` has no odd preimage): the famous starting value has an empty tree above
-it. `B(137)` holds three integers in ten: the path `137 -> 103 -> 155 -> 233 -> 350 -> ... -> 577 -> ... -> 5` carries `30%` of all integers into the trunk-entry point `5`, whose basin is `0.938` (mac-mini's `e_2`).
+it. `B(137)` holds three integers in ten: the path `137 -> 206 -> 103 -> 155 ->
+233 -> 350 -> ... -> 577 -> ... -> 5` carries `30%` of all integers into the trunk-entry point `5`, whose basin is `0.938` (mac-mini's `e_2`).
 
 **The family `1 + 12^m`, and the highway `11 -> 17 -> 13 -> 10 -> 5` (FINITE-EXACT counts to `2^30`; `_basins_mask_...c`, a bitmask sieve that assumes no orbit relation between its targets).** `dens B(1 + 12^m) = 0.476517, 0.035740, 0.004395, 0.000385, 0.000020` for `m = 1..5` (`13, 145, 1729, 20737, 248833`): about a decade per unit of `m`, i.e. per two extra links `(3x+1)/4` that the tree above must funnel through (ratios `13.3, 8.1, 11.4, 19`). The first two are not small numbers' basins but highways: `dens B(13) = 0.4765` and `dens B(17) = 0.4614` — nearly half of all integers pass through `17 -> 26 -> 13 -> 20 -> 10 -> 5` (and `11 -> 34 -> 17` above it), while the other odd preimages of `13` (`277, 1109, ...`) carry `1.5%` together; against `dens B(5) = 0.938` (mac-mini's `e_2`), the trunk entry `5` is fed `49%` through `13` and `49%` otherwise. `dens B(9232) = 0.000066`: the celebrated peak of the orbit of `27` has a basin of `6.6·10^(-5)` (it is `16·577`; its odd preimages `12309, 49237, ...` feed it). `dens B(137) = 0.299245` confirms the first sieve.
 
 
 **4.3 The Krasikov–Lagarias bound at the root 1729.** Krasikov–Lagarias
-(CITED): for every `a ≢ 0 mod 3` there is `X_0(a)` with `|B(a) ∩ [1, X]| >=
+(CITED; Theorem 6.1 of arXiv math/0205002, Acta Arith. 109 (2003), read by
+the audit; the count is over the map `T`, the same as the sieve's): for every `a ≢ 0 mod 3` there is `X_0(a)` with `|B(a) ∩ [1, X]| >=
 X^0.84` for `X >= X_0(a)`. Here `|B(1729) ∩ [1, 2^30]| = 4,719,191` while
 `(2^30)^0.84 = 3.85·10^7`: the count is `12.2%` of the bound, rising by
 `2^0.16 = 1.117` per doubling (`0.046` at `2^21`, `0.098` at `2^28`, `0.122`
 at `2^30`). Consequences: (i) **`X_0(1729) > 2^30`** (PROVED by the count:
 the inequality fails at `X = 2^30`); (ii) if the density `0.0044` persists,
-the inequality first holds near `X = 2^30 · 1.117^(-log(0.122)/log(1.117)) ≈
-2^49.3 ≈ 7·10^14` (OBSERVED extrapolation). The theorem is asymptotic; for the
-root `1729` its threshold is astronomically beyond any range in which
-Collatz has been checked exhaustively at the time of the theorem (`2^68`,
-Barina, is beyond it — but the theorem's own constants are not explicit).
+the inequality first holds near `X = 2^30 · 1.117^(-log(0.122)/log(1.117)) =
+2^(30 + 18.9) ≈ 2^48.9 ≈ 5·10^14` (equivalently `0.0044^(-1/0.16)`; OBSERVED
+extrapolation). The theorem is asymptotic with an ineffective `X_0(a)`; for the root `1729`
+the extrapolated threshold `≈ 2^49` lies inside the range checked
+exhaustively before the theorem (`3·2^53`, Oliveira e Silva 1999, CITED via
+the audit) and far below Barina's `2^68`, so for this root the sublinear
+bound is weaker than the truth throughout the verified range (the sentence
+first written here placed the threshold "astronomically beyond" that range:
+MISTAKE-552).
 mac-mini's THM-4517 shows why no root-uniform *positive proportion* can
 exist; the numbers here show, for one root, how far the sublinear bound sits
 below the truth. The owner's phrase "return to 1729" is, for `n > 1729`, the
@@ -496,18 +511,18 @@ statuses. **Verdict (report `collatz_necklace_20260929_audit.md`, 38 claims, own
 | item | status |
 |---|---|
 | Theorem 1 (character-spectrum duality; `sum_prim S_n = rho_n(1) - rho_(n-1)(1)`; parity sum `= rho_n(-1) - rho_(n-1)(-1)`) | PROVED; VERIFIED against the exact law (`n <= 9`, six digits) and against S19's independent values (`n = 10..16`, five digits) |
-| Proposition 2 (full-period one-pole recursion, exact) | PROVED; `M(n)` agrees with the S20 FFT at `n = 1..18` to seven digits |
+| Proposition 2 (full-period one-pole recursion, exact) | PROVED; `M(n)` agrees with the S20 FFT at `n = 1..18` to seven digits; level 19 reproduced independently by the audit |
 | `M(19) = 0.0098157` at `±2^24`, `24 = floor(19 log_2 3) - 6`; the maximum over all `774,840,978` units on `±2^s` | VERIFIED (float64, no truncation; `_fullperiod_max19_` output) |
 | `M(20) = 0.0088846` at `±2^26` (`20 log_2 3 - 5.7`), over all `2,324,522,934` units | VERIFIED (complex64 at level 20, no truncation; `_fullperiod_max20_` output) |
 | the multiplicative spectrum: rms at the Parseval scale, non-Rayleigh, largest moments `≈ n/2` Parseval units, on `psi_(±2), psi_(±8)` at low levels | VERIFIED (`n <= 16`); the reading of `psi_(±2)` as the 3-adic-logarithm character DIRECTION |
 | the Jacobi transfer `E[psi(Y_n)] = G_psi sum_(psi') c(psi, psi') E[psi'(Y_(n-1))]`; `|c| = (#prim')^(-1/2)` on primitive pairs, `c = 0` off them; `rms |G_psi| = 3^(-1/2)`; `corr(|S_n|, |G_psi|) = 0.6–0.8` | recursion PROVED; the constant modulus VERIFIED to `n = 7` (exact to `10^(-6)`), CONJECTURED for all `n`; the shape reading OBSERVED |
-| the 3-adic zero-line census: geometric depth law, Poisson tail, the S22 seed one of five depth-15 lines | FINITE-EXACT (`16.7·10^6` pairs) |
+| the 3-adic zero-line census: geometric depth law (deterministic for `d <= 8`, Poisson-testable from `d >= 10`), Poisson tail, the S22 seed one of five depth-15 lines | FINITE-EXACT (`16.7·10^6` pairs) |
 | `e^(-I) 3^(θ*/ln 2) = log_2 3 - 1` | PROVED (a one-line identity); the reading of H's margin DIRECTION |
 | the saddle chain `1 + 3^j 4^(6-j)`; `1729 = 1 + 12^3` its midpoint; `1 + 12^m` the midpoint for all `m`; `17 = 1 + 4^2` | EXACT (PROVED from the hedgehog note's Proposition 4; checked) |
 | `139 | 973`, the merge at `137`, the exponents `4, 3` | NUMEROLOGY |
 | basins of the chain, of `27`, of `137` to `2^30`; `dens B(1 + 12^m) = 0.48, 0.036, 0.0044, 3.9·10^(-4), 2.0·10^(-5)` (`m = 1..5`); `dens B(13) = 0.477`, `dens B(17) = 0.461`, `dens B(9232) = 6.6·10^(-5)` | FINITE-EXACT counts; densities OBSERVED (two codes agree at `2^21`; the bitmask sieve agrees with the chain sieve at `2^30`) |
 | `X_0(1729) > 2^30` for the Krasikov–Lagarias threshold | PROVED (by the count) |
-| `X_0(1729) ≈ 2^49` | OBSERVED extrapolation |
+| `X_0(1729) ≈ 2^49`, inside the range verified before the theorem (`3·2^53`, CITED) | OBSERVED extrapolation |
 | `x^4 + y^3 = z^17` has no primitive solution | UNVERIFIED (no source found); its "clock shadow" is not empty by any known argument (audit of THM-4516) |
 | arXiv:2609.26996 on `(3,5,7)` | AUTHOR-CLAIMED (found, not read) |
 
@@ -523,7 +538,7 @@ place (the balanced point of a saddle chain) and a measured basin, and the
 Krasikov–Lagarias threshold for it is bounded below. (5) The `(4,3,17)`
 statement is still without a source.
 
-**Obligations.** (a) The Jacobi transfer is now written and its constant-modulus structure verified to level 7 (section 2); to prove `|c(psi, psi')| = (#prim')^(-1/2)` for all `n` (the prime-power Jacobi-sum evaluation) and to derive the spectrum's tail law from `|G_psi|` and the mixing. (b) Level 20 done in complex64 (`M(20) = 0.0088846` at `±2^26`); level 21 would need `110 GB`. (c) The growth mechanism of the level-5
+**Obligations.** (a) The Jacobi transfer is now written and its constant-modulus structure verified to level 7 (section 2); to prove `|c(psi, psi')| = (#prim')^(-1/2)` for all `n` (the prime-power Jacobi-sum evaluation) and to derive the spectrum's tail law from `|G_psi|` and the mixing. (b) Level 20 done in complex64 (`M(20) = 0.0088846` at `±2^26`); the audit remarks that streaming the last level needs only `m_19` in memory (`12.4 GB`) with residues by doubling, so level 21 (`m_20`, `37 GB`) is within the machine and level 22 is not. (c) The growth mechanism of the level-5
 remnant (S22), untouched here. (d) `dens B(1 + 12^m)` falls by about a decade per unit of `m` (measured to `m = 5`); a law, and the basins of the other chain points `1 + 3^j 4^(m-j)`, remain to be found.
 (e) A source for the `(4,3,17)` statement.
 
@@ -544,4 +559,4 @@ gcc -O3 -o basins3 04-computation/experiments/collatz_three_mirrors_basins_20260
 gcc -O3 -o basins_mask 04-computation/experiments/collatz_three_mirrors_basins_mask_20260929.c && ./basins_mask 1073741824 13 145 1729 20737 248833 17 137 9232 > 05-knowledge/results/collatz_three_mirrors_basins_mask_20260929.out   # 15 s
 ```
 
-OWN_AUDIT_PLACEHOLDER
+**Own audit (2026-09-29, a second subagent, own code: forward DP of the law to `n = 9`, the full-period recursion re-implemented in C to level 19, an own bitmask sieve to `2^30`, own censuses in Python and C, the preprint texts checked; report `collatz_three_mirrors_20260929_audit.md`, 40 claims): SOUND WITH CORRECTIONS, eighteen applied.** Holds: Theorem 1(i), (ii) with own proofs, the corollary `-1/3`; Proposition 2 and every level `1..18` to seven digits, level 19 reproduced (`0.0098157`, mass `0.7089`); the spectrum statistics, the outlier characters, the parity split; the census, the deepest lines, the four exact valuations; the rate identity; the saddle chain and every factorisation; the basins to the last digit (own bitmask sieve), the nestedness, the empty tree above `27`, `dens B(137) = 0.2992`; the Krasikov–Lagarias quotation and the logic of `X_0(1729) > 2^30`; the attributions to the preprints. Corrections: (1) "five digits" holds for `rho_n(1)` at `2..16`; the parity differences are known to the three or four digits S19 prints; `rho_12(1) = 0.35824`; (2) the Fourier-mass explanation (the factor `3/2` is `3^n/L_n`, the same sum over the units, not extra characters); (3) the summary's `s = floor(h log_2 3) - 6` holds at `h = 19` only — the rule is `h log_2 3 - 6 ± 1`; (4) the top four conjugate pairs, not "top eight"; (5) a factor `2` in the `psi_(±2)` formula; (6) `H_n(1) = 1 + sum_(2<=m<=n) T_m` (the note's `1 + sum_(m<=n)` double-counted `T_1`); (7) the random-phase size `0.56` for `(2/3) L_m` primitive characters; (8) the histogram is geometric through depth 10, and for `d <= 8` its ratios are forced by the equidistribution of the powers of two (each multiplier contributes `2W/L_d + O(1)` lines deterministically; per-multiplier variance `0.13` against Poisson `41` at `d = 6`) — the Poisson test starts at `d >= 10`; (9) the critical-rate reading is typed CONJECTURAL/DIRECTION in the summary; (10) `137 -> 206 -> 103`; (11) `2^48.9 ≈ 5·10^14`, not `2^49.3 ≈ 7·10^14`; (12) the sentence placing the threshold "astronomically beyond any range checked exhaustively" was false — `2^49` lies inside the `3·2^53` of Oliveira e Silva 1999 and far below Barina's `2^68` (MISTAKE-552); (13) at audit time section 6 was a placeholder cited as a result ("confirmed by the audit") — the placeholder had been filled and the sentence corrected before the report arrived, and the record of that slip is MISTAKE-552; (14) "(odd `m`)" in the Gauss-sum identity of the second preprint; (15) the level-20 memory remark. The audit did not cover section 6, the history remarks, the truth of the `(4,3,17)` statement, or arXiv:2609.26996.
