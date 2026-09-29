@@ -1,0 +1,123 @@
+census: 333 multipliers u <= 1000 (odd, 3 does not divide u), Q <= 2000: N = 666000 pairs
+depth d: observed count, expected N (2/3) 3^-(d-1), ratio; cumulative >= d: observed, expected N 3^-(d-1)
+   d= 1:   444000     444000.00   1.000   | >= d:   666000    666000.000   1.000
+   d= 2:   148000     148000.00   1.000   | >= d:   222000    222000.000   1.000
+   d= 3:    49334      49333.33   1.000   | >= d:    74000     74000.000   1.000
+   d= 4:    16444      16444.44   1.000   | >= d:    24666     24666.667   1.000
+   d= 5:     5485       5481.48   1.001   | >= d:     8222      8222.222   1.000
+   d= 6:     1815       1827.16   0.993   | >= d:     2737      2740.741   0.999
+   d= 7:      614        609.05   1.008   | >= d:      922       913.580   1.009
+   d= 8:      204        203.02   1.005   | >= d:      308       304.527   1.011
+   d= 9:       74         67.67   1.093   | >= d:      104       101.509   1.025
+   d=10:       22         22.56   0.975   | >= d:       30        33.836   0.887
+   d=11:        2          7.52   0.266   | >= d:        8        11.279   0.709
+   d=12:        2          2.51   0.798   | >= d:        6         3.760   1.596
+   d=13:        1          0.84   1.197   | >= d:        4         1.253   3.192
+   d=14:        2          0.28   7.182   | >= d:        3         0.418   7.182
+   d=15:        1          0.09  10.772   | >= d:        1         0.139   7.182
+deepest lines (depth, u, Q, sign of u 2^Q -+ 1 = 0 mod 3^depth):
+   depth 15: u =    55, Q =   423, sign +   (2^-423 = -55 mod 3^15)
+   depth 14: u =   917, Q =  1557, sign -   (2^-1557 = 917 mod 3^14)
+   depth 14: u =   521, Q =  1365, sign -   (2^-1365 = 521 mod 3^14)
+   depth 13: u =   907, Q =   455, sign +   (2^-455 = -907 mod 3^13)
+   depth 12: u =   301, Q =   124, sign -   (2^-124 = 301 mod 3^12)
+   depth 12: u =    41, Q =   271, sign -   (2^-271 = 41 mod 3^12)
+   depth 11: u =   497, Q =    41, sign -   (2^-41 = 497 mod 3^11)
+   depth 11: u =   413, Q =  1806, sign +   (2^-1806 = -413 mod 3^11)
+   depth 10: u =   985, Q =  1693, sign +   (2^-1693 = -985 mod 3^10)
+   depth 10: u =   931, Q =   352, sign -   (2^-352 = 931 mod 3^10)
+   depth 10: u =   913, Q =   823, sign +   (2^-823 = -913 mod 3^10)
+   depth 10: u =   893, Q =  1484, sign +   (2^-1484 = -893 mod 3^10)
+   depth 10: u =   835, Q =  1763, sign +   (2^-1763 = -835 mod 3^10)
+   depth 10: u =   757, Q =   576, sign -   (2^-576 = 757 mod 3^10)
+   depth 10: u =   731, Q =  1214, sign +   (2^-1214 = -731 mod 3^10)
+   depth 10: u =   703, Q =  1854, sign -   (2^-1854 = 703 mod 3^10)
+   depth 10: u =   617, Q =   817, sign -   (2^-817 = 617 mod 3^10)
+   depth 10: u =   535, Q =   346, sign -   (2^-346 = 535 mod 3^10)
+   depth 10: u =   493, Q =   254, sign -   (2^-254 = 493 mod 3^10)
+   depth 10: u =   461, Q =   278, sign +   (2^-278 = -461 mod 3^10)
+   depth 10: u =   431, Q =   990, sign +   (2^-990 = -431 mod 3^10)
+   depth 10: u =   425, Q =   893, sign -   (2^-893 = 425 mod 3^10)
+   depth 10: u =   361, Q =  1551, sign +   (2^-1551 = -361 mod 3^10)
+   depth 10: u =   349, Q =   386, sign -   (2^-386 = 349 mod 3^10)
+   depth 10: u =   299, Q =   737, sign -   (2^-737 = 299 mod 3^10)
+   check (u, Q) = (55, 423): v3(u 2^Q - 1) = 0, v3(u 2^Q + 1) = 15
+   check (u, Q) = (13, 154): v3(u 2^Q - 1) = 7, v3(u 2^Q + 1) = 0
+   check (u, Q) = (1, 154): v3(u 2^Q - 1) = 1, v3(u 2^Q + 1) = 0
+   check (u, Q) = (1, 480): v3(u 2^Q - 1) = 2, v3(u 2^Q + 1) = 0
+   check (u, Q) = (1, 486): v3(u 2^Q - 1) = 6, v3(u 2^Q + 1) = 0
+lines of depth >= 5 in the window Q <= 60 (these place a multiplier family at the negative exponents -Q + j entering Ntilde_n for n <= depth):
+   Q =  1: depth 6 (u = 365-), depth 5 (u = 851-), depth 5 (u = 607+), depth 5 (u = 121+)
+   Q =  2: depth 7 (u = 547-), depth 6 (u = 911+), depth 5 (u = 425+), depth 5 (u = 61-)
+   Q =  3: depth 6 (u = 91+), depth 5 (u = 881-), depth 5 (u = 577+), depth 5 (u = 395-)
+   Q =  4: depth 6 (u = 319-), depth 5 (u = 805-), depth 5 (u = 653+), depth 5 (u = 167+)
+   Q =  5: depth 8 (u = 205+), depth 5 (u = 767-), depth 5 (u = 691+), depth 5 (u = 281-)
+   Q =  6: depth 7 (u = 991-), depth 6 (u = 467+), depth 5 (u = 953+), depth 5 (u = 505-)
+   Q =  7: depth 6 (u = 131-), depth 5 (u = 841+), depth 5 (u = 617-), depth 5 (u = 355+)
+   Q =  8: depth 7 (u = 299+), depth 5 (u = 785+), depth 5 (u = 673-), depth 5 (u = 187-)
+   Q =  9: depth 6 (u = 215-), depth 5 (u = 757+), depth 5 (u = 701-), depth 5 (u = 271+)
+   Q = 10: depth 6 (u = 257+), depth 5 (u = 743+), depth 5 (u = 715-), depth 5 (u = 229-)
+   Q = 11: depth 6 (u = 965-), depth 6 (u = 493+), depth 5 (u = 979+), depth 5 (u = 479-)
+   Q = 12: depth 6 (u = 847-), depth 6 (u = 611+), depth 5 (u = 361-), depth 5 (u = 125+)
+   Q = 13: depth 7 (u = 59-), depth 5 (u = 913+), depth 5 (u = 545-), depth 5 (u = 427+)
+   Q = 14: depth 6 (u = 335+), depth 5 (u = 821+), depth 5 (u = 637-), depth 5 (u = 151-)
+   Q = 15: depth 6 (u = 197-), depth 5 (u = 775+), depth 5 (u = 683-), depth 5 (u = 289+)
+   Q = 16: depth 6 (u = 995+), depth 6 (u = 463-), depth 5 (u = 949-), depth 5 (u = 509+)
+   Q = 17: depth 8 (u = 133+), depth 5 (u = 839-), depth 5 (u = 619+), depth 5 (u = 353-)
+   Q = 18: depth 6 (u = 431+), depth 5 (u = 917+), depth 5 (u = 541-), depth 5 (u = 55-)
+   Q = 19: depth 6 (u = 149-), depth 5 (u = 823+), depth 5 (u = 635-), depth 5 (u = 337+)
+   Q = 20: depth 6 (u = 439-), depth 5 (u = 925-), depth 5 (u = 533+), depth 5 (u = 47+)
+   Q = 21: depth 7 (u = 145+), depth 5 (u = 827-), depth 5 (u = 631+), depth 5 (u = 341-)
+   Q = 22: depth 6 (u = 437+), depth 5 (u = 923+), depth 5 (u = 535-), depth 5 (u = 49-)
+   Q = 23: depth 7 (u = 583+), depth 6 (u = 875-), depth 5 (u = 389-), depth 5 (u = 97+)
+   Q = 24: depth 6 (u = 73-), depth 5 (u = 899+), depth 5 (u = 559-), depth 5 (u = 413+)
+   Q = 25: depth 7 (u = 401-), depth 5 (u = 887-), depth 5 (u = 571+), depth 5 (u = 85+)
+   Q = 26: depth 7 (u = 893+), depth 6 (u = 565-), depth 5 (u = 407+), depth 5 (u = 79-)
+   Q = 27: depth 8 (u = 647-), depth 6 (u = 811+), depth 5 (u = 325+), depth 5 (u = 161-)
+   Q = 28: depth 6 (u = 41+), depth 5 (u = 931-), depth 5 (u = 527+), depth 5 (u = 445-)
+   Q = 29: depth 7 (u = 385+), depth 5 (u = 871+), depth 5 (u = 587-), depth 5 (u = 101-)
+   Q = 30: depth 8 (u = 901-), depth 6 (u = 557+), depth 5 (u = 415-), depth 5 (u = 71+)
+   Q = 31: depth 7 (u = 643+), depth 6 (u = 815-), depth 5 (u = 329-), depth 5 (u = 157+)
+   Q = 32: depth 6 (u = 43-), depth 5 (u = 929+), depth 5 (u = 529-), depth 5 (u = 443+)
+   Q = 33: depth 6 (u = 343+), depth 5 (u = 829+), depth 5 (u = 629-), depth 5 (u = 143-)
+   Q = 34: depth 7 (u = 193-), depth 5 (u = 779+), depth 5 (u = 679-), depth 5 (u = 293+)
+   Q = 35: depth 8 (u = 997+), depth 6 (u = 461-), depth 5 (u = 947-), depth 5 (u = 511+)
+   Q = 36: depth 7 (u = 595-), depth 6 (u = 863+), depth 5 (u = 377+), depth 5 (u = 109-)
+   Q = 37: depth 6 (u = 67+), depth 5 (u = 905-), depth 5 (u = 553+), depth 5 (u = 419-)
+   Q = 38: depth 6 (u = 331-), depth 5 (u = 817-), depth 5 (u = 641+), depth 5 (u = 155+)
+   Q = 39: depth 7 (u = 199+), depth 5 (u = 773-), depth 5 (u = 685+), depth 5 (u = 287-)
+   Q = 40: depth 6 (u = 265-), depth 5 (u = 751-), depth 5 (u = 707+), depth 5 (u = 221+)
+   Q = 41: depth 11 (u = 497-), depth 6 (u = 961+), depth 5 (u = 983-), depth 5 (u = 475+)
+   Q = 42: depth 7 (u = 845+), depth 6 (u = 613-), depth 5 (u = 359+), depth 5 (u = 127-)
+   Q = 43: depth 7 (u = 671-), depth 6 (u = 787+), depth 5 (u = 301+), depth 5 (u = 185-)
+   Q = 44: depth 6 (u = 29+), depth 5 (u = 943-), depth 5 (u = 515+), depth 5 (u = 457-)
+   Q = 45: depth 8 (u = 379+), depth 5 (u = 865+), depth 5 (u = 593-), depth 5 (u = 107-)
+   Q = 46: depth 6 (u = 175-), depth 5 (u = 797+), depth 5 (u = 661-), depth 5 (u = 311+)
+   Q = 47: depth 6 (u = 277+), depth 5 (u = 763+), depth 5 (u = 695-), depth 5 (u = 209-)
+   Q = 48: depth 6 (u = 955-), depth 6 (u = 503+), depth 5 (u = 989+), depth 5 (u = 469-)
+   Q = 49: depth 7 (u = 113-), depth 5 (u = 859+), depth 5 (u = 599-), depth 5 (u = 373+)
+   Q = 50: depth 6 (u = 421-), depth 5 (u = 907-), depth 5 (u = 551+), depth 5 (u = 65+)
+   Q = 51: depth 7 (u = 575-), depth 6 (u = 883+), depth 5 (u = 397+), depth 5 (u = 89-)
+   Q = 52: depth 6 (u = 77+), depth 5 (u = 895-), depth 5 (u = 563+), depth 5 (u = 409-)
+   Q = 53: depth 7 (u = 403+), depth 5 (u = 889+), depth 5 (u = 569-), depth 5 (u = 83-)
+   Q = 54: depth 6 (u = 163-), depth 5 (u = 809+), depth 5 (u = 649-), depth 5 (u = 323+)
+   Q = 55: depth 6 (u = 283+), depth 5 (u = 769+), depth 5 (u = 689-), depth 5 (u = 203-)
+   Q = 56: depth 7 (u = 223-), depth 5 (u = 749+), depth 5 (u = 709-), depth 5 (u = 263+)
+   Q = 57: depth 6 (u = 253+), depth 5 (u = 739+), depth 5 (u = 719-), depth 5 (u = 233-)
+   Q = 58: depth 8 (u = 491+), depth 6 (u = 967-), depth 5 (u = 977+), depth 5 (u = 481-)
+   Q = 59: depth 6 (u = 119-), depth 5 (u = 853+), depth 5 (u = 605-), depth 5 (u = 367+)
+   Q = 60: depth 6 (u = 305+), depth 5 (u = 791+), depth 5 (u = 667-), depth 5 (u = 181-)
+expected number of lines of depth >= d in this box under the uniform model, and the depth at which it drops below 1:
+   d >=  8:   304.5267
+   d >=  9:   101.5089
+   d >= 10:    33.8363
+   d >= 11:    11.2788
+   d >= 12:     3.7596
+   d >= 13:     1.2532
+   d >= 14:     0.4177
+   d >= 15:     0.1392
+   d >= 16:     0.0464
+   d >= 17:     0.0155
+   d >= 18:     0.0052
+   d >= 19:     0.0017
+DONE

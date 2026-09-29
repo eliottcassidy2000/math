@@ -1,0 +1,368 @@
+Independent audit of collatz-necklace-20260929 (THM-4515/4516/4517, HYP-9165) -- auditor's own code, 2026-09-29
+python 3.13.14, numpy 2.3.2, sympy 1.14.0, gcc: gcc (GCC) 15.2.0, platform Windows-11-10.0.26200-SP0
+==============================================================================
+SECTION A: THM-4515 fair consecutive splits are circulant (independent re-derivation)
+==============================================================================
+
+A1. Share equation, circulant DFT identities, clock factorisation, c_w = sum q^{(j-1-i)x} 2^{im} c_i,
+    all checked EXACTLY (numerators over the common denominator D = 2^K - q^X) on random words.
+    random words tested: 1500; fair splits found and checked: 1206; DFT identity failures: 0
+    -> share equation, clock factorisation (both forms), c_w decomposition, DFT identities,
+       k=0 / k=j/2 integer forms, residue signs and the j=2 CRT equivalence: all HOLD (0 failures).
+    Remark: eigenvalues of 2^m P - q^x I are 2^m zeta^k - q^x = zeta^k (2^m - zeta^{-k} q^x);
+       note 1.2 calls '2^m - zeta^{-k} q^x' the eigenvalues (off by the unit zeta^k; harmless).
+
+A2. Discrete IVT: h(r) = F(r+m) - F(r) - X/2 has h(r+m) = -h(r), unit steps -> zero. Exhaustive check.
+    (necklace, j) pairs with K <= 18: 23201 (note: 23,201); IVT failures (j=2 without fair split): 0;
+    criterion (a)/(b)/(c) mismatches against brute force: 0
+    note's census rows vs mine:
+      (K,X,j)=(12, 6, 3): note 47 of 75; mine 47 of 75 OK
+      (K,X,j)=(15, 6, 3): note 204 of 333; mine 204 of 333 OK
+      (K,X,j)=(18, 6, 3): note 621 of 1026; mine 621 of 1026 OK
+      (K,X,j)=(18, 9, 3): note 1592 of 2700; mine 1592 of 2700 OK
+      (K,X,j)=(16, 4, 4): note 42 of 112; mine 42 of 112 OK
+      (K,X,j)=(16, 8, 4): note 255 of 800; mine 255 of 800 OK
+      (K,X,j)=(18, 6, 6): note 107 of 1026; mine 107 of 1026 OK
+      (K,X,j)=(16, 8, 8): note 30 of 800; mine 30 of 800 OK
+      (K,X,j)=(18, 9, 9): note 56 of 2700; mine 56 of 2700 OK
+    all census rows agree: True
+    three-bead law m(m-1) of 3 C(m,2) primitive necklaces of shape (3m,3):
+      m=2: 2 of 3; m(m-1)=2, 3C(m,2)=3 OK
+      m=3: 6 of 9; m(m-1)=6, 3C(m,2)=9 OK
+      m=4: 12 of 18; m(m-1)=12, 3C(m,2)=18 OK
+      m=5: 20 of 30; m(m-1)=20, 3C(m,2)=30 OK
+      m=6: 30 of 45; m(m-1)=30, 3C(m,2)=45 OK
+      m=7: 42 of 63; m(m-1)=42, 3C(m,2)=63 OK
+      m=8: 56 of 84; m(m-1)=56, 3C(m,2)=84 OK
+
+A3. E[N_j] = m C(m,x)^j / C(jm,jx): brute-force mean over ALL words of five shapes (independent code).
+      shape (12,6) j=3: mean 72/77 = 0.935065; formula 0.935065 OK; P(N>=1)=0.6299
+      shape (12,4) j=4: mean 27/55 = 0.490909; formula 0.490909 OK; P(N>=1)=0.3939
+      shape (15,6) j=3: mean 1000/1001 = 0.999001; formula 0.999001 OK; P(N>=1)=0.6134
+      shape (16,8) j=4: mean 288/715 = 0.402797; formula 0.402797 OK; P(N>=1)=0.3225
+      shape (18,9) j=3: mean 2400/2431 = 0.987248; formula 0.987248 OK; P(N>=1)=0.5898
+    Stirling constants: sqrt(3)/(2 pi rho(1-rho)) at rho=1/2: 1.1027; at rho=log_3 2: 1.1838; at rho=12/19: 1.1847
+    (note says '1.1847 at rho = log_3 2'; 1.1847 is the value at rho = 12/19, the exact-log_3 2 value is 1.1839)
+    exact second moment E[N_3^2] = (m/C(3m,3x)) sum_delta sum_s C(delta,s)^3 C(m-delta,x-s)^3 (log-space, my code):
+      m=100: E[N]=1.0953 E[N^2]=4.8158 E[N^2]/log m=1.0457 slope dE[N^2]/dlog m=nan bound P>=E^2/E[N^2]=0.2491 (x log m: 1.147)
+      m=300: E[N]=1.1002 E[N^2]=5.7444 E[N^2]/log m=1.0071 slope dE[N^2]/dlog m=0.845 bound P>=E^2/E[N^2]=0.2107 (x log m: 1.202)
+      m=1000: E[N]=1.1019 E[N^2]=6.7366 E[N^2]/log m=0.9752 slope dE[N^2]/dlog m=0.824 bound P>=E^2/E[N^2]=0.1802 (x log m: 1.245)
+      m=3000: E[N]=1.1024 E[N^2]=7.6326 E[N^2]/log m=0.9533 slope dE[N^2]/dlog m=0.816 bound P>=E^2/E[N^2]=0.1592 (x log m: 1.275)
+      m=10000: E[N]=1.1026 E[N^2]=8.6107 E[N^2]/log m=0.9349 slope dE[N^2]/dlog m=0.812 bound P>=E^2/E[N^2]=0.1412 (x log m: 1.300)
+      m=30000: E[N]=1.1026 E[N^2]=9.5019 E[N^2]/log m=0.9217 slope dE[N^2]/dlog m=0.811 bound P>=E^2/E[N^2]=0.1280 (x log m: 1.319)
+    -> the second-moment bound values 0.249/0.180/0.141 at m=10^2/10^3/10^4 are reproduced; E[N^2] grows with
+       slope ~0.8 per unit log m (not 0.93: E[N^2]/log m is still falling), so 'E[N^2] ~ 0.93 log m' is loose.
+       The O(log m) growth is not proved in the note (it is an exact computation to m = 3e4 + a local-CLT heuristic).
+
+A4. Monte Carlo P(N_3 >= 1), rho = 1/2, own generator (numpy):
+      m=1000: P(N>=1)=0.304 +- 0.007; E[N]=1.115; P log m = 2.10; E[N|N>=1]=3.67
+      m=10000: P(N>=1)=0.244 +- 0.007; E[N]=1.092; P log m = 2.25; E[N|N>=1]=4.47
+      m=100000: P(N>=1)=0.208 +- 0.007; E[N]=1.141; P log m = 2.39; E[N|N>=1]=5.49
+      m=300000: P(N>=1)=0.187 +- 0.010; E[N]=1.058; P log m = 2.35; E[N|N>=1]=5.67
+
+A5. Fair Eliahou identity n'/n = sqrt(P_0/P_1) on real integer cycles with a fair 2-split:
+      3x+7 cycle min 5 (K,X)=(4,2) cut r=1: n=11, n'=10; (n'/n)^2 == P0/P1: True; |log(n'/n)|=0.0953 <= bound 0.8750: True
+      3x+11 cycle min 1 (K,X)=(6,2) cut r=1: n=7, n'=4; (n'/n)^2 == P0/P1: True; |log(n'/n)|=0.5596; bound N/A (needs q n_min > |d|, here 3*1 <= 11)
+      3x+11 cycle min 13 (K,X)=(14,8) cut r=3: n=70, n'=62; (n'/n)^2 == P0/P1: True; |log(n'/n)|=0.1214 <= bound 1.5714: True
+      3x+11 cycle min 13 (K,X)=(14,8) cut r=4: n=35, n'=31; (n'/n)^2 == P0/P1: True; |log(n'/n)|=0.1214 <= bound 1.5714: True
+      3x+11 cycle min 13 (K,X)=(14,8) cut r=5: n=58, n'=52; (n'/n)^2 == P0/P1: True; |log(n'/n)|=0.1092 <= bound 1.5714: True
+      3x+11 cycle min 13 (K,X)=(14,8) cut r=6: n=29, n'=26; (n'/n)^2 == P0/P1: True; |log(n'/n)|=0.1092 <= bound 1.5714: True
+      3x-17 cycle min 65 (K,X)=(6,4) cut r=2: n=125, n'=130; (n'/n)^2 == P0/P1: True; |log(n'/n)|=0.0392 <= bound 0.1910: True
+      3x-17 cycle min 73 (K,X)=(6,4) cut r=1: n=101, n'=103; (n'/n)^2 == P0/P1: True; |log(n'/n)|=0.0196 <= bound 0.1683: True
+      3x-17 cycle min 73 (K,X)=(6,4) cut r=2: n=143, n'=146; (n'/n)^2 == P0/P1: True; |log(n'/n)|=0.0208 <= bound 0.1683: True
+      5x-9 cycle min 7 (K,X)=(4,2) cut r=1: n=13, n'=14; (n'/n)^2 == P0/P1: True; |log(n'/n)|=0.0741 <= bound 0.3462: True
+      3x+25 cycle min 7 (K,X)=(16,8) cut r=2: n=47, n'=22; (n'/n)^2 == P0/P1: True; |log(n'/n)|=0.7591; bound N/A (needs q n_min > |d|, here 3*7 <= 25)
+      3x-29 cycle min 109 (K,X)=(12,8) cut r=2: n=209, n'=226; (n'/n)^2 == P0/P1: True; |log(n'/n)|=0.0782 <= bound 0.3893: True
+      3x-29 cycle min 109 (K,X)=(12,8) cut r=5: n=217, n'=218; (n'/n)^2 == P0/P1: True; |log(n'/n)|=0.0046 <= bound 0.3893: True
+    Remark: the bound needs the implicit hypothesis q n_min > |d| (so that |d/(qy)| < 1); the identity itself needs nothing.
+       The general bound X|d|/(2(q n_min - |d|)) gives X/(6 n_min) for 3x+1, while the note's 'relative precision
+       X/(12 n_min)' uses that all factors 1 + 1/(3y) exceed 1 (one-sided); both are correct.
+
+A6. The 3x+17021 cycle through 5: shape, fair antipodal cuts, alternating sum, fair 4-split.
+      length K=2140, odd steps X=1088, gcd=4, least element 5, primitive word: True
+      fair 2-cuts: 79 of 1070 (note: 79 of 1070), first at r=0 (cut elements 5, 187226); fair 4-cuts: 0 (note: none)
+      alternating sum n0 - n1 = -187221; -d(c0 - c1)/(2^m + 3^x) = -187221 -> OK
+      sum: (2^m - 3^x)(n0 + n1) == d (c0 + c1): True
+      2^m - 3^x has 323 digits, 2^m + 3^x has 323 digits (m=1070, x=544)
+
+A7. Primitive 3x+d cycles, |d| <= 100, d odd prime to 3, least element <= 100|d|, gcd(K,X) > 1 (own search):
+      total 49 (note: 49); first ten: [(7, 5, 4, 2, 2), (11, 1, 6, 2, 2), (11, 13, 14, 8, 2), (13, 131, 24, 15, 3), (-17, 65, 6, 4, 2), (-17, 73, 6, 4, 2), (25, 7, 16, 8, 8), (25, 17, 8, 4, 4), (-25, 113, 34, 22, 2), (-29, 109, 12, 8, 4)]
+      3x+13 cycle through 131: shape (24,15), fair 3-cuts: [] (note: none)
+
+A8. Shape (11,7), clock 2^11 - 3^7 = -139: necklaces, run classes, residues of carries mod 139, rotation law.
+      necklaces: 30 (all primitive: True); words: 330
+      run classes (m-cycles): {1: 1, 2: 9, 3: 15, 4: 5} (note: 1/9/15/5)
+      elements of least absolute value (-c_min/139, the note's 'minima') range [-27.10, -14.81] (note: [-27.10, -14.81]);
+      true minima (-c_max/139) range [-237.01, -72.94]; integral necklaces: [('00011110111', -17.0)]
+      residue classes hit mod 139: 130 of 139 (note 130); class 0 multiplicity 11 (note 11); max nonzero multiplicity 5 (note 5)
+      rotation law c_(rot w) = (3^(w_0) c_w + w_0 D)/2 on all 330 words: True; hence c -> 3^(w_0) c / 2 mod 139: consistent
+
+SECTION A VERDICT: THM-4515 (1)-(4) HOLD; the census, the 17021-cycle facts and the (11,7) orderings HOLD;
+  (5) E[N_j] exact formula and Stirling asymptotics HOLD; the 'PROVED lower bound of order 1/log m' is proved
+  only for the m values computed (E[N_3^2] = O(log m) for all m is not proved in the note).
+[sectionA: 67 s]
+
+==============================================================================
+SECTION B: THM-4516 perfect-power clocks (independent census: residue sieve + exact roots, no gmpy2)
+==============================================================================
+
+B1. Dictionary. 2^K - q^X = +-m^r with q = p^s odd, K >= 1: m is odd (2^K - q^X is odd), p does not divide m
+    (else p | 2^K), so gcd(m, 2p) = 1 and (2, p, m) with exponents (K, sX, r) is a primitive solution of
+    x^a + y^b = z^c; Darmon-Granville finiteness applies when 1/K + 1/(sX) + 1/r < 1. By THM-4484(1) (clock | d)
+    the shape (K,X) is free for T_{q, +-m^r} since the clock equals +-d. CONSISTENT (the converse is NOT claimed
+    correctly in section 2.5 / THM-4516(5); see B5).
+
+B2. Census of |2^K - q^X| in {1} u {m^r : r >= 2}, X >= 2 (own sieve; every prime exponent r <= log_3 N tested).
+    sieve: 68 prime exponents r <= 339, 251 auxiliary primes (max 15217), small-factor filter primes < 200
+      q-block 3..41: 99000 pairs, 24437 survive the small-factor filter
+    validation (odd q <= 41, 2 <= X <= K <= 100): sieve 7 clocks / brute force 7; identical: True
+      found: [(3, 5, 4, -49, 7, 2), (5, 4, 2, -9, 3, 2), (7, 9, 3, 169, 13, 2), (9, 5, 2, -49, 7, 2), (13, 9, 2, 343, 7, 3), (17, 6, 2, -225, 15, 2), (33, 7, 2, -961, 31, 2)]; units: [(3, 3, 2, -1)]
+    sieve: 294 prime exponents r <= 1931, 929 auxiliary primes (max 125353), small-factor filter primes < 200
+      q-block 3..101: 3990000 pairs, 978751 survive the small-factor filter
+      q-block 103..201: 3990000 pairs, 988818 survive the small-factor filter
+    (i) odd q <= 201, 2 <= X <= K <= 400: 10 perfect-power clocks + 1 unit clocks [20 s]
+        units |2^K - q^X| = 1 with X >= 2: [(3, 3, 2, -1)] (Gersonides/Catalan: only (3,3,2) expected)
+        Pythagorean family q = 2^(K-2)+1, X = 2: [(5, 4), (9, 5), (17, 6), (33, 7), (65, 8), (129, 9)]
+        all others (q, K, X, sign, m, r): [(3, 5, 4, -1, 7, 2), (7, 9, 3, 1, 13, 2), (13, 9, 2, 1, 7, 3), (71, 7, 2, -1, 17, 3)]
+        matches the note's list exactly (four Fermat-Catalan readings, family q=5,9,17,33,65,129): True
+    sieve: 431 prime exponents r <= 3001, 1340 auxiliary primes (max 175211), small-factor filter primes < 200
+      q-block 3..3: 4498500 pairs, 1386208 survive the small-factor filter
+    (ii) q = 3, 2 <= X <= K <= 3000: clocks [(3, 5, 4, -49, 7, 2)]; units [(3, 3, 2, -1)] [22 s]
+        nothing beyond (3,3,2) [-1] and (3,5,4) [-7^2]: True
+    sieve: 96 prime exponents r <= 504, 335 auxiliary primes (max 31771), small-factor filter primes < 200
+      q-block 3..2001: 1770000 pairs, 430421 survive the small-factor filter
+      q-block 2003..4001: 1770000 pairs, 432131 survive the small-factor filter
+      q-block 4003..6001: 1770000 pairs, 430924 survive the small-factor filter
+      q-block 6003..8001: 1770000 pairs, 431873 survive the small-factor filter
+      q-block 8003..9999: 1768230 pairs, 431424 survive the small-factor filter
+    (iii) odd q <= 10^4, 2 <= X <= K <= 60: 16 clocks = 12 family members (K = 4..15) + others [(3, 5, 4, -1, 7, 2), (7, 9, 3, 1, 13, 2), (13, 9, 2, 1, 7, 3), (71, 7, 2, -1, 17, 3)]; units [(3, 3, 2, -1)] [9 s]
+        note claims 17 = 13 family (K=3..15) + the four readings; with the unit clock (3,3,2) counted as the K = 3 family member
+        (2^3 + 1^2 = 3^2), mine: 17 = 13 family + 4 others: True
+    sieve: 81 prime exponents r <= 420, 290 auxiliary primes (max 31771), small-factor filter primes < 200
+      q-block 3..5001: 1950000 pairs, 468152 survive the small-factor filter
+      q-block 5003..10001: 1950000 pairs, 468876 survive the small-factor filter
+      q-block 10003..15001: 1950000 pairs, 467340 survive the small-factor filter
+      q-block 15003..20001: 1950000 pairs, 466515 survive the small-factor filter
+      q-block 20003..25001: 1950000 pairs, 466785 survive the small-factor filter
+      q-block 25003..30001: 1950000 pairs, 465609 survive the small-factor filter
+      q-block 30003..35001: 1950000 pairs, 466151 survive the small-factor filter
+      q-block 35003..40001: 1950000 pairs, 466089 survive the small-factor filter
+      q-block 40003..45001: 1950000 pairs, 465713 survive the small-factor filter
+      q-block 45003..50001: 1950000 pairs, 464615 survive the small-factor filter
+      q-block 50003..55001: 1950000 pairs, 465556 survive the small-factor filter
+      q-block 55003..60001: 1950000 pairs, 466625 survive the small-factor filter
+      q-block 60003..65001: 1950000 pairs, 465721 survive the small-factor filter
+      q-block 65003..70001: 1950000 pairs, 464959 survive the small-factor filter
+      q-block 70003..75001: 1950000 pairs, 466025 survive the small-factor filter
+      q-block 75003..80001: 1950000 pairs, 466320 survive the small-factor filter
+      q-block 80003..85001: 1950000 pairs, 465980 survive the small-factor filter
+      q-block 85003..90001: 1950000 pairs, 465755 survive the small-factor filter
+      q-block 90003..95001: 1950000 pairs, 465621 survive the small-factor filter
+      q-block 95003..99999: 1949220 pairs, 465686 survive the small-factor filter
+    (iv) odd q <= 10^5, 2 <= X <= K <= 40: 19 clocks = 15 family members (K = 4..18) + others [(3, 5, 4, -1, 7, 2), (7, 9, 3, 1, 13, 2), (13, 9, 2, 1, 7, 3), (71, 7, 2, -1, 17, 3)]; units [(3, 3, 2, -1)] [39 s]
+        note claims 20 = 16 family (K=3..18) + the four readings: True
+    Method remark: the session's power_clocks.py identifies the exponent with gmpy2.iroot(n, r) for r <= 64 only and
+      DROPS a perfect power whose least prime exponent exceeds 64 (power_data returns None); the wide script keeps it
+      with r = None. My sieve tests every prime r <= log_3 N, so the census statement is now covered for all r.
+
+B3. Free cycles of the perfect-power clocks, every necklace of the shape iterated directly:
+      3x-49 [2^5+7^2=3^4] shape (5,4) clock -49: [('01111', 65, 5, 'prim')]
+      9x-49 [2^5+7^2=9^2] shape (5,2) clock -49: [('00011', 11, 5, 'prim'), ('00101', 13, 5, 'prim')]
+      7x+169 [7^3+13^2=2^9] shape (9,3) clock 169: [('000000111', 67, 9, 'prim'), ('000001011', 85, 9, 'prim'), ('000001101', 71, 9, 'prim'), ('000010011', 121, 9, 'prim'), ('000010101', 93, 9, 'prim'), ('000011001', 79, 9, 'prim'), ('000100011', 95, 9, 'prim'), ('000100101', 137, 9, 'prim'), ('000101001', 109, 9, 'prim'), ('001001001', 169, 3, 'period 3, gcd 169')]
+      13x+343 [7^3+13^2=2^9] shape (9,2) clock 343: [('000000011', 15, 9, 'prim'), ('000000101', 17, 9, 'prim'), ('000001001', 21, 9, 'period 9, gcd 7'), ('000010001', 29, 9, 'prim')]
+      71x-4913 [2^7+17^3=71^2] shape (7,2) clock -4913: [('0000011', 73, 7, 'prim'), ('0000101', 75, 7, 'prim'), ('0001001', 79, 7, 'prim')]
+      5x-9 [2^4+3^2=5^2] shape (4,2) clock -9: [('0011', 7, 4, 'prim'), ('0101', 9, 2, 'period 2, gcd 9')]
+      17x-225 [2^6+15^2=17^2] shape (6,2) clock -225: [('000011', 19, 6, 'prim'), ('000101', 21, 6, 'period 6, gcd 3'), ('001001', 25, 3, 'period 3, gcd 25')]
+      3x+125 [2^7=3+5^3] shape (7,1) clock 125: [('0000001', 1, 7, 'prim')]
+      3x-49 cycle from 65: [65, 73, 85, 103, 130]; 3x+125 cycle from 1: [1, 64, 32, 16, 8, 4, 2]
+      13x+343 fourth necklace: least element 21 = 7 x 3, i.e. 7 x (cycle of 13x+49 through 3): [3, 44, 22, 11, 96, 48, 24, 12, 6] x 7 = [21, 308, 154, 77, 672, 336, 168, 84, 42]
+      -> note 2.2's phrase '21 = 7 x (3x+49 ...) scaled' should read '7 x (13x+49 cycle through 3)'.
+
+B4. Eisenstein factorisation of 2^9 - 7^3:
+      2^9 - 7^3 = 169 = 13^2; (2^3 - 7) Phi_3(8,7) = 169; 8 - 7 zeta == (3 - zeta)^2 mod Phi_3: True; 8 - 7 zeta^2 == (3 - zeta^2)^2: True; N(3 - zeta) = 9 + 3 + 1 = 13
+      13 = 1 mod 3 splits in Z[zeta_3]; (3 - zeta)(3 - zeta^2) = 13, so the twisted clocks are squares of the two primes above 13: HOLDS.
+
+B5. Beal shadow. THM-4516(5)/note 2.5 conclude: 'Beal implies no map py +- m^r (r >= 3) has a free mixed shape (K,X)
+    with K >= 3, sX >= 3, X >= 2'. Freeness needs only (2^K - p^X) | m^r (THM-4484), NOT 2^K - p^X = +-m^r. Counterexamples:
+      3y+125 = 3y+5^3: clock 2^5 - 3^3 = 5 divides d, so shape (5,3) is free (K=5, sX=3, r=3); necklaces -> integer cycles [('00111', 475, 5, True), ('01011', 575, 5, True)]; the clock 5 is not +-m^r, no Beal solution involved
+      3y+103823 = 3y+47^3: clock 2^7 - 3^4 = 47 divides d, so shape (7,4) is free (K=7, sX=4, r=3); necklaces -> integer cycles [('0001111', 143585, 7, True), ('0010111', 196601, 7, True), ('0011011', 187765, 7, True), ('0011101', 161257, 7, True), ('0101011', 223109, 7, True)]; the clock 47 is not +-m^r, no Beal solution involved
+    -> the sentence is FALSE as stated; the true consequence of Beal is only: no perfect-power CLOCK 2^K - p^{sX} = +-m^r with K, sX, r >= 3.
+
+B6. The (4,3,17) 'clock shadow is empty' sentence. A clock with exponent multiset {4,3,17} means 2^K = q^X +- m^r
+    with {K, sX, r} = {4, 3, 17}. The note's reason ('no term can be a pure power of two while the other two are powers
+    of one odd base') is not an argument: a coprime solution of x^4 + y^3 = z^17 has exactly one even variable, and
+    the clock shadow is the sub-case where that variable is a power of 2 (e.g. x = 2: 16 = z^17 - y^3). Finite checks:
+      2^K = u^a + v^b with u, v odd, {K,a,b} = {4,3,17}: solutions [] (finite search complete)
+      2^K = u^a - v^b or v^b - u^a with u odd < 3000: solutions [] (bounded search; NOT a proof of emptiness)
+    -> 'Its clock shadow is empty in any case' is UNSUPPORTED; emptiness of the shadow is exactly as open as the (4,3,17)
+       equation restricted to solutions with a power-of-two variable (plus the K = 4a readings for x = 2^a).
+
+SECTION B VERDICT: dictionary, census (now covered for all exponents r), free cycles, Eisenstein square: HOLD;
+  the Beal-shadow consequence in THM-4516(5)/title and the 'clock shadow is empty' sentence: FAIL as stated.
+[sectionB: 90 s]
+
+==============================================================================
+SECTION C: THM-4517 no root-uniform positive density; sheet cap; FINITE-EXACT basin densities
+==============================================================================
+
+C1. Proposition 3.2 re-derived.
+    a_i = (4^i-1)/3: a_2..a_8 = [5, 21, 85, 341, 1365, 5461, 21845]; T(a_i) = 2^(2i-1): True
+    a_i = 0 mod 3 iff 3 | i (i <= 200): True; ord_9(4) = 3
+    a_i (i >= 2) is never a power of two (odd and > 1): True; the orbit after a_i is the trunk down to 1, so no orbit contains two distinct a_i: disjointness HOLDS
+    odd preimage of n exists iff n = 2 mod 3 (n <= 10^5): True
+    B(a) = {a} u B(2a) u B((2a-1)/3) (last term iff a = 2 mod 3), checked on n <= 2^18 for ten roots: True
+    5 in B(16)? False (T(5) = 8 < 16). So 'B(4^i) = union_(i' >= i) B(a_i')' is off by one: B(2^(2i-1)) = trunk-above u union_(i' >= i) B(a_i'),
+      and B(4^i) = trunk-above u union_(i' >= i+1) B(a_i'). Check: B(16) \ {16,32,64,...} == union_(i'>=3) B(a_i') on n <= 2^18: True; B(8) \ {8,16,32,...} == union_(i'>=2) B(a_i'): True
+    B(5) u B(32) u {1,2,4,8,16} == B(1) on n <= 2^18 (this is the set reaching 1, i.e. all n only under Collatz): True; B(5) and B(32) disjoint: True
+    Superadditivity of lower density on disjoint sets: liminf (A u B)/X >= liminf A/X + liminf B/X: standard. Proposition (iii) HOLDS.
+    (iv) 'e_i sum to 1 iff almost every orbit reaches 1': the IF direction is proved (finite unions give lower density -> 1);
+      the ONLY-IF direction needs dens B(2^(2M+1)) -> 0 as M -> oo (tightness of the entry index), which is not proved: OVERCLAIM.
+
+C2. Sheet cap: a sheet-blind proof of 'every positive cycle basin has lower density >= c' transfers to 3x-1, whose three
+    known positive cycles have disjoint basins, so 3c <= 1 and c <= liminf of each; if the densities exist, c <= min: HOLDS.
+    The value quoted for the cap (0.3248) is the [1,2^29] count of the {5,7,10} basin; that basin is RISING (0.32505 on [2^31,2^32)),
+    so the cap, if the limit exists, is >= 0.3250 (HYP-9165's own status text says so; its title still says 0.3248).
+
+C3. FINITE-EXACT densities with my own sieves (C, unsigned __int128, memoised on the first value below n).
+      [audit_minus 1073741824: 19 s]
+    3x-1 basins of {1} / {5,7,10} / {17,...,91}:
+      N=1073741824 maxorbit_bits=56
+      [2^1,2^2) 2 0 0  1.0000000 0.0000000 0.0000000
+      [2^2,2^3) 2 2 0  0.5000000 0.5000000 0.0000000
+      [2^10,2^11) 330 330 364  0.3222656 0.3222656 0.3554688
+      [2^11,2^12) 664 664 720  0.3242188 0.3242188 0.3515625
+      [2^12,2^13) 1322 1347 1427  0.3227539 0.3288574 0.3483887
+      [2^13,2^14) 2673 2667 2852  0.3262939 0.3255615 0.3481445
+      [2^14,2^15) 5418 5317 5649  0.3306885 0.3245239 0.3447876
+      [2^15,2^16) 10912 10536 11320  0.3330078 0.3215332 0.3454590
+      [2^16,2^17) 21713 21071 22752  0.3313141 0.3215179 0.3471680
+      [2^17,2^18) 43180 42190 45702  0.3294373 0.3218842 0.3486786
+      [2^18,2^19) 85978 84745 91421  0.3279800 0.3232765 0.3487434
+      [2^19,2^20) 171843 169868 182577  0.3277645 0.3239975 0.3482380
+      [2^20,2^21) 343588 340008 364980  0.3276711 0.3242569 0.3480721
+      [2^21,2^22) 687193 680067 729892  0.3276792 0.3242812 0.3480396
+      [2^22,2^23) 1373826 1360408 1460070  0.3275456 0.3243465 0.3481078
+      [2^23,2^24) 2746435 2721109 2921064  0.3274006 0.3243815 0.3482180
+      [2^24,2^25) 5488442 5442410 5846364  0.3271366 0.3243929 0.3484704
+      [2^25,2^26) 10971697 10887719 11695016  0.3269821 0.3244793 0.3485386
+      [2^26,2^27) 21936176 21784848 23387840  0.3268745 0.3246195 0.3485060
+      [2^27,2^28) 43866984 43590337 46760407  0.3268345 0.3247733 0.3483922
+      [2^28,2^29) 87721223 87208132 93506101  0.3267870 0.3248756 0.3483374
+      [2^29,2^30) 175421419 174459668 186989825  0.3267479 0.3249565 0.3482957
+      unset=0
+      cumulative [1,2^29]: 175479953 174354092 187036866  0.3268569 0.3247598 0.3483833
+      cumulative [1,N]: 350901373 348813760 374026691  0.32680237 0.32485813 0.34833950
+      note [2^28,2^29): 87721223 87208132 93506101 (dens 0.326787 0.324876 0.348337); mine: 87721223 87208132 93506101 -> EXACT MATCH
+      note cumulative [1,2^29]: 0.3268569 0.3247598 0.3483833; mine:  175479953 174354092 187036866  0.3268569 0.3247598 0.3483833
+      note [2^29,2^30) (2-bit sieve): 0.3267479 0.3249565 0.3482957; mine: 0.3267479 0.3249565 0.3482957
+      top-10 first-ray-element densities on [1,2^29] (odd, k): [((7, 2), 0.198449), ((61, 2), 0.191424), ((1, 6), 0.187837), ((1, 4), 0.133581), ((7, 8), 0.05259), ((17, 1), 0.045956), ((25, 2), 0.043252), ((37, 4), 0.033481), ((5, 5), 0.028211), ((5, 7), 0.026377)]
+      note's top-10: [((7, 2), 0.1984), ((61, 2), 0.1914), ((1, 6), 0.1878), ((1, 4), 0.1336), ((7, 8), 0.0526), ((17, 1), 0.046), ((25, 2), 0.0433), ((37, 4), 0.0335), ((5, 5), 0.0282), ((5, 7), 0.0264)]; agree to 4 decimals: True
+      ray of 1 entered at k = [4, 6, 10, 12, 16] (never at k = 2, 8, 14: True)
+      third basin, dyadic rows from 2^20 (note: 'flat to four decimals from 2^20 on'):
+        [0.3480721, 0.3480396, 0.3481078, 0.348218, 0.3484704, 0.3485386, 0.348506, 0.3483922, 0.3483374, 0.3482957]; range 0.34804..0.34854: flat to THREE decimals (0.348), not four.
+      [audit_plus 1073741824: 15 s]
+    3x+1 trunk-entry basins e_i = dens B(a_i):
+      N=1073741824
+      [2^28,2^29): 0.93797 0.00000 0.02365 0.03778 0.00000 0.00008 0.00049 0.00000 0.00003 0.00000 0.00000 0.00000 0.00000  pow2=1 anomalies=0 unset=0
+      [2^29,2^30): 0.93794 0.00000 0.02366 0.03780 0.00000 0.00008 0.00049 0.00000 0.00003 0.00000 0.00000 0.00000 0.00000  pow2=1 anomalies=0 unset=0
+        i=2 a_i=5 count=1007130467 dens=0.937963340
+        i=3 a_i=21 count=26 dens=0.000000024
+        i=4 a_i=85 count=25390291 dens=0.023646551
+        i=5 a_i=341 count=40575843 dens=0.037789199
+        i=6 a_i=1365 count=20 dens=0.000000019
+        i=7 a_i=5461 count=86391 dens=0.000080458
+        i=8 a_i=21845 count=521208 dens=0.000485413
+        i=9 a_i=87381 count=14 dens=0.000000013
+        i=10 a_i=349525 count=34723 dens=0.000032338
+        i=11 a_i=1398101 count=2267 dens=0.000002111
+        i=12 a_i=5592405 count=8 dens=0.000000007
+        i=13 a_i=22369621 count=424 dens=0.000000395
+        i=14 a_i=89478485 count=109 dens=0.000000102
+        i=15 a_i=357913941 count=2 dens=0.000000002
+        powers of two: 31; anomalies (even-exponent first hit): 0; unset: 0
+      exact counts for 3 | i (doubling rays of a_i): i=3: 26 (21*2^k <= 2^30: 26), i=6: 20 (20), i=9: 14 (14), i=12: 8 (8)
+      -> 'e_3 = e_6 = e_9 = e_12 = 0 exactly' is a 7-decimal rounding: the counts are the ray lengths, not zero (density 0 in the limit).
+      note top range [2^29,2^30): 0.93794 0.02366 0.03780 for i = 2, 4, 5; mine: [2^29,2^30): 0.93794 0.00000 0.02366 0.03780 0.00000 0.00008 0.00049 0.00000 0.00003 0.00000 0.00000 0.00000 0.00000  pow2=1 anomalies=0 unset=0
+      cumulative e_2, e_4, e_5, e_7, e_8 (note: 0.9379633 0.0236466 0.0377892 0.0000805 0.0004854): [0.9379633, 0.0236466, 0.0377892, 8.05e-05, 0.0004854]
+      e_5 > e_4 (341 owns a larger basin than 85): True
+
+C4. Krasikov-Lagarias (2003) is CITED: for every a not divisible by 3, #{n <= X : a on the orbit of n} >= X^0.84 for all
+    X >= X_0(a). The note states it in this form (root-uniform in type, not in the threshold): consistent; not verified here.
+
+SECTION C VERDICT: (1) disjoint basins, (iii) no root-uniform positive proportion, (2) sheet cap: HOLD; (iv) has an index slip
+  and an unproved 'only if'; (3) FINITE-EXACT tables reproduced exactly, with two wording corrections (e_3 'exactly 0', 'four decimals').
+[sectionC: 41 s]
+
+==============================================================================
+SECTION D: HYP-9165 and the status-label audit
+==============================================================================
+
+D1. HYP-9165 claims (verbatim scope): the natural densities of the three 3x-1 basins and of B(5) on 3x+1 exist,
+    with values 0.3269 / 0.3248 / 0.3484 and 0.938; the strict ordering dens B({5,7,10}) < dens B({1}) < dens B({17,...});
+    hence a sheet-blind cycle-uniform lower bound is capped at 0.3248 rather than 1/3. Status OPEN with FINITE-EXACT support.
+    session's dyadic rows [2^s,2^(s+1)) s=28..31: increments of basin {5,7,10} per doubling ['8.1e-05', '5.6e-05', '3.5e-05'],
+      of basin {17,...} ['-4.2e-05', '-4.9e-05', '-4.5e-05']; basin {1} spread 4.7e-05.
+    The status label OPEN is right: existence of the natural density of any Collatz basin is open on both sheets; the
+    evidence supports the ORDERING to 2^32 (gaps 1.7e-3 and 2.2e-2) but the numerical VALUE 0.3248 in the title is stale:
+    the {5,7,10} basin is still rising (0.32499 cumulative, 0.32505 in the top row); the hypothesis body already says
+    'between 0.3250 and the limit'. A geometric extrapolation of the decaying increments (ratio ~0.7) would put the limit
+    near 0.3251-0.3252; this is a heuristic, not part of the hypothesis.
+    What would refute it: (a) a fourth positive 3x-1 cycle or a divergent 3x-1 orbit with positive upper density (the
+    three basins then need not exhaust density 1; note the three cumulative densities sum to 1 - 2e-8 at 2^32 only because
+    every n <= 2^32 was found to reach one of the three cycles); (b) a proof that some basin has different lower and
+    upper densities; (c) a crossing of the {1} and {5,7,10} curves at larger N (the gap 1.7e-3 is closing at ~5e-5 per
+    doubling with the increments themselves decaying, so a crossing would need the decay to stop).
+    Internal inconsistency: HYP-9165's title says 'the sheet cap ... is 0.3248', its status text says 'between 0.3250 and
+    the limit of the rising basin'; note section 3.1 and section 4 use 0.3248. The cap should be stated as 'the limit of
+    the {5,7,10} basin density, >= 0.3250 on the evidence'.
+
+D2. Status labels and overclaims found in the note and theorem files:
+    D2.1 [THM-4516(5), note 2.5, THM-4516 title] 'Beal implies no map py +- m^r (r >= 3) has a free mixed shape (K,X) with K >= 3, sX >= 3, X >= 2'
+        -> FALSE: freeness needs only (2^K - p^X) | m^r; 3y+125 has the free shape (5,3) with clock 5 | 125 (section B5). Correct statement: Beal implies no perfect-power CLOCK with K, sX, r >= 3.
+    D2.2 [note 2.5, THM-4516(5)] 'Its clock shadow is empty in any case: no term of x^4 + y^3 = z^17 can be a pure power of two while the other two are powers of one odd base'
+        -> UNSUPPORTED: no argument is given and none is elementary; the shadow is the set of solutions with a power-of-two variable (section B6). Should be marked OPEN/UNVERIFIED like the statement itself.
+    D2.3 [note 3.2(iv), THM-4517] 'e_i ... sum to 1 if and only if almost every orbit reaches 1'
+        -> Only 'if' is proved; 'only if' needs dens B(2^(2M+1)) -> 0 (tightness), not proved. Replace 'if and only if' by 'if' (converse open).
+    D2.4 [note 3.2(iv)] 'B(4^i) = union_{i' >= i} B(a_{i'})'
+        -> index slip: a_i maps to 2^(2i-1) < 4^i, so B(4^i) = trunk-above u union_{i' >= i+1} B(a_{i'}) (section C1).
+    D2.5 [note 3.2(iv)] 'B(5) and B(32) partition the positive integers minus the powers of two'
+        -> equivalent to the Collatz conjecture as stated (B(5) u B(32) u {1,2,4,8,16} is the set of n reaching 1, and 32, 64, ... lie in B(32)); replace by 'partition B(1) minus {1,2,4,8,16}'.
+    D2.6 [note 3.3, THM-4517(3)] 'e_3 = e_6 = e_9 = e_12 = 0 exactly'
+        -> the counts are the doubling-ray lengths (26, 20, 14, 8 up to 2^30), i.e. densities ~1e-8 that round to 0.0000000; 'exactly' should be 'to seven decimals (ray lengths 26, 20, 14, 8)'. THM-4517's 'exact check of (1)' is a check that these basins are rays.
+    D2.7 [note 3.3, THM-4517(3)] 'the third [basin] is flat to four decimals from 2^20 on' / 'flat at 0.3483 to four decimals'
+        -> the dyadic rows range 0.34804..0.34854: flat to THREE decimals (0.348).
+    D2.8 [note 1.8, THM-4515(5)] 'PROVED lower bound of order 1/log m'
+        -> the second-moment bound is exact for each m computed (<= 10^4; I extend to 3e4); the growth E[N_3^2] = O(log m) for all m is not proved in the note (local-CLT heuristic), so 'of order 1/log m' is PROVED only for the computed m. The slope is ~0.81 per unit log m, not 0.93.
+    D2.9 [note 1.8] 'E[N_3] -> sqrt(3)/(2 pi rho(1-rho)) (... 1.1847 at rho = log_3 2)'
+        -> 1.1847 is the value at rho = 12/19 (the shape used); at rho = log_3 2 exactly it is 1.1839.
+    D2.10 [note 1.2] 'The j twisted clocks 2^m - zeta^{-k} q^x are the eigenvalues'
+        -> the eigenvalues of 2^m P - q^x I are 2^m zeta^k - q^x = zeta^k (2^m - zeta^{-k} q^x); equal up to a unit (harmless).
+    D2.11 [note 1.5] '|log(n'/n)| <= X|d|/(2(q n_min - |d|))'
+        -> needs the implicit hypothesis q n_min > |d| (fails for 3x+11 through 1 and 3x+25 through 7, where the right side is negative); add 'for q n_min > |d|'.
+    D2.12 [note 1.9] 'minimum -14.81', 'minima range over [-27.10, -14.81]', 'minimum element exactly -17'
+        -> these are the elements of least absolute value (-c_min/139, the maximum of a negative cycle); the true minima range over [-237.0, -72.9]. Say 'least-absolute-value element'.
+    D2.13 [note 2.2 table] '21 = 7 x (3x+49 ...) scaled'
+        -> should read '21 = 7 x 3, the 13x+49 cycle through 3 scaled by 7'.
+    D2.14 [THM-4516 census method (power_clocks.py)] gmpy2.iroot loop r <= 64; power_data returns None otherwise
+        -> a perfect power whose least prime exponent exceeds 64 would have been dropped from the q <= 201 / q = 3 censuses; my sieve covers every prime r <= log_3 N and finds nothing new, so the census statement HOLDS (method gap closed here).
+    D2.15 [note 2.5 / THM-4516(5)] 'smallest open Beal signature (3,5,7)' alongside 'among (3,4,n) only n = 4, 5 are solved'
+        -> internally consistent only if 'smallest' is by largest exponent (or if (3,4,6), (3,4,7), ... count as solved by reduction); under lexicographic or reciprocal-sum order (3,4,6) or (3,4,17) would precede (3,5,7). CITED content not checked (no browsing); the ordering sense should be stated.
+
+D3. Labels that are correct as used: PROVED for THM-4515(1)-(4) and THM-4517(1)-(2)(iii); FINITE-EXACT for the censuses and
+    tables (all reproduced); CITED for Darmon-Granville, the ten Fermat-Catalan solutions, Krasikov-Lagarias, Barina; EMPIRICAL
+    for the ~2.2/log m law; UNVERIFIED for the (4,3,17) statement; OPEN for HYP-9165. 'Collatz OPEN' is stated throughout.
+[sectionD: 0 s]
+
+==============================================================================
+SECTION E: SUMMARY OF VERDICTS
+==============================================================================
+THM-4515: HOLDS (all identities exact on 1500 random words and 1206 fair splits; census K <= 18 reproduced; 17021-cycle facts
+          reproduced; E[N_j] formula exact; second-moment bounds reproduced). Two wording corrections (1/log m 'PROVED' scope, 1.1847).
+THM-4516: HOLDS WITH CORRECTION (census reproduced with a sieve that covers every exponent r, closing the r <= 64 gap of the
+          session's method; free cycles and the Eisenstein square verified). FAILS as stated: the Beal-shadow consequence in (5)
+          and in the title, and the 'clock shadow is empty' sentence.
+THM-4517: HOLDS WITH CORRECTION ((1), (iii), (2) proved; FINITE-EXACT tables reproduced to the last digit; (iv) has an index slip,
+          a Collatz-equivalent phrasing of the B(5)/B(32) partition and an unproved 'only if'; 'e_3 = 0 exactly' and 'four decimals').
+HYP-9165: status OPEN is right; the title's 0.3248 is stale (rising basin, >= 0.3250 on the evidence).
+OVERALL: SOUND WITH CORRECTIONS.
+[total 198 s]
