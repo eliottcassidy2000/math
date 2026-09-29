@@ -1574,14 +1574,15 @@ exploration and extend past work toward proofs. Note
 [`collatz_five_mirrors_20260929.md`](collatz_five_mirrors_20260929.md).
 
 * **The primitive Fourier profile `M(h)` of Tao's Syracuse random variable
-  (PROVED structure, FINITE-EXACT to `h = 17`).** `mu_hat_n(3^(n-h) u) =
+  (PROVED structure, FINITE-EXACT to `h = 18`).** `mu_hat_n(3^(n-h) u) =
   mu_hat_h(u)` (consistency), so `M(h) = max_u |mu_hat_h(u)|` is intrinsic;
   Mazur's (2.3) forces `M(h) <= C_A (h-1)^(-A)` for every `A` (PROVED).
   Measured: `0.577, 0.378, 0.252, 0.177, 0.129, 0.096, 0.076, 0.061, 0.048,
-  0.038, 0.032, 0.026, 0.022, 0.019, 0.016, 0.014, 0.0125`, maxima at the
-  powers of two `2^(h+3)`, `2^(h+4)`; the ratio rises from `0.65` to `0.87`
-  and levels over `14..17`; a fixed power law is excluded by the
-  steepening, a geometric rate about `0.87` fits `11..17` (OBSERVED). The
+  0.038, 0.032, 0.026, 0.022, 0.019, 0.016, 0.014, 0.0125, 0.0112`, maxima
+  at the powers of two `2^(h+3)` to `2^(h+5)`; the ratio rises from `0.65`
+  to `0.87–0.89` and levels over `14..18`; a fixed power law is excluded by
+  the steepening, a geometric rate about `0.87–0.89` fits `11..18`
+  (OBSERVED). The
   Fourier mass per conductor level is `0.466` at every level (`(3/2)` times
   the S19 second-moment slope, PROVED by Parseval); the typical coefficient
   has `|mu_hat|^2 3^h = 0.70` (square-root cancellation); the resonance at
@@ -1600,7 +1601,10 @@ exploration and extend past work toward proofs. Note
 * **Carry reciprocity (PROVED):** `C_(rev w)(u,v) = u^(d-1) v^A C'_w(1/u,
   1/v)` (inclusive-prefix carry); reversal is an involution on rational
   cycles preserving `(k, A)`; it fixes `-1` and `{-5,-7}` and sends the
-  seven-cycle of `-17` to the non-integer `-13801/139`.
+  seven-cycle of `-17` to the non-integer `-13801/139`. On `3x+k`, `k <=
+  41`, reversal is an involution on the integer cycles with fixed points
+  (rotation-symmetric words) and genuine pairs (`3x+13`: `227 ↔ 259`, `251
+  ↔ 287`; `3x+37`: `23 ↔ 29`; FINITE-EXACT, orbits verified).
 * Viaclovsky (contracting affine lift, monodromy relation, primitivity)
   and Lyu (local cliques do not bound compressibility; only forests do) are
   shape-only mirrors of the affine IFS / cycle equation and of the atlas's

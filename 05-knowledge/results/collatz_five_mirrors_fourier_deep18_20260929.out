@@ -1,0 +1,23 @@
+level 18 law [90s]
+FFT done [113s]
+h, M(h) = max |mu_hat| over conductor 3^h, argmax/3^(N-h), Fourier mass at level h, mean |mu_hat|^2 at level h * 3^h:
+   h= 1: M(h) = 0.577350 (ratio -), argmax u = 1 (= 2^0.00 if a power of two), mass 0.66667, typical |mu_hat|^2 3^h = 1.0000
+   h= 2: M(h) = 0.377924 (ratio 0.6546), argmax u = 4 (= 2^2.00 if a power of two), mass 0.47619, typical |mu_hat|^2 3^h = 0.7143
+   h= 3: M(h) = 0.252237 (ratio 0.6674), argmax u = 19 (= 2^4.25 if a power of two), mass 0.46157, typical |mu_hat|^2 3^h = 0.6924
+   h= 4: M(h) = 0.176999 (ratio 0.7017), argmax u = 65 (= 2^6.02 if a power of two), mass 0.46421, typical |mu_hat|^2 3^h = 0.6963
+   h= 5: M(h) = 0.129274 (ratio 0.7304), argmax u = 32 (= 2^5.00 if a power of two), mass 0.46551, typical |mu_hat|^2 3^h = 0.6983
+   h= 6: M(h) = 0.096106 (ratio 0.7434), argmax u = 64 (= 2^6.00 if a power of two), mass 0.46617, typical |mu_hat|^2 3^h = 0.6993
+   h= 7: M(h) = 0.075870 (ratio 0.7894), argmax u = 256 (= 2^8.00 if a power of two), mass 0.46549, typical |mu_hat|^2 3^h = 0.6982
+   h= 8: M(h) = 0.060891 (ratio 0.8026), argmax u = 512 (= 2^9.00 if a power of two), mass 0.46592, typical |mu_hat|^2 3^h = 0.6989
+   h= 9: M(h) = 0.048026 (ratio 0.7887), argmax u = 1024 (= 2^10.00 if a power of two), mass 0.46666, typical |mu_hat|^2 3^h = 0.7000
+   h=10: M(h) = 0.038278 (ratio 0.7970), argmax u = 4096 (= 2^12.00 if a power of two), mass 0.46739, typical |mu_hat|^2 3^h = 0.7011
+   h=11: M(h) = 0.031944 (ratio 0.8345), argmax u = 8192 (= 2^13.00 if a power of two), mass 0.46817, typical |mu_hat|^2 3^h = 0.7023
+   h=12: M(h) = 0.026458 (ratio 0.8283), argmax u = 16384 (= 2^14.00 if a power of two), mass 0.46894, typical |mu_hat|^2 3^h = 0.7034
+   h=13: M(h) = 0.022052 (ratio 0.8335), argmax u = 1528787 (= 2^20.54 if a power of two), mass 0.46961, typical |mu_hat|^2 3^h = 0.7044
+   h=14: M(h) = 0.019128 (ratio 0.8674), argmax u = 131072 (= 2^17.00 if a power of two), mass 0.47025, typical |mu_hat|^2 3^h = 0.7054
+   h=15: M(h) = 0.016284 (ratio 0.8513), argmax u = 262144 (= 2^18.00 if a power of two), mass 0.47083, typical |mu_hat|^2 3^h = 0.7062
+   h=16: M(h) = 0.014409 (ratio 0.8849), argmax u = 1048576 (= 2^20.00 if a power of two), mass 0.47135, typical |mu_hat|^2 3^h = 0.7070
+   h=17: M(h) = 0.012511 (ratio 0.8682), argmax u = 2097152 (= 2^21.00 if a power of two), mass 0.47182, typical |mu_hat|^2 3^h = 0.7077
+   h=18: M(h) = 0.011187 (ratio 0.8942), argmax u = 8388608 (= 2^23.00 if a power of two), mass 0.47223, typical |mu_hat|^2 3^h = 0.7084
+   |mu_hat_N(2^s)| for s = 0..60: 0.0000, 0.0001, 0.0001, 0.0000, 0.0000, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0002, 0.0002, 0.0004, 0.0006, 0.0009, 0.0014, 0.0021, 0.0032, 0.0048, 0.0068, 0.0090, 0.0106, 0.0112, 0.0104, 0.0082, 0.0054, 0.0028, 0.0012, 0.0006, 0.0001, 0.0001, 0.0001, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0001, 0.0000, 0.0000
+DONE

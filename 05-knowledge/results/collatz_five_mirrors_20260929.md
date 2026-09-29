@@ -40,7 +40,10 @@ Scripts and outputs:
 (profile to level 17; `8 GB`, one minute);
 `collatz_five_mirrors_costsplit_20260929.py` → `..._costsplit_...out` and
 `..._costsplit14_...out` (the resonant coefficient decomposed by total
-cost and by last valuation at levels 10 and 14).
+cost and by last valuation at levels 10 and 14);
+`collatz_five_mirrors_fourier_deep_20260929.py 18` → `..._fourier_deep18_...out`
+(the profile to level 18); `collatz_five_mirrors_reversal_20260929.py` →
+`..._reversal_...out` (reversal on the integer cycles of `3x+k`).
 
 ---
 
@@ -55,16 +58,17 @@ cost and by last valuation at levels 10 and 14).
    fine-scale estimate (2.3) of the Mazur digest (Tao's Proposition 1.14 in
    Mazur's restatement) implies `M(h) <= C_A (h-1)^(-A)` for every `A`
    (Proposition 2, PROVED): the primitive Fourier maxima must decay faster
-   than any polynomial. Computed to `h = 17` (FINITE-EXACT, float64):
+   than any polynomial. Computed to `h = 18` (FINITE-EXACT, float64):
    `0.5774, 0.3779, 0.2522, 0.1770, 0.1293, 0.0961, 0.0759, 0.0609, 0.0480,
-   0.0383, 0.0319, 0.0265, 0.0221, 0.0191, 0.0163, 0.0144, 0.0125`; the
-   maximum sits at `u = 2^s` with `s = h + 3` or `h + 4` (`2^17` at `h =
-   14`, `2^21` at `h = 17`); the ratio `M(h)/M(h-1)` rises from `0.65` to
-   about `0.87` and levels off over `h = 14..17` (`0.867, 0.851, 0.885,
-   0.868`). A fixed power law is excluded by the steepening (local exponents
-   `1.76, 1.86, 1.99, 2.08` on the doublings `5→10, 6→12, 7→14, 8→16`); a
-   geometric decay at rate about `0.87` per level fits levels `11–17` and
-   would satisfy (2.3) with room. No tension with Tao's proposition, whose
+   0.0383, 0.0319, 0.0265, 0.0221, 0.0191, 0.0163, 0.0144, 0.0125, 0.0112`;
+   the maximum sits at `u = 2^s` with `s = h + 3` to `h + 5` (`2^17` at `h
+   = 14`, `2^21` at `h = 17`, `2^23` at `h = 18`); the ratio `M(h)/M(h-1)`
+   rises from `0.65` to about `0.87–0.89` and levels off over `h = 14..18`
+   (`0.867, 0.851, 0.885, 0.868, 0.894`). A fixed power law is excluded by
+   the steepening (local exponents `1.76, 1.86, 1.99, 2.08, 2.10` on the
+   doublings `5→10, 6→12, 7→14, 8→16, 9→18`); a geometric decay at rate
+   about `0.87–0.89` per level fits levels `11–18` and would satisfy (2.3)
+   with room. No tension with Tao's proposition, whose
    explicit constants are vacuous here; but this is the first measurement of
    what the mixing estimate actually bounds.
 2. **Scale invariance of the Fourier energy.** The Fourier mass at conductor
@@ -111,7 +115,14 @@ cost and by last valuation at levels 10 and 14).
    two reciprocal evaluations of one integer. Reversal is an involution on
    rational cycles that preserves `(k, A)`; it fixes the cycles of `-1` and
    `{-5,-7}` (a rotation) and sends the seven-cycle of `-17` to the rational
-   point `-13801/139`, not an integer (FINITE-EXACT).
+   point `-13801/139`, not an integer (FINITE-EXACT). On the maps `3x + k`,
+   `k <= 41` odd, reversal permutes the integer cycles of fixed `(d, A)`:
+   its fixed points are exactly the rotation-symmetric words, and it has
+   genuine pairs — the 5-cycles of `3x+13` with minima `227 ↔ 259` and `251
+   ↔ 287`, the 3-cycles of `3x+37` with minima `23 ↔ 29` (and their triples
+   for `3x+39`); the seven-cycle family and the long cycles of `3x+5` (`d
+   = 17`) and `3x+13` (`d = 15`) have rational partners (FINITE-EXACT,
+   orbits verified; section 5).
 7. **The other two mirrors are shape only** (section 1): Viaclovsky's
    contracting affine lift and monodromy relation are the affine IFS
    `S_a(y) = (3y+1)/2^a` and the cycle equation, with the difference that a
@@ -249,37 +260,39 @@ his Section 8.1 describes the underlying "primitive Fourier coefficient
 bound `C* h^(-6409)` at level `h`", i.e. a bound on `M(h)` with `C*` a
 three-fold exponential tower.
 
-**The profile (FINITE-EXACT, float64 FFT of the level-17 law; identical at
-every level where compared).**
+**The profile (FINITE-EXACT, float64 FFT of the level-18 law, `20 GB`;
+identical at every level where compared).**
 
-| `h` | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `M(h)` | .5774 | .3779 | .2522 | .1770 | .1293 | .0961 | .0759 | .0609 | .0480 | .0383 | .0319 | .0265 | .0221 | .0191 | .0163 | .0144 | .0125 |
-| ratio | – | .655 | .667 | .702 | .730 | .743 | .789 | .803 | .789 | .797 | .835 | .828 | .834 | .867 | .851 | .885 | .868 |
-| argmax `u` | 1 | 2^2 | 2^3 | 2^4 | 2^5 | 2^6 | 2^8 | 2^9 | 2^10 | 2^12 | 2^13 | 2^14 | 2^16 | 2^17 | 2^18 | 2^20 | 2^21 |
-| Fourier mass at level `h` | .667 | .476 | .462 | .464 | .466 | .466 | .465 | .466 | .467 | .467 | .468 | .469 | .470 | .470 | .471 | .471 | .472 |
-| typical `|mu_hat|^2 3^h` | 1.00 | .714 | .692 | .696 | .698 | .699 | .698 | .699 | .700 | .701 | .702 | .703 | .704 | .705 | .706 | .707 | .708 |
+| `h` | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `M(h)` | .5774 | .3779 | .2522 | .1770 | .1293 | .0961 | .0759 | .0609 | .0480 | .0383 | .0319 | .0265 | .0221 | .0191 | .0163 | .0144 | .0125 | .0112 |
+| ratio | – | .655 | .667 | .702 | .730 | .743 | .789 | .803 | .789 | .797 | .835 | .828 | .834 | .867 | .851 | .885 | .868 | .894 |
+| argmax `u` | 1 | 2^2 | 2^3 | 2^4 | 2^5 | 2^6 | 2^8 | 2^9 | 2^10 | 2^12 | 2^13 | 2^14 | 2^16 | 2^17 | 2^18 | 2^20 | 2^21 | 2^23 |
+| Fourier mass at level `h` | .667 | .476 | .462 | .464 | .466 | .466 | .465 | .466 | .467 | .467 | .468 | .469 | .470 | .470 | .471 | .471 | .472 | .472 |
+| typical `|mu_hat|^2 3^h` | 1.00 | .714 | .692 | .696 | .698 | .699 | .698 | .699 | .700 | .701 | .702 | .703 | .704 | .705 | .706 | .707 | .708 | .708 |
 
 `M(1) = 1/sqrt 3` exactly (`|(1/3) e(1/3) + (2/3) e(2/3)|`). The maximum
-is always at a power of two, `u = 2^s` with `s = h + 3` or `h + 4` for `h
->= 7`, i.e. `t/3^h = 2^s/3^h ≈ 0.03`: the character `e(2^s y/3^h)` is not
+is always at a power of two, `u = 2^s` with `s = h + 3` to `h + 5` for `h
+>= 7`, i.e. `t/3^h = 2^s/3^h ≈ 0.03–0.05`: the character `e(2^s y/3^h)` is not
 a low frequency in the real sense; it is the frequency that turns the
 3-adic inverses `2^(-a)` of the small valuations into small integers
 `2^(s-a)` (the one-step Gauss sums of section 4 show the same alignment).
 The values `|mu_hat_17(2^s)|`, `s = 0..60`, form a single bump centred at
 `s = 21` (`0.0125`), with `0.0111` at `s = 20`, `0.0106` at `23`, and the
-generic size `3·10^(-4)` (`= 0.84 · 3^(-17/2)`) outside `s = 13..27`.
+generic size `3·10^(-4)` (`= 0.84 · 3^(-17/2)`) outside `s = 13..27`; at
+level 18 the bump is centred at `s = 23` (`0.0112`).
 
 **Decay.** Local exponents from the doublings `M(h)/M(2h)`: `1.76` (5→10),
-`1.86` (6→12), `1.99` (7→14), `2.08` (8→16): steepening, so no fixed
-power law; `3.75 h^(-2)` fits `7 <= h <= 14` to `4%` and undershoots by
-`2–4%` at `15–17`. The ratios rise from `0.65` to `0.87` and are flat over
-`14..17` at `0.87 ± 0.02` (they fluctuate with the `s = h+3`/`h+4`
-alternation of the argmax). Reading: a geometric decay at rate about
-`0.87` per level, which is compatible with Proposition 2 (super-polynomial)
-with room, and with Tao's proposition, whose constants say nothing below
-`m` of the order of `2^(2^(2^8697))`. OBSERVED, seventeen levels; the
-asymptotic regime is not established.
+`1.86` (6→12), `1.99` (7→14), `2.08` (8→16), `2.10` (9→18): steepening,
+so no fixed power law; `3.75 h^(-2)` fits `7 <= h <= 14` to `4%` and
+undershoots by `2–4%` at `15–18`. The ratios rise from `0.65` to `0.87`
+and are flat over `14..18` at `0.87 ± 0.02` (`0.894` at `h = 18`; they
+fluctuate with the `s = h+3`/`h+4`/`h+5` alternation of the argmax).
+Reading: a geometric decay at rate about `0.87–0.89` per level, which is
+compatible with Proposition 2 (super-polynomial) with room, and with Tao's
+proposition, whose constants say nothing below `m` of the order of
+`2^(2^(2^8697))`. OBSERVED, eighteen levels; the asymptotic regime is not
+established, and a ratio creeping to `1` is not excluded.
 
 **Scale invariance.** By Parseval, `sum_t |mu_hat_n(t)|^2 = 3^n sum_y
 mu_n(y)^2 = (3/2) E_units[rho_n^2]`; the second moment grows by `0.31` per
@@ -419,6 +432,33 @@ preserve integrality; the integer cycles are not closed under it, which is
 one more way the negative cycles are special objects of the 3-adic law
 (S19, Theorem B) rather than of the word combinatorics alone.
 
+**Reversal on the integer cycles of `3x + k` (FINITE-EXACT; added after
+the audit's snapshot, `collatz_five_mirrors_reversal_20260929.py`).** For
+the map `x -> (3x + k)/2^v` on odd integers the affine identity is `3^d x
++ k C_w = 2^A y`, the cycle point of a word is `y_0 = k C_w/(2^A - 3^d)`,
+and the reversed word's point is `y_0' = k C_(rev w)/(2^A - 3^d)`; the
+survey takes every cycle reached from the odd starts `|x| <= 5·10^4`
+(orbits capped at `10^15`), reverses its word from its minimal element,
+and verifies the reversed orbit step by step (integrality of the affine
+fixed point alone is not enough: the valuations must be exactly the
+reversed ones). Result for odd `k <= 41`: reversal permutes the integer
+cycles of fixed `(d, A)`; its fixed points are exactly the cycles whose
+word is a rotation of its reverse (`RIV` in the output), and it has genuine
+transpositions: for `3x+13` the 5-cycles of cost `A = 8` pair as `{227,
+347, 527, 797, 601}` (word `(1,1,1,2,3)`) `↔ {259, 395, 599, 905, 341}`
+(word `(3,2,1,1,1)`, read from `905`) and `251 ↔ 287`, while `211, 283,
+319` are self-dual; for `3x+37` the 3-cycles of cost `6` pair as `{23, 53,
+49}` (`(1,2,3)`) `↔ {29, 31, 65}` (`(2,1,3)`); `3x+39` repeats the `3x+13`
+pairs tripled (`681 ↔ 777`, `753 ↔ 861`). Every cycle of `3x+1` is
+self-dual except the seven-cycle, whose partner is rational; the long
+cycles of `3x+5` (`187, 347`, `d = 17`) and `3x+13` (`131`, `d = 15`)
+also have rational partners, and the `k`-multiples of the `3x+1` cycles
+appear for every `k` (`3(kx) + k = k(3x + 1)`). Reversal is thus a
+symmetry of the rational cycle set (the INTEGRAL row's objects) that
+sometimes descends to the integers: an involution on the integer cycles
+with fixed points and pairs, and the seven-cycle of `-17` is the smallest
+`3x+1` orbit it moves off the integers.
+
 ---
 
 ## 6. Typing and what changes for the repo
@@ -452,6 +492,8 @@ python 04-computation/experiments/collatz_five_mirrors_20260929.py              
 python 04-computation/experiments/collatz_five_mirrors_fourier_deep_20260929.py 17 > 05-knowledge/results/collatz_five_mirrors_fourier_deep_20260929.out   # 8 GB, 1 min
 python 04-computation/experiments/collatz_five_mirrors_costsplit_20260929.py 10 > 05-knowledge/results/collatz_five_mirrors_costsplit_20260929.out
 python 04-computation/experiments/collatz_five_mirrors_costsplit_20260929.py 14 > 05-knowledge/results/collatz_five_mirrors_costsplit14_20260929.out   # 5 GB
+python 04-computation/experiments/collatz_five_mirrors_fourier_deep_20260929.py 18 > 05-knowledge/results/collatz_five_mirrors_fourier_deep18_20260929.out   # 20 GB, 2 min
+python 04-computation/experiments/collatz_five_mirrors_reversal_20260929.py     > 05-knowledge/results/collatz_five_mirrors_reversal_20260929.out
 ```
 
 | item | status |
@@ -464,11 +506,12 @@ python 04-computation/experiments/collatz_five_mirrors_costsplit_20260929.py 14 
 | Proposition 3 (Gauss sums: 2-adic reading; no uniform gap) | PROVED; table FINITE-EXACT |
 | Proposition 4 (same-length spread lemma) and the collision table | PROVED; FINITE-EXACT |
 | Proposition 5 (carry reciprocity); reversed cycles | PROVED; FINITE-EXACT |
+| reversal on the integer cycles of `3x+k`, `k <= 41`: an involution with fixed points (rotation-symmetric words) and pairs (`3x+13`: `227 ↔ 259`, `251 ↔ 287`; `3x+37`: `23 ↔ 29`) | FINITE-EXACT (orbits verified; cycles reached from `|x| <= 5·10^4`) |
 | the five mirrors (section 1) | DIRECTION / remark |
 
-**Next probes.** The joint `(Y_h, A)` decomposition at `h = 14` (memory
-`3^14 × 60` doubles) to see whether the resonant cost ratio `A/h` drifts;
-a large-deviation lower bound `M(h) >= c e^(-I(α) h)` from the coherent
-family; the profile to `h = 18` (`20 GB`); the reversal involution on the
-rational cycles of `3x + k` for small `k` (which rational cycles are
-reversal-symmetric).
+**Next probes.** A large-deviation lower bound `M(h) >= c e^(-I(α) h)`
+from the coherent family, and the upper bound `|mu_hat_h(2^s)| <= C r^h`;
+the profile to `h = 19` (needs a chunked FFT); the reversal involution on
+the rational cycles of `3x + k` beyond the integer ones (which rational
+cycles are reversal-symmetric), and whether the reversal pairs of `3x+13`
+and `3x+37` are the first members of an infinite family.
