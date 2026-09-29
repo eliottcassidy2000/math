@@ -1,0 +1,35 @@
+shape (12,6) j=3: mean N over all 924 words = 0.935065, formula m*C(m,x)^j/C(K,X) = 0.935065; P(N>=1) = 0.6299
+shape (12,4) j=4: mean N over all 495 words = 0.490909, formula m*C(m,x)^j/C(K,X) = 0.490909; P(N>=1) = 0.3939
+shape (15,6) j=3: mean N over all 5005 words = 0.999001, formula m*C(m,x)^j/C(K,X) = 0.999001; P(N>=1) = 0.6134
+shape (16,8) j=4: mean N over all 12870 words = 0.402797, formula m*C(m,x)^j/C(K,X) = 0.402797; P(N>=1) = 0.3225
+shape (18,9) j=3: mean N over all 48620 words = 0.987248, formula m*C(m,x)^j/C(K,X) = 0.987248; P(N>=1) = 0.5898
+
+Monte Carlo, uniformly random words of shape (jm, jx):
+ j=3 rho=1/2 m=19: P(N>=1)=0.4890  E[N]=1.0297 (exact 1.0675, asym 1.1057)
+ j=3 rho=1/2 m=38: P(N>=1)=0.4422  E[N]=1.0540 (exact 1.0835, asym 1.1027)
+ j=3 rho=1/2 m=76: P(N>=1)=0.4115  E[N]=1.0967 (exact 1.0930, asym 1.1027)
+ j=3 rho=1/2 m=152: P(N>=1)=0.3777  E[N]=1.0845 (exact 1.0978, asym 1.1027)
+ j=3 rho=1/2 m=304: P(N>=1)=0.3382  E[N]=1.0657 (exact 1.1002, asym 1.1027)
+ j=3 rho=1/2 m=608: P(N>=1)=0.3100  E[N]=1.1140 (exact 1.1014, asym 1.1027)
+ j=3 rho=1/2 m=1216: P(N>=1)=0.3193  E[N]=1.1920 (exact 1.1021, asym 1.1027)
+ j=3 rho=~log_3 2 = 12/19 m=19: P(N>=1)=0.5092  E[N]=1.1698 (exact 1.1399, asym 1.1847)
+ j=3 rho=~log_3 2 = 12/19 m=38: P(N>=1)=0.4497  E[N]=1.1710 (exact 1.1621, asym 1.1847)
+ j=3 rho=~log_3 2 = 12/19 m=76: P(N>=1)=0.4218  E[N]=1.2357 (exact 1.1733, asym 1.1847)
+ j=3 rho=~log_3 2 = 12/19 m=152: P(N>=1)=0.3805  E[N]=1.2095 (exact 1.1790, asym 1.1847)
+ j=3 rho=~log_3 2 = 12/19 m=304: P(N>=1)=0.3518  E[N]=1.1778 (exact 1.1818, asym 1.1847)
+ j=3 rho=~log_3 2 = 12/19 m=608: P(N>=1)=0.3240  E[N]=1.2393 (exact 1.1833, asym 1.1847)
+ j=3 rho=~log_3 2 = 12/19 m=1216: P(N>=1)=0.2980  E[N]=1.2287 (exact 1.1840, asym 1.1847)
+ j=4 rho=1/2 m=19: P(N>=1)=0.1530  E[N]=0.2243 (exact 0.2227, asym 0.2340)
+ j=4 rho=1/2 m=38: P(N>=1)=0.1047  E[N]=0.1578 (exact 0.1608, asym 0.1648)
+ j=4 rho=1/2 m=76: P(N>=1)=0.0788  E[N]=0.1153 (exact 0.1151, asym 0.1165)
+ j=4 rho=1/2 m=152: P(N>=1)=0.0600  E[N]=0.0853 (exact 0.0819, asym 0.0824)
+ j=4 rho=1/2 m=304: P(N>=1)=0.0385  E[N]=0.0663 (exact 0.0581, asym 0.0583)
+ j=4 rho=1/2 m=608: P(N>=1)=0.0307  E[N]=0.0460 (exact 0.0411, asym 0.0412)
+ j=4 rho=1/2 m=1216: P(N>=1)=0.0193  E[N]=0.0333 (exact 0.0291, asym 0.0291)
+ j=4 rho=~log_3 2 = 12/19 m=19: P(N>=1)=0.1648  E[N]=0.2452 (exact 0.2459, asym 0.2596)
+ j=4 rho=~log_3 2 = 12/19 m=38: P(N>=1)=0.1138  E[N]=0.1752 (exact 0.1786, asym 0.1835)
+ j=4 rho=~log_3 2 = 12/19 m=76: P(N>=1)=0.0765  E[N]=0.1180 (exact 0.1280, asym 0.1298)
+ j=4 rho=~log_3 2 = 12/19 m=152: P(N>=1)=0.0570  E[N]=0.0925 (exact 0.0911, asym 0.0918)
+ j=4 rho=~log_3 2 = 12/19 m=304: P(N>=1)=0.0455  E[N]=0.0725 (exact 0.0647, asym 0.0649)
+ j=4 rho=~log_3 2 = 12/19 m=608: P(N>=1)=0.0300  E[N]=0.0467 (exact 0.0458, asym 0.0459)
+ j=4 rho=~log_3 2 = 12/19 m=1216: P(N>=1)=0.0147  E[N]=0.0253 (exact 0.0324, asym 0.0324)

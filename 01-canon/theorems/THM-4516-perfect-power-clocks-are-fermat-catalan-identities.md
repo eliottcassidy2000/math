@@ -16,6 +16,9 @@ status: >
   exactly for (q,K,X) = (3,3,2) [-1]; (2^(K-2)+1, K, 2) [-(2^(K-2)-1)^2, K = 4..9 in range,
   the trivial family (a+1)^2 - (a-1)^2 = 4a]; (3,5,4) and (9,5,2) [-7^2]; (7,9,3) [13^2]
   and (13,9,2) [7^3]; (71,7,2) [-17^3]. For q = 3 alone, K <= 3000 adds nothing with X >= 2.
+  Hostile extension: all odd q <= 10^4, 2 <= X <= K <= 60: exactly 17 clocks, 13 in the
+  Pythagorean family (K = 3..15; Catalan 2^3 + 1 = 3^2 is its K = 3 member) and the four
+  Fermat-Catalan readings (3,5,4), (7,9,3), (13,9,2), (71,7,2). Nothing new.
   (3) Free cycles verified: 3x-49 {65,73,85,103,130}; 9x-49 least 11, 13; 7x+169 nine
   primitive 9-cycles (least 67,71,79,85,93,95,109,121,137) plus 169 x {4,2,1}; 13x+343
   least 15, 17, 29 (and one scaled by 7); 71x-4913 least 73, 75, 79; 5x-9 {7,13,28,14};
@@ -45,6 +48,8 @@ outputs:
   - 05-knowledge/results/collatz_necklace_20260929_power_clocks_q201_K400.out
   - 05-knowledge/results/collatz_necklace_20260929_power_clocks_q3_K3000.out
   - 05-knowledge/results/collatz_necklace_20260929_circulant_check_d100.out
+  - 05-knowledge/results/collatz_necklace_20260929_power_clocks_wide_q1e4_K60.out (script 04-computation/experiments/collatz_necklace_20260929_power_clocks_wide.py)
+extra_sha256: 757328ca911a56e5d31c29fb22edcc0726e87ffeadfff2beb3239fc85c3a2537 (power_clocks_wide.py), 81b10782f3802fda678888d9b2c0902eb2e936a342de5cc7556c5afc927e8b1c (wide_q1e4_K60.out)
 script_sha256: 7dec4393a6248b3be63dd4bd65b28e9988da66c882ae571b7b60f54dc3c95798 (power_clocks), 8e8272b3b2c5027127185721dc99d17ded7f25531eee1aba0542912666108fe0 (circulant_check)
 output_sha256: 8288e05f57f1a566191d6a30732645b6ca3d40ce885cf4e234d2f4387f94a1f2 (q201_K400), 485dc20dbead1ceaa1e114dfea28444fb34cf62edaf9c25c4ab75260629182a0 (q3_K3000), b8885a9ad4819611a59f23affbf954d23adc2450353ba684781e6d374bca1d01 (circulant_check_d100)
 hash_basis: raw LF bytes
@@ -71,7 +76,7 @@ Odd `q <= 201`, `1 <= X <= K <= 400`, `X >= 2`:
 | `7^3 + 13^2 = 2^9` | 7 / 13 | `(9,3)` / `(9,2)` | `169` / `343` | `7x+169`: nine primitive 9-cycles; `13x+343`: least `15, 17, 29` |
 | `2^7 + 17^3 = 71^2` | 71 | `(7,2)` | `-4913` | `71x-4913`: least `73, 75, 79` |
 
-Nothing else occurs; `q = 3` to `K <= 3000` adds nothing with `X >= 2`. Exactly the four known Fermat–Catalan solutions with a pure power of two appear (each prime-power base gives one reading, so `3^4 = 9^2` and `7^3`, `13^2` each appear twice), and `2^5 + 7^2 = 3^4` is the `K = 5` member of the Pythagorean family, hyperbolic only because `9` is a square. The `X = 1` rows (`2^K = q + m^r`; e.g. `2^7 = 3 + 5^3`, the cycle `{1,64,32,16,8,4,2}` of `3x+125`) are one-odd-step shapes and are not counted.
+Nothing else occurs; `q = 3` to `K <= 3000` adds nothing with `X >= 2`, and the hostile extension to all odd `q <= 10^4`, `K <= 60` finds exactly the 13 family members `K = 3..15` (Catalan is the `K = 3` member, `2^3 + 1^2 = 3^2`) and the four Fermat–Catalan readings. Exactly the four known Fermat–Catalan solutions with a pure power of two appear (each prime-power base gives one reading, so `3^4 = 9^2` and `7^3`, `13^2` each appear twice), and `2^5 + 7^2 = 3^4` is the `K = 5` member of the Pythagorean family, hyperbolic only because `9` is a square. The `X = 1` rows (`2^K = q + m^r`; e.g. `2^7 = 3 + 5^3`, the cycle `{1,64,32,16,8,4,2}` of `3x+125`) are one-odd-step shapes and are not counted.
 
 ## 3. The Eisenstein square
 

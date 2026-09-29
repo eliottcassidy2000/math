@@ -1,0 +1,7 @@
+odd q<=10000, 2<=X<=K<=60: 17 perfect-power clocks
+Pythagorean-family members: 13
+all others:
+  (3, 5, 4, -49, (7, 2))
+  (7, 9, 3, 169, (13, 2))
+  (13, 9, 2, 343, (7, 3))
+  (71, 7, 2, -4913, (17, 3))

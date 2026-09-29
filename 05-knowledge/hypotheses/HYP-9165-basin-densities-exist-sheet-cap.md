@@ -7,8 +7,11 @@ status: >
   natural density of any Collatz basin is open (it implies, for the plus sheet, that
   almost every orbit reaches 1 if the trunk-entry densities e_i sum to 1). A proof
   would fix the exact constant that no sheet-blind cycle-uniform basin bound can exceed.
-  Cheapest test: the sign of the drift of the {1} and {5,7,10} basins between 2^29 and
-  2^33 (they move by 1e-4 per doubling now); a limit is suggested, not proved.
+  Drift test to 2^32 (dyadic rows): the {1} basin is flat at 0.32675 from 2^28 on; the
+  {5,7,10} basin still rises 5e-5 per doubling (0.3250474 at [2^31,2^32)) and the
+  {17,...} basin falls at the same rate (0.3482025); the sheet cap is therefore between
+  0.3250 and the limit of the rising basin, and the first gap (1.7e-3 at 2^32) is still
+  closing. Next test: 2^36 with a 2-bit sieve (16 GB) or a residue-class extrapolation.
 source: collatz-necklace-20260929 session (mac-mini), 2026-09-29
 related:
   - 01-canon/theorems/THM-4517-no-root-uniform-positive-density-of-collatz-basins.md

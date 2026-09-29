@@ -19,7 +19,9 @@ status: >
   c <= min of their densities if these exist.
   (3) FINITE-EXACT. 3x-1 on [1, 2^29]: basins of {1}, {5,7,10}, {17..91} have counting
   densities 0.3268569, 0.3247598, 0.3483833 (top dyadic range 0.326787, 0.324876,
-  0.348337; the third flat to four decimals from 2^20). 3x+1 on [1, 2^30], first trunk
+  0.348337); to 2^32 (2-bit sieve): 0.32676070, 0.32499135, 0.34824796, dyadic rows
+  [2^28..2^32): {1} flat at 0.32675, {5,7,10} rising 5e-5 per doubling (0.3248756 ->
+  0.3250474), {17..} falling 5e-5 per doubling (0.3483374 -> 0.3482025). 3x+1 on [1, 2^30], first trunk
   element 2^(2i-1) entered from a_i: e_2 = 0.93796, e_4 = 0.023647, e_5 = 0.037789,
   e_7 = 8.0e-5, e_8 = 4.85e-4, e_10 = 3.2e-5, e_11 = 2.1e-6, e_13 = 4e-7, e_14 = 1e-7,
   e_3 = e_6 = e_9 = e_12 = 0 exactly; so dens B(5) ~ 0.938, dens B(32) ~ 0.062, and 341
@@ -41,6 +43,8 @@ scripts:
 outputs:
   - 05-knowledge/results/collatz_necklace_20260929_basins_minus_2e29.out
   - 05-knowledge/results/collatz_necklace_20260929_entries_plus_2e30.out
+  - 05-knowledge/results/collatz_necklace_20260929_basins_minus_2e32.out (script 04-computation/experiments/collatz_necklace_20260929_basins_minus_2bit.c)
+extra_sha256: 2d947096fd356fe3335523f5035d04f365a186fba633485de5250d2f83aab3ff (basins_minus_2bit.c), cfac7d1933da9bb2f63131cb6d74633a306a8bf32dbc2606950e666970f06304 (basins_minus_2e32.out)
 script_sha256: f2d9f0326d206f969c41e85b9b4b5cb52810a2c0466a94555a86103f676ae1ad (basins_minus.c), 06094371c3c6d7c824fc37c06252d51a674688b37e30c3edd76703b6844d41e9 (entries_plus.c)
 output_sha256: f86129b8e0e8c69b9a9d760138ab09cb0d876171f0c23dd1d4e9bc2a63a485fb (basins_minus_2e29), 744ba1caa9aaef711ebea41962e234c4f42a30f7cef3ac7970ae088cf7a0e019 (entries_plus_2e30)
 hash_basis: raw LF bytes
@@ -69,7 +73,7 @@ So a root-uniform statement about predecessor sets can only be sublinear; `X^{0.
 
 ## 3. FINITE-EXACT densities
 
-`3x-1` on `[1, 2^29]` (`T_-(n) = (3n-1)/2` for odd `n`; the three known cycles `{1}`, `{5,7,10}`, `{17,25,37,55,82,41,61,91,136,68,34}`): counting densities `0.3268569 / 0.3247598 / 0.3483833`; top dyadic range `[2^28, 2^29)`: `0.326787 / 0.324876 / 0.348337`; the `{1}` basin drifts down from `0.3277` at `2^20`, the `{5,7,10}` basin up from `0.3243`, the seven-odd-step cycle's basin is flat at `0.3483` to four decimals from `2^20`. The three basins are not equal. First ray element hit (with the odd number entering it): `7 x 2^2` (from 19) `0.1984`, `61 x 2^2` (163) `0.1914`, `2^6` (43) `0.1878`, `2^4` (11) `0.1336`, `7 x 2^8` (1195) `0.0526`, `17 x 2` (23) `0.0460`, `25 x 2^2` (67) `0.0433`, `37 x 2^4` (395) `0.0335`, `5 x 2^5` (107) `0.0282`, `5 x 2^7` (427) `0.0264`; the ray of `1` is never entered at `2^2, 2^8, 2^14` (`(2^{k+1}+1)/3` a multiple of three).
+`3x-1` on `[1, 2^29]` (`T_-(n) = (3n-1)/2` for odd `n`; the three known cycles `{1}`, `{5,7,10}`, `{17,25,37,55,82,41,61,91,136,68,34}`): counting densities `0.3268569 / 0.3247598 / 0.3483833`; top dyadic range `[2^28, 2^29)`: `0.326787 / 0.324876 / 0.348337`; the `{1}` basin drifts down from `0.3277` at `2^20`, the `{5,7,10}` basin up from `0.3243`, the seven-odd-step cycle's basin is flat at `0.3483` to four decimals from `2^20`. To `2^32` (2-bit sieve): cumulative `0.32676070 / 0.32499135 / 0.34824796`; dyadic rows `[2^28..2^32)`: `{1}` flat at `0.32675`, `{5,7,10}` rising `5e-5` per doubling (`0.3248756 -> 0.3250474`), `{17,...}` falling at the same rate (`0.3483374 -> 0.3482025`). The three basins are not equal, and the five-cycle basin is still gaining from the seven-odd-step basin at `2^32`. First ray element hit (with the odd number entering it): `7 x 2^2` (from 19) `0.1984`, `61 x 2^2` (163) `0.1914`, `2^6` (43) `0.1878`, `2^4` (11) `0.1336`, `7 x 2^8` (1195) `0.0526`, `17 x 2` (23) `0.0460`, `25 x 2^2` (67) `0.0433`, `37 x 2^4` (395) `0.0335`, `5 x 2^5` (107) `0.0282`, `5 x 2^7` (427) `0.0264`; the ray of `1` is never entered at `2^2, 2^8, 2^14` (`(2^{k+1}+1)/3` a multiple of three).
 
 `3x+1` on `[1, 2^30]`, `e_i = ` counting density of `B(a_i)`: `e_2 = 0.93796` (`5`), `e_4 = 0.023647` (`85`), `e_5 = 0.037789` (`341`), `e_7 = 8.0e-5`, `e_8 = 4.85e-4`, `e_10 = 3.2e-5`, `e_11 = 2.1e-6`, `e_13 = 4e-7`, `e_14 = 1e-7`, and `e_3 = e_6 = e_9 = e_12 = 0` exactly. Top range `[2^29, 2^30)`: `0.93794 / 0.02366 / 0.03780`. Hence `dens B(5) ~ 0.938`, `dens B(32) ~ 0.062` (the two children of `16` partition everything but the trunk), and `341` owns a larger basin than `85`; the tail beyond `i = 11` is not converged (the basin of `a_i` is invisible below `~ 4^i`).
 

@@ -1,0 +1,15 @@
+(a) Monte Carlo, rho=1/2:
+  m=1000: P(N>=1)=0.3077  E[N]=1.083  E[N|N>=1]=3.52   P*log(m)=2.125  P*sqrt(log m)=0.809
+  m=3000: P(N>=1)=0.2710  E[N]=1.132  E[N|N>=1]=4.18   P*log(m)=2.170  P*sqrt(log m)=0.767
+  m=10000: P(N>=1)=0.2410  E[N]=1.065  E[N|N>=1]=4.42   P*log(m)=2.220  P*sqrt(log m)=0.731
+  m=30000: P(N>=1)=0.2120  E[N]=1.110  E[N|N>=1]=5.24   P*log(m)=2.185  P*sqrt(log m)=0.681
+  m=100000: P(N>=1)=0.1950  E[N]=1.060  E[N|N>=1]=5.44   P*log(m)=2.245  P*sqrt(log m)=0.662
+
+(b) exact E[N_3], E[N_3^2], second-moment bound, rho=1/2:
+  m=10: E[N]=1.0317  E[N^2]=2.6570  E[N^2]/log m=1.1539  lower bound P>=E^2/E[N^2]=0.4006
+  m=30: E[N]=1.0784  E[N^2]=3.7388  E[N^2]/log m=1.0993  lower bound P>=E^2/E[N^2]=0.3111
+  m=100: E[N]=1.0953  E[N^2]=4.8158  E[N^2]/log m=1.0457  lower bound P>=E^2/E[N^2]=0.2491
+  m=300: E[N]=1.1002  E[N^2]=5.7444  E[N^2]/log m=1.0071  lower bound P>=E^2/E[N^2]=0.2107
+  m=1000: E[N]=1.1019  E[N^2]=6.7366  E[N^2]/log m=0.9752  lower bound P>=E^2/E[N^2]=0.1802
+  m=3000: E[N]=1.1024  E[N^2]=7.6326  E[N^2]/log m=0.9533  lower bound P>=E^2/E[N^2]=0.1592
+  m=10000: E[N]=1.1026  E[N^2]=8.6107  E[N^2]/log m=0.9349  lower bound P>=E^2/E[N^2]=0.1412

@@ -20,6 +20,15 @@ status: >
   run of t consecutive cyclic gaps (1 <= t <= j-1) sums to a value in ((t-1)m, (t+1)m);
   X = j = 3, K = 3m iff every gap <= 2m - 1, giving m(m-1) primitive good necklaces out
   of 3 C(m,2) (exactly one third fail, for every m).
+  (5) Expected fair cuts (uniformly random word of shape (jm,jx), N_j = number of fair
+  cut positions in [0,m)): E[N_j] = m C(m,x)^j / C(jm,jx) exactly; Stirling gives
+  E[N_j] ~ sqrt(j) m^((3-j)/2) (2 pi rho(1-rho))^(-(j-1)/2), rho = x/m. Hence: j = 2
+  always (IVT) with E[N_2] ~ sqrt(m/(pi rho(1-rho))); j = 3: E[N_3] -> sqrt(3)/(2 pi rho(1-rho))
+  (1.1027 at rho = 1/2) while P(N_3 >= 1) -> 0 (EMPIRICAL law ~ 2.2/log m to m = 10^5;
+  PROVED lower bound E[N_3]^2/E[N_3^2] with the exact second moment
+  E[N_3^2] = (m/C(3m,3x)) sum_delta sum_s C(delta,s)^3 C(m-delta,x-s)^3 ~ 0.93 log m: the
+  imbalance pair is a planar lattice walk visiting the origin); j >= 4: P(N_j >= 1) <= E[N_j] -> 0
+  like m^(-(j-3)/2) (PROVED). A Pólya trichotomy for the one-arc-per-thief necklace problem.
   (4) Fair Eliahou identity: for a fair 2-split with cut elements n, n' and share
   products P_i = prod_{odd y in share i} (1 + d/(qy)): n'/n = sqrt(P_0/P_1), so
   |log(n'/n)| <= X|d| / (2(q n_min - |d|)); fairness cancels the drift q^x/2^m exactly.
@@ -44,9 +53,14 @@ note: 05-knowledge/results/collatz_necklace_20260929_fair_splits_power_clocks_ba
 scripts:
   - 04-computation/experiments/collatz_necklace_20260929_circulant_check.py
   - 04-computation/experiments/collatz_necklace_20260929_fairsplit_census.py
+  - 04-computation/experiments/collatz_necklace_20260929_fairsplit_asymptotics.py
+  - 04-computation/experiments/collatz_necklace_20260929_fairsplit_loglaw.py
 outputs:
   - 05-knowledge/results/collatz_necklace_20260929_circulant_check_d100.out
   - 05-knowledge/results/collatz_necklace_20260929_fairsplit_criteria_K18.out
+  - 05-knowledge/results/collatz_necklace_20260929_fairsplit_asymptotics.out
+  - 05-knowledge/results/collatz_necklace_20260929_fairsplit_loglaw.out
+extra_sha256: df66480e5af561fa99477d85edf03d57b914899eb1be1df0848bc65aef2c0f29 (fairsplit_asymptotics.py), 6b02b02a4b8281dbd0773edb9cb000ad47679e12b6638ea268ac23883f413ae9 (fairsplit_loglaw.py), 27c68009696d3efc9080532fd01b298cadb0d9a58cf2784e0f3758673d77f11d (asymptotics.out), ae58295f8b1ec309c675ff0091e57e330bfc0bae17a5c08ed1d6c273abb0fa47 (loglaw.out)
 script_sha256: 8e8272b3b2c5027127185721dc99d17ded7f25531eee1aba0542912666108fe0 (circulant_check), 116cefe9c4708cc866f7306e2bd57e28567ebf98b67106aabc3d0153887fe7cd (fairsplit_census)
 output_sha256: b8885a9ad4819611a59f23affbf954d23adc2450353ba684781e6d374bca1d01 (circulant_check_d100), c9f4ec136dad704b382bdba6ecdd6326f3177fb91086bdd761f2cd1e4cbdfe5f (fairsplit_criteria_K18)
 hash_basis: raw LF bytes
@@ -86,10 +100,14 @@ The integrality congruence of THM-4484 splits along any fair antipodal cut into 
 * **One bead per thief, `X = j`.** With cyclic gaps `g_1, ..., g_j` and `P_i = g_1 + ... + g_{i-1}`, the cut `r` must lie in every `(P_i - im, P_i - (i-1)m]`; these `j` integer intervals meet iff each lower end is below each upper end, i.e. iff every run of `t` consecutive gaps (`1 <= t <= j-1`) has sum in `((t-1)m, (t+1)m)` (the complementary-run condition is the same family).
 * **Three beads, `K = 3m`.** Iff every gap is `<= 2m-1`. Compositions of `3m` into three parts `<= 2m-1` number `binom(3m-1,2) - 3 binom(m,2) = 3m^2 - 3m + 1`; with the rotation-fixed `(m,m,m)` this gives `m^2 - m + 1` good necklaces, `m(m-1)` of them primitive, out of `(binom(3m-1,2) - 1)/3 = 3 binom(m,2)` primitive necklaces: exactly one third of the primitive three-bead necklaces of length `3m` have no fair 3-split, for every `m`.
 
-## 5. The fair Eliahou identity
+## 5. How many thieves: expected fair cuts and a Pólya trichotomy
+
+For a uniformly random word of shape `(jm, jx)` and `N_j` the number of fair cut positions `r in [0,m)`: each `r` is fair for exactly `binom(m,x)^j` words, so `E[N_j] = m binom(m,x)^j/binom(jm,jx)` exactly, and by Stirling `E[N_j] ~ sqrt(j) m^{(3-j)/2} (2 pi rho(1-rho))^{-(j-1)/2}`. Two thieves: always (section 4), `E[N_2] ~ sqrt(m/(pi rho(1-rho)))`. Four or more: `P(N_j >= 1) <= E[N_j] -> 0` like `m^{-(j-3)/2}`. Three: `E[N_3] -> sqrt(3)/(2 pi rho(1-rho))` (`1.1027` at `rho = 1/2`), but the fair cuts cluster — the imbalance pair `(F(r+m) - F(r) - x, F(r+2m) - F(r+m) - x)` is a planar lattice walk of `m` steps started at distance `~ sqrt(m)`, and a fair cut is a visit to the origin. Two fair 3-cuts at `0` and `delta` force the six window counts `s, x-s, s, x-s, s, x-s`, so `E[N_3^2] = (m/binom(3m,3x)) sum_{delta} sum_s binom(delta,s)^3 binom(m-delta,x-s)^3`, computed exactly to `m = 10^4` (`~ 0.93 log m` at `rho = 1/2`), giving the proved bound `P(N_3 >= 1) >= E[N_3]^2/E[N_3^2]` (`0.249, 0.180, 0.141` at `m = 10^2, 10^3, 10^4`). Monte Carlo to `m = 10^5`: `P(N_3 >= 1) log m = 2.13 .. 2.25` (flat) and `E[N_3 | N_3 >= 1] ~ 0.5 log m` — the law `P(N_3 >= 1) ~ 2.2/log m` is EMPIRICAL, its order `1/log m` from below is PROVED. (`..._fairsplit_asymptotics.out`, `..._fairsplit_loglaw.out`.)
+
+## 6. The fair Eliahou identity
 
 One odd step multiplies `y` by `(q/2)(1 + d/(qy))`, so a share of shape `(m,x)` multiplies by `q^x 2^{-m} P`, `P = prod_{odd y in share} (1 + d/(qy))`. For a fair 2-split with cut elements `n, n'`: `n'/n = q^x 2^{-m} P_0` and `n/n' = q^x 2^{-m} P_1`, hence `n'/n = sqrt(P_0/P_1)` and `|log(n'/n)| <= X|d|/(2(q n_min - |d|))`. Fairness cancels the drift; the two thieves' cut values differ only by the carry ratio. For a hypothetical positive `3x+1` cycle with even `K, X` (`n_min >= 2^68`), antipodal fair cut elements agree to relative precision `X/(12 n_min)`.
 
-## 6. Checks and boundary
+## 7. Checks and boundary
 
 Exact verification (`Z[zeta_j]` arithmetic modulo `Phi_j`) on 49 small `3x+d` cycles with `gcd(K,X) > 1`, the nine `7x+169` cycles of shape `(9,3)` (six with fair 3-splits; THM-4516), and the `3x+17021` cycle of shape `(2140,1088)` (79 fair antipodal cuts, no fair 4-split, so its factor `2^1070 + 3^544` has no share reading). Both existence criteria agree with brute force on all 23,201 `(necklace, j)` pairs with `K <= 18`. All known `3x+-1` cycles have `gcd(K,X) = 1` and admit no fair split. Collatz is OPEN; nothing here restricts a hypothetical cycle beyond THM-4484.
