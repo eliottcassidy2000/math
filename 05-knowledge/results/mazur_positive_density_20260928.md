@@ -1,4 +1,4 @@
-# Mazur's positive-density log-time convergence, digested: the harmonic mass of a Syracuse tree layer is `3^n mu_n(seed)`, the negative cycles are the resonances of the 3-adic Syracuse law (exact spike profile), and the seed-1 mass is a computable test of the theorem (`limsup n^(1/6) H_n(1) > 0` is forced; `H_n(1)` bottoms at `0.370` near `n = 22`, rises to `0.54` by `n = 42` and stays near `0.52` through `n = 48`)
+# Mazur's positive-density log-time convergence, digested: the harmonic mass of a Syracuse tree layer is `3^n mu_n(seed)`, the negative cycles are the resonances of the 3-adic Syracuse law (exact spike profile), and the seed-1 mass is a computable test of the theorem (`limsup n^(1/6) H_n(1) > 0` is forced; `H_n(1)` falls to `0.363` at `n = 27` (local minimum `0.370` at `n = 22`), rises to `0.54` by `n = 42` and stays near `0.52` through `n = 48`, lower bounds)
 
 **Session:** opus, `collatz-poset-dag-20260927` (S19 continuation), 2026-09-28.
 **Owner's directive:** "thoroughly digest the attached pdf for any possible
@@ -9,8 +9,9 @@ directions and new ones you synthesize"; Kaprekar's `6174`, `495`, the
 text (valuation sequences to 2-adic values; periodic implies rational; open
 whether an unrepeating sequence can have a rational value; a natural-number
 value would refute Collatz).
-**The paper:** M. Mazur, *Explicit Positive-Density Collatz Convergence in
-Logarithmic Time*, v2, September 2026 (AI-assisted; ProofAtlas platform;
+**The paper:** L. Mazur (Lech Mazur), *Explicit Positive-Density Collatz
+Convergence in Logarithmic Time*, version 2.1, September 6, 2026
+(AI-assisted; ProofAtlas platform;
 accompanying Lean 4 development). Companion (same platform, same supporting
 source revision): *Positive lower density of Collatz predecessors*.
 **Inherits (cited):** Tao 2022 (Syracuse random variables, fine-scale mixing,
@@ -26,16 +27,17 @@ value is the parity of the arriving valuation).
 
 **Status: CITED (Mazur's Theorem 1.1 and the companion theorem: Lean-checked
 on the platform, review pending, no independent replay by us, automated
-reviews only) + PROVED (Theorem A, the harmonic-mass identity and its
+reviews only; audited SOUND WITH CORRECTIONS, all applied, section 11) + PROVED (Theorem A, the harmonic-mass identity and its
 recursion; Theorem B, cycle resonances, lower-bound form; Theorem C, the
-seed-1 test) + FINITE-EXACT (the 3-adic Syracuse law to level 18, rational
-to level 6; every elementary component of the paper checked at small size,
-P1–P8) + OBSERVED (the exact spike profile `D` to four decimals at levels
+seed-1 test) + FINITE-EXACT (the 3-adic Syracuse law, rational, to level 6; every
+elementary component of the paper checked at small size, P1–P8) + VERIFIED
+(the law in float64 to level 18, agreeing with the rational law to
+`10^(-12)` where both exist) + OBSERVED (the exact spike profile `D` to four decimals at levels
 17 and 18; the decline of the seed-1 mass; linear growth of the second
 moment; convergence of the entropy deficit) + CONDITIONAL (absolute
 continuity of the 3-adic Syracuse law, from the fine-scale estimate as
-stated) + OPEN (`lim H_n(1) > 0`?) + DIRECTION. Audit: pending (section 11
-will hold the record).**
+stated) + OPEN (`lim H_n(1) > 0`?) + DIRECTION + INDEPENDENTLY AUDITED (SOUND
+WITH CORRECTIONS, thirty-two applied; section 11).**
 
 Scripts and outputs (all in this session's worktree):
 `04-computation/experiments/mazur_positive_density_20260928.py` (P1–P8),
@@ -52,9 +54,10 @@ level as argument), `mazur_seed1_test_20260928.py` (Theorem C's numbers),
 
 1. **The paper's object is the repo's object.** Mazur's reference density
    `rho_q = (2/3) 3^q mu_q` is the level-`q` law of Tao's Syracuse random
-   variable, and his weighted inverse histories from a seed `M` with weights
-   `omega(w) = 3^d 2^(-A(w))` are exactly the *harmonic mass* of the
-   Syracuse tree of `M`. **Theorem A (PROVED):** for every odd integer `y`
+   variable, and his weighted inverse histories from a seed `M`, weights `omega(w) =
+   3^d 2^(-A(w))`, are summands of the *harmonic mass* of the Syracuse
+   tree of `M` (he sums them over his restricted family of central
+   first-crossing histories). **Theorem A (PROVED):** for every odd integer `y`
    not divisible by `3` (either sign) and every `n >= 1`,
    `3^n mu_n(y mod 3^n) = sum_{x odd : S^n(x) = y} 3^n 2^(-A_n(x))`,
    the sum over the depth-`n` predecessors of `y` (which have the sign of
@@ -66,13 +69,17 @@ level as argument), `mazur_seed1_test_20260928.py` (Theorem C's numbers),
    (Theorem B, PROVED).** A Syracuse cycle of length `k`, total valuation
    `A`, through `y_0` gives `mu_{km}(y_0 mod 3^{km}) >= 2^(-Am)`, i.e.
    `rho >= (2/3)(3^k/2^A)^m`. Negative cycles have `3^k > 2^A`: the class
-   of `-1` carries `rho_n(-1) = 0.9748 (3/2)^n` (the word `1^n` lands there
-   exactly: `(3/2)^n - 1 = -1 mod 3^n`), the `{-5, -7}` cycle grows like
-   `(9/8)^(n/2)`, the seven-cycle of `-17` like `(2187/2048)^(n/7)`. The
-   limit density has singularities of order `|y - y_0|_3^(-s)`, `s = 1 -
-   (A/k) log_3 2 = 0.3691, 0.0536, 0.0086`. Positive cycles (`2^A > 3^k`)
+   of `-1` carries `rho_n(-1) = 0.9748 (3/2)^n` at `n = 18` (the ratio
+   increases with `n`, limit about `0.975`; the word `1^n` lands there
+   exactly: `(3/2)^n - 1 = -1 mod 3^n`), the `{-5, -7}` cycle grows at
+   least like `(9/8)^(n/2)` (observed factor `1.16–1.20` per two levels
+   through `n = 18`), the seven-cycle of `-17` at least like
+   `(2187/2048)^(n/7)` (no growth visible through `n = 18`). The limit
+   density, where it exists, has singularities of order at least `|y -
+   y_0|_3^(-s)`, `s = 1 - (A/k) log_3 2 = 0.3691, 0.0536, 0.0085`. Positive cycles (`2^A > 3^k`)
    are anti-resonant: the trivial cycle contributes `(3/4)^n`. The relative
-   profile of the `-1` spike on its forward rational closure is exact:
+   profile of the `-1` spike on its forward rational closure is, to four
+   decimals at levels 17 and 18 and as a proved lower bound:
    `D(-1/2) = 1/2`, `D(-1/4) = D(1/8) = D(11/16) = D(49/32) = 3/4`,
    `D(-1/8) = D(1/16) = D(11/32) = 3/8`, `D(-1/16) = 3/16`, all reproduced
    to four decimals at levels 17 and 18 (path sums `2^(l - A)`).
@@ -81,11 +88,13 @@ level as argument), `mazur_seed1_test_20260928.py` (Theorem C's numbers),
    x}` for *any* `C` forces `limsup_n n^(1/6) H_n(1) > 0`. The exact
    sequence is `1, 8/7, 1376/1387, 0.928, 0.964, 0.955, 0.860, 0.775,
    0.697, 0.637, 0.591, 0.537, 0.500, 0.473, 0.459, 0.435, 0.421, 0.410`
-   (`n = 1..18`), falling about `3%` per level from level 8 to level 22,
-   where it bottoms at `0.370`. Beyond, by the exact depth decomposition
+   (`n = 1..18`), falling about `5%` per level on average from level 8 to
+   level 22 (`0.370`), with its minimum `0.363` at `n = 27`. Beyond, by the
+   exact depth decomposition
    `H_{18+d}(1) = sum_{y ∈ T_d(1)} 3^d 2^(-A(y)) H_18(y)` (the level-18 law
-   plus a weight-pruned walk of the tree of `1` to depth 30; loss `<=
-   3·10^(-2)`, measured against the exact `H_18` at every split), it
+   plus a weight-pruned walk of the tree of `1` to depth 30; loss about
+   the pruned weight, `3·10^(-2)` at `n = 48`, an empirical calibration
+   against the exact `H_18`, not a bound), it
    *rises* to `0.54` at `n = 41–43` and stays near `0.52–0.54` through `n =
    48` (`0.374, 0.414, 0.452, 0.504, 0.543, 0.540, 0.531, 0.513` at `n =
    30, 34, 38, 40, 42, 44, 46, 48`, lower bounds; the exact values exceed
@@ -96,14 +105,16 @@ level as argument), `mazur_seed1_test_20260928.py` (Theorem C's numbers),
    is the sharpest computable stake we have on the theorem's *conclusion*,
    independent of its astronomical constants, and it is passed so far.
 4. **The 3-adic Syracuse law looks absolutely continuous but not
-   square-integrable.** Its entropy deficit `n ln 3 - H(mu_n)` converges
-   (`1.06, 1.08, ..., 1.173` at `n = 10..18`, increments shrinking
-   geometrically; information dimension `1`, `E[rho log rho] -> 0.84` on
-   units), while `E[rho_n^2]` over units grows linearly (`0.31 n + 0.8`).
+   square-integrable.** Its entropy deficit `n ln 3 - H(mu_n)` appears to converge
+   (`1.06, 1.08, ..., 1.173` at `n = 10..18`, increments shrinking, but
+   their ratios rise from `0.84` at `n = 8` to `0.9` at `n = 18`, so a slow
+   divergence is not excluded; information dimension `1`; `E_units[rho ln
+   rho] = deficit - ln(3/2) = 0.767` at `n = 18`, about `0.84` if the
+   deficit converges to about `1.25`), while `E[rho_n^2]` over units grows linearly (`0.31 n + 0.8`).
    The fine-scale distances `||mu_18 - lift(mu_m)||_1` decrease in `m`
    (`0.85` at `m = 1` to `0.35` at `m = 9`), the qualitative content of
    Mazur's (2.3) and Tao's Proposition 1.14, whose explicit constant here
-   is `2^(2^6536)`-sized and says nothing at these levels. As stated, (2.3)
+   is a three-fold tower `2^(2^(2^8697))` and says nothing at these levels. As stated, (2.3)
    *is* the `L^1`-Cauchy property of the densities, hence absolute
    continuity of the 3-adic law (CONDITIONAL on (2.3)).
 5. **Typing.** Mazur's theorem is a residue-averaging mechanism: it
@@ -190,22 +201,28 @@ the platform's word.
 4. **Deterministic residue spread (3.9):** distinct endpoints of bounded
    histories in one class mod `3^q` are spaced at least `3^q` apart; equal
    endpoints share their word; so the number of central histories landing
-   in a class is bounded by a polynomial in the generation.
+   in a class is bounded by `(n+1)^3 G^n`, `G = 2013/2000` ((3.10)), a
+   polynomial times a slowly growing exponential.
 5. **Seed by residue averaging (Proposition 4.2):** the seeds `R_j = (4^j -
    1)/3` (`S(R_j) = 1` with valuation `2j`) permute the residues mod `3^q`
    as `j` runs over `0..3^q - 1`; averaging the weighted terminal sums over
    the residue classes and picking a class at least as good as the mean
    gives a fixed odd seed `M >= 16 b_0`, `3 ∤ M`.
 6. **Terminal selection (Proposition 5.2) and the comparison of two residue
-   moduli (Proposition 5.3),** then **coverage (Proposition 6.3):** the
-   source charge `x omega(w) <= M` (each history's source times its weight
-   is at most the seed), so a terminal weighted sum bounded below at scale
-   `X` is a count of distinct sources below `X`.
+   moduli (Proposition 5.3),** then the **source charge (Lemma 6.1)** `x
+   omega(w) <= M` (each history's source times its weight is at most the
+   seed), **coverage of all large scales (Lemma 6.2)** and the **count
+   (Proposition 6.3)**: a terminal weighted sum bounded below at scale `X`
+   is a count of distinct sources below `X`.
 7. **Constants (Section 8):** `A* = 6409`, `E* = 2170`, `L* = 280`, then
-   towers: `D_exp = 2^(8192 A* 2^(3 E*))` (about `2^(2^6536)`), `C* = (32
-   A* D*)^A*` (`log_2 log_2 C* ≈ 6548`), `N = 20000(ceil(log_2 F) + 64)`
-   with `F = 2467 b 16^b (C+1)` (`log_2 N ≈ 6563`), and `c^(-1)` beyond
-   `2^(2^(2^6535))`. The paper says these are "an explicit certificate, not
+   towers: `D_exp = 2^(8192 A* 2^(3 E*))` (about `2^(2^6536)`), but `D* =
+   max(D_1, D_2, D_3)` is dominated by `D_sc >= P*^10` with `P* =
+   g^(R*-1)(T*)`, a cubic map composed `R* ≈ 2^8696` times, so `C* = (32
+   A* D*)^A*` has `log_2 log_2 log_2 C* ≈ 8697`; `N = 20000(ceil(log_2 F)
+   + 64)` has `log_2 log_2 N ≈ 8697`; `c^(-1)` is a four-fold tower
+   (`log_2^(4) c^(-1) ≈ 8697`) and `X_0` a five-fold one. (The session's
+   first evaluation took `D* = D_exp` and understated every level by one
+   exponential; corrected by the audit, section H of its script.) The paper says these are "an explicit certificate, not
    a claim of numerically usable constants".
 
 ---
@@ -219,12 +236,12 @@ the platform's word.
 | P3 | Lemma 2.1 with and without absolute values; existence of an integral source iff `R mod 3^d ∈ Im F_w` | 200 cases; `R < 3000`, words `<= 3`, valuations `<= 4` | holds |
 | P4 | `rho_q`: mean `2/3`, zero on nonunits | exact rationals, `q <= 5` | holds; `ell^1` distances between consecutive lifts `0.317 .. 0.198` (slow at tiny levels) |
 | P5 | mean identity `<sum_w T_w rho_k> = (2/3) p(V)` (`p(V) = 225/256`); residue pullback | seed `M = R_41`; the composed value `4.7143` reproduced exactly | holds |
-| P6 | endpoint spread (3.9): same class mod `3^q` implies spacing `>= 3^q`; equal endpoints share the word | enumeration | holds |
+| P6 | endpoint spread (3.9): same class mod `3^q` implies spacing `>= 3^q`; equal endpoints share the word | enumeration (vacuous as run: 5 histories in 5 `(D, A)` classes, no two endpoints ever compared; both statements are trivial) | holds |
 | P7 | Section 7: `tau(x) = d + A + tau(M)`; `A log 2 - d log 3 <= log(x/M) <= A log 2 - d log 3 + sum_j log(1 + 1/(3 x_j))`; the constant `3/log(4/3)` | 300 + 300 sampled histories from unit seeds | identities exact; `tau/log x` means `5.35 / 4.81` (seed-diluted); seed-free `(d+A)/(A log 2 - d log 3)` means `6.19 / 5.40` at mean valuations `2.39 / 2.56`; `3/log(4/3) = 10.428` at `A = 2d` |
-| P8 | the constants | evaluated | `D_exp ≈ 2^(2^6536)`, `log_2 log_2 C* ≈ 6548`, `log_2 N ≈ 6563`, `c^(-1) > 2^(2^(2^6535))` |
+| P8 | the constants | evaluated (the script's `part8` took `D* = D_exp`; the audit script's section H has the corrected tower) | `D_exp ≈ 2^(2^6536)`; `D* ≈ D_sc`, `log_2^(3) C* ≈ 8697`, `log_2^(2) N ≈ 8697`, `log_2^(4) c^(-1) ≈ 8697`, `log_2^(5) X_0 ≈ 8697` |
 
 Empirically `54.22%` of `n < 10^6` satisfy `tau(n) <= 10.46 ln n`; the
-theorem's lower bound `c` is the reciprocal of a triple exponential.
+theorem's lower bound `c` is the reciprocal of a four-fold exponential tower.
 
 ---
 
@@ -308,7 +325,7 @@ For the loop `-1` directly: `Y_n(1^n) = sum_{j<n} 3^j 2^(-j-1) = (3/2)^n -
 on the reference density exists; in the 3-adic limit the density (when it
 exists, section 7) has the singularities `|y - y_0|_3^(-s)`, `s = 1 -
 (A/k) log_3 2`: `s = 0.3691` at `-1`, `0.0536` at `-5` and `-7` (`k = 2,
-A = 3`), `0.0086` at the seven points `-17, -25, -37, -55, -41, -61, -91`
+A = 3`), `0.0085` at the seven points `-17, -25, -37, -55, -41, -61, -91`
 (`k = 7, A = 11`). A hypothetical positive cycle would have `s < 0`,
 extremely close to `0` (its mean valuation exceeds `log_2 3` by the cycle
 constraints), an anti-resonance nearly flat over the accessible levels: no
@@ -319,7 +336,8 @@ does to the 3-adic law.
 units is the class of `-1` at every level up to 14, where the full scan of
 the atoms stops (`1.33, 2.10, 3.20, 4.85, 7.32, 11.0, 16.6, 24.9, ...`,
 `285` at `n = 14`); `rho_n(-1)` itself is followed to `n = 18` (`1441`),
-with `rho_n(-1)/(3/2)^n -> 0.9748` (the loop word contributes exactly
+with `rho_n(-1)/(3/2)^n = 0.9748` at `n = 18`, increasing in `n` (limit
+about `0.975`; the loop word contributes exactly
 `(2/3)(3/2)^n`; the rest is the negative tree of `-1`). The atoms of the `{-5,-7}` cycle grow (`rho_18(-5)
 = 6.3`, `rho_18(-7) = 7.6`, against `1` for a typical unit); `-17` sits at
 `2.0–2.5`.
@@ -340,10 +358,11 @@ the all-ones forward orbit of `-1/4`, `x_j = 3^(j+1)/2^(j+2) - 1 = -1/4,
 = 3/8`, `D(-1/16) = 3/16`. Observed at levels 17 and 18: `0.5000, 0.7500,
 0.7500, 0.7500, 0.7500, 0.3750, 0.3750, 0.3750, 0.1875`. The second tier of
 atoms at level `n` is therefore the set of classes `3^(j+1)/2^(j+2) - 1 mod
-3^n`, `j < n`, the "shadows" of `-1` (they agree with `-1` to level `j+1`),
-each at `3/4` of the top atom, which is what the atom lists show at every
-level (`n = 8`: `-1: 24.9`, then five classes at `18.7`, all of the form
-`-1 + 2^(-(j+2)) 3^(j+1)`). Equality in the profile is a statement about
+3^n`, `j <= n - 2`, the "shadows" of `-1` (they agree with `-1` to level
+`j+1`), each at `3/4` of the top atom, which is what the atom lists show at
+every level (`n = 8`: `-1: 24.9`, then the seven shadow classes `j = 0..6`
+at `18.6–18.7`, of which the top-6 list shows five, all of the form `-1 +
+2^(-(j+2)) 3^(j+1)`). Equality in the profile is a statement about
 the limit and is left OBSERVED; the lower bound `rho_n(x) >= (2/3)(3/2)^n
 · 2^(depth - A_0)` for a point at depth `depth` and valuation `A_0` in the
 closure is PROVED by Theorem A applied to the word `1^(n-depth)` followed by
@@ -359,12 +378,16 @@ the path.
 | 18 | 0.2736 | 0.499 | 6.419 | 1.173 | 0.070 | 0.097 |
 
 `E[rho_n^2]` (over units; equals `(2/3) 3^n P(Y_n = Y_n')`) grows by `0.31`
-per level: the law is not square-integrable in the limit, its density has
-a tail `P(rho > t) ~ t^(-2)` fed by the spikes' forward closures. The
-entropy deficit converges (increments `0.021, 0.018, ..., 0.0088` at `n =
-11..18`, ratio `0.9`), so the information dimension is `1` and `E_units[rho
-log rho] -> 0.84`. The `L^1` distance between consecutive Haar densities
-decays like `n^(-0.93)`. The median density of a unit class settles at
+per level: the law is not square-integrable in the limit if this continues, and
+its density is consistent with a tail `P(rho > t) ~ t^(-2)` fed by the
+spikes' forward closures (heuristic; local exponents `1.3–2.3` at level
+14). The entropy deficit appears to converge (increments `0.021, 0.018,
+..., 0.0088` at `n = 11..18`, with ratios rising from `0.84` to `0.9`, so a
+slow divergence is not excluded); the information dimension is `1`
+(OBSERVED), and `E_units[rho ln rho] = deficit - ln(3/2) = 0.767` at `n =
+18`. The `L^1` distance between consecutive Haar densities decays roughly
+like `1/n` (fitted exponent `-0.93` over all levels, `-1.04` over `10..18`,
+`-1.16` over `14..18`). The median density of a unit class settles at
 `0.50`, with `7%` of the classes below `0.1`: the tree of a typical seed is
 thin at many depths.
 
@@ -373,7 +396,7 @@ thin at many depths.
 (at `N = 17`: `0.851, ..., 0.345`; the dependence on `N` is weak). This is
 the quantity bounded in (2.3) by `(2/3) C_A m^(-A)`, decreasing in `m` as
 it should; the explicit `C` of Lemma 8.1 says nothing below `m` of the
-order of `2^(2^6536)`.
+order of `2^(2^(2^8697))`.
 
 ---
 
@@ -417,21 +440,24 @@ tested range, and the `n^(1/6)` is a proof convenience, not the truth.
 
 (Levels `<= 18`: the FFT law, exact to `10^(-9)`. Levels `19..48`: the
 depth decomposition below with the depth-30 walk, lower bounds whose loss
-is at most the pruned weight, `4·10^(-9)` at `n = 19`, `1.8·10^(-4)` at
+is empirically about the pruned weight (validation at `m + d = 18`:
+deficit/pruned weight `= 1.00` at `d = 10, 15, 18`; no bound on the loss
+is proved, since `H_18(z)` on the pruned nodes is not bounded by `1`), `4·10^(-9)` at `n = 19`, `1.8·10^(-4)` at
 `n = 30`, `3.6·10^(-3)` at `n = 38`, `2.9·10^(-2)` at `n = 48`; adding the
 pruned weight, the values for `n = 41..48` are `0.548, 0.553, 0.556, 0.555,
 0.552, 0.551, 0.546, 0.542`.)
 
 Every ratio `H_{n+1}/H_n` from `n = 7` to `n = 21` is below `1` (`0.90` to
-`0.98`); the minimum is `H_22 = 0.3697`; from `n = 22` to `n = 43` the
-ratios are mostly above `1` and the sequence climbs to `0.544`; from `n =
-44` to `48` they are slightly below (`0.994, 0.988, 0.994, 0.981, 0.986`;
+`0.98`); `H_22 = 0.3697` is a local minimum, and the minimum of the
+computed sequence is `H_27 = 0.3634` (`n = 26..29` all lie below `H_22`);
+from `n = 28` to `n = 43` every ratio is above `1` and the sequence climbs
+to `0.544`; from `n = 44` to `48` they are slightly below (`0.994, 0.988, 0.994, 0.981, 0.986`;
 the corrected values drift from `0.556` to `0.542`). By Corollary A2 the
 ratio is `f_n^{(1)} + 2 f_n^{(2)} = 1 + f_n^{(2)} - f_n^{(0)}`, and the
 walk gives the class shares of the layers directly: the leaf share
-`f^{(0)}` sits at `0.34–0.35` from depth 6 on, while `f^{(2)}` climbs from
+`f^{(0)}` sits at `0.33–0.35` from depth 6 on, while `f^{(2)}` climbs from
 `0.23` (depth 7) to `0.31–0.32` (depths 17–20) at the expense of `f^{(1)}`
-(`0.45 -> 0.34`), and from depth 22 on all three shares are `1/3 ± 0.02`:
+(`0.45 -> 0.34`), and from depth 22 on all three shares are `1/3 ± 0.022`:
 the layers of the tree of `1` approach equidistribution mod `3` from a
 class-`1`-heavy start, the decline was the transient of that approach, and
 what remains is the martingale-like wandering of the mass. The 3-adic genealogy behind it is explicit at the first
@@ -447,7 +473,7 @@ mod 9` is the extreme case (`rho_18 = 0.047`: its `a = 2` child `7281` is a
 leaf).
 
 **The depth decomposition (`mazur_seed1_deep_20260928.py`, PROVED
-identity, FINITE-EXACT evaluation).** Theorem A applied at the depth-`d`
+identity; float64 lower bounds with an empirical loss estimate).** Theorem A applied at the depth-`d`
 ancestor gives, for every `d`,
 `H_{m+d}(1) = sum_{y ∈ T_d(1)} 3^d 2^(-A_d(y)) H_m(y)`, `H_m(y) = 3^m mu_m(y mod 3^m)`,
 and `mu_m` for `m <= 18` is the reduction of the level-18 law. The layers
@@ -463,15 +489,18 @@ Validation: with `m + d = 18` the identity must return the exact `H_18 =
 pruned weights (`5·10^(-8)`, `5·10^(-6)`, `2.5·10^(-4)`, `2.4·10^(-3)`,
 `6.0·10^(-3)`): the pruned nodes' subtrees carry mass about `1` each, so
 the true values exceed the table by about the pruned weight. Two routes
-(`(d, 18)` and `(d+1, 17)`) agree to `10^(-3)`, and the two runs agree at
+(`(d, 18)` and `(d+1, 17)`) agree to `2.5·10^(-3)` (depth-20 run) and
+`4·10^(-3)` (depth-30 run), the second route carrying one more pruned
+level, and the two runs agree at
 `n = 38` up to their pruned weights (`0.445` against `0.452`).
 
 The "parents" form `rho_{n+1}(1) = 3 sum_j 4^(-j) rho_n(R_j)` with the
 other seeds' values at level 18 (`R_2 = 5: 0.283`, `R_4 = 85: 0.227`, `R_5 =
 341: 1.160`, `R_7: 0.047`, `R_8: 0.999`) had given the fixed-point
 extrapolation `H_∞(1) ≈ 0.35`, close to the observed floor. **Verdict:
-OPEN, but decay is excluded through `n = 48`.** The sequence has a minimum
-`0.370` at `n = 22`, rises to `0.544` at `n = 43` and drifts to `0.513`
+OPEN, but decay is excluded through `n = 48`.** The sequence has its minimum
+`0.363` at `n = 27` (after a local minimum `0.370` at `n = 22`), rises to
+`0.544` at `n = 43` and drifts to `0.513`
 (`0.54` with the pruning correction) at `n = 48`; a positive limit of the
 order of `1/2` is the natural reading, and what is missing is a proof of
 `liminf H_n(1) > 0`. This is the first point in the thread where a Lean-checked
@@ -495,9 +524,10 @@ mu_n(y mod 3^n)` be the Haar density of the uniform lift of `mu_n` to
 mu_m||_1 <= C_A m^(-A)` uniformly in `q >= m`, is exactly the `L^1`-Cauchy
 property; so under (2.3) `f_n -> f_∞` in `L^1`, and the 3-adic Syracuse law
 is `f_∞ dHaar`, absolutely continuous, with `||f_∞ - f_m||_1 <= C_A
-m^(-A)`. Its density is unbounded (Theorem B), infinite on the forward
-rational closure of every negative cycle, not in `L^2` (the second moment
-grows linearly), with finite entropy `int f log f`. We did not verify that
+m^(-A)`. Its local averages are unbounded (Theorem B) and tend to infinity on the
+forward rational closure of every negative cycle (PROVED); it is not in
+`L^2` if the second moment keeps growing (OBSERVED through level 18;
+Jensen), and has finite entropy if the deficit converges (OBSERVED). We did not verify that
 Tao's Proposition 1.14 is literally (2.3); the paper says so, and the
 numerics of section 5 are consistent with it. If it is, absolute
 continuity of the 3-adic Syracuse law is a corollary of Tao 2022 and
@@ -521,13 +551,15 @@ lower density of integers reaching `1` in logarithmic time.
   conclusion.
 * **INTEGRAL: B** (the transfer operators act on `Z/3^t` and the Terras
   classes; a rational cycle in `Z_(2)` is invisible).
-* **UNIFORM: B** (presumably runs unchanged for `3x+k`, `3 ∤ k`, with
-  seeds `(4^j - k)/3`; not checked).
+* **UNIFORM: B, CONJECTURAL** (the mechanism should transfer to `3x+k`,
+  `3 ∤ k`, with map-specific seeds and constants; not checked).
 * **DIM: B.** Positive density leaves the whole non-descending set
   unresolved; no descent certificate is produced.
 
 **For the repo.** (i) The Krasikov–Lagarias `x^0.84` row (predecessors of
-`1`) would be replaced by positive density, and the "entry lane" coverage
+`1`), already superseded by Mazur's certified `pi_a(X) >= X^0.90` (his
+ref. [3], July 2026, cited in this paper's introduction), would be
+replaced by positive density, and the "entry lane" coverage
 of S15/S16 would get a certificate that is not class-based (the seed is a
 single integer, the histories are actual orbits); the divergence half
 (THM-4476/4499, DRIFT) is untouched, as the typing says. (ii) The
@@ -540,9 +572,10 @@ of thin divergent orbits or cycle basins; no contradiction, a shape. (iii)
 The 3-adic Syracuse density is a new object for the thread: its
 resonances are the negative cycles, its typical value is `1/2`, its dead
 zones (`7%` of classes below `0.1`) are the residues whose trees are thin,
-and the S18 observation that `80%` of visited values above the start range
-are `2 mod 3` is the class mean `4/3` of Corollary A1 seen from the orbit
-side. (iv) Theorem C is the leverage the owner asked for: a Lean-checked
+and the class mean `4/3` of Corollary A1 is `P(Y_n = 2 mod 3) = 2/3` seen
+from the orbit side (two thirds of the arriving valuations are odd); the
+S18 figure of `80%` above the start range is the conditional enrichment of
+`a = 1` arrivals, not the class mean. (iv) Theorem C is the leverage the owner asked for: a Lean-checked
 claim converted into a computable inequality on an exact sequence.
 
 ---
@@ -625,12 +658,12 @@ python 04-computation/experiments/kaprekar_cuboid_20260928.py          > 05-know
 | Mazur Theorem 1.1, Corollary 1.2; companion theorem and corollaries | CITED (platform Lean-checked; review pending / accepted formalization; no independent replay) |
 | P1–P8 elementary components | FINITE-EXACT, all consistent with the paper |
 | Theorem A (harmonic mass = `3^n mu_n(seed)`), Corollaries A1, A2 | PROVED; FINITE-EXACT to level 6 (rational) and 18 (float) |
-| Theorem B (cycle resonances; `-1` exact; singularity exponents) | PROVED (lower bounds); OBSERVED growth constant `0.9748` |
+| Theorem B (cycle resonances; `-1` exact; singularity exponents) | PROVED (lower bounds); OBSERVED growth constant `0.9748` at level 18 (increasing) |
 | spike profile `D` on the closure of `-1` | PROVED as lower bound; equality OBSERVED to four decimals (levels 17, 18) |
 | Theorem C (positive-density log-time convergence forces `limsup n^(1/6) H_n(1) > 0`) | PROVED |
-| `lim H_n(1) > 0`? | OPEN; exact to `n = 18` (`0.410`), depth decomposition to `n = 48`: minimum `0.370` at `n = 22`, rising to `0.544` at `n = 43`, `0.513` at `n = 48` (pruning loss `<= 3·10^(-2)`); no decay |
+| `lim H_n(1) > 0`? | OPEN; exact to `n = 18` (`0.410`), depth decomposition to `n = 48`: minimum `0.363` at `n = 27` (local minimum `0.370` at `n = 22`), rising to `0.544` at `n = 43`, `0.513` at `n = 48` (lower bounds; pruning loss about `3·10^(-2)` at `n = 48`, calibrated, not bounded); no decay |
 | absolute continuity of the 3-adic Syracuse law | CONDITIONAL on (2.3) as stated (Tao Prop. 1.14 per the paper); numerics consistent |
-| second moment linear, entropy deficit convergent, median `0.50` | OBSERVED (levels `<= 18`) |
+| second moment linear, entropy deficit apparently convergent, median `0.50` | OBSERVED (levels `<= 18`; a slow divergence of the deficit is not excluded) |
 | inverter = Bernstein map; open question = Periodicity Conjecture; THM-4476 partial result | CITED + PROVED (repo) |
 | Kaprekar cycles, `9 | image`, digit-multiset invariant; Euler bricks | FINITE-EXACT; perfect cuboid OPEN (CITED, from memory) |
 
@@ -639,3 +672,61 @@ subtree bound instead of the node weight, or the level-19 law); the exact profil
 Green's function of the transfer operator at the `-1` eigen-singularity);
 a proof or refutation of `liminf H_n(1) > 0`, which, by Theorem C, is the
 cheapest possible confrontation with a positive-density claim.
+
+---
+
+## 11. Audit record (2026-09-28/29)
+
+**Auditor:** an independent session (own script
+`04-computation/experiments/mazur_positive_density_20260928_audit.py`,
+output `mazur_positive_density_20260928_audit.out`, report
+`mazur_positive_density_20260928_audit.md`, 108 numbered claims): the
+3-adic law recomputed exactly to level 7 by the forward and by the parents
+recursion and in float64 to level 14 by a different algorithm, Terras
+classes by brute force, the converse and sign statements, the tree layers
+of eight seeds, the cycle words and resonance bounds, the profile `D` by
+dynamic programming on the closure, the harmonic-sum inequality (proved
+via `ln(1 + 1/n) = 2 artanh(1/(2n+1))`), `Pi(x)` to `2·10^5`, the density
+`54.22%`, every statistic to level 14, the Kaprekar cycles, the paper's
+constants in iterated logarithms, and the digest against the paper's text.
+
+**Verdict: SOUND WITH CORRECTIONS.** Theorems A, B (lower-bound form) and
+C hold step by step; every tested number reproduces; the digest of Theorem
+1.1, Corollary 1.2, Lemma 2.1, (2.3), Lemma 4.1 / Proposition 4.2, Lemma
+6.1 and Section 9 is faithful; the absolute-continuity derivation is valid
+conditional on (2.3); the typing is defensible. Thirty-two corrections,
+all applied above; the substantive ones:
+
+1. **The paper's constants were understated by one exponential level.**
+   The first evaluation took `D* = D_exp`; in fact `D* = D_sc >= P*^10`
+   with `P* = g^(R*-1)(T*)`, a cubic map composed about `2^8696` times,
+   so `log_2^(3) C* ≈ 8697`, `log_2^(2) N ≈ 8697`, `c^(-1)` is a four-fold
+   tower and `X_0` a five-fold one (sections 0, 2, 3, 5; atlas; ledger).
+2. **The minimum of the seed-1 sequence is `0.363` at `n = 27`,** not
+   `0.370` at `n = 22` (levels `26..29` lie below `H_22`; the rise starts at
+   `n = 28`). Title, sections 0 and 6, the status table and the wiring
+   corrected.
+3. **"Loss at most the pruned weight" was a calibration, not a bound:**
+   the pruned subtrees' masses are not bounded a priori (the level-18 law
+   reaches `2·10^3` on resonant residues); the deficits equal the pruned
+   weights empirically at `m + d = 18`. The extended values remain rigorous
+   lower bounds, so "no decay through `n = 48`" stands; the FINITE-EXACT
+   label on the extension did not.
+4. **Author and version:** Lech Mazur, version 2.1 of September 6, 2026.
+5. **Asymptotics relabelled:** "grows like", "singularities of order",
+   "`-> 0.9748`", "is exact", "converges", "`-> 0.84`", "`n^(-0.93)`",
+   "`t^(-2)`", "finite entropy" were one-sided bounds or finite-level
+   values and now say so (OBSERVED, or "at least").
+6. **Slips:** `s = 0.0085` for the seven-cycle; the second tier is `j <= n
+   - 2` (seven shadows at `n = 8`); "`3%` per level" was `5%`; the two
+   routes agree to `2.5–4·10^(-3)`; (3.9) is `(n+1)^3 (2013/2000)^n`, not
+   a polynomial; the source charge is Lemma 6.1; Mazur's own certified
+   `X^0.90` already supersedes the Krasikov–Lagarias row; the S18 `80%` is
+   a conditional statistic, not the class mean `4/3`.
+7. **Labels:** the level-18 law is float64 (VERIFIED against the rational
+   law to level 6), P6 was vacuous as run, UNIFORM B is conjectural.
+
+Not checked by the auditor: the platform figures (Lean statement, file
+counts, toolchain, companion theorem), the literal text of Tao's
+Proposition 1.14 (consistent with recollection), levels 15–18 of the law
+(the session's FFT, internally consistent). MISTAKES entry: MISTAKE-548.

@@ -1929,6 +1929,39 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
+## MISTAKE-548 (2026-09-29, opus S19 Mazur-digest audit) -- a tower's max() is evaluated level by level; a pruning "loss bound" needs a bound on the pruned subtrees, otherwise it is a calibration; the minimum of a sequence is read off the whole computed range
+
+- **Refuted claims** (independent audit of
+  `05-knowledge/results/mazur_positive_density_20260928.md`, SOUND WITH
+  CORRECTIONS, thirty-two applied): (1) "`log_2 log_2 C* ~ 6548`, `log_2 N
+  ~ 6563`, `c^(-1) > 2^(2^(2^6535))`" for the constants of Mazur's Section
+  8: the evaluation took `D* = D_exp`, but `D* = max(D_1, D_2, D_3)` is
+  dominated by `D_sc >= P*^10` with `P* = g^(R*-1)(T*)`, a cubic map
+  composed `2^8696` times; correct: `log_2^(3) C* ~ 8697`, `log_2^(2) N ~
+  8697`, `c^(-1)` a four-fold tower, `X_0` five-fold. (2) "the minimum of
+  `H_n(1) = 3^n mu_n(1)` is `0.370` at `n = 22`": the session's own
+  depth-decomposition output has `H_27 = 0.363`, and levels `26..29` all
+  lie below `H_22`; the exact FFT range ended at level 18 and the reading
+  stopped at the first upturn. (3) "lower bounds whose loss is at most the
+  pruned weight" and a FINITE-EXACT label on the extension: the loss is
+  `sum W(z) H_(18+d-d')(z)` over the pruned nodes and `H_18` reaches
+  `2·10^3` on resonant residues; the equality of deficit and pruned
+  weight at `m + d = 18` is a calibration, not a bound.
+- **What survives:** Theorems A (harmonic mass of a tree layer), B (cycle
+  resonances) and C (the seed-1 test) and the digest of the paper; the
+  extended values remain rigorous lower bounds, so "no decay of `H_n(1)`
+  through `n = 48`" stands; the qualitative statement about the constants
+  (no numerical range) is unchanged. Also corrected: author Lech Mazur,
+  version 2.1; several asymptotics ("grows like", "converges", "is exact")
+  relabelled OBSERVED or "at least".
+- **Reusable rule.** Evaluate a maximum of tower expressions term by term
+  in iterated logarithms before quoting any level. A "loss `<= X`" on a
+  truncated positive sum needs a proved bound on the truncated terms; if
+  the only evidence is agreement on a test case, call it calibrated.
+  Report the minimum of the full computed sequence, not of its exactly
+  computed prefix, and name the first level where the exact computation
+  ends.
+
 ## MISTAKE-547 (2026-09-06, higher-jet hostile probe) -- changing the observer changes its cancellation budget
 
 - **Refuted extrapolation, never a proved dependency:** complete uniform

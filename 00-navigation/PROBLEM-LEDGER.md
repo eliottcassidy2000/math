@@ -584,9 +584,9 @@ all heights (THM-1289, published), δ ineffective.
   vacuous CRT step; THM-4506 (O)/(H) glosses; MISTAKES). Note: `collatz_artin_corrections_20260927.md`.
 
   **Mazur's positive-density theorem digested; the 3-adic Syracuse law's resonances; the seed-1 test (opus, 2026-09-28,
-  S19):** the owner's Mazur PDF (*Explicit Positive-Density Collatz Convergence in Logarithmic Time*, v2, Lean-checked on
+  S19):** the owner's Mazur PDF (Lech Mazur, *Explicit Positive-Density Collatz Convergence in Logarithmic Time*, version 2.1, Lean-checked on
   ProofAtlas, review pending; companion "positive lower density of predecessors of every target" accepted there): CITED,
-  not replayed; P1-P8 elementary components verified at small size; constants c^(-1) > 2^(2^(2^6535)). PROVED (Theorem A):
+  not replayed; P1-P8 elementary components verified at small size; constants: c^(-1) a four-fold exponential tower (log_2^(4) c^(-1) ~ 8697). PROVED (Theorem A):
   3^n mu_n(y mod 3^n) = sum_(S^n x = y) 3^n 2^(-A_n(x)), the harmonic mass of the depth-n layer of the Syracuse tree of y
   (Tao's Syracuse random variable = Mazur's reference density = his weighted inverse histories); recursion H_(n+1) =
   H^(1) + 2 H^(2) by class mod 3; H_1(1) = 1, H_2 = 8/7, H_3 = 1376/1387; class means 2/3 and 4/3. PROVED (Theorem B):
@@ -594,12 +594,14 @@ all heights (THM-1289, published), δ ineffective.
   exponents 0.369 / 0.054 / 0.009), positive cycles are anti-resonant; the spike profile on the closure of -1 is the path
   sum 2^(l - A) (D(-1/2) = 1/2, D(-1/4) = 3/4, ...; OBSERVED to four decimals at levels 17-18). PROVED (Theorem C): positive
   lower density of {tau(x) <= C ln x} for any C forces limsup n^(1/6) 3^n mu_n(1) > 0; the law computed by FFT to level 18
-  (20 GB): H_18(1) = 0.410, every ratio below 1 from level 7 to the minimum 0.370 at n = 22, then rising to 0.544 at n = 43
-  and 0.513 at n = 48 by the depth decomposition H_(18+d) = sum_(T_d(1)) W H_18(y) (walk to depth 30; pruning loss <= 3 10^-2);
+  (20 GB): H_18(1) = 0.410, every ratio below 1 from level 7 to level 22 (0.370), minimum 0.363 at n = 27, then rising to 0.544 at n = 43
+  and 0.513 at n = 48 by the depth decomposition H_(18+d) = sum_(T_d(1)) W H_18(y) (walk to depth 30; lower bounds, pruning loss
+  about 3 10^-2, calibrated not bounded);
   n^(1/6) H_n ~ 1.0 for n >= 41 -- no decay through n = 48, limit OPEN; the cheapest confrontation with a Lean-checked positive-density claim, passed so far. 3-adic law: entropy deficit converges, second moment ~ 0.31 n, median 0.50; (2.3) as
   stated implies absolute continuity (CONDITIONAL). Typing (atlas s8): DRIFT O, STICKY O, SHEET/DEFECT/INTEGRAL/UNIFORM/DIM
   B. Seeds: inverter = Bernstein conjugacy, the open question = the Periodicity Conjecture, THM-4476 (2)(3)(8) the partial
-  result; Kaprekar = exact invariant (digit multiset); perfect cuboid open. Audit pending at entry time (note s11).
+  result; Kaprekar = exact invariant (digit multiset); perfect cuboid open. Audited SOUND WITH CORRECTIONS (constants one level larger, minimum at n = 27, loss calibrated
+  not bounded, author/version, asymptotics relabelled; MISTAKES; note s11).
   Note: `mazur_positive_density_20260928.md`.
 
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`

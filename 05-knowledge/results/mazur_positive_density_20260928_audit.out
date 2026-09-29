@@ -1,0 +1,169 @@
+audited file: 05-knowledge/results/mazur_positive_density_20260928.md: 41755 bytes, mtime 2026-09-28 22:15:16
+audited file: 04-computation/experiments/mazur_positive_density_20260928.py: 18986 bytes, mtime 2026-09-28 21:08:39
+audited file: 04-computation/experiments/mazur_harmonic_mass_20260928.py: 5107 bytes, mtime 2026-09-28 21:11:09
+audited file: 04-computation/experiments/mazur_harmonic_mass_deep_20260928.py: 6813 bytes, mtime 2026-09-28 21:35:40
+audited file: 04-computation/experiments/mazur_seed1_test_20260928.py: 4206 bytes, mtime 2026-09-28 21:43:20
+audited file: 04-computation/experiments/mazur_seed1_deep_20260928.py: 4937 bytes, mtime 2026-09-28 22:10:10
+audited file: 04-computation/experiments/kaprekar_cuboid_20260928.py: 2783 bytes, mtime 2026-09-28 21:07:42
+NMAX = 14 (float law), exact law to level 7
+exact law computed [   0.7s]
+float law computed to level 14 [   4.3s]
+
+==== A. Theorem A: harmonic mass of a tree layer = 3^n mu_n(seed) ====
+   [A1] Terras classes: for 111 words (n <= 4), a scan of all odd x in (-2^(A+3), 2^(A+3)) finds exactly the 8 elements of ONE residue class mod 2^(A+1), and it is the class (2^A - C_w) 3^-n mod 2^(A+1)  -> VERIFIED [   4.4s]
+   [A1b] words of length 5, 6, 8 (900 random words, 6300 tests): every element of the predicted class has the word, no odd element outside it does; failures 0  -> VERIFIED
+   [A2] 3000 random odd x (both signs), n <= 12: 3^n x + C_w = 2^A S^n(x) exactly, C_w odd, S^n(x) = Y_n(w) mod 3^n with Y_n(w) = C_w 2^-A = the recursion Y_{k+1} = 2^-a(3Y_k+1)  -> VERIFIED
+   [A3] converse: for all words n <= 4, a <= 4, and all odd y in (-4 3^n, 4 3^n), 3 !| y: y = Y_n(w) mod 3^n gives an odd integer x = (2^A y - C_w)/3^n with word w, S^n(x) = y and the sign of y (1360 cases); otherwise x is not an integer (58960 cases)  -> VERIFIED
+   [A4] tree layers sum_{x : S^n(x) = y} 3^n 2^-A(x) (valuations <= amax) versus 3^n mu_n(y mod 3^n):
+      y=   1 n=1: exact 1.000000 (= 1); truncated amax=8,12,16,20: 0.996094, 0.999756, 0.999985, 0.999999; gaps 3.9e-03, 2.4e-04, 1.5e-05, 9.5e-07
+      y=   1 n=3: exact 0.992069 (= 1376/1387); truncated amax=8,12,16,20: 0.972596, 0.991424, 0.992038, 0.992066; gaps 1.9e-02, 6.5e-04, 3.1e-05, 3.0e-06
+      y=   1 n=5: exact 0.964301 (= ...); truncated amax=8,12,16,20: 0.935623, 0.963403, 0.964252, 0.964297; gaps 2.9e-02, 9.0e-04, 4.9e-05, 4.2e-06
+      y=   5 n=1: exact 2.000000 (= 2); truncated amax=8,12,16,20: 1.992188, 1.999512, 1.999969, 1.999998; gaps 7.8e-03, 4.9e-04, 3.1e-05, 1.9e-06
+      y=   5 n=3: exact 0.889072 (= 8632/9709); truncated amax=8,12,16,20: 0.879850, 0.888517, 0.889032, 0.889068; gaps 9.2e-03, 5.6e-04, 4.0e-05, 4.4e-06
+      y=   5 n=5: exact 1.179754 (= ...); truncated amax=8,12,16,20: 1.159913, 1.178554, 1.179682, 1.179748; gaps 2.0e-02, 1.2e-03, 7.2e-05, 6.1e-06
+      y=   7 n=1: exact 1.000000 (= 1); truncated amax=8,12,16,20: 0.996094, 0.999756, 0.999985, 0.999999; gaps 3.9e-03, 2.4e-04, 1.5e-05, 9.5e-07
+      y=   7 n=3: exact 0.248017 (= 344/1387); truncated amax=8,12,16,20: 0.238566, 0.247856, 0.247983, 0.248016; gaps 9.5e-03, 1.6e-04, 3.4e-05, 1.6e-06
+      y=   7 n=5: exact 0.319690 (= ...); truncated amax=8,12,16,20: 0.297641, 0.319327, 0.319654, 0.319688; gaps 2.2e-02, 3.6e-04, 3.6e-05, 1.9e-06
+      y=  11 n=1: exact 2.000000 (= 2); truncated amax=8,12,16,20: 1.992188, 1.999512, 1.999969, 1.999998; gaps 7.8e-03, 4.9e-04, 3.1e-05, 1.9e-06
+      y=  11 n=3: exact 1.316716 (= 12784/9709); truncated amax=8,12,16,20: 1.295974, 1.315206, 1.316652, 1.316709; gaps 2.1e-02, 1.5e-03, 6.5e-05, 7.5e-06
+      y=  11 n=5: exact 1.016020 (= ...); truncated amax=8,12,16,20: 0.978798, 1.014132, 1.015936, 1.016012; gaps 3.7e-02, 1.9e-03, 8.3e-05, 7.2e-06
+      y=  -1 n=1: exact 2.000000 (= 2); truncated amax=8,12,16,20: 1.992188, 1.999512, 1.999969, 1.999998; gaps 7.8e-03, 4.9e-04, 3.1e-05, 1.9e-06
+      y=  -1 n=3: exact 4.796580 (= 46570/9709); truncated amax=8,12,16,20: 4.771875, 4.793975, 4.796398, 4.796575; gaps 2.5e-02, 2.6e-03, 1.8e-04, 5.9e-06
+      y=  -1 n=5: exact 10.977777 (= ...); truncated amax=8,12,16,20: 10.916811, 10.971359, 10.977259, 10.977762; gaps 6.1e-02, 6.4e-03, 5.2e-04, 1.5e-05
+      y=  -5 n=1: exact 1.000000 (= 1); truncated amax=8,12,16,20: 0.996094, 0.999756, 0.999985, 0.999999; gaps 3.9e-03, 2.4e-04, 1.5e-05, 9.5e-07
+      y=  -5 n=3: exact 1.776290 (= 17246/9709); truncated amax=8,12,16,20: 1.758059, 1.774838, 1.776246, 1.776286; gaps 1.8e-02, 1.5e-03, 4.4e-05, 4.3e-06
+      y=  -5 n=5: exact 2.358266 (= ...); truncated amax=8,12,16,20: 2.314275, 2.354832, 2.358164, 2.358256; gaps 4.4e-02, 3.4e-03, 1.0e-04, 1.1e-05
+      y=  -7 n=1: exact 2.000000 (= 2); truncated amax=8,12,16,20: 1.992188, 1.999512, 1.999969, 1.999998; gaps 7.8e-03, 4.9e-04, 3.1e-05, 1.9e-06
+      y=  -7 n=3: exact 3.556288 (= 34528/9709); truncated amax=8,12,16,20: 3.525968, 3.554068, 3.556180, 3.556279; gaps 3.0e-02, 2.2e-03, 1.1e-04, 8.6e-06
+      y=  -7 n=5: exact 4.530625 (= ...); truncated amax=8,12,16,20: 4.449345, 4.526149, 4.530428, 4.530609; gaps 8.1e-02, 4.5e-03, 2.0e-04, 1.6e-05
+      y= -17 n=1: exact 1.000000 (= 1); truncated amax=8,12,16,20: 0.996094, 0.999756, 0.999985, 0.999999; gaps 3.9e-03, 2.4e-04, 1.5e-05, 9.5e-07
+      y= -17 n=3: exact 1.778144 (= 17264/9709); truncated amax=8,12,16,20: 1.762984, 1.777034, 1.778090, 1.778140; gaps 1.5e-02, 1.1e-03, 5.4e-05, 4.3e-06
+      y= -17 n=5: exact 1.287572 (= ...); truncated amax=8,12,16,20: 1.266418, 1.285666, 1.287468, 1.287564; gaps 2.1e-02, 1.9e-03, 1.0e-04, 8.2e-06
+      all nodes carry the sign of the seed; the truncated sums increase to the exact value with geometric gaps  -> VERIFIED
+   [A5] exact H_n(1) = 3^n mu_n(1): H_1 = 1, H_2 = 8/7, H_3 = 1376/1387; H_4 = 0.927627, H_5 = 0.964301, H_6 = 0.955420, H_7 = 0.860359
+      depth-1 split of H_1 = 1 by class mod 3 (0,1,2): 0.047619, 0.761905, 0.190476 (= 1/21, 16/21, 4/21 up to 2^-800); H_2 = H^(1) + 2 H^(2) = 1.142857 = 8/7  -> VERIFIED
+      Corollary A2 on the truncated tree, n=1: H^(1) + 2 H^(2) = 1.142856 vs truncated H_2 = 1.142855 (exact 1.142857); first-arrival mass H_1^first = H_n - (3/4) H_0 = 0.250000
+      Corollary A2 on the truncated tree, n=2: H^(1) + 2 H^(2) = 0.992067 vs truncated H_3 = 0.992066 (exact 0.992069); first-arrival mass H_2^first = H_n - (3/4) H_1 = 0.392857
+      Corollary A2 on the truncated tree, n=3: H^(1) + 2 H^(2) = 0.927625 vs truncated H_4 = 0.927624 (exact 0.927627); first-arrival mass H_3^first = H_n - (3/4) H_2 = 0.134926
+      Corollary A2 on the truncated tree, n=4: H^(1) + 2 H^(2) = 0.964298 vs truncated H_5 = 0.964297 (exact 0.964301); first-arrival mass H_4^first = H_n - (3/4) H_3 = 0.183575
+      Corollary A2 on the truncated tree, n=5: H^(1) + 2 H^(2) = 0.955416 vs truncated H_6 = 0.955415 (exact 0.955420); first-arrival mass H_5^first = H_n - (3/4) H_4 = 0.268581
+      H_n = sum_{j<=n} (3/4)^(n-j) H_j^first  <=>  H_n^first = H_n - (3/4) H_{n-1}: first arrivals 1/4, 11/28 = 0.392857, 0.134926, ...  -> VERIFIED
+   [A6] forward and parents exact recursions agree to level 5; consistency (Y_n mod 3^m has the law of Y_m) exact to level 7; float law vs exact: max |diff| = 4.2e-17 (levels <= 7)  -> VERIFIED
+   [A7] Corollary A1: rho_n has mean 1 on units, 2/3 on the class 1 mod 3, 4/3 on the class 2 mod 3, 0 on nonunits (n = 1, 6, 10, 14)  -> VERIFIED
+   [A8] rho_2 on the classes 1, 2, 4, 5, 7, 8 mod 9 = ['16/21', '32/21', '22/21', '8/21', '4/21', '44/21'] = (16, 32, 22, 8, 4, 44)/21; the dominant child (a = 2 for y = 1 mod 3, a = 1 for y = 2 mod 3) is a leaf exactly for the classes 5 and 7 mod 9  -> VERIFIED
+
+==== B. Theorem B: cycle resonances ====
+   cycle of -1: length k=1, word [1], A=1, 3^k=3 vs 2^A=2 (negative: 3^k > 2^A); y0 = C_w/(2^A - 3^k) = 1/-1; s = 1 - (A/k) log_3 2 = 0.3691
+   cycle of -5: length k=2, word [1, 2], A=3, 3^k=9 vs 2^A=8 (negative: 3^k > 2^A); y0 = C_w/(2^A - 3^k) = 5/-1; s = 1 - (A/k) log_3 2 = 0.0536
+   cycle of -17: length k=7, word [1, 1, 1, 2, 1, 1, 4], A=11, 3^k=2187 vs 2^A=2048 (negative: 3^k > 2^A); y0 = C_w/(2^A - 3^k) = 2363/-139; s = 1 - (A/k) log_3 2 = 0.0085
+   cycle of 1: length k=1, word [2], A=2, 3^k=3 vs 2^A=4 (positive: 2^A > 3^k); y0 = C_w/(2^A - 3^k) = 1/1; s = 1 - (A/k) log_3 2 = -0.2619
+   Y_n(1^n) = (3/2)^n - 1 exactly and = -1 mod 3^n, n <= 14  -> VERIFIED
+   lower bound rho_n(y0) >= (2/3)(3^k/2^A)^(n/k) at n = km (float law):
+      n= 1: rho(-1)=   1.3333 vs (2/3)(3/2)^n=   1.0000, ratio 0.88889; rho(-17)=0.6667; argmax over units = -1
+      n= 2: rho(-1)=   2.0952 vs (2/3)(3/2)^n=   1.5000, ratio 0.93122; rho(-5)=1.0476, rho(-7)=1.5238 vs 0.7500; rho(-17)=0.7619; argmax over units = -1
+      n= 3: rho(-1)=   3.1977 vs (2/3)(3/2)^n=   2.2500, ratio 0.94747; rho(-17)=1.1854; argmax over units = -1
+      n= 4: rho(-1)=   4.8457 vs (2/3)(3/2)^n=   3.3750, ratio 0.95717; rho(-5)=1.8168, rho(-7)=2.0629 vs 0.8438; rho(-17)=0.7200; argmax over units = -1
+      n= 5: rho(-1)=   7.3185 vs (2/3)(3/2)^n=   5.0625, ratio 0.96376; rho(-17)=0.8584; argmax over units = -1
+      n= 6: rho(-1)=  11.0180 vs (2/3)(3/2)^n=   7.5938, ratio 0.96729; rho(-5)=2.2967, rho(-7)=2.6184 vs 0.9492; rho(-17)=1.2573; argmax over units = -1
+      n= 7: rho(-1)=  16.5657 vs (2/3)(3/2)^n=  11.3906, ratio 0.96955; rho(-17)=1.7497 vs 0.7119; argmax over units = -1
+      n= 8: rho(-1)=  24.8899 vs (2/3)(3/2)^n=  17.0859, ratio 0.97116; rho(-5)=2.7762, rho(-7)=3.2253 vs 1.0679; rho(-17)=1.5260; argmax over units = -1
+      n= 9: rho(-1)=  37.3841 vs (2/3)(3/2)^n=  25.6289, ratio 0.97245; rho(-17)=1.4130; argmax over units = -1
+      n=10: rho(-1)=  56.1180 vs (2/3)(3/2)^n=  38.4434, ratio 0.97317; rho(-5)=3.3207, rho(-7)=3.9115 vs 1.2014; rho(-17)=1.7904; argmax over units = -1
+      n=11: rho(-1)=  84.2263 vs (2/3)(3/2)^n=  57.6650, ratio 0.97374; rho(-17)=1.3434; argmax over units = -1
+      n=12: rho(-1)= 126.3957 vs (2/3)(3/2)^n=  86.4976, ratio 0.97418; rho(-5)=3.9712, rho(-7)=4.6997 vs 1.3515; rho(-17)=1.4629; argmax over units = -1
+      n=13: rho(-1)= 189.6427 vs (2/3)(3/2)^n= 129.7463, ratio 0.97443; rho(-17)=1.8730; argmax over units = -1
+      n=14: rho(-1)= 284.5036 vs (2/3)(3/2)^n= 194.6195, ratio 0.97456; rho(-5)=4.6770, rho(-7)=5.5576 vs 1.5205; rho(-17)=2.3833 vs 0.7602; argmax over units = -1
+   all lower bounds hold; the class of -1 is the maximal atom at every level  -> VERIFIED
+      rho_n(-1)/(3/2)^n increments n->n+1: 1.28e-03, 7.26e-04, 5.71e-04, 4.34e-04, 2.52e-04, 1.36e-04; ratio of successive increments 0.538; crude geometric extrapolation of the limit: 0.97472
+
+==== D. The spike profile on the forward closure of -1 ====
+   the parents recursion mu_{n+1}(z) = sum_{a = eps(z) mod 2} 2^-a mu_n((2^a z - 1)/3 mod 3^n) reproduces the forward law exactly at z = 1, -1, 5, -5, n <= 4 (and the whole float law is built from it)  -> VERIFIED
+   path-sum values: D(-1/2) = 1/2, D(-1/4) = 3/4, D(1/8) = 3/4, D(11/16) = 3/4, D(49/32) = 3/4, D(-1/8) = 3/8, D(1/16) = 3/8, D(11/32) = 3/8, D(-1/16) = 3/16
+   x_j = 3^(j+1)/2^(j+2) - 1 (j < 12): x_0 = -1/4, S_1(x_j) = x_{j+1}, x_j = -1 mod 3^(j+1), D(x_j) = 3/4 by path sums (j <= 7)  -> VERIFIED
+   level 8: rho_n(x)/rho_n(-1) at the nine named points: -1/2: 0.5000; -1/4: 0.7492; 1/8: 0.7502; 11/16: 0.7509; 49/32: 0.7518; -1/8: 0.3746; 1/16: 0.3751; 11/32: 0.3754; -1/16: 0.1873
+      over all 33 closure points with denominator <= 2^6: max |ratio - D| = 0.0218 at x = 11/64, mean |ratio - D| = 0.00564; distinct D-values: [0.046875, 0.09375, 0.1875, 0.375, 0.5, 0.75, 1.0]
+   level 10: rho_n(x)/rho_n(-1) at the nine named points: -1/2: 0.5000; -1/4: 0.7496; 1/8: 0.7497; 11/16: 0.7498; 49/32: 0.7501; -1/8: 0.3748; 1/16: 0.3749; 11/32: 0.3749; -1/16: 0.1874
+      over all 33 closure points with denominator <= 2^6: max |ratio - D| = 0.0111 at x = 11/64, mean |ratio - D| = 0.00228; distinct D-values: [0.046875, 0.09375, 0.1875, 0.375, 0.5, 0.75, 1.0]
+   level 12: rho_n(x)/rho_n(-1) at the nine named points: -1/2: 0.5000; -1/4: 0.7498; 1/8: 0.7497; 11/16: 0.7497; 49/32: 0.7497; -1/8: 0.3749; 1/16: 0.3749; 11/32: 0.3748; -1/16: 0.1874
+      over all 33 closure points with denominator <= 2^6: max |ratio - D| = 0.0059 at x = 11/64, mean |ratio - D| = 0.00101; distinct D-values: [0.046875, 0.09375, 0.1875, 0.375, 0.5, 0.75, 1.0]
+   level 14: rho_n(x)/rho_n(-1) at the nine named points: -1/2: 0.5000; -1/4: 0.7499; 1/8: 0.7499; 11/16: 0.7498; 49/32: 0.7497; -1/8: 0.3750; 1/16: 0.3750; 11/32: 0.3749; -1/16: 0.1875
+      over all 33 closure points with denominator <= 2^6: max |ratio - D| = 0.0031 at x = 11/64, mean |ratio - D| = 0.00047; distinct D-values: [0.046875, 0.09375, 0.1875, 0.375, 0.5, 0.75, 1.0]
+   level 8: classes with rho >= 0.7 rho(-1) other than -1: 7; shadows x_j mod 3^n (j <= 6) among them: 7; non-shadow classes: []; shadows below 0.7: []
+      ratios at the shadows j = 0..6: 0.749, 0.750, 0.751, 0.752, 0.752, 0.752, 0.746
+   level 10: classes with rho >= 0.7 rho(-1) other than -1: 9; shadows x_j mod 3^n (j <= 8) among them: 9; non-shadow classes: []; shadows below 0.7: []
+      ratios at the shadows j = 0..8: 0.750, 0.750, 0.750, 0.750, 0.751, 0.752, 0.752, 0.752, 0.746
+   level 12: classes with rho >= 0.7 rho(-1) other than -1: 11; shadows x_j mod 3^n (j <= 10) among them: 11; non-shadow classes: []; shadows below 0.7: []
+      ratios at the shadows j = 0..10: 0.750, 0.750, 0.750, 0.750, 0.750, 0.750, 0.751, 0.752, 0.752, 0.752, 0.746
+
+==== C. Theorem C: the seed-1 test ====
+   [C1] sum_{k<=n} 1/(2k-1) <= 1 + (1/2) ln n for n <= 10^6: min slack = 0.000e+00 at n = 1 (equality at n = 1), slack at n = 10^6: 0.01824 (limit 1 - ln 2 - gamma/2 = 0.01824); proof: increments 1/(2n+1) - (1/2) ln(1+1/n) <= 0 since ln(1+1/n) = 2 artanh(1/(2n+1)) >= 2/(2n+1)  -> VERIFIED
+   [C2] Pi(x) = 2^A/(3^n x) over odd 3 <= x <= 200000: max 1.25314 at x = 993, mean 1.16662, max Pi/(e^(1/3) n^(1/6)) = 0.7643  (note: 1.2531 at x = 993, mean 1.167, <= 0.764 over x <= 2 10^6)  -> VERIFIED
+   [C3] the identity 1/m = 3^n 2^-A prod_{j<n}(1 + 1/(3 x_j)) holds exactly (Fractions) for m = 3, 9, 27, 97, 871, 993  -> VERIFIED
+   [C4] for odd 3 <= m <= 20001 the orbit values before 1 are distinct and > 1 (first arrival), as the proof needs  -> VERIFIED
+      n=1: G_n^first = 0.26328, H_n^first = 0.24998 (exact H_n - (3/4)H_(n-1) = 0.25000), G/H^first = 1.0532 <= e^(1/3) n^(1/6) = 1.3956; H_n^first <= H_n = 1.00000
+      n=2: G_n^first = 0.45331, H_n^first = 0.39285 (exact H_n - (3/4)H_(n-1) = 0.39286), G/H^first = 1.1539 <= e^(1/3) n^(1/6) = 1.5665; H_n^first <= H_n = 1.14286
+      n=3: G_n^first = 0.14593, H_n^first = 0.13491 (exact H_n - (3/4)H_(n-1) = 0.13493), G/H^first = 1.0817 <= e^(1/3) n^(1/6) = 1.6760; H_n^first <= H_n = 0.99207
+      n=4: G_n^first = 0.20449, H_n^first = 0.18356 (exact H_n - (3/4)H_(n-1) = 0.18358), G/H^first = 1.1140 <= e^(1/3) n^(1/6) = 1.7584; H_n^first <= H_n = 0.92763
+      n=5: G_n^first = 0.31023, H_n^first = 0.26856 (exact H_n - (3/4)H_(n-1) = 0.26858), G/H^first = 1.1552 <= e^(1/3) n^(1/6) = 1.8250; H_n^first <= H_n = 0.96430
+      n=6: G_n^first = 0.27583, H_n^first = 0.23217 (exact H_n - (3/4)H_(n-1) = 0.23219), G/H^first = 1.1881 <= e^(1/3) n^(1/6) = 1.8813; H_n^first <= H_n = 0.95542
+   [C5] G_n <= e^(1/3) n^(1/6) H_n^first <= e^(1/3) n^(1/6) H_n at n <= 6 (truncated words, valuations <= 16)  -> VERIFIED
+   [C6] fraction of 2 <= n <= 10^6 with tau(n) <= (523/50) ln n: 0.5422 (note: 54.22%)  -> VERIFIED
+   [C7] Syracuse depth n(m) <= tau(m)/2 <= tau(m) for odd m <= 10^5: VERIFIED
+   [C8] H_n(1) and n^(1/6) H_n (float law, this script): n=1: 1.00000 / 1.0000, n=2: 1.14286 / 1.2828, n=3: 0.99207 / 1.1914, n=4: 0.92763 / 1.1687, n=5: 0.96430 / 1.2610, n=6: 0.95542 / 1.2879, n=7: 0.86036 / 1.1900, n=8: 0.77458 / 1.0954, n=9: 0.69675 / 1.0049, n=10: 0.63746 / 0.9357, n=11: 0.59142 / 0.8820, n=12: 0.53737 / 0.8131, n=13: 0.50015 / 0.7669, n=14: 0.47324 / 0.7347
+      ratios H_{n+1}/H_n, n = 1..: 1.1429, 0.8681, 0.9350, 1.0395, 0.9908, 0.9005, 0.9003, 0.8995, 0.9149, 0.9278, 0.9086, 0.9307, 0.9462; all ratios are < 1 from n = 5 on (H_6/H_5 onwards)
+      with the session's level-18 value: average decline per level from n = 8 to 18 = 0.062; 18^(1/6) H_18 = 0.6645
+   [C9] the session's mazur_seed1_deep_20260928.out values (depth 20, lower bounds): minimum 0.36323 at n = 27 (with the heuristic pruned-weight correction: 0.36338 at n = 27); H_22 = 0.36970 is only a local minimum; the last decrease is at n = 27, so the sequence rises for 11 consecutive levels (n = 28..38); 38^(1/6) H_38 = 0.8161
+   [C10] the depth-30 run (lower bounds): minimum 0.36336 at n = 27 (corrected 0.36338 at n = 27); levels below H_22 = 0.36971: [26, 27, 28, 29]; maximum 0.54371 at n = 43; H_48 = 0.51337 (corrected 0.5424); n^(1/6) H_n at n = 41..48: 1.004, 1.012, 1.018, 1.015, 1.007, 1.004, 0.989, 0.979; average decline per level from n = 8 (0.77458) to n = 22: 0.051 (the note says 'about 3%')
+
+==== F. Global statistics of the law (float, this script) ====
+   n= 1: rho_n(1)=0.66667 H_n=1.00000 E_units[rho^2]=1.1111 deficit n ln3 - H(mu_n)=0.4621 E_units[rho ln rho]=0.0566 (= deficit - ln(3/2) = 0.0566) median=1.0000 share(rho<0.1)=0.0000 L1inc=nan
+   n= 2: rho_n(1)=0.76190 H_n=1.14286 E_units[rho^2]=1.4286 deficit n ln3 - H(mu_n)=0.6304 E_units[rho ln rho]=0.2249 (= deficit - ln(3/2) = 0.2249) median=0.9048 share(rho<0.1)=0.0000 L1inc=0.4762
+   n= 3: rho_n(1)=0.66138 H_n=0.99207 E_units[rho^2]=1.7363 deficit n ln3 - H(mu_n)=0.7424 E_units[rho ln rho]=0.3369 (= deficit - ln(3/2) = 0.3369) median=0.6905 share(rho<0.1)=0.0000 L1inc=0.4057
+   n= 4: rho_n(1)=0.61842 H_n=0.92763 E_units[rho^2]=2.0458 deficit n ln3 - H(mu_n)=0.8240 E_units[rho ln rho]=0.4185 (= deficit - ln(3/2) = 0.4185) median=0.6505 share(rho<0.1)=0.0556 L1inc=0.3425
+   n= 5: rho_n(1)=0.64287 H_n=0.96430 E_units[rho^2]=2.3561 deficit n ln3 - H(mu_n)=0.8859 E_units[rho ln rho]=0.4804 (= deficit - ln(3/2) = 0.4804) median=0.6308 share(rho<0.1)=0.0494 L1inc=0.2972
+   n= 6: rho_n(1)=0.63695 H_n=0.95542 E_units[rho^2]=2.6669 deficit n ln3 - H(mu_n)=0.9351 E_units[rho ln rho]=0.5296 (= deficit - ln(3/2) = 0.5296) median=0.5872 share(rho<0.1)=0.0432 L1inc=0.2627
+   n= 7: rho_n(1)=0.57357 H_n=0.86036 E_units[rho^2]=2.9772 deficit n ln3 - H(mu_n)=0.9752 E_units[rho ln rho]=0.5697 (= deficit - ln(3/2) = 0.5697) median=0.5651 share(rho<0.1)=0.0494 L1inc=0.2349
+   n= 8: rho_n(1)=0.51638 H_n=0.77458 E_units[rho^2]=3.2878 deficit n ln3 - H(mu_n)=1.0087 E_units[rho ln rho]=0.6032 (= deficit - ln(3/2) = 0.6032) median=0.5499 share(rho<0.1)=0.0503 L1inc=0.2127
+   n= 9: rho_n(1)=0.46450 H_n=0.69675 E_units[rho^2]=3.5989 deficit n ln3 - H(mu_n)=1.0371 E_units[rho ln rho]=0.6316 (= deficit - ln(3/2) = 0.6316) median=0.5433 share(rho<0.1)=0.0524 L1inc=0.1942
+   n=10: rho_n(1)=0.42497 H_n=0.63746 E_units[rho^2]=3.9105 deficit n ln3 - H(mu_n)=1.0615 E_units[rho ln rho]=0.6560 (= deficit - ln(3/2) = 0.6560) median=0.5329 share(rho<0.1)=0.0583 L1inc=0.1783
+   n=11: rho_n(1)=0.39428 H_n=0.59142 E_units[rho^2]=4.2226 deficit n ln3 - H(mu_n)=1.0825 E_units[rho ln rho]=0.6770 (= deficit - ln(3/2) = 0.6770) median=0.5259 share(rho<0.1)=0.0596 L1inc=0.1640
+   n=12: rho_n(1)=0.35824 H_n=0.53737 E_units[rho^2]=4.5353 deficit n ln3 - H(mu_n)=1.1008 E_units[rho ln rho]=0.6954 (= deficit - ln(3/2) = 0.6954) median=0.5199 share(rho<0.1)=0.0620 L1inc=0.1513
+   n=13: rho_n(1)=0.33343 H_n=0.50015 E_units[rho^2]=4.8483 deficit n ln3 - H(mu_n)=1.1168 E_units[rho ln rho]=0.7114 (= deficit - ln(3/2) = 0.7114) median=0.5148 share(rho<0.1)=0.0641 L1inc=0.1399
+   n=14: rho_n(1)=0.31549 H_n=0.47324 E_units[rho^2]=5.1618 deficit n ln3 - H(mu_n)=1.1309 E_units[rho ln rho]=0.7255 (= deficit - ln(3/2) = 0.7255) median=0.5105 share(rho<0.1)=0.0656 L1inc=0.1296
+   entropy-deficit increments n = 7..: 0.0401, 0.0335, 0.0284, 0.0244, 0.0210, 0.0183, 0.0160, 0.0141; successive ratios: 0.835, 0.847, 0.858, 0.864, 0.870, 0.875, 0.879
+   E[rho^2] increments per level n = 7..: 0.3103, 0.3106, 0.3111, 0.3116, 0.3121, 0.3126, 0.3131, 0.3135
+   L1inc local exponents: over 6..14: -0.834; 10..14: -0.947; 12..14: -1.006 (note claims n^(-0.93) from levels <= 18; session values 0.1783 at 10, 0.1296 at 14, 0.0969 at 18 give 10..18: 1.037, 14..18: 1.157)
+   tail P_units(rho > t) at level 14: t=1: 2.70e-01 (t^2 P = 0.270), t=2: 1.10e-01 (t^2 P = 0.439), t=4: 3.59e-02 (t^2 P = 0.574), t=8: 9.98e-03 (t^2 P = 0.639), t=16: 2.41e-03 (t^2 P = 0.616), t=32: 4.71e-04 (t^2 P = 0.482); local exponents: 1.30, 1.61, 1.85, 2.05, 2.35
+   ||mu_14 - lift(mu_m)||_1, m = 1..9: 0.8400, 0.7211, 0.6292, 0.5559, 0.4948, 0.4416, 0.3933, 0.3484, 0.3065  (session at N = 18: 0.8541 ... 0.3535)
+   parents form at z = 1: rho_14(1) = 3 sum_j 4^-j rho_13(R_j) = 0.315492 vs 0.315492; fixed-point extrapolation from level 14: rho_inf(1) ~ 0.2771, H_inf ~ 0.4157
+   rho_n(-5), n = 1..14: 0.667, 1.048, 1.184, 1.817, 1.572, 2.297, 1.993, 2.776, 2.458, 3.321, 2.965, 3.971, 3.556, 4.677
+   rho_n(-7), n = 1..14: 1.333, 1.524, 2.371, 2.063, 3.020, 2.618, 3.653, 3.225, 4.373, 3.912, 5.253, 4.700, 6.201, 5.558
+   rho_n(-17), n = 1..14: 0.667, 0.762, 1.185, 0.720, 0.858, 1.257, 1.750, 1.526, 1.413, 1.790, 1.343, 1.463, 1.873, 2.383
+
+==== G. Kaprekar cycles and Euler bricks ====
+   d=2: [9, 81, 63, 27, 45] (len 5, 90 starts)
+   d=3: [495] (len 1, 990 starts)
+   d=4: [6174] (len 1, 9990 starts)
+   d=5: [63954, 61974, 82962, 75933] (len 4, 48480 starts); [74943, 62964, 71973, 83952] (len 4, 48320 starts); [53955, 59994] (len 2, 3190 starts)
+   d=6: [851742, 750843, 840852, 860832, 862632, 642654, 420876] (len 7, 935520 starts); [631764] (len 1, 62520 starts); [549945] (len 1, 1950 starts)
+   every image is divisible by 9; d = 2: the 5-cycle {9, 81, 63, 27, 45}; d = 3: 495; d = 4: 6174; d = 5: two 4-cycles and {53955, 59994}; d = 6: a 7-cycle and 631764, 549945  -> VERIFIED
+   Euler bricks with edges < 300: [(44, 117, 240, False), (240, 252, 275, False)] (flag = integer space diagonal)  -> VERIFIED
+
+==== H. Section 8.1 of the paper: the size of the constants, in iterated logarithms ====
+   T* = 10 A* 2^(3E*): log2 T* = 6525.97;  R* = 2^E*(T* + 24586) + 1: log2 R* = 8695.97
+   D_exp = 2^(8192 A* 2^(3E*)): log2 log2 D_exp = 6535.6  (the note's 2^(2^6536): correct for D_exp itself)
+   D_1 = (128 A* 2^(3E*))^2 + 2: log2 D_1 = 13059;  D_pt = 2(D_1 + L*^2 + 1) + 4 ~ D_1
+   P* = g^(R*-1)(T*) with g(t) ~ 10 8^32768 (t+1)^3: R* - 1 ~ 2^8696.0 compositions of a cubic map, so log2 log2 P* ~ (R*-1) log2 3 + 15.8, i.e. log2 log2 log2 P* ~ 8696.63: P* is a tower 2^2^2^8697
+   D_sc = 2 + P + P*^10 + 8^32768 (1+P*)^33 + (100 S*)^2 ~ 2^98304 P*^33 >> D_exp; D_bad ~ 2^38 P*; so D* = max(D_1, D_2, D_3) = D_sc, log2 log2 log2 D* ~ 8696.63 (NOT log2 log2 D* ~ 6536)
+   C* = (32 A* D*)^A*: log2 C* = A* (5 + log2 A* + log2 D*), so log2 log2 C* ~ 2^8696.63 + 12.6: log2 log2 log2 C* ~ 8696.63 (the note's 'log2 log2 C* ~ 6548' assumed D* = D_exp)
+   C = 2 C* 20^6409 + 2 + 2481 ~ C*;  F = 2^467 b^(16b) (C+1) (or 2467 b 16^b (C+1); the extraction is ambiguous, immaterial): log2 F ~ log2 C
+   N = 20000 (ceil(log2 F) + 64): log2 N ~ 14.3 + log2 log2 C ~ 2^8696.63: log2 log2 N ~ 8696.63 (the note's 'log2 N ~ 6563' is one exponential short)
+   beta(N) ~ 280 (1.01)^N: log2 beta(N) ~ 0.01435 N; q ~ 160 beta(N); M = 4^(2b+1+3q): log2 M ~ 6 q; m ~ M^(1/6);
+   c = 3/(256 M^2 m): log2 c^-1 ~ (13/6) log2 M ~ 2080 beta(N), log2 log2 c^-1 ~ 11 + 0.01435 N, log2^(3) c^-1 ~ log2 N - 6.1 ~ 2^8696.63, log2^(4) c^-1 ~ 8696.63: c^-1 is a tower of FOUR twos, 2^2^2^2^8697 (the note's 'beyond 2^(2^(2^6535))' is true but understates by a level)
+   J = max(N + N_t, 200(ceil(log2 m) - 78), 2 10^10) ~ 200 log2 m ~ 32000 beta(N) (exponential in N); B = E(J) + ... ~ 42 beta(J), log2 beta(J) ~ 0.01435 J: X_0 = 32(2^B M + 1) has log2^(5) X_0 ~ 8696.63, one level above c^-1 (the note: 'X_0 likewise')
+   Lemma 7.3's inequality (7.9): kappa(L+h) + 1 = 7.250120 <= (523/50) L = 7.250320  (margin 1.99e-04)  -> VERIFIED; with 262/25: 7.264182
+   3/ln(4/3) = 10.4282; [kappa_0 (L + ln 3) + 1]/L with kappa_0 = 1/ln(4/3): 10.4282 (= 3/ln(4/3): the central-word constant)  -> VERIFIED
+   Lemma 4.1: R_0..R_(3^q-1) permute Z/3^q (q <= 4); v_3(R_j - R_k) = v_3(4^(j-k) - 1) - 1 = v_3(j - k) (LTE), so it holds for all q  -> VERIFIED
+   session P6 (seed R_40, depth 3, valuations <= 5): integral histories by (D, A): {(3, 4): 1, (3, 6): 1, (3, 8): 1, (3, 9): 1, (3, 11): 1} -- every class has ONE history, so the spacing and equal-endpoint assertions of P6 never compare two endpoints (vacuous as run; both statements are trivial anyway)
+
+DONE [  26.6s]

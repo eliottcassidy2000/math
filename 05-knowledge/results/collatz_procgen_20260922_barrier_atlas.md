@@ -185,14 +185,15 @@ Searches for "nondeterministic Collatz", "Collatz with choice", "Collatz relatio
 ## 8. Mazur 2026 (added 2026-09-28, opus S19): positive-density log-time convergence, typed
 
 **Entered** by [`mazur_positive_density_20260928.md`](mazur_positive_density_20260928.md)
-(Theorems A–C; sections 1–2 and 7). Source: M. Mazur, *Explicit
-Positive-Density Collatz Convergence in Logarithmic Time*, v2 (September
-2026), Lean-checked on the ProofAtlas platform, review pending; companion
+(Theorems A–C; sections 1–2 and 7). Source: L. Mazur (Lech Mazur), *Explicit
+Positive-Density Collatz Convergence in Logarithmic Time*, version 2.1
+(September 6, 2026), Lean-checked on the ProofAtlas platform, review pending; companion
 *Positive lower density of Collatz predecessors* (accepted formalization
 there). CITED, not replayed by us.
 
 * **Claim:** explicit `c > 0` and `X_0` with `#{n < X : tau(n) <= (523/50)
-  ln n} >= c X` for `X >= X_0` (`c^(-1) > 2^(2^(2^6535))`); companion:
+  ln n} >= c X` for `X >= X_0` (`c^(-1)` a four-fold exponential tower,
+  `log_2^(4) c^(-1) ≈ 8697`); companion:
   every target `a`, `3 ∤ a`, has predecessors of positive lower density
   (so a single non-convergent integer forces a positive-density
   non-convergent set, and upper-density-one convergence forces universal
@@ -201,7 +202,7 @@ there). CITED, not replayed by us.
   3^d 2^(-A(w))` from a seed (exactly the harmonic mass `3^n mu_n(seed)` of
   the seed's Syracuse tree layer, Theorem A of the note), transfer operators
   on `Z/3^t` with `<T_w g> = 2^(-A) <g>`, Tao's fine-scale mixing (2.3) with
-  an explicit coefficient of size `2^(2^6536)`, deterministic residue
+  an explicit coefficient of size `2^(2^(2^8697))`, deterministic residue
   spread, the seed chosen by averaging over the residue classes of `R_j =
   (4^j - 1)/3`, source charge `x omega(w) <= M`, time constant `3/log(4/3)
   = 10.43`.
@@ -211,8 +212,9 @@ there). CITED, not replayed by us.
   scale: size-free memorylessness, which the aliquot control lacks; the
   pattern of §7 holds); SHEET **B** (the conclusion holds for `3x+1` on the
   negatives; the companion gives every target a positive-density basin, so
-  an extra cycle is invisible); DEFECT **B**; INTEGRAL **B**; UNIFORM **B**
-  (presumably runs unchanged for `3x+k`, `3 ∤ k`; not checked); DIM **B**
+  an extra cycle is invisible); DEFECT **B**; INTEGRAL **B**; UNIFORM **B,
+  CONJECTURAL** (the mechanism should transfer to `3x+k`, `3 ∤ k`, with
+  map-specific seeds and constants; not checked); DIM **B**
   (no descent certificate; the non-descending set is untouched).
   Krasikov–Lagarias `x^0.84` row: superseded by positive density *if the
   result stands*.
@@ -220,12 +222,14 @@ there). CITED, not replayed by us.
   lower density of `{x : tau(x) <= C ln x}` for any `C` forces
   `limsup_n n^(1/6) 3^n mu_n(1 mod 3^n) > 0`. The exact sequence `H_n(1)
   = 3^n mu_n(1)` is `1, 8/7, 1376/1387, 0.928, ..., 0.410` (`n = 18`),
-  falling about `3%` per level from level 8 to its minimum `0.370` at `n =
-  22`, then rising to `0.544` at `n = 43` and `0.513` at `n = 48` (depth
-  decomposition `H_{18+d} = sum_{T_d(1)} W H_18(y)` with the level-18 law;
-  pruning loss `<= 3·10^(-2)`); `n^(1/6) H_n ≈ 1.0` for `n >= 41`. No decay
+  falling about `5%` per level to `0.370` at `n = 22` and its minimum
+  `0.363` at `n = 27`, then rising to `0.544` at `n = 43` and `0.513` at `n
+  = 48` (depth decomposition `H_{18+d} = sum_{T_d(1)} W H_18(y)` with the
+  level-18 law; lower bounds, pruning loss about `3·10^(-2)`, calibrated
+  not bounded); `n^(1/6) H_n ≈ 1.0` for `n >= 41`. No decay
   through `n = 48`; the limit is OPEN; the cheapest confrontation with a positive-density claim available
-  anywhere, passed so far.
+  anywhere, passed so far. Audited SOUND WITH CORRECTIONS (note, section
+  11).
 * **A control on the reference density, not a failure mode:** the atoms of
   the 3-adic Syracuse law are the negative cycles (`rho_n(-1) = 0.975
   (3/2)^n`, exact spike profile on the forward closure of `-1`), so the

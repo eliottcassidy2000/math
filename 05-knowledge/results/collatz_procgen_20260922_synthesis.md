@@ -1503,9 +1503,9 @@ identities and the consecutive-sum identities as brainstorming. Note
 
 ## 2ad. Wave 31 (2026-09-28, opus session `collatz-poset-dag-20260927`, S19): Mazur's positive-density theorem digested; the 3-adic Syracuse law's resonances; the seed-1 test
 
-Owner's directive: digest M. Mazur's *Explicit Positive-Density Collatz
-Convergence in Logarithmic Time* (v2, September 2026; Lean-checked on
-ProofAtlas, review pending) "for any possible connections to our work we
+Owner's directive: digest Lech Mazur's *Explicit Positive-Density Collatz
+Convergence in Logarithmic Time* (version 2.1, September 6, 2026;
+Lean-checked on ProofAtlas, review pending) "for any possible connections to our work we
 can leverage or extend towards proofs", with Kaprekar's constants, the
 perfect cuboid and the pasted "inverter" text as further seeds. Note
 [`mazur_positive_density_20260928.md`](mazur_positive_density_20260928.md);
@@ -1536,10 +1536,11 @@ atlas §8.
   prod(1 + 1/(3 x_j))` with `prod <= e^(1/3) n^(1/6)` by distinctness of
   the orbit values). The sequence `3^n mu_n(1)` computed by FFT to level 18
   (`20 GB`): `0.410` at `n = 18`, every ratio below `1` from level 7 to
-  level 22 (minimum `0.370`), then rising to `0.544` at `n = 43` and
-  `0.513` at `n = 48` by the depth decomposition `H_{18+d} = sum_{T_d(1)} W
-  H_18(y)` (walk to depth 30; pruning loss `<= 3·10^(-2)`, validated
-  against the exact `H_18` at every split); `n^(1/6) H_n ≈ 1.0` for `n >=
+  level 22 (`0.370`), minimum `0.363` at `n = 27`, then rising to `0.544`
+  at `n = 43` and `0.513` at `n = 48` by the depth decomposition `H_{18+d}
+  = sum_{T_d(1)} W H_18(y)` (walk to depth 30; lower bounds, pruning loss
+  about `3·10^(-2)`, calibrated against the exact `H_18` at every split,
+  not bounded); `n^(1/6) H_n ≈ 1.0` for `n >=
   41`. No decay through `n = 48`; the limit is OPEN.
   First exact sequence that a Lean-checked positive-density claim must
   dominate, and it complies so far.
@@ -1557,8 +1558,12 @@ atlas §8.
   odd-denominator rational value). Kaprekar: exact invariant (digit
   multiset), the typology's finite extreme; `9 -> 81 -> 63 -> 27 -> 45`,
   `495`, `6174` reproduced. Perfect cuboid: open; not a Collatz technique.
-* Audit: pending at the time of writing (the note's section 11 will hold
-  the record).
+* Audited SOUND WITH CORRECTIONS (thirty-two applied: the paper's constants
+  are one exponential level larger than first evaluated, `c^(-1)` a
+  four-fold tower; the minimum of the seed-1 sequence is `0.363` at `n =
+  27`; the pruning loss is calibrated, not bounded; author Lech Mazur,
+  version 2.1; asymptotics relabelled OBSERVED; MISTAKES entry). Record in
+  the note's section 11.
 
 ## 3. The snippet, dispatched
 
