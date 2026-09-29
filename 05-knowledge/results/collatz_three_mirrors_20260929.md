@@ -68,7 +68,7 @@ level 19); `collatz_three_mirrors_zero_lines_20260929.py` and
 `..._zero_lines_wide_...py` → `.out` (the 3-adic zero-line census);
 `collatz_three_mirrors_saddle_chain_20260929.py` → `.out` (1729, 17, the
 chain, the merge with 27); `collatz_three_mirrors_basins_20260929.c` →
-`..._basins_...out` (the basins to `2^30`).
+`..._basins_...out` (the basins to `2^30`); `collatz_three_mirrors_basins_mask_20260929.c` → `..._basins_mask_...out` (the `1 + 12^m` family, `13, 17, 137, 9232`); `collatz_three_mirrors_jacobi_transfer_20260929.py` → `..._jacobi_transfer_...out` (the transfer recursion and its structure to level 7).
 
 ---
 
@@ -98,8 +98,7 @@ chain, the merge with 27); `collatz_three_mirrors_basins_20260929.c` →
    with no valuation truncation, in `O(L_n)` time and memory: it returns
    every Fourier coefficient of `mu_n` at every unit, organised by the
    discrete logarithm. It reproduces the S20 FFT maxima to seven digits at
-   every level `1..18` (`0.0111873` at `18`) and extends them: `M(19) =
-   0.00982` at `k = 24` (`= 19 log_2 3 - 6.1`) and its mirror — the maximum
+   every level `1..18` (`0.0111873` at `18`) and extends them: `M(19) = 0.0098157` at `k = 24` (`= 19 log_2 3 - 6.1`) and its mirror — the maximum
    over all units is still at `±2^s`, `s = floor(h log_2 3) - 6`.
 3. **The 3-adic zero lines behind the ridges are Poisson (FINITE-EXACT).**
    Chocian's survey design (a `p`-adic coincidence per pair, counted against
@@ -248,9 +247,7 @@ The first implementation ran two passes for every cycle and inherited a
 `2^(-2)` transient from level 1 (all maxima `12%` low) — the check against
 the S20 FFT caught it; the corrected values agree with the FFT at every
 level `1..18`: `0.5773503, 0.3779236, ..., 0.0144095 (16), 0.0125107 (17),
-0.0111873 (18)` (fullperiod output; seven digits), and at level 19 `M(19) =
-0.00982` at `k = 24` (`19 log_2 3 - 6.1`) with the mirror `-2^24` second and
-`k = 25, 23` next: the maximum over all `774,840,978` units is on `±2^s`
+0.0111873 (18)` (fullperiod output; seven digits), and at level 19 `M(19) = 0.0098157` at `k = 24` (`19 log_2 3 - 6.1`; ratio `M(19)/M(18) = 0.877`) with the mirror `-2^24` equal to seven digits and `k = 25` (`0.009769`), `k = 23` next: the maximum over all `774,840,978` units is on `±2^s`
 with `s = floor(19 log_2 3) - 6`, extending the S20 observation by one
 level. Fourier mass per level `0.709` at `n = 19` (S20: `0.462 -> 0.472` was
 the mass on the *primitive* characters; the all-units figure here includes
@@ -286,6 +283,10 @@ S = -mean_even S` to three digits at every level (`∓1.116·10^(-5)` at `n =
 16`), which is Theorem 1(ii): the difference `sum_even - sum_odd = rho_n(-1)
 - rho_(n-1)(-1)` grows like `0.325 (3/2)^n` while the sum `rho_n(1) -
 rho_(n-1)(1)` is `O(0.05)`.
+
+**The Jacobi transfer (exact recursion PROVED; its structure VERIFIED to level 7, CONJECTURED beyond; `_jacobi_transfer_` output).** Since `Y_n = 2^(-a)(3 Y_(n-1) + 1)` and `3y + 1 mod 3^n` depends on `y mod 3^(n-1)`,
+`E[psi(Y_n)] = G_psi · sum_(psi' mod 3^(n-1)) c(psi, psi') E[psi'(Y_(n-1))]`, `G_psi = sum_(a>=1) 2^(-a) psi(2)^(-a) = (psi(2)^(-1)/2)/(1 - psi(2)^(-1)/2)`, `c(psi, psi') = (1/L_(n-1)) sum_(y unit mod 3^(n-1)) psi(3y + 1) conj psi'(y)`
+— an exact linear recursion on the multiplicative spectrum (checked to `10^(-13)` at `n <= 7` against the spectra of the exact law). Its structure, found by computation: for `psi` primitive mod `3^n` and `psi'` primitive mod `3^(n-1)` (`n >= 3`) the Jacobi-type coefficients have **constant modulus** `|c(psi, psi')| = (#prim')^(-1/2)` (`0.5, 0.289, 0.167, 0.096, 0.056` at `n = 3..7`, equal to `1.000000` after scaling for every one of the pairs), and `c = 0` for imprimitive `psi'` (`< 2·10^(-13)`); the geometric factor satisfies `1/3 <= |G_psi| <= 1`, `rms |G_psi| = 3^(-1/2)` exactly over the primitive characters (`n >= 4`), with `|G_psi| -> 1` iff `psi(2) -> 1`, i.e. for the characters of small index `j` (`|G| = 0.950, 0.994, 0.9993, 0.9999` at `j = ±2`, `n = 4..7`). So each level is a *flat unitary-like mixing* of the previous spectrum (gain `3` in `ell^2`, the column sums of `|c|^2`) followed by the *diagonal contraction* `G_psi` (mean square `1/3`): the Parseval rms is preserved, and the shape of the spectrum is that of a Rayleigh variable multiplied by a factor ranging over `[1/3, 1]` — which is the observed non-Rayleigh form (fewer moments above the mean, a heavier tail) — with the largest moments on the characters where `|G_psi| ≈ 1`: `corr(|S_n|, |G_psi|) = 0.77, 0.74, 0.68, 0.65, 0.62` at `n = 3..7`, and the mean of `|S_n| 3^(n/2)` is `1.19–1.35` where `|G| > 0.9` against `0.48–0.50` where `|G| < 0.45`. This is Proposition 3 of S20 (no uniform one-step gap of the geometric Gauss sums) in the multiplicative picture: the contraction `|G_psi| = |sum_a 2^(-a) psi(2)^(-a)|` has no gap at the characters with `psi(2) ≈ 1`, the 3-adic-logarithm characters, which is why `psi_(±2), psi_(±8)` lead at low levels and why the sum of the spectrum (the seed-1 mass) is carried by the near-trivial characters. The constant-modulus law is the prime-power analogue of the classical `|J(chi_1, chi_2)| = p^(n/2)` for Jacobi sums of primitive characters; a proof for this restricted sum (over `y` a unit, with `psi'` evaluated at `y` and `psi` at `1 + 3y`) is left as an obligation.
 
 **The identities, checked (VERIFIED).** Against the exact law by a forward
 DP for `n <= 9`: `sum_(prim) S_n = (2/3)(H_n(1) - H_(n-1)(1))` and the parity
@@ -504,8 +505,9 @@ statuses. AUDIT_PLACEHOLDER
 |---|---|
 | Theorem 1 (character-spectrum duality; `sum_prim S_n = rho_n(1) - rho_(n-1)(1)`; parity sum `= rho_n(-1) - rho_(n-1)(-1)`) | PROVED; VERIFIED against the exact law (`n <= 9`, six digits) and against S19's independent values (`n = 10..16`, five digits) |
 | Proposition 2 (full-period one-pole recursion, exact) | PROVED; `M(n)` agrees with the S20 FFT at `n = 1..18` to seven digits |
-| `M(19) = 0.00982` at `±2^24`, `24 = floor(19 log_2 3) - 6`; the maximum over all units on `±2^s` | VERIFIED (float64, no truncation) |
+| `M(19) = 0.0098157` at `±2^24`, `24 = floor(19 log_2 3) - 6`; the maximum over all `774,840,978` units on `±2^s` | VERIFIED (float64, no truncation; `_fullperiod_max19_` output) |
 | the multiplicative spectrum: rms at the Parseval scale, non-Rayleigh, largest moments `≈ n/2` Parseval units, on `psi_(±2), psi_(±8)` at low levels | VERIFIED (`n <= 16`); the reading of `psi_(±2)` as the 3-adic-logarithm character DIRECTION |
+| the Jacobi transfer `E[psi(Y_n)] = G_psi sum_(psi') c(psi, psi') E[psi'(Y_(n-1))]`; `|c| = (#prim')^(-1/2)` on primitive pairs, `c = 0` off them; `rms |G_psi| = 3^(-1/2)`; `corr(|S_n|, |G_psi|) = 0.6–0.8` | recursion PROVED; the constant modulus VERIFIED to `n = 7` (exact to `10^(-6)`), CONJECTURED for all `n`; the shape reading OBSERVED |
 | the 3-adic zero-line census: geometric depth law, Poisson tail, the S22 seed one of five depth-15 lines | FINITE-EXACT (`16.7·10^6` pairs) |
 | `e^(-I) 3^(θ*/ln 2) = log_2 3 - 1` | PROVED (a one-line identity); the reading of H's margin DIRECTION |
 | the saddle chain `1 + 3^j 4^(6-j)`; `1729 = 1 + 12^3` its midpoint; `1 + 12^m` the midpoint for all `m`; `17 = 1 + 4^2` | EXACT (PROVED from the hedgehog note's Proposition 4; checked) |
@@ -529,11 +531,7 @@ place (the balanced point of a saddle chain) and a measured basin, and the
 Krasikov–Lagarias threshold for it is bounded below. (5) The `(4,3,17)`
 statement is still without a source.
 
-**Obligations.** (a) The Jacobi-sum transfer: `E[psi(Y_n)] = sum_a 2^(-a)
-psi(2)^(-a) E[psi(3 Y_(n-1) + 1)]`, with `y -> psi(3y+1)` expanded in the
-characters of the lower level — an exact linear recursion on the
-multiplicative spectrum whose coefficients are Jacobi-type sums; it would
-explain the heavy tail and the `psi_(±2)` dominance. (b) Level 20 of the
+**Obligations.** (a) The Jacobi transfer is now written and its constant-modulus structure verified to level 7 (section 2); to prove `|c(psi, psi')| = (#prim')^(-1/2)` for all `n` (the prime-power Jacobi-sum evaluation) and to derive the spectrum's tail law from `|G_psi|` and the mixing. (b) Level 20 of the
 full-period recursion in complex64. (c) The growth mechanism of the level-5
 remnant (S22), untouched here. (d) `dens B(1 + 12^m)` falls by about a decade per unit of `m` (measured to `m = 5`); a law, and the basins of the other chain points `1 + 3^j 4^(m-j)`, remain to be found.
 (e) A source for the `(4,3,17)` statement.
@@ -544,7 +542,9 @@ remnant (S22), untouched here. (d) `dens B(1 + 12^m)` falls by about a decade pe
 
 ```
 python 04-computation/experiments/collatz_three_mirrors_character_spectrum_20260929.py 16 > 05-knowledge/results/collatz_three_mirrors_character_spectrum_20260929.out   # 1 min, 5 GB
-python 04-computation/experiments/collatz_three_mirrors_fullperiod_max_20260929.py 19 2   > 05-knowledge/results/collatz_three_mirrors_fullperiod_max_20260929.out   # 10 min, 17 GB
+python 04-computation/experiments/collatz_three_mirrors_fullperiod_max_20260929.py 18 2   > 05-knowledge/results/collatz_three_mirrors_fullperiod_max_20260929.out   # 2 min, 6 GB
+python 04-computation/experiments/collatz_three_mirrors_fullperiod_max_20260929.py 19 19  > 05-knowledge/results/collatz_three_mirrors_fullperiod_max19_20260929.out   # 10 min, 17 GB
+python 04-computation/experiments/collatz_three_mirrors_jacobi_transfer_20260929.py 7      > 05-knowledge/results/collatz_three_mirrors_jacobi_transfer_20260929.out
 python 04-computation/experiments/collatz_three_mirrors_zero_lines_20260929.py 1000 2000  > 05-knowledge/results/collatz_three_mirrors_zero_lines_20260929.out
 python 04-computation/experiments/collatz_three_mirrors_zero_lines_wide_20260929.py 5000 10000 > 05-knowledge/results/collatz_three_mirrors_zero_lines_wide_20260929.out
 python 04-computation/experiments/collatz_three_mirrors_saddle_chain_20260929.py         > 05-knowledge/results/collatz_three_mirrors_saddle_chain_20260929.out

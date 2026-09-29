@@ -1,0 +1,55 @@
+n=2: L=6, L'=2; recursion check max |pred - S_n| = 5.83e-16; row sums of |c|^2: min 1.0000 max 1.0000 (Parseval 1)
+   concentration: number of psi' carrying 90% of a row's mass: min 1, median 2, max 2 of 2; largest |c| per row: mean 0.911
+   psi_2: |S_n| 3^(n/2) = 0.655; dominant psi'_j': j'=1 (|c|=0.866, |S'| 3^((n-1)/2)=0.577), j'=0 (|c|=0.500, |S'| 3^((n-1)/2)=1.732)
+   psi_4: |S_n| 3^(n/2) = 0.655; dominant psi'_j': j'=1 (|c|=0.866, |S'| 3^((n-1)/2)=0.577), j'=0 (|c|=0.500, |S'| 3^((n-1)/2)=1.732)
+   psi_1: |S_n| 3^(n/2) = 1.000; dominant psi'_j': j'=1 (|c|=0.866, |S'| 3^((n-1)/2)=0.577), j'=0 (|c|=0.500, |S'| 3^((n-1)/2)=1.732)
+   psi_4: |S_n| 3^(n/2) = 0.655; dominant psi'_j': j'=1 (|c|=0.866, |S'| 3^((n-1)/2)=0.577), j'=0 (|c|=0.500, |S'| 3^((n-1)/2)=1.732)
+   exact structure: over primitive (psi, psi') pairs, |c| sqrt(#prim') in [0.866025, 0.866025] (1 if flat); max |c| on imprimitive psi' columns 5.00e-01; |G_psi| in [0.3333, 1.0000], rms over primitive psi 0.4880 (1/sqrt 3 = 0.5774); |G| at j = +-2: 0.3780
+   correlation of |S_n(psi)| with |G_psi| over primitive psi: 1.000; mean |S_n| 3^(n/2) for |G| > 0.9: nan, for |G| < 0.45: 0.655
+   rule j' = j mod L' is the argmax for 3 of 6 rows
+n=3: L=18, L'=6; recursion check max |pred - S_n| = 2.66e-15; row sums of |c|^2: min 1.0000 max 1.0000 (Parseval 1)
+   concentration: number of psi' carrying 90% of a row's mass: min 1, median 4, max 4 of 6; largest |c| per row: mean 0.637
+   psi_2: |S_n| 3^(n/2) = 1.411; dominant psi'_j': j'=2 (|c|=0.500, |S'| 3^((n-1)/2)=0.655), j'=4 (|c|=0.500, |S'| 3^((n-1)/2)=0.655), j'=1 (|c|=0.500, |S'| 3^((n-1)/2)=1.000), j'=5 (|c|=0.500, |S'| 3^((n-1)/2)=1.000)
+   psi_16: |S_n| 3^(n/2) = 1.411; dominant psi'_j': j'=2 (|c|=0.500, |S'| 3^((n-1)/2)=0.655), j'=4 (|c|=0.500, |S'| 3^((n-1)/2)=0.655), j'=1 (|c|=0.500, |S'| 3^((n-1)/2)=1.000), j'=5 (|c|=0.500, |S'| 3^((n-1)/2)=1.000)
+   psi_1: |S_n| 3^(n/2) = 0.999; dominant psi'_j': j'=4 (|c|=0.500, |S'| 3^((n-1)/2)=0.655), j'=5 (|c|=0.500, |S'| 3^((n-1)/2)=1.000), j'=2 (|c|=0.500, |S'| 3^((n-1)/2)=0.655), j'=1 (|c|=0.500, |S'| 3^((n-1)/2)=1.000)
+   psi_10: |S_n| 3^(n/2) = 0.376; dominant psi'_j': j'=4 (|c|=0.500, |S'| 3^((n-1)/2)=0.655), j'=5 (|c|=0.500, |S'| 3^((n-1)/2)=1.000), j'=2 (|c|=0.500, |S'| 3^((n-1)/2)=0.655), j'=1 (|c|=0.500, |S'| 3^((n-1)/2)=1.000)
+   exact structure: over primitive (psi, psi') pairs, |c| sqrt(#prim') in [1.000000, 1.000000] (1 if flat); max |c| on imprimitive psi' columns 2.48e-15; |G_psi| in [0.3333, 1.0000], rms over primitive psi 0.5728 (1/sqrt 3 = 0.5774); |G| at j = +-2: 0.7187
+   correlation of |S_n(psi)| with |G_psi| over primitive psi: 0.773; mean |S_n| 3^(n/2) for |G| > 0.9: nan, for |G| < 0.45: 0.517
+   rule j' = j mod L' is the argmax for 9 of 18 rows
+n=4: L=54, L'=18; recursion check max |pred - S_n| = 7.81e-15; row sums of |c|^2: min 1.0000 max 1.0000 (Parseval 1)
+   concentration: number of psi' carrying 90% of a row's mass: min 1, median 11, max 11 of 18; largest |c| per row: mean 0.405
+   psi_2: |S_n| 3^(n/2) = 1.586; dominant psi'_j': j'=7 (|c|=0.289, |S'| 3^((n-1)/2)=0.692), j'=10 (|c|=0.289, |S'| 3^((n-1)/2)=0.376), j'=4 (|c|=0.289, |S'| 3^((n-1)/2)=0.556), j'=1 (|c|=0.289, |S'| 3^((n-1)/2)=0.999)
+   psi_52: |S_n| 3^(n/2) = 1.586; dominant psi'_j': j'=13 (|c|=0.289, |S'| 3^((n-1)/2)=0.484), j'=8 (|c|=0.289, |S'| 3^((n-1)/2)=0.376), j'=11 (|c|=0.289, |S'| 3^((n-1)/2)=0.692), j'=4 (|c|=0.289, |S'| 3^((n-1)/2)=0.556)
+   psi_1: |S_n| 3^(n/2) = 1.073; dominant psi'_j': j'=16 (|c|=0.289, |S'| 3^((n-1)/2)=1.411), j'=14 (|c|=0.289, |S'| 3^((n-1)/2)=0.556), j'=17 (|c|=0.289, |S'| 3^((n-1)/2)=0.999), j'=8 (|c|=0.289, |S'| 3^((n-1)/2)=0.376)
+   psi_28: |S_n| 3^(n/2) = 0.363; dominant psi'_j': j'=10 (|c|=0.289, |S'| 3^((n-1)/2)=0.376), j'=17 (|c|=0.289, |S'| 3^((n-1)/2)=0.999), j'=5 (|c|=0.289, |S'| 3^((n-1)/2)=0.484), j'=2 (|c|=0.289, |S'| 3^((n-1)/2)=1.411)
+   exact structure: over primitive (psi, psi') pairs, |c| sqrt(#prim') in [1.000000, 1.000000] (1 if flat); max |c| on imprimitive psi' columns 1.02e-14; |G_psi| in [0.3333, 1.0000], rms over primitive psi 0.5773 (1/sqrt 3 = 0.5774); |G| at j = +-2: 0.9501
+   correlation of |S_n(psi)| with |G_psi| over primitive psi: 0.740; mean |S_n| 3^(n/2) for |G| > 0.9: 1.329, for |G| < 0.45: 0.493
+   rule j' = j mod L' is the argmax for 12 of 54 rows
+n=5: L=162, L'=54; recursion check max |pred - S_n| = 1.63e-14; row sums of |c|^2: min 1.0000 max 1.0000 (Parseval 1)
+   concentration: number of psi' carrying 90% of a row's mass: min 1, median 33, max 33 of 54; largest |c| per row: mean 0.246
+   psi_2: |S_n| 3^(n/2) = 1.539; dominant psi'_j': j'=40 (|c|=0.167, |S'| 3^((n-1)/2)=0.833), j'=44 (|c|=0.167, |S'| 3^((n-1)/2)=0.750), j'=23 (|c|=0.167, |S'| 3^((n-1)/2)=0.580), j'=43 (|c|=0.167, |S'| 3^((n-1)/2)=0.352)
+   psi_160: |S_n| 3^(n/2) = 1.539; dominant psi'_j': j'=5 (|c|=0.167, |S'| 3^((n-1)/2)=0.957), j'=46 (|c|=0.167, |S'| 3^((n-1)/2)=0.195), j'=23 (|c|=0.167, |S'| 3^((n-1)/2)=0.580), j'=28 (|c|=0.167, |S'| 3^((n-1)/2)=0.363)
+   psi_1: |S_n| 3^(n/2) = 0.270; dominant psi'_j': j'=31 (|c|=0.167, |S'| 3^((n-1)/2)=0.580), j'=35 (|c|=0.167, |S'| 3^((n-1)/2)=0.116), j'=40 (|c|=0.167, |S'| 3^((n-1)/2)=0.833), j'=29 (|c|=0.167, |S'| 3^((n-1)/2)=0.560)
+   psi_82: |S_n| 3^(n/2) = 0.090; dominant psi'_j': j'=40 (|c|=0.167, |S'| 3^((n-1)/2)=0.833), j'=41 (|c|=0.167, |S'| 3^((n-1)/2)=0.873), j'=19 (|c|=0.167, |S'| 3^((n-1)/2)=0.116), j'=23 (|c|=0.167, |S'| 3^((n-1)/2)=0.580)
+   exact structure: over primitive (psi, psi') pairs, |c| sqrt(#prim') in [1.000000, 1.000000] (1 if flat); max |c| on imprimitive psi' columns 2.25e-14; |G_psi| in [0.3333, 1.0000], rms over primitive psi 0.5774 (1/sqrt 3 = 0.5774); |G| at j = +-2: 0.9940
+   correlation of |S_n(psi)| with |G_psi| over primitive psi: 0.676; mean |S_n| 3^(n/2) for |G| > 0.9: 1.351, for |G| < 0.45: 0.496
+   rule j' = j mod L' is the argmax for 9 of 162 rows
+n=6: L=486, L'=162; recursion check max |pred - S_n| = 2.80e-14; row sums of |c|^2: min 1.0000 max 1.0000 (Parseval 1)
+   concentration: number of psi' carrying 90% of a row's mass: min 1, median 98, max 98 of 162; largest |c| per row: mean 0.146
+   psi_2: |S_n| 3^(n/2) = 2.206; dominant psi'_j': j'=122 (|c|=0.096, |S'| 3^((n-1)/2)=0.307), j'=136 (|c|=0.096, |S'| 3^((n-1)/2)=0.974), j'=157 (|c|=0.096, |S'| 3^((n-1)/2)=1.532), j'=124 (|c|=0.096, |S'| 3^((n-1)/2)=0.603)
+   psi_484: |S_n| 3^(n/2) = 2.206; dominant psi'_j': j'=76 (|c|=0.096, |S'| 3^((n-1)/2)=0.532), j'=40 (|c|=0.096, |S'| 3^((n-1)/2)=0.307), j'=86 (|c|=0.096, |S'| 3^((n-1)/2)=0.532), j'=140 (|c|=0.096, |S'| 3^((n-1)/2)=0.187)
+   psi_1: |S_n| 3^(n/2) = 1.681; dominant psi'_j': j'=76 (|c|=0.096, |S'| 3^((n-1)/2)=0.532), j'=157 (|c|=0.096, |S'| 3^((n-1)/2)=1.532), j'=101 (|c|=0.096, |S'| 3^((n-1)/2)=0.731), j'=148 (|c|=0.096, |S'| 3^((n-1)/2)=1.436)
+   psi_244: |S_n| 3^(n/2) = 0.560; dominant psi'_j': j'=122 (|c|=0.096, |S'| 3^((n-1)/2)=0.307), j'=104 (|c|=0.096, |S'| 3^((n-1)/2)=0.724), j'=161 (|c|=0.096, |S'| 3^((n-1)/2)=0.270), j'=127 (|c|=0.096, |S'| 3^((n-1)/2)=0.939)
+   exact structure: over primitive (psi, psi') pairs, |c| sqrt(#prim') in [1.000000, 1.000000] (1 if flat); max |c| on imprimitive psi' columns 5.31e-14; |G_psi| in [0.3333, 1.0000], rms over primitive psi 0.5774 (1/sqrt 3 = 0.5774); |G| at j = +-2: 0.9993
+   correlation of |S_n(psi)| with |G_psi| over primitive psi: 0.653; mean |S_n| 3^(n/2) for |G| > 0.9: 1.231, for |G| < 0.45: 0.491
+   rule j' = j mod L' is the argmax for 19 of 486 rows
+n=7: L=1458, L'=486; recursion check max |pred - S_n| = 1.11e-13; row sums of |c|^2: min 1.0000 max 1.0000 (Parseval 1)
+   concentration: number of psi' carrying 90% of a row's mass: min 1, median 292, max 292 of 486; largest |c| per row: mean 0.086
+   psi_2: |S_n| 3^(n/2) = 1.775; dominant psi'_j': j'=473 (|c|=0.056, |S'| 3^((n-1)/2)=1.145), j'=454 (|c|=0.056, |S'| 3^((n-1)/2)=0.248), j'=464 (|c|=0.056, |S'| 3^((n-1)/2)=1.998), j'=451 (|c|=0.056, |S'| 3^((n-1)/2)=1.388)
+   psi_1456: |S_n| 3^(n/2) = 1.775; dominant psi'_j': j'=476 (|c|=0.056, |S'| 3^((n-1)/2)=1.736), j'=370 (|c|=0.056, |S'| 3^((n-1)/2)=0.361), j'=233 (|c|=0.056, |S'| 3^((n-1)/2)=0.589), j'=322 (|c|=0.056, |S'| 3^((n-1)/2)=0.715)
+   psi_1: |S_n| 3^(n/2) = 1.132; dominant psi'_j': j'=416 (|c|=0.056, |S'| 3^((n-1)/2)=0.792), j'=400 (|c|=0.056, |S'| 3^((n-1)/2)=0.861), j'=424 (|c|=0.056, |S'| 3^((n-1)/2)=0.292), j'=385 (|c|=0.056, |S'| 3^((n-1)/2)=0.207)
+   psi_730: |S_n| 3^(n/2) = 0.377; dominant psi'_j': j'=400 (|c|=0.056, |S'| 3^((n-1)/2)=0.861), j'=304 (|c|=0.056, |S'| 3^((n-1)/2)=0.579), j'=260 (|c|=0.056, |S'| 3^((n-1)/2)=0.374), j'=218 (|c|=0.056, |S'| 3^((n-1)/2)=0.323)
+   exact structure: over primitive (psi, psi') pairs, |c| sqrt(#prim') in [1.000000, 1.000000] (1 if flat); max |c| on imprimitive psi' columns 1.79e-13; |G_psi| in [0.3333, 1.0000], rms over primitive psi 0.5774 (1/sqrt 3 = 0.5774); |G| at j = +-2: 0.9999
+   correlation of |S_n(psi)| with |G_psi| over primitive psi: 0.616; mean |S_n| 3^(n/2) for |G| > 0.9: 1.194, for |G| < 0.45: 0.481
+   rule j' = j mod L' is the argmax for 16 of 1458 rows
+DONE
