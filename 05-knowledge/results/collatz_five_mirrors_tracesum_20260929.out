@@ -1,0 +1,6 @@
+   S_w(u,v) = S_rev(w)(u,v) on 300 random words and rational (u,v): True
+   sum of squares of the carries invariant on (1,2,3), (1,1,2,3), (2,1,1,3,1)? False
+   3x+13, cycle of 227: word [1, 1, 1, 2, 3]: points [227, 347, 527, 797, 601] sum 2499; reversed word [3, 2, 1, 1, 1]: points [905, 341, 259, 395, 599] sum 2499
+   3x+37, cycle of 23: word [1, 2, 3]: points [23, 53, 49] sum 125; reversed word [3, 2, 1]: points [65, 29, 31] sum 125
+   3x+1, seven-cycle of -17: word [1, 1, 1, 2, 1, 1, 4]: points [-17, -25, -37, -55, -41, -61, -91] sum -327; reversed word [4, 1, 1, 2, 1, 1, 1]: points ['-13801/139', '-2579/139', '-3799/139', '-5629/139', '-4187/139', '-6211/139', '-9247/139'] sum -327
+DONE

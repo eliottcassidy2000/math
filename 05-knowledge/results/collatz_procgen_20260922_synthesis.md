@@ -1604,7 +1604,9 @@ exploration and extend past work toward proofs. Note
   seven-cycle of `-17` to the non-integer `-13801/139`. On `3x+k`, `k <=
   41`, reversal is an involution on the integer cycles with fixed points
   (rotation-symmetric words) and genuine pairs (`3x+13`: `227 ↔ 259`, `251
-  ↔ 287`; `3x+37`: `23 ↔ 29`; FINITE-EXACT, orbits verified).
+  ↔ 287`; `3x+37`: `23 ↔ 29`; FINITE-EXACT, orbits verified); the trace of
+  a rational cycle is reversal-invariant (PROVED), so the pairs have equal
+  element sums (`2499`, `125`).
 * Viaclovsky (contracting affine lift, monodromy relation, primitivity)
   and Lyu (local cliques do not bound compressibility; only forests do) are
   shape-only mirrors of the affine IFS / cycle equation and of the atlas's

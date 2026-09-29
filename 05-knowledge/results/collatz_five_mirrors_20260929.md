@@ -43,7 +43,9 @@ Scripts and outputs:
 cost and by last valuation at levels 10 and 14);
 `collatz_five_mirrors_fourier_deep_20260929.py 18` → `..._fourier_deep18_...out`
 (the profile to level 18); `collatz_five_mirrors_reversal_20260929.py` →
-`..._reversal_...out` (reversal on the integer cycles of `3x+k`).
+`..._reversal_...out` (reversal on the integer cycles of `3x+k`);
+`collatz_five_mirrors_tracesum_20260929.py` → `..._tracesum_...out` (the
+reversal-invariant trace, Proposition 6).
 
 ---
 
@@ -122,7 +124,10 @@ cost and by last valuation at levels 10 and 14);
    ↔ 287`, the 3-cycles of `3x+37` with minima `23 ↔ 29` (and their triples
    for `3x+39`); the seven-cycle family and the long cycles of `3x+5` (`d
    = 17`) and `3x+13` (`d = 15`) have rational partners (FINITE-EXACT,
-   orbits verified; section 5).
+   orbits verified; section 5). The trace of a rational cycle is
+   reversal-invariant (Proposition 6, PROVED): the pairs have equal element
+   sums (`2499`, `125`), and the seven-cycle and its rational partner both
+   sum to `-327`.
 7. **The other two mirrors are shape only** (section 1): Viaclovsky's
    contracting affine lift and monodromy relation are the affine IFS
    `S_a(y) = (3y+1)/2^a` and the cycle equation, with the difference that a
@@ -459,6 +464,27 @@ sometimes descends to the integers: an involution on the integer cycles
 with fixed points and pairs, and the seven-cycle of `-17` is the smallest
 `3x+1` orbit it moves off the integers.
 
+**Proposition 6 (the trace of a cycle is reversal-invariant; PROVED, added
+after the audit's snapshot).** For a word `w` let `S_w(u,v) = sum_j
+C_(rot_j w)(u,v)` over the `d` cyclic rotations. Then `S_(rev w) = S_w` as
+polynomials; consequently the elements `y_j = k C_(rot_j w)(3,2)/(2^A -
+3^d)` of the rational cycle of `w` for `x -> (3x+k)/2^v` and those of the
+reversed cycle have the same sum. *Proof.* `S_w(u,v) = sum_(i=1)^d
+u^(d-i) B_(i-1)(w; v)`, where `B_m(w; v) = sum_j v^(b_(j,m))` and `b_(j,m)`
+is the sum of the `m` cyclically consecutive entries starting at position
+`j`; the multiset `{b_(j,m)}_j` is the same for `w` and `rev w` (a
+cyclically consecutive block of `rev w` is a reversed block of `w`), so
+every `B_m` is reversal-invariant. ∎ Checked on 300 random words with
+rational `(u, v)` (`collatz_five_mirrors_tracesum_20260929.py`): the pairs
+above have equal sums, `227 + 347 + 527 + 797 + 601 = 259 + 395 + 599 +
+905 + 341 = 2499` and `23 + 53 + 49 = 29 + 31 + 65 = 125`, and the
+seven-cycle's rational partner (`-13801/139, -2579/139, -3799/139,
+-5629/139, -4187/139, -6211/139, -9247/139`) sums to `-327 = -17 - 25 -
+37 - 55 - 41 - 61 - 91`. The sum of squares is not invariant. So the
+Narode mirror gives one exact invariant of the reversal involution — the
+trace — and the reversal pairs are pairs of integer cycles of equal trace,
+which is a strong constraint on any candidate family.
+
 ---
 
 ## 6. Typing and what changes for the repo
@@ -494,6 +520,7 @@ python 04-computation/experiments/collatz_five_mirrors_costsplit_20260929.py 10 
 python 04-computation/experiments/collatz_five_mirrors_costsplit_20260929.py 14 > 05-knowledge/results/collatz_five_mirrors_costsplit14_20260929.out   # 5 GB
 python 04-computation/experiments/collatz_five_mirrors_fourier_deep_20260929.py 18 > 05-knowledge/results/collatz_five_mirrors_fourier_deep18_20260929.out   # 20 GB, 2 min
 python 04-computation/experiments/collatz_five_mirrors_reversal_20260929.py     > 05-knowledge/results/collatz_five_mirrors_reversal_20260929.out
+python 04-computation/experiments/collatz_five_mirrors_tracesum_20260929.py     > 05-knowledge/results/collatz_five_mirrors_tracesum_20260929.out
 ```
 
 | item | status |
@@ -507,6 +534,7 @@ python 04-computation/experiments/collatz_five_mirrors_reversal_20260929.py     
 | Proposition 4 (same-length spread lemma) and the collision table | PROVED; FINITE-EXACT |
 | Proposition 5 (carry reciprocity); reversed cycles | PROVED; FINITE-EXACT |
 | reversal on the integer cycles of `3x+k`, `k <= 41`: an involution with fixed points (rotation-symmetric words) and pairs (`3x+13`: `227 ↔ 259`, `251 ↔ 287`; `3x+37`: `23 ↔ 29`) | FINITE-EXACT (orbits verified; cycles reached from `|x| <= 5·10^4`) |
+| Proposition 6 (the cycle-sum polynomial, hence the trace of a rational cycle, is reversal-invariant; the pairs have equal traces `2499`, `125`; the seven-cycle and its partner both sum to `-327`) | PROVED; FINITE-EXACT |
 | the five mirrors (section 1) | DIRECTION / remark |
 
 **Next probes.** A large-deviation lower bound `M(h) >= c e^(-I(α) h)`

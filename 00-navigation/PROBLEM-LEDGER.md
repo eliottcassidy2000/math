@@ -616,7 +616,8 @@ all heights (THM-1289, published), δ ineffective.
   => distinct classes; actual collisions need 29-63); carry reciprocity under word reversal (inclusive-prefix carry), reversal
   an involution on rational cycles that sends the seven-cycle of -17 to -13801/139; on 3x+k (k <= 41) it permutes the integer
   cycles with fixed points (rotation-symmetric words) and genuine pairs (3x+13: 227 <-> 259, 251 <-> 287; 3x+37: 23 <-> 29;
-  orbits verified). No barrier typed. Audit pending at
+  orbits verified); the trace of a rational cycle is reversal-invariant (PROVED: the multiset of cyclic block sums is), so the
+  pairs have equal element sums (2499, 125). No barrier typed. Audit pending at
   entry time (note s8). Note: `collatz_five_mirrors_20260929.md`.
 
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`
