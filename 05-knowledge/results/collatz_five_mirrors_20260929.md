@@ -725,9 +725,7 @@ The negative family was certified against the valuation truncation by an `a
 <= 60` rerun (`Ñ_n` to `1.3·10^(-11)` relative, single coefficients to
 `1.2·10^(-10)`, `n <= 80`), and the tail `m > 60` of `Ñ_n` is at most
 `2^(-60)`, which changes the bound at `h <= 300` by less than `10^(-18)`.
-For `h <= 81` every `Ñ_(J-1)` in the bound is a computed number, so the
-inequality `M_res(h) <= 0.18 e^(-hI)` there rests on Lemma R' and
-float64 arithmetic only. The bound against the measured maxima
+For `h <= 81` every `Ñ_(J-1)` in the bound is a computed number (with the tail `m > 60` bounded by `2^(-60)`), so the inequality `|mu_hat_h(2^s)| <= B_h(s) := Σ_J mass_h(J) Ñ_(J-1)` there rests on Lemma R' and float64 arithmetic only; at the argmax `s*` the bound is `B_h(s*) = 0.14–0.21 e^(-hI)` for `40 <= h <= 81` (`0.25` at `h = 20`, above `e^(-hI)` for `h <= 19`), while over all `0 <= s <= h log_2 3` it reaches `max_s B_h(s) = 0.7–0.95 e^(-hI)` near `δ = 0` (the factor `e^(θ*δ)`), so the unconditional statement is `|mu_hat_h(2^s)| <= 0.95 e^(-hI)` for `20 <= h <= 81` and all `s <= h log_2 3`, and `<= 0.22 e^(-hI)` at the resonant exponents (fourth audit). The bound against the measured maxima
 (renewal-bound output, d): `M(h)/bound = 0.070, 0.043, 0.039, 0.028, 0.021,
 0.019, 0.016, 0.010, 0.010` and `bound/e^(-hI) = 0.180, 0.178, 0.136, 0.141,
 0.148, 0.120, 0.105, 0.124, 0.110` at `h = 40, 60, 80, 100, 120, 150, 200,

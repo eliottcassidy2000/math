@@ -369,6 +369,10 @@ for n in (84, 88, 96, 104, 112, 120):
     arr = NEG[50][n]
     mm = max(range(1, 61), key=lambda m: abs(arr[60 - m]))
     print(f"   n={n}: sup_m |m_n(-m)| 3^(n/2) = {NS[50][n] * 3 ** (n / 2):.2f} at m = {mm}; sup over m <= 20: {max(abs(arr[60 - m]) for m in range(1, 21)) * 3 ** (n / 2):.2f}; 2^-m |m_n(-m)| 3^(n/2) at the argmax: {2.0 ** -mm * abs(arr[60 - mm]) * 3 ** (n / 2):.2e}")
+neg60b = closed_all(120, -20, 0, 60, keep=set(range(84, 121)))
+relb = max(abs(neg60b[n][20 - m] - NEG[50][n][60 - m]) / abs(neg60b[n][20 - m]) for n in range(84, 121) for m in range(1, 21))
+print(f"   truncation at n = 84..120, m <= 20: max relative |a<=50 - a<=60| = {relb:.1e}")
+print("   |m_n(-16)| 3^(n/2) for n = 96..120 (the outlying coefficient of the sup at n = 120): " + " ".join(f"{abs(NEG[50][n][60 - 16]) * 3 ** (n / 2):.2f}" for n in range(96, 121, 2)))
 svals = {n: NS[50][n] * 3 ** (n / 2) for n in range(1, 81)}
 print(f"   N_n 3^(n/2) over n <= 80: min {min(svals.values()):.3f} (n={min(svals, key=svals.get)}), max {max(svals.values()):.3f} (n={max(svals, key=svals.get)})")
 for lo, hi in ((20, 80), (40, 80), (20, 120), (60, 120), (81, 120)):
@@ -511,6 +515,30 @@ for h, sh in ((100, 152), (120, 184), (200, 310), (300, 469)):
             b_ext += term
     tot = b_comp + b_ext81 + b_ext
     print(f"      h={h}: bound/e^-hI = {tot / math.exp(-h * IRATE):.4f}; share from J-1 <= 80 (computed in the note): {b_comp / tot:.4f}; from 81 <= J-1 <= 120 (computed here): {b_ext81 / tot:.4f}; extrapolated beyond 120: {b_ext / tot:.1e}")
+
+# ----------------------------------------------------------------------------------------------------------------
+hdr("H2. the same for 82 <= h <= 150 with Ntilde_n computed to n = 120 (tail J - 1 > 120 bounded by Ntilde <= 1)")
+PROF150 = closed_all(150, -60, int(math.floor(150 * LOG23)) + 2, 50, keep=set(range(82, 151)))
+PC150 = cost_laws(150, 245)
+rows = []
+for h in range(82, 151):
+    kc = int(math.floor(h * LOG23))
+    arr = PROF150[h]
+    absr = np.abs(arr)
+    ks = np.arange(-60, -60 + len(arr))
+    mask = (ks >= 0) & (ks <= kc)
+    s_star = int(ks[mask][np.argmax(absr[mask])])
+    Mh = float(absr[mask].max())
+    NtJ = np.array([1.0] + [NTV[J - 1] + 2.0 ** -60 if 2 <= J <= 121 else 1.0 for J in range(1, h + 1)])
+    Bs = np.zeros(kc + 1)
+    for s in range(kc + 1):
+        Bs[s] = float((exact_masses(h, s, PC150) * NtJ).sum())
+    rat = absr[np.arange(kc + 1) + 60] / Bs
+    eI = math.exp(-h * IRATE)
+    rows.append((h, s_star, h * LOG23 - s_star, Mh, Bs[s_star] / eI, Bs.max() / eI, rat.max(), int(np.argmax(rat)), rat[s_star]))
+    if h % 10 == 0 or h in (82, 150):
+        print(f"   h={h:3d}: s*={s_star} d*={h * LOG23 - s_star:.2f} M={Mh:.3e}  B(s*)/e^-hI={Bs[s_star] / eI:.4f}  max_s B/e^-hI={Bs.max() / eI:.4f}  max_s |m|/B={rat.max():.4f} (s={int(np.argmax(rat))})  |m(s*)|/B(s*)={rat[s_star]:.4f}")
+print(f"   82 <= h <= 150: max_h B_h(s*)/e^-hI = {max(r[4] for r in rows):.4f} (h={max(rows, key=lambda r: r[4])[0]}), min {min(r[4] for r in rows):.4f}; max_h max_s B_h(s)/e^-hI = {max(r[5] for r in rows):.4f}; max_h max_s |m_h(s)|/B_h(s) = {max(r[6] for r in rows):.4f} (h={max(rows, key=lambda r: r[6])[0]}, s={max(rows, key=lambda r: r[6])[7]}); d* range [{min(r[2] for r in rows):.2f}, {max(r[2] for r in rows):.2f}]")
 
 # ----------------------------------------------------------------------------------------------------------------
 hdr("I. the profile |m_n(k)| on the powers of two: ceiling side and floor side")
