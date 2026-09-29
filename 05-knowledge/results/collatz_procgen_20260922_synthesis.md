@@ -1651,10 +1651,7 @@ of [`collatz_five_mirrors_20260929.md`](collatz_five_mirrors_20260929.md).
   reading `(t 2^(-r) mod 3^n)/3^n = t/(2^r 3^n) + (ξ mod 2^r)/2^r`, `ξ = -t
   3^(-n)`), and can approach `1` only for `t = ±2^v u` small: the corridor
   is exactly where it does (Proposition 3's `sup -> 1` with the resonant
-  set named). The ceiling family (negative powers of two) is closed under
-  the recursion and sits at the Parseval scale `3^(-n/2)` (VERIFIED to `n =
-  80`, certified against the valuation truncation); the floor family is far
-  larger, `≈ 2^(-d) M(n)` at `k = n log_2 3 + d`, since a word leaves the
+  set named). The ceiling family (negative powers of two) is closed under the recursion and sits at the Parseval scale `3^(-n/2)` up to *ridges* (VERIFIED to `n = 320`, certified against the valuation truncation): lines `m = m_0 - 1.3 (n - n_0)` of amplitude `2–30` times the Parseval scale, which are the resonances of the multiplier families `±u · 2^j` wherever `u · 2^Q ≡ ∓1 mod 3^(n_0)` for a small `u` (the dominant one: `v_3(55 · 2^423 + 1) = 15`; the others wrapped copies of the pure resonance from the periods `L_5 = 162`, `L_6 = 486`), living at the family's amplitude while the 3-adic coincidence lasts and decaying as remnants at `0.5675` per level afterwards (OBSERVED; the seeds exact; a polynomial size heuristic); the floor family is far larger, `≈ 2^(-d) M(n)` at `k = n log_2 3 + d`, since a word leaves the
   floor zone in one large first step (OBSERVED).
 * **Lemma R' (renewal bound, PROVED) and the mass law.** With `J(w)` the
   number of bottom levels above the ceiling, `mu_hat_h(2^s) = Σ_J c_J` and
@@ -1674,9 +1671,7 @@ of [`collatz_five_mirrors_20260929.md`](collatz_five_mirrors_20260929.md).
   all `s <= h log_2 3`: the resonant window decays at the no-descent rate
   with a constant prefactor — the sharp form of the coefficient side of
   Mazur's (2.3), against the `C* h^(-6409)` of the Fourier–renewal method.
-  The hypothesis is VERIFIED to `n = 80` (rate `0.574`, Parseval scale;
-  the margin is `1.3%`, `3^(-1/2)/(log_2 3 - 1) = 0.987`) and CONJECTURAL
-  beyond: it is square-root cancellation for one explicit character sum
+  The hypothesis is VERIFIED to `n = 320` (rate `0.568–0.574`, constant `1.58`, the Parseval scale up to the ridges; the margin is `1.3%`, `3^(-1/2)/(log_2 3 - 1) = 0.987`, and the ridges are why it cannot be called safe) and CONJECTURAL beyond: it is square-root cancellation for one explicit character sum
   over the 2-adic digits of `3^(-n)` (`m = 1`: the parity of the residue
   `Y_n`), of the `×2 ×3` kind. The bound evaluates to `0.11–0.18 e^(-hI)` at
   `h = 40..300` against `M(h) = 0.0125 -> 0.0011 e^(-hI)`: the S21 rate
@@ -1691,9 +1686,7 @@ of [`collatz_five_mirrors_20260929.md`](collatz_five_mirrors_20260929.md).
   (`|c_J|/|full| = 0.26, 0.52, 0.81, 0.26, 0.59, 0.44` for `J = 3..8` at `h
   = 40`) with per-mass weights `≈ 1/h` (the ballot factor of the top part
   staying in the corridor), which is how `M ≍ h^(-3/2) e^(-hI) ≍ P_h` would
-  arise. Obligations: prove H in any form (`ρ < 0.585`); compute the limits
-  `γ_J`; extend `Ñ_n` past `80`; the floor part of (T1) as a smoothness
-  statement for the law of the real angle `Σ_j 2^(κ_j - j log_2 3)`.
+  arise. Direct test to `h = 200`: `P_h = 9.2 h^(-3/2) e^(-hI)`, `|mu_hat_h(2^s*)|/P_h = 0.44–0.50`, the `J`-terms' phases settle from `h = 120` but their moduli converge only for `J <= 5`, so the constant of (T2) is not yet computable. Obligations: prove H in any form (`ρ < 0.585`); the limits `γ_J` at larger `h`; the fine structure of the multiplier families' amplitudes (a `u^(-0.5)` trend with a factor-four scatter); the floor part of (T1) as a smoothness statement for the law of the real angle `Σ_j 2^(κ_j - j log_2 3)`. MISTAKE-550 (the family was first called generic from a narrow window).
   No Collatz step.
 
 ## 3. The snippet, dispatched
