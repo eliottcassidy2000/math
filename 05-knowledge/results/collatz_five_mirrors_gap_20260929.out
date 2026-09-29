@@ -1,0 +1,74 @@
+== (1) one-step Gauss sums by class: 2-adic reading and gaps ==
+   n=2: 2-adic reading against the modular sum, max error 4.4e-16
+   n=2: sup |G| by class: v=1: 0.2184 (n=1); v=0,xi=1(4): 0.2184 (n=1); v=0,xi=3(4),theta<=1/2: 0.5817 (n=1); v=0,xi=3(4),theta>1/2: 0.5728 (n=1); v>=2,theta<=1/2: 0.5728 (n=1); v>=2,theta>1/2: 0.5817 (n=1)
+   n=3: 2-adic reading against the modular sum, max error 4.5e-16
+   n=3: sup |G| by class: v=1: 0.5950 (n=5); v=0,xi=1(4): 0.5950 (n=5); v=0,xi=3(4),theta<=1/2: 0.7655 (n=2); v=0,xi=3(4),theta>1/2: 0.7894 (n=2); v>=2,theta<=1/2: 0.7894 (n=2); v>=2,theta>1/2: 0.7655 (n=2)
+   n=4: 2-adic reading against the modular sum, max error 3.6e-16
+   n=4: sup |G| by class: v=1: 0.6096 (n=13); v=0,xi=1(4): 0.6096 (n=13); v=0,xi=3(4),theta<=1/2: 0.7347 (n=7); v=0,xi=3(4),theta>1/2: 0.8868 (n=7); v>=2,theta<=1/2: 0.8868 (n=7); v>=2,theta>1/2: 0.7347 (n=7)
+   n=5: 2-adic reading against the modular sum, max error 5.0e-16
+   n=5: sup |G| by class: v=1: 0.6468 (n=41); v=0,xi=1(4): 0.6468 (n=41); v=0,xi=3(4),theta<=1/2: 0.8301 (n=20); v=0,xi=3(4),theta>1/2: 0.9436 (n=20); v>=2,theta<=1/2: 0.9436 (n=20); v>=2,theta>1/2: 0.8301 (n=20)
+   n=6: sup |G| by class: v=1: 0.6528 (n=121); v=0,xi=1(4): 0.6528 (n=121); v=0,xi=3(4),theta<=1/2: 0.8236 (n=61); v=0,xi=3(4),theta>1/2: 0.9714 (n=61); v>=2,theta<=1/2: 0.9714 (n=61); v>=2,theta>1/2: 0.8236 (n=61)
+   n=7: sup |G| by class: v=1: 0.6685 (n=365); v=0,xi=1(4): 0.6685 (n=365); v=0,xi=3(4),theta<=1/2: 0.8163 (n=182); v=0,xi=3(4),theta>1/2: 0.9859 (n=182); v>=2,theta<=1/2: 0.9859 (n=182); v>=2,theta>1/2: 0.8163 (n=182)
+   n=8: sup |G| by class: v=1: 0.6718 (n=1093); v=0,xi=1(4): 0.6718 (n=1093); v=0,xi=3(4),theta<=1/2: 0.8421 (n=547); v=0,xi=3(4),theta>1/2: 0.9937 (n=547); v>=2,theta<=1/2: 0.9937 (n=547); v>=2,theta>1/2: 0.8421 (n=547)
+   n=9: sup |G| by class: v=1: 0.6718 (n=3281); v=0,xi=1(4): 0.6718 (n=3281); v=0,xi=3(4),theta<=1/2: 0.8462 (n=1640); v=0,xi=3(4),theta>1/2: 0.9967 (n=1640); v>=2,theta<=1/2: 0.9967 (n=1640); v>=2,theta>1/2: 0.8462 (n=1640)
+   proved: v = 1, and v = 0 with xi = 1 mod 4, have |G| <= sqrt(5)/4 + 1/4 = 0.8090
+== (2) uniform average of the level phase ==
+   n=1: (1/L) sum_k e(2^k mod 3^n / 3^n) = -0.500000+0.000000i
+   n=2: (1/L) sum_k e(2^k mod 3^n / 3^n) = -0.000000-0.000000i
+   n=3: (1/L) sum_k e(2^k mod 3^n / 3^n) = -0.000000-0.000000i
+   n=4: (1/L) sum_k e(2^k mod 3^n / 3^n) = -0.000000+0.000000i
+   n=5: (1/L) sum_k e(2^k mod 3^n / 3^n) = -0.000000-0.000000i
+   n=6: (1/L) sum_k e(2^k mod 3^n / 3^n) = -0.000000+0.000000i
+   n=7: (1/L) sum_k e(2^k mod 3^n / 3^n) = -0.000000-0.000000i
+== (3) resonant coefficient by the number S of levels outside the corridor 0 <= k_n < n log2 3 - K ==
+   h=40: s* = 57, |full| = 1.3832e-03, mass covered 0.99980
+      S= 1: mass 4.361e-04  |contribution| 7.288e-05  per mass 1.671e-01  |cum|/|full| 0.0527
+      S= 2: mass 2.328e-03  |contribution| 1.548e-04  per mass 6.652e-02  |cum|/|full| 0.1177
+      S= 3: mass 6.454e-03  |contribution| 3.496e-04  per mass 5.417e-02  |cum|/|full| 0.1823
+      S= 4: mass 1.294e-02  |contribution| 6.952e-04  per mass 5.371e-02  |cum|/|full| 0.6012
+      S= 5: mass 2.285e-02  |contribution| 1.136e-03  per mass 4.973e-02  |cum|/|full| 0.5137
+      S= 6: mass 3.600e-02  |contribution| 3.803e-04  per mass 1.056e-02  |cum|/|full| 0.4410
+      S= 7: mass 5.193e-02  |contribution| 8.087e-04  per mass 1.557e-02  |cum|/|full| 1.0229
+      S= 8: mass 6.930e-02  |contribution| 5.957e-04  per mass 8.596e-03  |cum|/|full| 0.9863
+      S= 9: mass 8.565e-02  |contribution| 2.778e-04  per mass 3.243e-03  |cum|/|full| 0.8841
+      S=10: mass 9.857e-02  |contribution| 1.425e-04  per mass 1.445e-03  |cum|/|full| 0.9864
+      S=11: mass 1.056e-01  |contribution| 2.743e-05  per mass 2.596e-04  |cum|/|full| 0.9683
+      S=12: mass 1.056e-01  |contribution| 8.217e-05  per mass 7.783e-04  |cum|/|full| 1.0274
+      S=13: mass 9.855e-02  |contribution| 5.066e-05  per mass 5.141e-04  |cum|/|full| 0.9918
+      S=14: mass 8.579e-02  |contribution| 1.126e-05  per mass 1.313e-04  |cum|/|full| 0.9990
+      S=15: mass 6.975e-02  |contribution| 5.665e-06  per mass 8.122e-05  |cum|/|full| 1.0007
+      S=16: mass 5.286e-02  |contribution| 6.814e-06  per mass 1.289e-04  |cum|/|full| 1.0028
+      S=17: mass 3.741e-02  |contribution| 6.607e-06  per mass 1.766e-04  |cum|/|full| 0.9999
+      S=18: mass 2.466e-02  |contribution| 7.444e-07  per mass 3.019e-05  |cum|/|full| 1.0000
+      S=19: mass 1.512e-02  |contribution| 3.530e-07  per mass 2.334e-05  |cum|/|full| 1.0000
+      S=20: mass 8.680e-03  |contribution| 1.002e-07  per mass 1.155e-05  |cum|/|full| 1.0000
+      S=21: mass 4.622e-03  |contribution| 2.146e-08  per mass 4.643e-06  |cum|/|full| 1.0000
+      S=22: mass 2.346e-03  |contribution| 1.040e-08  per mass 4.432e-06  |cum|/|full| 1.0000
+      S=23: mass 1.125e-03  |contribution| 6.005e-09  per mass 5.335e-06  |cum|/|full| 1.0000
+      S=24: mass 1.200e-03  |contribution| 3.528e-09  per mass 2.939e-06  |cum|/|full| 1.0000
+   h=80: s* = 120, |full| = 6.4534e-05, mass covered 0.94136
+      S= 1: mass 1.810e-05  |contribution| 1.920e-06  per mass 1.061e-01  |cum|/|full| 0.0298
+      S= 2: mass 9.944e-05  |contribution| 4.314e-06  per mass 4.339e-02  |cum|/|full| 0.0706
+      S= 3: mass 2.898e-04  |contribution| 1.032e-05  per mass 3.562e-02  |cum|/|full| 0.1164
+      S= 4: mass 6.292e-04  |contribution| 2.302e-05  per mass 3.658e-02  |cum|/|full| 0.4133
+      S= 5: mass 1.228e-03  |contribution| 4.133e-05  per mass 3.364e-02  |cum|/|full| 0.4142
+      S= 6: mass 2.198e-03  |contribution| 1.541e-05  per mass 7.010e-03  |cum|/|full| 0.3203
+      S= 7: mass 3.694e-03  |contribution| 4.137e-05  per mass 1.120e-02  |cum|/|full| 0.9612
+      S= 8: mass 5.893e-03  |contribution| 3.712e-05  per mass 6.299e-03  |cum|/|full| 0.9352
+      S= 9: mass 8.959e-03  |contribution| 2.146e-05  per mass 2.395e-03  |cum|/|full| 0.7454
+      S=10: mass 1.305e-02  |contribution| 1.425e-05  per mass 1.093e-03  |cum|/|full| 0.9649
+      S=11: mass 1.824e-02  |contribution| 3.542e-06  per mass 1.942e-04  |cum|/|full| 0.9177
+      S=12: mass 2.453e-02  |contribution| 1.544e-05  per mass 6.295e-04  |cum|/|full| 1.1542
+      S=13: mass 3.178e-02  |contribution| 1.363e-05  per mass 4.288e-04  |cum|/|full| 0.9510
+      S=14: mass 3.972e-02  |contribution| 4.464e-06  per mass 1.124e-04  |cum|/|full| 1.0135
+      S=15: mass 4.791e-02  |contribution| 3.339e-06  per mass 6.969e-05  |cum|/|full| 1.0405
+      S=16: mass 5.582e-02  |contribution| 6.236e-06  per mass 1.117e-04  |cum|/|full| 1.0919
+      S=17: mass 6.284e-02  |contribution| 9.843e-06  per mass 1.567e-04  |cum|/|full| 0.9851
+      S=18: mass 6.836e-02  |contribution| 1.840e-06  per mass 2.692e-05  |cum|/|full| 0.9928
+      S=19: mass 7.187e-02  |contribution| 1.522e-06  per mass 2.118e-05  |cum|/|full| 0.9937
+      S=20: mass 7.301e-02  |contribution| 7.503e-07  per mass 1.028e-05  |cum|/|full| 1.0017
+      S=21: mass 7.160e-02  |contribution| 1.491e-07  per mass 2.082e-06  |cum|/|full| 1.0012
+      S=22: mass 6.770e-02  |contribution| 5.003e-08  per mass 7.390e-07  |cum|/|full| 1.0004
+      S=23: mass 6.158e-02  |contribution| 3.619e-08  per mass 5.877e-07  |cum|/|full| 1.0001
+      S=24: mass 2.103e-01  |contribution| 3.122e-08  per mass 1.484e-07  |cum|/|full| 1.0000
+DONE

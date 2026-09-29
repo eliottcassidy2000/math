@@ -1,0 +1,87 @@
+constants: q = 0.369070, e^theta = 0.738140, theta = -0.303621, I = 0.054979, e^-I = 0.946505, 1/(log2 3 - 1) = 1.709511, product with 3^-1/2: 0.986987
+== (a) weighted negative-power norm Ntilde_n = sum_(m>=1) 2^-m |mu_hat_n(2^-m)| (m <= 60) ==
+   n= 1: Ntilde_n = 5.774e-01, Ntilde_n 3^(n/2) = 1.000, (1/(log2 3 - 1))^n Ntilde_n = 9.870e-01
+   n= 2: Ntilde_n = 3.089e-01, Ntilde_n 3^(n/2) = 0.927, (1/(log2 3 - 1))^n Ntilde_n = 9.028e-01
+   n= 3: Ntilde_n = 1.770e-01, Ntilde_n 3^(n/2) = 0.920, (1/(log2 3 - 1))^n Ntilde_n = 8.845e-01
+   n= 4: Ntilde_n = 1.058e-01, Ntilde_n 3^(n/2) = 0.952, (1/(log2 3 - 1))^n Ntilde_n = 9.035e-01
+   n= 5: Ntilde_n = 5.750e-02, Ntilde_n 3^(n/2) = 0.896, (1/(log2 3 - 1))^n Ntilde_n = 8.395e-01
+   n= 6: Ntilde_n = 3.046e-02, Ntilde_n 3^(n/2) = 0.822, (1/(log2 3 - 1))^n Ntilde_n = 7.603e-01
+   n= 7: Ntilde_n = 1.203e-02, Ntilde_n 3^(n/2) = 0.562, (1/(log2 3 - 1))^n Ntilde_n = 5.132e-01
+   n= 8: Ntilde_n = 6.851e-03, Ntilde_n 3^(n/2) = 0.555, (1/(log2 3 - 1))^n Ntilde_n = 4.997e-01
+   n= 9: Ntilde_n = 3.171e-03, Ntilde_n 3^(n/2) = 0.445, (1/(log2 3 - 1))^n Ntilde_n = 3.954e-01
+   n=10: Ntilde_n = 1.131e-03, Ntilde_n 3^(n/2) = 0.275, (1/(log2 3 - 1))^n Ntilde_n = 2.412e-01
+   n=11: Ntilde_n = 1.131e-03, Ntilde_n 3^(n/2) = 0.476, (1/(log2 3 - 1))^n Ntilde_n = 4.120e-01
+   n=12: Ntilde_n = 9.145e-04, Ntilde_n 3^(n/2) = 0.667, (1/(log2 3 - 1))^n Ntilde_n = 5.697e-01
+   n=16: Ntilde_n = 2.381e-04, Ntilde_n 3^(n/2) = 1.562, (1/(log2 3 - 1))^n Ntilde_n = 1.267e+00
+   n=20: Ntilde_n = 5.974e-06, Ntilde_n 3^(n/2) = 0.353, (1/(log2 3 - 1))^n Ntilde_n = 2.715e-01
+   n=24: Ntilde_n = 9.716e-07, Ntilde_n 3^(n/2) = 0.516, (1/(log2 3 - 1))^n Ntilde_n = 3.770e-01
+   n=28: Ntilde_n = 1.294e-07, Ntilde_n 3^(n/2) = 0.619, (1/(log2 3 - 1))^n Ntilde_n = 4.290e-01
+   n=32: Ntilde_n = 2.662e-09, Ntilde_n 3^(n/2) = 0.115, (1/(log2 3 - 1))^n Ntilde_n = 7.536e-02
+   n=36: Ntilde_n = 1.386e-09, Ntilde_n 3^(n/2) = 0.537, (1/(log2 3 - 1))^n Ntilde_n = 3.352e-01
+   n=40: Ntilde_n = 3.545e-10, Ntilde_n 3^(n/2) = 1.236, (1/(log2 3 - 1))^n Ntilde_n = 7.319e-01
+   n=44: Ntilde_n = 4.116e-11, Ntilde_n 3^(n/2) = 1.292, (1/(log2 3 - 1))^n Ntilde_n = 7.259e-01
+   n=48: Ntilde_n = 1.810e-12, Ntilde_n 3^(n/2) = 0.511, (1/(log2 3 - 1))^n Ntilde_n = 2.725e-01
+   n=52: Ntilde_n = 1.047e-13, Ntilde_n 3^(n/2) = 0.266, (1/(log2 3 - 1))^n Ntilde_n = 1.346e-01
+   n=56: Ntilde_n = 1.137e-14, Ntilde_n 3^(n/2) = 0.260, (1/(log2 3 - 1))^n Ntilde_n = 1.249e-01
+   n=60: Ntilde_n = 3.720e-15, Ntilde_n 3^(n/2) = 0.766, (1/(log2 3 - 1))^n Ntilde_n = 3.490e-01
+   n=64: Ntilde_n = 3.975e-16, Ntilde_n 3^(n/2) = 0.737, (1/(log2 3 - 1))^n Ntilde_n = 3.186e-01
+   n=68: Ntilde_n = 1.629e-17, Ntilde_n 3^(n/2) = 0.272, (1/(log2 3 - 1))^n Ntilde_n = 1.115e-01
+   n=72: Ntilde_n = 2.873e-18, Ntilde_n 3^(n/2) = 0.431, (1/(log2 3 - 1))^n Ntilde_n = 1.679e-01
+   n=76: Ntilde_n = 9.167e-20, Ntilde_n 3^(n/2) = 0.124, (1/(log2 3 - 1))^n Ntilde_n = 4.576e-02
+   n=80: Ntilde_n = 1.619e-20, Ntilde_n 3^(n/2) = 0.197, (1/(log2 3 - 1))^n Ntilde_n = 6.903e-02
+   least-squares rate of Ntilde_n over n = 20..80: 0.5736 per level (3^-1/2 = 0.5774, log2 3 - 1 = 0.5850); prefactor 0.523
+   rate over n = 40..80: 0.5574; max_n Ntilde_n 3^(n/2) over 20..80 = 1.292
+== (b) per-J inequality |c_J| <= mass_h(J) Ntilde_(J-1) and (c) Chernoff mass law, h = 40, 80 ==
+   h=40: s* = 57 (delta = 6.40), |full| = 1.3832e-03
+      J= 0: DP mass 1.601e-03, exact mass 1.601e-03, Chernoff 1.589e-02, |c_J| 2.587e-05, mass*Ntilde 1.601e-03, ratio 0.016
+      J= 1: DP mass 2.153e-03, exact mass 2.153e-03, Chernoff 2.717e-02, |c_J| 6.251e-05, mass*Ntilde 2.153e-03, ratio 0.029
+      J= 2: DP mass 4.420e-03, exact mass 4.420e-03, Chernoff 4.645e-02, |c_J| 1.362e-04, mass*Ntilde 2.552e-03, ratio 0.053
+      J= 3: DP mass 8.398e-03, exact mass 8.398e-03, Chernoff 7.940e-02, |c_J| 3.526e-04, mass*Ntilde 2.594e-03, ratio 0.136
+      J= 4: DP mass 1.480e-02, exact mass 1.480e-02, Chernoff 1.357e-01, |c_J| 7.159e-04, mass*Ntilde 2.620e-03, ratio 0.273
+      J= 5: DP mass 2.421e-02, exact mass 2.421e-02, Chernoff 2.320e-01, |c_J| 1.123e-03, mass*Ntilde 2.561e-03, ratio 0.439
+      J= 6: DP mass 3.684e-02, exact mass 3.684e-02, Chernoff 3.967e-01, |c_J| 3.632e-04, mass*Ntilde 2.119e-03, ratio 0.171
+      J= 7: DP mass 5.220e-02, exact mass 5.220e-02, Chernoff 6.781e-01, |c_J| 8.144e-04, mass*Ntilde 1.590e-03, ratio 0.512
+      J= 8: DP mass 6.890e-02, exact mass 6.890e-02, Chernoff 1.000e+00, |c_J| 6.063e-04, mass*Ntilde 8.286e-04, ratio 0.732
+      J= 9: DP mass 8.480e-02, exact mass 8.480e-02, Chernoff 1.000e+00, |c_J| 2.810e-04, mass*Ntilde 5.810e-04, ratio 0.484
+      J=10: DP mass 9.736e-02, exact mass 9.736e-02, Chernoff 1.000e+00, |c_J| 1.445e-04, mass*Ntilde 3.087e-04, ratio 0.468
+      J=11: DP mass 1.043e-01, exact mass 1.043e-01, Chernoff 1.000e+00, |c_J| 2.436e-05, mass*Ntilde 1.180e-04, ratio 0.206
+      J=12: DP mass 1.043e-01, exact mass 1.043e-01, Chernoff 1.000e+00, |c_J| 8.194e-05, mass*Ntilde 1.180e-04, ratio 0.695
+      J=15: DP mass 6.890e-02, exact mass 6.890e-02, Chernoff 1.000e+00, |c_J| 5.632e-06, mass*Ntilde 1.568e-05, ratio 0.359
+      J=18: DP mass 2.420e-02, exact mass 2.421e-02, Chernoff 1.000e+00, |c_J| 7.285e-07, mass*Ntilde 2.435e-06, ratio 0.299
+      J=21: DP mass 4.390e-03, exact mass 4.420e-03, Chernoff 1.000e+00, |c_J| 1.007e-08, mass*Ntilde 2.640e-08, ratio 0.382
+      J=24: DP mass 3.832e-04, exact mass 4.018e-04, Chernoff 1.000e+00, |c_J| 1.854e-10, mass*Ntilde 5.520e-10, ratio 0.336
+      J=27: DP mass 1.388e-05, exact mass 1.699e-05, Chernoff 1.000e+00, |c_J| 1.599e-12, mass*Ntilde 3.205e-12, ratio 0.499
+      J=30: DP mass 1.977e-07, exact mass 2.996e-07, Chernoff 1.000e+00, |c_J| 7.677e-15, mass*Ntilde 1.457e-14, ratio 0.527
+   h=40: worst |c_J|/(mass Ntilde) = 0.840 (must be <= 1); bound sum = 1.9906e-02; |full|/bound = 0.0695
+   h=80: s* = 120 (delta = 6.80), |full| = 6.4534e-05
+      J= 0: DP mass 1.652e-04, exact mass 1.652e-04, Chernoff 1.562e-03, |c_J| 6.479e-07, mass*Ntilde 1.652e-04, ratio 0.004
+      J= 1: DP mass 1.682e-04, exact mass 1.682e-04, Chernoff 2.670e-03, |c_J| 1.686e-06, mass*Ntilde 1.682e-04, ratio 0.010
+      J= 2: DP mass 3.163e-04, exact mass 3.163e-04, Chernoff 4.564e-03, |c_J| 3.866e-06, mass*Ntilde 1.826e-04, ratio 0.021
+      J= 3: DP mass 5.738e-04, exact mass 5.738e-04, Chernoff 7.801e-03, |c_J| 1.070e-05, mass*Ntilde 1.772e-04, ratio 0.060
+      J= 4: DP mass 1.004e-03, exact mass 1.004e-03, Chernoff 1.334e-02, |c_J| 2.376e-05, mass*Ntilde 1.778e-04, ratio 0.134
+      J= 5: DP mass 1.696e-03, exact mass 1.696e-03, Chernoff 2.280e-02, |c_J| 4.181e-05, mass*Ntilde 1.794e-04, ratio 0.233
+      J= 6: DP mass 2.765e-03, exact mass 2.765e-03, Chernoff 3.898e-02, |c_J| 1.559e-05, mass*Ntilde 1.590e-04, ratio 0.098
+      J= 7: DP mass 4.353e-03, exact mass 4.353e-03, Chernoff 6.663e-02, |c_J| 4.146e-05, mass*Ntilde 1.326e-04, ratio 0.313
+      J= 8: DP mass 6.620e-03, exact mass 6.620e-03, Chernoff 1.139e-01, |c_J| 3.772e-05, mass*Ntilde 7.962e-05, ratio 0.474
+      J= 9: DP mass 9.728e-03, exact mass 9.728e-03, Chernoff 1.947e-01, |c_J| 2.200e-05, mass*Ntilde 6.665e-05, ratio 0.330
+      J=10: DP mass 1.381e-02, exact mass 1.381e-02, Chernoff 3.329e-01, |c_J| 1.467e-05, mass*Ntilde 4.380e-05, ratio 0.335
+      J=11: DP mass 1.896e-02, exact mass 1.896e-02, Chernoff 5.690e-01, |c_J| 3.305e-06, mass*Ntilde 2.145e-05, ratio 0.154
+      J=12: DP mass 2.516e-02, exact mass 2.516e-02, Chernoff 9.728e-01, |c_J| 1.532e-05, mass*Ntilde 2.845e-05, ratio 0.539
+      J=15: DP mass 4.806e-02, exact mass 4.806e-02, Chernoff 1.000e+00, |c_J| 3.331e-06, mass*Ntilde 1.094e-05, ratio 0.304
+      J=18: DP mass 6.800e-02, exact mass 6.803e-02, Chernoff 1.000e+00, |c_J| 1.843e-06, mass*Ntilde 6.841e-06, ratio 0.269
+      J=21: DP mass 7.101e-02, exact mass 7.149e-02, Chernoff 1.000e+00, |c_J| 1.526e-07, mass*Ntilde 4.271e-07, ratio 0.357
+      J=24: DP mass 5.320e-02, exact mass 5.578e-02, Chernoff 1.000e+00, |c_J| 2.472e-08, mass*Ntilde 7.664e-08, ratio 0.323
+      J=27: DP mass 2.637e-02, exact mass 3.228e-02, Chernoff 1.000e+00, |c_J| 2.963e-09, mass*Ntilde 6.090e-09, ratio 0.487
+      J=30: DP mass 1.625e-02, exact mass 1.381e-02, Chernoff 1.000e+00, |c_J| 3.831e-10, mass*Ntilde 6.715e-10, ratio 0.571
+   h=80: worst |c_J|/(mass Ntilde) = 0.810 (must be <= 1); bound sum = 1.6774e-03; |full|/bound = 0.0385
+== (d) the bound sum_J mass_h(J) Ntilde_(J-1) at h = 40..300 against the measured maxima M(h) (level-300 run) ==
+   h= 40: s = 57 (delta = 6.40), M(h) = 1.383e-03, bound = 1.991e-02, M/bound = 0.0695, bound/e^(-hI) = 0.1795, M/e^(-hI) = 0.0125
+   h= 60: s = 89 (delta = 6.10), M(h) = 2.828e-04, bound = 6.584e-03, M/bound = 0.0430, bound/e^(-hI) = 0.1783, M/e^(-hI) = 0.0077
+   h= 80: s = 120 (delta = 6.80), M(h) = 6.453e-05, bound = 1.677e-03, M/bound = 0.0385, bound/e^(-hI) = 0.1364, M/e^(-hI) = 0.0052
+   h=100: s = 152 (delta = 6.50), M(h) = 1.594e-05, bound = 5.789e-04, M/bound = 0.0275, bound/e^(-hI) = 0.1414, M/e^(-hI) = 0.0039
+   h=120: s = 184 (delta = 6.20), M(h) = 4.120e-06, bound = 2.014e-04, M/bound = 0.0205, bound/e^(-hI) = 0.1477, M/e^(-hI) = 0.0030
+   h=150: s = 231 (delta = 6.74), M(h) = 5.964e-07, bound = 3.156e-05, M/bound = 0.0189, bound/e^(-hI) = 0.1204, M/e^(-hI) = 0.0023
+   h=200: s = 310 (delta = 6.99), M(h) = 2.727e-08, bound = 1.764e-06, M/bound = 0.0155, bound/e^(-hI) = 0.1052, M/e^(-hI) = 0.0016
+   h=250: s = 390 (delta = 6.24), M(h) = 1.379e-09, bound = 1.325e-07, M/bound = 0.0104, bound/e^(-hI) = 0.1235, M/e^(-hI) = 0.0013
+   h=300: s = 469 (delta = 6.49), M(h) = 7.425e-11, bound = 7.568e-09, M/bound = 0.0098, bound/e^(-hI) = 0.1102, M/e^(-hI) = 0.0011
+DONE

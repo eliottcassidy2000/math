@@ -1,0 +1,216 @@
+== (C5) real-phase identity at h = 6: e(2^s Y/3^h) = e(2^(s-A) C_w(3,2)/3^h) for A <= s ==
+   max |lhs - rhs| over all words with letters <= 4 and s in [A, A+5]: 1.9e-11
+== (C1) profile |m_n(k)| on the powers of two, k from -60 to floor(n log2 3) + 60 ==
+   (recursion to level 80 done, 1s)
+   n=20: argmax k = 26 (= n log2 3 - 5.70), max 8.885e-03; 3^(-n/2) = 1.694e-05
+      k in [-60,-41]        : rms 1.137e-05  max 2.989e-05  min 2.348e-06
+      k in [-40,-21]        : rms 1.301e-05  max 2.053e-05  min 7.012e-07
+      k in [-20,-1]         : rms 7.226e-06  max 1.312e-05  min 1.226e-06
+      k in [0, kc/2]        : rms 7.866e-05  max 2.105e-04  min 1.107e-05
+      k in (kc/2, kc-12]    : rms 7.667e-04  max 1.182e-03  min 3.182e-04
+      k in [kc-11, kc]      : rms 5.783e-03  max 8.885e-03  min 1.066e-03
+      k in [kc+1, kc+20]    : rms 1.093e-04  max 4.137e-04  min 1.553e-06
+      k in [kc+21, kc+60]   : rms 8.056e-06  max 1.653e-05  min 5.092e-07
+      k = kc-12..kc+8: 1.18e-03 1.79e-03 2.70e-03 3.97e-03 5.52e-03 7.12e-03 8.38e-03 8.88e-03 8.34e-03 6.79e-03 4.63e-03 2.56e-03 1.07e-03 4.14e-04 2.32e-04 9.26e-05 5.89e-05 3.67e-05 1.88e-05 7.41e-06 1.55e-06
+   n=40: argmax k = 57 (= n log2 3 - 6.40), max 1.383e-03; 3^(-n/2) = 2.868e-10
+      k in [-60,-41]        : rms 1.328e-10  max 4.171e-10  min 1.960e-11
+      k in [-40,-21]        : rms 2.216e-10  max 4.116e-10  min 5.180e-11
+      k in [-20,-1]         : rms 2.872e-10  max 5.946e-10  min 4.036e-11
+      k in [0, kc/2]        : rms 1.328e-07  max 5.982e-07  min 1.653e-11
+      k in (kc/2, kc-12]    : rms 1.261e-04  max 4.052e-04  min 8.830e-07
+      k in [kc-11, kc]      : rms 9.638e-04  max 1.383e-03  min 1.308e-04
+      k in [kc+1, kc+20]    : rms 1.816e-05  max 7.318e-05  min 1.802e-10
+      k in [kc+21, kc+60]   : rms 2.232e-10  max 9.791e-10  min 1.001e-11
+      k = kc-12..kc+8: 4.05e-04 5.56e-04 7.37e-04 9.36e-04 1.13e-03 1.30e-03 1.38e-03 1.36e-03 1.19e-03 9.13e-04 5.85e-04 2.99e-04 1.31e-04 7.32e-05 2.97e-05 1.53e-05 9.38e-06 5.62e-06 2.45e-06 6.68e-07 5.35e-07
+   n=60: argmax k = 89 (= n log2 3 - 6.10), max 2.828e-04; 3^(-n/2) = 4.857e-15
+      k in [-60,-41]        : rms 1.443e-15  max 3.056e-15  min 1.122e-16
+      k in [-40,-21]        : rms 2.080e-15  max 3.812e-15  min 3.557e-16
+      k in [-20,-1]         : rms 3.695e-15  max 9.058e-15  min 2.733e-16
+      k in [0, kc/2]        : rms 9.289e-11  max 3.911e-10  min 4.187e-16
+      k in (kc/2, kc-12]    : rms 2.773e-05  max 1.128e-04  min 1.359e-10
+      k in [kc-11, kc]      : rms 2.003e-04  max 2.828e-04  min 1.775e-05
+      k in [kc+1, kc+20]    : rms 2.608e-06  max 1.012e-05  min 3.532e-11
+      k in [kc+21, kc+60]   : rms 2.973e-12  max 1.651e-11  min 2.651e-17
+      k = kc-12..kc+8: 1.13e-04 1.46e-04 1.83e-04 2.20e-04 2.54e-04 2.77e-04 2.83e-04 2.65e-04 2.22e-04 1.61e-04 9.61e-05 4.66e-05 1.77e-05 1.01e-05 5.41e-06 1.93e-06 6.54e-07 3.73e-07 2.48e-07 1.40e-07 4.91e-08
+   n=80: argmax k = 120 (= n log2 3 - 6.80), max 6.453e-05; 3^(-n/2) = 8.225e-20
+      k in [-60,-41]        : rms 1.669e-20  max 5.378e-20  min 1.654e-21
+      k in [-40,-21]        : rms 2.666e-20  max 6.353e-20  min 4.846e-21
+      k in [-20,-1]         : rms 2.199e-20  max 4.225e-20  min 1.750e-21
+      k in [0, kc/2]        : rms 2.504e-13  max 1.230e-12  min 5.588e-21
+      k in (kc/2, kc-12]    : rms 5.069e-06  max 2.401e-05  min 1.644e-12
+      k in [kc-11, kc]      : rms 4.683e-05  max 6.453e-05  min 7.742e-06
+      k in [kc+1, kc+20]    : rms 7.304e-07  max 2.525e-06  min 2.811e-12
+      k in [kc+21, kc+60]   : rms 7.384e-13  max 4.072e-12  min 1.560e-21
+      k = kc-12..kc+8: 2.40e-05 3.08e-05 3.85e-05 4.67e-05 5.45e-05 6.10e-05 6.45e-05 6.37e-05 5.75e-05 4.60e-05 3.15e-05 1.78e-05 7.74e-06 2.52e-06 1.80e-06 9.59e-07 2.58e-07 2.39e-07 1.43e-07 4.35e-08 4.56e-09
+== (C2) negative-power family: N_n = sup_(1<=m<=60) |m_n(-m)| against 3^(-n/2) and M(n) ==
+   n= 2: N_n = 3.779e-01 (at m =  1), N_n 3^(n/2) = 1.134, M(n) = 3.779e-01, |m_n(-1)| = 3.779e-01, |m_n(-2)| = 2.143e-01
+   n= 3: N_n = 2.522e-01 (at m =  6), N_n 3^(n/2) = 1.311, M(n) = 2.522e-01, |m_n(-1)| = 1.943e-01, |m_n(-2)| = 1.748e-01
+   n= 4: N_n = 1.770e-01 (at m = 23), N_n 3^(n/2) = 1.593, M(n) = 1.770e-01, |m_n(-1)| = 1.326e-01, |m_n(-2)| = 9.143e-02
+   n= 5: N_n = 9.791e-02 (at m = 22), N_n 3^(n/2) = 1.526, M(n) = 1.293e-01, |m_n(-1)| = 5.812e-02, |m_n(-2)| = 5.512e-02
+   n= 6: N_n = 6.079e-02 (at m = 47), N_n 3^(n/2) = 1.641, M(n) = 9.611e-02, |m_n(-1)| = 3.885e-02, |m_n(-2)| = 2.592e-02
+   n= 7: N_n = 4.153e-02 (at m = 46), N_n 3^(n/2) = 1.942, M(n) = 7.587e-02, |m_n(-1)| = 1.413e-02, |m_n(-2)| = 9.341e-03
+   n= 8: N_n = 2.583e-02 (at m = 45), N_n 3^(n/2) = 2.093, M(n) = 6.089e-02, |m_n(-1)| = 7.852e-03, |m_n(-2)| = 7.436e-03
+   n= 9: N_n = 1.608e-02 (at m = 44), N_n 3^(n/2) = 2.257, M(n) = 4.803e-02, |m_n(-1)| = 3.888e-03, |m_n(-2)| = 1.070e-03
+   n=10: N_n = 7.838e-03 (at m = 42), N_n 3^(n/2) = 1.905, M(n) = 3.828e-02, |m_n(-1)| = 7.484e-04, |m_n(-2)| = 5.482e-04
+   n=11: N_n = 5.311e-03 (at m = 60), N_n 3^(n/2) = 2.235, M(n) = 3.194e-02, |m_n(-1)| = 9.600e-04, |m_n(-2)| = 1.451e-03
+   n=12: N_n = 3.175e-03 (at m = 59), N_n 3^(n/2) = 2.314, M(n) = 2.646e-02, |m_n(-1)| = 1.039e-03, |m_n(-2)| = 7.462e-04
+   n=16: N_n = 2.942e-04 (at m = 39), N_n 3^(n/2) = 1.930, M(n) = 1.441e-02, |m_n(-1)| = 2.571e-04, |m_n(-2)| = 2.772e-04
+   n=20: N_n = 2.989e-05 (at m = 58), N_n 3^(n/2) = 1.765, M(n) = 8.885e-03, |m_n(-1)| = 5.851e-06, |m_n(-2)| = 5.284e-06
+   n=24: N_n = 3.449e-06 (at m = 28), N_n 3^(n/2) = 1.833, M(n) = 5.831e-03, |m_n(-1)| = 1.069e-06, |m_n(-2)| = 1.038e-06
+   n=28: N_n = 6.008e-07 (at m = 24), N_n 3^(n/2) = 2.874, M(n) = 3.936e-03, |m_n(-1)| = 1.696e-07, |m_n(-2)| = 1.093e-07
+   n=32: N_n = 8.205e-08 (at m = 19), N_n 3^(n/2) = 3.532, M(n) = 2.758e-03, |m_n(-1)| = 2.399e-09, |m_n(-2)| = 1.941e-09
+   n=36: N_n = 6.348e-09 (at m = 14), N_n 3^(n/2) = 2.459, M(n) = 1.950e-03, |m_n(-1)| = 1.409e-09, |m_n(-2)| = 1.091e-09
+   n=40: N_n = 5.946e-10 (at m = 10), N_n 3^(n/2) = 2.073, M(n) = 1.383e-03, |m_n(-1)| = 3.737e-10, |m_n(-2)| = 4.045e-10
+   n=44: N_n = 5.474e-11 (at m = 29), N_n 3^(n/2) = 1.718, M(n) = 9.893e-04, |m_n(-1)| = 4.982e-11, |m_n(-2)| = 3.661e-11
+   n=48: N_n = 6.181e-12 (at m = 19), N_n 3^(n/2) = 1.746, M(n) = 7.214e-04, |m_n(-1)| = 2.461e-12, |m_n(-2)| = 1.039e-12
+   n=52: N_n = 6.437e-13 (at m = 15), N_n 3^(n/2) = 1.636, M(n) = 5.253e-04, |m_n(-1)| = 1.309e-13, |m_n(-2)| = 5.815e-14
+   n=56: N_n = 7.668e-14 (at m = 19), N_n 3^(n/2) = 1.754, M(n) = 3.819e-04, |m_n(-1)| = 7.085e-15, |m_n(-2)| = 1.112e-14
+   n=60: N_n = 9.058e-15 (at m = 14), N_n 3^(n/2) = 1.865, M(n) = 2.828e-04, |m_n(-1)| = 4.917e-15, |m_n(-2)| = 2.329e-15
+   n=64: N_n = 7.890e-16 (at m = 10), N_n 3^(n/2) = 1.462, M(n) = 2.094e-04, |m_n(-1)| = 3.234e-16, |m_n(-2)| = 5.167e-16
+   n=68: N_n = 8.040e-17 (at m =  4), N_n 3^(n/2) = 1.341, M(n) = 1.546e-04, |m_n(-1)| = 8.096e-18, |m_n(-2)| = 7.329e-18
+   n=72: N_n = 5.202e-18 (at m =  2), N_n 3^(n/2) = 0.781, M(n) = 1.154e-04, |m_n(-1)| = 2.396e-18, |m_n(-2)| = 5.202e-18
+   n=76: N_n = 6.344e-19 (at m = 17), N_n 3^(n/2) = 0.857, M(n) = 8.649e-05, |m_n(-1)| = 1.277e-19, |m_n(-2)| = 4.939e-20
+   n=80: N_n = 6.353e-20 (at m = 34), N_n 3^(n/2) = 0.772, M(n) = 6.453e-05, |m_n(-1)| = 1.606e-20, |m_n(-2)| = 2.099e-20
+== (C4) one-step Gauss-sum modulus on the scrambled exponent windows ==
+   n=10: ceiling k in [-40,-1]     : mean |G| 0.5250, geometric mean 0.4792, min 0.1823, max 0.9104
+   n=10: floor k in [kc+1,kc+40]   : mean |G| 0.5528, geometric mean 0.5051, min 0.1829, max 0.8942
+   n=10: corridor k in [0,kc-6]    : mean |G| 0.8132, geometric mean 0.7693, min 0.3011, max 0.9971
+   n=20: ceiling k in [-40,-1]     : mean |G| 0.5454, geometric mean 0.5021, min 0.1586, max 0.8860
+   n=20: floor k in [kc+1,kc+40]   : mean |G| 0.5269, geometric mean 0.4945, min 0.1644, max 0.7782
+   n=20: corridor k in [0,kc-6]    : mean |G| 0.9298, geometric mean 0.9082, min 0.3516, max 1.0000
+   n=30: ceiling k in [-40,-1]     : mean |G| 0.5624, geometric mean 0.5265, min 0.1755, max 0.8972
+   n=30: floor k in [kc+1,kc+40]   : mean |G| 0.5517, geometric mean 0.5029, min 0.1707, max 0.9090
+   n=30: corridor k in [0,kc-6]    : mean |G| 0.9568, geometric mean 0.9422, min 0.3227, max 1.0000
+   n=40: ceiling k in [-40,-1]     : mean |G| 0.5508, geometric mean 0.5081, min 0.1833, max 0.8512
+   n=40: floor k in [kc+1,kc+40]   : mean |G| 0.5145, geometric mean 0.4786, min 0.1639, max 0.7867
+   n=40: corridor k in [0,kc-6]    : mean |G| 0.9691, geometric mean 0.9588, min 0.3777, max 1.0000
+== (C3) decomposition of the resonant coefficient by J (ceiling-scrambled levels) and F (floor-scrambled levels, K = 3) ==
+   h=40, kind=J: s* = 57, |full| = 1.3832e-03, mass covered 0.99980  (4s)
+      J= 0: mass 1.601e-03  |contribution| 2.587e-05  arg +2.16  per mass 1.616e-02  |cum|/|full| 0.0187
+      J= 1: mass 2.153e-03  |contribution| 6.251e-05  arg +1.76  per mass 2.903e-02  |cum|/|full| 0.0628
+      J= 2: mass 4.420e-03  |contribution| 1.362e-04  arg +3.14  per mass 3.082e-02  |cum|/|full| 0.1319
+      J= 3: mass 8.398e-03  |contribution| 3.526e-04  arg +0.24  per mass 4.199e-02  |cum|/|full| 0.1771
+      J= 4: mass 1.480e-02  |contribution| 7.159e-04  arg +1.88  per mass 4.838e-02  |cum|/|full| 0.6128
+      J= 5: mass 2.421e-02  |contribution| 1.123e-03  arg -0.86  per mass 4.639e-02  |cum|/|full| 0.4988
+      J= 6: mass 3.684e-02  |contribution| 3.632e-04  arg +2.05  per mass 9.859e-03  |cum|/|full| 0.4411
+      J= 7: mass 5.220e-02  |contribution| 8.144e-04  arg +0.41  per mass 1.560e-02  |cum|/|full| 1.0277
+      J= 8: mass 6.890e-02  |contribution| 6.063e-04  arg +2.34  per mass 8.800e-03  |cum|/|full| 0.9910
+      J= 9: mass 8.480e-02  |contribution| 2.810e-04  arg -1.32  per mass 3.314e-03  |cum|/|full| 0.8818
+      J=10: mass 9.736e-02  |contribution| 1.445e-04  arg +0.55  per mass 1.484e-03  |cum|/|full| 0.9849
+      J=11: mass 1.043e-01  |contribution| 2.436e-05  arg -2.01  per mass 2.335e-04  |cum|/|full| 0.9690
+      J=12: mass 1.043e-01  |contribution| 8.194e-05  arg +0.82  per mass 7.855e-04  |cum|/|full| 1.0278
+      J=13: mass 9.736e-02  |contribution| 5.148e-05  arg -2.20  per mass 5.287e-04  |cum|/|full| 0.9916
+      J=14: mass 8.480e-02  |contribution| 1.161e-05  arg +0.17  per mass 1.369e-04  |cum|/|full| 0.9989
+      J=15: mass 6.890e-02  |contribution| 5.632e-06  arg -0.41  per mass 8.174e-05  |cum|/|full| 1.0008
+      J=16: mass 5.219e-02  |contribution| 6.703e-06  arg -0.46  per mass 1.284e-04  |cum|/|full| 1.0028
+      J=17: mass 3.684e-02  |contribution| 6.541e-06  arg +2.92  per mass 1.776e-04  |cum|/|full| 0.9999
+      J=18: mass 2.420e-02  |contribution| 7.285e-07  arg -0.69  per mass 3.011e-05  |cum|/|full| 1.0000
+      J=19: mass 1.478e-02  |contribution| 3.464e-07  arg -0.92  per mass 2.344e-05  |cum|/|full| 1.0000
+      J=20: mass 8.372e-03  |contribution| 9.398e-08  arg -0.21  per mass 1.123e-05  |cum|/|full| 1.0000
+      J=21: mass 4.390e-03  |contribution| 1.007e-08  arg +2.41  per mass 2.295e-06  |cum|/|full| 1.0000
+      J=22: mass 2.124e-03  |contribution| 1.732e-09  arg -2.56  per mass 8.157e-07  |cum|/|full| 1.0000
+      J=23: mass 9.438e-04  |contribution| 5.968e-10  arg -1.55  per mass 6.323e-07  |cum|/|full| 1.0000
+      J=24: mass 3.832e-04  |contribution| 1.854e-10  arg -2.97  per mass 4.839e-07  |cum|/|full| 1.0000
+      J=25: mass 1.412e-04  |contribution| 1.146e-10  arg +1.38  per mass 8.118e-07  |cum|/|full| 1.0000
+      J=26: mass 4.685e-05  |contribution| 8.330e-12  arg -1.90  per mass 1.778e-07  |cum|/|full| 1.0000
+      J=27: mass 1.388e-05  |contribution| 1.599e-12  arg -2.46  per mass 1.153e-07  |cum|/|full| 1.0000
+      J=28: mass 3.634e-06  |contribution| 3.686e-13  arg +2.09  per mass 1.014e-07  |cum|/|full| 1.0000
+      J=29: mass 8.329e-07  |contribution| 1.368e-13  arg -1.04  per mass 1.642e-07  |cum|/|full| 1.0000
+      J=30: mass 1.977e-07  |contribution| 7.677e-15  arg +1.71  per mass 3.883e-08  |cum|/|full| 1.0000
+   h=40, kind=F: s* = 57, |full| = 1.3832e-03, mass covered 0.99980  (5s)
+      F= 0: mass 9.756e-01  |contribution| 1.389e-03  arg +0.68  per mass 1.424e-03  |cum|/|full| 1.0041
+      F= 1: mass 6.353e-03  |contribution| 3.133e-05  arg -1.29  per mass 4.932e-03  |cum|/|full| 0.9954
+      F= 2: mass 3.576e-03  |contribution| 4.628e-06  arg +0.56  per mass 1.294e-03  |cum|/|full| 0.9987
+      F= 3: mass 2.615e-03  |contribution| 3.081e-05  arg +2.01  per mass 1.178e-02  |cum|/|full| 1.0039
+      F= 4: mass 1.946e-03  |contribution| 6.984e-06  arg -2.24  per mass 3.589e-03  |cum|/|full| 0.9990
+      F= 5: mass 1.528e-03  |contribution| 3.876e-06  arg -1.20  per mass 2.536e-03  |cum|/|full| 0.9981
+      F= 6: mass 1.260e-03  |contribution| 5.270e-06  arg +1.41  per mass 4.184e-03  |cum|/|full| 1.0010
+      F= 7: mass 9.711e-04  |contribution| 2.386e-06  arg +2.67  per mass 2.458e-03  |cum|/|full| 1.0003
+      F= 8: mass 8.597e-04  |contribution| 3.089e-07  arg +3.07  per mass 3.593e-04  |cum|/|full| 1.0001
+      F= 9: mass 6.969e-04  |contribution| 9.279e-07  arg -0.96  per mass 1.331e-03  |cum|/|full| 1.0001
+      F=10: mass 6.211e-04  |contribution| 4.549e-07  arg -1.78  per mass 7.325e-04  |cum|/|full| 0.9998
+      F=11: mass 5.367e-04  |contribution| 7.139e-07  arg +1.15  per mass 1.330e-03  |cum|/|full| 1.0003
+      F=12: mass 4.250e-04  |contribution| 4.370e-07  arg +2.80  per mass 1.028e-03  |cum|/|full| 1.0001
+      F=13: mass 4.001e-04  |contribution| 4.270e-07  arg -2.45  per mass 1.067e-03  |cum|/|full| 0.9998
+      F=14: mass 3.247e-04  |contribution| 2.548e-07  arg -0.80  per mass 7.848e-04  |cum|/|full| 0.9998
+      F=15: mass 3.058e-04  |contribution| 3.033e-07  arg +0.56  per mass 9.920e-04  |cum|/|full| 1.0001
+      F=16: mass 2.513e-04  |contribution| 1.495e-07  arg +2.09  per mass 5.948e-04  |cum|/|full| 1.0001
+      F=17: mass 2.416e-04  |contribution| 1.608e-07  arg -3.10  per mass 6.655e-04  |cum|/|full| 1.0000
+      F=18: mass 2.129e-04  |contribution| 9.052e-08  arg -1.09  per mass 4.252e-04  |cum|/|full| 1.0000
+      F=19: mass 1.612e-04  |contribution| 5.037e-08  arg +0.27  per mass 3.126e-04  |cum|/|full| 1.0000
+      F=20: mass 1.631e-04  |contribution| 3.462e-08  arg +1.43  per mass 2.123e-04  |cum|/|full| 1.0000
+      F=21: mass 1.248e-04  |contribution| 2.091e-08  arg +3.00  per mass 1.675e-04  |cum|/|full| 1.0000
+      F=22: mass 1.317e-04  |contribution| 1.270e-08  arg -2.14  per mass 9.645e-05  |cum|/|full| 1.0000
+      F=23: mass 1.131e-04  |contribution| 7.428e-09  arg -0.71  per mass 6.570e-05  |cum|/|full| 1.0000
+      F=24: mass 7.462e-05  |contribution| 4.113e-09  arg +0.64  per mass 5.512e-05  |cum|/|full| 1.0000
+      F=25: mass 8.321e-05  |contribution| 2.166e-09  arg +2.07  per mass 2.603e-05  |cum|/|full| 1.0000
+      F=26: mass 5.363e-05  |contribution| 1.041e-09  arg -3.03  per mass 1.941e-05  |cum|/|full| 1.0000
+      F=27: mass 6.291e-05  |contribution| 3.332e-10  arg -0.77  per mass 5.296e-06  |cum|/|full| 1.0000
+      F=28: mass 3.686e-05  |contribution| 1.579e-10  arg +0.10  per mass 4.285e-06  |cum|/|full| 1.0000
+      F=29: mass 4.899e-05  |contribution| 1.839e-10  arg +2.36  per mass 3.754e-06  |cum|/|full| 1.0000
+      F=30: mass 5.759e-05  |contribution| 4.639e-11  arg -1.63  per mass 8.055e-07  |cum|/|full| 1.0000
+   h=80, kind=J: s* = 120, |full| = 6.4534e-05, mass covered 0.94136  (16s)
+      J= 0: mass 1.652e-04  |contribution| 6.479e-07  arg +2.35  per mass 3.922e-03  |cum|/|full| 0.0100
+      J= 1: mass 1.682e-04  |contribution| 1.686e-06  arg +1.92  per mass 1.003e-02  |cum|/|full| 0.0355
+      J= 2: mass 3.163e-04  |contribution| 3.866e-06  arg -2.98  per mass 1.222e-02  |cum|/|full| 0.0783
+      J= 3: mass 5.738e-04  |contribution| 1.070e-05  arg +0.41  per mass 1.866e-02  |cum|/|full| 0.1169
+      J= 4: mass 1.004e-03  |contribution| 2.376e-05  arg +2.07  per mass 2.366e-02  |cum|/|full| 0.4231
+      J= 5: mass 1.696e-03  |contribution| 4.181e-05  arg -0.67  per mass 2.466e-02  |cum|/|full| 0.4109
+      J= 6: mass 2.765e-03  |contribution| 1.559e-05  arg +2.26  per mass 5.638e-03  |cum|/|full| 0.3245
+      J= 7: mass 4.353e-03  |contribution| 4.146e-05  arg +0.63  per mass 9.525e-03  |cum|/|full| 0.9669
+      J= 8: mass 6.620e-03  |contribution| 3.772e-05  arg +2.56  per mass 5.697e-03  |cum|/|full| 0.9407
+      J= 9: mass 9.728e-03  |contribution| 2.200e-05  arg -1.10  per mass 2.262e-03  |cum|/|full| 0.7398
+      J=10: mass 1.381e-02  |contribution| 1.467e-05  arg +0.78  per mass 1.062e-03  |cum|/|full| 0.9653
+      J=11: mass 1.896e-02  |contribution| 3.305e-06  arg -1.78  per mass 1.743e-04  |cum|/|full| 0.9198
+      J=12: mass 2.516e-02  |contribution| 1.532e-05  arg +1.04  per mass 6.091e-04  |cum|/|full| 1.1545
+      J=13: mass 3.228e-02  |contribution| 1.369e-05  arg -1.99  per mass 4.240e-04  |cum|/|full| 0.9503
+      J=14: mass 4.005e-02  |contribution| 4.530e-06  arg +0.38  per mass 1.131e-04  |cum|/|full| 1.0134
+      J=15: mass 4.806e-02  |contribution| 3.331e-06  arg -0.22  per mass 6.931e-05  |cum|/|full| 1.0407
+      J=16: mass 5.578e-02  |contribution| 6.214e-06  arg -0.27  per mass 1.114e-04  |cum|/|full| 1.0918
+      J=17: mass 6.262e-02  |contribution| 9.841e-06  arg +3.09  per mass 1.571e-04  |cum|/|full| 0.9853
+      J=18: mass 6.800e-02  |contribution| 1.843e-06  arg -0.52  per mass 2.711e-05  |cum|/|full| 0.9926
+      J=19: mass 7.140e-02  |contribution| 1.530e-06  arg -0.76  per mass 2.143e-05  |cum|/|full| 0.9937
+      J=20: mass 7.246e-02  |contribution| 7.533e-07  arg -0.06  per mass 1.040e-05  |cum|/|full| 1.0018
+      J=21: mass 7.101e-02  |contribution| 1.526e-07  arg +2.56  per mass 2.149e-06  |cum|/|full| 1.0012
+      J=22: mass 6.710e-02  |contribution| 5.176e-08  arg -2.42  per mass 7.713e-07  |cum|/|full| 1.0004
+      J=23: mass 6.101e-02  |contribution| 3.677e-08  arg -1.42  per mass 6.028e-07  |cum|/|full| 1.0001
+      J=24: mass 5.320e-02  |contribution| 2.472e-08  arg -2.85  per mass 4.645e-07  |cum|/|full| 0.9997
+      J=25: mass 4.434e-02  |contribution| 3.476e-08  arg +1.50  per mass 7.841e-07  |cum|/|full| 1.0001
+      J=26: mass 3.514e-02  |contribution| 6.066e-09  arg -1.79  per mass 1.726e-07  |cum|/|full| 1.0000
+      J=27: mass 2.637e-02  |contribution| 2.963e-09  arg -2.36  per mass 1.124e-07  |cum|/|full| 1.0000
+      J=28: mass 1.863e-02  |contribution| 1.849e-09  arg +2.18  per mass 9.925e-08  |cum|/|full| 1.0000
+      J=29: mass 1.233e-02  |contribution| 1.989e-09  arg -0.95  per mass 1.613e-07  |cum|/|full| 1.0000
+      J=30: mass 1.625e-02  |contribution| 3.831e-10  arg +1.59  per mass 2.357e-08  |cum|/|full| 1.0000
+   h=80, kind=F: s* = 120, |full| = 6.4534e-05, mass covered 0.94136  (22s)
+      F= 0: mass 9.218e-01  |contribution| 6.431e-05  arg +0.75  per mass 6.977e-05  |cum|/|full| 0.9965
+      F= 1: mass 4.920e-03  |contribution| 8.504e-07  arg -0.53  per mass 1.729e-04  |cum|/|full| 1.0004
+      F= 2: mass 2.770e-03  |contribution| 2.446e-07  arg +1.88  per mass 8.829e-05  |cum|/|full| 1.0020
+      F= 3: mass 2.004e-03  |contribution| 7.238e-07  arg +2.37  per mass 3.612e-04  |cum|/|full| 1.0013
+      F= 4: mass 1.501e-03  |contribution| 1.498e-07  arg -1.56  per mass 9.983e-05  |cum|/|full| 0.9998
+      F= 5: mass 1.157e-03  |contribution| 3.614e-08  arg -0.62  per mass 3.123e-05  |cum|/|full| 0.9999
+      F= 6: mass 9.616e-04  |contribution| 9.968e-08  arg +2.04  per mass 1.037e-04  |cum|/|full| 1.0003
+      F= 7: mass 7.728e-04  |contribution| 2.958e-08  arg -2.69  per mass 3.827e-05  |cum|/|full| 0.9999
+      F= 8: mass 6.648e-04  |contribution| 2.001e-08  arg +0.90  per mass 3.011e-05  |cum|/|full| 1.0002
+      F= 9: mass 5.605e-04  |contribution| 5.402e-09  arg +1.01  per mass 9.638e-06  |cum|/|full| 1.0002
+      F=10: mass 4.783e-04  |contribution| 1.893e-08  arg -2.23  per mass 3.958e-05  |cum|/|full| 1.0000
+      F=11: mass 4.179e-04  |contribution| 4.360e-09  arg +0.61  per mass 1.043e-05  |cum|/|full| 1.0000
+      F=12: mass 3.537e-04  |contribution| 7.578e-10  arg +1.53  per mass 2.143e-06  |cum|/|full| 1.0000
+      F=13: mass 3.182e-04  |contribution| 3.046e-09  arg -2.82  per mass 9.573e-06  |cum|/|full| 1.0000
+      F=14: mass 2.758e-04  |contribution| 5.562e-10  arg -1.43  per mass 2.017e-06  |cum|/|full| 1.0000
+      F=15: mass 2.448e-04  |contribution| 2.001e-09  arg +0.86  per mass 8.172e-06  |cum|/|full| 1.0000
+      F=16: mass 2.165e-04  |contribution| 3.476e-10  arg +2.62  per mass 1.605e-06  |cum|/|full| 1.0000
+      F=17: mass 1.904e-04  |contribution| 1.046e-09  arg -2.84  per mass 5.495e-06  |cum|/|full| 1.0000
+      F=18: mass 1.725e-04  |contribution| 4.859e-10  arg +0.20  per mass 2.817e-06  |cum|/|full| 1.0000
+      F=19: mass 1.516e-04  |contribution| 2.244e-10  arg +1.85  per mass 1.480e-06  |cum|/|full| 1.0000
+      F=20: mass 1.378e-04  |contribution| 1.201e-10  arg +2.82  per mass 8.714e-07  |cum|/|full| 1.0000
+      F=21: mass 1.233e-04  |contribution| 1.174e-10  arg -1.50  per mass 9.518e-07  |cum|/|full| 1.0000
+      F=22: mass 1.107e-04  |contribution| 6.448e-11  arg -0.26  per mass 5.826e-07  |cum|/|full| 1.0000
+      F=23: mass 1.010e-04  |contribution| 6.094e-11  arg +1.31  per mass 6.035e-07  |cum|/|full| 1.0000
+      F=24: mass 8.931e-05  |contribution| 4.742e-11  arg +2.74  per mass 5.310e-07  |cum|/|full| 1.0000
+      F=25: mass 8.243e-05  |contribution| 3.735e-11  arg -2.11  per mass 4.531e-07  |cum|/|full| 1.0000
+      F=26: mass 7.393e-05  |contribution| 2.600e-11  arg -0.75  per mass 3.517e-07  |cum|/|full| 1.0000
+      F=27: mass 6.737e-05  |contribution| 2.011e-11  arg +0.78  per mass 2.985e-07  |cum|/|full| 1.0000
+      F=28: mass 6.116e-05  |contribution| 1.424e-11  arg +2.03  per mass 2.328e-07  |cum|/|full| 1.0000
+      F=29: mass 5.525e-05  |contribution| 1.111e-11  arg -2.83  per mass 2.011e-07  |cum|/|full| 1.0000
+      F=30: mass 5.722e-04  |contribution| 6.752e-12  arg -0.81  per mass 1.180e-08  |cum|/|full| 1.0000
+DONE

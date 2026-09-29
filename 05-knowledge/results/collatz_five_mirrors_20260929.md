@@ -1,6 +1,6 @@
-# Five papers as structural mirrors of the 3-adic Syracuse law: the Fourier profile of Tao's Syracuse random variable (primitive maxima at the powers of two, decaying like the no-descent probability, `0.46 P_h`, on the powers of two to level 120, scale-invariant Fourier mass `0.47`), the same-length collision threshold, and carry-polynomial reciprocity under word reversal
+# Five papers as structural mirrors of the 3-adic Syracuse law: the Fourier profile of Tao's Syracuse random variable (primitive maxima at the powers of two, decaying at the no-descent rate `3^(h*-1)` on the powers of two — proved to be its upper rate conditional on square-root cancellation at the negative powers of two, S22 — scale-invariant Fourier mass `0.47`), the same-length collision threshold, and carry-polynomial reciprocity under word reversal
 
-**Session:** opus, `collatz-poset-dag-20260927` (S20), 2026-09-29.
+**Session:** opus, `collatz-poset-dag-20260927` (S20, S21, S22), 2026-09-29.
 **Owner's directive:** "merge ideas related to the linked papers below into
 the current mathematical exploration process and extend the ideas of past
 work in the repo toward Collatz related proofs", with five arXiv papers of
@@ -38,9 +38,7 @@ OBSERVED (the maxima sit at the powers of two `±2^s`, `s - h` growing
 slowly; the decay ratio rises from `0.65` to `0.89` over eighteen levels;
 the Fourier mass per conductor level is `0.46–0.47`; on the powers of two
 the coefficient is `0.44–0.48` times the no-descent probability over the
-levels `20..120`) + CONJECTURAL (`M(h) ≍ P_h`: the maximal primitive
-coefficient decays at the no-descent rate `3^(h*-1)`, a necessary condition
-for (2.3), not the mixing estimate itself) + DIRECTION. No Collatz proof step. Audited SOUND WITH CORRECTIONS (eighteen applied; section 8); section 2b, the `3x+k` reversal survey and Proposition 6 were added after the audit's snapshot, and section 2b was then audited separately (fifteen corrections applied; section 8).**
+levels `20..120`) + CONJECTURAL (`M(h) ≍ P_h`: the maximal primitive coefficient decays at the no-descent rate `3^(h*-1)`, a necessary condition for (2.3), not the mixing estimate itself) + DIRECTION. S22 (section 2d): PROVED — Lemma G (a quantitative one-step gap on half the units, with the resonant set named), the exponent-walk identity, Lemma R' (the renewal bound `|c_J| <= mass_h(J) Ñ_(J-1)`), the Chernoff mass law `mass_h(J) <= e^(-hI) e^(θ*δ) (log_2 3 - 1)^(-J)`; CONDITIONAL — Theorem C: if the weighted negative-power norm `Ñ_n` decays at any rate below `log_2 3 - 1 = 0.585`, the resonant window decays at the rate `3^(h*-1)` with a constant prefactor; VERIFIED — `Ñ_n` at the Parseval scale to level 80 (rate `0.574`), the bound term by term, `J_eff ≈ 1.6 √h`; the hypothesis H is CONJECTURAL and (T2) is reduced to one constant. No Collatz proof step. Audited SOUND WITH CORRECTIONS (eighteen applied; section 8); section 2b, the `3x+k` reversal survey and Proposition 6 were added after the audit's snapshot, and section 2b was then audited separately (fifteen corrections applied; section 8).**
 
 Scripts and outputs:
 `04-computation/experiments/collatz_five_mirrors_20260929.py` →
@@ -54,8 +52,7 @@ cost and by last valuation at levels 10 and 14);
 `collatz_five_mirrors_fourier_deep_20260929.py 18` → `..._fourier_deep18_...out`
 (the profile to level 18); `collatz_five_mirrors_reversal_20260929.py` →
 `..._reversal_...out` (reversal on the integer cycles of `3x+k`);
-`collatz_five_mirrors_tracesum_20260929.py` → `..._tracesum_...out` (the
-reversal-invariant trace, Proposition 6).
+`collatz_five_mirrors_tracesum_20260929.py` → `..._tracesum_...out` (the reversal-invariant trace, Proposition 6); S22: `collatz_five_mirrors_gap_20260929.py` → `..._gap_...out` (Lemma G over all units to `n = 9`, the Ramanujan average, the scrambled-level split), `collatz_five_mirrors_renewal_20260929.py` → `..._renewal_...out` (the exponent profile with negative exponents, the negative family, the `J`/`F` decompositions, the Gauss-sum regimes), `collatz_five_mirrors_renewal_bound_20260929.py` → `..._renewal_bound_...out` (Lemma R' term by term, `Ñ_n`, the bound to `h = 300`), `collatz_five_mirrors_renewal_cert_20260929.py` → `..._renewal_cert_...out` (the `a <= 60` certification, `J_eff`, the mass law, the bound to `h = 2000`).
 
 ---
 
@@ -551,6 +548,266 @@ mixing estimate, with the thin-divergence exponent `h*` as its rate.
 
 ---
 
+### 2d. S22: the renewal structure of the resonant coefficient — a one-step gap lemma, the exponent walk, a renewal bound (Lemma R'), and the sharp rate `3^(h*-1)` conditional on square-root cancellation at the negative powers of two
+
+**Directive.** "keep going with T1 and T2 toward a proof." Worked in the
+same worktree; scripts
+`04-computation/experiments/collatz_five_mirrors_gap_20260929.py`,
+`..._renewal_20260929.py`, `..._renewal_bound_20260929.py`,
+`..._renewal_cert_20260929.py`, outputs `05-knowledge/results/collatz_five_mirrors_gap_20260929.out`,
+`..._renewal_20260929.out`, `..._renewal_bound_20260929.out`,
+`..._renewal_cert_20260929.out`. Constants used throughout:
+`m := log_2 3 = 1.58496`, `p := log_3 2 = 0.63093`, `q := 1 - p = 0.36907`,
+the tilt `θ* := ln(2q) = -0.30362` (the exponential tilt of the geometric
+law `2^(-a)` to mean `m`), `I := θ* m - ln(m - 1) = 0.054979`, and the
+identity `e^(-I) = 3^(h*-1) = 0.946505` (PROVED: `ln 3^(h*-1) = -ln p -
+(q/p) ln q - ln 3` and `-I = -(1/p) ln(2q) + ln q - ln p` agree term by term,
+using `1/p = m` and `m - 1 = q/p`). The number `1/(m - 1) = 1.70951` is
+the growth factor of the mass law below.
+
+**Result in one paragraph.** The prefix-excursion coordinates of section 2c
+mixed two different scramblings. Reading the phase product *from the top
+level down*, the exponent `κ_j = s - T_j` (`T_j = a_j + ... + a_h` the
+suffix cost) performs a downward random walk with i.i.d. geometric steps,
+and the level-`j` phase `ω_j(κ_j) = e((2^(κ_j) mod 3^j)/3^j)` is near `1`
+in the *corridor* `0 <= κ_j < j m - K`, a wrapped power of two below the
+floor (`κ_j > j m - K`), and a modular inverse power above the ceiling
+(`κ_j < 0`). Three things are proved: (i) a quantitative one-step gap
+lemma (Lemma G) that names the frequencies where the geometric Gauss sum
+can approach `1` — the corridor is exactly where it does; (ii) an exact
+renewal identity `mu_hat_h(2^s) = Σ_J c_J` over the number `J` of bottom
+levels above the ceiling, with the bound `|c_J| <= mass_h(J) Ñ_(J-1)`
+(Lemma R'), where `mass_h(J)` is the explicit probability of exactly `J`
+ceiling levels and `Ñ_n = Σ_(m>=1) 2^(-m) |mu_hat_n(2^(-m) mod 3^n)|` is a
+weighted norm of the law's Fourier coefficients on the *negative* powers of
+two; (iii) the Chernoff mass law `mass_h(J) <= e^(-hI) e^(θ*δ) (m-1)^(-J)`
+at `s = hm - δ`. Consequently (Theorem C, CONDITIONAL): if
+`Ñ_n <= C ρ^n` with `ρ < m - 1 = 0.58496`, then `|mu_hat_h(2^s)| <= C'
+e^(θ*δ) e^(-hI)` for every `h` and every `s <= hm` — the resonant window
+of the powers of two decays at least at the no-descent rate `3^(h*-1)`
+with a *constant* prefactor, doubly exponentially better than the
+`C* h^(-6409)` of the Fourier–renewal method. The hypothesis is VERIFIED to
+level `80`: the negative-power coefficients sit at the Parseval scale,
+`Ñ_n 3^(n/2) ∈ [0.12, 1.56]` for `n <= 80` (`<= 1.29` for `n >= 20`), rate
+`0.574` per level over `20..80`, against the critical `0.585`; the margin is
+`1.3%`, since `3^(-1/2)/(m-1) = 0.98699`. Term by term the inequality
+`|c_J| <= mass_h(J) Ñ_(J-1)` holds with worst ratio `0.84` (`h = 40`) and
+`0.81` (`h = 80`), and the bound `Σ_J mass_h(J) Ñ_(J-1)` equals `0.18, 0.14,
+0.11 e^(-hI)` at `h = 40, 100, 300` (`0.08 e^(-hI)` at `h = 2000` under the
+hypothesis with the observed constant), so the S21 rate bracket
+`0.947–0.950` is read as the rate `0.9465` with a slowly varying
+prefactor. What (T1) and (T2) become: the deep-ceiling part of (T1) is
+Lemma R' plus the hypothesis; the floor part of (T1) is OBSERVED negligible
+(the words with any floor level carry `< 1%` of the coefficient at `h = 40,
+80`) without a proof; (T2) is reduced to the non-cancellation of a
+convergent series of `≈ 1.6 √h` comparable rotating terms `c_J` (`J_eff =
+10, 14, 19` at `h = 40, 80, 120`), whose per-mass weights scale roughly
+like `1/h` (the ballot factor of the top part staying in the corridor),
+which is how `M(h) ≍ h^(-3/2) e^(-hI) ≍ P_h` would arise. No Collatz step;
+the reductions are the deliverable.
+
+**Lemma G (one-step gap; PROVED).** Let `t` be a unit mod `3^n`, `0 < t <
+3^n`, `θ := t/3^n ∈ (0,1)`, and `ξ := -t 3^(-n) ∈ Z_2` with binary digits
+`ξ_1, ξ_2, ...` (`ξ_i = 0` for `i <= v_2(t)`). Then, exactly,
+`G_n(t) = Σ_(r>=1) 2^(-r) e(θ/2^r + (ξ mod 2^r)/2^r)` — the residue `t
+2^(-r) mod 3^n` equals `(t + m_r 3^n)/2^r` with `m_r = ξ mod 2^r` the unique
+representative in `[0, 2^r)` (from `0 <= t + m 3^n < 2^r 3^n`) — and
+`|G_n(t)| <= 1/4 + (5/16 + cos(2πφ)/4)^(1/2)`, `φ = (2ξ_2 - ξ_1 - θ)/4`
+(the two leading terms in closed form, the tail bounded by `1/4`). Hence:
+`|G_n(t)| <= (1 + √5)/4 = 0.8090` whenever the two leading digits of `ξ`
+differ, i.e. `v_2(t) = 1` or (`t` odd and `t ≡ (-1)^(n+1) mod 4`); for
+`4 | t` the bound is `1/4 + (5/16 + cos(πθ/2)/4)^(1/2)`, below `1` unless
+`θ -> 0`; for `t` odd with `t ≡ (-1)^n mod 4` it is `1/4 + (5/16 +
+sin(πθ/2)/4)^(1/2)`, below `1` unless `θ -> 1`. The gap classes are exactly
+half the units (`6562` of `13122` at `n = 9`). Checked against the modular
+sum to `4·10^(-16)` (`n <= 5`) and over all units to `n = 9`: the two gap
+classes never exceed `0.672`, the class `4 | t` with `θ <= 1/2` never
+exceeds `0.846`, and only the classes `4 | t, θ -> 0` and `t odd, θ -> 1`
+approach `1` (`0.9967` at `n = 9`), which is Proposition 3(ii) with the
+resonant set named: `t = 2^v u` small or `t = -(odd) small`. On the family
+`2^k` the phases are `θ = 2^(k - nm)`, so the gap fails precisely in the
+corridor `k < nm - K`, and for the resonant `s = hm - δ` the level-`h`
+Gauss sum is `1 - O(2^(-δ))`. A corollary used below: for the frequency
+`2^(-m) mod 3^n` the gap holds iff the binary digits of the 2-adic number
+`-3^(-n)` at positions `m+1` and `m+2` differ.
+
+**The exponent walk (PROVED, an identity).** For a word `w = (a_1..a_h)`,
+`Y_h = Σ_j 3^(h-j) 2^(-T_j)` (in `Z[1/2]`), so `e(2^s Y_h/3^h) = Π_(j=1)^h
+ω_j(κ_j)` with `κ_j := s - T_j` and `ω_j(k) := e((2^k mod 3^j)/3^j)`
+(inverse powers for `k < 0`); this is the phase factorisation of section
+2c read from the top: `κ_h = s - a_h`, `κ_(j-1) = κ_j - a_(j-1)`, a
+downward walk with i.i.d. geometric steps started at `s`, and no bridge
+condition. For `A <= s` the real-number identity `e(2^s Y_h/3^h) =
+e(2^(s-A) C_w(3,2)/3^h)` holds with the carry polynomial of section 5
+(checked at `h = 6`, all words with letters `<= 4`, to `2·10^(-11)`): the
+phase is the real number `2^(s-A) Σ_j 2^(P_(j-1) - jm)` and no 2-adic
+scrambling occurs; for `A > s` the factor `2^(s-A)` is a modular inverse.
+Ramanujan: `(1/L_n) Σ_(k mod L_n) ω_n(k) = μ(3^n)/L_n = 0` for `n >= 2`
+(`-1/2` at `n = 1`; checked to `n = 7`): a walk with uniformly distributed
+exponents would give a vanishing coefficient, so the whole coefficient is
+a correlation effect between the walk and the phases.
+
+**The corridor and the three regimes (VERIFIED).** At `s = hm - δ` the
+exponent walk starts `δ` bits below the critical line (`κ_h - hm = -δ -
+a_h`) and drifts *up* relative to the line at `2 - m = 0.415` bits per
+level, so a typical word stays in the corridor from the top until the
+exponent turns negative at `T_j > s`, i.e. for the bottom `J ≈ 0.21 h`
+levels. Three regimes for the one-step Gauss-sum modulus `|G_n(2^k)|`:
+corridor `0 <= k <= nm - 6`: mean `0.81, 0.93, 0.96, 0.97` at `n = 10, 20,
+30, 40`; ceiling `k ∈ [-40, -1]`: mean `0.525, 0.545, 0.562, 0.551`,
+geometric mean `0.48–0.53`; floor `k ∈ [nm + 1, nm + 40]`: mean
+`0.553, 0.527, 0.552, 0.515` — the scrambled exponents behave like the
+random units of section 4 (mean `0.543`). The profile `|mu_hat_n(2^k)|`
+over `k ∈ [-60, nm + 60]` at `n = 20, 40, 60, 80` (renewal output, C1):
+the maximum sits at `k = nm - 5.7, -6.4, -6.1, -6.8`; on the *ceiling side*
+`k ∈ [-60, -1]` the coefficients sit at the Parseval scale `3^(-n/2)` (rms
+`1.3·10^(-10)`–`2.9·10^(-10)` against `3^(-20) = 2.9·10^(-10)` at `n = 40`;
+`1.7`–`2.7·10^(-20)` against `8.2·10^(-20)` at `n = 80`) — the negative
+family is closed under the recursion (exponents only decrease), every
+remaining level is scrambled, and the coefficients are generic; on the
+*floor side* `k = nm + d` they are much larger, `≈ 2^(-d) M(n)` (`7.7·10^(-6),
+2.5·10^(-6), ..., 4.6·10^(-9)` for `d = 1..9` at `n = 80`; `4·10^(-12)`
+at `d ∈ [21, 60]` against `3^(-40) = 8·10^(-20)`), because a word can leave
+the floor zone in one large first step of cost `2^(-d)` and then run the
+corridor. This asymmetry is the reason the renewal bound is organised
+around the ceiling and not the floor.
+
+**Lemma R' (renewal bound; PROVED).** For every `h >= 1` and every integer
+`s`, with `J(w) := #{j : κ_j < 0} = #{j : T_j > s}` (the set is `{1..J}`
+since `T_j` decreases in `j`) and `c_J := E[1_(J(w)=J) Π_j ω_j(κ_j)]`, so
+that `mu_hat_h(2^s) = Σ_(J=0)^h c_J`:
+`|c_J| <= mass_h(J) · Ñ_(J-1)`, `mass_h(J) := P(T_(J+1) <= s < T_J)`,
+`Ñ_n := Σ_(m>=1) 2^(-m) |mu_hat_n(2^(-m) mod 3^n)|` (`Ñ_(-1) = Ñ_0 = 1`).
+Proof. `J = 0` is `A <= s`, and `|c_0| <= P(A <= s) = mass_h(0)`. For `J >=
+1` write `u = (a_(J+1)..a_h)`, `a = a_J`, `v = (a_1..a_(J-1))`; `J(w) = J`
+iff `T(u) <= s < T(u) + a`; put `κ := s - T(u) >= 0`. For `j < J`, `κ_j =
+(κ - a) - (a_j + ... + a_(J-1))`, the exponent walk of the word `v` at level
+`J - 1` started at `κ - a < 0`, so `E_v Π_(j<J) ω_j(κ_j) = mu_hat_(J-1)(2^(κ-a)
+mod 3^(J-1))`. Hence `c_J = Σ_u 2^(-T(u)) 1_(T(u)<=s) Π_(j>J) ω_j(κ_j(u)) ·
+Σ_(a>κ) 2^(-a) ω_J(κ - a) mu_hat_(J-1)(2^(κ-a))`, and `|c_J| <= Σ_(κ>=0)
+P(T_(J+1) = s - κ) Σ_(m>=1) 2^(-κ-m) |mu_hat_(J-1)(2^(-m))| = [Σ_κ P(T_(J+1) =
+s - κ) P(a_J > κ)] · Ñ_(J-1) = mass_h(J) Ñ_(J-1)`. ∎ (For `J = h` the top
+part is empty, `mass_h(h) = 2^(-s)`.) Exact evaluation: `mass_h(0) = P(S_h
+<= s)`, `mass_h(J) = Σ_(t<=s) P(S_(h-J) = t) 2^(-(s-t))` with `S_N` a sum of
+`N` geometric variables, computable by the recursion `P(S_(N+1) = t) =
+(P(S_N = t-1) + P(S_(N+1) = t-1))/2`. Checked term by term against the
+exact DP (renewal-bound output, b): at `h = 40`, `s = 57`, the ratios
+`|c_J|/(mass_h(J) Ñ_(J-1))` are `0.016, 0.029, 0.053, 0.136, 0.273, 0.439,
+0.171, 0.512, 0.732, 0.484, 0.468, 0.206, 0.695, ...`, worst `0.840`; at `h =
+80`, `s = 120`, worst `0.810`; the DP masses agree with the exact mass law to
+the DP's cost window (`J <= 20` complete to `< 1%`).
+
+**The mass law (Chernoff form PROVED; local form VERIFIED).** For `0 <= J
+<= h` and `s = hm - δ`: `mass_h(J) <= P(T_(J+1) <= s) <= e^(-θ* s) Z(θ*)^(h-J)
+= e^(-hI) e^(θ* δ) (m - 1)^(-J)`, with `Z(θ) = E e^(θ a) = (e^θ/2)/(1 -
+e^θ/2)`, `Z(θ*) = q/(1-q) = m - 1`, the tilted mean `1/(1 - e^(θ*)/2) = m`
+(Chernoff at the fixed tilt `θ* < 0`; `e^(-θ* hm) Z^h = e^(-hI)` by the
+definition of `I`). The exact masses normalised by `e^(-hI) e^(θ* δ)` grow
+by the factor `1.35, 2.05, 1.90, 1.76, ...` per unit of `J` at `h = 40`,
+`1.72, 1.71, 1.71, 1.71, 1.70, ...` at `h = 1000` (renewal-cert output,
+iii): the growth factor `1/(m-1) = 1.7095` is exact in the limit, and at
+finite `h` it is damped by the Gaussian window of the tilted local limit
+theorem, centred at `J ≈ δ/m ≈ 4` with width `≈ 0.61 √h` in `J`, which is
+where the `√h` of the next paragraph comes from. Since `1/(m-1) ·
+3^(-1/2) = 0.98699`, the series `Σ_J mass_h(J) Ñ_(J-1)` is *marginally*
+convergent when the negative family sits exactly at the Parseval scale:
+this is the sharp reason the rate question was delicate at `h <= 300`.
+
+**Theorem C (CONDITIONAL; PROVED given the hypothesis).** Hypothesis H:
+`Ñ_n <= C ρ^n` for all `n >= 0` with some `ρ < m - 1 = 0.58496`. Then for
+all `h >= 1` and all integers `s = hm - δ`, `δ >= 0`:
+`|mu_hat_h(2^s)| <= Σ_J mass_h(J) Ñ_(J-1) <= e^(-hI) e^(θ* δ) [1 + C (m-1)^(-1)
+/ (1 - ρ/(m-1))] =: C' e^(θ* δ) (3^(h*-1))^h`.
+With `ρ = 3^(-1/2)` the bracket is `1 + 131.4 C`. Two consequences: the
+exponential rate of the resonant window is *exactly* `3^(h*-1)` (an upper
+bound at this rate here; the lower bound is (T2)), and the low side of the
+resonance decays at least like `e^(θ* δ) = 0.738^δ` (observed `≈ 0.85^δ`
+near the peak at `h = 80`, steepening further out: `2.5·10^(-13)` rms on
+`k ∈ [0, nm/2]` against the peak `6.5·10^(-5)`). The hypothesis is what the
+data say (VERIFIED, not proved): `Ñ_n 3^(n/2) = 1.00, 0.93, 0.92, 0.95,
+0.90, 0.82, 0.56, 0.56, 0.45, 0.28, 0.48, 0.67` for `n = 1..12`, then in
+`[0.12, 1.56]` to `n = 80` (max `1.56` at `n = 16`, `1.29` for `n >= 20`);
+least-squares rate `0.5736` per level over `20..80` (`0.557` over `40..80`),
+below `3^(-1/2) = 0.5774` and below the critical `0.585`; the sup over `m <=
+60` of the single coefficients has `N_n 3^(n/2) ∈ [0.77, 3.5]` for `n <= 80`.
+The negative family was certified against the valuation truncation by an `a
+<= 60` rerun (`Ñ_n` to `1.3·10^(-11)` relative, single coefficients to
+`1.2·10^(-10)`, `n <= 80`), and the tail `m > 60` of `Ñ_n` is at most
+`2^(-60)`, which changes the bound at `h <= 300` by less than `10^(-18)`.
+For `h <= 81` every `Ñ_(J-1)` in the bound is a computed number, so the
+inequality `M_res(h) <= 0.18 e^(-hI)` there rests on Lemma R' and
+float64 arithmetic only. The bound against the measured maxima
+(renewal-bound output, d): `M(h)/bound = 0.070, 0.043, 0.039, 0.028, 0.021,
+0.019, 0.016, 0.010, 0.010` and `bound/e^(-hI) = 0.180, 0.178, 0.136, 0.141,
+0.148, 0.120, 0.105, 0.124, 0.110` at `h = 40, 60, 80, 100, 120, 150, 200,
+250, 300`; `M(h)/e^(-hI) = 0.0125 -> 0.0011` over the same levels, a
+prefactor `≈ h^(-1.2)` that the sup-based bound cannot see.
+
+**What the hypothesis is.** `Ñ_n` is the weighted `ℓ^1` norm of the vector
+`(mu_hat_n(2^(-m)))_(m>=1)`, which evolves by the closed linear maps
+`(L_n v)(m) = Σ_a 2^(-a) ω_n(-m-a) v(m+a)` with `ω_n(-m-a) = e((-3^(-n) mod
+2^(m+a))/2^(m+a) + 2^(-m-a) 3^(-n))` — the phases are the reversed binary
+digits of the 2-adic number `-3^(-n)` — so H says that the products `L_n
+··· L_1 1` contract at a rate below `m - 1` in that norm. At `m = 1` the
+coefficient is `E[(-1)^(Y_n) e(Y_n/(2·3^n))]`, the parity of the residue
+`Y_n ∈ [0, 3^n)` twisted by a slow phase: H is a square-root-cancellation
+statement for one explicit character sum over the 2-adic digits of `3^(-n)`,
+of the `×2 ×3` kind, and is CONJECTURAL. Lemma G gives a gap at the step
+`(n, m)` iff two consecutive digits of `-3^(-n)` differ, which holds at about
+half the steps but does not by itself control the product (the vector `v`
+is not constant in `a`). The Fourier–renewal method's structured/
+unstructured dichotomy gives `(1-c)^n` at these frequencies with a `c` far
+too small; H needs the sharp constant.
+
+**The `J`-series and (T2) (VERIFIED numerics; the reading DIRECTION).**
+The remainders `|Σ_(J'<=J) c_J' - full|/|full|` drop below `10%` at `J_eff =
+10, 14, 19` for `h = 40, 80, 120` (`≈ 1.6 √h`; `h/8` and `2.7 ln h .. 4 ln h`
+fit worse), which replaces the excursion band width `c = 5, 9, 15` of section
+2c: the carrier is the Gaussian `J`-window of the mass law, and its width
+grows like `√h` at least until `(1/(1 - 0.987))^2 ≈ 6000` levels. The terms
+are comparable and rotating: `|c_J|/|full| = 0.02, 0.05, 0.10, 0.26, 0.52,
+0.81, 0.26, 0.59, 0.44, 0.20, 0.10` with arguments `+2.2, +1.8, +3.1, +0.2,
++1.9, -0.9, +2.1, +0.4, +2.3, -1.3, +0.6` for `J = 0..10` at `h = 40`, and
+the same pattern at `h = 80, 120` (`0.65, 0.64` at `J = 5, 7`; `0.59, 0.64,
+0.62` at `J = 5, 7, 8`). The per-mass weights `|c_J|/mass_h(J)` times `h` are
+`1.94, 1.89, 1.48` (`J = 4`), `1.86, 1.97, 1.60` (`J = 5`), `0.62, 0.76, 0.66`
+(`J = 7`), `0.35, 0.46, 0.41` (`J = 8`) at `h = 40, 80, 120`: consistent with
+a `1/h` law within the spread (exponents between `-1.5` at `J = 2` and
+`-0.8` at `J = 9`), not decisive. The reading: the top part must keep its
+real angle `Σ_(j>J) 2^(κ_j - jm)` from spreading, which forces the bridge
+from the top to stay in the corridor — a ballot event of probability `≍
+1/h` — and the words that leave it (`F >= 1` floor levels, `K = 3`) carry
+`2.4%, 7.8%` of the mass and `< 2.3%, < 1.3%` of the coefficient at `h =
+40, 80` (the `F = 0` words give `100.4%, 99.65%` of it; renewal output,
+C3). So `M(h) ≈ e^(-hI) · h^(-1/2)` (local CLT) `· h^(-1)` (ballot) `· |Σ_J
+γ_J|` with `γ_J` the `J`-terms per unit of that scale, i.e. `M ≍ h^(-3/2)
+e^(-hI) ≍ P_h` iff the series `Σ_J γ_J` converges to a non-zero limit: that
+limit is (T2) in its final form, one complex number. Its convergence is H;
+its non-vanishing is open, and nothing here bounds it below. The S21
+observation `M/P_h ∈ [0.44, 0.58]` is this constant read at finite `h`,
+still drifting because the `J`-window is still widening.
+
+**What changed for (T1) and (T2).** (T1) *ceiling part*: for every `J_0`,
+the words with at least `J_0` ceiling levels contribute at most `Σ_(J>=J_0)
+mass_h(J) Ñ_(J-1)`, PROVED, and under H at most `C' e^(θ* δ) e^(-hI) ·
+(ρ/(m-1))^(J_0)` uniformly in `h` — an *absolute* cancellation at the scale
+`e^(-hI)`; relative to the coefficient (`≍ h^(-3/2) e^(-hI)` if (T2)) the
+uniform version needs `J_0 ≍ (3/2) ln h / |ln 0.987| ≈ 115 ln h`, so the
+band width in section 2c's sense is `O(log h)` asymptotically, after the
+`√h` regime. (T1) *floor part*: OBSERVED negligible (above), no proof; the
+mechanism is the spread of a real angle, not 2-adic scrambling. (T2): reduced
+to `Σ_J γ_J ≠ 0`. The S21 rate bracket `0.947–0.950` is read as the rate
+`0.9465` with a non-power prefactor, and the "levels `180..300` lean against
+`M ≍ P_h`" of section 2c is withdrawn as evidence: the drift is the
+widening `J`-window, and Theorem C forbids any rate above `0.9465` under H.
+Obligations: (1) prove H in any form with `ρ < 0.585` — the first genuinely
+new target, a single closed family, generic frequencies, the 2-adic digits
+of `3^(-n)`; (2) compute the limits `γ_J` (the top-part bridge sums converge
+as `h -> ∞` at fixed `J`) and the constant `Σ_J γ_J` to settle (T2)
+numerically; (3) extend `Ñ_n` past `n = 80` (the recursion with window
+`[-60, 0]` costs seconds per level) to watch the `1.3%` margin; (4) the
+floor part of (T1) as a smoothness statement for the law of the real angle.
+
 ## 3. The same-length spread lemma (the Moore mirror)
 
 **Proposition 4 (PROVED).** Let `w ≠ w'` be words of the same length `d`
@@ -766,6 +1023,10 @@ python 04-computation/experiments/collatz_five_mirrors_rate300_20260929.py      
 python 04-computation/experiments/collatz_five_mirrors_coherent_20260929.py       > 05-knowledge/results/collatz_five_mirrors_coherent_20260929.out   # 10 min
 python 04-computation/experiments/collatz_five_mirrors_coherent120_20260929.py    > 05-knowledge/results/collatz_five_mirrors_coherent120_20260929.out   # 10 min
 python 04-computation/experiments/collatz_five_mirrors_excursion_profile_20260929.py 40 80 120 > 05-knowledge/results/collatz_five_mirrors_excursion_profile_20260929.out   # 15 min
+python 04-computation/experiments/collatz_five_mirrors_gap_20260929.py            > 05-knowledge/results/collatz_five_mirrors_gap_20260929.out   # 3 min
+python 04-computation/experiments/collatz_five_mirrors_renewal_20260929.py        > 05-knowledge/results/collatz_five_mirrors_renewal_20260929.out   # 1 min
+python 04-computation/experiments/collatz_five_mirrors_renewal_bound_20260929.py  > 05-knowledge/results/collatz_five_mirrors_renewal_bound_20260929.out   # 1 min
+python 04-computation/experiments/collatz_five_mirrors_renewal_cert_20260929.py   > 05-knowledge/results/collatz_five_mirrors_renewal_cert_20260929.out   # 1 min
 ```
 
 | item | status |
@@ -779,7 +1040,14 @@ python 04-computation/experiments/collatz_five_mirrors_excursion_profile_2026092
 | the maximum over the seventeen families `u 2^j`, `u <= 49` odd, `3 ∤ u`, is on the pure powers of two at every level `h <= 60` | VERIFIED |
 | `M(h) ≍ P_h`, rate `3^(h*-1) = 0.9465` (a necessary condition for (2.3), measured; not the `ℓ^1` estimate itself) | CONJECTURAL; the levels `180..300` lean slightly against it (rate `0.947–0.950`) |
 | the recursion to `h = 300`: doubling exponents `3.1 -> 13.0` growing linearly (slope `0.0785`), rate `0.947–0.950` (`3^(h*-1)` at the lower edge), `M/P_h ∈ [0.44, 0.58]` rising after `180` | VERIFIED (certified by the audit's `a <= 60` run); the rate identification OBSERVED in the weak sense, the data leaning slightly against `M ≍ P_h` |
-| the resonant coefficient split by excursion above the critical line (`h = 40, 80, 120`): strict no-descent words carry `54%, 41%, 35%`; the band `E < c` reproduces the coefficient to `10%` from `c = 5, 9, 15` at `h = 40, 80, 120` (magnitude within `4%` from `c = 5`); deep descenders cancel slowly, the band width growing like `h/8`; random units at `h = 30` sit at the square-root scale, `10^5` below the resonance | VERIFIED (exact DP and recursion); the mechanism reading DIRECTION; targets (T1), (T2) OPEN |
+| the resonant coefficient split by excursion above the critical line (`h = 40, 80, 120`): strict no-descent words carry `54%, 41%, 35%`; the band `E < c` reproduces the coefficient to `10%` from `c = 5, 9, 15` at `h = 40, 80, 120` (magnitude within `4%` from `c = 5`); deep descenders cancel slowly, the band width growing like `h/8`; random units at `h = 30` sit at the square-root scale, `10^5` below the resonance | VERIFIED (exact DP and recursion); the mechanism reading DIRECTION; targets (T1), (T2) OPEN (superseded in part by section 2d) |
+| Lemma G (one-step gap `<= 0.809` on half the units: `v_2(t) = 1` or `t` odd with `t ≡ (-1)^(n+1) mod 4`; the resonant set `t = ±2^v u` small named) | PROVED; checked over all units to `n = 9` |
+| the exponent-walk identity; the real-phase identity for `A <= s`; the Ramanujan average `0` | PROVED (checked at `h = 6`, `n <= 7`) |
+| Lemma R' (`|c_J| <= mass_h(J) Ñ_(J-1)`) and the Chernoff mass law `mass_h(J) <= e^(-hI) e^(θ*δ) (log_2 3 - 1)^(-J)`, `e^(-I) = 3^(h*-1)` | PROVED; term by term VERIFIED at `h = 40, 80` (worst ratio `0.84`) |
+| Theorem C: H (`Ñ_n <= C ρ^n`, `ρ < 0.585`) ⟹ `|mu_hat_h(2^s)| <= C' e^(θ*δ) (3^(h*-1))^h` for all `h`, `s <= h log_2 3` | PROVED given H; H CONJECTURAL |
+| the negative family at the Parseval scale: `Ñ_n 3^(n/2) ∈ [0.12, 1.56]`, rate `0.574` over `20..80`; certified by `a <= 60` | VERIFIED |
+| the bound `Σ_J mass_h(J) Ñ_(J-1) = 0.11–0.18 e^(-hI)` at `h = 40..300`, `M/bound = 0.07 -> 0.01`; `J_eff = 10, 14, 19 ≈ 1.6 √h`; `F = 0` words carry `99.6–100.4%`; per-mass weights `≈ 1/h` | VERIFIED; the readings DIRECTION |
+| the profile asymmetry: ceiling side `3^(-n/2)`, floor side `≈ 2^(-d) M(n)` | OBSERVED |
 | Fourier mass per level `0.462 -> 0.472`, typical `|mu_hat|^2 3^h = 0.70` | VERIFIED; the level-by-level identity with the second-moment increments PROVED (Parseval + Proposition 1) |
 | cost/last-valuation decomposition of the resonance at `h = 10` | FINITE-EXACT |
 | Proposition 3 (Gauss sums: 2-adic reading; no uniform gap) | PROVED; table FINITE-EXACT |
@@ -875,7 +1143,7 @@ log_2 3 - 6 ± 1` for `20 <= h <= 120`, amending the first audit's
 
 **Third audit, section 2c (2026-09-29, same auditor; own recursion to `h = 300` with `a <= 40` and a certified `a <= 60` run, reversed-order and noise-injection runs, own `P_h`, own excursion-split DP validated at `c = ∞`, a hundred random units at `h = 30` and the exact coefficient distribution at `h = 12, 14`; files `collatz_five_mirrors_20260929_audit3.py/.out/.md`, 25 claims): SOUND WITH CORRECTIONS, eleven applied.** Holds: every level-300 value (to `4·10^(-7)`), all fits and ratios, the phase factorisation with its inverse-power reading, the split's completeness, the random units. Corrections: (1) the rate bracket had the pure-geometric misfit as its lower end; the admissible fits give `0.947–0.950`, the no-descent rate at the lower edge, and the `M/P_h` rise over `180..300` leans against `M ≍ P_h`; (2) "the band within 6 bits reproduces the magnitude" was a coincidence of a rotated vector at `h = 120`: as a vector the band needs `c = 5, 9, 15` for `10%` (`h/8`), so (T1) must be uniform in `h` with `c = c(h)`; (3) the level-300 certification (`a <= 40` not self-certifying); (4) `0.44–0.48` not `0.46 ± 0.02`, `s - h log_2 3 = -5.3 .. -7.2`, the strict share's trend, rms against median for the random units, the two-sided alignment condition. The excursion-profile paragraph was added after this audit's snapshot and is not covered by it.
 
-**Next probes.** The targets (T1), (T2) of section 2c (cancellation of
+**Next probes (S21; see section 2d for the S22 state).** The targets (T1), (T2) of section 2c (cancellation of
 deep descents; the band residue), replacing the earlier "coherent
 no-descent family with fixed initial phases", which section 2c refutes as
 a mechanism (the strict no-descent words carry a third to a half of the coefficient over `h = 40..120`, a decreasing share, and their phases are spread); whether the argmax of `|mu_hat_h|` over all units stays on the
