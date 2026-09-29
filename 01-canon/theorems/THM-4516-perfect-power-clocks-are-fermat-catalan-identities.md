@@ -1,10 +1,13 @@
 ---
 id: THM-4516
-title: "Perfect-power clocks are Fermat-Catalan identities: for q = p^s an odd prime power, X >= 2, r >= 2, an identity 2^K - q^X = +-m^r is a primitive solution of x^a + y^b = z^c with exponents {K, sX, r} and (THM-4484) makes the mixed shape (K,X) free for y -> y/2, (qy +- m^r)/2; for odd q <= 201, K <= 400 the only such clocks are Catalan 2^3 - 3^2 = -1, the Pythagorean family 2^K + (2^(K-2) - 1)^2 = (2^(K-2) + 1)^2, and the three Fermat-Catalan solutions with a power-of-two term, 2^5 + 7^2 = 3^4, 7^3 + 13^2 = 2^9, 2^7 + 17^3 = 71^2, whose free cycles are those of 3x-49, 9x-49, 7x+169, 13x+343, 71x-4913; 2^3 - 7 zeta_3 = (3 - zeta_3)^2; Beal implies no free shape with all three exponents >= 3"
+title: "Perfect-power clocks are Fermat-Catalan identities: for q = p^s an odd prime power, X >= 2, r >= 2, an identity 2^K - q^X = +-m^r is a primitive solution of x^a + y^b = z^c with exponents {K, sX, r} and (THM-4484) makes the mixed shape (K,X) free for y -> y/2, (qy +- m^r)/2; for odd q <= 201, K <= 400 the only such clocks are Catalan 2^3 - 3^2 = -1, the Pythagorean family 2^K + (2^(K-2) - 1)^2 = (2^(K-2) + 1)^2, and the three Fermat-Catalan solutions with a power-of-two term, 2^5 + 7^2 = 3^4, 7^3 + 13^2 = 2^9, 2^7 + 17^3 = 71^2, whose free cycles are those of 3x-49, 9x-49, 7x+169, 13x+343, 71x-4913; 2^3 - 7 zeta_3 = (3 - zeta_3)^2; Beal implies no perfect-power clock 2^K - p^(sX) = +-m^r with K, sX, r >= 3"
 status: >
   PROVED (elementary, from THM-4484 and the definitions) + FINITE-EXACT (census)
   + CITED (Darmon-Granville finiteness; the ten known Fermat-Catalan solutions; the
-  April 2025 survey arXiv:2412.11933v2 of solved signatures). NOT independently audited.
+  April 2025 survey arXiv:2412.11933v2 of solved signatures). Independently audited 2026-09-29 (opus S23 subagent, collatz_necklace_20260929_audit.md):
+  SOUND WITH CORRECTIONS -- the Beal-shadow consequence and the clock-shadow sentence of (5)
+  were refuted as stated and are corrected above (MISTAKE-551); censuses, free cycles and
+  the Eisenstein square reproduced.
   (1) Dictionary. q = p^s odd, X >= 2, K >= 1, r >= 2. If 2^K - q^X = +-m^r then
   gcd(m, 2p) = 1 and the identity is a primitive solution of the generalised Fermat
   equation with exponent multiset {K, sX, r}; if 1/K + 1/(sX) + 1/r < 1 it is one of
@@ -29,12 +32,13 @@ status: >
   squares above 13, and the untwisted factor is Gersonides' unit 2^3 - 7 = 1 (the
   trivial cycle of 7x+1). Six of the nine primitive 7x+169 cycles admit a fair 3-split.
   (5) Beal shadow: a perfect-power clock with K, sX, r >= 3 would be a Beal
-  counterexample, so Beal implies no map py +- m^r (r >= 3) has a free mixed shape with
-  K >= 3, sX >= 3, X >= 2. The statement "x^4 + y^3 = z^17 has no solution with
+  counterexample, so Beal implies no clock 2^K - p^(sX) with K >= 3, sX >= 3, X >= 2 is itself
+  +-m^r with r >= 3 (freeness only needs the clock to divide d: 3y+125 has the free
+  shape (5,3) with clock 5, so "no map py +- m^r has a free mixed shape" is false). [corrected by the independent audit `collatz_necklace_20260929_audit.md`, opus S23, 2026-09-29] The statement "x^4 + y^3 = z^17 has no solution with
   xyz != 0, gcd(x,y) = 1" is NOT in the solved table of the April 2025 survey (among
-  (3,4,n) only n = 4, 5 are solved; smallest open Beal signature (3,5,7)); recorded as
-  UNVERIFIED. Its clock shadow is empty: no term can be a pure power of two while the
-  other two are powers of one odd base.
+  (3,4,n) only n = 4, 5 are solved; open Beal signature with the smallest largest exponent: (3,5,7) [corrected by the independent audit `collatz_necklace_20260929_audit.md`, opus S23, 2026-09-29]); recorded as
+  UNVERIFIED. Its clock shadow (solutions whose even variable is a power of two, read as
+  2^K = q^X +- m^r) is as open as the statement itself. [corrected by the independent audit `collatz_necklace_20260929_audit.md`, opus S23, 2026-09-29]
 source: collatz-necklace-20260929 session (mac-mini), 2026-09-29; owner seed: the (4,3,17) statement
 depends_on:
   - 01-canon/theorems/THM-4484-free-and-sporadic-cycles.md (shift criterion: a mixed shape is free iff (2^K - q^X) | d)
@@ -55,7 +59,7 @@ extra_sha256: 757328ca911a56e5d31c29fb22edcc0726e87ffeadfff2beb3239fc85c3a2537 (
 script_sha256: 7dec4393a6248b3be63dd4bd65b28e9988da66c882ae571b7b60f54dc3c95798 (power_clocks), 8e8272b3b2c5027127185721dc99d17ded7f25531eee1aba0542912666108fe0 (circulant_check)
 output_sha256: 8288e05f57f1a566191d6a30732645b6ca3d40ce885cf4e234d2f4387f94a1f2 (q201_K400), 485dc20dbead1ceaa1e114dfea28444fb34cf62edaf9c25c4ab75260629182a0 (q3_K3000), b8885a9ad4819611a59f23affbf954d23adc2450353ba684781e6d374bca1d01 (circulant_check_d100)
 hash_basis: raw LF bytes
-audit: NOT independently audited; perfect-power tests by gmpy2.is_power/iroot; every listed cycle recomputed by iteration.
+audit: NOT independently audited; perfect-power tests by gmpy2.is_power, exponent identified by iroot for r <= 64 only (a power with least prime exponent > 64 would be dropped by power_clocks.py); the independent audit sieve covers every exponent and finds nothing further [corrected by the independent audit `collatz_necklace_20260929_audit.md`, opus S23, 2026-09-29]; every listed cycle recomputed by iteration.
 ---
 
 # THM-4516 -- perfect-power clocks are Fermat–Catalan identities

@@ -136,10 +136,7 @@ chain, the merge with 27); `collatz_three_mirrors_basins_20260929.c` →
    source for `x^4 + y^3 = z^17`; it found arXiv:2609.26996 (September 2026,
    "The primitive generalized Fermat equation `x^3 + y^5 = z^7`: a
    computer-assisted proof"), which, if correct, removes the smallest open
-   Beal signature named in mac-mini's note (AUTHOR-CLAIMED). mac-mini's clock
-   shadow argument (no term of `x^4 + y^3 = z^17` can be a pure power of two
-   while the other two are powers of one odd base) is confirmed by the
-   audit of section 6.
+   Beal signature named in mac-mini's note (AUTHOR-CLAIMED). mac-mini's sentence that the clock shadow of `x^4 + y^3 = z^17` is empty was refuted as unsupported by the audit of section 6 (the shadow — the solutions whose even variable is a power of two — is as open as the statement), as was the Beal-shadow consequence of THM-4516(5); both are corrected in their files and logged in MISTAKE-551.
 
 ---
 
@@ -482,11 +479,7 @@ be cited by the next session. The same search found arXiv:2609.26996
 (September 2026), *The primitive generalized Fermat equation `x^3 + y^5 =
 z^7`: a computer-assisted proof* — the signature mac-mini's note names as
 the smallest open Beal signature; recorded as AUTHOR-CLAIMED, not read, and
-added as an addendum to that note's section 2.5. mac-mini's clock-shadow
-observation (a perfect-power clock `2^K - q^X = ±m^r` is a Fermat–Catalan
-identity with a power-of-two term; `x^4 + y^3 = z^17` has none) is confirmed
-by the audit below. Nothing in this session bears on the truth of the
-statement.
+added as an addendum to that note's section 2.5. mac-mini's further sentence that the equation's clock shadow is empty ("no term can be a pure power of two while the other two are powers of one odd base") was refuted as unsupported by the audit below: a coprime solution has exactly one even variable, and the shadow is precisely the sub-case where it is a power of two (`x = 2^a` gives `2^{4a} = z^{17} - y^3`, a clock of shape `(4a, 17)`), which is as open as the equation itself. Nothing in this session bears on the truth of the statement.
 
 ---
 
@@ -495,7 +488,7 @@ statement.
 An independent auditor (own code, `collatz_necklace_20260929_audit.py/.out/.md`)
 was launched on the necklace note and its three theorem files with the brief
 to re-derive before reading, recompute the censuses and densities, and check
-statuses. AUDIT_PLACEHOLDER
+statuses. **Verdict (report `collatz_necklace_20260929_audit.md`, 38 claims, own sieves to `2^30` and `2^32`, own perfect-power sieve over every exponent, own DFT checks on 1206 fair splits): SOUND WITH CORRECTIONS.** Holds: the discrete IVT, the circulant share equation, the DFT diagonalisation and the clock factorisation (exact in `Z[zeta_j]`), the CRT form, the existence criteria, the `K <= 18` census to the last row, `E[N_j]` and the Stirling form, the fair Eliahou identity, the 30 necklaces of shape `(11,7)`, the dictionary of THM-4516, all four perfect-power censuses (now covered for every exponent, where the session's `iroot` covered `r <= 64`), every free cycle by direct iteration, the Eisenstein square, the disjoint trunk-entry basins, the superadditivity argument, the sheet cap, every FINITE-EXACT density table to the last digit, the Krasikov–Lagarias citation, HYP-9165's OPEN status. Refuted: (1) THM-4516(5)'s consequence "Beal implies no map `py ± m^r` (`r >= 3`) has a free mixed shape with `K, sX >= 3`, `X >= 2`" — freeness needs only `(2^K - p^X) | m^r` (THM-4484), and `3y + 125` has the free shape `(5,3)` with clock `2^5 - 3^3 = 5 | 125` (two integer cycles, no Beal solution); the correct consequence is that no perfect-power *clock* has all three exponents `>= 3`; (2) "the clock shadow of `x^4 + y^3 = z^17` is empty" — unsupported (section 5). Corrections of statement: `B(5)` and `B(32)` partition `B(1) \ {1,2,4,8,16}`, not the integers minus the powers of two (that would be Collatz); `B(2^{2i-1})` includes the trunk above; the trunk-entry densities summing to `1` implies almost every orbit reaches `1` but the converse is unproved; `e_3, e_6, e_9, e_12` vanish to seven decimals (doubling rays), not exactly; the third basin is flat to three decimals, not four; the sheet cap is the limit of the still-rising `{5,7,10}` basin, `>= 0.3250`, not `0.3248`; the `1/log m` lower bound is PROVED only at the computed `m` (its order EMPIRICAL); minor wording (the eigenvalues up to units; the least-absolute-value elements of the `(11,7)` necklaces; `21 = 7·3`; the ordering sense of "smallest open Beal signature"). All eighteen textual corrections were applied to mac-mini's note, theorem files and HYP-9165 with attribution tags; the two refuted consequences are MISTAKE-551. Nothing changes the Collatz status.
 
 ---
 
@@ -515,7 +508,7 @@ statuses. AUDIT_PLACEHOLDER
 | basins of the chain, of `27`, of `137` to `2^30`; `dens B(1 + 12^m) = 0.48, 0.036, 0.0044, 3.9·10^(-4), 2.0·10^(-5)` (`m = 1..5`); `dens B(13) = 0.477`, `dens B(17) = 0.461`, `dens B(9232) = 6.6·10^(-5)` | FINITE-EXACT counts; densities OBSERVED (two codes agree at `2^21`; the bitmask sieve agrees with the chain sieve at `2^30`) |
 | `X_0(1729) > 2^30` for the Krasikov–Lagarias threshold | PROVED (by the count) |
 | `X_0(1729) ≈ 2^49` | OBSERVED extrapolation |
-| `x^4 + y^3 = z^17` has no primitive solution | UNVERIFIED (no source found) |
+| `x^4 + y^3 = z^17` has no primitive solution | UNVERIFIED (no source found); its "clock shadow" is not empty by any known argument (audit of THM-4516) |
 | arXiv:2609.26996 on `(3,5,7)` | AUTHOR-CLAIMED (found, not read) |
 
 **What changes for the repo.** (1) The seed-1 mass and the negative-cycle

@@ -32,7 +32,7 @@ def omega_chunks(n: int, chunk: int):
     """Yield (lo, hi, omega_n[lo:hi]) for k in [0, L_n) using exact int64 arithmetic (valid for n <= 19)."""
     mod = 3 ** n
     L = 2 * 3 ** (n - 1)
-    assert mod * mod < 2 ** 63
+    big = mod * mod >= 2 ** 63   # n >= 20: multiply in two halves to stay inside int64
     base = np.empty(chunk, dtype=np.int64)
     x = 1
     for k in range(chunk):
@@ -43,25 +43,36 @@ def omega_chunks(n: int, chunk: int):
     lo = 0
     while lo < L:
         hi = min(L, lo + chunk)
-        r = (base[: hi - lo] * np.int64(mult)) % np.int64(mod)
+        if not big:
+            r = (base[: hi - lo] * np.int64(mult)) % np.int64(mod)
+        else:
+            m_lo = mult % (1 << 20)
+            m_hi = mult >> 20
+            r = (base[: hi - lo] * np.int64(m_lo)) % np.int64(mod)                       # base < 3^20 < 2^32, m_lo < 2^20: product < 2^52
+            t = (base[: hi - lo] * np.int64(m_hi)) % np.int64(mod)                       # m_hi < 3^20 / 2^20 < 2^12
+            t = (t * np.int64(1 << 20)) % np.int64(mod)                                   # < 2^32 * 2^20 = 2^52
+            r = (r + t) % np.int64(mod)
         yield lo, hi, np.exp(2j * np.pi * (r.astype(np.float64) / mod))
         mult = (mult * step) % mod
         lo = hi
 
 
-def level_up(prev: np.ndarray, n: int, chunk: int = 1 << 22) -> np.ndarray:
+def level_up(prev: np.ndarray, n: int, chunk: int = 1 << 22, c64_from: int = 99) -> np.ndarray:
     L = 2 * 3 ** (n - 1)
     Lp = len(prev)
-    out = np.empty(L, dtype=np.complex128)
+    dt = np.complex64 if n >= c64_from else np.complex128
+    if n >= c64_from and prev.dtype != np.complex64:
+        prev = prev.astype(np.complex64)
+    out = np.empty(L, dtype=dt)
     # pass 1: run the filter around the cycle from zero state until the transient 2^-(steps) is below 2^-80
-    zi = np.zeros(1, dtype=np.complex128)
+    zi = np.zeros(1, dtype=dt)
     for _ in range(max(1, -(-80 // L))):
         for lo, hi, om in omega_chunks(n, chunk):
-            g = om * prev[np.arange(lo, hi) % Lp] if Lp < L else om * prev[lo:hi]
+            g = (om.astype(dt) * prev[np.arange(lo, hi) % Lp]) if Lp < L else (om.astype(dt) * prev[lo:hi])
             _, zi = lfilter(B, A, g, zi=zi)
     # pass 2: from the periodic state (the transient of pass 1 is 2^-L, zero in float64 for L >= 60)
     for lo, hi, om in omega_chunks(n, chunk):
-        g = om * prev[np.arange(lo, hi) % Lp] if Lp < L else om * prev[lo:hi]
+        g = (om.astype(dt) * prev[np.arange(lo, hi) % Lp]) if Lp < L else (om.astype(dt) * prev[lo:hi])
         y, zi = lfilter(B, A, g, zi=zi)
         out[lo:hi] = y
     return out
@@ -70,12 +81,13 @@ def level_up(prev: np.ndarray, n: int, chunk: int = 1 << 22) -> np.ndarray:
 if __name__ == "__main__":
     NMAX = int(sys.argv[1]) if len(sys.argv) > 1 else 16
     NFROM = int(sys.argv[2]) if len(sys.argv) > 2 else 1
+    C64_FROM = int(sys.argv[3]) if len(sys.argv) > 3 else 99
     t0 = time.time()
     # level 1 by hand: L = 2, m_1(k) = sum_a 2^-a e(2^(k-a) mod 3 / 3)
     m = np.array([sum(2.0 ** (-a) * np.exp(2j * np.pi * (pow(2, k - a, 3) / 3)) for a in range(1, 80)) for k in range(2)], dtype=np.complex128)
     for n in range(2, NMAX + 1):
         prev = m
-        m = level_up(prev, n)
+        m = level_up(prev, n, c64_from=C64_FROM)
         del prev
         L = len(m)
         absm = np.abs(m)

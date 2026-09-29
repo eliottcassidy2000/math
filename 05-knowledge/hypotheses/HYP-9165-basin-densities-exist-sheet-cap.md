@@ -1,6 +1,6 @@
 ---
 id: HYP-9165
-title: "Basin densities exist on both sheets of 3x+1, with dens B({1}) = 0.3269, dens B({5,7,10}) = 0.3248, dens B({17,...,91}) = 0.3484 for 3x-1 and dens B(5) = 0.938 for 3x+1; the smallest 3x-1 basin is the five-cycle's, so the sheet cap on cycle-uniform sheet-blind lower bounds is 0.3248, not 1/3"
+title: "Basin densities exist on both sheets of 3x+1, with dens B({1}) = 0.3269, dens B({5,7,10}) = 0.3248, dens B({17,...,91}) = 0.3484 for 3x-1 and dens B(5) = 0.938 for 3x+1; the smallest 3x-1 basin is the five-cycle's, so the sheet cap on cycle-uniform sheet-blind lower bounds is the limit of the {5,7,10} basin density, >= 0.3250 on the evidence to 2^32 (still rising), not 1/3"
 status: >
   OPEN. FINITE-EXACT support: counting densities on [1, 2^29] (3x-1) and [1, 2^30]
   (3x+1), stable to three decimals across dyadic ranges (THM-4517). Existence of the
