@@ -430,6 +430,16 @@ fit the eighteen FFT levels better than a geometric law, fails beyond `h ≈
 30`. The resonant exponent grows linearly, `s/h = 1.52–1.53` at `h =
 100–120`, approaching `log_2 3 = 1.585`.
 
+*Is the maximum on the pure powers of two?* Every family `u 2^j` (`u` a
+fixed unit) is closed under the recursion in the same way, so the
+comparison can be run for the small odd multipliers `u <= 49`, `3 ∤ u`
+(seventeen families; `collatz_five_mirrors_multiplier_families_20260929.py`):
+at every level `h <= 60` the pure family `u = 1` gives the largest
+coefficient, with `pure/max = 1.0000` throughout (VERIFIED; the other
+sixteen families never exceed it). Units with larger multipliers are not
+covered, so "the maximum stays on the powers of two" remains OBSERVED (to
+`h = 18` over all units, to `h = 60` over these families).
+
 **The no-descent identity (OBSERVED).** `max_j |m_h(j)| / P_h = 0.46 ±
 0.02` at every level `20 <= h <= 120` (`0.461` at `20`, `0.463` at `50`,
 `0.462` at `100`, `0.443` at `120`). The rate of `P_h` is the
