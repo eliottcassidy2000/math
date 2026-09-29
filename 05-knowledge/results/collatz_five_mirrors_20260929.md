@@ -1,4 +1,4 @@
-# Five papers as structural mirrors of the 3-adic Syracuse law: the Fourier profile of Tao's Syracuse random variable (primitive maxima at the powers of two, decaying at the no-descent rate `3^(h*-1)` on the powers of two to level 120, scale-invariant Fourier mass `0.47`), the same-length collision threshold, and carry-polynomial reciprocity under word reversal
+# Five papers as structural mirrors of the 3-adic Syracuse law: the Fourier profile of Tao's Syracuse random variable (primitive maxima at the powers of two, decaying like the no-descent probability, `0.46 P_h`, on the powers of two to level 120, scale-invariant Fourier mass `0.47`), the same-length collision threshold, and carry-polynomial reciprocity under word reversal
 
 **Session:** opus, `collatz-poset-dag-20260927` (S20), 2026-09-29.
 **Owner's directive:** "merge ideas related to the linked papers below into
@@ -37,12 +37,10 @@ collision table; the reversed cycles; the Gauss-sum table; the traces) +
 OBSERVED (the maxima sit at the powers of two `±2^s`, `s - h` growing
 slowly; the decay ratio rises from `0.65` to `0.89` over eighteen levels;
 the Fourier mass per conductor level is `0.46–0.47`; on the powers of two
-the coefficient is `0.46` times the no-descent probability at every level
-`20..120`) + CONJECTURAL (`M(h) ≍ P_h`, the sup-norm mixing rate is the
-no-descent rate `3^(h*-1)`) + DIRECTION. No Collatz proof step. Audited
-SOUND WITH CORRECTIONS (eighteen applied; section 8); section 2b, the
-`3x+k` reversal survey and Proposition 6 were added after the audit's
-snapshot.**
+the coefficient is `0.44–0.48` times the no-descent probability over the
+levels `20..120`) + CONJECTURAL (`M(h) ≍ P_h`: the maximal primitive
+coefficient decays at the no-descent rate `3^(h*-1)`, a necessary condition
+for (2.3), not the mixing estimate itself) + DIRECTION. No Collatz proof step. Audited SOUND WITH CORRECTIONS (eighteen applied; section 8); section 2b, the `3x+k` reversal survey and Proposition 6 were added after the audit's snapshot, and section 2b was then audited separately (fifteen corrections applied; section 8).**
 
 Scripts and outputs:
 `04-computation/experiments/collatz_five_mirrors_20260929.py` →
@@ -86,17 +84,23 @@ reversal-invariant trace, Proposition 6).
    family under the exact frequency recursion (`2^j -> 2^(j-a)`), so
    `mu_hat_h(2^j)` is computable without the law (section 2b). That
    recursion reproduces every FFT value to six digits and continues to `h =
-   120`, where `max_j |mu_hat_h(2^j)|` decays geometrically (ratio `0.906
-   -> 0.930` over `h = 30..120`; local exponents `2.1, 2.3, 2.7, 3.1, 3.5,
-   4.4, 5.3, 6.1` on successive doublings, the signature of a geometric
-   law) and equals `0.46 ± 0.02` times the no-descent probability `P_h =
-   P(a_1 + ... + a_j < j log_2 3 for all j <= h)` at every level `20..120`.
-   `P_h` decays at the rate `3^(h* - 1) = 0.9465`, `h* = h(log_3 2)` the
+      120`, where `max_j |mu_hat_h(2^j)|` decays geometrically up to a
+   polynomial prefactor (`C h^(-1.1) r^h`, `r ≈ 0.944`; level ratio `0.906
+   -> 0.930` over `h = 30..120`; local exponents `2.1, ..., 6.1` on
+   successive doublings, growing linearly with slope `0.083 ≈ |log_2
+   0.9465|`, the signature of a geometric law) and is `0.44–0.48` times the
+   no-descent probability `P_h = P(a_1 + ... + a_j < j log_2 3 for all j <=
+   h)` over the levels `20..120`. `P_h` decays at the rate `3^(h* - 1) =
+   0.9465` (PROVED, standard large deviations), `h* = h(log_3 2)` the
    thin-divergence exponent of THM-4476: on the powers of two, which carry
-   the maximum wherever that was checked, the sup-norm mixing rate of the
-   3-adic law is the no-descent rate (OBSERVED; CONJECTURAL for `M(h)`).
-   This is consistent with (2.3) (geometric beats every polynomial), and it
-   is the first measurement of what the mixing estimate actually bounds.
+   the maximum wherever that was checked, the maximal Fourier coefficient
+   decays like the no-descent probability (OBSERVED to `h = 120`); that the
+   decay rate of `M(h)` is the no-descent rate `3^(h*-1)` is CONJECTURAL
+   (it needs the maximum to stay on the powers of two), and it concerns the
+   maximal primitive coefficient, not the `ℓ^1` distances of (2.3). This is
+   consistent with (2.3) (geometric beats every polynomial) and is the
+   first measurement of the necessary condition that Proposition 2 extracts
+   from the mixing estimate.
 2. **Scale invariance of the Fourier energy.** The Fourier mass at conductor
    level `h`, `sum_(cond t = 3^h) |mu_hat(t)|^2`, is `0.667, 0.476, 0.462`
    and then `0.464 .. 0.472` for `h = 4..18` (slowly increasing); with
@@ -117,10 +121,10 @@ reversal-invariant trace, Proposition 6).
    `A/h = 1.49` and `1.48`, and the cost family `A ≈ 1.48 h` has
    large-deviation mass `e^(-0.093 h)` (ratio `0.91` per level). The reading
    that the low-cost coherent words carry the coefficient is DIRECTION at
-   these levels and is confirmed at scale by section 2b: to `h = 120` the
-   coefficient at the powers of two tracks the no-descent probability, whose
-   critical family has `A/h -> log_2 3 = 1.585` (the resonant `s/h` reaches
-   `1.53` at `h = 120`).
+      these levels and is consistent with section 2b: to `h = 120` the
+   coefficient at the powers of two is proportional to the no-descent
+   probability, whose critical family has `A/h -> log_2 3 = 1.585` (the
+   resonant exponent is `s = h log_2 3 - 6 ± 1` there).
 4. **One-step geometric Gauss sums have no uniform gap (Proposition 3,
    PROVED).** `G_j(t) = c_j sum_r 2^(-r) e(t 2^(-r)/3^j)` satisfies `sup_t
    |G_j(t)| -> 1` (`0.577, 0.582, 0.789, 0.887, 0.944, 0.971, 0.986, 0.994,
@@ -315,8 +319,9 @@ the closed recursion of section 2b).**
 `M(1) = 1/sqrt 3` exactly (`|(1/3) e(1/3) + (2/3) e(2/3)|`). The maximum
 is always at a power of two up to sign (`|mu_hat(-u)| = |mu_hat(u)|`),
 `u = ±2^s` with `s - h` stepping up by one every two or three levels (`s -
-h = 1` at `h = 7`, `5` at `h = 18`), so `2^s/3^h` decreases geometrically
-(`0.12` at `h = 7`, `0.027` at `h = 14`, `0.022` at `h = 18`): the
+h = 1` at `h = 7`, `5` at `h = 18`), so `2^s/3^h` decreases (`0.12` at `h = 7`, `0.027` at `h = 14`, `0.022`
+at `h = 18`) until it settles near `2^(-6)` (section 2b: `s = h log_2 3 -
+6 ± 1` for `20 <= h <= 120`): the
 character `e(2^s y/3^h)` is not a low frequency in the real sense; it is
 the frequency that turns the 3-adic inverses `2^(-a)` of the small
 valuations into small integers `2^(s-a)` (the one-step Gauss sums of
@@ -419,16 +424,21 @@ true wherever checked):
 
 (`P_h = P(a_1 +
 ... + a_j < j log_2 3` for all `j <= h)` for i.i.d. geometric(1/2)
-valuations, by dynamic programming.) The decay is geometric: a geometric
-fit over `h = 40..120` has ratio `0.930` with maximal log-residual `0.12`,
-against `0.32` for the best shifted power law (which needs exponent `6.9`
-and shift `20`), and the local exponents on successive doublings grow
-without bound, `2.1` (10→20), `2.3` (15→30), `2.7` (20→40), `3.1`
-(25→50), `3.5` (30→60), `4.4` (40→80), `5.3` (50→100), `6.1` (60→120),
-as `h |log_2 r|` for a geometric law. The audit's shifted power law, which
-fit the eighteen FFT levels better than a geometric law, fails beyond `h ≈
-30`. The resonant exponent grows linearly, `s/h = 1.52–1.53` at `h =
-100–120`, approaching `log_2 3 = 1.585`.
+valuations, by dynamic programming.) The decay is geometric with a
+polynomial prefactor: `C h^(-1.1) r^h`, `r = 0.944`, fits `h = 40..120` to
+`0.9%` (a pure geometric fit has ratio `0.930` and residual `12%`; a
+shifted power law is not a well-posed competitor over a bounded range,
+since with a large shift it tends to a geometric law), and the local
+exponents on successive doublings, `2.1` (10→20), `2.3` (15→30), `2.7`
+(20→40), `3.1` (25→50), `3.5` (30→60), `4.4` (40→80), `5.3` (50→100),
+`6.1` (60→120), grow linearly in `h` with slope `0.083` per level and
+intercept `1.1`, as `h |log_2 r| + β` for `C h^(-β) r^h` (`|log_2 0.9465|
+= 0.079`); a shifted power law would saturate them at its exponent. The
+audit's shifted power law, which fit the eighteen FFT levels better than a
+geometric law, fails beyond `h ≈ 30`. The resonant exponent is `s = h log_2
+3 - 6 ± 1` for every `20 <= h <= 120`: the resonant frequency is a fixed
+fraction `2^s/3^h ≈ 2^(-6)` (`0.009–0.019`) of the modulus, and `s/h`
+approaches `log_2 3 = 1.585` (`1.53` at `h = 120`).
 
 *Is the maximum on the pure powers of two?* Every family `u 2^j` (`u` a
 fixed unit) is closed under the recursion in the same way, so the
@@ -440,30 +450,42 @@ sixteen families never exceed it). Units with larger multipliers are not
 covered, so "the maximum stays on the powers of two" remains OBSERVED (to
 `h = 18` over all units, to `h = 60` over these families).
 
-**The no-descent identity (OBSERVED).** `max_j |m_h(j)| / P_h = 0.46 ±
-0.02` at every level `20 <= h <= 120` (`0.461` at `20`, `0.463` at `50`,
-`0.462` at `100`, `0.443` at `120`). The rate of `P_h` is the
-large-deviation rate of the valuation sum at the critical slope `log_2 3`:
-`P_h^(1/h) -> e^(-I(log_2 3)) = 3^(h* - 1) = 0.94650` with `h* = h(log_3
-2) = 0.94996` the entropy that governs the thin divergent orbits of
-THM-4476 (`N(X) <= K X^(h*+ε)`) and the tilt of THM-4487 (standard: the
-cheapest way to stay under the critical line is to walk along it; the
-ratios `P_h/P_(h-1)` are `0.922, 0.931, 0.939, 0.948` at `h = 30, 40, 50,
-60` and `0.949` at `120`, still rising toward `0.9465`). Reading: the
+**The no-descent proportionality (OBSERVED).** `max_j |m_h(j)| / P_h`
+lies in `0.44–0.48` at every level `20 <= h <= 120` (window means `0.459,
+0.465, 0.456` over `20–40, 41–80, 81–120`; `0.481` at `h = 41`, `0.443` at
+`120`, the coefficient's prefactor decaying slightly faster than `P_h`'s).
+The rate of `P_h` is the large-deviation rate of the valuation sum at the
+critical slope `log_2 3`: `P_h^(1/h) -> e^(-I(log_2 3)) = 3^(h* - 1) =
+0.94650` with `h* = h(log_3 2) = 0.94996` the binary entropy of `log_3 2`,
+the entropy that governs the thin divergent orbits of THM-4476 (`N(X) <= K
+X^(h*+ε)`) and the tilt of THM-4487 (PROVED, standard: `P_h <= P(S_h < h
+log_2 3) <= e^(-I h)` by Chernoff, and the matching lower bound by tilting
+the valuations to mean `log_2 3 - ε`; the cheapest way to stay under the
+critical line is to walk along it). The convergence is slow because of a
+polynomial prefactor, `P_h e^(I h) ≈ h^(-1.3)` over `40..120` (expected
+`h^(-3/2)`): the single-level ratios `P_h/P_(h-1)` oscillate with the
+integer part of `j log_2 3` (`0.903` at `70`, `0.949` at `120`), and the
+geometric-mean ratio is `0.9325` over `61..120` and `0.9366` over
+`101..120`, approaching `0.9465` from below. Reading (DIRECTION): the
 maximal Fourier coefficient of the 3-adic Syracuse law at the powers of
-two is, up to a constant `0.46`, the probability that a random valuation
-word of length `h` never descends — the coherent family is the no-descent
-set, whose members' phases `e(2^(s-S_j)/3^j)` are fixed roots of unity
-determined by the first few valuations (the constant) while the descending
-words cancel. Consequences: (i) on this family (2.3) holds with the
-geometric rate `3^(h*-1)` per level and cannot hold faster; (ii) the
-sup-norm mixing rate of the 3-adic law and the thin-divergence exponent are
-the same number (CONJECTURAL for `M(h)`: it needs the maximum to stay on
-the powers of two, and a proof of the square-root cancellation over the
-descending words); (iii) Mazur's `C* h^(-6409)` is a polynomial statement
-about a geometric quantity. What is PROVED here: the closure and exactness
-of the recursion, `M(h) >= max_j |m_h(j)|`, and the FFT agreement to
-`h = 18`; what is OBSERVED: the geometric decay and the identity to `h =
+two is, up to a constant near `0.46`, the probability that a random
+valuation word of length `h` never descends — the coherent family is the
+no-descent set, whose members' phases `e(2^(s-T_j)/3^j)` (`T_j` the suffix
+sums, `2^(s-T_j)` small against `3^j` on the no-descent set) stay near `1`,
+the last few valuations fixing the constant, while the descending words
+cancel. Consequences: (i) by Proposition 2's inequality the `ℓ^1` distances
+of (2.3) satisfy `||mu_q - lift mu_m||_1 >= max_j |m_(m+1)(j)| ≈ 0.46
+P_(m+1)` (PROVED / OBSERVED), so (2.3) cannot hold with a rate faster than
+the no-descent rate; whether it holds with that rate is a statement about
+the bulk coefficients, which dominate the distances (section 2), and is
+not decided here; (ii) the decay rate of the maximal primitive coefficient
+and the thin-divergence exponent would be the same number (CONJECTURAL for
+`M(h)`: it needs the maximum to stay on the powers of two, and a proof of
+the square-root cancellation over the descending words); (iii) Mazur's
+`C* h^(-6409)` would then be a polynomial statement about a geometric
+quantity. What is PROVED here: the closure and exactness of the recursion,
+`M(h) >= max_j |m_h(j)|`, the FFT agreement to `h = 18`, the rate of
+`P_h`; what is OBSERVED: the decay law and the proportionality to `h =
 120`.
 
 ---
@@ -640,16 +662,21 @@ which is a strong constraint on any candidate family.
 * **For the mixing estimate.** (2.3) ⟹ `M(h) = o(h^(-A))` for every `A`
   (Proposition 2, PROVED). The eighteen FFT levels do not decide between a
   geometric and a polynomial decay of `M(h)`; the closed recursion on the
-  powers of two (section 2b) shows a geometric decay of `max_j
-  |mu_hat_h(2^j)|` to `h = 120` at the no-descent rate `3^(h*-1) = 0.9465`
-  (OBSERVED). If the maximum stays on the powers of two (true wherever
-  checked), (2.3) holds with a geometric constant, which no published proof
-  provides (Mazur's `C` is a three-fold tower, S19 audit), and the sharp
-  sup-norm form of the mixing estimate is `M(h) ≍ P_h`, the no-descent
-  probability of THM-4476/THM-4487: the mixing rate of the 3-adic law and
-  the thin-divergence exponent would be one number. The concrete inequality
-  to prove is `|mu_hat_h(2^s)| <= C P_h`, i.e. square-root cancellation
-  over the descending words.
+    powers of two (section 2b) shows `max_j |mu_hat_h(2^j)|` decaying to
+  `h = 120` like `C h^(-1.1) r^h` with `r ≈ 0.944` (fit to `0.9%`; a pure
+  geometric fit gives ratio `0.930` with `12%` residual), the doubling
+  exponents growing linearly with slope `0.083 ≈ |log_2 0.9465|`:
+  geometric with a polynomial prefactor, at the no-descent rate `3^(h*-1)
+  = 0.9465` asymptotically (OBSERVED). If the maximum stays on the powers
+  of two (true wherever checked), `M(h)` decays like `P_h`, which is the
+  necessary condition for (2.3) that Proposition 2 extracts (a geometric
+  bound on `M(h)` does not by itself give (2.3), whose `ℓ^1` distances are
+  dominated by the bulk coefficients), and the conjectured sharp form of
+  the coefficient bound is `M(h) ≍ P_h`, the no-descent probability of
+  THM-4476/THM-4487: the decay rate of the maximal primitive coefficient
+  and the thin-divergence exponent would be one number. The concrete
+  inequality to prove is `|mu_hat_h(2^s)| <= C P_h`, i.e. square-root
+  cancellation over the descending words.
 * **For the S19 seed-1 test.** Unchanged; the Fourier side explains why the
   `ell^1` distances of S19 decay slowly (bulk square-root coefficients at
   every level, constant Fourier energy per level) while remaining Cauchy.
@@ -681,9 +708,10 @@ python 04-computation/experiments/collatz_five_mirrors_multiplier_families_20260
 | Proposition 2 ((2.3) ⟹ `M(h) <= C_A (h-1)^(-A)`) | PROVED |
 | `M(h)`, `h <= 18`; argmax at `±2^s`, `s - h = 0..5`; ratios `0.65 -> 0.89` | VERIFIED (float64 FFT, matching the closed recursion to six digits); the decay law is not decided by these levels |
 | closure of the powers of two under the frequency recursion; `M(h) >= max_j |mu_hat_h(2^j)|` | PROVED |
-| `max_j |mu_hat_h(2^j)|` to `h = 120`: geometric, ratio `0.906 -> 0.930`, local exponents `2.1 -> 6.1`; `= 0.46 P_h` at every level `20..120` | VERIFIED (exact recursion, truncation `2^(-40)`); the identity OBSERVED |
+| `max_j |mu_hat_h(2^j)|` to `h = 120`: `C h^(-1.1) r^h`, `r ≈ 0.944` (pure geometric ratio `0.906 -> 0.930`), doubling exponents `2.1 -> 6.1` with slope `0.083 ≈ |log_2 0.9465|`; `= 0.44–0.48 P_h` over `20..120` | VERIFIED (exact recursion, truncation `2^(-40)`, float64 error `<= 1.1·10^(-10)`, independently recomputed; 30-digit check at `h = 30, 60`); the proportionality OBSERVED |
+| the rate of `P_h`: `P_h^(1/h) -> 3^(h*-1) = 0.9465` | PROVED (Chernoff and tilting) |
 | the maximum over the seventeen families `u 2^j`, `u <= 49` odd, `3 ∤ u`, is on the pure powers of two at every level `h <= 60` | VERIFIED |
-| `M(h) ≍ P_h`, rate `3^(h*-1) = 0.9465` | CONJECTURAL |
+| `M(h) ≍ P_h`, rate `3^(h*-1) = 0.9465` (a necessary condition for (2.3), measured; not the `ℓ^1` estimate itself) | CONJECTURAL |
 | Fourier mass per level `0.462 -> 0.472`, typical `|mu_hat|^2 3^h = 0.70` | VERIFIED; the level-by-level identity with the second-moment increments PROVED (Parseval + Proposition 1) |
 | cost/last-valuation decomposition of the resonance at `h = 10` | FINITE-EXACT |
 | Proposition 3 (Gauss sums: 2-adic reading; no uniform gap) | PROVED; table FINITE-EXACT |
@@ -751,8 +779,32 @@ accurate. Eighteen corrections, all applied:
 
 MISTAKES entry: MISTAKE-549. Not checked by the auditor: the literal text
 of Tao's Proposition 1.14; levels 15–18 and the `h = 14` decomposition
-(the session's FFTs); the completeness of the `3x+k` cycle survey; section
-2b.
+(the session's FFTs); the completeness of the `3x+k` cycle survey.
+
+**Follow-up audit of section 2b (2026-09-29, same auditor; own numpy
+implementation of the closed recursion, brute-force check against the word
+sum for `n <= 4`, a rigorous float64 error analysis (`ℓ^∞` contraction:
+error `<= n(2^(-40) + 41ε) = 1.1·10^(-10)` at `h = 120`), a 30-digit
+recomputation at `h = 30, 60`, an own dynamic programme for `P_h`, three
+decay models, the multiplier families to `h = 60`; files
+`collatz_five_mirrors_20260929_audit2.py/.out/.md`, 37 claims): SOUND WITH
+CORRECTIONS, fifteen applied.** Holds: closure and exactness, every value,
+offset, ratio and local exponent, the FFT agreement, `P_h` and the theorem
+`P_h^(1/h) -> 3^(h*-1)`, `3^(h*-1) = e^(-I(log_2 3))`. Corrections: (1)
+the implication in consequence (i) and in section 6 ran the wrong way —
+the family gives a lower bound on the `ℓ^1` distances of (2.3) (necessary,
+not sufficient); (2) the decay has a polynomial prefactor (`C h^(-1.1)
+r^h`, `r ≈ 0.944`; the linear growth of the doubling exponents with slope
+`0.083 ≈ |log_2 0.9465|` is the evidence for the no-descent rate; the
+shifted-power residual was a grid artefact; the `P_h` ratios oscillate
+and their geometric mean approaches `0.9465` from below); (3) "`0.46 ±
+0.02` at every level" was a band the data leave once (`0.481` at `h =
+41`): `0.44–0.48`; (4) wording: the `P_h` rate is PROVED, the mechanism is
+DIRECTION with phases near `1` involving the suffix sums, "the sup-norm
+mixing rate is the no-descent rate" was an overreach; (5) new fact: `s = h
+log_2 3 - 6 ± 1` for `20 <= h <= 120`, amending the first audit's
+"`2^s/3^h` decreases geometrically". Not checked: the prefactor exponent
+`3/2` of `P_h`; `M(h) ≍ P_h` beyond the sampled windows.
 
 **Next probes.** A proof of `c P_h <= |mu_hat_h(2^s)| <= C P_h` (the
 lower bound from the coherent no-descent family with its fixed initial

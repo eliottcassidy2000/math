@@ -1,0 +1,80 @@
+[A1] closure: t = 2^j gives t 2^-a = 2^(j-a); the family {2^j mod 3^n : j in Z} is the whole unit group (2 generates it, order 2 3^(n-1)),
+     so max over a full period of j IS M(n); over a window shorter than the period it is a lower bound for M(n).
+[A2] recursion vs brute-force word sum over all 6^n words (n <= 4, valuations <= 6, six exponents each, plus j = -3 at n = 3): max deviation 3.2e-16
+[A3] m_1(0) = -0.500000000000-0.288675134595j; (1/3)e(1/3)+(2/3)e(2/3) = -0.500000000000-0.288675134595j; |m_1| = 0.577350269189 = 1/sqrt3 = 0.577350269190
+[A4] inverse powers 2^-k mod 3^n well defined (2^-k 2^k = 1 mod 3^n at n = 5, 30, 120): True
+[A5] bookkeeping: level n computes j in [-AMAX (HMAX - n), JMAX] from level n-1 values at j - a, a <= AMAX, i.e. from
+     [-AMAX (HMAX - n + 1), JMAX - 1], inside the level-(n-1) window (asserted in the code); truncation a <= AMAX drops mass 2^-AMAX per level.
+[B] main run: HMAX = 120, AMAX = 40, JMAX = 280 [0s]
+[B1] window covers a full period of the unit group (max = M(h) by definition) for h <= 8
+[B2] h, max_j |m_h(j)|, FFT M(h), difference, argmax offset s - h (h = 1..18):
+      h= 1: 5.773503e-01  M=0.577350  diff=+2.7e-07  s-h=-4761
+      h= 2: 3.779236e-01  M=0.377924  diff=-3.7e-07  s-h=-4719
+      h= 3: 2.522368e-01  M=0.252237  diff=-1.6e-07  s-h=-4671
+      h= 4: 1.769989e-01  M=0.176999  diff=-1.2e-07  s-h=-4617
+      h= 5: 1.292736e-01  M=0.129274  diff=-4.3e-07  s-h=-4536
+      h= 6: 9.610639e-02  M=0.096106  diff=+3.9e-07  s-h=-4374
+      h= 7: 7.587004e-02  M=0.075870  diff=+3.8e-08  s-h=-4373
+      h= 8: 6.089074e-02  M=0.060891  diff=-2.6e-07  s-h=-4373
+      h= 9: 4.802615e-02  M=0.048026  diff=+1.5e-07  s-h=+1
+      h=10: 3.827832e-02  M=0.038278  diff=+3.2e-07  s-h=+2
+      h=11: 3.194419e-02  M=0.031944  diff=+1.9e-07  s-h=+2
+      h=12: 2.645817e-02  M=0.026458  diff=+1.7e-07  s-h=+2
+      h=13: 2.205243e-02  M=0.022052  diff=+4.3e-07  s-h=+3
+      h=14: 1.912799e-02  M=0.019128  diff=-9.3e-09  s-h=+3
+      h=15: 1.628448e-02  M=0.016284  diff=+4.8e-07  s-h=+3
+      h=16: 1.440949e-02  M=0.014409  diff=+4.9e-07  s-h=+4
+      h=17: 1.251069e-02  M=0.012511  diff=-3.1e-07  s-h=+4
+      h=18: 1.118727e-02  M=0.011187  diff=+2.7e-07  s-h=+5
+[B3] max |max_j |m_h(j)| - M(h)| over h <= 18: 4.9e-07; offsets 9..18: +1, +2, +2, +2, +3, +3, +3, +4, +4, +5
+[C1] h = 20, 30, ..., 120: value, argmax j, s - h, ratio to previous level:
+      h= 20: 8.884593e-03  j=26  s-h=+6  ratio=0.9051
+      h= 30: 3.288110e-03  j=42  s-h=+12  ratio=0.9058
+      h= 40: 1.383199e-03  j=57  s-h=+17  ratio=0.9193
+      h= 50: 6.156771e-04  j=73  s-h=+23  ratio=0.9310
+      h= 60: 2.828142e-04  j=89  s-h=+29  ratio=0.9259
+      h= 70: 1.329987e-04  j=105  s-h=+35  ratio=0.9213
+      h= 80: 6.453383e-05  j=120  s-h=+40  ratio=0.9287
+      h= 90: 3.186532e-05  j=136  s-h=+46  ratio=0.9382
+      h=100: 1.593621e-05  j=152  s-h=+52  ratio=0.9382
+      h=110: 8.061286e-06  j=168  s-h=+58  ratio=0.9343
+      h=120: 4.119742e-06  j=184  s-h=+64  ratio=0.9304
+[C2] against the note's table: max relative deviation of the values 2.3e-03; offsets agree: True
+[C3] argmax exponent s against h log_2 3 (s - h log2 3): h=20: -5.7, h=30: -5.5, h=40: -6.4, h=50: -6.2, h=60: -6.1, h=70: -5.9, h=80: -6.8, h=90: -6.6, h=100: -6.5, h=110: -6.3, h=120: -6.2
+[C3b] the resonant frequency as a fraction of the modulus, 2^s / 3^h: h=20: 0.0192, h=40: 0.0119, h=60: 0.0146, h=80: 0.0090, h=100: 0.0111, h=120: 0.0136  (h <= 18: 0.12 -> 0.022; it stops decreasing near 2^-6)
+[C4] local exponents log2(m(h)/m(2h)): 10->20: 2.107, 15->30: 2.308, 20->40: 2.683, 25->50: 3.102, 30->60: 3.539, 40->80: 4.422, 50->100: 5.272, 60->120: 6.101
+[C4b] for C h^-beta r^h the doubling exponent is h |log2 r| + beta: linear fit slope 0.0826 per level (|log2 0.94650| = 0.0793; |log2 0.930| = 0.1047), intercept beta = 1.11; a shifted power law C (h + c)^-alpha would give exponents bounded by alpha and saturating
+[C5] fits over h = 40..120: geometric ratio 0.93026 (max log-residual 0.1208); best shifted power law C (h + 40.0)^(-8.424) (max log-residual 0.2379)
+[C6] C h^-beta r^h over 40..120: r = 0.94371, beta = 1.086 (max log-residual 0.0089); pure geometric over 80..120: ratio 0.93360; asymptotic no-descent rate 3^(h*-1) = 0.94650
+[C7] max_j |m_h(j)| e^(I h) with I = I(log2 3) (the prefactor of the coefficient, if the rate is e^-I): h=20: 0.0267, h=40: 0.0125, h=60: 0.0077, h=80: 0.0052, h=100: 0.0039, h=120: 0.0030
+[C8] error analysis: the truncated recursion is a weighted average with weights 2^-a (sum 1 - 2^-AMAX) times unimodular phases,
+     hence an l^inf contraction; per level the computed value differs from the exact one by at most 2^-AMAX (dropped mass, |m| <= 1)
+     plus the rounding of one 40-term complex sum with correctly rounded phases (<= ~41 eps); errors add, never amplify:
+     |error at level n| <= n (2^-40 + 41 eps) = 120 * 9.19e-13 = 1.10e-10 at n = 120, against the value 4.12e-06 (relative 2.7e-05).
+[C9] AMAX = 40 against AMAX = 50 (float64), max |difference| on the window: h=20: 9.7e-15, h=60: 5.3e-16, h=100: 3.4e-17, h=120: 1.1e-17  (predicted truncation gap <= n 2^-40 = 1.1e-10 at 120) [0s]
+[C10] mpmath 30 digits, h=30, j=42: |m| = 0.00328811049397787; float64: 3.288110493977866e-03; |difference| = 9.7e-19 [12s]
+[C10] mpmath 30 digits, h=60, j=89: |m| = 0.000282814219315353; float64: 2.828142193153525e-04; |difference| = 3.1e-19 [50s]
+[D1] strict vs non-strict inequality in P_h: max |difference| over h <= 120 = 0.0e+00 (j log2 3 is irrational for j >= 1, so S_j < j log2 3 iff S_j <= floor(j log2 3))
+[D2] I(log2 3) = 0.054979, e^-I = 0.94650; h* = binary entropy of log_3 2 in bits = 0.94996, 3^(h*-1) = 0.94650; identity: (h*-1) ln 3 = -ln p - ((1-p)/p) ln(1-p) - ln 3 = -I with p = log_3 2 = 1/log_2 3 (algebra in the report)
+[D3] P_h at h = 20, 30, ..., 120 with the ratio P_h/P_(h-1), the prefactor P_h e^(I h), and max_j |m_h(j)| / P_h:
+      h= 20: P=1.9254e-02  ratio=0.8744  P e^(Ih)=0.0578  m/P=0.4614  note P=1.93e-02
+      h= 30: P=7.0746e-03  ratio=0.9221  P e^(Ih)=0.0368  m/P=0.4648  note P=7.07e-03
+      h= 40: P=2.9861e-03  ratio=0.9314  P e^(Ih)=0.0269  m/P=0.4632  note P=2.99e-03
+      h= 50: P=1.3288e-03  ratio=0.9392  P e^(Ih)=0.0208  m/P=0.4633  note P=1.33e-03
+      h= 60: P=6.1523e-04  ratio=0.9484  P e^(Ih)=0.0167  m/P=0.4597  note P=6.15e-04
+      h= 70: P=2.8288e-04  ratio=0.9031  P e^(Ih)=0.0133  m/P=0.4702  note P=2.83e-04
+      h= 80: P=1.3956e-04  ratio=0.9098  P e^(Ih)=0.0113  m/P=0.4624  note P=1.40e-04
+      h= 90: P=6.9438e-05  ratio=0.9191  P e^(Ih)=0.0098  m/P=0.4589  note P=6.94e-05
+      h=100: P=3.4515e-05  ratio=0.9437  P e^(Ih)=0.0084  m/P=0.4617  note P=3.45e-05
+      h=110: P=1.7937e-05  ratio=0.9456  P e^(Ih)=0.0076  m/P=0.4494  note P=1.79e-05
+      h=120: P=9.3061e-06  ratio=0.9492  P e^(Ih)=0.0068  m/P=0.4427  note P=9.31e-06
+[D4] against the note: max relative deviation of P_h 3.2e-03; m/P over 20..120: min 0.443, max 0.481, at h = 120: 0.443; levels with |m/P - 0.46| > 0.02: [(41, 0.481)]; window means of m/P: 20-40 0.4592, 41-80 0.4648, 81-120 0.4558
+[D5] P_h^(1/h) at h = 30, 60, 120: 0.8479, 0.8841, 0.9080 (limit e^-I = 0.9465); the ratio P_h/P_(h-1) averaged over 61..120: 0.9325; over 101..120: 0.9366
+[D6] prefactor P_h e^(I h) ~ h^(-beta): fitted beta over 40..120 = 1.265 (local: 30->60: 1.14, 60->120: 1.29); the same for the coefficient: 30->60: 1.16, 60->120: 1.34
+[D7] Chernoff upper bound P_h <= e^(-I h) holds at every h: True; P_h e^(Ih) at h = 1, 2, 5, 10: 0.528, 0.419, 0.195, 0.112
+[E1] seventeen families u 2^j, u <= 49 odd, 3 !| u, to h = 60 (AMAX = 36, error <= h 2^-36 = 9e-10): ratio max_(u > 1) / (u = 1) at h = 10, 20, ..., 60: h=10: 0.7414 (u=13), h=20: 0.4239 (u=11), h=30: 0.3537 (u=11), h=40: 0.3318 (u=13), h=50: 0.3326 (u=13), h=60: 0.3324 (u=13) [62s]
+[E2] is the pure family the largest at EVERY level 1..60? True; levels where another family ties within 1e-9: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+[E3] reading: 2 generates the units mod 3^n, so every u is 2^k for a profinite exponent k in Z/2 x Z_3 (its discrete log is not an integer
+     a family u 2^j is the pure family shifted by that 3-adic exponent, and for h beyond the window period (h >= 9 here) the seventeen
+     families are seventeen windows of ~ (36 (60-h) + 160) residues each out of 2 3^(h-1) units: a sample of the unit group, not a cover.
+DONE [62s]

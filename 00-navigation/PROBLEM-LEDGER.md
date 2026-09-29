@@ -611,8 +611,8 @@ all heights (THM-1289, published), δ ineffective.
   M(h) <= C_A (h-1)^-A for every A; VERIFIED to h = 18: 0.577 ... 0.0112, maxima at +-2^s with s - h = 0..5, ratio rising 0.65 -> 0.89 with no
   plateau (eighteen levels do not separate geometric from shifted-power decay); the powers of two are a closed family
   under the frequency recursion and were followed to h = 120 without the law: geometric (ratio -> 0.93, local exponents
-  2.1 -> 6.1), equal to 0.46 x the no-descent probability P_h at every level 20..120, rate 3^(h*-1) = 0.9465 with h* the
-  thin-divergence exponent (OBSERVED; M(h) ~ P_h CONJECTURAL); Fourier mass 0.466 per conductor level =
+  2.1 -> 6.1), proportional (0.44-0.48) to the no-descent probability P_h at every level 20..120, rate 3^(h*-1) = 0.9465 (PROVED) with h*
+  the thin-divergence exponent (OBSERVED; M(h) ~ P_h CONJECTURAL; a necessary condition for (2.3), not the ell^1 estimate); Fourier mass 0.466 per conductor level =
   (3/2) x the second-moment slope (Parseval); typical |mu_hat|^2 3^h = 0.70; the resonance carried by words of cost
   ~1.48 h (stable at h = 10, 14) with last valuations 1-3, mass rate e^(-0.093 h). PROVED: no uniform one-step gap of the
   geometric Gauss sums (sup -> 1 at t = 2^(j+1); 2-adic reading exact); same-length spread lemma (A + A' <= (n-d) log_2 3 + 1
@@ -621,7 +621,8 @@ all heights (THM-1289, published), δ ineffective.
   cycles with fixed points (rotation-symmetric words) and genuine pairs (3x+13: 227 <-> 259, 251 <-> 287; 3x+37: 23 <-> 29;
   orbits verified); the trace of a rational cycle is reversal-invariant (PROVED: the multiset of cyclic block sums is), so the
     pairs have equal element sums (2499, 125). No barrier typed. Audited SOUND WITH CORRECTIONS (eighteen applied; the decay
-  reading at h <= 18 had been overstated; MISTAKE-549); section 2b added after the audit. Note: `collatz_five_mirrors_20260929.md`.
+  reading at h <= 18 had been overstated; MISTAKE-549); section 2b added after the audit and audited separately (fifteen corrections: the implication direction, the polynomial
+  prefactor, 0.44-0.48 not 0.46 +- 0.02, s = h log2 3 - 6). Note: `collatz_five_mirrors_20260929.md`.
 
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`
 (ranks HN > reconstruction > Kakeya/Falconer > sunflower > Caccetta–Häggkvist > … ).

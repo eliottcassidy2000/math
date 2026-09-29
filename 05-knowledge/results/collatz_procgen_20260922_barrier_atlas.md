@@ -237,12 +237,16 @@ there). CITED, not replayed by us.
   (2.3) (PROVED); measured to `h = 17` they sit at the powers of two
     `±2^s` (`s - h = 0..5`) and decay with a ratio rising to `0.89`; the
   powers of two, a closed family under the frequency recursion, were
-  followed to `h = 120`: geometric decay at the no-descent rate `3^(h*-1)
-  = 0.9465`, the coefficient being `0.46` times the no-descent probability
-  at every level (OBSERVED; `h*` = THM-4476's thin-divergence exponent);
-  the Fourier energy per 3-adic scale is nearly constant (`0.46–0.47`); no
-  one-step spectral gap exists (Gauss sums `sup -> 1`). A proof of
-  `|mu_hat_h(2^s)| <= C P_h` would give a usable, sharp constant in (2.3).
+    followed to `h = 120`: geometric decay with a polynomial prefactor at
+  the no-descent rate `3^(h*-1) = 0.9465`, the coefficient being `0.44–0.48`
+  times the no-descent probability at every level (OBSERVED; `h*` =
+  THM-4476's thin-divergence exponent); since Proposition 2's inequality
+  bounds the `ℓ^1` distances of (2.3) from below by these coefficients,
+  (2.3) cannot hold faster than the no-descent rate; the Fourier energy per
+  3-adic scale is nearly constant (`0.46–0.47`); no one-step spectral gap
+  exists (Gauss sums `sup -> 1`). A proof of `|mu_hat_h(2^s)| <= C P_h`
+  would settle the coefficient side; the `ℓ^1` side is dominated by the
+  bulk.
 * **A control on the reference density, not a failure mode:** the atoms of
   the 3-adic Syracuse law are the negative cycles (`rho_n(-1) = 0.975
   (3/2)^n`, exact spike profile on the forward closure of `-1`), so the

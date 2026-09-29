@@ -1584,12 +1584,14 @@ exploration and extend past work toward proofs. Note
   geometric decay from a shifted power law (the audit's finding; they
   separate near `h = 31`). The powers of two are a closed family under the
   exact frequency recursion, so their coefficients were followed to `h =
-  120` without the law: geometric decay (ratio `0.906 -> 0.930`, local
-  exponents `2.1 -> 6.1`), equal at every level `20..120` to `0.46` times
-  the no-descent probability `P_h`, whose rate is `3^(h*-1) = 0.9465` with
-  `h*` the thin-divergence exponent of THM-4476 (OBSERVED; `M(h) ≍ P_h`
-  CONJECTURAL): the sup-norm mixing rate of the 3-adic law and the
-  thin-divergence exponent appear to be one number. The
+    120` without the law: geometric decay with a polynomial prefactor (`C
+  h^(-1.1) r^h`, `r ≈ 0.944`; doubling exponents `2.1 -> 6.1` growing
+  linearly with slope `0.083 ≈ |log_2 0.9465|`), proportional (`0.44–0.48`)
+  at every level `20..120` to the no-descent probability `P_h`, whose rate
+  is `3^(h*-1) = 0.9465` (PROVED) with `h*` the thin-divergence exponent of
+  THM-4476 (OBSERVED; `M(h) ≍ P_h` CONJECTURAL): the decay rate of the
+  maximal primitive coefficient and the thin-divergence exponent appear to
+  be one number — a necessary condition for (2.3), not the estimate itself. The
   Fourier mass per conductor level is `0.466` at every level (`(3/2)` times
     the S19 second-moment increments, PROVED by Parseval level by level); the
   typical coefficient has `|mu_hat|^2 3^h = 0.70` (square-root

@@ -1955,9 +1955,16 @@ were unaffected; successful explicit-path replays did not validate the prose.
   `3^(h*-1) = 0.9465`, with the coefficient equal to `0.46` times the
   no-descent probability at every level `20..120` (section 2b of the note;
   OBSERVED, not covered by the audit).
+- **Second pass (section 2b, same day):** the consequence "(2.3) holds
+  with a geometric constant on this family" ran Proposition 2's implication
+  backwards (a bound on the maximal coefficient is necessary for the
+  `ell^1` estimate, not sufficient), and "`0.46 ± 0.02` at every level" was
+  a band the data left once (`0.481` at `h = 41`): `0.44–0.48`.
 - **Reusable rule.** A fit over the computable range is evidence for a
   law only if the competing laws separate inside that range; state where
-  they separate. Before extrapolating a sequence defined by a global
+  they separate. When a computation measures a necessary condition, write
+  "necessary" in the consequence. Report a range, not a mean with a guessed
+  spread. Before extrapolating a sequence defined by a global
   computation, look for a sub-family closed under the defining recursion:
   it can be followed far beyond the global computation and it is exact.
   When a table's rows depend on a search cap (valuations, depth, size),
