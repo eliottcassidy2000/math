@@ -662,6 +662,7 @@ python 04-computation/experiments/collatz_five_mirrors_fourier_deep_20260929.py 
 python 04-computation/experiments/collatz_five_mirrors_reversal_20260929.py     > 05-knowledge/results/collatz_five_mirrors_reversal_20260929.out
 python 04-computation/experiments/collatz_five_mirrors_tracesum_20260929.py     > 05-knowledge/results/collatz_five_mirrors_tracesum_20260929.out
 python 04-computation/experiments/collatz_five_mirrors_powers_of_two_20260929.py 120 > 05-knowledge/results/collatz_five_mirrors_powers_of_two_20260929.out   # 3 min
+python 04-computation/experiments/collatz_five_mirrors_multiplier_families_20260929.py 60 49 > 05-knowledge/results/collatz_five_mirrors_multiplier_families_20260929.out   # 10 min
 ```
 
 | item | status |
@@ -671,6 +672,7 @@ python 04-computation/experiments/collatz_five_mirrors_powers_of_two_20260929.py
 | `M(h)`, `h <= 18`; argmax at `±2^s`, `s - h = 0..5`; ratios `0.65 -> 0.89` | VERIFIED (float64 FFT, matching the closed recursion to six digits); the decay law is not decided by these levels |
 | closure of the powers of two under the frequency recursion; `M(h) >= max_j |mu_hat_h(2^j)|` | PROVED |
 | `max_j |mu_hat_h(2^j)|` to `h = 120`: geometric, ratio `0.906 -> 0.930`, local exponents `2.1 -> 6.1`; `= 0.46 P_h` at every level `20..120` | VERIFIED (exact recursion, truncation `2^(-40)`); the identity OBSERVED |
+| the maximum over the seventeen families `u 2^j`, `u <= 49` odd, `3 ∤ u`, is on the pure powers of two at every level `h <= 60` | VERIFIED |
 | `M(h) ≍ P_h`, rate `3^(h*-1) = 0.9465` | CONJECTURAL |
 | Fourier mass per level `0.462 -> 0.472`, typical `|mu_hat|^2 3^h = 0.70` | VERIFIED; the level-by-level identity with the second-moment increments PROVED (Parseval + Proposition 1) |
 | cost/last-valuation decomposition of the resonance at `h = 10` | FINITE-EXACT |
