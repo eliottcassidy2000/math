@@ -1,0 +1,97 @@
+=== 1. primitive cycles of 3x+d, |d|<=100, least element <= 100|d|, with gcd(K,X)>1
+d, least, K, X, gcd: [(7, 5, 4, 2, 2), (11, 1, 6, 2, 2), (11, 13, 14, 8, 2), (13, 131, 24, 15, 3), (-17, 65, 6, 4, 2), (-17, 73, 6, 4, 2), (25, 7, 16, 8, 8), (25, 17, 8, 4, 4), (-25, 113, 34, 22, 2), (-29, 109, 12, 8, 4), (-31, 95, 9, 6, 3), (35, 13, 8, 4, 4), (35, 17, 8, 4, 4), (37, 19, 6, 3, 3), (37, 23, 6, 3, 3), (37, 29, 6, 3, 3), (41, 1, 20, 8, 4), (47, 25, 28, 16, 4), (49, 25, 38, 22, 2), (55, 1, 12, 4, 4), (55, 7, 6, 2, 2), (55, 41, 28, 16, 4), (59, 133, 10, 6, 2), (59, 149, 10, 6, 2), (59, 181, 10, 6, 2), (59, 185, 10, 6, 2), (59, 217, 10, 6, 2), (59, 221, 10, 6, 2), (65, 19, 24, 12, 12), (67, 17, 30, 16, 2), (71, 29, 10, 5, 5), (71, 31, 10, 5, 5), (73, 5, 12, 4, 4), (73, 19, 60, 32, 4), (77, 1, 38, 16, 2), (-77, 989, 22, 14, 2), (-77, 1153, 22, 14, 2), (-77, 1165, 22, 14, 2), (79, 1, 44, 20, 4), (79, 7, 44, 20, 4)] ... total 49
+
+3x+7 cycle: least element 5, shape (K,X)=(4,2), gcd=2, clock 2^K-q^X=7, min/max ratio 0.2500
+  j=2: (m,x)=(2,1); clock = prod_(e|j) Phi_e(2^m,q^x) verified; fair 2-splits at rotations [1] (1 of 2)
+    r=1: cut elements [11, 10]; sum n_i = d*sum c_i/(2^m-q^x) ok; alt sum n_i = -d*alt sum c_i/(2^m+q^x) = 1 ok; all j DFT identities exact in Z[zeta_j]
+
+3x+11 cycle: least element 1, shape (K,X)=(6,2), gcd=2, clock 2^K-q^X=55, min/max ratio 0.0625
+  j=2: (m,x)=(3,1); clock = prod_(e|j) Phi_e(2^m,q^x) verified; fair 2-splits at rotations [1] (1 of 3)
+    r=1: cut elements [7, 4]; sum n_i = d*sum c_i/(2^m-q^x) ok; alt sum n_i = -d*alt sum c_i/(2^m+q^x) = 3 ok; all j DFT identities exact in Z[zeta_j]
+
+3x+11 cycle: least element 13, shape (K,X)=(14,8), gcd=2, clock 2^K-q^X=9823, min/max ratio 0.1048
+  j=2: (m,x)=(7,4); clock = prod_(e|j) Phi_e(2^m,q^x) verified; fair 2-splits at rotations [3, 4, 5, 6] (4 of 7)
+    r=3: cut elements [70, 62]; sum n_i = d*sum c_i/(2^m-q^x) ok; alt sum n_i = -d*alt sum c_i/(2^m+q^x) = 8 ok; all j DFT identities exact in Z[zeta_j]
+    r=4: cut elements [35, 31]; sum n_i = d*sum c_i/(2^m-q^x) ok; alt sum n_i = -d*alt sum c_i/(2^m+q^x) = 4 ok; all j DFT identities exact in Z[zeta_j]
+
+3x+13 cycle: least element 131, shape (K,X)=(24,15), gcd=3, clock 2^K-q^X=2428309, min/max ratio 0.0470
+  j=3: (m,x)=(8,5); clock = prod_(e|j) Phi_e(2^m,q^x) verified; fair 3-splits at rotations [] (0 of 8)
+
+3x-17 cycle: least element 65, shape (K,X)=(6,4), gcd=2, clock 2^K-q^X=-17, min/max ratio 0.2500
+  j=2: (m,x)=(3,2); clock = prod_(e|j) Phi_e(2^m,q^x) verified; fair 2-splits at rotations [2] (1 of 3)
+    r=2: cut elements [125, 130]; sum n_i = d*sum c_i/(2^m-q^x) ok; alt sum n_i = -d*alt sum c_i/(2^m+q^x) = -5 ok; all j DFT identities exact in Z[zeta_j]
+
+3x-17 cycle: least element 73, shape (K,X)=(6,4), gcd=2, clock 2^K-q^X=-17, min/max ratio 0.3544
+  j=2: (m,x)=(3,2); clock = prod_(e|j) Phi_e(2^m,q^x) verified; fair 2-splits at rotations [1, 2] (2 of 3)
+    r=1: cut elements [101, 103]; sum n_i = d*sum c_i/(2^m-q^x) ok; alt sum n_i = -d*alt sum c_i/(2^m+q^x) = -2 ok; all j DFT identities exact in Z[zeta_j]
+    r=2: cut elements [143, 146]; sum n_i = d*sum c_i/(2^m-q^x) ok; alt sum n_i = -d*alt sum c_i/(2^m+q^x) = -3 ok; all j DFT identities exact in Z[zeta_j]
+
+=== 2. Fermat-Catalan / perfect-power clocks and their free cycles
+
+3x-49, free shape (5,4) from 2^5+7^2=3^4: least element 65, shape (K,X)=(5,4), gcd=1, clock 2^K-q^X=-49, min/max ratio 0.5000
+7x+169: 10 necklaces of shape (9,3); clock 2^9-7^3 = 169 = 13^2; 2^3-7 = 1
+  word 000000111: cycle min 67 max 4288 primitive; 3-fair splits at []
+  word 000001011: cycle min 85 max 2720 primitive; 3-fair splits at []
+  word 000001101: cycle min 71 max 2272 primitive; 3-fair splits at []
+  word 000010011: cycle min 121 max 1936 primitive; 3-fair splits at [2]
+
+   7x+169 3-split instance: least element 121, shape (K,X)=(9,3), gcd=3, clock 2^K-q^X=169, min/max ratio 0.0625
+  j=3: (m,x)=(3,1); clock = prod_(e|j) Phi_e(2^m,q^x) verified; fair 3-splits at rotations [2] (1 of 3)
+    r=2: cut elements [484, 508, 529]; sum n_i = d*sum c_i/(2^m-q^x) ok; all j DFT identities exact in Z[zeta_j]
+  word 000010101: cycle min 93 max 1488 primitive; 3-fair splits at [2]
+
+   7x+169 3-split instance: least element 93, shape (K,X)=(9,3), gcd=3, clock 2^K-q^X=169, min/max ratio 0.0625
+  j=3: (m,x)=(3,1); clock = prod_(e|j) Phi_e(2^m,q^x) verified; fair 3-splits at rotations [2] (1 of 3)
+    r=2: cut elements [372, 410, 401]; sum n_i = d*sum c_i/(2^m-q^x) ok; all j DFT identities exact in Z[zeta_j]
+  word 000011001: cycle min 79 max 1348 primitive; 3-fair splits at [2]
+
+   7x+169 3-split instance: least element 79, shape (K,X)=(9,3), gcd=3, clock 2^K-q^X=169, min/max ratio 0.0586
+  j=3: (m,x)=(3,1); clock = prod_(e|j) Phi_e(2^m,q^x) verified; fair 3-splits at rotations [2] (1 of 3)
+    r=2: cut elements [316, 361, 337]; sum n_i = d*sum c_i/(2^m-q^x) ok; all j DFT identities exact in Z[zeta_j]
+  word 000100011: cycle min 95 max 1544 primitive; 3-fair splits at [2]
+
+   7x+169 3-split instance: least element 95, shape (K,X)=(9,3), gcd=3, clock 2^K-q^X=169, min/max ratio 0.0615
+  j=3: (m,x)=(3,1); clock = prod_(e|j) Phi_e(2^m,q^x) verified; fair 3-splits at rotations [2] (1 of 3)
+    r=2: cut elements [386, 380, 417]; sum n_i = d*sum c_i/(2^m-q^x) ok; all j DFT identities exact in Z[zeta_j]
+  word 000100101: cycle min 137 max 1096 primitive; 3-fair splits at [1, 2]
+
+   7x+169 3-split instance: least element 137, shape (K,X)=(9,3), gcd=3, clock 2^K-q^X=169, min/max ratio 0.1250
+  j=3: (m,x)=(3,1); clock = prod_(e|j) Phi_e(2^m,q^x) verified; fair 3-splits at rotations [1, 2] (2 of 3)
+    r=1: cut elements [548, 564, 578]; sum n_i = d*sum c_i/(2^m-q^x) ok; all j DFT identities exact in Z[zeta_j]
+    r=2: cut elements [274, 282, 289]; sum n_i = d*sum c_i/(2^m-q^x) ok; all j DFT identities exact in Z[zeta_j]
+  word 000101001: cycle min 109 max 900 primitive; 3-fair splits at [1, 2]
+
+   7x+169 3-split instance: least element 109, shape (K,X)=(9,3), gcd=3, clock 2^K-q^X=169, min/max ratio 0.1211
+  j=3: (m,x)=(3,1); clock = prod_(e|j) Phi_e(2^m,q^x) verified; fair 3-splits at rotations [1, 2] (2 of 3)
+    r=1: cut elements [436, 466, 450]; sum n_i = d*sum c_i/(2^m-q^x) ok; all j DFT identities exact in Z[zeta_j]
+    r=2: cut elements [218, 233, 225]; sum n_i = d*sum c_i/(2^m-q^x) ok; all j DFT identities exact in Z[zeta_j]
+  word 001001001: NON-primitive word (period 3): cycle [676, 338, 169] = 169 x cycle of 7x+1
+  necklaces with a 3-fold fair split: 6 of 10
+  2^3 - 7*z == (3 - z)^2 mod Phi_3(z): True
+
+13x+343, free shape (9,2) from 7^3+13^2=2^9 (word 100001000): least element 29, shape (K,X)=(9,2), gcd=1, clock 2^K-q^X=343, min/max ratio 0.0625
+
+71x-4913, free shape (7,2) from 2^7+17^3=71^2 (word 1000100): least element 79, shape (K,X)=(7,2), gcd=1, clock 2^K-q^X=-4913, min/max ratio 0.1250
+
+5x-9, free shape (4,2) from 2^4+3^2=5^2 (word 1100): least element 7, shape (K,X)=(4,2), gcd=2, clock 2^K-q^X=-9, min/max ratio 0.2500
+  j=2: (m,x)=(2,1); clock = prod_(e|j) Phi_e(2^m,q^x) verified; fair 2-splits at rotations [1] (1 of 2)
+    r=1: cut elements [13, 14]; sum n_i = d*sum c_i/(2^m-q^x) ok; alt sum n_i = -d*alt sum c_i/(2^m+q^x) = -1 ok; all j DFT identities exact in Z[zeta_j]
+
+=== 3. the Belaga-Mignotte long cycle of 3x+17021 (least element 5)
+
+3x+17021 long cycle: least element 5, shape (K,X)=(2140,1088), gcd=4, clock 2^K-q^X=big, min/max ratio 0.0000
+  j=2: (m,x)=(1070,544); clock = prod_(e|j) Phi_e(2^m,q^x) verified; fair 2-splits at rotations [0, 2, 112, 113, 115, 116, 117, 125]... (79 of 1070)
+    r=0: cut elements [5, 187226]; sum n_i = d*sum c_i/(2^m-q^x) ok; alt sum n_i = -d*alt sum c_i/(2^m+q^x) = -187221 ok; all j DFT identities exact in Z[zeta_j]
+    r=2: cut elements [4259, 148930]; sum n_i = d*sum c_i/(2^m-q^x) ok; alt sum n_i = -d*alt sum c_i/(2^m+q^x) = -144671 ok; all j DFT identities exact in Z[zeta_j]
+  j=4: (m,x)=(535,272); clock = prod_(e|j) Phi_e(2^m,q^x) verified; fair 4-splits at rotations [] (0 of 535)
+
+3x+14303 long cycle: least element 101, shape (K,X)=(2155,1092), gcd=1, clock 2^K-q^X=big, min/max ratio 0.0000
+
+=== 4. every necklace of a free perfect-power shape is an integer cycle (THM-4484 shift criterion)
+ 3x-49 [2^5+7^2=3^4], shape (5,4), clock -49: 1 necklaces -> [('01111', 65, 5, 'prim')]
+ 7x+169 [7^3+13^2=2^9], shape (9,3), clock 169: 10 necklaces -> [('000000111', 67, 9, 'prim'), ('000001011', 85, 9, 'prim'), ('000001101', 71, 9, 'prim'), ('000010011', 121, 9, 'prim'), ('000010101', 93, 9, 'prim'), ('000011001', 79, 9, 'prim'), ('000100011', 95, 9, 'prim'), ('000100101', 137, 9, 'prim'), ('000101001', 109, 9, 'prim'), ('001001001', 169, 3, 'period 3, gcd 169')]
+ 13x+343 [7^3+13^2=2^9], shape (9,2), clock 343: 4 necklaces -> [('000000011', 15, 9, 'prim'), ('000000101', 17, 9, 'prim'), ('000001001', 21, 9, 'period 9, gcd 7'), ('000010001', 29, 9, 'prim')]
+ 71x-4913 [2^7+17^3=71^2], shape (7,2), clock -4913: 3 necklaces -> [('0000011', 73, 7, 'prim'), ('0000101', 75, 7, 'prim'), ('0001001', 79, 7, 'prim')]
+ 5x-9 [2^4+3^2=5^2], shape (4,2), clock -9: 2 necklaces -> [('0011', 7, 4, 'prim'), ('0101', 9, 2, 'period 2, gcd 9')]
+ 9x-49 [2^5+7^2=9^2], shape (5,2), clock -49: 2 necklaces -> [('00011', 11, 5, 'prim'), ('00101', 13, 5, 'prim')]
+ 17x-225 [2^6+15^2=17^2], shape (6,2), clock -225: 3 necklaces -> [('000011', 19, 6, 'prim'), ('000101', 21, 6, 'period 6, gcd 3'), ('001001', 25, 3, 'period 3, gcd 25')]

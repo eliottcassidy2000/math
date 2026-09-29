@@ -418,6 +418,18 @@ all heights (THM-1289, published), δ ineffective.
   bounded valuations and an interval-map itinerary; HYP-9164 (no divergent orbit has bounded shadow error; minus-sheet cycles do)
   is the intermediate pointwise statement. Note: `collatz_shadow_error_flp_20260927.md`.
 
+  **Necklace splits, power clocks, root-uniform basins (mac-mini, 2026-09-29):** a fair
+  consecutive j-split of a cycle necklace (equal shape per arc) makes the cycle system circulant:
+  N_k (2^m zeta^k - q^x) = d C_k, clock = prod Phi_e(2^m, q^x); fair 2-splits always exist and split
+  THM-4484 by CRT into 2^m -+ q^x; one-bead-per-thief splits iff runs of t gaps lie in ((t-1)m,(t+1)m)
+  (THM-4515; no new cycle condition). Perfect-power clocks 2^K - q^X = +-m^r, X >= 2, q <= 201, K <= 400:
+  Catalan, the Pythagorean family, and the three Fermat-Catalan solutions with a power of two (free
+  cycles of 3x-49, 7x+169 with 2^3 - 7 zeta_3 = (3 - zeta_3)^2, 13x+343, 71x-4913; THM-4516);
+  x^4 + y^3 = z^17 UNVERIFIED. Trunk-entry basins B((4^i-1)/3) are disjoint, so no root-uniform
+  positive basin density exists (the pasted Krasikov-Lagarias argument has a void premise); 3x-1
+  basins 0.3269 / 0.3248 / 0.3484 to 2^29; 93.8% of 3x+1 orbits enter through 5 (THM-4517, HYP-9165).
+  Note: `collatz_necklace_20260929_fair_splits_power_clocks_basins.md`.
+
   **Posets and DAGs (opus, 2026-09-27, S15):** value-time poset (dimension <= 2; leaders minimal, strict
   future minima maximal; infinitely many strict future minima iff divergent, one iff the global minimum is
   attained once); excursion forest (roots = height lower records = the descent chain under Terras equality;
