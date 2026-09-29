@@ -608,8 +608,11 @@ all heights (THM-1289, published), δ ineffective.
   owner's five arXiv papers (Viaclovsky S^6, Narode reciprocal polynomials, Merca two-block odd partitions, Dalfo-Fiol-Reyes
   three-quarters circulants, Lyu compressibility) read for the shape of their hard direction. PROVED: the primitive Fourier
   profile M(h) = max_u |mu_hat_h(u)| of Tao's Syracuse random variable is level-independent, and Mazur's (2.3) forces
-  M(h) <= C_A (h-1)^-A for every A; FINITE-EXACT to h = 18: 0.577 ... 0.0112, maxima at 2^(h+3) to 2^(h+5), ratio rising
-  0.65 -> 0.87-0.89 and levelling (OBSERVED: geometric ~0.87-0.89, no fixed power law); Fourier mass 0.466 per conductor level =
+  M(h) <= C_A (h-1)^-A for every A; VERIFIED to h = 18: 0.577 ... 0.0112, maxima at +-2^s with s - h = 0..5, ratio rising 0.65 -> 0.89 with no
+  plateau (eighteen levels do not separate geometric from shifted-power decay); the powers of two are a closed family
+  under the frequency recursion and were followed to h = 120 without the law: geometric (ratio -> 0.93, local exponents
+  2.1 -> 6.1), equal to 0.46 x the no-descent probability P_h at every level 20..120, rate 3^(h*-1) = 0.9465 with h* the
+  thin-divergence exponent (OBSERVED; M(h) ~ P_h CONJECTURAL); Fourier mass 0.466 per conductor level =
   (3/2) x the second-moment slope (Parseval); typical |mu_hat|^2 3^h = 0.70; the resonance carried by words of cost
   ~1.48 h (stable at h = 10, 14) with last valuations 1-3, mass rate e^(-0.093 h). PROVED: no uniform one-step gap of the
   geometric Gauss sums (sup -> 1 at t = 2^(j+1); 2-adic reading exact); same-length spread lemma (A + A' <= (n-d) log_2 3 + 1
@@ -617,8 +620,8 @@ all heights (THM-1289, published), δ ineffective.
   an involution on rational cycles that sends the seven-cycle of -17 to -13801/139; on 3x+k (k <= 41) it permutes the integer
   cycles with fixed points (rotation-symmetric words) and genuine pairs (3x+13: 227 <-> 259, 251 <-> 287; 3x+37: 23 <-> 29;
   orbits verified); the trace of a rational cycle is reversal-invariant (PROVED: the multiset of cyclic block sums is), so the
-  pairs have equal element sums (2499, 125). No barrier typed. Audit pending at
-  entry time (note s8). Note: `collatz_five_mirrors_20260929.md`.
+    pairs have equal element sums (2499, 125). No barrier typed. Audited SOUND WITH CORRECTIONS (eighteen applied; the decay
+  reading at h <= 18 had been overstated; MISTAKE-549); section 2b added after the audit. Note: `collatz_five_mirrors_20260929.md`.
 
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`
 (ranks HN > reconstruction > Kakeya/Falconer > sunflower > Caccetta–Häggkvist > … ).

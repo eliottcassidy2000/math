@@ -1578,18 +1578,24 @@ exploration and extend past work toward proofs. Note
   mu_hat_h(u)` (consistency), so `M(h) = max_u |mu_hat_h(u)|` is intrinsic;
   Mazur's (2.3) forces `M(h) <= C_A (h-1)^(-A)` for every `A` (PROVED).
   Measured: `0.577, 0.378, 0.252, 0.177, 0.129, 0.096, 0.076, 0.061, 0.048,
-  0.038, 0.032, 0.026, 0.022, 0.019, 0.016, 0.014, 0.0125, 0.0112`, maxima
-  at the powers of two `2^(h+3)` to `2^(h+5)`; the ratio rises from `0.65`
-  to `0.87–0.89` and levels over `14..18`; a fixed power law is excluded by
-  the steepening, a geometric rate about `0.87–0.89` fits `11..18`
-  (OBSERVED). The
+    0.038, 0.032, 0.026, 0.022, 0.019, 0.016, 0.014, 0.0125, 0.0112`, maxima
+  at the powers of two `±2^s` with `s - h = 0..5`; the ratio rises from
+  `0.65` to `0.89` with no plateau, and eighteen levels do not separate a
+  geometric decay from a shifted power law (the audit's finding; they
+  separate near `h = 31`). The powers of two are a closed family under the
+  exact frequency recursion, so their coefficients were followed to `h =
+  120` without the law: geometric decay (ratio `0.906 -> 0.930`, local
+  exponents `2.1 -> 6.1`), equal at every level `20..120` to `0.46` times
+  the no-descent probability `P_h`, whose rate is `3^(h*-1) = 0.9465` with
+  `h*` the thin-divergence exponent of THM-4476 (OBSERVED; `M(h) ≍ P_h`
+  CONJECTURAL): the sup-norm mixing rate of the 3-adic law and the
+  thin-divergence exponent appear to be one number. The
   Fourier mass per conductor level is `0.466` at every level (`(3/2)` times
-  the S19 second-moment slope, PROVED by Parseval); the typical coefficient
-  has `|mu_hat|^2 3^h = 0.70` (square-root cancellation); the resonance at
-  `2^(h+3)` is carried by words of total cost about `1.48 h` (stable at `h
-  = 10` and `14`) with last valuations `1–3`, a large-deviation family of
-  mass rate `e^(-0.093 h)` (ratio `0.91`) whose coherence loss gives the
-  `0.87`.
+    the S19 second-moment increments, PROVED by Parseval level by level); the
+  typical coefficient has `|mu_hat|^2 3^h = 0.70` (square-root
+  cancellation); the resonance is carried by words of total cost about
+  `1.48 h` (stable at `h = 10` and `14`) with last valuations `1–3`, the
+  beginning of the critical no-descent family (`A/h -> log_2 3`).
 * **No one-step gap (PROVED):** the geometric Gauss sums `G_j(t) = c_j
   sum_r 2^(-r) e(t 2^(-r)/3^j)` have `sup_t |G_j| -> 1` at `t = 2^(j+1)`
   (mean `0.5430`); their exact 2-adic reading `e(t m_r/2^r + t/(2^r 3^j))`,
@@ -1611,7 +1617,11 @@ exploration and extend past work toward proofs. Note
   and Lyu (local cliques do not bound compressibility; only forests do) are
   shape-only mirrors of the affine IFS / cycle equation and of the atlas's
   UNIFORM/DIM lesson.
-* Audit: pending at the time of writing (section 8 of the note).
+* Audited SOUND WITH CORRECTIONS (eighteen applied: the decay reading at
+  `h <= 18` was overstated, the argmax law misdescribed, the collision
+  table measured its cap, two proof slips, the 2-adic class mod `2^A`, two
+  mirror overreaches; MISTAKE-549). Section 2b (the powers of two to level
+  120) was added after the audit.
 
 ## 3. The snippet, dispatched
 

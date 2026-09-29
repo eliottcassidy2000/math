@@ -1929,6 +1929,42 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
+## MISTAKE-549 (2026-09-29, opus S20 five-mirrors audit) -- eighteen levels of a decaying sequence were read as a plateau and a decided law; a closed sub-family settled it where a full computation could not
+
+- **Refuted claims** (independent audit of
+  `05-knowledge/results/collatz_five_mirrors_20260929.md`, SOUND WITH
+  CORRECTIONS, eighteen applied): (1) the primitive Fourier maxima `M(h)`
+  of the 3-adic Syracuse law "level off at `0.87`" and "a geometric decay
+  fits and would satisfy (2.3) with room": a shifted power law `C (h +
+  2.5)^(-2.5)` fitted `h = 7..18` better (`1.8%` against `4.3%`),
+  predicted the new level `18`, and would contradict the mixing estimate;
+  the two readings separate only near `h = 31`, beyond any FFT of the full
+  law. (2) "The maxima sit at `2^(h+3)`, `2^(h+4)`": the offset `s - h`
+  steps from `0` to `5` over `h = 1..18`. (3) A collision table whose
+  first colliding depth and minimal cost sum depended on the valuation cap
+  used to build it, and a "depth `3.8 n`" with no derivation. (4) A false
+  intermediate inequality in the proof of a true statement (Proposition
+  3(ii): the tail costs `2^(1-s)`, not `2^(-s)`) and a recovery step that
+  forgot the last valuation (`(d, C_w)` does not determine `w`; `(d, C_w,
+  A)` does).
+- **What survives and what settled it:** Propositions 1, 2, 4, 5, 6 and all
+  numbers. The decay question was then decided for the powers of two by
+  noticing that they form a closed family under the exact frequency
+  recursion (`2^j -> 2^(j-a)`), so their coefficients can be followed to
+  level `120` without the law: geometric decay, at the no-descent rate
+  `3^(h*-1) = 0.9465`, with the coefficient equal to `0.46` times the
+  no-descent probability at every level `20..120` (section 2b of the note;
+  OBSERVED, not covered by the audit).
+- **Reusable rule.** A fit over the computable range is evidence for a
+  law only if the competing laws separate inside that range; state where
+  they separate. Before extrapolating a sequence defined by a global
+  computation, look for a sub-family closed under the defining recursion:
+  it can be followed far beyond the global computation and it is exact.
+  When a table's rows depend on a search cap (valuations, depth, size),
+  say so in the table's definition and vary the cap once. A true statement
+  can carry a false inequality in its proof; check the intermediate
+  inequalities numerically, not only the conclusion.
+
 ## MISTAKE-548 (2026-09-29, opus S19 Mazur-digest audit) -- a tower's max() is evaluated level by level; a pruning "loss bound" needs a bound on the pruned subtrees, otherwise it is a calibration; the minimum of a sequence is read off the whole computed range
 
 - **Refuted claims** (independent audit of

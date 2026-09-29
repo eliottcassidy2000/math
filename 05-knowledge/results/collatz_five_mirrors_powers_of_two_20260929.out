@@ -1,0 +1,140 @@
+h, max_j |mu_hat_h(2^j)|, argmax j (s - h), ratio, FFT value M(h) where known
+   h=  1: 5.773503e-01  argmax j=-4760 (s-h=-4761)  ratio -  0.577350
+   h=  2: 3.779236e-01  argmax j=-4717 (s-h=-4719)  ratio 0.6546  0.377924
+   h=  3: 2.522368e-01  argmax j=-4668 (s-h=-4671)  ratio 0.6674  0.252237
+   h=  4: 1.769989e-01  argmax j=-4613 (s-h=-4617)  ratio 0.7017  0.176999
+   h=  5: 1.292736e-01  argmax j=-4531 (s-h=-4536)  ratio 0.7304  0.129274
+   h=  6: 9.610639e-02  argmax j=-4368 (s-h=-4374)  ratio 0.7434  0.096106
+   h=  7: 7.587004e-02  argmax j=-4366 (s-h=-4373)  ratio 0.7894  0.075870
+   h=  8: 6.089074e-02  argmax j=-4365 (s-h=-4373)  ratio 0.8026  0.060891
+   h=  9: 4.802615e-02  argmax j=10 (s-h=+1)  ratio 0.7887  0.048026
+   h= 10: 3.827832e-02  argmax j=12 (s-h=+2)  ratio 0.7970  0.038278
+   h= 11: 3.194419e-02  argmax j=13 (s-h=+2)  ratio 0.8345  0.031944
+   h= 12: 2.645817e-02  argmax j=14 (s-h=+2)  ratio 0.8283  0.026458
+   h= 13: 2.205243e-02  argmax j=16 (s-h=+3)  ratio 0.8335  0.022052
+   h= 14: 1.912799e-02  argmax j=17 (s-h=+3)  ratio 0.8674  0.019128
+   h= 15: 1.628448e-02  argmax j=18 (s-h=+3)  ratio 0.8513  0.016284
+   h= 16: 1.440949e-02  argmax j=20 (s-h=+4)  ratio 0.8849  0.014409
+   h= 17: 1.251069e-02  argmax j=21 (s-h=+4)  ratio 0.8682  0.012511
+   h= 18: 1.118727e-02  argmax j=23 (s-h=+5)  ratio 0.8942  0.011187
+   h= 19: 9.815710e-03  argmax j=24 (s-h=+5)  ratio 0.8774  
+   h= 20: 8.884593e-03  argmax j=26 (s-h=+6)  ratio 0.9051  
+   h= 21: 7.872133e-03  argmax j=28 (s-h=+7)  ratio 0.8860  
+   h= 22: 7.161169e-03  argmax j=29 (s-h=+7)  ratio 0.9097  
+   h= 23: 6.426482e-03  argmax j=31 (s-h=+8)  ratio 0.8974  
+   h= 24: 5.830815e-03  argmax j=32 (s-h=+8)  ratio 0.9073  
+   h= 25: 5.287607e-03  argmax j=34 (s-h=+9)  ratio 0.9068  
+   h= 26: 4.779553e-03  argmax j=35 (s-h=+9)  ratio 0.9039  
+   h= 27: 4.373017e-03  argmax j=37 (s-h=+10)  ratio 0.9149  
+   h= 28: 3.936399e-03  argmax j=38 (s-h=+10)  ratio 0.9002  
+   h= 29: 3.630045e-03  argmax j=40 (s-h=+11)  ratio 0.9222  
+   h= 30: 3.288110e-03  argmax j=42 (s-h=+12)  ratio 0.9058  
+   h= 31: 3.021646e-03  argmax j=43 (s-h=+12)  ratio 0.9190  
+   h= 32: 2.758464e-03  argmax j=45 (s-h=+13)  ratio 0.9129  
+   h= 33: 2.520597e-03  argmax j=46 (s-h=+13)  ratio 0.9138  
+   h= 34: 2.317614e-03  argmax j=48 (s-h=+14)  ratio 0.9195  
+   h= 35: 2.106202e-03  argmax j=49 (s-h=+14)  ratio 0.9088  
+   h= 36: 1.949569e-03  argmax j=51 (s-h=+15)  ratio 0.9256  
+   h= 37: 1.774564e-03  argmax j=53 (s-h=+16)  ratio 0.9102  
+   h= 38: 1.641542e-03  argmax j=54 (s-h=+16)  ratio 0.9250  
+   h= 39: 1.504612e-03  argmax j=56 (s-h=+17)  ratio 0.9166  
+   h= 40: 1.383199e-03  argmax j=57 (s-h=+17)  ratio 0.9193  
+   h= 41: 1.276163e-03  argmax j=59 (s-h=+18)  ratio 0.9226  
+   h= 42: 1.166205e-03  argmax j=60 (s-h=+18)  ratio 0.9138  
+   h= 43: 1.082647e-03  argmax j=62 (s-h=+19)  ratio 0.9284  
+   h= 44: 9.893211e-04  argmax j=64 (s-h=+20)  ratio 0.9138  
+   h= 45: 9.185846e-04  argmax j=65 (s-h=+20)  ratio 0.9285  
+   h= 46: 8.449073e-04  argmax j=67 (s-h=+21)  ratio 0.9198  
+   h= 47: 7.794109e-04  argmax j=68 (s-h=+21)  ratio 0.9225  
+   h= 48: 7.213630e-04  argmax j=70 (s-h=+22)  ratio 0.9255  
+   h= 49: 6.613112e-04  argmax j=71 (s-h=+22)  ratio 0.9168  
+   h= 50: 6.156771e-04  argmax j=73 (s-h=+23)  ratio 0.9310  
+   h= 51: 5.646737e-04  argmax j=75 (s-h=+24)  ratio 0.9172  
+   h= 52: 5.252696e-04  argmax j=76 (s-h=+24)  ratio 0.9302  
+   h= 53: 4.847749e-04  argmax j=78 (s-h=+25)  ratio 0.9229  
+   h= 54: 4.479589e-04  argmax j=79 (s-h=+25)  ratio 0.9241  
+   h= 55: 4.158870e-04  argmax j=81 (s-h=+26)  ratio 0.9284  
+   h= 56: 3.818699e-04  argmax j=82 (s-h=+26)  ratio 0.9182  
+   h= 57: 3.565319e-04  argmax j=84 (s-h=+27)  ratio 0.9336  
+   h= 58: 3.281584e-04  argmax j=86 (s-h=+28)  ratio 0.9204  
+   h= 59: 3.054319e-04  argmax j=87 (s-h=+28)  ratio 0.9307  
+   h= 60: 2.828142e-04  argmax j=89 (s-h=+29)  ratio 0.9259  
+   h= 61: 2.614776e-04  argmax j=90 (s-h=+29)  ratio 0.9246  
+   h= 62: 2.434993e-04  argmax j=92 (s-h=+30)  ratio 0.9312  
+   h= 63: 2.237010e-04  argmax j=93 (s-h=+30)  ratio 0.9187  
+   h= 64: 2.094499e-04  argmax j=95 (s-h=+31)  ratio 0.9363  
+   h= 65: 1.934464e-04  argmax j=97 (s-h=+32)  ratio 0.9236  
+   h= 66: 1.799997e-04  argmax j=98 (s-h=+32)  ratio 0.9305  
+   h= 67: 1.672076e-04  argmax j=100 (s-h=+33)  ratio 0.9289  
+   h= 68: 1.545577e-04  argmax j=101 (s-h=+33)  ratio 0.9243  
+   h= 69: 1.443620e-04  argmax j=103 (s-h=+34)  ratio 0.9340  
+   h= 70: 1.329987e-04  argmax j=105 (s-h=+35)  ratio 0.9213  
+   h= 71: 1.245025e-04  argmax j=106 (s-h=+35)  ratio 0.9361  
+   h= 72: 1.153728e-04  argmax j=108 (s-h=+36)  ratio 0.9267  
+   h= 73: 1.072654e-04  argmax j=109 (s-h=+36)  ratio 0.9297  
+   h= 74: 9.995324e-05  argmax j=111 (s-h=+37)  ratio 0.9318  
+   h= 75: 9.232585e-05  argmax j=112 (s-h=+37)  ratio 0.9237  
+   h= 76: 8.648727e-05  argmax j=114 (s-h=+38)  ratio 0.9368  
+   h= 77: 7.995331e-05  argmax j=116 (s-h=+39)  ratio 0.9245  
+   h= 78: 7.474902e-05  argmax j=117 (s-h=+39)  ratio 0.9349  
+   h= 79: 6.949199e-05  argmax j=119 (s-h=+40)  ratio 0.9297  
+   h= 80: 6.453383e-05  argmax j=120 (s-h=+40)  ratio 0.9287  
+   h= 81: 6.031700e-05  argmax j=122 (s-h=+41)  ratio 0.9347  
+   h= 82: 5.565735e-05  argmax j=123 (s-h=+41)  ratio 0.9227  
+   h= 83: 5.228647e-05  argmax j=125 (s-h=+42)  ratio 0.9394  
+   h= 84: 4.849700e-05  argmax j=127 (s-h=+43)  ratio 0.9275  
+   h= 85: 4.527096e-05  argmax j=128 (s-h=+43)  ratio 0.9335  
+   h= 86: 4.221863e-05  argmax j=130 (s-h=+44)  ratio 0.9326  
+   h= 87: 3.915277e-05  argmax j=131 (s-h=+44)  ratio 0.9274  
+   h= 88: 3.670215e-05  argmax j=133 (s-h=+45)  ratio 0.9374  
+   h= 89: 3.396394e-05  argmax j=135 (s-h=+46)  ratio 0.9254  
+   h= 90: 3.186532e-05  argmax j=136 (s-h=+46)  ratio 0.9382  
+   h= 91: 2.965117e-05  argmax j=138 (s-h=+47)  ratio 0.9305  
+   h= 92: 2.763251e-05  argmax j=139 (s-h=+47)  ratio 0.9319  
+   h= 93: 2.584767e-05  argmax j=141 (s-h=+48)  ratio 0.9354  
+   h= 94: 2.393461e-05  argmax j=142 (s-h=+48)  ratio 0.9260  
+   h= 95: 2.250093e-05  argmax j=144 (s-h=+49)  ratio 0.9401  
+   h= 96: 2.089106e-05  argmax j=146 (s-h=+50)  ratio 0.9285  
+   h= 97: 1.956218e-05  argmax j=147 (s-h=+50)  ratio 0.9364  
+   h= 98: 1.825965e-05  argmax j=149 (s-h=+51)  ratio 0.9334  
+   h= 99: 1.698658e-05  argmax j=150 (s-h=+51)  ratio 0.9303  
+   h=100: 1.593621e-05  argmax j=152 (s-h=+52)  ratio 0.9382  
+   h=101: 1.476314e-05  argmax j=154 (s-h=+53)  ratio 0.9264  
+   h=102: 1.388934e-05  argmax j=155 (s-h=+53)  ratio 0.9408  
+   h=103: 1.293693e-05  argmax j=157 (s-h=+54)  ratio 0.9314  
+   h=104: 1.208982e-05  argmax j=158 (s-h=+54)  ratio 0.9345  
+   h=105: 1.131900e-05  argmax j=160 (s-h=+55)  ratio 0.9362  
+   h=106: 1.051066e-05  argmax j=161 (s-h=+55)  ratio 0.9286  
+   h=107: 9.889043e-06  argmax j=163 (s-h=+56)  ratio 0.9409  
+   h=108: 9.191209e-06  argmax j=165 (s-h=+57)  ratio 0.9294  
+   h=109: 8.627987e-06  argmax j=166 (s-h=+57)  ratio 0.9387  
+   h=110: 8.061286e-06  argmax j=168 (s-h=+58)  ratio 0.9343  
+   h=111: 7.518083e-06  argmax j=169 (s-h=+58)  ratio 0.9326  
+   h=112: 7.059438e-06  argmax j=171 (s-h=+59)  ratio 0.9390  
+   h=113: 6.547090e-06  argmax j=173 (s-h=+60)  ratio 0.9274  
+   h=114: 6.173244e-06  argmax j=174 (s-h=+60)  ratio 0.9429  
+   h=115: 5.755858e-06  argmax j=176 (s-h=+61)  ratio 0.9324  
+   h=116: 5.391031e-06  argmax j=177 (s-h=+61)  ratio 0.9366  
+   h=117: 5.052099e-06  argmax j=179 (s-h=+62)  ratio 0.9371  
+   h=118: 4.701929e-06  argmax j=180 (s-h=+62)  ratio 0.9307  
+   h=119: 4.427711e-06  argmax j=182 (s-h=+63)  ratio 0.9417  
+   h=120: 4.119742e-06  argmax j=184 (s-h=+64)  ratio 0.9304  
+   fits over h = 40..120: geometric ratio 0.93026 (max log-residual 0.1208); shifted power law C (h + 19.9)^(-6.912) (max log-residual 0.3239)
+   h* = h(log_3 2) = 0.94996; 3^(h* - 1) = 0.94650; e^(-I(log_2 3)) with I(a) = a H(1/a) - a ln 2: 0.94650
+   no-descent probability P_h and the ratio max_j |mu_hat_h(2^j)| / P_h:
+      h=  5: P_h = 1.4844e-01 (ratio to previous level 0.7308); M/P_h = 0.8709; (M/P_h)^(1/h) = 0.9727
+      h= 10: P_h = 6.4514e-02 (ratio to previous level 0.8162); M/P_h = 0.5933; (M/P_h)^(1/h) = 0.9491
+      h= 15: P_h = 3.4163e-02 (ratio to previous level 0.8488); M/P_h = 0.4767; (M/P_h)^(1/h) = 0.9518
+      h= 20: P_h = 1.9254e-02 (ratio to previous level 0.8744); M/P_h = 0.4614; (M/P_h)^(1/h) = 0.9621
+      h= 30: P_h = 7.0746e-03 (ratio to previous level 0.9221); M/P_h = 0.4648; (M/P_h)^(1/h) = 0.9748
+      h= 40: P_h = 2.9861e-03 (ratio to previous level 0.9314); M/P_h = 0.4632; (M/P_h)^(1/h) = 0.9809
+      h= 50: P_h = 1.3288e-03 (ratio to previous level 0.9392); M/P_h = 0.4633; (M/P_h)^(1/h) = 0.9847
+      h= 60: P_h = 6.1523e-04 (ratio to previous level 0.9484); M/P_h = 0.4597; (M/P_h)^(1/h) = 0.9871
+      h= 70: P_h = 2.8288e-04 (ratio to previous level 0.9031); M/P_h = 0.4702; (M/P_h)^(1/h) = 0.9893
+      h= 80: P_h = 1.3956e-04 (ratio to previous level 0.9098); M/P_h = 0.4624; (M/P_h)^(1/h) = 0.9904
+      h= 90: P_h = 6.9438e-05 (ratio to previous level 0.9191); M/P_h = 0.4589; (M/P_h)^(1/h) = 0.9914
+      h=100: P_h = 3.4515e-05 (ratio to previous level 0.9437); M/P_h = 0.4617; (M/P_h)^(1/h) = 0.9923
+      h=110: P_h = 1.7937e-05 (ratio to previous level 0.9456); M/P_h = 0.4494; (M/P_h)^(1/h) = 0.9928
+      h=120: P_h = 9.3061e-06 (ratio to previous level 0.9492); M/P_h = 0.4427; (M/P_h)^(1/h) = 0.9932
+   local exponents from doublings h -> 2h: 10->20: 2.107, 15->30: 2.308, 20->40: 2.683, 25->50: 3.102, 30->60: 3.539, 40->80: 4.422, 50->100: 5.272, 60->120: 6.101
+DONE

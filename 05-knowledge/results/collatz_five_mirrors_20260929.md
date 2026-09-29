@@ -1,4 +1,4 @@
-# Five papers as structural mirrors of the 3-adic Syracuse law: the Fourier profile of Tao's Syracuse random variable (primitive maxima at the powers of two, decay ratio rising to `0.87` per level, scale-invariant Fourier mass `0.47`), the same-length collision threshold, and carry-polynomial reciprocity under word reversal
+# Five papers as structural mirrors of the 3-adic Syracuse law: the Fourier profile of Tao's Syracuse random variable (primitive maxima at the powers of two, decaying at the no-descent rate `3^(h*-1)` on the powers of two to level 120, scale-invariant Fourier mass `0.47`), the same-length collision threshold, and carry-polynomial reciprocity under word reversal
 
 **Session:** opus, `collatz-poset-dag-20260927` (S20), 2026-09-29.
 **Owner's directive:** "merge ideas related to the linked papers below into
@@ -17,20 +17,32 @@ of its argument and matched to the thread's frontier (S19: Theorems A–C of
 THM-4476, THM-4514; the barrier atlas §§0, 7, 8).
 **Inherits (cited):** Tao 2022 (Syracuse random variables; fine-scale
 mixing, Proposition 1.14; from memory, as restated by Mazur's (2.3)), Mazur
-2026 (Lemma 8.1: "primitive Fourier coefficient bound `C* h^(-6409)` at level
-`h`"), Terras 1976, S19 Theorem A (harmonic mass), the S19 Fourier
-consistency (`Y_n mod 3^m` has the law of `Y_m`).
+2026 (Lemma 8.1, and the paragraph following it in §8.1: "primitive Fourier
+coefficient bound `C* h^(-6409)` at level `h` for characters not factoring
+through level `h - 1`"), Terras 1976, S19 Theorem A (harmonic mass), the
+S19 Fourier consistency (`Y_n mod 3^m` has the law of `Y_m`), THM-4476 and
+THM-4487 (the thin-divergence exponent `h* = h(log_3 2) = 0.94996` and the
+no-descent tilt).
 
 **Status: PROVED (Propositions 1–5: level-independence of the primitive
 Fourier profile; the implication (2.3) ⟹ super-polynomial decay of the
 primitive maxima; no uniform one-step gap of the geometric Gauss sums; the
-same-length spread lemma; carry reciprocity under reversal) + FINITE-EXACT
-(the Fourier profile of the law to level 17 in float64; the collision table;
-the reversed cycles; the Gauss-sum table) + OBSERVED (the maxima sit at the
-powers of two `2^(h+3)`, `2^(h+4)`; the decay ratio rises from `0.65` to
-`0.87` and levels; the Fourier mass per conductor level is `0.47`) +
-DIRECTION. No Collatz proof step. Audit: pending (section 8 will hold the
-record).**
+same-length spread lemma; carry reciprocity under reversal; Proposition 6,
+the reversal-invariant trace; the closure of the powers of two under the
+frequency recursion) + VERIFIED (the Fourier profile of the law to level
+18 in float64, agreeing with the rational law to level 6, with an
+independent forward recursion to level 14 to `4·10^(-7)`, and with the
+closed recursion on the powers of two to six digits) + FINITE-EXACT (the
+collision table; the reversed cycles; the Gauss-sum table; the traces) +
+OBSERVED (the maxima sit at the powers of two `±2^s`, `s - h` growing
+slowly; the decay ratio rises from `0.65` to `0.89` over eighteen levels;
+the Fourier mass per conductor level is `0.46–0.47`; on the powers of two
+the coefficient is `0.46` times the no-descent probability at every level
+`20..120`) + CONJECTURAL (`M(h) ≍ P_h`, the sup-norm mixing rate is the
+no-descent rate `3^(h*-1)`) + DIRECTION. No Collatz proof step. Audited
+SOUND WITH CORRECTIONS (eighteen applied; section 8); section 2b, the
+`3x+k` reversal survey and Proposition 6 were added after the audit's
+snapshot.**
 
 Scripts and outputs:
 `04-computation/experiments/collatz_five_mirrors_20260929.py` →
@@ -60,24 +72,38 @@ reversal-invariant trace, Proposition 6).
    fine-scale estimate (2.3) of the Mazur digest (Tao's Proposition 1.14 in
    Mazur's restatement) implies `M(h) <= C_A (h-1)^(-A)` for every `A`
    (Proposition 2, PROVED): the primitive Fourier maxima must decay faster
-   than any polynomial. Computed to `h = 18` (FINITE-EXACT, float64):
+      than any polynomial. Computed to `h = 18` (VERIFIED, float64):
    `0.5774, 0.3779, 0.2522, 0.1770, 0.1293, 0.0961, 0.0759, 0.0609, 0.0480,
    0.0383, 0.0319, 0.0265, 0.0221, 0.0191, 0.0163, 0.0144, 0.0125, 0.0112`;
-   the maximum sits at `u = 2^s` with `s = h + 3` to `h + 5` (`2^17` at `h
-   = 14`, `2^21` at `h = 17`, `2^23` at `h = 18`); the ratio `M(h)/M(h-1)`
-   rises from `0.65` to about `0.87–0.89` and levels off over `h = 14..18`
-   (`0.867, 0.851, 0.885, 0.868, 0.894`). A fixed power law is excluded by
-   the steepening (local exponents `1.76, 1.86, 1.99, 2.08, 2.10` on the
-   doublings `5→10, 6→12, 7→14, 8→16, 9→18`); a geometric decay at rate
-   about `0.87–0.89` per level fits levels `11–18` and would satisfy (2.3)
-   with room. No tension with Tao's proposition, whose
-   explicit constants are vacuous here; but this is the first measurement of
-   what the mixing estimate actually bounds.
+   the maximum sits at `u = ±2^s` with `s - h = 0` for `h <= 6` and `s - h
+   = 1, 2, 3, 4, 5` on `h = 7–9, 10–12, 13–15, 16–17, 18` (OBSERVED; `2^17`
+   at `h = 14`, `2^23` at `h = 18`); the ratio `M(h)/M(h-1)` rises from
+   `0.65` to `0.89` with no plateau (window means `0.78, 0.82, 0.87` over
+   `h = 6–9, 10–13, 14–18`). Eighteen levels do not separate a geometric
+   decay from a shifted power law (`C (h + 2.5)^(-2.5)` fits `7–18` to
+   `1.8%`, the audit's finding; the readings separate near `h = 31`). The
+   separation comes from the powers of two themselves: they are a closed
+   family under the exact frequency recursion (`2^j -> 2^(j-a)`), so
+   `mu_hat_h(2^j)` is computable without the law (section 2b). That
+   recursion reproduces every FFT value to six digits and continues to `h =
+   120`, where `max_j |mu_hat_h(2^j)|` decays geometrically (ratio `0.906
+   -> 0.930` over `h = 30..120`; local exponents `2.1, 2.3, 2.7, 3.1, 3.5,
+   4.4, 5.3, 6.1` on successive doublings, the signature of a geometric
+   law) and equals `0.46 ± 0.02` times the no-descent probability `P_h =
+   P(a_1 + ... + a_j < j log_2 3 for all j <= h)` at every level `20..120`.
+   `P_h` decays at the rate `3^(h* - 1) = 0.9465`, `h* = h(log_3 2)` the
+   thin-divergence exponent of THM-4476: on the powers of two, which carry
+   the maximum wherever that was checked, the sup-norm mixing rate of the
+   3-adic law is the no-descent rate (OBSERVED; CONJECTURAL for `M(h)`).
+   This is consistent with (2.3) (geometric beats every polynomial), and it
+   is the first measurement of what the mixing estimate actually bounds.
 2. **Scale invariance of the Fourier energy.** The Fourier mass at conductor
    level `h`, `sum_(cond t = 3^h) |mu_hat(t)|^2`, is `0.667, 0.476, 0.462`
-   and then `0.464 .. 0.472` for `h = 4..17` (slowly increasing): every
-   3-adic scale carries the same energy, which is exactly the linear growth
-   of the second moment of the density found in S19 (`(3/2)·0.31 = 0.466`).
+   and then `0.464 .. 0.472` for `h = 4..18` (slowly increasing); with
+   Proposition 1 the mass at level `h` is exactly `(3/2)(E_units[rho_h^2] -
+   E_units[rho_(h-1)^2])`, and the S19 second-moment increments `0.308 ->
+   0.314` give `0.462 -> 0.472`: every 3-adic scale carries nearly the same
+   energy, which is the linear growth of the second moment found in S19.
    The typical coefficient at level `h` has `|mu_hat|^2 3^h = 0.70`:
    square-root cancellation, as for random phases; the slow sup-norm decay
    comes from the powers of two alone.
@@ -85,14 +111,16 @@ reversal-invariant trace, Proposition 6).
    (`t = 2^12`, `0.0383`, against `0.0026` for a generic unit) is carried by
    the words of total cost `A = 12..17` (`60%` of `|.|` coherent), far below
    the typical cost `2h = 20`, and by the last valuations `1, 2, 3`
-   (`0.0225, 0.0120, 0.0051`): the low-cost words, exponentially rare but
-   phase-coherent, are the obstruction to fast sup-norm mixing. At `h = 14`
-   the same decomposition gives the same picture (`A = 19..23`, coherent
-   fraction `0.56`, last valuation `1` carrying `57%`), and the
-   contribution-weighted cost ratio is stable, `A/h = 1.49` at `h = 10`,
-   `1.48` at `h = 14`: the resonance is a fixed large-deviation family,
-   whose mass rate at `A/h = 1.48` is `e^(-0.093 h)` (ratio `0.91` per
-   level); the observed `0.87` is that rate times the coherence loss.
+      (`0.0225, 0.0120, 0.0051`) (FINITE-EXACT at `h = 10` and `14`; at `h =
+   14`: `A = 19..23`, coherent fraction `0.56`, last valuation `1` carrying
+   `57%`). The contribution-weighted cost ratio is stable at the two levels,
+   `A/h = 1.49` and `1.48`, and the cost family `A ≈ 1.48 h` has
+   large-deviation mass `e^(-0.093 h)` (ratio `0.91` per level). The reading
+   that the low-cost coherent words carry the coefficient is DIRECTION at
+   these levels and is confirmed at scale by section 2b: to `h = 120` the
+   coefficient at the powers of two tracks the no-descent probability, whose
+   critical family has `A/h -> log_2 3 = 1.585` (the resonant `s/h` reaches
+   `1.53` at `h = 120`).
 4. **One-step geometric Gauss sums have no uniform gap (Proposition 3,
    PROVED).** `G_j(t) = c_j sum_r 2^(-r) e(t 2^(-r)/3^j)` satisfies `sup_t
    |G_j(t)| -> 1` (`0.577, 0.582, 0.789, 0.887, 0.944, 0.971, 0.986, 0.994,
@@ -102,19 +130,23 @@ reversal-invariant trace, Proposition 6).
    multi-step (renewal) phenomenon, as in Tao's proof, never a spectral gap
    of one step.
 5. **The same-length spread lemma (Proposition 4, PROVED)** — the Moore
-   bound of the circulant paper: two distinct words of the same length `d`
+      bound of the circulant paper: two distinct words of the same length `d`
    with costs `A, A'` and `A + A' <= (n - d) log_2 3 + 1` land on distinct
-   classes mod `3^n`. The actual first collisions in the tree of `1` need
-   cost sums `29..63` at depths `2..4` for `n = 4..12`, three to five times
-   the bound: the "tessellation obstruction" of the paper (optimal tiles that
-   fail to tile) has no counterpart; the Syracuse residues stay injective far
-   beyond the Moore regime.
+   classes mod `3^n`. In the tree of `1` with valuations `<= 24` the first
+   same-length collisions mod `3^n` appear at depths `2..4` with minimal
+   cost sums `29..63` for `n = 4..12`, `4.4–7` times the bound; with
+   valuations `<= 70` collisions appear at depth `2` already for `n <= 9`
+   and the minimal colliding sum at depth `d` decreases with `d`, but at
+   every depth `d <= 5` and `n <= 12` it exceeds the bound by a factor of at
+   least `4.4`: the Syracuse residues stay injective well beyond the Moore
+   regime, and no counterpart of the paper's tessellation obstruction was
+   found (an analogy, not a theorem).
 6. **Reciprocity (Proposition 5, PROVED):** with the exclusive-prefix carry
    `C_w(u,v) = sum_j u^(d-j) v^(a_1+...+a_(j-1))` (the affine identity `3^d x
    + C_w = 2^A y`) and the inclusive one `C'_w`, word reversal is polynomial
-   reciprocity, `C_(rev w)(u,v) = u^(d-1) v^A C'_w(1/u, 1/v)`; the 2-adic
-   source `x ≡ -C_w 3^(-d)` and the 3-adic target `y ≡ C_w 2^(-A)` are the
-   two reciprocal evaluations of one integer. Reversal is an involution on
+      reciprocity, `C_(rev w)(u,v) = u^(d-1) v^A C'_w(1/u, 1/v)`; the 2-adic
+   source `x ≡ -C_w 3^(-d) mod 2^A` and the 3-adic target `y ≡ C_w 2^(-A)
+   mod 3^d` are the two reciprocal evaluations of one integer. Reversal is an involution on
    rational cycles that preserves `(k, A)`; it fixes the cycles of `-1` and
    `{-5,-7}` (a rotation) and sends the seven-cycle of `-17` to the rational
    point `-13801/139`, not an integer (FINITE-EXACT). On the maps `3x + k`,
@@ -154,7 +186,7 @@ monodromy image. *Shape of the hard direction:* build a global object as a
 quotient by a contracting affine lift of a translation, then control the
 degenerate fibers integrally. *Mirror:* the Syracuse maps `S_a(y) = (3y +
 1)/2^a` are contracting affine maps of `Z_3` (ratio `|3|_3 = 1/3`), the
-3-adic Syracuse law is the stationary law of this IFS (S19 §4), and the
+3-adic Syracuse law is the stationary law of this IFS (S19 §§2, 7), and the
 inverse histories are the "quotient by the lift". The cycle equation
 `3^k y_0 + C_w = 2^A y_0` is the sphere relation for the affine monodromy
 around a cycle, with linear part `3^k/2^A ≠ 1`: a Collatz cycle is a fixed
@@ -193,10 +225,12 @@ of the predecessors of `y`) is the cancellation-free one; the Lambert
 factors are the one-step Gauss sums of section 4, evaluated through the
 other prime by `e(t m_r/2^r + t/(2^r 3^j))`. The thread's positivity
 question, `liminf H_n(1) > 0`, is the seed-`1` value of that description;
-its layer recursion `H_(n+1) = H^(1) + 2H^(2)` (S19, Corollary A2) is the
-analogue of Merca's divisor recursion. Verdict: the frame is right; a
-closed formula for `H_n(1)` is not in reach (it would be a formula for the
-tree of `1`).
+its layer recursion `H_(n+1) = H^(1) + 2H^(2)` (S19, Corollary A2) is the analogue of Merca's linear recurrence (his Corollary 1.5). Verdict:
+remark; `mu_n` is positive by definition (a sum of the weights `2^(-A(w))`),
+so Merca's positivity phenomenon has no counterpart, and the open `liminf
+H_n(1) > 0` is an asymptotic question about a positive sequence; a closed
+formula for `H_n(1)` is not in reach (it would be a formula for the tree of
+`1`).
 
 **Dalfó–Fiol–Reyes (2609.33718).** On the circulant digraph `CD(N, a, b)`
 allow the step pairs `(+a,+b), (+a,-b), (-a,+b)` but not `(-a,-b)`: a
@@ -210,8 +244,9 @@ from realizability. *Mirror:* the frequency-side recursion of the 3-adic
 law, `mu_hat_n(t) = sum_(a>=1) 2^(-a) e(t 2^(-a)/3^n) mu_hat_(n-1)(t 2^(-a)
 mod 3^(n-1))` (verified exactly), is a twisted geometric walk on the cyclic
 unit group `<2> ≅ Z/(2·3^(n-1))` — a weighted circulant with generator
-`2^(-1)` — with the sector restriction that the parity of `a` is fixed by
-the class of the target mod `3`; the ball growth is exponential
+`2^(-1)`, all steps `a >= 1` allowed (the parity restriction `a ≡ ε(z) mod
+2` lives on the space side, in the parents' recursion of S19 §5); the ball
+growth is exponential
 (`2^(A-1)` words of cost `A`), not planar; the Moore bound is Proposition 4
 and it is far from attained (section 5): there is no tiling obstruction,
 the residues of same-length words stay injective long past the bound.
@@ -265,8 +300,9 @@ his Section 8.1 describes the underlying "primitive Fourier coefficient
 bound `C* h^(-6409)` at level `h`", i.e. a bound on `M(h)` with `C*` a
 three-fold exponential tower.
 
-**The profile (FINITE-EXACT, float64 FFT of the level-18 law, `20 GB`;
-identical at every level where compared).**
+**The profile (VERIFIED, float64 FFT of the level-18 law, `20 GB`;
+identical at every level where compared, and reproduced to six digits by
+the closed recursion of section 2b).**
 
 | `h` | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -277,33 +313,42 @@ identical at every level where compared).**
 | typical `|mu_hat|^2 3^h` | 1.00 | .714 | .692 | .696 | .698 | .699 | .698 | .699 | .700 | .701 | .702 | .703 | .704 | .705 | .706 | .707 | .708 | .708 |
 
 `M(1) = 1/sqrt 3` exactly (`|(1/3) e(1/3) + (2/3) e(2/3)|`). The maximum
-is always at a power of two, `u = 2^s` with `s = h + 3` to `h + 5` for `h
->= 7`, i.e. `t/3^h = 2^s/3^h ≈ 0.03–0.05`: the character `e(2^s y/3^h)` is not
-a low frequency in the real sense; it is the frequency that turns the
-3-adic inverses `2^(-a)` of the small valuations into small integers
-`2^(s-a)` (the one-step Gauss sums of section 4 show the same alignment).
+is always at a power of two up to sign (`|mu_hat(-u)| = |mu_hat(u)|`),
+`u = ±2^s` with `s - h` stepping up by one every two or three levels (`s -
+h = 1` at `h = 7`, `5` at `h = 18`), so `2^s/3^h` decreases geometrically
+(`0.12` at `h = 7`, `0.027` at `h = 14`, `0.022` at `h = 18`): the
+character `e(2^s y/3^h)` is not a low frequency in the real sense; it is
+the frequency that turns the 3-adic inverses `2^(-a)` of the small
+valuations into small integers `2^(s-a)` (the one-step Gauss sums of
+section 4 show the same alignment).
 The values `|mu_hat_17(2^s)|`, `s = 0..60`, form a single bump centred at
 `s = 21` (`0.0125`), with `0.0111` at `s = 20`, `0.0106` at `23`, and the
-generic size `3·10^(-4)` (`= 0.84 · 3^(-17/2)`) outside `s = 13..27`; at
+generic size `7·10^(-5)` (`= 0.84 · 3^(-17/2)`) outside `s = 13..27`; at
 level 18 the bump is centred at `s = 23` (`0.0112`).
 
-**Decay.** Local exponents from the doublings `M(h)/M(2h)`: `1.76` (5→10),
-`1.86` (6→12), `1.99` (7→14), `2.08` (8→16), `2.10` (9→18): steepening,
-so no fixed power law; `3.75 h^(-2)` fits `7 <= h <= 14` to `4%` and
-undershoots by `2–4%` at `15–18`. The ratios rise from `0.65` to `0.87`
-and are flat over `14..18` at `0.87 ± 0.02` (`0.894` at `h = 18`; they
-fluctuate with the `s = h+3`/`h+4`/`h+5` alternation of the argmax).
-Reading: a geometric decay at rate about `0.87–0.89` per level, which is
-compatible with Proposition 2 (super-polynomial) with room, and with Tao's
-proposition, whose constants say nothing below `m` of the order of
-`2^(2^(2^8697))`. OBSERVED, eighteen levels; the asymptotic regime is not
-established, and a ratio creeping to `1` is not excluded.
+**Decay (levels `<= 18`).** Local exponents from the doublings
+`M(h)/M(2h)`: `1.76` (5→10), `1.86` (6→12), `1.99` (7→14), `2.08` (8→16),
+`2.10` (9→18): steepening, so no pure power law `C h^(-α)`; but a shifted
+power law `C (h + 2.5)^(-2.52)` fits `7 <= h <= 18` to `1.8%` (the audit's
+fit; local exponents `1.86, 1.94, 2.01, 2.06, 2.10`, ratios `0.854–0.881`
+at `14..18`), better than a geometric `C r^h` (`r = 0.86`, `4.3%` on
+`11–18`), and it predicted the level-18 value from the levels below
+(`0.0110` against the geometric `0.0105`; measured `0.0112`). `3.75
+h^(-2)` fits `7 <= h <= 14` to `4%` and `M(h)` lies `2–4%` below it at
+`15–18`. The ratios rise from `0.65` to `0.89` and are still rising over
+`14..18` (mean `0.873` against `0.823` over `10..13`; the `±0.02`
+fluctuation follows the steps of `s - h`). So the eighteen FFT levels do
+not decide between a geometric decay (compatible with Proposition 2) and a
+polynomial one (which would contradict it); the two readings separate by a
+factor `2` near `h = 31`, and Tao's constants say nothing below `m` of the
+order of `2^(2^(2^8697))`. Section 2b decides it for the powers of two.
 
 **Scale invariance.** By Parseval, `sum_t |mu_hat_n(t)|^2 = 3^n sum_y
-mu_n(y)^2 = (3/2) E_units[rho_n^2]`; the second moment grows by `0.31` per
-level (S19), so the Fourier mass per conductor level is `(3/2)·0.31 =
-0.466`, the table's constant. Every 3-adic scale carries the same Fourier
-energy: the law is "`1/f`" in the 3-adic scale, its density is in no `L^p`
+mu_n(y)^2 = (3/2) E_units[rho_n^2]`, and with Proposition 1 the mass at
+level `h` is exactly `(3/2)(E_units[rho_h^2] - E_units[rho_(h-1)^2])`; the
+second-moment increment is `0.308 -> 0.314` over `h = 3..17` (S19: `0.31`),
+so the mass per level is `0.462 -> 0.472`, slowly increasing. Every 3-adic
+scale carries nearly the same Fourier energy: the law is "`1/f`" in the 3-adic scale, its density is in no `L^p`
 for `p >= 2` if this continues (S19 §7, OBSERVED), and the fine-scale
 `ell^1` distances `||mu_N - lift mu_m||_1` (`0.85 .. 0.35` for `m = 1..9`
 at `N = 18`) are dominated by the bulk of square-root-size coefficients,
@@ -326,13 +371,18 @@ resonance is carried by a fixed family, the words of total cost `A ≈ 1.48
 h` with small last valuations: exponentially rare (the rate function of the
 cost, `I(α) = α H(1/α) - α ln 2` in nats for `A = α h`, `H` the entropy,
 gives `I(1.48) = -0.093`, i.e. mass `e^(-0.093 h)`, ratio `0.91` per
-level) but phase-coherent; the observed sup-norm ratio `0.87` is this rate
-times a coherence loss of about `0.96` per level. This is the mechanism behind the slow
+level) but phase-coherent; at `h <= 18` the sup-norm ratio `0.87` lies below this
+mass rate `0.91` (a coherence loss, if the decay is geometric; DIRECTION,
+the quotient `0.87/0.91` is not a measurement). Section 2b shows, to `h =
+120`, that the coefficient at the powers of two is `0.46` times the
+no-descent probability, whose critical family has `A/h -> log_2 3 = 1.585`
+and rate `0.9465`: the finite-level family `A ≈ 1.48 h` is the beginning of
+that critical family. This is the candidate mechanism behind the slow
 sup-norm decay and the reason it must be renewal-theoretic (Tao's
 Fourier–renewal method, Mazur's §8.1 "renewal bounds"): no single step has
 a gap (section 4), and the obstruction is a large-deviation family of
-words, whose rate (`≈ 0.87` per level) is what a sharp version of (2.3)
-would have to compute.
+words, whose contribution is what a sharp version of (2.3) would have to
+bound.
 
 **Direction.** A proof that `|mu_hat_h(2^s)| <= C r^h` for some `r < 1`
 uniformly in `s`, together with the square-root behaviour of the generic
@@ -341,6 +391,70 @@ decomposition suggests the route: bound the coherent low-cost family by its
 large-deviation mass and show the remaining words cancel at the
 square-root rate. This is the analytic core of Tao's proposition restated
 as a concrete inequality on one explicit sequence.
+
+**2b. The powers of two to level 120 (added after the audit's snapshot;
+`collatz_five_mirrors_powers_of_two_20260929.py`).** The frequency
+recursion `mu_hat_n(t) = sum_(a>=1) 2^(-a) e((t 2^(-a) mod 3^n)/3^n)
+mu_hat_(n-1)(t 2^(-a) mod 3^(n-1))` sends `t = 2^j` to the frequencies
+`2^(j-a)`: the family `{2^j mod 3^n : j ∈ Z}` (the inverse powers included)
+is closed under it (PROVED, trivial). With the valuation truncated at `a <=
+40` (error `<= 2^(-40)` per level) and `mu_hat_0 ≡ 1`, the values `m_n(j)
+:= mu_hat_n(2^j mod 3^n)` follow for every `j` and `n` from a recursion
+over about `5000` exponents per level, in Python big integers for the
+residues and float64 for the phases, without the law itself. Validation:
+`max_j |m_h(j)|` reproduces every FFT value `M(h)`, `h <= 18`, to six
+digits (`0.577350, 0.377924, ..., 0.011187`) with the same argmax `s - h =
+1..5` for `9 <= h <= 18` (for `h <= 8` the family covers all units and
+the maximum is `M(h)` by definition). Beyond, `max_j |m_h(j)|` is a lower
+bound for `M(h)` (an equality if the maximum stays on the powers of two,
+true wherever checked):
+
+| `h` | 20 | 30 | 40 | 50 | 60 | 70 | 80 | 90 | 100 | 110 | 120 |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| `max_j |m_h(j)|` | 8.88e-3 | 3.29e-3 | 1.38e-3 | 6.16e-4 | 2.83e-4 | 1.33e-4 | 6.45e-5 | 3.19e-5 | 1.59e-5 | 8.06e-6 | 4.12e-6 |
+| argmax `s - h` | 6 | 12 | 17 | 23 | 29 | 35 | 40 | 46 | 52 | 58 | 64 |
+| ratio to the level below | .905 | .906 | .919 | .931 | .926 | .921 | .929 | .938 | .938 | .934 | .930 |
+| `P_h` (no-descent probability) | 1.93e-2 | 7.07e-3 | 2.99e-3 | 1.33e-3 | 6.15e-4 | 2.83e-4 | 1.40e-4 | 6.94e-5 | 3.45e-5 | 1.79e-5 | 9.31e-6 |
+| `max_j |m_h(j)| / P_h` | .461 | .465 | .463 | .463 | .460 | .470 | .462 | .459 | .462 | .449 | .443 |
+
+(`P_h = P(a_1 +
+... + a_j < j log_2 3` for all `j <= h)` for i.i.d. geometric(1/2)
+valuations, by dynamic programming.) The decay is geometric: a geometric
+fit over `h = 40..120` has ratio `0.930` with maximal log-residual `0.12`,
+against `0.32` for the best shifted power law (which needs exponent `6.9`
+and shift `20`), and the local exponents on successive doublings grow
+without bound, `2.1` (10→20), `2.3` (15→30), `2.7` (20→40), `3.1`
+(25→50), `3.5` (30→60), `4.4` (40→80), `5.3` (50→100), `6.1` (60→120),
+as `h |log_2 r|` for a geometric law. The audit's shifted power law, which
+fit the eighteen FFT levels better than a geometric law, fails beyond `h ≈
+30`. The resonant exponent grows linearly, `s/h = 1.52–1.53` at `h =
+100–120`, approaching `log_2 3 = 1.585`.
+
+**The no-descent identity (OBSERVED).** `max_j |m_h(j)| / P_h = 0.46 ±
+0.02` at every level `20 <= h <= 120` (`0.461` at `20`, `0.463` at `50`,
+`0.462` at `100`, `0.443` at `120`). The rate of `P_h` is the
+large-deviation rate of the valuation sum at the critical slope `log_2 3`:
+`P_h^(1/h) -> e^(-I(log_2 3)) = 3^(h* - 1) = 0.94650` with `h* = h(log_3
+2) = 0.94996` the entropy that governs the thin divergent orbits of
+THM-4476 (`N(X) <= K X^(h*+ε)`) and the tilt of THM-4487 (standard: the
+cheapest way to stay under the critical line is to walk along it; the
+ratios `P_h/P_(h-1)` are `0.922, 0.931, 0.939, 0.948` at `h = 30, 40, 50,
+60` and `0.949` at `120`, still rising toward `0.9465`). Reading: the
+maximal Fourier coefficient of the 3-adic Syracuse law at the powers of
+two is, up to a constant `0.46`, the probability that a random valuation
+word of length `h` never descends — the coherent family is the no-descent
+set, whose members' phases `e(2^(s-S_j)/3^j)` are fixed roots of unity
+determined by the first few valuations (the constant) while the descending
+words cancel. Consequences: (i) on this family (2.3) holds with the
+geometric rate `3^(h*-1)` per level and cannot hold faster; (ii) the
+sup-norm mixing rate of the 3-adic law and the thin-divergence exponent are
+the same number (CONJECTURAL for `M(h)`: it needs the maximum to stay on
+the powers of two, and a proof of the square-root cancellation over the
+descending words); (iii) Mazur's `C* h^(-6409)` is a polynomial statement
+about a geometric quantity. What is PROVED here: the closure and exactness
+of the recursion, `M(h) >= max_j |m_h(j)|`, and the FFT agreement to
+`h = 18`; what is OBSERVED: the geometric decay and the identity to `h =
+120`.
 
 ---
 
@@ -356,28 +470,43 @@ corresponding depth-`d` predecessors of any two integers in one class mod
 *Proof.* `Y(w) = C_w/2^A` with `C_w = sum_(j=1)^d 3^(d-j) 2^(a_1+...+a_(j-1))`
 odd. The congruence gives `3^n | C_w 2^(A') - C_(w') 2^A`. The difference is
 nonzero: equality would force `A = A'` (both carries odd) and `C_w =
-C_(w')`, and `(d, C_w)` determines `w` (`a_1 = v_2(C_w - 3^(d-1))`, then
-recurse on `(C_w - 3^(d-1))/2^(a_1)`). And `0 < |C_w 2^(A') - C_(w') 2^A|
+C_(w')`, and `(d, C_w, A)` determines `w` (`C_w` does not involve `a_d`:
+`a_1 = v_2(C_w - 3^(d-1))`, recurse on `(C_w - 3^(d-1))/2^(a_1)` for `a_2,
+..., a_(d-1)`, then `a_d = A - a_1 - ... - a_(d-1)`). And `0 < |C_w 2^(A')
+- C_(w') 2^A|
 < 2^(A+A') 3^d / 2` since `C_w <= 2^A (3^d - 1)/2`. Hence `3^n < 2^(A+A')
 3^d/2`. ∎
 
-**The actual first collisions in the tree of `1`** (nodes of depth `d`
-with valuations `<= 24`, reduced mod `3^n`; minimal `A + A'` among the
-colliding pairs at the first colliding depth):
+**The actual collisions in the tree of `1`** (nodes of depth `d`, reduced
+mod `3^n`; the session's run used valuations `<= 24` and reported the
+minimal `A + A'` at the first colliding depth, `29, 31, 32, 32, 56, 56, 58,
+61, 63` at `d = 2, 2, 3, 3, 3, 3, 4, 4, 4` for `n = 4..12`; the audit
+re-ran the search with valuations `<= 70` and found that the first
+colliding depth and the minimal sum both depend on the cap). Minimal
+colliding `A + A'` at depth `d` with valuations `<= 70` (exact for every
+entry `<= 70 + 3d`; `*` = upper bound; `–` = none found):
 
-| `n` | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
-|---|---|---|---|---|---|---|---|---|---|
-| first depth `d` | 2 | 2 | 3 | 3 | 3 | 3 | 4 | 4 | 4 |
-| minimal `A + A'` | 29 | 31 | 32 | 32 | 56 | 56 | 58 | 61 | 63 |
-| bound `(n-d) log_2 3 + 1` | 4.2 | 5.8 | 5.8 | 7.3 | 8.9 | 10.5 | 10.5 | 12.1 | 13.7 |
+| `n` | `d = 2` | `d = 3` | `d = 4` | `d = 5` | bound at `d = 2` | bound at `d = 3` |
+|---|---|---|---|---|---|---|
+| 4 | 29 | 22 | 26 | 29 | 4.2 | 2.6 |
+| 5 | 31 | 32 | 29 | 29 | 5.8 | 4.2 |
+| 6 | 49 | 32 | 29 | 33 | 7.3 | 5.8 |
+| 7 | 73 | 32 | 36 | 40 | 8.9 | 7.3 |
+| 8 | 99* | 56 | 43 | 44 | 10.5 | 8.9 |
+| 9 | 99* | 56 | 55 | 44 | 12.1 | 10.5 |
+| 10 | – | 70 | 58 | 50 | 13.7 | 12.1 |
+| 11 | – | 80* | 61 | 52 | 15.3 | 13.7 |
+| 12 | – | 127* | 63 | 59 | 16.9 | 15.3 |
 
-The bound is loose by a factor `3–5`: unlike the three-quarters digraphs,
+At every depth `d <= 5` and `n <= 12` the minimal colliding `A + A'`
+exceeds the bound `(n - d) log_2 3 + 1` by a factor of at least `4.4`
+(`4.4–7` on the first-depth entries). Unlike the three-quarters digraphs,
 where the counting optimum is never realised for diameter `> 1` because
-the optimal tiles do not tessellate, the Syracuse residue walk has no
-tiling obstruction at all; its same-length words stay injective far beyond
-the Moore regime, and the mixing of section 2 happens only once the
-exponentially many words of typical cost exhaust the `2·3^(n-1)` units
-(depth `≈ n log 3/log(4/3) = 3.8 n`).
+the optimal tiles do not tessellate, no tiling obstruction of the Syracuse
+residue walk was found (an analogy, not a theorem); its same-length words
+stay injective well beyond the Moore regime, and the depth-`d` layers with
+valuations `<= 70` already cover every unit class mod `3^n` from `d ≈ n/2`
+on for `n <= 8` (the entropy count `4^d ≈ 3^n` gives `d ≈ 0.79 n`).
 
 ---
 
@@ -393,10 +522,14 @@ t/(2^r 3^j))` with `m_r = -3^(-j) mod 2^r` (the 3-adic inverse of `2^r`
 read through the 2-adic inverse of `3^j`: `2^(-r) mod 3^j = (1 + m_r
 3^j)/2^r`). (ii) `sup_(t unit) |G_j(t)| -> 1` as `j -> ∞`: for `t = 2^s`
 with `2^s <= 3^j/2^K`, all `r <= s` give phases `e(2^(s-r)/3^j)` within
-`2π 2^(-K)` of `1`, so `|G_j(2^s)| >= 1 - 2π 2^(-K) - 2^(-s)`.
+`2π 2^(-K)` of `1`, so `|G_j(2^s)| >= (1 - 2^(-s)) cos(2π 2^(-K)) - 2^(-s)
+>= 1 - 2π 2^(-K) - 2^(1-s)` (head of modulus at least `(1 - 2^(-s))
+cos(2π 2^(-K))`, tail at most `2^(-s)`; with `2^(-s)` in place of
+`2^(1-s)` the bound fails, e.g. `|G_9(2)| = 0.207`).
 FINITE-EXACT: `sup |G_j| = 0.577, 0.582, 0.789, 0.887, 0.944, 0.971,
-0.986, 0.994, 0.997, 0.9985, 0.9993, 0.9997` (`j = 1..12`), at `t = 1, 8,
-8, 16, 32, 64, 128, 256, 18659, 2048, 4096, 8192`; the mean of `|G_j|` over
+0.986, 0.994, 0.997, 0.9985, 0.9993, 0.9997` (`j = 1..12`), at `t = ±2^(j+1)
+mod 3^j` (`1, 8, 8, 16, 32, 64, 128, 256, 18659 = -2^10, 2048, 4096,
+8192`); the mean of `|G_j|` over
 units converges to `0.5430`; `2.9%` of the units have `|G_j| > 0.9`. The
 2-adic reading agrees to `10^(-9)`.
 
@@ -421,7 +554,8 @@ whole content. Checked on 200 random words; `w = (1,2)`: `C_w = 5`, `C'_w
 = 14`, `C_(rev) = 7 = 3·8·C'_w(1/3,1/2)`.)
 
 **Reading.** The affine identity `3^d x + C_w(3,2) = 2^A y` gives the
-2-adic class of the source, `x ≡ -C_w 3^(-d) mod 2^(A+1)`, and the 3-adic
+2-adic class of the source, `x ≡ -C_w 3^(-d) mod 2^A` (the class mod
+`2^(A+1)` is `(2^A - C_w) 3^(-d)`, `y` being odd), and the 3-adic
 class of the target, `y ≡ C_w 2^(-A) mod 3^d`: one integer `C_w(3,2)`,
 evaluated with the two prime powers in the denominator — the reciprocal
 pair. Reversal exchanges the roles of the two carries and, for a cycle
@@ -494,12 +628,18 @@ which is a strong constraint on any candidate family.
   mixing estimate bounds (section 2), two elementary lemmas (Propositions 4,
   5), and one negative structural fact (Proposition 3).
 * **For the mixing estimate.** (2.3) ⟹ `M(h) = o(h^(-A))` for every `A`
-  (Proposition 2, PROVED). The measured `M(h)` to `h = 17` decays with a
-  ratio rising to `0.87`; if the ratio stays below `1`, the decay is
-  geometric and (2.3) holds with a usable constant, which no published
-  proof provides (Mazur's `C` is a three-fold tower, S19 audit). The
-  concrete inequality to prove is `|mu_hat_h(2^s)| <= C r^h`; the cost
-  decomposition names the family that carries the coefficient.
+  (Proposition 2, PROVED). The eighteen FFT levels do not decide between a
+  geometric and a polynomial decay of `M(h)`; the closed recursion on the
+  powers of two (section 2b) shows a geometric decay of `max_j
+  |mu_hat_h(2^j)|` to `h = 120` at the no-descent rate `3^(h*-1) = 0.9465`
+  (OBSERVED). If the maximum stays on the powers of two (true wherever
+  checked), (2.3) holds with a geometric constant, which no published proof
+  provides (Mazur's `C` is a three-fold tower, S19 audit), and the sharp
+  sup-norm form of the mixing estimate is `M(h) ≍ P_h`, the no-descent
+  probability of THM-4476/THM-4487: the mixing rate of the 3-adic law and
+  the thin-divergence exponent would be one number. The concrete inequality
+  to prove is `|mu_hat_h(2^s)| <= C P_h`, i.e. square-root cancellation
+  over the descending words.
 * **For the S19 seed-1 test.** Unchanged; the Fourier side explains why the
   `ell^1` distances of S19 decay slowly (bulk square-root coefficients at
   every level, constant Fourier energy per level) while remaining Cauchy.
@@ -521,14 +661,18 @@ python 04-computation/experiments/collatz_five_mirrors_costsplit_20260929.py 14 
 python 04-computation/experiments/collatz_five_mirrors_fourier_deep_20260929.py 18 > 05-knowledge/results/collatz_five_mirrors_fourier_deep18_20260929.out   # 20 GB, 2 min
 python 04-computation/experiments/collatz_five_mirrors_reversal_20260929.py     > 05-knowledge/results/collatz_five_mirrors_reversal_20260929.out
 python 04-computation/experiments/collatz_five_mirrors_tracesum_20260929.py     > 05-knowledge/results/collatz_five_mirrors_tracesum_20260929.out
+python 04-computation/experiments/collatz_five_mirrors_powers_of_two_20260929.py 120 > 05-knowledge/results/collatz_five_mirrors_powers_of_two_20260929.out   # 3 min
 ```
 
 | item | status |
 |---|---|
-| Proposition 1 (level independence of the primitive profile) | PROVED; checked at levels 4–17 |
+| Proposition 1 (level independence of the primitive profile) | PROVED; checked at levels 4–18 |
 | Proposition 2 ((2.3) ⟹ `M(h) <= C_A (h-1)^(-A)`) | PROVED |
-| `M(h)`, `h <= 17`; argmax at `2^(h+3)`, `2^(h+4)`; ratios `0.65 -> 0.87` | FINITE-EXACT (float64 FFT); the geometric reading OBSERVED |
-| Fourier mass per level `0.466`, typical `|mu_hat|^2 3^h = 0.70` | FINITE-EXACT; the identity with the second-moment slope PROVED (Parseval) |
+| `M(h)`, `h <= 18`; argmax at `±2^s`, `s - h = 0..5`; ratios `0.65 -> 0.89` | VERIFIED (float64 FFT, matching the closed recursion to six digits); the decay law is not decided by these levels |
+| closure of the powers of two under the frequency recursion; `M(h) >= max_j |mu_hat_h(2^j)|` | PROVED |
+| `max_j |mu_hat_h(2^j)|` to `h = 120`: geometric, ratio `0.906 -> 0.930`, local exponents `2.1 -> 6.1`; `= 0.46 P_h` at every level `20..120` | VERIFIED (exact recursion, truncation `2^(-40)`); the identity OBSERVED |
+| `M(h) ≍ P_h`, rate `3^(h*-1) = 0.9465` | CONJECTURAL |
+| Fourier mass per level `0.462 -> 0.472`, typical `|mu_hat|^2 3^h = 0.70` | VERIFIED; the level-by-level identity with the second-moment increments PROVED (Parseval + Proposition 1) |
 | cost/last-valuation decomposition of the resonance at `h = 10` | FINITE-EXACT |
 | Proposition 3 (Gauss sums: 2-adic reading; no uniform gap) | PROVED; table FINITE-EXACT |
 | Proposition 4 (same-length spread lemma) and the collision table | PROVED; FINITE-EXACT |
@@ -537,9 +681,73 @@ python 04-computation/experiments/collatz_five_mirrors_tracesum_20260929.py     
 | Proposition 6 (the cycle-sum polynomial, hence the trace of a rational cycle, is reversal-invariant; the pairs have equal traces `2499`, `125`; the seven-cycle and its partner both sum to `-327`) | PROVED; FINITE-EXACT |
 | the five mirrors (section 1) | DIRECTION / remark |
 
-**Next probes.** A large-deviation lower bound `M(h) >= c e^(-I(α) h)`
-from the coherent family, and the upper bound `|mu_hat_h(2^s)| <= C r^h`;
-the profile to `h = 19` (needs a chunked FFT); the reversal involution on
-the rational cycles of `3x + k` beyond the integer ones (which rational
-cycles are reversal-symmetric), and whether the reversal pairs of `3x+13`
-and `3x+37` are the first members of an infinite family.
+## 8. Audit record (2026-09-29)
+
+**Auditor:** an independent session (own script
+`04-computation/experiments/collatz_five_mirrors_20260929_audit.py`, output
+`collatz_five_mirrors_20260929_audit.out`, report
+`collatz_five_mirrors_20260929_audit.md`, 69 numbered claims): the law
+recomputed exactly to level 6 and in float64 to level 14 by an independent
+forward recursion; `M(h)` to `10^(-7)` for `h <= 14`; the masses and a
+sharpened Parseval identity (level by level); the Gauss-sum table; the
+collision table re-run with valuations `<= 70`; the cost decomposition; the
+cycles, the `3x+139` orbit and the traces; the (2.3) and §8.1 quotations
+against the S19 note; the five paper summaries against the texts (the
+Viaclovsky paper against its arXiv page). The note was extended during the
+audit (the `h = 14` decomposition, the level-18 profile, the `3x+k`
+reversal survey, Proposition 6); those parts received quick checks only,
+and section 2b (the powers of two to level 120) was written after the
+audit and is not covered by it.
+
+**Verdict: SOUND WITH CORRECTIONS.** Propositions 1, 2, 4, 5, 6 hold;
+every recomputed number reproduces; the quotations and mirrors are
+accurate. Eighteen corrections, all applied:
+
+1. **The decay reading was overstated.** "Levels off", "flat over
+   `14..18`", "would satisfy (2.3) with room" and the conditional "if the
+   ratio stays below `1`" were not supported: a shifted power law `C (h +
+   2.5)^(-2.5)` fitted the eighteen levels better than a geometric law and
+   would have contradicted Proposition 2; the readings separate only near
+   `h = 31`. Sections 0, 2 and 6 now say so. (The question was then
+   settled for the powers of two by the closed recursion of section 2b,
+   which reaches `h = 120`: geometric, at the no-descent rate.)
+2. **The argmax law was misdescribed:** `s - h = 0, 1, 2, 3, 4, 5` in steps
+   of two or three levels, not "`h + 3` to `h + 5`"; `2^s/3^h` decays
+   geometrically; the argmax is defined up to sign.
+3. **The collision table measured its valuation cap:** with valuations `<=
+   70` the first colliding depth drops and the minimal colliding sum
+   decreases with depth; the looseness factor is at least `4.4`, not
+   `3–5`; the "depth `3.8 n`" sentence had no derivation and was wrong
+   (coverage of the unit classes from `d ≈ n/2`). The table was replaced by
+   the audit's.
+4. **Two proof slips repaired:** Proposition 3(ii)'s intermediate
+   inequality had tail `2^(-s)` instead of `2^(1-s)` (178 violations,
+   `|G_9(2)| = 0.207` against `0.499`); Proposition 4's recovery step needs
+   `(d, C_w, A)`, not `(d, C_w)` (`C_w` does not involve `a_d`).
+5. **The 2-adic source class** is mod `2^A`, not `2^(A+1)`.
+6. **The resonance mechanism** was a heuristic stated as fact, its
+   "coherence loss `0.96`" a quotient; now DIRECTION.
+7. **Mirrors:** the three-quarters "sector restriction" sits on the space
+   side, not the frequency side; Merca's positivity has no counterpart
+   (`mu_n` is positive by definition) and his "divisor recursion" is a
+   linear recurrence.
+8. **Slips and labels:** the generic coefficient size is `7·10^(-5)`, not
+   `3·10^(-4)`; the Fourier mass per level is `0.462 -> 0.472`, not a
+   constant; "undershoots" was inverted; the `C* h^(-6409)` bound is in the
+   paragraph after Lemma 8.1; float64 profiles are VERIFIED, not
+   FINITE-EXACT; the header said "level 17".
+
+MISTAKES entry: MISTAKE-549. Not checked by the auditor: the literal text
+of Tao's Proposition 1.14; levels 15–18 and the `h = 14` decomposition
+(the session's FFTs); the completeness of the `3x+k` cycle survey; section
+2b.
+
+**Next probes.** A proof of `c P_h <= |mu_hat_h(2^s)| <= C P_h` (the
+lower bound from the coherent no-descent family with its fixed initial
+phases; the upper bound is square-root cancellation over the descending
+words); whether the argmax of `|mu_hat_h|` over all units stays on the
+powers of two beyond `h = 18` (a chunked FFT at `h = 19`, or a search over
+`±2^s u` for small units `u`); the constant `0.46` as a computable
+expectation over the first valuations; the reversal involution on the
+rational cycles of `3x + k` beyond the integer ones, and whether the
+reversal pairs of `3x+13` and `3x+37` begin an infinite family.

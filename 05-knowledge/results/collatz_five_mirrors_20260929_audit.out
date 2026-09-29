@@ -1,0 +1,140 @@
+[A] float law by the forward recursion to level 14 [4s]
+[A] exact rational law to level 6 [4s]
+[A1] level 1 exact: {1: Fraction(1, 3), 2: Fraction(2, 3)}  (mu_1(1) = 1/3, mu_1(2) = 2/3)
+[A2] n=1: max |float - exact| = 0.0e+00; total float mass 1.000000000000000
+[A2] n=2: max |float - exact| = 0.0e+00; total float mass 1.000000000000000
+[A2] n=3: max |float - exact| = 4.2e-17; total float mass 1.000000000000000
+[A2] n=4: max |float - exact| = 2.8e-17; total float mass 1.000000000000000
+[A2] n=5: max |float - exact| = 2.1e-17; total float mass 1.000000000000000
+[A2] n=6: max |float - exact| = 1.4e-17; total float mass 1.000000000000000
+[A3] consistency (reduction of mu_n mod 3^m equals mu_m) EXACT for all 1 <= m < n <= 6: True
+[A4] consistency in float64, all 1 <= m < n <= 14: max deviation 3.5e-14
+[A5] Y_n mod 3^h is the function F_h of the last h valuations (2000 random word pairs): True
+[A6] frequency recursion at n=6, eight t including non-units: max deviation 2.7e-14
+[B] profile at n=10 [4s]
+[B] profile at n=12 [4s]
+[B] profile at n=14 [5s]
+[B1] h, M(h), argmax u (as 2^s), mass at level h, typical |mu_hat|^2 3^h  (n = 14, own law):
+      h= 1: M=0.577350  u=1 (2^0.00)  mass=0.66667  typical=1.0000  (#t=2)
+      h= 2: M=0.377924  u=4 (2^2.00)  mass=0.47619  typical=0.7143  (#t=6)
+      h= 3: M=0.252237  u=8 (2^3.00)  mass=0.46157  typical=0.6924  (#t=18)
+      h= 4: M=0.176999  u=16 (2^4.00)  mass=0.46421  typical=0.6963  (#t=54)
+      h= 5: M=0.129274  u=32 (2^5.00)  mass=0.46551  typical=0.6983  (#t=162)
+      h= 6: M=0.096106  u=64 (2^6.00)  mass=0.46617  typical=0.6993  (#t=486)
+      h= 7: M=0.075870  u=256 (2^8.00)  mass=0.46549  typical=0.6982  (#t=1458)
+      h= 8: M=0.060891  u=512 (2^9.00)  mass=0.46592  typical=0.6989  (#t=4374)
+      h= 9: M=0.048026  u=18659 (2^14.19)  mass=0.46666  typical=0.7000  (#t=13122)
+      h=10: M=0.038278  u=4096 (2^12.00)  mass=0.46739  typical=0.7011  (#t=39366)
+      h=11: M=0.031944  u=8192 (2^13.00)  mass=0.46817  typical=0.7023  (#t=118098)
+      h=12: M=0.026458  u=16384 (2^14.00)  mass=0.46894  typical=0.7034  (#t=354294)
+      h=13: M=0.022052  u=65536 (2^16.00)  mass=0.46961  typical=0.7044  (#t=1062882)
+      h=14: M=0.019128  u=131072 (2^17.00)  mass=0.47025  typical=0.7054  (#t=3188646)
+[B2] Proposition 1 numerically: max |M_n(h) - M_14(h)| over n = 10, 12 = 1.1e-16; same argmax u up to sign: True
+[B3] M(1) = 0.5773502692; 1/sqrt(3) = 0.5773502692; |(1/3) e(1/3) + (2/3) e(2/3)|^2 = 1/9 + 4/9 + (4/9) cos(2 pi/3) = 1/3 exactly
+[B4] against the note's table (deep .out, h <= 14): max |M diff| = 4.3e-07; argmax agree up to sign: True (own argmax at h=9 is 18659 = -2^10 mod 3^9: the FFT breaks the |mu_hat(u)| = |mu_hat(-u)| tie arbitrarily)
+[B5] |mu_hat_12(2^s)|, s = 0..40: 0.0008, 0.0003, 0.0005, 0.0007, 0.0003, 0.0006, 0.0019, 0.0031, 0.0040, 0.0057, 0.0087, 0.0130, 0.0183, 0.0235, 0.0265, 0.0249, 0.0195, 0.0119, 0.0053, 0.0007, 0.0018, 0.0010, 0.0008, 0.0011, 0.0005, 0.0006, 0.0003, 0.0001, 0.0002, 0.0002, 0.0007, 0.0005, 0.0003, 0.0004, 0.0009, 0.0003, 0.0003, 0.0002, 0.0004, 0.0008, 0.0012
+[B6] argmax frequency 2^s / 3^h: h=7: 0.1171, h=8: 0.0780, h=9: 0.0520, h=10: 0.0694, h=11: 0.0462, h=12: 0.0308, h=13: 0.0411, h=14: 0.0274, h=15: 0.0183, h=16: 0.0244, h=17: 0.0162
+[B6b] s - h for the argmax u = 2^s (own to h = 14, the deep .outs beyond): h=2: +0, h=3: +0, h=4: +0, h=5: +0, h=6: +0, h=7: +1, h=8: +1, h=9: +1, h=10: +2, h=11: +2, h=12: +2, h=13: +3, h=14: +3, h=15: +3, h=16: +4, h=17: +4, h=18: +5  -- the note's 's = h + 3 to h + 5' holds only for h = 13..18; s - h steps up by one every two or three levels
+[B7] generic coefficient size at level 17 from typical |mu_hat|^2 3^h = 0.708: sqrt(0.708) 3^-8.5 = 7.40e-05; 0.84 * 3^(-17/2) = 7.39e-05; the note's '3e-4' would be 3.41 * 3^(-17/2)
+[B8] Parseval and the second moment: n, sum|mu_hat|^2, 3^n sum mu^2, E_units[rho^2], (3/2)E, increment of E, (3/2) increment, mass at level n
+      n= 1: 1.66667  1.66667  E=1.11111  (3/2)E=1.66667  dE=nan  (3/2)dE=nan  mass(n)=0.66667
+      n= 2: 2.14286  2.14286  E=1.42857  (3/2)E=2.14286  dE=0.3175  (3/2)dE=0.4762  mass(n)=0.47619
+      n= 3: 2.60443  2.60443  E=1.73629  (3/2)E=2.60443  dE=0.3077  (3/2)dE=0.4616  mass(n)=0.46157
+      n= 4: 3.06865  3.06865  E=2.04576  (3/2)E=3.06865  dE=0.3095  (3/2)dE=0.4642  mass(n)=0.46421
+      n= 5: 3.53416  3.53416  E=2.35611  (3/2)E=3.53416  dE=0.3103  (3/2)dE=0.4655  mass(n)=0.46551
+      n= 6: 4.00033  4.00033  E=2.66689  (3/2)E=4.00033  dE=0.3108  (3/2)dE=0.4662  mass(n)=0.46617
+      n= 7: 4.46582  4.46582  E=2.97721  (3/2)E=4.46582  dE=0.3103  (3/2)dE=0.4655  mass(n)=0.46549
+      n= 8: 4.93174  4.93174  E=3.28783  (3/2)E=4.93174  dE=0.3106  (3/2)dE=0.4659  mass(n)=0.46592
+      n= 9: 5.39840  5.39840  E=3.59893  (3/2)E=5.39840  dE=0.3111  (3/2)dE=0.4667  mass(n)=0.46666
+      n=10: 5.86579  5.86579  E=3.91053  (3/2)E=5.86579  dE=0.3116  (3/2)dE=0.4674  mass(n)=0.46739
+      n=11: 6.33396  6.33396  E=4.22264  (3/2)E=6.33396  dE=0.3121  (3/2)dE=0.4682  mass(n)=0.46817
+      n=12: 6.80290  6.80290  E=4.53527  (3/2)E=6.80290  dE=0.3126  (3/2)dE=0.4689  mass(n)=0.46894
+      n=13: 7.27251  7.27251  E=4.84834  (3/2)E=7.27251  dE=0.3131  (3/2)dE=0.4696  mass(n)=0.46961
+      n=14: 7.74277  7.74277  E=5.16185  (3/2)E=7.74277  dE=0.3135  (3/2)dE=0.4703  mass(n)=0.47025
+[C1] N=14: m, ||mu_N - lift mu_m||_1, max |lift^hat| at conductor > 3^m, max |mu_hat_N| at conductor > 3^m, M(m+1), ratio d/M(m+1)
+      m=1: d=0.8400  lift primitive max=0.0e+00  max|mu_hat| above=0.3779  M(m+1)=0.3779  d/M=2.22
+      m=2: d=0.7211  lift primitive max=0.0e+00  max|mu_hat| above=0.2522  M(m+1)=0.2522  d/M=2.86
+      m=3: d=0.6292  lift primitive max=0.0e+00  max|mu_hat| above=0.1770  M(m+1)=0.1770  d/M=3.56
+      m=4: d=0.5559  lift primitive max=0.0e+00  max|mu_hat| above=0.1293  M(m+1)=0.1293  d/M=4.30
+      m=5: d=0.4948  lift primitive max=0.0e+00  max|mu_hat| above=0.0961  M(m+1)=0.0961  d/M=5.15
+      m=6: d=0.4416  lift primitive max=0.0e+00  max|mu_hat| above=0.0759  M(m+1)=0.0759  d/M=5.82
+      m=7: d=0.3933  lift primitive max=0.0e+00  max|mu_hat| above=0.0609  M(m+1)=0.0609  d/M=6.46
+[C2] max over h <= 12 of M(h) / ||mu_h - lift mu_(h-1)||_1 = 0.7936 (must be <= 1)
+[C3] normalisation check q=8, m=3: mean_G_q |rho_q - rho_m o pi| = 0.367274 = (2/3) ||mu_q - lift mu_m||_1 = 0.367274
+[D1] j, sup_t |G_j| over units, argmax t (and t mod 3^j as +-2^s), mean |G_j|, share > 0.9, 2-adic reading deviation (10 random units)
+      j= 1: sup=0.57735 at t=1 (= +-2^[0, 1] mod 3^j)  mean=0.5774  share>0.9=0.0000  2-adic dev=4.8e-16
+      j= 2: sup=0.58175 at t=1 (= +-2^[0, 3] mod 3^j)  mean=0.4577  share>0.9=0.0000  2-adic dev=1.1e-15
+      j= 3: sup=0.78935 at t=19 (= +-2^[3, 12] mod 3^j)  mean=0.5380  share>0.9=0.0000  2-adic dev=7.1e-15
+      j= 4: sup=0.88682 at t=16 (= +-2^[4, 31] mod 3^j)  mean=0.5444  share>0.9=0.0000  2-adic dev=1.8e-14
+      j= 5: sup=0.94362 at t=32 (= +-2^[5, 86] mod 3^j)  mean=0.5431  share>0.9=0.0370  2-adic dev=2.4e-14
+      j= 6: sup=0.97140 at t=64 (= +-2^[6, 249] mod 3^j)  mean=0.5429  share>0.9=0.0329  2-adic dev=1.3e-13
+      j= 7: sup=0.98589 at t=128 (= +-2^[7, 736] mod 3^j)  mean=0.5430  share>0.9=0.0261  2-adic dev=2.6e-13
+      j= 8: sup=0.99371 at t=256 (= +-2^[8, 2195] mod 3^j)  mean=0.5430  share>0.9=0.0283  2-adic dev=1.2e-12
+      j= 9: sup=0.99674 at t=18659 (= +-2^[10, 6571] mod 3^j)  mean=0.5430  share>0.9=0.0282  2-adic dev=4.3e-12
+      j=10: sup=0.99852 at t=2048 (= +-2^[11, 19694] mod 3^j)  mean=0.5430  share>0.9=0.0287  2-adic dev=9.9e-12
+      j=11: sup=0.99928 at t=4096 (= +-2^[12, 59061] mod 3^j)  mean=0.5430  share>0.9=0.0286  2-adic dev=1.8e-11
+      j=12: sup=0.99968 at t=8192 (= +-2^[13, 177160] mod 3^j)  mean=0.5430  share>0.9=0.0286  2-adic dev=9.1e-11
+[D2] the stated inequality |G_j(2^s)| >= 1 - 2 pi 2^-K - 2^-s for 2^s <= 3^j / 2^K, tested for all j <= 12, s <= 40, K >= 0;
+     and the corrected one with tail 2^(1-s) (head: sum_(r<=s) 2^-r = 1 - 2^-s; tail |sum_(r>s)| <= 2^-s; both lose 2^-s)
+      violations of the stated inequality: 178 (by s: {1: 62, 2: 46, 3: 32, 4: 20, 5: 12, 6: 5, 7: 1}); of the corrected inequality: 0; worst stated violation (j, s, K, |G|, bound): (9, 1, 13, 0.207325503942214, 0.4992330096060572)
+[D3] |G_j(2)| and |G_j(4)| for j = 4..12 (s = 1, 2: the stated bound allows 1 - 1/2 - eps and 1 - 1/4 - eps for large j): j=4: 0.338, 0.647; j=5: 0.245, 0.609; j=6: 0.303, 0.632; j=7: 0.227, 0.612; j=8: 0.376, 0.671; j=9: 0.207, 0.595; j=10: 0.301, 0.635; j=11: 0.214, 0.603; j=12: 0.364, 0.662
+[E] tree of 1 to depth 5 with valuations <= 24: layer sizes [12, 96, 768, 6144, 49152] [9s]
+[E1] cap 24: n | first colliding depth d, minimal A+A' there (class) | minimal colliding A+A' at each depth 1..5 with the bound (n-d) log2 3 + 1
+      n= 4: first (2, 29, 1) | d=1: - (bound 5.8) d=2: 29 (bound 4.2) d=3: 22 (bound 2.6) d=4: 26 (bound 1.0) d=5: 29 (bound -0.6)
+      n= 5: first (2, 31, 3) | d=1: - (bound 7.3) d=2: 31 (bound 5.8) d=3: 32 (bound 4.2) d=4: 29 (bound 2.6) d=5: 29 (bound 1.0)
+      n= 6: first (3, 32, 3) | d=1: - (bound 8.9) d=2: - (bound 7.3) d=3: 32 (bound 5.8) d=4: 29 (bound 4.2) d=5: 33 (bound 2.6)
+      n= 7: first (3, 32, 3) | d=1: - (bound 10.5) d=2: - (bound 8.9) d=3: 32 (bound 7.3) d=4: 36 (bound 5.8) d=5: 40 (bound 4.2)
+      n= 8: first (3, 56, 4542) | d=1: - (bound 12.1) d=2: - (bound 10.5) d=3: 56 (bound 8.9) d=4: 43 (bound 7.3) d=5: 44 (bound 5.8)
+      n= 9: first (3, 56, 4542) | d=1: - (bound 13.7) d=2: - (bound 12.1) d=3: 56 (bound 10.5) d=4: 55 (bound 8.9) d=5: 44 (bound 7.3)
+      n=10: first (4, 58, 18169) | d=1: - (bound 15.3) d=2: - (bound 13.7) d=3: - (bound 12.1) d=4: 58 (bound 10.5) d=5: 50 (bound 8.9)
+      n=11: first (4, 61, 133238) | d=1: - (bound 16.8) d=2: - (bound 15.3) d=3: - (bound 13.7) d=4: 61 (bound 12.1) d=5: 52 (bound 10.5)
+      n=12: first (4, 63, 2421) | d=1: - (bound 18.4) d=2: - (bound 16.8) d=3: - (bound 15.3) d=4: 63 (bound 13.7) d=5: 59 (bound 12.1)
+[E] tree of 1 to depth 5 with valuations <= 70: layer sizes [35, 840, 19600, 457310, 10670450] [9s]
+[E2] cap 70: n | first colliding depth d, minimal A+A' there (class) | minimal colliding A+A' at each depth 1..5 with the bound (n-d) log2 3 + 1
+      n= 4: first (2, 29, 1) | d=1: - (bound 5.8) d=2: 29 (bound 4.2) d=3: 22 (bound 2.6) d=4: 26 (bound 1.0) d=5: 29 (bound -0.6)
+      n= 5: first (2, 31, 3) | d=1: - (bound 7.3) d=2: 31 (bound 5.8) d=3: 32 (bound 4.2) d=4: 29 (bound 2.6) d=5: 29 (bound 1.0)
+      n= 6: first (2, 49, 113) | d=1: - (bound 8.9) d=2: 49 (bound 7.3) d=3: 32 (bound 5.8) d=4: 29 (bound 4.2) d=5: 33 (bound 2.6)
+      n= 7: first (2, 73, 1942) | d=1: - (bound 10.5) d=2: 73 (bound 8.9) d=3: 32 (bound 7.3) d=4: 36 (bound 5.8) d=5: 40 (bound 4.2)
+      n= 8: first (2, 99, 3498) | d=1: - (bound 12.1) d=2: 99 (bound 10.5) d=3: 56 (bound 8.9) d=4: 43 (bound 7.3) d=5: 44 (bound 5.8)
+      n= 9: first (2, 99, 10059) | d=1: - (bound 13.7) d=2: 99 (bound 12.1) d=3: 56 (bound 10.5) d=4: 55 (bound 8.9) d=5: 44 (bound 7.3)
+      n=10: first (3, 70, 38833) | d=1: - (bound 15.3) d=2: - (bound 13.7) d=3: 70 (bound 12.1) d=4: 58 (bound 10.5) d=5: 50 (bound 8.9)
+      n=11: first (3, 80, 87249) | d=1: - (bound 16.8) d=2: - (bound 15.3) d=3: 80 (bound 13.7) d=4: 61 (bound 12.1) d=5: 52 (bound 10.5)
+      n=12: first (3, 127, 86934) | d=1: - (bound 18.4) d=2: - (bound 16.8) d=3: 127 (bound 15.3) d=4: 63 (bound 13.7) d=5: 59 (bound 12.1)
+[E3] certification: a colliding pair with a valuation > cap has A + A' >= (cap + d) + 2d, so every minimum <= cap + 3d above is exact for that depth
+[E7] share of the 2 3^(n-1) unit classes mod 3^n hit by the depth-d layer (cap 70), d = 1..5; the note's 3.8 n against n log3/log4 = 0.79 n:
+      n=4: d=1: 0.444, d=2: 1.000, d=3: 1.000, d=4: 1.000, d=5: 1.000   (3.8 n = 15.3; n log3/log4 = 3.2)
+      n=5: d=1: 0.148, d=2: 0.975, d=3: 1.000, d=4: 1.000, d=5: 1.000   (3.8 n = 19.1; n log3/log4 = 4.0)
+      n=6: d=1: 0.049, d=2: 0.623, d=3: 1.000, d=4: 1.000, d=5: 1.000   (3.8 n = 22.9; n log3/log4 = 4.8)
+      n=7: d=1: 0.016, d=2: 0.304, d=3: 0.999, d=4: 1.000, d=5: 1.000   (3.8 n = 26.7; n log3/log4 = 5.5)
+      n=8: d=1: 0.005, d=2: 0.120, d=3: 0.959, d=4: 1.000, d=5: 1.000   (3.8 n = 30.6; n log3/log4 = 6.3)
+[E4] on 3000 random words: C_w odd True; C_w <= 2^A (3^d-1)/2 and Y(w) = C_w 2^-A mod 3^12: True
+[E5] C_w does not involve the last valuation: C_(1,2) = 5, C_(1,3) = 5, C_(1,9) = 5 -- (d, C_w) alone does NOT determine w; (d, C_w, A) does
+[E6] recovery a_1 = v_2(C_w - 3^(d-1)), recurse, a_d = A - (a_1 + .. + a_(d-1)) on 2000 random words: True
+[F1] C_rev(w)(u,v) = u^(d-1) v^A C'_w(1/u,1/v) as a POLYNOMIAL IDENTITY (sympy, 120 random words): True
+[F2] w=(1,2): C_w=5, C'_w=14, C_rev=7, 3*8*C'_w(1/3,1/2)=7
+[F3] -1: orbit [-1, -1] has word [1] (note's word [1]: True); C_w=1, y0=C_w/(2^A-3^k)=-1; C_rev=1, y0'=-1 (integer); reversed word is a rotation: True
+[F3] {-5,-7}: orbit [-5, -7, -5] has word [1, 2] (note's word [1, 2]: True); C_w=5, y0=C_w/(2^A-3^k)=-5; C_rev=7, y0'=-7 (integer); reversed word is a rotation: True
+[F3] 7-cycle of -17: orbit [-17, -25, -37, -55, -41, -61, -91, -17] has word [1, 1, 1, 2, 1, 1, 4] (note's word [1, 1, 1, 2, 1, 1, 4]: True); C_w=2363, y0=C_w/(2^A-3^k)=-17; C_rev=13801, y0'=-13801/139 (not an integer); reversed word is a rotation: False
+[F4] x -> (3x+139)/2^v from -13801: word [4, 1, 1, 2, 1, 1, 1] (reversed seven-word (4,1,1,2,1,1,1): True), returns to -13801 (cycle: True); 139 = 3^7 - 2^11 = 139; gcd(13801,139) = 1
+[F5] x = -C_w 3^-d mod 2^A on 2000 sources: True; mod 2^(A+1) as the note states: False (the class mod 2^(A+1) is (2^A - C_w) 3^-d)
+[G1] h=10: |mu_hat(2^12)| = 0.03828 (FFT 0.03828); generic t=7: 0.00261; own law vs section-A law: 9.3e-11
+[G2] by total cost A: A=14: 0.0168 (P(A)=0.0436), A=16: 0.0144 (P(A)=0.0764), A=13: 0.0095 (P(A)=0.0269), A=15: 0.0072 (P(A)=0.0611), A=17: 0.0044 (P(A)=0.0873), A=12: 0.0036 (P(A)=0.0134), A=11: 0.0023 (P(A)=0.0049), A=19: 0.0019 (P(A)=0.0927), A=18: 0.0017 (P(A)=0.0927), A=10: 0.0010 (P(A)=0.0010)
+[G3] sum_A |.| = 0.0658; coherent fraction = 0.581; |.|-weighted mean A/h = 1.493
+[G4] by last valuation a: a=1: 0.0225, a=2: 0.0120, a=3: 0.0051, a=4: 0.0019, a=5: 0.0007, a=6: 0.0002; sum = 0.03828
+[G5] check P(A) at h=10: A=12: 0.0134, A=13: 0.0269, A=14: 0.0436, A=15: 0.0611, A=16: 0.0764, A=17: 0.0873
+[G6] Cramer rate of A/h for i.i.d. geometric(1/2) valuations, I(a) = a ln2 + (a-1) ln(a-1) - a ln a: I(1.20)=0.2911 (e^-I=0.747), I(1.30)=0.1988 (e^-I=0.820), I(1.35)=0.1632 (e^-I=0.849), I(1.40)=0.1328 (e^-I=0.876), I(1.48)=0.0933 (e^-I=0.911), I(1.50)=0.0849 (e^-I=0.919), I(1.60)=0.0505 (e^-I=0.951), I(1.70)=0.0266 (e^-I=0.974)
+[G7] exact -ln P(A = round(1.35 h))/h at h = 10, 14, 20, 40: h=10: 0.3132, h=14: 0.2939, h=20: 0.2659, h=40: 0.2230
+[F6] Proposition 6 (added to the note during the audit): sum_j C_(rot_j w)(u,v) reversal-invariant on 300 random words/rational (u,v): True; seven-cycle trace -327 = reversed-word trace -327 (mechanism: the coefficient of u^(d-i) is the sum of v^(block sum) over cyclic blocks of length i-1, a multiset reversal preserves)
+[H1] ratios M(h)/M(h-1), h=2..18: 0.655, 0.667, 0.702, 0.730, 0.743, 0.789, 0.803, 0.789, 0.797, 0.835, 0.828, 0.833, 0.867, 0.851, 0.885, 0.868, 0.894
+[H2] window means: h=6..9: 0.7810; h=10..13: 0.8233; h=14..17: 0.8680; h=14..18: 0.8732; least-squares slope of the ratio over h=11..18: +0.0090 per level; the ratio at h=18 (0.894) is the largest so far
+[H3] local exponents log2(M(h)/M(2h)): 5->10: 1.756, 6->12: 1.861, 7->14: 1.988, 8->16: 2.079, 9->18: 2.102
+[H4] pure power C h^-alpha on 7..18 (alpha = 2.063): max rel. residual 4.5%, rms 1.8%
+[H5] shifted power C (h + c)^-alpha on 7..18 (c = 2.50, alpha = 2.523): max rel. residual 1.8%, rms 1.0%; its ratios at h=14..18: 0.854, 0.862, 0.869, 0.876, 0.881; local exponents 5->10..9->18: 1.86, 1.94, 2.01, 2.06, 2.10
+[H5b] fitted on 7..17 only: shifted power (c = 3.00, alpha = 2.624) predicts M(18) = 0.01096 (ratio 0.880); geometric on 11..17 (r = 0.8567) predicts M(18) = 0.01047 (ratio 0.857); measured M(18) = 0.01119 (ratio 0.894)
+[H6] geometric C r^h on 11..18 (r = 0.8615): max rel. residual 4.3%, rms 2.7%
+[H6] geometric C r^h on 7..18 (r = 0.8404): max rel. residual 10.5%, rms 6.5%
+[H7] C h^-beta r^h on 7..18 (r = 0.9711, beta = 1.720): max rel. residual 2.1%, rms 1.2%
+[H8] 3.75 h^-2: relative error h=7..14: +0.9%, -3.8%, -3.6%, -2.0%, -3.0%, -1.6%, +0.6%, +0.0%; h=15..18: +2.3%, +1.7%, +3.7%, +3.5%
+[H9] extrapolation of the two readings: h=25, 34, 50: shifted power (7..18) 5.27e-03, 2.58e-03, 1.03e-03; geometric (11..18) 3.79e-03, 9.90e-04, 9.11e-05; the two readings first differ by a factor 2 at h = 31
+[H10] 1 - ratio, h=10..18: 0.203, 0.165, 0.172, 0.167, 0.133, 0.149, 0.115, 0.132, 0.106  (a shifted power law has 1 - ratio ~ alpha/(h + c) -> 0; geometric has 1 - r constant)
+DONE [118s]

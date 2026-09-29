@@ -235,10 +235,14 @@ there). CITED, not replayed by us.
   the primitive Fourier maxima `M(h)` of the Syracuse random variable
   (level-independent, PROVED) must decay faster than any polynomial under
   (2.3) (PROVED); measured to `h = 17` they sit at the powers of two
-  `2^(h+3)` and decay with a ratio rising to `0.87` (OBSERVED geometric);
-  the Fourier energy per 3-adic scale is constant (`0.466`); no one-step
-  spectral gap exists (Gauss sums `sup -> 1`). A proof of `|mu_hat_h(2^s)|
-  <= C r^h` would give a usable constant in (2.3).
+    `±2^s` (`s - h = 0..5`) and decay with a ratio rising to `0.89`; the
+  powers of two, a closed family under the frequency recursion, were
+  followed to `h = 120`: geometric decay at the no-descent rate `3^(h*-1)
+  = 0.9465`, the coefficient being `0.46` times the no-descent probability
+  at every level (OBSERVED; `h*` = THM-4476's thin-divergence exponent);
+  the Fourier energy per 3-adic scale is nearly constant (`0.46–0.47`); no
+  one-step spectral gap exists (Gauss sums `sup -> 1`). A proof of
+  `|mu_hat_h(2^s)| <= C P_h` would give a usable, sharp constant in (2.3).
 * **A control on the reference density, not a failure mode:** the atoms of
   the 3-adic Syracuse law are the negative cycles (`rho_n(-1) = 0.975
   (3/2)^n`, exact spike profile on the forward closure of `-1`), so the
