@@ -1,0 +1,10 @@
+== Kaprekar's routine: cycles by digit count ==
+   d=2: [9, 81, 63, 27, 45] (len 5, 90 starts)
+   d=3: [495] (len 1, 990 starts)
+   d=4: [6174] (len 1, 9990 starts)
+   d=5: [63954, 61974, 82962, 75933] (len 4, 48480 starts); [74943, 62964, 71973, 83952] (len 4, 48320 starts); [53955, 59994] (len 2, 3190 starts)
+   d=6: [851742, 750843, 840852, 860832, 862632, 642654, 420876] (len 7, 935520 starts); [631764] (len 1, 62520 starts); [549945] (len 1, 1950 starts)
+   every image is divisible by 9 (n - reverse-sorted differs from n by a multiple of 9); the map factors through the digit multiset: a finite state space per d
+   6174 = 6174 = 2*3^2*7^3, 495 = 3^2*5*11; the 2-digit cycle 9 -> 81 -> 63 -> 27 -> 45 -> 9 is 9 * (1, 9, 7, 3, 5)
+   Euler bricks with edges < 300: [(44, 117, 240, False), (240, 252, 275, False)] (last flag: integer space diagonal, i.e. a perfect cuboid; none)
+DONE

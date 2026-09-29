@@ -1,0 +1,19 @@
+== harmonic mass of the Syracuse tree of 1: H_n = sum_(depth n) 3^n 2^-A  versus 3^n mu_n(1) ==
+   n=1: 3^n mu_n(1) = 1.000000 (exact 1); direct truncated layer sums [0.996094, 0.999939, 0.999999]
+   n=2: 3^n mu_n(1) = 1.142857 (exact 8/7); direct truncated layer sums [1.132278, 1.142691, 1.142855]
+   n=3: 3^n mu_n(1) = 0.992069 (exact 1376/1387); direct truncated layer sums [0.972596, 0.991802, 0.992066]
+   n=4: 3^n mu_n(1) = 0.927627 (exact 0.9276273755523707); direct truncated layer sums [0.900632, 0.927292, 0.927624]
+   n=5: 3^n mu_n(1) = 0.964301 (exact 0.9643014694824091); direct truncated layer sums [0.963403]
+   n=6: 3^n mu_n(1) = 0.955420 (exact 0.9554199698890817); direct truncated layer sums [0.954376]
+   (the truncated sums approach the exact value: the identity H_n = 3^n mu_n(1) holds; the residue 1 is an ordinary unit of Z/3^n)
+   rho_n(1) = (2/3) 3^n mu_n(1) and the units' mean of rho_n is 1:
+   n=1: rho_n(1) = 0.66667; H_n = 1.00000; rho_n on units: min 0.6667, max 1.3333 at y = 2 (= -1 mod 3^n: True); rho_n(-1) = 1.3333 vs (2/3)(3/2)^n = 1.0000; rho_n(-5) = 0.6667 vs (2/3)(9/8)^(n/2) = 0.7071; rho_n(-17) = 0.6667 vs (2/3)(2187/2048)^(n/7) = 0.6730
+   n=2: rho_n(1) = 0.76190; H_n = 1.14286; rho_n on units: min 0.1905, max 2.0952 at y = 8 (= -1 mod 3^n: True); rho_n(-1) = 2.0952 vs (2/3)(3/2)^n = 1.5000; rho_n(-5) = 1.0476 vs (2/3)(9/8)^(n/2) = 0.7500; rho_n(-17) = 0.7619 vs (2/3)(2187/2048)^(n/7) = 0.6793
+   n=3: rho_n(1) = 0.66138; H_n = 0.99207; rho_n on units: min 0.1097, max 3.1977 at y = 26 (= -1 mod 3^n: True); rho_n(-1) = 3.1977 vs (2/3)(3/2)^n = 2.2500; rho_n(-5) = 1.1842 vs (2/3)(9/8)^(n/2) = 0.7955; rho_n(-17) = 1.1854 vs (2/3)(2187/2048)^(n/7) = 0.6857
+   n=4: rho_n(1) = 0.61842; H_n = 0.92763; rho_n on units: min 0.0966, max 4.8457 at y = 80 (= -1 mod 3^n: True); rho_n(-1) = 4.8457 vs (2/3)(3/2)^n = 3.3750; rho_n(-5) = 1.8168 vs (2/3)(9/8)^(n/2) = 0.8438; rho_n(-17) = 0.7200 vs (2/3)(2187/2048)^(n/7) = 0.6922
+   n=5: rho_n(1) = 0.64287; H_n = 0.96430; rho_n on units: min 0.0720, max 7.3185 at y = 242 (= -1 mod 3^n: True); rho_n(-1) = 7.3185 vs (2/3)(3/2)^n = 5.0625; rho_n(-5) = 1.5722 vs (2/3)(9/8)^(n/2) = 0.8949; rho_n(-17) = 0.8584 vs (2/3)(2187/2048)^(n/7) = 0.6987
+   n=6: rho_n(1) = 0.63695; H_n = 0.95542; rho_n on units: min 0.0603, max 11.0180 at y = 728 (= -1 mod 3^n: True); rho_n(-1) = 11.0180 vs (2/3)(3/2)^n = 7.5938; rho_n(-5) = 2.2967 vs (2/3)(9/8)^(n/2) = 0.9492; rho_n(-17) = 1.2573 vs (2/3)(2187/2048)^(n/7) = 0.7053
+   n=7: rho_n(1) = 0.57357; H_n = 0.86036; rho_n on units: min 0.0514, max 16.5657 at y = 2186 (= -1 mod 3^n: True); rho_n(-1) = 16.5657 vs (2/3)(3/2)^n = 11.3906; rho_n(-5) = 1.9925 vs (2/3)(9/8)^(n/2) = 1.0068; rho_n(-17) = 1.7497 vs (2/3)(2187/2048)^(n/7) = 0.7119
+   n=8: rho_n(1) = 0.51638; H_n = 0.77458; rho_n on units: min 0.0500, max 24.8899 at y = 6560 (= -1 mod 3^n: True); rho_n(-1) = 24.8899 vs (2/3)(3/2)^n = 17.0859; rho_n(-5) = 2.7762 vs (2/3)(9/8)^(n/2) = 1.0679; rho_n(-17) = 1.5260 vs (2/3)(2187/2048)^(n/7) = 0.7186
+   Mazur chooses a seed by averaging over residue classes; the seed 1 itself has the masses H_n above, which the mixing estimate says converge; positivity of the limit for the seed 1 is not claimed by the paper.
+DONE

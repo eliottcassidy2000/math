@@ -1,0 +1,40 @@
+== P1: seeds R_j = (4^j - 1)/3 (Lemma 4.1) ==
+   R_j odd, S(R_j) = 1 with valuation 2j, v_3(4^j - 1) = 1 + v_3(j) (j < 200); R_0..R_(3^q - 1) permute Z/3^q for q <= 5
+
+== P2: inverse histories with prescribed valuations; affine identity; weight x * 3^d 2^-A <= R ==
+   252 integral histories: source = affine formula, forward orbit returns with reversed valuations exactly, 3^d x < 2^A R
+   one inverse step exists iff 2^a R = 1 (mod 3), i.e. a has the parity fixed by R mod 3; multiples of 3 have no inverse step
+
+== P3: transfer operators: injectivity, Lemma 2.1, and exact agreement with inverse-orbit fibres ==
+   F_w injective and <T_w g> = 2^-A <g> (with and without absolute values), 200 random cases
+   for every odd R < 3000 and every word of length <= 3 with valuations <= 4: an inverse history exists iff R mod 3^d is in Im(F_w)
+
+== P4: the reference density rho_q (exact) ==
+   q=1: <rho_q> = 2/3, rho_q = 0 on nonunits; on units min 0.6667 max 1.3333
+   q=2: <rho_q> = 2/3, rho_q = 0 on nonunits; on units min 0.1905 max 2.0952
+   q=3: <rho_q> = 2/3, rho_q = 0 on nonunits; on units min 0.1097 max 3.1977
+   q=4: <rho_q> = 2/3, rho_q = 0 on nonunits; on units min 0.0966 max 4.8457
+   q=5: <rho_q> = 2/3, rho_q = 0 on nonunits; on units min 0.0720 max 7.3185
+   <|rho_2 - rho_1 o pi|> = 0.31746;   <|rho_3 - rho_1 o pi|> = 0.43744;   <|rho_4 - rho_1 o pi|> = 0.46752;   <|rho_5 - rho_1 o pi|> = 0.48470;   <|rho_3 - rho_2 o pi|> = 0.27049;   <|rho_4 - rho_2 o pi|> = 0.35669;   <|rho_5 - rho_2 o pi|> = 0.38641;   <|rho_4 - rho_3 o pi|> = 0.22834;   <|rho_5 - rho_3 o pi|> = 0.29519;   <|rho_5 - rho_4 o pi|> = 0.19814;
+
+== P5: mean identity (4.1) for a prefix-free family, and the exact residue pullback of a seed ==
+   family V = words of length 2, valuations 1..4: p(V) = 225/256 = 0.8789; <sum_w T_w rho_2> = (2/3) p(V) = 0.5859  (Lemma 2.1 summed)
+   the composed function vanishes on nonunits; max over units 4.7143 at y = 80 (mod 81); mean over units 0.8789
+   seed M = R_41 = 1611901092819505566274901 (S(M) = 1) in the best class: actual weighted history sum over 2 admitted words = 4.7143 = composed function value (exact)
+
+== P6: endpoints of histories with fixed (depth, valuation sum) in one residue class mod 3^q are spaced >= 3^q ==
+   seed R_40, depth 3, valuations 1..5: 5 histories in 5 (D, A) classes; W x <= M always, max offset M - W x = 1.188; same-class endpoints spaced >= 3^q (q <= 3); equal endpoints share their word
+
+== P7: ordinary-time constant along inverse histories from seeds; empirical density of tau(n) <= (523/50) log n ==
+   central-type histories, 300 samples: mean valuation 2.390; tau(x) = d + A + tau(M) and the log bounds hold exactly; tau/log x mean 5.35 (seed-diluted), seed-free constant (d+A)/(A log 2 - d log 3) mean 6.19
+   geometric-parity histories, 300 samples: mean valuation 2.559; tau(x) = d + A + tau(M) and the log bounds hold exactly; tau/log x mean 4.81 (seed-diluted), seed-free constant (d+A)/(A log 2 - d log 3) mean 5.40
+   at A = 2d the seed-free constant is 3/log(4/3) = 10.428; the paper's 523/50 = 10.46 is this constant with rounding losses
+   n < 1000000: fraction with tau(n) <= 10.46 log n: 0.5422 (the theorem asserts a positive lower density only beyond an astronomical X_0)
+
+== P8: the paper's constants, in bit lengths ==
+   D_exp = 2^(8192 A* 2^(3E*)): log2(log2 D_exp) = 6535.6, i.e. D_exp ~ 2^(2^6536)
+   C* = (32 A* D*)^A*: log2(log2 C*) ~ 6548.3; C ~ 2 C* 20^6409
+   N = 20000 (ceil(log2 F) + 64) with log2 F ~ log2 C: log2 N ~ 6562.6
+   beta(N) = 280 (1.01)^N, q ~ 1.6 sum beta, M = 4^(2b+1+3q), c = 3/(256 M^2 m): c^-1 exceeds 2^(2^(2^6535)); X_0 = 32(2^B M + 1) likewise. No numerical range.
+
+DONE
