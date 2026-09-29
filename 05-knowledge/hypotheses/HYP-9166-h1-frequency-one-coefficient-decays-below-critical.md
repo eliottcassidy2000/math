@@ -1,6 +1,6 @@
 ---
 id: HYP-9166
-title: "H1: the frequency-one Fourier coefficient of the 3-adic Syracuse law decays at a rate below log_2 3 - 1: |mu_hat_n(1)| = |E e(Y_n/3^n)| <= C rho^n with rho < 0.58496 — the single-sequence hypothesis under which Theorem C of the five-mirrors note holds (THM-4519), with the data |mu_hat_n(1)| <= 5.7 (0.58)^n for all n <= 1200 and <= 0.03 (0.58)^n for 200 <= n <= 1200"
+title: "H1: the frequency-one Fourier coefficient of the 3-adic Syracuse law decays at a rate below log_2 3 - 1: |mu_hat_n(1)| = |E e(Y_n/3^n)| <= C rho^n with rho < 0.58496 — the single-sequence hypothesis under which Theorem C of the five-mirrors note holds (THM-4519), with the data |mu_hat_n(1)| <= 5.7 (0.58)^n for all n <= 2500 and <= 0.03 (0.58)^n for 200 <= n <= 2500, the decay rate being about 0.569 per level"
 status: >
   OPEN (CONJECTURAL). Implied by S22's hypothesis H (the weighted negative-power
   norm) and implying Theorem C's sharp rate 3^(h*-1) for the resonant window of
@@ -15,10 +15,12 @@ status: >
   the primitive characters); the only mechanism found for a large value is the
   arrival of a ridge seed 2^-Q = -+u mod 3^k, which is enumerable (depth
   v_3(u 2^Q -+ 1), residue classes mod 2 3^(k-1)) and dead on arrival for
-  Q >~ 200 (EMPIRICAL). Cheapest tests: mu_hat_n(1) to n = 4000 (the runs to
-  2000 are in progress at close-out); the arrivals of the depth-7/8 seeds at
-  Q = 729 (n ~ 564: 0.01 observed), 1458 (n ~ 1125: 0.00); a proof of
-  |mu_hat_n(1)| <= C rho^n for any rho < 1 would already be new.
+  Q >~ 200 (EMPIRICAL). To n = 2500 (rescaled recursion): |mu_hat_n(1)| decays
+  at 0.567-0.572 per level on every 600-block of 200..2500, 3^(n/2)|mu_hat_n(1)|
+  falls from 9e-2 to 3e-15, and no value past n = 200 exceeds 0.078 (n = 261);
+  the arrivals of the seeds at Q = 729 (n ~ 564) and 1458 (n ~ 1125) are 0.01
+  and 0.00. Cheapest tests: n = 5000; a proof of |mu_hat_n(1)| <= C rho^n for
+  any rho < 1 would already be new.
 source: collatz-necklace-20260929 session (mac-mini), part 2, 2026-09-29
 related:
   - 01-canon/theorems/THM-4519-frequency-one-coefficient-carries-the-renewal-series.md
