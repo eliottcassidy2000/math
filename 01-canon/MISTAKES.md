@@ -1929,6 +1929,44 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
+## MISTAKE-550 (2026-09-29, opus S22 renewal structure) -- a Fourier family was called "generic" from a narrow window; widening it exposed travelling ridges thirty times the Parseval scale, and the "law" fitted at one point was a coincidence
+
+- **Refuted claims** (own extension of section 2d of
+  `05-knowledge/results/collatz_five_mirrors_20260929.md`, before the
+  audit): (1) "the negative-power family of the 3-adic Syracuse law is
+  closed under the recursion, every remaining level is scrambled, and the
+  coefficients are generic" — measured on the exponents `-60..-1` to level
+  `80`. In a window of `450–600` exponents followed to level `320` the
+  surface carries ridges `m = m_0 - 1.3 (n - n_0)` of amplitude `2–30`
+  times `3^(-n/2)`; the weighted norm `Ñ_n` spikes to `8 · 3^(-n/2)` at `n
+  = 128` and the single coefficients to `13.4`. (2) "the multiplier family
+  `u 2^j` has amplitude `M(n) u^(-0.438)`, `0.17 M(15)` predicted against
+  `0.20 M(15)` observed": a one-point agreement; over `u = 5..127` at four
+  levels the exponent is `-0.47..-0.55` with a scatter of a factor four
+  that depends on the multiplier's fine structure.
+- **What survives and what settled it:** Lemma R', the Chernoff mass law
+  and Theorem C are untouched (they are conditional on the rate of `Ñ_n`,
+  which stays below the critical `log_2 3 - 1 = 0.585` to level `320`:
+  `0.568–0.574`, constant `1.58`). The ridges were explained by Lemma G's
+  duality: one-step coherence at the exponent `-m` is a run of equal
+  2-adic digits of `3^(-n)` straddling `m`, i.e. `2^(-m) mod 3^n` a small
+  `±u`; the dominant ridge is the multiplier family `-55 · 2^j` because
+  `v_3(55 · 2^423 + 1) = 15`, the others are wrapped copies of the pure
+  resonance from the small periods `L_5 = 162`, `L_6 = 486`. A ridge lives
+  at its family's resonant amplitude while the 3-adic coincidence lasts
+  (growing against the Parseval scale by `1.64` per level), then decays as
+  a remnant at `0.5675` per level; the largest ridge a window of `W`
+  exponents can show is polynomial in `W` (heuristic), which is why the
+  hypothesis survives with its `1.3%` margin — but the margin can no
+  longer be called safe.
+- **Rule:** before calling a Fourier family generic, scan a window wide
+  enough to contain the structures that the recursion transports (here
+  `10 n` exponents at level `n`), track the maximum and its position level
+  by level, not only a weighted norm, and look for travelling features;
+  a "law" is not a law until it is tested across the parameter it is
+  stated in (`u = 5..127`, four levels), and a single agreeing point is
+  reported as a coincidence until then.
+
 ## MISTAKE-549 (2026-09-29, opus S20 five-mirrors audit) -- eighteen levels of a decaying sequence were read as a plateau and a decided law; a closed sub-family settled it where a full computation could not
 
 - **Refuted claims** (independent audit of
