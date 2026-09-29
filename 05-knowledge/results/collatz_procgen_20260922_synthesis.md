@@ -1589,9 +1589,17 @@ exploration and extend past work toward proofs. Note
   linearly with slope `0.083 ≈ |log_2 0.9465|`), proportional (`0.44–0.48`)
   at every level `20..120` to the no-descent probability `P_h`, whose rate
   is `3^(h*-1) = 0.9465` (PROVED) with `h*` the thin-divergence exponent of
-  THM-4476 (OBSERVED; `M(h) ≍ P_h` CONJECTURAL): the decay rate of the
+    THM-4476 (OBSERVED; `M(h) ≍ P_h` CONJECTURAL): the decay rate of the
   maximal primitive coefficient and the thin-divergence exponent appear to
-  be one number — a necessary condition for (2.3), not the estimate itself. The
+  be one number — a necessary condition for (2.3), not the estimate itself.
+  S21 (section 2c of the note) took the recursion to `h = 300` (rate
+  `0.941–0.949`, bracketing `0.9465`; `M/P_h` drifting in `0.44–0.58`) and
+  split the coefficient by the excursion of the prefix sums above the
+  critical line: the strict no-descent words carry only `35–54%`, the band
+  within `6` bits reproduces the magnitude, deep descenders cancel slowly,
+  and the phases inside the band are spread — the proof-shaped targets are
+  (T1) cancellation of deep descents and (T2) a band residue of the order
+  of `P_h`, both OPEN. The
   Fourier mass per conductor level is `0.466` at every level (`(3/2)` times
     the S19 second-moment increments, PROVED by Parseval level by level); the
   typical coefficient has `|mu_hat|^2 3^h = 0.70` (square-root

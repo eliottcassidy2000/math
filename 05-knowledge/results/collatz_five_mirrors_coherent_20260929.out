@@ -1,0 +1,26 @@
+h= 20: s* = 26 (h log2 3 - s* = 5.70); |full| = 8.8846e-03; P_h (no-descent mass) = 1.9254e-02; |coh| = 7.7443e-03 (|coh|/P_h = 0.4022, coherent fraction |coh|/sum|terms| = 0.4022); |rest| = 3.1124e-03 (|rest|/|full| = 0.3503); arg(coh) - arg(full) = +0.351
+h= 30: s* = 42 (h log2 3 - s* = 5.55); |full| = 3.2881e-03; P_h (no-descent mass) = 7.0746e-03; |coh| = 1.9421e-03 (|coh|/P_h = 0.2745, coherent fraction |coh|/sum|terms| = 0.2745); |rest| = 1.5998e-03 (|rest|/|full| = 0.4865); arg(coh) - arg(full) = +0.344
+h= 40: s* = 57 (h log2 3 - s* = 6.40); |full| = 1.3832e-03; P_h (no-descent mass) = 2.9861e-03; |coh| = 7.5246e-04 (|coh|/P_h = 0.2520, coherent fraction |coh|/sum|terms| = 0.2520); |rest| = 6.6538e-04 (|rest|/|full| = 0.4810); arg(coh) - arg(full) = +0.208
+h= 60: s* = 89 (h log2 3 - s* = 6.10); |full| = 2.8281e-04; P_h (no-descent mass) = 6.1523e-04; |coh| = 1.1795e-04 (|coh|/P_h = 0.1917, coherent fraction |coh|/sum|terms| = 0.1917); |rest| = 1.6789e-04 (|rest|/|full| = 0.5936); arg(coh) - arg(full) = +0.174
+h= 80: s* = 120 (h log2 3 - s* = 6.80); |full| = 6.4534e-05; P_h (no-descent mass) = 1.3956e-04; |coh| = 2.6335e-05 (|coh|/P_h = 0.1887, coherent fraction |coh|/sum|terms| = 0.1887); |rest| = 3.8844e-05 (|rest|/|full| = 0.6019); arg(coh) - arg(full) = +0.171
+== words with bounded excursion above the critical line (P_j < j log2 3 + c for all j) ==
+   h=40, c= 0: mass of the family 2.9861e-03 (= 3.28e+09 x 2^-h); |coh_c| = 7.5246e-04 = 0.5440 |full|; |full - coh_c|/|full| = 0.4810; coherent fraction 0.2520
+   h=40, c= 1: mass of the family 7.5746e-03 (= 8.33e+09 x 2^-h); |coh_c| = 6.8283e-04 = 0.4937 |full|; |full - coh_c|/|full| = 0.5081; coherent fraction 0.0901
+   h=40, c= 2: mass of the family 1.4264e-02 (= 1.57e+10 x 2^-h); |coh_c| = 1.0333e-03 = 0.7470 |full|; |full - coh_c|/|full| = 0.2760; coherent fraction 0.0724
+   h=40, c= 3: mass of the family 2.3509e-02 (= 2.58e+10 x 2^-h); |coh_c| = 1.0876e-03 = 0.7863 |full|; |full - coh_c|/|full| = 0.2877; coherent fraction 0.0463
+   h=40, c= 4: mass of the family 3.5730e-02 (= 3.93e+10 x 2^-h); |coh_c| = 1.2773e-03 = 0.9235 |full|; |full - coh_c|/|full| = 0.1625; coherent fraction 0.0357
+   h=40, c= 6: mass of the family 7.0522e-02 (= 7.75e+10 x 2^-h); |coh_c| = 1.3946e-03 = 1.0082 |full|; |full - coh_c|/|full| = 0.0121; coherent fraction 0.0198
+   h=40, c= 8: mass of the family 1.2060e-01 (= 1.33e+11 x 2^-h); |coh_c| = 1.3790e-03 = 0.9970 |full|; |full - coh_c|/|full| = 0.0286; coherent fraction 0.0114
+   h=40, c=12: mass of the family 2.6518e-01 (= 2.92e+11 x 2^-h); |coh_c| = 1.3760e-03 = 0.9948 |full|; |full - coh_c|/|full| = 0.0064; coherent fraction 0.0052
+   h=40, c=16: mass of the family 4.4774e-01 (= 4.92e+11 x 2^-h); |coh_c| = 1.3827e-03 = 0.9996 |full|; |full - coh_c|/|full| = 0.0010; coherent fraction 0.0031
+   h=80, c= 0: mass of the family 1.3956e-04 (= 1.69e+20 x 2^-h); |coh_c| = 2.6335e-05 = 0.4081 |full|; |full - coh_c|/|full| = 0.6019; coherent fraction 0.1887
+   h=80, c= 1: mass of the family 3.6279e-04 (= 4.39e+20 x 2^-h); |coh_c| = 2.7429e-05 = 0.4250 |full|; |full - coh_c|/|full| = 0.5778; coherent fraction 0.0756
+   h=80, c= 2: mass of the family 7.0578e-04 (= 8.53e+20 x 2^-h); |coh_c| = 4.0393e-05 = 0.6259 |full|; |full - coh_c|/|full| = 0.4027; coherent fraction 0.0572
+   h=80, c= 3: mass of the family 1.2105e-03 (= 1.46e+21 x 2^-h); |coh_c| = 4.8150e-05 = 0.7461 |full|; |full - coh_c|/|full| = 0.3102; coherent fraction 0.0398
+   h=80, c= 4: mass of the family 1.9275e-03 (= 2.33e+21 x 2^-h); |coh_c| = 5.9910e-05 = 0.9284 |full|; |full - coh_c|/|full| = 0.0961; coherent fraction 0.0311
+   h=80, c= 6: mass of the family 4.2503e-03 (= 5.14e+21 x 2^-h); |coh_c| = 6.4968e-05 = 1.0067 |full|; |full - coh_c|/|full| = 0.1081; coherent fraction 0.0153
+   h=80, c= 8: mass of the family 8.2846e-03 (= 1e+22 x 2^-h); |coh_c| = 6.3904e-05 = 0.9902 |full|; |full - coh_c|/|full| = 0.1032; coherent fraction 0.0077
+   h=80, c=12: mass of the family 2.4723e-02 (= 2.99e+22 x 2^-h); |coh_c| = 6.7167e-05 = 1.0408 |full|; |full - coh_c|/|full| = 0.0438; coherent fraction 0.0027
+   h=80, c=16: mass of the family 5.8662e-02 (= 7.09e+22 x 2^-h); |coh_c| = 6.5362e-05 = 1.0128 |full|; |full - coh_c|/|full| = 0.0129; coherent fraction 0.0011
+h=30: random units |mu_hat| = ['3.13e-08', '2.55e-08', '1.31e-08', '2.12e-08', '8.35e-09', '2.83e-08', '2.43e-08', '1.08e-08', '1.13e-08', '7.92e-08', '3.82e-08', '9.84e-09']; median 2.28e-08; square-root scale 0.84 3^(-15) = 5.85e-08; resonant window max = 3.29e-03
+DONE

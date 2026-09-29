@@ -621,8 +621,11 @@ all heights (THM-1289, published), δ ineffective.
   cycles with fixed points (rotation-symmetric words) and genuine pairs (3x+13: 227 <-> 259, 251 <-> 287; 3x+37: 23 <-> 29;
   orbits verified); the trace of a rational cycle is reversal-invariant (PROVED: the multiset of cyclic block sums is), so the
     pairs have equal element sums (2499, 125). No barrier typed. Audited SOUND WITH CORRECTIONS (eighteen applied; the decay
-  reading at h <= 18 had been overstated; MISTAKE-549); section 2b added after the audit and audited separately (fifteen corrections: the implication direction, the polynomial
-  prefactor, 0.44-0.48 not 0.46 +- 0.02, s = h log2 3 - 6). Note: `collatz_five_mirrors_20260929.md`.
+  reading at h <= 18 had been overstated; MISTAKE-549);   section 2b added after the audit and audited separately (fifteen corrections: the implication direction, the polynomial
+  prefactor, 0.44-0.48 not 0.46 +- 0.02, s = h log2 3 - 6). S21 (section 2c): recursion to h = 300 (rate 0.941-0.949 bracketing
+  3^(h*-1); M/P_h in 0.44-0.58); the coefficient split by excursion above the critical line: strict no-descent words carry
+  35-54%, the 6-bit band reproduces the magnitude, deep descenders cancel slowly; targets (T1) cancellation of deep descents,
+  (T2) band residue of order P_h, OPEN. Note: `collatz_five_mirrors_20260929.md`.
 
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`
 (ranks HN > reconstruction > Kakeya/Falconer > sunflower > Caccetta–Häggkvist > … ).
