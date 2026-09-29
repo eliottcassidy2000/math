@@ -1669,8 +1669,7 @@ of [`collatz_five_mirrors_20260929.md`](collatz_five_mirrors_20260929.md).
 * **Theorem C (CONDITIONAL).** If `Ñ_n <= C ρ^n` with `ρ < log_2 3 - 1 =
   0.585`, then `|mu_hat_h(2^s)| <= C' e^(θ*δ) (3^(h*-1))^h` for all `h` and
   all `s <= h log_2 3`: the resonant window decays at the no-descent rate
-  with a constant prefactor — the sharp form of the coefficient side of
-  Mazur's (2.3), against the `C* h^(-6409)` of the Fourier–renewal method.
+  with a constant prefactor — the sharp form of the coefficient side of Mazur's (2.3) on this family and under H (the cited unconditional bound on all of `M(h)` is polynomial, `C* h^(-6409)`, with a tower constant).
   The hypothesis is VERIFIED to `n = 320` (rate `0.568–0.574`, constant `1.58`, the Parseval scale up to the ridges; the margin is `1.3%`, `3^(-1/2)/(log_2 3 - 1) = 0.987`, and the ridges are why it cannot be called safe) and CONJECTURAL beyond: it is square-root cancellation for one explicit character sum
   over the 2-adic digits of `3^(-n)` (`m = 1`: the parity of the residue
   `Y_n`), of the `×2 ×3` kind. The bound evaluates to `0.11–0.18 e^(-hI)` at

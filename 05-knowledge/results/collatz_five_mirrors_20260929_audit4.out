@@ -64,7 +64,7 @@
 == E. the negative family Ntilde_n = sum_(m>=1) 2^-m |m_n(-m)| (window [-60, 0]; m <= 60, tail <= 2^-60) == [   3s]
    recursion with a <= 40 to n = 80 done [   3s]
    recursion with a <= 50 to n = 120 done [   3s]
-   recursion with a <= 60 to n = 80 done [   3s]
+   recursion with a <= 60 to n = 80 done [   4s]
    truncation: max_n |Ntilde(a<=40) - Ntilde(a<=50)|/Ntilde(a<=50) over n <= 80 = 1.3e-11; single coefficients (m <= 60): 1.3e-09
    truncation: max_n |Ntilde(a<=60) - Ntilde(a<=50)|/Ntilde(a<=50) over n <= 80 = 1.3e-14; single coefficients (m <= 60): 1.1e-12
    a priori truncation bound per level 2^-50 = 8.9e-16 against Ntilde_80 = 1.62e-20: NOT self-certifying a priori; certified only by the agreement of the three truncations
@@ -140,7 +140,74 @@
    least-squares rate of Ntilde_n over 60..120: 0.5578 per level (3^-1/2 = 0.5774, m - 1 = 0.5850); geometric-mean ratio 0.5683
    least-squares rate of Ntilde_n over 81..120: 0.5663 per level (3^-1/2 = 0.5774, m - 1 = 0.5850); geometric-mean ratio 0.5882
 
-== F. Lemma R' term by term with the walk DP; J_eff; per-mass weights; the floor counter == [   4s]
+== E2. the negative family to n = 160: the outlying wave, Ntilde_n, and the 2-adic digit runs of -3^-n == [   4s]
+   n : Ntilde_n 3^(n/2) : sup_m |m_n(-m)| 3^(n/2) (m <= 60) at m : the largest normalised term 2^-m |m_n(-m)| 3^(n/2) at m
+   100: 0.084  5.03 at m=43  0.027 at m=1
+   102: 0.146  4.48 at m=36  0.084 at m=1
+   104: 0.247  4.09 at m=38  0.116 at m=1
+   106: 0.158  3.83 at m=33  0.084 at m=1
+   108: 0.123  3.77 at m=34  0.088 at m=1
+   110: 0.066  5.17 at m=27  0.050 at m=1
+   112: 0.031  7.49 at m=24  0.014 at m=1
+   114: 0.044  7.39 at m=22  0.012 at m=1
+   116: 0.097  9.72 at m=20  0.058 at m=1
+   118: 0.076  11.02 at m=18  0.027 at m=3
+   120: 0.298  10.89 at m=16  0.133 at m=1
+   122: 0.312  6.61 at m=14  0.056 at m=6
+   124: 0.896  8.20 at m=11  0.290 at m=1
+   126: 3.371  8.65 at m= 5  1.564 at m=1
+   128: 7.965  13.43 at m= 3  3.044 at m=2
+   130: 8.674  13.30 at m= 1  6.649 at m=1
+   132: 2.377  2.93 at m= 2  1.252 at m=1
+   134: 1.803  2.71 at m= 1  1.357 at m=1
+   136: 0.354  0.80 at m=52  0.189 at m=2
+   138: 0.191  0.57 at m=50  0.138 at m=1
+   140: 0.109  0.59 at m=45  0.078 at m=1
+   142: 0.032  0.56 at m=40  0.010 at m=2
+   144: 0.106  0.64 at m=38  0.059 at m=1
+   146: 0.062  0.38 at m=36  0.035 at m=1
+   148: 0.047  0.42 at m=32  0.024 at m=1
+   150: 0.035  0.34 at m=32  0.020 at m=1
+   152: 0.052  0.27 at m=30  0.034 at m=1
+   154: 0.030  0.35 at m=27  0.013 at m=1
+   156: 0.036  0.30 at m=25  0.015 at m=1
+   158: 0.096  0.22 at m=23  0.050 at m=1
+   160: 0.086  0.21 at m=21  0.037 at m=2
+   Ntilde_n 3^(n/2) over 100 <= n <= 160: min 0.029 (n=113), max 8.674 (n=130); least-squares rate over 100..160: 0.5685; over 20..160: 0.5716
+   the one-step Gauss sum along the wave: n, argmax m of |m_n(-m)| 3^(n/2), its value, |G_n(2^-m)| there, mean |G_n(2^-m)| over m <= 60, |G_n(2^-1)|
+      n= 84: m*=60, |m_n(-m*)| 3^(n/2) =   1.03, |G_n(2^-m*)| = 0.538, mean_m |G_n(2^-m)| = 0.515, |G_n(2^-1)| = 0.720
+      n= 88: m*=59, |m_n(-m*)| 3^(n/2) =   3.63, |G_n(2^-m*)| = 0.170, mean_m |G_n(2^-m)| = 0.540, |G_n(2^-1)| = 0.823
+      n= 92: m*=52, |m_n(-m*)| 3^(n/2) =   3.63, |G_n(2^-m*)| = 0.740, mean_m |G_n(2^-m)| = 0.522, |G_n(2^-1)| = 0.760
+      n= 96: m*=48, |m_n(-m*)| 3^(n/2) =   5.03, |G_n(2^-m*)| = 0.563, mean_m |G_n(2^-m)| = 0.526, |G_n(2^-1)| = 0.843
+      n=100: m*=43, |m_n(-m*)| 3^(n/2) =   5.03, |G_n(2^-m*)| = 0.306, mean_m |G_n(2^-m)| = 0.567, |G_n(2^-1)| = 0.733
+      n=104: m*=38, |m_n(-m*)| 3^(n/2) =   4.09, |G_n(2^-m*)| = 0.602, mean_m |G_n(2^-m)| = 0.558, |G_n(2^-1)| = 0.783
+      n=108: m*=34, |m_n(-m*)| 3^(n/2) =   3.77, |G_n(2^-m*)| = 0.557, mean_m |G_n(2^-m)| = 0.524, |G_n(2^-1)| = 0.786
+      n=112: m*=24, |m_n(-m*)| 3^(n/2) =   7.49, |G_n(2^-m*)| = 0.648, mean_m |G_n(2^-m)| = 0.527, |G_n(2^-1)| = 0.829
+      n=116: m*=20, |m_n(-m*)| 3^(n/2) =   9.72, |G_n(2^-m*)| = 0.652, mean_m |G_n(2^-m)| = 0.536, |G_n(2^-1)| = 0.716
+      n=120: m*=16, |m_n(-m*)| 3^(n/2) =  10.89, |G_n(2^-m*)| = 0.681, mean_m |G_n(2^-m)| = 0.577, |G_n(2^-1)| = 0.805
+      n=124: m*=11, |m_n(-m*)| 3^(n/2) =   8.20, |G_n(2^-m*)| = 0.585, mean_m |G_n(2^-m)| = 0.554, |G_n(2^-1)| = 0.771
+      n=128: m*= 3, |m_n(-m*)| 3^(n/2) =  13.43, |G_n(2^-m*)| = 0.967, mean_m |G_n(2^-m)| = 0.581, |G_n(2^-1)| = 0.846
+      n=132: m*= 2, |m_n(-m*)| 3^(n/2) =   2.93, |G_n(2^-m*)| = 0.570, mean_m |G_n(2^-m)| = 0.539, |G_n(2^-1)| = 0.718
+      n=136: m*=52, |m_n(-m*)| 3^(n/2) =   0.80, |G_n(2^-m*)| = 0.518, mean_m |G_n(2^-m)| = 0.524, |G_n(2^-1)| = 0.797
+   runs of equal binary digits of -3^-n at positions <= 70 (position 1 = least significant): the longest run and where it starts, n = 100..160
+      n=100: longest run 7 digits starting at position 38 (digit 0); digits 1..40 (lsb first): 1111001101011011000100100111110110111000
+      n=104: longest run 6 digits starting at position 10 (digit 0); digits 1..40 (lsb first): 1111100010000001000001000010111010010100
+      n=108: longest run 8 digits starting at position 62 (digit 0); digits 1..40 (lsb first): 1111011001111111000010110100100111010001
+      n=112: longest run 6 digits starting at position 1 (digit 1); digits 1..40 (lsb first): 1111110101000100011001110101010001111000
+      n=116: longest run 5 digits starting at position 5 (digit 0); digits 1..40 (lsb first): 1111000001111101010100011111001010101110
+      n=120: longest run 8 digits starting at position 36 (digit 0); digits 1..40 (lsb first): 1111101000000101000110111101100100100000
+      n=124: longest run 6 digits starting at position 55 (digit 0); digits 1..40 (lsb first): 1111010110011001000101001111101101111010
+      n=128: longest run 9 digits starting at position 1 (digit 1); digits 1..40 (lsb first): 1111111110011110010001100000001101000001
+      n=132: longest run 7 digits starting at position 55 (digit 1); digits 1..40 (lsb first): 1111001010001000101100100001010001101001
+      n=136: longest run 6 digits starting at position 55 (digit 1); digits 1..40 (lsb first): 1111100111110100011110110100001010001100
+      n=140: longest run 7 digits starting at position 49 (digit 0); digits 1..40 (lsb first): 1111011100100101010100011110011100010110
+      n=144: longest run 6 digits starting at position 1 (digit 1); digits 1..40 (lsb first): 1111110010000010011010010001110011100100
+      n=148: longest run 5 digits starting at position 32 (digit 0); digits 1..40 (lsb first): 1111000100101011110001101001001000001000
+      n=152: longest run 6 digits starting at position 43 (digit 0); digits 1..40 (lsb first): 1111101101110100101000111101100111110100
+      n=156: longest run 7 digits starting at position 7 (digit 0); digits 1..40 (lsb first): 1111010000000100110100100010001001011111
+      n=160: longest run 7 digits starting at position 1 (digit 1); digits 1..40 (lsb first): 1111111000011110101010011010000100001011
+
+== F. Lemma R' term by term with the walk DP; J_eff; per-mass weights; the floor counter == [   5s]
    h=20: s* = 26 (delta = 5.70), |m_h(s*)| = 8.8846e-03; walk DP: |sum_J c_J - m_h(s*)| = 1.24e-15 (1.4e-13 relative), DP mass 1.0000000000, max_J |DP mass - exact mass| = 1.6e-12
       worst |c_J|/(mass_h(J) Ntilde_(J-1)) = 0.884 at J = 8; bound sum_J mass Ntilde = 8.4351e-02 = 0.2533 e^-hI; |full|/bound = 0.1053
       J : exact mass : |c_J| : ratio : |c_J|/|full| : arg c_J : per-mass x h : remainder |full - cum_J|/|full|
@@ -166,7 +233,7 @@
       19: 3.874e-07  9.135e-12  0.539  0.000  -1.00  0.00  0.000
       20: 1.490e-08  1.676e-13  0.845  0.000  -0.28  0.00  0.000
       J_eff: first J with remainder < 10%: 8; stable (< 10% from J on): 8; stable 5%: 8; 1.6 sqrt(h) = 7.2, h/8 = 2.5, 8.2 ln h - 20 = 4.6
-      [   4s]
+      [   5s]
    h=40: s* = 57 (delta = 6.40), |m_h(s*)| = 1.3832e-03; walk DP: |sum_J c_J - m_h(s*)| = 1.06e-15 (7.7e-13 relative), DP mass 1.0000000000, max_J |DP mass - exact mass| = 2.1e-12
       worst |c_J|/(mass_h(J) Ntilde_(J-1)) = 0.840 at J = 20; bound sum_J mass Ntilde = 1.9906e-02 = 0.1795 e^-hI; |full|/bound = 0.0695
       J : exact mass : |c_J| : ratio : |c_J|/|full| : arg c_J : per-mass x h : remainder |full - cum_J|/|full|
@@ -203,7 +270,7 @@
       30: 2.996e-07  7.744e-15  0.532  0.000  +1.80  0.00  0.000
       J_eff: first J with remainder < 10%: 10; stable (< 10% from J on): 10; stable 5%: 10; 1.6 sqrt(h) = 10.1, h/8 = 5.0, 8.2 ln h - 20 = 10.2
       floor counter F (K = 3): mass with F >= 1: 0.0242 of the DP mass (1.000000); |c_(F=0)|/|full| = 1.0041; vector remainder |full - c_(F=0)|/|full| = 0.0042; sum_(F>=1) |c_F| / |full| = 0.0648
-      [   4s]
+      [   6s]
    h=80: s* = 120 (delta = 6.80), |m_h(s*)| = 6.4534e-05; walk DP: |sum_J c_J - m_h(s*)| = 1.07e-16 (1.7e-12 relative), DP mass 0.9999999999, max_J |DP mass - exact mass| = 3.8e-12
       worst |c_J|/(mass_h(J) Ntilde_(J-1)) = 0.904 at J = 64; bound sum_J mass Ntilde = 1.6774e-03 = 0.1364 e^-hI; |full|/bound = 0.0385
       J : exact mass : |c_J| : ratio : |c_J|/|full| : arg c_J : per-mass x h : remainder |full - cum_J|/|full|
@@ -240,7 +307,7 @@
       30: 1.381e-02  3.515e-10  0.523  0.000  +1.88  0.00  0.000
       J_eff: first J with remainder < 10%: 14; stable (< 10% from J on): 17; stable 5%: 18; 1.6 sqrt(h) = 14.3, h/8 = 10.0, 8.2 ln h - 20 = 15.9
       floor counter F (K = 3): mass with F >= 1: 0.0197 of the DP mass (1.000000); |c_(F=0)|/|full| = 0.9965; vector remainder |full - c_(F=0)|/|full| = 0.0038; sum_(F>=1) |c_F| / |full| = 0.0340
-      [   5s]
+      [   7s]
    h=120: s* = 184 (delta = 6.20), |m_h(s*)| = 4.1197e-06; walk DP: |sum_J c_J - m_h(s*)| = 1.07e-17 (2.6e-12 relative), DP mass 0.9999999999, max_J |DP mass - exact mass| = 4.9e-12
       worst |c_J|/(mass_h(J) Ntilde_(J-1)) = 0.913 at J = 64; bound sum_J mass Ntilde = 2.0144e-04 = 0.1477 e^-hI; |full|/bound = 0.0205
       J : exact mass : |c_J| : ratio : |c_J|/|full| : arg c_J : per-mass x h : remainder |full - cum_J|/|full|
@@ -276,14 +343,14 @@
       29: 5.811e-02  5.446e-09  0.724  0.001  -0.77  0.00  0.000
       30: 5.625e-02  1.291e-09  0.472  0.000  +2.06  0.00  0.000
       J_eff: first J with remainder < 10%: 19; stable (< 10% from J on): 19; stable 5%: 19; 1.6 sqrt(h) = 17.5, h/8 = 15.0, 8.2 ln h - 20 = 19.3
-      [   7s]
+      [   8s]
    per-mass weights |c_J|/mass_h(J) x h, J = 2..10:
       h= 20: 1.59 1.75 1.71 1.44 0.28 0.40 0.21 0.08 0.03
       h= 40: 1.23 1.68 1.94 1.86 0.39 0.62 0.35 0.13 0.06
       h= 80: 0.98 1.49 1.89 1.97 0.45 0.76 0.46 0.18 0.08
       h=120: 0.70 1.12 1.48 1.60 0.38 0.66 0.41 0.17 0.08
 
-== G. the mass law: exact masses against Chernoff, normalised growth factors == [   7s]
+== G. the mass law: exact masses against Chernoff, normalised growth factors == [   8s]
    h=40: s = 57, delta = 6.40; max_J (mass - Chernoff) = -1.4e-02; max_J (P(T_(J+1) <= s) - Chernoff) = -1.4e-02; sum_J mass = 1.000000000000
       normalised masses J = 0..12: 1.01e-01 1.35e-01 2.78e-01 5.28e-01 9.31e-01 1.52e+00 2.32e+00 3.28e+00 4.34e+00 5.34e+00 6.13e+00 6.56e+00 6.56e+00
       ratios J/(J-1), J = 1..12: 1.35 2.05 1.90 1.76 1.64 1.52 1.42 1.32 1.23 1.15 1.07 1.00; argmax_J mass = 11 (0.21 h = 8); mass-weighted mean J = 11.5
@@ -300,7 +367,7 @@
       normalised masses J = 0..12: 4.82e-02 3.52e-02 6.06e-02 1.04e-01 1.78e-01 3.03e-01 5.15e-01 8.74e-01 1.48e+00 2.49e+00 4.20e+00 7.04e+00 1.18e+01
       ratios J/(J-1), J = 1..12: 0.73 1.72 1.71 1.71 1.71 1.70 1.70 1.69 1.69 1.68 1.68 1.67; argmax_J mass = 210 (0.21 h = 210); mass-weighted mean J = 210.5
 
-== H. B_h(s) = sum_J mass_h(J) Ntilde_(J-1) at every h <= 81 and every 0 <= s <= floor(h log2 3), against |m_h(s)| == [   7s]
+== H. B_h(s) = sum_J mass_h(J) Ntilde_(J-1) at every h <= 81 and every 0 <= s <= floor(h log2 3), against |m_h(s)| == [   8s]
    Ntilde_n taken from the a <= 50 recursion plus the tail bound 2^-60.  Columns: h, s*, delta*, M(h), B(s*)/e^-hI, max_s B(s)/e^-hI (at s), B(floor(hm))/e^-hI, max_s |m_h(s)|/B(s) (at s), |m_h(s*)|/B(s*)
    h= 1: s*=  0 d*= 1.58 M=5.774e-01  B(s*)/e^-hI=1.0565  max_s B/e^-hI=1.0565 (s=0, d=1.58)  B(kc)/e^-hI=1.0565  max_s |m|/B=0.5774 (s=0)  |m(s*)|/B(s*)=0.5774
    h= 2: global argmax over the powers of two is k = 5 > floor(h m) = 3 (|m| = 3.779e-01); the bound is evaluated for 0 <= s <= floor(h m) only
@@ -353,7 +420,7 @@
       h=200: bound/e^-hI = 0.1052; share from J-1 <= 80 (computed in the note): 1.0000; from 81 <= J-1 <= 120 (computed here): 0.0000; extrapolated beyond 120: 2.7e-42
       h=300: bound/e^-hI = 0.1102; share from J-1 <= 80 (computed in the note): 1.0000; from 81 <= J-1 <= 120 (computed here): 0.0000; extrapolated beyond 120: 1.5e-28
 
-== H2. the same for 82 <= h <= 150 with Ntilde_n computed to n = 120 (tail J - 1 > 120 bounded by Ntilde <= 1) == [   7s]
+== H2. the same for 82 <= h <= 150 with Ntilde_n computed to n = 120 (tail J - 1 > 120 bounded by Ntilde <= 1) == [   8s]
    h= 82: s*=123 d*=6.97 M=5.566e-05  B(s*)/e^-hI=0.1292  max_s B/e^-hI=0.6454  max_s |m|/B=0.1089 (s=28)  |m(s*)|/B(s*)=0.0391
    h= 90: s*=136 d*=6.65 M=3.187e-05  B(s*)/e^-hI=0.1387  max_s B/e^-hI=0.6863  max_s |m|/B=0.0999 (s=40)  |m(s*)|/B(s*)=0.0324
    h=100: s*=152 d*=6.50 M=1.594e-05  B(s*)/e^-hI=0.1414  max_s B/e^-hI=0.6989  max_s |m|/B=0.0896 (s=56)  |m(s*)|/B(s*)=0.0275
@@ -364,7 +431,7 @@
    h=150: s*=231 d*=6.74 M=5.964e-07  B(s*)/e^-hI=0.1204  max_s B/e^-hI=3815.8584  max_s |m|/B=0.0763 (s=210)  |m(s*)|/B(s*)=0.0189
    82 <= h <= 150: max_h B_h(s*)/e^-hI = 0.1642 (h=89), min 0.1072; max_h max_s B_h(s)/e^-hI = 3815.8584; max_h max_s |m_h(s)|/B_h(s) = 0.1089 (h=82, s=28); d* range [6.06, 7.16]
 
-== I. the profile |m_n(k)| on the powers of two: ceiling side and floor side == [   8s]
+== I. the profile |m_n(k)| on the powers of two: ceiling side and floor side == [   9s]
    n=40: M(n) = 1.383e-03 at k = 57 = nm - 6.40; ceiling k in [-60, -1]: rms 2.230e-10, max 5.946e-10 against 3^(-n/2) = 2.868e-10
       floor side, k = kc + d (kc = floor(nm)); columns: d, k - nm, |m_n(k)|/M(n), 2^-d, ratio
          d= -2  k-nm=-2.40  4.228e-01  4.000e+00  ratio 0.106
@@ -404,7 +471,7 @@
       k in [kc+1, kc+20]: rms 7.304e-07 max 2.525e-06; k in [kc+21, kc+60]: rms 7.384e-13 max 4.072e-12; against 3^(-n/2) = 8.2e-20
       low side k = s*-7..s*: 1.83e-05 2.40e-05 3.08e-05 3.85e-05 4.67e-05 5.45e-05 6.10e-05 6.45e-05; step ratios 0.76 0.78 0.80 0.83 0.86 0.89 0.94 (e^theta* = 0.738)
 
-== J. 30-digit mpmath check of the closed recursion on the negative family (same truncation, float64 rounding only) == [   8s]
-   N=40, k in [-10, 0], a <= 25: max relative |float64 - mpmath(30 digits)| = 1.1e-14; |m_N(-1)| = 3.736704e-10 (mp) vs 3.736704e-10 (float64)  [  10s]
-   N=60, k in [-6, 0], a <= 20: max relative |float64 - mpmath(30 digits)| = 9.7e-15; |m_N(-1)| = 4.917318e-15 (mp) vs 4.917318e-15 (float64)  [  12s]
-DONE [  12s]
+== J. 30-digit mpmath check of the closed recursion on the negative family (same truncation, float64 rounding only) == [   9s]
+   N=40, k in [-10, 0], a <= 25: max relative |float64 - mpmath(30 digits)| = 1.1e-14; |m_N(-1)| = 3.736704e-10 (mp) vs 3.736704e-10 (float64)  [  11s]
+   N=60, k in [-6, 0], a <= 20: max relative |float64 - mpmath(30 digits)| = 9.7e-15; |m_N(-1)| = 4.917318e-15 (mp) vs 4.917318e-15 (float64)  [  13s]
+DONE [  13s]

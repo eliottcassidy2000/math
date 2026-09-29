@@ -381,6 +381,41 @@ for lo, hi in ((20, 80), (40, 80), (20, 120), (60, 120), (81, 120)):
     print(f"   least-squares rate of Ntilde_n over {lo}..{hi}: {math.exp(slope):.4f} per level (3^-1/2 = {3 ** -0.5:.4f}, m - 1 = {MM - 1:.4f}); geometric-mean ratio {(NT[50][hi] / NT[50][lo]) ** (1 / (hi - lo)):.4f}")
 NTV = NT[50]
 
+hdr("E2. the negative family to n = 160: the outlying wave, Ntilde_n, and the 2-adic digit runs of -3^-n")
+neg160 = closed_all(160, -60, 0, 50, keep=set(range(100, 161)))
+print("   n : Ntilde_n 3^(n/2) : sup_m |m_n(-m)| 3^(n/2) (m <= 60) at m : the largest normalised term 2^-m |m_n(-m)| 3^(n/2) at m")
+for n in range(100, 161, 2):
+    arr = neg160[n]
+    nt = sum(2.0 ** (-m) * abs(arr[60 - m]) for m in range(1, 61))
+    mm = max(range(1, 61), key=lambda m: abs(arr[60 - m]))
+    mt = max(range(1, 61), key=lambda m: 2.0 ** (-m) * abs(arr[60 - m]))
+    print(f"   {n:3d}: {nt * 3 ** (n / 2):.3f}  {abs(arr[60 - mm]) * 3 ** (n / 2):.2f} at m={mm:2d}  {2.0 ** (-mt) * abs(arr[60 - mt]) * 3 ** (n / 2):.3f} at m={mt}")
+NT160 = {n: sum(2.0 ** (-m) * abs(neg160[n][60 - m]) for m in range(1, 61)) for n in range(100, 161)}
+v160 = {n: NT160[n] * 3 ** (n / 2) for n in NT160}
+print(f"   Ntilde_n 3^(n/2) over 100 <= n <= 160: min {min(v160.values()):.3f} (n={min(v160, key=v160.get)}), max {max(v160.values()):.3f} (n={max(v160, key=v160.get)}); least-squares rate over 100..160: {math.exp(np.polyfit(np.arange(100, 161), [math.log(NT160[n]) for n in range(100, 161)], 1)[0]):.4f}; over 20..160: {math.exp(np.polyfit(np.arange(20, 161), [math.log(NTV[n]) if n < 100 else math.log(NT160[n]) for n in range(20, 161)], 1)[0]):.4f}")
+print("   the one-step Gauss sum along the wave: n, argmax m of |m_n(-m)| 3^(n/2), its value, |G_n(2^-m)| there, mean |G_n(2^-m)| over m <= 60, |G_n(2^-1)|")
+for n in range(84, 137, 4):
+    arr = neg160[n] if n >= 100 else NEG[50][n]
+    mm = max(range(1, 61), key=lambda m: abs(arr[60 - m]))
+    mod = 3 ** n
+    g_at = abs(G_2adic(n, pow(2, -mm, mod)))
+    g_mean = sum(abs(G_2adic(n, pow(2, -m, mod))) for m in range(1, 61)) / 60
+    print(f"      n={n:3d}: m*={mm:2d}, |m_n(-m*)| 3^(n/2) = {abs(arr[60 - mm]) * 3 ** (n / 2):6.2f}, |G_n(2^-m*)| = {g_at:.3f}, mean_m |G_n(2^-m)| = {g_mean:.3f}, |G_n(2^-1)| = {abs(G_2adic(n, pow(2, -1, mod))):.3f}")
+print("   runs of equal binary digits of -3^-n at positions <= 70 (position 1 = least significant): the longest run and where it starts, n = 100..160")
+for n in range(100, 161, 4):
+    eta = (-pow(3, -n, 2 ** 80)) % 2 ** 80
+    digits = [(eta >> i) & 1 for i in range(80)]
+    best = (0, 0)
+    i = 0
+    while i < 70:
+        j = i
+        while j + 1 < 80 and digits[j + 1] == digits[i]:
+            j += 1
+        if j - i + 1 > best[0]:
+            best = (j - i + 1, i + 1)
+        i = j + 1
+    print(f"      n={n}: longest run {best[0]} digits starting at position {best[1]} (digit {digits[best[1] - 1]}); digits 1..40 (lsb first): {''.join(str(d) for d in digits[:40])}")
+
 # ----------------------------------------------------------------------------------------------------------------
 hdr("F. Lemma R' term by term with the walk DP; J_eff; per-mass weights; the floor counter")
 PROF = closed_all(81, -60, int(math.floor(81 * LOG23)) + 60, 50)

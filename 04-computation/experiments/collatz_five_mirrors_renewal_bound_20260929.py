@@ -10,7 +10,7 @@ I = I(log2 3) = -ln 3^(h*-1); at s = h log2 3 - delta this is exp(-h I) e^(theta
 Checks: (a) Ntilde_n to n = 80 (m <= 60 exact, tail <= 2^-60) and its rate; (b) the per-J inequality |c_J| <= mass_h(J)
 Ntilde_(J-1) at h = 40, 80 (c_J = contribution of the words with exactly J negative-exponent levels, from the exact DP);
 (c) mass_h(J) against the Chernoff bound; (d) the bound sum_J mass_h(J) Ntilde_(J-1) at h = 40..300 (Ntilde beyond 80
-extrapolated as 3.6 * 3^(-n/2), the largest observed constant) against the measured maxima M(h) of the level-300 run.
+extrapolated as 1.292 * 3^(-n/2), the largest constant observed for n >= 20) against the measured maxima M(h) of the level-300 run.
 Run: python 04-computation/experiments/collatz_five_mirrors_renewal_bound_20260929.py
 """
 from __future__ import annotations
