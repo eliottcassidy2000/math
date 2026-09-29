@@ -447,9 +447,10 @@ entries `(2^k a - 1)/3`, `k >= 4`: tiny at `1729` (`0.00023`, through `9221,
 36885, ...`), large at `730` (`0.0087`, through `3893 = 1 + 4·973`, the
 saddle point above `973`). `B(27)` is the doubling ray of `27` (`27 ≡ 0 mod
 3` has no odd preimage): the famous starting value has an empty tree above
-it. `B(137)` holds three integers in ten: the path `137 -> 103 -> 155 ->
-233 -> 350 -> ... -> 577 -> ... -> 5` carries `30%` of all integers into the
-trunk-entry point `5`, whose basin is `0.938` (mac-mini's `e_2`).
+it. `B(137)` holds three integers in ten: the path `137 -> 103 -> 155 -> 233 -> 350 -> ... -> 577 -> ... -> 5` carries `30%` of all integers into the trunk-entry point `5`, whose basin is `0.938` (mac-mini's `e_2`).
+
+**The family `1 + 12^m`, and the highway `11 -> 17 -> 13 -> 10 -> 5` (FINITE-EXACT counts to `2^30`; `_basins_mask_...c`, a bitmask sieve that assumes no orbit relation between its targets).** `dens B(1 + 12^m) = 0.476517, 0.035740, 0.004395, 0.000385, 0.000020` for `m = 1..5` (`13, 145, 1729, 20737, 248833`): about a decade per unit of `m`, i.e. per two extra links `(3x+1)/4` that the tree above must funnel through (ratios `13.3, 8.1, 11.4, 19`). The first two are not small numbers' basins but highways: `dens B(13) = 0.4765` and `dens B(17) = 0.4614` — nearly half of all integers pass through `17 -> 26 -> 13 -> 20 -> 10 -> 5` (and `11 -> 34 -> 17` above it), while the other odd preimages of `13` (`277, 1109, ...`) carry `1.5%` together; against `dens B(5) = 0.938` (mac-mini's `e_2`), the trunk entry `5` is fed `49%` through `13` and `49%` otherwise. `dens B(9232) = 0.000066`: the celebrated peak of the orbit of `27` has a basin of `6.6·10^(-5)` (it is `16·577`; its odd preimages `12309, 49237, ...` feed it). `dens B(137) = 0.299245` confirms the first sieve.
+
 
 **4.3 The Krasikov–Lagarias bound at the root 1729.** Krasikov–Lagarias
 (CITED): for every `a ≢ 0 mod 3` there is `X_0(a)` with `|B(a) ∩ [1, X]| >=
@@ -509,7 +510,7 @@ statuses. AUDIT_PLACEHOLDER
 | `e^(-I) 3^(θ*/ln 2) = log_2 3 - 1` | PROVED (a one-line identity); the reading of H's margin DIRECTION |
 | the saddle chain `1 + 3^j 4^(6-j)`; `1729 = 1 + 12^3` its midpoint; `1 + 12^m` the midpoint for all `m`; `17 = 1 + 4^2` | EXACT (PROVED from the hedgehog note's Proposition 4; checked) |
 | `139 | 973`, the merge at `137`, the exponents `4, 3` | NUMEROLOGY |
-| basins of the chain, of `27`, of `137` to `2^30` | FINITE-EXACT counts; densities OBSERVED (two codes agree at `2^21`) |
+| basins of the chain, of `27`, of `137` to `2^30`; `dens B(1 + 12^m) = 0.48, 0.036, 0.0044, 3.9·10^(-4), 2.0·10^(-5)` (`m = 1..5`); `dens B(13) = 0.477`, `dens B(17) = 0.461`, `dens B(9232) = 6.6·10^(-5)` | FINITE-EXACT counts; densities OBSERVED (two codes agree at `2^21`; the bitmask sieve agrees with the chain sieve at `2^30`) |
 | `X_0(1729) > 2^30` for the Krasikov–Lagarias threshold | PROVED (by the count) |
 | `X_0(1729) ≈ 2^49` | OBSERVED extrapolation |
 | `x^4 + y^3 = z^17` has no primitive solution | UNVERIFIED (no source found) |
@@ -534,8 +535,7 @@ characters of the lower level — an exact linear recursion on the
 multiplicative spectrum whose coefficients are Jacobi-type sums; it would
 explain the heavy tail and the `psi_(±2)` dominance. (b) Level 20 of the
 full-period recursion in complex64. (c) The growth mechanism of the level-5
-remnant (S22), untouched here. (d) Basins of the chain points `1 + 3^j
-4^(m-j)` for other `m`, and whether `dens B(1 + 12^m)` follows a law in `m`.
+remnant (S22), untouched here. (d) `dens B(1 + 12^m)` falls by about a decade per unit of `m` (measured to `m = 5`); a law, and the basins of the other chain points `1 + 3^j 4^(m-j)`, remain to be found.
 (e) A source for the `(4,3,17)` statement.
 
 ---
@@ -549,6 +549,7 @@ python 04-computation/experiments/collatz_three_mirrors_zero_lines_20260929.py 1
 python 04-computation/experiments/collatz_three_mirrors_zero_lines_wide_20260929.py 5000 10000 > 05-knowledge/results/collatz_three_mirrors_zero_lines_wide_20260929.out
 python 04-computation/experiments/collatz_three_mirrors_saddle_chain_20260929.py         > 05-knowledge/results/collatz_three_mirrors_saddle_chain_20260929.out
 gcc -O3 -o basins3 04-computation/experiments/collatz_three_mirrors_basins_20260929.c && ./basins3 1073741824 > 05-knowledge/results/collatz_three_mirrors_basins_20260929.out   # 15 s, 1 GB
+gcc -O3 -o basins_mask 04-computation/experiments/collatz_three_mirrors_basins_mask_20260929.c && ./basins_mask 1073741824 13 145 1729 20737 248833 17 137 9232 > 05-knowledge/results/collatz_three_mirrors_basins_mask_20260929.out   # 15 s
 ```
 
 OWN_AUDIT_PLACEHOLDER
