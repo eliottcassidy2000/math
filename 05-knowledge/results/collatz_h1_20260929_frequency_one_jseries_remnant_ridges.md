@@ -1,0 +1,93 @@
+# The frequency-one coefficient carries the renewal series: an exact J-series `c_J = 2^-s mu_hat_J(1) W_{h,J}(s)` (Theorem C needs only `|mu_hat_n(1)|`), the resonant prefactor drifting from `h^-1` toward `h^-3/2`, the growing remnant as a random-walk excursion of ridge transport that exits through frequency one, and the ridge inventory by the 3-adic depth `v_3(u 2^Q -+ 1)`
+
+**Status: PROVED — Lemma R'' (the exact identity), Theorem C' (Theorem C of the five-mirrors note §2d under the weaker hypothesis H1), the Gauss-sum structure of the level phases, the energy-weighted transport slope `4/3` under random phases, the residue-class arithmetic of the ridge seeds; FINITE-EXACT — the J-series to `h = 1600` (exact identity checked to `4 10^-14` at every level), `mu_hat_n(1)` to `n = 1200`, the negative family to `n = 420` on `m <= 80` and to `n = 140` on `m <= 160`, the seed inventory to `u <= 200, Q <= 700`; EMPIRICAL — the prefactor law, the H1 constants, the transport statistics; OPEN — H1 itself. Collatz OPEN. Single session (collatz-necklace-20260929, part 2, mac-mini), not independently audited; audit OWED.**
+
+Directive (owner, 2026-09-29): "prove H in any form with rate below 0.585; explain the growing remnant; the J-term limits at larger h; the ridge inventory by `v_3(u 2^Q -+ 1)`" — the four obligations left by opus S22 in [`collatz_five_mirrors_20260929.md` §2d](collatz_five_mirrors_20260929.md). Scripts `04-computation/experiments/collatz_h1_20260929_{jseries, mu1_track, remnant, arrivals, ridge_inventory}.py`; outputs `05-knowledge/results/collatz_h1_20260929_*.out`. Conventions as in S22: `T_j = a_j + ... + a_h`, `kappa_j = s - T_j`, `omega_j(k) = e((2^k mod 3^j)/3^j)`, `mu_hat_h(2^s) = E prod_j omega_j(kappa_j)`, `m = log_2 3`, `I = 0.054979`, `e^-I = 3^(h*-1)`, `J(w) = #{j : kappa_j < 0}`, `c_J = E[1_{J(w)=J} prod_j omega_j(kappa_j)]`, `mass_h(J) = P(T_{J+1} <= s < T_J) = 2^-s binom(s, h-J)`.
+
+## 1. Lemma R'' and Theorem C' (PROVED)
+
+**Lemma R'' (exact renewal identity).** For `h >= 1`, `s >= 0` and `1 <= J <= h`,
+
+`c_J = 2^-s mu_hat_J(1) W_{h,J}(s)`, `W_{h,J}(s) := sum_{u in Z_{>=1}^{h-J}, T(u) <= s} prod_{j=J+1}^h omega_j(s - T_j(u))`,
+
+with `W_{h,h} = 1`; and `|W_{h,J}(s)| <= binom(s, h-J)`, so `|c_J| <= mass_h(J) |mu_hat_J(1)|`.
+
+*Proof.* In S22's proof of Lemma R' the level-`J` and bottom factors combine as `sum_{a > kappa} 2^-a omega_J(kappa - a) mu_hat_{J-1}(2^{kappa - a})` with `kappa = s - T(u) >= 0`; substituting `b = a - kappa >= 1` this is `2^-kappa sum_{b >= 1} 2^-b omega_J(-b) mu_hat_{J-1}(2^-b mod 3^{J-1}) = 2^-kappa mu_hat_J(1)` by the frequency recursion at `t = 1` (`mu_hat_J(1) = sum_b 2^-b e((2^-b mod 3^J)/3^J) mu_hat_{J-1}(2^-b)`). The top weight `2^-T(u)` times `2^-kappa` is `2^-s`. The count of compositions of integers `<= s` into `h-J` positive parts is `binom(s, h-J)`. ∎
+
+So the bottom factor of every renewal term is the Fourier coefficient of the level-`J` law at frequency `1` — one explicit sequence, `mu_hat_n(1) = E e(Y_n/3^n)` — and not the weighted negative-power norm `Ñ_{J-1} = sum_m 2^-m |mu_hat_{J-1}(2^-m)|` of Lemma R' (which bounds it by the triangle inequality: `|mu_hat_J(1)| <= Ñ_{J-1}`). Verified: at `h = 40, s = 57` the identity reproduces every `|c_J|` and `gamma_J` of S22's tables to four digits (`|c_5| = 1.1233 10^-3`, `gamma_5 = 2.5625 e^{-0.86 i}`, …), and `sum_J c_J = mu_hat_h(2^s)` computed independently by the window recursion holds to relative `10^-13 .. 4 10^-14` at every `h <= 1600` (`..._jseries_h*.out`).
+
+**Theorem C' (CONDITIONAL on H1).** *Hypothesis H1:* `|mu_hat_n(1)| <= C rho^n` for all `n >= 0` with some `rho < m - 1 = 0.58496`. Then for all `h` and all `0 <= s = hm - delta`, `|mu_hat_h(2^s)| <= e^{-hI} e^{theta* delta} [1 + C (m-1)^{-1}/(1 - rho/(m-1))]`. *Proof.* Lemma R'' and the Chernoff mass law of §2d. ∎ H1 is implied by S22's H and is strictly weaker: the ridges of the negative family (S22 §2d) affect Theorem C only when they reach the exponent `0`.
+
+**The level phases are a Gauss sum (PROVED, standard).** On `Z/L_n`, `L_n = 2 3^{n-1} = |(Z/3^n)^x|` (`2` a primitive root), the function `omega_n(k) = e(2^k/3^n)` has Fourier transform `hat omega_n(xi) = sum_k omega_n(k) e(-k xi/L_n) = tau(bar psi_xi)`, the Gauss sum of the multiplicative character `psi_xi(2^k) = e(k xi/L_n)`; hence `|hat omega_n(xi)| = 3^{n/2}` when `3 ∤ xi` (primitive) and `hat omega_n(xi) = 0` when `3 | xi`, `n >= 2` (the Ramanujan sum). The frequency recursion `f_n = G * (omega_n lift f_{n-1})` (with `G(a) = 2^-a 1_{a>=1}`) is therefore a fixed geometric convolution composed with a spectrally flat multiplier; `mu_hat_n(1) = f_n(0)`. H1 is the statement that the entry `0` of this product of "convolution times Gauss-sum multiplier" operators decays at the Parseval rate up to `1.3%` per level; it is a square-root-cancellation statement of the `x2 x3` kind (the 3-adic digits of `2^-T` against the 2-adic digits of `3^-n`, S22 §2d) and is **not proved here**. What is proved is that nothing else is needed.
+
+## 2. H1: the data (FINITE-EXACT to `n = 1200`)
+
+`3^{n/2} |mu_hat_n(1)|` (`..._mu1_track_n1200.out`): `1.000, 0.666, 0.811, 1.062, 1.341, 0.411, 0.993, 0.889, 0.545, 0.405, 0.107, 0.608` for `n = 1..12`; the only local maxima above `2.5` are `3.9, 7.2, 10.4, 2.6` at `n = 127, 129, 131, 135`; median over `n <= 1200` about `0.05`.
+
+| `rho` | `sup_n |mu_hat_n(1)|/rho^n`, `n <= 1200` | attained at | `sup` over `n >= 200` | at |
+|---|---|---|---|---|
+| `0.585` | `1.866` | `131` | `< 0.02` | — |
+| `0.58` | `5.70` | `131` | `0.028` | `211` |
+| `0.5774 = 3^-1/2` | `10.26` | `131` | `0.076` | `261` |
+| `0.575` | `17.7` | `131` | `0.669` | `593` |
+
+Least-squares rates of `|mu_hat_n(1)|`: `0.5685` over `20..1200`, `0.5668` over `600..1200`, `0.5576` over `900..1200` — below the Parseval rate. So H1 holds with `rho = 0.58` and `C = 5.7` on `n <= 1200`, and for `n >= 200` with a factor `30` to spare: the frequency-one coefficient is far below the Parseval scale except during one event, the arrival of a ridge at the exponent `0` (§4). **The small-exponent negative family empties out.** The normalised energy `3^n sum_{m=1}^{80} |mu_hat_n(2^-m)|^2` (`..._arrivals_n420.out`) is `20–50` for `n <= 65` (`80` Parseval-scale coefficients would give `56`), rises to `248` at `n = 130` (the wave), and is `0.0–0.5` for every `n` in `140..420`: from level `140` on, the coefficients at the inverse small powers of two are two orders of magnitude below the Parseval scale. S22's Parseval-scale reading was made on windows of `450–600` exponents at `n <= 80`; at small exponents and larger `n` it does not hold, and this is the reason H1 has room.
+
+## 3. The J-series at larger `h` (FINITE-EXACT; the law EMPIRICAL)
+
+`R(h) := |mu_hat_h(2^{s*})| / (h^{-3/2} e^{-hI})` at `s* = round(h m) - 6` (S22's `gamma` script gave `3.16, 3.76, 3.97, 4.26, 4.60` at `h = 40..200` with its `s*`; here `s* = 121` at `h = 80`):
+
+| `h` | 40 | 80 | 120 | 200 | 300 | 400 | 600 | 800 | 1200 | 1600 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| `R(h)` | 3.156 | 3.707 | 3.971 | 4.530 | 5.618 | 6.437 | 7.840 | 8.787 | 9.871 | 10.42 |
+| `|mu_hat_h(2^{s*})| h e^{hI} = R/sqrt h` | 0.499 | 0.414 | 0.363 | 0.320 | 0.324 | 0.322 | 0.320 | 0.311 | 0.285 | 0.261 |
+| local exponent `beta` in `h^-beta e^-hI` (from the previous column) | — | — | — | 0.97 | 1.03 | 1.01 | 1.10 | 1.21 | 1.31 | — |
+
+So over `200 <= h <= 600` the resonant coefficient is `0.32 h^{-1} e^{-hI}` to `1.5%`, and the prefactor exponent then drifts (`1.10, 1.21, 1.31` on `600–800`, `800–1200`, `1200–1600`) toward the fixed-`J` prediction `3/2`. This settles S22's two open readings at once: the exponential rate is `3^{h*-1}` as Theorem C says, the prefactor is *not* `h^{-3/2}` in the accessible range, and S21's "`M/P_h` rises by `1.26` over `180..300`" is exactly `R(h)/9.2 ≍ sqrt h` (`0.49` at `200`, `0.60` at `300`, as observed). Mechanism (from the exact identity): `|c_J| = mass_h(J) |mu_hat_J(1)| coh_J` with `coh_J = |W_{h,J}|/binom(s,h-J)` the top-part coherence; `mass_h(J) ≍ e^{-hI} (m-1)^{-J} h^{-1/2} phi((J - J_0)/(0.6 sqrt h))`, `|mu_hat_J(1)| ≍ 3^{-J/2}`, and `coh_J ≍ 3J/h` for small `J` (`0.0257, 0.0355, 0.0458` at `J = 5, 6, 7`, `h = 600`; `0.0190, 0.0264, 0.0341` at `h = 800`), so `gamma_J(h) -> const J (0.987)^J`: each `gamma_J` converges (`gamma_5 = 2.067 -> 2.047`, `gamma_7 = 2.605 -> 2.602`, `gamma_8 = 2.780 -> 2.793` from `h = 600` to `800`, phases fixed to `0.01`), but the terms grow with `J` up to `J ≈ 1/(1 - 0.987) ≈ 77` and the Gaussian `J`-window of the mass law (width `0.6 sqrt h`) cuts the series at `J_eff ≈ 1.6 sqrt h`, so the window-limited sum grows with `h` until `h ≫ 10^4`. The limits `gamma_J` exist for every fixed `J`; the constant `sum_J gamma_J` of (T2) is finite (the series is dominated by `J 0.987^J`) but is not reached below `h ~ 10^4–10^5`, which is why S22 found the moduli converging only for `J <= 5` at `h <= 200`. (T2)'s constant is therefore not a quantity of the accessible range; the accessible law is `R(h) ≈ 0.32 sqrt h` then bending over.
+
+Truncation and precision: valuations `a <= A` with `A = 60, 80, 90, 120, 150` at `h <= 400, 600, 800, 1200, 1600` (error `h 2^-A` at most `10^-3` of the coefficient); the identity check is the precision control.
+
+## 4. The growing remnant (FINITE-EXACT; mechanism PROVED in part, EXPLAINED)
+
+S22's object: the level-5/7 ridge (seed `2^-154 = 13 mod 3^7`, `v_3(13 2^154 - 1) = 7`) grows against the Parseval scale from `1.0` (`n = 84, m = 60`) to `13.4` (`n = 128, m = 3`) "along generic one-step sums", lifts `Ñ_n` to `8.7` at `n = 130`, then dies.
+
+**Energy budget (exact).** With `v_n(m) = mu_hat_n(2^-m)`, the recursion `v_n(m) = sum_a 2^-a omega_n(-m-a) v_{n-1}(m+a)` gives
+
+`|v_n(m)|^2 = sum_a 4^-a |v_{n-1}(m+a)|^2 + 2 Re sum_{a<a'} 2^{-a-a'} omega_n(-m-a) bar omega_n(-m-a') v_{n-1}(m+a) bar v_{n-1}(m+a')` = direct + cross.
+
+Under random phases the cross terms vanish in mean: energy is multiplied by `1/3` per level (the Parseval scale) and transported with the step law `3 4^-a`, whose mean is `4/3` and standard deviation `2/3` per level. **The ridge slope `-1.3` is the energy-weighted mean step `4/3`** (PROVED for random phases; S22 observed `-1.16 .. -1.42`; the argmax path here runs from `(84, 63)` to `(128, 3)`, slope `-1.36`) — neither the drift `-2` of the walk nor `-log_2 3`, which the audit asked about. Along the argmax path (`..._remnant_n140.out`): the direct term is `0.26–0.29` times the previous peak energy at every level (the incoherent baseline, an amplitude factor `0.9` per level relative to Parseval because the packet is peaked), and the cross term is positive at `43` of the `51` levels `84..134`, between `-0.43` and `+1.31` of the direct term; the per-level amplitude gain `3^{1/2}|v_n(m_n)|/|v_{n-1}(m_{n-1})|` ranges over `0.45 .. 2.11` with geometric mean `0.984` over `84..134` and standard deviation of its logarithm about `0.35`. The packet's normalised energy `3^n sum_{m <= 160} |v_n(m)|^2` (`..._remnant_n140.out`) rises from `57` (`n = 87`) to `483` (`n = 128`): the growth is a genuine amplification of the packet (not a focusing; the peak fraction stays `0.2–0.6`), carried by constructive interference of the two leading terms `a = 1, 2` (relative phases within `40 deg` at most of the growth levels, e.g. `(-6, 16, 8)`, `(-7, 21, 20)`, `(-4, 21, 9)` degrees at `n = 126, 127, 128`).
+
+**Explanation.** (i) The only level whose one-step sum is coherent is `n = 128`, where `3^128 = 1 mod 2^9` makes the bottom nine 2-adic digits of `-3^-128` ones and the phases `omega_128(-M) = e(1 - 2^-M)` untwisted for `M <= 9`: the energy gain there is `1.435`, the largest of the wave (the audit's `|G_128| = 0.967`). (ii) All other gains are two-level alignments (the packet's own phase profile, created by the twists of level `n-1`, against the twists of level `n`), a multiplicative noise with mean log-gain near zero and standard deviation `0.35` per level. A driftless multiplicative random walk of this size makes a factor `13` over `44` levels (`+2.6` in the log, `1.1` standard deviations) an ordinary excursion, and the dominant ridge's decay from `25` to `0.3` over `270` levels (`-4.4`, `0.8` standard deviations) an ordinary excursion in the other direction: **the growing remnant and the decaying dominant ridge are one mechanism — noisy transport of a packet with a near-neutral mean — and the growth is a fluctuation, not a resonance**; the sustained sign of the cross terms along an argmax path is in part a selection effect of following the maximum. (iii) The packet exits through the exponent `0`: its energy collapses from `483` (`n = 128`) to `58` (`131`) and `13` (`134`) while `3^{n/2}|mu_hat_n(1)|` spikes to `3.9, 7.2, 10.4` at `n = 127, 129, 131` — the growing remnant *is* the H1 event of §2, a ridge arriving at frequency one. (iv) Universality (`..._arrivals_n420.out`): the arrivals predicted by the inventory (§5) at `n ≈ 190` (`u = 1, Q = 243`), `215` (`41, 271`, depth `12`), `253`, `263` (`7, 335`), `315`, `331` (`55, 423`, depth `15`), `361`, `377`, `440`, `536`, `564`, `1125` produce nothing above `0.28` at frequency one: packets transported over more than about `150` levels arrive dead, the incoherent baseline (`0.9` per level for a peaked packet) having won; the `Q = 154` packet arrived alive because its seed was close to the origin (`124` levels of transport) and it drew a positive excursion. What is not explained: a formula for the per-level gain statistics (the two-level alignment is the `x3` transducer acting on the 2-adic digits of `3^-n` against the packet's phase profile); the numbers above are its measured content.
+
+## 5. The ridge inventory by `v_3(u 2^Q -+ 1)` (PROVED arithmetic + FINITE-EXACT)
+
+A ridge of the negative family is born where `2^-Q = -+u mod 3^k` with `u` a small odd multiplier, i.e. `k = v_3(u 2^Q -+ 1)` is its **depth**. For fixed `(u, sign)` and each `k`, since `2` is a primitive root mod `3^k`, the exponents of depth `>= k` form one residue class `Q = Q_k(u) mod L_k = 2 3^{k-1}`, compatible in `k`; so in a window of `W` exponents each `(u, sign)` has about `W/L_k` seeds of depth `>= k` and `(2/3) W/L_k` of depth exactly `k`. For `u = 1` the lifting-the-exponent lemma gives `v_3(2^Q - 1) = 1 + v_3(Q)` (`Q` even) and `v_3(2^Q + 1) = 1 + v_3(Q)` (`Q` odd): the pure-resonance copies sit at `Q = 2 3^{k-1}` (sign `-`) and `Q = 3^{k-1}` (sign `+`). Predicted birth amplitude (S22's multiplier law): `v_birth ≈ 3^{k/2} M(k) u^{-0.44}`. Census (`..._ridge_inventory_u200_Q700.out`; `134` pairs `(u, sign)`, `u <= 200` odd prime to `3`, `0 <= Q <= 700`):
+
+| depth `k` | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| predicted `134 (Q+1) (2/3)/L_k` | 386.6 | 128.9 | 43.0 | 14.3 | 4.8 | 1.6 | 0.5 | 0.18 | 0.06 | 0.02 | 0.007 |
+| observed | 389 | 131 | 50 | 11 | 0 | 0 | 0 | 1 | 0 | 0 | 1 |
+
+The two ridges S22 saw are the two rare seeds: `(u, sign, Q) = (55, +, 423)` of depth `15` (a `1`-in-`150` event in this window; predicted `v_birth ≈ 10.6`, observed `12.2` at `n = 15`) and `(41, -, 271)` of depth `12` (`1` in `5`; `v_birth ≈ 3.8`; its arrival at `n ≈ 215` is dead: `0.28`). The named `(13, -, 154)` has depth `7` and `(1, -, 162)` depth `5` (they are one seed: `2^-154 = 2^8 2^-162`). The top seeds by predicted amplitude in `Q <= 600` are `(55,+,423) 10.6`, `(41,-,271) 3.8`, `(1,-,486) 2.6`, `(1,+,243) 2.6`, `(7,+,335) 2.1`, then the depth-5 pure copies at `Q = 81, 162, 324, 405, 567` (`2.0`), `(5,-,463) 1.75`, `(5,+,220) 1.3`, `(13,-,154) 1.15`. The deepest seed in a window `[0, Q]` over `U` multipliers has depth `≈ log_3(U Q)` and birth amplitude `≈ (3^{1/2} e^{-I})^k k^{-3/2} ≈ (UQ)^{0.45}`: polynomial in the window, which is S22's heuristic made explicit (given the multiplier law, EMPIRICAL). Since the arrival at frequency one of a seed at distance `Q` takes about `0.75 Q` levels of transport and the transport decays like `0.9` per level for a peaked packet up to fluctuations of `e^{+-0.35 sqrt(0.75 Q)}`, only seeds with `Q ≲ 200` can reach the exponent `0` alive; there are finitely many of them, and the largest, `(13,-,154)`, produced the `n = 131` spike. This is the enumerable content of the H1 risk.
+
+## 6. What this changes
+
+* S22's H is replaced by H1 (one sequence, `mu_hat_n(1)`); Theorem C holds under H1; the spikes of `Ñ_n` at `n = 16, 130` (ridges at `m >= 1`) are irrelevant to Theorem C unless they reach `m = 0`, and the one that did (`n = 131`) is the sup of the H1 ratio (`1.87` at `rho = 0.585`, `5.7` at `0.58`). For `n >= 200`, `|mu_hat_n(1)| <= 0.03 (0.58)^n`.
+* (T2) in the sharp form `M(h) ≍ h^{-3/2} e^{-hI}` is a statement about `h ≫ 10^4`; in the computed range `M(h) ≈ 0.32 h^{-1} e^{-hI}` (`200 <= h <= 600`), bending to `h^{-1.3}` by `h = 1600`. The identification of the exponential rate with `3^{h*-1}` is unaffected.
+* "Prove H in any form with rate below 0.585": not achieved; the honest reduction is to H1, whose failure could only come from a ridge arriving at frequency one, an enumerable set of events with the dead-on-arrival property beyond `Q ≈ 200` (EMPIRICAL). An unconditional proof would need square-root cancellation for one explicit product of Gauss-sum multipliers and geometric convolutions at the entry `0`; no route is offered.
+
+## 7. Reproduction
+
+```
+python3 04-computation/experiments/collatz_h1_20260929_jseries.py 40 40        # validation against S22's h = 40 tables
+python3 04-computation/experiments/collatz_h1_20260929_jseries.py 600 80       # h, A (valuation truncation), delta = 6
+python3 04-computation/experiments/collatz_h1_20260929_mu1_track.py 1200 120   # mu_hat_n(1), sup ratios, arrivals
+python3 04-computation/experiments/collatz_h1_20260929_remnant.py 140 160      # the wave: energy budget along the argmax path
+python3 04-computation/experiments/collatz_h1_20260929_arrivals.py 420 80      # the window energy and the arrivals to n = 420
+python3 04-computation/experiments/collatz_h1_20260929_ridge_inventory.py 200 700 5
+```
+(numpy; the negative-exponent phases from the 2-adic digits of `-3^-n` via `D_n(M) = (-3^-n mod 2^M)/2^M`, 53-bit windows; `h = 1600` takes about `15` minutes.)
+
+## 8. Boundary
+
+Not claimed: H1; the asymptotic constant of `M(h) h^{3/2} e^{hI}`; a law for the transport gains beyond their measured statistics; that the emptying of the small-exponent family persists beyond `n = 1200` (it is measured to there through `mu_hat_n(1)`, and to `420` on `m <= 80`).

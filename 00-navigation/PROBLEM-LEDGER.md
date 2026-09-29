@@ -430,6 +430,18 @@ all heights (THM-1289, published), δ ineffective.
   basins 0.3269 / 0.3248 / 0.3484 to 2^29; 93.8% of 3x+1 orbits enter through 5 (THM-4517, HYP-9165).
   Note: `collatz_necklace_20260929_fair_splits_power_clocks_basins.md`.
 
+  **Frequency one carries the renewal series; three thieves (mac-mini, 2026-09-29, part 2):** exact
+  c_J = 2^-s mu_hat_J(1) W_{h,J}(s) (|W| <= C(s,h-J)), so S22's Theorem C holds under H1: |mu_hat_n(1)| <= C rho^n,
+  rho < 0.585 (HYP-9166; data: <= 5.7 (0.58)^n for n <= 1200, <= 0.03 (0.58)^n for n >= 200; the n = 131 spike is
+  the growing remnant arriving at frequency one). Resonant coefficient 0.32 h^-1 e^-hI on 200 <= h <= 600, prefactor
+  exponent drifting 1.0 -> 1.3 toward 3/2 (M/P_h ~ sqrt h = S21's rise; gamma_J limits exist, terms ~ J 0.987^J, the
+  (T2) constant is an h >> 10^4 quantity). Growing remnant = +1.1 sigma excursion of near-neutral ridge transport
+  (energy-weighted slope 4/3, log-gain std 0.35, one coherent level n = 128), small-exponent negative family 100x below
+  Parseval for 140 <= n <= 420, far seeds dead on arrival. Ridge inventory: depth v_3(u 2^Q -+ 1), residue classes
+  mod 2 3^(k-1), counts match; dominant ridge = the unique depth-15 seed (THM-4519). Three thieves: P(fair 3-split)
+  = Theta(1/log m), upper bound from planar-walk returns (THM-4518). H/H1 OPEN, no Collatz step.
+  Note: `collatz_h1_20260929_frequency_one_jseries_remnant_ridges.md`, `collatz_thieves_20260929_three_thieves_log_law.md`.
+
   **Posets and DAGs (opus, 2026-09-27, S15):** value-time poset (dimension <= 2; leaders minimal, strict
   future minima maximal; infinitely many strict future minima iff divergent, one iff the global minimum is
   attained once); excursion forest (roots = height lower records = the descent chain under Terras equality;

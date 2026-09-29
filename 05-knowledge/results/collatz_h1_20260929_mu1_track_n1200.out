@@ -1,0 +1,34 @@
+N=1200 A=120: 3^(n/2)|mu_hat_n(1)|: median 0.000, mean 0.082, max 10.377 at n=131
+  sup_n |mu_hat_n(1)| / 0.585^n = 1.850 at n=131;  over n>=200: 0.005 at n=211
+  sup_n |mu_hat_n(1)| / 0.58^n = 5.696 at n=131;  over n>=200: 0.028 at n=211
+  sup_n |mu_hat_n(1)| / 0.5774^n = 10.261 at n=131;  over n>=200: 0.076 at n=261
+  sup_n |mu_hat_n(1)| / 0.575^n = 17.707 at n=131;  over n>=200: 0.669 at n=593
+  local maxima of 3^(n/2)|mu_hat_n(1)| >= 2.5 (n, value):
+    (127,3.9) (129,7.2) (131,10.4) (135,2.6)
+  predicted arrivals of the deepest seeds (u,sign,Q,depth k): n_arr ~ k + (Q - (k log2 3 - 6 - log2 u))/1.3:
+   u= 35- Q=  69 k= 8: n_arr ~     60;  max of 3^(n/2)|mu_hat_n(1)| in [34,84] = 1.63 at n=45
+   u= 13- Q= 154 k= 7: n_arr ~    124;  max of 3^(n/2)|mu_hat_n(1)| in [99,149] = 10.38 at n=131
+   u=  1- Q= 162 k= 5: n_arr ~    128;  max of 3^(n/2)|mu_hat_n(1)| in [103,153] = 10.38 at n=131
+   u=  1+ Q= 243 k= 6: n_arr ~    190;  max of 3^(n/2)|mu_hat_n(1)| in [165,215] = 0.28 at n=189
+   u= 41- Q= 271 k=12: n_arr ~    215;  max of 3^(n/2)|mu_hat_n(1)| in [189,239] = 0.28 at n=189
+   u=  1- Q= 324 k= 5: n_arr ~    253;  max of 3^(n/2)|mu_hat_n(1)| in [227,277] = 0.08 at n=261
+   u=  7+ Q= 335 k= 8: n_arr ~    263;  max of 3^(n/2)|mu_hat_n(1)| in [237,287] = 0.08 at n=261
+   u=  1+ Q= 405 k= 5: n_arr ~    315;  max of 3^(n/2)|mu_hat_n(1)| in [290,340] = 0.03 at n=337
+   u= 55+ Q= 423 k=15: n_arr ~    331;  max of 3^(n/2)|mu_hat_n(1)| in [306,356] = 0.03 at n=337
+   u=  5- Q= 463 k= 7: n_arr ~    361;  max of 3^(n/2)|mu_hat_n(1)| in [336,386] = 0.03 at n=337
+   u=  1- Q= 486 k= 6: n_arr ~    377;  max of 3^(n/2)|mu_hat_n(1)| in [352,402] = 0.02 at n=353
+   u=  1+ Q= 567 k= 5: n_arr ~    440;  max of 3^(n/2)|mu_hat_n(1)| in [414,464] = 0.01 at n=429
+   u= 11- Q= 689 k= 8: n_arr ~    536;  max of 3^(n/2)|mu_hat_n(1)| in [510,560] = 0.01 at n=560
+   u=  1+ Q= 729 k= 7: n_arr ~    564;  max of 3^(n/2)|mu_hat_n(1)| in [538,588] = 0.01 at n=587
+   u=  1- Q=1458 k= 7: n_arr ~   1125;  max of 3^(n/2)|mu_hat_n(1)| in [1099,1149] = 0.00 at n=1101
+  least-squares rate over n=20..1200: 0.5685
+  least-squares rate over n=600..1200: 0.5668
+  least-squares rate over n=900..1200: 0.5576
+python3 mu1_track.py 1200 120  210.72s user 3.12s system 99% cpu 3:34.57 total
+== h1200:
+h=1200 A=120 s=1896 (delta=5.96)  recursion 212.0s, DP 0.4s
+  f_h(s) direct = 5.009678e-33+1.675876e-33j  |.|=5.282559e-33;  sum_J c_J = 5.009678e-33+1.675876e-33j  |.|=5.282559e-33;  rel diff 3.37e-14
+  |f_h(s)|/(h^-3/2 e^-hI) = 9.8708   arg = +0.323
+  partial sums |sum_{J'<=J} c_J'|/scale at J = 5,10,20,40,80,160,320: 1.3488 4.0254 11.7355 12.0252 9.8729 9.8708 9.8708
+
+[exited with code 0]
