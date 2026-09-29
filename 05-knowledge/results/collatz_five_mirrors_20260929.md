@@ -95,8 +95,8 @@ reversal-invariant trace, Proposition 6).
    thin-divergence exponent of THM-4476: on the powers of two, which carry
    the maximum wherever that was checked, the    maximal Fourier coefficient
    decays like the no-descent probability (OBSERVED to `h = 300`, with the
-   exponential rate bracketed in `0.941–0.949` by the prefactor
-   degeneracy); that the
+      exponential rate `0.947–0.950` by the admissible fits, the no-descent
+   rate at its lower edge); that the
    decay rate of `M(h)` is the no-descent rate `3^(h*-1)` is CONJECTURAL
    (it needs the maximum to stay on the powers of two), and it concerns the
    maximal primitive coefficient, not the `ℓ^1` distances of (2.3). This is
@@ -497,49 +497,28 @@ quantity. What is PROVED here: the closure and exactness of the recursion,
 `collatz_five_mirrors_coherent120_20260929.py`).**
 
 *The rate to level 300 (VERIFIED numerics, OBSERVED law).* The closed
-recursion continued to `h = 300` (`M(300) = 7.42·10^(-11)`; exponent
-window `12000` per level): the local exponents on doublings keep growing
+recursion continued to `h = 300` (`M(300) = 7.42·10^(-11)`; exponent window `12000` per level; the truncation `a <= 40` is not self-certifying here, its a priori bound `300·2^(-40) = 2.7·10^(-10)` exceeding `M(300)`; the audit's `a <= 60` run certifies the values to `3·10^(-4)` relative and agrees with the `a <= 40` run to `2·10^(-12)`): the local exponents on doublings keep growing
 linearly, `3.10, 5.27, 7.27, 9.19, 11.07, 12.97` for `25→50, 50→100,
-75→150, 100→200, 125→250, 150→300`, slope `0.077` per level against
-`|log_2 3^(h*-1)| = 0.079`; the geometric-mean level ratio of `M` is
+75→150, 100→200, 125→250, 150→300`, least-squares slope `0.0785` per level (two-point `0.077` between the doublings `50→100` and `150→300`) against `|log_2 3^(h*-1)| = 0.079`, i.e. `r = 0.947`; the geometric-mean level ratio of `M` is
 `0.9383, 0.9418, 0.9427, 0.9433` over `100–200, 150–300, 200–300,
 250–300`, that of `P_h` `0.9375, 0.9404, 0.9413`, both rising toward
 `0.9465`. A free fit `C h^(-β) r^h` over `100..300` gives `β = 1.62, r =
 0.9489` for `M` (residual `1.0%`) and `β = 1.29, r = 0.9461` for `P_h`
 (`2.3%`); with `r` pinned to `3^(h*-1) = 0.9465` the fits have `β = 1.14`
 (`M`, residual `5.9%`) and `β = 1.38` (`P_h`, `2.5%`): over a finite range
-`β` and `r` trade against each other, so the exponential rate of `M` is
-`0.941–0.949`, bracketing `3^(h*-1)`, and the identification of the rate
-with the no-descent rate stays OBSERVED, now over three hundred levels. The
-ratio `M/P_h` is `0.46 ± 0.02` up to `h = 180` and then drifts up (`0.500,
-0.519, 0.560, 0.579` at `h = 200, 240, 280, 300`): `M` and `P_h` have the
-same exponential order, with prefactors that differ by a slowly varying
-factor (`0.44–0.58` over `20 <= h <= 300`); "`0.46 P_h`" is a description
-of the first two hundred levels, not an identity. The resonant exponent is
-`s = h log_2 3 - 6.2 .. 7.1` throughout (`-6.49` at `h = 300`).
+`β` and `r` trade against each other, so the exponential rate of `M` is `0.947–0.950` by the admissible estimators (fits with residual at most `2.5%` have `β = 1.5–1.75` and `r = 0.948–0.950`; the least-squares doubling slope `0.0785` gives `0.947`; the pure geometric `0.941` has residual `20%`, and the fit pinned to `3^(h*-1) = 0.9465` needs `β = 1.14` at six times the free fit's residual): the no-descent rate sits at the lower edge of the bracket, `0.15–0.35%` below the fitted rates, a gap that 300 levels cannot attribute to the prefactor or to the rate; the identification of the rate with the no-descent rate stays OBSERVED only in this weaker sense. The ratio `M/P_h` stays in `0.44–0.48` up to `h = 180` and then drifts up (`0.500,
+0.519, 0.560, 0.579` at `h = 200, 240, 280, 300`): over `20 <= h <= 300` the ratio moves within `0.44–0.58`; the rise by a factor `1.26` over `180..300` is what a rate `0.2%` per level above the no-descent rate produces, and whether `M` and `P_h` have the same exponential order (the conjecture `M ≍ P_h`) or `M` decays slightly slower is not decided by these levels, which lean slightly against the conjecture; "`0.46 P_h`" is a description of the first two hundred levels, not an identity. The resonant exponent is `s = h log_2 3 - 5.3 .. 7.2` at every level `20..300` (`-6.2 .. -7.1` at the multiples of 25; `-6.49` at `h = 300`).
 
 *The mechanism, tested directly (VERIFIED numerics; the reading
 DIRECTION).* A dynamic programme over `(total cost A, level j, prefix sum
 P)` with the exact phase factors `e((2^(s - A + P_(j-1)) mod 3^j)/3^j)`
 splits the resonant coefficient by the excursion of the prefix sums above
-the critical line, `E(w) = max_j (P_j - j log_2 3)`. The strict no-descent
-words (`E < 0`) carry `54%, 41%, 35%` of `|mu_hat_h(2^s)|` at `h = 40, 80,
-120` (their own coherent fraction is `0.25, 0.19, 0.15`: their phases are
+the critical line, `E(w) = max_j (P_j - j log_2 3)`. The strict no-descent words (`E < 0`) carry `54%, 41%, 35%` of `|mu_hat_h(2^s)|` at `h = 40, 80, 120`, a share falling by about `0.1` per forty levels (their own coherent fraction is `0.25, 0.19, 0.15`: their phases are
 spread), so the descending words do not cancel; they add roughly in phase.
-The words with `E < c` reproduce the coefficient's *magnitude* at `c ≈ 6`
-at all three levels (`|coh_6|/|full| = 1.008, 1.007, 0.997`; at `c = 4`:
-`0.92, 0.93, 0.89`), while the vector remainder `|full - coh_c|/|full|`
-decays with `c` more slowly as `h` grows (`c = 6`: `0.012, 0.108, 0.274`;
-`c = 16`: `0.001, 0.013, 0.065`; `c = 24` at `h = 120`: `0.002`): the
-deep-descending words' net contribution is a phase rotation of decreasing
-size, and the width of the band that carries the coefficient grows slowly
-with `h`. Within the band the phases are far from aligned (coherent
+The words with `E < c` reproduce the coefficient as a vector to `10%` from `c = 5, 9, 15` on (to `5%` from `c = 6, 10, 20`) at `h = 40, 80, 120`: the band width grows roughly like `h/8`. The magnitude alone is within `4%` for every `c >= 5` (`|coh_6|/|full| = 1.008, 1.007, 0.997`; at `c = 4`: `0.92, 0.93, 0.89`), but at `h = 120` it wanders up to `1.12` (`c = 12`) while the vector remainder is `0.19–0.29` for `c = 5..9` (`c = 16`: `0.065`; `c = 24`: `0.002`): the deep-descending words' net contribution is a rotation whose size decays with `c` more slowly as `h` grows. Within the band the phases are far from aligned (coherent
 fraction `0.02, 0.015, 0.013` at `c = 6`): the coefficient is a small
 residue of the band's mass (`P_h^(6)/P_h = 24, 30, 34`), not a sum of
-aligned terms. The typical coefficient is what square-root cancellation
-predicts: twelve random units at `h = 30` give `|mu_hat| = 0.8·10^(-8) ..
-8·10^(-8)`, median `2.3·10^(-8)` against `0.84·3^(-15) = 5.9·10^(-8)`,
-`10^5` below the resonant window (`3.3·10^(-3)`).
+aligned terms. The typical coefficient is at the square-root scale: random units at `h = 30` have rms `|mu_hat| ≈ 5·10^(-8)` (twelve units: `0.8·10^(-8) .. 8·10^(-8)`, rms `3·10^(-8)`; the audit's hundred: rms `5.4·10^(-8)`) against the level average `0.84·3^(-15) = 5.9·10^(-8)`; the median is only `0.4` of the rms (`2.3·10^(-8)`) because the coefficient distribution over the units is skewed (exact at `h = 14`: median `0.62` rms, `38%` of the units below half the rms), `10^5` below the resonant window (`3.3·10^(-3)`).
 
 *The excursion profile (added after the third audit's snapshot;
 `collatz_five_mirrors_excursion_profile_20260929.py`).* The same dynamic
@@ -560,12 +539,7 @@ rotation of the deep bins).
 
 *What this leaves as the proof-shaped targets.* With `s = h log_2 3 -
 6`, the phase of a word at level `j` is `e((2^(s - T_j) mod 3^j)/3^j)`,
-`T_j` the suffix cost, which is near `1` iff the prefix sum `P_(j-1)` lies
-below `j log_2 3 + 6 - K`: (T1) *cancellation of deep descents* — the sum
-of `2^(-A) e(2^s Y_h/3^h)` over the words whose excursion exceeds `c`
-tends to `0` relative to the band sum as `c` grows, for every `h`; (T2)
-*the band residue* — the sum over the words with excursion below `c` has
-modulus of the exponential order of `P_h` (its mass is `≍ P_h` by large
+`T_j` the suffix cost, which is near `1` iff `A - h log_2 3 + 6 <= P_(j-1) <= A - h log_2 3 + j log_2 3 + 6 - K` (on the band `A - h log_2 3` lies between `-∞` and `c`; below the lower end the exponent is negative and the phase is a scrambled inverse power): (T1) *cancellation of deep descents* — the sum of `2^(-A) e(2^s Y_h/3^h)` over the words whose excursion exceeds `c` is at most `ε(c)` times the band sum, with `ε(c) -> 0` uniformly in `h` (for fixed `h` the statement is empty; the data show the uniform version needs `c` of order `h/8` on `40..120`, so the target may have to be stated with `c = c(h) = o(h)`); (T2) *the band residue* — the sum over the words with excursion below the same `c(h)` has modulus of the exponential order of `P_h` (its mass is `≍ P_h` by large
 deviations; the content is that the spread phases leave a residue of the
 same order). (T1) is a statement about the scrambling of `2^m mod 3^j`
 for `m` beyond `j log_2 3`, the same equidistribution that Tao's
@@ -803,9 +777,9 @@ python 04-computation/experiments/collatz_five_mirrors_excursion_profile_2026092
 | `max_j |mu_hat_h(2^j)|` to `h = 120`: `C h^(-1.1) r^h`, `r ≈ 0.944` (pure geometric ratio `0.906 -> 0.930`), doubling exponents `2.1 -> 6.1` with slope `0.083 ≈ |log_2 0.9465|`; `= 0.44–0.48 P_h` over `20..120` | VERIFIED (exact recursion, truncation `2^(-40)`, float64 error `<= 1.1·10^(-10)`, independently recomputed; 30-digit check at `h = 30, 60`); the proportionality OBSERVED |
 | the rate of `P_h`: `P_h^(1/h) -> 3^(h*-1) = 0.9465` | PROVED (Chernoff and tilting) |
 | the maximum over the seventeen families `u 2^j`, `u <= 49` odd, `3 ∤ u`, is on the pure powers of two at every level `h <= 60` | VERIFIED |
-| `M(h) ≍ P_h`, rate `3^(h*-1) = 0.9465` (a necessary condition for (2.3), measured; not the `ℓ^1` estimate itself) | CONJECTURAL |
-| the recursion to `h = 300`: doubling exponents `3.1 -> 13.0` growing linearly (slope `0.077`), rate `0.941–0.949`, `M/P_h ∈ [0.44, 0.58]` | VERIFIED; the rate identification OBSERVED |
-| the resonant coefficient split by excursion above the critical line (`h = 40, 80, 120`): strict no-descent words carry `54%, 41%, 35%`; the band `E < 6` reproduces the magnitude (`1.008, 1.007, 0.997`); deep descenders cancel slowly; random units at `h = 30` sit at the square-root scale, `10^5` below the resonance | VERIFIED (exact DP and recursion); the mechanism reading DIRECTION; targets (T1), (T2) OPEN |
+| `M(h) ≍ P_h`, rate `3^(h*-1) = 0.9465` (a necessary condition for (2.3), measured; not the `ℓ^1` estimate itself) | CONJECTURAL; the levels `180..300` lean slightly against it (rate `0.947–0.950`) |
+| the recursion to `h = 300`: doubling exponents `3.1 -> 13.0` growing linearly (slope `0.0785`), rate `0.947–0.950` (`3^(h*-1)` at the lower edge), `M/P_h ∈ [0.44, 0.58]` rising after `180` | VERIFIED (certified by the audit's `a <= 60` run); the rate identification OBSERVED in the weak sense, the data leaning slightly against `M ≍ P_h` |
+| the resonant coefficient split by excursion above the critical line (`h = 40, 80, 120`): strict no-descent words carry `54%, 41%, 35%`; the band `E < c` reproduces the coefficient to `10%` from `c = 5, 9, 15` at `h = 40, 80, 120` (magnitude within `4%` from `c = 5`); deep descenders cancel slowly, the band width growing like `h/8`; random units at `h = 30` sit at the square-root scale, `10^5` below the resonance | VERIFIED (exact DP and recursion); the mechanism reading DIRECTION; targets (T1), (T2) OPEN |
 | Fourier mass per level `0.462 -> 0.472`, typical `|mu_hat|^2 3^h = 0.70` | VERIFIED; the level-by-level identity with the second-moment increments PROVED (Parseval + Proposition 1) |
 | cost/last-valuation decomposition of the resonance at `h = 10` | FINITE-EXACT |
 | Proposition 3 (Gauss sums: 2-adic reading; no uniform gap) | PROVED; table FINITE-EXACT |
@@ -897,14 +871,14 @@ and their geometric mean approaches `0.9465` from below); (3) "`0.46 ±
 DIRECTION with phases near `1` involving the suffix sums, "the sup-norm
 mixing rate is the no-descent rate" was an overreach; (5) new fact: `s = h
 log_2 3 - 6 ± 1` for `20 <= h <= 120`, amending the first audit's
-"`2^s/3^h` decreases geometrically". Not checked: the prefactor exponent
-`3/2` of `P_h`; `M(h) ≍ P_h` beyond the sampled windows.
+"`2^s/3^h` decreases geometrically". Not checked: the prefactor exponent `3/2` of `P_h`; `M(h) ≍ P_h` beyond the sampled windows.
+
+**Third audit, section 2c (2026-09-29, same auditor; own recursion to `h = 300` with `a <= 40` and a certified `a <= 60` run, reversed-order and noise-injection runs, own `P_h`, own excursion-split DP validated at `c = ∞`, a hundred random units at `h = 30` and the exact coefficient distribution at `h = 12, 14`; files `collatz_five_mirrors_20260929_audit3.py/.out/.md`, 25 claims): SOUND WITH CORRECTIONS, eleven applied.** Holds: every level-300 value (to `4·10^(-7)`), all fits and ratios, the phase factorisation with its inverse-power reading, the split's completeness, the random units. Corrections: (1) the rate bracket had the pure-geometric misfit as its lower end; the admissible fits give `0.947–0.950`, the no-descent rate at the lower edge, and the `M/P_h` rise over `180..300` leans against `M ≍ P_h`; (2) "the band within 6 bits reproduces the magnitude" was a coincidence of a rotated vector at `h = 120`: as a vector the band needs `c = 5, 9, 15` for `10%` (`h/8`), so (T1) must be uniform in `h` with `c = c(h)`; (3) the level-300 certification (`a <= 40` not self-certifying); (4) `0.44–0.48` not `0.46 ± 0.02`, `s - h log_2 3 = -5.3 .. -7.2`, the strict share's trend, rms against median for the random units, the two-sided alignment condition. The excursion-profile paragraph was added after this audit's snapshot and is not covered by it.
 
 **Next probes.** The targets (T1), (T2) of section 2c (cancellation of
 deep descents; the band residue), replacing the earlier "coherent
 no-descent family with fixed initial phases", which section 2c refutes as
-a mechanism (the strict no-descent words carry a third to a half of the
-coefficient and their phases are spread); whether the argmax of `|mu_hat_h|` over all units stays on the
+a mechanism (the strict no-descent words carry a third to a half of the coefficient over `h = 40..120`, a decreasing share, and their phases are spread); whether the argmax of `|mu_hat_h|` over all units stays on the
 powers of two beyond `h = 18` (a chunked FFT at `h = 19`, or a search over
 `±2^s u` for small units `u`); the constant `0.46` as a computable
 expectation over the first valuations; the reversal involution on the

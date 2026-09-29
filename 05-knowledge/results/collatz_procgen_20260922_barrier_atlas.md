@@ -247,8 +247,7 @@ there). CITED, not replayed by us.
   exists (Gauss sums `sup -> 1`). A proof of `|mu_hat_h(2^s)| <= C P_h`
     would settle the coefficient side; the `ℓ^1` side is dominated by the
   bulk. (S21: to `h = 300` the rate brackets `3^(h*-1)`; the coefficient is
-  carried by the words within about `6` bits of the critical line, the
-  strict no-descent set giving a third to a half; targets (T1)/(T2) of the
+  carried by the words within about `6` bits of the critical line, the strict no-descent set giving a third to a half over `h = 40..120`, a decreasing share; the rate `0.947–0.950` sits slightly above `3^(h*-1)`; targets (T1)/(T2) of the
   note's section 2c.)
 * **A control on the reference density, not a failure mode:** the atoms of
   the 3-adic Syracuse law are the negative cycles (`rho_n(-1) = 0.975

@@ -1593,7 +1593,8 @@ exploration and extend past work toward proofs. Note
   maximal primitive coefficient and the thin-divergence exponent appear to
   be one number — a necessary condition for (2.3), not the estimate itself.
   S21 (section 2c of the note) took the recursion to `h = 300` (rate
-  `0.941–0.949`, bracketing `0.9465`; `M/P_h` drifting in `0.44–0.58`) and
+  `0.947–0.950` by the admissible fits, `0.9465` at the lower edge; `M/P_h`
+  drifting in `0.44–0.58`, leaning slightly against `M ≍ P_h`) and
   split the coefficient by the excursion of the prefix sums above the
   critical line: the strict no-descent words carry only `35–54%`, the band
   within `6` bits reproduces the magnitude, deep descenders cancel slowly,

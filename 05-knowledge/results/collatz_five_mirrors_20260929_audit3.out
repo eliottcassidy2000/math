@@ -1,0 +1,61 @@
+[A] recursion to h = 300, AMAX = 40 [1s]
+[A] recursion to h = 300, AMAX = 60 [1s]
+[A] reversed-order and noise-injected (1e-12 per level) runs [3s]
+[A1] h, M(h) [AMAX 60], AMAX 40, session's value, s - h, s - h log2 3, level ratio:
+      h= 20: 8.884593e-03  8.884593e-03  8.884593e-03  s-h=+6  s-h log2 3=-5.70  ratio=0.9051
+      h= 50: 6.156771e-04  6.156771e-04  6.156771e-04  s-h=+23  s-h log2 3=-6.25  ratio=0.9310
+      h=100: 1.593621e-05  1.593621e-05  1.593621e-05  s-h=+52  s-h log2 3=-6.50  ratio=0.9382
+      h=150: 5.963695e-07  5.963695e-07  5.963695e-07  s-h=+81  s-h log2 3=-6.74  ratio=0.9460
+      h=180: 9.176845e-08  9.176845e-08  9.176845e-08  s-h=+99  s-h log2 3=-6.29  ratio=0.9353
+      h=200: 2.727375e-08  2.727375e-08  2.727375e-08  s-h=+110  s-h log2 3=-6.99  ratio=0.9419
+      h=240: 2.498980e-09  2.498980e-09  2.498980e-09  s-h=+134  s-h log2 3=-6.39  ratio=0.9393
+      h=250: 1.378503e-09  1.378503e-09  1.378503e-09  s-h=+140  s-h log2 3=-6.24  ratio=0.9355
+      h=280: 2.388116e-10  2.388116e-10  2.388116e-10  s-h=+157  s-h log2 3=-6.79  ratio=0.9497
+      h=300: 7.424733e-11  7.424733e-11  7.424733e-11  s-h=+169  s-h log2 3=-6.49  ratio=0.9426
+[A2] AMAX 40 vs 60: max relative |difference| over h <= 300: 2.5e-12; levels where the argmax differs: [1, 2, 3, 4, 5, 6, 7, 8, 9] (full-period ties for h <= 8: the window holds several periods 2 3^(h-1) and the first maximum is reported)
+[A3] against the session's output (AMAX 40, dict/cmath implementation): max relative |difference| over the 300 levels: 4.4e-07; levels where the argmax differs: [5]
+[A4] reversed summation order: max relative |difference| 1.4e-14; noise 1e-12 injected at every level: relative |difference| at h = 100, 200, 300: 2.3e-12, 6.4e-13, 7.8e-12  (linear accumulation would give 3e-10 at 300; errors are averaged down, not accumulated)
+[A5] error bounds. Truncation: the dropped terms sum_(a>AMAX) 2^-a m_(n-1)(j-a) involve exponents OUTSIDE the computed window, so only |m| <= 1 is
+     available a priori: <= n 2^-AMAX = 2.7e-10 (AMAX 40, > M(300) = 7.4e-11: not self-certifying) or 2.6e-16 (AMAX 60).
+     Rounding: every summed term lies inside the window, so per level <= 50 eps maxwin|m_(n-1)|; total <= 50 eps sum_k maxwin|m_k| = 50 eps * 2.096 = 2.3e-14
+     Certified (AMAX 60): |error at h = 300| <= 2.4e-14, i.e. 3.2e-04 relative. The AMAX-40 values agree with it to 2e-12.
+[A6] local doubling exponents log2(M(h)/M(2h)): 25->50: 3.102, 50->100: 5.272, 75->150: 7.274, 100->200: 9.191, 125->250: 11.066, 150->300: 12.972
+      linear fit: slope 0.0785 per level (endpoints: 0.0790), intercept 1.28; |log2 r0| = 0.0793; the slope gives r = 0.9471
+[A7] geometric-mean level ratios of M: 100-200: 0.93828, 150-300: 0.94182, 200-300: 0.94265, 250-300: 0.94325
+[A8] s - h log2 3 over 20..300: min -7.22, max -5.28; at 300: -6.49
+[B1] P_h at 100, 200, 300: 3.4515e-05, 5.4567e-08, 1.2816e-10; geometric-mean ratios: 100-200: 0.93754, 150-300: 0.94044, 200-300: 0.94126
+[B2] M/P_h: 20: 0.461, 60: 0.460, 100: 0.462, 120: 0.443, 140: 0.464, 180: 0.469, 200: 0.500, 240: 0.519, 280: 0.560, 300: 0.579; range over 20..180: 0.443-0.481; over 20..300: 0.443-0.584
+[B3] M ~ C h^-beta r^h over 100..300: free beta = 1.620, r = 0.94894 (max log-residual 0.0100); r pinned to 0.94650: beta = 1.144 (residual 0.0586)
+      trade-off (beta fixed -> fitted r, residual): beta=1.00: r=0.9458 (0.081), beta=1.25: r=0.9471 (0.051), beta=1.50: r=0.9483 (0.021), beta=1.75: r=0.9496 (0.020), beta=2.00: r=0.9508 (0.044), beta=2.50: r=0.9534 (0.102)
+[B3] P_h ~ C h^-beta r^h over 100..300: free beta = 1.293, r = 0.94605 (max log-residual 0.0227); r pinned to 0.94650: beta = 1.384 (residual 0.0254)
+      trade-off (beta fixed -> fitted r, residual): beta=1.00: r=0.9446 (0.044), beta=1.25: r=0.9458 (0.024), beta=1.50: r=0.9471 (0.040), beta=1.75: r=0.9483 (0.070), beta=2.00: r=0.9496 (0.100), beta=2.50: r=0.9521 (0.159)
+[B4] pure geometric fit of M over 100..300: ratio 0.94085, max log-residual 0.1997
+[B5] is the rate of P_h 'measured' better than that of M? free fit of P_h gives r = 0.94605 against the theorem 0.94650 (error -4.9e-04); the same free fit applied to M gives 0.94894
+[C1] validation of the DP: c = infinity (all words, A up to 2h + 8 sqrt(2h) + 40) against the closed recursion:
+      h=20, s=26: DP 8.884593e-03 (mass covered 1.000000, 111 values of A) vs recursion 8.884593e-03; |difference| = 7.2e-18
+      h=40, s=57: DP 1.383199e-03 (mass covered 1.000000, 152 values of A) vs recursion 1.383199e-03; |difference| = 2.2e-19
+[C2] c = 0 at h = 40: DP mass 2.986131e-03 = P_40 = 2.986131e-03 (difference 0.0e+00); |coh_0| = 7.5246e-04
+[C3] completeness of the A-window at h = 40, c = 6: window |A - s| <= 51 (30 values) vs all A in [h, lim_h] (30 values): |sum| 1.394593e-03 vs 1.394593e-03, mass 7.052156e-02 vs 7.052156e-02
+[C4] the split at h = 40, 80, 120 (s = 57, 120, 184): c, family mass, mass/P_h, |coh_c|/|full|, |full - coh_c|/|full|, coherent fraction |coh_c|/mass
+      h= 40 c= 0: mass 2.9861e-03 (=   1.00 P_h)  |coh|/|full| = 0.5440  |full-coh|/|full| = 0.4810  coherent 0.2520   |full| = 1.3832e-03 [4s]
+      h= 40 c= 4: mass 3.5730e-02 (=  11.97 P_h)  |coh|/|full| = 0.9235  |full-coh|/|full| = 0.1625  coherent 0.0357   |full| = 1.3832e-03 [4s]
+      h= 40 c= 6: mass 7.0522e-02 (=  23.62 P_h)  |coh|/|full| = 1.0082  |full-coh|/|full| = 0.0121  coherent 0.0198   |full| = 1.3832e-03 [4s]
+      h= 40 c=16: mass 4.4774e-01 (= 149.94 P_h)  |coh|/|full| = 0.9996  |full-coh|/|full| = 0.0010  coherent 0.0031   |full| = 1.3832e-03 [4s]
+      h= 80 c= 0: mass 1.3956e-04 (=   1.00 P_h)  |coh|/|full| = 0.4081  |full-coh|/|full| = 0.6019  coherent 0.1887   |full| = 6.4534e-05 [5s]
+      h= 80 c= 4: mass 1.9275e-03 (=  13.81 P_h)  |coh|/|full| = 0.9284  |full-coh|/|full| = 0.0961  coherent 0.0311   |full| = 6.4534e-05 [5s]
+      h= 80 c= 6: mass 4.2503e-03 (=  30.46 P_h)  |coh|/|full| = 1.0067  |full-coh|/|full| = 0.1081  coherent 0.0153   |full| = 6.4534e-05 [6s]
+      h= 80 c=16: mass 5.8662e-02 (= 420.35 P_h)  |coh|/|full| = 1.0128  |full-coh|/|full| = 0.0129  coherent 0.0011   |full| = 6.4534e-05 [6s]
+      h=120 c= 0: mass 9.3061e-06 (=   1.00 P_h)  |coh|/|full| = 0.3457  |full-coh|/|full| = 0.6802  coherent 0.1530   |full| = 4.1197e-06 [7s]
+      h=120 c= 4: mass 1.3574e-04 (=  14.59 P_h)  |coh|/|full| = 0.8883  |full-coh|/|full| = 0.1288  coherent 0.0270   |full| = 4.1197e-06 [8s]
+      h=120 c= 6: mass 3.1288e-04 (=  33.62 P_h)  |coh|/|full| = 0.9969  |full-coh|/|full| = 0.2735  coherent 0.0131   |full| = 4.1197e-06 [9s]
+      h=120 c=16: mass 6.1357e-03 (= 659.31 P_h)  |coh|/|full| = 1.0333  |full-coh|/|full| = 0.0645  coherent 0.0007   |full| = 4.1197e-06 [10s]
+      h=120 c=24: mass 3.1208e-02 (= 3353.53 P_h)  |coh|/|full| = 1.0002  |full-coh|/|full| = 0.0024  coherent 0.0001   |full| = 4.1197e-06 [12s]
+[C5] max |difference| against the note's quoted values (three ratios, all listed (h, c)): 4.9e-05
+[C6] magnitude ratio |coh_c|/|full| and vector remainder |full - coh_c|/|full| for c = 0..24:
+      h= 40: c0:0.54/0.48 c1:0.49/0.51 c2:0.75/0.28 c3:0.79/0.29 c4:0.92/0.16 c5:0.98/0.06 c6:1.01/0.01 c7:1.01/0.03 c8:1.00/0.03 c9:0.99/0.02 c10:0.99/0.01 c11:0.99/0.01 c12:0.99/0.01 c13:1.00/0.01 c14:1.00/0.00 c15:1.00/0.00 c16:1.00/0.00 c17:1.00/0.00 c18:1.00/0.00 c19:1.00/0.00 c20:1.00/0.00 c21:1.00/0.00 c22:1.00/0.00 c23:1.00/0.00 c24:1.00/0.00  -> remainder stays below 10% from c = 5, below 5% from c = 6 [15s]
+      h= 80: c0:0.41/0.60 c1:0.43/0.58 c2:0.63/0.40 c3:0.75/0.31 c4:0.93/0.10 c5:0.99/0.05 c6:1.01/0.11 c7:1.02/0.14 c8:0.99/0.10 c9:1.00/0.05 c10:1.02/0.04 c11:1.04/0.04 c12:1.04/0.04 c13:1.03/0.03 c14:1.02/0.02 c15:1.01/0.02 c16:1.01/0.01 c17:1.02/0.02 c18:1.02/0.02 c19:1.01/0.01 c20:1.01/0.01 c21:1.00/0.00 c22:1.00/0.00 c23:1.00/0.00 c24:1.00/0.00  -> remainder stays below 10% from c = 9, below 5% from c = 10 [28s]
+      h=120: c0:0.35/0.68 c1:0.36/0.64 c2:0.53/0.47 c3:0.70/0.31 c4:0.89/0.13 c5:0.98/0.19 c6:1.00/0.27 c7:1.01/0.29 c8:1.01/0.26 c9:1.02/0.19 c10:1.04/0.15 c11:1.09/0.13 c12:1.12/0.17 c13:1.09/0.15 c14:1.05/0.11 c15:1.03/0.09 c16:1.03/0.06 c17:1.05/0.06 c18:1.06/0.07 c19:1.06/0.06 c20:1.04/0.04 c21:1.02/0.02 c22:1.01/0.01 c23:1.01/0.01 c24:1.00/0.00  -> remainder stays below 10% from c = 15, below 5% from c = 20 [57s]
+[D1] 100 random units at h = 30: median 2.20e-08, rms 5.42e-08, mean 3.59e-08, min 2.27e-09, max 2.69e-07; square-root scale sqrt(0.70) 3^-15 = 5.83e-08; share below 0.5 x scale: 0.60; mean |mu_hat|^2 3^h = 0.604 (level-h average over all units: 0.70) [57s]
+[D2] exact distribution over all units at h = 12: rms 1.150e-03 (= 0.839 3^-h/2), median 7.581e-04 = 0.659 rms, mean = 0.789 rms, share below 0.5 rms 0.346, share below 0.3 rms 0.147; Rayleigh would give median 0.83 rms, mean 0.89 rms, share below 0.5 rms 0.22
+[D2] exact distribution over all units at h = 14: rms 3.840e-04 (= 0.840 3^-h/2), median 2.378e-04 = 0.619 rms, mean = 0.764 rms, share below 0.5 rms 0.381, share below 0.3 rms 0.170; Rayleigh would give median 0.83 rms, mean 0.89 rms, share below 0.5 rms 0.22
+DONE [61s]
