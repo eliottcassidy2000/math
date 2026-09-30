@@ -1,0 +1,7 @@
+/private/tmp/claude-501/-Users-e-Documents-GitHub-math/e745fef3-98b2-4020-9acc-f7ba4d8b2eef/scratchpad/c3/spectrum_exact.py:14: RuntimeWarning: invalid value encountered in power
+  pred = np.concatenate([np.array([m])**(2/L) * np.exp(2j*np.pi*np.arange(L//2)/(L//2)) for m in mu])  # principal root times (L/2)-th roots of unity
+n=2 L=6: |eig| in [0.490904,0.511945] vs predicted moduli nan,nan; max|eig - nearest predicted| = nan; scaled residual of the char. polynomial 1.4e-16; eigenvector check 4.9e-16; mu = [-0.13417439  0.11830138]
+n=3 L=18: |eig| in [0.499946,0.500054] vs predicted moduli nan,nan; max|eig - nearest predicted| = nan; scaled residual of the char. polynomial 1.2e-19; eigenvector check 3.7e-15; mu = [-0.00195504  0.00195122]
+n=4 L=54: |eig| in [0.500000,0.500000] vs predicted moduli nan,nan; max|eig - nearest predicted| = nan; scaled residual of the char. polynomial 1.4e-29; eigenvector check 7.1e-15; mu = [-7.45058062e-09  7.45058057e-09]
+n=5 L=162: |eig| in [0.500000,0.500000] vs predicted moduli nan,nan; max|eig - nearest predicted| = 1.94e-02; scaled residual of the char. polynomial 1.3e-60; eigenvector check 5.2e-15; mu = [ 4.13590306e-25 -4.13590306e-25]
+n=6 L=486: |eig| in [0.500000,0.500000] vs predicted moduli nan,nan; max|eig - nearest predicted| = 6.46e-03; scaled residual of the char. polynomial 1.7e-155; eigenvector check 2.6e-12; mu = [ 7.07474928e-74 -7.07474928e-74]

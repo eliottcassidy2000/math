@@ -442,6 +442,17 @@ all heights (THM-1289, published), δ ineffective.
   = Theta(1/log m), upper bound from planar-walk returns (THM-4518). H/H1 OPEN, no Collatz step.
   Note: `collatz_h1_20260929_frequency_one_jseries_remnant_ridges.md`, `collatz_thieves_20260929_three_thieves_log_law.md`.
 
+  **Circulants in Collatz (mac-mini, 2026-09-30, part 3):** the level operator T_n = (S/2)(I - S/2)^-1 diag(e(2^k/3^n))
+  on Z/(2 3^(n-1)) has characteristic polynomial (2^L - 1) lambda^L + lambda^(L/2) - 1 (Phi_(3^n)(-lambda) = lambda^L -
+  lambda^(L/2) + 1 because {2^k} is all units): every eigenvalue has modulus 1/2 -+ 2^(-L/2)/(2L), singular values fill [1/3,1],
+  the gauge e(2^k/3^n) has two-level autocorrelation and rms one-step Gauss sum 3^-1/2 exactly; the Parseval rate is a non-normal
+  transient and H1 is a cocycle statement (THM-4520). Owner's phi^8+1 = 7phi^4, phi^10 = 1+11phi^5 = L_4, L_5 = levels 4, 5 of
+  the Fibonacci-monodromy Spectre tower (O_j = F(2,j)^ab); the finite Fibonacci groups' orders 5, 11, 29 are Pillai gaps hence
+  free clocks (census complete to K <= 400: only K <= 8). lambda = 1/(5(2phi^4)^(1/6)) = M(5)(1 + 5e-5): coincidence. The cubic
+  x^3+2x+y^3+2y+z^3+2z = xyz+1: 12-digit solution verified, no solution with |x|,|y| <= 6000, smooth surface, curve at infinity
+  26b1 (rank 0). Reis-Song discrepancy and the Spectre paper typed as analogies.
+  Note: `collatz_circulant_20260930_circulants_lucas_cubic_monotile.md`.
+
   **Posets and DAGs (opus, 2026-09-27, S15):** value-time poset (dimension <= 2; leaders minimal, strict
   future minima maximal; infinitely many strict future minima iff divergent, one iff the global minimum is
   attained once); excursion forest (roots = height lower records = the descent chain under Terras equality;

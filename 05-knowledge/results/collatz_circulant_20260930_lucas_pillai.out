@@ -1,0 +1,18 @@
+Pillai gaps 2^K - 3^X (K <= 400) equal to Lucas/Fibonacci numbers or Fibonacci-group orders:
+  (K,X)=(1,0): 2^K-3^X = 1  ['L_1', 'F_2', '|O_2|=|F(2,2)^ab|']  -> free shape (1,0) for 3y+1  (density 0.000, contracting)
+  (K,X)=(1,1): 2^K-3^X = -1  ['L_1', 'F_2', '|O_2|=|F(2,2)^ab|']  -> free shape (1,1) for 3y-1  (density 1.000, expanding)
+  (K,X)=(2,0): 2^K-3^X = 3  ['L_2', 'F_4']  -> free shape (2,0) for 3y+3  (density 0.000, contracting)
+  (K,X)=(2,1): 2^K-3^X = 1  ['L_1', 'F_2', '|O_2|=|F(2,2)^ab|']  -> free shape (2,1) for 3y+1  (density 0.500, contracting)
+  (K,X)=(2,2): 2^K-3^X = -5  ['F_5', '|O_4|=|F(2,4)^ab|']  -> free shape (2,2) for 3y-5  (density 1.000, expanding)
+  (K,X)=(3,0): 2^K-3^X = 7  ['L_4']  -> free shape (3,0) for 3y+7  (density 0.000, contracting)
+  (K,X)=(3,1): 2^K-3^X = 5  ['F_5', '|O_4|=|F(2,4)^ab|']  -> free shape (3,1) for 3y+5  (density 0.333, contracting)
+  (K,X)=(3,2): 2^K-3^X = -1  ['L_1', 'F_2', '|O_2|=|F(2,2)^ab|']  -> free shape (3,2) for 3y-1  (density 0.667, expanding)
+  (K,X)=(4,1): 2^K-3^X = 13  ['F_7']  -> free shape (4,1) for 3y+13  (density 0.250, contracting)
+  (K,X)=(4,2): 2^K-3^X = 7  ['L_4']  -> free shape (4,2) for 3y+7  (density 0.500, contracting)
+  (K,X)=(4,3): 2^K-3^X = -11  ['L_5', '|O_5|=|F(2,5)^ab|']  -> free shape (4,3) for 3y-11  (density 0.750, expanding)
+  (K,X)=(5,1): 2^K-3^X = 29  ['L_7', '|O_7|=|F(2,7)^ab|']  -> free shape (5,1) for 3y+29  (density 0.200, contracting)
+  (K,X)=(5,3): 2^K-3^X = 5  ['F_5', '|O_4|=|F(2,4)^ab|']  -> free shape (5,3) for 3y+5  (density 0.600, contracting)
+  (K,X)=(6,2): 2^K-3^X = 55  ['F_10']  -> free shape (6,2) for 3y+55  (density 0.333, contracting)
+  (K,X)=(7,4): 2^K-3^X = 47  ['L_8']  -> free shape (7,4) for 3y+47  (density 0.571, contracting)
+  (K,X)=(8,5): 2^K-3^X = 13  ['F_7']  -> free shape (8,5) for 3y+13  (density 0.625, contracting)
+Fibonacci-group orders |O_j| for j=1..12: [1, 1, 4, 5, 11, 16, 29, 45, 76, 121, 199, 320]

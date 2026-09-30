@@ -1,0 +1,13 @@
+n=2 L=6: R(0)=6.000=L? True; R(L/3)=-3.000 (=-L/2=-3.0); max|R| elsewhere=2.07e-15; |omega_hat|/3^(n/2) on primitive xi in [1.000000,1.000000], on 3|xi max 7.02e-16
+      mean |G_n(2^k)|^2 over the cycle = 0.238095238 (1/3 = 0.333333333, sum_a 4^-a to A = 0.333333333);  spectral radius rho(T_n) = 0.51194, geometric mean |eig| = 0.50131 (Jensen 1/2), sigma_max = 1.00000, sigma_min = 0.33333
+n=3 L=18: R(0)=18.000=L? True; R(L/3)=-9.000 (=-L/2=-9.0); max|R| elsewhere=4.14e-15; |omega_hat|/3^(n/2) on primitive xi in [1.000000,1.000000], on 3|xi max 2.08e-15
+      mean |G_n(2^k)|^2 over the cycle = 0.328046143 (1/3 = 0.333333333, sum_a 4^-a to A = 0.333333333);  spectral radius rho(T_n) = 0.50005, geometric mean |eig| = 0.50000 (Jensen 1/2), sigma_max = 1.00000, sigma_min = 0.33333
+n=4 L=54: R(0)=54.000=L? True; R(L/3)=-27.000 (=-L/2=-27.0); max|R| elsewhere=6.84e-15; |omega_hat|/3^(n/2) on primitive xi in [1.000000,1.000000], on 3|xi max 4.30e-15
+      mean |G_n(2^k)|^2 over the cycle = 0.333332062 (1/3 = 0.333333333, sum_a 4^-a to A = 0.333333333);  spectral radius rho(T_n) = 0.50000, geometric mean |eig| = 0.50000 (Jensen 1/2), sigma_max = 1.00000, sigma_min = 0.33333
+n=5 L=162: R(0)=162.000=L? True; R(L/3)=-81.000 (=-L/2=-81.0); max|R| elsewhere=1.27e-14; |omega_hat|/3^(n/2) on primitive xi in [1.000000,1.000000], on 3|xi max 6.88e-15
+      mean |G_n(2^k)|^2 over the cycle = 0.333333333 (1/3 = 0.333333333, sum_a 4^-a to A = 0.333333333);  spectral radius rho(T_n) = 0.50000, geometric mean |eig| = 0.50000 (Jensen 1/2), sigma_max = 1.00000, sigma_min = 0.33333
+n=6 L=486: R(0)=486.000=L? True; R(L/3)=-243.000 (=-L/2=-243.0); max|R| elsewhere=5.06e-14; |omega_hat|/3^(n/2) on primitive xi in [1.000000,1.000000], on 3|xi max 5.34e-14
+      mean |G_n(2^k)|^2 over the cycle = 0.333333333 (1/3 = 0.333333333, sum_a 4^-a to A = 0.333333333);  spectral radius rho(T_n) = 0.50000, geometric mean |eig| = 0.50000 (Jensen 1/2), sigma_max = 1.00000, sigma_min = 0.33333
+n=7 L=1458: R(0)=1458.000=L? True; R(L/3)=-729.000 (=-L/2=-729.0); max|R| elsewhere=1.36e-13; |omega_hat|/3^(n/2) on primitive xi in [1.000000,1.000000], on 3|xi max 1.07e-13
+      mean |G_n(2^k)|^2 over the cycle = 0.333333333 (1/3 = 0.333333333, sum_a 4^-a to A = 0.333333333);  spectral radius rho(T_n) = 0.50000, geometric mean |eig| = 0.50000 (Jensen 1/2), sigma_max = 1.00000, sigma_min = 0.33333
+geometric circulant spectrum: w(theta) = 1/(2 e^{i theta} - 1): check |w - 1/3| = 2/3 at theta = 0.7: 0.6666666666666665

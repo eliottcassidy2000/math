@@ -37,6 +37,7 @@ related:
   - 05-knowledge/results/collatz_h1_20260929_frequency_one_jseries_remnant_ridges.md (the full note)
   - 05-knowledge/results/mazur_positive_density_20260928.md (Theorem A: the harmonic mass; Proposition 2 of the five-mirrors note)
   - 01-canon/theorems/THM-4476-thin-divergent-orbits-reciprocal-sums-finite.md (the exponent h*)
+  - 05-knowledge/results/collatz_three_mirrors_20260929.md (opus S23, same day: section 3 is the ridge-seed census on a 25x larger box with a Poisson test; Theorem 1 is the character transform of the closed family)
 note: 05-knowledge/results/collatz_h1_20260929_frequency_one_jseries_remnant_ridges.md
 scripts:
   - 04-computation/experiments/collatz_h1_20260929_jseries.py
