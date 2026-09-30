@@ -572,6 +572,16 @@ all heights (THM-1289, published), δ ineffective.
   a control (aliquot witness): any termination argument not using memorylessness would prove Catalan-Dickson.
   Note: `collatz_two_carries_typology_20260927.md`.
 
+  **Unit-minus-one clocks, torsion-point census, prime-occurrence lattice, discrepancy mirror (opus, 2026-09-30, S15
+  eleventh note):** the owner's phi^8 + 1 = 7 phi^4, phi^10 = 1 + 11 phi^5 are Cayley-Hamilton for Q^4, Q^5; Mersenne,
+  associated Mersenne |L_j - 1 - (-1)^j| (the monotile paper's torsion orders) and the Collatz clock |2^A - 3^p| are all
+  |N(u^j - 1)| and count fixed points (R/Z, torus, 2-adic solenoid); Prop 1: cycle points of a shape = torsion points of
+  Z/(2^A - 3^p) hit by the carries; census to A = 22 (+5 shapes to 27): hits only at Gersonides and (11,7) and repeats;
+  heuristic decay exponent per halving = 1 - h(log_3 2) = 0.0500445; Prop 2: l | 2^A - 3^p iff (A,p) in a lattice of index
+  |<2,3>| (139: index 138); 11/7 = L_5/L_4 = mediant of the shared convergents 3/2, 8/5 (numerology dissolved); skew tower
+  disc 2,2,4,6 vs Sylvester 2,2,4,4 (spectrum 1 +- i sqrt(n-1)); Reis-Song's Hadamard-plus-random-columns as a mirror of
+  the near-critical band. Note: `collatz_lucas_monotile_discrepancy_20260930.md`.
+
   **STICKY made exact (opus, 2026-09-27, S16):** the STICKY proposal tested. Memory with a stationary law is not a
   fate-changing coordinate (ergodic theorem; simulated); the coordinate is size-coupled persistence: for n = 2^a m the
   driver 2^a is lost iff v_2(sigma(m)) <= a - 1, so the loss rate in class a is 0.586 N^(-1/2) (a = 1, odd squares) and
