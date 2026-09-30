@@ -593,6 +593,15 @@ all heights (THM-1289, published), δ ineffective.
   disc 2,2,4,6 vs Sylvester 2,2,4,4 (spectrum 1 +- i sqrt(n-1)); Reis-Song's Hadamard-plus-random-columns as a mirror of
   the near-critical band. Note: `collatz_lucas_monotile_discrepancy_20260930.md`.
 
+  **Pentagon graph operator, carry cocycle, coherence (opus, 2026-09-30, S15 twelfth note):** Gervacio-Maehara-Ramos's
+  vanishing/periodic/expanding trichotomy for C_5 is the Collatz orbit trichotomy; van Rooij-Wilf's line-graph classification
+  rests on a monotone edge count that the pentagon operator and Collatz lack. FINITE-EXACT: C_5(Petersen) = K_12 minus the
+  co-polar matching then empty (the folds vanish, the covers D -> I -> I are periodic); C_5(I) = distance-2 graph of I;
+  Platonic table: fixed points K_4 (C_3) and I (C_5), none for C_4. PROVED: the carry is a 1-cocycle on the word monoid
+  (3 left, 2 right), beta(u,v) = S_(uv) - S_(vu) = D_u D_v (x_v - x_u), antisymmetric with two hexagon identities (symmetric,
+  not braided); cycles are coboundaries, H^1(<w>; Z) = Z/(2^A - 3^p), zero over Z_2 and Z_3; clocks = (-1)^A mod 6.
+  Coherence vs Terras/Conway typed ANALOGY. Note: `collatz_pentagon_operator_coherence_20260930.md`.
+
   **STICKY made exact (opus, 2026-09-27, S16):** the STICKY proposal tested. Memory with a stationary law is not a
   fate-changing coordinate (ergodic theorem; simulated); the coordinate is size-coupled persistence: for n = 2^a m the
   driver 2^a is lost iff v_2(sigma(m)) <= a - 1, so the loss rate in class a is 0.586 N^(-1/2) (a = 1, odd squares) and

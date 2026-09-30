@@ -55,7 +55,13 @@ and the character spectrum of the law
 the mac-mini session proved THM-4515–4517 on cycle necklaces, perfect-power
 clocks and root-uniform basin bounds
 ([`collatz_necklace_20260929_fair_splits_power_clocks_basins.md`](collatz_necklace_20260929_fair_splits_power_clocks_basins.md)).
-Nothing below duplicates them: this note is about *which numbers the clocks
+A parallel session's note of the same day,
+[`collatz_circulant_20260930_circulants_lucas_cubic_monotile.md`](collatz_circulant_20260930_circulants_lucas_cubic_monotile.md)
+(THM-4520; the Pillai gaps `2^K - 3^X` that are Lucas or Fibonacci numbers or
+Fibonacci-group orders, all with `K ≤ 8`), answers the same directive from
+the circulant side and was found after this note was pushed; the two are
+complementary (that note asks which clocks *are* Lucas numbers, this one what
+kind of number all three families are). Nothing below duplicates them: this note is about *which numbers the clocks
 are* (fixed-point counts), which primes divide them (a lattice), and the
 exact torsion-point census; the necklace note is about the necklace
 combinatorics and the perfect-power clocks, the mirrors notes about the
