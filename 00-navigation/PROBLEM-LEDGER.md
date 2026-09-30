@@ -602,6 +602,15 @@ all heights (THM-1289, published), δ ineffective.
   not braided); cycles are coboundaries, H^1(<w>; Z) = Z/(2^A - 3^p), zero over Z_2 and Z_3; clocks = (-1)^A mod 6.
   Coherence vs Terras/Conway typed ANALOGY. Note: `collatz_pentagon_operator_coherence_20260930.md`.
 
+  **P_13 expanding, C_k fixed points, mediants, Hadamard identity, proposals priced (opus, 2026-09-30, S15 thirteenth
+  note):** C_5^2(P_13) contains an induced icosahedron with 108 tadpole hats, so P_13 is pentagon-expanding (conditional on
+  the paper's Theorem 3.5; monotonicity lemma proved). Locally-C_k graphs: contractible induced k-cycles are links, C_k =
+  rhombus graph; Eisenstein tori C_6-fixed iff 3 does not divide the index (P_13 is a hexagon-operator fixed point; the
+  honeycomb falls into it); square tori C_4-fixed (self-duality); winding fixed points C_7(1,2), C_8(1,2), C_14(1,2,3);
+  D36 refuted. Collatz: (1-3z)(F*G) = n + zF; x_(uv) is a weighted mediant of x_u, x_v (rational cycles generated from
+  1/(2^v - 3)); near-misses at distance 1/D; no unimodular pairs; K cap Z = {-1,-5,-17} to 10^5; proposals P1-P7 priced,
+  none closes. Note: `collatz_pentagon_fixed_points_argument_styles_20260930.md`.
+
   **STICKY made exact (opus, 2026-09-27, S16):** the STICKY proposal tested. Memory with a stationary law is not a
   fate-changing coordinate (ergodic theorem; simulated); the coordinate is size-coupled persistence: for n = 2^a m the
   driver 2^a is lost iff v_2(sigma(m)) <= a - 1, so the loss rate in class a is 0.586 N^(-1/2) (a = 1, odd squares) and

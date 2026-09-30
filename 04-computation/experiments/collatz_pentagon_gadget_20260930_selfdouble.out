@@ -1,0 +1,5 @@
+ C_5^1(I_1): 14 vertices; induced icosahedra found 12; hatted copies of I_1 24; a vertex-disjoint non-adjacent pair of copies: no (0s)
+ C_5^2(I_1): 17 vertices; induced icosahedra found 12; hatted copies of I_1 48; a vertex-disjoint non-adjacent pair of copies: no (0s)
+ C_5^3(I_1): 31 vertices; induced icosahedra found 12; hatted copies of I_1 120; a vertex-disjoint non-adjacent pair of copies: no (0s)
+ C_5^4(I_1): 408 vertices; induced icosahedra found 400; hatted copies of I_1 4527; a vertex-disjoint non-adjacent pair of copies: no (109s)
+ sizes: [13, 14, 17, 31, 408]

@@ -1,0 +1,24 @@
+== (1) locally-C_k graphs, the rhombus graph, and the Eisenstein tori as fixed points of C_6 ==
+ P_13 = C_13(1,3,4): locally C_6: True; induced hexagons: 13; they are the 13 vertex links: True
+ C_6(P_13) iso P_13: True; C_6(P_13) iso rhombus graph R(P_13): True; R(P_13) = Cay(Z_13, non-squares): True (multiplier 1 - w = 1 - 3 = -2)
+ P_13 under C_5: 39 induced pentagons (all non-contractible on the torus); under C_4: 39 induced squares
+ other Eisenstein circulants C_n(1, a, a+1), a^2 + a + 1 = 0 mod n (3 does not divide n):
+  n = 19, a =  7: locally C_6 True; more than 57 induced hexagons (extra non-contractible ones)
+  n = 31, a =  5: locally C_6 True; more than 93 induced hexagons (extra non-contractible ones)
+  n = 37, a = 10: locally C_6 True; induced hexagons 37; C_6(G) iso G: True; multiplier 1 - a = 28 maps S to the rhombus set: True  (1.2s)
+  n = 43, a =  6: locally C_6 True; induced hexagons 43; C_6(G) iso G: True; multiplier 1 - a = 38 maps S to the rhombus set: True  (5.2s)
+  n = 49, a = 18: locally C_6 True; induced hexagons 49; C_6(G) iso G: True; multiplier 1 - a = 32 maps S to the rhombus set: True  (16.7s)
+  n = 61, a = 13: locally C_6 True; induced hexagons 61; C_6(G) iso G: True; multiplier 1 - a = 49 maps S to the rhombus set: True  (80.6s)
+  n = 67, a = 29: locally C_6 True; induced hexagons 67; C_6(G) iso G: True; multiplier 1 - a = 39 maps S to the rhombus set: True  (232.0s)
+ square and rectangular tori Z_a x Z_b with S = {+-(1,0), +-(0,1), +-(1,1)}:
+  Z_4 x Z_4: locally C_6 True; more than 48 induced hexagons
+  Z_5 x Z_5: locally C_6 True; more than 75 induced hexagons
+  Z_6 x Z_6 (index 36, 3 | index: True): locally C_6 True; hexagons 54; C_6(G) iso G: False; components of C_6(G): None
+  Z_7 x Z_7 (index 49, 3 | index: False): locally C_6 True; hexagons 49; C_6(G) iso G: True; components of C_6(G): 1
+  Z_8 x Z_8 (index 64, 3 | index: False): locally C_6 True; hexagons 64; C_6(G) iso G: True; components of C_6(G): 1
+  Z_4 x Z_8 (index 32, 3 | index: False): locally C_6 True; hexagons 64; C_6(G) iso G: False; components of C_6(G): None
+  Z_4 x Z_5: locally C_6 True; more than 60 induced hexagons
+  Z_5 x Z_7: locally C_6 True; more than 105 induced hexagons
+  Z_3 x Z_3 (index  9, 3 | index: True): locally C_6 False; hexagons 0; C_6(G) iso G: False; components of C_6(G): None
+  Z_3 x Z_4 (index 12, 3 | index: True): locally C_6 False; hexagons 6; C_6(G) iso G: False; components of C_6(G): None
+== (2) census of C_k-fixed Cayley graphs, k = 3..7, degree <= 7 ==

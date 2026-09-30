@@ -1,0 +1,21 @@
+(a) C_5(I_1): 14 vertices; pentagons through the hat: [5, 10], adjacent: True
+    C_5(I_2) has 16 vertices, C_5^2(I_1) has 17; C_5(I_2) is an induced subgraph of C_5^2(I_1): True
+    C_5(I_2) contains an induced icosahedron with [4, 4, 4] hats (the paper: four)
+(b) square tori: C_4(Cay(Z_n, {a, b})) equals the same circulant when the faces are the only induced squares
+   C_7(1,2): induced squares 7, faces are all of them: False, C_4-fixed: True
+   C_12(1,4): induced squares 12, faces are all of them: True, C_4-fixed: True
+   C_13(1,5): induced squares 13, faces are all of them: True, C_4-fixed: True
+   C_14(1,4): induced squares 14, faces are all of them: True, C_4-fixed: True
+   C_15(1,4): induced squares 15, faces are all of them: True, C_4-fixed: True
+   C_16(1,6): induced squares 16, faces are all of them: True, C_4-fixed: True
+   C_17(1,4): induced squares 17, faces are all of them: True, C_4-fixed: True
+   C_9(1,3): induced squares 18, faces are all of them: False, C_4-fixed: False
+   C_8(1,3): induced squares >32, faces are all of them: False, C_4-fixed: False
+   C_10(1,3): induced squares 30, faces are all of them: False, C_4-fixed: False
+   C_11(1,3): induced squares 22, faces are all of them: False, C_4-fixed: False
+   C_20(1,4): induced squares 20, faces are all of them: True, C_4-fixed: True
+   C_25(1,7): induced squares 25, faces are all of them: True, C_4-fixed: True
+(c) honeycomb torus on 26 vertices: degree [3], induced hexagons 13
+    C_6(honeycomb) iso P_13: True; C_6^2 iso P_13: True -> the {6,3} torus is C_6-preperiodic into the Eisenstein fixed point
+(d) 4-antiprism C_8(1,2): induced pentagons [(0, 1, 3, 4, 6), (0, 1, 3, 5, 6), (0, 2, 3, 5, 6), (0, 2, 3, 5, 7), (0, 2, 4, 5, 7), (1, 2, 4, 5, 7), (1, 2, 4, 6, 7), (1, 3, 4, 6, 7)]
+    C_5(C_8(1,2)) iso C_8(1,2): True; equals C_8(2,3) on the pentagon labels P_i -> i: False

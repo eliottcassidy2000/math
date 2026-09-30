@@ -1,0 +1,23 @@
+== (1) C_5(P_13) ==
+ P_13: 39 induced pentagons; C_5(P_13): 39 vertices, degrees [(16, 39)]
+ Aut(P_13) (order 78) acting on the 39 pentagons: orbits 1 (vertex-transitive: True); the index-2 subgroup Z_13 x| Z_3 acts freely: True -> C_5(P_13) is a Cayley graph of the non-abelian group of order 39
+== (2) what C_5(P_13) contains ==
+ induced P_13 inside C_5(P_13): False (0s)
+ induced icosahedra in C_5(P_13) (found, with a pole search from every vertex): 50
+  hats on them: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+ generic induced-subgraph search for the icosahedron in C_5(P_13): True
+== (3) C_5^2(P_13): icosahedra and hats from orbit representatives ==
+ C_5^2(P_13): 4563 vertices, 758862 edges, degree range 266..387 (0s)
+ orbits of Aut(P_13) on the 4563 vertices of C_5^2(P_13): 62, sizes [(39, 7), (78, 55)]
+ induced icosahedra of C_5(P_13) found by the pole search: 156
+ distinct lifted icosahedra in C_5^2(P_13) (the pentagon graphs of the icosahedra of C_5(P_13)): 13; all induced icosahedra: True
+ hats on the lifted icosahedra: [(108, 13)]
+  EXPANSION CERTIFICATE: C_5^2(P_13) contains the induced icosahedron [770, 339, 51, 385, 499, 66, 806, 2418, 3625, 3715, 1062, 3852] with tadpole hat(s) [1, 15, 25, 49] -> P_13 is pentagon-expanding
+== (4) the hat-doubling mechanism on the icosahedron, verified directly ==
+ tadpole T_(3,1) in the icosahedron: triangle [0, 1, 2] with pendant 6 attached to 1
+ C_5^1(I_1): 14 vertices; induced icosahedra found 3; hats on the first: [2, 2, 2]
+ C_5^2(I_1): 17 vertices; induced icosahedra found 3; hats on the first: [4, 4, 4]
+ C_5^3(I_1): 31 vertices; induced icosahedra found 3; hats on the first: [10, 10, 10]
+ C_5^4(I_1): 408 vertices; induced icosahedra found 3; hats on the first: [1, 16, 8]
+ sizes along the trajectory of I_1: [13, 14, 17, 31, 408]
+total time 10s
