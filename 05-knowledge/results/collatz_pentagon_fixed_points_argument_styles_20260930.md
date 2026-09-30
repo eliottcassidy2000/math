@@ -76,9 +76,24 @@ overlap (24, 48, 120, 4527 hatted copies at levels 1–4, no two disjoint and
 non-adjacent). So the conclusion rests on the paper's induction, whose first
 step is verified; it is typed accordingly.
 
-**A reusable certificate.** Any graph whose second pentagon iterate contains
-an induced hatted icosahedron is expanding. The same test applied to `P_17`
-(`17 → 272`) and to the Clebsch graph (`16 → 192`) is D39.
+**A reusable certificate, and `P_17`.** Any graph whose second pentagon
+iterate contains an induced hatted icosahedron is expanding. The test does
+not need `C_5^2` in full: for an induced icosahedron `I` of `C_5(G)`, the
+candidate hats are the induced pentagons of `C_5(G)` through the edges of
+the twelve link pentagons, and a hat is one that meets exactly four links
+forming a tadpole in the lifted icosahedron (adjacency there being "share an
+edge", the distance-2 relation of the twelfth note, not adjacency in `I`).
+Validated on `P_13` (108 hats, as in the full computation:
+`_p17_validation.out`), the test gives **`P_17` an induced icosahedron in
+`C_5(P_17)` (272 vertices) whose lift carries 402 tadpole hats**
+(`_p17.out`): `P_17` is pentagon-expanding under the same hypothesis as
+Theorem A. For the Clebsch graph the pole search is unusable (a link in
+`C_5(Clebsch)`, 192 vertices of degree 90, has more than `300000` induced
+pentagons), but a generic induced-subgraph search finds an icosahedron whose
+lift carries **583 hats** (`_clebsch.out`): the Clebsch graph is
+pentagon-expanding too. So the three growing graphs of the twelfth note's
+table (`P_13`, `P_17`, Clebsch) all expand, each by a hatted icosahedron two
+levels down.
 
 ## 2. Part B: the fixed points of `C_k` on vertex-transitive graphs
 
@@ -204,15 +219,27 @@ Circulants `C_n(S)`, `n ≤ 24`, degree `≤ 6`, `k = 3..6`: `k = 3`: `K_4` and
 its disjoint unions (`C_{4m}(m, 2m)`); `k = 4`: `C_7(1,2)` and the square tori
 listed in §2.3 (every `n` from 12 to 24 has some, `n = 8..11` none);
 `k = 5`: `C_8(1,2)`, `C_14(1,2,3)`, and `2 C_8(1,2)`, `3 C_8(1,2)`; `k = 6`:
-`P_13` only. The Cayley-graph part of the same census (abelian groups of
-rank 2 with `ab ≤ 36`, then `A_4`, `S_4`, `SL(2,3)`, `D_3..D_8`, `Q_8`,
-`Z_7 ⋊ Z_3`, `Z_13 ⋊ Z_3`, degree `≤ 6`) was still running when this note was
-committed (the abelian phase is slow: `Z_6 × Z_6` alone has thousands of
-connection sets); its output `_census.out` and a one-paragraph addendum here
-follow in a later commit. Expected there: the icosahedron as a Cayley graph
-of `A_4` (`k = 5`), the tori of §2.2–2.3 as Cayley graphs of `Z_a × Z_b`, and
-whatever else the filter "exactly `k` induced `k`-cycles through every
-vertex" lets through.
+`P_13` only. **Cayley graphs** (abelian groups of rank 2 with `ab ≤ 36`;
+`A_4`, `S_4`, `SL(2,3)`, `D_3..D_8`, `Q_8`, `Z_7 ⋊ Z_3`, `Z_13 ⋊ Z_3`; degree
+`≤ 6`; `_census_groups.out`, `_dihedral.out`): every `k = 3` fixed graph is
+`K_4` or a disjoint union of `K_4`'s; the `k = 4` fixed graphs are square tori
+on `Z_a × Z_b` (dozens of connection sets per group), the dihedral ones being
+the circulants again (`Cay(D_6, S) ≅ C_12(1,4)`, `Cay(D_8, S) ≅ C_16(1,6)`),
+and the `Z_7 ⋊ Z_3`, `Z_13 ⋊ Z_3` ones three disjoint copies of `C_7(1,2)`,
+`C_13(1,5)`; the `k = 5` fixed graphs are the icosahedron (`A_4`, degree 5),
+`C_8(1,2)` (as a Cayley graph of `D_4`) and its disjoint unions (`Z_2 × Z_8`,
+`Z_4 × Z_8`, `Z_2 × Z_16`, `D_8`, `S_4`), `C_14(1,2,3)` (`D_7`, degree 6) and
+its double (`Z_2 × Z_14`), two icosahedra (`S_4`, degree 5), and **one new
+sporadic example: a connected 6-regular Cayley graph of `D_8` on 16 vertices
+with 16 induced pentagons, six triangles at each vertex, and common-neighbour
+counts `0, 2, 4` on edges, isomorphic to no 6-regular circulant on 16
+vertices and neither to the Shrikhande graph (the `4 × 4` triangular torus,
+96 induced pentagons, not fixed) nor to the rook graph**; the `k = 6` fixed
+graphs are three copies of `P_13` in `Z_13 ⋊ Z_3` and nothing new. Caveat: the
+isomorphism test is budgeted after colour refinement, spectrum and triangle
+counts agree, and it gave up on 39 pairs (36-vertex abelian and 21/39-vertex
+non-abelian candidates), which are reported as non-fixed; those could hide
+further square tori, not new mechanisms.
 
 ## 3. Part C: argument styles for Collatz, re-priced, with three exact reformulations
 
@@ -250,6 +277,15 @@ the values of this tree. *Proof.* Divide the cocycle identities. ∎
 positive (`2^A ≥ 4^p > 3^p`) and its fixed point lies in `(0, 1]`; so a
 positive integer cycle other than `{1}` contains a 1-step (an element
 `≡ 3 mod 4`), the classical fact, here for free.
+
+*Corollary (the denominator law; D40 in the coprime case).* Always
+`D_u S_{uv} ≡ 2^{A_u} β(u, v) (mod D_{uv})` (substitute `3^{p_v} D_u ≡
+-2^{A_u} D_v` into the cocycle identity), so when `gcd(D_u, D_v) = 1` the
+denominator of `x_{uv}` in lowest terms is `|D_{uv}| / gcd(β(u,v), D_{uv})`:
+the mediant of two words with coprime clocks is integral iff the clock of
+the whole divides the Farey determinant of the parts. (Checked on all
+`16129` pairs of words with `A ≤ 7`, `13780` of them with coprime clocks;
+`_klein_farey.out`.)
 
 *Corollary (the one-run inequality).* If `w = (1)^k v` with `v` free of
 1-steps and `x_w = N ≥ 2` an integer, then
@@ -343,9 +379,14 @@ mediant tree, the set `K`), and D40–D41 say what to compute next.
   compare with the record `35655 ↦ 85`; a divergence proof must show this
   distance is bounded below by a function of the size, which is the size
   price in another coordinate.
-* **D42.** Fixed points of `C_7`: the census stopped at `k = 6`; test the
-  hyperbolic locally-`C_7` maps (Klein's `{3,7}` on 24 vertices) against the
-  rhombus graph, and extend the winding family (`C_n(1..m)`) to a rule.
+* **D42.** Fixed points of `C_7`: the census stopped at `k = 6`. A first
+  hyperbolic test is negative: among the `2997` degree-7 connection sets of
+  `S_4`, `96` give locally-`C_7` Cayley graphs (Klein's `{3,7}` map on 24
+  vertices is one, `PSL(2,7) ⊃ S_4` acting regularly), in four isomorphism
+  classes, and every one has more than `120` induced 7-cycles (short
+  non-contractible cycles), so none is a `C_7` fixed point
+  (`_klein_farey.out`). Larger hyperbolic quotients with systole `> 7` and the
+  winding family (`C_n(1..m)`) remain.
 * **D43.** The Cayley-graph census beyond degree 6, and vertex-transitive
   non-Cayley graphs (Petersen-like) for `k = 5`: is the 4-antiprism the only
   sporadic `C_5` fixed point?

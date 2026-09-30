@@ -1,0 +1,11 @@
+Shrikhande (4x4 triangular torus): n=16 degree=6 induced 5-cycles=96 triangles/vertex=6 lambda=[2] mu=[2] locally-C_k=False ; C_5-fixed: False
+== Cay(D_6, S), degree 4, k = 4: 1 non-isomorphic connected fixed graphs found
+   n=12 degree=4 induced 4-cycles=12 triangles/vertex=1 lambda=[0, 1] mu=[0, 1, 2] locally-C_k=False
+   isomorphic to: ['C_12(1,4)']
+== Cay(D_8, S), degree 4, k = 4: 1 non-isomorphic connected fixed graphs found
+   n=16 degree=4 induced 4-cycles=16 triangles/vertex=0 lambda=[0] mu=[0, 1, 2] locally-C_k=False
+   isomorphic to: ['C_16(1,6)', 'C_16(2,3)']
+== Cay(D_8, S), degree 6, k = 5: 1 non-isomorphic connected fixed graphs found
+   n=16 degree=6 induced 5-cycles=16 triangles/vertex=6 lambda=[0, 2, 4] mu=[0, 1, 2, 3, 4] locally-C_k=False
+   isomorphic to: none of the candidates
+   6-regular circulants on 16 vertices isomorphic to it: none (a genuinely non-circulant C_5 fixed point)

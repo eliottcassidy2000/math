@@ -1,0 +1,10 @@
+== (1) locally-C_7 Cayley graphs of S_4 of degree 7 ==
+ degree-7 connection sets: 2997; locally C_7: 96 (0s)
+ locally-C_7 graph #1: induced 7-cycles >120 (extra non-contractible 7-cycles; not a fixed point); triangles at a vertex 7 (0s)
+ locally-C_7 graph #2: induced 7-cycles >120 (extra non-contractible 7-cycles; not a fixed point); triangles at a vertex 7 (0s)
+ locally-C_7 graph #3: induced 7-cycles >120 (extra non-contractible 7-cycles; not a fixed point); triangles at a vertex 7 (1s)
+ locally-C_7 graph #4: induced 7-cycles >120 (extra non-contractible 7-cycles; not a fixed point); triangles at a vertex 7 (1s)
+== (2) the denominator law for weighted mediants ==
+ congruence D_u S_(uv) = -2^(A_u) beta mod D_(uv) on all 16129 pairs: True
+ denominator law den(x_(uv)) = |D_(uv)|/gcd(beta, D_(uv)) on the 13780 coprime-clock pairs: True 
+ so in the coprime-clock case the mediant is integral iff the clock of the whole divides the Farey determinant of the parts

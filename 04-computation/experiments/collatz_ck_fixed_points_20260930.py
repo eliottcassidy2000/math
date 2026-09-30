@@ -86,7 +86,22 @@ def wl_colours(adj, rounds=4):
     return col
 
 
-def is_isomorphic(adj1, adj2):
+def spectrum(adj):
+    import numpy as np
+    n = len(adj)
+    M = np.zeros((n, n))
+    for i in range(n):
+        for j in adj[i]:
+            M[i, j] = 1.0
+    return tuple(np.round(np.linalg.eigvalsh(M), 6))
+
+
+ISO_BUDGET = [0]
+
+
+def is_isomorphic(adj1, adj2, budget=200000):
+    """colour refinement + spectrum as invariants, then budgeted backtracking (returns False when the budget is exhausted,
+    which is logged; only used after the cheap invariants agree)."""
     n = len(adj1)
     if n != len(adj2):
         return False
@@ -95,6 +110,14 @@ def is_isomorphic(adj1, adj2):
         return False
     if sorted(Counter(c1).values()) != sorted(Counter(c2).values()):
         return False
+    if spectrum(adj1) != spectrum(adj2):
+        return False
+    # triangle counts per vertex as a further invariant
+    t1 = sorted(sum(1 for u in adj1[v] for w in adj1[v] if u < w and w in adj1[u]) for v in range(n))
+    t2 = sorted(sum(1 for u in adj2[v] for w in adj2[v] if u < w and w in adj2[u]) for v in range(n))
+    if t1 != t2:
+        return False
+    ISO_BUDGET[0] = budget
     # relabel colours of adj2 consistently: colours are canonical (sorted signatures) only if the multisets agree, which we checked
     order = sorted(range(n), key=lambda v: (Counter(c1)[c1[v]], c1[v]))
     mapping = {}; used = set()
@@ -103,6 +126,9 @@ def is_isomorphic(adj1, adj2):
     def bt(i):
         if i == n:
             return True
+        ISO_BUDGET[0] -= 1
+        if ISO_BUDGET[0] < 0:
+            return False
         v = order[i]
         for w in cand[v]:
             if w in used:
@@ -112,8 +138,13 @@ def is_isomorphic(adj1, adj2):
                 if bt(i + 1):
                     return True
                 del mapping[v]; used.discard(w)
+                if ISO_BUDGET[0] < 0:
+                    return False
         return False
-    return bt(0)
+    r = bt(0)
+    if not r and ISO_BUDGET[0] < 0:
+        print("   [isomorphism test: budget exhausted on a %d-vertex pair with equal invariants; reported as non-isomorphic]" % n, flush=True)
+    return r
 
 
 def is_locally_ck(adj, k):
@@ -296,12 +327,12 @@ def part1():
 
 
 # ---------- (2) census ----------
-def census():
+def census(skip_circulants=False):
     print("== (2) census of C_k-fixed Cayley graphs, k = 3..6, degree <= 6 (circulants n <= 24; abelian rank 2, ab <= 36; A_4, S_4, SL(2,3), D_3..D_8, Q_8, Z_7x|Z_3, Z_13x|Z_3) ==", flush=True)
     found = []
     t0 = time.time()
     # circulants
-    for n in range(4, 25):
+    for n in ([] if skip_circulants else range(4, 25)):
         els = list(range(n)); mul = lambda a, b: (a + b) % n; inv = lambda a: (-a) % n
         for S in symmetric_subsets(els, mul, inv, 0, 6):
             if min(S) != min(S):
@@ -322,6 +353,7 @@ def census():
             if a * b > 36 or b % a != 0:
                 continue
             els, mul, inv, ident = abelian(a, b)
+            print("  abelian Z_%d x Z_%d ... (%.0fs)" % (a, b, time.time() - t0), flush=True)
             for S in symmetric_subsets(els, mul, inv, ident, 6):
                 G = cayley(els, mul, inv, S)
                 for k in range(3, 7):
@@ -382,6 +414,6 @@ if __name__ == "__main__":
     mode = sys.argv[1] if len(sys.argv) > 1 else "all"
     if mode in ("all", "part1"):
         part1()
-    if mode in ("all", "census"):
-        found = census()
+    if mode in ("all", "census", "groups"):
+        found = census(skip_circulants=(mode == "groups"))
         part2_details(found)

@@ -1,0 +1,6 @@
+== Clebsch ==
+ Clebsch: 192 induced pentagons; C_5: 192 vertices, degrees 90..90 (0s)
+ (pole search unavailable; generic induced-subgraph search used)
+ induced icosahedra found in C_5(Clebsch): 1 (0s)
+  lifted icosahedron of [0, 1, 2, 42]: 355184 candidate pentagons through its link edges, 583 tadpole hats  -> EXPANSION CERTIFICATE (2s)
+total 2s

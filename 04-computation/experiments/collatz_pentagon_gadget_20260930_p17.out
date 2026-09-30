@@ -1,0 +1,5 @@
+== P_17 ==
+ P_17: 272 induced pentagons; C_5: 272 vertices, degrees 72..76 (0s)
+ induced icosahedra found in C_5(P_17): 4 (0s)
+  lifted icosahedron of [0, 1, 2, 56]: 223939 candidate pentagons through its link edges, 402 tadpole hats  -> EXPANSION CERTIFICATE (2s)
+total 2s

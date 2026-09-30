@@ -1,0 +1,171 @@
+== (2) census of C_k-fixed Cayley graphs, k = 3..6, degree <= 6 (circulants n <= 24; abelian rank 2, ab <= 36; A_4, S_4, SL(2,3), D_3..D_8, Q_8, Z_7x|Z_3, Z_13x|Z_3) ==
+ circulants done (0s): []
+  abelian Z_2 x Z_2 ... (0s)
+  abelian Z_2 x Z_4 ... (0s)
+  abelian Z_2 x Z_6 ... (0s)
+  abelian Z_2 x Z_8 ... (0s)
+  abelian Z_2 x Z_10 ... (0s)
+  abelian Z_2 x Z_12 ... (0s)
+  abelian Z_2 x Z_14 ... (1s)
+  abelian Z_2 x Z_16 ... (1s)
+  abelian Z_2 x Z_18 ... (3s)
+   [isomorphism test: budget exhausted on a 36-vertex pair with equal invariants; reported as non-isomorphic]
+  abelian Z_3 x Z_3 ... (24s)
+  abelian Z_3 x Z_6 ... (24s)
+  abelian Z_3 x Z_9 ... (24s)
+  abelian Z_3 x Z_12 ... (24s)
+   [isomorphism test: budget exhausted on a 36-vertex pair with equal invariants; reported as non-isomorphic]
+   [isomorphism test: budget exhausted on a 36-vertex pair with equal invariants; reported as non-isomorphic]
+   [isomorphism test: budget exhausted on a 36-vertex pair with equal invariants; reported as non-isomorphic]
+   [isomorphism test: budget exhausted on a 36-vertex pair with equal invariants; reported as non-isomorphic]
+   [isomorphism test: budget exhausted on a 36-vertex pair with equal invariants; reported as non-isomorphic]
+   [isomorphism test: budget exhausted on a 36-vertex pair with equal invariants; reported as non-isomorphic]
+   [isomorphism test: budget exhausted on a 36-vertex pair with equal invariants; reported as non-isomorphic]
+   [isomorphism test: budget exhausted on a 36-vertex pair with equal invariants; reported as non-isomorphic]
+   [isomorphism test: budget exhausted on a 36-vertex pair with equal invariants; reported as non-isomorphic]
+   [isomorphism test: budget exhausted on a 36-vertex pair with equal invariants; reported as non-isomorphic]
+   [isomorphism test: budget exhausted on a 36-vertex pair with equal invariants; reported as non-isomorphic]
+   [isomorphism test: budget exhausted on a 36-vertex pair with equal invariants; reported as non-isomorphic]
+  abelian Z_4 x Z_4 ... (84s)
+  abelian Z_4 x Z_8 ... (84s)
+  abelian Z_5 x Z_5 ... (85s)
+  abelian Z_6 x Z_6 ... (85s)
+ abelian rank-2 done (105s)
+ A_4: 85 connection sets (105s)
+ S_4: 3258 connection sets (106s)
+ D_3: 15 connection sets (106s)
+ D_4: 62 connection sets (106s)
+ D_5: 109 connection sets (106s)
+ D_6: 353 connection sets (106s)
+ D_7: 511 connection sets (106s)
+ D_8: 1372 connection sets (107s)
+ Q_8: 14 connection sets (107s)
+ SL(2,3): 298 connection sets (107s)
+   [isomorphism test: budget exhausted on a 39-vertex pair with equal invariants; reported as non-isomorphic]
+   [isomorphism test: budget exhausted on a 39-vertex pair with equal invariants; reported as non-isomorphic]
+   [isomorphism test: budget exhausted on a 39-vertex pair with equal invariants; reported as non-isomorphic]
+   [isomorphism test: budget exhausted on a 39-vertex pair with equal invariants; reported as non-isomorphic]
+   [isomorphism test: budget exhausted on a 39-vertex pair with equal invariants; reported as non-isomorphic]
+   [isomorphism test: budget exhausted on a 39-vertex pair with equal invariants; reported as non-isomorphic]
+   [isomorphism test: budget exhausted on a 39-vertex pair with equal invariants; reported as non-isomorphic]
+   [isomorphism test: budget exhausted on a 39-vertex pair with equal invariants; reported as non-isomorphic]
+   [isomorphism test: budget exhausted on a 39-vertex pair with equal invariants; reported as non-isomorphic]
+   [isomorphism test: budget exhausted on a 39-vertex pair with equal invariants; reported as non-isomorphic]
+   [isomorphism test: budget exhausted on a 39-vertex pair with equal invariants; reported as non-isomorphic]
+   [isomorphism test: budget exhausted on a 39-vertex pair with equal invariants; reported as non-isomorphic]
+   [isomorphism test: budget exhausted on a 39-vertex pair with equal invariants; reported as non-isomorphic]
+   [isomorphism test: budget exhausted on a 39-vertex pair with equal invariants; reported as non-isomorphic]
+   [isomorphism test: budget exhausted on a 39-vertex pair with equal invariants; reported as non-isomorphic]
+   [isomorphism test: budget exhausted on a 39-vertex pair with equal invariants; reported as non-isomorphic]
+   [isomorphism test: budget exhausted on a 39-vertex pair with equal invariants; reported as non-isomorphic]
+   [isomorphism test: budget exhausted on a 39-vertex pair with equal invariants; reported as non-isomorphic]
+   [isomorphism test: budget exhausted on a 39-vertex pair with equal invariants; reported as non-isomorphic]
+   [isomorphism test: budget exhausted on a 39-vertex pair with equal invariants; reported as non-isomorphic]
+   [isomorphism test: budget exhausted on a 39-vertex pair with equal invariants; reported as non-isomorphic]
+   [isomorphism test: budget exhausted on a 39-vertex pair with equal invariants; reported as non-isomorphic]
+   [isomorphism test: budget exhausted on a 39-vertex pair with equal invariants; reported as non-isomorphic]
+   [isomorphism test: budget exhausted on a 39-vertex pair with equal invariants; reported as non-isomorphic]
+   [isomorphism test: budget exhausted on a 39-vertex pair with equal invariants; reported as non-isomorphic]
+   [isomorphism test: budget exhausted on a 39-vertex pair with equal invariants; reported as non-isomorphic]
+ Z_13x|Z_3: 1159 connection sets (252s)
+ Z_7x|Z_3: 175 connection sets (252s)
+ C_k-FIXED graphs found (group, S, k, degree[, locality, connectivity]):
+   group A_4        k = 3 degree 3 : 1 connection sets
+   group D_4        k = 3 degree 3 : 3 connection sets
+   group D_6        k = 3 degree 3 : 3 connection sets
+   group D_8        k = 3 degree 3 : 5 connection sets
+   group Q_8        k = 3 degree 3 : 3 connection sets
+   group SL(2,3)    k = 3 degree 3 : 3 connection sets
+   group S_4        k = 3 degree 3 : 7 connection sets
+   group Z_2xZ_10   k = 3 degree 3 : 1 connection sets
+   group Z_2xZ_12   k = 3 degree 3 : 3 connection sets
+   group Z_2xZ_14   k = 3 degree 3 : 1 connection sets
+   group Z_2xZ_16   k = 3 degree 3 : 3 connection sets
+   group Z_2xZ_18   k = 3 degree 3 : 1 connection sets
+   group Z_2xZ_2    k = 3 degree 3 : 1 connection sets
+   group Z_2xZ_4    k = 3 degree 3 : 3 connection sets
+   group Z_2xZ_6    k = 3 degree 3 : 1 connection sets
+   group Z_2xZ_8    k = 3 degree 3 : 3 connection sets
+   group Z_3xZ_12   k = 3 degree 3 : 1 connection sets
+   group Z_4xZ_4    k = 3 degree 3 : 7 connection sets
+   group Z_4xZ_8    k = 3 degree 3 : 7 connection sets
+   group Z_6xZ_6    k = 3 degree 3 : 1 connection sets
+   group D_6        k = 4 degree 4 : 6 connection sets
+   group D_7        k = 4 degree 4 : 24 connection sets
+   group D_8        k = 4 degree 4 : 16 connection sets
+   group Z_13x|Z_3  k = 4 degree 4 : 3 connection sets
+   group Z_2xZ_10   k = 4 degree 4 : 6 connection sets
+   group Z_2xZ_12   k = 4 degree 4 : 12 connection sets
+   group Z_2xZ_14   k = 4 degree 4 : 30 connection sets
+   group Z_2xZ_16   k = 4 degree 4 : 32 connection sets
+   group Z_2xZ_18   k = 4 degree 4 : 71 connection sets
+   group Z_3xZ_12   k = 4 degree 4 : 92 connection sets
+   group Z_3xZ_3    k = 4 degree 4 : 6 connection sets
+   group Z_3xZ_6    k = 4 degree 4 : 24 connection sets
+   group Z_3xZ_9    k = 4 degree 4 : 60 connection sets
+   group Z_4xZ_8    k = 4 degree 4 : 16 connection sets
+   group Z_5xZ_5    k = 4 degree 4 : 60 connection sets
+   group Z_6xZ_6    k = 4 degree 4 : 96 connection sets
+   group Z_7x|Z_3   k = 4 degree 4 : 3 connection sets
+   group A_4        k = 5 degree 5 : 12 connection sets
+   group D_4        k = 5 degree 4 : 4 connection sets
+   group D_7        k = 5 degree 6 : 21 connection sets
+   group D_8        k = 5 degree 4 : 10 connection sets
+   group D_8        k = 5 degree 6 : 32 connection sets
+   group S_4        k = 5 degree 4 : 12 connection sets
+   group S_4        k = 5 degree 5 : 12 connection sets
+   group Z_2xZ_14   k = 5 degree 6 : 9 connection sets
+   group Z_2xZ_16   k = 5 degree 4 : 4 connection sets
+   group Z_2xZ_8    k = 5 degree 4 : 4 connection sets
+   group Z_4xZ_8    k = 5 degree 4 : 8 connection sets
+   group Z_13x|Z_3  k = 6 degree 6 : 2 connection sets
+== (2b) the fixed graphs, identified ==
+   ('Z_2xZ_2', ((0, 1), (1, 0), (1, 1)), 3, 3)
+   ('Z_2xZ_4', ((0, 1), (0, 3), (0, 2)), 3, 3)
+   ('Z_2xZ_6', ((0, 3), (1, 0), (1, 3)), 3, 3)
+   ('Z_2xZ_8', ((0, 1), (0, 7), (0, 2), (0, 6)), 5, 4)
+   ('Z_2xZ_8', ((0, 2), (0, 6), (0, 4)), 3, 3)
+   ('Z_2xZ_10', ((0, 1), (0, 9), (1, 2), (1, 8)), 4, 4)
+   ('Z_2xZ_10', ((0, 5), (1, 0), (1, 5)), 3, 3)
+   ('Z_2xZ_12', ((0, 1), (0, 11), (0, 4), (0, 8)), 4, 4)
+   ('Z_2xZ_12', ((0, 3), (0, 9), (0, 6)), 3, 3)
+   ('Z_2xZ_14', ((0, 1), (0, 13), (0, 4), (0, 10)), 4, 4)
+   ('Z_2xZ_14', ((0, 1), (0, 13), (0, 2), (0, 12), (0, 3), (0, 11)), 5, 6)
+   ('Z_2xZ_14', ((0, 7), (1, 0), (1, 7)), 3, 3)
+   ('Z_2xZ_16', ((0, 1), (0, 15), (0, 6), (0, 10)), 4, 4)
+   ('Z_2xZ_16', ((0, 2), (0, 14), (0, 4), (0, 12)), 5, 4)
+   ('Z_2xZ_16', ((0, 4), (0, 12), (0, 8)), 3, 3)
+   ('Z_2xZ_18', ((0, 1), (0, 17), (0, 4), (0, 14)), 4, 4)
+   ('Z_2xZ_18', ((0, 9), (1, 0), (1, 9)), 3, 3)
+   ('Z_3xZ_3', ((0, 1), (0, 2), (1, 0), (2, 0)), 4, 4)
+   ('Z_3xZ_6', ((0, 1), (0, 5), (1, 0), (2, 0)), 4, 4)
+   ('Z_3xZ_9', ((0, 1), (0, 8), (1, 0), (2, 0)), 4, 4)
+   ('Z_3xZ_12', ((0, 1), (0, 11), (0, 4), (0, 8)), 4, 4)
+   ('Z_3xZ_12', ((0, 3), (0, 9), (0, 6)), 3, 3)
+   ('Z_4xZ_4', ((0, 1), (0, 3), (0, 2)), 3, 3)
+   ('Z_4xZ_8', ((0, 1), (0, 7), (0, 2), (0, 6)), 5, 4)
+   ('Z_4xZ_8', ((0, 1), (0, 7), (1, 1), (3, 7)), 4, 4)
+   ('Z_4xZ_8', ((0, 2), (0, 6), (0, 4)), 3, 3)
+   ('Z_5xZ_5', ((0, 1), (0, 4), (1, 0), (4, 0)), 4, 4)
+   ('Z_6xZ_6', ((0, 1), (0, 5), (1, 0), (5, 0)), 4, 4)
+   ('Z_6xZ_6', ((0, 3), (3, 0), (3, 3)), 3, 3)
+   ('A_4', 'S of degree 5', 5, 5, 'locally C_k', 'connected')
+   ('A_4', 'S of degree 3', 3, 3, 'locally C_k', 'disconnected')
+   ('S_4', 'S of degree 3', 3, 3, 'locally C_k', 'disconnected')
+   ('S_4', 'S of degree 4', 5, 4, 'not locally C_k', 'disconnected')
+   ('S_4', 'S of degree 5', 5, 5, 'locally C_k', 'disconnected')
+   ('D_4', 'S of degree 3', 3, 3, 'locally C_k', 'disconnected')
+   ('D_4', 'S of degree 4', 5, 4, 'not locally C_k', 'connected')
+   ('D_6', 'S of degree 4', 4, 4, 'not locally C_k', 'connected')
+   ('D_6', 'S of degree 3', 3, 3, 'locally C_k', 'disconnected')
+   ('D_7', 'S of degree 4', 4, 4, 'not locally C_k', 'disconnected')
+   ('D_7', 'S of degree 6', 5, 6, 'not locally C_k', 'connected')
+   ('D_8', 'S of degree 4', 5, 4, 'not locally C_k', 'disconnected')
+   ('D_8', 'S of degree 3', 3, 3, 'locally C_k', 'disconnected')
+   ('D_8', 'S of degree 4', 4, 4, 'not locally C_k', 'connected')
+   ('D_8', 'S of degree 6', 5, 6, 'not locally C_k', 'connected')
+   ('Q_8', 'S of degree 3', 3, 3, 'locally C_k', 'disconnected')
+   ('SL(2,3)', 'S of degree 3', 3, 3, 'locally C_k', 'disconnected')
+   ('Z_13x|Z_3', 'S of degree 4', 4, 4, 'not locally C_k', 'disconnected')
+   ('Z_13x|Z_3', 'S of degree 6', 6, 6, 'locally C_k', 'disconnected')
+   ('Z_7x|Z_3', 'S of degree 4', 4, 4, 'not locally C_k', 'disconnected')
