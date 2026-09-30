@@ -453,6 +453,17 @@ all heights (THM-1289, published), δ ineffective.
   26b1 (rank 0). Reis-Song discrepancy and the Spectre paper typed as analogies.
   Note: `collatz_circulant_20260930_circulants_lucas_cubic_monotile.md`.
 
+  **Coherence and the pentagon trichotomy (mac-mini, 2026-09-30, part 4):** every periodic parity word closes a cycle of
+  every parity graph G_k (Banach point residues are lift-adjacent), so the level-1 inventory {loop 0 vanishing, 2-cycle
+  periodic, loop 1 expanding} persists at every level and forces rho_min = 0, rho_max = 1: THM-4474's "no residue certificate"
+  is a base-case coherence (Mac Lane's pattern with the sign reversed). Negation = half-turn k -> k + L/2 of the unit cycle
+  (2^(L/2) = -1 mod 3^n): conjugates Fourier coefficients and intertwines T_n with its conjugate (the braiding). Exact energy
+  transfer ||T_n g||^2 = sum |Ghat(xi)|^2 E_g(xi): Parseval 1/3 plus the covariance with the symbol (+5e-4 measured at n >= 8;
+  ridges = low-frequency twisted mass). 3-/5-node motif censuses of G_+ and G_- identical (SHEET-blind). Dictionary of sixes:
+  in-degree 2 iff n = 4 mod 6; (Z/6)^x = {+-1} swapped by the sheet involution; hexagon (Z/9)^x with 63 lambda^6 + lambda^3 - 1
+  (THM-4521). No Collatz step.
+  Note: `collatz_coherence_20260930_trichotomy_hexagon_motifs.md`.
+
   **Posets and DAGs (opus, 2026-09-27, S15):** value-time poset (dimension <= 2; leaders minimal, strict
   future minima maximal; infinitely many strict future minima iff divergent, one iff the global minimum is
   attained once); excursion forest (roots = height lower records = the descent chain under Terras equality;

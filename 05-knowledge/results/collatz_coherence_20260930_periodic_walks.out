@@ -1,0 +1,8 @@
+  word 0 ({0})                  x_w =        0: orbit mod 2^k is a closed walk of G_k with parities w, k=1..8: [True, True, True, True, True, True, True, True]
+  word 10 ({1,2})               x_w =        1: orbit mod 2^k is a closed walk of G_k with parities w, k=1..8: [True, True, True, True, True, True, True, True]
+  word 1 ({-1})                 x_w =       -1: orbit mod 2^k is a closed walk of G_k with parities w, k=1..8: [True, True, True, True, True, True, True, True]
+  word 110 ({-5,-7,-10})        x_w =       -5: orbit mod 2^k is a closed walk of G_k with parities w, k=1..8: [True, True, True, True, True, True, True, True]
+  word 11110111000 ({-17})      x_w =      -17: orbit mod 2^k is a closed walk of G_k with parities w, k=1..8: [True, True, True, True, True, True, True, True]
+  word 100 (x=1/5)              x_w =      1/5: orbit mod 2^k is a closed walk of G_k with parities w, k=1..8: [True, True, True, True, True, True, True, True]
+  word 1010 (x=?)               x_w =        1: orbit mod 2^k is a closed walk of G_k with parities w, k=1..8: [True, True, True, True, True, True, True, True]
+  word 11100 (x=?)              x_w =     19/5: orbit mod 2^k is a closed walk of G_k with parities w, k=1..8: [True, True, True, True, True, True, True, True]
