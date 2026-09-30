@@ -1,0 +1,4 @@
+== (5) control: the same record function for 5x+1 (positive drift; the never-descending set has Haar measure 0.176) ==
+ odd n <= 3000 under 5x+1 with no word-level descent within 400 odd steps (or periodic, or grown past 600 bits): 511 of them, first [7, 9, 21, 23, 25, 29, 31, 37, 39, 41, 45, 49]
+ records of tau_5 among the others: [(3, 1), (5, 118)]
+ reading: for 5x+1 the record function stalls (g_5 is bounded by the first stuck integer), as Conjecture G must fail when the drift is positive; for 3x+1 it climbs (27, 703, 10087, ...)

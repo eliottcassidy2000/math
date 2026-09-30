@@ -611,6 +611,14 @@ all heights (THM-1289, published), δ ineffective.
   1/(2^v - 3)); near-misses at distance 1/D; no unimodular pairs; K cap Z = {-1,-5,-17} to 10^5; proposals P1-P7 priced,
   none closes. Note: `collatz_pentagon_fixed_points_argument_styles_20260930.md`.
 
+  **Mediant tree and K unified (opus, 2026-09-30, S15 fourteenth note):** the prefix fixed point x_(w_j) is the 2-adic
+  convergent of n (x = n mod 2^(A_j)) and THM-4512's threshold; U^j(n) - n = D_j (x_(w_j) - n)/2^(A_j) (observer identity),
+  two-place product for the convergents; the precision residual (n at or below its prefix's fixed point) is empty to 10^6;
+  dist_2(n, K) = 2^(-floor(tau log_2 3)); tau records to 2*10^6 (27, 703, 10087, ..., 1126015 at 141); Conjecture G
+  (Terras minimum): the least representative of a no-descent class of depth A is >= 2^((1-h-o(1))A), which implies K cap N
+  empty and tau <= 12.6 log_2 n (data 5.6-7.0); fails for 5x+1 as DRIFT demands. The tree of fixed points is the tree of
+  all 3x+d cycles (denominator d), every d <= 100 coprime to 6 occurs. Note: `collatz_mediant_tree_K_20260930.md`.
+
   **STICKY made exact (opus, 2026-09-27, S16):** the STICKY proposal tested. Memory with a stationary law is not a
   fate-changing coordinate (ergodic theorem; simulated); the coordinate is size-coupled persistence: for n = 2^a m the
   driver 2^a is lost iff v_2(sigma(m)) <= a - 1, so the loss rate in class a is 0.586 N^(-1/2) (a = 1, odd squares) and

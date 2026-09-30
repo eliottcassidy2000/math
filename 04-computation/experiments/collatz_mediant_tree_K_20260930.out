@@ -1,0 +1,28 @@
+== (1) prefix fixed points are the 2-adic convergents of n ==
+ x_(w_j) = n mod 2^(A_j): True; U^j(n) - n = D_j (x_(w_j) - n)/2^(A_j): True; product identity |n - x|_2 |n - x|_oo = |U^j n - n|_2 |U^j n - n|_oo / |D_j|: True
+ n = 27: (j, clock > 0, x_(w_j), U^j(27)) for j <= 12: [(1, False, '-1', 41), (2, False, '-5', 31), (3, False, '-23/11', 47), (4, False, '-85/49', 71), (5, False, '-287/179', 107), (6, False, '-925/601', 161), (7, False, '-2903/1675', 121), (8, False, '-9221/4513', 91)]
+ the positive-clock prefixes with x_(w_j) < 27 are the value-level descents; 27 descends at j = 37
+== (2) THM-4512's threshold is the prefix fixed point; the precision residual ==
+ odd n <= 10^6: delay sigma - tau (value-level descent index minus first word-descent index): [(0, 499999)]
+ precision residual (n at or below the fixed point of its first positive-clock prefix): 0 members: []
+== (3) the 2-adic distance to K and the record function ==
+ dist_2(n, K) = 2^(-floor(tau(n) log_2 3)) (Lemma K1; proof in the note): (n, tau, exponent) for small n: [(1, 1, 1), (3, 2, 3), (5, 1, 1), (7, 4, 6), (9, 1, 1), (11, 3, 4), (15, 4, 6), (27, 37, 58)]
+ records of tau(n) (first word-descent index) for odd n < 2 * 10^6: [(3, 2, 3), (7, 4, 6), (27, 37, 58), (703, 51, 80), (10087, 66, 104), (35655, 85, 134), (270271, 103, 163), (362343, 104, 164), (381727, 109, 172), (626331, 111, 175), (1027431, 115, 182), (1126015, 141, 223)]
+ empirical Liouville exponent: dist_2(n, K) >= n^(-kappa) with kappa = max floor(tau log_2 3)/log_2 n over records = 12.198; the ratio tau/log_2 n at the last records: [5.63, 5.88, 5.76, 5.76, 7.01]
+ f(N) = least n with floor(tau log_2 3) >= N grows like 2^(N/kappa) = 2^(0.08 N): the size price of the never-descending set, in the record-holders
+== (4) the mediant tree is the tree of all 3x + d cycles ==
+ denominators d <= 100 (coprime to 6) of fixed points x_w, A <= 22, with the number of distinct x_w: [(1, 11), (5, 7), (7, 2), (11, 13), (13, 36), (17, 10), (19, 16), (23, 100), (25, 12), (29, 18), (31, 6), (35, 8), (37, 9), (41, 8), (43, 3), (47, 27), (49, 4), (55, 6), (59, 36), (61, 1), (71, 10), (73, 12), (77, 42), (83, 14), (85, 8), (89, 8), (91, 12), (95, 21), (97, 31)]
+ coprime-to-6 denominators <= 100 not reached by A <= 22: [53, 65, 67, 79] (11s)
+  d =  5: cycles of 3x+5 (least elements, starts <= 2*10^5): [1, 19, 23, 187, 347]; tree points m/5 with m in [1, 19, 23, 29, 31, 37, 49]
+  d =  7: cycles of 3x+7 (least elements, starts <= 2*10^5): [5]; tree points m/7 with m in [5, 11]
+  d = 11: cycles of 3x+11 (least elements, starts <= 2*10^5): [1, 13]; tree points m/11 with m in [1, 7, 13, 25, 29, 31, 35, 43, 49, 79]
+  d = 13: cycles of 3x+13 (least elements, starts <= 2*10^5): [1, 131, 211, 227, 251, 259, 283, 287, 319]; tree points m/13 with m in [1, 211, 227, 251, 259, 283, 287, 319, 323, 331, 341, 347]
+  d = 17: cycles of 3x+17 (least elements, starts <= 2*10^5): [1, 23]; tree points m/17 with m in [1, 5]
+  d = 19: cycles of 3x+19 (least elements, starts <= 2*10^5): [5]; tree points m/19 with m in [5, 7, 17, 31, 35]
+  d = 23: cycles of 3x+23 (least elements, starts <= 2*10^5): [5, 7, 41]; tree points m/23 with m in [5, 7, 11, 19]
+  d = 25: cycles of 3x+25 (least elements, starts <= 2*10^5): [7, 17]; tree points m/25 with m in [7, 11, 17, 19, 23, 29, 37, 41, 47, 83, 109, 137]
+  missing d = 53: 3x+53 cycles found (least elements): [103]
+  missing d = 65: 3x+65 cycles found (least elements): [19]
+  missing d = 67: 3x+67 cycles found (least elements): [17]
+  missing d = 79: 3x+79 cycles found (least elements): [1, 7, 233, 265]
+total 12s
