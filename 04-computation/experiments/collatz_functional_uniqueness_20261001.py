@@ -206,6 +206,20 @@ for D in (12, 16, 20):
     check(all(n % 3 == 0 for n in bare) and len(bare) == NB // 3,
           f"B: depth {D}: the bare-ray class is exactly the multiples of 3 ({len(bare)})")
 
+# direct identification: distinct n <= 2000 with 3 not dividing n differ 3-adically to order <= 6,
+# and s(D-2) >= 7 at D = 25, so their depth-25 backward trees must all be distinct
+D = 25
+ids = {}
+dup = []
+for n in range(1, 2001):
+    if n % 3 == 0:
+        continue
+    c = intcan(n, D)
+    if c in ids:
+        dup.append((ids[c], n))
+    ids[c] = n
+check(not dup, f"B: the depth-{D} backward trees of the {len(ids)} vertices n <= 2000 with 3 not dividing n are pairwise distinct" + ("" if not dup else f" dup={dup[:5]}"))
+
 # independent cross-check with string canonical forms (different code path)
 
 

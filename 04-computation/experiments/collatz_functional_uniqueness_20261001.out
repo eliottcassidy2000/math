@@ -46,7 +46,7 @@ PASS A: s(24) = 7 >= proved bound 6
 PASS A: s(25) = 7 >= proved bound 6
   26   13      13107 /   531441   s= 8   bound=6   worst-pair=(1, 13123)
 PASS A: s(26) = 8 >= proved bound 6
-  (time 8.0s)
+  (time 8.2s)
   first depth reaching s = k: {2: 4, 3: 9, 4: 13, 5: 16, 6: 19, 7: 23, 8: 26}  (steps [5, 4, 3, 3, 4, 3] )
   observed rate ~ 10/3 depth per 3-adic digit; the proof's recursion s(D) >= 1 + s(D-5) gives 5
 
@@ -61,6 +61,7 @@ PASS B: depth 16: the bare-ray class is exactly the multiples of 3 (2000)
 PASS B: depth 20: no canonical class mixes shapes (fbd 0/1/2/bare)
 PASS B: depth 20: every collision among n <= 6000 is 3-adically close (v_3 >= s(D-k)); 933 multi-classes
 PASS B: depth 20: the bare-ray class is exactly the multiples of 3 (2000)
+PASS B: the depth-25 backward trees of the 1334 vertices n <= 2000 with 3 not dividing n are pairwise distinct
 PASS B: string canonical forms (independent path) agree with hash-consed ids, n < 1500, depth 11
 
 == C. Eckmann-Hilton point: fibres {2w, (w-1)/3}, w = 4 mod 6 ==
