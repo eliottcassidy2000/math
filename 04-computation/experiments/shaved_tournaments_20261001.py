@@ -15,6 +15,8 @@ Checks:
   T5. n = 7: P7 is the only class without TT4, so every unavoidable 7-vertex graph lies in P7; every acyclic
       10-arc subgraph of P7 is avoided by some class => u(7) = 9, kappa(7) = 12 (HYP-3805 'very likely' -> proved);
       the 9-arc maximisers (51 isomorphism classes); the span-{1,3} graph misses exactly P7 and one |Aut|=1 class
+  T5b. n = 8 (C helper over all C(28,e) forward labellings): no 12-arc shaving; 48571 forward 11-arc shavings = 1617
+      isomorphism classes; u(8) = 11, kappa(8) = 17 (HYP-3819's predicted value)
   T6. T(n) by the Davis/Polya formula; u(n) <= C(n,2) - ceil(log2 T(n)) <= log2 n!; lower bound by superadditivity
       and transitive blocks (Erdos-Moser): u(n) = Theta(n log n); first n where the bound beats 2n - 4
   T7. perfect shavings (completions = classes, each once) exist only for n <= 4 (T(n) not a power of 2, 5 <= n <= 100)
@@ -624,6 +626,71 @@ miss = [i for i, t in enumerate(T7) if not emb13(t)]
 check(len(miss) == 2 and any(C[7][i][0] == cP7 for i in miss) and sorted(C[7][i][1] for i in miss) == [1, 21],
       f"path + all span-3 arcs (10 arcs) is avoided by exactly two 7-classes: P7 and one class with |Aut| = 1 "
       f"(scores {[scores(T7[i]) for i in miss]})")
+
+# T5b. n = 8 by exhaustive search over all forward labellings (C helper)
+def dcanon(n, arcs):
+    """canonical form of an oriented graph: individualisation-refinement on (out, in) colour signatures."""
+    out, inn = [0] * n, [0] * n
+    for a, b in arcs:
+        out[a] |= 1 << b
+        inn[b] |= 1 << a
+    best = [None]
+
+    def ref(colors):
+        while True:
+            sigs = [(colors[v], tuple(sorted(colors[w] for w in range(n) if out[v] >> w & 1)),
+                     tuple(sorted(colors[w] for w in range(n) if inn[v] >> w & 1))) for v in range(n)]
+            keys = sorted(set(sigs))
+            new = [keys.index(s) for s in sigs]
+            if len(keys) == len(set(colors)):
+                return new
+            colors = new
+
+    def rec(colors):
+        colors = ref(colors)
+        if len(set(colors)) == n:
+            order = sorted(range(n), key=lambda v: colors[v])
+            pos = {v: i for i, v in enumerate(order)}
+            code = tuple(sorted((pos[a], pos[b]) for a, b in arcs))
+            if best[0] is None or code < best[0]:
+                best[0] = code
+            return
+        cnt = Counter(colors)
+        target = min(c for c in cnt if cnt[c] > 1)
+        for v in range(n):
+            if colors[v] == target:
+                nc = [2 * c for c in colors]
+                nc[v] = 2 * target - 1
+                rec(nc)
+    rec([0] * n)
+    return best[0]
+
+
+src8 = os.path.join(HERE, "shaved_tournaments_20261001_u8.c")
+if gcc and os.path.exists(src8):
+    pairs8 = [(i, j) for i in range(8) for j in range(i + 1, 8)]
+    with tempfile.TemporaryDirectory() as td:
+        exe = os.path.join(td, "u8.exe")
+        subprocess.run([gcc, "-O2", "-fopenmp", "-o", exe, src8], check=True)
+        cf = os.path.join(td, "c8.txt")
+        with open(cf, "w") as f:
+            for c, _ in C[8]:
+                f.write(f"{c}\n")
+        r12 = subprocess.run([exe, "12", cf], capture_output=True, text=True, check=True).stdout.strip().splitlines()[-1]
+        mf = os.path.join(td, "m11.txt")
+        r11 = subprocess.run([exe, "11", cf, mf], capture_output=True, text=True, check=True).stdout.strip().splitlines()[-1]
+        masks = [int(x) for x in open(mf) if x.strip()]
+    print("   C helper:", r12, "|", r11)
+    check(r12 == "e=12 forward subsets=30421755 unavoidable=0",
+          "n = 8: none of the C(28,12) = 30421755 forward 12-arc graphs is a shaving: u(8) <= 11")
+    iso8 = Counter(dcanon(8, [pairs8[b] for b in range(28) if m >> b & 1]) for m in masks)
+    le8 = {k: linext(8, list(k)) for k in iso8}
+    check(len(masks) == 48571 and len(iso8) == 1617 and all(iso8[k] == le8[k] for k in iso8),
+          f"n = 8: {len(masks)} forward 11-arc shavings = {len(iso8)} isomorphism classes (each counted once per linear "
+          f"extension): u(8) = 11, kappa(8) = 28 - 11 = 17 = ceil(log2 6880) + 4, the value predicted by HYP-3819")
+    print("   n = 8 maximisers with a Hamiltonian path (unique linear extension):", sum(1 for k in le8 if le8[k] == 1))
+else:
+    print("   SKIP n = 8 (gcc or the C helper not found); recorded result: u(8) = 11, kappa(8) = 17")
 
 # ------------------------------------------------------------------ T6
 print("=== T6. growth: u(n) = Theta(n log n) ===")

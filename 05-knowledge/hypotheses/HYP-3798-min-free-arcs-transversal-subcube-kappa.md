@@ -80,3 +80,5 @@ random search inconclusive). A new invariant + a clean conjectural formula, not 
 
 
 > **CORRECTION (mac-mini-S90, HYP-3819):** the formula kappa(n)=1+C(n-2,2) gives kappa(7)=11 but the TRUE flip-rank kappa(7)=12 (opus/klein) -- the lazy-caterer formula BREAKS at n=7 (Paley-heptagon obstruction). The formula is exact only for n<=6.
+
+> **RESOLUTION (opus S15, 2026-10-01, THM-4526):** kappa(n) = 1, 2, 4, 7, 12, 17 for n = 3..8 EXACT (n = 7 via the Paley reduction, n = 8 by exhaustive search over all forward labellings). For n <= 6 the optimal fixing is UNIQUE up to isomorphism: the Hamiltonian path plus every span-3 arc (your 'path + skip-2 diagonal'). The lazy-caterer formula 1 + C(n-2,2) is exact only for n <= 6. It fails upward at n = 7, 8 (12 > 11, 17 > 16) and downward for large n, since kappa(n) = C(n,2) - Theta(n log n) (below 1 + C(n-2,2) from n = 38 on, by an explicit transitive-block bound). Note: `05-knowledge/results/shaved_tournaments_unavoidable_cores_20261001.md`.

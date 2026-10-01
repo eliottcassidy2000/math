@@ -36,6 +36,10 @@ PASS 51 isomorphism classes of maximum 7-vertex shavings; HYP-3805's span1 + spa
    linear-extension counts of the 51 maximisers: [(1, 4), (3, 10), (4, 2), (5, 8), (6, 2), (7, 2), (8, 2), (10, 10), (12, 2), (14, 6), (15, 1), (20, 2)]
 PASS certificate for u(7) <= 9: P7 plus 6 more classes (the minimum), all symmetric: |Aut| = [9, 9, 7, 5, 3, 3]
 PASS path + all span-3 arcs (10 arcs) is avoided by exactly two 7-classes: P7 and one class with |Aut| = 1 (scores [(1, 2, 2, 3, 4, 4, 5), (3, 3, 3, 3, 3, 3, 3)])
+   C helper: e=12 forward subsets=30421755 unavoidable=0 | e=11 forward subsets=21474180 unavoidable=48571
+PASS n = 8: none of the C(28,12) = 30421755 forward 12-arc graphs is a shaving: u(8) <= 11
+PASS n = 8: 48571 forward 11-arc shavings = 1617 isomorphism classes (each counted once per linear extension): u(8) = 11, kappa(8) = 28 - 11 = 17 = ceil(log2 6880) + 4, the value predicted by HYP-3819
+   n = 8 maximisers with a Hamiltonian path (unique linear extension): 5
 === T6. growth: u(n) = Theta(n log n) ===
 PASS Davis-Polya formula reproduces A000568 (n <= 10)
 PASS lower bound <= upper bound C(n,2) - ceil(log2 T(n)) for n <= 60

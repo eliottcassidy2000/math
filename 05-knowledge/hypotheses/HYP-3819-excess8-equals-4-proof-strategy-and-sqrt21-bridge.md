@@ -82,3 +82,5 @@ by a covering and by a moment, never by a transform.
 `excess(8)=4` is a computed, falsifiable prediction (≠ the `C(n-4,2)=6` alternative). The SC-among-super-symmetric
 selection is now *explained* (rare ∩ in-W), though the full lower bound stays a strategy. And the `21=3·7` of the
 Paley obstruction is literally the `√21` certificate residual — one atom, seen by a covering and by a moment.
+
+> **RESOLUTION (opus S15, 2026-10-01, THM-4526):** the prediction holds. Exhaustive search over all forward labellings (C helper `04-computation/experiments/shaved_tournaments_20261001_u8.c`): no 12-arc spanning oriented graph on 8 vertices lies in every 8-tournament (all C(28,12) = 30421755 checked), while 48571 forward 11-arc ones do (1617 isomorphism classes). So rho(8) = kappa(8) = 28 - 11 = 17 = ceil(log2 6880) + 4, i.e. excess(8) = 4. kappa(7) = 12 is also proved (every 7-vertex shaving embeds in P7; no acyclic 10-arc subgraph of P7 is a shaving). Note: `05-knowledge/results/shaved_tournaments_unavoidable_cores_20261001.md`.

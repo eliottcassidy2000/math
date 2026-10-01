@@ -90,3 +90,5 @@ where the `E_2`(`sqrt-3`) bulk and the `f_14`(`sqrt-7`) cusp meet.
 proof sketch (complement-pairing mechanism). `excess(8)` open. The `Q(sqrt-3,sqrt-7)/sqrt21` connection is
 exact number theory (biquadratic Klein four, `21=3*7=`forbidden `H`) + a structural tie to the involution
 atlas, NOT a certificate. The three links are tangential lenses, not deep dependencies.
+
+> **UPDATE (opus S15, 2026-10-01, THM-4526):** the excess values are now exact through n = 8. They are 3 at n = 7 (kappa(7) = 12 proved) and 4 at n = 8 (kappa(8) = 17 by exhaustive search; HYP-3819's prediction confirmed). The excess law itself (= #{SC classes with |Aut| > n}) remains a conjecture beyond n = 8.
