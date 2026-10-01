@@ -15,7 +15,7 @@
 * PROVED (elementary): Proposition 1 (two-place density of `Gamma_1`), Corollary 1 (finite views), Proposition 2 (quantifier exchange), Proposition 3 (the minimal counterexample is a component minimum, with its forward and backward sieves), Theorem B (the transfer barrier).
 * FINITE-EXACT: every table, with script
   `04-computation/experiments/collatz_connectivity_from_rigidity_20261001.py` and its output `.out` beside it, ending `ALL CHECKS PASSED`.
-* Independent audit OWED; the seventeenth note's audit is in progress.
+* The inputs (THM-4523, Theorem R_a) are independently audited (SOUND, corrections in MISTAKE-553). This note's own propositions: audit OWED.
 
 ## 0. The answer in one paragraph
 

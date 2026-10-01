@@ -19,7 +19,7 @@ Proposition B; FINITE-EXACT for every table (separation exponents to depth
 `5, 11, 13` and `7, 17, 23, 31`, the shortcut graph); CITED for
 Bernstein–Lagarias, Laarhoven–de Weger and Wirsching; typed ANALOGY /
 NUMEROLOGY where marked; Collatz OPEN.
-Independent audit: see §13.** Script
+Independently audited 2026-10-01 (SOUND; corrections applied, §13).** Script
 `04-computation/experiments/collatz_functional_uniqueness_20261001.py`
 (output `.out` beside it, ends `ALL CHECKS PASSED`). Canon: THM-4523
 (`01-canon/theorems/THM-4523-collatz-functional-graph-is-rigid-backward-trees-identify-vertices.md`).
@@ -63,12 +63,14 @@ residue graph `Gamma_M` is connected, Proposition M), and this also holds for
 `3n-1`, which has three components; so which component a vertex lies in is
 invisible modulo every `M` — it is an archimedean fact. **The component:** the
 trivial component is categorical — up to isomorphism it is the only connected
-"Collatz-typed" graph with a three-cycle through a branch vertex (Theorem C) —
-so the conjecture is equivalent to `(N, T)` being isomorphic to it; the cycle
-half of that statement is a family of first-order sentences, each a finite
-check (lonely-runner type), and the divergence half is not first-order at
-all: the complete first-order theory of the Collatz graph has models with
-divergent components (Proposition L). The owner's Eckmann–Hilton remark
+"Collatz-typed" graph with a three-cycle through a branch vertex (Theorem C).
+The conjecture is the statement that `(N, T)` is isomorphic to it, an
+immediate equivalence; Theorem C's content is the local characterisation.
+The cycle half of that statement is a family of first-order sentences, each a
+finite check (lonely-runner type). The divergence half is not first-order at
+all: the complete first-order theory of the Collatz graph, in the language
+of the map alone, has models with infinite aperiodic orbits (Proposition L).
+That is no barrier to proofs in PA or ZFC. The owner's Eckmann–Hilton remark
 becomes exact. Every fibre is produced by two "multiplications", `u ↦ 2u` and
 `u ↦ (u-1)/3`. They coincide only at the 3-adic number `u = -1/5`. That point
 is the fixed point of `x ↦ 6x+1`, one of the two orders of composing ×2 with
@@ -87,8 +89,10 @@ never balance one.
 
 The primes enter exactly here. For `n/2, an + 1` with `a` an odd prime, the
 backward trees identify the vertices iff 2 is a primitive root modulo `a^2`
-(Theorem R_a). Remembering the past is Artin's question, refined by
-Wieferich: yes for `3, 5, 11, 13, ...`, no for `7, 17, 23, 31, ...`.
+(Theorem R_a). Remembering each vertex from its own past is Artin's question,
+refined by Wieferich: yes for `3, 5, 11, 13, ...`, no for `7, 17, 23, 31,
+...`. Rigidity of the whole graph needs only non-Wieferich `a` (audit
+remark).
 
 The forward side is the mirror image. The 2-adic structure is *universal*:
 every map `n/2, (an+b)/2` is the same shift, the same De Bruijn graph. So the
@@ -102,7 +106,7 @@ backward structure name the same point.
 | labelling | `Aut(N, T) = 1`; the backward tree of `n` (with `3 ∤ n`) determines `n`; for `n/2, an+1` (`a` prime) backward trees identify vertices iff 2 is a primitive root mod `a^2` | **PROVED** (Theorems R, R_a) |
 | the map | `(N, T_{3,c}) ≅ (N, T_{3,c'})` iff `c = c'`; on `Z` iff `c' = ±c` (`gcd(cc', 6) = 1`) | **PROVED** (Corollary R2) |
 | finite places | every periodic `T`-invariant function is constant; `Gamma_M` connected for all `M` | **PROVED** (Proposition M); the same for `3n-1`, which has `≥ 3` components |
-| the component | `(N, T) ≅ Gamma_1`, the unique connected Collatz-typed graph with a branch three-cycle | **equivalent to Collatz** (Theorem C); cycle half first-order, divergence half not (Proposition L) |
+| the component | `(N, T) ≅ Gamma_1`, the unique connected Collatz-typed graph with a branch three-cycle | **equivalent to Collatz** (immediately; Theorem C gives the local characterisation); cycle half first-order, divergence half not (Proposition L) |
 | dynamics (fourth note) | among `n/2, (qn+1)/2`, `q = 3` is the only `q > 1` whose bounded-time certificates have density 1 | PROVED at density level, OPEN pointwise |
 
 ## 2. The backward tree is 3-adic (PROVED)
@@ -233,14 +237,24 @@ therefore has `φ(n)/c' = n/c` in `Z_3` for every `n` with `3 ∤ n`, i.e.
 proves (a).
 
 On `N` one caveat applies. The odd preimage `(n - c)/3` is negative for the
-finitely many even `n < c + 3` with `n ≡ c (mod 3)`, so exactly those fibres
-are truncated, and only vertices on their (finitely many) forward orbits have
-a backward tree that is not the full abstract one. `φ` maps forward orbits to
-forward orbits. So every `n` with `3 ∤ n` outside a finite union of forward
-orbits (all `n`, when `c = ±1`) has full trees at both ends, and
-`φ(n) = (c'/c) n`. Taking such `n` prime to `c` gives `c | c'`; symmetry gives
-`c = c'` (positivity excludes `c' = -c`). For `c = -1` the labels are `-n`, so
-an isomorphism with `(N, T)` would need `φ(n) = -n`. ∎
+finitely many even `n < c` with `n ≡ c (mod 3)` (example: `c = 5`, where the
+vertex 2 loses `-1`). So exactly those fibres are truncated, and only the
+vertices on their forward orbits `E_c` have a backward tree that is not the
+full abstract one. For `c = 5`, `E_5 = {1, 2, 4, 8}`.
+
+* `φ` maps forward orbits to forward orbits, so `E_c ∪ φ^(-1)(E_c')` is a
+  finite union of forward orbits.
+* Such `n` with `3 ∤ n` and `gcd(n, c) = 1` exist outside it. The levels of a
+  backward tree grow exponentially, each forward orbit meets a level at most
+  once, and coprimality to `c` is inherited by preimages.
+* For such `n`, `φ(n) = (c'/c) n`. This gives `c | c'`, and by symmetry
+  `c = c'` (positivity excludes `c' = -c`).
+* For `c = -1` it is simpler still: `(N, T_{3,-1})` has the 2-cycle `{1, 2}`
+  and `(N, T)` has no 2-cycle. ∎
+
+(The first draft read this off Theorem R through the conjugation and missed
+the pruned fibres. The gap was caught in self-review before the audit, and
+the audit confirmed both the gap and the patch.)
 
 **Corollary R3 (the shortcut graph).** For `x/2, (3x+1)/2` there is one vertex
 type, with preimages `2n` and `(2n-1)/3` (when `n ≡ 2 mod 3`), so parity
@@ -257,13 +271,15 @@ FINITE-EXACT (`.out`, section H): at depths `10, 14, 18, 22` every collision
 is 3-adically close to orders `3, 5, 7, 9`. The full proof is written out only
 for the non-shortcut graph.
 
-**Theorem R_a (prime multipliers: rigidity is Artin's question at `a^2`).**
-Let `a` be an odd prime and `T_a(n) = n/2` (`n` even), `an + 1` (`n` odd) on
-`N`. Labels now live in `Z_a`, with `e(x)` having the children `e(2x)` and, when
-`x ≡ 1 (mod a)`, `o((x-1)/a)`. The backward trees of `T_a` separate the vertices
-prime to `a` **iff 2 is a primitive root modulo `a^2`**. In that case
+**Theorem R_a (prime multipliers: backward separation is Artin's question at
+`a^2`).** Let `a` be an odd prime and `T_a(n) = n/2` (`n` even), `an + 1`
+(`n` odd) on `N`. Labels now live in `Z_a`, with `e(x)` having the children
+`e(2x)` and, when `x ≡ 1 (mod a)`, `o((x-1)/a)`. The backward trees of `T_a`
+*separate the vertices prime to `a`* (each such vertex is determined by its
+backward tree alone) **iff 2 is a primitive root modulo `a^2`**. In that case
 `Aut(N, T_a) = 1` and `s_a(D) ≥ 2 + ⌊(D - a - 1)/(2a - 1)⌋`; for `a = 3` this is
-Lemma 3 and Theorem R.
+Lemma 3 and Theorem R. The iff concerns separation only. Injectivity of
+`u ↦ A(u)` and whole-graph rigidity hold more widely (audit remark below).
 
 *Proof (if).* Let `κ(x)` be the least `k ≥ 0` with `2^k x ≡ 1 (mod a)`.
 
@@ -290,10 +306,27 @@ Lemma 3 and Theorem R.
 * If 2 is not a primitive root mod `a`, every unit outside `<2>` has a spine
   that never branches. Its tree is the bare path, the same as for multiples
   of `a`.
-* If 2 is a primitive root mod `a` but not mod `a^2` (a Wieferich `a` with
-  that property; none is known), then `W ≡ 0`. A spine whose first side is
-  bare then has only bare sides, and every label `≡ 1 (mod a^2)` has the same
-  comb-shaped tree. ∎
+* If 2 is a primitive root mod `a` but not mod `a^2`, then `W ≡ 0 (mod a)`.
+  A spine whose first side is bare then has only bare sides, and every label
+  `≡ 1 (mod a^2)` has the same comb-shaped tree. Such an `a` would be a
+  Wieferich prime with 2 primitive; the known Wieferich primes 1093 and 3511
+  have `ord_a(2) = 364` and `1755`, so this case is not known to occur. ∎
+
+**Audit remark (SKETCH + FINITE-EXACT, from the independent audit).** Let
+`r = ord_a(2)` and `W_r = (2^r - 1)/a`.
+
+* `u ↦ A(u)` is injective iff `W_r ≢ 0 (mod a)`, i.e. iff `a` is not
+  Wieferich. Along a spine the side residues advance by `W_r (mod a)`, so
+  runs of bare sides are bounded.
+* Then `Aut(N, T_a) = 1` by the same pinning argument: a vertex whose tree
+  is bare is fixed through its forward image `am + 1`, which branches.
+* Example `a = 7`: `s_7(D) = 1` for `D ≤ 10` and `2` for `D = 11..16`, so `A`
+  is injective and `7n+1` is rigid. Separation fails there only because the
+  units outside `<2>` carry the bare tree.
+
+So whole-graph rigidity of `n/2, an + 1` holds for every odd prime not known
+to be Wieferich. Backward *separation* needs 2 primitive mod `a^2`. The
+injectivity argument for non-primitive 2 is only sketched here.
 
 FINITE-EXACT (`.out`, section G2).
 
@@ -303,9 +336,10 @@ FINITE-EXACT (`.out`, section G2).
   carry the bare tree.
 
 The Eckmann–Hilton point of `T_a` is `-1/(2a - 1)`, again 2-adically odd.
-**Reading.** Whether a Collatz-like graph `n/2, an + 1` remembers its labels
-from its past alone is Artin's primitive-root question for 2 at `a`, refined
-by the Wieferich condition. The answer is yes for `a = 3, 5, 11, 13, 19, 29,
+**Reading.** Whether a Collatz-like graph `n/2, an + 1` remembers each label
+from that vertex's past alone is Artin's primitive-root question for 2 at
+`a`, refined by the Wieferich condition. Whether the whole graph is rigid is
+only the Wieferich condition. The answer is yes for `a = 3, 5, 11, 13, 19, 29,
 37, 53, 59, 61, ...`, and no for `a = 7, 17, 23, 31, ...`. There are
 infinitely many yes-primes under GRH (Hooley), but this is not known
 unconditionally.
@@ -467,16 +501,27 @@ which remains the strongest uniform statement there.
 ## 8. The logical type of the two halves (PROVED, elementary model theory)
 
 **Proposition L.** In the language with one unary function symbol `f`:
-(a) for each `L`, "no cycle of length `L` other than the trivial three-cycle"
-is a first-order sentence, decidable by a finite computation (a cycle of
-length `L` is a parity word whose rational fixed point must be a positive
-integer); (b) the complete theory `Th(N, T)` has a countable model with an
-element `c` whose orbit never meets the three-cycle (compactness: each finite
-set of sentences `f^k(c) ∉ {1,4,2}`, `k ≤ K`, is satisfied in `(N, T)` by
-`c = 2^(K+3)`); (c) if `(N, T)` has no non-trivial cycle, the component of `c`
-in that model is acyclic. So no set of first-order properties of the abstract
-graph implies the absence of divergent orbits, while the absence of cycles
-is a conjunction of first-order sentences.
+
+* (a) For each `L`, "no cycle of length `L` other than the trivial
+  three-cycle" is a first-order sentence, decidable by a finite computation:
+  a cycle of length `L` is a parity word whose rational fixed point must be a
+  positive integer.
+* (b) Unconditionally, the complete theory `Th(N, T)` has a countable model
+  with an element `c` whose forward orbit is infinite. Use compactness with
+  the sentences `f^(k+L)(c) ≠ f^k(c)` for all `k ≥ 0`, `L ≥ 1`. Any finite
+  subset of them, with `k, L ≤ B`, is satisfied in `(N, T)` by `c = 2^m` with
+  `m ≥ 2B`, whose first `m` iterates are distinct powers of 2.
+* (c) The component of `c` in that model is acyclic, since in a component
+  with a cycle every orbit is eventually periodic.
+
+So no set of first-order properties of the abstract graph implies the
+absence of acyclic components, while the absence of non-trivial cycles is a
+conjunction of first-order sentences. Here "divergent" can only mean
+"infinite forward orbit": the language has no order. This is a fact about
+the graph language alone. It is **not** a barrier to proofs in PA or ZFC,
+which may use arithmetic and induction. (Audit correction: the first draft
+proved (b)–(c) only under the hypothesis that `(N, T)` has no non-trivial
+cycle, while stating the conclusion unconditionally.)
 
 This is the sixteenth note's "cycle half is of lonely-runner type, divergence
 half is global" as a theorem about definability. Rigidity is not
@@ -509,8 +554,11 @@ i.e. `x = 1`. ∎
 
 **Theorem C.** A connected Collatz-typed graph that contains a three-cycle
 through a vertex of in-degree 2 is isomorphic to `Gamma_1`, the component of
-1 in `(N, T)`, by a unique isomorphism. Consequently **the Collatz conjecture
-is equivalent to `(N, T) ≅ Gamma_1`**.
+1 in `(N, T)`, by a unique isomorphism. (The equivalence
+`Collatz ⟺ (N, T) ≅ Gamma_1` is immediate, because connectivity is an
+isomorphism invariant. What Theorem C adds is that `Gamma_1` is
+characterised among all functional graphs by the local rules and one branch
+three-cycle.)
 
 *Proof.* By Lemma C the cycle carries `(1, 4, 2)`. A connected graph with a
 cycle has every forward orbit entering the cycle (shape lemma), so `ℓ` maps
@@ -523,8 +571,7 @@ cycle has every forward orbit entering the cycle (shape lemma), so `ℓ` maps
 * It is surjective: each backward rule exists in both graphs.
 
 Uniqueness of the isomorphism is Theorem R applied to `Gamma_1`, extended by
-the identity on the other components. Finally, `(N, T)` is connected iff it
-equals `Gamma_1`, iff it is isomorphic to `Gamma_1`. ∎
+the identity on the other components. `Gamma_1` is closed under preimages. ∎
 
 So "Collatz is the unique such graph" is exactly true in the categorical
 sense. The trivial component is pinned down by local rules plus one
@@ -592,11 +639,13 @@ Not proved: connectivity, which is the conjecture. Rigidity gives no grip on
 a hypothetical divergent component. Such a component would itself be rigid
 and Collatz-typed, and the skew product supplies such components in
 abundance off the diagonal. Whether one of them lies inside `N` is exactly the
-divergence half, and Proposition L shows that no first-order description of
-the graph can rule it out. Any proof must use something that distinguishes
-`N` from its elementary extensions: induction or the archimedean order. The
-fourth note's density statement and Tao's almost-all theorem are of that
-kind; the rigidity here is not.
+divergence half. Proposition L shows that no first-order description of the
+graph, in the language of the map alone, can rule it out. An argument
+phrased in that language must therefore use something that distinguishes
+`N` from its elementary extensions, such as induction or the archimedean
+order. This constrains graph-language arguments, not proofs in PA or ZFC.
+The fourth note's density statement and Tao's almost-all theorem use such
+inputs; the rigidity here does not (eighteenth note, Theorem B).
 
 ## 13. Verdicts and audit
 
@@ -604,28 +653,55 @@ kind; the rigidity here is not.
 |---|---|
 | Lemmas 1–2 (backward trees are 3-adic; four shapes) | PROVED |
 | Lemma 3 (`s(D) ≥ 1 + s(D-5)`; `A` injective on `U`); table to `D = 26` | PROVED + FINITE-EXACT |
-| Theorem R (`Aut(N,T) = 1`; backward trees identify vertices; `Z`, `R_6`) | PROVED |
-| Corollaries R1, R2; R3 (shortcut) | PROVED; R3 FINITE-EXACT + proof sketch |
+| Theorem R (`Aut(N,T) = 1`; backward trees identify vertices; `Z`, `R_6` with the fixed point 0) | PROVED + INDEPENDENTLY AUDITED |
+| Corollaries R1, R2 (pruned fibres handled); R3 (shortcut) | PROVED + AUDITED (R2 with the patch); R3 FINITE-EXACT + proof sketch |
 | Proposition EH (the point `-1/5`; balance depth in `[2v-1, 5v-6]`) | PROVED + FINITE-EXACT |
 | Proposition M (`Gamma_M` connected for all `M`; also `3n-1`) | PROVED + FINITE-EXACT |
 | census and exact obstructions | FINITE-EXACT |
-| Proposition L (first-order typing) | PROVED (compactness) |
-| Lemma C, Theorem C (categoricity; Collatz `⟺ (N,T) ≅ Gamma_1`) | PROVED |
+| Proposition L (first-order typing, language `{f}` only; unconditional after the audit correction) | PROVED (compactness) + AUDITED |
+| Lemma C, Theorem C (local characterisation of `Gamma_1`; the equivalence with Collatz is immediate) | PROVED + AUDITED |
 | Proposition B (cycle balance) | PROVED + FINITE-EXACT |
-| Theorem R_a (prime `a`: backward separation iff 2 is a primitive root mod `a^2`) | PROVED + FINITE-EXACT (`a = 5, 11, 13`; failures `7, 17, 23, 31`) |
+| Theorem R_a (prime `a`: backward separation iff 2 is a primitive root mod `a^2`) | PROVED + AUDITED + FINITE-EXACT (`a = 5, 11, 13`; failures `7, 17, 23, 31`); whole-graph rigidity for non-Wieferich `a` (e.g. 7): audit SKETCH |
 | LRC dictionary; tournaments; the two 5s | ANALOGY / NUMEROLOGY |
 | Collatz | OPEN |
 
-**Independent audit.** Pending at first draft; see the audit record appended
-below when it lands.
+**Independent audit (2026-10-01, blind re-derivation by a subagent, own code;
+no canonical forms or hash-consing).** The auditor built explicit
+truncations of the integer and `R_6` trees and decided isomorphism by an
+exact memoised child-matching search. The search was unit-tested against
+parenthesis strings.
+
+* **No claim false.** Every numerical claim reproduced exactly, including
+  `s(D)` for `D = 4..26`, `d(106288) = 34`, and the separation of all
+  `n ≤ 3000` at depth 26 (the last surviving pairs differ by `3^7`, e.g.
+  `230, 2417` at depth 25).
+* **Sound as stated:** Lemmas 1–3, Proposition EH, Proposition M (union-find
+  to `M ≤ 3000`), Proposition L(a), Proposition B (366 integer and 3000
+  rational cycles).
+* **Corrections, all applied above:**
+  * Theorem R on `Z` and `R_6` needs the vertex 0, the unique fixed point;
+    the note had it, the audit prompt did not.
+  * Corollary R2's pruned fibres (self-caught; patch confirmed).
+  * Proposition L(b): the conclusion was stated unconditionally from a proof
+    that assumed no non-trivial cycles. It is now unconditional via
+    `f^(k+L)(c) ≠ f^k(c)`, and it is not a barrier for PA or ZFC.
+  * Theorem C: the equivalence with Collatz is immediate; the content is the
+    local characterisation.
+  * Theorem R_a: the iff concerns separation, not injectivity, and
+    `W ≡ 0 (mod a)`. The audit adds that injectivity and rigidity hold for
+    every non-Wieferich `a`, e.g. `a = 7`, and that the threshold
+    `D ≥ a + 1` is sharp (`s_11(11) = 1`, `s_11(12) = 2`).
+* **Observed:** `d − 3v ∈ [−3, 0]` for the near-balance depths. Audit
+  scripts are in the session scratchpad (not committed).
 
 ## 14. Directions
 
-* **D57.** Whole-graph rigidity of `n/2, an+1` when 2 is *not* a primitive
-  root mod `a^2` (`a = 7, 17, 23, 31, ...`), using forward data: the bare unit
-  spines must be pinned by their images. Also prime-power and composite
-  multipliers, where `(Z/a)^×` is not cyclic and backward separation
-  necessarily fails.
+* **D57.** A full proof of the audit remark: injectivity of `u ↦ A(u)` for
+  every non-Wieferich prime `a` (side residues advance by
+  `W_r = (2^r - 1)/a`). With it, whole-graph rigidity of `n/2, an+1` follows
+  for `a = 7, 17, 23, 31, ...`, where bare unit spines are pinned through their
+  forward images. Also prime-power and composite multipliers, where
+  `(Z/a)^×` is not cyclic and backward separation necessarily fails.
 * **D58.** The exact separation rate. The steps `(4, 3, 3)` suggest
   `s(D) = ⌊(3D + c)/10⌋` from a worst-case cycle of root types. The balance
   depth is observed near `3v - 1`.
