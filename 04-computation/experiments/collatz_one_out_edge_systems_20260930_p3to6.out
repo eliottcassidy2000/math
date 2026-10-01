@@ -1,0 +1,20 @@
+== (3) Collatz on Q_odd: periodicity in a box, cycles per denominator, the sheet symmetry ==
+ odd-numerator rationals m/d, |m| <= 40, d <= 40 odd: 634 points; not eventually periodic within 600 steps or before 10^15: 0 []
+ distinct cycles reached, by denominator (d: least elements): {1: ['-1', '-7', '-91', '1'], 5: ['1/5', '19/5', '23/5'], 7: ['5/7'], 11: ['-29/11', '1/11', '13/11'], 13: ['1/13', '131/13'], 17: ['-179/17', '1/17', '23/17'], 19: ['5/19'], 23: ['41/23', '5/23', '7/23'], 25: ['17/25', '7/25'], 29: ['1/29', '11/29'], 31: ['13/31'], 35: ['13/35', '17/35']}
+ cycles with 3 | denominator: [] (clocks are coprime to 3, so none: preperiodic points may have 3 | d, cycle points cannot)
+ sheet symmetry: the fixed point of a word for 3x-1 is minus the fixed point for 3x+1: True (negation conjugates the two sheets on Z_(2))
+== (4) functional-graph census on N: cycles, preperiodicity, in-degrees ==
+ 3x+1  : cycles (least elements) reached from odd n < 2*10^4: [1]; preperiodic within bounds: 10000/10000; in-degree profile on odd m < 2*10^4 from n < 8*10^4: [(0, 3333), (1, 834), (2, 3958), (3, 1406), (4, 352)]
+ 3x-1  : cycles (least elements) reached from odd n < 2*10^4: [1, 5, 17]; preperiodic within bounds: 10000/10000; in-degree profile on odd m < 2*10^4 from n < 8*10^4: [(0, 3333), (1, 833), (2, 3959), (3, 1406), (4, 352)]
+ 5x+1  : cycles (least elements) reached from odd n < 2*10^4: [1, 13, 17]; preperiodic within bounds: 395/10000; in-degree profile on odd m < 2*10^4 from n < 8*10^4: [(0, 2000), (1, 5656), (2, 2198), (3, 137), (4, 8)]
+ 7x+1  : cycles (least elements) reached from odd n < 2*10^4: [1]; preperiodic within bounds: 18/10000; in-degree profile on odd m < 2*10^4 from n < 8*10^4: [(0, 5715), (1, 982), (2, 2756), (3, 479), (4, 59)]
+ x^2+1 : cycles (least elements) reached from odd n < 2*10^4: [1]; preperiodic within bounds: 1/10000; in-degree profile on odd m < 2*10^4 from n < 8*10^4: [(0, 9900), (1, 100)]
+ x^3+1 : cycles (least elements) reached from odd n < 2*10^4: [1]; preperiodic within bounds: 1/10000; in-degree profile on odd m < 2*10^4 from n < 8*10^4: [(0, 9977), (1, 23)]
+== (5) the Eckmann-Hilton defect ==
+ multipliers commute: 3 * (1/2) = (1/2) * 3; affine letters do not: the words (1,2) and (2,1) have carries 5, 7, defect beta = -2, so the two composites differ by the translation -1/4
+ the multiplier monoid <2, 3> is N x N (two commuting copies of N); the carry cocycle is the obstruction to interchange, and it is antisymmetric (twelfth note): the structure is symmetric, which is exactly what Eckmann-Hilton would force if the interchange held
+== (6) Chamberland's real extension ==
+ real fixed points of f in [-6, 6]: [-5.467909, -4.539501, -3.445708, -2.577373, -1.277734, 0.277734, 1.577373, 2.445708, 3.539501, 4.467909, 5.52644]
+ multipliers f'(x*) at them: [-6.714, 7.358, -3.475, 4.288, 0.386, 1.614, -2.288, 5.475, -5.358, 8.714, -8.475] (|f'| < 1 attracting)
+ f(1) = 2.000000, f(2) = 1.000000, f(-1) = -1.000000, f(-5) = -7.000000, f(-7) = -10.000000, f(-10) = -5.000000: the integer cycles of both sheets lie on one real line
+total 1s

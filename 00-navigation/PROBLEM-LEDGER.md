@@ -619,6 +619,16 @@ all heights (THM-1289, published), δ ineffective.
   empty and tau <= 12.6 log_2 n (data 5.6-7.0); fails for 5x+1 as DRIFT demands. The tree of fixed points is the tree of
   all 3x+d cycles (denominator d), every d <= 100 coprime to 6 occurs. Note: `collatz_mediant_tree_K_20260930.md`.
 
+  **One-out-edge systems (opus, 2026-09-30, S15 fifteenth note):** power maps oddpart(n^k+1) strictly increase for odd
+  n >= 3 (cubic identity oddpart(n^3+1) = oddpart(n+1)(n^2-n+1)): bare rays, the multiplicand extreme; only degree one can
+  balance multiplier against division (3 below, 5 and 7 above critical), the summand entering only as the carry. Collatz on
+  Z_(2) is all cycles (634-point box all preperiodic; cycles by denominator = the 3x+d cycles) while x^2+c on Q is all
+  trees (Northcott; c = -29/16 has exactly eight preperiodic rationals around the -7/4 three-cycle). Shape lemma and a
+  six-system census; the shift/automaton typing (2-shift, balanced, not a sliding-block code; orphans = multiples of 3);
+  Eckmann-Hilton: interchange fails by the carry, the defect is antisymmetric; negation conjugates the sheets on Z_(2);
+  Chamberland's extension glues the sheets about -1/2 (fixed-point equation invariant under x -> -1-x).
+  Note: `collatz_one_out_edge_systems_20260930.md`.
+
   **STICKY made exact (opus, 2026-09-27, S16):** the STICKY proposal tested. Memory with a stationary law is not a
   fate-changing coordinate (ergodic theorem; simulated); the coordinate is size-coupled persistence: for n = 2^a m the
   driver 2^a is lost iff v_2(sigma(m)) <= a - 1, so the loss rate in class a is 0.586 N^(-1/2) (a = 1, odd squares) and

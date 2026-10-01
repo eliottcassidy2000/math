@@ -1,0 +1,17 @@
+== (1) power maps n -> oddpart(n^k + 1) ==
+ strict increase for odd 3 <= n < 10^5: k = 2: True (v_2(n^2+1) = 1 always); k = 3: True (oddpart(n^3+1) = oddpart(n+1)(n^2-n+1))
+ identity oddpart(n^3+1) = oddpart(n+1) (n^2 - n + 1) for odd n < 10^5: True
+ images m = oddpart(n^3+1), n odd < 10^5: 50000 distinct, collisions (in-degree >= 2): 0 []
+ odd m <= 2000 that are images (have a preimage): 11 of 1000 -> orphans (in-degree 0) are the overwhelming majority; the graph on odd N is the fixed point 1 plus disjoint rays
+== (2) polynomial dynamics on Q: x -> x^2 + c ==
+ c = -29/16: orbit of -7/4: ['-7/4', '5/4', '-1/4', '-7/4'] (a rational 3-cycle; the -7/4 of the arithmetic-braids geometry note)
+  c = -29/16: rational preperiodic points with height <= 60: 8  ['-7/4', '-5/4', '-3/4', '-1/4', '1/4', '3/4', '5/4', '7/4']
+  c =     -1: rational preperiodic points with height <= 60: 3  ['-1', '0', '1']
+  c =      0: rational preperiodic points with height <= 60: 3  ['-1', '0', '1']
+  c =     -2: rational preperiodic points with height <= 60: 5  ['-2', '-1', '0', '1', '2']
+  c =    1/4: rational preperiodic points with height <= 60: 2  ['-1/2', '1/2']
+  c =   -3/4: rational preperiodic points with height <= 60: 4  ['-3/2', '-1/2', '1/2', '3/2']
+  c =   -7/4: rational preperiodic points with height <= 60: 4  ['-3/2', '-1/2', '1/2', '3/2']
+  c =     -6: rational preperiodic points with height <= 60: 4  ['-3', '-2', '2', '3']
+ reading: finitely many preperiodic rationals for every c (Northcott), at most one cycle of period <= 3 (Poonen's conjecture; periods 4, 5 excluded by Morton and Flynn-Poonen-Schaefer, CITED from memory); every other rational wanders to infinity in a tree component
+== (3) Collatz on Q_odd: periodicity in a box, cycles per denominator, the sheet symmetry ==
