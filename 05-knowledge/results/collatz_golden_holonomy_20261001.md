@@ -9,7 +9,9 @@
 - PROVED (elementary): Theorems G1–G3.
 - FINITE-EXACT: the lattice census in G2, and the checks for `n ≤ 20000`.
 - **NO PROOF of Collatz.** These are exact restatements (§6).
-- Independent audit: OWED.
+- Independent audit: DONE (2026-10-01, blind re-derivation with exact arithmetic). G1–G3 are SOUND; the census and
+  every identity were reproduced. Wording corrections are applied (semi-conjugacy, the exceptional point, the
+  measure; MISTAKE-556), and the record is in §8.
 
 ## 0. The owner's prompt
 
@@ -25,8 +27,9 @@ The first line is Proposition 3 of the twentieth note. This note takes the base-
 Let `T(n) = n/2, 3n+1`, `b_j(n) = T^j(n) mod 2`, and `F_n(z) = Σ_j b_j(n) z^j`.
 - After an odd step comes an even one, since `3n+1` is even. So **the parity words of `T` never contain `11`.**
 - Words with no `11` are exactly the normal forms of base φ, the golden-mean shift (Zeckendorf).
-- The rewriting `11 → 100` is the base-φ carry (`φ + 1 = φ²`). In Collatz it is the passage from `T` to the
-  shortcut `T₁ = (3n+1)/2`: substitute `10 → 1` (Check A).
+- The rewriting `11 → 100` is the base-φ carry (`φ + 1 = φ²`). Its Collatz analogue, not the same operation, is
+  the recoding from `T` to the shortcut `T₁ = (3n+1)/2`: substitute `10 → 1` (Check A). The carry preserves value;
+  the recoding changes word length.
 
 **"11 as bit shift with memory", made exact.**
 - In binary, `3 = 11₂`, and `3n = n + 2n` is a shift plus an add whose carries propagate: memory.
@@ -38,9 +41,12 @@ Let `T(n) = n/2, 3n+1`, `b_j(n) = T^j(n) mod 2`, and `F_n(z) = Σ_j b_j(n) z^j`.
 Put `Θ(n) = Σ_j b_j(n) φ^-(j+1) ∈ [0,1]`, the parity word read as a base-φ fraction.
 
 **Theorem G1.**
-- Θ extends continuously to the 2-adic integers and conjugates `T` to the golden β-transformation
-  `β(x) = φx mod 1`: `Θ(T x) = β(Θ(x))`.
-- The only exception is the boundary word `(10)^∞`, the cycle through −1, which reads as `Θ = 1`.
+- Θ extends to a continuous surjection `Z₂ → [0,1]` that **semi-conjugates** `T` to the golden β-transformation
+  `β(x) = φx mod 1`. It is injective except on a countable set where a word ending in `0^∞` and one ending in
+  `(10)^∞` have the same value; for example `Θ(−1/3) = Θ(−2) = 1/φ`.
+- `Θ(T x) = β(Θ(x))` holds as a congruence mod 1 for every `x ∈ Z₂`. As an equality in `[0,1)` it fails only at
+  `x = −2` (word `(01)^∞`), where `Θ(T(−2)) = Θ(−1) = 1` while `β(1/φ) = 0`. The cycle through −1 has word
+  `(10)^∞` and `Θ(−1) = 1`.
 - **The trivial cycle `1 → 4 → 2` reads as `Θ(1), Θ(4), Θ(2) = φ/2, 1/(2φ), 1/2 = cos 36°, cos 72°, cos 60°`,**
   the 3-cycle `1/2 → φ/2 → 1/(2φ) → 1/2` of β.
 
@@ -102,18 +108,25 @@ Hence **"no divergent Collatz orbit" ⟺ every parity series `F_n` is holonomic.
   numbers satisfies a Picard–Fuchs equation (Beukers' modular parametrisation). All the work is arithmetic
   (denominators) and analytic (decay).
 - For Collatz the arithmetic is free (coefficients 0/1), and holonomy is the whole question.
-- The 2024 "arithmetic holonomy" method of Calegari–Dimitrov–Tang is a quantitative Pólya–Carlson/Borel–Dwork
-  criterion. It turns integrality plus analytic continuation into rationality, the same dichotomy as Szegő's
-  theorem used here.
+- The 2024 "arithmetic holonomy" method of Calegari–Dimitrov–Tang bounds the holonomy rank (the dimension over
+  `Q(x)`) of the space of integral power series with prescribed analytic continuation. Rationality is its
+  classical rank-one case (Borel–Pólya), the same dichotomy as Szegő's theorem used here.
 - This is a mirror image, not a bridge: nothing here gives analytic continuation of `F_n`.
 
 ## 5. The parity measure lives on the golden-mean shift
 
-2-adic Haar measure pushes forward under the parity map to the Markov measure on the golden-mean shift with
-`P(0 → 1) = 1/2` (and `P(1 → 0) = 1`). Empirically `P(0→1) = 0.4991` on a million-range sample.
+2-adic Haar measure pushes forward under the parity map to the Markov chain on the golden-mean shift with
+`P(0 → 1) = 1/2` and `P(1 → 0) = 1`, started from `(1/2, 1/2)`.
+- This is not shift-invariant: Haar is not `T`-invariant, since `Haar(T⁻¹(2Z₂)) = 3/4`.
+- The shift-invariant version, with stationary law `(2/3, 1/3)`, is the image of
+  `(4/3)Haar|_even + (2/3)Haar|_odd`. That is the absolutely continuous `T`-invariant probability, and it is
+  equivalent to Haar.
+- Empirically `P(0→1) = 0.4991` on 20000 integers from `10⁶` (40-letter prefixes). The audit found 0.5002 on Haar
+  samples and 0.5022 over all `n ≤ 10⁶`.
 - Its entropy is `(2/3) ln 2 = 0.4621 < ln φ = 0.4812`.
 - The maximal-entropy (Parry) measure would use `P(0→1) = 1/φ² = 0.382`.
-- So `Θ_*(Haar)` is singular, of dimension `(2/3) log_φ 2 = 0.9603`.
+- So `Θ_*(Haar)`, which is equivalent to an ergodic β-invariant measure of this entropy, is singular, of dimension
+  `(2/3) log_φ 2 = 0.9603`.
 
 Collatz's coin is fair, while the golden shift's natural coin is biased by `1/φ²`. The 3n+1 dynamics sits
 strictly inside the golden-mean shift's entropy.
@@ -122,8 +135,9 @@ strictly inside the golden-mean shift's entropy.
 
 **NO PROOF.** G2 and G3 are exact restatements. The barrier is the one met in notes 18–20:
 - Θ is continuous on `Z₂`, and `Θ(n) ∈ ½Z[φ]` is a tail condition.
-- Every cylinder (finite parity prefix) contains positive integers and negative ones (whose Θ-values lie outside
-  `½Z[φ]`).
+- Every cylinder (finite parity prefix) contains positive integers and also negative integers that reach the −5
+  or −17 cycle, whose Θ-values lie outside `½Z[φ]`. (Negative integers reaching −1 have `Θ ∈ Z[φ]`; for example
+  `Θ(−3) = (8−4φ)/2`.) The audit checked every admissible prefix of length ≤ 14.
 - A proof must use the order or size of the integers, not their 2-adic or golden codes.
 
 ## 7. Directions
@@ -134,7 +148,19 @@ strictly inside the golden-mean shift's entropy.
 - **D77.** Find the D-finite closure: the smallest linear ODE that would be satisfied by `Σ_n F_n(z) w^n` (a
   two-variable parity generating function), if any.
 
-## 8. Reproduction
+## 8. Audit record (2026-10-01)
+
+A blind auditor subagent used its own exact code (record: session scratchpad `audit21/AUDIT.md`).
+- G1–G3 are SOUND.
+- The census was re-derived: 10 points, one of them (`2 − φ`) on the boundary `|conjugate| = φ²`, and 2 cycles.
+  All 1602 lattice points with `|b| ≤ 400` end in one of them.
+- Every identity holds exactly for `n ≤ 20000`.
+- Szegő's theorem is stated correctly.
+- Corrections applied: Θ is a semi-conjugacy; the exceptional point is `x = −2`; the Haar push-forward is not
+  stationary (the stationary version is equivalent to it); the sample size; negative integers reaching −1 have
+  `Θ ∈ Z[φ]`; the Calegari–Dimitrov–Tang description; T → T₁ is an analogue of the φ-carry.
+
+## 9. Reproduction
 
 ```bash
 python 04-computation/experiments/collatz_golden_holonomy_20261001.py

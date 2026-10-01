@@ -1931,6 +1931,19 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
+## MISTAKE-556 (2026-10-01, opus S15 twenty-first note, tournament designations, odd-zeta parallels; found by the independent audit) -- a counting identification taken from a summary instead of the source, and overgeneralisations contradicted by the session's own output
+
+- **Claims:**
+  - (1) `odd_zeta_parallels_petersen_20261001.md` called the Hamiltonian cycles of complement(C_N) (dinner-table rearrangements, 1, 3, 23, 177, 1553; classes 1, 1, 5, 19, 112) "Brown's convergent configurations", citing OEIS A002493. Brown's condition is stronger (no k-set, 2 <= k <= N-2, consecutive in both orders). His counts are 1, 1, 5, 17, 105 (labelled 1, 3, 23, 169, 1463), and the dinner-table sequence is A002816.
+  - (2) `tournament_designations_20261001.md` said "every designated 6-tournament is two 3-cycles glued" and "at 7 vertices only P7 survives". The same script's path-plus-arcs section lists four non-strong 6-tournaments and six non-strong 7-tournaments as unique avoiders. It also said P7 minus a vertex is "not singled out by any object", but an oriented (not directed) path plus one arc singles it out.
+  - (3) THM-4528 called Theta a conjugacy, with the exceptional point at the cycle through -1. It is a semi-conjugacy, and the identity fails only at x = -2.
+  - (4) The Haar push-forward was called "the Markov measure" without noting that it is not stationary.
+- **What survives:** every computation, Theorems G1-G3, the census of (1/2)Z[phi], all avoider lists, P1/P2 (P x P inside M_{0,8}), and the Z1/Z2 arithmetic.
+- **Rule:**
+  - Before naming a count after an author, recompute it with that author's exact definition from the source.
+  - Before writing "every X", read the full output of one's own script.
+  - For a map between a 2-adic space and an interval, check conjugacy versus semi-conjugacy and locate the exceptional points exactly.
+
 ## MISTAKE-555 (2026-10-01, opus S15 twentieth note and shaved-tournament note, found by the independent audit) -- two classical theorems presented without attribution ("we found no reference"), and a false reading of a size bound in the Paley-bridge proof attempt
 
 - **Claims** (`05-knowledge/results/shaved_tournaments_unavoidable_cores_20261001.md`, first draft):

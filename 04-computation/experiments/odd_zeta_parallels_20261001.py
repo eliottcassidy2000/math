@@ -9,8 +9,9 @@ Checks:
      lim (1/n) log Phi_n = 3 (psi(1) - psi(2/3)) - 3/2 = 0.72306, confirmed by direct prime sums; the preprint's
      C2' = 5.27694 equals 9 - 2.22306 - 1.5 (wrong sign); correct C2' = 8.27694 > C0' = 5.75349, and even the trivial
      bound log Phi_n <= 3 theta(n) gives C2' >= 6
-  B. Brown's convergent configurations (dinner parties): Hamiltonian cycles of the complement of C_N
-     (1, 3, 23, 177, 1553 for N = 5..9, OEIS A002493) and their classes under the dihedral symmetry (1, 1, 5, 19, 112)
+  B. dinner-table rearrangements (Hamiltonian cycles of complement(C_N): 1, 3, 23, 177, 1553 for N = 5..9, OEIS A002816;
+     1, 1, 5, 19, 112 dihedral classes) versus Brown's convergent configurations (the stronger condition that no set of
+     k elements, 2 <= k <= N-2, is consecutive in both orders: 1, 3, 23, 169, 1463; classes 1, 1, 5, 17, 105)
   C. Petersen = Kneser KG(5,2) = intersection graph of the 10 boundary lines D_ij of M_{0,5}-bar; for the
      dihedral order delta = (12345) and its convergent partner delta' = (13524), the consecutive pairs of delta and
      of delta' are two disjoint 5-cycles of Petersen joined by a perfect matching (the standard drawing): Brown's
@@ -52,7 +53,7 @@ def v_kp(n, k, p):
 
 ok = True
 tested = 0
-for n in list(range(10, 200)) + [997, 1500, 2023]:
+for n in list(range(10, 200)) + [997, 1500, 2023]:   # 4341 (n, p) pairs
     h0 = 3 * n + 2
     for p in primes_upto(n):
         if p * p <= h0:
@@ -111,17 +112,36 @@ def canon_cycle(c):
     return best
 
 
-raw, orb = [], []
+def brown_convergent(c):
+    """Brown (arXiv:1412.6508, 1.5 and 10.1): no set of k elements, 2 <= k <= N-2, is consecutive in both orders"""
+    n = len(c)
+    blocks_ref = {frozenset((s + i) % n for i in range(k)) for k in range(2, n - 1) for s in range(n)}
+    return not any(frozenset(c[(s + i) % n] for i in range(k)) in blocks_ref for k in range(2, n - 1) for s in range(n))
+
+
+raw, orb, rawB, orbB = [], [], [], []
 for n in range(5, 10):
     cyc = ham_cycles_complement(n)
-    o = set()
+    o, oB = set(), set()
+    nB = 0
     for c in cyc:
-        o.add(min(canon_cycle(tuple(((-x if g >= n else x) + g % n) % n for x in c)) for g in range(2 * n)))
+        k = min(canon_cycle(tuple(((-x if g >= n else x) + g % n) % n for x in c)) for g in range(2 * n))
+        o.add(k)
+        if brown_convergent(c):
+            nB += 1
+            oB.add(k)
     raw.append(len(cyc))
     orb.append(len(o))
-print("   raw:", raw, " up to the dihedral symmetry of delta:", orb)
+    rawB.append(nB)
+    orbB.append(len(oB))
+print("   dinner-table rearrangements:", raw, " classes:", orb)
+print("   Brown-convergent configurations:", rawB, " classes:", orbB)
 check(raw == [1, 3, 23, 177, 1553] and orb == [1, 1, 5, 19, 112],
-      "Hamiltonian cycles of complement(C_N): 1, 3, 23, 177, 1553 (A002493); dihedral classes 1, 1, 5, 19, 112")
+      "dinner-table rearrangements (Ham. cycles of complement(C_N)): 1, 3, 23, 177, 1553 (OEIS A002816); "
+      "dihedral classes 1, 1, 5, 19, 112")
+check(rawB == [1, 3, 23, 169, 1463] and orbB == [1, 1, 5, 17, 105],
+      "Brown's convergent configurations (no k-block, 2 <= k <= N-2, consecutive in both orders): 1, 3, 23, 169, 1463; "
+      "classes 1, 1, 5, 17, 105 = Brown's C_N (they differ from dinner tables from N = 8 on)")
 
 print("=== C. the Petersen graph inside M_{0,5}-bar ===")
 pairs = [frozenset(c) for c in combinations(range(1, 6), 2)]

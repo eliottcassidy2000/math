@@ -10,7 +10,9 @@
 - Two-block cycles for all `n`: Benhocine–Wojda (1983).
 - Oriented Hamiltonian paths for all `n`: Grünbaum (1971), Rosenfeld, Havet–Thomassé (2000).
 - No new theorem for general `n`. The results here are the small-`n` census and its structure.
-- Independent audit: OWED.
+- Independent audit: DONE (2026-10-01, blind, own C code). D1–D3 and D5 are SOUND, and every avoider list was
+  reproduced. D4 holds with the word "directed". The overgeneralizations in §3–§4 are corrected (MISTAKE-556), and
+  the record is in §6.
 
 ## 0. The question
 
@@ -52,25 +54,33 @@ All oriented Hamiltonian paths and all non-directed oriented Hamiltonian cycles,
   is the classical Grünbaum–Rosenfeld–Havet–Thomassé exception list, reproduced.
 - **Cycles.**
   - Two-block words designate the 3-cycle compositions of §1.
-  - Four-block and antidirected words designate the "Paley line":
+  - Four- and six-block (near-alternating) words designate the "Paley line":
     - `00101` is avoided only by `R5` (`n = 5`);
     - `001011` and `001101` are avoided only by **`G_par`** (`n = 6`);
     - `0010101` is avoided only by `P7` (`n = 7`).
+  - `001001` is avoided by three classes, one of them `P7` minus a vertex.
   - Antidirected cycles are avoided by 3, 13 and 19 classes at `n = 4, 6, 8`.
   - Nothing else is avoidable for `n = 7, 8`.
-- **Path + one or two extra arcs** (`n ≤ 7`):
+- **Directed Hamiltonian path + one or two extra arcs** (`n ≤ 7`):
   - `H_6 + (0→3)`, the bypass plus one more arc from the first vertex, is avoided only by **`G_par`**.
   - `H_7 + (0→5)` is avoided only by `P7`.
+  - The same family also uniquely designates non-strong tournaments with a source or sink:
+    - at `n = 6`: `TT2[T*_5,1]`, `TT2[1,T*_5]`, `TT4[1,C3,1,1]` and `TT4[1,1,C3,1]`;
+    - at `n = 7`: six classes, with scores `0333444`, `1222356`, `0134445`, `0133356`, `0233346` and `2223336`.
+- **Oriented Hamiltonian path + extra arcs.** Allowing any orientation of the path, `P7` minus a vertex becomes the
+  unique avoider of 18 labelled digraphs, for example path word `00100` plus the arc `4→1`.
 
 ## 3. Two 3-cycles, glued three ways
 
-Every special 6-tournament found is two copies of the 3-cycle (the special part of `T*_5`) glued together.
+Every 6-tournament uniquely designated by an oriented Hamiltonian **cycle** is two copies of the 3-cycle (the special
+part of `T*_5`) glued together: in series or in parallel. The antiparallel gluing is the third natural way, and it
+turns out to be `P7` minus a vertex.
 
 | gluing of `A = C3`, `B = C3` | cross arcs | what it is | designated by |
 |---|---|---|---|
 | in series | all `A → B` | `TT2[C3,C3]`, `|Aut| = 9` | `D(6;2,4)`, the two-block family |
 | matching, **parallel** rotation | `a_i → b_i`, the rest `B → A` | **`G_par`**: scores `2,2,2,3,3,3`, `|Aut| = 3`, `H = 45`, `hc = 5` | `H_6 + (0→3)`; cycles `001011`, `001101` |
-| matching, **antiparallel** rotation | same | **`P7` minus a vertex**: same scores, `|Aut|`, `H`, `hc` | not singled out by any object here |
+| matching, **antiparallel** rotation | same | **`P7` minus a vertex**: same scores, `|Aut|`, `H`, `hc` | no cycle, and no directed path + arcs; an oriented path + one arc (e.g. `00100` + `4→1`) |
 
 **`G_par` and `P7` minus a vertex are twins.** They share every invariant in the table, including the maximum
 `H = 45` at `n = 6`, yet they differ:
@@ -86,19 +96,30 @@ alone. The exact class computation corrected that before anything was written up
 **Two families.**
 - **Rigid compositions of 3-cycles** (`C3`, `TT2[1,C3]`, `T*_5`, `TT2[C3,C3]`) are designated by objects with few
   blocks.
-- **Symmetric "near-Paley" tournaments** (`R5`, `G_par`, `P7`) are designated by objects that alternate.
+- **Symmetric "near-Paley" tournaments** (`R5`, `G_par`, `P7`) are designated by many-block (near-alternating)
+  cycles and by the bypass with one more chord.
 
-**At 6 vertices the two families meet.** Every designated 6-tournament is two 3-cycles glued: in series, in
-parallel, or antiparallel.
+**At 6 vertices the two families meet.** The cycle-designated 6-tournaments are two 3-cycles glued in series
+(`TT2[C3,C3]`) or in parallel (`G_par`). The antiparallel gluing is `P7` minus a vertex. Path-plus-arcs objects also
+single out four non-strong compositions of `C3` or `T*_5` with transitive parts (§2).
 
-**At 7 vertices only `P7` survives** (for these objects). This matches its role as the obstruction for the largest
-unavoidable subgraphs (THM-4526).
+**At 7 vertices only `P7` survives** among oriented paths and cycles, and among strong tournaments designated by a
+directed path + arcs. This matches its role as the obstruction for the largest unavoidable subgraphs (THM-4526).
 
 At 8 vertices only the antidirected cycle is avoidable. Rosenfeld conjectured that from 9 vertices on, every
 non-directed oriented Hamiltonian cycle is unavoidable. Thomason proved this for very large `n`, and Havet (JCTB 80
 (2000)) for `n ≥ 68`. For paths, Havet–Thomassé settled all `n`.
 
-## 5. Reproduction
+## 5. Audit record (2026-10-01)
+
+A blind auditor regenerated all classes for `n ≤ 8` (1, 1, 2, 4, 12, 56, 456, 6880) with its own C code and recomputed
+every avoider list (record: session scratchpad `audit21/AUDIT.md`).
+- D1–D3 and D5: SOUND. In particular, the maximum `H = 45` at `n = 6` is attained exactly by `G_par` and `G_anti`.
+- D4: SOUND for directed paths. With arbitrary oriented paths, `P7` minus a vertex is a unique avoider.
+- §3–§4 overclaimed ("every designated 6-tournament is two 3-cycles glued"; "at 7 vertices only `P7` survives"),
+  contradicting the script's own §4 output. Corrected above; see MISTAKE-556.
+
+## 6. Reproduction
 
 ```bash
 python 04-computation/experiments/tournament_designations_20261001.py
