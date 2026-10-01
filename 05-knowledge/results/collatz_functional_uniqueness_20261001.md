@@ -620,12 +620,16 @@ by cycles).
   Paley heptagon (HYP-3805), whose automorphism group has order 21: maximal
   symmetry. The Collatz graph has trivial automorphism group: maximal
   asymmetry. The set `{1, 2, 4}` is both the Paley connection set and the
-  trivial Collatz cycle. This note first typed that as NUMEROLOGY; the label
-  is **WITHDRAWN**. The coincidence is structural: the trivial cycle's parity
-  word `100` has real code `QR_7` and 2-adic code `NQR_7`, and the Paley arc
-  reversal is the sheet swap (nineteenth note,
-  `collatz_paley_bridge_20261001.md`, Proposition 2). The only intrinsic
-  binary relation on the graph itself is the fibre pair
+  trivial Collatz cycle. This note first typed that as NUMEROLOGY. The
+  audited nineteenth note (`collatz_paley_bridge_20261001.md`, Propositions
+  2–3) gives the honest label, EXPLAINED COINCIDENCE:
+  * the trivial cycle's parity word `100` has real code `QR_7` and 2-adic
+    code `NQR_7`;
+  * every period-3 orbit of any 0/1-coded map gets such a code;
+  * the Collatz input is Gersonides' `2^2 − 3 = 1`;
+  * nothing extends beyond period 3.
+
+  The only intrinsic binary relation on the graph itself is the fibre pair
   (even child, odd child), oriented by parity. It is not a tournament, so per
   AGENTS.md none is forced.
 
@@ -667,7 +671,7 @@ inputs; the rigidity here does not (eighteenth note, Theorem B).
 | Proposition B (cycle balance) | PROVED + FINITE-EXACT |
 | Theorem R_a (prime `a`: backward separation iff 2 is a primitive root mod `a^2`) | PROVED + AUDITED + FINITE-EXACT (`a = 5, 11, 13`; failures `7, 17, 23, 31`); whole-graph rigidity for non-Wieferich `a` (e.g. 7): audit SKETCH |
 | LRC dictionary; the two 5s | ANALOGY / NUMEROLOGY |
-| `{1,2,4}` = Paley set = trivial cycle | STRUCTURAL (NUMEROLOGY label withdrawn; nineteenth note, Proposition 2) |
+| `{1,2,4}` = Paley set = trivial cycle | EXPLAINED COINCIDENCE (period 3 + Gersonides; nineteenth note, audited) |
 | Collatz | OPEN |
 
 **Independent audit (2026-10-01, blind re-derivation by a subagent, own code;
