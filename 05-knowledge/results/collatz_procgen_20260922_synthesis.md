@@ -1754,6 +1754,35 @@ seed and is cited, complemented and audited, not duplicated.
   smallest open Beal signature `(3,5,7)` (AUTHOR-CLAIMED). No Collatz
   step.
 
+## 2aa. Wave 22 (2026-09-30/10-01, this session): LRC is local, Collatz is global — the owner's thesis tested
+
+The owner wrote: "lonely runner being local while Collatz being global means that each lacks information about the other's type ... both finely tuned to the patterns in the primes; understanding both at the same time may unlock the number-theoretic insights to each." Two lanes tested this.
+
+**1. The asymmetry is real, and exact** ([localglobal note](procgen_localglobal_20260930_lrc_collatz_primes.md)).
+* **Two kinds of constraint.**
+  * An LRC counterexample is constrained at every prime: missing some `q <= k+1` makes `1/q` lonely.
+  * A Collatz cycle word is constrained only at the primes of `D = 2^p - 3^a` and at the real place.
+* **Exact dictionary.** A cycle of shape `(p,a)` exists iff the time `1/|D|` is not lonely for the carry set.
+* **No transference either way.** A single relation can block loneliness only if its l1-norm is 1, so a cycle relation is invisible to LRC tests.
+
+**2. The prime alignment is shallow on both sides.**
+* **LRC.** The primes decide where the lonely certificate lives (the first integer dividing no speed, in 87–98% of rows). They do not decide hardness:
+  * the tight sets `{1..k}`, `{1,3,4,7}`, `{1,3,4,5,9}`, `{1,2,3,4,5,7,12}`, `{1,4,5,6,7,11,13}` do not cover the small primes;
+  * the hard layer is additive (APs, doublings, Schur triples).
+* **Collatz.** At the primes of `D` the local solution densities are `~1/q` and glue independently (CRT), so there is no Hasse obstruction. 113 gates are solvable at every prime power yet carry no cycle, from size alone. The barrier is archimedean, and the information deficit is `1 - h(log_3 2) = 0.050` bits per step, the session's constant.
+
+**3. THM-4522: the multiplicative lonely runner, where both meet** ([mlr note](procgen_mlr_20260930_multiplicative_lonely_runner.md)).
+* **Local side.** LRC for 3-smooth speeds is trivial: they are lonely at `1/5`, because 5 divides none of them.
+* **The meeting point.** The `×2×3` lonely spectrum is discrete at the top, `{1/5, 1/7, 1/10, 1/11, 1/13, 1/14}`, indexed by the primes 5, 7, 11, 13 that are coprime to 6.
+* **Global side.**
+  * Crowding is rigid: near runners form triangles with 6-free apexes.
+  * By Parseval, no crowded-time dichotomy can exclude a cycle. That would need signed cancellation, which is the cycle count itself.
+* **Verdict.** Each side's information is useless to the other in exactly the way the owner said: a local mod-5 obstruction on one side, global signed cancellation on the other. Hybrid route: LOW as proof, MEDIUM as diagnostic.
+
+**4. External: arXiv:2609.02604** (Allikvere, "Fourteen and fifteen lonely runners", 2026-09) claims a computer-assisted proof of LRC for 14 and 15 runners: the repo's LRC(14). It is UNAUDITED and flagged in OPEN-QUESTIONS. Its method, a sieve modulo many primes plus bounds on speed products, is "local prime layer plus a global size bound", the owner's dichotomy in action.
+
+**Joint target that survives (EMPIRICAL).** The *tight-line principle*: for large primes `l`, the residue speed vectors with no lonely time `m/l` are exactly the scalar multiples of reductions of tight sets. If proved, one prime beyond the known speed bound would decide LRC(k). Its Collatz mirror fails: at the gate primes nothing stabilises.
+
 ## 3. The snippet, dispatched
 
 | pasted claim | verdict | where |
