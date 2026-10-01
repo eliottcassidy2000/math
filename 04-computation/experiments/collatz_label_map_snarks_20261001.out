@@ -23,7 +23,7 @@ PASS q = 1: only 0 and 1 (Collatz trivially true); q = 3: 1 and the three negati
 PASS QR_7/7 and NQR_7/7 are the two rational 3-cycles of the q = 1 map (words 100 and 110)
 PASS every integer T1-cycle with period L <= 16 (all 2^L words): least-|x| elements [-17, -5, -1, 0, 1]
 PASS q = 1 size bound: c_w(1) < 2^L - 1 for every non-constant word (no integer cycle but 0, 1)
-   q = 3, positive sheet: (L, k, 2^L - 3^k, min_w c_w(3)/(2^L-3^k)) with ratio > 1 (size bound fails):
+   q = 3, positive sheet: (L, k, 2^L - 3^k, min_w c_w(3)/(2^L-3^k)) where this lower bound on x_min exceeds 1:
     [(5, 3, 5, 3.8), (7, 4, 47, 1.38), (8, 5, 13, 16.23), (10, 6, 295, 2.25), (12, 7, 1909, 1.08), (13, 8, 1631, 3.87), (15, 9, 13085, 1.47), (16, 10, 6487, 8.94), (18, 11, 84997, 2.06), (20, 12, 517135, 1.02), (21, 13, 502829, 3.15), (23, 14, 3605639, 1.32)]
 === C. snarks: Fano colourings, the Paley line {1,2,4}, and the translations snarks need ===
 PASS a^0..a^6 are the 7 nonzero vectors of F_2^3 (Singer cycle)

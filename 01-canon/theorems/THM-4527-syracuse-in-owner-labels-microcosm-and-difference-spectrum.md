@@ -3,7 +3,9 @@ id: THM-4527
 title: "The Syracuse map in the owner's labels M = (A+1)/2 is F(2N) = 3N, F(4j+1) = 3j+1, F(4n-1) = F(n) (an exact microcosm); its descents K(A) = (A - S(A))/2 satisfy 6K + 1 = (2^v - 3) S(A), so every integer m occurs exactly #{v >= 1 : (2^v - 3) | 6m+1, quotient > 0} times (the 'two copies' are the units 2^1 - 3 = -1 and 2^2 - 3 = 1); and Collatz holds iff 7 Phi_T(n) is an integer for every n >= 1, in which case 7 Phi_T(n) = -2^sigma(n) (mod 7) is a non-residue."
 status: >
   PROVED (elementary) + FINITE-EXACT checks (F and K for M, N <= 10^6; the identity for odd A < 4*10^6;
-  multiplicities for m <= 10^5; the Paley restatement for n <= 20000). INDEPENDENT AUDIT: OWED.
+  multiplicities for m <= 10^5; the Paley restatement for n <= 20000). INDEPENDENTLY AUDITED
+  (2026-10-01, blind re-derivation: SOUND; wording fixes applied: the labels (4^j+2)/6 of the trunk, the
+  positivity step in the multiplicity proof).
   Non-consequence: nothing toward Collatz (the restatement is exact, the bridge is the q = 1 shadow and is
   2-adic, see the note section 2.3).
 source: opus-2026-10-01-S15 (collatz-functional-uniqueness-20261001), twentieth note, answering the owner's corrected map F(2N) = 3N, F(2N-1) = 2N-1-K_N
@@ -17,7 +19,7 @@ output: 04-computation/experiments/collatz_label_map_snarks_20261001.out (ALL CH
 
 # THM-4527 — the Syracuse map in the owner's labels
 
-**Status: PROVED (elementary); independent audit OWED.**
+**Status: PROVED (elementary); INDEPENDENTLY AUDITED (2026-10-01, SOUND; wording fixes applied).**
 Full statement and proofs: [`05-knowledge/results/collatz_label_map_paley_snarks_20261001.md`](../../05-knowledge/results/collatz_label_map_paley_snarks_20261001.md), §§1–2.
 
 ## Statement

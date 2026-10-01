@@ -11,8 +11,8 @@ Checks:
   B. Paley restatement: Collatz <=> 7*Phi_T(n) is an integer for every n >= 1, and then 7*Phi_T(n) = -2^sigma(n)
      (mod 7) lies in NQR_7 = {3,5,6} (sigma = number of T-steps to 1); negative integers have period-2, 5, 18
      tails; the q-family x/2, (qx+1)/2: the Paley codes are the rational cycles at q = 1; every integer cycle
-     of T1 with period L <= 16 is one of the five known ones; the size bound that settles q = 1 and where it
-     fails at q = 3 (near-resonances 2^L ~ 3^k)
+     of T1 with period L <= 16 is one of the five known ones; the size bound that settles q = 1, and the pairs
+     (L, k) where the q = 3 lower bound on the minimal cycle value exceeds 1 (a lower bound excludes nothing)
   C. snarks: Fano colourings = nowhere-zero Z_2^3-flows; Fano lines = translates of {1,2,4} in Singer
      coordinates; any colouring using one line, two lines, concurrent lines or missing a point is a
      3-edge-colouring; Petersen: all nowhere-zero Z_2^3-flows enumerated (every one uses all 7 points and a
@@ -257,7 +257,7 @@ for L in range(1, 40):
         k -= 1
     lb = Fraction(3 ** k - 2 ** k, 2 ** L - 3 ** k)
     rows.append((L, k, 2 ** L - 3 ** k, float(lb)))
-print("   q = 3, positive sheet: (L, k, 2^L - 3^k, min_w c_w(3)/(2^L-3^k)) with ratio > 1 (size bound fails):")
+print("   q = 3, positive sheet: (L, k, 2^L - 3^k, min_w c_w(3)/(2^L-3^k)) where this lower bound on x_min exceeds 1:")
 print("   ", [(L, k, d, round(r, 2)) for (L, k, d, r) in rows if r > 1][:12])
 
 # ---------------------------------------------------------------- C. snarks and Fano colourings

@@ -9,12 +9,16 @@ of the owner's fourth prompt of the day.
 - Canon: THM-4526.
 
 **Status.**
-- PROVED: Theorem A (all n) and Theorem C.
+- PROVED:
+  - Theorem A (all n). This is a **classical theorem** (Grünbaum 1971; §1), proved independently here.
+  - Theorem C, which is **superseded** by Linial–Saks–Sós (1983; §3).
 - PROVED by exhaustive computation: Theorem B (`u(n)` for `n ≤ 8`, hence `κ(7) = 12` and `κ(8) = 17`).
 - FINITE-EXACT: the tables, the n ≤ 6 parity, and perfect shavings (checked for n ≤ 60).
 - The odd case of Theorem A was found by a proof-search subagent of this session. The orchestrator checked
   it line by line, and the script re-checks it with an independent implementation.
-- Independent audit: OWED.
+- Independent audit: DONE (2026-10-01, blind re-derivation with the auditor's own code; n ≤ 9 classes, every
+  search redone). No claim is unsound. The corrections are applied: the two attributions above, five minimum
+  certificates at `n = 7` instead of one, and softened wording (MISTAKE-555). The record is in §8.
 
 ## 0. The owner's object
 
@@ -31,8 +35,8 @@ last. Two pairs are missing, `A–C` and `B–D`. Check T2 shows:
   `m = 1` of a general identity. For a fixed labelled shaving `S`, the number of completions isomorphic to
   `T` is `m_S(T) = emb(S,T)/|Aut T|` (orbit counting).
 
-**Definition.** A *shaving* of order `n` is a spanning oriented graph `S` on `n` vertices that is contained
-in every `n`-tournament. Equivalently, the `2^k` completions of `S` (`k` = number of missing pairs) meet every
+**Definition.** A *shaving* of order `n` (an *`n`-unavoidable digraph* in the literature) is a spanning oriented
+graph `S` on `n` vertices that is contained in every `n`-tournament. Equivalently, the `2^k` completions of `S` (`k` = number of missing pairs) meet every
 isomorphism class.
 
 This is the repo's flip-rank / transversal-subcube invariant (HYP-3798, mac-mini; seeded by the owner's
@@ -51,7 +55,7 @@ A Hamiltonian path (HP) either **closes** (last vertex → first, so path + arc 
 
 `#copies of H_n in T = #non-closing HPs = H(T) − n·hc(T).`
 
-**Theorem A.** Let `n ≥ 2`. An `n`-tournament contains no copy of `H_n` iff it is the 3-cycle `C3` or the
+**Theorem A (Grünbaum 1971; independent proof below).** Let `n ≥ 2`. An `n`-tournament contains no copy of `H_n` iff it is the 3-cycle `C3` or the
 5-vertex tournament `C3[1,C3,1]` (vertex `a` beats a 3-cycle, the 3-cycle beats `b`, and `b → a`). When `n`
 is even, every `n`-tournament contains an **odd** number of copies.
 
@@ -115,7 +119,13 @@ Fix a Hamiltonian cycle `c_0 … c_{n−1}` (Camion), with indices mod `n`. Call
   3-cycle with one vertex blown up into a 3-cycle. Blowing up two vertices already breaks this. In
   `C3[X, x, Y]` (`X ⇒ x ⇒ Y ⇒ X`), any split `X = X_1 ⊔ X_2`, `Y = Y_1 ⊔ Y_2` into non-empty parts gives the
   non-closing path `(Y_1, X_1, x, Y_2, X_2)`, so this works once `|X|, |Y| ≥ 2`.
-- We found no reference for Theorem A. The even case is one line from Rédei and may be folklore.
+- **Theorem A is classical.** `H_n` is the oriented cycle `D(n,2)`: a directed `n`-cycle with one arc reversed,
+  also called a Hamiltonian bypass. Grünbaum (J. Combin. Theory Ser. B 11 (1971) 249–257) proved that every
+  tournament of order `n ≥ 3` contains it unless it is `C3` or `C3[1,C3,1]`; see Havet, JCTB 80 (2000) §1.2.
+  Thomassen (1980) showed that a strong tournament has at least `n − 5` copies. Benhocine–Wojda, J. Graph
+  Theory 7 (1983) 469–473, treat all `D(n,p)`. The proof above is independent; the formula `H − n·hc` and the
+  even-`n` parity are at most minor additions. (The first draft said "we found no reference"; see
+  MISTAKE-555.)
 
 ## 2. The property: the largest shavings
 
@@ -139,15 +149,21 @@ Fix a Hamiltonian cycle `c_0 … c_{n−1}` (Camion), with indices mod `n`. Call
   shaving**, so `u(7) ≤ 9`.
 - Among 9-arc subgraphs, 54 orbits are shavings. So `u(7) = 9` and **`κ(7) = 12`**. This upgrades HYP-3805
   (opus, "very likely") to proved and confirms that the lazy-caterer formula `1 + C(n−2,2)` of HYP-3798 holds
-  exactly for `n ≤ 6`.
+  exactly for `3 ≤ n ≤ 6` (at `n = 2` it gives 1, while `κ(2) = 0`).
 - The maximum shavings at `n = 7` form **51 isomorphism classes**. Only 4 of them contain a Hamiltonian path
-  (unique linear extension). HYP-3805's span 1 + span 3 − `(0,3)` is one of them.
+  (unique linear extension). They are exactly path + span-3 arcs minus one of the four span-3 arcs.
+  HYP-3805's span 1 + span 3 − `(0,3)` is one of them.
 - The natural continuation, path + all span-3 arcs (10 arcs), is avoided by exactly two classes: `P_7` and the
   `|Aut| = 1` class with scores `(1,2,2,3,4,4,5)`. This matches HYP-3805.
 - **Certificate.** To kill every 10-arc candidate you need `P_7` plus 6 more classes, and 6 is the minimum
-  (exact branch and bound). All 6 are symmetric: `|Aut| = 9, 9, 7, 5, 3, 3`. The most frequent blocker is the
-  other vertex-transitive 7-tournament (`|Aut| = 7`). This is HYP-3805's mechanism made exact: a class with
-  `n!/|Aut|` labellings is hit by few completions, so symmetric classes are the obstructions.
+  (exact branch and bound). The minimum is **not unique**: there are exactly 5 minimum certificates. They
+  share five classes (`|Aut| = 9, 9, 7, 3, 3`) and differ in the sixth (four choices with `|Aut| = 3`, one with
+  `|Aut| = 5`). So their `|Aut|` multisets are `(9,9,7,3,3,3)` and `(9,9,7,5,3,3)`. Every minimum certificate
+  consists of symmetric classes, and `P_7` is needed in each.
+- The most frequent blocker is the other vertex-transitive 7-tournament (`|Aut| = 7`, the circulant on
+  `{1,2,3}`; it blocks 1417 of 1792 candidates). This is consistent with HYP-3805's heuristic that a class
+  with `n!/|Aut|` labellings is hit by few completions. The 13 most frequent blockers are symmetric, but the
+  14th has `|Aut| = 1`, so this is a tendency, not an exact law.
 
 **(c) `n = 8`: the excess law's prediction holds.**
 - Every acyclic graph on 8 vertices has a topological order, so it suffices to test every set of forward pairs
@@ -169,9 +185,9 @@ Fix a Hamiltonian cycle `c_0 … c_{n−1}` (Camion), with indices mod `n`. Call
 So the unique bipartite pattern "path + span-3 arcs" that governs `n ≤ 6` keeps an echo at `n = 8` (drop one
 interior span-3 arc). The number of maximum shavings explodes: `1, 1, 1, 51, 1617` for `n = 4, …, 8`.
 
-## 3. Growth: `u(n) = Θ(n log n)`
+## 3. Growth: `u(n) ~ n log₂ n` (Linial–Saks–Sós 1983)
 
-**Theorem C.** `(1/2 − o(1)) · n log₂ n ≤ u(n) ≤ C(n,2) − log₂ T(n) ≤ log₂ n!`, where `T(n)` is the number of
+**Theorem C (superseded; see below).** `(1/2 − o(1)) · n log₂ n ≤ u(n) ≤ C(n,2) − log₂ T(n) ≤ log₂ n!`, where `T(n)` is the number of
 classes (A000568).
 
 *Proof.*
@@ -187,7 +203,13 @@ classes (A000568).
 Peeling off greedy transitive blocks of size `≈ log₂ n` covers all but `o(n)` vertices with blocks of size
 `(1 − o(1)) log₂ n`. That gives `(1/2 − o(1)) n log₂ n` arcs. ∎
 
-The recursive bound `L(n)` (best of the two rules, seeded with Theorem B), compared with the upper bound
+**Theorem C is weaker than Linial–Saks–Sós** ("Largest digraphs contained in all n-tournaments",
+Combinatorica 3 (1983) 101–104). They prove `n log₂ n − c₁n ≥ u(n) ≥ n log₂ n − c₂ n log log n`. Their `f(n)`
+is our `u(n)`, and their upper bound is the same counting argument. So `u(n) ~ n log₂ n`. Their lower bound
+uses complete bipartite blocks instead of transitive ones, which is why the transitive peeling here only
+reaches `1/2`.
+
+The recursive bound `L(n)` (best of the two rules, seeded with `u(1..7)`), compared with the upper bound
 `U(n) = C(n,2) − ⌈log₂ T(n)⌉`:
 
 | n | L(n) | U(n) | 2n−4 | (n/2) log₂ n | log₂ n! |
@@ -214,7 +236,8 @@ already hit some classes 3 or 5 times (T8).
 
 ## 5. How this meets the Paley and Collatz threads (typed)
 
-- **STRUCTURAL (proved here).** The Paley heptagon is *the* obstruction at `n = 7`. Lacking `TT_4` confines
+- **STRUCTURAL (proved here).** The Paley heptagon is the principal obstruction at `n = 7`: it confines every
+  shaving to its subgraphs, and six further classes are needed to kill the 10-arc ones. Lacking `TT_4` confines
   every shaving to its subgraphs. Its maximal symmetry (`|Aut| = 21`) makes it the rarest class (240
   labellings). The rest of the minimum certificate is symmetric too. The same tournament is the extremal object
   of the flip-rank thread (HYP-3805) and of the LRC thread (HYP-3802).
@@ -231,9 +254,12 @@ already hit some classes 3 or 5 times (T8).
   must stop at 7.
 - **D70.** Find `u(9)` (`κ(9)`; the excess law predicts `⌈log₂ 191536⌉ + #{SC classes with |Aut| > 9}`). Which
   9-tournaments obstruct? (The forward-pair search has `C(36,e)` candidates, which needs a smarter search.)
-- **D71.** Determine the constant in `u(n) ~ c · n log₂ n`, with `c ∈ [1/2, 1]`.
+- **D71.** Known: `c = 1` (Linial–Saks–Sós 1983). Open: the second-order term, between `−c₁n` and
+  `−c₂ n log log n`.
 - **D72.** For which spanning oriented graphs is the number of embeddings odd in every tournament? The
-  Hamiltonian path (Rédei), `H_n` for even `n`, and path + span-3 arcs for `n ≤ 6` are examples.
+  Hamiltonian path (Rédei), `H_n` for even `n`, and path + span-3 arcs for `n ≤ 6` are examples. Compare
+  Forcade (Discrete Math. 6 (1973) 115–118) and El Sahili–Abi Aad (Discrete Math. 343 (2020) 111695): every
+  antisymmetric Hamiltonian path type occurs an odd number of times in every tournament.
 
 ## 7. Reproduction
 
@@ -243,3 +269,21 @@ python 04-computation/experiments/shaved_tournaments_20261001.py
 
 Allow about 15 minutes. The `n = 9` (Theorem A) and `n = 8` (Theorem B) parts compile and run the C helpers with
 `gcc -O2 -fopenmp`; without gcc they are skipped and the recorded results are printed.
+
+## 8. Audit record (2026-10-01)
+
+A blind auditor subagent re-derived every claim with its own C and Python code. The record is in the session
+scratchpad, `audit20/AUDIT.md`.
+- **Classes.** It generated all classes up to `n = 9` itself: 191536 at `n = 9`, with `Σ n!/|Aut| = 2^C(n,2)`.
+- **Theorem A.** It counted non-closing paths directly for every class with `n ≤ 9`. It re-implemented Steps
+  1–5 from every admissible position (2529 cycle runs, every branch exercised, failing only at the two
+  exceptions).
+- **Theorem B.** It confirmed `u(7) = 9` by a second route that does not use `P_7`: none of the 352716 forward
+  10-sets is a shaving, and 387 forward 9-sets are. It also redid the full `n = 8` search.
+- **Verdicts.**
+  - A1, A4, A6, A7, A8: SOUND.
+  - A2 (Theorem A): SOUND WITH CORRECTION. It is Grünbaum 1971.
+  - A3 (Theorem B): SOUND WITH CORRECTION. There are 5 minimum certificates, the lazy-caterer range is
+    `3 ≤ n ≤ 6`, and the HYP-3805 heuristic is a tendency, not a law.
+  - A5 (Theorem C): SOUND WITH CORRECTION. It is superseded by Linial–Saks–Sós 1983.
+- **Agreement.** Every number matches this note's script output line for line.

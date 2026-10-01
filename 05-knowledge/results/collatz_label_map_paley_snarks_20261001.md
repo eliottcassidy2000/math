@@ -10,10 +10,13 @@
 **Status.**
 - PROVED (elementary): Theorems 1–2, Propositions 3–5.
 - FINITE-EXACT: all tables.
-- **NO PROOF of Collatz.** The Paley bridge reformulates Collatz exactly but cannot prove it (§2.3).
+- **NO PROOF of Collatz.** The Paley bridge reformulates Collatz exactly. §2.3 lists obstructions to finishing
+  with it (obstructions to specific strategies, not impossibility theorems).
 - Snarks: a dictionary plus Proposition 5 (a re-derivation of Máčajová–Škoviera's "all seven points and at
   least four lines").
-- Independent audit: OWED.
+- Independent audit: DONE (2026-10-01, blind re-derivation with the auditor's own code). Every number was
+  reproduced and no claim is unsound. Corrections are applied (MISTAKE-555); the main one is that Proposition
+  4(c)'s first reading of the size bound was false. The record is in §6.
 
 The owner's fourth prompt asked for four things:
 1. consider the family of snarks, in view of the Paley symmetry split (the Frobenius survives, the
@@ -30,7 +33,7 @@ The owner's fourth prompt asked for four things:
 | Two copies of each difference? | False in `K` (mean multiplicity 1.3437). True for ascents + shallow descents: the units `2^1−3 = −1` and `2^2−3 = 1` | PROVED (Thm 2) |
 | Multiplicity of `m` in `K` | `#{v ≥ 2 : (2^v − 3) ∣ 6m+1}`, from `6K + 1 = (2^v − 3)·S(A)` | PROVED (Thm 2) |
 | Collatz via the Paley bridge | Exact restatement: Collatz ⟺ `7·Φ_T(n) ∈ Z` for all `n ≥ 1`, and then `7Φ_T(n) ≡ −2^σ(n) ∈ NQR_7` | PROVED (Prop 3); no proof of Collatz |
-| Why the bridge stalls | It is the `q = 1` shadow; the obstacle is the resonance `2^L ≈ 3^k` and the sign | PROVED (Prop 4) + typed |
+| Why the bridge stalls | It is the `q = 1` shadow; it is 2-adic (blind to the sign) and reads words independently of `q` | PROVED (Prop 4(a),(b) and the bound in (c)) + HEURISTIC (resonance and sign as the obstacle) |
 | Snarks | 3-edge-colouring = colouring by the single Paley line `{1,2,4}`; snarks need at least 4 translates of it | PROVED (Prop 5) + DICTIONARY |
 
 ## 1. The owner's map F
@@ -50,8 +53,8 @@ Write `S(A) = oddpart(3A+1)` for odd `A`, and label odd numbers by `M = (A+1)/2 
   - `F(4n−1) = F(n)`, **the microcosm**.
 
   In Syracuse language the last rule is `S(4A+1) = S(A)`. The quarter `M ≡ 3 (mod 4)` of the labels is an
-  exact copy of the whole map, rescaled by 4. Its fixed point is `M = 1/3`, and the chain `1, 3, 11, 43, …` is
-  the trunk `(4^j − 1)/3` (all mapped to 1).
+  exact copy of the whole map, rescaled by 4. Its fixed point is `M = 1/3`, and the chain `1, 3, 11, 43, …`
+  `= (4^j + 2)/6` consists of the labels of the trunk `A = (4^j − 1)/3` (all mapped to 1).
 - (c) `K_{2j+1} = j`, `K_{4m} = 5m − 1`, `K_{4m−2} = K_m + 6m − 4`. So `K` is a 2-regular sequence, and its
   positions `≡ 2 (mod 4)` replay the whole sequence plus a linear term.
 
@@ -87,8 +90,9 @@ Let `v = v_2(3A+1)`.
 *Proof.*
 - (a) `S(A) = (3A+1)/2^v`, so `6K + 1 = 3A − 3S + 1 = 2^v S − 3S`.
 - (b) Fix `m` and `v`, and let `s = (6m+1)/(2^v−3)`. Then `s` is odd and must be positive. The value
-  `A = (2^v s − 1)/3` is an integer because `2^v s ≡ (2^v − 3)s = 6m+1 ≡ 1 (mod 3)`. It is odd and positive,
-  `v_2(3A+1) = v_2(2^v s) = v`, and `K(A) = m`. Conversely `(A, v)` determines `(m, v)`. ∎
+  `A = (2^v s − 1)/3` is an integer because `2^v s ≡ (2^v − 3)s = 6m+1 ≡ 1 (mod 3)`. It equals `2m + s`, so it is
+  odd. It is positive because `m ≥ 0` when `v ≥ 2`, and `A = −4m − 1 > 0` when `v = 1`. Moreover
+  `v_2(3A+1) = v_2(2^v s) = v` and `K(A) = m`. Conversely `(A, v)` determines `(m, v)`. ∎
 
 **Data.** On `[0, 10^5]` the multiplicity histogram is `{1: 69619, 2: 26617, 3: 3549, 4: 210, 5: 6}` (Check
 A). For example:
@@ -133,8 +137,9 @@ This is the `T`-version of Lagarias' `Φ_{T1}(N) ⊆ (1/3)Z`.
 **Checks (B).**
 - For `n ≤ 20000`, the formula matches the actual parity bits to 40 bits past the entry into 1. The residues
   split `{3: 6665, 5: 6715, 6: 6620}`.
-- Negative integers have tails of periods 2, 5, 18 (cycles through −1, −5, −17), so their codes have
-  denominators `3, 31, 2^18 − 1`.
+- Every negative integer checked (all of `[−10^5, −1]` in the audit) ends in one of the cycles through −1, −5,
+  −17. These have periods 2, 5, 18 and reduced code denominators `3, 31, 2^18 − 1`; that all negative integers
+  do is open. Unconditionally, no negative integer has a code in `(1/7)Z`.
 
 ### 2.2 The bridge is the q = 1 shadow
 
@@ -146,31 +151,41 @@ In the family `x ↦ x/2, (qx+1)/2`, a cycle with parity word `w` (length `L`, `
   codes. **`QR_7/7` and `NQR_7/7` are the two rational 3-cycles of the `q = 1` map** (words `100` and `110`).
 - (b) At `q = 1`, Collatz is trivially true. `c_w(1) < 2^L − 1` for every non-constant word, so no
   non-constant word gives an integer cycle, and the only integer cycles are `{0}` and `{1}`.
-- (c) At `q = 3` the same size bound reads `x_min ≥ (3^k − 2^k)/(2^L − 3^k)`. It stops excluding cycles exactly
-  near the resonances `2^L ≈ 3^k`. The positive-sheet pairs where the crude bound exceeds 1 are
-  `(L, k) = (5,3), (7,4), (8,5), (10,6), (12,7), (13,8), (15,9), (16,10), (18,11), (20,12), (21,13), (23,14), …`
-  (Check B).
+- (c) At `q = 3` the minimum cycle value satisfies `x_min ≥ (3^k − 2^k)/(2^L − 3^k)`. This lower bound exceeds 1
+  exactly when `3^k < 2^L < 2·3^k − 2^k`, i.e. for the smallest admissible `L` of every `k ≥ 3`. For `L < 24` the
+  pairs are `(L, k) = (5,3), (7,4), (8,5), (10,6), (12,7), (13,8), (15,9), (16,10), (18,11), (20,12), (21,13),
+  (23,14)` (Check B).
 
-The Paley bridge carries no information about these resonances, because the codes do not depend on `q`.
+  A lower bound never excludes a cycle by itself. The `q = 1` argument (every cycle value is `< 1`) fails at
+  `q = 3` for **every** `(L, k)` with `k ≥ 2`, resonant or not: the word with its ones last has
+  `x_w = 2^(L−k)(3^k − 2^k)/(2^L − 3^k) > 1`. The resonance `2^L ≈ 3^k` enters through the upper bound
+  `x_min ≤ 1/(2^(L/k) − 3)`, which Baker-type bounds and computation exploit. (The first draft said the size
+  bound "stops excluding cycles exactly near the resonances"; that was false. See MISTAKE-555.)
+
+The Paley bridge carries no information about these resonances, because the binary reading
+`c_w(1)/(2^L − 1)` of a word does not involve `q`.
 
 **What closes the resonant cases is Diophantine and archimedean.** Steiner (1977) used Baker's theory to
 exclude 1-cycles. Simons and de Weger (2005) excluded `m`-cycles for `m ≤ 68`. Hercher (J. Integer Seq. 26,
 2023, Article 23.3.5) proved there are no `m`-cycles with `m ≤ 91`. Every integer `T1`-cycle with period
 `L ≤ 16` is one of the five known (`0`; `1`; `−1`; `−5`; `−17`), checked over all `2^L` words (Check B).
 
-### 2.3 Why the bridge cannot finish
+### 2.3 Obstructions to finishing with the bridge
 
 1. **It is a tail condition read 2-adically.** Proposition 3 is about the tail of `Φ_T(n)`. Any argument
    that looks at finitely many bits of codes (a cylinder condition) treats a positive `n` and a negative
    `n' ≡ n (mod 2^K)` alike. But the codes of negative integers are not in `(1/7)Z`. This is the
    eighteenth note's drift- and sign-blindness, in parity-code form.
-2. **It does not see `q`.** The bridge is identical for `3x+1`, for `5x+1` (cycles 1, 13, 17), and for the
-   `q = 1` map. The cycle condition `(2^L − 3^k) ∣ c_w(3)` does see `q`, and that is where Collatz lives.
+2. **It reads words independently of `q`.** The bridge reads parity words as binary rationals, and `q` enters
+   only through which words occur. (For `n/2, 5n+1`, the cycle of 1 has period 7, so the analogue of
+   Proposition 3 uses 127, not 7.) The cycle condition `(2^L − 3^k) ∣ c_w(3)` does involve `q`, and that is
+   where Collatz lives.
 3. **It does not extend past period 3.** A single ×2-orbit is a Paley set only when `L = 3` (nineteenth note,
    audited).
 
-**Verdict: NO PROOF.** A proof through parity codes would need an archimedean input: Baker-type bounds for
-the cycles, and a drift or measure statement for divergence. The Paley structure supplies neither.
+**Verdict: NO PROOF.** A proof through parity codes must use information that separates positive from
+negative integers (item 1). The known inputs of that kind are Baker-type bounds for cycles and drift or
+measure statements for divergence. The Paley structure supplies neither.
 
 ## 3. Snarks
 
@@ -180,8 +195,8 @@ Use Singer coordinates: the points of the Fano plane are `α^i` (`i ∈ Z_7`) in
 - **The 7 Fano lines are the translates `D + t` of the Paley set `D = {1,2,4}`**, since
   `α^(1+t) + α^(2+t) + α^(4+t) = 0`.
 - The Paley tournament's out-neighbourhoods are exactly these lines: `N^+(x) = x + D`.
-- The Frobenius `x ↦ x²` fixes `D` and rotates its points `1 → 2 → 4`; this is the trivial cycle's own
-  dynamics.
+- The Frobenius `x ↦ x²` fixes `D` and rotates its points `1 → 2 → 4`, the inverse of the trivial cycle's
+  order `1 → 4 → 2`.
 - A **Fano colouring** of a cubic graph labels the edges by points so that every vertex star is a line. It is
   the same thing as a nowhere-zero `Z_2^3`-flow, so every bridgeless cubic graph has one (Jaeger's 8-flow
   theorem).
@@ -228,9 +243,11 @@ always suffice and conjecture that 4 do.
 ### 3.4 In the owner's language (DICTIONARY, no implication)
 
 - A 3-edge-colouring is a colouring by the single Paley line `{1,2,4}`. Its colours are rotated by the
-  Frobenius, the trivial cycle's dynamics.
-- **A snark is exactly a bridgeless cubic graph that cannot do without the translations.** It needs at least
-  4 translates of `{1,2,4}`, three of them through a common point.
+  Frobenius, which runs the trivial cycle backwards.
+- **A bridgeless cubic graph fails to be 3-edge-colourable exactly when it cannot do without the
+  translations.** Such a graph (for instance a snark) needs at least 4 translates of `{1,2,4}`, three of them
+  through a common point. Any 5 or more lines contain a full pencil, so this holds for every Fano colouring of
+  such a graph.
 - So the 7 translations that "have no Collatz counterpart" (nineteenth note) are precisely what snarks force.
 - Nothing transfers between the problems.
 
@@ -247,7 +264,8 @@ The genuine shared pattern is the **minimal-counterexample reduction**:
 - A minimal counterexample to the cycle-double-cover or 5-flow conjecture must be a snark.
 - A minimal Collatz counterexample is the minimum of its component (eighteenth note).
 - But the four-colour-theorem route (a finite unavoidable set of reducible configurations) is closed for
-  Collatz. The residue classes mod `2^k` with no coefficient descent in `k` steps have positive density for
+  Collatz in its naive form. No finite set of residue classes with bounded-step coefficient descent covers
+  every `n`, since the class of −1 never descends. The residue classes mod `2^k` with no coefficient descent in `k` steps have positive density for
   every `k`: `1.25e−1, 6.25e−2, 2.6e−2, 5.8e−3, 6.6e−4` at `k = 5, 10, 20, 40, 80`. The class of `−1` always
   ascends.
 
@@ -257,10 +275,29 @@ The genuine shared pattern is the **minimal-counterexample reduction**:
   likely not; it is listed only to close the loop.)
 - **D74.** The 2-regular sequence `K`: closed form of its summatory function, and the distribution of
   `#{v : (2^v − 3) ∣ 6m+1}` (a divisor problem over `2^v − 3`).
-- **D75.** An exact `q`-interpolation. For which odd `q` does the size bound of Proposition 4 fail for
-  infinitely many `(L, k)`, and how does that track the known cycles of `qx+1`?
+- **D75.** An exact `q`-interpolation. How does the upper bound `x_min ≤ 1/(2^(L/k) − q)` interact with the
+  divisibility `(2^L − q^k) ∣ c_w(q)` across odd `q`, and how does that track the known cycles of `qx+1`?
 
-## 5. Reproduction
+## 6. Audit record (2026-10-01)
+
+A blind auditor subagent re-derived everything with its own code. The record is in the session scratchpad,
+`audit20/AUDIT.md`.
+- **SOUND:**
+  - B1 (label map, `K` recursions to `10^6`);
+  - B2 (identity to `4·10^6`, the multiplicity formula on `[0, 10^5]`, every negative `m` once);
+  - B3 (Proposition 3, residues reproduced, negative integers on `[−10^5, −1]`);
+  - B5 (Proposition 5; 28560 = `(k−1)(k−2)(k−3)(k−4)(k²−5k+10)` at `k = 8`; the line split; `J5`; all 300 dot
+    products `P·P` fall into exactly 2 classes, with 10 and 8 five-cycles; all citations confirmed);
+  - B6 (exact densities `1/8, 1/16, 427/16384, …`).
+- **SOUND WITH CORRECTION:** B4. The computations were right, but the reading "the size bound stops excluding
+  cycles exactly near the resonances" was false. The size bound is only a lower bound, the `q = 1` argument
+  fails at `q = 3` for every `k ≥ 2`, and resonance enters through `x_min ≤ 1/(2^(L/k) − 3)`. §2.3 also
+  overclaimed: its title, item 2 (the "7" is specific to `n/2, 3n+1`), and the "would need" in the verdict.
+- **Wording fixes applied:** the trunk labels `(4^j+2)/6`, the positivity of `A` in Theorem 2, the
+  negative-integer tails (a checked-range statement), the Frobenius direction (`1 → 2 → 4` runs the cycle
+  `1 → 4 → 2` backwards), and the four-colour remark ("in its naive form").
+
+## 7. Reproduction
 
 ```bash
 python 04-computation/experiments/collatz_label_map_snarks_20261001.py

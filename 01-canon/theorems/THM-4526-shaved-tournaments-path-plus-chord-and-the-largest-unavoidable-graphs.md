@@ -1,12 +1,15 @@
 ---
 id: THM-4526
-title: "Shaved tournaments. The Hamiltonian path plus the arc from its first to its last vertex lies in every n-tournament except exactly C3 and C3[1,C3,1] (equivalently: these are the only tournaments in which every Hamiltonian path closes into a Hamiltonian cycle), with an odd number of copies when n is even. The largest spanning oriented graphs contained in every n-tournament have u(n) = 1,2,4,6,8,9,11 arcs for n = 2..8 (unique for n <= 6: path + all span-3 arcs; 51 classes at n = 7, all inside the Paley heptagon; 1617 classes at n = 8), so kappa(7) = 12 and kappa(8) = 17; and u(n) = Theta(n log n)."
+title: "Shaved tournaments. The Hamiltonian path plus the arc from its first to its last vertex (the bypass D(n,2)) lies in every n-tournament except exactly C3 and C3[1,C3,1] (Grunbaum 1971; independent proof here) (equivalently: these are the only tournaments in which every Hamiltonian path closes into a Hamiltonian cycle), with an odd number of copies when n is even. The largest spanning oriented graphs contained in every n-tournament have u(n) = 1,2,4,6,8,9,11 arcs for n = 2..8 (unique for n <= 6: path + all span-3 arcs; 51 classes at n = 7, all inside the Paley heptagon; 1617 classes at n = 8), so kappa(7) = 12 and kappa(8) = 17; and u(n) = Theta(n log n) (weaker than Linial-Saks-Sos 1983: u(n) ~ n log2 n)."
 status: >
-  PROVED: Theorem A (all n; the odd case by a short constructive argument),
-  Theorem C (bounds). PROVED by exhaustive computation: Theorem B (n <= 8).
+  PROVED: Theorem A (all n): a KNOWN theorem (Grunbaum 1971), proved independently here
+  (Redei parity for even n; a short constructive argument for odd n). Theorem C (bounds):
+  SUPERSEDED by Linial-Saks-Sos 1983. PROVED by exhaustive computation: Theorem B (n <= 8).
   FINITE-EXACT: transversal multiplicities n <= 6; the n <= 6 embedding parity of
   path + span-3 arcs; T(n) not a power of 2 for 5 <= n <= 60.
-  INDEPENDENT AUDIT: OWED.
+  INDEPENDENTLY AUDITED (2026-10-01, blind re-derivation, n <= 9 classes regenerated, all
+  searches redone): SOUND; corrections applied (attributions, 5 minimum certificates at n = 7,
+  wording; MISTAKE-555).
   Notation: an n-shaving is a spanning oriented graph on n vertices contained in every
   n-tournament; u(n) = max arcs = C(n,2) - kappa(n) (kappa of HYP-3798); H_n = path
   v1 -> ... -> vn plus v1 -> vn; T(n) = A000568(n).
@@ -14,7 +17,7 @@ status: >
   (B) u = 1,2,4,6,8,9,11 (n = 2..8); the n <= 6 maximiser is unique (path + all i -> i+3);
       at n = 7 every shaving embeds in P7 (the only TT4-free class), no acyclic 10-arc
       subgraph of P7 is a shaving, 51 classes of 9-arc shavings; a minimum certificate is
-      P7 plus 6 classes, all with |Aut| > 1. n = 8: no forward 12-arc graph (C(28,12) = 30421755)
+      P7 plus 6 classes, all with |Aut| > 1 (5 such certificates). n = 8: no forward 12-arc graph (C(28,12) = 30421755)
       is a shaving; 48571 forward 11-arc shavings = 1617 classes; kappa(8) = 17 as HYP-3819 predicted.
   (C) (1/2 - o(1)) n log2 n <= u(n) <= C(n,2) - log2 T(n) <= log2 n!; the lazy-caterer
       formula 1 + C(n-2,2) fails both ways (kappa(7) = 12 > 11; kappa(n) < 1 + C(n-2,2)
@@ -22,6 +25,8 @@ status: >
 source: opus-2026-10-01-S15 (collatz-functional-uniqueness-20261001), owner's shaved 4-tournament prompt; the odd case of (A) was found by a proof-search subagent of the session and checked by the orchestrator and by an independent implementation (Check T3b)
 depends_on:
   - Redei 1934 (H(T) odd); Camion 1959 (strong => Hamiltonian); Erdos-Moser (TT_(1+floor(log2 n)) in every n-tournament)
+  - Grunbaum, J. Combin. Theory Ser. B 11 (1971) 249-257 (Theorem A, first proof); Thomassen 1980 (>= n - 5 copies in strong T); Benhocine-Wojda, J. Graph Theory 7 (1983) 469-473 (all D(n,p))
+  - Linial-Saks-Sos, Combinatorica 3 (1983) 101-104 (u(n) = n log2 n - O(n log log n); supersedes Theorem C)
 related:
   - 05-knowledge/hypotheses/HYP-3798-min-free-arcs-transversal-subcube-kappa.md (kappa; lazy-caterer formula, now exact only for n <= 6)
   - 05-knowledge/hypotheses/INDEX-HISTORICAL-THROUGH-2026-07-21.md (HYP-3805, opus S15 2026-07-01: kappa(7) = 12 'very likely' -> proved here)
@@ -35,7 +40,8 @@ output: 04-computation/experiments/shaved_tournaments_20261001.out (ALL CHECKS P
 
 # THM-4526 — shaved tournaments
 
-**Status: PROVED (A, C) + PROVED by exhaustive computation (B, n ≤ 8); independent audit OWED.**
+**Status: PROVED (A: a known theorem, Grünbaum 1971, with an independent proof; C: superseded by Linial–Saks–Sós
+1983) + PROVED by exhaustive computation (B, n ≤ 8); INDEPENDENTLY AUDITED (2026-10-01, corrections applied).**
 Full statement, proofs and tables:
 [`05-knowledge/results/shaved_tournaments_unavoidable_cores_20261001.md`](../../05-knowledge/results/shaved_tournaments_unavoidable_cores_20261001.md).
 
@@ -44,7 +50,8 @@ Full statement, proofs and tables:
 The owner observed that every 4-tournament contains `A→B, B→C, C→D, A→D`. This is `H_4`: a Hamiltonian path plus
 the arc from its first to its last vertex. Its 4 completions are the 4 classes, each exactly once.
 
-**(A) The shape, for every `n`.** An `n`-tournament (`n ≥ 2`) contains `H_n` unless it is `C3` or `C3[1,C3,1]`.
+**(A) The shape, for every `n` (Grünbaum 1971).** An `n`-tournament (`n ≥ 2`) contains `H_n` (the bypass `D(n,2)`)
+unless it is `C3` or `C3[1,C3,1]`.
 The number of copies is `H(T) − n·hc(T)`, which is odd when `n` is even (Rédei). Equivalently, the tournaments in
 which every Hamiltonian path closes into a Hamiltonian cycle are exactly `C3` and `C3[1,C3,1]`.
 
@@ -52,13 +59,15 @@ which every Hamiltonian path closes into a Hamiltonian cycle are exactly `C3` an
 `κ(n) = 0, 1, 2, 4, 7, 12, 17`.
 - For `n ≤ 6` the maximiser is unique up to isomorphism: the Hamiltonian path plus all span-3 arcs (the owner's
   `H_4` at `n = 4`).
-- At `n = 7` the Paley heptagon decides. It is the only class without a transitive 4-set, so every shaving lives
-  inside it. No acyclic 10-arc subgraph of `P_7` is a shaving.
+- At `n = 7` the Paley heptagon is the principal obstruction. It is the only class without a transitive 4-set,
+  so every shaving lives inside it. No acyclic 10-arc subgraph of `P_7` is a shaving; killing them needs `P_7`
+  plus 6 more classes (5 minimum certificates, all made of symmetric classes).
 - There are 51 classes of 9-arc shavings at `n = 7`.
 - At `n = 8` no 12-arc graph is a shaving, and there are 1617 classes of 11-arc shavings. So `κ(8) = 17`, the value
   predicted by the excess law (HYP-3819, HYP-3821).
 
-**(C) Growth.** `(1/2 − o(1)) n log₂ n ≤ u(n) ≤ C(n,2) − log₂ T(n) ≤ log₂ n!`.
+**(C) Growth.** `(1/2 − o(1)) n log₂ n ≤ u(n) ≤ C(n,2) − log₂ T(n) ≤ log₂ n!`. This is weaker than Linial–Saks–Sós
+(1983): `u(n) = n log₂ n − O(n log log n)`.
 
 ## Proof sketch of (A), odd `n`, `T` strong
 
