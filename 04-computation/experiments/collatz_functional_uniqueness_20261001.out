@@ -1,0 +1,160 @@
+== A. separation exponent s(D) of the abstract trees A(u), u = 1 mod 3 ==
+   D   m=ceil(D/2)  #classes(=3^(m-1) if injective)  s(D)  proved bound 2+floor((D-4)/5)
+   4    2          3 /        3   s= 2   bound=2   worst-pair=None
+PASS A: s(4) = 2 >= proved bound 2
+   5    3          4 /        9   s= 2   bound=2   worst-pair=(1, 10)
+PASS A: s(5) = 2 >= proved bound 2
+   6    3          6 /        9   s= 2   bound=2   worst-pair=(1, 10)
+PASS A: s(6) = 2 >= proved bound 2
+   7    4          8 /       27   s= 2   bound=2   worst-pair=(1, 10)
+PASS A: s(7) = 2 >= proved bound 2
+   8    4         12 /       27   s= 2   bound=2   worst-pair=(1, 19)
+PASS A: s(8) = 2 >= proved bound 2
+   9    5         17 /       81   s= 3   bound=3   worst-pair=(1, 28)
+PASS A: s(9) = 3 >= proved bound 3
+  10    5         25 /       81   s= 3   bound=3   worst-pair=(1, 28)
+PASS A: s(10) = 3 >= proved bound 3
+  11    6         36 /      243   s= 3   bound=3   worst-pair=(1, 55)
+PASS A: s(11) = 3 >= proved bound 3
+  12    6         53 /      243   s= 3   bound=3   worst-pair=(46, 73)
+PASS A: s(12) = 3 >= proved bound 3
+  13    7         78 /      729   s= 4   bound=3   worst-pair=(1, 82)
+PASS A: s(13) = 4 >= proved bound 3
+  14    7        114 /      729   s= 4   bound=4   worst-pair=(1, 163)
+PASS A: s(14) = 4 >= proved bound 4
+  15    8        169 /     2187   s= 4   bound=4   worst-pair=(46, 127)
+PASS A: s(15) = 4 >= proved bound 4
+  16    8        251 /     2187   s= 5   bound=4   worst-pair=(1, 244)
+PASS A: s(16) = 5 >= proved bound 4
+  17    9        369 /     6561   s= 5   bound=4   worst-pair=(1, 487)
+PASS A: s(17) = 5 >= proved bound 4
+  18    9        550 /     6561   s= 5   bound=4   worst-pair=(46, 289)
+PASS A: s(18) = 5 >= proved bound 4
+  19   10        816 /    19683   s= 6   bound=5   worst-pair=(1, 730)
+PASS A: s(19) = 6 >= proved bound 5
+  20   10       1209 /    19683   s= 6   bound=5   worst-pair=(1, 1459)
+PASS A: s(20) = 6 >= proved bound 5
+  21   11       1801 /    59049   s= 6   bound=5   worst-pair=(46, 1504)
+PASS A: s(21) = 6 >= proved bound 5
+  22   11       2675 /    59049   s= 6   bound=5   worst-pair=(73, 1531)
+PASS A: s(22) = 6 >= proved bound 5
+  23   12       3972 /   177147   s= 7   bound=5   worst-pair=(1, 4375)
+PASS A: s(23) = 7 >= proved bound 5
+  24   12       5924 /   177147   s= 7   bound=6   worst-pair=(55, 2242)
+PASS A: s(24) = 7 >= proved bound 6
+  25   13       8805 /   531441   s= 7   bound=6   worst-pair=(1531, 3718)
+PASS A: s(25) = 7 >= proved bound 6
+  26   13      13107 /   531441   s= 8   bound=6   worst-pair=(1, 13123)
+PASS A: s(26) = 8 >= proved bound 6
+  (time 8.0s)
+  first depth reaching s = k: {2: 4, 3: 9, 4: 13, 5: 16, 6: 19, 7: 23, 8: 26}  (steps [5, 4, 3, 3, 4, 3] )
+  observed rate ~ 10/3 depth per 3-adic digit; the proof's recursion s(D) >= 1 + s(D-5) gives 5
+
+== B. integer backward trees (positive integers) ==
+PASS B: integer backward trees of n <= 6000 equal the abstract e/o trees (depths 6,10,14,18)
+PASS B: depth 12: no canonical class mixes shapes (fbd 0/1/2/bare)
+PASS B: depth 12: every collision among n <= 6000 is 3-adically close (v_3 >= s(D-k)); 114 multi-classes
+PASS B: depth 12: the bare-ray class is exactly the multiples of 3 (2000)
+PASS B: depth 16: no canonical class mixes shapes (fbd 0/1/2/bare)
+PASS B: depth 16: every collision among n <= 6000 is 3-adically close (v_3 >= s(D-k)); 471 multi-classes
+PASS B: depth 16: the bare-ray class is exactly the multiples of 3 (2000)
+PASS B: depth 20: no canonical class mixes shapes (fbd 0/1/2/bare)
+PASS B: depth 20: every collision among n <= 6000 is 3-adically close (v_3 >= s(D-k)); 933 multi-classes
+PASS B: depth 20: the bare-ray class is exactly the multiples of 3 (2000)
+PASS B: string canonical forms (independent path) agree with hash-consed ids, n < 1500, depth 11
+
+== C. Eckmann-Hilton point: fibres {2w, (w-1)/3}, w = 4 mod 6 ==
+  v_3(5w+1)   count   min agree   max agree   (agree = deepest d with B(2w) ~_d B((w-1)/3))
+      1       22222       1          1
+      2        7407       3          4
+      3        2469       8          8
+      4         824      10         11
+      5         274      14         15
+      6          91      17         18
+      7          30      20         20
+      8          11      22         22
+      9           4      24         25
+     12           1      34         34
+  agreement depth / v_3(5w+1): {1: 1.0, 2: 2.0, 3: 2.67, 4: 2.75, 5: 3.0, 6: 3.0, 7: 2.86, 8: 2.75, 9: 2.78, 12: 2.83}
+PASS C: agreement depth <= 5 v_3(5w+1) - 6 (the bound implied by the separation lemma) for every w < 200000
+PASS C: 2v - 1 <= agreement depth <= 5v - 6 on the whole range (observed about 3v - 1)
+PASS C: no fibre with w < 200000 is balanced to the cap 40
+  deepest example: [106288] fibre [(212576, 35429)] agree [34]
+PASS C: -1/5 = 1 mod 3 and e(-1/5) has two identical child subtrees (depths < 2m-4, m = 30)
+PASS C: at -1/5 the two preimage maps 2x and (x-1)/3 coincide 3-adically
+  -1/5 is 2-adically odd (numerator -1), so no even vertex of a rational graph has 3-adic value -1/5
+
+== D. residue graphs Gamma_M (edges r -> T(n) mod M over n = r mod M) ==
+PASS D: 3x+1: Gamma_M connected for every M <= 1500 (no periodic invariant)
+PASS D: 3x-1: Gamma_M connected for every M <= 1500 (no periodic invariant)
+PASS D: 5x+1: Gamma_M connected for every M <= 1500 (no periodic invariant)
+PASS D: 7x+1: Gamma_M connected for every M <= 1500 (no periodic invariant)
+  3x+5: Gamma_5 has 2 components (gcd(n,5) invariant)
+PASS D: 3x+5 has a non-constant periodic invariant (gcd with 5)
+  3x+7: Gamma_7 has 2 components (gcd(n,7) invariant)
+PASS D: 3x+7 has a non-constant periodic invariant (gcd with 7)
+
+== E. census of n/2, an+b on the positive integers (starts <= 3000, cap 2e5 steps or 1e40) ==
+   a   b   cycles (least elements)                 escapes   obstruction
+   1  +1   [1]                                            0   -- (no obstruction found)
+   1  +3   [1, 3]                                         0   gcd(n,3) invariant; 2 cycles
+   1  +5   [1, 5]                                         0   gcd(n,5) invariant; 2 cycles
+   1  +7   [1, 3, 7]                                      0   gcd(n,7) invariant; 3 cycles
+   3  +1   [1]                                            0   -- (no obstruction found)
+   3  -1   [1, 5, 17]                                     0   3 cycles
+   3  +3   [3]                                            0   a,b share 3 (reduces to b/3 on an absorbing sublattice)
+   3  +5   [1, 5, 19, 23, 187, 347]                       0   gcd(n,5) invariant; 6 cycles
+   3  +7   [5, 7]                                         0   gcd(n,7) invariant; 2 cycles
+   5  +1   [1, 13, 17]                                 2662   3 cycles; escapes (drift > 0)
+   5  -1   [1]                                         2499   escapes (drift > 0)
+   5  +3   [1, 3, 39, 43, 51, 53, 61]                  2697   gcd(n,3) invariant; 7 cycles; escapes (drift > 0)
+   5  +5   [5, 65, 85]                                 2395   a,b share 5 (reduces to b/5 on an absorbing sublattice); 3 cycles; escapes (drift > 0)
+   5  +7   [1, 7, 9, 57, 91, 119]                      2046   gcd(n,7) invariant; 6 cycles; escapes (drift > 0)
+   7  +1   [1]                                         2940   escapes (drift > 0)
+   7  -1   []                                          3000   escapes (drift > 0)
+   7  +3   [3]                                         2960   gcd(n,3) invariant; escapes (drift > 0)
+   7  +5   [3, 5, 27]                                  2692   gcd(n,5) invariant; 3 cycles; escapes (drift > 0)
+   7  +7   [7]                                         2796   a,b share 7 (reduces to b/7 on an absorbing sublattice); escapes (drift > 0)
+   9  +1   []                                          3000   escapes (drift > 0)
+   9  -1   [1]                                         2981   escapes (drift > 0)
+   9  +3   []                                          3000   a,b share 3 (reduces to b/3 on an absorbing sublattice); escapes (drift > 0)
+   9  +5   []                                          3000   gcd(n,5) invariant; escapes (drift > 0)
+   9  +7   [1]                                         2978   gcd(n,7) invariant; escapes (drift > 0)
+
+== F. cycle balance identities (shortcut map x/2, (3x+b)/2) ==
+  3x+1 cycle from     1: length   2, p =   1, sum_even - sum_odd =     1 (= b p: True); second moment: True
+  3x+1 cycle from    -1: length   1, p =   1, sum_even - sum_odd =     1 (= b p: True); second moment: True
+  3x+1 cycle from    -5: length   3, p =   2, sum_even - sum_odd =     2 (= b p: True); second moment: True
+  3x+1 cycle from   -17: length  11, p =   7, sum_even - sum_odd =     7 (= b p: True); second moment: True
+  3x-1 cycle from     1: length   1, p =   1, sum_even - sum_odd =    -1 (= b p: True); second moment: True
+  3x-1 cycle from     5: length   3, p =   2, sum_even - sum_odd =    -2 (= b p: True); second moment: True
+  3x-1 cycle from    17: length  11, p =   7, sum_even - sum_odd =    -7 (= b p: True); second moment: True
+  3x+5 cycle from     1: length   3, p =   1, sum_even - sum_odd =     5 (= b p: True); second moment: True
+  3x+5 cycle from    19: length   5, p =   3, sum_even - sum_odd =    15 (= b p: True); second moment: True
+  3x+5 cycle from    23: length   5, p =   3, sum_even - sum_odd =    15 (= b p: True); second moment: True
+  3x+5 cycle from   187: length  27, p =  17, sum_even - sum_odd =    85 (= b p: True); second moment: True
+  3x+5 cycle from   347: length  27, p =  17, sum_even - sum_odd =    85 (= b p: True); second moment: True
+PASS F: sum_even - sum_odd = b p and 3 E_2 = 5 O_2 + 6 b O_1 + b^2 p on every listed cycle
+
+== G. backward separation for n/2, an+1: a = 5 (2 primitive root mod 5^k) vs a = 7 ==
+  a=5 depth 8, units mod 5^4: 500 labels -> 44 classes; largest class 50; collisions (outside bare spines) are 5-adically close to order 1
+  a=5 depth 12, units mod 5^6: 12500 labels -> 270 classes; largest class 500; collisions (outside bare spines) are 5-adically close to order 2
+  a=5 depth 16, units mod 5^7: 62500 labels -> 1666 classes; largest class 625; collisions (outside bare spines) are 5-adically close to order 3
+  a=7 depth 12, units mod 7^4: 2058 labels -> 191 classes; largest class 1029; collisions (outside bare spines) are 7-adically close to order 1; labels with bare spines (x = 3,5,6 mod 7): 1029
+PASS G: a = 7, depth 12: the non-residue coset {3,5,6} mod 7 collapses to one bare class (no backward injectivity)
+  a=7 depth 16, units mod 7^5: 14406 labels -> 1067 classes; largest class 7203; collisions (outside bare spines) are 7-adically close to order 2; labels with bare spines (x = 3,5,6 mod 7): 7203
+PASS G: a = 7, depth 16: the non-residue coset {3,5,6} mod 7 collapses to one bare class (no backward injectivity)
+
+== H. shortcut graph: preimages 2n and (2n-1)/3 (n = 2 mod 3); one vertex type, labels in Z_3 ==
+  depth 10: units mod 3^5: 162 labels -> 131 classes; collisions 3-adically close to order 3
+PASS H: shortcut depth 10: every collision is 3-adically close (order >= 2)
+  depth 14: units mod 3^7: 1458 labels -> 1222 classes; collisions 3-adically close to order 5
+PASS H: shortcut depth 14: every collision is 3-adically close (order >= 2)
+  depth 18: units mod 3^9: 13122 labels -> 11435 classes; collisions 3-adically close to order 7
+PASS H: shortcut depth 18: every collision is 3-adically close (order >= 2)
+  depth 22: units mod 3^10: 39366 labels -> 39072 classes; collisions 3-adically close to order 9
+PASS H: shortcut depth 22: every collision is 3-adically close (order >= 2)
+PASS H: shortcut Eckmann-Hilton point -1/4 = 2 mod 3: its two preimage subtrees coincide (depths < 28)
+  -1/4 is not a 2-adic integer, so the shortcut coincidence point is not a vertex of any graph on Z_(2)
+
+ALL CHECKS PASSED
