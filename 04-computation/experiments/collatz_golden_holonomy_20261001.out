@@ -1,0 +1,23 @@
+=== A. golden-mean words ===
+PASS T-parity words of n <= 5000 (200 steps) contain no '11'
+PASS substituting 10 -> 1 in the T-word gives the T1-word (n <= 3000)
+=== B. Theta conjugates T to the golden beta-map ===
+PASS Theta(T n) = phi*Theta(n) mod 1 for n <= 3000 (80-digit prefixes)
+PASS Theta(1), Theta(4), Theta(2) = phi/2, 1/(2phi), 1/2 = cos 36, cos 72, cos 60 degrees (0.809017, 0.309017, 0.500000)
+PASS cos(pi/5) = phi/2 and cos(2pi/5) = 1/(2 phi)
+=== C. cycles of the golden beta-map inside (1/2)Z[phi] ===
+   cycles: [(1, [0.0]), (3, [0.309017, 0.5, 0.809017])]
+PASS exactly two cycles in (1/2)Z[phi] cap [0,1): {0} and {1/(2phi), 1/2, phi/2} (10 lattice points with |conjugate| <= phi^2 checked; every periodic point has |conjugate| <= phi^2)
+=== D. one identity, two evaluations ===
+PASS for n <= 20000: (1 - z^3)F_n is a polynomial P_n; -P_n(2)/7 reproduces the 2-adic code Phi_T(n) (sigma + 30 bits) and phi*P_n(1/phi) in Z[phi] equals 2*Theta(n) exactly
+=== E. negative cycles ===
+   cycle through -1: T-word period start 101010101010101010..., Theta ~ 1.000000
+   cycle through -5: T-word period start 101001010010100101..., Theta ~ 0.938749
+   cycle through -17: T-word period start 101010100101010000..., Theta ~ 0.991308
+PASS the -5 cycle (word 10100) is golden-mean admissible
+PASS the -1 cycle has word (10)^inf: Theta = 1, the boundary point of the golden beta-shift (not a greedy expansion)
+=== F. the Collatz parity measure on the golden-mean shift ===
+   empirical P(0->1) = 0.4991 (Markov 1/2; Parry measure would give 1/phi^2 = 0.3820)
+PASS entropy (2/3) ln 2 = 0.46210 < ln phi = 0.48121; dim Theta_*(Haar) = 0.96028
+
+ALL CHECKS PASSED

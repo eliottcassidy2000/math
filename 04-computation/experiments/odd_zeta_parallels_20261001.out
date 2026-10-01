@@ -1,0 +1,17 @@
+=== A. the arithmetic gain of arXiv:2609.22316 ===
+PASS v_p = 3 [3 (n mod p) >= 2p - 1] (else 0) for all 4341 (n, p) pairs tested (sqrt(h0) < p <= n); asymptotically phi(x) = 3 * 1_[2/3,1)(frac x)
+   int phi dpsi = 2.2230563, int phi dx/x^2 = 1.5, gain = 0.7230563
+   direct: (1/n) log Phi_n at n = 3000000: 0.72068
+PASS the prime sum confirms the gain 0.7231 (not 3.7231)
+PASS the preprint's C2' = 5.27694374 is 9 - 2.22306 - 1.5 (second integral subtracted)
+PASS correct C2' = 8.27694 > C0' = 5.75349395; even the trivial bound gives C2' >= 6 > C0': the criterion fails
+=== B. Brown's dinner parties ===
+   raw: [1, 3, 23, 177, 1553]  up to the dihedral symmetry of delta: [1, 1, 5, 19, 112]
+PASS Hamiltonian cycles of complement(C_N): 1, 3, 23, 177, 1553 (A002493); dihedral classes 1, 1, 5, 19, 112
+=== C. the Petersen graph inside M_{0,5}-bar ===
+PASS Kneser KG(5,2): 10 vertices (the lines D_ij), 15 edges (D_ij meets D_kl iff {i,j}, {k,l} disjoint)
+PASS consecutive pairs of (12345) and of its convergent partner (13524) are two disjoint 5-cycles of Petersen joined by a perfect matching: Brown's zeta(2) configuration = Petersen's pentagon + pentagram + spokes
+=== D. M_{0,8}-bar ===
+PASS 35 boundary divisors D_S of M_{0,8}-bar with |S| = 4, each isomorphic to M_{0,5}-bar x M_{0,5}-bar
+
+ALL CHECKS PASSED
