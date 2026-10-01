@@ -1754,7 +1754,7 @@ seed and is cited, complemented and audited, not duplicated.
   smallest open Beal signature `(3,5,7)` (AUTHOR-CLAIMED). No Collatz
   step.
 
-## 2aa. Wave 22 (2026-09-30/10-01, this session): LRC is local, Collatz is global — the owner's thesis tested
+## 2ah. Wave 22 of this session (2026-09-30/10-01; 2aa-2ag were taken by the poset-dag session): LRC is local, Collatz is global — the owner's thesis tested
 
 The owner wrote: "lonely runner being local while Collatz being global means that each lacks information about the other's type ... both finely tuned to the patterns in the primes; understanding both at the same time may unlock the number-theoretic insights to each." Two lanes tested this.
 
