@@ -1,0 +1,54 @@
+=== T1. tournament classes ===
+PASS class counts 1,1,2,4,12,56,456,6880 = A000568
+PASS orbit-counting: sum over classes of n!/|Aut| = 2^C(n,2) for n <= 8 (|Aut| values correct)
+=== T2. the owner's H4 ===
+PASS the 4 completions of H4 are the 4 classes of 4-tournaments, each once
+PASS copies of H4 in T equal |Aut T| for every class: [((0, 1, 2, 3), 1), ((1, 1, 1, 3), 3), ((0, 2, 2, 2), 3), ((1, 1, 2, 2), 1)]
+=== T3. Hn = Hamiltonian path + first->last arc ===
+   n=3: min #Hn = 0, classes with #Hn = 0: 1
+   n=4: min #Hn = 1, classes with #Hn = 0: 0
+   n=5: min #Hn = 0, classes with #Hn = 0: 1
+   n=6: min #Hn = 1, classes with #Hn = 0: 0
+   n=7: min #Hn = 1, classes with #Hn = 0: 0
+   n=8: min #Hn = 1, classes with #Hn = 0: 0
+PASS n = 4: every class has an ODD number of copies of H4 (Redei: H odd, n even)
+PASS n = 6: every class has an ODD number of copies of H6 (Redei: H odd, n even)
+PASS n = 8: every class has an ODD number of copies of H8 (Redei: H odd, n even)
+PASS n = 3: only the 3-cycle avoids H3 (= TT3)
+PASS n = 5: exactly one class avoids H5: C3[1,C3,1] (a => C3 => b -> a), |Aut| = 3, H = 15 = 5 * hc
+PASS n = 7: every class contains H7 (no all-closing 7-tournament)
+   C helper: n=9 tested=1761280 allclosing=0
+PASS n = 9: every one-vertex extension of every 8-class (hence every 9-tournament) contains H9
+PASS Steps 1-5 from EVERY Hamiltonian cycle of every strong class, n = 3, 5, 7 (2529 runs): a non-closing HP except exactly at C3 and C3[1,C3,1]
+PASS Steps 1-5 on 975 random strong tournaments with odd n = 7..31 (incl. C3[1,R,1]): always a non-closing HP
+=== T4. maximum shavings u(n), n <= 6 ===
+PASS n = 3: u = 2 = 2n-4, unique maximiser (one forward labelling) = path + all span-3 arcs
+PASS n = 4: u = 4 = 2n-4, unique maximiser (one forward labelling) = path + all span-3 arcs
+PASS n = 5: u = 6 = 2n-4, unique maximiser (one forward labelling) = path + all span-3 arcs
+PASS n = 6: u = 8 = 2n-4, unique maximiser (one forward labelling) = path + all span-3 arcs
+PASS kappa(n) = C(n,2) - u(n) = 1,2,4,7 (agrees with HYP-3798, mac-mini)
+=== T5. n = 7: the Paley heptagon decides u(7) ===
+PASS P7 (QR_7, |Aut| = 21) is the only 7-tournament without TT4: every unavoidable 7-vertex graph embeds in P7
+   orbits under Aut(P7) of e-arc subgraphs of P7 (all, acyclic): {9: (14020, 3100), 10: (16796, 1792)}
+PASS no acyclic 10-arc subgraph of P7 is unavoidable: u(7) <= 9
+PASS 54 Aut(P7)-orbits of unavoidable 9-arc subgraphs: u(7) = 9, kappa(7) = 21 - 9 = 12
+PASS 51 isomorphism classes of maximum 7-vertex shavings; HYP-3805's span1 + span3 - (0,3) is one of them
+   linear-extension counts of the 51 maximisers: [(1, 4), (3, 10), (4, 2), (5, 8), (6, 2), (7, 2), (8, 2), (10, 10), (12, 2), (14, 6), (15, 1), (20, 2)]
+PASS certificate for u(7) <= 9: P7 plus 6 more classes (the minimum), all symmetric: |Aut| = [9, 9, 7, 5, 3, 3]
+PASS path + all span-3 arcs (10 arcs) is avoided by exactly two 7-classes: P7 and one class with |Aut| = 1 (scores [(1, 2, 2, 3, 4, 4, 5), (3, 3, 3, 3, 3, 3, 3)])
+=== T6. growth: u(n) = Theta(n log n) ===
+PASS Davis-Polya formula reproduces A000568 (n <= 10)
+PASS lower bound <= upper bound C(n,2) - ceil(log2 T(n)) for n <= 60
+   n, lower, upper, 2n-4, (n/2)log2 n, log2 n!: [(7, 9, 12, 10, 9.8, 12.3), (8, 10, 15, 12, 12.0, 15.3), (10, 14, 21, 16, 16.6, 21.8), (16, 25, 44, 28, 32.0, 44.3), (20, 31, 61, 36, 43.2, 61.1), (30, 51, 107, 56, 73.6, 107.7), (40, 78, 159, 76, 106.4, 159.2), (50, 105, 214, 96, 141.1, 214.2), (60, 126, 272, 116, 177.2, 272.1)]
+PASS the transitive-block lower bound exceeds 2n-4 from n = 38 on (n <= 60): kappa(n) < 1 + C(n-2,2) there
+PASS n = 7: counting bound gives u(7) <= 12; the truth is 9 (T5)
+=== T7. perfect shavings ===
+PASS T(n) is a power of 2 exactly for n <= 4 (n <= 60): a perfect shaving (each class exactly once) needs that
+=== T8. how the maximum shavings cover the classes ===
+PASS n = 4: 2^2 completions hit all 4 classes; m_S(T) = emb(S,T)/|Aut T|; multiplicity histogram [(1, 4)]
+PASS n = 5: 2^4 completions hit all 12 classes; m_S(T) = emb(S,T)/|Aut T|; multiplicity histogram [(1, 10), (3, 2)]
+PASS n = 6: 2^7 completions hit all 56 classes; m_S(T) = emb(S,T)/|Aut T|; multiplicity histogram [(1, 29), (3, 18), (5, 9)]
+   parity of emb(path + span-3 arcs, T) over the classes: {4: {1: 4}, 5: {1: 12}, 6: {1: 56}, 7: {1: 282, 0: 174}}
+PASS the number of embeddings of path + span-3 arcs is odd for EVERY tournament with n <= 6 (so every class is hit an odd number of times); at n = 7 it is even for 174 of the 456 classes (a small-n parity)
+
+ALL CHECKS PASSED
