@@ -45,3 +45,9 @@ Let `S(A) = oddpart(3A+1)` for odd `A`, and label odd numbers by `M = (A+1)/2`.
 3. **Paley restatement.** Let `Φ_T` be the parity code of `T = n/2, 3n+1`. Collatz holds iff `7Φ_T(n) ∈ Z` for
    every `n ≥ 1`. In that case `7Φ_T(n) ≡ −2^σ(n) (mod 7)`, which lies in `NQR_7 = {3, 5, 6}`; here `σ(n)` is
    the number of steps to reach 1.
+
+**FORMALIZED 2026-10-01 (collatz-procgen-20260922 lean lane; Lean 4.30 core; package [`04-computation/lean/ProcgenSelfieEdim/`](../../04-computation/lean/ProcgenSelfieEdim/README.md); orchestrator-audited).**
+- `drop_identity`: 6K + 1 = (2^v - 3) S.
+- The drop correspondence and multiplicity: `drop_forward`, `drop_backward`, `drop_injective`, `admissible_iff`, `admissible_of_neg` / `admissible_of_nonneg`.
+- The label-map rules F(2N) = 3N, F(4j+1) = 3j+1, F(4n-1) = F(n): `labelF_even`, `labelF_four_j_one`, `labelF_microcosm`.
+- Propositions 3-5 are not formalized.

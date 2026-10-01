@@ -164,3 +164,14 @@ The question was: what does A049313 (switching classes of tournaments) count, in
 - Brauer's lemma, applied to the affine action, turns each fixed-point count into a sum of a sign character over the Euler graphs that `g` fixes.
 
 The bijective form remains open.
+
+**FORMALIZED 2026-10-01 (Lean 4.30 core, no Mathlib; package [`04-computation/lean/ProcgenSelfieEdim/`](../../04-computation/lean/ProcgenSelfieEdim/README.md); `verify.py` PASS, 503 theorems, axioms within {propext, Quot.sound}; orchestrator re-built from scratch and re-audited the axioms).**
+- A1, the gauge theorem for all N: `path_arc`, `selfie_fibre`, `loops_ne_compl`, `selfie_onto`.
+- A2: `switch_sum`.
+- A3(e): `constant_switching_class`.
+- C1 for cyclic groups: `circulant_arcCount_even`.
+- The double counting and the parity constraints: `sum_arcCount`, `allOdd_mod_four_of_tournament`.
+- Rédei's theorem itself, proved from scratch: `redei`.
+- rho = 2: `parity_break_two`.
+- Finite facts: QR_7 / QR_7 - v (`qr7_counts`, `qr7del_counts`); no all-odd tournament for N <= 5 (`no_allOdd_three_to_five`); `no_covered_universal_arc`.
+- Not formalized: A3(a)-(d), B1, C2, E1, the dead-arc formula, the censuses.

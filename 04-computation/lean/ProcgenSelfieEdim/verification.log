@@ -1,0 +1,742 @@
+$ lean --version
+Lean (version 4.30.0, arm64-apple-darwin24.6.0, commit d024af099ca4bf2c86f649261ebf59565dc8c622, Release)
+exit_code=0 seconds=0.0
+
+$ lake clean
+exit_code=0 seconds=0.1
+
+$ lake build ProcgenSelfieEdim.ListLemmas
+✔ [2/2] Built ProcgenSelfieEdim.ListLemmas (807ms)
+Build completed successfully (2 jobs).
+exit_code=0 seconds=0.9
+
+$ lake build ProcgenSelfieEdim.Hypercube
+✔ [3/3] Built ProcgenSelfieEdim.Hypercube (2.5s)
+Build completed successfully (3 jobs).
+exit_code=0 seconds=2.6
+
+$ lake build ProcgenSelfieEdim.EdimQ6
+✔ [4/4] Built ProcgenSelfieEdim.EdimQ6 (1.4s)
+Build completed successfully (4 jobs).
+exit_code=0 seconds=1.5
+
+$ lake build ProcgenSelfieEdim.CountingBound
+✔ [5/5] Built ProcgenSelfieEdim.CountingBound (1.4s)
+Build completed successfully (5 jobs).
+exit_code=0 seconds=1.4
+
+$ lake build ProcgenSelfieEdim.Stabilizer
+✔ [5/5] Built ProcgenSelfieEdim.Stabilizer (861ms)
+Build completed successfully (5 jobs).
+exit_code=0 seconds=0.9
+
+$ lake build ProcgenSelfieEdim.KeyBlocks
+✔ [4/4] Built ProcgenSelfieEdim.KeyBlocks (397ms)
+Build completed successfully (4 jobs).
+exit_code=0 seconds=0.5
+
+$ lake build ProcgenSelfieEdim.EdimQ7Data
+✔ [5/5] Built ProcgenSelfieEdim.EdimQ7Data (497ms)
+Build completed successfully (5 jobs).
+exit_code=0 seconds=0.6
+
+$ lake build ProcgenSelfieEdim.EdimQ7P0
+✔ [6/6] Built ProcgenSelfieEdim.EdimQ7P0 (1.9s)
+Build completed successfully (6 jobs).
+exit_code=0 seconds=2.0
+
+$ lake build ProcgenSelfieEdim.EdimQ7P1
+✔ [6/6] Built ProcgenSelfieEdim.EdimQ7P1 (1.6s)
+Build completed successfully (6 jobs).
+exit_code=0 seconds=1.7
+
+$ lake build ProcgenSelfieEdim.EdimQ7
+✔ [8/8] Built ProcgenSelfieEdim.EdimQ7 (400ms)
+Build completed successfully (8 jobs).
+exit_code=0 seconds=0.5
+
+$ lake build ProcgenSelfieEdim.EdimQ8Data
+✔ [5/5] Built ProcgenSelfieEdim.EdimQ8Data (812ms)
+Build completed successfully (5 jobs).
+exit_code=0 seconds=0.9
+
+$ lake build ProcgenSelfieEdim.EdimQ8P0
+✔ [6/6] Built ProcgenSelfieEdim.EdimQ8P0 (2.8s)
+Build completed successfully (6 jobs).
+exit_code=0 seconds=2.9
+
+$ lake build ProcgenSelfieEdim.EdimQ8P1
+✔ [6/6] Built ProcgenSelfieEdim.EdimQ8P1 (3.1s)
+Build completed successfully (6 jobs).
+exit_code=0 seconds=3.3
+
+$ lake build ProcgenSelfieEdim.EdimQ8P2
+✔ [6/6] Built ProcgenSelfieEdim.EdimQ8P2 (3.4s)
+Build completed successfully (6 jobs).
+exit_code=0 seconds=3.4
+
+$ lake build ProcgenSelfieEdim.EdimQ8P3
+✔ [6/6] Built ProcgenSelfieEdim.EdimQ8P3 (3.8s)
+Build completed successfully (6 jobs).
+exit_code=0 seconds=3.9
+
+$ lake build ProcgenSelfieEdim.EdimQ8
+✔ [10/10] Built ProcgenSelfieEdim.EdimQ8 (680ms)
+Build completed successfully (10 jobs).
+exit_code=0 seconds=0.8
+
+$ lake build ProcgenSelfieEdim.EdimQ9Data
+✔ [5/5] Built ProcgenSelfieEdim.EdimQ9Data (1.7s)
+Build completed successfully (5 jobs).
+exit_code=0 seconds=1.8
+
+$ lake build ProcgenSelfieEdim.EdimQ9P0
+✔ [6/6] Built ProcgenSelfieEdim.EdimQ9P0 (3.4s)
+Build completed successfully (6 jobs).
+exit_code=0 seconds=3.5
+
+$ lake build ProcgenSelfieEdim.EdimQ9P1
+✔ [6/6] Built ProcgenSelfieEdim.EdimQ9P1 (3.5s)
+Build completed successfully (6 jobs).
+exit_code=0 seconds=3.6
+
+$ lake build ProcgenSelfieEdim.EdimQ9P2
+✔ [6/6] Built ProcgenSelfieEdim.EdimQ9P2 (3.0s)
+Build completed successfully (6 jobs).
+exit_code=0 seconds=4.1
+
+$ lake build ProcgenSelfieEdim.EdimQ9P3
+✔ [6/6] Built ProcgenSelfieEdim.EdimQ9P3 (4.1s)
+Build completed successfully (6 jobs).
+exit_code=0 seconds=4.2
+
+$ lake build ProcgenSelfieEdim.EdimQ9P4
+✔ [6/6] Built ProcgenSelfieEdim.EdimQ9P4 (4.3s)
+Build completed successfully (6 jobs).
+exit_code=0 seconds=4.4
+
+$ lake build ProcgenSelfieEdim.EdimQ9P5
+✔ [6/6] Built ProcgenSelfieEdim.EdimQ9P5 (4.9s)
+Build completed successfully (6 jobs).
+exit_code=0 seconds=5.0
+
+$ lake build ProcgenSelfieEdim.EdimQ9P6
+✔ [6/6] Built ProcgenSelfieEdim.EdimQ9P6 (5.2s)
+Build completed successfully (6 jobs).
+exit_code=0 seconds=5.3
+
+$ lake build ProcgenSelfieEdim.EdimQ9P7
+✔ [6/6] Built ProcgenSelfieEdim.EdimQ9P7 (5.5s)
+Build completed successfully (6 jobs).
+exit_code=0 seconds=5.6
+
+$ lake build ProcgenSelfieEdim.EdimQ9P8
+✔ [6/6] Built ProcgenSelfieEdim.EdimQ9P8 (5.7s)
+Build completed successfully (6 jobs).
+exit_code=0 seconds=5.8
+
+$ lake build ProcgenSelfieEdim.EdimQ9P9
+✔ [6/6] Built ProcgenSelfieEdim.EdimQ9P9 (5.7s)
+Build completed successfully (6 jobs).
+exit_code=0 seconds=5.9
+
+$ lake build ProcgenSelfieEdim.EdimQ9P10
+✔ [6/6] Built ProcgenSelfieEdim.EdimQ9P10 (6.4s)
+Build completed successfully (6 jobs).
+exit_code=0 seconds=6.4
+
+$ lake build ProcgenSelfieEdim.EdimQ9P11
+✔ [6/6] Built ProcgenSelfieEdim.EdimQ9P11 (6.4s)
+Build completed successfully (6 jobs).
+exit_code=0 seconds=6.4
+
+$ lake build ProcgenSelfieEdim.EdimQ9
+✔ [18/18] Built ProcgenSelfieEdim.EdimQ9 (1.7s)
+Build completed successfully (18 jobs).
+exit_code=0 seconds=1.9
+
+$ lake build ProcgenSelfieEdim.Tournament
+✔ [2/2] Built ProcgenSelfieEdim.Tournament (839ms)
+Build completed successfully (2 jobs).
+exit_code=0 seconds=0.9
+
+$ lake build ProcgenSelfieEdim.HamPath
+✔ [4/4] Built ProcgenSelfieEdim.HamPath (587ms)
+Build completed successfully (4 jobs).
+exit_code=0 seconds=0.7
+
+$ lake build ProcgenSelfieEdim.ArcParity
+✔ [5/5] Built ProcgenSelfieEdim.ArcParity (1.1s)
+Build completed successfully (5 jobs).
+exit_code=0 seconds=1.2
+
+$ lake build ProcgenSelfieEdim.AltSum
+✔ [7/7] Built ProcgenSelfieEdim.AltSum (907ms)
+Build completed successfully (7 jobs).
+exit_code=0 seconds=1.0
+
+$ lake build ProcgenSelfieEdim.TournamentCode
+✔ [4/4] Built ProcgenSelfieEdim.TournamentCode (669ms)
+Build completed successfully (4 jobs).
+exit_code=0 seconds=0.8
+
+$ lake build ProcgenSelfieEdim.SelfieFinite
+✔ [7/7] Built ProcgenSelfieEdim.SelfieFinite (13s)
+Build completed successfully (7 jobs).
+exit_code=0 seconds=13.3
+
+$ lake build ProcgenSelfieEdim.Shaved
+✔ [8/8] Built ProcgenSelfieEdim.Shaved (6.4s)
+Build completed successfully (8 jobs).
+exit_code=0 seconds=6.5
+
+$ lake build ProcgenSelfieEdim.CycleCount
+✔ [9/9] Built ProcgenSelfieEdim.CycleCount (851ms)
+Build completed successfully (9 jobs).
+exit_code=0 seconds=1.0
+
+$ lake build ProcgenSelfieEdim.Circulant
+✔ [10/10] Built ProcgenSelfieEdim.Circulant (2.9s)
+Build completed successfully (10 jobs).
+exit_code=0 seconds=3.0
+
+$ lake build ProcgenSelfieEdim.HPExist
+✔ [11/11] Built ProcgenSelfieEdim.HPExist (482ms)
+Build completed successfully (11 jobs).
+exit_code=0 seconds=0.6
+
+$ lake build ProcgenSelfieEdim.SwitchSum
+✔ [12/12] Built ProcgenSelfieEdim.SwitchSum (827ms)
+Build completed successfully (12 jobs).
+exit_code=0 seconds=0.9
+
+$ lake build ProcgenSelfieEdim.Redei
+✔ [13/13] Built ProcgenSelfieEdim.Redei (2.0s)
+Build completed successfully (13 jobs).
+exit_code=0 seconds=2.2
+
+$ lake build ProcgenSelfieEdim.ConstantH
+✔ [14/15] Built ProcgenSelfieEdim.CollatzDrop (2.8s)
+✔ [15/15] Built ProcgenSelfieEdim.ConstantH (906ms)
+Build completed successfully (15 jobs).
+exit_code=0 seconds=3.8
+
+$ lake build ProcgenSelfieEdim.ParityBreak
+✔ [14/14] Built ProcgenSelfieEdim.ParityBreak (721ms)
+Build completed successfully (14 jobs).
+exit_code=0 seconds=0.8
+
+$ lake build ProcgenSelfieEdim.CollatzDrop
+Build completed successfully (2 jobs).
+exit_code=0 seconds=0.2
+
+$ lake build
+✔ [47/48] Built ProcgenSelfieEdim (227ms)
+Build completed successfully (48 jobs).
+exit_code=0 seconds=0.4
+
+$ lake env lean AxiomAudit.lean
+'ProcgenSelfieEdim.nodup_range' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.length_filter_lt' depends on axioms: [propext]
+'ProcgenSelfieEdim.pigeonhole' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.length_eq_of_same_members' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.eq_of_map_nodup' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.nodup_of_map_nodup' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.nodup_flatMap' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.nodup_of_allDistinct' depends on axioms: [propext]
+'ProcgenSelfieEdim.all_of_all_eq_true' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.forall_lt_of_all_range' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.filter_cons_true' does not depend on any axioms
+'ProcgenSelfieEdim.filter_cons_false' does not depend on any axioms
+'ProcgenSelfieEdim.exists_of_length_filter_ne_zero' does not depend on any axioms
+'ProcgenSelfieEdim.length_filter_or_le' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.length_filter_mono' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.length_filter_add_not' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.length_filter_false' does not depend on any axioms
+'ProcgenSelfieEdim.length_filter_any_le' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.sum_le_mul' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.nodup_map_of_inj_on' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.memR_iff' depends on axioms: [propext]
+'ProcgenSelfieEdim.nodup_of_distinctR' depends on axioms: [propext]
+'ProcgenSelfieEdim.appR_eq' does not depend on any axioms
+'ProcgenSelfieEdim.flatR_eq' depends on axioms: [propext]
+'ProcgenSelfieEdim.downR_succ' does not depend on any axioms
+'ProcgenSelfieEdim.mem_downR' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.length_downR' does not depend on any axioms
+'ProcgenSelfieEdim.nodup_downR' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.countR_eq' does not depend on any axioms
+'ProcgenSelfieEdim.allR_eq_true' depends on axioms: [propext]
+'ProcgenSelfieEdim.anyR_eq_true' depends on axioms: [propext]
+'ProcgenSelfieEdim.rsum_congr' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.rsum_add' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.rsum_zero' does not depend on any axioms
+'ProcgenSelfieEdim.rsum_single' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.hamming_succ' does not depend on any axioms
+'ProcgenSelfieEdim.hamming_le' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.hamming_comm' does not depend on any axioms
+'ProcgenSelfieEdim.hamming_self' does not depend on any axioms
+'ProcgenSelfieEdim.two_pow_succ' does not depend on any axioms
+'ProcgenSelfieEdim.eq_of_hamming_eq_zero' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.hamming_congr_of_zero' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.hamming_adjacent' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.hamming_triangle' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.antipode_lt' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.antipode_antipode' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.hamming_antipode' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.hamming_antipode_antipode' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.isEdge_antipode' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.edgeDist_comm' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.hist_comm' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.edgeDist_le' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.edgeDist_antipode' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.hist_antipode' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.bit_zero' depends on axioms: [propext]
+'ProcgenSelfieEdim.bit_succ' depends on axioms: [propext]
+'ProcgenSelfieEdim.hamming_flip' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.flip_lt' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.edge_cases' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.mem_edgeList' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.isEdge_of_mem_edgeList' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.canonical_mem' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.hist_nil' does not depend on any axioms
+'ProcgenSelfieEdim.hist_cons' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.hist_eq_zero_of_le' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.weighted_sum_eq' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.sum_map_one' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.rsum_hist' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.resolving_of_keys' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.hamR_eq' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.fmin_eq' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.keyR_eq' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.resolving_of_check' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.rsum_shift' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.rsum_palindrome_even' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.hist_not_palindrome' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.no_antipodal_collision' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.paperSet_is_vertex_set' depends on axioms: [propext]
+'ProcgenSelfieEdim.check_paperSet' does not depend on any axioms
+'ProcgenSelfieEdim.edgeList_six' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.paperSet_resolving' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.eq_antipode_of_hamming_eq' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.touch_count_check' does not depend on any axioms
+'ProcgenSelfieEdim.touch_count' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.touched_of_bad' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.mem_comps' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.comps_small' does not depend on any axioms
+'ProcgenSelfieEdim.rsum_six' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.histVec6_mem_comps' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.not_resolving_of_length_le_six' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.geodesic_step' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.hamming_map_le' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.automorphism_isometry' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.surj_of_inj' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.length_filter_comp' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.hist_invariant' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.isEdge_flipBit' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.flipBit_dist' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.trivial_stabilizer' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.paperSet_trivial_stabilizer' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.keyBR_eq' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.resolving_of_edgeKeys' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.blk_succ' depends on axioms: [propext]
+'ProcgenSelfieEdim.eq_of_blocks' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.eq_of_eqListR' depends on axioms: [propext]
+'ProcgenSelfieEdim.mergeR_perm' depends on axioms: [propext]
+'ProcgenSelfieEdim.mergePairsR_perm' depends on axioms: [propext]
+'ProcgenSelfieEdim.flatten_singletons' does not depend on any axioms
+'ProcgenSelfieEdim.msortR_perm' depends on axioms: [propext]
+'ProcgenSelfieEdim.strictFrom_lt' depends on axioms: [propext]
+'ProcgenSelfieEdim.nodup_of_strictFrom' depends on axioms: [propext]
+'ProcgenSelfieEdim.nodup_of_strictIncR' depends on axioms: [propext]
+'ProcgenSelfieEdim.nodup_of_msortR' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.q7set_is_vertex_set' does not depend on any axioms
+'ProcgenSelfieEdim.q7_lengths' does not depend on any axioms
+'ProcgenSelfieEdim.q7_block_0' does not depend on any axioms
+'ProcgenSelfieEdim.q7_block_1' does not depend on any axioms
+'ProcgenSelfieEdim.q7_block_2' does not depend on any axioms
+'ProcgenSelfieEdim.q7_block_3' does not depend on any axioms
+'ProcgenSelfieEdim.q7_block_4' does not depend on any axioms
+'ProcgenSelfieEdim.q7_block_5' does not depend on any axioms
+'ProcgenSelfieEdim.q7_block_6' does not depend on any axioms
+'ProcgenSelfieEdim.q7_distinct' does not depend on any axioms
+'ProcgenSelfieEdim.q7_keys_eq' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.q7set_resolving' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.q8set_is_vertex_set' does not depend on any axioms
+'ProcgenSelfieEdim.q8_lengths' does not depend on any axioms
+'ProcgenSelfieEdim.q8_block_0' does not depend on any axioms
+'ProcgenSelfieEdim.q8_block_1' does not depend on any axioms
+'ProcgenSelfieEdim.q8_block_2' does not depend on any axioms
+'ProcgenSelfieEdim.q8_block_3' does not depend on any axioms
+'ProcgenSelfieEdim.q8_block_4' does not depend on any axioms
+'ProcgenSelfieEdim.q8_block_5' does not depend on any axioms
+'ProcgenSelfieEdim.q8_block_6' does not depend on any axioms
+'ProcgenSelfieEdim.q8_block_7' does not depend on any axioms
+'ProcgenSelfieEdim.q8_block_8' does not depend on any axioms
+'ProcgenSelfieEdim.q8_block_9' does not depend on any axioms
+'ProcgenSelfieEdim.q8_block_10' does not depend on any axioms
+'ProcgenSelfieEdim.q8_block_11' does not depend on any axioms
+'ProcgenSelfieEdim.q8_block_12' does not depend on any axioms
+'ProcgenSelfieEdim.q8_block_13' does not depend on any axioms
+'ProcgenSelfieEdim.q8_block_14' does not depend on any axioms
+'ProcgenSelfieEdim.q8_block_15' does not depend on any axioms
+'ProcgenSelfieEdim.q8_distinct' does not depend on any axioms
+'ProcgenSelfieEdim.q8_keys_eq' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.q8set_resolving' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.q9set_is_vertex_set' does not depend on any axioms
+'ProcgenSelfieEdim.q9_lengths' does not depend on any axioms
+'ProcgenSelfieEdim.q9_block_0' does not depend on any axioms
+'ProcgenSelfieEdim.q9_block_1' does not depend on any axioms
+'ProcgenSelfieEdim.q9_block_2' does not depend on any axioms
+'ProcgenSelfieEdim.q9_block_3' does not depend on any axioms
+'ProcgenSelfieEdim.q9_block_4' does not depend on any axioms
+'ProcgenSelfieEdim.q9_block_5' does not depend on any axioms
+'ProcgenSelfieEdim.q9_block_6' does not depend on any axioms
+'ProcgenSelfieEdim.q9_block_7' does not depend on any axioms
+'ProcgenSelfieEdim.q9_block_8' does not depend on any axioms
+'ProcgenSelfieEdim.q9_block_9' does not depend on any axioms
+'ProcgenSelfieEdim.q9_block_10' does not depend on any axioms
+'ProcgenSelfieEdim.q9_block_11' does not depend on any axioms
+'ProcgenSelfieEdim.q9_block_12' does not depend on any axioms
+'ProcgenSelfieEdim.q9_block_13' does not depend on any axioms
+'ProcgenSelfieEdim.q9_block_14' does not depend on any axioms
+'ProcgenSelfieEdim.q9_block_15' does not depend on any axioms
+'ProcgenSelfieEdim.q9_block_16' does not depend on any axioms
+'ProcgenSelfieEdim.q9_block_17' does not depend on any axioms
+'ProcgenSelfieEdim.q9_block_18' does not depend on any axioms
+'ProcgenSelfieEdim.q9_block_19' does not depend on any axioms
+'ProcgenSelfieEdim.q9_block_20' does not depend on any axioms
+'ProcgenSelfieEdim.q9_block_21' does not depend on any axioms
+'ProcgenSelfieEdim.q9_block_22' does not depend on any axioms
+'ProcgenSelfieEdim.q9_block_23' does not depend on any axioms
+'ProcgenSelfieEdim.q9_block_24' does not depend on any axioms
+'ProcgenSelfieEdim.q9_block_25' does not depend on any axioms
+'ProcgenSelfieEdim.q9_block_26' does not depend on any axioms
+'ProcgenSelfieEdim.q9_block_27' does not depend on any axioms
+'ProcgenSelfieEdim.q9_block_28' does not depend on any axioms
+'ProcgenSelfieEdim.q9_block_29' does not depend on any axioms
+'ProcgenSelfieEdim.q9_block_30' does not depend on any axioms
+'ProcgenSelfieEdim.q9_block_31' does not depend on any axioms
+'ProcgenSelfieEdim.q9_block_32' does not depend on any axioms
+'ProcgenSelfieEdim.q9_block_33' does not depend on any axioms
+'ProcgenSelfieEdim.q9_block_34' does not depend on any axioms
+'ProcgenSelfieEdim.q9_block_35' does not depend on any axioms
+'ProcgenSelfieEdim.q9_distinct' does not depend on any axioms
+'ProcgenSelfieEdim.q9_keys_eq' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.q9set_resolving' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.tiling_down' does not depend on any axioms
+'ProcgenSelfieEdim.tiling_up' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.tiling_lt' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.tiling_gt' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.four_cases' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.tiling_isTournament' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.switch_isTournament' does not depend on any axioms
+'ProcgenSelfieEdim.switch_switch' does not depend on any axioms
+'ProcgenSelfieEdim.not_eq_not' does not depend on any axioms
+'ProcgenSelfieEdim.switch_compl' does not depend on any axioms
+'ProcgenSelfieEdim.switch_congr' does not depend on any axioms
+'ProcgenSelfieEdim.switch_loops_congr' does not depend on any axioms
+'ProcgenSelfieEdim.tiling_congr' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.path_arc' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.tiles_of_switch_eq' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.loops_relation' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.selfie_fibre' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.loops_ne_compl' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.gauge_path' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.selfie_onto' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.reversedCount_parity' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.selfie_parameter_count' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.pairs_eq' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.isPath_cons_cons' depends on axioms: [propext]
+'ProcgenSelfieEdim.isPath_append_right' depends on axioms: [propext]
+'ProcgenSelfieEdim.length_append_two' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.usesArc_iff' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.usesArc_mem' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.usesArc_arc' depends on axioms: [propext]
+'ProcgenSelfieEdim.usesArc_self' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.extR_zero' does not depend on any axioms
+'ProcgenSelfieEdim.extR_succ_cons' does not depend on any axioms
+'ProcgenSelfieEdim.hamPathsR_zero' does not depend on any axioms
+'ProcgenSelfieEdim.hamPathsR_succ' does not depend on any axioms
+'ProcgenSelfieEdim.extR_shape' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.valid_cons' depends on axioms: [propext]
+'ProcgenSelfieEdim.mem_extR' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.nodup_extR' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.mem_hamPathsR' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.nodup_hamPathsR' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.hpCount_unique' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.arcCount_unique' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.beq_false_of_ne' does not depend on any axioms
+'ProcgenSelfieEdim.length_filter_eq_sum' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.rsum_listSum' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.sum_map_const' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.rsum_ite_out' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.rsum_rsum_point' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.ind_usesArc_cons_cons' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.arcs_of_path' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.sum_arcCount' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.rsum_one' does not depend on any axioms
+'ProcgenSelfieEdim.arcTotal' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.rsum_mod_two_congr' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.arcCount_eq_zero_of_not' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.arcCount_mod_two_of_allOdd' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.pairs_parity' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.sum_arcCount_mod_two' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.oddArcs_parity' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.allOdd_mod_four' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.allEven_odd' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.isPath_deleteArc' depends on axioms: [propext]
+'ProcgenSelfieEdim.shave_arc' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.sgn_add' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.sgn_congr' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.hamming_eq_rsum' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.bit_lt_two' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.bit_flip' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.edgeDist_projection' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.alt_sum' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.alt_sum_hist' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.sgn_cases' does not depend on any axioms
+'ProcgenSelfieEdim.alt_sum_two_values' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.tourC_lt' depends on axioms: [propext]
+'ProcgenSelfieEdim.tourC_gt' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.tourC_self' depends on axioms: [propext]
+'ProcgenSelfieEdim.tourC_isTournament' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.nthB_append_left' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.nthB_append_right' does not depend on any axioms
+'ProcgenSelfieEdim.bitB_bitsToNat' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.bitsToNat_lt' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.ascList_length' depends on axioms: [propext]
+'ProcgenSelfieEdim.nthB_ascList' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.codeList_length' depends on axioms: [propext]
+'ProcgenSelfieEdim.pairs_mono' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.codeList_nthB' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.pairs_formula' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.tourC_code' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.isPath_congr' depends on axioms: [propext]
+'ProcgenSelfieEdim.isHamPath_congr' depends on axioms: [propext]
+'ProcgenSelfieEdim.hpCount_congr' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.arcCount_congr' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.usesArcFrom_eq' depends on axioms: [propext]
+'ProcgenSelfieEdim.usesArcR_eq' depends on axioms: [propext]
+'ProcgenSelfieEdim.arcCountR_eq' depends on axioms: [propext]
+'ProcgenSelfieEdim.lenR_eq' does not depend on any axioms
+'ProcgenSelfieEdim.checkArcs_sound' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.qr7_isTournament_aux' does not depend on any axioms
+'ProcgenSelfieEdim.qr7_isTournament' does not depend on any axioms
+'ProcgenSelfieEdim.qr7_check' does not depend on any axioms
+'ProcgenSelfieEdim.qr7_counts' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.lift_lt' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.lift_ne' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.lift_inj' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.qr7del_isTournament' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.qr7del_check' does not depend on any axioms
+'ProcgenSelfieEdim.qr7del_counts' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.qr7del_antipodal_arcs' does not depend on any axioms
+'ProcgenSelfieEdim.qr7del_allOdd' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.hasEvenArc_sound' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.checkFrom_sound' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.exists_even_arc_of_codes' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.three_codes' does not depend on any axioms
+'ProcgenSelfieEdim.four_codes' does not depend on any axioms
+'ProcgenSelfieEdim.five_chunk_0' does not depend on any axioms
+'ProcgenSelfieEdim.five_chunk_1' does not depend on any axioms
+'ProcgenSelfieEdim.five_chunk_2' does not depend on any axioms
+'ProcgenSelfieEdim.five_chunk_3' does not depend on any axioms
+'ProcgenSelfieEdim.five_chunk_4' does not depend on any axioms
+'ProcgenSelfieEdim.five_chunk_5' does not depend on any axioms
+'ProcgenSelfieEdim.five_chunk_6' does not depend on any axioms
+'ProcgenSelfieEdim.five_chunk_7' does not depend on any axioms
+'ProcgenSelfieEdim.five_codes' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.no_allOdd_three_to_five' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.c3c3_isTournament_aux' does not depend on any axioms
+'ProcgenSelfieEdim.c3c3_isTournament' does not depend on any axioms
+'ProcgenSelfieEdim.lastOr_nil' does not depend on any axioms
+'ProcgenSelfieEdim.lastOr_cons' does not depend on any axioms
+'ProcgenSelfieEdim.eq_append_lastOr' does not depend on any axioms
+'ProcgenSelfieEdim.lastOr_append' does not depend on any axioms
+'ProcgenSelfieEdim.containsH_of_mem' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.hasH_sound' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.anyR_of_mem' depends on axioms: [propext]
+'ProcgenSelfieEdim.anyR_headBeatsLast_of_containsH' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.containsH_congr' depends on axioms: [propext]
+'ProcgenSelfieEdim.four_H_codes' does not depend on any axioms
+'ProcgenSelfieEdim.every_four_contains_H4' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.nthR_mem' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.nthR_inj' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.isPath_complete' depends on axioms: [propext]
+'ProcgenSelfieEdim.findIso_sound' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.five_H_chunk_0' does not depend on any axioms
+'ProcgenSelfieEdim.five_H_chunk_1' does not depend on any axioms
+'ProcgenSelfieEdim.five_H_chunk_2' does not depend on any axioms
+'ProcgenSelfieEdim.five_H_chunk_3' does not depend on any axioms
+'ProcgenSelfieEdim.five_H_chunk_4' does not depend on any axioms
+'ProcgenSelfieEdim.five_H_chunk_5' does not depend on any axioms
+'ProcgenSelfieEdim.five_H_chunk_6' does not depend on any axioms
+'ProcgenSelfieEdim.five_H_chunk_7' does not depend on any axioms
+'ProcgenSelfieEdim.five_H_codes' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.c3c3_avoids_check' does not depend on any axioms
+'ProcgenSelfieEdim.c3c3_avoids_H5' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.isPath_map' depends on axioms: [propext]
+'ProcgenSelfieEdim.containsH_of_iso' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.avoids_H5_iff' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.lastOr_mem' does not depend on any axioms
+'ProcgenSelfieEdim.containsH_iff_copiesH_pos' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.closes_eq_not' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.split_closes' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.rotN_append' depends on axioms: [propext]
+'ProcgenSelfieEdim.rotN_eq' depends on axioms: [propext]
+'ProcgenSelfieEdim.isPath_snoc' depends on axioms: [propext]
+'ProcgenSelfieEdim.rot1_closing' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.rotN_closing' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.pos_unique' depends on axioms: [propext]
+'ProcgenSelfieEdim.rotN_zero_head' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.rotN_zero_split' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.rotN_nodup' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.rot_index_unique' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.rotN_inj' depends on axioms: [propext]
+'ProcgenSelfieEdim.startsAtZero_iff' depends on axioms: [propext]
+'ProcgenSelfieEdim.zero_mem_of_hamPath' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.closing_count' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.copiesH_add' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.c3c3_counts' does not depend on any axioms
+'ProcgenSelfieEdim.refl_spec' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.cdist_spec' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.refl_lt' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.refl_refl' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.cdist_refl' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.circ_refl' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.isPath_iff_pairs' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.isPath_reverse' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.nodup_reverse_of' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.length_filter_ne' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.even_of_involution' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.circulant_arcCount_even' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.qr7_eq_circ' does not depend on any axioms
+'ProcgenSelfieEdim.qr7_allEven' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.mem_insertV' depends on axioms: [propext]
+'ProcgenSelfieEdim.nodup_insertV' depends on axioms: [propext]
+'ProcgenSelfieEdim.head_insertV' depends on axioms: [Quot.sound]
+'ProcgenSelfieEdim.isPath_insertV' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.exists_path_on' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.exists_hamPath' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.hpCount_pos' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.usesArc_succ_unique' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.usesArc_pred_unique' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.usesArc_last' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.no_covered_universal_arc' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.ffact_self' depends on axioms: [propext]
+'ProcgenSelfieEdim.sum_map_ite' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.count_not_mem' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.length_extR_complete' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.hpCount_complete' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.mem_allBools' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.nodup_allBools' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.length_allBools' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.nthB_ext' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.isPathB_iff' depends on axioms: [propext]
+'ProcgenSelfieEdim.switch_pair' does not depend on any axioms
+'ProcgenSelfieEdim.bool_flip' does not depend on any axioms
+'ProcgenSelfieEdim.isPath_switch_congr' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.loops_along' depends on axioms: [propext]
+'ProcgenSelfieEdim.loopsAlong_path' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.mem_of_hamPath' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.two_loop_sets' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.count_loop_sets' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.length_filter_cons' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.sum_map_add' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.sum_filter_swap' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.switch_sum' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.isPath_append_cons' depends on axioms: [propext]
+'ProcgenSelfieEdim.isPath_prefix' depends on axioms: [propext]
+'ProcgenSelfieEdim.isPath_snoc_iff' depends on axioms: [propext]
+'ProcgenSelfieEdim.isPath_congr_pairs' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.lt_of_mem_ne' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.count_head' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.count_last' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.forceArc_ab' does not depend on any axioms
+'ProcgenSelfieEdim.forceArc_ba' does not depend on any axioms
+'ProcgenSelfieEdim.forceArc_other' does not depend on any axioms
+'ProcgenSelfieEdim.forceArc_isTournament' does not depend on any axioms
+'ProcgenSelfieEdim.forceArc_sameOn' does not depend on any axioms
+'ProcgenSelfieEdim.eraseN_of_not_mem' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.eraseN_cons_self' depends on axioms: [propext]
+'ProcgenSelfieEdim.eraseN_cons_ne' does not depend on any axioms
+'ProcgenSelfieEdim.eraseN_append' depends on axioms: [propext]
+'ProcgenSelfieEdim.split_around' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.nodup_insert_middle' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.mem_of_snoc_eq' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.isPath_splice' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.eraseN_splice' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.count_interior' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.lastIs_snoc' does not depend on any axioms
+'ProcgenSelfieEdim.usesArc_into' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.usesArc_from' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.ind_and_false_left' does not depend on any axioms
+'ProcgenSelfieEdim.ind_and_false_right' does not depend on any axioms
+'ProcgenSelfieEdim.hp_split' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.sum_map_one'' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.hp_decomp' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.rsum_comm' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.mul_list_sum' does not depend on any axioms
+'ProcgenSelfieEdim.list_sum_mod_two' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.rsum_rsum_weighted_point' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.weighted_arcs' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.odd_contribution' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.not_pred_and_succ' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.deleteArc_force_sameOn' depends on axioms: [propext]
+'ProcgenSelfieEdim.redei' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.allOdd_mod_four_of_tournament' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.allEven_odd_of_tournament' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.oddArcs_parity_of_tournament' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.exists_odd_arc_of_even' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.shave_keeps_odd_iff' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.copiesH_odd_of_even' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.containsH_of_even' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.s2_eq' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.s2_zero' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.s2_double' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.s2_double_add_one' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.s2_eq_zero' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.pow_two_of_s2_eq_one' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.v2_mul' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.v2_odd' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.v2_double' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.s2_succ' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.fact_pos' does not depend on any axioms
+'ProcgenSelfieEdim.legendre_two' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.constant_switching_class' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.constant_class_check' does not depend on any axioms
+'ProcgenSelfieEdim.constant_class_example' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.succ_or_last' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.pred_of_last' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.out_arcs_sum' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.end_sum' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.arc_split' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.delete_two' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.parity_break_two' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.aux_spec' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.v2_oddPart_of_eq' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.exists_decomp' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.decomp' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.oddPart_two_pow_mul' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.syr_decomp' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.drop_identity' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.two_pow_sub_three_ne_zero' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.drop_forward' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.drop_injective' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.drop_backward' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.admissible_iff' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.pow_two_ge_four' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.admissible_of_neg' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.admissible_of_nonneg' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.mod_four_iff' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.labelF_even' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.labelF_four_j_one' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.labelF_microcosm' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.labelF_eq_sub_drop' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.drop_two_regular' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.owner_K_values' does not depend on any axioms
+'ProcgenSelfieEdim.owner_S_values' does not depend on any axioms
+'ProcgenSelfieEdim.two_pow_mono' depends on axioms: [propext]
+'ProcgenSelfieEdim.not_admissible_of_large' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.multiplicity_examples' depends on axioms: [propext, Quot.sound]
+exit_code=0 seconds=0.4

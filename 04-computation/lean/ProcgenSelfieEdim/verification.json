@@ -1,0 +1,1620 @@
+{
+  "audit_seconds": 0.4,
+  "axiom_histogram": {
+    "(none)": 152,
+    "Quot.sound": 1,
+    "propext": 54,
+    "propext, Quot.sound": 296
+  },
+  "axioms": {
+    "ProcgenSelfieEdim.admissible_iff": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.admissible_of_neg": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.admissible_of_nonneg": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.allEven_odd": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.allEven_odd_of_tournament": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.allOdd_mod_four": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.allOdd_mod_four_of_tournament": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.allR_eq_true": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.all_of_all_eq_true": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.alt_sum": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.alt_sum_hist": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.alt_sum_two_values": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.antipode_antipode": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.antipode_lt": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.anyR_eq_true": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.anyR_headBeatsLast_of_containsH": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.anyR_of_mem": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.appR_eq": [],
+    "ProcgenSelfieEdim.arcCountR_eq": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.arcCount_congr": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.arcCount_eq_zero_of_not": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.arcCount_mod_two_of_allOdd": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.arcCount_unique": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.arcTotal": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.arc_split": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.arcs_of_path": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.ascList_length": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.automorphism_isometry": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.aux_spec": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.avoids_H5_iff": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.beq_false_of_ne": [],
+    "ProcgenSelfieEdim.bitB_bitsToNat": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.bit_flip": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.bit_lt_two": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.bit_succ": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.bit_zero": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.bitsToNat_lt": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.blk_succ": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.bool_flip": [],
+    "ProcgenSelfieEdim.c3c3_avoids_H5": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.c3c3_avoids_check": [],
+    "ProcgenSelfieEdim.c3c3_counts": [],
+    "ProcgenSelfieEdim.c3c3_isTournament": [],
+    "ProcgenSelfieEdim.c3c3_isTournament_aux": [],
+    "ProcgenSelfieEdim.canonical_mem": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.cdist_refl": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.cdist_spec": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.checkArcs_sound": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.checkFrom_sound": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.check_paperSet": [],
+    "ProcgenSelfieEdim.circ_refl": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.circulant_arcCount_even": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.closes_eq_not": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.closing_count": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.codeList_length": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.codeList_nthB": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.comps_small": [],
+    "ProcgenSelfieEdim.constant_class_check": [],
+    "ProcgenSelfieEdim.constant_class_example": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.constant_switching_class": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.containsH_congr": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.containsH_iff_copiesH_pos": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.containsH_of_even": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.containsH_of_iso": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.containsH_of_mem": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.copiesH_add": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.copiesH_odd_of_even": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.countR_eq": [],
+    "ProcgenSelfieEdim.count_head": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.count_interior": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.count_last": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.count_loop_sets": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.count_not_mem": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.decomp": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.deleteArc_force_sameOn": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.delete_two": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.downR_succ": [],
+    "ProcgenSelfieEdim.drop_backward": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.drop_forward": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.drop_identity": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.drop_injective": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.drop_two_regular": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.edgeDist_antipode": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.edgeDist_comm": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.edgeDist_le": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.edgeDist_projection": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.edgeList_six": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.edge_cases": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.end_sum": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.eq_antipode_of_hamming_eq": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.eq_append_lastOr": [],
+    "ProcgenSelfieEdim.eq_of_blocks": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.eq_of_eqListR": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.eq_of_hamming_eq_zero": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.eq_of_map_nodup": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.eraseN_append": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.eraseN_cons_ne": [],
+    "ProcgenSelfieEdim.eraseN_cons_self": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.eraseN_of_not_mem": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.eraseN_splice": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.even_of_involution": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.every_four_contains_H4": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.exists_decomp": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.exists_even_arc_of_codes": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.exists_hamPath": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.exists_odd_arc_of_even": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.exists_of_length_filter_ne_zero": [],
+    "ProcgenSelfieEdim.exists_path_on": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.extR_shape": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.extR_succ_cons": [],
+    "ProcgenSelfieEdim.extR_zero": [],
+    "ProcgenSelfieEdim.fact_pos": [],
+    "ProcgenSelfieEdim.ffact_self": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.filter_cons_false": [],
+    "ProcgenSelfieEdim.filter_cons_true": [],
+    "ProcgenSelfieEdim.findIso_sound": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.five_H_chunk_0": [],
+    "ProcgenSelfieEdim.five_H_chunk_1": [],
+    "ProcgenSelfieEdim.five_H_chunk_2": [],
+    "ProcgenSelfieEdim.five_H_chunk_3": [],
+    "ProcgenSelfieEdim.five_H_chunk_4": [],
+    "ProcgenSelfieEdim.five_H_chunk_5": [],
+    "ProcgenSelfieEdim.five_H_chunk_6": [],
+    "ProcgenSelfieEdim.five_H_chunk_7": [],
+    "ProcgenSelfieEdim.five_H_codes": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.five_chunk_0": [],
+    "ProcgenSelfieEdim.five_chunk_1": [],
+    "ProcgenSelfieEdim.five_chunk_2": [],
+    "ProcgenSelfieEdim.five_chunk_3": [],
+    "ProcgenSelfieEdim.five_chunk_4": [],
+    "ProcgenSelfieEdim.five_chunk_5": [],
+    "ProcgenSelfieEdim.five_chunk_6": [],
+    "ProcgenSelfieEdim.five_chunk_7": [],
+    "ProcgenSelfieEdim.five_codes": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.flatR_eq": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.flatten_singletons": [],
+    "ProcgenSelfieEdim.flipBit_dist": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.flip_lt": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.fmin_eq": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.forall_lt_of_all_range": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.forceArc_ab": [],
+    "ProcgenSelfieEdim.forceArc_ba": [],
+    "ProcgenSelfieEdim.forceArc_isTournament": [],
+    "ProcgenSelfieEdim.forceArc_other": [],
+    "ProcgenSelfieEdim.forceArc_sameOn": [],
+    "ProcgenSelfieEdim.four_H_codes": [],
+    "ProcgenSelfieEdim.four_cases": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.four_codes": [],
+    "ProcgenSelfieEdim.gauge_path": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.geodesic_step": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.hamPathsR_succ": [],
+    "ProcgenSelfieEdim.hamPathsR_zero": [],
+    "ProcgenSelfieEdim.hamR_eq": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.hamming_adjacent": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.hamming_antipode": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.hamming_antipode_antipode": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.hamming_comm": [],
+    "ProcgenSelfieEdim.hamming_congr_of_zero": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.hamming_eq_rsum": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.hamming_flip": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.hamming_le": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.hamming_map_le": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.hamming_self": [],
+    "ProcgenSelfieEdim.hamming_succ": [],
+    "ProcgenSelfieEdim.hamming_triangle": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.hasEvenArc_sound": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.hasH_sound": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.head_insertV": [
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.histVec6_mem_comps": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.hist_antipode": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.hist_comm": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.hist_cons": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.hist_eq_zero_of_le": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.hist_invariant": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.hist_nil": [],
+    "ProcgenSelfieEdim.hist_not_palindrome": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.hpCount_complete": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.hpCount_congr": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.hpCount_pos": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.hpCount_unique": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.hp_decomp": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.hp_split": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.ind_and_false_left": [],
+    "ProcgenSelfieEdim.ind_and_false_right": [],
+    "ProcgenSelfieEdim.ind_usesArc_cons_cons": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.isEdge_antipode": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.isEdge_flipBit": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.isEdge_of_mem_edgeList": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.isHamPath_congr": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.isPathB_iff": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.isPath_append_cons": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.isPath_append_right": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.isPath_complete": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.isPath_congr": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.isPath_congr_pairs": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.isPath_cons_cons": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.isPath_deleteArc": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.isPath_iff_pairs": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.isPath_insertV": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.isPath_map": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.isPath_prefix": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.isPath_reverse": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.isPath_snoc": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.isPath_snoc_iff": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.isPath_splice": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.isPath_switch_congr": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.keyBR_eq": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.keyR_eq": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.labelF_eq_sub_drop": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.labelF_even": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.labelF_four_j_one": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.labelF_microcosm": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.lastIs_snoc": [],
+    "ProcgenSelfieEdim.lastOr_append": [],
+    "ProcgenSelfieEdim.lastOr_cons": [],
+    "ProcgenSelfieEdim.lastOr_mem": [],
+    "ProcgenSelfieEdim.lastOr_nil": [],
+    "ProcgenSelfieEdim.legendre_two": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.lenR_eq": [],
+    "ProcgenSelfieEdim.length_allBools": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.length_append_two": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.length_downR": [],
+    "ProcgenSelfieEdim.length_eq_of_same_members": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.length_extR_complete": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.length_filter_add_not": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.length_filter_any_le": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.length_filter_comp": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.length_filter_cons": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.length_filter_eq_sum": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.length_filter_false": [],
+    "ProcgenSelfieEdim.length_filter_lt": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.length_filter_mono": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.length_filter_ne": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.length_filter_or_le": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.lift_inj": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.lift_lt": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.lift_ne": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.list_sum_mod_two": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.loopsAlong_path": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.loops_along": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.loops_ne_compl": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.loops_relation": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.lt_of_mem_ne": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.memR_iff": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.mem_allBools": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.mem_comps": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.mem_downR": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.mem_edgeList": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.mem_extR": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.mem_hamPathsR": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.mem_insertV": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.mem_of_hamPath": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.mem_of_snoc_eq": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.mergePairsR_perm": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.mergeR_perm": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.mod_four_iff": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.msortR_perm": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.mul_list_sum": [],
+    "ProcgenSelfieEdim.multiplicity_examples": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.no_allOdd_three_to_five": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.no_antipodal_collision": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.no_covered_universal_arc": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.nodup_allBools": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.nodup_downR": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.nodup_extR": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.nodup_flatMap": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.nodup_hamPathsR": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.nodup_insertV": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.nodup_insert_middle": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.nodup_map_of_inj_on": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.nodup_of_allDistinct": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.nodup_of_distinctR": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.nodup_of_map_nodup": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.nodup_of_msortR": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.nodup_of_strictFrom": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.nodup_of_strictIncR": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.nodup_range": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.nodup_reverse_of": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.not_admissible_of_large": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.not_eq_not": [],
+    "ProcgenSelfieEdim.not_pred_and_succ": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.not_resolving_of_length_le_six": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.nthB_append_left": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.nthB_append_right": [],
+    "ProcgenSelfieEdim.nthB_ascList": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.nthB_ext": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.nthR_inj": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.nthR_mem": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.oddArcs_parity": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.oddArcs_parity_of_tournament": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.oddPart_two_pow_mul": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.odd_contribution": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.out_arcs_sum": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.owner_K_values": [],
+    "ProcgenSelfieEdim.owner_S_values": [],
+    "ProcgenSelfieEdim.pairs_eq": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.pairs_formula": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.pairs_mono": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.pairs_parity": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.paperSet_is_vertex_set": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.paperSet_resolving": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.paperSet_trivial_stabilizer": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.parity_break_two": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.path_arc": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.pigeonhole": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.pos_unique": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.pow_two_ge_four": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.pow_two_of_s2_eq_one": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.pred_of_last": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.q7_block_0": [],
+    "ProcgenSelfieEdim.q7_block_1": [],
+    "ProcgenSelfieEdim.q7_block_2": [],
+    "ProcgenSelfieEdim.q7_block_3": [],
+    "ProcgenSelfieEdim.q7_block_4": [],
+    "ProcgenSelfieEdim.q7_block_5": [],
+    "ProcgenSelfieEdim.q7_block_6": [],
+    "ProcgenSelfieEdim.q7_distinct": [],
+    "ProcgenSelfieEdim.q7_keys_eq": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.q7_lengths": [],
+    "ProcgenSelfieEdim.q7set_is_vertex_set": [],
+    "ProcgenSelfieEdim.q7set_resolving": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.q8_block_0": [],
+    "ProcgenSelfieEdim.q8_block_1": [],
+    "ProcgenSelfieEdim.q8_block_10": [],
+    "ProcgenSelfieEdim.q8_block_11": [],
+    "ProcgenSelfieEdim.q8_block_12": [],
+    "ProcgenSelfieEdim.q8_block_13": [],
+    "ProcgenSelfieEdim.q8_block_14": [],
+    "ProcgenSelfieEdim.q8_block_15": [],
+    "ProcgenSelfieEdim.q8_block_2": [],
+    "ProcgenSelfieEdim.q8_block_3": [],
+    "ProcgenSelfieEdim.q8_block_4": [],
+    "ProcgenSelfieEdim.q8_block_5": [],
+    "ProcgenSelfieEdim.q8_block_6": [],
+    "ProcgenSelfieEdim.q8_block_7": [],
+    "ProcgenSelfieEdim.q8_block_8": [],
+    "ProcgenSelfieEdim.q8_block_9": [],
+    "ProcgenSelfieEdim.q8_distinct": [],
+    "ProcgenSelfieEdim.q8_keys_eq": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.q8_lengths": [],
+    "ProcgenSelfieEdim.q8set_is_vertex_set": [],
+    "ProcgenSelfieEdim.q8set_resolving": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.q9_block_0": [],
+    "ProcgenSelfieEdim.q9_block_1": [],
+    "ProcgenSelfieEdim.q9_block_10": [],
+    "ProcgenSelfieEdim.q9_block_11": [],
+    "ProcgenSelfieEdim.q9_block_12": [],
+    "ProcgenSelfieEdim.q9_block_13": [],
+    "ProcgenSelfieEdim.q9_block_14": [],
+    "ProcgenSelfieEdim.q9_block_15": [],
+    "ProcgenSelfieEdim.q9_block_16": [],
+    "ProcgenSelfieEdim.q9_block_17": [],
+    "ProcgenSelfieEdim.q9_block_18": [],
+    "ProcgenSelfieEdim.q9_block_19": [],
+    "ProcgenSelfieEdim.q9_block_2": [],
+    "ProcgenSelfieEdim.q9_block_20": [],
+    "ProcgenSelfieEdim.q9_block_21": [],
+    "ProcgenSelfieEdim.q9_block_22": [],
+    "ProcgenSelfieEdim.q9_block_23": [],
+    "ProcgenSelfieEdim.q9_block_24": [],
+    "ProcgenSelfieEdim.q9_block_25": [],
+    "ProcgenSelfieEdim.q9_block_26": [],
+    "ProcgenSelfieEdim.q9_block_27": [],
+    "ProcgenSelfieEdim.q9_block_28": [],
+    "ProcgenSelfieEdim.q9_block_29": [],
+    "ProcgenSelfieEdim.q9_block_3": [],
+    "ProcgenSelfieEdim.q9_block_30": [],
+    "ProcgenSelfieEdim.q9_block_31": [],
+    "ProcgenSelfieEdim.q9_block_32": [],
+    "ProcgenSelfieEdim.q9_block_33": [],
+    "ProcgenSelfieEdim.q9_block_34": [],
+    "ProcgenSelfieEdim.q9_block_35": [],
+    "ProcgenSelfieEdim.q9_block_4": [],
+    "ProcgenSelfieEdim.q9_block_5": [],
+    "ProcgenSelfieEdim.q9_block_6": [],
+    "ProcgenSelfieEdim.q9_block_7": [],
+    "ProcgenSelfieEdim.q9_block_8": [],
+    "ProcgenSelfieEdim.q9_block_9": [],
+    "ProcgenSelfieEdim.q9_distinct": [],
+    "ProcgenSelfieEdim.q9_keys_eq": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.q9_lengths": [],
+    "ProcgenSelfieEdim.q9set_is_vertex_set": [],
+    "ProcgenSelfieEdim.q9set_resolving": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.qr7_allEven": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.qr7_check": [],
+    "ProcgenSelfieEdim.qr7_counts": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.qr7_eq_circ": [],
+    "ProcgenSelfieEdim.qr7_isTournament": [],
+    "ProcgenSelfieEdim.qr7_isTournament_aux": [],
+    "ProcgenSelfieEdim.qr7del_allOdd": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.qr7del_antipodal_arcs": [],
+    "ProcgenSelfieEdim.qr7del_check": [],
+    "ProcgenSelfieEdim.qr7del_counts": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.qr7del_isTournament": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.redei": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.refl_lt": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.refl_refl": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.refl_spec": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.resolving_of_check": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.resolving_of_edgeKeys": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.resolving_of_keys": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.reversedCount_parity": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.rot1_closing": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.rotN_append": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.rotN_closing": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.rotN_eq": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.rotN_inj": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.rotN_nodup": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.rotN_zero_head": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.rotN_zero_split": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.rot_index_unique": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.rsum_add": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.rsum_comm": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.rsum_congr": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.rsum_hist": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.rsum_ite_out": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.rsum_listSum": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.rsum_mod_two_congr": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.rsum_one": [],
+    "ProcgenSelfieEdim.rsum_palindrome_even": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.rsum_rsum_point": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.rsum_rsum_weighted_point": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.rsum_shift": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.rsum_single": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.rsum_six": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.rsum_zero": [],
+    "ProcgenSelfieEdim.s2_double": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.s2_double_add_one": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.s2_eq": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.s2_eq_zero": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.s2_succ": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.s2_zero": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.selfie_fibre": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.selfie_onto": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.selfie_parameter_count": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.sgn_add": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.sgn_cases": [],
+    "ProcgenSelfieEdim.sgn_congr": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.shave_arc": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.shave_keeps_odd_iff": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.split_around": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.split_closes": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.startsAtZero_iff": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.strictFrom_lt": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.succ_or_last": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.sum_arcCount": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.sum_arcCount_mod_two": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.sum_filter_swap": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.sum_le_mul": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.sum_map_add": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.sum_map_const": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.sum_map_ite": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.sum_map_one": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.sum_map_one'": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.surj_of_inj": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.switch_compl": [],
+    "ProcgenSelfieEdim.switch_congr": [],
+    "ProcgenSelfieEdim.switch_isTournament": [],
+    "ProcgenSelfieEdim.switch_loops_congr": [],
+    "ProcgenSelfieEdim.switch_pair": [],
+    "ProcgenSelfieEdim.switch_sum": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.switch_switch": [],
+    "ProcgenSelfieEdim.syr_decomp": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.three_codes": [],
+    "ProcgenSelfieEdim.tiles_of_switch_eq": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.tiling_congr": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.tiling_down": [],
+    "ProcgenSelfieEdim.tiling_gt": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.tiling_isTournament": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.tiling_lt": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.tiling_up": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.touch_count": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.touch_count_check": [],
+    "ProcgenSelfieEdim.touched_of_bad": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.tourC_code": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.tourC_gt": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.tourC_isTournament": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.tourC_lt": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.tourC_self": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.trivial_stabilizer": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.two_loop_sets": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.two_pow_mono": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.two_pow_sub_three_ne_zero": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.two_pow_succ": [],
+    "ProcgenSelfieEdim.usesArcFrom_eq": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.usesArcR_eq": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.usesArc_arc": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.usesArc_from": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.usesArc_iff": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.usesArc_into": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.usesArc_last": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.usesArc_mem": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.usesArc_pred_unique": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.usesArc_self": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.usesArc_succ_unique": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.v2_double": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.v2_mul": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.v2_odd": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.v2_oddPart_of_eq": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.valid_cons": [
+      "propext"
+    ],
+    "ProcgenSelfieEdim.weighted_arcs": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.weighted_sum_eq": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ProcgenSelfieEdim.zero_mem_of_hamPath": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  "build_seconds": {
+    "(root)": 0.4,
+    "AltSum": 1.0,
+    "ArcParity": 1.2,
+    "Circulant": 3.0,
+    "CollatzDrop": 0.2,
+    "ConstantH": 3.8,
+    "CountingBound": 1.4,
+    "CycleCount": 1.0,
+    "EdimQ6": 1.5,
+    "EdimQ7": 0.5,
+    "EdimQ7Data": 0.6,
+    "EdimQ7P0": 2.0,
+    "EdimQ7P1": 1.7,
+    "EdimQ8": 0.8,
+    "EdimQ8Data": 0.9,
+    "EdimQ8P0": 2.9,
+    "EdimQ8P1": 3.3,
+    "EdimQ8P2": 3.4,
+    "EdimQ8P3": 3.9,
+    "EdimQ9": 1.9,
+    "EdimQ9Data": 1.8,
+    "EdimQ9P0": 3.5,
+    "EdimQ9P1": 3.6,
+    "EdimQ9P10": 6.4,
+    "EdimQ9P11": 6.4,
+    "EdimQ9P2": 4.1,
+    "EdimQ9P3": 4.2,
+    "EdimQ9P4": 4.4,
+    "EdimQ9P5": 5.0,
+    "EdimQ9P6": 5.3,
+    "EdimQ9P7": 5.6,
+    "EdimQ9P8": 5.8,
+    "EdimQ9P9": 5.9,
+    "HPExist": 0.6,
+    "HamPath": 0.7,
+    "Hypercube": 2.6,
+    "KeyBlocks": 0.5,
+    "ListLemmas": 0.9,
+    "ParityBreak": 0.8,
+    "Redei": 2.2,
+    "SelfieFinite": 13.3,
+    "Shaved": 6.5,
+    "Stabilizer": 0.9,
+    "SwitchSum": 0.9,
+    "Tournament": 0.9,
+    "TournamentCode": 0.8
+  },
+  "external_packages": [],
+  "lean_version": "Lean (version 4.30.0, arm64-apple-darwin24.6.0, commit d024af099ca4bf2c86f649261ebf59565dc8c622, Release)",
+  "peak_child_rss_mb": 1028.0,
+  "root_import": "ProcgenSelfieEdim",
+  "scope": "THM-4525 (Q_6 resolving 15-set, L1, L2, L3, L4, explicit sets edim_m(Q_7) <= 19, Q_8 <= 26, Q_9 <= 38), THM-4524 (gauge theorem A1, verified Hamiltonian-path enumerator, double counting and arc parity, QR_7 / QR_7 - v counts, no all-odd tournament for N = 3..5, C1 for circulants of odd order, HP existence, no HP-covered tournament with a universal arc, A2 loop-set sum 2 N!, Redei's theorem and the unconditional parity corollaries, A3(e) constant-H classes need N = 2^k, parity-break number 2 for all-even tournaments), THM-4526 (H_4, H_5, #copies(H_n) = H - n hc), S15 Collatz drop multiplicity and label map; not the lower bound edim_m(Q_6) >= 15",
+  "sha256": {
+    "AxiomAudit.lean": "ee00dc620d373292f7296240d15dab7072572ed555102ce14cf2168a0a981baa",
+    "ProcgenSelfieEdim.lean": "c57915978f00f16c55a27e37a3d6074c34b0ecd63ee97ef8c3456143805f8756",
+    "ProcgenSelfieEdim/AltSum.lean": "264f4f825ea23324cfaf557e61ba9443e54cdcccaa79e37c23a3afb9fca0a277",
+    "ProcgenSelfieEdim/ArcParity.lean": "346c9e5682467222ab2713bcaeb275c7ee11b3aa6fb184186900bd91b70829fc",
+    "ProcgenSelfieEdim/Circulant.lean": "eebea0235b62715850a61a85729d095b4481a7a4b22dfc2e5c20281566b10390",
+    "ProcgenSelfieEdim/CollatzDrop.lean": "8e9f006ff350c9f85d2bfbf21b970fdb7ab49a951dccafbcd3067bd63daf6a70",
+    "ProcgenSelfieEdim/ConstantH.lean": "e799fa5e389e262b40e81eefa78f4c3d5e0d0f45baa73611a59c0a0f4a14447d",
+    "ProcgenSelfieEdim/CountingBound.lean": "36f6d6bb95fe61cbb32cdc5d963085caacddce667daf9ee16fba37b57c42d26d",
+    "ProcgenSelfieEdim/CycleCount.lean": "6e158c8c2e4ebb32544156f5c76875227ec8dcc945d86042cad2bdc1748dd34a",
+    "ProcgenSelfieEdim/EdimQ6.lean": "f852bf347c42c94d61a582b81ee368f938f69de785a3143f8c8e1674e93b7ef0",
+    "ProcgenSelfieEdim/EdimQ7.lean": "915f160bbff93ba6de530457702bbc21a6c4b549dcae9386588f1e0afa099fa1",
+    "ProcgenSelfieEdim/EdimQ7Data.lean": "b7d3f42868d61dcd646c8e39589dc3dc3a83a4afab1bc091d961e62ad1e7b5df",
+    "ProcgenSelfieEdim/EdimQ7P0.lean": "8af5feb531c5d33fa1bce0f4ddc038148c25a8d2fc4399f57ed395150c1acd67",
+    "ProcgenSelfieEdim/EdimQ7P1.lean": "d5eaca0d5f6a1a9ee7a6ceb75305b88b5180ebe2aede2d2779a3d4b96b146bd6",
+    "ProcgenSelfieEdim/EdimQ8.lean": "a5d66969beda3eee7ee5cd548fa78ae7e32455479d9c86df412f5760a5075341",
+    "ProcgenSelfieEdim/EdimQ8Data.lean": "0ee8775e345fcce8e56793cc6dd17b0b540e8295333dfed8f3d596a1930747e7",
+    "ProcgenSelfieEdim/EdimQ8P0.lean": "421e621fd1dbc3fd4f633dce9c188fc6d6c08c747868e737dd22f7eaac07bd6a",
+    "ProcgenSelfieEdim/EdimQ8P1.lean": "eae271532fe59178974eda8d6dfd0000594d0e34e5917ccbd143dac6b55187ee",
+    "ProcgenSelfieEdim/EdimQ8P2.lean": "8c91e86cdbd27504b782c1cbbd8bb9585c8ada0279a4f8b8c4829c1f8e9e1241",
+    "ProcgenSelfieEdim/EdimQ8P3.lean": "b9c9b4cb55cc361d344a919298ce2d7150bca0cf0bbfe07f4d5c2ba6d206863d",
+    "ProcgenSelfieEdim/EdimQ9.lean": "bf66a95346fcb630577fbb8d91d612d387fa41362655df92632ee512447959dd",
+    "ProcgenSelfieEdim/EdimQ9Data.lean": "fcc63372e9698d432b69c3788a95b540ff4a28b9882b5b16b85538a7f1c6e20e",
+    "ProcgenSelfieEdim/EdimQ9P0.lean": "57630b7db9d83a8e0faaf3999086d9abdaf7aa1dd40c47e9b6c8ddd977dcf19d",
+    "ProcgenSelfieEdim/EdimQ9P1.lean": "e0c664ebe131a663db45732ab4d9ca35b5f960cd845fe19dff3cdfdb2ce546be",
+    "ProcgenSelfieEdim/EdimQ9P10.lean": "71076d654219dd740855cf54aba37dc3a1fd3aa684982c10d6482d85da485811",
+    "ProcgenSelfieEdim/EdimQ9P11.lean": "a8c1cb13aa8a1ceb5c9012b1965073f5dcae0362a240a26b4ca4080e139cfedd",
+    "ProcgenSelfieEdim/EdimQ9P2.lean": "5509b7f612e792e04fa1a75f412f6cca8724fc8ec02293ceead812cefabf1bf3",
+    "ProcgenSelfieEdim/EdimQ9P3.lean": "d2d2555a28d97fe433d804acabb245fc552c31218d3aa462264a74268866ea0f",
+    "ProcgenSelfieEdim/EdimQ9P4.lean": "7a6a6358716050ce3c51e4d17533b5c2037d25483b811db6365d556266bf910d",
+    "ProcgenSelfieEdim/EdimQ9P5.lean": "73a5d598eb362891a7c05ceda1215ba2cf0bcde77573289231ea36fbb4b3ef16",
+    "ProcgenSelfieEdim/EdimQ9P6.lean": "e172caaec78726084f53fa95f17758d6b4717ee034055f8e50acb8f280e86b8b",
+    "ProcgenSelfieEdim/EdimQ9P7.lean": "edf2cf838c1d3b07accef4feec7fe39a7c9dfb835e5fdb950957ccf5643061f8",
+    "ProcgenSelfieEdim/EdimQ9P8.lean": "207041ad7c589e3e8dc3ddee566af2ee058c87d039b87a1dc0ef0ee3c997ded1",
+    "ProcgenSelfieEdim/EdimQ9P9.lean": "16c2bd61b08ea973db15eb5acc7394e2638a3d8a0faafc4d141d6203cd49b268",
+    "ProcgenSelfieEdim/HPExist.lean": "1501ad7c6e2381778b795058f3f5f66cfce270fd2bc085f2b212ad68adc11ee8",
+    "ProcgenSelfieEdim/HamPath.lean": "4475930c2ee0cba9bf733c7df391927afc7c8e0a2e76c90068794fed7bca83ad",
+    "ProcgenSelfieEdim/Hypercube.lean": "a142895dede9527129f88f9725f0acccbd1e98e6ce73718684cdb9af70deedc3",
+    "ProcgenSelfieEdim/KeyBlocks.lean": "936005b2575f0e8c780ed42c70af5c1f7d4a9ac93a9b0859ea20ec75f234e9da",
+    "ProcgenSelfieEdim/ListLemmas.lean": "c4c37710ecac75be46ed88848466d5babe14b573ee0f717b67a1567ba3928ad1",
+    "ProcgenSelfieEdim/ParityBreak.lean": "59b5d37029c6a13be20b4419b61d1bd38abec56a811157ee46cc1845728de71f",
+    "ProcgenSelfieEdim/Redei.lean": "2afa8509c61f0e329411c6717db253435e46173333e01b1f4776b602ca85556d",
+    "ProcgenSelfieEdim/SelfieFinite.lean": "49726c312018a42210d9a0a9c4df1f1f86614de4bb955e3929a415ab8b26b733",
+    "ProcgenSelfieEdim/Shaved.lean": "0cbb9a5ccb9a075b1c994dc1db614aa096515558835081d7c3adddf044d7a305",
+    "ProcgenSelfieEdim/Stabilizer.lean": "850f7bbf31d82effefa8a42fc6bb83d041a0fc87d340fcd1d493890d4b304f8f",
+    "ProcgenSelfieEdim/SwitchSum.lean": "f1617255e0cc881032b54fcab793a99e3febeaf7315cb59f7cd9658e7224aee5",
+    "ProcgenSelfieEdim/Tournament.lean": "5a55fbca430f44b5bfab45d856eaaa0bf90472b92b9e83559b7c32b2f9afeb74",
+    "ProcgenSelfieEdim/TournamentCode.lean": "609bbe968a8ab412ac7172c3f32885062266488d1c8ddec7fa6e2d46717822cc",
+    "gen_certificates.py": "13b3ba15acea648bdd189fb052ef4601d80fc1f995602cd55b5431fde1bbe873",
+    "lakefile.toml": "3038c02a9ab5e1c033b4ab94bb6a923a3674717d02544b539dfb9d9ef8dce772",
+    "lean-toolchain": "54727eec5cba149c18842e6deb5c41b369d66455c93ce135d7d5347c782b2325",
+    "verify.py": "e18d2efc1cbe345a9df24b6fafff68fb88f36e72b957f5b00845c72a4dd8b065"
+  },
+  "status": "PASS",
+  "theorems_audited": 503
+}

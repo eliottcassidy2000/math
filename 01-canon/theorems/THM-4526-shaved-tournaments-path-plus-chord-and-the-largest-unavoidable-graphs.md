@@ -80,3 +80,10 @@ Take a Hamiltonian cycle `c_0 … c_{n−1}`. Call position `i` forward if `c_{i
    unless `R` is a single vertex or a 3-cycle.
 
 Full proof: note §1.
+
+**FORMALIZED 2026-10-01 (collatz-procgen-20260922 lean lane; Lean 4.30 core; package [`04-computation/lean/ProcgenSelfieEdim/`](../../04-computation/lean/ProcgenSelfieEdim/README.md); orchestrator-audited).**
+- `every_four_contains_H4`.
+- `avoids_H5_iff`: a 5-tournament avoids H_5 iff it is isomorphic to C3[1,C3,1].
+- `copiesH_add`: #copies(H_n) + n hc = H.
+- Theorem A for even n, through a from-scratch formal proof of Rédei's theorem (`redei`).
+- The odd-n case for n > 5 and Theorems B and C are not formalized.

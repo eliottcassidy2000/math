@@ -1,0 +1,9 @@
+name = "ProcgenSelfieEdim"
+version = "0.1.0"
+defaultTargets = ["ProcgenSelfieEdim"]
+
+[[lean_lib]]
+name = "ProcgenSelfieEdim"
+# Resource caps (shared 8 GB machine): one elaboration thread, and the kernel
+# aborts with "excessive memory consumption" instead of exceeding ~1.4 GB.
+moreLeanArgs = ["--threads=1", "--memory=1400"]

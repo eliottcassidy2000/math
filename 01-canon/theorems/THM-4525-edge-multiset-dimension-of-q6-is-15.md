@@ -125,3 +125,12 @@ The near miss at `k = 14` fails on a single antipodal pair of edges whose common
 So `8 <= edim_m(Q_7) <= 19`.
 
 **Tournament structure.** It does not help: resolving sets have trivial stabilizer, so no union of tournament classes in the tiling cube resolves.
+
+**FORMALIZED 2026-10-01 (Lean 4.30 core; package [`04-computation/lean/ProcgenSelfieEdim/`](../../04-computation/lean/ProcgenSelfieEdim/README.md); orchestrator-audited).**
+- The paper's 15-set resolves Q_6, so edim_m(Q_6) <= 15: `paperSet_resolving`.
+- L1: `trivial_stabilizer`.
+- L2: `hist_antipode`.
+- L3: `alt_sum`.
+- L4: `not_resolving_of_length_le_six`, i.e. edim_m(Q_6) >= 7.
+- Explicit sets: edim_m(Q_7) <= 19, Q_8 <= 26, Q_9 <= 38.
+- Not formalized: the lower bound edim_m(Q_6) >= 15 (a 1.4e10-leaf search) and L5.
