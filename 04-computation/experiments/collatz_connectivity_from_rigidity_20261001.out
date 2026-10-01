@@ -1,0 +1,39 @@
+== A. backward trees identify vertices for 3n-1 and 5n+1 (both have three cycles) ==
+  3n-1: depth-25 backward trees of the 1334 vertices n <= 2000 prime to 3: pairwise distinct = True; cycles (least elements) = [1, 5, 17]
+PASS A: 3n-1 is backward-rigid on n <= 2000 yet has 3 cycles (>= 3 components)
+  5n+1: depth-33 backward trees of the 500 vertices n <= 624 prime to 5: pairwise distinct = True; cycles (least elements) = [1, 13, 17]
+PASS A: 5n+1 is backward-rigid on n <= 624 yet has 3 cycles (>= 3 components)
+
+== B. every class mod 2^a 3^b contains a number reaching 1 (explicit construction) ==
+PASS B: for every residue class mod 2^a 3^b (a <= 5, b <= 3; 2520 classes) the constructed n lies in the class and T1^a(n) = (4^j-1)/3, which reaches 1
+
+== C. delta_k(n) on the minus sheet 3n-1: least element of the basin of {1} with n's parity and class mod 3^k ==
+  basin counting densities on [1, 3000000]: {1}: 0.32712, {5,..}: 0.32438, {17,..}: 0.34850 (HYP-9165: 0.327, 0.325, 0.348)
+  n =   5 (basin 2): delta_k for k = 1..11: [11, 59, 59, 653, 1463, 1463, 4379, 39371, 39371, 118103, None]
+  n =  17 (basin 3): delta_k for k = 1..11: [11, 53, 71, 827, 1961, 4391, 4391, 52505, 118115, 118115, 2480075]
+  n =   7 (basin 2): delta_k for k = 1..11: [1, 43, 115, 169, 979, 2923, 4381, 26251, 157471, 236203, None]
+  n =  25 (basin 3): delta_k for k = 1..11: [1, 43, 79, 1645, 2455, 2941, 48139, 78757, 78757, 1181005, None]
+  n =  41 (basin 3): delta_k for k = 1..11: [11, 59, 95, 365, 3929, 13163, 13163, 13163, 275603, 944825, 1062923]
+PASS C: for vertices of the two non-trivial components, delta_11(n) exceeds 3^9 (None = beyond N = 3000000)
+  delta_k(n)/3^k for n = 5, 17 at k = 8..11: [6.0, 2.0, 2.0, 8.0, 6.0, 2.0, 14.0] (bounded ratio: delta_k grows like 3^k)
+
+== D. backward sieve: odd n with no predecessor of multiplier 2^e/3^j < 1 within depth D ==
+   D   classes (odd, 3 not dividing, mod 3^floor(D/2))   surviving fraction
+   4          6   0.50000
+   6         18   0.33333
+   8         54   0.33333
+  10        162   0.31481
+  12        486   0.31481
+  14       1458   0.31481
+  16       4374   0.31070
+  18      13122   0.30521
+  20      39366   0.30521
+  22     118098   0.30521
+PASS D: odd n = 2 mod 3 and odd n = 4 mod 9 always have a smaller predecessor ((2n-1)/3, (8n-5)/9)
+  multiples of 3 have the bare backward tree, so the backward sieve never excludes them
+
+== E. the minima of the minus-sheet components ==
+  least element of each basin in [1, N]: {1: 1, 2: 5, 3: 17}
+PASS E: 5 and 17 are the minima of their components: the two-sided no-descent trap is realised by integers on the minus sheet
+
+ALL CHECKS PASSED
