@@ -40,6 +40,8 @@ its historical record.
 Both routes' irreducible cores are now PINNED and UNIFIED. Covering-min rigidity PROVED (THM-724/726: deep
 well `{1..12,182}` UNIQUE covering-min `14/183`); Schur/E₃ inverse PROVED (THM-730); density route FULLY
 REDUCED (klein S273–283: THM-727/728/729, crude `Q_s≤4π²r²/3`, any-ε-suffices, closed-form `diag=O(r)`).
+**EXTERNAL CLAIM (flagged 2026-10-01 by the collatz-procgen session; UNAUDITED here):** arXiv:2609.02604, J. Allikvere, "Fourteen and fifteen lonely runners" (v1 2026-09-02, v2 2026-09-24), claims a computer-assisted proof of the Lonely Runner Conjecture for 14 and 15 runners: the repo's LRC(14) (13 speeds, gap 1/14) and LRC(15). The method is stronger bounds on speed products plus exhaustive verification modulo primes (projected lattice bases, Gram-Schmidt bounds, two-branch covering search, binary lifting), with code and certificates archived. Audit it before further LRC(14) work.
+
 **LRC(14) = [vast proved skeleton, both routes] + [ONE equidistribution cancellation, two unified forms]:**
 [A density] `Q_s=o(r²)` — soft oscillatory Weyl bound on the arc midpoints (any power-saving suffices);
 [B covering] `Schur deficit ⟹ L>0` — sharp multi-linear (Gowers/E₃) resummation. Both = a distinguished
@@ -90,6 +92,7 @@ mac-mini HYP-4040 (`q=Φ₆(max-speed)→∞`). So the residual is not "no floor
 Eisenstein denominator the bounded-`q` search steps over." NEXT: the `r≥2` PHASE-SPREAD THM-608 variant
 (resonant sweep in the `1/13` window; phase spread `(r−1)/183` small vs speed spread `13(r−1)` large — the
 reason THM-608's speed-spread (ii) misses it). -> HYP-4047, reflection the-13-comb-lever-is-the-eisenstein-resonance.
+**CORRECTION (collatz-procgen orchestrator, 2026-10-01; lane `localglobal`, exact re-check in `05-knowledge/results/procgen_localglobal_20260930_orchestrator_check.out`):** the deep well `{1..12,182}` is NOT lonely only at `14/183`. At `t = 2/27` its minimum distance is `2/27 > 1/14`, so a small-`q` certificate (`q = 27 <= 45`) exists, and the "small-`q` census fails (best `1/15`)" sentence above is false for this set.
 
 **OPEN-Q-110 HYP-3981 the c=7 near-equal-SMALL regime (kind-pasteur-2026-07-02-S24):** The compressed
 `>= 7`-far leg of `lrc14_of_farcut_split` (Lean) splits by BLOCK SPEED SCALE into a trichotomy, and

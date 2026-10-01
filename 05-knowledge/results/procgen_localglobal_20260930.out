@@ -1,0 +1,323 @@
+
+====================================================================================================
+A1.1  AP rows {1..k}: M = 1/(k+1), lonely only at j/(k+1); a prime-denominator lonely time exists iff k+1 is prime    [t=0s]
+====================================================================================================
+  k= 7  M=1/8  maximisers=['1/8', '3/8']  lld=8  lonely primes<=500: []
+  k= 8  M=1/9  maximisers=['1/9', '2/9', '4/9']  lld=9  lonely primes<=500: []
+  k= 9  M=1/10  maximisers=['1/10', '3/10']  lld=10  lonely primes<=500: []
+  k=10  M=1/11  maximisers=['1/11', '2/11', '3/11', '4/11', '5/11']  lld=11  lonely primes<=500: [11]
+  k=11  M=1/12  maximisers=['1/12', '5/12']  lld=12  lonely primes<=500: []
+  k=12  M=1/13  maximisers=['1/13', '2/13', '3/13', '4/13', '5/13', '6/13']  lld=13  lonely primes<=500: [13]
+  k=13  M=1/14  maximisers=['1/14', '3/14', '5/14']  lld=14  lonely primes<=500: []
+  k=14  M=1/15  maximisers=['1/15', '2/15', '4/15', '7/15']  lld=15  lonely primes<=500: []
+
+====================================================================================================
+A1.2  exhaustive primitive sets (max speed <= B): tight sets, divisor-completeness, hardest covering sets    [t=0s]
+====================================================================================================
+  k=3 B=16: 493 primitive sets; tight = [(1, 2, 3)]; DC sets 192 (median sigma 0.600) vs non-DC 301 (median 0.600); hardest primitive covering M = 2/7 at (1, 3, 4)
+  k=4 B=18: 2919 primitive sets; tight = [(1, 2, 3, 4), (1, 3, 4, 7)]; DC sets 782 (median sigma 0.667) vs non-DC 2137 (median 0.667); hardest primitive covering M = 2/9 at (1, 3, 4, 5)
+  k=5 B=20: 15246 primitive sets; tight = [(1, 2, 3, 4, 5), (1, 3, 4, 5, 9)]; DC sets 4880 (median sigma 0.742) vs non-DC 10366 (median 0.800); hardest primitive covering M = 2/11 at (1, 3, 4, 5, 18)
+  k=6 B=21: 54047 primitive sets; tight = [(1, 2, 3, 4, 5, 6)]; DC sets 12527 (median sigma 0.826) vs non-DC 41520 (median 0.826); hardest primitive covering M = 2/13 at (1, 2, 5, 6, 7, 8)
+  k=7 B=21: 116159 primitive sets; tight = [(1, 2, 3, 4, 5, 6, 7), (1, 2, 3, 4, 5, 7, 12), (1, 4, 5, 6, 7, 11, 13)]; DC sets 21747 (median sigma 0.846) vs non-DC 94412 (median 0.882); hardest primitive covering M = 2/15 at (1, 4, 5, 6, 7, 11, 16)
+
+====================================================================================================
+A1.3  deep wells {1..k-1, k(k+1)}, the LRC(14) named rows, joint (non-divisibility) failures    [t=11s]
+====================================================================================================
+  k= 4  M=5/21 (= (k+1)/Phi6(k+1): True)  maximiser=[Fraction(5, 21)]  lld=9  least uncovered=6  llp=13  joint failures=3
+  k= 5  M=6/31 (= (k+1)/Phi6(k+1): True)  maximiser=[Fraction(6, 31)]  lld=11  least uncovered=7  llp=11  joint failures=3
+  k= 6  M=7/43 (= (k+1)/Phi6(k+1): True)  maximiser=[Fraction(7, 43)]  lld=13  least uncovered=8  llp=13  joint failures=5
+  k= 7  M=8/57 (= (k+1)/Phi6(k+1): True)  maximiser=[Fraction(8, 57)]  lld=15  least uncovered=9  llp=23  joint failures=5
+  k= 8  M=9/73 (= (k+1)/Phi6(k+1): True)  maximiser=[Fraction(9, 73)]  lld=17  least uncovered=10  llp=17  joint failures=6
+  k= 9  M=10/91 (= (k+1)/Phi6(k+1): True)  maximiser=[Fraction(10, 91)]  lld=19  least uncovered=11  llp=19  joint failures=6
+  k=10  M=11/111 (= (k+1)/Phi6(k+1): True)  maximiser=[Fraction(11, 111)]  lld=21  least uncovered=12  llp=31  joint failures=9
+  k=11  M=12/133 (= (k+1)/Phi6(k+1): True)  maximiser=[Fraction(12, 133)]  lld=23  least uncovered=13  llp=23  joint failures=9
+  k=12  M=13/157 (= (k+1)/Phi6(k+1): True)  maximiser=[Fraction(13, 157)]  lld=25  least uncovered=14  llp=37  joint failures=11
+  k=13  M=14/183 (= (k+1)/Phi6(k+1): True)  maximiser=[Fraction(14, 183)]  lld=27  least uncovered=15  llp=41  joint failures=11
+  k=14  M=15/211 (= (k+1)/Phi6(k+1): True)  maximiser=[Fraction(15, 211)]  lld=29  least uncovered=16  llp=29  joint failures=12
+  deep well {1..12,182}: lonely grid points in [0.07,0.078] (step 1e-6): 4774, span [0.071822, 0.077380]; t = 2/27 lonely: True
+  1..12,182        M=14/183  maximisers (1): ['14/183']  DC=True  lld=27  least uncovered=15  llp=41  joint failures [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+  1..12,5460       M=420/5461  maximisers (1): ['420/5461']  DC=True  lld=27  least uncovered=16  llp=41  joint failures [16, 17, 18, 19, 22, 23, 24, 25]
+  26*(1..12),339   M=1/13  maximisers (132): ['27/338', '14/169', '29/338']  DC=True  lld=27  least uncovered=15  llp=41  joint failures [15, 17, 19, 21, 23, 25]
+  hardest covering (1, 3, 4, 5): lld=9 = 2k+1, least uncovered=6, joint failures [6, 7, 8]
+  hardest covering (1, 3, 4, 5, 18): lld=11 = 2k+1, least uncovered=7, joint failures [7, 8, 10]
+  hardest covering (1, 2, 5, 6, 7, 8): lld=13 = 2k+1, least uncovered=9, joint failures [9, 10, 11, 12]
+  hardest covering (1, 4, 5, 6, 7, 11, 16): lld=15 = 2k+1, least uncovered=9, joint failures [9, 10, 12, 13, 14]
+
+====================================================================================================
+A1.4  consecutive rows {w, ..., w+12} (k = 13), w <= 400    [t=12s]
+====================================================================================================
+  hardest: [('0', 1, False), ('3/4', 2, True), ('4/3', 3, True), ('9/5', 4, True), ('24/11', 5, True)];  DC rows: 371/400, min sigma over DC rows = 3/4 at w = 2
+
+====================================================================================================
+A1.5  random primitive rows, k = 8..14 (200 rows per cell, seed 20260930)    [t=12s]
+====================================================================================================
+  k  Vmax  DC%   P(lld=u)  P(llp=u_p)  joint/row  rho(depth,sigma)  rho(depth,lld)  med sigma DC/nonDC
+   8    18   20     0.870      0.735     0.250            -0.19           +0.56   0.636/0.862
+   8    60   13     0.925      0.845     0.105            -0.15           +0.59   1.204/1.323
+   8  1000   22     0.955      0.880     0.050            +0.05           +0.58   2.100/2.043
+   9    20   15     0.900      0.730     0.140            -0.18           +0.69   0.775/0.905
+   9    60   14     0.930      0.785     0.095            -0.05           +0.56   1.429/1.349
+   9  1000   19     0.945      0.845     0.070            -0.11           +0.64   2.127/2.129
+  10    22   15     0.910      0.820     0.205            -0.25           +0.35   0.804/0.958
+  10    60   14     0.955      0.940     0.050            -0.10           +0.55   1.444/1.391
+  10  1000   17     0.935      0.930     0.080            +0.02           +0.58   2.289/2.306
+  11    24   22     0.895      0.795     0.170            -0.12           +0.52   0.846/0.935
+  11    60    8     0.985      0.870     0.015            -0.07           +0.47   1.542/1.400
+  11  1000   14     0.955      0.900     0.060            -0.14           +0.53   2.414/2.385
+  12    26    6     0.970      0.920     0.045            -0.25           +0.40   0.857/1.000
+  12    60    9     0.970      0.960     0.035            -0.19           +0.43   1.432/1.404
+  12  1000   15     0.955      0.955     0.060            +0.03           +0.58   2.436/2.457
+  13    28    8     0.940      0.870     0.085            -0.26           +0.36   0.867/1.000
+  13    60    9     0.965      0.950     0.045            -0.17           +0.46   1.685/1.438
+  13  1000   12     0.955      0.955     0.045            +0.01           +0.48   2.510/2.552
+  14    30    9     0.940      0.855     0.105            -0.10           +0.28   1.010/1.069
+  14    60    8     0.965      0.905     0.045            -0.02           +0.44   1.500/1.500
+  14  1000   11     0.970      0.960     0.035            +0.02           +0.32   2.574/2.650
+
+====================================================================================================
+A1.6  S-smooth runner sets: kappa(S) = 1/P(S), P(S) = least prime outside S (S = all primes < P)    [t=16s]
+====================================================================================================
+  S=(2,): M({1..2}) = 1/3, maximisers ['1/3']; 20 S-smooth numbers <= 1e6, none divisible by 3: kappa(S) = 1/3
+  S=(2, 3): M({1..4}) = 1/5, maximisers ['1/5', '2/5']; 142 S-smooth numbers <= 1e6, none divisible by 5: kappa(S) = 1/5
+  S=(2, 3, 5): M({1..6}) = 1/7, maximisers ['1/7', '2/7', '3/7']; 507 S-smooth numbers <= 1e6, none divisible by 7: kappa(S) = 1/7
+  S=(2, 3, 5, 7): M({1..10}) = 1/11, maximisers ['1/11', '2/11', '3/11', '4/11', '5/11']; 1273 S-smooth numbers <= 1e6, none divisible by 11: kappa(S) = 1/11
+  S=(2, 3, 5, 7, 11): M({1..12}) = 1/13, maximisers ['1/13', '2/13', '3/13', '4/13', '5/13', '6/13']; 2432 S-smooth numbers <= 1e6, none divisible by 13: kappa(S) = 1/13
+
+====================================================================================================
+A2.1  gate census, q = 3, all (p,a) with p <= 40 (exact meet-in-the-middle counts, primitive words)    [t=16s]
+====================================================================================================
+  classes: {'ARCH': 380, 'GLOBAL': 3, 'HASSE': 113, 'LOCAL': 199, 'LOCAL!': 6, 'PRIME-GATE': 46, 'REPEAT': 33}
+  primitive cycles found (p, a, D, #words): [(2, 1, 1, 2), (3, 2, -1, 3), (11, 7, -139, 11)]
+  by side: {('ARCH', 'dyadic'): 380, ('GLOBAL', '3-adic'): 2, ('GLOBAL', 'dyadic'): 1, ('HASSE', '3-adic'): 49, ('HASSE', 'dyadic'): 64, ('LOCAL', '3-adic'): 180, ('LOCAL', 'dyadic'): 19, ('LOCAL!', '3-adic'): 6, ('PRIME-GATE', '3-adic'): 32, ('PRIME-GATE', 'dyadic'): 14, ('REPEAT', '3-adic'): 14, ('REPEAT', 'dyadic'): 19}
+  HASSE gates: 113; largest local-product prediction 0.353 primitive necklaces at (p,a)=(19,12), D=-7153={23: 1, 311: 1}, local={23: 2223, 311: 152}
+  prime type   pairs  zero-class empty (obs / necklace-Poisson)   N/(Cp/q) for L/q>=5: n, mean, sd
+  cofactor      279      79 /    81.7                       164  0.9977  0.1958
+  primitive     542     277 /   263.1                       225  1.0063  0.1153
+  sub-gate      262      48 /    43.2                       188  0.9837  0.2007
+  CRT gluing N_m / (Cp prod nu) (prediction >= 20): bulk 0.5<=a/p<=0.8 eligible n=188 mean 1.081 sd 0.455;  all gates n=417 mean 1.020 sd 0.452
+  all words (repetitions included): max z-score of N_q against C/q = 76.5  (cyclotomic cofactor effect; e.g. (40,22): 2^40-3^22 = (2^20-3^11)(2^20+3^11) and every square word u u is 0 mod 2^20+3^11)
+  '!' gates (a local zero with necklace-Poisson expectation >= 3):
+      (31, 29, {5: 1, 13725645976247: 1}, {5: 0, 13725645976247: 0})
+      (33, 31, {5: 1, 149: 1, 499: 1, 1661483521: 1}, {5: 0, 149: 0, 499: 0, 1661483521: 0})
+      (35, 33, {5: 1, 1111805241363431: 1}, {5: 0, 1111805241363431: 0})
+      (36, 32, {5: 1, 11: 1, 23: 1, 263: 1, 643: 1, 1933: 1, 4481: 1}, {5: 14688, 11: 5364, 23: 2700, 263: 0, 643: 360, 1933: 36, 4481: 36})
+      (37, 35, {5: 1, 2237: 1, 4473080702731: 1}, {5: 0, 2237: 0, 4473080702731: 0})
+      (40, 35, {11: 1, 1931: 1, 2355371479091: 1}, {11: 59560, 1931: 0, 2355371479091: 0})
+  dyadic: 116 eligible gates without a primitive cycle: uniform prediction sum L/|D| = 2.442 primitive necklaces; local-product prediction sum = 0.561; observed 0
+  3-adic: 281 eligible gates without a primitive cycle: uniform prediction sum L/|D| = 0.929 primitive necklaces; local-product prediction sum = 0.513; observed 0
+  sub-gate anomaly (36,32) mod 263: C = 58905, mean per class 224.0, empty classes [0] (gate D(9,8) = -6049)
+  sub-gate anomaly (40,35) mod 1931: C = 658008, mean per class 340.8, empty classes [0] (gate D(8,7) = -1931)
+  coverage regime |D| <= C+1 at p <= 40: [(4, 2, 7, 'REPEAT'), (5, 3, 5, 'PRIME-GATE'), (8, 5, 13, 'PRIME-GATE'), (11, 7, -139, 'GLOBAL'), (16, 10, 6487, 'LOCAL'), (19, 12, -7153, 'HASSE'), (27, 17, 5077565, 'HASSE'), (38, 24, -7551629537, 'HASSE')]
+  near-critical HASSE / PRIME-GATE gates, p >= 24: (p, a, D, {q: (ord_q 2, ord_q 3, primitive N_q)})
+      (24, 14, 11994247, {23: (11, 11, 84768), 61: (60, 10, 31776), 83: (82, 41, 23832), 103: (51, 34, 18384)})
+      (24, 15, 2428309, {13: (12, 3, 100440), 186793: (46698, 7783, 24)})
+      (25, 16, -9492289, {9492289: (296634, 4746144, 0)})
+      (25, 17, -95585731, {2069: (2068, 2068, 375), 46199: (23099, 23099, 25)})
+      (26, 16, 24062143, {7: (3, 6, 758836), 233: (29, 232, 22308), 14753: (1844, 14752, 312)})
+      (26, 18, -320311625, {5: (4, 4, 323466), 223: (37, 222, 7020), 11491: (3830, 11490, 78)})
+      (27, 16, 91171007, {257: (16, 256, 50652), 354751: (177375, 118250, 54)})
+      (27, 17, 5077565, {5: (4, 4, 1656369), 71: (35, 35, 115020), 14303: (7151, 7151, 621)})
+      (28, 17, 139295293, {419: (418, 209, 50848), 332447: (166223, 166223, 28)})
+      (28, 18, -118985033, {3299: (3298, 1649, 4564), 36067: (12022, 12022, 476)})
+      (28, 19, -893826011, {13: (12, 3, 529592), 1381: (1380, 345, 4900), 49787: (49786, 24893, 84)})
+      (29, 17, 407730749, {29: (28, 28, 1787937), 53: (52, 52, 978141), 265277: (24116, 24116, 319)})
+      (29, 18, 149450423, {137: (68, 136, 251604), 1090879: (181813, 1090878, 87)})
+      (30, 18, 686321335, {5: (4, 4, 17440680), 7: (3, 6, 12352650), 59: (58, 29, 1461000), 127: (7, 126, 677850), 2617: (1308, 436, 33510)})
+
+====================================================================================================
+A2.2  identities: zero-carry, repetition (cyclotomic cofactor), the a = p-2 family mod 5    [t=113s]
+====================================================================================================
+  c_w = -(2^p - 3^a) + sum_j 3^(a+j-1-z_j) 2^(z_j)  (zeros z_1<...<z_z) and c_w = 2^(s_(a-1)) (mod 3): 8166 words
+  c_(u^d) = c_u * (2^p - 3^a)/(2^(p/d) - 3^(a/d)) for every d-fold repetition: 148 cases
+  a = p-2, 5 | D (exactly the odd p): N_5 = {0} for p in 5..61 (29 gates); 2/3 = -1 mod 5, so c_w = 3^a((-1)^z1 + 3(-1)^z2) != 0 mod 5
+
+====================================================================================================
+A2.3  convergent / semiconvergent gates of log_2 3 up to p = 1054    [t=113s]
+====================================================================================================
+  (5,3) dyadic |D|~10^0 amp=6.4 log2 C - log2|D| = +1.00  small primes {5: 1}  other factors (digits) [] (fully factored)  ords [(5, 4, 4)]  q*nu_q - 1: {5: -1.0}
+  (11,7) 3-adic |D|~10^2 amp=15.7 log2 C - log2|D| = +1.25  small primes {139: 1}  other factors (digits) [] (fully factored)  ords [(139, 138, 138)]  q*nu_q - 1: {139: 3.63}
+  (27,17) dyadic |D|~10^6 amp=26.4 log2 C - log2|D| = +0.73  small primes {5: 1, 71: 1, 14303: 1}  other factors (digits) [] (fully factored)  ords [(5, 4, 4), (71, 35, 35), (14303, 7151, 7151)]  q*nu_q - 1: {5: -0.0183, 71: -0.032, 14303: 0.0529}
+  (46,29) dyadic |D|~10^12 amp=40.5 log2 C - log2|D| = +0.01  small primes {39409: 1}  other factors (digits) [8] (fully factored)  ords [(39409, 9852, 4926)]  q*nu_q - 1: {}
+  (65,41) dyadic |D|~10^17 amp=87.7 log2 C - log2|D| = -0.08  small primes {19: 1, 29: 1, 17021: 1}  other factors (digits) [11] (fully factored)  ords [(19, 18, 18), (29, 28, 28), (17021, 17020, 3404)]  q*nu_q - 1: {19: -1.8e-09, 29: 5.74e-09, 17021: 7.24e-07}
+  (84,53) 3-adic |D|~10^22 amp=479 log2 C - log2|D| = +1.22  small primes {11: 1, 467: 1}  other factors (digits) [8, 12] (fully factored)  ords [(11, 10, 5), (467, 466, 233)]  q*nu_q - 1: {11: 2.18e-13, 467: 5.66e-11}
+  (149,94) dyadic |D|~10^42 amp=107 log2 C - log2|D| = -4.59  small primes {7: 3, 30809: 1}  other factors (digits) [7, 10, 21] (fully factored)  ords [(7, 3, 6), (30809, 15404, 30808)]  q*nu_q - 1: {7: -2.22e-16}
+  (233,147) dyadic |D|~10^68 amp=138 log2 C - log2|D| = -8.76  small primes {5: 1}  other factors (digits) [8, 12, 49] (fully factored)  ords [(5, 4, 4)]  q*nu_q - 1: {5: 0.0}
+  (317,200) dyadic |D|~10^93 amp=193 log2 C - log2|D| = -12.70  small primes {2593: 1, 6791: 1}  other factors (digits) [10, 12, 65] (fully factored)  ords [(2593, 81, 648), (6791, 679, 3395)]  q*nu_q - 1: {2593: -1.11e-16, 6791: 0.0}
+  (401,253) dyadic |D|~10^118 amp=322 log2 C - log2|D| = -16.33  small primes {53: 1}  other factors (digits) [14, 104] (fully factored)  ords [(53, 52, 52)]  q*nu_q - 1: {53: 2.22e-16}
+  (485,306) dyadic |D|~10^143 amp=979 log2 C - log2|D| = -19.07  small primes {929: 1}  other factors (digits) [8, 10, 123] (composite cofactor left)  ords [(929, 464, 928)]  q*nu_q - 1: {929: -1.11e-16}
+  (569,359) 3-adic |D|~10^168 amp=939 log2 C - log2|D| = -23.45  small primes {5: 1, 582551: 1}  other factors (digits) [8, 13, 143] (composite cofactor left)  ords [(5, 4, 4), (582551, 58255, 58255)]  q*nu_q - 1: {5: 0.0}
+  (1054,665) 3-adic |D|~10^312 amp=2.29e+04 log2 C - log2|D| = -43.56  small primes {37: 1}  other factors (digits) [312] (composite cofactor left)  ords [(37, 36, 18)]  q*nu_q - 1: {37: 2.22e-16}
+
+====================================================================================================
+A2.4  the coverage regime |2^p - 3^a| <= C(p,a)+1 (where the LRC trivial lemma speaks), p <= 5000    [t=194s]
+====================================================================================================
+  gates: [(4, 2), (5, 3), (8, 5), (11, 7), (16, 10), (19, 12), (27, 17), (38, 24), (46, 29), (84, 53)]
+
+====================================================================================================
+A2.5  control: 5x+1 (q = 5), all (p,a) with p <= 22    [t=199s]
+====================================================================================================
+  classes: {'ARCH': 197, 'GLOBAL': 3, 'HASSE': 8, 'LOCAL': 4, 'PRIME-GATE': 4, 'REPEAT': 15}
+  primitive cycles (p, a, D, #words): [(2, 1, -1, 2), (5, 2, 7, 5), (7, 3, 3, 14)]
+
+====================================================================================================
+B1  Poisson / relation-lattice identity  N_lone(V,q) = q * sum_{xi in Lambda_q(V)} prod ghat(xi_i)    [t=199s]
+====================================================================================================
+  V=(1, 2, 3) q=7: brute 0, Fourier over Lambda_q +0.0000000000-2.9e-15i
+  V=(1, 3, 4) q=11: brute 0, Fourier over Lambda_q -0.0000000000-3.4e-15i
+  V=(2, 5, 7) q=13: brute 0, Fourier over Lambda_q +0.0000000000+1.4e-15i
+  V=(1, 2, 3, 4) q=7: brute 0, Fourier over Lambda_q +0.0000000000-1.9e-15i
+  V=(1, 3, 4, 7) q=5: brute 4, Fourier over Lambda_q +4.0000000000+8.9e-16i
+  V=(1, 2, 5) q=9: brute 2, Fourier over Lambda_q +2.0000000000+1.2e-15i
+
+====================================================================================================
+B2  single-relation lemma: one relation xi of Lambda_q(V) excludes every lonely m/q by itself iff ||xi||_1 = 1    [t=199s]
+====================================================================================================
+  k=3: checked 342 relation vectors (entries in [-3,3] on 4 coordinates)
+  k=4: checked 2400 relation vectors (entries in [-3,3] on 4 coordinates)
+  k=5: checked 2400 relation vectors (entries in [-3,3] on 4 coordinates)
+  k=6: checked 2400 relation vectors (entries in [-3,3] on 4 coordinates)
+  k=7: checked 2400 relation vectors (entries in [-3,3] on 4 coordinates)
+  k=8: checked 2400 relation vectors (entries in [-3,3] on 4 coordinates)
+
+====================================================================================================
+B3  mod-ell local badness: every bad residue vector (no lonely m/ell) carries a relation of l1-norm <= 4    [t=200s]
+====================================================================================================
+  k=3 ell= 5: bad classes    2  beta=0.75000  ell*beta= 3.750  min-relation norms {2: 2}
+  k=3 ell= 7: bad classes    1  beta=0.22222  ell*beta= 1.556  min-relation norms {3: 1}
+  k=3 ell=11: bad classes    5  beta=0.24000  ell*beta= 2.640  min-relation norms {3: 5}
+  k=3 ell=13: bad classes   14  beta=0.38889  ell*beta= 5.056  min-relation norms {3: 14}
+  k=3 ell=17: bad classes   24  beta=0.28125  ell*beta= 4.781  min-relation norms {3: 24}
+  k=3 ell=19: bad classes   12  beta=0.09877  ell*beta= 1.877  min-relation norms {3: 12}
+  k=3 ell=23: bad classes   11  beta=0.04959  ell*beta= 1.140  min-relation norms {3: 11}
+  k=3 ell=29: bad classes   28  beta=0.06122  ell*beta= 1.776  min-relation norms {3: 28}
+  k=3 ell=31: bad classes   15  beta=0.02667  ell*beta= 0.827  min-relation norms {3: 15}
+  k=3 ell=37: bad classes   24  beta=0.02469  ell*beta= 0.914  min-relation norms {3: 24}
+  k=3 ell=41: bad classes   40  beta=0.03000  ell*beta= 1.230  min-relation norms {3: 40}
+  k=3 ell=43: bad classes   28  beta=0.01814  ell*beta= 0.780  min-relation norms {3: 28}
+  k=3 ell=47: bad classes   23  beta=0.01134  ell*beta= 0.533  min-relation norms {3: 23}
+  k=3 ell=53: bad classes   26  beta=0.00888  ell*beta= 0.470  min-relation norms {3: 26}
+  k=3 ell=59: bad classes   29  beta=0.00713  ell*beta= 0.421  min-relation norms {3: 29}
+  k=3 ell=61: bad classes   30  beta=0.00667  ell*beta= 0.407  min-relation norms {3: 30}
+  k=4 ell= 7: bad classes    3  beta=0.44444  ell*beta= 3.111  min-relation norms {2: 3}
+  k=4 ell=11: bad classes   20  beta=0.48000  ell*beta= 5.280  min-relation norms {2: 15, 3: 5}
+  k=4 ell=13: bad classes   15  beta=0.22222  ell*beta= 2.889  min-relation norms {2: 6, 3: 9}
+  k=4 ell=17: bad classes   30  beta=0.17578  ell*beta= 2.988  min-relation norms {3: 30}
+  k=4 ell=19: bad classes   18  beta=0.06584  ell*beta= 1.251  min-relation norms {3: 18}
+  k=4 ell=23: bad classes   44  beta=0.07213  ell*beta= 1.659  min-relation norms {3: 44}
+  k=4 ell=29: bad classes   42  beta=0.02624  ell*beta= 0.761  min-relation norms {3: 42}
+  k=4 ell=31: bad classes  150  beta=0.07111  ell*beta= 2.204  min-relation norms {3: 150}
+  k=4 ell=37: bad classes  144  beta=0.03292  ell*beta= 1.218  min-relation norms {3: 144}
+  k=4 ell=41: bad classes  195  beta=0.02925  ell*beta= 1.199  min-relation norms {3: 190, 4: 5}
+  k=5 ell= 7: bad classes    6  beta=0.61728  ell*beta= 4.321  min-relation norms {2: 6}
+  k=5 ell=11: bad classes    1  beta=0.03840  ell*beta= 0.422  min-relation norms {3: 1}
+  k=5 ell=13: bad classes   54  beta=0.40895  ell*beta= 5.316  min-relation norms {2: 48, 3: 6}
+  k=5 ell=17: bad classes   32  beta=0.08789  ell*beta= 1.494  min-relation norms {2: 16, 3: 16}
+  k=5 ell=19: bad classes  144  beta=0.21948  ell*beta= 4.170  min-relation norms {2: 72, 3: 72}
+  k=5 ell=23: bad classes   44  beta=0.03278  ell*beta= 0.754  min-relation norms {3: 44}
+  k=5 ell=29: bad classes   98  beta=0.02187  ell*beta= 0.634  min-relation norms {3: 98}
+  k=6 ell=11: bad classes    5  beta=0.11520  ell*beta= 1.267  min-relation norms {2: 5}
+  k=6 ell=13: bad classes    1  beta=0.01543  ell*beta= 0.201  min-relation norms {3: 1}
+  k=6 ell=17: bad classes  140  beta=0.18860  ell*beta= 3.206  min-relation norms {2: 120, 3: 20}
+  k=6 ell=19: bad classes   75  beta=0.07113  ell*beta= 1.351  min-relation norms {2: 45, 3: 30}
+  k=6 ell=23: bad classes  407  beta=0.12071  ell*beta= 2.776  min-relation norms {2: 220, 3: 187}
+  base rate: fraction of ALL vectors carrying a relation of norm <= 3 / <= 4 (the test is informative only where this is < 1):
+     k=3 ell=37: 0.5185 / 0.8704
+     k=3 ell=47: 0.4216 / 0.7505
+     k=3 ell=61: 0.3333 / 0.6200
+     k=4 ell=41: 0.8103 / 1.0000
+     k=5 ell=29: 0.9969 / 1.0000
+     k=6 ell=23: 1.0000 / 1.0000
+
+====================================================================================================
+B5  local stabilization (tight-line principle): for large primes ell the bad vectors are exactly the multiples of the reductions of the tight sets    [t=220s]
+====================================================================================================
+  k=3 ell= 29 [exception ]: bad classes   28, density / tight-line prediction = 2.0000, off the tight lines   14 [(1, 3, 4), (1, 7, 8)]
+  k=3 ell= 37 [exception ]: bad classes   24, density / tight-line prediction = 1.3333, off the tight lines    6 [(1, 10, 11), (2, 15, 17)]
+  k=3 ell= 41 [exception ]: bad classes   40, density / tight-line prediction = 2.0000, off the tight lines   20 [(1, 3, 4), (1, 10, 11)]
+  k=3 ell= 43 [exception ]: bad classes   28, density / tight-line prediction = 1.3333, off the tight lines    7 [(1, 6, 7), (2, 12, 14)]
+  k=3 ell= 31 [stabilised]: bad classes   15, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=3 ell= 47 [stabilised]: bad classes   23, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=3 ell= 53 [stabilised]: bad classes   26, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=3 ell= 59 [stabilised]: bad classes   29, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=3 ell= 61 [stabilised]: bad classes   30, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=3 ell= 67 [stabilised]: bad classes   33, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=3 ell= 71 [stabilised]: bad classes   35, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=3 ell= 73 [stabilised]: bad classes   36, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=3 ell= 79 [stabilised]: bad classes   39, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=3 ell= 83 [stabilised]: bad classes   41, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=3 ell= 89 [stabilised]: bad classes   44, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=3 ell= 97 [stabilised]: bad classes   48, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=3 ell=101 [stabilised]: bad classes   50, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=3 ell=103 [stabilised]: bad classes   51, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=3 ell=107 [stabilised]: bad classes   53, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=3 ell=109 [stabilised]: bad classes   54, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=3 ell=113 [stabilised]: bad classes   56, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=3 ell=127 [stabilised]: bad classes   63, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=3 ell=131 [stabilised]: bad classes   65, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=3 ell=137 [stabilised]: bad classes   68, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=3 ell=139 [stabilised]: bad classes   69, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=3 ell=149 [stabilised]: bad classes   74, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=3 ell=151 [stabilised]: bad classes   75, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=3 ell=157 [stabilised]: bad classes   78, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=3 ell=163 [stabilised]: bad classes   81, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=3 ell=167 [stabilised]: bad classes   83, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=3 ell=173 [stabilised]: bad classes   86, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=3 ell=179 [stabilised]: bad classes   89, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=3 ell=181 [stabilised]: bad classes   90, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=3 ell=191 [stabilised]: bad classes   95, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=3 ell=193 [stabilised]: bad classes   96, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=3 ell=197 [stabilised]: bad classes   98, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=3 ell=199 [stabilised]: bad classes   99, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=4 ell= 61 [exception ]: bad classes  180, density / tight-line prediction = 3.0000, off the tight lines  120 [(1, 4, 5, 9), (1, 4, 28, 29)]
+  k=4 ell= 67 [exception ]: bad classes  165, density / tight-line prediction = 2.5000, off the tight lines   99 [(1, 4, 31, 32), (1, 7, 8, 9)]
+  k=4 ell= 71 [exception ]: bad classes  175, density / tight-line prediction = 2.5000, off the tight lines  105 [(1, 3, 4, 5), (1, 4, 5, 6)]
+  k=4 ell= 73 [exception ]: bad classes  180, density / tight-line prediction = 2.5000, off the tight lines  108 [(1, 3, 4, 5), (1, 4, 5, 6)]
+  k=4 ell= 89 [exception ]: bad classes  110, density / tight-line prediction = 1.2500, off the tight lines   22 [(1, 27, 28, 34), (1, 33, 34, 35)]
+  k=4 ell=101 [exception ]: bad classes  150, density / tight-line prediction = 1.5000, off the tight lines   50 [(1, 7, 8, 9), (1, 12, 44, 45)]
+  k=4 ell=103 [exception ]: bad classes  204, density / tight-line prediction = 2.0000, off the tight lines  102 [(1, 7, 8, 9), (1, 8, 9, 10)]
+  k=4 ell=131 [exception ]: bad classes  195, density / tight-line prediction = 1.5000, off the tight lines   65 [(1, 8, 9, 17), (1, 29, 30, 31)]
+  k=4 ell= 59 [stabilised]: bad classes   58, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=4 ell= 79 [stabilised]: bad classes   78, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=4 ell= 83 [stabilised]: bad classes   82, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=4 ell= 97 [stabilised]: bad classes   96, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=4 ell=107 [stabilised]: bad classes  106, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=4 ell=109 [stabilised]: bad classes  108, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=4 ell=113 [stabilised]: bad classes  112, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=4 ell=127 [stabilised]: bad classes  126, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=4 ell=137 [stabilised]: bad classes  136, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=4 ell=139 [stabilised]: bad classes  138, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=4 ell=149 [stabilised]: bad classes  148, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=4 ell=151 [stabilised]: bad classes  150, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=4 ell=157 [stabilised]: bad classes  156, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=4 ell=163 [stabilised]: bad classes  162, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=4 ell=167 [stabilised]: bad classes  166, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=4 ell=173 [stabilised]: bad classes  172, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=4 ell=179 [stabilised]: bad classes  178, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=4 ell=181 [stabilised]: bad classes  180, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=4 ell=191 [stabilised]: bad classes  190, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=4 ell=193 [stabilised]: bad classes  192, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=4 ell=197 [stabilised]: bad classes  196, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=4 ell=199 [stabilised]: bad classes  198, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=5 ell= 53 [exception ]: bad classes  156, density / tight-line prediction = 3.0000, off the tight lines  104 [(1, 2, 3, 5, 8), (1, 4, 5, 9, 17)]
+  k=5 ell= 59 [exception ]: bad classes  116, density / tight-line prediction = 2.0000, off the tight lines   58 [(1, 3, 4, 5, 11), (1, 3, 12, 15, 27)]
+  k=5 ell= 61 [exception ]: bad classes  606, density / tight-line prediction = 10.1000, off the tight lines  546 [(1, 2, 3, 5, 8), (1, 2, 3, 5, 12)]
+  k=5 ell= 67 [exception ]: bad classes  561, density / tight-line prediction = 8.5000, off the tight lines  495 [(1, 2, 3, 5, 8), (1, 2, 13, 15, 28)]
+  k=5 ell= 71 [exception ]: bad classes  175, density / tight-line prediction = 2.5000, off the tight lines  105 [(1, 2, 3, 5, 8), (1, 3, 4, 5, 7)]
+  k=5 ell= 89 [exception ]: bad classes  264, density / tight-line prediction = 3.0000, off the tight lines  176 [(1, 2, 3, 5, 8), (1, 3, 4, 5, 7)]
+  k=5 ell=127 [exception ]: bad classes  189, density / tight-line prediction = 1.5000, off the tight lines   63 [(1, 3, 4, 5, 11), (1, 12, 23, 35, 58)]
+  k=5 ell=101 [stabilised]: bad classes  100, density / tight-line prediction = 1.0000, off the tight lines    0 []
+  k=5 ell=151 [stabilised]: bad classes  150, density / tight-line prediction = 1.0000, off the tight lines    0 []
+
+====================================================================================================
+B4  Collatz objects sit in LRC's trivial (non-covering) class; the information budget    [t=345s]
+====================================================================================================
+  every carry c_w is prime to 3 (c_w = 2^(s_(a-1)) mod 3) => the carry set is lonely at t = 1/3 (level 1/3);
+  cycle elements are prime to 3 (known cycles checked; general: a multiple of 3 has no odd-step preimage);
+  the runner set {2^s 3^r} is prime to 5 => lonely at t = 1/5 (kappa(2,3) = 1/5 exactly, A1.6).
+  information budget at the critical ratio a/p = log_3 2 = 0.630930: log2 C(p,a)/p -> H = 0.94996 bits, log2|D|/p -> 1 (Baker/Rhin): deficit 0.05004 bits per step
+  (84,53): log2 C = 76.3, log2|D| = 75.1
+  (485,306): log2 C = 456.0, log2|D| = 475.1
+  (1054,665): log2 C = 996.0, log2|D| = 1039.5
+
+29198 checks, total time 345s
+ALL CHECKS PASSED
