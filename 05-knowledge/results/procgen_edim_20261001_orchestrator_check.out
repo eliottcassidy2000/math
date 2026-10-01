@@ -1,0 +1,104 @@
+[OK] |Aut(Q6)| = 46080 vertex permutations
+[OK] automorphisms preserve distance
+==== Part I: third exhaustive search (orchestrator C engine) ====
+a=0 reps=1 burnside=1
+a=1 reps=1 burnside=1
+a=2 reps=5 burnside=5
+a=3 reps=10 burnside=10
+a=4 reps=47 burnside=47
+a=5 reps=131 burnside=131
+a=6 reps=472 burnside=472
+a=7 reps=1326 burnside=1326
+a=8 reps=3779 burnside=3779
+a=9 reps=9013 burnside=9013
+a=10 reps=19963 burnside=19963
+a=11 reps=38073 burnside=38073
+a=12 reps=65664 burnside=65664
+a=13 reps=98804 burnside=98804
+a=14 reps=133576 burnside=133576
+a=15 reps=158658 burnside=158658
+orbit representatives MATCH Burnside
+k=1 expected leaves=1
+k=1 leaves=1 fullchecks=0 resolving_found=0
+k=2 expected leaves=37
+k=2 leaves=37 fullchecks=3 resolving_found=0
+k=3 expected leaves=170
+k=3 leaves=170 fullchecks=6 resolving_found=0
+k=4 expected leaves=2847
+k=4 leaves=2847 fullchecks=27 resolving_found=0
+k=5 expected leaves=6595
+k=5 leaves=6595 fullchecks=50 resolving_found=0
+k=6 expected leaves=77576
+k=6 leaves=77576 fullchecks=231 resolving_found=0
+k=7 expected leaves=314526
+k=7 leaves=314526 fullchecks=241 resolving_found=0
+k=8 expected leaves=2620203
+k=8 leaves=2620203 fullchecks=5230 resolving_found=0
+k=9 expected leaves=7839517
+k=9 leaves=7839517 fullchecks=17854 resolving_found=0
+k=10 expected leaves=52113099
+k=10 leaves=52113099 fullchecks=119745 resolving_found=0
+k=11 expected leaves=166623609
+k=11 leaves=166623609 fullchecks=366949 resolving_found=0
+k=12 expected leaves=886530168
+k=12 leaves=886530168 fullchecks=2054758 resolving_found=0
+k=13 expected leaves=2406818716
+k=13 leaves=2406818716 fullchecks=4852810 resolving_found=0
+k=14 expected leaves=10645202720
+k=14 leaves=10645202720 fullchecks=12761653 resolving_found=0
+k=15 expected leaves=26655385802
+k=15 leaves=26655385802 fullchecks=75629429 resolving_found=1678
+  (search time 875 s)
+[OK] Aut(Q5)-orbit representatives of a-subsets (a <= 15) match the Burnside counts
+[OK] k=1: enumeration complete (leaves = sum_a #reps(a) C(32, k-a) = 1)
+[OK] k=1: no edge-multiset resolving set
+[OK] k=2: enumeration complete (leaves = sum_a #reps(a) C(32, k-a) = 37)
+[OK] k=2: no edge-multiset resolving set
+[OK] k=3: enumeration complete (leaves = sum_a #reps(a) C(32, k-a) = 170)
+[OK] k=3: no edge-multiset resolving set
+[OK] k=4: enumeration complete (leaves = sum_a #reps(a) C(32, k-a) = 2847)
+[OK] k=4: no edge-multiset resolving set
+[OK] k=5: enumeration complete (leaves = sum_a #reps(a) C(32, k-a) = 6595)
+[OK] k=5: no edge-multiset resolving set
+[OK] k=6: enumeration complete (leaves = sum_a #reps(a) C(32, k-a) = 77576)
+[OK] k=6: no edge-multiset resolving set
+[OK] k=7: enumeration complete (leaves = sum_a #reps(a) C(32, k-a) = 314526)
+[OK] k=7: no edge-multiset resolving set
+[OK] k=8: enumeration complete (leaves = sum_a #reps(a) C(32, k-a) = 2620203)
+[OK] k=8: no edge-multiset resolving set
+[OK] k=9: enumeration complete (leaves = sum_a #reps(a) C(32, k-a) = 7839517)
+[OK] k=9: no edge-multiset resolving set
+[OK] k=10: enumeration complete (leaves = sum_a #reps(a) C(32, k-a) = 52113099)
+[OK] k=10: no edge-multiset resolving set
+[OK] k=11: enumeration complete (leaves = sum_a #reps(a) C(32, k-a) = 166623609)
+[OK] k=11: no edge-multiset resolving set
+[OK] k=12: enumeration complete (leaves = sum_a #reps(a) C(32, k-a) = 886530168)
+[OK] k=12: no edge-multiset resolving set
+[OK] k=13: enumeration complete (leaves = sum_a #reps(a) C(32, k-a) = 2406818716)
+[OK] k=13: no edge-multiset resolving set
+[OK] k=14: enumeration complete (leaves = sum_a #reps(a) C(32, k-a) = 10645202720)
+[OK] k=14: no edge-multiset resolving set
+[OK] k=15: enumeration complete (leaves = sum_a #reps(a) C(32, k-a) = 26655385802)
+[OK] k=15: 1678 resolving leaves found
+==== Part II: certificates, orbits, bounds ====
+[OK] deposited orbit list has 229 representatives
+[OK] all 229 representatives are 15-sets that resolve all 192 edges (own checker)
+[OK] each representative is the minimum mask of its Aut(Q6)-orbit
+[OK] the 229 orbits are pairwise distinct
+[OK] every orbit has trivial stabilizer (the minimum is attained by exactly one automorphism)
+[OK] paper's set decoded
+[OK] paper's 15-set (Table 1) is resolving
+[OK] paper's set lies in one of the 229 orbits
+[OK] the 1678 resolving 15-sets found by the third search reduce to exactly the deposited 229 orbits (229 orbits)
+[OK] k=14 near miss 0x000001810690226d: defect 1, the one collision is {24,26} ~ {37,39} with histogram (1,1,5,5,1,1)
+[OK] Q7: explicit set of size 19 resolves all 448 edges  =>  edim_m(Q7) <= 19
+[OK] Q8: explicit set of size 26 resolves all 1024 edges  =>  edim_m(Q8) <= 26
+[OK] Q9: explicit set of size 38 resolves all 2304 edges  =>  edim_m(Q9) <= 38
+[OK] Q10: explicit set of size 48 resolves all 5120 edges  =>  edim_m(Q10) <= 48
+[OK] Q11: explicit set of size 65 resolves all 11264 edges  =>  edim_m(Q11) <= 65
+[OK] Q12: explicit set of size 76 resolves all 24576 edges  =>  edim_m(Q12) <= 76
+[OK] L4: 192 - 12m > C(m+3,3) exactly for m <= 6, so edim_m(Q6) >= 7
+[OK] L5 entropy bound table reproduced: {6: 4, 7: 5, 8: 5, 10: 6, 12: 8, 16: 11, 20: 15, 32: 28, 64: 81, 128: 275, 256: 1159, 1024: 50116}
+[OK] L2: H_{antipode(e)}(r) = H_e(5 - r) on 20 random 15-sets
+elapsed 882 s
+ALL CHECKS PASSED

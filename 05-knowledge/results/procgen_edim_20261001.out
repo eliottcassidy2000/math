@@ -1,0 +1,156 @@
+
+==== S1 cited certificates (Allikvere 2026, Table 1) ====
+[OK] paper certificate Q6: |S|=15 is edge-multiset resolving (pure-python + numpy checkers)
+[OK] paper certificate Q7: |S|=63 is edge-multiset resolving (pure-python + numpy checkers)
+[OK] paper certificate Q8: |S|=115 is edge-multiset resolving (pure-python + numpy checkers)
+
+==== S2 elementary lemmas ====
+[OK] Q5 antipodal reversal H_{ebar}(r) = H_e(d-1-r) (20 random S, all edges)
+[OK] Q5 alternating sum: sum_r (-1)^r H_e(r) = chi_U(u) * S^(U), U = 1-vector xor e_i
+[OK] Q6 antipodal reversal H_{ebar}(r) = H_e(d-1-r) (20 random S, all edges)
+[OK] Q6 alternating sum: sum_r (-1)^r H_e(r) = chi_U(u) * S^(U), U = 1-vector xor e_i
+[OK] Q7 antipodal reversal H_{ebar}(r) = H_e(d-1-r) (20 random S, all edges)
+[OK] Q7 alternating sum: sum_r (-1)^r H_e(r) = chi_U(u) * S^(U), U = 1-vector xor e_i
+[OK] Q6, |S| odd: number of colliding edge pairs is even (200 random sets)
+[OK] counting bound: 192-12m > C(m+3,3) for m<=6, fails at m=7  => edim_m(Q6) >= 7
+[OK] sanity: #edges with H(0)=H(5)=0 is >= 192-12|S| (50 random sets)
+[OK] entropy lower bound edim_m(Q_d) >= m_ent(d): 6:4, 7:5, 8:5, 10:6, 12:8, 16:11, 20:15, 32:28, 64:81, 128:275, 256:1159, 1024:50116
+
+==== S3 Aut(Q5)-orbit representatives of a-subsets of Q5, a=0..15 ====
+[OK] Burnside counts of a-subset orbits of Q5, a=0..15: 1,1,5,10,47,131,472,1326,3779,9013,19963,38073,65664,98804,133576,158658
+[OK] reps a=0: 1 sets, pairwise distinct, each minimal in its Aut(Q5)-orbit, count = Burnside
+[OK] reps a=1: 1 sets, pairwise distinct, each minimal in its Aut(Q5)-orbit, count = Burnside
+[OK] reps a=2: 5 sets, pairwise distinct, each minimal in its Aut(Q5)-orbit, count = Burnside
+[OK] reps a=3: 10 sets, pairwise distinct, each minimal in its Aut(Q5)-orbit, count = Burnside
+[OK] reps a=4: 47 sets, pairwise distinct, each minimal in its Aut(Q5)-orbit, count = Burnside
+[OK] reps a=5: 131 sets, pairwise distinct, each minimal in its Aut(Q5)-orbit, count = Burnside
+[OK] reps a=6: 472 sets, pairwise distinct, each minimal in its Aut(Q5)-orbit, count = Burnside
+[OK] reps a=7: 1326 sets, pairwise distinct, each minimal in its Aut(Q5)-orbit, count = Burnside
+[OK] reps a=8: 3779 sets, pairwise distinct, each minimal in its Aut(Q5)-orbit, count = Burnside
+[OK] reps a=9: 9013 sets, pairwise distinct, each minimal in its Aut(Q5)-orbit, count = Burnside
+[OK] reps a=10: 19963 sets, pairwise distinct, each minimal in its Aut(Q5)-orbit, count = Burnside
+[OK] reps a=11: 38073 sets, pairwise distinct, each minimal in its Aut(Q5)-orbit, count = Burnside
+[OK] reps a=12: 65664 sets, pairwise distinct, each minimal in its Aut(Q5)-orbit, count = Burnside
+[OK] reps a=13: 98804 sets, pairwise distinct, each minimal in its Aut(Q5)-orbit, count = Burnside
+[OK] reps a=14: 133576 sets, pairwise distinct, each minimal in its Aut(Q5)-orbit, count = Burnside
+[OK] reps a=15: 158658 sets, pairwise distinct, each minimal in its Aut(Q5)-orbit, count = Burnside
+
+==== S4 METHOD A exhaustive search, k=1..15 ====
+[OK] method A k=1: leaf counts per a equal the independent numpy DP count (total 1)
+[OK] method A k=1: no edge-multiset resolving set
+[OK] method A k=2: leaf counts per a equal the independent numpy DP count (total 6)
+[OK] method A k=2: no edge-multiset resolving set
+[OK] method A k=3: leaf counts per a equal the independent numpy DP count (total 72)
+[OK] method A k=3: no edge-multiset resolving set
+[OK] method A k=4: leaf counts per a equal the independent numpy DP count (total 274)
+[OK] method A k=4: no edge-multiset resolving set
+[OK] method A k=5: leaf counts per a equal the independent numpy DP count (total 1913)
+[OK] method A k=5: no edge-multiset resolving set
+[OK] method A k=6: leaf counts per a equal the independent numpy DP count (total 13092)
+[OK] method A k=6: no edge-multiset resolving set
+[OK] method A k=7: leaf counts per a equal the independent numpy DP count (total 70347)
+[OK] method A k=7: no edge-multiset resolving set
+[OK] method A k=8: leaf counts per a equal the independent numpy DP count (total 375809)
+[OK] method A k=8: no edge-multiset resolving set
+[OK] method A k=9: leaf counts per a equal the independent numpy DP count (total 1953411)
+[OK] method A k=9: no edge-multiset resolving set
+[OK] method A k=10: leaf counts per a equal the independent numpy DP count (total 9222226)
+[OK] method A k=10: no edge-multiset resolving set
+[OK] method A k=11: leaf counts per a equal the independent numpy DP count (total 39735306)
+[OK] method A k=11: no edge-multiset resolving set
+[OK] method A k=12: leaf counts per a equal the independent numpy DP count (total 161182358)
+[OK] method A k=12: no edge-multiset resolving set
+[OK] method A k=13: leaf counts per a equal the independent numpy DP count (total 602815147)
+[OK] method A k=13: no edge-multiset resolving set
+[OK] method A k=14: leaf counts per a equal the independent numpy DP count (total 2075614912)
+[OK] method A k=14: no edge-multiset resolving set
+[OK] method A k=15: leaf counts per a equal the independent numpy DP count (total 6609712486)
+[OK] method A k=15: 314 resolving leaves found
+  (method A time 450 s)
+
+==== S5 METHOD B exhaustive search, k=1..15 ====
+[OK] method B k=1: leaf counts per a equal the independent numpy DP count (total 1)
+[OK] method B k=1: no edge-multiset resolving set
+[OK] method B k=2: leaf counts per a equal the independent numpy DP count (total 32)
+[OK] method B k=2: no edge-multiset resolving set
+[OK] method B k=3: leaf counts per a equal the independent numpy DP count (total 160)
+[OK] method B k=3: no edge-multiset resolving set
+[OK] method B k=4: leaf counts per a equal the independent numpy DP count (total 2506)
+[OK] method B k=4: no edge-multiset resolving set
+[OK] method B k=5: leaf counts per a equal the independent numpy DP count (total 4971)
+[OK] method B k=5: no edge-multiset resolving set
+[OK] method B k=6: leaf counts per a equal the independent numpy DP count (total 52535)
+[OK] method B k=6: no edge-multiset resolving set
+[OK] method B k=7: leaf counts per a equal the independent numpy DP count (total 234240)
+[OK] method B k=7: no edge-multiset resolving set
+[OK] method B k=8: leaf counts per a equal the independent numpy DP count (total 1808073)
+[OK] method B k=8: no edge-multiset resolving set
+[OK] method B k=9: leaf counts per a equal the independent numpy DP count (total 4767589)
+[OK] method B k=9: no edge-multiset resolving set
+[OK] method B k=10: leaf counts per a equal the independent numpy DP count (total 29955834)
+[OK] method B k=10: no edge-multiset resolving set
+[OK] method B k=11: leaf counts per a equal the independent numpy DP count (total 96667005)
+[OK] method B k=11: no edge-multiset resolving set
+[OK] method B k=12: leaf counts per a equal the independent numpy DP count (total 491865822)
+[OK] method B k=12: no edge-multiset resolving set
+[OK] method B k=13: leaf counts per a equal the independent numpy DP count (total 1234172511)
+[OK] method B k=13: no edge-multiset resolving set
+[OK] method B k=14: leaf counts per a equal the independent numpy DP count (total 5359115934)
+[OK] method B k=14: no edge-multiset resolving set
+[OK] method B k=15: leaf counts per a equal the independent numpy DP count (total 13146176599)
+[OK] method B k=15: 585 resolving leaves found
+  (method B time 908 s)
+
+==== S6 k=15: orbit comparison and verification ====
+[OK] methods A and B find the same set of Aut(Q6)-orbits of resolving 15-sets
+[OK] number of Aut(Q6)-orbits of edge-multiset resolving 15-sets of Q6 = 229
+[OK] every resolving 15-set found has trivial stabilizer in Aut(Q6) (orbit size 46080)
+[OK] all 229 canonical representatives verified resolving (pure Python)
+[OK] the paper's 15-set (canonical 00000180026dcd03) is one of the 229 orbits
+[OK] pure-Python stabilizer of the paper set in Aut(Q6) is trivial
+RESULT: edim_m(Q6) = 15  (no resolving set of size <= 14 by methods A and B; 229 orbits of size 15)
+[OK] recomputed orbit list equals the deposited list procgen_edim_20261001_q6_resolving15_orbits.txt
+  first five canonical 15-set masks: 00000016030748e3 00000016061920bd 0000001606229cd1 0000001618167283 000000161824ce0b
+
+==== S7 k=14 near-resolving cross-check (defect = 192 - #distinct histograms <= 2) ====
+[OK] no resolving 14-set (re-run with defect output)
+[OK] no resolving 14-set (re-run with defect output)
+[OK] defect<=2 14-set orbits agree between A and B: defect 1: 1 orbits, defect 2: 16 orbits
+[OK] k=14: minimum defect 1, attained by exactly one orbit (canonical 000001810690226d); 16 orbits of defect 2
+[OK] minimum defect at k=14 is 1 (20 orbit reps rechecked in Python)
+
+==== S8 normal-form (WLOG) test on random sets ====
+[OK] normal forms of 100 random 14/15-sets (both rules) lie in the searched domains and in the same Aut(Q6)-orbit
+
+==== S9 tournament-structured landmark sets in the n=5 tiling cube Q6 (THM-474) ====
+[OK] 64 tilings fall into 12 tournament isomorphism classes, sizes 1,1,1,1,3,5,5,5,9,9,11,13
+[OK] no union of isomorphism classes is resolving (4095 unions; best: 4 colliding pairs at size 30)
+[OK] no union of H(T)-level sets is resolving (127 unions; best 88 colliding pairs at size 32)
+[OK] grid transpose G is a nontrivial coordinate permutation of Q6 (an automorphism)
+[OK] H(T) is G-invariant on tilings => every union of H-levels has nontrivial stabilizer (cannot resolve)
+
+==== S10 explicit small resolving sets for Q7..Q12 (found by simulated annealing; exact verification) ====
+[OK] Q7: explicit set of size 19 is edge-multiset resolving  => edim_m(Q7) <= 19
+[OK] Q8: explicit set of size 26 is edge-multiset resolving  => edim_m(Q8) <= 26
+[OK] Q9: explicit set of size 38 is edge-multiset resolving  => edim_m(Q9) <= 38
+[OK] Q10: explicit set of size 48 is edge-multiset resolving  => edim_m(Q10) <= 48
+[OK] Q11: explicit set of size 65 is edge-multiset resolving  => edim_m(Q11) <= 65
+[OK] Q12: explicit set of size 76 is edge-multiset resolving  => edim_m(Q12) <= 76
+
+==== S11 union bounds (random-flow forest lemma, any inclusion probability q) ====
+[OK] q=1/2 reproduces the paper: U(10)=1.307 > 1 > U(11)=0.1562
+[OK] sparse random landmarks q=0.23421: U(11)=0.946<1 and P(|S|>511)<1-U  => edim_m(Q11) <= 511  (ln M / d^(1/3) = 2.804; density 1/2: ~2^10)
+[OK] sparse random landmarks q=0.13357: U(12)=0.907<1 and P(|S|>576)<1-U  => edim_m(Q12) <= 576  (ln M / d^(1/3) = 2.776; density 1/2: ~2^11)
+[OK] sparse random landmarks q=0.07666: U(13)=0.947<1 and P(|S|>667)<1-U  => edim_m(Q13) <= 667  (ln M / d^(1/3) = 2.766; density 1/2: ~2^12)
+[OK] sparse random landmarks q=0.045528: U(14)=0.905<1 and P(|S|>781)<1-U  => edim_m(Q14) <= 781  (ln M / d^(1/3) = 2.764; density 1/2: ~2^13)
+[OK] sparse random landmarks q=0.02648: U(15)=0.927<1 and P(|S|>910)<1-U  => edim_m(Q15) <= 910  (ln M / d^(1/3) = 2.763; density 1/2: ~2^14)
+[OK] sparse random landmarks q=0.015496: U(16)=0.898<1 and P(|S|>1056)<1-U  => edim_m(Q16) <= 1056  (ln M / d^(1/3) = 2.763; density 1/2: ~2^15)
+[OK] sparse random landmarks q=0.009052: U(17)=0.840<1 and P(|S|>1221)<1-U  => edim_m(Q17) <= 1221  (ln M / d^(1/3) = 2.764; density 1/2: ~2^16)
+[OK] sparse random landmarks q=0.00519906: U(18)=0.891<1 and P(|S|>1408)<1-U  => edim_m(Q18) <= 1408  (ln M / d^(1/3) = 2.766; density 1/2: ~2^17)
+[OK] sparse random landmarks q=0.00170376: U(20)=0.882<1 and P(|S|>1837)<1-U  => edim_m(Q20) <= 1837  (ln M / d^(1/3) = 2.769; density 1/2: ~2^19)
+[OK] sparse random landmarks q=0.000173393: U(24)=0.868<1 and P(|S|>2969)<1-U  => edim_m(Q24) <= 2969  (ln M / d^(1/3) = 2.772; density 1/2: ~2^23)
+[OK] sparse random landmarks q=1.66387e-05: U(28)=0.854<1 and P(|S|>4537)<1-U  => edim_m(Q28) <= 4537  (ln M / d^(1/3) = 2.773; density 1/2: ~2^27)
+[OK] sparse random landmarks q=1.52675e-06: U(32)=0.842<1 and P(|S|>6638)<1-U  => edim_m(Q32) <= 6638  (ln M / d^(1/3) = 2.772; density 1/2: ~2^31)
+
+Total checks: 127   (elapsed 2073 s)
+ALL CHECKS PASSED

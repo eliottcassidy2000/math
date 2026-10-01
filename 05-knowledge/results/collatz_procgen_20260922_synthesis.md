@@ -1786,6 +1786,44 @@ The owner wrote: "lonely runner being local while Collatz being global means tha
 
 **Joint target that survives (EMPIRICAL).** The *tight-line principle*: for large primes `l`, the residue speed vectors with no lonely time `m/l` are exactly the scalar multiples of reductions of tight sets. If proved, one prime beyond the known speed bound would decide LRC(k). Its Collatz mirror fails: at the gate primes nothing stabilises.
 
+## 2ai. Wave 23 of this session (2026-10-01): selfie tournaments, Hamiltonian-path arc parity, and the edge multiset dimension of Q_6
+
+The owner asked about tournaments with optional loops ("selfie tournaments"):
+- compare the `N` optional loops with the `N-1` arcs of the Hamiltonian path that must exist;
+- shave tournaments down while keeping a Hamiltonian path;
+- test a conjectured 5/6 threshold for arcs on Hamiltonian paths;
+- look for inspiration on named open problems, including those of arXiv:2608.09983 (edge multiset dimension of hypercubes).
+
+**1. THM-4524: the loops are the gauge** ([selfie note](procgen_selfie_20261001_selfie_tournaments.md)).
+* **Loops versus path arcs.**
+  * The `N` loop bits are exactly the switching bits: (tiling, loop set) maps 2-to-1 onto labeled tournaments, with `L` and its complement giving the same tournament.
+  * The `N-1` path arcs are their discrete derivative: arc `i+1 -> i` is reversed iff exactly one end is looped.
+  * So `C(N-1,2) + N = C(N,2) + 1`, and the one extra bit is the global complement.
+* **New identities.**
+  * `H` has loop-Walsh degree `<= 2 floor(N/3)`, so `sum_L (-1)^|L| H(switch_L T) = 0`.
+  * Loops act as odd 1-cycles in a fixed-point form of the odd-cycle formula (OCF). The resulting "selfie Redei" count is odd and is `H + 2|L| (mod 4)`.
+* **The owner's 5/6 conjecture is false in both readings.**
+  * Every arc lies on some HP for a fraction of tournaments that rises to 1 (0.998 at `N = 10`).
+  * The real threshold is a parity one and runs the other way. *Every arc on an odd number of HPs* is impossible for `N = 3..5` and first happens at `N = 6`, in one class: Paley `QR_7` minus a vertex.
+  * `N = 10` has exactly two such classes. `N = 9` has none, and `N = 0, 3 (mod 4)` is excluded by parity.
+  * Cayley tournaments of odd abelian groups (including `QR_7` itself, with `c = 54` on every arc) are all-even.
+* **Shaving.**
+  * An arc can be shaved keeping `H` odd iff `c(e)` is even. Every non-all-odd class with `N <= 7` shaves down to a single HP with `H` odd at every step.
+  * All-even tournaments need exactly two deletions to make `H` even.
+  * Killing every HP costs a Hall-type deficiency bound (HYP-9168, `N <= 9`).
+* **OPEN-Q-060 answered (Burnside form).** A049313 counts the Euler graphs whose automorphisms all reverse an even number of edges: Mallows-Sloane twisted by the tournament torsor's cocycle.
+* **New HYPs.** HYP-9167 (Paley minus a vertex is all-odd; all-odd exists iff `N = 2 mod 4`) and HYP-9168.
+
+**2. THM-4525: edim_m(Q_6) = 15** ([edim note](procgen_edim_20261001_edge_multiset_dimension.md)).
+* **Open Problem 1 settled.** `Q_6` is the `n = 5` tiling cube. No set of at most 14 landmarks separates all 192 edges by distance multisets.
+  * Three independent exhaustive searches, each up to `Aut(Q_6)`, find nothing at `k <= 14`, and the same 229 orbits at `k = 15`.
+  * Multisets do not refine, so no class-splitting pruning was used.
+* **Open Problem 2.** An entropy bound gives `edim_m(Q_d) >= exp((0.62 - o(1)) d^(1/3))`, so growth is superpolynomial. HYP-9169 conjectures `ln edim_m = Theta(d^(1/3))`.
+* **Open Problem 4.** Density 1/2 is far from optimal: explicit sets give `Q_7 <= 19` (the paper had 63), down to `Q_12 <= 76`.
+* **Tournament structure gives no shortcut.** A resolving set has trivial stabilizer, so no union of tournament classes works.
+
+**Cross-session note.** `QR_7` appears twice today. Here it is the all-even tournament whose vertex-deleted subtournament is the first parity-rigid tournament. In opus S15's nineteenth note (`collatz_paley_bridge_20261001.md`) it is the Paley heptagon read as the trivial Collatz cycle. The two facts are independent, and no bridge is claimed (ANALOGY at most).
+
 ## 3. The snippet, dispatched
 
 | pasted claim | verdict | where |
