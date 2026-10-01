@@ -1,0 +1,86 @@
+=== A. combination law under CRT, multiplicativity, which power clocks are tournaments ===
+PASS pair type of a CRT product = AND of factor types (moduli 63, 72, 35, 80, 108, 143; k = 2,3,4)
+   monoid table: 11 (doubled or loop) is the identity, 00 (missing) absorbs, 10 AND 01 = 00 (opposite arcs annihilate)
+PASS |D_k(n)| and |D_k(n) cap -D_k(n)| are multiplicative (n < 400, k = 2..6); one-way, doubled, missing counts follow
+PASS power clock (nonzero differences) is a tournament iff n = p = 3 mod 4 prime and gcd(k, p-1) = 2: the Paley tournaments (n < 3000, k = 2..8)
+PASS per-vertex counts for any D (3000 random D, with and without 0): one-way |D| - |D cap -D|, doubled |D cap -D| - [0 in D], missing n - 1 - 2|D| + |D cap -D| + [0 in D]; loopless P7 = Cay(Z/7, {1,2,4}) has 0 missing
+   per vertex: one-way out-arcs, doubled neighbours, missing neighbours (2*one-way + doubled + missing = n - 1)
+   n=9   k=2  D=[0, 1, 4, 7]  one-way=3 doubled=0 missing=2 loop=True
+   n=9   k=3  D=[0, 1, 8]  one-way=0 doubled=2 missing=6 loop=True
+   n=7   k=2  D=[0, 1, 2, 4]  one-way=3 doubled=0 missing=0 loop=True
+   n=7   k=3  D=[0, 1, 6]  one-way=0 doubled=2 missing=4 loop=True
+   n=5   k=2  D=[0, 1, 4]  one-way=0 doubled=2 missing=2 loop=True
+   n=8   k=2  D=[0, 1, 4]  one-way=1 doubled=1 missing=4 loop=True
+   n=27  k=2  D=[0, 1, 4, 7, 9, 10, 13, 16, 19, 22, 25]  one-way=10 doubled=0 missing=6 loop=True
+   n=63  k=2  D=...  one-way=15 doubled=0 missing=32 loop=True
+PASS Jacobi clocks (distinct odd primes p, q < 60): symmetric iff (-1/p)(-1/q) = +1, else a tournament on unit differences: two Paley tournaments (p, q = 3 mod 4) multiply to an undirected graph
+=== B. fractal towers at prime powers, digit conservation, prime atoms ===
+PASS squares mod 3^m (m = 2..5): every 3^j-coset partition is a module partition and level j is C3 (j even) / empty (j odd)
+PASS cubes mod 3^m (m = 2..6): the 3^j-coset partition is a module partition iff j != 1 (mod 3): two-digit C9 blocks then one empty digit
+PASS cube clock mod 9 = 9-cycle with loops (D = {0, 1, 8}), a prime digraph
+PASS x^2 mod 9 has period 9, x^3 mod 9 has period 3 (the owner's two cycles)
+PASS unit squares mod 3^m = {1 mod 3} (decided mod 3); unit cubes mod 3^m = {+-1 mod 9} (decided mod 9), m = 2..9
+   conservation: squaring loses no 3-adic input digit and its image is read mod 3; cubing loses one input digit and its image needs one extra digit (mod 9)
+PASS prime-level power clocks Cay(Z/p, D_k(p)) are prime (indecomposable) digraphs unless complete (3 <= p < 200, k = 2..8)
+PASS every circulant Cay(Z/p, D) with p an odd prime is a prime digraph iff D minus {0} is neither empty nor everything (3 <= p < 60, 25 random D each)
+PASS FINITE-EXACT: a power clock on n with >= 2 distinct primes is prime iff no prime-power factor has a clique module (1100 cases, n <= 300, k = 2..6)
+PASS odd p: Cl(p^e, D_k(p^e)) has a clique module iff k | e-1 and gcd(k, p-1) = 1 (prime powers <= 300, k = 2..6); for e = 1 it is the whole complete clock
+PASS tower law (p = 3,5,7,11; k = 2..6; p^m <= 2500): the type of d = p^v w depends only on v and w mod p^min(m-v, 1+v_p(k)), and is missing unless k | v
+PASS squares mod 63, 45, 225 and cubes mod 175, 189, 225 are prime, although each has a tower factor (squares mod 9 and 25, cubes mod 25 and 27): CRT dissolves towers; cubes mod 9 is not a tower (it is the prime 9-cycle)
+PASS digit conservation (Prop 6): on units mod p^m, x^k depends exactly on x mod p^(m-a), a = v_p(k), when m >= a+2; for m <= a+1 only on x mod p (on nothing when (p-1) | k) (p = 3, 5, 7, several k, p^m <= 20000)
+=== C. Collatz on the mod-9 clocks ===
+PASS odd n < 2e6: 3n+1 is a unit square mod 9 (digital root 1,4,7); T(n)^3 = (-1)^v (mod 9); T(n) is a square mod 9 iff v is even; exactly T(n) = (-1)^v * 4^(n+v) (mod 9): sign in the cube clock {1,8}, rotation n+v mod 3 in the square clock {1,4,7}
+PASS forward Syracuse images mod 9: 1/9 on each square, 2/9 on each non-square (observed {1: 0.1111, 2: 0.2222, 4: 0.1111, 5: 0.2222, 7: 0.1111, 8: 0.2222})
+PASS orbit law mod 9 (exact, two independent geometric halving counts): (1,2,4,5,7,8) get (8,16,11,4,2,22)/63
+PASS second Syracuse iterates of odd n < 2e6 follow the orbit law to 1e-3 (observed x63: {1: 8.002, 2: 16.0, 4: 10.999, 5: 4.0, 7: 2.0, 8: 21.999}): 7 mod 9 is rare, 8 mod 9 common
+PASS n_(i+1) mod 3^k is a function of (v_(i-k+1) mod 2, ..., v_i mod 2*3^(k-1)) for k = 1..5 (odd starts < 1e5): the 3-adic clock forgets the start
+PASS duality (m = 2..12): <2> mod 3^m = all units, contains -1 (doubled, complete 3-partite clock); <3> mod 2^(m+1) = {1,3 mod 8}, misses -1 (bipartite tournament); at m = 1, <3> mod 4 = {1, 3} contains -1
+PASS units mod 9: generators = units that are neither squares {1,4,7} nor cubes {1,8}; 2 is one (so 2 generates every (Z/3^k)^x)
+PASS odd primes a < 400: 2 is a primitive root mod a^2 iff 2 lies in no q-th power clock mod a^2, q | a(a-1) prime
+   (a, 2 primitive mod a^2, power clocks containing 2): [(3, True, []), (5, True, []), (7, False, [2]), (11, True, []), (13, True, []), (17, False, [2]), (19, True, []), (23, False, [2]), (29, True, []), (31, False, [2, 3]), (37, True, [])]
+   this is exactly the condition of THM-4523's Theorem R_a (an iff) for n/2, an+1; at a = 3 it is 'squares mod 9' and 'cubes mod 9'
+PASS an+1 maps (a = 3,5,7,11,13,17,1093,3511; odd n < 2e5): (an+1)/2^v = omega(2)^(-v) (1+a)^(n + q_a(2) v) (mod a^2); each halving turns the mu_(a-1) clock by omega(2)^(-1) and the 1+aZ clock by the Fermat quotient q_a(2), frozen iff a is Wieferich
+   (a, q_a(2) mod a): [(3, 1), (5, 3), (7, 2), (11, 5), (13, 3), (17, 13), (1093, 0), (3511, 0)]
+=== D. triplets: Pythagorean triples as transitive triangles of the square clock ===
+PASS all 31819 PPTs with c <= 2e5: 4 | even leg, 3 | a leg and never c, 5 | abc, every prime of c is 1 mod 4
+   which member carries the 5: {'hypotenuse': 10595, 'odd leg': 10607, 'even leg': 10617} (the mod-5 clock is symmetric, so the hypotenuse may take the loop)
+PASS the square clock mod p has a unit transitive triangle (x + y = z, all nonzero squares) iff p >= 7 (p < 400)
+PASS odd p < 400: p divides some hypotenuse (c <= 2e5) iff the square clock mod p is symmetric iff p = 1 mod 4; at p = 2 the clock is symmetric but every hypotenuse is odd
+PASS leg exchange: #{(m, n) mod p : (m^2 - n^2, 2mn) = (x, y)} is symmetric in (x, y) iff p != 5 (mod 8), odd p < 200 (i is a square in F_p[i] iff p != 5 mod 8)
+PASS PPTs c <= 2e5: Jacobi (b/c) = +1 and (a/c) = (2/c) = (2/a); for every prime q = 1 mod 4 dividing abc (137630 incidences): q | a => (b/q) = (2/q), q | b => (a/q) = +1, q | c => (a/q) = (2/q), (b/q) = +1: the factor 2 of the even leg is visible exactly where (2/q) = -1, i.e. q = 5 mod 8
+PASS square clock mod 9 (C3 blown up) has no unit transitive triangle: every PPT has 3 | a leg
+PASS cube clock mod 9 (9-cycle) has no unit triangle: x^3 + y^3 = z^3 forces 3 | xyz (Fermat case I for p = 3)
+=== E. F = S + U, p^2qr and the 3-4-3 split ===
+PASS F = S + U iff |Q| = |U| (square-containing proper divisors = prime divisors), N < 2e4
+PASS N = p^2qr = 60: classes U = [2, 3, 5], M = [6, 10, 15, 30], Q = [4, 12, 20] (3-4-3)
+PASS the 5 complementary pairs [(2, 30), (3, 20), (4, 15), (5, 12), (6, 10)] give the class multigraph U=Q doubled, M looped, U-M, M-Q
+PASS the p-valuation layering L0 = [3, 5, 15], L1 = [2, 6, 10, 30], L2 = [4, 12, 20] is also 3-4-3 and complementation swaps L0 <-> L2, fixes L1
+PASS Q = lcm(U, p^2): doubling the exponent of the repeated prime carries U onto Q (the p^3 move)
+PASS in squareclass coordinates F_2^3 complementation is translation by [N] = [qr]; its orbits are the 3 Fano lines through [qr] and {0, [qr]}
+PASS N = p^3: U = {p}, Q = {p^2}, and complementation itself swaps U and Q
+PASS profile (2,1^(r-1)): classes (r, 2^r-1-r, 2^(r-1)-1), layers (2^(r-1)-1, 2^(r-1), 2^(r-1)-1); they agree iff r = 3: [(1, (1, 0, 0), [0, 1, 0]), (2, (2, 1, 1), [1, 2, 1]), (3, (3, 4, 3), [3, 4, 3]), (4, (4, 11, 7), [7, 8, 7]), (5, (5, 26, 15), [15, 16, 15]), (6, (6, 57, 31), [31, 32, 31])]
+=== F. Fermat case I as a triangle census of the p-th power clock mod p^2 (Teichmuller clock) ===
+PASS p = 3: the p-th power clock mod p^2 is the owner's cube clock mod 9
+PASS p < 400: unit triangles x^p + y^p = z^p (mod p^2) exist iff ((1+t)^p - 1 - t^p)/p has a root t != 0, -1 mod p (direct pow cross-check)
+PASS orbit law for 5 <= p < 30000: the root set is invariant under t -> 1/t and t -> -1-t, contains the Eisenstein pair (1 + w = -w^2) iff p = 1 mod 3, contains t = 1 iff p is Wieferich, and #roots = 2[p = 1 mod 3] + 3[Wieferich] + 6j
+PASS the isosceles (doubling) triangle x + x = 2x lies in the clock exactly at the Wieferich primes [1093, 3511]
+   p = 1 mod 3 root counts: [(2, 1401), (5, 1), (8, 192), (14, 15), (17, 1)]
+   p = 2 mod 3 root counts: [(0, 1371), (6, 243), (12, 18), (18, 1)]
+   p = 2 mod 3 with NO unit triangle mod p^2 (case I of FLT then follows from this congruence alone): 1371 / 1633 = 0.8396; Poisson(1/6) heuristic exp(-1/6) = 0.8465
+PASS a large majority of p = 2 mod 3 have a unit-triangle-free Teichmuller clock (first ones: [5, 11, 17, 23, 29, 41, 47, 53, 71, 89, 101, 107, 113, 131, 137, 149, 167, 173, 191, 197])
+PASS 2 (resp. 3) lies in the p-th power clock mod p^2 iff p is a base-2 (resp. base-3) Wieferich prime (5 <= p < 1200; 1093 and 11 occur)
+=== G. local Waring numbers: loops make CRT products strong products, so distances take the max ===
+PASS k = 2: local Waring number of n = max over its prime powers; maximum 4 first at n = 8
+PASS k = 3: local Waring number of n = max over its prime powers; maximum 4 first at n = 9
+PASS k = 4: local Waring number of n = max over its prime powers; maximum 15 first at n = 16
+PASS residues mod 9 that are not sums of three cubes: 4, 5 (the antipodes of the 9-cycle at distance 4)
+=== H. doubling clocks Cay(Z/p, <2>) ===
+PASS doubling clocks read off their actual pair types (odd p < 3000) agree with the ord_p(2) rule; the tournaments are the Paley tournaments (<2> = squares)
+PASS doubling clock mod p is a (Paley) tournament iff p = 7 mod 8 and ord_p(2) = (p-1)/2; first: [7, 23, 47, 71, 79, 103, 167, 191, 199, 239, 263, 271]
+   odd primes < 2000000: complete 0.37429, Paley 0.18694, symmetric 0.33377, oriented-with-missing 0.10500
+   Artin's constant A = 0.373956 (product over l < 1e5); A/2 = 0.186978
+PASS observed shares of complete and Paley doubling clocks agree with A and A/2 to 0.002 (heuristic comparison, not a theorem)
+PASS share of symmetric doubling clocks (ord_p(2) even, i.e. -1 in <2>) = 0.70806 vs 17/24 = 0.70833 (unconditional density theorem for base 2)
+PASS the Wieferich prime 3511 is a Paley doubling prime (ord = 1755); 1093 is not (ord = 364): NUMEROLOGY, recorded as data
+
+ALL CHECKS PASSED

@@ -1,0 +1,11 @@
+primes 5 <= p < 150000; base-2 Wieferich primes (each has t = 1 as a root): [1093, 3511]; orbit-law violations: []
+p = 1 mod 3: 6906 primes; generic 6-orbits j: [(0, 5924), (1, 903), (2, 78), (4, 1)]
+   share with j = 0: 0.8578 (Poisson(1/6): 0.8465); mean j: 0.1539 (1/6 = 0.1667, standard error 0.0049)
+p = 2 mod 3: 6940 primes; generic 6-orbits j: [(0, 5842), (1, 999), (2, 95), (3, 4)]
+   share with j = 0: 0.8418 (Poisson(1/6): 0.8465); mean j: 0.1731 (1/6 = 0.1667, standard error 0.0049)
+pooled: 13846 primes, mean j 0.1635, z = -0.91 against 1/6
+class difference (p = 2 minus p = 1 mod 3): 0.0191, z = 2.76
+primes with j >= 3: [(20123, 3), (32909, 3), (36847, 4), (57149, 3), (137201, 3)]
+p = 1 mod 3, mean j by range of 25000: 0.1415, 0.1468, 0.1502, 0.1732, 0.1437, 0.1720
+p = 2 mod 3, mean j by range of 25000: 0.1706, 0.1686, 0.1806, 0.1743, 0.1688, 0.1762
+ALL CHECKS PASSED
