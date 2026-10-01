@@ -1,0 +1,129 @@
+
+==============================================================================
+A. Selfie gauge theorem: (tiling t, loop set L) -> switch_L(T_t)
+==============================================================================
+n=2: tilings=1, selfies=4 = 2 x 2 labeled; class sum 2n!=4; loop-Walsh degree <= 0 (attained by 1.000 of tilings); (1+y)-order of loop enumerator: {2: 1}
+n=3: tilings=2, selfies=16 = 2 x 8 labeled; class sum 2n!=12; loop-Walsh degree <= 2 (attained by 1.000 of tilings); (1+y)-order of loop enumerator: {1: 2}
+n=4: tilings=8, selfies=128 = 2 x 64 labeled; class sum 2n!=48; loop-Walsh degree <= 2 (attained by 0.750 of tilings); (1+y)-order of loop enumerator: {2: 6, 4: 2}
+n=5: tilings=64, selfies=2048 = 2 x 1024 labeled; class sum 2n!=240; loop-Walsh degree <= 2 (attained by 1.000 of tilings); (1+y)-order of loop enumerator: {3: 64}
+n=6: tilings=1024, selfies=65536 = 2 x 32768 labeled; class sum 2n!=1440; loop-Walsh degree <= 4 (attained by 1.000 of tilings); (1+y)-order of loop enumerator: {2: 1024}
+n=7: tilings=32768, selfies=4194304 = 2 x 2097152 labeled; class sum 2n!=10080; loop-Walsh degree <= 4 (attained by 1.000 of tilings); (1+y)-order of loop enumerator: {3: 32768}
+n=8: 30 iso classes have H = 315 = 8!/2^7; none has H constant on its switching class
+n=2: every ordering is a HP of exactly 2 selfies per class; sum over the 2^n loop sets of a_k = 2 n! C(n-1,k), i.e. per switching class n! C(n-1,k) = [2, 2]; per-class sum of the deformation a_k - A(n,k): [0, 0]
+n=3: every ordering is a HP of exactly 2 selfies per class; sum over the 2^n loop sets of a_k = 2 n! C(n-1,k), i.e. per switching class n! C(n-1,k) = [6, 12, 6]; per-class sum of the deformation a_k - A(n,k): [2, -4, 2]
+n=4: every ordering is a HP of exactly 2 selfies per class; sum over the 2^n loop sets of a_k = 2 n! C(n-1,k), i.e. per switching class n! C(n-1,k) = [24, 72, 72, 24]; per-class sum of the deformation a_k - A(n,k): [16, -16, -16, 16]
+n=5: every ordering is a HP of exactly 2 selfies per class; sum over the 2^n loop sets of a_k = 2 n! C(n-1,k), i.e. per switching class n! C(n-1,k) = [120, 480, 720, 480, 120]; per-class sum of the deformation a_k - A(n,k): [104, 64, -336, 64, 104]
+n=3: segment formula for every loop-Walsh coefficient and the Ising coupling formula verified (8 tournaments)
+n=4: segment formula for every loop-Walsh coefficient and the Ising coupling formula verified (64 tournaments)
+n=5: segment formula for every loop-Walsh coefficient and the Ising coupling formula verified (64 tournaments)
+
+==============================================================================
+B. Loops as odd 1-cycles: H(T;x) = sum_S 2^|S| x^(n-|V(S)|) = sum_U (x-1)^(n-|U|) H(T[U])
+==============================================================================
+n=1 (1 classes): H(T;3)=I(Omega+all loops,2) values [3]
+       I(Omega,-2) = (-1)^n H(T;-1) value range [1, 1], sign counts {1: 1}; H(T;0) (odd-cycle partitions) values [0]
+       T=-  H(T;x) coefficients (x^0..x^n) = [0, 1]
+n=2 (1 classes): H(T;3)=I(Omega+all loops,2) values [9]
+       I(Omega,-2) = (-1)^n H(T;-1) value range [1, 1], sign counts {1: 1}; H(T;0) (odd-cycle partitions) values [0]
+       T=1  H(T;x) coefficients (x^0..x^n) = [0, 0, 1]
+n=3 (2 classes): H(T;3)=I(Omega+all loops,2) values [27, 29]
+       I(Omega,-2) = (-1)^n H(T;-1) value range [-1, 1], sign counts {1: 1, -1: 1}; H(T;0) (odd-cycle partitions) values [0, 2]
+       T=111  H(T;x) coefficients (x^0..x^n) = [0, 0, 0, 1]
+       T=101  H(T;x) coefficients (x^0..x^n) = [2, 0, 0, 1]
+n=4 (4 classes): H(T;3)=I(Omega+all loops,2) values [81, 87, 93]
+       I(Omega,-2) = (-1)^n H(T;-1) value range [-3, 1], sign counts {1: 1, -1: 3}; H(T;0) (odd-cycle partitions) values [0]
+       T=111111  H(T;x) coefficients (x^0..x^n) = [0, 0, 0, 0, 1]
+       T=111101  H(T;x) coefficients (x^0..x^n) = [0, 2, 0, 0, 1]
+       T=101111  H(T;x) coefficients (x^0..x^n) = [0, 2, 0, 0, 1]
+       T=100111  H(T;x) coefficients (x^0..x^n) = [0, 4, 0, 0, 1]
+n=5 (12 classes): H(T;3)=I(Omega+all loops,2) values [243, 261, 279, 299, 317, 319, 321, 337]
+       I(Omega,-2) = (-1)^n H(T;-1) value range [-13, 1], sign counts {1: 1, -1: 11}; H(T;0) (odd-cycle partitions) values [0, 2, 4, 6]
+n=6 (56 classes): H(T;3)=I(Omega+all loops,2) values [729, 783, 837, 841, 897, 951, 957, 961, 963, 969, 1011, 1023]
+       I(Omega,-2) = (-1)^n H(T;-1) value range [-35, 1], sign counts {1: 2, -1: 54}; H(T;0) (odd-cycle partitions) values [0, 4, 8, 16]
+n=7 (456 classes): H(T;3)=I(Omega+all loops,2) values [2187, 2349, 2511, 2523, 2691, 2697, 2853, 2871, 2883, 2889, 2907, 3033]
+       I(Omega,-2) = (-1)^n H(T;-1) value range [-131, 3], sign counts {1: 6, -1: 450}; H(T;0) (odd-cycle partitions) values [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 34, 48]
+
+==============================================================================
+C. The owner's conjecture: arcs on no HP, and arc-HP-count parities
+==============================================================================
+n=3: classes=2 labeled=2^3 | all arcs on some HP: 1 classes / 2 labeled (0.2500) | strong & some dead arc: 0 classes | all-odd: 0/0 | all-even: 1/2 | all-equal: 1 | min/max #odd arcs: 0/2 of 3 | odd-arc graph components: {1: 1, 3: 1}  [0.0s]
+       H-maximizers: max H = 3, 1 class(es), #odd arcs of each: [0]
+n=4: classes=4 labeled=2^6 | all arcs on some HP: 3 classes / 40 labeled (0.6250) | strong & some dead arc: 0 classes | all-odd: 0/0 | all-even: 0/0 | all-equal: 0 | min/max #odd arcs: 3/5 of 6 | odd-arc graph components: {1: 4}  [0.0s]
+       H-maximizers: max H = 5, 1 class(es), #odd arcs of each: [5]
+n=5: classes=12 labeled=2^10 | all arcs on some HP: 7 classes / 664 labeled (0.6484) | strong & some dead arc: 1 classes | all-odd: 0/0 | all-even: 3/184 | all-equal: 1 | min/max #odd arcs: 0/8 of 10 | odd-arc graph components: {1: 9, 5: 3}  [0.0s]
+       H-maximizers: max H = 15, 2 class(es), #odd arcs of each: [0, 0]
+n=6: classes=56 labeled=2^15 | all arcs on some HP: 44 classes / 26048 labeled (0.7949) | strong & some dead arc: 2 classes | all-odd: 1/240 | all-even: 0/0 | all-equal: 0 | min/max #odd arcs: 5/15 of 15 | odd-arc graph components: {1: 56}  [0.0s]
+       H-maximizers: max H = 45, 2 class(es), #odd arcs of each: [9, 15]
+n=7: classes=456 labeled=2^21 | all arcs on some HP: 412 classes / 1934528 labeled (0.9225) | strong & some dead arc: 9 classes | all-odd: 0/0 | all-even: 28/96608 | all-equal: 1 | min/max #odd arcs: 0/18 of 21 | odd-arc graph components: {1: 365, 2: 14, 3: 28, 4: 12, 5: 9, 7: 28}  [0.0s]
+       H-maximizers: max H = 189, 1 class(es), #odd arcs of each: [0]
+n=8: classes=6880 labeled=2^28 | all arcs on some HP: 6674 classes / 261710080 labeled (0.9749) | strong & some dead arc: 33 classes | all-odd: 0/0 | all-even: 0/0 | all-equal: 0 | min/max #odd arcs: 7/27 of 28 | odd-arc graph components: {1: 6852, 2: 28}  [0.4s]
+       H-maximizers: max H = 661, 6 class(es), #odd arcs of each: [11, 11, 15, 15, 19, 19]
+n=9: classes=191536 labeled=2^36 | all arcs on some HP: 189992 classes / 68219344384 labeled (0.9927) | strong & some dead arc: 167 classes | all-odd: 0/0 | all-even: 899/285894016 | all-equal: 0 | min/max #odd arcs: 0/32 of 36 | odd-arc graph components: {1: 169872, 2: 12892, 3: 4742, 4: 1559, 5: 1099, 6: 290, 7: 183, 9: 899}  [26.8s]
+       H-maximizers: max H = 3357, 1 class(es), #odd arcs of each: [0]
+independent mod-2 bitmask DP reproduces every class #odd-arc histogram, n = 3..9
+all-even classes n=3,5,7,9: [1, 3, 28, 899]
+labeled direct enumeration n=3..6 agrees with Aut-weighted class counts
+dead-arc formula z(T) = sum_{j>=i+2}|C_i||C_j| + sum_i z(T[C_i]) verified for all classes n<=7
+circulants Z_3: 2 Cayley tournaments, all have every arc on an even number of HPs
+circulants Z_5: 4 Cayley tournaments, all have every arc on an even number of HPs
+circulants Z_7: 8 Cayley tournaments, all have every arc on an even number of HPs
+circulants Z_9: 16 Cayley tournaments, all have every arc on an even number of HPs
+circulants Z_11: 32 Cayley tournaments, all have every arc on an even number of HPs
+circulants Z_13: 64 Cayley tournaments, all have every arc on an even number of HPs
+Cayley Z_3xZ_3: 16 Cayley tournaments, all have every arc on an even number of HPs
+QR_7 minus a vertex (N=6): every one of the 15 arcs lies on an odd number of HPs
+QR_11 minus a vertex (N=10): every one of the 45 arcs lies on an odd number of HPs
+QR_19 minus a vertex (N=18): every one of the 153 arcs lies on an odd number of HPs
+   mod-2 DP: PALEY_MINUS_VERTEX q=7 N=6 arcs=15 odd_arcs=15 antipodal_arcs=3 odd_antipodal=3 H_parity=1 all_odd=1  [0.5s]
+   mod-2 DP: PALEY_MINUS_VERTEX q=11 N=10 arcs=45 odd_arcs=45 antipodal_arcs=5 odd_antipodal=5 H_parity=1 all_odd=1  [0.0s]
+   mod-2 DP: PALEY_MINUS_VERTEX q=19 N=18 arcs=153 odd_arcs=153 antipodal_arcs=9 odd_antipodal=9 H_parity=1 all_odd=1  [0.0s]
+   mod-2 DP: PALEY_MINUS_VERTEX q=23 N=22 arcs=231 odd_arcs=231 antipodal_arcs=11 odd_antipodal=11 H_parity=1 all_odd=1  [0.7s]
+   mod-2 DP: PALEY_MINUS_VERTEX q=27 N=26 arcs=325 odd_arcs=325 antipodal_arcs=13 odd_antipodal=13 H_parity=1 all_odd=1  [10.4s]
+   QR11 - v: ALLODD N=10 T=101110001101110001011100101110101111011101101  ... H = 15745
+control: doubled DRT(15): all-even=0; its 15 vertex-deletions: all-odd=0, #odd arcs [39, 45, 49] of 91
+N=14: none of the 128 circulants on Z_15 minus a vertex is all-odd (all-odd count 0; max #odd arcs 73 of 91)
+n=10 search example 110101111011111101011100000001101000100000001 is all-odd (H=3929): all-odd classes at n=10 are not unique
+n=10 random sample (20000 labeled): all arcs on some HP 0.9981, all-odd 0, min/max #odd arcs 9/39, strong 0.9629
+C4 probe n=12 (local search, 40 near-transitive restarts): fewest odd arcs found = 11 (bound n-1 = 11)  [20.1s]
+Conjecture C4 at n=10: minimum #odd arcs = 5 (FAILS: REFUTED), attained by 4 classes
+   all-odd classes at n=10: ['H=3929 |Aut|=1', 'H=15745 |Aut|=5']
+   independent mod-2 census (procgen_selfie_20261001_n10_oddfilter.out) agrees; the 4 classes with 5 odd arcs: ['110011110111110011110001111111111001111111110', '111001110101110111111111111101101111101111101', '111000101101101101111011111101110111111111101', '101011111111011011111011110111110001111111101']
+   (each witness re-verified with exact counts in Python)
+n=10 EXHAUSTIVE (all 9733056 classes; procgen_selfie_20261001_n10_census.out): all arcs on some HP 9711588 classes / 0.997884 of labeled; all-odd 2 classes / 4354560 labeled; min #odd arcs 5; odd-arc graph components {1: 9608457, 2: 118494, 3: 5479, 4: 554, 5: 72}
+
+==============================================================================
+D. Shaved tournaments: HP-core, HP-blocking number beta, parity-break rho, Redei shaving
+==============================================================================
+n=3: beta distribution {1: 1, 2: 1}; beta = Hall bound in every class; beta < two-source bound in 0 class(es) []; Redei-shavable 2/2 (stuck = the all-odd classes: 0); rho distribution {'1': 1, '2': 1}; HP-core size range [2, 3]  [0.0s]
+n=4: beta distribution {1: 1, 2: 3}; beta = Hall bound in every class; beta < two-source bound in 0 class(es) []; Redei-shavable 4/4 (stuck = the all-odd classes: 0); rho distribution {'1': 4}; HP-core size range [3, 6]  [0.0s]
+n=5: beta distribution {1: 3, 2: 5, 3: 3, 4: 1}; beta = Hall bound in every class; beta < two-source bound in 0 class(es) []; Redei-shavable 12/12 (stuck = the all-odd classes: 0); rho distribution {'1': 9, '2': 3}; HP-core size range [4, 10]  [0.0s]
+n=6: beta distribution {1: 7, 2: 22, 3: 22, 4: 5}; beta = Hall bound in every class; beta < two-source bound in 0 class(es) []; Redei-shavable 55/56 (stuck = the all-odd classes: 1); rho distribution {'1': 56}; HP-core size range [5, 15]  [0.0s]
+n=7: beta distribution {1: 22, 2: 117, 3: 196, 4: 103, 5: 15, 6: 3}; beta = Hall bound in every class; beta < two-source bound in 1 class(es) ['111000101111111111101']; Redei-shavable 456/456 (stuck = the all-odd classes: 0); rho distribution {'1': 428, '2': 28}; HP-core size range [6, 21]  [11.1s]
+n=8 (branch and bound): BETA N=8 classes=6880 hall_below_two_source=13 beta_below_hall_bound=0 bb_nodes=5159832 bound_hist: 1:109 2:898 3:2460 4:2489 5:839 6:85  [0.8s]
+n=9 (branch and bound): BETA N=9 classes=191536 hall_below_two_source=180 beta_below_hall_bound=0 bb_nodes=881084968 bound_hist: 1:905 2:10572 3:43826 4:74626 5:49688 6:11447 7:457 8:15  [102.8s]
+
+==============================================================================
+E. OPEN-Q-060: A049313 counts the orientation-parity-preserving Euler graphs
+==============================================================================
+A049313 from the Babai-Cameron/THM-479 Burnside formula, n=1..12: [1, 1, 1, 2, 2, 6, 12, 79, 792, 19576, 886288, 75369960]
+n=1: Euler graphs 1, orientation-parity-preserving 1 = A049313(1) = 1
+n=2: Euler graphs 1, orientation-parity-preserving 1 = A049313(2) = 1
+n=3: Euler graphs 2, orientation-parity-preserving 1 = A049313(3) = 1
+n=4: Euler graphs 3, orientation-parity-preserving 2 = A049313(4) = 2
+n=5: Euler graphs 7, orientation-parity-preserving 2 = A049313(5) = 2
+n=6: Euler graphs 16, orientation-parity-preserving 6 = A049313(6) = 6
+n=7: Euler graphs 54, orientation-parity-preserving 12 = A049313(7) = 12
+n=8: Euler graphs 243, orientation-parity-preserving 79 = A049313(8) = 79
+n=9: Euler graphs 2038, orientation-parity-preserving 792 = A049313(9) = 792
+n=10: Euler graphs 33120, orientation-parity-preserving 19576 = A049313(10) = 19576
+n=2: #switching classes fixed by s = sum over s-invariant Euler graphs F of eps_F(s), checked for 2 permutations (all)
+n=3: #switching classes fixed by s = sum over s-invariant Euler graphs F of eps_F(s), checked for 6 permutations (all)
+n=4: #switching classes fixed by s = sum over s-invariant Euler graphs F of eps_F(s), checked for 24 permutations (all)
+n=5: #switching classes fixed by s = sum over s-invariant Euler graphs F of eps_F(s), checked for 120 permutations (all)
+n=6: #switching classes fixed by s = sum over s-invariant Euler graphs F of eps_F(s), checked for 720 permutations (all)
+n=7: #switching classes fixed by s = sum over s-invariant Euler graphs F of eps_F(s), checked for 15 cycle types
+n=8: #switching classes fixed by s = sum over s-invariant Euler graphs F of eps_F(s), checked for 22 cycle types
+THEOREM (twisted Mallows-Sloane): A049313(n) = number of unlabeled Euler graphs on n vertices whose automorphisms all reverse an even number of edges of a fixed orientation.
+
+total checks: 133060, elapsed 224.0 s
+ALL CHECKS PASSED

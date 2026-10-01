@@ -1,0 +1,143 @@
+==== Part I: C engine ====
+labeled N=3: total=8 cover=2 allodd=0 alleven=2 minodd=0 maxodd=2 bad(cover&on-all)=0 zformula_fail=0 oddcount_parity_fail=0 x0_fail=0 selfieRedei_fail=0
+labeled N=3: sum_L H(switch_L T) != 2N!: 0 ; sum_L (-1)^|L| H != 0: 0
+labeled N=3: tiling reps=2 walsh_degree_fail=0 top_degree_2_attained=2 constant_H_classes=0
+fails=0
+[OK] labeled N=3 counts
+[OK] labeled N=3 switching sums
+[OK] labeled N=3 Walsh degree bound
+labeled N=4: total=64 cover=40 allodd=0 alleven=0 minodd=3 maxodd=5 bad(cover&on-all)=0 zformula_fail=0 oddcount_parity_fail=0 x0_fail=0 selfieRedei_fail=0
+labeled N=4: sum_L H(switch_L T) != 2N!: 0 ; sum_L (-1)^|L| H != 0: 0
+  constant-H switching class N=4 code=2 H=3
+  constant-H switching class N=4 code=16 H=3
+labeled N=4: tiling reps=8 walsh_degree_fail=0 top_degree_2_attained=6 constant_H_classes=2
+fails=0
+[OK] labeled N=4 counts
+[OK] labeled N=4 switching sums
+[OK] labeled N=4 Walsh degree bound
+labeled N=5: total=1024 cover=664 allodd=0 alleven=184 minodd=0 maxodd=8 bad(cover&on-all)=0 zformula_fail=0 oddcount_parity_fail=0 x0_fail=0 selfieRedei_fail=0
+labeled N=5: sum_L H(switch_L T) != 2N!: 0 ; sum_L (-1)^|L| H != 0: 0
+labeled N=5: tiling reps=64 walsh_degree_fail=0 top_degree_2_attained=64 constant_H_classes=0
+fails=0
+[OK] labeled N=5 counts
+[OK] labeled N=5 switching sums
+[OK] labeled N=5 Walsh degree bound
+labeled N=6: total=32768 cover=26048 allodd=240 alleven=0 minodd=5 maxodd=15 bad(cover&on-all)=0 zformula_fail=0 oddcount_parity_fail=0 x0_fail=0 selfieRedei_fail=0
+labeled N=6: sum_L H(switch_L T) != 2N!: 0 ; sum_L (-1)^|L| H != 0: 0
+labeled N=6: tiling reps=1024 walsh_degree_fail=0 top_degree_4_attained=1024 constant_H_classes=0
+fails=0
+[OK] labeled N=6 counts
+[OK] labeled N=6 switching sums
+[OK] labeled N=6 Walsh degree bound
+labeled N=7: total=2097152 cover=1934528 allodd=0 alleven=96608 minodd=0 maxodd=18 bad(cover&on-all)=0 zformula_fail=0 oddcount_parity_fail=0 x0_fail=0 selfieRedei_fail=0(not run)
+labeled N=7: sum_L H(switch_L T) != 2N!: 0 ; sum_L (-1)^|L| H != 0: 0
+labeled N=7: tiling reps=32768 walsh_degree_fail=0 top_degree_4_attained=32768 constant_H_classes=0
+fails=0
+[OK] labeled N=7 counts
+[OK] labeled N=7 switching sums
+[OK] labeled N=7 Walsh degree bound
+[OK] constant-H switching classes only at N=4 (two, H=3)
+REGULAR 101 beta=2
+classes N=3: n=2 cover=1 allodd=0 alleven=1 minodd=0 maxodd=2 strong_with_dead_arc=0 zformula_fail=0 beta!=hall=0 hall<sigma=0 max_beta=2 no_redei_shaving=0
+fails=0
+[OK] classes N=3 census
+[OK] classes N=3 beta = Hall bound
+[OK] classes N=3 Redei shaving to one HP (H odd at every step) fails for exactly 0 class(es)
+[OK] classes N=3: every regular class has beta = N-1 (1 classes)
+classes N=4: n=4 cover=3 allodd=0 alleven=0 minodd=3 maxodd=5 strong_with_dead_arc=0 zformula_fail=0 beta!=hall=0 hall<sigma=0 max_beta=2 no_redei_shaving=0
+fails=0
+[OK] classes N=4 census
+[OK] classes N=4 beta = Hall bound
+[OK] classes N=4 Redei shaving to one HP (H odd at every step) fails for exactly 0 class(es)
+REGULAR 1100110111 beta=4
+classes N=5: n=12 cover=7 allodd=0 alleven=3 minodd=0 maxodd=8 strong_with_dead_arc=1 zformula_fail=0 beta!=hall=0 hall<sigma=0 max_beta=4 no_redei_shaving=0
+fails=0
+[OK] classes N=5 census
+[OK] classes N=5 beta = Hall bound
+[OK] classes N=5 Redei shaving to one HP (H odd at every step) fails for exactly 0 class(es)
+[OK] classes N=5: every regular class has beta = N-1 (1 classes)
+ALLODD 110101101110111 H=45
+  NO_REDEI_SHAVING 110101101110111 H=45
+classes N=6: n=56 cover=44 allodd=1 alleven=0 minodd=5 maxodd=15 strong_with_dead_arc=2 zformula_fail=0 beta!=hall=0 hall<sigma=0 max_beta=4 no_redei_shaving=1
+fails=0
+[OK] classes N=6 census
+[OK] classes N=6 beta = Hall bound
+[OK] classes N=6 Redei shaving to one HP (H odd at every step) fails for exactly 1 class(es)
+[OK] N=6: the class with no Redei shaving is the all-odd one (H=45)
+REGULAR 111000111001110111111 beta=6
+  REGULAR 110010111001110101111 beta=6
+  REGULAR 110100110101101110111 beta=6
+classes N=7: n=456 cover=412 allodd=0 alleven=28 minodd=0 maxodd=18 strong_with_dead_arc=9 zformula_fail=0 beta!=hall=0 hall<sigma=1 max_beta=6 no_redei_shaving=0
+fails=0
+[OK] classes N=7 census
+[OK] classes N=7 beta = Hall bound
+[OK] classes N=7 Redei shaving to one HP (H odd at every step) fails for exactly 0 class(es)
+[OK] classes N=7: every regular class has beta = N-1 (3 classes)
+classes N=8: n=6880 cover=6674 allodd=0 alleven=0 minodd=7 maxodd=27 strong_with_dead_arc=33 zformula_fail=0
+fails=0
+[OK] classes N=8 census
+classes N=9: n=191536 cover=189992 allodd=0 alleven=899 minodd=0 maxodd=32 strong_with_dead_arc=167 zformula_fail=0
+fails=0
+[OK] classes N=9 census
+beta 111000101111111111101: beta=3 hall=3 sigma=4
+fails=0
+[OK] N=7 sigma counterexample: beta = hall = 3 < sigma = 4
+QR_7: one N=7: H=189 #odd arcs=0 of 21, min c=54 max c=54; c values: 54x21
+[OK] QR_7
+QR_7 minus 0: one N=6: H=45 #odd arcs=15 of 15, min c=13 max c=23; c values: 13x12 23x3
+[OK] QR_7 minus 0
+QR_11: one N=11: H=95095 #odd arcs=0 of 55, min c=17290 max c=17290; c values: 17290x55
+[OK] QR_11
+QR_11 minus 0: one N=10: H=15745 #odd arcs=45 of 45, min c=2707 max c=3913; c values: 2707x10 3079x10 3111x10 2721x5 3913x10
+[OK] QR_11 minus 0
+QR_19: par2 N=19: H mod 2 = 1, #odd arcs = 0 of 171
+[OK] QR_19
+QR_19 minus 0: one N=18: H=117266659317 #odd arcs=153 of 153, min c=11804865007 max c=14587032213; c values: 11804865007x18 13018042551x18 13017551967x18 13012358515x18 11807219907x18 13016707863x18 11806069645x9 14585032065x18 14587032213x18
+[OK] QR_19 minus 0
+QR_23 minus 0: par2 N=22: H mod 2 = 1, #odd arcs = 231 of 231
+[OK] QR_23 minus 0
+circulants Z_3: 2 tournaments, all-even: 2
+[OK] circulants Z_3 all-even
+circulants Z_5: 4 tournaments, all-even: 4
+[OK] circulants Z_5 all-even
+circulants Z_7: 8 tournaments, all-even: 8
+[OK] circulants Z_7 all-even
+circulants Z_9: 16 tournaments, all-even: 16
+[OK] circulants Z_9 all-even
+circulants Z_11: 32 tournaments, all-even: 32
+[OK] circulants Z_11 all-even
+circulants Z_13: 64 tournaments, all-even: 64
+[OK] circulants Z_13 all-even
+Cayley Z3xZ3: 16 tournaments, all-even: 16
+[OK] Cayley Z3xZ3 all-even
+one N=10: H=3929 #odd arcs=45 of 45, min c=205 max c=2029; c values: 1153x2 561x2 479x2 69
+[OK] N=10 class 111111001110...
+one N=10: H=15745 #odd arcs=45 of 45, min c=2707 max c=3913; c values: 3111x10 2721x5 3079
+[OK] N=10 class 101010110111...
+one N=10: H=9283 #odd arcs=5 of 45, min c=840 max c=4452; c values: 1706x1 1186x1 1690x1 1
+[OK] N=10 class 110011110111...
+one N=10: H=5513 #odd arcs=5 of 45, min c=376 max c=3328; c values: 687x1 2014x1 887x1 688
+[OK] N=10 class 111001110101...
+one N=10: H=9283 #odd arcs=5 of 45, min c=840 max c=4452; c values: 1348x1 2241x1 2386x1 1
+[OK] N=10 class 111000101101...
+one N=10: H=5513 #odd arcs=5 of 45, min c=376 max c=3328; c values: 861x1 982x1 1062x1 912
+[OK] N=10 class 101011111111...
+==== Part II: Theorem E1 (OPEN-Q-060) ====
+n=1: perms checked=1 identity mismatches=0 cycle-form mismatches=0 Burnside orbits=1 A049313=1 OK
+   direct: Euler graph orbits=1 (A002854=1), untwisted=1 OK
+n=2: perms checked=2 identity mismatches=0 cycle-form mismatches=0 Burnside orbits=1 A049313=1 OK
+   direct: Euler graph orbits=1 (A002854=1), untwisted=1 OK
+n=3: perms checked=6 identity mismatches=0 cycle-form mismatches=0 Burnside orbits=1 A049313=1 OK
+   direct: Euler graph orbits=2 (A002854=2), untwisted=1 OK
+n=4: perms checked=24 identity mismatches=0 cycle-form mismatches=0 Burnside orbits=2 A049313=2 OK
+   direct: Euler graph orbits=3 (A002854=3), untwisted=2 OK
+n=5: perms checked=120 identity mismatches=0 cycle-form mismatches=0 Burnside orbits=2 A049313=2 OK
+   direct: Euler graph orbits=7 (A002854=7), untwisted=2 OK
+n=6: perms checked=11 identity mismatches=0 cycle-form mismatches=0 Burnside orbits=6 A049313=6 OK
+   direct: Euler graph orbits=16 (A002854=16), untwisted=6 OK
+n=7: perms checked=15 identity mismatches=0 cycle-form mismatches=0 Burnside orbits=12 A049313=12 OK
+n=8: cycle-form Burnside untwisted orbits=79 (A049313=79), Euler orbits=243 (A002854=243) OK
+n=9: cycle-form Burnside untwisted orbits=792 (A049313=792), Euler orbits=2038 (A002854=2038) OK
+n=10: cycle-form Burnside untwisted orbits=19576 (A049313=19576), Euler orbits=33120 (A002854=33120) OK
+elapsed 49.2 s
+ALL CHECKS PASSED
