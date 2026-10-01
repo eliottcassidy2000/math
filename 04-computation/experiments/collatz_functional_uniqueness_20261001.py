@@ -452,6 +452,64 @@ for a, D, m in ((5, 8, 4), (5, 12, 6), (5, 16, 7), (7, 12, 4), (7, 16, 5)):
     if a == 7:
         check(sizes[0] >= bare, f"G: a = 7, depth {D}: the non-residue coset {{3,5,6}} mod 7 collapses to one bare class (no backward injectivity)")
 
+# ---------------- G2. general prime multiplier: Theorem R_a ----------------
+print("\n== G2. n/2, an+1 for a prime: backward separation iff 2 is a primitive root mod a^2 ==")
+
+
+def is_prim_root_sq(a):
+    m = a * a
+    phi = a * (a - 1)
+    o = 1
+    x = 2 % m
+    while x != 1:
+        x = x * 2 % m
+        o += 1
+    return o == phi
+
+
+def a_tree_maker(a):
+    @lru_cache(maxsize=None)
+    def Ea(x, d):
+        if d == 0:
+            return LEAF
+        ch = [Ea(2 * x, d - 1)]
+        if x % a == 1:
+            ch.append(Oa((x - 1) // a, d - 1))
+        return cid(ch)
+
+    @lru_cache(maxsize=None)
+    def Oa(x, d):
+        if d == 0:
+            return LEAF
+        return cid([Ea(2 * x, d - 1)])
+    return Ea
+
+
+for a, m in ((5, 4), (11, 3), (13, 3)):
+    Ea = a_tree_maker(a)
+    D = (a + 1) + (2 * a - 1) * (m - 2)       # proved bound: s(D) >= 2 + floor((D-a-1)/(2a-1)) = m
+    labels = [u for u in range(1, a ** m) if u % a == 1]
+    ids = defaultdict(list)
+    for u in labels:
+        ids[Ea(u, D)].append(u)
+    distinct = all(len(g) == 1 for g in ids.values())
+    print(f"  a={a}: 2 primitive root mod a^2: {is_prim_root_sq(a)}; depth {D} = (a+1)+(2a-1)(m-2): the {len(labels)} labels u = 1 mod {a} below {a}^{m} -> {len(ids)} classes")
+    check(is_prim_root_sq(a) and distinct, f"G2: a = {a}: depth-{D} trees A(u) separate the labels u = 1 mod {a} modulo {a}^{m} (the proved bound)")
+
+for a in (7, 17, 23, 31):
+    o2 = 1
+    x = 2 % a
+    while x != 1:
+        x = x * 2 % a
+        o2 += 1
+    H = {pow(2, k, a) for k in range(o2)}
+    bare_units = [x for x in range(1, a) if x not in H]
+    Ea = a_tree_maker(a)
+    D = 3 * a
+    ids = {Ea(x, D) for x in bare_units}
+    print(f"  a={a}: ord_a(2) = {o2} < {a-1}; the {len(bare_units)} unit residues outside <2> all have the bare tree: {len(ids) == 1 and next(iter(ids)) == Ea(a, D)}")
+    check(len(ids) == 1 and next(iter(ids)) == Ea(a, D), f"G2: a = {a}: backward trees do not separate units (non-<2> coset is bare)")
+
 # ---------------- H. the shortcut graph x/2, (3x+1)/2 ----------------
 print("\n== H. shortcut graph: preimages 2n and (2n-1)/3 (n = 2 mod 3); one vertex type, labels in Z_3 ==")
 

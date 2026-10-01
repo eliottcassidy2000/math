@@ -11,12 +11,14 @@ the patterns in tournament structure. consider proving collatz's uniqueness
 amongst infinite directed graphs with outdegree = 1 for all vertices".
 
 **Status: PROVED (elementary) for Lemmas 1–3, Theorem R and Corollaries
-R1–R3, Proposition EH, Proposition M, Proposition L, Theorem C and
+R1–R3, Theorem R_a (prime multipliers: separation iff 2 is a primitive root
+mod `a^2`), Proposition EH, Proposition M, Proposition L, Theorem C and
 Proposition B; FINITE-EXACT for every table (separation exponents to depth
 26, integer collision checks for `n ≤ 6000`, the near-balance law for
-`w < 2·10^5`, residue graphs for `M ≤ 1500`, the census, the multipliers 5
-and 7, the shortcut graph); CITED for Bernstein–Lagarias, Laarhoven–de Weger
-and Wirsching; typed ANALOGY / NUMEROLOGY where marked; Collatz OPEN.
+`w < 2·10^5`, residue graphs for `M ≤ 1500`, the census, the multipliers
+`5, 11, 13` and `7, 17, 23, 31`, the shortcut graph); CITED for
+Bernstein–Lagarias, Laarhoven–de Weger and Wirsching; typed ANALOGY /
+NUMEROLOGY where marked; Collatz OPEN.
 Independent audit: see §13.** Script
 `04-computation/experiments/collatz_functional_uniqueness_20261001.py`
 (output `.out` beside it, ends `ALL CHECKS PASSED`). Canon: THM-4523
@@ -83,6 +85,11 @@ fibre at `w` stays balanced to depth `d` with `2v - 1 ≤ d ≤ 5v - 6`, where
 counterexample is forced to balance its fibres, while the Collatz graph can
 never balance one.
 
+The primes enter exactly here. For `n/2, an + 1` with `a` an odd prime, the
+backward trees identify the vertices iff 2 is a primitive root modulo `a^2`
+(Theorem R_a). Remembering the past is Artin's question, refined by
+Wieferich: yes for `3, 5, 11, 13, ...`, no for `7, 17, 23, 31, ...`.
+
 The forward side is the mirror image. The 2-adic structure is *universal*:
 every map `n/2, (an+b)/2` is the same shift, the same De Bruijn graph. So the
 integers are the diagonal on which a universal forward structure and a rigid
@@ -92,7 +99,7 @@ backward structure name the same point.
 
 | reading | statement | status |
 |---|---|---|
-| labelling | `Aut(N, T) = 1`; the backward tree of `n` (with `3 ∤ n`) determines `n` | **PROVED** (Theorem R) |
+| labelling | `Aut(N, T) = 1`; the backward tree of `n` (with `3 ∤ n`) determines `n`; for `n/2, an+1` (`a` prime) backward trees identify vertices iff 2 is a primitive root mod `a^2` | **PROVED** (Theorems R, R_a) |
 | the map | `(N, T_{3,c}) ≅ (N, T_{3,c'})` iff `c = c'`; on `Z` iff `c' = ±c` (`gcd(cc', 6) = 1`) | **PROVED** (Corollary R2) |
 | finite places | every periodic `T`-invariant function is constant; `Gamma_M` connected for all `M` | **PROVED** (Proposition M); the same for `3n-1`, which has `≥ 3` components |
 | the component | `(N, T) ≅ Gamma_1`, the unique connected Collatz-typed graph with a branch three-cycle | **equivalent to Collatz** (Theorem C); cycle half first-order, divergence half not (Proposition L) |
@@ -250,6 +257,59 @@ FINITE-EXACT (`.out`, section H): at depths `10, 14, 18, 22` every collision
 is 3-adically close to orders `3, 5, 7, 9`. The full proof is written out only
 for the non-shortcut graph.
 
+**Theorem R_a (prime multipliers: rigidity is Artin's question at `a^2`).**
+Let `a` be an odd prime and `T_a(n) = n/2` (`n` even), `an + 1` (`n` odd) on
+`N`. Labels now live in `Z_a`, with `e(x)` having the children `e(2x)` and, when
+`x ≡ 1 (mod a)`, `o((x-1)/a)`. The backward trees of `T_a` separate the vertices
+prime to `a` **iff 2 is a primitive root modulo `a^2`**. In that case
+`Aut(N, T_a) = 1` and `s_a(D) ≥ 2 + ⌊(D - a - 1)/(2a - 1)⌋`; for `a = 3` this is
+Lemma 3 and Theorem R.
+
+*Proof (if).* Let `κ(x)` be the least `k ≥ 0` with `2^k x ≡ 1 (mod a)`.
+
+* **Shapes.** `e(x) = node^κ(x)[A(2^κ(x) x)]`, and `o(x) = e(x)` unless
+  `κ(x) = 0`, in which case `o(x) = node^(a-1)[A(2^(a-1) x)]`. So the
+  first-branching depth `d` and the `A`-label `u` return `x = 2^(-d) u`.
+* **Branch vertices.** At a branch vertex `u` the continuation is
+  `node^(a-2)[A(2^(a-1) u)]`. The side `o(z)`, with `z = (u-1)/a`, first
+  branches at a depth in `{1, ..., a-1}`, or is bare when `a | z`. The two can
+  be confused only when `κ(z) = a - 2`, i.e. `z ≡ 2 (mod a)`.
+* **Crossed match.** It gives `2au ≡ u' - 1` and `u - 1 ≡ 2au' (mod a^(t+1))`.
+  Their sum is `(2a + 1)(u - u') ≡ 0`, so `u ≡ u'`.
+* **Bare side.** After a bare side, the next side down the spine is
+  `z_1 = 2^(a-1) z + W`, where `W = (2^(a-1) - 1)/a` is the Fermat quotient.
+  `W ≢ 0 (mod a)` exactly because 2 is a primitive root mod `a^2`, so that
+  side is not bare.
+* **Recursion.** Hence `s(D) ≥ 1 + s(D - 2a + 1)`, with the root types
+  (`z mod a`) visible at depth `a + 1`.
+* **Multiples of `a`.** For `n = 2^j m` with `a | m` odd, the vertex
+  `w = am + 1 ≡ 1 (mod a)` is fixed. Its preimages are `2w` (fixed) and `m`.
+
+*Proof (only if).*
+
+* If 2 is not a primitive root mod `a`, every unit outside `<2>` has a spine
+  that never branches. Its tree is the bare path, the same as for multiples
+  of `a`.
+* If 2 is a primitive root mod `a` but not mod `a^2` (a Wieferich `a` with
+  that property; none is known), then `W ≡ 0`. A spine whose first side is
+  bare then has only bare sides, and every label `≡ 1 (mod a^2)` has the same
+  comb-shaped tree. ∎
+
+FINITE-EXACT (`.out`, section G2).
+
+* At the depths `24, 33, 39` given by the bound, the trees `A(u)` separate
+  every label `u ≡ 1 (mod a)` below `5^4`, `11^3` and `13^3` respectively.
+* For `a = 7, 17, 23, 31` the `3, 8, 11, 25` unit residues outside `<2>` all
+  carry the bare tree.
+
+The Eckmann–Hilton point of `T_a` is `-1/(2a - 1)`, again 2-adically odd.
+**Reading.** Whether a Collatz-like graph `n/2, an + 1` remembers its labels
+from its past alone is Artin's primitive-root question for 2 at `a`, refined
+by the Wieferich condition. The answer is yes for `a = 3, 5, 11, 13, 19, 29,
+37, 53, 59, 61, ...`, and no for `a = 7, 17, 23, 31, ...`. There are
+infinitely many yes-primes under GRH (Hooley), but this is not known
+unconditionally.
+
 ## 5. The Eckmann–Hilton point `-1/5` (PROVED + FINITE-EXACT)
 
 **Proposition EH.** Let `μ_2(x) = 2x` and `μ_3(x) = (x-1)/3` be the two preimage
@@ -323,7 +383,8 @@ inherit that rigidity, so they cannot be found by symmetry.
 * **Forward is universal.** For every odd `a` and `b` the map `n/2, (an+b)/2`
   on `Z_2` is conjugate to the one-sided 2-shift by the parity-vector map
   (CITED for `3x+1`; the proof only uses odd multipliers), and its graph
-  modulo `2^k` is the binary De Bruijn graph (Laarhoven–de Weger). The
+  modulo `2^k` is the binary De Bruijn graph (Laarhoven–de Weger, proved
+  there for `3x+1`; the same argument applies to every odd `a`, `b`). The
   2-adic, forward-in-time structure cannot tell `3n+1` from `5n+1` or `3n-1`.
 * **Backward is rigid.** The 3-adic, backward-in-time structure determines
   every vertex prime to 3 (Theorem R).
@@ -487,21 +548,22 @@ by cycles).
 
 ## 11. Primes and tournaments (typed)
 
-* **Artin (REAL mechanism, general case OPEN).** Backward rigidity needs every
-  unit-labelled spine `x, 2x, 4x, ...` to branch, i.e. `2` must generate
-  `(Z/a)^×` for the multiplier `a`.
-  * `a = 3`: proved above.
-  * `a = 5`: collisions are 5-adically close to orders `1, 2, 3` at depths
-    `8, 12, 16` (FINITE-EXACT, consistent with injectivity; no proof
-    attempted).
-  * `a = 7`: `<2> = {1, 2, 4}` has index 2. Every label `≡ 3, 5, 6 (mod 7)`
-    has a bare backward tree, and half of all unit labels (`1029` of `2058`
-    modulo `7^4`) collapse into one class. So `7n+1` is not backward-rigid.
-    Whether it is rigid with forward data is not decided here.
+* **Artin and Wieferich (REAL, PROVED: Theorem R_a).** The backward trees of
+  `n/2, an+1` (`a` an odd prime) separate vertices iff 2 is a primitive root
+  mod `a^2`.
+  * `a = 7`: `<2> = {1, 2, 4}` has index 2. Half of all unit labels (`1029`
+    of `2058` modulo `7^4`) collapse into the bare class, so `7n+1` is not
+    backward-rigid. Whether it is rigid using forward data is not decided
+    here.
 
   So which multipliers have graphs that remember their labels from the past
-  alone is governed by the primitive-root pattern of 2, the subject of
-  Artin's conjecture (the repo's S18 audit).
+  alone is the primitive-root pattern of 2, the subject of Artin's
+  conjecture (the repo's S18 audit), refined by Wieferich primes. For `a = 3` the mechanism is
+  that 2 topologically generates `Z_3^×`: the ×2-orbit of every 3-adic unit
+  is dense, so every spine branches in every phase. This is the 3-adic
+  counterpart of the orbit density behind Furstenberg's ×2×3 theorem on the
+  circle. The analogy is typed and the mechanisms differ: non-lacunarity on
+  `R/Z` there, a primitive root and the carry's fixed point `-1/5` here.
 * **Denominators (NUMEROLOGY).** The Eckmann–Hilton point of `n/2, an+b` has
   denominator `2a - 1` (5, 9, 13 for `a = 3, 5, 7`). That this 5 equals
   THM-4522's mod-5 obstruction (5 is both `2·3 - 1` and the least prime not
@@ -550,7 +612,7 @@ kind; the rigidity here is not.
 | Proposition L (first-order typing) | PROVED (compactness) |
 | Lemma C, Theorem C (categoricity; Collatz `⟺ (N,T) ≅ Gamma_1`) | PROVED |
 | Proposition B (cycle balance) | PROVED + FINITE-EXACT |
-| multipliers 5 and 7; Artin reading | FINITE-EXACT; REAL mechanism; general `a` OPEN |
+| Theorem R_a (prime `a`: backward separation iff 2 is a primitive root mod `a^2`) | PROVED + FINITE-EXACT (`a = 5, 11, 13`; failures `7, 17, 23, 31`) |
 | LRC dictionary; tournaments; the two 5s | ANALOGY / NUMEROLOGY |
 | Collatz | OPEN |
 
@@ -559,9 +621,11 @@ below when it lands.
 
 ## 14. Directions
 
-* **D57.** Backward rigidity for `n/2, an+1` when 2 is a primitive root modulo
-  `a^2` (`a = 5, 11, 13, 19, ...`): the analogue of Lemma 3, with types
-  indexed by `a^2`; and whole-graph rigidity for `a = 7` from forward data.
+* **D57.** Whole-graph rigidity of `n/2, an+1` when 2 is *not* a primitive
+  root mod `a^2` (`a = 7, 17, 23, 31, ...`), using forward data: the bare unit
+  spines must be pinned by their images. Also prime-power and composite
+  multipliers, where `(Z/a)^×` is not cyclic and backward separation
+  necessarily fails.
 * **D58.** The exact separation rate. The steps `(4, 3, 3)` suggest
   `s(D) = ⌊(3D + c)/10⌋` from a worst-case cycle of root types. The balance
   depth is observed near `3v - 1`.
