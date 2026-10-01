@@ -1,0 +1,66 @@
+== A. parity codes of the integer cycles on Z ==
+  T  (n/2, 3n+1)
+    cycle from    1: length  3, word 100, 2-adic numerators mod 7: [3, 5, 6], real numerators: [1, 2, 4]
+    cycle from    0: length  1, word 0, 2-adic numerators mod 1: [0], real numerators: [0]
+    cycle from   -1: length  2, word 10, 2-adic numerators mod 3: [1, 2], real numerators: [1, 2]
+    cycle from   -5: length  5, word 10100, 2-adic numerators mod 31: [11, 13, 21, 22, 26], real numerators: [5, 9, 10, 18, 20]
+    cycle from  -17: length 18, word 101010100101010000, 2-adic numerators mod 262143: 18 elements, real numerators: 18 elements
+  T1 (n/2,(3n+1)/2)
+    cycle from    1: length  2, word 10, 2-adic numerators mod 3: [1, 2], real numerators: [1, 2]
+    cycle from    0: length  1, word 0, 2-adic numerators mod 1: [0], real numerators: [0]
+    cycle from   -1: length  1, word 1, 2-adic numerators mod 1: [0], real numerators: [0]
+    cycle from   -5: length  3, word 110, 2-adic numerators mod 7: [1, 2, 4], real numerators: [3, 5, 6]
+    cycle from  -17: length 11, word 11110111000, 2-adic numerators mod 2047: 11 elements, real numerators: 11 elements
+PASS A: for n = 1, 4, 2 the first 30 parity bits equal the 2-adic expansion of -c/(2^L-1) = -1/7, -4/7, -2/7
+
+== B. L = 3: Paley QR/NQR and the two sheets ==
+  trivial cycle [1, 4, 2] (T), word [1, 0, 0]: real numerators [1, 2, 4], 2-adic numerators [3, 5, 6]
+  minus-sheet cycle [-5, -7, -10] (T1), word [1, 1, 0]: real numerators [3, 5, 6], 2-adic numerators [1, 2, 4]
+PASS B: trivial cycle: real code = QR_7 = {1,2,4} (Paley connection set), 2-adic code = NQR_7
+PASS B: minus-sheet 3-cycle {-5,-7,-10}: real code = NQR_7, 2-adic code = QR_7
+PASS B: the complement of the trivial word (011) is the minus-sheet word up to rotation, real code NQR_7
+PASS B: under T1 the word 100 is the rational cycle {1/5, 4/5, 2/5} (clock 2^3 - 3 = 5); under T it is {1,4,2} (clock 2^2 - 3 = 1)
+PASS B: on {1,4,2} the Collatz map acts as x -> 4x (mod 7) = x/2, a Paley automorphism (4 is a square)
+
+== C. one 2-coset = QR_p for a Mersenne prime p = 2^L - 1 only when L = 3 ==
+  L =  2, p = 3: |<2>| = 2, |QR_p| = 1, equal: False
+  L =  3, p = 7: |<2>| = 3, |QR_p| = 3, equal: True
+  L =  5, p = 31: |<2>| = 5, |QR_p| = 15, equal: False
+  L =  7, p = 127: |<2>| = 7, |QR_p| = 63, equal: False
+  L = 13, p = 8191: |<2>| = 13, |QR_p| = 4095, equal: False
+  L = 17, p = 131071: |<2>| = 17, |QR_p| = 65535, equal: False
+  L = 19, p = 524287: |<2>| = 19, |QR_p| = 262143, equal: False
+  L = 31, p = 2147483647: |<2>| = 31, |QR_p| = 1073741823, equal: False
+PASS C: <2> = QR_p exactly for L = 3 among the Mersenne primes with L <= 31 (equation 2^(L-1) - 1 = L)
+
+== D. Fano / Singer ==
+PASS D: {1,2,4} is a (7,3,1) difference set (every nonzero residue once)
+  powers of alpha: [1, 2, 4, 3, 6, 7, 5]  exponents with trace 0: [1, 2, 4]
+PASS D: {1,2,4} = exponents of alpha^i with trace 0 (x^3+x+1), i.e. the conjugates of alpha; a Fano line
+PASS D: the 7 translates of {1,2,4} are the lines of a Fano plane (pairwise meeting in one point)
+
+== E. Aut(Paley_7) and what the Collatz cycle keeps ==
+  affine automorphisms: 21; multipliers used: [1, 2, 4]
+PASS E: |Aut| = 21 (x -> ax+b, a in QR); the stabiliser of the connection set QR_7 is the multiplier group <x2> of order 3
+PASS E: no non-trivial translate of QR_7 is a 2-coset, so none is the code of a cycle (translations have no Collatz counterpart)
+PASS E: x -> -x reverses every arc (anti-automorphism), i.e. swaps QR and NQR: the sheet/place swap of B
+
+== F. lonely runner readings ==
+  lon({1,2}) = 1/3 at t in ['1/3', '2/3']
+PASS F: speeds {1,2} (the T1 trivial cycle) are a tight instance (lon = 1/3 = 1/(k+1)), lonely exactly at t = 1/3, 2/3 = 0.(01)_2, 0.(10)_2, its own real parity code
+  lon({1,2,4}) = 1/3 at t in ['1/3', '2/3']; positions at t = 1/7: [1, 2, 4]/7, at t = 3/7: [3, 5, 6]/7
+PASS F: speeds {1,2,4} have lon = 1/3 (not tight for k = 3); at t = 1/7 they sit on QR_7/7, at t = 3/7 on NQR_7/7
+
+== G. the owner's F ==
+  preimages under the owner's F (inputs < 200, odd-position pattern extended): {0: [0, 1], 1: [5], 2: [3, 9], 3: [2, 13], 4: [7, 17], 9: [6, 15, 37], 15: [10, 19, 61]}
+PASS G: the 2-cycle {2,3} of F has two preimages at each vertex (2 <- 3, 9; 3 <- 2, 13), from the given data alone
+PASS G: 9 has three preimages 6, 15, 37 (even rule, K_8 = 9, K_19 = 9 by the odd pattern)
+PASS G: the integer Collatz 2-cycles ({1,2} for T1, {-1,-2} for T) have in-degrees (1,2); no Collatz map has in-degree 3
+PASS G: F+(2N) = 3N, F+(2N-1) = N is T1 in labels n+1 (3n+1 sheet); F-(2N) = 3N, F-(2N-1) = N-1 is 3n-1 in labels n-1
+  multiset of odd-label values of F+ and F- together (N <= 49): [0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6] ...
+PASS G: together the two completions take every positive integer twice and 0 once: the owner's 'two copies plus one 0'
+PASS G: folding Z about -1/2 (z -> z or -1-z) sends T1 to the two-branch relation y -> floor(y/2), ceil(3y/2)
+  first K values and their reading: K_1..K_3 = [0, 2, 1] = exponents of {2^0, 2^2, 2^1} = {1,4,2}; K_2..K_5 = [2, 1, 4, 2] = the cycle 2 -> 1 -> 4 -> 2
+  K agrees with F+ at N = [2, 4], with F- at N = [1]
+
+ALL CHECKS PASSED

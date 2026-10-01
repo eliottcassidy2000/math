@@ -620,8 +620,12 @@ by cycles).
   Paley heptagon (HYP-3805), whose automorphism group has order 21: maximal
   symmetry. The Collatz graph has trivial automorphism group: maximal
   asymmetry. The set `{1, 2, 4}` is both the Paley connection set and the
-  trivial Collatz cycle; that is NUMEROLOGY, since both are the powers of 2
-  below 7. The only intrinsic binary relation here is the fibre pair
+  trivial Collatz cycle. This note first typed that as NUMEROLOGY; the label
+  is **WITHDRAWN**. The coincidence is structural: the trivial cycle's parity
+  word `100` has real code `QR_7` and 2-adic code `NQR_7`, and the Paley arc
+  reversal is the sheet swap (nineteenth note,
+  `collatz_paley_bridge_20261001.md`, Proposition 2). The only intrinsic
+  binary relation on the graph itself is the fibre pair
   (even child, odd child), oriented by parity. It is not a tournament, so per
   AGENTS.md none is forced.
 
@@ -662,7 +666,8 @@ inputs; the rigidity here does not (eighteenth note, Theorem B).
 | Lemma C, Theorem C (local characterisation of `Gamma_1`; the equivalence with Collatz is immediate) | PROVED + AUDITED |
 | Proposition B (cycle balance) | PROVED + FINITE-EXACT |
 | Theorem R_a (prime `a`: backward separation iff 2 is a primitive root mod `a^2`) | PROVED + AUDITED + FINITE-EXACT (`a = 5, 11, 13`; failures `7, 17, 23, 31`); whole-graph rigidity for non-Wieferich `a` (e.g. 7): audit SKETCH |
-| LRC dictionary; tournaments; the two 5s | ANALOGY / NUMEROLOGY |
+| LRC dictionary; the two 5s | ANALOGY / NUMEROLOGY |
+| `{1,2,4}` = Paley set = trivial cycle | STRUCTURAL (NUMEROLOGY label withdrawn; nineteenth note, Proposition 2) |
 | Collatz | OPEN |
 
 **Independent audit (2026-10-01, blind re-derivation by a subagent, own code;
