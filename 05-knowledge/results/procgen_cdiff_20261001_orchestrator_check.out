@@ -1,0 +1,32 @@
+==== A ====
+[OK] A: over odd A in Z (|A| <= 12050), every |d| <= 1500 is a drop exactly 2 + N(6d+1) times (bad: [])
+[OK] A: over odd A > 0: d < 0 once, d >= 0 exactly 1 + N(6d+1) times (|d| <= 1500)
+==== B ====
+    delta_1 (orchestrator, v <= 64) = 0.69617490344013259529   lane 0.6961749034401325952912   |diff| = 2.73e-23
+    delta_2 (orchestrator, v <= 64) = 0.26623803667773837389   lane 0.266238036677738373892   |diff| = 2.76e-23
+    delta_3 (orchestrator, v <= 64) = 0.035389558839315882426   lane 0.03538955883931588242586   |diff| = 4.26e-24
+[OK] B: exact densities delta_1..3 agree with the lane to < 1e-17 (v <= 64, tail < 2^-63); 10 shared primes [5, 11, 13, 19, 23, 29, 37, 47, 71, 431]; 3072 valuation states
+[OK] B: sieve on [0, 2e7]: delta_1..3 = [0.6961746, 0.2662387, 0.035389] (exact [0.6961749, 0.266238, 0.0353896])
+==== C ====
+[OK] C: m(d_k) = k+1 exactly for the lane's 12 record values (exact big-integer divisibility)
+[OK] C: first d with m(d) >= 2..6 on the sieve range: [2, 24, 314, 7854, 479104]
+[OK] C: max m(d) on [0, 20000000] = 6 lies in [4.46, 14.42]
+==== D ====
+[OK] D: sum_{N <= 4^n} K_N = (3*16^n - 4^n - 2)/6 for n <= 9
+[OK] D: sum_{A odd < 2^n} K(A) = -J_{n-1} (Jacobsthal) for n <= 22
+==== E ====
+[OK] E: k-step identity (2^p - 3^k) Syr^k(A) = 2*3^k*D + c(v) on 3000 random (A, k)
+[OK] E: every D in [-3000, -1] is the 2-step drop of -16D-5 and of -16D-7
+[OK] E: mu_2(D) = 2 + [5 | D] for D in [-2000, -1]
+[OK] E: P(mu_2 = 0) on [0, 300000] = 0.406685 (lane: 0.4066556)
+[OK] E: P(mu_3 = 0) on [0, 100000] = 0.099859 (lane: 0.1000254)
+==== F ====
+[OK] F: (K(A), K(S(A))) injective on odd A < 10^6 for 3x+1
+[OK] F: (K(A), K(S(A))) injective on odd A < 10^6 for 3x-1
+==== G ====
+[OK] G: hits all d >= 0 iff q = 2^a - 1, all d < 0 iff q = 2^a + 1 (odd q <= 33); all of Z only for q = [3]
+[OK] G: 5x+1 misses 0.5926 of d in [0, 20000] (lane: 0.5927)
+==== H ====
+[OK] H: S = (6K+1)(2^v-3)^{-1} mod 3^k and Syr^k(A) = 2^{-p} c(v) mod 3^k (4000 random cases, k <= 5)
+elapsed 15 s
+ALL CHECKS PASSED

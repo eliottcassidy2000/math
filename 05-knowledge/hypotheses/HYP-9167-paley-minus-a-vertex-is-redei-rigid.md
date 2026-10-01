@@ -46,3 +46,14 @@ Exhaustive data reach only `N = 10`:
 - `N = 10` has exactly two classes: `QR_11 - v` and one rigid class with `H = 3929`.
 
 So (b) has thin evidence on the non-existence side at `N = 1 (mod 4)`.
+
+**UPDATE 2026-10-01 (THM-4529, petersen lane; orchestrator-audited): the first open existence case N = 14 is settled.**
+
+`QR_127` restricted to `mu_14 = +-<2> = {+-1, +-2, +-4, +-8, +-16, +-32, +-64}` (x -> y iff y - x is a nonzero square mod 127) is a 14-vertex tournament.
+- Every one of its 91 arcs lies on an odd number of Hamiltonian paths (H = 24540117).
+- |Aut| = 7.
+- This was verified by the lane's three engines and independently by the orchestrator.
+
+It belongs to the anti-circulant family, which also contains every `QR_q - 0`, and in every member of that family the antipodal arcs are odd (THM-4529, Theorem 6.1).
+
+The existence half of (b) is now reduced to HYP-9170 (P1). Known existence cases: N = 6, 10, 14, 18, 22, 26. The non-existence side (N = 13, and N = 1 mod 4 in general) remains open.

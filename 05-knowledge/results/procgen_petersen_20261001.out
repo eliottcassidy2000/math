@@ -1,0 +1,235 @@
+
+====================================================================================================
+A. Delta-Y families
+====================================================================================================
+K6     family size 7, edge counts [15], Delta-Y descendants of the root 6, Y-Delta moves creating multi-edges 0, networkx class count 7
+K7     family size 20, edge counts [21], Delta-Y descendants of the root 14, Y-Delta moves creating multi-edges 0, networkx class count 20
+K3311  family size 58, edge counts [22], Delta-Y descendants of the root 26, Y-Delta moves creating multi-edges 0, networkx class count 58
+
+Petersen family invariants:
+  name     n degrees                   tri  girth  bip |Aut|   HP_u   HC
+  K6       6 555555                     20      3 False   720    360   60
+  K331     7 6444444                     9      3 False    72    324   36
+  P7       7 5554443                    10      3 False    36    324   36
+  K44-e    8 44444433                    0      4 True    72    324   36
+  P8       8 54444333                    4      3 False     8    264   20
+  P9       9 444333333                   1      3 False    12    192    8
+  P10     10 3333333333                  0      5 False   120    120    0
+
+Delta-Y Hasse arrows: [('K331', 'P8'), ('K6', 'P7'), ('P7', 'K44-e'), ('P7', 'P8'), ('P8', 'P9'), ('P9', 'P10')]
+
+Heawood family (n, degrees, |Aut|, Delta-Y descendant of K7):
+   7 6666666                                       5040 True
+   8 66665553                                       144 True
+   9 555555444                                       48 False
+   9 655555533                                       72 True
+   9 665555433                                       16 True
+  10 5544444444                                      16 False
+  10 5554444443                                       6 False
+  10 5555544333                                       8 True
+  10 5555553333                                      48 True
+  10 6555444333                                       6 True
+  11 44444444433                                     12 False
+  11 54444444333                                      4 False
+  11 55444443333                                      4 True
+  11 55544433333                                      6 True
+  11 64444443333                                     24 True
+  12 444444333333                                    12 True
+  12 444444333333                                    12 False
+  12 544443333333                                     8 True
+  13 4443333333333                                   24 True
+  14 33333333333333                                 336 True  <- Heawood graph
+
+====================================================================================================
+B. Paley / Fano coordinates
+====================================================================================================
+Heawood graph = Delta-Y of K7 along the 7 translates of {1,2,4} = split(P7): OK
+Delta-Y along Fano line sets (one per GL(3,2)-orbit):
+   |S| = 0, orbit size  1, rep () -> n = 7, degrees 6666666
+   |S| = 1, orbit size  7, rep (0,) -> n = 8, degrees 66665553
+   |S| = 2, orbit size 21, rep (0, 1) -> n = 9, degrees 665555433
+   |S| = 3, orbit size  7, rep (0, 1, 5) -> n = 10, degrees 5555553333
+   |S| = 3, orbit size 28, rep (0, 1, 2) -> n = 10, degrees 6555444333
+   |S| = 4, orbit size  7, rep (0, 1, 2, 4) -> n = 11, degrees 64444443333
+   |S| = 4, orbit size 28, rep (0, 1, 2, 3) -> n = 11, degrees 55544433333
+   |S| = 5, orbit size 21, rep (0, 1, 2, 3, 4) -> n = 12, degrees 544443333333
+   |S| = 6, orbit size  7, rep (0, 1, 2, 3, 4, 5) -> n = 13, degrees 4443333333333
+   |S| = 7, orbit size  1, rep (0, 1, 2, 3, 4, 5, 6) -> n = 14, degrees 33333333333333  (Heawood)
+Pasch lines (avoiding 0): t = [0, 1, 2, 4] ; lines through 0: t = [3, 5, 6]
+   Delta-Y on 0 Pasch lines -> {'K6'}
+   Delta-Y on 1 Pasch lines -> {'P7'}
+   Delta-Y on 2 Pasch lines -> {'P8'}
+   Delta-Y on 3 Pasch lines -> {'P9'}
+   Delta-Y on 4 Pasch lines -> {'P10'}
+   matching left of K6: [(1, 3), (2, 6), (4, 5)] = {u, 3u : u in D}
+K44-e = Delta-Y on D and -D (missing edge = the two centres); K331 = Y-Delta at point 2 of Delta-Y_{L0,L1}: OK
+Petersen = Heawood - point (suppressed) = Delta-Y_{Pasch}(K7) - 0: OK
+vertex-deletion shadows of the Heawood family in the Petersen family: {'K6': 12, 'P7': 20, 'P8': 30, 'K44-e': 4, 'P9': 20, 'P10': 19}
+vertex-deletion shadows of the K3311 family in the Petersen family: {'K331': 9, 'P8': 18, 'P9': 23, 'P10': 6}
+Aut orders, Petersen family: {'K6': 720, 'P7': 36, 'P8': 8, 'K44-e': 72, 'P9': 12, 'K331': 72, 'P10': 120}
+Aut orders, Heawood family: [4, 4, 6, 6, 6, 8, 8, 12, 12, 12, 16, 16, 24, 24, 48, 48, 72, 144, 336, 5040]
+Aut(P7) = 21 affine maps; Stab(0) = Stab(D) = Aut(P7 - 0) = {x, 2x, 4x}: OK
+P7 - 0: H = 45, arc classes: {'D-internal': [13, 13, 13], 'u->3u (matching)': [13, 13, 13], 'u->5u': [13, 13, 13], 'antipodal -u->u': [23, 23, 23], '(-D)-internal': [13, 13, 13]}
+
+====================================================================================================
+C. Fano colourings of the Paley-coordinate Petersen graph
+====================================================================================================
+Fano colourings: 28560 lines-used histogram [(4, 3360), (5, 10080), (6, 10080), (7, 5040)]
+Frobenius-equivariant colourings: 24 ; using 4 lines: 6 ; their line sets: {((0, 1, 3), (0, 2, 6), (0, 4, 5), (1, 2, 4))}
+
+====================================================================================================
+D. Arc-HP parity over all orientations of the Petersen family
+====================================================================================================
+  member     H odd  all-odd  all-even   even,H odd    sum H
+  K6         32768      240         0            0   737280
+  K331       11808        0      4592          144   331776
+  P7         12960        0      3752            0   331776
+  K44-e       9504        0     11156            0   165888
+  P8         12064        0     10628            0   135168
+  P9          7552        0     19872            4    49152
+  P10         3968        0     26480            0    15360
+C engine agrees with the independent Python enumeration on 280 random orientations
+transit lemma verified on all 44 triangles of the family
+Frobenius-symmetric oriented Petersens (H, #odd arcs): [((0, 0), 10), ((3, 9), 4), ((6, 6), 2)]
+
+====================================================================================================
+E. Conway-Gordon-Sachs parity on random PL embeddings
+====================================================================================================
+  K6     disjoint cycle pairs 10: sum of lk odd in all 180 embeddings; linked pairs in straight ones: [1, 3]
+  K331   disjoint cycle pairs  9: sum of lk odd in all 180 embeddings; linked pairs in straight ones: [1, 2, 3, 5]
+  P7     disjoint cycle pairs  9: sum of lk odd in all 180 embeddings; linked pairs in straight ones: [1, 3, 5]
+  K44-e  disjoint cycle pairs  9: sum of lk odd in all 180 embeddings; linked pairs in straight ones: [1, 3, 5, 6]
+  P8     disjoint cycle pairs  8: sum of lk odd in all 180 embeddings; linked pairs in straight ones: [1, 2, 3, 4]
+  P9     disjoint cycle pairs  7: sum of lk odd in all 180 embeddings; linked pairs in straight ones: [1, 2, 3, 4, 5]
+  P10    disjoint cycle pairs  6: sum of lk odd in all 180 embeddings; linked pairs in straight ones: [1, 2, 3, 4, 5]
+
+====================================================================================================
+F. Theorem L: linear K6 and the Gale tournament (exhaustive, exact)
+====================================================================================================
+totally cyclic order/sign patterns: 18720 of 23040
+   Gale class &EO@ow{m   H = 17, odd arcs  7, patterns  4320, linked pairs {1: 4320} 
+   Gale class &EAgawT{   H = 23, odd arcs  9, patterns  4320, linked pairs {1: 4320} 
+   Gale class &EGgDqwu   H = 23, odd arcs  9, patterns  4320, linked pairs {1: 4320} 
+   Gale class &EWHBwse   H = 41, odd arcs  9, patterns  4320, linked pairs {1: 4320} RT7 - v
+   Gale class &ESI`Yhs   H = 45, odd arcs  9, patterns  1440, linked pairs {3: 1440} C3[TT2,TT2,TT2]
+the two 6-vertex H-maximizers (H = 45): C3[TT2,TT2,TT2] (circular, 9 odd arcs, 3 linked pairs) and P7 - v (not circular, all 15 arcs odd, Gale dual of no linear K6)
+piercing-rule count over all 56 tournaments (circular?, symmetric?, count): [((False, False, 0), 9), ((False, False, 1), 19), ((False, False, 2), 11), ((False, False, 3), 9), ((False, False, 5), 1), ((False, True, 0), 1), ((True, True, 1), 5), ((True, True, 3), 1)]
+linear K_6 in R^3: 300 random configurations, numbers of linked pairs [(1, 241), (3, 59)] (bound 3); walk criterion exact
+linear K_8 in R^5: 300 random configurations, numbers of linked pairs [(1, 179), (3, 121)] (bound 3); walk criterion exact
+linear K_10 in R^7: 120 random configurations, numbers of linked pairs [(1, 64), (3, 55), (5, 1)] (bound 5); walk criterion exact
+linear K_12 in R^9: 60 random configurations, numbers of linked pairs [(1, 20), (3, 36), (5, 4)] (bound 5); walk criterion exact
+
+====================================================================================================
+G. Collatz side
+====================================================================================================
+Theorem 5.1 checked on 84 random Cayley digraphs (Z/n, n odd <= 13, and Z3 x Z3)
+control Cay(Z/6, {1,2}): H = 18, odd arcs 6 (odd order is needed)
+
+code digraphs Cay(Z/(2^L-1), C(w)) and their punctures:
+   L=2 w=01 C=[1, 2]: Cayley H=6, odd arcs 0/6 | punctured H=2, odd arcs 2/2
+   L=3 w=001 C=[1, 2, 4]: Cayley H=189, odd arcs 0/21 | punctured H=45, odd arcs 15/15
+   L=3 w=011 C=[3, 5, 6]: Cayley H=189, odd arcs 0/21 | punctured H=45, odd arcs 15/15
+   L=4 w=0001 C=[1, 2, 4, 8]: Cayley H=239160, odd arcs 0/60 | punctured H=47208, odd arcs 0/52
+   L=4 w=0011 C=[3, 6, 9, 12]: Cayley H=0, odd arcs 0/60 | punctured H=0, odd arcs 0/52
+   L=4 w=0111 C=[7, 11, 13, 14]: Cayley H=239160, odd arcs 0/60 | punctured H=47208, odd arcs 0/52
+
+Mersenne-Legendre circulants T_L and code subtournaments of QR_M:
+   L= 3: S_L = [1]; multiplier-equivalent to Paley: True; to the rotational tournament: True
+   L= 5: S_L = [1, 3]; multiplier-equivalent to Paley: False; to the rotational tournament: True
+   L= 7: S_L = [1, 4, 5]; multiplier-equivalent to Paley: False; to the rotational tournament: True
+   L=13: S_L = [1, 7, 8, 9, 10, 11]; multiplier-equivalent to Paley: False; to the rotational tournament: False
+   L=17: S_L = [1, 3, 5, 6, 7, 9, 13, 15]; multiplier-equivalent to Paley: False; to the rotational tournament: False
+   L=19: S_L = [1, 4, 5, 10, 11, 12, 13, 16, 17]; multiplier-equivalent to Paley: False; to the rotational tournament: False
+   L=31: S_L = [1, 4, 7, 8, 9, 12, 13, 16, 17, 20, 21, 25, 26, 28, 29]; multiplier-equivalent to Paley: False; to the rotational tournament: False
+every unit cycle code induces T_L (or its reverse) in QR_M for L = 3, 5, 7: OK
+
+Legendre sign of the real code, and integral cycles (q = 3, 5; T = non-shortcut, T1 = shortcut):
+   L=3 w=001 real code   1 chi=+1  integral: [('T', 3, 4), ('T', 5, -4)]
+   L=3 w=011 real code   3 chi=-1  integral: [('T1', 3, -10)]
+   L=5 w=00001 real code   1 chi=+1  integral: []
+   L=5 w=00011 real code   3 chi=-1  integral: [('T1', 5, 8)]
+   L=5 w=00101 real code   5 chi=+1  integral: [('T', 3, -20)]
+   L=5 w=00111 real code   7 chi=+1  integral: []
+   L=5 w=01011 real code  11 chi=-1  integral: []
+   L=5 w=01111 real code  15 chi=-1  integral: []
+   L=7 w=0000101 real code   5 chi=-1  integral: [('T', 5, 16)]
+   L=7 w=0000111 real code   7 chi=-1  integral: [('T1', 5, 208)]
+   L=7 w=0010011 real code  19 chi=+1  integral: [('T1', 5, 108)]
+L = 13: real and 2-adic Legendre signs agree for 280 of 630 necklaces (opposite for all words when L <= 7)
+
+q-interpolation:
+   word 100 non-shortcut x(1..9) = ['1/3', '1', '-1', '-1/3', '-1/5'] ; integral for odd q < 200: [3, 5]
+   word 10 shortcut     x(1..9) = ['1/3', '1', '-1', '-1/3', '-1/5'] ; integral for odd q < 200: [3, 5]
+   word 100 shortcut     x(1..9) = ['1/7', '1/5', '1/3', '1', '-1'] ; integral for odd q < 200: [7, 9]
+   word 11000 shortcut     x(1..9) = ['3/31', '5/23', '1', '-9/17', '-11/49'] ; integral for odd q < 200: [5]
+x_w(q) = c_w(q)/(2^L - q^k), deg c_w <= k-1, non-negative coefficients: 400 random checks OK
+
+positive cycles of x -> x/2, (qx+1)/2 for odd q < 200 (starts <= 20000):
+   q =   3 (q mod 4 = 3): cycles (min, length) [(1, 2)]
+   q =   5 (q mod 4 = 1): cycles (min, length) [(1, 5), (13, 7), (17, 7)]
+   q =   7 (q mod 4 = 3): cycles (min, length) [(1, 3)]
+   q =  15 (q mod 4 = 3): cycles (min, length) [(1, 4)]
+   q =  31 (q mod 4 = 3): cycles (min, length) [(1, 5)]
+   q =  63 (q mod 4 = 3): cycles (min, length) [(1, 6)]
+   q = 127 (q mod 4 = 3): cycles (min, length) [(1, 7)]
+   q = 181 (q mod 4 = 1): cycles (min, length) [(27, 15), (35, 15)]
+
+====================================================================================================
+H. Two-code tournaments; anti-circulant tournaments; an all-odd tournament on 14 vertices
+====================================================================================================
+parity engine agrees with the exact engine on 200 random digraphs
+two-code tournaments Theta(w) (M = 2^L - 1 prime):
+   L=3 w=001 |V|= 6 H=45 odd arcs 15/15 palindromic=True
+   L=3 w=011 |V|= 6 H=45 odd arcs 15/15 palindromic=True
+   L=5 w=00001 |V|=10 H=15505 odd arcs 35/45 palindromic=True
+   L=5 w=00011 |V|=10 H=15505 odd arcs 35/45 palindromic=True
+   L=5 w=00101 |V|=10 H=15505 odd arcs 35/45 palindromic=True
+   L=5 w=00111 |V|=10 H=15505 odd arcs 35/45 palindromic=True
+   L=5 w=01011 |V|=10 H=15505 odd arcs 35/45 palindromic=True
+   L=5 w=01111 |V|=10 H=15505 odd arcs 35/45 palindromic=True
+   L=7 w=0000001 |V|=14 H=24540117 odd arcs 91/91 palindromic=True
+   L=7 w=0001011 |V|=14 H=24641505 odd arcs 63/91 palindromic=False
+   L=7 w=0001101 |V|=14 H=24641505 odd arcs 63/91 palindromic=False
+   L=7 w=0010111 |V|=14 H=24641505 odd arcs 63/91 palindromic=False
+   L=7 w=0011101 |V|=14 H=24641505 odd arcs 63/91 palindromic=False
+   L = 7: all 14 palindromic necklaces give the same all-odd tournament (H = 24540117); the 4 chiral ones give 63/91
+QR_127 restricted to mu14 = [1, 2, 4, 8, 16, 32, 63, 64, 95, 111, 119, 123, 125, 126]: H = 24540117, all 91 arc counts odd, values [3085307, 3125731, 3361361, 3510057, 3604781, 4056367, 4087295] (two independent engines)
+anti-circulant tournaments T_s on Z/2m (x -> y iff s(y - x) = (-1)^x):
+   N =  6:    8 patterns,   2 orbit representatives, all-odd isomorphism classes: 1
+   N = 10:   32 patterns,   4 orbit representatives, all-odd isomorphism classes: 1
+   N = 14:  128 patterns,  12 orbit representatives, all-odd isomorphism classes: 1
+   N = 18:  512 patterns,  48 orbit representatives, all-odd isomorphism classes: 2
+   N = 22: 2048 patterns, 104 orbit representatives, all-odd isomorphism classes: 4
+QR_p restricted to mu_2m (p = 3 mod 4 prime, p < 2500): classes and all-odd status
+   N =  6: all-odd True  primes [7, 31, 79, 103, 127, 151, 199, 223, 271, 367] ...
+   N =  6: all-odd False primes [19, 43, 67, 139, 163, 211, 283, 307, 331, 379] ...
+   N = 10: all-odd True  primes [11, 131, 211, 251, 331, 491, 571, 691, 811, 971] ...
+   N = 10: all-odd False primes [31, 71, 151, 191, 271, 311, 431, 631, 751, 911] ...
+   N = 14: all-odd False primes [43, 211, 659, 827, 883, 1163, 1499, 1667, 1723, 2003] ...
+   N = 14: all-odd True  primes [71, 127, 463, 631, 743, 911, 967, 1303, 1471, 2087] ...
+   N = 14: all-odd False primes [239, 1583, 2143]
+   N = 14: all-odd False primes [379, 491, 547, 1051]
+   N = 18: all-odd True  primes [19, 163, 307, 811, 883, 1171, 1459, 1531, 1747, 2251] ...
+   N = 18: all-odd False primes [127, 271, 487, 631, 919, 991, 1063, 1279, 1423, 1567] ...
+   N = 18: all-odd False primes [199, 2287]
+   N = 18: all-odd False primes [379, 523, 739, 2179]
+   N = 22: all-odd True  primes [23, 2399]
+   N = 22: all-odd False primes [67, 2179]
+   N = 22: all-odd True  primes [199, 463, 1607]
+   N = 22: all-odd False primes [331, 683, 859, 947, 2003, 2267]
+   N = 22: all-odd False primes [419, 1123]
+   N = 22: all-odd True  primes [727, 991, 2311]
+   N = 22: all-odd True  primes [1783, 1871]
+QR_p[mu6] all-odd iff p = 7 (mod 8), QR_p[mu10] all-odd iff p = 3 (mod 8): PROVED by the sign algebra (checked for every a, b, chi(2)) and confirmed for all p < 2500
+   all-odd class N =  6: |Aut| = 3
+   all-odd class N = 10: |Aut| = 5
+   all-odd class N = 14: |Aut| = 7
+   all-odd class N = 18: |Aut| = 9
+   all-odd class N = 18: |Aut| = 9
+anti-circulant engine agrees with the parity engine (40 tournaments, N <= 22) and parities are constant on sigma-orbits
+L = 13: 126 palindromic necklaces, each two-code vertex set a coset of mu26
+N = 26: QR27 - 0 all-odd (confirms THM-4524 with an independent engine); QR2003[mu26] all-odd and not isomorphic to it;
+        the L = 13 two-code tournament QR8191[mu26] is NOT all-odd (parities by difference d = 1..13: [1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1])
+
+902151 checks, 150 s
+ALL CHECKS PASSED

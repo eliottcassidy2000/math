@@ -1,0 +1,10 @@
+N = 26: 8192 sign patterns, 344 orbit representatives under multipliers and negation
+   all-odd representative #74: s(1..13) = ++++++-+-+-++
+   all-odd representative #238: s(1..13) = ++++-+--++-++
+all-odd orbit representatives: 2; distinct isomorphism classes: 2
+   class &Y^_^_Au_swZSEZPkajPPz`WbNbDQJtGxieBqkRPXppKYjBQuFPaVSwUQkf`pMpqfHY\QhMQ^TRO\rbaQ}MSZkHa^kcaVtePPwww~AayuIdZUa[d]oo  QR27 - 0
+   class &Y^_^_BwJXC]EYRBbbDoXwwwA}El?^_y~oEtBx@Xo{WK]MFFAr@x`M_^OXvx?E{}b@mFpwZCX~F?a~xOC^~CNo_I~xCENbb{YNEGw^boMRp]FcWfrx?  QR_p[mu26] for p = [2003, 2939]
+prime-derived classes (p < 3000): 9, of which all-odd: 1
+
+689 checks, 1078 s
+ALL CHECKS PASSED

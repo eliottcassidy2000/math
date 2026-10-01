@@ -1,0 +1,197 @@
+=== A. independent re-verification of THM-4527 (S15 Theorems 1-2) ===
+PASS A1 F(2N) = 3N for 1 <= N < 5e5
+PASS A1 F(4j+1) = 3j+1 for 0 <= j < 2.5e5
+PASS A1 F(4n-1) = F(n) (the microcosm) for 1 <= n < 2.5e5
+PASS A2 owner's K_1..K_11 = 0,2,1,4,2,10,3,9,4,15,5 (K_N = (A - S(A))/2 at A = 4N-3)
+PASS A2 owner's examples S(1)=1, S(5)=1, S(9)=7, S(13)=5
+PASS A2 F(2N-1) = 2N-1-K_N for N < 5e5
+PASS A2 K_{2j+1} = j, K_{4m} = 5m-1, K_{4m-2} = K_m + 6m - 4 (2-regular recursion)
+PASS A3 6K(A) + 1 = (2^v - 3) S(A) for every odd A with |A| < 2e6 (both signs)
+PASS A4 multiplicity of m in the owner's K = #{v >= 2 : (2^v-3) | 6m+1}, all 0 <= m <= 1e6 (brute force over A <= 8e6+1)
+PASS A4 S15's histogram on [0,1e5] {1: 69619, 2: 26617, 3: 3549, 4: 210, 5: 6} reproduced
+PASS A4 every negative m in [-1e5,-1] is a drop exactly once (the ascents A = 4N-1, K = -N)
+PASS A5 over all odd A in Z, every d in [-2e4,2e4] is a drop exactly 2 + #{v>=3 : (2^v-3) | 6d+1} times (unit branches: A = 8d+1 and A = -4d-1)
+PASS A5 the two unit preimages of every d: S(8d+1) = 6d+1 (v=2), S(-4d-1) = -6d-1 (v=1), both with drop d
+PASS A5 in labels M (all integers): every d = M - F(M) occurs exactly once with M even, once with M = 1 mod 4, and #{v>=3 : (2^v-3) | 6d+1} times with M = 3 mod 4 (the microcosm), |d| <= 5000
+    mean multiplicity sum_{v>=2} 1/(2^v-3) = 1.343673433181769018544483
+PASS A6 mean multiplicity = 1.34367343318176901854448...
+    peak RSS so far: 60 MB, elapsed 4 s
+=== B. the divisor problem over 2^v - 3 (D74) ===
+    pairwise gcds > 1 among 2^v-3, 3 <= v <= 64: [5, 11, 13, 19, 23, 25, 29, 37, 47, 71, 115, 431]
+PASS B1 for v <= 64 exactly ten primes divide two of the 2^v - 3: 5, 11, 13, 19, 23, 29, 37, 47, 71, 431 (private parts pairwise coprime)
+    overlap: log2 prod M_v - log2 lcm M_v (3 <= v <= 64) = 141.8 of 2075.7 bits (6.8%)
+    moduli involving shared primes (38 of 62): [3, 4, 5, 7, 8, 11, 13, 15, 16, 18, 19, 23, 26, 27, 28, 30, 31, 33, 35, 38, 39, 40, 41, 42, 43, 47, 48, 49, 51, 52, 55, 56, 58, 59, 61, 62, 63, 64]
+    exact law of N_64 computed over 3072 shared-prime states in 3.8s
+PASS B2 the law of N_64 is a probability vector (exact rationals)
+PASS B2 exact first moment: E[N_64] = sum_{v=3}^{64} 1/(2^v-3)
+PASS B2 exact second binomial moment: E[C(N_64,2)] = sum_{v<w} 1/lcm(M_v, M_w)
+PASS B2 sympy factorizations give the same ten shared primes
+PASS B2 truncation error sum_{v>64} 1/(2^v-3) < 2^-63 = 1.08e-19
+    delta_1 = density{d : m(d) = 1} = 0.6961749034401325952912  (+- 1.1e-19)
+    delta_2 = density{d : m(d) = 2} = 0.266238036677738373892  (+- 1.1e-19)
+    delta_3 = density{d : m(d) = 3} = 0.03538955883931588242586  (+- 1.1e-19)
+    delta_4 = density{d : m(d) = 4} = 0.00213458515130198837113  (+- 1.1e-19)
+    delta_5 = density{d : m(d) = 5} = 0.00006206142257024921277015  (+- 1.1e-19)
+    delta_6 = density{d : m(d) = 6} = 8.491492917052677240062e-7  (+- 1.1e-19)
+    delta_7 = density{d : m(d) = 7} = 5.302819767490086859428e-9  (+- 1.1e-19)
+    delta_8 = density{d : m(d) = 8} = 1.680074489300358066171e-11  (+- 1.1e-19)
+    delta_9 = density{d : m(d) = 9} = 2.866616892777887865915e-14  (+- 1.1e-19)
+    delta_10 = density{d : m(d) = 10} = 2.697297503244192755618e-17  (+- 1.1e-19)
+    counts on [0,1e8]: {1: 69617492, 2: 26623796, 3: 3538961, 4: 213471, 5: 6192, 6: 89}
+PASS B3 empirical frequencies of m(d) = 1..6 on [0,1e8] agree with the exact densities to 3e-7
+    first d with m(d) >= j: {2: 2, 3: 24, 4: 314, 5: 7854, 6: 479104}
+    independent-events model P(m=1..5): ['0.69023469', '0.27724918', '0.031149657', '0.001341173', '2.5082207e-5']
+PASS B3 the gcd structure matters: P(m=1) exceeds the independent model by 0.0059, P(m=4) by a factor 1.59
+    Var(m) = Var(N_64) = 0.309910512941778 (mean 0.343673433181769)
+    E[2^N_64] = 1.38830639, E[3^N_64] = 1.876266063 (finite for u < 4 in the limit, Lemma 2.2)
+PASS B4 gcd(2^v-3, 2^w-3) divides 2^(w-v) - 1 and is prime to 6, 3 <= v < w <= 200
+PASS B4 M_v | M_w <=> ord_{M_v}(2) | w - v, for 3 <= v <= 40 and v < w <= 400 (E_w inside E_v)
+    ord_{M_v}(2) for v = 3..8: [4, 12, 28, 60, 100, 110] (so M_3 | M_v iff v = 3 mod 4, M_4 iff v = 4 mod 12, ...)
+PASS B4 5^2 | M_v iff v = 7 mod 20, 5^3 | M_v iff v = 7 mod 100 (v <= 400); M_16 = 13*71^2
+PASS B4 p = 5 divides 2^v - 3 exactly for v = 3 mod 4 (v <= 200)
+PASS B4 p = 11 divides 2^v - 3 exactly for v = 8 mod 10 (v <= 200)
+PASS B4 p = 13 divides 2^v - 3 exactly for v = 4 mod 12 (v <= 200)
+PASS B4 p = 19 divides 2^v - 3 exactly for v = 13 mod 18 (v <= 200)
+PASS B4 p = 23 divides 2^v - 3 exactly for v = 8 mod 11 (v <= 200)
+PASS B4 p = 29 divides 2^v - 3 exactly for v = 5 mod 28 (v <= 200)
+PASS B4 p = 37 divides 2^v - 3 exactly for v = 26 mod 36 (v <= 200)
+PASS B4 p = 47 divides 2^v - 3 exactly for v = 19 mod 23 (v <= 200)
+PASS B4 p = 71 divides 2^v - 3 exactly for v = 16 mod 35 (v <= 200)
+PASS B4 p = 431 divides 2^v - 3 exactly for v = 13 mod 43 (v <= 200)
+    record search: 2262581 sets T with lcm(M_T) <= 2^100
+    records (k, n_k, d_k = (n_k-1)/6, log2 n_k) [115.3s]:
+      k=1  n_k=13  d_k=2  log2 n_k=3.70  sqrt(2 log2 n_k)=2.72
+      k=2  n_k=145  d_k=24  log2 n_k=7.18  sqrt(2 log2 n_k)=3.79
+      k=3  n_k=1885  d_k=314  log2 n_k=10.88  sqrt(2 log2 n_k)=4.66
+      k=4  n_k=47125  d_k=7854  log2 n_k=15.52  sqrt(2 log2 n_k)=5.57
+      k=5  n_k=2874625  d_k=479104  log2 n_k=21.45  sqrt(2 log2 n_k)=6.55
+      k=6  n_k=727280125  d_k=121213354  log2 n_k=29.44  sqrt(2 log2 n_k)=7.67
+      k=7  n_k=297457571125  d_k=49576261854  log2 n_k=38.11  sqrt(2 log2 n_k)=8.73
+      k=8  n_k=303704180118625  d_k=50617363353104  log2 n_k=48.11  sqrt(2 log2 n_k)=9.81
+      k=9  n_k=690259514980267375  d_k=115043252496711229  log2 n_k=59.26  sqrt(2 log2 n_k)=10.89
+      k=10  n_k=704754964794852989875  d_k=117459160799142164979  log2 n_k=69.26  sqrt(2 log2 n_k)=11.77
+      k=11  n_k=2884562070905333287558375  d_k=480760345150888881259729  log2 n_k=81.25  sqrt(2 log2 n_k)=12.75
+      k=12  n_k=14541077399433785102581768375  d_k=2423512899905630850430294729  log2 n_k=93.55  sqrt(2 log2 n_k)=13.68
+PASS B5 record d_k (first d with m(d) >= k+1) = 2, 24, 314, 7854, 479104 for k <= 5, matching the 1e8 sieve
+PASS B5 exhaustive below 2^100: n_9 = 690259514980267375, n_10 = 704754964794852989875, n_11 = 2884562070905333287558375, n_12 = 14541077399433785102581768375 (13 copies first at d = 2423512899905630850430294729)
+PASS B5 n_12 is divisible exactly by M_v for v = 3..12, 16, 19 (M_16 = 13*71^2 and M_19 = 5*23*47*97 reuse shared primes)
+PASS B5 records respect the proved bounds: k+1 <= 1 + log2(n_k)/2 and n_k <= 5 prod_{v=3}^{k+2} M_v
+PASS B6 P(N >= k) >= 1/lcm(M_3..M_{k+2}) for k <= 8 (lower tail bound)
+    log2 P(m = j) for j = 2..9: [-1.91, -4.82, -8.87, -13.98, -20.17, -27.49, -35.79, -44.99]
+    peak RSS so far: 199 MB, elapsed 124 s
+=== C. the summatory function of K ===
+PASS C1 exact recursion S(X) = J(J+1)/2 + 5U(U+1)/2 - U + 3W(W+1) - 4W + S(W), J=floor((X-1)/2), U=floor(X/4), W=floor((X+2)/4)
+PASS C2 S(4^n) = (3*16^n - 4^n - 2)/6 for n <= 10
+PASS C3 digit formula S(X) = X^2/2 + sum_i ell(X_i), X_{i+1} = floor((X_i+2)/4), ell(4t+r) = -t/2, -(5t+1)/2, (t+1)/2, -(3t+2)/2
+    E(X)/X = (S(X) - X^2/2)/X on [1e3, 2^20]: min -0.833329, max 0.167643, mean -0.333328
+PASS C4 E(X)/X lies in [-5/6, 1/6] + o(1); extremes attained along X = (4^n+2)/3 (-> 1/6) and X = (4^n-1)/3 (-> -5/6)
+PASS C5 counting function: sum_{d<=Y} m(d) = sum_v (floor((Y - d_v)/M_v) + 1) exactly (Y = 1e6)
+    sum_{d<=1e6} m(d) = 1343675 ~ 1.34367 * 1e6
+PASS C6 Lambert series: sum_d m(d) q^(6d+1) = sum_{v even} q^(M_v)/(1-q^(6M_v)) + sum_{v odd>=3} q^(5M_v)/(1-q^(6M_v)) (coefficients d <= 1e6)
+PASS C7 sum_{A odd < 2^n} K(A) = -J_{n-1} (Jacobsthal 0,1,1,3,5,11,21,...) exactly for n <= 22: up and down steps cancel to O(X)
+    sum_{A odd <= X} K(A) / X ranges over [-0.3333, 0.1668] for 1e4 <= X < 2^22 (extremes next to the trunk (4^j-1)/3)
+    peak RSS so far: 237 MB, elapsed 126 s
+=== D. k-step drops, consecutive drops, cycles ===
+PASS D1 (2^p - 3^k) Syr^k(A) = 2*3^k*D + c(v) for k <= 7 and all odd |A| <= 1e5 (D = (A - Syr^k A)/2)
+PASS D2 bijection: for every word v (k <= 4, p <= 11) and odd s >= 1 with 2^p s = c(v) mod 3^k, A = (2^p s - c)/3^k has word v and Syr^k(A) = s
+PASS D3 k=2: multiplicity of a total drop D = #{v : (2^p-3^k) | 2*3^k*D + c(v), quotient > 0}, all |D| <= 3000
+    k=2 histogram D in [0,3000]: [(0, 1207), (1, 1261), (2, 440), (3, 88), (4, 5)] ; D in [-3000,-1]: [(2, 2400), (3, 600)]
+PASS D3 k=3: multiplicity of a total drop D = #{v : (2^p-3^k) | 2*3^k*D + c(v), quotient > 0}, all |D| <= 3000
+    k=3 histogram D in [0,3000]: [(0, 298), (1, 1104), (2, 774), (3, 478), (4, 260), (5, 73), (6, 12), (7, 2)] ; D in [-3000,-1]: [(0, 2067), (1, 891), (2, 42)]
+    k=  1 rho_k^+ = 1.343673433  rho_k^- = 1.0  frac(k log2 3) = 0.585
+    k=  2 rho_k^+ = 0.8076972408  rho_k^- = 2.2  frac(k log2 3) = 0.1699
+    k=  3 rho_k^+ = 1.859436325  rho_k^- = 0.3253588517  frac(k log2 3) = 0.7549
+    k=  4 rho_k^+ = 1.020035091  rho_k^- = 0.6852525626  frac(k log2 3) = 0.3399
+    k=  5 rho_k^+ = 3.512549145  rho_k^- = 0.16310708  frac(k log2 3) = 0.9248
+    k=  7 rho_k^+ = 0.9228738825  rho_k^- = 1.603845521  frac(k log2 3) = 0.09474
+    k= 12 rho_k^+ = 0.9442610145  rho_k^- = 4.509744979  frac(k log2 3) = 0.01955
+    k= 17 rho_k^+ = 2.002367558  rho_k^- = 0.0436385731  frac(k log2 3) = 0.9444
+    k= 29 rho_k^+ = 1.618741112  rho_k^- = 0.01670434258  frac(k log2 3) = 0.9639
+    k= 41 rho_k^+ = 1.589768485  rho_k^- = 0.007035937331  frac(k log2 3) = 0.9835
+    k= 53 rho_k^+ = 0.9973631436  rho_k^- = 1.474408789  frac(k log2 3) = 0.003013
+    k=100 rho_k^+ = 1.000273607  rho_k^- = 0.000441289369  frac(k log2 3) = 0.4963
+    k=250 rho_k^+ = 1.000000003  rho_k^- = 1.639590807e-7  frac(k log2 3) = 0.2406
+PASS D4 rho_1^+ = sum_{v>=2} 1/(2^v-3) = 1.3437..., rho_1^- = 1
+PASS D4 rho_2^- = 1/(9-4) + 2/(9-8) = 11/5 (two unit words (1,2),(2,1): 3^2 - 2^3 = 1)
+PASS D4 rho_k^+ -> 1 and rho_k^- -> 0 (k = 250: 1.0, 1.64e-7)
+    large-deviation rate at p = k log2 3: I = log 3 + (l-1)log(l-1) - l log l = 0.054979473 ; -(1/k) log pi_k(floor(k l)) at k=4000: 0.056301001
+PASS D4 resonance spikes are damped by exp(-I k), I = 0.05498 nats (0.0793 bits) per odd step
+PASS D5 'two copies' at k = 2: every D <= -1 (|D| <= 1e5) is the 2-step drop of A = -16D-5 (word 12) and A = -16D-7 (word 21)
+PASS D6 3x+1: A -> (K(A), K(T(A))) is injective on odd A < 1e6 (brute force)
+PASS D6 3x-1: A -> (K(A), K(T(A))) is injective on odd A < 1e6 (brute force)
+PASS D6 (EMPIRICAL for other q) no repeated consecutive-drop pair for A < 2e5 for qx+1, q = 1,5,7,9,11,13, and for 5x-1
+    quadruple hits with a negative point (not on the positive sheet): [(1, 1, 2, 1, 2, 1)]  [the fixed points 1 and -1 share the drop pair (0,0)]
+PASS D6 no quadruple (v,v',u,u') with exponents < 60 solves n1*E = +-M_v M_v' (2^d - 1) with n1 admissible (both sheets): injectivity holds for all A with such valuations
+PASS D6 proof check (exponents 2..33): 0 < E <= g(2^d-1) only at (v,v',u,u') = (3,4,2,3), E = 1, where n1 = 65 = 5 mod 6 is inadmissible; 0 < -E <= g(2^d-1) never (3x-1)
+    k=1: D = 0 fiber (all words with k <= p <= 2k): [-1, 1]
+    k=2: D = 0 fiber (all words with k <= p <= 2k): [-7, -5, -1, 1]
+    k=3: D = 0 fiber (all words with k <= p <= 2k): [-1, 1]
+    k=4: D = 0 fiber (all words with k <= p <= 2k): [-7, -5, -1, 1]
+    k=5: D = 0 fiber (all words with k <= p <= 2k): [-1, 1]
+    k=6: D = 0 fiber (all words with k <= p <= 2k): [-7, -5, -1, 1]
+    k=7: D = 0 fiber (all words with k <= p <= 2k): [-91, -61, -55, -41, -37, -25, -17, -1, 1]
+    k=8: D = 0 fiber (all words with k <= p <= 2k): [-7, -5, -1, 1]
+    k=9: D = 0 fiber (all words with k <= p <= 2k): [-1, 1]
+    k=10: D = 0 fiber (all words with k <= p <= 2k): [-7, -5, -1, 1]
+PASS D7 the D = 0 fiber is the set of integer periodic points: {1} on the positive sheet, {-1}, {-5,-7}, {-17,...} on the negative sheet (k <= 10)
+PASS D8 3x-1 two-step multiplicity sieve agrees with brute force on [1,3000]; at D = 0 brute force finds the 3x-1 periodic points 1, 5, 7
+    k=2 multiplicity law on [0,1e6]: 3x+1 [0.40666, 0.41111, 0.15275, 0.02694, 0.00242, 0.00011, 1e-05, 0.0]
+                                     3x-1 [0.40668, 0.41108, 0.15274, 0.027, 0.00237, 0.00013, 0.0, 0.0]
+PASS D8 the 3x+1 and 3x-1 sheets have the same 2-step drop-multiplicity law (to 2e-3 on [0,1e6]) although their cycles differ
+PASS D9 valuation pairs are exactly geometric-independent on odd A < 2^21 (#{word (a,b)} = 2^(20-a-b)): normalized drops K(A_i)/A_i -> iid (2^V-3)/2^(V+1)
+    engine computations (run first, in a child process to keep memory low) took 1.6s, child peak RSS 233 MB
+PASS D10 the elimination engine reproduces the exact k = 1 law (to 1e-13)
+    k=2 exact law of the k-step drop multiplicity on D >= 0 (words p <= 50, truncation error <= 2 P(P_k > 50) = 9.1e-14):
+       P(mu_2 = 0..9) = ['0.406655577104', '0.411117039014', '0.152761396106', '0.026927858359', '0.002419931618', '0.000115124632', '0.000003027697', '0.000000045081', '0.000000000386', '0.000000000002']
+PASS D10 k=2: the law sums to 1 and its mean is rho_2^+ = 0.807697240794
+PASS D10 k=2: the engine's E[mu(mu-1)] = 0.498524360514 equals the exact sum over word pairs (CRT compatibilities), words p <= 50
+    k=3 exact law of the k-step drop multiplicity on D >= 0 (words p <= 50, truncation error <= 2 P(P_k > 50) = 2.3e-12):
+       P(mu_3 = 0..9) = ['0.100025419499', '0.369937051720', '0.252780315253', '0.159597308002', '0.087756944313', '0.025654295554', '0.003909015456', '0.000324240970', '0.000015005535', '0.000000397514']
+PASS D10 k=3: the law sums to 1 and its mean is rho_3^+ = 1.85943632458
+PASS D10 k=3: the engine's E[mu(mu-1)] = 3.161071794409 equals the exact sum over word pairs (CRT compatibilities), words p <= 50
+PASS D10 k=2 law agrees with the 3x+1 sieve on [0,1e6] (D8) to 5e-5
+    k=3 sieve on [0,1e6]: [0.099902, 0.370357, 0.252343, 0.159679, 0.087844, 0.02561, 0.003937, 0.000318]
+PASS D10 k=3 law agrees with the sieve on [0,1e6] to 5e-4
+PASS D10 ascending side (D < 0): k=2 law (0, 0, 4/5, 1/5); k=3 law (144/209, 62/209, 3/209) [mu_3 = [19 | D] + [D mod 11 in {1,7,8}]]
+    peak RSS so far: 291 MB, elapsed 144 s
+=== E. other q (D75): x -> oddpart(qx + s) ===
+PASS E1 2qK + s = (2^v - q) T for T = oddpart(qA + s), s = +-1, q in {1,3,...,13}, odd |A| <= 2e4
+PASS E2 multiplicity of drop d for oddpart(qx+s) = #{v : (2^v - q) | 2qd + s, quotient > 0} (q,s) in {(1,+),(5,+),(7,+),(11,+),(5,-),(3,-),(7,-)}, |d| <= 1500
+    q= 1 desc units [1] asc units [] | desc P(m=0..4) ['0.0', '0.548301', '0.33242', '0.0892885', '0.0250003'] | asc P(m=0..3) ['1.0', '0.0', '0.0', '0.0']
+    q= 3 desc units [1] asc units [1] | desc P(m=0..4) ['0.0', '0.696175', '0.266238', '0.0353896', '0.00213459'] | asc P(m=0..3) ['0.0', '1.0', '0.0', '0.0']
+    q= 5 desc units [] asc units [1] | desc P(m=0..4) ['0.592675', '0.327618', '0.072728', '0.00671921', '0.000255113'] | asc P(m=0..3) ['0.0', '0.666667', '0.333333', '0.0']
+    q= 7 desc units [1] asc units [] | desc P(m=0..4) ['0.0', '0.830649', '0.154485', '0.0142189', '0.000631841'] | asc P(m=0..3) ['0.533333', '0.4', '0.0666667', '0.0']
+    q= 9 desc units [] asc units [1] | desc P(m=0..4) ['0.799448', '0.181148', '0.0184667', '0.000909572', '2.71659e-5'] | asc P(m=0..3) ['0.0', '0.685714', '0.285714', '0.0285714']
+    q=11 desc units [] asc units [] | desc P(m=0..4) ['0.739609', '0.239846', '0.0185017', '0.00194452', '9.62076e-5'] | asc P(m=0..3) ['0.571429', '0.285714', '0.126984', '0.015873']
+    q=13 desc units [] asc units [] | desc P(m=0..4) ['0.624435', '0.330941', '0.0424998', '0.00207995', '4.35638e-5'] | asc P(m=0..3) ['0.646465', '0.307071', '0.0444444', '0.0020202']
+PASS E3 q = 3 descending law (truncation 48) agrees with section B (shifted by the unit)
+PASS E3 q=5 descent holes: brute force 0.59265 vs exact density 0.592675
+PASS E3 q=9 descent holes: brute force 0.79944 vs exact density 0.799448
+PASS E3 q=11 descent holes: brute force 0.73961 vs exact density 0.739609
+PASS E3 q=13 descent holes: brute force 0.62435 vs exact density 0.624435
+PASS E3 q=7 ascent holes: brute force 0.53333 vs exact density 0.533333
+PASS E3 q=11 ascent holes: brute force 0.57143 vs exact density 0.571429
+PASS E3 q=13 ascent holes: brute force 0.64647 vs exact density 0.646465
+PASS E4 odd q <= 1025: a descending unit iff q = 2^a - 1, an ascending unit iff q = 2^a + 1, both only for q = 3; a side without unit has sum 1/|modulus| < 0.62 (holes of density > 0.38)
+    q=1 rho_k^+ + rho_k^- for k = 1,10,50,100,200: ['1.6067', '1.00002', '1.0', '1.0', '1.0']
+PASS E5 q=1: rho_k -> 1
+    q=5 rho_k^+ + rho_k^- for k = 1,10,50,100,200: ['1.82761', '0.750633', '0.24559', '0.0406416', '0.00257595']
+PASS E5 q=5: rho_k^+ + rho_k^- -> 0 (expanding drift log(q/4) > 0)
+    q=7 rho_k^+ + rho_k^- for k = 1,10,50,100,200: ['1.71821', '0.439541', '0.000783274', '1.74233e-6', '8.24345e-12']
+PASS E5 q=7: rho_k^+ + rho_k^- -> 0 (expanding drift log(q/4) > 0)
+PASS E6 (2^p - q^k) T^k(A) = 2 q^k D + s c_q(v) for (q,s) in {(5,+),(7,+),(3,-),(5,-)}, k <= 4
+    5x+1 positive D=0 fibers k=1,2,3 (5^k < 2^p <= 6^k): {1: [], 2: [1, 3], 3: [13, 17, 27, 33, 43, 83]}
+PASS E7 5x+1: the D = 0 fibers are its cycles {1,3}, {13,33,83}, {17,43,27} (drop statistics generic, cycles present)
+    peak RSS so far: 291 MB, elapsed 159 s
+=== F. the drop identity mod 3^k ===
+PASS F1 2 is a primitive root mod 3^k (k <= 10), so 2^v mod 3^k has period 2*3^(k-1)
+PASS F2 S(A) mod 9 = (6K+1)(2^v-3)^(-1) mod 9 is a function of (K mod 3, v mod 6); K = 2(A - (-1)^v) mod 3
+    K = 0 mod 3: S mod 9 for v = 1..6 mod 6: [8, 1, 2, 7, 5, 4]
+    K = 1 mod 3: S mod 9 for v = 1..6 mod 6: [2, 7, 5, 4, 8, 1]
+    K = 2 mod 3: S mod 9 for v = 1..6 mod 6: [5, 4, 8, 1, 2, 7]
+PASS F3 Syr^k(A) = 2^(-p) c(v) mod 3^k depends only on the valuation word (k <= 6)
+PASS F5 (cross-check of the tcpc lane's G1) with x = (-1)^c 4^s mod 9, one Syracuse step is (c,s) -> (v mod 2, 1+c+v mod 3), odd A < 2e5 prime to 3
+PASS F4 the residue d mod 9 carries no information on m(d): each class has the frequencies delta_1..3 to 1e-3 (exact by CRT)
+
+95 checks, 159 s, peak RSS 293 MB
+ALL CHECKS PASSED

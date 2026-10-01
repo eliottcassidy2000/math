@@ -1,0 +1,50 @@
+==== A ====
+[OK] A: QR_127 on mu_14 = +-<2> is a tournament on 14 vertices
+[OK] A: H = 24540117 (lane: 24540117)
+[OK] A: all 91 arc counts odd; distinct values [3085307, 3125731, 3361361, 3510057, 3604781, 4056367, 4087295]
+[OK] A: the 7 values match the lane
+[OK] A: |Aut| = 7
+==== B ====
+[OK] B: N=6: all 8 sign patterns give tournaments
+[OK] B: N=6: x -> x+1 is an anti-automorphism of every T_s
+[OK] B: N=6: Theorem 6.1 (antipodal arcs odd) on every pattern
+[OK] B: N=6: all-odd anti-circulant isomorphism classes = 1 (lane: 1)
+[OK] B: N=10: all 32 sign patterns give tournaments
+[OK] B: N=10: x -> x+1 is an anti-automorphism of every T_s
+[OK] B: N=10: Theorem 6.1 (antipodal arcs odd) on every pattern
+[OK] B: N=10: all-odd anti-circulant isomorphism classes = 1 (lane: 1)
+[OK] B: N=14: all 128 sign patterns give tournaments
+[OK] B: N=14: x -> x+1 is an anti-automorphism of every T_s
+[OK] B: N=14: Theorem 6.1 (antipodal arcs odd) on every pattern
+[OK] B: N=14: all-odd anti-circulant isomorphism classes = 1 (lane: 1)
+[OK] B: QR_7 - 0 in generator order (g = 3) is anti-circulant (x -> x+1 reverses every arc)
+[OK] B: QR_11 - 0 in generator order (g = 2) is anti-circulant (x -> x+1 reverses every arc)
+[OK] B: QR_19 - 0 in generator order (g = 2) is anti-circulant (x -> x+1 reverses every arc)
+[OK] B: QR_127[mu_14] in the order of a primitive 14th root (zeta = 63) is anti-circulant
+==== C ====
+[OK] C: QR_p[mu_6] all-odd iff p = 7 (mod 8): 108 primes < 3000, 0 mismatches
+[OK] C: QR_p[mu_10] all-odd iff p = 3 (mod 8): 55 primes < 3000, 0 mismatches
+==== D ====
+[OK] D: Theorem 5.1 on 36 random Cayley digraphs (32 non-tournaments): every arc even (0 failures)
+==== E ====
+[OK] E: Prop 3.2 construction gives H = 0 on 40 random non-complete graphs
+==== F ====
+[OK] F: closure of K6 has 7 graphs, all with 15 edges
+[OK] F: Aut orders [8, 12, 36, 72, 72, 120, 720]
+[OK] F: Delta-Y Hasse diagram has 6 arrows and is a tree
+[OK] F: the Petersen graph is in the family
+[OK] F: every member except K3,3,1 is a Delta-Y descendant of K6
+[OK] F: Heawood family (closure of K7) has 20 graphs, 14 Delta-Y descendants of K7
+==== G ====
+[OK] G: Delta-Y on the 7 translates of {1,2,4} in K7 is the Heawood graph
+[OK] G: 4 translates avoid 0; the 3 through 0 leave the matching {1,3},{2,6},{4,5} = {u, 3u}
+[OK] G: Delta-Y on the 4 translates avoiding 0 in K6 = K7 - 0 is the Petersen graph
+[OK] G: Delta-Y on {1,2,4} and {3,5,6} in K6 is K_{4,4} - e
+[OK] G: |Aut(P7 - 0)| = 3, and x -> 2x is an automorphism
+==== H ====
+[OK] H: 1500 random general-position configurations: linked-pair counts {1: 1098, 3: 402} (always 1 or 3)
+[OK] H: the Gale tournament T* is locally transitive (circular) in every configuration
+[OK] H: #linked = 3 iff T* is isomorphic to C3[TT2,TT2,TT2]
+[OK] H: piercing rule (# B-edges piercing A = # uniform-opposite b in B) for all 10 splits of every configuration
+elapsed 8 s
+ALL CHECKS PASSED
