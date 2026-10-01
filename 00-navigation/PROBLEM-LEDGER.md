@@ -629,6 +629,14 @@ all heights (THM-1289, published), δ ineffective.
   Chamberland's extension glues the sheets about -1/2 (fixed-point equation invariant under x -> -1-x).
   Note: `collatz_one_out_edge_systems_20260930.md`.
 
+  **LRC relations and the Collatz cycle equation (opus, 2026-09-30, S15 sixteenth note):** Beck-Everett (arXiv:2609.06259):
+  any LRC counterexample or tight instance has a harmful (odd-sum) relation with ||m||_1 <= 2k+3, ||m||_2 <= 2(k+1)/sqrt(k-1);
+  for LRC(14) this sharpens THM-4009 (sum m_i^2 195 -> 65, 1-norm 50 -> 29, parity proved; support-two ratios 47 -> 11),
+  as a necessary condition (not necessarily Graver). Joint reading: the cycle half of Collatz is of lonely-runner type
+  (finite check per period, short relations, Fourier cancellation, Dirichlet root, parity layer), the divergence half is the
+  global part with no parameter; the transfer obstacle is the non-product structure of the word sum. Kawasaki = THM-4471.
+  Note: `collatz_lrc_relations_20260930.md`.
+
   **STICKY made exact (opus, 2026-09-27, S16):** the STICKY proposal tested. Memory with a stationary law is not a
   fate-changing coordinate (ergodic theorem; simulated); the coordinate is size-coupled persistence: for n = 2^a m the
   driver 2^a is lost iff v_2(sigma(m)) <= a - 1, so the loss rate in class a is 0.586 N^(-1/2) (a = 1, odd squares) and

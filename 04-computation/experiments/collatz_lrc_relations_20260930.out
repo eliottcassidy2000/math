@@ -1,0 +1,46 @@
+== (0) Beck-Everett Lemma 3 identities and the LRC(14) numbers ==
+ k =  3, h = 0.2500: sum a_r = 1.00000 (should be 1), sum r^2 a_r = 3.9468 (should be 1/(4h^2) = 4.0000)
+ k = 13, h = 0.4286: sum a_r = 1.00000 (should be 1), sum r^2 a_r = 1.3504 (should be 1/(4h^2) = 1.3611)
+ LRC(14) (k = 13): a counterexample or tight instance has a harmful relation with ||m||_1 <= 29 and ||m||_2 <= 8.083 (sum m_i^2 <= 65), against THM-4009's ||a||_2 < 14 (sum <= 195), ||a||_1 <= 50 without the parity
+ support-two branch: coprime ratios a:b with a^2 + b^2 < 196: 47; with a^2 + b^2 <= 65 and a - b odd (harmful): 11 [(1, 2), (1, 4), (1, 6), (1, 8), (2, 3), (2, 5), (2, 7), (3, 4), (4, 5), (4, 7), (5, 6)]
+== (1) tight instances and their harmful relations (Beck-Everett Theorem 2) ==
+ k = 2, speeds <= 24: tight instances 12; Beck-Everett bounds ||m||_1 <= 7, ||m||_2 <= 6.000; violations: 0 (2s)
+   n = (1, 2): shortest harmful relation m = (-2, 1), ||m||_1 = 3, ||m||_2 = 2.24
+   n = (2, 4): shortest harmful relation m = (-2, 1), ||m||_1 = 3, ||m||_2 = 2.24
+   n = (3, 6): shortest harmful relation m = (-2, 1), ||m||_1 = 3, ||m||_2 = 2.24
+   n = (4, 8): shortest harmful relation m = (-2, 1), ||m||_1 = 3, ||m||_2 = 2.24
+   n = (5, 10): shortest harmful relation m = (-2, 1), ||m||_1 = 3, ||m||_2 = 2.24
+ k = 3, speeds <= 18: tight instances 6; Beck-Everett bounds ||m||_1 <= 9, ||m||_2 <= 5.657; violations: 0 (4s)
+   n = (1, 2, 3): shortest harmful relation m = (-1, -1, 1), ||m||_1 = 3, ||m||_2 = 1.73
+   n = (2, 4, 6): shortest harmful relation m = (-1, -1, 1), ||m||_1 = 3, ||m||_2 = 1.73
+   n = (3, 6, 9): shortest harmful relation m = (-1, -1, 1), ||m||_1 = 3, ||m||_2 = 1.73
+   n = (4, 8, 12): shortest harmful relation m = (-1, -1, 1), ||m||_1 = 3, ||m||_2 = 1.73
+   n = (5, 10, 15): shortest harmful relation m = (-1, -1, 1), ||m||_1 = 3, ||m||_2 = 1.73
+ k = 4, speeds <= 14: tight instances 5; Beck-Everett bounds ||m||_1 <= 11, ||m||_2 <= 5.774; violations: 0 (8s)
+   n = (1, 2, 3, 4): shortest harmful relation m = (-1, -1, 1, 0), ||m||_1 = 3, ||m||_2 = 1.73
+   n = (1, 3, 4, 7): shortest harmful relation m = (-1, -1, 1, 0), ||m||_1 = 3, ||m||_2 = 1.73
+   n = (2, 4, 6, 8): shortest harmful relation m = (-1, -1, 1, 0), ||m||_1 = 3, ||m||_2 = 1.73
+   n = (2, 6, 8, 14): shortest harmful relation m = (-1, -1, 1, 0), ||m||_1 = 3, ||m||_2 = 1.73
+   n = (3, 6, 9, 12): shortest harmful relation m = (-1, -1, 1, 0), ||m||_1 = 3, ||m||_2 = 1.73
+ k = 5, speeds <= 11: tight instances 3; Beck-Everett bounds ||m||_1 <= 13, ||m||_2 <= 6.000; violations: 0 (10s)
+   n = (1, 2, 3, 4, 5): shortest harmful relation m = (-1, -1, 1, 0, 0), ||m||_1 = 3, ||m||_2 = 1.73
+   n = (1, 3, 4, 5, 9): shortest harmful relation m = (-1, -1, 1, 0, 0), ||m||_1 = 3, ||m||_2 = 1.73
+   n = (2, 4, 6, 8, 10): shortest harmful relation m = (-1, -1, 1, 0, 0), ||m||_1 = 3, ||m||_2 = 1.73
+== (2) the converse fails: strictly lonely sets with short harmful relations ==
+ k = 3, speeds <= 12: sets with a harmful relation of 1-norm <= 9: 196, of which strictly lonely (lon > 1/4): 192 -> the relation is necessary for tightness, not sufficient
+== (3) the Collatz cycle half is a per-period finite check ==
+ (period p, least A with positive clock, clock, max carry, max possible cycle element S_max/D):
+   (1, 2, 1, 1, 1)
+   (2, 4, 7, 11, 1)
+   (3, 5, 5, 49, 9)
+   (4, 7, 47, 331, 7)
+   (5, 8, 13, 1121, 86)
+   (6, 10, 295, 6995, 23)
+   (7, 12, 1909, 43289, 22)
+   (8, 13, 1631, 133963, 82)
+   (9, 15, 13085, 813601, 62)
+   (10, 16, 6487, 2473571, 381)
+   (11, 18, 84997, 14913449, 175)
+   (12, 20, 517135, 89827835, 173)
+ every positive cycle of period p has elements <= S_max/D for its shape, so at fixed p the cycle question is a finite check (Steiner for one run, Simons-de Weger and Hercher for m runs); the divergence half has no such parameter
+total 11s
