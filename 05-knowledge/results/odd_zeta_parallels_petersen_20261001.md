@@ -7,7 +7,7 @@
   [`collatz_golden_holonomy_20261001.md`](collatz_golden_holonomy_20261001.md) (holonomy mirror).
 
 **Status.**
-- Audit of arXiv:2609.22316: its proof is INVALID. The decisive error is elementary and checked here; an
+- Audit of arXiv:2609.22316: its proof is INVALID. The decisive error is elementary, is checked here, and is confirmed by an
   independent numerical audit is in §2.
 - Structural parallels: typed (DICTIONARY / STRUCTURAL); facts about M̄₀,ₙ are standard (Keel).
 - Ziegler's question (is the product of two Petersen graphs polytopal?): OPEN. Nothing is claimed beyond the
@@ -76,7 +76,8 @@ and claims `C₀' = 5.7535 > C₂' = 5.2769`.
    `lim (1/n) log Φ_n = ∫₀¹ φ(y) ψ'(1+y) dy = ∫φ dψ − ∫φ dy/y² = 3(ψ(1) − ψ(2/3)) − 3/2 = 2.22306 − 1.5`.
 
 3. **The preprint subtracts the second integral instead of adding it back.** Its `C₂' = 9 − 2.22306 − 1.5 =
-   5.27694374` reproduces its stated value to 8 digits. The correct value is `C₂' = 9 − 0.72306 = 8.27694`.
+   5.27694374` reproduces its stated value to 8 digits. The correct value, keeping its own denominator exponent 9,
+   is `C₂' = 9 − 0.72306 = 8.27694`. With the exponent that Zudilin's lemma actually supports (10), it is 9.27694.
 4. **Even the trivial bound kills it.** `v_p ≤ 3` and `Σ_{p≤n} log p ~ n`, so the gain is at most 3 and
    `C₂' ≥ 6 > C₀' = 5.7535`.
 
@@ -85,7 +86,34 @@ and claims `C₀' = 5.7535 > C₂' = 5.2769`.
 **Verdict: INVALID.** The integer linear forms grow like `e^{(8.28 − 5.75)n} = e^{2.52n}` instead of tending to 0.
 Zudilin's theorem (one of ζ(5), ζ(7), ζ(9), ζ(11) is irrational, 2001) is not improved.
 
-AUDIT-PLACEHOLDER
+**Independent numerical audit (subagent, own code; record in the session scratchpad `s21/zaudit/AUDIT.md`).**
+
+*Sources.*
+- The preprint's construction is Zudilin's *Arithmetic of linear forms involving odd zeta values* (J. Théor.
+  Nombres Bordeaux 16 (2004); arXiv:math/0206176), Section 8, with `q = 13` replaced by `q = 11`. The citations'
+  page numbers do not exist in the works cited.
+- Zudilin's Lemma 11 gives `lim (1/n) log Φ_n = ∫φ dψ − ∫₀^{1/m} φ dx/x²`. His Proposition 5 gives
+  `C₂ = r m₁ + m₂ + … − (∫φ dψ − ∫φ dx/x²)`.
+
+*The sign.* Read with the subtraction, the formula reproduces Zudilin's published `C₂ = 226.24944266…` for his own
+example (`q = 13`, `η₀ = 91`). Read with the preprint's flip, it gives 127.25, which is wrong.
+
+*Confirmed.*
+- `C₀' = 5.75349395301` (claim (c) is true). The saddle point `τ₀ = 2.86852453 + 0.11960091 i` is reproduced, and
+  regressions on the exact `F_n` up to `n = 450` give 5.7535.
+- The linear forms are exact: `A₃ = A₄ = A₆ = A₈ = A₁₀ = 0` for all `n = 3..300`, and they agree with direct
+  summation to 45–85 digits (claim (a) is true).
+- `(1/n) log Φ_n = 0.6282, 0.7178, 0.7199, 0.7202, 0.7216, 0.7226` at `n = 10³…10⁸`, converging to 0.72306.
+
+*Further errors.*
+- The integrality lemma (claim (b): `2D_n⁹Φ_n⁻¹ A_i ∈ Z`) is false. It fails for 280 of the 298 values
+  `n = 3..300`, and the first counterexample is `n = 13, p = 7`. The step that creates the extra power silently
+  changes an exponent `−(11−j)` into `−(9−j)`. The correct form, `D_n^{10} Φ_n⁻¹`, is Zudilin's Lemma 19.
+- The denominator exponent is 10, not 9: the paper drops `m₈`.
+- `φ` is never defined in the preprint.
+
+*Consequence.* With the true least common denominators `d_n`, `ln(d_n|F_n|)` grows at slope `+2.73` per unit `n`.
+The integer linear forms explode instead of tending to 0: `ln(d_n|F_n|) = 1231.7` at `n = 450`.
 
 ## 3. What the objects represent
 
