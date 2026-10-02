@@ -90,3 +90,8 @@ The owner wrote odd numbers as `A = 2N - 1` and their Syracuse images as `A - K`
   - The k-step drop equation at `D = 0` is exactly the cycle equation `(2^p - 3^k) x = c`.
   - The `3x-1` sheet has identical drop statistics, yet it has extra cycles. So drop statistics cannot rule out cycles.
 - **What is special to `q = 3`.** It is the only odd multiplier with a unit branch on both sides (`3 = 2 + 1 = 4 - 1`). Hence it is the only one whose drop map hits every integer.
+
+**FORMALIZED 2026-10-01 (Lean round 2; package [`04-computation/lean/ProcgenSelfieEdim/`](../../04-computation/lean/ProcgenSelfieEdim/README.md); orchestrator rebuilt from scratch, verify.py PASS).**
+- Prop. 2.6, two copies over Z: `dropZ_unit_pos`, `dropZ_unit_neg`, `dropZ_fibre`, `fibreZ_length` (exactly 2 + N(6d+1) preimages).
+- Theorem 4.5, two consecutive drops determine the point, for 3x+1 and 3x-1: `drop_pair_injective`, `dropM_pair_injective`.
+- Theorem 5.2, both directions, over positive odd A: `units_nonneg_iff`, `units_neg_iff`, `units_all_iff` (every integer is a drop iff q = 3).
