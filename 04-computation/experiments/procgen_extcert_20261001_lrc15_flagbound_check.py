@@ -27,6 +27,10 @@ Checks:
   E. The prime mass: the 71 gate primes are distinct primes > 15 (so coprime to 360360); sum log p = 408.8233173785861..
      > target; margin 6.8388 > log 569; the 52 'J(14,p) empty' gates alone give less than the target, so the 19 gates
      closed with the few-exception shift lemma (p = 89..241 except 239) are load-bearing.
+  F. Remark 3.9 / Table 1 side claims: the shape bounds R_13 < 101/200 (H > (2600/101)^2) and R_15 < 1/2 (H > 900) by
+     multistart minimization; the first 59 gate primes of the fourteen-runner package (its Table 6.1, read from the
+     package's paper.tex) end at 523 and have sum log p = 341.17 > 341.03, the n = 13 flag threshold; the table's block
+     sums 24.9221 / 272.6869 / 383.9202 and total 681.5292 are recomputed.
 """
 import itertools
 import math
@@ -265,6 +269,51 @@ def check_E():
        f'E: the 52 strict J(14,p) = {{}} gates ({strict_p[0]}, {strict_p[1]}, ..) alone give {mpmath.nstr(strict, 10)} < target: the 19 gates {near} closed through the few-exception shift lemma are load-bearing')
 
 
+def shape_min(n, starts=200, seed=0):
+    rng = np.random.default_rng(seed)
+    def f(z):
+        u = np.concatenate([np.clip(z, 1e-12, 1.0), [1.0]])
+        return math.log(H_of_u(u, n))
+    best = math.inf
+    for s_ in range(starts):
+        z0 = rng.uniform(0.01, 1.0, n - 1) if s_ % 2 else rng.uniform(0.01, 0.3, n - 1)
+        res = minimize(f, z0, method='L-BFGS-B', bounds=[(1e-9, 1.0)] * (n - 1))
+        best = min(best, res.fun)
+    return math.exp(best)
+
+
+def check_F():
+    import re
+    H13 = shape_min(13, seed=13)
+    H15 = shape_min(15, seed=15)
+    ok(H13 > (2600 / 101) ** 2 and H15 > 900,
+       f'F: shape bounds: min H_13 = {H13:.3f} > (2600/101)^2 = {(2600 / 101) ** 2:.3f} (R_13 < 101/200); min H_15 = {H15:.3f} > 900 (R_15 < 1/2)')
+    tex = open(os.path.join(PKG, '..', 'lrc14', 'unpacked', 'fourteen_lonely_runners', 'paper.tex')).read()
+    i = tex.index('Small closed &')
+    j = tex.index('\\textbf{Total}', i)
+    blocks = re.findall(r'(Small closed|Consecutive|Tail) &(.*?)& (\d+) & ([\d.]+)', tex[i:j], re.S)
+    allp = []
+    good = True
+    for name, plist, cnt, ssum in blocks:
+        ps = [int(x) for x in re.findall(r'\d+', plist)]
+        allp += ps
+        bs = mpmath.fsum(mpmath.log(q) for q in ps)
+        good &= len(ps) == int(cnt) and abs(bs - mpmath.mpf(ssum)) < 1e-4
+    allp.sort()
+    tot = mpmath.fsum(mpmath.log(q) for q in allp)
+    first59 = allp[:59]
+    s59 = mpmath.fsum(mpmath.log(q) for q in first59)
+    _, _, K13, _ = flag_constants(13)
+    A13 = mpmath.mpf(K13.denominator) ** 0.5 / mpmath.mpf(K13.numerator) ** 0.5
+    t13 = 13 * (mpmath.log(A13) - mpmath.log(13) + mpmath.log(mpmath.mpf(101) / 200))
+    logB13 = 13 * (12 * mpmath.log(91) - mpmath.log(13))
+    ok(good and len(allp) == 111 == len(set(allp)) and all(isprime(q) for q in allp) and abs(tot - mpmath.mpf('681.5292')) < 1e-4
+       and first59[-1] == 523 and s59 > t13 and tot - mpmath.log(877) > logB13,
+       f'F: fourteen-runner gate table: 111 distinct primes, block sums reproduced, total {mpmath.nstr(tot, 10)}; without '
+       f'p = 877: {mpmath.nstr(tot - mpmath.log(877), 10)} > log B_13 = 13(12 log 91 - log 13) = {mpmath.nstr(logB13, 10)}; '
+       f'the first 59 (through {first59[-1]}) sum to {mpmath.nstr(s59, 8)} > {mpmath.nstr(t13, 8)} (Remark 3.9)')
+
+
 K14 = None
 
 
@@ -278,6 +327,7 @@ def main():
     print('==== C ====', flush=True); check_C()
     print('==== D ====', flush=True); check_D()
     print('==== E ====', flush=True); check_E()
+    print('==== F ====', flush=True); check_F()
     print(f'elapsed {time.time() - t0:.0f} s')
     print('ALL CHECKS PASSED' if all(OKS) else 'SOME CHECK FAILED')
 

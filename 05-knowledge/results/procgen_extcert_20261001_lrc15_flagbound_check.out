@@ -20,5 +20,8 @@
 [OK] E: 71 distinct gate primes, all prime and > 15 (coprime to 360360), from 89 to 569
 [OK] E: sum log p = 408.8233173785861075681 > target 401.984505745934; margin 6.8388116 > log 569 = 6.34388
 [OK] E: the 52 strict J(14,p) = {} gates (239, 251, ..) alone give 310.0033636 < target: the 19 gates [89, 131, 149, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229, 233, 241] closed through the few-exception shift lemma are load-bearing
+==== F ====
+[OK] F: shape bounds: min H_13 = 664.926 > (2600/101)^2 = 662.680 (R_13 < 101/200); min H_15 = 944.961 > 900 (R_15 < 1/2)
+[OK] F: fourteen-runner gate table: 111 distinct primes, block sums reproduced, total 681.529208; without p = 877: 674.752701 > log B_13 = 13(12 log 91 - log 13) = 670.3497414; the first 59 (through 523) sum to 341.17469 > 341.03199 (Remark 3.9)
 elapsed 15 s
 ALL CHECKS PASSED
