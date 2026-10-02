@@ -1,0 +1,8 @@
+strong 7-tournaments (labelled): 1677488; OCF failures: 0; H = 21 anywhere at n = 7: 0
+floor f(7) = min H over strong = 25; min alpha_1 = c3+c5+c7 over strong = 9 (attained with H = 31)
+strong H = 25: (alpha_1, alpha_2 = d33, labelled count): (12, 0, 5040)
+strong H = 27: (alpha_1, alpha_2 = d33, labelled count): (11, 1, 5040) (13, 0, 10080)
+strong H = 29: (alpha_1, alpha_2 = d33, labelled count): (10, 2, 10080)
+strong H = 31: (alpha_1, alpha_2 = d33, labelled count): (9, 3, 5040) (15, 0, 5040)
+floor tournaments (strong, H = 25): 5040 labelled, 1 isomorphism class(es); score vector of the canonical form: 3 1 1 2 4 5 5
+strong H values below 60: 25 27 29 31 33 35 37 39 41 43 45 47 49 51 53 55 57 59

@@ -1,0 +1,88 @@
+== A. H = I(Omega, 2): which conflict graphs give 7 and 21
+  I(Omega, 2) = 7:
+    alpha = (3, 0, 0): ['K3'];  I(Omega, x) = 3*x + 1
+    (alpha-vectors with no graph: [(1, 1, 0)])
+  I(Omega, 2) = 21:
+    alpha = (4, 3, 0): ['K3 + K1 (complement K_{1,3})', 'P4 (self-complementary)'];  I(Omega, x) = (x + 1)*(3*x + 1)
+    alpha = (6, 2, 0): ['K6 - 2K2', 'K6 - P3'];  I(Omega, x) = 2*x**2 + 6*x + 1
+    alpha = (8, 1, 0): ['K8 - e'];  I(Omega, x) = x**2 + 8*x + 1
+    alpha = (10, 0, 0): ['K10'];  I(Omega, x) = 10*x + 1
+    (alpha-vectors with no graph: [(0, 1, 2), (0, 3, 1), (0, 5, 0), (2, 0, 2), (2, 2, 1), (2, 4, 0), (4, 1, 1), (6, 0, 1)])
+  so H = 7 iff Omega = K3, and H = 21 iff Omega is K10, K8 - e, K6 - 2K2, K6 - P3, P4 or K3 + K1.
+  I(P4, x) = I(K3 + K1, x) = (1 + x)(1 + 3x): the 7-polynomial 1 + 3x is a factor of one of the four
+  21-polynomials, so the 21-problem contains the 7-problem
+== B. the Camion-Moon bound against the strong floor
+  m = 3: strong labelled 2, floor f(m) = 3, Camion-Moon bound B(m) = 3, strong H values [3]
+  m = 4: strong labelled 24, floor f(m) = 5, Camion-Moon bound B(m) = 5, strong H values [5]
+  m = 5: strong labelled 544, floor f(m) = 9, Camion-Moon bound B(m) = 9, strong H values [9, 11, 13, 15]
+  m = 6: strong labelled 22320, floor f(m) = 15, Camion-Moon bound B(m) = 13, strong H values [15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+  m = 7 (C census, camion_busch_strong7_20261002.out): f(7) = 25, min alpha_1 = 9; B(7) = 17 ; B(8) = 21 ; B(9) = 25
+  m = 5: the floor is attained only with (alpha_1, alpha_2) in [(4, 0)]
+  m = 6: the floor is attained only with (alpha_1, alpha_2) in [(7, 0)]
+  (m = 7: only (12, 0), one isomorphism class of 5040 labellings; see the C census)
+  -> gap 7 lies in (f(4), f(5)) = (5, 9) and f(5) = 9 = B(5): Camion + Moon certify it exactly.
+     gap 21 lies in (f(6), f(7)) = (15, 25), but B(7) = 17 and B(8) = 21 do not exceed 21: Camion + Moon
+     cannot certify it; it needs the true floor f(7) = 25 (Busch 2006) and floor monotonicity (THM-1370).
+== C. the mod-4 locks around the gaps (THM-466: H = 1 + 2 alpha_1 mod 4)
+  n = 5, all tournaments with 5 <= H <= 9 (c3, c5, H): {(2, 0, 5): 240, (3, 1, 9): 240}
+  strong n = 6, c3 = 4: c5 in [2, 3, 4], d33 in [0, 1], H in [15, 17]
+  strong n = 6, c3 = 5: c5 in [4, 6], d33 in [0, 1], H in [19, 23, 27]
+  strong n = 6, c3 = 6: c5 in [4, 5, 6, 7, 8], d33 in [0, 1, 2], H in [23, 25, 29, 31, 33, 37]
+  strong n = 6, c3 = 7: c5 in [7, 9], d33 in [0, 1, 2], H in [33, 37]
+  strong n = 6, c3 = 8: c5 in [6, 8, 11, 12], d33 in [1, 2, 4], H in [41, 43, 45]
+  -> the window around 7 is locked to H = 1 (mod 4) [7 = 3 mod 4]; the window around 21 is c3 = 5, where
+     c5 is always even and d33 <= 1, so H = 11 + 2 c5 + 4 d33 is 3 (mod 4) [21 = 1 mod 4].
+     c3 = 4 gives H <= 17 and c3 >= 6 gives H >= 23, so 21 falls through.
+== D. score vectors are the weights of V_rho; the n = 4 shells
+  n = 3: prod_(i<j) (x_i + x_j) = s_delta (bialternant) = sum over tournaments of x^score: verified; 7 score vectors
+  n = 4: prod_(i<j) (x_i + x_j) = s_delta (bialternant) = sum over tournaments of x^score: verified; 38 score vectors
+  n = 5: prod_(i<j) (x_i + x_j) = s_delta (bialternant) = sum over tournaments of x^score: verified; 291 score vectors
+  n = 4, squared distance 1.0 from the centre: 6 score vectors, multiplicity [4]
+  n = 4, squared distance 3.0 from the centre: 8 score vectors, multiplicity [2]
+  n = 4, squared distance 5.0 from the centre: 24 score vectors, multiplicity [1]
+  shell 1 (6 strong score vectors): octahedron, edges (12, 1.414214) ; shell 3 (8 "3-cycle + source/sink"): cube, edges (12, 2.0) ; shell 5 (24 transitive): truncated octahedron, edges (36, 1.414214)
+  the 6 strong score vectors are the face centres of the cube of the 8 one-triangle score vectors
+  arc reversals change the score by a root e_j - e_i: 12 roots, edges at minimal distance (24, 1.414214) = cuboctahedron (12 vertices, 24 edges), the medial graph of cube and octahedron
+  score lattice A3 = FCC: an octahedral hole has 6 nearest lattice points, a tetrahedral hole 4 ; Voronoi cell vertices: 6 octahedral + 8 tetrahedral holes = rhombic dodecahedron
+  n = 5 shells around the centre (2,2,2,2,2): squared distance -> {multiplicity: number of score vectors}: {0: {24: 1}, 2: {14: 20}, 4: {8: 30}, 6: {4: 60}, 8: {2: 60}, 10: {1: 120}}
+== E. planar duality on the tetrahedron
+  c3(T) = #sources + #sinks of the dual tournament T*, for all 64 labelled 4-tournaments
+  (class of T, class of T*): {('transitive', 'strong'): 24, ('middle', 'middle'): 16, ('strong', 'transitive'): 24} ; dual of dual = T or its converse: True
+  transitive 4-tournaments joined by single arc reversals: 24 vertices, 36 edges; isomorphic to the flag graph of the tetrahedron: True (the graph of the truncated octahedron)
+== F. P7 on the torus
+  the 14 cyclic triangles of P7 are the faces {i,i+1,i+3}, {i,i+2,i+3} of the 7-vertex torus triangulation
+  (each edge in one face of each kind; links are hexagons; V - E + F = 7 - 21 + 14 = 0); A-faces and B-faces
+  are the lines of the Fano planes {0,1,3} + i and {0,2,3} + i
+  the surface is orientable with A-faces read (i,i+1,i+3) and B-faces read (i,i+3,i+2); every arc of P7 runs
+  along its A-face and against its B-face: True -> in the dual every A-face is a source and every B-face a sink
+  orientations of the 21 edges making all 14 faces directed triangles: 2 (P7 and its converse)
+  |Aut(P7)| = 21: orbits on vertices 1 (7), on arcs 1 (21, regular), on faces 2 ([7, 7]); since every edge borders one face of each kind, the two kinds alternate around each vertex
+  dual graph: 14 vertices, cubic True, bipartite (A | B) True, girth 6: the Heawood graph (Fano incidence graph); dual orientation = points -> lines
+  medial graph: 21 vertices, 4-regular True; Aut(P7) acts regularly on its vertices: True (a Cayley graph of the Frobenius group of order 21)
+  H(P7) = 189 = 9 x |Aut(P7)|; Hamiltonian cycles 24, Aut-orbits of sizes [3, 21] (the size-3 orbit: the circulant cycles x -> x + d, d in {1,2,4})
+== G. tournaments with T - v transitive: H = 1 + 2 K(w)
+  every odd cycle passes through v, so Omega is complete and H = 1 + 2 alpha_1, where alpha_1 =
+  K(w) = sum over 10-inversions b < a of w (w_b = 1: v beats b; w_a = 0: a beats v) of 2^max(0, a-b-2):
+  verified against the path DP for every word of length <= 7
+  attained K below 256 (words of length <= 14): 145 of 256; first missing K [3, 6, 10, 14, 17, 20, 21, 24, 27, 28, 29, 33]
+  K = 3 and K = 10 (H = 7, 21) are missing, as they must be; the family also misses about half of all values
+== H. 60 = 2^2 3 5 = |A5|
+  proper divisors [2, 3, 4, 5, 6, 10, 12, 15, 20, 30]: primes [2, 3, 5], squarefree composites [6, 10, 15, 30], square-containing [4, 12, 20] (3-4-3)
+  icosahedral rotation group: point stabilizers C2, C3, C5 with orbits 30, 20, 12 (edges, dodecahedron
+  vertices, icosahedron vertices); axis stabilizers D2, D3, D5 with 15, 10, 6 axes
+  stabilizer orders and orbit sizes together are exactly the ten proper divisors: True
+  V - E + F = 12 - 30 + 20 = 2 ; passing from points to axes (the antipodal quotient)
+  doubles each stabilizer (2 -> 4, 3 -> 6, 5 -> 10) and halves each orbit (30 -> 15, 20 -> 10, 12 -> 6)
+  triangle group (2, 2, 5): 1/p + 1/q + 1/r = 6/5 -> rotation group of order 10
+  triangle group (2, 3, 3): 1/p + 1/q + 1/r = 7/6 -> rotation group of order 12
+  triangle group (2, 3, 4): 1/p + 1/q + 1/r = 13/12 -> rotation group of order 24
+  triangle group (2, 3, 5): 1/p + 1/q + 1/r = 31/30 -> rotation group of order 60
+  triangle group (2, 3, 6): 1/p + 1/q + 1/r = 1 -> flat (torus maps, e.g. K7 on the torus is {3,6})
+  triangle group (2, 3, 7): 1/p + 1/q + 1/r = 41/42 -> hyperbolic (the Klein quartic is (2,3,7), automorphisms PSL(2,7))
+== I. the Collatz side
+  Syracuse orbit of 7 (7 = 3 mod 4): [7, 11, 17, 13, 5, 1]
+  Syracuse orbit of 21 (21 = 1 mod 4): [21, 1]
+  quadratic residues mod 7: [1, 2, 4] = the trivial Collatz cycle {1, 2, 4}
+  1 + 2 + 4 = 7 ; 1 + 4 + 16 = 21 ; q^2 + q + 1 at q = 2, 4: 7 21
+  verdict: NUMEROLOGY (no map between Syracuse dynamics and Hamiltonian path counts)
+ALL CHECKS PASSED
