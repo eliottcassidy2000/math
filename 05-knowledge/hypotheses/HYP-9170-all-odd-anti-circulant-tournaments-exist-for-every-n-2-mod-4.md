@@ -34,3 +34,11 @@ related:
 - Exhaustive censuses up to `N = 26`.
 - Proofs of (P2) for `m = 3, 5`.
 - The 14-vertex example `QR127[mu_14]`, built from the Mersenne prime `2^7 - 1` and the `x2`-codes of length-7 parity words.
+
+**UPDATE 2026-10-01 (THM-4532): an explicit candidate family for (P1).**
+The two-sheet clocks `D_r` are anti-circulant: the sheet swap composed with a shift is a single `2r`-cycle anti-automorphism. They are all-odd for every odd `r <= 19` (`N <= 38`), and `D_9` is the second all-odd class at `N = 18` in THM-4529's census.
+
+**Conjecture C1 (the explicit form of P1):** `D_r` is all-odd for every odd `r`.
+- Only the vertical arcs are proved odd so far (THM-4532 T1).
+- The non-vertical arcs lie in orbits of size `2r` and need a new mechanism.
+- Their parities are not affine in the cross set over GF(2).

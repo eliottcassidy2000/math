@@ -1,0 +1,121 @@
+procgen_tcpc_20261001_run.py -- TCPC lane runner
+
+== A. engines: C exact / C parity / Python DP / brute force / memo agree  [t=0.0s]
+  60 random multidigraphs (n <= 7, loops and multiplicities): all five engines agree
+  H(QR_7) = 189, HC = 24; H(QR_19) = 19 x rooted = 1172695746915 (matches HYP-9028 record)
+
+== B. L1 reflection law on all clocks of odd order  [t=0.5s]
+  Z/3: 4 connection sets, L1 (1)(2)(3) hold
+  Z/5: 16 connection sets, L1 (1)(2)(3) hold
+  Z/7: 64 connection sets, L1 (1)(2)(3) hold
+  Z/9: 256 connection sets, L1 (1)(2)(3) hold
+  Z/11: 1024 connection sets, L1 (1)(2)(3) hold
+  Z/13: 4096 connection sets, L1 (1)(2)(3) hold
+  300 random multisets with loops: L1 holds
+  Z/3 x Z/3: all 256 connection sets, L1 holds
+  [--long] Paley p=23: F = 63871533 = 11 x 5806503 (odd quotient)
+  Paley p= 3: F = 1, F/|M| = 1 (odd), H = 3, H - pF divisible by 2p|M|
+  Paley p= 7: F = 9, F/|M| = 3 (odd), H = 189, H - pF divisible by 2p|M|
+  Paley p=11: F = 185, F/|M| = 37 (odd), H = 95095, H - pF divisible by 2p|M|
+  Paley p=19: F = 573057, F/|M| = 63673 (odd), H = 1172695746915, H - pF divisible by 2p|M|
+  even order (Z/4, Z/6, Z/8, Z/10, all connection sets, 2844 arcs out of 0): c(u->v) = number of
+    rho_(u+v)-symmetric HPs with middle arc u->v (mod 2)
+
+== C. L2 lexicographic law and the mod-9 clock table  [t=310.4s]
+  L2b composition formula = direct count on 40 random compositions (missing/doubled pairs, multiplicities)
+  L2 inner-arc parity and the corrected cross-arc parity (terms k_u, k_v in {1,2}) hold on 40 random
+    lexicographic products (1061 cross arcs); the naive (1,1)-only formula fails on 98 of them (REFUTED)
+  no all-odd lexicographic product among T[TT_2], TT_2[T] (|T| <= 7), T[QR_7 - v] (|T| <= 4): 1069 products
+  Clk(9,[1, 4, 7]         ) H =    648  HC =    72
+  Clk(9,[2, 5, 8]         ) H =    648  HC =    72
+  Clk(9,[1, 3, 4, 7]      ) H =   3159  HC =   207
+  Clk(9,[1, 3, 4, 6, 7]   ) H =  14256  HC =  1152
+  Clk(9,[1, 8]            ) H =     18  HC =     2
+  Clk(9,[1, 2, 4, 5, 7, 8]) H =  37584  HC =  3168
+  Clk(9,[1, 4, 7, 8]      ) H =   2268  HC =   154
+  Clk(9,[1, 2, 3, 4]      ) H =   3267  HC =   222
+  C3[S] closed form gives 648, 3159, 14256; Smirnov count 174, 216 x 174 = 37584; L2a isomorphisms (nauty)
+
+== D. L3 power-residue clocks mod 3^k  [t=321.9s]
+  k = 2..6: squares = 1 mod 3, cubes = +-1 mod 9, all d = 2^a 3^j power sets as predicted;
+            Sq Cu = U(3^k), |Sq cap Cu| = 3^(k-2) (direct product only for k = 2)
+  cube clock mod 9, 27 = undirected C_9 blown up; square clock mod 27 = C_3[9K_1] (nauty)
+  x = x^3 x^4 (mod 9); squares mod 9 = 0,1,4,0,7,7,0,4,1,0; cubes = 0,1,8,0
+
+== E. L4 multiplicative law and twisted spectral sum  [t=322.0s]
+  Clk(9, Sq Cu) = union of a Clk(9,Cu) over a in Sq = union of c Clk(9,Sq) over c in Cu; twisted spectral sums
+
+== F. L5 complement duality H(D) = sum_k (-1)^(n-k) k! pc_k(complement)  [t=322.0s]
+  60 random digraphs: identity exact; H(D) = H(complement) mod 2
+
+== G. two-sheet clocks and Redei-rigid (all-odd) tournaments  [t=322.5s]
+  Prop 1.1: QR_q - 0 = T(S_A, X) in discrete-log coordinates for q = 7, 11, 19, 23 (nauty)
+  T1: all 5688 vertical arcs of all symmetric reversed-sheet two-sheet clocks, r <= 9, are odd
+  N =  6:    32 two-sheet clocks,  12 all-odd labelled = (r-1)N, ONE class: H = 45, |Aut| = 3
+  N = 10:   512 two-sheet clocks,  40 all-odd labelled = (r-1)N, ONE class: H = 15745, |Aut| = 5
+  N = 14:  8192 two-sheet clocks,  84 all-odd labelled = (r-1)N, ONE class: H = 24540117, |Aut| = 7
+  N = 14 witness C0 = {2,4,6,7,9,11}, C1 = {1,8,...,13} = D_7: H = 24540117, HC = 1001369,
+    all 91 arcs odd (7 values, 3085307..4087295) by C 128-bit, Python DP and memoized H(T)-H(T-e)
+  D_3  (N =  6): all-odd by the full parity engine and the lean engine (5 orbit reps); exact H = 45
+  D_5  (N = 10): all-odd by the full parity engine and the lean engine (9 orbit reps); exact H = 15745
+  D_7  (N = 14): all-odd by the full parity engine and the lean engine (13 orbit reps); exact H = 24540117
+  D_9  (N = 18): all-odd by the full parity engine and the lean engine (17 orbit reps); exact H = 116670839805
+  D_11 (N = 22): all-odd by the full parity engine and the lean engine (21 orbit reps)
+  control: interval cross set {0..m-1} is all-odd exactly for r = 3 mod 4 (r = 3,5,7,9,11)
+  D_3, D_5 also by the pure-Python DP
+  arc parities of T(S, X) are not affine in X over GF(2) (r = 3, 5)
+  all 456 seven-vertex tournaments x 7 vertices: (Q all-even, Q-v all-odd) = both 7, even only 189,
+    odd only 23, neither 2973
+  quadrant form of D_r (signs of Im z, -Im z, Re z; vertical arcs by r mod 4) checked for r = 3..39
+  D_3 = QR_7 - v, D_5 = QR_11 - v, D_9 != QR_19 - v, D_11 != QR_23 - v; |Aut D_r| = r;
+  apex completion Q_r regular, Q_3 = QR_7, Q_5 = QR_11, |Aut Q_r| = r for r = 7, 9, 11
+  r = 9: all sheets x all cross sets (176 orbit reps): exactly two all-odd classes, D_9 and QR_19 - v
+  [--long] r = 11 rotational sheets: 188 translation classes of X, 6 all-odd, 3 isomorphism classes: [[(0, 1, 2, 3, 4), (0, 1, 2, 3, 4, 5)], [(0, 1, 4, 5, 9), (0, 1, 2, 4, 7, 8)], [(0, 1, 3, 7, 8), (0, 1, 2, 5, 6, 9)]]
+  [--n26] D_13 (N = 26): all 25 arc orbits odd on T and on T^op; interval control 23/25 odd
+  circulants on Z/7 (2 classes up to multipliers): minus a vertex all-odd only for Paley
+  circulants on Z/11 (4 classes up to multipliers): minus a vertex all-odd only for Paley
+  circulants on Z/15 (16 classes up to multipliers): minus a vertex all-odd only for none
+  circulants on Z/19 (30 classes up to multipliers): minus a vertex all-odd only for Paley
+  circulants on Z/23 (94 classes up to multipliers): minus a vertex all-odd only for Paley
+  Paley-type products on Z/3 x Z/5 (chi_3(a) chi_5(b), two choices on 0 x Z/5): not doubly regular,
+    H = 197728485 / 197094945, minus a vertex 73/91 and 41/91 arcs odd
+  Q_r all-even for r = 3,5,7,9; Q_7 - v all-odd for v = inf, a_0, b_0; Q_9 - a_0 has 97/153 odd arcs
+  Z/19 sextic-union tournaments: 2 classes; Paley H = 1172695746915 (|Aut| 171, minus a vertex all-odd)
+    versus mixed unions H = 1167595581285 (|Aut| 57, minus a vertex 117/153 odd)
+  mod 7: squares {1,2,4} = <2> (Paley, trivial-cycle code), cubes {1,6}; mod 9: squares {1,4,7} = <4>,
+    cubes {1,8}, <2> = U(9): the same Z/3 x Z/2 clock group, a tournament on the field, a blow-up on the ring
+  [--long] N = 13, Z/11 + 2    :    256 tournaments, none all-odd, best 22/78 odd arcs
+  [--long] N = 13, Z/7 + 6     :  28672 tournaments, none all-odd, best 54/78 odd arcs
+  [--long] N = 13, Z/5 x 2 + 3 : 262144 tournaments, none all-odd, best 72/78 odd arcs
+
+== G2. inclusion-exclusion engines (Karp/Bax over GF(2)[e], O(1) memory) and D_r beyond N = 26  [t=1517.3s]
+  r =  3: karp3 = karp4 = subset DP; odd orbits: D_r 5/5, interval 5/5, random0 5/5, random1 3/5, random2 5/5
+  r =  5: karp3 = karp4 = subset DP; odd orbits: D_r 9/9, interval 7/9, random0 9/9, random1 7/9, random2 7/9
+  r =  7: karp3 = karp4 = subset DP; odd orbits: D_r 13/13, interval 13/13, random0 11/13, random1 7/13, random2 5/13
+  r =  9: karp3 = karp4 = subset DP; odd orbits: D_r 17/17, interval 15/17, random0 7/17, random1 9/17, random2 5/17
+  r = 11: karp3 = karp4 = subset DP; odd orbits: D_r 21/21, interval 21/21, random0 9/21, random1 17/21, random2 11/21
+  r = 13: karp3 = karp4 = lean; odd orbits: D_r 25/25, interval 23/25, random0 11/25, random1 11/25, random2 15/25
+  [--long] D_15 (N = 30): all 29 arc orbits odd by karp3 and karp4 (71582943 subset reps)
+  [--n34] D_17 (N = 34): all 33 arc orbits odd by karp3 on T and karp4 on T^op (1010580543 subset reps)
+
+== H. the Syracuse clock  [t=3675.4s]
+  Syrac(Z/9) = (0, 8, 16, 0, 11, 4, 0, 2, 22)/63  (Tao 2019, after Lemma 1.12) reproduced
+  k = 1..8: class 0 null; class 1 has mass 1/3; G2 P(2x) = 2P(x) for x = 1 mod 3; G3 one-tick IFS identity;
+            projection consistency (Tao (1.23))
+  level 9: mu1(1) = mu1(4)/4 + 1/4, mu1(4) = mu1(7)/4 + 1/2, mu1(7) = mu1(1)/4  ->  (8, 11, 2)/21
+  coupling: P(s | c=1) = P(s+1 | c=0) = (11, 2, 8)/21; the law is not a product of its marginals
+  mod-9 residue chain: two distinct rows (out-twins over the sign bit), P^2 = 1 pi exactly
+  step law (c,s) -> (v mod 2, 1+c+v mod 3) holds for all 10^6 odd A < 2*10^6
+  mod 81: S(A) = (-1)^v (-2)^(lambda(A) - v), lambda(A) = log_(-2)(3A+1) = -A (mod 3): all odd A < 2*10^5
+  A_(n+1) mod 9 = (-1)^(v_n) 4^(1 + v_(n-1) + v_n): all 2,200,000 orbit transitions
+  empirical law of S^6(A) mod 9, 200000 random 80-bit A: TV distance 0.0048 to Tao
+
+== I. triplet instances  [t=3697.9s]
+  2040 primitive triples (m < 101): c +- (even leg) squares, c +- (odd leg) twice squares, never squares
+  squaring on {1,4,7}: 1 fixed, 4 <-> 7; doubling on Z/3 = negation; p = 3 is the only prime with 2 = -1
+  N <= 10^5: F = S + U  <=>  (U, S-U, F-S) palindromic; S = 2^U - 1 off squarefree;
+             solutions exactly p, p^3, p^2qr; 60 = 2^2*3*5: split 3-4-3 and rank split 3-4-3 differ by p^2 <-> pqr
+  primes 5 <= p < 200: p^3 = (p/3) (mod 9), p^2 in {1,4,7}
+
+671807 checks, 3698.1 s
+ALL CHECKS PASSED

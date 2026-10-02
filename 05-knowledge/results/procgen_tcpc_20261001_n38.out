@@ -1,0 +1,7 @@
+procgen_tcpc_20261001_run.py -- TCPC lane runner
+
+== D_19 (N = 38) by the inclusion-exclusion engine karp4  [t=0.3s]
+  D_19 (N = 38): H odd, all 37 arc orbits odd (14467258263 subset reps)
+
+2 checks, 4352.0 s
+ALL CHECKS PASSED
