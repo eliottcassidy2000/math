@@ -1931,6 +1931,27 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
+## MISTAKE-560 (2026-10-02, opus S15 Camion/Busch note; found by the independent audit) -- a classical theorem's bound taken from a canon derivation instead of the source, so the place where the direct count fails was misplaced; analogies typed as exact instances
+
+- **Claims:**
+  - (1) The draft of `camion_busch_gaps_polyhedra_collatz_20261002.md` §2 used THM-115's pancyclicity count (c_3 >= m - 2, c_k >= ceil(m/k)) and called it "Moon's bound". Moon 1966 (Cor. 2.1) proves the sharp c_k >= m - k + 1. That gives B*(m) = 1 + 2 floor((m-1)^2/4) = 3, 5, 9, 13, 19, 25, 33, not 3, 5, 9, 13, 17, 21, 25. Consequences:
+    - "Moon's bound of 8" at m = 7 is 9, attained by Moon's T'_7, the unique minimiser;
+    - "B(8) = 21; first exceeds 21 at m = 9" was an artefact of the weaker count, since B*(8) = 25;
+    - "that needs the true floor f(7) = 25" overstated what a floor proof needs (f(7) >= 23).
+  - (2) Busch 2006 was described as "proving Moon's 1972 conjecture". Busch shows Moon's upper-bound construction is optimal (Cor. 1).
+  - (3) §7 typed six triplets as "new exact instances" of the triplet principle. TCPC §4.1 requires a factor-2 cocycle on the swapped pair; none of the six supplies one (for 60, TCPC §4.3 shows there is none between 3 and 5).
+  - (4) Smaller:
+    - the Pi_1 lemma bound m log_3 m (m suffices: sum <= product) and "O(log^2 m)" with Busch (O(log m));
+    - "at least as hard as Collatz, unless completeness is false" lacked the explicit relative statement;
+    - the quasiregular patterns were not marked as patterns of the subgroup Aut(P7).
+- **What survives:**
+  - every computation (f(m) for m <= 7, the floor and minimiser classes, the mod-4 locks, the forbidden graphs, the Pi_1 lemma, the polyhedral dictionary);
+  - the verdict that the direct Camion-Moon count certifies the gap 7 exactly and not the gap 21, now located at m = 7 only;
+  - the Pi_1 versus Pi_2 verdict on the Collatz comparison.
+- **Rule:**
+  - Take a classical theorem's bound from the source paper, not from a canon argument that used a weaker form of it. Check sharpness (the extremal example) before calling a bound "Moon's".
+  - When a note claims "exact instances" of a principle, check every clause of the principle's definition for each instance.
+
 ## MISTAKE-559 (2026-10-02, opus S15 noble-polyhedra note; found by the independent audit) -- repo canon cited as stronger than it is (H-spectrum completeness), a coincidence of small numbers typed DICTIONARY, and a census claim made from a partial list
 
 - **Claims:**

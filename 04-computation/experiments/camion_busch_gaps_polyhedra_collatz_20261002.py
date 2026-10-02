@@ -5,7 +5,8 @@ The order-7 census is the C program camion_busch_strong7_20261002.c (+ .out).
 
 Sections:
   A  forbidden independence polynomials: H = I(Omega, 2) equals 7 or 21 exactly for which conflict graphs
-  B  the Camion-Moon bound B(m) against the strong floor f(m) (exhaustive m <= 6; m = 7 in the C census)
+  B  the direct Camion-Moon count B*(m) (Moon 1966: >= m - k + 1 k-cycles, sharp for Moon's T'_m) and THM-115's
+     weaker pancyclicity count B(m), against the strong floor f(m) (exhaustive m <= 6; m = 7 in the C census)
   C  the mod-4 locks around the gaps: n = 5 (gap 7) and strong n = 6 (gap 21)
   D  score vectors as weights: prod (x_i + x_j) = s_delta; the n = 4 shells (truncated octahedron, cube, octahedron),
      the arc-reversal roots (cuboctahedron), the score lattice (FCC, Voronoi cell the rhombic dodecahedron); n = 5
@@ -122,12 +123,22 @@ def strong_data(n):
 
 
 def camion_moon_bound(m):
-    # Moon: c3 >= m - 2; vertex-pancyclicity: every vertex on a k-cycle, so c_k >= ceil(m / k); OCF with alpha_2 >= 0
+    # THM-115's pancyclicity count: c3 >= m - 2 (Moon); every vertex on a k-cycle, so c_k >= ceil(m / k); alpha_2 >= 0
     return 1 + 2 * ((m - 2) + sum(math.ceil(m / k) for k in range(5, m + 1, 2)))
 
 
+def moon_bound(m):
+    # Moon 1966, Cor. 2.1 (sharp): a strong m-tournament has at least m - k + 1 directed k-cycles; alpha_2 >= 0
+    return 1 + 2 * sum(m - k + 1 for k in range(3, m + 1, 2))
+
+
+def moon_T_prime(m):
+    # Moon's T'_m: p_i -> p_j iff i = j - 1 or i >= j + 2 (consecutive arcs forward, all other arcs backward)
+    return {(i, j): (i == j - 1 or i >= j + 2) for i in range(m) for j in range(m) if i != j}
+
+
 def section_BC():
-    print('== B. the Camion-Moon bound against the strong floor')
+    print('== B. the direct Camion-Moon count against the strong floor')
     floor = {}
     data = {}
     for n in range(3, 7):
@@ -135,21 +146,34 @@ def section_BC():
         data[n] = rows
         sH = [H for st, *_, H in rows if st]
         floor[n] = min(sH)
+        minA1 = min(c3 + c5 for st, c3, c5, d33, H in rows if st)
         assert all(H >= n for st, *_, H in rows if st)      # Camion: a Hamiltonian cycle gives n Hamiltonian paths
-        print(f'  m = {n}: strong labelled {len(sH)}, floor f(m) = {floor[n]}, Camion-Moon bound B(m) = '
-              f'{camion_moon_bound(n)}, strong H values {sorted(set(sH))}')
-    print('  m = 7 (C census, camion_busch_strong7_20261002.out): f(7) = 25, min alpha_1 = 9; B(7) =',
-          camion_moon_bound(7), '; B(8) =', camion_moon_bound(8), '; B(9) =', camion_moon_bound(9))
+        print(f'  m = {n}: strong labelled {len(sH)}, floor f(m) = {floor[n]}, Moon count B*(m) = {moon_bound(n)}, '
+              f'pancyclicity count B(m) = {camion_moon_bound(n)}; min alpha_1 = {minA1} = Moon\'s '
+              f'{sum(n - k + 1 for k in range(3, n + 1, 2))}; strong H values {sorted(set(sH))}')
+        assert minA1 == sum(n - k + 1 for k in range(3, n + 1, 2))
+    print('  m = 7 (C census, camion_busch_strong7_20261002.out): f(7) = 25; min alpha_1 = 9 = Moon\'s 5 + 3 + 1, attained')
+    print('  only with alpha_2 = 3 (H = 31) by Moon\'s T\'_7 (unique up to isomorphism)')
     assert [camion_moon_bound(m) for m in range(3, 10)] == [3, 5, 9, 13, 17, 21, 25]
+    assert [moon_bound(m) for m in range(3, 10)] == [3, 5, 9, 13, 19, 25, 33]
+    assert all(moon_bound(m) == 1 + 2 * ((m - 1) ** 2 // 4) for m in range(3, 40))
+    print('  B*(m) = 1 + 2 floor((m-1)^2/4) = 3, 5, 9, 13, 19, 25, 33 (m = 3..9); THM-115\'s B(m) = 3, 5, 9, 13, 17, 21, 25')
+    for m in (5, 6, 7):
+        b = moon_T_prime(m)
+        assert strong(m, b)
+        ck = {k: sum(hc(b, S) for S in itertools.combinations(range(m), k)) for k in range(3, m + 1)}
+        assert all(ck[k] == m - k + 1 for k in ck)
+        print(f'  Moon\'s T\'_{m}: strong, exactly m - k + 1 k-cycles for every k ({ck}), H = {hp(m, b)}')
     assert floor == {3: 3, 4: 5, 5: 9, 6: 15}
     for n in (5, 6):
         at_floor = {(c3 + c5, d33) for st, c3, c5, d33, H in data[n] if st and H == floor[n]}
         print(f'  m = {n}: the floor is attained only with (alpha_1, alpha_2) in {sorted(at_floor)}')
         assert all(a2 == 0 for _, a2 in at_floor)
     print('  (m = 7: only (12, 0), one isomorphism class of 5040 labellings; see the C census)')
-    print('  -> gap 7 lies in (f(4), f(5)) = (5, 9) and f(5) = 9 = B(5): Camion + Moon certify it exactly.')
-    print('     gap 21 lies in (f(6), f(7)) = (15, 25), but B(7) = 17 and B(8) = 21 do not exceed 21: Camion + Moon')
-    print('     cannot certify it; it needs the true floor f(7) = 25 (Busch 2006) and floor monotonicity (THM-1370).')
+    print('  -> gap 7 lies in (f(4), f(5)) = (5, 9), and B*(5) = f(5) = 9: the direct count certifies it exactly.')
+    print('     gap 21 lies in (f(6), f(7)) = (15, 25); the direct count gives B*(7) = 19 < 21 (B*(8) = 25 already exceeds')
+    print('     21), so it does not certify 21 at m = 7. A floor proof needs f(7) > 21; the true value 25 is Busch 2006,')
+    print('     extended to all m >= 7 by monotonicity (THM-1370). What the count misses at m = 7 is alpha_2.')
 
     print('== C. the mod-4 locks around the gaps (THM-466: H = 1 + 2 alpha_1 mod 4)')
     near7 = Counter((c3, c5, H) for st, c3, c5, d33, H in data[5] if 5 <= H <= 9)

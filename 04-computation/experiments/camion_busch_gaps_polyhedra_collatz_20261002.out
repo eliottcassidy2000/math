@@ -11,18 +11,24 @@
   so H = 7 iff Omega = K3, and H = 21 iff Omega is K10, K8 - e, K6 - 2K2, K6 - P3, P4 or K3 + K1.
   I(P4, x) = I(K3 + K1, x) = (1 + x)(1 + 3x): the 7-polynomial 1 + 3x is a factor of one of the four
   21-polynomials, so the 21-problem contains the 7-problem
-== B. the Camion-Moon bound against the strong floor
-  m = 3: strong labelled 2, floor f(m) = 3, Camion-Moon bound B(m) = 3, strong H values [3]
-  m = 4: strong labelled 24, floor f(m) = 5, Camion-Moon bound B(m) = 5, strong H values [5]
-  m = 5: strong labelled 544, floor f(m) = 9, Camion-Moon bound B(m) = 9, strong H values [9, 11, 13, 15]
-  m = 6: strong labelled 22320, floor f(m) = 15, Camion-Moon bound B(m) = 13, strong H values [15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
-  m = 7 (C census, camion_busch_strong7_20261002.out): f(7) = 25, min alpha_1 = 9; B(7) = 17 ; B(8) = 21 ; B(9) = 25
+== B. the direct Camion-Moon count against the strong floor
+  m = 3: strong labelled 2, floor f(m) = 3, Moon count B*(m) = 3, pancyclicity count B(m) = 3; min alpha_1 = 1 = Moon's 1; strong H values [3]
+  m = 4: strong labelled 24, floor f(m) = 5, Moon count B*(m) = 5, pancyclicity count B(m) = 5; min alpha_1 = 2 = Moon's 2; strong H values [5]
+  m = 5: strong labelled 544, floor f(m) = 9, Moon count B*(m) = 9, pancyclicity count B(m) = 9; min alpha_1 = 4 = Moon's 4; strong H values [9, 11, 13, 15]
+  m = 6: strong labelled 22320, floor f(m) = 15, Moon count B*(m) = 13, pancyclicity count B(m) = 13; min alpha_1 = 6 = Moon's 6; strong H values [15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+  m = 7 (C census, camion_busch_strong7_20261002.out): f(7) = 25; min alpha_1 = 9 = Moon's 5 + 3 + 1, attained
+  only with alpha_2 = 3 (H = 31) by Moon's T'_7 (unique up to isomorphism)
+  B*(m) = 1 + 2 floor((m-1)^2/4) = 3, 5, 9, 13, 19, 25, 33 (m = 3..9); THM-115's B(m) = 3, 5, 9, 13, 17, 21, 25
+  Moon's T'_5: strong, exactly m - k + 1 k-cycles for every k ({3: 3, 4: 2, 5: 1}), H = 9
+  Moon's T'_6: strong, exactly m - k + 1 k-cycles for every k ({3: 4, 4: 3, 5: 2, 6: 1}), H = 17
+  Moon's T'_7: strong, exactly m - k + 1 k-cycles for every k ({3: 5, 4: 4, 5: 3, 6: 2, 7: 1}), H = 31
   m = 5: the floor is attained only with (alpha_1, alpha_2) in [(4, 0)]
   m = 6: the floor is attained only with (alpha_1, alpha_2) in [(7, 0)]
   (m = 7: only (12, 0), one isomorphism class of 5040 labellings; see the C census)
-  -> gap 7 lies in (f(4), f(5)) = (5, 9) and f(5) = 9 = B(5): Camion + Moon certify it exactly.
-     gap 21 lies in (f(6), f(7)) = (15, 25), but B(7) = 17 and B(8) = 21 do not exceed 21: Camion + Moon
-     cannot certify it; it needs the true floor f(7) = 25 (Busch 2006) and floor monotonicity (THM-1370).
+  -> gap 7 lies in (f(4), f(5)) = (5, 9), and B*(5) = f(5) = 9: the direct count certifies it exactly.
+     gap 21 lies in (f(6), f(7)) = (15, 25); the direct count gives B*(7) = 19 < 21 (B*(8) = 25 already exceeds
+     21), so it does not certify 21 at m = 7. A floor proof needs f(7) > 21; the true value 25 is Busch 2006,
+     extended to all m >= 7 by monotonicity (THM-1370). What the count misses at m = 7 is alpha_2.
 == C. the mod-4 locks around the gaps (THM-466: H = 1 + 2 alpha_1 mod 4)
   n = 5, all tournaments with 5 <= H <= 9 (c3, c5, H): {(2, 0, 5): 240, (3, 1, 9): 240}
   strong n = 6, c3 = 4: c5 in [2, 3, 4], d33 in [0, 1], H in [15, 17]

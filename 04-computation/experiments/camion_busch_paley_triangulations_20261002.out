@@ -1,0 +1,5 @@
+p = 7: 2 orbits of usable P_p-directed triangles; 2 Z_p-invariant Steiner triple systems with P_p-directed blocks; 1 disjoint pairs, rotation-cycle counts {1: 1}; genuine surfaces 1 (genus 1), 1 up to multipliers
+p = 19: 6 orbits of usable P_p-directed triangles; 8 Z_p-invariant Steiner triple systems with P_p-directed blocks; 4 disjoint pairs, rotation-cycle counts {3: 4}; genuine surfaces 0 (genus 20), 0 up to multipliers
+p = 31: 40 orbits of usable P_p-directed triangles; 192 Z_p-invariant Steiner triple systems with P_p-directed blocks; 9056 disjoint pairs, rotation-cycle counts {1: 1280, 3: 6080, 5: 1676, 7: 20}; genuine surfaces 1280 (genus 63), 112 up to multipliers
+p = 43: 56 orbits of usable P_p-directed triangles; 1024 Z_p-invariant Steiner triple systems with P_p-directed blocks; 93696 disjoint pairs, rotation-cycle counts {3: 21504, 5: 63168, 7: 9024}; genuine surfaces 0 (genus 130), 0 up to multipliers
+ALL CHECKS PASSED
