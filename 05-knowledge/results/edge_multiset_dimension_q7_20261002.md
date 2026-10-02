@@ -1,4 +1,4 @@
-# Edge multiset dimension of Q_7: no resolving set of size <= 12, so 13 <= edim_m(Q_7) <= 19
+# Edge multiset dimension of Q_7: no resolving set of size <= 13, so 14 <= edim_m(Q_7) <= 19
 
 **Provenance:** Claude thread session (project thread, branch `claude/project-thread-96889h`), 2026-10-01/02;
 temporary identity, no `.machine-id`. Part of the edim2 lane; the growth results are in
@@ -8,7 +8,8 @@ summarizes this note. Previous bounds: 8 <= edim_m(Q_7) <= 19
 had 63 as the upper bound).
 **Status:** FINITE-EXACT (computer-assisted exhaustive search, validated as described in Sections 3 and 6).
 A blind independent audit (2026-10-02) found no false claim and no gap; it re-ran parts of the search with its own
-code, and its wording and provenance fixes are applied here. **Promoted:** nothing (no THM/HYP IDs reserved).
+code, and its wording and provenance fixes are applied here. The audit covered k <= 12; the k = 13 run finished
+after it (Section 4.4) and has not been audited independently. **Promoted:** nothing (no THM/HYP IDs reserved).
 **Labels used:** PROVED (Lemmas 1-3), FINITE-EXACT, EMPIRICAL (annealing).
 **Code and evidence:** [`04-computation/edge_multiset_dimension_q7_20261002/`](../../04-computation/edge_multiset_dimension_q7_20261002/)
 (C search, Python driver and checkers, run scripts, run records and logs; paths below are relative to it).
@@ -21,21 +22,21 @@ landed on `origin/main` (12d7b60c, 00:49:53 UTC) while this note was being finis
 [THM-4534](../../01-canon/theorems/THM-4534-edge-multiset-dimension-grows-like-exp-theta-cube-root-d.md), which
 records its Q_7 bound as FINITE-EXACT (lane only). Independently, it proves 11 <= edim_m(Q_7) by an exhaustive
 search in a maximal-imbalance normal form (k <= 10), and leaves one case of k = 11 unfinished (a = 11, b = 0 in its
-normal form). The search here covers every set of size k <= 12, so it settles that case as well. On Q_6 the
+normal form). The search here covers every set of size k <= 13, so it settles that case as well. On Q_6 the
 parallel search ran k = 15 with a = 13, 14, 15 of its normal form and recovered the three THM-4525 orbits of
 maximal imbalance 11; the search here reproduces all of THM-4525 on Q_6 (nothing for k <= 14, and all 229 orbits at
 k = 15; Section 3.4). Its Burnside counts (Q_6, a = 1..8; Q_5, a = 13..15) agree with the ones here where they
 overlap.
 
-**Status of k = 13.** The k = 13 search (1,507,949,500,245 leaves) was started at 2026-10-02 00:09:40 UTC and was
-still running when this note was committed. Nothing about k = 13 is claimed here; Section 4.4 says how to read
-its outcome.
+**k = 13 (added after the audit).** The k = 13 search (1,507,949,500,245 leaves) ran from 2026-10-02 00:09:40 to
+03:19 UTC with the same validated binary and found nothing, and `validate.py` printed ok=True with C = DP
+(Section 4.4). So edim_m(Q_7) >= 14. The success criteria were fixed in this note before the run ended.
 
 ## 1. Summary
 
 **Main result (FINITE-EXACT, computer-assisted).**
-* Q_7 has no edge-multiset resolving set of any size k = 1, ..., 12. Hence **edim_m(Q_7) ≥ 13**.
-* With the known resolving 19-set: **13 ≤ edim_m(Q_7) ≤ 19**. The previous bounds were 8 ≤ edim_m(Q_7) ≤ 19
+* Q_7 has no edge-multiset resolving set of any size k = 1, ..., 13. Hence **edim_m(Q_7) ≥ 14**.
+* With the known resolving 19-set: **14 ≤ edim_m(Q_7) ≤ 19**. The previous bounds were 8 ≤ edim_m(Q_7) ≤ 19
   (11 ≤ edim_m(Q_7) in the parallel procgen_edim2 note).
 
 **Method.**
@@ -51,7 +52,7 @@ its outcome.
     229 orbits of the deposited list, all with trivial stabilizer;
   * the alternative hot-list engine (engine 1) reproduces k = 14 and 15 exactly. It replaces only the hot-list
     scan; the search, the keys and the full test are shared with engine 0.
-* Leaf counts: for every (k, a), with d = 6 (k ≤ 15) and d = 7 (k ≤ 12), the C leaf count
+* Leaf counts: for every (k, a), with d = 6 (k ≤ 15) and d = 7 (k ≤ 13), the C leaf count
   equals an independent numpy dynamic-programming count.
 * Python checker:
   * it confirms the known Q_7 19-set and the paper's Q_6 15-set;
@@ -65,17 +66,16 @@ its outcome.
 
 **Timing (2 cores, shared machine).**
 * Q_7, k ≤ 12: 4,376.5 CPU s in 37.4 min wall. Of this, k = 12 took 4,029 CPU s in 33.7 min wall.
-* Speed: 11.7-14.7 ns per leaf; 3.04e11 leaves in total.
-* k = 13 has 1.508e12 leaves (DP). At the observed rate of about 100 of the 19,735 a = 7 representatives
-  per minute (14-15 ns per leaf), completion is expected around 03:10-03:40 UTC.
+* Q_7, k = 13: 22,738.5 CPU s (6.3 CPU hours) in 190 min wall, 15.08 ns per leaf, on the same shared machine.
+* Speed: 11.7-15.1 ns per leaf for k = 10..13 (Section 4.1); 1.81e12 leaves in total for k ≤ 13.
 * k = 14 has 1.429e13 leaves, about 55 CPU hours. It was not attempted.
 
-**Annealing.** Only the calibration runs were done:
+**Annealing.** The calibration runs, and one run at size 18:
 * Q_6, k = 15: 55 resolving sets found in 60 s, in 44 distinct orbits. All 44 lie in the deposited list of
   229 orbits.
 * Q_7, k = 19: one resolving 19-set found in 120 s. It is **not** equivalent to the known 19-set.
-* The production runs for sizes 18 and 17 were **not run**; the CPU was kept for k = 13. The script is
-  ready (Section 5).
+* Q_7, k = 18: one 90-minute run on one spare core (286 restarts of 8M moves) found no resolving 18-set; the best
+  restart ended with 1 colliding pair. Size 17 was not run (Section 5).
 
 ## 2. Method
 
@@ -370,7 +370,7 @@ validation JSON files are byte-identical to the earlier ones.
 
 ## 4. Q_7 results
 
-### 4.1 Per k (run `runs/d7_e0`, engine 0, hot-list capacity 1024, 2 workers; `logs/d7_e0_k1-12.out`, `logs/validate_d7_e0.out`)
+### 4.1 Per k (run `runs/d7_e0`, engine 0, hot-list capacity 1024, 2 workers; `logs/d7_e0_k1-12.out`, `logs/validate_d7_e0.out`; k = 13: `logs/d7_e0_k13.out`, `logs/validate_k13.out`)
 
 | k | leaves (C search) | leaves (DP) | equal | resolving leaves | orbits | CPU s | wall s | ns/leaf | validation |
 |---|---:|---:|:-:|---:|---:|---:|---:|---:|:-:|
@@ -387,15 +387,19 @@ validation JSON files are byte-identical to the earlier ones.
 | 11 | 25,086,535,792 | 25,086,535,792 | yes | 0 | 0 | 293.9 | 177 | 11.72 | ok |
 | 12 | 273,963,417,196 | 273,963,417,196 | yes | 0 | 0 | 4029.2 | 2022 | 14.71 | ok |
 | **1-12** | **303,583,126,680** | | yes | **0** | | **4376.5** | **2244** | | ok |
+| 13 | 1,507,949,500,245 | 1,507,949,500,245 | yes | 0 | 0 | 22738.5 | 11377 | 15.08 | ok |
+| **1-13** | **1,811,532,626,925** | | yes | **0** | | **27115.0** | | | ok |
 
 **Notes.**
-* Wall time is the time from the `start` line to the `COMPLETE` line in `logs/d7_e0_k1-12.out`.
-* The whole run k = 1..12 took 23:10:44 to 23:48:08 UTC: 37.4 min wall and 4,376.5 CPU s.
-* No resolving leaf was found for any k ≤ 12, so no set needed re-verification.
+* Wall time is the time from the `start` line to the `COMPLETE` line in `logs/d7_e0_k1-12.out`, and in
+  `logs/d7_e0_k13.out` for k = 13 (`logs/validate_k13.out` for its validation).
+* The whole run k = 1..12 took 23:10:44 to 23:48:08 UTC: 37.4 min wall and 4,376.5 CPU s. k = 13 ran from 00:09:40
+  to 03:19 UTC.
+* No resolving leaf was found for any k ≤ 13, so no set needed re-verification.
 
 ### 4.2 Per (k, a)
 A row marked "weight lemma" has no representative file. Lemma 2 excludes it, and `validate.py` re-derived the
-exclusion. The Q_6 file for a = 11 exists and was searched for k = 11 and 12: it gives 0 leaves, in
+exclusion. The Q_6 file for a = 11 exists and was searched for k = 11, 12 and 13: it gives 0 leaves, in
 agreement with the DP and with Lemma 2.
 
 | k | a | b | delta | reps | chunks | leaves (C) | leaves (DP) | resolving | CPU s |
@@ -448,11 +452,18 @@ agreement with the DP and with Lemma 2.
 | 12 | 10 | 2 | 8 | 3,561,696 | 2 | 0 | 0 | 0 | 0.1 |
 | 12 | 11 | 1 | 10 | 16,938,566 | 2 | 0 | 0 | 0 | 0.8 |
 | 12 | 12 | 0 | 12 | - | - | 0 (weight lemma: W_min(12)=16 > 0) | 0 | 0 | 0 |
+| 13 | 7 | 6 | 1 | 19,735 | 178 | 1,479,619,152,480 | 1,479,619,152,480 | 0 | 20765.4 |
+| 13 | 8 | 5 | 3 | 120,843 | 19 | 28,261,148,980 | 28,261,148,980 | 0 | 1955.3 |
+| 13 | 9 | 4 | 5 | 681,474 | 2 | 69,191,803 | 69,191,803 | 0 | 16.8 |
+| 13 | 10 | 3 | 7 | 3,561,696 | 2 | 6,982 | 6,982 | 0 | 0.2 |
+| 13 | 11 | 2 | 9 | 16,938,566 | 2 | 0 | 0 | 0 | 0.8 |
+| 13 | 12 | 1 | 11 | - | - | 0 (weight lemma: W_min(12)=16 > 6) | 0 | 0 | 0 |
+| 13 | 13 | 0 | 13 | - | - | 0 (weight lemma: W_min(13)=18 > 0) | 0 | 0 | 0 |
 
 ### 4.3 Performance, and the cost of k = 13 and 14
 **Engine 0 speed.**
-* Engine 0 runs at 11.7-14.7 ns per leaf on Q_7 (about 10.7 leaves per last-level node, about 28 hot pairs
-  scanned per node).
+* Engine 0 runs at 11.7-15.1 ns per leaf on Q_7 for k = 10..13 (about 10.7 leaves per last-level node, about
+  28 hot pairs scanned per node).
 * The machine was shared: load average about 3 on 4 cores from other jobs. Clean single-chunk
   benchmarks give 11.7-13.3 ns.
 * Engine 1 is about 1.1x slower on Q_6 (34 vs 30 ns per leaf). Its speed on Q_7 was not measured on a deposited
@@ -468,20 +479,26 @@ instead of move-to-front. The differences were within ±5% noise, so the validat
 | 13 | 1,479,619,152,480 | 28,261,148,980 | 69,191,803 | 6,982 | 0 | **1,507,949,500,245** | 5.4-6.3 h | 2.7-3.2 h |
 | 14 | 12,259,701,549,120 | 2,016,262,554,454 | 18,959,624,460 | 17,799,808 | 293 | **14,294,941,528,135** | 52-60 h | 26-30 h |
 
-For k = 14, a ≥ 12 is excluded by Lemma 2. Only k = 13 was started.
+For k = 14, a ≥ 12 is excluded by Lemma 2. Only k = 13 was run.
 
-### 4.4 k = 13 (running at commit time; nothing claimed)
+### 4.4 k = 13 (complete: nothing found)
 * `runs/post12.sh` started k = 13 at 2026-10-02 00:09:40 UTC, only after every check of Sections 3 and 4
   passed (`logs/post12.out`), as `runs/run_d7.sh 13 13`: 2 workers on the same binary, into `runs/d7_e0`.
 * The a = 7 file has 19,735 representatives and carries 98% of the work. Progress lines look like
   `2026-10-02 00:11:42 done a=7 [2,108) leaves=7947283008 found=0 sec=121.0 ns/leaf=15.23 ...`.
-* The records committed here stop at k = 12; the k = 13 chunk records are not included.
+* It ended with `COMPLETE D=7 K=13 leaves=1507949500245 found=0 cpu=22738.5s ns/leaf=15.08` (`logs/d7_e0_k13.out`).
+* `python3 py/validate.py 7 runs/d7_e0 13` then printed
+  `VALIDATE D=7 k=13 ok=True leaves C=1507949500245 DP=1507949500245 resolving_leaves=0 python_ok=True orbits=0 stab=[] cpu=22738.5s problems=[]` (`logs/validate_k13.out`).
+* The k = 13 records are stored with the others: the k = 13 lines of `runs/d7_e0/chunks.jsonl`,
+  `runs/d7_e0/summary_k13.json` and `runs/d7_e0/validation_k13.json`.
+* The per-(k, a) rows are in Section 4.2. The pairs (13, 12) and (13, 13) are excluded by Lemma 2
+  (W_min(12) = 16 > 6 and W_min(13) = 18 > 0).
 
-**How to read the outcome.**
+**How the outcome was read** (criteria written before the run ended; both met).
 * Success is the line `COMPLETE D=7 K=13 leaves=1507949500245 found=0 ...`; the leaves value must be exactly the
   DP total 1,507,949,500,245 (`logs/dp_d7_k13.out`). Then `python3 py/validate.py 7 runs/d7_e0 13` (about 2 min)
   must print `VALIDATE D=7 k=13 ok=True leaves C=1507949500245 DP=1507949500245 resolving_leaves=0 ...`.
-  Only then does edim_m(Q_7) >= 14 follow.
+  Only then does edim_m(Q_7) >= 14 follow. Both lines appeared as required.
 * A resolving 13-set would be printed as `FOUND RESOLVING d=7 k=13 set=v1,...,v13` (vertices 0..127, bit i of v
   = coordinate i), already re-verified from scratch by the C program. `python3 py/pycheck.py 7 <<< "v1,...,v13"`
   must then print `RESOLVING k=13 defect=0`, and edim_m(Q_7) = 13 would follow.
@@ -518,33 +535,32 @@ fail the tiling check.
 * The other Q_7 k = 19 restarts ended with 3-5 colliding pairs. So the annealer finds Q_7 resolving 19-sets,
   but only in about 1 restart out of 30.
 
-**Sizes 18 and 17: not run.**
-* `runs/anneal.sh 900` is the planned run: 2 × 15 min for each size, one with 2M and one with 8M moves per
-  restart, about 1 core-hour in total.
-* It was cancelled to keep the CPU for k = 13. So there is **no** annealing
-  result for 18 or 17, and no best defect to report.
-* To run it later, after k = 13:
-  1. `runs/anneal.sh 900`
-  2. `python3 py/anneal_summary.py logs/anneal_q7_k1[78]_*.out`
+**Size 18: one run, nothing found. Size 17: not run.**
+* `./src/anneal 7 18 5400 31 8000000` (90 min, seed 31, 8M moves per restart) ran on one spare core at the
+  lowest priority, alongside the two k = 13 workers (`logs/anneal_q7_k18_s31.out`).
+* It made 286 restarts (2.29e9 moves) and found no resolving 18-set. The best restart ended with 1 colliding
+  pair (1 restart reached it); `py/pycheck.py` confirms defect 1 for the best set printed in the log's
+  SUMMARY line. For comparison, the calibration at size 19 needed about 30 restarts per resolving set.
+* The planned `runs/anneal.sh 900` (2 × 15 min for each of the sizes 18 and 17) was not run.
 
 Whatever the outcome, annealing proves nothing about non-existence.
 
 ## 6. What is proved
 
 **Theorem (FINITE-EXACT, computer-assisted).** Q_7 has no edge-multiset resolving set of size k for any
-k = 1, 2, ..., 12. Hence **edim_m(Q_7) ≥ 13**. The known resolving 19-set, re-verified here by the pure-Python
-checker, gives the upper bound: **13 ≤ edim_m(Q_7) ≤ 19**. A second, inequivalent resolving 19-set was found
+k = 1, 2, ..., 13. Hence **edim_m(Q_7) ≥ 14**. The known resolving 19-set, re-verified here by the pure-Python
+checker, gives the upper bound: **14 ≤ edim_m(Q_7) ≤ 19**. A second, inequivalent resolving 19-set was found
 by annealing (Section 5).
 
-Every size k ≤ 12 is excluded separately, because resolvability is not monotone.
+Every size k ≤ 13 is excluded separately, because resolvability is not monotone.
 
-**Exactly what was checked for each k = 1..12** (all logged in `runs/d7_e0/validation_k<k>.json` and
-`logs/validate_d7_e0.out`):
+**Exactly what was checked for each k = 1..13** (all logged in `runs/d7_e0/validation_k<k>.json`, and in
+`logs/validate_d7_e0.out` for k ≤ 12 and `logs/validate_k13.out` for k = 13):
 1. **Coverage.** For every a = ⌈k/2⌉..k with a representative file (all a ≤ 11), the completed chunks tile
-   [0, nrep) exactly. The single remaining pair (k, a) = (12, 12) is excluded by Lemma 2; trivially, 12
-   distinct vertices of Q_6 cannot agree in all 6 coordinates.
+   [0, nrep) exactly. The remaining pairs (12, 12), (13, 12) and (13, 13) are excluded by Lemma 2; (12, 12) and
+   (13, 13) also trivially, since 12 or 13 distinct vertices of Q_6 cannot agree in all 6 coordinates.
 2. **Leaf count.** The C leaf count equals the independent DP count, for every (k, a) and in total
-   (303,583,126,680 leaves for k ≤ 12).
+   (303,583,126,680 leaves for k ≤ 12 and 1,507,949,500,245 for k = 13; 1,811,532,626,925 in total).
 3. **Result.** 0 resolving leaves in every chunk. Every leaf was either killed by an exactly computed collision
    or fully tested.
 4. **Representatives.** The files used (Q_6, a ≤ 11) have the Burnside counts. The files for a ≤ 10 passed
@@ -565,8 +581,7 @@ hardware. The sha256 values of the production binaries, the deposited sources an
 `logs/provenance_sha256.txt`.
 
 **Not proved.**
-* Anything for k ≥ 13. The k = 13 run is in progress and must not be counted until its COMPLETE line shows
-  `leaves=1507949500245 found=0` and `validate.py` reports ok=True (Section 4.4).
+* Anything for k ≥ 14 (k = 14 has 1.43e13 leaves, about 55 CPU hours; not attempted).
 * The annealing gives no non-existence information.
 
 ## 7. Files and reproduction
@@ -604,13 +619,13 @@ hardware. The sha256 values of the production binaries, the deposited sources an
   `python3 py/burnside.py 5` and `python3 py/burnside.py 6`.
 * `data/neg_n5_a3.bin`: the negative control of `runs/checks.sh` ({0,1,3}, {0,1,2} twice, {1,2,4}).
 * Stored evidence:
-  * `runs/d7_e0/`: `chunks.jsonl` (k <= 12), `summary_k1..12.json`, `validation_k1..12.json`;
+  * `runs/d7_e0/`: `chunks.jsonl` (k <= 13), `summary_k1..13.json`, `validation_k1..13.json`;
   * `runs/d6_e0/` (k = 1..15) and `runs/d6_e1/` (k = 14, 15): `chunks.jsonl`, summaries, validations;
-  * `logs/`: the k <= 12 driver log `d7_e0_k1-12.out`, and the validation, verification, check, DP, `orbreps`
-    and annealing-calibration logs cited above. The Q_6 progress logs and the drivers' `log.txt` copies are not
-    stored; the chunk records carry the same data.
+  * `logs/`: the driver logs `d7_e0_k1-12.out` and `d7_e0_k13.out`, `validate_k13.out`, and the validation,
+    verification, check, DP, `orbreps` and annealing logs cited above. The Q_6 progress logs and the drivers'
+    `log.txt` copies are not stored; the chunk records carry the same data.
 * To re-validate the stored records, regenerate the representative files (including a = 11) and run
-  `python3 py/validate.py 7 runs/d7_e0 $(seq 1 12)`. It rewrites the `validation_k*.json` files, so compare them
+  `python3 py/validate.py 7 runs/d7_e0 $(seq 1 13)`. It rewrites the `validation_k*.json` files, so compare them
   with the stored ones.
 
 ### 7.3 Commands
@@ -673,12 +688,11 @@ the expected numbers are those of Section 3.4.
 * Re-running a finished K only rewrites its summary.
 
 ## 8. Points of uncertainty
-1. **Annealing is incomplete.** Only the calibration was run before this note was first committed; the 18/17
-   annealing was held back to keep the CPU for k = 13. A 90-minute run at size 18 on one spare core started at
-   01:31 UTC on 2026-10-02; its outcome will be recorded here.
+1. **Annealing is thin.** Besides the calibration, one 90-minute run at size 18 ran (no resolving set; best
+   1 colliding pair), and size 17 was not tried. Annealing proves nothing about non-existence.
 2. **One production run per Q_7 size.** Each k was run once, with engine 0.
    * Independent support: the DP leaf counts (enumeration), 154M leaves in verification mode (0.05% of the
-     3.04e11 leaves), and the end-to-end Q_6 reproduction with both engines.
+     3.04e11 leaves of k ≤ 12, 0.009% of all 1.81e12), and the end-to-end Q_6 reproduction with both engines.
    * The planned engine-1 re-run of Q_7 for k ≤ 11 was cancelled to keep CPU for k = 13.
 3. **Shared hash test.** The "full test" hash function (open addressing with exact key comparison) is shared
    by both engines, the search and the verification mode's ground truth.
@@ -686,12 +700,13 @@ the expected numbers are those of Section 3.4.
      set), by the Python checker (1,636 sets), and by the Q_6 reproduction.
    * A fault that shows up only on Q_7 key patterns outside the verified samples cannot be excluded
      completely by testing.
-4. **Hand proofs.** The normal form (Lemma 1) and the weight lemma (Lemma 2) are proved by hand. For k ≤ 12,
-   Lemma 2 is used only for (12, 12), which is trivial. Lemma 1 was also tested empirically on 1,250 sets.
+4. **Hand proofs.** The normal form (Lemma 1) and the weight lemma (Lemma 2) are proved by hand. For k ≤ 13,
+   Lemma 2 is used only for (12, 12), (13, 12) and (13, 13); two of these are trivial. Lemma 1 was also tested
+   empirically on 1,250 sets.
 5. **Fast-mode repcheck.** It was used for Q_6 a = 9 and 10 and rests on the elementary argument that only
    images containing 0 can be lex-smaller. The full-group mode was used for every other file.
-6. **Timing.** The k = 13 completion estimate (03:10-03:40 UTC) depends on the load from other jobs.
-   Observed speeds were 12-15 ns per leaf.
+6. **k = 13 after the audit.** The k = 13 run finished after the blind audit, so it rests on the same checks as
+   k ≤ 12 (the same binary, tiling, C = DP for every (k, a)) but has not been re-checked independently.
 7. **Earlier verify sample.** The earlier k = 11 verify-mode sample (15.2M leaves per engine)
    has no log file.
 8. **Usual caveats.** Trust in compiler, hardware and memory. No ECC information is available.

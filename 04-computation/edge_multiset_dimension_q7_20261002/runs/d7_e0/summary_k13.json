@@ -1,0 +1,75 @@
+{
+ "D": 7,
+ "K": 13,
+ "excluded": {
+  "12": "weight lemma: W_min(12)=16 > 6*1",
+  "13": "weight lemma: W_min(13)=18 > 6*0"
+ },
+ "ns_per_leaf": 15.079,
+ "per_a": {
+  "10": {
+   "chunks": 2,
+   "feasible_reps": 2573,
+   "found": 0,
+   "fullchecks": 19,
+   "leaves": 6982,
+   "nodes": 3303,
+   "nrep": 3561696,
+   "reps": 3561696,
+   "sec": 0.22
+  },
+  "11": {
+   "chunks": 2,
+   "feasible_reps": 0,
+   "found": 0,
+   "fullchecks": 0,
+   "leaves": 0,
+   "nodes": 0,
+   "nrep": 16938566,
+   "reps": 16938566,
+   "sec": 0.79
+  },
+  "7": {
+   "chunks": 178,
+   "feasible_reps": 19735,
+   "found": 0,
+   "fullchecks": 112697614,
+   "leaves": 1479619152480,
+   "nodes": 138714295545,
+   "nrep": 19735,
+   "reps": 19735,
+   "sec": 20765.36
+  },
+  "8": {
+   "chunks": 19,
+   "feasible_reps": 120843,
+   "found": 0,
+   "fullchecks": 2240246,
+   "leaves": 28261148980,
+   "nodes": 6252785940,
+   "nrep": 120843,
+   "reps": 120843,
+   "sec": 1955.32
+  },
+  "9": {
+   "chunks": 2,
+   "feasible_reps": 681474,
+   "found": 0,
+   "fullchecks": 2498,
+   "leaves": 69191803,
+   "nodes": 20282643,
+   "nrep": 681474,
+   "reps": 681474,
+   "sec": 16.78
+  }
+ },
+ "resolving": [],
+ "total": {
+  "found": 0,
+  "fullchecks": 114940377,
+  "leaves": 1507949500245,
+  "nodes": 144987367431,
+  "reps": 21322314,
+  "sec": 22738.47
+ }
+}

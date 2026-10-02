@@ -119,9 +119,9 @@ the known 19-set and the annealed 19-set both resolve Q_7; deleting one landmark
 leaves defects [33, 27, 54, 45, 31, 30, 26, 30, 28, 45, 33, 39, 32, 30, 16, 17, 34, 14, 24]
 Aut(Q_6)-orbits of a-subsets, a = 0..11: [1, 1, 6, 16, 103, 497, 3253, 19735, 120843, 681474, 3561696, 16938566]
 W_min(11..14) = [14, 16, 18, 20] -> for k <= 13 every a >= 11 is excluded (Lemma 2)
-deposited records, Q_7, k = 1..12: every (k, a) tiled, C leaves = DP leaves (303583126680 in total),
-representative counts = Burnside, nothing found => edim_m(Q_7) >= 13
+deposited records, Q_7, k = 1..13: every (k, a) tiled, C leaves = DP leaves (1811532626925 in total),
+representative counts = Burnside, nothing found => edim_m(Q_7) >= 14
 (run with --q7 to rebuild the C search and re-run Q_6, k <= 13, and Q_7, k <= 10)
 
-470144 checks
+470160 checks
 ALL CHECKS PASSED

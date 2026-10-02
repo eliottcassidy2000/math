@@ -38,7 +38,7 @@ values (M_16 = 636, M_64 = 31808) come from a full run that was not deposited, a
 It also has a result with no counterpart here: its Theorem C shows that no choice of forests makes the forest-lemma
 union bound work below kappa_+. New here: the lower half of the dichotomy (Theorem D(2)), Lemma H and the
 toward-the-centre forest (item 5), the explicit bound edim_m(Q_d) < 2 exp(5 d^(1/3)) for every d >= 6 (Theorem C),
-the certified table for every 11 <= d <= 64 with its certificates deposited, and the Q_7 search (13 <= edim_m(Q_7),
+the certified table for every 11 <= d <= 64 with its certificates deposited, and the Q_7 search (14 <= edim_m(Q_7),
 against 11 there). So items 1 and 4 (upper half) below are an independent second derivation of results stated
 there.
 
@@ -52,7 +52,7 @@ there.
 | 4 | **Open Problem 4 (density 1/2 versus sparse).** For random sets S_q: P(S_q resolves) -> 1 when ln(q 2^d) >= (kappa_+ + eps) d^(1/3), uniformly in q <= 1/2; P(S_q resolves) -> 0 when ln(q 2^d) <= (kappa_- - eps) d^(1/3). Minimum resolving sets have density 2^(-d) e^(Theta(d^(1/3))), so density-1/2 sets are larger by a factor 2^(d - O(d^(1/3))). | PROVED (Theorem D). THM-4534 (lane note item 10) states the upper half |
 | 5 | Lemma H (a "valid cell" lemma for the hypergeometric law) and the toward-the-centre forest. For every pair type with h, nu >= 1, every level with \|t\| > 1 has a flow edge toward the middle whose cell carries at least 1/(3(min(h,nu)+1)) of the level. | PROVED; exact check for all L <= 60 |
 | 6 | Open Problem 3 (one analytic estimate valid from d = 11). Here Theorem A is effective from d = 41 (lambda chosen per d) and from d = 64 with lambda = 5 d^(1/3). THM-4534 reaches d = 17 at density 1/2. | Answered in the companion note [`edge_multiset_dimension_op3_20261002.md`](edge_multiset_dimension_op3_20261002.md): one recursion with closed-form coefficients from the single exact value V_11 (PROVED there, computer-assisted at one point; its first version was audited and revised). Here: PROVED for d >= 41 (check S6) |
-| 7 | **Q_7: no resolving set of size <= 12, so 13 <= edim_m(Q_7) <= 19** (was 8..19; 11..19 in procgen_edim2_20261001, k <= 10). Exhaustive search up to Aut(Q_7), validated end to end on Q_6 (section 7; full write-up in [the Q_7 note](edge_multiset_dimension_q7_20261002.md)). | FINITE-EXACT (computer-assisted); a blind independent audit (2026-10-02) of the Q_7 note found no false claim and no gap |
+| 7 | **Q_7: no resolving set of size <= 13, so 14 <= edim_m(Q_7) <= 19** (was 8..19; 11..19 in procgen_edim2_20261001, k <= 10). Exhaustive search up to Aut(Q_7), validated end to end on Q_6 (section 7; full write-up in [the Q_7 note](edge_multiset_dimension_q7_20261002.md)). | FINITE-EXACT (computer-assisted); a blind independent audit (2026-10-02) of the Q_7 note found no false claim and no gap for k <= 12; k = 13 finished after it |
 
 ## 0. Definitions and notation
 
@@ -436,27 +436,29 @@ value V_11 < 0.0859648, this gives V_d < 1 for every d >= 11 (and V_d <= 1/2 fro
 V_10 < 0.660228 (PROVED there, computer-assisted at one point).
 
 ## 7. Q_7
-**Theorem 7.1 (FINITE-EXACT, computer-assisted; blind-audited 2026-10-02).** Q_7 has no edge-multiset resolving set of any
-size k <= 12. Hence 13 <= edim_m(Q_7) <= 19; the previous bounds were 8 <= edim_m(Q_7) <= 19 (THM-4525).
+**Theorem 7.1 (FINITE-EXACT, computer-assisted; blind-audited 2026-10-02 for k <= 12).** Q_7 has no edge-multiset
+resolving set of any size k <= 13. Hence 14 <= edim_m(Q_7) <= 19; the previous bounds were 8 <= edim_m(Q_7) <= 19
+(THM-4525).
 
 Full write-up: [`edge_multiset_dimension_q7_20261002.md`](edge_multiset_dimension_q7_20261002.md). Code and run
 records: `04-computation/edge_multiset_dimension_q7_20261002/`.
 * **Method.** Every k-set is Aut(Q_7)-equivalent to A x {0} u B x {1}, where the last coordinate has the least
-  imbalance a - b >= 0 and A is one of the Aut(Q_6)-orbit representatives of a-subsets (Lemma 1 there, proved).
-  For every (k, a), every representative A and every admissible B is tested exactly. Nothing is pruned on
-  partial collisions, because resolvability is not monotone. A weight lemma (Lemma 2 there) shows that the pairs
-  with a >= 11 hold no resolving set (in the k <= 12 run it removed (12, 12); the a = 11 cases were searched anyway
-  and have no leaves). The representatives come from orderly generation and match the Burnside counts 1, 1, 6, 16,
-  103, 497, 3253, 19735, 120843, 681474, 3561696, 16938566 (a = 0..11).
-* **Size.** 303,583,126,680 leaves for k <= 12, in 73 CPU minutes. For every (k, a) the leaf count equals an
-  independent dynamic-programming count of the domain.
+  imbalance a - b >= 0 and A is one of the Aut(Q_6)-orbit representatives of a-subsets (Lemma 1 there, proved). For
+  every (k, a), every representative A and every admissible B is tested exactly. Nothing is pruned on partial
+  collisions, because resolvability is not monotone. A weight lemma (Lemma 2 there) shows that the pairs with
+  a >= 11 hold no resolving set (in the k <= 13 run it removed (12, 12), (13, 12) and (13, 13); the a = 11 cases
+  were searched anyway and have no leaves). The representatives come from orderly generation and match the Burnside
+  counts 1, 1, 6, 16, 103, 497, 3253, 19735, 120843, 681474, 3561696, 16938566 (a = 0..11).
+* **Size.** 303,583,126,680 leaves for k <= 12, in 73 CPU minutes, and 1,507,949,500,245 for k = 13, in 6.3 CPU
+  hours. For every (k, a) the leaf count equals an independent dynamic-programming count of the domain.
 * **Validation.** The same code reproduces the Q_6 result of THM-4525 end to end: nothing for k <= 14, and for
   k = 15 exactly the 229 deposited orbits, with both search engines. A verification mode re-tested 154 million
   Q_7 leaves from scratch with no discrepancy. The C and pure-Python checkers agree on 1,636 sets.
 * **Annealing** (EMPIRICAL) found a second resolving 19-set of Q_7, {2, 4, 21, 22, 32, 38, 42, 44, 47, 54, 70,
-  79, 84, 90, 110, 114, 116, 120, 126}, inequivalent to the known one. Sizes 17 and 18 were not tried.
-* **k = 13** (1.51e12 leaves, about 6 CPU hours) was still running when this note was committed and is not
-  claimed. k = 14 would take about 55 CPU hours by the same method.
+  79, 84, 90, 110, 114, 116, 120, 126}, inequivalent to the known one. A 90-minute run at size 18 found none (best:
+  1 colliding pair); size 17 was not tried.
+* **k = 13** finished after the blind audit, with C = DP and nothing found. k = 14 would take about 55 CPU hours
+  by the same method.
 * Runner section S10 recomputes the two 19-sets and the orbit counts from the definitions and audits the stored
   records; with `--q7` it rebuilds the search and re-runs Q_6 (k <= 13) and Q_7 (k <= 10).
 
@@ -475,13 +477,13 @@ records: `04-computation/edge_multiset_dimension_q7_20261002/`.
 * The constant: does lim ln edim_m(Q_d)/d^(1/3) exist, and where in [0.8146, 2.0526] is it?
 * Open Problem 3 is answered in the companion note from one exact value, V_11. What remains open there is a version
   with no evaluation at all.
-* Q_7: 13 <= edim_m(Q_7) <= 19. Is a resolving set of size 13 to 18 possible? (k = 13 and a first annealing run
-  at size 18 were running at commit time.)
+* Q_7: 14 <= edim_m(Q_7) <= 19. Is a resolving set of size 14 to 18 possible? (One annealing run at size 18 found
+  none; k = 14 would take about 55 CPU hours.)
 
 ## 10. Reproduction
 `python3 -u 04-computation/experiments/edge_multiset_dimension_growth_20261002_run.py` prints its results to stdout
 (deposited as `05-knowledge/results/edge_multiset_dimension_growth_20261002.out`) and section timings to stderr,
-and ends with ALL CHECKS PASSED (470144 checks). It takes about 4 to 5 minutes on one core (231 s on the
+and ends with ALL CHECKS PASSED (470160 checks). It takes about 4 to 5 minutes on one core (231 s on the
 original machine, 295 s in the audit re-run), mostly S5 and S6.
 Needs numpy, scipy and mpmath. With `--q7`, S10 also builds the Q_7 search (gcc) and re-runs the fast subset in a
-temporary directory: 161 s more with 2 of 4 shared cores, 455 checks in S10.
+temporary directory: 161 s more with 2 of 4 shared cores, 471 checks in S10.

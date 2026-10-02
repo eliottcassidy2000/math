@@ -14,7 +14,7 @@ Sections
   S8  constants kappa_+ and kappa_-
   S9  Theorem B: the entropy bound L5 evaluated exactly (sanity)
   S10 Q_7 (section 7): the two resolving 19-sets, orbit counts, and the deposited exhaustive-search records
-      of 04-computation/edge_multiset_dimension_q7_20261002/ (k <= 12); with --q7 the C search is rebuilt
+      of 04-computation/edge_multiset_dimension_q7_20261002/ (k <= 13); with --q7 the C search is rebuilt
       and re-run on the fast subset (Q_6, k <= 13; Q_7, k <= 10) in a temporary directory
 
 Run:  nice python3 -u 04-computation/experiments/edge_multiset_dimension_growth_20261002_run.py [--q7]
@@ -562,7 +562,7 @@ Q7_KNOWN19 = [5, 57, 54, 104, 35, 109, 115, 49, 6, 39, 55, 102, 15, 32, 85, 97, 
 Q7_NEW19 = [2, 4, 21, 22, 32, 38, 42, 44, 47, 54, 70, 79, 84, 90, 110, 114, 116, 120, 126]
 Q6_ORBITS = [1, 1, 6, 16, 103, 497, 3253, 19735, 120843, 681474, 3561696, 16938566]      # a = 0..11
 Q7_LEAVES = [None, 1, 64, 384, 12154, 32283, 686390, 4300936, 68340374, 317832905, 4141968201,
-             25086535792, 273963417196]                                                 # k = 1..12
+             25086535792, 273963417196, 1507949500245]                                  # k = 1..13
 Q6_LEAVES = [None, 1, 32, 160, 2506, 4971, 52535, 234240, 1808073, 4767589, 29955834, 96667005,
              491865822, 1234172511]                                                     # k = 1..13
 
@@ -685,13 +685,13 @@ def s10():
     check(all(w_min(6, a) > 6 * (k - a) and a - 2 * (k - a) > 0 for k in range(1, 14) for a in range(11, k + 1)),
           'S10 weight lemma: every a >= 11 excluded for k <= 13')
     print('W_min(11..14) =', wm, '-> for k <= 13 every a >= 11 is excluded (Lemma 2)')
-    # the deposited records of the exhaustive Q_7 search, k = 1..12
+    # the deposited records of the exhaustive Q_7 search, k = 1..13
     rundir = os.path.join(Q7_PKG, 'runs', 'd7_e0')
-    q7_check_records(rundir, 7, 12, Q7_LEAVES, lambda a, nrep: nrep == Q6_ORBITS[a])
+    q7_check_records(rundir, 7, 13, Q7_LEAVES, lambda a, nrep: nrep == Q6_ORBITS[a])
     tot = sum(Q7_LEAVES[1:])
-    check(tot == 303583126680, 'S10 total leaves')
-    print('deposited records, Q_7, k = 1..12: every (k, a) tiled, C leaves = DP leaves (%d in total),' % tot)
-    print('representative counts = Burnside, nothing found => edim_m(Q_7) >= 13')
+    check(tot == 303583126680 + 1507949500245, 'S10 total leaves')
+    print('deposited records, Q_7, k = 1..13: every (k, a) tiled, C leaves = DP leaves (%d in total),' % tot)
+    print('representative counts = Burnside, nothing found => edim_m(Q_7) >= 14')
     if Q7_RERUN:
         q7_rerun()
     else:

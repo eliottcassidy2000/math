@@ -3,8 +3,8 @@
 Write-up: [`05-knowledge/results/edge_multiset_dimension_q7_20261002.md`](../../05-knowledge/results/edge_multiset_dimension_q7_20261002.md)
 (method, proofs of the normal-form and weight lemmas, validation, results, reproduction).
 
-Result (FINITE-EXACT; a blind independent audit on 2026-10-02 found no false claim and no gap): Q_7 has no
-edge-multiset resolving set of size k <= 12, so 13 <= edim_m(Q_7) <= 19.
+Result (FINITE-EXACT; a blind independent audit on 2026-10-02 found no false claim and no gap in k <= 12; k = 13
+finished after it): Q_7 has no edge-multiset resolving set of size k <= 13, so 14 <= edim_m(Q_7) <= 19.
 
 Layout:
 - `src/`: C sources. `edimsearch.c` (the search), `orbreps.c` (Aut(Q_n)-orbit representatives by orderly
@@ -15,10 +15,11 @@ Layout:
   normal-form test, table and annealing summaries.
 - `runs/*.sh`: the run scripts used. Their `cd` line was changed to this directory; `checks.sh` also reads its
   negative control from `data/`, and one comment line of `anneal.sh` changed.
-- `runs/d7_e0/`: records of the Q_7 run, k = 1..12 (`chunks.jsonl`, `summary_k*.json`, `validation_k*.json`).
+- `runs/d7_e0/`: records of the Q_7 run, k = 1..13 (`chunks.jsonl`, `summary_k*.json`, `validation_k*.json`).
 - `runs/d6_e0/`, `runs/d6_e1/`: the Q_6 reproduction (k = 1..15 with engine 0; k = 14, 15 with engine 1).
-- `logs/`: driver log for k <= 12, validation, verification-mode, check, DP, `orbreps`, `is_canon` self-test and
-  annealing logs, and `provenance_sha256.txt` (sha256 of the production binaries, sources and representative files).
+- `logs/`: driver logs for k <= 12 and k = 13, validation, verification-mode, check, DP, `orbreps`, `is_canon`
+  self-test and annealing logs, and `provenance_sha256.txt` (sha256 of the production binaries, sources and
+  representative files).
 - `data/`: Burnside counts and the negative control of `runs/checks.sh`. The representative files
   (`data/q5`, `data/q6`, about 44 MB for a <= 10) are regenerated in under a minute and not stored.
 
