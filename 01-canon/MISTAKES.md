@@ -1931,7 +1931,7 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
-## MISTAKE-560 (2026-10-02, opus S15 Camion/Busch note; found by the independent audit) -- a classical theorem's bound taken from a canon derivation instead of the source, so the place where the direct count fails was misplaced; analogies typed as exact instances
+## MISTAKE-560 (2026-10-02, opus S15 Camion/Busch note; found by the independent audit) -- a classical theorem's bound taken from a canon derivation instead of the source, so the place where the direct count fails was misplaced; analogies typed as exact instances; a congruence pattern stated from two data points per class
 
 - **Claims:**
   - (1) The draft of `camion_busch_gaps_polyhedra_collatz_20261002.md` §2 used THM-115's pancyclicity count (c_3 >= m - 2, c_k >= ceil(m/k)) and called it "Moon's bound". Moon 1966 (Cor. 2.1) proves the sharp c_k >= m - k + 1. That gives B*(m) = 1 + 2 floor((m-1)^2/4) = 3, 5, 9, 13, 19, 25, 33, not 3, 5, 9, 13, 17, 21, 25. Consequences:
@@ -1944,6 +1944,7 @@ were unaffected; successful explicit-path replays did not validate the prose.
     - the Pi_1 lemma bound m log_3 m (m suffices: sum <= product) and "O(log^2 m)" with Busch (O(log m));
     - "at least as hard as Collatz, unless completeness is false" lacked the explicit relative statement;
     - the quasiregular patterns were not marked as patterns of the subgroup Aut(P7).
+  - (5) §6.6 (added after the first audit) stated a "split p = 7 versus p = 19 (mod 24)" for Z_p-invariant Paley face-cyclic triangulations, from p = 7, 31 (exist) and p = 19, 43 (none). The second audit pass found genuine surfaces at p = 67, 139, 163, all = 19 (mod 24). The failures at 19 and 43 are small-case accidents (a unique partition at 19; pairwise-intersecting partitions at 43). The hedge "a pattern, not a conjecture yet" did not make a two-points-per-class extrapolation acceptable.
 - **What survives:**
   - every computation (f(m) for m <= 7, the floor and minimiser classes, the mod-4 locks, the forbidden graphs, the Pi_1 lemma, the polyhedral dictionary);
   - the verdict that the direct Camion-Moon count certifies the gap 7 exactly and not the gap 21, now located at m = 7 only;
@@ -1951,6 +1952,7 @@ were unaffected; successful explicit-path replays did not validate the prose.
 - **Rule:**
   - Take a classical theorem's bound from the source paper, not from a canon argument that used a weaker form of it. Check sharpness (the extremal example) before calling a bound "Moon's".
   - When a note claims "exact instances" of a principle, check every clause of the principle's definition for each instance.
+  - Do not state a congruence pattern from two data points per class. Test the next members of each class first (here p = 67 and 79 were within reach) or say nothing.
 
 ## MISTAKE-559 (2026-10-02, opus S15 noble-polyhedra note; found by the independent audit) -- repo canon cited as stronger than it is (H-spectrum completeness), a coincidence of small numbers typed DICTIONARY, and a census claim made from a partial list
 

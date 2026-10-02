@@ -60,16 +60,18 @@
       dodecahedron does.
     - Its medial graph is a Cayley graph of the Frobenius group of order 21.
     - (V, E, F) = (7, 21, 14): the two gap values are V and E. That is NUMEROLOGY.
-  - Beyond 7 (COMPUTED; independent check pending, §6.6): P31 is the face-cyclic orientation of 1,280 Z₃₁-invariant
-    triangulations of the genus-63 surface (112 up to multipliers). P19 and P43 have none of this kind.
+  - Beyond 7 (COMPUTED; independently reproduced, §6.6): P31 is the face-cyclic orientation of 1,280 Z₃₁-invariant
+    triangulations of the genus-63 surface (112 classes under square multipliers). P19 and P43 have none of this kind,
+    by small-case accidents. Such surfaces exist again at p = 67, 79, 103, 127, 139, 151 and 163. Existence for every
+    prime p ≡ 7 (mod 12) other than 19 and 43 is open.
 - The triplet principle (TCPC: an involution with one fixed point plus a factor-2 cocycle). §7 records exact facts that
   carry the involution half. None of them supplies the factor-2 cocycle; for 60, TCPC §4.3 shows there is none between
   3 and 5. **As instances of the principle they are ANALOGY.**
   - The sharpest is **60 = 2²·3·5 = |A₅|**: its ten proper divisors are exactly the stabilizer orders and orbit sizes of
     the icosahedral rotation group (exact).
   - Reading the square 2² as the doubling of stabilizers from points to axes is ANALOGY.
-- Independent audit: DONE (2026-10-02) for §1–§7. No item was unsound. The corrections are applied (§11; MISTAKE-560).
-  The §6.6 counts are under a separate check.
+- Independent audit: DONE (2026-10-02) for §1–§7, with a second pass on §6.6. No item of §1–§7 was unsound. In §6.6 the
+  counts were confirmed, but the draft's mod-24 pattern was false. All corrections are applied (§11; MISTAKE-560).
 
 ## 0. The owner's prompt
 
@@ -315,24 +317,47 @@ source or a sink (planar duality of cycles and cuts). So `c₃(T) = #sources + #
     the Fano plane.
 - Hill's orbit parameters (a, b, c) are distances to the three mirrors of a (2,3,5) or (2,3,4) triangle.
 
-**6.6 Beyond P7: Paley face-cyclic triangulations (COMPUTED; independent check pending).**
+**6.6 Beyond P7: Paley face-cyclic triangulations (COMPUTED; independently reproduced).**
 - Every face 2-colourable orientable triangulation of K_n induces a tournament in which every face is a directed
   triangle: orient each edge along its colour-1 face. Such a triangulation is a biembedding of two Steiner triple
   systems.
-- Search, for primes p ≡ 1 (mod 6) and p ≡ 3 (mod 4):
-  - take Z_p-invariant Steiner triple systems whose blocks are all directed triangles of the Paley tournament P_p;
-  - take pairs of such systems with no common block, orienting one along P_p and the other against it;
-  - keep those whose link at a vertex is a single cycle (a genuine surface).
+- Setting: primes p ≡ 7 (mod 12), so that p ≡ 1 (mod 6) and p ≡ 3 (mod 4). We take Z_p-invariant Steiner triple
+  systems whose blocks are all directed triangles of the Paley tournament P_p.
+- **Reduction (PROVED, from the audit).** Each class {±d} has exactly one quadratic residue, and the three steps of a
+  P_p-directed triangle are residues summing to 0.
+  - So such a system is exactly a partition of QR(p) into zero-sum triples (a Heffter system on the half-set QR), with
+    a cyclic order on each triple.
+  - There are N_p·2^((p−1)/6) of them, with N_p = 1, 1, 6, 8, 521 for p = 7, 19, 31, 43, 67.
+- **Gluing.** Take two systems with no common block, and orient one along P_p and the other against it. Every arc lies
+  in one face of each, traversed oppositely, so the faces glue to an oriented pseudo-surface. P_p is its face-cyclic
+  tournament.
+  - It is a genuine surface iff the rotation at a vertex is a single (p − 1)-cycle.
+  - Equivalently, the pair forms a Heffter array H((p−1)/6; 3) on QR with compatible orderings. This is the hypothesis
+    of Archdeacon's biembedding theorem (Electron. J. Combin. 22 (2015) #P1.74).
+  - The number of rotation cycles is always odd: both cyclic-order permutations are products of 3-cycles, and (p−1)/2
+    is odd.
 
-| p | systems | disjoint pairs | genuine surfaces (genus) | up to multipliers |
-|---|---|---|---|---|
-| 7 | 2 | 1 | 1 (torus) | 1 |
-| 19 | 8 | 4 | 0 (every link splits into 3 cycles) | 0 |
-| 31 | 192 | 9,056 | 1,280 (genus 63) | 112 |
-| 43 | 1,024 | 93,696 | 0 (links split into 3, 5 or 7 cycles) | 0 |
+| p | p mod 24 | systems | disjoint pairs | rotation-cycle counts | genuine surfaces (genus) |
+|---|---|---|---|---|---|
+| 7 | 7 | 2 | 1 | {1: 1} | 1 (the torus) |
+| 19 | 19 | 8 | 4 | {3: 4} | 0 |
+| 31 | 7 | 192 | 9,056 | {1: 1280, 3: 6080, 5: 1676, 7: 20} | 1,280 (genus 63); 112 classes under square multipliers, 56 under all |
+| 43 | 19 | 1,024 | 93,696 | {3: 21504, 5: 63168, 7: 9024} | 0 |
 
-- So P31 plays P7's role on a genus-63 surface, while P19 and P43 have no Z_p-invariant surface of this kind. With two
-  data points on each side, the split p ≡ 7 versus p ≡ 19 (mod 24) is a pattern, not a conjecture yet.
+- **Existence beyond 43.** Genuine surfaces exist again at p = 67, 139 and 163 (≡ 19 mod 24) and at p = 79, 103, 127 and
+  151 (≡ 7 mod 24). They are explicit, found by the audit and verified literally. The script re-checks those at 67, 79,
+  139 and 163.
+- **The failures at 19 and 43 are small-case accidents, not a congruence obstruction** (audit).
+  - At p = 19 the only partition is the cube-root one, which forces 3 rotation cycles.
+  - At p = 43 any two of the 8 partitions share a triple, so the required bipartite graph is disconnected.
+- **Status.** Existence for every prime p ≡ 7 (mod 12) other than 19 and 43 is OPEN. The draft's "p ≡ 7 versus 19
+  (mod 24)" pattern was an extrapolation from two data points per class and is false (MISTAKE-560).
+- **Literature.**
+  - Bennett–Grannell–Griggs (2001) count 2408 cyclic orientable biembeddings of STS(31), without the Paley restriction;
+    the Paley ones should be a subfamily.
+  - Grannell–Korzhik (2009) construct many cyclic STS(12n+7) biembeddings.
+  - Buratti–Pasotti (Heffter spaces) work on the half-set of squares.
+  - No source found states the Paley-restricted existence question.
 - On P31's surfaces the faces are 310 of P31's 1,240 cyclic triangles. P7 is the only case where the faces are all the
   cyclic triangles.
 
@@ -389,9 +414,10 @@ stabilizer orders {2,3,5,4,6,10} and orbit sizes {30,20,12,15,10,6} of the icosa
   disjoint pairs as T′₇ and the floor tournament do. Busch's proof covers all m; an OCF proof at m = 7 would show
   exactly where the disjoint pairs enter.
 - **Face-cyclic orientations of neighbourly triangulations** (§6.6). K_n triangulates an orientable surface iff
-  n ≡ 0, 3, 4, 7 (mod 12) (Ringel–Youngs). Which primes p admit a Z_p-invariant Paley face-cyclic triangulation? The
-  data so far: yes for p = 7, 31 and no for p = 19, 43. Compare with the literature on cyclic biembeddings of Steiner
-  triple systems.
+  n ≡ 0, 3, 4, 7 (mod 12) (Ringel–Youngs). Does every prime p ≡ 7 (mod 12) other than 19 and 43 admit a Z_p-invariant
+  Paley face-cyclic triangulation, i.e. a compatible Heffter array H((p−1)/6; 3) on QR(p)? Data: no at 19 and 43, yes
+  at 7, 31, 67, 79, 103, 127, 139, 151 and 163. A construction would likely come from the finite-field Heffter systems
+  on the squares (Buratti–Pasotti) together with an ordering argument.
 - **Completeness** is to be pursued by the solid-interval constructions (THM-4097, THM-4102, THM-4104), not through
   Collatz.
 
@@ -405,7 +431,9 @@ stabilizer orders {2,3,5,4,6,10} and orbit sizes {30,20,12,15,10,6} of the icosa
   - minimum α₁ = 9, attained only by Moon's T′₇, with α₂ = 3;
   - the OCF checked on all 1,677,488;
   - H ≠ 21 at n = 7.
-- `python 04-computation/experiments/camion_busch_paley_triangulations_20261002.py <p>` reproduces the §6.6 table.
+- `python 04-computation/experiments/camion_busch_paley_triangulations_20261002.py` reproduces the §6.6 table (p = 7,
+  19, 31, 43), the reduction counts N_p, and the literal checks of the audit's examples at p = 67, 79, 139 and 163.
+  Give a prime as an argument to run the table search for that p alone.
 - Not computed here: f(8) = 45 and f(9) = 75 (canon THM-1370; Busch 2006), and the Kurtz–Simon theorem (cited).
 
 ## 11. Audit record
@@ -437,4 +465,11 @@ reproduced both committed outputs exactly.
   - The script's "Camion + Moon cannot certify it" print is corrected.
 - **Canon aside from the audit.** THM-079 Part B's P₄ argument, as written, does not treat two triangles sharing an
   edge. The all-n result stands through THM-1370.
-- §6.6 was added after the audit and is under a separate independent check.
+- **Second pass (§6.6).**
+  - The counts for p = 7, 19, 31 and 43 were reproduced exactly by two routes: a literal construction, and the
+    reduction to zero-sum triple partitions of QR.
+  - The gluing argument is sound, and is a special case of Archdeacon's Heffter-array biembedding theorem.
+  - The audit added the reduction, the odd-parity explanation of the rotation-cycle counts, and the class count under
+    all multipliers (56 at p = 31).
+  - **The draft's pattern "exist for p ≡ 7, none for p ≡ 19 (mod 24)" is false.** Genuine surfaces exist at p = 67,
+    139 and 163 (≡ 19 mod 24). The script now re-checks the examples at 67, 79, 139 and 163 independently.

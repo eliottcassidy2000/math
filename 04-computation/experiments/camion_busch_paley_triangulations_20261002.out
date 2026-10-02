@@ -1,5 +1,14 @@
 p = 7: 2 orbits of usable P_p-directed triangles; 2 Z_p-invariant Steiner triple systems with P_p-directed blocks; 1 disjoint pairs, rotation-cycle counts {1: 1}; genuine surfaces 1 (genus 1), 1 up to multipliers
+  reduction: N_7 = 1 partitions of QR(7) into zero-sum triples (1 such triples); systems = N_p 2^((p-1)/6) = 2
 p = 19: 6 orbits of usable P_p-directed triangles; 8 Z_p-invariant Steiner triple systems with P_p-directed blocks; 4 disjoint pairs, rotation-cycle counts {3: 4}; genuine surfaces 0 (genus 20), 0 up to multipliers
+  reduction: N_19 = 1 partitions of QR(19) into zero-sum triples (3 such triples); systems = N_p 2^((p-1)/6) = 8
 p = 31: 40 orbits of usable P_p-directed triangles; 192 Z_p-invariant Steiner triple systems with P_p-directed blocks; 9056 disjoint pairs, rotation-cycle counts {1: 1280, 3: 6080, 5: 1676, 7: 20}; genuine surfaces 1280 (genus 63), 112 up to multipliers
+  reduction: N_31 = 6 partitions of QR(31) into zero-sum triples (20 such triples); systems = N_p 2^((p-1)/6) = 192
 p = 43: 56 orbits of usable P_p-directed triangles; 1024 Z_p-invariant Steiner triple systems with P_p-directed blocks; 93696 disjoint pairs, rotation-cycle counts {3: 21504, 5: 63168, 7: 9024}; genuine surfaces 0 (genus 130), 0 up to multipliers
+  reduction: N_43 = 8 partitions of QR(43) into zero-sum triples (28 such triples); systems = N_p 2^((p-1)/6) = 1024
+N_67 = 521
+p = 67 (= 19 mod 24): the audit example is a genuine surface of genus 336, every face a directed triangle of P_67: True
+p = 79 (= 7 mod 24): the audit example is a genuine surface of genus 475, every face a directed triangle of P_79: True
+p = 139 (= 19 mod 24): the audit example is a genuine surface of genus 1530, every face a directed triangle of P_139: True
+p = 163 (= 19 mod 24): the audit example is a genuine surface of genus 2120, every face a directed triangle of P_163: True
 ALL CHECKS PASSED
