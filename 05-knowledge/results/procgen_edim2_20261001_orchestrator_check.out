@@ -1,0 +1,22 @@
+==== A ====
+[OK] A: Q_6: explicit set of size 15 resolves all 192 edges  =>  edim_m(Q_6) <= 15
+[OK] A: Q_7: explicit set of size 19 resolves all 448 edges  =>  edim_m(Q_7) <= 19
+[OK] A: Q_8: explicit set of size 26 resolves all 1024 edges  =>  edim_m(Q_8) <= 26
+[OK] A: Q_9: explicit set of size 38 resolves all 2304 edges  =>  edim_m(Q_9) <= 38
+[OK] A: Q_10: explicit set of size 48 resolves all 5120 edges  =>  edim_m(Q_10) <= 48
+[OK] A: Q_11: explicit set of size 65 resolves all 11264 edges  =>  edim_m(Q_11) <= 65
+[OK] A: Q_12: explicit set of size 76 resolves all 24576 edges  =>  edim_m(Q_12) <= 76
+[OK] A: Q_13: explicit set of size 105 resolves all 53248 edges  =>  edim_m(Q_13) <= 105
+[OK] A: Q_14: explicit set of size 125 resolves all 114688 edges  =>  edim_m(Q_14) <= 125
+[OK] A: Q_15: explicit set of size 135 resolves all 245760 edges  =>  edim_m(Q_15) <= 135
+[OK] A: Q_16: explicit set of size 171 resolves all 524288 edges  =>  edim_m(Q_16) <= 171
+==== B ====
+[OK] B: Lemma A and Lemma A2 on 300 random (n, n', q): 0 / 0 violations
+==== C ====
+[OK] C: Proposition K (weighted spanning-tree count = 2^n prod (C(n,k) - K_k(h))) for every par(h), 3 <= d <= 8; CORRECTION: connected iff h is odd AND h < n (at h = n the level graph is the matching {p, n-p}, disconnected even for odd n)
+==== D ====
+[OK] D: C* = 2.052616, c* = 0.814581, C*/c* = 4^(2/3), (sqrt2/3) C*^(3/2) = 2 ln 2
+[OK] D: entropy-integral identity at d = 1000000: (1/d) * integral = 1.000000000000
+[OK] D: entropy-integral identity at d = 1000000000: (1/d) * integral = 1.000000000000
+elapsed 3 s
+ALL CHECKS PASSED
