@@ -114,7 +114,10 @@ audit: >
     not repeated. The lane's two N = 10 passes (exact and an independent
     mod-2 DP) agree.
   - beta = Hall for N = 8, 9 rests on the lane's branch and bound.
-  - No literature search was made for E1, so priority is not claimed.
+  - Literature (2026-10-01, THM-4531): E1 is the switching-class analogue of Royle, Praeger, Glasby, Freedman and
+    Devillers, "Tournaments and even graphs are equinumerous" (J. Algebraic Combin. 57 (2023), arXiv:2204.01947). That
+    paper proves von Broemssen's conjecture with the same sign homomorphism and Cauchy-Frobenius mechanism. No published
+    statement of E1 itself was found. Both are the U = 0 and U = cuts instances of THM-4531's Theorem G.
 ---
 
 # THM-4524 — selfie tournaments, arc parity of Hamiltonian paths, and the odd Mallows–Sloane partner
@@ -175,3 +178,5 @@ The bijective form remains open.
 - rho = 2: `parity_break_two`.
 - Finite facts: QR_7 / QR_7 - v (`qr7_counts`, `qr7del_counts`); no all-odd tournament for N <= 5 (`no_allOdd_three_to_five`); `no_covered_universal_arc`.
 - Not formalized: A3(a)-(d), B1, C2, E1, the dead-arc formula, the censuses.
+
+**UPDATE 2026-10-01 (THM-4531): the bijective form of E1 is answered negatively.** No relabelling-invariant construction gives a bijection on isomorphism types between switching classes and even (untwisted) Euler graphs. This is PROVED for 5 <= n <= 100 and is impossible in the reverse direction for every n >= 3. For odd n, the canonical object on the tournament side is the unique member of each switching class with out-degree = in-degree (mod 4) at every vertex.
