@@ -22,20 +22,29 @@ status: >
   (C) (1/2 - o(1)) n log2 n <= u(n) <= C(n,2) - log2 T(n) <= log2 n!; the lazy-caterer
       formula 1 + C(n-2,2) fails both ways (kappa(7) = 12 > 11; kappa(n) < 1 + C(n-2,2)
       for 38 <= n <= 60 and all large n).
+  EXTENSION (thread session thread-2cjcob, 2026-10-01; INDEPENDENTLY AUDITED by a blind re-derivation with a
+  different search): u(9) = 14, kappa(9) = 22
+  (54 classes, all rigid; three hosts agree; a brute-force second proof of u(9) <= 14 and an
+  exhaustive re-verification of the 54; the shave4 lane found the same 54 classes independently, THM-4533,
+  whose audit covers u(9) >= 14, while the blind audit here re-derived u(9) <= 14 with a host-free search);
+  Theorem A FINITE-EXACT for n = 10 (9733056 classes);
+  the lazy-caterer formula is exact at n = 9 and too large for every n >= 38; the excess law of
+  HYP-3817 holds for n = 3..9 and fails for every n >= 21 with n = 0, 2 (mod 3).
+  Note: 05-knowledge/results/shaved_tournaments_proved_vs_conjectured_20261001.md.
 source: opus-2026-10-01-S15 (collatz-functional-uniqueness-20261001), owner's shaved 4-tournament prompt; the odd case of (A) was found by a proof-search subagent of the session and checked by the orchestrator and by an independent implementation (Check T3b)
 depends_on:
   - Redei 1934 (H(T) odd); Camion 1959 (strong => Hamiltonian); Erdos-Moser (TT_(1+floor(log2 n)) in every n-tournament)
   - Grunbaum, J. Combin. Theory Ser. B 11 (1971) 249-257 (Theorem A, first proof); Thomassen 1980 (>= n - 5 copies in strong T); Benhocine-Wojda, J. Graph Theory 7 (1983) 469-473 (all D(n,p))
   - Linial-Saks-Sos, Combinatorica 3 (1983) 101-104 (u(n) = n log2 n - O(n log log n); supersedes Theorem C)
 related:
-  - 05-knowledge/hypotheses/HYP-3798-min-free-arcs-transversal-subcube-kappa.md (kappa; lazy-caterer formula, now exact only for n <= 6)
+  - 05-knowledge/hypotheses/HYP-3798-min-free-arcs-transversal-subcube-kappa.md (kappa; lazy-caterer formula: exact for n = 3..6 and 9, fails at n = 7, 8 and for n >= 38; MISTAKE-557 corrected an earlier 'exact only for n <= 6')
   - 05-knowledge/hypotheses/INDEX-HISTORICAL-THROUGH-2026-07-21.md (HYP-3805, opus S15 2026-07-01: kappa(7) = 12 'very likely' -> proved here)
   - 05-knowledge/hypotheses/HYP-3821-biquadratic-field-Q-sqrt-3-sqrt-7-Klein-four-and-sqrt21.md (excess law; kappa(7) = 12 confirmed)
   - 05-knowledge/hypotheses/HYP-3819-excess8-equals-4-proof-strategy-and-sqrt21-bridge.md (predicted excess(8) = 4)
   - 01-canon/theorems/THM-4524-selfie-tournaments-loop-gauge-arc-parity-and-the-odd-mallows-sloane-partner.md (a different 'shaving')
 note: 05-knowledge/results/shaved_tournaments_unavoidable_cores_20261001.md
-scripts: 04-computation/experiments/shaved_tournaments_20261001.py, 04-computation/experiments/shaved_tournaments_20261001_closing.c, 04-computation/experiments/shaved_tournaments_20261001_u8.c
-output: 04-computation/experiments/shaved_tournaments_20261001.out (ALL CHECKS PASSED)
+scripts: 04-computation/experiments/shaved_tournaments_20261001.py, 04-computation/experiments/shaved_tournaments_20261001_closing.c, 04-computation/experiments/shaved_tournaments_20261001_u8.c, 04-computation/experiments/shaved_tournaments_n9_20261001.py, 04-computation/experiments/shaved_tournaments_n9_20261001.c (extension)
+output: 04-computation/experiments/shaved_tournaments_20261001.out (ALL CHECKS PASSED), 04-computation/experiments/shaved_tournaments_n9_20261001.out (extension; --full, ALL CHECKS PASSED)
 ---
 
 # THM-4526 — shaved tournaments
@@ -68,6 +77,12 @@ which every Hamiltonian path closes into a Hamiltonian cycle are exactly `C3` an
 
 **(C) Growth.** `(1/2 − o(1)) n log₂ n ≤ u(n) ≤ C(n,2) − log₂ T(n) ≤ log₂ n!`. This is weaker than Linial–Saks–Sós
 (1983): `u(n) = n log₂ n − O(n log log n)`.
+
+**Extension, `n = 9` (2026-10-01, independently audited).** `u(9) = 14` and `κ(9) = 22`. The maximum 9-shavings are 54 classes,
+all rigid, none with a Hamiltonian path; the shave4 lane found the same 54 classes independently
+([THM-4533](THM-4533-redei-graphs-parity-of-shaved-tournaments-and-u9.md)). See
+[`shaved_tournaments_proved_vs_conjectured_20261001.md`](../../05-knowledge/results/shaved_tournaments_proved_vs_conjectured_20261001.md),
+which also proves that the excess law of HYP-3817 fails for every `n ≥ 21` with `n ≡ 0, 2 (mod 3)`.
 
 ## Proof sketch of (A), odd `n`, `T` strong
 
