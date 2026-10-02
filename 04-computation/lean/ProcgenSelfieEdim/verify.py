@@ -74,6 +74,13 @@ MODULES = (
     "ConstantH",
     "ParityBreak",
     "CollatzDrop",
+    "PolyNorm",
+    "DropZ",
+    "DropPair",
+    "DropUnits",
+    "AntiAut",
+    "CayleyAbelian",
+    "AntiCirculant",
 )
 SOURCE_PATHS = (
     "lean-toolchain",
@@ -146,7 +153,7 @@ def main() -> None:
     names: list[str] = []
     for module in MODULES:
         source = (ROOT / LIB / f"{module}.lean").read_text(encoding="utf-8")
-        names.extend(re.findall(r"^theorem\s+([A-Za-z_][A-Za-z0-9_']*)", source, re.MULTILINE))
+        names.extend(re.findall(r"^theorem\s+([A-Za-z_][A-Za-z0-9_'.]*)", source, re.MULTILINE))
     require(len(set(names)) == len(names), "Duplicate theorem names in audited modules")
     audit_source = (ROOT / "AxiomAudit.lean").read_text(encoding="utf-8")
     require(audit_source.startswith(f"import {LIB}\n"), "Axiom audit must import the library root")
@@ -190,7 +197,11 @@ def main() -> None:
             "THM-4525 (Q_6 resolving 15-set, L1, L2, L3, L4, explicit sets edim_m(Q_7) <= 19, Q_8 <= 26, Q_9 <= 38), THM-4524 (gauge theorem A1, verified "
             "Hamiltonian-path enumerator, double counting and arc parity, QR_7 / QR_7 - v counts, "
             "no all-odd tournament for N = 3..5, C1 for circulants of odd order, HP existence, no HP-covered tournament with a universal arc, A2 loop-set sum 2 N!, Redei's theorem and the unconditional parity corollaries, A3(e) constant-H classes need N = 2^k, parity-break number 2 for all-even tournaments), THM-4526 (H_4, H_5, #copies(H_n) = H - n hc), S15 Collatz drop "
-            "multiplicity and label map; not the lower bound edim_m(Q_6) >= 15"
+            "multiplicity and label map; round 2: THM-4530 (two copies over Z with the exact fibre count 2 + N(6d+1), "
+            "pair-injectivity of (K(A), K(S(A))) on both the 3x+1 and 3x-1 sheets, unit branches of qx+1: all d >= 0 iff "
+            "q = 2^a - 1, all d < 0 iff q = 2^a + 1, all of Z iff q = 3), THM-4529 (Theorem 5.1 for Cayley digraphs of every "
+            "finite abelian group of odd order, incl. Z/m x Z/n; Theorem 6.1 antipodal arcs of anti-circulant tournaments are "
+            "odd, all odd m; a cyclic anti-automorphism forces N = 2 mod 4); not the lower bound edim_m(Q_6) >= 15"
         ),
         "lean_version": version.strip(),
         "root_import": LIB,

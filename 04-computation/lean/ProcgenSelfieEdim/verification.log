@@ -6,233 +6,268 @@ $ lake clean
 exit_code=0 seconds=0.1
 
 $ lake build ProcgenSelfieEdim.ListLemmas
-✔ [2/2] Built ProcgenSelfieEdim.ListLemmas (807ms)
+✔ [2/2] Built ProcgenSelfieEdim.ListLemmas (666ms)
 Build completed successfully (2 jobs).
-exit_code=0 seconds=0.9
+exit_code=0 seconds=0.8
 
 $ lake build ProcgenSelfieEdim.Hypercube
-✔ [3/3] Built ProcgenSelfieEdim.Hypercube (2.5s)
+✔ [3/3] Built ProcgenSelfieEdim.Hypercube (2.2s)
 Build completed successfully (3 jobs).
-exit_code=0 seconds=2.6
+exit_code=0 seconds=2.3
 
 $ lake build ProcgenSelfieEdim.EdimQ6
-✔ [4/4] Built ProcgenSelfieEdim.EdimQ6 (1.4s)
+✔ [4/4] Built ProcgenSelfieEdim.EdimQ6 (1.3s)
 Build completed successfully (4 jobs).
-exit_code=0 seconds=1.5
+exit_code=0 seconds=1.3
 
 $ lake build ProcgenSelfieEdim.CountingBound
-✔ [5/5] Built ProcgenSelfieEdim.CountingBound (1.4s)
+✔ [5/5] Built ProcgenSelfieEdim.CountingBound (1.2s)
 Build completed successfully (5 jobs).
-exit_code=0 seconds=1.4
+exit_code=0 seconds=1.3
 
 $ lake build ProcgenSelfieEdim.Stabilizer
-✔ [5/5] Built ProcgenSelfieEdim.Stabilizer (861ms)
+✔ [5/5] Built ProcgenSelfieEdim.Stabilizer (740ms)
 Build completed successfully (5 jobs).
 exit_code=0 seconds=0.9
 
 $ lake build ProcgenSelfieEdim.KeyBlocks
-✔ [4/4] Built ProcgenSelfieEdim.KeyBlocks (397ms)
+✔ [4/4] Built ProcgenSelfieEdim.KeyBlocks (324ms)
 Build completed successfully (4 jobs).
 exit_code=0 seconds=0.5
 
 $ lake build ProcgenSelfieEdim.EdimQ7Data
-✔ [5/5] Built ProcgenSelfieEdim.EdimQ7Data (497ms)
+✔ [5/5] Built ProcgenSelfieEdim.EdimQ7Data (414ms)
 Build completed successfully (5 jobs).
-exit_code=0 seconds=0.6
+exit_code=0 seconds=0.5
 
 $ lake build ProcgenSelfieEdim.EdimQ7P0
-✔ [6/6] Built ProcgenSelfieEdim.EdimQ7P0 (1.9s)
-Build completed successfully (6 jobs).
-exit_code=0 seconds=2.0
-
-$ lake build ProcgenSelfieEdim.EdimQ7P1
-✔ [6/6] Built ProcgenSelfieEdim.EdimQ7P1 (1.6s)
+✔ [6/6] Built ProcgenSelfieEdim.EdimQ7P0 (1.6s)
 Build completed successfully (6 jobs).
 exit_code=0 seconds=1.7
 
+$ lake build ProcgenSelfieEdim.EdimQ7P1
+✔ [6/6] Built ProcgenSelfieEdim.EdimQ7P1 (1.4s)
+Build completed successfully (6 jobs).
+exit_code=0 seconds=1.5
+
 $ lake build ProcgenSelfieEdim.EdimQ7
-✔ [8/8] Built ProcgenSelfieEdim.EdimQ7 (400ms)
+✔ [8/8] Built ProcgenSelfieEdim.EdimQ7 (341ms)
 Build completed successfully (8 jobs).
 exit_code=0 seconds=0.5
 
 $ lake build ProcgenSelfieEdim.EdimQ8Data
-✔ [5/5] Built ProcgenSelfieEdim.EdimQ8Data (812ms)
+✔ [5/5] Built ProcgenSelfieEdim.EdimQ8Data (717ms)
 Build completed successfully (5 jobs).
-exit_code=0 seconds=0.9
+exit_code=0 seconds=0.8
 
 $ lake build ProcgenSelfieEdim.EdimQ8P0
-✔ [6/6] Built ProcgenSelfieEdim.EdimQ8P0 (2.8s)
+✔ [6/6] Built ProcgenSelfieEdim.EdimQ8P0 (2.5s)
 Build completed successfully (6 jobs).
-exit_code=0 seconds=2.9
+exit_code=0 seconds=2.6
 
 $ lake build ProcgenSelfieEdim.EdimQ8P1
-✔ [6/6] Built ProcgenSelfieEdim.EdimQ8P1 (3.1s)
+✔ [6/6] Built ProcgenSelfieEdim.EdimQ8P1 (2.7s)
 Build completed successfully (6 jobs).
-exit_code=0 seconds=3.3
+exit_code=0 seconds=2.8
 
 $ lake build ProcgenSelfieEdim.EdimQ8P2
-✔ [6/6] Built ProcgenSelfieEdim.EdimQ8P2 (3.4s)
+✔ [6/6] Built ProcgenSelfieEdim.EdimQ8P2 (3.1s)
+Build completed successfully (6 jobs).
+exit_code=0 seconds=3.1
+
+$ lake build ProcgenSelfieEdim.EdimQ8P3
+✔ [6/6] Built ProcgenSelfieEdim.EdimQ8P3 (3.4s)
 Build completed successfully (6 jobs).
 exit_code=0 seconds=3.4
 
-$ lake build ProcgenSelfieEdim.EdimQ8P3
-✔ [6/6] Built ProcgenSelfieEdim.EdimQ8P3 (3.8s)
-Build completed successfully (6 jobs).
-exit_code=0 seconds=3.9
-
 $ lake build ProcgenSelfieEdim.EdimQ8
-✔ [10/10] Built ProcgenSelfieEdim.EdimQ8 (680ms)
+✔ [10/10] Built ProcgenSelfieEdim.EdimQ8 (632ms)
 Build completed successfully (10 jobs).
-exit_code=0 seconds=0.8
+exit_code=0 seconds=0.7
 
 $ lake build ProcgenSelfieEdim.EdimQ9Data
-✔ [5/5] Built ProcgenSelfieEdim.EdimQ9Data (1.7s)
+✔ [5/5] Built ProcgenSelfieEdim.EdimQ9Data (1.5s)
 Build completed successfully (5 jobs).
-exit_code=0 seconds=1.8
+exit_code=0 seconds=1.6
 
 $ lake build ProcgenSelfieEdim.EdimQ9P0
-✔ [6/6] Built ProcgenSelfieEdim.EdimQ9P0 (3.4s)
+✔ [6/6] Built ProcgenSelfieEdim.EdimQ9P0 (2.9s)
 Build completed successfully (6 jobs).
-exit_code=0 seconds=3.5
+exit_code=0 seconds=3.0
 
 $ lake build ProcgenSelfieEdim.EdimQ9P1
-✔ [6/6] Built ProcgenSelfieEdim.EdimQ9P1 (3.5s)
+✔ [6/6] Built ProcgenSelfieEdim.EdimQ9P1 (3.1s)
+Build completed successfully (6 jobs).
+exit_code=0 seconds=3.2
+
+$ lake build ProcgenSelfieEdim.EdimQ9P2
+✔ [6/6] Built ProcgenSelfieEdim.EdimQ9P2 (3.2s)
+Build completed successfully (6 jobs).
+exit_code=0 seconds=3.3
+
+$ lake build ProcgenSelfieEdim.EdimQ9P3
+✔ [6/6] Built ProcgenSelfieEdim.EdimQ9P3 (3.3s)
+Build completed successfully (6 jobs).
+exit_code=0 seconds=3.4
+
+$ lake build ProcgenSelfieEdim.EdimQ9P4
+✔ [6/6] Built ProcgenSelfieEdim.EdimQ9P4 (3.5s)
 Build completed successfully (6 jobs).
 exit_code=0 seconds=3.6
 
-$ lake build ProcgenSelfieEdim.EdimQ9P2
-✔ [6/6] Built ProcgenSelfieEdim.EdimQ9P2 (3.0s)
+$ lake build ProcgenSelfieEdim.EdimQ9P5
+✔ [6/6] Built ProcgenSelfieEdim.EdimQ9P5 (3.9s)
 Build completed successfully (6 jobs).
-exit_code=0 seconds=4.1
+exit_code=0 seconds=3.9
 
-$ lake build ProcgenSelfieEdim.EdimQ9P3
-✔ [6/6] Built ProcgenSelfieEdim.EdimQ9P3 (4.1s)
+$ lake build ProcgenSelfieEdim.EdimQ9P6
+✔ [6/6] Built ProcgenSelfieEdim.EdimQ9P6 (4.1s)
 Build completed successfully (6 jobs).
 exit_code=0 seconds=4.2
 
-$ lake build ProcgenSelfieEdim.EdimQ9P4
-✔ [6/6] Built ProcgenSelfieEdim.EdimQ9P4 (4.3s)
-Build completed successfully (6 jobs).
-exit_code=0 seconds=4.4
-
-$ lake build ProcgenSelfieEdim.EdimQ9P5
-✔ [6/6] Built ProcgenSelfieEdim.EdimQ9P5 (4.9s)
-Build completed successfully (6 jobs).
-exit_code=0 seconds=5.0
-
-$ lake build ProcgenSelfieEdim.EdimQ9P6
-✔ [6/6] Built ProcgenSelfieEdim.EdimQ9P6 (5.2s)
-Build completed successfully (6 jobs).
-exit_code=0 seconds=5.3
-
 $ lake build ProcgenSelfieEdim.EdimQ9P7
-✔ [6/6] Built ProcgenSelfieEdim.EdimQ9P7 (5.5s)
+✔ [6/6] Built ProcgenSelfieEdim.EdimQ9P7 (4.3s)
 Build completed successfully (6 jobs).
-exit_code=0 seconds=5.6
+exit_code=0 seconds=4.3
 
 $ lake build ProcgenSelfieEdim.EdimQ9P8
-✔ [6/6] Built ProcgenSelfieEdim.EdimQ9P8 (5.7s)
+✔ [6/6] Built ProcgenSelfieEdim.EdimQ9P8 (4.5s)
 Build completed successfully (6 jobs).
-exit_code=0 seconds=5.8
+exit_code=0 seconds=4.6
 
 $ lake build ProcgenSelfieEdim.EdimQ9P9
-✔ [6/6] Built ProcgenSelfieEdim.EdimQ9P9 (5.7s)
+✔ [6/6] Built ProcgenSelfieEdim.EdimQ9P9 (4.6s)
 Build completed successfully (6 jobs).
-exit_code=0 seconds=5.9
+exit_code=0 seconds=4.7
 
 $ lake build ProcgenSelfieEdim.EdimQ9P10
-✔ [6/6] Built ProcgenSelfieEdim.EdimQ9P10 (6.4s)
+✔ [6/6] Built ProcgenSelfieEdim.EdimQ9P10 (4.9s)
 Build completed successfully (6 jobs).
-exit_code=0 seconds=6.4
+exit_code=0 seconds=4.9
 
 $ lake build ProcgenSelfieEdim.EdimQ9P11
-✔ [6/6] Built ProcgenSelfieEdim.EdimQ9P11 (6.4s)
+✔ [6/6] Built ProcgenSelfieEdim.EdimQ9P11 (5.0s)
 Build completed successfully (6 jobs).
-exit_code=0 seconds=6.4
+exit_code=0 seconds=5.2
 
 $ lake build ProcgenSelfieEdim.EdimQ9
-✔ [18/18] Built ProcgenSelfieEdim.EdimQ9 (1.7s)
+✔ [18/18] Built ProcgenSelfieEdim.EdimQ9 (1.4s)
 Build completed successfully (18 jobs).
-exit_code=0 seconds=1.9
+exit_code=0 seconds=1.4
 
 $ lake build ProcgenSelfieEdim.Tournament
-✔ [2/2] Built ProcgenSelfieEdim.Tournament (839ms)
+✔ [2/2] Built ProcgenSelfieEdim.Tournament (630ms)
 Build completed successfully (2 jobs).
-exit_code=0 seconds=0.9
-
-$ lake build ProcgenSelfieEdim.HamPath
-✔ [4/4] Built ProcgenSelfieEdim.HamPath (587ms)
-Build completed successfully (4 jobs).
 exit_code=0 seconds=0.7
 
-$ lake build ProcgenSelfieEdim.ArcParity
-✔ [5/5] Built ProcgenSelfieEdim.ArcParity (1.1s)
-Build completed successfully (5 jobs).
-exit_code=0 seconds=1.2
-
-$ lake build ProcgenSelfieEdim.AltSum
-✔ [7/7] Built ProcgenSelfieEdim.AltSum (907ms)
-Build completed successfully (7 jobs).
-exit_code=0 seconds=1.0
-
-$ lake build ProcgenSelfieEdim.TournamentCode
-✔ [4/4] Built ProcgenSelfieEdim.TournamentCode (669ms)
+$ lake build ProcgenSelfieEdim.HamPath
+✔ [4/4] Built ProcgenSelfieEdim.HamPath (470ms)
 Build completed successfully (4 jobs).
-exit_code=0 seconds=0.8
-
-$ lake build ProcgenSelfieEdim.SelfieFinite
-✔ [7/7] Built ProcgenSelfieEdim.SelfieFinite (13s)
-Build completed successfully (7 jobs).
-exit_code=0 seconds=13.3
-
-$ lake build ProcgenSelfieEdim.Shaved
-✔ [8/8] Built ProcgenSelfieEdim.Shaved (6.4s)
-Build completed successfully (8 jobs).
-exit_code=0 seconds=6.5
-
-$ lake build ProcgenSelfieEdim.CycleCount
-✔ [9/9] Built ProcgenSelfieEdim.CycleCount (851ms)
-Build completed successfully (9 jobs).
-exit_code=0 seconds=1.0
-
-$ lake build ProcgenSelfieEdim.Circulant
-✔ [10/10] Built ProcgenSelfieEdim.Circulant (2.9s)
-Build completed successfully (10 jobs).
-exit_code=0 seconds=3.0
-
-$ lake build ProcgenSelfieEdim.HPExist
-✔ [11/11] Built ProcgenSelfieEdim.HPExist (482ms)
-Build completed successfully (11 jobs).
 exit_code=0 seconds=0.6
 
+$ lake build ProcgenSelfieEdim.ArcParity
+✔ [5/5] Built ProcgenSelfieEdim.ArcParity (861ms)
+Build completed successfully (5 jobs).
+exit_code=0 seconds=1.0
+
+$ lake build ProcgenSelfieEdim.AltSum
+✔ [7/7] Built ProcgenSelfieEdim.AltSum (720ms)
+Build completed successfully (7 jobs).
+exit_code=0 seconds=0.8
+
+$ lake build ProcgenSelfieEdim.TournamentCode
+✔ [4/4] Built ProcgenSelfieEdim.TournamentCode (516ms)
+Build completed successfully (4 jobs).
+exit_code=0 seconds=0.6
+
+$ lake build ProcgenSelfieEdim.SelfieFinite
+✔ [7/7] Built ProcgenSelfieEdim.SelfieFinite (10s)
+Build completed successfully (7 jobs).
+exit_code=0 seconds=10.6
+
+$ lake build ProcgenSelfieEdim.Shaved
+✔ [8/8] Built ProcgenSelfieEdim.Shaved (4.9s)
+Build completed successfully (8 jobs).
+exit_code=0 seconds=5.0
+
+$ lake build ProcgenSelfieEdim.CycleCount
+✔ [9/9] Built ProcgenSelfieEdim.CycleCount (705ms)
+Build completed successfully (9 jobs).
+exit_code=0 seconds=0.8
+
+$ lake build ProcgenSelfieEdim.Circulant
+✔ [10/10] Built ProcgenSelfieEdim.Circulant (2.6s)
+Build completed successfully (10 jobs).
+exit_code=0 seconds=2.7
+
+$ lake build ProcgenSelfieEdim.HPExist
+✔ [11/11] Built ProcgenSelfieEdim.HPExist (417ms)
+Build completed successfully (11 jobs).
+exit_code=0 seconds=0.5
+
 $ lake build ProcgenSelfieEdim.SwitchSum
-✔ [12/12] Built ProcgenSelfieEdim.SwitchSum (827ms)
+✔ [12/12] Built ProcgenSelfieEdim.SwitchSum (663ms)
 Build completed successfully (12 jobs).
-exit_code=0 seconds=0.9
+exit_code=0 seconds=0.8
 
 $ lake build ProcgenSelfieEdim.Redei
-✔ [13/13] Built ProcgenSelfieEdim.Redei (2.0s)
+✔ [13/13] Built ProcgenSelfieEdim.Redei (1.5s)
 Build completed successfully (13 jobs).
-exit_code=0 seconds=2.2
+exit_code=0 seconds=1.7
 
 $ lake build ProcgenSelfieEdim.ConstantH
-✔ [14/15] Built ProcgenSelfieEdim.CollatzDrop (2.8s)
-✔ [15/15] Built ProcgenSelfieEdim.ConstantH (906ms)
+✔ [14/15] Built ProcgenSelfieEdim.CollatzDrop (2.1s)
+✔ [15/15] Built ProcgenSelfieEdim.ConstantH (711ms)
 Build completed successfully (15 jobs).
-exit_code=0 seconds=3.8
+exit_code=0 seconds=2.9
 
 $ lake build ProcgenSelfieEdim.ParityBreak
-✔ [14/14] Built ProcgenSelfieEdim.ParityBreak (721ms)
+✔ [14/14] Built ProcgenSelfieEdim.ParityBreak (568ms)
 Build completed successfully (14 jobs).
-exit_code=0 seconds=0.8
+exit_code=0 seconds=0.7
 
 $ lake build ProcgenSelfieEdim.CollatzDrop
 Build completed successfully (2 jobs).
-exit_code=0 seconds=0.2
+exit_code=0 seconds=0.1
+
+$ lake build ProcgenSelfieEdim.PolyNorm
+✔ [2/2] Built ProcgenSelfieEdim.PolyNorm (278ms)
+Build completed successfully (2 jobs).
+exit_code=0 seconds=0.4
+
+$ lake build ProcgenSelfieEdim.DropZ
+✔ [5/5] Built ProcgenSelfieEdim.DropZ (2.0s)
+Build completed successfully (5 jobs).
+exit_code=0 seconds=2.1
+
+$ lake build ProcgenSelfieEdim.DropPair
+✔ [4/4] Built ProcgenSelfieEdim.DropPair (6.0s)
+Build completed successfully (4 jobs).
+exit_code=0 seconds=7.1
+
+$ lake build ProcgenSelfieEdim.DropUnits
+✔ [16/16] Built ProcgenSelfieEdim.DropUnits (1.3s)
+Build completed successfully (16 jobs).
+exit_code=0 seconds=1.4
+
+$ lake build ProcgenSelfieEdim.AntiAut
+✔ [14/14] Built ProcgenSelfieEdim.AntiAut (533ms)
+Build completed successfully (14 jobs).
+exit_code=0 seconds=0.7
+
+$ lake build ProcgenSelfieEdim.CayleyAbelian
+✔ [15/15] Built ProcgenSelfieEdim.CayleyAbelian (879ms)
+Build completed successfully (15 jobs).
+exit_code=0 seconds=1.0
+
+$ lake build ProcgenSelfieEdim.AntiCirculant
+✔ [16/16] Built ProcgenSelfieEdim.AntiCirculant (2.9s)
+Build completed successfully (16 jobs).
+exit_code=0 seconds=3.0
 
 $ lake build
-✔ [47/48] Built ProcgenSelfieEdim (227ms)
-Build completed successfully (48 jobs).
+✔ [54/55] Built ProcgenSelfieEdim (179ms)
+Build completed successfully (55 jobs).
 exit_code=0 seconds=0.4
 
 $ lake env lean AxiomAudit.lean
@@ -739,4 +774,118 @@ $ lake env lean AxiomAudit.lean
 'ProcgenSelfieEdim.two_pow_mono' depends on axioms: [propext]
 'ProcgenSelfieEdim.not_admissible_of_large' depends on axioms: [propext, Quot.sound]
 'ProcgenSelfieEdim.multiplicity_examples' depends on axioms: [propext, Quot.sound]
-exit_code=0 seconds=0.4
+'ProcgenSelfieEdim.lit_mul_r' depends on axioms: [propext]
+'ProcgenSelfieEdim.lit_mul_m' depends on axioms: [propext]
+'ProcgenSelfieEdim.lit_lit' depends on axioms: [propext]
+'ProcgenSelfieEdim.natCast_lit' does not depend on any axioms
+'ProcgenSelfieEdim.decompZ' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.v2Z_oddPartZ_of_eq' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.syrZ_decomp' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.v2Z_pos' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.dropZ_identity' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.dropZ_backward' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.dropZ_forward' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.two_pow_lt_of_dvd' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.dropZ_fibre' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.dropZ_fibre_inj' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.dropZ_unit_pos' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.dropZ_unit_neg' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.unit_copies_opposite_signs' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.extra_copy_sign' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.branchB_iff' depends on axioms: [propext]
+'ProcgenSelfieEdim.fibreZ_spec' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.branch_one_two' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.length_filter_range_succ' depends on axioms: [propext]
+'ProcgenSelfieEdim.fibreZ_length' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.extraZ_stable' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.v2Z_mod_eight' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.labels_two_copies' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.fibreZ_examples' does not depend on any axioms
+'ProcgenSelfieEdim.two_pow_mod_three' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.two_pow_cases' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.two_pow_cases'' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.two_pow_lt' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.le_of_mul_eq_pos' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.pos_of_mul_pos' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.neg_of_mul_pos_neg' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.pos_of_mul_pos_left' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.three_dvd_of_mul' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.mod_three_prod' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.both_ge_two' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.elim_identities' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.plus_gt' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.plus_lt' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.pair_core_plus' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.minus_gt' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.minus_lt' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.pair_core_minus' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.cast_decomp' does not depend on any axioms
+'ProcgenSelfieEdim.v2_pos_of_odd' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.drop_pair_injective' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.syrM_decomp' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.dropM_pair_injective' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.syrQ_decomp' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.odd_mul_odd' depends on axioms: [propext]
+'ProcgenSelfieEdim.dropQ_identity' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.dropQ_unit_desc' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.dropQ_unit_asc' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.unit_of_zero_drop' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.dvd_fact' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.natCast_dvd' does not depend on any axioms
+'ProcgenSelfieEdim.fact_pos'' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.unit_of_neg_drop' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.units_nonneg_iff' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.units_neg_iff' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.units_all_iff' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.units_examples' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.anti_maps_hp' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.map_reverse_map' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.arcCount_anti' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.reflection_arcCount_even' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.iterN_succ'' does not depend on any axioms
+'ProcgenSelfieEdim.iterN_add' does not depend on any axioms
+'ProcgenSelfieEdim.iterN_lt' does not depend on any axioms
+'ProcgenSelfieEdim.anti_cycle_mod_four' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.FinAbGroup.add_zero' does not depend on any axioms
+'ProcgenSelfieEdim.FinAbGroup.add_neg' does not depend on any axioms
+'ProcgenSelfieEdim.FinAbGroup.neg_unique' does not depend on any axioms
+'ProcgenSelfieEdim.FinAbGroup.neg_sub' does not depend on any axioms
+'ProcgenSelfieEdim.FinAbGroup.refl_lt' does not depend on any axioms
+'ProcgenSelfieEdim.FinAbGroup.refl_refl' does not depend on any axioms
+'ProcgenSelfieEdim.FinAbGroup.refl_diff' does not depend on any axioms
+'ProcgenSelfieEdim.FinAbGroup.refl_swap' does not depend on any axioms
+'ProcgenSelfieEdim.cayley_arcCount_even' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.divmod_enc' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.enc_lt' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.dec_enc' depends on axioms: [propext]
+'ProcgenSelfieEdim.div_lt_of_lt_mul'' depends on axioms: [propext]
+'ProcgenSelfieEdim.cayley_cyclic_prod_arcCount_even' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.succMod_lt' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.predMod_lt' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.pred_succ' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.succ_pred' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.addMod_lt' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.addMod_zero' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.zero_addMod' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.addMod_comm' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.addMod_succ' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.succ_addMod' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.succ_addMod'' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.addMod_back' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.addMod_antipode' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.cdist_succMod' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.cdist_addMod' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.rsum_rot1' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.rsum_rot' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.total_by_diff' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.rsum_split' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.rsum_reverse' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.rsum_sym_mod_two' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.rsum_const' depends on axioms: [propext]
+'ProcgenSelfieEdim.arcCount_zero_of_not_arc' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.cyclic_anti_antipodal_odd' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.antiCirc_isTournament' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.antiCirc_anti' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.antiCirc_antipodal_odd' depends on axioms: [propext, Quot.sound]
+'ProcgenSelfieEdim.antiSign_odd' depends on axioms: [propext, Quot.sound]
+exit_code=0 seconds=0.2

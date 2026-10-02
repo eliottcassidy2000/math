@@ -1,12 +1,13 @@
-# Lean formalization of THM-4524, THM-4525, THM-4526 and S15's Collatz drop results (procgen lean lane, 2026-10-01)
+# Lean formalization of THM-4524, THM-4525, THM-4526, S15's Collatz drop results, and (round 2) THM-4529, THM-4530 (procgen lean lane, 2026-10-01)
 
 **Lane:** procgen lean lane (resumed instance; the first instance's files were lost in a reboot), session
 `collatz-procgen-20260922`, 2026-10-01, machine mac-mini (Apple M2, 8 GB).
 **Package:** `04-computation/lean/ProcgenSelfieEdim/` (Lean 4 core `v4.30.0` with the bundled `Std`; no Mathlib, no downloads).
-**Verifier:** `python3 verify.py` in the package: PASS, **503 theorems** in 45 modules, every one within
-`{propext, Quot.sound}` (152 use no axiom, 54 only `propext`, 1 only `Quot.sound`, 296 `propext, Quot.sound`).
+**Verifier:** `python3 verify.py` in the package: PASS, **617 theorems** in 52 modules (round 1: 503 in 45), every
+one within `{propext, Quot.sound}` (167 use no axiom, 63 only `propext`, 1 only `Quot.sound`, 386 `propext, Quot.sound`).
 **No theorem uses `Classical.choice`.** No `sorry`, no `native_decide` / `decide +native`, no custom axiom.
-**Status:** FORMALIZED (Lean-checked) for the statements in sections 3-6e. Independent audit: OWED (orchestrator).
+**Status:** FORMALIZED (Lean-checked) for the statements in sections 3-6e (round 1) and section 9 (round 2:
+THM-4530 (a)-(c), THM-4529 (a)-(c)). Independent audit: round 1 done (orchestrator, commit 05791bbd51); round 2 OWED.
 
 ## 0. Status table
 
@@ -44,7 +45,8 @@ process), runs `lake env lean AxiomAudit.lean` (which imports only the library r
 peak child RSS) and `verification.log` (the transcript). The lakefile passes `--threads=1 --memory=1400` to Lean,
 so a kernel check that would exceed about 1.4 GB aborts with "excessive memory consumption" instead of swapping.
 
-Measured (final run): clean sequential build **129 s** in total over 45 modules (largest: `SelfieFinite` 13.3 s,
+Measured after round 2: **122 s** over 52 modules, peak RSS **1060 MB**, audit 0.2 s (section 9). Round-1 run:
+clean sequential build **129 s** in total over 45 modules (largest: `SelfieFinite` 13.3 s,
 `Shaved` 6.5 s, the twelve `EdimQ9P*` parts 4-6.4 s each), axiom audit 0.4 s, **peak RSS 1028 MB** (one Lean
 process at a time; about 400 MB of it is the baseline for loading `Init`/`Std`). Every module stays below the
 1.4 GB cap set in the lakefile. The build log has no warnings.
@@ -71,6 +73,8 @@ The previous instance had started this investigation; it is now complete. Each r
 | `split` | none |
 | `funext` | `Quot.sound` |
 | core `List.nodup_range`, `List.length_erase_of_mem`, `List.mem_erase_of_ne` | **`Classical.choice`** |
+| core `Int.natCast_dvd_natCast` (round 2) | **`Classical.choice`** (replaced by a two-line `natCast_dvd`) |
+| `pnorm` / `pcast` (round 2: `simp only` normalisation then `omega`) | `propext, Quot.sound` |
 | core `List.mem_flatMap`, `List.nodup_append`, `List.mem_range`, `List.filter_congr`, `List.append_inj`, `Int.mul_ediv_cancel'` | `propext` and/or `Quot.sound` |
 
 Adopted rules: no `grind`; `omega` only on goals without `∧` (split conjunctions first) and after `exfalso` when the
@@ -354,7 +358,8 @@ case: a tournament on an even number `n ≥ 2` of vertices contains an odd numbe
     `CountingBound`, `Stabilizer`, `KeyBlocks`, `EdimQ7Data`, `EdimQ7P0-1`, `EdimQ7`, `EdimQ8Data`, `EdimQ8P0-3`,
     `EdimQ8`, `EdimQ9Data`, `EdimQ9P0-11`, `EdimQ9`, `Tournament`, `HamPath`, `ArcParity`, `TournamentCode`,
     `SelfieFinite`, `AltSum`, `Shaved`, `CycleCount`, `Circulant`, `HPExist`, `SwitchSum`, `Redei`, `ConstantH`,
-    `ParityBreak`, `CollatzDrop`;
+    `ParityBreak`, `CollatzDrop`, and (round 2) `PolyNorm`, `DropZ`, `DropPair`, `DropUnits`, `AntiAut`,
+    `CayleyAbelian`, `AntiCirculant`;
   * `gen_certificates.py` (regenerates the `EdimQ7*`, `EdimQ8*`, `EdimQ9*` modules from the lane's sets; the
     Lean files are trusted only through the kernel checks);
   * `AxiomAudit.lean`, `verify.py`, `README.md`, `verification.json`, `verification.log`.
@@ -362,3 +367,145 @@ case: a tournament on an even number `n ≥ 2` of vertices contains an odd numbe
 * Scratch (not for commit): `scratch/procgen_lean/` (axiom tests, build helpers, cost experiments).
 
 No git state was changed. No HYP/THM file was created or edited.
+
+## 9. Round 2: THM-4530 and THM-4529 (coordinator's round-2 list)
+
+**Status:** FORMALIZED (Lean-checked) for every item of the round-2 list, in seven new modules
+(`PolyNorm`, `DropZ`, `DropPair`, `DropUnits`, `AntiAut`, `CayleyAbelian`, `AntiCirculant`). Every new theorem is
+within `{propext, Quot.sound}`; no `Classical.choice`, no `sorry`, no `native_decide`. Independent audit: OWED.
+Final run (`python3 verify.py`, after round 2): **PASS, 617 theorems in 52 modules**, clean sequential build
+**122 s** (round-2 modules: `PolyNorm` 0.4 s, `DropZ` 2.1 s, `DropPair` 7.1 s, `DropUnits` 1.4 s, `AntiAut` 0.7 s,
+`CayleyAbelian` 1.0 s, `AntiCirculant` 3.0 s), axiom audit 0.2 s, **peak RSS 1060 MB** (below the 1.4 GB cap).
+Axiom histogram: 167 none, 63 `propext`, 1 `Quot.sound`, 386 `propext, Quot.sound`; no `Classical.choice`.
+New `Classical.choice` source found: core `Int.natCast_dvd_natCast` (replaced by `natCast_dvd`).
+
+| Round-2 target | Lean module | Status |
+|---|---|---|
+| THM-4530 (a) Prop. 2.6, two copies over Z, and the fibre formula | `DropZ` | FORMALIZED (`dropZ_unit_pos`, `dropZ_unit_neg`, `dropZ_fibre`, `fibreZ_spec`, `fibreZ_length`) |
+| THM-4530 (b) Theorem 4.5, pair-injectivity, `3x + 1` **and** `3x - 1` | `DropPair` | FORMALIZED (`drop_pair_injective`, `dropM_pair_injective`) |
+| THM-4530 (c) Theorem 5.2, unit branches, both directions | `DropUnits` | FORMALIZED (`units_nonneg_iff`, `units_neg_iff`, `units_all_iff`) |
+| THM-4529 (a) Theorem 6.1 for every odd `m` | `AntiCirculant` | FORMALIZED (`cyclic_anti_antipodal_odd`, `antiCirc_antipodal_odd`) |
+| THM-4529 (b) Theorem 5.1 for every finite abelian group of odd order | `AntiAut`, `CayleyAbelian` | FORMALIZED (`cayley_arcCount_even`; instances `cyclic`, `FinAbGroup.prod`, so `Z/m × Z/n`) |
+| THM-4529 (c) cyclic anti-automorphism forces `N ≡ 2 (mod 4)` | `AntiAut` | FORMALIZED (`anti_cycle_mod_four`) |
+| THM-4524 E1 | | skipped as instructed (needs group theory) |
+
+### 9.1 Polynomial identities in core Lean (`PolyNorm`)
+
+There is no `ring` or `nlinarith` without Mathlib, and `grind` (which has a ring solver) introduces
+`Classical.choice`. The new tactic macro `pnorm` normalises `Int` polynomials with `simp only`: it distributes
+(`Int.mul_add`, `Int.sub_mul`, …), sorts the factors of each monomial by simp's AC ordering (`Int.mul_comm`,
+`Int.mul_assoc`, `Int.mul_left_comm`), and then moves numerals to the front of each monomial (`lit_mul_r`,
+`lit_mul_m`). After `pnorm`, `omega` treats equal monomials as one atom, so any polynomial identity that is an
+integer linear combination of multiplied-out hypotheses closes by `omega` (the hypotheses are multiplied by the
+needed factors with `congrArg`). `pcast` pushes `Nat → Int` casts (with `natCast_lit` for numerals).
+
+Pitfall found and fixed: simp's AC order puts numerals *before* constant applications (`2 * dropZ A`) but
+*after* free variables (`X * (S * 5)`), so two numerals of one monomial need not be adjacent, and the swap lemma
+`lit_mul_m` then loops (`2 * (3 * x) ↦ 3 * (2 * x) ↦ …`). The fix is a pre-phase lemma `lit_lit`
+(`m * (n * b) = (m * n) * b`) together with the pre-phase simproc `Int.reduceMul`, so numerals are merged
+before they can be swapped.
+
+### 9.2 THM-4530 (a): two copies over Z (`DropZ`)
+
+Definitions (all on `Int`; `A % 2 = 1` means "odd" for both signs, since `%` is `emod`):
+`v2Z n := v2 n.natAbs`; `oddPartZ n := if n < 0 then -(oddPart n.natAbs) else oddPart n.natAbs`;
+`syrZ A := oddPartZ (3 * A + 1)`; `dropZ A := (A - syrZ A) / 2`.
+
+* `decompZ (hn : n ≠ 0) : n = 2 ^ v2Z n * oddPartZ n ∧ oddPartZ n % 2 = 1` and `v2Z_oddPartZ_of_eq` (uniqueness).
+* `dropZ_identity (hA : A % 2 = 1) : 6 * dropZ A + 1 = ((2 : Int) ^ v2Z (3 * A + 1) - 3) * syrZ A`.
+* `dropZ_unit_pos d : (8 * d + 1) % 2 = 1 ∧ v2Z (3 * (8 * d + 1) + 1) = 2 ∧ syrZ (8 * d + 1) = 6 * d + 1 ∧
+  dropZ (8 * d + 1) = d` and `dropZ_unit_neg d : (-4 * d - 1) % 2 = 1 ∧ v2Z (3 * (-4 * d - 1) + 1) = 1 ∧
+  syrZ (-4 * d - 1) = -6 * d - 1 ∧ dropZ (-4 * d - 1) = d` (every `d ∈ Z`); `unit_copies_opposite_signs`.
+* **`dropZ_fibre d A : (A % 2 = 1 ∧ dropZ A = d) ↔ ∃ v : Nat, 1 ≤ v ∧ ((2 : Int) ^ v - 3) ∣ (6 * d + 1) ∧
+  A = (1 + 2 ^ (v + 1) * d) / ((2 : Int) ^ v - 3)`** (the coordinator's formulation of Prop. 2.6), with
+  `dropZ_fibre_inj` (the preimage from branch `v` has `v_2(3A + 1) = v`, so distinct branches give distinct `A`).
+* **Exact count.** `fibreZ d V` lists the preimages from the branches `v < V`. `fibreZ_spec (hd1 : 6 * d + 1 <
+  2 ^ V - 3) (hd2 : -(6 * d + 1) < 2 ^ V - 3) : (fibreZ d V).Nodup ∧ ∀ A, A ∈ fibreZ d V ↔ (A % 2 = 1 ∧
+  dropZ A = d)`, and `fibreZ_length (hV : 3 ≤ V) : (fibreZ d V).length = 2 + extraZ d V`, where `extraZ d V` is the
+  number of `3 ≤ v < V` with `(2^v - 3) ∣ 6d + 1`, i.e. `N(6d + 1)` (independent of `V`, `extraZ_stable`). So every
+  `d ∈ Z` is a drop exactly `2 + N(6d + 1)` times.
+* `extra_copy_sign`: the extra copies (`v ≥ 3`) have the sign of `6d + 1`.
+* Owner's labels: `v2Z_mod_eight` (`v = 1 ↔ A ≡ 3 mod 4`, `v = 2 ↔ A ≡ 1 mod 8`, `v ≥ 3 ↔ A ≡ 5 mod 8`) and
+  `labels_two_copies` (with `M = (A + 1)/2`: `M` even iff `A = -4d - 1`, `M ≡ 1 mod 4` iff `A = 8d + 1`, every
+  other preimage has `M ≡ 3 mod 4`).
+* `fibreZ_examples` (kernel `decide`): `fibreZ 2 6 = [-9, 17, 5]`, `fibreZ 24 9 = [-97, 193, 77, 53]`.
+
+### 9.3 THM-4530 (b): Theorem 4.5 on both sheets (`DropPair`)
+
+* **`drop_pair_injective (hA : A % 2 = 1) (hA' : A' % 2 = 1) (h1 : drop A = drop A') (h2 : drop (syr A) =
+  drop (syr A')) : A = A'`** (`syr`, `drop` are S15's definitions from `CollatzDrop`, on the naturals).
+* **`dropM_pair_injective`**, the same for the `3x - 1` map `syrM A := oddPart (3 * A - 1)`,
+  `dropM A := (A - syrM A) / 2`.
+* Ingredients: `elim_identities` (with `X = 2^v`, `Y = 2^v'`, `U = 2^u`, `UP = 2^u'`,
+  `E = P(U - 3)(Y - 3) - (UP - 3)(X - 3)`: `S E = ε (P - 1)(Y - 3)` and `S' E = ε (P - 1)(X - 3)`, `ε = ±1` the
+  sheet; proved by `pnorm`), `both_ge_two` (the sign argument), `plus_gt`/`plus_lt` and `minus_gt`/`minus_lt`
+  (the case analysis), `pair_core_plus`/`pair_core_minus` (the symmetric reduction to `u < u'`),
+  `three_dvd_of_mul`, `mod_three_prod`.
+* Differences from the note's proof, same mathematics: the note's `E ∣ g(2^δ - 1)` with `g = gcd(M_v, M_v')` is
+  replaced by explicit combinations. `S' E = (P - 1) M_v` gives `E ≤ (P - 1) M_v` (enough for
+  `M_u (2^e - 1) < 4`); for `e = 2`, `(S - 4S') E = 9 (P - 1)` gives `E ≤ 9 (P - 1) < 3·2^v + 9(P - 1) = E`; for
+  `e = 1`, `(S - 2S') E = 3 (P - 1)` and `3 ∤ E` give `E ∣ P - 1`. The last case (`δ = 1`, `v = 3`, `S = 13`) is
+  excluded by `3A + 1 = 8 · 13` (equivalently the note's `n₁ = 65 ≢ 1 mod 6`). For `3x - 1`: `E < 0`; `v' < v`
+  contradicts `-E ≤ (P - 1) M_v`; `v' > v` forces `u = 2`, `e = 1`, and `9(P - 1) < 2^v (2P - 3) ≤ 10(P - 1)`, which no
+  power of two `2^v ≥ 4` satisfies.
+
+### 9.4 THM-4530 (c): Theorem 5.2 (`DropUnits`)
+
+`syrQ q A := oddPart (q * A + 1)`, `dropQ q A := (A - syrQ q A) / 2` (odd `A ≥ 1`, `s = +1`).
+
+* `dropQ_identity (hA : A % 2 = 1) : 2 * (q : Int) * dropQ q A + 1 = ((2 : Int) ^ v2 (q * A + 1) - q) * syrQ q A`
+  (Theorem 5.1, one step).
+* `dropQ_unit_desc (hqa : q + 1 = 2 ^ a) : (2 ^ (a + 1) * d + 1) % 2 = 1 ∧ dropQ q (2 ^ (a + 1) * d + 1) = d` and
+  `dropQ_unit_asc (ha : 1 ≤ a) (hqa : q = 2 ^ a + 1) (hn : 1 ≤ n) : (2 ^ (a + 1) * n - 1) % 2 = 1 ∧
+  dropQ q (2 ^ (a + 1) * n - 1) = -n` (the "if" directions, explicit preimages).
+* `unit_of_zero_drop` (a drop `0` is a fixed point, so `(2^v - q) A = 1`, `A = 1`, `q = 2^v - 1`) and
+  `unit_of_neg_drop` (if `-q!` is a drop, the ascending modulus `q - 2^v ≤ q` divides `q!` and `2q·q! - 1`, so it is 1).
+* **`units_nonneg_iff q : (∀ d : Nat, ∃ A, A % 2 = 1 ∧ dropQ q A = d) ↔ ∃ a, q + 1 = 2 ^ a`**,
+  **`units_neg_iff q (hq : q % 2 = 1) : (∀ n, 1 ≤ n → ∃ A, A % 2 = 1 ∧ dropQ q A = -n) ↔ ∃ a, 1 ≤ a ∧ q = 2 ^ a + 1`**,
+  **`units_all_iff q (hq : q % 2 = 1) : (∀ d : Int, ∃ A, A % 2 = 1 ∧ dropQ q A = d) ↔ q = 3`**;
+  `units_examples` (`5x + 1` misses some `d ≥ 0`, `7x + 1` some `d < 0`).
+* Not formalized: the density statement (a side without a unit misses a set of density `> 0.38`). The "only if"
+  directions use single explicit witnesses (`d = 0`, `d = -q!`) instead.
+
+### 9.5 THM-4529 (`AntiAut`, `CayleyAbelian`, `AntiCirculant`)
+
+* Infrastructure (`AntiAut`): `anti_maps_hp` (`P ↦ reverse(π P)` maps HPs through `a → b` to HPs through
+  `π b → π a` when `T(π a, π b) = T(b, a)`), **`arcCount_anti : arcCount n T a b = arcCount n T (π b) (π a)`** (for an
+  anti-automorphism with an inverse), and **`reflection_arcCount_even`** (an involutive anti-automorphism swapping
+  `u, v`, `n` odd: `c(u → v)` even), the abstract core of THM-4524 C1 / Theorem 5.1.
+* **(b) Theorem 5.1.** `FinAbGroup N` is a structure (operations on `Nat`, closure, associativity, commutativity,
+  neutral element, inverses on `{0, …, N - 1}`), `cayley G S a b := S (G.add b (G.neg a))` (`a → b` iff
+  `b - a ∈ S`, `S` arbitrary). **`cayley_arcCount_even (hN : N % 2 = 1) (G : FinAbGroup N) (S) (hu : u < N)
+  (hv : v < N) : arcCount N (cayley G S) u v % 2 = 0`**, via `φ(x) = (u + v) - x` (`FinAbGroup.refl_refl`,
+  `FinAbGroup.refl_diff`, `FinAbGroup.refl_swap`). Instances: `cyclic n` (`Z/n`) and `FinAbGroup.prod G₁ G₂` (on
+  `{0, …, N₁N₂ - 1}`, `x = i N₂ + j`), hence `cayley_cyclic_prod_arcCount_even` for `Z/m × Z/n` with `m, n` odd
+  (e.g. the non-cyclic `Z/3 × Z/3`). Every finite abelian group is a product of cyclic groups, but that structure
+  theorem is not formalized: the general statement is over the structure `FinAbGroup`.
+* **(a) Theorem 6.1.** **`cyclic_anti_antipodal_odd (hm : m % 2 = 1) (hT : IsTournament (2 * m) T) (hanti : ∀ a b,
+  a < 2 * m → b < 2 * m → a ≠ b → T (succMod (2 * m) a) (succMod (2 * m) b) = T b a) (hx : x < 2 * m) :
+  (arcCount (2 * m) T x (addMod (2 * m) x m) + arcCount (2 * m) T (addMod (2 * m) x m) x) % 2 = 1`** (every tournament
+  on `Z/2m`, `m` odd, with the anti-automorphism `x ↦ x + 1`). In the note's coordinates: `antiCirc m s x y :=
+  if x % 2 = 0 then s (cdist (2m) x y) else !s (cdist (2m) x y)` (`x → y` iff `s(y - x) = (-1)^x`), `AntiSign m s`
+  (`s(-d) = -(-1)^d s(d)`), `antiCirc_isTournament`, `antiCirc_anti`, and **`antiCirc_antipodal_odd (hm : m % 2 = 1)
+  (hs : AntiSign m s) (hx : x < 2 * m) (harc : antiCirc m s x (addMod (2 * m) x m) = true) : arcCount (2 * m)
+  (antiCirc m s) x (addMod (2 * m) x m) % 2 = 1`**. Proof as in the note (σ = reverse ∘ τ, Rédei via `redei`),
+  with the orbit count done by grouping `Σ c(x → y) = (2m - 1) H` by differences: `C(d) = C(2m - d)`, so the sum is
+  `≡ C(0) + C(m)`, `C(0) = 0`, and `C(m) = m · A` where `A(x) = c(x → x+m) + c(x+m → x)` is σ-invariant, hence
+  constant (`total_by_diff`, `rsum_rot`, `rsum_sym_mod_two`).
+* **(c)** **`anti_cycle_mod_four (hN : 2 ≤ N) (hT : IsTournament N T) (hπ : ∀ a, a < N → π a < N) (hanti : ∀ a b,
+  a < N → b < N → a ≠ b → T (π a) (π b) = T b a) (hcyc : ∀ a, a < N → iterN π N a = a) (hfree : ∀ k, 0 < k →
+  k < N → iterN π k 0 ≠ 0) : N % 4 = 2`**. Also `antiSign_odd` (the sign condition itself forces `m` odd).
+
+### 9.6 Skipped in round 2, and why
+
+* Drafted at the very end but **excluded at wrap-up** (coordinator's stop; not in the verified package): the
+  converse characterization of THM-4529 §6.3 (every tournament on `Z/2m` with the anti-automorphism `x ↦ x + 1`
+  equals `T_s` with `s(d) = T(0, d)`; it compiled but was not re-verified), and THM-4530 Theorem 4.1(a) (the k-step
+  identity) with Prop. 4.4 (the two 2-step copies `16n - 5`, `16n - 7`), not compiled.
+
+* THM-4524 E1: needs group theory (as the coordinator said).
+* THM-4530: the density results (Theorem 2.1, Lemma 2.2, the 18-digit densities, Prop. 2.5, Theorem 4.8, the
+  `> 0.38` hole density of Theorem 5.2) need real analysis / measure (Haar measure on `Ẑ`) or large exact rational
+  computations; the k-step results (4.1-4.4) and §6 were not on the list.
+* THM-4529: the Petersen/Heawood identifications, Theorem L (linear `K_6`), the census and the prime-derived
+  criteria are finite computations or need finite fields; they were not on the list.

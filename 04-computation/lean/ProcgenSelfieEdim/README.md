@@ -32,6 +32,13 @@ is `05-knowledge/results/procgen_lean_20261001_formalization.md`.
 | `Shaved` | copies of `H_n` (HP plus first→last arc) | `every_four_contains_H4`, `avoids_H5_iff` (a 5-tournament avoids `H_5` iff it is `≅ C3[1,C3,1]`) |
 | `CycleCount` | rotations of closing Hamiltonian paths | `closing_count`, `copiesH_add` (`#copies(H_n) + n · hc = H`), `containsH_iff_copiesH_pos` |
 | `CollatzDrop` | Syracuse map `S(A) = oddpart(3A+1)`, drop `K(A) = (A - S(A))/2`, label map `F(M) = (S(2M-1)+1)/2` | `drop_identity` (`6K+1 = (2^v-3) S`), `drop_forward`, `drop_backward`, `drop_injective`, `admissible_iff`, `admissible_of_neg`, `admissible_of_nonneg`, `mod_four_iff`, `labelF_even`, `labelF_four_j_one`, `labelF_microcosm`, `labelF_eq_sub_drop`, `drop_two_regular`, worked values |
+| `PolyNorm` | round 2: the `pnorm` / `pcast` tactic macros (polynomial normalisation for `omega`, no Mathlib) | `lit_mul_r`, `lit_mul_m`, `lit_lit`, `natCast_lit` |
+| `DropZ` | round 2, THM-4530 (a): `syrZ`, `dropZ` on all odd integers (sign kept) | `dropZ_identity`, `dropZ_unit_pos` (`8d+1`), `dropZ_unit_neg` (`-4d-1`), `dropZ_fibre` (Prop. 2.6: `A = (1 + 2^(v+1) d)/(2^v - 3)`, `(2^v - 3) ∣ 6d+1`), `fibreZ_spec`, `fibreZ_length` (exactly `2 + N(6d+1)` preimages), `extra_copy_sign`, `labels_two_copies` |
+| `DropPair` | round 2, THM-4530 (b): Theorem 4.5 | `drop_pair_injective` (`3x+1`), `dropM_pair_injective` (`3x-1`), `elim_identities`, `pair_core_plus`, `pair_core_minus` |
+| `DropUnits` | round 2, THM-4530 (c): Theorem 5.2 for `qx+1` | `dropQ_identity`, `dropQ_unit_desc`, `dropQ_unit_asc`, `units_nonneg_iff` (all `d >= 0` iff `q = 2^a - 1`), `units_neg_iff` (all `d < 0` iff `q = 2^a + 1`), `units_all_iff` (all of Z iff `q = 3`) |
+| `AntiAut` | round 2, THM-4529: anti-automorphisms | `arcCount_anti` (`c(a→b) = c(πb→πa)`), `reflection_arcCount_even`, `anti_cycle_mod_four` (**(c)**: a cyclic anti-automorphism through all `N` vertices forces `N ≡ 2 mod 4`) |
+| `CayleyAbelian` | round 2, THM-4529 (b): Theorem 5.1 | `cayley_arcCount_even` (every Cayley digraph of a `FinAbGroup` of odd order is arc-even), `cyclic`, `FinAbGroup.prod`, `cayley_cyclic_prod_arcCount_even` (`Z/m × Z/n`) |
+| `AntiCirculant` | round 2, THM-4529 (a): Theorem 6.1 | `cyclic_anti_antipodal_odd` (all odd `m`), `antiCirc_isTournament`, `antiCirc_anti`, `antiCirc_antipodal_odd`, `antiSign_odd` |
 
 Conventions:
 

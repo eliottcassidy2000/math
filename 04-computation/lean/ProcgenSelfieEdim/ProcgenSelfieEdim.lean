@@ -43,6 +43,13 @@ import ProcgenSelfieEdim.Redei
 import ProcgenSelfieEdim.ConstantH
 import ProcgenSelfieEdim.ParityBreak
 import ProcgenSelfieEdim.CollatzDrop
+import ProcgenSelfieEdim.PolyNorm
+import ProcgenSelfieEdim.DropZ
+import ProcgenSelfieEdim.DropPair
+import ProcgenSelfieEdim.DropUnits
+import ProcgenSelfieEdim.AntiAut
+import ProcgenSelfieEdim.CayleyAbelian
+import ProcgenSelfieEdim.AntiCirculant
 
 /-!
 Explicit library root: every theorem of the package is reachable from here.
@@ -52,4 +59,10 @@ THM-4525 (edge multiset dimension): `Hypercube`, `EdimQ6`, `CountingBound`, `Sta
 THM-4524 (selfie tournaments, arc-HP parity): `Tournament`, `HamPath`, `ArcParity`,
 `TournamentCode`, `SelfieFinite`, `Circulant`, `HPExist`, `SwitchSum`, `Redei` (Rédei's theorem and its corollaries), `ConstantH`, `ParityBreak`.
 THM-4526 (shaved tournaments): `Shaved`, `CycleCount`. THM-4527 / S15 Theorems 1-2: `CollatzDrop`.
+Round 2. THM-4530 (drop multiplicities): `PolyNorm` (a small `Int` polynomial normaliser),
+`DropZ` (two copies over Z, Prop. 2.6), `DropPair` (pair-injectivity, Theorem 4.5, both sheets),
+`DropUnits` (unit branches of `qx + 1`, Theorem 5.2). THM-4529 (Paley coordinates,
+anti-circulants): `AntiAut` (anti-automorphisms, the reflection lemma, `N ≡ 2 mod 4`),
+`CayleyAbelian` (Theorem 5.1 for every finite abelian group of odd order), `AntiCirculant`
+(Theorem 6.1, antipodal arcs odd).
 -/
