@@ -114,7 +114,10 @@ audit: >
     not repeated. The lane's two N = 10 passes (exact and an independent
     mod-2 DP) agree.
   - beta = Hall for N = 8, 9 rests on the lane's branch and bound.
-  - No literature search was made for E1, so priority is not claimed.
+  - Literature (2026-10-01, THM-4531): E1 is the switching-class analogue of Royle, Praeger, Glasby, Freedman and
+    Devillers, "Tournaments and even graphs are equinumerous" (J. Algebraic Combin. 57 (2023), arXiv:2204.01947). That
+    paper proves von Broemssen's conjecture with the same sign homomorphism and Cauchy-Frobenius mechanism. No published
+    statement of E1 itself was found. Both are the U = 0 and U = cuts instances of THM-4531's Theorem G.
 ---
 
 # THM-4524 — selfie tournaments, arc parity of Hamiltonian paths, and the odd Mallows–Sloane partner
@@ -176,8 +179,10 @@ The bijective form remains open.
 - Finite facts: QR_7 / QR_7 - v (`qr7_counts`, `qr7del_counts`); no all-odd tournament for N <= 5 (`no_allOdd_three_to_five`); `no_covered_universal_arc`.
 - Not formalized: A3(a)-(d), B1, C2, E1, the dead-arc formula, the censuses.
 
-**Later work (2026-10-02; independent audit owed).** The bijective form is answered, in the natural
-(S_n-equivariant) sense, in [`natural_matchings_switching_classes_20261002.md`](../../05-knowledge/results/natural_matchings_switching_classes_20261002.md):
-a natural bijection from switching classes of tournaments to untwisted Euler graphs exists for n <= 4 and for no
-5 <= n <= 10^6 (FINITE-EXACT census for n = 5..9; PROVED with a computed additive condition up to 10^6; CONDITIONAL
-beyond). For odd n every switching class has exactly one member with all scores = (n-1)/2 mod 2.
+**UPDATE 2026-10-01 (THM-4531): the bijective form of E1 is answered negatively.** No relabelling-invariant construction gives a bijection on isomorphism types between switching classes and even (untwisted) Euler graphs. This is PROVED for 5 <= n <= 100 and is impossible in the reverse direction for every n >= 3. For odd n, the canonical object on the tournament side is the unique member of each switching class with out-degree = in-degree (mod 4) at every vertex.
+
+**Later work (2026-10-02; independent audit owed).** [`natural_matchings_switching_classes_20261002.md`](../../05-knowledge/results/natural_matchings_switching_classes_20261002.md)
+was written in parallel with THM-4531 and extends its range: no natural bijection from switching classes to untwisted
+Euler graphs exists for any 5 <= n <= 10^6 (PROVED, using rigid blocks of every odd order with no prime factor = 1
+mod 8 and a computed additive condition; CONDITIONAL beyond 10^6). Its odd-n canonical member is THM-4531's P1, found
+independently.

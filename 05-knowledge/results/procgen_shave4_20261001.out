@@ -1,0 +1,510 @@
+
+=== 0. build  [0s]
+PASS tournament class counts A000568(2..9)
+
+=== 1. THM-4526(A) re-verified: H_n = path + first->last arc  [1s]
+PASS n=3: classes=2, classes with no copy of H_n=1, odd/even counts 1/1 (closing HPs = n*hc checked per class)
+PASS n=4: classes=4, classes with no copy of H_n=0, odd/even counts 4/0 (closing HPs = n*hc checked per class)
+PASS n=5: classes=12, classes with no copy of H_n=1, odd/even counts 8/4 (closing HPs = n*hc checked per class)
+PASS n=6: classes=56, classes with no copy of H_n=0, odd/even counts 56/0 (closing HPs = n*hc checked per class)
+PASS n=7: classes=456, classes with no copy of H_n=0, odd/even counts 254/202 (closing HPs = n*hc checked per class)
+PASS n=8: classes=6880, classes with no copy of H_n=0, odd/even counts 6880/0 (closing HPs = n*hc checked per class)
+PASS n=9: classes=191536, classes with no copy of H_n=0, odd/even counts 100178/91358 (closing HPs = n*hc checked per class)
+PASS the only avoiders are C3 (n=3) and C3[1,C3,1] = 1110101111 (n=5)
+PASS 1110101111 is a => C3 => b -> a, i.e. C3[1,C3,1]
+
+=== 2. Redei graphs of the form path + chords (R_n)  [17s]
+PASS n=3: tilings partition {0,1}^C(n-1,2) into the 2 classes, every class has an odd number of tilings (Redei), multiplicities = |Aut|, orbit sum = 2^C(n,2)
+PASS n=3: R_n = ['{}']
+PASS n=4: tilings partition {0,1}^C(n-1,2) into the 4 classes, every class has an odd number of tilings (Redei), multiplicities = |Aut|, orbit sum = 2^C(n,2)
+PASS n=4: R_n = ['{}', '{0-3}']
+PASS n=5: tilings partition {0,1}^C(n-1,2) into the 12 classes, every class has an odd number of tilings (Redei), multiplicities = |Aut|, orbit sum = 2^C(n,2)
+PASS n=5: R_n = ['{}', '{0-3}', '{1-4}', '{0-3,1-4}']
+PASS n=6: tilings partition {0,1}^C(n-1,2) into the 56 classes, every class has an odd number of tilings (Redei), multiplicities = |Aut|, orbit sum = 2^C(n,2)
+PASS n=6: R_n = ['{}', '{0-3}', '{0-5}', '{2-5}', '{0-5,1-4}', '{0-3,2-5}', '{0-3,1-4,2-5}']
+PASS n=7: tilings partition {0,1}^C(n-1,2) into the 456 classes, every class has an odd number of tilings (Redei), multiplicities = |Aut|, orbit sum = 2^C(n,2)
+PASS n=7: R_n = ['{}', '{0-3,1-6}', '{0-5,1-6}', '{0-3,3-6}', '{0-5,3-6}']
+PASS n=8: tilings partition {0,1}^C(n-1,2) into the 6880 classes, every class has an odd number of tilings (Redei), multiplicities = |Aut|, orbit sum = 2^C(n,2)
+PASS n=8: R_n = ['{}', '{0-7}']
+PASS n=9 (all 191536 classes): no single chord, the only chord pair is {07,18}; among subsets of {07,18,08} only {} and {07,18}
+PASS n=10: interval heredity (B5) leaves exactly the candidates {}, {09}, {07,18,29}, {07,18,29,09}
+PASS n=11: interval heredity leaves exactly the 8 subsets of {09, 1-10, 0-10}
+PASS n=10 chords [(0, 7), (1, 8), (2, 9)]: random search finds a tournament with an even count
+PASS    independent Python count confirms: 710 (even) embeddings in 001000100100001001101010000101110101100000100
+PASS n=10 chords [(0, 7), (1, 8), (2, 9), (0, 9)]: random search finds a tournament with an even count
+PASS    independent Python count confirms: 396 (even) embeddings in 001000100100001001101010000101110101100000100
+PASS n=11 chords [(0, 9)]: random search finds a tournament with an even count
+PASS    independent Python count confirms: 22280 (even) embeddings in 0010001001000010011010100001011101011000001000110000011
+PASS n=11 chords [(1, 10)]: random search finds a tournament with an even count
+PASS    independent Python count confirms: 20944 (even) embeddings in 0010001001000010011010100001011101011000001000110000011
+PASS n=11 chords [(0, 10)]: random search finds a tournament with an even count
+PASS    independent Python count confirms: 16452 (even) embeddings in 1010010111001000100101001111010101000011110000000001011
+PASS n=11 chords [(0, 9), (0, 10)]: random search finds a tournament with an even count
+PASS    independent Python count confirms: 10858 (even) embeddings in 1001101001101100101100010100000100000010100101111100110
+PASS n=11 chords [(1, 10), (0, 10)]: random search finds a tournament with an even count
+PASS    independent Python count confirms: 8802 (even) embeddings in 1001101001101100101100010100000100000010100101111100110
+PASS n=11 chords [(0, 9), (1, 10), (0, 10)]: random search finds a tournament with an even count
+PASS    independent Python count confirms: 5348 (even) embeddings in 1110000100111101100010100101100000101101110011110010000
+PASS D_11 = P_11 + {09,1-10}: 300 random 11-tournaments, all counts odd (EMPIRICAL support; PROVED by D1)
+PASS D_13: 60 random 13-tournaments, all counts odd (EMPIRICAL support; PROVED by D1)
+
+=== 3. Theorem D1: exact identities behind the proof  [44s]
+PASS n=5: emb(D_n)=H-A-B+AB, A=sum_w hc(T-w)d-(w), B=sum_w hc(T-w)d+(w), AB even, for every class; emb(D_n) odd in 12 classes
+PASS n=6: emb(D_n)=H-A-B+AB, A=sum_w hc(T-w)d-(w), B=sum_w hc(T-w)d+(w), AB even, for every class; emb(D_n) odd in 32 classes; = 1+sum_w hc(T-w) mod 2 for every class
+PASS n=7: emb(D_n)=H-A-B+AB, A=sum_w hc(T-w)d-(w), B=sum_w hc(T-w)d+(w), AB even, for every class; emb(D_n) odd in 456 classes
+PASS n=8: emb(D_n)=H-A-B+AB, A=sum_w hc(T-w)d-(w), B=sum_w hc(T-w)d+(w), AB even, for every class; emb(D_n) odd in 3588 classes; = 1+sum_w hc(T-w) mod 2 for every class
+PASS n=9: emb(D_n)=H-A-B+AB, A=sum_w hc(T-w)d-(w), B=sum_w hc(T-w)d+(w), AB even, for every class; emb(D_n) odd in 191536 classes
+
+=== 4. census of parity-rigid and Redei graphs  [59s]
+PASS n=2: 2 DAG classes, 1 Redei (Gray-code completion parity, full class table)
+PASS    B4: every rigid DAG with |Aut S| odd and >= 1 arc has an involution of its underlying graph (1 checked)
+PASS    B4: every Redei graph has an odd number of linear extensions
+PASS n=3: 6 DAG classes, 2 Redei (Gray-code completion parity, full class table)
+PASS    B4: every rigid DAG with |Aut S| odd and >= 1 arc has an involution of its underlying graph (2 checked)
+PASS    B4: every Redei graph has an odd number of linear extensions
+PASS n=4: 31 DAG classes, 5 Redei (Gray-code completion parity, full class table)
+PASS    B4: every rigid DAG with |Aut S| odd and >= 1 arc has an involution of its underlying graph (6 checked)
+PASS    B4: every Redei graph has an odd number of linear extensions
+PASS n=5: 302 DAG classes, 21 Redei (Gray-code completion parity, full class table)
+PASS    B4: every rigid DAG with |Aut S| odd and >= 1 arc has an involution of its underlying graph (30 checked)
+PASS    B4: every Redei graph has an odd number of linear extensions
+PASS n=6: 5984 DAG classes, 43 Redei (Gray-code completion parity, full class table)
+PASS    B4: every rigid DAG with |Aut S| odd and >= 1 arc has an involution of its underlying graph (165 checked)
+PASS    B4: every Redei graph has an odd number of linear extensions
+PASS n=7: 243668 DAG classes, 156 Redei (Gray-code completion parity, full class table)
+PASS    B4: every rigid DAG with |Aut S| odd and >= 1 arc has an involution of its underlying graph (1620 checked)
+PASS    B4: every Redei graph has an odd number of linear extensions
+PASS r(n) = max arcs of a Redei graph = 1,2,4,6,8,9 for n = 2..7 (= u(n))
+PASS n=5: backtracking tester with the B4 filters returns the same 21 Redei classes
+PASS n=6: backtracking tester with the B4 filters returns the same 43 Redei classes
+PASS n=7: backtracking tester with the B4 filters returns the same 156 Redei classes
+PASS n=8: all 20286025 DAG classes: 220 Redei, max 10 arcs (2 classes); r(8) = 10 < u(8) = 11; histogram [(7, 96), (8, 96), (9, 26), (10, 2)]
+PASS ideal formula corollary: deleting the unique source (or sink) of a Redei graph leaves a Redei graph (138 cases, n = 5..8)
+PASS n=7: the two 9-arc Redei graphs: 0>3 0>4 6>0 1>3 5>1 1>6 2>4 5>2 6>2 | 0>3 4>0 0>6 1>3 5>1 6>1 4>2 5>2 2>6
+PASS n=8 10-arc Redei graph 0>4 6>0 0>7 1>4 1>6 2>5 6>2 7>2 3>5 3>7 = (H_4 u H_4) + a twisted pair [(0, 7), (6, 2)] under the involution [(0, 2), (1, 3), (4, 5), (6, 7)]
+PASS n=8 10-arc Redei graph 0>4 6>0 0>7 1>4 1>6 5>2 2>6 2>7 5>3 7>3 = (H_4 u H_4) + a twisted pair [(0, 7), (2, 6)] under the involution [(0, 7), (1, 5), (2, 6), (3, 4)]
+
+=== 5. deletion-reversal closure (Horn) and the D69 derivations  [109s]
+PASS n=1: 1 oriented graphs, 1 parity-rigid (1 Redei); Horn closure certifies 1 (1 Redei), 0 not certified
+PASS n=2: 2 oriented graphs, 2 parity-rigid (1 Redei); Horn closure certifies 2 (1 Redei), 0 not certified
+PASS n=3: 7 oriented graphs, 5 parity-rigid (2 Redei); Horn closure certifies 5 (2 Redei), 0 not certified
+PASS n=4: 42 oriented graphs, 23 parity-rigid (5 Redei); Horn closure certifies 22 (5 Redei), 1 not certified
+PASS n=5: 582 oriented graphs, 178 parity-rigid (21 Redei); Horn closure certifies 174 (20 Redei), 4 not certified
+PASS n=6: 21480 oriented graphs, 2999 parity-rigid (43 Redei); Horn closure certifies 2976 (43 Redei), 23 not certified
+PASS n=7: 2142288 oriented graphs, 130574 parity-rigid (156 Redei); Horn closure certifies 130345 (151 Redei), 229 not certified
+   derivations of path + span-3 (n = 4, 5, 6) printed by the closure:
+   TARGET n=4: 0>1 1>2 2>3 0>3
+     true status 1, known 1
+     G1 [n=4, phi=0] = 0>2 0>3 1>2 1>3
+         by free automorphism of even order (|Aut| even)
+     G2 [n=4, phi=0] = 0>2 1>3
+         by free automorphism of even order (|Aut| even)
+     G3 [n=4, phi=1] = 0>2 1>3 3>0
+         by Redei (directed Hamiltonian path)
+     G4 [n=4, phi=1] = 0>2 0>3 1>3
+         by DR on its arc 0>3: phi = phi(G2 = minus arc) + phi(G3 = arc reversed)
+     G5 [n=4, phi=1] = 0>2 0>3 1>2 3>1
+         by DR: it is G1 with arc 0>2 reversed; phi = phi(G1) + phi(G4 = minus that arc)
+     UNEXPLAINED n=5 status=1 arcs 0>3 0>4 3>1 3>4 4>1
+     UNEXPLAINED n=5 status=0 arcs 0>3 1>4 3>1 3>4 4>0
+     UNEXPLAINED n=5 status=0 arcs 0>2 0>3 1>2 1>4 3>1 3>2 3>4 4>0 4>2
+     UNEXPLAINED n=5 status=0 arcs 0>2 1>3 2>1 2>3 3>0 4>0 4>1 4>2 4>3
+   TARGET n=5: 0>1 1>2 2>3 3>4 0>3 1>4
+     true status 1, known 1
+     G1 [n=5, phi=0] = 0>3 0>4 1>3 1>4 3>2 4>2
+         by free automorphism of even order (|Aut| even)
+     G2 [n=5, phi=0] = 0>3 0>4 1>3 1>4 2>4
+         by free automorphism of even order (|Aut| even)
+     G3 [n=5, phi=0] = 2>0 3>1 4>0 4>1
+         by free automorphism of even order (|Aut| even)
+     G4 [n=5, phi=0] = 0>3 0>4 1>3 2>4 4>1
+         by DR: it is G2 with arc 0>4 reversed; phi = phi(G2) + phi(G3 = minus that arc)
+     G5 [n=5, phi=0] = 0>3 0>4 1>4 2>4
+         by free automorphism of even order (|Aut| even)
+     G6 [n=5, phi=1] = 0>3 0>4 1>4
+         by disjoint union of rigid components (Lucas)
+     G7 [n=5, phi=1] = 0>3 0>4 1>4 4>2
+         by DR: it is G5 with arc 1>4 reversed; phi = phi(G5) + phi(G6 = minus that arc)
+     G8 [n=5, phi=1] = 0>3 0>4 2>4 3>1 4>1
+         by DR: it is G4 with arc 1>3 reversed; phi = phi(G4) + phi(G7 = minus that arc)
+     G9 [n=5, phi=1] = 0>3 0>4 1>3 3>2 4>1 4>2
+         by DR: it is G1 with arc 0>3 reversed; phi = phi(G1) + phi(G8 = minus that arc)
+     UNEXPLAINED n=6 status=0 arcs 0>3 1>4 2>5 4>2 4>5 5>1
+     UNEXPLAINED n=6 status=0 arcs 0>3 0>4 1>4 2>5 3>5 4>2 5>1
+     UNEXPLAINED n=6 status=0 arcs 0>3 0>4 1>4 2>5 4>2 5>1 5>3
+     UNEXPLAINED n=6 status=0 arcs 0>3 1>4 2>5 3>5 4>0 4>2 5>1
+     UNEXPLAINED n=6 status=0 arcs 0>3 1>4 2>5 4>0 4>2 5>1 5>3
+     UNEXPLAINED n=6 status=0 arcs 0>3 0>5 1>3 2>4 3>5 4>0 5>4
+     UNEXPLAINED n=6 status=0 arcs 0>3 0>5 3>1 3>5 4>0 4>2 5>4
+     UNEXPLAINED n=6 status=0 arcs 0>3 0>4 1>3 1>5 4>1 4>2 4>5 5>0 5>2
+     UNEXPLAINED n=6 status=0 arcs 0>4 1>5 2>4 2>5 3>0 3>1 4>1 4>5 5>0
+     UNEXPLAINED n=6 status=0 arcs 0>3 0>4 1>3 1>5 4>1 4>3 4>5 5>0 5>3
+     UNEXPLAINED n=6 status=0 arcs 0>3 1>4 3>1 3>4 4>0 5>0 5>1 5>3 5>4
+     UNEXPLAINED n=6 status=0 arcs 0>3 0>5 1>4 1>5 2>5 3>1 3>4 3>5 4>0 4>5
+     UNEXPLAINED n=6 status=0 arcs 0>3 0>5 1>4 1>5 3>1 3>4 3>5 4>0 4>5 5>2
+     UNEXPLAINED n=6 status=0 arcs 0>3 1>4 2>5 3>1 3>4 4>0 5>0 5>1 5>3 5>4
+     UNEXPLAINED n=6 status=0 arcs 0>3 1>4 3>1 3>4 4>0 5>0 5>1 5>2 5>3 5>4
+     UNEXPLAINED n=6 status=0 arcs 0>2 0>5 1>4 1>5 2>4 3>1 4>0 5>3
+     UNEXPLAINED n=6 status=0 arcs 0>2 0>3 0>4 0>5 2>1 2>4 3>1 3>5 4>1 4>3 4>5 5>1 5>2
+     UNEXPLAINED n=6 status=0 arcs 0>2 0>3 1>4 1>5 2>1 2>4 3>1 3>5 4>0 4>3 4>5 5>0 5>2
+     UNEXPLAINED n=6 status=0 arcs 0>2 0>3 0>4 1>2 1>3 1>5 2>3 4>1 4>2 4>3 4>5 5>0 5>2 5>3
+     UNEXPLAINED n=6 status=0 arcs 0>2 0>3 1>2 1>4 2>5 3>1 3>2 3>4 4>0 4>2 5>0 5>1 5>3 5>4
+     UNEXPLAINED n=6 status=0 arcs 0>2 0>3 1>2 1>4 3>1 3>2 3>4 4>0 4>2 5>0 5>1 5>2 5>3 5>4
+     UNEXPLAINED n=6 status=0 arcs 0>2 0>3 1>4 1>5 2>1 2>3 2>4 3>1 3>4 3>5 4>0 4>5 5>0 5>2
+     UNEXPLAINED n=6 status=0 arcs 0>2 1>3 2>1 2>3 3>0 4>0 4>1 4>2 4>3 4>5 5>0 5>1 5>2 5>3
+   TARGET n=6: 0>1 1>2 2>3 3>4 4>5 0>3 1>4 2>5
+     true status 1, known 1
+     G1 [n=6, phi=0] = 0>3 0>4 0>5 1>3 2>4 2>5 4>1 5>1
+         by free automorphism of even order (|Aut| even)
+     G2 [n=6, phi=0] = 0>3 0>4 1>3 1>5 2>4 2>5 5>0
+         by free automorphism of even order (|Aut| even)
+     G3 [n=6, phi=0] = 0>3 0>5 1>4 1>5 2>4 2>5
+         by free automorphism of even order (|Aut| even)
+     G4 [n=6, phi=1] = 0>3 1>4 2>5 5>0
+         by disjoint union of rigid components (Lucas)
+     G5 [n=6, phi=1] = 0>3 1>5 2>4 4>1 5>0
+         by Redei (directed Hamiltonian path)
+     G6 [n=6, phi=0] = 0>3 0>5 1>5 2>4 4>1
+         by DR on its arc 0>5: phi = phi(G4 = minus arc) + phi(G5 = arc reversed)
+     G7 [n=6, phi=1] = 0>3 0>5 1>4 2>5
+         by disjoint union of rigid components (Lucas)
+     G8 [n=6, phi=1] = 0>3 0>5 1>4 1>5 2>4
+         by DR: it is G6 with arc 4>1 reversed; phi = phi(G6) + phi(G7 = minus that arc)
+     G9 [n=6, phi=1] = 0>3 0>5 1>4 1>5 2>4 5>2
+         by DR: it is G3 with arc 1>5 reversed; phi = phi(G3) + phi(G8 = minus that arc)
+     G10 [n=6, phi=1] = 0>3 1>3 1>5 2>4 2>5 4>0 5>0
+         by DR: it is G2 with arc 0>3 reversed; phi = phi(G2) + phi(G9 = minus that arc)
+     G11 [n=6, phi=1] = 0>3 0>4 1>3 2>4 2>5 4>1 5>0 5>1
+         by DR: it is G1 with arc 0>4 reversed; phi = phi(G1) + phi(G10 = minus that arc)
+     UNEXPLAINED n=7 status=1 arcs 0>4 1>5 1>6 5>2 5>6 6>2
+     UNEXPLAINED n=7 status=0 arcs 0>4 1>5 2>6 5>2 5>6 6>1
+     UNEXPLAINED n=7 status=0 arcs 0>4 0>5 1>5 1>6 4>6 5>2 6>2
+     UNEXPLAINED n=7 status=1 arcs 0>4 0>5 1>5 1>6 5>2 6>2 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>4 0>5 1>5 2>6 4>6 5>2 6>1
+     UNEXPLAINED n=7 status=0 arcs 0>4 0>5 1>5 2>6 5>2 6>1 6>4
+     UNEXPLAINED n=7 status=1 arcs 0>4 1>5 1>6 4>6 5>0 5>2 6>2
+     UNEXPLAINED n=7 status=0 arcs 0>4 1>5 1>6 5>0 5>2 6>2 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>4 1>5 2>6 4>6 5>0 5>2 6>1
+     UNEXPLAINED n=7 status=0 arcs 0>4 1>5 2>6 5>0 5>2 6>1 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>4 0>5 1>5 1>6 4>6 5>2 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>4 0>5 1>5 4>6 5>2 6>1 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>4 0>5 1>6 4>6 5>1 5>2 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>4 0>5 4>6 5>1 5>2 6>1 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>4 1>5 1>6 2>5 3>6 5>0 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>4 1>5 2>5 3>6 5>0 6>1 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>4 1>6 2>5 3>6 5>0 5>1 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>4 2>5 3>6 5>0 5>1 6>1 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>4 0>5 1>5 2>6 4>6 5>2 6>1 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>4 0>5 1>6 4>6 5>1 5>2 6>2 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>4 1>5 1>6 2>5 3>6 5>0 6>2 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>4 1>5 2>6 3>6 5>0 5>2 6>1 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>5 1>5 2>6 4>0 4>6 5>2 6>1 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>5 1>6 4>0 4>6 5>1 5>2 6>2 6>3
+     UNEXPLAINED n=7 status=0 arcs 1>5 1>6 2>5 3>6 4>0 5>0 6>2 6>4
+     UNEXPLAINED n=7 status=0 arcs 1>5 2>6 3>6 4>0 5>0 5>2 6>1 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>4 0>5 1>5 2>6 4>6 5>4 6>0 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>4 0>5 2>6 4>6 5>1 5>4 6>0 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>4 0>6 1>5 2>6 4>5 5>0 6>3 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>4 0>6 2>6 4>5 5>0 5>1 6>3 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>4 0>5 1>5 2>6 4>6 5>2 5>3 6>1 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>4 1>5 1>6 2>5 3>6 5>0 5>3 6>2 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>4 0>5 1>5 1>6 4>6 5>2 5>4 6>0 6>2
+     UNEXPLAINED n=7 status=0 arcs 0>4 0>5 1>5 1>6 4>6 5>2 5>4 6>0 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>4 0>5 2>5 3>6 4>6 5>1 5>4 6>0 6>1
+     UNEXPLAINED n=7 status=0 arcs 0>4 0>6 1>4 2>5 4>6 5>0 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>4 0>6 1>4 4>6 5>0 5>2 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>4 0>6 2>5 4>1 4>6 5>0 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>4 0>6 4>1 4>6 5>0 5>2 6>5
+     UNEXPLAINED n=7 status=1 arcs 0>4 0>6 2>5 4>1 4>6 5>3 6>1
+     UNEXPLAINED n=7 status=0 arcs 0>4 1>6 2>5 4>1 4>6 5>3 6>0
+     UNEXPLAINED n=7 status=0 arcs 0>4 0>6 2>5 3>6 4>1 5>3 6>1 6>2
+     UNEXPLAINED n=7 status=0 arcs 0>4 0>5 1>4 1>6 5>1 5>2 5>6 6>0 6>2
+     UNEXPLAINED n=7 status=0 arcs 0>5 1>6 2>5 2>6 4>0 4>1 5>1 5>6 6>0
+     UNEXPLAINED n=7 status=1 arcs 0>4 1>6 2>5 2>6 4>1 5>0 5>3 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>4 1>6 2>5 3>6 4>1 5>0 5>3 6>2
+     UNEXPLAINED n=7 status=0 arcs 0>4 0>6 1>5 1>6 2>6 4>1 4>5 4>6 5>0 5>6
+     UNEXPLAINED n=7 status=0 arcs 0>4 0>6 1>5 1>6 4>1 4>5 4>6 5>0 5>6 6>2
+     UNEXPLAINED n=7 status=0 arcs 0>4 1>5 2>6 4>1 4>5 5>0 6>0 6>1 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>4 1>5 4>1 4>5 5>0 6>0 6>1 6>2 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>4 0>6 1>5 1>6 2>6 4>1 4>5 4>6 5>0 5>6 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>4 1>5 2>6 4>1 4>5 5>0 6>0 6>1 6>3 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>4 0>5 0>6 2>5 4>1 4>5 5>1 5>6 6>1 6>2 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>4 0>5 0>6 2>5 4>1 4>6 5>1 5>4 6>1 6>2 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>4 1>6 2>5 3>6 4>1 4>5 5>0 5>3 5>6 6>2 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>4 1>6 2>5 3>6 4>1 4>6 5>0 5>3 5>4 6>2 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>6 1>5 1>6 3>5 4>1 5>0 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>3 1>4 1>5 1>6 2>6 3>6 4>0 4>6 5>2
+     UNEXPLAINED n=7 status=0 arcs 0>3 1>4 1>5 4>0 5>2 6>1 6>2 6>3 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>4 1>4 1>6 2>5 2>6 3>0 3>6 4>6 5>1
+     UNEXPLAINED n=7 status=0 arcs 0>4 1>4 2>5 3>0 5>1 6>1 6>2 6>3 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>6 1>4 1>5 4>0 5>2 5>6 6>1 6>2 6>3 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>3 1>4 1>5 1>6 2>6 3>6 4>0 4>6 5>2 6>0 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>4 0>6 1>4 2>5 3>0 5>1 5>6 6>1 6>2 6>3 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>4 1>4 1>6 2>5 2>6 3>0 3>6 4>6 5>1 6>0 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>5 1>4 2>5 3>6 4>2 5>1 6>0 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>3 1>4 2>5 3>6 4>2 4>6 5>0 5>1 6>0
+     UNEXPLAINED n=7 status=0 arcs 0>3 1>4 1>5 2>4 2>6 5>2 5>4 5>6 6>1 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>3 1>4 2>5 4>2 4>5 5>1 6>1 6>2 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>6 1>4 1>6 2>5 2>6 4>2 4>5 4>6 5>1 5>6
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>6 1>4 2>5 4>2 4>5 5>1 6>1 6>2 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 1>4 1>6 2>5 2>6 4>2 4>5 4>6 5>1 5>6 6>0
+     UNEXPLAINED n=7 status=0 arcs 0>3 1>4 2>5 4>2 4>5 5>1 6>0 6>1 6>2 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>6 1>4 1>6 2>5 2>6 3>0 4>2 4>5 4>6 5>1 5>6
+     UNEXPLAINED n=7 status=0 arcs 0>6 1>4 2>5 3>0 4>2 4>5 5>1 6>1 6>2 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 1>4 1>6 2>5 2>6 3>0 4>2 4>5 4>6 5>1 5>6 6>0
+     UNEXPLAINED n=7 status=0 arcs 1>4 2>5 3>0 4>2 4>5 5>1 6>0 6>1 6>2 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>6 1>4 1>6 2>5 2>6 3>6 4>2 4>5 4>6 5>1 5>6
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>6 1>4 1>6 2>5 2>6 4>2 4>5 4>6 5>1 5>6 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>6 1>4 2>5 3>6 4>2 4>5 5>1 6>1 6>2 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>6 1>4 2>5 4>2 4>5 5>1 6>1 6>2 6>3 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 1>4 1>6 2>5 2>6 3>6 4>2 4>5 4>6 5>1 5>6 6>0
+     UNEXPLAINED n=7 status=0 arcs 0>3 1>4 1>6 2>5 2>6 4>2 4>5 4>6 5>1 5>6 6>0 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>3 1>4 2>5 3>6 4>2 4>5 5>1 6>0 6>1 6>2 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 1>4 2>5 4>2 4>5 5>1 6>0 6>1 6>2 6>3 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 1>5 2>6 3>4 5>2 5>6 6>1
+     UNEXPLAINED n=7 status=0 arcs 0>3 1>5 2>6 3>4 4>0 5>2 5>6 6>1
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 0>6 1>4 1>6 2>5 2>6 3>5 3>6 4>2 5>1
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 1>4 2>5 3>5 4>2 5>1 6>0 6>1 6>2 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>6 1>4 1>6 2>5 2>6 3>6 4>0 4>2 5>1 5>3
+     UNEXPLAINED n=7 status=0 arcs 0>3 1>4 2>5 4>0 4>2 5>1 5>3 6>0 6>1 6>2 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 0>6 1>4 2>6 4>2 4>6 5>1 5>2 5>3 6>1
+     UNEXPLAINED n=7 status=0 arcs 0>3 1>4 1>5 2>5 2>6 4>0 4>2 4>6 5>3 6>0 6>1
+     UNEXPLAINED n=7 status=0 arcs 0>4 0>6 1>4 2>6 3>0 3>5 4>2 4>6 5>1 5>2 6>1
+     UNEXPLAINED n=7 status=0 arcs 1>4 1>5 2>5 2>6 3>0 3>5 4>0 4>2 4>6 6>0 6>1
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 0>6 1>4 1>6 2>5 2>6 3>5 3>6 4>2 4>6 5>1 5>6
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 0>6 1>4 1>6 2>5 2>6 3>5 3>6 4>2 5>1 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 0>6 1>4 1>6 2>5 2>6 3>6 4>2 4>6 5>1 5>3 5>6
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 1>4 2>5 3>5 4>2 4>6 5>1 5>6 6>0 6>1 6>2 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 1>4 2>5 3>5 4>2 5>1 6>0 6>1 6>2 6>3 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 1>4 2>5 4>2 5>1 5>3 6>0 6>1 6>2 6>3 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>6 1>4 1>6 2>5 2>6 3>5 3>6 4>0 4>2 4>6 5>1 5>6
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>6 1>4 1>6 2>5 2>6 3>6 4>0 4>2 4>6 5>1 5>3 5>6
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>6 1>4 1>6 2>5 2>6 3>6 4>0 4>2 5>1 5>3 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 1>4 2>5 3>5 4>0 4>2 5>1 6>0 6>1 6>2 6>3 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 1>4 2>5 4>0 4>2 4>6 5>1 5>3 5>6 6>0 6>1 6>2 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>3 1>4 2>5 4>0 4>2 5>1 5>3 6>0 6>1 6>2 6>3 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 0>6 1>4 1>6 2>5 2>6 3>5 3>6 4>3 4>6 5>0 5>6
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 0>6 1>4 1>6 2>5 2>6 3>5 3>6 4>3 5>0 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 0>6 1>6 2>6 3>5 3>6 4>1 4>3 4>6 5>0 5>2 5>6
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 0>6 1>6 2>6 3>5 3>6 4>1 4>3 5>0 5>2 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 1>4 2>5 3>5 4>3 4>6 5>0 5>6 6>0 6>1 6>2 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 1>4 2>5 3>5 4>3 5>0 6>0 6>1 6>2 6>3 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 3>5 4>1 4>3 4>6 5>0 5>2 5>6 6>0 6>1 6>2 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 3>5 4>1 4>3 5>0 5>2 6>0 6>1 6>2 6>3 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 0>5 1>3 1>4 1>6 5>1 5>2 5>3 5>6 6>0 6>2 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>5 1>3 1>6 2>5 2>6 4>0 4>1 5>1 5>3 5>6 6>0 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>4 0>5 1>4 1>6 3>0 3>1 3>5 3>6 5>1 5>2 5>6 6>0 6>2
+     UNEXPLAINED n=7 status=0 arcs 0>5 1>6 2>5 2>6 3>0 3>1 3>5 3>6 4>0 4>1 5>1 5>6 6>0
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 0>5 0>6 3>1 3>5 4>1 4>6 5>1 5>4 5>6 6>1 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 1>5 1>6 3>1 3>5 4>1 4>6 5>0 5>4 5>6 6>0 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 0>5 0>6 1>3 1>5 2>4 2>6 5>2 5>6 6>1
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 0>5 0>6 1>5 2>6 3>1 4>2 5>2 5>6 6>1
+     UNEXPLAINED n=7 status=0 arcs 1>3 1>5 2>4 2>6 3>0 4>0 5>0 5>2 5>6 6>0 6>1
+     UNEXPLAINED n=7 status=0 arcs 1>5 2>6 3>0 3>1 4>0 4>2 5>0 5>2 5>6 6>0 6>1
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 0>6 1>3 1>5 1>6 2>6 3>6 4>1 4>2 4>5 4>6 5>0 5>2 5>6
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 0>6 1>3 1>5 1>6 4>1 4>2 4>5 4>6 5>0 5>2 5>6 6>2 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 1>3 1>5 2>6 3>6 4>1 4>2 4>5 5>0 5>2 6>0 6>1 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 1>3 1>5 4>1 4>2 4>5 5>0 5>2 6>0 6>1 6>2 6>3 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>4 0>6 1>5 1>6 2>4 2>5 2>6 3>0 3>1 3>6 4>1 4>5 4>6 5>0 5>6
+     UNEXPLAINED n=7 status=0 arcs 0>4 0>6 1>5 1>6 2>4 2>5 3>0 3>1 4>1 4>5 4>6 5>0 5>6 6>2 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>4 1>5 2>4 2>5 2>6 3>0 3>1 3>6 4>1 4>5 5>0 6>0 6>1 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>4 1>5 2>4 2>5 3>0 3>1 4>1 4>5 5>0 6>0 6>1 6>2 6>3 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>5 0>6 1>4 1>5 1>6 2>6 3>1 3>4 3>5 3>6 4>0 4>5 4>6
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>5 0>6 1>4 1>5 1>6 3>1 3>4 3>5 3>6 4>0 4>5 4>6 6>2
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>5 1>4 1>5 2>6 3>1 3>4 3>5 4>0 4>5 6>0 6>1 6>3 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>5 1>4 1>5 3>1 3>4 3>5 4>0 4>5 6>0 6>1 6>2 6>3 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>6 1>4 1>6 2>6 3>1 3>4 3>6 4>0 4>6 5>0 5>1 5>3 5>4
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>6 1>4 1>6 3>1 3>4 3>6 4>0 4>6 5>0 5>1 5>3 5>4 6>2
+     UNEXPLAINED n=7 status=0 arcs 0>3 1>4 2>6 3>1 3>4 4>0 5>0 5>1 5>3 5>4 6>0 6>1 6>3 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>3 1>4 3>1 3>4 4>0 5>0 5>1 5>3 5>4 6>0 6>1 6>2 6>3 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 0>5 1>3 1>4 1>6 3>4 5>1 5>3 5>4 5>6 6>0 6>3 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 1>3 1>5 3>6 4>1 4>3 4>5 5>0 5>3 6>0 6>1 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 1>3 1>5 4>1 4>3 4>5 5>0 5>3 6>0 6>1 6>3 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 1>5 1>6 3>1 3>4 3>5 4>1 4>5 4>6 5>0 5>6 6>0 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>3 1>4 3>1 3>4 4>0 5>0 5>1 5>3 5>4 5>6 6>0 6>1 6>3 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 0>6 1>3 1>5 1>6 2>6 3>6 4>1 4>3 4>5 4>6 5>0 5>3 5>6
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 0>6 1>3 1>5 1>6 2>6 4>1 4>3 4>5 4>6 5>0 5>3 5>6 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 0>6 1>3 1>5 1>6 3>6 4>1 4>3 4>5 4>6 5>0 5>3 5>6 6>2
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 0>6 1>3 1>5 1>6 4>1 4>3 4>5 4>6 5>0 5>3 5>6 6>2 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 1>3 1>5 2>6 3>6 4>1 4>3 4>5 5>0 5>3 6>0 6>1 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 1>3 1>5 2>6 4>1 4>3 4>5 5>0 5>3 6>0 6>1 6>3 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 1>3 1>5 3>6 4>1 4>3 4>5 5>0 5>3 6>0 6>1 6>2 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 1>3 1>5 4>1 4>3 4>5 5>0 5>3 6>0 6>1 6>2 6>3 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>6 1>4 1>6 2>6 3>1 3>4 3>6 4>0 4>6 5>0 5>1 5>3 5>4 5>6
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>6 1>4 1>6 2>6 3>1 3>4 3>6 4>0 4>6 5>0 5>1 5>3 5>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>6 1>4 1>6 3>1 3>4 3>6 4>0 4>6 5>0 5>1 5>3 5>4 5>6 6>2
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>6 1>4 1>6 3>1 3>4 3>6 4>0 4>6 5>0 5>1 5>3 5>4 6>2 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 1>4 2>6 3>1 3>4 4>0 5>0 5>1 5>3 5>4 5>6 6>0 6>1 6>3 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>3 1>4 2>6 3>1 3>4 4>0 5>0 5>1 5>3 5>4 6>0 6>1 6>3 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 1>4 3>1 3>4 4>0 5>0 5>1 5>3 5>4 5>6 6>0 6>1 6>2 6>3 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>3 1>4 3>1 3>4 4>0 5>0 5>1 5>3 5>4 6>0 6>1 6>2 6>3 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>5 0>6 1>4 1>5 1>6 2>5 2>6 3>1 3>4 3>5 3>6 4>0 4>5 4>6 5>6
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>5 0>6 1>4 1>5 1>6 2>5 3>1 3>4 3>5 3>6 4>0 4>5 4>6 5>6 6>2
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>5 0>6 1>4 1>5 1>6 2>5 3>1 3>4 3>5 3>6 4>0 4>5 4>6 6>2 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>5 0>6 1>4 1>5 1>6 3>1 3>4 3>5 3>6 4>0 4>5 4>6 5>2 5>6 6>2
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>5 1>4 1>5 2>5 2>6 3>1 3>4 3>5 4>0 4>5 5>6 6>0 6>1 6>3 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>5 1>4 1>5 2>5 2>6 3>1 3>4 3>5 4>0 4>5 6>0 6>1 6>3 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>5 1>4 1>5 2>5 3>1 3>4 3>5 4>0 4>5 5>6 6>0 6>1 6>2 6>3 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>5 1>4 1>5 2>5 3>1 3>4 3>5 4>0 4>5 6>0 6>1 6>2 6>3 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>5 1>4 1>5 2>6 3>1 3>4 3>5 4>0 4>5 5>2 5>6 6>0 6>1 6>3 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>5 1>4 1>5 2>6 3>1 3>4 3>5 4>0 4>5 5>2 6>0 6>1 6>3 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>5 1>4 1>5 3>1 3>4 3>5 4>0 4>5 5>2 5>6 6>0 6>1 6>2 6>3 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>5 1>4 1>5 3>1 3>4 3>5 4>0 4>5 5>2 6>0 6>1 6>2 6>3 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 1>4 2>5 2>6 3>1 3>4 4>0 5>0 5>1 5>3 5>4 5>6 6>0 6>1 6>3 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>3 1>4 2>5 3>1 3>4 4>0 5>0 5>1 5>3 5>4 5>6 6>0 6>1 6>2 6>3 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>3 1>4 2>5 3>1 3>4 4>0 5>0 5>1 5>3 5>4 6>0 6>1 6>2 6>3 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 1>4 3>1 3>4 4>0 5>0 5>1 5>2 5>3 5>4 5>6 6>0 6>1 6>2 6>3 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 0>5 1>4 1>5 1>6 2>4 3>1 3>4 3>5 3>6 5>2 6>0 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 1>4 1>6 2>4 2>5 3>1 3>4 3>6 5>0 5>1 5>3 5>6 6>0 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 1>4 1>6 2>4 2>5 3>1 3>5 3>6 4>3 4>6 5>0 5>1 6>0 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 1>4 1>6 2>4 3>1 3>4 3>6 5>0 5>1 5>2 5>3 5>6 6>0 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 1>4 1>6 2>5 3>1 3>4 3>6 4>2 5>0 5>1 5>3 5>6 6>0 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 1>4 1>6 3>1 3>4 3>6 4>2 5>0 5>1 5>2 5>3 5>6 6>0 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 1>4 1>6 3>1 3>5 3>6 4>2 4>3 4>6 5>0 5>1 5>2 6>0 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>3 1>6 2>4 3>1 3>6 4>0 4>1 4>3 4>6 5>0 5>1 5>2 5>3 5>6 6>0
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 0>5 0>6 1>3 1>4 2>5 2>6 3>2 3>5 4>2 4>6 5>1 5>4 5>6 6>1 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>4 1>5 1>6 3>1 3>2 3>5 4>1 4>2 4>6 5>0 5>2 5>4 5>6 6>0 6>2 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>6 1>3 2>4 3>5 3>6 4>0 5>1 6>1 6>2
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>5 0>6 1>4 1>5 1>6 2>4 2>6 3>1 3>6 4>0 4>6 5>3 5>6
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>5 1>4 1>5 2>4 3>1 4>0 5>3 6>0 6>1 6>2 6>3 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>3 0>4 0>5 1>2 1>3 1>4 1>6 2>4 5>1 5>2 5>3 5>4 5>6 6>0 6>2 6>3 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>3 0>5 1>2 1>3 1>6 2>4 4>0 4>1 4>5 4>6 5>1 5>2 5>3 5>6 6>0 6>2 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>3 0>5 1>2 1>3 1>6 4>0 4>1 4>2 4>5 4>6 5>1 5>2 5>3 5>6 6>0 6>2 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>4 0>5 1>2 1>4 1>6 2>4 3>0 3>1 3>5 3>6 5>1 5>2 5>4 5>6 6>0 6>2 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>5 1>2 1>6 2>4 3>0 3>1 3>5 3>6 4>0 4>1 4>5 4>6 5>1 5>2 5>6 6>0 6>2
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>5 1>2 1>6 3>0 3>1 3>5 3>6 4>0 4>1 4>2 4>5 4>6 5>1 5>2 5>6 6>0 6>2
+     UNEXPLAINED n=7 status=0 arcs 0>3 0>5 1>3 1>6 2>0 2>1 2>4 2>5 2>6 4>0 4>1 4>5 4>6 5>1 5>3 5>6 6>0 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>5 1>6 2>0 2>1 2>4 2>5 2>6 3>0 3>1 3>5 3>6 4>0 4>1 4>5 4>6 5>1 5>6 6>0
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>3 0>4 0>5 0>6 1>2 1>3 1>4 1>5 2>4 2>6 3>5 3>6 4>3 4>5 4>6 5>2 5>6 6>1
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>3 0>4 0>5 0>6 1>2 1>3 1>4 1>5 2>4 3>5 4>3 4>5 5>2 6>1 6>2 6>3 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>3 0>4 0>5 0>6 1>4 2>1 2>4 2>5 3>1 3>4 3>6 5>1 5>3 5>4 5>6 6>1 6>2 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>3 0>4 0>5 0>6 1>4 2>1 2>5 3>1 3>6 4>2 4>3 4>5 4>6 5>1 5>3 5>6 6>1 6>2
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>3 0>4 0>5 0>6 2>1 2>4 2>5 3>1 3>4 3>6 4>1 5>1 5>3 5>4 5>6 6>1 6>2 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>3 0>4 0>5 0>6 2>1 2>4 3>1 3>5 4>1 4>3 4>5 5>1 5>2 6>1 6>2 6>3 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>3 0>4 0>5 1>2 1>3 1>4 1>6 2>4 4>3 5>1 5>2 5>3 5>4 5>6 6>0 6>2 6>3 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>3 0>4 0>5 1>6 2>1 2>4 2>6 3>1 3>5 3>6 4>1 4>3 4>5 4>6 5>1 5>2 5>6 6>0
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>3 0>4 0>5 1>6 2>1 2>4 3>1 3>5 4>1 4>3 4>5 5>1 5>2 6>0 6>2 6>3 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>3 0>4 0>5 2>1 2>4 2>6 3>1 3>5 3>6 4>1 4>3 4>5 4>6 5>1 5>2 5>6 6>0 6>1
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>3 0>4 0>5 2>1 2>4 3>1 3>5 4>1 4>3 4>5 5>1 5>2 6>0 6>1 6>2 6>3 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>3 0>4 1>2 1>3 1>5 2>6 4>1 4>2 4>3 4>5 5>0 5>2 5>3 6>0 6>1 6>3 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>3 0>4 1>4 1>5 1>6 2>1 2>4 2>5 3>1 3>4 3>6 5>0 5>3 5>4 5>6 6>0 6>2 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>3 0>4 1>4 1>5 1>6 2>1 2>5 3>1 3>6 4>2 4>3 4>5 4>6 5>0 5>3 5>6 6>0 6>2
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>3 1>4 1>5 2>1 2>4 2>6 3>1 3>5 3>6 4>0 4>3 4>5 4>6 5>0 5>2 5>6 6>0 6>1
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>3 1>4 1>5 2>1 2>4 3>1 3>5 4>0 4>3 4>5 5>0 5>2 6>0 6>1 6>2 6>3 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>3 0>4 0>5 1>2 1>3 1>4 1>6 2>3 2>4 3>4 5>1 5>2 5>3 5>4 5>6 6>0 6>2 6>3 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>3 0>4 0>5 1>2 1>3 1>4 1>6 2>3 3>4 4>2 5>1 5>2 5>3 5>4 5>6 6>0 6>2 6>3 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>3 0>4 1>2 1>3 1>5 2>3 2>6 3>6 4>1 4>2 4>3 4>5 5>0 5>2 5>3 6>0 6>1 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>3 0>4 1>2 1>3 1>5 2>3 2>6 4>1 4>2 4>3 4>5 5>0 5>2 5>3 6>0 6>1 6>3 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>3 0>4 1>2 1>3 1>5 2>3 3>6 4>1 4>2 4>3 4>5 5>0 5>2 5>3 6>0 6>1 6>2 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>3 0>4 1>2 1>3 1>5 2>3 4>1 4>2 4>3 4>5 5>0 5>2 5>3 6>0 6>1 6>2 6>3 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>3 0>4 1>2 1>5 1>6 3>1 3>2 3>4 3>5 4>1 4>2 4>5 4>6 5>0 5>2 5>6 6>0 6>2 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>3 1>2 1>4 2>5 2>6 3>1 3>2 3>4 4>0 4>2 5>0 5>1 5>3 5>4 5>6 6>0 6>1 6>3 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>3 1>2 1>4 2>5 3>1 3>2 3>4 4>0 4>2 5>0 5>1 5>3 5>4 5>6 6>0 6>1 6>2 6>3 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>3 1>2 1>4 2>5 3>1 3>2 3>4 4>0 4>2 5>0 5>1 5>3 5>4 6>0 6>1 6>2 6>3 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>3 1>2 1>4 3>1 3>2 3>4 4>0 4>2 5>0 5>1 5>2 5>3 5>4 5>6 6>0 6>1 6>2 6>3 6>4
+     UNEXPLAINED n=7 status=0 arcs 0>2 0>3 1>4 1>5 2>1 2>3 2>4 3>1 3>4 3>5 4>0 4>5 5>0 5>2 6>0 6>1 6>2 6>3 6>4 6>5
+     UNEXPLAINED n=7 status=0 arcs 0>2 1>3 2>1 2>3 3>0 4>0 4>1 4>2 4>3 4>5 4>6 5>0 5>1 5>2 5>3 5>6 6>0 6>1 6>2 6>3
+     UNEXPLAINED n=7 status=0 arcs 0>2 1>3 2>1 2>3 3>0 4>0 4>1 4>2 4>3 4>5 5>0 5>1 5>2 5>3 5>6 6>0 6>1 6>2 6>3 6>4
+PASS path + span-3 is certified Redei by the closure for n = 4, 5, 6
+
+=== 6. D69 hand proof (n = 6) and the n = 7 obstruction  [153s]
+PASS step 1: iota = (1 3)(2 4) is an automorphism of S with 1>4 reversed (twisted pair)
+PASS path + span-3 and P_6 + {03,25} are Redei on all 56 classes
+PASS step 2: emb = H - A - B + AB with AB even, A even, B(T) = A(T^op) on every 6-class
+PASS step 3: phi(C_4 + tail of length 2) = 0 on all classes (so A is even)
+PASS    (c0 c2) is an automorphism of Y_2 with c3>c0 reversed
+PASS    phi(Y_2) = phi(c0<c1>c2>c3>w1>w2) = 1 (Forcade: compositions (6),(1,5))
+PASS    T_1' minus c1>c2 has the involution (c0 c2)
+PASS    (c2 w1)(c1 w2) is an automorphism of T_1'' with c3>w1 reversed
+PASS    phi(T_1) = phi(T_1') = phi(T_1'') = phi(antidirected P_4 + P_2) = 1; so phi(C_4 + tail) = 1 + 1 = 0
+PASS n=7: the tree T_1 of the same expansion is S(1,2,3), the smallest asymmetric tree (no involution)
+PASS n=7: phi(H_4.P_3) = 1 + phi(T_1) + phi(Y_3) with phi(Y_3) = 0 and phi(T_1) non-constant (266 of 456 classes even)
+PASS path + span-3 at n = 7 is avoided by exactly 2 classes (count 0 is even): not Redei, and by B5 not for any n >= 7
+PASS near-transitive witness: TT_7 with 0>6 and 3>6 reversed has exactly 2 copies; every single reversal keeps the count odd; 13 double reversals make it even (= the 13 degree-2 terms of the ANF of phi - 1)
+
+=== 7. oriented trees: Theorem T (hereditarily symmetric => rigid)  [154s]
+PASS n=3: 3 oriented trees, 3 parity-rigid, 0 not
+PASS    every orientation of every hereditarily symmetric tree is rigid (Theorem T)
+PASS    a tree has a non-rigid orientation iff it contains the spider S(1,2,3) (1 trees; 0 such)
+PASS    all 3 oriented Hamiltonian paths are rigid with value = #{carry-free cut compositions} mod 2 (Forcade)
+PASS n=4: 8 oriented trees, 8 parity-rigid, 0 not
+PASS    every orientation of every hereditarily symmetric tree is rigid (Theorem T)
+PASS    a tree has a non-rigid orientation iff it contains the spider S(1,2,3) (2 trees; 0 such)
+PASS    all 4 oriented Hamiltonian paths are rigid with value = #{carry-free cut compositions} mod 2 (Forcade)
+PASS n=5: 27 oriented trees, 27 parity-rigid, 0 not
+PASS    every orientation of every hereditarily symmetric tree is rigid (Theorem T)
+PASS    a tree has a non-rigid orientation iff it contains the spider S(1,2,3) (3 trees; 0 such)
+PASS    all 10 oriented Hamiltonian paths are rigid with value = #{carry-free cut compositions} mod 2 (Forcade)
+PASS n=6: 91 oriented trees, 91 parity-rigid, 0 not
+PASS    every orientation of every hereditarily symmetric tree is rigid (Theorem T)
+PASS    a tree has a non-rigid orientation iff it contains the spider S(1,2,3) (6 trees; 0 such)
+PASS    all 16 oriented Hamiltonian paths are rigid with value = #{carry-free cut compositions} mod 2 (Forcade)
+PASS n=7: 350 oriented trees, 286 parity-rigid, 64 not
+PASS    every orientation of every hereditarily symmetric tree is rigid (Theorem T)
+PASS    a tree has a non-rigid orientation iff it contains the spider S(1,2,3) (11 trees; 1 such)
+PASS    all 36 oriented Hamiltonian paths are rigid with value = #{carry-free cut compositions} mod 2 (Forcade)
+PASS n=8: 1376 oriented trees, 1056 parity-rigid, 320 not
+PASS    every orientation of every hereditarily symmetric tree is rigid (Theorem T)
+PASS    a tree has a non-rigid orientation iff it contains the spider S(1,2,3) (23 trees; 7 such)
+PASS    all 64 oriented Hamiltonian paths are rigid with value = #{carry-free cut compositions} mod 2 (Forcade)
+
+=== 7b. cycles (Corollary G2) and doubling (D4)  [213s]
+PASS C_4: 4 orientation classes, all parity-rigid
+PASS C_5: 4 orientation classes, none parity-rigid
+PASS C_6: 9 orientation classes, all parity-rigid
+PASS C_7: 10 orientation classes, none parity-rigid
+PASS C_8: 22 orientation classes, all parity-rigid
+PASS doubling: S u S + (x,0)->(x,1) is Redei for all 5 Redei S on 4 vertices and all x (20/20 in the n=8 census)
+
+=== 8. halving lemma: emb(K + (u->v)) = emb(K)/2 when an involution of K swaps u, v  [215s]
+PASS exact equality emb(K)=2 emb(K+(0>1)) in 180 random (K, T) pairs
+
+=== 9. u(n) for n <= 7 (forward arc sets, full completion test)  [215s]
+PASS n=3: no forward 3-arc shaving, 1 forward 2-arc shavings: u(3) = 2
+PASS n=4: no forward 5-arc shaving, 1 forward 4-arc shavings: u(4) = 4
+PASS n=5: no forward 7-arc shaving, 1 forward 6-arc shavings: u(5) = 6
+PASS n=6: no forward 9-arc shaving, 1 forward 8-arc shavings: u(6) = 8
+PASS n=7: no forward 10-arc shaving, 387 forward 9-arc shavings: u(7) = 9
+PASS n=7: the 387 forward 9-arc shavings form 51 isomorphism classes (as S15 found)
+PASS n=7: both 9-arc Redei graphs are among the 51 maximum shavings
+
+=== 10. D70: u(9) = 14 (orderly search over a symmetric host), and r(n)  [221s]
+PASS method check n=7 (host P_7): no 10-arc shaving
+PASS method check n=7: 54 Aut(P_7)-orbits of 9-arc shavings = 51 classes (S15)
+PASS method check n=8 (host P_7 + source): no 12-arc shaving (S15: u(8) = 11)
+PASS method check n=8: 2290 orbits of 11-arc shavings = 1617 classes (S15)
+PASS parity mode n=8: no 11-arc Redei graph
+PASS parity mode n=8: the 10-arc Redei graphs are the census' 2 classes
+PASS the 14-arc graph 0>1 0>3 0>6 1>4 1>5 1>7 2>3 2>5 3>4 3>7 4>7 5>6 5>8 6>8 embeds in all 191536 9-classes: u(9) >= 14
+PASS    (adding 0>2 makes it avoidable: 217 classes avoid it)
+PASS |Aut| census of the 191536 classes (nauty countg): 14 classes have |Aut| > 9 (15^8, 21^4, 27, 81)
+PASS excess law (HYP-3817/3819): #{self-converse 9-classes with |Aut| > 9} = 4, predicting kappa(9) = ceil(log2 191536) + 4 = 22, u(9) = 14
+PASS the host C3[C3] contains no transitive 5-subtournament
+   N=9 host arcs=36 |Aut(host)|=81
+   K=15 found=0 fullchecks=50 final_pool=64 searches=107086810
+   depth 0 nodes 1
+   depth 1 nodes 2
+   depth 2 nodes 16
+   depth 3 nodes 126
+   depth 4 nodes 824
+   depth 5 nodes 4691
+   depth 6 nodes 22116
+   depth 7 nodes 84586
+   depth 8 nodes 259105
+   depth 9 nodes 621307
+   depth 10 nodes 1116708
+   depth 11 nodes 1365910
+   depth 12 nodes 904224
+   depth 13 nodes 214122
+   depth 14 nodes 10358
+   depth 15 nodes 50
+PASS exhaustive orderly search (host C3[C3], |Aut| = 81): no 15-arc shaving on 9 vertices (151 s): u(9) = 14, kappa(9) = 22
+PASS the 54 recorded maximum (14-arc) shavings on 9 vertices embed in all 191536 classes and are pairwise non-isomorphic; S_14 is one of them
+
+=== 11. r(9): the densest Redei graphs on 9 vertices  [500s]
+PASS existence: the 6 recorded 11-arc graphs are Redei (odd embedding count in all 191536 classes; engine backtracking)
+   recorded search (host C3[C3], parity mode, Redei tests at sizes 12..15): REDEI_BY_DEPTH 12:0 13:0 14:0 | K=15 found=0 fullchecks=142843 final_pool=68 searches=100627283
+PASS non-existence: no Redei graph with 12..15 arcs on 9 vertices, so r(9) = 11 (u(9) = 14)
+
+149 checks, 516 s
+ALL CHECKS PASSED

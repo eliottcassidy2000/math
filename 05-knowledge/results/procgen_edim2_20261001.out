@@ -1,0 +1,100 @@
+
+==== S1 cells, pair types, orbit counts ====
+[OK] cell formulas (paper Prop. 14) equal brute force for every pair type, 3 <= d <= 7
+[OK] Q_4: every unordered edge pair classified by (parallel?, d(e,f)); counts = d 2^(d-2) C(n,h), C(d,2) 2^d C(n-1,h)
+[OK] Q_5: every unordered edge pair classified by (parallel?, d(e,f)); counts = d 2^(d-2) C(n,h), C(d,2) 2^d C(n-1,h)
+[OK] sum of type counts = C(d 2^(d-1), 2) for 2 <= d < 60
+[OK] A = d(e,w) and B = d(f,w) are Bin(n,1/2) for uniform w (row/column sums 2C(n,a)), all types, d < 30
+
+==== S2 forest lemma for general q (brute force, Q_4, all 2^16 subsets) ====
+[OK] P(H_e = H_f) <= prod over a max-weight forest of exact max atoms, all 18 (q, type) cases
+
+==== S3 atom lemmas, binomial bounds, star lemma, forests ====
+[OK] Lemma A, its sharper form e^-x I_0(x), and Lemma A2 (>= (12x+1)^-1/2) hold for 1000 exact max atoms
+[OK] Lemma A: for x >= 1 the bound is <= 0.69/sqrt(x) (grid 1..1001; analytic: both terms decrease, value 0.683 at x=1)
+[OK] Lemma B.1: b_M(k0 +- t) >= sqrt(2/(pi(M+2))) exp(-t(t+1)/(k0+1-t)), M < 400
+[OK] Lemma B.2: b_n(r) <= sqrt(2/(pi(n+1/2))) exp(-(x^2-1/4)/(n/2+|x|)), n < 400
+[OK] E[B - A | A = a] = -2 x eta_tau (eta = h/n for par, (h+1/2)/n for crs), all types, 4 <= d <= 40 (exact)
+[OK] Var(B - A | A = a) <= n/2 + 1/4, all types and levels, 4 <= d <= 40 (exact)
+[OK] Lemma S (star lemma) at every admissible level (6130 levels, 4 <= d <= 40)
+[OK] path, zigzag and matching edge sets are forests (distinct level pairs, acyclic), every type, 4 <= d <= 40
+[OK] their cells satisfy N_ab >= the closed-form lower bounds (4C(h,p)C(g,r) par; 2C(h,p)C(g,r) crs), 42189 cells
+[OK] Section 2.2: every path/zigzag cell is >= 2^d kappa_n b_M(j), kappa_n = sqrt(2/(pi(n+1)))/4, 4 <= d <= 40
+[OK] potential forests (each level joins its best cell towards the centre) are forests, d < 31
+[OK] Proposition K: weighted spanning-tree count of the par(h) level graph = 2^n prod_k D_k(h) (0 iff h even), 54 cases, 3 <= d <= 11
+
+==== S4 Lemma FH (Fourier-Hoelder multi-forest lemma): exact check on random small level graphs ====
+[OK] Lemma FH: P(divergence = 0) <= prod_j prod_{F_j} J_q(N/w_j)^(w_j) in all 8996 (graph, forest pair, weight) cases
+
+==== S5 Theorem B: entropy bound values and the constant c* ====
+[OK] L5 values (THM-4525) reproduced: 6:4, 7:5, 8:5, 10:6, 12:8, 16:11, 20:15, 32:28, 64:81, 128:275, 256:1159, 1024:50116
+[OK] c* = (3 ln2/(2 sqrt2))^(2/3) = 0.814581, C* = (3 sqrt2 ln2)^(2/3) = 2.052616, C*/c* = 4^(2/3)
+[OK] (sqrt2/3) C*^(3/2) = 2 ln 2 (the bulk balance in Theorem A)
+[OK] illustration: L5 minimum m gives (ln m - (1/2)ln(pi(n+1/2)/2))/n^(1/3) = 0.526, 0.640, 0.708, 0.749 increasing towards c* (d = 64..4096)
+
+==== S6 Theorem D (closed-form estimate from d = 17) ====
+[OK] identity ln prod_r C(m,r) = sum_k (2k - m - 1) ln k (m < 60)
+[OK] Lemma PI: ln prod_r C(m,r) >= (m^2-1)/2 - ((m+1)/2) ln m for 1 <= m <= 2000
+[OK] path region: min of P_- at an end; zigzag region: min of Z~_- at an end; tangent values below the true end values (16 <= n <= 400)
+[OK] d = 17: d^2 2^(2d-3) e^-Phi + d 2^(d-2) e^-Psi <= 0.61754 (bulk 0.6175, par(n) 1.98e-08) < 1 (interval)
+[OK] d = 18: d^2 2^(2d-3) e^-Phi + d 2^(d-2) e^-Psi <= 0.011861 (bulk 0.01186, par(n) 8.18e-10) < 1 (interval)
+[OK] d = 19: d^2 2^(2d-3) e^-Phi + d 2^(d-2) e^-Psi <= 0.0029612 (bulk 0.002961, par(n) 2.65e-11) < 1 (interval)
+[OK] d = 16: the closed-form bound is 1.729 > 1 (so certificates are used up to d = 16)
+[OK] crude closed forms E1..E5 are below the endpoint values for 16 <= n <= 3000
+[OK] E1..E4 >= 2n ln2 + 2 ln(n+1) and E5 >= (n-1) ln2 + ln(n+1) + ln4 for 19 <= n <= 3000 (min margin 5.24; analytic for all n >= 19)
+[OK] derivatives: E_i' > T' for real n >= 19 (sampled; the quadratic terms dominate)
+
+==== S7 certificates: explicit edge-multiset resolving sets of Q_6 .. Q_16 (exact verification) ====
+[OK] Q_6: explicit set of size 15 is edge-multiset resolving  =>  edim_m(Q_6) <= 15
+[OK] Q_7: explicit set of size 19 is edge-multiset resolving  =>  edim_m(Q_7) <= 19
+[OK] Q_8: explicit set of size 26 is edge-multiset resolving  =>  edim_m(Q_8) <= 26
+[OK] Q_9: explicit set of size 38 is edge-multiset resolving  =>  edim_m(Q_9) <= 38
+[OK] Q_10: explicit set of size 48 is edge-multiset resolving  =>  edim_m(Q_10) <= 48
+[OK] Q_11: explicit set of size 65 is edge-multiset resolving  =>  edim_m(Q_11) <= 65
+[OK] Q_12: explicit set of size 76 is edge-multiset resolving  =>  edim_m(Q_12) <= 76
+[OK] Q_13: explicit set of size 105 is edge-multiset resolving  =>  edim_m(Q_13) <= 105
+  certificate Q_13 (vertices as integers, bit i = coordinate i): 60 186 223 531 554 713 769 774 795 880 988 1189 1264 1392 1420 1500 1535 1563 1630 1715 1864 1884 1903 2115 2128 2157 2390 2496 2682 2697 2700 2710 2736 2775 2882 2955 3000 3022 3053 3150 3191 3318 3503 3781 3877 3882 4121 4135 4187 4189 4220 4237 4279 4465 4553 4592 4770 4778 4848 4851 5038 5076 5299 5335 5336 5468 5469 5512 5533 5588 5762 5851 5914 5938 6106 6136 6149 6233 6260 6319 6332 6338 6515 6551 6756 6846 6881 6890 7078 7103 7187 7294 7407 7408 7510 7518 7635 7666 7779 7861 7918 7919 7940 8123 8149
+[OK] Q_14: explicit set of size 125 is edge-multiset resolving  =>  edim_m(Q_14) <= 125
+  certificate Q_14 (vertices as integers, bit i = coordinate i): 97 110 226 242 502 538 551 599 690 1366 1701 1715 2020 2134 2139 2174 2344 2464 2583 2694 2843 2961 2994 3003 3046 3047 3358 3391 3422 3553 3667 3759 3870 4083 4097 4190 4849 4892 4991 5160 5291 5590 5676 5982 6053 6066 6386 6688 6713 6786 6934 7080 7137 7214 7294 7411 7544 7920 7954 8246 8292 8296 8411 8468 8561 8899 9041 9069 9144 9573 9890 10252 10319 10406 10438 10525 10562 10716 10946 11053 11059 11075 11179 11336 11370 11410 11882 12014 12051 12159 12204 12225 12326 12348 12592 12676 12714 12724 13056 13066 13098 13166 13370 13508 13600 13646 13981 14115 14214 14391 14603 14617 14738 14768 14819 15055 15300 15371 15416 15802 15866 15870 15903 16108 16275
+[OK] Q_15: explicit set of size 135 is edge-multiset resolving  =>  edim_m(Q_15) <= 135
+  certificate Q_15 (vertices as integers, bit i = coordinate i): 26 62 307 707 974 1030 1069 1241 1250 1348 1363 1422 1431 1470 1498 1528 1543 2147 2223 2546 2780 2829 3294 3423 3662 3710 3916 3917 3944 4329 4559 4675 4933 4936 5562 5664 5955 5963 6803 7322 7670 7794 8015 8048 8209 8594 8634 8665 8670 8988 9115 9292 9408 9826 10236 10270 10458 10485 10745 10898 11512 11568 11888 12327 12382 13433 13748 13820 14203 14376 14621 16156 16420 16481 16508 16729 17159 17272 17433 17740 18032 18168 18359 18450 18633 18742 18970 19319 19324 19561 19716 19802 20183 20342 20564 20651 21024 21030 21319 21841 21975 22294 23260 23379 23836 24548 25290 25295 25407 25615 25859 26033 26084 26108 26131 26392 26508 26810 26828 26831 27835 27869 28187 28250 28252 28905 29049 29559 29750 30181 30692 30955 31867 32543 32766
+[OK] Q_16: explicit set of size 171 is edge-multiset resolving  =>  edim_m(Q_16) <= 171
+  certificate Q_16 (vertices as integers, bit i = coordinate i): 104 107 774 1028 1236 1658 2741 2894 3028 4078 4301 4688 4828 5067 5212 5764 5809 6056 6097 6230 6550 6745 6872 8170 8709 8814 9416 9483 9629 10061 10258 11204 13264 13364 13829 13905 13974 15110 15595 15804 15850 16059 16214 16379 17579 17584 17652 18018 19029 20597 20707 20924 21321 22017 22722 23883 24151 24989 25108 25256 25489 26100 26162 26426 26579 27214 27530 28193 28509 29525 30162 30184 30649 30882 31185 31568 31669 32143 33060 33446 33495 34258 34806 34827 35079 35220 35834 35909 36266 36560 36693 36972 37005 37550 37648 37778 38662 39241 39766 39793 40424 40788 41225 41257 41467 41557 41811 41968 42154 42180 42695 43064 43272 43949 44902 45562 45864 46267 46520 46584 46728 46824 47816 47862 48014 48073 48082 48222 48398 48746 48831 49007 49178 49353 51084 52218 52607 52735 53636 54204 54493 54624 54640 55141 55236 55625 56543 56910 57350 57917 58051 59051 59219 59794 60187 60196 60215 60476 61035 61620 62112 62351 62576 63138 63151 63551 63558 63750 64324 65426 65527
+[OK] verifier negative controls: {0..9} in Q_8, {0} and V(Q_6) are rejected
+
+==== S8 certified union bounds at q = 1/2 with Lemma FH (interval arithmetic) ====
+[OK] d = 10: U_10 <= 0.2648 < 1 (paper single-forest bound: 1.307 > 1); probabilistic method works from d = 10
+[OK] d = 11: U_11 <= 0.0448 (paper: 0.1562 numerically, certified 0.2548)
+[OK] d = 9: the same bound gives 2.583 > 1
+[OK] paper's U_d with optimal (Kruskal) forests reproduced exactly: U_10 = 1.3074533293, U_11 = 0.156176899005, U_12 = 0.0107480207982
+[OK] potential forests (each level joins its best cell towards the centre) give U_11 = 0.156426 (exact rational)
+[OK] closed-form forests (Section 4.1, Wallis): V_14 in [2.695, 2.695] > 1, V_15 in [0.5194, 0.5194] < 1 (interval)
+
+==== S9 certified sparse union bounds (Lemma FH, k <= 2, intervals)  =>  edim_m(Q_d) <= M_d ====
+[OK] d = 11, q = 685785/4194304: U <= 0.9276, P(|S| > 361) <= 0.0692, sum < 1  =>  edim_m(Q_11) <= 361  (ln M/d^(1/3) = 2.648)
+[OK] d = 12, q = 352219/4194304: U <= 0.9099, P(|S| > 370) <= 0.0852, sum < 1  =>  edim_m(Q_12) <= 370  (ln M/d^(1/3) = 2.583)
+[OK] d = 13, q = 876587/16777216: U <= 0.9039, P(|S| > 457) <= 0.0912, sum < 1  =>  edim_m(Q_13) <= 457  (ln M/d^(1/3) = 2.605)
+[OK] d = 14, q = 954651/33554432: U <= 0.8146, P(|S| > 490) <= 0.1729, sum < 1  =>  edim_m(Q_14) <= 490  (ln M/d^(1/3) = 2.570)
+
+==== S10 Monte Carlo first moments, density 1/2 (EMPIRICAL, fixed seed) ====
+[OK] EMPIRICAL: mean number of colliding pairs 3.04 (d=8), 0.90 (d=9); P(resolving) 0.24, 0.50
+
+==== S11 Q_7: exhaustive search with a complete (non-canonical) normal form (C program) ====
+[OK] q7search: A-set and leaf counts equal an independent Python enumeration, (D,k) = (6,6), (6,7), (7,5), all a, both normal forms
+[OK] normal forms: 300 random sets (D = 6, 7) land in the searched domains (0 in A, sorted columns, |beta_i| <= a - b; translate-maximal)
+[OK] canonical mode (tmax = 2): number of accepted A equals the Burnside number of Aut(Q_6)-orbits of a-subsets of Q_6, a = 1..7 (1, 6, 16, 103, 497, 3253, 19735)
+[OK] control Q_6, k = 15 (canonical normal form): none with imbalance 13, 15; 3 resolving leaves with imbalance 11 = exactly the 3 THM-4525 orbits
+[OK] control Q_6, canonical mode: exactly one resolving leaf per orbit (3)
+[OK] control Q_6, k = 15 (translate-maximal normal form): none with imbalance 13, 15; 34 resolving leaves with imbalance 11 = exactly the 3 THM-4525 orbits
+[OK] Q_7, k = 1: no edge-multiset resolving set (plain normal form, all a)
+[OK] Q_7, k = 2: no edge-multiset resolving set (plain normal form, all a)
+[OK] Q_7, k = 3: no edge-multiset resolving set (plain normal form, all a)
+[OK] Q_7, k = 4: no edge-multiset resolving set (plain normal form, all a)
+[OK] Q_7, k = 5: no edge-multiset resolving set (plain normal form, all a)
+[OK] Q_7, k = 6: no edge-multiset resolving set (plain normal form, all a)
+[OK] Q_7, k = 7: no edge-multiset resolving set (plain normal form, all a)
+[OK] Q_7, k = 8: no edge-multiset resolving set (plain normal form, all a)
+[OK] Q_7, k = 9: no edge-multiset resolving set (canonical normal form, 93919319 leaves, 38 s)
+
+Total checks: 71   (elapsed 161 s)
+ALL CHECKS PASSED

@@ -1,0 +1,93 @@
+procgen_tbij_20261001_run.py  (full=True)
+== A. closed forms 0.0s
+   A049313, A002854 closed forms = OEIS for n <= 16; branch split N_odd/N_lev (n=2..12): [(2, '1/2', '1/2'), (3, '1', '0'), (4, '1', '1'), (5, '2', '0'), (6, '4', '2'), (7, '12', '0'), (8, '64', '15'), (9, '792', '0'), (10, '19296', '280'), (11, '886288', '0'), (12, '75346496', '23464')]
+== B. P1: odd n, classes <-> mod-4-Eulerian tournaments 0.0s
+   n=3: 1 mod-4-Eulerian tournaments up to iso (= A049313), labelled 2^C(n-1,2), Aut(class) = Aut(member) (all odd order)
+   n=5: 2 mod-4-Eulerian tournaments up to iso (= A049313), labelled 2^C(n-1,2), Aut(class) = Aut(member) (all odd order)
+   n=7: 12 mod-4-Eulerian tournaments up to iso (= A049313), labelled 2^C(n-1,2), Aut(class) = Aut(member) (all odd order)
+   n=9: 792 mod-4-Eulerian tournaments up to iso (= A049313), labelled 2^C(n-1,2), Aut(class) = Aut(member) (all odd order)
+   n=3: all 2 labelled mod-4-Eulerian tournaments form one coset T* + Z, and each has exactly one mod-4-Eulerian member among its 2^(n-1) switchings
+   n=5: all 64 labelled mod-4-Eulerian tournaments form one coset T* + Z, and each has exactly one mod-4-Eulerian member among its 2^(n-1) switchings
+   n=7: all 32768 labelled mod-4-Eulerian tournaments form one coset T* + Z, and each has exactly one mod-4-Eulerian member among its 2^(n-1) switchings
+   c3(mod-4-Eulerian member) = C(n,3) - n C((n-1)/2, 2) (mod 4) for every class, n = 5, 7, 9
+-- building orbit data 11.8s
+   orbit data consistent: classes = A049313, Euler = two-graphs = A002854, even Euler = A049313 (n <= 9), even graphs = tournaments (n <= 8); all labelled counts by orbit-stabiliser
+== C. Theorem G (twisted Mallows-Sloane) for 8 submodules U 21.3s
+   U=0      n=2..8: [1, 2, 4, 12, 56, 456, 6880]
+   U=J      n=2..8: [1, 2, 3, 10, 34, 272, 3528]
+   U=C      n=2..8: [1, 1, 2, 2, 6, 12, 79]
+   U=C+J    n=2..8: [1, 1, 2, 2, 6, 12, 69]
+   U=Z      n=2..8: [1, 2, 3, 3, 3, 4, 5]
+   U=Z+J    n=2..8: [1, 2, 2, 3, 2, 4, 3]
+   U=CcapZ  n=2..8: [1, 2, 3, 12, 8, 456, 156]
+   U=C+Z    n=2..8: [1, 1, 2, 1, 2, 1, 3]
+   per-permutation identity #Fix_{T/U}(g) = sum_{X in (U^perp)^g} sgn_X(g): 760 (n, U, g) triples, n <= 5, U in {0, J, C, C+J, Z}
+== D. Corollary G2 (converse refinements) 21.9s
+   self-converse tournaments n=2..8 = [1, 2, 2, 8, 12, 88, 176] = sum over even graphs of (-1)^edges
+   self-converse switching classes n=2..9 = [1, 1, 2, 2, 6, 12, 59, 176] = sum over even Euler graphs of (-1)^edges
+   n=9: even Euler graphs with even/odd edge count: 484 / 308
+   Proposition S: self-converse classes on n = self-converse tournaments on n-1 for n = 3,5,7,9: [1, 2, 12, 176]
+== E. exhaustive natural-map analysis (Lemma N1 matching) 22.6s
+   CLASS->EVENE n=2: perfect, symmetric classes 1, matched 1
+   CLASS->EVENE n=3: perfect, symmetric classes 1, matched 1
+   CLASS->EVENE n=4: perfect, symmetric classes 2, matched 2
+   CLASS->EVENE n=5: NO PERFECT MATCHING, symmetric classes 2, matched 1
+   CLASS->EVENE n=6: NO PERFECT MATCHING, symmetric classes 6, matched 5
+   CLASS->EVENE n=7: NO PERFECT MATCHING, symmetric classes 7, matched 5
+   CLASS->EVENE n=8: NO PERFECT MATCHING, symmetric classes 39, matched 36
+   CLASS->EVENE n=9: NO PERFECT MATCHING, symmetric classes 73, matched 69
+   TOUR->EVENG n=2: perfect, symmetric tournaments 0, matched 0
+   TOUR->EVENG n=3: perfect, symmetric tournaments 1, matched 1
+   TOUR->EVENG n=4: perfect, symmetric tournaments 2, matched 2
+   TOUR->EVENG n=5: NO PERFECT MATCHING, symmetric tournaments 5, matched 4
+   TOUR->EVENG n=6: NO PERFECT MATCHING, symmetric tournaments 15, matched 13
+   TOUR->EVENG n=7: NO PERFECT MATCHING, symmetric tournaments 57, matched 52
+   TOUR->EVENG n=8: NO PERFECT MATCHING, symmetric tournaments 324, matched 312
+   TWOG->EULER n=2: perfect ; EULER->TWOG: perfect
+   TWOG->EULER n=3: perfect ; EULER->TWOG: perfect
+   TWOG->EULER n=4: NO ; EULER->TWOG: NO
+   TWOG->EULER n=5: perfect ; EULER->TWOG: perfect
+   TWOG->EULER n=6: NO ; EULER->TWOG: NO
+   TWOG->EULER n=7: perfect ; EULER->TWOG: perfect
+   TWOG->EULER n=8: NO ; EULER->TWOG: NO
+== F. data behind the hand proofs 60.3s
+   n=5: Euler graphs with an automorphism of order 3: edge counts [0, 3, 7, 10] (empty, K3, K5-K3, K5); of order 5: [0, 5, 10] (empty, C5, K5); even among them: only the empty graph
+   n=5 DFGPR: (abc)-invariant even graph types: empty, K13+K1, K14, K23; tournaments with Aut C3: 4, with Aut C5: 1 (5 > 4)
+   Mallows-Sloane, even n = 4..30: S_n, S_{n-1}, S_{n/2} wr S_2 each fix exactly the two trivial two-graphs; the Euler graphs empty, K_{n-1}+K_1, B_n are invariant under them; K_n is not Euler
+   |Fix_TWOG(g)| = |Fix_EULER(g)| for all 65 cycle types with n <= 8 (equal cycle index)
+== G. block-lemma certificates 69.5s
+   twist-rigid block sizes <= 100 (every nonempty invariant graph has an odd automorphism): [1, 3, 5, 7, 9, 11, 13, 19, 23, 29, 31, 37, 43, 47, 53, 59, 61, 67, 71, 79, 83]
+   E1: every 5 <= n <= 100 has >= 2 non-isomorphic block classes forced to the empty graph; min count 2, per n (5..30): [2, 2, 3, 2, 2, 3, 4, 3, 4, 4, 4, 3, 3, 3, 5, 3, 4, 3, 5, 3, 5, 3, 4, 2, 6, 3]
+   n = 5..9: the classes forced to the empty graph (exhaustive) are exactly the block classes
+   DFGPR block certificates (forced T0 + pattern family), n <= 100: [5, 6, 7, 9, 10, 11, 13, 14, 22, 23, 26, 31, 38, 46, 47, 61, 62, 71, 74, 83, 86]
+   DFGPR block-type Hall search (k <= 4), n <= 100: violation for [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 22, 23, 26, 31, 32, 33, 38, 46, 47, 61, 62, 63, 71, 74, 83, 86]
+   block-restricted deficits (lower bounds for the true deficit): [(5, 1), (6, 2), (7, 5), (8, 2), (9, 5), (10, 3), (11, 5), (12, 2), (13, 5), (14, 3), (15, 4)]
+== H. P2: bipartite Euler graphs are even 902.4s
+   (n, #bipartite Euler graphs, #even Euler graphs): [(1, 1, 1), (2, 1, 1), (3, 1, 1), (4, 2, 2), (5, 2, 2), (6, 4, 6), (7, 5, 12), (8, 12, 79), (9, 19, 792)]
+== I. P3: Higashitani-Ueyama s_{l,n} = t_{l,n} 902.4s
+   l= 2: s = t = [1, 1, 2, 3, 7, 16, 54]
+   l= 3: s = t = [1, 1, 2, 4, 14, 120, 3222]
+   l= 4: s = t = [1, 1, 3, 8, 62, 1760, 224248]
+   l= 6: s = t = [1, 1, 4, 17, 461, 86544]
+   l= 8: s = t = [1, 1, 5, 32, 2332, 1504128]
+   l= 9: s = t = [1, 1, 5, 39, 4533, 4855167]
+   l=12: s = t = [1, 1, 7, 88, 25306, 86130144]
+   brute force agrees (l=4, n<=4; l=6, n<=3); per-permutation |A^s| = |K^s| for every cycle type
+== J. branch split 903.4s
+   sum over classes of (odd-order fraction of Aut) = N_odd(n) for n = 3..9
+   n=6: 4 classes with even-order Aut; tau (reverse the arcs of the perfect matching of an involution) pairs them without fixed points
+== K. automorphism-order multisets 903.5s
+   |Aut| multisets of two-graphs and Euler graphs: equal for n = 3, 5, 7, 9, different for n = 4, 6, 8
+   sum 1/|Aut| over CLASS exceeds that over EVENE (n = 3..9), same for TOUR vs EVENG (n = 3..8): no |Aut|-preserving bijection
+== L. independent re-implementations (backtracking automorphisms, cycle-form sign) 903.5s
+   1249 orbit representatives: nauty generators (S-digraph / incidence graph / dreadnaut) generate exactly the groups found by independent backtracking or brute force; evenness agrees with the cycle form and the arc-sign form
+== heavy part e1n10 (child process) 906.6s
+   CLASS->EVENE n=10: NO PERFECT MATCHING, symmetric classes 1066, matched 1056; forced classes 3 (= block classes (1,9), (3,7), (5,5)) [169s]
+   n=10: 560 classes with even-order Aut, Sylow 2-subgroups of order 2; tau is a fixed-point-free involution on them
+   N_lev(10) = 280 = (number of even-Aut classes)/2
+PART OK 2855 checks
+== heavy part dfgpr9 (child process) 1077.5s
+   TOUR->EVENG n=9: NO PERFECT MATCHING, symmetric tournaments 3199, matched 3155
+PART OK 1 checks
+total checks: 39749, time 1256.3s
+ALL CHECKS PASSED

@@ -592,3 +592,131 @@ import ProcgenSelfieEdim
 #print axioms ProcgenSelfieEdim.two_pow_mono
 #print axioms ProcgenSelfieEdim.not_admissible_of_large
 #print axioms ProcgenSelfieEdim.multiplicity_examples
+
+-- PolyNorm
+#print axioms ProcgenSelfieEdim.lit_mul_r
+#print axioms ProcgenSelfieEdim.lit_mul_m
+#print axioms ProcgenSelfieEdim.lit_lit
+#print axioms ProcgenSelfieEdim.natCast_lit
+
+-- DropZ
+#print axioms ProcgenSelfieEdim.decompZ
+#print axioms ProcgenSelfieEdim.v2Z_oddPartZ_of_eq
+#print axioms ProcgenSelfieEdim.syrZ_decomp
+#print axioms ProcgenSelfieEdim.v2Z_pos
+#print axioms ProcgenSelfieEdim.dropZ_identity
+#print axioms ProcgenSelfieEdim.dropZ_backward
+#print axioms ProcgenSelfieEdim.dropZ_forward
+#print axioms ProcgenSelfieEdim.two_pow_lt_of_dvd
+#print axioms ProcgenSelfieEdim.dropZ_fibre
+#print axioms ProcgenSelfieEdim.dropZ_fibre_inj
+#print axioms ProcgenSelfieEdim.dropZ_unit_pos
+#print axioms ProcgenSelfieEdim.dropZ_unit_neg
+#print axioms ProcgenSelfieEdim.unit_copies_opposite_signs
+#print axioms ProcgenSelfieEdim.extra_copy_sign
+#print axioms ProcgenSelfieEdim.branchB_iff
+#print axioms ProcgenSelfieEdim.fibreZ_spec
+#print axioms ProcgenSelfieEdim.branch_one_two
+#print axioms ProcgenSelfieEdim.length_filter_range_succ
+#print axioms ProcgenSelfieEdim.fibreZ_length
+#print axioms ProcgenSelfieEdim.extraZ_stable
+#print axioms ProcgenSelfieEdim.v2Z_mod_eight
+#print axioms ProcgenSelfieEdim.labels_two_copies
+#print axioms ProcgenSelfieEdim.fibreZ_examples
+
+-- DropPair
+#print axioms ProcgenSelfieEdim.two_pow_mod_three
+#print axioms ProcgenSelfieEdim.two_pow_cases
+#print axioms ProcgenSelfieEdim.two_pow_cases'
+#print axioms ProcgenSelfieEdim.two_pow_lt
+#print axioms ProcgenSelfieEdim.le_of_mul_eq_pos
+#print axioms ProcgenSelfieEdim.pos_of_mul_pos
+#print axioms ProcgenSelfieEdim.neg_of_mul_pos_neg
+#print axioms ProcgenSelfieEdim.pos_of_mul_pos_left
+#print axioms ProcgenSelfieEdim.three_dvd_of_mul
+#print axioms ProcgenSelfieEdim.mod_three_prod
+#print axioms ProcgenSelfieEdim.both_ge_two
+#print axioms ProcgenSelfieEdim.elim_identities
+#print axioms ProcgenSelfieEdim.plus_gt
+#print axioms ProcgenSelfieEdim.plus_lt
+#print axioms ProcgenSelfieEdim.pair_core_plus
+#print axioms ProcgenSelfieEdim.minus_gt
+#print axioms ProcgenSelfieEdim.minus_lt
+#print axioms ProcgenSelfieEdim.pair_core_minus
+#print axioms ProcgenSelfieEdim.cast_decomp
+#print axioms ProcgenSelfieEdim.v2_pos_of_odd
+#print axioms ProcgenSelfieEdim.drop_pair_injective
+#print axioms ProcgenSelfieEdim.syrM_decomp
+#print axioms ProcgenSelfieEdim.dropM_pair_injective
+
+-- DropUnits
+#print axioms ProcgenSelfieEdim.syrQ_decomp
+#print axioms ProcgenSelfieEdim.odd_mul_odd
+#print axioms ProcgenSelfieEdim.dropQ_identity
+#print axioms ProcgenSelfieEdim.dropQ_unit_desc
+#print axioms ProcgenSelfieEdim.dropQ_unit_asc
+#print axioms ProcgenSelfieEdim.unit_of_zero_drop
+#print axioms ProcgenSelfieEdim.dvd_fact
+#print axioms ProcgenSelfieEdim.natCast_dvd
+#print axioms ProcgenSelfieEdim.fact_pos'
+#print axioms ProcgenSelfieEdim.unit_of_neg_drop
+#print axioms ProcgenSelfieEdim.units_nonneg_iff
+#print axioms ProcgenSelfieEdim.units_neg_iff
+#print axioms ProcgenSelfieEdim.units_all_iff
+#print axioms ProcgenSelfieEdim.units_examples
+
+-- AntiAut
+#print axioms ProcgenSelfieEdim.anti_maps_hp
+#print axioms ProcgenSelfieEdim.map_reverse_map
+#print axioms ProcgenSelfieEdim.arcCount_anti
+#print axioms ProcgenSelfieEdim.reflection_arcCount_even
+#print axioms ProcgenSelfieEdim.iterN_succ'
+#print axioms ProcgenSelfieEdim.iterN_add
+#print axioms ProcgenSelfieEdim.iterN_lt
+#print axioms ProcgenSelfieEdim.anti_cycle_mod_four
+
+-- CayleyAbelian
+#print axioms ProcgenSelfieEdim.FinAbGroup.add_zero
+#print axioms ProcgenSelfieEdim.FinAbGroup.add_neg
+#print axioms ProcgenSelfieEdim.FinAbGroup.neg_unique
+#print axioms ProcgenSelfieEdim.FinAbGroup.neg_sub
+#print axioms ProcgenSelfieEdim.FinAbGroup.refl_lt
+#print axioms ProcgenSelfieEdim.FinAbGroup.refl_refl
+#print axioms ProcgenSelfieEdim.FinAbGroup.refl_diff
+#print axioms ProcgenSelfieEdim.FinAbGroup.refl_swap
+#print axioms ProcgenSelfieEdim.cayley_arcCount_even
+#print axioms ProcgenSelfieEdim.divmod_enc
+#print axioms ProcgenSelfieEdim.enc_lt
+#print axioms ProcgenSelfieEdim.dec_enc
+#print axioms ProcgenSelfieEdim.div_lt_of_lt_mul'
+#print axioms ProcgenSelfieEdim.cayley_cyclic_prod_arcCount_even
+
+-- AntiCirculant
+#print axioms ProcgenSelfieEdim.succMod_lt
+#print axioms ProcgenSelfieEdim.predMod_lt
+#print axioms ProcgenSelfieEdim.pred_succ
+#print axioms ProcgenSelfieEdim.succ_pred
+#print axioms ProcgenSelfieEdim.addMod_lt
+#print axioms ProcgenSelfieEdim.addMod_zero
+#print axioms ProcgenSelfieEdim.zero_addMod
+#print axioms ProcgenSelfieEdim.addMod_comm
+#print axioms ProcgenSelfieEdim.addMod_succ
+#print axioms ProcgenSelfieEdim.succ_addMod
+#print axioms ProcgenSelfieEdim.succ_addMod'
+#print axioms ProcgenSelfieEdim.addMod_back
+#print axioms ProcgenSelfieEdim.addMod_antipode
+#print axioms ProcgenSelfieEdim.cdist_succMod
+#print axioms ProcgenSelfieEdim.cdist_addMod
+#print axioms ProcgenSelfieEdim.rsum_rot1
+#print axioms ProcgenSelfieEdim.rsum_rot
+#print axioms ProcgenSelfieEdim.total_by_diff
+#print axioms ProcgenSelfieEdim.rsum_split
+#print axioms ProcgenSelfieEdim.rsum_reverse
+#print axioms ProcgenSelfieEdim.rsum_sym_mod_two
+#print axioms ProcgenSelfieEdim.rsum_const
+#print axioms ProcgenSelfieEdim.arcCount_zero_of_not_arc
+#print axioms ProcgenSelfieEdim.cyclic_anti_antipodal_odd
+#print axioms ProcgenSelfieEdim.antiCirc_isTournament
+#print axioms ProcgenSelfieEdim.antiCirc_anti
+#print axioms ProcgenSelfieEdim.antiCirc_antipodal_odd
+#print axioms ProcgenSelfieEdim.antiSign_odd

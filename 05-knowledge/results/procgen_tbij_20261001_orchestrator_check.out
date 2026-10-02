@@ -1,0 +1,36 @@
+==== A/B/C ====
+[OK] B: n=3: no labelled switching class is fixed by all of S_3 (2 classes, 1 types)
+[OK] B: n=4: no labelled switching class is fixed by all of S_4 (8 classes, 2 types)
+[OK] B: n=5: no labelled switching class is fixed by all of S_5 (64 classes, 2 types)
+[OK] A: n=5: 2 class types (2 with nontrivial Aut), 2 even Euler types, maximum stabiliser-containment matching 1 < 2: no natural bijection
+[OK] C: n=5 class stabiliser element orders [[1, 5], [1, 3]] (an element of order 3, resp. 5)
+[OK] C: Euler graphs on 5 vertices with an order-3 automorphism: 4, order-5: 3; the only even one is the empty graph
+[OK] B: n=6: no labelled switching class is fixed by all of S_6 (1024 classes, 6 types)
+[OK] A: n=6: 6 class types (6 with nontrivial Aut), 6 even Euler types, maximum stabiliser-containment matching 5 < 6: no natural bijection
+==== D ====
+[OK] D: n=2: all 1 labelled bipartite Euler graphs are even
+[OK] D: n=3: all 1 labelled bipartite Euler graphs are even
+[OK] D: n=4: all 4 labelled bipartite Euler graphs are even
+[OK] D: n=5: all 16 labelled bipartite Euler graphs are even
+[OK] D: n=6: all 121 labelled bipartite Euler graphs are even
+==== E ====
+[OK] E: n=1: even graphs 1 = tournaments A000568 = 1
+[OK] E: n=2: even graphs 1 = tournaments A000568 = 1
+[OK] E: n=3: even graphs 2 = tournaments A000568 = 2
+[OK] E: n=4: even graphs 4 = tournaments A000568 = 4
+[OK] E: n=5: even graphs 12 = tournaments A000568 = 12
+==== F ====
+[OK] F: l=3, n=1: s = 1, t = 1 (expected 1)
+[OK] F: l=3, n=2: s = 1, t = 1 (expected 1)
+[OK] F: l=3, n=3: s = 2, t = 2 (expected 2)
+[OK] F: l=3, n=4: s = 4, t = 4 (expected 4)
+[OK] F: l=4, n=1: s = 1, t = 1 (expected 1)
+[OK] F: l=4, n=2: s = 1, t = 1 (expected 1)
+[OK] F: l=4, n=3: s = 3, t = 3 (expected 3)
+[OK] F: l=4, n=4: s = 8, t = 8 (expected 8)
+==== G ====
+[OK] G: n=3: every one of the 2 switching classes has exactly one member with out = in (mod 4) everywhere
+[OK] G: n=5: every one of the 64 switching classes has exactly one member with out = in (mod 4) everywhere
+[OK] G: n=7: every one of the 32768 switching classes has exactly one member with out = in (mod 4) everywhere
+elapsed 26 s
+ALL CHECKS PASSED
