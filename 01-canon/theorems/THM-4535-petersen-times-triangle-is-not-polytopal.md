@@ -9,7 +9,9 @@ status: >
   - dim 5: a 5-polytope with a 5-regular graph is simple; PPS Thm 2.3 (a product is simply polytopal iff its factors
     are) and the non-polytopality of P exclude it;
   - dim 4: no 4-polytope boundary complex has this graph. The SAT model encodes only necessary conditions, over the
-    complete list of 7681 induced cycles (lengths 3..12) as candidate 2-faces, and is UNSAT after 263 lazy iterations.
+    complete list of 7681 induced cycles (lengths 3..12) as candidate 2-faces, and is UNSAT. The recorded run takes 215
+    lazy iterations; independent runs took 263 and 281. The final formula (base + all cuts, 1,394,635 clauses) is
+    re-solved from scratch by a second solver (Glucose 4): UNSAT.
   PPS (2012, end of Section 2.4) cite P x C3 as the graph of a cellular S^1 x RP^2. It is an example where local
   combinatorics cannot decide; the decision here comes from facets and homology.
   Validation:
@@ -54,5 +56,5 @@ The Cartesian product `P×C₃` of the Petersen graph with a triangle is not the
 
 ## Reproduction
 
-`python 04-computation/experiments/petersen_product_4polytope_20261001.py pc3 31` takes 20–40 minutes with CaDiCaL
-1.9.5 via `python-sat`.
+`python 04-computation/experiments/petersen_product_4polytope_20261001.py pc3 31 --crosscheck` takes about 30 minutes:
+10 for the lazy CaDiCaL 1.9.5 loop and 20 for the Glucose 4 re-solve, via `python-sat`.

@@ -166,8 +166,10 @@ is an annulus of squares plus a cap one level up; `cgs`-clauses of this kind are
 
 **Computed result.** The graph `P×C₃` (30 vertices, 5-regular) is not the graph of any polytope.
 - **Dimension 4.** All induced cycles of `P×C₃` were enumerated: 7681, with at most 12 vertices; the longest wind
-  around the triangle. They are all the candidate 2-faces, so the model is complete. It is UNSAT after 263 lazy
-  iterations (21 minutes): 27 homology cuts and 1916 facet cuts (235 F1, 10 F4, 1671 F6).
+  around the triangle. They are all the candidate 2-faces, so the model is complete.
+  - The recorded run (`.out`) is UNSAT after 215 lazy iterations (10 minutes): 23 homology cuts and 1533 facet
+    cuts (191 F1, 4 F4, 1338 F6).
+  - Two earlier runs, one without and one with the CGS clauses, needed 263 and 281 iterations.
 - **Dimension 5.** A 5-polytope with a 5-regular graph is simple. PPS Thm 2.3 (a product is simply polytopal iff its
   factors are) excludes it, since `P` is not polytopal.
 - **Dimensions ≤ 3.** Excluded because the graph is non-planar; no dimension above 5 is possible because the graph is
@@ -184,7 +186,10 @@ The same run restricted to the 3301 cycles of length ≤ 10 is UNSAT in about 1�
 **Cross-checks.**
 - A second run with the CGS clauses added follows a different search path. It is also UNSAT (281 iterations).
 - The final formula, with the base clauses and every lazily added cut, is re-solved from scratch by a second solver
-  (Glucose 4). For faces ≤ 10 it agrees: UNSAT, 419026 clauses (`pc3 10 --crosscheck`).
+  (Glucose 4). It agrees in both cases:
+  - all 7681 cycles: UNSAT, 1,394,635 clauses, 20 minutes (recorded in the `.out`);
+  - faces ≤ 10: UNSAT, 419026 clauses.
+- So the UNSAT verdict rests on two independent SAT solvers. The soundness of each cut is argued in §5.
 
 ### 6.3 Two excluded sub-cases of P□P
 

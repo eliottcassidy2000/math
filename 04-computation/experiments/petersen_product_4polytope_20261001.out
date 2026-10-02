@@ -66,6 +66,14 @@
   UNSAT after 207 iterations (61.0s), cuts {'H': 18, 'F1': 188, 'F6': 1413, 'F4': 3}
   result: UNSAT (excluded)
 ALL REQUESTED CHECKS DONE (213s)
+
+# --- python petersen_product_4polytope_20261001.py pc3 31 --crosscheck  (the "all-long" run, with the second-solver re-solve of the final formula)
 == P x C3 (Petersen x triangle), candidate 2-faces = all induced cycles with <= 31 vertices
   candidates: 7681 [(3, 10), (4, 45), (5, 36), (6, 30), (7, 360), (8, 1260), (9, 1200), (10, 360), (11, 1800), (12, 2580)]
-  model: 7681 candidate faces, 309241 vars, 1390890 clauses (1.2s)
+  model: 7681 candidate faces, 309241 vars, 1390890 clauses (1.0s)
+    it 100: cuts {'H': 10, 'F1': 90, 'F4': 2, 'F6': 555}  (471s)
+    it 200: cuts {'H': 21, 'F1': 179, 'F4': 4, 'F6': 1255}  (563s)
+  UNSAT after 215 iterations (589.8s), cuts {'H': 23, 'F1': 191, 'F4': 4, 'F6': 1338}
+  cross-check of the final formula (1394635 clauses) with glucose4: UNSAT (agrees) (1186.6s)
+  result: UNSAT (excluded)
+ALL REQUESTED CHECKS DONE (1779s)
