@@ -57,20 +57,20 @@ audit: >
 
 ## 1. The owner's 4-vertex object, as n grows
 
-A *shaving* of order n is an oriented graph contained in every tournament on n vertices. The owner's object (a Hamiltonian path plus the arc from first to last) is the prototype.
+A *shaving* of order `n` is an oriented graph contained in every tournament on `n` vertices. The owner's object (a Hamiltonian path plus the arc from first to last) is the prototype.
 
-**H_n itself (S15, THM-4526) is classical.** It is unavoidable except in C3 and one 5-vertex tournament. This is a case of Rosenfeld's problem on oriented Hamiltonian cycles (Grünbaum 1971; Havet 2000; El Zein 2022).
+**`H_n` itself (S15, THM-4526) is classical.** It is unavoidable except in `C3` and one 5-vertex tournament. This is a case of Rosenfeld's problem on oriented Hamiltonian cycles (Grünbaum 1971; Havet 2000; El Zein 2022).
 
-**The largest shavings.** Their size is  (Linial–Saks–Sós 1983), and on 9 vertices the maximum is 14 arcs.
+**The largest shavings.** Their size is `n log2 n - O(n log log n)` (Linial–Saks–Sós 1983), and on 9 vertices the maximum is 14 arcs.
 
 ## 2. Rédei graphs
 
 Rédei's theorem says the Hamiltonian path lies an odd number of times in every tournament. Call any oriented graph with this property a *Rédei graph*. Every Rédei graph is a shaving, certified by parity alone.
 
 - **One rule generates all parity relations.** Reversing an arc changes the count by the count of the graph with that arc deleted, mod 2.
-- **D69 settled.** The path plus every span-3 arc is Rédei exactly for . It fails from 7 on, and the obstruction is the smallest asymmetric tree, the spider .
+- **D69 settled.** The path plus every span-3 arc is Rédei exactly for `n = 4, 5, 6`. It fails from 7 on, and the obstruction is the smallest asymmetric tree, the spider `S(1, 2, 3)`.
 - **Infinite families.**
-  -  = the path plus the two arcs  and , for every odd ;
-  -  for every even ;
+  - `D_n` = the path plus the two arcs `0 -> n-2` and `1 -> n-1`, for every odd `n`;
+  - `H_n` for every even `n`;
   - a doubling construction.
-- **Parity certificates fall behind.** The largest Rédei graph has 11 arcs at , against 14 for the largest shaving.
+- **Parity certificates fall behind.** The largest Rédei graph has 11 arcs at `n = 9`, against 14 for the largest shaving.
