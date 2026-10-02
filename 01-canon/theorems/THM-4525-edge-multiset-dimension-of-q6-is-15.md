@@ -87,6 +87,28 @@ audit: >
   - Minimality of the defect-1 orbit is lane-only.
   - No literature search was made beyond the paper. As of the paper's v1,
     Open Problem 1 was open.
+external_audit: >
+  2026-10-01, the orchestrator's audit of the paper's own certificate package (Zenodo 10.5281/zenodo.21739363,
+  MD5-checked download; only its data files were read, none of its code was read or run). Own code:
+  04-computation/experiments/procgen_extcert_20261001_edim_paper_check.py and procgen_extcert_20261001_edim_q5.c;
+  output 05-knowledge/results/procgen_extcert_20261001_edim_paper_check.out (sha256 a0fac61902b1c58e374e6700bce6dbfd0c953d42e0c23981a09bacaade7a1f6f). Findings:
+  - edim_m(Q_d) = infinity for d = 2, 3, 4 (all 2^(2^d) subsets) and d = 5: all 698,635 Aut(Q_5)-orbit representatives
+    with |S| <= 16 fail to resolve. The representative system was checked twice, by Burnside and by orbit sizes summing
+    to C(32, a); complements cover |S| >= 16. This replaces the paper's 2^32 scan by an orbit enumeration;
+  - the paper's intermediate Q_5 data were recomputed exactly: R4 = 14,887,680 resolving {0,1,2}-weightings of Q_4,
+    and 3,056,640 directional survivors. The survivor orbits per size (12, 38, 73, 30, 153, 184, 153, 30, 73, 38, 12)
+    match, the 796 archived representatives meet every survivor orbit exactly once, and all 796 archived collision
+    witnesses are genuine;
+  - every archived resolving set checks out: the Q_6 descent chain 29 -> 15 (all 15 sets; the last is the paper's set
+    0x02283022a042a00a), and the Q_7..Q_10 sets of sizes 63, 115, 246, 492;
+  - the 40 rational bounds U_d (11 <= d <= 50) are fractions < 1 (largest U_11 = 0.2548). Their derivation was not redone;
+    THM-4534 makes them unnecessary.
+  Two packaging slips in the README:
+  - it attributes the size-15 Q_6 set to q6_quick.txt, which holds a size-29 set (the 15-set is the last line of
+    q6_min_result.txt);
+  - it calls the 796 survivor orbits "orbits under Aut(Q_5) x complement". They are Aut(Q_5)-orbits; under
+    Aut(Q_5) x complement there are 402 (8 of the 184 size-16 orbits are self-complementary).
+  Neither slip affects any mathematical claim.
 ---
 
 # THM-4525 — the edge multiset dimension of Q_6 is 15
@@ -134,3 +156,12 @@ So `8 <= edim_m(Q_7) <= 19`.
 - L4: `not_resolving_of_length_le_six`, i.e. edim_m(Q_6) >= 7.
 - Explicit sets: edim_m(Q_7) <= 19, Q_8 <= 26, Q_9 <= 38.
 - Not formalized: the lower bound edim_m(Q_6) >= 15 (a 1.4e10-leaf search) and L5.
+
+**EXTERNAL CERTIFICATE AUDIT 2026-10-01.** The paper's own certificate package was audited with the orchestrator's own code. Every claim checks out:
+- `edim_m(Q_d) = infinity` for `d = 2..5`;
+- the exact Q_5 intermediate counts;
+- the 796 orbit representatives and their witnesses;
+- the Q_6..Q_10 resolving sets;
+- `U_d < 1` as stated for `11 <= d <= 50`.
+
+The README has two harmless packaging slips. See `external_audit` in the frontmatter for details.

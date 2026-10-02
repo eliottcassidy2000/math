@@ -82,3 +82,5 @@ audit: >
    - Sparse random sets are optimal up to the constant `4^(2/3)` in the exponent.
 
 **Also: `11 <= edim_m(Q_7) <= 19`.**
+
+**EXTERNAL CERTIFICATE AUDIT 2026-10-01 (see THM-4525's `external_audit`).** The paper's archived rational union bounds `U_d < 1` for `11 <= d <= 50` were checked to be fractions `< 1`; their derivation was not redone. THM-4534 does not use them: Theorem D covers every `d >= 17` and the explicit sets cover `6 <= d <= 16`.

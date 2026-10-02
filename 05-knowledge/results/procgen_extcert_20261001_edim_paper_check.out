@@ -1,0 +1,42 @@
+==== A ====
+[OK] A: Q_2: none of the 15 nonempty vertex subsets resolves the edges (the paper: edim_m(Q_2) = infinity)
+[OK] A: Q_3: none of the 255 nonempty vertex subsets resolves the edges (the paper: edim_m(Q_3) = infinity)
+[OK] A: Q_4: none of the 65535 nonempty vertex subsets resolves the edges (the paper: edim_m(Q_4) = infinity)
+==== B ====
+    a=0 reps=1 burnside=1 orbit_sizes_sum=1 C(32,a)=1 survivor_orbits=0 survivor_sets=0
+    a=1 reps=1 burnside=1 orbit_sizes_sum=32 C(32,a)=32 survivor_orbits=0 survivor_sets=0
+    a=2 reps=5 burnside=5 orbit_sizes_sum=496 C(32,a)=496 survivor_orbits=0 survivor_sets=0
+    a=3 reps=10 burnside=10 orbit_sizes_sum=4960 C(32,a)=4960 survivor_orbits=0 survivor_sets=0
+    a=4 reps=47 burnside=47 orbit_sizes_sum=35960 C(32,a)=35960 survivor_orbits=0 survivor_sets=0
+    a=5 reps=131 burnside=131 orbit_sizes_sum=201376 C(32,a)=201376 survivor_orbits=0 survivor_sets=0
+    a=6 reps=472 burnside=472 orbit_sizes_sum=906192 C(32,a)=906192 survivor_orbits=0 survivor_sets=0
+    a=7 reps=1326 burnside=1326 orbit_sizes_sum=3365856 C(32,a)=3365856 survivor_orbits=0 survivor_sets=0
+    a=8 reps=3779 burnside=3779 orbit_sizes_sum=10518300 C(32,a)=10518300 survivor_orbits=0 survivor_sets=0
+    a=9 reps=9013 burnside=9013 orbit_sizes_sum=28048800 C(32,a)=28048800 survivor_orbits=0 survivor_sets=0
+    a=10 reps=19963 burnside=19963 orbit_sizes_sum=64512240 C(32,a)=64512240 survivor_orbits=0 survivor_sets=0
+    a=11 reps=38073 burnside=38073 orbit_sizes_sum=129024480 C(32,a)=129024480 survivor_orbits=12 survivor_sets=46080
+    a=12 reps=65664 burnside=65664 orbit_sizes_sum=225792840 C(32,a)=225792840 survivor_orbits=38 survivor_sets=145920
+    a=13 reps=98804 burnside=98804 orbit_sizes_sum=347373600 C(32,a)=347373600 survivor_orbits=73 survivor_sets=280320
+    a=14 reps=133576 burnside=133576 orbit_sizes_sum=471435600 C(32,a)=471435600 survivor_orbits=30 survivor_sets=115200
+    a=15 reps=158658 burnside=158658 orbit_sizes_sum=565722720 C(32,a)=565722720 survivor_orbits=153 survivor_sets=587520
+    a=16 reps=169112 burnside=169112 orbit_sizes_sum=601080390 C(32,a)=601080390 survivor_orbits=184 survivor_sets=706560
+    Q5: 698635 orbit representatives with |S| <= 16 checked, resolving: 0; reps match Burnside and orbit sizes sum to C(32,a): yes
+    Q5: directional survivors among all 2^32 subsets: 3056640; survivor orbits under Aut(Q5) x complement: 402 (size-16 Aut-orbits 184, self-complementary 8)
+[OK] B: Q5: 698635 orbit representatives with |S| <= 16 checked, resolving: 0; reps match Burnside and orbit sizes sum to C(32,a): yes
+[OK] B: R4 recomputed = 14887680 resolving {0,1,2}-weightings of Q_4 (paper: 14887680 of 3^16)
+[OK] B: directional survivors recomputed by orbit sizes = 3056640 (paper: 3056640, by a 2^32 scan)
+[OK] B: survivor Aut(Q_5)-orbits per size {11: 12, 12: 38, 13: 73, 14: 30, 15: 153, 16: 184, 17: 153, 18: 30, 19: 73, 20: 38, 21: 12} = the paper's table (796 in all)
+[OK] B: the 796 archived representatives are pairwise inequivalent and hit every survivor Aut(Q_5)-orbit exactly once
+[OK] B: all 796 archived collision witnesses are genuine (two distinct edges, equal stated histograms)
+==== C ====
+[OK] C: Q_6: all 15 sets of the archived descent chain (sizes 29 -> 15) resolve the 192 edges; the last is 0x02283022a042a00a (= THM-4525's set)
+[OK] C: Q_6: q6_quick.txt holds a resolving set of size 29 (the README attributes the size-15 set to this file; it is the last line of q6_min_result.txt)
+    q6_min14_result.txt: |W|=14: none found in 96 restarts x 8000000 iters -> stopping (min so far = 15)
+[OK] C: Q_7: the archived set of size 63 resolves all 448 edges
+[OK] C: Q_8: the archived set of size 115 resolves all 1024 edges
+[OK] C: Q_9: the archived set of size 246 resolves all 2304 edges
+[OK] C: Q_10: the archived set of size 492 resolves all 5120 edges
+==== D ====
+[OK] D: all 40 rational bounds U_d (11 <= d <= 50) are < 1 (largest U_11 = 0.2548); derivation not redone (non-load-bearing after THM-4534)
+elapsed 27 s
+ALL CHECKS PASSED
