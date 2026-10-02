@@ -32,12 +32,20 @@ Making this rigorous needs a uniform, `q -> 0` version of the paper's forest-lem
 
 **Explicit sets.** Small explicit sets (THM-4525: `Q_7 <= 19`, ..., `Q_12 <= 76`) are far below density `1/2`. This answers the qualitative half of Open Problem 4: sparse constructions are substantially better.
 
-**Proof proposed (2026-10-02; independent audit owed, status unchanged until then).**
-[`edge_multiset_dimension_growth_20261002.md`](../results/edge_multiset_dimension_growth_20261002.md) proves both halves:
-0.8146 = kappa_- <= liminf ln edim_m(Q_d)/d^(1/3) <= limsup <= kappa_+ = (3 sqrt2 ln 2)^(2/3) = 2.0526. The upper half
-uses sparse random sets with a uniform, q -> 0 version of the forest lemma (Theorem A); the lower half sharpens L5
-(Theorem B). It also proves edim_m(Q_d) < 2 exp(5 d^(1/3)) for every d >= 6 and certifies the sparse table for
-11 <= d <= 64 in interval arithmetic. The parallel lane note
-[`procgen_edim2_20261001_growth_and_uniform_bounds.md`](../results/procgen_edim2_20261001_growth_and_uniform_bounds.md)
-(audit also owed) proves the same two constants independently, with different forests, so the two derivations
-can serve as cross-checks for the audit.
+**UPDATE 2026-10-01 (THM-4534, edim2 lane; orchestrator-audited): the Theta form is PROVED.**
+`0.8146 <= liminf ln edim_m(Q_d)/d^(1/3) <= limsup <= 2.0526`.
+- **Upper bound.** Sparse random landmarks with an analytic union bound: Fourier atom bound plus star forests. The constant
+  `C* = (3 sqrt2 ln2)^(2/3)` is exactly the reach of the forest-lemma method.
+- **Lower bound.** A sharper evaluation of the entropy inequality gives `c* = (3 ln2/(2 sqrt2))^(2/3)`.
+- **What remains OPEN.** Whether the limit exists, and its value. The conjecture is now the sharper statement that
+  `lim ln edim_m(Q_d)/d^(1/3)` exists, possibly equal to `C*`, the heuristic threshold of uniformly random landmark sets.
+
+**Second, independent derivation (2026-10-02, branch `claude/project-thread-96889h`; blind independent audit found
+no false claim, wording fixes applied).**
+[`edge_multiset_dimension_growth_20261002.md`](../results/edge_multiset_dimension_growth_20261002.md) proves the same
+two constants with different forests (Lemma H and the toward-the-centre forest for the upper half, Theorem A; the
+same L5 inequality evaluated more sharply for the lower half, Theorem B). It adds the lower half of the Open Problem 4
+dichotomy (Theorem D(2)), the explicit bound edim_m(Q_d) < 2 exp(5 d^(1/3)) for every d >= 6 (computer-assisted at
+its finite inputs), and a sparse table certified in interval arithmetic for every 11 <= d <= 64. The companion note
+[`edge_multiset_dimension_op3_20261002.md`](../results/edge_multiset_dimension_op3_20261002.md) settles Open Problem 3
+with one estimate at density 1/2 for every d >= 10 (audit owed).

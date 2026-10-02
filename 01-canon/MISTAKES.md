@@ -1937,6 +1937,14 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
+## MISTAKE-557 (2026-10-01, thread session thread-2cjcob, found while writing up the shaved-tournament results) -- a cross-thread identification typed as "STRUCTURAL (proved here)", and "exact only for n <= 6" asserted for a formula whose values for 9 <= n <= 37 were unknown
+
+- **Claims:**
+  - (1) `05-knowledge/results/shaved_tournaments_unavoidable_cores_20261001.md` §5, under "STRUCTURAL (proved here)": "The same tournament [P7] is the extremal object of the flip-rank thread (HYP-3805) and of the LRC thread (HYP-3802)". HYP-3802 does not make P7 an extremal object of the lonely runner. It attaches the Paley orientation to the seven roots of -1 in the lonely measure of the tight core {1..13}, a chosen orientation. The lonely-runner extremal objects are the tight speed sets ({1..k}, {1,3,4,7}, {1,3,4,5,9}, and two sets at k = 7), and P7's connection set {1,2,4} is not tight: its loneliness is at least 1/3, attained at t = 1/3.
+  - (2) HYP-3798's correction and resolution notes ("The formula is exact only for n<=6"; "The lazy-caterer formula 1 + C(n-2,2) is exact only for n <= 6") and THM-4526's `related` line ("now exact only for n <= 6"). The formula is exact at n = 9: kappa(9) = 22 = 1 + C(7,2) (`05-knowledge/results/shaved_tournaments_proved_vs_conjectured_20261001.md`). When "only" was written, u(n) was unknown for 9 <= n <= 37.
+- **What survives:** P7 is the n = 7 obstruction for shavings and for the flip rank (proved; it is the same problem). The formula is exact for n = 3..6 and n = 9, too small at n = 7, 8, and too large for every n >= 38 and at n = 34.
+- **Rule:** a "STRUCTURAL" or "proved here" header covers every sentence under it. Move cross-thread identifications to DICTIONARY or ANALOGY lines (MISTAKE-228 lineage). "Exact only for ..." is a universal statement over the unknown range: write "exact for ...; fails at ...; unknown for ...".
+
 ## MISTAKE-556 (2026-10-01, opus S15 twenty-first note, tournament designations, odd-zeta parallels; found by the independent audit) -- a counting identification taken from a summary instead of the source, and overgeneralisations contradicted by the session's own output
 
 - **Claims:**

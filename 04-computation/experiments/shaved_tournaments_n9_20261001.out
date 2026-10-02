@@ -1,0 +1,198 @@
+
+N1. class lists
+PASS gentourng n = 3: 2 classes (A000568: 2)
+PASS gentourng n = 4: 4 classes (A000568: 4)
+PASS gentourng n = 5: 12 classes (A000568: 12)
+PASS gentourng n = 6: 56 classes (A000568: 56)
+PASS gentourng n = 7: 456 classes (A000568: 456)
+PASS gentourng n = 8: 6880 classes (A000568: 6880)
+PASS gentourng n = 9: 191536 classes (A000568: 191536)
+   |Aut| distribution at n = 9: {1: 188337, 3: 3047, 5: 40, 7: 4, 9: 94, 15: 8, 21: 4, 27: 1, 81: 1}
+PASS n = 7, 8, 9: |Aut| read for every class
+PASS n = 9: the largest group order is 81, attained only by C3[C3] = Cay(Z9, {1,3,4,7})
+
+N2. Theorem A: H_n = Hamiltonian path + first->last arc
+PASS n = 3: classes without H_n = 1 (C3)
+PASS n = 4: classes without H_n = 0
+PASS n = 5: classes without H_n = 1 (C3[1,C3,1])
+PASS n = 6: classes without H_n = 0
+PASS n = 7: classes without H_n = 0
+PASS n = 8: classes without H_n = 0
+PASS n = 9: classes without H_n = 0
+PASS n = 10: thma n=10 tournaments=9733056 without a copy of H_n (path + first->last arc) = 0
+
+N3. u(7) = 9 and u(8) = 11 by orderly search inside a host
+   orderly n=7 e=9 host|Aut|=21 classes=456: canonical e-arc shavings inside the host (Aut-orbits) = 54 (full checks 163)
+PASS n = 7, host P7: 54 orbits of 9-arc shavings = 51 classes
+   orderly n=7 e=10 host|Aut|=21 classes=456: canonical e-arc shavings inside the host (Aut-orbits) = 0 (full checks 44)
+PASS n = 7: no 10-arc shaving, so u(7) = 9 and kappa(7) = 12
+   orderly n=8 e=11 host|Aut|=21 classes=6880: canonical e-arc shavings inside the host (Aut-orbits) = 2290 (full checks 2807)
+PASS n = 8, host TT1 => P7: 2290 orbits of 11-arc shavings = 1617 classes
+   orderly n=8 e=12 host|Aut|=21 classes=6880: canonical e-arc shavings inside the host (Aut-orbits) = 0 (full checks 284)
+PASS n = 8: no 12-arc shaving, so u(8) = 11 and kappa(8) = 17
+
+N4. u(9) = 14
+   orderly n=9 e=14 host|Aut|=81 classes=191536: canonical e-arc shavings inside the host (Aut-orbits) = 64 (full checks 817)
+PASS host C3[C3]: 64 orbits of 14-arc shavings = 54 classes
+   orderly n=9 e=15 host|Aut|=81 classes=191536: canonical e-arc shavings inside the host (Aut-orbits) = 0 (full checks 638)
+PASS host C3[C3]: no 15-arc shaving
+   orderly n=9 e=14 host|Aut|=27 classes=191536: canonical e-arc shavings inside the host (Aut-orbits) = 104 (full checks 1083)
+PASS host TT3[C3]: 104 orbits of 14-arc shavings = 54 classes
+   orderly n=9 e=15 host|Aut|=27 classes=191536: canonical e-arc shavings inside the host (Aut-orbits) = 0 (full checks 1151)
+PASS host TT3[C3]: no 15-arc shaving
+   orderly n=9 e=14 host|Aut|=21 classes=191536: canonical e-arc shavings inside the host (Aut-orbits) = 66 (full checks 906)
+PASS host C3[1,P7,1]: 66 orbits of 14-arc shavings = 54 classes
+   orderly n=9 e=15 host|Aut|=21 classes=191536: canonical e-arc shavings inside the host (Aut-orbits) = 0 (full checks 870)
+PASS host C3[1,P7,1]: no 15-arc shaving
+PASS all three hosts give the same 54 classes; u(9) = 14, kappa(9) = 22
+
+N5. exhaustive embedding counts (no pruning) and parity
+   count n=7 classes=456 candidates=51: embedded in every class = 51 (least minimum 1); odd count in every class = 2
+     histogram of the minimum embedding count over the classes: 1:22 2:12 3:15 4:2
+     odd in every class: candidate 49
+     odd in every class: candidate 50
+PASS n = 7: all 51 maximum shavings embed in every class; odd count in every class: 2 (a converse pair)
+   count n=8 classes=6880 candidates=1617: embedded in every class = 1617 (least minimum 1); odd count in every class = 0
+     histogram of the minimum embedding count over the classes: 1:343 2:360 3:635 4:79 5:103 6:79 7:6 8:6 9:2 14:4
+PASS n = 8: all 1617 maximum shavings embed in every class; odd count in every class: 0
+   count n=9 classes=191536 candidates=54: embedded in every class = 54 (least minimum 1); odd count in every class = 0
+     histogram of the minimum embedding count over the classes: 1:10 2:16 3:26 6:2
+PASS n = 9: all 54 maximum shavings embed in every class; odd count in every class: 0
+
+N6. one-arc extensions of the 54 maximum 9-shavings (brute force over 9! bijections)
+   bruteext n=9 classes=191536 candidates=1739: contained in every class = 0
+PASS 1739 acyclic 15-arc extension classes, none in every class: u(9) <= 14 again (shavings are hereditary)
+   blockers n=9 classes=191536 candidates=1739: candidates avoided by no class = 0
+     candidates avoided only by rigid classes = 0
+     candidates avoided only by symmetric classes = 0
+     fewest classes avoiding one candidate = 27 (candidate 476)
+     top blocker 1: class 158732 avoids 1018
+     top blocker 2: class 3997 avoids 904
+     top blocker 3: class 26294 avoids 805
+     top blocker 4: class 57677 avoids 767
+     top blocker 5: class 158721 avoids 728
+     top blocker 6: class 11262 avoids 726
+     top blocker 7: class 143169 avoids 726
+     top blocker 8: class 21122 avoids 702
+     top blocker 9: class 57676 avoids 691
+     top blocker 10: class 93474 avoids 688
+     top blocker 11: class 65232 avoids 590
+     top blocker 12: class 156521 avoids 590
+     top blocker 13: class 69639 avoids 558
+     top blocker 14: class 158726 avoids 558
+     top blocker 15: class 9539 avoids 505
+     greedy 1: class 158732 blocks 1018 more (left 721)
+     greedy 2: class 11262 blocks 336 more (left 385)
+     greedy 3: class 143169 blocks 202 more (left 183)
+     greedy 4: class 57677 blocks 93 more (left 90)
+     greedy 5: class 3997 blocks 48 more (left 42)
+     greedy 6: class 143213 blocks 19 more (left 23)
+     greedy 7: class 163143 blocks 14 more (left 9)
+     greedy 8: class 157187 blocks 6 more (left 3)
+     greedy 9: class 38532 blocks 2 more (left 1)
+     greedy 10: class 332 blocks 1 more (left 0)
+   greedy blocking set size = 10
+   |Aut| of the 15 most frequent blockers: [81, 9, 9, 21, 9, 21, 21, 3, 21, 3, 15, 15, 9, 9, 7]
+   |Aut| along the greedy blocking set: [81, 21, 21, 21, 9, 15, 9, 9, 7, 1]
+PASS every extension has a blocker; the most frequent one is C3[C3] (it avoids 1018 of the 1739); the 15 most frequent blockers all have |Aut| > 1 (188337 of the 191536 classes are rigid)
+PASS n = 9: every extension is avoided by at least 27 classes, among them a symmetric one and a rigid one: symmetric classes alone block all 1739, and so do rigid classes alone
+   blockers n=7 classes=456 candidates=706: candidates avoided by no class = 0
+     candidates avoided only by rigid classes = 0
+     candidates avoided only by symmetric classes = 27
+     fewest classes avoiding one candidate = 2 (candidate 15), avoided by class 23 351
+PASS n = 7: every one of the 706 one-arc extension classes is avoided by a symmetric class, and some are avoided only by symmetric classes
+   blockers n=8 classes=6880 candidates=33384: candidates avoided by no class = 0
+     candidates avoided only by rigid classes = 0
+     candidates avoided only by symmetric classes = 906
+     fewest classes avoiding one candidate = 1 (candidate 5980), avoided by class 5806
+PASS n = 8: every one of the 33384 one-arc extension classes is avoided by a symmetric class, and some are avoided only by symmetric classes (one only by C3 => R5)
+
+N7. structure of the maximum shavings
+PASS n = 7: 51 classes, all rigid (|Aut| = 1), converse-closed, self-converse 1, with a Hamiltonian path 4, bipartite 8, weakly connected 51
+PASS n = 8: 1617 classes, all rigid (|Aut| = 1), converse-closed, self-converse 15, with a Hamiltonian path 5, bipartite 27, weakly connected 1594
+PASS n = 9: 54 classes, all rigid (|Aut| = 1), converse-closed, self-converse 0, with a Hamiltonian path 0, bipartite 0, weakly connected 54
+PASS n = 7: path + all span-3 arcs (10 arcs) is avoided by 2 classes, so it is not a shaving
+PASS n = 8: path + all span-3 arcs (12 arcs) is avoided by 17 classes, so it is not a shaving
+PASS n = 9: path + all span-3 arcs (14 arcs) is avoided by 81 classes, so it is not a shaving
+
+N8. the symmetry penalty
+   n = 7, u = 9: a 9-arc shaving has |Aut S| <= n!/2^u = 9.84
+   n = 8, u = 11: a 11-arc shaving has |Aut S| <= n!/2^u = 19.69
+   n = 9, u = 14: a 14-arc shaving has |Aut S| <= n!/2^u = 22.15
+PASS Burnside: a 9-shaving with |Aut S| = 2 still has >= 2^21 > T(9) completion orbits, so counting alone does not force rigidity
+
+N9. the excess law (HYP-3817): kappa(n) - ceil(log2 T(n)) = #{SC classes with |Aut| > n}
+PASS Davis-Polya T(n) = A000568 for n <= 10
+   excess(n), n = 3..9: [0, 0, 0, 1, 3, 4, 4]
+   #{SC, |Aut| > n}:   [0, 0, 0, 1, 3, 4, 4]
+PASS the law holds for n = 3..9 (n = 9: 22 - 18 = 4)
+   prediction at n = 10 (recorded #{SC, |Aut| > 10} = 1): kappa(10) = 25, u(10) = 20 (counting bound U(10) = 21)
+PASS self-converse counts by orbit counting = A002785 for n <= 10
+PASS X -> X[C3] (m <= 6) and X -> TT1 => X[C3] => TT1 (m <= 5): injective on classes, keep self-converse, |Aut| >= 3^m
+    n  U(n)  L(n)  U-L  lower bound on #{SC, |Aut| > n}
+    10    21    14    7  -
+    11    25    15   10  2
+    12    28    17   11  2
+    13    32    20   12  -
+    14    36    20   16  2
+    15    40    22   18  8
+    16    44    25   19  -
+    17    48    27   21  8
+    18    52    30   22  12
+    19    56    30   26  -
+    20    61    32   29  12
+    21    65    35   30  88   law FAILS
+    22    69    37   32  -
+    23    74    40   34  88   law FAILS
+    24    79    40   39  176   law FAILS
+    25    83    42   41  -
+    26    88    45   43  176   law FAILS
+    27    93    47   46  2752   law FAILS
+    28    97    50   47  -
+    29   102    50   52  2752   law FAILS
+    30   107    52   55  8784   law FAILS
+    31   112    55   57  -
+    32   117    60   57  8784   law FAILS
+    33   122    62   60  279968   law FAILS
+    36   138    67   71  1492288   law FAILS
+    45   186    92   94  111698291584   law FAILS
+    54   237   112  125  13013584213369088   law FAILS
+PASS the law fails at every n in [21, 60] with n = 0, 2 (mod 3), and at no smaller n by this construction
+PASS an involution with <= 1 fixed point is an anti-automorphism of 2^((C(m,2) + floor(m/2))/2) labelled tournaments
+PASS for 15 <= m < 400 that bound exceeds log2((3m+2)!) >= U(3m+2) >= U(3m), so the law fails at every n >= 21 with n = 0, 2 (mod 3) (beyond 400 the gap only grows)
+
+N10. the lazy-caterer formula kappa(n) = 1 + C(n-2, 2)
+PASS exact for n in [3, 4, 5, 6, 9] among 3 <= n <= 9 (above it at n = 7, 8)
+PASS u(n) >= L(n) > 2n - 4 for 38 <= n <= 60; with u(n) >= C(k,2) + u(n-k), k = 1 + floor(log2 n) >= 6, C(k,2) >= 2k, this holds for all n >= 38
+
+N11. lonely-runner tight sets and circulant tournaments on Z_(2k+1)
+   tight: 1 2   circulant tournament connection set mod 5: yes
+   lrctight k=2 B=30 primitive sets=277 tight=1 (connection sets mod 5: 1) below 1/(k+1)=0
+PASS k = 2, speeds <= 30: no set below 1/(k+1)
+   tight: 1 2 3   circulant tournament connection set mod 7: yes
+   lrctight k=3 B=30 primitive sets=3472 tight=1 (connection sets mod 7: 1) below 1/(k+1)=0
+PASS k = 3, speeds <= 30: no set below 1/(k+1)
+   tight: 1 2 3 4   circulant tournament connection set mod 9: yes
+     tight: 1 3 4 7   circulant tournament connection set mod 9: yes
+   lrctight k=4 B=40 primitive sets=85771 tight=2 (connection sets mod 9: 2) below 1/(k+1)=0
+PASS k = 4, speeds <= 40: no set below 1/(k+1)
+   tight: 1 2 3 4 5   circulant tournament connection set mod 11: yes
+     tight: 1 3 4 5 9   circulant tournament connection set mod 11: yes
+   lrctight k=5 B=30 primitive sets=139246 tight=2 (connection sets mod 11: 2) below 1/(k+1)=0
+PASS k = 5, speeds <= 30: no set below 1/(k+1)
+   tight: 1 2 3 4 5 6   circulant tournament connection set mod 13: yes
+   lrctight k=6 B=26 primitive sets=228486 tight=1 (connection sets mod 13: 1) below 1/(k+1)=0
+PASS k = 6, speeds <= 26: no set below 1/(k+1)
+   tight: 1 2 3 4 5 6 7   circulant tournament connection set mod 15: yes
+     tight: 1 2 3 4 5 7 12   circulant tournament connection set mod 15: no
+     tight: 1 4 5 6 7 11 13   circulant tournament connection set mod 15: no
+   lrctight k=7 B=26 primitive sets=656076 tight=3 (connection sets mod 15: 1) below 1/(k+1)=0
+PASS k = 7, speeds <= 26: no set below 1/(k+1)
+   tight: 1 2 3 4 5 6 7 8   circulant tournament connection set mod 17: yes
+   lrctight k=8 B=22 primitive sets=319605 tight=1 (connection sets mod 17: 1) below 1/(k+1)=0
+PASS k = 8, speeds <= 22: no set below 1/(k+1)
+PASS primitive tight sets besides {1..k}: {1,3,4,7}, {1,3,4,5,9}, and two at k = 7
+PASS {1,3,4,7} and {1,3,4,5,9} are circulant connection sets mod 9 and 11 (C3[C3], Paley P11); the k = 7 sporadic sets are not (3 + 12 = 4 + 11 = 15)
+PASS {1,3,4,5,9} = QR_11
+
+ALL CHECKS PASSED

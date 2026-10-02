@@ -57,3 +57,12 @@ So (b) has thin evidence on the non-existence side at `N = 1 (mod 4)`.
 It belongs to the anti-circulant family, which also contains every `QR_q - 0`, and in every member of that family the antipodal arcs are odd (THM-4529, Theorem 6.1).
 
 The existence half of (b) is now reduced to HYP-9170 (P1). Known existence cases: N = 6, 10, 14, 18, 22, 26. The non-existence side (N = 13, and N = 1 mod 4 in general) remains open.
+
+**UPDATE 2026-10-01 (THM-4532, tcpc lane; orchestrator-audited): existence at N = 30, 34, 38 via the two-sheet clocks `D_r`.**
+`D_r` is two rotational `r`-clocks, the second turned a quarter and run backwards, joined by the quadrant rule. It is all-odd for every odd `r <= 19`.
+- **Evidence.**
+  - Independently audited for `r <= 13`.
+  - `r = 15, 17` by two inclusion-exclusion engines, reproduced on re-run.
+  - `r = 19` by one engine run.
+- **Coverage.** All-odd tournaments now exist for every `N = 2 (mod 4)` up to 38. That includes `N = 34, 38`, where no Paley tournament minus a vertex exists, since 35 and 39 are not prime powers.
+- **Relation to Paley.** `D_3 = QR_7 - v`, `D_5 = QR_11 - v`, `D_7 = QR_127[mu_14]`; `D_9`, `D_11`, `D_13` are new. Part (a), Paley minus a vertex for every `q`, is untouched.

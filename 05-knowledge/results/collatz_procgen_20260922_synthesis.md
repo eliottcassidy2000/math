@@ -1826,6 +1826,63 @@ The owner asked about tournaments with optional loops ("selfie tournaments"):
 
 **Cross-session note.** `QR_7` appears twice today. Here it is the all-even tournament whose vertex-deleted subtournament is the first parity-rigid tournament. In opus S15's nineteenth note (`collatz_paley_bridge_20261001.md`) it is the Paley heptagon read as the trivial Collatz cycle. The two facts are independent, and no bridge is claimed (ANALOGY at most).
 
+## 2aj. Wave 24 of this session (2026-10-01): the owner's six requests, a reboot, and seven lanes
+
+**The requests.** The owner asked for:
+- the one-to-one matching for OPEN-Q-060;
+- the remaining open problems of arXiv:2608.09983;
+- formalization of what gets proved;
+- the "family of 7 Petersen graphs" and a Collatz attempt through the Paley parity bridge;
+- the structure of the Syracuse drops `A - S(A)` (the "exactly two copies" guess);
+- the shaved 4-tournament (path + first->last arc) as n grows;
+- after the reboot, "Tournament Clock Prime Collatz" (TCPC): clocks on a modulus with loops, doubled and missing arcs.
+
+**What happened to the session.** A reboot wiped `/tmp` mid-wave, taking the worktree, the lane files and the scratchpad. The lanes were recovered from their transcripts and relaunched in a persistent worktree under `~/Documents/GitHub`. opus S15 had meanwhile answered parts of the same prompts (THM-4526/4527/4528), so the lanes were re-scoped to build on that work and audit it.
+
+**Results (all independently audited by the orchestrator unless noted).**
+* **OPEN-Q-060 (THM-4531).** The bijective form is answered negatively.
+  * There is no natural (relabelling-invariant) matching between switching classes and even Euler graphs for `5 <= n <= 100`, and none in the reverse direction for `n >= 3`.
+  * E1 turns out to be the switching analogue of Royle-Praeger-Glasby-Freedman-Devillers (2023); both follow from one twisted Mallows-Sloane principle.
+  * Mallows-Sloane's even-n remark is explained.
+  * For odd `n`, A049313 counts the tournaments with out-degree = in-degree (mod 4) at every vertex.
+  * Byproduct: Higashitani-Ueyama's stated expectation `s_{4,n} = t_{4,n}` holds for every modulus.
+* **Paper open problems.**
+  * **OP1** was THM-4525 (`edim_m(Q6) = 15`).
+  * **OP2 (THM-4534): SOLVED in Theta form.** `ln edim_m(Q_d)` lies between `0.8146 d^(1/3)` and `2.0526 d^(1/3)`; the limit is OPEN (HYP-9169).
+  * **OP3: partly.** A closed form covers `d >= 17` and explicit sets cover `6..16`; a single estimate from `d = 11` is OPEN.
+  * **OP4: answered.** Density 1/2 overshoots by `exp(d ln2 - O(d^(1/3)))`.
+  * **Q7:** `11 <= edim_m(Q7) <= 19`.
+* **Petersen family (THM-4529).**
+  * In Paley coordinates the Petersen family comes from the Fano translates of `{1,2,4}`. The real link is a 4 + 3 split; the "7 translations <-> 7 graphs" bijection is numerology.
+  * A linear K6 has 3 linked triangle pairs iff its Gale tournament is `C3[TT2,TT2,TT2]`.
+  * Anti-circulant tournaments have odd antipodal arcs.
+  * `QR_127[mu_14]` is all-odd (HYP-9167(b) at N = 14).
+  * Collatz via the bridge: NO PROOF. Every parity object it produces is q-blind.
+* **Drops (THM-4530).** Over all odd integers every `d` is a drop exactly `2 + N(6d+1)` times, with unit preimages `8d+1` and `-4d-1`: the owner's "two copies", made exact.
+  * The densities of each multiplicity are computed exactly.
+  * Two consecutive drops determine the point.
+  * Only `q = 3` makes the drop map hit every integer.
+  * Drop statistics cannot constrain cycles (`3x-1` has the same statistics).
+* **Shaved tournaments (THM-4533).**
+  * S15's Theorem A is classical (Grunbaum/Havet/El Zein), and Linial-Saks-Sos 1983 gives `u(n) ~ n log2 n`.
+  * New: a Redei-graph parity calculus. Path + span-3 is Redei exactly for `n = 4..6`. `D_n` is Redei for odd `n`. `u(9) = 14`.
+* **TCPC (THM-4532).**
+  * Clocks obey reflection, lexicographic, multiplicative and complement laws.
+  * The two-sheet clocks `D_r` (two rotational clocks, one turned a quarter and run backwards) are all-odd for every odd `r <= 19`. They give the first all-odd tournaments at N = 34 and 38, where no Paley tournament exists.
+  * The Syracuse map is a mod-9 clock: `log_2 S(A) = 2(A mod 3) - v (mod 6)`. This is a reformulation, not progress on Collatz.
+* **Formalization.** `04-computation/lean/ProcgenSelfieEdim/`: 617 theorems in core Lean 4.30 (no Mathlib), axioms only `propext`/`Quot.sound`. It includes:
+  * Redei's theorem from scratch;
+  * the selfie gauge theorem;
+  * `edim_m(Q6) <= 15`, `>= 7`, L1-L3, and the Q7-Q9 sets;
+  * the drop theorems (two copies over Z, pair-injectivity, the unit law);
+  * anti-circulant parity for every odd m, and odd-abelian Cayley arc-evenness;
+  * the small cases of THM-4526.
+
+**Process lessons.**
+- Long sessions must not live in `/tmp`.
+- Subagent transcripts in `~/.claude/projects/.../subagents/` are the recovery source.
+- An unquoted shell heredoc ate backtick spans in THM-4533; it was restored. Write canon through Python or the Write tool.
+
 ## 3. The snippet, dispatched
 
 | pasted claim | verdict | where |

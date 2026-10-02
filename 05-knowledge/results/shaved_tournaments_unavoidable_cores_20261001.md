@@ -19,6 +19,10 @@ of the owner's fourth prompt of the day.
 - Independent audit: DONE (2026-10-01, blind re-derivation with the auditor's own code; n ≤ 9 classes, every
   search redone). No claim is unsound. The corrections are applied: the two attributions above, five minimum
   certificates at `n = 7` instead of one, and softened wording (MISTAKE-555). The record is in §8.
+- Continued in [`shaved_tournaments_proved_vs_conjectured_20261001.md`](shaved_tournaments_proved_vs_conjectured_20261001.md)
+  (thread session thread-2cjcob, 2026-10-01; independently audited): `u(9) = 14`, so `κ(9) = 22` (D70 resolved); the excess
+  law fails for every `n ≥ 21` with `n ≡ 0, 2 (mod 3)`; a ledger of what is proved and what is conjectured. One
+  sentence of §5 is corrected (MISTAKE-557).
 
 ## 0. The owner's object
 
@@ -224,6 +228,7 @@ The recursive bound `L(n)` (best of the two rules, seeded with `u(1..7)`), compa
 directions**:
 - `κ(7) = 12 > 11` and `κ(8) = 17 > 16`;
 - `L(n) > 2n − 4` for every `38 ≤ n ≤ 60`, so `κ(n) < 1 + C(n−2,2)` there and, by Theorem C, for all large `n`.
+  (An induction with the transitive-block rule extends this to every `n ≥ 38`; see the continuation note §4.)
 
 The counting bound is not tight even at `n = 7` (12 versus 9).
 
@@ -240,7 +245,9 @@ already hit some classes 3 or 5 times (T8).
   shaving to its subgraphs, and six further classes are needed to kill the 10-arc ones. Lacking `TT_4` confines
   every shaving to its subgraphs. Its maximal symmetry (`|Aut| = 21`) makes it the rarest class (240
   labellings). The rest of the minimum certificate is symmetric too. The same tournament is the extremal object
-  of the flip-rank thread (HYP-3805) and of the LRC thread (HYP-3802).
+  of the flip-rank thread (HYP-3805), which is the same problem. *(Corrected 2026-10-01, MISTAKE-557: the draft
+  added "and of the LRC thread (HYP-3802)". HYP-3802 only attaches the Paley orientation to the seven roots of
+  `−1` of the tight core `{1, …, 13}`, and `{1,2,4}` is not a tight lonely-runner set.)*
 - **DICTIONARY, no implication.** `P_7`'s out-neighbourhoods `x + {1,2,4}` are the 7 Fano lines. The set
   `{1,2,4}` is also the parity code of the trivial Collatz cycle (an explained coincidence, nineteenth note), and
   it is the single colour line of a 3-edge-colouring (snarks; twentieth note). None of this transfers
@@ -254,12 +261,17 @@ already hit some classes 3 or 5 times (T8).
   must stop at 7.
 - **D70.** Find `u(9)` (`κ(9)`; the excess law predicts `⌈log₂ 191536⌉ + #{SC classes with |Aut| > 9}`). Which
   9-tournaments obstruct? (The forward-pair search has `C(36,e)` candidates, which needs a smarter search.)
+  **Resolved (2026-10-01):** `u(9) = 14`, `κ(9) = 22`, as the excess law predicted. There are 54 classes, all
+  rigid, none with a Hamiltonian path. They were found by an orderly search inside a host tournament (continuation
+  note §2), and independently by the shave4 lane ([THM-4533](../../01-canon/theorems/THM-4533-redei-graphs-parity-of-shaved-tournaments-and-u9.md)).
 - **D71.** Known: `c = 1` (Linial–Saks–Sós 1983). Open: the second-order term, between `−c₁n` and
   `−c₂ n log log n`.
 - **D72.** For which spanning oriented graphs is the number of embeddings odd in every tournament? The
   Hamiltonian path (Rédei), `H_n` for even `n`, and path + span-3 arcs for `n ≤ 6` are examples. Compare
   Forcade (Discrete Math. 6 (1973) 115–118) and El Sahili–Abi Aad (Discrete Math. 343 (2020) 111695): every
-  antisymmetric Hamiltonian path type occurs an odd number of times in every tournament.
+  antisymmetric Hamiltonian path type occurs an odd number of times in every tournament. Among the maximum
+  shavings, the odd-everywhere ones are 2 of 51 at `n = 7`, and none of the 1617 at `n = 8` or the 54 at `n = 9`
+  (continuation note §2).
 
 ## 7. Reproduction
 

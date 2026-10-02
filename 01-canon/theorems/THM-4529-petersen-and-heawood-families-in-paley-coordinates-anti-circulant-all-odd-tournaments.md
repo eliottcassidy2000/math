@@ -113,3 +113,8 @@ The two sevens do not match up, however: no member of the Petersen family has a 
 **NO PROOF.** Every parity object the bridge produces depends only on the parity word, or on residues of q. So it cannot separate integral cycles of `3x+1` from rational ones, or from those of `5x+1`.
 
 A concrete instance: the word `100` gives an integer cycle for `q = 3` (`{1, 4, 2}`) and for `q = 5` (`{-1, -4, -2}`), and for no other q.
+
+**FORMALIZED 2026-10-01 (Lean round 2; package [`04-computation/lean/ProcgenSelfieEdim/`](../../04-computation/lean/ProcgenSelfieEdim/README.md); orchestrator rebuilt from scratch, verify.py PASS, 617 theorems within {propext, Quot.sound}).**
+- Theorem 6.1 for every odd m: `antiCirc_antipodal_odd`, and the general form `cyclic_anti_antipodal_odd`, via the formal Rédei theorem.
+- Theorem 5.1 for every finite abelian group of odd order: `cayley_arcCount_even` (`FinAbGroup`), and `cayley_cyclic_prod_arcCount_even` for Z/m x Z/n.
+- The N = 2 mod 4 necessity for anti-circulants: `anti_cycle_mod_four`.

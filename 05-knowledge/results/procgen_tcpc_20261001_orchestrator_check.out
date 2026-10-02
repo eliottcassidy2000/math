@@ -1,0 +1,22 @@
+==== A/B/C ====
+[OK] A: D_3 (N = 6) is a tournament with translation automorphism and a single-2r-cycle anti-automorphism (1)
+[OK] B: D_3: H = 45, all 15 arc counts odd (exact)
+[OK] A: D_5 (N = 10) is a tournament with translation automorphism and a single-2r-cycle anti-automorphism (1)
+[OK] B: D_5: H = 15745, all 45 arc counts odd (exact)
+[OK] A: D_7 (N = 14) is a tournament with translation automorphism and a single-2r-cycle anti-automorphism (1)
+[OK] B: D_7: H = 24540117, all 91 arc counts odd (exact)
+[OK] A: D_9 (N = 18) is a tournament with translation automorphism and a single-2r-cycle anti-automorphism (1)
+[OK] B: D_9: H = 116670839805, all 153 arc counts odd (exact)
+[OK] A: D_11 (N = 22) is a tournament with translation automorphism and a single-2r-cycle anti-automorphism (1)
+[OK] B: D_11 (N = 22): H odd and 231 of 231 arcs odd (mod-2 bitset engine)
+[OK] A: D_13 (N = 26) is a tournament with translation automorphism and a single-2r-cycle anti-automorphism (1)
+[OK] B: D_13 (N = 26): H odd and 325 of 325 arcs odd (mod-2 bitset engine)
+[OK] C: D_3 = QR_7 - v, D_5 = QR_11 - v, D_7 = QR_127[mu_14]; D_9 is not QR_19 - v
+==== D ====
+[OK] D: T1 on 75 random symmetric two-sheet clocks (r = 3, 5, 7): 375 vertical arcs, 0 even
+==== E ====
+[OK] E: interval cross set all-odd: {3: True, 5: False, 7: True, 9: False}
+==== F ====
+[OK] F: log_2(S(A)) = 2(A mod 3) - v (mod 6) for all 133333 odd A < 4e5 prime to 3
+elapsed 15 s
+ALL CHECKS PASSED

@@ -1,0 +1,16 @@
+[OK] A: path + span-3, n = 4: parity n=4 arcs=4 classes=4 odd=4 even=0 zero=0
+[OK] A: path + span-3, n = 5: parity n=5 arcs=6 classes=12 odd=12 even=0 zero=0
+[OK] A: path + span-3, n = 6: parity n=6 arcs=8 classes=56 odd=56 even=0 zero=0
+[OK] A: path + span-3, n = 7: parity n=7 arcs=10 classes=456 odd=282 even=174 zero=2
+[OK] A: TT7 with 0->6 and 3->6 reversed has exactly 2 copies of path + span-3
+[OK] B: D_5 Redei: parity n=5 arcs=6 classes=12 odd=12 even=0 zero=0
+[OK] B: D_7 Redei: parity n=7 arcs=8 classes=456 odd=456 even=0 zero=0
+[OK] B: D_9 Redei: parity n=9 arcs=10 classes=191536 odd=191536 even=0 zero=0
+[OK] C: the 14-arc graph embeds in every 9-class: exist n=9 arcs=14 classes=191536 fail=0
+[OK] D: n = 1: 1 Redei classes among 1 oriented graphs; largest has 0 arcs
+[OK] D: n = 2: 1 Redei classes among 2 oriented graphs; largest has 1 arcs
+[OK] D: n = 3: 2 Redei classes among 7 oriented graphs; largest has 2 arcs
+[OK] D: n = 4: 5 Redei classes among 42 oriented graphs; largest has 4 arcs
+[OK] D: n = 5: 21 Redei classes among 582 oriented graphs; largest has 6 arcs
+elapsed 93 s
+ALL CHECKS PASSED

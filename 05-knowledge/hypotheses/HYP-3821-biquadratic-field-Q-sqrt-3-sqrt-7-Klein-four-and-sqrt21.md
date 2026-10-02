@@ -92,3 +92,5 @@ exact number theory (biquadratic Klein four, `21=3*7=`forbidden `H`) + a structu
 atlas, NOT a certificate. The three links are tangential lenses, not deep dependencies.
 
 > **UPDATE (opus S15, 2026-10-01, THM-4526):** the excess values are now exact through n = 8. They are 3 at n = 7 (kappa(7) = 12 proved) and 4 at n = 8 (kappa(8) = 17 by exhaustive search; HYP-3819's prediction confirmed). The excess law itself (= #{SC classes with |Aut| > n}) remains a conjecture beyond n = 8.
+
+> **UPDATE (thread session thread-2cjcob, 2026-10-01):** excess(9) = 4 (kappa(9) = 22 by exhaustive search), as the excess law predicts. The law itself is REFUTED as a general law: it fails for every n >= 21 with n = 0, 2 (mod 3) (HYP-3817 resolution; `05-knowledge/results/shaved_tournaments_proved_vs_conjectured_20261001.md` §3).
