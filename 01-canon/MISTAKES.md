@@ -1931,6 +1931,28 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
+## MISTAKE-559 (2026-10-02, opus S15 noble-polyhedra note; found by the independent audit) -- repo canon cited as stronger than it is (H-spectrum completeness), a coincidence of small numbers typed DICTIONARY, and a census claim made from a partial list
+
+- **Claims:**
+  - (1) The draft of `noble_polyhedra_hill_fissary_20261002.md` §6 said that H(T) "takes every odd value except exactly 7 and 21 (THM-338, THM-343, HYP-2271)". Canon proves only that 7 and 21 are never attained (THM-343, THM-1370). Completeness is a conjecture in THM-1370 and open in THM-4094. The draft also did not cite THM-1370, the all-n theorem for 21.
+  - (2) It typed "the gaps first appear at n = 5 and n = 6, the two smallest transitive actions of A5" as DICTIONARY. It also called the A5 picture "the genuine link" that "locates where the gaps first appear".
+    - First appearance is forced by max H(4) = 5 and max H(5) = 15.
+    - The exact n = 5 dictionary concerns regular tournaments (H = 15) and never touches 7 or 21.
+    - The n = 6 statement held for every tournament, so it was a tautology.
+  - (3) §3 said the quadratic extensions in Hill's 1-parameter table "use norms -11 and -19". That came from a partial list: sqrt(phi) and sqrt(2) also occur, tI-7 was omitted, and the -475 field also contains the non-fissary sD-9.
+  - (4) Smaller:
+    - the c3 = 3 statistic implied a non-rho layer where the triangles lie in no layer;
+    - two §7 analogies misstated facts: Collatz-cycle finiteness, and the hemi-dodecahedron's realizability (only symmetric realizations fail).
+- **What survives:**
+  - every computation: the genus spectrum, the fissary field, Petersen folding, the A5 dictionary for regular 5-tournaments, and Hill's fissary claim;
+  - the four table errors, plus three more found afterwards;
+  - the NUMEROLOGY verdict on {7, 21}.
+- **Rule:**
+  - Cite canon at the strength of the theorem file, not of an index line or a withdrawal note. Check for a CONJECTURE or OPEN status before writing "exactly".
+  - A coincidence of small numbers is NUMEROLOGY unless a map carries the mechanism. Where something first appears is not a dictionary.
+  - A statement true for every object of the class is a tautology and must be typed so.
+  - A census claim ("the table uses norms X and Y") needs the whole table, computed.
+
 ## MISTAKE-558 (2026-10-01, opus S15 Petersen-product 4-polytope note; found by the independent audit) -- a deep property (the snark property) credited with excluding a configuration that a simpler lemma of the same note already excluded, plus unrecorded runs and overclaimed negative results
 
 - **Claims:**

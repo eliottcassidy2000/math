@@ -1,0 +1,138 @@
+== data
+  model library: 148 .off files (commit a801da7)
+  paper HTML: 1596033 bytes, sha256 d3cfce35450c2a89
+== A. surface invariants of all models
+  models: 148 (146 noble + fissary ['rD-F', 'tI-F'])
+  orientable genus spectrum (genus: count): {0: 7, 4: 2, 6: 5, 7: 5, 11: 1, 13: 4, 16: 34, 21: 1, 31: 52, 61: 1}
+  non-orientable (crosscap number: count): {14: 4, 32: 22, 62: 10}
+  genus 7: ['rC-1.1', 'sC-3.1', 'sC-5.1', 'sC-6.2', 'tC-1.1']
+  genus 21: ['D-4']
+  crosscap 14: ['sC-1.1', 'sC-2.1', 'sC-4.1', 'sC-6.1']
+  tI-F: 60 points, abstract V=120, E=300, F=120, chi=-60, orientable genus 31
+  rD-F: 60 points, abstract V=120, E=300, F=120, chi=-60, orientable genus 31
+  gD-19.1: 120 points, abstract V=120, E=300, F=120, chi=-60, orientable genus 31
+  gD-28.1: 120 points, abstract V=120, E=300, F=120, chi=-60, orientable genus 31
+  D-4: 20 points, abstract V=20, E=120, F=60, chi=-40, orientable genus 21
+  D-5: 20 points, abstract V=20, E=90, F=60, chi=-10, orientable genus 6
+== B. Hill's fissary claim: nobles with two faces in one plane
+  D-4: plane multiplicities {3: 20}
+  D-5: plane multiplicities {3: 20}
+  gD-19.1: plane multiplicities {2: 60}
+  gD-28.1: plane multiplicities {2: 60}
+  exactly the four parents named by Hill (their duals tI-F, rD-F, D-F1, D-F2 are fissary)
+== C. abstract map automorphism groups (flag-orbit counts) and Petrie walks
+  D-1      flags   120  |Aut|  120  flag orbits  1  Petrie (r0r1r2) orbit lengths {10: 12}
+  D-3      flags   240  |Aut|  240  flag orbits  1  Petrie (r0r1r2) orbit lengths {6: 40}
+  D-4      flags   480  |Aut|  240  flag orbits  2  Petrie (r0r1r2) orbit lengths {10: 48}
+  D-5      flags   360  |Aut|  120  flag orbits  3  Petrie (r0r1r2) orbit lengths {6: 20, 10: 24}
+  D-6      flags   120  |Aut|  120  flag orbits  1  Petrie (r0r1r2) orbit lengths {10: 12}
+  I-2      flags   120  |Aut|  120  flag orbits  1  Petrie (r0r1r2) orbit lengths {6: 20}
+  I-3      flags   120  |Aut|  120  flag orbits  1  Petrie (r0r1r2) orbit lengths {6: 20}
+  tC-1.1   flags   240  |Aut|   48  flag orbits  5  Petrie (r0r1r2) orbit lengths {8: 12, 6: 8, 4: 24}
+  sC-5.1   flags   240  |Aut|   24  flag orbits 10  Petrie (r0r1r2) orbit lengths {20: 12}
+  gD-19.1  flags  1200  |Aut|  120  flag orbits 10  Petrie (r0r1r2) orbit lengths {50: 24}
+  gD-28.1  flags  1200  |Aut|  120  flag orbits 10  Petrie (r0r1r2) orbit lengths {50: 24}
+  tI-F     flags  1200  |Aut|  120  flag orbits 10  Petrie (r0r1r2) orbit lengths {50: 24}
+  rD-F     flags  1200  |Aut|  120  flag orbits 10  Petrie (r0r1r2) orbit lengths {50: 24}
+== D. number fields of the orbit locations
+  tI-F: a**4 + 2*a**3 + 2*a**2 + a - 1   disc -475 = {5: 2, 19: 1, -1: 1};  over Q(sqrt5): (a**2 + a + 1/2 + sqrt(5)/2)*(a**2 + a - sqrt(5)/2 + 1/2)
+  rD-F: a**4 - 2*a**3 + 2*a**2 - a - 1   disc -475 = {5: 2, 19: 1, -1: 1};  over Q(sqrt5): (a**2 - a + 1/2 + sqrt(5)/2)*(a**2 - a - sqrt(5)/2 + 1/2)
+  gD-19 (a): a**4 + a**3 - 2*a**2 + 2*a - 1   disc -475 = {5: 2, 19: 1, -1: 1};  over Q(sqrt5): (a**2 + a*(1/2 - sqrt(5)/2) - 1/2 + sqrt(5)/2)*(a**2 + a*(1/2 + sqrt(5)/2) - sqrt(5)/2 - 1/2)
+  gD-28 (a = b): a**4 - a**3 - 2*a**2 - 2*a - 1   disc -475 = {5: 2, 19: 1, -1: 1};  over Q(sqrt5): (a**2 + a*(-1/2 + sqrt(5)/2) - 1/2 + sqrt(5)/2)*(a**2 + a*(-sqrt(5)/2 - 1/2) - sqrt(5)/2 - 1/2)
+  tI-F location x = (-1 + sqrt(4phi-3))/2 has Hill's minimal polynomial: True
+  rD-F location y = x + 1 has Hill's minimal polynomial: True
+  gD-28 a = (phi + sqrt(5phi+1))/2 has Hill's minimal polynomial: True
+  gD-19 a = (-phi + sqrt(5phi+1))/2 has Hill's minimal polynomial: True
+  x(x+1) = 1/phi: True
+  y(y-1) = 1/phi: True
+  (5phi+1)(4phi-3) = (phi+4)^2, so sqrt(5phi+1) sqrt(4phi-3) = phi + 4: True
+  numerical: x = 0.431683416590579  y = 1.43168341659058  gD-28 a = 2.31651242917313  gD-19 a = 0.698478440423237
+  norms of the radicands: N(phi) = -1 , N(2) = 4 , N(1+4phi) = -11 , N(4phi-3) = -19 , N(5phi+1) = -19
+  |N(z)| for z in Z[phi] (|coefficients| <= 60) avoids 3, 7, 21: True (3 and 7 are inert in Q(sqrt5))
+  Tables 10-13: 100 orbits, 176 location polynomials; printed locations that are not roots of the printed polynomial: [('sD-3', 'b'), ('sD-16', 'b'), ('gD-15', 'a')] (copy errors, see section H)
+  Q(phi, sqrt(1+4phi)): ['tI-4:a', 'tI-7:a', 'tD-1:a', 'rD-6:a', 'rD-7:a', 'sD-10:a', 'sD-10:b', 'sD-12:a', 'sD-12:b']
+  Q(phi, sqrt(2)): ['tI-1:a', 'rD-1:a', 'sD-18:b', 'sD-20:a', 'sD-20:b', 'sD-21:a', 'sD-21:b', 'sD-29:a', 'sD-29:b']
+  Q(phi, sqrt(4phi-3)): ['tI-F:a', 'rD-F:a', 'sD-9:a', 'gD-19:a', 'gD-28:a', 'gD-28:b']
+  Q(phi, sqrt(phi)): ['tI-2:a', 'tD-3:a', 'rD-4:a']
+  Table 10 quartics by field (polynomial discriminants):
+    Q(phi, sqrt(phi)): {'rD-4': {2: 4, 5: 2, -1: 1}, 'tD-3': {2: 4, 5: 2, -1: 1}, 'tI-2': {2: 4, 5: 2, -1: 1}}
+    Q(phi, sqrt(2)): {'rD-1': {2: 10, 5: 2}, 'tI-1': {2: 6, 3: 2, 5: 2}}
+    Q(phi, sqrt(1+4phi)): {'rD-6': {5: 2, 11: 1, -1: 1}, 'rD-7': {5: 2, 11: 1, -1: 1}, 'tD-1': {5: 2, 11: 1, -1: 1}, 'tI-4': {5: 2, 11: 1, -1: 1}, 'tI-7': {3: 2, 5: 2, 11: 1, -1: 1}}
+    Q(phi, sqrt(4phi-3)): {'rD-F': {5: 2, 19: 1, -1: 1}, 'tI-F': {5: 2, 19: 1, -1: 1}}
+  Table 10, other locations: {'Q': ['rC-1', 'rD-5', 'tC-1', 'tD-2'], 'Q(phi)': ['rD-2', 'tD-4', 'tI-3', 'tI-5', 'tI-6'], 'degree 3': ['tO-1'], 'quadratic, disc 8': ['rD-3', 'rD-8']}
+    tO-1 cubic discriminant: {31: 1, -1: 1}
+  orbits all of whose location parameters lie in the fissary field K = Q(phi, sqrt(4phi-3)): ['gD-19', 'gD-28', 'rD-F', 'sD-9', 'tI-F']
+  so K holds the four fissary-related orbits and one more: sD-9, whose a has the tI-F minimal polynomial and
+  whose b is the root 1/phi of b**2 + b - 1 ; its noble sD-9.1 has no coplanar faces (section B)
+== E. dodecahedral nobles folded by the antipodal map
+  quotient edges: a pair of antipodal classes is a Petersen edge if its lifts are at distances 1 and 4,
+  and a J(5,2) edge if they are at distances 2 and 3 (each quotient edge has 4 lifts, 2 of each distance)
+  D-1: edges at dodecahedral distances {1: 30}; centrally symmetric True; antipodal quotient = Petersen; Petersen edges covered 15/15 x[2]; J(5,2) edges covered 0/30 x[]
+  D-2: edges at dodecahedral distances {1: 30, 3: 60}; centrally symmetric True; antipodal quotient = K10; Petersen edges covered 15/15 x[2]; J(5,2) edges covered 30/30 x[2]
+  D-3: edges at dodecahedral distances {1: 30, 4: 30}; centrally symmetric True; antipodal quotient = Petersen; Petersen edges covered 15/15 x[4]; J(5,2) edges covered 0/30 x[]
+  D-4: edges at dodecahedral distances {1: 30, 3: 60, 4: 30}; centrally symmetric True; antipodal quotient = K10; Petersen edges covered 15/15 x[4]; J(5,2) edges covered 30/30 x[2]
+  D-5: edges at dodecahedral distances {1: 30, 3: 30, 4: 30}; centrally symmetric False; antipodal quotient = K10; Petersen edges covered 15/15 x[4]; J(5,2) edges covered 30/30 x[1]
+    D-5 takes exactly one of the two distance-3 lifts of every J(5,2) edge; the central inversion,
+    which maps the chiral D-5 to its mirror image, takes the other one
+  D-6: edges at dodecahedral distances {4: 30}; centrally symmetric True; antipodal quotient = Petersen; Petersen edges covered 15/15 x[2]; J(5,2) edges covered 0/30 x[]
+  D-7: edges at dodecahedral distances {3: 60, 4: 30}; centrally symmetric True; antipodal quotient = K10; Petersen edges covered 15/15 x[2]; J(5,2) edges covered 30/30 x[2]
+== F. 5-tournaments through A5
+  the 20 three-cycles of A5 carry two A5-invariant dodecahedron graphs (swapped by the outer automorphism);
+  in either, the inverse 3-cycle is the antipode
+  layers (orbits of 5-fold rotations): 24 {(1, 1, 1, 1, 1, 2, 2, 2, 2, 2): 12, (2, 2, 2, 2, 2, 4, 4, 4, 4, 4): 12}
+  layers = the 12 faces of the dodecahedron D-1 + the 12 pentagram faces of the great stellated dodecahedron D-6
+  (c3, c5, H) over the 1024 labelled 5-tournaments: {(0, 0, 1): 120, (1, 0, 3): 120, (2, 0, 5): 240, (3, 1, 9): 240, (4, 1, 11): 120, (4, 2, 13): 120, (4, 3, 15): 40, (5, 2, 15): 24}
+  H takes the values [1, 3, 5, 9, 11, 13, 15] - the first gap of the H-spectrum, 7, appears here:
+    c3 <= 2 forces c5 = 0 and c3 = 3 forces c5 = 1, so c3 + c5 = 3 never occurs
+  strong <=> c3 >= 3 <=> Hamiltonian cycle (c5 >= 1), on all 1024; H of non-strong: [1, 3, 5] ; of strong: [9, 11, 13, 15]
+  strong score sequences: {(1, 1, 2, 3, 3): 240, (1, 2, 2, 2, 3): 280, (2, 2, 2, 2, 2): 24}
+  so H = 7 is skipped because a strong 5-tournament has c3 >= 3 (Moon: >= n - 2) and c5 >= 1 (Camion),
+  hence H >= 9, while a non-strong one has c5 = 0 and c3 <= 2, hence H <= 5
+  the cyclic triangles of each of the 24 regular 5-tournaments form a layer: a face of D-1 or of D-6
+  A5-orbits of regular tournaments: [12, 12] ; D-1-face membership per orbit: [Counter({False: 12}), Counter({True: 12})]
+  -> the two A5-orbits (swapped by odd permutations, i.e. by the Galois conjugation sqrt5 -> -sqrt5) are
+     exactly the faces of the dodecahedron and the faces of the great stellated dodecahedron
+  Galois sqrt5 -> -sqrt5 on exact dodecahedron coordinates sends edges to distance class 4 of the image
+  the 240 tournaments with c3 = 3 (score sequence (1,1,2,3,3)), by the position of their 3 cyclic triangles:
+      60  in a layer of its 5-cycle rho, a D-1 face   [isomorphism class 10]
+      60  in a layer of its 5-cycle rho, a D-6 face   [isomorphism class 10]
+     120  in no layer: the 3 neighbours of a vertex whose triple is transitive in T   [isomorphism class 8]
+  -> the two isomorphism classes with c3 = 3 are told apart exactly by layer / no layer
+== F2. n = 6: A5 = PSL(2,5) on the 6 axes of the icosahedron
+  odd-cycle formula H = 1 + 2(c3 + c5) + 4 d33 verified on all 32768 labelled 6-tournaments
+  H values at n = 6: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45] ; missing odd values up to the maximum 45: [7, 21, 35, 39]
+  so 21 first becomes a gap at n = 6 (7 at n = 5); 35 and 39 are attained at n = 7 (section F3)
+  Galois sqrt5 -> -sqrt5 on exact icosahedron coordinates sends edges to distance class 2 of the image
+  the 20 triples of the 6 axes = 10 face triples of the icosahedron I-1 + 10 of the great icosahedron I-4
+  (the two hemi-icosahedra), and complementation swaps the classes.  So every complementary pair of triples,
+  in particular every vertex-disjoint pair of cyclic triangles counted by d33, is {I-1 triple, I-4 triple},
+  for every tournament and every labelling of its vertices by the axes: a tautology, no tournament content
+== F3. n = 7: H = 35 and H = 39 (missing at n = 6) are attained
+  H = 35: arc mask 1536567 (bit t orients the t-th pair (a, b), a < b, as a -> b), scores [1, 1, 2, 4, 4, 4, 5]
+  H = 39: arc mask 30866 (bit t orients the t-th pair (a, b), a < b, as a -> b), scores [1, 2, 2, 3, 3, 5, 5]
+== G. where 7 and 21 occur
+  canon: H(T) is odd, and never 7 (THM-343; THM-338 at n = 5) or 21 (THM-1370), for every n; every other odd
+  value up to 609 occurs by n = 8 (THM-1370).  That 7 and 21 are the ONLY gaps is the open spectrum-completeness
+  conjecture (THM-1370, THM-4094).  Mechanism of the two gaps: multiplicativity over strong components and
+  the strong minima 3, 5, 9, 15, 25, 45, 75, ... (Busch).
+  in the noble classification:
+    genus 21 occurs once, for D-4 (whose dual is the fissary D-F1);
+    genus 7 occurs for ['rC-1.1', 'sC-3.1', 'sC-5.1', 'sC-6.2', 'tC-1.1'] ;
+    no noble polyhedron has 7 or 21 points, vertices, edges or faces; the fissary field has discriminant
+    -5^2 19, and no element of Z[phi] has norm +-7 or +-21.
+  verdict: NUMEROLOGY (no mechanism links surface genus to Hamiltonian path counts).
+== H. rows of the paper's appendix Tables 5-9 against the model files
+  146 rows parsed; rows disagreeing with their model: ['D-2', 'D-7', 'rD-5.2', 'tI-5.6']; internally inconsistent rows (2E = pF = qV fails): ['D-2', 'D-7', 'rD-5.2']
+  D-2: printed {9,3} V=20 E=90 F=60;  model {3,9} V=20 E=90 F=60;  printed dual row rD-5.1: {9,3} V=60 E=90 F=20 = dual of the model: True
+  D-7: printed {5,3} V=20 E=90 F=60;  model {3,9} V=20 E=90 F=60;  printed dual row tI-5.7: {9,3} V=60 E=90 F=20 = dual of the model: True
+  rD-5.2: printed {8,4} V=60 E=180 F=60;  model {8,4} V=60 E=120 F=30;  printed dual row ID-5: {4,8} V=30 E=120 F=60 = dual of the model: True
+  tI-5.6: printed {5,5} V=60 E=150 F=60;  model {6,6} V=60 E=180 F=60;  printed dual row rD-5.7: {6,6} V=60 E=180 F=60 = dual of the model: True
+  every wrong row is refuted by its own printed dual row; the count 146 is unaffected
+== H2. the printed orbit locations of Tables 10-13 against the model files
+  100 orbits: parameters recovered from each model (distances to the mirrors of its Moebius triangle)
+  sD-3 b: printed 1.27703280443828, model 0.17390637642569, a root of the printed minimal polynomial: True
+  sD-16 b: printed 0.86777225107780, model 0.78083000327643, a root of the printed minimal polynomial: True
+  gD-15 a: printed 0.39234579229990, model 0.55463631656377, a root of the printed minimal polynomial: True
+  three printed decimals are copied from a neighbouring row (sD-3 b = sD-1 b, sD-16 b = sD-17 a,
+  gD-15 a = gD-14 a); the polynomials and the models agree, so nothing else is affected
+ALL CHECKS PASSED
