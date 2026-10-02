@@ -47,5 +47,6 @@ two constants with different forests (Lemma H and the toward-the-centre forest f
 same L5 inequality evaluated more sharply for the lower half, Theorem B). It adds the lower half of the Open Problem 4
 dichotomy (Theorem D(2)), the explicit bound edim_m(Q_d) < 2 exp(5 d^(1/3)) for every d >= 6 (computer-assisted at
 its finite inputs), and a sparse table certified in interval arithmetic for every 11 <= d <= 64. The companion note
-[`edge_multiset_dimension_op3_20261002.md`](../results/edge_multiset_dimension_op3_20261002.md) settles Open Problem 3
-with one estimate at density 1/2 for every d >= 10 (audit owed).
+[`edge_multiset_dimension_op3_20261002.md`](../results/edge_multiset_dimension_op3_20261002.md) answers Open Problem 3
+at density 1/2 with one recursion (closed-form coefficients) from the single exact value V_11, for every d >= 11
+(d = 10 from V_10). Its first version overstated this and was revised after a blind audit.

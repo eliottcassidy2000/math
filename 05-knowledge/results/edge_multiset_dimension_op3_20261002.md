@@ -1,33 +1,44 @@
-# Edge multiset dimension of hypercubes III: Open Problem 3, one estimate from d = 10
+# Edge multiset dimension of hypercubes III: Open Problem 3, a recursion from one base value
 
 **Provenance:** Claude thread session (project thread, branch `claude/project-thread-96889h`), 2026-10-02;
-temporary identity claude-96889h, no `.machine-id`. Independent audit owed.
+temporary identity claude-96889h, no `.machine-id`.
+**Audit and revision:** a blind independent audit (2026-10-02) of the first version (commit ada1e7bc) reproduced
+every number and found the mathematics correct (transfer lemma, recursion, ratio bound, antipodal bounds, V_10). It
+also found the headline overstated. That version claimed "one estimate, no per-d certificate for d >= 11", but its
+induction used an exact ratio check at each 10 <= d <= 40 and numerical A_d for 11 <= d <= 60, and several of its
+printed upper bounds were rounded down. This version follows the audit's fix. Theorem 5 now starts from the single
+exact value V_11 and uses closed forms, valid for every d >= 3, at every step. Every printed upper bound is rounded
+up, and the runner asserts each constant quoted here exactly. The auditor checked the new route of Theorem 5 in its
+own interval arithmetic; this revised text has not had a second audit.
 **Source problem:** J. Allikvere, *The edge multiset dimension of hypercubes*, arXiv:2608.09983v1, Section 10,
 Open Problem 3, as recorded in
 [THM-4534](../../01-canon/theorems/THM-4534-edge-multiset-dimension-grows-like-exp-theta-cube-root-d.md) and the lane
 note [`procgen_edim2_20261001_growth_and_uniform_bounds.md`](procgen_edim2_20261001_growth_and_uniform_bounds.md)
-(section 4). The paper proves that a uniformly random vertex set of Q_d resolves with positive probability for every
-d >= 11. For 11 <= d <= 50 it does this with a separate computer certificate of its union bound U_d at each d; for
-d >= 51 it uses an analytic tail estimate. Open Problem 3 asks for one analytic estimate valid from d = 11. THM-4534
-lists the strict form as OPEN and proves a closed-form estimate for every d >= 17 (its Theorem D).
-**Builds on:** the forest lemma (the paper's Lemma 11), the pair types and cells, and the antipodal halving of
-[`edge_multiset_dimension_growth_20261002.md`](edge_multiset_dimension_growth_20261002.md) (sections 1.1, 1.2, 1.4,
-1.6), which are also in THM-4534 and
-[THM-4525](../../01-canon/theorems/THM-4525-edge-multiset-dimension-of-q6-is-15.md) (L2).
+(section 4). The paper itself could not be fetched here (the container's network policy blocks arxiv.org). The paper
+proves that a uniformly random vertex set of Q_d resolves with positive probability for every d >= 11. For
+11 <= d <= 50 it uses a separate computer certificate of its union bound U_d at each d. For d >= 51 it uses an
+analytic tail estimate, whose constant rests on one evaluation (B_51; lane note section 4). Open Problem 3 asks for
+one analytic estimate valid from d = 11. THM-4534 lists this strict form as OPEN. Its Theorem D proves a closed-form
+estimate for every d >= 17, whose only numerical inputs are interval evaluations at d = 17, 18 and 19.
+**Builds on:** the forest lemma (the paper's Lemma 11; growth note 1.2 at q = 1/2) and the pair types and cells
+(growth note 1.1) of [`edge_multiset_dimension_growth_20261002.md`](edge_multiset_dimension_growth_20261002.md); the
+antipodal halving (growth note 1.4, which rests on Lemma L2 of
+[THM-4525](../../01-canon/theorems/THM-4525-edge-multiset-dimension-of-q6-is-15.md)).
 **Runner:** `04-computation/experiments/edge_multiset_dimension_op3_20261002_run.py` (pure Python, exact integer and
-rational arithmetic, 9 s); stdout in `05-knowledge/results/edge_multiset_dimension_op3_20261002.out`: 573,465
-checks, ALL CHECKS PASSED.
-**Labels used:** PROVED, FINITE-EXACT.
+rational arithmetic, about 9 s); stdout in `05-knowledge/results/edge_multiset_dimension_op3_20261002.out`:
+573,986 checks, ALL CHECKS PASSED.
+**Labels used:** PROVED, FINITE-EXACT, OPEN.
 
 ## Status header
 
 | # | Claim | Label |
 |---|-------|-------|
-| 1 | **Open Problem 3 is settled in its strict form, and from d = 10.** For every d >= 10, a uniformly random subset of V(Q_d) is edge-multiset resolving with probability at least 0.32. The proof is one estimate: the recursion V_(d+1) <= V_d/2 + A_(d+1) for the paper's own union bound (with antipodal halving), started from the single exact value V_10 = 0.66023. No per-d certificate is used for d >= 11. | PROVED (computer-assisted in two finite places: the exact rational V_10, and a rational check of the ratio inequality for 10 <= d <= 40; analytic beyond d = 40) |
-| 2 | **Transfer lemma (Theorem 1).** For every pair type t' of Q_(d+1) other than the antipodal one there is a pair type t of Q_d, and an explicit near-central cell size N*(t'), with B(t') <= B(t) beta(N*(t')). Here B is the potential-forest bound of a pair type. | PROVED by hand; also machine-checked sub-cell by sub-cell for every type, 3 <= d <= 40 (41,116 transferred forest edges) |
-| 3 | **Ratio bound (Lemma 4).** rho_d <= 1/2 for every d >= 10 (0.4959 at d = 10, 0.0875 at d = 16, 0.00006 at d = 40). | PROVED (rational upper bounds for 10 <= d <= 40; a closed-form bound below 0.001 for d >= 41) |
-| 4 | With antipodal halving, the paper's union bound is already below 1 at d = 10: V_10 = 0.66023 (1.30745 without halving, the value the lane note quotes). For 6 <= d <= 12, the potential forests reach the maximum-weight-forest value exactly. | FINITE-EXACT |
-| 5 | V_d -> 0, and V_d <= 0.6767 for every d >= 10. | PROVED |
+| 1 | **Open Problem 3: one recursion with closed-form coefficients, from one base value.** For every d >= 11, a uniformly random subset of V(Q_d) is edge-multiset resolving with positive probability. The proof is one estimate for the paper's union bound with antipodal halving, V_(d+1) <= R(d) V_d + g(d+1), whose coefficients R and g are explicit elementary functions, valid for every d >= 3. It starts from the single exact value V_11 < 0.0859648. It gives V_12, ..., V_16 <= 0.4606, 0.7406, 0.8026, 0.6490, 0.4039 and V_d <= 1/2 for every d >= 16 (Theorem 5). The case d = 10 follows from a second exact value, V_10 < 0.660228. | PROVED, computer-assisted at one point: the exact rational V_11 is FINITE-EXACT (runner S2); the rest is closed-form, re-checked in exact arithmetic by the runner (S4-S6). The case d = 10 uses V_10 in the same way |
+| 2 | **V_d <= V_10 < 0.660228 for every d >= 10**, so a uniformly random subset of V(Q_d) is resolving with probability more than 0.3397 for every d >= 10 (Corollary 6). Also V_d -> 0. | PROVED, computer-assisted. Its finite inputs are FINITE-EXACT: V_10, the ratio bounds rho_10, ..., rho_15, and A_11, A_12 (runner S2, S4, S5). V_d -> 0 needs only Theorem 5 |
+| 3 | **Transfer lemma (Theorem 1).** For every pair type t' of Q_(d+1) other than the antipodal one there is a pair type t of Q_d, and an explicit near-central cell size N*(t'), with B(t') <= B(t) beta(N*(t')). Here B is the potential-forest bound of a pair type. | PROVED by hand; also machine-checked sub-cell by sub-cell for every type, 3 <= d <= 40 (41,116 transferred forest edges) |
+| 4 | **Closed forms (Lemmas 4 and 5).** rho_d <= R(d) = max(2 (d+1)^(3/2), 4 (d+1)^2/(d-1)) sqrt(2/pi) 2^(-d/2) and A_d <= g(d) = d 2^(d-2) (3/8) (2 pi (d-1))^(-(d-3)/4), for every d >= 3. R decreases from d = 7 on and is below 1/2 from d = 16 on; g decreases from d = 6 on. | PROVED (the runner checks, as a sanity check, that they dominate the exact values for 3 <= d <= 64, resp. 3 <= d <= 60) |
+| 5 | Exact values: V_10 < 0.660228 and V_11 < 0.0859648 (without halving the bounds are at most 1.30746 and 0.156177); rho_d <= 1/2 for every 10 <= d <= 40, with rho_10 <= 0.49587. For 6 <= d <= 12 the potential forests reach the maximum-weight-forest value exactly. | FINITE-EXACT |
+| 6 | Open Problem 3 with no evaluation at all (no exact base value). | OPEN (section 8) |
 
 ## 1. Setting
 
@@ -49,19 +60,19 @@ All of this is at density q = 1/2. S is a uniformly random subset of V(Q_d).
   P(H_e = H_f) <= prod over ab in F of beta(N_ab), where beta(N) = C(N, floor(N/2))/2^N. The reason: the flow through
   a forest edge is X - Y with X ~ Bin(M_1, 1/2), Y ~ Bin(M_2, 1/2), M_1 + M_2 = N_ab, and the largest atom of X - Y
   is beta(N_ab).
-* **beta.** It is non-increasing, since beta(2m-1) = beta(2m) >= beta(2m+1). Also beta(N) <= sqrt(2/(pi N))
-  (C(2m, m) <= 4^m/sqrt(pi m)).
+* **beta.** It is non-increasing, since beta(2m-1) = beta(2m) >= beta(2m+1). Also beta(N) <= sqrt(2/(pi N)) for
+  N >= 1 (C(2m, m) <= 4^m/sqrt(pi m), and beta(2m-1) = beta(2m)).
 * **Antipodal halving (growth note 1.4; THM-4525 L2).** H_(e-bar) is H_e reversed. So {e, f} and {e-bar, f-bar}
   collide together, and the involution fixes exactly the antipodal pairs, which form the type P(d-1) (nu = 0). In
   the union bound every type gets weight w = 1/2, except P(d-1), which gets weight 1.
 
 ## 2. Potential forests and the bound V_d
 
-**Centrality.** On the levels 0..T of a type, b is *more central* than a, written b < a, when |2b - T| < |2a - T|,
+**Centrality.** On the levels 0..T of a type, b is *more central* than a, written b ≺ a, when |2b - T| < |2a - T|,
 or when |2b - T| = |2a - T| and b > a. (Of two mirror levels, the upper one counts as more central.) This is a strict
 total order.
 
-**Potential forest.** Every level a that has a neighbour b < a with N_ab > 0 *chooses* one such neighbour of largest
+**Potential forest.** Every level a that has a neighbour b ≺ a with N_ab > 0 *chooses* one such neighbour of largest
 weight; write N(a) for that weight. Levels with no such neighbour are *roots*.
 
 **Lemma 1 (PROVED).** The chosen edges form a forest. *Proof.* Orient each chosen edge away from its chooser. Two
@@ -69,7 +80,7 @@ levels cannot choose the same edge, since each would be more central than the ot
 most 1, and centrality strictly increases along an oriented edge. A cycle of chosen edges, with as many edges as
 levels, would have to be a directed cycle, which is impossible. QED
 
-The forest is the same idea as the toward-the-centre forest of the growth note (Lemma 3 there), now with the
+The forest is the same idea as the toward-the-centre forest of the growth note (section 1.6 there), now with the
 heaviest edge at every level and with ties broken. Define
 * B(t) = prod over the choosers a of t of beta(N(a)),
 * V_d = sum over the types t of Q_d of w(t) |t| B(t), the union bound with halving,
@@ -79,12 +90,14 @@ heaviest edge at every level and with ties broken. Define
 
 By the forest lemma and the halving, **P(S is not resolving) <= V_d.**
 
-**FINITE-EXACT (runner S2).** V_6, ..., V_12 = 41.80, 29.21, 13.00, 3.843, **0.66023**, 0.08596, 0.005561. These
-equal the maximum-weight-forest (Kruskal) values with halving, exactly, for every 6 <= d <= 12. Without halving
-the Kruskal values are 1.30745 (d = 10), 0.15618 (d = 11) and 0.01075 (d = 12); these are the values the lane note
-quotes for the paper's bound. The weights and counts agree with the independent `cells` and `type_count` of
-`procgen_edim2_20261001_lib.py` for 6 <= d <= 12, and with brute force over representative edge pairs for
-3 <= d <= 8 (runner S1).
+**FINITE-EXACT (runner S2).** V_6, ..., V_12 <= 41.7956, 29.2119, 13.0044, 3.84260, **0.660228**, **0.0859648**,
+0.00556133 (exact fractions, rounded up). These equal the maximum-weight-forest (Kruskal) values with halving,
+exactly, for every 6 <= d <= 12. Without halving the Kruskal values are at most 1.30746 (d = 10), 0.156177 (d = 11)
+and 0.0107481 (d = 12). These are the values the lane note quotes for the paper's bound (1.307, 0.156, 0.0107); its
+section 4.3 quotes 0.1564 at d = 11 for its own version of the potential forests. The weights and counts were also
+compared with the independent `cells` and `type_count` of `procgen_edim2_20261001_lib.py` for 6 <= d <= 12, during
+development and again by the blind audit; the deposited runner checks them against brute force over representative
+edge pairs for 3 <= d <= 8 (S1).
 
 ## 3. The transfer lemma
 
@@ -139,7 +152,7 @@ its size has C(nu + 1, c) or C(nu + 1, c + 1) in place of C(nu, c), or C(h + 1, 
 C(h, j). The map is injective, because within one direction it is a translation, and the two directions land on
 sub-cells that start at different levels (phi(a) != psi(b) by Step 2). Hence N'(phi(a) psi(b)) >= N_ab.
 
-*Step 2: psi(b) is more central than phi(a) in t'.* Put delta = 2a - T and gamma = 2b - T, so that b < a means
+*Step 2: psi(b) is more central than phi(a) in t'.* Put delta = 2a - T and gamma = 2b - T, so that b ≺ a means
 |gamma| < |delta|, or |gamma| = |delta| with gamma > 0 > delta. In t' the top is T + 1.
 * a lower (delta < 0): 2 phi(a) - (T+1) = delta - 1, of absolute value |delta| + 1. For a nu-step,
   2 psi(b) - (T+1) = gamma - 1. If |gamma| < |delta|, then |gamma - 1| < |delta| + 1. If gamma = -delta > 0, then
@@ -187,9 +200,9 @@ inequality B(t') <= B(t) beta(N*(t')) is also checked in exact arithmetic.)
 N*(t') of order 2^d/d. The weight of the antipodal type halves under the nu-step that leaves it, and the
 crossing types use whichever step has the larger denominator.
 
-## 4. The recursion
+## 4. The recursion and the ratio bound
 
-**Corollary 2 (PROVED).** V_(d+1) <= rho_d V_d + A_(d+1), where
+**Corollary 2 (PROVED).** For every d >= 3, V_(d+1) <= rho_d V_d + A_(d+1), where
 rho_d = max over types t of Q_d of the sum, over the types t' of Q_(d+1) whose predecessor is t, of
 r(t') = (w(t') |t'|)/(w(t) |t|) beta(N*(t')).
 
@@ -204,85 +217,129 @@ at most two: (h, nu+1) when nu >= h, and (h+1, nu) when h + 1 >= nu.
 2^m), and C(h, ceil(h/2) - 1) >= 2^h/(2(h+1)) for h >= 1 (for odd h it is central; for even h it is
 C(h, h/2) (h/2)/(h/2 + 1) >= C(h, h/2)/2).
 
-**Lemma 4 (ratio bound).** rho_d <= 1/2 for every d >= 10.
-* *10 <= d <= 40 (FINITE-EXACT, runner S4).* Every r(t') is bounded above by a rational number: beta(N) itself
-  for N <= 4000, else an integer-square-root upper bound for sqrt(2/(3.14159 N)). The loads are summed exactly.
-  The maxima are
+**Lemma 4 (ratio bound, PROVED).** For every d >= 3,
+rho_d <= R(d) := max(2 (d+1)^(3/2), 4 (d+1)^2/(d-1)) sqrt(2/pi) 2^(-d/2).
+For d >= 7 the first term is the larger one, and R(d+1) < R(d). In particular R(15) <= 0.56419 and
+R(16) <= 0.43693, so R(d) < 1/2 for every d >= 16.
 
-  | d | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 24 | 32 | 40 |
-  |---|---|---|---|---|---|---|---|---|---|---|
-  | rho_d <= | 0.49587 | 0.35085 | 0.26127 | 0.19845 | 0.15036 | 0.11648 | 0.08751 | 0.00877 | 0.00077 | 0.00006 |
+*Proof.* Parallel t' = (P, h', nu'): h' + nu' = d with h', nu' >= 1, and t' is the only successor of its
+predecessor. By Lemma 3, N*(t') >= 4 (2^(nu')/(nu'+1)) (2^(h')/(2(h'+1))) = 2^(d+1)/((nu'+1)(h'+1)). With
+beta(N) <= sqrt(2/(pi N)), a weight ratio at most 1, and (nu'+1)(h'+1)/nu'^2 <= 2d <= 2(d+1) (as (nu'+1)/nu' <= 2
+and (h'+1)/nu' <= d),
+r(t') <= (2(d+1)/nu') sqrt((nu'+1)(h'+1)/(pi 2^d)) <= 2 (d+1)^(3/2) sqrt(2/pi) 2^(-d/2).
+Crossing t' = (X, h', nu'): h' + nu' = d - 1, the count ratio has the denominator max(h', nu') >= (d-1)/2, the weight
+ratio is 1, (nu'+1)(h'+1) <= ((d+1)/2)^2, and N*(t') >= 2 C(nu', floor(nu'/2)) C(h', floor(h'/2))
+>= 2^d/((nu'+1)(h'+1)). So each r(t') is at most (2(d+1)^2/(d-1)) sqrt(2/pi) 2^(-d/2), and a load (two successors
+at most) is at most twice that. For the last sentence: comparing squares, the first term is the larger one exactly
+when (d-1)^2 >= 4(d+1), which holds for d >= 7; and the first term decreases because ((d+2)/(d+1))^3 <= (9/8)^3 < 2.
+QED (Runner S4 checks Lemma 3 for m <= 300, the two inequalities of the last step for 7 <= d < 400, and, as a sanity
+check, that R(d), rounded up with pi > 3.14159, dominates the exact bound below for every 3 <= d <= 64.)
 
-  For d = 10..12 the largest load sits on a central crossing type ((X, 4, 4), (X, 4, 5), (X, 5, 5)). From d = 13 on
-  it sits on the parallel types next to the antipodal one (nu = 0 or 1). For comparison, rho_8 <= 0.923 and
-  rho_9 <= 0.654, while rho_6, rho_7 > 1.
-* *d >= 41 (PROVED).* Parallel: h' + nu' = d, and N*(t') >= 4 (2^(nu')/(nu'+1)) (2^(h')/(2(h'+1)))
-  = 2^(d+1)/((nu'+1)(h'+1)) by Lemma 3. With beta(N) <= sqrt(2/(pi N)) and (nu'+1)(h'+1)/nu'^2 <= 2(d+1),
-  r(t') <= (2(d+1)/nu') sqrt((nu'+1)(h'+1)/(pi 2^d)) <= 2 (d+1)^(3/2) sqrt(2/pi) 2^(-d/2).
-  Crossing: h' + nu' = d - 1, the denominator is max(h', nu') >= (d-1)/2, (nu'+1)(h'+1) <= ((d+1)/2)^2 and
-  N*(t') >= 2 C(nu', floor(nu'/2)) C(h', floor(h'/2)) >= 2^d/((nu'+1)(h'+1)). So each r(t') is at most
-  (2(d+1)^2/(d-1)) sqrt(2/pi) 2^(-d/2), and a load (two successors at most) is at most twice that. Both bounds
-  decrease for d >= 41, where their larger value is 2.9e-4. (The runner also checks Lemma 3 for m <= 300, and that
-  this crude bound dominates the exact one for 41 <= d <= 64.) QED
+The closed form at d = 10, ..., 16 is R(d) <= 1.8194, 1.4659, 1.1688, 0.92357, 0.72427, 0.56419, 0.43693.
+
+**Exact ratio bounds (FINITE-EXACT, runner S4; used only in Corollary 6).** Every r(t') is bounded above by a
+rational number: beta(N) itself for N <= 4000, else an integer-square-root upper bound for sqrt(2/(3.14159 N)). The
+loads are summed exactly, and the table rounds up:
+
+| d | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 24 | 32 | 40 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| rho_d <= | 0.49587 | 0.35085 | 0.26127 | 0.19845 | 0.15036 | 0.11649 | 0.087512 | 0.0087701 | 0.00077196 | 0.000063118 |
+| largest load on | (X,4,4) | (X,4,5) | (X,5,5) | (P,12,0) | (P,12,1) | (P,14,0) | (P,14,1) | (P,22,1) | (P,30,1) | (P,38,1) |
+
+Every value for 10 <= d <= 40 is at most 1/2. For d = 10..12 the largest load sits on a central crossing type. In the
+rows from d = 13 on it sits on the antipodal type (P, d-1, 0) for odd d and on its neighbour (P, d-2, 1) for even d.
+For comparison, rho_6, ..., rho_9 <= 1.7311, 1.2326, 0.92321, 0.65417.
 
 ## 5. Antipodal terms
 
-A_d = d 2^(d-2) prod over 0 <= j < (d-1)/2 of beta(4 C(d-1, j)).
-* *11 <= d <= 60 (FINITE-EXACT, runner S5).* Rational upper bounds as in Lemma 4: A_11 <= 0.01575,
-  A_12 <= 3.75e-4, A_13 <= 3.84e-4, A_14 <= 4.0e-6, and the sum over 11 <= d <= 60 is at most 0.016518.
-* *d >= 61 (PROVED).* beta(4) = 3/8, and beta(4 C(d-1, j)) <= (2 pi (d-1))^(-1/2) for 1 <= j <= d-2. There are at
-  least (d-3)/2 factors with j >= 1, so log2 A_d <= log2 d + d - 2 + log2(3/8) - ((d-3)/4) log2(2 pi (d-1)).
-  For d >= 61, log2(2 pi (d-1)) >= 8.55, so log2 A_d + d/2 <= log2 d - 0.637 d + 3.0. This is negative at d = 61
-  and decreasing beyond, so A_d <= 2^(-d/2), and the tail sum is at most 2.2e-9.
+**Lemma 5 (PROVED).** For every d >= 3, A_d <= g(d) := d 2^(d-2) (3/8) (2 pi (d-1))^(-(d-3)/4), and g(d+1) < g(d)
+for every d >= 6.
+
+*Proof.* A_d = d 2^(d-2) prod over 0 <= j < (d-1)/2 of beta(4 C(d-1, j)). The factor j = 0 is beta(4) = 3/8. For
+1 <= j < (d-1)/2 (so j <= d - 2), C(d-1, j) >= d - 1, hence beta(4 C(d-1, j)) <= (2 pi (d-1))^(-1/2) < 1. There are
+at least (d-3)/2 such factors. For the monotonicity,
+g(d+1)/g(d) = (2(d+1)/d) (2 pi d)^(-1/4) ((d-1)/d)^((d-3)/4) <= (2(d+1)/d) (2 pi d)^(-1/4),
+and (2(d+1)/d)^4 < 2 pi d for d >= 6 (the left side decreases, the right side increases, and at d = 6 they are
+2401/81 < 29.7 and 12 pi > 37.6). QED (Runner S5 checks the last inequality for 6 <= d < 400 and, as a sanity check, that g(d)
+dominates the exact rational upper bound for A_d for every 3 <= d <= 60.)
+
+The closed form at d = 11, ..., 17 is g(d) <= 0.53498, 0.33457, 0.20226, 0.11863, 0.067701, 0.037687, 0.020507.
+The exact rational upper bounds (FINITE-EXACT, runner S5; A_11 and A_12 are used only in Corollary 6) are
+A_11 <= 0.015753, A_12 <= 0.00037463, A_13 <= 0.00038347 and A_14 <= 4.0273e-6.
 
 ## 6. Open Problem 3
 
-**Theorem 5 (PROVED; Open Problem 3).** For every d >= 10,
-P(a uniformly random subset of V(Q_d) is not edge-multiset resolving) <= V_d <= V_10 + sum over k >= 11 of A_k
-<= 0.66023 + 0.01652 < 0.6767.
-Moreover V_(d+1) <= V_d/2 + A_(d+1), so V_d -> 0.
+**Theorem 5 (PROVED, computer-assisted at one point; Open Problem 3).** For every d >= 3,
+V_(d+1) <= R(d) V_d + g(d+1).
+Started from the exact value V_11 < 0.0859648 (runner S2), this gives V_12, ..., V_16 <= 0.4606, 0.7406, 0.8026,
+0.6490, 0.4039, and V_d <= 1/2 for every d >= 16. Hence, for every d >= 11,
+P(a uniformly random subset of V(Q_d) is not edge-multiset resolving) <= V_d < 1,
+and V_d -> 0. With the exact V_10 < 0.660228 the same holds at d = 10.
 
-*Proof.* Section 2 gives the first inequality. Corollary 2 and Lemma 4 give V_(d+1) <= V_d/2 + A_(d+1) <= V_d + A_(d+1)
-for d >= 10. Induct from V_10 (runner S2: an exact fraction below 0.6603) and use section 5. QED
+*Proof.* Corollary 2 with Lemmas 4 and 5 gives the recursion for every d >= 3, and its right side increases with V_d.
+The five steps from V_11 are evaluated in exact rational arithmetic, with R and g rounded up (runner S6). For
+d >= 16, if V_d <= 1/2 then V_(d+1) <= R(16)/2 + g(17) <= 0.2390 < 1/2, because R decreases from d = 7 on and g from
+d = 6 on. So V_d <= 1/2 for every d >= 16, by induction, and then V_(d+1) <= R(d)/2 + g(d+1) -> 0. Section 2 gives
+the probability bound. QED
 
-So existence of resolving sets for all d >= 10 follows from one estimate: the recursion, plus one base value. The
-paper's union bound needs an evaluation at a single d only, and that d can be 10 instead of 11 thanks to the
-halving. Together with explicit resolving sets for 6 <= d <= 9 (THM-4525 and the first lane note
-[`procgen_edim_20261001_edge_multiset_dimension.md`](procgen_edim_20261001_edge_multiset_dimension.md)), this gives
-edim_m(Q_d) < infinity for every d >= 6.
+**Corollary 6 (PROVED, computer-assisted).** V_d <= V_10 < 0.660228 for every d >= 10. So a uniformly random subset
+of V(Q_d) is resolving with probability more than 0.3397 for every d >= 10.
 
-**How this answers the question as posed.** THM-4534 and its lane note record OP3 as "one analytic estimate valid from
-d = 11", and the lane note suggested exactly this route (section 4.3 there): a monotonicity lemma V_(d+1) <= V_d for
-the potential-forest bound would reduce the problem to one value. Theorem 1 and Lemma 4 prove a quantitative form
-of that lemma (with the antipodal term separated), for d >= 10. If one insists on no computer evaluation at all, two
-finite inputs remain: the base value V_10 (an exact rational, one d) and the ratio check for 10 <= d <= 40. The
-paper's own tail estimate also rests on a single evaluation, at d = 51.
+*Proof.* Induct on d. The step from d to d + 1 needs rho_d <= 1/2 and A_(d+1) <= V_10/2. The first holds by the exact
+values for 10 <= d <= 15 (section 4) and by R(d) <= R(16) < 0.437 for d >= 16 (Lemma 4). For the second,
+V_10 > 0.6602 (an exact fraction), so V_10/2 > 0.33; A_11 <= 0.015753 and A_12 <= 0.00037463 (section 5); and
+A_k <= g(k) <= g(13) <= 0.20226 for every k >= 13 (Lemma 5). Then V_(d+1) <= V_10/2 + V_10/2 = V_10. QED
+
+**How this answers the question as posed.** THM-4534 and its lane note record Open Problem 3 as "one analytic
+estimate valid from d = 11". The lane note suggested this route (section 4.3 there): "a monotonicity lemma
+V_(d+1) <= V_d for the potential-forest bound would reduce Open Problem 3 to the single value V_11". Theorem 1 and
+Lemmas 4 and 5 make it rigorous in a quantitative form, with the antipodal term separated. The result is not
+V_(d+1) <= V_d itself, but V_(d+1) <= R(d) V_d + g(d+1) with closed-form coefficients. The estimate is one recursion,
+valid at every d >= 3, and its one numerical input is the exact value V_11 (with antipodal halving). This is the
+same shape as the paper's tail (one closed form, one evaluation at d = 51) and THM-4534's Theorem D (one closed form,
+evaluations at d = 17, 18, 19), and it starts at d = 11, where the paper's computations start. Read this way, it
+answers Open Problem 3. If the problem is read as forbidding any evaluation of the union bound, it stays open
+(section 8).
+
+Explicit resolving sets for 6 <= d <= 9 (THM-4525 and the first lane note
+[`procgen_edim_20261001_edge_multiset_dimension.md`](procgen_edim_20261001_edge_multiset_dimension.md)), with
+Theorem 5 from d = 10 on, give edim_m(Q_d) < infinity for every d >= 6. THM-4534 already proves this, with explicit
+sets up to d = 16 and its Theorem D beyond.
 
 ## 7. Relation to other work
 
-* THM-4534 (audited canon; procgen_edim2 lane): Theorem D proves U_d < 1 in closed form for every d >= 17. Its
-  Fourier-Hoelder multi-forest lemma certifies U_10 <= 0.2649 and U_11 <= 0.0448, computed at each d. Its OPEN item
-  "OP3 in the strict form" is what Theorem 5 settles. Proposition K there (weighted spanning trees of the parallel
-  level graph) is not used here.
-* Growth note ([`edge_multiset_dimension_growth_20261002.md`](edge_multiset_dimension_growth_20261002.md), section 6)
-  first recorded OP3 as OPEN and asked for "a lifting lemma from Q_d to Q_(d+1)". Theorem 1 is such a lemma, for the
-  union bound rather than for resolving sets; that section now points here. Its own sparse-regime estimate (Theorem A
-  there) is effective from d = 41.
+* THM-4534 (audited canon; procgen_edim2 lane): Theorem D proves U_d < 1 in closed form for every d >= 17. Its only
+  numerical inputs are interval evaluations at d = 17, 18 and 19 (bounds 0.6175, 0.01186 and 0.00297), and from
+  d = 20 on it is elementary. Its Fourier-Hoelder multi-forest lemma certifies U_10 <= 0.2649 and U_11 <= 0.0448
+  without halving, so positive probability at d = 10 was already known there (lane-level numerics, as THM-4534
+  labels them). What is new here is the halved potential-forest bound V_10 < 1, the transfer lemma, and the recursion
+  that reduces every d >= 11 to the single value V_11. THM-4534 lists "OP3 in the strict form" as OPEN; Theorem 5
+  answers it in the sense of section 6. Proposition K there (weighted spanning trees of the parallel level graph) is
+  not used here.
+* Growth note ([`edge_multiset_dimension_growth_20261002.md`](edge_multiset_dimension_growth_20261002.md), section 6):
+  an earlier version recorded Open Problem 3 as OPEN and asked for "a lifting lemma from Q_d to Q_(d+1)". Theorem 1
+  is such a lemma, for the union bound rather than for resolving sets; that section now points here. Its own
+  sparse-regime estimate (Theorem A there) is effective from d = 41.
 
 ## 8. Not done
 
-* A base below d = 10. V_9 = 3.843 > 1, although rho_9 <= 0.654. The true expected number of colliding pairs at
-  d = 9 is about 0.8 (EMPIRICAL, lane note 4.3), so a first-moment argument at d = 9 would need much more than
-  forests.
+* **Open Problem 3 with no evaluation at all (OPEN).** The closed forms alone cannot start below d = 16, since
+  R(15) > 1/2. From V_10 alone they give only V_11 <= 1.74. The audit also found that from V_10, with the exact rho_10
+  and A_11, they fail at d = 13 and 14 (bounds 1.18 and 1.21). A proof with no exact base value would need closed forms for
+  rho_d, or for V_11 itself, that are much sharper at d <= 15.
+* A base below d = 10. V_9 <= 3.84260 > 1, although rho_9 <= 0.65417. The lane note's Monte Carlo estimate (section
+  4.3 there; not a proof) of the expected number of colliding pairs at d = 9 is about 0.8, so a first-moment
+  argument at d = 9 would need much more than forests.
 * The Fourier-Hoelder lemma of THM-4534 was not combined with the transfer. Doing so would need edge-disjoint extra
   edges, one for each forest.
-* An independent audit of this note.
+* A second independent audit of this revised version.
 
 ## 9. Reproduction
 
 ```
 python3 04-computation/experiments/edge_multiset_dimension_op3_20261002_run.py [DMAX_TRANSFER=40]
 ```
-Sections: S1 cells and counts against brute force; S2 the union bound, the Kruskal comparison and V_10; S3 the
-transfer lemma, sub-cell by sub-cell; S4 the ratio bound; S5 the antipodal terms and the conclusion. 573,465
-checks, about 9 seconds, ALL CHECKS PASSED. Timing goes to stderr; stdout is deterministic.
+Sections: S1 cells and counts against brute force; S2 the union bound, the Kruskal comparison, V_10 and V_11; S3 the
+transfer lemma, sub-cell by sub-cell; S4 the exact ratio bounds and the closed form R(d); S5 the exact antipodal
+terms and the closed form g(d); S6 Theorem 5 and Corollary 6. 573,986 checks, about 9 seconds, ALL CHECKS PASSED.
+Timing goes to stderr; stdout is deterministic.

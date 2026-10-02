@@ -31,8 +31,8 @@ Open Problem 4 it states the upper half of the density dichotomy (its item 10); 
 kappa_-, is not stated there, although it follows at once from its Theorem B and Markov's inequality. It goes
 further on two points. (i) Open Problem 3: a closed-form estimate at density 1/2 for every d >= 17 (its Theorem D),
 against d >= 41 here in the sparse regime (Theorem A; section 6). The companion note
-[`edge_multiset_dimension_op3_20261002.md`](edge_multiset_dimension_op3_20261002.md) now settles Open Problem 3
-from d = 10. (ii) The sparse table: its Lemma FH gives M_11 = 361, M_12 = 370, M_13 = 457 and M_14 = 490, against
+[`edge_multiset_dimension_op3_20261002.md`](edge_multiset_dimension_op3_20261002.md) now answers Open Problem 3
+from one exact value, V_11. (ii) The sparse table: its Lemma FH gives M_11 = 361, M_12 = 370, M_13 = 457 and M_14 = 490, against
 492, 543, 622 and 724 here. Its deposited output is a `--quick` run, which certifies only d = 11..14; its larger
 values (M_16 = 636, M_64 = 31808) come from a full run that was not deposited, and THM-4534 lists them as lane-only.
 It also has a result with no counterpart here: its Theorem C shows that no choice of forests makes the forest-lemma
@@ -51,7 +51,7 @@ there.
 | 3 | **Certified sparse table.** For every 11 <= d <= 64, a random set of rational density q_d is resolving and has at most M_d points with positive probability, so edim_m(Q_d) <= M_d. Examples: Q_11 <= 492, Q_16 <= 978, Q_32 <= 6242, Q_64 <= 57738 (full table in section 4). ln M_d / d^(1/3) lies in [2.731, 2.788]. | FINITE-EXACT (outward-rounded interval arithmetic). Supersedes item 7 of the first note, which was double precision only. THM-4534 is sharper where its deposited output certifies (d = 11..14, Lemma FH) |
 | 4 | **Open Problem 4 (density 1/2 versus sparse).** For random sets S_q: P(S_q resolves) -> 1 when ln(q 2^d) >= (kappa_+ + eps) d^(1/3), uniformly in q <= 1/2; P(S_q resolves) -> 0 when ln(q 2^d) <= (kappa_- - eps) d^(1/3). Minimum resolving sets have density 2^(-d) e^(Theta(d^(1/3))), so density-1/2 sets are larger by a factor 2^(d - O(d^(1/3))). | PROVED (Theorem D). THM-4534 (lane note item 10) states the upper half |
 | 5 | Lemma H (a "valid cell" lemma for the hypergeometric law) and the toward-the-centre forest. For every pair type with h, nu >= 1, every level with \|t\| > 1 has a flow edge toward the middle whose cell carries at least 1/(3(min(h,nu)+1)) of the level. | PROVED; exact check for all L <= 60 |
-| 6 | Open Problem 3 (one analytic estimate valid from d = 11). Here Theorem A is effective from d = 41 (lambda chosen per d) and from d = 64 with lambda = 5 d^(1/3). THM-4534 reaches d = 17 at density 1/2. | Settled from d = 10 in the companion note [`edge_multiset_dimension_op3_20261002.md`](edge_multiset_dimension_op3_20261002.md) (PROVED there, computer-assisted at its base; audit owed). Here: PROVED for d >= 41 (check S6) |
+| 6 | Open Problem 3 (one analytic estimate valid from d = 11). Here Theorem A is effective from d = 41 (lambda chosen per d) and from d = 64 with lambda = 5 d^(1/3). THM-4534 reaches d = 17 at density 1/2. | Answered in the companion note [`edge_multiset_dimension_op3_20261002.md`](edge_multiset_dimension_op3_20261002.md): one recursion with closed-form coefficients from the single exact value V_11 (PROVED there, computer-assisted at one point; its first version was audited and revised). Here: PROVED for d >= 41 (check S6) |
 | 7 | **Q_7: no resolving set of size <= 12, so 13 <= edim_m(Q_7) <= 19** (was 8..19; 11..19 in procgen_edim2_20261001, k <= 10). Exhaustive search up to Aut(Q_7), validated end to end on Q_6 (section 7; full write-up in [the Q_7 note](edge_multiset_dimension_q7_20261002.md)). | FINITE-EXACT (computer-assisted); a blind independent audit (2026-10-02) of the Q_7 note found no false claim and no gap |
 
 ## 0. Definitions and notation
@@ -416,7 +416,7 @@ exp(Theta(d^(1/3))). For every d >= 6 the ratio 2^(d-1)/edim_m(Q_d) is at least 
 | 32 | 2.1e9 | existence | 6242 | - |
 | 64 | 9.2e18 | existence | 57738 | - |
 
-## 6. Open Problem 3: settled in the companion note
+## 6. Open Problem 3: answered in the companion note
 The paper proves existence for d >= 11 at q = 1/2, by exact computation for 11 <= d <= 50 and an
 elementary estimate beyond. Theorem A is one analytic estimate. With lambda = 5 d^(1/3) it becomes effective at
 d = 64 (check S6, first part). With lambda chosen for each d it is effective from d = 41: lambda = (d + 37)/4 works
@@ -431,8 +431,9 @@ It does not lift landmark sets
 (the naive lift S x {0} fails: after two lifts the set is fixed by swapping the two new coordinates, so L1 excludes
 it). It lifts the union bound itself: each pair type of Q_(d+1) inherits a potential forest from a pair type of Q_d
 plus one extra near-central edge, so the paper's union bound at density 1/2 with antipodal halving satisfies
-V_(d+1) <= V_d/2 + A_(d+1). Started from the exact value V_10 = 0.66023, this gives V_d <= 0.6767 for every d >= 10,
-which settles Open Problem 3 from d = 10 (PROVED there, computer-assisted at its base; audit owed).
+V_(d+1) <= R(d) V_d + g(d+1) for every d >= 3, with closed-form coefficients R and g. Started from the single exact
+value V_11 < 0.0859648, this gives V_d < 1 for every d >= 11 (and V_d <= 1/2 from d = 16 on); d = 10 follows from
+V_10 < 0.660228 (PROVED there, computer-assisted at one point).
 
 ## 7. Q_7
 **Theorem 7.1 (FINITE-EXACT, computer-assisted; blind-audited 2026-10-02).** Q_7 has no edge-multiset resolving set of any
@@ -472,8 +473,8 @@ records: `04-computation/edge_multiset_dimension_q7_20261002/`.
 
 ## 9. Open
 * The constant: does lim ln edim_m(Q_d)/d^(1/3) exist, and where in [0.8146, 2.0526] is it?
-* Open Problem 3 is settled from d = 10 in the companion note. What remains open there is a version without the
-  finite computations at its base (the exact V_10 and the ratio check for 10 <= d <= 40).
+* Open Problem 3 is answered in the companion note from one exact value, V_11. What remains open there is a version
+  with no evaluation at all.
 * Q_7: 13 <= edim_m(Q_7) <= 19. Is a resolving set of size 13 to 18 possible? (k = 13 and a first annealing run
   at size 18 were running at commit time.)
 

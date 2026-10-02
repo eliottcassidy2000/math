@@ -11,17 +11,17 @@ d=8: 14 types; closed-form edge weights match brute force; counts add up to C(E,
 type counts add up to C(E,2) for 9 <= d <= 40
 
 ==============================================================================
-S2: the union bound V_d (potential forests, antipodal halving) and the base value V_10
+S2: the union bound V_d (potential forests, antipodal halving) and the base values V_10, V_11
 ==============================================================================
 potential forests are forests for every type, 6 <= d <= 12
-d= 6: V_d = 41.795520; maximum-weight forests with halving 41.795520 (equal); without halving 82.795801
-d= 7: V_d = 29.211807; maximum-weight forests with halving 29.211807 (equal); without halving 57.034794
-d= 8: V_d = 13.004341; maximum-weight forests with halving 13.004341 (equal); without halving 25.841036
-d= 9: V_d = 3.842594; maximum-weight forests with halving 3.842594 (equal); without halving 7.443002
-d=10: V_d = 0.660228; maximum-weight forests with halving 0.660228 (equal); without halving 1.307453
-d=11: V_d = 0.085965; maximum-weight forests with halving 0.085965 (equal); without halving 0.156177
-d=12: V_d = 0.005561; maximum-weight forests with halving 0.005561 (equal); without halving 0.010748
-V_10 = 1001/1002-bit fraction < 0.6603 (exact)
+d= 6: V_d <= 41.7956; maximum-weight forests with halving <= 41.7956 (equal); without halving <= 82.7959
+d= 7: V_d <= 29.2119; maximum-weight forests with halving <= 29.2119 (equal); without halving <= 57.0348
+d= 8: V_d <= 13.0044; maximum-weight forests with halving <= 13.0044 (equal); without halving <= 25.8411
+d= 9: V_d <= 3.84260; maximum-weight forests with halving <= 3.84260 (equal); without halving <= 7.44301
+d=10: V_d <= 0.660228; maximum-weight forests with halving <= 0.660228 (equal); without halving <= 1.30746
+d=11: V_d <= 0.0859648; maximum-weight forests with halving <= 0.0859648 (equal); without halving <= 0.156177
+d=12: V_d <= 0.00556133; maximum-weight forests with halving <= 0.00556133 (equal); without halving <= 0.0107481
+V_10 < 0.660228 and V_11 < 0.0859648 (exact fractions; numerator/denominator bit lengths 1001/1002 and 2007/2011)
 
 ==============================================================================
 S3: the transfer lemma at the level of sub-cells, every type, 3 <= d <= 40
@@ -31,38 +31,41 @@ targets strictly more central; extra chooser not an image, extra edge weight = N
 B(t') <= B(t) beta(N*(t')) checked exactly for d <= 13
 
 ==============================================================================
-S4: rho_d <= 1/2 for every d >= 10
+S4: the ratio bound rho_d <= R(d)
 ==============================================================================
 d=10 -> 11: rho_d <= 0.49587 (largest load on ('X', 4, 4))
 d=11 -> 12: rho_d <= 0.35085 (largest load on ('X', 4, 5))
 d=12 -> 13: rho_d <= 0.26127 (largest load on ('X', 5, 5))
 d=13 -> 14: rho_d <= 0.19845 (largest load on ('P', 12, 0))
 d=14 -> 15: rho_d <= 0.15036 (largest load on ('P', 12, 1))
-d=15 -> 16: rho_d <= 0.11648 (largest load on ('P', 14, 0))
-d=16 -> 17: rho_d <= 0.08751 (largest load on ('P', 14, 1))
-d=24 -> 25: rho_d <= 0.00877 (largest load on ('P', 22, 1))
-d=32 -> 33: rho_d <= 0.00077 (largest load on ('P', 30, 1))
-d=40 -> 41: rho_d <= 0.00006 (largest load on ('P', 38, 1))
-rho_d <= 0.49587 for 10 <= d <= 40 (exact rational upper bounds)
-  (for comparison, d=6: rho_d <= 1.7311)
-  (for comparison, d=7: rho_d <= 1.2326)
-  (for comparison, d=8: rho_d <= 0.9232)
-  (for comparison, d=9: rho_d <= 0.6542)
-crude bound max(2(d+1)^(3/2), 4(d+1)^2/(d-1)) sqrt(2/pi) 2^(-d/2): 2.93e-04 at d = 41, decreasing;
-it dominates the exact rho_d bound for 41 <= d <= 64; binomial lower bounds checked for m <= 300
+d=15 -> 16: rho_d <= 0.11649 (largest load on ('P', 14, 0))
+d=16 -> 17: rho_d <= 0.087512 (largest load on ('P', 14, 1))
+d=24 -> 25: rho_d <= 0.0087701 (largest load on ('P', 22, 1))
+d=32 -> 33: rho_d <= 0.00077196 (largest load on ('P', 30, 1))
+d=40 -> 41: rho_d <= 0.000063118 (largest load on ('P', 38, 1))
+exact rational bounds: rho_d <= 1/2 for every 10 <= d <= 40; for comparison rho_6..rho_9 <= 1.7311, 1.2326, 0.92321, 0.65417
+closed form R(d) = max(2(d+1)^(3/2), 4(d+1)^2/(d-1)) sqrt(2/pi) 2^(-d/2) dominates the exact bound for
+  3 <= d <= 64; R(d) <= 1.8194, 1.4659, 1.1688, 0.92357, 0.72427, 0.56419, 0.43693, 0.33661 for d = 10..17; it decreases for d >= 7, and R(16) <= 0.43693 < 1/2
 
 ==============================================================================
-S5: antipodal terms and the conclusion
+S5: the antipodal terms A_d <= g(d)
 ==============================================================================
-A_11 <= 1.575e-02
-A_12 <= 3.746e-04
-A_13 <= 3.835e-04
-A_14 <= 4.027e-06
-sum of A_d over 11 <= d <= 60 <= 0.016518; tail d >= 61 <= 2.2e-09 (A_d <= 2^(-d/2): proved in the note,
-  checked numerically for 61 <= d < 400)
-V_(d+1) <= rho_d V_d + A_(d+1) with rho_d <= 1/2 gives, for every d >= 10,
-  V_d <= V_10 + sum_{k >= 11} A_k <= 0.6767 < 1
-consistency: V_11 = 0.08596 <= rho_10 V_10 + A_11 = 0.34314
+A_11 <= 0.015753
+A_12 <= 0.00037463
+A_13 <= 0.00038347
+A_14 <= 4.0273e-06
+closed form g(d) = d 2^(d-2) (3/8) (2 pi (d-1))^(-(d-3)/4) dominates A_d for 3 <= d <= 60;
+  g(d) <= 0.53498, 0.33457, 0.20226, 0.11863, 0.067701, 0.037687, 0.020507 for d = 11..17; it decreases for d >= 6
 
-573465 checks
+==============================================================================
+S6: Theorem 5 (one base value) and Corollary 6
+==============================================================================
+from V_11 alone: V_(d+1) <= R(d) V_d + g(d+1) gives V_12, ..., V_16 <= 0.4606, 0.7406, 0.8026, 0.6490, 0.4039
+invariant: V_d <= 1/2 implies V_(d+1) <= R(16)/2 + g(17) <= 0.2390 <= 1/2 for every d >= 16
+so V_d < 1 for every d >= 11 (one exact value, V_11); and V_10 < 0.660228 < 1
+Corollary 6: rho_d <= 1/2 (exact for 10 <= d <= 15, R(d) beyond) and A_(d+1) <= V_10/2 (exact A_11, A_12;
+  g(d) <= g(13) <= 0.20226 beyond) give V_d <= V_10 < 0.660228 for every d >= 10
+consistency: V_11 <= 0.085965 <= rho_10 V_10 + A_11 <= 0.34314
+
+573986 checks
 ALL CHECKS PASSED

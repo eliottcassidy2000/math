@@ -135,7 +135,7 @@ So `8 <= edim_m(Q_7) <= 19`.
 - Explicit sets: edim_m(Q_7) <= 19, Q_8 <= 26, Q_9 <= 38.
 - Not formalized: the lower bound edim_m(Q_6) >= 15 (a 1.4e10-leaf search) and L5.
 
-**Later work (2026-10-02, branch `claude/project-thread-96889h`; the first two notes were blind-audited, no false claim).**
+**Later work (2026-10-02, branch `claude/project-thread-96889h`; all three notes were blind-audited: no false claim in the first two, and the third was revised after its audit).**
 - [`edge_multiset_dimension_q7_20261002.md`](../../05-knowledge/results/edge_multiset_dimension_q7_20261002.md):
   Q_7 has no resolving set of size <= 12 (exhaustive search, FINITE-EXACT), so 13 <= edim_m(Q_7) <= 19.
   THM-4534 (lane note `procgen_edim2_20261001_growth_and_uniform_bounds.md` §6) has 11 <= edim_m(Q_7) (k <= 10).
@@ -143,5 +143,6 @@ So `8 <= edim_m(Q_7) <= 19`.
   ln edim_m(Q_d) = Theta(d^(1/3)) (HYP-9169; Open Problem 2), with L5's constant 0.6216 improved to 0.8146, proved
   independently of THM-4534, which reaches the same constants.
 - [`edge_multiset_dimension_op3_20261002.md`](../../05-knowledge/results/edge_multiset_dimension_op3_20261002.md):
-  Open Problem 3 from d = 10 (one recursion for the density-1/2 union bound, started from the exact V_10; audit
-  owed).
+  Open Problem 3: one recursion with closed-form coefficients for the density-1/2 union bound gives existence for
+  every d >= 11 from the single exact value V_11 (d = 10 from V_10). Its first version overstated this and was
+  revised after the audit.

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""edge_multiset_dimension_op3_20261002_run.py -- Allikvere's Open Problem 3: one estimate from d = 10.
+"""edge_multiset_dimension_op3_20261002_run.py -- Allikvere's Open Problem 3: a recursion from one base value.
 
 Companion runner of 05-knowledge/results/edge_multiset_dimension_op3_20261002.md.  Pure Python 3, exact integer and
 rational arithmetic throughout (square roots are bounded from above by integer square roots).
@@ -8,16 +8,21 @@ Setting: a uniformly random subset S of V(Q_d) (density 1/2).  For a pair type t
 levels 0..T and edge weights N_ab (the number of vertices s with {d(e,s), d(f,s)} = {a, b}).  The forest lemma bounds
 P(H_e = H_f) by the product of beta(N) over the edges of any forest, beta(N) = C(N, floor(N/2)) / 2^N.  The potential
 forest of t lets every level pick its heaviest edge to a strictly more central level.  V_d is the resulting union
-bound with antipodal halving.  The note proves V_(d+1) <= rho_d V_d + A_(d+1) (transfer lemma); this runner checks
+bound with antipodal halving.  The note proves V_(d+1) <= rho_d V_d + A_(d+1) (transfer lemma), with closed forms
+rho_d <= R(d) and A_d <= g(d) valid for every d >= 3; this runner checks
 
   S1  the closed-form cells and type counts against brute force over representative edge pairs (d = 3..8);
   S2  the union bound itself: potential forests against maximum-weight (Kruskal) forests, d = 6..12, and the exact
-      value V_10 < 0.6603 (the base of the induction);
+      base values V_10 and V_11;
   S3  the transfer lemma at the level of sub-cells, for every type and 3 <= d <= 40: the explicit sub-cell maps are
       injective, land on the image edge and do not decrease sizes; targets stay strictly more central; the explicit
       extra chooser is not an image and its edge weight equals the closed form N*(t');
-  S4  rho_d <= 1/2 for 10 <= d <= 40 (rational upper bounds) and the crude bound for d >= 41;
-  S5  the antipodal terms A_d, d >= 11, and the conclusion V_d <= 0.677 for every d >= 10.
+  S4  the ratio bound: exact rational rho_d for 10 <= d <= 40, the closed form R(d) (a sanity check that it
+      dominates the exact values for 3 <= d <= 64), and R(d) <= 1/2 for d >= 16;
+  S5  the antipodal terms: exact A_11..A_14 and the closed form g(d) (dominates the exact A_d for 3 <= d <= 60);
+  S6  Theorem 5 (every d >= 11 from the single exact value V_11 and the closed forms; d = 10 from V_10) and
+      Corollary 6 (V_d <= V_10 for every d >= 10).
+Every printed upper bound is rounded up (function up), and the constants quoted in the note are asserted exactly.
 usage: python3 edge_multiset_dimension_op3_20261002_run.py [DMAX_TRANSFER=40]
 """
 import sys
@@ -347,6 +352,58 @@ def A_upper(d):
     return B
 
 
+PI_LO = Fr(314159, 100000)          # pi > 3.14159
+
+
+def ceil_root(x, k, K=10 ** 12):
+    """a rational upper bound for x^(1/k), x > 0 rational: the k-th root of x K^k, rounded up, over K"""
+    q = -((-x.numerator * K ** k) // x.denominator)
+    lo, hi = 0, 1
+    while hi ** k < q:
+        hi *= 2
+    while lo < hi:
+        mid = (lo + hi) // 2
+        if mid ** k >= q:
+            hi = mid
+        else:
+            lo = mid + 1
+    return Fr(lo, K)
+
+
+def R_up(d):
+    """upper bound for R(d) = max(2 (d+1)^(3/2), 4 (d+1)^2/(d-1)) sqrt(2/pi) 2^(-d/2), via its square"""
+    sq = max(Fr(4 * (d + 1) ** 3), Fr(16 * (d + 1) ** 4, (d - 1) ** 2)) * 2 / PI_LO / 2 ** d
+    return ceil_root(sq, 2)
+
+
+def g_up(d):
+    """upper bound for g(d) = d 2^(d-2) (3/8) (2 pi (d-1))^(-(d-3)/4), via its 4th power"""
+    return ceil_root(Fr(3 * d * 2 ** (d - 2), 8) ** 4 / (2 * PI_LO * (d - 1)) ** (d - 3), 4)
+
+
+def up(x, sig=5):
+    """decimal string of the rational x > 0 rounded UP to sig significant digits (a rigorous upper bound)"""
+    x = Fr(x)
+    e = 0
+    while Fr(10) ** (e + 1) <= x:
+        e += 1
+    while Fr(10) ** e > x:
+        e -= 1
+    k = sig - 1 - e
+    y = x * Fr(10) ** k
+    n = -((-y.numerator) // y.denominator)
+    if n == 10 ** sig:
+        n, k, e = 10 ** (sig - 1), k - 1, e + 1
+    if 0 <= k <= 9:
+        txt = str(n).rjust(k + 1, '0')
+        txt = txt[:-k] + '.' + txt[-k:] if k > 0 else txt
+    else:
+        m = str(n)
+        txt = m[0] + '.' + m[1:] + 'e%+03d' % e
+    assert Fr(txt) >= x
+    return txt
+
+
 def main():
     dmax_tr = int(sys.argv[1]) if len(sys.argv) > 1 else 40
 
@@ -375,7 +432,7 @@ def main():
         ok(sum(count(d, t) for t in types(d)) == comb(d * 2 ** (d - 1), 2), ('type counts', d))
     print('type counts add up to C(E,2) for 9 <= d <= 40')
 
-    section('S2: the union bound V_d (potential forests, antipodal halving) and the base value V_10')
+    section('S2: the union bound V_d (potential forests, antipodal halving) and the base values V_10, V_11')
     for d in range(6, 13):
         for t in types(d):
             T, adj, ch = potential(t)
@@ -386,12 +443,17 @@ def main():
         K = kruskal_bound(d, True)
         K0 = kruskal_bound(d, False)
         ok(V >= K, ('maximum-weight forests are optimal', d))
-        print('d=%2d: V_d = %.6f; maximum-weight forests with halving %.6f%s; without halving %.6f'
-              % (d, float(V), float(K), ' (equal)' if V == K else '', float(K0)))
+        print('d=%2d: V_d <= %s; maximum-weight forests with halving <= %s%s; without halving <= %s'
+              % (d, up(V, 6), up(K, 6), ' (equal)' if V == K else '', up(K0, 6)))
         if d == 10:
             V10 = V
-    ok(V10 < Fr(6603, 10000), 'V_10 < 0.6603')
-    print('V_10 = %d/%d-bit fraction < 0.6603 (exact)' % (V10.numerator.bit_length(), V10.denominator.bit_length()))
+        if d == 11:
+            V11 = V
+    ok(V10 < Fr('0.660228') and V11 < Fr('0.0859648'), 'V_10 < 0.660228, V_11 < 0.0859648')
+    ok(V10 > Fr('0.6602'), 'V_10 > 0.6602 (used in Corollary 6: V_10/2 > 0.33)')
+    print('V_10 < 0.660228 and V_11 < 0.0859648 (exact fractions; numerator/denominator bit lengths %d/%d and %d/%d)'
+          % (V10.numerator.bit_length(), V10.denominator.bit_length(),
+             V11.numerator.bit_length(), V11.denominator.bit_length()))
 
     section('S3: the transfer lemma at the level of sub-cells, every type, 3 <= d <= %d' % dmax_tr)
     tot = 0
@@ -401,55 +463,63 @@ def main():
     print('targets strictly more central; extra chooser not an image, extra edge weight = N*(t\') in every case;')
     print('B(t\') <= B(t) beta(N*(t\')) checked exactly for d <= 13')
 
-    section('S4: rho_d <= 1/2 for every d >= 10')
-    worst = Fr(0)
-    for d in range(10, 41):
-        r, t = rho_upper(d)
-        ok(r <= Fr(1, 2), ('rho', d))
-        worst = max(worst, r)
-        if d <= 16 or d % 8 == 0:
-            print('d=%2d -> %2d: rho_d <= %.5f (largest load on %s)' % (d, d + 1, float(r), t))
-    print('rho_d <= %.5f for 10 <= d <= 40 (exact rational upper bounds)' % float(worst))
-    for d in (6, 7, 8, 9):
-        r, t = rho_upper(d)
-        print('  (for comparison, d=%d: rho_d <= %.4f)' % (d, float(r)))
-    # crude bound for d >= 41 (proved in the note); here: its ingredients and its value at d = 41
+    section('S4: the ratio bound rho_d <= R(d)')
+    rho = {}
+    for d in range(6, 41):
+        rho[d], t = rho_upper(d)
+        if 10 <= d <= 16 or d in (24, 32, 40):
+            print('d=%2d -> %2d: rho_d <= %s (largest load on %s)' % (d, d + 1, up(rho[d]), t))
+    ok(all(rho[d] <= Fr(1, 2) for d in range(10, 41)), 'exact rho_d <= 1/2 for 10 <= d <= 40')
+    ok(rho[10] <= Fr('0.49587') and rho[9] > Fr(1, 2), 'rho_10, rho_9')
+    print('exact rational bounds: rho_d <= 1/2 for every 10 <= d <= 40; for comparison rho_6..rho_9 <= %s'
+          % ', '.join(up(rho[d]) for d in (6, 7, 8, 9)))
+    # the closed form R(d), proved for every d >= 3 in the note (Lemma 4); its ingredients and a sanity check
     for m in range(0, 301):
         ok(comb(m, m // 2) * (m + 1) >= 2 ** m, ('central binomial', m))
         if m >= 1:
             ok(comb(m, (m + 1) // 2 - 1) * 2 * (m + 1) >= 2 ** m, ('near-central binomial', m))
-    fP = lambda d: 2 * (d + 1) ** 1.5 * sqrt(2 / pi) * 2 ** (-d / 2)
-    fX = lambda d: 4 * (d + 1) ** 2 / (d - 1) * sqrt(2 / pi) * 2 ** (-d / 2)
-    ok(max(fP(41), fX(41)) < 0.001, 'crude bound at 41')
-    for d in range(41, 65):
-        r, t = rho_upper(d)
-        ok(float(r) <= max(fP(d), fX(d)) * 1.000001, ('crude bound dominates', d))
-    print('crude bound max(2(d+1)^(3/2), 4(d+1)^2/(d-1)) sqrt(2/pi) 2^(-d/2): %.2e at d = 41, decreasing;' % max(fP(41), fX(41)))
-    print('it dominates the exact rho_d bound for 41 <= d <= 64; binomial lower bounds checked for m <= 300')
+    for d in range(3, 65):
+        r = rho[d] if d in rho else rho_upper(d)[0]
+        ok(R_up(d) >= r, ('closed form R(d) dominates the exact bound', d))
+    for d in range(7, 400):
+        ok(4 * (d + 1) ** 3 * (d - 1) ** 2 >= 16 * (d + 1) ** 4 and (d + 2) ** 3 < 2 * (d + 1) ** 3, ('R branch', d))
+    ok(R_up(16) <= Fr('0.43693'), 'R(16)')
+    print('closed form R(d) = max(2(d+1)^(3/2), 4(d+1)^2/(d-1)) sqrt(2/pi) 2^(-d/2) dominates the exact bound for')
+    print('  3 <= d <= 64; R(d) <= %s for d = 10..17; it decreases for d >= 7, and R(16) <= 0.43693 < 1/2'
+          % ', '.join(up(R_up(d)) for d in range(10, 18)))
 
-    section('S5: antipodal terms and the conclusion')
-    SA = Fr(0)
-    for d in range(11, 61):
-        A = A_upper(d)
-        SA += A
-        if d <= 14:
-            print('A_%d <= %.3e' % (d, float(A)))
-    # tail: A_d <= d 2^(d-2) (3/8) (2 pi (d-1))^(-m/2), m = ceil((d-1)/2) - 1 >= (d-3)/2, and that is <= 2^(-d/2), d >= 61
-    for d in range(61, 400):
-        lg = log2(d) + (d - 2) + log2(3 / 8) - ((d - 3) / 4) * log2(2 * pi * (d - 1))
-        ok(lg <= -d / 2, ('antipodal tail', d))
-    tail = 2 ** (-30.5) / (1 - 2 ** -0.5)
-    total = float(SA) + tail
-    print('sum of A_d over 11 <= d <= 60 <= %.6f; tail d >= 61 <= %.1e (A_d <= 2^(-d/2): proved in the note,' % (float(SA), tail))
-    print('  checked numerically for 61 <= d < 400)')
-    bound = float(V10) + total
-    ok(bound < 0.677, 'final')
-    print('V_(d+1) <= rho_d V_d + A_(d+1) with rho_d <= 1/2 gives, for every d >= 10,')
-    print('  V_d <= V_10 + sum_{k >= 11} A_k <= %.4f < 1' % bound)
-    V11 = V_exact(11)
-    r10, _ = rho_upper(10)
+    section('S5: the antipodal terms A_d <= g(d)')
+    for d in range(11, 15):
+        print('A_%d <= %s' % (d, up(A_upper(d))))
+    ok(A_upper(11) <= Fr('0.015753') and A_upper(12) <= Fr('0.00037463'), 'A_11, A_12')
+    for d in range(3, 61):
+        ok(g_up(d) >= A_upper(d), ('closed form g(d) dominates A_d', d))
+    for d in range(6, 400):
+        ok(Fr(2 * (d + 1), d) ** 4 < 2 * PI_LO * d, ('g decreases', d))
+    ok(g_up(13) <= Fr('0.20226') and g_up(17) <= Fr('0.020507'), 'g(13), g(17)')
+    print('closed form g(d) = d 2^(d-2) (3/8) (2 pi (d-1))^(-(d-3)/4) dominates A_d for 3 <= d <= 60;')
+    print('  g(d) <= %s for d = 11..17; it decreases for d >= 6' % ', '.join(up(g_up(d)) for d in range(11, 18)))
+
+    section('S6: Theorem 5 (one base value) and Corollary 6')
+    Vb = {11: V11}
+    for d in range(11, 16):
+        Vb[d + 1] = R_up(d) * Vb[d] + g_up(d + 1)
+    quoted = {12: '0.4606', 13: '0.7406', 14: '0.8026', 15: '0.6490', 16: '0.4039'}
+    ok(all(Vb[d] <= Fr(quoted[d]) for d in quoted), 'quoted V_12..V_16 bounds')
+    print('from V_11 alone: V_(d+1) <= R(d) V_d + g(d+1) gives V_12, ..., V_16 <= %s'
+          % ', '.join(up(Vb[d], 4) for d in range(12, 17)))
+    inv = R_up(16) / 2 + g_up(17)
+    ok(Vb[16] <= Fr(1, 2) and inv <= Fr(1, 2), 'invariant')
+    print('invariant: V_d <= 1/2 implies V_(d+1) <= R(16)/2 + g(17) <= %s <= 1/2 for every d >= 16' % up(inv, 4))
+    print('so V_d < 1 for every d >= 11 (one exact value, V_11); and V_10 < 0.660228 < 1')
+    # Corollary 6: V_d <= V_10 for every d >= 10
+    ok(all(rho[d] <= Fr(1, 2) for d in range(10, 16)) and R_up(16) <= Fr(1, 2), 'rho_d <= 1/2 for d >= 10')
+    ok(A_upper(11) <= V10 / 2 and A_upper(12) <= V10 / 2 and g_up(13) <= V10 / 2, 'A_d <= V_10/2 for d >= 11')
+    print('Corollary 6: rho_d <= 1/2 (exact for 10 <= d <= 15, R(d) beyond) and A_(d+1) <= V_10/2 (exact A_11, A_12;')
+    print('  g(d) <= g(13) <= 0.20226 beyond) give V_d <= V_10 < 0.660228 for every d >= 10')
+    r10 = rho[10]
     ok(V11 <= r10 * V10 + A_upper(11), 'recursion at d = 10')
-    print('consistency: V_11 = %.5f <= rho_10 V_10 + A_11 = %.5f' % (float(V11), float(r10 * V10 + A_upper(11))))
+    print('consistency: V_11 <= %s <= rho_10 V_10 + A_11 <= %s' % (up(V11), up(r10 * V10 + A_upper(11))))
 
     print()
     print('%d checks' % CHECKS)
