@@ -14,14 +14,14 @@
     2-faces [(3, 30)], facets [(4, 5), (6, 5)]
   icosahedron x K2 (icosahedral prism) 24 vertices
   model: 1674 candidate faces, 51558 vars, 352608 clauses (0.3s)
-  SAT (all checks) after 1 iterations (1.8s), cuts {}
+  SAT (all checks) after 1 iterations (2.1s), cuts {}
     2-faces [(3, 40), (4, 27), (5, 2), (6, 2)], facets [(6, 16), (8, 5), (9, 2)]
   K33 x K2 (PPS Prop. 2.11: not polytopal) 12 vertices
   model: 63 candidate faces, 1203 vars, 5628 clauses (0.0s)
   UNSAT after 1 iterations (0.0s), cuts {}
   P x K2 (PPS Thm 2.3: not polytopal) 20 vertices
   model: 359 candidate faces, 7319 vars, 33380 clauses (0.0s)
-  UNSAT after 4 iterations (0.0s), cuts {'H': 1, 'F1': 2, 'Fglobal': 4, 'F6': 4}
+  UNSAT after 4 iterations (0.1s), cuts {'H': 1, 'F1': 2, 'Fglobal': 4, 'F6global': 4}
   CHECK sanity PASSED
 == structure of P x P
   induced cycles of P x P up to 10 vertices: [(4, 225), (5, 240), (6, 200), (7, 3600), (8, 6300), (9, 14400), (10, 172440)]
@@ -36,44 +36,65 @@
   SAT (2-face level) after 1 iterations (0.0s)
   a 2-face system with polyhedral vertex figures: [((4, 'square'), 180), ((5, 'fibre'), 65), ((6, 'fibre'), 11)]
 == P x P, sub-case: no bent 2-faces and every vertex figure a triangulation whose faces all have both H and V vertices
-  model: 665 candidate faces, 91265 vars, 903800 clauses (0.9s)
+  model: 665 candidate faces, 91265 vars, 903800 clauses (1.0s)
   allowed labelled vertex figures per vertex: [81]
-  UNSAT after 1 iterations (52.8s), cuts {}
+  UNSAT after 1 iterations (62.8s), cuts {}
   result: UNSAT (excluded)
 == P x P, sub-case: every 2-face is a square or lies in a fibre, and every vertex lies in exactly 8 square 2-faces
-  model: 665 candidate faces, 91265 vars, 903800 clauses (1.2s)
-  UNSAT after 1 iterations (47.9s), cuts {}
+  model: 665 candidate faces, 91265 vars, 903800 clauses (1.3s)
+  UNSAT after 1 iterations (55.6s), cuts {}
   result: UNSAT (excluded)
 == validation: K33 x K3.  PPS (end of their paper) announce that the unique strongly regular combinatorial
    manifold with this graph is a cellular S^1 x RP^2 (6 triangular prisms + 9 cubes).
   all induced cycles: 456 [(3, 6), (4, 54), (6, 108), (7, 216), (9, 72)]
-  model: 456 candidate faces, 10752 vars, 64494 clauses (0.0s)
-    it 50: cuts {'F1': 34, 'F6': 213, 'F4': 17, 'Fglobal': 6}  (2s)
-  SAT (all checks) after 54 iterations (1.6s), cuts {'F1': 35, 'F6': 218, 'F4': 18, 'Fglobal': 7}
+  model: 456 candidate faces, 10752 vars, 64494 clauses (0.1s)
+  SAT (all checks) after 42 iterations (1.5s), cuts {'F1': 26, 'F6': 178, 'F4': 20, 'Fglobal': 4}
   without (H): 2-faces [(3, 6), (4, 36)] facets [(6, 6), (8, 9)] ; (H) fails on it: True
-  model: 456 candidate faces, 10752 vars, 64494 clauses (0.0s)
+  model: 456 candidate faces, 10752 vars, 64494 clauses (0.1s)
     it 50: cuts {'F1': 43, 'F6': 233, 'H': 7, 'F4': 9}  (2s)
-  UNSAT after 53 iterations (1.6s), cuts {'F1': 45, 'F6': 243, 'H': 7, 'F4': 9}
+  UNSAT after 54 iterations (1.8s), cuts {'F1': 46, 'F6': 248, 'H': 7, 'F4': 9}
   with (H): UNSAT -- K33 x K3 is not 4-polytopal (as PPS announce)
+== orientability layer (O): validation
+  SAT (all checks) after 1 iterations (0.0s), cuts {}
+  C5 x C5: SAT with (O); independent orientation check: 0 conflicts
+  SAT (all checks) after 1 iterations (0.0s), cuts {}
+  J(5,2): SAT with (O); independent orientation check: 0 conflicts
+  SAT (all checks) after 2 iterations (15.1s), cuts {'F6': 1}
+  icosahedron x K2: SAT with (O); independent orientation check: 0 conflicts
+  SAT (all checks) after 42 iterations (1.5s), cuts {'F1': 26, 'F6': 178, 'F4': 20, 'Fglobal': 4}
+  K33 x K3, (H) off: the cellular S^1 x RP^2 found above has 9 orientation conflicts (non-orientable)
+  UNSAT after 1 iterations (0.6s), cuts {}
+  K33 x K3, (H) off, (O) on: UNSAT
+== P x P, packing sub-case WITHOUT the edge-figure orientation (R): satisfiable (so (R) is what excludes it)
+  model: 665 candidate faces, 13265 vars, 57800 clauses (0.1s)
+  SAT (2-face level) after 1 iterations (0.0s)
+  a 2-face system: [((4, 'square'), 200), ((5, 'fibre'), 48), ((6, 'fibre'), 15)]
+  every vertex lies in exactly 8 square 2-faces: True
 == P x P, no bent faces, constraints (V)+(R) imposed only at the vertices of 8 of the 10 H-fibres
-  model: 665 candidate faces, 75665 vars, 716560 clauses (0.8s)
-  SAT (10.4s)
+  model: 665 candidate faces, 75665 vars, 716560 clauses (0.9s)
+  SAT (10.2s)
 == P x C3 (Petersen x triangle), candidate 2-faces = all induced cycles with <= 10 vertices
   candidates: 3301 [(3, 10), (4, 45), (5, 36), (6, 30), (7, 360), (8, 1260), (9, 1200), (10, 360)]
-  model: 3301 candidate faces, 86341 vars, 415290 clauses (0.5s)
-    it 100: cuts {'H': 12, 'F1': 88, 'F6': 630}  (50s)
-    it 200: cuts {'H': 18, 'F1': 182, 'F6': 1349, 'F4': 3}  (60s)
-  UNSAT after 207 iterations (61.0s), cuts {'H': 18, 'F1': 188, 'F6': 1413, 'F4': 3}
+  model: 3301 candidate faces, 86341 vars, 415290 clauses (0.4s)
+    it 100: cuts {'H': 13, 'F1': 87, 'F6': 529, 'F4': 2}  (56s)
+  UNSAT after 175 iterations (62.5s), cuts {'H': 18, 'F1': 156, 'F6': 1115, 'F4': 5}
+  cross-check of the final formula (418764 clauses) with glucose4: UNSAT (agrees) (119.4s)
   result: UNSAT (excluded)
-ALL REQUESTED CHECKS DONE (213s)
+ALL REQUESTED CHECKS DONE (374s)
 
-# --- python petersen_product_4polytope_20261001.py pc3 31 --crosscheck  (the "all-long" run, with the second-solver re-solve of the final formula)
+# --- python petersen_product_4polytope_20261001.py all-long --crosscheck
+== P x P, no bent faces, constraints (V)+(R) imposed only at the vertices of 9 of the 10 H-fibres
+  model: 665 candidate faces, 83465 vars, 810180 clauses (1.0s)
+  SAT (124.8s)
+== P x P, no bent faces, (V)+(R)+(O) imposed only at the vertices of 8 of the 10 H-fibres
+  model: 665 candidate faces, 75665 vars, 716560 clauses (0.9s)
+  SAT (136.0s)
+  independent orientation check of the witness on the constrained fibres: 0 conflicts
 == P x C3 (Petersen x triangle), candidate 2-faces = all induced cycles with <= 31 vertices
   candidates: 7681 [(3, 10), (4, 45), (5, 36), (6, 30), (7, 360), (8, 1260), (9, 1200), (10, 360), (11, 1800), (12, 2580)]
-  model: 7681 candidate faces, 309241 vars, 1390890 clauses (1.0s)
-    it 100: cuts {'H': 10, 'F1': 90, 'F4': 2, 'F6': 555}  (471s)
-    it 200: cuts {'H': 21, 'F1': 179, 'F4': 4, 'F6': 1255}  (563s)
-  UNSAT after 215 iterations (589.8s), cuts {'H': 23, 'F1': 191, 'F4': 4, 'F6': 1338}
-  cross-check of the final formula (1394635 clauses) with glucose4: UNSAT (agrees) (1186.6s)
+  model: 7681 candidate faces, 309241 vars, 1390890 clauses (1.5s)
+    it 100: cuts {'H': 22, 'F1': 78, 'F4': 5, 'F6': 483}  (516s)
+  UNSAT after 184 iterations (610.1s), cuts {'H': 26, 'F1': 157, 'F4': 6, 'F6': 1078}
+  cross-check of the final formula (1394307 clauses) with glucose4: UNSAT (agrees) (906.5s)
   result: UNSAT (excluded)
-ALL REQUESTED CHECKS DONE (1779s)
+ALL REQUESTED CHECKS DONE (1783s)

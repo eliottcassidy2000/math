@@ -1931,6 +1931,23 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
+## MISTAKE-558 (2026-10-01, opus S15 Petersen-product 4-polytope note; found by the independent audit) -- a deep property (the snark property) credited with excluding a configuration that a simpler lemma of the same note already excluded, plus unrecorded runs and overclaimed negative results
+
+- **Claims:**
+  - (1) `petersen_product_4polytope_attempt_20261001.md` §3 called the prism vertex-figure picture "exactly what Petersen's being a snark forbids". But its hypotheses already contradict L1 of the same note (no facet lies in a fibre): the facet whose germ is the H-triangle propagates to the whole fibre. The note also claimed "for a 3-edge-colourable cubic H that tiles a surface, the same recipe gives a candidate cell structure for H□H"; by the same argument that is false for every surface except the sphere. The 1-factorization argument itself is correct, but it is only a 2-face-level obstruction.
+  - (2) It cited runs that were not recorded or reproducible from the repository: a run with CGS clauses (not implemented in the script), a Glucose cross-check for faces <= 10, and the 9-fibre relaxation. THM-4535 called reruns of the same code "independent runs".
+  - (3) §6.4 overclaimed: "passes every purely local test", "globally rigid", "the signature of a global parity obstruction". L5 said "four maximal families" (there are 28, of three kinds). The Observation used an "antisymmetric part" over Z/2.
+  - (4) Code: the F6 facet cut could choose its witness pair inside a 2-face shared by the two classes, so the lazy loop could stall. An iteration cap was printed as "SAT". Neither affects any UNSAT verdict.
+- **What survives:**
+  - THM-4535 (P x C3 not polytopal), independently reproduced by a re-implementation sharing no code;
+  - L1-L5, Lemma 1 as a 2-face-level statement, Lemma 2 (CGS), the Observation (mod 2);
+  - both excluded P x P sub-cases and the K33 x K3 validation.
+- **Rule:**
+  - Before crediting an obstruction to a deep property, check whether the simpler lemmas already in the note exclude the configuration.
+  - Every number cited in a note must be in the `.out` or reproducible by a script subcommand.
+  - Never call a rerun of the same code "independent".
+  - When a lazy cut is built from a witness, check that it actually excludes the current assignment.
+
 ## MISTAKE-557 (2026-10-01, thread session thread-2cjcob, found while writing up the shaved-tournament results) -- a cross-thread identification typed as "STRUCTURAL (proved here)", and "exact only for n <= 6" asserted for a formula whose values for 9 <= n <= 37 were unknown
 
 - **Claims:**

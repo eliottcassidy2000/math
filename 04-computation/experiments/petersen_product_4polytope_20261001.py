@@ -28,8 +28,11 @@ Optional:
       2-faces avoiding the other (otherwise the linking sum would be even).
 
 Usage:  python petersen_product_4polytope_20261001.py [verify|sanity|structure|k33c3|pc3 L|pp-packing|
-                                                       pp-prismgerm|pp-nobent-norot|pp-levels k|all|all-long]
-        'all' takes about 5 minutes; 'all-long' runs P x C3 with all 7681 induced cycles (about 20-40 minutes).
+                                                       pp-prismgerm|pp-nobent-norot|pp-packing-norot|orientation|
+                                                       pp-levels k [m]|pp-levels-orient k|all|all-long]
+        'all' takes about 10 minutes (it includes the second-solver re-solve for P x C3 with faces <= 10); 'all-long'
+        adds the 9-fibre relaxation, the 8-fibre relaxation with orientability, and P x C3 with all 7681 induced cycles
+        (about 45 minutes; pass --crosscheck for the Glucose re-solve of the final formula, another 20 minutes).
 """
 import itertools
 import sys
@@ -97,6 +100,7 @@ def induced_cycles(G, L):
 # ============================================================================ polyhedral vertex figures
 def polyhedral_cnf(d):
     """CNF over the C(d,2) pair variables: graph is 3-connected and planar (d <= 6)."""
+    assert d <= 6, 'the planarity clauses are complete only for at most 6 vertices'
     pairs = list(itertools.combinations(range(d), 2))
     pid = {p: i for i, p in enumerate(pairs)}
     P = lambda a, b: pid[(min(a, b), max(a, b))]
@@ -150,6 +154,7 @@ def polyhedral_labelled(d):
 def consec_terms(d, y, z1, z2):
     """DNF: z1, z2 consecutive around y in a polyhedral graph on d <= 6 vertices <=> the path z1-y-z2 lies on a face;
     faces = induced non-separating cycles (Tutte).  Terms are lists of ((a,b), polarity)."""
+    assert d <= 6, 'the DNF is exact only for at most 6 vertices'
     W = [w for w in range(d) if w not in (y, z1, z2)]
     E = lambda a, b: (min(a, b), max(a, b))
     base = [(E(y, z1), True), (E(y, z2), True)]
@@ -441,6 +446,7 @@ def germ_var(model, x, cyc):
         if (j - i) % k not in (1, k - 1):
             lits.append(-model.A(x, cyc[i], cyc[j]))
     rest = [r for r in model.N[x] if r not in cyc]
+    assert len(rest) <= 3, 'germ_var is exact only for vertex degree <= 6'
     cl = model.pending
     for l in lits: cl.append([-g, l])
     if len(rest) == 3:
@@ -545,7 +551,9 @@ def solve_full(model, solver, maxit=100000, report=50, facets_on=True, homology_
             Fi, Fj = facets[i], facets[j]
             bi = {germs[g][0]: g for g in Fi['germs']}; bj = {germs[g][0]: g for g in Fj['germs']}
             com = [x for x in bi if x in bj]
-            pair = next(((a, b) for a, b in itertools.combinations(com, 2) if b not in model.adj[a]), None)
+            shared = [set(chosen[q]) for q in set(Fi['faces']) & set(Fj['faces'])]
+            pair = next(((a, b) for a, b in itertools.combinations(com, 2)
+                         if b not in model.adj[a] and not any(a in sq and b in sq for sq in shared)), None)
             if pair is None:
                 new.append([-l for l in facet_literals(model, chosen, germs, Fi)] +
                            [-l for l in facet_literals(model, chosen, germs, Fj)]); st['F6global'] += 1
@@ -567,6 +575,101 @@ def solve_full(model, solver, maxit=100000, report=50, facets_on=True, homology_
         if it % report == 0:
             print(f'    it {it}: cuts {dict(st)}  ({time.time()-t0:.0f}s)', flush=True)
     return 'maxit'
+
+
+# ============================================================================ (O) orientability (optional layer)
+def add_orientation(model, X=None):
+    """Static clauses: the vertex links are coherently oriented, i.e. the 3-manifold is orientable (S^3 is).
+    Su(x,y,z1,z2): in the oriented rotation system of Gamma_x, z2 is the successor of z1 around y.
+      (1) successors are present and consecutive (C); (2) around each y the successor relation is one cycle on the
+      present neighbours (exactly one successor and one predecessor, no 2-cycles); (3) every face phi of Gamma_x is
+      traced coherently: Su(n_i; n_(i-1) -> n_(i+1)) for all i, or the reverse for all i (face tracing a->b->sigma_b(a));
+      (4) across an edge xy, the cyclic order of the 2-faces around xy seen from x is the reverse of the order seen
+      from y: for faces Q1 = (z1 at x, w1 at y), Q2 = (z2, w2):  Su(x,y,z1,z2) <-> Su(y,x,w2,w1)."""
+    N, pool, cls = model.N, model.pool, []
+    X = set(model.nodes) if X is None else set(X)
+    Su = lambda x, y, z1, z2: pool.id(('Su', x, y, z1, z2))
+    for x in model.nodes:
+        if x not in X: continue
+        loc = N[x]
+        assert len(loc) <= 6
+        for y in loc:
+            others = [z for z in loc if z != y]
+            for z1, z2 in itertools.permutations(others, 2):
+                v = Su(x, y, z1, z2)
+                cls += [[-v, model.A(x, y, z1)], [-v, model.A(x, y, z2)], [-v, model.C(x, y, z1, z2)]]
+            for z in others:
+                succ = [Su(x, y, z, w) for w in others if w != z]
+                pred = [Su(x, y, w, z) for w in others if w != z]
+                cls.append([-model.A(x, y, z)] + succ); cls.append([-model.A(x, y, z)] + pred)
+                for i, j in itertools.combinations(range(len(succ)), 2):
+                    cls += [[-succ[i], -succ[j]], [-pred[i], -pred[j]]]
+            for z1, z2 in itertools.combinations(others, 2):
+                cls.append([-Su(x, y, z1, z2), -Su(x, y, z2, z1)])
+        seen = set()
+        for k in (3, 4, 5):
+            for S in itertools.combinations(loc, k):
+                for perm in itertools.permutations(S[1:]):
+                    c = canon_cycle((S[0],) + perm)
+                    if c in seen: continue
+                    seen.add(c)
+                    model.pending = []
+                    g = germ_var(model, x, list(c))
+                    cls += model.pending; model.pending = []
+                    dr = pool.id(('Dr', x, c))
+                    for i in range(k):
+                        a, b, cc = c[i - 1], c[i], c[(i + 1) % k]
+                        cls += [[-g, -dr, Su(x, b, a, cc)], [-g, dr, Su(x, b, cc, a)]]
+    for x in model.nodes:
+        for y in N[x]:
+            if not x < y or x not in X or y not in X: continue
+            Zs = [z for z in N[x] if z != y]; Ws = [w for w in N[y] if w != x]
+            for z1, z2 in itertools.permutations(Zs, 2):
+                for w1 in Ws:
+                    for w2 in Ws:
+                        if w1 == w2: continue
+                        m1, m2 = model.M(x, y, z1, w1), model.M(x, y, z2, w2)
+                        cls += [[-m1, -m2, -Su(x, y, z1, z2), Su(y, x, w2, w1)],
+                                [-m1, -m2, Su(x, y, z1, z2), -Su(y, x, w2, w1)]]
+    return cls
+
+
+def orientation_conflicts(G, faces, X=None):
+    """Independent check on a found 2-face system: number of BFS conflicts when trying to orient the vertex figures
+    coherently (0 = orientable).  Uses networkx embeddings, not the SAT encoding."""
+    X = set(G.nodes()) if X is None else set(X)
+    angle = {}
+    for qi, f in enumerate(faces):
+        n = len(f)
+        for t in range(n):
+            a, x, b = f[t - 1], f[t], f[(t + 1) % n]
+            angle[(x, min(a, b), max(a, b))] = qi
+    rot = {}
+    for x in X:
+        H = nx.Graph(); H.add_edges_from((a, b) for (y, a, b) in angle if y == x)
+        ok, emb = nx.check_planarity(H)
+        rot[x] = {y: list(emb.neighbors_cw_order(y)) for y in H.nodes()}
+    sgn = {}
+    for x in X:
+        for y in G.neighbors(x):
+            if y not in X or not x < y: continue
+            fx = [angle[(x, min(y, z), max(y, z))] for z in rot[x][y]]
+            fy = [angle[(y, min(x, w), max(x, w))] for w in rot[y][x]]
+            k = len(fx); i = fy.index(fx[0])
+            sgn[(x, y)] = 1 if all(fy[(i - j) % k] == fx[j] for j in range(k)) else -1
+    adj = {}
+    for (x, y), v in sgn.items():
+        adj.setdefault(x, []).append((y, v)); adj.setdefault(y, []).append((x, v))
+    o, conflicts = {}, 0
+    for x0 in X:
+        if x0 in o: continue
+        o[x0] = 1; dq = deque([x0])
+        while dq:
+            x = dq.popleft()
+            for y, v in adj.get(x, []):
+                if y not in o: o[y] = o[x] * v; dq.append(y)
+                elif o[y] != o[x] * v: conflicts += 1
+    return conflicts // 2
 
 
 # ============================================================================ helpers for P x P
@@ -754,26 +857,82 @@ def exp_pp_nobent_norot():
     print('  a 2-face system with polyhedral vertex figures:', sorted(Counter((len(f), kind(f)) for f in ch).items()))
 
 
-def exp_pp_levels(k):
-    print(f'== P x P, no bent faces, constraints (V)+(R) imposed only at the vertices of {k} of the 10 H-fibres')
+def exp_pp_levels(k, extra=0):
+    print(f'== P x P, no bent faces, constraints (V)+(R) imposed only at the vertices of {k} of the 10 H-fibres'
+          + (f' and at {extra} vertices of fibre {k}' if extra else ''))
     G = pp_graph()
-    X = set(10 * u + v for u in range(10) for v in range(k))
+    X = set(10 * u + v for u in range(10) for v in range(k)) | set(10 * u + k for u in range(extra))
     m = Model(G, nobent_candidates(G), X=X)
     t0 = time.time()
     ok = Solver(name=SOLVER, bootstrap_with=m.cls).solve()
     print(f'  {"SAT" if ok else "UNSAT"} ({time.time()-t0:.1f}s)')
 
 
-def exp_pc3(L):
+def exp_pc3(L, crosscheck=False):
     print(f'== P x C3 (Petersen x triangle), candidate 2-faces = all induced cycles with <= {L} vertices')
     G = product(petersen(), nx.cycle_graph(3))
     cyc = induced_cycles(G, L)
     print('  candidates:', len(cyc), sorted(Counter(len(c) for c in cyc).items()))
     m = Model(G, cyc)
     r = solve_full(m, Solver(name=SOLVER, bootstrap_with=m.cls), report=100,
-                   crosscheck=('glucose4' if '--crosscheck' in sys.argv else None))
-    print('  result:', 'UNSAT (excluded)' if r is None else 'SAT')
+                   crosscheck=('glucose4' if (crosscheck or '--crosscheck' in sys.argv) else None))
+    print('  result:', 'UNSAT (excluded)' if r is None else ('INCONCLUSIVE (iteration cap)' if r == 'maxit' else 'SAT'))
     return r
+
+
+def exp_pp_packing_norot():
+    print('== P x P, packing sub-case WITHOUT the edge-figure orientation (R): satisfiable (so (R) is what excludes it)')
+    G = pp_graph()
+    m = Model(G, nobent_candidates(G), rotation=False)
+    extra = []
+    for x in G.nodes():
+        mixed = [m.A(x, a, b) for a, b in itertools.combinations(m.N[x], 2) if typ(x, a) != typ(x, b)]
+        extra += CardEnc.equals(mixed, bound=8, vpool=m.pool, encoding=EncType.seqcounter).clauses
+    r = solve_full(m, Solver(name=SOLVER, bootstrap_with=m.cls + extra), facets_on=False, homology_on=False)
+    ch, _ = r
+    print('  a 2-face system:', sorted(Counter((len(f), kind(f)) for f in ch).items()))
+    assert all(sum(1 for f in ch if kind(f) == 'square' and x in f) == 8 for x in G.nodes())
+    print('  every vertex lies in exactly 8 square 2-faces: True')
+
+
+def exp_orientation():
+    print('== orientability layer (O): validation')
+    rel = lambda G: nx.convert_node_labels_to_integers(G, ordering='sorted')
+    for name, G in [('C5 x C5', rel(nx.cartesian_product(nx.cycle_graph(5), nx.cycle_graph(5)))),
+                    ('J(5,2)', rel(nx.complement(petersen()))),
+                    ('icosahedron x K2', rel(nx.cartesian_product(nx.icosahedral_graph(), nx.path_graph(2))))]:
+        m = Model(G, induced_cycles(G, 8), verbose=False)
+        r = solve_full(m, Solver(name=SOLVER, bootstrap_with=m.cls + add_orientation(m)))
+        ch, fac = r
+        c = orientation_conflicts(G, ch)
+        print(f'  {name}: SAT with (O); independent orientation check: {c} conflicts')
+        assert c == 0
+    K = nx.convert_node_labels_to_integers(nx.complete_bipartite_graph(3, 3))
+    G = product(K, nx.cycle_graph(3))
+    m = Model(G, induced_cycles(G, 19), verbose=False)
+    r = solve_full(m, Solver(name=SOLVER, bootstrap_with=m.cls), homology_on=False)
+    print('  K33 x K3, (H) off: the cellular S^1 x RP^2 found above has', orientation_conflicts(G, r[0]),
+          'orientation conflicts (non-orientable)')
+    m = Model(G, induced_cycles(G, 19), verbose=False)
+    r = solve_full(m, Solver(name=SOLVER, bootstrap_with=m.cls + add_orientation(m)), homology_on=False)
+    assert r is None
+    print('  K33 x K3, (H) off, (O) on: UNSAT')
+
+
+def exp_pp_levels_orient(k):
+    print(f'== P x P, no bent faces, (V)+(R)+(O) imposed only at the vertices of {k} of the 10 H-fibres')
+    G = pp_graph()
+    X = set(10 * u + v for u in range(10) for v in range(k))
+    m = Model(G, nobent_candidates(G), X=X)
+    t0 = time.time()
+    s = Solver(name=SOLVER, bootstrap_with=m.cls + add_orientation(m, X=X))
+    ok = s.solve()
+    print(f'  {"SAT" if ok else "UNSAT"} ({time.time()-t0:.1f}s)')
+    if ok:
+        vs = set(l for l in s.get_model() if l > 0)
+        ch = [m.faces[i] for i in range(len(m.faces)) if m.F(i) in vs]
+        print('  independent orientation check of the witness on the constrained fibres:',
+              orientation_conflicts(G, ch, X), 'conflicts')
 
 
 def exp_k33c3():
@@ -805,12 +964,17 @@ if __name__ == '__main__':
     if what in ('pp-nobent-norot', 'all'): exp_pp_nobent_norot()
     if what in ('pp-prismgerm', 'all'): exp_pp_prismgerm()
     if what in ('pp-packing', 'all'): exp_pp_packing()
-    if what in ('pp-levels',): exp_pp_levels(int(sys.argv[2]))
+    if what in ('pp-levels',): exp_pp_levels(int(sys.argv[2]), int(sys.argv[3]) if len(sys.argv) > 3 and sys.argv[3].isdigit() else 0)
     if what in ('pc3',): exp_pc3(int(sys.argv[2]))
     if what in ('k33c3', 'all'): exp_k33c3()
+    if what in ('orientation', 'all'): exp_orientation()
+    if what in ('pp-packing-norot', 'all'): exp_pp_packing_norot()
+    if what in ('pp-levels-orient',): exp_pp_levels_orient(int(sys.argv[2]))
     if what == 'all':
         exp_pp_levels(8)
-        exp_pc3(10)
+        exp_pc3(10, crosscheck=True)
     if what in ('all-long',):
+        exp_pp_levels(9)
+        exp_pp_levels_orient(8)
         exp_pc3(31)
     print(f'ALL REQUESTED CHECKS DONE ({time.time()-T0:.0f}s)')
