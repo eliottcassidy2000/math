@@ -14,42 +14,57 @@ density-1/2 landmark sets with sparse ones.
 **Builds on:** [THM-4525](../../01-canon/theorems/THM-4525-edge-multiset-dimension-of-q6-is-15.md)
 (edim_m(Q_6) = 15; Lemmas L1-L5; explicit sets for Q_7..Q_12) and
 [HYP-9169](../hypotheses/HYP-9169-edge-multiset-dimension-of-hypercubes-grows-like-exp-cube-root.md)
-(the growth conjecture, proved here; promotion and audit owed).
+(the growth conjecture; proved here and, independently, in THM-4534, which upgraded it).
+**Audit:** a blind independent audit (2026-10-02) found no false claim and no substantive gap, and re-certified
+every row of the table with its own code; its label, credit and wording fixes, and one monotonicity line for
+d > 10^5, are applied here.
 **Runner:** `04-computation/experiments/edge_multiset_dimension_growth_20261002_run.py`; stdout in
 `05-knowledge/results/edge_multiset_dimension_growth_20261002.out`, ending with ALL CHECKS PASSED.
 **Parallel work.** The mac-mini lane note
 [`procgen_edim2_20261001_growth_and_uniform_bounds.md`](procgen_edim2_20261001_growth_and_uniform_bounds.md)
-(lane results, orchestrator audit owed) landed on `origin/main` (12d7b60c) while this note was being finished; the
-two were written independently. It reaches the same constants kappa_+ = 2.0526 and kappa_- = 0.8146 and the same
-density dichotomy for Open Problem 4, with a different forest construction (a star lemma with path and zigzag
-forests, against Lemma H and the toward-the-centre forest here). It is sharper on three points: Open Problem 3 (a
-closed-form estimate at density 1/2 for every d >= 17, against d >= 64 here in the sparse regime), the certified
-sparse table (its Lemma FH gives M_11 = 361, M_16 = 636, M_64 = 31808, against 492, 978, 57738 here), and its
-Theorem C, which shows that kappa_+ is exactly the reach of the forest-lemma union bound. New here: the explicit
-bound edim_m(Q_d) < 2 exp(5 d^(1/3)) for every d >= 6 (Theorem C below), and the Q_7 search (13 <= edim_m(Q_7),
-against 11 there). So for items 1, 4 and 5 below this note is an independent second derivation.
+landed on `origin/main` (12d7b60c, 00:49:53 UTC) while this note was being finished, and was then audited and
+promoted as [THM-4534](../../01-canon/theorems/THM-4534-edge-multiset-dimension-grows-like-exp-theta-cube-root-d.md).
+The two were written independently: this note's first commit (fc801d67, 00:38:50 UTC) already had Theorems A-D and
+both constants. It reaches the same constants kappa_+ = 2.0526 and kappa_- = 0.8146, with a different forest
+construction (a star lemma with path and zigzag forests, against Lemma H and the toward-the-centre forest here). For
+Open Problem 4 it states the upper half of the density dichotomy (its item 10); the lower half, P -> 0 below
+kappa_-, is not stated there, although it follows at once from its Theorem B and Markov's inequality. It goes
+further on two points. (i) Open Problem 3: a closed-form estimate at density 1/2 for every d >= 17 (its Theorem D),
+against d >= 41 here in the sparse regime (Theorem A; section 6). The companion note
+[`edge_multiset_dimension_op3_20261002.md`](edge_multiset_dimension_op3_20261002.md) now settles Open Problem 3
+from d = 10. (ii) The sparse table: its Lemma FH gives M_11 = 361, M_12 = 370, M_13 = 457 and M_14 = 490, against
+492, 543, 622 and 724 here. Its deposited output is a `--quick` run, which certifies only d = 11..14; its larger
+values (M_16 = 636, M_64 = 31808) come from a full run that was not deposited, and THM-4534 lists them as lane-only.
+It also has a result with no counterpart here: its Theorem C shows that no choice of forests makes the forest-lemma
+union bound work below kappa_+. New here: the lower half of the dichotomy (Theorem D(2)), Lemma H and the
+toward-the-centre forest (item 5), the explicit bound edim_m(Q_d) < 2 exp(5 d^(1/3)) for every d >= 6 (Theorem C),
+the certified table for every 11 <= d <= 64 with its certificates deposited, and the Q_7 search (13 <= edim_m(Q_7),
+against 11 there). So items 1 and 4 (upper half) below are an independent second derivation of results stated
+there.
 
 ## Status header
 
 | # | Claim | Label |
 |---|-------|-------|
-| 1 | **Open Problem 2 is settled: ln edim_m(Q_d) = Theta(d^(1/3)).** More precisely, kappa_- <= liminf ln edim_m(Q_d)/d^(1/3) <= limsup <= kappa_+, where kappa_+ = (3 sqrt2 ln 2)^(2/3) = 2.0526 and kappa_- = ((3 sqrt2/4) ln 2)^(2/3) = kappa_+/4^(2/3) = 0.8146. This proves HYP-9169, independently of procgen_edim2_20261001 (same constants). | PROVED (Theorems A and B); audit owed before promotion |
-| 2 | **Explicit form, every d >= 6:** edim_m(Q_d) < 2 exp(5 d^(1/3)). | PROVED (Theorem C: explicit sets for 6 <= d <= 12; certified table for 11 <= d <= 64; Theorem A checked in interval arithmetic for 64 <= d <= 10^5; by hand beyond) |
-| 3 | **Certified sparse table.** For every 11 <= d <= 64, a random set of rational density q_d is resolving and has at most M_d points with positive probability, so edim_m(Q_d) <= M_d. Examples: Q_11 <= 492, Q_16 <= 978, Q_32 <= 6242, Q_64 <= 57738 (full table in section 4). ln M_d / d^(1/3) lies in [2.731, 2.788]. | FINITE-EXACT (outward-rounded interval arithmetic). Supersedes item 7 of the first note, which was double precision only; procgen_edim2_20261001 item 10 is sharper (Lemma FH) |
-| 4 | **Open Problem 4 (density 1/2 versus sparse).** For random sets S_q: P(S_q resolves) -> 1 when ln(q 2^d) >= (kappa_+ + eps) d^(1/3), uniformly in q <= 1/2; P(S_q resolves) -> 0 when ln(q 2^d) <= (kappa_- - eps) d^(1/3). Minimum resolving sets have density 2^(-d) e^(Theta(d^(1/3))), so density-1/2 sets are larger by a factor 2^(d - O(d^(1/3))). | PROVED (Theorem D); the same dichotomy is procgen_edim2_20261001 item 10 |
+| 1 | **Open Problem 2 (the growth of edim_m(Q_d), as THM-4525 and the first note record it): ln edim_m(Q_d) = Theta(d^(1/3)).** More precisely, kappa_- <= liminf ln edim_m(Q_d)/d^(1/3) <= limsup <= kappa_+, where kappa_+ = (3 sqrt2 ln 2)^(2/3) = 2.0526 and kappa_- = ((3 sqrt2/4) ln 2)^(2/3) = kappa_+/4^(2/3) = 0.8146. This proves HYP-9169, independently of THM-4534 (same constants). The paper's own wording of Open Problem 2 could not be read here; if it asks for the constant, that part is open (section 9). | PROVED (Theorems A and B); blind independent audit 2026-10-02 found no false claim |
+| 2 | **Explicit form, every d >= 6:** edim_m(Q_d) < 2 exp(5 d^(1/3)). | PROVED, computer-assisted (Theorem C). Its finite inputs are FINITE-EXACT: the explicit sets of THM-4525 for 6 <= d <= 12, the certified table for 11 <= d <= 64 (check S5), and Theorem A in interval arithmetic for 64 <= d <= 10^5 (check S6); by hand beyond |
+| 3 | **Certified sparse table.** For every 11 <= d <= 64, a random set of rational density q_d is resolving and has at most M_d points with positive probability, so edim_m(Q_d) <= M_d. Examples: Q_11 <= 492, Q_16 <= 978, Q_32 <= 6242, Q_64 <= 57738 (full table in section 4). ln M_d / d^(1/3) lies in [2.731, 2.788]. | FINITE-EXACT (outward-rounded interval arithmetic). Supersedes item 7 of the first note, which was double precision only. THM-4534 is sharper where its deposited output certifies (d = 11..14, Lemma FH) |
+| 4 | **Open Problem 4 (density 1/2 versus sparse).** For random sets S_q: P(S_q resolves) -> 1 when ln(q 2^d) >= (kappa_+ + eps) d^(1/3), uniformly in q <= 1/2; P(S_q resolves) -> 0 when ln(q 2^d) <= (kappa_- - eps) d^(1/3). Minimum resolving sets have density 2^(-d) e^(Theta(d^(1/3))), so density-1/2 sets are larger by a factor 2^(d - O(d^(1/3))). | PROVED (Theorem D). THM-4534 (lane note item 10) states the upper half |
 | 5 | Lemma H (a "valid cell" lemma for the hypergeometric law) and the toward-the-centre forest. For every pair type with h, nu >= 1, every level with \|t\| > 1 has a flow edge toward the middle whose cell carries at least 1/(3(min(h,nu)+1)) of the level. | PROVED; exact check for all L <= 60 |
-| 6 | Open Problem 3 (one analytic estimate valid from d = 11). | OPEN. The analytic estimate here starts at d = 64; below that a computation is still used, as in the paper. procgen_edim2_20261001 Theorem D reaches d = 17 at density 1/2 |
-| 7 | **Q_7: no resolving set of size <= 12, so 13 <= edim_m(Q_7) <= 19** (was 8..19; 11..19 in procgen_edim2_20261001, k <= 10). Exhaustive search up to Aut(Q_7), validated end to end on Q_6 (section 7; full write-up in [the Q_7 note](edge_multiset_dimension_q7_20261002.md)). | FINITE-EXACT (computer-assisted); audit owed |
+| 6 | Open Problem 3 (one analytic estimate valid from d = 11). Here Theorem A is effective from d = 41 (lambda chosen per d) and from d = 64 with lambda = 5 d^(1/3). THM-4534 reaches d = 17 at density 1/2. | Settled from d = 10 in the companion note [`edge_multiset_dimension_op3_20261002.md`](edge_multiset_dimension_op3_20261002.md) (PROVED there, computer-assisted at its base; audit owed). Here: PROVED for d >= 41 (check S6) |
+| 7 | **Q_7: no resolving set of size <= 12, so 13 <= edim_m(Q_7) <= 19** (was 8..19; 11..19 in procgen_edim2_20261001, k <= 10). Exhaustive search up to Aut(Q_7), validated end to end on Q_6 (section 7; full write-up in [the Q_7 note](edge_multiset_dimension_q7_20261002.md)). | FINITE-EXACT (computer-assisted); a blind independent audit (2026-10-02) of the Q_7 note found no false claim and no gap |
 
 ## 0. Definitions and notation
 
 * Q_d has vertex set {0,1}^d and edges e = {u, u + e_i}. For a vertex s, d(e, s) = min(d(u,s), d(u+e_i, s)).
   For a vertex set S, the histogram of e is H_e(r) = #{s in S : d(e,s) = r}, r = 0..d-1.
   S is (edge-multiset) resolving when the d 2^(d-1) histograms are pairwise distinct; edim_m(Q_d) is
-  the least |S|. The paper proves edim_m(Q_d) < infinity exactly for d >= 6 (as cited in the first note).
+  the least |S|. edim_m(Q_d) is infinite exactly for 2 <= d <= 5 (the paper's Theorem 6, as cited in the first
+  note): it is finite for every d >= 6, and trivially for d = 1, which has a single edge.
 * Projection lemma (paper, Lemma 3): for e = {u, u + e_i}, d(e, s) = d_H(u', s'), where ' deletes
   coordinate i.
-* b_n(k) = C(n,k)/2^n. D(p||1/2) = p ln(2p) + (1-p) ln(2(1-p)). Logarithms are natural throughout.
+* b_n(k) = C(n,k)/2^n. D(p||q) = p ln(p/q) + (1-p) ln((1-p)/(1-q)) is the binary divergence, so
+  D(p||1/2) = p ln(2p) + (1-p) ln(2(1-p)). Logarithms are natural throughout.
 * A random landmark set S_q contains each vertex independently with probability q. Write m = q 2^d and
   lambda = ln m.
 * E = d 2^(d-1) is the number of edges.
@@ -209,12 +224,13 @@ If U + e^(-m/3) < 1, then edim_m(Q_d) < 2m.
    Adding both sides and halving,
    -ln P(H_e = H_f) >= (2/3) Lambda tau - 2 Lambda - tau Lambda^2/(15(L - 2 Lambda)) >= g(L, Lambda).
 3. *Crossing, h = 0.* The flow graph is the path {c, c+1}, c = 0..d-2, and the edge {c, c+1} has
-   N = 2 C(d-2, c), so x = (1-q) m b_(d-2)(c)/2. Give every level the path edge toward the centre (d-1)/2.
+   N = 2 C(d-2, c), so x = (1-q) m b_(d-2)(c)/2. Give every level with |s| > 1 the path edge toward the centre
+   (d-1)/2.
    A level at offset s from (d-1)/2 then uses b_(d-2)(c) with c at distance |s| - 1/2 from (d-2)/2, and
    phi_(d-2)(|s| - 1/2) <= phi_(d-2)(s), so (1/2) ln(8x/pi) >= (1/2)(Lambda_X - phi_(d-2)(s)). The
    computation of step 2 with L = d - 2 then gives -ln P >= g(d-2, Lambda_X).
-4. *Antipodal types.* For P(d-1) (nu = 0, L = d-1) the cells (0, j) give the perfect matching {j, L-j}
-   with x = 2(1-q) m b_L(j). It is a forest, and step 2 applied to one side (the matching pairs t with -t)
+4. *Antipodal types.* For P(d-1) (nu = 0, L = d-1) the cells (0, j) give the matching {j, L-j}, j < L/2,
+   with x = 2(1-q) m b_L(j) (when d is odd the middle level L/2 is left unmatched). It is a forest, and step 2 applied to one side (the matching pairs t with -t)
    gives -ln P >= (1/3) Lambda_P tau - Lambda_P - tau Lambda_P^2/(30(L - 2 Lambda_P)) >= g'(d-1, Lambda_P).
    For X(d-2) the x = y = 0 sub-cells give the matching {j, L - j} with x >= (1-q) m b_L(j)/2, L = d-2,
    and -ln P >= g'(d-2, Lambda_X) in the same way.
@@ -251,7 +267,8 @@ This improves the constant c = (ln 2/sqrt 2)^(2/3) = 0.6216 of L5 in THM-4525 (w
 The inequality used is L5's own; only its evaluation is sharper.
 
 *Proof.* Let m = |S|, lambda = ln m, L = d - 1, mu_r = m b_L(r) and t = r - L/2. In nats, L5 says
-(d-1) ln 2 + ln d <= sum_(r=0)^(L) G(mu_r), where G(mu) = (mu+1) ln(mu+1) - mu ln mu.
+(d-1) ln 2 + ln d <= sum_(r=0)^(L-1) G(mu_r), where G(mu) = (mu+1) ln(mu+1) - mu ln mu. Adding the nonnegative
+term r = L only weakens it, and the proof uses that weaker form, with the sum running to L.
 The right side increases with m, so it suffices to show that it is below (d-1) ln 2 when
 lambda = (kappa_- - eps) d^(1/3) and d is large.
 1. G(mu) = ln(1+mu) + mu ln(1 + 1/mu) <= ln(1 + mu) + 1. For mu <= 1, G(mu) <= mu(1 + ln 2 + ln(1/mu)).
@@ -267,7 +284,8 @@ lambda = (kappa_- - eps) d^(1/3) and d is large.
    sum G(mu_r) <= (2 sqrt2/3) L^(1/2) lambda^(3/2) + O(d^(2/3)) = (1 - eps/kappa_-)^(3/2) d ln 2 + O(d^(2/3)),
    because (2 sqrt2/3) kappa_-^(3/2) = ln 2. This is below (d-1) ln 2 for large d. QED
 
-Check S9 solves L5 numerically (exact G, exact binomials) for d up to 10^6. The least lambda that L5 allows,
+Check S9 solves L5 numerically for d up to 10^6 (exact G; the binomials come from `gammaln` in double precision,
+so S9 is a sanity check, not part of the proof). The least lambda that L5 allows,
 divided by d^(1/3), is 1.11, 1.07, 0.99, 0.92, 0.876 at d = 10^2, ..., 10^6, so it approaches kappa_- = 0.8146
 slowly. The excess is of the size of one lower-order term: the factor sqrt(2/(pi L)) in b_L shifts lambda by
 about (1/2) ln(pi d/2), which is 0.071 d^(1/3) at d = 10^6, against an excess of 0.061 d^(1/3).
@@ -289,7 +307,14 @@ about (1/2) ln(pi d/2), which is 0.071 d^(1/3) at d = 10^6, against an excess of
   tau <= 1.6 d^(2/3) and L - 2 Lambda >= 0.99 d. Then
   g_* >= (sqrt2/3) (d-2)^(1/2) (4.4 d^(1/3))^(3/2) - 15 d^(1/3) - 3 d^(1/3) >= 4.2 d and
   g' >= 2.1 d, so U <= e^(2d ln 2 + 2 ln d - 4.2 d) + 2 e^(d ln 2 + 2 ln d - 2.1 d) < e^(-1.4 d).
-  Check S7 evaluates these estimates at d = 10^5, 10^6, 10^8 and 10^12. QED
+  Each step holds for every d > 10^5, by monotonicity. The third term of g is at most
+  (1.6 d^(2/3)/15 + 2/3) 25 d^(2/3)/(0.99 d) = (2.694 + 16.84 d^(-2/3)) d^(1/3) <= 3 d^(1/3). Since
+  (d-2)^(1/2) d^(1/2) >= d - 2, g_* >= 4.3508 (d-2) - 18 d^(1/3), and 0.1508 d - 8.71 - 18 d^(1/3) is positive at
+  10^5 and increasing for d > 251; so g_* >= 4.2 d. Likewise g' >= 2.1754 (d-2) - 6.5 d^(1/3) >= 2.1 d (the
+  difference is positive at 10^5 and increasing for d > 155). Then U e^(1.4 d) <= d^2 e^(-1.41 d) + 2 d^2 e^(-0.0068 d),
+  and both terms decrease for d > 2/0.0068 and are below e^(-600) at 10^5. Finally m = e^(5 d^(1/3)) > e^230, so
+  e^(-m/3) is negligible and U + e^(-m/3) < 1. Check S7 evaluates the estimates at d = 10^5, 10^6, 10^8 and
+  10^12 and checks each monotonicity step at 10^5. QED
 
 **Certified table (FINITE-EXACT).** For each d, the union bound uses, for every pair type, a
 maximum-weight spanning forest of the flow graph (Kruskal on the exact integer cell counts). The other
@@ -355,6 +380,11 @@ arithmetic, and the table lists rigorous upper endpoints. Then edim_m(Q_d) <= M_
 | 63 | 13446593/2305843009213693952000 | 54415 | 0.97452018 | 0.02545243 | 2.7404 |
 | 64 | 28397833/9223372036854775808000 | 57738 | 0.99958142 | 0.00041343 | 2.7409 |
 
+Each M_d is chosen as small as the certificate allows, so some margins 1 - (U + tail) are tiny: 1.05e-6 at d = 49
+and 5.2e-6 at d = 64. They are rigorous (outward-rounded upper endpoints; the blind audit re-certified all 54 rows
+with its own code and a tighter enclosure), and nothing else depends on them: Theorem C needs only
+M_d <= e^(2.79 d^(1/3)), and with a larger M the tail, and hence the margin, improves at once.
+
 The certified bounds are smaller than the first note's double-precision values (Q_11 <= 511,
 Q_16 <= 1056, Q_32 <= 6638). The union bound here also uses the antipodal halving of section 1.4, which
 the first note did not.
@@ -386,20 +416,26 @@ exp(Theta(d^(1/3))). For every d >= 6 the ratio 2^(d-1)/edim_m(Q_d) is at least 
 | 32 | 2.1e9 | existence | 6242 | - |
 | 64 | 9.2e18 | existence | 57738 | - |
 
-## 6. Open Problem 3: status (OPEN)
+## 6. Open Problem 3: settled in the companion note
 The paper proves existence for d >= 11 at q = 1/2, by exact computation for 11 <= d <= 50 and an
-elementary estimate beyond. Theorem A is one analytic estimate, but it only becomes effective at
-d = 64 (with lambda = 5 d^(1/3)). Its losses are the factor 1/(3(L+1)) of Lemma H, the factor
-1/(L+1) of the method-of-types bound, and the crude atom constant sqrt(pi/8). Even with all three
-removed, a union bound at d = 11 has little room: the exact-atom, best-forest bound at q = 1/2 is
-U(11) = 0.156 (first note). Reaching d = 11 analytically would need a different idea, for example a
-lifting lemma from Q_d to Q_(d+1); none was found. The naive lift S x {0} fails: after two lifts the
-set is fixed by swapping the two new coordinates, so L1 excludes it. The parallel note
-procgen_edim2_20261001 goes further at density 1/2: a closed-form estimate for every d >= 17 (its Theorem D)
-and, with its Fourier-Hoelder lemma, a certified U_10 <= 0.2649.
+elementary estimate beyond. Theorem A is one analytic estimate. With lambda = 5 d^(1/3) it becomes effective at
+d = 64 (check S6, first part). With lambda chosen for each d it is effective from d = 41: lambda = (d + 37)/4 works
+for every 41 <= d <= 63 (check S6, second part; the largest value of U + e^(-m/3) there is 0.054, at d = 41). At
+d = 40 no lambda on a grid of step 0.01 in [15, 22] works (the best value is 1.37, at lambda = 19.1). Its losses are the factor 1/(3(L+1)) of Lemma H, the factor 1/(L+1) of the method-of-types bound,
+and the crude atom constant sqrt(pi/8). The parallel note behind THM-4534 goes further at density 1/2: a closed-form
+estimate for every d >= 17 (its Theorem D) and, with its Fourier-Hoelder lemma, a certified U_10 <= 0.2649.
+
+An earlier version of this section asked for a different idea, such as a lifting lemma from Q_d to Q_(d+1). The
+companion note [`edge_multiset_dimension_op3_20261002.md`](edge_multiset_dimension_op3_20261002.md) supplies one.
+It does not lift landmark sets
+(the naive lift S x {0} fails: after two lifts the set is fixed by swapping the two new coordinates, so L1 excludes
+it). It lifts the union bound itself: each pair type of Q_(d+1) inherits a potential forest from a pair type of Q_d
+plus one extra near-central edge, so the paper's union bound at density 1/2 with antipodal halving satisfies
+V_(d+1) <= V_d/2 + A_(d+1). Started from the exact value V_10 = 0.66023, this gives V_d <= 0.6767 for every d >= 10,
+which settles Open Problem 3 from d = 10 (PROVED there, computer-assisted at its base; audit owed).
 
 ## 7. Q_7
-**Theorem 7.1 (FINITE-EXACT, computer-assisted; audit owed).** Q_7 has no edge-multiset resolving set of any
+**Theorem 7.1 (FINITE-EXACT, computer-assisted; blind-audited 2026-10-02).** Q_7 has no edge-multiset resolving set of any
 size k <= 12. Hence 13 <= edim_m(Q_7) <= 19; the previous bounds were 8 <= edim_m(Q_7) <= 19 (THM-4525).
 
 Full write-up: [`edge_multiset_dimension_q7_20261002.md`](edge_multiset_dimension_q7_20261002.md). Code and run
@@ -407,9 +443,10 @@ records: `04-computation/edge_multiset_dimension_q7_20261002/`.
 * **Method.** Every k-set is Aut(Q_7)-equivalent to A x {0} u B x {1}, where the last coordinate has the least
   imbalance a - b >= 0 and A is one of the Aut(Q_6)-orbit representatives of a-subsets (Lemma 1 there, proved).
   For every (k, a), every representative A and every admissible B is tested exactly. Nothing is pruned on
-  partial collisions, because resolvability is not monotone. A weight lemma (Lemma 2 there) removes the pairs
-  with a >= 11. The representatives come from orderly generation and match the Burnside counts 1, 1, 6, 16, 103,
-  497, 3253, 19735, 120843, 681474, 3561696, 16938566 (a = 0..11).
+  partial collisions, because resolvability is not monotone. A weight lemma (Lemma 2 there) shows that the pairs
+  with a >= 11 hold no resolving set (in the k <= 12 run it removed (12, 12); the a = 11 cases were searched anyway
+  and have no leaves). The representatives come from orderly generation and match the Burnside counts 1, 1, 6, 16,
+  103, 497, 3253, 19735, 120843, 681474, 3561696, 16938566 (a = 0..11).
 * **Size.** 303,583,126,680 leaves for k <= 12, in 73 CPU minutes. For every (k, a) the leaf count equals an
   independent dynamic-programming count of the domain.
 * **Validation.** The same code reproduces the Q_6 result of THM-4525 end to end: nothing for k <= 14, and for
@@ -435,13 +472,15 @@ records: `04-computation/edge_multiset_dimension_q7_20261002/`.
 
 ## 9. Open
 * The constant: does lim ln edim_m(Q_d)/d^(1/3) exist, and where in [0.8146, 2.0526] is it?
-* Open Problem 3 (one analytic estimate from d = 11).
-* Q_7: 13 <= edim_m(Q_7) <= 19. Is a resolving set of size 13 to 18 possible? (k = 13 was running at
-  commit time; annealing below 19 was not tried.)
+* Open Problem 3 is settled from d = 10 in the companion note. What remains open there is a version without the
+  finite computations at its base (the exact V_10 and the ratio check for 10 <= d <= 40).
+* Q_7: 13 <= edim_m(Q_7) <= 19. Is a resolving set of size 13 to 18 possible? (k = 13 and a first annealing run
+  at size 18 were running at commit time.)
 
 ## 10. Reproduction
 `python3 -u 04-computation/experiments/edge_multiset_dimension_growth_20261002_run.py` prints its results to stdout
 (deposited as `05-knowledge/results/edge_multiset_dimension_growth_20261002.out`) and section timings to stderr,
-and ends with ALL CHECKS PASSED (470114 checks). It takes 231 s on one core, mostly S5 (84 s) and S6 (138 s).
+and ends with ALL CHECKS PASSED (470144 checks). It takes about 4 to 5 minutes on one core (231 s on the
+original machine, 295 s in the audit re-run), mostly S5 and S6.
 Needs numpy, scipy and mpmath. With `--q7`, S10 also builds the Q_7 search (gcc) and re-runs the fast subset in a
 temporary directory: 161 s more with 2 of 4 shared cores, 455 checks in S10.

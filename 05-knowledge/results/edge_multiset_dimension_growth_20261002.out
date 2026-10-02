@@ -89,11 +89,12 @@ every certificate verified: edim_m(Q_d) <= M_d; lnM/d^(1/3) in [2.7317, 2.7871]
 S6: Theorem C, lambda = 5 d^(1/3), every 64 <= d <= 10^5 (interval arithmetic)
 ==============================================================================
 U + e^(-m/3) < 1 for every d in [64, 100000]; largest value 0.6610 at d = 64
+Theorem A, lambda = (d + 37)/4: U + e^(-m/3) < 1 for every d in [41, 63]; largest value 0.0539 at d = 41
 
 ==============================================================================
 S7: Theorem C beyond 10^5 -- the hand estimates
 ==============================================================================
-hand estimates of Theorem C checked at d = 1e5, 1e6, 1e8, 1e12 (all terms monotone in d)
+hand estimates of Theorem C checked at d = 1e5, 1e6, 1e8, 1e12, and each one shown monotone in d beyond 1e5
 
 ==============================================================================
 S8: constants
@@ -122,5 +123,5 @@ deposited records, Q_7, k = 1..12: every (k, a) tiled, C leaves = DP leaves (303
 representative counts = Burnside, nothing found => edim_m(Q_7) >= 13
 (run with --q7 to rebuild the C search and re-run Q_6, k <= 13, and Q_7, k <= 10)
 
-470114 checks
+470144 checks
 ALL CHECKS PASSED

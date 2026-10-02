@@ -1,0 +1,11 @@
+# is_canon self-tests (orbreps self-test mode; writes no files). Binary built from src/orbreps.c (sha256 efd79b1e...92f2).
+# run 2026-10-02 in a scratch directory; equivalent to the commands of Section 7.3 of the Q_7 note.
+$ ./src/orbreps 4 16 data 3000
+selftest n=4: 3000 random sets, 0 disagreements
+exit=0
+$ ./src/orbreps 5 32 data 3000
+selftest n=5: 3000 random sets, 0 disagreements
+exit=0
+$ ./src/orbreps 6 6 data 1500
+selftest n=6: 1500 random sets, 0 disagreements
+exit=0

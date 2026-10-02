@@ -6,8 +6,9 @@ temporary identity, no `.machine-id`. Part of the edim2 lane; the growth results
 summarizes this note. Previous bounds: 8 <= edim_m(Q_7) <= 19
 ([THM-4525](../../01-canon/theorems/THM-4525-edge-multiset-dimension-of-q6-is-15.md); Allikvere arXiv:2608.09983
 had 63 as the upper bound).
-**Status:** FINITE-EXACT (computer-assisted exhaustive search, validated as described in Sections 3 and 6);
-independent audit OWED. **Promoted:** nothing (no THM/HYP IDs reserved).
+**Status:** FINITE-EXACT (computer-assisted exhaustive search, validated as described in Sections 3 and 6).
+A blind independent audit (2026-10-02) found no false claim and no gap; it re-ran parts of the search with its own
+code, and its wording and provenance fixes are applied here. **Promoted:** nothing (no THM/HYP IDs reserved).
 **Labels used:** PROVED (Lemmas 1-3), FINITE-EXACT, EMPIRICAL (annealing).
 **Code and evidence:** [`04-computation/edge_multiset_dimension_q7_20261002/`](../../04-computation/edge_multiset_dimension_q7_20261002/)
 (C search, Python driver and checkers, run scripts, run records and logs; paths below are relative to it).
@@ -16,10 +17,15 @@ two 19-sets and the orbit counts from scratch and audits the deposited records; 
 and re-runs the fast subset (Section 7.3).
 **Parallel work.** The mac-mini lane note
 [`procgen_edim2_20261001_growth_and_uniform_bounds.md`](procgen_edim2_20261001_growth_and_uniform_bounds.md) §6
-(orchestrator audit owed) landed on `origin/main` (12d7b60c) while this note was being finished. Independently, it
-proves 11 <= edim_m(Q_7) by an exhaustive search in a maximal-imbalance normal form (k <= 10), and leaves one case
-of k = 11 unfinished (a = 11, b = 0 in its normal form). The search here covers every set of size k <= 12, so it
-settles that case as well. Both searches reproduce THM-4525 on Q_6 and the same Burnside orbit counts.
+landed on `origin/main` (12d7b60c, 00:49:53 UTC) while this note was being finished, and was later promoted as
+[THM-4534](../../01-canon/theorems/THM-4534-edge-multiset-dimension-grows-like-exp-theta-cube-root-d.md), which
+records its Q_7 bound as FINITE-EXACT (lane only). Independently, it proves 11 <= edim_m(Q_7) by an exhaustive
+search in a maximal-imbalance normal form (k <= 10), and leaves one case of k = 11 unfinished (a = 11, b = 0 in its
+normal form). The search here covers every set of size k <= 12, so it settles that case as well. On Q_6 the
+parallel search ran k = 15 with a = 13, 14, 15 of its normal form and recovered the three THM-4525 orbits of
+maximal imbalance 11; the search here reproduces all of THM-4525 on Q_6 (nothing for k <= 14, and all 229 orbits at
+k = 15; Section 3.4). Its Burnside counts (Q_6, a = 1..8; Q_5, a = 13..15) agree with the ones here where they
+overlap.
 
 **Status of k = 13.** The k = 13 search (1,507,949,500,245 leaves) was started at 2026-10-02 00:09:40 UTC and was
 still running when this note was committed. Nothing about k = 13 is claimed here; Section 4.4 says how to read
@@ -43,7 +49,8 @@ its outcome.
   * the same code, run on Q_6 for k = 1..15, finds nothing for k ≤ 14;
   * for k = 15 it finds 585 resolving leaves, which canonicalize under all 46080 automorphisms to exactly the
     229 orbits of the deposited list, all with trivial stabilizer;
-  * the second, independent leaf engine reproduces k = 14 and 15 exactly.
+  * the alternative hot-list engine (engine 1) reproduces k = 14 and 15 exactly. It replaces only the hot-list
+    scan; the search, the keys and the full test are shared with engine 0.
 * Leaf counts: for every (k, a), with d = 6 (k ≤ 15) and d = 7 (k ≤ 12), the C leaf count
   equals an independent numpy dynamic-programming count.
 * Python checker:
@@ -235,7 +242,7 @@ So every leaf is either refuted by an exactly computed collision or tested compl
   * Q_5: every level a = 0..32;
   * Q_6, a = 0..11: 1, 1, 6, 16, 103, 497, 3253, 19735, 120843, 681474, 3561696, 16938566.
 * **Self-test of `is_canon`** against a brute-force canonical form: 3000 random sets for n = 4 and n = 5, and
-  1500 for n = 6, with 0 disagreements.
+  1500 for n = 6, with 0 disagreements (`logs/iscanon_selftest.out`; the blind audit re-ran all three).
 * **`src/repcheck`** (`logs/repcheck.out`, 7.3 min) checked every listed set for: correct size, lex-minimal in
   its orbit, and no duplicates.
   * Group used: the full group (3840 or 46080 explicit elements) for Q_5, a = 0..32, and Q_6, a = 0..8. For
@@ -284,7 +291,7 @@ All samples finished without FATAL.
 | | | | | **total** | **154,155,615** | | |
 
 An earlier sample also passed for both engines: d = 7, k = 11, a = 6, two representatives, 15,249,024 leaves
-each. It has no log file.
+each. It has no log file, and nothing rests on it.
 
 ### 3.4 Reproduction of Q_6 (edim_m(Q_6) = 15, THM-4525)
 Run with engine 0: `runs/d6_e0`, `logs/d6_e0.out`, `logs/validate_d6_e0.out`.
@@ -448,7 +455,8 @@ agreement with the DP and with Lemma 2.
   scanned per node).
 * The machine was shared: load average about 3 on 4 cores from other jobs. Clean single-chunk
   benchmarks give 11.7-13.3 ns.
-* Engine 1 is about 1.1x slower on Q_6 (34 vs 30 ns per leaf) and about 1.8x slower on Q_7.
+* Engine 1 is about 1.1x slower on Q_6 (34 vs 30 ns per leaf). Its speed on Q_7 was not measured on a deposited
+  run (the planned engine-1 re-run of Q_7 was cancelled; Section 8).
 
 **Block-size benchmark.** Block sizes 1, 2, 3, 4 and 8 were benchmarked for the engine-0 scan, as was swapping
 instead of move-to-front. The differences were within ±5% noise, so the validated binary was kept unchanged.
@@ -539,8 +547,9 @@ Every size k ≤ 12 is excluded separately, because resolvability is not monoton
    (303,583,126,680 leaves for k ≤ 12).
 3. **Result.** 0 resolving leaves in every chunk. Every leaf was either killed by an exactly computed collision
    or fully tested.
-4. **Representatives.** The files used (Q_6, a ≤ 11) have the Burnside counts. The files for a ≤ 10 passed the
-   brute-force `repcheck` (a = 11 contributes 0 leaves and is unnecessary by Lemma 2).
+4. **Representatives.** The files used (Q_6, a ≤ 11) have the Burnside counts. The files for a ≤ 10 passed
+   `repcheck`, with the full group for a ≤ 8 and the exact images-containing-0 mode for a = 9 and 10 (a = 11
+   contributes 0 leaves and is unnecessary by Lemma 2).
 5. **Same binary.** The same binary passed:
    * the Q_6 end-to-end reproduction (k ≤ 14: nothing; k = 15: exactly the 229 known orbits; both engines);
    * the Q_7 verification-mode samples (154,155,615 leaves, 0 discrepancies, including the k = 12 and k = 13
@@ -549,8 +558,11 @@ Every size k ≤ 12 is excluded separately, because resolvability is not monoton
 6. **Normal form.** Lemma 1 (proof in Section 2.2) reduces every k-set to the searched domain. This was
    confirmed empirically on 1,250 random sets.
 
-**What the proof rests on.** Lemma 1 and Lemma 2 (hand proofs, Section 2), the correctness of the C search
-code as supported by the checks above, and the usual trust in compiler and hardware.
+**What the proof rests on.** Lemma 1 and Lemma 2 (hand proofs, Section 2); the completeness of the representative
+lists R_a (their lengths equal the Burnside counts, and `repcheck` shows the listed sets pairwise inequivalent, item
+4); the correctness of the C search code as supported by the checks above; and the usual trust in compiler and
+hardware. The sha256 values of the production binaries, the deposited sources and the representative files are in
+`logs/provenance_sha256.txt`.
 
 **Not proved.**
 * Anything for k ≥ 13. The k = 13 run is in progress and must not be counted until its COMPLETE line shows
@@ -576,7 +588,7 @@ code as supported by the checks above, and the usual trust in compiler and hardw
 | `py/nf_test.py` | 3,263 | empirical normal-form test |
 | `py/make_tables.py` | 2,801 | the tables of this report, from the JSON files |
 | `py/anneal_summary.py` | 2,157 | annealing summaries and re-verification |
-| `runs/run_d7.sh`, `run_d6.sh`, `checks.sh`, `verify_d7.sh`, `post12.sh`, `chain2.sh`, `anneal.sh` | 469 / 582 / 1,389 / 1,332 / 2,457 / 666 / 895 | the run scripts used; only their `cd` line was changed, to the package directory |
+| `runs/run_d7.sh`, `run_d6.sh`, `checks.sh`, `verify_d7.sh`, `post12.sh`, `chain2.sh`, `anneal.sh` | 401 / 514 / 1,323 / 1,264 / 2,389 / 598 / 819 | the run scripts used. Their `cd` line was changed to the package directory; `checks.sh` also reads its negative control from `data/` instead of `tmp/`, and one comment line of `anneal.sh` changed |
 
 * All C sources compile with `gcc -O3 -march=native -Wall [-Wextra]`; `anneal` also needs `-lm`.
 * Dependencies: python3 with numpy only.
@@ -646,7 +658,8 @@ python3 py/validate.py 6 runs/fast_d6 14 15                # k=15: resolving_lea
 **Further optional checks.**
 * `runs/checks.sh`: pycheck, xcheck, repcheck, nf_test; about 9 min on 1 core.
 * `runs/verify_d7.sh big1|big2|small`: 11, 11 and 1 min.
-* `./src/orbreps 5 32 data 3000` and `./src/orbreps 6 6 data 1500` (self-test mode writes no files): `is_canon` self-tests.
+* `./src/orbreps 4 16 data 3000`, `./src/orbreps 5 32 data 3000` and `./src/orbreps 6 6 data 1500` (self-test mode
+  writes no files): the `is_canon` self-tests of Sections 2.4 and 3.1, logged in `logs/iscanon_selftest.out`.
 
 The fast subset was executed through the growth runner's `--q7` option, which builds the sources and runs
 these commands in a temporary directory (161 s with 2 of 4 shared cores): Q_6, k <= 13, 1,859,531,279 leaves,
@@ -660,8 +673,9 @@ the expected numbers are those of Section 3.4.
 * Re-running a finished K only rewrites its summary.
 
 ## 8. Points of uncertainty
-1. **Annealing is incomplete.** Only the calibration was run. The 18/17 annealing was stopped before it
-   started, to keep the CPU for k = 13.
+1. **Annealing is incomplete.** Only the calibration was run before this note was first committed; the 18/17
+   annealing was held back to keep the CPU for k = 13. A 90-minute run at size 18 on one spare core started at
+   01:31 UTC on 2026-10-02; its outcome will be recorded here.
 2. **One production run per Q_7 size.** Each k was run once, with engine 0.
    * Independent support: the DP leaf counts (enumeration), 154M leaves in verification mode (0.05% of the
      3.04e11 leaves), and the end-to-end Q_6 reproduction with both engines.

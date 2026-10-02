@@ -8,8 +8,9 @@ Sections
   S3  Lemma H, exactly, for every 2 <= L <= 60
   S4  Theorem A chain: toward-the-centre forest products dominate g(L, Lambda)
   S5  certified sparse table, 11 <= d <= 64 (stored certificates re-verified in interval arithmetic)
-  S6  Theorem C: explicit union bound with lambda = 5 d^(1/3), every 64 <= d <= 10^5 (interval arithmetic)
-  S7  Theorem C beyond 10^5: the hand estimates
+  S6  Theorem C: explicit union bound with lambda = 5 d^(1/3), every 64 <= d <= 10^5 (interval arithmetic);
+      also Theorem A with lambda = (d + 37)/4, every 41 <= d <= 63
+  S7  Theorem C beyond 10^5: the hand estimates and the monotonicity that carries them to every d > 10^5
   S8  constants kappa_+ and kappa_-
   S9  Theorem B: the entropy bound L5 evaluated exactly (sanity)
   S10 Q_7 (section 7): the two resolving 19-sets, orbit counts, and the deposited exhaustive-search records
@@ -453,6 +454,16 @@ def s6():
             worst = (float(tot.b), d)
     check(worst[1] == 64, 'S6 worst at 64')
     print('U + e^(-m/3) < 1 for every d in [64, 100000]; largest value %.4f at d = %d' % worst)
+    # Theorem A with lambda chosen per d (a fixed lambda, not 5 d^(1/3)) is already effective from d = 41
+    worst = (0, None)
+    for d in range(41, 64):
+        lam = iv.mpf(d + 37) / 4
+        tot = theorem_c_total(d, lam / iv.mpf(d) ** (iv.mpf(1) / 3))
+        check(tot is not None and tot.b < 1, 'S6 per-d lambda d=%d' % d)
+        if tot.b > worst[0]:
+            worst = (float(tot.b), d)
+    check(worst[1] == 41, 'S6 per-d lambda worst at 41')
+    print('Theorem A, lambda = (d + 37)/4: U + e^(-m/3) < 1 for every d in [41, 63]; largest value %.4f at d = %d' % worst)
 
 
 def s7():
@@ -474,7 +485,23 @@ def s7():
         check((mainp - negp).a >= 2.1 * d, "S7 g' >= 2.1 d at d=%g" % d)
         tot = (iv.exp(2 * D * LN2 + 2 * iv.log(D) - 4.2 * D) + 2 * iv.exp(D * LN2 + 2 * iv.log(D) - 2.1 * D))
         check((iv.log(tot)).b < -1.4 * d, 'S7 U < e^(-1.4 d) at d=%g' % d)
-    print('hand estimates of Theorem C checked at d = 1e5, 1e6, 1e8, 1e12 (all terms monotone in d)')
+    # monotonicity: each estimate below holds at d = 10^5, and its slack increases with d (derivative checked at
+    # 10^5, where it is already positive and from where it only grows), so it holds for every d >= 10^5
+    D5 = 1e5
+    third_over = lambda d: (1.6 * d ** (2 / 3) / 15 + 2 / 3) * 25 / 0.99 * d ** (-2 / 3)   # third term / d^(1/3)
+    check(third_over(D5) <= 3, 'S7 third term of g <= 3 d^(1/3) (third term / d^(1/3) decreases in d)')
+    a_g = math.sqrt(2) / 3 * 4.4 ** 1.5          # g_* >= a_g (d - 2) - 18 d^(1/3); g' >= (a_g/2)(d - 2) - 6.5 d^(1/3)
+    check(a_g > 4.3508, 'S7 constant a_g = (sqrt2/3) 4.4^(3/2) = 4.3508')
+    check((a_g - 4.2) * D5 - 2 * a_g - 18 * D5 ** (1 / 3) > 0 and (a_g - 4.2) - 6 * D5 ** (-2 / 3) > 0,
+          'S7 a_g (d - 2) - 18 d^(1/3) >= 4.2 d: true at 1e5, increasing beyond')
+    check((a_g / 2 - 2.1) * D5 - a_g - 6.5 * D5 ** (1 / 3) > 0 and (a_g / 2 - 2.1) - (6.5 / 3) * D5 ** (-2 / 3) > 0,
+          "S7 (a_g/2)(d - 2) - 6.5 d^(1/3) >= 2.1 d: true at 1e5, increasing beyond")
+    e1, e2 = 4.2 - 2 * math.log(2) - 1.4, 2.1 - math.log(2) - 1.4
+    check(e2 > 0.0068 and 2 / e2 < D5 and 2 * math.log(D5) - e1 * D5 < -700
+          and math.log(2) + 2 * math.log(D5) - e2 * D5 < -600,
+          'S7 U e^(1.4 d) <= d^2 e^(-1.41 d) + 2 d^2 e^(-0.0068 d) < 1 (both decrease for d > 2/0.0068)')
+    check(5 * D5 ** (1 / 3) > 230, 'S7 e^(-m/3) <= exp(-e^230/3) is negligible')
+    print('hand estimates of Theorem C checked at d = 1e5, 1e6, 1e8, 1e12, and each one shown monotone in d beyond 1e5')
 
 
 def s8():

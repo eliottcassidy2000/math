@@ -1,4 +1,4 @@
-# OPEN-Q-060: natural matchings of tournament switching classes with untwisted Euler graphs exist only for n <= 4
+# OPEN-Q-060: natural matchings of tournament switching classes with untwisted Euler graphs exist for n <= 4 and not for 5 <= n <= 10^6
 
 **Provenance:** Claude thread session (project thread, branch `claude/project-thread-96889h`), 2026-10-01/02;
 temporary identity, no `.machine-id`. This is the "tbij" lane named in the wave-24 letter of
@@ -7,7 +7,9 @@ collatz-procgen-20260922 (OPEN-Q-060's bijective form), continued here; no tbij 
 [procgen_selfie_20261001_selfie_tournaments.md](procgen_selfie_20261001_selfie_tournaments.md) §5 and
 [THM-4524](../../01-canon/theorems/THM-4524-selfie-tournaments-loop-gauge-arc-parity-and-the-odd-mallows-sloane-partner.md),
 which records "the bijective form remains open".
-**Status:** COMPLETE for this pass; independent audit OWED. **Promoted:** nothing; candidates are listed in §11
+**Status:** COMPLETE for this pass. A blind independent audit (2026-10-02) reproduced every computational claim with
+its own code and found no false headline claim; its fixes (two false side remarks, one gap, credit and title wording)
+are applied and marked "(audit, 2026-10-02)". **Promoted:** nothing; candidates are listed in §11
 (no THM/HYP IDs reserved).
 **Labels used:** PROVED, CITED, FINITE-EXACT, VERIFIED, CONDITIONAL, OPEN, EMPIRICAL.
 **Code:** `04-computation/experiments/natural_matchings_switching_classes_20261002_run.py` (runner, ends ALL CHECKS PASSED) with helpers
@@ -17,17 +19,24 @@ which records "the bijective form remains open".
 **Parallel work.** [THM-4531](../../01-canon/theorems/THM-4531-twisted-mallows-sloane-principle-and-no-natural-bijection-for-switching-classes.md)
 (PROVED + INDEPENDENTLY AUDITED) and its note [procgen_tbij_20261001_natural_bijections.md](procgen_tbij_20261001_natural_bijections.md)
 landed on `origin/main` (80cbda5c) while this note was being finished; the two were written independently.
-Overlap: Lemma 0 = THM-4531 N1; Theorem 1 = P1; Theorem 3 = O4 (one direction); the remark at the end of §1 = O1;
-Theorem 11 = P3. The census deficits of Theorems 4 and 9 agree with THM-4531's exhaustive matchings, which go one
-size further (n <= 10 for classes, n <= 9 for tournaments). THM-4531 also has Theorem G, P2, Theorem B and S,
-which are not here.
-New here: Theorems 5-6 extend O2 from 5 <= n <= 100 to 5 <= n <= 10^6. Rigid blocks are closed under
-lexicographic products (Lemma 5.3(d)), so every order in Sigma is available, a superset of THM-4531's twist-rigid
-sizes (prime powers = 3 mod 4 or 5 mod 8, and 9). The forced classes are told apart by hand, and A(n) was computed
-up to 10^6 (A(n) >= 2 except at n = 8, 16, 40, which have computer certificates). This reduces the switching half of
-HYP-9172(a) to binary additive problems over Sigma (density about x/(log x)^(1/4)). Theorem 10 adds two infinite
-families to O3 (n = 21, 30, 35, 39, 42, 45, ... are new). Theorem 2 (the level lemma), the twisted Euler graph
-counts and the correction of §7.4 are not in THM-4531.
+Overlap (each item found independently): Lemma 0 = THM-4531 N1; Theorem 1 = P1; Theorem 3 = O4 (one direction);
+the remark at the end of §1 = O1; Theorem 11 = P3. Lemmas 5.1 and 5.2 and Theorem 5 are THM-4531's block lemma
+(a), (b) and (c), with the same hypotheses and the same proof; Lemma 5.3(a)-(c) are its twist-rigid families (with
+the same R_q); the n = 5 hand proofs of §5 and of Theorem 8 are those of O2 and O3(b); and the first two sentences
+of Theorem 10 are O3's "general mechanism". THM-4531's note also observes that going beyond its range is a
+Goldbach/Lemoine-type additive question over twist-rigid sizes. The census deficits of Theorems 4 and 9 agree with
+THM-4531's exhaustive matchings, which go one size further (n <= 10 for classes, n <= 9 for tournaments).
+THM-4531 also has Theorem G, G2, P2, Theorem B and S, which are not here.
+New here:
+* Lemma 5.3(d): rigid blocks are closed under lexicographic products. So every order in Sigma has a rigid block,
+  a superset of THM-4531's twist-rigid sizes (prime powers = 3 mod 4 or 5 mod 8, and 9).
+* Hand proofs that the forced classes of Theorem 6 are pairwise non-isomorphic (THM-4531 uses nauty certificates).
+* A(n) computed up to 10^6: A(n) >= 2 except at n = 8, 16, 40, which have computer certificates.
+* Together these extend O2 from 5 <= n <= 100 to 5 <= n <= 10^6 (Theorem 6). They reduce the switching half of
+  HYP-9172(a) to binary additive problems over Sigma (density about x/(log x)^(1/4)).
+* Theorem 10 adds two infinite families to O3 (n = 21, 30, 35, 39, 42, 45, ... are new).
+* Not in THM-4531: Theorem 2 (the level lemma) with the twisted Euler graph counts, the unboundedness of the
+  deficiency (§10), and the correction of §7.4.
 
 Notation. V = {0, ..., n-1}. A tournament T has scores s_T(v) (out-degrees). Switching T at U reverses every
 arc with exactly one end in U; [T] is the switching class (2^(n-1) labelled members). An Euler graph has all
@@ -90,7 +99,8 @@ n is odd, so |D| is even. The member with E = D has all scores = c (mod 2), and 
 is the set of flipped vertices. QED
 **Corollary 1.1.** C -> T*(C) is S_n-equivariant, so Stab(C) = Aut(T*(C)) has odd order, and for odd n
 A049313(n) = number of tournaments with all scores = (n-1)/2 (mod 2). *Verified:* 1, 2, 12, 792 for
-n = 3, 5, 7, 9 (gentourng), and the labelled statement for every tournament on 5 vertices and a sample on 7.
+n = 3, 5, 7, 9 (gentourng), and the labelled statement exhaustively for n = 5 and n = 7 (all 2^21 labelled tournaments on 7 vertices, in
+32768 classes; runner S1).
 
 *Relation to repo work.* For n = 1 mod 4 this is THM-1470 (even tournaments). For n = 3 mod 4 THM-1470 records
 only that no member has all scores even and exactly n members have a single odd score; Theorem 1 adds the
@@ -99,7 +109,8 @@ tournament as the matrix M_T over Z/4 with entries +1 (i -> j) and -1 (j -> i). 
 2 s(v) - (n-1), so "all scores = (n-1)/2 mod 2" means "all row sums = 0 mod 4", which Higashitani-Ueyama
 (arXiv:2409.10904, Def 4.1) call modular Eulerian; Z/4-switching by a vector with constant parity is
 tournament switching. Their Theorem 4.4 (gcd(n, l) = 1 gives exactly one modular Eulerian member per class,
-up to isomorphism) therefore implies Theorem 1. They do not mention tournaments; the specialisation and the
+up to isomorphism) therefore implies the unlabelled count of Corollary 1.1; the labelled uniqueness of Theorem 1
+needs the direct proof above. They do not mention tournaments; the specialisation and the
 direct proof above are ours.
 
 ## 3. The level lemma: how the twist sees the level split
@@ -201,7 +212,7 @@ reverses one edge).
 element. Since -1 lies in g^2 M, D and -D partition the nonzero elements, so R_q is a tournament. H = {x -> ax
 + b : a in M} has odd order q(q-1)/4 and two orbits on pairs (difference square or not), so the invariant
 graphs are empty, the Paley graph, its complement and K_q. The Paley graph and its complement are twisted by
-x -> -x: it has (q-1)/2 two-cycles {x, -x}, of which (q-1)/4 (odd) are edges.
+x -> -x: it has (q-1)/2 two-cycles {x, -x}, of which (q-1)/4 (odd) are edges. K_q is twisted as in (b).
 (d) Lexicographic products A[B] of rigid blocks, with H = H_B wr H_A: an invariant graph is either nonempty
 inside a copy of B (twisted by Lemma 5.1) or a blow-up of a nonempty H_A-invariant graph on A by independent
 sets of odd size |B| (twisted by Lemma 5.2), or empty.
@@ -216,8 +227,10 @@ hence F is twisted (Lemma 5.1); so F = Gamma[B_1, ..., B_m] with Gamma Euler (Le
 vertices the only Euler graph is empty. On three vertices the other one is the triangle, giving the complete
 3-partite graph; if |B_1| = |B_2| = w, swapping B_1 and B_2 reverses the w^2 (odd) edges between them and no
 others, so it is twisted. QED
-With four or more blocks no class of this shape is forced: Gamma = C4 gives a complete bipartite graph with
-even parts, which is Euler and untwisted.
+With four or more blocks the product group H_1 x ... x H_m never forces: Gamma = C4 gives a complete bipartite
+graph with even parts, which is Euler and untwisted. A larger subgroup of Stab(C) can force such a class. For
+example, with Q = source => C3 the lifts of its A_4 symmetry make Q[B, B, B, B] forced, but that class is the
+two-block class B => P_3[B] (audit, 2026-10-02).
 
 **Theorem 6 (PROVED for 5 <= n <= 10^6; CONDITIONAL beyond).** For n >= 5 let A(n) be
 * n odd: #{(w, w') : 2w + w' = n, w, w' in Sigma} + [n is a prime in Sigma];
@@ -235,22 +248,26 @@ Non-isomorphism:
   Theorem 1 is again Q*[B, B, B'] with Q* on 3 vertices. If Q* is transitive, the strong components of T* are
   the blocks; if Q* is the 3-cycle, the blocks are the maximal proper modules (the quotient is prime). Either
   way the block-size multiset {w, w, w'} is an invariant, and it determines (w, w'). The single block of prime
-  order n is a prime tournament (a circulant tournament of prime order has no nontrivial module: translates of
-  a minimal module of size >= 3 would be disjoint, and a 2-element module {x, x+d} forces, for every vertex
-  c, c -> c+d iff c -> c-d, which is impossible), while the three-block T* are decomposable.
+  order n is a prime tournament, while the three-block T* are decomposable. (A circulant tournament of prime
+  order p is regular, hence strong, so by Gallai's modular decomposition its maximal proper modules partition V
+  and every proper module lies inside one of them. That partition is invariant under the transitive group Z_p,
+  so its parts are blocks of imprimitivity of a group of prime degree, hence singletons.)
 * *n = 2 mod 4.* For even n, switching at U flips no parity (|U| even) or all parities (|U| odd), so the
   unordered partition of V by score parity is a class invariant. For B_{w1} => B_{w2}, vertices of B_1 have
   score (w1-1)/2 + w2 and those of B_2 have (w2-1)/2; as w1 = w2 (mod 4), these parities differ, so the
   partition is {B_1, B_2} and its part sizes {w1, w2} are an invariant.
-* *n = 0 mod 4.* Now the parity partition is trivial. For a pair {u, v}, restrict the class to V \ {u, v}
+* *n = 0 mod 4.* For these classes the parity partition is trivial. For a pair {u, v}, restrict the class to V \ {u, v}
   (n - 2 = 2 mod 4 vertices) and let beta(u, v) be the smaller part of its parity partition. The parity of
   x after deleting u, v changes by [x -> u] + [x -> v], so the parts are separated by S(u, v) = {x : x beats
-  exactly one of u, v}. Call {u, v} balanced if |S(u, v)| = (n-2)/2. For B_{w1} => P_q: mixed pairs give
+  exactly one of u, v}. Call {u, v} balanced if |S(u, v)| = (n-2)/2. This is a class invariant, since S(u, v) is a
+  part of the parity partition of the restricted class. For B_{w1} => P_q: mixed pairs give
   |S| = (w1-1)/2 + (q-1)/2 = (n-2)/2 (balanced); pairs inside B_1 give |S| <= w1 - 2 < (n-2)/2; pairs inside
   P_q give |S| = (q-1)/2 (P_q is doubly regular), balanced iff q = n - 1. So the number of balanced pairs is
   w1 (n - w1) for w1 >= 5 and C(n, 2) for w1 = 1, which determines w1. QED
-*Computation.* `arith`: A(n) for all n <= 10^6 by FFT convolution; the least value of A(n) over n >= 1000 is
-21, 169, 156, 146 in the classes n = 0, 1, 2, 3 (mod 4) (EMPIRICAL growth about n / sqrt(log n)). Allowing
+*Computation.* `arith`: A(n) for all n <= 10^6, by FFT convolution for odd n and n = 2 mod 4 and by exact slice
+sums for n = 0 mod 4. The least value of A(n) over n >= 1000 is 21, 169, 156, 146 in the classes
+n = 0, 1, 2, 3 (mod 4). EMPIRICAL: in the classes 1, 2, 3 the minima grow like n / sqrt(log n); in the class 0,
+where one summand is a prime, like n / (log n)^(5/4) (audit, 2026-10-02). Allowing
 prime powers q = 3 mod 4 in the n = 0 mod 4 case (Lemma 5.3(b) covers them) removes n = 40 from the
 exception list but needs Paley tournaments over F_q, so the runner uses primes.
 *What is missing for all n.* A(n) >= 2 for all n > 10^6 is a binary additive problem: Sigma has density about
@@ -266,10 +283,11 @@ of edges; our "untwisted" for arbitrary graphs) are equinumerous, and write: "It
 natural bijection between the sets of unlabelled even graphs and tournaments on n vertices." With "natural"
 read as in §1 (the only direction possible is tournaments -> even graphs):
 
-**Theorem 8 (PROVED, n = 5 by hand).** There is no natural bijection for n = 5. The five tournaments with a
+**Theorem 8 (PROVED, n = 5 by hand; = THM-4531 O3(b) at n = 5, found independently).** There is no natural
+bijection for n = 5. The five tournaments with a
 nontrivial automorphism (R_5 with Aut = Z_5, and four with Aut = Z_3: scores 0,1,3,3,3; 0,2,2,2,4; 1,1,1,3,4;
 1,2,2,2,3) can only go to even graphs invariant under an element of order 5 or 3. For order 5 the invariant
-graphs are empty, C5 (twice) and K5, and only the empty graph is even (a reflection of C5 reverses 3 edges).
+graphs are empty, C5 (twice) and K5, and only the empty graph is even (a reflection of C5 reverses an odd number of edges).
 For order 3 the even ones are the empty graph, K_{1,3} + K1, K_{1,4} and K_{2,3}. Five tournaments, four
 possible partners. QED
 
@@ -285,8 +303,9 @@ sides reverses w^2 edges). Two non-isomorphic Royle-forced tournaments rule out 
 exists for n in Sigma with at least two distinct prime factors (B_p[B_{n/p}] for two different primes p | n
 have different prime quotients in their modular decomposition) and for n = 2w with w such a number
 (B => B and B' => B' differ in their strong components). Examples: 15, 21, 30, 33, 35, 39, 42, 45, 55, 57, 63, 65, 66, 69, 70, ...
-With three or more blocks no class of this kind is Royle-forced (a path quotient gives K_{w, w'+w''}, which is
-even), so this method does not reach all n here; the switching setting has the extra Euler constraint, which
+With three or more blocks the product group H_1 x ... x H_m never Royle-forces (a path quotient gives
+K_{w, w'+w''}, which is even); a larger group can (C3[B, B, B] = P_3[B] is itself a rigid block), but only through
+such re-bracketings. So this method does not reach all n here; the switching setting has the extra Euler constraint, which
 is why §6 covers much more.
 
 **7.4 Correction to the repo's explanation.** HYP-3799, `07-reflections/one-word-two-even-graphs.md` and the
@@ -339,16 +358,21 @@ from the shell (HTTP 403), the OEIS search endpoint for the fetch tool (robots.t
 * Royle setting: THM-4531 O3 settles 5 <= n <= 15 and 16 larger n, and Theorem 10 adds two infinite families.
   The smallest n settled by neither is 16.
 * The deficiency of the best natural matching: 1, 1, 2, 3, 4 for n = 5..9 (switching) and 1, 2, 5, 12 for
-  n = 5..8 (Royle); THM-4531 adds 10 at n = 10 and 44 at n = 9 (Royle). Is it unbounded? A(n) gives a lower
-  bound of A(n) - 1 for n <= 10^6.
+  n = 5..8 (Royle); THM-4531 adds 10 at n = 10 and 44 at n = 9 (Royle). Its exact growth is open, but it is
+  **unbounded (PROVED)**. For every n >= 5 the A(n) forced classes of Theorem 6 are pairwise non-isomorphic (the
+  invariants of its proof work for every n) and all need the empty graph, so the deficiency is at least A(n) - 1.
+  And A(n) is unbounded: the primes = 3 mod 4 up to x/2 give >> x^2/log^2 x pairs (w1, w2) in Sigma^2 with
+  w1 = w2 (mod 4), whose sums are = 2 mod 4 and at most x, so some n <= x has A(n) >> x/log^2 x. On
+  1000 <= n <= 10^6 the deficiency is at least 20 (the minima of A(n) above) (audit, 2026-10-02).
 * Weaker notions of naturality (equivariance under a subgroup, or natural correspondences that are bijective
   only on isomorphism classes of rigid objects) remain unexplored.
 
 ## 11. Promotion candidates
 
 * Theorems 1 and 11 are already canon as THM-4531 P1 and P3 (found independently); nothing to promote.
-* Theorems 5-6 as an extension of THM-4531 O2 to 5 <= n <= 10^6, and as progress on HYP-9172(a) (the reduction
-  to A(n) >= 2).
+* Lemma 5.3(d) and Theorem 6 (Theorem 5 is THM-4531's block lemma (c)) as an extension of THM-4531 O2 to
+  5 <= n <= 10^6, and as progress on HYP-9172(a) (the reduction to A(n) >= 2); with it, the unboundedness of the
+  deficiency (§10).
 * Theorem 10 as an extension of THM-4531 O3 (two infinite families).
 * Theorem 2 (the level lemma) as the direct proof of how the twist sees THM-479's split, with the twisted counts.
 * The §7.4 correction, against HYP-3799 and `07-reflections/one-word-two-even-graphs.md`.
