@@ -1,0 +1,68 @@
+
+==============================================================================
+S1: cells and type counts against brute force
+==============================================================================
+d=3: 4 types; closed-form edge weights match brute force; counts add up to C(E,2) = 66
+d=4: 6 types; closed-form edge weights match brute force; counts add up to C(E,2) = 496
+d=5: 8 types; closed-form edge weights match brute force; counts add up to C(E,2) = 3160
+d=6: 10 types; closed-form edge weights match brute force; counts add up to C(E,2) = 18336
+d=7: 12 types; closed-form edge weights match brute force; counts add up to C(E,2) = 100128
+d=8: 14 types; closed-form edge weights match brute force; counts add up to C(E,2) = 523776
+type counts add up to C(E,2) for 9 <= d <= 40
+
+==============================================================================
+S2: the union bound V_d (potential forests, antipodal halving) and the base value V_10
+==============================================================================
+potential forests are forests for every type, 6 <= d <= 12
+d= 6: V_d = 41.795520; maximum-weight forests with halving 41.795520 (equal); without halving 82.795801
+d= 7: V_d = 29.211807; maximum-weight forests with halving 29.211807 (equal); without halving 57.034794
+d= 8: V_d = 13.004341; maximum-weight forests with halving 13.004341 (equal); without halving 25.841036
+d= 9: V_d = 3.842594; maximum-weight forests with halving 3.842594 (equal); without halving 7.443002
+d=10: V_d = 0.660228; maximum-weight forests with halving 0.660228 (equal); without halving 1.307453
+d=11: V_d = 0.085965; maximum-weight forests with halving 0.085965 (equal); without halving 0.156177
+d=12: V_d = 0.005561; maximum-weight forests with halving 0.005561 (equal); without halving 0.010748
+V_10 = 1001/1002-bit fraction < 0.6603 (exact)
+
+==============================================================================
+S3: the transfer lemma at the level of sub-cells, every type, 3 <= d <= 40
+==============================================================================
+41116 chooser edges transferred: sub-cell maps injective, on the image edge, sizes not decreasing;
+targets strictly more central; extra chooser not an image, extra edge weight = N*(t') in every case;
+B(t') <= B(t) beta(N*(t')) checked exactly for d <= 13
+
+==============================================================================
+S4: rho_d <= 1/2 for every d >= 10
+==============================================================================
+d=10 -> 11: rho_d <= 0.49587 (largest load on ('X', 4, 4))
+d=11 -> 12: rho_d <= 0.35085 (largest load on ('X', 4, 5))
+d=12 -> 13: rho_d <= 0.26127 (largest load on ('X', 5, 5))
+d=13 -> 14: rho_d <= 0.19845 (largest load on ('P', 12, 0))
+d=14 -> 15: rho_d <= 0.15036 (largest load on ('P', 12, 1))
+d=15 -> 16: rho_d <= 0.11648 (largest load on ('P', 14, 0))
+d=16 -> 17: rho_d <= 0.08751 (largest load on ('P', 14, 1))
+d=24 -> 25: rho_d <= 0.00877 (largest load on ('P', 22, 1))
+d=32 -> 33: rho_d <= 0.00077 (largest load on ('P', 30, 1))
+d=40 -> 41: rho_d <= 0.00006 (largest load on ('P', 38, 1))
+rho_d <= 0.49587 for 10 <= d <= 40 (exact rational upper bounds)
+  (for comparison, d=6: rho_d <= 1.7311)
+  (for comparison, d=7: rho_d <= 1.2326)
+  (for comparison, d=8: rho_d <= 0.9232)
+  (for comparison, d=9: rho_d <= 0.6542)
+crude bound max(2(d+1)^(3/2), 4(d+1)^2/(d-1)) sqrt(2/pi) 2^(-d/2): 2.93e-04 at d = 41, decreasing;
+it dominates the exact rho_d bound for 41 <= d <= 64; binomial lower bounds checked for m <= 300
+
+==============================================================================
+S5: antipodal terms and the conclusion
+==============================================================================
+A_11 <= 1.575e-02
+A_12 <= 3.746e-04
+A_13 <= 3.835e-04
+A_14 <= 4.027e-06
+sum of A_d over 11 <= d <= 60 <= 0.016518; tail d >= 61 <= 2.2e-09 (A_d <= 2^(-d/2): proved in the note,
+  checked numerically for 61 <= d < 400)
+V_(d+1) <= rho_d V_d + A_(d+1) with rho_d <= 1/2 gives, for every d >= 10,
+  V_d <= V_10 + sum_{k >= 11} A_k <= 0.6767 < 1
+consistency: V_11 = 0.08596 <= rho_10 V_10 + A_11 = 0.34314
+
+573465 checks
+ALL CHECKS PASSED
