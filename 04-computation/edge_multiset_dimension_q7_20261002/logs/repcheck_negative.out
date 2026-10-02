@@ -1,0 +1,2 @@
+REPCHECK n=5 a=3 mode=fast file_reps=4 checked=4 noncanonical=2 wrongsize=0 duplicates=1
+REPCHECK n=5 a=3 mode=full file_reps=4 checked=4 noncanonical=2 wrongsize=0 duplicates=1

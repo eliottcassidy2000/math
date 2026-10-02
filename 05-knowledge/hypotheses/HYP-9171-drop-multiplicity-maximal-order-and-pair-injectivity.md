@@ -23,3 +23,9 @@ related:
 
 **(b)** For `q = 3`, the proof eliminates the second drop and reduces to a single residue contradiction (`65 != 1 mod 6`). For general odd `q` the same elimination gives
 `n_1 E = M_v M_v' (2^delta - 1)`-type identities with `M_v = 2^v - q`. A uniform argument is missing.
+
+**Progress on (a) (2026-10-02; independent audit owed).**
+[`drop_multiplicities_supplement_20261002.md`](../results/drop_multiplicities_supplement_20261002.md) improves the upper
+bound to m(d) = O(log d / sqrt(log log d)), from k(k+3)/2 <= log2 n + (log2 n + 1) log2 tau(n) with n = 6d+1 and
+k = m(d) - 1, and gives m(d) <= log2(1 + sqrt(6d+5)). The O(sqrt(log X)) bound itself stays open; a primitive-divisor
+bound P_v >= 2^(cv) for 2^v - 3 would suffice (data: P_v > 2^(v/2) for 10 <= v <= 200).

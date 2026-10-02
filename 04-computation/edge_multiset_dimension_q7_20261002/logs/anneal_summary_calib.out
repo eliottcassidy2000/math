@@ -1,0 +1,2 @@
+ANNEAL anneal_q6_k15_calib.out d=6 k=15 restarts=92 moves=83088352 best_colliding_pairs=0 (python: pairs=0 defect=0, agree=True) resolving_found=55 python_verified=True orbits=44 best_set=3,16,18,23,26,28,30,32,38,42,43,44,46,50,56
+ANNEAL anneal_q7_k19_calib.out d=7 k=19 restarts=29 moves=56180674 best_colliding_pairs=0 (python: pairs=0 defect=0, agree=True) resolving_found=1 python_verified=True orbits=1 best_set=2,4,21,22,32,38,42,44,47,54,70,79,84,90,110,114,116,120,126

@@ -134,3 +134,9 @@ So `8 <= edim_m(Q_7) <= 19`.
 - L4: `not_resolving_of_length_le_six`, i.e. edim_m(Q_6) >= 7.
 - Explicit sets: edim_m(Q_7) <= 19, Q_8 <= 26, Q_9 <= 38.
 - Not formalized: the lower bound edim_m(Q_6) >= 15 (a 1.4e10-leaf search) and L5.
+
+**Later work (2026-10-02; independent audit owed).**
+- [`edge_multiset_dimension_q7_20261002.md`](../../05-knowledge/results/edge_multiset_dimension_q7_20261002.md):
+  Q_7 has no resolving set of size <= 12 (exhaustive search, FINITE-EXACT), so 13 <= edim_m(Q_7) <= 19.
+- [`edge_multiset_dimension_growth_20261002.md`](../../05-knowledge/results/edge_multiset_dimension_growth_20261002.md):
+  ln edim_m(Q_d) = Theta(d^(1/3)) (HYP-9169; Open Problem 2), with L5's constant 0.6216 improved to 0.8146.

@@ -1,0 +1,61 @@
+{
+ "D": 7,
+ "K": 6,
+ "excluded": {},
+ "ns_per_leaf": 0.0,
+ "per_a": {
+  "3": {
+   "chunks": 3,
+   "feasible_reps": 16,
+   "found": 0,
+   "fullchecks": 761,
+   "leaves": 666624,
+   "nodes": 31248,
+   "nrep": 16,
+   "reps": 16,
+   "sec": 0.0
+  },
+  "4": {
+   "chunks": 2,
+   "feasible_reps": 103,
+   "found": 0,
+   "fullchecks": 100,
+   "leaves": 19755,
+   "nodes": 3936,
+   "nrep": 103,
+   "reps": 103,
+   "sec": 0.0
+  },
+  "5": {
+   "chunks": 3,
+   "feasible_reps": 6,
+   "found": 0,
+   "fullchecks": 2,
+   "leaves": 11,
+   "nodes": 6,
+   "nrep": 497,
+   "reps": 497,
+   "sec": 0.0
+  },
+  "6": {
+   "chunks": 3,
+   "feasible_reps": 0,
+   "found": 0,
+   "fullchecks": 0,
+   "leaves": 0,
+   "nodes": 0,
+   "nrep": 3253,
+   "reps": 3253,
+   "sec": 0.0
+  }
+ },
+ "resolving": [],
+ "total": {
+  "found": 0,
+  "fullchecks": 863,
+  "leaves": 686390,
+  "nodes": 35190,
+  "reps": 3869,
+  "sec": 0.0
+ }
+}

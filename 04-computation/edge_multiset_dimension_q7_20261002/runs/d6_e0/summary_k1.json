@@ -1,0 +1,28 @@
+{
+ "D": 6,
+ "K": 1,
+ "excluded": {},
+ "ns_per_leaf": 0.0,
+ "per_a": {
+  "1": {
+   "chunks": 1,
+   "feasible_reps": 1,
+   "found": 0,
+   "fullchecks": 0,
+   "leaves": 1,
+   "nodes": 0,
+   "nrep": 1,
+   "reps": 1,
+   "sec": 0.0
+  }
+ },
+ "resolving": [],
+ "total": {
+  "found": 0,
+  "fullchecks": 0,
+  "leaves": 1,
+  "nodes": 0,
+  "reps": 1,
+  "sec": 0.0
+ }
+}

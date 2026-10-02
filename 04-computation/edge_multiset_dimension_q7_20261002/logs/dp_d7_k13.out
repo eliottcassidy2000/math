@@ -1,0 +1,6 @@
+DP d=7 k=13 a=7 b=6 reps=19735 leaves=1479619152480
+DP d=7 k=13 a=8 b=5 reps=120843 leaves=28261148980
+DP d=7 k=13 a=9 b=4 reps=681474 leaves=69191803
+DP d=7 k=13 a=10 b=3 reps=3561696 leaves=6982
+DP d=7 k=13 a=11 b=2 reps=16938566 leaves=0
+DP-TOTAL d=7 k=13 a_values=7,8,9,10,11 leaves=1507949500245

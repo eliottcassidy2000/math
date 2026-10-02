@@ -1,0 +1,143 @@
+
+==============================================================================
+S1: Theorem 1 -- odd n, the member with all scores = (n-1)/2 mod 2
+==============================================================================
+n=3: tournaments (up to isomorphism) with all scores = 1 mod 2: 1 = A049313(3)
+n=5: tournaments (up to isomorphism) with all scores = 0 mod 2: 2 = A049313(5)
+n=7: tournaments (up to isomorphism) with all scores = 1 mod 2: 12 = A049313(7)
+n=9: tournaments (up to isomorphism) with all scores = 0 mod 2: 792 = A049313(9)
+n=5: all 64 labelled switching classes contain exactly one such member
+n=7: all 32768 labelled switching classes contain exactly one such member
+
+==============================================================================
+S2: Theorem 2 -- level lemma, twisting witness, twisted Euler graph counts
+==============================================================================
+level lemma holds for every cycle type, n <= 13 (GF(2)); witness F0 checked for n <= 10
+twisted Euler graphs = A002854 - A049313, n = 1..13: [0, 0, 1, 1, 5, 10, 42, 164, 1246, 13544, 295716, 12353336, 1030186824]
+
+==============================================================================
+S3: Theorem 3 -- graphs, even n: [empty] and [K_n] are S_n-fixed, K_n is not Euler
+==============================================================================
+n=4: K_n has odd degrees; [K_n] != [empty]; both classes S_n-fixed -> both map to the empty graph
+n=6: K_n has odd degrees; [K_n] != [empty]; both classes S_n-fixed -> both map to the empty graph
+n=8: K_n has odd degrees; [K_n] != [empty]; both classes S_n-fixed -> both map to the empty graph
+
+==============================================================================
+S4: Theorem 4 -- natural matchings, switching classes -> untwisted Euler graphs
+==============================================================================
+n=3: classes = untwisted Euler graphs = 1, Euler graphs 2; nontrivial stabilizer orders [3]
+      maximum natural matching 1 of 1 (deficiency 0)
+n=4: classes = untwisted Euler graphs = 2, Euler graphs 3; nontrivial stabilizer orders [12, 4]
+      maximum natural matching 2 of 2 (deficiency 0)
+n=5: classes = untwisted Euler graphs = 2, Euler graphs 7; nontrivial stabilizer orders [5, 3]
+      maximum natural matching 1 of 2 (deficiency 1); Hall violator 2 classes (stabilizer orders [5, 3]) vs 1 Euler graphs
+      n=5: untwisted Euler graphs have 0 and 4 edges (empty, C4+K1); stabilizers Z3, Z5
+n=6: classes = untwisted Euler graphs = 6, Euler graphs 16; nontrivial stabilizer orders [18, 6, 6, 5, 3, 2]
+      maximum natural matching 5 of 6 (deficiency 1); Hall violator 2 classes (stabilizer orders [18, 5]) vs 1 Euler graphs
+n=7: classes = untwisted Euler graphs = 12, Euler graphs 54; nontrivial stabilizer orders [21, 9, 7, 5, 3, 3, 3]
+      maximum natural matching 10 of 12 (deficiency 2); Hall violator 3 classes (stabilizer orders [21, 9, 5]) vs 1 Euler graphs
+n=8: classes = untwisted Euler graphs = 79, Euler graphs 243; nontrivial stabilizer orders [168, 18, 18, 15, 12, 9, 8, 8, 8, 7, 6, 6, 6, 5, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+      maximum natural matching 76 of 79 (deficiency 3); Hall violator 6 classes (stabilizer orders [168, 18, 18, 15, 9, 5]) vs 3 Euler graphs
+n=9: classes = untwisted Euler graphs = 792, Euler graphs 2038; nontrivial stabilizer orders [81, 21, 15, 15, 9, 9, 9, 9, 9, 9, 9, 9, 9, 7, 5, 5, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+      maximum natural matching 788 of 792 (deficiency 4); Hall violator 11 classes (stabilizer orders [81, 21, 15, 15, 9, 9, 9, 9, 9, 5, 5]) vs 7 Euler graphs
+
+==============================================================================
+S5: Theorems 8, 9 -- Royle setting: tournaments -> even graphs
+==============================================================================
+n=3: tournaments = even graphs = 2; maximum natural matching 2 (deficiency 0)
+n=4: tournaments = even graphs = 4; maximum natural matching 4 (deficiency 0)
+n=5: tournaments = even graphs = 12; maximum natural matching 11 (deficiency 1); Hall violator 5 tournaments (|Aut| {3: 4, 5: 1}) vs 4 even graphs
+      n=5: 5 tournaments with |Aut| in {3,5}; their possible partners: 4 even graphs with [0, 3, 4, 6] edges
+n=6: tournaments = even graphs = 56; maximum natural matching 54 (deficiency 2); Hall violator 13 tournaments (|Aut| {3: 10, 5: 2, 9: 1}) vs 11 even graphs
+n=7: tournaments = even graphs = 456; maximum natural matching 451 (deficiency 5); Hall violator 49 tournaments (|Aut| {3: 40, 5: 4, 9: 4, 21: 1}) vs 44 even graphs
+n=8: tournaments = even graphs = 6880; maximum natural matching 6868 (deficiency 12); Hall violator 292 tournaments (|Aut| {3: 262, 5: 10, 9: 16, 15: 2, 21: 2}) vs 280 even graphs
+
+==============================================================================
+S6: Lemma 5.3 -- rigid blocks
+==============================================================================
+P3      order  3:  1 orbits on pairs, all 1 nonempty invariant graphs twisted
+P7      order  7:  1 orbits on pairs, all 1 nonempty invariant graphs twisted
+P11     order 11:  1 orbits on pairs, all 1 nonempty invariant graphs twisted
+P19     order 19:  1 orbits on pairs, all 1 nonempty invariant graphs twisted
+R5      order  5:  2 orbits on pairs, all 3 nonempty invariant graphs twisted
+R13     order 13:  2 orbits on pairs, all 3 nonempty invariant graphs twisted
+R29     order 29:  2 orbits on pairs, all 3 nonempty invariant graphs twisted
+P3[P3]  order  9:  2 orbits on pairs, all 3 nonempty invariant graphs twisted
+P3[R5]  order 15:  3 orbits on pairs, all 7 nonempty invariant graphs twisted
+R5[P3]  order 15:  3 orbits on pairs, all 7 nonempty invariant graphs twisted
+P3[P7]  order 21:  2 orbits on pairs, all 3 nonempty invariant graphs twisted
+P7[P3]  order 21:  2 orbits on pairs, all 3 nonempty invariant graphs twisted
+R5[R5]  order 25:  4 orbits on pairs, all 15 nonempty invariant graphs twisted
+
+==============================================================================
+S7: Theorems 5, 6 -- forced classes, two non-isomorphic ones for every n in range
+==============================================================================
+n=  5: forced constructions [(1, 1, 3), (5,)] -> 2 non-isomorphic classes
+n=  6: forced constructions [(1, 5), (3, 3)] -> 2 non-isomorphic classes
+n=  7: forced constructions [(1, 1, 5), (3, 3, 1), (7,)] -> 3 non-isomorphic classes
+n=  8: forced constructions [(1, 7), (3, 5)] -> 2 non-isomorphic classes
+n=  9: forced constructions [(1, 1, 7), (3, 3, 3)] -> 2 non-isomorphic classes
+n= 10: forced constructions [(1, 9), (3, 7), (5, 5)] -> 3 non-isomorphic classes
+n= 11: forced constructions [(1, 1, 9), (3, 3, 5), (5, 5, 1)] -> 3 non-isomorphic classes
+n= 12: forced constructions [(1, 11), (3, 9), (5, 7)] -> 3 non-isomorphic classes
+n= 20: forced constructions [(1, 19), (5, 15), (7, 13)] -> 3 non-isomorphic classes
+n= 30: forced constructions [(1, 29), (3, 27), (5, 25)] -> 3 non-isomorphic classes
+n= 40: forced constructions [(1, 39), (3, 37), (5, 35)] -> 3 non-isomorphic classes
+n= 50: forced constructions [(1, 49), (3, 47), (5, 45)] -> 3 non-isomorphic classes
+n= 60: forced constructions [(1, 59), (3, 57), (5, 55)] -> 3 non-isomorphic classes
+n= 70: forced constructions [(1, 69), (3, 67), (5, 65)] -> 3 non-isomorphic classes
+n= 80: forced constructions [(1, 79), (3, 77), (5, 75)] -> 3 non-isomorphic classes
+n= 90: forced constructions [(3, 87), (7, 83), (9, 81)] -> 3 non-isomorphic classes
+n=100: forced constructions [(1, 99), (5, 95), (7, 93)] -> 3 non-isomorphic classes
+every n in [5, 100]: at least two non-isomorphic forced switching classes
+
+==============================================================================
+S8: Theorem 6 -- the arithmetic condition A(n) >= 2, 5 <= n <= 10^6
+==============================================================================
+A(n) >= 2 for all 5 <= n <= 10^6 except n in [8, 16, 40] (covered by S7 / S4)
+  n = 0 mod 4, 1000 <= n <= 10^6: min A(n) = 21
+  n = 1 mod 4, 1000 <= n <= 10^6: min A(n) = 169
+  n = 2 mod 4, 1000 <= n <= 10^6: min A(n) = 156
+  n = 3 mod 4, 1000 <= n <= 10^6: min A(n) = 146
+  Sigma up to 10^6: 328981 elements
+
+==============================================================================
+S9: Theorem 6, n = 0 mod 4 -- balanced pairs of B_w1 => P_q
+==============================================================================
+B_1 => P_7 (n=8): 28 balanced pairs = C(n,2)
+B_5 => P_7 (n=12): 35 balanced pairs = w1*q
+B_1 => P_11 (n=12): 66 balanced pairs = C(n,2)
+B_5 => P_11 (n=16): 55 balanced pairs = w1*q
+B_1 => P_19 (n=20): 190 balanced pairs = C(n,2)
+B_9 => P_19 (n=28): 171 balanced pairs = w1*q
+B_5 => P_23 (n=28): 115 balanced pairs = w1*q
+B_13 => P_19 (n=32): 247 balanced pairs = w1*q
+B_1 => P_23 (n=24): 276 balanced pairs = C(n,2)
+B_9 => P_23 (n=32): 207 balanced pairs = w1*q
+
+==============================================================================
+S10: prime blocks and doubly regular Paley tournaments
+==============================================================================
+P_p prime and doubly regular (p = 3..31), R_p prime (p = 5, 13, 29, 37), P_3[R_5] decomposable
+
+==============================================================================
+S11: Theorem 10 -- Royle-forced families
+==============================================================================
+P3[R5]             n=15: 3 orbits on pairs, every nonempty invariant graph odd -> Royle-forced
+R5[P3]             n=15: 3 orbits on pairs, every nonempty invariant graph odd -> Royle-forced
+P3[R5] => P3[R5]   n=30: 7 orbits on pairs, every nonempty invariant graph odd -> Royle-forced
+R5[P3] => R5[P3]   n=30: 7 orbits on pairs, every nonempty invariant graph odd -> Royle-forced
+P3[R5] => R5[P3]   n=30: 7 orbits on pairs, every nonempty invariant graph odd -> Royle-forced
+no natural bijection (Royle setting) for n in [15, 21, 30, 33, 35, 39, 42, 45, 55, 57, 63, 65, 66, 69, 70, 75, 77, 78, 87, 90, 91, 93, 95, 99] ...
+
+==============================================================================
+S12: Theorem 11 -- switching classes vs modular Eulerian matrices in Alt_n(Z/l)
+==============================================================================
+l=2: s_{l,n} = t_{l,n} = [1, 2, 3, 7, 16] (n = 2..6)
+l=3: s_{l,n} = t_{l,n} = [1, 2, 4, 14, 120] (n = 2..6)
+l=4: s_{l,n} = t_{l,n} = [1, 3, 8, 62, 1760] (n = 2..6)
+l=6: s_{l,n} = t_{l,n} = [1, 4, 17, 461] (n = 2..5)
+l=8: s_{l,n} = t_{l,n} = [1, 5, 32, 2332] (n = 2..5)
+
+4573 checks; mode full
+ALL CHECKS PASSED

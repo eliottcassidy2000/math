@@ -1,0 +1,2 @@
+VALIDATE D=6 k=14 ok=True leaves C=5359115934 DP=5359115934 resolving_leaves=0 python_ok=True orbits=0 stab=[] cpu=183.1s problems=[]
+VALIDATE D=6 k=15 ok=True leaves C=13146176599 DP=13146176599 resolving_leaves=585 python_ok=True orbits=229 stab=[1] cpu=445.0s problems=[]

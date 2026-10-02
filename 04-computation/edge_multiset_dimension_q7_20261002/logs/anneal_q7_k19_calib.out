@@ -1,0 +1,31 @@
+restart 1: final cost 6, best in run 5, overall best 5
+restart 2: final cost 9, best in run 4, overall best 4
+restart 3: final cost 7, best in run 5, overall best 4
+restart 4: final cost 7, best in run 2, overall best 2
+restart 5: final cost 4, best in run 4, overall best 2
+restart 6: final cost 4, best in run 4, overall best 2
+restart 7: final cost 3, best in run 3, overall best 2
+restart 8: final cost 8, best in run 4, overall best 2
+restart 9: final cost 7, best in run 2, overall best 2
+restart 10: final cost 5, best in run 4, overall best 2
+restart 11: final cost 3, best in run 2, overall best 2
+restart 12: final cost 3, best in run 3, overall best 2
+RESOLVING d=7 k=19 set=70,2,44,32,54,47,110,21,126,90,42,4,120,38,22,114,79,116,84
+restart 13: final cost 0, best in run 0, overall best 0
+restart 14: final cost 9, best in run 3, overall best 0
+restart 15: final cost 6, best in run 3, overall best 0
+restart 16: final cost 8, best in run 5, overall best 0
+restart 17: final cost 7, best in run 4, overall best 0
+restart 18: final cost 7, best in run 3, overall best 0
+restart 19: final cost 6, best in run 3, overall best 0
+restart 20: final cost 4, best in run 2, overall best 0
+restart 21: final cost 3, best in run 3, overall best 0
+restart 22: final cost 7, best in run 3, overall best 0
+restart 23: final cost 5, best in run 5, overall best 0
+restart 24: final cost 4, best in run 4, overall best 0
+restart 25: final cost 5, best in run 5, overall best 0
+restart 26: final cost 5, best in run 4, overall best 0
+restart 27: final cost 5, best in run 5, overall best 0
+restart 28: final cost 5, best in run 4, overall best 0
+restart 29: final cost 4, best in run 3, overall best 0
+SUMMARY d=7 k=19 restarts=29 moves=56180674 best_colliding_pairs=0 best_set=70,2,44,32,54,47,110,21,126,90,42,4,120,38,22,114,79,116,84

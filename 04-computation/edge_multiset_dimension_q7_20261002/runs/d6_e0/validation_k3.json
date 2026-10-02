@@ -1,0 +1,31 @@
+{
+ "D": 6,
+ "k": 3,
+ "per_a": {
+  "2": {
+   "nrep": 5,
+   "chunks": 3,
+   "tiled": true,
+   "leaves_C": 160,
+   "leaves_DP": 160,
+   "found": 0,
+   "sec": 0.0
+  },
+  "3": {
+   "nrep": 10,
+   "chunks": 3,
+   "tiled": true,
+   "leaves_C": 0,
+   "leaves_DP": 0,
+   "found": 0,
+   "sec": 0.0
+  }
+ },
+ "ok": true,
+ "problems": [],
+ "resolving_leaves": 0,
+ "python_reverified": true,
+ "leaves_total_C": 160,
+ "leaves_total_DP": 160,
+ "cpu_sec": 0.0
+}

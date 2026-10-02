@@ -175,3 +175,9 @@ The bijective form remains open.
 - rho = 2: `parity_break_two`.
 - Finite facts: QR_7 / QR_7 - v (`qr7_counts`, `qr7del_counts`); no all-odd tournament for N <= 5 (`no_allOdd_three_to_five`); `no_covered_universal_arc`.
 - Not formalized: A3(a)-(d), B1, C2, E1, the dead-arc formula, the censuses.
+
+**Later work (2026-10-02; independent audit owed).** The bijective form is answered, in the natural
+(S_n-equivariant) sense, in [`natural_matchings_switching_classes_20261002.md`](../../05-knowledge/results/natural_matchings_switching_classes_20261002.md):
+a natural bijection from switching classes of tournaments to untwisted Euler graphs exists for n <= 4 and for no
+5 <= n <= 10^6 (FINITE-EXACT census for n = 5..9; PROVED with a computed additive condition up to 10^6; CONDITIONAL
+beyond). For odd n every switching class has exactly one member with all scores = (n-1)/2 mod 2.

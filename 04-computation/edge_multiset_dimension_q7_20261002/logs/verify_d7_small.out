@@ -1,0 +1,6 @@
+SUMMARY d=7 k=12 a=7 b=5 first=9000 last=9002 reps=2 feasible_reps=2 leaves=2641978 nodes=689520 fullchecks=1088 found=0 scan=9538493 vleaves=2641978 engine=0 hotcap=1024 verify=1 sec=25.801 ns_per_leaf=9765.665
+SUMMARY d=7 k=12 a=8 b=4 first=70000 last=70020 reps=20 feasible_reps=20 leaves=8820 nodes=3676 fullchecks=93 found=0 scan=23157 vleaves=8820 engine=0 hotcap=1024 verify=1 sec=0.071 ns_per_leaf=8018.498
+SUMMARY d=7 k=13 a=8 b=5 first=60000 last=60010 reps=10 feasible_reps=10 leaves=1550378 nodes=324895 fullchecks=992 found=0 scan=4375455 vleaves=1550378 engine=0 hotcap=1024 verify=1 sec=19.334 ns_per_leaf=12470.239
+SUMMARY d=7 k=13 a=9 b=4 first=300000 last=300200 reps=200 feasible_reps=200 leaves=5252 nodes=2558 fullchecks=64 found=0 scan=8545 vleaves=5252 engine=0 hotcap=1024 verify=1 sec=0.093 ns_per_leaf=17739.217
+SUMMARY d=7 k=13 a=10 b=3 first=0 last=3000 reps=3000 feasible_reps=34 leaves=451 nodes=226 fullchecks=2 found=0 scan=225 vleaves=451 engine=0 hotcap=1024 verify=1 sec=0.004 ns_per_leaf=9460.827
+VERIFY-DONE small rc=0

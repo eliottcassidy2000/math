@@ -1,0 +1,22 @@
+{
+ "D": 6,
+ "k": 1,
+ "per_a": {
+  "1": {
+   "nrep": 1,
+   "chunks": 1,
+   "tiled": true,
+   "leaves_C": 1,
+   "leaves_DP": 1,
+   "found": 0,
+   "sec": 0.0
+  }
+ },
+ "ok": true,
+ "problems": [],
+ "resolving_leaves": 0,
+ "python_reverified": true,
+ "leaves_total_C": 1,
+ "leaves_total_DP": 1,
+ "cpu_sec": 0.0
+}

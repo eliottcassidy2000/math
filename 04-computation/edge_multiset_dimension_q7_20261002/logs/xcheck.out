@@ -1,0 +1,5 @@
+d=4: 400 sets compared (C check mode vs pure Python), 0 resolving
+d=5: 400 sets compared (C check mode vs pure Python), 0 resolving
+d=6: 416 sets compared (C check mode vs pure Python), 1 resolving
+d=7: 420 sets compared (C check mode vs pure Python), 1 resolving
+XCHECK ALL AGREE

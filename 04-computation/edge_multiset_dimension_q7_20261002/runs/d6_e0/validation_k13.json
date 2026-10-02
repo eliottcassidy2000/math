@@ -1,0 +1,76 @@
+{
+ "D": 6,
+ "k": 13,
+ "per_a": {
+  "7": {
+   "nrep": 1326,
+   "chunks": 3,
+   "tiled": true,
+   "leaves_C": 1201610592,
+   "leaves_DP": 1201610592,
+   "found": 0,
+   "sec": 27.75
+  },
+  "8": {
+   "nrep": 3779,
+   "chunks": 2,
+   "tiled": true,
+   "leaves_C": 32468870,
+   "leaves_DP": 32468870,
+   "found": 0,
+   "sec": 3.22
+  },
+  "9": {
+   "nrep": 9013,
+   "chunks": 2,
+   "tiled": true,
+   "leaves_C": 93047,
+   "leaves_DP": 93047,
+   "found": 0,
+   "sec": 0.04
+  },
+  "10": {
+   "nrep": 19963,
+   "chunks": 2,
+   "tiled": true,
+   "leaves_C": 2,
+   "leaves_DP": 2,
+   "found": 0,
+   "sec": 0.0
+  },
+  "11": {
+   "nrep": 38073,
+   "chunks": 2,
+   "tiled": true,
+   "leaves_C": 0,
+   "leaves_DP": 0,
+   "found": 0,
+   "sec": 0.0
+  },
+  "12": {
+   "nrep": 65664,
+   "chunks": 2,
+   "tiled": true,
+   "leaves_C": 0,
+   "leaves_DP": 0,
+   "found": 0,
+   "sec": 0.0
+  },
+  "13": {
+   "nrep": 98804,
+   "chunks": 2,
+   "tiled": true,
+   "leaves_C": 0,
+   "leaves_DP": 0,
+   "found": 0,
+   "sec": 0.01
+  }
+ },
+ "ok": true,
+ "problems": [],
+ "resolving_leaves": 0,
+ "python_reverified": true,
+ "leaves_total_C": 1234172511,
+ "leaves_total_DP": 1234172511,
+ "cpu_sec": 31.0
+}

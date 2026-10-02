@@ -1,0 +1,2 @@
+SUMMARY d=7 k=12 a=6 b=6 first=1777 last=1778 reps=1 feasible_reps=1 leaves=74974368 nodes=7028847 fullchecks=10296 found=0 scan=260286961 vleaves=74974368 engine=0 hotcap=1024 verify=1 sec=632.853 ns_per_leaf=8440.919
+VERIFY-DONE big1 rc=0
