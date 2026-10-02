@@ -37,4 +37,7 @@ Making this rigorous needs a uniform, `q -> 0` version of the paper's forest-lem
 0.8146 = kappa_- <= liminf ln edim_m(Q_d)/d^(1/3) <= limsup <= kappa_+ = (3 sqrt2 ln 2)^(2/3) = 2.0526. The upper half
 uses sparse random sets with a uniform, q -> 0 version of the forest lemma (Theorem A); the lower half sharpens L5
 (Theorem B). It also proves edim_m(Q_d) < 2 exp(5 d^(1/3)) for every d >= 6 and certifies the sparse table for
-11 <= d <= 64 in interval arithmetic.
+11 <= d <= 64 in interval arithmetic. The parallel lane note
+[`procgen_edim2_20261001_growth_and_uniform_bounds.md`](../results/procgen_edim2_20261001_growth_and_uniform_bounds.md)
+(audit also owed) proves the same two constants independently, with different forests, so the two derivations
+can serve as cross-checks for the audit.

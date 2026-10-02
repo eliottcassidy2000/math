@@ -14,6 +14,12 @@ independent audit OWED. **Promoted:** nothing (no THM/HYP IDs reserved).
 The growth runner `04-computation/experiments/edge_multiset_dimension_growth_20261002_run.py` (S10) re-checks the
 two 19-sets and the orbit counts from scratch and audits the deposited records; with `--q7` it rebuilds the search
 and re-runs the fast subset (Section 7.3).
+**Parallel work.** The mac-mini lane note
+[`procgen_edim2_20261001_growth_and_uniform_bounds.md`](procgen_edim2_20261001_growth_and_uniform_bounds.md) §6
+(orchestrator audit owed) landed on `origin/main` (12d7b60c) while this note was being finished. Independently, it
+proves 11 <= edim_m(Q_7) by an exhaustive search in a maximal-imbalance normal form (k <= 10), and leaves one case
+of k = 11 unfinished (a = 11, b = 0 in its normal form). The search here covers every set of size k <= 12, so it
+settles that case as well. Both searches reproduce THM-4525 on Q_6 and the same Burnside orbit counts.
 
 **Status of k = 13.** The k = 13 search (1,507,949,500,245 leaves) was started at 2026-10-02 00:09:40 UTC and was
 still running when this note was committed. Nothing about k = 13 is claimed here; Section 4.4 says how to read
@@ -23,7 +29,8 @@ its outcome.
 
 **Main result (FINITE-EXACT, computer-assisted).**
 * Q_7 has no edge-multiset resolving set of any size k = 1, ..., 12. Hence **edim_m(Q_7) ≥ 13**.
-* With the known resolving 19-set: **13 ≤ edim_m(Q_7) ≤ 19**. The previous bounds were 8 ≤ edim_m(Q_7) ≤ 19.
+* With the known resolving 19-set: **13 ≤ edim_m(Q_7) ≤ 19**. The previous bounds were 8 ≤ edim_m(Q_7) ≤ 19
+  (11 ≤ edim_m(Q_7) in the parallel procgen_edim2 note).
 
 **Method.**
 * Every k-set is reduced to the minimum-imbalance normal form (Lemma 1, proved in Section 2.2): one

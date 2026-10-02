@@ -14,6 +14,20 @@ which records "the bijective form remains open".
 `04-computation/experiments/natural_matchings_switching_classes_20261002_lib.py`. Needs numpy, sympy and nauty (`geng`, `gentourng`,
 `labelg`, `dreadnaut`, with or without the `nauty-` prefix).
 **Output:** `05-knowledge/results/natural_matchings_switching_classes_20261002.out` (runner stdout, `--full`).
+**Parallel work.** [THM-4531](../../01-canon/theorems/THM-4531-twisted-mallows-sloane-principle-and-no-natural-bijection-for-switching-classes.md)
+(PROVED + INDEPENDENTLY AUDITED) and its note [procgen_tbij_20261001_natural_bijections.md](procgen_tbij_20261001_natural_bijections.md)
+landed on `origin/main` (80cbda5c) while this note was being finished; the two were written independently.
+Overlap: Lemma 0 = THM-4531 N1; Theorem 1 = P1; Theorem 3 = O4 (one direction); the remark at the end of §1 = O1;
+Theorem 11 = P3. The census deficits of Theorems 4 and 9 agree with THM-4531's exhaustive matchings, which go one
+size further (n <= 10 for classes, n <= 9 for tournaments). THM-4531 also has Theorem G, P2, Theorem B and S,
+which are not here.
+New here: Theorems 5-6 extend O2 from 5 <= n <= 100 to 5 <= n <= 10^6. Rigid blocks are closed under
+lexicographic products (Lemma 5.3(d)), so every order in Sigma is available, a superset of THM-4531's twist-rigid
+sizes (prime powers = 3 mod 4 or 5 mod 8, and 9). The forced classes are told apart by hand, and A(n) was computed
+up to 10^6 (A(n) >= 2 except at n = 8, 16, 40, which have computer certificates). This reduces the switching half of
+HYP-9172(a) to binary additive problems over Sigma (density about x/(log x)^(1/4)). Theorem 10 adds two infinite
+families to O3 (n = 21, 30, 35, 39, 42, 45, ... are new). Theorem 2 (the level lemma), the twisted Euler graph
+counts and the correction of §7.4 are not in THM-4531.
 
 Notation. V = {0, ..., n-1}. A tournament T has scores s_T(v) (out-degrees). Switching T at U reverses every
 arc with exactly one end in U; [T] is the switching class (2^(n-1) labelled members). An Euler graph has all
@@ -29,13 +43,13 @@ its cycle lengths have the same 2-adic valuation (THM-479, Babai-Cameron).
 | # | Result | Status |
 |---|--------|--------|
 | 1 | "Natural" = S_n-equivariant. A natural bijection on isomorphism classes exists iff a perfect matching exists in which each class is matched to an object whose stabilizer contains (a conjugate of) the class stabilizer (Lemma 0). | PROVED |
-| 2 | **Odd n:** every switching class contains exactly one tournament whose scores are all congruent to (n-1)/2 mod 2. So for every odd n, A049313(n) = number of tournaments with all scores = (n-1)/2 mod 2, and "class -> that member" is a natural bijection (Theorem 1). | PROVED. n = 1 mod 4 is THM-1470; n = 3 mod 4 (all scores odd) is new to the repo. Also the tournament case of Higashitani-Ueyama Thm 4.4 (CITED) |
+| 2 | **Odd n:** every switching class contains exactly one tournament whose scores are all congruent to (n-1)/2 mod 2. So for every odd n, A049313(n) = number of tournaments with all scores = (n-1)/2 mod 2, and "class -> that member" is a natural bijection (Theorem 1). | PROVED. n = 1 mod 4 is THM-1470; n = 3 mod 4 (all scores odd) was found independently of THM-4531 P1. Also the tournament case of Higashitani-Ueyama Thm 4.4 (CITED) |
 | 3 | **Level lemma:** if g is level, every g-invariant Euler graph has eps_F(g) = +1; if g is not level, exactly half of them have eps_F(g) = -1 (Theorem 2). Twisted Euler graphs: 0,0,1,1,5,10,42,164,1246,13544,295716,12353336,1030186824 (n = 1..13). | PROVED (new direct proof; equivalent to THM-4524 + THM-479). Counts FINITE-EXACT |
 | 4 | **Graphs:** for even n >= 4 no natural map from two-graphs to Euler graphs is injective on isomorphism classes; for odd n Seidel's map is a natural bijection (Theorem 3). | PROVED (elementary) |
 | 5 | **The bijective form of OPEN-Q-060:** a natural bijection (switching classes of tournaments) <-> (untwisted Euler graphs) exists for n <= 4 and does not exist for n = 5, ..., 9 (Theorem 4). | FINITE-EXACT; n = 5 also by hand |
 | 6 | It does not exist for any 5 <= n <= 10^6 (Theorems 5, 6): two non-isomorphic "forced" classes, built from rigid blocks (Paley and quartic-residue tournaments and their lexicographic products), must both go to the empty graph. | PROVED, with a computer check of an additive condition. For all n >= 5: CONDITIONAL on that condition |
 | 7 | **Royle-Praeger-Glasby-Freedman-Devillers setting** (tournaments vs even graphs; they ask for a natural bijection): a natural bijection exists for n <= 4 and not for n = 5, 6, 7, 8 (Theorems 8, 9), nor for infinitely many further n, e.g. 15, 21, 30, 33, 35, 39, 42 (Theorem 10). | FINITE-EXACT (n <= 8); n = 5 by hand; families PROVED |
-| 8 | Side result: for every l >= 2 and n >= 1, switching classes in Alt_n(Z/l) and modular Eulerian matrices are equinumerous up to isomorphism (Theorem 11). Higashitani-Ueyama prove this for l prime or gcd(n, l) = 1, and for l = 4 say they expect it without proof. | PROVED; VERIFIED for l in {2, 3, 4, 6, 8}, small n |
+| 8 | Side result: for every l >= 2 and n >= 1, switching classes in Alt_n(Z/l) and modular Eulerian matrices are equinumerous up to isomorphism (Theorem 11). Higashitani-Ueyama prove this for l prime or gcd(n, l) = 1, and for l = 4 say they expect it without proof. | PROVED (= THM-4531 P3, found independently); VERIFIED for l in {2, 3, 4, 6, 8}, small n |
 
 **What this settles in OPEN-Q-060.** The question's "still open" part had two items. (a) The bijective
 form: unlabelled bijections exist trivially (the counts agree by THM-4524), so the content is in naturality,
@@ -322,19 +336,22 @@ from the shell (HTTP 403), the OEIS search endpoint for the fetch tool (robots.t
 ## 10. OPEN
 
 * A(n) >= 2 for all n > 10^6, or another source of two forced classes, to make Theorem 6 unconditional.
-* Royle setting: is there a natural bijection for any n >= 9? (Theorems 9 and 10 leave e.g. n = 9, 10, 11 open.)
+* Royle setting: THM-4531 O3 settles 5 <= n <= 15 and 16 larger n, and Theorem 10 adds two infinite families.
+  The smallest n settled by neither is 16.
 * The deficiency of the best natural matching: 1, 1, 2, 3, 4 for n = 5..9 (switching) and 1, 2, 5, 12 for
-  n = 5..8 (Royle). Is it unbounded? A(n) gives a lower bound of A(n) - 1 for n <= 10^6.
+  n = 5..8 (Royle); THM-4531 adds 10 at n = 10 and 44 at n = 9 (Royle). Is it unbounded? A(n) gives a lower
+  bound of A(n) - 1 for n <= 10^6.
 * Weaker notions of naturality (equivariance under a subgroup, or natural correspondences that are bijective
   only on isomorphism classes of rigid objects) remain unexplored.
 
 ## 11. Promotion candidates
 
-* Theorem 1 (odd-n canonical member) as an addendum to THM-1470.
-* Theorems 2, 4, 6 as a theorem on OPEN-Q-060 ("no natural bijection for 5 <= n <= 10^6"), with Theorem 2 noted
-  as the direct proof of THM-4524 + THM-479.
-* Theorems 8-10 against HYP-3799 (Royle setting), with the §7.4 correction.
-* Theorem 11 (outside the project's main line; worth a note to the authors if it survives a reading of the PDF).
+* Theorems 1 and 11 are already canon as THM-4531 P1 and P3 (found independently); nothing to promote.
+* Theorems 5-6 as an extension of THM-4531 O2 to 5 <= n <= 10^6, and as progress on HYP-9172(a) (the reduction
+  to A(n) >= 2).
+* Theorem 10 as an extension of THM-4531 O3 (two infinite families).
+* Theorem 2 (the level lemma) as the direct proof of how the twist sees THM-479's split, with the twisted counts.
+* The §7.4 correction, against HYP-3799 and `07-reflections/one-word-two-even-graphs.md`.
 
 ## 12. Reproduction
 

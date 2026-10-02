@@ -15,3 +15,17 @@ source: collatz-procgen-20260922 session, tbij lane (2026-10-01), conjecture C1 
 related:
   - 01-canon/theorems/THM-4531-twisted-mallows-sloane-principle-and-no-natural-bijection-for-switching-classes.md
   - 01-canon/theorems/THM-479-level-holonomy-and-branch-split.md
+---
+
+# HYP-9172 — no natural bijection for the twisted Mallows–Sloane identities at any n >= 5
+
+**Progress on (a) (2026-10-02; independent audit owed).**
+[`natural_matchings_switching_classes_20261002.md`](../results/natural_matchings_switching_classes_20261002.md),
+written in parallel with THM-4531, proves the switching-class half of (a) for every 5 <= n <= 10^6. Lexicographic
+products of rigid blocks are rigid (Lemma 5.3(d) there), so rigid blocks exist for every odd order with no prime
+factor = 1 mod 8 (the set Sigma), which contains every twist-rigid size listed above. The forced classes are told apart
+by hand, and the number A(n) of available constructions is >= 2 for every 5 <= n <= 10^6 except n = 8, 16, 40, which
+have computer certificates. So the switching half of (a) reduces to A(n) >= 2: binary additive problems over Sigma,
+a set of density about x/(log x)^(1/4), with one summand a prime = 3 mod 4 when n = 0 mod 4. The tournament half
+gains two infinite families: n in Sigma with at least two distinct prime factors, and twice such n (21, 30, 35, 39,
+42, 45, ... are new). The exhaustive deficits there agree with the ones above for n <= 9 and n <= 8.

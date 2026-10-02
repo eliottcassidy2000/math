@@ -17,18 +17,29 @@ density-1/2 landmark sets with sparse ones.
 (the growth conjecture, proved here; promotion and audit owed).
 **Runner:** `04-computation/experiments/edge_multiset_dimension_growth_20261002_run.py`; stdout in
 `05-knowledge/results/edge_multiset_dimension_growth_20261002.out`, ending with ALL CHECKS PASSED.
+**Parallel work.** The mac-mini lane note
+[`procgen_edim2_20261001_growth_and_uniform_bounds.md`](procgen_edim2_20261001_growth_and_uniform_bounds.md)
+(lane results, orchestrator audit owed) landed on `origin/main` (12d7b60c) while this note was being finished; the
+two were written independently. It reaches the same constants kappa_+ = 2.0526 and kappa_- = 0.8146 and the same
+density dichotomy for Open Problem 4, with a different forest construction (a star lemma with path and zigzag
+forests, against Lemma H and the toward-the-centre forest here). It is sharper on three points: Open Problem 3 (a
+closed-form estimate at density 1/2 for every d >= 17, against d >= 64 here in the sparse regime), the certified
+sparse table (its Lemma FH gives M_11 = 361, M_16 = 636, M_64 = 31808, against 492, 978, 57738 here), and its
+Theorem C, which shows that kappa_+ is exactly the reach of the forest-lemma union bound. New here: the explicit
+bound edim_m(Q_d) < 2 exp(5 d^(1/3)) for every d >= 6 (Theorem C below), and the Q_7 search (13 <= edim_m(Q_7),
+against 11 there). So for items 1, 4 and 5 below this note is an independent second derivation.
 
 ## Status header
 
 | # | Claim | Label |
 |---|-------|-------|
-| 1 | **Open Problem 2 is settled: ln edim_m(Q_d) = Theta(d^(1/3)).** More precisely, kappa_- <= liminf ln edim_m(Q_d)/d^(1/3) <= limsup <= kappa_+, where kappa_+ = (3 sqrt2 ln 2)^(2/3) = 2.0526 and kappa_- = ((3 sqrt2/4) ln 2)^(2/3) = kappa_+/4^(2/3) = 0.8146. This proves HYP-9169. | PROVED (Theorems A and B); audit owed before promotion |
+| 1 | **Open Problem 2 is settled: ln edim_m(Q_d) = Theta(d^(1/3)).** More precisely, kappa_- <= liminf ln edim_m(Q_d)/d^(1/3) <= limsup <= kappa_+, where kappa_+ = (3 sqrt2 ln 2)^(2/3) = 2.0526 and kappa_- = ((3 sqrt2/4) ln 2)^(2/3) = kappa_+/4^(2/3) = 0.8146. This proves HYP-9169, independently of procgen_edim2_20261001 (same constants). | PROVED (Theorems A and B); audit owed before promotion |
 | 2 | **Explicit form, every d >= 6:** edim_m(Q_d) < 2 exp(5 d^(1/3)). | PROVED (Theorem C: explicit sets for 6 <= d <= 12; certified table for 11 <= d <= 64; Theorem A checked in interval arithmetic for 64 <= d <= 10^5; by hand beyond) |
-| 3 | **Certified sparse table.** For every 11 <= d <= 64, a random set of rational density q_d is resolving and has at most M_d points with positive probability, so edim_m(Q_d) <= M_d. Examples: Q_11 <= 492, Q_16 <= 978, Q_32 <= 6242, Q_64 <= 57738 (full table in section 4). ln M_d / d^(1/3) lies in [2.731, 2.788]. | FINITE-EXACT (outward-rounded interval arithmetic). Supersedes item 7 of the first note, which was double precision only |
-| 4 | **Open Problem 4 (density 1/2 versus sparse).** For random sets S_q: P(S_q resolves) -> 1 when ln(q 2^d) >= (kappa_+ + eps) d^(1/3), uniformly in q <= 1/2; P(S_q resolves) -> 0 when ln(q 2^d) <= (kappa_- - eps) d^(1/3). Minimum resolving sets have density 2^(-d) e^(Theta(d^(1/3))), so density-1/2 sets are larger by a factor 2^(d - O(d^(1/3))). | PROVED (Theorem D) |
+| 3 | **Certified sparse table.** For every 11 <= d <= 64, a random set of rational density q_d is resolving and has at most M_d points with positive probability, so edim_m(Q_d) <= M_d. Examples: Q_11 <= 492, Q_16 <= 978, Q_32 <= 6242, Q_64 <= 57738 (full table in section 4). ln M_d / d^(1/3) lies in [2.731, 2.788]. | FINITE-EXACT (outward-rounded interval arithmetic). Supersedes item 7 of the first note, which was double precision only; procgen_edim2_20261001 item 10 is sharper (Lemma FH) |
+| 4 | **Open Problem 4 (density 1/2 versus sparse).** For random sets S_q: P(S_q resolves) -> 1 when ln(q 2^d) >= (kappa_+ + eps) d^(1/3), uniformly in q <= 1/2; P(S_q resolves) -> 0 when ln(q 2^d) <= (kappa_- - eps) d^(1/3). Minimum resolving sets have density 2^(-d) e^(Theta(d^(1/3))), so density-1/2 sets are larger by a factor 2^(d - O(d^(1/3))). | PROVED (Theorem D); the same dichotomy is procgen_edim2_20261001 item 10 |
 | 5 | Lemma H (a "valid cell" lemma for the hypergeometric law) and the toward-the-centre forest. For every pair type with h, nu >= 1, every level with \|t\| > 1 has a flow edge toward the middle whose cell carries at least 1/(3(min(h,nu)+1)) of the level. | PROVED; exact check for all L <= 60 |
-| 6 | Open Problem 3 (one analytic estimate valid from d = 11). | OPEN. The analytic estimate here starts at d = 64; below that a computation is still used, as in the paper |
-| 7 | **Q_7: no resolving set of size <= 12, so 13 <= edim_m(Q_7) <= 19** (was 8..19). Exhaustive search up to Aut(Q_7), validated end to end on Q_6 (section 7; full write-up in [the Q_7 note](edge_multiset_dimension_q7_20261002.md)). | FINITE-EXACT (computer-assisted); audit owed |
+| 6 | Open Problem 3 (one analytic estimate valid from d = 11). | OPEN. The analytic estimate here starts at d = 64; below that a computation is still used, as in the paper. procgen_edim2_20261001 Theorem D reaches d = 17 at density 1/2 |
+| 7 | **Q_7: no resolving set of size <= 12, so 13 <= edim_m(Q_7) <= 19** (was 8..19; 11..19 in procgen_edim2_20261001, k <= 10). Exhaustive search up to Aut(Q_7), validated end to end on Q_6 (section 7; full write-up in [the Q_7 note](edge_multiset_dimension_q7_20261002.md)). | FINITE-EXACT (computer-assisted); audit owed |
 
 ## 0. Definitions and notation
 
@@ -383,7 +394,9 @@ d = 64 (with lambda = 5 d^(1/3)). Its losses are the factor 1/(3(L+1)) of Lemma 
 removed, a union bound at d = 11 has little room: the exact-atom, best-forest bound at q = 1/2 is
 U(11) = 0.156 (first note). Reaching d = 11 analytically would need a different idea, for example a
 lifting lemma from Q_d to Q_(d+1); none was found. The naive lift S x {0} fails: after two lifts the
-set is fixed by swapping the two new coordinates, so L1 excludes it.
+set is fixed by swapping the two new coordinates, so L1 excludes it. The parallel note
+procgen_edim2_20261001 goes further at density 1/2: a closed-form estimate for every d >= 17 (its Theorem D)
+and, with its Fourier-Hoelder lemma, a certified U_10 <= 0.2649.
 
 ## 7. Q_7
 **Theorem 7.1 (FINITE-EXACT, computer-assisted; audit owed).** Q_7 has no edge-multiset resolving set of any
@@ -413,7 +426,8 @@ records: `04-computation/edge_multiset_dimension_q7_20261002/`.
 * Random sets cannot do much better than kappa_+. A typical pair of edges collides with probability
   about the product of its central atoms, so the expected number of colliding pairs is about U, and
   U -> infinity for ln m <= (kappa_+ - eps) d^(1/3). A second-moment argument would turn this into a
-  threshold at kappa_+ for random sets; it was not attempted.
+  threshold at kappa_+ for random sets; it was not attempted. (procgen_edim2_20261001 Theorem C proves the
+  related statement that no choice of forests makes the union bound work below kappa_+.)
 * The entropy bound treats each level count as if it could take about mu_r values; a random set only
   spreads it over about sqrt(mu_r) values. And the union bound pays for pairs (2 d ln 2) rather than
   edges (d ln 2). These two factors of 2 are exactly the ratio kappa_+/kappa_- = 4^(2/3). Whether a
