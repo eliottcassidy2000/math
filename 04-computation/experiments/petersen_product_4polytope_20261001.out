@@ -1,0 +1,71 @@
+== verify: polyhedral CNF and rotation DNF against brute force
+  d=4: 1 labelled polyhedral graphs; CNF exact: True; rotation DNF exact: True
+  d=5: 25 labelled polyhedral graphs; CNF exact: True; rotation DNF exact: True
+  d=6: 1227 labelled polyhedral graphs; CNF exact: True; rotation DNF exact: True
+  CHECK verify PASSED
+== sanity: known 4-polytopes must pass, known non-polytopal graphs must fail
+  C5 x C5 (product of pentagons) 25 vertices
+  model: 160 candidate faces, 3810 vars, 17125 clauses (0.0s)
+  SAT (all checks) after 1 iterations (0.0s), cuts {}
+    2-faces [(4, 25), (5, 10)], facets [(10, 10)]
+  J(5,2) (rectified 5-cell) 10 vertices
+  model: 57 candidate faces, 8862 vars, 89300 clauses (0.1s)
+  SAT (all checks) after 1 iterations (0.0s), cuts {}
+    2-faces [(3, 30)], facets [(4, 5), (6, 5)]
+  icosahedron x K2 (icosahedral prism) 24 vertices
+  model: 1674 candidate faces, 51558 vars, 352608 clauses (0.3s)
+  SAT (all checks) after 1 iterations (1.8s), cuts {}
+    2-faces [(3, 40), (4, 27), (5, 2), (6, 2)], facets [(6, 16), (8, 5), (9, 2)]
+  K33 x K2 (PPS Prop. 2.11: not polytopal) 12 vertices
+  model: 63 candidate faces, 1203 vars, 5628 clauses (0.0s)
+  UNSAT after 1 iterations (0.0s), cuts {}
+  P x K2 (PPS Thm 2.3: not polytopal) 20 vertices
+  model: 359 candidate faces, 7319 vars, 33380 clauses (0.0s)
+  UNSAT after 4 iterations (0.0s), cuts {'H': 1, 'F1': 2, 'Fglobal': 4, 'F6': 4}
+  CHECK sanity PASSED
+== structure of P x P
+  induced cycles of P x P up to 10 vertices: [(4, 225), (5, 240), (6, 200), (7, 3600), (8, 6300), (9, 14400), (10, 172440)]
+  vertex figures (mixed, pureH, pureV): [((3, 3, 3), 6), ((4, 3, 3), 36), ((5, 2, 2), 36), ((5, 2, 3), 54), ((5, 3, 2), 54), ((5, 3, 3), 72), ((6, 2, 2), 144), ((6, 2, 3), 90), ((6, 3, 2), 90), ((6, 3, 3), 42), ((7, 1, 1), 18), ((7, 1, 2), 54), ((7, 1, 3), 18), ((7, 2, 1), 54), ((7, 2, 2), 144), ((7, 2, 3), 36), ((7, 3, 1), 18), ((7, 3, 2), 36), ((8, 1, 1), 36), ((8, 1, 2), 54), ((8, 1, 3), 18), ((8, 2, 1), 54), ((8, 2, 2), 45), ((8, 3, 1), 18)]
+  -> every vertex figure has a pure H edge, a pure V edge and at most 8 of the 9 mixed edges
+  induced cycles of P: Counter({5: 12, 6: 10})
+  maximal families of pairwise properly meeting 5/6-cycles of P: {((5, 6),): 2, ((5, 3), (6, 1)): 20, ((5, 2),): 6}
+  Phi(beta) = sum over the 6 complementary pentagon pairs of beta(C,C') vanishes on all symmetric bilinear forms on Z_1(P;Z/2): True
+  CHECK structure PASSED
+== P x P, no bent faces, vertex figures + proper intersections only (no edge-figure orientation): the purely local 2-face conditions are satisfiable
+  model: 665 candidate faces, 13265 vars, 57800 clauses (0.1s)
+  SAT (2-face level) after 1 iterations (0.0s)
+  a 2-face system with polyhedral vertex figures: [((4, 'square'), 180), ((5, 'fibre'), 65), ((6, 'fibre'), 11)]
+== P x P, sub-case: no bent 2-faces and every vertex figure a triangulation whose faces all have both H and V vertices
+  model: 665 candidate faces, 91265 vars, 903800 clauses (0.9s)
+  allowed labelled vertex figures per vertex: [81]
+  UNSAT after 1 iterations (52.8s), cuts {}
+  result: UNSAT (excluded)
+== P x P, sub-case: every 2-face is a square or lies in a fibre, and every vertex lies in exactly 8 square 2-faces
+  model: 665 candidate faces, 91265 vars, 903800 clauses (1.2s)
+  UNSAT after 1 iterations (47.9s), cuts {}
+  result: UNSAT (excluded)
+== validation: K33 x K3.  PPS (end of their paper) announce that the unique strongly regular combinatorial
+   manifold with this graph is a cellular S^1 x RP^2 (6 triangular prisms + 9 cubes).
+  all induced cycles: 456 [(3, 6), (4, 54), (6, 108), (7, 216), (9, 72)]
+  model: 456 candidate faces, 10752 vars, 64494 clauses (0.0s)
+    it 50: cuts {'F1': 34, 'F6': 213, 'F4': 17, 'Fglobal': 6}  (2s)
+  SAT (all checks) after 54 iterations (1.6s), cuts {'F1': 35, 'F6': 218, 'F4': 18, 'Fglobal': 7}
+  without (H): 2-faces [(3, 6), (4, 36)] facets [(6, 6), (8, 9)] ; (H) fails on it: True
+  model: 456 candidate faces, 10752 vars, 64494 clauses (0.0s)
+    it 50: cuts {'F1': 43, 'F6': 233, 'H': 7, 'F4': 9}  (2s)
+  UNSAT after 53 iterations (1.6s), cuts {'F1': 45, 'F6': 243, 'H': 7, 'F4': 9}
+  with (H): UNSAT -- K33 x K3 is not 4-polytopal (as PPS announce)
+== P x P, no bent faces, constraints (V)+(R) imposed only at the vertices of 8 of the 10 H-fibres
+  model: 665 candidate faces, 75665 vars, 716560 clauses (0.8s)
+  SAT (10.4s)
+== P x C3 (Petersen x triangle), candidate 2-faces = all induced cycles with <= 10 vertices
+  candidates: 3301 [(3, 10), (4, 45), (5, 36), (6, 30), (7, 360), (8, 1260), (9, 1200), (10, 360)]
+  model: 3301 candidate faces, 86341 vars, 415290 clauses (0.5s)
+    it 100: cuts {'H': 12, 'F1': 88, 'F6': 630}  (50s)
+    it 200: cuts {'H': 18, 'F1': 182, 'F6': 1349, 'F4': 3}  (60s)
+  UNSAT after 207 iterations (61.0s), cuts {'H': 18, 'F1': 188, 'F6': 1413, 'F4': 3}
+  result: UNSAT (excluded)
+ALL REQUESTED CHECKS DONE (213s)
+== P x C3 (Petersen x triangle), candidate 2-faces = all induced cycles with <= 31 vertices
+  candidates: 7681 [(3, 10), (4, 45), (5, 36), (6, 30), (7, 360), (8, 1260), (9, 1200), (10, 360), (11, 1800), (12, 2580)]
+  model: 7681 candidate faces, 309241 vars, 1390890 clauses (1.2s)
