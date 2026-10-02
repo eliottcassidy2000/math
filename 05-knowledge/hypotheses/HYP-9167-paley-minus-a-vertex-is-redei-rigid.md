@@ -65,4 +65,5 @@ The existence half of (b) is now reduced to HYP-9170 (P1). Known existence cases
   - `r = 15, 17` by two inclusion-exclusion engines, reproduced on re-run.
   - `r = 19` by one engine run.
 - **Coverage.** All-odd tournaments now exist for every `N = 2 (mod 4)` up to 38. That includes `N = 34, 38`, where no Paley tournament minus a vertex exists, since 35 and 39 are not prime powers.
+- **N = 38 confirmed by a second engine (2026-10-02).** The orchestrator ran karp3 on the converse `D_19^op`, in 4 parts: `H` is odd and all 37 arc orbits are odd. The lane's run was karp4 on `D_19`. Output: `procgen_tcpc_20261001_n38_op_karp3.out`.
 - **Relation to Paley.** `D_3 = QR_7 - v`, `D_5 = QR_11 - v`, `D_7 = QR_127[mu_14]`; `D_9`, `D_11`, `D_13` are new. Part (a), Paley minus a vertex for every `q`, is untouched.

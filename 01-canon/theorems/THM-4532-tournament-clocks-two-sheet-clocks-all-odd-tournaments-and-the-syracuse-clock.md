@@ -16,8 +16,9 @@ status: >
   bound).
   FINITE-EXACT:
   - D_r is all-odd for every odd r <= 19: independently audited for r <= 13 (N <= 26); r = 15 (N = 30) and r = 17
-    (N = 34) by two independent inclusion-exclusion engines (lane, reproduced on re-run); r = 19 (N = 38) by one engine run
-    (karp4, 14.5e9 subset representatives; a second-engine confirmation is still owed);
+    (N = 34) by two independent inclusion-exclusion engines (lane, reproduced on re-run); r = 19 (N = 38) by two engines,
+    karp4 on D_19 (lane) and karp3 on the converse D_19^op (orchestrator run, 4 parts, 14,467,258,263 canonical
+    subsets; the same two-engine standard as N = 34);
   - the N = 14 two-sheet census (exactly one all-odd class, D_7).
   REFUTED: the lane's own draft one-term parity formula for lexicographic products (corrected in the note).
   OPEN:
@@ -53,7 +54,10 @@ audit: >
   D_9's H equals the unexplained second all-odd anti-circulant class at N = 18 in THM-4529's census, so that class is D_9.
   The lane's runner was re-run with --long --n34 (1657 s, 671799 checks, ALL CHECKS PASSED). D_15 (N = 30) by karp3 and karp4,
   and D_17 (N = 34) by karp3 on T and karp4 on T^op, were reproduced. The output is identical to the lane's apart from the --n26 lines
-  not requested. The N = 38 run (karp4 only, 72 minutes) was not repeated.
+  not requested. The N = 38 karp4 run (72 minutes) was not repeated. Instead the orchestrator ran karp3 on D_19^op
+  (procgen_tcpc_20261001_n38_op_orchestrator.py, 4 parts of about 45 CPU-minutes each; output
+  procgen_tcpc_20261001_n38_op_karp3.out, sha256 a38911ce7159b213efb51ee82c59f05823bbdfd45376e1a839ec02dcf91ed003):
+  H odd and all 37 arc orbits odd. The canonical-subset count, 14,467,258,263, equals karp4's.
 ---
 
 # THM-4532 — tournament clocks, two-sheet clocks and all-odd tournaments
