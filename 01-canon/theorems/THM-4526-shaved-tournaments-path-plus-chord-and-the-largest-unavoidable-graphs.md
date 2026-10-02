@@ -87,3 +87,11 @@ Full proof: note §1.
 - `copiesH_add`: #copies(H_n) + n hc = H.
 - Theorem A for even n, through a from-scratch formal proof of Rédei's theorem (`redei`).
 - The odd-n case for n > 5 and Theorems B and C are not formalized.
+
+**LITERATURE + UPDATE 2026-10-01 (collatz-procgen-20260922 shave4 lane, THM-4533; orchestrator-audited).**
+- **Theorem A is classical.** H_n is the oriented Hamiltonian cycle of block type (n-1, 1). In El Zein's proof of Rosenfeld's conjecture (arXiv:2204.11211, exactly 35 exceptions), the exceptions of this type are C3 and the 5-vertex class. El Zein credits them to Havet (JCTB 80 (2000)), and existence to Grunbaum (JCTB 11 (1971)). The insertion-lemma proof here is an independent proof, and the even-n parity statement is new in form only.
+- **Theorem C's constant is settled.** Linial, Saks and Sos, "Largest digraphs contained in all n-tournaments", Combinatorica 3 (1983) 101-104, give u(n) = n log n - O(n log log n), so c = 1.
+- **D70 resolved.** u(9) = 14 and kappa(9) = 22, matching the excess-law prediction; there are 54 classes of maximum 9-shavings.
+- **D69 resolved.** Path + span-3 is Redei exactly for n = 4, 5, 6.
+- **D72.** Rédei graphs are treated in THM-4533.
+- **Independent audit.** Theorem A was verified independently for all classes with n <= 9, and its odd-n proof re-derived step by step with no gap found.
