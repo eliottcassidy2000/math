@@ -5,7 +5,8 @@ golden denominator and signed Collatz investigations.
 
 **PROVED** below: elementary difference-pair arithmetic, triangular splice
 law, a golden fundamental domain, the primitive-phase correspondence, and
-the exact 19-branch phase tower. **FINITE-EXACT**: the stated complete
+the exact 19-branch phase tower; lattice-carry termination for supplied
+golden-field inputs. **FINITE-EXACT**: the stated complete
 denominator censuses and integer filters. **PROPOSED / OPEN**: the combined
 family carrier and a normalizer covering every integer. The companion
 [rational-anchor compiler](rational_anchor_returns_20261004.md) proves new
@@ -115,6 +116,28 @@ The finite size-N diagonal is the triangular split chart; moving along
 D_n changes N by even increments while preserving the block imbalance n.
 This gives a concrete meaning to a family of integers organized by one
 difference.
+
+There is also a useful categorical reading: regard (a,b) as the arrow
+b -> a. The integer is its displacement, and D_n consists of all translates
+of an arrow of displacement n. Sequential composition remembers the middle
+endpoint:
+
+    (a,b) compose (b,c)=(a,c).
+
+Parallel addition is the first operation in (2). They satisfy the typed
+interchange identity
+
+    [(a,b) compose (b,c)]+[(d,e) compose (e,f)]
+      =[(a,b)+(d,e)] compose [(b,c)+(e,f)]
+      =(a+d,c+f).
+
+This gives two genuine ways of composing a construction. Sequential
+composition has one identity (b,b) at each object and is defined only when
+endpoints match. There is no single common-unit operation on all arrows
+to which the usual Eckmann-Hilton conclusion could be applied. Forgetting
+the endpoints sends both compositions to addition of displacements and
+loses precisely their different gluing instructions. This is a concrete
+reason to keep the family members rather than only their integer labels.
 
 ## The triangular f law and a typed interpretation of g
 
@@ -285,6 +308,50 @@ tilings associated with Pisot units](https://arxiv.org/pdf/0907.2676),
 version 3, Example 3.14 and section 4.3. The elementary domain and counting
 proofs used here are supplied above. No novelty is claimed for that framework.
 
+### A terminating difference normalization inside the golden field
+
+There is a useful synthesis with the original difference proposal. For any
+x in Q(phi) intersect (0,1), of exact q>1, let x_bar be the unique point
+of D with the same residue. Their difference is an algebraic integer:
+
+    x=x_bar+u+v*phi, u,v in Z.
+
+Run beta on both. If their current digits are d and d_bar, the offset obeys
+
+    (u,v) -> (v-(d-d_bar),u+v).                       (10a)
+
+This is an exact carry equation: the finite periodic phase runs in V_q,
+and an unbounded integer pair records the deviation from its periodic
+representative. It retains precisely the data lost by reduction modulo q.
+
+**PROVED termination on field inputs.** Every such offset eventually
+becomes (0,0). The conjugate coordinate obeys y_next=psi*y-d, so it is
+eventually bounded because |psi|<1. The first coordinate stays in [0,1].
+At fixed denominator q, the two bounds leave finitely many possible
+coefficient pairs. The deterministic orbit therefore becomes periodic.
+By the primitive-phase theorem every periodic point is in D, where its
+residue has the unique representative x_bar. Thus the offset vanishes.
+This is the elementary quadratic Pisot mechanism in this coordinate system.
+
+For the certified source 151,
+
+    Theta(151)=(586-361*phi)/2
+              =Theta(1)+(293-181*phi).
+
+Its reference phase begins at Theta(1)=phi/2. The offset (293,-181)
+becomes zero after the fifteen ordinary steps of 151 -> 227 -> 341 -> 1
+(three odd steps and twelve divisions). Another control is
+Theta(-9)=(30-12*phi)/11, with reference numerator (8,-1) and offset (2,-1).
+Both phase and offset are verified against the actual parity digits.
+
+The scope is crucial: termination is proved for **supplied field inputs**.
+Constructing Theta(n) in Q(phi) from an arbitrary integer n without already
+knowing its future remains the missing part. The formula does not establish
+that every positive n has q=2. It gives a total normalizer on the proposed
+algebraic carrier, while surjectivity of its integer-realizable sealed part
+onto all positive integers is OPEN. This states exactly where a new
+certificate-generating theorem would have to enter.
+
 ## Prime products and the precise role of 6 over pi squared
 
 Inclusion-exclusion in (11) gives exactly
@@ -324,6 +391,7 @@ checked:
 | 10 | 72 | 12 : 1; 60 : 1 | none |
 | 11 | 120 | 5 : 2; 10 : 11 | -5 |
 | 19 | 360 | 9 : 2; 18 : 19 | none |
+| 29 | 840 | 7 : 4; 14 : 58 | none |
 | 38 | 1080 | 9 : 6; 18 : 57 | none |
 | 76 | 4320 | 18 : 240 | -17 |
 | 100 | 7200 | 60 : 20; 300 : 20 | none |
@@ -397,6 +465,17 @@ cycles, covering all 1559520 primitive phases. At q=76 the same filter
 retains the known -17 cycle. The extra 19 branches therefore do not simply
 produce a fourth negative integer root. No all-k exclusion is claimed.
 
+The computation also explains a stronger failure at this first lift.
+Every q=1444 word has between 83 and 106 odd letters in its 342 raw steps.
+A negative rational cycle would require 3^p>2^(342-p), hence p>=133.
+Thus **every cycle at this exact denominator is a positive rational cycle**;
+none can serve as a negative growth anchor. This is a complete finite
+statement at k=2, not an extrapolation to all levels.
+At q=76 there are 26 negative rational cycles, only one integer cycle.
+Reduction between the two levels therefore does not preserve the sign of
+the decoded Collatz root. The phase quotient retains period information
+while losing the parity weight that determines that sign.
+
 Another cheap extrapolation also fails: the magnitudes 1,5,17 continue
 under a ->3a+2 to 53, but
 
@@ -448,6 +527,26 @@ is a third, different orbit; its first values -7/4,21/16,-7/256 do not close.
 The conductor-nine companion reverses to parameter -11/4 with multiplier
 19. That 19 is a quadratic multiplier; a conjugacy with the tower (14) has
 not been established.
+
+There is a more direct arithmetic web around the new compiler anchor:
+
+    rational Collatz: -19/11 -> -23/11 -> -29/11 -> -19/11,
+    scaled 3n-11:       19   ->   23   ->   29   ->   19,
+    final numerator: 3*29-11=76=4*19,
+    golden phase: Theta(-19/11)=(-4+20*phi)/29.
+
+Here scaling by -11 and the parity evaluation are explicit maps. The
+golden denominator 29 follows from phi^7-1=7+13*phi, of norm -29. This
+explains why a golden phase with no integer cycle can nevertheless be a
+useful rational anchor for **integer** route families. The compiler retains
+the denominator-11 integrality guard instead of discarding that phase.
+
+The same last numerator 29 and total division factor 16 suggest comparing
+with c=-29/16. An affine identification of the two three-point cycles
+fails: the rational Collatz cycle has unequal successive sorted gaps
+4/11 and 6/11, whereas the quadratic cycle is an arithmetic progression.
+The numbers alone do not supply a dynamical conjugacy. The surviving
+connection is the explicitly typed anchored-coordinate framework (18)-(20).
 
 These are useful atlases of anchored dynamics. Their common content is
 the exact displacement update with retained phase, not an assertion that
@@ -577,7 +676,7 @@ The [saved output](difference_families_20261004.out) records:
 - All exact denominators 2..30,38,76,100: the domain points and every
   primitive residue agree with the earlier independently implemented trap
   enumeration. This is 32 complete denominator comparisons.
-- Complete phase and integer-cycle counts for the ten displayed q values,
+- Complete phase and integer-cycle counts for the eleven displayed q values,
   and all 4560 cycles / 1559520 phases at q=1444.
 - Matrix-order controls at all eight levels k=1..8 of (14). The all-vector,
   all-k assertion rests on (16), not on matrix-order sampling.
@@ -586,9 +685,18 @@ The [saved output](difference_families_20261004.out) records:
   and 63000 radix reconstruction instances.
 - 722 rational quadratic-pair controls, the exact -29/16 cycle and its
   multiplier, the -53 hostile, and exact coefficient-pair checks of (21).
+- Golden carry normalization for every exact-denominator point with
+  q in {2,11,76}, -40<=a,b<=40 and 0<(a+b*phi)/q<1, plus the two signed
+  itinerary controls 151 and -9. The output records its count and maximum
+  entry time; the all-field termination proof is separate.
 
 The rational compiler has a separate reproduction block and explicit
 universes in its companion. Checks remain active under optimized Python.
 This is a self-audited research note with independent computational paths,
 not an assertion of an independent human or agent review. No Lean theorem
 or universal Collatz result is claimed.
+
+Repository-wide documentation validation also reports the pre-existing
+maintained-prefix budget failure in `05-knowledge/hypotheses/INDEX.md`
+(125 lines, budget 120). That file is unchanged in this session; it does
+not affect the exact research replays above.

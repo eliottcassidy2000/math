@@ -110,6 +110,8 @@ def log2_mod3(target,power):
 
 def sealed_certificate(m,target):
     """Power-expression certificate; its source need not be expanded."""
+    cycles={1:[2],-1:[1],-5:[1,2],-17:[1,1,1,2,1,1,4]}
+    check(target in cycles,'this seal requires a named terminal cycle')
     modulus=27**m
     t=log2_mod3(-19*pow(11*target,-1,modulus),3*m)
     period=2*3**(3*m-1)
@@ -117,6 +119,7 @@ def sealed_certificate(m,target):
     check((19+11*target*pow(2,t,modulus))%modulus==0)
     return {'chart':{'word':[1,1,2],'anchor_numerator':-19,'anchor_denominator':11},
             'repetitions':m,'terminal':target,'terminal_exponent':t,
+            'terminal_cycle_word':cycles[target],
             'exponent_period':period,
             'source_expression':'(16^m*(19+11*r*2^t)-19*27^m)/(11*27^m)',
             'parameters':{'m':m,'r':target,'t':t},
@@ -137,6 +140,12 @@ def replay_sealed(cert):
     check(current==r and (source>0)==(r>0))
     P,Q,B=compose(word)
     check(P*source+B==Q*r)
+    current=r
+    for a in cert['terminal_cycle_word']:
+        z=3*current+1
+        check(z!=0 and (abs(z)&-abs(z)).bit_length()-1==a)
+        current=z//2**a
+    check(current==r,'terminal cycle does not close')
     cert['replayed_source_bit_length']=abs(source).bit_length()
     if abs(source).bit_length()<150:cert['replayed_source']=source
     return source

@@ -69,8 +69,9 @@ def j2(q):
     return sum(gcd(gcd(a,b),q)==1 for a in range(q) for b in range(q))
 
 
-def phase_cycles(q, decode=False):
+def phase_cycles(q, decode=False, profile=False):
     visited=bytearray(q*q); lengths=Counter(); roots=[]; total=0
+    odd_counts=Counter()
     for a in range(q):
         for b in range(q):
             start=a*q+b
@@ -92,6 +93,7 @@ def phase_cycles(q, decode=False):
                     else:
                         A+=1
                 check((x,y)==initial,"golden lift does not close")
+                odd_counts[p]+=1
                 denominator=2**A-3**p
                 if B%denominator==0:
                     root=B//denominator; current=root; values=[]
@@ -103,6 +105,13 @@ def phase_cycles(q, decode=False):
                         current=3*current+1 if digit else current//2
                     check(current==root)
                     roots.append(min(values,key=abs))
+    if profile:
+        check(len(lengths)==1,'profile sign threshold needs a common period')
+        L=next(iter(lengths))
+        negative=sum(number for p,number in odd_counts.items() if 3**p>2**(L-p))
+        if q==1444:check(min(odd_counts)==83 and max(odd_counts)==106 and negative==0)
+        print('q',q,'odd-count profile',dict(sorted(odd_counts.items())),
+              'negative rational cycles',negative)
     return total,dict(sorted(lengths.items())),sorted(roots)
 
 
@@ -185,6 +194,48 @@ def owner_identities():
             print(label,'lambda',format(lam,'.18f'),'illustrative mass GeV',format(mass,'.12f'))
 
 
+def carry_normalization():
+    cases=maximum=0
+    for q in (2,11,76):
+        for a in range(-40,41):
+            for b in range(-40,41):
+                if gcd(gcd(a,b),q)!=1 or sign(a,b)<=0 or sign(a-q,b)>=0:
+                    continue
+                P=(a,b); R=representative(a%q,b%q,q); steps=0
+                while P!=R:
+                    u,v=(P[0]-R[0])//q,(P[1]-R[1])//q
+                    NP,d=beta(*P,q);NR,rd=beta(*R,q)
+                    check(((NP[0]-NR[0])//q,(NP[1]-NR[1])//q)==(v-(d-rd),u+v))
+                    P,R=NP,NR;steps+=1
+                    check(steps<1000,'normalization control exceeded its bound')
+                cases+=1;maximum=max(maximum,steps)
+    print('Golden lattice-carry normalization:',cases,'field inputs; max entry time',maximum)
+    for start,target,q,root in [(151,1,2,(0,1)),(-9,-5,11,(-1,7))]:
+        n=start;bits=[]
+        while n!=target:
+            bits.append(n%2);n=3*n+1 if n%2 else n//2
+        a,b=root
+        for d in bits[::-1]:a,b=b-a-d*q,a+d*q
+        P=(a,b);R=representative(a%q,b%q,q)
+        offset=((a-R[0])//q,(b-R[1])//q)
+        print('Certified field input:',start,'theta numerator',P,'q',q,'lattice offset',offset)
+        for d in bits:
+            P,digit=beta(*P,q);R,rd=beta(*R,q)
+            check(digit==d)
+        check(P==R==root)
+
+    # The inherited rational anchor supplies a concrete 11/19/29/76 bridge.
+    P=(-4,20);q=29;n=Fraction(-19,11);initial=n;bits=[]
+    for _ in range(7):
+        digit=n.numerator%2
+        NP,d=beta(*P,q);check(d==digit)
+        n=3*n+1 if digit else n/2
+        P=NP;bits.append(digit)
+    check(P==(-4,20) and n==initial and bits==[1,0,1,0,1,0,0])
+    check(3*29-11==76==4*19)
+    print('Rational -19/11 anchor: raw word 1010100; theta=(-4+20*phi)/29; 3*29-11=76=4*19')
+
+
 def main():
     import argparse
     parser=argparse.ArgumentParser()
@@ -207,8 +258,8 @@ def main():
             check(representative(a,b,q) in window)
         checks+=1
     print('L-domain / independent old trap / every primitive phase:',checks,'complete denominators')
-    for q in (2,3,4,5,10,11,19,38,76,100):
-        total,lengths,roots=phase_cycles(q,decode=True)
+    for q in (2,3,4,5,10,11,19,29,38,76,100):
+        total,lengths,roots=phase_cycles(q,decode=True,profile=(q==76))
         check(total==j2(q))
         print('q',q,'J2',total,'periods',lengths,'integer roots',roots)
 
@@ -224,7 +275,7 @@ def main():
         print('tower k',k,'q',q,'primitive phases',4320*19**(2*k-2),
               'common period',length,'cycles',240*19**(k-1))
     if args.large:
-        total,lengths,roots=phase_cycles(1444,decode=True)
+        total,lengths,roots=phase_cycles(1444,decode=True,profile=True)
         check(total==1559520 and lengths=={342:4560} and roots==[])
         print('COMPLETE q=1444 integer filter:',total,'phases;',lengths,'cycles; roots',roots)
 
@@ -245,6 +296,7 @@ def main():
     check(all(n==-1 for n,k in records) and all(records[i+1][1]>records[i][1] for i in range(7)))
     print('Hostile over the -1 cycle (value, common part):',records)
     owner_identities()
+    carry_normalization()
     print('ALL CHECKS PASSED')
 
 

@@ -6,7 +6,9 @@ q 5 J2 24 periods {4: 1, 20: 1} integer roots []
 q 10 J2 72 periods {12: 1, 60: 1} integer roots []
 q 11 J2 120 periods {5: 2, 10: 11} integer roots [-5]
 q 19 J2 360 periods {9: 2, 18: 19} integer roots []
+q 29 J2 840 periods {7: 4, 14: 58} integer roots []
 q 38 J2 1080 periods {9: 6, 18: 57} integer roots []
+q 76 odd-count profile {1: 1, 2: 5, 3: 23, 4: 54, 5: 73, 6: 58, 7: 23, 8: 3} negative rational cycles 26
 q 76 J2 4320 periods {18: 240} integer roots [-17]
 q 100 J2 7200 periods {60: 20, 300: 20} integer roots []
 tower k 1 q 76 primitive phases 4320 common period 18 cycles 240
@@ -17,6 +19,7 @@ tower k 5 q 9904396 primitive phases 73368992337120 common period 2345778 cycles
 tower k 6 q 188183524 primitive phases 26486206233700320 common period 44569782 cycles 594263760
 tower k 7 q 3575486956 primitive phases 9561520450365815520 common period 846825858 cycles 11291011440
 tower k 8 q 67934252164 primitive phases 3451708882582059402720 common period 16089691302 cycles 214529217360
+q 1444 odd-count profile {83: 11, 84: 49, 85: 93, 86: 193, 87: 244, 88: 337, 89: 227, 90: 184, 91: 158, 92: 146, 93: 207, 94: 244, 95: 282, 96: 227, 97: 259, 98: 319, 99: 400, 100: 354, 101: 236, 102: 196, 103: 120, 104: 61, 105: 12, 106: 1} negative rational cycles 0
 COMPLETE q=1444 integer filter: 1559520 phases; {342: 4560} cycles; roots []
 Difference-pair arithmetic: 28561 ordered pairs; Collatz lifts 169
 Hostile over the -1 cycle (value, common part): [(-1, 1), (-1, 2), (-1, 3), (-1, 5), (-1, 8), (-1, 12), (-1, 18), (-1, 27)]
@@ -25,4 +28,8 @@ Quadratic difference and sum: 722 pairs; -29/16 cycle and multiplier 35/8
 Negative-root extrapolation hostile: [-53, -79, -59, -11, -1] then repeats -1
 literal lambda 0.554855513344434017 illustrative mass GeV 259.375097730384
 historical lambda 0.129280563443397023 illustrative mass GeV 125.200177018301
+Golden lattice-carry normalization: 2852 field inputs; max entry time 12
+Certified field input: 151 theta numerator (586, -361) q 2 lattice offset (293, -181)
+Certified field input: -9 theta numerator (30, -12) q 11 lattice offset (2, -1)
+Rational -19/11 anchor: raw word 1010100; theta=(-4+20*phi)/29; 3*29-11=76=4*19
 ALL CHECKS PASSED

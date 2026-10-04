@@ -131,6 +131,19 @@ Take w=(1,1,2). Then
     W(n)=(27n+19)/16, r=-19/11,
     r -> -23/11 -> -29/11 -> r.
 
+Multiplying these three points by -11 gives the generalized accelerated
+3n-11 cycle 19 -> 23 -> 29 -> 19. Its last numerator is exactly
+3*29-11=76=4*19. The numbers 11,19,29,76 are therefore connected by an
+explicit map and actual cycle equations, with no claim that this is a
+new ordinary integer Collatz cycle. Its raw parity word is 1010100, so
+
+    Theta(r)=(phi^6+phi^4+phi^2)/(phi^7-1)
+            =(-4+20*phi)/29.
+
+The anchor's arithmetic denominator is 11 and its golden denominator is
+29. Keeping their types distinct is part of the certificate. The phase
+script independently checks this identity and the seven raw steps.
+
 For m>=2 let t_m be least with
 
     2^t*(16^m-19)>27^m-19.                           (7)
