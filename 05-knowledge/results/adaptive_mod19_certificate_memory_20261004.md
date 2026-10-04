@@ -6,12 +6,13 @@ Universal Collatz convergence, universal selector termination and LRC(14)
 remain **OPEN**. No publication-priority or runtime-improvement claim is made.
 
 The session produced an executable source-aware selector, four automatically
-learned infinite descent cylinders, and a reusable graph of completed route
-suffixes. On the declared finite universe, keeping proof memory had a much
-larger effect than adding one more local rule. Mod19 supplies a different
-positive function: it selects addresses of completed routes and exposes an
-exact hierarchy of shared ternary digits, beginning at19 and continuing
-through the earlier cubic clock's missing factors.
+learned infinite descent cylinders, and a reusable graph of route evidence.
+The strongest finite improvement came from retaining unfinished checked
+segments as well as completed suffixes. Mod19 supplies a different positive
+function: it selects addresses of completed routes and exposes an exact
+hierarchy of shared ternary digits, beginning at19 and continuing through the
+earlier cubic clock's missing factors. Concurrent work then supplied an exact
+map from this block clock to recursive triangular torus layers and tournaments.
 
 ## 1. Inheritance, portfolio and live board
 
@@ -94,6 +95,16 @@ to67. Its exact word through the join is1113, whose coefficient81/64 is still
 expanding. A supplied proof for67 therefore solves an obligation before the
 actual orbit or its coefficient has descended.
 
+Concurrent commit `78c99c600` supplies a second dependency for the same
+family: `39+64k`, with word `(1,1,2,1)` to that same join. Its
+[reset switch](checked_switch_phase19_20261004.md), section3, transforms
+`(1^r,a)` into `(1^(r-1),2,a-2)` for a>=3 and gives the smaller source
+`(n-1)/2`. Our ladders satisfy this reset guard. The two constructions offer
+different supplied proofs: one has a shorter join, the other a smaller source.
+Keeping both is meaningful; choosing by only one statistic can lose an
+available certificate. Reset2 is excluded because the transformed last
+exponent would be zero; the incoming note retains a debt state instead.
+
 For each s>=1, choose the unique j with
 `(3/2)^j<4^s<(3/2)^(j+1)`. An explicit dyadic cylinder then gives a smaller
 sibling dependency after j actual steps, while all j+1 actual prefixes still
@@ -168,6 +179,46 @@ discarded an available proof for the actual join335. Retaining both repaired
 that case. This echoes the inherited241/483 examples: a smaller numerical
 representative need not be the useful available certificate. Finite policy
 gains do not prove general dominance of one priority order.
+
+### A further procedural step: retain unfinished evidence too
+
+The [observation-union experiment](adaptive_observation_union_20261004.md)
+keeps every exact primitive edge inspected by the adaptive selector on these
+same512 inputs at budget8, together with the advertised one-step sibling
+edges. It does not require an inspected segment to be part of an already
+completed route before remembering it. Certification is the least backward
+closure from the sole root1 in this finite graph. A cycle without a path to1
+cannot certify itself. Adding checked observations cannot remove a previously
+proved source; this monotonicity follows from the closure operation itself.
+
+The initial graph has802 distinct checked edges and certifies509 inputs,
+without learned cylinders or additional orbit seeds. The ordered pass with
+only completed-suffix memory certified354. A direct trace control resolves
+whether extra observations caused the gain: that ordered pass makes352
+nonroot selector calls and submits1388 primitive-edge claims. Deduplicating
+exactly those observations gives the same802-edge graph as inspecting every
+requested input. Closing that same information gives509 certificates. Thus
+retention and closure account for this gain in the declared experiment;
+this is still not an equal-runtime comparison. Adding the inherited/literal observations,
+the incoming reset witnesses on these inputs, or the learned27 word inserts
+no new primitive edges into this particular initial union.
+
+Only three requested sources remain:703,871,937. Their observed paths end at
+two missing outgoing edges:2287 blocks703 and937;2125 blocks871. A selector
+that chooses the missing edge with most dependent inputs completes the graph
+after32 new exact odd-step observations:31 on the shared2287 continuation,
+ending at `3349->157`, then `2125->797`. All512 inputs are then certified.
+These new observations are counted explicitly; they are not free consequences
+of a modular annotation or an assumed child certificate.
+
+The final graph has the same835 nodes and834 edges found above. An independent
+canonical-route audit verifies that its edges are exactly the union of all512
+first-hit routes. Therefore32 is the minimum number of additional distinct
+literal edges required to complete this initial graph in that representation.
+This is no lower bound against symbolic proofs or a claim of runtime optimality.
+The missing-frontier scheduler reuses earlier work without requiring a new
+family at each original input. Checked family rules remain useful for making
+an observation apply to infinitely many sources.
 
 ## 5. Mod19 builds actual recursive routes, with a sharp four-step bound
 
@@ -289,13 +340,90 @@ Its exact integer guard remains `n=7 mod32`. The full formal19-adic orbit is
 not automatically a legal repeated integer word; the selector checks the
 dyadic guard before applying it.
 
-## 7. What the next iteration should optimize
+## 7. A concurrent torus construction gives the same clock, by an exact map
 
-The demonstrated productive operation is **learn a checked family, compile
-one completed proof, then retain all its certified continuations**. Future
-experiments should measure how many unresolved obligations each such proof
-discharges, keeping source identity and proof provenance exact. Merely adding
-more residue classes to a lookup table cannot replace this test.
+The incoming [checked-switch geometry](checked_switch_phase19_20261004.md)
+partitions the Paley19 directions into three triangular torus layers.
+The [inverse-ray/torus bridge](inverse_ray_torus_clock_20261004.md) identifies
+their permutation with the inverse-family block clock, including prime-power
+refinements. This uses the residue ring `Z/(p^k)`, not the field with p^k
+elements.
+
+Let p be a prime congruent to7 modulo12, Q the group of square units modulo
+p^k, and H its order-three subgroup. The layer is the coset qH. Cubing gives
+
+\[
+ Q/H\;\xrightarrow[\cong]{\ qH\mapsto q^3\ }\;Q^3,
+ \qquad 4qH\longmapsto64q^3.
+\]
+
+For an anchored inverse ray with unit `alpha=2^kappa*u`,
+`3n_b+1=alpha*64^b`. Consequently
+
+\[
+ \Phi_\alpha(qH)=\frac{\alpha q^3-1}{3},\qquad
+ \Phi_\alpha(4qH)=64\Phi_\alpha(qH)+21
+ \pmod{p^k}.
+\]
+
+The affine carry21 is necessary. The resulting source addresses belong to
+an anchored torsor; one inverse ray traverses one clock orbit within it.
+At19 all three layers are one orbit. At87211 there are14535 layers split
+into1615 orbits of length9. Thus the shared ternary depth2 belongs to each
+such orbit; it does not mean that nine layers exhaust the geometry. The
+unit-hub guard is essential; nonunit hubs need the valuation peel from
+section6. The map returns residue addresses, not new certificates for
+arbitrary integers with those addresses.
+
+There is a literal recursive edge decomposition at every prime-power scale.
+Each unit-direction layer gives a triangular torus with `p^k` vertices.
+For differences of valuation v, restrict to a fibre modulo p^v and divide
+its coordinates by p^v. There are `phi(p^k)/6` tori at every level
+`v=0,...,k-1`, each with `p^(k-v)` vertices. Their edges partition every
+unordered pair of distinct residue vertices. For361:
+
+| Difference valuation | Tori | Vertices per torus | Total edges |
+|---|---:|---:|---:|
+|0|57|361|61731|
+|1|57|19|3249|
+|Total|114|mixed|64980 = binomial(361,2)|
+
+Identifying equal residue vertices glues these surfaces into a singular
+complex. A vertex has60 separate cellular hexagonal links, not one link
+of a larger surface. Keeping the fibre and layer labels recovers the114
+disjoint tori. The geometric layer refinement and the clock refinement
+are different operations: within a persistent valuation stratum, each layer
+has p child tori, each a p-sheet cover, whereas their clock states may
+participate in one longer orbit. The newly added top valuation stratum
+collapses to vertices under reduction; the whole normalized union is not
+a surface covering of the previous level.
+
+An intrinsic tournament also survives every scale. For distinct x,y, orient
+x toward y when the first nonzero p-adic digit of y-x is a square modulo p.
+This is the iterated lexicographic product of the prime Paley tournament,
+with lower digits compared first. It respects the valuation strata and has
+no off-diagonal ties. At361 it is not a field Paley tournament. This gives
+an exact recursive tournament/torus object while retaining the lost integer
+and route coordinates explicitly.
+
+The geometric congruence restriction does not end the shared-depth tower.
+For r>=2, `C_r=3 mod4`, and every prime factor of C_r is1 modulo6 by its
+exact order `2*3^r`. At least one factor must therefore be7 modulo12 with
+odd multiplicity. Every positive shared depth has a prime supporting this
+oriented torus/tournament construction. Not every factor qualifies: at r=4,
+163 does, whereas135433 and272010961 are1 modulo12. The theorem gives a
+choice at every level, not a canonical increasing sequence of chosen primes.
+
+## 8. What the next iteration should optimize
+
+The demonstrated productive operation is **retain all checked segments,
+close proofs from known roots, then inspect a shared missing frontier**.
+The earlier family-learning loop remains useful: promote a reusable checked
+segment to a whole cylinder when its exact guard and boundary proof pass.
+Future experiments should measure how many unresolved obligations each new
+observation or family discharges, keeping source identity and proof provenance
+exact. Merely adding more residue classes to a lookup table cannot replace
+this test.
 
 For mod19 and later cyclotomic primes, retain the shared block digits when
 joining selectors. An independent CRT product would invent unreachable

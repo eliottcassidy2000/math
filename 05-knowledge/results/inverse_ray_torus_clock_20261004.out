@@ -1,0 +1,186 @@
+{
+  "status": "PROVED torsor and prime-power layer mechanisms; FINITE-EXACT declared controls",
+  "prime_layer_clocks": [
+    {
+      "prime": 7,
+      "layers": 1,
+      "block_order": 1,
+      "direction_order": 3,
+      "clock_orbits": 1,
+      "visited_layers": 1,
+      "unvisited_layers": 0,
+      "unvisited_orbits": 0,
+      "shared_ternary_depth": 0,
+      "multiplicative_cube_section_exists": true
+    },
+    {
+      "prime": 19,
+      "layers": 3,
+      "block_order": 3,
+      "direction_order": 9,
+      "clock_orbits": 1,
+      "visited_layers": 3,
+      "unvisited_layers": 0,
+      "unvisited_orbits": 0,
+      "shared_ternary_depth": 1,
+      "multiplicative_cube_section_exists": false
+    },
+    {
+      "prime": 31,
+      "layers": 5,
+      "block_order": 5,
+      "direction_order": 5,
+      "clock_orbits": 1,
+      "visited_layers": 5,
+      "unvisited_layers": 0,
+      "unvisited_orbits": 0,
+      "shared_ternary_depth": 0,
+      "multiplicative_cube_section_exists": true
+    },
+    {
+      "prime": 127,
+      "layers": 21,
+      "block_order": 7,
+      "direction_order": 7,
+      "clock_orbits": 3,
+      "visited_layers": 7,
+      "unvisited_layers": 14,
+      "unvisited_orbits": 2,
+      "shared_ternary_depth": 0,
+      "multiplicative_cube_section_exists": false
+    },
+    {
+      "prime": 5779,
+      "layers": 963,
+      "block_order": 963,
+      "direction_order": 2889,
+      "clock_orbits": 1,
+      "visited_layers": 963,
+      "unvisited_layers": 0,
+      "unvisited_orbits": 0,
+      "shared_ternary_depth": 2,
+      "multiplicative_cube_section_exists": false
+    },
+    {
+      "prime": 87211,
+      "layers": 14535,
+      "block_order": 9,
+      "direction_order": 27,
+      "clock_orbits": 1615,
+      "visited_layers": 9,
+      "unvisited_layers": 14526,
+      "unvisited_orbits": 1614,
+      "shared_ternary_depth": 2,
+      "multiplicative_cube_section_exists": false
+    }
+  ],
+  "literal_root_edges": 988,
+  "prime_power_geometries": [
+    {
+      "prime": 7,
+      "depth": 1,
+      "vertices": 7,
+      "strata": [
+        {
+          "valuation": 0,
+          "tori": 1,
+          "vertices_per_torus": 7,
+          "edges": 21,
+          "faces": 14
+        }
+      ],
+      "edges": 21,
+      "normalized_tori": 1,
+      "hexagonal_links_per_glued_vertex": 1
+    },
+    {
+      "prime": 19,
+      "depth": 1,
+      "vertices": 19,
+      "strata": [
+        {
+          "valuation": 0,
+          "tori": 3,
+          "vertices_per_torus": 19,
+          "edges": 171,
+          "faces": 114
+        }
+      ],
+      "edges": 171,
+      "normalized_tori": 3,
+      "hexagonal_links_per_glued_vertex": 3
+    },
+    {
+      "prime": 7,
+      "depth": 2,
+      "vertices": 49,
+      "strata": [
+        {
+          "valuation": 0,
+          "tori": 7,
+          "vertices_per_torus": 49,
+          "edges": 1029,
+          "faces": 686
+        },
+        {
+          "valuation": 1,
+          "tori": 7,
+          "vertices_per_torus": 7,
+          "edges": 147,
+          "faces": 98
+        }
+      ],
+      "edges": 1176,
+      "normalized_tori": 14,
+      "hexagonal_links_per_glued_vertex": 8
+    },
+    {
+      "prime": 19,
+      "depth": 2,
+      "vertices": 361,
+      "strata": [
+        {
+          "valuation": 0,
+          "tori": 57,
+          "vertices_per_torus": 361,
+          "edges": 61731,
+          "faces": 41154
+        },
+        {
+          "valuation": 1,
+          "tori": 57,
+          "vertices_per_torus": 19,
+          "edges": 3249,
+          "faces": 2166
+        }
+      ],
+      "edges": 64980,
+      "normalized_tori": 114,
+      "hexagonal_links_per_glued_vertex": 60
+    }
+  ],
+  "direction_vs_clock_children": {
+    "prime": 19,
+    "parent_depth": 1,
+    "direction_children_per_parent": 19,
+    "child_clock_orbits_per_parent": 1
+  },
+  "cube_section_hostile": {
+    "prime": 19,
+    "cube": 7,
+    "cube_roots": [
+      4,
+      6,
+      9
+    ],
+    "root_orders": [
+      9,
+      9,
+      9
+    ]
+  },
+  "normalized_zero_source": 87381,
+  "collapsed_hub": 19,
+  "boundary": "Layer quotient cubing acts on multiplicative directions, not additive vertices or forward Collatz time."
+}
+PASS: exact arithmetic; every assertion remains active under -O
