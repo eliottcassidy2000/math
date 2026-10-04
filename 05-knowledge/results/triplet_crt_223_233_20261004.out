@@ -1,0 +1,11 @@
+CRT bridge: Z/36 = Z/18 x_(Z/6) Z/12 = Z/9 x Z/4.
+Valuation phases: order_19(2)=18, order_13(2)=12, order_247(2)=36.
+Golden 233: phi order52, -phi^2 order13; norm-one group order234=18*13.
+Fibonacci pair periods at moduli6,9,12,18,36: all24.
+223: index6, unique forbidden coset5->3, empty Fermat sextic.
+233: index8, unique forbidden coset7->4, empty Fermat octic.
+Sharp descending return budgets: 223 cost<=8; 233 cost<=10.
+233 rule entry: least source55221; relative density1/128 among odd233-multiples.
+Common future: U^5(223)=U^5(111)=U^10(233)=425.
+Inherited tournament response independently replayed: 233,291,123,223.
+PASS: 22994 explicit checks; standard library; no assert statements.
