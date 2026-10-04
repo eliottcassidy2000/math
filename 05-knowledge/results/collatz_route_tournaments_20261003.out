@@ -1,0 +1,20 @@
+Universe: j in {0,1,2,3,4}, lengths 1..5; no inherited filters
+Inverse grammar: 694 valid, 3211 rejected, plus the empty root
+Forward replay and safe first-block +2 / source 4n+1: 694 each
+General internal macro: 3174 word/position pairs; increment j_p by 3^p
+Exact affine recurrence and all valuations pass; 65134 minimal-period controls
+Cyclic +2 is an induced extension: every odd block size 3..31
+Same multiset, different certified order/source: (((1, 3), 453), ((3, 1), 213))
+Internal hostile (0,1)->(0,2): 3->5->1 becomes tail 21; an odd predecessor needs an odd target prime to 3
+Minimality scope: (0,1)->(0,3) is valid at delta=2<3, but head valuation changes 1->2
+Guarded internal +18 macro: t=0..3, word (0,0,9t+4), valuations (1,1,18t+10)
+Macro sources: [151, 39768215, 10424999137431, 2732850973882896535]
+Macro: recurrence 262144n+184471; SCC sizes (3,3,18t+11,1); vertices 18t+18
+Macro: 3 induced old-edge-preserving extensions; ordinary remaining steps 18t+15
+Actual tournaments: 18; SCC decoding also under reversed vertex labels
+Intrinsic twin-fibre halving: 12, also under reversed labels
+Ordinary odd-step rewrites: 30, also reversed labels; outputs <=128 vertices
+Root convention: stop at 1; the explicit even chain 4->2->1 also passes
+Size: 2^e*(1+sum(2j+3)); n=3 has 9 vertices, n=12 has 36
+Compression: retain ordered SCC indices and binary clone exponent; no expanded graph needed
+ALL CHECKS PASSED

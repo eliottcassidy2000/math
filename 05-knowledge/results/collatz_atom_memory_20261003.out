@@ -1,0 +1,10 @@
+Signed atoms: 10000 edges; mirror/doubling lift, atom z lift, opposite-sheet control
+Inverse signed chart: 5010 target/exponent pairs
+Sheet-loss hostile: plus 5 -> 1, minus 5 -> 7 -> 5
+Minus-splice control: parameters 0/1 join cycle 5 <-> 7; root-padding control 1 -> 1
+Binary parent: exact rank bit_length(x-1), 1 <= x <= 10000
+Splices: 2040 instances; word lengths 1..4, letters 1..4, seeds 1/5/27, parameters 0/1
+Each splice checked by forward valuation replay, residue permutation, exact cylinder, and recurrence
+Order-loss hostile: (1,2) and (2,1) have same clock (A,p) but carries 5 and 7
+EXAMPLE_JSON={"seed":1,"head":[1,1],"summary":{"A":2,"p":2,"S":5},"sibling_phase":4,"sibling_period":9,"source_initial":151,"recurrence_multiplier":262144,"recurrence_offset":184471,"first_route":[151,227,341,1],"scope":"all integer parameters >= 0; certified plus-sheet family"}
+ALL CHECKS PASSED
