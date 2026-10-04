@@ -359,6 +359,69 @@ flowchart LR
 
 The return arrow is a **search operation**, not a termination theorem.
 
+### Join the forward family to a completed inverse certificate
+
+The concurrent [inverse-ray codec](inverse_ray_ternary_addresses_20261004.md)
+in incoming commit `6e7cc4fdee` supplies the complementary interface: a
+checked `(parent,row,block)` node denotes an integer and a completed route,
+and answers residue queries without expanding the integer. It is a positive
+first-hit codec. The following join is proved algebraically and checked
+against that implementation, rather than assuming an arbitrary input
+already has such a node.
+
+Let u be an odd integer not divisible by3, with a supplied terminal
+certificate. Choose the unique `e_0 in{0,...,53}` satisfying
+
+    2^e_0 u = 5 mod81.
+
+Existence and uniqueness use `ord_81(2)=54`. For every `h>=0`, put
+
+    e=e_0+54h,
+    n_h=(2^(7+e)u-73)/81.
+
+The period54 is `6*9`: the six-step unit clock modulo9 lifted by two more
+ternary digits to81. The modulus81 is forced here by the four odd steps,
+whose multiplicative coefficient is `3^4`; the sixth-clock connection is
+therefore an exact divisibility requirement of the certificate.
+
+The numerator is divisible by81. Equivalently
+`n_h=7+128k`, where `k=(2^e u-5)/81` is integral. The coarse-family formula
+now gives **the exact four-step word**
+
+    (1,1,2,3+e),  U^4(n_h)=u.
+
+For u positive, k is nonnegative; the earlier three odd iterates exceed
+n_h and the final endpoint is smaller. Thus this word can be prepended to
+u's first-hit route without inserting an earlier visit to1. For negative
+u, the same algebra and exact valuations hold; attach its signed terminal
+cycle witness separately, preserving the positive codec's type boundary.
+
+In particular, taking `u=1` gives `e_0=23` and the complete infinite family
+
+    n_h=(2^(30+54h)-73)/81,
+    U^4(n_h)=1, h>=0.                              (3)
+
+Its first source is13256071. Taking u=5 and h=0 recovers7 and its five-step
+route to1. The signed terminal examples are
+
+| u | e_0 | n_0 |
+|---:|---:|---:|
+| -1 | 50 | -1779199852788345 |
+| -5 | 27 | -1060485753 |
+| -17 | 17 | -3521145 |
+
+Each has the same four-step form followed by its independently checked
+cycle. This is an application of inherited inverse completion to the repaired
+chart, not a novelty claim for parametrizing fixed-length Collatz preimages.
+
+The exact experiment replays h=0..5 for all five targets `1,5,-1,-5,-17`.
+All twelve positive cases also pass the independently written inverse
+codec, expansion, and binary/ternary residue checks. At `h=10^100`, (3) is
+stored as only four inverse nodes; its residues at precisions1,7,19,61 are
+checked against modular evaluation of (3), with no expansion of its source.
+This is a concrete proof-bearing structure mapping to an integer. Finding
+such a structure for **every independently supplied integer** remains open.
+
 ## 6. Connections recovered from other lanes
 
 | Source → target; map | Preserved predicate | Lost information / required sidecar | Decisive result or test |

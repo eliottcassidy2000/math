@@ -2190,5 +2190,75 @@
       ]
     ],
     "earlier_common_future_rows": 100
+  },
+  "sealed_families": {
+    "examples": [
+      {
+        "terminal": 1,
+        "e0": 23,
+        "source": 13256071,
+        "word": [
+          1,
+          1,
+          2,
+          26
+        ],
+        "exponent_period": 54
+      },
+      {
+        "terminal": 5,
+        "e0": 0,
+        "source": 7,
+        "word": [
+          1,
+          1,
+          2,
+          3
+        ],
+        "exponent_period": 54
+      },
+      {
+        "terminal": -1,
+        "e0": 50,
+        "source": -1779199852788345,
+        "word": [
+          1,
+          1,
+          2,
+          53
+        ],
+        "exponent_period": 54
+      },
+      {
+        "terminal": -5,
+        "e0": 27,
+        "source": -1060485753,
+        "word": [
+          1,
+          1,
+          2,
+          30
+        ],
+        "exponent_period": 54
+      },
+      {
+        "terminal": -17,
+        "e0": 17,
+        "source": -3521145,
+        "word": [
+          1,
+          1,
+          2,
+          20
+        ],
+        "exponent_period": 54
+      }
+    ],
+    "finite_replays": 30,
+    "positive_codec_replays": 12,
+    "symbolic_height": "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "symbolic_terminal": 1,
+    "source_formula": "(2^(30+54h)-73)/81",
+    "odd_steps": 4
   }
 }

@@ -380,6 +380,73 @@ def hostile_controls():
             "modulus": Q, "pole": str(F(B, Q - P)), "smaller_first_step": 31}
 
 
+def sealed_boundary_families():
+    """Join the new forward chart to the concurrent checked inverse codec.
+
+    The imported codec is positive/first-hit. Negative targets use direct
+    signed word and cycle checks, rather than silently changing that type.
+    """
+    from inverse_ray_ternary_addresses_20261004 import (
+        ROOT, extend, kappa, mod3, mod2, expand, encode_source, audit_certificate)
+
+    def prepend(cert, word):
+        for a in reversed(word):
+            parent9 = mod3(cert, 2)
+            numerator = (pow(2, a, 9) * parent9 - 1) % 9
+            check(numerator % 3 == 0)
+            row = numerator // 3
+            least = kappa(parent9, row)
+            check(a >= least and (a - least) % 6 == 0)
+            cert = extend(cert, row, (a - least) // 6)
+        check(audit_certificate(cert))
+        return cert
+
+    # 2 generates every unit modulo81; hence the exponent is unique modulo54.
+    check(len({pow(2, e, 81) for e in range(54)}) == 54)
+    cycles = {1: (2,), -1: (1,), -5: (1, 2), -17: (1, 1, 1, 2, 1, 1, 4)}
+    examples = []
+    for target in (1, 5, -1, -5, -17):
+        e0 = next(e for e in range(54) if pow(2, e, 81) * target % 81 == 5)
+        for h in range(6):
+            e = e0 + 54 * h
+            numerator = (1 << (7 + e)) * target - 73
+            check(numerator % 81 == 0)
+            source = numerator // 81
+            word = (1, 1, 2, 3 + e)
+            path, actual = replay(source, 4)
+            check(path[-1] == target and actual == word)
+            if target > 0:
+                hub = ROOT if target == 1 else encode_source(target, step_cap=1)
+                cert = prepend(hub, word)
+                check(expand(cert) == source)
+                for precision in (1, 7, 19):
+                    check(mod2(cert, precision) == source % (1 << precision))
+                    check(mod3(cert, precision) == source % (3 ** precision))
+            else:
+                cycle, aw = replay(target, len(cycles[target]))
+                check(cycle[-1] == target and aw == cycles[target])
+            if h == 0:
+                examples.append({"terminal": target, "e0": e0, "source": source,
+                                 "word": list(word), "exponent_period": 54})
+    # Fixed four-node certificate at unexpanded height 10^100.
+    h = 10 ** 100
+    e = 23 + 54 * h
+    cert = prepend(ROOT, (1, 1, 2, 3 + e))
+    for precision in (1, 7, 19, 61):
+        M = 1 << precision
+        binary = (pow(2, 7 + e, M) - 73) * pow(81, -1, M) % M
+        M3 = 3 ** precision
+        ternary = ((pow(2, 7 + e, 81 * M3) - 73) % (81 * M3)) // 81
+        check(mod2(cert, precision) == binary)
+        check(mod3(cert, precision) == ternary)
+    print("Sealed chart: n=(2^(7+e)*u-73)/81, e=e0+54h; 30 signed replays")
+    print("First sealed sources:", [(x['terminal'], x['e0'], x['source']) for x in examples])
+    print("Positive inverse-codec cross-check: 12 expanded, one four-node h=10^100 symbolic certificate")
+    return {"examples": examples, "finite_replays": 30, "positive_codec_replays": 12,
+            "symbolic_height": str(h), "symbolic_terminal": 1,
+            "source_formula": "(2^(30+54h)-73)/81", "odd_steps": 4}
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--json", help="optional exact certificate summary")
@@ -390,6 +457,7 @@ def main():
     result["census"] = first_coefficient_census()
     result["hostile"] = hostile_controls()
     result["boundary_switch"] = boundary_switch_census()
+    result["sealed_families"] = sealed_boundary_families()
     print("PASS: exact finite checks; all-length argument is in the companion proof")
     if args.json:
         with open(args.json, "w") as handle:

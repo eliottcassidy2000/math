@@ -22,4 +22,7 @@ Boundary-switch census: odd sources3..9999, <=96 odd steps, stop at1
 Actual prefixes: 153336 ; failed contracting endpoint tests: 148
 Distinct sources: 144 ; all rescued by earlier source-relative descent
 Sibling common-future obligations appear earlier than actual descent: 100 rows
+Sealed chart: n=(2^(7+e)*u-73)/81, e=e0+54h; 30 signed replays
+First sealed sources: [(1, 23, 13256071), (5, 0, 7), (-1, 50, -1779199852788345), (-5, 27, -1060485753), (-17, 17, -3521145)]
+Positive inverse-codec cross-check: 12 expanded, one four-node h=10^100 symbolic certificate
 PASS: exact finite checks; all-length argument is in the companion proof
