@@ -598,8 +598,13 @@ The exact golden trace phi^4+phi^(-4)=7 gives respectively
     976562500*lambda_previous^12-218750*lambda_previous^6+1=0. (21)
 
 These algebraic identities are proved by putting t=lambda^6 and taking
-the conjugate of phi^(-4). They organize the constants within the same
-quadratic field used by the phase reader.
+the conjugate of phi^(-4). Their sixth powers lie in the same quadratic
+field used by the phase reader; the constants themselves need not.
+The [sixth-clock continuation](sixth_clock_branches_20261004.md#4-the-annotated-lambda-is-cubic-over-the-golden-field)
+sharpens the first identity: lambda_current=(phi^4-1)^(-1/3), with minimal
+polynomial5*lambda_current^6+5*lambda_current^3-1. Its reciprocal generates
+a sextic field whose residue at2 is F64, with an explicit63-cycle and
+an all-height32-child binary tower. This is arithmetic, not a Higgs derivation.
 
 For a numerical comparison only, the Standard Model tree relation is
 m_H^2=2*lambda*v^2; lambda is an input, not a predicted constant of the

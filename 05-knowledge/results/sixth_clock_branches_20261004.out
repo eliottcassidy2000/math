@@ -1,0 +1,30 @@
+Mersenne primitive-support exceptions, n=1..60: [1, 6]
+Corrected arithmetic: 63=3*19+6; 2*19+6=44
+Plus single-halving row 3: h=5+6j; seeds=[21, 1365, 87381]
+Plus single-halving row 5: h=3+6j; seeds=[5, 341, 21845]
+Plus single-halving row 1: h=7+6j; seeds=[85, 5461, 349525]
+Root rays: 100 valuation checks; odometer and one offset through 3^7
+Hostiles: F(3)=5; 7 is new in the even-index subsequence at M_6
+Phi_9(phi)=(7,10), Phi_18(phi)=(5,6), both norm19
+phi^18-1=76*phi^9; 5=2^16 and 15=2^11 modulo19
+Dual clocks checked through prime-power depth12
+Synchronized base2/mod19^k and golden/mod(4*19^k) orders checked k=1..8
+Complete primitive q76 control: 4320 phases, 240 cycles, all length18
+Sextic discriminants: power order=1660753125; integral basis=2278125; index27
+F64: t order9; beta=t+1 order63; beta^21=phi; beta^56=t
+Independent binary recurrence: all63 nonzero six-bit states
+Sextic binary tower: exact orders checked k=1..16
+Complete q4 control: 4032 primitive phases, 32 cycles, all length126
+Five-bit child selectors checked at depths1..5
+Compatible odd clock and finite Fourier controls: 384 last-entry tests, depths1..8
+Period21 controls: anchor112 repeated7; anchor1112114 repeated3
+Fourier hostile: a last-entry difference2 vanishes modulo2, survives modulo4
+Divisor controls: 63 gives(4,3,2); 126 gives(10,7,3); k-free k=2..8
+Nine-axis marked profile defect=246; fixed squarefree balance does not recurse
+History controls: 4096 words of length12, 401 signed source histories
+Signed inverse macros: 130 exact ray members for targets1,5,-1,-5,-17
+2 prime decomposition [e,f]: [[1, 6]]
+3 prime decomposition [e,f]: [[3, 2]]
+5 prime decomposition [e,f]: [[6, 1]]
+PARI independent number-field audit PASS
+PASS: exact controls; universal signed Collatz coverage remains OPEN
