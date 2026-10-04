@@ -9,6 +9,8 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+- **2026-10-03, Codex tiling/modular-atoms audit — center versus existing neighbors.** The uncommitted draft of `05-knowledge/results/tiling_modular_atoms_20261003.md` stated the even-modulus central-neighbor formulas without restricting the nonzero-index table's size. At modulus 2 the center exists but proposed neighbors have indices 0 and 2, outside the table indexed by 1. Both independent reviewers caught this; the final note restricts the neighbor statement to modulus at least 4, retaining the center formula for every positive half-modulus. The computation already used the correct range. Mechanism: an algebraically valid modular expression need not designate an existing cell of a restricted table.
+
 - **2026-09-30, opus S15 (twelfth note, direction D36).** Conjectured that a vertex-transitive graph is `C_k`-fixed iff its vertex links are induced `k`-cycles meeting in an edge exactly at distance 2 (from the five Platonic data points). False: the circulant census of the thirteenth note gives `C_4`-fixed square tori (`C_13(1,5)`, ...), the winding `C_7(1,2)` (`k = 4`), and `C_8(1,2)`, `C_14(1,2,3)` (`k = 5`), none locally `C_k`. Corrected in `collatz_pentagon_fixed_points_argument_styles_20260930.md` §2.4. Lesson: a conjecture read off five examples must be run against the cheapest large family (circulants) before it is written down.
 
 ## 2026-09-27 Artin-corrections note (opus S18): a finite-population statistic labelled "exactly 1/2 in expectation" through a vacuous CRT step, a false carry bound, "noise" for a frozen offset, and two mis-glossed clauses of THM-4506

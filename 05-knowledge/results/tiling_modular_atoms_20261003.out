@@ -1,0 +1,10 @@
+Folding: every cell for 2 <= modulus <= 101: 348550 checks
+mod 10 L boundary: [5, 0, 5, 0, 5, 4, 3, 2, 1]
+Pair/loop/path/wedge coordinate bijection: 2 <= n <= 30
+Odd central blocks: both families, 1 <= atom N <= 500
+Even centers and four diagonal neighbors: 2 <= half-modulus <= 500
+p: 10000 ordered input pairs, inverse, triangular identity, product law
+q: 4950 pairs, exact image/inverse; hostile (5,6) and boundary (7,8)
+Order 5: all 64 fixed-path tilings cover all 12 classes of 1024 labeled tournaments
+Order 5 selfie gauge: 2048 inputs, every labeled tournament has exactly 2 preimages
+ALL CHECKS PASSED
