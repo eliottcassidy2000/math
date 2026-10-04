@@ -1,0 +1,31 @@
+RESET TWO DEBT FAMILIES: PROVED guarded rewrites; FINITE-EXACT controls; universal closure OPEN
+Portal rows: e, prefix, sum, carry; condition B=2^sum+7
+1 (1, 2, 1) 4 23
+3 (1, 6, 1, 3, 1) 12 4103
+4 (2, 2, 1, 3, 3, 1) 12 4103
+Exact signed word rewrites: 4608 (3 portals; r1..24; a1..8; signs +/-; four lifts)
+Boundary-to-sibling controls: 96 ; first portal guard M=59 mod128
+Growing-family controls: 363 (r8..128, three lifts); all prefix multipliers >1
+First r8 cylinder: 236031 mod 524288 ; child 118015 ; common endpoint 478505
+Source r8 states: (236031, 354047, 531071, 796607, 1194911, 1792367, 2688551, 4032827, 6049241, 4536931, 6805397, 319003, 478505)
+Child r8 states: (118015, 177023, 265535, 398303, 597455, 896183, 1344275, 2016413, 756155, 1134233, 850675, 1276013, 478505)
+r7 hostile: 91903 falls to 82807 before the join
+Disjoint growing-family natural density: 1/262144 of all integers; 1/131072 among odds
+Retained reset2 debt n 7 : (r,b,M,e,h,Y,next)= (2, 4, 1, 1, 2, 13, 5)
+Retained reset2 debt n 27 : (r,b,M,e,h,Y,next)= (1, 3, 5, 1, 1, 31, 47)
+Retained reset2 debt n 315 : (r,b,M,e,h,Y,next)= (1, 3, 59, 1, 1, 355, 533)
+Illustrative 315 join: (315, 473, 355, 533, 25, 19) <- (157, 59, 89, 67, 101, 19) ; smaller source 157
+Rational-anchor ansatz controls: length, exact word, endpoint
+3 (1, 2, 1) 1
+4 (2, 1, 1, 1) 3
+5 (1, 6, 1, 3, 1) 1
+6 (2, 2, 1, 3, 3, 1) 1
+Signed hostile controls: separate minus cycles 1, 5/7, 17/.../91 retained
+Supplied smaller-source AST transports: 26 (r8..20, two lifts; premise search explicitly counted)
+Selector census: 10000 odd inputs through20000; 20 exact matches; no supplied-home inference
+Necessary least-counterexample kernel: first reset2; density1/8 of integers,1/4 among odds
+All-terminal e1 family density:1/1024 of integers,1/512 among odds; remaining necessary kernel127/512 of odds
+First-hit root control:(2^168-1279)/243 ->1 with word(1,2,1,6,158); no root padding
+Retained failed-hub lift hostile:68579 does not meet the source cylinder
+Rejected malformed/rank/source/ansatz controls: 6
+PASS: no unconditional source coverage, no terminal-basin identification, no reset2 debt erasure
