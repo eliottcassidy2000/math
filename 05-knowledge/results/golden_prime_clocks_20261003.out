@@ -1,0 +1,24 @@
+golden_prime_clocks_20261003: exact integer checks
+Universe: primes <=499; moduli 1..128; unit tables 1..64;
+          2-exponents 0..12, 3-exponents 0..8; cyclotomics 1..105.
+Lucas, signed norm, signed powers, matrix identities: 320 checks
+Signed norm hostile: N(phi^4-1)=N(1+3phi)=-5; quotient size=5.
+Prime laws: 95 primes, 45 split, 48 odd inert, 2 exceptions.
+ord(phi mod 3)=8
+ord(phi mod 5)=20
+ord(phi mod 7)=16
+ord(phi mod 11)=10
+ord(phi mod 105)=80
+Independent Fibonacci-register/matrix clock comparisons: 128
+Unit criterion: 89440 pairs; 650 independent brute inverse tests
+Unit counts: {3: 8, 5: 20, 7: 48, 11: 100, 105: 7680}; mod105 phi orbit covers 80/7680=1/96 of units.
+Hostile: (phi-3)^2=0 mod5 although phi-3!=0; no nonzero-only division.
+Guard clocks: 117 mixed powers, plus 20 direct prime-power cycles
+Example: modulus 2^8*3^3=6912, clock=1152
+Hostiles: shift by a full clock loses exact size; n=1,5 mod4 share v2>=2 but not v2=2.
+Cyclotomics: all 1..104 flat; Phi105 degree48; only nonflat coefficients (7,-2),(41,-2).
+Phi105(phi)=(5224431949, 8453308464); norm=16271615641=21211*767131
+Prime-index repunits: 26 exact Lucas norms
+Hostile: Phi23(phi)=phi^12*(11+2phi)*(21+phi), norm=64079=139*461.
+Boundary: Phi3(phi)=2phi^2 is algebraically prime, quotient F4, norm4.
+PASS: all exact checks completed; no global primality or Collatz-coverage claim.

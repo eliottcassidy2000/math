@@ -1,0 +1,17 @@
+FINITE-EXACT cross-interface universe: heads(1),(1,2); m=1..6; lifts=0,1,2
+Sources / neighbor guard rejections / clock phases: 36 each
+Exact two-shift numerator carry certificates: 36
+Complete suffixes independently found and spliced: 36; search bound=10000
+Maximum tested source=2557948511554391157403; maximum radix=102; longest suffix=670
+First interfaces: {(1,): {'source': 6815, 'source_word': '1000100010101001010.000101010100010001', 'guard': (6815, 13), 'endpoint': 5459, 'prefix_time': 21, 'suffix_time': 160, 'total_time': 181, 'radix': 18, 'modulus': 24576, 'period': 12288}, (1, 2): {'source': 27291, 'source_word': '1000010010001000010101.0100101000100100101001', 'guard': (27291, 15), 'endpoint': 8197, 'prefix_time': 25, 'suffix_time': 158, 'total_time': 183, 'radix': 22, 'modulus': 294912, 'period': 49152}}
+Complete SCC-size route encodings: 36; largest tournament=942 vertices
+Exact shared-suffix storage: 4607 route-edge occurrences -> 3315 distinct odd edges
+Auxiliary mod2 cycle: [(1, 0), (0, 1), (1, 1)] ; zero remains separate; no identification with ordered R/K/B grammar
+Exponent-phase signature constraints: 1001 integers; primes3,5 share signatures with composites9,105.
+Exact Fourier-dual digit checks: 79946; all states/modes moduli2..11, digits0,1
+Cosine hostile: mod3 states(1,0),(-1,0) share every cosine; after digit1 mode(1,1) has phases2 and0.
+Decorated carry-memory arithmetic: 128 exact sum/product controls, a,b=1..8
+Concurrent ideal bridge: (Phi5(phi))=(phi^5-1)=(phi-4); -5 and rational1/13 coordinates share it.
+Timing hostile: source3 prefixes [1] and [1,0] both evaluate to phi^-1, but endpoints are10 and5.
+PROVED interface is value/guard/timed-certificate preservation; FINITE-EXACT complete routes only for tested sources.
+PASS: all checks active with and without python -O

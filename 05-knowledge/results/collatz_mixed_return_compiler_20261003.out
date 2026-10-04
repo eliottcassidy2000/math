@@ -1,0 +1,842 @@
+{
+  "status": "PROVED compiler on stated input domain; FINITE-EXACT checks; Collatz OPEN",
+  "independent_golden_reader": {
+    "script": "golden_digit_carry_20261003.py",
+    "count": 638
+  },
+  "mixed_instances": {
+    "m": "1..50",
+    "lifts": [
+      0,
+      1,
+      7,
+      29
+    ],
+    "count": 200
+  },
+  "generic_instances": {
+    "heads": [
+      [],
+      [
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        1,
+        2
+      ]
+    ],
+    "cycles": [
+      [
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        4
+      ]
+    ],
+    "m": "1..8",
+    "lifts": [
+      0,
+      2
+    ],
+    "count": 238,
+    "outside_stated_sufficient_domain": [
+      {
+        "head": [
+          1,
+          1,
+          2
+        ],
+        "cycle": [
+          1
+        ],
+        "m": 1
+      }
+    ]
+  },
+  "compiler_rejection_controls": [
+    "nonexpanding head",
+    "noninteger cycle center",
+    "nonexpanding cycle"
+  ],
+  "bounded_head_ranking": {
+    "head_lengths": "1..4",
+    "letters": "1..4",
+    "cycle": [
+      1,
+      1,
+      1,
+      2,
+      1,
+      1,
+      4
+    ],
+    "m": "1..3",
+    "expanding_heads": 13,
+    "candidate_cylinders": 39,
+    "last_first_descent": 25,
+    "baseline_cylinders": 79,
+    "inherited_family_truncations_justified_by_first_descent": [
+      {
+        "head": [],
+        "cycle": [
+          1,
+          2
+        ],
+        "m": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      {
+        "head": [],
+        "cycle": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          4
+        ],
+        "m": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "head": [
+          1,
+          2
+        ],
+        "cycle": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          4
+        ],
+        "m": [
+          1,
+          2,
+          3
+        ]
+      }
+    ],
+    "ranking": [
+      {
+        "head": [
+          1
+        ],
+        "new_density": "4196353/34359738368",
+        "cylinders": [
+          {
+            "m": 1,
+            "residue": 6815,
+            "K": 13,
+            "t": 1
+          },
+          {
+            "m": 2,
+            "residue": 2796191,
+            "K": 24,
+            "t": 1
+          },
+          {
+            "m": 3,
+            "residue": 28633115295,
+            "K": 35,
+            "t": 1
+          }
+        ]
+      },
+      {
+        "head": [
+          1,
+          1
+        ],
+        "new_density": "4196353/137438953472",
+        "cylinders": [
+          {
+            "m": 1,
+            "residue": 20927,
+            "K": 15,
+            "t": 2
+          },
+          {
+            "m": 2,
+            "residue": 1864127,
+            "K": 26,
+            "t": 2
+          },
+          {
+            "m": 3,
+            "residue": 41995235775,
+            "K": 37,
+            "t": 2
+          }
+        ]
+      },
+      {
+        "head": [
+          1,
+          1,
+          1
+        ],
+        "new_density": "8392705/549755813888",
+        "cylinders": [
+          {
+            "m": 1,
+            "residue": 13951,
+            "K": 16,
+            "t": 2
+          },
+          {
+            "m": 2,
+            "residue": 1242751,
+            "K": 27,
+            "t": 2
+          },
+          {
+            "m": 3,
+            "residue": 394500699775,
+            "K": 39,
+            "t": 3
+          }
+        ]
+      },
+      {
+        "head": [
+          1,
+          1,
+          2
+        ],
+        "new_density": "8392705/549755813888",
+        "cylinders": [
+          {
+            "m": 1,
+            "residue": 40039,
+            "K": 16,
+            "t": 1
+          },
+          {
+            "m": 2,
+            "residue": 96935015,
+            "K": 27,
+            "t": 1
+          },
+          {
+            "m": 3,
+            "residue": 259606912103,
+            "K": 39,
+            "t": 2
+          }
+        ]
+      },
+      {
+        "head": [
+          1,
+          2,
+          1
+        ],
+        "new_density": "8392705/549755813888",
+        "cylinders": [
+          {
+            "m": 1,
+            "residue": 13339,
+            "K": 16,
+            "t": 1
+          },
+          {
+            "m": 2,
+            "residue": 77050907,
+            "K": 27,
+            "t": 1
+          },
+          {
+            "m": 3,
+            "residue": 544665482267,
+            "K": 39,
+            "t": 2
+          }
+        ]
+      },
+      {
+        "head": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "new_density": "4196353/1099511627776",
+        "cylinders": [
+          {
+            "m": 1,
+            "residue": 52991,
+            "K": 18,
+            "t": 3
+          },
+          {
+            "m": 2,
+            "residue": 179785471,
+            "K": 29,
+            "t": 3
+          },
+          {
+            "m": 3,
+            "residue": 996008218367,
+            "K": 40,
+            "t": 3
+          }
+        ]
+      },
+      {
+        "head": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "new_density": "4196353/1099511627776",
+        "cylinders": [
+          {
+            "m": 1,
+            "residue": 70383,
+            "K": 18,
+            "t": 2
+          },
+          {
+            "m": 2,
+            "residue": 333058799,
+            "K": 29,
+            "t": 2
+          },
+          {
+            "m": 3,
+            "residue": 173071274735,
+            "K": 40,
+            "t": 2
+          }
+        ]
+      },
+      {
+        "head": [
+          1,
+          1,
+          1,
+          3
+        ],
+        "new_density": "4196353/1099511627776",
+        "cylinders": [
+          {
+            "m": 1,
+            "residue": 105167,
+            "K": 18,
+            "t": 1
+          },
+          {
+            "m": 2,
+            "residue": 102734543,
+            "K": 29,
+            "t": 1
+          },
+          {
+            "m": 3,
+            "residue": 726220643023,
+            "K": 40,
+            "t": 1
+          }
+        ]
+      },
+      {
+        "head": [
+          1,
+          1,
+          2,
+          1
+        ],
+        "new_density": "4196353/1099511627776",
+        "cylinders": [
+          {
+            "m": 1,
+            "residue": 183655,
+            "K": 18,
+            "t": 2
+          },
+          {
+            "m": 2,
+            "residue": 319802727,
+            "K": 29,
+            "t": 2
+          },
+          {
+            "m": 3,
+            "residue": 363110321511,
+            "K": 40,
+            "t": 2
+          }
+        ]
+      },
+      {
+        "head": [
+          1,
+          1,
+          2,
+          2
+        ],
+        "new_density": "4196353/1099511627776",
+        "cylinders": [
+          {
+            "m": 1,
+            "residue": 218439,
+            "K": 18,
+            "t": 1
+          },
+          {
+            "m": 2,
+            "residue": 89478471,
+            "K": 29,
+            "t": 1
+          },
+          {
+            "m": 3,
+            "residue": 916259689799,
+            "K": 40,
+            "t": 1
+          }
+        ]
+      },
+      {
+        "head": [
+          1,
+          2,
+          1,
+          1
+        ],
+        "new_density": "4196353/1099511627776",
+        "cylinders": [
+          {
+            "m": 1,
+            "residue": 222491,
+            "K": 18,
+            "t": 2
+          },
+          {
+            "m": 2,
+            "residue": 299918619,
+            "K": 29,
+            "t": 2
+          },
+          {
+            "m": 3,
+            "residue": 648168891675,
+            "K": 40,
+            "t": 2
+          }
+        ]
+      },
+      {
+        "head": [
+          1,
+          2,
+          1,
+          2
+        ],
+        "new_density": "4196353/1099511627776",
+        "cylinders": [
+          {
+            "m": 1,
+            "residue": 257275,
+            "K": 18,
+            "t": 1
+          },
+          {
+            "m": 2,
+            "residue": 69594363,
+            "K": 29,
+            "t": 1
+          },
+          {
+            "m": 3,
+            "residue": 101806632187,
+            "K": 40,
+            "t": 1
+          }
+        ]
+      },
+      {
+        "head": [
+          1,
+          2
+        ],
+        "new_density": "0",
+        "cylinders": [
+          {
+            "m": 1,
+            "residue": 27291,
+            "K": 15,
+            "t": 1
+          },
+          {
+            "m": 2,
+            "residue": 11184795,
+            "K": 26,
+            "t": 1
+          },
+          {
+            "m": 3,
+            "residue": 114532461211,
+            "K": 37,
+            "t": 1
+          }
+        ]
+      }
+    ]
+  },
+  "retained_winning_head": {
+    "head": [
+      1
+    ],
+    "instances": 200,
+    "m": "1..50",
+    "lifts": [
+      0,
+      1,
+      7,
+      29
+    ],
+    "missed_parent": {
+      "residue": 2719,
+      "K": 12
+    },
+    "disjoint_from_minus5_minus17_and_mixed": true,
+    "density_m1_to20": "3292616837707605464936075005201569553019488186083734148310108161/26959946667150639794667015087019630673637144422540572481103610249216",
+    "decimal": 0.00012212994626282017,
+    "tail_strictly_less_than": "1/41091034308123129747162318266494379118611502182184342872529244017152958",
+    "first_twelve": [
+      {
+        "m": 1,
+        "t": 1,
+        "parameter": 5,
+        "residue": 6815,
+        "K": 13,
+        "first_descent": 8
+      },
+      {
+        "m": 2,
+        "t": 1,
+        "parameter": 1,
+        "residue": 2796191,
+        "K": 24,
+        "first_descent": 15
+      },
+      {
+        "m": 3,
+        "t": 1,
+        "parameter": 5,
+        "residue": 28633115295,
+        "K": 35,
+        "first_descent": 22
+      },
+      {
+        "m": 4,
+        "t": 1,
+        "parameter": 1,
+        "residue": 11728124029599,
+        "K": 46,
+        "first_descent": 29
+      },
+      {
+        "m": 5,
+        "t": 2,
+        "parameter": 11,
+        "residue": 264211178139069087,
+        "K": 58,
+        "first_descent": 36
+      },
+      {
+        "m": 6,
+        "t": 2,
+        "parameter": 1,
+        "residue": 49191317529892137631,
+        "K": 69,
+        "first_descent": 43
+      },
+      {
+        "m": 7,
+        "t": 2,
+        "parameter": 11,
+        "residue": 1108182001313410076813983,
+        "K": 80,
+        "first_descent": 50
+      },
+      {
+        "m": 8,
+        "t": 2,
+        "parameter": 1,
+        "residue": 206323339880896712483187359,
+        "K": 91,
+        "first_descent": 57
+      },
+      {
+        "m": 9,
+        "t": 2,
+        "parameter": 11,
+        "residue": 4648052200836841138821245086367,
+        "K": 102,
+        "first_descent": 64
+      },
+      {
+        "m": 10,
+        "t": 2,
+        "parameter": 1,
+        "residue": 865382809755804604755082721536671,
+        "K": 113,
+        "first_descent": 71
+      },
+      {
+        "m": 11,
+        "t": 2,
+        "parameter": 11,
+        "residue": 19495343938178766135922503550778387103,
+        "K": 124,
+        "first_descent": 78
+      },
+      {
+        "m": 12,
+        "t": 2,
+        "parameter": 1,
+        "residue": 3629678580490010276942662479272194255519,
+        "K": 135,
+        "first_descent": 85
+      }
+    ],
+    "example": {
+      "source": 6815,
+      "endpoint": 5459,
+      "ordinary_time": 21,
+      "extra_terminal_zeros": 1,
+      "golden_constant": [
+        2352,
+        -1453
+      ],
+      "golden_tail_multiplier": [
+        -17711,
+        10946
+      ]
+    },
+    "weak_budget_hostile": {
+      "m": 5,
+      "parameter": 5,
+      "required_t": 2,
+      "used_t": 1,
+      "source": 120095990063213215,
+      "selected_step": 36,
+      "endpoint": 125078862747499259
+    }
+  },
+  "first_twelve_cylinders": [
+    {
+      "m": 1,
+      "t": 1,
+      "parameter": 5,
+      "parameter_modulus": 6,
+      "residue": 27291,
+      "K": 15,
+      "first_descent": 9
+    },
+    {
+      "m": 2,
+      "t": 1,
+      "parameter": 1,
+      "parameter_modulus": 6,
+      "residue": 11184795,
+      "K": 26,
+      "first_descent": 16
+    },
+    {
+      "m": 3,
+      "t": 1,
+      "parameter": 5,
+      "parameter_modulus": 6,
+      "residue": 114532461211,
+      "K": 37,
+      "first_descent": 23
+    },
+    {
+      "m": 4,
+      "t": 1,
+      "parameter": 1,
+      "parameter_modulus": 6,
+      "residue": 46912496118427,
+      "K": 48,
+      "first_descent": 30
+    },
+    {
+      "m": 5,
+      "t": 1,
+      "parameter": 5,
+      "parameter_modulus": 6,
+      "residue": 480383960252852891,
+      "K": 59,
+      "first_descent": 37
+    },
+    {
+      "m": 6,
+      "t": 1,
+      "parameter": 1,
+      "parameter_modulus": 6,
+      "residue": 196765270119568550555,
+      "K": 70,
+      "first_descent": 44
+    },
+    {
+      "m": 7,
+      "t": 1,
+      "parameter": 5,
+      "parameter_modulus": 6,
+      "residue": 2014876366024381957843611,
+      "K": 81,
+      "first_descent": 51
+    },
+    {
+      "m": 8,
+      "t": 1,
+      "parameter": 1,
+      "parameter_modulus": 6,
+      "residue": 825293359523586849932749467,
+      "K": 92,
+      "first_descent": 58
+    },
+    {
+      "m": 9,
+      "t": 2,
+      "parameter": 5,
+      "parameter_modulus": 12,
+      "residue": 8451004001521529343311354702491,
+      "K": 104,
+      "first_descent": 65
+    },
+    {
+      "m": 10,
+      "t": 2,
+      "parameter": 7,
+      "parameter_modulus": 12,
+      "residue": 24230718673162528933142316203027099,
+      "K": 115,
+      "first_descent": 72
+    },
+    {
+      "m": 11,
+      "t": 2,
+      "parameter": 5,
+      "parameter_modulus": 12,
+      "residue": 35446079887597756610768188274142522011,
+      "K": 126,
+      "first_descent": 79
+    },
+    {
+      "m": 12,
+      "t": 2,
+      "parameter": 7,
+      "parameter_modulus": 12,
+      "residue": 101631000253720287754394549419621439154843,
+      "K": 137,
+      "first_descent": 86
+    }
+  ],
+  "coverage": {
+    "raw_bank_rows": 171,
+    "minimal_bank_rows": 65,
+    "saved_table_agreement": true,
+    "missed_parent": {
+      "residue": 667,
+      "K": 11
+    },
+    "disjoint_from_minus5_and_minus17": true,
+    "added_density_m1_to20": "3292616837707699046735101983813322875886299596876969068128636929/107839786668602559178668060348078522694548577690162289924414440996864",
+    "decimal": 3.053248656570591e-05,
+    "augmented_old_bank_density": "20421074957531412223510996240033966284992262788349412818404193079297/107839786668602559178668060348078522694548577690162289924414440996864",
+    "tail_strictly_less_than": "1/123273102924369389241486954799483137355834506546553028617587732051458874"
+  },
+  "weak_budget_hostile": {
+    "m": 9,
+    "parameter": 11,
+    "required_t": 2,
+    "used_t": 1,
+    "source": 18592208803347364555284980345499,
+    "selected_step": 65,
+    "endpoint": 18885261011608818665618169991037
+  },
+  "example": {
+    "source": 27291,
+    "endpoint": 8197,
+    "ordinary_time": 25,
+    "extra_terminal_zeros": 2,
+    "golden_constant": [
+      -9971,
+      6163
+    ],
+    "golden_tail_multiplier": [
+      -121393,
+      75025
+    ],
+    "trace": [
+      27291,
+      40937,
+      30703,
+      46055,
+      69083,
+      103625,
+      77719,
+      116579,
+      174869,
+      8197
+    ],
+    "parity_positions": [
+      0,
+      2,
+      5,
+      7,
+      9,
+      11,
+      14,
+      16,
+      18
+    ],
+    "nominal_ordinary_time": 23,
+    "certificate": "Theta(source)=golden_constant+golden_tail_multiplier*Theta(endpoint)"
+  }
+}
+PASS: all checks active under -O

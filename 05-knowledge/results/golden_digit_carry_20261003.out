@@ -1,0 +1,25 @@
+FINITE-EXACT greedy normal forms n=0..1000: 1001
+Independent Laurent / Horner modular checks: 13013; moduli=(2, 3, 4, 5, 7, 8, 9, 11, 16, 27, 64, 81, 105)
+2 = 10.01_phi
+3 = 100.01_phi
+5 = 1000.1001_phi
+7 = 10000.0001_phi
+11 = 10101.0101_phi
+18 = 1000000.000001_phi
+105 = 1001010101.0101001001_phi
+Radix hostile: literal 10.01_phi=2; no-radix 1001_phi=2+2phi; Zeckendorf 1001=6
+105 factor supports: [(2, -2), (3, -1, -4), (4, -4)]
+105 raw convolution (exponent, multiplicity): [(9, 1), (5, 2), (2, 1), (1, 2), (-2, 1), (-3, 2), (-6, 1), (-7, 1), (-10, 1)]
+105 normal support: (9, 6, 4, 2, 0, -2, -4, -7, -10)
+105 carry certificate: R=10; Q(exponent, coefficient)=[(14, -1), (13, 1), (12, -1), (10, -1), (9, 1), (8, -1), (6, -1), (5, 1), (4, -1)]
+105 exact factorization Q=-t^4*(t^2-t+1)*(t^8+t^4+1)=-t^4*Phi3*Phi6^2*Phi12
+Carry specialization hostile: Q(phi)=-16phi^8=(-208,-336), norm256; this does not recover factors3,5,7
+Carry recovery is exact; original factor list is an additional parse witness
+Carry audits: 82 local rewrites; 900 products a,b=1..30; unequal-value rejection
+Carry composition: 1000 additive and 1000 multiplicative associativity controls a,b,c=1..10
+Unimodular reader bridge: 2002 append checks n=0..1000
+Zeckendorf-lift defects: 10201 multiplication and 10201 addition checks
+Multiplication hostile: L(2)=phi; L(2)^2=phi^2=L(3), while 2*2=4
+Lucas controls k=1..20: L4=7, L5=11, L6=18; 18=phi^6+phi^-6 is sparse and composite
+Collatz numerator: 333 exact two-shift-plus-unit carry checks; division guards are separate
+ALL CHECKS PASSED
