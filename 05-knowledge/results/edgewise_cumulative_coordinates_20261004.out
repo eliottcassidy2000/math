@@ -1,0 +1,754 @@
+{
+  "status": "PROVED scoped statements with FINITE-EXACT controls; classical edgewise subdivision",
+  "smallest_literal_hostile": {
+    "r": 2,
+    "u": [
+      0,
+      2,
+      0
+    ],
+    "v": [
+      1,
+      0,
+      1
+    ],
+    "cumulative_difference": [
+      1,
+      -1,
+      0
+    ],
+    "crossed_edge": [
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0
+      ]
+    ],
+    "squared_lengths": {
+      "extra": 6,
+      "mesh": 2
+    }
+  },
+  "triangular_census": [
+    {
+      "r": 1,
+      "repaired_faces": [
+        3,
+        3,
+        1
+      ],
+      "literal_clique_faces": [
+        3,
+        3,
+        1
+      ],
+      "extra_edges": 0
+    },
+    {
+      "r": 2,
+      "repaired_faces": [
+        6,
+        9,
+        4
+      ],
+      "literal_clique_faces": [
+        6,
+        10,
+        6,
+        1
+      ],
+      "extra_edges": 1
+    },
+    {
+      "r": 3,
+      "repaired_faces": [
+        10,
+        18,
+        9
+      ],
+      "literal_clique_faces": [
+        10,
+        21,
+        15,
+        3
+      ],
+      "extra_edges": 3
+    },
+    {
+      "r": 4,
+      "repaired_faces": [
+        15,
+        30,
+        16
+      ],
+      "literal_clique_faces": [
+        15,
+        36,
+        28,
+        6
+      ],
+      "extra_edges": 6
+    },
+    {
+      "r": 5,
+      "repaired_faces": [
+        21,
+        45,
+        25
+      ],
+      "literal_clique_faces": [
+        21,
+        55,
+        45,
+        10
+      ],
+      "extra_edges": 10
+    },
+    {
+      "r": 6,
+      "repaired_faces": [
+        28,
+        63,
+        36
+      ],
+      "literal_clique_faces": [
+        28,
+        78,
+        66,
+        15
+      ],
+      "extra_edges": 15
+    },
+    {
+      "r": 7,
+      "repaired_faces": [
+        36,
+        84,
+        49
+      ],
+      "literal_clique_faces": [
+        36,
+        105,
+        91,
+        21
+      ],
+      "extra_edges": 21
+    },
+    {
+      "r": 8,
+      "repaired_faces": [
+        45,
+        108,
+        64
+      ],
+      "literal_clique_faces": [
+        45,
+        136,
+        120,
+        28
+      ],
+      "extra_edges": 28
+    },
+    {
+      "r": 9,
+      "repaired_faces": [
+        55,
+        135,
+        81
+      ],
+      "literal_clique_faces": [
+        55,
+        171,
+        153,
+        36
+      ],
+      "extra_edges": 36
+    },
+    {
+      "r": 10,
+      "repaired_faces": [
+        66,
+        165,
+        100
+      ],
+      "literal_clique_faces": [
+        66,
+        210,
+        190,
+        45
+      ],
+      "extra_edges": 45
+    },
+    {
+      "r": 11,
+      "repaired_faces": [
+        78,
+        198,
+        121
+      ],
+      "literal_clique_faces": [
+        78,
+        253,
+        231,
+        55
+      ],
+      "extra_edges": 55
+    },
+    {
+      "r": 12,
+      "repaired_faces": [
+        91,
+        234,
+        144
+      ],
+      "literal_clique_faces": [
+        91,
+        300,
+        276,
+        66
+      ],
+      "extra_edges": 66
+    }
+  ],
+  "general_simplex_census": [
+    {
+      "d": 1,
+      "r": 1,
+      "f_vector": [
+        2,
+        1
+      ]
+    },
+    {
+      "d": 1,
+      "r": 2,
+      "f_vector": [
+        3,
+        2
+      ]
+    },
+    {
+      "d": 1,
+      "r": 3,
+      "f_vector": [
+        4,
+        3
+      ]
+    },
+    {
+      "d": 1,
+      "r": 4,
+      "f_vector": [
+        5,
+        4
+      ]
+    },
+    {
+      "d": 2,
+      "r": 1,
+      "f_vector": [
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "d": 2,
+      "r": 2,
+      "f_vector": [
+        6,
+        9,
+        4
+      ]
+    },
+    {
+      "d": 2,
+      "r": 3,
+      "f_vector": [
+        10,
+        18,
+        9
+      ]
+    },
+    {
+      "d": 2,
+      "r": 4,
+      "f_vector": [
+        15,
+        30,
+        16
+      ]
+    },
+    {
+      "d": 3,
+      "r": 1,
+      "f_vector": [
+        4,
+        6,
+        4,
+        1
+      ]
+    },
+    {
+      "d": 3,
+      "r": 2,
+      "f_vector": [
+        10,
+        25,
+        24,
+        8
+      ]
+    },
+    {
+      "d": 3,
+      "r": 3,
+      "f_vector": [
+        20,
+        64,
+        72,
+        27
+      ]
+    },
+    {
+      "d": 3,
+      "r": 4,
+      "f_vector": [
+        35,
+        130,
+        160,
+        64
+      ]
+    },
+    {
+      "d": 4,
+      "r": 1,
+      "f_vector": [
+        5,
+        10,
+        10,
+        5,
+        1
+      ]
+    },
+    {
+      "d": 4,
+      "r": 2,
+      "f_vector": [
+        15,
+        55,
+        85,
+        60,
+        16
+      ]
+    },
+    {
+      "d": 4,
+      "r": 3,
+      "f_vector": [
+        35,
+        175,
+        330,
+        270,
+        81
+      ]
+    },
+    {
+      "d": 4,
+      "r": 4,
+      "f_vector": [
+        70,
+        425,
+        900,
+        800,
+        256
+      ]
+    }
+  ],
+  "triangle_graph_distance_checks": 26662,
+  "compatible_refinement_checks": [
+    {
+      "d": 1,
+      "r": 1,
+      "s": 1,
+      "top_cells": 1
+    },
+    {
+      "d": 1,
+      "r": 1,
+      "s": 2,
+      "top_cells": 2
+    },
+    {
+      "d": 1,
+      "r": 1,
+      "s": 3,
+      "top_cells": 3
+    },
+    {
+      "d": 1,
+      "r": 2,
+      "s": 1,
+      "top_cells": 2
+    },
+    {
+      "d": 1,
+      "r": 2,
+      "s": 2,
+      "top_cells": 4
+    },
+    {
+      "d": 1,
+      "r": 2,
+      "s": 3,
+      "top_cells": 6
+    },
+    {
+      "d": 1,
+      "r": 3,
+      "s": 1,
+      "top_cells": 3
+    },
+    {
+      "d": 1,
+      "r": 3,
+      "s": 2,
+      "top_cells": 6
+    },
+    {
+      "d": 1,
+      "r": 3,
+      "s": 3,
+      "top_cells": 9
+    },
+    {
+      "d": 2,
+      "r": 1,
+      "s": 1,
+      "top_cells": 1
+    },
+    {
+      "d": 2,
+      "r": 1,
+      "s": 2,
+      "top_cells": 4
+    },
+    {
+      "d": 2,
+      "r": 1,
+      "s": 3,
+      "top_cells": 9
+    },
+    {
+      "d": 2,
+      "r": 2,
+      "s": 1,
+      "top_cells": 4
+    },
+    {
+      "d": 2,
+      "r": 2,
+      "s": 2,
+      "top_cells": 16
+    },
+    {
+      "d": 2,
+      "r": 2,
+      "s": 3,
+      "top_cells": 36
+    },
+    {
+      "d": 2,
+      "r": 3,
+      "s": 1,
+      "top_cells": 9
+    },
+    {
+      "d": 2,
+      "r": 3,
+      "s": 2,
+      "top_cells": 36
+    },
+    {
+      "d": 2,
+      "r": 3,
+      "s": 3,
+      "top_cells": 81
+    },
+    {
+      "d": 3,
+      "r": 1,
+      "s": 1,
+      "top_cells": 1
+    },
+    {
+      "d": 3,
+      "r": 1,
+      "s": 2,
+      "top_cells": 8
+    },
+    {
+      "d": 3,
+      "r": 1,
+      "s": 3,
+      "top_cells": 27
+    },
+    {
+      "d": 3,
+      "r": 2,
+      "s": 1,
+      "top_cells": 8
+    },
+    {
+      "d": 3,
+      "r": 2,
+      "s": 2,
+      "top_cells": 64
+    },
+    {
+      "d": 3,
+      "r": 2,
+      "s": 3,
+      "top_cells": 216
+    },
+    {
+      "d": 3,
+      "r": 3,
+      "s": 1,
+      "top_cells": 27
+    },
+    {
+      "d": 3,
+      "r": 3,
+      "s": 2,
+      "top_cells": 216
+    },
+    {
+      "d": 3,
+      "r": 3,
+      "s": 3,
+      "top_cells": 729
+    }
+  ],
+  "arbitrary_child_order_hostile": {
+    "d": 3,
+    "r": 2,
+    "s": 2,
+    "cell_absent_from_direct": [
+      [
+        0,
+        0,
+        1,
+        3
+      ],
+      [
+        0,
+        1,
+        0,
+        3
+      ],
+      [
+        0,
+        1,
+        1,
+        2
+      ],
+      [
+        1,
+        1,
+        0,
+        2
+      ]
+    ],
+    "spurious_top_cells": 32,
+    "missing_top_cells": 32
+  },
+  "coordinate_symmetry_census": [
+    {
+      "d": 1,
+      "r": 2,
+      "coordinate_symmetries": 2,
+      "unrefined_symmetries": 2
+    },
+    {
+      "d": 1,
+      "r": 3,
+      "coordinate_symmetries": 2,
+      "unrefined_symmetries": 2
+    },
+    {
+      "d": 2,
+      "r": 2,
+      "coordinate_symmetries": 6,
+      "unrefined_symmetries": 6
+    },
+    {
+      "d": 2,
+      "r": 3,
+      "coordinate_symmetries": 6,
+      "unrefined_symmetries": 6
+    },
+    {
+      "d": 3,
+      "r": 2,
+      "coordinate_symmetries": 8,
+      "unrefined_symmetries": 24
+    },
+    {
+      "d": 3,
+      "r": 3,
+      "coordinate_symmetries": 8,
+      "unrefined_symmetries": 24
+    },
+    {
+      "d": 4,
+      "r": 2,
+      "coordinate_symmetries": 10,
+      "unrefined_symmetries": 120
+    },
+    {
+      "d": 4,
+      "r": 3,
+      "coordinate_symmetries": 10,
+      "unrefined_symmetries": 120
+    },
+    {
+      "d": 5,
+      "r": 2,
+      "coordinate_symmetries": 12,
+      "unrefined_symmetries": 720
+    },
+    {
+      "d": 5,
+      "r": 3,
+      "coordinate_symmetries": 12,
+      "unrefined_symmetries": 720
+    }
+  ],
+  "tetrahedron_chart_hostile": {
+    "edge": [
+      [
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1
+      ]
+    ],
+    "nonedge_after_swap": [
+      [
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1
+      ]
+    ]
+  },
+  "point_decoder_checks": 4212,
+  "hierarchical_point_decoder_checks": 2106,
+  "cell_only_loss": {
+    "first_point": [
+      "1/10",
+      "1/5",
+      "7/10"
+    ],
+    "second_point": [
+      "1/5",
+      "1/10",
+      "7/10"
+    ],
+    "common_vertices": [
+      [
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        1
+      ]
+    ],
+    "first_weights": {
+      "(1, 0, 1)": "1/5",
+      "(0, 1, 1)": "2/5",
+      "(0, 0, 2)": "2/5"
+    },
+    "second_weights": {
+      "(1, 0, 1)": "2/5",
+      "(0, 1, 1)": "1/5",
+      "(0, 0, 2)": "2/5"
+    }
+  },
+  "barycentric_depth_census": [
+    {
+      "depth": 0,
+      "f_vector": [
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "depth": 1,
+      "f_vector": [
+        7,
+        12,
+        6
+      ]
+    },
+    {
+      "depth": 2,
+      "f_vector": [
+        25,
+        60,
+        36
+      ]
+    },
+    {
+      "depth": 3,
+      "f_vector": [
+        121,
+        336,
+        216
+      ]
+    },
+    {
+      "depth": 4,
+      "f_vector": [
+        673,
+        1968,
+        1296
+      ]
+    },
+    {
+      "depth": 5,
+      "f_vector": [
+        3937,
+        11712,
+        7776
+      ]
+    }
+  ]
+}
+PASS: all checks remain active under -O

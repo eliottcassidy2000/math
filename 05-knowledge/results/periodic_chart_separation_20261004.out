@@ -1,0 +1,430 @@
+{
+  "status": "PROVED universal m>=2 separation and natural-density existence; FINITE-EXACT enumerated atlas",
+  "universe": {
+    "maximum_odd_period": 12,
+    "minimum_repetition": 2,
+    "maximum_mass_repetition": 30,
+    "literal_repetitions": [
+      2,
+      3
+    ],
+    "literal_lifts": [
+      0
+    ]
+  },
+  "per_period_counts": [
+    {
+      "period": 1,
+      "maximum_total_valuation": 1,
+      "all_growth_marked_words": 1,
+      "primitive_growth_marked_words": 1,
+      "primitive_growth_necklaces": 1,
+      "favorable_primitive_marked_words": 1
+    },
+    {
+      "period": 2,
+      "maximum_total_valuation": 3,
+      "all_growth_marked_words": 3,
+      "primitive_growth_marked_words": 2,
+      "primitive_growth_necklaces": 1,
+      "favorable_primitive_marked_words": 1
+    },
+    {
+      "period": 3,
+      "maximum_total_valuation": 4,
+      "all_growth_marked_words": 4,
+      "primitive_growth_marked_words": 3,
+      "primitive_growth_necklaces": 1,
+      "favorable_primitive_marked_words": 2
+    },
+    {
+      "period": 4,
+      "maximum_total_valuation": 6,
+      "all_growth_marked_words": 15,
+      "primitive_growth_marked_words": 12,
+      "primitive_growth_necklaces": 3,
+      "favorable_primitive_marked_words": 5
+    },
+    {
+      "period": 5,
+      "maximum_total_valuation": 7,
+      "all_growth_marked_words": 21,
+      "primitive_growth_marked_words": 20,
+      "primitive_growth_necklaces": 4,
+      "favorable_primitive_marked_words": 11
+    },
+    {
+      "period": 6,
+      "maximum_total_valuation": 9,
+      "all_growth_marked_words": 84,
+      "primitive_growth_marked_words": 78,
+      "primitive_growth_necklaces": 13,
+      "favorable_primitive_marked_words": 26
+    },
+    {
+      "period": 7,
+      "maximum_total_valuation": 11,
+      "all_growth_marked_words": 330,
+      "primitive_growth_marked_words": 329,
+      "primitive_growth_necklaces": 47,
+      "favorable_primitive_marked_words": 84
+    },
+    {
+      "period": 8,
+      "maximum_total_valuation": 12,
+      "all_growth_marked_words": 495,
+      "primitive_growth_marked_words": 480,
+      "primitive_growth_necklaces": 60,
+      "favorable_primitive_marked_words": 166
+    },
+    {
+      "period": 9,
+      "maximum_total_valuation": 14,
+      "all_growth_marked_words": 2002,
+      "primitive_growth_marked_words": 1998,
+      "primitive_growth_necklaces": 222,
+      "favorable_primitive_marked_words": 473
+    },
+    {
+      "period": 10,
+      "maximum_total_valuation": 15,
+      "all_growth_marked_words": 3003,
+      "primitive_growth_marked_words": 2980,
+      "primitive_growth_necklaces": 298,
+      "favorable_primitive_marked_words": 948
+    },
+    {
+      "period": 11,
+      "maximum_total_valuation": 17,
+      "all_growth_marked_words": 12376,
+      "primitive_growth_marked_words": 12375,
+      "primitive_growth_necklaces": 1125,
+      "favorable_primitive_marked_words": 2651
+    },
+    {
+      "period": 12,
+      "maximum_total_valuation": 19,
+      "all_growth_marked_words": 50388,
+      "primitive_growth_marked_words": 50292,
+      "primitive_growth_necklaces": 4191,
+      "favorable_primitive_marked_words": 8010
+    }
+  ],
+  "total_favorable_marked_charts": 12378,
+  "total_primitive_growth_necklaces": 5966,
+  "Fourier_exact_controls": {
+    "cyclotomic_periods": "2..120",
+    "exact_geometric_remainders": 482,
+    "primitive_test_words": 345,
+    "distinct_word_pairs": 59340
+  },
+  "boundary_hostiles": {
+    "single_copy_overlap": {
+      "first_word": [
+        1,
+        2
+      ],
+      "first_m": 1,
+      "second_word": [
+        1
+      ],
+      "second_m": 2,
+      "cylinder": [
+        3,
+        4
+      ],
+      "route": [
+        3,
+        5,
+        1
+      ]
+    },
+    "nonprimitive_overlap": {
+      "first_word": [
+        1,
+        1
+      ],
+      "first_m": 2,
+      "second_word": [
+        1
+      ],
+      "second_m": 4,
+      "cylinder": [
+        15,
+        7
+      ]
+    },
+    "all_period_missed_source": {
+      "source": 7,
+      "first_descent_route": [
+        7,
+        11,
+        17,
+        13,
+        5
+      ],
+      "valuations": [
+        1,
+        1,
+        2,
+        3
+      ],
+      "impossible_periods": [
+        1,
+        2
+      ]
+    },
+    "density_hostile": "C(n,n+10), n>=1: Haar measure <=1/1024, positive-integer union all of N"
+  },
+  "uniform_non_descent_controls": 1536,
+  "natural_density_tail_controls": [
+    {
+      "odd_steps": 1,
+      "maximum_total_valuation": 1,
+      "uniform_source_threshold": "2",
+      "non_descent_upper_density": "1/4",
+      "generating_function_upper": "2/5"
+    },
+    {
+      "odd_steps": 2,
+      "maximum_total_valuation": 3,
+      "uniform_source_threshold": "20/7",
+      "non_descent_upper_density": "1/4",
+      "generating_function_upper": "32/75"
+    },
+    {
+      "odd_steps": 5,
+      "maximum_total_valuation": 7,
+      "uniform_source_threshold": "1688/13",
+      "non_descent_upper_density": "29/256",
+      "generating_function_upper": "8192/28125"
+    },
+    {
+      "odd_steps": 10,
+      "maximum_total_valuation": 15,
+      "uniform_source_threshold": "3713600/6487",
+      "non_descent_upper_density": "309/4096",
+      "generating_function_upper": "536870912/2373046875"
+    },
+    {
+      "odd_steps": 20,
+      "maximum_total_valuation": 31,
+      "uniform_source_threshold": "219654983680/12433583",
+      "non_descent_upper_density": "1255043/33554432",
+      "generating_function_upper": "2305843009213693952/16894054412841796875"
+    },
+    {
+      "odd_steps": 24,
+      "maximum_total_valuation": 38,
+      "uniform_source_threshold": "1322014470799360/38189468201",
+      "non_descent_upper_density": "1230994787/34359738368",
+      "generating_function_upper": "37778931862957161709568/285087168216705322265625"
+    },
+    {
+      "odd_steps": 30,
+      "maximum_total_valuation": 47,
+      "uniform_source_threshold": "405810853058969600/568299583579",
+      "non_descent_upper_density": "173592421215/8796093022208",
+      "generating_function_upper": "9903520314283042199192993792/120271149091422557830810546875"
+    },
+    {
+      "odd_steps": 40,
+      "maximum_total_valuation": 63,
+      "uniform_source_threshold": "3138027092547587339714560/96755055610040351",
+      "non_descent_upper_density": "193459082416763/18014398509481984",
+      "generating_function_upper": "42535295865117307932921825928971026432/856227223512178170494735240936279296875"
+    },
+    {
+      "odd_steps": 60,
+      "maximum_total_valuation": 95,
+      "uniform_source_threshold": "336969139945238359775191834380206080/4261076256685729795170563",
+      "non_descent_upper_density": "1035127009349922089429089/309485009821345068724781056",
+      "generating_function_upper": "784637716923335095479473677900958302012794430558004314112/43395447911313579474057444684831352788023650646209716796875"
+    }
+  ],
+  "universal_atlas_mass": {
+    "finite_density_lower": "458444874399397485559944991473073863498058289806172041933176918906906660985866340826705499332024598121341319410791058773187145543536122736151620537472497602893156589244325/3864537523017258344695351890931987344298927329706434998657235251451519142289560424536193766581922577962463616031502177177365078661042987655742908673467080748696980814823424",
+    "repetition_tail_upper": "4613730882152229027106108865087078881088403241029861248413976860677030205578847160247242650487604148556525056278293673234412220035262826114779726057919536485554783547758521760037/1899852549012729783092482450950552663855834340657543143897953252386683315421901038318380693061413245977285838879784284831999076253912679416883332149564682194836556814699867485605975074520057820",
+    "period_tail_upper": "3/6377288",
+    "full_atlas_density_upper": "173578044562768548316426341830118160861500034037690006441344988339002321168600744892346707651807003699161246699335087215575351567563848318077764587162836859123838882057792974333793345204787887587434048738489411968695093253764819275219528676423452154327001305991677348778335948542213388397651698703150024030042169695740397889879955099285059807344190840998867518429703787/1463199271745461425031418154949430163901311500013551472998570363750799780993126004664017487731939037960545360192156067451378064407962264399334496548931421622381405705196155714918058571763554982342446054197395283086658567155916549753083157976633390838705689397576531698413516211318930179812420174259480320087894930730999130768843496378910804419758745805223220747561861120",
+    "cylinder_count": 358962,
+    "exponent_histogram": {
+      "4": 1,
+      "5": 1,
+      "7": 2,
+      "8": 1,
+      "10": 4,
+      "12": 1,
+      "13": 7,
+      "15": 3,
+      "16": 13,
+      "18": 1,
+      "20": 35,
+      "21": 1,
+      "23": 86,
+      "24": 14,
+      "26": 173,
+      "27": 1,
+      "29": 503,
+      "31": 1,
+      "32": 966,
+      "34": 87,
+      "35": 2653,
+      "37": 1,
+      "39": 8211,
+      "40": 12,
+      "42": 2,
+      "43": 476,
+      "45": 91,
+      "46": 1,
+      "48": 989,
+      "51": 172,
+      "53": 2653,
+      "54": 1,
+      "56": 95,
+      "58": 8517,
+      "61": 1,
+      "62": 2,
+      "64": 1131,
+      "67": 113,
+      "70": 2657,
+      "72": 486,
+      "73": 1,
+      "77": 8210,
+      "78": 84,
+      "80": 960,
+      "81": 2,
+      "83": 6,
+      "86": 502,
+      "88": 2662,
+      "89": 256,
+      "91": 2,
+      "92": 1,
+      "96": 9003,
+      "100": 559,
+      "102": 171,
+      "104": 11,
+      "105": 2679,
+      "108": 5,
+      "110": 2,
+      "111": 1043,
+      "115": 8682,
+      "119": 13,
+      "121": 5,
+      "123": 2735,
+      "124": 28,
+      "127": 1130,
+      "129": 475,
+      "134": 8127,
+      "135": 11,
+      "138": 2,
+      "140": 2822,
+      "143": 1460,
+      "145": 84,
+      "146": 5,
+      "151": 11,
+      "153": 8207,
+      "156": 84,
+      "157": 3124,
+      "159": 964,
+      "162": 26,
+      "165": 171,
+      "167": 95,
+      "172": 8514,
+      "175": 3610,
+      "178": 255,
+      "181": 26,
+      "183": 11,
+      "184": 5,
+      "186": 473,
+      "189": 84,
+      "191": 9166,
+      "192": 2651,
+      "199": 11,
+      "200": 583,
+      "203": 166,
+      "207": 959,
+      "210": 10687,
+      "211": 84,
+      "214": 484,
+      "216": 166,
+      "219": 26,
+      "222": 1043,
+      "227": 2651,
+      "229": 8675,
+      "230": 11,
+      "233": 84,
+      "238": 985,
+      "241": 166,
+      "243": 473,
+      "245": 2735,
+      "248": 8036,
+      "254": 1114,
+      "256": 84,
+      "257": 499,
+      "262": 2651,
+      "267": 8286,
+      "270": 948,
+      "272": 473,
+      "276": 26,
+      "278": 84,
+      "279": 2817,
+      "286": 9457,
+      "289": 84,
+      "292": 166,
+      "297": 2651,
+      "300": 557,
+      "302": 948,
+      "305": 8176,
+      "311": 84,
+      "314": 3124,
+      "317": 1114,
+      "322": 84,
+      "324": 8010,
+      "329": 473,
+      "330": 166,
+      "332": 2651,
+      "333": 1032,
+      "343": 8649,
+      "349": 3599,
+      "356": 166,
+      "357": 473,
+      "362": 8010,
+      "365": 948,
+      "367": 2651,
+      "368": 166,
+      "371": 473,
+      "381": 9124,
+      "384": 2651,
+      "386": 473,
+      "397": 948,
+      "400": 8483,
+      "401": 2651,
+      "413": 948,
+      "414": 473,
+      "419": 10661,
+      "428": 1421,
+      "436": 2651,
+      "438": 8010,
+      "444": 948,
+      "454": 2651,
+      "457": 8010,
+      "460": 948,
+      "471": 2651,
+      "476": 8958,
+      "489": 2651,
+      "495": 8010,
+      "506": 2651,
+      "514": 8010,
+      "524": 2651,
+      "533": 8010,
+      "552": 8010,
+      "571": 8010
+    },
+    "literal_first_descent_controls": 24756,
+    "maximum_replayed_source_bits": 58
+  }
+}
+Approximate displays of the exact lower/upper endpoints: 0.11862865133768043 0.11862912175708371
+Certified outward-rounded interval: 0.11862865 < delta_atlas < 0.11862913
+PASS: all checks remain active under optimized Python; no universal Collatz-coverage assertion.

@@ -110,7 +110,7 @@ positive affine maps from n>0.
 as full blocks followed by a prefix and use (1). Its carry is positive, so
 its value exceeds n. The exit budget pays the original source because
 
-    d*(2^t*n-z)
+    d*2^t*n-z
        = b*(2^t*Q^m-P^m)-h*(2^t-1) > 0.
 
 Here (2) says that the coefficient of b exceeds h*(2^t-1), and b>=1.

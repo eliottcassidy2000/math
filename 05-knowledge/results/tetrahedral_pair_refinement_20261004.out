@@ -1,0 +1,483 @@
+{
+  "status": "PROVED with exact finite controls; minimality is for common refinement of the stated embedded charts",
+  "pair_midpoint_labels": [
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "point": [
+        "1/2",
+        "1/2",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "point": [
+        "1/2",
+        "0",
+        "1/2",
+        "0"
+      ]
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "point": [
+        "1/2",
+        "0",
+        "0",
+        "1/2"
+      ]
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "point": [
+        "0",
+        "1/2",
+        "1/2",
+        "0"
+      ]
+    },
+    {
+      "pair": [
+        1,
+        3
+      ],
+      "point": [
+        "0",
+        "1/2",
+        "0",
+        "1/2"
+      ]
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "point": [
+        "0",
+        "0",
+        "1/2",
+        "1/2"
+      ]
+    }
+  ],
+  "diagonal_matchings": [
+    [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    [
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        2
+      ]
+    ]
+  ],
+  "coordinate_orders_per_chart": [
+    8,
+    8,
+    8
+  ],
+  "hadamard_cut_coordinates": {
+    "matrix": [
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        -1,
+        -1
+      ],
+      [
+        1,
+        -1,
+        1,
+        -1
+      ],
+      [
+        1,
+        -1,
+        -1,
+        1
+      ]
+    ],
+    "determinant": -16,
+    "lattice_index": 16,
+    "inverse": "H/4",
+    "integer_image": "all four coordinates have the same parity and their sum is 0 mod 4",
+    "klein_four_vertex_labels": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "walsh_character_labels": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "degree_two_center_cut": [
+      2,
+      0,
+      0,
+      0
+    ],
+    "degree_four_center_cut": [
+      4,
+      0,
+      0,
+      0
+    ],
+    "original_corner_cuts": [
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        -1,
+        -1
+      ],
+      [
+        1,
+        -1,
+        1,
+        -1
+      ],
+      [
+        1,
+        -1,
+        -1,
+        1
+      ]
+    ],
+    "cut_action_determinants": {
+      "-1": 12,
+      "1": 12
+    }
+  },
+  "chart_counts": [
+    {
+      "f_vector": [
+        10,
+        25,
+        24,
+        8
+      ],
+      "boundary_triangles": 16,
+      "relative_volume_histogram": {
+        "1/8": 8
+      }
+    },
+    {
+      "f_vector": [
+        10,
+        25,
+        24,
+        8
+      ],
+      "boundary_triangles": 16,
+      "relative_volume_histogram": {
+        "1/8": 8
+      }
+    },
+    {
+      "f_vector": [
+        10,
+        25,
+        24,
+        8
+      ],
+      "boundary_triangles": 16,
+      "relative_volume_histogram": {
+        "1/8": 8
+      }
+    }
+  ],
+  "center": [
+    "1/4",
+    "1/4",
+    "1/4",
+    "1/4"
+  ],
+  "center_repair": {
+    "f_vector": [
+      11,
+      30,
+      32,
+      12
+    ],
+    "boundary_triangles": 16,
+    "relative_volume_histogram": {
+      "1/16": 8,
+      "1/8": 4
+    }
+  },
+  "original_vertex_only_candidate_tetrahedra": 16,
+  "original_vertex_only_central_candidate_tetrahedra": 12,
+  "common_refinement_cells": 12,
+  "central_joint_codes": [
+    {
+      "octant": [
+        -1,
+        -1,
+        -1
+      ],
+      "three_chart_codes": [
+        [
+          -1,
+          -1
+        ],
+        [
+          -1,
+          -1
+        ],
+        [
+          -1,
+          -1
+        ]
+      ]
+    },
+    {
+      "octant": [
+        -1,
+        -1,
+        1
+      ],
+      "three_chart_codes": [
+        [
+          -1,
+          1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          -1,
+          -1
+        ]
+      ]
+    },
+    {
+      "octant": [
+        -1,
+        1,
+        -1
+      ],
+      "three_chart_codes": [
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ]
+      ]
+    },
+    {
+      "octant": [
+        -1,
+        1,
+        1
+      ],
+      "three_chart_codes": [
+        [
+          1,
+          1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          -1,
+          1
+        ]
+      ]
+    },
+    {
+      "octant": [
+        1,
+        -1,
+        -1
+      ],
+      "three_chart_codes": [
+        [
+          -1,
+          -1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ]
+    },
+    {
+      "octant": [
+        1,
+        -1,
+        1
+      ],
+      "three_chart_codes": [
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          -1
+        ]
+      ]
+    },
+    {
+      "octant": [
+        1,
+        1,
+        -1
+      ],
+      "three_chart_codes": [
+        [
+          1,
+          -1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "octant": [
+        1,
+        1,
+        1
+      ],
+      "three_chart_codes": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    }
+  ],
+  "flag_completion": {
+    "f_vector": [
+      85,
+      420,
+      624,
+      288
+    ],
+    "boundary_triangles": 96,
+    "relative_volume_histogram": {
+      "1/384": 192,
+      "1/192": 96
+    }
+  },
+  "flag_completion_parent_checks": 288,
+  "automorphism_counts": {
+    "bare_midpoint_octahedron": 48,
+    "octahedron_with_one_diagonal": 16,
+    "bare_center_star": 48,
+    "full_edgewise_chart": 8,
+    "full_center_repair": 24
+  },
+  "full_center_repair_tetrahedron_orbit_sizes": [
+    4,
+    4,
+    4
+  ],
+  "scope": "Standard midpoint boundary fixed for ten-vertex classification; any two distinct charts force the unique twelve-cell minimal common refinement.",
+  "loss": "A single diagonal chart forgets one octant sign; the bare octahedron forgets which triangular facets came from old vertices versus old faces."
+}
+PASS: all checks remain active under -O

@@ -1,0 +1,13 @@
+FINITE-EXACT: Fraction meshes; no numerical tolerance; triangle coordinate unit vectors.
+r=1..12: pure and mixed counts, manifold edges, area, and S(E_r) common refinement verified.
+r,s=1..5: E_s(E_r)=E_(rs), exact equality of triangle sets.
+k=0..4: barycentric f-vector and exact geometric validation.
+E_2(S): {"E": 42, "F": 24, "V": 19, "boundary": 12, "degree_histogram": {"3": 6, "4": 6, "6": 7}}
+S(E_2): {"E": 42, "F": 24, "V": 19, "boundary": 12, "degree_histogram": {"3": 9, "4": 3, "6": 4, "7": 3}}
+E_2(S) not refining E_2; witness: [['0', '1/4', '3/4'], ['0', '1/2', '1/2'], ['1/6', '5/12', '5/12']]
+S^2(E_2) not refining S^2; witness: [['0', '1/4', '3/4'], ['1/18', '11/36', '23/36'], ['1/12', '5/24', '17/24']]
+S^2: {"E": 60, "F": 36, "V": 25, "boundary": 12, "degree_histogram": {"3": 6, "4": 6, "5": 6, "6": 6, "12": 1}}
+E_6: {"E": 63, "F": 36, "V": 28, "boundary": 18, "degree_histogram": {"2": 3, "4": 15, "6": 10}}
+Overlay E_2 with S^2: polygon cells 54 cell-size histogram {3: 42, 4: 12} barycentric refinement {"E": 534, "F": 348, "V": 187, "boundary": 24, "degree_histogram": {"3": 12, "4": 81, "5": 6, "6": 42, "8": 33, "9": 3, "12": 6, "13": 3, "24": 1}}
+r=1..4,k=0..2: intersection overlay and barycentric common refinement pass; both parent maps retained.
+All checks passed. General claims require the accompanying proofs, not this finite range.

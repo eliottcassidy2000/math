@@ -1,0 +1,15 @@
+EXACT FLAG / EDGEWISE REFINEMENT CONTROLS
+tetrahedron base (4, 6, 4) barycentric (14, 36, 24) degree census {4: 6, 6: 8} typed/untyped Aut (24, 48)
+cube base (8, 12, 6) barycentric (26, 72, 48) degree census {4: 12, 6: 8, 8: 6} typed/untyped Aut (48, 48)
+octahedron base (6, 12, 8) barycentric (26, 72, 48) degree census {4: 12, 6: 8, 8: 6} typed/untyped Aut (48, 48)
+regular tetrahedron barycentric geometric Aut 24
+D-4 base (20, 120, 60) flags 480 abstract Aut 240 inherited abstract face orbits 2 barycentric (200, 720, 480)
+D-4 base V/E/F orbit sizes [[20], [60, 60], [60]] barycentric degree census {4: 120, 8: 60, 24: 20}
+D-5 base (20, 90, 60) flags 360 abstract Aut 120 inherited abstract face orbits 3 barycentric (170, 540, 360)
+D-5 base V/E/F orbit sizes [[20], [30, 60], [60]] barycentric degree census {4: 90, 6: 60, 18: 20}
+edgewise r=1..12 local face-orbit counts [1, 2, 3, 5, 7, 9, 12, 15, 18, 22, 26, 30]
+edgewise composition: all 36 pairs r,s=1..6 passed
+equal face-count hostile: sd^2 (25, 60, 36) boundary 12 versus edgewise6 (28, 63, 36) boundary 18
+r6 shared-vertex hostile: midpoint-to-centroid direction (-1, -1, 2)
+Universes: 3 regular maps; 2 pinned noble maps; local r=1..12; tetra/octa r=1..12; 36 compositions.
+ALL CHECKS PASSED
