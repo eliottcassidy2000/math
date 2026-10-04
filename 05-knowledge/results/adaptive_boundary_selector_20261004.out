@@ -1,0 +1,38 @@
+ADAPTIVE BOUNDARY SELECTOR: sound bounded reductions, not global coverage
+Inherited bank rows: 171 maximum literal macro length: 41
+Universe: odd integers 3..8191; count 4095 ; per-macro word cap128; fixed policy orders; no warm cache
+budget 1 {"adaptive": {"common_future": 1044, "max_actual_odd_horizon": 8, "pending": 472, "reduced": 3623}, "inherited": {"common_future": 0, "max_actual_odd_horizon": 8, "pending": 498, "reduced": 3597}, "literal": {"common_future": 0, "max_actual_odd_horizon": 1, "pending": 2048, "reduced": 2047}}
+  adaptive-minus-inherited: 26 first [207, 463, 719, 1231, 1487, 1743, 2255, 2431, 2511, 2767, 3279, 3535] ; reverse difference: 0 first []
+budget 2 {"adaptive": {"common_future": 1057, "max_actual_odd_horizon": 11, "pending": 424, "reduced": 3671}, "inherited": {"common_future": 0, "max_actual_odd_horizon": 11, "pending": 469, "reduced": 3626}, "literal": {"common_future": 0, "max_actual_odd_horizon": 2, "pending": 1536, "reduced": 2559}}
+  adaptive-minus-inherited: 45 first [207, 231, 411, 463, 615, 679, 719, 1191, 1231, 1487, 1743, 2255] ; reverse difference: 0 first []
+budget 4 {"adaptive": {"common_future": 1145, "max_actual_odd_horizon": 16, "pending": 222, "reduced": 3873}, "inherited": {"common_future": 0, "max_actual_odd_horizon": 14, "pending": 264, "reduced": 3831}, "literal": {"common_future": 0, "max_actual_odd_horizon": 4, "pending": 832, "reduced": 3263}}
+  adaptive-minus-inherited: 42 first [359, 487, 543, 743, 1095, 1115, 1255, 1351, 1487, 1511, 1743, 1883] ; reverse difference: 0 first []
+budget 8 {"adaptive": {"common_future": 1223, "max_actual_odd_horizon": 29, "pending": 66, "reduced": 4029}, "inherited": {"common_future": 0, "max_actual_odd_horizon": 24, "pending": 88, "reduced": 4007}, "literal": {"common_future": 0, "max_actual_odd_horizon": 8, "pending": 367, "reduced": 3728}}
+  adaptive-minus-inherited: 22 first [167, 495, 1743, 3099, 3175, 3431, 3567, 3839, 3943, 4303, 4575, 4935] ; reverse difference: 0 first []
+Independent 112 guard controls:16384 odd sources; 1024 positive matches
+Supplied-child route AST compilations: 496 ; common-future: 155
+Seed-only ascending closure: odd1..1023; sole initial certificate1; no orbit-derived children
+  budget 1 {"adaptive": {"certified_including_root": 269, "pending": 62, "reduced_but_child_unavailable": 181}, "inherited": {"certified_including_root": 268, "pending": 65, "reduced_but_child_unavailable": 179}} ; gains 1 [719] ; losses 0 [] ; adaptive pending first [27, 31, 47, 63, 71, 91, 103, 111, 127, 155, 159, 167, 191, 223, 231]
+  budget 2 {"adaptive": {"certified_including_root": 277, "pending": 55, "reduced_but_child_unavailable": 180}, "inherited": {"certified_including_root": 273, "pending": 62, "reduced_but_child_unavailable": 177}} ; gains 4 [615, 679, 719, 905] ; losses 0 [] ; adaptive pending first [27, 31, 47, 63, 71, 91, 103, 111, 127, 155, 159, 167, 191, 223, 239]
+  budget 4 {"adaptive": {"certified_including_root": 308, "pending": 31, "reduced_but_child_unavailable": 173}, "inherited": {"certified_including_root": 306, "pending": 35, "reduced_but_child_unavailable": 171}} ; gains 2 [359, 957] ; losses 0 [] ; adaptive pending first [27, 31, 47, 63, 71, 91, 103, 111, 155, 159, 167, 223, 239, 251, 283]
+  budget 8 {"adaptive": {"certified_including_root": 350, "pending": 15, "reduced_but_child_unavailable": 147}, "inherited": {"certified_including_root": 332, "pending": 17, "reduced_but_child_unavailable": 163}} ; gains 18 [167, 175, 207, 233, 263, 311, 351, 395, 445, 467, 495, 527] ; losses 0 [] ; adaptive pending first [27, 31, 47, 63, 71, 91, 103, 111, 155, 223, 447, 671, 703, 871, 927]
+Learned from least pending27: odd length/valuation 37 59 ; exact cylinder 27 mod 1152921504606846976 ; least endpoint 23
+  learned/root-only budget 1 certified 288 pending 61 unavailable child 163 ; gains 19 [27, 109, 145, 171, 193, 257, 343, 387, 437, 457, 515, 581, 609, 685, 773, 811] ; losses 0 []
+  learned/root-only budget 2 certified 296 pending 54 unavailable child 162 ; gains 19 [27, 109, 145, 171, 193, 257, 343, 387, 437, 457, 515, 581, 609, 685, 773, 811] ; losses 0 []
+  learned/root-only budget 4 certified 328 pending 30 unavailable child 154 ; gains 20 [27, 109, 145, 171, 193, 257, 343, 387, 437, 457, 515, 543, 581, 609, 685, 773] ; losses 0 []
+  learned/root-only budget 8 certified 370 pending 14 unavailable child 128 ; gains 20 [27, 109, 145, 171, 193, 257, 343, 387, 437, 457, 515, 543, 581, 609, 685, 773] ; losses 0 []
+Certified suffix memory: same increasing pass and macro budget; exact parent/cut provenance
+  budget 1 without learned 269 62 181 ; with learned 428 49 35 ; remaining uncertified first [63, 127, 159, 169, 191, 223, 225, 231, 239, 255, 287, 297, 303, 327, 339, 359]
+  budget 2 without learned 278 54 180 ; with learned 447 37 28 ; remaining uncertified first [127, 159, 169, 191, 225, 239, 287, 303, 327, 339, 415, 447, 451, 491, 495, 509]
+  budget 4 without learned 308 31 173 ; with learned 497 12 3 ; remaining uncertified first [327, 447, 495, 667, 671, 703, 751, 795, 871, 889, 895, 927, 937, 1001, 1007]
+  budget 8 without learned 354 12 146 ; with learned 508 3 1 ; remaining uncertified first [447, 703, 871, 937]
+Four bounded refinement rounds:budget8, root1 only, suffix memory, discovery cap128
+  learned 27 length 37 valuation 59 least endpoint 23 ; certified 508 ; pending [447, 703, 871] ; unavailable child [937]
+  learned 447 length 25 valuation 41 least endpoint 173 ; certified 509 ; pending [703, 871] ; unavailable child [937]
+  learned 703 length 51 valuation 83 least endpoint 157 ; certified 511 ; pending [871] ; unavailable child []
+  learned 871 length 22 valuation 35 least endpoint 797 ; certified 512 ; pending [] ; unavailable child []
+Final logical proof-memory counts: {"distinct_certified_sources": 835, "outside_universe": 323, "separate_odd_edge_count": 11373} ; node count includesroot; separate count is odd edges, not bytes
+Explicit virtual79: (67,) join 101 ; completed-child AST handoffs: 3 ; s5 macro count/actual odd horizon: 1 18
+Optional exact mod19-ray lookup: 190 certified supplied members; 190 same-residue nonmembers rejected; excluded from policy tables
+Hostiles:483 intermediate181,893 retains223/335, root/zero budget,7/45 mod19 alias; 6 rejected inputs/discharges
+No adaptive-policy completeness, new basin, runtime speedup, or unbounded coverage claim.

@@ -1,0 +1,438 @@
+{
+  "status": "PROVED shared-depth and elementary all-level existence; FINITE-EXACT declared controls",
+  "prime_universe": {
+    "all_primes_from5_through1000": 166,
+    "extra_primes": [
+      3511,
+      5779,
+      87211
+    ],
+    "histogram": {
+      "0": 143,
+      "1": 16,
+      "2": 5,
+      "3": 1,
+      "4": 1
+    },
+    "least_prime_per_exact_depth": {
+      "0": 5,
+      "1": 19,
+      "3": 163,
+      "2": 271,
+      "4": 487
+    }
+  },
+  "lifted_gcd_checks": 12168,
+  "named_clocks": [
+    {
+      "prime": 19,
+      "order2": 18,
+      "order2_factors": {
+        "2": 1,
+        "3": 2
+      },
+      "order64": 3,
+      "resonance": 1,
+      "order64_depths": [
+        3,
+        57,
+        1083
+      ]
+    },
+    {
+      "prime": 73,
+      "order2": 9,
+      "order2_factors": {
+        "3": 2
+      },
+      "order64": 3,
+      "resonance": 1,
+      "order64_depths": [
+        3,
+        219,
+        15987
+      ]
+    },
+    {
+      "prime": 109,
+      "order2": 36,
+      "order2_factors": {
+        "2": 2,
+        "3": 2
+      },
+      "order64": 6,
+      "resonance": 1,
+      "order64_depths": [
+        6,
+        654,
+        71286
+      ]
+    },
+    {
+      "prime": 127,
+      "order2": 7,
+      "order2_factors": {
+        "7": 1
+      },
+      "order64": 7,
+      "resonance": 0,
+      "order64_depths": [
+        7,
+        889,
+        112903
+      ]
+    },
+    {
+      "prime": 163,
+      "order2": 162,
+      "order2_factors": {
+        "2": 1,
+        "3": 4
+      },
+      "order64": 27,
+      "resonance": 3,
+      "order64_depths": [
+        27,
+        4401,
+        717363
+      ]
+    },
+    {
+      "prime": 3511,
+      "order2": 1755,
+      "order2_factors": {
+        "3": 3,
+        "5": 1,
+        "13": 1
+      },
+      "order64": 585,
+      "resonance": 2,
+      "order64_depths": [
+        585,
+        585,
+        2053935
+      ]
+    },
+    {
+      "prime": 5779,
+      "order2": 5778,
+      "order2_factors": {
+        "2": 1,
+        "3": 3,
+        "107": 1
+      },
+      "order64": 963,
+      "resonance": 2,
+      "order64_depths": [
+        963,
+        5565177,
+        32161157883
+      ]
+    },
+    {
+      "prime": 87211,
+      "order2": 54,
+      "order2_factors": {
+        "2": 1,
+        "3": 3
+      },
+      "order64": 9,
+      "resonance": 2,
+      "order64_depths": [
+        9,
+        784899,
+        68451826689
+      ]
+    }
+  ],
+  "inherited_binary_layers": [
+    {
+      "layer": 1,
+      "quotient": 1,
+      "factors": {},
+      "resonance": null
+    },
+    {
+      "layer": 2,
+      "quotient": 19,
+      "factors": {
+        "19": 1
+      },
+      "resonance": 1
+    },
+    {
+      "layer": 3,
+      "quotient": 87211,
+      "factors": {
+        "87211": 1
+      },
+      "resonance": 2
+    },
+    {
+      "layer": 4,
+      "quotient": 6004799458421419,
+      "factors": {
+        "163": 1,
+        "135433": 1,
+        "272010961": 1
+      },
+      "resonance": 3
+    }
+  ],
+  "complete_joint_languages": [
+    {
+      "prime": 5,
+      "ternary_depth": 1,
+      "candidate_pairs": 2,
+      "compatible_pairs": 2,
+      "index": 1
+    },
+    {
+      "prime": 5,
+      "ternary_depth": 2,
+      "candidate_pairs": 6,
+      "compatible_pairs": 6,
+      "index": 1
+    },
+    {
+      "prime": 5,
+      "ternary_depth": 3,
+      "candidate_pairs": 18,
+      "compatible_pairs": 18,
+      "index": 1
+    },
+    {
+      "prime": 5,
+      "ternary_depth": 4,
+      "candidate_pairs": 54,
+      "compatible_pairs": 54,
+      "index": 1
+    },
+    {
+      "prime": 7,
+      "ternary_depth": 1,
+      "candidate_pairs": 1,
+      "compatible_pairs": 1,
+      "index": 1
+    },
+    {
+      "prime": 7,
+      "ternary_depth": 2,
+      "candidate_pairs": 3,
+      "compatible_pairs": 3,
+      "index": 1
+    },
+    {
+      "prime": 7,
+      "ternary_depth": 3,
+      "candidate_pairs": 9,
+      "compatible_pairs": 9,
+      "index": 1
+    },
+    {
+      "prime": 7,
+      "ternary_depth": 4,
+      "candidate_pairs": 27,
+      "compatible_pairs": 27,
+      "index": 1
+    },
+    {
+      "prime": 19,
+      "ternary_depth": 1,
+      "candidate_pairs": 3,
+      "compatible_pairs": 3,
+      "index": 1
+    },
+    {
+      "prime": 19,
+      "ternary_depth": 2,
+      "candidate_pairs": 9,
+      "compatible_pairs": 3,
+      "index": 3
+    },
+    {
+      "prime": 19,
+      "ternary_depth": 3,
+      "candidate_pairs": 27,
+      "compatible_pairs": 9,
+      "index": 3
+    },
+    {
+      "prime": 19,
+      "ternary_depth": 4,
+      "candidate_pairs": 81,
+      "compatible_pairs": 27,
+      "index": 3
+    },
+    {
+      "prime": 73,
+      "ternary_depth": 1,
+      "candidate_pairs": 3,
+      "compatible_pairs": 3,
+      "index": 1
+    },
+    {
+      "prime": 73,
+      "ternary_depth": 2,
+      "candidate_pairs": 9,
+      "compatible_pairs": 3,
+      "index": 3
+    },
+    {
+      "prime": 73,
+      "ternary_depth": 3,
+      "candidate_pairs": 27,
+      "compatible_pairs": 9,
+      "index": 3
+    },
+    {
+      "prime": 73,
+      "ternary_depth": 4,
+      "candidate_pairs": 81,
+      "compatible_pairs": 27,
+      "index": 3
+    },
+    {
+      "prime": 109,
+      "ternary_depth": 1,
+      "candidate_pairs": 6,
+      "compatible_pairs": 6,
+      "index": 1
+    },
+    {
+      "prime": 109,
+      "ternary_depth": 2,
+      "candidate_pairs": 18,
+      "compatible_pairs": 6,
+      "index": 3
+    },
+    {
+      "prime": 109,
+      "ternary_depth": 3,
+      "candidate_pairs": 54,
+      "compatible_pairs": 18,
+      "index": 3
+    },
+    {
+      "prime": 109,
+      "ternary_depth": 4,
+      "candidate_pairs": 162,
+      "compatible_pairs": 54,
+      "index": 3
+    },
+    {
+      "prime": 127,
+      "ternary_depth": 1,
+      "candidate_pairs": 7,
+      "compatible_pairs": 7,
+      "index": 1
+    },
+    {
+      "prime": 127,
+      "ternary_depth": 2,
+      "candidate_pairs": 21,
+      "compatible_pairs": 21,
+      "index": 1
+    },
+    {
+      "prime": 127,
+      "ternary_depth": 3,
+      "candidate_pairs": 63,
+      "compatible_pairs": 63,
+      "index": 1
+    },
+    {
+      "prime": 127,
+      "ternary_depth": 4,
+      "candidate_pairs": 189,
+      "compatible_pairs": 189,
+      "index": 1
+    },
+    {
+      "prime": 163,
+      "ternary_depth": 1,
+      "candidate_pairs": 27,
+      "compatible_pairs": 27,
+      "index": 1
+    },
+    {
+      "prime": 163,
+      "ternary_depth": 2,
+      "candidate_pairs": 81,
+      "compatible_pairs": 27,
+      "index": 3
+    },
+    {
+      "prime": 163,
+      "ternary_depth": 3,
+      "candidate_pairs": 243,
+      "compatible_pairs": 27,
+      "index": 9
+    },
+    {
+      "prime": 163,
+      "ternary_depth": 4,
+      "candidate_pairs": 729,
+      "compatible_pairs": 27,
+      "index": 27
+    },
+    {
+      "prime": 5779,
+      "ternary_depth": 1,
+      "candidate_pairs": 963,
+      "compatible_pairs": 963,
+      "index": 1
+    },
+    {
+      "prime": 5779,
+      "ternary_depth": 2,
+      "candidate_pairs": 2889,
+      "compatible_pairs": 963,
+      "index": 3
+    },
+    {
+      "prime": 5779,
+      "ternary_depth": 3,
+      "candidate_pairs": 8667,
+      "compatible_pairs": 963,
+      "index": 9
+    },
+    {
+      "prime": 5779,
+      "ternary_depth": 4,
+      "candidate_pairs": 26001,
+      "compatible_pairs": 2889,
+      "index": 9
+    },
+    {
+      "prime": 87211,
+      "ternary_depth": 1,
+      "candidate_pairs": 9,
+      "compatible_pairs": 9,
+      "index": 1
+    },
+    {
+      "prime": 87211,
+      "ternary_depth": 2,
+      "candidate_pairs": 27,
+      "compatible_pairs": 9,
+      "index": 3
+    },
+    {
+      "prime": 87211,
+      "ternary_depth": 3,
+      "candidate_pairs": 81,
+      "compatible_pairs": 9,
+      "index": 9
+    },
+    {
+      "prime": 87211,
+      "ternary_depth": 4,
+      "candidate_pairs": 243,
+      "compatible_pairs": 27,
+      "index": 9
+    }
+  ],
+  "boundary": "Shared ternary phase is a quotient of a fixed inverse-ray block clock; retain the hub, row, source certificate and original integer identity."
+}
+PASS: exact primality/order certificates and all checks active under -O
