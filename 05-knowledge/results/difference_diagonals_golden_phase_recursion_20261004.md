@@ -49,6 +49,10 @@ The overlap is acknowledged explicitly: the phase correspondence and
 difference-pair arithmetic have parallel proofs, not separate novelty claims.
 The additional connections below use the numerator selector, the independent
 arithmetic filter, and the compatible residue ring.
+Its follow-up commit6146c2b3e independently adds the q29 rational-anchor
+bridge and an exact terminating offset register for supplied golden-field
+inputs. Those additions are integrated below, preserving the open
+integer-to-field construction problem.
 
 ## 1. The ideal equality leads to a stronger, reconstructive invariant
 
@@ -460,6 +464,22 @@ to a certified ordered suffix. Each component repairs a demonstrated loss.
 An implementation can intern common suffixes while keeping the source and
 edge legality checks local. The existing carry register and route compiler
 already provide those local certificates.
+
+There is now a proved offset-normalization component for supplied field
+inputs. Write x=x_bar+u+v*phi, where x_bar is the periodic lift of its
+nonzero phase and (u,v) is integral. If their current golden digits are
+d and d_bar, the exact offset update is
+
+    (u,v) -> (v-(d-d_bar),u+v).
+
+The contracting conjugate and fixed denominator put the orbit in a finite
+lattice; once it is periodic, uniqueness of the lift forces offset(0,0).
+Thus this register terminates for every supplied x in Q(phi) intersect[0,1]
+with nonzero phase. The incoming note checks Theta(151) with initial offset
+(293,-181), which vanishes after the15 ordinary steps ending at1. This
+normalizes a given algebraic carrier; it does not construct Theta(n) in the
+field for an arbitrary input integer. Retaining that distinction prevents
+the normalization theorem from assuming the unknown orbit's destination.
 
 The first finite phase/route intersection and the negative-anchor transfer
 are now implemented in the independent filter above. Three decisive
