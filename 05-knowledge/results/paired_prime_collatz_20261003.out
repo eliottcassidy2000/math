@@ -1,0 +1,22 @@
+Eratosthenes vs independent trial division: integers 2..40001
+Four family product laws exactly classify 200000 labels; 522157 factor pairs
+A prime indices first 20: [1, 3, 4, 7, 9, 10, 13, 15, 18, 22, 24, 25, 27, 28, 34, 37, 39, 43, 45, 48]
+B prime indices first 20: [1, 2, 3, 5, 6, 8, 11, 12, 15, 17, 18, 20, 21, 26, 27, 32, 33, 35, 38, 41]
+Largest consecutive composite-index gap in each row: 3 (sharp)
+A prime-index count / max gap (gap,left,right): 16900 (50, 45772, 45822)
+B prime-index count / max gap (gap,left,right): 16959 (42, 90153, 90195)
+A union B prime-index count / max gap (gap,left,right): 31925 (28, 92565, 92593)
+(B prime,A prime) state counts: [((False, False), 68075), ((False, True), 14966), ((True, False), 15025), ((True, True), 1934)]
+First both-composite atom: N=14, (55,57)
+Longest both-composite run in 1..100000: (92566, 92592, 27)
+Factorial simultaneous-gap witnesses: lengths 1..20, both rows
+Central-block shortcut pairs and both affine conjugacies: n=1..10000
+Same-atom full-odd dynamics: + maps (7,9)->(11,7); - maps (7,9)->(5,13)
+Family+prime flag fails to determine next prime flag: + at 7/23, - at 7/47
+3n-1 cycle control: odd accelerated cycle 5->7->5; 1 fixed
+Eckmann-Hilton interchange defect 2(ad+bc): all 1296 inputs in 0..5
+q atom-address transport: 1275 positive pairs with I<J<=51
+Twin-pair counts (vertical, diagonal within atom window): (1934, 1870)
+Four-label prime atoms (independent trial-division replay): count / first 20: 125 [1, 3, 18, 45, 87, 357, 528, 942, 1470, 2523, 2607, 2838, 2958, 2985, 3153, 3483, 3840, 3972, 4245, 4770]
+Four-form local root counts checked at every prime <=101: 0,2,2,4 thereafter
+ALL CHECKS PASSED
