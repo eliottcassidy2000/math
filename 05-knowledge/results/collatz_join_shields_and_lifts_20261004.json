@@ -1,0 +1,7429 @@
+{
+  "status": "PROVED scoped mechanisms; FINITE-EXACT; universal coverage OPEN",
+  "seed_sha256": "c1a01b7d890f9bcf6205572a65f112b4038c290b67c10ef86e5d1eba40df31b7",
+  "independent_search_cases": 10560,
+  "shield": {
+    "signed_sources": 32,
+    "sharp_family": {
+      "source": 283,
+      "child": 223,
+      "source_period": 1296,
+      "child_period": 1024,
+      "w": [
+        1,
+        2
+      ],
+      "v": [
+        1,
+        1,
+        1,
+        1,
+        3,
+        2
+      ],
+      "slope": "64/81",
+      "intercept": "-49/81",
+      "source_residue": 283
+    }
+  },
+  "sibling_runs": [
+    {
+      "k": 0,
+      "ell": 1,
+      "modulus": 3,
+      "residue": 2,
+      "least_odd_source": 5,
+      "child": 3,
+      "gap": 1
+    },
+    {
+      "k": 1,
+      "ell": 4,
+      "modulus": 81,
+      "residue": 40,
+      "least_odd_source": 121,
+      "child": 95,
+      "gap": 17
+    },
+    {
+      "k": 2,
+      "ell": 7,
+      "modulus": 2187,
+      "residue": 273,
+      "least_odd_source": 273,
+      "child": 255,
+      "gap": 139
+    },
+    {
+      "k": 3,
+      "ell": 11,
+      "modulus": 177147,
+      "residue": 94109,
+      "least_odd_source": 94109,
+      "child": 69631,
+      "gap": 46075
+    },
+    {
+      "k": 4,
+      "ell": 14,
+      "modulus": 4782969,
+      "residue": 2503585,
+      "least_odd_source": 2503585,
+      "child": 2195455,
+      "gap": 588665
+    },
+    {
+      "k": 5,
+      "ell": 18,
+      "modulus": 387420489,
+      "residue": 62804493,
+      "least_odd_source": 62804493,
+      "child": 43515903,
+      "gap": 118985033
+    },
+    {
+      "k": 6,
+      "ell": 21,
+      "modulus": 10460353203,
+      "residue": 5439587969,
+      "least_odd_source": 5439587969,
+      "child": 4466933759,
+      "gap": 1870418611
+    },
+    {
+      "k": 7,
+      "ell": 24,
+      "modulus": 282429536481,
+      "residue": 221027314255,
+      "least_odd_source": 221027314255,
+      "child": 215117463551,
+      "gap": 7551629537
+    },
+    {
+      "k": 8,
+      "ell": 28,
+      "modulus": 22876792454961,
+      "residue": 7257210008829,
+      "least_odd_source": 7257210008829,
+      "child": 5580773130239,
+      "gap": 5284606410545
+    }
+  ],
+  "strict_extension": {
+    "missed": {
+      "n": 144615,
+      "m": null,
+      "visits": 31
+    },
+    "found": {
+      "n": 144615,
+      "m": 101567,
+      "w": [
+        1
+      ],
+      "v": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        3
+      ],
+      "join": 216923,
+      "visits": 15
+    },
+    "lift": {
+      "source": 1731,
+      "child": 1215,
+      "source_period": 2916,
+      "child_period": 2048,
+      "w": [
+        1
+      ],
+      "v": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        3
+      ],
+      "slope": "512/729",
+      "intercept": "-179/243",
+      "source_residue": 1731
+    }
+  },
+  "search_matrix": [
+    {
+      "forward_cap": 6,
+      "inverse_cap": 6,
+      "resolved": 0,
+      "visited_inverse_nodes": 7625
+    },
+    {
+      "forward_cap": 6,
+      "inverse_cap": 8,
+      "resolved": 7,
+      "visited_inverse_nodes": 14294
+    },
+    {
+      "forward_cap": 6,
+      "inverse_cap": 12,
+      "resolved": 12,
+      "visited_inverse_nodes": 35173
+    },
+    {
+      "forward_cap": 6,
+      "inverse_cap": 16,
+      "resolved": 16,
+      "visited_inverse_nodes": 91321
+    },
+    {
+      "forward_cap": 8,
+      "inverse_cap": 6,
+      "resolved": 78,
+      "visited_inverse_nodes": 9109
+    },
+    {
+      "forward_cap": 8,
+      "inverse_cap": 8,
+      "resolved": 84,
+      "visited_inverse_nodes": 17319
+    },
+    {
+      "forward_cap": 8,
+      "inverse_cap": 12,
+      "resolved": 89,
+      "visited_inverse_nodes": 44068
+    },
+    {
+      "forward_cap": 8,
+      "inverse_cap": 16,
+      "resolved": 93,
+      "visited_inverse_nodes": 113802
+    },
+    {
+      "forward_cap": 12,
+      "inverse_cap": 6,
+      "resolved": 159,
+      "visited_inverse_nodes": 10615
+    },
+    {
+      "forward_cap": 12,
+      "inverse_cap": 8,
+      "resolved": 164,
+      "visited_inverse_nodes": 19988
+    },
+    {
+      "forward_cap": 12,
+      "inverse_cap": 12,
+      "resolved": 166,
+      "visited_inverse_nodes": 53523
+    },
+    {
+      "forward_cap": 12,
+      "inverse_cap": 16,
+      "resolved": 169,
+      "visited_inverse_nodes": 137519
+    },
+    {
+      "forward_cap": 16,
+      "inverse_cap": 6,
+      "resolved": 192,
+      "visited_inverse_nodes": 11154
+    },
+    {
+      "forward_cap": 16,
+      "inverse_cap": 8,
+      "resolved": 195,
+      "visited_inverse_nodes": 21056
+    },
+    {
+      "forward_cap": 16,
+      "inverse_cap": 12,
+      "resolved": 196,
+      "visited_inverse_nodes": 56984
+    },
+    {
+      "forward_cap": 16,
+      "inverse_cap": 16,
+      "resolved": 198,
+      "visited_inverse_nodes": 147364
+    }
+  ],
+  "family_witnesses": [
+    {
+      "source": 111,
+      "child": 103,
+      "source_period": 8748,
+      "child_period": 8192,
+      "w": [
+        1
+      ],
+      "v": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        3
+      ],
+      "slope": "2048/2187",
+      "intercept": "-689/729",
+      "source_residue": 111
+    },
+    {
+      "source": 1275,
+      "child": 1007,
+      "source_period": 2592,
+      "child_period": 2048,
+      "w": [
+        1,
+        2,
+        1
+      ],
+      "v": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        3
+      ],
+      "slope": "64/81",
+      "intercept": "-11/27",
+      "source_residue": 1275
+    },
+    {
+      "source": 3867,
+      "child": 3055,
+      "source_period": 2592,
+      "child_period": 2048,
+      "w": [
+        1,
+        2,
+        1
+      ],
+      "v": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        3
+      ],
+      "slope": "64/81",
+      "intercept": "-11/27",
+      "source_residue": 1275
+    },
+    {
+      "source": 4839,
+      "child": 3823,
+      "source_period": 5184,
+      "child_period": 4096,
+      "w": [
+        1,
+        1,
+        2,
+        1
+      ],
+      "v": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        3
+      ],
+      "slope": "64/81",
+      "intercept": "-11/27",
+      "source_residue": 4839
+    },
+    {
+      "source": 6591,
+      "child": 6171,
+      "source_period": 8748,
+      "child_period": 8192,
+      "w": [
+        1
+      ],
+      "v": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        3
+      ],
+      "slope": "2048/2187",
+      "intercept": "-797/729",
+      "source_residue": 6591
+    },
+    {
+      "source": 8859,
+      "child": 8295,
+      "source_period": 8748,
+      "child_period": 8192,
+      "w": [
+        1
+      ],
+      "v": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        3
+      ],
+      "slope": "2048/2187",
+      "intercept": "-689/729",
+      "source_residue": 111
+    },
+    {
+      "source": 9051,
+      "child": 7151,
+      "source_period": 2592,
+      "child_period": 2048,
+      "w": [
+        1,
+        2,
+        1
+      ],
+      "v": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        3
+      ],
+      "slope": "64/81",
+      "intercept": "-11/27",
+      "source_residue": 1275
+    },
+    {
+      "source": 159,
+      "child": 111,
+      "source_period": 186624,
+      "child_period": 131072,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "v": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "slope": "512/729",
+      "intercept": "-163/243",
+      "source_residue": 159
+    },
+    {
+      "source": 303,
+      "child": 239,
+      "source_period": 20736,
+      "child_period": 16384,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "v": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        4
+      ],
+      "slope": "64/81",
+      "intercept": "-11/27",
+      "source_residue": 303
+    },
+    {
+      "source": 5991,
+      "child": 4207,
+      "source_period": 46656,
+      "child_period": 32768,
+      "w": [
+        1,
+        1,
+        2,
+        1
+      ],
+      "v": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        3
+      ],
+      "slope": "512/729",
+      "intercept": "-163/243",
+      "source_residue": 5991
+    },
+    {
+      "source": 7335,
+      "child": 5151,
+      "source_period": 46656,
+      "child_period": 32768,
+      "w": [
+        1,
+        1,
+        2,
+        1
+      ],
+      "v": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        3
+      ],
+      "slope": "512/729",
+      "intercept": "-49/81",
+      "source_residue": 7335
+    },
+    {
+      "source": 9375,
+      "child": 7407,
+      "source_period": 20736,
+      "child_period": 16384,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "v": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "slope": "64/81",
+      "intercept": "-11/27",
+      "source_residue": 9375
+    },
+    {
+      "source": 511,
+      "child": 447,
+      "source_period": 19131876,
+      "child_period": 16777216,
+      "w": [
+        1
+      ],
+      "v": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        3,
+        2,
+        1,
+        1,
+        1,
+        3,
+        3
+      ],
+      "slope": "4194304/4782969",
+      "intercept": "-5302201/4782969",
+      "source_residue": 511
+    },
+    {
+      "source": 4863,
+      "child": 4263,
+      "source_period": 19131876,
+      "child_period": 16777216,
+      "w": [
+        1
+      ],
+      "v": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        3,
+        1,
+        2,
+        3
+      ],
+      "slope": "4194304/4782969",
+      "intercept": "-2367835/1594323",
+      "source_residue": 4863
+    },
+    {
+      "source": 5871,
+      "child": 5791,
+      "source_period": 2125764,
+      "child_period": 2097152,
+      "w": [
+        1
+      ],
+      "v": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        3,
+        2,
+        3
+      ],
+      "slope": "524288/531441",
+      "intercept": "-173339/177147",
+      "source_residue": 5871
+    },
+    {
+      "source": 6471,
+      "child": 6383,
+      "source_period": 68024448,
+      "child_period": 67108864,
+      "w": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "v": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        3,
+        2,
+        2,
+        1,
+        1,
+        1,
+        4
+      ],
+      "slope": "524288/531441",
+      "intercept": "-53305/59049",
+      "source_residue": 6471
+    },
+    {
+      "source": 231,
+      "child": 31,
+      "source_period": 32768,
+      "child_period": 4374,
+      "w": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        6
+      ],
+      "v": [],
+      "slope": "2187/16384",
+      "intercept": "2707/16384",
+      "source_residue": 231
+    },
+    {
+      "source": 303,
+      "child": 61,
+      "source_period": 65536,
+      "child_period": 13122,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        4
+      ],
+      "v": [],
+      "slope": "6561/32768",
+      "intercept": "10865/32768",
+      "source_residue": 303
+    },
+    {
+      "source": 543,
+      "child": 387,
+      "source_period": 4096,
+      "child_period": 2916,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        3
+      ],
+      "v": [
+        1
+      ],
+      "slope": "729/1024",
+      "intercept": "441/1024",
+      "source_residue": 543
+    },
+    {
+      "source": 615,
+      "child": 329,
+      "source_period": 8192,
+      "child_period": 4374,
+      "w": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        5
+      ],
+      "v": [],
+      "slope": "2187/4096",
+      "intercept": "2579/4096",
+      "source_residue": 615
+    },
+    {
+      "source": 1071,
+      "child": 763,
+      "source_period": 4096,
+      "child_period": 2916,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        3
+      ],
+      "v": [
+        1
+      ],
+      "slope": "729/1024",
+      "intercept": "553/1024",
+      "source_residue": 1071
+    },
+    {
+      "source": 1135,
+      "child": 455,
+      "source_period": 32768,
+      "child_period": 13122,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        5
+      ],
+      "v": [],
+      "slope": "6561/16384",
+      "intercept": "7985/16384",
+      "source_residue": 1135
+    },
+    {
+      "source": 1191,
+      "child": 955,
+      "source_period": 16384,
+      "child_period": 13122,
+      "w": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        4
+      ],
+      "v": [],
+      "slope": "6561/8192",
+      "intercept": "9209/8192",
+      "source_residue": 1191
+    },
+    {
+      "source": 1215,
+      "child": 487,
+      "source_period": 32768,
+      "child_period": 13122,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        3,
+        4
+      ],
+      "v": [],
+      "slope": "6561/16384",
+      "intercept": "7393/16384",
+      "source_residue": 1215
+    },
+    {
+      "source": 1275,
+      "child": 1211,
+      "source_period": 8192,
+      "child_period": 7776,
+      "w": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        3
+      ],
+      "v": [
+        1,
+        2,
+        1
+      ],
+      "slope": "243/256",
+      "intercept": "191/256",
+      "source_residue": 1275
+    },
+    {
+      "source": 1563,
+      "child": 1319,
+      "source_period": 2048,
+      "child_period": 1728,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "v": [
+        1,
+        1,
+        2,
+        1
+      ],
+      "slope": "27/32",
+      "intercept": "7/32",
+      "source_residue": 1563
+    },
+    {
+      "source": 1567,
+      "child": 157,
+      "source_period": 131072,
+      "child_period": 13122,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        6
+      ],
+      "v": [],
+      "slope": "6561/65536",
+      "intercept": "8065/65536",
+      "source_residue": 1567
+    },
+    {
+      "source": 1627,
+      "child": 1159,
+      "source_period": 4096,
+      "child_period": 2916,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        3
+      ],
+      "v": [
+        1
+      ],
+      "slope": "729/1024",
+      "intercept": "733/1024",
+      "source_residue": 1627
+    },
+    {
+      "source": 1639,
+      "child": 1383,
+      "source_period": 2048,
+      "child_period": 1728,
+      "w": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        3
+      ],
+      "v": [
+        1,
+        1,
+        2,
+        1
+      ],
+      "slope": "27/32",
+      "intercept": "3/32",
+      "source_residue": 1639
+    },
+    {
+      "source": 1647,
+      "child": 55,
+      "source_period": 131072,
+      "child_period": 4374,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        8
+      ],
+      "v": [],
+      "slope": "2187/65536",
+      "intercept": "2491/65536",
+      "source_residue": 1647
+    },
+    {
+      "source": 1863,
+      "child": 1327,
+      "source_period": 4096,
+      "child_period": 2916,
+      "w": [
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        3
+      ],
+      "v": [
+        1
+      ],
+      "slope": "729/1024",
+      "intercept": "721/1024",
+      "source_residue": 1863
+    },
+    {
+      "source": 1983,
+      "child": 1589,
+      "source_period": 16384,
+      "child_period": 13122,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        5
+      ],
+      "v": [],
+      "slope": "6561/8192",
+      "intercept": "6625/8192",
+      "source_residue": 1983
+    },
+    {
+      "source": 2031,
+      "child": 1085,
+      "source_period": 8192,
+      "child_period": 4374,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        5
+      ],
+      "v": [],
+      "slope": "2187/4096",
+      "intercept": "2363/4096",
+      "source_residue": 2031
+    },
+    {
+      "source": 2079,
+      "child": 833,
+      "source_period": 32768,
+      "child_period": 13122,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        5
+      ],
+      "v": [],
+      "slope": "6561/16384",
+      "intercept": "7553/16384",
+      "source_residue": 2079
+    },
+    {
+      "source": 2095,
+      "child": 1679,
+      "source_period": 16384,
+      "child_period": 13122,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        3
+      ],
+      "v": [],
+      "slope": "6561/8192",
+      "intercept": "9073/8192",
+      "source_residue": 2095
+    },
+    {
+      "source": 2203,
+      "child": 1177,
+      "source_period": 8192,
+      "child_period": 4374,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        4
+      ],
+      "v": [],
+      "slope": "2187/4096",
+      "intercept": "3031/4096",
+      "source_residue": 2203
+    },
+    {
+      "source": 2239,
+      "child": 299,
+      "source_period": 32768,
+      "child_period": 4374,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        7
+      ],
+      "v": [],
+      "slope": "2187/16384",
+      "intercept": "2123/16384",
+      "source_residue": 2239
+    },
+    {
+      "source": 2331,
+      "child": 467,
+      "source_period": 65536,
+      "child_period": 13122,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        7
+      ],
+      "v": [],
+      "slope": "6561/32768",
+      "intercept": "8965/32768",
+      "source_residue": 2331
+    },
+    {
+      "source": 2607,
+      "child": 2089,
+      "source_period": 16384,
+      "child_period": 13122,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        4
+      ],
+      "v": [],
+      "slope": "6561/8192",
+      "intercept": "8561/8192",
+      "source_residue": 2607
+    },
+    {
+      "source": 2907,
+      "child": 1553,
+      "source_period": 8192,
+      "child_period": 4374,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        3
+      ],
+      "v": [],
+      "slope": "2187/4096",
+      "intercept": "3479/4096",
+      "source_residue": 2907
+    },
+    {
+      "source": 3067,
+      "child": 1229,
+      "source_period": 32768,
+      "child_period": 13122,
+      "w": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        3
+      ],
+      "v": [],
+      "slope": "6561/16384",
+      "intercept": "13349/16384",
+      "source_residue": 3067
+    },
+    {
+      "source": 3399,
+      "child": 3227,
+      "source_period": 8192,
+      "child_period": 7776,
+      "w": [
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        3
+      ],
+      "v": [
+        1,
+        2,
+        1
+      ],
+      "slope": "243/256",
+      "intercept": "155/256",
+      "source_residue": 3399
+    },
+    {
+      "source": 3675,
+      "child": 1963,
+      "source_period": 8192,
+      "child_period": 4374,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        4
+      ],
+      "v": [],
+      "slope": "2187/4096",
+      "intercept": "3223/4096",
+      "source_residue": 3675
+    },
+    {
+      "source": 3687,
+      "child": 3111,
+      "source_period": 2048,
+      "child_period": 1728,
+      "w": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        3
+      ],
+      "v": [
+        1,
+        1,
+        2,
+        1
+      ],
+      "slope": "27/32",
+      "intercept": "3/32",
+      "source_residue": 1639
+    },
+    {
+      "source": 3751,
+      "child": 2671,
+      "source_period": 4096,
+      "child_period": 2916,
+      "w": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        3
+      ],
+      "v": [
+        1
+      ],
+      "slope": "729/1024",
+      "intercept": "625/1024",
+      "source_residue": 3751
+    },
+    {
+      "source": 3835,
+      "child": 2731,
+      "source_period": 4096,
+      "child_period": 2916,
+      "w": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        3
+      ],
+      "v": [
+        1
+      ],
+      "slope": "729/1024",
+      "intercept": "829/1024",
+      "source_residue": 3835
+    },
+    {
+      "source": 4251,
+      "child": 3027,
+      "source_period": 4096,
+      "child_period": 2916,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        3
+      ],
+      "v": [
+        1
+      ],
+      "slope": "729/1024",
+      "intercept": "669/1024",
+      "source_residue": 155
+    },
+    {
+      "source": 4327,
+      "child": 2311,
+      "source_period": 8192,
+      "child_period": 4374,
+      "w": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        4
+      ],
+      "v": [],
+      "slope": "2187/4096",
+      "intercept": "2707/4096",
+      "source_residue": 4327
+    },
+    {
+      "source": 4455,
+      "child": 3569,
+      "source_period": 16384,
+      "child_period": 13122,
+      "w": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        5
+      ],
+      "v": [],
+      "slope": "6561/8192",
+      "intercept": "7993/8192",
+      "source_residue": 4455
+    },
+    {
+      "source": 4635,
+      "child": 3911,
+      "source_period": 4096,
+      "child_period": 3456,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        4
+      ],
+      "v": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "slope": "27/32",
+      "intercept": "7/32",
+      "source_residue": 539
+    },
+    {
+      "source": 5023,
+      "child": 503,
+      "source_period": 131072,
+      "child_period": 13122,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        4,
+        5
+      ],
+      "v": [],
+      "slope": "6561/65536",
+      "intercept": "8705/65536",
+      "source_residue": 5023
+    },
+    {
+      "source": 5031,
+      "child": 2687,
+      "source_period": 8192,
+      "child_period": 4374,
+      "w": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        3
+      ],
+      "v": [],
+      "slope": "2187/4096",
+      "intercept": "3155/4096",
+      "source_residue": 5031
+    },
+    {
+      "source": 5103,
+      "child": 511,
+      "source_period": 131072,
+      "child_period": 13122,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        3,
+        6
+      ],
+      "v": [],
+      "slope": "6561/65536",
+      "intercept": "8113/65536",
+      "source_residue": 5103
+    },
+    {
+      "source": 5115,
+      "child": 683,
+      "source_period": 32768,
+      "child_period": 4374,
+      "w": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        5
+      ],
+      "v": [],
+      "slope": "2187/16384",
+      "intercept": "3767/16384",
+      "source_residue": 5115
+    },
+    {
+      "source": 5167,
+      "child": 3679,
+      "source_period": 4096,
+      "child_period": 2916,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        3
+      ],
+      "v": [
+        1
+      ],
+      "slope": "729/1024",
+      "intercept": "553/1024",
+      "source_residue": 1071
+    },
+    {
+      "source": 5191,
+      "child": 4159,
+      "source_period": 16384,
+      "child_period": 13122,
+      "w": [
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2
+      ],
+      "v": [],
+      "slope": "6561/8192",
+      "intercept": "12377/8192",
+      "source_residue": 5191
+    },
+    {
+      "source": 5371,
+      "child": 4303,
+      "source_period": 16384,
+      "child_period": 13122,
+      "w": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        4
+      ],
+      "v": [],
+      "slope": "6561/8192",
+      "intercept": "11045/8192",
+      "source_residue": 5371
+    },
+    {
+      "source": 5659,
+      "child": 4775,
+      "source_period": 2048,
+      "child_period": 1728,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "v": [
+        1,
+        1,
+        2,
+        1
+      ],
+      "slope": "27/32",
+      "intercept": "7/32",
+      "source_residue": 1563
+    },
+    {
+      "source": 5743,
+      "child": 3067,
+      "source_period": 8192,
+      "child_period": 4374,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        4
+      ],
+      "v": [],
+      "slope": "2187/4096",
+      "intercept": "2491/4096",
+      "source_residue": 5743
+    },
+    {
+      "source": 5787,
+      "child": 1159,
+      "source_period": 65536,
+      "child_period": 13122,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        6
+      ],
+      "v": [],
+      "slope": "6561/32768",
+      "intercept": "9605/32768",
+      "source_residue": 5787
+    },
+    {
+      "source": 5799,
+      "child": 3097,
+      "source_period": 8192,
+      "child_period": 4374,
+      "w": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        4
+      ],
+      "v": [],
+      "slope": "2187/4096",
+      "intercept": "2899/4096",
+      "source_residue": 5799
+    },
+    {
+      "source": 5871,
+      "child": 4703,
+      "source_period": 16384,
+      "child_period": 13122,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        5
+      ],
+      "v": [],
+      "slope": "6561/8192",
+      "intercept": "7345/8192",
+      "source_residue": 5871
+    },
+    {
+      "source": 5883,
+      "child": 1571,
+      "source_period": 16384,
+      "child_period": 4374,
+      "w": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        5
+      ],
+      "v": [],
+      "slope": "2187/8192",
+      "intercept": "3511/8192",
+      "source_residue": 5883
+    },
+    {
+      "source": 5979,
+      "child": 2395,
+      "source_period": 32768,
+      "child_period": 13122,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        4
+      ],
+      "v": [],
+      "slope": "6561/16384",
+      "intercept": "11461/16384",
+      "source_residue": 5979
+    },
+    {
+      "source": 6127,
+      "child": 409,
+      "source_period": 65536,
+      "child_period": 4374,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        8
+      ],
+      "v": [],
+      "slope": "2187/32768",
+      "intercept": "2363/32768",
+      "source_residue": 6127
+    },
+    {
+      "source": 6375,
+      "child": 4539,
+      "source_period": 4096,
+      "child_period": 2916,
+      "w": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        3
+      ],
+      "v": [
+        1
+      ],
+      "slope": "729/1024",
+      "intercept": "561/1024",
+      "source_residue": 2279
+    },
+    {
+      "source": 6427,
+      "child": 5423,
+      "source_period": 8192,
+      "child_period": 6912,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        4
+      ],
+      "v": [
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "slope": "27/32",
+      "intercept": "7/32",
+      "source_residue": 6427
+    },
+    {
+      "source": 6447,
+      "child": 3443,
+      "source_period": 8192,
+      "child_period": 4374,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        3
+      ],
+      "v": [],
+      "slope": "2187/4096",
+      "intercept": "2939/4096",
+      "source_residue": 6447
+    },
+    {
+      "source": 6559,
+      "child": 2627,
+      "source_period": 32768,
+      "child_period": 13122,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        5
+      ],
+      "v": [],
+      "slope": "6561/16384",
+      "intercept": "7169/16384",
+      "source_residue": 6559
+    },
+    {
+      "source": 6687,
+      "child": 3571,
+      "source_period": 8192,
+      "child_period": 4374,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        4
+      ],
+      "v": [],
+      "slope": "2187/4096",
+      "intercept": "2347/4096",
+      "source_residue": 6687
+    },
+    {
+      "source": 6703,
+      "child": 6363,
+      "source_period": 8192,
+      "child_period": 7776,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        3
+      ],
+      "v": [
+        1,
+        2,
+        1
+      ],
+      "slope": "243/256",
+      "intercept": "99/256",
+      "source_residue": 6703
+    },
+    {
+      "source": 6747,
+      "child": 5405,
+      "source_period": 16384,
+      "child_period": 13122,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        3
+      ],
+      "v": [],
+      "slope": "6561/8192",
+      "intercept": "10693/8192",
+      "source_residue": 6747
+    },
+    {
+      "source": 6759,
+      "child": 5703,
+      "source_period": 4096,
+      "child_period": 3456,
+      "w": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        4
+      ],
+      "v": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "slope": "27/32",
+      "intercept": "3/32",
+      "source_residue": 2663
+    },
+    {
+      "source": 7003,
+      "child": 935,
+      "source_period": 32768,
+      "child_period": 4374,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        5
+      ],
+      "v": [],
+      "slope": "2187/16384",
+      "intercept": "3479/16384",
+      "source_residue": 7003
+    },
+    {
+      "source": 7071,
+      "child": 59,
+      "source_period": 524288,
+      "child_period": 4374,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        11
+      ],
+      "v": [],
+      "slope": "2187/262144",
+      "intercept": "2219/262144",
+      "source_residue": 7071
+    },
+    {
+      "source": 7215,
+      "child": 3853,
+      "source_period": 8192,
+      "child_period": 4374,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        4
+      ],
+      "v": [],
+      "slope": "2187/4096",
+      "intercept": "2683/4096",
+      "source_residue": 7215
+    },
+    {
+      "source": 7239,
+      "child": 1933,
+      "source_period": 16384,
+      "child_period": 4374,
+      "w": [
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        4
+      ],
+      "v": [],
+      "slope": "2187/8192",
+      "intercept": "3443/8192",
+      "source_residue": 7239
+    },
+    {
+      "source": 7399,
+      "child": 5927,
+      "source_period": 16384,
+      "child_period": 13122,
+      "w": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        3
+      ],
+      "v": [],
+      "slope": "6561/8192",
+      "intercept": "9145/8192",
+      "source_residue": 7399
+    },
+    {
+      "source": 7495,
+      "child": 1501,
+      "source_period": 65536,
+      "child_period": 13122,
+      "w": [
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        6
+      ],
+      "v": [],
+      "slope": "6561/32768",
+      "intercept": "10073/32768",
+      "source_residue": 7495
+    },
+    {
+      "source": 7707,
+      "child": 6503,
+      "source_period": 2048,
+      "child_period": 1728,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "v": [
+        1,
+        1,
+        2,
+        1
+      ],
+      "slope": "27/32",
+      "intercept": "7/32",
+      "source_residue": 1563
+    },
+    {
+      "source": 7783,
+      "child": 6567,
+      "source_period": 2048,
+      "child_period": 1728,
+      "w": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        3
+      ],
+      "v": [
+        1,
+        1,
+        2,
+        1
+      ],
+      "slope": "27/32",
+      "intercept": "3/32",
+      "source_residue": 1639
+    },
+    {
+      "source": 7791,
+      "child": 5547,
+      "source_period": 4096,
+      "child_period": 2916,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        3
+      ],
+      "v": [
+        1
+      ],
+      "slope": "729/1024",
+      "intercept": "489/1024",
+      "source_residue": 3695
+    },
+    {
+      "source": 7911,
+      "child": 6337,
+      "source_period": 16384,
+      "child_period": 13122,
+      "w": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        4
+      ],
+      "v": [],
+      "slope": "6561/8192",
+      "intercept": "8633/8192",
+      "source_residue": 7911
+    },
+    {
+      "source": 8007,
+      "child": 1069,
+      "source_period": 32768,
+      "child_period": 4374,
+      "w": [
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        6
+      ],
+      "v": [],
+      "slope": "2187/16384",
+      "intercept": "3187/16384",
+      "source_residue": 8007
+    },
+    {
+      "source": 8103,
+      "child": 6491,
+      "source_period": 16384,
+      "child_period": 13122,
+      "w": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        3
+      ],
+      "v": [],
+      "slope": "6561/8192",
+      "intercept": "10489/8192",
+      "source_residue": 8103
+    },
+    {
+      "source": 8475,
+      "child": 7151,
+      "source_period": 4096,
+      "child_period": 3456,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "v": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "slope": "27/32",
+      "intercept": "7/32",
+      "source_residue": 283
+    },
+    {
+      "source": 8551,
+      "child": 7215,
+      "source_period": 8192,
+      "child_period": 6912,
+      "w": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        4
+      ],
+      "v": [
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "slope": "27/32",
+      "intercept": "3/32",
+      "source_residue": 359
+    },
+    {
+      "source": 8871,
+      "child": 3553,
+      "source_period": 32768,
+      "child_period": 13122,
+      "w": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        4
+      ],
+      "v": [],
+      "slope": "6561/16384",
+      "intercept": "9721/16384",
+      "source_residue": 8871
+    },
+    {
+      "source": 9127,
+      "child": 2437,
+      "source_period": 16384,
+      "child_period": 4374,
+      "w": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        4
+      ],
+      "v": [],
+      "slope": "2187/8192",
+      "intercept": "3155/8192",
+      "source_residue": 9127
+    },
+    {
+      "source": 9327,
+      "child": 7471,
+      "source_period": 16384,
+      "child_period": 13122,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        4
+      ],
+      "v": [],
+      "slope": "6561/8192",
+      "intercept": "7985/8192",
+      "source_residue": 9327
+    },
+    {
+      "source": 9519,
+      "child": 7625,
+      "source_period": 16384,
+      "child_period": 13122,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        3
+      ],
+      "v": [],
+      "slope": "6561/8192",
+      "intercept": "9841/8192",
+      "source_residue": 9519
+    },
+    {
+      "source": 9759,
+      "child": 7817,
+      "source_period": 16384,
+      "child_period": 13122,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        3
+      ],
+      "v": [],
+      "slope": "6561/8192",
+      "intercept": "8065/8192",
+      "source_residue": 9759
+    },
+    {
+      "source": 9819,
+      "child": 6991,
+      "source_period": 4096,
+      "child_period": 2916,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        3
+      ],
+      "v": [
+        1
+      ],
+      "slope": "729/1024",
+      "intercept": "733/1024",
+      "source_residue": 1627
+    },
+    {
+      "source": 9831,
+      "child": 8295,
+      "source_period": 2048,
+      "child_period": 1728,
+      "w": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        3
+      ],
+      "v": [
+        1,
+        1,
+        2,
+        1
+      ],
+      "slope": "27/32",
+      "intercept": "3/32",
+      "source_residue": 1639
+    },
+    {
+      "source": 6783,
+      "child": 5359,
+      "source_period": 82944,
+      "child_period": 65536,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "v": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "slope": "64/81",
+      "intercept": "-11/27",
+      "source_residue": 6783
+    },
+    {
+      "source": 5055,
+      "child": 4207,
+      "source_period": 10077696,
+      "child_period": 8388608,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "v": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "slope": "16384/19683",
+      "intercept": "-4913/6561",
+      "source_residue": 5055
+    },
+    {
+      "source": 127,
+      "child": 77,
+      "source_period": 65536,
+      "child_period": 39366,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        4,
+        3
+      ],
+      "v": [],
+      "slope": "19683/32768",
+      "intercept": "23395/32768",
+      "source_residue": 127
+    },
+    {
+      "source": 511,
+      "child": 173,
+      "source_period": 1048576,
+      "child_period": 354294,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        7
+      ],
+      "v": [],
+      "slope": "177147/524288",
+      "intercept": "179707/524288",
+      "source_residue": 511
+    },
+    {
+      "source": 559,
+      "child": 505,
+      "source_period": 131072,
+      "child_period": 118098,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        4
+      ],
+      "v": [],
+      "slope": "59049/65536",
+      "intercept": "87289/65536",
+      "source_residue": 559
+    },
+    {
+      "source": 603,
+      "child": 545,
+      "source_period": 131072,
+      "child_period": 118098,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        3
+      ],
+      "v": [],
+      "slope": "59049/65536",
+      "intercept": "110573/65536",
+      "source_residue": 603
+    },
+    {
+      "source": 763,
+      "child": 97,
+      "source_period": 8388608,
+      "child_period": 1062882,
+      "w": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        1,
+        6
+      ],
+      "v": [],
+      "slope": "531441/4194304",
+      "intercept": "1358005/4194304",
+      "source_residue": 763
+    },
+    {
+      "source": 795,
+      "child": 671,
+      "source_period": 8192,
+      "child_period": 6912,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "v": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "slope": "27/32",
+      "intercept": "7/32",
+      "source_residue": 795
+    },
+    {
+      "source": 927,
+      "child": 743,
+      "source_period": 524288,
+      "child_period": 419904,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        4,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "v": [
+        1,
+        1,
+        2,
+        1
+      ],
+      "slope": "6561/8192",
+      "intercept": "4609/8192",
+      "source_residue": 927
+    },
+    {
+      "source": 1051,
+      "child": 711,
+      "source_period": 1048576,
+      "child_period": 708588,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        4,
+        3
+      ],
+      "v": [
+        1
+      ],
+      "slope": "177147/262144",
+      "intercept": "202887/262144",
+      "source_residue": 1051
+    },
+    {
+      "source": 1095,
+      "child": 659,
+      "source_period": 65536,
+      "child_period": 39366,
+      "w": [
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        1,
+        3
+      ],
+      "v": [],
+      "slope": "19683/32768",
+      "intercept": "41227/32768",
+      "source_residue": 1095
+    },
+    {
+      "source": 1179,
+      "child": 133,
+      "source_period": 1048576,
+      "child_period": 118098,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        6
+      ],
+      "v": [],
+      "slope": "59049/524288",
+      "intercept": "111533/524288",
+      "source_residue": 1179
+    },
+    {
+      "source": 1351,
+      "child": 1083,
+      "source_period": 32768,
+      "child_period": 26244,
+      "w": [
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        2,
+        3
+      ],
+      "v": [
+        1
+      ],
+      "slope": "6561/8192",
+      "intercept": "8025/8192",
+      "source_residue": 1351
+    },
+    {
+      "source": 1519,
+      "child": 685,
+      "source_period": 262144,
+      "child_period": 118098,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        3,
+        1,
+        4
+      ],
+      "v": [],
+      "slope": "59049/131072",
+      "intercept": "88889/131072",
+      "source_residue": 1519
+    },
+    {
+      "source": 1767,
+      "child": 1195,
+      "source_period": 1048576,
+      "child_period": 708588,
+      "w": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1,
+        3
+      ],
+      "v": [
+        1
+      ],
+      "slope": "177147/262144",
+      "intercept": "243331/262144",
+      "source_residue": 1767
+    },
+    {
+      "source": 1791,
+      "child": 1211,
+      "source_period": 524288,
+      "child_period": 354294,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        3,
+        5
+      ],
+      "v": [],
+      "slope": "177147/262144",
+      "intercept": "186107/262144",
+      "source_residue": 1791
+    },
+    {
+      "source": 1951,
+      "child": 1759,
+      "source_period": 262144,
+      "child_period": 236196,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        3,
+        2,
+        1,
+        1,
+        3
+      ],
+      "v": [
+        1
+      ],
+      "slope": "59049/65536",
+      "intercept": "73225/65536",
+      "source_residue": 1951
+    },
+    {
+      "source": 2043,
+      "child": 691,
+      "source_period": 1048576,
+      "child_period": 354294,
+      "w": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        6
+      ],
+      "v": [],
+      "slope": "177147/524288",
+      "intercept": "371687/524288",
+      "source_residue": 2043
+    },
+    {
+      "source": 2139,
+      "child": 2031,
+      "source_period": 32768,
+      "child_period": 31104,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "v": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "slope": "243/256",
+      "intercept": "159/256",
+      "source_residue": 2139
+    },
+    {
+      "source": 2175,
+      "child": 1103,
+      "source_period": 2097152,
+      "child_period": 1062882,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        3,
+        1,
+        2,
+        1,
+        5
+      ],
+      "v": [],
+      "slope": "531441/1048576",
+      "intercept": "695153/1048576",
+      "source_residue": 2175
+    },
+    {
+      "source": 2671,
+      "child": 301,
+      "source_period": 1048576,
+      "child_period": 118098,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        6
+      ],
+      "v": [],
+      "slope": "59049/524288",
+      "intercept": "90809/524288",
+      "source_residue": 2671
+    },
+    {
+      "source": 2719,
+      "child": 817,
+      "source_period": 131072,
+      "child_period": 39366,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        4,
+        4
+      ],
+      "v": [],
+      "slope": "19683/65536",
+      "intercept": "24835/65536",
+      "source_residue": 2719
+    },
+    {
+      "source": 2727,
+      "child": 1639,
+      "source_period": 65536,
+      "child_period": 39366,
+      "w": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        4
+      ],
+      "v": [],
+      "slope": "19683/32768",
+      "intercept": "31211/32768",
+      "source_residue": 2727
+    },
+    {
+      "source": 2799,
+      "child": 841,
+      "source_period": 131072,
+      "child_period": 39366,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        6
+      ],
+      "v": [],
+      "slope": "19683/65536",
+      "intercept": "23059/65536",
+      "source_residue": 2799
+    },
+    {
+      "source": 2811,
+      "child": 1901,
+      "source_period": 524288,
+      "child_period": 354294,
+      "w": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        3,
+        3
+      ],
+      "v": [],
+      "slope": "177147/262144",
+      "intercept": "375527/262144",
+      "source_residue": 2811
+    },
+    {
+      "source": 2815,
+      "child": 2255,
+      "source_period": 32768,
+      "child_period": 26244,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        5
+      ],
+      "v": [
+        1
+      ],
+      "slope": "6561/8192",
+      "intercept": "3745/8192",
+      "source_residue": 2815
+    },
+    {
+      "source": 2887,
+      "child": 2603,
+      "source_period": 131072,
+      "child_period": 118098,
+      "w": [
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        3
+      ],
+      "v": [],
+      "slope": "59049/65536",
+      "intercept": "115745/65536",
+      "source_residue": 2887
+    },
+    {
+      "source": 2919,
+      "child": 2463,
+      "source_period": 8192,
+      "child_period": 6912,
+      "w": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "v": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "slope": "27/32",
+      "intercept": "3/32",
+      "source_residue": 2919
+    },
+    {
+      "source": 3099,
+      "child": 2095,
+      "source_period": 1048576,
+      "child_period": 708588,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        3,
+        3
+      ],
+      "v": [
+        1
+      ],
+      "slope": "177147/262144",
+      "intercept": "213127/262144",
+      "source_residue": 3099
+    },
+    {
+      "source": 3103,
+      "child": 2797,
+      "source_period": 131072,
+      "child_period": 118098,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        4
+      ],
+      "v": [],
+      "slope": "59049/65536",
+      "intercept": "75145/65536",
+      "source_residue": 3103
+    },
+    {
+      "source": 3183,
+      "child": 269,
+      "source_period": 4194304,
+      "child_period": 354294,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        7
+      ],
+      "v": [],
+      "slope": "177147/2097152",
+      "intercept": "274987/2097152",
+      "source_residue": 3183
+    },
+    {
+      "source": 3303,
+      "child": 1985,
+      "source_period": 65536,
+      "child_period": 39366,
+      "w": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        3
+      ],
+      "v": [],
+      "slope": "19683/32768",
+      "intercept": "31531/32768",
+      "source_residue": 3303
+    },
+    {
+      "source": 3375,
+      "child": 1141,
+      "source_period": 1048576,
+      "child_period": 354294,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        4
+      ],
+      "v": [],
+      "slope": "177147/524288",
+      "intercept": "341483/524288",
+      "source_residue": 3375
+    },
+    {
+      "source": 3615,
+      "child": 611,
+      "source_period": 2097152,
+      "child_period": 354294,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        5
+      ],
+      "v": [],
+      "slope": "177147/1048576",
+      "intercept": "293531/1048576",
+      "source_residue": 3615
+    },
+    {
+      "source": 3931,
+      "child": 2799,
+      "source_period": 131072,
+      "child_period": 93312,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "v": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "slope": "729/1024",
+      "intercept": "477/1024",
+      "source_residue": 3931
+    },
+    {
+      "source": 3999,
+      "child": 2703,
+      "source_period": 1048576,
+      "child_period": 708588,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        3,
+        1,
+        1,
+        1,
+        1,
+        5
+      ],
+      "v": [
+        1
+      ],
+      "slope": "177147/262144",
+      "intercept": "164379/262144",
+      "source_residue": 3999
+    },
+    {
+      "source": 4123,
+      "child": 3303,
+      "source_period": 32768,
+      "child_period": 26244,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        3
+      ],
+      "v": [
+        1
+      ],
+      "slope": "6561/8192",
+      "intercept": "7173/8192",
+      "source_residue": 4123
+    },
+    {
+      "source": 4143,
+      "child": 3319,
+      "source_period": 32768,
+      "child_period": 26244,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        3
+      ],
+      "v": [
+        1
+      ],
+      "slope": "6561/8192",
+      "intercept": "7025/8192",
+      "source_residue": 4143
+    },
+    {
+      "source": 4167,
+      "child": 2113,
+      "source_period": 2097152,
+      "child_period": 1062882,
+      "w": [
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        4
+      ],
+      "v": [],
+      "slope": "531441/1048576",
+      "intercept": "1126441/1048576",
+      "source_residue": 4167
+    },
+    {
+      "source": 4287,
+      "child": 161,
+      "source_period": 1048576,
+      "child_period": 39366,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        4,
+        1,
+        7
+      ],
+      "v": [],
+      "slope": "19683/524288",
+      "intercept": "29347/524288",
+      "source_residue": 4287
+    },
+    {
+      "source": 4335,
+      "child": 3907,
+      "source_period": 131072,
+      "child_period": 118098,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        3,
+        4
+      ],
+      "v": [],
+      "slope": "59049/65536",
+      "intercept": "71737/65536",
+      "source_residue": 4335
+    },
+    {
+      "source": 4347,
+      "child": 4127,
+      "source_period": 131072,
+      "child_period": 124416,
+      "w": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        4
+      ],
+      "v": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "slope": "243/256",
+      "intercept": "191/256",
+      "source_residue": 4347
+    },
+    {
+      "source": 4543,
+      "child": 3639,
+      "source_period": 32768,
+      "child_period": 26244,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        5
+      ],
+      "v": [
+        1
+      ],
+      "slope": "6561/8192",
+      "intercept": "4065/8192",
+      "source_residue": 4543
+    },
+    {
+      "source": 4735,
+      "child": 4267,
+      "source_period": 262144,
+      "child_period": 236196,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        3,
+        3
+      ],
+      "v": [
+        1
+      ],
+      "slope": "59049/65536",
+      "intercept": "45097/65536",
+      "source_residue": 4735
+    },
+    {
+      "source": 4839,
+      "child": 3271,
+      "source_period": 1048576,
+      "child_period": 708588,
+      "w": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        4,
+        1,
+        1,
+        3
+      ],
+      "v": [
+        1
+      ],
+      "slope": "177147/262144",
+      "intercept": "258691/262144",
+      "source_residue": 4839
+    },
+    {
+      "source": 5211,
+      "child": 1321,
+      "source_period": 4194304,
+      "child_period": 1062882,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        6
+      ],
+      "v": [],
+      "slope": "531441/2097152",
+      "intercept": "998741/2097152",
+      "source_residue": 5211
+    },
+    {
+      "source": 5223,
+      "child": 4707,
+      "source_period": 262144,
+      "child_period": 236196,
+      "w": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        3
+      ],
+      "v": [
+        1
+      ],
+      "slope": "59049/65536",
+      "intercept": "65025/65536",
+      "source_residue": 5223
+    },
+    {
+      "source": 5247,
+      "child": 665,
+      "source_period": 8388608,
+      "child_period": 1062882,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        4,
+        5
+      ],
+      "v": [],
+      "slope": "531441/4194304",
+      "intercept": "741233/4194304",
+      "source_residue": 5247
+    },
+    {
+      "source": 5311,
+      "child": 3191,
+      "source_period": 65536,
+      "child_period": 39366,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        3,
+        2,
+        3
+      ],
+      "v": [],
+      "slope": "19683/32768",
+      "intercept": "26275/32768",
+      "source_residue": 5311
+    },
+    {
+      "source": 5679,
+      "child": 2879,
+      "source_period": 2097152,
+      "child_period": 1062882,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        5
+      ],
+      "v": [],
+      "slope": "531441/1048576",
+      "intercept": "796865/1048576",
+      "source_residue": 5679
+    },
+    {
+      "source": 5823,
+      "child": 41,
+      "source_period": 16777216,
+      "child_period": 118098,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        3,
+        2,
+        9
+      ],
+      "v": [],
+      "slope": "59049/8388608",
+      "intercept": "90601/8388608",
+      "source_residue": 5823
+    },
+    {
+      "source": 6055,
+      "child": 4093,
+      "source_period": 524288,
+      "child_period": 354294,
+      "w": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        2,
+        4
+      ],
+      "v": [],
+      "slope": "177147/262144",
+      "intercept": "330307/262144",
+      "source_residue": 6055
+    },
+    {
+      "source": 6139,
+      "child": 2075,
+      "source_period": 1048576,
+      "child_period": 354294,
+      "w": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        5
+      ],
+      "v": [],
+      "slope": "177147/524288",
+      "intercept": "392167/524288",
+      "source_residue": 6139
+    },
+    {
+      "source": 6175,
+      "child": 1855,
+      "source_period": 131072,
+      "child_period": 39366,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        3,
+        4
+      ],
+      "v": [],
+      "slope": "19683/65536",
+      "intercept": "26755/65536",
+      "source_residue": 6175
+    },
+    {
+      "source": 6235,
+      "child": 5619,
+      "source_period": 262144,
+      "child_period": 236196,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        5
+      ],
+      "v": [
+        1
+      ],
+      "slope": "59049/65536",
+      "intercept": "76269/65536",
+      "source_residue": 6235
+    },
+    {
+      "source": 6255,
+      "child": 1879,
+      "source_period": 131072,
+      "child_period": 39366,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        6
+      ],
+      "v": [],
+      "slope": "19683/65536",
+      "intercept": "24979/65536",
+      "source_residue": 6255
+    },
+    {
+      "source": 6271,
+      "child": 5023,
+      "source_period": 32768,
+      "child_period": 26244,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        3,
+        3
+      ],
+      "v": [
+        1
+      ],
+      "slope": "6561/8192",
+      "intercept": "4385/8192",
+      "source_residue": 6271
+    },
+    {
+      "source": 6639,
+      "child": 5983,
+      "source_period": 131072,
+      "child_period": 118098,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        4
+      ],
+      "v": [],
+      "slope": "59049/65536",
+      "intercept": "75577/65536",
+      "source_residue": 6639
+    },
+    {
+      "source": 6783,
+      "child": 4075,
+      "source_period": 65536,
+      "child_period": 39366,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        6
+      ],
+      "v": [],
+      "slope": "19683/32768",
+      "intercept": "19811/32768",
+      "source_residue": 6783
+    },
+    {
+      "source": 6847,
+      "child": 1157,
+      "source_period": 2097152,
+      "child_period": 354294,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        4,
+        1,
+        5
+      ],
+      "v": [],
+      "slope": "177147/1048576",
+      "intercept": "276923/1048576",
+      "source_residue": 6847
+    },
+    {
+      "source": 7419,
+      "child": 5943,
+      "source_period": 32768,
+      "child_period": 26244,
+      "w": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        3
+      ],
+      "v": [
+        1
+      ],
+      "slope": "6561/8192",
+      "intercept": "8997/8192",
+      "source_residue": 7419
+    },
+    {
+      "source": 7471,
+      "child": 6733,
+      "source_period": 131072,
+      "child_period": 118098,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        4
+      ],
+      "v": [],
+      "slope": "59049/65536",
+      "intercept": "98809/65536",
+      "source_residue": 7471
+    },
+    {
+      "source": 7615,
+      "child": 965,
+      "source_period": 8388608,
+      "child_period": 1062882,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        9
+      ],
+      "v": [],
+      "slope": "531441/4194304",
+      "intercept": "580145/4194304",
+      "source_residue": 7615
+    },
+    {
+      "source": 7711,
+      "child": 6949,
+      "source_period": 131072,
+      "child_period": 118098,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        1,
+        4
+      ],
+      "v": [],
+      "slope": "59049/65536",
+      "intercept": "82825/65536",
+      "source_residue": 7711
+    },
+    {
+      "source": 8187,
+      "child": 4919,
+      "source_period": 65536,
+      "child_period": 39366,
+      "w": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        3
+      ],
+      "v": [],
+      "slope": "19683/32768",
+      "intercept": "41071/32768",
+      "source_residue": 8187
+    },
+    {
+      "source": 8263,
+      "child": 6619,
+      "source_period": 32768,
+      "child_period": 26244,
+      "w": [
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        3
+      ],
+      "v": [
+        1
+      ],
+      "slope": "6561/8192",
+      "intercept": "9305/8192",
+      "source_residue": 8263
+    },
+    {
+      "source": 8283,
+      "child": 4199,
+      "source_period": 2097152,
+      "child_period": 1062882,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        4,
+        3
+      ],
+      "v": [],
+      "slope": "531441/1048576",
+      "intercept": "1044821/1048576",
+      "source_residue": 8283
+    },
+    {
+      "source": 8319,
+      "child": 4217,
+      "source_period": 2097152,
+      "child_period": 1062882,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        4,
+        1,
+        1,
+        1,
+        5
+      ],
+      "v": [],
+      "slope": "531441/1048576",
+      "intercept": "787313/1048576",
+      "source_residue": 8319
+    },
+    {
+      "source": 8431,
+      "child": 5065,
+      "source_period": 65536,
+      "child_period": 39366,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        6
+      ],
+      "v": [],
+      "slope": "19683/32768",
+      "intercept": "22547/32768",
+      "source_residue": 8431
+    },
+    {
+      "source": 8607,
+      "child": 4363,
+      "source_period": 2097152,
+      "child_period": 1062882,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        4
+      ],
+      "v": [],
+      "slope": "531441/1048576",
+      "intercept": "824401/1048576",
+      "source_residue": 8607
+    },
+    {
+      "source": 8751,
+      "child": 1109,
+      "source_period": 8388608,
+      "child_period": 1062882,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        7
+      ],
+      "v": [],
+      "slope": "531441/4194304",
+      "intercept": "842945/4194304",
+      "source_residue": 8751
+    },
+    {
+      "source": 8863,
+      "child": 7099,
+      "source_period": 32768,
+      "child_period": 26244,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        3,
+        3
+      ],
+      "v": [
+        1
+      ],
+      "slope": "6561/8192",
+      "intercept": "4865/8192",
+      "source_residue": 8863
+    },
+    {
+      "source": 8955,
+      "child": 6053,
+      "source_period": 524288,
+      "child_period": 354294,
+      "w": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        3
+      ],
+      "v": [],
+      "slope": "177147/262144",
+      "intercept": "406247/262144",
+      "source_residue": 8955
+    },
+    {
+      "source": 9051,
+      "child": 2719,
+      "source_period": 131072,
+      "child_period": 39366,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        4
+      ],
+      "v": [],
+      "slope": "19683/65536",
+      "intercept": "41551/65536",
+      "source_residue": 9051
+    },
+    {
+      "source": 9063,
+      "child": 2297,
+      "source_period": 4194304,
+      "child_period": 1062882,
+      "w": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        7
+      ],
+      "v": [],
+      "slope": "531441/2097152",
+      "intercept": "708361/2097152",
+      "source_residue": 9063
+    },
+    {
+      "source": 9199,
+      "child": 4145,
+      "source_period": 262144,
+      "child_period": 118098,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        3,
+        2,
+        2,
+        3
+      ],
+      "v": [],
+      "slope": "59049/131072",
+      "intercept": "101689/131072",
+      "source_residue": 9199
+    },
+    {
+      "source": 9307,
+      "child": 7455,
+      "source_period": 32768,
+      "child_period": 26244,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        3
+      ],
+      "v": [
+        1
+      ],
+      "slope": "6561/8192",
+      "intercept": "8133/8192",
+      "source_residue": 9307
+    },
+    {
+      "source": 9343,
+      "child": 8419,
+      "source_period": 262144,
+      "child_period": 236196,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        3,
+        1,
+        3
+      ],
+      "v": [
+        1
+      ],
+      "slope": "59049/65536",
+      "intercept": "52777/65536",
+      "source_residue": 9343
+    },
+    {
+      "source": 9375,
+      "child": 11,
+      "source_period": 33554432,
+      "child_period": 39366,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        15
+      ],
+      "v": [],
+      "slope": "19683/16777216",
+      "intercept": "21251/16777216",
+      "source_residue": 9375
+    },
+    {
+      "source": 9447,
+      "child": 7567,
+      "source_period": 32768,
+      "child_period": 26244,
+      "w": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        3
+      ],
+      "v": [
+        1
+      ],
+      "slope": "6561/8192",
+      "intercept": "7097/8192",
+      "source_residue": 9447
+    },
+    {
+      "source": 9543,
+      "child": 1075,
+      "source_period": 1048576,
+      "child_period": 118098,
+      "w": [
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        6
+      ],
+      "v": [],
+      "slope": "59049/524288",
+      "intercept": "104993/524288",
+      "source_residue": 9543
+    },
+    {
+      "source": 9711,
+      "child": 2917,
+      "source_period": 131072,
+      "child_period": 39366,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        3,
+        4
+      ],
+      "v": [],
+      "slope": "19683/65536",
+      "intercept": "26899/65536",
+      "source_residue": 9711
+    },
+    {
+      "source": 9883,
+      "child": 835,
+      "source_period": 4194304,
+      "child_period": 354294,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        3,
+        2,
+        1,
+        6
+      ],
+      "v": [],
+      "slope": "177147/2097152",
+      "intercept": "378119/2097152",
+      "source_residue": 9883
+    },
+    {
+      "source": 5991,
+      "child": 5055,
+      "source_period": 16384,
+      "child_period": 13824,
+      "w": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "v": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "slope": "27/32",
+      "intercept": "3/32",
+      "source_residue": 5991
+    },
+    {
+      "source": 159,
+      "child": 61,
+      "source_period": 8388608,
+      "child_period": 3188646,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        4,
+        2,
+        2,
+        4
+      ],
+      "v": [],
+      "slope": "1594323/4194304",
+      "intercept": "2355187/4194304",
+      "source_residue": 159
+    },
+    {
+      "source": 327,
+      "child": 125,
+      "source_period": 8388608,
+      "child_period": 3188646,
+      "w": [
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        5
+      ],
+      "v": [],
+      "slope": "1594323/4194304",
+      "intercept": "2944379/4194304",
+      "source_residue": 327
+    },
+    {
+      "source": 639,
+      "child": 365,
+      "source_period": 16777216,
+      "child_period": 9565938,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        3,
+        5
+      ],
+      "v": [],
+      "slope": "4782969/8388608",
+      "intercept": "5524729/8388608",
+      "source_residue": 639
+    },
+    {
+      "source": 667,
+      "child": 143,
+      "source_period": 134217728,
+      "child_period": 28697814,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        3,
+        1,
+        1,
+        7
+      ],
+      "v": [],
+      "slope": "14348907/67108864",
+      "intercept": "25846583/67108864",
+      "source_residue": 667
+    },
+    {
+      "source": 1263,
+      "child": 811,
+      "source_period": 134217728,
+      "child_period": 86093442,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        5,
+        4
+      ],
+      "v": [],
+      "slope": "43046721/67108864",
+      "intercept": "57280081/67108864",
+      "source_residue": 1263
+    },
+    {
+      "source": 1959,
+      "child": 629,
+      "source_period": 268435456,
+      "child_period": 86093442,
+      "w": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        7
+      ],
+      "v": [],
+      "slope": "43046721/134217728",
+      "intercept": "94424473/134217728",
+      "source_residue": 1959
+    },
+    {
+      "source": 2463,
+      "child": 937,
+      "source_period": 8388608,
+      "child_period": 3188646,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        3,
+        1,
+        2,
+        2,
+        1,
+        4
+      ],
+      "v": [],
+      "slope": "1594323/4194304",
+      "intercept": "3245299/4194304",
+      "source_residue": 2463
+    },
+    {
+      "source": 3231,
+      "child": 1843,
+      "source_period": 16777216,
+      "child_period": 9565938,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        4,
+        2,
+        4
+      ],
+      "v": [],
+      "slope": "4782969/8388608",
+      "intercept": "6431705/8388608",
+      "source_residue": 3231
+    },
+    {
+      "source": 3355,
+      "child": 319,
+      "source_period": 33554432,
+      "child_period": 3188646,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        6
+      ],
+      "v": [],
+      "slope": "1594323/16777216",
+      "intercept": "2978239/16777216",
+      "source_residue": 3355
+    },
+    {
+      "source": 3519,
+      "child": 3011,
+      "source_period": 33554432,
+      "child_period": 28697814,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        3,
+        3,
+        1,
+        2,
+        2,
+        3
+      ],
+      "v": [],
+      "slope": "14348907/16777216",
+      "intercept": "22393643/16777216",
+      "source_residue": 3519
+    },
+    {
+      "source": 3823,
+      "child": 3271,
+      "source_period": 67108864,
+      "child_period": 57395628,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        3,
+        1,
+        2,
+        1,
+        1,
+        4,
+        1,
+        1,
+        3
+      ],
+      "v": [
+        1
+      ],
+      "slope": "14348907/16777216",
+      "intercept": "22402075/16777216",
+      "source_residue": 3823
+    },
+    {
+      "source": 3867,
+      "child": 1103,
+      "source_period": 33554432,
+      "child_period": 9565938,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        5,
+        1,
+        2,
+        1,
+        5
+      ],
+      "v": [],
+      "slope": "4782969/16777216",
+      "intercept": "9528125/16777216",
+      "source_residue": 3867
+    },
+    {
+      "source": 4719,
+      "child": 673,
+      "source_period": 67108864,
+      "child_period": 9565938,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        6
+      ],
+      "v": [],
+      "slope": "4782969/33554432",
+      "intercept": "11302025/33554432",
+      "source_residue": 4719
+    },
+    {
+      "source": 4767,
+      "child": 2719,
+      "source_period": 16777216,
+      "child_period": 9565938,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        3,
+        1,
+        2,
+        2,
+        2,
+        1,
+        4
+      ],
+      "v": [],
+      "slope": "4782969/8388608",
+      "intercept": "8211929/8388608",
+      "source_residue": 4767
+    },
+    {
+      "source": 4935,
+      "child": 2815,
+      "source_period": 16777216,
+      "child_period": 9565938,
+      "w": [
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        4
+      ],
+      "v": [],
+      "slope": "4782969/8388608",
+      "intercept": "9979505/8388608",
+      "source_residue": 4935
+    },
+    {
+      "source": 5055,
+      "child": 961,
+      "source_period": 16777216,
+      "child_period": 3188646,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        3,
+        1,
+        6
+      ],
+      "v": [],
+      "slope": "1594323/8388608",
+      "intercept": "2149523/8388608",
+      "source_residue": 5055
+    },
+    {
+      "source": 5403,
+      "child": 4109,
+      "source_period": 4194304,
+      "child_period": 3188646,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        4,
+        1,
+        2,
+        3
+      ],
+      "v": [],
+      "slope": "1594323/2097152",
+      "intercept": "3070399/2097152",
+      "source_residue": 5403
+    },
+    {
+      "source": 5479,
+      "child": 4687,
+      "source_period": 67108864,
+      "child_period": 57395628,
+      "w": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        3
+      ],
+      "v": [
+        1
+      ],
+      "slope": "14348907/16777216",
+      "intercept": "17149939/16777216",
+      "source_residue": 5479
+    },
+    {
+      "source": 5887,
+      "child": 1259,
+      "source_period": 134217728,
+      "child_period": 28697814,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        3,
+        1,
+        4,
+        5
+      ],
+      "v": [],
+      "slope": "14348907/67108864",
+      "intercept": "18044267/67108864",
+      "source_residue": 5887
+    },
+    {
+      "source": 5991,
+      "child": 961,
+      "source_period": 536870912,
+      "child_period": 86093442,
+      "w": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        2,
+        1,
+        2,
+        3,
+        1,
+        6
+      ],
+      "v": [],
+      "slope": "43046721/268435456",
+      "intercept": "73567705/268435456",
+      "source_residue": 5991
+    },
+    {
+      "source": 6303,
+      "child": 337,
+      "source_period": 536870912,
+      "child_period": 28697814,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        4,
+        2,
+        4,
+        6
+      ],
+      "v": [],
+      "slope": "14348907/268435456",
+      "intercept": "21587851/268435456",
+      "source_residue": 6303
+    },
+    {
+      "source": 6939,
+      "child": 371,
+      "source_period": 536870912,
+      "child_period": 28697814,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        4,
+        1,
+        9
+      ],
+      "v": [],
+      "slope": "14348907/268435456",
+      "intercept": "22488503/268435456",
+      "source_residue": 6939
+    },
+    {
+      "source": 7327,
+      "child": 5571,
+      "source_period": 8388608,
+      "child_period": 6377292,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        3,
+        1,
+        2,
+        2,
+        3
+      ],
+      "v": [
+        1
+      ],
+      "slope": "1594323/2097152",
+      "intercept": "1629171/2097152",
+      "source_residue": 7327
+    },
+    {
+      "source": 7335,
+      "child": 6275,
+      "source_period": 33554432,
+      "child_period": 28697814,
+      "w": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        3,
+        1,
+        3,
+        3
+      ],
+      "v": [],
+      "slope": "14348907/16777216",
+      "intercept": "27797555/16777216",
+      "source_residue": 7335
+    },
+    {
+      "source": 7407,
+      "child": 11,
+      "source_period": 2147483648,
+      "child_period": 3188646,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        15
+      ],
+      "v": [],
+      "slope": "1594323/1073741824",
+      "intercept": "2009603/1073741824",
+      "source_residue": 7407
+    },
+    {
+      "source": 7839,
+      "child": 3353,
+      "source_period": 67108864,
+      "child_period": 28697814,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        3,
+        2,
+        3
+      ],
+      "v": [],
+      "slope": "14348907/33554432",
+      "intercept": "26928523/33554432",
+      "source_residue": 7839
+    },
+    {
+      "source": 8127,
+      "child": 7323,
+      "source_period": 2097152,
+      "child_period": 1889568,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        3,
+        1,
+        1,
+        3,
+        1,
+        3
+      ],
+      "v": [
+        1,
+        2,
+        1
+      ],
+      "slope": "59049/65536",
+      "intercept": "28905/65536",
+      "source_residue": 8127
+    },
+    {
+      "source": 8175,
+      "child": 7367,
+      "source_period": 8388608,
+      "child_period": 7558272,
+      "w": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        4,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        4
+      ],
+      "v": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "slope": "59049/65536",
+      "intercept": "78137/65536",
+      "source_residue": 8175
+    },
+    {
+      "source": 8223,
+      "child": 1319,
+      "source_period": 536870912,
+      "child_period": 86093442,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        1,
+        4,
+        1,
+        5
+      ],
+      "v": [],
+      "slope": "43046721/268435456",
+      "intercept": "93179681/268435456",
+      "source_residue": 8223
+    },
+    {
+      "source": 8443,
+      "child": 5417,
+      "source_period": 134217728,
+      "child_period": 86093442,
+      "w": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        5
+      ],
+      "v": [],
+      "slope": "43046721/67108864",
+      "intercept": "85250885/67108864",
+      "source_residue": 8443
+    },
+    {
+      "source": 8859,
+      "child": 7983,
+      "source_period": 16777216,
+      "child_period": 15116544,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        4,
+        1,
+        1,
+        1,
+        1,
+        4
+      ],
+      "v": [
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "slope": "59049/65536",
+      "intercept": "58797/65536",
+      "source_residue": 8859
+    },
+    {
+      "source": 9151,
+      "child": 3479,
+      "source_period": 8388608,
+      "child_period": 3188646,
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        6,
+        3
+      ],
+      "v": [],
+      "slope": "1594323/4194304",
+      "intercept": "2333843/4194304",
+      "source_residue": 9151
+    },
+    {
+      "source": 9243,
+      "child": 1757,
+      "source_period": 16777216,
+      "child_period": 3188646,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        9
+      ],
+      "v": [],
+      "slope": "1594323/8388608",
+      "intercept": "2456767/8388608",
+      "source_residue": 9243
+    },
+    {
+      "source": 2715,
+      "child": 2175,
+      "source_period": 33554432,
+      "child_period": 26873856,
+      "w": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        5
+      ],
+      "v": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        3
+      ],
+      "slope": "6561/8192",
+      "intercept": "4485/8192",
+      "source_residue": 2715
+    },
+    {
+      "source": 8359,
+      "child": 7935,
+      "source_period": 524288,
+      "child_period": 497664,
+      "w": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "v": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "slope": "243/256",
+      "intercept": "123/256",
+      "source_residue": 8359
+    }
+  ],
+  "deeper_inverse": [
+    {
+      "forward_cap": 6,
+      "inverse_cap": 20,
+      "resolved": 16,
+      "visited_inverse_nodes": 235431
+    },
+    {
+      "forward_cap": 6,
+      "inverse_cap": 24,
+      "resolved": 16,
+      "visited_inverse_nodes": 608929
+    },
+    {
+      "forward_cap": 6,
+      "inverse_cap": 28,
+      "resolved": 16,
+      "visited_inverse_nodes": 1568023
+    }
+  ],
+  "saturation": {
+    "full_route_inputs": 5000,
+    "distinct_vertices": 7925,
+    "all_depth_hits": [
+      {
+        "n": 111,
+        "m": 103,
+        "w": [
+          1
+        ],
+        "v": [
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          2,
+          3
+        ],
+        "join": 167
+      },
+      {
+        "n": 159,
+        "m": 111,
+        "w": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          1
+        ],
+        "v": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3
+        ],
+        "join": 911
+      },
+      {
+        "n": 303,
+        "m": 239,
+        "w": [
+          1,
+          1,
+          1,
+          2,
+          2
+        ],
+        "v": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          4
+        ],
+        "join": 577
+      },
+      {
+        "n": 511,
+        "m": 447,
+        "w": [
+          1
+        ],
+        "v": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          3,
+          2,
+          1,
+          1,
+          1,
+          3,
+          3
+        ],
+        "join": 767
+      },
+      {
+        "n": 1275,
+        "m": 1007,
+        "w": [
+          1,
+          2,
+          1
+        ],
+        "v": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          3
+        ],
+        "join": 2153
+      },
+      {
+        "n": 1567,
+        "m": 1055,
+        "w": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2
+        ],
+        "v": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          2,
+          2,
+          1,
+          1,
+          3,
+          4,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          3,
+          2,
+          3,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          5,
+          1,
+          1,
+          1,
+          1,
+          4
+        ],
+        "join": 4465
+      },
+      {
+        "n": 3867,
+        "m": 3055,
+        "w": [
+          1,
+          2,
+          1
+        ],
+        "v": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          3
+        ],
+        "join": 6527
+      },
+      {
+        "n": 4839,
+        "m": 3823,
+        "w": [
+          1,
+          1,
+          2,
+          1
+        ],
+        "v": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          3
+        ],
+        "join": 12251
+      },
+      {
+        "n": 4863,
+        "m": 4263,
+        "w": [
+          1
+        ],
+        "v": [
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          3,
+          1,
+          2,
+          3
+        ],
+        "join": 7295
+      },
+      {
+        "n": 5871,
+        "m": 5791,
+        "w": [
+          1
+        ],
+        "v": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          3,
+          2,
+          3
+        ],
+        "join": 8807
+      },
+      {
+        "n": 5991,
+        "m": 4207,
+        "w": [
+          1,
+          1,
+          2,
+          1
+        ],
+        "v": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          1,
+          3
+        ],
+        "join": 15167
+      },
+      {
+        "n": 6471,
+        "m": 6383,
+        "w": [
+          1,
+          1,
+          2,
+          2
+        ],
+        "v": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          2,
+          3,
+          2,
+          2,
+          1,
+          1,
+          1,
+          4
+        ],
+        "join": 8191
+      },
+      {
+        "n": 6591,
+        "m": 6171,
+        "w": [
+          1
+        ],
+        "v": [
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          2,
+          3
+        ],
+        "join": 9887
+      },
+      {
+        "n": 7335,
+        "m": 5151,
+        "w": [
+          1,
+          1,
+          2,
+          1
+        ],
+        "v": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          1,
+          1,
+          1,
+          3
+        ],
+        "join": 18569
+      },
+      {
+        "n": 8859,
+        "m": 8295,
+        "w": [
+          1
+        ],
+        "v": [
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          2,
+          3
+        ],
+        "join": 13289
+      },
+      {
+        "n": 9051,
+        "m": 7151,
+        "w": [
+          1,
+          2,
+          1
+        ],
+        "v": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          3
+        ],
+        "join": 15275
+      },
+      {
+        "n": 9375,
+        "m": 7407,
+        "w": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          1
+        ],
+        "v": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3
+        ],
+        "join": 53399
+      }
+    ],
+    "all_depth_excluded": [
+      27,
+      127,
+      231,
+      327,
+      447,
+      495,
+      543,
+      559,
+      603,
+      615,
+      639,
+      667,
+      703,
+      763,
+      795,
+      871,
+      927,
+      1051,
+      1071,
+      1095,
+      1135,
+      1179,
+      1191,
+      1215,
+      1263,
+      1351,
+      1383,
+      1519,
+      1563,
+      1627,
+      1639,
+      1647,
+      1695,
+      1767,
+      1791,
+      1819,
+      1863,
+      1951,
+      1959,
+      1983,
+      2031,
+      2043,
+      2079,
+      2095,
+      2139,
+      2151,
+      2175,
+      2203,
+      2215,
+      2239,
+      2331,
+      2463,
+      2559,
+      2607,
+      2671,
+      2715,
+      2719,
+      2727,
+      2751,
+      2799,
+      2811,
+      2815,
+      2887,
+      2907,
+      2919,
+      3067,
+      3099,
+      3103,
+      3175,
+      3183,
+      3231,
+      3303,
+      3355,
+      3375,
+      3399,
+      3519,
+      3567,
+      3615,
+      3675,
+      3687,
+      3711,
+      3751,
+      3823,
+      3835,
+      3931,
+      3943,
+      3999,
+      4123,
+      4143,
+      4167,
+      4251,
+      4255,
+      4263,
+      4287,
+      4327,
+      4335,
+      4347,
+      4399,
+      4455,
+      4543,
+      4591,
+      4635,
+      4719,
+      4735,
+      4767,
+      4935,
+      5023,
+      5031,
+      5055,
+      5103,
+      5115,
+      5151,
+      5167,
+      5191,
+      5211,
+      5223,
+      5247,
+      5311,
+      5371,
+      5403,
+      5479,
+      5535,
+      5659,
+      5679,
+      5743,
+      5787,
+      5799,
+      5823,
+      5883,
+      5887,
+      5979,
+      6055,
+      6127,
+      6139,
+      6171,
+      6175,
+      6235,
+      6255,
+      6271,
+      6303,
+      6375,
+      6427,
+      6447,
+      6559,
+      6639,
+      6687,
+      6703,
+      6747,
+      6759,
+      6783,
+      6811,
+      6823,
+      6847,
+      6939,
+      7003,
+      7071,
+      7167,
+      7215,
+      7239,
+      7279,
+      7323,
+      7327,
+      7359,
+      7399,
+      7407,
+      7419,
+      7471,
+      7495,
+      7527,
+      7615,
+      7707,
+      7711,
+      7783,
+      7791,
+      7839,
+      7911,
+      7935,
+      7963,
+      8007,
+      8103,
+      8127,
+      8175,
+      8187,
+      8223,
+      8263,
+      8283,
+      8295,
+      8319,
+      8359,
+      8431,
+      8443,
+      8475,
+      8551,
+      8607,
+      8703,
+      8751,
+      8863,
+      8871,
+      8895,
+      8935,
+      8943,
+      8955,
+      9063,
+      9127,
+      9151,
+      9199,
+      9243,
+      9307,
+      9327,
+      9343,
+      9447,
+      9519,
+      9543,
+      9631,
+      9663,
+      9711,
+      9759,
+      9775,
+      9819,
+      9831,
+      9855,
+      9883
+    ],
+    "forward_profile": [
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        4,
+        13
+      ],
+      [
+        6,
+        17
+      ],
+      [
+        8,
+        93
+      ],
+      [
+        12,
+        169
+      ],
+      [
+        16,
+        198
+      ],
+      [
+        24,
+        220
+      ],
+      [
+        32,
+        228
+      ],
+      [
+        48,
+        238
+      ],
+      [
+        64,
+        239
+      ]
+    ],
+    "coalescence_rows": [
+      {
+        "n": 27,
+        "coalescence": 37,
+        "first_descent": 37,
+        "owner": 15
+      },
+      {
+        "n": 111,
+        "coalescence": 1,
+        "first_descent": 19,
+        "owner": 27
+      },
+      {
+        "n": 127,
+        "coalescence": 9,
+        "first_descent": 9,
+        "owner": 51
+      },
+      {
+        "n": 159,
+        "coalescence": 6,
+        "first_descent": 13,
+        "owner": 27
+      },
+      {
+        "n": 231,
+        "coalescence": 7,
+        "first_descent": 7,
+        "owner": 27
+      },
+      {
+        "n": 303,
+        "coalescence": 5,
+        "first_descent": 8,
+        "owner": 27
+      },
+      {
+        "n": 327,
+        "coalescence": 13,
+        "first_descent": 13,
+        "owner": 55
+      },
+      {
+        "n": 447,
+        "coalescence": 25,
+        "first_descent": 25,
+        "owner": 115
+      },
+      {
+        "n": 495,
+        "coalescence": 17,
+        "first_descent": 17,
+        "owner": 159
+      },
+      {
+        "n": 511,
+        "coalescence": 1,
+        "first_descent": 11,
+        "owner": 447
+      },
+      {
+        "n": 543,
+        "coalescence": 7,
+        "first_descent": 8,
+        "owner": 387
+      },
+      {
+        "n": 559,
+        "coalescence": 10,
+        "first_descent": 10,
+        "owner": 505
+      },
+      {
+        "n": 603,
+        "coalescence": 10,
+        "first_descent": 10,
+        "owner": 363
+      },
+      {
+        "n": 615,
+        "coalescence": 7,
+        "first_descent": 7,
+        "owner": 219
+      },
+      {
+        "n": 639,
+        "coalescence": 14,
+        "first_descent": 14,
+        "owner": 243
+      },
+      {
+        "n": 667,
+        "coalescence": 15,
+        "first_descent": 15,
+        "owner": 63
+      },
+      {
+        "n": 703,
+        "coalescence": 51,
+        "first_descent": 51,
+        "owner": 123
+      },
+      {
+        "n": 763,
+        "coalescence": 12,
+        "first_descent": 12,
+        "owner": 97
+      },
+      {
+        "n": 795,
+        "coalescence": 9,
+        "first_descent": 17,
+        "owner": 447
+      },
+      {
+        "n": 871,
+        "coalescence": 22,
+        "first_descent": 22,
+        "owner": 531
+      },
+      {
+        "n": 927,
+        "coalescence": 12,
+        "first_descent": 23,
+        "owner": 495
+      },
+      {
+        "n": 1051,
+        "coalescence": 12,
+        "first_descent": 15,
+        "owner": 711
+      },
+      {
+        "n": 1071,
+        "coalescence": 7,
+        "first_descent": 8,
+        "owner": 763
+      },
+      {
+        "n": 1095,
+        "coalescence": 9,
+        "first_descent": 9,
+        "owner": 439
+      },
+      {
+        "n": 1135,
+        "coalescence": 8,
+        "first_descent": 8,
+        "owner": 303
+      },
+      {
+        "n": 1179,
+        "coalescence": 10,
+        "first_descent": 10,
+        "owner": 133
+      },
+      {
+        "n": 1191,
+        "coalescence": 8,
+        "first_descent": 8,
+        "owner": 955
+      },
+      {
+        "n": 1215,
+        "coalescence": 8,
+        "first_descent": 8,
+        "owner": 487
+      },
+      {
+        "n": 1263,
+        "coalescence": 16,
+        "first_descent": 16,
+        "owner": 811
+      },
+      {
+        "n": 1275,
+        "coalescence": 3,
+        "first_descent": 9,
+        "owner": 447
+      },
+      {
+        "n": 1351,
+        "coalescence": 9,
+        "first_descent": 10,
+        "owner": 1083
+      },
+      {
+        "n": 1383,
+        "coalescence": 20,
+        "first_descent": 24,
+        "owner": 999
+      },
+      {
+        "n": 1519,
+        "coalescence": 10,
+        "first_descent": 10,
+        "owner": 685
+      },
+      {
+        "n": 1563,
+        "coalescence": 7,
+        "first_descent": 8,
+        "owner": 879
+      },
+      {
+        "n": 1567,
+        "coalescence": 6,
+        "first_descent": 8,
+        "owner": 703
+      },
+      {
+        "n": 1627,
+        "coalescence": 7,
+        "first_descent": 10,
+        "owner": 1159
+      },
+      {
+        "n": 1639,
+        "coalescence": 7,
+        "first_descent": 27,
+        "owner": 1383
+      },
+      {
+        "n": 1647,
+        "coalescence": 7,
+        "first_descent": 7,
+        "owner": 55
+      },
+      {
+        "n": 1695,
+        "coalescence": 20,
+        "first_descent": 20,
+        "owner": 459
+      },
+      {
+        "n": 1767,
+        "coalescence": 12,
+        "first_descent": 13,
+        "owner": 1195
+      },
+      {
+        "n": 1791,
+        "coalescence": 11,
+        "first_descent": 11,
+        "owner": 807
+      },
+      {
+        "n": 1819,
+        "coalescence": 37,
+        "first_descent": 38,
+        "owner": 1051
+      },
+      {
+        "n": 1863,
+        "coalescence": 7,
+        "first_descent": 14,
+        "owner": 1179
+      },
+      {
+        "n": 1951,
+        "coalescence": 11,
+        "first_descent": 16,
+        "owner": 1563
+      },
+      {
+        "n": 1959,
+        "coalescence": 16,
+        "first_descent": 16,
+        "owner": 279
+      },
+      {
+        "n": 1983,
+        "coalescence": 8,
+        "first_descent": 8,
+        "owner": 1059
+      },
+      {
+        "n": 2031,
+        "coalescence": 7,
+        "first_descent": 7,
+        "owner": 723
+      },
+      {
+        "n": 2043,
+        "coalescence": 11,
+        "first_descent": 11,
+        "owner": 691
+      },
+      {
+        "n": 2079,
+        "coalescence": 8,
+        "first_descent": 8,
+        "owner": 555
+      },
+      {
+        "n": 2095,
+        "coalescence": 8,
+        "first_descent": 8,
+        "owner": 1119
+      },
+      {
+        "n": 2139,
+        "coalescence": 10,
+        "first_descent": 12,
+        "owner": 2031
+      },
+      {
+        "n": 2151,
+        "coalescence": 26,
+        "first_descent": 27,
+        "owner": 1659
+      },
+      {
+        "n": 2175,
+        "coalescence": 12,
+        "first_descent": 12,
+        "owner": 735
+      },
+      {
+        "n": 2203,
+        "coalescence": 7,
+        "first_descent": 7,
+        "owner": 1177
+      },
+      {
+        "n": 2215,
+        "coalescence": 27,
+        "first_descent": 27,
+        "owner": 961
+      },
+      {
+        "n": 2239,
+        "coalescence": 7,
+        "first_descent": 7,
+        "owner": 199
+      },
+      {
+        "n": 2331,
+        "coalescence": 8,
+        "first_descent": 8,
+        "owner": 207
+      },
+      {
+        "n": 2463,
+        "coalescence": 13,
+        "first_descent": 13,
+        "owner": 937
+      },
+      {
+        "n": 2559,
+        "coalescence": 25,
+        "first_descent": 25,
+        "owner": 1315
+      },
+      {
+        "n": 2607,
+        "coalescence": 8,
+        "first_descent": 8,
+        "owner": 2089
+      },
+      {
+        "n": 2671,
+        "coalescence": 10,
+        "first_descent": 10,
+        "owner": 267
+      },
+      {
+        "n": 2715,
+        "coalescence": 16,
+        "first_descent": 20,
+        "owner": 2175
+      },
+      {
+        "n": 2719,
+        "coalescence": 9,
+        "first_descent": 9,
+        "owner": 817
+      },
+      {
+        "n": 2727,
+        "coalescence": 9,
+        "first_descent": 9,
+        "owner": 1639
+      },
+      {
+        "n": 2751,
+        "coalescence": 27,
+        "first_descent": 27,
+        "owner": 1591
+      },
+      {
+        "n": 2799,
+        "coalescence": 9,
+        "first_descent": 9,
+        "owner": 747
+      },
+      {
+        "n": 2811,
+        "coalescence": 11,
+        "first_descent": 11,
+        "owner": 1267
+      },
+      {
+        "n": 2815,
+        "coalescence": 9,
+        "first_descent": 17,
+        "owner": 1503
+      },
+      {
+        "n": 2887,
+        "coalescence": 10,
+        "first_descent": 10,
+        "owner": 1735
+      },
+      {
+        "n": 2907,
+        "coalescence": 7,
+        "first_descent": 7,
+        "owner": 1035
+      },
+      {
+        "n": 2919,
+        "coalescence": 9,
+        "first_descent": 16,
+        "owner": 2463
+      },
+      {
+        "n": 3067,
+        "coalescence": 8,
+        "first_descent": 8,
+        "owner": 819
+      },
+      {
+        "n": 3099,
+        "coalescence": 12,
+        "first_descent": 19,
+        "owner": 2095
+      },
+      {
+        "n": 3103,
+        "coalescence": 10,
+        "first_descent": 10,
+        "owner": 2797
+      },
+      {
+        "n": 3175,
+        "coalescence": 17,
+        "first_descent": 25,
+        "owner": 1695
+      },
+      {
+        "n": 3183,
+        "coalescence": 11,
+        "first_descent": 11,
+        "owner": 79
+      },
+      {
+        "n": 3231,
+        "coalescence": 14,
+        "first_descent": 14,
+        "owner": 1843
+      },
+      {
+        "n": 3303,
+        "coalescence": 9,
+        "first_descent": 9,
+        "owner": 1323
+      },
+      {
+        "n": 3355,
+        "coalescence": 13,
+        "first_descent": 13,
+        "owner": 27
+      },
+      {
+        "n": 3375,
+        "coalescence": 11,
+        "first_descent": 11,
+        "owner": 1141
+      },
+      {
+        "n": 3399,
+        "coalescence": 8,
+        "first_descent": 30,
+        "owner": 2151
+      },
+      {
+        "n": 3519,
+        "coalescence": 15,
+        "first_descent": 15,
+        "owner": 2007
+      },
+      {
+        "n": 3567,
+        "coalescence": 19,
+        "first_descent": 22,
+        "owner": 2575
+      },
+      {
+        "n": 3615,
+        "coalescence": 11,
+        "first_descent": 11,
+        "owner": 271
+      },
+      {
+        "n": 3675,
+        "coalescence": 7,
+        "first_descent": 7,
+        "owner": 1963
+      },
+      {
+        "n": 3687,
+        "coalescence": 7,
+        "first_descent": 8,
+        "owner": 3111
+      },
+      {
+        "n": 3711,
+        "coalescence": 23,
+        "first_descent": 23,
+        "owner": 1695
+      },
+      {
+        "n": 3751,
+        "coalescence": 7,
+        "first_descent": 16,
+        "owner": 2671
+      },
+      {
+        "n": 3823,
+        "coalescence": 16,
+        "first_descent": 20,
+        "owner": 2907
+      },
+      {
+        "n": 3835,
+        "coalescence": 7,
+        "first_descent": 8,
+        "owner": 2427
+      },
+      {
+        "n": 3867,
+        "coalescence": 3,
+        "first_descent": 14,
+        "owner": 2715
+      },
+      {
+        "n": 3931,
+        "coalescence": 11,
+        "first_descent": 15,
+        "owner": 2799
+      },
+      {
+        "n": 3943,
+        "coalescence": 25,
+        "first_descent": 25,
+        "owner": 63
+      },
+      {
+        "n": 3999,
+        "coalescence": 12,
+        "first_descent": 15,
+        "owner": 2703
+      },
+      {
+        "n": 4123,
+        "coalescence": 9,
+        "first_descent": 17,
+        "owner": 3303
+      },
+      {
+        "n": 4143,
+        "coalescence": 9,
+        "first_descent": 11,
+        "owner": 3319
+      },
+      {
+        "n": 4167,
+        "coalescence": 12,
+        "first_descent": 12,
+        "owner": 2113
+      },
+      {
+        "n": 4251,
+        "coalescence": 7,
+        "first_descent": 8,
+        "owner": 3027
+      },
+      {
+        "n": 4255,
+        "coalescence": 44,
+        "first_descent": 44,
+        "owner": 2367
+      },
+      {
+        "n": 4263,
+        "coalescence": 34,
+        "first_descent": 34,
+        "owner": 3949
+      },
+      {
+        "n": 4287,
+        "coalescence": 9,
+        "first_descent": 9,
+        "owner": 27
+      },
+      {
+        "n": 4327,
+        "coalescence": 7,
+        "first_descent": 7,
+        "owner": 2311
+      },
+      {
+        "n": 4335,
+        "coalescence": 10,
+        "first_descent": 10,
+        "owner": 3907
+      },
+      {
+        "n": 4347,
+        "coalescence": 11,
+        "first_descent": 31,
+        "owner": 2751
+      },
+      {
+        "n": 4399,
+        "coalescence": 20,
+        "first_descent": 20,
+        "owner": 1191
+      },
+      {
+        "n": 4455,
+        "coalescence": 8,
+        "first_descent": 8,
+        "owner": 2379
+      },
+      {
+        "n": 4543,
+        "coalescence": 9,
+        "first_descent": 11,
+        "owner": 3639
+      },
+      {
+        "n": 4591,
+        "coalescence": 37,
+        "first_descent": 41,
+        "owner": 4251
+      },
+      {
+        "n": 4635,
+        "coalescence": 7,
+        "first_descent": 10,
+        "owner": 2607
+      },
+      {
+        "n": 4719,
+        "coalescence": 14,
+        "first_descent": 14,
+        "owner": 673
+      },
+      {
+        "n": 4735,
+        "coalescence": 11,
+        "first_descent": 13,
+        "owner": 4267
+      },
+      {
+        "n": 4767,
+        "coalescence": 14,
+        "first_descent": 14,
+        "owner": 2719
+      },
+      {
+        "n": 4839,
+        "coalescence": 4,
+        "first_descent": 15,
+        "owner": 3823
+      },
+      {
+        "n": 4863,
+        "coalescence": 1,
+        "first_descent": 20,
+        "owner": 4263
+      },
+      {
+        "n": 4935,
+        "coalescence": 14,
+        "first_descent": 14,
+        "owner": 2815
+      },
+      {
+        "n": 5023,
+        "coalescence": 8,
+        "first_descent": 8,
+        "owner": 223
+      },
+      {
+        "n": 5031,
+        "coalescence": 7,
+        "first_descent": 7,
+        "owner": 1791
+      },
+      {
+        "n": 5055,
+        "coalescence": 7,
+        "first_descent": 13,
+        "owner": 2215
+      },
+      {
+        "n": 5103,
+        "coalescence": 8,
+        "first_descent": 8,
+        "owner": 511
+      },
+      {
+        "n": 5115,
+        "coalescence": 7,
+        "first_descent": 7,
+        "owner": 303
+      },
+      {
+        "n": 5151,
+        "coalescence": 21,
+        "first_descent": 23,
+        "owner": 4183
+      },
+      {
+        "n": 5167,
+        "coalescence": 7,
+        "first_descent": 11,
+        "owner": 3679
+      },
+      {
+        "n": 5191,
+        "coalescence": 8,
+        "first_descent": 8,
+        "owner": 4159
+      },
+      {
+        "n": 5211,
+        "coalescence": 12,
+        "first_descent": 12,
+        "owner": 1321
+      },
+      {
+        "n": 5223,
+        "coalescence": 11,
+        "first_descent": 12,
+        "owner": 4707
+      },
+      {
+        "n": 5247,
+        "coalescence": 12,
+        "first_descent": 12,
+        "owner": 295
+      },
+      {
+        "n": 5311,
+        "coalescence": 9,
+        "first_descent": 9,
+        "owner": 2127
+      },
+      {
+        "n": 5371,
+        "coalescence": 8,
+        "first_descent": 8,
+        "owner": 3399
+      },
+      {
+        "n": 5403,
+        "coalescence": 13,
+        "first_descent": 13,
+        "owner": 2739
+      },
+      {
+        "n": 5479,
+        "coalescence": 16,
+        "first_descent": 20,
+        "owner": 4687
+      },
+      {
+        "n": 5535,
+        "coalescence": 17,
+        "first_descent": 17,
+        "owner": 2367
+      },
+      {
+        "n": 5659,
+        "coalescence": 7,
+        "first_descent": 13,
+        "owner": 3183
+      },
+      {
+        "n": 5679,
+        "coalescence": 12,
+        "first_descent": 12,
+        "owner": 1279
+      },
+      {
+        "n": 5743,
+        "coalescence": 7,
+        "first_descent": 7,
+        "owner": 3067
+      },
+      {
+        "n": 5787,
+        "coalescence": 8,
+        "first_descent": 8,
+        "owner": 1159
+      },
+      {
+        "n": 5799,
+        "coalescence": 7,
+        "first_descent": 7,
+        "owner": 3097
+      },
+      {
+        "n": 5823,
+        "coalescence": 10,
+        "first_descent": 10,
+        "owner": 27
+      },
+      {
+        "n": 5871,
+        "coalescence": 1,
+        "first_descent": 8,
+        "owner": 703
+      },
+      {
+        "n": 5883,
+        "coalescence": 7,
+        "first_descent": 7,
+        "owner": 1047
+      },
+      {
+        "n": 5887,
+        "coalescence": 15,
+        "first_descent": 15,
+        "owner": 559
+      },
+      {
+        "n": 5979,
+        "coalescence": 8,
+        "first_descent": 8,
+        "owner": 2395
+      },
+      {
+        "n": 5991,
+        "coalescence": 4,
+        "first_descent": 16,
+        "owner": 2215
+      },
+      {
+        "n": 6055,
+        "coalescence": 11,
+        "first_descent": 11,
+        "owner": 4093
+      },
+      {
+        "n": 6127,
+        "coalescence": 7,
+        "first_descent": 7,
+        "owner": 363
+      },
+      {
+        "n": 6139,
+        "coalescence": 11,
+        "first_descent": 11,
+        "owner": 1383
+      },
+      {
+        "n": 6171,
+        "coalescence": 35,
+        "first_descent": 36,
+        "owner": 5715
+      },
+      {
+        "n": 6175,
+        "coalescence": 9,
+        "first_descent": 9,
+        "owner": 1855
+      },
+      {
+        "n": 6235,
+        "coalescence": 11,
+        "first_descent": 12,
+        "owner": 5619
+      },
+      {
+        "n": 6255,
+        "coalescence": 9,
+        "first_descent": 9,
+        "owner": 1879
+      },
+      {
+        "n": 6271,
+        "coalescence": 9,
+        "first_descent": 15,
+        "owner": 5023
+      },
+      {
+        "n": 6303,
+        "coalescence": 15,
+        "first_descent": 15,
+        "owner": 199
+      },
+      {
+        "n": 6375,
+        "coalescence": 7,
+        "first_descent": 8,
+        "owner": 4539
+      },
+      {
+        "n": 6427,
+        "coalescence": 8,
+        "first_descent": 13,
+        "owner": 3615
+      },
+      {
+        "n": 6447,
+        "coalescence": 7,
+        "first_descent": 7,
+        "owner": 2295
+      },
+      {
+        "n": 6471,
+        "coalescence": 4,
+        "first_descent": 31,
+        "owner": 4255
+      },
+      {
+        "n": 6559,
+        "coalescence": 8,
+        "first_descent": 8,
+        "owner": 1167
+      },
+      {
+        "n": 6591,
+        "coalescence": 1,
+        "first_descent": 29,
+        "owner": 6171
+      },
+      {
+        "n": 6639,
+        "coalescence": 10,
+        "first_descent": 10,
+        "owner": 5983
+      },
+      {
+        "n": 6687,
+        "coalescence": 7,
+        "first_descent": 7,
+        "owner": 3571
+      },
+      {
+        "n": 6703,
+        "coalescence": 8,
+        "first_descent": 10,
+        "owner": 6363
+      },
+      {
+        "n": 6747,
+        "coalescence": 8,
+        "first_descent": 8,
+        "owner": 3603
+      },
+      {
+        "n": 6759,
+        "coalescence": 7,
+        "first_descent": 9,
+        "owner": 5703
+      },
+      {
+        "n": 6783,
+        "coalescence": 8,
+        "first_descent": 9,
+        "owner": 3175
+      },
+      {
+        "n": 6811,
+        "coalescence": 18,
+        "first_descent": 27,
+        "owner": 6555
+      },
+      {
+        "n": 6823,
+        "coalescence": 23,
+        "first_descent": 23,
+        "owner": 4155
+      },
+      {
+        "n": 6847,
+        "coalescence": 11,
+        "first_descent": 11,
+        "owner": 771
+      },
+      {
+        "n": 6939,
+        "coalescence": 15,
+        "first_descent": 15,
+        "owner": 219
+      },
+      {
+        "n": 7003,
+        "coalescence": 7,
+        "first_descent": 7,
+        "owner": 327
+      },
+      {
+        "n": 7071,
+        "coalescence": 7,
+        "first_descent": 7,
+        "owner": 39
+      },
+      {
+        "n": 7167,
+        "coalescence": 21,
+        "first_descent": 22,
+        "owner": 3879
+      },
+      {
+        "n": 7215,
+        "coalescence": 7,
+        "first_descent": 7,
+        "owner": 3853
+      },
+      {
+        "n": 7239,
+        "coalescence": 7,
+        "first_descent": 7,
+        "owner": 1933
+      },
+      {
+        "n": 7279,
+        "coalescence": 36,
+        "first_descent": 48,
+        "owner": 5055
+      },
+      {
+        "n": 7323,
+        "coalescence": 17,
+        "first_descent": 17,
+        "owner": 231
+      },
+      {
+        "n": 7327,
+        "coalescence": 14,
+        "first_descent": 15,
+        "owner": 5571
+      },
+      {
+        "n": 7335,
+        "coalescence": 4,
+        "first_descent": 15,
+        "owner": 5151
+      },
+      {
+        "n": 7359,
+        "coalescence": 25,
+        "first_descent": 27,
+        "owner": 5311
+      },
+      {
+        "n": 7399,
+        "coalescence": 8,
+        "first_descent": 8,
+        "owner": 3951
+      },
+      {
+        "n": 7407,
+        "coalescence": 13,
+        "first_descent": 13,
+        "owner": 7
+      },
+      {
+        "n": 7419,
+        "coalescence": 9,
+        "first_descent": 11,
+        "owner": 5943
+      },
+      {
+        "n": 7471,
+        "coalescence": 10,
+        "first_descent": 10,
+        "owner": 5319
+      },
+      {
+        "n": 7495,
+        "coalescence": 8,
+        "first_descent": 8,
+        "owner": 1501
+      },
+      {
+        "n": 7527,
+        "coalescence": 46,
+        "first_descent": 46,
+        "owner": 2355
+      },
+      {
+        "n": 7615,
+        "coalescence": 12,
+        "first_descent": 12,
+        "owner": 507
+      },
+      {
+        "n": 7707,
+        "coalescence": 7,
+        "first_descent": 12,
+        "owner": 4335
+      },
+      {
+        "n": 7711,
+        "coalescence": 10,
+        "first_descent": 10,
+        "owner": 6949
+      },
+      {
+        "n": 7783,
+        "coalescence": 7,
+        "first_descent": 9,
+        "owner": 6567
+      },
+      {
+        "n": 7791,
+        "coalescence": 7,
+        "first_descent": 8,
+        "owner": 5547
+      },
+      {
+        "n": 7839,
+        "coalescence": 15,
+        "first_descent": 15,
+        "owner": 2235
+      },
+      {
+        "n": 7911,
+        "coalescence": 8,
+        "first_descent": 8,
+        "owner": 6337
+      },
+      {
+        "n": 7935,
+        "coalescence": 25,
+        "first_descent": 25,
+        "owner": 603
+      },
+      {
+        "n": 7963,
+        "coalescence": 45,
+        "first_descent": 45,
+        "owner": 327
+      },
+      {
+        "n": 8007,
+        "coalescence": 7,
+        "first_descent": 7,
+        "owner": 1069
+      },
+      {
+        "n": 8103,
+        "coalescence": 8,
+        "first_descent": 8,
+        "owner": 4327
+      },
+      {
+        "n": 8127,
+        "coalescence": 13,
+        "first_descent": 27,
+        "owner": 7323
+      },
+      {
+        "n": 8175,
+        "coalescence": 14,
+        "first_descent": 15,
+        "owner": 4911
+      },
+      {
+        "n": 8187,
+        "coalescence": 9,
+        "first_descent": 9,
+        "owner": 3279
+      },
+      {
+        "n": 8223,
+        "coalescence": 16,
+        "first_descent": 16,
+        "owner": 879
+      },
+      {
+        "n": 8263,
+        "coalescence": 9,
+        "first_descent": 10,
+        "owner": 5883
+      },
+      {
+        "n": 8283,
+        "coalescence": 12,
+        "first_descent": 12,
+        "owner": 2799
+      },
+      {
+        "n": 8295,
+        "coalescence": 22,
+        "first_descent": 23,
+        "owner": 7983
+      },
+      {
+        "n": 8319,
+        "coalescence": 12,
+        "first_descent": 12,
+        "owner": 2811
+      },
+      {
+        "n": 8359,
+        "coalescence": 14,
+        "first_descent": 30,
+        "owner": 7935
+      },
+      {
+        "n": 8431,
+        "coalescence": 9,
+        "first_descent": 9,
+        "owner": 5065
+      },
+      {
+        "n": 8443,
+        "coalescence": 16,
+        "first_descent": 16,
+        "owner": 2139
+      },
+      {
+        "n": 8475,
+        "coalescence": 8,
+        "first_descent": 16,
+        "owner": 4767
+      },
+      {
+        "n": 8551,
+        "coalescence": 8,
+        "first_descent": 10,
+        "owner": 7215
+      },
+      {
+        "n": 8607,
+        "coalescence": 12,
+        "first_descent": 12,
+        "owner": 4363
+      },
+      {
+        "n": 8703,
+        "coalescence": 17,
+        "first_descent": 17,
+        "owner": 5583
+      },
+      {
+        "n": 8751,
+        "coalescence": 12,
+        "first_descent": 12,
+        "owner": 583
+      },
+      {
+        "n": 8859,
+        "coalescence": 1,
+        "first_descent": 16,
+        "owner": 8295
+      },
+      {
+        "n": 8863,
+        "coalescence": 9,
+        "first_descent": 10,
+        "owner": 7099
+      },
+      {
+        "n": 8871,
+        "coalescence": 8,
+        "first_descent": 8,
+        "owner": 3553
+      },
+      {
+        "n": 8895,
+        "coalescence": 17,
+        "first_descent": 17,
+        "owner": 475
+      },
+      {
+        "n": 8935,
+        "coalescence": 18,
+        "first_descent": 18,
+        "owner": 4299
+      },
+      {
+        "n": 8943,
+        "coalescence": 19,
+        "first_descent": 19,
+        "owner": 2151
+      },
+      {
+        "n": 8955,
+        "coalescence": 11,
+        "first_descent": 11,
+        "owner": 4035
+      },
+      {
+        "n": 9051,
+        "coalescence": 3,
+        "first_descent": 9,
+        "owner": 4767
+      },
+      {
+        "n": 9063,
+        "coalescence": 12,
+        "first_descent": 12,
+        "owner": 1531
+      },
+      {
+        "n": 9127,
+        "coalescence": 7,
+        "first_descent": 7,
+        "owner": 2437
+      },
+      {
+        "n": 9151,
+        "coalescence": 13,
+        "first_descent": 13,
+        "owner": 2319
+      },
+      {
+        "n": 9199,
+        "coalescence": 10,
+        "first_descent": 10,
+        "owner": 2763
+      },
+      {
+        "n": 9243,
+        "coalescence": 13,
+        "first_descent": 13,
+        "owner": 1095
+      },
+      {
+        "n": 9307,
+        "coalescence": 9,
+        "first_descent": 14,
+        "owner": 7455
+      },
+      {
+        "n": 9327,
+        "coalescence": 8,
+        "first_descent": 8,
+        "owner": 7471
+      },
+      {
+        "n": 9343,
+        "coalescence": 11,
+        "first_descent": 12,
+        "owner": 6651
+      },
+      {
+        "n": 9375,
+        "coalescence": 6,
+        "first_descent": 9,
+        "owner": 7407
+      },
+      {
+        "n": 9447,
+        "coalescence": 9,
+        "first_descent": 12,
+        "owner": 7567
+      },
+      {
+        "n": 9519,
+        "coalescence": 8,
+        "first_descent": 8,
+        "owner": 5083
+      },
+      {
+        "n": 9543,
+        "coalescence": 10,
+        "first_descent": 10,
+        "owner": 955
+      },
+      {
+        "n": 9631,
+        "coalescence": 19,
+        "first_descent": 23,
+        "owner": 6951
+      },
+      {
+        "n": 9663,
+        "coalescence": 34,
+        "first_descent": 34,
+        "owner": 8947
+      },
+      {
+        "n": 9711,
+        "coalescence": 9,
+        "first_descent": 9,
+        "owner": 2917
+      },
+      {
+        "n": 9759,
+        "coalescence": 8,
+        "first_descent": 8,
+        "owner": 5211
+      },
+      {
+        "n": 9775,
+        "coalescence": 17,
+        "first_descent": 17,
+        "owner": 6271
+      },
+      {
+        "n": 9819,
+        "coalescence": 7,
+        "first_descent": 10,
+        "owner": 6991
+      },
+      {
+        "n": 9831,
+        "coalescence": 7,
+        "first_descent": 26,
+        "owner": 8295
+      },
+      {
+        "n": 9855,
+        "coalescence": 18,
+        "first_descent": 20,
+        "owner": 9483
+      },
+      {
+        "n": 9883,
+        "coalescence": 11,
+        "first_descent": 11,
+        "owner": 835
+      }
+    ],
+    "expanding_hostile_word": [
+      1,
+      1,
+      2,
+      1,
+      1,
+      2,
+      6,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      1,
+      2,
+      1,
+      1
+    ]
+  },
+  "first_merge_probe": {
+    "odd_nonroot_sources": 49999,
+    "failed_nonexpanding_lift": [],
+    "previously_unseen_sources": 26599,
+    "already_in_smaller_route_union": 23400,
+    "unseen_with_earlier_than_actual_descent": 2419,
+    "maximum_unseen_saving": [
+      70,
+      {
+        "n": 75007,
+        "coalescence": 8,
+        "first_descent": 78,
+        "child": 37503,
+        "inverse_depth": 8
+      }
+    ]
+  },
+  "checks": 2083116
+}

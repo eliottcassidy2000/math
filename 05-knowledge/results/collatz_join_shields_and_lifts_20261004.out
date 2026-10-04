@@ -1,0 +1,22 @@
+SEARCH {"forward_cap": 6, "inverse_cap": 6, "resolved": 0, "visited_inverse_nodes": 7625}
+SEARCH {"forward_cap": 6, "inverse_cap": 8, "resolved": 7, "visited_inverse_nodes": 14294}
+SEARCH {"forward_cap": 6, "inverse_cap": 12, "resolved": 12, "visited_inverse_nodes": 35173}
+SEARCH {"forward_cap": 6, "inverse_cap": 16, "resolved": 16, "visited_inverse_nodes": 91321}
+SEARCH {"forward_cap": 8, "inverse_cap": 6, "resolved": 78, "visited_inverse_nodes": 9109}
+SEARCH {"forward_cap": 8, "inverse_cap": 8, "resolved": 84, "visited_inverse_nodes": 17319}
+SEARCH {"forward_cap": 8, "inverse_cap": 12, "resolved": 89, "visited_inverse_nodes": 44068}
+SEARCH {"forward_cap": 8, "inverse_cap": 16, "resolved": 93, "visited_inverse_nodes": 113802}
+SEARCH {"forward_cap": 12, "inverse_cap": 6, "resolved": 159, "visited_inverse_nodes": 10615}
+SEARCH {"forward_cap": 12, "inverse_cap": 8, "resolved": 164, "visited_inverse_nodes": 19988}
+SEARCH {"forward_cap": 12, "inverse_cap": 12, "resolved": 166, "visited_inverse_nodes": 53523}
+SEARCH {"forward_cap": 12, "inverse_cap": 16, "resolved": 169, "visited_inverse_nodes": 137519}
+SEARCH {"forward_cap": 16, "inverse_cap": 6, "resolved": 192, "visited_inverse_nodes": 11154}
+SEARCH {"forward_cap": 16, "inverse_cap": 8, "resolved": 195, "visited_inverse_nodes": 21056}
+SEARCH {"forward_cap": 16, "inverse_cap": 12, "resolved": 196, "visited_inverse_nodes": 56984}
+SEARCH {"forward_cap": 16, "inverse_cap": 16, "resolved": 198, "visited_inverse_nodes": 147364}
+DEEPER {"forward_cap": 6, "inverse_cap": 20, "resolved": 16, "visited_inverse_nodes": 235431}
+DEEPER {"forward_cap": 6, "inverse_cap": 24, "resolved": 16, "visited_inverse_nodes": 608929}
+DEEPER {"forward_cap": 6, "inverse_cap": 28, "resolved": 16, "visited_inverse_nodes": 1568023}
+ALL_DEPTH {"first_six_resolved": 17, "first_six_excluded": 222, "forward_profile": [[1, 6], [2, 6], [4, 13], [6, 17], [8, 93], [12, 169], [16, 198], [24, 220], [32, 228], [48, 238], [64, 239]]}
+FIRST_MERGE {"already_in_smaller_route_union": 23400, "failed_nonexpanding_lift": [], "maximum_unseen_saving": [70, {"child": 37503, "coalescence": 8, "first_descent": 78, "inverse_depth": 8, "n": 75007}], "odd_nonroot_sources": 49999, "previously_unseen_sources": 26599, "unseen_with_earlier_than_actual_descent": 2419}
+PASS: 2083116 explicit checks; no assertions removed by -O.
