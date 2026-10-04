@@ -1,0 +1,11 @@
+Virtual charts:s=1..30;240 literal growing prefixes; all firstj+1 coefficients expand.
+First family:n=79+128k; smaller dependency67+108k; actual join after4 steps.
+Completed families:90 symbolic certificates; 7 literal replays under100000bits.
+First suffix addresses: [(1, 3, 26), (2, 6, 459), (3, 10, 10798), (4, 13, 152390), (5, 17, 44327568), (6, 20, 3034050841)]
+First19-adic fibres: [(1, 18), (2, 15), (3, 9), (4, 9), (5, 9), (6, 8), (7, 8), (8, 10), (9, 18), (10, 18), (11, 16), (12, 12)]
+Exact19-digit census:8 charts,depth1..3; one complete first-digit fibre per chart.
+Huge selected certificate:odd rank 70 source bit lower bound 768476391313888049127345956512235397659214847375466654636451934
+Smaller-dependency cylinder density,s5..30 (not root coverage): 44960493447437644864916638468354502363169/23384026197294446691258957323460528314494920687616
+Remaining density afters30 <= 1/(124*2^150), fromj>=3s.
+Boundary: dependencies need certificates;19-adic digit support is not integer coverage.
+PASS: 84077 explicit exact checks, active under-O.

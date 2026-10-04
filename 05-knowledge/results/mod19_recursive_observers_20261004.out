@@ -1,0 +1,184 @@
+{
+  "status": "PROVED modular/guard identities; FINITE-EXACT declared universes",
+  "clocks": [
+    {
+      "depth": 1,
+      "base2_order": 18,
+      "rho112_order": 18
+    },
+    {
+      "depth": 2,
+      "base2_order": 342,
+      "rho112_order": 342
+    },
+    {
+      "depth": 3,
+      "base2_order": 6498,
+      "rho112_order": 6498
+    },
+    {
+      "depth": 4,
+      "base2_order": 123462,
+      "rho112_order": 123462
+    },
+    {
+      "depth": 5,
+      "base2_order": 2345778,
+      "rho112_order": 2345778
+    },
+    {
+      "depth": 6,
+      "base2_order": 44569782,
+      "rho112_order": 44569782
+    }
+  ],
+  "all_residue_shell_census": [
+    {
+      "depth": 1,
+      "cycles": {
+        "1": 1,
+        "18": 1
+      }
+    },
+    {
+      "depth": 2,
+      "cycles": {
+        "1": 1,
+        "18": 1,
+        "342": 1
+      }
+    },
+    {
+      "depth": 3,
+      "cycles": {
+        "1": 1,
+        "18": 1,
+        "342": 1,
+        "6498": 1
+      }
+    }
+  ],
+  "word_filters": {
+    "words": 340,
+    "depth1_endpoints": "all 19",
+    "depth2_endpoints": [
+      0,
+      1,
+      18,
+      19,
+      360
+    ],
+    "offsets": 3,
+    "exact_replays": 24480,
+    "distinct_affine_maps_mod19": 181
+  },
+  "equal_clock_fixed_point_hostile": [
+    {
+      "word": [
+        4,
+        4
+      ],
+      "depth": 1,
+      "count": 19
+    },
+    {
+      "word": [
+        4,
+        4
+      ],
+      "depth": 2,
+      "count": 19
+    },
+    {
+      "word": [
+        4,
+        4
+      ],
+      "depth": 3,
+      "count": 19
+    },
+    {
+      "word": [
+        1,
+        7
+      ],
+      "depth": 1,
+      "count": 0
+    },
+    {
+      "word": [
+        1,
+        7
+      ],
+      "depth": 2,
+      "count": 0
+    },
+    {
+      "word": [
+        1,
+        7
+      ],
+      "depth": 3,
+      "count": 0
+    }
+  ],
+  "drift_alias": "For every k, words (1) and (1+18*19^(k-1)) have identical full affine maps mod19^k and opposite drift.",
+  "ray_address_census": {
+    "hubs": [
+      1,
+      5,
+      7,
+      11,
+      19,
+      361,
+      6859
+    ],
+    "rows": [
+      0,
+      1,
+      2
+    ],
+    "depths": [
+      1,
+      2,
+      3
+    ],
+    "all_requested_residues": 152019,
+    "next_digit_checks": 5130
+  },
+  "joint_selector": {
+    "all_cases": 3591,
+    "compatible_cases": 189,
+    "incompatible_root_row2": {
+      "ternary": 5,
+      "mod19": 18
+    },
+    "root_exception": {
+      "row": 1,
+      "block": 0,
+      "period": 3,
+      "first_parameter": 1
+    },
+    "first_root_address_source": 349525
+  },
+  "unexpanded_certificate": {
+    "parent_depth": 6,
+    "child_depth": 7,
+    "wanted3": 5,
+    "ternary_depth": 3,
+    "wanted19": 84354,
+    "mod19_depth": 4,
+    "selection": {
+      "row": 2,
+      "block": 63,
+      "period": 61731,
+      "first_parameter": 0
+    },
+    "lower_bits": "300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000450",
+    "upper_bits": "300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000457",
+    "expanded": false
+  },
+  "rejected_hostiles": 5,
+  "scope": "Observers filter supplied legal charts and certified predecessor families; no arbitrary-source coverage or residue-based drift theorem."
+}
+PASS: exact arithmetic; all checks survive -O
