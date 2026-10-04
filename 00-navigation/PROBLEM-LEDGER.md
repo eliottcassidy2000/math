@@ -387,8 +387,10 @@ all heights (THM-1289, published), δ ineffective.
   **Precision residual and size-6 law (S11, corrected 2026-09-27):** coefficient-no-descent
   density D(41)=0.00265 differs from the finite bank's complement (witness4091).
   THM-4512: exact words use modulus2^(A+1); coarse modulus2^A gives a sufficient threshold.
-  N(w)<2^A for j<=5000, so at most one coarse representative needs checking; j<=14 leaves
-  only1. The producer reports sigma=sigma_inf through10^7. Local-descent entry is already
+  N(w)/2^A<=1121/3328 now holds at ALL lengths; only one representative needs
+  checking. The j<=16 census leaves only1. The explicit cutoff/bridge is in
+  `05-knowledge/results/collatz_boundary_compiler_20261004.md`.
+  The producer reports sigma=sigma_inf through10^7. Local-descent entry is already
   unconditional; paying the original source remains open. See entry_20260927_board.md.
   Gilbreath size 6: exact Markov reduction, exact rationals to F = 11, excess = 2^-F c_6(F) with a
   dyadic per-z anatomy, c_6 ~ 1.4 log_2 F (HYP-9163). Notes: `collatz_precision_residual_20260926.md`,

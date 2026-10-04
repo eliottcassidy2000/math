@@ -1,0 +1,25 @@
+Sharp finite maximum j=1..64: (Fraction(1121, 3328), 5, 8, 1121)
+Independent extended integer check j=1..5000: PASS
+Two exact log-series certificates: |log_2(3)-p/q|<1/q^2
+p,q: 9115015689657667 5750934602875680 ; bridge 65..2^42; Matveev C=10^10 thereafter
+Independent exhaustive words: j<=7, three least contracting totals: 4330
+All marked prefix-growth words length<=8: 313 ; m=1..6
+Compiled rows / unique coarse classes: 1878 1655
+Boundary statuses: {'descent': 1877, 'root': 1, 'unresolved': 0}
+Old Q^m>h restriction excludes: 265 rows
+Less restrictive guard on old-admissible rows: 16
+Largest guard saving: (5, (1, 1, 1, 1, 1, 2, 2, 1), 1, 8) new t 3
+7 repair: {'nominal_word': [1, 1, 2, 2], 'repetitions': 1, 'extra_guard': 1, 'coarse_word': [1, 1, 2, 3], 'residue': 7, 'modulus': 128, 'boundary_endpoint': 5, 'boundary_status': 'descent'}
+Repeat constraint removed; no claim of new coverage against every older bank
+First-coefficient exit cylinders per length 1..16: [1, 1, 2, 3, 7, 12, 30, 85, 173, 476, 961, 2652, 8045, 17637, 51033, 108950]
+Census total: 190068 ; threshold exceptions: [{'source': 1, 'length': 1, 'endpoint': 1, 'word': [2]}]
+Exact density among all positive integers: 16258529/33554432
+Independent residue sweep modulo 8192 through depth8: PASS
+Generic contracting-word hostile: 165 ->167 in17 odd steps; first step31
+Hostile pole: 1106233681/5077565 ; class modulus: 134217728
+5n+1 hostile: 13 ->33 ->83 ->13, word115, positive pole13
+Boundary-switch census: odd sources3..9999, <=96 odd steps, stop at1
+Actual prefixes: 153336 ; failed contracting endpoint tests: 148
+Distinct sources: 144 ; all rescued by earlier source-relative descent
+Sibling common-future obligations appear earlier than actual descent: 100 rows
+PASS: exact finite checks; all-length argument is in the companion proof

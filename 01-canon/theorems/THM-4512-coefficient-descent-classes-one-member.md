@@ -1,18 +1,19 @@
 ---
 id: THM-4512
-title: "Coefficient-descent thresholds on exact-word and coarse cylinders; at most one uncertified coarse representative for j <= 5000"
+title: "Coefficient-descent cylinders: sharp all-length threshold ratio 1121/3328 and at most one uncertified coarse representative"
 status: >
   PROVED elementary threshold and carry inequalities, SCOPE-CORRECTED:
   exact valuation words use modulus 2^(A+1); the modulus 2^A cylinder permits
   extra final divisions and gives an upper bound, not an exact U endpoint.
-  FINITE-EXACT gap inequality for j <= 5000 and first-coefficient-descent
-  representative census for j <= 14. The producer reports sigma=sigma_inf
-  for odd 3 <= n <= 10^7. All-j one-member coverage requires an explicit
-  effective cutoff and the remaining finite verification; it is not supplied
-  merely by citing existence of an irrationality measure. Collatz remains OPEN.
-source: opus-2026-09-26 session gilbreath6-collatz-precision-20260926; scope and cylinder repair codex-2026-09-27
+  PROVED all-length sharp bound N(w)/2^A <= 1121/3328, using CITED explicit
+  Matveev input, an exact rational-log bridge through 2^42, and the finite
+  check j <= 64. FINITE-EXACT first-coefficient-descent coarse census through
+  j <= 16; only threshold exception 1. The original producer separately
+  reports sigma=sigma_inf for odd 3 <= n <= 10^7. Universal coefficient
+  stopping and universal stopping-time equality remain OPEN, as does Collatz.
+source: opus-2026-09-26 session gilbreath6-collatz-precision-20260926; scope and cylinder repair codex-2026-09-27; explicit all-length closure codex-2026-10-04
 depends_on: [THM-4495, reset_20260926_swaplift.md]
-verification: 04-computation/experiments/collatz_precision_residual_20260926.py; collatz_coefficient_stopping_20260926.py; independent correction audit entry_20260927_incoming.py
+verification: 04-computation/experiments/collatz_precision_residual_20260926.py; collatz_coefficient_stopping_20260926.py; independent correction audit entry_20260927_incoming.py; collatz_boundary_compiler_20261004.py (two rational-log certificates, exact bounds, census and hostile controls)
 ---
 
 # THM-4512 -- coefficient-descent cylinders and the one-member bound
@@ -24,6 +25,13 @@ as a sufficient inequality, but the endpoint equality does not. The
 all-j claim was also too broad without a specified effective cutoff.
 The [independent correction audit](../../05-knowledge/results/entry_20260927_incoming.md)
 records the precise scope and executable controls. No literature-priority claim.
+
+**Explicit extension, 2026-10-04.** The missing all-length cutoff is now
+supplied by [BC1 in the boundary-compiler proof](../../05-knowledge/results/collatz_boundary_compiler_20261004.md#2-the-sharp-all-length-carry-bound).
+It strengthens the one-member bound to the sharp ratio `1121/3328`, with
+equality only at `(4,1,1,1,1)`. The earlier retraction was necessary: the
+present extension includes numerical constants and a rigorous bridge
+across the previously unchecked range. The exact/coarse correction remains.
 
 ## Exact and coarse cylinders
 
@@ -61,18 +69,20 @@ integers is 2^(-A); it is not the density of the coarser C_w.
 2. If 3^j<2^A, define N(w)=S_j/(2^A-3^j). On E_w, actual descent at j
    is equivalent to n>N(w). On C_w the same inequality is sufficient;
    additional final divisions may cause descent even when this test fails.
-3. If N(w)<2^A, at most the least positive representative of C_w can fail
-   this sufficient threshold test. This holds for every word of length
-   j<=5000 with coefficient descent, by the independently checked integer
-   gap inequality below. It therefore also holds on the exact subcylinder.
-4. For first coefficient descent at j<=14, the finite representative
-   enumeration and the explicit large-final-valuation tail argument leave
-   only n=1 unproved by the threshold, from word(2).
+3. For every contracting word of every length, `N(w)/2^A<=1121/3328<1/2`.
+   Thus only the least positive representative of C_w can fail this
+   sufficient threshold test. It also bounds the exact subcylinder's
+   possible exception. Equality in the ratio occurs only at `(4,1,1,1,1)`.
+4. For first coefficient descent at j<=16, a complete census of 190068
+   canonical coarse exit cylinders leaves only n=1 unproved by the
+   threshold, from word(2). Arbitrarily large final valuations are included
+   in these coarse classes. The earlier j<=14 exact-word census and its
+   explicit tail argument remain valid independent finite checks.
 5. The original producer separately reports sigma(n)=sigma_inf(n) on all
    odd 3<=n<=10^7, with maximum155. This is a finite computational result,
-   not a universal equality or an all-j one-member proof.
+   not a universal stopping-time equality.
 
-## Proof and finite boundaries
+## Elementary estimate, historical finite boundary, and all-length closure
 
 Since each valuation is at least1, A_t<=A-(j-t), giving
 
@@ -84,8 +94,30 @@ At the smallest coefficient-descending A=bit_length(3^j), the exact test is
     3^j-2^j < (2^A-3^j)*2^j.
 
 It passes for every 1<=j<=5000; larger A only increase the denominator.
-The largest tested ratio is approximately0.507 at(j,A)=(5,8).
-This proves statement3 on its specified range.
+The largest tested value of this loose upper bound is approximately0.507
+at(j,A)=(5,8). This was the original proof of statement3 only through5000.
+It is not the sharp carry ratio proved in the extension.
+
+At fixed j,A the exact maximum carry is
+
+    S_max=3^(j-1)+2^(A-j+1)*(3^(j-1)-2^(j-1)),
+
+attained uniquely by `(A-j+1,1,...,1)`. Its ratio to `2^A*(2^A-3^j)`
+strictly decreases with `2^A>3^j`, so take A=bit_length(3^j). Lengths1..64
+give the unique maximum1121/3328. For the rest, put Lambda=2^A/3^j-1;
+the elementary estimate gives `N(w)/2^A<2^(-j)/Lambda`.
+
+The coprime approximation
+`p/q=9115015689657667/5750934602875680` has error less than1/q^2 against
+log_2(3), certified by two exact logarithm-series interval calculations.
+Since2^43<q<2^53, for65<=j<=2^42 it gives
+`Lambda>1/(4q)>2^(-55)`, so the ratio is less than1/1024.
+Forj>=2^42, the explicit Matveev theorem gives
+`Lambda>exp[-10^10*(1+log(2j))]>exp(-j/4)>2^(-j/2)`.
+Here the cutoff is checked by `44*10^10<2^40` and monotonicity.
+This proves statement3 for all lengths. The
+[full proof and retrieved literature statement](../../05-knowledge/results/collatz_boundary_compiler_20261004.md#2-the-sharp-all-length-carry-bound)
+specify every constant, hypothesis, equality case, and finite check.
 
 For a word whose first coefficient descent is at j, its earlier sums
 satisfy 2^(A_t)<=3^t. Therefore S_j<=j*3^(j-1). For j<=14 and A>=41,
@@ -98,11 +130,9 @@ stopping at A=40; it does not enumerate forty extra valuation bits for
 every prefix. The displayed tail bound repairs that description and
 justifies the omitted range. The independent audit uses integer thresholds.
 
-An effective estimate such as 2^A-3^j>=c*3^j*j^(-mu), with explicit
-constants and applicability range, would prove the gap inequality for all
-sufficiently large j. To extend statement3 to ALL j, one must specify that
-cutoff J_0 and verify any remaining range5001..J_0. Existence of an effective
-irrationality measure alone does not certify that J_0<=5000.
+The extension does not infer that a generic effective cutoff is<=5000.
+It supplies a particular cutoff and covers its entire preceding range by
+an exact rational approximation. No stopping-time equality is inferred.
 
 ## What this does and does not certify
 

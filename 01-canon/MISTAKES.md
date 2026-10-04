@@ -117,9 +117,15 @@ Format per entry:
   so they must not be called Haar-generic valuation sequences.
 - **Effective does not mean checked to5000.** An irrationality estimate
   with explicit constants gives an eventual cutoff; any gap beyond the
-  verified5000 still needs checking. The theorem now retains this finite scope.
+  verified5000 still needs checking. The 2026-09-27 repair retained this finite scope.
   The word census actually stops at total A=41, not forty additional bits;
   S_j<=j*3^(j-1) proves its omitted tail harmless for j<=14.
+- **Subsequent closure, 2026-10-04.** The
+  [boundary compiler](../05-knowledge/results/collatz_boundary_compiler_20261004.md)
+  now proves the sharp all-length ratio1121/3328 with an explicit Matveev
+  cutoff2^42 and an exact rational-log bridge across65..2^42. This supplies
+  the previously missing proof; it does not retroactively justify the old
+  cutoff inference or establish universal Collatz coverage.
 - **Repair and survivor.** [THM-4512](theorems/THM-4512-coefficient-descent-classes-one-member.md),
   its note, ledger, synthesis and index are corrected. The
   [independent audit](../05-knowledge/results/entry_20260927_incoming.md)

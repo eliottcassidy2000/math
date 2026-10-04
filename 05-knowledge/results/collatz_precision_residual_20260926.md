@@ -9,6 +9,13 @@ repaired during an independent audit. The prior published formulation is
 preserved in Git history at4403f0015; it is superseded where it conflicts
 with this note. The computed density table survives the repairs.
 
+**All-length extension, 2026-10-04:**
+[the boundary compiler](collatz_boundary_compiler_20261004.md) supplies the
+previously missing effective cutoff and proves the sharp ratio
+`N(w)/2^A<=1121/3328` for every contracting word. Its complete coarse census
+through16 odd steps leaves only root1 at the threshold. Section4 below
+retains the earlier finite audit and now distinguishes this later extension.
+
 Inherits [the reset bank](reset_20260926_swaplift.md),
 [THM-4495, no-descent count order](../../01-canon/theorems/THM-4495-collatz-no-descent-exact-order-spitzer.md),
 and the stopping-time references in
@@ -106,7 +113,7 @@ step to cost per odd step, giving (1-h*)/rho*, approximately0.0793, with
 rho*=log_3(2). It must not be quoted as1-h* per odd step. That asymptotic
 comparison is not a dependency of any new certificate or correction here.
 
-## 4. The one-member theorem has an explicit finite scope
+## 4. The finite audit and its subsequent all-length extension
 
 For any positive valuation word,
 
@@ -138,7 +145,12 @@ An effective irrationality estimate supplies a sufficiently large
 computable cutoff only after its constants are specified. One must then
 check the remaining gap between5000 and that cutoff. The original wording
 that any effective measure immediately covers every j>5000 was unsupported.
-The all-j extension is not a proved dependency.
+That was the reason the September audit did not accept the all-j extension.
+The October boundary-compiler proof now supplies explicit Matveev constants,
+a cutoff2^42, and an exact rational approximation covering65..2^42; only
+the sharp-maximizer check1..64 is needed below that bridge. Thus the
+all-length one-member result is now proved, while universal stopping and
+first-stopping equality remain open. The old cutoff inference stays retracted.
 
 ## 5. Entry must retain its target
 
