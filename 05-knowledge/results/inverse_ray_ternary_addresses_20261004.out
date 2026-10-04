@@ -1,0 +1,21 @@
+INVERSE RAY TERNARY ADDRESSES: PROVED codec; FINITE-EXACT declared controls
+kappa table: target mod9 -> source rows0,1,2
+1 [6, 2, 4]
+2 [5, 1, 3]
+4 [4, 6, 2]
+5 [1, 3, 5]
+7 [2, 4, 6]
+8 [3, 5, 1]
+root nonself first sources by rows0,2,1: [21, 5, 85]
+all target residues at ternary depths1..4: address/affine-orbit checks 14760
+four certified-hub address families: depths1..8, four residues, three lifts each; 300 leaf-depth controls
+depth/internal/leaf census [(1, 3, 2), (2, 12, 6), (3, 48, 24), (4, 192, 96), (5, 768, 384)]
+expanded certificates 1536 largest source bits 50
+precision hostile [[11, 7, 9], [29, 19, 25]] ; root self-return and inverse continuation from21 rejected
+hub11 fibre j0..50: ranks(5,16+2j); source7mod128 already in old-bank rows [25, 89, 153, 217, 281]
+huge internal certificate odd/ordinary ranks (21, 1200000000000000000000000000000000000000000000000000000000000000000001140000000000000000000000000000093)
+huge internal source binary-length interval (1200000000000000000000000000000000000000000000000000000000000000000001140000000000000000000000000000031, 1200000000000000000000000000000000000000000000000000000000000000000001140000000000000000000000000000052)
+huge internal residues mod2^64 / mod3^12 6148914691236517205 33890
+adding one row-zero leaf gives odd rank 22 ; no expanded source was created
+Universe: all14760 row/address pairs at depths1..4; 1536 expanded codes; two huge symbolic codes.
+ALL CHECKS PASSED; global integer coverage remains OPEN

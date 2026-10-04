@@ -1,0 +1,37 @@
+Sixth-depth session exact reproduction audit, 2026-10-04
+All four normal and optimized runs passed in the preceding integration run.
+Normal and optimized stdout matched byte for byte; saved outputs use LF line endings.
+The subsequent local-link check is repeated after creating this self-referenced record.
+
+cyclotomic_depth_towers_20261004
+Commands: python -X utf8 -B 04-computation/experiments/cyclotomic_depth_towers_20261004.py
+          python -O -X utf8 -B 04-computation/experiments/cyclotomic_depth_towers_20261004.py
+PASS normal / optimized / saved (platform line endings normalized)
+SHA256 (LF): 411e1c321b2ce4e30a4fc53ded36274abf667c2309f29867a8bdf39c4f0b42b6
+Output lines: 28
+
+divisor_layers_pair_geometry_20261004
+Commands: python -X utf8 -B 04-computation/experiments/divisor_layers_pair_geometry_20261004.py
+          python -O -X utf8 -B 04-computation/experiments/divisor_layers_pair_geometry_20261004.py
+PASS normal / optimized / saved (platform line endings normalized)
+SHA256 (LF): da25712adf7750daa5cfad5b69e4eca3bb783a44d4846aa78a7b0241877369c6
+Output lines: 43
+
+inverse_ray_ternary_addresses_20261004
+Commands: python -X utf8 -B 04-computation/experiments/inverse_ray_ternary_addresses_20261004.py
+          python -O -X utf8 -B 04-computation/experiments/inverse_ray_ternary_addresses_20261004.py
+PASS normal / optimized / saved (platform line endings normalized)
+SHA256 (LF): 5cfbf1cc16ebb45206a8fcd39735f19c72accdca9781c4f704f2e732ec70235a
+Output lines: 21
+
+sextic_subfield_clock_20261004
+Commands: python -X utf8 -B 04-computation/experiments/sextic_subfield_clock_20261004.py
+          python -O -X utf8 -B 04-computation/experiments/sextic_subfield_clock_20261004.py
+PASS normal / optimized / saved (platform line endings normalized)
+SHA256 (LF): 53bba1630ad8acbe91e1b35cfcddeab2d4e66efcf39bdf21a7ecedb1ac8adb5e
+Output lines: 453
+
+PASS local linked targets: 31
+Independent proof reviews: three reciprocal subagent reviews plus root review.
+The a=6 extension additionally has an independent standard-library primality/order replay.
+Scope and corrections are recorded in the four proof notes and MISTAKES.md.

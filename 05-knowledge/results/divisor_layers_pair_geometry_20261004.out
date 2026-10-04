@@ -1,0 +1,43 @@
+DIVISOR LAYERS / PAIR GEOMETRY: EXACT AUDIT
+Universe: N=2..500; k=2..20 for p^kqr; k=1..8,m=1..5 for general Walsh;
+all simplex vertex involutions v=1..8; independent proper-poset aut k=2..6;
+all words length 1..5 for ten-letter charges, using exact convolution.
+
+Inherited F=S+U direct audit: 499 integers, 132 balanced.
+  N=2: (F,S,U)=(0, 0, 0)
+  N=8: (F,S,U)=(2, 1, 1)
+  N=60: (F,S,U)=(10, 7, 3)
+  N=63: (F,S,U)=(4, 3, 2)
+  N=126: (F,S,U)=(10, 7, 3)
+General rank-Walsh product/duality/integrated spectrum: 496 cases.
+p^kqr rank chart, inverse and order: k=2..20, 49324 pair comparisons.
+Proper-poset automorphisms: exactly identity and q/r exchange for k=2..6.
+Ten-point bridge: inherited pair map is bijective; histograms are 4 corners + 6 midpoints.
+  A 2+2 vertex partition gives parallel height layers=(3,4,3); rankwise sorted matching
+  is a graded-set bijection, different from the inherited squarefree/pair map.
+  Pair-XOR multiplicities=(4,2,2,2), spectrum=(10,2,2,2).
+  q/r exponent multiplicities=(2,3,3,2), spectrum=(10,0,0,-2).
+  k=2 rank-Walsh rows:
+    (0, 0): (0, 3, 4, 3, 0)
+    (0, 1): (0, 1, 0, -1, 0)
+    (1, 0): (0, 1, 0, -1, 0)
+    (1, 1): (0, -1, 0, -1, 0)
+  Arithmetic hostile: pair-XOR(4) XOR pair-XOR(3)=0 XOR 2=2, but pair-XOR(12)=0 for N=60.
+  Natural word charges length 1: [2, 3, 3, 2]
+  Natural word charges length 2: [26, 24, 24, 26]
+  Natural word charges length 3: [248, 252, 252, 248]
+  Natural word charges length 4: [2504, 2496, 2496, 2504]
+  Natural word charges length 5: [24992, 25008, 25008, 24992]
+Simplex v=1: involution fixed-letter distribution={1: 1}
+Simplex v=2: involution fixed-letter distribution={1: 1, 3: 1}
+Simplex v=3: involution fixed-letter distribution={2: 3, 6: 1}
+Simplex v=4: involution fixed-letter distribution={2: 3, 4: 6, 10: 1}
+Simplex v=5: involution fixed-letter distribution={3: 15, 7: 10, 15: 1}
+Simplex v=6: involution fixed-letter distribution={3: 15, 5: 45, 11: 15, 21: 1}
+Simplex v=7: involution fixed-letter distribution={4: 105, 8: 105, 16: 21, 28: 1}
+Simplex v=8: involution fixed-letter distribution={4: 105, 6: 420, 12: 210, 22: 28, 36: 1}
+All involutions through 8 vertices: 1115 exact checks.
+Complement obstruction: divisor ten-set has 0 fixed; tetrahedral involutions have 2,4,10.
+Sharp boundary: p^4 has 3 proper divisors; exponents 1,2,3 map to 0,1/2,1,
+and complement becomes segment reflection (one fixed midpoint).
+PASS: inherited classifications, new all-height formulas, exact maps and hostile controls.

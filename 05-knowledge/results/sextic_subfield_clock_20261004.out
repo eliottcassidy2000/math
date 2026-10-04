@@ -1,0 +1,453 @@
+{
+  "status": "PROVED elementary F64 maps; FINITE-EXACT full-field controls; no Collatz conjugacy",
+  "field_polynomial": "t^6+t^3+1",
+  "independent_inherited_product_checks": 4096,
+  "generators": {
+    "t": {
+      "bits": 2,
+      "polynomial": "t"
+    },
+    "b": {
+      "bits": 3,
+      "polynomial": "t+1"
+    },
+    "phi": {
+      "bits": 9,
+      "polynomial": "t^3+1"
+    },
+    "gamma": {
+      "bits": 38,
+      "polynomial": "t^5+t^2+t"
+    },
+    "rho": {
+      "bits": 32,
+      "polynomial": "t^5"
+    },
+    "delta": {
+      "bits": 48,
+      "polynomial": "t^5+t^4"
+    }
+  },
+  "subfields": {
+    "F4": [
+      {
+        "bits": 0,
+        "polynomial": "0"
+      },
+      {
+        "bits": 1,
+        "polynomial": "1"
+      },
+      {
+        "bits": 8,
+        "polynomial": "t^3"
+      },
+      {
+        "bits": 9,
+        "polynomial": "t^3+1"
+      }
+    ],
+    "F8": [
+      {
+        "bits": 0,
+        "polynomial": "0"
+      },
+      {
+        "bits": 1,
+        "polynomial": "1"
+      },
+      {
+        "bits": 22,
+        "polynomial": "t^4+t^2+t"
+      },
+      {
+        "bits": 23,
+        "polynomial": "t^4+t^2+t+1"
+      },
+      {
+        "bits": 38,
+        "polynomial": "t^5+t^2+t"
+      },
+      {
+        "bits": 39,
+        "polynomial": "t^5+t^2+t+1"
+      },
+      {
+        "bits": 48,
+        "polynomial": "t^5+t^4"
+      },
+      {
+        "bits": 49,
+        "polynomial": "t^5+t^4+1"
+      }
+    ],
+    "intersection": [
+      0,
+      1
+    ]
+  },
+  "tensor_basis": [
+    {
+      "bits": 1,
+      "polynomial": "1"
+    },
+    {
+      "bits": 38,
+      "polynomial": "t^5+t^2+t"
+    },
+    {
+      "bits": 22,
+      "polynomial": "t^4+t^2+t"
+    },
+    {
+      "bits": 9,
+      "polynomial": "t^3+1"
+    },
+    {
+      "bits": 50,
+      "polynomial": "t^5+t^4+t"
+    },
+    {
+      "bits": 52,
+      "polynomial": "t^5+t^4+t^2"
+    }
+  ],
+  "tensor_rank_counts": {
+    "0": 1,
+    "1": 21,
+    "2": 42
+  },
+  "multiplicative_order_counts": {
+    "1": 1,
+    "3": 2,
+    "7": 6,
+    "9": 6,
+    "21": 12,
+    "63": 36
+  },
+  "tensor_rank_by_order": {
+    "1": {
+      "1": 1
+    },
+    "3": {
+      "1": 2
+    },
+    "7": {
+      "1": 6
+    },
+    "9": {
+      "2": 6
+    },
+    "21": {
+      "1": 12
+    },
+    "63": {
+      "2": 36
+    }
+  },
+  "norm_map": {
+    "output_count": 21,
+    "fibre_size": 3,
+    "kernel": [
+      {
+        "bits": 1,
+        "polynomial": "1"
+      },
+      {
+        "bits": 8,
+        "polynomial": "t^3"
+      },
+      {
+        "bits": 9,
+        "polynomial": "t^3+1"
+      }
+    ],
+    "cube_decoder": "x^3=N_F4(x)*N_F8(x)^(-2)",
+    "sixth_roots_of_phi": [
+      {
+        "bits": 2,
+        "polynomial": "t"
+      },
+      {
+        "bits": 16,
+        "polynomial": "t^4"
+      },
+      {
+        "bits": 18,
+        "polynomial": "t^4+t"
+      }
+    ],
+    "no_section_hostile": {
+      "target": [
+        9,
+        1
+      ],
+      "lifts": [
+        {
+          "bits": 4,
+          "polynomial": "t^2"
+        },
+        {
+          "bits": 32,
+          "polynomial": "t^5"
+        },
+        {
+          "bits": 36,
+          "polynomial": "t^5+t^2"
+        }
+      ],
+      "lift_orders": [
+        9,
+        9,
+        9
+      ]
+    }
+  },
+  "clock_code": {
+    "coordinates": "(i,j,l): k mod9=i+3j and k mod7=l",
+    "step": "(i+1 mod3,j+[i=2] mod3,l+1 mod7)",
+    "decoder": "rho^(i+3j)*delta^l",
+    "codes": 63,
+    "product_checks": 3969,
+    "first_states": [
+      {
+        "k": 0,
+        "state": {
+          "bits": 1,
+          "polynomial": "1"
+        },
+        "code": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "k": 1,
+        "state": {
+          "bits": 3,
+          "polynomial": "t+1"
+        },
+        "code": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "k": 2,
+        "state": {
+          "bits": 5,
+          "polynomial": "t^2+1"
+        },
+        "code": [
+          2,
+          0,
+          2
+        ]
+      },
+      {
+        "k": 3,
+        "state": {
+          "bits": 15,
+          "polynomial": "t^3+t^2+t+1"
+        },
+        "code": [
+          0,
+          1,
+          3
+        ]
+      },
+      {
+        "k": 4,
+        "state": {
+          "bits": 17,
+          "polynomial": "t^4+1"
+        },
+        "code": [
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "k": 5,
+        "state": {
+          "bits": 51,
+          "polynomial": "t^5+t^4+t+1"
+        },
+        "code": [
+          2,
+          1,
+          5
+        ]
+      },
+      {
+        "k": 6,
+        "state": {
+          "bits": 28,
+          "polynomial": "t^4+t^3+t^2"
+        },
+        "code": [
+          0,
+          2,
+          6
+        ]
+      },
+      {
+        "k": 7,
+        "state": {
+          "bits": 36,
+          "polynomial": "t^5+t^2"
+        },
+        "code": [
+          1,
+          2,
+          0
+        ]
+      },
+      {
+        "k": 8,
+        "state": {
+          "bits": 37,
+          "polynomial": "t^5+t^2+1"
+        },
+        "code": [
+          2,
+          2,
+          1
+        ]
+      },
+      {
+        "k": 9,
+        "state": {
+          "bits": 38,
+          "polynomial": "t^5+t^2+t"
+        },
+        "code": [
+          0,
+          0,
+          2
+        ]
+      },
+      {
+        "k": 10,
+        "state": {
+          "bits": 35,
+          "polynomial": "t^5+t+1"
+        },
+        "code": [
+          1,
+          0,
+          3
+        ]
+      },
+      {
+        "k": 11,
+        "state": {
+          "bits": 44,
+          "polynomial": "t^5+t^3+t^2"
+        },
+        "code": [
+          2,
+          0,
+          4
+        ]
+      }
+    ]
+  },
+  "trace_fourier": {
+    "character_count": 64,
+    "nontrivial_character_clock_length": 63,
+    "gram_F4": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "gram_F8": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "tensor_gram": [
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ]
+    ],
+    "trace_clock_word": "000100100001110000010111111001010100011001111011101011010011011",
+    "six_bit_windows": 63,
+    "one_bit_counts": {
+      "0": 31,
+      "1": 32
+    }
+  },
+  "boundaries": [
+    "F4 tensor F8 has dimension6; the additive Cartesian product has dimension5.",
+    "Pure tensor rank2 alone does not imply primitivity; t has order9.",
+    "The norm pair is nonlinear and loses one ternary phase digit.",
+    "Binary vector addition, multiplicative clock time, and Collatz iteration are different operations."
+  ]
+}
+PASS: all checks remain active under -O
