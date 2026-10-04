@@ -1,0 +1,227 @@
+{
+  "status": "PROVED elementary constructions; FINITE-EXACT controls; no inferred F(G)/E(G) definition",
+  "pair_tiles": [
+    {
+      "n": 2,
+      "ordered": 4,
+      "strict": 1,
+      "with_diagonal": 3,
+      "completed_automorphisms": 2
+    },
+    {
+      "n": 3,
+      "ordered": 9,
+      "strict": 3,
+      "with_diagonal": 6,
+      "completed_automorphisms": 6
+    },
+    {
+      "n": 4,
+      "ordered": 16,
+      "strict": 6,
+      "with_diagonal": 10,
+      "completed_automorphisms": 24
+    },
+    {
+      "n": 5,
+      "ordered": 25,
+      "strict": 10,
+      "with_diagonal": 15,
+      "completed_automorphisms": 120
+    },
+    {
+      "n": 6,
+      "ordered": 36,
+      "strict": 15,
+      "with_diagonal": 21,
+      "completed_automorphisms": 720
+    }
+  ],
+  "off_diagonal_automorphisms": {
+    "3": 6,
+    "4": 48,
+    "5": 120,
+    "6": 720
+  },
+  "maps": [
+    {
+      "name": "tetrahedron",
+      "VEF": [
+        4,
+        6,
+        4
+      ],
+      "flags": 24,
+      "map_automorphisms": 24,
+      "medial_automorphisms": 48,
+      "medial_face_actions": {
+        "preserve": 24,
+        "exchange": 24
+      }
+    },
+    {
+      "name": "cube",
+      "VEF": [
+        8,
+        12,
+        6
+      ],
+      "flags": 48,
+      "map_automorphisms": 48,
+      "medial_automorphisms": 48,
+      "medial_face_actions": {
+        "preserve": 48
+      }
+    },
+    {
+      "name": "square pyramid",
+      "VEF": [
+        5,
+        8,
+        5
+      ],
+      "flags": 32,
+      "map_automorphisms": 8,
+      "medial_automorphisms": 16,
+      "medial_face_actions": {
+        "preserve": 8,
+        "exchange": 8
+      }
+    }
+  ],
+  "smallest_polyhedral_hostile": {
+    "vertices": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        3
+      ]
+    ],
+    "squared_edge_lengths": [
+      1,
+      4,
+      5,
+      9,
+      10,
+      13
+    ],
+    "geometric_symmetry_order": 1,
+    "abstract_map_order": 24,
+    "abstract_medial_order": 48,
+    "complement_sends_star0_to_face_edges": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ]
+  },
+  "line_medial_hostile": {
+    "map": "square pyramid",
+    "line_edges": 18,
+    "medial_edges": 16,
+    "adjacent_only_in_line_graph": [
+      [
+        0,
+        4
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    "n5_pair_graph_degree": 6,
+    "medial_map_degree": 4
+  },
+  "n5": {
+    "pair_vertices": 10,
+    "stars": 5,
+    "star_size": 4,
+    "stars_per_pair": 2,
+    "overlap_degree": 6,
+    "disjoint_degree": 3,
+    "ordered_pair_table": {
+      "equal": 10,
+      "overlap": 60,
+      "disjoint": 30
+    },
+    "unordered_distinct_pairs": {
+      "overlap": 30,
+      "disjoint": 15
+    },
+    "Petersen_edges": 15,
+    "complete_tournament_bits": 10,
+    "fixed_path_bits": 4,
+    "free_tiles": 6,
+    "optional_loop_tiles": 5,
+    "fifteen_positions": "6 free + 4 path + 5 loops",
+    "path_presentations": 64,
+    "path_isomorphism_classes": 12
+  },
+  "n4_tournament_classes": [
+    {
+      "scores": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "labelled_count": 24
+    },
+    {
+      "scores": [
+        1,
+        1,
+        1,
+        3
+      ],
+      "labelled_count": 8
+    },
+    {
+      "scores": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "labelled_count": 24
+    },
+    {
+      "scores": [
+        0,
+        2,
+        2,
+        2
+      ],
+      "labelled_count": 8
+    }
+  ],
+  "transitive_flag_bijection": {
+    "vertices": 24,
+    "edges": 36
+  },
+  "arithmetic_loss_hostile": "1*4=2*2=4; off-diagonal pair and diagonal double remain different cells"
+}
+PASS: all checks remain active under -O

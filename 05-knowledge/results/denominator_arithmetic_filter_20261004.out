@@ -1,0 +1,3045 @@
+{
+  "status": "FINITE-EXACT arithmetic-realization filter; no all-denominator or global Collatz coverage claim",
+  "golden_denominator_universe": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    64,
+    76,
+    81,
+    105
+  ],
+  "counts": {
+    "golden_cycles": 1065,
+    "golden_periodic_points": 40730,
+    "primitive_nonzero_phase_points": 40727,
+    "integer_cycles": 5,
+    "rational_only_cycles": 1060,
+    "distinct_arithmetic_denominators": 209
+  },
+  "arithmetic_sign_counts": {
+    "negative_integer": 3,
+    "negative_rational_only": 48,
+    "positive_integer": 1,
+    "positive_rational_only": 1012,
+    "zero_integer": 1
+  },
+  "negative_anchor_gate": {
+    "status": "PROVED inherited favorable-rotation lemma; FINITE-EXACT application to this census",
+    "cycles_checked": 51,
+    "rational_only_cycles_checked": 48,
+    "canonical_odd_phases_changed": 0,
+    "arbitrary_cyclic_odd_phases_checked": 331,
+    "arbitrary_odd_phases_changed": 231,
+    "rational_only_odd_period_histogram": {
+      "3": 1,
+      "4": 3,
+      "5": 3,
+      "6": 3,
+      "7": 33,
+      "8": 4,
+      "10": 1
+    },
+    "rational_only_denominator_histogram": {
+      "11": 1,
+      "17": 2,
+      "49": 1,
+      "115": 3,
+      "139": 29,
+      "473": 3,
+      "791": 1,
+      "1219": 1,
+      "1675": 4,
+      "5537": 3
+    },
+    "first_rational_examples": [
+      {
+        "golden_denominator": 11,
+        "root": "-73/17",
+        "arithmetic_denominator": 17,
+        "odd_word": [
+          1,
+          1,
+          2,
+          2
+        ],
+        "rotation_index": 0,
+        "favorable_anchor": "-73/17",
+        "favorable_word": [
+          1,
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "golden_denominator": 11,
+        "root": "-65/17",
+        "arithmetic_denominator": 17,
+        "odd_word": [
+          1,
+          1,
+          1,
+          3
+        ],
+        "rotation_index": 0,
+        "favorable_anchor": "-65/17",
+        "favorable_word": [
+          1,
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "golden_denominator": 19,
+        "root": "-2939/139",
+        "arithmetic_denominator": 139,
+        "odd_word": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2
+        ],
+        "rotation_index": 0,
+        "favorable_anchor": "-2939/139",
+        "favorable_word": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "golden_denominator": 20,
+        "root": "-227/115",
+        "arithmetic_denominator": 115,
+        "odd_word": [
+          1,
+          1,
+          1,
+          2,
+          2
+        ],
+        "rotation_index": 0,
+        "favorable_anchor": "-227/115",
+        "favorable_word": [
+          1,
+          1,
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "golden_denominator": 29,
+        "root": "-697/473",
+        "arithmetic_denominator": 473,
+        "odd_word": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2
+        ],
+        "rotation_index": 0,
+        "favorable_anchor": "-697/473",
+        "favorable_word": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "golden_denominator": 29,
+        "root": "-665/473",
+        "arithmetic_denominator": 473,
+        "odd_word": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          3
+        ],
+        "rotation_index": 0,
+        "favorable_anchor": "-665/473",
+        "favorable_word": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "golden_denominator": 29,
+        "root": "-19/11",
+        "arithmetic_denominator": 11,
+        "odd_word": [
+          1,
+          1,
+          2
+        ],
+        "rotation_index": 0,
+        "favorable_anchor": "-19/11",
+        "favorable_word": [
+          1,
+          1,
+          2
+        ]
+      },
+      {
+        "golden_denominator": 29,
+        "root": "-745/473",
+        "arithmetic_denominator": 473,
+        "odd_word": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          2
+        ],
+        "rotation_index": 0,
+        "favorable_anchor": "-745/473",
+        "favorable_word": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          2
+        ]
+      }
+    ],
+    "retained_q29_anchor": {
+      "golden_denominator": 29,
+      "root": "-19/11",
+      "arithmetic_denominator": 11,
+      "parity_word": "1010100",
+      "golden_numerator_pair": [
+        -4,
+        20
+      ],
+      "odd_word": [
+        1,
+        1,
+        2
+      ],
+      "odd_cycle": [
+        "-19/11",
+        "-23/11",
+        "-29/11"
+      ],
+      "favorable_rotation_index": 0
+    },
+    "compiler_instances": [
+      {
+        "golden_denominator": 11,
+        "anchor": "-73/17",
+        "word": [
+          1,
+          1,
+          2,
+          2
+        ],
+        "h": 73,
+        "d": 17,
+        "m": 2,
+        "t": 1,
+        "residue": 6983,
+        "modulus": 8192,
+        "modulus_exponent": 13,
+        "first_descent_odd_step": 8,
+        "endpoint": 2797,
+        "three_lift_endpoints": [
+          2797,
+          12155,
+          4679
+        ],
+        "three_lift_extra_halvings": [
+          2,
+          1,
+          3
+        ]
+      },
+      {
+        "golden_denominator": 11,
+        "anchor": "-65/17",
+        "word": [
+          1,
+          1,
+          1,
+          3
+        ],
+        "h": 65,
+        "d": 17,
+        "m": 2,
+        "t": 1,
+        "residue": 719,
+        "modulus": 8192,
+        "modulus_exponent": 13,
+        "first_descent_odd_step": 8,
+        "endpoint": 577,
+        "three_lift_endpoints": [
+          577,
+          3569,
+          13699
+        ],
+        "three_lift_extra_halvings": [
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "golden_denominator": 19,
+        "anchor": "-2939/139",
+        "word": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2
+        ],
+        "h": 2939,
+        "d": 139,
+        "m": 2,
+        "t": 1,
+        "residue": 5763375,
+        "modulus": 8388608,
+        "modulus_exponent": 23,
+        "first_descent_odd_step": 14,
+        "endpoint": 1643065,
+        "three_lift_endpoints": [
+          1643065,
+          8069099,
+          3213017
+        ],
+        "three_lift_extra_halvings": [
+          2,
+          1,
+          3
+        ]
+      },
+      {
+        "golden_denominator": 20,
+        "anchor": "-227/115",
+        "word": [
+          1,
+          1,
+          1,
+          2,
+          2
+        ],
+        "h": 227,
+        "d": 115,
+        "m": 2,
+        "t": 2,
+        "residue": 11823,
+        "modulus": 65536,
+        "modulus_exponent": 16,
+        "first_descent_odd_step": 10,
+        "endpoint": 5327,
+        "three_lift_endpoints": [
+          5327,
+          69703,
+          8047
+        ],
+        "three_lift_extra_halvings": [
+          3,
+          2,
+          6
+        ]
+      },
+      {
+        "golden_denominator": 29,
+        "anchor": "-697/473",
+        "word": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2
+        ],
+        "h": 697,
+        "d": 473,
+        "m": 2,
+        "t": 4,
+        "residue": 25631,
+        "modulus": 1048576,
+        "modulus_exponent": 20,
+        "first_descent_odd_step": 12,
+        "endpoint": 12991,
+        "three_lift_endpoints": [
+          12991,
+          34027,
+          1075873
+        ],
+        "three_lift_extra_halvings": [
+          4,
+          8,
+          4
+        ]
+      },
+      {
+        "golden_denominator": 29,
+        "anchor": "-665/473",
+        "word": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          3
+        ],
+        "h": 665,
+        "d": 473,
+        "m": 2,
+        "t": 4,
+        "residue": 930111,
+        "modulus": 1048576,
+        "modulus_exponent": 20,
+        "first_descent_odd_step": 12,
+        "endpoint": 471401,
+        "three_lift_endpoints": [
+          471401,
+          501421,
+          1534283
+        ],
+        "three_lift_extra_halvings": [
+          4,
+          5,
+          4
+        ]
+      },
+      {
+        "golden_denominator": 29,
+        "anchor": "-19/11",
+        "word": [
+          1,
+          1,
+          2
+        ],
+        "h": 19,
+        "d": 11,
+        "m": 2,
+        "t": 2,
+        "residue": 999,
+        "modulus": 1024,
+        "modulus_exponent": 10,
+        "first_descent_odd_step": 6,
+        "endpoint": 89,
+        "three_lift_endpoints": [
+          89,
+          1441,
+          1085
+        ],
+        "three_lift_extra_halvings": [
+          5,
+          2,
+          3
+        ]
+      },
+      {
+        "golden_denominator": 29,
+        "anchor": "-745/473",
+        "word": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          2
+        ],
+        "h": 745,
+        "d": 473,
+        "m": 2,
+        "t": 4,
+        "residue": 766063,
+        "modulus": 1048576,
+        "modulus_exponent": 20,
+        "first_descent_odd_step": 12,
+        "endpoint": 194129,
+        "three_lift_endpoints": [
+          194129,
+          919699,
+          362785
+        ],
+        "three_lift_extra_halvings": [
+          5,
+          4,
+          6
+        ]
+      },
+      {
+        "golden_denominator": 36,
+        "anchor": "-1859/1219",
+        "word": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2
+        ],
+        "h": 1859,
+        "d": 1219,
+        "m": 1,
+        "t": 2,
+        "residue": 29823,
+        "modulus": 65536,
+        "modulus_exponent": 16,
+        "first_descent_odd_step": 10,
+        "endpoint": 3359,
+        "three_lift_endpoints": [
+          3359,
+          85921,
+          72485
+        ],
+        "three_lift_extra_halvings": [
+          5,
+          2,
+          3
+        ]
+      },
+      {
+        "golden_denominator": 38,
+        "anchor": "-2539/139",
+        "word": [
+          1,
+          1,
+          1,
+          1,
+          3,
+          1,
+          3
+        ],
+        "h": 2539,
+        "d": 139,
+        "m": 2,
+        "t": 1,
+        "residue": 7935967,
+        "modulus": 8388608,
+        "modulus_exponent": 23,
+        "first_descent_odd_step": 14,
+        "endpoint": 2262443,
+        "three_lift_endpoints": [
+          2262443,
+          9307855,
+          1761353
+        ],
+        "three_lift_extra_halvings": [
+          2,
+          1,
+          4
+        ]
+      },
+      {
+        "golden_denominator": 38,
+        "anchor": "-3443/139",
+        "word": [
+          1,
+          1,
+          2,
+          2,
+          1,
+          2,
+          2
+        ],
+        "h": 3443,
+        "d": 139,
+        "m": 2,
+        "t": 1,
+        "residue": 5039175,
+        "modulus": 8388608,
+        "modulus_exponent": 23,
+        "first_descent_odd_step": 14,
+        "endpoint": 1436605,
+        "three_lift_endpoints": [
+          1436605,
+          7656179,
+          3109787
+        ],
+        "three_lift_extra_halvings": [
+          2,
+          1,
+          3
+        ]
+      },
+      {
+        "golden_denominator": 38,
+        "anchor": "-2603/139",
+        "word": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          3,
+          2
+        ],
+        "h": 2603,
+        "d": 139,
+        "m": 2,
+        "t": 1,
+        "residue": 6246175,
+        "modulus": 8388608,
+        "modulus_exponent": 23,
+        "first_descent_odd_step": 14,
+        "endpoint": 1780705,
+        "three_lift_endpoints": [
+          1780705,
+          8344379,
+          3281837
+        ],
+        "three_lift_extra_halvings": [
+          2,
+          1,
+          3
+        ]
+      },
+      {
+        "golden_denominator": 38,
+        "anchor": "-919/791",
+        "word": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2
+        ],
+        "h": 919,
+        "d": 791,
+        "m": 1,
+        "t": 6,
+        "residue": 12415,
+        "modulus": 65536,
+        "modulus_exponent": 16,
+        "first_descent_odd_step": 8,
+        "endpoint": 1243,
+        "three_lift_endpoints": [
+          1243,
+          1951,
+          14365
+        ],
+        "three_lift_extra_halvings": [
+          6,
+          8,
+          6
+        ]
+      },
+      {
+        "golden_denominator": 38,
+        "anchor": "-3223/139",
+        "word": [
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          3
+        ],
+        "h": 3223,
+        "d": 139,
+        "m": 2,
+        "t": 1,
+        "residue": 4556379,
+        "modulus": 8388608,
+        "modulus_exponent": 23,
+        "first_descent_odd_step": 14,
+        "endpoint": 649483,
+        "three_lift_endpoints": [
+          649483,
+          7380901,
+          6081935
+        ],
+        "three_lift_extra_halvings": [
+          3,
+          1,
+          2
+        ]
+      },
+      {
+        "golden_denominator": 38,
+        "anchor": "-2491/139",
+        "word": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          2,
+          3
+        ],
+        "h": 2491,
+        "d": 139,
+        "m": 2,
+        "t": 1,
+        "residue": 814703,
+        "modulus": 8388608,
+        "modulus_exponent": 23,
+        "first_descent_odd_step": 14,
+        "endpoint": 116131,
+        "three_lift_endpoints": [
+          116131,
+          5247493,
+          5015231
+        ],
+        "three_lift_extra_halvings": [
+          3,
+          1,
+          2
+        ]
+      },
+      {
+        "golden_denominator": 38,
+        "anchor": "-3287/139",
+        "word": [
+          1,
+          2,
+          1,
+          1,
+          1,
+          3,
+          2
+        ],
+        "h": 3287,
+        "d": 139,
+        "m": 2,
+        "t": 1,
+        "residue": 2866587,
+        "modulus": 8388608,
+        "modulus_exponent": 23,
+        "first_descent_odd_step": 14,
+        "endpoint": 204307,
+        "three_lift_endpoints": [
+          204307,
+          6417425,
+          5600197
+        ],
+        "three_lift_extra_halvings": [
+          4,
+          1,
+          2
+        ]
+      },
+      {
+        "golden_denominator": 38,
+        "anchor": "-65/49",
+        "word": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "h": 65,
+        "d": 49,
+        "m": 2,
+        "t": 3,
+        "residue": 5871,
+        "modulus": 8192,
+        "modulus_exponent": 13,
+        "first_descent_odd_step": 8,
+        "endpoint": 4703,
+        "three_lift_endpoints": [
+          4703,
+          11,
+          17825
+        ],
+        "three_lift_extra_halvings": [
+          3,
+          13,
+          3
+        ]
+      },
+      {
+        "golden_denominator": 40,
+        "anchor": "-251/115",
+        "word": [
+          1,
+          1,
+          2,
+          1,
+          2
+        ],
+        "h": 251,
+        "d": 115,
+        "m": 2,
+        "t": 2,
+        "residue": 48295,
+        "modulus": 65536,
+        "modulus_exponent": 16,
+        "first_descent_odd_step": 10,
+        "endpoint": 10879,
+        "three_lift_endpoints": [
+          10879,
+          102565,
+          80807
+        ],
+        "three_lift_extra_halvings": [
+          4,
+          2,
+          3
+        ]
+      },
+      {
+        "golden_denominator": 40,
+        "anchor": "-211/115",
+        "word": [
+          1,
+          1,
+          1,
+          1,
+          3
+        ],
+        "h": 211,
+        "d": 115,
+        "m": 2,
+        "t": 2,
+        "residue": 31199,
+        "modulus": 65536,
+        "modulus_exponent": 16,
+        "first_descent_odd_step": 10,
+        "endpoint": 1757,
+        "three_lift_endpoints": [
+          1757,
+          87161,
+          73105
+        ],
+        "three_lift_extra_halvings": [
+          6,
+          2,
+          3
+        ]
+      },
+      {
+        "golden_denominator": 76,
+        "anchor": "-2059/139",
+        "word": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          5
+        ],
+        "h": 2059,
+        "d": 139,
+        "m": 2,
+        "t": 1,
+        "residue": 3832191,
+        "modulus": 8388608,
+        "modulus_exponent": 23,
+        "first_descent_odd_step": 14,
+        "endpoint": 1092509,
+        "three_lift_endpoints": [
+          1092509,
+          6967987,
+          2937739
+        ],
+        "three_lift_extra_halvings": [
+          2,
+          1,
+          3
+        ]
+      },
+      {
+        "golden_denominator": 76,
+        "anchor": "-2971/139",
+        "word": [
+          1,
+          1,
+          1,
+          3,
+          1,
+          1,
+          3
+        ],
+        "h": 2971,
+        "d": 139,
+        "m": 2,
+        "t": 1,
+        "residue": 4918479,
+        "modulus": 8388608,
+        "modulus_exponent": 23,
+        "first_descent_odd_step": 14,
+        "endpoint": 350549,
+        "three_lift_endpoints": [
+          350549,
+          7587361,
+          6185165
+        ],
+        "three_lift_extra_halvings": [
+          4,
+          1,
+          2
+        ]
+      },
+      {
+        "golden_denominator": 76,
+        "anchor": "-2219/139",
+        "word": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          4
+        ],
+        "h": 2219,
+        "d": 139,
+        "m": 2,
+        "t": 1,
+        "residue": 7996319,
+        "modulus": 8388608,
+        "modulus_exponent": 23,
+        "first_descent_odd_step": 14,
+        "endpoint": 4559297,
+        "three_lift_endpoints": [
+          4559297,
+          4671133,
+          14125235
+        ],
+        "three_lift_extra_halvings": [
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "golden_denominator": 76,
+        "anchor": "-2251/139",
+        "word": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          3
+        ],
+        "h": 2251,
+        "d": 139,
+        "m": 2,
+        "t": 1,
+        "residue": 7151423,
+        "modulus": 8388608,
+        "modulus_exponent": 23,
+        "first_descent_odd_step": 14,
+        "endpoint": 4077559,
+        "three_lift_endpoints": [
+          4077559,
+          553783,
+          13643497
+        ],
+        "three_lift_extra_halvings": [
+          1,
+          5,
+          1
+        ]
+      },
+      {
+        "golden_denominator": 76,
+        "anchor": "-6305/5537",
+        "word": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3
+        ],
+        "h": 6305,
+        "d": 5537,
+        "m": 2,
+        "t": 6,
+        "residue": 14998783,
+        "modulus": 67108864,
+        "modulus_exponent": 26,
+        "first_descent_odd_step": 16,
+        "endpoint": 601307,
+        "three_lift_endpoints": [
+          601307,
+          52667633,
+          47857177
+        ],
+        "three_lift_extra_halvings": [
+          10,
+          6,
+          7
+        ]
+      },
+      {
+        "golden_denominator": 76,
+        "anchor": "-2707/139",
+        "word": [
+          1,
+          1,
+          2,
+          1,
+          1,
+          2,
+          3
+        ],
+        "h": 2707,
+        "d": 139,
+        "m": 2,
+        "t": 1,
+        "residue": 7694567,
+        "modulus": 8388608,
+        "modulus_exponent": 23,
+        "first_descent_odd_step": 14,
+        "endpoint": 2193623,
+        "three_lift_endpoints": [
+          2193623,
+          9170215,
+          436037
+        ],
+        "three_lift_extra_halvings": [
+          2,
+          1,
+          6
+        ]
+      },
+      {
+        "golden_denominator": 76,
+        "anchor": "-3479/139",
+        "word": [
+          1,
+          2,
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "h": 3479,
+        "d": 139,
+        "m": 2,
+        "t": 1,
+        "residue": 6185819,
+        "modulus": 8388608,
+        "modulus_exponent": 23,
+        "first_descent_odd_step": 14,
+        "endpoint": 3526997,
+        "three_lift_endpoints": [
+          3526997,
+          4154983,
+          13092935
+        ],
+        "three_lift_extra_halvings": [
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "golden_denominator": 76,
+        "anchor": "-3155/139",
+        "word": [
+          1,
+          1,
+          2,
+          1,
+          2,
+          2,
+          2
+        ],
+        "h": 3155,
+        "d": 139,
+        "m": 2,
+        "t": 1,
+        "residue": 4254631,
+        "modulus": 8388608,
+        "modulus_exponent": 23,
+        "first_descent_odd_step": 14,
+        "endpoint": 2425883,
+        "three_lift_endpoints": [
+          2425883,
+          1802213,
+          11991821
+        ],
+        "three_lift_extra_halvings": [
+          1,
+          3,
+          1
+        ]
+      },
+      {
+        "golden_denominator": 76,
+        "anchor": "-2579/139",
+        "word": [
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          4
+        ],
+        "h": 2579,
+        "d": 139,
+        "m": 2,
+        "t": 1,
+        "residue": 2685543,
+        "modulus": 8388608,
+        "modulus_exponent": 23,
+        "first_descent_odd_step": 14,
+        "endpoint": 1531229,
+        "three_lift_endpoints": [
+          1531229,
+          3157099,
+          11097167
+        ],
+        "three_lift_extra_halvings": [
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "golden_denominator": 76,
+        "anchor": "-2683/139",
+        "word": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          1,
+          3
+        ],
+        "h": 2683,
+        "d": 139,
+        "m": 2,
+        "t": 1,
+        "residue": 4133935,
+        "modulus": 8388608,
+        "modulus_exponent": 23,
+        "first_descent_odd_step": 14,
+        "endpoint": 2357065,
+        "three_lift_endpoints": [
+          2357065,
+          3570017,
+          11923003
+        ],
+        "three_lift_extra_halvings": [
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "golden_denominator": 76,
+        "anchor": "-6913/5537",
+        "word": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          2
+        ],
+        "h": 6913,
+        "d": 5537,
+        "m": 2,
+        "t": 6,
+        "residue": 23246495,
+        "modulus": 67108864,
+        "modulus_exponent": 26,
+        "first_descent_odd_step": 16,
+        "endpoint": 14911375,
+        "three_lift_endpoints": [
+          14911375,
+          3622381,
+          101004817
+        ],
+        "three_lift_extra_halvings": [
+          6,
+          10,
+          6
+        ]
+      },
+      {
+        "golden_denominator": 76,
+        "anchor": "-2507/139",
+        "word": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          4,
+          2
+        ],
+        "h": 2507,
+        "d": 139,
+        "m": 2,
+        "t": 1,
+        "residue": 392255,
+        "modulus": 8388608,
+        "modulus_exponent": 23,
+        "first_descent_odd_step": 14,
+        "endpoint": 223655,
+        "three_lift_endpoints": [
+          223655,
+          156457,
+          9789593
+        ],
+        "three_lift_extra_halvings": [
+          1,
+          6,
+          1
+        ]
+      },
+      {
+        "golden_denominator": 76,
+        "anchor": "-2123/139",
+        "word": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          4
+        ],
+        "h": 2123,
+        "d": 139,
+        "m": 2,
+        "t": 1,
+        "residue": 2142399,
+        "modulus": 8388608,
+        "modulus_exponent": 23,
+        "first_descent_odd_step": 14,
+        "endpoint": 610771,
+        "three_lift_endpoints": [
+          610771,
+          6004511,
+          1348435
+        ],
+        "three_lift_extra_halvings": [
+          2,
+          1,
+          4
+        ]
+      },
+      {
+        "golden_denominator": 76,
+        "anchor": "-3227/139",
+        "word": [
+          1,
+          1,
+          1,
+          3,
+          1,
+          2,
+          2
+        ],
+        "h": 3227,
+        "d": 139,
+        "m": 2,
+        "t": 1,
+        "residue": 6547919,
+        "modulus": 8388608,
+        "modulus_exponent": 23,
+        "first_descent_odd_step": 14,
+        "endpoint": 3733457,
+        "three_lift_endpoints": [
+          3733457,
+          4258213,
+          13299395
+        ],
+        "three_lift_extra_halvings": [
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "golden_denominator": 76,
+        "anchor": "-2963/139",
+        "word": [
+          1,
+          1,
+          2,
+          1,
+          1,
+          3,
+          2
+        ],
+        "h": 2963,
+        "d": 139,
+        "m": 2,
+        "t": 1,
+        "residue": 935399,
+        "modulus": 8388608,
+        "modulus_exponent": 23,
+        "first_descent_odd_step": 14,
+        "endpoint": 266671,
+        "three_lift_endpoints": [
+          266671,
+          5316311,
+          631205
+        ],
+        "three_lift_extra_halvings": [
+          2,
+          1,
+          5
+        ]
+      },
+      {
+        "golden_denominator": 76,
+        "anchor": "-6625/5537",
+        "word": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          2
+        ],
+        "h": 6625,
+        "d": 5537,
+        "m": 2,
+        "t": 6,
+        "residue": 26403775,
+        "modulus": 67108864,
+        "modulus_exponent": 26,
+        "first_descent_odd_step": 16,
+        "endpoint": 2117075,
+        "three_lift_endpoints": [
+          2117075,
+          59983321,
+          51515021
+        ],
+        "three_lift_extra_halvings": [
+          9,
+          6,
+          7
+        ]
+      },
+      {
+        "golden_denominator": 76,
+        "anchor": "-2347/139",
+        "word": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          3
+        ],
+        "h": 2347,
+        "d": 139,
+        "m": 2,
+        "t": 1,
+        "residue": 4616735,
+        "modulus": 8388608,
+        "modulus_exponent": 23,
+        "first_descent_odd_step": 14,
+        "endpoint": 2632345,
+        "three_lift_endpoints": [
+          2632345,
+          3707657,
+          12198283
+        ],
+        "three_lift_extra_halvings": [
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "golden_denominator": 76,
+        "anchor": "-3511/139",
+        "word": [
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          3
+        ],
+        "h": 3511,
+        "d": 139,
+        "m": 2,
+        "t": 1,
+        "residue": 5340923,
+        "modulus": 8388608,
+        "modulus_exponent": 23,
+        "first_descent_odd_step": 14,
+        "endpoint": 3045259,
+        "three_lift_endpoints": [
+          3045259,
+          1957057,
+          12611197
+        ],
+        "three_lift_extra_halvings": [
+          1,
+          3,
+          1
+        ]
+      },
+      {
+        "golden_denominator": 76,
+        "anchor": "-3767/139",
+        "word": [
+          1,
+          2,
+          1,
+          2,
+          1,
+          2,
+          2
+        ],
+        "h": 3767,
+        "d": 139,
+        "m": 2,
+        "t": 1,
+        "residue": 6970363,
+        "modulus": 8388608,
+        "modulus_exponent": 23,
+        "first_descent_odd_step": 14,
+        "endpoint": 993581,
+        "three_lift_endpoints": [
+          993581,
+          8757293,
+          6770131
+        ],
+        "three_lift_extra_halvings": [
+          3,
+          1,
+          2
+        ]
+      },
+      {
+        "golden_denominator": 76,
+        "anchor": "-3031/139",
+        "word": [
+          1,
+          2,
+          1,
+          1,
+          1,
+          2,
+          3
+        ],
+        "h": 3031,
+        "d": 139,
+        "m": 2,
+        "t": 1,
+        "residue": 1237147,
+        "modulus": 8388608,
+        "modulus_exponent": 23,
+        "first_descent_odd_step": 14,
+        "endpoint": 705391,
+        "three_lift_endpoints": [
+          705391,
+          686045,
+          10271329
+        ],
+        "three_lift_extra_halvings": [
+          1,
+          4,
+          1
+        ]
+      },
+      {
+        "golden_denominator": 76,
+        "anchor": "-2747/139",
+        "word": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          3,
+          2
+        ],
+        "h": 2747,
+        "d": 139,
+        "m": 2,
+        "t": 1,
+        "residue": 2444143,
+        "modulus": 8388608,
+        "modulus_exponent": 23,
+        "first_descent_odd_step": 14,
+        "endpoint": 1393589,
+        "three_lift_endpoints": [
+          1393589,
+          3088279,
+          10959527
+        ],
+        "three_lift_extra_halvings": [
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "golden_denominator": 76,
+        "anchor": "-2795/139",
+        "word": [
+          1,
+          1,
+          1,
+          1,
+          3,
+          2,
+          2
+        ],
+        "h": 2795,
+        "d": 139,
+        "m": 2,
+        "t": 1,
+        "residue": 1176799,
+        "modulus": 8388608,
+        "modulus_exponent": 23,
+        "first_descent_odd_step": 14,
+        "endpoint": 335491,
+        "three_lift_endpoints": [
+          335491,
+          5453951,
+          1279615
+        ],
+        "three_lift_extra_halvings": [
+          2,
+          1,
+          4
+        ]
+      },
+      {
+        "golden_denominator": 76,
+        "anchor": "-3187/139",
+        "word": [
+          1,
+          1,
+          2,
+          2,
+          1,
+          1,
+          3
+        ],
+        "h": 3187,
+        "d": 139,
+        "m": 2,
+        "t": 1,
+        "residue": 3409735,
+        "modulus": 8388608,
+        "modulus_exponent": 23,
+        "first_descent_odd_step": 14,
+        "endpoint": 1944145,
+        "three_lift_endpoints": [
+          1944145,
+          3363557,
+          11510083
+        ],
+        "three_lift_extra_halvings": [
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "golden_denominator": 76,
+        "anchor": "-2903/139",
+        "word": [
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          4
+        ],
+        "h": 2903,
+        "d": 139,
+        "m": 2,
+        "t": 1,
+        "residue": 4616731,
+        "modulus": 8388608,
+        "modulus_exponent": 23,
+        "first_descent_odd_step": 14,
+        "endpoint": 2632343,
+        "three_lift_endpoints": [
+          2632343,
+          463457,
+          12198281
+        ],
+        "three_lift_extra_halvings": [
+          1,
+          5,
+          1
+        ]
+      },
+      {
+        "golden_denominator": 76,
+        "anchor": "-2899/139",
+        "word": [
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          3
+        ],
+        "h": 2899,
+        "d": 139,
+        "m": 2,
+        "t": 1,
+        "residue": 2625191,
+        "modulus": 8388608,
+        "modulus_exponent": 23,
+        "first_descent_odd_step": 14,
+        "endpoint": 748409,
+        "three_lift_endpoints": [
+          748409,
+          6279787,
+          2765689
+        ],
+        "three_lift_extra_halvings": [
+          2,
+          1,
+          3
+        ]
+      },
+      {
+        "golden_denominator": 105,
+        "anchor": "-2219/1675",
+        "word": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          2
+        ],
+        "h": 2219,
+        "d": 1675,
+        "m": 2,
+        "t": 5,
+        "residue": 4953503,
+        "modulus": 8388608,
+        "modulus_exponent": 23,
+        "first_descent_odd_step": 14,
+        "endpoint": 2824361,
+        "three_lift_endpoints": [
+          2824361,
+          3803665,
+          12390299
+        ],
+        "three_lift_extra_halvings": [
+          5,
+          6,
+          5
+        ]
+      },
+      {
+        "golden_denominator": 105,
+        "anchor": "-2059/1675",
+        "word": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3
+        ],
+        "h": 2059,
+        "d": 1675,
+        "m": 2,
+        "t": 5,
+        "residue": 1723263,
+        "modulus": 8388608,
+        "modulus_exponent": 23,
+        "first_descent_odd_step": 14,
+        "endpoint": 982561,
+        "three_lift_endpoints": [
+          982561,
+          2882765,
+          10548499
+        ],
+        "three_lift_extra_halvings": [
+          5,
+          6,
+          5
+        ]
+      },
+      {
+        "golden_denominator": 105,
+        "anchor": "-2123/1675",
+        "word": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2
+        ],
+        "h": 2123,
+        "d": 1675,
+        "m": 2,
+        "t": 5,
+        "residue": 3015359,
+        "modulus": 8388608,
+        "modulus_exponent": 23,
+        "first_descent_odd_step": 14,
+        "endpoint": 1719281,
+        "three_lift_endpoints": [
+          1719281,
+          3251125,
+          11285219
+        ],
+        "three_lift_extra_halvings": [
+          5,
+          6,
+          5
+        ]
+      },
+      {
+        "golden_denominator": 105,
+        "anchor": "-2363/1675",
+        "word": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          2
+        ],
+        "h": 2363,
+        "d": 1675,
+        "m": 2,
+        "t": 5,
+        "residue": 7860719,
+        "modulus": 8388608,
+        "modulus_exponent": 23,
+        "first_descent_odd_step": 14,
+        "endpoint": 4481981,
+        "three_lift_endpoints": [
+          4481981,
+          4632475,
+          14047919
+        ],
+        "three_lift_extra_halvings": [
+          5,
+          6,
+          5
+        ]
+      }
+    ],
+    "compiler_integer_source_replays": 144,
+    "inherited_compiler_control": {
+      "cylinder": "999 mod 1024",
+      "finite_lifts_checked": 64,
+      "least_source_odd_orbit": [
+        999,
+        1499,
+        2249,
+        1687,
+        2531,
+        3797,
+        89
+      ],
+      "least_source_valuation_word": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        7
+      ],
+      "weak_budget_hostile": [
+        487,
+        731,
+        1097,
+        823,
+        1235,
+        1853,
+        695
+      ]
+    },
+    "preserved": "The cyclic word and rational cycle, with a phase change retaining every exact valuation.",
+    "additional_guard": "A positive-integer source, congruence guards, and original-source exit budget are still required."
+  },
+  "all_integer_cycles": [
+    {
+      "golden_denominator": 1,
+      "tag": "zero",
+      "root": 0,
+      "ordinary_period": 1,
+      "orbit": [
+        0
+      ],
+      "parity_word": "0",
+      "arithmetic_denominator": 1
+    },
+    {
+      "golden_denominator": 1,
+      "tag": "upper boundary",
+      "root": -1,
+      "ordinary_period": 2,
+      "orbit": [
+        -1,
+        -2
+      ],
+      "parity_word": "10",
+      "arithmetic_denominator": 1
+    },
+    {
+      "golden_denominator": 2,
+      "tag": "primitive phase",
+      "root": 1,
+      "ordinary_period": 3,
+      "orbit": [
+        1,
+        4,
+        2
+      ],
+      "parity_word": "100",
+      "arithmetic_denominator": 1
+    },
+    {
+      "golden_denominator": 11,
+      "tag": "primitive phase",
+      "root": -5,
+      "ordinary_period": 5,
+      "orbit": [
+        -5,
+        -14,
+        -7,
+        -20,
+        -10
+      ],
+      "parity_word": "10100",
+      "arithmetic_denominator": 1
+    },
+    {
+      "golden_denominator": 76,
+      "tag": "primitive phase",
+      "root": -17,
+      "ordinary_period": 18,
+      "orbit": [
+        -17,
+        -50,
+        -25,
+        -74,
+        -37,
+        -110,
+        -55,
+        -164,
+        -82,
+        -41,
+        -122,
+        -61,
+        -182,
+        -91,
+        -272,
+        -136,
+        -68,
+        -34
+      ],
+      "parity_word": "101010100101010000",
+      "arithmetic_denominator": 1
+    }
+  ],
+  "first_rational_hostiles": [
+    {
+      "golden_denominator": 3,
+      "root": "1/11",
+      "arithmetic_denominator": 11,
+      "ordinary_period": 8,
+      "orbit": [
+        "1/11",
+        "14/11",
+        "7/11",
+        "32/11",
+        "16/11",
+        "8/11",
+        "4/11",
+        "2/11"
+      ],
+      "parity_word": "10100000"
+    },
+    {
+      "golden_denominator": 4,
+      "root": "1/29",
+      "arithmetic_denominator": 29,
+      "ordinary_period": 6,
+      "orbit": [
+        "1/29",
+        "32/29",
+        "16/29",
+        "8/29",
+        "4/29",
+        "2/29"
+      ],
+      "parity_word": "100000"
+    },
+    {
+      "golden_denominator": 4,
+      "root": "5/7",
+      "arithmetic_denominator": 7,
+      "ordinary_period": 6,
+      "orbit": [
+        "5/7",
+        "22/7",
+        "11/7",
+        "40/7",
+        "20/7",
+        "10/7"
+      ],
+      "parity_word": "101000"
+    },
+    {
+      "golden_denominator": 5,
+      "root": "275/3131",
+      "arithmetic_denominator": 3131,
+      "ordinary_period": 20,
+      "orbit": [
+        "275/3131",
+        "3956/3131",
+        "1978/3131",
+        "989/3131",
+        "6098/3131",
+        "3049/3131",
+        "12278/3131",
+        "6139/3131",
+        "21548/3131",
+        "10774/3131",
+        "5387/3131",
+        "19292/3131",
+        "9646/3131",
+        "4823/3131",
+        "17600/3131",
+        "8800/3131",
+        "4400/3131",
+        "2200/3131",
+        "1100/3131",
+        "550/3131"
+      ],
+      "parity_word": "10010101001001000000"
+    },
+    {
+      "golden_denominator": 5,
+      "root": "1/5",
+      "arithmetic_denominator": 5,
+      "ordinary_period": 4,
+      "orbit": [
+        "1/5",
+        "8/5",
+        "4/5",
+        "2/5"
+      ],
+      "parity_word": "1000"
+    },
+    {
+      "golden_denominator": 6,
+      "root": "2167/25777",
+      "arithmetic_denominator": 25777,
+      "ordinary_period": 24,
+      "orbit": [
+        "2167/25777",
+        "32278/25777",
+        "16139/25777",
+        "74194/25777",
+        "37097/25777",
+        "137068/25777",
+        "68534/25777",
+        "34267/25777",
+        "128578/25777",
+        "64289/25777",
+        "218644/25777",
+        "109322/25777",
+        "54661/25777",
+        "189760/25777",
+        "94880/25777",
+        "47440/25777",
+        "23720/25777",
+        "11860/25777",
+        "5930/25777",
+        "2965/25777",
+        "34672/25777",
+        "17336/25777",
+        "8668/25777",
+        "4334/25777"
+      ],
+      "parity_word": "101010010100100000010000"
+    },
+    {
+      "golden_denominator": 7,
+      "root": "13/803",
+      "arithmetic_denominator": 803,
+      "ordinary_period": 16,
+      "orbit": [
+        "13/803",
+        "842/803",
+        "421/803",
+        "2066/803",
+        "1033/803",
+        "3902/803",
+        "1951/803",
+        "6656/803",
+        "3328/803",
+        "1664/803",
+        "832/803",
+        "416/803",
+        "208/803",
+        "104/803",
+        "52/803",
+        "26/803"
+      ],
+      "parity_word": "1010101000000000"
+    },
+    {
+      "golden_denominator": 7,
+      "root": "5/73",
+      "arithmetic_denominator": 73,
+      "ordinary_period": 16,
+      "orbit": [
+        "5/73",
+        "88/73",
+        "44/73",
+        "22/73",
+        "11/73",
+        "106/73",
+        "53/73",
+        "232/73",
+        "116/73",
+        "58/73",
+        "29/73",
+        "160/73",
+        "80/73",
+        "40/73",
+        "20/73",
+        "10/73"
+      ],
+      "parity_word": "1000101000100000"
+    }
+  ],
+  "exact_census_by_golden_denominator": [
+    {
+      "q": 1,
+      "cycles": 2,
+      "points": 3,
+      "periods": {
+        "1": 1,
+        "2": 1
+      },
+      "integer_roots": [
+        -1,
+        0
+      ],
+      "arithmetic_sign_counts": {
+        "negative_integer": 1,
+        "zero_integer": 1
+      },
+      "arithmetic_denominators": {
+        "1": 2
+      }
+    },
+    {
+      "q": 2,
+      "cycles": 1,
+      "points": 3,
+      "periods": {
+        "3": 1
+      },
+      "integer_roots": [
+        1
+      ],
+      "arithmetic_sign_counts": {
+        "positive_integer": 1
+      },
+      "arithmetic_denominators": {
+        "1": 1
+      }
+    },
+    {
+      "q": 3,
+      "cycles": 1,
+      "points": 8,
+      "periods": {
+        "8": 1
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "positive_rational_only": 1
+      },
+      "arithmetic_denominators": {
+        "11": 1
+      }
+    },
+    {
+      "q": 4,
+      "cycles": 2,
+      "points": 12,
+      "periods": {
+        "6": 2
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "positive_rational_only": 2
+      },
+      "arithmetic_denominators": {
+        "7": 1,
+        "29": 1
+      }
+    },
+    {
+      "q": 5,
+      "cycles": 2,
+      "points": 24,
+      "periods": {
+        "4": 1,
+        "20": 1
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "positive_rational_only": 2
+      },
+      "arithmetic_denominators": {
+        "5": 1,
+        "3131": 1
+      }
+    },
+    {
+      "q": 6,
+      "cycles": 1,
+      "points": 24,
+      "periods": {
+        "24": 1
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "positive_rational_only": 1
+      },
+      "arithmetic_denominators": {
+        "25777": 1
+      }
+    },
+    {
+      "q": 7,
+      "cycles": 3,
+      "points": 48,
+      "periods": {
+        "16": 3
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "positive_rational_only": 3
+      },
+      "arithmetic_denominators": {
+        "73": 1,
+        "361": 1,
+        "803": 1
+      }
+    },
+    {
+      "q": 8,
+      "cycles": 4,
+      "points": 48,
+      "periods": {
+        "12": 4
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "positive_rational_only": 4
+      },
+      "arithmetic_denominators": {
+        "35": 2,
+        "97": 1,
+        "203": 1
+      }
+    },
+    {
+      "q": 9,
+      "cycles": 3,
+      "points": 72,
+      "periods": {
+        "24": 3
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "positive_rational_only": 3
+      },
+      "arithmetic_denominators": {
+        "25777": 2,
+        "52283": 1
+      }
+    },
+    {
+      "q": 10,
+      "cycles": 2,
+      "points": 72,
+      "periods": {
+        "12": 1,
+        "60": 1
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "positive_rational_only": 2
+      },
+      "arithmetic_denominators": {
+        "485": 1,
+        "3518428599539": 1
+      }
+    },
+    {
+      "q": 11,
+      "cycles": 13,
+      "points": 120,
+      "periods": {
+        "5": 2,
+        "10": 11
+      },
+      "integer_roots": [
+        -5
+      ],
+      "arithmetic_sign_counts": {
+        "negative_integer": 1,
+        "negative_rational_only": 2,
+        "positive_rational_only": 10
+      },
+      "arithmetic_denominators": {
+        "1": 1,
+        "13": 1,
+        "17": 2,
+        "101": 5,
+        "247": 3,
+        "509": 1
+      }
+    },
+    {
+      "q": 12,
+      "cycles": 4,
+      "points": 96,
+      "periods": {
+        "24": 4
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "positive_rational_only": 4
+      },
+      "arithmetic_denominators": {
+        "643": 1,
+        "679": 1,
+        "2617": 1,
+        "25777": 1
+      }
+    },
+    {
+      "q": 13,
+      "cycles": 6,
+      "points": 168,
+      "periods": {
+        "28": 6
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "positive_rational_only": 6
+      },
+      "arithmetic_denominators": {
+        "391": 1,
+        "16031": 1,
+        "208403": 3,
+        "418993": 1
+      }
+    },
+    {
+      "q": 14,
+      "cycles": 3,
+      "points": 144,
+      "periods": {
+        "48": 3
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "positive_rational_only": 3
+      },
+      "arithmetic_denominators": {
+        "490716749": 1,
+        "6871628809": 2
+      }
+    },
+    {
+      "q": 15,
+      "cycles": 8,
+      "points": 192,
+      "periods": {
+        "8": 4,
+        "40": 4
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "positive_rational_only": 8
+      },
+      "arithmetic_denominators": {
+        "5": 2,
+        "55": 1,
+        "125": 1,
+        "42947311": 1,
+        "53580803": 1,
+        "107338753": 2
+      }
+    },
+    {
+      "q": 16,
+      "cycles": 8,
+      "points": 192,
+      "periods": {
+        "24": 8
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "positive_rational_only": 8
+      },
+      "arithmetic_denominators": {
+        "2617": 1,
+        "11795": 2,
+        "25777": 1,
+        "52283": 2,
+        "104809": 2
+      }
+    },
+    {
+      "q": 17,
+      "cycles": 8,
+      "points": 288,
+      "periods": {
+        "36": 8
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "positive_rational_only": 8
+      },
+      "arithmetic_denominators": {
+        "1915709": 2,
+        "6675457": 1,
+        "13409963": 4,
+        "26839609": 1
+      }
+    },
+    {
+      "q": 18,
+      "cycles": 9,
+      "points": 216,
+      "periods": {
+        "24": 9
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "positive_rational_only": 9
+      },
+      "arithmetic_denominators": {
+        "539": 1,
+        "4753": 1,
+        "7469": 1,
+        "25777": 5,
+        "52283": 1
+      }
+    },
+    {
+      "q": 19,
+      "cycles": 21,
+      "points": 360,
+      "periods": {
+        "9": 2,
+        "18": 19
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "negative_rational_only": 1,
+        "positive_rational_only": 20
+      },
+      "arithmetic_denominators": {
+        "17": 1,
+        "37": 1,
+        "139": 1,
+        "481": 3,
+        "2329": 3,
+        "3367": 4,
+        "7949": 4,
+        "16303": 1,
+        "32741": 3
+      }
+    },
+    {
+      "q": 20,
+      "cycles": 8,
+      "points": 288,
+      "periods": {
+        "12": 4,
+        "60": 4
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "negative_rational_only": 1,
+        "positive_rational_only": 7
+      },
+      "arithmetic_denominators": {
+        "25": 1,
+        "115": 1,
+        "145": 1,
+        "485": 1,
+        "1759192776409": 3,
+        "7036871547985": 1
+      }
+    },
+    {
+      "q": 21,
+      "cycles": 24,
+      "points": 384,
+      "periods": {
+        "16": 24
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "positive_rational_only": 24
+      },
+      "arithmetic_denominators": {
+        "19": 1,
+        "59": 6,
+        "361": 4,
+        "803": 8,
+        "1633": 3,
+        "3275": 2
+      }
+    },
+    {
+      "q": 22,
+      "cycles": 13,
+      "points": 360,
+      "periods": {
+        "15": 2,
+        "30": 11
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "positive_rational_only": 13
+      },
+      "arithmetic_denominators": {
+        "781": 1,
+        "1991": 1,
+        "4069": 1,
+        "141361": 1,
+        "2077469": 2,
+        "4187743": 4,
+        "8386421": 3
+      }
+    },
+    {
+      "q": 23,
+      "cycles": 11,
+      "points": 528,
+      "periods": {
+        "48": 11
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "positive_rational_only": 11
+      },
+      "arithmetic_denominators": {
+        "3435017243": 4,
+        "6871628809": 6,
+        "13743789059": 1
+      }
+    },
+    {
+      "q": 24,
+      "cycles": 16,
+      "points": 384,
+      "periods": {
+        "24": 16
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "positive_rational_only": 16
+      },
+      "arithmetic_denominators": {
+        "97": 1,
+        "1685": 2,
+        "2359": 2,
+        "2617": 1,
+        "11795": 1,
+        "25777": 2,
+        "52283": 3,
+        "104809": 3,
+        "209699": 1
+      }
+    },
+    {
+      "q": 25,
+      "cycles": 10,
+      "points": 600,
+      "periods": {
+        "20": 5,
+        "100": 5
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "positive_rational_only": 10
+      },
+      "arithmetic_denominators": {
+        "15655": 2,
+        "32525": 3,
+        "944473291998570551747": 4,
+        "3777893185787343005291": 1
+      }
+    },
+    {
+      "q": 26,
+      "cycles": 6,
+      "points": 504,
+      "periods": {
+        "84": 6
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "positive_rational_only": 6
+      },
+      "arithmetic_denominators": {
+        "12136012865024321": 1,
+        "131762456772752237": 1,
+        "230584244435462099": 1,
+        "461168583014103025": 2,
+        "922337197409265659": 1
+      }
+    },
+    {
+      "q": 27,
+      "cycles": 9,
+      "points": 648,
+      "periods": {
+        "72": 9
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "positive_rational_only": 9
+      },
+      "arithmetic_denominators": {
+        "128674175445317": 1,
+        "450357870666409": 2,
+        "900719228117219": 3,
+        "1801439618495905": 3
+      }
+    },
+    {
+      "q": 28,
+      "cycles": 12,
+      "points": 576,
+      "periods": {
+        "48": 12
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "positive_rational_only": 12
+      },
+      "arithmetic_denominators": {
+        "4751017": 1,
+        "121483445": 1,
+        "403668697": 1,
+        "1715117137": 1,
+        "3435017243": 2,
+        "5497551053": 1,
+        "13743789059": 4,
+        "109951158841": 1
+      }
+    },
+    {
+      "q": 29,
+      "cycles": 62,
+      "points": 840,
+      "periods": {
+        "7": 4,
+        "14": 58
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "negative_rational_only": 4,
+        "positive_rational_only": 58
+      },
+      "arithmetic_denominators": {
+        "11": 1,
+        "23": 2,
+        "43": 1,
+        "61": 1,
+        "269": 14,
+        "473": 3,
+        "943": 20,
+        "2021": 14,
+        "4087": 5,
+        "8189": 1
+      }
+    },
+    {
+      "q": 30,
+      "cycles": 8,
+      "points": 576,
+      "periods": {
+        "24": 4,
+        "120": 4
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "positive_rational_only": 8
+      },
+      "arithmetic_denominators": {
+        "3395": 1,
+        "8425": 1,
+        "128885": 1,
+        "524045": 1,
+        "7737125235527317698319585": 1,
+        "15474250487731817096305739": 2,
+        "123794003928414492810655633": 1
+      }
+    },
+    {
+      "q": 31,
+      "cycles": 33,
+      "points": 960,
+      "periods": {
+        "15": 2,
+        "30": 31
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "positive_rational_only": 33
+      },
+      "arithmetic_denominators": {
+        "781": 1,
+        "4069": 1,
+        "89957": 1,
+        "141361": 3,
+        "347141": 2,
+        "598249": 1,
+        "989527": 4,
+        "2077469": 4,
+        "2396641": 4,
+        "4187743": 5,
+        "8386421": 6,
+        "16776487": 1
+      }
+    },
+    {
+      "q": 32,
+      "cycles": 16,
+      "points": 768,
+      "periods": {
+        "48": 16
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "positive_rational_only": 16
+      },
+      "arithmetic_denominators": {
+        "490716749": 1,
+        "850384115": 2,
+        "1715117137": 2,
+        "3435017243": 2,
+        "6871628809": 5,
+        "7853652797": 1,
+        "13743789059": 1,
+        "27487755265": 1,
+        "54975569579": 1
+      }
+    },
+    {
+      "q": 33,
+      "cycles": 24,
+      "points": 960,
+      "periods": {
+        "40": 24
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "positive_rational_only": 24
+      },
+      "arithmetic_denominators": {
+        "12465179": 2,
+        "26524681": 4,
+        "53580803": 2,
+        "107338753": 7,
+        "214736555": 5,
+        "429492793": 3,
+        "858992147": 1
+      }
+    },
+    {
+      "q": 34,
+      "cycles": 24,
+      "points": 864,
+      "periods": {
+        "36": 24
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "positive_rational_only": 24
+      },
+      "arithmetic_denominators": {
+        "142031": 1,
+        "1412611": 1,
+        "1915709": 6,
+        "6675457": 1,
+        "13409963": 13,
+        "26839609": 2
+      }
+    },
+    {
+      "q": 35,
+      "cycles": 24,
+      "points": 1152,
+      "periods": {
+        "16": 12,
+        "80": 12
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "positive_rational_only": 24
+      },
+      "arithmetic_denominators": {
+        "295": 3,
+        "365": 2,
+        "1805": 3,
+        "4015": 1,
+        "8165": 2,
+        "16375": 1,
+        "14411462321678291": 1,
+        "20962209111273865": 1,
+        "28823018786535409": 5,
+        "57646068954130427": 2,
+        "115292148368614057": 3
+      }
+    },
+    {
+      "q": 36,
+      "cycles": 36,
+      "points": 864,
+      "periods": {
+        "24": 36
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "negative_rational_only": 1,
+        "positive_rational_only": 35
+      },
+      "arithmetic_denominators": {
+        "337": 4,
+        "1067": 1,
+        "1219": 1,
+        "1685": 1,
+        "2359": 1,
+        "2617": 4,
+        "7469": 3,
+        "11795": 2,
+        "25777": 5,
+        "29957": 3,
+        "52283": 4,
+        "104809": 6,
+        "209699": 1
+      }
+    },
+    {
+      "q": 37,
+      "cycles": 18,
+      "points": 1368,
+      "periods": {
+        "76": 18
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "positive_rational_only": 18
+      },
+      "arithmetic_denominators": {
+        "720574685136895": 1,
+        "3602873425684475": 5,
+        "7205757311722153": 6,
+        "14411518110228707": 6
+      }
+    },
+    {
+      "q": 38,
+      "cycles": 63,
+      "points": 1080,
+      "periods": {
+        "9": 6,
+        "18": 57
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "negative_rational_only": 8,
+        "positive_rational_only": 55
+      },
+      "arithmetic_denominators": {
+        "37": 2,
+        "49": 1,
+        "119": 2,
+        "137": 1,
+        "139": 6,
+        "253": 1,
+        "259": 1,
+        "481": 5,
+        "791": 1,
+        "2329": 8,
+        "3367": 4,
+        "7949": 22,
+        "9361": 2,
+        "16303": 3,
+        "32741": 4
+      }
+    },
+    {
+      "q": 39,
+      "cycles": 24,
+      "points": 1344,
+      "periods": {
+        "56": 24
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "positive_rational_only": 24
+      },
+      "arithmetic_denominators": {
+        "5363261371": 1,
+        "9560596357": 1,
+        "13046538467": 1,
+        "27255338401": 3,
+        "79964395057": 1,
+        "109925334745": 2,
+        "219893716211": 4,
+        "439801781329": 4,
+        "879608345627": 3,
+        "1759218285577": 1,
+        "3518437102595": 2,
+        "7036874382337": 1
+      }
+    },
+    {
+      "q": 40,
+      "cycles": 32,
+      "points": 1152,
+      "periods": {
+        "12": 16,
+        "60": 16
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "negative_rational_only": 2,
+        "positive_rational_only": 30
+      },
+      "arithmetic_denominators": {
+        "115": 2,
+        "175": 5,
+        "485": 6,
+        "1015": 2,
+        "2045": 1,
+        "4053142019": 1,
+        "125647402589": 1,
+        "1759192776409": 8,
+        "3518428599539": 5,
+        "14073747878939": 1
+      }
+    },
+    {
+      "q": 64,
+      "cycles": 32,
+      "points": 3072,
+      "periods": {
+        "96": 32
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "positive_rational_only": 32
+      },
+      "arithmetic_denominators": {
+        "3688978210704139955": 1,
+        "7378574094804563857": 2,
+        "8432796637216010597": 1,
+        "14757354080741222363": 1,
+        "23611832109324326669": 3,
+        "29514776791859809609": 3,
+        "33731189090729870717": 1,
+        "59029576460512074179": 2,
+        "118059160546621633345": 2,
+        "134924756645349019349": 1,
+        "236118323635109095019": 5,
+        "472236648117506799481": 4,
+        "755578637257887991807": 1,
+        "944473296517443135443": 3,
+        "1888946593129029449713": 1,
+        "3777893186289439959035": 1
+      }
+    },
+    {
+      "q": 76,
+      "cycles": 240,
+      "points": 4320,
+      "periods": {
+        "18": 240
+      },
+      "integer_roots": [
+        -17
+      ],
+      "arithmetic_sign_counts": {
+        "negative_integer": 1,
+        "negative_rational_only": 25,
+        "positive_rational_only": 214
+      },
+      "arithmetic_denominators": {
+        "1": 1,
+        "91": 2,
+        "139": 22,
+        "259": 3,
+        "481": 1,
+        "959": 4,
+        "1129": 1,
+        "3367": 52,
+        "5537": 3,
+        "5957": 1,
+        "7949": 73,
+        "16303": 50,
+        "32741": 22,
+        "65527": 4,
+        "131069": 1
+      }
+    },
+    {
+      "q": 81,
+      "cycles": 27,
+      "points": 5832,
+      "periods": {
+        "216": 27
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "positive_rational_only": 27
+      },
+      "arithmetic_denominators": {
+        "652456088094153077583204315264174015813544205": 1,
+        "1405290035895098959159063750300792080218482319": 1,
+        "2283596308329535580781002864951693241022455313": 1,
+        "2609824352376612352723975536272899577548610021": 1,
+        "9134385233318143213338335239347046764272918473": 6,
+        "18268770466636286469067828753910297042840270147": 5,
+        "36537540933272572952266043599559328590445351361": 7,
+        "73075081866545145909242215896364902015812306411": 4,
+        "146150163733090291820054474691811885643265147385": 1
+      }
+    },
+    {
+      "q": 105,
+      "cycles": 192,
+      "points": 9216,
+      "periods": {
+        "16": 96,
+        "80": 96
+      },
+      "integer_roots": [],
+      "arithmetic_sign_counts": {
+        "negative_rational_only": 4,
+        "positive_rational_only": 188
+      },
+      "arithmetic_denominators": {
+        "55": 1,
+        "95": 2,
+        "295": 11,
+        "355": 2,
+        "365": 1,
+        "1675": 4,
+        "1805": 31,
+        "4015": 25,
+        "8165": 15,
+        "16375": 3,
+        "32765": 1,
+        "132215250657599": 1,
+        "14411462321678291": 2,
+        "20962209111273865": 1,
+        "28823018786535409": 36,
+        "57646068954130427": 36,
+        "115292148368614057": 13,
+        "230584300224012515": 5,
+        "461168601610286497": 1,
+        "922337203607993483": 1
+      }
+    }
+  ],
+  "missing_gate": "A periodic golden cycle carries a rational parity realization; integrality is an additional tested predicate."
+}
+PASS: all acceptance checks remain active under -O

@@ -1,0 +1,16 @@
+difference_family_operations_20261004: exact arithmetic, explicit universes
+No definition is assigned to the user's unparenthesized f expression.
+Raw pair semiring: 256 pair and 4096 triple controls on {0..3}^2
+Lossless (gap,translation) laws: 14450 sum/product controls, gap -8..8 and translation0..4
+Hostile: (7,11)*(1,2) has component-product gap15; (8,12)*(1,2) gap16.
+Crossed products both have gap4; raw zero-fibre product only contains even diagonal pairs.
+Translation-independent affine controls: 2401; nonlinear hostile above
+Triangular gap chart N=3..200: 9900 splits; 9702 internal transfers
+g scalar controls: 3321; modular fixed subgroups: 1088; finite ray boundaries: 432
+g boundary: cS=S has no nonempty positive-integer solution for c>1; a forward ray loses its root.
+Universal quotient: c=1 in Z/(c-1); modulo c itself only the zero fixed residue survives.
+Inherited drop fibres: 2001 complete signed fibres, |drop|<=1000
+Inherited two-drop decoding: 10001 positive odd sources1..20001
+Drop hostiles: K(13)=K(33)=4 but K(3*13)=-10, K(3*33)=-25; +/-1 both have signature(0,0).
+D4 contains the unique positive odd Syracuse rise (7,11); translate (8,12) is not an odd-map edge.
+PASS: quotient arithmetic proved; exact orbit guards remain separate; no f/g naming imposed.

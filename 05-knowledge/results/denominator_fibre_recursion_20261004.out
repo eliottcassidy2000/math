@@ -1,0 +1,1267 @@
+{
+  "status": "PROVED all-q periodic lift and 2/3 towers; FINITE-EXACT controls; signed Collatz coverage OPEN",
+  "lattice_phase_universe": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    64,
+    76,
+    81,
+    105
+  ],
+  "exact_censuses": [
+    {
+      "q": 1,
+      "trapped_states": 4,
+      "cycles": 2,
+      "periodic_points": 3,
+      "periods": {
+        "1": 1,
+        "2": 1
+      },
+      "integer_cycles": [
+        [
+          -2,
+          -1
+        ],
+        [
+          0
+        ]
+      ]
+    },
+    {
+      "q": 2,
+      "trapped_states": 8,
+      "cycles": 1,
+      "periodic_points": 3,
+      "periods": {
+        "3": 1
+      },
+      "integer_cycles": [
+        [
+          1,
+          2,
+          4
+        ]
+      ]
+    },
+    {
+      "q": 3,
+      "trapped_states": 21,
+      "cycles": 1,
+      "periodic_points": 8,
+      "periods": {
+        "8": 1
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 4,
+      "trapped_states": 31,
+      "cycles": 2,
+      "periodic_points": 12,
+      "periods": {
+        "6": 2
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 5,
+      "trapped_states": 64,
+      "cycles": 2,
+      "periodic_points": 24,
+      "periods": {
+        "4": 1,
+        "20": 1
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 6,
+      "trapped_states": 65,
+      "cycles": 1,
+      "periodic_points": 24,
+      "periods": {
+        "24": 1
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 7,
+      "trapped_states": 129,
+      "cycles": 3,
+      "periodic_points": 48,
+      "periods": {
+        "16": 3
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 8,
+      "trapped_states": 130,
+      "cycles": 4,
+      "periodic_points": 48,
+      "periods": {
+        "12": 4
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 9,
+      "trapped_states": 193,
+      "cycles": 3,
+      "periodic_points": 72,
+      "periods": {
+        "24": 3
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 10,
+      "trapped_states": 193,
+      "cycles": 2,
+      "periodic_points": 72,
+      "periods": {
+        "12": 1,
+        "60": 1
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 11,
+      "trapped_states": 321,
+      "cycles": 13,
+      "periodic_points": 120,
+      "periods": {
+        "5": 2,
+        "10": 11
+      },
+      "integer_cycles": [
+        [
+          -20,
+          -14,
+          -10,
+          -7,
+          -5
+        ]
+      ]
+    },
+    {
+      "q": 12,
+      "trapped_states": 259,
+      "cycles": 4,
+      "periodic_points": 96,
+      "periods": {
+        "24": 4
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 13,
+      "trapped_states": 450,
+      "cycles": 6,
+      "periodic_points": 168,
+      "periods": {
+        "28": 6
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 14,
+      "trapped_states": 386,
+      "cycles": 3,
+      "periodic_points": 144,
+      "periods": {
+        "48": 3
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 15,
+      "trapped_states": 516,
+      "cycles": 8,
+      "periodic_points": 192,
+      "periods": {
+        "8": 4,
+        "40": 4
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 16,
+      "trapped_states": 515,
+      "cycles": 8,
+      "periodic_points": 192,
+      "periods": {
+        "24": 8
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 17,
+      "trapped_states": 774,
+      "cycles": 8,
+      "periodic_points": 288,
+      "periods": {
+        "36": 8
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 18,
+      "trapped_states": 580,
+      "cycles": 9,
+      "periodic_points": 216,
+      "periods": {
+        "24": 9
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 19,
+      "trapped_states": 966,
+      "cycles": 21,
+      "periodic_points": 360,
+      "periods": {
+        "9": 2,
+        "18": 19
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 20,
+      "trapped_states": 774,
+      "cycles": 8,
+      "periodic_points": 288,
+      "periods": {
+        "12": 4,
+        "60": 4
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 21,
+      "trapped_states": 1031,
+      "cycles": 24,
+      "periodic_points": 384,
+      "periods": {
+        "16": 24
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 22,
+      "trapped_states": 966,
+      "cycles": 13,
+      "periodic_points": 360,
+      "periods": {
+        "15": 2,
+        "30": 11
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 23,
+      "trapped_states": 1416,
+      "cycles": 11,
+      "periodic_points": 528,
+      "periods": {
+        "48": 11
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 24,
+      "trapped_states": 1028,
+      "cycles": 16,
+      "periodic_points": 384,
+      "periods": {
+        "24": 16
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 25,
+      "trapped_states": 1609,
+      "cycles": 10,
+      "periodic_points": 600,
+      "periods": {
+        "20": 5,
+        "100": 5
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 26,
+      "trapped_states": 1353,
+      "cycles": 6,
+      "periodic_points": 504,
+      "periods": {
+        "84": 6
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 27,
+      "trapped_states": 1738,
+      "cycles": 9,
+      "periodic_points": 648,
+      "periods": {
+        "72": 9
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 28,
+      "trapped_states": 1546,
+      "cycles": 12,
+      "periodic_points": 576,
+      "periods": {
+        "48": 12
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 29,
+      "trapped_states": 2253,
+      "cycles": 62,
+      "periodic_points": 840,
+      "periods": {
+        "7": 4,
+        "14": 58
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 30,
+      "trapped_states": 1545,
+      "cycles": 8,
+      "periodic_points": 576,
+      "periods": {
+        "24": 4,
+        "120": 4
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 31,
+      "trapped_states": 2576,
+      "cycles": 33,
+      "periodic_points": 960,
+      "periods": {
+        "15": 2,
+        "30": 31
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 32,
+      "trapped_states": 2061,
+      "cycles": 16,
+      "periodic_points": 768,
+      "periods": {
+        "48": 16
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 33,
+      "trapped_states": 2577,
+      "cycles": 24,
+      "periodic_points": 960,
+      "periods": {
+        "40": 24
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 34,
+      "trapped_states": 2316,
+      "cycles": 24,
+      "periodic_points": 864,
+      "periods": {
+        "36": 24
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 35,
+      "trapped_states": 3091,
+      "cycles": 24,
+      "periodic_points": 1152,
+      "periods": {
+        "16": 12,
+        "80": 12
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 36,
+      "trapped_states": 2318,
+      "cycles": 36,
+      "periodic_points": 864,
+      "periods": {
+        "24": 36
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 37,
+      "trapped_states": 3671,
+      "cycles": 18,
+      "periodic_points": 1368,
+      "periods": {
+        "76": 18
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 38,
+      "trapped_states": 2898,
+      "cycles": 63,
+      "periodic_points": 1080,
+      "periods": {
+        "9": 6,
+        "18": 57
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 39,
+      "trapped_states": 3608,
+      "cycles": 24,
+      "periodic_points": 1344,
+      "periods": {
+        "56": 24
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 40,
+      "trapped_states": 3091,
+      "cycles": 32,
+      "periodic_points": 1152,
+      "periods": {
+        "12": 16,
+        "60": 16
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 64,
+      "trapped_states": 8243,
+      "cycles": 32,
+      "periodic_points": 3072,
+      "periods": {
+        "96": 32
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 76,
+      "trapped_states": 11592,
+      "cycles": 240,
+      "periodic_points": 4320,
+      "periods": {
+        "18": 240
+      },
+      "integer_cycles": [
+        [
+          -272,
+          -182,
+          -164,
+          -136,
+          -122,
+          -110,
+          -91,
+          -82,
+          -74,
+          -68,
+          -61,
+          -55,
+          -50,
+          -41,
+          -37,
+          -34,
+          -25,
+          -17
+        ]
+      ]
+    },
+    {
+      "q": 81,
+      "trapped_states": 15650,
+      "cycles": 27,
+      "periodic_points": 5832,
+      "periods": {
+        "216": 27
+      },
+      "integer_cycles": []
+    },
+    {
+      "q": 105,
+      "trapped_states": 24729,
+      "cycles": 192,
+      "periodic_points": 9216,
+      "periods": {
+        "16": 96,
+        "80": 96
+      },
+      "integer_cycles": []
+    }
+  ],
+  "overlap_vectors": [
+    [
+      -2,
+      1
+    ],
+    [
+      -1,
+      0
+    ],
+    [
+      -1,
+      1
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      -1
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      -1
+    ]
+  ],
+  "towers": [
+    {
+      "prime": 2,
+      "exponent": 1,
+      "modulus": 2,
+      "cycles": 1,
+      "period": 3,
+      "parent_child_checks": 1,
+      "first_child_example": [
+        {
+          "parent": [
+            0,
+            1
+          ],
+          "translation": [
+            1,
+            1
+          ],
+          "children": [
+            {
+              "label": 0,
+              "anchor": [
+                0,
+                1
+              ]
+            },
+            {
+              "label": 1,
+              "anchor": [
+                0,
+                3
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "prime": 2,
+      "exponent": 2,
+      "modulus": 4,
+      "cycles": 2,
+      "period": 6,
+      "parent_child_checks": 2,
+      "first_child_example": [
+        {
+          "parent": [
+            0,
+            1
+          ],
+          "translation": [
+            0,
+            1
+          ],
+          "children": [
+            {
+              "label": 0,
+              "anchor": [
+                0,
+                1
+              ]
+            },
+            {
+              "label": 1,
+              "anchor": [
+                1,
+                4
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "prime": 2,
+      "exponent": 3,
+      "modulus": 8,
+      "cycles": 4,
+      "period": 12,
+      "parent_child_checks": 4,
+      "first_child_example": [
+        {
+          "parent": [
+            0,
+            1
+          ],
+          "translation": [
+            0,
+            1
+          ],
+          "children": [
+            {
+              "label": 0,
+              "anchor": [
+                0,
+                1
+              ]
+            },
+            {
+              "label": 1,
+              "anchor": [
+                0,
+                5
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "prime": 2,
+      "exponent": 4,
+      "modulus": 16,
+      "cycles": 8,
+      "period": 24,
+      "parent_child_checks": 8,
+      "first_child_example": [
+        {
+          "parent": [
+            0,
+            1
+          ],
+          "translation": [
+            0,
+            1
+          ],
+          "children": [
+            {
+              "label": 0,
+              "anchor": [
+                0,
+                1
+              ]
+            },
+            {
+              "label": 1,
+              "anchor": [
+                0,
+                9
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "prime": 2,
+      "exponent": 5,
+      "modulus": 32,
+      "cycles": 16,
+      "period": 48,
+      "parent_child_checks": 16,
+      "first_child_example": [
+        {
+          "parent": [
+            0,
+            1
+          ],
+          "translation": [
+            0,
+            1
+          ],
+          "children": [
+            {
+              "label": 0,
+              "anchor": [
+                0,
+                1
+              ]
+            },
+            {
+              "label": 1,
+              "anchor": [
+                0,
+                17
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "prime": 2,
+      "exponent": 6,
+      "modulus": 64,
+      "cycles": 32,
+      "period": 96,
+      "parent_child_checks": 0,
+      "first_child_example": []
+    },
+    {
+      "prime": 3,
+      "exponent": 1,
+      "modulus": 3,
+      "cycles": 1,
+      "period": 8,
+      "parent_child_checks": 1,
+      "first_child_example": [
+        {
+          "parent": [
+            0,
+            1
+          ],
+          "translation": [
+            1,
+            2
+          ],
+          "children": [
+            {
+              "label": 0,
+              "anchor": [
+                0,
+                1
+              ]
+            },
+            {
+              "label": 1,
+              "anchor": [
+                0,
+                4
+              ]
+            },
+            {
+              "label": 2,
+              "anchor": [
+                0,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "prime": 3,
+      "exponent": 2,
+      "modulus": 9,
+      "cycles": 3,
+      "period": 24,
+      "parent_child_checks": 3,
+      "first_child_example": [
+        {
+          "parent": [
+            0,
+            1
+          ],
+          "translation": [
+            1,
+            2
+          ],
+          "children": [
+            {
+              "label": 0,
+              "anchor": [
+                0,
+                1
+              ]
+            },
+            {
+              "label": 1,
+              "anchor": [
+                0,
+                10
+              ]
+            },
+            {
+              "label": 2,
+              "anchor": [
+                0,
+                8
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "prime": 3,
+      "exponent": 3,
+      "modulus": 27,
+      "cycles": 9,
+      "period": 72,
+      "parent_child_checks": 9,
+      "first_child_example": [
+        {
+          "parent": [
+            0,
+            1
+          ],
+          "translation": [
+            1,
+            2
+          ],
+          "children": [
+            {
+              "label": 0,
+              "anchor": [
+                0,
+                1
+              ]
+            },
+            {
+              "label": 1,
+              "anchor": [
+                0,
+                28
+              ]
+            },
+            {
+              "label": 2,
+              "anchor": [
+                0,
+                26
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "prime": 3,
+      "exponent": 4,
+      "modulus": 81,
+      "cycles": 27,
+      "period": 216,
+      "parent_child_checks": 0,
+      "first_child_example": []
+    }
+  ],
+  "rejected_child_selector_inputs": [
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      -1
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      5,
+      5
+    ]
+  ],
+  "cycle_addition_hostile": "mod2: 1 and phi share an orbit; 1+1=0 but 1+phi=phi^2 is nonzero",
+  "modulus105": {
+    "primitive_phases": 9216,
+    "period16_phases": 1536,
+    "period80_phases": 7680,
+    "period16_cycles": 96,
+    "period80_cycles": 96,
+    "primitive_density": "1024/1225",
+    "unit_phases": 7680
+  },
+  "primorial_density_controls": [
+    {
+      "last_prime": 2,
+      "q": 2,
+      "primitive_phase_density": "3/4"
+    },
+    {
+      "last_prime": 3,
+      "q": 6,
+      "primitive_phase_density": "2/3"
+    },
+    {
+      "last_prime": 5,
+      "q": 30,
+      "primitive_phase_density": "16/25"
+    },
+    {
+      "last_prime": 7,
+      "q": 210,
+      "primitive_phase_density": "768/1225"
+    },
+    {
+      "last_prime": 11,
+      "q": 2310,
+      "primitive_phase_density": "18432/29645"
+    },
+    {
+      "last_prime": 13,
+      "q": 30030,
+      "primitive_phase_density": "442368/715715"
+    }
+  ],
+  "integer_lift_hostile": {
+    "parent_q": 2,
+    "parent_odd_root": 1,
+    "child_q": 4,
+    "child_odd_roots": [
+      [
+        "1/29"
+      ],
+      [
+        "11/7",
+        "5/7"
+      ]
+    ]
+  },
+  "ideal_phase_hostile": {
+    "q": 11,
+    "minus5_phase_values": [
+      1,
+      3,
+      4,
+      5,
+      9
+    ],
+    "one_thirteenth_phase_values": [
+      2,
+      6,
+      7,
+      8,
+      10
+    ]
+  },
+  "signed_splices": {
+    "head_lengths": "0..3",
+    "letters": "1..3",
+    "heads": 40,
+    "roots": [
+      1,
+      -1,
+      -5,
+      -17
+    ],
+    "lifts": "0..4",
+    "instances": 800,
+    "examples": [
+      {
+        "word": [],
+        "root": 1,
+        "p": 0,
+        "A": 0,
+        "S": 0,
+        "C": 1,
+        "modulus": 3,
+        "T": 2,
+        "a": 10,
+        "source": 341
+      },
+      {
+        "word": [],
+        "root": -1,
+        "p": 0,
+        "A": 0,
+        "S": 0,
+        "C": 1,
+        "modulus": 3,
+        "T": 2,
+        "a": 9,
+        "source": -171
+      },
+      {
+        "word": [],
+        "root": -5,
+        "p": 0,
+        "A": 0,
+        "S": 0,
+        "C": 1,
+        "modulus": 3,
+        "T": 2,
+        "a": 6,
+        "source": -107
+      },
+      {
+        "word": [],
+        "root": -17,
+        "p": 0,
+        "A": 0,
+        "S": 0,
+        "C": 1,
+        "modulus": 3,
+        "T": 2,
+        "a": 6,
+        "source": -363
+      },
+      {
+        "word": [
+          1
+        ],
+        "root": 1,
+        "p": 1,
+        "A": 1,
+        "S": 1,
+        "C": 5,
+        "modulus": 9,
+        "T": 6,
+        "a": 10,
+        "source": 227
+      },
+      {
+        "word": [
+          1
+        ],
+        "root": -1,
+        "p": 1,
+        "A": 1,
+        "S": 1,
+        "C": 5,
+        "modulus": 9,
+        "T": 6,
+        "a": 13,
+        "source": -1821
+      },
+      {
+        "word": [
+          1
+        ],
+        "root": -5,
+        "p": 1,
+        "A": 1,
+        "S": 1,
+        "C": 5,
+        "modulus": 9,
+        "T": 6,
+        "a": 8,
+        "source": -285
+      },
+      {
+        "word": [
+          1
+        ],
+        "root": -17,
+        "p": 1,
+        "A": 1,
+        "S": 1,
+        "C": 5,
+        "modulus": 9,
+        "T": 6,
+        "a": 10,
+        "source": -3869
+      },
+      {
+        "word": [
+          1,
+          2
+        ],
+        "root": 1,
+        "p": 2,
+        "A": 3,
+        "S": 5,
+        "C": 23,
+        "modulus": 27,
+        "T": 18,
+        "a": 26,
+        "source": 19884107
+      },
+      {
+        "word": [
+          1,
+          2
+        ],
+        "root": -1,
+        "p": 2,
+        "A": 3,
+        "S": 5,
+        "C": 23,
+        "modulus": 27,
+        "T": 18,
+        "a": 17,
+        "source": -38837
+      },
+      {
+        "word": [
+          1,
+          2
+        ],
+        "root": -5,
+        "p": 2,
+        "A": 3,
+        "S": 5,
+        "C": 23,
+        "modulus": 27,
+        "T": 18,
+        "a": 12,
+        "source": -6069
+      },
+      {
+        "word": [
+          1,
+          2
+        ],
+        "root": -17,
+        "p": 2,
+        "A": 3,
+        "S": 5,
+        "C": 23,
+        "modulus": 27,
+        "T": 18,
+        "a": 20,
+        "source": -5281717
+      }
+    ],
+    "sibling_phase_periods": [
+      {
+        "p": 0,
+        "root": 1,
+        "sibling_phase_period": 3
+      },
+      {
+        "p": 0,
+        "root": -1,
+        "sibling_phase_period": 1
+      },
+      {
+        "p": 0,
+        "root": -5,
+        "sibling_phase_period": 5
+      },
+      {
+        "p": 0,
+        "root": -17,
+        "sibling_phase_period": 9
+      },
+      {
+        "p": 1,
+        "root": 1,
+        "sibling_phase_period": 1
+      },
+      {
+        "p": 1,
+        "root": -1,
+        "sibling_phase_period": 1
+      },
+      {
+        "p": 1,
+        "root": -5,
+        "sibling_phase_period": 5
+      },
+      {
+        "p": 1,
+        "root": -17,
+        "sibling_phase_period": 3
+      },
+      {
+        "p": 2,
+        "root": 1,
+        "sibling_phase_period": 1
+      },
+      {
+        "p": 2,
+        "root": -1,
+        "sibling_phase_period": 1
+      },
+      {
+        "p": 2,
+        "root": -5,
+        "sibling_phase_period": 5
+      },
+      {
+        "p": 2,
+        "root": -17,
+        "sibling_phase_period": 1
+      },
+      {
+        "p": 3,
+        "root": 1,
+        "sibling_phase_period": 1
+      },
+      {
+        "p": 3,
+        "root": -1,
+        "sibling_phase_period": 1
+      },
+      {
+        "p": 3,
+        "root": -5,
+        "sibling_phase_period": 5
+      },
+      {
+        "p": 3,
+        "root": -17,
+        "sibling_phase_period": 1
+      }
+    ],
+    "hostile": "1/13 and -5 have the same denominator ideal, distinct phase orbits"
+  }
+}
+PASS: all checks active under -O
