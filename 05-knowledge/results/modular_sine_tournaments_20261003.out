@@ -1,0 +1,8 @@
+FINITE-EXACT universe: m=1..101; all modular cells/differences; seeds=1..1000
+wedge reconstruction cells: 348551
+multiplication character-image ranks: 5151
+odd center blocks: 50; odd cyclic differences: 2550
+even antipodal tie controls: 50; odd primes: 25
+rooted route-polynomial group-algebra checks: 5000
+hostiles: K_5 sine is symmetric, not skew; even antipodes tie; composite 9 has nonunit 3
+ALL CHECKS PASSED

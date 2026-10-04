@@ -1,0 +1,20 @@
+Universe: every n=0..10000; moduli 3,9,27,81,4,16,64
+Exact digit/value/shift/charge checks: 70007; odd-modulus CRT checks: 40004
+Hostile normal form 11 rejected; zero and leading-zero states allowed
+Shift sidecar hostile: 2 and 8 share value mod3, charge, and last digit; shifts 3 and 13 split
+Supplied stripe: RKBRKRKBRKBRKRKBRKRKBRKBRKRKBRKBRKB
+Wythoff candidate mismatch: position35, supplied B / candidate R
+XOR charge differs from supplied stripe: 2 and4 share (0,1), but are K/R; neutral at6
+Confirmed extra-unit convention: all fibres n=1..200, 524 representations, 1572 native reader checks
+Marker polynomial and exactly two charge-preserving sheets pass; (value,marker) recovers every support
+Supplied35-blue row = atom34 + blue1; both legal row36 supports force red at position35 in this grammar
+Unit-label rotation is not an index symmetry: black+red is legal, black+blue is not
+Actual-color C3 Fourier basis: all35 positionwise inversions exact; cosine-only and magnitudes conflate blue/red
+Diagonal carry: 40000 positive pairs; defects -1,0,1; strict sum5 splits before repair
+Route universe: j=0..4, lengths1..5; 694 valid, 3211 rejected
+Fibonacci-digit macro phase gates: 3174; direct prefix valuations agree
+Wrong-phase controls: 2480; 780 remain valid but change the head
+Compiler/DFA/strict-route interface: 14760 cases; 45 isolated index-zero padding exclusions
+First-hit guard removes t=0 only, not its whole residue class: head(1), t=3 is valid source453
+Scope: fixed-modulus finite automata on unbounded digit words; no finite color clock or universal coverage claimed
+ALL CHECKS PASSED

@@ -1,0 +1,13 @@
+EXHAUSTIVE: 120 compressed heads, lengths 1..4, indices 0..2
+Compiled 1554 distinct valuation phases; replayed 14760 index cases (two periods each)
+Every head has exactly 2^p phases mod 3^p; 45 legal index-zero cases require first-hit truncation
+EXACT: cyclotomic Parseval, nonconstant energy 2^p*(3^p-2^p), for all 120 heads
+Additional targets 5/7/13: four fixed heads, every phase independently replayed
+Head (0,0): legal phases mod9 = [0, 3, 4, 7]
+First positive representatives (index, route, valuation head): [(3, (75, 113, 85, 1), (1, 2)), (4, (151, 227, 341, 1), (1, 1)), (7, (19417, 14563, 21845, 1), (2, 1)), (9, (621377, 466033, 349525, 1), (2, 2))]
+ROOT HOSTILE: head(1), index0 gives 5->1->1; source>1 alone is not a first-hit check
+FOURIER HOSTILE: increment masks {0,2} and {0,1}; identical cosine coefficients [2,1/2,1/2] and squared magnitudes [4,1,1]
+Their exact DFTs (a+b*zeta_3) are [(2, 0), (1, 1), (0, -1)] and [(2, 0), (0, -1), (1, 1)] ; +1 legality differs
+Even/odd Fourier lift: 480 formal monomial checks on four heads, both parity sheets
+BOUNDARY: masks describe legality in one sibling-index family; neither first-hit validity nor integer-basin coverage follows from spectra alone
+ALL CHECKS PASSED
