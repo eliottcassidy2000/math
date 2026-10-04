@@ -1,0 +1,10 @@
+Projective7: strict21, switching168, anti-switching168; SL2 signed cover336.
+Signed cover:16 vertices,112 oriented pairs,8 antipodal ties.
+Paley word census: 340 words at 7 primes.
+p mod24 -> orientation:7=(-1)^j;11=(-1)^A;19=(-1)^(j+A);23=+1.
+Hostiles: words1 and3 have opposite drift and every quadratic signature equal.
+Certified aliases:240 modulus/depth cases; 122 literal expanded pairs.
+Huge control: M=2^64*3^12*35,D=10,j=75; both sources exceed10^35 binary digits.
+Smallest declared control: 3 53 -> 5 ->1.
+Boundary: fixed finite observations cannot determine later net drift; adaptive tests remain available.
+PASS: 1062456 exact checks; all guards active under -O.

@@ -1,0 +1,382 @@
+{
+  "status": "PROVED rotation-bit mechanism; FINITE-EXACT full Heawood rotation census",
+  "graph": {
+    "vertices": 14,
+    "edges": 21,
+    "darts": 42,
+    "flags": 84,
+    "abstract_automorphisms": 336,
+    "paley_subgroup": 21
+  },
+  "all_rotation_systems": 16384,
+  "genus_counts": {
+    "1": 16,
+    "2": 1008,
+    "3": 10880,
+    "4": 4480
+  },
+  "paley_invariant_rotation_masks": [
+    0,
+    127,
+    16256,
+    16383
+  ],
+  "maps": [
+    {
+      "signs": [
+        1,
+        1
+      ],
+      "face_lengths": {
+        "6": 7
+      },
+      "genus": 1,
+      "orientation_preserving": 42,
+      "orientation_reversing": 0,
+      "cell_orbits": {
+        "vertices": [
+          14
+        ],
+        "edges": [
+          21
+        ],
+        "faces": [
+          7
+        ]
+      },
+      "flag_orbits": 2,
+      "dual": "K7",
+      "face_vertex_cycles": [
+        [
+          0,
+          13,
+          1,
+          11,
+          5,
+          10
+        ],
+        [
+          0,
+          12,
+          2,
+          8,
+          3,
+          13
+        ],
+        [
+          0,
+          10,
+          4,
+          9,
+          6,
+          12
+        ],
+        [
+          1,
+          7,
+          2,
+          12,
+          6,
+          11
+        ],
+        [
+          1,
+          13,
+          3,
+          9,
+          4,
+          7
+        ],
+        [
+          2,
+          7,
+          4,
+          10,
+          5,
+          8
+        ],
+        [
+          3,
+          8,
+          5,
+          11,
+          6,
+          9
+        ]
+      ]
+    },
+    {
+      "signs": [
+        1,
+        -1
+      ],
+      "face_lengths": {
+        "14": 3
+      },
+      "genus": 3,
+      "orientation_preserving": 21,
+      "orientation_reversing": 21,
+      "cell_orbits": {
+        "vertices": [
+          14
+        ],
+        "edges": [
+          21
+        ],
+        "faces": [
+          3
+        ]
+      },
+      "flag_orbits": 2,
+      "dual": "7 parallel edges per pair of K3",
+      "face_vertex_cycles": [
+        [
+          0,
+          13,
+          3,
+          9,
+          6,
+          12,
+          2,
+          8,
+          5,
+          11,
+          1,
+          7,
+          4,
+          10
+        ],
+        [
+          0,
+          12,
+          6,
+          11,
+          5,
+          10,
+          4,
+          9,
+          3,
+          8,
+          2,
+          7,
+          1,
+          13
+        ],
+        [
+          0,
+          10,
+          5,
+          8,
+          3,
+          13,
+          1,
+          11,
+          6,
+          9,
+          4,
+          7,
+          2,
+          12
+        ]
+      ]
+    },
+    {
+      "signs": [
+        -1,
+        1
+      ],
+      "face_lengths": {
+        "14": 3
+      },
+      "genus": 3,
+      "orientation_preserving": 21,
+      "orientation_reversing": 21,
+      "cell_orbits": {
+        "vertices": [
+          14
+        ],
+        "edges": [
+          21
+        ],
+        "faces": [
+          3
+        ]
+      },
+      "flag_orbits": 2,
+      "dual": "7 parallel edges per pair of K3",
+      "face_vertex_cycles": [
+        [
+          0,
+          13,
+          1,
+          7,
+          2,
+          8,
+          3,
+          9,
+          4,
+          10,
+          5,
+          11,
+          6,
+          12
+        ],
+        [
+          0,
+          12,
+          2,
+          7,
+          4,
+          9,
+          6,
+          11,
+          1,
+          13,
+          3,
+          8,
+          5,
+          10
+        ],
+        [
+          0,
+          10,
+          4,
+          7,
+          1,
+          11,
+          5,
+          8,
+          2,
+          12,
+          6,
+          9,
+          3,
+          13
+        ]
+      ]
+    },
+    {
+      "signs": [
+        -1,
+        -1
+      ],
+      "face_lengths": {
+        "6": 7
+      },
+      "genus": 1,
+      "orientation_preserving": 42,
+      "orientation_reversing": 0,
+      "cell_orbits": {
+        "vertices": [
+          14
+        ],
+        "edges": [
+          21
+        ],
+        "faces": [
+          7
+        ]
+      },
+      "flag_orbits": 2,
+      "dual": "K7",
+      "face_vertex_cycles": [
+        [
+          0,
+          13,
+          3,
+          8,
+          2,
+          12
+        ],
+        [
+          0,
+          12,
+          6,
+          9,
+          4,
+          10
+        ],
+        [
+          0,
+          10,
+          5,
+          11,
+          1,
+          13
+        ],
+        [
+          1,
+          7,
+          4,
+          9,
+          3,
+          13
+        ],
+        [
+          1,
+          11,
+          6,
+          12,
+          2,
+          7
+        ],
+        [
+          2,
+          8,
+          5,
+          10,
+          4,
+          7
+        ],
+        [
+          3,
+          9,
+          6,
+          11,
+          5,
+          8
+        ]
+      ]
+    }
+  ],
+  "tournament_induced_rotation": {
+    "signs": [
+      -1,
+      1
+    ],
+    "local_arc_checks": 42,
+    "genus": 3,
+    "rule": "At both vertex types follow the induced Paley cycle on neighbor labels."
+  },
+  "triangle_excesses": {
+    "5": "1/30",
+    "6": "0",
+    "7": "-1/42"
+  },
+  "regular_group_quotients": [
+    {
+      "p": 5,
+      "darts": 60,
+      "flags": 120,
+      "vertices": 20,
+      "edges": 30,
+      "faces": 12,
+      "genus": 0,
+      "excess": "1/30"
+    },
+    {
+      "p": 7,
+      "darts": 168,
+      "flags": 336,
+      "vertices": 56,
+      "edges": 84,
+      "faces": 24,
+      "genus": 3,
+      "excess": "-1/42"
+    }
+  ],
+  "loss": "The graph, its full flow space, and the Paley subgroup do not determine faces, genus or curvature.",
+  "restoration": "Retain the local cyclic rotation sigma alongside the intrinsic dart reversal alpha.",
+  "boundary": "The genus3 Heawood map is type(14,3), not the type(7,3) PSL(2,7) map."
+}
+PASS: all checks active under -O; no Collatz transfer asserted

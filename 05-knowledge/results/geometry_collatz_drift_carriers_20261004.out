@@ -1,0 +1,12 @@
+GEOMETRY / COLLATZ DRIFT CARRIERS: PROVED algebra; FINITE-EXACT controls
+All positive words with total valuation<=12: 4095
+Distinct marked axes: 4016 ; exact integer replays: 12285
+All ordered word pairs with both totals<=8: 65025
+Same-clock j7,A11 words / distinct axes / integer axes: 210 210 [-91, -61, -55, -41, -37, -25, -17]
+Letters1,2: axes -1,+1; words12,21: axes -5,-7; order defect -1/4
+Equal-weight 5/7 formal curvature: flat word12 grows11->13; first strict error (7, 4, -1, 139)
+Inherited minus17 shadow controls m1..24: score -m, all7m prefixes grow; m1:4079 ->4357
+144 rational-score samples; latest first strict error: (7, -5, (53, 31, -1, 40432553845953101497907))
+Incoming compiler growing words length<=6, repetitions1..3: 165 {'descent': 164, 'root': 1}
+Contracting-axis hostile source165 ->167; moving checkpoint27 ->41 ->31
+ALL CHECKS PASSED; no new coverage or geometric Collatz conjugacy claimed

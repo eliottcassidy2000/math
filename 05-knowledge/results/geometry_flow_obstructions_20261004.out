@@ -1,0 +1,31 @@
+GEOMETRY / FLOW OBSTRUCTIONS: EXACT AUDIT
+Local triangle fibres: 283 boundary triples across Z2..Z8,F2^2,F2^3.
+Full flow quotient K7 -> Heawood: dimensions15 -> 8, seven triangle circulations lost.
+Hostile: value1 on every oriented Paley triangle is nowhere-zero, but maps to zero.
+Independent q4 check:24 perfect matchings, each complementary to one14-cycle, giving48 Tait colorings.
+Heawood embedding sign 1 face lengths [6, 6, 6, 6, 6, 6, 6] genus 1 dual K7 boundary rank 6 homology rank 2
+Heawood embedding sign -1 face lengths [14, 14, 14] genus 3 dual 7*K3 boundary rank 2 homology rank 6
+Threshold controls: offset1 matching carries -2, others+1: integral3-flow; constant2 is Z6 flow;
+  seven distinct torus face labels give a Z7 boundary flow.
+Group Z3 order 3 nowhere-zero flows 2 boundary counts genus1/genus3 [0, 2]
+  Enumerated all 256 nonzero cotree assignments.
+  Homology sector occupancy histograms: [{1: 2}, {2: 1}]
+  Triangle lift count over each Heawood nowhere-zero flow: 0 ; number of descending nowhere-zero K7 flows: 0
+  Complete independently checked lifts of one witness: 0
+Group F2^r order 4 nowhere-zero flows 48 boundary counts genus1/genus3 [0, 6]
+  Enumerated all 6561 nonzero cotree assignments.
+  Homology sector occupancy histograms: [{8: 6}, {1: 42, 6: 1}]
+  Triangle lift count over each Heawood nowhere-zero flow: 1 ; number of descending nowhere-zero K7 flows: 48
+  Complete independently checked lifts of one witness: 1
+Group Z5 order 5 nowhere-zero flows 1692 boundary counts genus1/genus3 [0, 12]
+  Enumerated all 65536 nonzero cotree assignments.
+  Homology sector occupancy histograms: [{43: 12, 98: 12}, {1: 1176, 2: 84, 4: 84, 12: 1}]
+  Triangle lift count over each Heawood nowhere-zero flow: 128 ; number of descending nowhere-zero K7 flows: 216576
+  Complete independently checked lifts of one witness: 128
+Group F2^r order 8 nowhere-zero flows 765072 boundary counts genus1/genus3 [5040, 42]
+  Enumerated all 117649 normalized cotree assignments; GL(3,2) orbit multiplier42.
+  Triangle lift count over each Heawood nowhere-zero flow: 78125 ; number of descending nowhere-zero K7 flows: 59771250000
+  Complete independently checked lifts of one witness: 78125
+Conditional cubic Euler bound: all face lengths>=7 gives V<=28(g-1).
+Negative curvature alone is not a no-flow certificate: both embeddings have identical flows.
+PASS: exact local fibres, two embeddings, complete flow counts and boundary obstructions.
