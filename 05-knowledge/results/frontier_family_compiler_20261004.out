@@ -1,0 +1,16 @@
+FRONTIER FAMILY COMPILER: rooted finite discovery plus proved guarded all-height rules
+Initial802 checked edges; requested512 odds1..1023; only ROOT1; query cap128, segment-word cap128
+Strategy comparison:edge-only 32 new queries; frontier 32 new queries, 0 cached prefix reads, learned lengths [31, 1] ; original 32 new queries, 41 cached prefix reads, learned lengths [51, 22]
+These reads are discovery-path reads only; graph-closure and verification work are separate.
+Frontier family 2287 join 157 beneficiaries (703, 937) {"B": 1511225692948955, "P": 617673396283947, "Q": 9007199254740992, "first_parameter": 0, "length": 31, "nominal": 157, "residue": 2287, "valuation": 53}
+  pulled family 703 head length 20 tail parameter [0, 3486784401] {"B": 4363973393857133714501915, "P": 2153693963075557766310747, "Q": 9671406556917033397649408, "first_parameter": 0, "length": 51, "nominal": 157, "residue": 703, "valuation": 83}
+  pulled family 937 head length 21 tail parameter [0, 10460353203] {"B": 19609587538504092624318407, "P": 6461081889226673298932241, "Q": 38685626227668133590597632, "first_parameter": 0, "length": 52, "nominal": 157, "residue": 937, "valuation": 85}
+Frontier family 2125 join 797 beneficiaries (871,) {"B": 1, "P": 3, "Q": 8, "first_parameter": 0, "length": 1, "nominal": 2, "residue": 5, "valuation": 3}
+  pulled family 871 head length 21 tail parameter [265, 10460353203] {"B": 51808559857, "P": 31381059609, "Q": 34359738368, "first_parameter": 0, "length": 22, "nominal": 797, "residue": 871, "valuation": 35}
+Family replay instances: 35 ; complete phase/extra-clock controls: 19760
+Clock hostile:k0/k247 share source phase 64 but extra halvings0/1; nominal phase 157 actual 202
+Boundary hostile:27->41->31; tail descends but pullback unrefined nominal family is not paid.
+Grounded final graph: 834 edges; 835 certified vertices; requested 512 all complete.
+Completed subfamilies: 60 symbolic AST controls; 16 expanded controls; largest extra valuation 10544953611659671185738477 ; zero new odd-edge queries for completion.
+Prime-derived shared Family interface: 50 controls;223 filter retained for modular return, unnecessary for whole-cylinder first descent.
+No family parameter is an oracle seed; general family conclusion is descent, not unconditional home.

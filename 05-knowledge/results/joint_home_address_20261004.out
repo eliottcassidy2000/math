@@ -1,0 +1,310 @@
+{
+  "status": "PROVED joint-address rank-four construction; FINITE-EXACT declared controls",
+  "rays": [
+    {
+      "residue": 0,
+      "source": 2261,
+      "prefix": [
+        7,
+        5,
+        4
+      ],
+      "hub": 1,
+      "coefficient": 65536,
+      "offset": 4489
+    },
+    {
+      "residue": 1,
+      "source": 9045,
+      "prefix": [
+        9,
+        5,
+        4
+      ],
+      "hub": 1,
+      "coefficient": 262144,
+      "offset": 17929
+    },
+    {
+      "residue": 2,
+      "source": 144725,
+      "prefix": [
+        13,
+        5,
+        4
+      ],
+      "hub": 1,
+      "coefficient": 4194304,
+      "offset": 286729
+    },
+    {
+      "residue": 3,
+      "source": 17749,
+      "prefix": [
+        12,
+        3,
+        4
+      ],
+      "hub": 1,
+      "coefficient": 524288,
+      "offset": 45065
+    },
+    {
+      "residue": 4,
+      "source": 2417,
+      "prefix": [
+        2,
+        6,
+        8
+      ],
+      "hub": 1,
+      "coefficient": 65536,
+      "offset": 277
+    },
+    {
+      "residue": 5,
+      "source": 36181,
+      "prefix": [
+        11,
+        5,
+        4
+      ],
+      "hub": 1,
+      "coefficient": 1048576,
+      "offset": 71689
+    },
+    {
+      "residue": 6,
+      "source": 1507,
+      "prefix": [
+        1,
+        7,
+        5
+      ],
+      "hub": 5,
+      "coefficient": 40960,
+      "offset": 271
+    },
+    {
+      "residue": 7,
+      "source": 1109,
+      "prefix": [
+        8,
+        3,
+        4
+      ],
+      "hub": 1,
+      "coefficient": 32768,
+      "offset": 2825
+    },
+    {
+      "residue": 8,
+      "source": 141,
+      "prefix": [
+        3,
+        5,
+        4
+      ],
+      "hub": 1,
+      "coefficient": 4096,
+      "offset": 289
+    },
+    {
+      "residue": 9,
+      "source": 4835,
+      "prefix": [
+        1,
+        8,
+        8
+      ],
+      "hub": 1,
+      "coefficient": 131072,
+      "offset": 527
+    },
+    {
+      "residue": 10,
+      "source": 4437,
+      "prefix": [
+        10,
+        3,
+        4
+      ],
+      "hub": 1,
+      "coefficient": 131072,
+      "offset": 11273
+    },
+    {
+      "residue": 11,
+      "source": 277,
+      "prefix": [
+        6,
+        3,
+        4
+      ],
+      "hub": 1,
+      "coefficient": 8192,
+      "offset": 713
+    },
+    {
+      "residue": 12,
+      "source": 69,
+      "prefix": [
+        4,
+        3,
+        4
+      ],
+      "hub": 1,
+      "coefficient": 2048,
+      "offset": 185
+    },
+    {
+      "residue": 13,
+      "source": 70997,
+      "prefix": [
+        14,
+        3,
+        4
+      ],
+      "hub": 1,
+      "coefficient": 2097152,
+      "offset": 180233
+    },
+    {
+      "residue": 14,
+      "source": 565,
+      "prefix": [
+        5,
+        5,
+        4
+      ],
+      "hub": 1,
+      "coefficient": 16384,
+      "offset": 1129
+    },
+    {
+      "residue": 15,
+      "source": 283989,
+      "prefix": [
+        16,
+        3,
+        4
+      ],
+      "hub": 1,
+      "coefficient": 8388608,
+      "offset": 720905
+    },
+    {
+      "residue": 16,
+      "source": 35,
+      "prefix": [
+        1,
+        5,
+        4
+      ],
+      "hub": 1,
+      "coefficient": 1024,
+      "offset": 79
+    },
+    {
+      "residue": 17,
+      "source": 17,
+      "prefix": [
+        2,
+        3,
+        4
+      ],
+      "hub": 1,
+      "coefficient": 512,
+      "offset": 53
+    },
+    {
+      "residue": 18,
+      "source": 75,
+      "prefix": [
+        1,
+        2,
+        8
+      ],
+      "hub": 1,
+      "coefficient": 2048,
+      "offset": 23
+    }
+  ],
+  "literal_first_hit_checks": 228,
+  "two_prime_difference_checks": 5700,
+  "joint_address_universe": {
+    "ternary_depths": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "prime_depths": [
+      1,
+      2
+    ],
+    "all_addresses": 15200
+  },
+  "low_rank_residues": {
+    "1": [
+      0,
+      1,
+      2,
+      5,
+      8,
+      9,
+      14,
+      16,
+      18
+    ],
+    "2": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "3": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ]
+  },
+  "huge_symbolic": {
+    "ternary_depth": 100,
+    "prime_depth": 80,
+    "parameter_bits": 495,
+    "odd_rank": 3,
+    "source_bit_lower_bound": 1462257007873670213278791754185670314587675246879824396602939236800972120429412422863229617660367819474326550556075613866094668193267791926323567337830
+  },
+  "boundary": "This compiler constructs a new certified source in a requested joint address; no arbitrary-source convergence follows."
+}
+PASS: exact arithmetic and independent certificate readers; all checks active under -O

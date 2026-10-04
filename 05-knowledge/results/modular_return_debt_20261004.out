@@ -1,0 +1,408 @@
+{
+  "status": "PROVED cut/tail/observer theorems; FINITE-EXACT declared audits",
+  "cuts": [
+    {
+      "modulus": 223,
+      "budget": 8,
+      "bounded_words": [
+        [
+          2,
+          3,
+          1,
+          1
+        ],
+        [
+          2,
+          3,
+          1,
+          2
+        ]
+      ],
+      "bounded_mass": "3/256",
+      "debt_cells": 253,
+      "terminal_debt_cells": 3,
+      "completion_rows": [
+        {
+          "prefix": [
+            1,
+            1,
+            1,
+            1,
+            2,
+            1,
+            1
+          ],
+          "first_overflow_last": 1,
+          "certified_last": 5,
+          "P": 6561,
+          "Q_prefix": 256,
+          "carry": 6913,
+          "residue": 6815,
+          "dyadic_period": 8192,
+          "mass": "1/4096",
+          "least_source": 1727135,
+          "actual_last": 5,
+          "actual_endpoint": 1383269,
+          "shorter_descent_prefix": null,
+          "all_proper_prefixes_grow": true
+        },
+        {
+          "prefix": [
+            1,
+            1,
+            2,
+            1,
+            2,
+            1
+          ],
+          "first_overflow_last": 1,
+          "certified_last": 4,
+          "P": 2187,
+          "Q_prefix": 256,
+          "carry": 2899,
+          "residue": 1703,
+          "dyadic_period": 4096,
+          "mass": "1/2048",
+          "least_source": 640679,
+          "actual_last": 5,
+          "actual_endpoint": 171041,
+          "shorter_descent_prefix": null,
+          "all_proper_prefixes_grow": true
+        },
+        {
+          "prefix": [
+            2,
+            3,
+            1
+          ],
+          "first_overflow_last": 3,
+          "certified_last": 3,
+          "P": 81,
+          "Q_prefix": 64,
+          "carry": 223,
+          "residue": 465,
+          "dyadic_period": 512,
+          "mass": "1/256",
+          "least_source": 74705,
+          "actual_last": 3,
+          "actual_endpoint": 11819,
+          "shorter_descent_prefix": [
+            2
+          ],
+          "all_proper_prefixes_grow": false
+        }
+      ],
+      "added_mass": "19/4096",
+      "total_return_descent_mass": "67/4096",
+      "residual_modular_rule_mass": "4029/4096",
+      "source_period": 1826816,
+      "direct_odd_multiples": 4096,
+      "direct_certified_count": 67,
+      "in_budget_root_points": 0,
+      "crossing_root_points": 0,
+      "independent_tail_controls": 54
+    },
+    {
+      "modulus": 233,
+      "budget": 10,
+      "bounded_words": [
+        [
+          2,
+          1,
+          1,
+          2,
+          3,
+          1
+        ],
+        [
+          5,
+          2,
+          1
+        ],
+        [
+          5,
+          2,
+          2
+        ],
+        [
+          5,
+          2,
+          3
+        ]
+      ],
+      "bounded_mass": "1/128",
+      "debt_cells": 1016,
+      "terminal_debt_cells": 5,
+      "completion_rows": [
+        {
+          "prefix": [
+            1,
+            3,
+            1,
+            1,
+            1,
+            3
+          ],
+          "first_overflow_last": 1,
+          "certified_last": 2,
+          "P": 2187,
+          "Q_prefix": 1024,
+          "carry": 5359,
+          "residue": 595,
+          "dyadic_period": 4096,
+          "mass": "1/2048",
+          "least_source": 229971,
+          "actual_last": 2,
+          "actual_endpoint": 122791,
+          "shorter_descent_prefix": [
+            1,
+            3
+          ],
+          "all_proper_prefixes_grow": false
+        },
+        {
+          "prefix": [
+            1,
+            4,
+            5
+          ],
+          "first_overflow_last": 1,
+          "certified_last": 1,
+          "P": 81,
+          "Q_prefix": 1024,
+          "carry": 1165,
+          "residue": 643,
+          "dyadic_period": 2048,
+          "mass": "1/1024",
+          "least_source": 270979,
+          "actual_last": 2,
+          "actual_endpoint": 5359,
+          "shorter_descent_prefix": [
+            1,
+            4
+          ],
+          "all_proper_prefixes_grow": false
+        },
+        {
+          "prefix": [
+            2,
+            1,
+            1,
+            2,
+            3
+          ],
+          "first_overflow_last": 2,
+          "certified_last": 2,
+          "P": 729,
+          "Q_prefix": 512,
+          "carry": 1631,
+          "residue": 9,
+          "dyadic_period": 2048,
+          "mass": "1/1024",
+          "least_source": 126985,
+          "actual_last": 3,
+          "actual_endpoint": 22601,
+          "shorter_descent_prefix": [
+            2
+          ],
+          "all_proper_prefixes_grow": false
+        },
+        {
+          "prefix": [
+            5,
+            2
+          ],
+          "first_overflow_last": 4,
+          "certified_last": 4,
+          "P": 27,
+          "Q_prefix": 128,
+          "carry": 233,
+          "residue": 1205,
+          "dyadic_period": 2048,
+          "mass": "1/1024",
+          "least_source": 353461,
+          "actual_last": 6,
+          "actual_endpoint": 1165,
+          "shorter_descent_prefix": [
+            5
+          ],
+          "all_proper_prefixes_grow": false
+        },
+        {
+          "prefix": [
+            6,
+            1,
+            1,
+            1,
+            1
+          ],
+          "first_overflow_last": 1,
+          "certified_last": 1,
+          "P": 729,
+          "Q_prefix": 1024,
+          "carry": 13747,
+          "residue": 661,
+          "dyadic_period": 2048,
+          "mass": "1/1024",
+          "least_source": 47765,
+          "actual_last": 1,
+          "actual_endpoint": 17009,
+          "shorter_descent_prefix": [
+            6
+          ],
+          "all_proper_prefixes_grow": false
+        }
+      ],
+      "added_mass": "9/2048",
+      "total_return_descent_mass": "25/2048",
+      "residual_modular_rule_mass": "2023/2048",
+      "source_period": 954368,
+      "direct_odd_multiples": 2048,
+      "direct_certified_count": 25,
+      "in_budget_root_points": 0,
+      "crossing_root_points": 1,
+      "independent_tail_controls": 90
+    }
+  ],
+  "growing_debt": {
+    "source": 707155,
+    "frontier": 503435,
+    "exact_exit": [
+      1,
+      755153
+    ],
+    "within_cost": 10,
+    "actual_return_cost": 11
+  },
+  "ordered_carry_hostile": [
+    [
+      27,
+      256,
+      233
+    ],
+    [
+      27,
+      256,
+      149
+    ]
+  ],
+  "finite_observer_drift_aliases": [
+    {
+      "ternary_depth": 1,
+      "observer19_depth": 1,
+      "clock": 18,
+      "growing_source_bits": 23,
+      "descending_source_bits": 41,
+      "source_residue": 1,
+      "endpoint_residue": 23
+    },
+    {
+      "ternary_depth": 1,
+      "observer19_depth": 2,
+      "clock": 342,
+      "growing_source_bits": 28,
+      "descending_source_bits": 370,
+      "source_residue": 1,
+      "endpoint_residue": 707
+    },
+    {
+      "ternary_depth": 2,
+      "observer19_depth": 1,
+      "clock": 18,
+      "growing_source_bits": 23,
+      "descending_source_bits": 41,
+      "source_residue": 1,
+      "endpoint_residue": 80
+    },
+    {
+      "ternary_depth": 2,
+      "observer19_depth": 2,
+      "clock": 342,
+      "growing_source_bits": 28,
+      "descending_source_bits": 374,
+      "source_residue": 1,
+      "endpoint_residue": 1790
+    },
+    {
+      "ternary_depth": 3,
+      "observer19_depth": 1,
+      "clock": 18,
+      "growing_source_bits": 29,
+      "descending_source_bits": 47,
+      "source_residue": 1,
+      "endpoint_residue": 422
+    },
+    {
+      "ternary_depth": 3,
+      "observer19_depth": 2,
+      "clock": 342,
+      "growing_source_bits": 32,
+      "descending_source_bits": 375,
+      "source_residue": 1,
+      "endpoint_residue": 5039
+    },
+    {
+      "ternary_depth": 4,
+      "observer19_depth": 1,
+      "clock": 54,
+      "growing_source_bits": 29,
+      "descending_source_bits": 82,
+      "source_residue": 1,
+      "endpoint_residue": 1448
+    },
+    {
+      "ternary_depth": 4,
+      "observer19_depth": 2,
+      "clock": 1026,
+      "growing_source_bits": 32,
+      "descending_source_bits": 1061,
+      "source_residue": 1,
+      "endpoint_residue": 24533
+    }
+  ],
+  "frontier_family_crosslinks": [
+    {
+      "nominal_word": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        4
+      ],
+      "residue": 1703,
+      "period": 4096,
+      "endpoint_intercept": 910,
+      "endpoint_slope": 2187,
+      "first_parameter": 0,
+      "replayed_parameters": 64,
+      "scope": "whole dyadic first-descent family; 223 only selects marked returns"
+    },
+    {
+      "nominal_word": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        5
+      ],
+      "residue": 6815,
+      "period": 8192,
+      "endpoint_intercept": 5459,
+      "endpoint_slope": 6561,
+      "first_parameter": 0,
+      "replayed_parameters": 64,
+      "scope": "whole dyadic first-descent family; 223 only selects marked returns"
+    }
+  ],
+  "root_controls": [
+    "3->5->1 stops",
+    "5->1 crossing edge retained"
+  ],
+  "invalid_inputs_rejected": 6
+}
+PASS: source guards and first-hit root checks remain active under -O
