@@ -1,0 +1,703 @@
+[
+  {
+    "integer": 7,
+    "binary_sleeve": 0,
+    "prefix": [
+      1,
+      1,
+      2,
+      3,
+      4
+    ],
+    "endpoint": 1,
+    "cycle_word": [
+      2
+    ],
+    "affine": {
+      "A": 11,
+      "p": 5,
+      "B": 347
+    },
+    "exact_residue": 7,
+    "modulus": 4096,
+    "golden": {
+      "a": -477,
+      "b": 296,
+      "q": 2
+    },
+    "parity_coordinate": {
+      "numerator": -50157,
+      "denominator": 7
+    },
+    "time_word_fibonacci_reader": {
+      "X": 2503,
+      "Y": 4050,
+      "golden_a": 591,
+      "golden_b": 956
+    },
+    "seal_polynomial": {
+      "0": 1,
+      "2": 1,
+      "3": -1,
+      "4": 1,
+      "5": -1,
+      "10": -1,
+      "11": 1,
+      "14": -1,
+      "16": 1
+    }
+  },
+  {
+    "integer": 9,
+    "binary_sleeve": 0,
+    "prefix": [
+      2,
+      1,
+      1,
+      2,
+      3,
+      4
+    ],
+    "endpoint": 1,
+    "cycle_word": [
+      2
+    ],
+    "affine": {
+      "A": 13,
+      "p": 6,
+      "B": 1631
+    },
+    "exact_residue": 9,
+    "modulus": 16384,
+    "golden": {
+      "a": 2021,
+      "b": -1248,
+      "q": 2
+    },
+    "parity_coordinate": {
+      "numerator": -401249,
+      "denominator": 7
+    },
+    "time_word_fibonacci_reader": {
+      "X": 9268,
+      "Y": 14996,
+      "golden_a": 2188,
+      "golden_b": 3540
+    },
+    "seal_polynomial": {
+      "0": 1,
+      "5": 1,
+      "6": -1,
+      "7": 1,
+      "8": -1,
+      "13": -1,
+      "14": 1,
+      "17": -1,
+      "19": 1
+    }
+  },
+  {
+    "integer": 27,
+    "binary_sleeve": 0,
+    "prefix": [
+      1,
+      2,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      1,
+      2,
+      1,
+      1,
+      2,
+      1,
+      1,
+      1,
+      2,
+      3,
+      1,
+      1,
+      2,
+      1,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1,
+      3,
+      1,
+      1,
+      1,
+      4,
+      2,
+      2,
+      4,
+      3,
+      1,
+      1,
+      5,
+      4
+    ],
+    "endpoint": 1,
+    "cycle_word": [
+      2
+    ],
+    "affine": {
+      "A": 70,
+      "p": 41,
+      "B": 195820718533800070543
+    },
+    "exact_residue": 27,
+    "modulus": 2361183241434822606848,
+    "golden": {
+      "a": 34340079325425715449194,
+      "b": -21223336199480653289891,
+      "q": 2
+    },
+    "parity_coordinate": {
+      "numerator": -2016558521929141941923846668932477,
+      "denominator": 7
+    },
+    "time_word_fibonacci_reader": {
+      "X": 174202085497730865813884,
+      "Y": 281864895246443684224775,
+      "golden_a": 41123533999694771007898,
+      "golden_b": 66539275749018047402993
+    },
+    "seal_polynomial": {
+      "0": 1,
+      "2": 1,
+      "3": -1,
+      "7": 1,
+      "8": -1,
+      "9": 1,
+      "10": -1,
+      "11": 1,
+      "12": -1,
+      "13": 1,
+      "14": -1,
+      "21": 1,
+      "22": -1,
+      "26": 1,
+      "27": -1,
+      "28": 1,
+      "29": -1,
+      "33": 1,
+      "34": -1,
+      "35": 1,
+      "36": -1,
+      "37": 1,
+      "38": -1,
+      "43": -1,
+      "44": 1,
+      "46": 1,
+      "47": -1,
+      "48": 1,
+      "49": -1,
+      "53": 1,
+      "54": -1,
+      "58": 1,
+      "59": -1,
+      "60": 1,
+      "61": -1,
+      "62": 1,
+      "63": -1,
+      "64": 1,
+      "65": -1,
+      "66": 1,
+      "67": -1,
+      "69": -1,
+      "70": 1,
+      "72": 1,
+      "73": -1,
+      "74": 1,
+      "75": -1,
+      "76": 1,
+      "77": -1,
+      "79": -1,
+      "81": 1,
+      "90": -1,
+      "92": 1,
+      "95": -1,
+      "96": 1,
+      "98": 1,
+      "99": -1,
+      "100": 1,
+      "101": -1,
+      "103": -1,
+      "106": 1,
+      "109": -1,
+      "111": 1
+    }
+  },
+  {
+    "integer": -3,
+    "binary_sleeve": 0,
+    "prefix": [
+      3
+    ],
+    "endpoint": -1,
+    "cycle_word": [
+      1
+    ],
+    "affine": {
+      "A": 3,
+      "p": 1,
+      "B": 1
+    },
+    "exact_residue": 13,
+    "modulus": 16,
+    "golden": {
+      "a": 4,
+      "b": -2,
+      "q": 1
+    },
+    "parity_coordinate": {
+      "numerator": -13,
+      "denominator": 3
+    },
+    "time_word_fibonacci_reader": {
+      "X": 5,
+      "Y": 8,
+      "golden_a": 1,
+      "golden_b": 2
+    },
+    "seal_polynomial": {
+      "0": 1,
+      "2": -1,
+      "4": 1
+    }
+  },
+  {
+    "integer": -9,
+    "binary_sleeve": 0,
+    "prefix": [
+      1,
+      1,
+      3
+    ],
+    "endpoint": -7,
+    "cycle_word": [
+      2,
+      1
+    ],
+    "affine": {
+      "A": 5,
+      "p": 3,
+      "B": 19
+    },
+    "exact_residue": 55,
+    "modulus": 64,
+    "golden": {
+      "a": 30,
+      "b": -12,
+      "q": 11
+    },
+    "parity_coordinate": {
+      "numerator": -1653,
+      "denominator": 31
+    },
+    "time_word_fibonacci_reader": {
+      "X": 52,
+      "Y": 84,
+      "golden_a": 12,
+      "golden_b": 20
+    },
+    "seal_polynomial": {
+      "0": 1,
+      "2": 1,
+      "4": 1,
+      "5": -1,
+      "7": -1,
+      "8": 1,
+      "9": -1,
+      "11": 1
+    }
+  },
+  {
+    "integer": -27,
+    "binary_sleeve": 0,
+    "prefix": [
+      4
+    ],
+    "endpoint": -5,
+    "cycle_word": [
+      1,
+      2
+    ],
+    "affine": {
+      "A": 4,
+      "p": 1,
+      "B": 1
+    },
+    "exact_residue": 5,
+    "modulus": 32,
+    "golden": {
+      "a": 32,
+      "b": -15,
+      "q": 11
+    },
+    "parity_coordinate": {
+      "numerator": -129,
+      "denominator": 31
+    },
+    "time_word_fibonacci_reader": {
+      "X": 8,
+      "Y": 13,
+      "golden_a": 2,
+      "golden_b": 3
+    },
+    "seal_polynomial": {
+      "0": 1,
+      "7": 1
+    }
+  },
+  {
+    "integer": -7,
+    "binary_sleeve": 0,
+    "prefix": [],
+    "endpoint": -7,
+    "cycle_word": [
+      2,
+      1
+    ],
+    "affine": {
+      "A": 0,
+      "p": 0,
+      "B": 0
+    },
+    "exact_residue": 1,
+    "modulus": 2,
+    "golden": {
+      "a": 6,
+      "b": 2,
+      "q": 11
+    },
+    "parity_coordinate": {
+      "numerator": -9,
+      "denominator": 31
+    },
+    "time_word_fibonacci_reader": {
+      "X": 0,
+      "Y": 0,
+      "golden_a": 0,
+      "golden_b": 0
+    },
+    "seal_polynomial": {
+      "0": 1,
+      "3": 1
+    }
+  },
+  {
+    "integer": -25,
+    "binary_sleeve": 0,
+    "prefix": [],
+    "endpoint": -25,
+    "cycle_word": [
+      1,
+      1,
+      2,
+      1,
+      1,
+      4,
+      1
+    ],
+    "affine": {
+      "A": 0,
+      "p": 0,
+      "B": 0
+    },
+    "exact_residue": 1,
+    "modulus": 2,
+    "golden": {
+      "a": 50,
+      "b": 15,
+      "q": 76
+    },
+    "parity_coordinate": {
+      "numerator": -68245,
+      "denominator": 262143
+    },
+    "time_word_fibonacci_reader": {
+      "X": 0,
+      "Y": 0,
+      "golden_a": 0,
+      "golden_b": 0
+    },
+    "seal_polynomial": {
+      "0": 1,
+      "2": 1,
+      "4": 1,
+      "7": 1,
+      "9": 1,
+      "11": 1,
+      "16": 1
+    }
+  },
+  {
+    "integer": 151,
+    "binary_sleeve": 0,
+    "prefix": [
+      1,
+      1,
+      10
+    ],
+    "endpoint": 1,
+    "cycle_word": [
+      2
+    ],
+    "affine": {
+      "A": 12,
+      "p": 3,
+      "B": 19
+    },
+    "exact_residue": 151,
+    "modulus": 8192,
+    "golden": {
+      "a": 586,
+      "b": -361,
+      "q": 2
+    },
+    "parity_coordinate": {
+      "numerator": -32621,
+      "denominator": 7
+    },
+    "time_word_fibonacci_reader": {
+      "X": 1508,
+      "Y": 2440,
+      "golden_a": 356,
+      "golden_b": 576
+    },
+    "seal_polynomial": {
+      "0": 1,
+      "2": 1,
+      "3": -1,
+      "4": 1,
+      "5": -1,
+      "7": -1,
+      "15": 1
+    }
+  },
+  {
+    "integer": 64,
+    "binary_sleeve": 6,
+    "prefix": [],
+    "endpoint": 1,
+    "cycle_word": [
+      2
+    ],
+    "affine": {
+      "A": 0,
+      "p": 0,
+      "B": 0
+    },
+    "exact_residue": 1,
+    "modulus": 2,
+    "golden": {
+      "a": -8,
+      "b": 5,
+      "q": 2
+    },
+    "parity_coordinate": {
+      "numerator": -64,
+      "denominator": 7
+    },
+    "time_word_fibonacci_reader": {
+      "X": 0,
+      "Y": 0,
+      "golden_a": 0,
+      "golden_b": 0
+    },
+    "seal_polynomial": {
+      "6": 1
+    }
+  },
+  {
+    "integer": 54,
+    "binary_sleeve": 1,
+    "prefix": [
+      1,
+      2,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      1,
+      2,
+      1,
+      1,
+      2,
+      1,
+      1,
+      1,
+      2,
+      3,
+      1,
+      1,
+      2,
+      1,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1,
+      3,
+      1,
+      1,
+      1,
+      4,
+      2,
+      2,
+      4,
+      3,
+      1,
+      1,
+      5,
+      4
+    ],
+    "endpoint": 1,
+    "cycle_word": [
+      2
+    ],
+    "affine": {
+      "A": 70,
+      "p": 41,
+      "B": 195820718533800070543
+    },
+    "exact_residue": 27,
+    "modulus": 2361183241434822606848,
+    "golden": {
+      "a": -55563415524906368739085,
+      "b": 34340079325425715449194,
+      "q": 2
+    },
+    "parity_coordinate": {
+      "numerator": -4033117043858283883847693337864954,
+      "denominator": 7
+    },
+    "time_word_fibonacci_reader": {
+      "X": 174202085497730865813884,
+      "Y": 281864895246443684224775,
+      "golden_a": 41123533999694771007898,
+      "golden_b": 66539275749018047402993
+    },
+    "seal_polynomial": {
+      "1": 1,
+      "3": 1,
+      "4": -1,
+      "8": 1,
+      "9": -1,
+      "10": 1,
+      "11": -1,
+      "12": 1,
+      "13": -1,
+      "14": 1,
+      "15": -1,
+      "22": 1,
+      "23": -1,
+      "27": 1,
+      "28": -1,
+      "29": 1,
+      "30": -1,
+      "34": 1,
+      "35": -1,
+      "36": 1,
+      "37": -1,
+      "38": 1,
+      "39": -1,
+      "44": -1,
+      "45": 1,
+      "47": 1,
+      "48": -1,
+      "49": 1,
+      "50": -1,
+      "54": 1,
+      "55": -1,
+      "59": 1,
+      "60": -1,
+      "61": 1,
+      "62": -1,
+      "63": 1,
+      "64": -1,
+      "65": 1,
+      "66": -1,
+      "67": 1,
+      "68": -1,
+      "70": -1,
+      "71": 1,
+      "73": 1,
+      "74": -1,
+      "75": 1,
+      "76": -1,
+      "77": 1,
+      "78": -1,
+      "80": -1,
+      "82": 1,
+      "91": -1,
+      "93": 1,
+      "96": -1,
+      "97": 1,
+      "99": 1,
+      "100": -1,
+      "101": 1,
+      "102": -1,
+      "104": -1,
+      "107": 1,
+      "110": -1,
+      "112": 1
+    }
+  },
+  {
+    "integer": -18,
+    "binary_sleeve": 1,
+    "prefix": [
+      1,
+      1,
+      3
+    ],
+    "endpoint": -7,
+    "cycle_word": [
+      2,
+      1
+    ],
+    "affine": {
+      "A": 5,
+      "p": 3,
+      "B": 19
+    },
+    "exact_residue": 55,
+    "modulus": 64,
+    "golden": {
+      "a": -42,
+      "b": 30,
+      "q": 11
+    },
+    "parity_coordinate": {
+      "numerator": -3306,
+      "denominator": 31
+    },
+    "time_word_fibonacci_reader": {
+      "X": 52,
+      "Y": 84,
+      "golden_a": 12,
+      "golden_b": 20
+    },
+    "seal_polynomial": {
+      "1": 1,
+      "3": 1,
+      "5": 1,
+      "6": -1,
+      "8": -1,
+      "9": 1,
+      "10": -1,
+      "12": 1
+    }
+  }
+]
