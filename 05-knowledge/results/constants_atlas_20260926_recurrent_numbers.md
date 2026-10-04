@@ -8,6 +8,12 @@ A shared number is a lead, never a connection: every entry below names the
 mechanism in each thread and says whether a map exists. Session
 `collatz-exponent-atlas-20260926` (opus), 2026-09-26.**
 
+**2026-10-04 companion:** [Natural-number roles](natural_number_roles_20261004.md)
+adds the small integers omitted by this census and explicit connections through
+the missing19-phase, Eisenstein torus quotients and guarded Collatz actions.
+The earlier AMM/log2(3) lead is already superseded in section4 below; its stale
+heading and results-index summary have now been synchronized with that repair.
+
 Scripts: `04-computation/experiments/constants_atlas_20260926_mine.py`
 (census; JSON `constants_atlas_20260926_mine.json`) and
 `constants_atlas_20260926_context.py` (the sentence carrying each value,
@@ -106,7 +112,7 @@ which are primes `= 1 mod 13`; that `1093 = 1 mod 13` is forced by
 `3^3 = 1 mod 13` and `1093 = (3^7-1)/2`, a one-line identity with no
 dynamical content. Verdict: TRANSPORTED by an identity; not a bridge.
 
-## 4. Family D (STRUCTURAL inside AMM 12592; one untested lead): the golden family
+## 4. Family D (STRUCTURAL inside AMM 12592; cross-problem lead SUPERSEDED): the golden family
 
 `gamma* = log_5(phi^2) = 0.597987`, `C_* = 1 + gamma* = 1.597987`,
 binding fraction `1/phi^2`, `delta = 1/phi`, base `5 = disc(phi)`; the
