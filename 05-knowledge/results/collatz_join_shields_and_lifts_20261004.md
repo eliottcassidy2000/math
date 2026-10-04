@@ -404,6 +404,15 @@ plateaus giving rigorous stopping reasons for particular search directions.
 
 ## Reproduction and audit boundaries
 
+The continuation [Binary debt and ternary sibling addresses](collatz_binary_ternary_guard_fusion_20261004.md)
+integrates incoming commits9b320b7701 and7c15ea9559. Their guarded half-source
+rewrites complement the joins here. The continuation extends their eight-row
+debt bank to sixteen, proves that sibling height is a ternary isometric
+address, and uses positivity to establish a natural-density product law
+for the binary and ternary necessary tests. The combined direct tests
+still leave positive density; the source-relative forward frontier remains
+the target. This does not change the frozen239-source counts above.
+
 Run `python3 -B 04-computation/experiments/collatz_join_shields_and_lifts_20261004.py`
 and repeat with `python3 -O -B`. The [script](../../04-computation/experiments/collatz_join_shields_and_lifts_20261004.py),
 [JSON](collatz_join_shields_and_lifts_20261004.json), and

@@ -1,0 +1,1127 @@
+{
+  "status": "PROVED scoped family and address mechanisms; FINITE-EXACT controls; Collatz OPEN",
+  "debt_rows": [
+    {
+      "s": 1,
+      "e": 1,
+      "source_word": [
+        1,
+        6,
+        1
+      ],
+      "child_word": [
+        1,
+        2,
+        1,
+        3
+      ],
+      "cost": 8,
+      "binary_c": 10,
+      "odd_relative_density": "1/512",
+      "first_tested_example": {
+        "source": 2363,
+        "child": 1181,
+        "s": 1,
+        "e": 1,
+        "r": 1,
+        "parent_word": [
+          1,
+          2,
+          1,
+          6,
+          1
+        ],
+        "child_word": [
+          3,
+          1,
+          2,
+          1,
+          3
+        ],
+        "endpoint": 281
+      }
+    },
+    {
+      "s": 1,
+      "e": 2,
+      "source_word": [
+        1,
+        6,
+        4,
+        1
+      ],
+      "child_word": [
+        2,
+        1,
+        1,
+        1,
+        3,
+        3
+      ],
+      "cost": 12,
+      "binary_c": 16,
+      "odd_relative_density": "1/32768",
+      "first_tested_example": {
+        "source": 45931,
+        "child": 22965,
+        "s": 1,
+        "e": 2,
+        "r": 1,
+        "parent_word": [
+          1,
+          2,
+          2,
+          1,
+          6,
+          4,
+          1
+        ],
+        "child_word": [
+          5,
+          2,
+          1,
+          1,
+          1,
+          3,
+          3
+        ],
+        "endpoint": 767
+      }
+    },
+    {
+      "s": 1,
+      "e": 3,
+      "source_word": [
+        1,
+        2,
+        9,
+        1
+      ],
+      "child_word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        5
+      ],
+      "cost": 13,
+      "binary_c": 19,
+      "odd_relative_density": "1/262144",
+      "first_tested_example": {
+        "source": 540587,
+        "child": 270293,
+        "s": 1,
+        "e": 3,
+        "r": 1,
+        "parent_word": [
+          1,
+          2,
+          2,
+          2,
+          1,
+          2,
+          9,
+          1
+        ],
+        "child_word": [
+          7,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          5
+        ],
+        "endpoint": 3383
+      }
+    },
+    {
+      "s": 1,
+      "e": 4,
+      "source_word": [
+        1,
+        14,
+        1
+      ],
+      "child_word": [
+        2,
+        2,
+        1,
+        3,
+        3,
+        1,
+        3
+      ],
+      "cost": 16,
+      "binary_c": 24,
+      "odd_relative_density": "1/8388608",
+      "first_tested_example": {
+        "source": 4380331,
+        "child": 2190165,
+        "s": 1,
+        "e": 4,
+        "r": 1,
+        "parent_word": [
+          1,
+          2,
+          2,
+          2,
+          2,
+          1,
+          14,
+          1
+        ],
+        "child_word": [
+          9,
+          2,
+          2,
+          1,
+          3,
+          3,
+          1,
+          3
+        ],
+        "endpoint": 857
+      }
+    },
+    {
+      "s": 1,
+      "e": 5,
+      "source_word": [
+        1,
+        1,
+        5,
+        11,
+        1
+      ],
+      "child_word": [
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        5
+      ],
+      "cost": 19,
+      "binary_c": 29,
+      "odd_relative_density": "1/268435456",
+      "first_tested_example": {
+        "source": 77781675,
+        "child": 38890837,
+        "s": 1,
+        "e": 5,
+        "r": 1,
+        "parent_word": [
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          1,
+          5,
+          11,
+          1
+        ],
+        "child_word": [
+          11,
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          2,
+          5
+        ],
+        "endpoint": 12833
+      }
+    },
+    {
+      "s": 1,
+      "e": 6,
+      "source_word": [
+        1,
+        1,
+        17,
+        1
+      ],
+      "child_word": [
+        1,
+        4,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        5
+      ],
+      "cost": 20,
+      "binary_c": 32,
+      "odd_relative_density": "1/2147483648",
+      "first_tested_example": {
+        "source": 9671731883,
+        "child": 4835865941,
+        "s": 1,
+        "e": 6,
+        "r": 1,
+        "parent_word": [
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          1,
+          17,
+          1
+        ],
+        "child_word": [
+          13,
+          1,
+          4,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          2,
+          5
+        ],
+        "endpoint": 199457
+      }
+    },
+    {
+      "s": 1,
+      "e": 7,
+      "source_word": [
+        1,
+        5,
+        12,
+        3,
+        1
+      ],
+      "child_word": [
+        1,
+        3,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        5
+      ],
+      "cost": 22,
+      "binary_c": 36,
+      "odd_relative_density": "1/34359738368",
+      "first_tested_example": {
+        "source": 72831707819,
+        "child": 36415853909,
+        "s": 1,
+        "e": 7,
+        "r": 1,
+        "parent_word": [
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          5,
+          12,
+          3,
+          1
+        ],
+        "child_word": [
+          15,
+          1,
+          3,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          2,
+          5
+        ],
+        "endpoint": 844865
+      }
+    },
+    {
+      "s": 1,
+      "e": 8,
+      "source_word": [
+        1,
+        11,
+        11,
+        1
+      ],
+      "child_word": [
+        2,
+        3,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        5
+      ],
+      "cost": 24,
+      "binary_c": 40,
+      "odd_relative_density": "1/549755813888",
+      "first_tested_example": {
+        "source": 3908975372971,
+        "child": 1954487686485,
+        "s": 1,
+        "e": 8,
+        "r": 1,
+        "parent_word": [
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          11,
+          11,
+          1
+        ],
+        "child_word": [
+          17,
+          2,
+          3,
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          2,
+          5
+        ],
+        "endpoint": 2834063
+      }
+    },
+    {
+      "s": 2,
+      "e": 1,
+      "source_word": [
+        6,
+        1
+      ],
+      "child_word": [
+        1,
+        1,
+        3
+      ],
+      "cost": 7,
+      "binary_c": 9,
+      "odd_relative_density": "1/256",
+      "first_tested_example": {
+        "source": 587,
+        "child": 293,
+        "s": 2,
+        "e": 1,
+        "r": 1,
+        "parent_word": [
+          1,
+          2,
+          6,
+          1
+        ],
+        "child_word": [
+          4,
+          1,
+          1,
+          3
+        ],
+        "endpoint": 47
+      }
+    },
+    {
+      "s": 2,
+      "e": 2,
+      "source_word": [
+        10,
+        1
+      ],
+      "child_word": [
+        3,
+        2,
+        1,
+        3
+      ],
+      "cost": 11,
+      "binary_c": 15,
+      "odd_relative_density": "1/16384",
+      "first_tested_example": {
+        "source": 119339,
+        "child": 59669,
+        "s": 2,
+        "e": 2,
+        "r": 1,
+        "parent_word": [
+          1,
+          2,
+          2,
+          10,
+          1
+        ],
+        "child_word": [
+          6,
+          3,
+          2,
+          1,
+          3
+        ],
+        "endpoint": 443
+      }
+    },
+    {
+      "s": 2,
+      "e": 3,
+      "source_word": [
+        10,
+        1
+      ],
+      "child_word": [
+        1,
+        1,
+        1,
+        3,
+        3
+      ],
+      "cost": 11,
+      "binary_c": 17,
+      "odd_relative_density": "1/65536",
+      "first_tested_example": {
+        "source": 275627,
+        "child": 137813,
+        "s": 2,
+        "e": 3,
+        "r": 1,
+        "parent_word": [
+          1,
+          2,
+          2,
+          2,
+          10,
+          1
+        ],
+        "child_word": [
+          8,
+          1,
+          1,
+          1,
+          3,
+          3
+        ],
+        "endpoint": 767
+      }
+    },
+    {
+      "s": 2,
+      "e": 4,
+      "source_word": [
+        3,
+        1,
+        11,
+        1
+      ],
+      "child_word": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        5
+      ],
+      "cost": 16,
+      "binary_c": 24,
+      "odd_relative_density": "1/8388608",
+      "first_tested_example": {
+        "source": 58790571,
+        "child": 29395285,
+        "s": 2,
+        "e": 4,
+        "r": 1,
+        "parent_word": [
+          1,
+          2,
+          2,
+          2,
+          2,
+          3,
+          1,
+          11,
+          1
+        ],
+        "child_word": [
+          10,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          2,
+          5
+        ],
+        "endpoint": 34487
+      }
+    },
+    {
+      "s": 2,
+      "e": 5,
+      "source_word": [
+        5,
+        10,
+        1
+      ],
+      "child_word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        5,
+        3
+      ],
+      "cost": 16,
+      "binary_c": 26,
+      "odd_relative_density": "1/33554432",
+      "first_tested_example": {
+        "source": 140855979,
+        "child": 70427989,
+        "s": 2,
+        "e": 5,
+        "r": 1,
+        "parent_word": [
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          5,
+          10,
+          1
+        ],
+        "child_word": [
+          12,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          5,
+          3
+        ],
+        "endpoint": 20657
+      }
+    },
+    {
+      "s": 2,
+      "e": 6,
+      "source_word": [
+        3,
+        12,
+        3,
+        1
+      ],
+      "child_word": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        5
+      ],
+      "cost": 19,
+      "binary_c": 31,
+      "odd_relative_density": "1/1073741824",
+      "first_tested_example": {
+        "source": 1018112683,
+        "child": 509056341,
+        "s": 2,
+        "e": 6,
+        "r": 1,
+        "parent_word": [
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          3,
+          12,
+          3,
+          1
+        ],
+        "child_word": [
+          14,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          2,
+          5
+        ],
+        "endpoint": 41993
+      }
+    },
+    {
+      "s": 2,
+      "e": 7,
+      "source_word": [
+        13,
+        5,
+        1
+      ],
+      "child_word": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        5
+      ],
+      "cost": 19,
+      "binary_c": 33,
+      "odd_relative_density": "1/4294967296",
+      "first_tested_example": {
+        "source": 1762962091,
+        "child": 881481045,
+        "s": 2,
+        "e": 7,
+        "r": 1,
+        "parent_word": [
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          13,
+          5,
+          1
+        ],
+        "child_word": [
+          16,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          2,
+          5
+        ],
+        "endpoint": 18179
+      }
+    },
+    {
+      "s": 2,
+      "e": 8,
+      "source_word": [
+        5,
+        17,
+        1
+      ],
+      "child_word": [
+        3,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        5
+      ],
+      "cost": 23,
+      "binary_c": 39,
+      "odd_relative_density": "1/274877906944",
+      "first_tested_example": {
+        "source": 1829406681771,
+        "child": 914703340885,
+        "s": 2,
+        "e": 8,
+        "r": 1,
+        "parent_word": [
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          5,
+          17,
+          1
+        ],
+        "child_word": [
+          18,
+          3,
+          2,
+          1,
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          2,
+          5
+        ],
+        "endpoint": 884231
+      }
+    }
+  ],
+  "search_counts": [
+    {
+      "cost": 1,
+      "words": 1
+    },
+    {
+      "cost": 2,
+      "words": 2
+    },
+    {
+      "cost": 3,
+      "words": 4
+    },
+    {
+      "cost": 4,
+      "words": 8
+    },
+    {
+      "cost": 5,
+      "words": 16
+    },
+    {
+      "cost": 6,
+      "words": 32
+    },
+    {
+      "cost": 7,
+      "words": 64
+    },
+    {
+      "cost": 8,
+      "words": 128
+    },
+    {
+      "cost": 9,
+      "words": 256
+    },
+    {
+      "cost": 10,
+      "words": 512
+    },
+    {
+      "cost": 11,
+      "words": 1024
+    },
+    {
+      "cost": 12,
+      "words": 2048
+    },
+    {
+      "cost": 13,
+      "words": 4096
+    },
+    {
+      "cost": 14,
+      "words": 8192
+    },
+    {
+      "cost": 15,
+      "words": 16384
+    },
+    {
+      "cost": 16,
+      "words": 32768
+    },
+    {
+      "cost": 17,
+      "words": 65536
+    },
+    {
+      "cost": 18,
+      "words": 131072
+    },
+    {
+      "cost": 19,
+      "words": 262144
+    },
+    {
+      "cost": 20,
+      "words": 524288
+    },
+    {
+      "cost": 21,
+      "words": 1048576
+    },
+    {
+      "cost": 22,
+      "words": 2097152
+    },
+    {
+      "cost": 23,
+      "words": 4194304
+    },
+    {
+      "cost": 24,
+      "words": 4192255
+    }
+  ],
+  "words_examined": 12580862,
+  "binary_necessary_density": "134156760173/549755813888",
+  "ternary": {
+    "rows": [
+      {
+        "k": 0,
+        "ell": 1,
+        "modulus": 3,
+        "residue": 2,
+        "covered_by": []
+      },
+      {
+        "k": 1,
+        "ell": 4,
+        "modulus": 81,
+        "residue": 40,
+        "covered_by": []
+      },
+      {
+        "k": 2,
+        "ell": 7,
+        "modulus": 2187,
+        "residue": 273,
+        "covered_by": []
+      },
+      {
+        "k": 3,
+        "ell": 11,
+        "modulus": 177147,
+        "residue": 94109,
+        "covered_by": [
+          0
+        ]
+      },
+      {
+        "k": 4,
+        "ell": 14,
+        "modulus": 4782969,
+        "residue": 2503585,
+        "covered_by": []
+      },
+      {
+        "k": 5,
+        "ell": 18,
+        "modulus": 387420489,
+        "residue": 62804493,
+        "covered_by": []
+      },
+      {
+        "k": 6,
+        "ell": 21,
+        "modulus": 10460353203,
+        "residue": 5439587969,
+        "covered_by": [
+          0
+        ]
+      },
+      {
+        "k": 7,
+        "ell": 24,
+        "modulus": 282429536481,
+        "residue": 221027314255,
+        "covered_by": []
+      },
+      {
+        "k": 8,
+        "ell": 28,
+        "modulus": 22876792454961,
+        "residue": 7257210008829,
+        "covered_by": []
+      },
+      {
+        "k": 9,
+        "ell": 31,
+        "modulus": 617673396283947,
+        "residue": 1814302502207,
+        "covered_by": [
+          0
+        ]
+      },
+      {
+        "k": 10,
+        "ell": 35,
+        "modulus": 50031545098999707,
+        "residue": 14515778388298306,
+        "covered_by": []
+      },
+      {
+        "k": 11,
+        "ell": 38,
+        "modulus": 1350851717672992089,
+        "residue": 1216893913247817471,
+        "covered_by": []
+      },
+      {
+        "k": 12,
+        "ell": 42,
+        "modulus": 109418989131512359209,
+        "residue": 26645831972935300103,
+        "covered_by": [
+          0
+        ]
+      },
+      {
+        "k": 13,
+        "ell": 45,
+        "modulus": 2954312706550833698643,
+        "residue": 2906264669978311344064,
+        "covered_by": []
+      },
+      {
+        "k": 14,
+        "ell": 48,
+        "modulus": 79766443076872509863361,
+        "residue": 14759551523611037904570,
+        "covered_by": []
+      },
+      {
+        "k": 15,
+        "ell": 52,
+        "modulus": 6461081889226673298932241,
+        "residue": 6444830166338357930942543,
+        "covered_by": [
+          0
+        ]
+      },
+      {
+        "k": 16,
+        "ell": 55,
+        "modulus": 174449211009120179071170507,
+        "residue": 43608239821557965925795202,
+        "covered_by": []
+      },
+      {
+        "k": 17,
+        "ell": 59,
+        "modulus": 14130386091738734504764811067,
+        "residue": 5636889114999515266526697651,
+        "covered_by": []
+      },
+      {
+        "k": 18,
+        "ell": 62,
+        "modulus": 381520424476945831628649898809,
+        "residue": 234560592792438998145251057018,
+        "covered_by": [
+          0
+        ]
+      },
+      {
+        "k": 19,
+        "ell": 65,
+        "modulus": 10301051460877537453973547267843,
+        "residue": 7975188956094735755830798164541,
+        "covered_by": []
+      },
+      {
+        "k": 20,
+        "ell": 69,
+        "modulus": 834385168331080533771857328695283,
+        "residue": 156509569152186745748560908558780,
+        "covered_by": []
+      }
+    ],
+    "lower": "288811137934943769736700806047013/834385168331080533771857328695283",
+    "upper": "278114429122538444931637813230457/803482013948447921409936686891754",
+    "tail_bound": "1/21694014376608093878068290546077358",
+    "odd_sources_through_19999": 3461,
+    "hostiles": [
+      1,
+      7,
+      27,
+      703
+    ]
+  },
+  "fused_necessary_density_interval": [
+    "70481613080157771592507126632794648061124381/441718908522598355509101603792726441225879552",
+    "36596222176235766019186392674720300611675355/229354048655964530745110448123146421405745152"
+  ],
+  "fused_decimal_interval": [
+    0.15956213718786713,
+    0.15956213718786713
+  ],
+  "crt_cases": 585,
+  "incoming_eight_family_seed_hits": [
+    6783
+  ],
+  "checks": 8765636
+}
