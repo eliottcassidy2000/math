@@ -126,6 +126,11 @@ def crt_and_phases():
     check({x*x % 9 for x in range(9) if gcd(x, 9) == 1} == {1, 4, 7}, "squares9")
     check(order(2, 13) == 12 and order(2, 19) == 18, "phase periods")
     check(order(2, 247) == 36, "minimal joined period")
+    check((order(64, 13), order(64, 19), order(64, 247)) == (2, 3, 6), "inverse block clocks")
+    for b in range(7):
+        n = (5*2**(1+6*b)-1)//3
+        next_n = (5*2**(1+6*(b+1))-1)//3
+        check(step(n) == (5, 1+6*b) and next_n == 64*n+21, "guarded inverse channel")
     for a in range(1, 37):
         for n in range(247):
             y = (3*n+1)*pow(2, -a, 247) % 247

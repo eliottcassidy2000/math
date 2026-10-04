@@ -8,4 +8,4 @@ Sharp descending return budgets: 223 cost<=8; 233 cost<=10.
 233 rule entry: least source55221; relative density1/128 among odd233-multiples.
 Common future: U^5(223)=U^5(111)=U^10(233)=425.
 Inherited tournament response independently replayed: 233,291,123,223.
-PASS: 22994 explicit checks; standard library; no assert statements.
+PASS: 23002 explicit checks; standard library; no assert statements.
