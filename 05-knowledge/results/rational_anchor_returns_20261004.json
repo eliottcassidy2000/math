@@ -1,0 +1,285 @@
+[
+  {
+    "chart": {
+      "word": [
+        1,
+        1,
+        2
+      ],
+      "anchor_numerator": -19,
+      "anchor_denominator": 11
+    },
+    "repetitions": 1,
+    "terminal": 1,
+    "terminal_exponent": 8,
+    "exponent_period": 18,
+    "source_expression": "(16^m*(19+11*r*2^t)-19*27^m)/(11*27^m)",
+    "parameters": {
+      "m": 1,
+      "r": 1,
+      "t": 8
+    },
+    "actual_word": "(1,1,2)^(m-1) followed by (1,1,2+t)",
+    "replayed_source_bit_length": 8,
+    "replayed_source": 151
+  },
+  {
+    "chart": {
+      "word": [
+        1,
+        1,
+        2
+      ],
+      "anchor_numerator": -19,
+      "anchor_denominator": 11
+    },
+    "repetitions": 2,
+    "terminal": 1,
+    "terminal_exponent": 278,
+    "exponent_period": 486,
+    "source_expression": "(16^m*(19+11*r*2^t)-19*27^m)/(11*27^m)",
+    "parameters": {
+      "m": 2,
+      "r": 1,
+      "t": 278
+    },
+    "actual_word": "(1,1,2)^(m-1) followed by (1,1,2+t)",
+    "replayed_source_bit_length": 277
+  },
+  {
+    "chart": {
+      "word": [
+        1,
+        1,
+        2
+      ],
+      "anchor_numerator": -19,
+      "anchor_denominator": 11
+    },
+    "repetitions": 3,
+    "terminal": 1,
+    "terminal_exponent": 11942,
+    "exponent_period": 13122,
+    "source_expression": "(16^m*(19+11*r*2^t)-19*27^m)/(11*27^m)",
+    "parameters": {
+      "m": 3,
+      "r": 1,
+      "t": 11942
+    },
+    "actual_word": "(1,1,2)^(m-1) followed by (1,1,2+t)",
+    "replayed_source_bit_length": 11940
+  },
+  {
+    "chart": {
+      "word": [
+        1,
+        1,
+        2
+      ],
+      "anchor_numerator": -19,
+      "anchor_denominator": 11
+    },
+    "repetitions": 1,
+    "terminal": -1,
+    "terminal_exponent": 17,
+    "exponent_period": 18,
+    "source_expression": "(16^m*(19+11*r*2^t)-19*27^m)/(11*27^m)",
+    "parameters": {
+      "m": 1,
+      "r": -1,
+      "t": 17
+    },
+    "actual_word": "(1,1,2)^(m-1) followed by (1,1,2+t)",
+    "replayed_source_bit_length": 17,
+    "replayed_source": -77673
+  },
+  {
+    "chart": {
+      "word": [
+        1,
+        1,
+        2
+      ],
+      "anchor_numerator": -19,
+      "anchor_denominator": 11
+    },
+    "repetitions": 2,
+    "terminal": -1,
+    "terminal_exponent": 35,
+    "exponent_period": 486,
+    "source_expression": "(16^m*(19+11*r*2^t)-19*27^m)/(11*27^m)",
+    "parameters": {
+      "m": 2,
+      "r": -1,
+      "t": 35
+    },
+    "actual_word": "(1,1,2)^(m-1) followed by (1,1,2+t)",
+    "replayed_source_bit_length": 34,
+    "replayed_source": -12065971225
+  },
+  {
+    "chart": {
+      "word": [
+        1,
+        1,
+        2
+      ],
+      "anchor_numerator": -19,
+      "anchor_denominator": 11
+    },
+    "repetitions": 3,
+    "terminal": -1,
+    "terminal_exponent": 5381,
+    "exponent_period": 13122,
+    "source_expression": "(16^m*(19+11*r*2^t)-19*27^m)/(11*27^m)",
+    "parameters": {
+      "m": 3,
+      "r": -1,
+      "t": 5381
+    },
+    "actual_word": "(1,1,2)^(m-1) followed by (1,1,2+t)",
+    "replayed_source_bit_length": 5379
+  },
+  {
+    "chart": {
+      "word": [
+        1,
+        1,
+        2
+      ],
+      "anchor_numerator": -19,
+      "anchor_denominator": 11
+    },
+    "repetitions": 1,
+    "terminal": -5,
+    "terminal_exponent": 12,
+    "exponent_period": 18,
+    "source_expression": "(16^m*(19+11*r*2^t)-19*27^m)/(11*27^m)",
+    "parameters": {
+      "m": 1,
+      "r": -5,
+      "t": 12
+    },
+    "actual_word": "(1,1,2)^(m-1) followed by (1,1,2+t)",
+    "replayed_source_bit_length": 14,
+    "replayed_source": -12137
+  },
+  {
+    "chart": {
+      "word": [
+        1,
+        1,
+        2
+      ],
+      "anchor_numerator": -19,
+      "anchor_denominator": 11
+    },
+    "repetitions": 2,
+    "terminal": -5,
+    "terminal_exponent": 12,
+    "exponent_period": 486,
+    "source_expression": "(16^m*(19+11*r*2^t)-19*27^m)/(11*27^m)",
+    "parameters": {
+      "m": 2,
+      "r": -5,
+      "t": 12
+    },
+    "actual_word": "(1,1,2)^(m-1) followed by (1,1,2+t)",
+    "replayed_source_bit_length": 13,
+    "replayed_source": -7193
+  },
+  {
+    "chart": {
+      "word": [
+        1,
+        1,
+        2
+      ],
+      "anchor_numerator": -19,
+      "anchor_denominator": 11
+    },
+    "repetitions": 3,
+    "terminal": -5,
+    "terminal_exponent": 2928,
+    "exponent_period": 13122,
+    "source_expression": "(16^m*(19+11*r*2^t)-19*27^m)/(11*27^m)",
+    "parameters": {
+      "m": 3,
+      "r": -5,
+      "t": 2928
+    },
+    "actual_word": "(1,1,2)^(m-1) followed by (1,1,2+t)",
+    "replayed_source_bit_length": 2929
+  },
+  {
+    "chart": {
+      "word": [
+        1,
+        1,
+        2
+      ],
+      "anchor_numerator": -19,
+      "anchor_denominator": 11
+    },
+    "repetitions": 1,
+    "terminal": -17,
+    "terminal_exponent": 2,
+    "exponent_period": 18,
+    "source_expression": "(16^m*(19+11*r*2^t)-19*27^m)/(11*27^m)",
+    "parameters": {
+      "m": 1,
+      "r": -17,
+      "t": 2
+    },
+    "actual_word": "(1,1,2)^(m-1) followed by (1,1,2+t)",
+    "replayed_source_bit_length": 6,
+    "replayed_source": -41
+  },
+  {
+    "chart": {
+      "word": [
+        1,
+        1,
+        2
+      ],
+      "anchor_numerator": -19,
+      "anchor_denominator": 11
+    },
+    "repetitions": 2,
+    "terminal": -17,
+    "terminal_exponent": 2,
+    "exponent_period": 486,
+    "source_expression": "(16^m*(19+11*r*2^t)-19*27^m)/(11*27^m)",
+    "parameters": {
+      "m": 2,
+      "r": -17,
+      "t": 2
+    },
+    "actual_word": "(1,1,2)^(m-1) followed by (1,1,2+t)",
+    "replayed_source_bit_length": 5,
+    "replayed_source": -25
+  },
+  {
+    "chart": {
+      "word": [
+        1,
+        1,
+        2
+      ],
+      "anchor_numerator": -19,
+      "anchor_denominator": 11
+    },
+    "repetitions": 3,
+    "terminal": -17,
+    "terminal_exponent": 11180,
+    "exponent_period": 13122,
+    "source_expression": "(16^m*(19+11*r*2^t)-19*27^m)/(11*27^m)",
+    "parameters": {
+      "m": 3,
+      "r": -17,
+      "t": 11180
+    },
+    "actual_word": "(1,1,2)^(m-1) followed by (1,1,2+t)",
+    "replayed_source_bit_length": 11182
+  }
+]

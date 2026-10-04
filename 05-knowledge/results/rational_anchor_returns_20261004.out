@@ -1,0 +1,38 @@
+General compiler: 23 primitive growth necklaces; exact first-descent controls 1840
+All 171 old rows / 65 minimal cylinders avoid n=743 mod2048
+rational return m 2 t 2 source 999 modulus 2^ 10 endpoint 89
+rational return m 3 t 3 source 21223 modulus 2^ 15 endpoint 12749
+rational return m 4 t 4 source 303847 modulus 2^ 20 endpoint 153997
+rational return m 5 t 4 source 3908327 modulus 2^ 24 endpoint 3342643
+rational return m 6 t 5 source 529244903 modulus 2^ 29 endpoint 381917357
+rational return m 7 t 6 source 10176144103 modulus 2^ 34 endpoint 3097988129
+rational return m 8 t 7 source 494702142183 modulus 2^ 39 endpoint 254146465001
+rational return m 9 t 7 source 4854093947623 modulus 2^ 43 endpoint 4208159975735
+rational return m 10 t 8 source 81063993647847 modulus 2^ 48 endpoint 29648030562635
+Added density lower (m=3..30): 351602244700605111198803325916524593697/11150372599265311570767859136324180752990208
+Added density tail upper: 1/226927052770280523073176334466394910841077674
+Added density decimal display: 3.1532779875335455e-05
+One-bit-weakened exit hostile: [487, 731, 1097, 823, 1235, 1853, 695]
+Sealed source m 1 terminal exponent t 8 mod 18
+  finite replay: source bit length 8 odd steps 3 target 1
+Sealed source m 2 terminal exponent t 278 mod 486
+  finite replay: source bit length 277 odd steps 6 target 1
+Sealed source m 3 terminal exponent t 11942 mod 13122
+  finite replay: source bit length 11940 odd steps 9 target 1
+Sealed source m 4 terminal exponent t 11942 mod 354294
+  finite replay: source bit length 11939 odd steps 12 target 1
+Sealed source m 5 terminal exponent t 2137706 mod 9565938
+Sealed source m 6 terminal exponent t 97797086 mod 258280326
+Signed seal: 1 m 1 t 8 source bits 8
+Signed seal: 1 m 2 t 278 source bits 277
+Signed seal: 1 m 3 t 11942 source bits 11940
+Signed seal: -1 m 1 t 17 source bits 17
+Signed seal: -1 m 2 t 35 source bits 34
+Signed seal: -1 m 3 t 5381 source bits 5379
+Signed seal: -5 m 1 t 12 source bits 14
+Signed seal: -5 m 2 t 12 source bits 13
+Signed seal: -5 m 3 t 2928 source bits 2929
+Signed seal: -17 m 1 t 2 source bits 6
+Signed seal: -17 m 2 t 2 source bits 5
+Signed seal: -17 m 3 t 11180 source bits 11182
+ALL CHECKS PASSED
