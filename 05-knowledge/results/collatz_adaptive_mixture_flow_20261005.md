@@ -3,12 +3,14 @@
 **Status: PROVED scoped constructions and bounds; FINITE-EXACT checks;
 positivity at every integer and universal Collatz remain OPEN.**
 
-The main result is a summable incoming flow with root weight 1, total mass
-at most **16/3**, and no chosen fixed exchange rate between its two costs.
-Its weights have a factorial formula, exact infinite-fibre sums, and at most
-a polynomial loss against the best fixed exchange rate for each certified
-source. It is positive exactly on the rooted component. This improves the
-weights; it does not establish that the rooted component contains every input.
+The main results are adaptive critical incoming flows with exact factorial
+weights and telescoping infinite-fibre sums. A finite, checked boundary
+improves the first mixture's full mass bound from **16/3 to less than41/10**.
+It also permits a singular parameter mixture, after deleting the already
+killed root, whose nonroot mass is **less than23/8**. Both have deficit
+measures of mass1 on rooted multiples of3. Their positive support is exactly
+the rooted component. This improves the weights; it does not establish that
+the rooted component contains every input.
 
 ## 1. Inheritance, portfolio, and the retained obstruction
 
@@ -21,6 +23,21 @@ everywhere. The hostile is the same note's **C7**: 107->161->121->91 with an
 extra positive predecessor 429 defeats the specified coarse golden observer.
 The least-used relevant sidecars here are the removed root loop, its first
 nontrivial child 3, and the full source/word accompanying a compressed bill.
+
+Incoming commits `7118147ce1` and `15b6d2dac1` were read during this work.
+[Critical beta weights](collatz_critical_beta_weights_20261005.md) independently
+gives the beta(2,2) critical mixture, polynomial comparison and computable
+finite-measure approximants. [Mixed refuel weights](collatz_mixed_refuel_weights_20261005.md)
+gives the beta(1,2) formula below at strict discount rho<1, its posterior
+updates and exact fibre tails. [Green weights](collatz_green_weight_20261005.md)
+sharpens the original estimate using the first root column.
+These are overlapping mechanisms, not independent discoveries to count twice.
+Here the added ingredients are the next root generation, the completed
+total-cost kernels, the resulting critical beta(1,2) bounds, and the
+singular mixture allowed by the finite boundary. The incoming
+[lookahead obstruction](collatz_finite_lookahead_weight_obstruction_20261005.md)
+also excludes specified growing observation windows; our certificate-based
+counters retain information outside that excluded class.
 
 The concept board is:
 
@@ -324,7 +341,157 @@ tests are now precise:
 No known negative cycle was identified with a positive ROOT. No value from
 finite verification is treated as an unbounded convergence theorem.
 
-## 9. Reproduction
+## 9. A finite paid boundary controls an infinite remainder
+
+**P6 — PROVED conditional kernel formula; explicit six-base case PROVED.**
+Suppose a finite, checked rooted kernel B_q contains exactly all rooted
+bases of total sibling cost K<=q, where q>=2. No depth cutoff is silently
+imposed. For a base b in this kernel let
+
+    h_b=q-K(b)+1,       e_b=(-b-h_b) mod3 in {0,1,2},
+    P_q(r)=sum_(b in B_q) (1-r)^L(b) r^K(b),
+    R_q(r)=P_q(r)+r^(q-1) sum_(b in B_q)
+                             (1-r)^L(b) (1+r+r^2-r^e_b).  (15)
+
+Then the entire rooted base flow, including everything outside the kernel,
+has mass at most R_q(r). Its full sibling extension has mass at most
+R_q(r)/(1-r).
+
+Proof. The first outside children at b have depths k>=h_b, except the
+forbidden class k=-b mod3. Their total factor is
+
+    sum_(k>=h_b allowed) (1-r)r^k
+      =r^h_b (1-r^e_b/(1+r+r^2)).
+
+Each boundary subtree has total relative mass at most 1/(1-kappa), with
+1-kappa=r^2/(1+r+r^2). Multiply by its parent's weight and sum. Since
+K(b)+h_b=q+1, the remainder is exactly the second term in (15). Distinct
+boundary subtrees have disjoint base sets because every base has one parent.
+This is a worst-column bound only after the explicitly paid boundary.
+
+For q=2, direct inverse closure gives precisely
+
+    B_2={1,3,17,11,7,9},
+    (L,K)=(0,0),(1,1),(2,2),(3,2),(4,2),(5,2),
+    R_2(r)=1+5r-3r^2-4r^3+10r^4-10r^5+5r^6-r^7.          (16)
+
+These six bases account for all paths of cost at most2, including every
+zero-cost edge between them. All exits have cost at least3. In particular
+R_2(r)=1+O(r) as r tends to zero, sharper than (3)'s bound tending to2.
+This improvement at the parameter boundary is what the next construction
+needs. It does not assert an independently discovered positive lower bound
+for an arbitrary source.
+
+The program exhausts the entire cost-eight kernel and stores every base,
+parent, edge depth and both counters in the JSON. A separate forward reader
+checks every parent equation, and a closed-form inverse reader checks that
+no admissible child inside the budget is missing. Strict increase of L
+away from ROOT verifies grounding. The resulting **FINITE-EXACT** table is:
+
+| Cost budget q | Bases | Maximum L | Upper bound on full W-mass | Upper bound on nonroot Z-mass below |
+|---|---:|---:|---:|---:|
+| 2 | 6 | 5 | 407/84 | 61/14 |
+| 3 | 18 | 9 | 4.485548 | 3.468182 |
+| 4 | 41 | 12 | 4.325936 | 3.185294 |
+| 5 | 130 | 21 | 4.231736 | 3.053717 |
+| 6 | 399 | 31 | 4.148047 | 2.958436 |
+| 7 | 1186 | 34 | 4.109018 | 2.913904 |
+| 8 | 3591 | 40 | 4.070056 | 2.874681 |
+
+Decimals in this table are rounded **up**; the output retains the exact
+rationals. In particular the last row proves full W-mass<41/10 and
+nonroot Z-mass<23/8, using the finite checked kernel and (15).
+It also proves that any rooted base with K<=8 has L<=40. This is a
+completed cost-budget classification, not a claim that all sources have
+bounded cost. The search has an explicit aborting resource cap; the theorem
+does not assume such a kernel can be completed for every q.
+
+The L<=40 bound cannot be restarted at an arbitrary intermediate target.
+For any R, the actual bases n_i=3^i 2^(R+3-i)-1, 0<=i<=R, satisfy
+G(n_i)=n_(i+1) with zero sibling cost on every one of these R edges.
+They are positive and increasing, and do not terminate at1 on this prefix.
+The checker retains R=64 as a hostile. A ROOT-anchored finite classification
+does not imply a uniform refuel frequency on arbitrary trajectory segments.
+
+For reproducible rational evaluation, write B(a,b) for the beta integral.
+The two bounds in a row are respectively
+
+    2 sum_b B(K+1,L+1)
+      +2 sum_b sum_(j in {0,1,2}, j!=e_b) B(q+j,L+1),
+
+    1+sum_(b!=1) B(K,L+1)
+      +sum_b sum_(j in {0,1,2}, j!=e_b) B(q-1+j,L+1).        (17)
+
+All terms are positive. The first expression is 2 integral R_q(r) dr.
+The second is integral [R_q(r)-(1-r)]/r dr. Keeping larger completed
+kernels cannot worsen either bound: replacing a boundary vertex by its
+actual children refines the same positive subtree estimate.
+
+## 10. Removing the root allows a heavier parameter tail
+
+**P7 — PROVED with the six-base bound; sharper constants FINITE-EXACT.**
+On V only, define
+
+    Z(n)=integral_0^1 ((1-r)/r) f_r(n) dr.
+
+This parameter measure has infinite mass at r=0. The deleted root would
+indeed have infinite weight. Every actual nonroot ROOT certificate has
+K>=1, so each of its weights is nevertheless finite and equals
+
+    Z(n)=B(K,L+2)=(K-1)!(L+1)!/(L+K+1)!,
+    Z(n)/W(n)=(L+K+2)/(2K).                               (18)
+
+Set Z=0 on unrooted inputs. Exclude the root **before** integrating;
+if desired, assign it a bookkeeping value afterward, outside this formula.
+
+The six-base bound justifies summing the singular integral:
+
+    sum_(n in V) Z(n)
+       <= integral_0^1 [R_2(r)-(1-r)]/r dr =61/14.          (19)
+
+The numerator subtraction removes exactly the root from the sibling
+extension R_2/(1-r). Its zero at r=0 removes the otherwise nonintegrable
+pole. Nonnegative integration still preserves every killed incoming
+inequality and exact row. The completed cost-eight certificate sharpens
+(19) to **sum_V Z<23/8**.
+
+The differences still telescope on the correct domain K>=1:
+
+    z(L,K)=z(L+1,K)+z(L,K+1),
+    sum_(j>=0) z(L+1,K+j)=z(L,K).
+
+Its actual root-entry ray now has weights
+
+    Z(S^j1)=1/[j(j+1)] for j>=1,     sum_(j>=1) Z(S^j1)=1.
+
+Exactly as in (11), lambda_0(n)=Z(n) at multiples of3 and zero elsewhere
+is a probability measure, and Z is its pre-root occupation measure.
+The checked kernel gives E_(lambda_0)[odd root time]<23/8. Its support is
+still precisely the rooted multiples of3.
+
+This is not merely a rescaling of W: (18) reallocates weight toward large
+base depth relative to sibling cost. For instance, Z(3)=1/3 and
+Z(27)=(25/8)W(27). It is also the pointwise limit on V of
+W_(alpha,2)/alpha as alpha decreases to zero. That limit alone would not
+justify summability; the finite boundary in (19) supplies the missing bound.
+
+The adaptation guarantee survives: for t=L+K and K>=1, (9) implies
+
+    Z(n) >= [(L+1)/(K(t+1))] M(L,K).
+
+No upper bound by M is claimed for this improper mixture. Its values can
+be approximated without a termination assumption: an unfinished base
+prefix of length L has an upper bound z(L,max(K,1))<=1/(L+2).
+Again, effective approximation does not prove a positive value.
+
+The reusable research move is concrete: replace a worst-case estimate
+near a singular parameter by a finite checked boundary, then test whether
+that improved endpoint order permits a previously divergent mixture.
+Here it succeeds on mass control, while the full-support question remains
+unchanged. The root deletion is authorized by the actual terminal state;
+deleting an arbitrary unpaid source would invalidate the argument.
+
+## 11. Reproduction
 
 [Exact program](../../04-computation/experiments/collatz_adaptive_mixture_flow_20261005.py)
 and [JSON output](collatz_adaptive_mixture_flow_20261005.json):
@@ -334,7 +501,7 @@ python3 04-computation/experiments/collatz_adaptive_mixture_flow_20261005.py
 python3 -O 04-computation/experiments/collatz_adaptive_mixture_flow_20261005.py
 ```
 
-**672,721 explicit checks**, identical outputs normally and with -O.
+**713,962 explicit checks**, identical outputs normally and with -O.
 The universe is all positive odds below 2^15; an independent reader follows
 actual U-words while the other follows sibling-base edges. The full array
 rectangle 0<=L,K<=60 checks splitting, tails and the regret inequality;
@@ -343,11 +510,18 @@ factorials. Inverse target rows below4096 retain six actual siblings and
 their exact infinite remainder. The controller tests t=0..127; the
 three-divisible section tests unit odd targets below8192. Fixed-price root
 generations and beta-prior formulas have separate exact checks.
+The complete3591-base cost-eight kernel is validated by forward parent
+decoding and exhaustive inverse closure within the cost budget. Removing
+the zero-cost child9, corrupting the root boundary, and altering a cost
+counter are rejected. Exact positive beta sums evaluate all seven boundary
+bounds in (17), including the singular mixture.
 
 The finite source head has W-mass approximately2.599557 and lambda-mass
 approximately0.572152; JSON retains exact fractions. These are finite lower
 bounds, not estimates that the unknown remainder is small. The proved
-global quantities are W-mass<=16/3 and lambda-mass=1. Controls include the
+global quantities include W-mass<41/10, Z-mass<23/8, and both injection
+measures having mass1. The singular finite head has mass approximately
+1.930619 and injection mass approximately0.735069. Controls include the
 divergent uniform-prior root fibre and equal-cost, different-word sources.
 All load-bearing calculations use integers and rational fractions; decimals
 are display only. This session includes self-audit and separate code paths,

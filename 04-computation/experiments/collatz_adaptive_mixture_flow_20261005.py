@@ -5,6 +5,7 @@ Only finite orbit checks use discovery. The theorem about all rooted sources
 is proved separately in the companion note. Checks survive python -O.
 """
 from fractions import Fraction as F
+from collections import deque
 from functools import lru_cache
 from hashlib import sha256
 from math import comb, factorial
@@ -58,6 +59,66 @@ def weight(L, K):
 
 def beta_integer(a, b):
     return F(factorial(a - 1) * factorial(b - 1), factorial(a + b - 1))
+
+
+def singular_weight(L, K):
+    if K < 1:
+        raise ValueError("The singular mixture excludes ROOT and requires K>=1")
+    return beta_integer(K, L + 2)
+
+
+def cost_kernel(q):
+    """Discover then verify every rooted base of total sibling cost <=q.
+
+    No depth cutoff is assumed to be complete: exceeding a resource cap is
+    an error. The forward decoder and exhaustive boundary check are separate.
+    """
+    entries = {1: (0, 0, None, None)}
+    todo = deque([1])
+    while todo:
+        c = todo.popleft()
+        L, K, _, _ = entries[c]
+        y = c
+        for k in range(q - K + 1):
+            if y % 3 and not (c == 1 and k == 0):
+                b = inverse_base(y)
+                require(b not in entries, ("duplicate inverse address", b))
+                entries[b] = (L + 1, K + k, c, k)
+                todo.append(b)
+            y = sibling(y)
+        require(len(entries) <= 200000 and L <= 2000, "kernel search cap, no completion claim")
+
+    verify_cost_kernel(entries, q)
+    return entries
+
+
+def verify_cost_kernel(entries, q):
+    require(entries.get(1) == (0, 0, None, None), "bad ROOT boundary")
+    for b, (L, K, parent, depth) in entries.items():
+        require(type(b) is int and b > 0 and b % 2 == 1)
+        require(type(L) is int and type(K) is int and L >= 0 and 0 <= K <= q)
+        require(unsibling(b) == (b, 0) and K <= q)
+        if b != 1:
+            require(parent in entries and type(depth) is int and depth >= 0)
+            require(unsibling(U(b)) == (parent, depth))
+            lp, kp, _, _ = entries[parent]
+            require(L == lp + 1 and K == kp + depth)
+        # Independent closed-form fibre, rather than repeated S in discovery.
+        for k in range(q - K + 1):
+            y = 4 ** k * b + (4 ** k - 1) // 3
+            if y % 3 and not (b == 1 and k == 0):
+                a = 1 if y % 6 == 5 else 2
+                child = (2 ** a * y - 1) // 3
+                require(child in entries and entries[child] == (L + 1, K + k, b, k))
+
+
+def require_rejected(entries, q):
+    try:
+        verify_cost_kernel(entries, q)
+    except RuntimeError:
+        require(True)
+    else:
+        require(False, "invalid kernel was accepted")
 
 
 def polynomial_integral(L, K):
@@ -146,6 +207,10 @@ def main():
                     + weight(L, K + 8) == w)
             if L <= 18 and K <= 18:
                 require(w == polynomial_integral(L, K))
+            if K:
+                z = singular_weight(L, K)
+                require(z == w * F(L + K + 2, 2 * K))
+                require(z == singular_weight(L + 1, K) + singular_weight(L, K + 1))
             t = L + K
             best = (F(L, t) ** L * F(K, t) ** K) if t else F(1)
             require(F(2 * (L + 1), (t + 1) * (t + 2)) * best <= w <= best)
@@ -166,8 +231,67 @@ def main():
                 beta_bounds.append({"alpha": alpha, "beta": beta, "bound": str(formula)})
     require(beta_bounds[0]["bound"] == "16/3")
 
+    # Exhaust the total-cost budget, retaining arbitrary base depth. This
+    # finite completed certificate controls the entire unbounded remainder.
+    largest_kernel = cost_kernel(8)
+    small_kernel = {b: row for b, row in largest_kernel.items() if row[1] <= 2}
+    missing_zero_cost_child = dict(small_kernel)
+    del missing_zero_cost_child[9]
+    require_rejected(missing_zero_cost_child, 2)
+    bad_root = dict(small_kernel)
+    bad_root[1] = (1, 0, None, None)
+    require_rejected(bad_root, 2)
+    bad_bill = dict(small_kernel)
+    bad_bill[3] = (1, 0, 1, 1)
+    require_rejected(bad_bill, 2)
+    kernel_bounds = []
+    previous_proper = previous_singular = None
+    for q in range(2, 9):
+        kernel = {b: row for b, row in largest_kernel.items() if row[1] <= q}
+        P_integral = sum((beta_integer(K + 1, L + 1)
+                          for L, K, _, _ in kernel.values()), F(0))
+        proper = 2 * P_integral
+        singular = 1 + sum((beta_integer(K, L + 1)
+                            for b, (L, K, _, _) in kernel.items() if b != 1), F(0))
+        for c, (L, K, _, _) in kernel.items():
+            h = q - K + 1
+            e = (-c - h) % 3
+            for j in range(3):
+                if j != e:
+                    proper += 2 * beta_integer(q + j, L + 1)
+                    singular += beta_integer(q - 1 + j, L + 1)
+        for r in (F(1, 16), F(1, 4), F(1, 2), F(3, 4)):
+            D = 1 + r + r * r
+            P = sum(((1 - r) ** L * r ** K for L, K, _, _ in kernel.values()), F(0))
+            boundary = F(0)
+            boundary_numerator = F(0)
+            for c, (L, K, _, _) in kernel.items():
+                h = q - K + 1
+                e = (-c - h) % 3
+                boundary += (1 - r) ** L * r ** (K + h) * (1 - r ** e / D)
+                boundary_numerator += (1 - r) ** L * (D - r ** e)
+            require(boundary * D == r ** (q + 1) * boundary_numerator)
+            R = P + boundary * D / (r * r)
+            require(R <= 2 + 2 * r - r * r)
+            if q == 2:
+                polynomial = 1 + 5*r - 3*r**2 - 4*r**3 + 10*r**4 - 10*r**5 + 5*r**6 - r**7
+                require(R == polynomial)
+        if q == 2:
+            require(set(kernel) == {1, 3, 17, 11, 7, 9})
+            require(proper == F(407, 84) and singular == F(61, 14))
+        if previous_proper is not None:
+            require(proper < previous_proper and singular < previous_singular)
+        previous_proper, previous_singular = proper, singular
+        kernel_bounds.append({"budget": q, "base_count": len(kernel),
+                              "max_base_depth": max(row[0] for row in kernel.values()),
+                              "proper_full_mass_bound": rational_record(proper),
+                              "singular_nonroot_mass_bound": rational_record(singular)})
+    require(len(largest_kernel) == 3591)
+    require(previous_proper < F(41, 10) and previous_singular < F(23, 8))
+    require(sum((singular_weight(0, j) for j in range(1, 101)), F(0)) + F(1, 101) == 1)
+
     rows = []
-    total_head = flux_head = F(0)
+    total_head = flux_head = singular_head = singular_flux_head = F(0)
     maxL = maxK = 0
     limit = 1 << 15
     for n in range(1, limit, 2):
@@ -180,6 +304,10 @@ def main():
         total_head += w
         if n % 3 == 0:
             flux_head += w
+        if n > 1:
+            singular_head += singular_weight(L, K)
+            if n % 3 == 0:
+                singular_flux_head += singular_weight(L, K)
         if n > 1 and U(n) != 1:
             lm, km = labels(U(n))
             require(L == lm + 1 and K == km + (v2(3 * n + 1) - 1) // 2)
@@ -193,10 +321,13 @@ def main():
                 partial += weight(*labels(p))
                 p = sibling(p)
             require(partial + weight(L, K + 6) == w)
+            require(sum((singular_weight(L + 1, K + j) for j in range(6)), F(0))
+                    + singular_weight(L, K + 6) == singular_weight(L, K))
         if n in (1, 3, 5, 7, 9, 13, 17, 21, 27, 53, 113, 155, 111):
             rows.append({"n": n, "L": L, "K": K, "odd_steps": tau,
                          "weight": str(w)})
     require(total_head < F(16, 3) and flux_head < 1)
+    require(singular_head < F(23, 8) and singular_flux_head < 1)
 
     # Transport through the existing six-edge common-future paid controller.
     word = (1, 2, 1, 1, 1, 2)
@@ -238,6 +369,14 @@ def main():
     # Hostile controls: counts do not identify a legal route or its source.
     require(labels(53) == labels(113) == (1, 3))
     require(v2(3 * 53 + 1) == 5 and v2(3 * 113 + 1) == 2)
+    # A ROOT-anchored cost classification cannot be restarted mid-orbit:
+    # arbitrary long legitimate G-prefixes have zero sibling cost.
+    R = 64
+    for i in range(R):
+        n = 3 ** i * 2 ** (R + 3 - i) - 1
+        m = 3 ** (i + 1) * 2 ** (R + 2 - i) - 1
+        require(v2(3 * n + 1) == 1 and U(n) == m > n > 1)
+        require(unsibling(n) == (n, 0) and unsibling(m) == (m, 0))
     # Sending counter mass to an unrelated finite-grid boundary is not ROOT.
     require(weight(1, 0) + weight(0, 1) == 1)
     # Exact weight 1 at ROOT is NOT the target's killed incoming inequality.
@@ -259,20 +398,36 @@ def main():
         "adaptive_mass_upper_bound": "16/3",
         "root_sibling_mass": "2",
         "three_divisible_flux": "1",
+        "singular_nonroot_mass_upper_bound": "23/8 (strict; verified kernel)",
+        "improved_proper_full_mass_upper_bound": "41/10 (strict; verified kernel)",
+        "cost_kernel_bounds": kernel_bounds,
+        "cost_kernel_columns": ["base", "L", "K", "parent", "edge_depth"],
+        "cost_kernel": [[b, *row] for b, row in sorted(largest_kernel.items())],
         "finite_head_mass": rational_record(total_head),
         "finite_head_three_divisible_flux": rational_record(flux_head),
+        "finite_head_singular_mass": rational_record(singular_head),
+        "finite_head_singular_flux": rational_record(singular_flux_head),
         "max_head_labels": [maxL, maxK],
         "sample_weights": rows,
         "controller_transports": controller_rows,
         "controls": {"same_counts_different_words": [53, 113],
+                     "nonroot_zero_cost_prefix_length": R,
                      "uniform_prior_root_fibre_diverges": True,
                      "partial_counters_do_not_certify_root": True},
         "limits": "Finite checks do not establish support positivity at untested integers."
     }
     dest = Path(__file__).resolve().parents[2] / "05-knowledge/results/collatz_adaptive_mixture_flow_20261005.json"
-    dest.write_text(json.dumps(out, indent=2, sort_keys=True) + "\n")
+    kernel_rows = out.pop("cost_kernel")
+    encoded = json.dumps(out, indent=2, sort_keys=True)
+    encoded = (encoded[:-2] + ',\n  "cost_kernel": [\n'
+               + ',\n'.join('    ' + json.dumps(row) for row in kernel_rows)
+               + '\n  ]\n}\n')
+    dest.write_text(encoded)
     print(json.dumps({"checks": CHECKS, "head_mass_decimal": float(total_head),
-                      "head_flux_decimal": float(flux_head), "output": str(dest)}, sort_keys=True))
+                      "head_flux_decimal": float(flux_head),
+                      "singular_head_mass_decimal": float(singular_head),
+                      "singular_head_flux_decimal": float(singular_flux_head),
+                      "output": str(dest)}, sort_keys=True))
 
 
 if __name__ == "__main__":

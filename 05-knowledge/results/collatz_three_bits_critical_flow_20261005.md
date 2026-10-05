@@ -706,10 +706,12 @@ the unsolved support-positivity obligation.
 
 The [adaptive-mixture follow-up](collatz_adaptive_mixture_flow_20261005.md),
 P1-P5, sharpens the base mass bound to 2+2r-r^2 by retaining the root's
-first two generations. A beta(1,2) mixture has total full-flow mass<=16/3,
-exact factorial weights and telescoping inverse fibres. Its deficit is a
-unit probability measure on rooted multiples of three. These improvements
-remove fixed-price loss and retain the same OPEN positivity obligation.
+first two generations. Its P6-P7 then retain a completed cost kernel:
+the beta(1,2) mixture has full mass<41/10, while a singular mixture on
+nonroot sources has mass<23/8. Both have exact factorial weights,
+telescoping inverse fibres and deficit probability measures on rooted
+multiples of three. These improvements remove fixed-price loss and retain
+the same OPEN positivity obligation.
 
 The same incoming note needed a scoped audit: a real negative log
 probability is not literally an integer binary prefix length; its stopping
