@@ -4,6 +4,10 @@
 **Filed by:** opus-2026-04-04-S4
 **Depends on:** THM-284, OCF
 
+**Boundary-count correction (2026-10-04):** each new boundary arm has
+n-1 free tiles, not n-2. The total is 2n-1. The source/sink proof and
+the polynomial restriction identity below are unchanged.
+
 ## Statement
 
 The multilinear polynomial H_{n+2} decomposes as:
@@ -13,8 +17,8 @@ The multilinear polynomial H_{n+2} decomposes as:
 where:
 - **t_inner**: the C(n-1,2) overlap tiles = tiles of the n-tournament on inner vertices {2,...,n+1}
 - **t_boundary**: the 2n-1 boundary tiles:
-  - **Bottom wiring** (n-2 tiles): (x, 1) for x = 3,...,n connecting vertex 1 to inner vertices
-  - **Top wiring** (n-2 tiles): (n+2, y) for y = 2,...,n-1 connecting vertex n+2 to inner vertices
+  - **Bottom wiring** (n-1 tiles): (x, 1) for x = 3,...,n+1 connecting vertex 1 to inner vertices
+  - **Top wiring** (n-1 tiles): (n+2, y) for y = 2,...,n connecting vertex n+2 to inner vertices
   - **Apex** (1 tile): (n+2, 1) connecting vertex 1 to vertex n+2
 - **Δ_n**: the boundary correction, involving at least one boundary tile in every term
 
@@ -56,8 +60,8 @@ The staircase δ_{n} (for n+2 vertices) decomposes as:
  wiring wiring
 ```
 
-- δ_n = δ_{n-2} ⊔ bottom(n-2 tiles) ⊔ top(n-2 tiles) ⊔ apex(1 tile)
-- Total: C(n-1,2) + (n-2) + (n-2) + 1 = C(n-1,2) + 2n-3 = C(n+1,2). ✓
+- δ_n = δ_{n-2} ⊔ bottom(n-1 tiles) ⊔ top(n-1 tiles) ⊔ apex(1 tile)
+- Total: C(n-1,2) + (n-1) + (n-1) + 1 = C(n-1,2) + 2n-1 = C(n+1,2). ✓
 
 ## The Recursive Construction of H(t)
 

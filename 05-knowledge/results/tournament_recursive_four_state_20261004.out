@@ -1,0 +1,14 @@
+N4 fibers {'T': [0], '+': [1], '-': [2], 'S': [3, 4, 5, 6, 7]} ; H {'T': 1, '+': 3, 'S': 5, '-': 3} ; automorphisms {'T': 1, '+': 3, 'S': 1, '-': 3}
+S states ab/c diverge after flip a; unrestricted predictive quotient needs8 states.
+Closed halfsection c0 has4 states; general unique-transitive lemma controls all n.
+Finite predictive controls n2..5: 2045 distinct pairs.
+Four-symbol codec:341 words of length0..4;3 relabelings each; 1023 checks.
+H(+,-)=H(-,+)=9, but SCC size words3,1,1,3 and1,3,3,1 distinguish them.
+Typed modes: padding n+2/Hfixed; selfjoin2n/H^2; selfsubstitution n^2.
+C3 selfjoin:order6,H9; selfsubstitution:order9,H3159.
+TT2 cloning givesT4,H1; skew doubling gives source-over-C3,H3.
+Skew recursion: A^2=2I,B^2=-I,AB+BA=0; four-product expansion cancels cross terms.
+D^d(M)^2=I_(2^d) tensor [2^d M^2-(2^d-1)I]; 300 checks, all labelled n1..4,depth0..3.
+Squared skew magnitude z maps2z+1; z+1 doubles, unlike word-slope squaring.
+Malformed or non-language controls rejected: 5
+PASS: exact graph storage and typed recursions; no arithmetic coverage inference.

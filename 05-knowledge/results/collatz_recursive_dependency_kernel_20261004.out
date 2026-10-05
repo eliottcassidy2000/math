@@ -1,0 +1,22 @@
+PROVED-IMPLEMENTATION: H(n)=(729n+669)/1024 on n=155 mod2048.
+Finite prefix universe: m=1..32; four lifts each; checked 128 prefixes, plus m=64,128,256,512 guard-only controls.
+Closed/linear block products agree; binary composition products across m=1..32: 178
+Completed supplied-terminal controls: 12 ; separately observed terminal odd edges: 1622
+Their added 468 odd letters use 12 repeat counts and shared V/W templates;
+the 1622 supplied terminal letters and all integer/source bits remain explicit.
+Each repeat adds odd rank6, halving cost10, ordinary rank16.
+All-height completed family literal control: m 1 b 888 source_bits 887 terminal_bits 887 ranks (7, 905)
+All-height completed family literal control: m 2 b 786750 source_bits 786750 terminal_bits 786749 ranks (13, 786783)
+Symbolic completed family: m=1..16, lifts0/1/7; 240 closed-form/inverse-letter residue comparisons; no large-source expansion.
+Power-of-three prefix family: m 1 exponent 483 mod 512
+Power-of-three prefix family: m 2 exponent 335331 mod 524288
+Power-of-three prefix family: m 3 exponent 130883043 mod 536870912
+Power-of-three prefix family: m 4 exponent 2815237603 mod 549755813888
+Power-of-three prefix family: m 5 exponent 57727175695843 mod 562949953421312
+Power-of-three prefix family: m 6 exponent 118277217394171363 mod 576460752303423488
+Power-of-three prefix family: m 7 exponent 223208588358819061219 mod 590295810358705651712
+Power-of-three prefix family: m 8 exponent 286516676612331060141539 mod 604462909807314587353088
+Power-of-three controls: 40 ; modular guards only, with no terminal home claim or huge source expansion.
+Explicit API/type/root/fuel/phase/expansion-cap hostiles rejected: 14 ; plus128 sharp fuel failures and H-not-word hostile.
+Scope: repeat description compresses proof structure; source and arithmetic bits remain.
+No finite guard bank, unconditional source coverage, or self-grounding cycle is claimed.

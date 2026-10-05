@@ -1,0 +1,26 @@
+Four ordered channels are weighted pairs, not an oriented tournament.
+Kernel: J(a)J(b)=J(ab)+J(a/b); cross term2 iff a=b>0.
+Exact positive rational values 23; ordered pair controls 529.
+Raw matrix controls 81: full Sym^2 plus exterior-square intertwining and traces.
+Matrix universe: all2x2 entries in{-1,0,1}, including singular boundary controls.
+Trace/determinant iteration:625 half-integer matrices, four squarings each; 2500 checks.
+Determinant1/2 hostile: traces0,-1,1/2; the first x^2-1 step is not an invariant fiber.
+All positive valuation words with total cost<=9: 511.
+Typed trace-axis round trips 511; exact source replays 1022.
+Full marked tensor carrier controls 511 (list/tuple); ordered compositions 961.
+Symmetric character controls, degrees0..6: 3577.
+Ordered compositions of all cost<=5 words: 961.
+Six words with r3,A5,J1753/864:
+  (1, 1, 3): carry 19, anchor 19/5, source 55 mod64
+  (1, 2, 2): carry 23, anchor 23/5, source 43 mod64
+  (1, 3, 1): carry 31, anchor 31/5, source 19 mod64
+  (2, 1, 2): carry 29, anchor 29/5, source 57 mod64
+  (2, 2, 1): carry 37, anchor 37/5, source 33 mod64
+  (3, 1, 1): carry 49, anchor 49/5, source 61 mod64
+Order hostile:1212 has carry85;1122 has carry73; both diagonal entries81,64.
+Nontrivial translation-1/4 has all tested symmetric characters of the identity.
+The full tensor retains the carry; positivity repairs its ambient overall-sign loss.
+Source27 admits12 but not1212; source5 admits42 but hits1 before its last letter.
+Invalid typed trace-axis inputs rejected 6.
+Invalid marked-tensor inputs rejected 4.
+No graph-size identity, intrinsic tournament orientation, or convergence claim.
