@@ -12,15 +12,17 @@ HYP-9174; the three-place form of the clock-as-fixed-point-group reading) +
 FINITE-EXACT (Probes A, B, E, F: THM-4522's 88-point census reproduced; the
 value spectrum of `I` to `q <= 4000` and the prime index census to
 `20000`; the carry census to `A <= 18`; `|Bad_k cap <3>|` exactly to
-`k = 24` and by a dynamic programme to `k = 6000`) + CONJECTURE / SPECULATIVE
-/ ANALOGY where so marked. Collatz OPEN; LRC(14) OPEN in the repo (external
-claim under audit). Nothing here is a proof step for either.** New
+`k = 24`; the share by a floating-point dynamic programme to `k = 6000`,
+confirmed by the audit's exact big-integer programme) + CONJECTURE /
+SPECULATIVE / ANALOGY where so marked. Collatz OPEN; LRC(14) OPEN in the repo
+(external claim under audit). Nothing here is a proof step for either.** New
 hypothesis files: HYP-9174 (the Artin coordinate of the `x2x3` spectrum),
 HYP-9175 (the powers of three against bounded-depth certificates).
 Script `04-computation/experiments/collatz_coalescence_20261004_probes.py`,
 output beside it (`ALL PROBES RAN in 13.1s` before the E2 extension; `~60s`
-with it). Independent audit: subagent, blind re-derivation of Probes A and
-E and a read of this note's typed claims (section 9).
+with it). **Independently audited (blind subagent, own code, 33 checks, 0
+failures): SOUND WITH CORRECTIONS, all six applied in place and logged in
+MISTAKES (section 9).**
 
 ---
 
@@ -223,8 +225,10 @@ exactly at `1` (shape `(2,1)` and its repeats), `-1` (`(1,1)`), `-7, -5`
 tower (the owner's `phi^8 + 1 = 7 phi^4`, `phi^10 = 1 + 11 phi^5` are its
 levels `4, 5`, eleventh note); while the golden shift (the parity language of
 the standard Collatz map, THM-4528) has `tr(A^j) = L_j` points of period
-dividing `j`. Probe B checks both to `j = 60`: the cat map loses exactly the
-shift's two points `0^inf` and `(01)^inf` when `j` is even. So: **the
+dividing `j`. Probe B checks both to `j = 60`: for even `j` the count of
+cat-map points is the shift's count minus `2`, the two period-two codings
+`(01)^inf` and `(10)^inf` (the word `0^inf` codes the origin, fixed by every
+`A^j`; audit C4). So: **the
 Fibonacci groups are to the golden beta-map what the clock groups are to
 Collatz** -- the fixed-point groups of the natural extension, and the
 "lattice cycles" (`(1/2)Z[phi]` for the beta-map, exactly two, THM-4528; `Z`
@@ -320,7 +324,7 @@ is one coordinate that the thread keeps rediscovering:
 | THM-4520 | `(Z/3^n)^x = <2>`, cyclic of order `L_n = 2 3^(n-1)` | `2` generates | the level operator is a circulant; the Fourier profile is one sequence `m_n(k) = mu_hat_n(2^k)`; the half-turn `2^(L/2) = -1` is the sheet (THM-4521) |
 | THM-4523 | `(Z/a)^x` | `2` must generate for backward separation (`a = 7` fails: half the units bare) | backward separation; A-injectivity for every non-Wieferich `a` (the audit's sketch, MISTAKE-553 entry) |
 | THM-4532 | `(Z/p)^x`, `(Z/9)^x` | discrete-log coordinates; the sheet is the parity of the exponent | Paley minus a vertex is a two-sheet clock; `log_2 S(A) = 2(A mod 3) - v mod 6` |
-| THM-4522 + HYP-9174 (today) | `(Z/q)^x` and its subgroup `<2,3>` | `I(m/q) = (least absolute residue of the coset)/q` | the `x2x3` lonely spectrum: top `{1/5, ..., 1/14}` where `2` is a primitive root, then `5/73` where `<2,3>` is the squares and `5` the least non-residue; index distribution and the two-generator Artin fraction `0.707` (Probe A) |
+| THM-4522 + HYP-9174 (today) | `(Z/q)^x` and its subgroup `<2,3>` | `I(m/q) = (least absolute residue of the coset)/q` for `q` prime to `6` | the `x2x3` lonely spectrum: top `{1/5, ..., 1/14}` where `<2,3> = (Z/q')^x` for the 6-free part `q' in {5, 7, 11, 13}`, then `5/73` where `<2,3>` is the squares and `5` the least non-residue; index distribution and the two-generator Artin fraction `0.707` (Probe A) |
 | HYP-9175 (today) | `(Z/2^k)^x` and its subgroup `<3> = {1, 3 mod 8}` | `-1 notin <3>`; closure of `<3>` in `Z_2^x` | which cycle points the powers of three can shadow; the resisting exponent `log_3(-5) in Z_2` (Probe E) |
 
 Typing of the axis: source = each of the five problems; target = the
@@ -414,13 +418,18 @@ the one hit the model owes `3x+1`. Test: THM-4484's free/sporadic census for
 convergent shapes would refute the model and locate a structure (Lagarias
 1990's `k^(1-eps)` counts are the thing to reproduce first).
 
-**P3 = HYP-9174 (the Artin spectrum). CONJECTURE; tested today.** Below
-`1/14` the `x2x3` lonely spectrum is the Artin coordinate of `<2,3>`: values
-`n_q/q` with `n_q` the least absolute residue of a proper coset, first `5/73`,
-then `1/17, 1/19, 5/97, 13/259, ...`; the index-2 primes `q = 1 mod 24` give
-exactly the least quadratic non-residue over `q` (186 of 186 to `20000`); the
+**P3 = HYP-9174 (the Artin spectrum). CONJECTURE; tested today; corrected
+by the audit (C1).** On the moduli prime to `6` the `x2x3` lonely spectrum is
+the Artin coordinate of `<2,3>`: values `n_q/q` with `n_q` the least absolute
+residue of a coset (PROVED), below `1/14` first `5/73`, then `1/17, 1/19,
+5/97, 13/259, ...`; moduli divisible by `2` or `3` add values of their own
+(over all rationals the list below `1/14` begins `5/73, 7/104, 1/15, 1/17,
+1/19, 5/97, 5/99, 11/219, 13/259, ...`; the first value is still `5/73`). The
+index-2 primes `q = 1 mod 24` give exactly the least quadratic non-residue
+over `q` (a one-line theorem, checked on all 186 below `20000`); the
 two-generator Artin fraction is `0.707 +- 0.010` against the heuristic
-`0.6975`; only accumulation point `0`. Survived (Probe A).
+`0.6975`; only accumulation point `0` (CONJECTURED). Survived (Probe A) with
+the scope correction.
 
 **P4 = HYP-9175 (the powers of three). PROVED + FINITE-EXACT + CONJECTURE;
 tested today.** A cycle point is a 2-adic limit of powers of three iff it is
@@ -558,9 +567,10 @@ the least prime `1 mod 24` (both `2` and `3` squares, `-1` a square), and
 **Probe B (clocks as fixed-point counts).** `|det(A^j - I)| = |L_j - 1 -
 (-1)^j|` and `tr(A^j) = L_j` for `j <= 60`; the carry census of every shape
 `(A,p)`, `A <= 18`, hits the zero class of the clock only at the known
-cycles (`1`, `-1`, `-7/-5`, the `-17` cycle at `(11,7)` with its seven
-rotations) and their repeats; `242461 = 2^18 - 3^9` is hit only by the
-repeat of `1`.
+cycles (`1`, `-1`, `-7/-5`, the `-17` cycle at `(11,7)`: its seven valuation
+words give the seven odd points; all eleven parity rotations, four of them
+even points, hit the zero class of `139`) and their repeats; `242461 = 2^18 -
+3^9` is hit only by the repeat of `1`.
 
 **Probe E (the powers of three) and Proposition E.**
 
@@ -575,8 +585,8 @@ unique 2-adic integer with `3^(log_3 x) = x`, and `3^a = x mod 2^k` for every
 `a = log_3(x) mod 2^(k-2)`; such `3^a` follow the word of `x` for `k` steps,
 so for `x = -5` (word `(110)^inf`, in `E_inf`) they have no coefficient
 descent within `k` steps. ∎ Digits: `log_3(-5) = 1 mod 2, 3 mod 4, 3 mod 8,
-11 mod 16, ..., 11 mod 128, 267 mod 512, 1291 mod 1024, 3339 mod 2048, ...,
-68011179275 mod 2^37`.
+11 mod 16, ..., 11 mod 128, 267 mod 512 (and mod 1024), 1291 mod 2048, 3339
+mod 4096, ..., 68011179275 mod 2^37` (labels corrected, audit C3).
 
 *Counts.* `Bad_k subset {3, 7 mod 8}` (the second letter of a no-descent word
 is `1`), and `Bad_k cap <3> = Bad_k cap {3 mod 8}`. Exact residue scans:
@@ -678,5 +688,26 @@ pricing note's Theorem 1 and Proposition 2, and the identification
 of the [Spitzer note](collatz_nodescent_order_20260926_spitzer_ballot.md)'s
 table; the blind audit re-derives the counts with its own code).
 
-Audit record: see the end of this file (appended by the session after the
-subagent's verdict).
+**Audit record (2026-10-04, blind subagent; report
+[`collatz_coalescence_20261004_audit.md`](collatz_coalescence_20261004_audit.md),
+code `collatz_coalescence_20261004_audit.py` written before reading the
+session's script).** Verdict SOUND WITH CORRECTIONS; 33 numerical checks, 0
+failures (the 88-point census; the coset identity on all `q <= 300` prime
+to 6; the value list below `1/14`; the 186 least-non-residue primes; the
+Artin fraction `1598/2260`; `|Bad_k|` and `|Bad_k cap <3>|` for `k = 4..24`
+by exact residue scans against a word DP; `<3> = {1, 3 mod 8}`; the share by
+an exact big-integer DP to `k = 6000` and floats to `24000`, limit `0.15972`;
+the 2-adic digits of `log_3(-5)`; the cat-map identities to `j = 60`;
+Proposition E; the three-place `Fix` statement; the sheet-cancellation
+arithmetic). Corrections applied: C1 (the coset identity and the ordered
+value list hold on moduli prime to 6; over all rationals `7/104, 1/15, 5/99,
+11/219, 77/1539, 1/20, 25/518` interleave -- HYP-9174 and P3 rescoped), C2
+(HYP-9175 (iii): the resisting fraction is `4 s_k W_k / 2^k = 4 s_k C_k
+2^(-(1-h)k) k^(-3/2)` with `C_k -> ~11`, prefactor `~7`, not `0.32`), C3
+(modulus labels of the digits of `log_3(-5)`), C4 (the two lost cat-map
+points are `(01)^inf, (10)^inf`), C5 (the top of the spectrum lives on the
+6-free parts `5, 7, 11, 13` with `<2,3> = (Z/q')^x`, not "2 a primitive
+root"), C6 (the share DP is floating point; the exact DP is the audit's).
+Remarks adopted: the least-non-residue law typed PROVED; "seven odd points"
+of the `(11,7)` cycle; "odd rational cycle point" in HYP-9175. Mechanism
+logged in MISTAKES (2026-10-04, opus coalescence note).

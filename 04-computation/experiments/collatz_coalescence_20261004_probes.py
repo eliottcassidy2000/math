@@ -236,7 +236,7 @@ def probe_B(AMAX=18):
         if abs(det) != abs(L[j] - 1 - (-1) ** j) or tr != L[j]:
             ok = False; P("  MISMATCH at j =", j)
     P(f"  j <= 60: |det(A^j - I)| = |L_j - 1 - (-1)^j| = |F(2,j)^ab| (Spectre monodromy order) and tr(A^j) = L_j = #Fix(golden shift^j): {'ALL OK' if ok else 'FAIL'}")
-    P("  so #Fix(cat^j) = #Fix(shift^j) - (1 + (-1)^j): the two shift points lost for even j are 0^inf and the 2-cycle (01)^inf")
+    P("  so #Fix(cat^j) = #Fix(shift^j) - (1 + (-1)^j): for even j the two shift points not counted on the torus are the period-two codings (01)^inf and (10)^inf (0^inf codes the origin, fixed by every A^j)")
     P("-" * 78)
     P(f"  Collatz: carries S_w of every word of shape (A,p), A <= {AMAX}, against the zero class of the clock Z/(2^A - 3^p) = Fix(y -> (3^p/2^A) y on the <2,3>-solenoid)")
     hits = []

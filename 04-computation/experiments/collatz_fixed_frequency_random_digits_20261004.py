@@ -71,7 +71,8 @@ if __name__ == "__main__":
             line += f" | rate {a_}..{b_}: {math.exp(sl):.4f} (ratio to 1/sqrt3: {math.exp(sl)*math.sqrt(3):.4f})"
         P(line)
     t0 = time.time()
-    for q in (3, 5):
+    qs = [int(x) for x in sys.argv[4].split(",")] if len(sys.argv) > 4 else [3, 5]
+    for q in qs:
         v = run(N, A, "real", q=q); report(f"real q={q}", v)
     P(f"  [{time.time()-t0:.0f}s]")
     for s in range(S):

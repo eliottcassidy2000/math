@@ -147,8 +147,66 @@ family of the recursion), not as real positions. The cold fixed units of E1 are 
 
 Script `collatz_fixed_frequency_random_digits_20261004.py` (`N = 1500`, `A = 40`, three seeds). Modes: the real
 digits of `-3^-n` and `-5^-n`; i.i.d. random bits at every level; the digits of `-Q^-n` for a random odd 40-bit
-`Q`. Values are `3^(n/2)|f_n(0)|` (rescaled by the incoherent rate). **Results: appended below in section 4a
-when the run completes.**
+`Q`. Values are `3^(n/2)|f_n(0)|` (rescaled by the incoherent rate).
+
+**Results (`N = 1500`, `A = 40`; least-squares rates and their ratio to `1/sqrt3`).**
+
+| digit source | rate `300..1500` | ratio | rate `750..1500` | ratio |
+|---|---|---|---|---|
+| real `-3^-n` (the Collatz case) | **0.5689** | 0.9854 | **0.5695** | 0.9864 |
+| real `-5^-n` | 0.5736 | 0.9934 | 0.5745 | 0.9950 |
+| i.i.d. bits, seed 0 / 1 / 2 | 0.5741 / 0.5720 / 0.5723 | 0.994 / 0.991 / 0.991 | 0.5726 / 0.5733 / 0.5731 | 0.992 / 0.993 / 0.993 |
+| random odd 40-bit multiplier `Q`, seed 0 / 1 / 2 | 0.5736 / 0.5721 / 0.5727 | 0.993 / 0.991 / 0.992 | 0.5755 / 0.5739 / 0.5725 | 0.997 / 0.994 / 0.992 |
+
+**Reading.** (i) Even with i.i.d. digits the recursion decays at `0.573 +- 0.001`, `0.8%` below the
+incoherent rate `1/sqrt3`: the window entries `f_(n-1)(-a)` are correlated (they share their past), so the
+Cauchy-Schwarz/incoherent model is an upper heuristic, not the rate. (ii) The real digits of `3^-n` give a
+further `0.6%` deficit (`0.569`, mac-mini's value to `n = 2500`), below every random model in both windows,
+while the real digits of `5^-n` sit at the random level. So the Collatz case shows an additional arithmetic
+cancellation of about `0.6%` per level, specific to `q = 3` among the cases run (OBSERVED; three seeds per
+model; the wider control of section 4a settles the significance). (iii) Whatever its origin, for H1 only the
+inequality matters: every model, random or arithmetic, sits at `0.569-0.576 < 0.585`; H1's margin against the
+critical rate is `1.6-2.8%`, and what a proof must show is that the Collatz digits are no worse than random
+in this one functional.
+
+### 4b. The mean-square rate is exactly incoherent in the i.i.d. model (PROVED); the rest is a Jensen gap
+
+**Proposition (PROVED, one line).** In the i.i.d.-digit model (fresh uniform bits at every level) the window
+phases `omega(-d) = e(theta_d)`, `theta_d = 0.b_d b_(d-1) ... b_1`, are pairwise uncorrelated: for `d < e` the top
+bit `b_e` enters `theta_e - theta_d` with coefficient `1/2` and nowhere else, so `E e(theta_d - theta_e)` contains the
+factor `(1 + e(1/2))/2 = 0`. Hence `E|f_n(k)|^2 = sum_a 4^-a E|f_(n-1)(k-a)|^2` and, from `f_0 = 1`, **`E|f_n(k)|^2 =
+3^-n` exactly** for every window position `k` and every `n`: the root-mean-square rate of the i.i.d. model is
+exactly `1/sqrt3`. (Monte Carlo, `collatz_fixed_frequency_iid_second_moment_20261004.py`, 200 seeds, `n <= 100`:
+`E[3^n |f_n(0)|^2] = 0.90, 0.79, 1.00, 2.78, 1.11, 0.53` with heavy-tailed errors `0.1-2`; consistent.)
+
+**The Jensen gap.** The typical value `exp(E log 3^(n/2)|f_n(0)|)` of the same model decays (`0.61, 0.50, 0.39,
+0.28, 0.26, 0.18` at `n = 10..100`), so the almost-sure rate of one realisation is below the rms rate: `0.573` at
+`n <= 1500` (E5) against `0.5774`. This is the ordinary gap between the mean-square and the Lyapunov growth of a
+product of fluctuating factors. H1 concerns one realisation (the real digits), so its natural rate is the typical
+one, `0.569`; the mean-square rate `1/sqrt3` is an upper envelope that the sup over `n` can touch only at the
+ridges.
+
+**E5d (window energy along the real digits; `collatz_fixed_frequency_window_energy_20261004.py`, `N = 600`,
+`W = 100`).** The per-level ratio of the window energy `e_n = sum_(k=-W)^0 |f_n(k)|^2` in rescaled units
+(incoherent `= 1`) has mean `0.994, 1.019, 0.997` for the real digits of `3^-n, 5^-n, 7^-n` and `1.021, 0.994,
+1.004` for three i.i.d. seeds (medians `0.96-0.98`, heavy-tailed): **in mean square the real digits are
+incoherent within the noise, like random digits**; the fitted energy rates `0.5723, 0.5746, 0.5718` (real) and
+`0.5727, 0.5716, 0.5729` (i.i.d.) do not separate `q = 3` at this length, and the typical rates at `N = 600`
+(`0.5706, 0.5741, 0.5710` real; `0.5715, 0.5724, 0.5727` i.i.d.) are within `0.002` of each other. The `0.6%`
+deficit of section 4 is therefore a long-run effect of the fluctuation structure (the ridges), not of the second
+moment; the wider control of section 4a (eight seeds, `q = 3, 7, 11, 13, 19`, `N = 1500`) decides whether it is
+real and whether it is a `3 mod 8` phenomenon (`11 = 3 mod 8` against `13 = 5 mod 8`).
+
+**What this makes of H1 (DIRECTION, typed).** H1 (`|mu_hat_n(1)| <= C rho^n`, `rho < 0.585`) decomposes into
+(a) *mean-square incoherence of the real digit string:* the window energy decays at `(1/3)^n` up to
+`exp(o(n))`, i.e. the covariance of the twisted vector `D_n f_(n-1)` with the geometric symbol (THM-4521(3) on the
+window) has `o(n)` partial sums -- an autocorrelation statement about the binary digits of `3^-n`; and
+(b) *sub-exponential ridges:* the excursions of `3^(n/2)|f_n(0)|` above its typical size are polynomial in `n`
+-- the ridge inventory of S22/S23 (depths `v_3(u 2^Q -+ 1)`, Poisson), a statement about the 3-adic digits
+of powers of `2`. (a) holds in mean square in the random model exactly and for the real digits within noise to
+`n = 600`; (b) holds to `n = 2500` (largest excursion `10.4` at `n = 131`, nothing above `0.08` past `200`).
+The two mirror endgames of the procgen synthesis (low binary digits of `3^A u` for Q1, low ternary digits of
+`2^K w` for Q2) are exactly (a) and (b).
 
 ## 5. E2: `L^p` moments, tails, and THM-4263's condition (14)
 

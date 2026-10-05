@@ -1,0 +1,8 @@
+window energy (W=100) versus typical rate, N=600, A=40; values rescaled by 3^(n/2) (energy by 3^n): a flat energy = exactly incoherent
+real q=3: rescaled energy medians by 100-blocks 4.388e+01 8.726e-01 2.135e-01 3.625e-02 8.614e-04 1.501e-02 | energy ratio mean 0.9937 median 0.9733 (incoherent 1.0000) | mean-square amplitude rate 0.57232 | typical rate of |f_n(0)| 0.57061
+real q=5: rescaled energy medians by 100-blocks 1.165e+01 3.022e+00 3.851e-01 5.712e+00 4.446e-01 2.090e-01 | energy ratio mean 1.0188 median 0.9804 (incoherent 1.0000) | mean-square amplitude rate 0.57463 | typical rate of |f_n(0)| 0.57412
+real q=7: rescaled energy medians by 100-blocks 6.537e+01 3.959e+01 1.708e+00 5.827e-02 2.586e-02 1.295e-02 | energy ratio mean 0.9965 median 0.9752 (incoherent 1.0000) | mean-square amplitude rate 0.57176 | typical rate of |f_n(0)| 0.57098
+iid seed=0: rescaled energy medians by 100-blocks 4.791e+01 2.608e+01 2.472e-01 2.155e+02 1.425e-01 4.283e-03 | energy ratio mean 1.0207 median 0.9609 (incoherent 1.0000) | mean-square amplitude rate 0.57265 | typical rate of |f_n(0)| 0.57151
+iid seed=1: rescaled energy medians by 100-blocks 9.957e+01 1.953e+01 1.230e+00 2.062e+01 3.273e-02 6.650e-03 | energy ratio mean 0.9942 median 0.9759 (incoherent 1.0000) | mean-square amplitude rate 0.57156 | typical rate of |f_n(0)| 0.57242
+iid seed=2: rescaled energy medians by 100-blocks 8.731e+01 1.919e+01 9.139e+00 9.454e-01 5.906e-01 3.588e-02 | energy ratio mean 1.0037 median 0.9694 (incoherent 1.0000) | mean-square amplitude rate 0.57287 | typical rate of |f_n(0)| 0.57269
+  [8s]

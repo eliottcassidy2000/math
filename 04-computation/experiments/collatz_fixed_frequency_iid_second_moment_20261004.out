@@ -1,0 +1,9 @@
+iid-digit model, 200 seeds, A = 40: E[3^n |f_n(0)|^2] (prediction exactly 1) and the typical value exp(E log(3^(n/2)|f_n(0)|))
+  n= 10: E[3^n|f|^2] = 0.9016 +- 0.0969   typical 3^(n/2)|f| = 0.6066   => typical rate = 3^(-1/2) * 0.6066^(1/n) = 0.54920
+  n= 20: E[3^n|f|^2] = 0.7884 +- 0.1051   typical 3^(n/2)|f| = 0.5020   => typical rate = 3^(-1/2) * 0.5020^(1/n) = 0.55779
+  n= 40: E[3^n|f|^2] = 0.9962 +- 0.2768   typical 3^(n/2)|f| = 0.3915   => typical rate = 3^(-1/2) * 0.3915^(1/n) = 0.56397
+  n= 60: E[3^n|f|^2] = 2.7761 +- 1.9806   typical 3^(n/2)|f| = 0.2821   => typical rate = 3^(-1/2) * 0.2821^(1/n) = 0.56530
+  n= 80: E[3^n|f|^2] = 1.1065 +- 0.3641   typical 3^(n/2)|f| = 0.2647   => typical rate = 3^(-1/2) * 0.2647^(1/n) = 0.56784
+  n=100: E[3^n|f|^2] = 0.5254 +- 0.1537   typical 3^(n/2)|f| = 0.1844   => typical rate = 3^(-1/2) * 0.1844^(1/n) = 0.56767
+real 3^-n digits (one sample): 3^(n/2)|f_n(0)| at the checkpoints: 0.4042 0.6644 1.0147 0.3577 0.0998 0.0931
+  [5s]
