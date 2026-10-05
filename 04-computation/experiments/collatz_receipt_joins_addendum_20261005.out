@@ -2,38 +2,39 @@
     most frequent join points z (count over all (pair, hit)): [(175, 2938), (65, 1397), (35, 1256), (377, 932), (319, 891), (325, 690), (445, 557), (55, 445), (155, 438), (91, 406), (121, 394), (425, 363)]
     mid examples (a,b,i,j,l,x,y,z): [(3, 11, 1, 1, 3, 5, 5, 25), (3, 43, 3, 1, 5, 5, 11, 55), (3, 45, 5, 1, 2, 5, 13, 65), (3, 51, 3, 1, 5, 5, 13, 65), (3, 61, 5, 1, 2, 5, 35, 175), (3, 63, 10, 1, 36, 5, 35, 175), (3, 81, 6, 1, 3, 5, 35, 175), (3, 95, 9, 1, 35, 5, 35, 175), (3, 97, 14, 1, 40, 5, 35, 175), (3, 109, 22, 1, 2, 5, 31, 155), (3, 109, 24, 1, 38, 5, 35, 175), (3, 111, 12, 1, 21, 5, 35, 175)]
     upward examples: [(3, 9, 38, 1, 1, 5, 7, 35), (3, 19, 2, 1, 4, 5, 13, 65), (3, 25, 2, 1, 4, 5, 17, 85), (3, 43, 38, 1, 1, 5, 65, 325), (3, 55, 12, 1, 38, 5, 35, 175), (3, 57, 39, 1, 2, 5, 65, 325), (3, 65, 37, 1, 0, 5, 65, 325), (3, 139, 24, 1, 4, 5, 89, 445)]
-    [0s]
+    [1s]
 (b) synchronous two-step fusions U^2(ab) = U^2(a) U^2(b), a <= b <= 3001, all > 1: 0 []
     [1s]
 (c) Applegate--Lagarias classes replayed (accelerated map; multiply by m at the listed odd index, then iterate until below (76/79) x or 12 odd steps):
     class 1 mod 4: multipliers none; worst ratio over t<64: 0.7778; odd steps <= 1; descent for all t<64: True
     class 3 mod 16: multipliers none; worst ratio over t<64: 0.5789; odd steps <= 2; descent for all t<64: True
     class 11 mod 32: multipliers none; worst ratio over t<64: 0.8605; odd steps <= 3; descent for all t<64: True
-    class 27 mod 128: multipliers [(1, 13)]; worst ratio over t<64: 0.9259; odd steps <= 2; descent for all t<64: True; composite defect labels (t=0,1): [533, 3029]
-    class 91 mod 256: multipliers [(0, 25)]; worst ratio over t<64: 0.8790; odd steps <= 2; descent for all t<64: True; composite defect labels (t=0,1): [2275, 8675]
+    class 27 mod 128: multipliers [(1, 13)]; worst ratio over t<64: 0.9259; odd steps <= 2; descent for all t<64: True; moving multiplier labels (t=0,1): [533, 3029]
+    class 91 mod 256: multipliers [(0, 25)]; worst ratio over t<64: 0.8790; odd steps <= 2; descent for all t<64: True; moving multiplier labels (t=0,1): [2275, 8675]
     class 219 mod 256: multipliers none; worst ratio over t<64: 0.9543; odd steps <= 5; descent for all t<64: True
     class 59 mod 128: multipliers none; worst ratio over t<64: 0.6364; odd steps <= 4; descent for all t<64: True
-    class 123 mod 256: multipliers [(0, 7)]; worst ratio over t<64: 0.7398; odd steps <= 3; descent for all t<64: True; composite defect labels (t=0,1): [861, 2653]
-    class 251 mod 256: multipliers [(0, 23)]; worst ratio over t<64: 0.8088; odd steps <= 2; descent for all t<64: True; composite defect labels (t=0,1): [5773, 11661]
-    class 7 mod 64: multipliers [(0, 5)]; worst ratio over t<64: 0.7143; odd steps <= 2; descent for all t<64: True; composite defect labels (t=0,1): [35, 355]
-    class 39 mod 128: multipliers [(0, 35)]; worst ratio over t<64: 0.8204; odd steps <= 1; descent for all t<64: True; composite defect labels (t=0,1): [1365, 5845]
-    class 103 mod 512: multipliers [(2, 13)]; worst ratio over t<64: 0.6893; odd steps <= 3; descent for all t<64: True; composite defect labels (t=0,1): [3029, 18005]
-    class 359 mod 512: multipliers [(0, 35)]; worst ratio over t<64: 0.6156; odd steps <= 2; descent for all t<64: True; composite defect labels (t=0,1): [12565, 30485]
-    class 231 mod 256: multipliers [(0, 5)]; worst ratio over t<64: 0.5277; odd steps <= 3; descent for all t<64: True; composite defect labels (t=0,1): [1155, 2435]
+    class 123 mod 256: multipliers [(0, 7)]; worst ratio over t<64: 0.7398; odd steps <= 3; descent for all t<64: True; moving multiplier labels (t=0,1): [861, 2653]
+    class 251 mod 256: multipliers [(0, 23)]; worst ratio over t<64: 0.8088; odd steps <= 2; descent for all t<64: True; moving multiplier labels (t=0,1): [5773, 11661]
+    class 7 mod 64: multipliers [(0, 5)]; worst ratio over t<64: 0.7143; odd steps <= 2; descent for all t<64: True; moving multiplier labels (t=0,1): [35, 355]
+    class 39 mod 128: multipliers [(0, 35)]; worst ratio over t<64: 0.8204; odd steps <= 1; descent for all t<64: True; moving multiplier labels (t=0,1): [1365, 5845]
+    class 103 mod 512: multipliers [(2, 13)]; worst ratio over t<64: 0.6893; odd steps <= 3; descent for all t<64: True; moving multiplier labels (t=0,1): [3029, 18005]
+    class 359 mod 512: multipliers [(0, 35)]; worst ratio over t<64: 0.6156; odd steps <= 2; descent for all t<64: True; moving multiplier labels (t=0,1): [12565, 30485]
+    class 231 mod 256: multipliers [(0, 5)]; worst ratio over t<64: 0.5277; odd steps <= 3; descent for all t<64: True; moving multiplier labels (t=0,1): [1155, 2435]
     class 23 mod 32: multipliers none; worst ratio over t<64: 0.8545; odd steps <= 3; descent for all t<64: True
     class 15 mod 128: multipliers none; worst ratio over t<64: 0.6364; odd steps <= 4; descent for all t<64: True
     class 79 mod 256: multipliers none; worst ratio over t<64: 0.9522; odd steps <= 5; descent for all t<64: True
-    class 207 mod 256: multipliers [(0, 5), (1, 5)]; worst ratio over t<64: 0.8790; odd steps <= 2; descent for all t<64: True; composite defect labels (t=0,1): [1035, 7765, 2315, 17365]
-    class 47 mod 128: multipliers [(0, 13)]; worst ratio over t<64: 0.9149; odd steps <= 2; descent for all t<64: True; composite defect labels (t=0,1): [611, 2275]
-    class 111 mod 128: multipliers [(0, 11)]; worst ratio over t<64: 0.7741; odd steps <= 2; descent for all t<64: True; composite defect labels (t=0,1): [1221, 2629]
-    class 31 mod 64: multipliers [(0, 11)]; worst ratio over t<64: 0.5158; odd steps <= 1; descent for all t<64: True; composite defect labels (t=0,1): [341, 1045]
-    class 63 mod 128: multipliers [(0, 11)]; worst ratio over t<64: 0.7778; odd steps <= 2; descent for all t<64: True; composite defect labels (t=0,1): [693, 2101]
-    class 127 mod 256: multipliers [(0, 43)]; worst ratio over t<64: 0.5039; odd steps <= 1; descent for all t<64: True; composite defect labels (t=0,1): [5461, 16469]
-    class 255 mod 512: multipliers [(0, 43)]; worst ratio over t<64: 0.7569; odd steps <= 2; descent for all t<64: True; composite defect labels (t=0,1): [10965, 32981]
-    class 511 mod 1024: multipliers [(1, 29)]; worst ratio over t<64: 0.7652; odd steps <= 3; descent for all t<64: True; composite defect labels (t=0,1): [22243, 66787]
-    class 1023 mod 2048: multipliers [(0, 11), (1, 11)]; worst ratio over t<64: 0.5317; odd steps <= 2; descent for all t<64: True; composite defect labels (t=0,1): [11253, 11605, 33781, 34837]
-    class 2047 mod 4096: multipliers [(0, 11), (1, 11)]; worst ratio over t<64: 0.7978; odd steps <= 3; descent for all t<64: True; composite defect labels (t=0,1): [22517, 23221, 67573, 69685]
+    class 207 mod 256: multipliers [(0, 5), (1, 5)]; worst ratio over t<64: 0.8790; odd steps <= 2; descent for all t<64: True; moving multiplier labels (t=0,1): [1035, 7765, 2315, 17365]
+    class 47 mod 128: multipliers [(0, 13)]; worst ratio over t<64: 0.9149; odd steps <= 2; descent for all t<64: True; moving multiplier labels (t=0,1): [611, 2275]
+    class 111 mod 128: multipliers [(0, 11)]; worst ratio over t<64: 0.7741; odd steps <= 2; descent for all t<64: True; moving multiplier labels (t=0,1): [1221, 2629]
+    class 31 mod 64: multipliers [(0, 11)]; worst ratio over t<64: 0.5158; odd steps <= 1; descent for all t<64: True; moving multiplier labels (t=0,1): [341, 1045]
+    class 63 mod 128: multipliers [(0, 11)]; worst ratio over t<64: 0.7778; odd steps <= 2; descent for all t<64: True; moving multiplier labels (t=0,1): [693, 2101]
+    class 127 mod 256: multipliers [(0, 43)]; worst ratio over t<64: 0.5039; odd steps <= 1; descent for all t<64: True; moving multiplier labels (t=0,1): [5461, 16469]
+    class 255 mod 512: multipliers [(0, 43)]; worst ratio over t<64: 0.7569; odd steps <= 2; descent for all t<64: True; moving multiplier labels (t=0,1): [10965, 32981]
+    class 511 mod 1024: multipliers [(1, 29)]; worst ratio over t<64: 0.7652; odd steps <= 3; descent for all t<64: True; moving multiplier labels (t=0,1): [22243, 66787]
+    class 1023 mod 2048: multipliers [(0, 11), (1, 11)]; worst ratio over t<64: 0.5317; odd steps <= 2; descent for all t<64: True; moving multiplier labels (t=0,1): [11253, 11605, 33781, 34837]
+    class 2047 mod 4096: multipliers [(0, 11), (1, 11)]; worst ratio over t<64: 0.7978; odd steps <= 3; descent for all t<64: True; moving multiplier labels (t=0,1): [22517, 23221, 67573, 69685]
     all listed classes descend (t < 64): True
 (d) odd density of plain-descent classes: 51/64 = 0.7969; multiplier classes: 415/2048 = 0.2026; uncovered -1 mod 4096: 1/2048 = 0.0005; total 1.0000
-    comparison: P(no coefficient descent within 12 odd steps) = P(Bin(19,1/2) >= 12) = 0.1796
+    comparison: terminal coefficient survival at 12 odd steps = 11773/65536 = 0.1796; survival at every prefix = 427/8192 = 0.0521
+    class counts: 27 total; 8 plain; 19 multiplier
     [1s total]

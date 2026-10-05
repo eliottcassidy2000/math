@@ -1,0 +1,29 @@
+{
+  "checks": 2059,
+  "depth_two_witness": {
+    "A": 6,
+    "a": 5,
+    "alpha": 8,
+    "b": 17
+  },
+  "insertion5_at7": {
+    "7": 1,
+    "11": -1,
+    "13": -1,
+    "35": 1,
+    "49": -1,
+    "55": 1,
+    "65": 1,
+    "125": -1
+  },
+  "prime_child_error": {
+    "1": 1,
+    "13": -1
+  },
+  "semigroup_classes": {
+    "multiplier": 19,
+    "plain": 8,
+    "total": 27
+  },
+  "status": "PASS; targeted type and scope controls only"
+}

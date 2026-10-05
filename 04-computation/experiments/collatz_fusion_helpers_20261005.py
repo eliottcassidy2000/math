@@ -218,6 +218,15 @@ def safe_moves():
     buffer = scale(neutral, 4)
     check(all(all(buffer.get(u, 0) >= a for u, a in req.items()) for req in requests),
           "one neutral context for finite unit-stock requests")
+    root5 = {5: 1}
+    c5, d5 = add(root5, neutral), add(root5, {1: 1})
+    common = add(root5, neutral, {1: 1})
+    check(value(c5) == value(d5) == value(common) == 5, "common extension value")
+    check(value(add(common, scale(c5, -1))) == value(add(common, scale(d5, -1))) == 1,
+          "both extension differences neutral")
+    check({u: a for u, a in c0.items() if u % 3 == 0}
+          != {u: a for u, a in target.items() if u % 3 == 0},
+          "same-value9 receipts have incompatible neutral profiles")
     return {"nine_move": z, "nine_root_path": list(target),
             "proper_conformal_subrelations": proper, "power3_fibres": fibre_rows,
             "common_neutral_context_multiple": 4}
@@ -336,6 +345,20 @@ def transport():
         count += 1
     check(push(K(9)) == {1: 1, 5: -2, 7: 1}, "K9 leaves factorization kernel")
     check(prime_image(push(K(9))) == {5: -2, 7: 1}, "lost charge witness")
+    neutral = {7: 2, 11: 1, 17: 1, 55: 1, 65: 1, 83: 1, 5: 1}
+    for t in range(32):
+        n = 799+1024*t
+        child = (243*n+147)//256
+        left = Counter(execute(n, (1, 1, 1, 1, 2, 3))[:-1])
+        right = {child: 1}
+        child_receipt = add(Counter(path(child)), neutral)
+        source_receipt = add(child_receipt, left, scale(right, -1))
+        check(all(v >= 0 for v in source_receipt.values()), "replacement retains stock")
+        check(value(source_receipt) == n and value(child_receipt) == child, "replacement values")
+        check(D(n, source_receipt) == D(child, child_receipt) == boundary(neutral),
+              "common-future replacement preserves the full nonzero defect")
+        check(add(source_receipt, right, scale(left, -1)) == child_receipt,
+              "inverse replacement with retained prefix")
     return {"cases": count, "K9_after_U": push(K(9)), "prime_charge": prime_image(push(K(9)))}
 
 

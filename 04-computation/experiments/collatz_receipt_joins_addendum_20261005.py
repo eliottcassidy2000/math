@@ -6,7 +6,8 @@ Addendum to collatz_receipt_joins_census_20261005.py (opus, 2026-10-05).
 (b) synchronous two-step fusion U^2(ab) = U^2(a) U^2(b) searched to a, b <= 3001 (none expected);
 (c) the Applegate--Lagarias multiplier classes (Tables 1-2 of arXiv math/0411140) replayed as parametrized
     receipts: for each class s mod 2^k with a multiplier m inserted at the first odd point y = U(x), the
-    affine image z(t) = c x + d and the composite defect K_{m y(t)}; the plain classes are checked too;
+    orbit endpoint and the moving multiplier label m*y(t); the full insertion defect also includes
+    -[y(t)] and the wild-certificate boundary. The plain classes are checked too;
 (d) the exact odd density of the multiplier classes (the classes where the universal receipt has a composite defect).
 """
 import sys, math, time
@@ -108,19 +109,31 @@ def main():
                     y = y * mult_at[k]
                     if t < 2: defect_labels.append(y)
                 y = U(y); k += 1; path.append(y)
-                if y < x * 76 / 79 or k >= 14: break
-            r = y / x
+                if 79 * y < 76 * x or k >= 14: break
+            r = Fraction(y, x)
             worst = max(worst, r)
             steps_max = max(steps_max, k)
             if r >= 1: good = False
         ok_all &= good
-        P(f"    class {s} mod {M}: multipliers {mults or 'none'}; worst ratio over t<64: {worst:.4f}; odd steps <= {steps_max}; descent for all t<64: {good}" + (f"; composite defect labels (t=0,1): {defect_labels}" if mults else ""))
+        P(f"    class {s} mod {M}: multipliers {mults or 'none'}; worst ratio over t<64: {float(worst):.4f}; odd steps <= {steps_max}; descent for all t<64: {good}" + (f"; moving multiplier labels (t=0,1): {defect_labels}" if mults else ""))
     P(f"    all listed classes descend (t < 64): {ok_all}")
     P(f"(d) odd density of plain-descent classes: {dens_plain} = {float(dens_plain):.4f}; multiplier classes: {dens_mult} = {float(dens_mult):.4f}; uncovered -1 mod 4096: {Fraction(2,4096)} = {2/4096:.4f}; total {float(dens_plain+dens_mult+Fraction(2,4096)):.4f}")
-    # no-descent density at depth 12 for comparison
+    # Endpoint and all-prefix coefficient events must not be conflated.
     from math import comb
-    p12 = sum(comb(19, i) for i in range(12, 20)) / 2 ** 19
-    P(f"    comparison: P(no coefficient descent within 12 odd steps) = P(Bin(19,1/2) >= 12) = {p12:.4f}")
+    endpoint12 = Fraction(sum(comb(19, i) for i in range(12, 20)), 2 ** 19)
+    counts = {0: 1}
+    for depth in range(1, 13):
+        new = {}
+        bound = (3**depth).bit_length() - 1
+        for old, count in counts.items():
+            for total in range(old + 1, bound + 1):
+                new[total] = new.get(total, 0) + count
+        counts = new
+    prefix12 = sum((Fraction(count, 2**total) for total, count in counts.items()), Fraction())
+    if endpoint12 != Fraction(11773, 65536) or prefix12 != Fraction(427, 8192):
+        raise ValueError("endpoint/prefix control")
+    P(f"    comparison: terminal coefficient survival at 12 odd steps = {endpoint12} = {float(endpoint12):.4f}; survival at every prefix = {prefix12} = {float(prefix12):.4f}")
+    P(f"    class counts: {len(classes)} total; {sum(not m for _, _, m in classes)} plain; {sum(bool(m) for _, _, m in classes)} multiplier")
     P(f"    [{time.time()-t0:.0f}s total]")
     with open(__file__.replace(".py", ".out"), "w", encoding="utf-8") as fh:
         fh.write("\n".join(out) + "\n")

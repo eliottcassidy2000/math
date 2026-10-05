@@ -1,4 +1,4 @@
-# The four receipt questions (2026-10-05): surplus receipts contain the actual orbit, so "deficits below the source" is the stopping time and the product identity plays no role; the Applegate--Lagarias coverage is a prefix-code descent with multipliers from the `3x-1` trunk on `20.3%` of odd residues, and those insertion points are exactly the composite defects of the universal receipts; product joins are hub coincidences, synchronous fusion is impossible in one step (F1), empty in two steps to `3001`, sporadic deeper; the first deficit of a multiple of three is below it iff `m = 3 mod 4`; a substitution chain carries one obligation; exact entry is terminal-family membership
+# The four receipt questions: source-surplus paths, multiplier insertion defects, joins, and terminal families
 
 **Session:** opus, `pascal-lyapunov-20261005` (second task; worktree `codex/session-pascal-lyapunov-20261005`), 2026-10-05.
 Owner's directive: "pursue Collatz coverage creatively and prioritize the four helper questions" of the
@@ -14,13 +14,22 @@ terminal families turning local coverage into exact entry.
 [dependency kernel](collatz_recursive_dependency_kernel_20261004.md); the
 [Pascal-tower note](collatz_pascal_tower_lyapunov_20261005.md) section 5 (the no-descent rate).
 
-**Status: PROVED (elementary; Theorems 1-7 below, each a few lines); CITED (the semigroup theorem and its
+**Status: PROVED (elementary, with the scope repairs below; Theorems 1-9 below, each a few lines); CITED (the semigroup theorem and its
 proof structure, read from the paper); FINITE-EXACT (two scripts, section 8: `11,325` pairs for joins, `250,000`
-for synchronous fusion, `2,250,000` for two-step fusion, `500,000` multiples of three, the `26` semigroup
+for synchronous fusion, `2,250,000` for two-step fusion, `500,000` multiples of three, the `27` semigroup
 classes replayed); CONJECTURED (no synchronous two-step fusion, section 4). Author-audited only; audit OWED.
-Nothing here is a Collatz step; every question is shown to be a known equivalent of the problem or a
-bookkeeping fact, and the creative content is the identification of where the universal receipts' defects
-actually sit.**
+No universal Collatz entry theorem is proved. The reductions identify obligations that any successful
+construction must meet; they do not rule out useful new repair or controller mechanisms. A concrete
+follow-up supplies conformal repairs and a new paid common-future cell.**
+
+**2026-10-05 targeted correction (fusion-helpers):** The signed-substitution error retains prime
+charge as well as a labelled endpoint; a prefix with value n/v is not automatically a weak receipt for n.
+The depth-two exponent range, one-edge deficit wording, semigroup class counts (8 plain +19 multiplier),
+and reused endpoint-versus-prefix probability were repaired. Historical censuses retain their stated
+search restrictions. See [the follow-up](collatz_fusion_helpers_20261005.md), especially equations(7)-(8),
+and `01-canon/MISTAKES.md`. The [type audit](collatz_receipt_type_audit_20261005.json)
+contains 2,059 exact checks; the corrected addendum was rerun with integer/Fraction comparisons.
+No complete independent audit of all empirical claims is implied.
 
 ---
 
@@ -47,19 +56,19 @@ actually sit.**
    odd steps; on `415/2048 = 20.26%` a multiplier `m in {5, 7, 11, 13, 23, 29, 43}` (or `25, 35`) is inserted at an
    odd point `y` of the orbit and the descent continues from `m y`; the last cell `-1 mod 4096` is handled by the
    multiplier `m_j = (2^j+1)/3`, for which `U(m_j x) = oddpart(x + (x+1)/2^j)` whenever `x = -1 mod 2^j`
-   (Theorem 6) -- `m_j` is the trunk of the `3x-1` map (`3 m_j - 1 = 2^j`). **The composite defects of the
-   universal receipts are precisely the labels `[m y]` at these insertion points**, and the `20.26%` is the
-   no-descent set at depth twelve (the renewal value is `P(Bin(19,1/2) >= 12) = 17.96%`): the universal weak
-   coverage is plain descent where plain descent exists and a multiplier where it does not.
-5. **Multiples of three (Theorem 7).** The receipt of `n = 3m` must start with `3m -> U(3m)`, and that first
-   deficit is below `n` iff `m = 3 mod 4` (`500,000/500,000`); beyond that the deficits-below-`n` condition is
+   (Theorem 6) -- `m_j` is the trunk of the `3x-1` map (`3 m_j - 1 = 2^j`). **Multiplier insertion creates the full prime-balanced vectors
+   `[m y]-[y]+d w_m`; the moving labels `[m y]` identify useful repair targets**, and `20.26%` is the measure of this particular multiplier-coded portfolio, not the complete
+   no-descent set. At odd depth twelve the terminal coefficient event has density `11773/65536=17.96%`,
+   while all-prefix coefficient survival has density `427/8192=5.21%`. These are different predicates.
+5. **Multiples of three (Theorem 7).** A receipt with surplus at `n = 3m` contains `3m -> U(3m)`, and that first
+   endpoint is below `n` iff `m = 3 mod 4` (`500,000/500,000`); beyond that the deficits-below-`n` condition is
    the Terras stopping time (half the multiples of three need more than one step, `6.5%` more than ten, the
    deepest below `3 10^6` needs `141`). An induction that stays inside the multiples of three exists (the
    3-parent rank, section 6) and needs a descent about `2^6` deeper; its hypothesis is again Collatz.
 6. **Substitutions carry one obligation (Theorem 8).** A compiled common-future substitution `n -> d` is the
    signed packet with boundary `[n] - [d]`, defect `[1] - [d]`: one coordinate, preserved by composition;
-   fusion appears only under multiplication of receipts. Q3 is answered, and the whole difficulty is the rank
-   of the one obligation, which is the repo's credit-potential problem.
+   fusion appears only under multiplication of receipts. This retains the endpoint count for signed substitutions; the prime charge and stock conditions
+   must also be kept, and a paid rank remains necessary.
 7. **Exact entry is membership (Theorem 9).** Replacing the terminal ray by the family `T_j` of integers
    reaching `1` within `j` odd steps, the S1 shadow is exact (`r = n`) iff `U^m(n) in T_j`. The least-exponent
    shadow is sometimes smaller than `n` (`n = 27, 255, 999` give `r = 3`) and sometimes `2^12 n`
@@ -82,8 +91,11 @@ and the fusion relation (D1, D2).
 **Theorem 1.** Let `c` be any finite nonnegative edge multiset of a deterministic map on a set `X`, and let
 `n` have `d c(n) > 0`. Then the actual trajectory `n, U(n), U^2(n), ...` uses only edges with positive stock
 in `c` until it first visits a deficit vertex, and it does visit one. Consequently, for the Collatz map:
-`n` admits a receipt (with or without (W)) whose surplus is at `n` and whose deficit vertices other than `1`
-are all `< n` **iff** `n` has finite stopping time (some `U^k(n) < n`, or `n = 1`).
+for n>1, `n` admits a finite nonnegative edge multiset, without imposing (W), whose surplus is at `n`
+and whose deficit vertices are all `< n` **iff** `n` has finite stopping time (some `U^k(n) < n`).
+The root n=1 is a separate base case. If (W) is additionally imposed, the forward implication still holds;
+the prefix used for the converse has value n/v, not n. Under induction that every smaller positive odd
+v is rooted, append its root path and recover (W). No unconditional (W)-converse is asserted here.
 
 *Proof.* This is G1's argument with `R` = the set of deficit vertices: if the supported trajectory from `n`
 never meets a deficit vertex, let `S` be the set of vertices it visits (through its first repetition or
@@ -100,7 +112,7 @@ offers no new leverage; with "an already certified family" it is the join proble
 
 ## 3. Theorem 2, Theorem 3, Proposition 4: what edge replacements can and cannot do (Q1)
 
-**Theorem 2.** A nonnegative receipt for `ab` with zero composite defect is a root path for `ab` (G2). Hence a
+**Theorem 2.** A nonnegative weak receipt for `ab` with zero composite defect contains a root path for `ab` (G2); extra edge cycles may remain. Hence a
 "family of composite defects eliminated by nonnegative edge replacements" is a rooted family, and the
 replacement is a root-certificate transport along a join `U^i(ab) = U^j(a)` (or with `b`, or with any rooted
 number). □
@@ -111,11 +123,16 @@ with `ord_(3a)(2) | k`; `k` is then even (so this is F2 with `4^k`), and `b` is 
 `b = (2^k(3a+1) - 1)/(3a) = 2^k + (2^k - 1)/(3a)`, integral iff `3a | 2^k - 1`; since `3 | 3a` and
 `ord_3(2) = 2`, `k` is even; `(2^k - 1)/(3a)` is odd, so `b` is odd. □
 
-**Proposition 4 (depth-two joins).** `U^2(ab) = U(a)` with first valuation `alpha` at `ab` iff
-`b = [2^A (3a+1) - 3 - 2^alpha]/(9a)` is an odd integer `> 1` for some `A >= alpha + 1` and the valuation of
-`3ab + 1` is exactly `alpha` (then `A = alpha + alpha_2 - v_2(3a+1)`). For each `a` the admissible `A` form
-residue classes modulo the order of `2` modulo `9a/gcd`, so each solvable `(a, alpha)` gives an infinite family.
-Script D (section 8) lists, for every odd `3 <= a <= 51` except `19, 35` (none with `alpha <= 13`, `A <= alpha
+**Proposition 4 (depth-two joins, corrected parameter range).** `U^2(ab) = U(a)` with first valuation
+`alpha` at `ab` iff
+`b = [2^(alpha+beta) U(a) - 3 - 2^alpha]/(9a)` is an odd integer `> 1` for some integers
+`alpha,beta >= 1` and `v_2(3ab+1)=alpha`. The second valuation is then exactly beta. This follows by
+substituting twice and retaining the odd endpoint U(a). In the old parameterization
+`A=alpha+beta-v_2(3a+1)`; A need not be at least alpha+1. For example a=5,b=17 has
+`85 -> 1 -> 1=U(5)`, alpha=8 and A=6. The displayed census below is the **restricted subsearch**
+`alpha+1<=A<=alpha+60`, not a complete depth-two join classification. Periodicity in beta modulo the
+odd modulus supplies congruence families whenever the exact first-valuation guard is retained.
+Script D (section 8) lists, for every odd `3 <= a <= 51` except `19, 35` (none with `alpha <= 13`, `alpha+1 <= A <= alpha
 + 60`), the smallest member: e.g. `a = 3`: `b = 23` (`69 -> 13 -> 5 = U(3)`), `a = 7`: `b = 11` (`77 -> 29 -> 11 =
 U(7)`), `a = 9`: `b = 11` (`99 -> 149 -> 7 = U(9)`), `a = 31`: `b = 43`, `a = 41`: `b = 43`. These are depth-two
 predecessors of `U(a)` divisible by `a`; the general depth-`i` family is the predecessor tree of `U^j(a)`
@@ -176,34 +193,36 @@ d = [x] - [y] + [m y] - [z] + d w_m,   defect relative to [x] - [z]:   [m y] - [
 ```
 
 where `w_m` is the wild certificate of `1/m` (Table 3 of the paper; for `m = 5` the packet `{7:2, 11, 17, 55,
-65, 83}` of the receipts note). **The composite coordinate of the universal receipt is `[m y]`, the label at
-which the paper multiplies.** Replayed with the accelerated map (addendum (c)): all `26` listed classes
+65, 83}` of the receipts note). **The insertion defect is the full vector `[m y]-[y]+d w_m`.** Its prime part cancels,
+but several composite coordinates can remain, including `[y]` and endpoints of the fixed wild certificate.
+The label `[m y]`, where the paper multiplies, identifies a moving repair target, not the whole defect. Replayed with the accelerated map (addendum (c)): all `27` listed classes
 descend for `t < 64` with the stated worst ratios (`0.5039` to `0.9543`), the plain classes within `<= 5` odd
-steps, the multiplier classes within `<= 3` odd steps after the insertion; the composite defect labels for
+steps, the multiplier classes within `<= 3` odd steps after the insertion; the moving multiplier labels for
 `t = 0, 1` are e.g. `533, 3029` (class `27 mod 128`, `27 -> 41`, `13 * 41 = 533 -> 25`), `35, 355` (class `7 mod
 64`, `5 * 7 = 35 -> 53`), `22517, 23221` (class `2047 mod 4096`, two multiplications by `11`).
 
 | odd residues mod `4096` | density | content |
 |---|---|---|
-| plain descent (nine classes, `1 mod 4` to `79 mod 256`) | `51/64 = 79.69%` | actual orbit below `(76/79) x` within `<= 5` odd steps; zero defect |
-| multiplier classes (seventeen) | `415/2048 = 20.26%` | one or two composite defects `[m y]`, `m in H` |
+| plain descent (eight classes, `1 mod 4` to `79 mod 256`) | `51/64 = 79.69%` | actual orbit below `(76/79) x` within `<= 5` odd steps; zero defect |
+| multiplier classes (nineteen) | `415/2048 = 20.26%` | one or two insertion vectors `[m y]-[y]+d w_m` |
 | `-1 mod 4096` | `1/2048 = 0.05%` | Lemma 2.3: multiplier `m_j = (2^j+1)/3`, then the table |
 
-For comparison the renewal computation of the no-descent set at depth twelve (Pascal-tower note, section 5)
-is `P(Bin(19, 1/2) >= 12) = 17.96%`; the paper's cruder prefix code pays `20.26%` with multipliers. **So the
-universal weak coverage is: plain Collatz descent exactly where bounded-depth descent exists, and a
-multiplicative shortcut exactly where it does not** -- the same cells the partition-cover theorem shows no
-bounded-depth portfolio can pay.
+For comparison, at odd depth twelve the **terminal coefficient** event has density
+`P(Bin(19,1/2)>=12)=11773/65536=17.96%`. All-prefix coefficient survival instead has density
+`427/8192=5.21%`, as verified by the corrected prefix gate. The multiplier-class measure `415/2048`
+describes this particular sufficient portfolio. It is not the exact complement of all bounded-depth
+descent classes. The partition-cover obstruction concerns **universal** coverage by a fixed bounded-depth
+portfolio; it does not forbid paying individual subcells, including by a different controller.
 
-**Theorem 6 (the `-1` cell and the `3x-1` trunk).** For odd `j` let `m_j = (2^j + 1)/3`. Then `3 m_j - 1 = 2^j`
-(`m_j` is on the trunk of the `3x-1` map, `U_-(m_j) = 1`), and for every `x = -1 mod 2^j`,
-`3 m_j x + 1 = 2^j x + (x + 1)` is divisible by `2^j`, so `U(m_j x) = oddpart(x + (x+1)/2^j)`: one odd step
-from `m_j x` lands at `x (1 + 2^-j) + 2^-j`, a number of the size of `x` whose binary tail is `-1` only modulo
-`2^(k-j)` when `x = -1 mod 2^k`. *Proof.* Direct. (Checked for `k <= 15`, odd `j <= k`, five `x` each.) □
+**Theorem 6 (the `-1` cell and the `3x-1` trunk).** For positive odd `j` let `m_j = (2^j + 1)/3`. Then `3 m_j - 1 = 2^j`
+(`m_j` is on the trunk of the `3x-1` map, `U_-(m_j) = 1`), and for every positive `x = -1 mod 2^j`,
+`3 m_j x + 1 = 2^j x + (x + 1)` is divisible by `2^j`, so `U(m_j x) = oddpart(x + (x+1)/2^j)`: the value **before taking its odd part** is `x (1 + 2^-j) + 2^-j`. When `x=-1 mod2^k`
+with k>j this is odd; the boundary k=j can require further halvings. No exact residual tail depth
+follows from the non-exact congruence x=-1 mod2^k alone. *Proof.* Direct. (Checked for `k <= 15`, odd `j <= k`, five `x` each.) □
 
 This is what the paper's Lemma 2.2 uses (with `T`): the deepest growth cell of `3x+1` is neutralized by
-multiplying with a trunk number of `3x-1`. In the receipt calculus the obligation of that step is the single
-composite coordinate `[m_j x]`, and eliminating it means the actual orbit of `x` itself reaching a rooted
+multiplying with a trunk number of `3x-1`. In the receipt calculus that step contributes the insertion vector
+`[m_j x]-[x]+d w_(m_j)`, not only the composite coordinate `[m_j x]`, and eliminating it means the actual orbit of `x` itself reaching a rooted
 vertex, i.e. the plain descent of the `-1 mod 2^k` cell, which climbs for `k` steps and is exactly the cell
 the partition-cover obstruction exhibits. Q1 for the universal receipts is therefore equivalent to the
 descent of those cells; the multiplier families are "parameterized edge replacements" that pay them weakly
@@ -212,7 +231,8 @@ and cannot be made exact without that descent.
 ## 6. Multiples of three (Q2)
 
 **Theorem 7.** Let `n = 3m` with `m` odd. Every receipt with surplus at `n` contains the edge `3m -> U(3m)`
-(A2), and the deficit `U(3m)` is below `n` iff `m = 3 mod 4`. *Proof.* `U(3m) = (9m+1)/2^a` with `a = v_2(9m+1)`;
+(A2). The endpoint of this **one-edge prefix** is below `n` iff `m = 3 mod 4`.
+It need not be a deficit of the full receipt, where further edges can cancel it. *Proof.* `U(3m) = (9m+1)/2^a` with `a = v_2(9m+1)`;
 `9m + 1 = 0 mod 4` iff `m = 3 mod 4` (`9 = 1 mod 4`); then `U(3m) <= (9m+1)/4 < 3m`; if `a = 1`, `U(3m) =
 (9m+1)/2 > 3m`. □ (`500,000/500,000` checks.)
 
@@ -236,15 +256,17 @@ certified family" can be taken to be the multiples of three themselves; the obli
 
 **Theorem 8.** A checked common-future receipt `U^u(n) = U^v(d)` (words `u`, `v`, endpoint `e`) is the signed
 packet `c_u - c_v` with boundary `([n] - [e]) - ([d] - [e]) = [n] - [d]`; relative to the ideal `[n] - [1]` its
-defect is `[1] - [d]`, i.e. one composite coordinate (`K_d`) when `d` is composite and none when `d` is prime
-or `1`. Composition `n -> d -> d'` adds boundaries and keeps one open coordinate; a product of two
+defect is `[1] - [d]`, i.e. one labelled endpoint obligation with prime charge `-v(d)`. Its decomposition is
+`[1]-[d] = -K_d - sum_p v_p(d)([p]-[1])`; even a prime d leaves a nonzero obligation. Composition `n -> d -> d'` adds boundaries and keeps one open coordinate; a product of two
 substitution packets for `n, n'` acquires `-R(n, n')` (D2) and is not a substitution. The compiled controllers
 of the repo (`H`, `G`, `L`, `A`, `B`, the five-letter alphabet) are substitutions, so their symbolic defect is
 always `[1] - [d(t)]` with `d(t)` affine in the parameter; the semigroup multipliers are substitutions glued
-by a product, with the extra coordinate `[m y]`. *Proof.* Cancellation. □ So Q3 holds trivially, and the
-difficulty it was meant to isolate is entirely the rank of the single obligation (the
-[credit potential](adaptive_credit_potential_20261004.md) `E(x,k) = (x+5)(9/8)^k`), not a proliferation
-of coordinates.
+with a multiplicative wild certificate, producing the full insertion vector `[m y]-[y]+d w_m`. *Proof.* Cancellation. □ This answers the endpoint-count question for **signed substitutions**. It does not prove closure of
+the prime-balanced weak-receipt defect module under actual vertex transport (U_*K_9 has nonzero
+prime image e_7-2e_5). The obligation rank remains necessary; see the
+[credit potential](adaptive_credit_potential_20261004.md) `E(x,k) = (x+5)(9/8)^k`.
+A stock-supported common-future replacement does preserve the full weak-receipt defect exactly;
+this is proved separately as T2 in the follow-up, rather than inferred by discarding prime charge.
 
 **Theorem 9.** Let `T_j` be the set of odd integers reaching `1` within `j` odd steps. Replacing the terminal
 ray `(4^e - 1)/3 = T_1` in S1 by `T_j` (exponent vectors of length `j`), a shadow of `n` with prefix length `m`
@@ -274,7 +296,7 @@ the densities.
 | defect elimination is rootedness; F2 is the complete depth-one join; depth-two joins are congruence families (Theorems 2-3, Proposition 4) | PROVED + FINITE-EXACT |
 | product joins are hub coincidences (`60.8%` of pairs, join points `175, 65, 35, ...`) | FINITE-EXACT |
 | no synchronous two-step fusion to `3001`; conjectured for all; deeper fusions sporadic | FINITE-EXACT + CONJECTURED |
-| the universal receipts' composite defects are the multiplier insertion points of the semigroup proof; `20.26%` of odd residues; the `-1` cell uses the `3x-1` trunk (Theorem 6) | CITED + PROVED + FINITE-EXACT |
-| first deficit of `3m` below `3m` iff `m = 3 mod 4` (Theorem 7); the 3-parent induction and its rank | PROVED + FINITE-EXACT |
+| the universal receipts' insertion defects are full prime-balanced vectors with moving multiplier labels; `20.26%` of odd residues; the `-1` cell uses the `3x-1` trunk (Theorem 6) | CITED + PROVED + FINITE-EXACT |
+| first one-edge endpoint of `3m` below `3m` iff `m = 3 mod 4` (Theorem 7); the 3-parent induction and its rank | PROVED + FINITE-EXACT |
 | substitutions carry one obligation (Theorem 8); exact entry is terminal-family membership (Theorem 9) | PROVED |
 | Collatz, universal grounded coverage | OPEN |
