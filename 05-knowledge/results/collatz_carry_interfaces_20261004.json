@@ -1,0 +1,281 @@
+{
+  "Fourier": {
+    "height_hostile": {
+      "carrier": {
+        "b": 1106233681,
+        "p": 129140163,
+        "q": 134217728
+      },
+      "paid": [
+        268435621,
+        258280493
+      ],
+      "unpaid": [
+        165,
+        167
+      ],
+      "word": [
+        4,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        3
+      ]
+    },
+    "phase_collision": [
+      {
+        "carrier": {
+          "b": 5,
+          "p": 9,
+          "q": 256
+        },
+        "source": 483,
+        "target": 17,
+        "word": [
+          1,
+          7
+        ]
+      },
+      {
+        "carrier": {
+          "b": 131,
+          "p": 9,
+          "q": 256
+        },
+        "source": 469,
+        "target": 17,
+        "word": [
+          7,
+          1
+        ]
+      }
+    ],
+    "proved_phase_error_bound": "2*pi*abs(u)*(2^(-m)-q^(-m))/(q-2)",
+    "universe": "q=3,5,7,9; lengths 1..5; total cost <=14",
+    "word_cases": 13888
+  },
+  "checks": {
+    "Fourier_law_independent_DP": 12,
+    "H_dependency": 140664,
+    "LG_equals_K_affine": 1,
+    "LG_equals_K_guarded": 1,
+    "L_local_common_future": 32620,
+    "all_composite_states_reachable": 12,
+    "cancelled_guard_hostile": 1,
+    "canonical_ports": 5461,
+    "carry_square": 22400,
+    "compiled_common_future": 10921,
+    "composite_states_distinguishable": 12,
+    "decoder_hostile": 6,
+    "division_state_range": 22400,
+    "extended_native_affine": 183392,
+    "extended_native_replay": 150772,
+    "five_letter_credit_interface": 183392,
+    "five_letter_decoder": 19531,
+    "five_letter_injective": 19531,
+    "five_letter_paid_prefix": 142580,
+    "five_letter_tree_count": 8,
+    "fixed_cost_address_injective": 13888,
+    "formal_tree_native_empty": 1,
+    "general_q_target_port": 13888,
+    "height_hostile": 3,
+    "inherited_credit_interface": 61896,
+    "marked_centroid_decoder": 12611,
+    "marked_centroid_injective": 12611,
+    "mixed_history_collision": 1,
+    "mixed_tree_count": 10,
+    "mod3_tag_collision": 1,
+    "native_port_affine": 15985,
+    "native_port_associativity": 29791,
+    "native_port_endpoint": 31970,
+    "native_port_sign_boundary": 15985,
+    "native_word": 204232,
+    "negative_port_control": 10922,
+    "paid_prefix": 44892,
+    "phase_correction_equality": 13888,
+    "phase_loses_source": 1,
+    "phase_transducer": 700,
+    "port_carry": 5461,
+    "port_composition": 7225,
+    "port_integrality": 315951,
+    "port_progression": 10922,
+    "reversed_phase_path": 13888,
+    "root_branch_digit": 22400,
+    "root_identity": 1,
+    "source_phase_bridge": 41664,
+    "target_phase": 41664,
+    "translation_decoder": 5461,
+    "translation_injective": 5461,
+    "triadic_cycle_hostile": 3,
+    "triadic_cycle_rejected": 1,
+    "truncated_law_mass": 12,
+    "uniform_phase_correction": 13888
+  },
+  "extended_library": {
+    "empty_native_guards": 3546,
+    "explicit_empty_program": "LBGGGGG",
+    "formal_words": 19531,
+    "funded_source_replays": 24538,
+    "native_associativity_triples": 29791,
+    "new_letter": {
+      "affine": {
+        "b": -3,
+        "p": 9,
+        "q": 16
+      },
+      "name": "L",
+      "native_guard": {
+        "c": 219,
+        "d": 123,
+        "ell": 144,
+        "m": 256
+      },
+      "tag_mod9": 6
+    },
+    "nonempty_native_guards_including_identity": 15985,
+    "relation_if_K_is_added": "K=LG"
+  },
+  "geometry": {
+    "centroid_word_controls": {
+      "fan": 3280,
+      "flag": 9331
+    },
+    "mixed_collision_centroid": [
+      "175/324",
+      "37/324",
+      "28/81"
+    ],
+    "triadic_period_three": [
+      [
+        "1/9",
+        "2/9",
+        "2/3"
+      ],
+      [
+        "1/9",
+        "5/9",
+        "1/3"
+      ],
+      [
+        "4/9",
+        "2/9",
+        "1/3"
+      ]
+    ]
+  },
+  "macros": {
+    "clock_collision": {
+      "AG": {
+        "b": 1405,
+        "p": 729,
+        "q": 1024
+      },
+      "BG": {
+        "b": 1297,
+        "p": 729,
+        "q": 1024
+      },
+      "GA": {
+        "b": 1085,
+        "p": 729,
+        "q": 1024
+      },
+      "GB": {
+        "b": 989,
+        "p": 729,
+        "q": 1024
+      },
+      "H": {
+        "b": 669,
+        "p": 729,
+        "q": 1024
+      }
+    },
+    "funded_nonempty_sources": 7708,
+    "port_composition_pairs": 7225,
+    "positive_sources": 10922,
+    "tags_mod9": {
+      "2": "A",
+      "3": "H",
+      "4": "G",
+      "5": "B",
+      "6": "L"
+    },
+    "words": 5461
+  },
+  "phase_grid": {
+    "boundary": "finite-state division at one level does not give bounded memory for all levels",
+    "minimal_state_counts_controls": {
+      "3^1": 3,
+      "3^2": 9,
+      "3^3": 27,
+      "3^4": 81,
+      "5^1": 5,
+      "5^2": 25,
+      "5^3": 125,
+      "5^4": 625,
+      "7^1": 7,
+      "7^2": 49,
+      "7^3": 343,
+      "7^4": 2401
+    },
+    "q3_table": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        2
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        1
+      ],
+      [
+        2,
+        1,
+        1,
+        2
+      ]
+    ],
+    "q3_table_columns": [
+      "carry",
+      "input_bit",
+      "output_bit",
+      "next_carry"
+    ]
+  },
+  "scope": "PROVED identities in the note; finite exact controls here; Collatz and H1 remain open",
+  "total_checks": 1900995
+}

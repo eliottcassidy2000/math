@@ -1,0 +1,10 @@
+Exact carry interface audit
+Four-letter translation codes: 5461
+Positive native source replays: 10922
+Funded nonempty source replays: 7708
+Independent port composition pairs: 7225
+Five-letter codes: 19531; empty native guards: 3546
+Ordinary-word phase and source controls: 13888
+Marked-centroid codes: {'fan': 3280, 'flag': 9331}
+Total explicit checks: 1900995
+All checks passed. No universal coverage, deterministic cancellation, or root completion inferred.
