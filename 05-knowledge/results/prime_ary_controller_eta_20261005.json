@@ -1,0 +1,401 @@
+{
+  "checks": {
+    "DP versus literal words": 11,
+    "Euler-logarithm integrality": 1023,
+    "binary fusion defect": 28821,
+    "boundary-only fusion": 4761,
+    "complete ternary branch level": 6,
+    "credit fusion defect": 28821,
+    "disjoint ternary tags": 1,
+    "equal enumeration sizes": 1,
+    "eta controller prime2 bridge": 11,
+    "eta good-prime recurrence": 19,
+    "eta level11 controls": 1,
+    "eta sign preserved": 28821,
+    "exact branch height bound": 6,
+    "exact lifted source-clock order": 6,
+    "fixed-source signed hostile": 1,
+    "formal ternary cylinder mass": 1,
+    "fusion affine correction": 1,
+    "fusion associativity": 729,
+    "fusion semantic hostile": 1,
+    "generating function": 3,
+    "golden conjugacy modulo3": 1,
+    "golden exact order": 7,
+    "golden order upper bound": 1,
+    "height escaping tree control": 1,
+    "height-completed positive decoder": 6,
+    "independent eta expansion": 1,
+    "infinite-address hostile": 14,
+    "integral signed clock": 1,
+    "integral source clock": 121,
+    "literal native guard census": 524288,
+    "matrix lifting valuation": 1,
+    "modulo9 congruence hostile": 1,
+    "native-shadow alphabets": 28821,
+    "native-shadow inverse": 28821,
+    "positive finite-address control": 5,
+    "prime-tree moment stratification": 50,
+    "same-guard finite rejection": 6,
+    "shadow-native inverse": 28821,
+    "signed tiling count": 121,
+    "small-source finite rejection": 3,
+    "source cylinder density": 16,
+    "source eta congruence modulo3": 121,
+    "source-clock fixed-line golden-plane intertwiner": 1,
+    "source-resolved cancellation defect": 1,
+    "ternary depth preserved": 28821,
+    "ternary grade is valuation": 517,
+    "ternary inverse table": 1092,
+    "tree compatible prefix": 6217,
+    "tree division precision": 13643,
+    "tree exact residue": 6217,
+    "tree isometry control": 56,
+    "two-colour tiling count": 121,
+    "two-prime slope product": 517
+  },
+  "eta_first_22": [
+    1,
+    -2,
+    -1,
+    2,
+    1,
+    2,
+    -2,
+    0,
+    -2,
+    -2,
+    1,
+    -2,
+    4,
+    4,
+    -1,
+    -4,
+    -2,
+    4,
+    0,
+    2,
+    2,
+    -2
+  ],
+  "eta_prime_power_controls": {
+    "2": [
+      1,
+      -2,
+      2,
+      0,
+      -4,
+      8,
+      -8,
+      0,
+      16,
+      -32,
+      32
+    ],
+    "3": [
+      1,
+      -1,
+      -2,
+      5,
+      1,
+      -16,
+      13
+    ],
+    "5": [
+      1,
+      1,
+      -4,
+      -9,
+      11
+    ],
+    "7": [
+      1,
+      -2,
+      -3,
+      20
+    ]
+  },
+  "grade3_legal_words_at_fixed_sources": {
+    "155": [
+      "H"
+    ],
+    "219": [
+      "LGG"
+    ]
+  },
+  "grade3_literal_signed_sum": 27,
+  "height_decoder_branch_depth_gapdepth_sourcebits": [
+    [
+      0,
+      0,
+      0,
+      1353
+    ],
+    [
+      1,
+      1,
+      1,
+      2811
+    ],
+    [
+      2,
+      1,
+      1,
+      4269
+    ],
+    [
+      7,
+      2,
+      2,
+      11559
+    ],
+    [
+      19,
+      3,
+      3,
+      29055
+    ],
+    [
+      40,
+      4,
+      4,
+      59673
+    ]
+  ],
+  "integral_source_clock_eighth_power": [
+    [
+      505,
+      -714,
+      198
+    ],
+    [
+      99,
+      802,
+      -318
+    ],
+    [
+      -159,
+      -378,
+      166
+    ]
+  ],
+  "integral_source_clock_initial_values": [
+    8,
+    -17,
+    19,
+    27,
+    -191,
+    503,
+    -691,
+    -321,
+    4733,
+    -14297,
+    23317,
+    -3297,
+    -111971
+  ],
+  "parent3_first_child_binary_digits": 1353,
+  "parent3_kappa": 675,
+  "radial_model_rho_one_half_moments_depth5": [
+    [
+      2,
+      1,
+      "95/2048"
+    ],
+    [
+      2,
+      2,
+      "70217/2097152"
+    ],
+    [
+      3,
+      1,
+      "431/41472"
+    ],
+    [
+      3,
+      2,
+      "201643/42467328"
+    ],
+    [
+      5,
+      1,
+      "2357/800000"
+    ],
+    [
+      5,
+      2,
+      "71437/163840000"
+    ],
+    [
+      7,
+      1,
+      "16295/8605184"
+    ],
+    [
+      7,
+      2,
+      "868211/8811708416"
+    ],
+    [
+      11,
+      1,
+      "114817/82458112"
+    ],
+    [
+      11,
+      2,
+      "1411813/84437106688"
+    ]
+  ],
+  "signed_counts_equal_eta_a_2power": [
+    1,
+    -2,
+    2,
+    0,
+    -4,
+    8,
+    -8,
+    0,
+    16,
+    -32,
+    32,
+    0,
+    -64
+  ],
+  "source_averaged_signed_counts": [
+    "1",
+    "-17/128",
+    "19/2048",
+    "27/32768",
+    "-191/524288",
+    "503/8388608",
+    "-691/134217728"
+  ],
+  "source_clock_modulus_and_exact_order": [
+    [
+      3,
+      8
+    ],
+    [
+      9,
+      24
+    ],
+    [
+      27,
+      72
+    ],
+    [
+      81,
+      216
+    ],
+    [
+      243,
+      648
+    ],
+    [
+      729,
+      1944
+    ]
+  ],
+  "status": "Exact scoped identities and finite controls; Collatz and fixed-seed H1 OPEN",
+  "total_checks": 761476,
+  "translation_first_level_mass": "181/729",
+  "translation_tags_mod9": [
+    3,
+    4,
+    2,
+    5,
+    6
+  ],
+  "tree_target155_depth24_prefix": [
+    282429536481,
+    242892246410,
+    2
+  ],
+  "tree_target155_first12_prefixes": [
+    [
+      3,
+      2,
+      2
+    ],
+    [
+      9,
+      8,
+      2
+    ],
+    [
+      27,
+      8,
+      0
+    ],
+    [
+      81,
+      62,
+      2
+    ],
+    [
+      243,
+      143,
+      1
+    ],
+    [
+      729,
+      143,
+      0
+    ],
+    [
+      2187,
+      143,
+      0
+    ],
+    [
+      6561,
+      4517,
+      2
+    ],
+    [
+      19683,
+      11078,
+      1
+    ],
+    [
+      59049,
+      30761,
+      1
+    ],
+    [
+      177147,
+      148859,
+      2
+    ],
+    [
+      531441,
+      326006,
+      1
+    ]
+  ],
+  "universe": {
+    "DP_grade_limit": 120,
+    "eta_coefficient_limit": 1024,
+    "grade3_odd_source_modulus": 65536,
+    "native_grade_limit": 10,
+    "native_words": 28821,
+    "shadow_words": 28821
+  },
+  "unsigned_counts": [
+    1,
+    2,
+    6,
+    16,
+    44,
+    120,
+    328,
+    896,
+    2448,
+    6688,
+    18272,
+    49920,
+    136384
+  ]
+}
