@@ -187,10 +187,12 @@ in this one functional.
 the Jensen gap of section 4b. (ii) `q = 7, 11, 13` sit at the random level; **the "`3 mod 8`" sub-hypothesis
 (`11` like `3`, `13` like `5`) is REFUTED.** (iii) `q = 3` is `0.0037` below the i.i.d. mean (`4` standard
 deviations of the seed scatter; `7` of the random-multiplier scatter) on `300..1500`, and `0.0033` below on
-`750..1500` (`2.2` and `3.4` sd); the six fixed units of E1 (`q = 3`, `n = 200..800`) gave `0.5680-0.5709`,
-mean `0.5698`, all below every random model: pooling, **the digits of `3^-n` produce a typical decay about
-`0.5%` per level faster than random digits, and `3` is the only multiplier among `3, 5, 7, 11, 13` to do so**
-(`19` is marginal, `0.5711`). OBSERVED; mechanism OPEN (candidates: the fluctuation structure -- section 4b and
+`750..1500` (`2.2` and `3.4` sd); the six fixed units `u = 1, 5, 7, 11, 13, 17` of `q = 3` rerun to `N = 1500`
+(`collatz_fixed_frequency_rates_20261004.log`; the `N = 800` run kept as `_N800`) give `0.5691, 0.5699, 0.5692,
+0.5712, 0.5709, 0.5697` on `200..1500`: mean **`0.5700 +- 0.0009`** against the twelve i.i.d. runs' `0.5723 +-
+0.0008` -- a difference of `0.0023`, five standard errors: **the digits of `3^-n` produce a typical decay about
+`0.4%` per level faster than random digits, for every unit tried, and `3` is the only multiplier among `3, 5, 7,
+11, 13` to do so** (`19` is marginal, `0.5711`; the `q = 5, 7` unit families are in section 4c). OBSERVED; mechanism OPEN (candidates: the fluctuation structure -- section 4b and
 E5e -- or an arithmetic anticorrelation specific to the carry automaton of `x -> 3x`). For H1 only the sign
 matters: the Collatz digits are at least as cancelling as random ones in this functional.
 
@@ -288,6 +290,24 @@ of `E[rho^p]` for `p` just below `2` is too slow to confirm at level 14 (increme
 UI tails at fixed `M` have not saturated. A level-18 run (the S19 FFT machinery) would settle `M <= 64`.
 
 ---
+
+### 4d. Per-level increments, and the root-order reading (E5h; DIRECTION)
+
+From the saved E5e arrays (`n = 300..1500`): the per-level log-increments of `3^(n/2)|f_n(0)|` have mean
+`-0.0133` (`q = 3`; rate `0.5697`), `-0.0087` (`5`), `-0.0059` (`7`), `-0.0046` (`11`), `-0.0066..-0.0100`
+(four i.i.d. seeds), with variances `0.81, 0.68, 0.60, 0.88` (real) and `0.68-0.74` (i.i.d.), skew `~0`, and
+heavy-tailed squared ratios (means `4-17`). The variance does not order the rates (`q = 11` has the largest
+variance and the highest rate), so the `q = 3` excess is not a per-level fluctuation effect either.
+
+**Root-order reading.** The random models differ only in how consecutive levels are coupled: unrelated
+(i.i.d. digits, `0.5723 +- 0.0008`), coupled by a `Q`-th root with `Q ~ 2^40` (`0.5728 +- 0.0005`), coupled by a
+cube root with a random start (the `u`-family of `q = 3`, `0.5700 +- 0.0009`). The natural statement is that the
+typical rate `r(q)` of the `q`-th-root tower is a function of the root order, with `r(3)` the lowest; the
+`q = 5, 7` families (section 4c, pending output `collatz_fixed_frequency_unit_families_20261004.out`) test it.
+ANALOGY (typed, lost coordinate named): the tower of levels related by `q`-th roots is a Cartier-type tower
+(the `q`-th-root-of-Frobenius structure of THM-4210's Rule-30 carriers), and THM-4210's lesson -- bounded
+truncations of a Frobenius/Cartier carrier do not decide an all-scale statement -- is the shape of H1's
+difficulty; nothing transfers as a method (the Collatz tower is on phases, not on power series).
 
 ## 6. Reproduction
 

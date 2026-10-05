@@ -6,7 +6,12 @@ status: >
   collatz_fourier_experiments_20261004.md (E1 six units to n = 800; E4 four
   multipliers to 600; E5/E5b sixteen random-digit runs to 1500; E5c the exact
   second moment 3^-n of the i.i.d. model, PROVED one line; E5d window energies
-  to 600) and mac-mini's |mu_hat_n(1)| to 2500 (HYP-9166). What it adds to
+  to 600; E5e/E6: the Collatz digits are neither more fluctuating nor
+  correlated within a level; E5f: six units of q = 3 to n = 1500 give
+  0.5700 +- 0.0009 against twelve i.i.d. runs at 0.5723 +- 0.0008, five
+  standard errors; the level-to-level law e(theta_(n+1,d))^q = e(theta_(n,d))
+  is PROVED and locates the q = 3 excess in the cross-level coupling) and
+  mac-mini's |mu_hat_n(1)| to 2500 (HYP-9166). What it adds to
   HYP-9166: H1's rate is not 3's Parseval scale but the incoherent rate of the
   2-adic window recursion (identical for 5x+1, whose law is nowhere near
   Parseval-flat); the margin 0.577 vs 0.585 is a near-coincidence at q = 3;
