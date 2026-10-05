@@ -78,7 +78,19 @@ Previous session (`opus-2026-10-05-S5`,
 A (counter-only flows are price mixtures), Lemma B (no power-law comparison,
 witnessed by the `-1` shadows), Proposition C (Riesz decomposition), Proposition
 D (leaf-section tower). This note is its continuation on the question of
-lower bounds.
+lower bounds. Concurrent commit `905023c4d` (Codex, source-local floors)
+audited that note and corrected four scope overclaims in place, logged in
+`01-canon/MISTAKES.md` (2026-10-05, Pascal source-floor audit): the discounted
+`D` obeys a weighted split and is not a Pascal trace; the lookahead theorem
+excludes specified observers only; a positive potential needs no positive
+injection at every vertex; summability is the integral condition
+`int dmu/(1-r) < infinity`. All four are accepted. Nothing below depends on
+the corrected phrasings: T2 uses only `w(L,K) <= w(L,0)`, T4 and T5 use only
+the incoming inequality, and the same commit's
+[localized resolvent floor](collatz_localized_resolvent_floor_20261005.md)
+(monotone signed kernel minorants converging to an atom, with a conditional
+finite ROOT deadline) is consistent with T2: its floors recover the atom
+effectively but, by its own status line, certify no new source.
 
 ## 2. T1: the 2-adic tower of a source is the 3-adic tower of its images
 
