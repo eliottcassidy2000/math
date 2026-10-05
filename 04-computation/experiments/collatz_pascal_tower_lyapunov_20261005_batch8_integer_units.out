@@ -1,0 +1,19 @@
+collatz units u<=600 prime to 3 (200 units) A=40: N=1500 Mmax=5N seeds=200 [409s]
+  lambda (L_N - L_N0)/(N-N0), N0=300: -0.56246 +- 0.00018   rate 0.56981 +- 0.00011
+  lambda least-squares slope 300..1500: -0.56287 +- 0.00010   rate 0.56957 +- 0.00006
+  per-seed sd of (L_N-L_N0)/(N-N0): 0.00261;  mean-square rate reference sqrt(sum w_c^2) = 0.57735 (sum w_c = 1.00000); Jensen gap log(rate/rms) = -0.01315
+  D=1: mean increment/D -0.56246  Var/D 0.84516
+  D=10: mean increment/D -0.56267  Var/D 0.33910
+  D=100: mean increment/D -0.56275  Var/D 0.11194
+  D=1000: mean increment/D -0.56276  Var/D 0.01116
+  mean log|f_N| / N = -0.56336   (includes the transient)
+tower q=3 A=40: N=1500 Mmax=5N seeds=200 [171s]
+  lambda (L_N - L_N0)/(N-N0), N0=300: -0.56318 +- 0.00019   rate 0.56939 +- 0.00011
+  lambda least-squares slope 300..1500: -0.56262 +- 0.00010   rate 0.56972 +- 0.00006
+  per-seed sd of (L_N-L_N0)/(N-N0): 0.00264;  mean-square rate reference sqrt(sum w_c^2) = 0.57735 (sum w_c = 1.00000); Jensen gap log(rate/rms) = -0.01388
+  D=1: mean increment/D -0.56318  Var/D 0.85239
+  D=10: mean increment/D -0.56307  Var/D 0.34705
+  D=100: mean increment/D -0.56261  Var/D 0.11382
+  D=1000: mean increment/D -0.56261  Var/D 0.01131
+  mean log|f_N| / N = -0.56380   (includes the transient)
+BATCH8 DONE

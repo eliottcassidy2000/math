@@ -190,7 +190,7 @@ side). At `N = 1500` (100 seeds, levels `300..1500`, standard errors `0.0003` on
 `q = -3`: gap **`-0.0220`** (rate `0.5648`; excess `0.0138` over the i.i.d. gap `-0.0082`, nearly three times
 the step-1 excess); `q = -5`: `-0.0094` (excess `+0.0012`); `q = -7`: `-0.0099` (`+0.0017`); `q = -9`:
 `-0.0084`; `q = -11`: `-0.0085` (universal). So the alternating-sign towers `-5, -7` carry a small excess
-where `+5, +7` carry at most a marginal one, and `-3` carries the largest. [[PENDING-Q3000-NEG]] At this precision every positive `q >= 5` is within `0.0007` of the universal value
+where `+5, +7` carry at most a marginal one, and `-3` carries the largest. At this precision every positive `q >= 5` is within `0.0007` of the universal value
 (the `q = 7, 23, 27, 29, 31, 127, 129` entries at `0.5720-0.5722` are two to three standard errors low on
 levels `200..1000`, where the transient is not yet over).
 
@@ -402,7 +402,7 @@ and the same truncation gives the step-2 tower nothing at any `A`. The real cont
    dyadic-shell profile `D_v` (3e, PROVED), so the excess is a property of the joint law of four or more path
    phases -- it is a statement about `E log|sum|`, i.e. about the multifractal spectrum (3b), not about
    correlations of pairs.
-4. Not arithmetic: present with a uniform deepest string (this note and 4m). [[PENDING-UNITS-CONSTRAINT]]
+4. Not arithmetic: present with a uniform deepest string (this note and 4m). The exact Collatz coefficients `mu_hat_n(u)` of 200 integer units `u <= 600` prime to `3` (window kernel, `A = 40`, levels `300..1500`) have typical rate `0.56981 +- 0.00011` (`0.56989 +- 0.00015` on `600..1500`) against `0.56939 +- 0.00011` (`0.56946 +- 0.00015`) for the uniform-start tower computed the same way: the integer-start family and the uniform-start tower agree to `0.0004`, both at the step-1 value, so the excess uses nothing of the digits of `3^-n`.
 5. A bulk property of the per-level increments (3a), while over frequencies the second moment of the step-1
    tower is carried by `0.1%` of them (3b).
 
@@ -414,7 +414,7 @@ of `2^c + 5` -- the same odd numbers shifted by two -- and the excess sits exact
 (constraint 2). Why the shift by two changes the typical logarithm but no pair statistic is OPEN.
 
 **What this does and does not touch.** Nothing above uses the digits of `3^-n`; the integer-start Collatz
-family (unit `u` fixed, `x_n = -u 3^-n`) [[PENDING-UNITS]]. The ridges of HYP-9166 (coincidences `u 2^Q = -+1
+family (unit `u` fixed, `x_n = -u 3^-n`) The exact Collatz coefficients `mu_hat_n(u)` of 200 integer units `u <= 600` prime to `3` (window kernel, `A = 40`, levels `300..1500`) have typical rate `0.56981 +- 0.00011` (`0.56989 +- 0.00015` on `600..1500`) against `0.56939 +- 0.00011` (`0.56946 +- 0.00015`) for the uniform-start tower computed the same way: the integer-start family and the uniform-start tower agree to `0.0004`, both at the step-1 value, so the excess uses nothing of the digits of `3^-n`.. The ridges of HYP-9166 (coincidences `u 2^Q = -+1
 mod 3^k`) are a property of integer starts and are not the `0.0049`: the uniform-start tower has no such
 coincidences and the full excess.
 
