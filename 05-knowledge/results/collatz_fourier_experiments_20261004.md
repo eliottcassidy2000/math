@@ -448,6 +448,49 @@ the top bit of one level; with (iii) the cross-level second moment of the `u`-fa
 paths weighted by `2^-|a|-|b|` of the indicator that two binomial combinations of the deepest string's angles
 cancel -- an exact, finite, if large, computation).
 
+### 4k. Exact moments of the random-start tower (PROVED): the second moment is exactly incoherent for every `q`, the fourth is heavier than i.i.d. for every `q`
+
+**Setting.** The random-start `q`-tower: the deepest level's digit string is a uniform residue `R mod 2^M`
+(equivalently a uniform 2-adic start `x` of the tower `x q^-n`), all shallower levels following by the Pascal
+identity. By (iii) the phase of a path `a = (a_1, ..., a_n)` (valuations, depth `D_i = a_i + ... + a_n`) is
+`e(R Phi_q(a))` with the real dyadic value `Phi_q(a) = sum_i q^(n-i) 2^-D_i (mod 1)`, so
+`f_n(0) = sum_a 2^-|a| e(R Phi_q(a))`.
+
+**Theorem (second moment; PROVED).** `E_R |f_n(0)|^2 = sum_(a,b) 2^-|a|-|b| 1[Phi_q(a) = Phi_q(b)] = sum_a 4^-|a| =
+3^-n` exactly, for every odd `q` and every `n`, for `R` uniform over all residues and also over the odd ones.
+*Proof.* Averaging `e(R Delta)` over `R` gives `1[Delta in Z]` (over odd `R`: also `-1` when `Delta = 1/2 mod 1`).
+`Phi_q` is injective on paths: at the first index `j` where two paths differ, `Phi_q(a) - Phi_q(b) =
+q^(n-j)(2^-D_j(a) - 2^-D_j(b)) + (terms of larger depth cancel exactly since the paths agree beyond j)` has
+exact 2-adic denominator `2^max(D_j(a), D_j(b))` (`q` odd), hence is not an integer, and equals `1/2` only if that
+maximum is `1`, impossible when the two depths differ. So only `a = b` survives. ∎ Checked exactly for `n <= 5`
+(`collatz_phase_tower_second_moment_20261004.py`: `248832` paths, `248832` distinct values; the Monte-Carlo over
+random starts, all residues and odd residues, agrees within its error). **So the random Collatz tower and the
+i.i.d. model have identical second moments at every level; the `q = 3` excess of the typical rate is not a
+mean-square anticorrelation** (this settles 4h: E5l's "ensemble rms" readings were estimator bias).
+
+**Proposition (fourth moment; PROVED inequality, FINITE-EXACT values).** `E_R |f_n(0)|^4 = sum over quadruples
+w_a w_b w_c w_d 1[Phi_q(a) + Phi_q(b) = Phi_q(c) + Phi_q(d) mod 1]` (the weighted additive energy of the path
+values), while the i.i.d. model's fourth moment counts the quadruples with `{D_i(a), D_i(b)} = {D_i(c), D_i(d)}`
+as multisets at every level `i`; every i.i.d.-admissible quadruple is tower-admissible, so
+`E|f|^4_tower >= E|f|^4_iid`. Values (`collatz_phase_tower_fourth_moment_20261004.py`, valuations `<= 8`,
+scaled by `9^n`; a complex Gaussian of the same variance has `2`):
+
+| `n` | i.i.d. | `q = 3` | `q = 5` | `q = 7` | `q = 9` | `q = 11` | `q = 15` |
+|---|---|---|---|---|---|---|---|
+| 1 | 1.400 | 1.400 | 1.400 | 1.400 | 1.400 | 1.400 | 1.400 |
+| 2 | 1.704 | 2.550 | 2.222 | 2.651 | 2.233 | 2.531 | 2.674 |
+| 3 | 1.976 | 3.915 | 4.013 | 3.888 | 3.818 | 3.959 | 4.474 |
+| 4 | 2.241 | 7.047 | 7.531 | 7.255 | 7.098 | 7.547 | 7.306 |
+
+The i.i.d. model's normalised fourth moment grows linearly (`+0.27` per level: Gaussian-like with polynomial
+corrections); every random-start tower's grows geometrically (`x1.5-1.8` per level at these `n`): **a shared
+digit string gives all `q`-towers the same second moment as random digits and exponentially heavier tails**,
+which is the statistical form of the ridges. But the heavier tail is the same for `q = 3` and `q >= 5` at
+`n <= 4`, while only `q = 3` has the lower typical rate; so the `q = 3` excess is not a low-moment, small-`n`
+effect either. Its mechanism remains OPEN; what is now excluded: within-level digit statistics (E6), fluctuation
+size (E5e), low-level seeding (E5k), mean-square anticorrelation (this theorem), and fourth-moment weight at
+`n <= 4` (this table).
+
 ### 4e. The web around the cold rate (connections found by the niche search; all typed)
 
 | repo thread | the object there | the map to the cold-frequency problem | preserved | lost / sidecar | type |

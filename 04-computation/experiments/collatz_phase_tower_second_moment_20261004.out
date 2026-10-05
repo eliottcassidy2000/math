@@ -1,0 +1,9 @@
+exact second moment of the random-start Pascal tower, valuations <= 12
+n | 3^n E_R|f_n(0)|^2 (exact group sum) | 3^n x diagonal (iid value, -> 1 minus truncation) | #groups / #paths | 3^n x collision mass | MC all residues | MC odd residues
+1 | 1.000000 | 1.000000 | 12 / 12 | 0.000000 | 0.990 +- 0.032 (A<=8) | 0.999 +- 0.010   [0s]
+2 | 1.000000 | 1.000000 | 144 / 144 | 0.000000 | 1.061 +- 0.065 (A<=8) | 1.067 +- 0.046   [0s]
+3 | 1.000000 | 1.000000 | 1728 / 1728 | 0.000000 | 1.110 +- 0.090 (A<=8) | 1.021 +- 0.038   [0s]
+4 | 1.000000 | 1.000000 | 20736 / 20736 | 0.000000 | 1.003 +- 0.087 (A<=8) | 0.973 +- 0.040   [0s]
+5 | 1.000000 | 1.000000 | 248832 / 248832 | 0.000000 | 0.852 +- 0.053 (A<=8) | 1.000 +- 0.065   [2s]
+reading: the exact group sum exceeds the diagonal by the collision mass (>= 0): the random-start Collatz tower has a LARGER mean square than the i.i.d. model, never smaller;
+the Monte-Carlo over all residues should match the exact group sum (truncation A <= 8 there), the odd-only one may sit lower by the half-collision pairs.

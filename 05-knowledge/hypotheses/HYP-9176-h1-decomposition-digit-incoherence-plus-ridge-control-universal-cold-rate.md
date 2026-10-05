@@ -22,8 +22,14 @@ status: >
   calibrated on the i.i.d. model, equals the effect); exact: over the full
   frequency ensemble the mean square is the collision probability
   (3/2) 3^-n E[rho_n^2], rate 1/sqrt3 with a linearly growing prefactor
-  (Parseval, PROVED) -- a heavier tail than the i.i.d. model's, consistent
-  with a lower typical rate by Jensen; mechanism OPEN) and
+  (Parseval, PROVED); and for the RANDOM-START tower (uniform 2-adic start,
+  all levels by the Pascal identity theta_{N-m,d} = sum_i C(m,i) theta_{N,d-i},
+  PROVED) the second moment is EXACTLY 3^-n at every level for every odd q
+  (the path value Phi_q(a) = sum_i q^(n-i) 2^-D_i mod 1 is injective on
+  paths, PROVED), while the fourth moment exceeds the i.i.d. model's for every
+  q (weighted additive energy; x3 at n = 4): same mean square as random
+  digits, exponentially heavier tails = the ridges; the q = 3 typical-rate
+  excess is not visible in moments up to four at n <= 4; mechanism OPEN) and
   mac-mini's |mu_hat_n(1)| to 2500 (HYP-9166). What it adds to
   HYP-9166: H1's rate is not 3's Parseval scale but the incoherent rate of the
   2-adic window recursion (identical for 5x+1, whose law is nowhere near
