@@ -15,10 +15,25 @@ fixed-path tiling, `64` tilings at `n = 5`); [HYP-3244](../hypotheses/HYP-3244-t
 (the fixed-path tiling model); the [Camion/Busch note](camion_busch_gaps_polyhedra_collatz_20261002.md) (`6` strong
 `4`-tournaments as the octahedron; `12` classes at `n = 5`).
 
-**Status: FINITE-EXACT (the Syracuse law to level `19` in full, `1.16 10^9` residues, level `20` streamed,
-`3.5 10^9`; all elementary checks of section 2-5 to the stated bounds); PROVED (Propositions 1-3, elementary);
-OBSERVED (the decay exponents and the verdict on equality, which is a statement about limits read from finite
-levels); typed (section 6). Author-audited only; audit OWED. Collatz OPEN.**
+**Status: VERIFIED (finite numerical) for the partition functions (float64, valuations to `44`; the Syracuse law to
+level `19` in full, `1.16 10^9` residues, level `20` streamed, `3.5 10^9`; mass `1` to ten digits) -- not exact
+rational certificates, per the Codex audit of 2026-10-05 (MISTAKES, "atomic-prefix audit"); FINITE-EXACT for the
+integer checks of sections 2-5; PROVED (Propositions 1-3, elementary); OBSERVED (the decay exponents and the verdict
+on equality, which is a statement about limits read from finite levels against explicit models); typed (section 6).
+Author-audited only; audit OWED. Collatz OPEN.**
+
+**Corrections received while this note was being written (Codex, commit `162c5afe3`, MISTAKES 2026-10-05, three
+entries).** (i) In the bridge note, coefficient contraction `3^k < 2^(S_k)` was identified with actual descent and the
+exact valuation cylinder (modulus `2^(S_k+1)`, odd-conditional mass `2^(-S_k)`) with the coarse one (modulus
+`2^(S_k)`); the carry `B` and THM-4512's exceptional representatives must be retained (`x = 1`, word `(2)`,
+coefficient `3/4`, `U(1) = 1`). (ii) In the two-sheet note the sibling automaton is a sufficient common-future
+detector, not a necessary one (`x = 31` fails the detector and still reaches its shadow `35`); the quarter-child
+relation is reached at simultaneous time `k-3` and equality at `k-2`; an exact `-1` cell of depth `r` has `r-1`
+initial valuation-one steps. (iii) The "no measure argument can cross" reading of the Vitali wall was too broad: a
+computable measure with an atom at every integer makes mass-one coverage the universal statement itself (the
+Codex [prefix-mass note](collatz_effective_prefix_mass_20261005.md)); what is true is only that computable points
+are not random for computable atomless measures. This note uses the corrected statements; its own claims are typed
+accordingly.
 
 ---
 
@@ -58,7 +73,7 @@ levels); typed (section 6). Author-audited only; audit OWED. Collatz OPEN.**
 
 ---
 
-## 1. Equality in the spectrum bound (FINITE-EXACT; `collatz_syracuse_multifractal_deep_20261005.py`)
+## 1. Equality in the spectrum bound (VERIFIED, finite numerical; `collatz_syracuse_multifractal_deep_20261005.py`)
 
 The bridge note proved `tau(q) <= min(q-1, log_3(2^q-1))` and conjectured equality for `q > 2`. The decisive
 quantity is the deficit `d_n(q) = bound(q) - s_n(q)` with `s_n(q) = -log(Z_n(q)/Z_(n-1)(q))/log 3` the per-level
@@ -179,7 +194,7 @@ Outputs `.out`/`.json` beside the scripts.
 
 | claim | status |
 |---|---|
-| equality `tau(q) = min(q-1, log_3(2^q-1))` forced by the deficits for `1.5 <= q <= 6` (levels `13..20`); undecided at `q = 8` (`d_inf <= 0.0074`) | OBSERVED (levels `17-20`) |
+| equality `tau(q) = min(q-1, log_3(2^q-1))` forced by the deficits for `1.5 <= q <= 6` (levels `13..20`); undecided at `q = 8` (`d_inf <= 0.0074`) | OBSERVED on VERIFIED finite numerical data (levels `13-20`) |
 | centre of every odd multiplication table is `+-4^-1`, swapped by `3x-1` and `3x+1` (Proposition 1) | PROVED |
 | the `T_(k+1)` triangle is a fundamental domain of the table block under the order-8 group (Proposition 2) | PROVED + FINITE-EXACT |
 | triples: `4y = -+1 (mod z)`, the sheet split, `p` to the atom `yz`, `q` to the sibling (Proposition 3) | PROVED + FINITE-EXACT |
