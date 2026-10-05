@@ -1,0 +1,9 @@
+BRANCH TOLL AND ROOT-CENTERED RANK: universal coverage OPEN
+DELAYS [(1, 4), (2, 7), (3, 11), (4, 14), (5, 18), (6, 21), (7, 24), (8, 28), (9, 31), (10, 35), (11, 38), (12, 42)]
+RANK {"complete_neighbor_sources": 2002, "reduction_sources": 10002, "distinct_critical_stops": 2920, "magnitude_increasing_edges": 1351, "longest_reduction": [17, [-9077, -13615, -10211, -3829, -5743, -4307, -1615, -1211, -227, -85, -127, -95, -71, -53, -79, -59, -11, -1]], "critical_residues": [3, 7, 15, 19, 27, 31, 39, 51, 55, 63, 67, 79, 87, 91]}
+PRIME {"n": 223, "m": 233, "w": [1, 1, 1, 1, 3], "v": [2, 1, 1, 1, 2, 3, 1, 1, 2, 1], "P": 62208, "Q": 65536, "source_k": 1, "child_k": 3, "integer_slope": "256/243", "refined_by": 1, "energy_difference_coefficients": ["14256", "7886592", "1090437120"]}
+BENCHMARK {"forward_cap": 6, "inverse_cap": 2, "hits": 3, "larger_children": 3, "inverse_visits": 7637}
+BENCHMARK {"forward_cap": 6, "inverse_cap": 4, "hits": 3, "larger_children": 3, "inverse_visits": 18039}
+BENCHMARK {"forward_cap": 6, "inverse_cap": 6, "hits": 3, "larger_children": 3, "inverse_visits": 34523}
+BENCHMARK {"forward_cap": 6, "inverse_cap": 8, "hits": 10, "larger_children": 3, "inverse_visits": 59224}
+PASS: 69150 explicit checks.
