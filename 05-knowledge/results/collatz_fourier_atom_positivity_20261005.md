@@ -266,6 +266,15 @@ The eight states retain phase that the two-dimensional quotient compresses.
 Neither the local Galois/Hecke match nor this intertwiner supplies a map from
 actual Collatz sources preserving the ROOT predicate.
 
+```mermaid
+flowchart LR
+    P["Positive weighted eight-cycle"] -->|"Integral quotient J; AJ = JP"| A["Signed two-dimensional oldform action"]
+    A -->|"Reduce modulo 3"| G["Golden action on F9"]
+```
+
+The first arrow preserves the operator equation and loses pointed positivity.
+The second retains a finite-field action, where real order is unavailable.
+
 There is a further elementary boundary for identifying (3) directly with
 a modular form. **F3.** A nonzero holomorphic function bounded throughout
 the upper half plane cannot obey a positive-weight modular transformation
