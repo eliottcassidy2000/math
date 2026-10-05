@@ -1,0 +1,564 @@
+{
+  "checks_by_group": {
+    "all_four_carries": 1,
+    "anchor_affine": 192,
+    "anchor_backwards": 192,
+    "anchor_minus_guard": 10,
+    "anchor_minus_return": 3,
+    "anchor_plus_guard": 640,
+    "anchor_repeat_depth": 6141,
+    "anchor_repeat_mass": 60,
+    "anchor_resolvent_mass": 3,
+    "anchor_run_guard": 2638,
+    "anchor_ternary_depth_hostile": 2,
+    "block_cost_control": 8191,
+    "climb_law_by_shells": 78,
+    "climb_resolvent": 32767,
+    "collision_tilt": 40,
+    "complete_policy_direction": 8191,
+    "complete_policy_guard": 9239,
+    "eight_states": 1,
+    "fano_carry_control": 1,
+    "finite_climb_total": 1,
+    "finite_root_control": 8191,
+    "forced_climb": 32767,
+    "golden_carry": 20000,
+    "independent_alias": 229376,
+    "independent_climb_accumulation": 2047,
+    "independent_climb_cofactor": 32768,
+    "measure_comparison": 32768,
+    "minus_cycle_control": 2,
+    "nu_normalization": 12,
+    "other_sheet_ray": 40,
+    "outside_predecessor": 2,
+    "overdraft_false_proof": 30,
+    "peak_and_block": 32767,
+    "policy_flow_lifting_identity": 9686,
+    "q_moment": 40,
+    "q_tail": 40,
+    "ray_binary_word": 40,
+    "ray_mu_mass": 1,
+    "ray_nu_mass": 1,
+    "ray_ternary_step": 40,
+    "refuel_branch": 7,
+    "root_ray": 40,
+    "ternary_odometer": 7,
+    "two_bit_payment": 16384,
+    "unbounded_refuel_lower_bound": 7,
+    "zeck_charge": 20000,
+    "zeck_guard": 373635,
+    "zeck_reader": 20000
+  },
+  "checks_total": 899089,
+  "complete_local_policy": {
+    "counts": {
+      "D": 4095,
+      "G": 1024,
+      "H": 4,
+      "R": 3068
+    },
+    "exact_nu_domain_masses": {
+      "D": "1/12",
+      "G": "1/64",
+      "H": "1/4194304",
+      "R": "983039/4194304"
+    },
+    "finite_universe": "odd 3 <= n < 2^14",
+    "scope": "universal legal block coverage; global root coverage remains OPEN"
+  },
+  "critical_flow": {
+    "climb_closed_total_mass_on_n_gt_1": "2/3",
+    "first_falling_edge_failure_in_head": [
+      17,
+      13,
+      "21/4"
+    ],
+    "maximum_falling_edge_ratio_in_head": {
+      "edge": [
+        13121,
+        9841
+      ],
+      "ratio": "1446"
+    },
+    "refuel_family": [
+      {
+        "flow_ratio": "5/4",
+        "h": 5,
+        "source_bits": 6,
+        "target_bits": 5,
+        "ternary_depth": 1
+      },
+      {
+        "flow_ratio": "9/4",
+        "h": 17,
+        "source_bits": 18,
+        "target_bits": 17,
+        "ternary_depth": 2
+      },
+      {
+        "flow_ratio": "25/4",
+        "h": 53,
+        "source_bits": 54,
+        "target_bits": 53,
+        "ternary_depth": 3
+      },
+      {
+        "flow_ratio": "41/4",
+        "h": 161,
+        "source_bits": 162,
+        "target_bits": 161,
+        "ternary_depth": 4
+      },
+      {
+        "flow_ratio": "105/4",
+        "h": 485,
+        "source_bits": 486,
+        "target_bits": 485,
+        "ternary_depth": 5
+      },
+      {
+        "flow_ratio": "361/4",
+        "h": 1457,
+        "source_bits": 1458,
+        "target_bits": 1457,
+        "ternary_depth": 6
+      },
+      {
+        "flow_ratio": "617/4",
+        "h": 4373,
+        "source_bits": 4374,
+        "target_bits": 4373,
+        "ternary_depth": 7
+      }
+    ],
+    "status": "ascent inequalities closed exactly; full flow remains OPEN"
+  },
+  "cycle_anchor_macros": [
+    {
+      "B": 1,
+      "P": 3,
+      "Q": 2,
+      "anchor": -1,
+      "extra_resolvent_mass": "1/3",
+      "first_endpoint": 5,
+      "first_positive_source": 3,
+      "total_resolvent_mass_on_n_gt_1": "2/3",
+      "word": [
+        1
+      ]
+    },
+    {
+      "B": 5,
+      "P": 9,
+      "Q": 8,
+      "anchor": -5,
+      "extra_resolvent_mass": "1/63",
+      "first_endpoint": 13,
+      "first_positive_source": 11,
+      "total_resolvent_mass_on_n_gt_1": "22/63",
+      "word": [
+        1,
+        2
+      ]
+    },
+    {
+      "B": 2363,
+      "P": 2187,
+      "Q": 2048,
+      "anchor": -17,
+      "extra_resolvent_mass": "1/4194303",
+      "first_endpoint": 4357,
+      "first_positive_source": 4079,
+      "total_resolvent_mass_on_n_gt_1": "466034/1398101",
+      "word": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        4
+      ]
+    }
+  ],
+  "finite_closure_stages": [
+    {
+      "frontier_tail_upper_bound": "1/24576",
+      "mass_from_source_head": "8191/12288",
+      "mass_tail_upper_bound": "1/1536",
+      "refuels_paid": 0,
+      "unrooted_frontier_mass_from_head": "4097001/33554432"
+    },
+    {
+      "frontier_tail_upper_bound": "1/24576",
+      "mass_from_source_head": "28421525/33554432",
+      "mass_tail_upper_bound": "1/512",
+      "refuels_paid": 1,
+      "unrooted_frontier_mass_from_head": "4878173/50331648"
+    },
+    {
+      "frontier_tail_upper_bound": "1/24576",
+      "mass_from_source_head": "97183667/100663296",
+      "mass_tail_upper_bound": "7/1536",
+      "refuels_paid": 2,
+      "unrooted_frontier_mass_from_head": "1378209/33554432"
+    },
+    {
+      "frontier_tail_upper_bound": "1/24576",
+      "mass_from_source_head": "51899297/50331648",
+      "mass_tail_upper_bound": "5/512",
+      "refuels_paid": 3,
+      "unrooted_frontier_mass_from_head": "392137/16777216"
+    },
+    {
+      "frontier_tail_upper_bound": "1/24576",
+      "mass_from_source_head": "108778817/100663296",
+      "mass_tail_upper_bound": "31/1536",
+      "refuels_paid": 4,
+      "unrooted_frontier_mass_from_head": "1870799/100663296"
+    },
+    {
+      "frontier_tail_upper_bound": "1/24576",
+      "mass_from_source_head": "28203613/25165824",
+      "mass_tail_upper_bound": "21/512",
+      "refuels_paid": 5,
+      "unrooted_frontier_mass_from_head": "1517135/100663296"
+    },
+    {
+      "frontier_tail_upper_bound": "1/24576",
+      "mass_from_source_head": "38614371/33554432",
+      "mass_tail_upper_bound": "127/1536",
+      "refuels_paid": 6,
+      "unrooted_frontier_mass_from_head": "341647/25165824"
+    },
+    {
+      "frontier_tail_upper_bound": "1/24576",
+      "mass_from_source_head": "119370881/100663296",
+      "mass_tail_upper_bound": "85/512",
+      "refuels_paid": 7,
+      "unrooted_frontier_mass_from_head": "107545/8388608"
+    },
+    {
+      "frontier_tail_upper_bound": "1/24576",
+      "mass_from_source_head": "20606527/16777216",
+      "mass_tail_upper_bound": "511/1536",
+      "refuels_paid": 8,
+      "unrooted_frontier_mass_from_head": "413401/33554432"
+    }
+  ],
+  "finite_root_control": {
+    "maximum_odd_steps": 101,
+    "maximum_source": 13255,
+    "scope": "no estimate of the stopping-time moment in the infinite tail",
+    "step_cap": 10000,
+    "unexamined_source_mass": "1/24576",
+    "universe": "odd 1 <= n < 2^14",
+    "weighted_odd_steps_finite_head": "8838787/6291456"
+  },
+  "hostile_controls": {
+    "budget_control": "identity base map, j -> j-1, kill j=0: contraction but no root receipt",
+    "external_predecessors": [
+      [
+        27,
+        5
+      ],
+      [
+        363,
+        17
+      ]
+    ],
+    "minus_cycles": [
+      [
+        5,
+        7
+      ],
+      [
+        17,
+        25,
+        37,
+        55,
+        41,
+        61,
+        91
+      ]
+    ]
+  },
+  "root_ray": {
+    "mu_mass": "19/30",
+    "nu_mass": "32/45",
+    "rows": [
+      {
+        "height": 2,
+        "j": 1,
+        "plus_root_source": 1,
+        "source_index": 1
+      },
+      {
+        "height": 10,
+        "j": 2,
+        "plus_root_source": 5,
+        "source_index": 3
+      },
+      {
+        "height": 42,
+        "j": 3,
+        "plus_root_source": 21,
+        "source_index": 11
+      },
+      {
+        "height": 170,
+        "j": 4,
+        "plus_root_source": 85,
+        "source_index": 43
+      },
+      {
+        "height": 682,
+        "j": 5,
+        "plus_root_source": 341,
+        "source_index": 171
+      },
+      {
+        "height": 2730,
+        "j": 6,
+        "plus_root_source": 1365,
+        "source_index": 683
+      }
+    ],
+    "ternary_bijections_through_depth": 7
+  },
+  "source_laws": {
+    "alias_offsets": "0..6",
+    "cofactor_1_mass": "8/9",
+    "cofactor_other_mass": "nu(t)/3",
+    "entropy_alias": "8/3-log2(3)",
+    "entropy_mu": "3",
+    "entropy_nu": "log2(3)+1/3",
+    "mu_all_ones_mass": "2/3",
+    "nu": "8/(3*4^bit_length(n))",
+    "nu_all_ones_mass": "8/9",
+    "odd_source_bound_exclusive": 65536,
+    "q": "3/4^a"
+  },
+  "source_sha256": "f17e259c7e8e5b6665970fb18325e155950a0cc98c46de6f6c876e11c78ec2fc",
+  "status": "FINITE-EXACT; symbolic proofs are in the companion note",
+  "zeckendorf": {
+    "finite_universe": "0 <= n < 20000",
+    "odd_carry_examples": {
+      "-1": 7,
+      "0": 5,
+      "1": 1,
+      "2": 9
+    },
+    "plus_parity_map_mod_8": [
+      0,
+      5,
+      2,
+      3,
+      4,
+      1,
+      6,
+      7
+    ],
+    "scope": "auxiliary XOR charge, not the owner-confirmed stripe",
+    "states": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "transitions": [
+      [
+        [
+          0,
+          0,
+          0
+        ],
+        0,
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          0
+        ],
+        1,
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          1
+        ],
+        0,
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          0
+        ],
+        0,
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          0
+        ],
+        1,
+        [
+          0,
+          1,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          1
+        ],
+        0,
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      [
+        [
+          1,
+          0,
+          0
+        ],
+        0,
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      [
+        [
+          1,
+          0,
+          0
+        ],
+        1,
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      [
+        [
+          1,
+          0,
+          1
+        ],
+        0,
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      [
+        [
+          1,
+          1,
+          0
+        ],
+        0,
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          1,
+          1,
+          0
+        ],
+        1,
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          1,
+          1,
+          1
+        ],
+        0,
+        [
+          1,
+          0,
+          0
+        ]
+      ]
+    ]
+  }
+}

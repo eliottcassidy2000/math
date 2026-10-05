@@ -13,6 +13,11 @@ claim of literature priority.
 [Program](../../04-computation/experiments/collatz_effective_prefix_mass_20261005.py)
 and [exact output](collatz_effective_prefix_mass_20261005.json).
 
+**Follow-up:** [Three bits and critical flow, C1–C5](collatz_three_bits_critical_flow_20261005.md)
+identifies the code-alias law with the climb-depth law, relaxes P6 to `Kv<=v`
+using external cycle predecessors, and constructs a finite-mass closure for
+all rising edges. Full refuel payment and universal coverage remain OPEN.
+
 ## 1. Inheritance and the changed target
 
 The anchor is universal entry into sound root certificates. The niche is
