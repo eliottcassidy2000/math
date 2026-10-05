@@ -1,0 +1,17 @@
+Exact inverse repetition audits: 94848
+Exact forward repetition audits: 97536
+All binary inverse words through length16: 131071 ; strict first-hit words: 274
+All R-containing subwords of these strict paths: 17311 ; hostile pump rejected
+Explicit unbounded-R witnesses D^(3^(r-1)) R^r:
+ r=2 initial_doublings=3 source_bits=2
+ r=3 initial_doublings=9 source_bits=8
+ r=4 initial_doublings=27 source_bits=25
+ r=5 initial_doublings=81 source_bits=79
+ r=6 initial_doublings=243 source_bits=240
+ r=7 initial_doublings=729 source_bits=725
+ r=8 initial_doublings=2187 source_bits=2183
+ r=9 initial_doublings=6561 source_bits=6556
+Sound regular one-R controls: 1023 ; root-cycle exception retained
+Two-anchor precision switches: 20020 ; equality-boundary cases: 5144
+Polylog word-count bounds at X=1000000 for K=0..3: [(0, 20), (1, 252), (2, 2299), (3, 17549)]
+PASS: arithmetic and finite-language controls; universal coverage remains OPEN

@@ -1,0 +1,14 @@
+QUADRATIC COMPONENTS AND RANK ATLASES: exact mechanisms, no global Collatz closure
+x^2-0: core (-1, 0, 1) ; critical orbit [0] ; eventual cycle [0] ; escaping roots b<=5000: 4930
+x^2-1: core (-1, 0, 1) ; critical orbit [0, -1] ; eventual cycle [0, -1] ; escaping roots b<=5000: 4930
+x^2-2: core (-2, -1, 0, 1, 2) ; critical orbit [0, -2, 2] ; eventual cycle [2] ; escaping roots b<=5000: 4930
+Exact signed codec/transition checks: 29992 ; roots count X-floor(sqrt(X+c))
+Escaping component c=0: +/- [2, 4, 16, 256, 65536]
+Escaping component c=1: +/- [2, 3, 8, 63, 3968]
+Escaping component c=2: +/- [3, 7, 47, 2207, 4870847]
+Chebyshev rational orbit6/5: denominator=5^(2^j); denominator bit lengths: [(0, 3), (1, 5), (2, 10), (3, 19), (4, 38), (5, 75), (6, 149), (7, 298), (8, 595)]
+Arbitrary polynomial-chart assignments rejected: 1114 ; q1..4, q+1 increasing states; finite unrolled controls pass
+Bounded macro controls: 2262 ; q1..3, all macro lengths1..3 and all chart assignments
+Valuation-coordinate edge controls: 6240 ; reset hostile9->7 raises energy15->27;27->41->31 gives63,63,243
+Fold hostile: rank(3)=rank(-1), but3->5->1 and-1->-1; sign cannot be dropped
+PASS: finite critical orbit, proper graph reduction, and global attraction are different predicates
