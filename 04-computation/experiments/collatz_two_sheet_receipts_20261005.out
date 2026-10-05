@@ -1,0 +1,74 @@
+# A. the trunk move and Proposition A (exact)
+  trunk move: U_+(m_j x) = oddpart(x + (x+1)/2^j), value x/x', transport defect = R(m_j, x), sheets valid: 756/756; with j < v_2(x+1) the landing point x + (x+1)/2^j is itself odd: 720/720
+  Proposition A (general - rooted multiplier, any + depth): value x/x' and defect R(m,x): 400/400
+  3x-1-rooted odd m <= 100: [3, 11, 15, 29, 39, 43, 53, 57, 59, 65, 69, 71, 77, 79, 85, 87, 95, 97]
+  AL multipliers and their - fate: 5:cycle 7, 7:cycle 5, 11:rooted, 13:cycle 5, 23:cycle 91, 29:rooted, 43:rooted, 25:cycle 17, 35:cycle 5
+  example x = 7, j = 3, m_3 = 3: 21 -> 1 on +, 3 -> 1 on -: value 7, boundary {21: 1, 3: -1}, defect vs [7]-[1]: {21: 1, 3: -1, 7: -1, 1: 1} = R(3,7)
+  [0s]
+# B. prefix codes to Kmax = 16, at most one multiplier, inserted at odd index <= 3, <= 20 odd steps
+  plain only: classes 790; odd density plain 0.9355, multiplier 0.0000, uncovered 0.06451 (2114 classes, e.g. [(65535, 16), (32767, 16), (49151, 16), (16383, 16), (57343, 16), (24575, 16), (40959, 16), (8191, 16)])
+  M_minus greedy (multiplier tried before refining): classes 17; odd density plain 0.6875, multiplier 0.3125, uncovered 0.00003 (1 classes, e.g. [(65535, 16)])
+     multipliers used (density): 3:0.2500, 11:0.0469, 15:0.0117, 29:0.0020, 39:0.0015, 53:0.0004, 69:0.0001
+  M_minus plain-first: classes 2903; odd density plain 0.9355, multiplier 0.0645, uncovered 0.00003 (1 classes, e.g. [(65535, 16)])
+     multipliers used (density): 3:0.0535, 11:0.0078, 15:0.0024, 29:0.0004, 39:0.0002, 53:0.0001, 69:0.0001, 43:0.0001
+  M_AL plain-first: classes 2896; odd density plain 0.9355, multiplier 0.0643, uncovered 0.00024 (8 classes, e.g. [(65535, 16), (32767, 16), (49151, 16), (16383, 16), (24575, 16), (40959, 16), (8191, 16), (36863, 16)])
+     multipliers used (density): 5:0.0555, 7:0.0055, 11:0.0022, 29:0.0005, 13:0.0004, 23:0.0002, 35:0.0000, 43:0.0000
+  trunk only {3, 11, 43, 171, 683} plain-first: classes 2900; odd density plain 0.9355, multiplier 0.0644, uncovered 0.00012 (4 classes, e.g. [(65535, 16), (32767, 16), (16383, 16), (57343, 16)])
+     multipliers used (density): 3:0.0535, 11:0.0078, 43:0.0022, 171:0.0006, 683:0.0003
+  Kmax = 12 with M_minus: plain 0.8896, multiplier 0.1099, uncovered 0.00049 (1 classes [(4095, 12)]); AL paper: plain 0.7969, multiplier 0.2026, uncovered -1 mod 4096 only
+  [2s]
+# C. universal two-sheet receipts for odd x <= 65536: fusion relations per x
+  M_minus greedy (multiplier tried before refining): no receipt 0; fusion relations per x: mean 2.680 (of which deep-cell trunk moves 0.0000), max (10, 41695); distribution 0:1599, 1:5690, 2:8681, 3:7912, 4:5212, 5:2404, 6:888, 7:249, 8:99, 9:30, 10:3
+  M_minus plain-first: no receipt 0; fusion relations per x: mean 0.747 (of which deep-cell trunk moves 0.0000), max (6, 11983); distribution 0:15383, 1:11849, 2:4256, 3:1033, 4:214, 5:20, 6:12
+  M_AL plain-first: no receipt 0; fusion relations per x: mean 0.733 (of which deep-cell trunk moves 0.0016), max (5, 26159); distribution 0:15383, 1:11897, 2:4415, 3:992, 4:78, 5:2
+  trunk only {3, 11, 43, 171, 683} plain-first: no receipt 0; fusion relations per x: mean 0.748 (of which deep-cell trunk moves 0.0002), max (6, 11983); distribution 0:15383, 1:11873, 2:4218, 3:1039, 4:214, 5:26, 6:14
+  [3s]
+# D. deep cells x = -1 mod 2^k (exact depth k): does the + orbit of x meet the + orbit of m_j x before x descends below itself?
+  k=8, j=3, m_j=3: pairs 500; orbits meet before x descends: 223; meet anywhere above 1: 478
+  k=8, j=5, m_j=11: pairs 500; orbits meet before x descends: 0; meet anywhere above 1: 434
+  k=10, j=3, m_j=3: pairs 500; orbits meet before x descends: 251; meet anywhere above 1: 484
+  k=10, j=5, m_j=11: pairs 500; orbits meet before x descends: 0; meet anywhere above 1: 443
+  k=10, j=7, m_j=43: pairs 500; orbits meet before x descends: 0; meet anywhere above 1: 446
+  k=12, j=3, m_j=3: pairs 500; orbits meet before x descends: 269; meet anywhere above 1: 484
+  k=12, j=5, m_j=11: pairs 500; orbits meet before x descends: 0; meet anywhere above 1: 438
+  k=12, j=7, m_j=43: pairs 500; orbits meet before x descends: 0; meet anywhere above 1: 438
+  k=12, j=9, m_j=171: pairs 500; orbits meet before x descends: 0; meet anywhere above 1: 450
+  k=14, j=3, m_j=3: pairs 500; orbits meet before x descends: 286; meet anywhere above 1: 485
+  k=14, j=5, m_j=11: pairs 500; orbits meet before x descends: 0; meet anywhere above 1: 440
+  k=14, j=7, m_j=43: pairs 500; orbits meet before x descends: 0; meet anywhere above 1: 442
+  k=14, j=9, m_j=171: pairs 500; orbits meet before x descends: 0; meet anywhere above 1: 435
+  k=14, j=11, m_j=683: pairs 500; orbits meet before x descends: 0; meet anywhere above 1: 444
+  k=16, j=3, m_j=3: pairs 500; orbits meet before x descends: 278; meet anywhere above 1: 482
+  k=16, j=5, m_j=11: pairs 500; orbits meet before x descends: 0; meet anywhere above 1: 438
+  k=16, j=7, m_j=43: pairs 500; orbits meet before x descends: 0; meet anywhere above 1: 436
+  k=16, j=9, m_j=171: pairs 500; orbits meet before x descends: 0; meet anywhere above 1: 437
+  k=16, j=11, m_j=683: pairs 500; orbits meet before x descends: 0; meet anywhere above 1: 431
+  k=16, j=13, m_j=2731: pairs 500; orbits meet before x descends: 0; meet anywhere above 1: 435
+  k=20, j=3, m_j=3: pairs 500; orbits meet before x descends: 286; meet anywhere above 1: 474
+  k=20, j=5, m_j=11: pairs 500; orbits meet before x descends: 0; meet anywhere above 1: 441
+  k=20, j=7, m_j=43: pairs 500; orbits meet before x descends: 0; meet anywhere above 1: 436
+  k=20, j=9, m_j=171: pairs 500; orbits meet before x descends: 0; meet anywhere above 1: 431
+  k=20, j=11, m_j=683: pairs 500; orbits meet before x descends: 0; meet anywhere above 1: 444
+  k=20, j=13, m_j=2731: pairs 500; orbits meet before x descends: 0; meet anywhere above 1: 437
+  [14s]
+# F. the sheet commutator U_+(3x) = U_-(U_+(x)) for v_2(3x+1) = 1, and the sibling chain X = 2^c Y + 1
+  x = 3 mod 4 (valuation one): identity holds 250000/250000; x = 1 mod 4: holds only 0/249999
+  x = 3 mod 4, x <= 10^6 (250000 values): by entry relation and outcome: M1/break:0.1667, M1/merge:0.0833, M2/break:0.1250, M3/break:0.0625, M4/break:0.0625, P1/break:0.1250, P1/merge:0.1250, P2/merge:0.1250, P3/break:0.0625, P4/break:0.0625
+    structural merge total 0.3333 (automaton prediction: from (+1,1) 1/2, from a fresh pair 1/3); ground truth (orbits of x2 and y share an element > 1 within 400 steps, x <= 2 10^5): 0.9313
+    automaton merges below 2 10^5: 16662, confirmed by the orbits: 16660
+  deep cell -1 mod 2^8 (exact): merge 0.5000, break 0.5000 (2000 values; merge step always 5..5, i.e. k - 3 = 5)
+  deep cell -1 mod 2^12 (exact): merge 0.5000, break 0.5000 (2000 values; merge step always 9..9, i.e. k - 3 = 9)
+  deep cell -1 mod 2^16 (exact): merge 0.5000, break 0.5000 (2000 values; merge step always 13..13, i.e. k - 3 = 13)
+  deep cell -1 mod 2^20 (exact): merge 0.5000, break 0.5000 (2000 values; merge step always 17..17, i.e. k - 3 = 17)
+  deep cell -1 mod 2^24 (exact): merge 0.5000, break 0.5000 (2000 values; merge step always 21..21, i.e. k - 3 = 21)
+  universal receipts x <= 65536: x3 events 21676, of which sibling-repairable (the x-orbit merges with the orbit of U_-(U_+(x))) 794 (0.0366); other-multiplier events 2812
+  [16s]
+# E. mixed trunk x = (4^e - 1)/(2^j + 1), j | e, j odd: m_j x = (4^e - 1)/3 is on the + trunk
+  (j, e, x, m_j): (3, 3, 7, 3), (3, 6, 455, 3), (3, 9, 29127, 3), (5, 5, 31, 11), (5, 10, 31775, 11), (5, 15, 32537631, 11), (7, 7, 127, 43), (7, 14, 2080895, 43), (7, 21, 34093383807, 43), (9, 9, 511, 171), (9, 18, 133956095, 171), (9, 27, 35115786568191, 171), (11, 11, 2047, 683), (11, 22, 8585742335, 683), (11, 33, 36011213418661887, 683)
+    x=7: own + orbit length 5 odd steps; the trunk move gives a two-sheet receipt with defect R(3, 7) in one step
+    x=455: own + orbit length 12 odd steps; the trunk move gives a two-sheet receipt with defect R(3, 455) in one step
+    x=29127: own + orbit length 34 odd steps; the trunk move gives a two-sheet receipt with defect R(3, 29127) in one step
+    x=31: own + orbit length 39 odd steps; the trunk move gives a two-sheet receipt with defect R(11, 31) in one step
+    x=31775: own + orbit length 24 odd steps; the trunk move gives a two-sheet receipt with defect R(11, 31775) in one step
+    x=32537631: own + orbit length 104 odd steps; the trunk move gives a two-sheet receipt with defect R(11, 32537631) in one step
+  [16s total]
