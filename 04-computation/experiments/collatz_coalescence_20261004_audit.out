@@ -1,0 +1,211 @@
+====================================================================================================
+PART 1: I(t) = inf_{j,k} ||2^j 3^k t||
+====================================================================================================
+
+(a) reduced m/q in (0,1), q <= 600, with I(m/q) >= 1/14
+  number of points           : 88
+  denominators               : [5, 7, 10, 11, 13, 14, 26, 28, 33, 52, 56]
+  points per denominator     : [(5, 4), (7, 6), (10, 4), (11, 10), (13, 12), (14, 6), (26, 6), (28, 6), (33, 10), (52, 12), (56, 12)]
+  values (value: multiplicity): [('1/5', 4), ('1/7', 6), ('1/10', 4), ('1/11', 20), ('1/13', 30), ('1/14', 24)]
+  (denominator, value) table :
+      q=5    I=1/5     x4
+      q=7    I=1/7     x6
+      q=10   I=1/10    x4
+      q=11   I=1/11    x10
+      q=13   I=1/13    x12
+      q=14   I=1/14    x6
+      q=26   I=1/13    x6
+      q=28   I=1/14    x6
+      q=33   I=1/11    x10
+      q=52   I=1/13    x12
+      q=56   I=1/14    x12
+  CHECK 1a count = 88                                                          PASS
+  CHECK 1a denominators = {5,7,10,11,13,14,26,28,33,52,56}                     PASS
+  CHECK 1a values 1/5x4 1/7x6 1/10x4 1/11x20 1/13x30 1/14x24                   PASS
+  explicit list: 1/5, 2/5, 3/5, 4/5, 1/7, 2/7, 3/7, 4/7, 5/7, 6/7, 1/10, 3/10, 7/10, 9/10, 1/11, 2/11, 3/11, 4/11, 5/11, 6/11, 7/11, 8/11, 9/11, 10/11, 1/13, 2/13, 3/13, 4/13, 5/13, 6/13, 7/13, 8/13, 9/13, 10/13, 11/13, 12/13, 1/14, 3/14, 5/14, 9/14, 11/14, 13/14, 5/26, 7/26, 11/26, 15/26, 19/26, 21/26, 5/28, 11/28, 13/28, 15/28, 17/28, 23/28, 5/33, 7/33, 10/33, 13/33, 14/33, 19/33, 20/33, 23/33, 26/33, 28/33, 5/52, 7/52, 11/52, 15/52, 19/52, 21/52, 31/52, 33/52, 37/52, 41/52, 45/52, 47/52, 5/56, 11/56, 13/56, 15/56, 17/56, 23/56, 33/56, 39/56, 41/56, 43/56, 45/56, 51/56
+  [t=0.1s]
+
+(b) q <= 300 prime to 6: coset formula vs direct orbit (per m) vs table algorithm
+  denominators tested: 99  fractions tested: 13686  mismatches: 0
+  CHECK 1b coset formula == direct orbit == table algorithm (q<=300 prime to 6) PASS
+  [t=0.8s]
+
+(c) largest 12 values of I strictly below 1/14, q <= 4000
+  q prime to 6 (the claim's range), top 20:
+      I = 5/73     = 0.068493   smallest q = 73     index [(Z/q)^x:<2,3>] = 2
+      I = 1/17     = 0.058824   smallest q = 17     index [(Z/q)^x:<2,3>] = 1
+      I = 1/19     = 0.052632   smallest q = 19     index [(Z/q)^x:<2,3>] = 1
+      I = 5/97     = 0.051546   smallest q = 97     index [(Z/q)^x:<2,3>] = 2
+      I = 13/259   = 0.050193   smallest q = 259    index [(Z/q)^x:<2,3>] = 3
+      I = 7/145    = 0.048276   smallest q = 145    index [(Z/q)^x:<2,3>] = 2
+      I = 29/601   = 0.048253   smallest q = 601    index [(Z/q)^x:<2,3>] = 8
+      I = 11/247   = 0.044534   smallest q = 247    index [(Z/q)^x:<2,3>] = 3
+      I = 31/697   = 0.044476   smallest q = 697    index [(Z/q)^x:<2,3>] = 8
+      I = 19/431   = 0.044084   smallest q = 431    index [(Z/q)^x:<2,3>] = 10
+      I = 1/23     = 0.043478   smallest q = 23     index [(Z/q)^x:<2,3>] = 2
+      I = 1/25     = 0.040000   smallest q = 25     index [(Z/q)^x:<2,3>] = 1
+      I = 1/29     = 0.034483   smallest q = 29     index [(Z/q)^x:<2,3>] = 1
+      I = 13/385   = 0.033766   smallest q = 385    index [(Z/q)^x:<2,3>] = 2
+      I = 1/31     = 0.032258   smallest q = 31     index [(Z/q)^x:<2,3>] = 1
+      I = 7/241    = 0.029046   smallest q = 241    index [(Z/q)^x:<2,3>] = 2
+      I = 1/35     = 0.028571   smallest q = 35     index [(Z/q)^x:<2,3>] = 1
+      I = 1/37     = 0.027027   smallest q = 37     index [(Z/q)^x:<2,3>] = 1
+      I = 13/485   = 0.026804   smallest q = 485    index [(Z/q)^x:<2,3>] = 8
+      I = 23/865   = 0.026590   smallest q = 865    index [(Z/q)^x:<2,3>] = 4
+  CHECK 1c note section 6 top-20 list (q<=4000 prime to 6)                     PASS
+  CHECK 1c indices quoted in the note for those moduli                         PASS
+  CHECK 1c top-12 values below 1/14 over q<=4000 prime to 6                    PASS
+  CHECK 1c smallest q attaining each value is the printed denominator          PASS
+  ALL q <= 4000 (including q divisible by 2 or 3) -- robustness check:
+      I = 5/73     = 0.068493   smallest q = 73
+      I = 7/104    = 0.067308   smallest q = 104
+      I = 1/15     = 0.066667   smallest q = 15
+      I = 1/17     = 0.058824   smallest q = 17
+      I = 1/19     = 0.052632   smallest q = 19
+      I = 5/97     = 0.051546   smallest q = 97
+      I = 5/99     = 0.050505   smallest q = 99
+      I = 11/219   = 0.050228   smallest q = 219
+      I = 13/259   = 0.050193   smallest q = 259
+      I = 77/1539  = 0.050032   smallest q = 1539
+      I = 1/20     = 0.050000   smallest q = 20
+      I = 7/145    = 0.048276   smallest q = 145
+      I = 25/518   = 0.048263   smallest q = 518
+      I = 29/601   = 0.048253   smallest q = 601
+  values in the all-q top list that do NOT occur for q prime to 6: [(Fraction(7, 104), 104), (Fraction(1, 15), 15), (Fraction(5, 99), 99), (Fraction(11, 219), 219), (Fraction(77, 1539), 1539), (Fraction(1, 20), 20), (Fraction(25, 518), 518)]
+  [t=4.0s]
+
+(d) primes q <= 20000, q = 1 (mod 24), index exactly 2: q*max_m I(m/q) vs least QNR
+  CHECK 1d |<2,3>| = lcm(ord 2, ord 3) agrees with explicit subgroup (primes <= 3000) PASS
+  primes 5 <= q <= 20000: 2260
+  index histogram: [(1, 1598), (2, 465), (3, 86), (4, 42), (5, 16), (6, 19), (7, 5), (8, 13), (9, 3), (10, 4), (12, 3), (14, 1), (15, 1), (16, 1), (17, 1), (24, 1), (56, 1)]
+  primes with <2,3> = (Z/q)^x: 1598  fraction = 0.7071
+  CHECK 1d number of primes 5<=q<=20000                                        PASS
+  CHECK 1d primes with <2,3> = (Z/q)^x = 1598                                  PASS
+  naive two-generator Artin product prod_l (1 - 1/(l^2 (l-1))) = 0.69750 ; measured 0.7071 ; difference 0.0096 = 0.99 standard errors (SE 0.0097)
+  CHECK 1d two-generator Artin product rounds to 0.6975                        PASS
+  primes q = 1 mod 24 with index exactly 2: 186
+  CHECK 1d count of q = 1 mod 24 with index 2 = 186                            PASS
+  least-QNR histogram over those primes: [(5, 96), (7, 57), (11, 21), (13, 8), (17, 4)]
+  exceptions (q, q*max I, least QNR): []
+  CHECK 1d q*max_m I(m/q) == least quadratic non-residue, no exception         PASS
+  first few such primes: [73, 97, 193, 241, 313, 337, 409, 433, 457, 673, 769, 1009]
+  largest I_max(q) = max_m I(m/q) over primes q <= 20000 with index > 1:
+      I_max = 5/73       = 0.068493  q = 73     index 2
+      I_max = 5/97       = 0.051546  q = 97     index 2
+      I_max = 29/601     = 0.048253  q = 601    index 8
+      I_max = 19/431     = 0.044084  q = 431    index 10
+      I_max = 1/23       = 0.043478  q = 23     index 2
+      I_max = 197/6563   = 0.030017  q = 6563   index 17
+      I_max = 7/241      = 0.029046  q = 241    index 2
+      I_max = 5/193      = 0.025907  q = 193    index 2
+      I_max = 11/439     = 0.025057  q = 439    index 3
+      I_max = 109/4513   = 0.024152  q = 4513   index 12
+      I_max = 29/1201    = 0.024147  q = 1201   index 4
+      I_max = 157/6553   = 0.023958  q = 6553   index 56
+  CHECK 1d note's top-12 I_max over primes with proper <2,3> (values)          PASS
+      indices quoted in the note (where given): 6563->17, 4513->12, 6553->56; mine: [(73, 2), (97, 2), (601, 8), (431, 10), (23, 2), (6563, 17), (241, 2), (193, 2), (439, 3), (4513, 12), (1201, 4), (6553, 56)]
+  [t=7.2s]
+
+====================================================================================================
+PART 2: Collatz no-coefficient-descent residues
+====================================================================================================
+
+(a) |Bad_k| (exact word DP), k = 4..24:
+    [3, 4, 8, 13, 19, 38, 64, 128, 226, 367, 734, 1295, 2114, 4228, 7495, 14990, 27328, 46611, 93222, 168807, 286581]
+  CHECK 2a |Bad_k| k=4..24                                                     PASS
+
+(b) |Bad_k cap {1,3 mod 8}| = |Bad_k cap {3 mod 8}| (prefix 110), k = 4..24:
+    [1, 1, 2, 3, 4, 8, 13, 26, 45, 71, 142, 247, 395, 790, 1386, 2772, 5019, 8468, 16936, 30485, 51280]
+  CHECK 2b |Bad_k cap {1,3 mod 8}| k=4..24                                     PASS
+
+  direct residue enumeration (numpy), k = 4..24:
+    k= 4 |Bad_k|=      3  #(1 or 3 mod 8)=     1  residues mod 8 present: [3, 7]
+    k= 5 |Bad_k|=      4  #(1 or 3 mod 8)=     1  residues mod 8 present: [3, 7]
+    k= 6 |Bad_k|=      8  #(1 or 3 mod 8)=     2  residues mod 8 present: [3, 7]
+    k= 7 |Bad_k|=     13  #(1 or 3 mod 8)=     3  residues mod 8 present: [3, 7]
+    k= 8 |Bad_k|=     19  #(1 or 3 mod 8)=     4  residues mod 8 present: [3, 7]
+    k= 9 |Bad_k|=     38  #(1 or 3 mod 8)=     8  residues mod 8 present: [3, 7]
+    k=10 |Bad_k|=     64  #(1 or 3 mod 8)=    13  residues mod 8 present: [3, 7]
+    k=11 |Bad_k|=    128  #(1 or 3 mod 8)=    26  residues mod 8 present: [3, 7]
+    k=12 |Bad_k|=    226  #(1 or 3 mod 8)=    45  residues mod 8 present: [3, 7]
+    k=13 |Bad_k|=    367  #(1 or 3 mod 8)=    71  residues mod 8 present: [3, 7]
+    k=14 |Bad_k|=    734  #(1 or 3 mod 8)=   142  residues mod 8 present: [3, 7]
+    k=15 |Bad_k|=   1295  #(1 or 3 mod 8)=   247  residues mod 8 present: [3, 7]
+    k=16 |Bad_k|=   2114  #(1 or 3 mod 8)=   395  residues mod 8 present: [3, 7]
+    k=17 |Bad_k|=   4228  #(1 or 3 mod 8)=   790  residues mod 8 present: [3, 7]
+    k=18 |Bad_k|=   7495  #(1 or 3 mod 8)=  1386  residues mod 8 present: [3, 7]
+    k=19 |Bad_k|=  14990  #(1 or 3 mod 8)=  2772  residues mod 8 present: [3, 7]
+    k=20 |Bad_k|=  27328  #(1 or 3 mod 8)=  5019  residues mod 8 present: [3, 7]
+    k=21 |Bad_k|=  46611  #(1 or 3 mod 8)=  8468  residues mod 8 present: [3, 7]
+    k=22 |Bad_k|=  93222  #(1 or 3 mod 8)= 16936  residues mod 8 present: [3, 7]
+    k=23 |Bad_k|= 168807  #(1 or 3 mod 8)= 30485  residues mod 8 present: [3, 7]
+    k=24 |Bad_k|= 286581  #(1 or 3 mod 8)= 51280  residues mod 8 present: [3, 7]
+  CHECK 2a direct residue enumeration == word DP, k=4..24                      PASS
+  CHECK 2b direct #(1,3 mod 8) == word DP prefix-110 count                     PASS
+  CHECK 2b every element of Bad_k is 3 or 7 mod 8 (k=4..24)                    PASS
+  [t=13.3s]
+
+(c) <3> in (Z/2^k)^x equals {u odd : u = 1 or 3 mod 8}, and -1 not in <3>, k=3..20
+  CHECK 2c <3> = {1,3 mod 8} and -1 not in <3>, k=3..20                        PASS
+  CHECK 2c (Probe F) 2^(L/2) = -1 mod 3^n for n=2..20                          PASS
+
+(d) share s_k = |Bad_k cap {3 mod 8}| / |Bad_k| for large k
+    h = H_2(log_3 2) = 0.94996  (THM-4479/4495's exponent; 2^h = 2 min_theta M(theta) = 1.93181)
+    k=   24  exact s_k = 0.178937   C_k = W_k k^(3/2) 2^(-hk) = 4.6174
+    k=   50  exact s_k = 0.169832  (note: 0.16983)   C_k = W_k k^(3/2) 2^(-hk) = 6.6436
+    k=  100  exact s_k = 0.165041  (note: 0.16504)   C_k = W_k k^(3/2) 2^(-hk) = 7.6613
+    k=  200  exact s_k = 0.162544  (note: 0.16254)   C_k = W_k k^(3/2) 2^(-hk) = 8.9188
+    k=  400  exact s_k = 0.161188  (note: 0.16119)   C_k = W_k k^(3/2) 2^(-hk) = 9.8402
+    k=  800  exact s_k = 0.160470  (note: 0.16047)   C_k = W_k k^(3/2) 2^(-hk) = 10.4458
+    k= 1600  exact s_k = 0.160098  (note: 0.16010)   C_k = W_k k^(3/2) 2^(-hk) = 10.7572
+    k= 3200  exact s_k = 0.159908  (note: 0.15991)   C_k = W_k k^(3/2) 2^(-hk) = 11.0462
+    k= 6000  exact s_k = 0.159819  (note: 0.15982)   C_k = W_k k^(3/2) 2^(-hk) = 10.9830
+  CHECK 2d exact shares round to the note's five-digit values at k=50..6000    PASS
+  CHECK 2d float DP s_6000 == exact s_6000 to 1e-12                            PASS
+    k=12000  float DP s_k = 0.159767
+    k=24000  float DP s_k = 0.159741
+    1/k extrapolation from (1600, 6000):  0.159717
+    1/k extrapolation from (6000, 24000): 0.159716
+    s_6000 = 0.15982 (claimed 0.15982); limit claimed 0.1597 to four digits
+  CHECK 2d s_6000 rounds to 0.15982                                            PASS
+  CHECK 2d limit (1/k extrapolation) rounds to 0.1597                          PASS
+    W_6000/W_5999 = 1.925094 ; (W_6000/W_3200)^(1/2800) = 1.931159 ; 2^h = 1.931813
+    HYP-9175(iii): fraction of exponent classes a mod 2^(k-2) that resist = |Bad_k cap <3>| / 2^(k-2):
+      k=   24  log2(fraction) = -6.354 ; log2 of the HYP's 0.16*2*2^(-(1-h)k) k^(-3/2) = -9.722 ; ratio = 10.33
+      k=  100  log2(fraction) = -12.632 ; log2 of the HYP's 0.16*2*2^(-(1-h)k) k^(-3/2) = -16.614 ; ratio = 15.81
+      k=  400  log2(fraction) = -30.318 ; log2 of the HYP's 0.16*2*2^(-(1-h)k) k^(-3/2) = -34.627 ; ratio = 19.83
+      k= 1600  log2(fraction) = -93.253 ; log2 of the HYP's 0.16*2*2^(-(1-h)k) k^(-3/2) = -97.681 ; ratio = 21.53
+      k= 6000  log2(fraction) = -316.281 ; log2 of the HYP's 0.16*2*2^(-(1-h)k) k^(-3/2) = -320.737 ; ratio = 21.94
+  [t=19.3s]
+
+(e) a mod 2^(k-2) with 3^a = -5 (mod 2^k), k = 3..14
+    [1, 3, 3, 11, 11, 11, 11, 11, 267, 267, 1291, 3339]
+  CHECK 2e a_k = 1,3,3,11,11,11,11,11,267,267,1291,3339 (unique each k)        PASS
+    consistency: a_k = a_{k+1} mod 2^(k-2): True
+    2-adic expansion of a (low bits first): 110100001011
+    (k, modulus 2^(k-2), a): [(3, 2, 1), (4, 4, 3), (5, 8, 3), (6, 16, 11), (7, 32, 11), (8, 64, 11), (9, 128, 11), (10, 256, 11), (11, 512, 267), (12, 1024, 267), (13, 2048, 1291), (14, 4096, 3339)]
+    a mod 2^37 (k = 39): 68011179275
+  CHECK 2e log_3(-5) = 68011179275 mod 2^37                                    PASS
+    integers = 1 or 3 mod 8 : [-5, -7, -37, -55, -61, 1]
+    integers not            : [-1, -17, -25, -41, -91]  (residues mod 8: [7, 7, 7, 7, 5] )
+  CHECK 2e {-5,-7,-37,-55,-61,1} are 1 or 3 mod 8; the others are not          PASS
+    each listed integer lies on a T-cycle: True {-1: True, -5: True, -7: True, -17: True, -25: True, -37: True, -55: True, -41: True, -61: True, -91: True, 1: True}
+
+(f) A = [[1,1],[1,0]]: |det(A^j - I)| = |L_j - 1 - (-1)^j|, tr(A^j) = L_j, j <= 60
+  CHECK 2f determinant and trace identities, j=1..60                           PASS
+    |det(A^j - I)| for j=1..12: [1, 1, 4, 5, 11, 16, 29, 45, 76, 121, 199, 320]
+    tr(A^j) - |det(A^j - I)| = 1 + (-1)^j: 2 for even j (the two period-2 codings), 0 for odd j
+  [t=19.3s]
+
+(g) carry census: words of length A <= 18 whose carry S_w is 0 in Z/(2^A - 3^p)
+    integers x_0 hit (x_0: number of (A, word) pairs): [(-136, 1), (-91, 1), (-82, 1), (-68, 1), (-61, 1), (-55, 1), (-41, 1), (-37, 1), (-34, 1), (-25, 1), (-17, 1), (-10, 6), (-7, 6), (-5, 6), (-1, 18), (0, 18), (1, 9), (2, 9)]
+  CHECK 2g every integral carry solution with A <= 18 is a point of a known T-cycle (incl. 0 and even points) PASS
+  CHECK 2g all 18 known cycle points (0, 1, 2, -1, the -5 and -17 cycles) occur PASS
+    shape (18, 9), clock 2^18 - 3^9 = 242461: hits [(1, 1), (2, 1)]
+  CHECK 2g clock 242461 is hit only by the repeat of the cycle {1,2}           PASS
+    shape (11, 7), clock 139: hits (x_0, count) = [(-136, 1), (-91, 1), (-82, 1), (-68, 1), (-61, 1), (-55, 1), (-41, 1), (-37, 1), (-34, 1), (-25, 1), (-17, 1)]  -> 11 words = the 11 rotations (7 odd, 4 even points)
+  [t=20.1s]
+
+====================================================================================================
+SUMMARY: 0 failed checks
+[t=20.1s]

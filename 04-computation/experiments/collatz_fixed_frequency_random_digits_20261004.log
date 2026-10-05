@@ -1,0 +1,8 @@
+random-digit control, N=1500, A=40; values are 3^(n/2)|f_n(0)| (rescaled by the incoherent rate)
+real q=3: 300-block medians 6.25e-02 2.23e-03 6.93e-06 5.40e-08 2.70e-09 | rate 300..1500: 0.5689 (ratio to 1/sqrt3: 0.9854) | rate 750..1500: 0.5695 (ratio to 1/sqrt3: 0.9864)
+real q=5: 300-block medians 8.48e-02 8.26e-03 7.87e-04 1.27e-04 7.42e-06 | rate 300..1500: 0.5736 (ratio to 1/sqrt3: 0.9934) | rate 750..1500: 0.5745 (ratio to 1/sqrt3: 0.9950)
+  [62s]
+iid digits seed=0: 300-block medians 1.17e-01 4.23e-03 5.44e-04 7.75e-04 2.82e-05 | rate 300..1500: 0.5741 (ratio to 1/sqrt3: 0.9944) | rate 750..1500: 0.5726 (ratio to 1/sqrt3: 0.9918)
+iid digits seed=1: 300-block medians 9.58e-02 1.64e-02 7.56e-04 1.82e-05 2.98e-06 | rate 300..1500: 0.5720 (ratio to 1/sqrt3: 0.9908) | rate 750..1500: 0.5733 (ratio to 1/sqrt3: 0.9929)
+iid digits seed=2: 300-block medians 2.25e-01 1.23e-02 5.50e-04 9.32e-05 2.95e-06 | rate 300..1500: 0.5723 (ratio to 1/sqrt3: 0.9912) | rate 750..1500: 0.5731 (ratio to 1/sqrt3: 0.9926)
+random odd multiplier seed=0: 300-block medians 1.43e-01 1.20e-02 8.42e-04 1.45e-05 5.24e-05 | rate 300..1500: 0.5736 (ratio to 1/sqrt3: 0.9934) | rate 750..1500: 0.5755 (ratio to 1/sqrt3: 0.9968)

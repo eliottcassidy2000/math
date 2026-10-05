@@ -1,0 +1,168 @@
+n=8: mass over units 0.4659; top theta-bins (of 64, uniform = 0.0156 each): [0.844,0.859):0.0204, [0.141,0.156):0.0204, [0.062,0.078):0.0204, [0.922,0.938):0.0204, [0.469,0.484):0.0196, [0.516,0.531):0.0196, [0.250,0.266):0.0194, [0.734,0.750):0.0194
+   top coefficients:
+     t=      6049 theta=0.921963 (bin 11101100..) |mu_hat|=0.06089 -2^9
+     t=       512 theta=0.078037 (bin 00010011..) |mu_hat|=0.06089 +2^9
+     t=       256 theta=0.039018 (bin 00001001..) |mu_hat|=0.05378 +2^8
+     t=      6305 theta=0.960982 (bin 11110110..) |mu_hat|=0.05378 -2^8
+     t=      5537 theta=0.843926 (bin 11011000..) |mu_hat|=0.05096 -2^10
+     t=      1024 theta=0.156074 (bin 00100111..) |mu_hat|=0.05096 +2^10
+     t=      1675 theta=0.255296 (bin 01000001..) |mu_hat|=0.04606 -2^1467
+     t=      4886 theta=0.744704 (bin 10111110..) |mu_hat|=0.04606 +2^1467
+     t=      4630 theta=0.705685 (bin 10110100..) |mu_hat|=0.04027 -2^737
+     t=      1931 theta=0.294315 (bin 01001011..) |mu_hat|=0.04027 +2^737
+     t=      3428 theta=0.522481 (bin 10000101..) |mu_hat|=0.04005 +2^981
+     t=      3133 theta=0.477519 (bin 01111010..) |mu_hat|=0.04005 -2^981
+     t=       128 theta=0.019509 (bin 00000100..) |mu_hat|=0.03887 +2^7
+     t=      6433 theta=0.980491 (bin 11111011..) |mu_hat|=0.03887 -2^7
+     t=      1163 theta=0.177260 (bin 00101101..) |mu_hat|=0.03628 +2^739
+     t=      5398 theta=0.822740 (bin 11010010..) |mu_hat|=0.03628 -2^739
+   m=3: mass within 2^-3/4 of a dyadic rational j/2^3: 0.4967 (uniform expectation 0.5002, ratio 0.99)
+   m=4: mass within 2^-4/4 of a dyadic rational j/2^4: 0.4962 (uniform expectation 0.5002, ratio 0.99)
+   m=5: mass within 2^-5/4 of a dyadic rational j/2^5: 0.5042 (uniform expectation 0.5002, ratio 1.01)
+   m=6: mass within 2^-6/4 of a dyadic rational j/2^6: 0.4957 (uniform expectation 0.5002, ratio 0.99)
+   m=7: mass within 2^-7/4 of a dyadic rational j/2^7: 0.5147 (uniform expectation 0.5002, ratio 1.03)
+   m=8: mass within 2^-8/4 of a dyadic rational j/2^8: 0.5129 (uniform expectation 0.5002, ratio 1.03)
+   fixed units |t| <= 100: mass fraction 2.970e-02 (uniform 3.064e-02, ratio 0.969)
+   fixed units |t| <= 1000: mass fraction 3.027e-01 (uniform 3.050e-01, ratio 0.992)
+   fixed units |t| <= 10000: mass fraction 1.000e+00 (uniform 1.000e+00, ratio 1.000)
+   [level 8 done in 0.1s]
+n=9: mass over units 0.4667; top theta-bins (of 64, uniform = 0.0156 each): [0.641,0.656):0.0179, [0.344,0.359):0.0179, [0.094,0.109):0.0178, [0.891,0.906):0.0178, [0.047,0.062):0.0174, [0.938,0.953):0.0174, [0.203,0.219):0.0174, [0.781,0.797):0.0174
+   top coefficients:
+     t=     18659 theta=0.947975 (bin 11110010..) |mu_hat|=0.04803 -2^10
+     t=      1024 theta=0.052025 (bin 00001101..) |mu_hat|=0.04803 +2^10
+     t=     17635 theta=0.895951 (bin 11100101..) |mu_hat|=0.04508 -2^11
+     t=      2048 theta=0.104049 (bin 00011010..) |mu_hat|=0.04508 +2^11
+     t=     19171 theta=0.973988 (bin 11111001..) |mu_hat|=0.04062 -2^9
+     t=       512 theta=0.026012 (bin 00000110..) |mu_hat|=0.04062 +2^9
+     t=      5537 theta=0.281309 (bin 01001000..) |mu_hat|=0.03621 +2^2197
+     t=     14146 theta=0.718691 (bin 10110111..) |mu_hat|=0.03621 -2^2197
+     t=      4513 theta=0.229284 (bin 00111010..) |mu_hat|=0.03314 -2^4385
+     t=     15170 theta=0.770716 (bin 11000101..) |mu_hat|=0.03314 +2^4385
+     t=      9911 theta=0.503531 (bin 10000000..) |mu_hat|=0.03130 -2^1468
+     t=      9772 theta=0.496469 (bin 01111111..) |mu_hat|=0.03130 +2^1468
+     t=     13634 theta=0.692679 (bin 10110001..) |mu_hat|=0.03018 +2^4383
+     t=      6049 theta=0.307321 (bin 01001110..) |mu_hat|=0.03018 -2^4383
+     t=     19427 theta=0.986994 (bin 11111100..) |mu_hat|=0.02973 -2^8
+     t=       256 theta=0.013006 (bin 00000011..) |mu_hat|=0.02973 +2^8
+   m=3: mass within 2^-3/4 of a dyadic rational j/2^3: 0.5031 (uniform expectation 0.4999, ratio 1.01)
+   m=4: mass within 2^-4/4 of a dyadic rational j/2^4: 0.5008 (uniform expectation 0.4999, ratio 1.00)
+   m=5: mass within 2^-5/4 of a dyadic rational j/2^5: 0.5000 (uniform expectation 0.4999, ratio 1.00)
+   m=6: mass within 2^-6/4 of a dyadic rational j/2^6: 0.4905 (uniform expectation 0.4999, ratio 0.98)
+   m=7: mass within 2^-7/4 of a dyadic rational j/2^7: 0.4893 (uniform expectation 0.4999, ratio 0.98)
+   m=8: mass within 2^-8/4 of a dyadic rational j/2^8: 0.4871 (uniform expectation 0.4999, ratio 0.97)
+   fixed units |t| <= 100: mass fraction 8.851e-03 (uniform 1.021e-02, ratio 0.867)
+   fixed units |t| <= 1000: mass fraction 1.014e-01 (uniform 1.017e-01, ratio 0.998)
+   fixed units |t| <= 10000: mass fraction 1.000e+00 (uniform 1.000e+00, ratio 1.000)
+   [level 9 done in 0.1s]
+n=10: mass over units 0.4674; top theta-bins (of 64, uniform = 0.0156 each): [0.031,0.047):0.0168, [0.953,0.969):0.0168, [0.188,0.203):0.0167, [0.797,0.812):0.0167, [0.125,0.141):0.0167, [0.859,0.875):0.0167, [0.250,0.266):0.0166, [0.734,0.750):0.0166
+   top coefficients:
+     t=     54953 theta=0.930634 (bin 11101110..) |mu_hat|=0.03828 -2^12
+     t=      4096 theta=0.069366 (bin 00010001..) |mu_hat|=0.03828 +2^12
+     t=      2048 theta=0.034683 (bin 00001000..) |mu_hat|=0.03775 +2^11
+     t=     57001 theta=0.965317 (bin 11110111..) |mu_hat|=0.03775 -2^11
+     t=     58025 theta=0.982658 (bin 11111011..) |mu_hat|=0.03100 -2^10
+     t=      1024 theta=0.017342 (bin 00000100..) |mu_hat|=0.03100 +2^10
+     t=      8192 theta=0.138732 (bin 00100011..) |mu_hat|=0.02933 +2^13
+     t=     50857 theta=0.861268 (bin 11011100..) |mu_hat|=0.02933 -2^13
+     t=     43462 theta=0.736033 (bin 10111100..) |mu_hat|=0.02838 -2^6573
+     t=     15587 theta=0.263967 (bin 01000011..) |mu_hat|=0.02838 +2^6573
+     t=     41414 theta=0.701350 (bin 10110011..) |mu_hat|=0.02816 +2^13133
+     t=     17635 theta=0.298650 (bin 01001100..) |mu_hat|=0.02816 -2^13133
+     t=     30757 theta=0.520872 (bin 10000101..) |mu_hat|=0.02410 +2^2198
+     t=     28292 theta=0.479128 (bin 01111010..) |mu_hat|=0.02410 -2^2198
+     t=     28709 theta=0.486189 (bin 01111100..) |mu_hat|=0.02370 +2^10947
+     t=     30340 theta=0.513811 (bin 10000011..) |mu_hat|=0.02370 -2^10947
+   m=3: mass within 2^-3/4 of a dyadic rational j/2^3: 0.4984 (uniform expectation 0.5000, ratio 1.00)
+   m=4: mass within 2^-4/4 of a dyadic rational j/2^4: 0.5031 (uniform expectation 0.5000, ratio 1.01)
+   m=5: mass within 2^-5/4 of a dyadic rational j/2^5: 0.5035 (uniform expectation 0.5000, ratio 1.01)
+   m=6: mass within 2^-6/4 of a dyadic rational j/2^6: 0.5051 (uniform expectation 0.5000, ratio 1.01)
+   m=7: mass within 2^-7/4 of a dyadic rational j/2^7: 0.5091 (uniform expectation 0.5000, ratio 1.02)
+   m=8: mass within 2^-8/4 of a dyadic rational j/2^8: 0.5037 (uniform expectation 0.5000, ratio 1.01)
+   fixed units |t| <= 100: mass fraction 3.032e-03 (uniform 3.404e-03, ratio 0.891)
+   fixed units |t| <= 1000: mass fraction 3.293e-02 (uniform 3.389e-02, ratio 0.972)
+   fixed units |t| <= 10000: mass fraction 3.410e-01 (uniform 3.387e-01, ratio 1.007)
+   [level 10 done in 0.3s]
+n=11: mass over units 0.4682; top theta-bins (of 64, uniform = 0.0156 each): [0.953,0.969):0.0171, [0.031,0.047):0.0171, [0.000,0.016):0.0166, [0.984,1.000):0.0166, [0.453,0.469):0.0165, [0.531,0.547):0.0165, [0.297,0.312):0.0163, [0.688,0.703):0.0163
+   top coefficients:
+     t=      8192 theta=0.046244 (bin 00001011..) |mu_hat|=0.03194 +2^13
+     t=    168955 theta=0.953756 (bin 11110100..) |mu_hat|=0.03194 -2^13
+     t=      4096 theta=0.023122 (bin 00000101..) |mu_hat|=0.02975 +2^12
+     t=    173051 theta=0.976878 (bin 11111010..) |mu_hat|=0.02975 -2^12
+     t=    160763 theta=0.907512 (bin 11101000..) |mu_hat|=0.02756 -2^14
+     t=     16384 theta=0.092488 (bin 00010111..) |mu_hat|=0.02756 +2^14
+     t=      2048 theta=0.011561 (bin 00000010..) |mu_hat|=0.02380 +2^11
+     t=    175099 theta=0.988439 (bin 11111101..) |mu_hat|=0.02380 -2^11
+     t=     50857 theta=0.287089 (bin 01001001..) |mu_hat|=0.02354 -2^39379
+     t=    126290 theta=0.712911 (bin 10110110..) |mu_hat|=0.02354 +2^39379
+     t=    122194 theta=0.689789 (bin 10110000..) |mu_hat|=0.02181 -2^19695
+     t=     54953 theta=0.310211 (bin 01001111..) |mu_hat|=0.02181 +2^19695
+     t=    134482 theta=0.759155 (bin 11000010..) |mu_hat|=0.02003 -2^19697
+     t=     42665 theta=0.240845 (bin 00111101..) |mu_hat|=0.02003 +2^19697
+     t=     86924 theta=0.490689 (bin 01111101..) |mu_hat|=0.01964 -2^45940
+     t=     90223 theta=0.509311 (bin 10000010..) |mu_hat|=0.01964 +2^45940
+   m=3: mass within 2^-3/4 of a dyadic rational j/2^3: 0.4967 (uniform expectation 0.5000, ratio 0.99)
+   m=4: mass within 2^-4/4 of a dyadic rational j/2^4: 0.4972 (uniform expectation 0.5000, ratio 0.99)
+   m=5: mass within 2^-5/4 of a dyadic rational j/2^5: 0.4979 (uniform expectation 0.5000, ratio 1.00)
+   m=6: mass within 2^-6/4 of a dyadic rational j/2^6: 0.4993 (uniform expectation 0.5000, ratio 1.00)
+   m=7: mass within 2^-7/4 of a dyadic rational j/2^7: 0.5030 (uniform expectation 0.5000, ratio 1.01)
+   m=8: mass within 2^-8/4 of a dyadic rational j/2^8: 0.4974 (uniform expectation 0.5000, ratio 0.99)
+   fixed units |t| <= 100: mass fraction 1.119e-03 (uniform 1.135e-03, ratio 0.986)
+   fixed units |t| <= 1000: mass fraction 1.061e-02 (uniform 1.130e-02, ratio 0.940)
+   fixed units |t| <= 10000: mass fraction 1.171e-01 (uniform 1.129e-01, ratio 1.038)
+   [level 11 done in 1.1s]
+n=12: mass over units 0.4689; top theta-bins (of 64, uniform = 0.0156 each): [0.000,0.016):0.0169, [0.984,1.000):0.0169, [0.969,0.984):0.0167, [0.016,0.031):0.0167, [0.312,0.328):0.0163, [0.672,0.688):0.0163, [0.047,0.062):0.0162, [0.938,0.953):0.0162
+   top coefficients:
+     t=     16384 theta=0.030829 (bin 00000111..) |mu_hat|=0.02646 +2^14
+     t=    515057 theta=0.969171 (bin 11111000..) |mu_hat|=0.02646 -2^14
+     t=     32768 theta=0.061659 (bin 00001111..) |mu_hat|=0.02495 +2^15
+     t=    498673 theta=0.938341 (bin 11110000..) |mu_hat|=0.02495 -2^15
+     t=      8192 theta=0.015415 (bin 00000011..) |mu_hat|=0.02348 +2^13
+     t=    523249 theta=0.984585 (bin 11111100..) |mu_hat|=0.02348 -2^13
+     t=    465905 theta=0.876682 (bin 11100000..) |mu_hat|=0.01952 -2^16
+     t=     65536 theta=0.123318 (bin 00011111..) |mu_hat|=0.01952 +2^16
+     t=    370678 theta=0.697496 (bin 10110010..) |mu_hat|=0.01922 -2^59063
+     t=    160763 theta=0.302504 (bin 01001101..) |mu_hat|=0.01922 +2^59063
+     t=    527345 theta=0.992293 (bin 11111110..) |mu_hat|=0.01827 -2^12
+     t=      4096 theta=0.007707 (bin 00000001..) |mu_hat|=0.01827 +2^12
+     t=    387062 theta=0.728325 (bin 10111010..) |mu_hat|=0.01801 +2^118113
+     t=    144379 theta=0.271675 (bin 01000101..) |mu_hat|=0.01801 -2^118113
+     t=    362486 theta=0.682081 (bin 10101110..) |mu_hat|=0.01685 +2^118111
+     t=    168955 theta=0.317919 (bin 01010001..) |mu_hat|=0.01685 -2^118111
+   m=3: mass within 2^-3/4 of a dyadic rational j/2^3: 0.5023 (uniform expectation 0.5000, ratio 1.00)
+   m=4: mass within 2^-4/4 of a dyadic rational j/2^4: 0.5023 (uniform expectation 0.5000, ratio 1.00)
+   m=5: mass within 2^-5/4 of a dyadic rational j/2^5: 0.5016 (uniform expectation 0.5000, ratio 1.00)
+   m=6: mass within 2^-6/4 of a dyadic rational j/2^6: 0.5011 (uniform expectation 0.5000, ratio 1.00)
+   m=7: mass within 2^-7/4 of a dyadic rational j/2^7: 0.5060 (uniform expectation 0.5000, ratio 1.01)
+   m=8: mass within 2^-8/4 of a dyadic rational j/2^8: 0.5021 (uniform expectation 0.5000, ratio 1.00)
+   fixed units |t| <= 100: mass fraction 5.515e-04 (uniform 3.782e-04, ratio 1.458)
+   fixed units |t| <= 1000: mass fraction 3.757e-03 (uniform 3.765e-03, ratio 0.998)
+   fixed units |t| <= 10000: mass fraction 3.994e-02 (uniform 3.764e-02, ratio 1.061)
+   [level 12 done in 3.5s]
+n=13: mass over units 0.4696; top theta-bins (of 64, uniform = 0.0156 each): [0.656,0.672):0.0163, [0.328,0.344):0.0163, [0.016,0.031):0.0163, [0.969,0.984):0.0163, [0.312,0.328):0.0162, [0.672,0.688):0.0162, [0.000,0.016):0.0161, [0.984,1.000):0.0161
+   top coefficients:
+     t=     65536 theta=0.041106 (bin 00001010..) |mu_hat|=0.02205 +2^16
+     t=   1528787 theta=0.958894 (bin 11110101..) |mu_hat|=0.02205 -2^16
+     t=   1561555 theta=0.979447 (bin 11111010..) |mu_hat|=0.02177 -2^15
+     t=     32768 theta=0.020553 (bin 00000101..) |mu_hat|=0.02177 +2^15
+     t=    131072 theta=0.082212 (bin 00010101..) |mu_hat|=0.01884 +2^17
+     t=   1463251 theta=0.917788 (bin 11101010..) |mu_hat|=0.01884 -2^17
+     t=     16384 theta=0.010276 (bin 00000010..) |mu_hat|=0.01848 +2^14
+     t=   1577939 theta=0.989724 (bin 11111101..) |mu_hat|=0.01848 -2^14
+     t=   1128418 theta=0.707773 (bin 10110101..) |mu_hat|=0.01574 -2^177163
+     t=    465905 theta=0.292227 (bin 01001010..) |mu_hat|=0.01574 +2^177163
+     t=    498673 theta=0.312780 (bin 01010000..) |mu_hat|=0.01552 -2^354309
+     t=   1095650 theta=0.687220 (bin 10101111..) |mu_hat|=0.01552 +2^354309
+     t=      8192 theta=0.005138 (bin 00000001..) |mu_hat|=0.01393 +2^13
+     t=   1586131 theta=0.994862 (bin 11111110..) |mu_hat|=0.01393 -2^13
+     t=   1193954 theta=0.748878 (bin 10111111..) |mu_hat|=0.01350 +2^354311
+     t=    400369 theta=0.251122 (bin 01000000..) |mu_hat|=0.01350 -2^354311
+   m=3: mass within 2^-3/4 of a dyadic rational j/2^3: 0.4988 (uniform expectation 0.5000, ratio 1.00)
+   m=4: mass within 2^-4/4 of a dyadic rational j/2^4: 0.4985 (uniform expectation 0.5000, ratio 1.00)
+   m=5: mass within 2^-5/4 of a dyadic rational j/2^5: 0.4979 (uniform expectation 0.5000, ratio 1.00)
+   m=6: mass within 2^-6/4 of a dyadic rational j/2^6: 0.4959 (uniform expectation 0.5000, ratio 0.99)
+   m=7: mass within 2^-7/4 of a dyadic rational j/2^7: 0.4971 (uniform expectation 0.5000, ratio 0.99)
+   m=8: mass within 2^-8/4 of a dyadic rational j/2^8: 0.4993 (uniform expectation 0.5000, ratio 1.00)
+   fixed units |t| <= 100: mass fraction 1.314e-04 (uniform 1.261e-04, ratio 1.042)
+   fixed units |t| <= 1000: mass fraction 1.218e-03 (uniform 1.255e-03, ratio 0.971)
+   fixed units |t| <= 10000: mass fraction 1.336e-02 (uniform 1.255e-02, ratio 1.065)
+   [level 13 done in 17.0s]

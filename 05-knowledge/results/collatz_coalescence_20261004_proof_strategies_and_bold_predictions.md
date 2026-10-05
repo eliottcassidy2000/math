@@ -63,7 +63,7 @@ E and a read of this note's typed claims (section 9).
    coset swap of `<3>` in `(Z/2^n)^x` (Probe F); on the multiplicative
    spectrum it is the parity of the character, and the seed-`1` density is
    the cancellation to `O(1)` of two sums of size `0.16 (3/2)^n` (section
-   4.5). Everything conjugation-invariant is sheet-blind.
+   4.5; verified to level `16` from S23's output, ratio `1.5 x 10^(-4)`). Everything conjugation-invariant is sheet-blind.
 3. **Twelve predictions** (section 5), typed and priced. Two were tested
    today and survived with their numbers (P3 = HYP-9174, P4 = HYP-9175);
    one is a one-line theorem (Proposition E: a cycle point is 2-adically

@@ -1,0 +1,41 @@
+drift control: fixed-frequency rates for qx+1, N=600, A=40
+control at n = 4, 5 (direct law, A = 30):
+  q=3 n=4: recursion 0.1180167444  direct 0.1180167444
+  q=3 n=5: recursion 0.0860179286  direct 0.0860179286
+  q=5 n=4: recursion 0.0423766661  direct 0.0423766661
+  q=5 n=5: recursion 0.0636576585  direct 0.0636576585
+  q=7 n=4: recursion 0.1618577810  direct 0.1618577810
+  q=7 n=5: recursion 0.0562198420  direct 0.0562198420
+q= 3 u=1: q^(n/2)|mu_hat_n(u)| 100-block medians: 3.59e-01 6.41e-02 8.33e-03 6.46e-03 4.02e-04 1.75e-03  [2.1s]
+     rate of |mu_hat_n(1)| over n=100..300: 0.5656   (Parseval q^(-1/2) = 0.5774; ratio 0.9796)
+     rate of |mu_hat_n(1)| over n=300..600: 0.5720   (Parseval q^(-1/2) = 0.5774; ratio 0.9908)
+     rate of |mu_hat_n(1)| over n=200..600: 0.5721   (Parseval q^(-1/2) = 0.5774; ratio 0.9909)
+q= 3 u=5: q^(n/2)|mu_hat_n(u)| 100-block medians: 2.32e-01 3.68e-02 7.73e-03 1.36e-03 5.31e-04 2.49e-04  [2.1s]
+     rate of |mu_hat_n(5)| over n=100..300: 0.5677   (Parseval q^(-1/2) = 0.5774; ratio 0.9833)
+     rate of |mu_hat_n(5)| over n=300..600: 0.5713   (Parseval q^(-1/2) = 0.5774; ratio 0.9896)
+     rate of |mu_hat_n(5)| over n=200..600: 0.5698   (Parseval q^(-1/2) = 0.5774; ratio 0.9868)
+q= 5 u=1: q^(n/2)|mu_hat_n(u)| 100-block medians: 1.71e+05 9.53e+14 1.47e+26 1.14e+36 2.96e+47 1.96e+58  [2.1s]
+     rate of |mu_hat_n(1)| over n=100..300: 0.5768   (Parseval q^(-1/2) = 0.4472; ratio 1.2899)
+     rate of |mu_hat_n(1)| over n=300..600: 0.5765   (Parseval q^(-1/2) = 0.4472; ratio 1.2891)
+     rate of |mu_hat_n(1)| over n=200..600: 0.5735   (Parseval q^(-1/2) = 0.4472; ratio 1.2824)
+q= 5 u=2: q^(n/2)|mu_hat_n(u)| 100-block medians: 7.62e+04 6.46e+14 1.48e+26 1.15e+36 1.29e+47 1.72e+58  [2.1s]
+     rate of |mu_hat_n(2)| over n=100..300: 0.5764   (Parseval q^(-1/2) = 0.4472; ratio 1.2890)
+     rate of |mu_hat_n(2)| over n=300..600: 0.5765   (Parseval q^(-1/2) = 0.4472; ratio 1.2892)
+     rate of |mu_hat_n(2)| over n=200..600: 0.5738   (Parseval q^(-1/2) = 0.4472; ratio 1.2831)
+q= 7 u=1: q^(n/2)|mu_hat_n(u)| 100-block medians: 1.46e+09 2.62e+27 1.20e+45 1.02e+62 3.64e+81 3.49e+99  [2.1s]
+     rate of |mu_hat_n(1)| over n=100..300: 0.5715   (Parseval q^(-1/2) = 0.3780; ratio 1.5120)
+     rate of |mu_hat_n(1)| over n=300..600: 0.5743   (Parseval q^(-1/2) = 0.3780; ratio 1.5195)
+     rate of |mu_hat_n(1)| over n=200..600: 0.5716   (Parseval q^(-1/2) = 0.3780; ratio 1.5124)
+q= 7 u=5: q^(n/2)|mu_hat_n(u)| 100-block medians: 2.55e+08 2.15e+27 6.27e+42 1.79e+64 1.48e+80 7.61e+97  [2.2s]
+     rate of |mu_hat_n(5)| over n=100..300: 0.5712   (Parseval q^(-1/2) = 0.3780; ratio 1.5112)
+     rate of |mu_hat_n(5)| over n=300..600: 0.5665   (Parseval q^(-1/2) = 0.3780; ratio 1.4989)
+     rate of |mu_hat_n(5)| over n=200..600: 0.5718   (Parseval q^(-1/2) = 0.3780; ratio 1.5128)
+q=11 u=1: q^(n/2)|mu_hat_n(u)| 100-block medians: 2.01e+14 1.85e+41 1.39e+69 4.20e+97 1.66e+125 4.89e+152  [2.1s]
+     rate of |mu_hat_n(1)| over n=100..300: 0.5685   (Parseval q^(-1/2) = 0.3015; ratio 1.8855)
+     rate of |mu_hat_n(1)| over n=300..600: 0.5739   (Parseval q^(-1/2) = 0.3015; ratio 1.9034)
+     rate of |mu_hat_n(1)| over n=200..600: 0.5720   (Parseval q^(-1/2) = 0.3015; ratio 1.8970)
+q=11 u=5: q^(n/2)|mu_hat_n(u)| 100-block medians: 6.77e+13 1.88e+41 1.02e+69 8.12e+95 1.39e+126 2.81e+152  [2.2s]
+     rate of |mu_hat_n(5)| over n=100..300: 0.5694   (Parseval q^(-1/2) = 0.3015; ratio 1.8886)
+     rate of |mu_hat_n(5)| over n=300..600: 0.5772   (Parseval q^(-1/2) = 0.3015; ratio 1.9143)
+     rate of |mu_hat_n(5)| over n=200..600: 0.5734   (Parseval q^(-1/2) = 0.3015; ratio 1.9018)
+DONE
