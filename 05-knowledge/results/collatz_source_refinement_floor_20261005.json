@@ -8,7 +8,7 @@
     "aggregate_floor": "1/6",
     "subdivided_floor_less_than_original": true
   },
-  "checks": 250052,
+  "checks": 250069,
   "exceptional_kernels": [
     {
       "J": 1,
@@ -53,6 +53,35 @@
   ],
   "finite_inverse_edges": 65532,
   "finite_unit_targets": 10922,
+  "incoming_hostiles": {
+    "contracting_slope_size_rise": {
+      "carry": 1106233681,
+      "endpoint": 167,
+      "source": 165,
+      "word": [
+        4,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        3
+      ]
+    },
+    "neighbor_density_energy": "1 with the target missing",
+    "residue_tail_cancellation": "1 - 9/10 = 1/10",
+    "visit_ledger": "multiplicities required on repeated vertices"
+  },
   "inherited_kernel_sha256": "802f9c69aee7943caab552ac2c42aab6f8413c3e73cf8c0a51f3f806dc032321",
   "kernel_bases": 3591,
   "largest_observed_section_bill": {
@@ -167,6 +196,6 @@
     "large_cost_bill_bound": "3025/1296",
     "squared_coefficient": "160/441"
   },
-  "source_sha256": "f27f755cb72ad0d8666c8db4ac5aabe6018cdec3c471ec6dc8644777731b6cf7",
+  "source_sha256": "38d69b3dd8a98b8fe32a5fc2b876a8d296c50959b745cf170ff3ae816d3b4d59",
   "status": "PROVED scoped plus FINITE-EXACT; universal positivity OPEN"
 }

@@ -1,56 +1,46 @@
-# Refinement floors are stopping-time bounds; descent lower bounds live on the 3-adic shadows of negative rational cycle points
+# Collatz rising word shadows and segment exit ledgers
 
-2026-10-05, opus session `opus-2026-10-05-S6` (refinement-floor). Owner's seed:
-"work toward a source-specific lower bound that survives refinement; pull from
-recent and past repository work across topics not yet touched; search for
-connections."
+2026-10-05, opus session `opus-2026-10-05-S6`, with a Codex integration audit.
 
-**Status.** PROVED (elementary): Theorem T1 (tower conjugation along an orbit
-prefix), Lemma T2 (every refinement floor is a stopping-time bound), Proposition
-T3 (lower bounds on the tail cost of the Codex atom criterion), Theorem T4 (the
-shadow theorem: backward-descent cones are 3-adic shadows of negative rational
-cycle points, forward-rising cylinders are their 2-adic shadows), Lemma T4b
-(existence of primitive cones at depth `l` iff `{l log_2 3} < log_2(3/2)`,
-necessity proved, sufficiency finite-exact), Proposition T5 (exact defect ledger
-of every segment closure). FINITE-EXACT: all listed checks, the census of the
-descent set to `2^24`, and the sampled forward/backward depths. CITED and typed:
-the cross-thread inheritance of section 6. **OPEN:** a certificate-free positive
-lower bound at any unresolved source, and universal Collatz. Not a canon
-promotion.
+**Status. PROVED scoped:** tower transport T1, floor-to-stopping bound T2,
+whole-size-tail lower bounds T3, sufficient rising-word cones T4, and the
+visit-count defect ledger T5 with finite pointwise sums. **FINITE-EXACT:**
+the declared census and word checks. T4b has a necessary depth test for
+`l>=2`, depth1 separately, and finite sufficiency checks. **OPEN:** equality
+of the rising-cone union with the full smaller-ancestor set; an asymptotic
+density from the finite census; independent positive floors everywhere.
+The original necessary-modulus interpretation of T3 is withdrawn.
+
+**Integration correction.** A whole-tail lower bound does not alone force
+failure of a residue-minus-tail test: aliases can cancel. Ordinary-size
+increase need not mean expanding affine slope. General segment occupation
+must count repeated visits and retain a finiteness premise. No theorem here
+requires that a lower-bound proof literally run the orbit. The exact hostile
+controls and positive section transport are in
+[source floors under refinement](collatz_source_refinement_floor_20261005.md).
 
 ## 0. Answer first
 
-A lower bound on the Codex weight at a fixed source that survives refinement of
-the residue tower is, exactly, an a priori bound on that source's odd stopping
-time (T2). Nothing in the price layer, the finite representations, or any other
-repository thread supplies such a bound without the orbit; every thread that
-tried (Mahler `3/2`, Hensel, Rule 30, Sun's modular solubility, the LRC dyadic
-tower) records the same failure boundary: positive mass in every finite class,
-and the atom can still vanish (section 6). What this note adds is where lower
-bounds propagate from **smaller** sources and where they cannot:
+A positive floor at a fixed source gives an a priori odd stopping-time bound
+(T2). The constructions examined here do not establish such a floor at every
+source independently of its orbit. They supply three useful mechanisms.
 
-- They propagate exactly along rising words, and the set of targets reached is
-  the union of the 3-adic shadows of the negative rational cycle points
-  `x_w = c_w/(2^A - 3^l)` of rising words `w` (T4). Its density among odd
-  integers is `0.4687` (census to `2^24`, agreeing with the cone series through
-  depth 12, `0.4665`). The complement, the basin minima such as
-  `7, 19, 25, 37, 43, 55, ...`, has no smaller ancestor at all: at those sources
-  every lower bound is a certificate of the source itself.
-- The 2-adic shadows of the same points are the cylinders where forward descent
-  is delayed (Terras). Forward and backward induction are organized by one set
-  of rational points; combining them halves the unpaid fraction at every depth
-  but never empties it (S5: at depth 12, `5.6%` forward-unpaid, `3.1%` jointly).
-- The Codex refinement criterion `p_m >= L - R(q)` is quantitatively hopeless
-  for the mixtures: the certified two-step family alone forces
-  `R(q) >= c/(log q)^2`, so certifying the atom at 27 (odd stopping time 41)
-  would need a modulus near `10^90407` (T3). Fixed prices need `q` polynomial
-  in `1/atom`, i.e. polynomial in the source, against a logarithmic orbit cost.
-- Every "closure" of a source prior along a segment rule pays exactly the
-  source atom minus the exit mass landing at each target (T5). Codex's C4 is
-  the single-rise rule (first violation 17 -> 13, ratio 21/4) and C5 the
-  refuel-block rule; the stopping rule is new and fails first at the trunk entry
-  5 (ratio 1.845). The only rule without exits is the full orbit, whose mass is
-  the `nu`-mean odd stopping time.
+- Checked rising words transport smaller-ancestor bounds through 3-adic
+  shadows of negative rational fixed points. The finite census proportion
+  of targets with smaller ancestors is `0.4687` below `2^24`; the cone series
+  through depth12 gives `0.4665`. These are not a proved asymptotic density
+  or a proof that all smaller-ancestor transfers have rising slope.
+- The same rational points organize forward parity cylinders. At depth12 the
+  declared sample has `5.6%` forward-unpaid and `3.1%` jointly unpaid. It does
+  not establish a fixed improvement factor at every depth.
+- The exact segment ledger identifies exit charges. Full first-hit orbit
+  occupation has no nonroot exit and total mass `E_nu[tau]` when finite.
+  A finite exit creates a violation only when its charge exceeds the
+  source prior at that target.
+
+The certified family in T3 forces a slowly decaying whole-size tail. Its
+original comparison to `lambda(27)` estimates a costly sufficient blanket
+budget, not a necessary modulus for a source-specific residue test.
 
 ## 1. Inheritance and board
 
@@ -104,15 +94,19 @@ Hence, for every fixed price `0<r<1`, whenever `U^t(n') != 1`,
 
     f_r(n') = (1-r)^t r^(K_pre) f_r(U^t(n')),
 
-and the mass of the 2-adic cylinder of `n` at depth `A+1` equals the prefix
-price times the fixed-price mass of the odd 3-adic class of `U^t(n)` modulo
-`3^t`. Mixtures follow by integrating in `r`. (PROVED: the perturbation
+and the mass of this one-sided arithmetic progression starting at `n` equals
+the prefix price times the mass of the one-sided odd 3-adic progression
+starting at `U^t(n)`, with step `2*3^t`. This is not an equality of the entire
+residue classes after forgetting their lower endpoints: omitted finite heads
+and possible early ROOT visits then require separate handling. Mixtures
+follow by integrating in `r`. (PROVED: the perturbation
 `2^(A+1) s` keeps every valuation because at the last step the odd parts differ
 by `2 * 3^t s`; the counters add because the word concatenates. FINITE-EXACT on
 624 triples in S1.)
 
 Reading. Refining a source 2-adically pushes the floor question forward along
-its orbit and converts it into a 3-adic residue question at the image, with
+its orbit and converts it into a 3-adic progression question at the image,
+retaining the ordinary lower endpoint, with
 one ternary digit per odd step; this is the reverse of the ternary-digit
 consumption of the inverse-ray notes. The hazard-product form of the
 criterion (THM-4263's `prod (1-p_j)`) becomes: the atom survives iff the orbit
@@ -127,31 +121,41 @@ For the beta(1,2) weight, `w(L,K) <= w(L,0) = 2/(L+2)` because `w(L,K+1)/w(L,K)
 `tau(n) <= 2/epsilon - 1`. Conversely the atom itself is the floor. The
 independent sweep of today's thread reached the same conclusion from the Green
 solver's effective intervals: a certificate-free lower bound is an a priori
-bound on the counters. There is no third thing.
+bound on the counters. This does not require its proof to compute the orbit.
 
-## 4. T3: the tail cost of the Codex atom criterion
+## 4. T3: a whole size tail and the source-specific cost
 
-Let `p_m = lambda(6m+3)` and `R(q) = sum_{j>=q} p_j`. The certified two-step
-family `z_k = (2 S^k(1) - 1)/3`, `k = 1 mod 9`, has `lambda(z_k) =
-4/((k+1)(k+2)(k+3))` (counters `(1,k)`; checked for `k <= 28`) and `z_k ~
-4^k`, so
+Let `p_m=lambda(6m+3)` and `R(q)=sum_{j>=q}p_j`. The certified family
+`z_k=(2 S^k(1)-1)/3`, `k=1 mod9`, has
+`lambda(z_k)=4/((k+1)(k+2)(k+3))` and exact source index
+`(z_k-3)/6=(4^(k+1)-16)/27`. Let `k_0(q)` be the least `k=1 mod9` with
+`4^(k+1)>=27q+16`. Then unconditionally
 
-    R(q) >= sum_{k >= log_4 q, k = 1 mod 9} 4/((k+1)(k+2)(k+3)) ~ 2/(9 (log_4 q)^2).
+    R(q) >= sum_{t>=0} 4/((k_0+9t+1)(k_0+9t+2)(k_0+9t+3))
+         >= 2/(9*(k_0+3)^2).
 
-At `q = 10^10, 10^50, 10^200` this gives `7.6e-4, 2.8e-5, 2.0e-6`. The atom
-at the leaf 27 is `lambda(27) = 1/11274451650 = 8.87e-11`, so `L - R > 0` is
-impossible unless `q` exceeds about `4^(1.5e5) = 10^90407`. For a fixed price
-`r` the root ray alone gives `R(q) >= c q^(-log_4(1/r))`, so the needed
-modulus is at least `f_r(27)^(-1/log_4(1/r))`: `7.9e28` at `r=1/2`, `6.5e9`
-at `r=1/4`, `2.4e5` at `r=1/16`. The orbit of 27 has 41 odd steps. (PROVED
-lower bounds; the two-step family and the root ray are certified, so no
-convergence assumption enters.)
+The second inequality compares `4/(k+3)^3` with its integral. The certified
+family tail is asymptotic to `2/(9*(log_4 q)^2)`. No convergence assumption
+enters this lower bound.
 
-Mechanism. The sibling rays decay polynomially in the sibling index, which is
-logarithmic in size; the atoms decay exponentially in the stopping time. Any
-refinement tower indexed by size therefore pays at least exponentially in the
-inverse atom with heavy-tailed priors and polynomially in the source with
-geometric prices, whereas the certificate costs `tau = O(log n)` steps.
+The original numerical comparison with `lambda(27)=1/11274451650` suggests
+an enormous scale near `10^90407` for the stronger blanket requirement
+`R(q)<p_4`. It is not a necessary scale for the actual test `L-R(q)>0`.
+If the exact residue mass is `C_q(m)=p_m+A_q(m)`, then
+
+    C_q(m)-R(q)=p_m-(R(q)-A_q(m)).
+
+Aliases already counted in the residue cancel part of the whole tail. A
+probability with mass `1/10` at index0 and `9/10` at indexq has `R(q)>p_0`
+but `C_q(0)-R(q)=1/10>0`. A necessary cost bound for a selected source must
+therefore bound the non-alias tail `R-A`, or bound the actual lower readout;
+the displayed whole-tail bound alone does not do so.
+
+The earlier fixed-price estimates are likewise heuristic scale comparisons,
+with constants suppressed, for controlling the whole tail. The literal
+route of27 has41 odd steps, but no universal `tau=O(log n)` bound is proved.
+The finite numerical output is retained as provenance; its former statements
+of necessity are superseded by this correction.
 
 ## 5. T4: the shadow theorem
 
@@ -164,7 +168,7 @@ sum a_i`. Put `c_w = sum_i 3^(l-i) 2^(a_1 + ... + a_(i-1))`, so that following
 **Theorem T4 (PROVED; 274,888 exact checks for all 68,722 rising words of
 length `<= 12`).** The forward map along `w` is a bijection
 
-    { m odd : m = x_w mod 2^(A+1) }  ->  { n odd : n = x_w mod 3^l },
+    { m positive odd : m = x_w mod 2^(A+1) }  ->  { n positive odd : n = x_w mod 3^l },
     m = m_0 + 2^(A+1) s  ->  n = n_0 + 2 * 3^l s,
 
 every `m` on the left follows `w` with exact valuations and rises to `n > m`,
@@ -191,10 +195,11 @@ one; class `13 mod 27`, chain `7 -> 11 -> 17 -> 13`). Codex's C4 chain
 `-1` shadow.
 
 **The descent set.** Let `D` be the set of odd `n` having a smaller odd
-ancestor, i.e. some odd `m < n` with `n` on the orbit of `m`. Then `D` is
-exactly the union over rising words of the classes `x_w mod 3^l` (up to the
-finitely many small `n` where the chain would pass through zero), because a
-backward chain descends below `n` iff its word is rising, up to the carries.
+ancestor, i.e. some odd `m < n` with `n` on the orbit of `m`. Then `D` contains the union over rising words of the classes `x_w mod 3^l`.
+The wordwise converse fails:165 reaches167 in17 steps with total valuation27
+and slope `3^17/2^27<1`; the carry produces the size increase. This does not
+exclude a different rising ancestor of167, but equality of the two sets
+requires a replacement argument that is not supplied here.
 The census to `2^24` by the stopping-segment sieve gives
 
 | quantity | value |
@@ -210,7 +215,9 @@ Leaves (`3 | n`) have no predecessors and are never in `D`. The first unit
 basin minima are `1, 7, 19, 25, 37, 43, 55, 73, 79, 97, 109, 115, 127, 133,
 145, ...`; all are `1` or `7 mod 9`, never `4 mod 9` (the `-5` shadow).
 
-**Lemma T4b (new cones exist at depth `l` iff `{l log_2 3} < log_2(3/2)`).** A
+**Lemma T4b (necessary depth test, sufficiency checked through12).** For
+`l>=2` the proposed test is `{l log_2 3} < log_2(3/2)`; depth1 is a separate
+positive base case, since its fractional parts are equal. A
 primitive rising word (no rising proper suffix) must begin with `a_1 = 1`,
 because the suffix of length `l-1` is not rising while the whole word is, and
 `2^(a_1) < 3^l/3^(l-1) = 3`. Then `1 + ceil((l-1) log_2 3) <= floor(l log_2 3)`
@@ -234,9 +241,10 @@ exists for 46.6% (33.5% at depth 1, 11.1% at depth 2). The unpaid fractions:
 | 8 | 0.0917 | 0.0500 |
 | 12 | 0.0559 | 0.0311 |
 
-Backward descent roughly halves the forward-unpaid set at every depth and, by
-T4, can never do better than the density of `D`; the basin minima are paid
-only forward, i.e. only by their own orbit.
+In this sample backward descent roughly halves the forward-unpaid set at the
+listed depths. It cannot provide a smaller ancestor at a true basin minimum;
+this does not exclude other floor proofs there or establish asymptotic
+proportions from the finite table.
 
 ## 6. Cross-thread inheritance (typed)
 
@@ -264,17 +272,23 @@ thread, and it has one name in each.
 
 Let `nu` be any positive summable source prior (the checks use Codex's
 `nu(m) = 8/(3 * 4^bitlength(m))`). A **segment rule** assigns to each odd start
-`m` a finite initial orbit segment `seg(m) = {m, U(m), ..., U^k(m)}` and the
-exit `e(m) = U^(k+1)(m)`. Define the closure `W_sigma = sum_m nu(m) 1_seg(m)`.
+`m` a finite initial orbit segment `(m,U(m),...,U^k(m))` and exit
+`e(m)=U^(k+1)(m)`. Define `W_sigma(y)` as the sum of `nu(m)` times the
+number of visits to `y` in that segment, counting multiplicities. Assume the
+pointwise occupation and incoming sums are finite; finite total weighted
+segment length is a sufficient condition. On the cycle-free segments used
+in the finite controls, visit counts equal set indicators.
 
 **Proposition T5 (PROVED).** For every odd target `y != 1`,
 
     (W_sigma - K W_sigma)(y) = nu(y) - nu{ m : e(m) = y }.
 
-*Proof.* Each pair `(m, p)` with `p in seg(m)` and `U(p) = y` contributes
-`nu(m)` to `K W_sigma(y)`; either `y in seg(m)` with `m != y` (it contributes
-to `W_sigma(y)` as well) or `y = e(m)`. No nontrivial cycle passes through the
-segments below the verified range, so `y = m` is impossible for `m != 1`. QED.
+*Proof.* For each start, the difference between visits to `y` at times
+`0..k` and at times `1..k+1` is `1_{m=y}-1_{e(m)=y}`. Multiply by `nu(m)`
+and sum; the finiteness premise permits the subtraction. This works even
+with repeated vertices. Replacing visits by a set needs a separate
+cycle-free hypothesis: on `-5,-7,-5` in the negative two-cycle, set indicators
+have zero defect while the correct visit defect is `delta_-5-delta_-7`. QED.
 
 So `W_sigma` is a supersolution iff no target receives more exit mass than its
 own atom. Instances:
@@ -291,31 +305,31 @@ own atom. Instances:
   violations below `4096`. The identity is checked exactly at all 2,046
   targets with 32,767 starts.
 
-The only rule without exits is the full orbit, whose closure is the Green
-weight with mass `E_nu[tau]`, the "stronger sufficient target" of C5. Every
-truncation creates violations exactly at its exits; no truncation is free. In
+Occupation of the full first-hit orbit has no nonroot exits; its total mass
+is `E_nu[tau]`, the stronger sufficient target of C5 when finite. Truncation
+creates exit charges, but these are violations only where they exceed the
+source atom. A positive boundary charge is not by itself an unpaid inequality. In
 T4's language, the stopping rule's exits are the landing points of the forward
 descents, and the single-rise rule's exits are the targets of the first fall
 after a `-1`-shadow climb.
 
 ## 8. What survives and what is owed
 
-- A source-specific lower bound surviving refinement exists exactly when a
-  smaller ancestor exists (T4) or the orbit has been run (T2). On the basin
-  minima (29.7% of units) only the second option exists.
-- The Codex criterion (10) is correct and, for the current weights,
-  astronomically more expensive than the orbit (T3). A refinement scheme that
-  could compete must index the tower by stopping time, not by size; T1 says
-  that such a tower is the 3-adic class tower of the images.
-- Obligations: (i) independent audit of T4's bijection and of T5; (ii) the
-  density of `D` as an exact series over primitive cones, with the Beatty
-  structure of T4b proved for all depths; (iii) whether the basin minima carry
-  a positive share of the injection measure `lambda` (they are units, so they
-  are not sources of `lambda`; their atoms are sums over leaves above them);
-  (iv) the Codex obligation is unchanged: a source-dependent lower bound on
-  `lambda` across a refuel boundary for a named unbounded family of leaves.
-  T4 restricts where such a family can be fed from below: only through
-  shadows of rising words.
+A source floor is equivalent to rootedness, but its proof need not run the
+orbit. Smaller-ancestor transfer is one possible proof operation. The reported
+`29.7%` basin-minimum figure concerns the declared finite unit census.
+
+Whole-size tails decay slowly. A necessary cost comparison must retain the
+selected source and subtract aliases; this note does not show that every
+refinement method is more expensive than orbit replay.
+
+The next obligations are an actual replacement argument if one wants equality
+of the full descent set with the rising-cone union, an asymptotic density
+argument beyond the census, and independently grounded floors across the
+remaining boundaries. The exact source-floor transport in the concurrent
+[source-floor note](collatz_source_refinement_floor_20261005.md) is one
+quantitative extension of the inverse-section mechanism. Universal positivity
+remains OPEN.
 
 ## 9. Reproduction and scope
 

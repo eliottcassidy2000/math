@@ -52,7 +52,9 @@ as mathematical input. The Pascal classification survives the audit; claims
 that its discounted array is an exact split array and that it excludes every
 finite-dimensional representation do not. The repairs are recorded in the
 [Pascal note](collatz_pascal_boundary_leaf_section_20261005.md) and
-[mistakes ledger](../../01-canon/MISTAKES.md).
+[mistakes ledger](../../01-canon/MISTAKES.md). During this session the
+independent audit in commit 905023c4dd reached the same corrections; its
+incoming repairs were retained instead of duplicating that edit.
 
 ## Definitions and the complete finite boundary
 
@@ -347,6 +349,18 @@ undeleted geometric measure, the same norm is
 \(4(1-2^{-q})\), bounded by four and converging to the inverse atom.
 No bound \(E_m<\infty\) for every Collatz source is asserted here.
 
+The concurrent [localized resolvent floor](collatz_localized_resolvent_floor_20261005.md)
+uses \(h_m(j)=4t/(1+t)^2\), \(t=2^{m-j}\), and the signed readout
+\(9H_{m,d+1}-8H_{m,d}\), where \(H_{m,d}=\sum_jp_jh_m(j)^d\).
+Its positive readout is a valid finite atom certificate. It is important
+not to replace SF4's evaluation representers by the normalized densities
+\(h_m^d/H_{m,d}\): these can have bounded energy while concentrating on a
+neighbor. For target \(m=1\) and probability \(1/2\) at each of 0 and 2,
+the target is missing, \(H_{1,d}=(8/9)^d\), and every such normalized density
+has squared norm one. The signed readout correctly stays zero.
+The required sidecar in the energy route is exact evaluation at the target,
+not merely a source-centered shape.
+
 ## Source-only floors on a proper binary inverse tree
 
 A related construction gives genuine unbounded coverage with a terminating
@@ -405,11 +419,58 @@ tests. The Hensel transfer remains a proposed direction: no Collatz energy
 bound has been imported from a different orbit theorem. The rank work
 primarily improves the scope audit.
 
+## Incoming deadlines and the next interface
+
+Commits 905023c4dd, 5cf951f802, dedefebd4f and bfece2fb8a arrived while the
+exact checks were running. Their mathematical packages were read before
+integration. The [floor deadline theorem](collatz_floor_transport_deadlines_20261005.md)
+and [threshold compiler](collatz_weight_threshold_receipts_20261005.md)
+strengthen the operational consequence of this note. A true rational floor
+\(W(n)\geq\eta>0\) forces \(N=L+K\leq B(\eta)\), where
+
+\[
+ B(\eta)=\max\{b\geq0:\eta(b+1)(b+2)\leq2\}.
+\]
+
+The actual ROOT word has length at most \(B(\eta)\). At the selected
+predecessor, retaining the original floor and the actual single inverse edge
+gives the better deadline \(B(\eta)+1\). Rebuilding a deadline from the
+smaller scalar SF1 floor discards this information. Likewise, SF3 should
+retain its complete word relation in addition to its scalar floor.
+
+The concurrent [polynomial atom dual](collatz_atom_polynomial_dual_20261005.md)
+and localized resolvent package give finite signed tests that can provide
+the initial floor if their moment premises are independently established.
+They complement SF4: a uniform bound on an exact evaluation norm and a
+positive signed minorant are different certificate formats for the same atom.
+Neither a positive Gram matrix nor a bounded norm for a nearby density can
+substitute for either format.
+
+The [refinement and shadows note](collatz_refinement_floor_shadows_20261005.md)
+supplies actual rising-word cones and the exact segment-exit mechanism.
+The integration audit retains those mechanisms but scopes three stronger
+claims. An ordinary-size increase need not have expanding affine slope:
+\(165\) reaches \(167\) in 17 steps with total valuation 27, so
+\(3^{17}<2^{27}\); the positive carry matters. This refutes a wordwise
+converse, not the possible existence of a different expanding ancestor.
+A lower bound on the *whole* size tail is not by itself a necessary cost
+bound for a residue-minus-tail test, because some of that same tail is
+already present in the residue mass and cancels. Finally, segment
+occupation must count visits with multiplicity if cycles are permitted.
+The corrected note separates these points from its valid finite censuses.
+
+These are useful route changes. SF1 avoids paying an ordinary-size tail to
+transport a floor, and SF3 preserves the affine history until the final
+quote. The remaining target is an independent positive input to one of
+these interfaces, rather than improved normalization of a zero lower bound.
+
 ## Exact checks and remaining work
 
 The [script](../../04-computation/experiments/collatz_source_refinement_floor_20261005.py)
 uses only rational and integer arithmetic; its
 [JSON](collatz_source_refinement_floor_20261005.json) records counts and hashes.
+Normal and optimized Python runs agree on **250,069 exact checks**. The
+repository documentation check and all eighteen local link targets pass.
 Reproduce from the repository root:
 
     python3 04-computation/experiments/collatz_source_refinement_floor_20261005.py --json 05-knowledge/results/collatz_source_refinement_floor_20261005.json
@@ -423,6 +484,9 @@ levels, and twelve full binary-tree levels. The polynomial identities in
 (5)–(6) are proved algebraically above and also checked on a finite grid.
 Hostiles include a deleted kernel record, the canceled-bill detour, the
 deleted atom, and the rooted source excluded from the binary family.
+Additional incoming controls check the neighboring-atom energy trap, the
+contracting-slope rise \(165\to167\), cancellation between a residue and its
+tail, and the visit-versus-set distinction on the negative two-cycle.
 
 The next productive obligations are now more specific.
 

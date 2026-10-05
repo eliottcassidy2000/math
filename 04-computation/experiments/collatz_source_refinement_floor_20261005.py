@@ -309,6 +309,42 @@ def main():
             check(D(L, K) == F(L + 3, L + 1) * D(L + 1, K) + D(L, K + 1))
     check(W(5) == F(1, 3))  # its unit incoming deficit is zero by the fibre sum
 
+    # Incoming localized kernels: bounded density energy can select a neighbor
+    # instead of evaluation at the missing source. Target index 1 is absent.
+    neighbor_law = {0: F(1, 2), 2: F(1, 2)}
+    for degree in range(12):
+        h = {j: 4 * F(2 ** 1, 2 ** j) / (1 + F(2 ** 1, 2 ** j)) ** 2
+             for j in neighbor_law}
+        H = sum(neighbor_law[j] * h[j] ** degree for j in neighbor_law)
+        norm2 = sum(neighbor_law[j] * (h[j] ** degree / H) ** 2
+                    for j in neighbor_law)
+        Hnext = sum(neighbor_law[j] * h[j] ** (degree + 1) for j in neighbor_law)
+        check(norm2 == 1 and 9 * Hnext - 8 * H == 0)
+    # A finite signed word can rise in ordinary size despite contracting slope.
+    n, A, carry, word = 165, 0, 0, []
+    for length in range(1, 18):
+        n, a = step(n)
+        carry = 3 * carry + 2 ** A
+        A += a
+        word.append(a)
+    check(n == 167 and A == 27 and 2 ** A > 3 ** 17)
+    check(2 ** A * 167 == 3 ** 17 * 165 + carry)
+    # Full tail > target atom does not preclude residue-minus-tail positivity:
+    # all of this tail is already an alias in the selected residue class.
+    target, alias = F(1, 10), F(9, 10)
+    check(alias > target and target + alias - alias == target > 0)
+
+    # Finite visits telescope even on a cycle; replacing visits by a set does
+    # not. This checks the general ledger mechanism, not a positive Collatz cycle.
+    orbit = [-5, -7, -5]
+    successor = {-5: -7, -7: -5}
+    counts = {x: orbit.count(x) for x in successor}
+    defect = {x: counts[x] - sum(counts[y] for y in successor if successor[y] == x)
+              for x in successor}
+    check(defect == {-5: 1, -7: -1})
+    check({x: 1 - sum(1 for y in successor if successor[y] == x)
+           for x in successor} != defect)
+
     result = dict(
         status="PROVED scoped plus FINITE-EXACT; universal positivity OPEN",
         checks=CHECKS,
@@ -328,6 +364,11 @@ def main():
         binary_tree=dict(levels="0..11", sources=tree_count,
                          rejected_rooted_control=7),
         repaired_discount_split="D00=1; D10+D01=5/9",
+        incoming_hostiles=dict(neighbor_density_energy="1 with the target missing",
+                               contracting_slope_size_rise=dict(source=165, endpoint=167,
+                                                               word=word, carry=carry),
+                               residue_tail_cancellation="1 - 9/10 = 1/10",
+                               visit_ledger="multiplicities required on repeated vertices"),
         limitations=["No arbitrary-source positive anchor was proved.",
                      "General Holder constants J=1..5 use the verified cost-eight boundary.",
                      "Finite exact checks supplement, not replace, the analytic proofs.",
