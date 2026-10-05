@@ -1,0 +1,14 @@
+SUPPLIED STATE JOIN EXTENSIONS: PROVED cut/potential laws; FINITE-EXACT declared controls
+Expanding pair233/231: 134217728/129140163 ; source period 258280326
+Cut at child31: 8192/59049 ; family233+118098t <-31+16384t; guard factor2187
+All retained smaller suffixes: [(0, 231, '134217728/129140163'), (7, 31, '8192/59049'), (8, 47, '4096/19683'), (9, 71, '2048/6561'), (10, 107, '1024/2187'), (11, 161, '512/729'), (12, 121, '128/243'), (13, 91, '32/81'), (14, 137, '16/27'), (15, 103, '4/9'), (16, 155, '2/3')]
+Same-pair continuation obstruction: 30 strict common endpoints retain expanding slope
+Partial-repair hostile75/73:cut to71 still has slope 18014398509481984/16677181699666569 >1
+Inherited stubborn-source / grounded257 controls: [{"source": 7, "child": 3, "endpoint": 5, "forward_steps": 4, "reverse_steps": 1, "slope": "27/64", "retained_cuts": 2, "source_period": 256}, {"source": 27, "child": 15, "endpoint": 23, "forward_steps": 37, "reverse_steps": 1, "slope": "150094635296999121/288230376151711744", "retained_cuts": 2, "source_period": 1152921504606846976}, {"source": 703, "child": 123, "endpoint": 157, "forward_steps": 51, "reverse_steps": 4, "slope": "26588814358957503287787/151115727451828646838272", "retained_cuts": 5, "source_period": 19342813113834066795298816}, {"source": 515, "child": 257, "endpoint": 145, "forward_steps": 2, "reverse_steps": 2, "slope": "1/2", "retained_cuts": 3, "source_period": 64}]
+257 scope:171->257, but257->193->145->109->41 needs the shared grounded suffix; no circular premise
+FINITE-EXACT pair probe:all odd1<=m<n<=1001; 2914 expanding earliest-pair joins, 2914 have a usable child cut
+Of those:2822 endpoints are already below the source;92 endpoints are not, and require an earlier child cut
+OPEN: no proof that every expanding pair admits such a cut; no source coverage inferred
+Rejected type, wrong endpoint and root-padding controls: 5
+Supplied one-edge certificate beyond10000bits:passed using its explicit codec bit bound
+PASS: APIs consume supplied certificates; symbolic family conclusions remain conditional on their child premises
