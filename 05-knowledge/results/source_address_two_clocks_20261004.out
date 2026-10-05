@@ -1,0 +1,7 @@
+Exact source-address two-clock audit
+Composition/parity cases: 20475
+q in {3,5,7,9,11}; all costs through 12
+Odd-Haar Gram matrices: every cost cutoff 1..12
+Exact cyclotomic cost sums: cutoffs 1..8, 3 damping values, 13 signed/zero seeds
+Total explicit checks: 97842
+All checks passed. Fixed integer estimates and Collatz remain open.

@@ -1,0 +1,73 @@
+{
+  "checks": {
+    "binary_partition_injective": 20475,
+    "binary_partition_surjective": 60,
+    "composition_binomial_count": 390,
+    "cost_clock_Ramanujan_identity": 1560,
+    "finite_odd_step_boundary_energy": 390,
+    "finite_weighted_difference_energy": 60,
+    "global_character_injective": 20475,
+    "half_turn_changes_one_odd_step": 20470,
+    "half_turn_splits_final_block": 10235,
+    "independent_parity_replay": 20475,
+    "odd_Haar_cross_length_hostile": 2,
+    "odd_Haar_tridiagonal_Gram": 3250
+  },
+  "hostile_cross_length_addresses": [
+    "5/8",
+    "1/8"
+  ],
+  "multipliers": {
+    "11": {
+      "cost_3_word_to_source": {
+        "(1, 1, 1)": 7,
+        "(1, 2)": 3,
+        "(2, 1)": 1,
+        "(3,)": 5
+      },
+      "words_cost_at_most_12": 4095
+    },
+    "3": {
+      "cost_3_word_to_source": {
+        "(1, 1, 1)": 7,
+        "(1, 2)": 3,
+        "(2, 1)": 1,
+        "(3,)": 5
+      },
+      "words_cost_at_most_12": 4095
+    },
+    "5": {
+      "cost_3_word_to_source": {
+        "(1, 1, 1)": 5,
+        "(1, 2)": 1,
+        "(2, 1)": 7,
+        "(3,)": 3
+      },
+      "words_cost_at_most_12": 4095
+    },
+    "7": {
+      "cost_3_word_to_source": {
+        "(1, 1, 1)": 3,
+        "(1, 2)": 7,
+        "(2, 1)": 5,
+        "(3,)": 1
+      },
+      "words_cost_at_most_12": 4095
+    },
+    "9": {
+      "cost_3_word_to_source": {
+        "(1, 1, 1)": 1,
+        "(1, 2)": 5,
+        "(2, 1)": 3,
+        "(3,)": 7
+      },
+      "words_cost_at_most_12": 4095
+    }
+  },
+  "proved_full_Haar_norm_squared": "3^(-m)",
+  "proved_odd_Haar_adjacent_inner_product": "-1/(4*3^m)",
+  "proved_odd_Haar_partial_sum_error_squared": "1/(4*3^M)",
+  "scope": "FINITE-EXACT controls; all-depth proofs in the note; fixed-seed H1 OPEN",
+  "total_checks": 97842,
+  "total_word_cases": 20475
+}

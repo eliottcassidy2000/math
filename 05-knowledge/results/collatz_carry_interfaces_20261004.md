@@ -36,7 +36,7 @@ Anchor: lossless composition of paid Collatz controllers. Niche: the
 source-address meaning of the concurrent Fourier calculation. Wildcard:
 the same disjoint-image coding lemma in triangle refinement.
 
-This session read the mathematical packages in both incoming batches,
+This session read the mathematical packages in the incoming batches,
 including their corrections, rather than treating commit titles as evidence:
 
 - Through `0392961fe6`: [adaptive credit](adaptive_credit_potential_20261004.md),
@@ -54,6 +54,10 @@ including their corrections, rather than treating commit titles as evidence:
   ensemble and Pascal-tower additions. The new L operation forced us to
   replace the initially sufficient denominator-only guard by a native
   progression. Its distinct ternary tag then extended the decoder.
+- Through `9ba31b1b3b`: the exact full/odd-Haar moment proofs, integer-start
+  ensembles, and q=5 heavy-tail caution in the Fourier package. These led to
+  [the two-clock source-address theorem](source_address_two_clocks_20261004.md):
+  a complete binary character partition and an exact adjacent-level energy.
 
 The incoming coverage improvements belong to those packages; this note
 does not add their densities again. We use the existing META-PATTERNS
@@ -377,6 +381,11 @@ sums sj, has rational phase coefficient
 
 Reversal preserves the word weights, so it leaves the aggregate law
 unchanged. Individual controller words must still retain their direction.
+
+The subsequent [two-clock theorem](source_address_two_clocks_20261004.md)
+uses this source coordinate to prove full-Haar orthogonality across odd-step
+levels and an exact nearest-neighbor energy on odd seeds. It computes both
+clock sums and isolates their unproved pointwise interchange at seed 1.
 
 ### Why a phase estimate does not certify every source
 
