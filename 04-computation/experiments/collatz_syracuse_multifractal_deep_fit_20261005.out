@@ -1,0 +1,11 @@
+levels with slopes: 2..20; fit window 13..20
+  q     d_last    loglog e (d~n^-e)   endpoint 1/n model d_inf (c)   1/d linear fit: c, c', max rel. residual, second-difference sign
+  1.5   +0.0085   e = 1.46             d_inf = -0.0054 (c = 0.278)       c = 0.128, c' = -5.22, resid 2.6%, convex
+  1.9   +0.0318   e = 0.99             d_inf = +0.0004 (c = 0.629)       c = 0.641, c' = +0.10, resid 0.4%, convex
+  2.0   +0.0416   e = 0.88             d_inf = +0.0061 (c = 0.710)       c = 0.927, c' = +2.25, resid 0.0%, convex
+  2.1   +0.0367   e = 1.05             d_inf = -0.0024 (c = 0.781)       c = 0.704, c' = -0.87, resid 0.6%, convex
+  2.5   +0.0217   e = 1.79             d_inf = -0.0250 (c = 0.933)       c = 0.284, c' = -7.25, resid 5.2%, convex
+  3.0   +0.0161   e = 2.16             d_inf = -0.0298 (c = 0.919)       c = 0.188, c' = -8.80, resid 8.7%, convex
+  4.0   +0.0218   e = 1.62             d_inf = -0.0191 (c = 0.819)       c = 0.305, c' = -6.27, resid 3.1%, convex
+  6.0   +0.0315   e = 1.01             d_inf = -0.0004 (c = 0.639)       c = 0.626, c' = -0.16, resid 0.1%, mixed/linear
+  8.0   +0.0303   e = 0.79             d_inf = +0.0074 (c = 0.458)       c = 0.738, c' = +4.42, resid 0.7%, concave (saturating)
