@@ -346,18 +346,30 @@ the multiplicative spectrum it is the parity of the character:
 `E_n + O_n = rho_n(1) - rho_(n-1)(1)` and `E_n - O_n = rho_n(-1) - rho_(n-1)(-1)`
 for `E_n = sum_(psi even, prim) E psi(Y_n)` and `O_n` the odd sum.
 
-**The exhibit.** From the S19 data (`rho_n(-1) = 0.9748 (3/2)^n` at `n = 18`,
-increasing; `rho_n(1) = 0.637, 0.425, 0.3155, 0.2736` at `n = 6, 10, 14, 18`):
-`E_n ≈ -O_n ≈ (0.975/6)(3/2)^n`, i.e. `E_18 ≈ +240`, `O_18 ≈ -240`, while
-`E_18 + O_18 = rho_18(1) - rho_17(1)` is of size `10^(-2)`. **The seed-`1`
-density is the cancellation, to four digits at level `18`, of a
+**The exhibit (VERIFIED to level 16 from S23's own output,
+`collatz_three_mirrors_character_spectrum_20260929.out`: its lines
+`sum_prim S` and `parity sum` are `E_n + O_n` and `E_n - O_n`).**
+
+| `n` | `E_n + O_n = Δrho_n(1)` | `E_n - O_n = Δrho_n(-1)` | `E_n` | `O_n` | `(0.975/6)(3/2)^n` | `|E_n + O_n| / E_n` |
+|---|---|---|---|---|---|---|
+| 8 | `-0.0572` | `8.324` | `4.134` | `-4.191` | `4.165` | `1.4e-2` |
+| 10 | `-0.0395` | `18.734` | `9.347` | `-9.387` | `9.371` | `4.2e-3` |
+| 12 | `-0.0360` | `42.169` | `21.067` | `-21.103` | `21.084` | `1.7e-3` |
+| 14 | `-0.0179` | `94.861` | `47.42` | `-47.44` | `47.44` | `3.8e-4` |
+| 16 | `-0.0158` | `213.434` | `106.71` | `-106.72` | `106.74` | `1.5e-4` |
+
+So `E_n ≈ -O_n ≈ (0.975/6)(3/2)^n` to three digits by level `14`, and at
+level `18` (S19: `rho_18(-1) = 0.9748 (3/2)^18`) `E_18 ≈ +240`, `O_18 ≈ -240`,
+`E_18 + O_18 = rho_18(1) - rho_17(1)` of size `10^(-2)`. **The seed-`1`
+density is the cancellation, to four digits by level `16`, of a
 sheet-symmetric and a sheet-antisymmetric sum each of size `0.16 (3/2)^n`.**
 Everything conjugation-invariant (H1, the mixing estimate (2.3), the
 Parseval mass, the motif censuses, the profile `M(h)`) sees `E_n` only, i.e.
 the `-1` resonance; all the information about the positive integers is in
 `O_n`. This is the Fourier-side form of the barrier atlas's "every
-mechanism that overcomes DRIFT is blind to SHEET". (DERIVED from Theorem
-1(ii), PROVED, and the OBSERVED spike law; the numbers are S19's.)
+mechanism that overcomes DRIFT is blind to SHEET". (The identities are
+Theorem 1(ii) of the three-mirrors note, PROVED; the spike law is OBSERVED;
+the table is read off S23's output, VERIFIED.)
 
 **The observer.** THM-4523 is an observer statement: every vertex prime to
 `3` is identified by what it sees looking backward, and the only point where
@@ -420,8 +432,9 @@ three digits; the share of `Bad_k` inside `<3>` converges to `0.1597`,
 strictly below the plain tilt `1 - log_3 2 = 0.369`, by ballot conditioning.
 Survived (Probe E).
 
-**P5 (the seed-`1` density is a sheet cancellation). DERIVED + OBSERVED.**
-`E_n = -O_n + O(1)` with both of size `(0.975/6)(3/2)^n`; the limit
+**P5 (the seed-`1` density is a sheet cancellation). VERIFIED to level
+16 (section 4.5) + OBSERVED beyond.** `E_n = -O_n + O(1)` with both of size
+`(0.975/6)(3/2)^n` (ratio `|E_n + O_n|/E_n = 1.5 x 10^(-4)` at `n = 16`); the limit
 `lim_n sum_(m <= n) (E_m + O_m) = lim rho_n(1)` exists and is positive iff
 Mazur's seed-1 test passes (S19 Theorem C: `limsup n^(1/6) H_n(1) > 0` is
 forced; the limit is OPEN). Prediction: the first sheet-sensitive quantity
@@ -600,7 +613,7 @@ and the data give `h(0.170)/h(1.755) = 0.3249`.
 | two-generator Artin fraction `0.707` vs `0.6975` | FINITE-EXACT vs HEURISTIC (within one standard error) |
 | Proposition E (closure of `<3>`; shadows; the resisting exponent) | PROVED |
 | the share limit `0.1597` | FINITE-EXACT to `k = 24`, dynamic programme to `6000`, extrapolated; the harmonic-function formula CONJECTURED |
-| the seed-`1` cancellation `E_n ≈ -O_n` | DERIVED from S23 Theorem 1(ii) (PROVED) and S19's spike law (OBSERVED) |
+| the seed-`1` cancellation `E_n ≈ -O_n ≈ (0.975/6)(3/2)^n` | identities PROVED (S23 Theorem 1(ii)); numbers VERIFIED to level 16 from S23's output; spike law OBSERVED |
 | P1, P8, P11, P12 | SPECULATIVE (typed, with the negative tests named) |
 | P2, P6, P7, P10 | CONJECTURE with a cheap test named |
 | P9 | negative prediction, FALSIFIABLE |
