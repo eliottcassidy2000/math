@@ -1,0 +1,21 @@
+{
+  "backward_box_T_lt6_L_lt12": {
+    "base_sources": 688,
+    "double_weight_sum": "890213479/428828400",
+    "single_weight_sum": "427967041/196035840",
+    "sources": 1990
+  },
+  "certified_parameter_box_64_4096_error_bounds": {
+    "double_exact_expression": "4/65 + 4*(H_4096-1)/4095",
+    "double_rational_upper_bound": "20/273",
+    "single": "36893488147419107329/18894077617497008242688"
+  },
+  "checks": 16522,
+  "exact_incoming_rows": 1332,
+  "hostiles": 10,
+  "independent_literal_membership_sources": 2048,
+  "larger_box_T_lt7_L_lt14_sources": 8292,
+  "rho": "1/2",
+  "rooted_sibling_family_total_weight_both_mixtures": 2
+}
+PASS: finite backward receipts and unconditional weight tails; all-source positivity remains OPEN.

@@ -1,0 +1,127 @@
+{
+  "abstract_contraction_does_not_imply_positive_support": {
+    "Green_at_1": 1,
+    "Green_at_every_n_ge2": 0,
+    "map": "G(n)=n+1 for n>=2; ROOT1 isolated",
+    "operator_norm": "1/2"
+  },
+  "column_controls_bases_lt512_cutoffs0_to8_nine_parameter_pairs": 15552,
+  "critical_rho1_bounds": {
+    "1/16": {
+      "finite_depth3_cutoff3_mass": "300090073924111/281474976710656",
+      "inherited_general_column_bound": "273",
+      "root_start_bound": "273/16"
+    },
+    "1/2": {
+      "finite_depth3_cutoff3_mass": "6281/4096",
+      "inherited_general_column_bound": "7",
+      "root_start_bound": "7/2"
+    },
+    "1/4": {
+      "finite_depth3_cutoff3_mass": "21655843/16777216",
+      "inherited_general_column_bound": "21",
+      "root_start_bound": "21/4"
+    }
+  },
+  "default_constants": {
+    "global_total_mass_upper_bound": "4641/4384",
+    "operator_L1_norm": "136/273",
+    "r": "1/16",
+    "rho": "1/2",
+    "root_column": "257/8736",
+    "row_bound": "15/32"
+  },
+  "exact_checks": 106678,
+  "factored_multipliers": [
+    "15/128",
+    "15/32",
+    "15/8"
+  ],
+  "finite_kernels": [
+    {
+      "bases": 1,
+      "branch_cutoff": 0,
+      "certified_nu_sibling_mass": "32/45",
+      "depth": 0,
+      "global_L1_error_bound": "54869/300304",
+      "weight_mass": "1"
+    },
+    {
+      "bases": 2,
+      "branch_cutoff": 1,
+      "certified_nu_sibling_mass": "8/9",
+      "depth": 1,
+      "global_L1_error_bound": "96961201/2623455744",
+      "weight_mass": "527/512"
+    },
+    {
+      "bases": 4,
+      "branch_cutoff": 2,
+      "certified_nu_sibling_mass": "257/288",
+      "depth": 2,
+      "global_L1_error_bound": "172268341825/11459254689792",
+      "weight_mass": "4321009/4194304"
+    },
+    {
+      "bases": 60,
+      "branch_cutoff": 3,
+      "certified_nu_sibling_mass": "31740848530151/32985348833280",
+      "depth": 4,
+      "global_L1_error_bound": "49750582918722913/13664748684408127488",
+      "weight_mass": "19018782541839042931/18446744073709551616"
+    },
+    {
+      "bases": 1024,
+      "branch_cutoff": 5,
+      "certified_nu_sibling_mass": "21760735636759145167680705653/22282920707136844948184236032",
+      "depth": 5,
+      "global_L1_error_bound": "1717816298277356039281/955001956055915213881344",
+      "weight_mass": "2741180862094836499977095503771430447/2658455991569831745807614120560689152"
+    }
+  ],
+  "global_precision_compiler": [
+    {
+      "bases": 16,
+      "branch_cutoff": 2,
+      "certified_nu_sibling_mass": "4538693/4718592",
+      "contains_base27": false,
+      "depth": 4,
+      "epsilon": "1/100",
+      "proven_L1_error": "3497514574361953/854046792775507968"
+    },
+    {
+      "bases": 128,
+      "branch_cutoff": 2,
+      "certified_nu_sibling_mass": "19426156605169/19791209299968",
+      "contains_base27": false,
+      "depth": 7,
+      "epsilon": "1/1000",
+      "proven_L1_error": "16179446141636814826897/17376792183323072503750656"
+    }
+  ],
+  "invalid_input_controls": 15,
+  "point_precision_controls": 1728,
+  "selected_exact_weights": {
+    "1": {
+      "base_root_depth": 0,
+      "weight": "1"
+    },
+    "127": {
+      "base_root_depth": 14,
+      "weight": "29192926025390625/19807040628566084398385987584"
+    },
+    "27": {
+      "base_root_depth": 40,
+      "weight": "110573323209400121422731899656355381011962890625/6901746346790563787434755862277025452451108972170386555162524223799296"
+    },
+    "3": {
+      "base_root_depth": 1,
+      "weight": "15/512"
+    },
+    "7": {
+      "base_root_depth": 4,
+      "weight": "50625/268435456"
+    }
+  }
+}
+PASS: unconditional computable summable Green weight; positivity everywhere remains OPEN.

@@ -1,0 +1,17 @@
+{
+  "checks": 20224,
+  "finite_box": {
+    "T_less_than": 5,
+    "each_k_and_j_at_most": 5,
+    "mass": "14303044848359/4011209802600",
+    "multiple_three_mass": "180216778109/194090796900",
+    "source_count": 1536
+  },
+  "hostile": "zero approximation at 27 with cutoff 0 later becomes positive",
+  "proved_multiple_three_mass": "2",
+  "proved_root_ray_mass": "3",
+  "proved_total_mass_bound": "11",
+  "status": "FINITE-EXACT; universal positivity OPEN",
+  "tail_bound_formula_checked": true,
+  "weight_27": "1/21296186450"
+}

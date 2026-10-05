@@ -1,0 +1,12 @@
+PROVED: finite future-register/cofactor-residue/current-height aliases on G
+FINITE-EXACT: 65 lookaheads x 15 moduli = 975 exact positive source pairs
+PROVED: exact alias guard K>=3 floor(L/2)+4; expanding native word (1,2); all displayed sibling depths 0
+PROVED: identical complete current heights and both baseline atoms; no strict weight factors through this observer
+PROVED: variable-radius obstruction L(N)<=2 floor((N-s-9)/3)+1; no optimality claim
+FINITE-EXACT: variable-radius pairs = 1215
+PROVED: two-anchor pole correction pays guarded phase edges; base charges r=1/16, rho=2/3
+FINITE-EXACT: guarded pole edges below 65536 = 6144
+PROVED: same correction fails at 7 -> 11 with ratio 16384; global refuel payment remains OPEN
+FINITE-EXACT: malformed/source/root hostiles = 13
+explicit checks=186630
+SCOPE: no obstruction to arbitrary finite algorithms, full cofactors, or other growing-precision controllers
