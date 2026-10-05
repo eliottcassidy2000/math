@@ -1,0 +1,24 @@
+Barycentric triangle: (7, 12, 6, 12, 6) = vertices,edges,cells,untypedAut,typedAut
+Exact chart-word counts by depth: {0: 1, 1: 6, 2: 36, 3: 216, 4: 1296} ; total 1555
+Independent terminal port frames: 1554
+Composition pairs 1849 ; compensated interface gauges 216
+Hostiles: uncompensated port swap changes matrix; all six chart tips give one center.
+Centroid fan: three cells; each splits into two flags; all fan words depth0..5: 364
+Full adaptive ternary-tree counts: {0: 1, 1: 1, 2: 3, 3: 12, 4: 55, 5: 273} ; exact leaves checked 3601
+Balanced H(+2)/G(-1) words through length12: 72
+For m fan splits: (V,E,F)=(m+3,3m+3,2m+1); exact area and no hanging nodes.
+Mixed alphabet A0,A1,A2,B0,B1 words length0..5: 3906 ; distinct matrices by depth {0: 1, 1: 5, 2: 25, 3: 125, 4: 625, 5: 3121}
+First marked-matrix collisions at depth5: 4 ; A1 A0 A1 B0 B0 = B0 B0 A0 A1 A1
+Collision matrix: ((Fraction(4, 9), Fraction(7, 12), Fraction(16, 27)), (Fraction(1, 9), Fraction(1, 12), Fraction(4, 27)), (Fraction(4, 9), Fraction(1, 3), Fraction(7, 27)))
+Mixed H/P typed trees through3 nodes: {0: 1, 1: 2, 2: 10, 3: 66} ; area/leaf checks 79
+Mixed leaf count2h+p+1; midpoint(1/6,2/3,1/6) is a hanging-node hostile.
+Point/boundary reconstructions degrees1..12: 454
+Degree6 strata: {'center': 1, 'distinct-interior': 6, 'equal-edge': 3, 'two-small': 3, 'unequal-edge': 12, 'vertex': 3}
+Degree12 first realizes all seven strata: {'center': 1, 'distinct-interior': 42, 'equal-edge': 3, 'two-large': 3, 'two-small': 9, 'unequal-edge': 30, 'vertex': 3}
+Guarded chart transport: 672 cases from 84 words
+Exact telescoping/guard intersections: 60
+Payment hostile: current5 with original3 is unpaid, with original7 is paid.
+Only two open monitor chambers occur when current and original are >1 and unequal.
+Formal repeat12 at27 is legal once, not twice; chart transport does not repair it.
+Rejected malformed/undeclared-frame controls: 10
+PASS: pure-chart decoders, typed mixed partitions, guarded interfaces; no universal payment claim.

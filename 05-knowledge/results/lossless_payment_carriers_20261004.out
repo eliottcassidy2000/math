@@ -1,0 +1,7 @@
+H/G lengths 0..8: 511 round trips by two independent decoders; 1022 independently replayed legal sources; 430 credit-paid controls
+Credit associativity: 3375 triples; HG/GH carry and prefix hostile
+Polynomial controls: 1875 state transports; 1875 composition identities over five rational values
+Local/global hostile GGGH: (212987, 239611, 269563, 303259, 215895) ; original debt numerator 1524629504
+Rank controls: E(15)=147 > E(17)=81; 171->257 lowers E 21675->6561
+Invalid type/carrier/credit controls rejected: 8
+PASS: exact guarded program memory and source payment; no universal completion claim

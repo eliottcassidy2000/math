@@ -1,0 +1,13 @@
+Uniform payment: H^m then any legal G^q with q<=2m pays original source; G=actual12.
+Switch universe: m=1..12, q=2m/3m, residual fuel1/2/3, row parameters0/1/7/31.
+Literal exact exhausted-family controls: 144 pay integer size and rank; 144 fail integer size payment.
+The96 designated residual2/3 hostile controls also strictly increase graph rank.
+Sharp control: Switch(source=241819, h_repeats=1, g_blocks=2) terminal 172155 endpoint 217885 paid True
+Sharp control: Switch(source=110747, h_repeats=1, g_blocks=3) terminal 78843 endpoint 112261 paid False
+Three-credit graph-rank hostile: 1159323 via 825339 to 1175143 ranks (1008020624763, 1) (1035719040123, 1)
+Four independently supplied endpoint proofs: observed odd edges 317 ; these observations are outside the switch verifier.
+Constructed completed control: m1, root exponent 962 source bits 961 ranks (11, 989)
+Completed plans m1..12, lifts0/1/7: 144 independent modular comparisons; only m1 source expanded.
+Type/source/terminal/phase/expansion-cap hostiles rejected: 8
+Scope: conditional payment and constructed ROOT families; no new source coverage beyond H.
+Local expansion is permitted only against retained original-source debt; exhaustion alone pays nothing.
