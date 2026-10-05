@@ -1,0 +1,21 @@
+EARLY REROUTES: exact least branch clock and guarded larger coverage; universal home OPEN
+All-height schema controls: 36 (r0..3,u1/2/4,three parameters; k=3^r*u)
+Independent legal clock comparisons: 2059 (n3..399,r0..2,k1..12,ell<=12)
+ORIGIN [source,period,child,increment]: (89211, 93312, 62655, 65536) ;words(1) versus1^5,2,3
+ONE_STEP [source,period,child,increment]: (2424699, 2519424, 2018303, 2097152) ;words(1,2) versus1^9,2,6
+REFINED_ORIGIN_ROWS [[89211, 279936, 62655, 196608], [182523, 279936, 128191, 196608]]
+Each refined row:oldbank occupancy<=1/78; previous composition extra<=3^-55/(1-3^-30).
+Surviving relative density >0.98717; union odd-relative density lower bound: 172212682662848571118682075/12208653583262207315470753502976
+Position-one row:at least25/26 lies outside the full strengthened origin bank.
+MOD19 [position,k,slope,intercept]: [(0, 2, 8, 2), (1, 3, 13, 17)] ;invertible transport, not identity assumed
+Origin-bank density interval: ('0.4458180914749391', '0.4458180914749392')
+Oldbank+inherited12 density interval: ('0.4449019034751894', '0.4449019034751895')
+Origin-bank primitive indices through31: (0, 1, 2, 4, 5, 7, 8, 11, 13, 14, 16, 17, 20, 22, 23, 25, 26, 29, 31)
+MERSENNE [k,d,p0,p_period,p_mod6]: [(1, 2, 5, 6, 5), (4, 12, 75379, 354294, 1), (7, 23, 36969036897, 62762119218, 3)]
+Literal large control:75379-bit source,13 child odd edges; largest exponent family stays symbolic.
+Infinite hostile:all powers3^a,a>=1; literal controls: 32
+Ternary wedge9^a>=32u^3; [u,first sufficient a]: [(1, 2), (5, 4), (7, 5), (11, 5), (19, 6), (101, 8)] ;four heights each
+Other constructions on powers3^a,a1..64: {'direct': 32, 'half_child': 16, 'three_steps': 8, 'residual': 8} ;all-height survivor for these three rules is a=3mod8.
+Supplied-child demonstrations:3; premise search cap5000, not universal child grounding.
+Hostiles:7/27/703 still uncovered; k1 inherited12; new type/source rejections: 9
+PASS: 102421 always-active checks; no coverage or home claim beyond the proved guards.

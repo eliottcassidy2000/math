@@ -4,7 +4,8 @@
 Chebyshev trace identity, rational denominator growth, and the finite
 rational-chart conjugacy obstruction. **PROVED:** the complete escaping
 integer-component codec and the finite monotone-rank-atlas obstruction,
-including bounded forward macros. **FINITE-EXACT:** the declared controls.
+including bounded forward macros; the word-doubling application of the
+inherited Chebyshev identity. **FINITE-EXACT:** the declared controls.
 Universal Collatz completion remains **OPEN**. No priority claim.
 
 ## 1. Recover the objects before transplanting their pattern
@@ -243,7 +244,103 @@ atlas theorem shows why the valuation fuel cannot be replaced by a
 finite collection of ordinary polynomial height pieces. Neither
 statement grounds every positive Collatz critical state.
 
-## 6. Exact controls
+## 6. The first and third quadratics act on repeated word presentations
+
+The later incoming [branch-gap audit, section7](collatz_branch_toll_rank_20261004.md#the-branch-gap-and-the-negative-cycle-denominator-are-the-same-invariant)
+identifies an exact cancellation: doubling an ordered Collatz word multiplies
+its carry and its raw fixed-point denominator by the same factor. Combining
+this with the inherited Chebyshev identity gives a precise connection to two
+of the user's maps. The object being iterated is a **word presentation**,
+not a Collatz starting integer.
+
+For a nonempty positive valuation word \(w=(a_1,\ldots,a_r)\), put
+\[
+ A=\sum_i a_i,\qquad u=3^r,\qquad v=2^A,\qquad
+ M_w=\begin{pmatrix}u&B_w\\0&v\end{pmatrix},\qquad
+ F_w(n)=\frac{un+B_w}{v}.
+\]
+These are formal affine data; using \(w\) on an integer requires its actual
+valuation guard. Concatenating \(w\) with itself gives
+\[
+ M_{ww}=M_w^2
+ =\begin{pmatrix}u^2&B_w(u+v)\\0&v^2\end{pmatrix}.                 \tag{6}
+\]
+Let \(\lambda=u/v\), and use the exact rational trace coordinate
+\[
+ J(\lambda)=\lambda+\lambda^{-1}
+ =\frac{u^2+v^2}{uv}>2.
+\]
+The strict inequality follows from \(u\ne v\), by unique factorization.
+Then word doubling simultaneously realizes
+\[
+ \boxed{\lambda\longmapsto\lambda^2,\qquad
+ J\longmapsto J^2-2.}                                           \tag{7}
+\]
+Indeed \(J(\lambda^2)=(\lambda+\lambda^{-1})^2-2\).
+Equivalently the determinant-one normalization has trace
+\(X=(u+v)/\sqrt{uv}\), with \(X^2=J+2\), and
+\(X(M_w^2)=X(M_w)^2-2\). No irrational arithmetic is needed for the
+rational version (7). The middle map \(x^2-1\) remains a separate member
+of the quadratic classification; this construction gives no corresponding
+Collatz-word operation for it.
+
+For the one-letter word \((1)\),
+\(\lambda=3/2\) and \(J=13/6\), so the first doubling gives \(97/36\).
+After \(j\) doublings the reduced denominator of \(J\) is exactly
+\[
+ (uv)^{2^j}=(3^r2^A)^{2^j},                                    \tag{8}
+\]
+because its numerator \(u^{2^{j+1}}+v^{2^{j+1}}\) is coprime to both
+2 and 3. Thus these rational coordinates escape in real size as well as
+arithmetic denominator. This describes increasing presentation length.
+It does not imply escape of any positive Collatz source: even when
+\(\lambda<1\), its trace \(J>2\) grows under (7).
+
+The affine anchor is unchanged:
+\[
+ \rho_w=-\frac{B_w}{u-v}
+ =-\frac{B_w(u+v)}{u^2-v^2}=\rho_{ww}.                           \tag{9}
+\]
+Every prime factor supplied by the common multiplier \(u+v\) cancels in
+this reduced quotient. The incoming example \(w=(1,2)\) has
+\((u,B_w,v)=(9,5,8)\); doubling gives \((81,85,64)\). The raw gap
+acquires the factor17 but the anchor stays \(-5\). This is a cancellation
+in the repeated presentation, not evidence of a new signed basin or
+new primitive prime phase.
+
+There are two separate information issues. On the ambient positive
+rationals, \(J\) identifies \(\lambda\) with \(\lambda^{-1}\).
+The positive-word type repairs this sheet ambiguity: the reciprocal
+of \(3^r/2^A\) cannot be another permitted slope. Indeed the reduced
+denominator \(3^r2^A\) of \(J\) recovers both counts. A large trace
+by itself still does not imply an expanding slope.
+Even retaining the typed slope loses the carry:
+the words \((1,2)\) and \((2,1)\) have the same
+\(J=145/72\), but anchors \(-5\) and \(-7\). Retaining the ordered word,
+or at least its full affine data together with exact valuation guards,
+repairs the relevant losses. An anchor alone also discards length and
+the binary precision consumed by an application.
+
+In particular, replacing a checked word by its formal square does not
+prove that square is legal at the same source. The actual valuations
+starting from27 are \(1,2,1,1\); the word \((1,2)\) is legal, but
+\((1,2,1,2)\) is not. The doubled word uses \(2A\) halvings, and needs
+its own source guard. The [guarded-pumping result](collatz_guarded_pumping_memory_20261004.md)
+separately measures the finite repeated-word fuel. Neither a fixed anchor
+nor the trace identity supplies that fuel or a root certificate.
+
+**Connection contract.** Source: ordered affine word presentations under
+concatenation. Target: rational squaring and Chebyshev dynamics.
+Map: \(w\mapsto\lambda_w\mapsto J(\lambda_w)\). Preserved predicate:
+the doubling law and, with the carry retained, the affine fixed point.
+Lost data: carry, order, source legality and first-hit status; the ambient
+sheet is also lost if the positive-word arithmetic type is forgotten.
+Needed sidecar: that type, ordered word and its guarded source or supplied proof.
+The smallest tests are one-letter squaring, the two carries \(12/21\),
+and the failed doubled word at27. This connects the user's quadratic
+maps exactly while staying outside an integer-orbit conjugacy claim.
+
+## 7. Exact controls
 
 Program:
 [quadratic_escape_rank_atlas_20261004.py](../../04-computation/experiments/quadratic_escape_rank_atlas_20261004.py).
@@ -257,6 +354,10 @@ Controls cover all escaping integers in \([-5000,5000]\) for the three
 maps: 29992 lossless codec and transition checks, with 4930 component
 labels through 5000 for each map. The Gaussian lift checks nine exact
 stages, retaining bounded real trace and the explicit denominator.
+The word-matrix controls cover every word of length1--4 with letters1--4
+at doubling depths0--3: 1360 exact checks of coefficients, both trace
+identities, denominator growth and anchor cancellation. They retain the
+same-trace/different-carry and illegal-repeat hostiles.
 
 The finite rank check enumerates every assignment of \(q\) polynomial
 charts to \(q+1\) increasing states for \(q=1,\ldots,4\): 1114 cases.

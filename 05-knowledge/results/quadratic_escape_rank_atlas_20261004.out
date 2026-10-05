@@ -7,6 +7,10 @@ Escaping component c=0: +/- [2, 4, 16, 256, 65536]
 Escaping component c=1: +/- [2, 3, 8, 63, 3968]
 Escaping component c=2: +/- [3, 7, 47, 2207, 4870847]
 Chebyshev rational orbit6/5: denominator=5^(2^j); denominator bit lengths: [(0, 3), (1, 5), (2, 10), (3, 19), (4, 38), (5, 75), (6, 149), (7, 298), (8, 595)]
+Word-matrix controls: 1360 ; all words length1..4, letters1..4, doubling depths0..3
+Slope3/2 squares; rational trace13/6 ->97/36; denominator=(3^r*2^A)^(2^j)
+Carry hostile: words12/21 have trace145/72 but anchors-5/-7; doubled12 factor17 cancels
+Guard hostile:27 has valuations1,2,1,1, so matrix doubling does not certify repeated word12
 Arbitrary polynomial-chart assignments rejected: 1114 ; q1..4, q+1 increasing states; finite unrolled controls pass
 Bounded macro controls: 2262 ; q1..3, all macro lengths1..3 and all chart assignments
 Valuation-coordinate edge controls: 6240 ; reset hostile9->7 raises energy15->27;27->41->31 gives63,63,243

@@ -83,6 +83,64 @@ def one_run_rank(n):
     return 3**k*t, k
 
 
+def word_matrix(word):
+    """Upper triangular representative (u, B, v) of the formal odd-word map."""
+    need(isinstance(word, tuple) and len(word) > 0 and
+         all(type(a) is int and a >= 1 for a in word), 'nonempty positive exact valuation word')
+    u, B, v = 1, 0, 1
+    for a in word:
+        u, B, v = 3*u, 3*B+v, (2**a)*v
+    return u, B, v
+
+
+def trace_controls():
+    """Word doubling is squaring on slope and Chebyshev on its rational trace."""
+    checks = 0
+    for length in range(1, 5):
+        for word in product(range(1, 5), repeat=length):
+            original = word_matrix(word)
+            u0, B0, v0 = original
+            anchor = Fraction(-B0, u0-v0)
+            for depth in range(4):
+                u, B, v = word_matrix(word*(2**depth))
+                uu, BB, vv = word_matrix(word*(2**(depth+1)))
+                need((uu, BB, vv) == (u*u, B*(u+v), v*v), 'matrix-square coefficient law')
+                slope = Fraction(u, v)
+                trace = slope+1/slope
+                next_trace = Fraction(uu, vv)+Fraction(vv, uu)
+                need(Fraction(uu,vv) == slope*slope and next_trace == trace*trace-2,
+                     'simultaneous exact squaring / Chebyshev semiconjugacy')
+                need(Fraction(-BB,uu-vv) == anchor, 'anchor survives doubled presentation')
+                need(trace > 2 and next_trace > trace and
+                     trace.denominator == (u0*v0)**(2**depth),
+                     'real trace escape and exact denominator growth')
+                # X=tr(M)/sqrt(det(M)); use its square to avoid floating radicals.
+                X_squared = Fraction((u+v)**2, u*v)
+                need(X_squared == trace+2 and
+                     Fraction(uu+vv,u*v) == X_squared-2,
+                     'normalized trace itself obeys the same Chebyshev map')
+                checks += 1
+    u, B, v = word_matrix((1,))
+    need(Fraction(u,v)+Fraction(v,u) == Fraction(13,6), 'explicit trace seed')
+    need(Fraction(u*u,v*v)+Fraction(v*v,u*u) == Fraction(97,36), 'explicit doubled trace')
+    left, right = word_matrix((1,2)), word_matrix((2,1))
+    need(left == (9,5,8) and right == (9,7,8), 'same trace / different carry hostile')
+    need(word_matrix((1,2,1,2)) == (81,85,64) and
+         Fraction(-85,81-64) == -5, 'new raw factor17 cancels from anchor')
+    current, observed = 27, []
+    for _ in range(4):
+        current, a = odd_step(current)
+        observed.append(a)
+    need(observed == [1,2,1,1], 'word12 is legal at27 but its doubled word is not')
+    need(Fraction(3,4) < 1 and Fraction(3,4)+Fraction(4,3) > 2,
+         'trace escape does not distinguish expanding and contracting slopes')
+    print('Word-matrix controls:',checks,
+          '; all words length1..4, letters1..4, doubling depths0..3')
+    print('Slope3/2 squares; rational trace13/6 ->97/36; denominator=(3^r*2^A)^(2^j)')
+    print('Carry hostile: words12/21 have trace145/72 but anchors-5/-7; doubled12 factor17 cancels')
+    print('Guard hostile:27 has valuations1,2,1,1, so matrix doubling does not certify repeated word12')
+
+
 def main():
     print('QUADRATIC COMPONENTS AND RANK ATLASES: exact mechanisms, no global Collatz closure')
     controls, roots = 0, []
@@ -134,6 +192,7 @@ def main():
     print('Chebyshev rational orbit6/5: denominator=5^(2^j); denominator bit lengths:',rational_checks)
     for z in (Fraction(2),Fraction(3,2),Fraction(-2),Fraction(1,3)):
         need(z*z+1/(z*z) == quadratic(z+1/z,2), 'J(z^2)=J(z)^2-2')
+    trace_controls()
 
     # Exhaustive arbitrary chart assignments in a small finite proof control.
     # Each chart n^d is proper and increasing; selecting history-dependent
@@ -201,7 +260,8 @@ def main():
 
     for thunk in (lambda: escape_address(1,0),lambda: escape_address(3,True),
                   lambda: decode_address((4,0,1),0),lambda: increasing_run(True,1),
-                  lambda: one_run_rank(2)):
+                  lambda: one_run_rank(2),lambda: word_matrix(()),
+                  lambda: word_matrix((True,)),lambda: word_matrix((1,0))):
         try:
             thunk()
         except ValueError:
