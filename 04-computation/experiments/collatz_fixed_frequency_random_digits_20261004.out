@@ -9,4 +9,3 @@ random odd multiplier seed=0: 300-block medians 1.43e-01 1.20e-02 8.42e-04 1.45e
 random odd multiplier seed=1: 300-block medians 1.29e-01 4.09e-02 3.17e-04 2.34e-05 5.31e-06 | rate 300..1500: 0.5721 (ratio to 1/sqrt3: 0.9910) | rate 750..1500: 0.5739 (ratio to 1/sqrt3: 0.9940)
 random odd multiplier seed=2: 300-block medians 1.42e-01 9.65e-03 2.01e-03 5.19e-05 1.03e-05 | rate 300..1500: 0.5727 (ratio to 1/sqrt3: 0.9919) | rate 750..1500: 0.5725 (ratio to 1/sqrt3: 0.9917)
   [173s total]
-DONE
