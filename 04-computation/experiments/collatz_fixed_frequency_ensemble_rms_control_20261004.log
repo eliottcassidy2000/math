@@ -1,0 +1,6 @@
+ensemble control (16 members), N=1000, A=40, window 300..1000; values rescaled by 3^(n/2)
+i.i.d. digits (true rms rate exactly 0.5774): ensemble rms rate 0.5732; ensemble typical rate 0.5722; per-member typical 0.5722 +- 0.0011; Jensen gap +0.0017   [34s]
+   ensemble mean square by 100-blocks: 1.86e-01 1.27e-02 2.45e-01 7.78e-02 1.16e-03 4.29e-04 1.06e-05
+random odd multiplier: ensemble rms rate 0.5730; ensemble typical rate 0.5726; per-member typical 0.5726 +- 0.0011; Jensen gap +0.0006   [211s]
+   ensemble mean square by 100-blocks: 9.84e-02 1.78e-02 1.79e-02 8.73e-04 5.21e-05 1.23e-04 8.35e-05
+DONE

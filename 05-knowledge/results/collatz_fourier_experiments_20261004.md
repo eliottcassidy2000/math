@@ -381,17 +381,23 @@ prime to `3q`): the ensemble mean square `E_u[q^n |mu_hat_n(u)|^2]` and the ense
 |---|---|---|---|---|
 | 3 | **`0.5703`** | `0.5692` | `0.5692 +- 0.0012` | `+0.0019` |
 | 5 | `0.5735` | `0.5728` | `0.5728 +- 0.0013` | `+0.0013` |
-| i.i.d. digits (true rms rate exactly `0.5774`, E5c) | calibration run `collatz_fixed_frequency_ensemble_rms_control_20261004.py` (results below) | | | |
+| i.i.d. digits, 16 seeds (true rms rate exactly `0.5774`, E5c) | `0.5732` | `0.5722` | `0.5722 +- 0.0011` | `+0.0017` |
+| random odd multiplier, 16 seeds | `0.5730` | `0.5726` | `0.5726 +- 0.0011` | `+0.0006` |
 
-**Preliminary reading (to be calibrated).** For `q = 3` the sixteen-unit mean square decays at `(0.5703)^2` per
-level, faster than the incoherent `1/3`, i.e. the cube-root coupling would produce a genuine mean-square
-anticorrelation of about `1.2%` per level, with only a small Jensen gap (`0.2%`); for `q = 5` the ensemble rms
-is `0.5735`, also below `0.5774`. The ensemble mean squares are extremely heavy-tailed (100-block means for
-`q = 3`: `9e-3, 5e-5, 5e-5, 2e-2, 8e-9, 3e-7, 3e-9`), so a sixteen-member estimate of a mean-square rate is itself
-biased low by the same Jensen mechanism; the i.i.d. control (whose true rms rate is exactly `1/sqrt3`) measures
-that bias. Until it lands, the honest statement is: **the excess shows in the ensemble mean square of sixteen
-units at least as strongly as in the typical rate; whether the true (infinite-ensemble) mean-square rate of the
-Collatz tower is below `1/sqrt3` is decided by the calibration.**
+**Calibrated reading: INCONCLUSIVE.** The sixteen-member "ensemble rms rate" of the i.i.d. model is `0.5732`
+although its true mean-square rate is exactly `0.5774` (E5c): with ensemble mean squares this heavy-tailed
+(100-block means for `q = 3`: `9e-3, 5e-5, 5e-5, 2e-2, 8e-9, 3e-7, 3e-9`) the estimator inherits the Jensen bias of
+the members, about `-0.004`. Against that baseline `q = 3` sits `0.003` lower in the ensemble statistic, exactly
+as in the typical rate (`0.5692` against `0.5722`); so the sixteen-unit ensemble cannot separate a true
+mean-square anticorrelation from a typical-rate effect, and the `1.2%` reading of the first version of this
+section is withdrawn. What is exact instead (PROVED, Parseval): over the FULL frequency ensemble `t mod 3^n`,
+`E_t |mu_hat_n(t)|^2 = sum_y mu_n(y)^2 = (3/2) 3^-n E_units[rho_n^2]`, the collision probability -- rate exactly
+`1/sqrt3` with the prefactor `(3/2) E[rho_n^2] ~ 0.47 n` (E2), against the prefactor `1` of the i.i.d. model. The
+Collatz ensemble therefore has the same exponential mean-square rate as the random model and a heavier tail
+(the linearly growing collision prefactor is the forward closure of the `-1` spike), which by Jensen is
+consistent with a lower typical rate; but the fixed small units are a null subfamily of that ensemble, so this
+is a heuristic for the `0.4%`, not a derivation. The excess itself is robust (E5f: five standard errors;
+E5k: localized to the cube-root coupling); its mechanism stays OPEN.
 
 ### 4e. The web around the cold rate (connections found by the niche search; all typed)
 

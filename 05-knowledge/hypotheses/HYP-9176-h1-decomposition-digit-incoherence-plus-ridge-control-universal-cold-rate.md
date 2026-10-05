@@ -17,7 +17,13 @@ status: >
   level -- breaking the cube-root relation between consecutive levels -- lose
   it too (0.5725); the root orders q = 5..49, prime, prime power or composite,
   all sit at 0.5725 +- 0.0007, so the cube root alone interacts with the
-  geometric weights; mechanism OPEN) and
+  geometric weights; E5l sixteen-unit ensembles are INCONCLUSIVE on whether
+  the excess is a mean-square anticorrelation (the estimator's Jensen bias,
+  calibrated on the i.i.d. model, equals the effect); exact: over the full
+  frequency ensemble the mean square is the collision probability
+  (3/2) 3^-n E[rho_n^2], rate 1/sqrt3 with a linearly growing prefactor
+  (Parseval, PROVED) -- a heavier tail than the i.i.d. model's, consistent
+  with a lower typical rate by Jensen; mechanism OPEN) and
   mac-mini's |mu_hat_n(1)| to 2500 (HYP-9166). What it adds to
   HYP-9166: H1's rate is not 3's Parseval scale but the incoherent rate of the
   2-adic window recursion (identical for 5x+1, whose law is nowhere near
