@@ -26,6 +26,12 @@ proves that the exact fixed half-child ansatz fails at7 at every length.
 Its slope-spectrum theorem and the
 [child-cut law](supplied_state_join_extensions_20261004.md) are inherited.
 
+A later clean checkpoint integrated `b58b73e38c`, `891b067700`, and
+`f29c414ec2`: the descent-class correction, whole-cell depth obstruction,
+and [composed dependency families](collatz_partitioned_completion_20261004.md).
+Section8 applies the incoming construction to this note's critical set;
+the final audit independently verifies its exact all-height guards.
+
 Closest mechanisms: [the reset shield and family lift](collatz_join_shields_and_lifts_20261004.md),
 [the binary/ternary selector](collatz_binary_ternary_guard_fusion_20261004.md),
 and the incoming rooted proof graph. Canonical hostiles: 3,7,27,703;
@@ -326,6 +332,48 @@ exchanges7 and13 modulo18. On the three odd classes modulo6 it fixes1
 and exchanges3 with5. This is a concrete link to the earlier triplets;
 it preserves that quotient's group law, not arbitrary Collatz trajectories.
 
+### The branch gap and the negative-cycle denominator are the same invariant
+
+The [boundary compiler](collatz_boundary_compiler_20261004.md) and the older
+[coincidence atlas, section4](collatz_coincidence_atlas_20260927.md) already
+identify the -17 cycle's seven odd steps, eleven halvings, and raw gap139.
+The new branch theorem gives those counts another exact role. Put
+`r=ell(k), A=ell(k)+2k`. The positive gap
+
+    Delta_k=3^r-2^A
+
+is both the strict margin that first allows the branch to be paid and the
+raw denominator of the fixed point of every word with these counts.
+For an ordered word w, write `F_w(n)=(3^r*n+B_w)/2^A`; its anchor is
+`rho_w=-B_w/Delta_k`. The ordering determines B_w and hence whether the
+anchor is an integer and which signed basin it represents.
+
+**FINITE-EXACT, exhaustive at three specified pairs:**
+
+| k | r,A | Delta_k | All positive compositions of A into r letters | Integral anchors |
+|---:|---|---:|---:|---|
+| 1 | 4,6 | 17 | 10 | -5,-7: the two rotations of the repeated word12 |
+| 2 | 7,11 | 139 | 210 | The seven rotations of the -17 cycle |
+| 3 | 11,17 | 46075=25*19*97 | 8008 | None |
+
+The audit enumerates every ordered positive composition, computes its
+exact rational anchor, and replays every integral result with actual
+valuations. Thus the first two matches are exact, but the third barrier
+does not introduce an integer cycle at those counts. This is not an
+assertion excluding cycles at other lengths or costs.
+
+There is an all-word explanation for another apparent prime-generating
+pattern. Repeating a word doubles its counts and multiplies both its gap
+and its carry by `3^r+2^A`; the reduced anchor stays unchanged. Repeating
+the word12 gives `3^4-2^6=17` while still fixing -5. Repeating the -17 word
+gives `3^14-2^22=139*5*7*11^2` while still fixing -17. New factors of the
+raw gap need not represent new dynamics. The pair `(B_w,Delta_w)` has a
+projective quotient, the anchor; retain the word as a sidecar because
+that quotient discards the consumed binary fuel and the exact guards.
+This supplies a concrete interpretation of recursive number appearances:
+some encode new addresses, while others encode repeated presentations
+of the same fixed point.
+
 ## 8. A more ambitious well-founded controller, with explicit obligations
 
 The graph reduction suggests a different research target: **cancel the
@@ -338,7 +386,7 @@ A complementary way to represent a long path is a finite controller with
 rational anchors. Here is a sufficient criterion that admits growing loops.
 
 **PROVED conditional controller criterion.** A finite control graph has
-exact guarded forward-word edges. For every strongly connected component,
+exact guarded, nonempty forward-word edges. For every strongly connected component,
 assign a rational anchor rho_s at each mode such that every internal edge
 F_e sends rho_s exactly to rho_t. Denominators are odd. Require that no
 nonterminal actual input equal its mode's anchor. Then an internal edge
@@ -391,6 +439,31 @@ therefore cannot decrease on every odd edge when r is just n modM.
 Adding fixed prime phases does not repair that rank class. An unbounded
 anchor-precision coordinate is materially different from such a phase.
 
+**An incoming infinite cancellation of critical states.** The concurrent
+[partitioned-completion construction](collatz_partitioned_completion_20261004.md)
+supplies the exact family
+
+    n_t=27727075633746555+79062194724345216t,
+    h_t=25270565367447551+72057594037927936t, t>=0,
+    n_t --(1,2,1)-->J_t<--(1^32,2,19)-- h_t.
+
+Every source is27 mod96 and hence belongs to our critical set. Both source
+and child are3 mod4, so both K values equal1. The positive differences
+between the constants and between the periods prove `0<h_t<n_t`, hence
+`R(h_t)<R(n_t)` for the entire family. This is a concrete cancellation
+rule inside the residual problem. It still requires a child certificate
+or an induction covering every possible dependency. Our audit preserves
+the incoming periods; it makes no new claim about their maximality.
+
+The incoming whole-cell theorem says that, for any fixed forward/inverse
+depths R,S, the entire cell `n=-1 mod2^(R+1), n=0 mod3^S` has no smaller
+common-future child within those bounds. It targets ordinary integer
+descent. Permitting a larger ranked child does not contradict it: the
+explicit subsequent normalization has a length controlled by the child's
+unbounded K. Nor does the theorem exclude an unbounded-word controller.
+The two results explain why retaining precision, rather than merely
+enlarging a fixed-depth table, is a substantive change of representation.
+
 This connects to established termination research without importing a
 solution. Yolcu, Aaronson and Heule construct mixed binary/ternary rewriting
 systems equivalent to Collatz termination and use matrix interpretations
@@ -441,6 +514,11 @@ Each saved ranked family also includes all three exact coefficients of
 `E(n_t)-E(m_t)`. They are nonnegative, with a strict constant term or the
 specified strictly smaller K in the equality case. This is a directly
 checkable polynomial certificate for every parameter, beyond sampled replays.
+An independent symbolic replay checks each exact valuation on a whole
+affine family: for a word letter a, its numerator constant is2^a mod2^(a+1)
+and its numerator period is0 mod2^(a+1). It then divides both coefficients
+by2^a. This certifies the common future for every parameter, including the
+incoming critical family, without relying on a sample of heights.
 
 ## 10. Connection contracts and next decisive tests
 

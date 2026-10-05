@@ -5,6 +5,8 @@ classification. Frozen-source joins remain obligations unless a child is grounde
 """
 from collections import deque
 from fractions import Fraction
+from itertools import combinations
+from math import comb
 from pathlib import Path
 import json
 
@@ -217,6 +219,78 @@ def reflection_audit():
                 mod18_involution=[(h,(2-h) % 18) for h in (1,7,13)])
 
 
+def symbolic_word(base, period, word):
+    """Certify every nonnegative parameter, retaining the exact valuation guard."""
+    check(base > 0 and period > 0 and base % 2 == 1 and period % 2 == 0,
+          'positive odd affine family')
+    for a in word:
+        modulus = 2**(a+1)
+        check((3*base+1) % modulus == 2**a and 3*period % modulus == 0,
+              'all-height exact valuation guard')
+        base, period = (3*base+1)//2**a, 3*period//2**a
+    return base, period
+
+
+def incoming_critical_cancellation():
+    """Independently integrate the concurrent composed family, without enlarging it."""
+    N, P = 27727075633746555, 79062194724345216
+    H, Q = 25270565367447551, 72057594037927936
+    w, v = (1, 2, 1), (1,)*32+(2, 19)
+    J = symbolic_word(N, P, w)
+    check(J == symbolic_word(H, Q, v), 'incoming symbolic common future')
+    check(N % 96 == 27 and P % 96 == 0, 'entire incoming source family critical')
+    check(N % 4 == H % 4 == 3 and P % 4 == Q % 4 == 0,
+          'incoming source and child have root precision one')
+    check(0 < H < N and 0 < Q < P, 'all-height incoming integer decrease')
+    polynomial = (Fraction(3, 4)*((N-1)**2-(H-1)**2),
+                  Fraction(3, 2)*((N-1)*P-(H-1)*Q),
+                  Fraction(3, 4)*(P*P-Q*Q))
+    check(all(c > 0 and c.denominator == 1 for c in polynomial),
+          'incoming strict all-height energy polynomial')
+    for t in (0, 1, 17, 10**6):
+        n, m = N+P*t, H+Q*t
+        check(critical(n) and rank(m) < rank(n), 'incoming critical cancellation')
+        check(replay(n, w)[-1] == replay(m, v)[-1], 'incoming literal common future')
+    return dict(source_note='collatz_partitioned_completion_20261004.md',
+                n=N, P=P, m=H, Q=Q, w=w, v=v, critical_class_mod96=27,
+                source_k=1, child_k=1, symbolic_join=J,
+                energy_difference_coefficients=list(map(str, polynomial)))
+
+
+def cycle_gap_audit():
+    """Exhaust all ordered positive valuation words at the first three toll pairs."""
+    rows = []
+    expected = {1: {-5, -7}, 2: {-17, -25, -37, -55, -41, -61, -91}, 3: set()}
+    for k in (1, 2, 3):
+        r, A = ell(k), ell(k)+2*k
+        gap = 3**r-2**A
+        integral, count = [], 0
+        for cuts in combinations(range(1, A), r-1):
+            ends = (0,)+cuts+(A,)
+            word = tuple(ends[j+1]-ends[j] for j in range(r))
+            B, used = 0, 0
+            for a in word:
+                B, used = 3*B+2**used, used+a
+            rho = Fraction(-B, gap)
+            x = rho
+            for a in word:
+                x = (3*x+1)/2**a
+            check(x == rho, 'rational composition independently verifies word anchor')
+            count += 1
+            if rho.denominator == 1:
+                n = int(rho)
+                check(replay(n, word)[-1] == n, 'integral anchor has exact signed cycle')
+                integral.append(dict(anchor=n, word=word, carry=B))
+        check(count == comb(A-1, r-1), 'all ordered positive compositions enumerated')
+        check({row['anchor'] for row in integral} == expected[k], 'complete integral-anchor universe')
+        rows.append(dict(k=k, length=r, halving_cost=A, gap=gap,
+                         words=count, integral_anchors=integral))
+    check(46075 == 25*19*97, 'third gap factorization does not imply a cycle')
+    check(3**14-2**22 == 139*5*7*11**2,
+          'repeating the minus-seventeen word creates factors without a new anchor')
+    return rows
+
+
 def rank_lift(row):
     n, m, w, v = row['n'], row['m'], tuple(row['w']), tuple(row['v'])
     check(m != 1 and rank(m) < rank(n), 'nonterminal ranked child')
@@ -225,6 +299,8 @@ def rank_lift(row):
     P, Q = 2**(A+1)*3**max(s-r, 0), 2**(D+1)*3**max(r-s, 0)
     h = max(0, Kn+1-v2(P), Km+1-v2(Q))
     P, Q = P*2**h, Q*2**h
+    check(symbolic_word(n, P, w) == symbolic_word(m, Q, v),
+          'all-height symbolic common future')
     check(Q*Q*3**Km*4**Kn <= P*P*3**Kn*4**Km, 'weighted family slope')
     Wn, Wm = Fraction(3**Kn,4**Kn), Fraction(3**Km,4**Km)
     polynomial = (Wn*(n-1)**2-Wm*(m-1)**2,
@@ -332,7 +408,9 @@ def main():
     root = Path(__file__).resolve().parents[2]
     report = dict(status='PROVED scoped rank and branch laws; FINITE-EXACT; Collatz OPEN',
                   branch=branch_audit(), commutator_cases=address_commutator(), rank=rank_audit(),
-                  independent_inverse_cases=independent_inverse_audit(), reflection=reflection_audit())
+                  independent_inverse_cases=independent_inverse_audit(), reflection=reflection_audit(),
+                  incoming_critical_cancellation=incoming_critical_cancellation(),
+                  cycle_gaps=cycle_gap_audit())
     prime = dict(n=223, m=233, w=(1,1,1,1,3), v=(2,1,1,1,2,3,1,1,2,1))
     report['larger_prime_child'] = rank_lift(prime)
     check((report['larger_prime_child']['P'], report['larger_prime_child']['Q']) == (62208,65536),
@@ -366,7 +444,9 @@ def main():
     lines = ['BRANCH TOLL AND ROOT-CENTERED RANK: universal coverage OPEN',
              'DELAYS '+str([(k,ell(k)) for k in range(1,13)]),
              'RANK '+json.dumps(report['rank']),
-             'PRIME '+json.dumps(report['larger_prime_child'])]
+             'PRIME '+json.dumps(report['larger_prime_child']),
+             'INCOMING '+json.dumps(report['incoming_critical_cancellation']),
+             'CYCLE GAPS '+json.dumps(report['cycle_gaps'])]
     lines += ['BENCHMARK '+json.dumps(r) for r in benchmarks]
     lines += [f'PASS: {CHECKS} explicit checks.']
     output = '\n'.join(lines)+'\n'
