@@ -309,6 +309,35 @@ ANALOGY (typed, lost coordinate named): the tower of levels related by `q`-th ro
 truncations of a Frobenius/Cartier carrier do not decide an all-scale statement -- is the shape of H1's
 difficulty; nothing transfers as a method (the Collatz tower is on phases, not on power series).
 
+### 4f. The root-order law: the cold rate counts adic digits, not size (E5g, E5i, E5j; a pre-registered prediction)
+
+`collatz_fixed_frequency_unit_families_20261004.py` (six units each, `N = 1500`): `q = 5`: `0.5731 +- 0.0007`;
+`q = 7`: `0.5723 +- 0.0009` -- the i.i.d. level (`0.5723 +- 0.0008`), with `q = 3` (`0.5700 +- 0.0009`) the only
+prime clearly below and `q = 5` marginally above. `collatz_fixed_frequency_root_order_20261004.py` (four units,
+`N = 1500`): **`q = 9`: `0.3305 +- 0.0002`; `q = 15`: `0.3312, 0.3305` (first two units)** -- not the Parseval
+rates `0.333, 0.258`, not the incoherent `0.577`, but `(0.575)^2` for both. By CRT the frequency-`1` character of
+`Z/15^n` is the product of a `3`-adic character of conductor `3^n` (frequency `5^-n mod 3^n`) and a `5`-adic one
+(frequency `3^-n mod 5^n`), and for `q = 9` one level advances the `3`-adic conductor by two digits; so the
+reading is: **the typical cold rate is `c^(Omega(q))`, `c ~ 0.575`, with `Omega(q)` the number of prime factors
+of `q` with multiplicity -- one factor `0.575` per adic digit gained per level, whatever the prime**, i.e. the
+`p`-adic reductions of the `q`-adic Syracuse variable at distinct primes decorrelate at fixed frequencies (a
+`p`-versus-`p'` transversality under the common 2-adic driving), and digits of one prime decorrelate across
+depth. Pre-registered predictions for the runs in progress: `r(21) = 0.33`, `r(27) = 0.19`, `r(25) = 0.33`,
+`r(49) = 0.33`, `r(45) = 0.19`, `r(33) = 0.33`. (Results appended in 4g.) If confirmed, the Collatz value
+`c_3 = 0.5700` is a `0.5%` anomaly of the single-digit `3`-adic tower against `c = 0.5723-0.5749` elsewhere, and
+the `q`-independence found in E4 is the `Omega(q) = 1` case of this law.
+
+### 4e. The web around the cold rate (connections found by the niche search; all typed)
+
+| repo thread | the object there | the map to the cold-frequency problem | preserved | lost / sidecar | type |
+|---|---|---|---|---|---|
+| [THM-4263](../../01-canon/theorems/THM-4263-moving-multigraph-filtered-jet-and-finite-factor-density-transport.md) finite-factor density transport | condition (14): uniformly integrable fibre weights | the Syracuse reference density `rho_n` is the fibre weight of the factor `Z/3^n -> words`; (14) is `E[rho_n 1(rho_n > M)] -> 0` uniformly | density-one transport target -> source | pointwise statements (Collatz needs them); the tail law itself | EXACT reading; E2 SUPPORTS (14) via the `t^-2` tail |
+| [Q1 mirror](collatz_procgen_20260922_q1_mirror.md) section 5 | the endgame reads the low binary digits of `3^A u` along Beatty exponents | the window phases ARE the low binary digits of `3^-n = 3^(2^(M-2)-n) mod 2^M` | the digit object (powers of `3` in base `2`) | the Beatty exponent selection (Q1 needs specific `A`); here all `n` enter with geometric weights | EXACT identification of the object; the two statements differ in the quantifier |
+| Dupuy-Weirich (CITED there) | low `q`-adic digits of `p^n` equidistributed on average over `n` | E6: equidistribution of the digits of one `3^-n` to the noise floor, `M = 2^20` | averaged balance | the pointwise/along-the-recursion statement (a) needs more than balance: the weighted cross-level sums | CITED + FINITE-EXACT consistency |
+| [THM-3848](../../01-canon/theorems/THM-3848-rational-base-prefix-atom-tree-and-lonely-runner-separation.md) / the Mahler `3/2` frontier | `frac(xi (3/2)^n)`, the safe-prefix tree, loneliness `2/5` of the mixed-power speed row | the digits of `3^n mod 2^d` are `frac(3^n/2^d) 2^d`: the phase tower is Mahler's object read at depth `d` | the `3^n mod 2^d` arithmetic | Mahler fixes `xi` and varies `n`; here `n` and `d` both vary with geometric weights; no Z-number enters | ANALOGY (shared object, different predicate) |
+| [THM-4210](../../01-canon/theorems/THM-4210-rule30-lossless-dyadic-block-current-cartier-tree.md) Rule 30 Cartier tree | even/odd Cartier lift, Frobenius/Cartier carrier, all-scale admissibility | the level-to-level `q`-th-root law is a Cartier-type tower on phases | "bounded truncations do not decide an all-scale statement" | the power-series structure; nothing transfers as a method | ANALOGY |
+| [THM-485](../../01-canon/theorems/THM-485-two-temperatures-viswanath.md) Viswanath's constant | Lyapunov exponent of random Fibonacci products via the Stern-Brocot stationary measure; the golden-mean shift = Zeckendorf | the typical cold rate (`0.5723` i.i.d., `0.5700` Collatz) is a Lyapunov exponent of a random product of THM-4520's operators; the Collatz parity language is the golden-mean shift (THM-4528) | "a typical rate below the mean-square rate, computed from an invariant measure" | the product here acts on an infinite window, not on `R^2`; no stationary measure identified | DIRECTION: a Viswanath-type exact value for the i.i.d. rate would turn (a) of HYP-9176 into a computable constant |
+
 ## 6. Reproduction
 
 ```bash
