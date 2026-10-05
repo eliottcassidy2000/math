@@ -1,0 +1,11 @@
+FINITE AFFINE GROUPS AND GUARDED LIFTS; arbitrary supplied-source convergence OPEN
+Group universe: all 50 moduli5..151 coprime6; 321945 affine elements
+Full local-product mismatches (modulus, true slope size, local product): [(95, 36, 72), (119, 48, 96), (143, 60, 120), (145, 56, 112)]
+Mod95: H=<2>, order36; 3=2^31; G order3420, not6840; missing slope7
+Independent derived-series pair controls: 14264
+Compressed all-map lifts: 1542 ; independent modular readers: 7710
+Initial exponent BIT LENGTHS (modulus, hub, bits): [(5, 1, 33), (5, 5, 32), (5, 7, 30), (7, 1, 68), (7, 5, 67), (7, 7, 65), (11, 1, 176), (11, 5, 174), (11, 7, 175), (19, 1, 543), (19, 5, 543), (19, 7, 542)]
+Literal high-hub controls: 1032 D/E edges; 514 marked maps
+Repetition fuel: 2800 exact guards; 84 refuel certificates; 190 literal positivity edges
+Hostiles: E(1); formal +1 word has empty integer domain (100 controls); six bad certificates
+Scope: constructed ancestors of supplied hubs; hub-home proof remains a premise
