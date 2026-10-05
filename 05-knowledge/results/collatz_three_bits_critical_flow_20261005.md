@@ -33,8 +33,13 @@ Incoming commit `4afc2fcaeb26` supplies the exact measure comparison. Older
 [ternary Berggren work, B11–B13](ternary_berggren_20260925.md) supplies the
 actual source of 0,2,10,42. The [guard automaton](zeckendorf_guard_automaton_20261003.md)
 and [marked-unit construction](duck_zeckendorf_20260925.md) keep the different
-three-color conventions separate. No additional remote commits appeared at
-the mid-session fetch.
+three-color conventions separate. Incoming commit `e3b54e1376` supplies the
+[sibling-flow kernel](collatz_three_bit_sibling_flow_20261005.md),
+[neighbor macros](collatz_2_10_42_neighbour_macros_20261005.md), and
+[independent color lift](collatz_three_colour_lift_20261005.md). Section 9
+derives further consequences from that shared work; the overlapping entropy
+and rooted-ray calculations are independent recoveries, not distinct claims
+of priority.
 
 Use U(n)=oddpart(3n+1) on positive odd integers, ell(n)=bit_length(n), and
 V={3,5,7,...}. An edge reaching 1 is killed in every flow operator below.
@@ -531,7 +536,127 @@ remains an upper bound there. The unhandled target is the distribution of
 **anchor switches and residual falls**, after internal repeats have been
 summed exactly. No completeness of the list of negative cycles is assumed.
 
-## 9. What the enriched integer should retain next
+## 9. Incoming synthesis: turn code aliases into arithmetic coordinates
+
+The incoming sibling-flow note proves the particularly useful product law
+
+\[
+                  \mu(2^h t-1)=q(h)\nu(t).                 \tag{23}
+\]
+
+Our C1 says that a redundant description has law nu(n)q(A). Combining the
+two gives a **length-preserving bijection of descriptions**:
+
+\[
+ (D,n)\longmapsto Y=2^{D-\ell(n)+1}n-1,
+ \quad A=v_2(Y+1),\quad n=\operatorname{oddpart}(Y+1).
+                                                                    \tag{24}
+\]
+
+Here D>=ell(n); the inverse also recovers D=ell(n)+A−1. Both description
+weights are 2/4^D, and both code lengths are 2D−1. At fixed D, the gamma
+index (Y+1)/2 is obtained by moving the leading zeros of the D-bit odd n
+to its end. This permutes the 2^(D−1) descriptions bijectively onto all
+D-bit gamma indices.
+
+The alias is now an actual climb coordinate of the **new** integer Y:
+
+\[
+ U(2^A n-1)=2^{A-1}(3n)-1\quad(A>1),
+ \qquad U(2n-1)=\operatorname{oddpart}(3n-1).                 \tag{25}
+\]
+
+Thus redundancy can be converted into meaningful arithmetic memory by an
+explicit change of projection. It is not free fuel for the original integer
+n, whose value changed to Y. This is a concrete model for an enriched integer
+with an exact readout, rather than an analogy between two entropy formulas.
+
+The neighbor note identifies our n_h with a_k−1 at h=2k−1. It proves a
+paid, smaller-child common-future macro for a_k+1, and the expanding
+refuel word (2,1 repeated 2k−2 times,2) for a_k−1. Hence our ternary
+counterfamily (14) lies at k=3^s in its **minus-neighbor** family. The
+offset is the preserved coordinate separating the two behaviors.
+
+### A stronger small-observer obstruction at the critical boundary
+
+The incoming 9->7->11->17->13 example excludes strict discount weights
+depending only on height and climb depth. The critical criterion admits
+a stronger test because additional predecessors supply strict inequality.
+Consider the actual path
+
+\[
+                  107\to161\to121\to91.
+\]
+
+Both endpoints have the identical observer
+
+\[
+ (\ell(n),h(n),Q(n)\bmod2,\text{last Zeckendorf digit})
+                    =(7,2,(1,1),0).
+\]
+
+But 429 is another positive predecessor of 161. Any strictly positive
+flow satisfying Kv<=v must therefore obey
+
+\[
+ v(91)\ge v(121)\ge v(161)\ge v(107)+v(429)>v(107).           \tag{26}
+\]
+
+**C7.** No positive weight depending only on that observer can satisfy the
+critical incoming-flow inequalities, even without summability or uniform
+discount. In particular, adding the full three-bit golden reader to height
+and climb depth still does not suffice. This does not rule out a finite
+observer accompanied by further unbounded memory.
+
+The ternary depths separate the endpoints: v3(108)=3 while v3(92)=0.
+The exact word is (1,2,2), a legitimate source-relative descent. Thus a
+coarse measure failing here is not evidence that the actual paid route
+fails. It is a mismatch between the measure's equal-value fibres and the
+branching flow it is being asked to support.
+
+### Remove the artificial discount in the sibling-base compiler
+
+Incoming work uniquely writes n=S^j(b), S(n)=4n+1, where b is a base with
+v2(3b+1) in {1,2}. Fix 0<r<1 and assign f(S^j b)=r^j g(b).
+Each complete inverse fibre sums to g(b)/(1−r). If
+U(b)=S^{k(b)}G(b), the critical inequality is exactly
+
+\[
+       g(b)\le(1-r)r^{k(b)}g(G(b)),\qquad b\ne1.            \tag{27}
+\]
+
+This follows directly from the target row, so it remains valid at rho=1,
+outside the strict-discount range originally stated in the incoming note.
+The factor 1−r still gives strict progress along base dependencies. A
+positive summable g on **every** base would solve the target by C3; its
+existence is still OPEN. Conversely, under convergence, the incoming
+path-contribution construction also works with these factors, proving the
+same existential equivalence without supplying the unknown paths.
+
+For the supplied finite 88-base kernel, the critical equality weights are
+especially simple. Put r=1/16, root weight g(1)=1, and let L(b) be the
+number of base edges to the root and K(b) the sum of their sibling depths:
+
+\[
+                g(b)=(15/16)^{L(b)}16^{-K(b)}.               \tag{28}
+\]
+
+We independently checked every literal base equation, the entire rooted
+dependency graph, and equality in (27). This builds a finite-mass flow on
+the **same** certified infinite sibling union as the incoming compiler;
+it does not certify new bases. The no-discount formulation removes one
+unnecessary exponential penalty from the attempted global extension.
+
+[Integration program](../../04-computation/experiments/collatz_three_bits_incoming_bridge_20261005.py)
+and [exact output](collatz_three_bits_incoming_bridge_20261005.json) retain
+the source-kernel hash, all rational critical weights, the code bijection,
+and the observer-plateau hostile. The independent color-lift package further
+shows why aggregate XOR charge loses order: one unrestricted new four-state
+symbol makes it uniform independently of the previous finite source guard.
+That is compatible with, and complementary to, the deterministic obstruction
+(26); neither identifies random decorations with the owner's marked colors.
+
+## 10. What the enriched integer should retain next
 
 A useful research state is
 
@@ -578,7 +703,7 @@ unpaid refuel distribution. The new exact bridge is q across coding,
 climb statistics, and word likelihood; the new constructive object is the
 finite-mass ascent closure. Universal coverage remains the open target.
 
-## 10. Reproduction and scope
+## 11. Reproduction and scope
 
 Run from the repository root:
 
@@ -597,3 +722,5 @@ carry, and the overdraft pseudo-proof. The JSON includes the source hash.
 No finite check is used as the proof of an unbounded statement above.
 The final run contains **899,089 exact checks**; normal and optimized runs
 produce identical output.
+The incoming-integration program adds **37,667 exact checks**, including a
+second validation of the supplied 88-base kernel at the critical boundary.
