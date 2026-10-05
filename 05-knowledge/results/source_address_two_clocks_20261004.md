@@ -49,6 +49,11 @@ old proof. E5r's typical-rate separation between q=3 and q=5 is OBSERVED;
 no asymptotic Lyapunov exponent or deterministic seed bound is proved by
 those finite runs. It prompted the exact linear-versus-product test in
 section 3a below.
+The subsequent `846ef28d0c` extension to 24 seeds strengthens that finite
+observation without changing its quantifiers. The `fc73eb5c19` finite-seed
+package supplies actual rooted recursive families; the companion carry
+note records their exact source-matching interface. Statistical phase
+estimates and source-level family entry remain separate obligations.
 
 The reusable move is: **change the grading of an exact expansion, retain
 both truncations, and compute their compatibility before exchanging limits.**

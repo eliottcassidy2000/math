@@ -67,6 +67,11 @@ including their corrections, rather than treating commit titles as evidence:
   explanation is withdrawn and is not a dependency here. The new two-clock
   continuation proves a unitary multiplier transfer that fails to preserve
   products, identifying the coordinate that quadratic moments cannot see.
+- Through `fc73eb5c19`: the finite-seed kernel, receipt compiler, recursive
+  refuel tree, and bootstrap boundary, with their four programs; also the
+  24-seed E5r extension. The family compiler is a direct consumer of our
+  recoverable words and native guards. The source-matching test below
+  keeps its universal family theorem distinct from a whole-cylinder claim.
 
 The incoming coverage improvements belong to those packages; this note
 does not add their densities again. We use the existing META-PATTERNS
@@ -551,6 +556,46 @@ new guard, and cannot be promoted to a conjugacy of integer Collatz maps.
 Likewise the cost 11 of forbidden LB=4+7 in the incoming word generating
 function does not determine the eta curve's level 11. The coordinate
 map, not the repeated integer, is the established connection.
+
+### From a recoverable word to a grounded family, then back to a supplied source
+
+The incoming [finite-seed compiler](finite_seed_receipt_compiler_20261005.md)
+is now a concrete consumer of this carrier. For a nonempty funded word w
+that avoids LB and ends non-L, and a fixed odd seed s prime to 3, it proves
+
+    a_t=a0+2P*t,
+    n_t=(Q*s*2^a_t-Q-3B)/(3P),   t>=0,
+
+with an actual receipt to s. One supplied certificate for s grounds every
+member. Therefore (exact translation beta, s, t, seed certificate) is a
+proof-bearing integer representation: decode beta to recover w,P,Q,B;
+verify the program and seed; reconstruct the source and its receipt.
+Different descriptors may represent the same integer; no global unique
+normal form is asserted.
+
+There is a useful **exact inverse membership test for each fixed family**.
+For a supplied positive odd n, form Z=3P*n+Q+3B. It belongs iff
+
+    Z>0, Q*s divides Z, Z/(Q*s)=2^a,
+    a>=a0, and a=a0 modulo 2P.
+
+Necessity is substitution in the family formula. Sufficiency recovers the
+unique nonnegative t=(a-a0)/(2P), so the same formula reconstructs the
+supplied n exactly. The power-of-two test and integer congruence terminate;
+this is not an orbit search. For the incoming LG/seed7 family, test whether
+(243n+287)/896 is exactly 2^(46+162t). Its first member is accepted; adding
+256 preserves the native L residue but makes that quotient nonintegral,
+since the increment is 486/7. Thus address matching retains source identity.
+
+The [refuel tree](finite_seed_refuel_tree_20261005.md) supplies a different
+all-depth family with a decreasing-parent decoder and the sole base3.
+The [kernel](finite_seed_kernel_20261005.md) counts constant assumptions in
+a fixed checked graph, and the [bootstrap boundary](finite_seed_bootstrap_boundary_20261005.md)
+shows why completing an entire odd dyadic tail would already imply the
+whole Collatz assertion. None of those facts identifies each source with
+one of the constructed members. The next coverage task is now precise:
+find a complete, well-founded choice of these family-matching tests or
+additional checked joins for inputs that all existing tests reject.
 
 ## 7. The resulting web and next obligations
 
