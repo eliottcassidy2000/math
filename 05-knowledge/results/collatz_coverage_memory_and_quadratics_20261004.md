@@ -163,6 +163,16 @@ checkpoint positions are not exhausted by this comparison. The unbounded
 repetition parameter explains why these controllers lie outside the
 bounded-depth obstruction below.
 
+The [four-slot continuation](collatz_four_slot_compression_20261004.md)
+then uses the p^2qr multiplicity profile to retain and bound the ordered
+affine carry. It pays1213 on the new disjoint cell187 mod256, supplying
+the entire exponent class27 mod64;1123 adds the disjoint cell7 mod256
+and extends to a paid all-depth1^h2a bank with exact-six overlaps removed.
+This raises the specified exponent
+coverage from30.2206 to42.7206 percent, with residual odd-relative density
+0.109660842 for the named binary16/strengthened-origin comparison.
+The wider all-parameter minimum-exit statement remains open.
+
 The complete per-checkpoint search has a finite height bound. The number
 of checkpoints needed for an arbitrary source still has no proved bound.
 The small hostile inputs remain useful: the specified checkpoint grammar

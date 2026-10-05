@@ -1,0 +1,13 @@
+PROVED scoped bridges and new paid family; universal Collatz OPEN
+PROFILE: 12 ideals / 16 raw subsets; (F,S,U)=(10,7,3); width defect=2q-2.
+CARRY: exact adjacent-swap law; same clocks retain carries925 and1085.
+PAID: all six initial-one orderings of {1,1,2,a}, every a>=3 (proved in note).
+NEW CELL: 187+256t ->119+162t; exponents27+64t; added relative exponent density1/8.
+SECOND CELL: 7+256t ->5+162t; two disjoint cells add odd-relative binary density1/64.
+ALL-DEPTH PERMUTATION BANK: density 0.0190331589941956, exact-six holes removed.
+TOTAL BINARY INCREMENT: 0.0268456589941956
+COMBINED EXPONENT DOMAIN: 0.4272061558342825
+NAMED BANK RESIDUAL: 0.1096608418065868
+COMPLETED AT EVERY DEPTH: a=3^(h+1)(2t+1)-1, n=2^(h+1)(2^(a+1)+1)/3^(h+2)-1; word1^h2a ->1.
+FINITE MINIMUM-EXIT PROBE: {"cases": 16384, "least_source_payment_failures": [], "q_range": [1, 128], "r_range": [1, 128], "status": "FINITE-EXACT; all-parameter minimum-exit claim OPEN"}
+PASS: 267656 explicit checks.

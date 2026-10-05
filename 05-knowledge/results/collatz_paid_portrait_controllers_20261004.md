@@ -9,6 +9,13 @@ affine group, prime-adic repeat fuel and anchor-switch boundary.
 coverage and complete negative-basin classification. No literature
 priority claim is made.
 
+**Continuation:** [four-slot compression](collatz_four_slot_compression_20261004.md)
+sharpens the q=r=1 exit to a>=3 by an exact carry bound. Its new187 mod256
+cell is disjoint from the banks frozen here and adds the exponent class
+27 mod64. The enlarged specified exponent coverage is42.7206 percent.
+The30.2206 percent below remains the correct subtotal for this note's
+original bank and saved computation.
+
 The main gain is an infinite controller family based on repeated words
 `1^h 2`. Its negative rational anchor records exactly how many repetitions
 are possible; a checked exit then pays the original integer and therefore
