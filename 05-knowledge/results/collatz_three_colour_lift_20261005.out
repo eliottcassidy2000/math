@@ -1,0 +1,61 @@
+{
+  "J_interface_hostile": {
+    "actual_join_controls": 32,
+    "child": 759,
+    "child_likelihood": "3/2",
+    "join": 1139,
+    "relative_likelihood": "243/256",
+    "source": 799,
+    "source_likelihood": "729/512"
+  },
+  "all_four_state_words_through_length6": 5461,
+  "every_binary_split_through_length8": 3076,
+  "existing_paid_guard_bank_horizon10": {
+    "S": 19197,
+    "T": 1,
+    "aggregate_charge_lift_counts": [
+      4800,
+      4799,
+      4799,
+      4799
+    ],
+    "letters": [
+      "H",
+      "A",
+      "B",
+      "L",
+      "J"
+    ],
+    "literal_affine_payment_controls": 160,
+    "odd_source_mass": "27/1024",
+    "tilted_source_mass": "19197/1048576"
+  },
+  "nonzero_colour_tuple_universe": 9841,
+  "owner_representation_fibre_sizes_n1_to_100": {
+    "2": 38,
+    "3": 62
+  },
+  "same_guard_bank_horizon11": {
+    "S": 76788,
+    "T": 0,
+    "aggregate_charge_lift_counts": [
+      19197,
+      19197,
+      19197,
+      19197
+    ],
+    "tilted_source_mass_unchanged": "19197/1048576"
+  },
+  "source_prefix_controls_all_odds_at_horizons1_to_10": 2046,
+  "three_bit_fibre_sizes_lex_order": [
+    1,
+    3,
+    3,
+    9,
+    3,
+    9,
+    9,
+    27
+  ]
+}
+PASS: exact colour lift and guarded comparisons; no new all-source coverage.

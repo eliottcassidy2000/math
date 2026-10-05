@@ -1,0 +1,11 @@
+PROVED: a_k=2(4^k-1)/3; neighbour/root formula controls k=1..128
+FINITE-EXACT: neighbour membership on 4096 positive odd sources below8192, both offsets
+PROVED: plus macro pays; k>=3 first descent exactly3; smaller common-future dependency3^(k-1)
+PROVED: minus k>=2 macro grows and restores h=1; k=1 is ROOT with empty word
+PROVED: both climb-register laws3/4^k; minimum representative conditionals2/3 and8/9
+PROVED: rooted inverse ray gamma mass19/30, mixture mass32/45; exact finite tails checked
+PROVED: every positive h-only reweighting of either baseline fails strict all-edge discounted flow
+FINITE-EXACT: supplied-child receipt transport k=1..16; resulting odd edges=590
+FINITE-EXACT: malformed/root/valuation hostiles=14
+explicit checks=11254
+OPEN: source coverage outside the stated guards; no universal convergence or new basin claim
