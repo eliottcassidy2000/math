@@ -265,6 +265,18 @@ random level; the `q = 5, 7` unit families are run in `collatz_fixed_frequency_u
 Mechanism OPEN; the cleanest next statement would be the typical rate of the `q`-th-root random model as a
 function of `q`.
 
+**The adjacent-depth identity (PROVED, one line) and a failed naive prediction.** Along one level the phases
+obey the odometer law `theta_(d-1) = 2 theta_d (mod 1)`, so for `q = 2^j +- 1` the `q`-th-root law reads
+`omega_n(d) = omega_(n+1)(d)^q = omega_(n+1)(d-j) omega_(n+1)(d)^(+-1)`: the level-`n` phase at depth `d` is a
+product of two level-`(n+1)` phases at depths `d` and `d-j`. **`q = 3` (`j = 1`) is the only root order for
+which the two depths are adjacent**, i.e. for which the cross-level law pairs the two terms of the recursion
+with the largest weights (`2^-1` and `2^-2`); `q = 5` pairs depths two apart, `q = 7, 9` three apart, `q = 15, 17`
+four apart, and `q = 11, 13` are sums of three phases. This is a precise sense in which the Collatz tower has
+the strongest cross-level coupling, and it would predict an excess decreasing like `2^-j` (`q = 5`: half of
+`q = 3`'s). The data refute the naive form: `q = 5` sits `0.0008` ABOVE the i.i.d. level (six units,
+`0.5731 +- 0.0007`), not `0.001` below. So the identity locates where the coupling is strongest but does not by
+itself give the sign or size of the effect; typed DIRECTION.
+
 ## 5. E2: `L^p` moments, tails, and THM-4263's condition (14)
 
 Script `collatz_syracuse_law_lp_moments_20261004.py` (`n <= 14`, `A = 40`; the dense law by the exact recursion;
