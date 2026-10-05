@@ -18,10 +18,14 @@ density `rho_n = (2/3) 3^n mu_n`, its atoms and `E[rho_n^2]`), the S20 five-mirr
 [THM-4263](../../01-canon/theorems/THM-4263-moving-multigraph-filtered-jet-and-finite-factor-density-transport.md)
 (finite-factor density transport iff uniformly integrable fibre weights, condition (14)).
 
-**Status: FINITE-EXACT / VERIFIED (every number below is from the scripts named in section 6, each with a
-direct-enumeration control at small levels); PROVED (two identities: the phase sequence of the recursion is the
-2-adic digit string of `-u q^-n`; the Cauchy-Schwarz form of the incoherent rate); OBSERVED (the rates);
+**Status: FINITE-EXACT / VERIFIED (every number below is from a script named in the section that reports it
+(`collatz_fixed_frequency_*`, `collatz_phase_tower_*`, `collatz_syracuse_law_*`, `collatz_fourier_mass_*`,
+`collatz_digit_phase_*`), each with a direct-enumeration control at small levels); PROVED (the phase sequence of
+the recursion is the 2-adic digit string of `-u q^-n`; the `q`-th-root, odometer and Pascal-tower identities;
+the exact second moment of the uniform-start tower; the fourth-moment inequality); OBSERVED (the rates);
 REFUTED (the real-coordinate concentration hypothesis of E3); SUPPORTED (P7, uniform integrability);
+TWICE AUDITED (the second blind audit, `collatz_fourier_experiments_20261004_audit.md`: SOUND WITH CORRECTIONS,
+seventeen corrections applied in place, two of them logged in MISTAKES);
 DIRECTION (the digit reframing of H1). H1 remains OPEN; nothing here is a Collatz step.**
 
 ---
@@ -40,7 +44,7 @@ DIRECTION (the digit reframing of H1). H1 remains OPEN; nothing here is a Collat
    Parseval rates are `0.5774, 0.4472, 0.3780, 0.3015`. So the cold-frequency rate is not `q`'s Parseval scale;
    it is the incoherent rate of the 2-adic recursion, `(sum_a 4^-a)^(1/2) = 1/sqrt3 = 0.57735`, which for `q = 3`
    happens to coincide with the Parseval rate. For `q = 5, 7, 11` the fixed-frequency coefficients are
-   astronomically ABOVE the Parseval scale (`q^(n/2)|mu_hat_n(1)| = 10^58, 10^99, 10^152` at `n = 600`): the
+   astronomically ABOVE the Parseval scale (`q^(n/2)|mu_hat_n(1)| ~ 10^63, 10^108, 10^166` at `n = 600`): the
    `q`-adic law of a drifting map equidistributes at fixed frequencies only at the 2-adic rate `0.57`.
 3. **The identity behind it (PROVED, one line).** `omega_n(-a) = e((u 2^-a mod q^n)/q^n) = e(0.b_a b_(a-1) ... b_1
    + u 2^-a q^-n)`, where `b_i` is the `i`-th binary digit of the 2-adic number `-u q^-n`. So `mu_hat_n(u) =
@@ -51,16 +55,16 @@ DIRECTION (the digit reframing of H1). H1 remains OPEN; nothing here is a Collat
    `q`-universality of the rate says the mechanism uses nothing about `3` beyond oddness.
 4. **E5 (the random-digit control; section 4).** Replacing the digit strings by i.i.d. bits, or by the digits of
    a random odd multiplier, gives the rates recorded in section 4: this decides whether mac-mini's measured deficit
-   (`0.569` against `0.5774`, i.e. `3^(n/2)|mu_hat_n(1)|` falling from `9 10^-2` to `3 10^-15` over `n =
+   (`0.569` against `0.5774`, i.e. `3^(n/2)|mu_hat_n(1)|` falling from `8 10^-3` at `n = 200` to `4 10^-17` at `2500` (audit C11; HYP-9166's block medians are `9 10^-2` and `3 10^-15`) over `n =
    200..2500`) is arithmetic or a property of the recursion.
 5. **E3 (REFUTED hypothesis).** The Fourier mass at level `n <= 13`, in the real coordinate `theta = t/3^n`, is
-   uniform to `+-5%` in 64 bins; the mass within a quarter-spacing of the dyadic rationals `j/2^m` equals its
+   uniform to `+-4.4%` in 64 bins at `n = 13` (`+-8-9%` at `n = 11, 12`; audit C8); the mass within a quarter-spacing of the dyadic rationals `j/2^m` equals its
    Haar expectation to `1%` for `m = 3..8`; the fixed units `|t| <= 100, 1000, 10000` carry their Haar share
    (ratios `0.94-1.46`). The resonant maxima `+-2^s` are isolated spikes (`|mu_hat| = 0.022-0.026` at
    `n = 12, 13`, `30x` the rms) carrying `0.1%` of the mass each. So "the law has structure at the real scale
    `1/64`" is false; the powers of two are special as 2-adically simple frequencies, not as real positions.
 6. **E2 (P7 supported; THM-4263's condition named).** `E[rho_n^2]` grows by `0.3077 ... 0.3135` per level
-   (`n = 2..14`, slowly rising), `E[rho_n^2.5]` grows geometrically (`x1.17` per level), `E[rho_n^1.5]` has
+   (`n = 3..14`, slowly rising but not monotone; `+0.3175` at `n = 2`; audit C17), `E[rho_n^2.5]` grows geometrically (`x1.17` per level), `E[rho_n^1.5]` has
    increments decaying like `n^-1.1` (`0.0282` at `n = 14`), `E[rho_n^1.9]` increments decay like `0.98^n`; the
    tails `P(rho_n > t)` are stable in `n` at fixed `t` with local exponents `1.85, 2.05, 2.35, 2.89` at
    `t = 4, 8, 16, 32` (level 14), i.e. `P(rho > t) ~ c t^-2` with `c ~ 0.5` in the bulk. The maximal atom is
@@ -79,9 +83,10 @@ DIRECTION (the digit reframing of H1). H1 remains OPEN; nothing here is a Collat
 Script `collatz_fixed_frequency_rates_20261004.py` (`N = 800`, `A = 40`; output `.out`). The recursion
 `f_n(k) = sum_(a=1)^A 2^-a omega^(u)_n(k-a) f_(n-1)(k-a)` on the window `[-(N-n)A, 0]`, rescaled by `3^(n/2)`,
 with `omega^(u)_n(j) = e((u 2^j mod 3^n)/3^n)`; `mu_hat_n(u) = f_n(0)`. Control: at `n = 3, 5, 7` the recursion
-agrees with a direct enumeration of the law (valuations `<= 30`) to ten digits for `u = 1, 5, 7`.
+agrees with a direct enumeration of the law (valuations `<= 30`) to nine significant digits for `u = 1, 5, 7`
+(the two truncations differ by `2 10^-9` relative; audit C6).
 
-| `u` | 200-block medians of `3^(n/2)|mu_hat_n(u)|` (`n = 1..800`) | rate `200..400` | `400..600` | `600..800` | `200..800` | local maxima `>= 1` (`n`, value) |
+| `u` | 200-block medians of `3^(n/2)|mu_hat_n(u)|` (`n = 1..800`) | rate `200..400` | `400..600` | `600..800` | `200..800` | some local maxima `>= 1` (`n`, value; the lists are a selection, not complete -- audit C7) |
 |---|---|---|---|---|---|---|
 | 1 | `1.5e-1, 7.4e-3, 9.5e-4, 4.4e-6` | 0.5741 | 0.5802 | 0.5534 | **0.5680** | (127, 3.88), (129, 7.22), (131, 10.38), (135, 2.62) |
 | 5 | `1.0e-1, 3.5e-3, 3.5e-4, 2.0e-5` | 0.5629 | 0.5698 | 0.5663 | **0.5695** | (68, 2.69) |
@@ -105,12 +110,15 @@ rescaled by `q^(n/2)`. Control: direct enumeration at `n = 4, 5` for `q = 3, 5, 
 |---|---|---|---|---|---|---|---|
 | 3 | 0.5774 | 1 | 0.5656 | 0.5720 | 0.5721 | 0.991 | `~10^-3` |
 | 3 | 0.5774 | 5 | 0.5677 | 0.5713 | 0.5698 | 0.987 | `~10^-4` |
-| 5 | 0.4472 | 1 | 0.5768 | 0.5765 | 0.5735 | 1.282 | `2 10^58` |
-| 5 | 0.4472 | 2 | 0.5764 | 0.5765 | 0.5738 | 1.283 | `2 10^58` |
-| 7 | 0.3780 | 1 | 0.5715 | 0.5743 | 0.5716 | 1.512 | `3 10^99` |
-| 7 | 0.3780 | 5 | 0.5712 | 0.5665 | 0.5718 | 1.513 | `8 10^97` |
-| 11 | 0.3015 | 1 | 0.5685 | 0.5739 | 0.5720 | 1.897 | `5 10^152` |
-| 11 | 0.3015 | 5 | 0.5694 | 0.5772 | 0.5734 | 1.902 | `3 10^152` |
+| 5 | 0.4472 | 1 | 0.5768 | 0.5765 | 0.5735 | 1.282 | `10^63` (block median `500..600`: `2 10^58`) |
+| 5 | 0.4472 | 2 | 0.5764 | 0.5765 | 0.5738 | 1.283 | `10^63` |
+| 7 | 0.3780 | 1 | 0.5715 | 0.5743 | 0.5716 | 1.512 | `10^108` (block median `3 10^99`) |
+| 7 | 0.3780 | 5 | 0.5712 | 0.5665 | 0.5718 | 1.513 | `10^108` |
+| 11 | 0.3015 | 1 | 0.5685 | 0.5739 | 0.5720 | 1.897 | `10^166` (block median `5 10^152`) |
+| 11 | 0.3015 | 5 | 0.5694 | 0.5772 | 0.5734 | 1.902 | `10^166` |
+
+(The last column's endpoint values were corrected by the audit, C2: the first version quoted the `500..600`
+block medians as values at `n = 600`.)
 
 **Reading.** The rate is a property of the 2-adic side (the geometric weights `2^-a` and the phases, which are
 the binary digits of `-u q^-n`), not of `q`. Under independent random phases the recursion gives
@@ -133,7 +141,8 @@ and by the S13 directions note; it is now one explicit sequence.
 Script `collatz_fourier_mass_real_coordinate_20261004.py` (`n <= 13`, full FFT of the dense law). The
 hypothesis tested: the Parseval mass at level `n` is carried by frequencies `t` whose real position
 `theta = t/3^n` is near a dyadic rational of small denominator (the resonant maxima sit at `2^s/3^n ~ 2^-6`).
-Result: the 64-bin mass distribution over `theta` is flat (top bins `0.0163-0.0169` against uniform `0.0156`);
+Result: the 64-bin mass distribution over `theta` is flat (top bins `0.0163-0.0171` against uniform `0.0156`,
+i.e. within `4.4%` at `n = 13` and `9%` at `n = 11`);
 the mass within a quarter spacing of `{j/2^m}` is `0.496-0.506` for `m = 3..8` against the uniform `0.500`; the
 fixed units `|t| <= 10^2, 10^3, 10^4` carry `0.94-1.46` of their Haar share at `n = 11..13`. The top coefficients
 at `n = 13` are `+-2^16 (0.0221), +-2^15 (0.0218), +-2^17 (0.0188), +-2^14 (0.0185)` (S20's resonant family, with
@@ -187,7 +196,7 @@ in this one functional.
 the Jensen gap of section 4b. (ii) `q = 7, 11, 13` sit at the random level; **the "`3 mod 8`" sub-hypothesis
 (`11` like `3`, `13` like `5`) is REFUTED.** (iii) `q = 3` is `0.0037` below the i.i.d. mean (`4` standard
 deviations of the seed scatter; `7` of the random-multiplier scatter) on `300..1500`, and `0.0033` below on
-`750..1500` (`2.2` and `3.4` sd); the six fixed units `u = 1, 5, 7, 11, 13, 17` of `q = 3` rerun to `N = 1500`
+`750..1500` (`3.0` sd of the i.i.d. scatter; audit C9); the six fixed units `u = 1, 5, 7, 11, 13, 17` of `q = 3` rerun to `N = 1500`
 (`collatz_fixed_frequency_rates_20261004.log`; the `N = 800` run kept as `_N800`) give `0.5691, 0.5699, 0.5692,
 0.5712, 0.5709, 0.5697` on `200..1500`: mean **`0.5700 +- 0.0009`** against the twelve i.i.d. runs' `0.5723 +-
 0.0008` -- a difference of `0.0023`, five standard errors: **the digits of `3^-n` produce a typical decay about
@@ -313,7 +322,7 @@ variance and the highest rate), so the `q = 3` excess is not a per-level fluctua
 
 **Root-order reading.** The random models differ only in how consecutive levels are coupled: unrelated
 (i.i.d. digits, `0.5723 +- 0.0008`), coupled by a `Q`-th root with `Q ~ 2^40` (`0.5728 +- 0.0005`), coupled by a
-cube root with a random start (the `u`-family of `q = 3`, `0.5700 +- 0.0009`). The `q = 5, 7` families and the
+cube root with an integer start (the `u`-family of `q = 3`, `0.5700 +- 0.0009`). The `q = 5, 7` families and the
 composite and prime-power root orders (section 4f) all sit at `0.5725 +- 0.0007`: the typical rate does not
 depend on the root order at all, and `q = 3` is the single exception.
 ANALOGY (typed, lost coordinate named): the tower of levels related by `q`-th roots is a Cartier-type tower
@@ -373,7 +382,8 @@ before the control line was read.
 | C: a genuine string of `-u_n 3^-n` at every level, with a fresh random unit `u_n` per level | `0.5725, 0.5735, 0.5715` | `0.5725` |
 
 **Reading.** (A) The excess is a steady-state property of the high levels (it survives replacing the first 20
-or 100 levels, where the phase strings are periodic inside the window, by random digits). (B) It disappears
+or 100 levels -- the phase strings are periodic inside the `60000`-deep window only for `n <= 10` (period
+`2 3^(n-1)`), audit C10 -- by random digits). (B) It disappears
 when the high levels are random. (C) **It disappears when every level is a genuine `3^-n` digit string but the
 unit changes from level to level** -- i.e. when consecutive levels are no longer related by the cube-root law
 `e(theta_(n+1,d))^3 = e(theta_(n,d))` of section 4c. So the Collatz-specific `0.4%` per level extra cancellation
@@ -459,14 +469,20 @@ identity. By (iii) the phase of a path `a = (a_1, ..., a_n)` (valuations, depth 
 **Theorem (second moment; PROVED).** `E_R |f_n(0)|^2 = sum_(a,b) 2^-|a|-|b| 1[Phi_q(a) = Phi_q(b)] = sum_a 4^-|a| =
 3^-n` exactly, for every odd `q` and every `n`, for `R` uniform over all residues and also over the odd ones.
 *Proof.* Averaging `e(R Delta)` over `R` gives `1[Delta in Z]` (over odd `R`: also `-1` when `Delta = 1/2 mod 1`).
-`Phi_q` is injective on paths: at the first index `j` where two paths differ, `Phi_q(a) - Phi_q(b) =
-q^(n-j)(2^-D_j(a) - 2^-D_j(b)) + (terms of larger depth cancel exactly since the paths agree beyond j)` has
-exact 2-adic denominator `2^max(D_j(a), D_j(b))` (`q` odd), hence is not an integer, and equals `1/2` only if that
-maximum is `1`, impossible when the two depths differ. So only `a = b` survives. ∎ Checked exactly for `n <= 5`
+`Phi_q` is injective on paths. Let `a != b` and let `i*` be the least index at which the depths differ,
+`D_(i*)(a) != D_(i*)(b)` (depths agree for `i < i*`, so those terms cancel; note that the valuations may differ at
+indices beyond `i*` while the depths still agree there -- the first version of this proof wrongly used the first
+differing valuation, audit C1). Then `Phi_q(a) - Phi_q(b) = sum_(i >= i*) q^(n-i)(2^-D_i(a) - 2^-D_i(b))`, whose
+`i = i*` term is `(odd)/2^M` with `M = max(D_(i*)(a), D_(i*)(b))`, while every later term has both depths
+strictly smaller than `D_(i*)` on its own path, hence denominator `< 2^M`: the sum has exact denominator `2^M >=
+2^2` (two different depths `>= 1` have maximum `>= 2`), so it is neither an integer nor `1/2 mod 1`. So only
+`a = b` survives. ∎ Checked exactly for `n <= 5`
 (`collatz_phase_tower_second_moment_20261004.py`: `248832` paths, `248832` distinct values; the Monte-Carlo over
-random starts, all residues and odd residues, agrees within its error). **So the random Collatz tower and the
-i.i.d. model have identical second moments at every level; the `q = 3` excess of the typical rate is not a
-mean-square anticorrelation** (this settles 4h: E5l's "ensemble rms" readings were estimator bias).
+random starts, all residues and odd residues, agrees within its error). **So the uniform-start Collatz tower and
+the i.i.d. model have identical second moments at every level.** This is PROVED for uniform starts only; for the
+Collatz family proper (integer units, whose deep digits are arithmetic, 4l) the mean square is OBSERVED at
+`0.6-0.7` of the incoherent value to `n = 40` (audit C4), and E5l's sixteen-member "ensemble rms" readings (4h)
+were estimator bias.
 
 **Proposition (fourth moment; PROVED inequality, FINITE-EXACT values).** `E_R |f_n(0)|^4 = sum over quadruples
 w_a w_b w_c w_d 1[Phi_q(a) + Phi_q(b) = Phi_q(c) + Phi_q(d) mod 1]` (the weighted additive energy of the path
@@ -488,48 +504,58 @@ digit string gives all `q`-towers the same second moment as random digits and ex
 which is the statistical form of the ridges. At `n <= 4` the heavier tail is the same for `q = 3` and `q >= 5`;
 the `q`-dependence appears at larger `n` with arithmetic (integer) starts, section 4l.
 
-### 4l. Integer starts are not uniform starts: the Collatz tower's tails at `n = 10..40` (E5q) and the
-two-hundred-member ensembles (E5n)
+### 4l. Integer starts are not uniform starts: the Collatz family's moments at `n = 10..40` (E5q, corrected) and the two-hundred-member ensembles (E5n)
 
-**E5q** (`collatz_phase_tower_kurtosis_mc_20261004.py`: `2000` random odd `40`-bit starts `u`, the recursion to
-`N = 40`, `K_n = 9^n E|f_n(0)|^4`; note that a `40`-bit `u` is uniform only in its first `40` digits -- the deeper
-digits of `-u q^-n`, which the window reads to depth `1640`, are arithmetic, so this is the real Collatz
-family, not the uniform-start tower of 4k):
+**E5q** (`collatz_phase_tower_kurtosis_mc_20261004.py`: `2000` random odd `40`-bit starts `u` **prime to `q`**,
+the recursion to `N = 40`, `K_n = 9^n E|f_n(0)|^4` (a scaled fourth moment); a `40`-bit `u` is uniform only in
+its first `40` digits -- the deeper digits of `-u q^-n`, which the window reads to depth `1640`, are
+arithmetic, so this is the Collatz family proper, not the uniform-start tower of 4k). **The first version of
+this table sampled all odd `u`, multiples of `q` included; a multiple `q^j u'` is a non-primitive frequency with
+`|mu_hat_n(q^j u')| = |mu_hat_(n-j)(u')|` (projectivity of the law), i.e. a value `3^(j/2)` larger in the rescaled
+units with probability `q^-j`, which inflated the moments (`3^n E|f|^2 ~ 4`, `K_n ~ 10^3` for `q = 3`) and was
+read as "a kurtosis `50-100x`"; found by the second blind audit (C3) and logged in MISTAKES; the unfiltered
+output is kept as `..._unfiltered_u.out`.** Corrected values:
 
 | | `3^n E|f|^2` at `n = 10, 20, 30, 40` | `K_n` at `n = 10, 20, 30, 40` | typical rate `10..40` |
 |---|---|---|---|
-| `q = 3` | `4.19, 4.04, 2.94, 2.86` | **`1296 +- 576, 2880 +- 1904, 444 +- 171, 920 +- 488`** | `0.5656` |
-| `q = 5` | `1.16, 1.43, 1.11, 1.65` | `26, 244, 26, 331` | `0.5692` |
-| `q = 7` | `1.32, 1.37, 1.29, 1.46` | `11, 30, 31, 193` | `0.5681` |
-| `q = 11` | `1.05, 1.04, 0.96, 1.10` | `5.2, 10.8, 11.1, 41.7` | `0.5679` |
+| `q = 3` | `0.72, 0.58, 0.66, 0.91` | `2.5 +- 0.5, 3.5 +- 1.6, 8.9 +- 3.6, 190 +- 176` | `0.5655` |
+| `q = 5` | `0.61, 0.57, 0.60, 0.55` | `1.3, 2.1, 5.6, 2.8` | `0.5695` |
+| `q = 7` | `0.89, 0.92, 0.95, 1.00` | `2.7, 8.9, 19, 38` | `0.5678` |
+| `q = 11` | `0.81, 0.82, 0.87, 0.97` | `3.0, 4.8, 20, 43` | `0.5682` |
 | i.i.d. | `1.00, 1.07, 1.04, 0.95` | `4.6, 18.9, 14.6, 13.9` | `0.5684` |
 
-With integer starts the `q = 3` family has a second moment `3-4x` the incoherent value at `n = 10..40` (still far
-below the Parseval average over all units, `(3/2) E[rho_n^2] ~ 6-20`, so the fixed small units remain cold) and
-**a kurtosis `50-100x` that of the `q >= 5` families and of random digits**: the arithmetic deep digits of
-`u 3^-n` produce rare huge values -- the ridges -- far more often for `q = 3` than for any other multiplier.
+With primitive integer starts the `q = 3` and `q = 5` families have a mean square `0.6-0.7` of the incoherent
+value at `n = 10..40` (the fixed small units are cold, E3), and scaled fourth moments in or below the i.i.d.
+range (the `190 +- 176` at `n = 40` is one excursion in two thousand): **no heavier tail of the Collatz family
+is visible in moments up to four at `n <= 40`**, while its typical rate is again the lowest (`0.5655` against
+`0.5678-0.5695`).
 
-**E5n** (`collatz_fixed_frequency_large_ensemble_20261004.py`: two hundred integer units `u <= 1200` of `q = 3`
-against two hundred i.i.d. seeds, `N = 600`, window `200..600`): per-member typical rates `0.5694 +- 0.0002`
-(`q = 3`; member sd `0.0026`) against `0.5721 +- 0.0001` (i.i.d.; sd `0.0021`): **thirteen standard errors**;
-the two-hundred-member "ensemble rms" estimates are `0.5729` and `0.5734` (both biased below the exact `0.5774`
-by the heavy tails), trimmed means `0.5707` / `0.5730`, medians of members `0.5693` / `0.5720`.
+**E5n** (`collatz_fixed_frequency_large_ensemble_20261004.py`: two hundred integer units `u <= 1200` prime to
+`3`, against two hundred i.i.d. seeds, `N = 600`, window `200..600`): per-member typical rates `0.5694 +-
+0.0002` (`q = 3`; member sd `0.0026`) against `0.5721 +- 0.0001` (i.i.d.; sd `0.0021`): **thirteen standard
+errors**; the two-hundred-member "ensemble rms" estimates are `0.5729` and `0.5734` (both biased below the exact
+i.i.d. value `0.5774`), trimmed means `0.5707` / `0.5730`, medians of members `0.5693` / `0.5720`.
 
-**Verdict on the mechanism (SUPPORTED).** The Collatz tower's `0.4-0.5%` excess in the typical rate is a
-heavy-tail effect: the mean square sits at the incoherent rate (exactly `3^-n` for uniform starts, PROVED in
-4k; a bounded prefactor for integer starts, E5q), while the fourth moment of the integer-start `q = 3` family is
-two orders of magnitude above every other `q` at `n = 10..40`. By Jensen a heavier tail at fixed variance lowers
-the typical value; `q = 3` pays the largest Jensen gap (`log(0.5774/0.5694) = 1.4%` against `0.9%` for i.i.d.
-digits). A caution from the same table: the `q = 5` family also has a heavier tail than i.i.d. digits
-(`K = 26-330` against `5-19`) yet a typical rate at or slightly above the i.i.d. level (`0.5731`), so a heavier
-tail alone does not lower the typical rate; the Collatz family differs in degree on both counts (mean square
-`3-4x`, kurtosis `50-100x`), and only a quantitative model of the ridge inventory would turn this into a
-derivation. The source of the tail is the ridge mechanism of HYP-9166/THM-4519 (coincidences `u 2^Q = -+1 mod 3^k`
-feed coherent waves), and these coincidences are densest for the smallest prime: at depth `k` a random pair has
-probability `~q^-(k-1)` of a `q`-adic coincidence, largest for `q = 3`. What remains OPEN is a derivation of the
-`0.4%` from the ridge inventory, and the sup statement (b) itself. Excluded along the way: within-level digit
-statistics (E6), fluctuation variance (E5e), low-level seeding (E5k), mean-square anticorrelation (4k), and any
-difference in moments up to four at `n <= 4` (4k).
+**Verdict on the mechanism (OPEN).** The Collatz excess of the typical rate is real (E5f, E5n, E5q) and is
+located in the cube-root coupling of consecutive levels (E5k, 4g); it is not a mean-square anticorrelation of
+the uniform-start tower (4k, PROVED), not a within-level digit correlation (E6), not a difference in fluctuation
+variance (E5e), not seeded by the low levels (E5k), and -- after the correction above -- not a heavier tail in
+moments up to four at `n <= 40` (E5q). The ridge picture of HYP-9166/THM-4519 (coincidences `u 2^Q = -+1 mod
+3^k`, densest for the smallest prime) remains the natural candidate, but it is not what the fourth moment sees
+at these levels; a derivation of the `0.4%` has not been found.
+
+### 4i. The ridge test (b) to level 5000 (E7)
+
+`collatz_fixed_frequency_ridges_n5000_20261004.py` (`u = 1`, `N = 5000`, `A = 60`, `2879 s`): least-squares
+rates of `|mu_hat_n(1)|` `0.5697` (`300..2500`), `0.5708` (`2500..5000`), `0.5698` (`300..5000`); 250-block
+medians of `3^(n/2)|mu_hat_n(1)|` from `9.4 10^-2` down to `8.3 10^-29`; the largest values past `n = 300` are
+`0.0596` (`n = 593`), `0.0326`, `0.0320` (`594, 595`), `0.0303` (`337`); the detrended series has `405` local
+maxima at least `8x` the fitted trend over `n = 300..5000`, the tallest near `n = 557-571` (`50-90x`); and
+`sup_(n >= 200) |mu_hat_n(1)|/0.585^n = 4.6 10^-3` (at `n = 211`), `sup_(n >= 2500) = 1.1 10^-30`;
+`sup_(n >= 200) |mu_hat_n(1)|/0.5774^n = 0.076` (`n = 261`), `sup_(n >= 2500) = 2.1 10^-16`. So to level `5000`
+the frequency-one coefficient decays at `0.570` with excursions of at most two orders of magnitude above its
+trend, and H1 holds with `rho = 0.58` and a constant below `0.03` on `n >= 200`; the ridge heights stay far
+below any exponential growth (consistent with (b) of HYP-9176; not a proof).
 
 ### 4e. The web around the cold rate (connections found by the niche search; all typed)
 
@@ -546,7 +572,7 @@ difference in moments up to four at `n <= 4` (4k).
 
 | statement | status | evidence |
 |---|---|---|
-| the frequency-`u` coefficient of the `q`-adic Syracuse law, `u` fixed, decays at one typical rate `0.5725 +- 0.0007` for every odd `q >= 5`, prime, prime power or composite, and for every unit tried | OBSERVED (`N = 1200-1500`; `q = 5, 7, 9, 11, 13, 15, 19, 21, 25, 27, 33, 45, 49`; 6 units at `5, 7`; 3-4 units elsewhere) | E4, E5g, E5i/E5j (corrected) |
+| the frequency-`u` coefficient of the `q`-adic Syracuse law, `u` fixed, decays at one typical rate `0.5725 +- 0.0007` for every odd `q >= 5`, prime, prime power or composite, and for every unit tried | OBSERVED (`N = 1200-1500`; `q = 5, 7, 9, 11, 13, 15, 19, 21, 25, 27, 33, 45, 49`; six units at `5, 7`; four at `9, 15, 21, 27`; two dyadic families at `25, 33, 45, 49` (`u = 1` and `u = 2` are the same family, audit C14); one unit at `13, 19`, two at `11`) | E4, E5g, E5i/E5j (corrected) |
 | the same rate for i.i.d. digit strings (`0.5723 +- 0.0008`, twelve seeds) and for random odd multipliers (`0.5728 +- 0.0005`, eight) | OBSERVED | E5, E5b |
 | Collatz, `q = 3`: `0.5700 +- 0.0009` over six units, five standard errors below -- the only exception | OBSERVED; mechanism OPEN | E1, E5f |
 | the rate is not `q`'s Parseval scale `q^(-1/2)` (for `q >= 5` the fixed units are astronomically above it) | OBSERVED | E4 |
@@ -557,7 +583,8 @@ difference in moments up to four at `n <= 4` (4k).
 | "the cold rate counts adic digits, `c^(Omega(q))`" | REFUTED (reporting bug, caught by the `q = 5` control; MISTAKES) | 4f |
 | the Pascal tower: `theta_(N-m,d) = sum_i C(m,i) theta_(N,d-i)` (every level a binomial transform of the deepest) | PROVED (exact check) | 4j |
 | the random-start `q`-tower has second moment exactly `3^-n` (path values injective) and a fourth moment at least the i.i.d. model's | PROVED; values FINITE-EXACT (`n <= 4`) | 4k |
-| the Collatz excess is a heavy-tail (Jensen) effect of the integer-start tower, not a mean-square effect; kurtosis `50-100x` at `n = 10..40`; `0.5694 +- 0.0002` vs `0.5721 +- 0.0001` over two hundred members | SUPPORTED (mechanism = the ridges, densest for `q = 3`); the `0.4%` itself not derived | 4l, 4h |
+| the Collatz excess is real at thirteen standard errors (`0.5694 +- 0.0002` vs `0.5721 +- 0.0001`, two hundred members each), located in the cube-root coupling of consecutive levels, and not a mean-square or low-moment effect | OBSERVED; mechanism OPEN (the first version's "kurtosis `50-100x`" was a sampling artifact, MISTAKES) | 4l, 4g, 4k |
+| `|mu_hat_n(1)|` to `n = 5000`: rate `0.5698`, excursions at most `~90x` the trend, `sup_(n>=200) |mu_hat_n(1)|/0.585^n = 0.0046` | FINITE-EXACT (consistent with HYP-9176(b)) | 4i |
 | "the Fourier mass concentrates near dyadic real frequencies" | REFUTED | E3 |
 | H1 = (a) digit incoherence in mean square + (b) polynomial ridges | HYP-9176 (CONJECTURED) | 4b |
 
@@ -587,3 +614,14 @@ Outputs beside the scripts (`.out`; the `.log` files are the raw runs).
 | real-coordinate concentration of the Fourier mass | REFUTED (`n <= 13`) |
 | P7 (`L^p` iff `p < 2`); THM-4263 (14) for the Syracuse density | SUPPORTED, not confirmed at level 14 |
 | H1, Collatz | OPEN |
+
+**Second audit record (2026-10-05, blind subagent; report
+[`collatz_fourier_experiments_20261004_audit.md`](collatz_fourier_experiments_20261004_audit.md), code written
+before reading the session's scripts).** Verdict SOUND WITH CORRECTIONS: every rate, moment, tail, mass and
+identity of E1-E4, 4j, 4k and the i.i.d. second moment reproduces to the printed digits (31 checks); seventeen
+corrections applied in place: C1 (the injectivity proof's index: depths, not valuations), C2 (E4 endpoint
+values), C3 (E5q sampled units not prime to `q`; the "kurtosis `50-100x`" retracted, 4l rewritten, HYP-9176 and
+the index retyped, MISTAKES), C4 (4k's scope), C5 (HYP-9176: (a) alone implies H1), C6-C8 (digits, selection
+rule, flatness percentages), C9 (`3.0` sd), C10 (periodicity only for `n <= 10`), C11 (HYP-9166's endpoints),
+C12 (title ranges), C13-C14 (unit counts; `u = 2` is `u = 1`'s dyadic family), C15 (integer start), C16 (status
+line), C17 (`E[rho^2]` increments not monotone).

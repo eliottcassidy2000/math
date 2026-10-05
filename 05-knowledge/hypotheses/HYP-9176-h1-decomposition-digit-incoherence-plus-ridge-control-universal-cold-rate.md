@@ -1,6 +1,6 @@
 ---
 id: HYP-9176
-title: "The H1 decomposition. (a) Digit incoherence: the fixed-frequency window energy e_n = sum_{k=-W}^0 |mu_hat_n(2^k)|^2 of the 3-adic Syracuse law decays at (1/3)^n exp(o(n)), i.e. the covariance of the twisted vector with the geometric symbol has o(n) partial sums -- an autocorrelation statement about the binary digits of 3^-n (CONJECTURED; holds exactly in mean in the i.i.d.-digit model, PROVED, and within noise for the real digits to n = 600); (b) ridge control: the excursions of 3^(n/2)|mu_hat_n(1)| above its typical size are polynomial in n (CONJECTURED; the ridge inventory of S22/S23, Poisson in the 3-adic zero lines u 2^Q = -+1 mod 3^k; largest 10.4 at n = 131, nothing above 0.08 past n = 200 to 2500). (a) and (b) together give H1 with rho = 1/sqrt3 + eps < 0.585. Universality: the typical rate of |mu_hat_n(u)| is the same for every fixed unit u and every odd multiplier q (0.5727 +- 0.001 for random digits; q = 5, 7, 11, 13 at that level), and the Collatz digits of 3^-n are about 0.5% per level MORE cancelling (0.5689-0.5709 over six units; OBSERVED, mechanism OPEN)"
+title: "The H1 decomposition. (a) Digit incoherence: the fixed-frequency window energy e_n = sum_{k=-W}^0 |mu_hat_n(2^k)|^2 of the 3-adic Syracuse law decays at (1/3)^n exp(o(n)), i.e. the covariance of the twisted vector with the geometric symbol has o(n) partial sums -- an autocorrelation statement about the binary digits of 3^-n (CONJECTURED; holds exactly in mean in the i.i.d.-digit model, PROVED, and within noise for the real digits to n = 600); (b) ridge control: the excursions of 3^(n/2)|mu_hat_n(1)| above its typical size are polynomial in n (CONJECTURED; the ridge inventory of S22/S23, Poisson in the 3-adic zero lines u 2^Q = -+1 mod 3^k; largest 10.4 at n = 131, nothing above 0.08 past n = 200 to 2500). (a) and (b) together give H1 with rho = 1/sqrt3 + eps < 0.585. Universality: the typical rate of |mu_hat_n(u)| is the same for every fixed unit u and every odd multiplier q (0.5727 +- 0.001 for random digits; q = 5, 7, 11, 13 at that level), and the Collatz digits of 3^-n are about 0.4% per level MORE cancelling (0.5691-0.5712 over six units at N = 1500, mean 0.5700 +- 0.0009; OBSERVED, mechanism OPEN)"
 status: >
   OPEN (CONJECTURAL). Evidence: the five Fourier experiments of
   collatz_fourier_experiments_20261004.md (E1 six units to n = 800; E4 four
@@ -28,14 +28,17 @@ status: >
   (the path value Phi_q(a) = sum_i q^(n-i) 2^-D_i mod 1 is injective on
   paths, PROVED), while the fourth moment exceeds the i.i.d. model's for every
   q (weighted additive energy; x3 at n = 4): same mean square as random
-  digits, exponentially heavier tails = the ridges; with INTEGER starts
-  (arithmetic deep digits) the q = 3 family's kurtosis at n = 10..40 is
-  50-100x that of q >= 5 and of random digits (E5q, 2000 starts), and two
-  hundred integer units give the typical rate 0.5694 +- 0.0002 against
-  0.5721 +- 0.0001 for two hundred i.i.d. seeds (E5n): the excess is a
-  heavy-tail (Jensen) effect of the ridges, densest for the smallest prime
-  -- mechanism SUPPORTED at the statistical level, derivation of the 0.4%
-  from the ridge inventory OPEN) and
+  digits, exponentially heavier tails = the ridges; with INTEGER starts prime
+  to q (the Collatz family proper) the scaled fourth moment 9^n E|f|^4 at
+  n = 10..40 is 2.5-9 for q = 3 and 1.3-6 for q = 5 against 5-19 for i.i.d.
+  digits -- no heavier tail (E5q, 2000 starts; the first version sampled
+  units not prime to q and read a 50-100x inflation that was projectivity,
+  audit C3, MISTAKES) -- while two hundred integer units prime to 3 give the
+  typical rate 0.5694 +- 0.0002 against 0.5721 +- 0.0001 for two hundred
+  i.i.d. seeds (E5n): the excess is real and its mechanism is OPEN; E7: the
+  frequency-one coefficient to n = 5000 decays at 0.5698 with excursions at
+  most ~90x its trend and sup_(n>=200) |mu_hat_n(1)|/0.585^n = 0.0046,
+  consistent with (b)) and
   mac-mini's |mu_hat_n(1)| to 2500 (HYP-9166). What it adds to
   HYP-9166: H1's rate is not 3's Parseval scale but the incoherent rate of the
   2-adic window recursion (identical for 5x+1, whose law is nowhere near
@@ -83,8 +86,12 @@ the sup over `n` is attained at ridge arrivals (`n = 131`, `10.4`; HYP-9166's
 inventory by depth `v_3(u 2^Q -+ 1)`), which the three-mirrors census finds
 Poisson. Conjecture: the ridge heights are `n^O(1)`.
 
-**Why (a) + (b) give H1.** `|f_n(0)| <= (typical) x (ridge factor) <=
-C n^O(1) (0.57)^n`, and `0.57 < 0.585`.
+**Why (a) gives H1, and what (b) adds (logic corrected after the audit, C5).** (a) alone implies H1:
+`|f_n(0)|^2 <= e_n = 3^-n exp(o(n))` gives `|mu_hat_n(1)| <= C_eps (1/sqrt3 + eps)^n` for every `eps > 0`, and
+`1/sqrt3 + eps < 0.585` for `eps < 0.0076`. (b) is not needed for the rate: it describes where the sup over `n`
+of `|mu_hat_n(1)|/rho^n` is attained (the ridges), hence the size of the constant `C`, and it is what makes the
+typical rate sit below `1/sqrt3`. H1 does not imply (a). The two statements are the mean-square and the sup
+forms of one incoherence.
 
 **Non-consequences.** H1 itself does not prove Collatz (THM-4519: it gives
 Theorem C's resonant rate `3^(h*-1)`); the universality across `q` says the

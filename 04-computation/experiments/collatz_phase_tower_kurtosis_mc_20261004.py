@@ -33,7 +33,9 @@ if __name__ == "__main__":
                 F[s] = v
             else:
                 u = int(rng.integers(1, 1 << 40)) | 1
-                v = run_uq(u, q, N, A)                              # q^(n/2)|f|: convert to 3^(n/2)|f|
+                while u % q == 0:                                   # PRIMITIVE frequencies only: a multiple of q has
+                    u = int(rng.integers(1, 1 << 40)) | 1           # |mu_hat_n(q u')| = |mu_hat_(n-1)(u')| (projectivity),
+                v = run_uq(u, q, N, A)                              # which inflated the first version's moments (audit C3)
                 F[s] = v * (3.0 / q) ** (np.arange(N + 1) / 2.0)
         line = f"{label:5s}:"
         for n in checkpoints:

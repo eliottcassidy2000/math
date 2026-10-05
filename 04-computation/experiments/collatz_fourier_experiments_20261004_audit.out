@@ -1,0 +1,202 @@
+====================================================================================================
+A. Exact check of the phase device theta_{n,d} = (R mod 2^d)/2^d + u 2^-d q^-n, R = -u q^-n mod 2^(d+1)
+====================================================================================================
+  checked 5760 cases (q in 3,5,7,11; u in 1,2,5,7,11,13; n<=8; d<=30): violations = 0
+  digit reading at (u,q,n,d)=(1,3,4,12): 0.b_d...b_1 = 1871/4096 ; (R mod 2^d)/2^d = 1871/4096 ; equal = True
+  elapsed 0.0s
+====================================================================================================
+B. Direct enumeration of the law on Z/q^n (DP, valuations <= A, or exact via the period of 2 mod q^n)
+====================================================================================================
+  q = 3: |mu_hat_n(u)| by direct enumeration; A = 30 (as in the note's control), A = 40, and exact (period of 2 mod 3^n)
+   n  u   A=30            A=40            exact           claimed
+   3  1   0.156139784634  0.156139784974  0.156139784973  0.1561397846
+   3  5   0.137689700479  0.137689700739  0.137689700740  0.1376897005
+   3  7   0.174771336509  0.174771336753  0.174771336752  -
+   5  1   0.086017928609  0.086017928754  0.086017928754  0.0860179286
+   5  5   0.045672409518  0.045672409541  0.045672409541  -
+   5  7   0.035748154836  0.035748154992  0.035748154992  -
+   7  1   0.021243071083  0.021243071115  0.021243071115  0.0212430711
+   7  5   0.007877579706  0.007877579715  0.007877579715  -
+   7  7   0.012969663108  0.012969663160  0.012969663160  0.0129696631
+  elapsed 0.0s
+====================================================================================================
+C. Window recursion f_n(k), k in [-(N-n)A, 0], phases from the binary digits of -u q^-n
+====================================================================================================
+  float phases vs modular-inverse phases at (u,q,n)=(7,3,40), m<=3000: max |diff| = 9.55e-16
+  float phases vs modular-inverse phases at (u,q,n)=(5,5,30), m<=2000: max |diff| = 9.55e-16
+  (a) window recursion vs direct enumeration (q = 3):
+   n  u   window A=30     window A=40     |win30-DP30|  |win40-exact|  claimed         |win40-claimed|
+   3  1   0.156139784634  0.156139784974  2.8e-17       7.2e-14        0.1561397846      3.7e-10
+   5  1   0.086017928609  0.086017928754  1.5e-16       4.7e-15        0.0860179286      1.5e-10
+   7  1   0.021243071083  0.021243071115  3.1e-17       1.7e-14        0.0212430711      1.5e-11
+      rescaled vs unrescaled recursion (u=1, n<=7): max |diff of ln| = 1.3e-15
+   3  5   0.137689700479  0.137689700739  3.3e-16       1.9e-13        0.1376897005      2.4e-10
+   5  5   0.045672409518  0.045672409541  1.8e-16       2.4e-14        -
+   7  5   0.007877579706  0.007877579715  7.1e-17       2.9e-14        -
+      rescaled vs unrescaled recursion (u=5, n<=7): max |diff of ln| = 1.8e-15
+   3  7   0.174771336509  0.174771336753  6.7e-16       1.3e-13        -
+   5  7   0.035748154836  0.035748154992  2.1e-16       4.6e-14        -
+   7  7   0.012969663108  0.012969663160  1.0e-17       3.1e-14        0.0129696631      6.0e-11
+      rescaled vs unrescaled recursion (u=7, n<=7): max |diff of ln| = 1.8e-15
+  q=5 u=1: |mu_hat_n(u)| n=3,4,5 = ['0.2100822979', '0.0423766663', '0.0636576585']; window-vs-DP max diff 1.7e-16
+  q=5 u=2: |mu_hat_n(u)| n=3,4,5 = ['0.0615668760', '0.0839281622', '0.0145230901']; window-vs-DP max diff 8.3e-17
+  q=5 u=5: |mu_hat_n(u)| n=3,4,5 = ['0.3279831477', '0.2100822979', '0.0423766663']; window-vs-DP max diff 2.5e-16
+  q=7 u=1: |mu_hat_n(u)| n=3,4,5 = ['0.2016314109', '0.1618577810', '0.0562198420']; window-vs-DP max diff 1.9e-16
+  q=7 u=2: |mu_hat_n(u)| n=3,4,5 = ['0.1705680895', '0.0366799076', '0.0539794340']; window-vs-DP max diff 1.7e-16
+  q=7 u=5: |mu_hat_n(u)| n=3,4,5 = ['0.1018939205', '0.0489774436', '0.0155209028']; window-vs-DP max diff 1.8e-16
+  elapsed 0.1s
+====================================================================================================
+C(b). Rates. q = 3, N = 800, A = 40; LS rate = exp(slope of ln|mu_hat_n(u)| vs n), endpoints inclusive
+====================================================================================================
+  u= 1: block medians of 3^(n/2)|mu_hat| = ['1.5e-01', '7.4e-03', '9.5e-04', '4.4e-06']; rates 200-400 0.5741, 400-600 0.5802, 600-800 0.5534, 200..800 0.5680 (claimed 0.568)
+         also 200..600 0.5721, 100..300 0.5656, 300..600 0.5720, 201..800 0.5680
+         3^(300)|mu_hat_600| = 2.63e-03;  local maxima >= 1 of 3^(n/2)|mu_hat_n|: [(5, 1.34), (17, 2.04), (41, 1.46), (45, 1.63), (61, 1.03), (63, 1.1), (127, 3.88), (129, 7.22), (131, 10.38), (135, 2.62)]  (claimed (127, 3.88), (129, 7.22), (131, 10.38), (135, 2.62))
+         (5.1s)
+  u= 5: block medians of 3^(n/2)|mu_hat| = ['1.0e-01', '3.5e-03', '3.5e-04', '2.0e-05']; rates 200-400 0.5629, 400-600 0.5698, 600-800 0.5663, 200..800 0.5695 (claimed 0.5695)
+         also 200..600 0.5698, 100..300 0.5677, 300..600 0.5713, 201..800 0.5695
+         3^(300)|mu_hat_600| = 4.19e-05;  local maxima >= 1 of 3^(n/2)|mu_hat_n|: [(2, 1.13), (20, 1.47), (24, 1.66), (26, 1.05), (68, 2.69)]  (claimed (68, 2.69))
+         (5.3s)
+  u= 7: block medians of 3^(n/2)|mu_hat| = ['4.4e-02', '5.3e-03', '1.9e-04', '9.4e-06']; rates 200-400 0.5681, 400-600 0.5795, 600-800 0.5754, 200..800 0.5687 (claimed 0.5687)
+         also 200..600 0.5699, 100..300 0.5747, 300..600 0.5715, 201..800 0.5687
+         3^(300)|mu_hat_600| = 2.67e-06;  local maxima >= 1 of 3^(n/2)|mu_hat_n|: [(11, 1.8), (21, 1.02), (49, 1.27)]  (claimed (11,1.80),(49,1.27))
+         (5.1s)
+  u=11: block medians of 3^(n/2)|mu_hat| = ['1.4e-01', '2.6e-03', '1.3e-04', '3.5e-05']; rates 200-400 0.5652, 400-600 0.5685, 600-800 0.5567, 200..800 0.5709 (claimed 0.5709)
+         also 200..600 0.5675, 100..300 0.5653, 300..600 0.5684, 201..800 0.5710
+         3^(300)|mu_hat_600| = 4.53e-04;  local maxima >= 1 of 3^(n/2)|mu_hat_n|: [(4, 1.21), (20, 1.24), (24, 2.57), (28, 1.59), (32, 2.06), (120, 1.56), (180, 1.57), (182, 1.48)]  (claimed (24,2.57),(32,2.06),(180,1.57))
+         (5.1s)
+  u=13: block medians of 3^(n/2)|mu_hat| = ['1.0e-01', '4.6e-03', '1.6e-04', '4.0e-05']; rates 200-400 0.5666, 400-600 0.5748, 600-800 0.5653, 200..800 0.5703 (claimed 0.5703)
+         also 200..600 0.5680, 100..300 0.5676, 300..600 0.5681, 201..800 0.5703
+         3^(300)|mu_hat_600| = 1.82e-05;  local maxima >= 1 of 3^(n/2)|mu_hat_n|: [(2, 1.13), (8, 1.71), (10, 1.16), (13, 1.11), (18, 1.4), (22, 1.53), (34, 6.89), (36, 6.98), (72, 1.62)]  (claimed (34,6.89),(36,6.98),(72,1.62))
+         (5.1s)
+  u=17: block medians of 3^(n/2)|mu_hat| = ['1.2e-01', '3.7e-03', '3.0e-04', '3.1e-05']; rates 200-400 0.5627, 400-600 0.5761, 600-800 0.5693, 200..800 0.5704 (claimed 0.5704)
+         also 200..600 0.5696, 100..300 0.5679, 300..600 0.5736, 201..800 0.5704
+         3^(300)|mu_hat_600| = 5.14e-04;  local maxima >= 1 of 3^(n/2)|mu_hat_n|: [(5, 1.22), (27, 2.08), (92, 1.28)]  (claimed (27,2.08),(92,1.28))
+         (5.0s)
+  u=1 wave: 3^(n/2)|mu_hat_n(1)| at n = 125..136: ['0.133', '1.806', '3.882', '1.768', '7.221', '2.422', '10.377', '6.148', '3.140', '1.383', '2.624', '0.950']
+  truncation control u=1: max relative difference |mu_hat_n| A=60 vs A=40, n<=400: 5.0e-10 (claimed < 3e-9)
+  rescaled vs unrescaled recursion to n=400: max |diff of ln| = 8.5e-14
+  elapsed 33.8s
+====================================================================================================
+C(b). q = 5, 7, 11: N = 600, A = 40; rate over 200..600 of |mu_hat_n(u)| itself; q^(n/2)|mu_hat_600(u)| via logs
+====================================================================================================
+  q= 3 u=1: rates 100..300 0.5656, 300..600 0.5720, 200..600 0.5721 (claimed 0.5721); Parseval q^-1/2 = 0.5774; ratio 0.991; q^(300)|mu_hat_600| = 10^-2.58; 3^(300)|mu_hat_600| = 10^-2.58; |mu_hat_600| = 10^-145.72  (2.2s)
+  q= 3 u=5: rates 100..300 0.5677, 300..600 0.5713, 200..600 0.5698 (claimed 0.5698); Parseval q^-1/2 = 0.5774; ratio 0.987; q^(300)|mu_hat_600| = 10^-4.38; 3^(300)|mu_hat_600| = 10^-4.38; |mu_hat_600| = 10^-147.51  (2.2s)
+  q= 5 u=1: rates 100..300 0.5768, 300..600 0.5765, 200..600 0.5735 (claimed 0.5735); Parseval q^-1/2 = 0.4472; ratio 1.282; q^(300)|mu_hat_600| = 10^63.05; 3^(300)|mu_hat_600| = 10^-3.51; |mu_hat_600| = 10^-146.64  (2.2s)
+  q= 5 u=2: rates 100..300 0.5764, 300..600 0.5765, 200..600 0.5738 (claimed 0.5738); Parseval q^-1/2 = 0.4472; ratio 1.283; q^(300)|mu_hat_600| = 10^62.65; 3^(300)|mu_hat_600| = 10^-3.90; |mu_hat_600| = 10^-147.04  (2.2s)
+  q= 7 u=1: rates 100..300 0.5715, 300..600 0.5743, 200..600 0.5716 (claimed 0.5716); Parseval q^-1/2 = 0.3780; ratio 1.512; q^(300)|mu_hat_600| = 10^107.55; 3^(300)|mu_hat_600| = 10^-2.84; |mu_hat_600| = 10^-145.98  (2.3s)
+  q= 7 u=5: rates 100..300 0.5712, 300..600 0.5665, 200..600 0.5718 (claimed 0.5718); Parseval q^-1/2 = 0.3780; ratio 1.513; q^(300)|mu_hat_600| = 10^108.08; 3^(300)|mu_hat_600| = 10^-2.32; |mu_hat_600| = 10^-145.45  (2.2s)
+  q=11 u=1: rates 100..300 0.5685, 300..600 0.5739, 200..600 0.5720 (claimed 0.572); Parseval q^-1/2 = 0.3015; ratio 1.897; q^(300)|mu_hat_600| = 10^165.67; 3^(300)|mu_hat_600| = 10^-3.61; |mu_hat_600| = 10^-146.75  (2.3s)
+  q=11 u=5: rates 100..300 0.5694, 300..600 0.5772, 200..600 0.5734 (claimed 0.5734); Parseval q^-1/2 = 0.3015; ratio 1.902; q^(300)|mu_hat_600| = 10^166.09; 3^(300)|mu_hat_600| = 10^-3.20; |mu_hat_600| = 10^-146.33  (2.4s)
+  elapsed 51.7s
+====================================================================================================
+D. Section 4j identities in exact rational arithmetic: theta_{n,d} = (u 2^-d mod q^n)/q^n in Q/Z
+====================================================================================================
+  q=3: (i) q theta_(n+1,d) = theta_(n,d): 0 violations / 960;  (ii) theta_(n,d-1) = 2 theta_(n,d): 0 / 920;  (iii) Pascal (N=14, m<=6, m<d<=24): 0 / 588
+  q=5: (i) q theta_(n+1,d) = theta_(n,d): 0 violations / 960;  (ii) theta_(n,d-1) = 2 theta_(n,d): 0 / 920;  (iii) Pascal (N=14, m<=6, m<d<=24): 0 / 528
+  q=7 (= 2^3 - 1, alternating signs, step 3): 0 violations / 270
+  elapsed 51.7s
+====================================================================================================
+E. Section 4k: Phi_q(a) = sum_i q^(n-i) 2^-D_i mod 1, D_i = a_i + ... + a_n (suffix sums)
+====================================================================================================
+  q=3, n=1, valuations<=12: 12 paths, 12 distinct values of Phi_3 -> injective = True
+  q=3, n=2, valuations<=12: 144 paths, 144 distinct values of Phi_3 -> injective = True
+  q=3, n=3, valuations<=12: 1728 paths, 1728 distinct values of Phi_3 -> injective = True
+  q=3, n=4, valuations<=12: 20736 paths, 20736 distinct values of Phi_3 -> injective = True
+  q=3, n=5, valuations<=12: 248832 paths, 248832 distinct values of Phi_3 -> injective = True
+  n=3, valuations<=5, 7750 unordered pairs: v_2(Phi(a)-Phi(b)) = -max(D_i0(a),D_i0(b)) with i0 = first index where the DEPTHS differ: 7750/7750; differences equal to 1/2 mod 1: 0
+    the note's bookkeeping 'denominator 2^max(D_j(a),D_j(b)) at the first index j where the paths differ': holds for 5587/7750; with j = LAST differing index (so that the later terms cancel): 550/7750
+    explicit counterexample to the note's sketch (n=2, q=3): a=(3, 1), b=(1, 2): depths [4, 1] vs [3, 2]; last differing index j=2, max(D_2)=2, but Phi(a)-Phi(b) = 1/16 (denominator 2^4 = 2^max(D_1), not 2^2); the j=2 term alone is 1/2-1/4 = 1/4
+  fourth moments scaled by 9^n, valuations <= 8 (claims: iid 1.400,1.704,1.976,2.241; q=3 1.400,2.550,3.915,7.047):
+    per-level i.i.d. check: max |E e(th_p+th_q-th_r-th_s) - 1[{p,q}={r,s}]| over depths <= 6 = 1.2e-16
+    pairwise: max |E e(th_d - th_e)|, d != e, depths <= 6 = 1.2e-16
+    n   iid      q=3      q=5      q=7      q=9      q=11     q=15
+    1   1.400  1.400  1.400  1.400  1.400  1.400  1.400
+    2   1.704  2.550  2.222  2.651  2.233  2.531  2.674
+    3   1.976  3.915  4.013  3.888  3.818  3.959  4.474
+    4   2.241  7.047  7.531  7.255  7.098  7.547  7.306
+  elapsed 70.4s
+====================================================================================================
+F. i.i.d.-digit model: Monte Carlo of E[3^n |f_n(0)|^2] at n = 10 (A = 40), 2000 seeds; and window positions
+====================================================================================================
+  E[3^10 |f_10(0)|^2] = 0.9875 +- 0.0429 (exact: 1.000000); median 0.451; max 42.0
+  window position k = -1: E[3^10 |f_10(k)|^2] = 0.9766 +- 0.0366
+  window position k = -7: E[3^10 |f_10(k)|^2] = 0.9433 +- 0.0337
+  window position k = -40: E[3^10 |f_10(k)|^2] = 1.0074 +- 0.0395
+  typical value exp(E log 3^(n/2)|f_10(0)|) = 0.642
+  elapsed 72.5s
+====================================================================================================
+G. E2/E3 checks from the dense law (A = 40): rho_n = (2/3) 3^n mu_n on the units; moments under the uniform measure on units
+====================================================================================================
+  n= 1: E[rho^1.5]=1.0420 E[rho^1.9]=1.0951 E[rho^2]=1.1111 (inc +nan) E[rho^2.5]=1.208 rho(-1)=1.333 rho(1)=0.667 max rho=1.333 (=(0.8889)(3/2)^n)
+  n= 2: E[rho^1.5]=1.1616 E[rho^1.9]=1.3658 E[rho^2]=1.4286 (inc +0.3175) E[rho^2.5]=1.826 rho(-1)=2.095 rho(1)=0.762 max rho=2.095 (=(0.9312)(3/2)^n)
+  n= 3: E[rho^1.5]=1.2571 E[rho^1.9]=1.6181 E[rho^2]=1.7363 (inc +0.3077) E[rho^2.5]=2.556 rho(-1)=3.198 rho(1)=0.661 max rho=3.198 (=(0.9475)(3/2)^n)
+  n= 4: E[rho^1.5]=1.3382 E[rho^1.9]=1.8632 E[rho^2]=2.0458 (inc +0.3095) E[rho^2.5]=3.434 rho(-1)=4.846 rho(1)=0.618 max rho=4.846 (=(0.9572)(3/2)^n)
+  n= 5: E[rho^1.5]=1.4081 E[rho^1.9]=2.1013 E[rho^2]=2.3561 (inc +0.3103) E[rho^2.5]=4.475 rho(-1)=7.319 rho(1)=0.643 max rho=7.319 (=(0.9638)(3/2)^n)
+  n= 6: E[rho^1.5]=1.4694 E[rho^1.9]=2.3329 E[rho^2]=2.6669 (inc +0.3108) E[rho^2.5]=5.693 rho(-1)=11.018 rho(1)=0.637 max rho=11.018 (=(0.9673)(3/2)^n)
+  n= 7: E[rho^1.5]=1.5236 E[rho^1.9]=2.5581 E[rho^2]=2.9772 (inc +0.3103) E[rho^2.5]=7.104 rho(-1)=16.566 rho(1)=0.574 max rho=16.566 (=(0.9696)(3/2)^n)
+  n= 8: E[rho^1.5]=1.5722 E[rho^1.9]=2.7780 E[rho^2]=3.2878 (inc +0.3106) E[rho^2.5]=8.732 rho(-1)=24.890 rho(1)=0.516 max rho=24.890 (=(0.9712)(3/2)^n)
+  n= 9: E[rho^1.5]=1.6161 E[rho^1.9]=2.9930 E[rho^2]=3.5989 (inc +0.3111) E[rho^2.5]=10.601 rho(-1)=37.384 rho(1)=0.465 max rho=37.384 (=(0.9724)(3/2)^n)
+         P(rho>t), t=2..256: ['0.117', '0.0373', '0.00876', '0.00137', '7.62e-05', '0', '0', '0'];  E[rho 1(rho>M)], M=4..128: ['0.2605', '0.1102', '0.0313', '0.0028', '0.0000', '0.0000']
+  n=10: E[rho^1.5]=1.6560 E[rho^1.9]=3.2036 E[rho^2]=3.9105 (inc +0.3116) E[rho^2.5]=12.737 rho(-1)=56.118 rho(1)=0.425 max rho=56.118 (=(0.9732)(3/2)^n)
+         P(rho>t), t=2..256: ['0.113', '0.0344', '0.00821', '0.00163', '0.000254', '0', '0', '0'];  E[rho 1(rho>M)], M=4..128: ['0.2573', '0.1136', '0.0410', '0.0111', '0.0000', '0.0000']
+  n=11: E[rho^1.5]=1.6924 E[rho^1.9]=3.4100 E[rho^2]=4.2226 (inc +0.3121) E[rho^2.5]=15.171 rho(-1)=84.226 rho(1)=0.394 max rho=84.226 (=(0.9737)(3/2)^n)
+         P(rho>t), t=2..256: ['0.112', '0.036', '0.0101', '0.00248', '0.000432', '8.47e-06', '0', '0'];  E[rho 1(rho>M)], M=4..128: ['0.2707', '0.1339', '0.0574', '0.0178', '0.0007', '0.0000']
+  n=12: E[rho^1.5]=1.7258 E[rho^1.9]=3.6125 E[rho^2]=4.5353 (inc +0.3126) E[rho^2.5]=17.936 rho(-1)=126.396 rho(1)=0.358 max rho=126.396 (=(0.9742)(3/2)^n)
+         P(rho>t), t=2..256: ['0.111', '0.0358', '0.00929', '0.00186', '0.000277', '3.39e-05', '0', '0'];  E[rho 1(rho>M)], M=4..128: ['0.2748', '0.1317', '0.0506', '0.0148', '0.0033', '0.0000']
+  n=13: E[rho^1.5]=1.7564 E[rho^1.9]=3.8112 E[rho^2]=4.8483 (inc +0.3131) E[rho^2.5]=21.068 rho(-1)=189.643 rho(1)=0.333 max rho=189.643 (=(0.9744)(3/2)^n)
+         P(rho>t), t=2..256: ['0.11', '0.0352', '0.00944', '0.00226', '0.000489', '8.66e-05', '1.22e-05', '0'];  E[rho 1(rho>M)], M=4..128: ['0.2775', '0.1376', '0.0604', '0.0234', '0.0074', '0.0018']
+  n=14: E[rho^1.5]=1.7846 E[rho^1.9]=4.0062 E[rho^2]=5.1618 (inc +0.3135) E[rho^2.5]=24.610 rho(-1)=284.504 rho(1)=0.315 max rho=284.504 (=(0.9746)(3/2)^n)
+         P(rho>t), t=2..256: ['0.11', '0.0359', '0.00998', '0.00241', '0.000471', '6.37e-05', '4.7e-06', '3.14e-07'];  E[rho 1(rho>M)], M=4..128: ['0.2843', '0.1452', '0.0648', '0.0239', '0.0064', '0.0010']
+  n=11: Parseval total sum_t |mu_hat|^2 = 6.3340 (= 3^n sum mu^2 = (3/2)E[rho^2] check), primitive-t mass = 0.4682, rms over primitive t = 1.99e-03
+       top primitive coefficients (t, |mu_hat|): [(8192, 0.0319), (-8192, 0.0319), (4096, 0.0298), (-4096, 0.0298), (-16384, 0.0276), (16384, 0.0276), (2048, 0.0238), (-2048, 0.0238)]
+       64-bin mass over theta (primitive t): min 0.0143, max 0.0171, uniform 1/64 = 0.0156; max/uniform = 1.093
+       mass within a quarter-spacing of j/2^3: 0.4967 (uniform 0.5)
+       mass within a quarter-spacing of j/2^5: 0.4979 (uniform 0.5)
+       mass within a quarter-spacing of j/2^8: 0.4974 (uniform 0.5)
+       fixed frequencies 1<=|t|<=100: primitive-only ratio to Haar share 0.986; all t!=0 (incl. multiples of 3) ratio 0.434
+       fixed frequencies 1<=|t|<=1000: primitive-only ratio to Haar share 0.940; all t!=0 (incl. multiples of 3) ratio 0.714
+       fixed frequencies 1<=|t|<=10000: primitive-only ratio to Haar share 1.038; all t!=0 (incl. multiples of 3) ratio 0.769
+  n=12: Parseval total sum_t |mu_hat|^2 = 6.8029 (= 3^n sum mu^2 = (3/2)E[rho^2] check), primitive-t mass = 0.4689, rms over primitive t = 1.15e-03
+       top primitive coefficients (t, |mu_hat|): [(16384, 0.0265), (-16384, 0.0265), (32768, 0.0249), (-32768, 0.0249), (8192, 0.0235), (-8192, 0.0235), (-65536, 0.0195), (65536, 0.0195)]
+       64-bin mass over theta (primitive t): min 0.0148, max 0.0169, uniform 1/64 = 0.0156; max/uniform = 1.082
+       mass within a quarter-spacing of j/2^3: 0.5023 (uniform 0.5)
+       mass within a quarter-spacing of j/2^5: 0.5016 (uniform 0.5)
+       mass within a quarter-spacing of j/2^8: 0.5021 (uniform 0.5)
+       fixed frequencies 1<=|t|<=100: primitive-only ratio to Haar share 1.458; all t!=0 (incl. multiples of 3) ratio 0.356
+       fixed frequencies 1<=|t|<=1000: primitive-only ratio to Haar share 0.998; all t!=0 (incl. multiples of 3) ratio 0.457
+       fixed frequencies 1<=|t|<=10000: primitive-only ratio to Haar share 1.061; all t!=0 (incl. multiples of 3) ratio 0.796
+  n=13: Parseval total sum_t |mu_hat|^2 = 7.2725 (= 3^n sum mu^2 = (3/2)E[rho^2] check), primitive-t mass = 0.4696, rms over primitive t = 6.65e-04
+       top primitive coefficients (t, |mu_hat|): [(65536, 0.0221), (-65536, 0.0221), (-32768, 0.0218), (32768, 0.0218), (131072, 0.0188), (-131072, 0.0188), (16384, 0.0185), (-16384, 0.0185)]
+       |mu_hat_13(+-2^14)| = 0.0185, 0.0185; share of primitive mass 0.07%; theta = 0.010
+       |mu_hat_13(+-2^15)| = 0.0218, 0.0218; share of primitive mass 0.10%; theta = 0.021
+       |mu_hat_13(+-2^16)| = 0.0221, 0.0221; share of primitive mass 0.10%; theta = 0.041
+       |mu_hat_13(+-2^17)| = 0.0188, 0.0188; share of primitive mass 0.08%; theta = 0.082
+       |mu_hat_13(465905)| = 0.0157  (465905 = -2^16 mod 3^12)
+       64-bin mass over theta (primitive t): min 0.0151, max 0.0163, uniform 1/64 = 0.0156; max/uniform = 1.044
+       mass within a quarter-spacing of j/2^3: 0.4988 (uniform 0.5)
+       mass within a quarter-spacing of j/2^5: 0.4979 (uniform 0.5)
+       mass within a quarter-spacing of j/2^8: 0.4993 (uniform 0.5)
+       fixed frequencies 1<=|t|<=100: primitive-only ratio to Haar share 1.042; all t!=0 (incl. multiples of 3) ratio 0.234
+       fixed frequencies 1<=|t|<=1000: primitive-only ratio to Haar share 0.971; all t!=0 (incl. multiples of 3) ratio 0.567
+       fixed frequencies 1<=|t|<=10000: primitive-only ratio to Haar share 1.065; all t!=0 (incl. multiples of 3) ratio 0.735
+  elapsed 75.9s
+====================================================================================================
+H. q = 3, u = 1 to N = 2500 and three i.i.d.-digit runs to N = 1500 (A = 40): typical rates, ridges
+====================================================================================================
+  real digits of -3^-n, u=1: rates 200..1500 0.5691 (claimed 0.5691), 300..1500 0.5689 (claimed 0.5689), 750..1500 0.5695 (claimed 0.5695), 200..2500 0.5697, 200..800 0.5680  (146s)
+     3^(n/2)|mu_hat_n(1)| at n=200: 8.06e-03, n=2500: 4.30e-17 (note: 9e-2 -> 3e-15); largest past n=200: 0.078 at n=261 (note: nothing above 0.08); count of n in 201..2500 with value > 0.08: 0; mean per-level log increment 300..1500: -0.0133 (note -0.0133)
+  i.i.d. digits seed 0: rates 300..1500 0.5708, 750..1500 0.5697, 200..1500 0.5711 (note: 0.572-0.574; rms rate exactly 0.5774)  (4s)
+  i.i.d. digits seed 1: rates 300..1500 0.5723, 750..1500 0.5712, 200..1500 0.5722 (note: 0.572-0.574; rms rate exactly 0.5774)  (4s)
+  i.i.d. digits seed 2: rates 300..1500 0.5722, 750..1500 0.5732, 200..1500 0.5720 (note: 0.572-0.574; rms rate exactly 0.5774)  (4s)
+====================================================================================================
+I. Integer-start ensembles at N = 40 (2000 random odd 40-bit units prime to q; A = 40): 3^n E|f|^2, K_n = 9^n E|f|^4, kurtosis K_n/(3^n E|f|^2)^2
+====================================================================================================
+  projectivity check: max | |mu_hat_n(3u)| - |mu_hat_(n-1)(u)| | (dense law, n<=7) = 6.7e-16; window recursion u=3u' at N=7 vs u' at N=6: 1.4e-14; u=9 at N=7 vs u=1 at N=5: 1.6e-13
+  so a start u with v_q(u) = j has 3^n|f_n(0)|^2 = 3^j x (a level-(n-j) unit value): sampling ALL odd 40-bit u (fraction q^-j with v_q = j) inflates the moments.
+  source    3 prime to q: 3^n E|f|^2 at n=10,20,30,40 = ['0.70', '0.63', '0.66', '0.62']; K_n = ['3 +- 1', '4 +- 2', '18 +- 15', '16 +- 9']; kurtosis K_n/(3^n E|f|^2)^2 = ['6', '10', '43', '42']; typical rate 10..40 (fit of E log) 0.5652; starts divisible by q: 0  (12s)
+  source    3  all odd u: 3^n E|f|^2 at n=10,20,30,40 = ['8.27', '3.60', '3.35', '6.57']; K_n = ['36446 +- 35566', '1014 +- 460', '1238 +- 712', '37635 +- 37155']; kurtosis K_n/(3^n E|f|^2)^2 = ['533', '78', '110', '873']; typical rate 10..40 (fit of E log) 0.5654; starts divisible by q: 648  (12s)
+  source    5 prime to q: 3^n E|f|^2 at n=10,20,30,40 = ['0.63', '0.61', '0.72', '0.57']; K_n = ['3 +- 2', '4 +- 2', '11 +- 5', '7 +- 3']; kurtosis K_n/(3^n E|f|^2)^2 = ['8', '11', '22', '22']; typical rate 10..40 (fit of E log) 0.5685; starts divisible by q: 0  (12s)
+  source    5  all odd u: 3^n E|f|^2 at n=10,20,30,40 = ['1.32', '1.10', '2.61', '1.35']; K_n = ['54 +- 28', '13 +- 3', '4969 +- 4947', '108 +- 60']; kurtosis K_n/(3^n E|f|^2)^2 = ['31', '11', '730', '59']; typical rate 10..40 (fit of E log) 0.5683; starts divisible by q: 393  (12s)
+  source  iid           : 3^n E|f|^2 at n=10,20,30,40 = ['1.04', '1.08', '0.98', '0.87']; K_n = ['5 +- 1', '16 +- 8', '17 +- 11', '21 +- 13']; kurtosis K_n/(3^n E|f|^2)^2 = ['5', '13', '18', '28']; typical rate 10..40 (fit of E log) 0.5674; starts divisible by q: 0  (12s)
+  (note's E5q claims: q=3: 4.19,4.04,2.94,2.86 / 1296,2880,444,920 / rate 0.5656; q=5: 1.16,1.43,1.11,1.65 / 26,244,26,331 / 0.5692; iid: 1.00,1.07,1.04,0.95 / 4.6,18.9,14.6,13.9 / 0.5684)
+  total elapsed 294.8s
