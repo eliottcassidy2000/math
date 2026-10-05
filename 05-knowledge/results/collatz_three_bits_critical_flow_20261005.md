@@ -704,6 +704,13 @@ g(b)<=(1−r)^L ||g||_1 for every L, hence must vanish there. Thus the
 canonical chain measure separates a solved mass-control obligation from
 the unsolved support-positivity obligation.
 
+The [adaptive-mixture follow-up](collatz_adaptive_mixture_flow_20261005.md),
+P1-P5, sharpens the base mass bound to 2+2r-r^2 by retaining the root's
+first two generations. A beta(1,2) mixture has total full-flow mass<=16/3,
+exact factorial weights and telescoping inverse fibres. Its deficit is a
+unit probability measure on rooted multiples of three. These improvements
+remove fixed-price loss and retain the same OPEN positivity obligation.
+
 The same incoming note needed a scoped audit: a real negative log
 probability is not literally an integer binary prefix length; its stopping
 probability contributes an additional factor; the root self-loop must be

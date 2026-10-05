@@ -1,0 +1,217 @@
+{
+  "adaptive_mass_upper_bound": "16/3",
+  "beta_prior_bounds": [
+    {
+      "alpha": 1,
+      "beta": 2,
+      "bound": "16/3"
+    },
+    {
+      "alpha": 1,
+      "beta": 3,
+      "bound": "15/4"
+    },
+    {
+      "alpha": 2,
+      "beta": 2,
+      "bound": "17/2"
+    }
+  ],
+  "checks": 672721,
+  "controller_transports": [
+    {
+      "child": 111,
+      "child_labels": [
+        23,
+        7
+      ],
+      "ratio": "5800/131461",
+      "source": 155
+    },
+    {
+      "child": 1569,
+      "child_labels": [
+        8,
+        6
+      ],
+      "ratio": "455/22287",
+      "source": 2203
+    },
+    {
+      "child": 3027,
+      "child_labels": [
+        20,
+        8
+      ],
+      "ratio": "40365/1091944",
+      "source": 4251
+    }
+  ],
+  "controls": {
+    "partial_counters_do_not_certify_root": true,
+    "same_counts_different_words": [
+      53,
+      113
+    ],
+    "uniform_prior_root_fibre_diverges": true
+  },
+  "finite_head_mass": {
+    "denominator": 4164090077319143230070339136140045075852921948800740078822000,
+    "numerator": 10824789322034673764702404645758141487821737730395371349423857
+  },
+  "finite_head_three_divisible_flux": {
+    "denominator": 4566948047536734466280351985102680076107685597828000,
+    "numerator": 2612987431485206015290435616122397567387944198435189
+  },
+  "fixed_parameter_mass_bounds": [
+    {
+      "base_bound": "8319/4096",
+      "full_bound": "2773/1344",
+      "r": "1/64"
+    },
+    {
+      "base_bound": "543/256",
+      "full_bound": "181/80",
+      "r": "1/16"
+    },
+    {
+      "base_bound": "39/16",
+      "full_bound": "13/4",
+      "r": "1/4"
+    },
+    {
+      "base_bound": "11/4",
+      "full_bound": "11/2",
+      "r": "1/2"
+    },
+    {
+      "base_bound": "47/16",
+      "full_bound": "47/4",
+      "r": "3/4"
+    },
+    {
+      "base_bound": "767/256",
+      "full_bound": "767/16",
+      "r": "15/16"
+    }
+  ],
+  "limits": "Finite checks do not establish support positivity at untested integers.",
+  "max_head_labels": [
+    112,
+    25
+  ],
+  "root_sibling_mass": "2",
+  "sample_weights": [
+    {
+      "K": 0,
+      "L": 0,
+      "n": 1,
+      "odd_steps": 0,
+      "weight": "1"
+    },
+    {
+      "K": 1,
+      "L": 1,
+      "n": 3,
+      "odd_steps": 2,
+      "weight": "1/6"
+    },
+    {
+      "K": 1,
+      "L": 0,
+      "n": 5,
+      "odd_steps": 1,
+      "weight": "1/3"
+    },
+    {
+      "K": 2,
+      "L": 4,
+      "n": 7,
+      "odd_steps": 5,
+      "weight": "1/84"
+    },
+    {
+      "K": 2,
+      "L": 5,
+      "n": 9,
+      "odd_steps": 6,
+      "weight": "1/126"
+    },
+    {
+      "K": 2,
+      "L": 1,
+      "n": 13,
+      "odd_steps": 2,
+      "weight": "1/15"
+    },
+    {
+      "K": 2,
+      "L": 2,
+      "n": 17,
+      "odd_steps": 3,
+      "weight": "1/30"
+    },
+    {
+      "K": 2,
+      "L": 0,
+      "n": 21,
+      "odd_steps": 1,
+      "weight": "1/6"
+    },
+    {
+      "K": 8,
+      "L": 40,
+      "n": 27,
+      "odd_steps": 41,
+      "weight": "1/11274451650"
+    },
+    {
+      "K": 3,
+      "L": 1,
+      "n": 53,
+      "odd_steps": 2,
+      "weight": "1/30"
+    },
+    {
+      "K": 7,
+      "L": 23,
+      "n": 111,
+      "odd_steps": 24,
+      "weight": "1/42073200"
+    },
+    {
+      "K": 3,
+      "L": 1,
+      "n": 113,
+      "odd_steps": 2,
+      "weight": "1/30"
+    },
+    {
+      "K": 8,
+      "L": 29,
+      "n": 155,
+      "odd_steps": 30,
+      "weight": "1/953618094"
+    }
+  ],
+  "source_sha256": "2ab7d796f2d7cc01ba98117df8cb2dba4656026e2b142eefba7955379c18897d",
+  "status": "PROVED scoped identities; FINITE-EXACT checks; universal positivity OPEN",
+  "three_divisible_flux": "1",
+  "universe": {
+    "controller_parameters": [
+      0,
+      127
+    ],
+    "counter_rectangle": [
+      60,
+      60
+    ],
+    "inverse_fibre_targets_below": 4096,
+    "odd_sources": [
+      1,
+      32767
+    ],
+    "section_targets_below": 8192,
+    "tested_siblings_per_target": 6
+  }
+}
