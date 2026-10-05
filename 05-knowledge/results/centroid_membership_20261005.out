@@ -1,0 +1,16 @@
+PROVED: finite fan centroid points recover the full word; exact denominator=3^(depth+1).
+MISSING SIDECAR: terminal port permutation is lost; arbitrary rational points need not terminate.
+FINITE WORDS: 1093 through depth6; independent terminal-frame controls: 726
+RATIONAL UNIVERSE: 712 primitive interior triples with denominator3..18.
+DENOMINATOR9: primitive counts {'tie': 6, 'cycle': 18, 'center': 3} ; strict cycles ((1, 2, 6), (1, 5, 3), (4, 2, 3)) and ((2, 1, 6), (5, 1, 3), (2, 4, 3))
+CYCLE WORDS:001 and110, primitive period3; denominator6 already has fixed nonterminating points.
+CENTER MEMBERS AT denominator3^k:3^(k-1); primitive total=4*3^(2k-2)-3^k; fraction3/(4*3^k-9).
+RETURN001: ((-7, 4, 0), (-4, 0, 1), (12, -3, 0)) ; transverse: ((-7, 4), (-5, -1)) ; characteristic z^2+8z+27, discriminant-44.
+INDEX2 CUBIC ROOT: ((Fraction(2, 1), Fraction(-1, 1)), (Fraction(5, 1), Fraction(-1, 1))) ; signed local operator: ((Fraction(-2, 1), Fraction(1, 1)), (Fraction(-5, 1), Fraction(1, 1))) ; det(I-tD)=1+t+3t^2.
+COMPANION: D*S=S*[[-1,-3],[1,0]], S=[[0,1],[1,2]], detS=-1; formal eta a3=-1.
+LOCAL TRACES: [2, -1, -5, 8, 7, -31, 10, 83, -113] ; signed local cube is minus the transverse return.
+CONTROLLED LIMIT: E_Q(A001^j*center-p)=4/27^(j+1), Q=[[5,-3],[-3,4]], j0..6 checked.
+INFINITE-WORD HOSTILE: A2^j fixes both endpoints of the same full edge for everyj.
+SCOPE: exact local polynomial match only, not a conductor derivation/global dynamical equivalence.
+BOUNDARIES: center before ties; noncentral ties/zero coordinates reject; denominator3-power alone fails.
+CHECKS: 36385

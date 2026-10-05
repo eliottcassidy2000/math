@@ -1,0 +1,11 @@
+DESSIN PSL2(F11)=660; P1=12; passport=2^6,3^4,11*1; genus=1
+REGULAR COVER: degree660; cycles330,220,60; genus26; quotient degree55
+MARKED PALEY: Borel55; 55 arcs; 3025 arc-image checks; inversion reverses1->2
+DESSIN GENERATOR CYCLES (11 denotes infinity): ((2, 2, 2, 2, 2, 2), (3, 3, 3, 3), (1, 11)) ([(0, 11), (1, 10), (2, 5), (3, 7), (4, 8), (6, 9)], [(0, 10, 11), (1, 5, 9), (2, 7, 4), (3, 8, 6)], [(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10), (11,)])
+CLOCK: A^4=-4I; A mod3 is swap-conjugate to goldenM; both order8
+HOSTILE mod9: both order24, but traces7/1 and determinants2/8 prevent conjugacy
+TORSION: exhaustive65536 affine pairs overF256; E(F256)=225; E[3]=9
+TORSION: P,Frob(P) basis= (92, 242) (224, 66) ; 81 additive controls; golden matrix on all9 points
+TORSION ORBIT: [(92, 242), (224, 66), (93, 175), (225, 163), (92, 243), (224, 67), (93, 174), (225, 162)]
+TORSION COORDINATES: x^4+x+1 irreducible overF2; four x inF16; eight points requireF256
+PASS: exact finite controls; modular identification is separately cited; no Collatz guard transferred
