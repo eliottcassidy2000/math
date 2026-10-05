@@ -19,4 +19,3 @@ root orders q = 25, 49, 45, 33, 5: typical rate of |mu_hat_n(u)|, N=1200, A=40
   q= 5 u= 2: rate 250..1200 = 0.5733   (Parseval q^(-1/2) = 0.4472, incoherent 0.5774)   [263s]
   q= 5 u= 7: rate 250..1200 = 0.5728   (Parseval q^(-1/2) = 0.4472, incoherent 0.5774)   [282s]
   q= 5: mean 0.5731 +- 0.0003
-DONE
