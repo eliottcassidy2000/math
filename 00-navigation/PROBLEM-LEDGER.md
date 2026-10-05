@@ -327,6 +327,17 @@ all heights (THM-1289, published), δ ineffective.
   The27/91/347 family has constant defect36; later members descend in six
   steps. Signed additive digit ranks fail. Exact precision swaps retain
   the source, but global reset control and prime selection remain open.
+  **Coalescence synthesis (opus, 2026-10-04):** the
+  [strategy atlas and five axes](../05-knowledge/results/collatz_coalescence_20261004_proof_strategies_and_bold_predictions.md)
+  type every proof style in the thread by one of two walls (DRIFT-seeing
+  methods stop at the pointwise statement, SHEET-seeing methods at bounded
+  complexity) and name five axes of coalescence (three places and the
+  `<2,3>`-solenoid with the Fibonacci/cat-map rank-one model; criticality;
+  clocks as `H^1`; the Artin coordinate; the sheet as a phase), with twelve
+  typed predictions. HYP-9174: the `x2x3` lonely spectrum below `1/14` is
+  the Artin coordinate of `<2,3>` (first value `5/73`). HYP-9175: powers of
+  three shadow only the cycle points `1, 3 mod 8`, `log_3(-5) in Z_2` is a
+  universal resisting exponent, resisting share `0.1597`. Collatz OPEN.
 - **Erdős Problem 592** [DEEP — $1000 problem] — the p=2 Schur-seam theorem (THM-469),
   R(n,2)=2n+1 linear conjecture, Chang-tower m=3 open; 21 scripts, a survey draft.
 - **{7,21} forbidden H-spectrum** [DEEP, repo-signature] — permanent exclusions by
