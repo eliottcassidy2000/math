@@ -1,0 +1,155 @@
+{
+  "actual_prefix_lifts": 4128,
+  "checks": 26980,
+  "color_resolved_flux_controls": 6,
+  "grounded_residue_representatives": 172,
+  "groups": {
+    "11": {
+      "affine_group": 110,
+      "irreducible_permutation_dimensions": [
+        1,
+        10
+      ],
+      "residue_fibres_with_ambiguous_next_residue": 10,
+      "slopes": 10
+    },
+    "19": {
+      "affine_group": 342,
+      "irreducible_permutation_dimensions": [
+        1,
+        18
+      ],
+      "residue_fibres_with_ambiguous_next_residue": 18,
+      "slopes": 18
+    },
+    "35": {
+      "affine_group": 840,
+      "irreducible_permutation_dimensions": [
+        1,
+        4,
+        6,
+        24
+      ],
+      "residue_fibres_with_ambiguous_next_residue": 34,
+      "slopes": 24
+    },
+    "5": {
+      "affine_group": 20,
+      "irreducible_permutation_dimensions": [
+        1,
+        4
+      ],
+      "residue_fibres_with_ambiguous_next_residue": 4,
+      "slopes": 4
+    },
+    "7": {
+      "affine_group": 42,
+      "irreducible_permutation_dimensions": [
+        1,
+        6
+      ],
+      "residue_fibres_with_ambiguous_next_residue": 6,
+      "slopes": 6
+    },
+    "95": {
+      "affine_group": 3420,
+      "irreducible_permutation_dimensions": [
+        1,
+        4,
+        18,
+        36,
+        36
+      ],
+      "residue_fibres_with_ambiguous_next_residue": 94,
+      "slopes": 36
+    }
+  },
+  "hostile_missing_atom": 3,
+  "hostile_moduli": [
+    5,
+    7,
+    11,
+    19,
+    35,
+    95,
+    191
+  ],
+  "hostile_total_mass": "13/24",
+  "invalid_inputs": 13,
+  "same_matrix_opposite_drift": [
+    {
+      "m": 5,
+      "order2": 4,
+      "slopes": [
+        "3/2",
+        "3/32"
+      ],
+      "valuation_pair": [
+        1,
+        5
+      ]
+    },
+    {
+      "m": 7,
+      "order2": 3,
+      "slopes": [
+        "3/2",
+        "3/16"
+      ],
+      "valuation_pair": [
+        1,
+        4
+      ]
+    },
+    {
+      "m": 11,
+      "order2": 10,
+      "slopes": [
+        "3/2",
+        "3/2048"
+      ],
+      "valuation_pair": [
+        1,
+        11
+      ]
+    },
+    {
+      "m": 19,
+      "order2": 18,
+      "slopes": [
+        "3/2",
+        "3/524288"
+      ],
+      "valuation_pair": [
+        1,
+        19
+      ]
+    },
+    {
+      "m": 35,
+      "order2": 12,
+      "slopes": [
+        "3/2",
+        "3/8192"
+      ],
+      "valuation_pair": [
+        1,
+        13
+      ]
+    },
+    {
+      "m": 95,
+      "order2": 36,
+      "slopes": [
+        "3/2",
+        "3/137438953472"
+      ],
+      "valuation_pair": [
+        1,
+        37
+      ]
+    }
+  ],
+  "status": "PROVED algebra and scopes; FINITE-EXACT controls"
+}
+PASS: finite representation is faithful to affine residue maps; source positivity still needs an unbounded refinement lower bound.

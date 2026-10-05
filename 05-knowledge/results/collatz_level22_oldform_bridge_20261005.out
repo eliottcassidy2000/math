@@ -1,0 +1,15 @@
+level22 oldform bridge: FINITE-EXACT controls; modular identification CITED
+eta coefficients q1..q11: [1, -2, -1, 2, 1, 2, -2, 0, -2, -2, 1]
+two eta expansions agree through q512; U2 relations through q256
+Gamma0(11): index12 cusps2 elliptic0/0 genus1
+Gamma0(22): index36 cusps4 elliptic0/0 genus2; old dimension2, new0 (cited)
+U2 matrix: ((-2, 1), (-2, 0)) ; characteristic polynomial X^2+2X+2
+U2^4=-4I; U2^8=16I; no nonzero pointed invariant real cone
+mod3: golden after SWAP; order8; one nonzero eight-point orbit
+mod9: trace and determinant obstruct golden conjugacy
+positive eight-state cycle P: P^8=16I, AJ=JP; J is integrally surjective
+J maps the positive cone onto the whole real plane; positivity is lost at quotient
+ordered Collatz carriers12=(9,8,5),21=(9,8,7); guarded APs distinct
+same target5: source3 grows, source13 shrinks
+No claim of new positive Collatz weights or universal ROOT coverage
+checks: 831

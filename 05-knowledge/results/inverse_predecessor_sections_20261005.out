@@ -1,0 +1,185 @@
+{
+  "certified_heavy_size_tail_examples": [
+    {
+      "K": 1,
+      "lambda_atom": "1/6",
+      "n": 5,
+      "t": 0,
+      "z": 3
+    },
+    {
+      "K": 10,
+      "lambda_atom": "1/429",
+      "n": 1398101,
+      "t": 1,
+      "z": 932067
+    },
+    {
+      "K": 136,
+      "lambda_atom": "2/1313967",
+      "n": 10118067147009005577705530764705827638762535620063226673186522967390126485443794261,
+      "t": 15,
+      "z": 6745378098006003718470353843137218425841690413375484448791015311593417656962529507
+    }
+  ],
+  "exact_checks": 47759,
+  "formal_array_adaptive_controls": 1911,
+  "increasing_unit_rays": [
+    {
+      "end_after16": 23363825,
+      "exponents": [
+        4,
+        3,
+        2,
+        5,
+        2,
+        4,
+        4,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        2,
+        5,
+        2
+      ],
+      "start": 1
+    },
+    {
+      "end_after16": 62303533,
+      "exponents": [
+        3,
+        2,
+        5,
+        2,
+        4,
+        4,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        2,
+        5,
+        2,
+        3
+      ],
+      "start": 5
+    },
+    {
+      "end_after16": 89368837,
+      "exponents": [
+        4,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        2,
+        2,
+        3,
+        5,
+        2,
+        5,
+        4,
+        2,
+        4
+      ],
+      "start": 7
+    }
+  ],
+  "malformed_controls": 10,
+  "palette_exponents_rows_0_1_2": {
+    "1": [
+      6,
+      2,
+      4
+    ],
+    "2": [
+      5,
+      1,
+      3
+    ],
+    "4": [
+      4,
+      6,
+      2
+    ],
+    "5": [
+      1,
+      3,
+      5
+    ],
+    "7": [
+      2,
+      4,
+      6
+    ],
+    "8": [
+      3,
+      5,
+      1
+    ]
+  },
+  "ray_controls": 192,
+  "root_ray_fixed_cap_escape_and_adaptive_repair": [
+    {
+      "K": 1,
+      "first3_mass_fraction": "4/5",
+      "last_selected_source_bits": 2,
+      "minimal_half_mass_count": 1,
+      "target_bits": 3
+    },
+    {
+      "K": 4,
+      "first3_mass_fraction": "7/12",
+      "last_selected_source_bits": 12,
+      "minimal_half_mass_count": 3,
+      "target_bits": 9
+    },
+    {
+      "K": 10,
+      "first3_mass_fraction": "13/35",
+      "last_selected_source_bits": 28,
+      "minimal_half_mass_count": 5,
+      "target_bits": 21
+    },
+    {
+      "K": 31,
+      "first3_mass_fraction": "17/105",
+      "last_selected_source_bits": 88,
+      "minimal_half_mass_count": 14,
+      "target_bits": 63
+    },
+    {
+      "K": 100,
+      "first3_mass_fraction": "103/1820",
+      "last_selected_source_bits": 284,
+      "minimal_half_mass_count": 43,
+      "target_bits": 201
+    },
+    {
+      "K": 301,
+      "first3_mass_fraction": "304/15555",
+      "last_selected_source_bits": 852,
+      "minimal_half_mass_count": 126,
+      "target_bits": 603
+    }
+  ],
+  "scope": "Sections and conditional weight transport proved; no universal positivity claim.",
+  "sharp_bounds": {
+    "any": "4/3",
+    "divisible": "64/3",
+    "growing_unit": "32/3",
+    "unit": "16/3"
+  },
+  "target_universe": {
+    "count": 1365,
+    "positive_odd_units_below": 4096
+  }
+}
+PASS
