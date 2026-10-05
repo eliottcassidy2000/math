@@ -1,0 +1,15 @@
+complete binary-prefix bijections depths1..10: 2046 ; independent isometry pairs 32640
+all positive valuation words of cost1..11: 2047 ; exact geometric probability checks 6141
+all controller words lengths1..4: 780 ; native 695
+primitive native masses: naive sum 153/1024 ; true union 17/128 ; first-letter funder union HABL 25/1024 ; retained union cells ((11, 16), (7, 256))
+incoming six-letter J extension: words lengths1..4 1554 ; native 1316 ; 32 literal J joins; terminal-J likelihood factor3/2
+tilted likelihood: coefficient3^r/2^A at valuation boundaries; native terminal-L factor9/8; 19 exact martingale-tail controls
+hostiles: carry5 versus7; L/LG same guard with endpoints123/139; formula L(27)=15 lacks native guard; -1 fixed despite expanding slope; root code(01)^infinity
+NUMERICAL (mean,frequency-set dimension,coefficient drift,local dim z=.5,local dim z=.25)
+(1, 0.0, 0.584962500721, 1.0, 0.415037499279)
+(1.5, 0.918295834054, 0.084962500721, 1.0, 0.943358332853)
+(1.584962500721, 0.949955527188, 0.0, 1.0, 1.0)
+(2, 1.0, -0.415037499279, 1.0, 1.207518749639)
+(3, 0.918295834054, -1.415037499279, 1.0, 1.471679166426)
+(4, 0.811278124459, -2.415037499279, 1.0, 1.60375937482)
+PROVED scopes: exact code/guard information; fixed arithmetic inputs remain computable; no probabilistic Collatz conclusion

@@ -15,8 +15,9 @@ carried by few parity words, so Z_n(q) ~ sum_words 2^(-q S_n) = (2^q - 1)^-n; in
 with the transition exactly at q = 2 because sum_a 4^-a = 1/3 = 3^-(2-1).  Legendre: alpha(q) = tau'(q) =
 2^q ln 2 / ((2^q - 1) ln 3), f = q alpha - tau; at q = 2: alpha = 4/(3 log_2 3) = 1/(p log_2 3) with p = 3/4, and
 2 - H(3/4) = (3/4) log_2 3 exactly (the critical valuation-one frequency 3/4 = the energy-weighted step law 3 4^-a).
-This script evaluates a valuation-truncated exact recursion in float64 to n = N.
-The partition functions and slopes are numerical, not exact rational certificates.
+This script approximates Z_n(q) through n = N with float64 arithmetic and valuations truncated at A.
+The infinite recursion is exact; these finite numerical slopes are not certified limits or a proved spectrum.
+See the corrected companion note for the q >= 1 moment bound and the additional hypotheses needed for Legendre claims.
 Usage: python collatz_syracuse_multifractal_20261005.py [N=13] [A=60]
 """
 import sys, math, time
@@ -32,7 +33,7 @@ def main():
     qs = [0.5, 1.0, 1.5, 1.9, 2.0, 2.1, 2.5, 3.0, 4.0, 6.0, 8.0]
     def tau_conj(q):
         return (q - 1) if q <= 2 else math.log(2 ** q - 1) / math.log(3)
-    P(f"Syracuse law mu_n on Z/3^n, exact recursion (valuations <= {A}), n <= {N}; conjecture tau(q) = q-1 (q<=2), log_3(2^q-1) (q>=2)")
+    P(f"Syracuse law mu_n on Z/3^n, float64 numerical recursion (valuations <= {A}), n <= {N}; conjecture tau(q) = q-1 (q<=2), log_3(2^q-1) (q>=2)")
     mu = np.array([1.0])            # n = 0
     Z_prev = None
     rows = []
@@ -66,7 +67,7 @@ def main():
         Dq = tau_conj(q) / (q - 1) if q != 1 else 1.0
         P(f"  {q:<5} {tau_conj(q):.4f}     {vals} {Dq:.4f}")
     P("")
-    P(f"max atom at c = -1: mu_n(-1) 2^n -> {rows and amax * 2.0 ** N:.4f} (the L^inf local dimension log_3 2 = {math.log(2)/math.log(3):.4f}); D_inf conjectured = log_3 2")
+    P(f"finite-level largest residue mass times 2^n: {amax * 2.0 ** N:.4f} at c={cmax}; c=-1: {cmax == 3 ** N - 1}; conjectured D_inf = log_3 2 = {math.log(2)/math.log(3):.4f}")
     H = lambda p: -p * math.log2(p) - (1 - p) * math.log2(1 - p)
     a = math.log2(3)
     P(f"exact identities: 2 - H(3/4) = {2 - H(0.75):.10f} = (3/4) log_2 3 = {0.75 * a:.10f}; alpha(2) = 4/(3 log_2 3) = {4 / (3 * a):.6f}; f(alpha(2)) = H(3/4)/((3/4) log_2 3) = {H(0.75) / (0.75 * a):.6f}; h* = H(1/log_2 3) = {H(1 / a):.6f}")

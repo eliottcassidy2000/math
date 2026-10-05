@@ -28,6 +28,14 @@ merges confirmed against the orbits, `10,000` deep-cell members); author-audited
 The calculus changes the FORM of the universal obligations (one checkable fusion relation per multiplier event),
 not their nature; the one dynamical content found is the sheet commutator and its sibling automaton.**
 
+> **Targeted correction, 2026-10-05:** the sibling automaton detects one
+> sufficient common-future repair. Its BREAK outcome does not exclude other
+> actual-edge repairs or later orbit intersections. The former section5
+> elimination iff is refuted by x=7 below; TheoremE's merge predicate is
+> scoped to the maintained-relation automaton. The exact counterexample is
+> replayed in [the selector audit](vitali_selector_certificate_20261005.md).
+> This is not an independent audit of the other probabilities or censuses.
+
 ---
 
 ## 0. What is new, in one screen
@@ -186,7 +194,21 @@ exact audit in the prefix-mass follow-up. □ Measured: detector success `0.5000
 `k`-step climb, which may already be below `x` (`x = 255`: climb to `4373 = 4 * 1093 + 1`, then `205`): the move
 reveals that half of each deep cell shares its post-climb orbit with its shadow, and supplies no additional descent beyond that already present in the common-future paths.
 
-**Consequence for the receipts.** An automaton merge supplies actual common-future paths that can be used in a stock-supported repair of a `x3` event; it is a sufficient detector, not an iff criterion for eliminating `R(3,x)`. In the frozen census, among the `21,676` `x3` events of the universal receipts below `2^16` only `794`
+**Consequence for the receipts, scope-corrected.** An automaton merge supplies
+a particular actual common-future repair. BREAK only loses its tracked
+relation; it does not characterize all possible actual-edge repairs. For
+example, x=7 gives U_+(x)=11 and sheet pair (17,1), so 17=2^4*1+1 immediately
+BREAKs. Nevertheless the checked actual ROOT words Q_21=(6), Q_3=(1,4),
+Q_7=(1,1,2,3,4) satisfy
+
+    boundary(Q_21-Q_3-Q_7) = [21]+[1]-[3]-[7] = R(3,7).
+
+Replace the minus-sheet path of3 by its checked plus-sheet path Q_3 and
+subtract this signed boundary repair; the resulting receipt is the
+nonnegative actual path Q_7. This uses those explicit root certificates,
+not an unproved automatic repair rule.
+
+The original restricted census remains: among the `21,676` `x3` events of the universal receipts below `2^16` only `794`
 (`3.7%`) are at a stage source `x_i = 3 mod 4` whose chain merges, because the code inserts `x3` at classes without
 plain descent, where the merge, when it happens, lands at the end of a climb. The sibling repair is real and
 rare.

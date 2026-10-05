@@ -1,7 +1,7 @@
 ---
 id: THM-398
-title: LRC reduces to C′ (multiple-of-n ⟹ loose); the dominance-dodge lemma
-status: PROVED (the reduction and the dodge lemma); C′ itself remains CONJECTURE
+title: LRC reduces to primitive C′ (gcd-normalized multiple-of-n implies loose); the dominance-dodge lemma
+status: PROVED scoped primitive-C′ reduction and dodge criteria; unrestricted C′ REFUTED; primitive C′ OPEN
 source: opus-2026-06-03-S572
 depends_on:
   - THM-369   # divisibility / 1-clock witness
@@ -14,6 +14,17 @@ related:
 ---
 
 # THM-398 — LRC reduces to C′, and the dominance-dodge lemma
+
+> **Correction lineage, 2026-10-05.** The former unrestricted C′ is false:
+> n=3, S={3,6} has M=1/3 despite containing a multiple of3 (also n=2,
+> S={2}). Only the **primitive** candidate gcd(S)=1 is retained below,
+> still OPEN. The reduction now normalizes by gcd first. The fixed-radius
+> danger arcs are not a fine Vitali cover; the proved arc-containment facts
+> use connectedness and interval lengths. Coverage means M<=1/n, and means
+> tightness only with an additional M>=1/n hypothesis. Endpoint tests use
+> ordinary absolute distances to one common lifted arc centre. Historical
+> sample percentages are sample statements, not universal coverage rates.
+> See [the exact selector/coverage audit](../../05-knowledge/results/vitali_selector_certificate_20261005.md).
 
 ## 0. Setup and definitions
 
@@ -34,10 +45,19 @@ has all `‖v t‖ > 1/n` so `M > 1/n`; conversely the optimum `t*` with
 `min ‖v t*‖ = M > 1/n` has an open neighbourhood still in `G` by continuity). We call
 `S` **loose** if `M(S) > 1/n` and **tight** if `M(S) = 1/n`.
 
-> **C′ (conjecture).** If `n | v` for some `v ∈ S`, then `M(S) > 1/n` (`S` is loose).
+> **Primitive C′ (OPEN candidate).** If `gcd(S)=1` and `n | v` for some
+> `v ∈ S`, then `M(S) > 1/n` (`S` is loose).
 
-C′ was observed in S564 as a *property of tight sets* ("tight ⟹ no multiple of `n`").
-Here we prove its converse direction is the entire conjecture.
+The primitive qualification is necessary: M(dS)=M(S) because t->dt is
+surjective on the circle. Thus S={3,6}=3{1,2} has M=1/3. Explicitly, on
+0<=u<=1/2, either u<=1/3 and min(||u||,||2u||)<=u<=1/3, or u>=1/3 and
+||2u||=1-2u<=1/3; equality occurs at u=1/3. This refutes the older unrestricted
+candidate, not LRC. Throughout the candidate/reduction discussion below,
+C′ means the primitive candidate; the local dodge criteria need no gcd assumption.
+
+C′ was historically observed in S564 as a proposed *property of tight sets*;
+the unrestricted statement "tight implies no multiple of n" is refuted above.
+The implication to LRC below is a sufficient reduction, not an equivalence with LRC or a proof of primitive C′.
 
 ## 1. Lemma A (the 1-clock witness; restatement of THM-369)
 
@@ -49,32 +69,36 @@ Here we prove its converse direction is the entire conjecture.
 
 ## 2. Theorem (the reduction): **C′ ⟹ LRC(n)**
 
-*Proof.* Let `S` be any speed set.
-- If no `v ∈ S` is a multiple of `n`: `M(S) ≥ 1/n` by Lemma A.
-- If some `v ∈ S` is a multiple of `n`: `M(S) > 1/n ≥ 1/n` by C′.
+*Proof.* Let S be any speed set, d=gcd(S), and S0={v/d:v in S}.
+Then gcd(S0)=1 and M(S)=M(S0), by surjectivity of t->dt on the circle.
+- If no v in S0 is a multiple of n, apply Lemma A to S0.
+- Otherwise apply primitive C′ to S0, obtaining M(S0)>1/n.
 
 Either way `M(S) ≥ 1/n`; this is LRC(n). ∎
 
 **Remark (why this is a genuine reduction).** The hypothesis C′ constrains only the
-*proper subclass* of speed sets that contain a multiple of `n` — precisely the sets
+*proper subclass* of primitive speed sets that contain a multiple of `n` — precisely the sets
 on which the elementary `1/n`-clock witness fails. All of LRC's difficulty is thereby
 isolated into a single structural statement about the distinguished runner that
 vanishes on the whole `n`-clock. (Verified: 0 tight-with-multiple over exhaustive
-small boxes and large samples, `n = 4..14`, every multiplier size — HYP-2102.)
+the historical tested boxes and samples, `n = 4..14` — HYP-2102; those finite
+claims do not establish all multiplier sizes.)
 
-**Remark (the Vitali handoff — S551o).** This split *is* the "Vitali wall" of S551o:
-LRC = (positive-measure bulk, settled by *measure*) ∪ (measure-zero core, settled by
-*construction*), with the Vitali set marking the handoff. THM-398 *locates the
-handoff*: it is the equation **`n | v`**. Configs with `n ∤ v` are handled by Lemma A
-— the `t=1/n` construction, which is *measure-blind* and so reaches the measure-zero
-core (the worry-set has no multiple of `n`, S564). Configs with `n | v` are pushed to
-the *measure* side (C′). On that side the danger of `v=nw` is a **periodic,
-bounded-eccentricity arc family** (a genuine Vitali cover), so the **Vitali covering
-lemma / Lebesgue density theorem** is the natural tool — see §3–§4 and HYP-2104.
+**Remark (the historical Vitali handoff, scope-corrected).** The useful split
+is between a strict open safe set, whose nonemptiness is detected by positive
+Lebesgue measure, and a weak safe set at equality, whose nonemptiness may be
+supported only on boundary points. Lemma A supplies a concrete weak witness
+on the normalized no-multiple branch. Primitive C′ conjecturally gives strict
+slack on the other branch; it is not proved by a measure analogy. For fixed v,
+the danger family has a fixed positive radius1/(nv), so it does not provide
+arbitrarily small covering sets at each point as a fine Vitali cover would.
+The interval arguments below are elementary and do not invoke the Vitali
+covering theorem or Lebesgue density theorem. No nonmeasurable Vitali set is
+constructed. HYP-2104 records the same corrected distinction.
 
 ## 3. Lemma B (the dominance-dodge): a partial proof of C′ — **and more**
 
-For a speed set `S` and `v ∈ S` write `V'(v) = max(S \ {v})`.
+For sections3 onward assume n>=3, so S\{v} is nonempty. For a speed set `S` and `v ∈ S` write `V'(v) = max(S \ {v})`.
 
 > **Lemma B.** Assume LRC(n−1). If some `v ∈ S` satisfies `v > (n-1)·V'(v)`, then
 > `M(S) > 1/n` (`S` is loose). *(No divisibility hypothesis: this holds for any
@@ -94,9 +118,9 @@ So on the open interval `I = (t₀ - δ, t₀ + δ)` every runner of `S'` is `> 
 
 *Dodging v.* The danger set of `v` is `D_v = { t : ‖v t‖ < 1/n }`, a union of open
 arcs of radius `ρ := 1/(n v)` centred at the points `k/v`, separated by safe gaps.
-An interval can lie inside `D_v` only if it lies inside a *single* arc (a gap is
+An interval can lie inside the closed danger set `D̄_v` only if it lies inside a *single* closed arc (a gap is
 `v`-safe, so an interval spanning a gap meets the `v`-safe set). Hence if
-`|I| = 2δ > 2ρ`, i.e. **`δ > ρ`**, then `I ⊄ D_v`, so `I` contains a point with
+`|I| = 2δ > 2ρ`, i.e. **`δ > ρ`**, then `I ⊄ D̄_v`, so `I` contains a point with
 `‖v t‖ > 1/n` as well — and an open neighbourhood of it, since `I ∩ (circle ∖ D̄_v)`
 is open and nonempty.
 
@@ -125,26 +149,27 @@ Inspecting the proof, Lemma B only used that *some* component interval of `G(S')
 > then `S` is loose. *(Proof identical: that long interval cannot sit inside one
 > `v`-arc, so it meets `G(S)`.)*
 
-**Vitali-covering iff (HYP-2104).** Because `G(S\{v})` is a finite union of intervals
+**Connected-interval containment (scope-corrected HYP-2104).** Because `G(S\{v})` is a finite union of intervals
 and `D_v`'s gaps are open and nonempty, *an interval of `G(S\{v})` lies in `D_v` iff
-it fits inside a single arc*. So Criterion B′ is the Vitali-covering direction, and a
+it fits inside a single arc*. Criterion B′ is a sufficient length obstruction, not a Vitali theorem or a length-only iff. A
 multiple-of-`n` config is tight (measure-0) *only if* every component of `G(S\{v})` is
-both short **and** arc-aligned. Quantified: B′ already proves looseness for **72%
-(n=6) → 96.8% (n=14)** of multiple-of-`n` configs, and the all-short residual is
-**never tight** (0 across n=6..14) — `lrc_vitali_covering_residual_s573.py`.
+both short **and** arc-aligned. The historical experiment reported criterion
+successes for **72% (n=6) to96.8% (n=14)** of its sampled rows and no tight
+all-short residual among those samples — `lrc_vitali_covering_residual_s573.py`.
+These percentages do not measure coverage of the unrestricted infinite class.
 
 This yields the honest **dichotomy** for a multiple-of-`n` config `S` (`v = nw`):
 
 1. **Long-interval case** — `G(S\{v})` has a component longer than `2/(n·nw) = 2/(n²w)`:
    `S` is loose by Criterion B′. *(Always holds when `v` dominates; Lemma B.)*
 2. **All-short case** (the **residual**) — every component of `G(S\{v})` is `≤ 2/(n²w)`:
-   the dodge of a single interval is not guaranteed. Here `S` is still loose
-   (verified), but for the equidistribution reason
+   the dodge of a single interval is not guaranteed. The historical sampled rows were loose; this does not prove all rows in
+   this case loose. The proposed heuristic was
    ```
    μ(G(S)) = μ(G(S')) − μ(G(S') ∩ D_v),   μ(G(S') ∩ D_v) ≈ (2/n)·μ(G(S')) < μ(G(S')),
    ```
-   i.e. the single arithmetic progression of thin arcs `{k/(nw)}` (period `1/(nw)`,
-   total danger `2/n`) cannot *align to cover* the fixed union of intervals `G(S')`.
+   The unproved primitive C′ claim is that these arcs cannot align to cover
+   the safe intervals for every primitive multiple-of-n configuration.
    Proving this non-covering is the remaining open core of C′ — a discrepancy /
    three-distance statement about one AP against a fixed open set.
 
@@ -163,7 +188,7 @@ Each endpoint of a component of `G(S')` carries an **owner**: a left endpoint is
 `j/(nw)`" *translates*, on clearing denominators (`× n u w`), into the **endpoint-owner
 congruences**
 ```
-|w(k_a n + 1) − j·u_a| < u_a/n     and     |w(k_b n − 1) − j·u_b| < u_b/n.
+|w(k_a n + 1) − j·u_a| <= u_a/n     and     |w(k_b n − 1) − j·u_b| <= u_b/n.
 ```
 For an owner `u < n` the right side is `< 1`, and the bracket is an integer, so it is
 **forced to 0** — the endpoint must equal the arc centre: `a = j/(nw)` (resp. `b`).
@@ -194,7 +219,7 @@ proved criteria** (Lemma C ∪ Criterion B′), multiple-of-`n` configs:
 | **14** | **81.3%** | **99.0%** | **19** |
 
 The proved coverage **grows toward the frontier**: at `n=14` the two criteria
-discharge `99%` of multiple-of-14 configs. The residual (`~1%`) is exactly the configs
+discharge `99%` of the sampled multiple-of-14 configs. The sampled residual (`~1%`) is exactly the configs
 where every component is short **and** every component has a **large** (`≥ n`) binding
 owner — the only regime where the congruence slack permits an off-centre fit.
 
@@ -204,13 +229,13 @@ The cover condition has an exact one-line form per component. Let `C_i = (a_i, b
 a component of `G(S')`, with midpoint `m_i = (a_i+b_i)/2` and length `ℓ_i = b_i-a_i`.
 
 > **Lemma D (endpoint-cover criterion).**
-> `C_i ⊆ D_v  ⟺  ∃ j∈ℤ: ‖v a_i − j‖ ≤ 1/n and ‖v b_i − j‖ ≤ 1/n  ⟺  ‖v m_i‖ ≤ 1/n − (v/2)ℓ_i.`
-> *Proof.* `C_i ⊆` arc `(j/v − 1/(nv), j/v + 1/(nv))` ⟺ `v a_i, v b_i ∈ (j−1/n, j+1/n)`;
+> `C_i ⊆ D_v  ⟺  ∃ j∈ℤ: |v a_i − j| ≤ 1/n and |v b_i − j| ≤ 1/n  ⟺  ‖v m_i‖ ≤ 1/n − (v/2)ℓ_i.`
+> *Proof.* `C_i ⊆` arc `(j/v − 1/(nv), j/v + 1/(nv))` ⟺ `v a_i, v b_i ∈ [j−1/n, j+1/n]` (the component is open, so its endpoints may be on the arc boundary);
 > a common integer `j` exists iff the interval `[v b_i − 1/n, v a_i + 1/n]` — midpoint
 > `v m_i`, half-length `1/n − (v/2)ℓ_i` — contains an integer, i.e. `‖v m_i‖ ≤ 1/n −
 > (v/2)ℓ_i`. ∎
 
-Hence **`S` is tight ⟺ every component satisfies Lemma D**, and the **circuit-positivity
+Hence **M(S)<=1/n iff every component satisfies Lemma D**; this is tightness only when M(S)>=1/n is separately known. The **circuit-positivity
 margin**
 ```
 P(S) := max_i ( ‖v m_i‖ + (v/2)ℓ_i − 1/n )      satisfies   P(S) > 0  ⟺  S is loose.
@@ -277,7 +302,7 @@ functional**
 ```
 
 > **Lemma G.** `G(v) := μ(safe set of S = S'∪{v}) = Φ(C)`, exactly.
-> *Proof.* `safe(S) = G(S') \ D_v`; per component `μ(C_i \ D_v) = (1/v)·(`uncovered
+> *Proof.* `safe(S) = G(S') \ D̄_v`; replacing the closed danger by `D_v` changes only finitely many boundary points and not measure. Per component `μ(C_i \ D_v) = (1/v)·(`uncovered
 > phase of `(v a_i, v b_i)` against the band `B)`; sum over the circuit. ∎
 
 **Verified exactly** (`Φ == μ(safe)`, `900/900` each `n=6..14`, zero error —
@@ -288,12 +313,12 @@ over the cover circuit. Consequences:
 - **`Φ(C) > 0 ⟺ S loose`**, and `Φ` gives the *exact* loneliness measure, not just the
   sign that `P(S)` gave (`φ_i>0 ⟺` the `i`-th `P`-term `>0`).
 - **Kernel.** `ker Φ := {Φ(C)=0}` `= {`every `φ_i=0}` `= {`every component's phase
-  interval `⊆ B}` `=` the **tight / worry-set**. So **C′ ⟺ Φ(C) > 0 for every
-  multiple-of-`n` config**, i.e. `ker Φ` contains no `n|v` config. The conjecture is now
-  *"the gap functional has empty kernel on the multiple-of-`n` class."*
+  interval `⊆ B}` `=` the **not-loose set M(S)<=1/n**. So **primitive C′ ⟺ Φ(C) > 0 for every
+  primitive multiple-of-`n` config**, i.e. `ker Φ` contains no primitive `n|v` config. The conjecture is now
+  *"the gap functional has empty kernel on the primitive multiple-of-`n` class."*
 - **Optimisation form.** `Φ` is an explicit piecewise-linear (sum-of-ReLU) functional of
-  the circuit data `{v a_i, v b_i}`; minimising `Φ` over multiple-of-`n` configs is an
-  LP-flavoured problem whose optimum being `> 0` is exactly C′.
+  the circuit data `{v a_i, v b_i}`; pointwise positivity of `Φ` on all primitive multiple-of-`n` configs is
+  exactly primitive C′. This does not assert a positive uniform infimum.
 
 ## 4.96. The dual n-clock cap pigeonhole (Lemma H)
 
@@ -317,7 +342,7 @@ Inside each `I_r`, the danger set `D_{nw}` has exactly `w` caps, each of length
 > μ(G(S)) >= max_r ( μ(G(S') ∩ I_r) - 2/n^2 ).
 > ```
 > *Proof.* `D_{nw}∩I_r` has measure exactly `2/n^2`.  Any excess of `G(S')` in
-> that cell cannot be covered by `D_{nw}`, so it remains in `G(S')\D_{nw}=G(S)`. ∎
+> that cell cannot be covered by the closed danger set either (the boundary is finite), so positive measure remains in `G(S')\D̄_{nw}=G(S)`. ∎
 
 This is the aggregate counterpart to B′: even when every component is short, too many
 short components may overload the caps in one `n`-clock cell.
@@ -383,12 +408,13 @@ by the origin-bisection face rather than by total mass.
 |---|---|
 | Lemma I (origin-bisection upper/lower cap certificate) | **PROVED** (sec 4.97), routes 23/5000 sampled multiple-of-14 rows after total-cell cap fails |
 | Lemma A (no-multiple ⟹ `M ≥ 1/n`) | **PROVED** (THM-369) |
-| Reduction **C′ ⟹ LRC(n)** | **PROVED** (§2) |
+| Reduction **primitive C′ ⟹ LRC(n)** | **PROVED** (§2), after gcd normalization |
+| Unrestricted C′ without gcd normalization | **REFUTED**, S={3,6}, n=3 |
 | Lemma B / Cor B1 (dominant multiple dodge, uses LRC(n−1)) | **PROVED** (§3) |
 | Cor B2 (one dominant runner ⟹ loose) | **PROVED** (§3), verified 1500×5 |
 | Criterion B′ (long component ⟹ loose) | **PROVED** (§4) |
-| Lemma C (both-small-owner component ⟹ loose, w-free) | **PROVED** (§4½), covers 81% at n=14 |
-| Lemma C ∪ B′ | **PROVED**, covers **99%** of multiple-of-14 configs |
+| Lemma C (both-small-owner component ⟹ loose, w-free) | **PROVED** (§4½); historical sample coverage 81% at n=14 |
+| Lemma C ∪ B′ | **PROVED**; historical coverage **99%** of sampled multiple-of-14 configs |
 | Lemma D (exact endpoint-cover criterion + circuit positivity `P>0 ⟺ loose`) | **PROVED** (§4¾), verified 100% n=6..14 |
 | Summed corollary (tight ⟹ avg midpoint v-phase `< 1/n`) | **PROVED**; actual avg `≈0.245 ≫ 1/n` |
 | Lemma E (one small owner off lattice ⟹ loose) | **PROVED** (§4⅞), S581 route |
@@ -396,10 +422,10 @@ by the origin-bisection face rather than by total mass.
 | B′ ∪ C ∪ E ∪ F | **PROVED criteria**, covers **100%** of S581 sampled multiple-of-14 configs |
 | Lemma G (`G(v) = Φ(C)`, exact circuit-to-gap functional) | **PROVED** (§4.95), verified exact 900/900 n=6..14 |
 | Lemma H (dual n-clock cell cap pigeonhole) | **PROVED** (§4.96), routes 2460/2500 sampled multiple-of-14 rows |
-| C′ ⟺ `ker Φ` has no multiple-of-`n` config (= `Φ>0` always) | **OPEN** (the gap functional's kernel; sum-of-ReLU optimisation) |
+| Primitive C′ ⟺ `ker Φ` has no primitive multiple-of-`n` config (= pointwise `Φ>0`) | **OPEN** (the gap functional's kernel; sum-of-ReLU optimisation) |
 
-So LRC(14) now sits on a single open assertion: *the thin evenly-spaced danger arcs
-of a multiple of 14 cannot cover the safe set of the other twelve runners* (the
+Thus one sufficient route to LRC(14) is the still-open primitive assertion: *the thin evenly-spaced danger arcs
+of a multiple of14 in a gcd-normalized speed set cannot cover the strict safe set of the other twelve runners* (the
 all-short case), with the long-interval/dominant case fully proved from the literature's
 LRC(13).
 
