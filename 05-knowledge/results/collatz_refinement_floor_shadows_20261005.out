@@ -1,0 +1,42 @@
+== S1. Tower conjugation: 2-adic cylinder of n <-> 3-adic class of U^t(n) ==
+  exact on 624 (n,t,s) triples: prefix fixed, U^t(n+2^(A+1)s)=U^t(n)+2*3^t s, f_r multiplicative with the prefix price
+  W(n) <= 2/(L+2): an epsilon-floor forces tau(n) <= 2/epsilon - 1
+== S2. Tail cost of the refinement criterion (Codex (10)) ==
+  lambda(27) = W(27) = 1/11274451650 = 8.870e-11 (27 is a leaf; 41 odd steps)
+  q=10^10 : R(q) >= 7.649e-04 from the two-step family alone
+  q=10^20 : R(q) >= 1.837e-04 from the two-step family alone
+  q=10^50 : R(q) >= 2.829e-05 from the two-step family alone
+  q=10^100: R(q) >= 7.716e-06 from the two-step family alone
+  q=10^200: R(q) >= 2.008e-06 from the two-step family alone
+  criterion (10) at the atom 27 needs k0 ~ 1.50e+05 sibling levels, i.e. q >~ 4^(k0) = 10^90407
+  fixed price r=0.5000: f_r(27)=3.553e-15, root-ray tail ~ q^(-0.500), needs q >~ 7.92e+28
+  fixed price r=0.2500: f_r(27)=1.535e-10, root-ray tail ~ q^(-1.000), needs q >~ 6.52e+09
+  fixed price r=0.0625: f_r(27)=1.762e-11, root-ray tail ~ q^(-2.000), needs q >~ 2.38e+05
+== S3. Shadow theorem (rising words of length <= 12) ==
+  rising words: 68722
+  274888 exact forward/backward shadow checks; m=x_w mod 2^(A+1) -> n=x_w mod 3^l bijectively
+  cycle points: (1)->-1, (1,2)->-5, (2,1)->-7, (1,1,1,2,1,1,4)->-17, (1,1,2)->-19/11
+  density of the backward-descent set from cones of depth <= l:
+    l=1: 0.33333  l=2: 0.44444  l=3: 0.44444  l=4: 0.45679  l=5: 0.45679  l=6: 0.45953  l=7: 0.46319  l=8: 0.46319  l=9: 0.46461  l=10: 0.46461  l=11: 0.46531  l=12: 0.46645
+  new cone classes per depth: {1: 1, 2: 1, 3: 0, 4: 1, 5: 0, 6: 2, 7: 8, 8: 0, 9: 28, 10: 0, 11: 124, 12: 602}
+== S4. Census of D = {odd n : some odd m<n has n on its orbit} ==
+  below 2^24 (0.9s, max excursion 2.011e+13): dens(D) = 0.46867; among units 0.70300; n=1 mod 3: 0.40600; n=2 mod 3: 1.00000
+  first unit basin minima (no smaller ancestor): [1, 7, 19, 25, 37, 43, 55, 73, 79, 97, 109, 115, 127, 133, 145, 151, 163, 169, 181, 187, 199, 217, 223, 235, 241]
+  dens(D) by dyadic block: [2^18,2^19): 0.4685 [2^19,2^20): 0.4687 [2^20,2^21): 0.4686 [2^21,2^22): 0.4687 [2^22,2^23): 0.4687 [2^23,2^24): 0.4687
+== S5. Forward stopping depth versus backward descent depth (random odd n < 2^40) ==
+  forward odd-step stopping depth: mean 3.568, P(>5)=0.1523, P(>10)=0.0683, P(>20)=0.0211
+  backward descent depth (<= 12): P(none)=0.5336, P(=1)=0.3346, P(=2)=0.1114, P(>=3)=0.0204
+  depth  3: forward-unpaid 0.2562, forward-and-backward-unpaid 0.1374
+  depth  5: forward-unpaid 0.1523, forward-and-backward-unpaid 0.0824
+  depth  8: forward-unpaid 0.0917, forward-and-backward-unpaid 0.0500
+  depth 12: forward-unpaid 0.0559, forward-and-backward-unpaid 0.0311
+== S6. Segment closures: defect(y) = nu(y) - nu{starts exiting at y} ==
+  rule: stopping (exit at first value below the start)
+    identity K W = (through) + (exit mass) checked at 2046 targets; violations (exit mass > nu(y)): 509
+    first violations (y, exit/nu): [(5, '1.845'), (19, '1.692'), (23, '2.532'), (37, '2.379'), (43, '1.227'), (47, '1.517'), (61, '2.692'), (65, '1.267')]
+  rule: single rise (exit at the first valuation >= 2)
+    identity K W = (through) + (exit mass) checked at 2046 targets; violations (exit mass > nu(y)): 540
+    first violations (y, exit/nu): [(13, '5.267'), (19, '1.129'), (31, '1.268'), (37, '1.379'), (43, '1.102'), (47, '1.517'), (49, '1.267'), (65, '1.267')]
+== Summary ==
+  checks: 10865520, total time 3.3s
+  json written: 05-knowledge/results/collatz_refinement_floor_shadows_20261005.json
