@@ -157,10 +157,16 @@ def make_bits(model, N, Mmax, q=3, u=1, seed=0, Q=None):
             bits[j] = pack(x, W)
     elif model == "collatz":
         # column j+1 <-> level n = N - j; 2-adic unit -u 3^-n, correction u 3^-n
+        inv3 = pow(3, -1, mod)                        # one inverse; then one multiplication per level
+        xinv = pow(inv3, N - (N - 1), mod)            # 3^-1 ... built up below: x_n = 3^-n mod 2^Mmax
+        pows = [None] * (N + 1)
+        pows[1] = inv3
+        for n in range(2, N + 1):
+            pows[n] = (pows[n - 1] * inv3) % mod
         for j in range(N):
             n = N - j
             un = u % 3 ** n if n < 64 else u          # the phase depends on u mod 3^n only
-            x = (-un * pow(3, -n, mod)) % mod
+            x = (-un * pows[n]) % mod
             bits[j] = pack(x, W)
             corr[j] = un * 3.0 ** (-n) if n < 640 else 0.0
     else:

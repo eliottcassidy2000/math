@@ -54,16 +54,19 @@ H1; Collatz). NOT independently audited; audit OWED. Nothing here is a Collatz s
    model) is carried by ever rarer `R`: at level `100` the top `0.1%` of frequencies carry `77%` of it for
    `q = 3`, `45%` for `q = 7`, `30%` for `q = 5`, `27%` for `q = 9`, `34%` for i.i.d. digits; at level `200`,
    `85%` for `q = 3`. The pressure `P(s) = (1/N) log E|f_N|^(2s)` of the `q = 3` tower lies below the others for
-   `s < 1`, meets them at `s = 1` (exactly) and lies above them for `s > 1`: same mean square, a more
-   multifractal distribution. (c) [[PENDING-A]] (d) [[PENDING-P]]
-5. **Mechanism (CONJECTURED, section 4).** The real backward map `y -> (1 + q y)/2^c` with `c ~ geometric(p)`
-   has Lyapunov exponent `gamma(q, p) = log|q| - (log 2)/p`: contracting iff `|q| < 2^(1/p)`, i.e. for `p = 1/2`
-   iff `|q| <= 3`. The exact pair-coherence census (section 3e) shows the law of `Phi mod 1` concentrated above
-   the uniform law at coarse scales exactly for `q = +-3` (and not for `q = +-1`, whose law is uniform). The
-   candidate mechanism is that the typical Fourier decay at a Haar frequency is faster when the real law of the
-   path values is stationary (contracting multiplier) than when it spreads (expanding), with the sign of `q`
-   setting the shape of the stationary law. Decisive test: the biased-coin scan moves the threshold
-   (`q = 3` expanding for `p >= 0.64`, `q = 5` contracting for `p <= 0.43`). [[PENDING-THRESHOLD]]
+   `s <= 0.9` at every level tried and meets them at `s = 1` (exactly): same mean square, a more
+   concentrated distribution. (c) Truncating the valuations to `c <= 2` removes the excess entirely (the step-1 tower then cancels less than i.i.d. digits); it appears with valuation `3`, is `90%` there with `4` and saturates by `6`: the two largest weights do not carry it. (d) Biasing the coin moves the excess smoothly: `0.0158, 0.0103, 0.0049, 0.0019, 0.0008` per level at `p = 0.3, 0.4, 0.5, 0.6, 0.7` for the step-1 tower, while the step-2 tower stays at the i.i.d. value at every `p` -- also at `p = 0.3`, where its real backward map is strongly contracting.
+5. **Mechanism: a conjecture tested and REFUTED in the session (section 4).** The natural candidate -- the
+   real backward map `y -> (1 + q y)/2^c` is contracting exactly for `|q| <= 3` at the Syracuse coin, and the
+   circle law of the path values is concentrated exactly for `q = +-3` (exact census, 3e) -- fails its decisive
+   test: biasing the coin makes the step-2 tower strongly contracting without giving it any excess, and leaves
+   the step-1 tower a smooth excess through its own threshold. What remains is a set of constraints: the excess
+   is specific to `+-3`, carried by valuations `>= 3`, invisible to every pair statistic (the dyadic-shell
+   profile of the mean square is the same for every `q`, PROVED), not arithmetic, and a bulk property of the
+   increments. The local twist relation `omega_(m,j+1) = omega_(m,j) omega_(m-1,j)` (adjacent depths, the
+   Collatz carry automaton; `m-2` for `q = 5`) is the only structural difference left, and a run of `c`
+   halvings contributes `(2^c + q) theta`: the step-1 phases are the step-2 phases with `2^c + 3` for
+   `2^c + 5`. Why that shift changes `E log|sum|` is OPEN.
 6. **Families whose dependency rules close their union, with a common decreasing rank (section 5; typed).**
    With the integer itself as the rank, a union of smaller-child families is closed iff its leak is empty; for
    every bounded-depth portfolio the leak after `k` odd steps has density exactly `P(Bin(floor(k log_2 3), 1/2)
@@ -182,7 +185,12 @@ estimates on `300..1500` (`0.5698`, `0.5726`) mixed the transient in; the asympt
 | rate | 0.5068 | 0.5693 | 0.5727 | 0.5720 | 0.5724 | 0.5722 | 0.5724 | 0.5726 | 0.5729 | 0.5728 | 0.5728 | 0.5721 | 0.5726 | 0.5722 | 0.5722 | 0.5721 | 0.5725 | 0.5726 | 0.5723 | 0.5722 | 0.5722 | 0.5725 |
 
 and `q = -3`: **`0.5647 +- 0.0002`** (the alternating-sign step-1 tower, `x_j = R (-3)^j`, i.e. the `3x-1`
-side). [[PENDING-NEGQ]] At this precision every positive `q >= 5` is within `0.0007` of the universal value
+side). At `N = 1500` (100 seeds, levels `300..1500`, standard errors `0.0003` on the Jensen gap `log(rate/rms)`):
+`q = -1`: gap `-0.0003` (rate `0.5772`: the alternating-sign coherent tower has no Jensen gap at all);
+`q = -3`: gap **`-0.0220`** (rate `0.5648`; excess `0.0138` over the i.i.d. gap `-0.0082`, nearly three times
+the step-1 excess); `q = -5`: `-0.0094` (excess `+0.0012`); `q = -7`: `-0.0099` (`+0.0017`); `q = -9`:
+`-0.0084`; `q = -11`: `-0.0085` (universal). So the alternating-sign towers `-5, -7` carry a small excess
+where `+5, +7` carry at most a marginal one, and `-3` carries the largest. [[PENDING-Q3000-NEG]] At this precision every positive `q >= 5` is within `0.0007` of the universal value
 (the `q = 7, 23, 27, 29, 31, 127, 129` entries at `0.5720-0.5722` are two to three standard errors low on
 levels `200..1000`, where the transient is not yet over). [[PENDING-Q3000-TABLE]]
 
@@ -222,25 +230,83 @@ sampling noise of a mean carried by `0.1%` of the samples).
 |---|---|---|---|---|---|---|---|
 | `q = 3` | `-0.2832` | `-0.5619` | `-0.8343` | `-1.0954` | `-1.3466` | `-1.5947` | **`0.771 / 0.885 / 0.974`** |
 | `q = 5` | `-0.2806` | `-0.5575` | `-0.8307` | `-1.0997` | `-1.3647` | `-1.6264` | `0.304 / 0.585 / 0.885` |
-| `q = 7` | | | | | | | `0.453 / 0.690 / 0.919` |
-| `q = 9` | | | | | | | `0.273 / 0.563 / 0.877` |
-| i.i.d. | | | | | | | `0.341 / 0.632 / 0.903` |
+| `q = 7` | `-0.2810` | `-0.5581` | `-0.8308` | `-1.0978` | `-1.3578` | `-1.6124` | `0.453 / 0.690 / 0.919` |
+| `q = 9` | `-0.2804` | `-0.5572` | `-0.8302` | `-1.0995` | `-1.3651` | `-1.6277` | `0.273 / 0.563 / 0.877` |
+| i.i.d. | `-0.2807` | `-0.5576` | `-0.8303` | `-1.0985` | `-1.3623` | `-1.6225` | `0.341 / 0.632 / 0.903` |
 
-[[PENDING-PRESSURE-ROWS]] At level `50` the shares are `0.295 / 0.545 / 0.842` (`q = 3`), `0.180 / 0.400 /
-0.763` (`q = 5`), `0.154 / 0.391 / 0.769` (i.i.d.); at level `200`, `0.851 / 0.951 / 0.994` for `q = 3`
-[[PENDING-200]]. **Reading.** All models share `E|f_N|^2 = 3^-N` exactly; the step-1 tower distributes it over
-far fewer frequencies, and the concentration grows with the level. Its pressure is below the others for
-`s < 1` (lower typical value), equal at `s = 1`, above for `s > 1` (heavier high moments). This is the
-"heavy-tail effect" that is true: the Jensen gap `lambda - (-(log 3)/2)` is the price of a second moment
-carried by resonant frequencies, and the step-1 tower pays `0.013` per level against `0.008`.
+At level `50` the shares are `0.295 / 0.545 / 0.842` (`q = 3`), `0.180 / 0.400 / 0.763` (`q = 5`),
+`0.154 / 0.391 / 0.769` (i.i.d.); at level `200`, `0.851 / 0.951 / 0.994` (`q = 3`), `0.664 / 0.870 / 0.979`
+(`q = 5`), `0.497 / 0.800 / 0.969` (i.i.d.), with `P(0.5) = -0.5608, -0.5562, -0.5565` and `P(0.75) =
+-0.8344, -0.8293, -0.8300`. **Reading.** All models share `E|f_N|^2 = 3^-N` exactly; every model concentrates
+its second moment on fewer frequencies as the level grows, and the step-1 tower does so fastest (at level `200`
+its top `0.1%` carry `85%`). For `s <= 0.9` its pressure is below the others at every level tried (`50, 100,
+200`); the empirical `P(1)` reproduces the exact `-1.0986` to `+-0.004`, and for `s >= 1` the estimates are
+dominated by the top `0.1%` of samples and are not resolved at these sample sizes (the `s = 1.25` ordering
+changes between levels `100` and `200`). This is the "heavy-tail effect" that is true: the Jensen gap
+`lambda - (-(log 3)/2)` is the price of a second moment carried by rare frequencies, and the step-1 tower pays
+`0.013` per level against `0.008`; it is a statement about the distribution of `|f_N(R)|^2` over `R`, not
+about the per-level increments (3a).
 
 ### 3c. Truncating the valuations (OBSERVED; window kernel, `N = 1500`, 100 seeds)
 
-[[PENDING-A]]
+Valuations restricted to `c <= A` with the weights `2^-c` (unnormalized; the mean-square rate is then
+`(sum_(c<=A) 4^-c)^(1/2)` and the comparison is the Jensen gap `log(rate / rms)`); the window kernel of
+section 1(iii); levels `300..1500`, standard errors `0.00025` on each gap.
+
+| `A` | rms rate | gap, `q = 3` | gap, `q = 5` | gap, i.i.d. | excess of `q = 3` over i.i.d. | `gamma(3, A) = log 3 - (log 2) E[c]` |
+|---|---|---|---|---|---|---|
+| 2 | 0.55902 | `-0.0048` | `-0.0059` | `-0.0056` | **`-0.0008`** (reversed) | `+0.174` |
+| 3 | 0.57282 | `-0.0100` | `-0.0073` | `-0.0082` | `+0.0018` | `+0.009` |
+| 4 | 0.57622 | `-0.0127` | `-0.0079` | `-0.0082` | `+0.0045` | `-0.103` |
+| 6 | 0.57728 | `-0.0136` | `-0.0079` | `-0.0085` | `+0.0051` | `-0.222` |
+| 8 | 0.57735 | `-0.0135` | `-0.0078` | `-0.0086` | `+0.0049` | `-0.266` |
+| 12 | 0.57735 | `-0.0135` | `-0.0077` | `-0.0081` | `+0.0054` | `-0.286` |
+| all | 0.57735 | `-0.0130` | `-0.0079` | `-0.0082` | `+0.0049` (2a) | `-0.288` |
+
+**The two largest weights do not carry the excess: with valuations `1, 2` only, the step-1 tower cancels
+LESS than the i.i.d. model.** The excess appears with the valuation `3`, is `90%` complete with valuation `4`
+and saturates by `6`. The last column is the Lyapunov exponent of the truncated real backward map (section 4):
+the excess appears where that map turns from expanding (`A = 2, 3`) to contracting (`A >= 4`) and saturates
+with it. The October 4 direction "a transfer operator on pairs of adjacent depths (`2^-1`, `2^-2`) to compute
+`0.5698` from the two couplings" is therefore closed negatively: such an operator reproduces the universal
+value's neighbourhood, not the excess.
 
 ### 3d. Changing the coin (OBSERVED; biased valuations `c ~ geometric(p)`, weights `p (1-p)^(c-1)`)
 
-[[PENDING-P]]
+Valuations `c ~ geometric(p)` (weights `p (1-p)^(c-1)`, summing to `1`; `p = 1/2` is the Syracuse weight);
+column kernel, `N = 1500`, 60 seeds, levels `300..1500`, standard errors `0.0003-0.0005` on each gap
+(`0.0008` at `p = 0.3`); `gamma(q, p) = log|q| - (log 2)/p` is the Lyapunov exponent of the real backward map.
+
+| `p` | rms rate | gap, `q = 3` | gap, `q = 5` | gap, i.i.d. | excess of `q = 3` | excess of `q = 5` | `gamma(3,p)` | `gamma(5,p)` |
+|---|---|---|---|---|---|---|---|---|
+| 0.3 | 0.42008 | `-0.0313` | `-0.0152` | `-0.0155` | **`+0.0158`** | `-0.0003` | `-1.212` | `-0.701` |
+| 0.4 | 0.50000 | `-0.0216` | `-0.0110` | `-0.0113` | **`+0.0103`** | `-0.0003` | `-0.634` | `-0.123` |
+| 0.5 | 0.57735 | `-0.0130` | `-0.0079` | `-0.0082` | **`+0.0049`** | `-0.0003` | `-0.288` | `+0.223` |
+| 0.6 | 0.65465 | `-0.0076` | `-0.0052` | `-0.0057` | **`+0.0019`** | `-0.0005` | `-0.057` | `+0.454` |
+| 0.7 | 0.73380 | `-0.0041` | `-0.0035` | `-0.0033` | `+0.0008` | `+0.0002` | `+0.108` | `+0.619` |
+
+Fine scan of the step-1 tower across its contraction threshold `p = 0.63` (`N = 1500`, 100 seeds for `q = 3`,
+60 for i.i.d.; standard errors `0.0003`): excess `+0.0031, +0.0019, +0.0017, +0.0016, +0.0014, +0.0008` at
+`p = 0.55, 0.60, 0.62, 0.64, 0.66, 0.70` (`gamma(3,p) = -0.16, -0.06, -0.02, +0.02, +0.05, +0.11`): smooth
+through the sign change of `gamma`, no switch.
+
+The step-2 tower across ITS threshold `p = 0.43` (`N = 1500`, 100 seeds; i.i.d. reference 60 seeds, run twice
+at `p = 0.4`, the two references differing by `0.0010`, i.e. the reference itself is known to `+-0.0003`):
+excess `-0.0005 +- 0.0004, +0.0000, +0.0006, +0.0011, +0.0005` at `p = 0.30, 0.35, 0.40, 0.43, 0.46`
+(`gamma(5,p) = -0.70, -0.37, -0.12, -0.00, +0.10`): nothing above `0.001` and no trend with the contraction,
+where the conjecture predicted the excess to grow as `p` falls. Other multipliers at `p = 0.3` (standard errors
+`0.0004`): `q = 7`: excess **`+0.0035`** (`gamma = -0.37`); `q = 9`: **`-0.0022`** (a deficit: the tower
+cancels less than i.i.d. digits; `gamma = -0.11`); `q = 7` at `p = 0.4`: `+0.0011`; `q = -3` at `p = 0.7`:
+`+0.0022` (`gamma = +0.11`, expanding, and three times the `q = 3` value there). The excess therefore depends
+on the multiplier beyond its size: at the long-run coin `p = 0.3` the order is `3 (+0.016) > 7 (+0.0035) > 5
+(0) > 9 (-0.002)`, i.e. `2^s - 1` above `2^s + 1` for `s = 2, 3`, which is the sign of the `omega_(m,j)` factor in
+the twist relation (`omega_(m,j+1) = omega_(m-s,j) conj(omega_(m,j))` for `2^s - 1`, `omega_(m-s,j)
+omega_(m,j)` for `2^s + 1`). [[PENDING-SIGN]]
+
+**The step-1 excess is a smooth function of the coin, roughly tripling for every `0.1` taken off `p`, and the
+step-2 tower never acquires one** -- not even at `p = 0.3`, where its real backward map contracts twice as
+fast as the Syracuse step-1 map does. Together with 3c: the excess lives in the long valuation runs (it needs
+`c >= 3`, grows with their weight) and is specific to the multiplier `3` (and `-3`, 2c).
 
 ### 3e. Exact pair-coherence census (FINITE-EXACT; `collatz_pascal_tower_pair_coherence_20261005.py`)
 
@@ -270,26 +336,45 @@ of ones beyond position `v` (same deep set implies the same number of shallow on
 cancel; PROVED by the deepest-differing-depth argument of 4k). So the dyadic shells of the frequency carry no
 `q`-information at all; what differs between multipliers is only the coarse-scale shape of the circle law.
 
-## 4. Mechanism (CONJECTURED; decisive test recorded)
+## 4. Mechanism: one conjecture tested and REFUTED within the session; the constraints that remain
 
-The real backward map `T_c(y) = (1 + q y)/2^c`, `c ~ geometric(p)`, has Lyapunov exponent
-`gamma(q,p) = E log|q 2^-c| = log|q| - (log 2)/p`: for `p = 1/2`, `gamma = log|q| - 2 log 2`, negative
-(contracting, the law of `Phi_N` converges to a stationary law with Kesten tail exponent `kappa = 1`, since
-`E (3 2^-c)^kappa = 3^kappa/(2^(1+kappa) - 1) = 1` at `kappa = 1`) for `|q| <= 3` and positive (the real values
-spread like `(|q|/4)^N`) for `|q| >= 5`. The census of 3e shows the circle law concentrated exactly in the
-contracting cases with `|q| = 3` (for `|q| = 1` the stationary law happens to project to the uniform law).
+**The conjecture (made after 2c and 3e, before 3c/3d).** The real backward map `T_c(y) = (1 + q y)/2^c`,
+`c ~ geometric(p)`, has Lyapunov exponent `gamma(q,p) = E log|q 2^-c| = log|q| - (log 2)/p`: contracting
+iff `|q| < 2^(1/p)`, i.e. at `p = 1/2` exactly for `|q| <= 3` (the law of `Phi_N` then converges to a
+stationary law of Kesten tail exponent `kappa = 1`, since `E (3 2^-c)^kappa = 3^kappa/(2^(1+kappa) - 1) = 1`
+at `kappa = 1`), and spreading like `(|q|/4)^N` for `|q| >= 5`. The census 3e shows the circle law of `Phi`
+concentrated at coarse scales exactly for `q = +-3`, in the order of the excess, and `q = 1`, the most
+contracting multiplier, has the largest Jensen gap of all. Conjecture: the typical Fourier decay at a Haar
+frequency is faster when the real law of the path values is stationary than when it spreads.
 
-**Conjecture (mechanism).** The typical Fourier decay at a Haar frequency is governed by the real-line
-dynamics of the backward map: a contracting multiplier gives a stationary, non-uniform circle law whose
-transform at random integer frequencies is typically smaller (and at rare frequencies larger) than that of a
-spreading law, which behaves like the i.i.d. model; the sign of `q` selects the stationary law (`q = -3`:
-fixed points `1/(2^c + 3)`; `q = 3`: `1/(2^c - 3)`, the rational cycles of the forward map), and `-3` is the
-more concentrated one. The exact second moment `3^-N` is blind to this (injectivity), the typical value is not.
+**The decisive test and its outcome (3c, 3d): REFUTED.** The threshold moves with the coin, `|q| < 2^(1/p)`;
+the step-2 tower is contracting for `p <= 0.43` (`gamma(5, 0.3) = -0.70`, more contracting than the Syracuse
+step-1 map at `-0.29`) and shows no excess there (`-0.0003 +- 0.0008` at `p = 0.3`, `-0.0003 +- 0.0005` at
+`0.4`); the step-1 tower is expanding at `p = 0.7` (`gamma = +0.11`) and keeps a small excess (`+0.0008 +-
+0.0004`), its excess varying smoothly through the threshold `p = 0.63` instead of switching. In the truncated
+models the excess does appear where `gamma(3, A)` changes sign (3c), but that is the valuation `3` entering,
+and the same truncation gives the step-2 tower nothing at any `A`. The real contraction is not the mechanism.
 
-**Decisive test.** Change the coin: the threshold is `|q| < 2^(1/p)`. Predictions: `q = 3` loses its excess
-for `p >= 0.64` (`gamma(3, 0.64) = +0.016`) and keeps it for `p <= 0.62`; `q = 5` acquires an excess for
-`p <= 0.43` (`gamma(5, 0.43) = -0.003`) and `q = 7, 9` for `p = 0.3` (`gamma = -0.37, -0.11`); the i.i.d. model
-at the same `p` is the reference at every `p`. Outcome: [[PENDING-THRESHOLD]]
+**Constraints on any mechanism (all OBSERVED or PROVED above).**
+1. Specific to the multipliers `+-3` at every coin bias tried; `q = 5, 7, 9, ..., 257` universal at `p = 1/2`
+   (2c) and `q = 5` universal at `p = 0.3 .. 0.7` (3d); the alternating-sign towers `-5, -7` carry a small
+   excess (`0.0012-0.0017`) and `-3` the largest (`0.0138`), `-9, -11` none (2c).
+2. Carried by the valuations `c >= 3` (3c: absent, with reversed sign, at `A = 2`; `90%` present at `A = 4`)
+   and growing with their weight (3d: roughly `x3` per `0.1` of `p` removed).
+3. Invisible to every pair statistic: the mean square is `3^-N` for every `q` (4k) and so is its whole
+   dyadic-shell profile `D_v` (3e, PROVED), so the excess is a property of the joint law of four or more path
+   phases -- it is a statement about `E log|sum|`, i.e. about the multifractal spectrum (3b), not about
+   correlations of pairs.
+4. Not arithmetic: present with a uniform deepest string (this note and 4m). [[PENDING-UNITS-CONSTRAINT]]
+5. A bulk property of the per-level increments (3a), while over frequencies the second moment of the step-1
+   tower is carried by `0.1%` of them (3b).
+
+The local twist relation that distinguishes the multipliers, `omega_(m,j+1) = omega_(m,j) omega_(m-1,j)` for
+`q = 3` (adjacent depths, the Collatz carry automaton) against `omega_(m,j) omega_(m-2,j)` for `q = 5`, is
+the natural place to look: a run of `c` halvings between the `j`-th and `(j+1)`-th ones contributes the phase
+`(2^c + q) theta_(m+c, j)`, so the step-1 path phases are the step-2 path phases with `2^c + 3` in place
+of `2^c + 5` -- the same odd numbers shifted by two -- and the excess sits exactly in the paths where `c >= 3`
+(constraint 2). Why the shift by two changes the typical logarithm but no pair statistic is OPEN.
 
 **What this does and does not touch.** Nothing above uses the digits of `3^-n`; the integer-start Collatz
 family (unit `u` fixed, `x_n = -u 3^-n`) [[PENDING-UNITS]]. The ridges of HYP-9166 (coincidences `u 2^Q = -+1
@@ -408,7 +493,8 @@ The batch logs are kept as `collatz_pascal_tower_lyapunov_20261005_batch*.out` b
 | the step-1 deficit is a bulk effect of the increments (lighter left tail, fewer recoveries) | OBSERVED |
 | the second moment of the step-1 tower is carried by the top `0.1%` of frequencies (`77%` at level `100`, `85%` at `200`) against `30%` for step 2 | FINITE-EXACT samples |
 | the circle law of `Phi` is concentrated at coarse scales exactly for `q = +-3` (`N = 6`, exact) | FINITE-EXACT |
-| mechanism: real contraction `|q| < 2^(1/p)` of the backward map | CONJECTURED; test [[PENDING-THRESHOLD-VERDICT]] |
+| mechanism: real contraction `|q| < 2^(1/p)` of the backward map | CONJECTURED in session, then REFUTED by the coin scan (step-2 tower contracting at `p = 0.3` with no excess) |
+| the excess is `+-3`-specific, carried by valuations `>= 3`, smooth in the coin, blind to pair statistics | OBSERVED (3c, 3d) + PROVED (`D_v` is `q`-independent) |
 | no-descent rate `a^a/(3 (a-1)^(a-1)) = 0.946505`, `a = log_2 3`; bounded-depth unions never close | PROVED (Cramer) + CITED (partition cover) |
 | `{2, 3, 11}` / `eta(tau)^2 eta(11 tau)^2` enter the tower | NOT FOUND (no object in common beyond the integer `11` as a multiplier) |
 | an exact value of `lambda_3`; H1; Collatz | OPEN |
