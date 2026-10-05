@@ -17,8 +17,9 @@ if __name__ == "__main__":
         rates = []
         for u in (1, 2, 7) if q % 7 else (1, 2, 11):
             v = run_uq3(u, q, N, A)
+            # slope of log|f_n| is log(rate); no further rescaling (bug in the first version, caught by the q = 5 control)
             ns = np.arange(250, N + 1); y = np.log(np.maximum(v[250:N + 1], 1e-300)) - ns * math.log(3) / 2
-            r = 3 ** -0.5 * math.exp(np.polyfit(ns, y, 1)[0]); rates.append(r)
+            r = math.exp(np.polyfit(ns, y, 1)[0]); rates.append(r)
             P(f"  q={q:2d} u={u:2d}: rate 250..{N} = {r:.4f}   (Parseval q^(-1/2) = {q**-0.5:.4f}, incoherent 0.5774)   [{time.time()-t0:.0f}s]")
         a = np.array(rates)
         P(f"  q={q:2d}: mean {a.mean():.4f} +- {a.std(ddof=1):.4f}")

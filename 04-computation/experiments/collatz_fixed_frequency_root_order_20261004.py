@@ -37,8 +37,10 @@ if __name__ == "__main__":
         rates = []
         for u in (1, 5, 7, 11) if q % 5 else (1, 7, 11, 13):
             v = run_uq3(u, q, N, A)
+            # v is rescaled by 3^(n/2); subtracting n log3/2 gives log|f_n|, whose slope IS log(rate).
+            # (The first version multiplied by 3^-0.5 once more -- caught by the q = 5 control, 2026-10-04.)
             ns = np.arange(300, N + 1); y = np.log(np.maximum(v[300:N + 1], 1e-300)) - ns * math.log(3) / 2
-            r = 3 ** -0.5 * math.exp(np.polyfit(ns, y, 1)[0]); rates.append(r)
+            r = math.exp(np.polyfit(ns, y, 1)[0]); rates.append(r)
             P(f"  q={q:2d} u={u:2d}: rate 300..{N} = {r:.4f}   [{time.time()-t0:.0f}s]")
         a = np.array(rates)
         P(f"  q={q:2d}: mean {a.mean():.4f} +- {a.std(ddof=1):.4f}   (i.i.d. 0.5723 +- 0.0008; q=3 six units 0.5700 +- 0.0009)")

@@ -301,31 +301,36 @@ variance and the highest rate), so the `q = 3` excess is not a per-level fluctua
 
 **Root-order reading.** The random models differ only in how consecutive levels are coupled: unrelated
 (i.i.d. digits, `0.5723 +- 0.0008`), coupled by a `Q`-th root with `Q ~ 2^40` (`0.5728 +- 0.0005`), coupled by a
-cube root with a random start (the `u`-family of `q = 3`, `0.5700 +- 0.0009`). The natural statement is that the
-typical rate `r(q)` of the `q`-th-root tower is a function of the root order, with `r(3)` the lowest; the
-`q = 5, 7` families (section 4c, pending output `collatz_fixed_frequency_unit_families_20261004.out`) test it.
+cube root with a random start (the `u`-family of `q = 3`, `0.5700 +- 0.0009`). The `q = 5, 7` families and the
+composite and prime-power root orders (section 4f) all sit at `0.5725 +- 0.0007`: the typical rate does not
+depend on the root order at all, and `q = 3` is the single exception.
 ANALOGY (typed, lost coordinate named): the tower of levels related by `q`-th roots is a Cartier-type tower
 (the `q`-th-root-of-Frobenius structure of THM-4210's Rule-30 carriers), and THM-4210's lesson -- bounded
 truncations of a Frobenius/Cartier carrier do not decide an all-scale statement -- is the shape of H1's
 difficulty; nothing transfers as a method (the Collatz tower is on phases, not on power series).
 
-### 4f. The root-order law: the cold rate counts adic digits, not size (E5g, E5i, E5j; a pre-registered prediction)
+### 4f. The root order does not matter either: one rate for every `q` (E5g, E5i, E5j) -- and a retracted reading
 
 `collatz_fixed_frequency_unit_families_20261004.py` (six units each, `N = 1500`): `q = 5`: `0.5731 +- 0.0007`;
 `q = 7`: `0.5723 +- 0.0009` -- the i.i.d. level (`0.5723 +- 0.0008`), with `q = 3` (`0.5700 +- 0.0009`) the only
-prime clearly below and `q = 5` marginally above. `collatz_fixed_frequency_root_order_20261004.py` (four units,
-`N = 1500`): **`q = 9`: `0.3305 +- 0.0002`; `q = 15`: `0.3312, 0.3305` (first two units)** -- not the Parseval
-rates `0.333, 0.258`, not the incoherent `0.577`, but `(0.575)^2` for both. By CRT the frequency-`1` character of
-`Z/15^n` is the product of a `3`-adic character of conductor `3^n` (frequency `5^-n mod 3^n`) and a `5`-adic one
-(frequency `3^-n mod 5^n`), and for `q = 9` one level advances the `3`-adic conductor by two digits; so the
-reading is: **the typical cold rate is `c^(Omega(q))`, `c ~ 0.575`, with `Omega(q)` the number of prime factors
-of `q` with multiplicity -- one factor `0.575` per adic digit gained per level, whatever the prime**, i.e. the
-`p`-adic reductions of the `q`-adic Syracuse variable at distinct primes decorrelate at fixed frequencies (a
-`p`-versus-`p'` transversality under the common 2-adic driving), and digits of one prime decorrelate across
-depth. Pre-registered predictions for the runs in progress: `r(21) = 0.33`, `r(27) = 0.19`, `r(25) = 0.33`,
-`r(49) = 0.33`, `r(45) = 0.19`, `r(33) = 0.33`. (Results appended in 4g.) If confirmed, the Collatz value
-`c_3 = 0.5700` is a `0.5%` anomaly of the single-digit `3`-adic tower against `c = 0.5723-0.5749` elsewhere, and
-the `q`-independence found in E4 is the `Omega(q) = 1` case of this law.
+prime clearly below and `q = 5` marginally above.
+
+**Retraction (same session, self-caught).** The first version of this section read the runs of
+`collatz_fixed_frequency_root_order_20261004.py` and `..._root_order2_...py` as giving `0.3305` for `q = 9, 15,
+21, 25, 33, 45, 49` and pre-registered a "digit-counting law" `rate = c^(Omega(q))`. Those two scripts' reporting
+line applied the `1/sqrt3` rescaling a second time (the vector is stored rescaled by `3^(n/2)`, the fit already
+removes it); the pre-registered control `q = 5` in the second script came out `0.3309` against its known `0.5731`
+(E4, E5g) and exposed the error. Dividing the printed values by `3^(-1/2)` (and rerunning the corrected scripts,
+outputs `.out`): **`q = 9`: `0.5724`; `15`: `0.5724`; `21`: `0.5728`; `25`: `0.5717`; `27`: `0.5743` (one unit);
+`33`: `0.5716`; `45`: `0.5730`; `49`: `0.5730`; control `5`: `0.5731`** -- all at the universal `0.5725 +- 0.0007`.
+So the typical cold rate is the same constant for every odd `q`, prime, prime power or composite, and the only
+exception remains `q = 3` at `0.5700`. The CRT remark stands as an identity (the frequency-`1` character of
+`Z/15^n` is a product of a `3`-adic and a `5`-adic character), but the product's typical rate is not the product
+of the typical rates: a `q`-adic digit advanced per level costs the same `0.5725` whether it is one digit of one
+prime, two digits of one prime, or one digit each of two primes. The lesson is logged in MISTAKES (2026-10-04,
+opus Fourier note): a control value that contradicts an earlier measurement must be checked before any
+pre-registered prediction is read as confirmed -- here `q = 25` and `q = 49` "confirmed" the law for an hour
+before the control line was read.
 
 ### 4e. The web around the cold rate (connections found by the niche search; all typed)
 
