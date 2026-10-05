@@ -12,6 +12,18 @@ dictionary of section 4 beyond its proved rows. **OPEN:** positivity at every
 positive odd integer, equivalently universal Collatz. Nothing here is a canon
 promotion or a literature-priority claim.
 
+**Scope correction, 2026-10-05 (Codex source-floor audit).** Theorem A
+classifies exact split arrays; it includes `E,W`, but the discounted `D`
+satisfies a weighted split instead. Its support equivalence does not exclude
+future proofs of support. The inherited observer obstruction concerns its
+specified observations, not arbitrary finite-dimensional representations.
+Proposition C concerns summable potentials and harmonic mass; it neither
+classifies a Martin boundary nor requires the injection to charge every
+vertex. A2's endpoint integrability condition is the general criterion;
+a positive-power density condition is only a beta-family specialization.
+The current text below incorporates these corrections. Exact minimal
+witnesses: [scope audit](collatz_pascal_scope_audit_20261005.out).
+
 ## 0. The prompt, decoded against the repository
 
 The pasted formula `E(n)=6(M+1)!(T+1)!/(M+T+3)!` with "total mass at most
@@ -28,13 +40,13 @@ with `a_0(v)<=6`, hence `rho(v)<=(64v-1)/3<22v`.
 
 The owner asks four things. Each gets one answer here, and each answer is typed.
 
-1. **Positivity everywhere.** It stays OPEN. What is new is a complete
-   description of what cannot work and what any certificate must be: no
-   exchangeable price system (Theorem A, Corollary A3), no finite-state and no
-   power-law-comparable weight (Lemma B with the inherited lookahead theorem),
-   and every summable supersolution is the potential of a measure on rooted
-   sources plus a cycle-constant harmonic part (Proposition C). The continuous
-   Martin boundary of the Syracuse graph carries no mass.
+1. **Positivity everywhere.** It stays OPEN. Changing an interior price prior
+   does not change the support of the canonical rooted flow (Theorem A,
+   Corollary A3). The specified finite-lookahead observers and power-law
+   comparability face separate obstructions. Every summable supersolution
+   is the potential of a measure on rooted sources plus a cycle-constant
+   harmonic part (Proposition C). These results do not exclude every possible
+   source encoding or a future proof that the canonical support is full.
 2. **`11*2=22` and `{2,3,11}`.** The two numbers have different mechanisms:
    `11=3!*H_3=6(1+1/2+1/3)` comes from the beta(2,2) prior and the period
    three of sibling depths modulo three (`ord_9(4)=3`); `22=ceil(64/3)` comes
@@ -50,19 +62,20 @@ The owner asks four things. Each gets one answer here, and each answer is typed.
    gauge-invariant CAR algebra and the fusion graph of `1+chi` for `U(1)`,
    and its harmonic functions (traces) are exactly the probability measures on
    the continuous boundary `[0,1]` (Hausdorff, de Finetti; Bratteli; Vershik-Kerov).
-   The Codex weights `E`, `W`, `D` are three such traces pulled back along the
-   counter map. Section 4 types the rest of the analogy and stops where the
+   The Codex weights `E`, `W` are such traces pulled back along the counter
+   map; `D` is a separately discounted array. Section 4 types the analogy where the
    theorems stop.
 4. **Langlands.** Only the abelian (`GL(1)`) layer exists here: counter-only
-   weights are positive characters of the free monoid on the two letters
-   {base, sibling} that factor through its abelianization, and Theorem A is
+   weights are mixtures of positive characters of the free monoid on the
+   two letters {base, sibling} that factor through its abelianization, and Theorem A is
    their Fourier/Laplace classification. The arithmetic side at that layer is
    the discrete logarithm modulo `3^(j+1)` (the Artin coordinate of
    [HYP-9174](../hypotheses/HYP-9174-x2x3-lonely-spectrum-is-the-artin-coordinate-of-2-3.md)),
-   which is exactly what the section exponent `a_0(v)` is. The non-abelian
-   layer (word-dependent weights) is where a certificate would have to live,
-   and the inherited finite-lookahead theorem says it is not finite-dimensional.
-   This is a typed analogy, not a theorem; see section 4.
+   which is exactly what the section exponent `a_0(v)` is. Word-dependent
+   constructions retain information lost by counters. The inherited
+   finite-lookahead theorem excludes its specified observers; it does not
+   exclude arbitrary finite-dimensional exact encodings. This is a typed
+   analogy, not a Langlands correspondence; see section 4.
 
 ## 1. Inheritance and board
 
@@ -73,8 +86,8 @@ The owner asks four things. Each gets one answer here, and each answer is typed.
   then P2-P5 of the adaptive note (beta(1,2) array, exact fibre payment, the
   injection measure `lambda` on rooted multiples of three with mass one).
 - Canonical hostile: `53` and `113` have the same counters `(1,3)` and
-  different words (Codex). Here it becomes the reason the abelian layer cannot
-  certify anything: Theorem A is blind to the word by construction.
+  different words (Codex). Theorem A forgets the word; this example shows
+  non-injectivity, not impossibility of proving a predicate constant on a fibre.
 - Corrected near miss: reading `22=2*11` as structure. Section 7.
 - Least-used sidecar: the order of a letter sequence, i.e. the word itself.
   Every object below either forgets it (Theorem A) or is defined by it
@@ -103,9 +116,9 @@ show that faithful finite affine representations and continuous encodings of
 improves the `W`-mass bound to below `41/10` with a checked cost-eight kernel
 and builds a root-deleted singular mixture `Z` (prior `(1-r)/r dr`) with
 nonroot mass below `23/8`. Everything below is consistent with these: the
-size-cap obstruction and Lemma B are the two faces of one fact (bounded
-arithmetic ratio does not control flow ratio), `Z` is Corollary A2 with the
-root ray removed, and section 6 sharpens `41/10` to `3.89` with a lower
+size-cap obstruction and Lemma B are two manifestations of a lost coordinate
+(bounded arithmetic ratio does not control flow ratio). `Z` needs the separate
+sigma-finite-prior argument in P7, and section 6 numerically sharpens `41/10` to `3.89` with a lower
 bound `3.19`.
 
 The Codex notes already observed that their arrays are "completely monotone in
@@ -160,13 +173,16 @@ is `r^K(1-r)^L = r^K(1-r)^(L+1) + r^(K+1)(1-r)^L`. QED.
 
 This is de Finetti's theorem in its Pascal-graph form: the extreme points of
 the convex set of split arrays are the fixed prices `r in [0,1]` (Vershik and
-Kerov's boundary of the Pascal graph). The Codex arrays are the images of
-`6r(1-r)dr` (E), `2(1-r)dr` (W) and, after integrating the discount, `D`.
+Kerov's boundary of the Pascal graph). The Codex arrays `E,W` are the images
+of `6r(1-r)dr` and `2(1-r)dr`. The discounted array is
+`D(L,K)=2W(L,K)/((L+1)(L+2))`; it instead satisfies
+`D(L,K)=D(L,K+1)+(L+3)D(L+1,K)/(L+1)`.
+Already `D(0,0)=1` but `D(1,0)+D(0,1)=2/9+1/3=5/9`.
 
 **Corollary A1 (fibre payment for every `mu`; PROVED).** For `L>=1`,
 `sum_(j>=0) w(L+1,K+j) = w(L,K)` exactly, with remainder `w(L,K+J)` after `J`
 terms. For `L=0` the sum is `w(0,K)-mu({1})`. An atom at `r=1` therefore
-leaves a root-row defect equal to the atom, and it makes the root ray
+leaves a formal `L=0` row defect equal to the atom, and it makes the root ray
 non-summable (`w(0,j)>=mu({1})` for all `j`). So for every finite-mass member
 the incoming row of every unit target is paid exactly (this is P3 of the
 adaptive note for all `mu` at once).
@@ -180,29 +196,37 @@ against the integral for six priors in S3).
 The root-deleted mixture `Z` of the updated adaptive note (P7) uses the
 non-integrable prior `(1-r)/r dr`; it is finite on `V` only because every
 nonroot certificate has `K>=1`, and its root-entry ray `1/(j(j+1))` sums to
-1. That is the statement of A2 after removing the ray, not an exception.
+1. This is outside A2's finite-probability-prior hypotheses: the full nonroot
+mass bound requires the separate cost-kernel estimate in P7, not only the
+root-entry calculation.
 
 **Corollary A3 (support; PROVED).** If `mu((0,1))>0` then every `w(L,K)>0`,
 so the flow `W_mu(n)=w(L(n),K(n))` on rooted sources, zero elsewhere, has
 support exactly the rooted component, independently of `mu`. If `mu` is
-carried by `{0,1}` the array has zeros. Consequently **no choice of price
-measure changes the support**; positivity everywhere of any counter-only flow
-is equivalent to universal Collatz and cannot be established at this layer.
+carried by `{0,1}` the array has zeros. Consequently **among priors charging
+the interior, changing the price measure leaves the support unchanged**;
+positivity everywhere of any such canonical counter-only flow
+is equivalent to universal Collatz. This equivalence supplies no independent
+proof of positivity, and does not rule out one by another argument.
 
-**Corollary A4 (the universal-coding optimum is excluded; PROVED).** The
-Krichevsky-Trofimov prior `beta(1/2,1/2)`, which is the minimax-regret
-universal mixture for binary sequences (CITED: Krichevsky-Trofimov 1981,
-Xie-Barron 2000), gives root-ray weights `C(2j,j)/4^j` with partial sums
-`(2J+1)C(2J,J)/4^J -> infinity`. Summability of the root ray forces the prior
-density to vanish at `r=1` at least like `(1-r)^(beta-1)` with `beta>1`, which
-is a boundary regret the coding literature does not price. S3 tabulates the
-loss `w(L,K)/sup_r r^K(1-r)^L` for five priors; the admissible priors lose at
-most a quadratic factor (P4 of the adaptive note), and `beta(1/2,2)` is the
-admissible prior closest to the coding optimum in the interior.
+**Corollary A4 (the KT prior is not summable; PROVED).** The
+Krichevsky-Trofimov prior `beta(1/2,1/2)`, a standard universal binary
+mixture, gives root-ray weights `C(2j,j)/4^j` with partial sums
+`(2J+1)C(2J,J)/4^J -> infinity`. The general condition is exactly
+`int dmu/(1-r)<infinity`; within the beta family it is `beta>1`.
+It does not force a positive-power endpoint decay. For example, a density
+proportional to `1/log(1/(1-r))^2` on `1-e^(-1)<r<1` is admissible:
+substitution `u=log(1/(1-r))` gives the finite integral `int_1^infinity du/u^2`.
+This density vanishes more slowly than every positive power of `1-r`.
+S3 tabulates the likelihood ratio `w(L,K)/sup_r r^K(1-r)^L` for five
+priors. P4 supplies the particular `W` prior's quadratic loss bound;
+no uniform quadratic bound for all admissible priors or optimality of
+`beta(1/2,2)` is asserted.
 
 Scope. Theorem A says nothing about which `(L,K)` are realized by integers,
 nor about the word. It classifies the price layer completely and shows that
-the layer has no further parameter worth optimizing for support.
+changing an interior prior alone leaves its support unchanged. Other
+objectives, such as a source-specific lower bound, can still depend on the prior.
 
 ## 4. The dictionary, typed
 
@@ -211,21 +235,20 @@ the layer has no further parameter worth optimizing for support.
 | Split arrays `w(L,K)` | Harmonic functions on the Pascal graph | identity | split = harmonicity at every vertex | nothing | — | PROVED (definition) |
 | Pascal graph | Bratteli diagram of the gauge-invariant CAR algebra; fusion graph of `1+chi` in `Rep U(1)` | level `n=L+K`, charge `K` | multiplicities `C(n,K)` | — | the word tree is the binary (CAR, not gauge-invariant) diagram | CITED (Bratteli 1972; Vershik-Kerov) |
 | Traces of that algebra | Probability measures on `[0,1]` | moment map | convexity, extreme points `r` | — | atom at 1 = non-summable root ray (A1) | CITED + Theorem A |
-| Codex `E, W, D` | three interior traces | priors `6r(1-r)`, `2(1-r)`, double mixture | payment, summability, regret | word, source guard | 53 vs 113 | PROVED |
-| Free monoid `{b,s}*` (words) | `N^2` (counters) | abelianization | exchangeable prices | order, realizability | lookahead theorem: finite-state words fail | PROVED (A3 + inherited) |
+| Codex `E, W` | two interior traces | priors `6r(1-r)`, `2(1-r)` | exact split and fibre payment | word, source guard | 53 vs 113; `D` has a weighted split | PROVED |
+| Free monoid `{b,s}*` (words) | `N^2` (counters) | abelianization | exchangeable prices | order, realizability | inherited obstruction concerns specified bounded observations | PROVED (A3 + inherited, scoped) |
 | Finite subgroups of `SU(2)` / `U(1)` / `SU(2)` | affine ADE / `A_infinity^infinity` / `A_infinity` McKay graphs | fusion with the defining representation | discrete list vs continuous boundary | dynamics | no Collatz theorem uses index values | CITED analogy only |
-| `GL(1)` Langlands (characters, class field theory) | counter-only flows and residue sections | characters of `N^2`; discrete log mod `3^(j+1)` | abelian reciprocity | the non-abelian word | finite-dimensional representations are excluded | HEURISTIC |
+| `GL(1)` Langlands (characters, class field theory) | counter-only flows and residue sections | mixtures of characters of `N^2`; discrete log mod `3^(j+1)` | an abelian-coordinate analogy | the word | no constructed reciprocity correspondence | HEURISTIC |
 | `S_2(Gamma_0(22))` oldforms of the conductor-11 newform (Codex level-22 note) | the predecessor constant 22 | none found | an exact phase module and graph lift (their section 3) | mass and source (their F3: the atom generating function is not a modular form) | the two 22s have different origins (their section 5) | CITED + their PROVED obstruction |
 
 Two rows deserve a sentence each. The McKay/Jones dichotomy (finite subgroups
 give the finite ADE list; the continuous groups give infinite paths with a
 continuum of traces) is the shape the owner asked about, and the Pascal
 boundary `[0,1]` is its `U(1)` instance, but no Jones-index value or ADE
-diagram enters any Collatz statement here. The Langlands row says only that
-the proved reciprocity is abelian and that the certificate would be a
-"representation" of the word monoid that does not factor through counters
-and, by the inherited finite-lookahead theorem, is not finite-dimensional.
-Nothing non-abelian is proved; the row is a typed label for the obligation.
+diagram enters any Collatz statement here. The Langlands row records an
+abelian-coordinate analogy, not a reciprocity theorem for Collatz. Exact
+finite-dimensional matrices may retain unbounded arithmetic data; the
+finite-lookahead obstruction does not exclude them.
 
 ## 5. Positivity everywhere: what any certificate must be
 
@@ -265,18 +288,23 @@ decreasing limit of `K^T v`; monotone convergence gives `Kh=h`. The mass of
 `K^t lambda` is the `lambda`-mass of sources whose `t`-th image is still in
 `V`, so `sum_V G lambda = sum_z lambda(z) #{t: U^t z in V}`; finiteness forces
 `lambda=0` wherever that count is infinite, i.e. off the rooted component.
-If `n` has a divergent orbit then `h` is nondecreasing along it and summable
+Summing `Kh=h` first forces zero harmonic mass on the predecessors of the
+killed root, then recursively on every rooted source. If `n` has a divergent
+orbit then `h` is nondecreasing along it and summable
 over infinitely many distinct terms, so `h(n)=0`. On a cycle component, sum
 `Kh=h` around the cycle: the incoming tree mass vanishes, so `h=0` on the
 trees feeding the cycle and `h` is constant on the cycle. QED.
 
-The Martin boundary of the Syracuse graph (its ends, the divergent backward
-paths) is therefore invisible to summable flows: all mass enters at sources
-with finite future, and the only harmonic mass sits on finite cycles. This is
-a continuous-versus-discrete boundary statement in the graph itself, and it
-re-proves C3: a strictly positive summable supersolution has `h=0` (every
-cycle component has a tree part, where `v=h=0`), hence no nontrivial cycle,
-and `lambda` charges every source, hence no divergent orbit.
+This classifies the harmonic remainder among these nonnegative summable
+supersolutions; a Martin boundary requires a separately specified kernel and
+is not classified here. It re-proves C3: a nontrivial cycle has an external
+predecessor divisible by three, where both its rooted potential and harmonic
+remainder vanish, contradicting strict positivity. A divergent source also
+has both terms zero. Thus strict positivity implies every source is rooted.
+It does not require `lambda(n)>0` at every vertex: the potential is positive
+when the vertex lies on the finite future of a source charged by `lambda`.
+The finite example `v(3)=v(5)=1`, zero elsewhere, has `Kv<=v`,
+`lambda(3)=1` and `lambda(5)=0`, along `3 -> 5 -> 1`.
 
 For the Codex flows `lambda` is supported on the leaves (odd multiples of
 three) and the payment at units is exact (A1); P5 of the adaptive note is the
@@ -312,17 +340,17 @@ of a change of coordinates, not progress on support. The adversary this
 coordinate does not remove is Lemma B's: inside `Sigma` the ascending shadows
 are still present.
 
-**Finite-state weights.** The inherited theorem of
+**Specified finite-observation weights.** The inherited theorem of
 [finite lookahead obstruction](collatz_finite_lookahead_weight_obstruction_20261005.md)
-excludes positive weights that factor through any finite observation, and
-Lemma B excludes power-law comparability. Together with Theorem A and
-Proposition C: a certificate is the potential `G lambda` of a measure on
-leaves that is positive at every leaf and has `sum lambda(z)tau(z)<infinity`;
-it is not exchangeable, not finite-state, and not comparable to `n^(-s)`.
-The Green weight of the Codex note (`v(n)=sum_(m in tree(n)) mu(m)`) is the
-canonical example, and it is defined through the orbits it is meant to certify.
-That circularity is the whole remaining problem, stated as precisely as the
-layer permits.
+excludes its explicitly defined lookahead/cofactor-residue observers, and
+Lemma B excludes power-law comparability. A positive summable rooted
+potential requires an injection whose finite futures cover every vertex.
+It suffices to find a leaf-supported injection positive at every leaf with
+`sum lambda(z)tau(z)<infinity`: every unit has a leaf predecessor.
+These statements do not require every possible certificate to be
+non-exchangeable or infinite-dimensional. The canonical Green construction
+is defined using rooted futures. The remaining obligation is an independent
+proof that its support is full, or a different positive summable construction.
 
 ## 6. Hostile probe: the 11 is not attained, nor the 16/3
 

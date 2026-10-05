@@ -1,0 +1,14 @@
+{
+  "status": "FINITE-EXACT scope witnesses; analytic endpoint proof in note",
+  "checks": 1428,
+  "counter_universe": "0<=L,K<=20",
+  "D00": "1",
+  "D10_plus_D01": "5/9",
+  "finite_potential": {
+    "v3": "1",
+    "v5": "1",
+    "lambda3": "1",
+    "lambda5": "0"
+  },
+  "not_a_claim": "No audit of all numerical Bellman bounds or representation analogies"
+}

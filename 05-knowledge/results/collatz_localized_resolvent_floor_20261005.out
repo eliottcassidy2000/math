@@ -1,0 +1,33 @@
+{
+  "status": "PROVED conditional floor; universal positivity OPEN",
+  "checks": 29483,
+  "direct_kernel_coefficient_norm": 17,
+  "error_bound": "8*(16/25)^d",
+  "known_head_controls": [
+    {
+      "source": 3,
+      "degree": 2,
+      "floor": "1/32",
+      "actual_weight": "1/6",
+      "deadline": 6,
+      "actual_odd_steps": 2
+    },
+    {
+      "source": 9,
+      "degree": 9,
+      "floor": "1/1024",
+      "actual_weight": "1/126",
+      "deadline": 43,
+      "actual_odd_steps": 6
+    },
+    {
+      "source": 27,
+      "degree": 42,
+      "floor": "1/68719476736",
+      "actual_weight": "1/11274451650",
+      "deadline": 370726,
+      "actual_odd_steps": 41
+    }
+  ],
+  "coverage_scope": "all example ROOT sources were already in the head"
+}

@@ -1,0 +1,205 @@
+{
+  "actual_lambda_head": {
+    "indices": "0..15",
+    "literal_cap": 512,
+    "sources": "3,9,...,93"
+  },
+  "actual_positive_controls": [
+    {
+      "actual_atom": "1/6",
+      "first_tested_d": 1,
+      "index": 0,
+      "lower_bound": "80890082949936335617/537701516570945126400",
+      "scope": "already certified head; no additional ROOT source",
+      "source": 3,
+      "word": [
+        1,
+        4
+      ]
+    },
+    {
+      "actual_atom": "1/126",
+      "first_tested_d": 3,
+      "index": 1,
+      "lower_bound": "14270710919159706722440741432397/2522492030901519845183309102448640",
+      "scope": "already certified head; no additional ROOT source",
+      "source": 9,
+      "word": [
+        2,
+        1,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "actual_atom": "1/252",
+      "first_tested_d": 1,
+      "index": 2,
+      "lower_bound": "19876023441561773446528181/6765850865278744282320076800",
+      "scope": "already certified head; no additional ROOT source",
+      "source": 15,
+      "word": [
+        1,
+        1,
+        1,
+        5,
+        4
+      ]
+    },
+    {
+      "actual_atom": "1/6",
+      "first_tested_d": 1,
+      "index": 3,
+      "lower_bound": "123448126252735896914874683497/749721646412646013768816394240",
+      "scope": "already certified head; no additional ROOT source",
+      "source": 21,
+      "word": [
+        6
+      ]
+    },
+    {
+      "actual_atom": "1/11274451650",
+      "first_tested_d": 11,
+      "index": 4,
+      "lower_bound": "165749510135916543035341800840124904607183196117221260431/2802799691599637317656171499414292286279770653141774673807985868800",
+      "scope": "already certified head; no additional ROOT source",
+      "source": 27,
+      "word": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        3,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        4,
+        2,
+        2,
+        4,
+        3,
+        1,
+        1,
+        5,
+        4
+      ]
+    }
+  ],
+  "checks": 22208,
+  "geometric_examples": [
+    {
+      "actual_atom": "1/2",
+      "coefficient_norm": "3",
+      "d": 1,
+      "exact_lower": "10/21",
+      "m": 0,
+      "tail_error": "1/4"
+    },
+    {
+      "actual_atom": "1/2",
+      "coefficient_norm": "3",
+      "d": 4,
+      "exact_lower": "976/1953",
+      "m": 0,
+      "tail_error": "1/256"
+    },
+    {
+      "actual_atom": "1/2",
+      "coefficient_norm": "3",
+      "d": 8,
+      "exact_lower": "261376/522753",
+      "m": 0,
+      "tail_error": "1/65536"
+    },
+    {
+      "actual_atom": "1/4",
+      "coefficient_norm": "40",
+      "d": 1,
+      "exact_lower": "8/35",
+      "m": 1,
+      "tail_error": "1/2"
+    },
+    {
+      "actual_atom": "1/4",
+      "coefficient_norm": "320",
+      "d": 4,
+      "exact_lower": "61952/248031",
+      "m": 1,
+      "tail_error": "1/128"
+    },
+    {
+      "actual_atom": "1/4",
+      "coefficient_norm": "5120",
+      "d": 8,
+      "exact_lower": "267517952/1070075391",
+      "m": 1,
+      "tail_error": "1/32768"
+    },
+    {
+      "actual_atom": "1/32",
+      "coefficient_norm": "3244032/7",
+      "d": 1,
+      "exact_lower": "425984/15625953",
+      "m": 4,
+      "tail_error": "256/315"
+    },
+    {
+      "actual_atom": "1/32",
+      "coefficient_norm": "13287555072/7",
+      "d": 4,
+      "exact_lower": "1073741824/34404820065",
+      "m": 4,
+      "tail_error": "4/315"
+    },
+    {
+      "actual_atom": "1/32",
+      "coefficient_norm": "870813209198592/7",
+      "d": 8,
+      "exact_lower": "18375812379578466304/588028857777261085185",
+      "m": 4,
+      "tail_error": "1/20160"
+    }
+  ],
+  "invalid_inputs": 11,
+  "missing_atom1_Hankel_determinants": [
+    "1",
+    "89/567",
+    "6488/21531825",
+    "103942144/47893379919249375",
+    "20670268309504/986660106882568155405049775625"
+  ],
+  "no_new_source_controls": 13,
+  "polynomial_universe": {
+    "damping_degrees": "0..12",
+    "target_indices": "0..12",
+    "tested_nodes": "0..64"
+  },
+  "status": "PROVED signed dual and error bounds; universal Collatz OPEN"
+}
+PASS: a positive signed-moment lower bound certifies the selected atom; independent moment premises remain essential.

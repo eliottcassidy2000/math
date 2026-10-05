@@ -1,0 +1,111 @@
+{
+  "aggregation_example": {
+    "aggregate_two_steps": "1/10",
+    "anchor_floor": "1/3",
+    "sequential_reencoding": "1/15"
+  },
+  "composition_exchange_hostile": {
+    "same_integer_endpoint_possible": false,
+    "word12_endpoint_mod9": 4,
+    "word21_endpoint_mod9": 2
+  },
+  "exact_checks": 32229,
+  "exact_superlevel_extrema": [
+    {
+      "B": 0,
+      "epsilon": "1",
+      "largest_source": 1,
+      "witness_weight": "1"
+    },
+    {
+      "B": 0,
+      "epsilon": "1/2",
+      "largest_source": 1,
+      "witness_weight": "1"
+    },
+    {
+      "B": 1,
+      "epsilon": "1/3",
+      "largest_source": 5,
+      "witness_weight": "1/3"
+    },
+    {
+      "B": 2,
+      "epsilon": "1/6",
+      "largest_source": 21,
+      "witness_weight": "1/6"
+    },
+    {
+      "B": 3,
+      "epsilon": "1/12",
+      "largest_source": 85,
+      "witness_weight": "1/10"
+    },
+    {
+      "B": 9,
+      "epsilon": "1/60",
+      "largest_source": 349525,
+      "witness_weight": "1/55"
+    },
+    {
+      "B": 27,
+      "epsilon": "1/420",
+      "largest_source": 24019198012642645,
+      "witness_weight": "1/406"
+    },
+    {
+      "B": 43,
+      "epsilon": "1/1000",
+      "largest_source": 103161669940448356241593685,
+      "witness_weight": "1/990"
+    }
+  ],
+  "finite_sources": {
+    "count": 512,
+    "positive_odds_below": 1024
+  },
+  "formal_transport_envelopes": 100,
+  "guarded_prefix_controls": 1966,
+  "malformed_controls": 12,
+  "pointwise_interval_controls": 3584,
+  "scope": "Threshold decisions total; an initial floor for every source remains OPEN.",
+  "threshold_controls": 4096,
+  "unbounded_changed_source_refinement": [
+    {
+      "sibling_depth": 0,
+      "source": 3,
+      "weight": "1/6"
+    },
+    {
+      "sibling_depth": 1,
+      "source": 13,
+      "weight": "1/15"
+    },
+    {
+      "sibling_depth": 2,
+      "source": 53,
+      "weight": "1/30"
+    },
+    {
+      "sibling_depth": 4,
+      "source": 853,
+      "weight": "1/84"
+    },
+    {
+      "sibling_depth": 8,
+      "source": 218453,
+      "weight": "1/330"
+    },
+    {
+      "sibling_depth": 16,
+      "source": 14316557653,
+      "weight": "1/1710"
+    },
+    {
+      "sibling_depth": 32,
+      "source": 61489146912365172053,
+      "weight": "1/10710"
+    }
+  ]
+}
+PASS
