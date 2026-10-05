@@ -571,6 +571,11 @@ second moment is exactly `3^-n` at every level (4k, PROVED). Eight seeds per `q`
 | integer-start `q = 3` (E5f, six units; E5n, two hundred) | | `0.5700 +- 0.0009`; `0.5694 +- 0.0002` | |
 | i.i.d. digits (twelve seeds) | | `0.5723 +- 0.0008` | |
 
+Twenty-four seeds per `q` (`collatz_fixed_frequency_uniform_start_20261004.log`, the eight-seed run kept as
+`_8seeds.out`): **`q = 3`: `0.5698 +- 0.0008` (standard error `0.0002`); `q = 5`: `0.5726 +- 0.0005` (standard
+error `0.0001`)** on `300..1500`; `0.5696 +- 0.0015` and `0.5723 +- 0.0014` on `750..1500`. The difference,
+`0.0028`, is fifteen standard errors.
+
 **Reading (OBSERVED; the model is exact).** The uniform-start cube-root tower reproduces the Collatz value
 and the uniform-start fifth-root tower reproduces the i.i.d. value. So the `0.4%` excess needs no arithmetic:
 it is a property of the step-`1` Pascal coupling of consecutive levels by itself (`3 = 2 + 1`, adjacent depths,
