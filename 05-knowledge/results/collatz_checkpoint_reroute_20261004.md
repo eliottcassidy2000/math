@@ -266,6 +266,11 @@ variable terminal valuation materially widens the exponent family.
 
 These are proved smaller dependencies for every indicated exponent. They do not
 prove that all their children reach1 or that all exponents \(a=3\pmod8\) are covered.
+The ternary depth changes in a controlled way: every child in (8) is
+\(3(37+486t)\), so \(v_3(h)=1\). In particular, a covered tower source
+\(3^a\) moves from arbitrarily large ternary valuation to exactly one,
+while also decreasing the original integer. This does not assert that
+the next selector rule applies to every resulting cofactor.
 
 ## 6. Bounded target probe and costs
 

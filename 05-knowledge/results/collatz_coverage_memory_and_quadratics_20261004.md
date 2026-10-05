@@ -140,6 +140,21 @@ has this reduction for \(n=3^a\). It occupies one of the 64 exponent
 classes modulo 512 inside \(a\equiv3\pmod8\). This is coverage of that
 exponent family, not a claim to have rooted every resulting child.
 
+The incoming [paid portrait controllers](collatz_paid_portrait_controllers_20261004.md)
+then supplied a complementary unbounded family. Their power-of-three
+rules follow \((1,2)^q\), \(q\ge2\), and a sufficiently large final reset.
+Every covered exponent is 11 modulo 32; every exponent in our new family
+is 3 modulo 32. The two domains are therefore disjoint. If \(\delta\)
+denotes that note's proved relative density within \(a\equiv3\pmod8\),
+their combined reduction coverage is exactly
+\[
+ \delta+\frac1{64}\ \approx\ 0.08258927719932.
+\]
+Thus this explicitly compared union handles about 8.2589 percent of the
+residual **exponent class**. It is not an integer-density or a root-proof
+percentage. The incoming unbounded repetition parameter also explains
+why its controller lies outside the bounded-depth obstruction below.
+
 The complete per-checkpoint search has a finite height bound. The number
 of checkpoints needed for an arbitrary source still has no proved bound.
 The small hostile inputs remain useful: the specified checkpoint grammar
@@ -255,6 +270,45 @@ obstruction excludes.
 
 ## 6. Current proof obligation and evidence
 
+A [negative-cycle shadow theorem](collatz_negative_cycle_shadow_20261004.md)
+gives the next exact boundary. Fix bounds R and S on the source and child
+word lengths. If
+\[
+ n\equiv-5\pmod{2^{\lfloor3R/2\rfloor+1}},\qquad 3^S\mid n,
+\]
+there is no smaller-child common-future join within those bounds whose
+affine child map \(h=\lambda n+b\) has \(b>-1\). Individual halving
+exponents are unrestricted. Every row of the checkpoint grammar satisfies
+this intercept condition.
+
+The source's checked prefix imitates the signed cycle
+\(-5\to-7\to-5\), while the ternary divisibility restricts the child
+intercept. Together these force any putative paying join to have
+\(\lambda\ge1\), contradicting its source payment. Unlike the earlier
+\(-1\) binary shadow, the \(-5\) shadow is attained by positive powers
+of 3 to every finite binary precision. Thus every such bounded-depth bank
+misses an infinite exponent progression inside \(a\equiv3\pmod8\).
+For example, source depth at most 6 misses \(3^a\) with
+\(a\equiv11\pmod{256}\) once \(a\ge S\).
+
+This explains why the new exponent family does not close the whole
+problem. It points toward growing depth, a child construction outside the
+stated intercept condition, or another well-founded proof move. It does
+not exclude those alternatives or an adaptive controller with unbounded
+arithmetic state.
+
+For this particular shadow the retained memory is especially concrete.
+An actual valuation block \((1,2)\) satisfies
+\[
+ U^2(n)+5=\frac98(n+5),
+\]
+and the number of consecutive legal blocks at a positive odd source is
+exactly \(\lfloor(v_2(n+5)-1)/3\rfloor\). Each block consumes three
+binary digits. The extra one in the guard enforces an odd endpoint:
+mere integer divisibility would incorrectly accept the block at n=3,
+where its formal endpoint is 4. A productive next controller must account
+for the cost of changing patterns at this finite fuel boundary.
+
 The live board is **original rank / checkpoint carry / ternary guard /
 repeat fuel / modular action / grounded component**. Anchor: cover every
 positive source by a paying dependency. Niche: legal compressed group
@@ -270,9 +324,11 @@ new infinite domains and expose narrower residuals. Neither finite
 solvability, modular reachability, repeated-word identities nor a larger
 finite census supplies that last implication.
 
-All five component packages have hand proofs, declared hostile controls,
+All six component packages have hand proofs, declared hostile controls,
 independent audits, and matching normal/optimized Python outputs. The
 experiments use exact integer or rational arithmetic. The incoming
 critical-rank and negative-cycle gap audit was integrated from the live
 shared branch; its newly recorded repeated-word cancellation is used
-only in the scope stated above.
+only in the scope stated above. The later incoming paid-controller package
+was also integrated, with its complementary exponent domains combined by
+the explicit modulo-32 disjointness proof.

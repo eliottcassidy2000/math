@@ -1,0 +1,32 @@
+PROVED statement in note: bounded depths R,S; affine intercept b>-1.
+FINITE-EXACT word universe: all r,s=0..5 and every positive child word
+under the necessary strict-slope total-cost bound; no individual-letter cap.
+word controls r<s: 162
+word controls r=s: 13
+word controls r>s: 15
+word controls signed_actual: 190
+word controls dyadic_intercept: 0
+Independent literal graph: R,S=0..4; first three cell members >1.
+Source instances 74; largest source 21627; odd paths 10814.
+Literal smaller joins found 0; every one has intercept <=-1.
+Diagonal cells (R=S, bits, residue, modulus):
+  0: 1, 1, 2
+  1: 2, 3, 12
+  2: 4, 27, 144
+  3: 5, 27, 864
+  4: 7, 891, 10368
+  5: 8, 52731, 62208
+Shadow power phases (bits, exponent residue, exponent period):
+  (5, 3, 8)
+  (7, 11, 32)
+  (10, 11, 256)
+  (12, 267, 1024)
+  (16, 15627, 16384)
+  (18, 15627, 65536)
+Phase progression checks 56; independent complete phase searches 8.
+Exact (12)-block fuel controls 20; small-positive-intercept controls 16.
+Positive checkpoint-family controls 20; its exponent483 mod1024 is distinct.
+Hostiles: rational -11/3 enters -5; n3 has integral but illegal formal12 endpoint.
+Both missing-guard positive controls pass; empty-word cases are included.
+Invalid exact-domain controls rejected 6.
+No arbitrary-intercept no-go, universal coverage, or new home proof claimed.
