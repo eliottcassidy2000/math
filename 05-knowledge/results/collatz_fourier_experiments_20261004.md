@@ -420,6 +420,34 @@ input). Means over `n = 300..1500`: real `3^-n` (`u = 1, 5, 7`) `0.985, 0.961, 0
 the `q = 3` means below `1` are suggestive only. The decisive test is the two-hundred-member ensemble
 (`collatz_fixed_frequency_large_ensemble_20261004.py`, i.i.d. calibration at the same size; results in 4i).
 
+### 4j. The Pascal tower (PROVED, exact): every level's phases are a binomial transform of the deepest level's
+
+Write `theta_(n,d) := (u 2^-d mod 3^n)/3^n in Q/Z` for the exact phase of the recursion at level `n`, depth
+`d`. Three identities, checked in exact rational arithmetic
+(`collatz_phase_tower_identities_20261004.py`; `u = 1, 5, 7, 11`, `n <= 12`, `d <= 24`, `m <= 6`):
+
+* (i) `3 theta_(n+1,d) = theta_(n,d)` (the cube-root law of 4c, exact);
+* (ii) `theta_(n,d-1) = 2 theta_(n,d)` (the odometer: along a level the phases are an orbit of the inverse
+  doubling map);
+* (iii) hence `theta_(N-m,d) = 3^m theta_(N,d) = (1+2)^m theta_(N,d) = sum_(i=0)^m C(m,i) theta_(N,d-i)`:
+  **the level-`(N-m)` phase at depth `d` is the binomial combination of the deepest level's phases at depths
+  `d, d-1, ..., d-m`.** For `q = 2^j + 1` the same holds with step `j` (`q = 5`: `theta_(N-m,d) = sum_i C(m,i)
+  theta_(N,d-2i)`, checked), and for `q = 2^j - 1` with alternating signs.
+
+Reading (typed). The whole Collatz tower is determined by one digit string (the deepest level's) through the
+Pascal triangle; since `e(C theta_(N,d')) = e(odd * theta_(N, d' - v_2(C)))` by the odometer, the depth shift of
+each contribution is the 2-adic valuation of the binomial coefficient, i.e. Kummer's carry count -- the
+Pascal-mod-powers-of-2 structure that the Gilbreath thread met as "row `t` of Pascal mod 2 = the product of the
+Fermat numbers over the bits of `t`" (S10, THM-4511's setting). Map: the carry automaton of `x -> 3x`
+(cube-root law) iterated `m` times is `(1+2)^m`; preserved: the exact phases; lost: nothing (it is an identity);
+what it gives: the cross-level coupling of 4g in closed form -- the level-`n` phase at depth `d` shares the
+deepest level's phases at depths `d-i` with odd binomial multiplicities exactly at the `i` with no carry in
+`i + (m-i)` (Lucas), the densest for `q = 3` (step `1`), sparser for `q = 2^j + 1` (step `j`). Whether the `0.4%`
+excess can be computed from this structure is OPEN (DIRECTION: the i.i.d. second-moment proof of 4b used only
+the top bit of one level; with (iii) the cross-level second moment of the `u`-family becomes a sum over pairs of
+paths weighted by `2^-|a|-|b|` of the indicator that two binomial combinations of the deepest string's angles
+cancel -- an exact, finite, if large, computation).
+
 ### 4e. The web around the cold rate (connections found by the niche search; all typed)
 
 | repo thread | the object there | the map to the cold-frequency problem | preserved | lost / sidecar | type |
