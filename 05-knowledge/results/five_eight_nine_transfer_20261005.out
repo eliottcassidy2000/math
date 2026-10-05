@@ -1,0 +1,10 @@
+Discriminant5, field F9, golden clock8: ((1, 0), (0, 1), (1, 1), (1, 2), (2, 0), (0, 2), (2, 2), (2, 1))
+Norm alternates1,2; mod5 phi-3 is nonzero square-zero, clock20.
+All ternary ring states at precisions1..4: 7380 ; all81 linear maps: only zero intertwines the two dynamics.
+Golden theta=(1+phi)/3: parity10100000; arithmetic return(9n+5)/64, fixed1/11.
+Same carry, different budget: word12 fixes-5; word15 is legal35mod128 and35->53->5.
+Odd sources1..1023: 585 legal repeat prefixes with exact binary fuel and ternary contraction.
+27mod64: exactly one12; output31+72t is7mod8, blocks immediate H; mod9 predecessor returns source.
+Positive composition219mod256: K=139+162t, inverse-G child L=123+144t; four-credit ratio<=6561/7168.
+Tournament8 masks ->4 classes; strong fiber5; diamond joins each H9, SCC words [(3, 1, 1, 3), (1, 3, 3, 1)]
+PASS: exact transfer maps and hostile boundaries; no all-source guard coverage claim.

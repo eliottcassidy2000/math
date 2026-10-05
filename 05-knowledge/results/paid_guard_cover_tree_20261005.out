@@ -1,0 +1,10 @@
+PROVED: exact guarded first descent on n219mod256; new frozen-bank half n219mod512.
+LOCAL TREE: [{"label": "fifth=1", "parameter_modulus": 2, "parameter_residue": 0, "source_modulus": 128, "source_residue": 27}, {"label": "fifth=2", "parameter_modulus": 4, "parameter_residue": 1, "source_modulus": 256, "source_residue": 91}, {"label": "fifth=3: new", "parameter_modulus": 8, "parameter_residue": 3, "source_modulus": 512, "source_residue": 219}, {"label": "fifth>=4: old", "parameter_modulus": 8, "parameter_residue": 7, "source_modulus": 512, "source_residue": 475}]
+NEW AFFINE ROW: n=219+512t ->209+486t; word12113; (P,Q,B)=(243,256,287).
+COARSE ROW: n=219+256t ->oddpart(209+243t); fifth valuation=3+v2(209+243t).
+POWERS: {"inherited_four_slot": "27 mod64", "inherited_half": "19 mod128", "literal_power_controls": 9, "maximum_exponent": 1107, "merged_exponents": "19 mod64", "new_exponents": "83 mod128"}
+FROZEN COMPARISON: {"exponent_increment": "1/16", "exponent_subtotal_decimal": 0.48970615583428245, "exponent_subtotal_interval": ["1573854904635860320653898484615292205418669351612096216376393/3213876088517980551083924184682325205044405987565585670602752", "11016984332451022245976530485085944399692081847044104400143871/22497132619625863857587469292776276435310841912959099694219264"], "provenance_sha256": {"collatz_binary_ternary_guard_fusion_20261004.json": "400d3a63c433be64fa04631745147d02a85c0cb3747ef1412f730b9d20704b40", "collatz_four_slot_compression_20261004.json": "e714b6e1f70512376b952000afd75f6b04b137b27acbdbc8cef9043ebd7e0161", "collatz_paid_portrait_controllers_20261004.json": "2fb860c4168c53ec201af4522ff5226c3c610671802b938fec5843405b26f93e"}, "saved_rows_checked": 2217, "scope": "Intermediate subtotal over this frozen bank; not the current larger threshold-bank union."}
+FINITE UNIVERSE: 4096 local tree parameters; 1024 exact-half parameters; 9 source powers.
+HOSTILES: literal27 differs from exponent27; source155 is tree-open but old-checkpoint paid.
+SCOPE: paid dependencies only; other local leaves grow at step five; universal root coverage OPEN.
+CHECKS: 34040

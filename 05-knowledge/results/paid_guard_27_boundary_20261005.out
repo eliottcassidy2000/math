@@ -1,0 +1,16 @@
+Type distinction: exponent27mod64 -> source187mod256; literal source27mod64 starts1211.
+New coarse family:219+256t -> quarter-child139+162t; actual1211a, a>=3 pays source.
+New exact half:219+512t ->209+486t via12113; powers3^(83+128t).
+All q,r>=1: first contracting exit a0 plus exact source guard(D-P)n>B gives infinite paid AP tail.
+No assumption that every uncut least source pays; inherited128x128 probe remains finite evidence.
+Independent literal controls q1..12,r1..16,lifts0,1,7: 576
+Quarter-child controls: 128 ; explicit power sources: 3
+Prior-cell comparison q1..8,r1..12 except1,1: 204725
+Density truncation q1..24,r1..64 except1,1: 1535 rows; binary/phase initial cuts: 0 0
+Added odd density: 0.00689011741468514 ; exact tail bound: 257/66113130760175032991744
+Named exponent coverage:0.53744803446924 < delta <0.53744803446925.
+Named fused residual:0.10584246338775 < delta <0.10584246338776.
+Frozen prior SHA256: 2fb860c4168c53ec201af4522ff5226c3c610671802b938fec5843405b26f93e
+Frozen four-slot SHA256: e714b6e1f70512376b952000afd75f6b04b137b27acbdbc8cef9043ebd7e0161
+Typed/source/corrupted-row hostiles rejected: 6
+Payment is a smaller dependency; universal guard coverage and completed ROOT coverage remain OPEN.
