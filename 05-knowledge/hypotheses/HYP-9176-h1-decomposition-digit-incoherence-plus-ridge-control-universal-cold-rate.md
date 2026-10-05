@@ -28,8 +28,14 @@ status: >
   (the path value Phi_q(a) = sum_i q^(n-i) 2^-D_i mod 1 is injective on
   paths, PROVED), while the fourth moment exceeds the i.i.d. model's for every
   q (weighted additive energy; x3 at n = 4): same mean square as random
-  digits, exponentially heavier tails = the ridges; the q = 3 typical-rate
-  excess is not visible in moments up to four at n <= 4; mechanism OPEN) and
+  digits, exponentially heavier tails = the ridges; with INTEGER starts
+  (arithmetic deep digits) the q = 3 family's kurtosis at n = 10..40 is
+  50-100x that of q >= 5 and of random digits (E5q, 2000 starts), and two
+  hundred integer units give the typical rate 0.5694 +- 0.0002 against
+  0.5721 +- 0.0001 for two hundred i.i.d. seeds (E5n): the excess is a
+  heavy-tail (Jensen) effect of the ridges, densest for the smallest prime
+  -- mechanism SUPPORTED at the statistical level, derivation of the 0.4%
+  from the ridge inventory OPEN) and
   mac-mini's |mu_hat_n(1)| to 2500 (HYP-9166). What it adds to
   HYP-9166: H1's rate is not 3's Parseval scale but the incoherent rate of the
   2-adic window recursion (identical for 5x+1, whose law is nowhere near

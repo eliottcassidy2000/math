@@ -1,0 +1,9 @@
+large ensembles, 200 members each, N=600, A=40, window 200..600; values 3^(n/2)|f_n(0)|
+  q=3 ensemble done [488s]
+  iid ensemble done [662s]
+q=3, 200 units: ensemble rms rate 0.5729; ensemble typical rate 0.5694; per-member typical 0.5694 +- 0.0002 (sd 0.0026)
+   ensemble mean square by 50-blocks (iid exact = 1): 0.043 0.021 0.016 0.012 0.004 0.000 0.011 0.000
+   trimmed-mean (top 5% dropped) rms rate 0.5707; median-of-members rms rate 0.5693
+iid, 200 seeds: ensemble rms rate 0.5734; ensemble typical rate 0.5721; per-member typical 0.5721 +- 0.0001 (sd 0.0021)
+   ensemble mean square by 50-blocks (iid exact = 1): 0.428 0.261 4.448 0.128 0.038 0.132 0.009 0.004
+   trimmed-mean (top 5% dropped) rms rate 0.5730; median-of-members rms rate 0.5720

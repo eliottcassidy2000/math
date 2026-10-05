@@ -485,11 +485,47 @@ scaled by `9^n`; a complex Gaussian of the same variance has `2`):
 The i.i.d. model's normalised fourth moment grows linearly (`+0.27` per level: Gaussian-like with polynomial
 corrections); every random-start tower's grows geometrically (`x1.5-1.8` per level at these `n`): **a shared
 digit string gives all `q`-towers the same second moment as random digits and exponentially heavier tails**,
-which is the statistical form of the ridges. But the heavier tail is the same for `q = 3` and `q >= 5` at
-`n <= 4`, while only `q = 3` has the lower typical rate; so the `q = 3` excess is not a low-moment, small-`n`
-effect either. Its mechanism remains OPEN; what is now excluded: within-level digit statistics (E6), fluctuation
-size (E5e), low-level seeding (E5k), mean-square anticorrelation (this theorem), and fourth-moment weight at
-`n <= 4` (this table).
+which is the statistical form of the ridges. At `n <= 4` the heavier tail is the same for `q = 3` and `q >= 5`;
+the `q`-dependence appears at larger `n` with arithmetic (integer) starts, section 4l.
+
+### 4l. Integer starts are not uniform starts: the Collatz tower's tails at `n = 10..40` (E5q) and the
+two-hundred-member ensembles (E5n)
+
+**E5q** (`collatz_phase_tower_kurtosis_mc_20261004.py`: `2000` random odd `40`-bit starts `u`, the recursion to
+`N = 40`, `K_n = 9^n E|f_n(0)|^4`; note that a `40`-bit `u` is uniform only in its first `40` digits -- the deeper
+digits of `-u q^-n`, which the window reads to depth `1640`, are arithmetic, so this is the real Collatz
+family, not the uniform-start tower of 4k):
+
+| | `3^n E|f|^2` at `n = 10, 20, 30, 40` | `K_n` at `n = 10, 20, 30, 40` | typical rate `10..40` |
+|---|---|---|---|
+| `q = 3` | `4.19, 4.04, 2.94, 2.86` | **`1296 +- 576, 2880 +- 1904, 444 +- 171, 920 +- 488`** | `0.5656` |
+| `q = 5` | `1.16, 1.43, 1.11, 1.65` | `26, 244, 26, 331` | `0.5692` |
+| `q = 7` | `1.32, 1.37, 1.29, 1.46` | `11, 30, 31, 193` | `0.5681` |
+| `q = 11` | `1.05, 1.04, 0.96, 1.10` | `5.2, 10.8, 11.1, 41.7` | `0.5679` |
+| i.i.d. | `1.00, 1.07, 1.04, 0.95` | `4.6, 18.9, 14.6, 13.9` | `0.5684` |
+
+With integer starts the `q = 3` family has a second moment `3-4x` the incoherent value at `n = 10..40` (still far
+below the Parseval average over all units, `(3/2) E[rho_n^2] ~ 6-20`, so the fixed small units remain cold) and
+**a kurtosis `50-100x` that of the `q >= 5` families and of random digits**: the arithmetic deep digits of
+`u 3^-n` produce rare huge values -- the ridges -- far more often for `q = 3` than for any other multiplier.
+
+**E5n** (`collatz_fixed_frequency_large_ensemble_20261004.py`: two hundred integer units `u <= 1200` of `q = 3`
+against two hundred i.i.d. seeds, `N = 600`, window `200..600`): per-member typical rates `0.5694 +- 0.0002`
+(`q = 3`; member sd `0.0026`) against `0.5721 +- 0.0001` (i.i.d.; sd `0.0021`): **thirteen standard errors**;
+the two-hundred-member "ensemble rms" estimates are `0.5729` and `0.5734` (both biased below the exact `0.5774`
+by the heavy tails), trimmed means `0.5707` / `0.5730`, medians of members `0.5693` / `0.5720`.
+
+**Verdict on the mechanism (SUPPORTED).** The Collatz tower's `0.4-0.5%` excess in the typical rate is a
+heavy-tail effect: the mean square sits at the incoherent rate (exactly `3^-n` for uniform starts, PROVED in
+4k; a bounded prefactor for integer starts, E5q), while the fourth moment of the integer-start `q = 3` family is
+two orders of magnitude above every other `q` at `n = 10..40`. By Jensen a heavier tail at fixed variance lowers
+the typical value; `q = 3` pays the largest Jensen gap (`log(0.5774/0.5694) = 1.4%` against `0.9%` for i.i.d.
+digits). The source of the tail is the ridge mechanism of HYP-9166/THM-4519 (coincidences `u 2^Q = -+1 mod 3^k`
+feed coherent waves), and these coincidences are densest for the smallest prime: at depth `k` a random pair has
+probability `~q^-(k-1)` of a `q`-adic coincidence, largest for `q = 3`. What remains OPEN is a derivation of the
+`0.4%` from the ridge inventory, and the sup statement (b) itself. Excluded along the way: within-level digit
+statistics (E6), fluctuation variance (E5e), low-level seeding (E5k), mean-square anticorrelation (4k), and any
+difference in moments up to four at `n <= 4` (4k).
 
 ### 4e. The web around the cold rate (connections found by the niche search; all typed)
 
