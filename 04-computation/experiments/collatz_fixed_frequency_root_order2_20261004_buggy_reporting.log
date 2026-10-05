@@ -1,0 +1,22 @@
+root orders q = 25, 49, 45, 33, 5: typical rate of |mu_hat_n(u)|, N=1200, A=40
+  q=25 u= 1: rate 250..1200 = 0.3303   (Parseval q^(-1/2) = 0.2000, incoherent 0.5774)   [17s]
+  q=25 u= 2: rate 250..1200 = 0.3304   (Parseval q^(-1/2) = 0.2000, incoherent 0.5774)   [34s]
+  q=25 u= 7: rate 250..1200 = 0.3297   (Parseval q^(-1/2) = 0.2000, incoherent 0.5774)   [51s]
+  q=25: mean 0.3301 +- 0.0004
+  q=49 u= 1: rate 250..1200 = 0.3309   (Parseval q^(-1/2) = 0.1429, incoherent 0.5774)   [68s]
+  q=49 u= 2: rate 250..1200 = 0.3309   (Parseval q^(-1/2) = 0.1429, incoherent 0.5774)   [87s]
+  q=49 u=11: rate 250..1200 = 0.3307   (Parseval q^(-1/2) = 0.1429, incoherent 0.5774)   [105s]
+  q=49: mean 0.3308 +- 0.0001
+  q=45 u= 1: rate 250..1200 = 0.3306   (Parseval q^(-1/2) = 0.1491, incoherent 0.5774)   [122s]
+  q=45 u= 2: rate 250..1200 = 0.3306   (Parseval q^(-1/2) = 0.1491, incoherent 0.5774)   [139s]
+  q=45 u= 7: rate 250..1200 = 0.3312   (Parseval q^(-1/2) = 0.1491, incoherent 0.5774)   [157s]
+  q=45: mean 0.3308 +- 0.0003
+  q=33 u= 1: rate 250..1200 = 0.3298   (Parseval q^(-1/2) = 0.1741, incoherent 0.5774)   [174s]
+  q=33 u= 2: rate 250..1200 = 0.3298   (Parseval q^(-1/2) = 0.1741, incoherent 0.5774)   [191s]
+  q=33 u= 7: rate 250..1200 = 0.3305   (Parseval q^(-1/2) = 0.1741, incoherent 0.5774)   [209s]
+  q=33: mean 0.3300 +- 0.0004
+  q= 5 u= 1: rate 250..1200 = 0.3310   (Parseval q^(-1/2) = 0.4472, incoherent 0.5774)   [226s]
+  q= 5 u= 2: rate 250..1200 = 0.3310   (Parseval q^(-1/2) = 0.4472, incoherent 0.5774)   [243s]
+  q= 5 u= 7: rate 250..1200 = 0.3307   (Parseval q^(-1/2) = 0.4472, incoherent 0.5774)   [260s]
+  q= 5: mean 0.3309 +- 0.0002
+DONE

@@ -343,6 +343,26 @@ before the control line was read.
 | [THM-4210](../../01-canon/theorems/THM-4210-rule30-lossless-dyadic-block-current-cartier-tree.md) Rule 30 Cartier tree | even/odd Cartier lift, Frobenius/Cartier carrier, all-scale admissibility | the level-to-level `q`-th-root law is a Cartier-type tower on phases | "bounded truncations do not decide an all-scale statement" | the power-series structure; nothing transfers as a method | ANALOGY |
 | [THM-485](../../01-canon/theorems/THM-485-two-temperatures-viswanath.md) Viswanath's constant | Lyapunov exponent of random Fibonacci products via the Stern-Brocot stationary measure; the golden-mean shift = Zeckendorf | the typical cold rate (`0.5723` i.i.d., `0.5700` Collatz) is a Lyapunov exponent of a random product of THM-4520's operators; the Collatz parity language is the golden-mean shift (THM-4528) | "a typical rate below the mean-square rate, computed from an invariant measure" | the product here acts on an infinite window, not on `R^2`; no stationary measure identified | DIRECTION: a Viswanath-type exact value for the i.i.d. rate would turn (a) of HYP-9176 into a computable constant |
 
+## 5b. What the day established about the cold rate (consolidated; the owner's experiment loop, cycles 2-3)
+
+| statement | status | evidence |
+|---|---|---|
+| the frequency-`u` coefficient of the `q`-adic Syracuse law, `u` fixed, decays at one typical rate `0.5725 +- 0.0007` for every odd `q >= 5`, prime, prime power or composite, and for every unit tried | OBSERVED (`N = 1200-1500`; `q = 5, 7, 9, 11, 13, 15, 19, 21, 25, 27, 33, 45, 49`; 6 units at `5, 7`; 3-4 units elsewhere) | E4, E5g, E5i/E5j (corrected) |
+| the same rate for i.i.d. digit strings (`0.5723 +- 0.0008`, twelve seeds) and for random odd multipliers (`0.5728 +- 0.0005`, eight) | OBSERVED | E5, E5b |
+| Collatz, `q = 3`: `0.5700 +- 0.0009` over six units, five standard errors below -- the only exception | OBSERVED; mechanism OPEN | E1, E5f |
+| the rate is not `q`'s Parseval scale `q^(-1/2)` (for `q >= 5` the fixed units are astronomically above it) | OBSERVED | E4 |
+| the phases are the binary digits of `-u q^-n`; consecutive levels are `q`-th roots | PROVED (identities) | section 0.3, 4c |
+| in the i.i.d. model `E|f_n(k)|^2 = 3^-n` exactly; the typical rate is below the rms rate by a Jensen gap | PROVED + OBSERVED | 4b, E5c |
+| the Collatz digits are neither correlated within a level nor more fluctuating; the `q = 3` excess lives in the cross-level coupling | OBSERVED (null results) | E6, E5e, E5h |
+| the mean-square (window-energy) rate of the real digits is incoherent within noise | OBSERVED (`n <= 600`) | E5d |
+| "the cold rate counts adic digits, `c^(Omega(q))`" | REFUTED (reporting bug, caught by the `q = 5` control; MISTAKES) | 4f |
+| "the Fourier mass concentrates near dyadic real frequencies" | REFUTED | E3 |
+| H1 = (a) digit incoherence in mean square + (b) polynomial ridges | HYP-9176 (CONJECTURED) | 4b |
+
+**Where this leaves H1 (HYP-9166).** The rate H1 needs, `rho < 0.585`, is beaten by every model and every
+`q` by `1.6-2.8%`; the one Collatz-specific fact is a `0.4%` extra cancellation, in the right direction. A proof
+would have to show (a) for the digits of `3^-n` and (b) for the ridge inventory; neither is attempted here.
+
 ## 6. Reproduction
 
 ```bash
