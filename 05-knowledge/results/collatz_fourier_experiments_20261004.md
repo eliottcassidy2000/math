@@ -411,6 +411,15 @@ consistent with a lower typical rate; but the fixed small units are a null subfa
 is a heuristic for the `0.4%`, not a derivation. The excess itself is robust (E5f: five standard errors;
 E5k: localized to the cube-root coupling); its mechanism stays OPEN.
 
+**E5m (per-level coherence ratio; inconclusive).** `collatz_fixed_frequency_coherence_20261004.py` measures
+`kappa_n = |f_(n+1)(0)|^2 / sum_a 4^-a |f_n(-a)|^2` along one run (mean `1` under random phases whatever the
+input). Means over `n = 300..1500`: real `3^-n` (`u = 1, 5, 7`) `0.985, 0.961, 0.971`; real `5^-n` `0.985`; real
+`7^-n` `1.179`; i.i.d. `1.026, 1.012, 1.016`; medians `0.89-0.97` everywhere except `7^-n` (`1.15`); typical values
+`exp(E log kappa) = 0.73-0.79` (`0.98` for `7^-n`). The ratio is a heavy-tailed random variable whose mean over
+`1200` levels scatters by `+-0.1` (the `7^-n` value), so a `0.4%` per-level effect is not resolvable this way;
+the `q = 3` means below `1` are suggestive only. The decisive test is the two-hundred-member ensemble
+(`collatz_fixed_frequency_large_ensemble_20261004.py`, i.i.d. calibration at the same size; results in 4i).
+
 ### 4e. The web around the cold rate (connections found by the niche search; all typed)
 
 | repo thread | the object there | the map to the cold-frequency problem | preserved | lost / sidecar | type |

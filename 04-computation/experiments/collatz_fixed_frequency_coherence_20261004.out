@@ -1,0 +1,10 @@
+per-level coherence ratio kappa_n (1 = incoherent), N=1500, A=40, window 300..1500
+source | mean kappa (mean-square coherence) | exp(mean log kappa) (typical coherence) | median | P(kappa > 4) | implied typical rate factor sqrt(typ)
+real q=3 u=1   | 0.9845 | 0.7581 | 0.9579 | 0.0000 | 0.8707   [32s]
+real q=3 u=5   | 0.9607 | 0.7264 | 0.9119 | 0.0000 | 0.8523   [64s]
+real q=3 u=7   | 0.9705 | 0.7403 | 0.9665 | 0.0000 | 0.8604   [96s]
+real q=5 u=1   | 0.9846 | 0.7480 | 0.8937 | 0.0000 | 0.8649   [128s]
+real q=7 u=1   | 1.1788 | 0.9842 | 1.1486 | 0.0000 | 0.9921   [160s]
+iid seed=0     | 1.0262 | 0.7786 | 0.9622 | 0.0000 | 0.8824   [165s]
+iid seed=1     | 1.0122 | 0.7875 | 0.9654 | 0.0000 | 0.8874   [175s]
+iid seed=2     | 1.0158 | 0.7869 | 0.9364 | 0.0008 | 0.8871   [182s]
