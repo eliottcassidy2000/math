@@ -1,6 +1,6 @@
 ---
 source: oracle-2026-06-01-S551o
-status: synthesis (the Vitali lens on LRC: measure vs set-nonemptiness; why the high-energy core needs construction, not measure)
+status: SUPERSEDED as a no-go claim about all measure methods; corrected scope below (2026-10-05)
 tags:
   - lonely-runner
   - vitali-set
@@ -12,6 +12,34 @@ tags:
 ---
 
 # The Vitali Wall: Measure vs Set, and Why the LRC Core Needs Construction, Not Measure
+
+## Current correction (2026-10-05)
+
+The historical reflection below is preserved for provenance, not as a
+current impossibility theorem. Its valid observation is that Lebesgue mass
+zero does not distinguish an empty set from a nonempty null set. The following
+stronger statements in that reflection are false or unsupported:
+
+- Positive measure **does** certify nonemptiness. A Vitali transversal is
+  nonmeasurable for Lebesgue measure; it is not a measurable null transversal.
+- For speeds1,...,n-1 the closed lonely set is exactly
+  `{a/n: 1<=a<n, gcd(a,n)=1}`, containing phi(n) points, not all n polygon
+  vertices. The n points0,t,...,(n-1)t must be separated by at least1/n;
+  equality in circle packing forces this primitive fraction description.
+  For n=6 only1/6 and5/6 qualify.
+- Failure of a particular atomless-measure lower bound is not a proof that
+  every measure argument, uniform estimate, or change of measure must fail.
+  Atomic measures can assign positive mass to every rational witness in a
+  specified countable set. Measure is not exclusively archimedean; p-adic
+  spaces also carry probability measures.
+
+The useful surviving analogy is loss of information under an observable.
+The AP lonely set is Borel, and no actual Vitali pathology is needed here.
+[Atomic-prefix follow-up](../05-knowledge/results/collatz_effective_prefix_mass_20261005.md),
+sections3–6 and9, gives a computable atomic measure retaining every positive
+odd Collatz source and exact controls for the repaired AP statement.
+
+## Historical original (superseded where it conflicts with the correction)
 
 "Consider the Vitali set." It is the cleanest possible diagnosis of the wall the
 resonance-energy approach (S550) just hit — and it tells us, sharply, where *not* to

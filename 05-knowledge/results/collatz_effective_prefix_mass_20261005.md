@@ -372,6 +372,29 @@ guarantee, and the incoming automaton's success is sufficient for a common
 future, not necessary. The targeted audit does not audit every census or
 claim in that incoming note.
 
+A second incoming commit, `5ab42c931f`, develops a
+[Syracuse target-law spectrum bound](collatz_information_dimension_bridge_20261005.md).
+Its elementary inequality is useful: merging word weights can only increase
+their q-th power sum for q>=1, so the target pressure is bounded above by
+min(q-1,log_3(2^q-1)). The nontrivial crossing is q=2; q=1 is also an
+equality by normalization. The limiting equality proposed there remains
+unproved, and its program evaluates a truncated recursion in float64.
+
+That law is on **ternary target residues under a Haar source**, whereas
+our mu is on **binary source addresses with atoms at ordinary integers**.
+The two phase transitions, q=2 there and q=1/2 in (5), are not identified
+by an established duality. Each comes from a competition between branching
+counts and mass concentration; the branching measures and maps differ.
+
+A concrete next representation is a joint table on a finite prefix-free
+bank of valuation words. A row retains the exact source guard, ordinary
+representative r, source mass, affine carry, and actual endpoint inequality;
+its column records the target residue together with its ternary depth.
+Column sums reveal collisions while the row sidecars retain the source
+obligations. For a non-Haar source these tables must not be assumed to form
+the same projective Syracuse law. This is a proposed computation, not an
+extra convergence theorem.
+
 ## 8. A stronger structure: summable discounted edge flow
 
 The atomic measure translates coverage exactly, but proving its decay still
@@ -557,6 +580,8 @@ cmp /tmp/prefix-mass.json /tmp/prefix-mass-O.json
 ```
 
 All decisions use integers or Fraction; decimals only display exact masses.
+The saved run performs **381,291 explicit checks**; normal and optimized
+Python produce byte-identical JSON.
 Controls include independent mixture versus cylinder sums, binary refinement,
 direct parity iteration for both signs through depth 14, exact word-tree
 enumeration through 26, direct root-time replays, all odd sources below

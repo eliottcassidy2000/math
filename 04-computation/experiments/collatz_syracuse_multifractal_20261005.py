@@ -15,7 +15,8 @@ carried by few parity words, so Z_n(q) ~ sum_words 2^(-q S_n) = (2^q - 1)^-n; in
 with the transition exactly at q = 2 because sum_a 4^-a = 1/3 = 3^-(2-1).  Legendre: alpha(q) = tau'(q) =
 2^q ln 2 / ((2^q - 1) ln 3), f = q alpha - tau; at q = 2: alpha = 4/(3 log_2 3) = 1/(p log_2 3) with p = 3/4, and
 2 - H(3/4) = (3/4) log_2 3 exactly (the critical valuation-one frequency 3/4 = the energy-weighted step law 3 4^-a).
-This script computes Z_n(q) exactly to n = N and compares the per-level slopes with the conjecture.
+This script evaluates a valuation-truncated exact recursion in float64 to n = N.
+The partition functions and slopes are numerical, not exact rational certificates.
 Usage: python collatz_syracuse_multifractal_20261005.py [N=13] [A=60]
 """
 import sys, math, time

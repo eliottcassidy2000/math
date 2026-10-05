@@ -1,6 +1,17 @@
 # The two-sheet receipt calculus (2026-10-05): reversed `3x-1` paths are the multipliers, a `3x-1`-rooted multiplier costs exactly one fusion relation, the trunk move `m_j = (2^j+1)/3` pays every `-1 mod 2^k` cell, a 16-bit plain-first prefix code with `3x-1`-rooted multipliers covers every odd residue class but `-1 mod 2^16` (the Applegate--Lagarias multipliers `5, 7, 13, 23` are `3x-1`-cyclic and not needed), universal two-sheet receipts cost `0.75` fusion relations per integer below `2^16`, and the first trunk multiplier is the sheet commutator `U_+(3x) = U_-(U_+(x))` whose shadow orbit merges with the orbit of `x` through the quarter-child relation with probability exactly `1/3` (`1/2` in every deep cell, decided at step `k-3`)
 
 **Session:** opus, `pascal-lyapunov-20261005` (third task; worktree `codex/session-pascal-lyapunov-20261005`), 2026-10-05.
+
+**2026-10-05 targeted scope/timing correction:** the sibling automaton is a
+sufficient common-future detector, not a necessary one. At x=31 its deep-cell
+test fails, yet the actual orbit of31 reaches its shadow35 and then53.
+In a successful deep cell the quarter-child relation is reached at
+simultaneous time k-3 and the two states become equal one step later.
+The probability1/2 uses conditional Haar measure; under the computable
+atomic source measure of the [prefix-mass follow-up](collatz_effective_prefix_mass_20261005.md),
+section7, it is11/12 for even k and1/12 for odd k. The local algebra survives;
+an unguarded claim that structural non-detection prevents every repair does
+not. Other statements and finite censuses have not all been independently audited.
 Owner's directive: "build the two-sheet receipt calculus and test the trunk multiplier move" (the direction recorded at
 the end of the [four-questions note](collatz_receipts_four_questions_20261005.md)).
 **Inherits (cited):** the [universal weak receipts note](collatz_universal_weak_receipts_20261005.md) (receipts,
@@ -157,19 +168,25 @@ weights `(+1,1): 1/4, (+1,2): 1/8, (+1,3): 1/16, (+1,>=4): 1/16, (-1,1): 1/4, (-
 (`16,660/16,662`, the two misses at a `400`-step cap), while the orbits meet somewhere above `1` in `93%` of
 cases (hub coincidences).
 
-**Theorem E (deep cells).** For `x = t 2^k - 1`, `t` odd, `k >= 4`: `y = 9 t 2^(k-3) - 1` lies in the cell
-`-1 mod 2^(k-3)`, the entry state is `(+1, 1)`, the chain is forced for `k - 3` steps (both orbits climb with
-valuation one, `X_i = 2 Y_(i-2) + 1`), and the two orbits merge iff the shadow's exit valuation `v_2(3 Y_(k-3) + 1)`
-equals `2`, i.e. for exactly half of the cell, decided at step `k - 3` by one bit of `t`. *Proof.* `3x + 1 = 2(3t
-2^(k-1) - 1)`, `U_+(x) = 3 t 2^(k-1) - 1 = -1 mod 2^(k-1)`, `3 U_+(x) - 1 = 4 (9 t 2^(k-3) - 1)`, so `y = 9t 2^(k-3) -
-1` and `c = 1`; a cell `-1 mod 2^r` has valuation one for `r` steps and stays in the relation; at step `k - 3` the
-valuation `b` is `2` or `>= 3` according to the next bit. □ Measured: merge `0.5000` and the merge step exactly
+**Theorem E (deep cells, corrected timing and scope).** For
+`x = t 2^k - 1`, t odd and k>=4, put `y = 9t 2^(k-3)-1` and
+`X = U_+^2(x) = 2y+1`. After k-4 simultaneous valuation-one steps,
+the next valuation of the smaller state is
+`b = 1 + v_2(3^(k-1)t-1) >= 2`. This automaton reaches the quarter-child
+state iff b=2, equivalently `t = 3^k mod4`. That is half the exact cell
+under conditional Haar measure. It reaches the quarter-child state at
+simultaneous time k-3 and actual equality at k-2. If b=3 it next enters
+a negative-sign state with exponent>=2 and stops certifying; if b>=4 it
+stops directly. Neither outcome excludes a later or asynchronous common
+future. *Proof.* Expand the two affine recurrences and use that an exact
+cell `-1 mod2^r` has r-1 initial valuation-one steps, followed by a valuation
+at least2. Apply `U_+(4s+1)=U_+(s)` for the final equality. See the independent
+exact audit in the prefix-mass follow-up. □ Measured: detector success `0.5000` and the quarter-child detection time exactly
 `k - 3` for `k = 8, 12, 16, 20, 24` (`2,000` values each). The merge point is `x`'s first point after its own
 `k`-step climb, which may already be below `x` (`x = 255`: climb to `4373 = 4 * 1093 + 1`, then `205`): the move
-reveals that half of each deep cell shares its post-climb orbit with its shadow, and gains no descent.
+reveals that half of each deep cell shares its post-climb orbit with its shadow, and supplies no additional descent beyond that already present in the common-future paths.
 
-**Consequence for the receipts.** The fusion relation `R(3, x)` of a `x3` event is eliminable by actual edges
-exactly when the automaton merges; among the `21,676` `x3` events of the universal receipts below `2^16` only `794`
+**Consequence for the receipts.** An automaton merge supplies actual common-future paths that can be used in a stock-supported repair of a `x3` event; it is a sufficient detector, not an iff criterion for eliminating `R(3,x)`. In the frozen census, among the `21,676` `x3` events of the universal receipts below `2^16` only `794`
 (`3.7%`) are at a stage source `x_i = 3 mod 4` whose chain merges, because the code inserts `x3` at classes without
 plain descent, where the merge, when it happens, lands at the end of a climb. The sibling repair is real and
 rare.

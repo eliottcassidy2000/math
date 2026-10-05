@@ -1,5 +1,5 @@
 {
-  "checks": 381286,
+  "checks": 381291,
   "climb_credit_controls": {
     "refuels": [
       {
@@ -873,6 +873,19 @@
       ],
       "reversed_mask": 84707
     }
+  },
+  "incoming_scope_controls": {
+    "Z_2": "5/9",
+    "coarse_same_residue_sources": [
+      1,
+      5
+    ],
+    "coefficient_exception": 1,
+    "syracuse_level_one": [
+      "0",
+      "1/3",
+      "2/3"
+    ]
   },
   "measure_controls": {
     "all_odd_sign_controls": [

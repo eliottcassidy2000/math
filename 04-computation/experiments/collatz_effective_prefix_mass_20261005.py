@@ -317,6 +317,22 @@ def climb_credit_controls():
     return {"valuation_one_sources_checked": 8192, "refuels": refuels}
 
 
+def incoming_scope_controls():
+    check(Fraction(3, 4) < 1 and odd_step(1) == 1,
+          "coefficient contraction need not be actual descent")
+    check(1 % 4 == 5 % 4 and 1 % 8 != 5 % 8,
+          "coarse word guard loses exact last valuation")
+    check((3*1+1) == 4 and (3*5+1) == 16,
+          "valuation two versus valuation four in one coarse cylinder")
+    # At Syracuse level one, the exact infinite geometric law is (0,1/3,2/3).
+    check(Fraction(1, 3)**2 + Fraction(2, 3)**2 == Fraction(5, 9),
+          "exact one-level target-law second moment")
+    check(2**1-1 == 3**0 and 2**2-1 == 3**1,
+          "pressure bounds coincide at both normalization one and transition two")
+    return {"coefficient_exception": 1, "coarse_same_residue_sources": [1, 5],
+            "syracuse_level_one": ["0", "1/3", "2/3"], "Z_2": "5/9"}
+
+
 def finite_observer_controls():
     # A finite sigma-algebra obstruction, with no nonmeasurable subset involved.
     pairs = list(combinations(range(7), 2))
@@ -401,7 +417,8 @@ def main():
     result = {"measure_controls": measure_controls(), "survivor_tree": survivor_tree(),
               "finite_head": finite_head(), "partition_controls": partition_controls(),
               "sibling_controls": sibling_controls(), "finite_observer_controls": finite_observer_controls(),
-              "transfer_hostiles": transfer_hostiles(), "climb_credit_controls": climb_credit_controls()}
+              "transfer_hostiles": transfer_hostiles(), "climb_credit_controls": climb_credit_controls(),
+              "incoming_scope_controls": incoming_scope_controls()}
     result["checks"] = CHECKS
     result["status"] = "FINITE-EXACT controls passed; universal Collatz OPEN"
     print(json.dumps(result, indent=2, sort_keys=True))

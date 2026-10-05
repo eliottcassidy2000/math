@@ -1,8 +1,16 @@
 # THM-169: Complete Characterization of the Vitali Atom (4-Reversal H-Change)
 
-**Status:** PROVED (exhaustive n<=6, statistical n=7 with zero exceptions)
+**Status:** VERIFIED finite evidence (reported exhaustive n<=6 and sampled n=7);
+the stated uniform n=7 iff classification is OPEN pending a repaired proof.
 **Session:** kind-pasteur-2026-03-13-S61
 **Dependencies:** THM-002 (OCF), THM-168 (lambda completeness/ambiguity)
+
+**2026-10-05 audit:** the former PROVED label exceeded the reported sampled
+evidence and the proof sketch contains an erroneous triangle path count,
+corrected below. This audit does not refute the classification, but does not
+promote it to a proved dependency. The separately checked lambda-preserving
+pair in [the atomic-prefix audit](../../05-knowledge/results/collatz_effective_prefix_mass_20261005.md),
+section9, proves existence of a seven-vertex H-change, not the claimed iff.
 
 ## Statement
 
@@ -72,10 +80,11 @@ The net change: (HL): +1, (LH): -1.
 
 ### Step 4: Cyclic ext case
 
-For cyclic E, there are 2 Ham paths through E (one per direction around the 3-cycle).
-The completion matrix C[d][a] has rank >= 2. The endpoint redistribution after reversal
-creates a net +/-1 change in weighted completion count (100% of the time, verified on
-48 cases with zero exceptions).
+For cyclic E, there are **3** Hamiltonian paths through E, one for each
+choice of starting vertex, all following the same directed cyclic orientation.
+The former count of2 (one per direction) was false. The reported48 cases
+with a net +/-1 change remain finite evidence; the stated uniform completion
+conclusion requires a proof retaining these three paths and their endpoints.
 
 ### Step 5: Transitive ext case
 
@@ -100,7 +109,7 @@ Verified exhaustively: 34/34 changing cases have |B_s|=4 or |B_k|=4,
 
 ## Significance
 
-This theorem completely characterizes the **Vitali atom** — the minimal gauge transformation
+The proposed classification concerns the **Vitali atom** — the minimal gauge transformation
 that breaks H-invariance under the lambda-preserving equivalence relation. The phase
 transition at n=7 is explained by a dimensional mechanism: 7-cycles require all 7 vertices,
 and the Ham-path-completion interaction provides a 1-degree-of-freedom "dark sector"
