@@ -551,6 +551,9 @@ difference in moments up to four at `n <= 4` (4k).
 | the Collatz digits are neither correlated within a level nor more fluctuating; the `q = 3` excess lives in the cross-level coupling | OBSERVED (null results) | E6, E5e, E5h |
 | the mean-square (window-energy) rate of the real digits is incoherent within noise | OBSERVED (`n <= 600`) | E5d |
 | "the cold rate counts adic digits, `c^(Omega(q))`" | REFUTED (reporting bug, caught by the `q = 5` control; MISTAKES) | 4f |
+| the Pascal tower: `theta_(N-m,d) = sum_i C(m,i) theta_(N,d-i)` (every level a binomial transform of the deepest) | PROVED (exact check) | 4j |
+| the random-start `q`-tower has second moment exactly `3^-n` (path values injective) and a fourth moment at least the i.i.d. model's | PROVED; values FINITE-EXACT (`n <= 4`) | 4k |
+| the Collatz excess is a heavy-tail (Jensen) effect of the integer-start tower, not a mean-square effect; kurtosis `50-100x` at `n = 10..40`; `0.5694 +- 0.0002` vs `0.5721 +- 0.0001` over two hundred members | SUPPORTED (mechanism = the ridges, densest for `q = 3`); the `0.4%` itself not derived | 4l, 4h |
 | "the Fourier mass concentrates near dyadic real frequencies" | REFUTED | E3 |
 | H1 = (a) digit incoherence in mean square + (b) polynomial ridges | HYP-9176 (CONJECTURED) | 4b |
 
