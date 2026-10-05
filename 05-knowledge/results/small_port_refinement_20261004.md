@@ -393,6 +393,13 @@ eventually crosses the payment wall.
 
 ## 7. Reproduction and precise scope
 
+A subsequent [marked-centroid refinement](collatz_carry_interfaces_20261004.md)
+shows that a fixed interior centroid's image alone determines a finite word
+in either pure chart alphabet. This strengthens the arbitrary-point case
+only by retaining the distinguished seed. Final port permutations remain
+invisible; a period-three triadic inverse cycle shows why arbitrary rational
+points need not have finite addresses. The mixed matrix collision persists.
+
 Run:
 
     python 04-computation/experiments/small_port_refinement_20261004.py

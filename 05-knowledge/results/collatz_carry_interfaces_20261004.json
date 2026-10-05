@@ -78,10 +78,12 @@
     "carry_square": 22400,
     "compiled_common_future": 10921,
     "composite_states_distinguishable": 12,
+    "cyclic_boundary_loss": 2,
     "decoder_hostile": 6,
     "division_state_range": 22400,
     "extended_native_affine": 183392,
     "extended_native_replay": 150772,
+    "first_empty_balanced_tree_count": 1,
     "five_letter_credit_interface": 183392,
     "five_letter_decoder": 19531,
     "five_letter_injective": 19531,
@@ -90,6 +92,7 @@
     "fixed_cost_address_injective": 13888,
     "formal_tree_native_empty": 1,
     "general_q_target_port": 13888,
+    "guard_trace_Chebyshev": 21,
     "height_hostile": 3,
     "inherited_credit_interface": 61896,
     "marked_centroid_decoder": 12611,
@@ -97,6 +100,11 @@
     "mixed_history_collision": 1,
     "mixed_tree_count": 10,
     "mod3_tag_collision": 1,
+    "native_DFA_word_counts": 9,
+    "native_balanced_tree_series": 9,
+    "native_golden_sublibrary": 9,
+    "native_language_iff": 19531,
+    "native_language_output_state": 15985,
     "native_port_affine": 15985,
     "native_port_associativity": 29791,
     "native_port_endpoint": 31970,
@@ -173,6 +181,67 @@
         "2/9",
         "1/3"
       ]
+    ]
+  },
+  "guard_language": {
+    "DFA_live_matrix": [
+      [
+        4,
+        1
+      ],
+      [
+        3,
+        1
+      ]
+    ],
+    "cyclic_two_letter_counts": {
+      "GBL": 7,
+      "HGABL": 23
+    },
+    "forbidden_pair": "LB",
+    "golden_counts_0_to_8": [
+      1,
+      3,
+      8,
+      21,
+      55,
+      144,
+      377,
+      987,
+      2584
+    ],
+    "golden_sublibrary": "G,B,L",
+    "minimal_DFA_states_including_rejection": 3,
+    "native_balanced_counts_0_to_12": [
+      1,
+      0,
+      2,
+      1,
+      8,
+      11,
+      43,
+      97,
+      288,
+      812,
+      2240,
+      6805,
+      18964
+    ],
+    "native_balanced_generating_function": "T=1+z^3*T^3+2*z^2*T^2+z^5*T^5-z^7*T^6",
+    "native_words_by_length_0_to_12": [
+      1,
+      5,
+      24,
+      115,
+      551,
+      2640,
+      12649,
+      60605,
+      290376,
+      1391275,
+      6665999,
+      31938720,
+      153027601
     ]
   },
   "macros": {
@@ -277,5 +346,5 @@
     ]
   },
   "scope": "PROVED identities in the note; finite exact controls here; Collatz and H1 remain open",
-  "total_checks": 1900995
+  "total_checks": 1936562
 }

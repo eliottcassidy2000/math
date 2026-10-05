@@ -373,10 +373,11 @@ section, good-cover or factorization control. **Evidence:** THM-2658/2672/
 
 ## Audit and close sections under their next native operation
 
-**Action:** test the next target operation before scalarizing. Retain moving
-labels, cocycles, co-support and basepoint; observer equality must be a lawful
-congruence. Adaptive state need not be uniformly finite; walks need not be
-chronology. **Evidence:** THM-2292/3144/2658/3156/3285--3324/3511/3732/4006.
+**Action:** test composition with labels, cocycles, co-support and seed.
+Test disjoint-image decoding, termination and mixed-alphabet collisions.
+Finite states can hide memory or chronology.
+**Evidence:** THM-2292/3144/2658/3156/3285--3324/3511/3732/4006;
+[carry interfaces](../05-knowledge/results/collatz_carry_interfaces_20261004.md).
 
 ## Exteriorize a commutative response against the lost relation
 

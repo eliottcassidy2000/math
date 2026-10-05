@@ -298,6 +298,7 @@ def audit_extended_library():
         check(shift not in translations, "five_letter_injective")
         translations.add(shift)
         ap = guarded_encode(w)
+        check((ap is not None) == ("LB" not in w), "native_language_iff")
         balance, minimum = 0, 0
         for letter in w:
             balance += AWARD[letter]
@@ -311,6 +312,10 @@ def audit_extended_library():
             empty += 1
             continue
         legal += 1
+        precision = 4 if w.endswith("L") else 1
+        residue = 11 if w.endswith("L") else 1
+        check(valuation(ap.ell) == precision and ap.d % (1 << precision) == residue,
+              "native_language_output_state")
         check(ap.affine() == (F(op.p, op.q), shift), "native_port_affine")
         check(0 < ap.c < ap.m and 0 < ap.d < ap.ell, "native_port_sign_boundary")
         for lift in (0, 1):
@@ -353,6 +358,77 @@ def audit_extended_library():
             "new_letter": {"name": "L", "affine": LETTERS["L"].__dict__,
                            "native_guard": NATIVE["L"].__dict__, "tag_mod9": 6},
             "explicit_empty_program": "LBGGGGG", "relation_if_K_is_added": "K=LG"}
+
+
+def audit_guard_language():
+    native_counts, balanced_counts, formal_counts = Counter(), Counter(), Counter()
+    for w in words("HGABL", 8):
+        native = "LB" not in w
+        if native:
+            native_counts[len(w)] += 1
+        balance, minimum = 0, 0
+        for letter in w:
+            balance += AWARD[letter]
+            minimum = min(minimum, balance)
+        if balance == 0 and minimum == 0:
+            formal_counts[len(w)] += 1
+            if native:
+                balanced_counts[len(w)] += 1
+    sequence = [1, 5]
+    for _ in range(2, 13):
+        sequence.append(5 * sequence[-1] - sequence[-2])
+    for n in range(9):
+        check(native_counts[n] == sequence[n], "native_DFA_word_counts")
+
+    def mm(a, b):
+        return tuple(tuple(sum(a[i][k] * b[k][j] for k in range(2)) for j in range(2)) for i in range(2))
+    matrices = [((1, 0), (0, 1))]
+    M = ((4, 1), (3, 1))
+    for _ in range(40):
+        matrices.append(mm(matrices[-1], M))
+    for n in range(21):
+        t = sum(matrices[n][i][i] for i in range(2))
+        tt = sum(matrices[2 * n][i][i] for i in range(2))
+        check(tt == t * t - 2, "guard_trace_Chebyshev")
+    fib = [0, 1]
+    for _ in range(18):
+        fib.append(fib[-1] + fib[-2])
+    golden_counts = []
+    for n in range(9):
+        count = sum("LB" not in "".join(w) for w in product("GBL", repeat=n))
+        check(count == fib[2 * n + 2], "native_golden_sublibrary")
+        golden_counts.append(count)
+    cyclic_two = {}
+    for alphabet in ("GBL", "HGABL"):
+        cyclic_two[alphabet] = sum("LB" not in a + b + a for a, b in product(alphabet, repeat=2))
+        check(cyclic_two[alphabet] == len(alphabet) ** 2 - 2, "cyclic_boundary_loss")
+
+    cutoff = 12
+    def mul(a, b):
+        out = [0] * (cutoff + 1)
+        for i, x in enumerate(a):
+            for j, y in enumerate(b[:cutoff + 1 - i]):
+                out[i + j] += x * y
+        return out
+    def power(a, k):
+        out = [1] + [0] * cutoff
+        for _ in range(k):
+            out = mul(out, a)
+        return out
+    T = [1] + [0] * cutoff
+    for n in range(1, cutoff + 1):
+        T[n] = sum(coefficient * power(T, exponent)[n - offset]
+                   for coefficient, exponent, offset in ((1, 3, 3), (2, 2, 2), (1, 5, 5), (-1, 6, 7))
+                   if n >= offset)
+    for n in range(9):
+        check(T[n] == balanced_counts[n], "native_balanced_tree_series")
+    check(formal_counts[7] - balanced_counts[7] == 1, "first_empty_balanced_tree_count")
+    return {"DFA_live_matrix": M, "forbidden_pair": "LB", "minimal_DFA_states_including_rejection": 3,
+            "native_words_by_length_0_to_12": sequence,
+            "golden_sublibrary": "G,B,L", "golden_counts_0_to_8": golden_counts,
+            "cyclic_two_letter_counts": cyclic_two,
+            "native_balanced_counts_0_to_12": T,
+            "native_balanced_generating_function": "T=1+z^3*T^3+2*z^2*T^2+z^5*T^5-z^7*T^6"}
 
 
 def compositions(total, length):
@@ -580,6 +656,7 @@ def audit_geometric_codes():
 def main():
     result = {"scope": "PROVED identities in the note; finite exact controls here; Collatz and H1 remain open",
               "macros": audit_macros(), "extended_library": audit_extended_library(),
+              "guard_language": audit_guard_language(),
               "Fourier": audit_fourier(),
               "phase_grid": audit_phase_grid(), "geometry": audit_geometric_codes()}
     result["checks"] = dict(sorted(CHECKS.items()))
@@ -590,6 +667,7 @@ def main():
              f"Funded nonempty source replays: {result['macros']['funded_nonempty_sources']}",
              f"Independent port composition pairs: {result['macros']['port_composition_pairs']}",
              f"Five-letter codes: {result['extended_library']['formal_words']}; empty native guards: {result['extended_library']['empty_native_guards']}",
+             f"Native guard language: avoid LB; live matrix {result['guard_language']['DFA_live_matrix']}",
              f"Ordinary-word phase and source controls: {result['Fourier']['word_cases']}",
              f"Marked-centroid codes: {result['geometry']['centroid_word_controls']}",
              f"Total explicit checks: {result['total_checks']}",

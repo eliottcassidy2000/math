@@ -2,7 +2,9 @@
 
 2026-10-04 local / 2026-10-05 UTC. **PROVED:** lossless translation coding
 for the five-operation library below; exact composition of its native
-arithmetic progressions; the source-address Fourier identity and its uniform
+arithmetic progressions and their finite admissibility automaton;
+the resulting golden-ratio sublanguage and reciprocal trace law;
+the source-address Fourier identity and its uniform
 exponentially small error; the binary carry-square law and its state-count
 boundary; marked-centroid coding on the two pure refinement alphabets.
 **FINITE-EXACT:** the independent controls in the accompanying program.
@@ -194,6 +196,98 @@ formal balanced language has 2h+p+4l+1 leaves and
 
 words. The usual last-minimum cyclic-shift argument gives this count.
 It counts receipt shapes; some have empty native guards, as above.
+
+### The exact guard language recovers a reciprocal quadratic recursion
+
+**Native-language theorem.** A finite word in H,G,A,B,L has a nonempty
+native source guard if and only if it contains no adjacent pair LB.
+The claim concerns the existence of sources, not legality at every source.
+
+Proof: keep only the dyadic part of the target progression in (1).
+If a legal prefix ends in L, its target period has valuation four and
+its target is 11 modulo 16. Every other legal prefix, including the empty
+prefix, has target period of valuation one and an odd target. All native
+input periods have valuation at least four; the L input period has
+valuation eight. The gcd test in (1) therefore gives these exact rules:
+
+- From the ordinary state, every letter is possible. A following L leaves
+  target valuation four and residue 11 modulo 16; every other letter
+  leaves valuation one.
+- From the L state, the next native input must be 11 modulo 16. H,G,A,L
+  satisfy this and B does not. A legal following letter resets the state
+  according to the same rule as above.
+
+These statements follow by the formula
+v2(l_new)=v2(l_old)+v2(l_letter)-min(v2(l_old),v2(m_letter)).
+No higher bits obstruct existence because all input moduli are powers
+of two. A nonempty progression supplies infinitely many positive sources.
+Induction proves both directions.
+
+There are two live states and one rejecting state. This deterministic
+automaton is minimal: a B suffix distinguishes the two live states, and
+the empty suffix distinguishes each from rejection. Its live counting
+matrix, with rows and columns ordered ordinary,L, is
+
+    M5 = [4 1]
+         [3 1],       det M5=1, trace M5=5.           (2a)
+
+Thus the number a_n of native-realizable words of length n satisfies
+a_0=1, a_1=5, a_n=5a_(n-1)-a_(n-2):
+
+    1, 5, 24, 115, 551, 2640, 12649, ... .
+
+This makes the reciprocal quadratic structure native to the guard rules.
+The eigenvalues are lambda=(5+sqrt(21))/2 and lambda^(-1), and
+
+    trace(M5^(2n))=trace(M5^n)^2-2.                   (2b)
+
+The correction has a boundary interpretation. At length two, linear
+words exclude LB and number 24. Cyclic words also exclude BL, whose closing
+boundary is LB, and number 23=5^2-2. Matrix trace counts cyclic words;
+the sum from the initial ordinary state counts linear words. These
+observables must not be interchanged.
+Nor are cyclic label words arithmetic cycles. For example L repeated forever
+passes this finite-state language, but L's fixed point is the rational
+-3/7, not a positive integer. The native 2-adic guard contains that fixed
+point; all finite L prefixes have positive realizations, without any one
+positive integer realizing the infinite repetition.
+
+There is an exact golden-ratio sublibrary. Restrict to G,B,L, retaining
+the same native rules. The two-state matrix becomes
+
+    M3 = [2 1] = [1 1]^2,
+         [1 1]   [1 0]
+
+with eigenvalues phi^2 and phi^(-2). Its native-word counts are
+F_(2n+2)=1,3,8,21,55,..., whereas its two-letter cyclic count is 7.
+Here the 7/8 difference and the golden ratio come from the actual forbidden
+interface, not a matching decimal. These are counts of nonempty guards;
+they are neither densities of their overlapping source cylinders nor
+counts of grounded root certificates.
+The incoming unit-clock transfer obstruction remains intact: M3 acts on
+guard-admissibility states, while multiplication by 9/8 acts on arithmetic
+values. No nonconstant quotient from the golden unit clock to that
+contracting ternary action has been constructed.
+
+More generally, weighting the five letters by h,g,a,b,l gives the matrix
+[[h+g+a+b,l],[h+g+a,l]], with trace h+g+a+b+l and determinant b*l.
+The trace-square defect is exactly twice the weight of the forbidden pair.
+The determinant forgets which orientation is forbidden; the named
+transition interface restores it. This is the same two-mixed-term
+mechanism as the earlier reciprocal-product expansion, with a new
+independently specified carrier.
+
+The guard automaton can also be joined to the credit grammar. In its ordered
+tree, LB occurs precisely when an L node's first child is B-rooted. Let T
+count realizable balanced receipts, let z count executed letters, and let N
+count those receipts whose root is not B. The nonnegative recursive system is
+
+    T=1+z^3*T^3+2z^2*T^2+z^5*N*T^4,
+    N=1+z^3*T^3+ z^2*T^2+z^5*N*T^4.
+
+Equivalently T=1+z^3*T^3+2z^2*T^2+z^5*T^5-z^7*T^6. This counts exactly the
+balanced programs with nonempty guards. It still does not test a particular
+source, whose unbounded address is retained by the full progression.
 
 ## 4. The Fourier phase is the other end of the same progression
 
@@ -397,6 +491,7 @@ of the coding lemma and a precise counterindication to extending it.
 |---|---|---|---|
 | Divisor profile to controller | the prior P^2QR word profile, then ordered affine composition | operation multiplicities; with carry, the full action | chronology and native guards must be restored |
 | Controller word to rational code | w -> F_w(0), using the five disjoint ternary tags | full word and therefore its typed local proofs | cost grows; redundant K must be normalized to LG |
+| Native guards to a small automaton | target progression reduced to ordinary or last-L state | nonemptiness iff LB is absent; the G/B/L sublanguage has golden growth | actual source, period, height and terminal proof are lost |
 | Native rules to a reusable boundary record | [c,m;d,l], composed by (1) | every legal source and endpoint, including empty domains | reducing the affine denominator alone loses guard bits |
 | Collatz word to Fourier phase | [c,2Q;d,2P] -> e(u*d/P) | the exact summand; source-address replacement has bound (7) | source address, period and integer height are not recovered from the phase |
 | Fourier tower to local tiles | the carry square (9) | cross-level branch compatibility | flattening m levels needs q^m distinguishable residual states |
@@ -411,7 +506,8 @@ mathematical data with explicit decoders, not a promise of free information.
 The most concrete new analytical target is (7): prove the required decay
 directly for the source-address measure while retaining the compatibility
 tiles. The most concrete controller target is to extend the native guard
-cover, using (1) to reject unrealizable switches before expensive searches.
+cover, using the finite automaton to reject unrealizable switches and (1)
+to recover their exact source cylinders before expensive searches.
 Neither storing a finite receipt nor composing valid local receipts proves
 that every integer has a completed receipt.
 
@@ -423,7 +519,7 @@ Run from the repository root:
     python3 -O -B 04-computation/experiments/collatz_carry_interfaces_20261004.py
 
 The program uses only exact integers and Fractions, with explicit exceptions
-that remain active under optimization. Its saved output counts 1,900,995
+that remain active under optimization. Its saved output counts 1,936,562
 checks. The principal universes are:
 
 - All 5,461 H/G/A/B words through length six, two positive lifts and one
@@ -434,7 +530,10 @@ checks. The principal universes are:
   Nonempty domains are replayed at two positive lifts, with local dependency
   joins and every admitted credit prefix checked. All 29,791 triples of
   words of length at most two check native-port associativity, including
-  empty domains. Formal tree counts are independently enumerated.
+  empty domains. All 488,281 formal words through length eight independently
+  check native-language and balanced-tree counts. The G/B/L sublanguage is
+  enumerated through length eight; reciprocal trace identities are checked
+  through n=20. The all-depth language proof is the two-state invariant.
 - 13,888 ordinary-word cases: q in {3,5,7,9}, m=1,...,5, total valuation
   cost at most 14. Phases and correction bounds are exact rational
   identities. An independent probability recursion checks the complete

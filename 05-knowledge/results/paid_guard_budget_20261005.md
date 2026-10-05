@@ -182,9 +182,13 @@ when they agree. This gives an exact associative composition rule, because
 it is literal intersection with a preimage. The guarded equality LG=K
 restores the three missing bits through G's native input condition.
 
-No claim is made that the enlarged H/G/L affine alphabet losslessly decodes
-its entire history. Store its typed expression until such injectivity is
-proved. The earlier pure H/G decoder is not silently extended.
+The subsequent [carry-interface theorem](collatz_carry_interfaces_20261004.md)
+proves lossless translation decoding for H/G/L together with the two exact
+four-slot operations 1213 and 1123. Distinct translation residues modulo 9
+identify the last letter. Decoding regenerates each native guard, including
+L's missing bits; the native language forbids exactly L followed by 1123.
+This scoped extension does not cover every permutation or exit in the full
+P bank. A typed expression remains a valid carrier and retains chosen sharing.
 
 The program additionally compiles any legal H/G/L expression into actual
 common-future words. Traverse it backward. G prepends 12; H uses the inherited
