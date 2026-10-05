@@ -398,6 +398,30 @@ def audit_guard_language():
         count = sum("LB" not in "".join(w) for w in product("GBL", repeat=n))
         check(count == fib[2 * n + 2], "native_golden_sublibrary")
         golden_counts.append(count)
+    swap, golden = ((0, 1), (1, 0)), ((0, 1), (1, 1))
+    guard = ((2, 1), (1, 1))
+    check(guard == mm(swap, mm(mm(golden, golden), swap)), "golden_square_conjugacy")
+    def reduced(a):
+        return tuple(tuple(x % 3 for x in row) for row in a)
+    check(reduced(mm(guard, guard)) == ((2, 0), (0, 2)), "golden_square_order")
+    check(reduced(mm(mm(guard, guard), mm(guard, guard))) == ((1, 0), (0, 1)),
+          "golden_square_order")
+    def act(a, v):
+        return tuple(sum(x * y for x, y in zip(row, v)) % 3 for row in a)
+    for v in product(range(3), repeat=2):
+        check(act(swap, act(guard, v)) == act(mm(golden, golden), act(swap, v)),
+              "golden_square_intertwiner")
+    unseen = set(product(range(3), repeat=2)) - {(0, 0)}
+    cycles = []
+    while unseen:
+        v = min(unseen)
+        orbit = []
+        while v not in orbit:
+            orbit.append(v)
+            unseen.remove(v)
+            v = act(guard, v)
+        cycles.append(orbit)
+    check(sorted(map(len, cycles)) == [4, 4], "golden_square_nonzero_orbits")
     cyclic_two = {}
     for alphabet in ("GBL", "HGABL"):
         cyclic_two[alphabet] = sum("LB" not in a + b + a for a, b in product(alphabet, repeat=2))
@@ -426,6 +450,7 @@ def audit_guard_language():
     return {"DFA_live_matrix": M, "forbidden_pair": "LB", "minimal_DFA_states_including_rejection": 3,
             "native_words_by_length_0_to_12": sequence,
             "golden_sublibrary": "G,B,L", "golden_counts_0_to_8": golden_counts,
+            "golden_guard_matrix": guard, "mod3_nonzero_orbits": cycles,
             "cyclic_two_letter_counts": cyclic_two,
             "native_balanced_counts_0_to_12": T,
             "native_balanced_generating_function": "T=1+z^3*T^3+2*z^2*T^2+z^5*T^5-z^7*T^6"}

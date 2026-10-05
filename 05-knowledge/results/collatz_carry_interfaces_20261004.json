@@ -92,6 +92,10 @@
     "fixed_cost_address_injective": 13888,
     "formal_tree_native_empty": 1,
     "general_q_target_port": 13888,
+    "golden_square_conjugacy": 1,
+    "golden_square_intertwiner": 9,
+    "golden_square_nonzero_orbits": 1,
+    "golden_square_order": 2,
     "guard_trace_Chebyshev": 21,
     "height_hostile": 3,
     "inherited_credit_interface": 61896,
@@ -210,8 +214,56 @@
       987,
       2584
     ],
+    "golden_guard_matrix": [
+      [
+        2,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
     "golden_sublibrary": "G,B,L",
     "minimal_DFA_states_including_rejection": 3,
+    "mod3_nonzero_orbits": [
+      [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          2
+        ]
+      ]
+    ],
     "native_balanced_counts_0_to_12": [
       1,
       0,
@@ -346,5 +398,5 @@
     ]
   },
   "scope": "PROVED identities in the note; finite exact controls here; Collatz and H1 remain open",
-  "total_checks": 1936562
+  "total_checks": 1936575
 }

@@ -25,6 +25,15 @@ typical rate. Their second-moment proof identifies distinct path characters.
 Their finite ensembles do not supply a bound at the fixed seed 1.
 See [Fourier experiments, sections 4k-4l](collatz_fourier_experiments_20261004.md).
 
+The later batch `d3509b04be` independently supplies a constructive real-phase
+decoder and excludes antipodal pairs within one length; see
+[translation decoder, section 8](translation_phase_decoder_20261005.md).
+Our multiplication by -q^(-m) turns that fixed-length coding into the
+cross-length source partition and adjacent covariance proved below.
+Its companion [centroid membership result](centroid_membership_20261005.md)
+provides a concrete warning for exchanging limits: finite addresses can
+converge geometrically to a rational point with no finite address.
+
 The closest proved mechanism is finite inverse-parity coding. The hostile
 is transferring an almost-everywhere estimate to a specified integer.
 The corrected near miss is forgetting which clock truncates an infinite

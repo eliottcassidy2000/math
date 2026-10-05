@@ -58,6 +58,10 @@ including their corrections, rather than treating commit titles as evidence:
   ensembles, and q=5 heavy-tail caution in the Fourier package. These led to
   [the two-clock source-address theorem](source_address_two_clocks_20261004.md):
   a complete binary character partition and an exact adjacent-level energy.
+- Through `d3509b04be`: all four notes and programs in the level-11,
+  centroid-membership, and guarded-decoder package. Its independent decoder
+  agrees with ours and adds a bounded-precision packet; its fan denominator
+  law supplies an intrinsic stopping budget. The exact transfers are below.
 
 The incoming coverage improvements belong to those packages; this note
 does not add their densities again. We use the existing META-PATTERNS
@@ -494,6 +498,55 @@ the common point is (175,37,112)/324. Here the disjoint-image premise fails,
 and the typed tree is still required. This gives both a successful transfer
 of the coding lemma and a precise counterindication to extending it.
 
+### Concurrent refinements: precision, denominator and the golden operator
+
+The independent [translation decoder](translation_phase_decoder_20261005.md)
+proves that (dyadic cost A, translation modulo 3^floor(2A/3)) is already a
+finite lossless packet for the five-letter library. The retained cost pays
+for successive ternary precision losses. Its native closed form agrees
+with our progression composition: after decoding and rejecting LB, require
+P*n+B=t*Q modulo s*Q, with (s,t)=(16,11) after terminal L and (2,1)
+otherwise. The incoming real-phase decoder is a different quotient and
+retains ordinary-word length. Our source-address coordinate then makes
+cross-length character interactions explicit in the two-clock note.
+
+The [centroid membership theorem](centroid_membership_20261005.md) further
+proves that a fan word of depth d has exact reduced denominator 3^(d+1).
+Thus for fan centroids the denominator supplies the depth budget that our
+general marked-point lemma requested separately. It gives total rational
+membership, and a second finite-state classifier distinguishes center,
+tie and cycle. Its period-three limit is also a useful control: finite
+centroid addresses converge to a nonmember, with an exactly contracting
+quadratic error. A limit of valid finite codes need not be a finite code.
+This parallels the two-clock warning about pointwise evaluation after an
+L2 limit; it is a transfer of the validity test, not a conjugacy of maps.
+
+There is an exact linear bridge to the incoming
+[level-11 torsion construction](level11_dessin_golden_torsion_20261005.md).
+Put J=[[0,1],[1,0]], M=[[0,1],[1,1]], and let M3 be our G/B/L matrix.
+Then, over the integers,
+
+    M3=[[2,1],[1,1]]=J*M^2*J.
+
+The incoming basis identifies M modulo 3 with Frobenius-at-2 on the
+3-torsion of the level-11 eta curve. Therefore M3 modulo 3 is conjugate
+to its square, Frobenius-at-4. Explicitly a count vector (a,b) modulo 3
+maps to b*P+a*pi(P), where pi is Frobenius-at-2 and P is a nonzero
+3-torsion point. This intertwines M3 with pi^2. Its order is 4; its
+square is -I and its projective order is 2. Eight nonzero vectors form
+two four-cycles. The elementary identity is independently checked below;
+the elliptic interpretation uses the incoming cited identification.
+Primary inputs are [Elkies' conductor-11 entry](https://people.math.harvard.edu/~elkies/nature.html)
+and [Sutherland's trace/determinant theorems](https://math.mit.edu/classes/18.783/2015/LectureNotes7.pdf).
+
+This maps the vector space of counts modulo 3 to a torsion module, not
+the two automaton states themselves to curve points. It forgets integer
+counts, individual controller words and source membership. It supplies no
+new guard, and cannot be promoted to a conjugacy of integer Collatz maps.
+Likewise the cost 11 of forbidden LB=4+7 in the incoming word generating
+function does not determine the eta curve's level 11. The coordinate
+map, not the repeated integer, is the established connection.
+
 ## 7. The resulting web and next obligations
 
 | Source and target | Actual map | Preserved predicate | Loss and required coordinate |
@@ -528,7 +581,7 @@ Run from the repository root:
     python3 -O -B 04-computation/experiments/collatz_carry_interfaces_20261004.py
 
 The program uses only exact integers and Fractions, with explicit exceptions
-that remain active under optimization. Its saved output counts 1,936,562
+that remain active under optimization. Its saved output counts 1,936,575
 checks. The principal universes are:
 
 - All 5,461 H/G/A/B words through length six, two positive lifts and one
@@ -542,7 +595,9 @@ checks. The principal universes are:
   empty domains. All 488,281 formal words through length eight independently
   check native-language and balanced-tree counts. The G/B/L sublanguage is
   enumerated through length eight; reciprocal trace identities are checked
-  through n=20. The all-depth language proof is the two-state invariant.
+  through n=20. Thirteen matrix/vector/orbit checks verify the incoming
+  golden square bridge modulo 3. The all-depth language proof is the
+  two-state invariant.
 - 13,888 ordinary-word cases: q in {3,5,7,9}, m=1,...,5, total valuation
   cost at most 14. Phases and correction bounds are exact rational
   identities. An independent probability recursion checks the complete
