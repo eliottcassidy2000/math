@@ -169,6 +169,31 @@ inequality matters: every model, random or arithmetic, sits at `0.569-0.576 < 0.
 critical rate is `1.6-2.8%`, and what a proof must show is that the Collatz digits are no worse than random
 in this one functional.
 
+### 4a. The wide control (eight seeds per random model; `q = 3, 7, 11, 13, 19`; `N = 1500`)
+
+`collatz_fixed_frequency_random_digits_20261004_wide.log` (same script, `8` seeds, `q` list):
+
+| digit source | rate `300..1500` | rate `750..1500` |
+|---|---|---|
+| real `-3^-n` | **0.5689** | **0.5695** |
+| real `-7^-n` | 0.5727 | 0.5726 |
+| real `-11^-n` (`11 = 3 mod 8`) | 0.5722 | 0.5719 |
+| real `-13^-n` (`13 = 5 mod 8`) | 0.5724 | 0.5726 |
+| real `-19^-n` | 0.5711 | 0.5709 |
+| i.i.d. bits, 8 seeds | `0.5741, 0.5720, 0.5723, 0.5725, 0.5726, 0.5738, 0.5716, 0.5719`: mean **0.5726**, sd `0.0009` | mean `0.5728`, sd `0.0015` (one seed at `0.5697`) |
+| random odd multiplier, 8 seeds | `0.5736, 0.5721, 0.5727, 0.5729, 0.5733, 0.5731, 0.5720, 0.5727`: mean **0.5728**, sd `0.0005` | mean `0.5732`, sd `0.0011` |
+
+**Verdicts.** (i) The random models agree with each other: `0.5727 +- 0.001`, i.e. `0.8%` below `1/sqrt3`,
+the Jensen gap of section 4b. (ii) `q = 7, 11, 13` sit at the random level; **the "`3 mod 8`" sub-hypothesis
+(`11` like `3`, `13` like `5`) is REFUTED.** (iii) `q = 3` is `0.0037` below the i.i.d. mean (`4` standard
+deviations of the seed scatter; `7` of the random-multiplier scatter) on `300..1500`, and `0.0033` below on
+`750..1500` (`2.2` and `3.4` sd); the six fixed units of E1 (`q = 3`, `n = 200..800`) gave `0.5680-0.5709`,
+mean `0.5698`, all below every random model: pooling, **the digits of `3^-n` produce a typical decay about
+`0.5%` per level faster than random digits, and `3` is the only multiplier among `3, 5, 7, 11, 13` to do so**
+(`19` is marginal, `0.5711`). OBSERVED; mechanism OPEN (candidates: the fluctuation structure -- section 4b and
+E5e -- or an arithmetic anticorrelation specific to the carry automaton of `x -> 3x`). For H1 only the sign
+matters: the Collatz digits are at least as cancelling as random ones in this functional.
+
 ### 4b. The mean-square rate is exactly incoherent in the i.i.d. model (PROVED); the rest is a Jensen gap
 
 **Proposition (PROVED, one line).** In the i.i.d.-digit model (fresh uniform bits at every level) the window
