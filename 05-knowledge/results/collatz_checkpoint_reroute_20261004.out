@@ -1,0 +1,17 @@
+ARBITRARY CHECKPOINT REROUTES: finite complete local search; universal coverage OPEN
+NEW_FAMILY {"all_source_prefixes_grow": true, "child": 111, "child_period": 93312, "child_word": [1, 1, 1, 2, 1], "ell": 4, "intercept": "669/1024", "k": 1, "period": 131072, "rho": "729/1024", "source": 155, "source_word": [1, 2, 1, 1, 1, 2, 3, 1, 1, 2, 1], "trimmed_root_member": false}
+SHORT_GUARD r10,ell4,H: 1645596 ;full phase kappa: 10288 mod 59049
+New relative density >0.55413 after originbank,allposition1rows,andpriorcomposedrows.
+Exact conservative relative lower bound: 26740003125525959630993489359/48255734084683125000000000000 ;odd-relative lower bound: 26740003125525959630993489359/3162487788973793280000000000000000
+CUT_FAMILY source155+2048t,child111+1458t;variable last a>=3,child a-2.
+Even t:source155+4096u,child111+2916u;all7source steps grow.
+Odd t:already first-descends at7;minimal union guard is64x broader than discovery.
+Nontrivial even-row odd-relative new density lower bound: 26740003125525959630993489359/98827743405431040000000000000000
+POWER3 exponent a=27107+32768t;least source bits: 42964 ;11 source and5 child literal edges; child remains an obligation.
+WIDENED_POWER3 a=483+512t;nontrivial growing-join half a=483+1024u;least bits: 766
+TARGETED [source,firstdescent,guardtests]: [('3^3', 37, 108), ('3^11', 7, 270), ('3^19', 5, 544), ('3^27', 4, 792), ('3^35', 6, 2255), ('3^43', 5, 2748), ('3^51', 7, 5688), ('3^59', 4, 3837), ('3^67', 13, 19908), ('7', 4, 3), ('703', 51, 650)]
+Targeted work: 143 literal odd edges; 36803 candidate guards;11 sources,horizon128;no new earlier hit in that fixed target list.
+Positive controls:155 later checkpoint;prior(1,2),ell33,k10 family;703 cap8 staysPENDING.
+Independent full-phase controls: 96 ;ell<r retained as separate truncated guard.
+Guard/type rejections: 6
+PASS: 112694 always-active compiler checks; no supplied or oracle child used by search.
