@@ -372,6 +372,27 @@ particular interacts with the geometric weights `2^-a` while higher roots do not
 experiment `collatz_fixed_frequency_ensemble_rms_20261004.py` (sixteen units, `q = 3` and `5`) tests whether the
 excess is a mean-square anticorrelation or a Jensen effect (results in 4h).
 
+### 4h. Mean square or Jensen? The sixteen-unit ensembles (E5l) and their calibration
+
+`collatz_fixed_frequency_ensemble_rms_20261004.py` (`N = 1000`, `A = 40`, window `300..1000`, sixteen units
+prime to `3q`): the ensemble mean square `E_u[q^n |mu_hat_n(u)|^2]` and the ensemble mean log.
+
+| `q` | ensemble rms rate | ensemble typical rate | per-unit typical | Jensen gap per level |
+|---|---|---|---|---|
+| 3 | **`0.5703`** | `0.5692` | `0.5692 +- 0.0012` | `+0.0019` |
+| 5 | `0.5735` | `0.5728` | `0.5728 +- 0.0013` | `+0.0013` |
+| i.i.d. digits (true rms rate exactly `0.5774`, E5c) | calibration run `collatz_fixed_frequency_ensemble_rms_control_20261004.py` (results below) | | | |
+
+**Preliminary reading (to be calibrated).** For `q = 3` the sixteen-unit mean square decays at `(0.5703)^2` per
+level, faster than the incoherent `1/3`, i.e. the cube-root coupling would produce a genuine mean-square
+anticorrelation of about `1.2%` per level, with only a small Jensen gap (`0.2%`); for `q = 5` the ensemble rms
+is `0.5735`, also below `0.5774`. The ensemble mean squares are extremely heavy-tailed (100-block means for
+`q = 3`: `9e-3, 5e-5, 5e-5, 2e-2, 8e-9, 3e-7, 3e-9`), so a sixteen-member estimate of a mean-square rate is itself
+biased low by the same Jensen mechanism; the i.i.d. control (whose true rms rate is exactly `1/sqrt3`) measures
+that bias. Until it lands, the honest statement is: **the excess shows in the ensemble mean square of sixteen
+units at least as strongly as in the typical rate; whether the true (infinite-ensemble) mean-square rate of the
+Collatz tower is below `1/sqrt3` is decided by the calibration.**
+
 ### 4e. The web around the cold rate (connections found by the niche search; all typed)
 
 | repo thread | the object there | the map to the cold-frequency problem | preserved | lost / sidecar | type |

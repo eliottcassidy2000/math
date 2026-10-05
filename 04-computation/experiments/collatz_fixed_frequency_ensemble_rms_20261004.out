@@ -1,0 +1,11 @@
+ensemble (16 units) mean square versus typical rate, N=1000, A=40, window 300..1000
+q=3: units [1, 5, 7, 11, 13, 17, 19, 23, 25, 29, 31, 35, 37, 41, 43, 47]
+   ensemble rms rate 0.5703   (incoherent 1/sqrt3 = 0.5774; Parseval q^(-1/2) = 0.5774)
+   ensemble typical rate 0.5692;  per-unit typical rates mean 0.5692 +- 0.0012
+   Jensen gap log(rms/typical) per level = +0.0019
+   ensemble mean square by 100-blocks (rescaled): 9.15e-03 4.95e-05 4.90e-05 2.18e-02 7.95e-09 3.22e-07 2.71e-09   [190s]
+q=5: units [1, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 49, 53, 59]
+   ensemble rms rate 0.5735   (incoherent 1/sqrt3 = 0.5774; Parseval q^(-1/2) = 0.4472)
+   ensemble typical rate 0.5728;  per-unit typical rates mean 0.5728 +- 0.0013
+   Jensen gap log(rms/typical) per level = +0.0013
+   ensemble mean square by 100-blocks (rescaled): 1.08e+85 2.59e+106 1.75e+127 2.67e+153 2.15e+171 1.38e+192 5.62e+215   [355s]
