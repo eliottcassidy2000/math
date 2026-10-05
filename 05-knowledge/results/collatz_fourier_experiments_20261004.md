@@ -233,6 +233,36 @@ of powers of `2`. (a) holds in mean square in the random model exactly and for t
 The two mirror endgames of the procgen synthesis (low binary digits of `3^A u` for Q1, low ternary digits of
 `2^K w` for Q2) are exactly (a) and (b).
 
+### 4c. Where the `q = 3` excess does NOT come from (E5e, E6), and the level-to-level phase law (PROVED)
+
+**E5e (fluctuations; `collatz_fixed_frequency_fluctuations_20261004.py`, `N = 1500`, window `300..1500`).**
+Detrended log-variance of `3^(n/2)|f_n(0)|`: real `3^-n` `6.19`, `5^-n` `5.98`, `7^-n` `3.52`, `11^-n` `3.80`;
+four i.i.d. seeds `6.86, 4.65, 2.77, 4.20`. Largest upward excursion: `+9.1` (`q = 3`, `n = 889`), `+9.7` (i.i.d.
+seed 0, `n = 740`); counts of `n` with `v_n >= 3 x` trend: `389, 414, 274, 336` (real) against `349, 348, 326,
+365` (i.i.d.). **The Collatz digits are not more fluctuating than random ones**; the Jensen gap does not single
+out `q = 3`. The twelve i.i.d. runs now pooled (E5b's eight and E5e's four) give `0.5723 +- 0.0008` on
+`300..1500`.
+
+**E6 (within-level digit statistics; `collatz_digit_phase_autocorrelation_20261004.py`, `n = 60`, `M = 2^20`
+digits).** For the real strings of `-3^-60, -5^-60, -7^-60, -11^-60`: digit balance `0.4991-0.5000`, phase
+autocorrelations `|C_s| = |(1/M) sum_d e(theta_(d+s) - theta_d)|` at every lag `s <= 40` of size `10^-3 =
+M^(-1/2)` (rms `9.6-10.0 x 10^-4`, exactly the i.i.d. level `9.5-9.9 x 10^-4`), bit correlations at lags `1..8`
+of size `10^-3`. **Along one level the real digits are indistinguishable from random.** (The digits of `q^-n mod
+2^M` are the digits of the power `q^(2^(M-2) - n) mod 2^M`, so this is the Dupuy-Weirich-type averaged
+equidistribution of the low binary digits of powers of `q`, seen on one exponent.)
+
+**The level-to-level law (PROVED, one line).** With `R_n = -u q^-n mod 2^d` and `theta_(n,d) = R_n/2^d`,
+`q R_(n+1) = R_n mod 2^d`, so `q theta_(n+1,d) = theta_(n,d) mod 1`: **`e(theta_(n+1,d))` is a `q`-th root of
+`e(theta_(n,d))`**, the branch being fixed by `R_n mod q`. For Collatz the phase at depth `d` of level `n+1` is
+a cube root of the phase at depth `d` of level `n`. The random models differ exactly here: i.i.d. digits have
+unrelated levels, the random-multiplier model relates levels by a `Q`-th root with `Q ~ 2^40` (effectively
+unrelated), and the `x q^-n` family (`u` varying, E1/E5f) keeps the `q`-th-root law with a random start. The
+`q = 3` excess therefore lives in the cross-level coupling of the cube-root law with the geometric-weight
+recursion (section 4a: six units of `q = 3`, all below the random models; `q = 5, 7, 11, 13` single units at the
+random level; the `q = 5, 7` unit families are run in `collatz_fixed_frequency_unit_families_20261004.py`).
+Mechanism OPEN; the cleanest next statement would be the typical rate of the `q`-th-root random model as a
+function of `q`.
+
 ## 5. E2: `L^p` moments, tails, and THM-4263's condition (14)
 
 Script `collatz_syracuse_law_lp_moments_20261004.py` (`n <= 14`, `A = 40`; the dense law by the exact recursion;

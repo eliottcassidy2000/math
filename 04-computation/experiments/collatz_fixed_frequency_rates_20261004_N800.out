@@ -1,4 +1,4 @@
-fixed-frequency rates: N=1500, A=40
+fixed-frequency rates: N=800, A=40
 control: recursion vs direct enumeration of the law at n <= 7 (A = 30), |mu_hat_n(u)|:
   u= 1 n=3: recursion 0.1561397846  direct 0.1561397846
   u= 1 n=5: recursion 0.0860179286  direct 0.0860179286
@@ -9,48 +9,47 @@ control: recursion vs direct enumeration of the law at n <= 7 (A = 30), |mu_hat_
   u= 7 n=3: recursion 0.1747713365  direct 0.1747713365
   u= 7 n=5: recursion 0.0357481548  direct 0.0357481548
   u= 7 n=7: recursion 0.0129696631  direct 0.0129696631
-u= 1: 3^(n/2)|mu_hat_n(u)| 200-block medians: 1.479e-01 7.372e-03 9.477e-04 4.418e-06 3.413e-06 7.785e-09 4.979e-09 1.104e-09   [33.0s]
+u= 1: 3^(n/2)|mu_hat_n(u)| 200-block medians: 1.479e-01 7.372e-03 9.477e-04 4.418e-06   [5.1s]
      least-squares rate of |mu_hat_n(1)| over n=200..400: 0.5741   (Parseval 0.5774, critical 0.5850)
      least-squares rate of |mu_hat_n(1)| over n=400..600: 0.5802   (Parseval 0.5774, critical 0.5850)
-     least-squares rate of |mu_hat_n(1)| over n=600..1500: 0.5694   (Parseval 0.5774, critical 0.5850)
-     least-squares rate of |mu_hat_n(1)| over n=200..1500: 0.5691   (Parseval 0.5774, critical 0.5850)
+     least-squares rate of |mu_hat_n(1)| over n=600..800: 0.5534   (Parseval 0.5774, critical 0.5850)
+     least-squares rate of |mu_hat_n(1)| over n=200..800: 0.5680   (Parseval 0.5774, critical 0.5850)
      local maxima of 3^(n/2)|mu_hat_n(1)| >= 1: [(5, 1.341), (17, 2.043), (41, 1.457), (45, 1.631), (61, 1.027), (63, 1.105), (127, 3.882), (129, 7.221), (131, 10.377), (135, 2.624)]
-u= 5: 3^(n/2)|mu_hat_n(u)| 200-block medians: 1.035e-01 3.512e-03 3.470e-04 1.999e-05 8.305e-07 3.399e-08 3.753e-08 4.424e-10   [33.7s]
+u= 5: 3^(n/2)|mu_hat_n(u)| 200-block medians: 1.035e-01 3.512e-03 3.470e-04 1.999e-05   [4.9s]
      least-squares rate of |mu_hat_n(5)| over n=200..400: 0.5629   (Parseval 0.5774, critical 0.5850)
      least-squares rate of |mu_hat_n(5)| over n=400..600: 0.5698   (Parseval 0.5774, critical 0.5850)
-     least-squares rate of |mu_hat_n(5)| over n=600..1500: 0.5706   (Parseval 0.5774, critical 0.5850)
-     least-squares rate of |mu_hat_n(5)| over n=200..1500: 0.5699   (Parseval 0.5774, critical 0.5850)
+     least-squares rate of |mu_hat_n(5)| over n=600..800: 0.5663   (Parseval 0.5774, critical 0.5850)
+     least-squares rate of |mu_hat_n(5)| over n=200..800: 0.5695   (Parseval 0.5774, critical 0.5850)
      local maxima of 3^(n/2)|mu_hat_n(5)| >= 1: [(2, 1.134), (20, 1.471), (24, 1.66), (26, 1.049), (68, 2.686)]
-u= 7: 3^(n/2)|mu_hat_n(u)| 200-block medians: 4.351e-02 5.275e-03 1.860e-04 9.395e-06 2.971e-07 1.426e-07 3.225e-09 7.791e-10   [39.7s]
+u= 7: 3^(n/2)|mu_hat_n(u)| 200-block medians: 4.351e-02 5.275e-03 1.860e-04 9.395e-06   [4.9s]
      least-squares rate of |mu_hat_n(7)| over n=200..400: 0.5681   (Parseval 0.5774, critical 0.5850)
      least-squares rate of |mu_hat_n(7)| over n=400..600: 0.5795   (Parseval 0.5774, critical 0.5850)
-     least-squares rate of |mu_hat_n(7)| over n=600..1500: 0.5696   (Parseval 0.5774, critical 0.5850)
-     least-squares rate of |mu_hat_n(7)| over n=200..1500: 0.5692   (Parseval 0.5774, critical 0.5850)
+     least-squares rate of |mu_hat_n(7)| over n=600..800: 0.5754   (Parseval 0.5774, critical 0.5850)
+     least-squares rate of |mu_hat_n(7)| over n=200..800: 0.5687   (Parseval 0.5774, critical 0.5850)
      local maxima of 3^(n/2)|mu_hat_n(7)| >= 1: [(11, 1.8), (21, 1.022), (49, 1.271)]
-u=11: 3^(n/2)|mu_hat_n(u)| 200-block medians: 1.366e-01 2.625e-03 1.265e-04 3.511e-05 7.845e-07 7.189e-06 1.700e-09 3.062e-07   [34.1s]
+u=11: 3^(n/2)|mu_hat_n(u)| 200-block medians: 1.366e-01 2.625e-03 1.265e-04 3.511e-05   [7.4s]
      least-squares rate of |mu_hat_n(11)| over n=200..400: 0.5652   (Parseval 0.5774, critical 0.5850)
      least-squares rate of |mu_hat_n(11)| over n=400..600: 0.5685   (Parseval 0.5774, critical 0.5850)
-     least-squares rate of |mu_hat_n(11)| over n=600..1500: 0.5709   (Parseval 0.5774, critical 0.5850)
-     least-squares rate of |mu_hat_n(11)| over n=200..1500: 0.5712   (Parseval 0.5774, critical 0.5850)
+     least-squares rate of |mu_hat_n(11)| over n=600..800: 0.5567   (Parseval 0.5774, critical 0.5850)
+     least-squares rate of |mu_hat_n(11)| over n=200..800: 0.5709   (Parseval 0.5774, critical 0.5850)
      local maxima of 3^(n/2)|mu_hat_n(11)| >= 1: [(4, 1.212), (20, 1.243), (24, 2.574), (28, 1.592), (32, 2.057), (120, 1.556), (180, 1.572), (182, 1.484)]
-u=13: 3^(n/2)|mu_hat_n(u)| 200-block medians: 1.021e-01 4.556e-03 1.640e-04 4.011e-05 5.601e-07 4.311e-08 4.547e-06 1.047e-09   [33.9s]
+u=13: 3^(n/2)|mu_hat_n(u)| 200-block medians: 1.021e-01 4.556e-03 1.640e-04 4.011e-05   [6.8s]
      least-squares rate of |mu_hat_n(13)| over n=200..400: 0.5666   (Parseval 0.5774, critical 0.5850)
      least-squares rate of |mu_hat_n(13)| over n=400..600: 0.5748   (Parseval 0.5774, critical 0.5850)
-     least-squares rate of |mu_hat_n(13)| over n=600..1500: 0.5717   (Parseval 0.5774, critical 0.5850)
-     least-squares rate of |mu_hat_n(13)| over n=200..1500: 0.5709   (Parseval 0.5774, critical 0.5850)
+     least-squares rate of |mu_hat_n(13)| over n=600..800: 0.5653   (Parseval 0.5774, critical 0.5850)
+     least-squares rate of |mu_hat_n(13)| over n=200..800: 0.5703   (Parseval 0.5774, critical 0.5850)
      local maxima of 3^(n/2)|mu_hat_n(13)| >= 1: [(2, 1.134), (8, 1.707), (10, 1.158), (13, 1.111), (18, 1.401), (22, 1.533), (34, 6.89), (36, 6.979), (72, 1.621)]
-u=17: 3^(n/2)|mu_hat_n(u)| 200-block medians: 1.212e-01 3.674e-03 3.017e-04 3.132e-05 2.945e-06 5.875e-08 1.324e-08 1.443e-09   [33.0s]
+u=17: 3^(n/2)|mu_hat_n(u)| 200-block medians: 1.212e-01 3.674e-03 3.017e-04 3.132e-05   [5.2s]
      least-squares rate of |mu_hat_n(17)| over n=200..400: 0.5627   (Parseval 0.5774, critical 0.5850)
      least-squares rate of |mu_hat_n(17)| over n=400..600: 0.5761   (Parseval 0.5774, critical 0.5850)
-     least-squares rate of |mu_hat_n(17)| over n=600..1500: 0.5696   (Parseval 0.5774, critical 0.5850)
-     least-squares rate of |mu_hat_n(17)| over n=200..1500: 0.5697   (Parseval 0.5774, critical 0.5850)
+     least-squares rate of |mu_hat_n(17)| over n=600..800: 0.5693   (Parseval 0.5774, critical 0.5850)
+     least-squares rate of |mu_hat_n(17)| over n=200..800: 0.5704   (Parseval 0.5774, critical 0.5850)
      local maxima of 3^(n/2)|mu_hat_n(17)| >= 1: [(5, 1.218), (27, 2.077), (92, 1.282)]
 ratio medians |mu_hat_n(u)| / |mu_hat_n(1)| by 200-blocks:
-  u= 5: 0.768 0.433 0.730 2.491 0.169 3.359 15.051 0.576
-  u= 7: 0.444 0.753 0.503 1.452 0.104 10.469 0.744 0.444
-  u=11: 0.759 0.360 0.173 8.755 0.463 279.929 0.388 200.544
-  u=13: 0.773 0.568 0.276 5.552 0.078 3.509 275.138 1.014
-  u=17: 0.867 0.445 0.386 5.108 0.176 3.202 1.031 1.249
-truncation control u=1: A=40 vs A=60 to n=750: max relative difference 2.18e-09
-truncation control u=5: A=40 vs A=60 to n=750: max relative difference 5.60e-09
-DONE
+  u= 5: 0.768 0.433 0.730 2.491
+  u= 7: 0.444 0.753 0.503 1.452
+  u=11: 0.759 0.360 0.173 8.755
+  u=13: 0.773 0.568 0.276 5.552
+  u=17: 0.867 0.445 0.386 5.108
+truncation control u=1: A=40 vs A=60 to n=400: max relative difference 5.02e-10
+truncation control u=5: A=40 vs A=60 to n=400: max relative difference 2.76e-09
