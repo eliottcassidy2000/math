@@ -21,6 +21,18 @@ kernels agreeing to ten digits); OBSERVED (the rates; `200` seeds at level `3000
 CONJECTURED (the mechanism, section 4, with its decisive test recorded); OPEN (an exact value of the exponent;
 H1; Collatz). NOT independently audited; audit OWED. Nothing here is a Collatz step.**
 
+> **2026-10-05 targeted correction (fusion-helper session):** section 5 now
+> separates the terminal coefficient event from avoiding contraction at
+> every prefix. At odd depth 2 their densities are 1/2 and 3/8, respectively;
+> `(2,1)`, realized by `9 -> 7 -> 11`, is the minimal separating word.
+> A cyclic-rotation sandwich preserves the stated exponential rate for the
+> full coefficient-prefix survivor event, not for arbitrary portfolios.
+> The correction also narrows "every pair statistic" to the total
+> mean-square/dyadic-shell observables: section 3e's coarse pair statistic
+> C_v already depends on q. The stale real-contraction explanation below
+> has been removed. The numerical Fourier experiments were not rerun by
+> this targeted audit; their status remains as stated above.
+
 ---
 
 ## 0. What is new, in one screen
@@ -61,21 +73,23 @@ H1; Collatz). NOT independently audited; audit OWED. Nothing here is a Collatz s
    circle law of the path values is concentrated exactly for `q = +-3` (exact census, 3e) -- fails its decisive
    test: biasing the coin makes the step-2 tower strongly contracting without giving it any excess, and leaves
    the step-1 tower a smooth excess through its own threshold. What remains is a set of constraints: the excess
-   is specific to `+-3`, carried by valuations `>= 3`, invisible to every pair statistic (the dyadic-shell
-   profile of the mean square is the same for every `q`, PROVED), not arithmetic, and a bulk property of the
+   is strongest at `+-3`, carried by valuations `>= 3`, invisible to the total mean square and its dyadic-shell
+   profile (the same for every `q`, PROVED), present without arithmetic starts, and a bulk property of the
    increments. The local twist relation `omega_(m,j+1) = omega_(m,j) omega_(m-1,j)` (adjacent depths, the
    Collatz carry automaton; `m-2` for `q = 5`) is the only structural difference left, and a run of `c`
    halvings contributes `(2^c + q) theta`: the step-1 phases are the step-2 phases with `2^c + 3` for
    `2^c + 5`. Why that shift changes `E log|sum|` is OPEN.
 6. **Families whose dependency rules close their union, with a common decreasing rank (section 5; typed).**
-   With the integer itself as the rank, a union of smaller-child families is closed iff its leak is empty; for
-   every bounded-depth portfolio the leak after `k` odd steps has density exactly `P(Bin(floor(k log_2 3), 1/2)
-   >= k)`, which decays at the rate `e^(-I) = a^a / (3 (a-1)^(a-1)) = 0.946505...`, `a = log_2 3` (PROVED,
-   Cramer for the geometric renewal; this is the repo's "no-descent rate `3^(h*-1)`" with `h* = 1 - I/log 3 =
-   0.94996`). It is the left tail of the SAME coin process whose Fourier transform is the Pascal tower. The
+   With the integer itself as the rank, destination closure must be checked separately from coverage.
+   The terminal coefficient event has probability `E_k=P(Bin(floor(k log_2 3), 1/2)>=k)`.
+   The full coefficient-prefix survivor probability instead satisfies `E_k/k <= P_k <= E_k`.
+   Both have exponential rate `e^(-I)=a^a/(3(a-1)^(a-1))=0.946505...`, `a=log_2 3`
+   (PROVED by the renewal tail plus cyclic rotation). This is not a density formula for an arbitrary
+   controller portfolio. The two events use the SAME coin process whose Fourier transform is the Pascal tower. The
    partition-cover theorem (CITED) says one arithmetic cell escapes every bounded-depth portfolio, and the
    depth-growing valuation-fuel families (the `H` kernel) close only until their fuel is spent. No assembly with
-   a bounded dependency depth closes; this note adds no closure theorem and claims none.
+   bounded common-future depths covers every positive integer; proper closed unions can exist.
+   This note adds no universal closure theorem and claims none.
 7. **`{2, 3, 11}` and `eta(tau)^2 eta(11 tau)^2` do not enter (section 6).** The Pascal tower uses the coin
    (binary renewal) and the multiplier `q` only; the level-eleven bridges of the repo are local matrix identities
    (Frobenius-at-2 on 3-torsion, the index-2 lattice cube root with local factor `1 + T + 3T^2`), typed there as
@@ -398,10 +412,11 @@ and the same truncation gives the step-2 tower nothing at any `A`. The real cont
    `q = 5` universal at every coin bias (3d).
 2. Carried by the valuations `c >= 3` (3c: absent, with reversed sign, at `A = 2`; `90%` present at `A = 4`)
    and growing with their weight (3d: roughly `x3` per `0.1` of `p` removed).
-3. Invisible to every pair statistic: the mean square is `3^-N` for every `q` (4k) and so is its whole
-   dyadic-shell profile `D_v` (3e, PROVED), so the excess is a property of the joint law of four or more path
-   phases -- it is a statement about `E log|sum|`, i.e. about the multifractal spectrum (3b), not about
-   correlations of pairs.
+3. Invisible to the total mean square and its dyadic-shell profile: the mean square is `3^-N` for
+   every `q` (4k), and `D_v` is q-independent (3e, PROVED). Those observables do not determine
+   `E log|sum|`. This does not exclude all pair information: the coarse pair-coherence statistic
+   `C_v` in section 3e differs between multipliers. A mechanism requiring four or more phases
+   has not been deduced from the equalities of the specified second moments.
 4. Not arithmetic: present with a uniform deepest string (this note and 4m). The exact Collatz coefficients `mu_hat_n(u)` of 200 integer units `u <= 600` prime to `3` (window kernel, `A = 40`, levels `300..1500`) have typical rate `0.56981 +- 0.00011` (`0.56989 +- 0.00015` on `600..1500`) against `0.56939 +- 0.00011` (`0.56946 +- 0.00015`) for the uniform-start tower computed the same way: the integer-start family and the uniform-start tower agree to `0.0004`, both at the step-1 value, so the excess uses nothing of the digits of `3^-n`.
 5. A bulk property of the per-level increments (3a), while over frequencies the second moment of the step-1
    tower is carried by `0.1%` of them (3b).
@@ -428,13 +443,13 @@ changes included, provided ONE rank works for every rule (the finite-seed kernel
 bootstrap note's "destination obligation"). The hostile `D = {n = 1 mod 4}` (`U(n) < n` but `9 -> 7` leaves
 `D`) is exactly a failure of closure, not of rank.
 
-**With the integer as the rank, the leak of every bounded-depth portfolio is the left tail of the Pascal
-tower's coin (PROVED, elementary).** The valuation word `(c_1, ..., c_k)` of the first `k` odd steps has density
+**Terminal payment and prefix survival are different events (PROVED, elementary).**
+The valuation word `(c_1, ..., c_k)` of the first `k` odd steps has density
 `2^(-S_k)`, `S_k = c_1 + ... + c_k` (Terras), so the first `k` odd steps give an affine map with coefficient
 `3^k / 2^(S_k)` and the class pays (all members but at most one bounded head, THM-4512) iff `S_k > k log_2 3`.
-The density of odd `n` not paid within `k` odd steps is therefore exactly
+The density of odd `n` whose coefficient is not paid AT step `k` is exactly
 ```
-P(S_k <= floor(k log_2 3)) = P( Bin(floor(k log_2 3), 1/2) >= k ),
+E_k=P(S_k <= floor(k log_2 3)) = P( Bin(floor(k log_2 3), 1/2) >= k ),
 ```
 (`7.48 10^-2, 1.19 10^-2, 5.21 10^-4, 1.33 10^-6, 1.61 10^-11` at `k = 20, 50, 100, 200, 400`), and by Cramer's
 theorem for the geometric renewal (`Lambda(t) = log(e^t/(2 - e^t))`, `I(a) = sup_t (a t - Lambda(t))`,
@@ -443,16 +458,36 @@ theorem for the geometric renewal (`Lambda(t) = log(e^t/(2 - e^t))`, `I(a) = sup
 I(log_2 3) = log 3 + (a-1) log(a-1) - a log a = 0.054979...,
 e^(-I) = a^a / (3 (a-1)^(a-1)) = 0.946505...   (= 3^(h*-1) with h* = 1 - I/log 3 = 0.949956).
 ```
-This is the "no-descent rate `3^(h*-1) = 0.9465`" of the renewal notes, now in closed form, and it is a
-statement about the same coin sequence `epsilon` whose Fourier transform `E_epsilon e(R Phi(epsilon))` is the
-tower: descent coverage is the lower large deviation of `S_k`, the cold-frequency rate is its Fourier dual.
-The two are not the same problem (one is a tail, one a transform), and the `0.0049` excess is not visible in
-the tail (it has no `q`-dependence at all).
+Avoiding payment at EVERY prefix instead has density
+
+```
+P_k=P(S_j <= floor(j log_2 3) for all 1<=j<=k).
+E_k/k <= P_k <= E_k.                                      (prefix gate)
+```
+
+For the lower bound, partition all endpoint-eligible valuation words into cyclic-rotation orbits.
+Every such orbit has at least one prefix-eligible rotation: for the increments
+`c_i-log_2 3` of negative total, start just after a maximum of the partial sums.
+All rotations have the same weight `2^-S_k`, and each orbit has at most k members.
+The upper bound is event inclusion. Therefore `P_k` has the SAME exponential rate as E_k,
+without being the same sequence. At k=2, `E_2=1/2`, `P_2=3/8`; `(2,1)` is the missing
+weight-1/8 cylinder. The older [THM-4495, Spitzer/ballot](../../01-canon/theorems/THM-4495-no-descent-count-exact-order-spitzer-ballot.md)
+already makes this endpoint/prefix distinction at the shortcut-step clock; that theorem's
+counts cannot be copied unchanged to the present odd-step clock.
+
+[Exact correction checker](../../04-computation/experiments/collatz_pascal_prefix_gate_20261005.py)
+and [saved output](collatz_pascal_prefix_gate_20261005.json): 1,178 checks, exact DP to odd depth100,
+independent dyadic and composition enumeration through depth8, and953 cyclic-word controls.
+Normal and optimized output agree. This is the full coefficient-prefix survivor event.
+Arbitrary smaller-child/common-future portfolios require their own guard and destination analysis;
+neither E_k nor P_k is their automatic coverage formula. The shared coin representation does not
+identify Fourier cancellation with descent, and the measured `0.0049` excess does not enter this tail.
 
 **What closes and what does not (CITED + typed).**
 * The [partition-cover theorem](collatz_partition_cover_20261004.md) (mixed congruence obstruction) gives, for
   every pair of depth bounds, a whole arithmetic cell none of whose members has a smaller join within those
-  depths: no bounded-depth union is closed, whatever the guards.
+  depths: no such bounded-depth portfolio covers every positive integer. This does not exclude
+  proper closed unions, such as a finite collection of checked root paths.
 * The depth-growing families close within themselves while their fuel lasts: the `H` kernel on `n = 155 mod
   2048` repeats exactly `floor((v_2(295 n - 669) - 1)/10)` times, each step strictly decreasing the integer and
   staying on the cylinder; the exit `c = H^m(n) >= 111` is a destination obligation outside the family
@@ -461,16 +496,16 @@ the tail (it has no `q`-dependence at all).
   single seed `3` with the rank `6d + 2` -- a closed union with a common rank, but not a union of residue
   classes and with no density.
 * Hence the honest status of the directive: a union closed under its own rules with one decreasing rank exists
-  (the refuel tree) and has density zero; every union of residue classes with bounded-depth rules leaks at the
-  rate `0.9465` per odd step; and unbounded-depth families leak at fuel exhaustion. Assembling more families
-  changes the constant, not the shape. No closure theorem is added here.
+  (the refuel tree); full coefficient-prefix survival has exponential rate `0.9465` per odd step;
+  arbitrary portfolios do not inherit that formula; and the stated H-repeat family leaves an
+  obligation at fuel exhaustion. No universal closure theorem is added here.
 
 **`p`-ary trees.** The only `p`-ary recursion in these objects with `p` an odd prime is the ternary fuel of the
 refuel constructor (`4` has order `3^6` in `(1 + 3Z)/3^7`, so the branch index `kappa(u)` lives on a 3-adic
 tree). The Pascal tower is binary (the coin) with a `q`-adic multiplier; its "step" is the binary length of
 `q - 1`, and the measured excess does not follow that length (`q = 7 = 2^3 - 1` and `q = 9 = 2^3 + 1` are
-universal, `q = -3` exceeds `q = 3`). The structure that the excess follows is the real contraction of the
-multiplier (section 4), not a `p`-ary depth.
+approximately at the reference rate, while `q = -3` exceeds `q = 3`). Real contraction was
+refuted as the mechanism in section 4; the observed signed-binary pattern is not yet an explanation.
 
 ## 6. `{2, 3, 11}`, the eta product, and the pasted items (typed)
 
@@ -531,7 +566,7 @@ The batch logs are kept as `collatz_pascal_tower_lyapunov_20261005_batch*.out` b
 | the second moment of the step-1 tower is carried by the top `0.1%` of frequencies (`77%` at level `100`, `85%` at `200`) against `30%` for step 2 | FINITE-EXACT samples |
 | the circle law of `Phi` is concentrated at coarse scales exactly for `q = +-3` (`N = 6`, exact) | FINITE-EXACT |
 | mechanism: real contraction `|q| < 2^(1/p)` of the backward map | CONJECTURED in session, then REFUTED by the coin scan (step-2 tower contracting at `p = 0.3` with no excess) |
-| the excess is `+-3`-specific, carried by valuations `>= 3`, smooth in the coin, blind to pair statistics | OBSERVED (3c, 3d) + PROVED (`D_v` is `q`-independent) |
-| no-descent rate `a^a/(3 (a-1)^(a-1)) = 0.946505`, `a = log_2 3`; bounded-depth unions never close | PROVED (Cramer) + CITED (partition cover) |
+| the excess is strongest at `+-3`, carried by valuations `>= 3`, smooth in the coin, invisible to total mean square and its dyadic-shell profile | OBSERVED (3c, 3d) + PROVED (`D_v` is `q`-independent); other pair statistics differ |
+| terminal and full coefficient-prefix events have the same exponential rate `a^a/(3 (a-1)^(a-1)) = 0.946505`, but different densities; bounded-depth common-future portfolios cannot cover all positives | PROVED (renewal + cyclic rotation) + CITED (partition cover); no arbitrary-portfolio density formula |
 | `{2, 3, 11}` / `eta(tau)^2 eta(11 tau)^2` enter the tower | NOT FOUND (no object in common beyond the integer `11` as a multiplier) |
 | an exact value of `lambda_3`; H1; Collatz | OPEN |

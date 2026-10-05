@@ -1,0 +1,88 @@
+{
+  "DP_depth": 100,
+  "checks": 1178,
+  "independent_dyadic_depth": 8,
+  "rotation_words": 953,
+  "rows": [
+    {
+      "endpoint": "1/2",
+      "k": 1,
+      "prefix": "1/2",
+      "ratio_prefix_endpoint": "1"
+    },
+    {
+      "endpoint": "1/2",
+      "k": 2,
+      "prefix": "3/8",
+      "ratio_prefix_endpoint": "3/4"
+    },
+    {
+      "endpoint": "5/16",
+      "k": 3,
+      "prefix": "1/4",
+      "ratio_prefix_endpoint": "4/5"
+    },
+    {
+      "endpoint": "11/32",
+      "k": 4,
+      "prefix": "13/64",
+      "ratio_prefix_endpoint": "13/22"
+    },
+    {
+      "endpoint": "29/128",
+      "k": 5,
+      "prefix": "19/128",
+      "ratio_prefix_endpoint": "19/29"
+    },
+    {
+      "endpoint": "65/256",
+      "k": 6,
+      "prefix": "1/8",
+      "ratio_prefix_endpoint": "32/65"
+    },
+    {
+      "endpoint": "281/1024",
+      "k": 7,
+      "prefix": "113/1024",
+      "ratio_prefix_endpoint": "113/281"
+    },
+    {
+      "endpoint": "397/2048",
+      "k": 8,
+      "prefix": "367/4096",
+      "ratio_prefix_endpoint": "367/794"
+    },
+    {
+      "endpoint": "1255043/16777216",
+      "k": 20,
+      "prefix": "41347483/2147483648",
+      "ratio_prefix_endpoint": "41347483/160645504"
+    },
+    {
+      "endpoint": "112485791421522936711/9444732965739290427392",
+      "k": 50,
+      "prefix": "803209913882910595105/604462909807314587353088",
+      "ratio_prefix_endpoint": "803209913882910595105/7199090650977467949504"
+    },
+    {
+      "endpoint": "23808003150185564971277879739687259762707989/45671926166590716193865151022383844364247891968",
+      "k": 100,
+      "prefix": "12611110251311599424175457059896087432768463/365375409332725729550921208179070754913983135744",
+      "ratio_prefix_endpoint": "12611110251311599424175457059896087432768463/190464025201484519770223037917498078101663912"
+    }
+  ],
+  "status": "PASS; coefficient-prefix events, not a Collatz proof",
+  "witness": {
+    "endpoint_probability_k2": "1/2",
+    "prefix_probability_k2": "3/8",
+    "route": [
+      9,
+      7,
+      11
+    ],
+    "word": [
+      2,
+      1
+    ]
+  }
+}
