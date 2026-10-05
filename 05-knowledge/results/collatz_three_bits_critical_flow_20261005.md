@@ -4,7 +4,7 @@
 factorization, the climb/cofactor factorization, the critical-flow criterion,
 the finite ascent resolvent, the refuel counterfamilies, the cycle-anchor
 closures, and the finite-stage debt identities below. **FINITE-EXACT:** the
-accompanying checks. **OPEN:** a
+accompanying checks. **OPEN:** a strictly positive
 summable flow paying both kinds of edge, a uniform bound for the debt closures,
 and universal Collatz. No claim of literature priority or canon promotion.
 
@@ -656,6 +656,64 @@ symbol makes it uniform independently of the previous finite source guard.
 That is compatible with, and complementary to, the deterministic obstruction
 (26); neither identifies random decorations with the owner's marked colors.
 
+### The forbidden third class supplies the critical Kraft bound
+
+Incoming commit `971e25db9c`, [refuel bills](collatz_refuel_bill_code_20261005.md),
+identifies the chain product as the maximal weight for a fixed choice of
+r and rho, and bounds its rooted-tree sum when rho<1. Its missing-child
+observation also closes the summability question at rho=1.
+
+**C8 — unconditional critical chain measure.** For each base c, an inverse
+base child at depth k exists exactly when 3 does not divide S^k(c).
+Since S^k(c)=c+k modulo three, exactly one class k=a(c) mod3 is forbidden.
+At c=1 additionally omit the root self-loop k=0. Put d_k=(1−r)r^k. Then
+
+\[
+ \sum_{k\text{ allowed at }c}d_k
+ \le1-\frac{r^{a(c)}}{1+r+r^2}
+ \le\kappa(r):=1-\frac{r^2}{1+r+r^2}<1.                    \tag{29}
+\]
+
+Define g_*(1)=1; on a rooted base let g_*(b) be the product of d_k along
+its unique first-hit base chain, and put g_*(b)=0 on every other base.
+The total product mass at tree depth j is at most kappa^j. Therefore,
+without assuming universal convergence,
+
+\[
+ \boxed{\sum_b g_*(b)\le\frac{1+r+r^2}{r^2}.}               \tag{30}
+\]
+
+For r=1/16 the bound is 273; for r=1/4 it is 21. Equation (27) holds with
+equality at every nonroot base, including the zero-valued components.
+Extending by f_*(S^j b)=r^j g_*(b) gives an unconditional summable
+nonnegative flow, with total mass at most (1+r+r^2)/(r^2(1−r)), satisfying
+the critical incoming inequality. Its positive support is **exactly the
+rooted component**. Positivity at every base is the remaining OPEN claim.
+
+For computable r (in particular r=1/16), the values g_*(b) are uniformly
+computable reals even without deciding that claim. Follow at most L base
+edges. If the chain roots, evaluate its finite
+product; otherwise the unknown value lies between zero and the current
+product, which is at most (1−r)^L. This effective approximation to zero
+is not a decision that the value is zero, nor a positive lower bound.
+
+The construction is maximal among nonnegative summable solutions of (27)
+with g(1)<=1. Rooted values are bounded by iteration along their finite
+chains. On an unrooted chain, any such solution satisfies
+g(b)<=(1−r)^L ||g||_1 for every L, hence must vanish there. Thus the
+canonical chain measure separates a solved mass-control obligation from
+the unsolved support-positivity obligation.
+
+The same incoming note needed a scoped audit: a real negative log
+probability is not literally an integer binary prefix length; its stopping
+probability contributes an additional factor; the root self-loop must be
+omitted; a Haar average is not a proven pointwise asymptotic; and the
+size comparison's affine carry cannot be dropped. At the critical
+parameters r=1/4, the edge 9->7 has size-weight ratio 28/27 rather than
+the claimed exact break-even. The maintained correction and minimal
+witnesses are recorded in that note and the mistakes ledger. None of
+these corrections removes the valid fixed-parameter chain-product bound.
+
 ## 10. What the enriched integer should retain next
 
 A useful research state is
@@ -722,5 +780,5 @@ carry, and the overdraft pseudo-proof. The JSON includes the source hash.
 No finite check is used as the proof of an unbounded statement above.
 The final run contains **899,089 exact checks**; normal and optimized runs
 produce identical output.
-The incoming-integration program adds **37,667 exact checks**, including a
+The incoming-integration program adds **49,333 exact checks**, including a
 second validation of the supplied 88-base kernel at the critical boundary.

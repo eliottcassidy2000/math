@@ -1,7 +1,24 @@
 {
-  "checks_total": 37667,
+  "checks_total": 49333,
   "coding_bijection": "(D,n) -> Y=2^(D-bit_length(n)+1)*n-1",
   "coding_universe": "all mixture descriptions at heights 1..13; all gamma sources below 2^14",
+  "critical_branch_capacity": [
+    {
+      "kappa": "272/273",
+      "r": "1/16",
+      "rooted_base_mass_bound": "273"
+    },
+    {
+      "kappa": "20/21",
+      "r": "1/4",
+      "rooted_base_mass_bound": "21"
+    },
+    {
+      "kappa": "6/7",
+      "r": "1/2",
+      "rooted_base_mass_bound": "7"
+    }
+  ],
   "critical_finite_kernel": {
     "bases": 88,
     "maximum_base_path_length": 42,
@@ -562,6 +579,16 @@
       91
     ]
   },
-  "source_sha256": "835ff5f03b62ae89089dbc78070d31115102d25b9a3cc43e5ac553ba9715f7b0",
+  "size_carry_hostile": {
+    "base_edge": [
+      9,
+      7
+    ],
+    "r": "1/4",
+    "rho": "1",
+    "s": 1,
+    "source_to_allowed_weight_ratio": "28/27"
+  },
+  "source_sha256": "9f9417ca7fe1268f7c24d069a59b0fd73231a1ccc8a79ed3250ee8516dea7598",
   "status": "FINITE-EXACT integration; universal coverage remains OPEN"
 }

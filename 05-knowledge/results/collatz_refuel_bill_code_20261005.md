@@ -1,3 +1,106 @@
+# Refuel bills and maximal chain weights — corrected scope
+
+**CURRENT AUDIT, 2026-10-05.** The corrected statements here supersede the
+historical discussion below. **PROVED:** fixed-parameter maximality on the
+rooted component, its geometric mass bound, and the critical-boundary
+extension linked below. **FINITE-EXACT:** the 88-base kernel rechecked in the
+integration program. Other original census results remain reported finite
+computations, not independently re-audited here. **OPEN:** positivity at every
+base and universal Collatz. No information-theoretic lower bound on arbitrary
+certificates, asymptotic power law, or general finite-observer impossibility
+follows from the original size-weight census.
+
+## Corrected chain-product theorem
+
+Use the bases, sibling map S and child map G of the
+[sibling-flow note](collatz_three_bit_sibling_flow_20261005.md). Fix 0<r<1
+and 0<rho<=1, and let d(b)=rho(1-r)r^k(b). Put g_*(1)=1, define g_*(b)
+as the product of d along the unique first-hit base chain when it reaches
+1, and set it to zero otherwise. In the inverse tree **omit child_0(1)=1**.
+Without this omission, the empty root word and the word (0) decode to the
+same base, so the original injectivity statement would be false.
+
+The products satisfy every nonroot base inequality with equality. They are
+pointwise maximal among nonnegative **summable** solutions with g(1)<=1:
+iterate to the root on a finite chain; on an unrooted chain use
+
+g(b) <= [rho(1-r)]^L * ||g||_1 -> 0.
+
+This argument does not exclude arbitrary unbounded weights on a hypothetical
+infinite base orbit. Full positivity of the summable solution remains exactly
+the original coverage obligation.
+
+At inverse node c, depths k with k=-c mod3 are forbidden, since S^k(c)=c+k
+mod3. Let kappa=1-r^2/(1+r+r^2)<1. The total outgoing product factor is at
+most rho*kappa; omitting the root loop only decreases it. Therefore
+
+    sum_b g_*(b) <= 1/(1-rho*kappa).
+
+For rho<1 this sharpens the original valid bound 1/(1-rho). At rho=1 it
+still gives the finite bound (1+r+r^2)/r^2: 273 at r=1/16 and 21 at r=1/4.
+See [critical-flow C8](collatz_three_bits_critical_flow_20261005.md) for the
+proof, the source-level flow and computable-real interpretation. This mass
+bound is unconditional on the rooted component; it does not prove that
+component contains every base.
+
+## Surprisal is not a universal certificate-length lower bound
+
+The sum bill(b)=-log2 g_*(b) is an exact **real log-weight** for this fixed
+model. In the original stopped walk with rho<1, the probability of stopping
+at b is (1-rho)g_*(b), so its surprisal includes the extra term
+-log2(1-rho). These generally noninteger numbers are not literal binary
+prefix-code lengths. A coding construction must retain the stopping rule
+and its integer code or arithmetic-decoding convention.
+
+Iteration of the specified weight inequalities gives -log2 g(b)>=bill(b)
+when g(1)<=1. It does not prove that every possible ROOT certificate carries
+at least that many bits. Changing r, rho, the retained state or the allowable
+controller changes the inequality and its charge. The critical construction
+above is an explicit instance in which the artificial discount is removed.
+
+## Restore the affine carry in the size comparison
+
+For a base edge b->c=G(b), with a=v2(3b+1) and depth k,
+
+    3b+1 = 2^a [4^k c + (4^k-1)/3].
+
+At r=1/4, rho=1 and the size weight g(b)=1/b, the ratio of incoming source
+weight to the allowed target weight is exactly
+
+    g(b) / [(3/4)*4^-k*g(c)] = 2^(2+2k)*c/(3b).
+
+Dropping the additive terms only gives the multiplicative approximation
+2^(2-a), not exact break-even at a=2. The minimal displayed witness is
+b=9,c=7,a=2,k=0: the ratio is 28/27>1. Thus the historical exact balance
+`a-2` and the claimed equality of total deficit with the count of a=1
+steps are withdrawn; their carry-free approximations survive.
+
+A finite Haar census does not prove a drift law along every fixed orbit,
+a limit bill(b)/log2 b, or a pointwise asymptotic g_*(b)~b^-5.85. The listed
+finite numerical comparisons may be retained as observations. Pure size
+powers failing on rising edges do not exclude every function of size,
+residue, or finite observations. A precise, separately proved obstruction
+for one enlarged observer is [C7](collatz_three_bits_critical_flow_20261005.md):
+107->161->121->91 repeats its observer, and the extra predecessor 429->161
+forces strict aggregate growth.
+
+For a nonroot base whose chain roots, its base-chain length is one less than
+its odd U-root time: the final stripped sibling of base 1 still needs one
+actual odd step. Already b=3 has one base edge but the actual orbit
+3->5->1 has two. The original parenthetical equality of these times is
+therefore withdrawn; no all-input timing law is inferred from the census.
+
+[Exact audit program](../../04-computation/experiments/collatz_three_bits_incoming_bridge_20261005.py)
+and [output](collatz_three_bits_incoming_bridge_20261005.json) preserve the
+code bijection, critical weights, forbidden-depth calculations, and minimal
+carry and observer controls. The original discovery script and finite output
+are retained unchanged as historical artifacts.
+
+## Historical pre-audit discussion — not the current truth source
+
+The following original text preserves claim provenance. Its unqualified
+codelength, asymptotic, size-balance and observer claims are superseded above.
+
 # The refuel bill is a codelength (2026-10-05): every solution of the base criterion is dominated by `2^-bill(b)`, the probability of `b` under the base-tree code, so the bill `log_2(32/15) + 4k(b)` is the exact information a certificate must carry per base change (not a tunable budget); the size rank pays none of it at the atomic prior's own exponent and at most half of the edges at any exponent (the valuation-one base edges with `k = 0` are pure climbs); the chain code costs `5.85 log_2 b` bits on average (`6.04` measured, `364` bits at `837799`), the Kraft sum converges to `1.031`, and the Codex kernel's `88` bases carry essentially all of it
 
 **Session:** opus, `pascal-lyapunov-20261005` (sixth task), 2026-10-05.

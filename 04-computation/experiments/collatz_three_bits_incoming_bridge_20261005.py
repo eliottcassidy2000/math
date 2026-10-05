@@ -114,6 +114,30 @@ def main():
             incoming = weights[b] * F(16, 15)
             target_mass = F(1, 16) ** row["depth"] * weights[row["parent"]]
             require(incoming == target_mass, b)
+    capacity_rows = []
+    for r in (F(1, 16), F(1, 4), F(1, 2)):
+        denominator = 1 + r + r * r
+        kappa = 1 - r * r / denominator
+        for forbidden in range(3):
+            exact = 1 - r ** forbidden / denominator
+            partial = sum(((1-r) * r ** k for k in range(36) if k % 3 != forbidden), F())
+            require(partial == exact * (1 - r ** 36))
+            require(exact <= kappa < 1)
+        capacity_rows.append({"r": str(r), "kappa": str(kappa),
+                              "rooted_base_mass_bound": str(1 / (1 - kappa))})
+    for c in range(1, 1024, 2):
+        if v2(3*c+1) not in (1, 2):
+            continue
+        for k in range(13):
+            y = 4 ** k * c + (4 ** k - 1) // 3
+            require(y % 3 == (c + k) % 3)
+            if y % 3 == 0:
+                continue
+            b = ((2*y-1)//3) if y % 6 == 5 else ((4*y-1)//3)
+            require(U(b) == y and v2(3*b+1) in (1, 2))
+            require((b == 1) == (c == 1 and k == 0))
+    require(sum(weights.values(), F()) <= 273)
+    require(U(9) == 7 and F(1,9)/(F(3,4)*F(1,7)) == F(28,27))
     report = {
         "status": "FINITE-EXACT integration; universal coverage remains OPEN",
         "source_sha256": sha256(Path(__file__).read_bytes()).hexdigest(),
@@ -122,6 +146,9 @@ def main():
         "coding_bijection": "(D,n) -> Y=2^(D-bit_length(n)+1)*n-1",
         "plateau": {"path": [107, 161, 121, 91], "observer": list(obs(107)),
                     "additional_predecessor": [429, 161], "nu_endpoint_atom": str(nu(107))},
+        "critical_branch_capacity": capacity_rows,
+        "size_carry_hostile": {"base_edge": [9,7], "r": "1/4", "rho": "1", "s": 1,
+                                "source_to_allowed_weight_ratio": "28/27"},
         "critical_finite_kernel": {"bases": 88, "r": "1/16", "rho": "1",
             "root_weight_before_normalization": "1", "total_full_sibling_flow_mass": str(total),
             "maximum_base_path_length": max(lengths.values()),
