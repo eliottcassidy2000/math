@@ -520,7 +520,11 @@ heavy-tail effect: the mean square sits at the incoherent rate (exactly `3^-n` f
 4k; a bounded prefactor for integer starts, E5q), while the fourth moment of the integer-start `q = 3` family is
 two orders of magnitude above every other `q` at `n = 10..40`. By Jensen a heavier tail at fixed variance lowers
 the typical value; `q = 3` pays the largest Jensen gap (`log(0.5774/0.5694) = 1.4%` against `0.9%` for i.i.d.
-digits). The source of the tail is the ridge mechanism of HYP-9166/THM-4519 (coincidences `u 2^Q = -+1 mod 3^k`
+digits). A caution from the same table: the `q = 5` family also has a heavier tail than i.i.d. digits
+(`K = 26-330` against `5-19`) yet a typical rate at or slightly above the i.i.d. level (`0.5731`), so a heavier
+tail alone does not lower the typical rate; the Collatz family differs in degree on both counts (mean square
+`3-4x`, kurtosis `50-100x`), and only a quantitative model of the ridge inventory would turn this into a
+derivation. The source of the tail is the ridge mechanism of HYP-9166/THM-4519 (coincidences `u 2^Q = -+1 mod 3^k`
 feed coherent waves), and these coincidences are densest for the smallest prime: at depth `k` a random pair has
 probability `~q^-(k-1)` of a `q`-adic coincidence, largest for `q = 3`. What remains OPEN is a derivation of the
 `0.4%` from the ridge inventory, and the sup statement (b) itself. Excluded along the way: within-level digit
