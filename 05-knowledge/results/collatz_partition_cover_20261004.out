@@ -1,0 +1,154 @@
+{
+  "blind_sources_checked": 243,
+  "cells": 81,
+  "child_words_cost_at_most16": 65535,
+  "contracting_word_pairs": 48559,
+  "depth_growing_repair_controls": 288,
+  "diagonal_cells": [
+    {
+      "R": 0,
+      "S": 0,
+      "modulus": 2,
+      "odd_relative_density": "1",
+      "residue": 1
+    },
+    {
+      "R": 1,
+      "S": 1,
+      "modulus": 12,
+      "odd_relative_density": "1/6",
+      "residue": 3
+    },
+    {
+      "R": 2,
+      "S": 2,
+      "modulus": 72,
+      "odd_relative_density": "1/36",
+      "residue": 63
+    },
+    {
+      "R": 3,
+      "S": 3,
+      "modulus": 432,
+      "odd_relative_density": "1/216",
+      "residue": 351
+    },
+    {
+      "R": 4,
+      "S": 4,
+      "modulus": 2592,
+      "odd_relative_density": "1/1296",
+      "residue": 1215
+    },
+    {
+      "R": 5,
+      "S": 5,
+      "modulus": 15552,
+      "odd_relative_density": "1/7776",
+      "residue": 1215
+    },
+    {
+      "R": 6,
+      "S": 6,
+      "modulus": 93312,
+      "odd_relative_density": "1/46656",
+      "residue": 16767
+    },
+    {
+      "R": 7,
+      "S": 7,
+      "modulus": 559872,
+      "odd_relative_density": "1/279936",
+      "residue": 483327
+    },
+    {
+      "R": 8,
+      "S": 8,
+      "modulus": 3359232,
+      "odd_relative_density": "1/1679616",
+      "residue": 2722815
+    }
+  ],
+  "dyadic_only_hostiles": [
+    [
+      0,
+      5,
+      3
+    ],
+    [
+      1,
+      11,
+      7
+    ],
+    [
+      2,
+      23,
+      15
+    ],
+    [
+      3,
+      47,
+      31
+    ],
+    [
+      4,
+      95,
+      63
+    ],
+    [
+      5,
+      191,
+      127
+    ],
+    [
+      6,
+      383,
+      255
+    ],
+    [
+      7,
+      767,
+      511
+    ],
+    [
+      8,
+      1535,
+      1023
+    ]
+  ],
+  "family_not_closed_control": {
+    "smaller": 11,
+    "source": 29,
+    "source_family": "5mod8"
+  },
+  "independent_all_smaller_label_controls": 300,
+  "inherited_mod9_mersenne_exponents": [
+    5,
+    11,
+    17,
+    23,
+    29,
+    35,
+    41,
+    47,
+    53,
+    59
+  ],
+  "larger_ancestor_control": {
+    "child": 581,
+    "endpoint": 41,
+    "source": 27
+  },
+  "malformed_depths_rejected": 4,
+  "rational_inverse_controls": 1024,
+  "scope": "No convergence conclusion. No exponent cutoff in the bounded inverse search.",
+  "search_counters": {
+    "forward_endpoints": 1965,
+    "inverse_exponents": 8685,
+    "inverse_nodes": 6571
+  },
+  "status": "PROVED all-depth blind-cell theorem; FINITE-EXACT independent controls",
+  "theorem": "n=-1 mod2^(R+1), n=0 mod3^S, n>1 => no m<n with U^r(n)=U^s(m), r<=R,s<=S",
+  "universe": "R,S=0..8; each cell at parameters0,1,7 (replace root1 by next member)",
+  "unpaid_original_source_rejected": true
+}
