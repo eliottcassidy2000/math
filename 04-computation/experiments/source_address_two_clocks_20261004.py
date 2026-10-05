@@ -134,12 +134,32 @@ def audit():
     left, right = F(source((3,), 3), 8), F(source((2, 1), 3), 8)
     check((left, right) == (F(5, 8), F(1, 8)), "odd_Haar_cross_length_hostile")
     check((left - right) % 1 == F(1, 2), "odd_Haar_cross_length_hostile")
+    transfer = {F(0): F(0)}
+    for A in range(1, 4):
+        for m in range(1, A + 1):
+            for w in compositions(A, m):
+                transfer[F(source(w, 3), 2 ** A)] = F(source(w, 5), 2 ** A)
+    check(len(transfer) == len(set(transfer.values())) == 8, "unitary_character_permutation")
+    check([transfer[x] for x in (F(1, 8), F(1, 4), F(3, 8))]
+          == [F(7, 8), F(3, 4), F(1, 8)], "unitary_transfer_witness")
+    check(transfer[F(3, 8)] != (transfer[F(1, 8)] + transfer[F(1, 4)]) % 1,
+          "unitary_not_multiplicative")
+    spectrum = (F(1, 8), F(1, 4), F(3, 8))
+    transformed = tuple(transfer[x] for x in spectrum)
+    def fourth_moment(s):
+        counts = Counter((x + y) % 1 for x in s for y in s)
+        return sum(v * v for v in counts.values())
+    moments = [fourth_moment(spectrum), fourth_moment(transformed)]
+    check(moments == [19, 15], "unitary_fourth_moment_hostile")
     return {"scope": "FINITE-EXACT controls; all-depth proofs in the note; fixed-seed H1 OPEN",
             "multipliers": data, "total_word_cases": total_words,
             "proved_full_Haar_norm_squared": "3^(-m)",
             "proved_odd_Haar_adjacent_inner_product": "-1/(4*3^m)",
             "proved_odd_Haar_partial_sum_error_squared": "1/(4*3^M)",
             "hostile_cross_length_addresses": [str(left), str(right)],
+            "q3_to_q5_unitary_hostile": {"source_spectrum": list(map(str, spectrum)),
+                                        "target_spectrum": list(map(str, transformed)),
+                                        "full_Haar_fourth_moments": moments},
             "checks": dict(sorted(CHECKS.items())), "total_checks": sum(CHECKS.values())}
 
 

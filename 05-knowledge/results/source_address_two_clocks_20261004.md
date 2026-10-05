@@ -2,7 +2,8 @@
 
 2026-10-04–05 session. **PROVED:** the source-address partition,
 full-Haar orthogonality, odd-Haar nearest-neighbor covariance, and the
-weighted difference-square identity below. **FINITE-EXACT:** accompanying
+weighted difference-square identity below; unitary transfer between multipliers
+and its explicit failure to preserve products. **FINITE-EXACT:** accompanying
 integer/Fraction controls. **OPEN:** the fixed-seed estimate, H1, and Collatz.
 These are deductions from finite parity coding; no priority claim is made.
 
@@ -38,6 +39,16 @@ The closest proved mechanism is finite inverse-parity coding. The hostile
 is transferring an almost-everywhere estimate to a specified integer.
 The corrected near miss is forgetting which clock truncates an infinite
 sum. The useful sidecar is the pair (odd-step count, halving cost).
+
+The next batch through `b626f1620d` includes a second independent Fourier
+audit and the uniform-start experiment E5r. Its correction takes precedence:
+the earlier E5q large-tail comparison sampled nonprimitive frequencies and
+is retracted. The phase-injectivity statement survives with a corrected
+depth-index proof. None of our proofs uses the withdrawn moments or that
+old proof. E5r's typical-rate separation between q=3 and q=5 is OBSERVED;
+no asymptotic Lyapunov exponent or deterministic seed bound is proved by
+those finite runs. It prompted the exact linear-versus-product test in
+section 3a below.
 
 The reusable move is: **change the grading of an exact expansion, retain
 both truncations, and compute their compatibility before exchanging limits.**
@@ -170,6 +181,59 @@ odd R. The implied bound depends on the seed. All ordinary integers form
 a countable Haar-null set, so this conclusion certifies none of them
 individually.
 
+## 3a. Every multiplier has the same linear geometry, but not the same products
+
+The q-independence of (1) and (3) has a constructive explanation. For any
+odd multipliers p,q>=3 define U_(q->p) on the character basis by
+
+    U(1)=1,
+    U(chi_(r_w(q)/2^A))=chi_(r_w(p)/2^A).
+
+The partition theorem makes this a permutation of the entire orthonormal
+basis, hence a unitary operator on L2(Z_2). It preserves exact frequency
+cost, commutes with the projections onto frequencies of cost at most A,
+and sends every V_m^(q) to V_m^(p). The last-bit pairing is the same
+word operation for every multiplier, so U also preserves the character
+relations on the odd coset and descends to a unitary map there. Thus the
+whole cross-level quadratic geometry is universal, not just each diagonal
+second moment.
+
+This map is linear but generally **not multiplicative**. For q=3,p=5:
+
+| Word | Character address at q=3 | Its image at p=5 |
+|---|---|---|
+| (2,1) | 1/8 | 7/8 |
+| (2) | 1/4 | 3/4 |
+| (1,2) | 3/8 | 1/8 |
+
+Since characters multiply by adding their addresses modulo one,
+
+    U(chi_(1/8)*chi_(1/4)) = chi_(1/8),
+    U(chi_(1/8))*U(chi_(1/4)) = chi_(5/8).
+
+The two outputs are different, and on odd seeds they are negatives.
+There is even a small exact fourth-moment witness. Set
+F=chi_(1/8)+chi_(1/4)+chi_(3/8). Its squared norm and that of U(F)
+are both 3, but under full Haar measure
+
+    integral |F|^4 = 19,       integral |U(F)|^4 = 15.
+
+Proof: the fourth moment counts ordered pairs of addresses with equal
+sum. For {1,2,3}/8 the sum multiplicities are 1,2,3,2,1; their squares
+sum to 19. For {7,6,1}/8 they are 2,1,1,2,1,2 at residues 0,2,4,5,6,7;
+their squares sum to 15. The program independently reconstructs the
+address map and these pair sums.
+
+This explains exactly why universal second moments do not force universal
+higher moments or pointwise behavior. U is not pullback by a map of seeds:
+any such pullback on functions would preserve multiplication. In particular
+it does not transport evaluation at the integer 1. This is an explicit
+missing compatibility, not an unexplained mismatch between frameworks.
+A useful next analysis keeps the additive relations among character
+addresses, or equivalently the failure of U to respect products. The
+incoming fourth-moment and typical-rate experiments probe that coordinate;
+our finite witness does not derive their asymptotic rates.
+
 ## 4. The unproved operation is switching clocks at the fixed seed
 
 Retain both clocks by inserting a damping parameter 0<=t<1:
@@ -217,6 +281,7 @@ positive integers. The exceptional-source obligation remains explicit.
 | Source | Map | Preserved predicate | Lost information / sidecar |
 |---|---|---|---|
 | Collatz words | finite inverse-parity address | all nontrivial binary characters, bijectively | odd-step grading must accompany cost |
+| Multipliers q and p | same-word permutation of characters | all quadratic inner products and cost | products, higher moments and fixed-seed evaluation |
 | Character partition | Haar inner product | exact second moments | the chosen integer seed is averaged away |
 | Odd-seed character pairs | flip the last parity bit | adjacent odd-step coupling | source labels needed for deterministic estimates |
 | Adjacent covariance | weighted difference squares | exact boundary energy | L2 control does not imply point evaluation |
@@ -235,5 +300,5 @@ checks its closed formula, boundary energy, and a nonconstant rational
 coefficient probe. Cyclotomic-polynomial arithmetic independently checks
 the cost sums through cost 8, at three damping values and thirteen
 signed/zero seeds. No floating-point phase cancellation is used.
-All 97,842 explicit checks pass identically with and without Python optimization.
+All 97,846 explicit checks pass identically with and without Python optimization.
 The full infinite statements follow from the proofs above.

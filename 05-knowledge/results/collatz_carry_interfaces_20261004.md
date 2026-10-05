@@ -62,6 +62,11 @@ including their corrections, rather than treating commit titles as evidence:
   centroid-membership, and guarded-decoder package. Its independent decoder
   agrees with ours and adds a bounded-precision packet; its fan denominator
   law supplies an intrinsic stopping budget. The exact transfers are below.
+- Through `b626f1620d`: the second Fourier audit, its nonprimitive-frequency
+  correction, and E5r uniform-start controls. The earlier E5q heavy-tail
+  explanation is withdrawn and is not a dependency here. The new two-clock
+  continuation proves a unitary multiplier transfer that fails to preserve
+  products, identifying the coordinate that quadratic moments cannot see.
 
 The incoming coverage improvements belong to those packages; this note
 does not add their densities again. We use the existing META-PATTERNS

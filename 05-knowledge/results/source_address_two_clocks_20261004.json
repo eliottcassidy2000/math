@@ -11,7 +11,11 @@
     "half_turn_splits_final_block": 10235,
     "independent_parity_replay": 20475,
     "odd_Haar_cross_length_hostile": 2,
-    "odd_Haar_tridiagonal_Gram": 3250
+    "odd_Haar_tridiagonal_Gram": 3250,
+    "unitary_character_permutation": 1,
+    "unitary_fourth_moment_hostile": 1,
+    "unitary_not_multiplicative": 1,
+    "unitary_transfer_witness": 1
   },
   "hostile_cross_length_addresses": [
     "5/8",
@@ -67,7 +71,23 @@
   "proved_full_Haar_norm_squared": "3^(-m)",
   "proved_odd_Haar_adjacent_inner_product": "-1/(4*3^m)",
   "proved_odd_Haar_partial_sum_error_squared": "1/(4*3^M)",
+  "q3_to_q5_unitary_hostile": {
+    "full_Haar_fourth_moments": [
+      19,
+      15
+    ],
+    "source_spectrum": [
+      "1/8",
+      "1/4",
+      "3/8"
+    ],
+    "target_spectrum": [
+      "7/8",
+      "3/4",
+      "1/8"
+    ]
+  },
   "scope": "FINITE-EXACT controls; all-depth proofs in the note; fixed-seed H1 OPEN",
-  "total_checks": 97842,
+  "total_checks": 97846,
   "total_word_cases": 20475
 }
