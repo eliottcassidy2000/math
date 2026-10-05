@@ -1,0 +1,12 @@
+FINITE-EXACT: six explicitly supplied seed words checked; no orbit search used.
+Conditional DAG requests7,9,11 expose exactly{3,5}; both independent seed receipts discharge all three.
+Conservative funded native programs length1..3 ending non-L: 88
+Family universe: seeds1,5,7,11,13; parameters0,1: 880 plans; 880 completed inherited ASTs.
+Independent source residue comparisons: 8800 ; expanded literal controls under20000bits: 203
+Maximum symbolic terminal exponent: 1439843110 ; maximum source-to-seed odd depth: 19
+LG seed 1 : a= 116 + 162 *t; n=(128*seed*2^a-287)/243; route1211(a+2).
+LG seed 5 : a= 93 + 162 *t; n=(128*seed*2^a-287)/243; route1211(a+2).
+LG seed 7 : a= 46 + 162 *t; n=(128*seed*2^a-287)/243; route1211(a+2).
+Typed, malformed, circular, missing/wrong seed, root-padding and budget hostiles rejected: 19
+PROVED: each fixed admissible program/3-unit seed has infinitely many constructed sources, with one constant ROOT obligation.
+No arbitrary-source coverage claim. Finite seed constants and universal parameterized schemas are distinct obligations.

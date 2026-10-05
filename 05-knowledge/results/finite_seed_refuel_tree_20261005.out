@@ -1,0 +1,8 @@
+phase clock: all729 parent residues, unique positive exponent1..729
+complete addresses: branches{0,1,3}, depths0..4: 121 literal odd edges 2798 modular checks 847 independent codec exports13; nonseed first descent7
+canonical branch0 path: (depth,k,source bits,odd rank) [(1, 675, 1353, 8), (2, 60, 1473, 14), (3, 174, 1822, 20), (4, 605, 3032, 26), (5, 604, 4241, 32), (6, 723, 5687, 38), (7, 316, 6320, 44), (8, 498, 7316, 50)]
+ternary branch bijections: 1089 targets; derivative controls 108
+rooted observer hostile: equal parent residues 366 and kappa 60 but child residues 675 253
+hostiles: native H source155 and same-guard source perturbation rejected; exact types retained
+unexpanded address(10^100,7,10^80): residues mod(8,19,729,2048) (3, 4, 99, 155) odd rank 20 halving-cost digits 104
+PROVED: one checked seed and a decreasing-parent induction close this tree; arbitrary-source coverage is not claimed

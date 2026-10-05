@@ -1,0 +1,33 @@
+{
+  "L_only_closure": [
+    1,
+    123,
+    219,
+    555,
+    987,
+    1755
+  ],
+  "L_only_seeds": [
+    1,
+    123,
+    555
+  ],
+  "contracting_words_total_cost_at_most_10": 719,
+  "example_tail_member": {
+    "extra": 13,
+    "hub": 5,
+    "source": 194179,
+    "word": [
+      1,
+      4,
+      15
+    ]
+  },
+  "largest_constructed_source_bits": 335,
+  "literal_L_fuel_and_ancestry_sources": 10000,
+  "tail_receipts": 620,
+  "ternary_log_units_depth_1_to_6": 728,
+  "threshold_parameter_controls_0_to_3": 2876,
+  "words_with_exceptional_least_representative": 12
+}
+PASS: exact finite controls; all-height claims are proved in the companion note.

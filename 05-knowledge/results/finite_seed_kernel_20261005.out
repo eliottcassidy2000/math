@@ -1,0 +1,79 @@
+{
+  "adaptive_final_edges": 197,
+  "adaptive_new_edges": 26,
+  "adaptive_seed_calls_for_bound255": [
+    27,
+    127,
+    159,
+    223,
+    231,
+    255
+  ],
+  "checks": 108744,
+  "finite_experiments": [
+    {
+      "certified_targets_after": 16,
+      "components": 2,
+      "minimal_point_assumptions_for_fixed_graph": [
+        27
+      ],
+      "observed_edges": 21,
+      "seed_odd_lengths": [
+        41
+      ],
+      "target_bound": 31,
+      "target_count": 16,
+      "unrooted_targets_before": 2
+    },
+    {
+      "certified_targets_after": 64,
+      "components": 6,
+      "minimal_point_assumptions_for_fixed_graph": [
+        27,
+        63,
+        111,
+        123,
+        127
+      ],
+      "observed_edges": 86,
+      "seed_odd_lengths": [
+        41,
+        39,
+        24,
+        15,
+        15
+      ],
+      "target_bound": 127,
+      "target_count": 64,
+      "unrooted_targets_before": 20
+    },
+    {
+      "certified_targets_after": 128,
+      "components": 8,
+      "minimal_point_assumptions_for_fixed_graph": [
+        27,
+        111,
+        127,
+        159,
+        223,
+        231,
+        255
+      ],
+      "observed_edges": 171,
+      "seed_odd_lengths": [
+        41,
+        24,
+        15,
+        18,
+        24,
+        46,
+        15
+      ],
+      "target_bound": 255,
+      "target_count": 128,
+      "unrooted_targets_before": 51
+    }
+  ],
+  "scope": "Exact finite assumption kernels and transported point certificates; infinite family laws require separate universal proofs. No universal Collatz coverage.",
+  "status": "PASS"
+}
