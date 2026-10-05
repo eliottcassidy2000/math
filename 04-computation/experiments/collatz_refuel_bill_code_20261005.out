@@ -1,0 +1,19 @@
+A. decomposition n = S^k(b), b a base (v2(3b+1) <= 2), k = floor((v2(3n+1)-1)/2): errors 0/131072, k-formula errors 0
+   child-by-depth map c -> b0(S^k c): 53247 children checked, errors 0; missing (3 | S^k c, exactly one residue of k mod 3) 26625
+B. base edges b <= 1048576: 393215 bases; (a, k) fractions vs Haar (2/3, 1/3) x (3/4)(1/4)^k:
+   a=1: k=0:0.5000(0.5000) k=1:0.1250(0.1250) k=2:0.0313(0.0312) k=3:0.0078(0.0078) k=4:0.0020(0.0020)  ...  max k 10
+   a=2: k=0:0.2500(0.2500) k=1:0.0625(0.0625) k=2:0.0156(0.0156) k=3:0.0039(0.0039) k=4:0.0010(0.0010)  ...  max k 10
+C. chain code over the 393216 bases <= 1048576 (all rooted): chain length T = odd root time, mean 46.75, max (194, 837799)
+   codex (1/16, 1/2): Kraft partial sum sum_(b<=N) 2^-bill(b) = 1.031127 (bound 1/(1-rho) = 2.000); bill/log2(b): mean 6.044, median 5.836, 90% 8.741, max 18.773; largest bill 364.1 bits at b = 837799
+   critical (1/4, 1): Kraft partial sum sum_(b<=N) 2^-bill(b) = 1.384778 (bound 1/(1-rho) = 1000022122209.503); bill/log2(b): mean 2.691, median 2.606, 90% 3.834, max 8.103; largest bill 156.5 bits at b = 837799
+   (1/4, 1/2): Kraft partial sum sum_(b<=N) 2^-bill(b) = 1.123345 (bound 1/(1-rho) = 2.000); bill/log2(b): mean 5.211, median 4.987, 90% 7.928, max 17.865; largest bill 350.5 bits at b = 837799
+   Haar prediction for the codex bill: per base change E[bill] = 1.093 + 4 E[k] = 2.426 bits, E[size drop] = E[a|base] + 2E[k] - log2 3 = 0.415 bits, so bill/log2 b -> 5.85
+D. size weights g = b^-s: fraction of base edges (b <= N, first edge) paid, i.e. s*log2(b/G(b)) >= bill(edge):
+   codex (1/16, 1/2): s=2: 0.0000  s=3: 0.3750  s=4: 0.5000  s=6: 0.5000  s=8: 0.5000;  chains with no overdraft at any prefix (s = 6): 0.06861, median worst overdraft -34.7 bits
+   critical (1/4, 1): s=2: 0.5000  s=3: 0.5000  s=4: 0.5000  s=6: 0.5000  s=8: 0.5000;  chains with no overdraft at any prefix (s = 6): 0.19684, median worst overdraft -7.8 bits
+   (1/4, 1/2): s=2: 0.1250  s=3: 0.2500  s=4: 0.5000  s=6: 0.5000  s=8: 0.5000;  chains with no overdraft at any prefix (s = 6): 0.08499, median worst overdraft -31.5 bits
+   exact per-edge drop: log2(b/G(b)) = a + 2k - log2 3 + log2((1 + 1/(3b)) / (1 + 2^(a+2k)(4^k-1)/(3*4^k... )))  [the carry; a in {1,2} on bases]; the critical bill (r=1/4, rho=1) is exactly 2 - log2 3 + 2k per edge, so its per-edge balance against s = 1 size is a - 2: zero on a = 2 edges, -1 bit on every a = 1 edge
+E. codex kernel: 88 entries; r = 1/16, rho = 1/2; sample entry: {'b': 1, 'parent': None, 'depth': 0, 'valuation': 2}
+   kernel bases: chain lengths 0..42; bills 0.0..81.9 bits; sum of 2^-bill over the kernel = 1.031108 (the note reports sum_C g < 1 with its own path weights)
+   five largest kernel bills: [(97, 42, 81.9), (73, 41, 80.8), (55, 40, 79.7), (83, 39, 78.6), (63, 38, 77.5)]
+  [20s]
