@@ -1,0 +1,12 @@
+CHILD-CUT OBLIGATION PARTITION: exact fixed-word intervals; universal integer repair OPEN
+Rational hostile: 77/27 ->43/9 ->23/3 ->3; source3; slope32/27; all values>1
+Repair obstruction interval23/16<J<19/5; integral odd endpoint J=47+54t excludes it
+Scaled different-map control3x+27: 77->129->207->81; no conclusion for3x+1 integers
+Independent backwards endpoint checks: 10496
+Symbolic shapes: source length<=2/cost<=6 plus empty22; child cost<=12 plus empty4096
+Expanding44600; compatible15116; smaller-seed shapes11; unfilled obligations0; maxseedcount 1
+Inherited source universe odds<=1001: expanding2914; directendpoint2822; nontrivial92
+All92 entire fixed-word smaller-seed intervals discharged; (lastseed,firstrepair) frequencies: [((0, 0), 92)]
+Exact two-path residue-product checks: 2930
+Pair233/231 repairable cuts (index,seed,slope,firstparameter): [(7, 31, '8192/59049', 0), (8, 47, '4096/19683', 0), (9, 71, '2048/6561', 0), (10, 107, '1024/2187', 0), (11, 161, '512/729', 0), (12, 121, '128/243', 0), (13, 91, '32/81', 0), (14, 137, '16/27', 0), (15, 103, '4/9', 0), (16, 155, '2/3', 0)]
+Status: no integer counterexample found in inherited universe; universal cut existence remains OPEN

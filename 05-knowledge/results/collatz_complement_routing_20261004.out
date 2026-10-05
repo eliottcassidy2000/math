@@ -1,0 +1,17 @@
+COMPLEMENT ROUTING: all-height source-paid composition; global family coverage OPEN
+BROAD {"child": 25270565367447551, "child_period": 72057594037927936, "ell": 33, "intercept_numerator": -138123117816363, "k": 10, "modulus": 617673396283947, "period": 79062194724345216, "residue": 549446197252887, "slope_numerator": 562949953421312, "source": 27727075633746555}
+PHASE {"child": 203384946486673407, "child_period": 288230376151711744, "ell": 35, "intercept_numerator": -3640859452685187, "k": 10, "modulus": 5559060566555523, "period": 711559752519106944, "residue": 1784792989820781, "slope_numerator": 2251799813685248, "source": 502100243979817851}
+Exact words:source(1,2,1), child1^(ell-1),2,(2k-1); source firstfour(1,2,1,2) all grow.
+ANCESTOR_TABLE [[0, 1, 0, 2], [1, 4, 9, 40], [2, 7, 252, 273], [3, 11, 87732, 94109], [4, 14, 2744937, 2503585], [5, 18, 261025263, 62804493], [6, 21, 5684912109, 5439587969], [7, 24, 120748797342, 221027314255], [8, 28, 403178333823, 7257210008829], [9, 31, 549446197252887, 1814302502207]]
+Old ternary relative occupancy <=1/78; new fraction>=77/78; odd-relative new density>= 77/3083425594249463424
+GENERAL_FAMILY_ROWS [k,ell,power_of2,power_of3_in_slope] [[1, 3, 1, 1], [10, 33, 49, 31], [19, 64, 98, 62], [28, 95, 147, 93], [37, 126, 196, 124], [46, 156, 244, 154], [55, 187, 293, 185], [64, 218, 342, 216], [73, 249, 391, 247], [82, 279, 439, 277], [91, 310, 488, 308], [100, 341, 537, 339], [109, 372, 586, 370], [118, 403, 635, 401], [127, 433, 683, 431], [136, 464, 732, 462], [145, 495, 781, 493], [154, 526, 830, 524], [163, 556, 878, 554], [172, 587, 927, 585], [181, 618, 976, 616]]
+General literal all-word controls: 126 (k1..181 step9, six parameters)
+General initial-run controls [r,k,ell]: [(1, 10, 33), (2, 28, 96), (3, 82, 281)] ;three parameters each
+All-height hostile:2^(2j+1)-1,j>=1 is outside this schema;24 literal selector controls.
+Broad controls:first512 parameters; 512 new-class dispatches; others retained in earlier class
+HOSTILES:k1 already covered; k19 at oldell 65 has intermediate>source>finalchild
+Nested refinement:t=6 mod9; two k0 steps give phase family; all19 phases occur.
+Maximal k0 partition controls: 512 ; observed exact depths [0, 1, 2, 3, 4, 5, 6]
+Supplied-child AST demonstrations:4, bounded premise searches cap5000; no free-parameter home inference.
+Guard/type/source rejections: 6 ;7/27/703 remain outside this new class.
+PASS: compose first, then test original-source size; disjoint extension has positive density, not universal coverage.
