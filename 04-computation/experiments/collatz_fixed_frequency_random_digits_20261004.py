@@ -35,6 +35,11 @@ def run(N, A, mode, q=3, seed=0):
     v0 = np.zeros(N + 1); v0[0] = 1.0
     if mode == "randomunit":
         qq = int(rng.integers(1, 1 << 40)) | 1   # a random odd 'multiplier'
+    if mode == "uniformstart":
+        # the UNIFORM-START q-tower of the Fourier note, section 4k: the deepest level N has a uniform odd digit
+        # string R0 (to the full window depth), and level n < N is R0 * q^(N-n) (the q-th-root / Pascal law).
+        Mmax = N * A + A
+        R0 = int.from_bytes(rng.bytes((Mmax + 1) // 8 + 1), "little") % (1 << (Mmax + 1)) | 1
     for n in range(1, N + 1):
         lo = -(N - n) * A
         M = -(lo - A)
@@ -44,6 +49,8 @@ def run(N, A, mode, q=3, seed=0):
             R = int.from_bytes(rng.bytes((M + 1) // 8 + 1), "little") % (1 << (M + 1)) | 1
         elif mode == "randomunit":
             R = (-pow(qq, -n, 1 << (M + 1))) % (1 << (M + 1))
+        elif mode == "uniformstart":
+            R = (R0 * pow(q, N - n, 1 << (M + 1))) % (1 << (M + 1))
         ph_neg = phases_from_R(R, M)          # k = -M .. -1
         ph = np.empty(M + 1, dtype=np.complex128); ph[:M] = ph_neg; ph[M] = 1.0   # k = 0: e(u/q^n) ~ 1
         Pp = ph * prev[(lo - A) - prev_lo: (0 - prev_lo) + 1]

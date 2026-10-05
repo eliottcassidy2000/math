@@ -35,7 +35,13 @@ status: >
   units not prime to q and read a 50-100x inflation that was projectivity,
   audit C3, MISTAKES) -- while two hundred integer units prime to 3 give the
   typical rate 0.5694 +- 0.0002 against 0.5721 +- 0.0001 for two hundred
-  i.i.d. seeds (E5n): the excess is real and its mechanism is OPEN; E7: the
+  i.i.d. seeds (E5n): the excess is real; E5r: the UNIFORM-start cube-root
+  tower (uniform deepest string, levels by the exact Pascal law, no
+  arithmetic input, second moment exactly 3^-n) has the same typical rate
+  0.5698 +- 0.0009 while the uniform-start fifth-root tower has 0.5724 +-
+  0.0005 -- so the excess is a Lyapunov-exponent property of the step-1
+  Pascal coupling itself (mechanism localized to an exact random model; its
+  value not derived, OPEN); E7: the
   frequency-one coefficient to n = 5000 decays at 0.5698 with excursions at
   most ~90x its trend and sup_(n>=200) |mu_hat_n(1)|/0.585^n = 0.0046,
   consistent with (b)) and

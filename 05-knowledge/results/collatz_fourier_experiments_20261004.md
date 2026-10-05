@@ -557,6 +557,36 @@ the frequency-one coefficient decays at `0.570` with excursions of at most two o
 trend, and H1 holds with `rho = 0.58` and a constant below `0.03` on `n >= 200`; the ridge heights stay far
 below any exponential growth (consistent with (b) of HYP-9176; not a proof).
 
+### 4m. The excess without arithmetic: the uniform-start cube-root tower has the Collatz rate (E5r)
+
+`collatz_fixed_frequency_uniform_start_20261004.py` (mode `uniformstart` of the random-digits script): the
+deepest level's digit string is uniform to the full window depth (`N A + A` bits) and level `n < N` is `R_0
+q^(N-n) mod 2^(M+1)`, i.e. the exact `q`-th-root / Pascal law of 4c/4j with NO arithmetic input -- the model whose
+second moment is exactly `3^-n` at every level (4k, PROVED). Eight seeds per `q`, `N = 1500`, `A = 40`:
+
+| tower | rates `300..1500` (8 seeds) | mean | `750..1500` |
+|---|---|---|---|
+| uniform-start, `q = 3` (cube-root / step-1 Pascal) | `0.5709, 0.5708, 0.5688, 0.5686, 0.5699, 0.5695, 0.5694, 0.5708` | **`0.5698 +- 0.0009`** | `0.5694 +- 0.0018` |
+| uniform-start, `q = 5` (fifth-root / step-2 Pascal) | `0.5731, 0.5720, 0.5727, 0.5728, 0.5716, 0.5722, 0.5725, 0.5719` | **`0.5724 +- 0.0005`** | `0.5712 +- 0.0012` |
+| integer-start `q = 3` (E5f, six units; E5n, two hundred) | | `0.5700 +- 0.0009`; `0.5694 +- 0.0002` | |
+| i.i.d. digits (twelve seeds) | | `0.5723 +- 0.0008` | |
+
+**Reading (OBSERVED; the model is exact).** The uniform-start cube-root tower reproduces the Collatz value
+and the uniform-start fifth-root tower reproduces the i.i.d. value. So the `0.4%` excess needs no arithmetic:
+it is a property of the step-`1` Pascal coupling of consecutive levels by itself (`3 = 2 + 1`, adjacent depths,
+section 4c), absent for step `2` (`5 = 4 + 1`). Combined with 4k this is now a sharp statement about two
+explicit random models with identical, exactly known second moments (`3^-n`): their almost-sure (Lyapunov)
+rates differ, `0.5698` against `0.5724`, and both are below the mean-square rate `1/sqrt3` by Jensen gaps of
+`1.3%` and `0.9%`. The Collatz-specific input (the digits of `3^-n` being those of one particular start, `u = 1`)
+changes nothing at this precision: the integer-start and uniform-start cube-root towers agree to `0.0002`.
+
+**What this changes.** The mechanism question of 4g/4l is now a question about the Lyapunov exponent of the
+step-`1` Pascal random product -- a well-posed problem on an explicit model (Viswanath-type, 4e) -- rather than
+about the arithmetic of `3^-n`; and HYP-9176's (a) for the Collatz tower is, up to the `u = 1` specialisation,
+the statement that the uniform-start cube-root tower's window energy decays at `(1/3)^n e^(o(n))`, which holds
+in mean exactly (4k). Direction: a transfer-operator formulation of the step-`1` tower on pairs of adjacent
+depths (the two largest weights, `2^-1`, `2^-2`) to compute `0.5698` and `0.5724` from the two couplings.
+
 ### 4e. The web around the cold rate (connections found by the niche search; all typed)
 
 | repo thread | the object there | the map to the cold-frequency problem | preserved | lost / sidecar | type |
@@ -583,7 +613,8 @@ below any exponential growth (consistent with (b) of HYP-9176; not a proof).
 | "the cold rate counts adic digits, `c^(Omega(q))`" | REFUTED (reporting bug, caught by the `q = 5` control; MISTAKES) | 4f |
 | the Pascal tower: `theta_(N-m,d) = sum_i C(m,i) theta_(N,d-i)` (every level a binomial transform of the deepest) | PROVED (exact check) | 4j |
 | the random-start `q`-tower has second moment exactly `3^-n` (path values injective) and a fourth moment at least the i.i.d. model's | PROVED; values FINITE-EXACT (`n <= 4`) | 4k |
-| the Collatz excess is real at thirteen standard errors (`0.5694 +- 0.0002` vs `0.5721 +- 0.0001`, two hundred members each), located in the cube-root coupling of consecutive levels, and not a mean-square or low-moment effect | OBSERVED; mechanism OPEN (the first version's "kurtosis `50-100x`" was a sampling artifact, MISTAKES) | 4l, 4g, 4k |
+| the Collatz excess is real at thirteen standard errors (`0.5694 +- 0.0002` vs `0.5721 +- 0.0001`, two hundred members each), located in the cube-root coupling of consecutive levels, and not a mean-square or low-moment effect | OBSERVED (the first version's "kurtosis `50-100x`" was a sampling artifact, MISTAKES) | 4l, 4g, 4k |
+| the uniform-start cube-root tower (no arithmetic input; second moment exactly `3^-n`) has the Collatz typical rate `0.5698 +- 0.0009`, the uniform-start fifth-root tower the i.i.d. one `0.5724 +- 0.0005`: the excess is a Lyapunov-exponent property of the step-1 Pascal coupling | OBSERVED (8 seeds each); mechanism localized to an exact model, its value not derived | 4m |
 | `|mu_hat_n(1)|` to `n = 5000`: rate `0.5698`, excursions at most `~90x` the trend, `sup_(n>=200) |mu_hat_n(1)|/0.585^n = 0.0046` | FINITE-EXACT (consistent with HYP-9176(b)) | 4i |
 | "the Fourier mass concentrates near dyadic real frequencies" | REFUTED | E3 |
 | H1 = (a) digit incoherence in mean square + (b) polynomial ridges | HYP-9176 (CONJECTURED) | 4b |
