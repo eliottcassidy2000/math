@@ -140,20 +140,28 @@ has this reduction for \(n=3^a\). It occupies one of the 64 exponent
 classes modulo 512 inside \(a\equiv3\pmod8\). This is coverage of that
 exponent family, not a claim to have rooted every resulting child.
 
-The incoming [paid portrait controllers](collatz_paid_portrait_controllers_20261004.md)
-then supplied a complementary unbounded family. Their power-of-three
-rules follow \((1,2)^q\), \(q\ge2\), and a sufficiently large final reset.
-Every covered exponent is 11 modulo 32; every exponent in our new family
-is 3 modulo 32. The two domains are therefore disjoint. If \(\delta\)
-denotes that note's proved relative density within \(a\equiv3\pmod8\),
-their combined reduction coverage is exactly
-\[
- \delta+\frac1{64}\ \approx\ 0.08258927719932.
-\]
-Thus this explicitly compared union handles about 8.2589 percent of the
-residual **exponent class**. It is not an integer-density or a root-proof
-percentage. The incoming unbounded repetition parameter also explains
-why its controller lies outside the bounded-depth obstruction below.
+The [paid portrait controllers](collatz_paid_portrait_controllers_20261004.md)
+supply complementary unbounded families. First restrict to their
+single-anchor power-three rules: they follow `(1,2)^q`, q>=2, and a
+sufficiently large final reset. Every covered exponent is11 modulo32;
+every exponent in the checkpoint family above is3 modulo32. These
+subdomains are disjoint, giving the single-anchor-plus-checkpoint subtotal
+0.08258927719932 of the exponent class3 modulo8.
+
+The same continuation now also pays a route that crosses from the -5
+anchor to -1, retaining the original source rank. Its two-parameter guards,
+with the old315 modulo2048 overlap removed, are disjoint from the155
+modulo2048 checkpoint above. The enlarged union pays about30.2206 percent
+of the specified exponent class3 modulo8. This includes19 modulo128 and
+291 modulo512 alongside107 modulo128,11 modulo2048 and the checkpoint's
+483 modulo512. These are exponent-domain densities and strict smaller
+dependencies, not root proofs for every free-parameter child.
+
+The combined binary bank with binary16 and the strengthened original-source
+ternary bank has residual odd-relative density about0.124538220; other
+checkpoint positions are not exhausted by this comparison. The unbounded
+repetition parameter explains why these controllers lie outside the
+bounded-depth obstruction below.
 
 The complete per-checkpoint search has a finite height bound. The number
 of checkpoints needed for an arbitrary source still has no proved bound.

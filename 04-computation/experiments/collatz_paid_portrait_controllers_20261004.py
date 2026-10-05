@@ -76,6 +76,10 @@ def anchored_runs():
         check(rho.denominator % 2 == 1 and v2(rho) == 0, 'odd periodic anchor')
         P, Q, B = coefficients(w)
         check(F(P*rho+B, Q) == rho, 'anchor fixed by formal word')
+        lam=F(P,Q);fold=lam+1/lam
+        check(coefficients(w+w)==(P*P,Q*Q,B*(P+Q)), 'word repetition transports multiplier and carry')
+        check(lam*lam+1/(lam*lam)==fold*fold-2 and anchor(w+w)==rho,
+              'Chebyshev operation quotient with retained anchor')
         for n in range(-101, 102, 2):
             if n == rho:
                 continue
@@ -250,7 +254,58 @@ def powers_of_three(bank):
     return rows
 
 
-def coverage(density_rows, rational_bank):
+def switched_bank(Qmax=24,Rmax=64):
+    rows=[]
+    for q in range(1,Qmax+1):
+        for r in range(1,Rmax+1):
+            L=2
+            while 2**(3*q+r+L)<=2*3**(2*q+r+1):L+=1
+            prefix=(1,2)*q+(1,)*r
+            P,Q,B=coefficients(prefix+(L,))
+            residue=-B*pow(P,-1,Q)%Q
+            density=F(2,Q)
+            holes=[]
+            if (q,r)==(1,1):
+                p,z,b=coefficients(prefix+(6,))
+                hole=((z-b)*pow(p,-1,2*z))%(2*z)
+                holes=[dict(residue=hole,modulus=2*z)]
+                check((hole,2*z)==(315,2048),'exact inherited debt-row overlap')
+                density-=F(1,1024)
+            for j in (0,1,17):
+                n=residue+Q*j
+                x=replay(n,prefix)
+                m,a=step(x)
+                check(a>=L and 0<m<n and rank(m)<rank(n),'paid switch retains original source rank')
+                check(n%32==27,'switched bank binary critical class')
+            rows.append(dict(q=q,r=r,L=L,residue=residue,modulus=Q,
+                             holes=holes,odd_density=str(density)))
+    tail=F(4,7)*F(1,2**(3*(Qmax+1)))+F(1,14*2**Rmax)
+    powers=[]
+    for row in rows:
+        if row['q']!=1 or row['r'] not in (1,2,3,4):continue
+        residue,modulus=row['residue'],row['modulus']
+        bits=modulus.bit_length()-1;exponent=1
+        for b in range(3,bits):
+            valid=[a for a in (exponent,exponent+2**(b-2))
+                   if pow(3,a,2**(b+1))==residue%2**(b+1)]
+            check(len(valid)==1,'switched-controller exponent lift')
+            exponent=valid[0]
+        powers.append(dict(q=1,r=row['r'],L=row['L'],exponent=exponent,
+                           period=2**(bits-2),excluded_source_cells=row['holes']))
+    checkpoint=dict(residue=155,modulus=2048,odd_density=str(F(1,1024)),
+                    child=111,child_period=1458)
+    check(symbolic_word(155,2048,(1,2,1,1,1,2))==(445,5832),
+          'incoming checkpoint identity verified at every height')
+    for j in (0,1,17,10**6):
+        n,m=155+2048*j,111+1458*j
+        x=replay(n,(1,2,1,1,1,2))
+        check(x==4*m+1 and step(x)[0]==step(m)[0] and rank(m)<rank(n),
+              'incoming supplied-child common future and original rank payment')
+    check(pow(3,483,2048)==155 and pow(3,512,2048)==1,'incoming exponent progression')
+    return dict(Q=Qmax,R=Rmax,rows=rows,tail_bound=str(tail),power_rows=powers,checkpoint=checkpoint)
+
+
+def coverage(density_rows, rational_bank, switched):
     old=json.loads((ROOT/'05-knowledge/results/collatz_binary_ternary_guard_fusion_20261004.json').read_text())
     debt1=[row for row in old['debt_rows'] if row['e']==1]
     check([(row['s'],row['source_word'][:-1]) for row in debt1] == [(1,[1,6]),(2,[6])],
@@ -258,8 +313,10 @@ def coverage(density_rows, rational_bank):
     selected=[row for row in density_rows if row['c']==17]
     for row in selected:
         check(row['residue'] % 32 == 15, 'minus-seventeen bank binary critical class')
-    lower=sum(F(row['odd_density']) for row in selected+rational_bank['rows'])
-    tail=F(rational_bank['tail_bound'])+F(1,2**(11*65+2))/(1-F(1,2**11))
+    one_lower=sum(F(row['odd_density']) for row in selected+rational_bank['rows'])
+    switch_lower=sum(F(row['odd_density']) for row in switched['rows'])
+    lower=one_lower+switch_lower+F(1,1024)
+    tail=F(rational_bank['tail_bound'])+F(1,2**(11*65+2))/(1-F(1,2**11))+F(switched['tail_bound'])
     upper=lower+tail
     d2=F(old['binary_necessary_density'])
     lo3,hi3=F(old['ternary']['lower']),F(old['ternary']['upper'])
@@ -286,7 +343,11 @@ def coverage(density_rows, rational_bank):
     # Independent finite census uses the live map, not the density formula.
     counts=dict(odd_sources=50000,critical=0,integer_cycle_safe_union=0,integer_cycle_safe_critical=0,new_union=0,new_critical=0)
     examples=[]
-    active_cells=[row for row in selected+rational_bank['rows'] if row['residue']<100000]
+    allcells=selected+rational_bank['rows']+switched['rows']+[switched['checkpoint']]
+    active_cells=[row for row in allcells if row['residue']<100000]
+    def contains(row,n):
+        return n%row['modulus']==row['residue'] and not any(
+            n%hole['modulus']==hole['residue'] for hole in row.get('holes',[]))
     def old_binary_applies(n):
         x,a=step(n)
         if a!=1:
@@ -346,15 +407,34 @@ def coverage(density_rows, rational_bank):
                     check(not new,'rational atlas disjoint from minus-seventeen bank')
                     check(replay(n,w*q)==x and rank(m)<rank(n),'independent rational census payment')
                     new=True
+        K=v2(n+5);q=(K-1)//3
+        if q>=1:
+            x=F(-5)+F(9,8)**q*(n+5)
+            check(x.denominator==1,'switch controller first phase integral')
+            x=int(x);r=v2(x+1)-1
+            if r>=1:
+                L=2
+                while 2**(3*q+r+L)<=2*3**(2*q+r+1):L+=1
+                z=F(3,2)**r*(x+1)-1
+                check(z.denominator==1,'switch controller second phase integral')
+                m,a=step(int(z))
+                if a>=L and not (q==r==1 and a==6):
+                    check(not new,'switched bank disjoint from single-anchor banks')
+                    check(rank(m)<rank(n),'switched selector pays original rank')
+                    new=True
+        if n%2048==155:
+            check(not new,'incoming checkpoint cell disjoint from both new controller banks')
+            new=True
         counts['new_union']+=new
         counts['new_critical']+=new and crit
-        check(new==any(n%row['modulus']==row['residue'] for row in active_cells),
+        check(new==any(contains(row,n) for row in active_cells),
               'independent finite cylinder census matches actual dynamic selector')
         if new:
             check(not old_binary_applies(n),'new selector disjoint from inherited binary bank')
-    hostiles=[n for n in (7,27,703) if not any(n%row['modulus']==row['residue'] for row in active_cells)]
+    hostiles=[n for n in (7,27,703) if not any(contains(row,n) for row in active_cells)]
     check(hostiles==[7,27,703],'canonical sources remain outside this safe-exit bank')
     return dict(compared_bank='binary16 and ternary sibling bank from collatz_binary_ternary_guard_fusion_20261004.json',
+                single_anchor_binary_decimal=float(one_lower),switched_binary_decimal=float(switch_lower),
                 new_binary_density_interval=list(map(str,(lower,upper))),new_binary_decimal=float(lower),
                 uncovered_density_interval=list(map(str,(newlo,newhi))),uncovered_decimal=float(newhi),
                 added_outside_old_bank_interval=list(map(str,(gainlo,gainhi))),added_decimal=float(gainlo),
@@ -363,8 +443,11 @@ def coverage(density_rows, rational_bank):
                 strengthened_fused_residual_decimal=float(origin_residual[1]),
                 added_outside_strengthened_origin_interval=list(map(str,origin_gain)),
                 added_outside_strengthened_origin_decimal=float(origin_gain[0]),
-                repaired_fraction_of_exponents_3_mod8_interval=list(map(str,(16*c5lower,16*c5upper))),
-                repaired_fraction_of_exponents_3_mod8_decimal=float(16*c5lower),
+                single_anchor_repaired_fraction_of_exponents_3_mod8_decimal=float(16*c5lower),
+                repaired_fraction_of_exponents_3_mod8_interval=list(map(str,(
+                    16*(c5lower+switch_lower+F(1,1024)),
+                    16*(c5upper+switch_lower+F(switched['tail_bound'])+F(1,1024))))),
+                repaired_fraction_of_exponents_3_mod8_decimal=float(16*(c5lower+switch_lower+F(1,1024))),
                 census=counts,examples=examples,hostiles=hostiles)
 
 
@@ -412,7 +495,8 @@ def main():
     report['safe_cylinders']=density_rows
     report['rational_bank']=rational_cycle_bank()
     report['power_three_repairs']=powers_of_three(report['rational_bank'])
-    report['coverage']=coverage(density_rows,report['rational_bank'])
+    report['switched_bank']=switched_bank()
+    report['coverage']=coverage(density_rows,report['rational_bank'],report['switched_bank'])
     report['checks']=CHECKS
     stem=ROOT/'05-knowledge/results/collatz_paid_portrait_controllers_20261004'
     stem.with_suffix('.json').write_text(json.dumps(report,indent=2)+'\n')

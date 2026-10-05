@@ -12,7 +12,9 @@ priority claim is made.
 The main gain is an infinite controller family based on repeated words
 `1^h 2`. Its negative rational anchor records exactly how many repetitions
 are possible; a checked exit then pays the original integer and therefore
-the inherited rank. These families add positive-density coverage to the
+the inherited rank. A second family pays after an actual switch from
+the -5 anchor to the -1 anchor, retaining the original source throughout.
+These families add positive-density coverage to the
 named binary16/ternary banks, including infinite families of powers of
 three that the concurrent early-reroute grammar cannot handle.
 
@@ -44,6 +46,13 @@ the two-anchor ultrametric boundary developed independently below; the
 second supplies the exact finite group and its legality restoration.
 The new paid word families, their density comparison, and the ternary-tower
 repairs are the principal additions of this note.
+The later incoming `14d243942e` adds a
+[checkpoint cancellation](collatz_checkpoint_reroute_20261004.md)
+on155 mod2048; section6 integrates that entire cell disjointly.
+The subsequent `70be6f6822` proves a
+[negative-cycle shadow obstruction](collatz_negative_cycle_shadow_20261004.md)
+for bounded-depth checkpoint joins. Section5 connects its necessary
+depth growth to an explicit paid exit one step beyond the shadow.
 
 ## 2 Exact run lengths give a controller an unbounded register
 
@@ -119,6 +128,11 @@ followed by a final valuation at least L. Its modulus is `2^(A*q+L)`,
 and its density among odd integers is
 
     2^(-(A*q+L-1)).                                 (6)
+
+The guard is directly reconstructible: if the formal full word through
+that minimum last valuation is `(P*n+C)/2^D`, its coarse cylinder is
+`n=-C*P^(-1) mod2^D`. The preceding valuations are exact; only the last
+one can be larger. This is the inherited coarse-cylinder identity.
 
 The precise terminal exponent need not be fixed. Every legal higher
 valuation only decreases the child further. A sharper compiler can use
@@ -196,9 +210,10 @@ The newly covered portion outside that named old bank is approximately
 The concurrent early-reroute note improves the **original-source**
 ternary bank to density between0.4458180914749391 and0.4458180914749392.
 Replacing delta_T by that stronger density gives a second exact product
-interval in the saved JSON: its residual is approximately0.13268614492279,
+interval for this single-anchor subtotal: its residual is approximately0.13268614492279,
 with approximately0.00255071390807 newly paid outside that strengthened
-original-source comparison bank. Position-dependent reroutes and the other
+original-source comparison bank. Section6 enlarges these subtotals further.
+Position-dependent reroutes and the other
 repository constructions are not exhausted by either comparison.
 These are densities of paid dependencies, not completed home proofs.
 
@@ -245,7 +260,117 @@ The modular address chooses a legal paid family; the actual word and
 strict endpoint inequality supply the convergence-relevant content.
 Neither family covers its entire exponent class.
 
-## 6 What switching anchors really does to the remaining fuel
+The later incoming negative-cycle shadow theorem makes the depth issue
+precise. If source and child depths are bounded by R,S, every source
+`n=-5 mod2^(floor(3R/2)+1)` with `3^S|n` excludes smaller-child joins
+whose induced affine intercept is greater than -1. The source and child
+valuation costs are otherwise unrestricted. Powers of3 enter this cell
+at arbitrarily large prescribed precision, so no bounded-depth bank of
+that type covers them all.
+
+Our repeat register grows with the source's actual precision. For the
+concrete source `n=3^11`, `v2(n+5)=10`: the obstruction applies at R=6
+and every S<=11. Its seven-step paid exit1212124 has formal action
+`(2187*n+3767)/8192`, with intercept greater than -1, and reaches47293.
+Thus this example pays exactly one source step beyond its six-step
+negative-cycle shadow. There is no conflict with the depth bound and
+no claim that every departure from the shadow supplies a safe exit.
+
+## 6 A paid controller that crosses the refill boundary
+
+The next family performs an actual anchor switch. For any q,r>=1, take
+the source word
+
+    (12)^q, 1^r, a,
+    L_2(q,r)=min{a>=2:2^(3q+r+a)>2*3^(2q+r+1)},
+    actual a>=L_2(q,r).                             (9)
+
+This guard is one exact-prefix cylinder with the last valuation bounded
+below. Its odd-relative density is `2^(-(3q+r+L_2-1))`.
+
+**PROVED payment against the original source.** After the12 blocks,
+`x=(9/8)^q*(n+5)-5`. After the r ones and the final reset,
+
+    y=alpha*(n+5)-(12*(3/2)^r+2)/2^a,
+    alpha=3^(2q+r+1)/2^(3q+r+a)<1/2.
+
+Every positive source admitting12 has n>=11. Therefore y<n, and
+positivity and strict rank decrease follow exactly as in section3.
+The growing intermediate values need not pay individually. The entire
+two-anchor route pays the unchanged original rank.
+
+The first q blocks are maximal, because the following ones/reset string
+differs from the next12: at r>=2 its second letter is1, and at r=1 its
+second letter is at least4. Thus q and r identify disjoint cylinders.
+They are disjoint from section4's single-anchor bank as well: that
+bank departs immediately after its full cyclic blocks with a valuation
+at least3. The present family instead starts another run of ones.
+
+Against the old binary16 bank, exactly one overlap needs removal:
+q=r=1 with actual a=6 has prefix1216, the old e=1,s=1 rule.
+Its precise cylinder is315 mod2048, of odd-relative density1/1024.
+All other q,r rows fail the old suffixes `(1,6)` and `(6)` by their
+first differing exponent. Removing that cylinder gives a disjoint new
+bank B_switch of density
+
+    delta_switch=sum_(q,r>=1)2^(-(3q+r+L_2(q,r)-1))-1/1024
+                approximately0.0137260549146851.      (10)
+
+All its sources are27 mod32. Truncation at q<=24,r<=64 is audited with
+the rigorous tail upper bound
+`(4/7)*2^(-3(Q+1))+2^(-R)/14`, using L_2>=2. Natural-density convergence
+follows by the same two-stage cylinder argument: large q forces deep
+-5 precision; at a fixed q, large r forces deep -1 precision after
+that fixed affine prefix.
+
+**Merge the concurrent checkpoint rule.** The incoming whole family
+
+    n=155+2048t,   h=111+1458t,   t>=0,
+    n --(1,2,1,1,1,2)-->4h+1,
+    U(4h+1)=U(h),   0<h<n,                          (11)
+
+is independently verified symbolically. Its prefix is the q=1,r=3
+switch with terminal valuation2, below L_2(1,3)=5. Hence its cylinder
+is disjoint from B_switch, from section4's bank, and from the binary16
+bank. It adds exactly1/1024 to the new binary coverage.
+
+The combined **disjoint** binary addition has density
+
+    delta_all=delta_B+delta_switch+1/1024
+             approximately0.0193052828370450.        (12)
+
+Combining the union with binary16 and the old ternary sibling bank gives
+residual density approximately0.146939116830961. Combining instead with
+the strengthened original-source ternary bank gives approximately
+**0.124538220343603**. The latter adds approximately0.010698638487250
+coverage beyond binary16 plus that strengthened origin bank. Exact
+rational enclosing intervals are in the JSON. Other checkpoint positions
+and existing repository rules may reduce the residual further; these
+figures do not describe a hypothetical counterexample density.
+
+The second controller also adds whole ternary-tower families:
+
+| q,r | L_2 | Exponents a of3^a |
+|---|---:|---|
+| 1,2 | 4 | 19+128t |
+| 1,3 | 5 | 291+512t |
+| 1,4 | 6 | 1411+2048t |
+
+The incoming checkpoint adds483+512t. All these are disjoint from the
+single-anchor exponent families where asserted by their source-cylinder
+partition. The q=r=1 family also contributes, after the315 mod2048
+overlap is removed. Since all these source cylinders are3 mod8,
+the same exponent-order calculation gives combined relative coverage
+
+    16*(delta_(h=1)+delta_switch+1/1024)
+       approximately0.302206155834282               (13)
+
+of the incoming residual exponent class a=3 mod8. Thus about30.22 percent
+of that **specified exponent domain** has a paid dependency from these
+controllers and the concurrent checkpoint. This is not30.22 percent of
+the positive integers and not a proof that every resulting child is rooted.
+
+## 7 What switching anchors really does to the remaining fuel
 
 The inherited two-anchor ultrametric law extends through an affine word
 without approximation. Let F(x)=(3^r*x+B)/2^A, and choose odd-denominator
@@ -256,7 +381,7 @@ anchors rho,sigma. Put
 
 If delta=0, Knew=K-A. Otherwise, when K-A!=h,
 
-    Knew=min(K-A,h).                                (9)
+    Knew=min(K-A,h).                                (14)
 
 When K-A=h, the two normalized odd summands cancel and Knew>h,
 possibly without a uniform upper bound. Thus every strict fuel increase
@@ -267,7 +392,7 @@ An actual positive example makes the missing coordinate visible:
 
     n=32t-5 --(1,2)-->x=36t-5,  t positive odd,
     v2(n+5)=5,
-    v2(x+1)=2+v2(9t-1).                             (10)
+    v2(x+1)=2+v2(9t-1).                             (15)
 
 The final precision can be arbitrarily large, on explicit dyadic
 progressions of t. At t=1 this is `27 ->41 ->31`, and the new precision
@@ -280,7 +405,7 @@ An unbounded repeat may be compressed; an anchor refill must still
 record which arithmetic expression supplied its new digits and how
 the complete route pays the original source.
 
-## 7 Quadratic portraits suggest a construction and expose its limit
+## 8 Quadratic portraits suggest a construction and expose its limit
 
 The user's finite graphs are exactly the inherited integer preperiodic
 portraits of x^2, x^2-1, x^2-2. Their polynomial encodings are
@@ -292,10 +417,22 @@ Writing f_c(x)=x^2-c, direct factorization gives
 
     P_0(f_0(x))=P_0(x)*x(x^2+1),
     P_1(f_1(x))=P_1(x)*x(x^2-2),
-    P_2(f_2(x))=P_2(x)*x(x^2-2)(x^2-3).             (11)
+    P_2(f_2(x))=P_2(x)*x(x^2-2)(x^2-3).             (16)
 
 These retain the full finite root sets and their pullbacks. They suggest
 trying a polynomial of several Collatz anchors in place of one distance.
+
+There is also an exact operation-level connection to two of the maps.
+For an affine word of multiplier lambda, doubling the word sends
+`lambda -> lambda^2`. On the folded coordinate `z=lambda+lambda^(-1)`
+the same operation sends `z -> z^2-2`. This is the Chebyshev identity
+already used in the incoming quadratic note. Its lost coordinate matters:
+the words12 and21 have the same multiplier9/8 and folded coordinate,
+but anchors -5 and -7 and different exact source guards. Retaining
+the anchor and the choice between lambda and its inverse recovers the
+affine action; retaining the word and guard recovers its legal use.
+This quadratic dynamics acts on operations, not directly on the integer
+being iterated by Collatz. No analogous conjugacy is asserted for x^2-1.
 
 **PROVED limitation of that specific repair.** Suppose a nonempty
 finite root set at each controller mode is transported into the next
@@ -322,7 +459,7 @@ cofactors. The incoming [quadratic escape atlas](quadratic_escape_rank_atlas_202
 also shows why finite critical portraits do not imply attraction: the
 integer points outside these finite quadratic cores escape.
 
-## 8 Burnside provides a decomposition principle not integer coverage
+## 9 Burnside provides a decomposition principle not integer coverage
 
 **CITED.** Burnside's theorem says every finite group of order p^a q^b
 is solvable. In particular a nonabelian finite simple group needs at
@@ -351,9 +488,9 @@ above a supplied certified hub, but does not give a descending route
 from an arbitrary prescribed source. Our paid controllers add exactly
 that direction and size inequality on their specified domains.
 
-## 9 Remaining target and reproducible scope
+## 10 Remaining target and reproducible scope
 
-The next target is payment through the refill shells that the safe-exit
+The next target is payment through the refill shells that both safe-exit
 rules miss. A concrete testbed is the residual part of n=32t-5 with
 refill cofactor oddpart(9t-1), keeping the original rank fixed. A second
 is the remaining exponents3 mod8 of the ternary tower. The paid
@@ -367,8 +504,11 @@ comparison bank. The universes include180 words of length at most4,
 letters1..4 and cost at most9 on102 signed inputs; five anchors through
 five affine words; arbitrary-refill witnesses through precision40;
 576 exact-exit families at q1..64; the h<=24,q<=24 rational atlas;
-all50000 positive odd sources below100000; and eleven power-three
-exponent classes. Large power sources are expanded only when their
+the q<=24,r<=64 switch atlas; all50000 positive odd sources below100000;
+and the declared power-three exponent classes. The live-map selectors
+and the independently enumerated dyadic cylinders agree throughout
+that finite universe, including the old-bank overlap and checkpoint
+disjointness controls. Large power sources are expanded only when their
 exponents are at most10000. Literal replay, affine coefficients,
 symbolic all-height guards, and rational density bounds are kept distinct.
 
