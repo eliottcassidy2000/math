@@ -1,0 +1,109 @@
+tower q=7: N=3000 Mmax=5N seeds=100 [66s]
+  lambda (L_N - L_N0)/(N-N0), N0=600: -0.55816 +- 0.00011   rate 0.57226 +- 0.00007
+  lambda least-squares slope 600..3000: -0.55815 +- 0.00011   rate 0.57227 +- 0.00007
+  per-seed sd of (L_N-L_N0)/(N-N0): 0.00115;  mean-square rate reference sqrt(sum w_c^2) = 0.57735 (sum w_c = 1.00000); Jensen gap log(rate/rms) = -0.00886
+  D=1: mean increment/D -0.55816  Var/D 0.74121
+  D=10: mean increment/D -0.55817  Var/D 0.08235
+  D=100: mean increment/D -0.55814  Var/D 0.01314
+  D=1000: mean increment/D -0.55815  Var/D 0.00402
+  mean log|f_N| / N = -0.55855   (includes the transient)
+tower q=9: N=3000 Mmax=5N seeds=100 [43s]
+  lambda (L_N - L_N0)/(N-N0), N0=600: -0.55693 +- 0.00013   rate 0.57297 +- 0.00007
+  lambda least-squares slope 600..3000: -0.55688 +- 0.00013   rate 0.57299 +- 0.00007
+  per-seed sd of (L_N-L_N0)/(N-N0): 0.00128;  mean-square rate reference sqrt(sum w_c^2) = 0.57735 (sum w_c = 1.00000); Jensen gap log(rate/rms) = -0.00762
+  D=1: mean increment/D -0.55693  Var/D 0.75707
+  D=10: mean increment/D -0.55690  Var/D 0.08237
+  D=100: mean increment/D -0.55692  Var/D 0.01346
+  D=1000: mean increment/D -0.55687  Var/D 0.00460
+  mean log|f_N| / N = -0.55725   (includes the transient)
+tower q=15: N=3000 Mmax=5N seeds=100 [28s]
+  lambda (L_N - L_N0)/(N-N0), N0=600: -0.55774 +- 0.00012   rate 0.57250 +- 0.00007
+  lambda least-squares slope 600..3000: -0.55776 +- 0.00012   rate 0.57249 +- 0.00007
+  per-seed sd of (L_N-L_N0)/(N-N0): 0.00119;  mean-square rate reference sqrt(sum w_c^2) = 0.57735 (sum w_c = 1.00000); Jensen gap log(rate/rms) = -0.00844
+  D=1: mean increment/D -0.55774  Var/D 0.74938
+  D=10: mean increment/D -0.55771  Var/D 0.08225
+  D=100: mean increment/D -0.55774  Var/D 0.01336
+  D=1000: mean increment/D -0.55776  Var/D 0.00438
+  mean log|f_N| / N = -0.55805   (includes the transient)
+tower q=17: N=3000 Mmax=5N seeds=100 [27s]
+  lambda (L_N - L_N0)/(N-N0), N0=600: -0.55718 +- 0.00012   rate 0.57282 +- 0.00007
+  lambda least-squares slope 600..3000: -0.55716 +- 0.00012   rate 0.57283 +- 0.00007
+  per-seed sd of (L_N-L_N0)/(N-N0): 0.00119;  mean-square rate reference sqrt(sum w_c^2) = 0.57735 (sum w_c = 1.00000); Jensen gap log(rate/rms) = -0.00787
+  D=1: mean increment/D -0.55718  Var/D 0.75468
+  D=10: mean increment/D -0.55713  Var/D 0.08248
+  D=100: mean increment/D -0.55713  Var/D 0.01339
+  D=1000: mean increment/D -0.55716  Var/D 0.00445
+  mean log|f_N| / N = -0.55761   (includes the transient)
+tower q=31: N=3000 Mmax=5N seeds=100 [28s]
+  lambda (L_N - L_N0)/(N-N0), N0=600: -0.55740 +- 0.00013   rate 0.57269 +- 0.00007
+  lambda least-squares slope 600..3000: -0.55723 +- 0.00013   rate 0.57279 +- 0.00007
+  per-seed sd of (L_N-L_N0)/(N-N0): 0.00126;  mean-square rate reference sqrt(sum w_c^2) = 0.57735 (sum w_c = 1.00000); Jensen gap log(rate/rms) = -0.00810
+  D=1: mean increment/D -0.55740  Var/D 0.75693
+  D=10: mean increment/D -0.55743  Var/D 0.08291
+  D=100: mean increment/D -0.55739  Var/D 0.01353
+  D=1000: mean increment/D -0.55721  Var/D 0.00436
+  mean log|f_N| / N = -0.55788   (includes the transient)
+tower q=33: N=3000 Mmax=5N seeds=100 [27s]
+  lambda (L_N - L_N0)/(N-N0), N0=600: -0.55720 +- 0.00013   rate 0.57281 +- 0.00007
+  lambda least-squares slope 600..3000: -0.55727 +- 0.00012   rate 0.57277 +- 0.00007
+  per-seed sd of (L_N-L_N0)/(N-N0): 0.00126;  mean-square rate reference sqrt(sum w_c^2) = 0.57735 (sum w_c = 1.00000); Jensen gap log(rate/rms) = -0.00789
+  D=1: mean increment/D -0.55720  Var/D 0.75694
+  D=10: mean increment/D -0.55723  Var/D 0.08306
+  D=100: mean increment/D -0.55724  Var/D 0.01343
+  D=1000: mean increment/D -0.55729  Var/D 0.00454
+  mean log|f_N| / N = -0.55768   (includes the transient)
+tower q=5: N=3000 Mmax=5N seeds=100 [27s]
+  lambda (L_N - L_N0)/(N-N0), N0=600: -0.55731 +- 0.00011   rate 0.57275 +- 0.00006
+  lambda least-squares slope 600..3000: -0.55739 +- 0.00011   rate 0.57270 +- 0.00006
+  per-seed sd of (L_N-L_N0)/(N-N0): 0.00108;  mean-square rate reference sqrt(sum w_c^2) = 0.57735 (sum w_c = 1.00000); Jensen gap log(rate/rms) = -0.00801
+  D=1: mean increment/D -0.55731  Var/D 0.75869
+  D=10: mean increment/D -0.55732  Var/D 0.08198
+  D=100: mean increment/D -0.55734  Var/D 0.01282
+  D=1000: mean increment/D -0.55742  Var/D 0.00409
+  mean log|f_N| / N = -0.55763   (includes the transient)
+tower q=-3: N=3000 Mmax=5N seeds=100 [27s]
+  lambda (L_N - L_N0)/(N-N0), N0=600: -0.57120 +- 0.00016   rate 0.56485 +- 0.00009
+  lambda least-squares slope 600..3000: -0.57134 +- 0.00014   rate 0.56477 +- 0.00008
+  per-seed sd of (L_N-L_N0)/(N-N0): 0.00156;  mean-square rate reference sqrt(sum w_c^2) = 0.57735 (sum w_c = 1.00000); Jensen gap log(rate/rms) = -0.02189
+  D=1: mean increment/D -0.57120  Var/D 0.71025
+  D=10: mean increment/D -0.57117  Var/D 0.08753
+  D=100: mean increment/D -0.57121  Var/D 0.01764
+  D=1000: mean increment/D -0.57136  Var/D 0.00643
+  mean log|f_N| / N = -0.57183   (includes the transient)
+tower q=-5: N=3000 Mmax=5N seeds=100 [27s]
+  lambda (L_N - L_N0)/(N-N0), N0=600: -0.55862 +- 0.00011   rate 0.57200 +- 0.00006
+  lambda least-squares slope 600..3000: -0.55854 +- 0.00010   rate 0.57204 +- 0.00006
+  per-seed sd of (L_N-L_N0)/(N-N0): 0.00108;  mean-square rate reference sqrt(sum w_c^2) = 0.57735 (sum w_c = 1.00000); Jensen gap log(rate/rms) = -0.00931
+  D=1: mean increment/D -0.55862  Var/D 0.75569
+  D=10: mean increment/D -0.55857  Var/D 0.08282
+  D=100: mean increment/D -0.55857  Var/D 0.01331
+  D=1000: mean increment/D -0.55856  Var/D 0.00385
+  mean log|f_N| / N = -0.55896   (includes the transient)
+tower q=-7: N=3000 Mmax=5N seeds=100 [27s]
+  lambda (L_N - L_N0)/(N-N0), N0=600: -0.55893 +- 0.00012   rate 0.57182 +- 0.00007
+  lambda least-squares slope 600..3000: -0.55895 +- 0.00012   rate 0.57181 +- 0.00007
+  per-seed sd of (L_N-L_N0)/(N-N0): 0.00115;  mean-square rate reference sqrt(sum w_c^2) = 0.57735 (sum w_c = 1.00000); Jensen gap log(rate/rms) = -0.00962
+  D=1: mean increment/D -0.55893  Var/D 0.74309
+  D=10: mean increment/D -0.55894  Var/D 0.08287
+  D=100: mean increment/D -0.55895  Var/D 0.01411
+  D=1000: mean increment/D -0.55896  Var/D 0.00470
+  mean log|f_N| / N = -0.55944   (includes the transient)
+tower q=11: N=3000 Mmax=5N seeds=100 [27s]
+  lambda (L_N - L_N0)/(N-N0), N0=600: -0.55747 +- 0.00014   rate 0.57266 +- 0.00008
+  lambda least-squares slope 600..3000: -0.55741 +- 0.00012   rate 0.57269 +- 0.00007
+  per-seed sd of (L_N-L_N0)/(N-N0): 0.00136;  mean-square rate reference sqrt(sum w_c^2) = 0.57735 (sum w_c = 1.00000); Jensen gap log(rate/rms) = -0.00816
+  D=1: mean increment/D -0.55747  Var/D 0.74551
+  D=10: mean increment/D -0.55749  Var/D 0.08159
+  D=100: mean increment/D -0.55749  Var/D 0.01315
+  D=1000: mean increment/D -0.55739  Var/D 0.00420
+  mean log|f_N| / N = -0.55789   (includes the transient)
+tower q=13: N=3000 Mmax=5N seeds=100 [27s]
+  lambda (L_N - L_N0)/(N-N0), N0=600: -0.55728 +- 0.00014   rate 0.57276 +- 0.00008
+  lambda least-squares slope 600..3000: -0.55743 +- 0.00014   rate 0.57268 +- 0.00008
+  per-seed sd of (L_N-L_N0)/(N-N0): 0.00139;  mean-square rate reference sqrt(sum w_c^2) = 0.57735 (sum w_c = 1.00000); Jensen gap log(rate/rms) = -0.00797
+  D=1: mean increment/D -0.55728  Var/D 0.75230
+  D=10: mean increment/D -0.55729  Var/D 0.08277
+  D=100: mean increment/D -0.55734  Var/D 0.01406
+  D=1000: mean increment/D -0.55745  Var/D 0.00503
+  mean log|f_N| / N = -0.55781   (includes the transient)
+BATCH6 DONE

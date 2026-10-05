@@ -46,7 +46,7 @@ H1; Collatz). NOT independently audited; audit OWED. Nothing here is a Collatz s
    fully coherent tower, where `Phi` is the coin string itself), `q = -3` gives **`0.5647`** (a larger excess
    than `q = 3`), `q = 3` gives `0.5693`, and `q = 5, 7, 9, ..., 257` all sit in `0.5720..0.5729`. So the step-1
    tower is not the extreme case: the sign of the multiplier matters more than its binary length.
-   [[PENDING-Q3000]]
+   At level `3000` (100 seeds, levels `600..3000`, standard errors `0.00012` in the log; i.i.d. reference `-0.55747 +- 0.00008`) the landscape resolves to `0.0003`: excess `+0.0007` for `q = 7`, `+0.0003` for `15`, `0` for `31`, `-0.0005` for `9`, `-0.0003` for `17` and `33`, `0` for `5, 11, 13`; `-3`: `+0.0137`, `-5`: `+0.0012`, `-7`: `+0.0015`. The long-run coin `p = 0.3` amplifies the same pattern tenfold (2d).
 4. **Where the excess lives (section 3).** (a) In the per-level increments `log|f_j/f_(j-1)|` the step-1 tower is
    not heavier-tailed: its left tail (increments below `-1`) contributes `+0.004` relative to the i.i.d. model,
    the deficit `-0.005` comes from the band `[-1, -0.5)` (`-0.0033`) and from fewer large positive increments
@@ -192,7 +192,41 @@ the step-1 excess); `q = -5`: `-0.0094` (excess `+0.0012`); `q = -7`: `-0.0099` 
 `-0.0084`; `q = -11`: `-0.0085` (universal). So the alternating-sign towers `-5, -7` carry a small excess
 where `+5, +7` carry at most a marginal one, and `-3` carries the largest. [[PENDING-Q3000-NEG]] At this precision every positive `q >= 5` is within `0.0007` of the universal value
 (the `q = 7, 23, 27, 29, 31, 127, 129` entries at `0.5720-0.5722` are two to three standard errors low on
-levels `200..1000`, where the transient is not yet over). [[PENDING-Q3000-TABLE]]
+levels `200..1000`, where the transient is not yet over).
+
+**Level `3000` refinement (100 seeds, levels `600..3000`, standard error `0.00012`; i.i.d. `-0.55747`, `q = 5`
+`-0.55731`).** `lambda` and excess over i.i.d.: `q = 7`: `-0.55816` (**`+0.0007`**); `9`: `-0.55693`
+(**`-0.0005`**, a deficit); `11`: `-0.55747` (`0`); `13`: `-0.55728` (`-0.0002`); `15`: `-0.55774` (`+0.0003`);
+`17`: `-0.55718` (`-0.0003`); `31`: `-0.55740` (`-0.0001`); `33`: `-0.55720` (`-0.0003`); `-3`: `-0.57120`
+(**`+0.0137`**); `-5`: `-0.55862` (**`+0.0012`**); `-7`: `-0.55893` (**`+0.0015`**). So beyond `+-3` there are
+small but real effects of both signs (`7` and `15` above i.i.d., `9, 17, 33` below), of the size `0.0005`.
+
+### 2d. The sign law of the multiplier (OBSERVED; `p = 0.3`, `N = 1500`, 60-100 seeds, standard errors `0.0004`)
+
+At the long-run coin `p = 0.3` every effect is about ten times larger. Excess over the i.i.d. gap
+(`-0.0155`), with `q` written as `+-2^s +- 1`:
+
+| `q = 2^s - 1` | 3 | 7 | 15 | 31 | 63 | | `q = 2^s + 1` | 5 | 9 | 17 | 33 | 65 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| excess | **`+0.0158`** | **`+0.0035`** | **`+0.0016`** | `+0.0003` | `0.0000` | | excess | `-0.0005` | **`-0.0022`** | **`-0.0015`** | `-0.0008` | `-0.0006` |
+
+| `q = 1 - 2^s` | -3 | -7 | -15 | | `q = -1 - 2^s` | -5 | -9 | -17 | | three-term `q` | 11 | 13 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| excess | (`+0.0137` at `p = 1/2`) | **`+0.0129`** | **`+0.0048`** | | excess | **`+0.0076`** | **`+0.0018`** | `0.0000` | | excess | `-0.0002` | `+0.0002` |
+Controls at `p = 0.3`: a second i.i.d. reference with 100 fresh seeds gives the gap `-0.0154 +- 0.0002`
+(against `-0.0155` with 60 seeds), so the excesses above are good to `+-0.0004`; `q = -1` has gap `-0.0003`
+(no Jensen gap, as at `p = 1/2`); `q = 1` has gap `-0.320` (the coherent tower, rate `0.3052` against the rms
+`0.4201`).
+
+**Reading (OBSERVED; a law, not a mechanism).** Write `q theta_(m,j) = +-theta_(m-s,j) +- theta_(m,j)` (the
+twist of column `j+1` as a signed sum of two twists of column `j`, by the odometer `2^s theta_(m,j) =
+theta_(m-s,j)`). The three sign patterns with a minus -- `(+,-)`: `2^s - 1`; `(-,+)`: `1 - 2^s`; `(-,-)`:
+`-1 - 2^s` -- give an excess that decreases geometrically in `s` (about `x0.4` per step for `2^s - 1`), the
+`(-,+)` family being the strongest; the all-plus pattern `2^s + 1` gives a small DEFICIT peaking at `s = 3`;
+the three-term multipliers `11 = 8 + 2 + 1` and `13 = 8 + 4 + 1` give nothing. The step-1 tower, `3 = 4 - 1`,
+is the `s = 2` member of the `(+,-)` family, and the Collatz carry automaton is the only case where the two
+summed twists sit at adjacent depths. A borrow in the carry automaton of `x -> q x` is what the typical
+logarithm sees; a carry alone is not. Why is OPEN (section 4).
 
 `q = 1` is the degenerate control: `Phi_N = 0.epsilon_1 epsilon_2 ... epsilon_(S_N)` is the coin string read as
 a binary fraction, the law of `Phi mod 1` is uniform at every coarse scale, and the transform at a Haar
@@ -301,7 +335,9 @@ cancels less than i.i.d. digits; `gamma = -0.11`); `q = 7` at `p = 0.4`: `+0.001
 on the multiplier beyond its size: at the long-run coin `p = 0.3` the order is `3 (+0.016) > 7 (+0.0035) > 5
 (0) > 9 (-0.002)`, i.e. `2^s - 1` above `2^s + 1` for `s = 2, 3`, which is the sign of the `omega_(m,j)` factor in
 the twist relation (`omega_(m,j+1) = omega_(m-s,j) conj(omega_(m,j))` for `2^s - 1`, `omega_(m-s,j)
-omega_(m,j)` for `2^s + 1`). [[PENDING-SIGN]]
+omega_(m,j)` for `2^s + 1`). The full sign scan (2d) confirms the law: at `p = 0.3`, `15`: `+0.0016`, `31`: `+0.0003`,
+`63`: `0`; `17`: `-0.0015`, `33`: `-0.0008`, `65`: `-0.0006`; `-7`: `+0.0129`, `-15`: `+0.0048`; `-5`: `+0.0076`,
+`-9`: `+0.0018`, `-17`: `0`; `11, 13`: `0`.
 
 **The step-1 excess is a smooth function of the coin, roughly tripling for every `0.1` taken off `p`, and the
 step-2 tower never acquires one** -- not even at `p = 0.3`, where its real backward map contracts twice as
@@ -356,9 +392,10 @@ models the excess does appear where `gamma(3, A)` changes sign (3c), but that is
 and the same truncation gives the step-2 tower nothing at any `A`. The real contraction is not the mechanism.
 
 **Constraints on any mechanism (all OBSERVED or PROVED above).**
-1. Specific to the multipliers `+-3` at every coin bias tried; `q = 5, 7, 9, ..., 257` universal at `p = 1/2`
-   (2c) and `q = 5` universal at `p = 0.3 .. 0.7` (3d); the alternating-sign towers `-5, -7` carry a small
-   excess (`0.0012-0.0017`) and `-3` the largest (`0.0138`), `-9, -11` none (2c).
+1. Governed by the SIGNS in `q = +-2^s +- 1` (2d): a minus (a borrow in the carry automaton of `x -> q x`)
+   gives an excess decreasing geometrically in `s`, with `3 = 4 - 1` the largest positive case and `-3 = 1 - 4`
+   the largest of all; the all-plus `2^s + 1` gives a small deficit; three-term multipliers (`11, 13`) nothing;
+   `q = 5` universal at every coin bias (3d).
 2. Carried by the valuations `c >= 3` (3c: absent, with reversed sign, at `A = 2`; `90%` present at `A = 4`)
    and growing with their weight (3d: roughly `x3` per `0.1` of `p` removed).
 3. Invisible to every pair statistic: the mean square is `3^-N` for every `q` (4k) and so is its whole
