@@ -10,7 +10,14 @@ status: >
   correlated within a level; E5f: six units of q = 3 to n = 1500 give
   0.5700 +- 0.0009 against twelve i.i.d. runs at 0.5723 +- 0.0008, five
   standard errors; the level-to-level law e(theta_(n+1,d))^q = e(theta_(n,d))
-  is PROVED and locates the q = 3 excess in the cross-level coupling) and
+  is PROVED and locates the q = 3 excess in the cross-level coupling; E5k
+  hybrid towers CONFIRM the localization: real digits at the high levels with
+  random digits below keep the excess (0.5696), random digits above lose it
+  (0.5727), and genuine 3^-n strings at every level but with a fresh unit per
+  level -- breaking the cube-root relation between consecutive levels -- lose
+  it too (0.5725); the root orders q = 5..49, prime, prime power or composite,
+  all sit at 0.5725 +- 0.0007, so the cube root alone interacts with the
+  geometric weights; mechanism OPEN) and
   mac-mini's |mu_hat_n(1)| to 2500 (HYP-9166). What it adds to
   HYP-9166: H1's rate is not 3's Parseval scale but the incoherent rate of the
   2-adic window recursion (identical for 5x+1, whose law is nowhere near

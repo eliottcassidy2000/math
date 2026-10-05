@@ -320,9 +320,24 @@ prime clearly below and `q = 5` marginally above.
 21, 25, 33, 45, 49` and pre-registered a "digit-counting law" `rate = c^(Omega(q))`. Those two scripts' reporting
 line applied the `1/sqrt3` rescaling a second time (the vector is stored rescaled by `3^(n/2)`, the fit already
 removes it); the pre-registered control `q = 5` in the second script came out `0.3309` against its known `0.5731`
-(E4, E5g) and exposed the error. Dividing the printed values by `3^(-1/2)` (and rerunning the corrected scripts,
-outputs `.out`): **`q = 9`: `0.5724`; `15`: `0.5724`; `21`: `0.5728`; `25`: `0.5717`; `27`: `0.5743` (one unit);
-`33`: `0.5716`; `45`: `0.5730`; `49`: `0.5730`; control `5`: `0.5731`** -- all at the universal `0.5725 +- 0.0007`.
+(E4, E5g) and exposed the error. Dividing the printed values by `3^(-1/2)` (archived logs
+`*_buggy_reporting.log`; the corrected scripts rerun to the same values, outputs `.out`):
+
+| `q` | units | corrected rates | mean |
+|---|---|---|---|
+| 9 | 1, 5, 7, 11 | `0.5731, 0.5724, 0.5723, 0.5723` | `0.5725 +- 0.0004` |
+| 15 | 1, 7, 11, 13 | `0.5737, 0.5724, 0.5705, 0.5730` | `0.5724 +- 0.0013` |
+| 21 | 1, 5, 7, 11 | `0.5712, 0.5742, 0.5728, 0.5731` | `0.5728 +- 0.0012` |
+| 27 | 1, 5, 7, 11 | `0.5743, 0.5714, 0.5728, 0.5733` | `0.5730 +- 0.0012` |
+| 25 | 1, 2, 7 | `0.5721, 0.5723, 0.5711` | `0.5718 +- 0.0007` |
+| 49 | 1, 2, 11 | `0.5731, 0.5731, 0.5728` | `0.5730 +- 0.0002` |
+| 45 | 1, 2, 7 | `0.5726, 0.5726, 0.5737` | `0.5730 +- 0.0006` |
+| 33 | 1, 2, 7 | `0.5712, 0.5712, 0.5724` | `0.5716 +- 0.0007` |
+| 5 (control) | 1, 2, 7 | `0.5733, 0.5733, 0.5728` | `0.5731 +- 0.0003` |
+| 3 (control, buggy run) | 1, 5, 7, 11 | `0.5690, 0.5700, 0.5693, 0.5714` | `0.5699 +- 0.0011` |
+
+-- every `q >= 5` at the universal `0.5725 +- 0.0007`, and the `q = 3` control reproduces the anomaly
+(`0.5699`), so the buggy run was internally consistent and only its last reporting line was wrong.
 So the typical cold rate is the same constant for every odd `q`, prime, prime power or composite, and the only
 exception remains `q = 3` at `0.5700`. The CRT remark stands as an identity (the frequency-`1` character of
 `Z/15^n` is a product of a `3`-adic and a `5`-adic character), but the product's typical rate is not the product
@@ -331,6 +346,31 @@ prime, two digits of one prime, or one digit each of two primes. The lesson is l
 opus Fourier note): a control value that contradicts an earlier measurement must be checked before any
 pre-registered prediction is read as confirmed -- here `q = 25` and `q = 49` "confirmed" the law for an hour
 before the control line was read.
+
+### 4g. The anomaly localized: it is the cube-root coupling of consecutive levels (E5k, hybrid towers)
+
+`collatz_fixed_frequency_hybrid_20261004.py` (`N = 1500`, `A = 40`, rates over `300..1500`; reference: real
+`0.5700 +- 0.0009`, i.i.d. `0.5723 +- 0.0008`):
+
+| tower | `u = 1, 5, 7` (or three seeds) | mean |
+|---|---|---|
+| A: real digits of `-u 3^-n` for `n > 20`, i.i.d. digits for `n <= 20` | `0.5689, 0.5705, 0.5693` | **`0.5696`** |
+| A: real for `n > 100`, i.i.d. for `n <= 100` | `0.5701, 0.5698, 0.5692` | **`0.5697`** |
+| B: i.i.d. for `n > 20`, real for `n <= 20` | `0.5721, 0.5734, 0.5728` | `0.5727` |
+| B: i.i.d. for `n > 100`, real for `n <= 100` | `0.5726, 0.5730, 0.5727` | `0.5727` |
+| C: a genuine string of `-u_n 3^-n` at every level, with a fresh random unit `u_n` per level | `0.5725, 0.5735, 0.5715` | `0.5725` |
+
+**Reading.** (A) The excess is a steady-state property of the high levels (it survives replacing the first 20
+or 100 levels, where the phase strings are periodic inside the window, by random digits). (B) It disappears
+when the high levels are random. (C) **It disappears when every level is a genuine `3^-n` digit string but the
+unit changes from level to level** -- i.e. when consecutive levels are no longer related by the cube-root law
+`e(theta_(n+1,d))^3 = e(theta_(n,d))` of section 4c. So the Collatz-specific `0.4%` per level extra cancellation
+is produced by the exact cross-level relation between the digits of `u 3^-n` and `u 3^-(n+1)` (the carry
+automaton of `x -> 3x` linking consecutive levels), not by the digit strings themselves (E6) and not by their
+fluctuations (E5e). The `q`-th-root couplings for `q >= 5` produce no excess (section 4f). Why the cube root in
+particular interacts with the geometric weights `2^-a` while higher roots do not is OPEN; the ensemble
+experiment `collatz_fixed_frequency_ensemble_rms_20261004.py` (sixteen units, `q = 3` and `5`) tests whether the
+excess is a mean-square anticorrelation or a Jensen effect (results in 4h).
 
 ### 4e. The web around the cold rate (connections found by the niche search; all typed)
 

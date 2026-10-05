@@ -1,0 +1,7 @@
+hybrid towers for q = 3, N=1500, A=40; rates over 300..1500 (reference: real 0.5700 +- 0.0009, i.i.d. 0.5723 +- 0.0008)
+  mode A K= 20 (real above K, iid below): rates u=1,5,7: 0.5689 0.5705 0.5693  mean 0.5696   [104s]
+  mode A K=100 (real above K, iid below): rates u=1,5,7: 0.5701 0.5698 0.5692  mean 0.5697   [207s]
+  mode B K= 20 (iid above K, real below): rates u=1,5,7: 0.5721 0.5734 0.5728  mean 0.5727   [223s]
+  mode B K=100 (iid above K, real below): rates u=1,5,7: 0.5726 0.5730 0.5727  mean 0.5727   [248s]
+  mode C (every level a genuine 3^-n string, fresh random unit per level): rates: 0.5725 0.5735 0.5715  mean 0.5725   [350s]
+DONE
