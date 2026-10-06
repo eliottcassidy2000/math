@@ -1,0 +1,94 @@
+# Lyapunov symmetric-maximizer searches, six-seven session 2026-10-06 (FINITE-NUMERICAL)
+# (a) python3 sixseven_20261006_lyapunov_six.py kv | strip | search 7 1500 11 | search 6 1500 12
+kron identity check: 8.881784197001252e-16
+KV matrix: sigma_sym^2 = 1195.593985 < 1196 < sigma_skew^2 = 1196.025224; h = 1.8031e-04
+local maximum of h from KV: 7.3074e-03  (sigma_skew/sigma_sym = 1.007334)
+  delete coordinate 0: h(6x6) = -1.363e-02 -> local max -8.647e-05
+  delete coordinate 1: h(6x6) = -1.334e-02 -> local max -1.059e-04
+  delete coordinate 2: h(6x6) = -4.089e-02 -> local max -2.579e-08
+  delete coordinate 3: h(6x6) = -4.017e-02 -> local max -2.337e-05
+  delete coordinate 4: h(6x6) = -2.810e-02 -> local max -8.023e-05
+  delete coordinate 5: h(6x6) = -1.045e-02 -> local max -3.362e-07
+  delete coordinate 6: h(6x6) = -1.803e-02 -> local max -3.570e-05
+kron identity check: 6.661338147750939e-16
+m = 1.500e-01: 7x7 h = +7.0906e-03 | stripped 6x6 h = -2.7353e-02, best 6x6 local max = -1.2225e-05
+m = 1.286e-01: 7x7 h = +6.2535e-03 | stripped 6x6 h = -2.4000e-02, best 6x6 local max = -1.1170e-05
+m = 1.103e-01: 7x7 h = +5.3377e-03 | stripped 6x6 h = -2.0742e-02, best 6x6 local max = -1.9573e-05
+m = 9.453e-02: 7x7 h = +4.4540e-03 | stripped 6x6 h = -1.7700e-02, best 6x6 local max = -1.2551e-05
+m = 8.105e-02: 7x7 h = +3.6590e-03 | stripped 6x6 h = -1.4970e-02, best 6x6 local max = -1.5406e-06
+m = 6.949e-02: 7x7 h = +2.9727e-03 | stripped 6x6 h = -1.2575e-02, best 6x6 local max = -9.6764e-06
+m = 5.958e-02: 7x7 h = +2.3952e-03 | stripped 6x6 h = -1.0485e-02, best 6x6 local max = -1.4730e-05
+m = 5.108e-02: 7x7 h = +1.9177e-03 | stripped 6x6 h = -8.6585e-03, best 6x6 local max = -4.9757e-06
+m = 4.379e-02: 7x7 h = +1.5282e-03 | stripped 6x6 h = -7.0602e-03, best 6x6 local max = -1.0653e-05
+m = 3.755e-02: 7x7 h = +1.2137e-03 | stripped 6x6 h = -5.6737e-03, best 6x6 local max = -9.8279e-06
+m = 3.219e-02: 7x7 h = +9.6177e-04 | stripped 6x6 h = -4.5082e-03, best 6x6 local max = -9.6205e-06
+m = 2.760e-02: 7x7 h = +7.6129e-04 | stripped 6x6 h = -3.5169e-03, best 6x6 local max = -3.1805e-06
+m = 2.366e-02: 7x7 h = +6.0241e-04 | stripped 6x6 h = -2.7291e-03, best 6x6 local max = -4.1507e-06
+m = 2.029e-02: 7x7 h = +4.7683e-04 | stripped 6x6 h = -2.1098e-03, best 6x6 local max = -1.9375e-06
+m = 1.739e-02: 7x7 h = +3.7770e-04 | stripped 6x6 h = -1.6272e-03, best 6x6 local max = -7.7092e-06
+m = 1.491e-02: 7x7 h = +2.9947e-04 | stripped 6x6 h = -1.2568e-03, best 6x6 local max = -2.2073e-05
+m = 1.278e-02: 7x7 h = +2.3773e-04 | stripped 6x6 h = -9.6826e-04, best 6x6 local max = -1.3368e-05
+m = 1.096e-02: 7x7 h = +1.8894e-04 | stripped 6x6 h = -7.4999e-04, best 6x6 local max = -1.4440e-05
+m = 9.398e-03: 7x7 h = +1.5037e-04 | stripped 6x6 h = -5.8555e-04, best 6x6 local max = -8.0988e-06
+m = 8.057e-03: 7x7 h = +1.1982e-04 | stripped 6x6 h = -4.5507e-04, best 6x6 local max = -1.9915e-05
+m = 6.908e-03: 7x7 h = +9.5596e-05 | stripped 6x6 h = -3.5823e-04, best 6x6 local max = -9.6449e-06
+m = 5.922e-03: 7x7 h = +7.6354e-05 | stripped 6x6 h = -2.8365e-04, best 6x6 local max = -4.0482e-06
+m = 5.078e-03: 7x7 h = +6.1068e-05 | stripped 6x6 h = -2.2090e-04, best 6x6 local max = -3.3623e-06
+m = 4.353e-03: 7x7 h = +4.8889e-05 | stripped 6x6 h = -1.7176e-04, best 6x6 local max = -3.9038e-06
+m = 3.732e-03: 7x7 h = +3.9181e-05 | stripped 6x6 h = -1.3843e-04, best 6x6 local max = -2.7497e-06
+m = 3.200e-03: 7x7 h = +2.4827e-08 | stripped 6x6 h = -6.1803e-05, best 6x6 local max = -1.3297e-06
+branch fit for m < 0.02: h ~ 0.146 * m^1.472;  best 6x6 value reached: -1.3297e-06
+kron identity check: 4.440892098500626e-16
+search n=7 seed=11: 1500 structured starts, best h = -7.2590e-11 (66s)
+kron identity check: 4.440892098500626e-16
+search n=6 seed=12: 1500 structured starts, best h = -2.0404e-10 (51s)
+
+# (b) long structured-start L-BFGS runs (earlier scratch version of mode 'search', same generator; seeds 1, 2 at n = 6 and 9 at n = 7, budgets 1200 s / 600 s)
+n=6 seed=1: 30883 structured starts, best log-ratio -1.1600e-12
+  best by layer pattern: [((1, 2, 3), '-1.16e-12'), ((1, 2, 1, 2), '-4.52e-12'), ((1, 3, 1, 1), '-9.85e-12'), ((1, 1, 1, 3), '-1.74e-11'), ((3, 1, 2), '-5.97e-11')]
+n=6 seed=2: 30807 structured starts, best log-ratio -3.7837e-11
+  best by layer pattern: [((1, 1, 1, 3), '-3.78e-11'), ((2, 3, 1), '-4.00e-11'), ((1, 1, 3, 1), '-5.17e-11'), ((3, 1, 1, 1), '-7.35e-11'), ((3, 2, 1), '-9.14e-11')]
+n=7 seed=9: 11345 structured starts, best log-ratio -2.0610e-11
+  best by layer pattern: [((1, 1, 4, 1), '-2.06e-11'), ((4, 2, 1), '-1.92e-10'), ((1, 6), '-2.02e-10'), ((1, 4, 1, 1), '-2.58e-10'), ((1, 3, 1, 2), '-2.64e-10')]
+
+# (c) Adam (KV recipe): python3 sixseven_20261006_lyapunov_adam.py n starts seed [iterations_per_phase] [lr]
+n=9 seed=1 it=800+800 lr=0.02: 9 Adam runs, 4 with gap > 1e-9; best gap 1.6533e-06 (ratio sigma_skew/sigma_sym - 1 = 1.897e-06); quantiles of best gap: [-1.53302697e-08  7.33085488e-07  1.56127038e-06]; 12s
+n=8 seed=2: 100 Adam runs, 25 with gap > 1e-9; best gap 5.8917e-03 (ratio sigma_skew/sigma_sym - 1 = 7.562e-03); quantiles of best gap: [-2.78342778e-07  6.75676244e-06  5.74793099e-03]; 81s
+n=7 seed=1 it=800+800 lr=0.02: 12 Adam runs, 0 with gap > 1e-9; best gap -4.5508e-08 (ratio sigma_skew/sigma_sym - 1 = -5.031e-08); quantiles of best gap: [-7.28044160e-07 -1.42923019e-07 -5.54594008e-08]; 8s
+n=7 seed=3: 400 Adam runs, 13 with gap > 1e-9; best gap 6.2038e-03 (ratio sigma_skew/sigma_sym - 1 = 7.719e-03); quantiles of best gap: [-7.02056194e-07 -4.21013558e-08  5.40316616e-03]; 228s
+n=7 seed=7 it=1600+1600 lr=0.05: 300 Adam runs, 4 with gap > 1e-9; best gap 6.1758e-03 (ratio sigma_skew/sigma_sym - 1 = 7.685e-03); quantiles of best gap: [-2.23637525e-08 -2.86543534e-09  7.08090012e-07]; 337s
+n=6 seed=4: 1500 Adam runs, 0 with gap > 1e-9; best gap 2.2204e-15 (ratio sigma_skew/sigma_sym - 1 = 2.445e-15); quantiles of best gap: [-2.08359316e-06 -5.90432301e-09 -9.31232869e-14]; 550s
+n=6 seed=5: 1500 Adam runs, 0 with gap > 1e-9; best gap 1.8874e-15 (ratio sigma_skew/sigma_sym - 1 = 2.057e-15); quantiles of best gap: [-2.18227225e-06 -3.28004982e-09 -1.28494992e-13]; 550s
+n=6 seed=6 it=1600+1600 lr=0.05: 1500 Adam runs, 0 with gap > 1e-9; best gap 2.8866e-15 (ratio sigma_skew/sigma_sym - 1 = 3.196e-15); quantiles of best gap: [-1.96407040e-08 -5.38097322e-10 -4.29656311e-15]; 1176s
+n=6 seed=8 it=800+800 lr=0.01: 1500 Adam runs, 0 with gap > 1e-9; best gap 1.2212e-15 (ratio sigma_skew/sigma_sym - 1 = 1.320e-15); quantiles of best gap: [-2.94712204e-05 -5.63638951e-07 -3.40849626e-11]; 581s
+
+# (d) rank-constrained Adam control (sixseven_20261006_lyapunov_adam_lowrank.py 7 5 200 21; 6 4 600 22; 6 5 600 23; A = U V^T): fails its own n = 7 control, so not counted
+n=7 rank<=5: 200 Adam runs, 0 with gap>1e-9, best gap -5.595e-09 (113s)
+n=6 rank<=4: 600 Adam runs, 0 with gap>1e-9, best gap -1.532e-14 (236s)
+n=6 rank<=5: 600 Adam runs, 0 with gap>1e-9, best gap -3.768e-09 (227s)
+
+# (e) singular-value profiles of order-7 counterexamples (sixseven_20261006_lyapunov_collect7.py 7 500 31 and 7 500 32)
+gap 1.019e-05  normalised singular values [1.    0.972 0.817 0.796 0.539 0.365 0.003]
+gap 2.191e-04  normalised singular values [1.    0.915 0.785 0.771 0.389 0.095 0.077]
+gap 1.094e-06  normalised singular values [1.    0.855 0.807 0.553 0.26  0.153 0.05 ]
+gap 5.358e-05  normalised singular values [1.    0.832 0.807 0.749 0.321 0.149 0.02 ]
+gap 4.874e-03  normalised singular values [1.    0.932 0.862 0.775 0.661 0.336 0.086]
+gap 7.198e-05  normalised singular values [1.    0.877 0.782 0.698 0.226 0.105 0.012]
+gap 4.525e-03  normalised singular values [1.    0.848 0.842 0.74  0.658 0.285 0.062]
+gap 2.172e-05  normalised singular values [1.    0.846 0.744 0.691 0.169 0.088 0.029]
+gap 6.205e-03  normalised singular values [1.    0.849 0.846 0.739 0.688 0.139 0.055]
+gap 6.096e-03  normalised singular values [1.    0.849 0.847 0.741 0.685 0.131 0.049]
+gap 1.712e-06  normalised singular values [1.    0.874 0.803 0.632 0.306 0.18  0.031]
+n=7 seed=31: 11 counterexamples in 500 runs
+median profile: [1.    0.855 0.807 0.74  0.389 0.149 0.049]  max of the two smallest: [0.365 0.086]
+gap 4.620e-05  normalised singular values [1.    0.862 0.817 0.726 0.29  0.155 0.019]
+gap 1.570e-04  normalised singular values [1.    0.888 0.827 0.602 0.404 0.09  0.031]
+gap 2.060e-08  normalised singular values [1.    0.852 0.803 0.544 0.433 0.111 0.033]
+gap 1.142e-08  normalised singular values [1.    0.871 0.719 0.45  0.292 0.082 0.039]
+gap 6.207e-03  normalised singular values [1.    0.847 0.844 0.738 0.693 0.137 0.044]
+gap 8.856e-07  normalised singular values [1.    0.899 0.89  0.665 0.519 0.287 0.185]
+gap 6.097e-03  normalised singular values [1.    0.858 0.854 0.74  0.653 0.144 0.102]
+gap 3.469e-04  normalised singular values [1.    0.925 0.816 0.776 0.509 0.158 0.09 ]
+gap 6.151e-03  normalised singular values [1.    0.85  0.849 0.741 0.685 0.161 0.057]
+n=7 seed=32: 9 counterexamples in 500 runs
+median profile: [1.    0.862 0.827 0.726 0.509 0.144 0.044]  max of the two smallest: [0.287 0.185]

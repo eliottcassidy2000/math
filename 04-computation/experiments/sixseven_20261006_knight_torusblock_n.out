@@ -1,0 +1,167 @@
+# Knight-torus tour-blocking census, N x N torus, N = 5..8 (sixseven_20261006_knight_torusblock_n.c)
+# build: cc -O2 -DN=<N> -o tb<N> sixseven_20261006_knight_torusblock_n.c ; run: ./tb<N> K 1000 <seed>
+# K = 6: every 6-set of moves through the fixed move e0 leaves a Hamiltonian cycle  => beta(N) >= 7 (edge-transitivity)
+# K = 7: every blocking 7-set through e0 is listed; 'vertex-isolating' = all but one move at a square (a star)
+
+=== N=5 K=6 pool=1000 seed=1
+5x5 torus knight graph: 25 vertices, 100 edges (8-regular). e0 = {0,7}
+initial pool: 1000 random Hamiltonian cycles
+TOTAL 6-sets containing e0 checked: 71523144
+finder calls 24, final pool 1024, BLOCKING sets 0 (vertex-isolating type 0), UNRESOLVED 0
+
+real	0m3.314s
+user	0m3.273s
+sys	0m0.008s
+=== N=5 K=7 pool=1000 seed=1
+5x5 torus knight graph: 25 vertices, 100 edges (8-regular). e0 = {0,7}
+initial pool: 1000 random Hamiltonian cycles
+BLOCKING (vertex-isolating) D = {0,7} {0,11} {0,22} {0,16} {0,8} {0,14} {0,23}
+BLOCKING (vertex-isolating) D = {0,7} {0,11} {0,22} {0,16} {0,8} {0,14} {0,19}
+BLOCKING (vertex-isolating) D = {0,7} {0,11} {0,22} {0,16} {0,8} {0,23} {0,19}
+BLOCKING (vertex-isolating) D = {0,7} {0,11} {0,22} {0,16} {0,14} {0,23} {0,19}
+BLOCKING (vertex-isolating) D = {0,7} {0,11} {0,22} {0,8} {0,14} {0,23} {0,19}
+BLOCKING (vertex-isolating) D = {0,7} {0,11} {0,16} {0,8} {0,14} {0,23} {0,19}
+BLOCKING (vertex-isolating) D = {0,7} {0,22} {0,16} {0,8} {0,14} {0,23} {0,19}
+BLOCKING (vertex-isolating) D = {0,7} {4,7} {7,14} {7,18} {7,23} {7,10} {7,16}
+BLOCKING (vertex-isolating) D = {0,7} {4,7} {7,14} {7,18} {7,23} {7,10} {7,21}
+BLOCKING (vertex-isolating) D = {0,7} {4,7} {7,14} {7,18} {7,23} {7,16} {7,21}
+BLOCKING (vertex-isolating) D = {0,7} {4,7} {7,14} {7,18} {7,10} {7,16} {7,21}
+BLOCKING (vertex-isolating) D = {0,7} {4,7} {7,14} {7,23} {7,10} {7,16} {7,21}
+BLOCKING (vertex-isolating) D = {0,7} {4,7} {7,18} {7,23} {7,10} {7,16} {7,21}
+BLOCKING (vertex-isolating) D = {0,7} {7,14} {7,18} {7,23} {7,10} {7,16} {7,21}
+TOTAL 7-sets containing e0 checked: 1120529256
+finder calls 88, final pool 1074, BLOCKING sets 14 (vertex-isolating type 14), UNRESOLVED 0
+
+real	0m51.481s
+user	0m51.004s
+sys	0m0.123s
+=== N=6 K=6 pool=1000 seed=1
+6x6 torus knight graph: 36 vertices, 144 edges (8-regular). e0 = {0,8}
+initial pool: 1000 random Hamiltonian cycles
+TOTAL 6-sets containing e0 checked: 464306843
+finder calls 2, final pool 1002, BLOCKING sets 0 (vertex-isolating type 0), UNRESOLVED 0
+
+real	0m17.072s
+user	0m16.927s
+sys	0m0.038s
+=== N=6 K=7 pool=1000 seed=1
+6x6 torus knight graph: 36 vertices, 144 edges (8-regular). e0 = {0,8}
+initial pool: 1000 random Hamiltonian cycles
+BLOCKING (vertex-isolating) D = {0,8} {0,13} {0,32} {0,25} {0,10} {0,17} {0,34}
+BLOCKING (vertex-isolating) D = {0,8} {0,13} {0,32} {0,25} {0,10} {0,17} {0,29}
+BLOCKING (vertex-isolating) D = {0,8} {0,13} {0,32} {0,25} {0,10} {0,34} {0,29}
+BLOCKING (vertex-isolating) D = {0,8} {0,13} {0,32} {0,25} {0,17} {0,34} {0,29}
+BLOCKING (vertex-isolating) D = {0,8} {0,13} {0,32} {0,10} {0,17} {0,34} {0,29}
+BLOCKING (vertex-isolating) D = {0,8} {0,13} {0,25} {0,10} {0,17} {0,34} {0,29}
+BLOCKING (vertex-isolating) D = {0,8} {0,32} {0,25} {0,10} {0,17} {0,34} {0,29}
+BLOCKING (vertex-isolating) D = {0,8} {4,8} {8,16} {8,21} {8,33} {8,12} {8,19}
+BLOCKING (vertex-isolating) D = {0,8} {4,8} {8,16} {8,21} {8,33} {8,12} {8,31}
+BLOCKING (vertex-isolating) D = {0,8} {4,8} {8,16} {8,21} {8,33} {8,19} {8,31}
+BLOCKING (vertex-isolating) D = {0,8} {4,8} {8,16} {8,21} {8,12} {8,19} {8,31}
+BLOCKING (vertex-isolating) D = {0,8} {4,8} {8,16} {8,33} {8,12} {8,19} {8,31}
+BLOCKING (vertex-isolating) D = {0,8} {4,8} {8,21} {8,33} {8,12} {8,19} {8,31}
+BLOCKING (vertex-isolating) D = {0,8} {8,16} {8,21} {8,33} {8,12} {8,19} {8,31}
+TOTAL 7-sets containing e0 checked: 10679057389
+finder calls 25, final pool 1011, BLOCKING sets 14 (vertex-isolating type 14), UNRESOLVED 0
+
+real	7m43.259s
+user	7m30.459s
+sys	0m1.661s
+=== N=7 K=6 pool=1000 seed=2
+7x7 torus knight graph: 49 vertices, 196 edges (8-regular). e0 = {0,9}
+initial pool: 1000 random Hamiltonian cycles
+TOTAL 6-sets containing e0 checked: 2231243664
+finder calls 0, final pool 1000, BLOCKING sets 0 (vertex-isolating type 0), UNRESOLVED 0
+
+real	1m11.361s
+user	1m9.455s
+sys	0m0.288s
+=== N=7 K=7 pool=1000 seed=3
+7x7 torus knight graph: 49 vertices, 196 edges (8-regular). e0 = {0,9}
+initial pool: 1000 random Hamiltonian cycles
+BLOCKING (vertex-isolating) D = {0,9} {0,15} {0,44} {0,36} {0,12} {0,20} {0,47}
+BLOCKING (vertex-isolating) D = {0,9} {0,15} {0,44} {0,36} {0,12} {0,20} {0,41}
+BLOCKING (vertex-isolating) D = {0,9} {0,15} {0,44} {0,36} {0,12} {0,47} {0,41}
+BLOCKING (vertex-isolating) D = {0,9} {0,15} {0,44} {0,36} {0,20} {0,47} {0,41}
+BLOCKING (vertex-isolating) D = {0,9} {0,15} {0,44} {0,12} {0,20} {0,47} {0,41}
+BLOCKING (vertex-isolating) D = {0,9} {0,15} {0,36} {0,12} {0,20} {0,47} {0,41}
+BLOCKING (vertex-isolating) D = {0,9} {0,44} {0,36} {0,12} {0,20} {0,47} {0,41}
+BLOCKING (vertex-isolating) D = {0,9} {4,9} {9,18} {9,24} {9,45} {9,14} {9,22}
+BLOCKING (vertex-isolating) D = {0,9} {4,9} {9,18} {9,24} {9,45} {9,14} {9,43}
+BLOCKING (vertex-isolating) D = {0,9} {4,9} {9,18} {9,24} {9,45} {9,22} {9,43}
+BLOCKING (vertex-isolating) D = {0,9} {4,9} {9,18} {9,24} {9,14} {9,22} {9,43}
+BLOCKING (vertex-isolating) D = {0,9} {4,9} {9,18} {9,45} {9,14} {9,22} {9,43}
+BLOCKING (vertex-isolating) D = {0,9} {4,9} {9,24} {9,45} {9,14} {9,22} {9,43}
+BLOCKING (vertex-isolating) D = {0,9} {9,18} {9,24} {9,45} {9,14} {9,22} {9,43}
+TOTAL 7-sets containing e0 checked: 70656049360
+finder calls 14, final pool 1000, BLOCKING sets 14 (vertex-isolating type 14), UNRESOLVED 0
+
+real	30m24.344s
+user	29m42.750s
+sys	0m5.896s
+=== N=8 K=6 pool=1000 seed=4
+8x8 torus knight graph: 64 vertices, 256 edges (8-regular). e0 = {0,10}
+initial pool: 1000 random Hamiltonian cycles
+TOTAL 6-sets containing e0 checked: 8637487551
+finder calls 0, final pool 1000, BLOCKING sets 0 (vertex-isolating type 0), UNRESOLVED 0
+
+real	3m59.467s
+user	3m47.930s
+sys	0m0.908s
+
+=== N=8 K=7 pool=1000 seed=5, part 0: second edge 1..23 (single run, stopped after edge 24 to split the rest; cumulative counts after edge 23 are the record)
+8x8 torus knight graph: 64 vertices, 256 edges (8-regular). e0 = {0,10}
+initial pool: 1000 random Hamiltonian cycles
+BLOCKING (vertex-isolating) D = {0,10} {0,17} {0,58} {0,49} {0,14} {0,23} {0,62}
+BLOCKING (vertex-isolating) D = {0,10} {0,17} {0,58} {0,49} {0,14} {0,23} {0,55}
+BLOCKING (vertex-isolating) D = {0,10} {0,17} {0,58} {0,49} {0,14} {0,62} {0,55}
+BLOCKING (vertex-isolating) D = {0,10} {0,17} {0,58} {0,49} {0,23} {0,62} {0,55}
+BLOCKING (vertex-isolating) D = {0,10} {0,17} {0,58} {0,14} {0,23} {0,62} {0,55}
+BLOCKING (vertex-isolating) D = {0,10} {0,17} {0,49} {0,14} {0,23} {0,62} {0,55}
+BLOCKING (vertex-isolating) D = {0,10} {0,58} {0,49} {0,14} {0,23} {0,62} {0,55}
+  first free edge  23 done: sets checked 156990902453, finder calls 8, pool 1001, blocking 7 (iso 7), unresolved 0
+=== N=8 K=7 pool=1000 seed=5, second-edge range [24, 35) (./tb8 7 1000 5 - lo hi)
+8x8 torus knight graph: 64 vertices, 256 edges (8-regular). e0 = {0,10}
+initial pool: 1000 random Hamiltonian cycles; second-edge range [24, 35)
+TOTAL 7-sets containing e0 checked: 51793247968
+finder calls 0, final pool 1000, BLOCKING sets 0 (vertex-isolating type 0), UNRESOLVED 0
+
+real	17m41.521s
+user	16m50.789s
+sys	0m4.217s
+=== N=8 K=7 pool=1000 seed=5, second-edge range [35, 50) (./tb8 7 1000 5 - lo hi)
+8x8 torus knight graph: 64 vertices, 256 edges (8-regular). e0 = {0,10}
+initial pool: 1000 random Hamiltonian cycles; second-edge range [35, 50)
+BLOCKING (vertex-isolating) D = {0,10} {4,10} {10,20} {10,27} {10,59} {10,16} {10,25}
+BLOCKING (vertex-isolating) D = {0,10} {4,10} {10,20} {10,27} {10,59} {10,16} {10,57}
+BLOCKING (vertex-isolating) D = {0,10} {4,10} {10,20} {10,27} {10,59} {10,25} {10,57}
+BLOCKING (vertex-isolating) D = {0,10} {4,10} {10,20} {10,27} {10,16} {10,25} {10,57}
+BLOCKING (vertex-isolating) D = {0,10} {4,10} {10,20} {10,59} {10,16} {10,25} {10,57}
+BLOCKING (vertex-isolating) D = {0,10} {4,10} {10,27} {10,59} {10,16} {10,25} {10,57}
+TOTAL 7-sets containing e0 checked: 52491795713
+finder calls 6, final pool 1000, BLOCKING sets 6 (vertex-isolating type 6), UNRESOLVED 0
+
+real	18m39.451s
+user	17m48.243s
+sys	0m4.369s
+=== N=8 K=7 pool=1000 seed=5, second-edge range [50, 72) (./tb8 7 1000 5 - lo hi)
+8x8 torus knight graph: 64 vertices, 256 edges (8-regular). e0 = {0,10}
+initial pool: 1000 random Hamiltonian cycles; second-edge range [50, 72)
+TOTAL 7-sets containing e0 checked: 48981638167
+finder calls 0, final pool 1000, BLOCKING sets 0 (vertex-isolating type 0), UNRESOLVED 0
+
+real	18m58.557s
+user	18m6.730s
+sys	0m4.450s
+=== N=8 K=7 pool=1000 seed=5, second-edge range [72, 256) (./tb8 7 1000 5 - lo hi)
+8x8 torus knight graph: 64 vertices, 256 edges (8-regular). e0 = {0,10}
+initial pool: 1000 random Hamiltonian cycles; second-edge range [72, 256)
+BLOCKING (vertex-isolating) D = {0,10} {10,20} {10,27} {10,59} {10,16} {10,25} {10,57}
+TOTAL 7-sets containing e0 checked: 49637730324
+finder calls 1, final pool 1000, BLOCKING sets 1 (vertex-isolating type 1), UNRESOLVED 0
+
+real	23m9.543s
+user	22m15.638s
+sys	0m5.075s
+
+N=8 K=7 total: 156990902453 + 51793247968 + 52491795713 + 48981638167 + 49637730324 = 359895314625 = C(255,6) sets through e0; BLOCKING 7 + 0 + 6 + 0 + 1 = 14, all vertex-isolating (stars at the two ends of e0); UNRESOLVED 0

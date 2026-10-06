@@ -1,0 +1,5 @@
+n=5: V=25 E=100; initial pool 1000 cycles
+  phase A done after 1 master solves: every 6-set containing e0 misses one of 1000 pool cycles => beta >= 7  (4s)
+  phase B done after 1 solves: no non-star 7-set containing e0 hits all 1000 pool cycles => the minimum blocking sets are exactly the stars (25*8 = 200 of them)  (124s)
+  pool re-verified: 1000 Hamiltonian cycles; exotic minima: 0
+exit 0

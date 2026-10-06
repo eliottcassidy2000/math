@@ -755,6 +755,15 @@ all heights (THM-1289, published), δ ineffective.
   `N <= 9`), PROVED whenever `hall <= 3` (`beta >= min(hall, 3)` by a merge count), random-verified to `N = 14`, and
   false for oriented graphs that are not tournaments.
   No LRC(14), Collatz or `H >= disc` consequence.
+- **Sixes and sevens (mac-mini, 2026-10-06; [note](../05-knowledge/results/sixes_and_sevens_20261006.md), THM-4552, THM-4553, HYP-9211).**
+  The owner's "6x6 knight torus: 7 deletions, only by stripping a square" holds on every torus tested (n = 5..8):
+  the 7 is the knight's Hall law `8 - 1` (HYP-9211). But 6 and 7 are the exceptional knight tori: `G_6 = C_4 x Paley(9)`
+  by CRT (mod-2 rook x mod-3 bishop; twin squares), `G_7` = knight = norm-5 coset of `mu_8` in `F_49` (non-squares),
+  queen = Paley(49), nightrider = its complement, the only order-8 rotation. One point-stripping ladder:
+  `PSL(2,7)` > Borel `= Aut(P_7)` > split torus `= Aut(P_7 - 0)` (THM-4524) = the Collatz Frobenius of the S15
+  nineteenth note; octonionic `J` at `e_0` = Fano matching `q -> 3q` (`QR_7 -> NQR_7`). Lean: `beta(P_7) = 6`,
+  63 minima in four Hall types. S6 manuscript: ANALOGY only. Lyapunov `n = 6` OPEN (stripping law along the KV branch).
+  No Collatz, LRC or Hopf consequence.
 
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`
 (ranks HN > reconstruction > Kakeya/Falconer > sunflower > Caccetta–Häggkvist > … ).

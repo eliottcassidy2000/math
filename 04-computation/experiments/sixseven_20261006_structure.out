@@ -1,0 +1,59 @@
+A. knight-torus automorphism groups (nauty)
+  n= 5  |Aut| =     28800  stabiliser of a square =    1152  twin classes = 0
+  n= 6  |Aut| =  37748736  stabiliser of a square = 1048576  twin classes = 18
+  n= 7  |Aut| =       784  stabiliser of a square =      16  twin classes = 0
+  n= 8  |Aut| =     32768  stabiliser of a square =     512  twin classes = 0
+  n= 9  |Aut| =       648  stabiliser of a square =       8  twin classes = 0
+  n=10  |Aut| =      1600  stabiliser of a square =      16  twin classes = 0
+  n=11  |Aut| =       968  stabiliser of a square =       8  twin classes = 0
+  n=12  |Aut| =      1152  stabiliser of a square =       8  twin classes = 0
+  n=13  |Aut| =      1352  stabiliser of a square =       8  twin classes = 0
+  n=14  |Aut| =      1568  stabiliser of a square =       8  twin classes = 0
+  ok   n=6: |Aut| = 2^18*144, 18 twin pairs
+  ok   n=7: vertex stabiliser of order 16 (generic n: 8)
+  ok   n = 9, 11, 12, 13, 14: stabiliser = D4 (order 8)
+  ok   n=5: |Aut| = 28800 = |S5 wr S2| (G_5 = K5 box K5)
+B. G_6 = C_4 x Paley(9)
+  ok   CRT map (i,j) -> ((i,j) mod 2, (i,j) mod 3) is an isomorphism G_6 -> C_4 x P_9
+  ok   knight set = S_2 x S_3 exactly (8 = 2 * 4): the mod-2 rook step times the mod-3 bishop step
+  ok   x and x + (3,3) have the same 8 neighbours (twins)
+  ok   Paley(9) = Cay(Z_3^2, {+-(1,1), +-(1,-1)}) = K3 box K3 (lines of slope 1 and -1)
+C. G_7 inside F_49 = F_7[i]
+  ok   knight moves = the 8 elements of norm 5
+  ok   norm-5 set = (1+2i) * mu_8, a coset of the norm-one torus mu_8
+  ok   every knight move is a non-square in F_49 (5 in NQR_7)
+  ok   nightrider steps = {N in NQR_7}
+  ok   queen steps = {N in QR_7} = squares of F_49*
+  ok   queen + nightrider partition the 48 nonzero steps (P^1(F_7) = 4 + 4 slopes)
+  ok   queen and nightrider torus graphs are srg(49,24,11,12) (Paley(49) and its complement)
+  ok   omega = 5+5i has order 8 and maps knight moves to knight moves (the 45-degree rotation)
+  linear stabiliser of the knight set (size, max element order), n = 5..26: {5: (32, 8), 6: (16, 4), 7: (16, 8), 8: (32, 4), 9: (8, 4), 10: (16, 4), 11: (8, 4), 12: (8, 4), 13: (8, 4), 14: (8, 4), 15: (8, 4), 16: (8, 4), 17: (8, 4), 18: (8, 4), 19: (8, 4), 20: (8, 4), 21: (8, 4), 22: (8, 4), 23: (8, 4), 24: (8, 4), 25: (8, 4), 26: (8, 4)}
+  ok   extra linear symmetries beyond D4 exactly at n = 5, 6, 7, 8, 10 (n <= 26)
+  ok   an order-8 linear symmetry (a '45-degree rotation') exists only at n = 5 (degenerate, K5 box K5) and n = 7 (omega in F_49)
+D. transversality of the four knight direction classes
+  ok   pairwise determinants of the knight directions are 3, 3, 4, 4, 5, 5; transversal iff gcd(n,30) = 1 (n = 5..60): 7 is the least n > 1
+E. the point-stripping ladder PSL(2,7) > Borel > torus
+  ok   PSL(2,7) acting on P^1(F_7): 168 permutations
+  ok   2-transitive on the 8 points (so it preserves no tournament)
+  ok   stabiliser of infinity = Aut(P_7) (order 21, x -> ax+b, a in QR_7)
+  ok   the Borel has exactly 2 orbitals on ordered pairs of F_7: the invariant tournaments are P_7 and its reverse
+  ok   stabiliser of 0 and infinity = Aut(P_7 - 0) = {x -> ax : a in QR_7} = <x -> 2x> (order 3): the split torus
+F. octonions from the Fano plane
+  ok   the Fano table e_x e_{x+1} = e_{x+3} defines an alternative algebra (octonions), 30 random exact tests
+  ok   J = left multiplication by e_0 on span(e_1..e_6): e_q -> e_{3q} for q in QR_7 (QR -> NQR along the 3 Fano lines through 0)
+  ok   x -> 2x permutes the 3 complex lines of T_{e_0} S^6 cyclically
+  ok   P_7 - 0: O = QR_7 and I = NQR_7 are cyclic triangles
+  ok   the only I -> O arcs are the antipodal arcs u -> -u
+G. Paley P_7: Hamiltonian-path blocking
+  beta(P_7) = 6 ; minimum blocking sets: 63 {'two sinks': 21, 'star': 7, 'two sources': 21, 'three vertices, one common out- or in-neighbour': 14}
+  ok   beta(P_7) = 6 = hall = N - 1; 63 minimum sets, all Hall obstructions: 7 stars, 21 + 21 two sources/sinks, 14 triples
+H. spectra: the 7x7 knight torus is the finite Euclidean graph E_7(5), a Kloosterman / Ramanujan graph
+  ok   Ramanujan knight tori (all nontrivial |lambda| <= 2 sqrt 7), n = 5..60: [5, 6, 7, 8, 10]
+  ok   for n >= 12 the character (1,0) alone gives 4cos(2pi/n) + 4cos(4pi/n) >= 2 + 2 sqrt 3 > 2 sqrt 7 (checked to 2000; monotone)
+  ok   every nontrivial eigenvalue of G_7 at the character (a1,a2) is -Kl_7(3 N(a)), Kl_7(c) = sum_x e((x + c/x)/7)
+  ok   Weil bound |Kl_7(c)| <= 2 sqrt 7 (max 4.4940): G_7 is Ramanujan because d - 1 = 7 = q
+  ok   among primes p <= 59 the knight set is the whole 'sphere' {x^2 + y^2 = 5} only for p = 7 (p + 1 = 8)
+I. the modular-curve reading of the ladder (PARI/GP)
+  ok   49a1: conductor 49, j = -3375 (CM by Q(sqrt(-7))); genus X_0(49) = 1, genus X_0(7) = 0
+  ok   primes splitting in Q(sqrt(-7)) are 1, 2, 4 mod 7 = QR_7 = the trivial cycle's code
+ALL CHECKS PASSED
