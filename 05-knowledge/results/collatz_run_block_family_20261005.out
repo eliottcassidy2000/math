@@ -1,0 +1,79 @@
+{
+  "bounded_generation": {
+    "group": 0,
+    "levels": [
+      1,
+      8,
+      64,
+      512
+    ],
+    "max_bits": 364,
+    "runs": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "sources": 585
+  },
+  "checks": 6390,
+  "hostiles": 10,
+  "measurement_controls": [
+    {
+      "degree": 14,
+      "expense_ceiling": 0,
+      "leaf": 3,
+      "leaf_floor_denominator_bits": 5,
+      "odd_step_deadline": 1,
+      "source": 5
+    },
+    {
+      "degree": 26,
+      "expense_ceiling": 5,
+      "leaf": 15,
+      "leaf_floor_denominator_bits": 13,
+      "odd_step_deadline": 6,
+      "source": 23
+    },
+    {
+      "degree": 30,
+      "expense_ceiling": 7,
+      "leaf": 93,
+      "leaf_floor_denominator_bits": 16,
+      "odd_step_deadline": 8,
+      "source": 35
+    },
+    {
+      "degree": 56,
+      "expense_ceiling": 18,
+      "leaf": 15765,
+      "leaf_floor_denominator_bits": 32,
+      "odd_step_deadline": 19,
+      "source": 739
+    },
+    {
+      "degree": 1138,
+      "expense_ceiling": 522,
+      "leaf": 15779026855945504772370269461081448222339069437975277903892373625493,
+      "leaf_floor_denominator_bits": 729,
+      "odd_step_deadline": 523,
+      "source": 739641883872445536204856380988192885422143879905091151744955013695
+    }
+  ],
+  "old_hybrid_inclusion_controls": 341,
+  "phase_controls": 168,
+  "scope": "Unbounded run and exponent grammar with explicit floors; universal entry remains OPEN.",
+  "weaker_guard_hostile": {
+    "block_length": 3,
+    "expense": 2,
+    "height_ratio": "27/23",
+    "parent": 47,
+    "scope": "A paid block outside the strong grammar, not an unrooted source.",
+    "source": 55,
+    "word": [
+      1,
+      1,
+      3
+    ]
+  }
+}

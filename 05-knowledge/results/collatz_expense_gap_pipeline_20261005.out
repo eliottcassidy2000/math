@@ -1,0 +1,82 @@
+{
+  "checks": 49,
+  "plans": [
+    {
+      "atom_floor": "1/30",
+      "conditional_moment_width": "1/61440",
+      "conditional_noisy_readout_lower": "1/60",
+      "expense_ceiling": 0,
+      "leaf": 3,
+      "moment_values_consumed": 0,
+      "odd_step_deadline": 1,
+      "original_selector_polynomial_degree": 15,
+      "polynomial_degree": 7,
+      "simple_exact_readout_lower": "1/40",
+      "source": 5,
+      "source_index": 0,
+      "status": "proved_on_run_family",
+      "supplied_ROOT_words_consumed": 0,
+      "uniform_selector_error": "4398046511104/6104260178955225"
+    },
+    {
+      "atom_floor": "1/5148",
+      "conditional_moment_width": "1/10543104",
+      "conditional_noisy_readout_lower": "1/10296",
+      "expense_ceiling": 5,
+      "leaf": 15,
+      "moment_values_consumed": 0,
+      "odd_step_deadline": 6,
+      "original_selector_polynomial_degree": 27,
+      "polynomial_degree": 9,
+      "simple_exact_readout_lower": "1/6864",
+      "source": 23,
+      "source_index": 2,
+      "status": "proved_on_run_family",
+      "supplied_ROOT_words_consumed": 0,
+      "uniform_selector_error": "9223372036854775808/103646632705337599152305625"
+    },
+    {
+      "atom_floor": "1/40040",
+      "conditional_moment_width": "1/82001920",
+      "conditional_noisy_readout_lower": "1/80080",
+      "expense_ceiling": 7,
+      "leaf": 93,
+      "moment_values_consumed": 0,
+      "odd_step_deadline": 8,
+      "original_selector_polynomial_degree": 31,
+      "polynomial_degree": 9,
+      "simple_exact_readout_lower": "3/160160",
+      "source": 35,
+      "source_index": 15,
+      "status": "proved_on_run_family",
+      "supplied_ROOT_words_consumed": 0,
+      "uniform_selector_error": "9223372036854775808/103646632705337599152305625"
+    },
+    {
+      "atom_floor": "1/3725581860",
+      "conditional_moment_width": "1/7629991649280",
+      "conditional_noisy_readout_lower": "1/7451163720",
+      "expense_ceiling": 18,
+      "leaf": 15765,
+      "moment_values_consumed": 0,
+      "odd_step_deadline": 19,
+      "original_selector_polynomial_degree": 57,
+      "polynomial_degree": 11,
+      "simple_exact_readout_lower": "1/4967442480",
+      "source": 739,
+      "source_index": 2627,
+      "status": "proved_on_run_family",
+      "supplied_ROOT_words_consumed": 0,
+      "uniform_selector_error": "309485009821345068724781056/454508646885086620359404413873334705625"
+    },
+    {
+      "source": 7,
+      "status": "unresolved_by_this_family"
+    },
+    {
+      "source": 27,
+      "status": "unresolved_by_this_family"
+    }
+  ],
+  "scope": "Family theorem supplies the atom floor; arithmetic support supplies the selector. Universal coverage remains OPEN."
+}

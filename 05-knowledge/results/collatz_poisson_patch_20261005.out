@@ -1,0 +1,72 @@
+{
+  "actual_parent_closed_controls": [
+    {
+      "root_floor": "1/4",
+      "source": 3,
+      "vertices": 2
+    },
+    {
+      "root_floor": "1/64",
+      "source": 7,
+      "vertices": 5
+    },
+    {
+      "root_floor": "1/32",
+      "source": 11,
+      "vertices": 4
+    },
+    {
+      "root_floor": "1/16",
+      "source": 17,
+      "vertices": 3
+    },
+    {
+      "root_floor": "1/281474976710656",
+      "source": 27,
+      "vertices": 41
+    },
+    {
+      "root_floor": "1/70368744177664",
+      "source": 31,
+      "vertices": 39
+    },
+    {
+      "root_floor": "1/35184372088832",
+      "source": 47,
+      "vertices": 38
+    },
+    {
+      "root_floor": "1/140737488355328",
+      "source": 63,
+      "vertices": 39
+    },
+    {
+      "root_floor": "1/70368744177664",
+      "source": 95,
+      "vertices": 38
+    },
+    {
+      "root_floor": "1/1048576",
+      "source": 127,
+      "vertices": 15
+    }
+  ],
+  "checks": 16926,
+  "coverage": "No new Collatz ROOT coverage or global positivity claim.",
+  "localized_error_prices_at_1_11_7": [
+    "1",
+    "1/32",
+    "1/64"
+  ],
+  "signed_margin_7_minus_3_over_32": "1/128",
+  "status": "FINITE-EXACT controls; global claims proved in note",
+  "synthetic_infinite_patch_readout": "1/6",
+  "universe": {
+    "actual_sources": 10,
+    "all_binary_quarter_kernels_3x3": 512,
+    "exact_lumpings": 114,
+    "functional_tree_partitions": 1350,
+    "nested_patches": 128,
+    "patches": 2048
+  }
+}

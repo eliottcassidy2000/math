@@ -1,0 +1,43 @@
+{
+  "boundary_hostile": {
+    "boundary": "1",
+    "critical_weight": "2^j",
+    "scope": "Dropping the strict growth/tail hypothesis gives the false readout1<=0.",
+    "subcritical_weight": "(3/2)^j",
+    "weighted_contraction": "3/4"
+  },
+  "checks": 16037,
+  "constants": {
+    "log_contraction": "641/686",
+    "log_normalized_mass_bound": "686/45",
+    "log_weight": "(25+bitlength(3b+1))/28",
+    "phase_additive_costs": [
+      "95/49",
+      "106/49",
+      "93/49"
+    ],
+    "polynomial_contraction": "3280/3367",
+    "polynomial_exponent": "1/12",
+    "polynomial_normalized_mass_bound": "3367/87"
+  },
+  "finite_rows": {
+    "bases_below_512": 192,
+    "largest_certified_log_upper": "14915459/16252928",
+    "largest_certified_poly_upper": "2638836379799213421420362374121/2772985687999251815774038261760",
+    "sibling_cut": 24
+  },
+  "growth_hostiles": {
+    "half_power": "infinite row sum diverges; terms do not tend to zero",
+    "quarter_power_parent": 25,
+    "quarter_power_partial_row_lower": "11895746614128583/9007199254740992"
+  },
+  "status": "PROVED operator/dual domain; FINITE-EXACT controls; all-source positivity OPEN",
+  "unbounded_positive_control": {
+    "actual_g3": "1/4",
+    "function": "path_packet_3 - V_log/8",
+    "implied_g3_lower": "1/8",
+    "root_value": "1/8",
+    "scope": "A strictly larger witness class, not a new convergence basin.",
+    "target": 3
+  }
+}
