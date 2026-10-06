@@ -1,0 +1,104 @@
+==============================================================================
+P1. n = 2 (threshold 1/3).  THEOREM: for coprime 1 <= a < b,
+      tau(a,b) = min{ t >= 1/(3a) : ||t b|| >= 1/3 }  and  1/(3a) <= tau(a,b) <= 2/(3a);
+    tau(1,b) = 1/3 if 3 does not divide b, tau(1,3k) = 1/3 + 1/(9k).  Hence max tau = 4/9,
+    attained ONLY at (1,3), and tau > 1/3 iff v = (1,3k).
+    PROOF.  Safe(a) = U_m [(m+1/3)/a, (m+2/3)/a]; its first interval is
+    I0 = [1/(3a), 2/(3a)], so tau >= 1/(3a).  The danger set of b is a union of OPEN
+    intervals of length 2/(3b) separated by safe closed intervals.  If b <= 2a then
+    1/(3a) <= 2/(3b), i.e. 1/(3a) lies in b's first safe interval [1/(3b), 2/(3b)],
+    so tau = 1/(3a).  If b > 2a then |I0| = 1/(3a) > 2/(3b), so the closed interval I0
+    cannot sit inside one open danger interval of b: I0 contains a safe point of b and
+    tau is the first one, <= 2/(3a).  For a >= 2 this gives tau <= 1/3.  For a = 1,
+    I0 = [1/3, 2/3]; t = 1/3 is safe for b iff 3 does not divide b (||b/3|| = 1/3);
+    if b = 3k the next safe point of b is (k + 1/3)/(3k) = 1/3 + 1/(9k) <= 4/9 < 2/3,
+    with equality iff k = 1.  QED.
+    For vmin = a >= 3: tau <= 2/(3a) <= 2/9.  For a = 2 (b odd >= 5): tau <= 1/6 + 2/(3b),
+    which is <= 11/42 < 4/15 for b >= 7, and tau(2,5) = 4/15.  So max over vmin >= 2 is
+    4/15, only at (2,5).
+    exact check over all 48677 coprime pairs with b <= 400: closed form OK, tau in [1/(3a), 2/(3a)] OK,
+    the 133 pairs with tau > 1/3 are exactly (1,3k), tau = 1/3 + 1/(9k) OK; max over a >= 2 = 4/15 at (2, 5) OK.
+
+==============================================================================
+P2. n = 3 (threshold 1/4), triples containing 1:  max tau(1,b,w) = 7/16, ONLY at (1,3,12).
+    Inputs (exact): Safe_{1/4}(1,b) cap [0,1/2] for b = 2..7:
+      b=2: [1/4,3/8]
+      b=3: {1/4}, [5/12,7/12]
+      b=4: [5/16,7/16]
+      b=5: [1/4,7/20], [9/20,11/20]
+      b=6: [1/4,7/24], [3/8,11/24]
+      b=7: {1/4}, [9/28,11/28], [13/28,15/28]
+    PROOF (w > b throughout; danger set of w = open intervals of length 1/(2w)).
+    A closed interval J inside Safe(1,b) with |J| >= 1/(2w) contains a safe point of w.
+    b = 2: J = [1/4,3/8], |J| = 1/8 >= 1/(2w) for w >= 4, so tau <= 3/8; (1,2,3): tau = 1/4.
+    b = 3: Safe(1,3) = {1/4} u [5/12,1/2].  4 does not divide w: tau = 1/4.  w = 4m,
+           3 does not divide m: ||5w/12|| = 1/3, tau = 5/12.  w = 12k: 5/12 is killed and
+           the next safe point of w is (5k+1/4)/(12k) = 5/12 + 1/(48k) <= 7/16, equality iff k=1.
+    b = 4: J = [5/16,7/16]; if [5/16,7/16) had no safe point of w it would lie in one
+           danger interval, forcing 1/8 <= 1/(2w), w <= 4: impossible.  So tau < 7/16.
+    b = 5: J = [1/4,7/20], |J| = 1/10 >= 1/(2w) (w >= 6): tau <= 7/20.
+    b = 6: J = [1/4,7/24], |J| = 1/24 >= 1/(2w) for w >= 12: tau <= 7/24; w = 7..11 below.
+    b = 7: J = [9/28,11/28], |J| = 1/14 > 1/(2w) (w >= 8): tau <= 11/28.
+    b >= 8: [1/4, 7/16) has length 3/16 >= 3/(2b), so it contains a full safe interval of b,
+           of length 1/(2b) > 1/(2w), hence a safe point of w: tau < 7/16.   QED (with the
+           finite residue below).
+    finite residue tau(1,6,w), w = 7..11: 7: 1/4, 8: 9/32, 9: 1/4, 10: 1/4, 11: 1/4
+    family check tau(1,3,w) in {1/4, 5/12, 5/12 + 1/(48k)} exactly as stated, w = 4..3000: OK
+
+==============================================================================
+P3. Family F_N = {1,3,4,...,N} = AP{1..N} minus {2} (n = N-1 speeds, threshold 1/N).
+    THEOREM.  For N >= 4, Safe(F_N) cap (0,1/2] = [tau_N, 1/2 - 1/(4N)] with
+       tau_N = 1/2 - (N-2)/(2N k_o),  k_o = N (N odd), N-1 (N even);  for N = 3 the component is [4/9, 5/9].
+    i.e. tau_N = 1/2 - 1/(2N) + 1/N^2 (N odd),  1/2 - 1/(2N) + 1/(2N(N-1)) (N even).
+    PROOF.  (i) The AP {1..N-1} is tight with Safe = {a/N}: if ||kt|| >= 1/N for k <= N-1,
+    the N points 0,t,..,(N-1)t are pairwise >= 1/N apart on a circle of length 1, hence
+    equally spaced, hence t in (1/N)Z.  (ii) So if t is safe for F_N and ||2t|| >= 1/N then
+    t = a/N, but then ||N t|| = 0: contradiction.  Hence every safe t has ||2t|| < 1/N, and
+    with t >= 1/N (speed 1) this leaves t = 1/2 - s, 0 <= s < 1/(2N).  (iii) There, for k <= N,
+    ks < 1/2, so odd k gives ||kt|| = 1/2 - ks >= 1/N iff s <= (N-2)/(2Nk) (binding at k_o),
+    and even k gives ||kt|| = ks >= 1/N iff s >= 1/(Nk) (binding at k = 4).  QED
+    COROLLARY.  For every n >= 2:  sup over n-sets of tau >= tau_{n+1} = 1/2 - 1/(2(n+1)) + O(1/n^2),
+    so the first lonely time can be pushed to 1/2 - O(1/n).
+    exact check N = 3..40 (Safe cap (0,1/2] equals the stated interval): OK
+    tau_N for N = 3..12: 3:4/9, 4:5/12, 5:11/25, 6:13/30, 7:22/49, 8:25/56, 9:37/81, 10:41/90, 11:56/121, 12:61/132
+
+==============================================================================
+P4. Kill-and-replace lemma.  If T is tight with Safe(T) in (1/N)Z (N = |T|+1), s in T and
+    m = kN is not in T, then every safe t of v = (T - {s}) + {m} has ||s t|| < 1/N.
+    PROOF: otherwise t is safe for T, so t in (1/N)Z and ||m t|| = 0.  QED
+    exact check: 524 triples (T, s, m) from the 11 tight sets, m = kN <= 60: OK
+    (checked as: Safe_{1/N}(v + {s}) is empty, while Safe(v) is nonempty)
+
+==============================================================================
+P5. Families met in the census (exact checks):
+    tau(1,3,12k) = 5/12 + 1/(48k), k = 1..200: OK (proved in P2)
+    Safe_(1/5)(1,3,4) cap [0,1/2] = {1/5}, [2/5,9/20]
+    tau(1,3,4,5k) = 2/5 + 1/(25k), k = 1..200: OK  [5k kills 1/5 and 2/5 (multiples of 1/5);
+     the next safe point of 5k after 2/5 is (2k+1/5)/(5k) = 2/5 + 1/(25k), inside [2/5,9/20]]
+
+==============================================================================
+P6. Good period q(v): two easy facts.
+    (a) q is UNBOUNDED for every n >= 2: if L = lcm(1..Q) is a speed, every t = k/q with
+        q <= Q has ||L t|| = 0, so q(v) > Q (e.g. v = (1, L) is primitive).
+    (b) q(v) <= 2 vmax whenever LRC holds for v: delta is attained at some t* = m/(v_i+v_j)
+        (A1), f(t*) = delta >= 1/(n+1), so t* is a good time with denominator <= v_i+v_j <= 2vmax.
+    (c) den(tau) >= q(v) always (tau is itself a good time).
+    (a) exact: Q=2: q(1,2)=3; Q=3: q(1,6)=5; Q=4: q(1,12)=8; Q=5: q(1,60)=8; Q=6: q(1,60)=8; Q=7: q(1,420)=8; Q=8: q(1,840)=9; Q=9: q(1,2520)=11; Q=10: q(1,2520)=11; Q=11: q(1,27720)=13; Q=12: q(1,27720)=13
+    (b) exact check q(v) <= 2 vmax on the required universes: OK; max q/vmax: n=2: 5/3 at (2, 3) (q=5); n=3: 7/4 at (1, 3, 4) (q=7); n=4: 9/5 at (1, 3, 4, 5) (q=9); n=5: 5/3 at (1, 2, 4, 5, 6) (q=10)
+
+==============================================================================
+P7. Independent re-computation of the headline tau values by two other methods
+    (brute grid 1/((n+1) lcm v) and the fixed-point chase):
+    tau(1, 3) = 4/9  (sweep = brute = chase)
+    tau(1, 3, 12) = 7/16  (sweep = brute = chase)
+    tau(1, 3, 4, 5) = 11/25  (sweep = brute = chase)
+    tau(1, 3, 5, 8) = 11/25  (sweep = brute = chase)
+    tau(1, 5, 6, 7, 8) = 19/42  (sweep = brute = chase)
+    tau(1, 3, 4, 5, 30) = 79/180  (sweep = brute = chase)
+    tau(1, 3, 4, 5, 7, 18) = 19/42  (sweep = brute = chase)
+    tau(1, 3, 4, 5, 6, 7) = 22/49  (sweep = brute = chase)
+    tau(1, 5, 6, 7, 8, 11, 13) = 49/104  (sweep = brute = chase)
+    tau(2, 5) = 4/15  (sweep = brute = chase)
+    tau(2, 5, 8) = 9/32  (sweep = brute = chase)
+
+Total time 10.3s

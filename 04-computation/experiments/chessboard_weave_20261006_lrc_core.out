@@ -1,0 +1,6 @@
+chessboard_weave_20261006_lrc_core self-test (exact arithmetic)
+[1] simplest_in == brute least-denominator on 20000 random closed intervals: OK
+[2] delta(candidates m/(v_i+v_j), i<=j) == delta_brute on 1842 sets (all n-subsets of [1,B], n=1..5, B=25,25,16,12,11); brute mode counts {'lattice': 817, 'union': 1025}: OK
+[3] tau(sweep) == tau(brute grid 1/((n+1)lcm)) == tau(chase) on 1863 sets (all n-subsets of [1,B], n=1..5, B=30,30,18,11,10): OK
+[4] good_period(Stern-Brocot on components) == brute k/q search on 5941 sets (all n-subsets of [1,B], n=1..5, B=30,40,24,16,13): OK
+self-test PASSED

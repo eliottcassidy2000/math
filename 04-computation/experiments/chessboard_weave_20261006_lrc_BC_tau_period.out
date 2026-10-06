@@ -1,0 +1,255 @@
+B. FIRST LONELY TIME tau(v)   /   C. GOOD PERIOD q(v)
+   universes = all primitive n-subsets of {1..B}; exact arithmetic
+
+==============================================================================
+[required] n = 2, max speed <= 200: 12231 primitive sets (1.4s); threshold 1/3
+  checks passed: Safe nonempty (LRC) for all; 0 < tau < 1/2 for all; tau >= 1/(N*vmin) for all
+  tau == 1/(N*vmin) ('lonely at first chance'): 7459 of 12231
+  MAX tau = 4/9 = 0.444444; extremizers: [(1, 3)]
+  top 10 values of tau:
+          4/9 = 0.444444  [1 sets; stored 1: contain 1: 1, contain a multiple of 3: 1]  (1, 3)
+         7/18 = 0.388889  [1 sets; stored 1: contain 1: 1, contain a multiple of 3: 1]  (1, 6)
+        10/27 = 0.370370  [1 sets; stored 1: contain 1: 1, contain a multiple of 3: 1]  (1, 9)
+        13/36 = 0.361111  [1 sets; stored 1: contain 1: 1, contain a multiple of 3: 1]  (1, 12)
+        16/45 = 0.355556  [1 sets; stored 1: contain 1: 1, contain a multiple of 3: 1]  (1, 15)
+        19/54 = 0.351852  [1 sets; stored 1: contain 1: 1, contain a multiple of 3: 1]  (1, 18)
+        22/63 = 0.349206  [1 sets; stored 1: contain 1: 1, contain a multiple of 3: 1]  (1, 21)
+        25/72 = 0.347222  [1 sets; stored 1: contain 1: 1, contain a multiple of 3: 1]  (1, 24)
+        28/81 = 0.345679  [1 sets; stored 1: contain 1: 1, contain a multiple of 3: 1]  (1, 27)
+        31/90 = 0.344444  [1 sets; stored 1: contain 1: 1, contain a multiple of 3: 1]  (1, 30)
+  max tau over sets with vmin >= 2: 4/15 = 0.266667 at (2, 5)
+  C: q(v) histogram: {2: 4075, 3: 4101, 5: 1344, 6: 1353, 7: 353, 8: 250, 9: 511, 10: 67, 11: 88, 12: 73, 13: 6, 14: 7, 15: 3}
+  C: MAX q = 15 at (1, 72), (144, 163), (144, 187)
+     q = 14: (13, 144), (72, 91), (72, 179), (72, 199), (83, 144), (97, 144), ... (7 sets)
+     q = 13: (11, 72), (41, 72), (72, 109), (72, 151), (77, 144), (127, 144)
+     q = 12: (1, 198), (7, 90), (11, 90), (11, 162), (13, 54), (17, 54), ... (73 sets)
+  C: running max q by max speed: B=10:9, B=20:12, B=30:12, B=50:12, B=100:15, B=150:15, B=200:15
+  C: denominator of tau vs q(v): {'den(tau) == q': 87, 'den(tau) > q': 12144} (den(tau) < q is impossible: tau is in Safe)
+
+==============================================================================
+[required] n = 3, max speed <= 60: 28876 primitive sets (1.8s); threshold 1/4
+  checks passed: Safe nonempty (LRC) for all; 0 < tau < 1/2 for all; tau >= 1/(N*vmin) for all
+  tau == 1/(N*vmin) ('lonely at first chance'): 17192 of 28876
+  MAX tau = 7/16 = 0.437500; extremizers: [(1, 3, 12)]
+  top 10 values of tau:
+         7/16 = 0.437500  [1 sets; stored 1: contain 1: 1, contain a multiple of 4: 1]  (1, 3, 12)
+        41/96 = 0.427083  [1 sets; stored 1: contain 1: 1, contain a multiple of 4: 1]  (1, 3, 24)
+       61/144 = 0.423611  [1 sets; stored 1: contain 1: 1, contain a multiple of 4: 1]  (1, 3, 36)
+        27/64 = 0.421875  [1 sets; stored 1: contain 1: 1, contain a multiple of 4: 1]  (1, 3, 48)
+      101/240 = 0.420833  [1 sets; stored 1: contain 1: 1, contain a multiple of 4: 1]  (1, 3, 60)
+         5/12 = 0.416667  [10 sets; stored 10: contain 1: 10, contain a multiple of 4: 10]  (1, 3, 4), (1, 3, 8), (1, 3, 16), (1, 3, 20), (1, 3, 28), (1, 3, 32), (1, 3, 40), (1, 3, 44), ... (10 sets)
+          3/8 = 0.375000  [1 sets; stored 1: contain 1: 1, contain a multiple of 4: 1]  (1, 4, 6)
+        13/36 = 0.361111  [1 sets; stored 1: contain 1: 1, contain a multiple of 4: 1]  (1, 4, 9)
+        17/48 = 0.354167  [1 sets; stored 1: contain 1: 1, contain a multiple of 4: 1]  (1, 7, 12)
+       53/160 = 0.331250  [1 sets; stored 1: contain 1: 1, contain a multiple of 4: 1]  (1, 7, 40)
+  max tau over sets with vmin >= 2: 9/32 = 0.281250 at (2, 5, 8)
+  C: q(v) histogram: {2: 3915, 3: 7529, 4: 6486, 5: 1373, 6: 1660, 7: 4200, 8: 1455, 9: 845, 10: 477, 11: 599, 12: 201, 13: 75, 14: 37, 15: 11, 16: 10, 17: 2, 18: 1}
+  C: MAX q = 18 at (19, 24, 43)
+     q = 17: (11, 14, 48), (19, 24, 27)
+     q = 16: (7, 53, 60), (9, 29, 60), (11, 36, 47), (11, 49, 60), (12, 17, 29), (12, 37, 49), ... (10 sets)
+     q = 15: (1, 35, 36), (5, 7, 12), (5, 24, 29), (5, 48, 53), (7, 48, 55), (12, 13, 25), ... (11 sets)
+  C: running max q by max speed: B=10:11, B=20:15, B=30:17, B=50:18, B=60:18
+  C: denominator of tau vs q(v): {'den(tau) == q': 328, 'den(tau) > q': 28548} (den(tau) < q is impossible: tau is in Safe)
+
+==============================================================================
+[required] n = 4, max speed <= 30: 25819 primitive sets (1.3s); threshold 1/5
+  checks passed: Safe nonempty (LRC) for all; 0 < tau < 1/2 for all; tau >= 1/(N*vmin) for all
+  tau == 1/(N*vmin) ('lonely at first chance'): 15413 of 25819
+  MAX tau = 11/25 = 0.440000; extremizers: [(1, 3, 4, 5), (1, 3, 5, 8)]
+  top 10 values of tau:
+        11/25 = 0.440000  [2 sets; stored 2: contain 1: 2, contain a multiple of 5: 2]  (1, 3, 4, 5), (1, 3, 5, 8)
+        21/50 = 0.420000  [1 sets; stored 1: contain 1: 1, contain a multiple of 5: 1]  (1, 3, 4, 10)
+        31/75 = 0.413333  [1 sets; stored 1: contain 1: 1, contain a multiple of 5: 1]  (1, 3, 4, 15)
+       41/100 = 0.410000  [1 sets; stored 1: contain 1: 1, contain a multiple of 5: 1]  (1, 3, 4, 20)
+       51/125 = 0.408000  [1 sets; stored 1: contain 1: 1, contain a multiple of 5: 1]  (1, 3, 4, 25)
+       61/150 = 0.406667  [1 sets; stored 1: contain 1: 1, contain a multiple of 5: 1]  (1, 3, 4, 30)
+        28/75 = 0.373333  [1 sets; stored 1: contain 1: 1, contain a multiple of 5: 1]  (1, 4, 6, 30)
+        11/30 = 0.366667  [2 sets; stored 2: contain 1: 2, contain a multiple of 5: 2]  (1, 4, 6, 10), (1, 4, 6, 20)
+         9/25 = 0.360000  [1 sets; stored 1: contain 1: 1, contain a multiple of 5: 1]  (1, 7, 9, 20)
+        16/45 = 0.355556  [1 sets; stored 1: contain 1: 1, contain a multiple of 5: 1]  (1, 4, 9, 10)
+  max tau over sets with vmin >= 2: 11/40 = 0.275000 at (2, 5, 8, 19)
+  C: q(v) histogram: {2: 1360, 3: 4424, 4: 6200, 5: 5775, 6: 594, 7: 2528, 8: 1622, 9: 2094, 10: 521, 11: 327, 12: 170, 13: 140, 14: 40, 15: 18, 16: 2, 17: 2, 18: 1, 19: 1}
+  C: MAX q = 19 at (5, 11, 16, 27)
+     q = 18: (9, 11, 20, 29)
+     q = 17: (8, 9, 10, 13), (9, 14, 16, 30)
+     q = 16: (7, 13, 28, 30), (13, 15, 28, 29)
+  C: running max q by max speed: B=10:15, B=20:17, B=30:19
+  C: denominator of tau vs q(v): {'den(tau) == q': 835, 'den(tau) > q': 24984} (den(tau) < q is impossible: tau is in Safe)
+
+==============================================================================
+[required] n = 5, max speed <= 18: 8436 primitive sets (0.4s); threshold 1/6
+  checks passed: Safe nonempty (LRC) for all; 0 < tau < 1/2 for all; tau >= 1/(N*vmin) for all
+  tau == 1/(N*vmin) ('lonely at first chance'): 5121 of 8436
+  MAX tau = 19/42 = 0.452381; extremizers: [(1, 5, 6, 7, 8)]
+  top 10 values of tau:
+        19/42 = 0.452381  [1 sets; stored 1: contain 1: 1, contain a multiple of 6: 1]  (1, 5, 6, 7, 8)
+        13/30 = 0.433333  [4 sets; stored 4: contain 1: 4, contain a multiple of 6: 4]  (1, 3, 4, 5, 6), (1, 3, 4, 5, 12), (1, 3, 4, 5, 18), (1, 3, 5, 8, 18)
+         5/12 = 0.416667  [3 sets; stored 3: contain 1: 3, contain a multiple of 6: 3]  (1, 3, 4, 6, 10), (1, 4, 6, 8, 10), (1, 6, 8, 10, 18)
+         7/18 = 0.388889  [1 sets; stored 1: contain 1: 1, contain a multiple of 6: 1]  (1, 3, 4, 6, 15)
+        25/66 = 0.378788  [2 sets; stored 2: contain 1: 2, contain a multiple of 6: 2]  (1, 4, 6, 10, 11), (1, 9, 10, 11, 12)
+        31/84 = 0.369048  [1 sets; stored 1: contain 1: 1, contain a multiple of 6: 1]  (1, 4, 6, 10, 14)
+       37/102 = 0.362745  [1 sets; stored 1: contain 1: 1, contain a multiple of 6: 1]  (1, 4, 6, 10, 17)
+        13/36 = 0.361111  [11 sets; stored 11: contain 1: 11, contain a multiple of 6: 11]  (1, 2, 4, 6, 10), (1, 4, 5, 6, 7), (1, 4, 5, 6, 10), (1, 4, 6, 7, 10), (1, 4, 6, 7, 15), (1, 4, 6, 9, 10), (1, 4, 6, 10, 12), (1, 4, 6, 10, 13), ... (11 sets)
+        25/72 = 0.347222  [2 sets; stored 2: contain 1: 2, contain a multiple of 6: 2]  (1, 4, 10, 12, 16), (1, 5, 7, 12, 13)
+        19/60 = 0.316667  [9 sets; stored 9: contain 1: 9, contain a multiple of 6: 9]  (1, 4, 5, 10, 12), (1, 4, 5, 10, 18), (1, 4, 10, 11, 12), (1, 4, 10, 11, 18), (1, 4, 10, 12, 17), (1, 4, 10, 17, 18), (1, 5, 8, 10, 18), (1, 8, 10, 11, 18), ... (9 sets)
+  max tau over sets with vmin >= 2: 13/42 = 0.309524 at (2, 5, 7, 9, 12)
+  C: q(v) histogram: {2: 126, 3: 780, 4: 1754, 5: 2254, 6: 1110, 7: 468, 8: 385, 9: 578, 10: 477, 11: 378, 12: 32, 13: 18, 14: 13, 15: 21, 16: 19, 17: 16, 18: 4, 20: 1, 21: 2}
+  C: MAX q = 21 at (5, 6, 11, 16, 17), (10, 11, 12, 14, 17)
+     q = 20: (10, 11, 12, 13, 16)
+     q = 18: (3, 5, 9, 12, 15), (3, 9, 11, 12, 15), (3, 9, 12, 15, 16), (9, 10, 11, 12, 15)
+     q = 17: (1, 5, 8, 13, 18), (1, 9, 10, 11, 12), (1, 10, 11, 12, 18), (3, 11, 12, 15, 18), (5, 6, 10, 11, 16), (5, 7, 11, 16, 18), ... (16 sets)
+  C: running max q by max speed: B=10:12, B=18:21
+  C: denominator of tau vs q(v): {'den(tau) == q': 277, 'den(tau) > q': 8159} (den(tau) < q is impossible: tau is in Safe)
+
+==============================================================================
+[extended] n = 2, max speed <= 400: 48677 primitive sets (12.0s); threshold 1/3
+  checks passed: Safe nonempty (LRC) for all; 0 < tau < 1/2 for all; tau >= 1/(N*vmin) for all
+  tau == 1/(N*vmin) ('lonely at first chance'): 29554 of 48677
+  MAX tau = 4/9 = 0.444444; extremizers: [(1, 3)]
+  top 10 values of tau:
+          4/9 = 0.444444  [1 sets; stored 1: contain 1: 1, contain a multiple of 3: 1]  (1, 3)
+         7/18 = 0.388889  [1 sets; stored 1: contain 1: 1, contain a multiple of 3: 1]  (1, 6)
+        10/27 = 0.370370  [1 sets; stored 1: contain 1: 1, contain a multiple of 3: 1]  (1, 9)
+        13/36 = 0.361111  [1 sets; stored 1: contain 1: 1, contain a multiple of 3: 1]  (1, 12)
+        16/45 = 0.355556  [1 sets; stored 1: contain 1: 1, contain a multiple of 3: 1]  (1, 15)
+        19/54 = 0.351852  [1 sets; stored 1: contain 1: 1, contain a multiple of 3: 1]  (1, 18)
+        22/63 = 0.349206  [1 sets; stored 1: contain 1: 1, contain a multiple of 3: 1]  (1, 21)
+        25/72 = 0.347222  [1 sets; stored 1: contain 1: 1, contain a multiple of 3: 1]  (1, 24)
+        28/81 = 0.345679  [1 sets; stored 1: contain 1: 1, contain a multiple of 3: 1]  (1, 27)
+        31/90 = 0.344444  [1 sets; stored 1: contain 1: 1, contain a multiple of 3: 1]  (1, 30)
+  max tau over sets with vmin >= 2: 4/15 = 0.266667 at (2, 5)
+  C: q(v) histogram: {2: 16182, 3: 16252, 5: 5407, 6: 5458, 7: 1359, 8: 1024, 9: 2016, 10: 254, 11: 382, 12: 240, 13: 47, 14: 35, 15: 15, 16: 6}
+  C: MAX q = 16 at (37, 360), (149, 360), (187, 360), (247, 360), (271, 360), (359, 360)
+     q = 15: (1, 72), (53, 216), (72, 209), (143, 216), (144, 163), (144, 187), ... (15 sets)
+     q = 14: (7, 360), (13, 144), (71, 360), (72, 91), (72, 179), (72, 199), ... (35 sets)
+     q = 13: (11, 72), (11, 288), (29, 360), (41, 72), (47, 216), (49, 360), ... (47 sets)
+  C: running max q by max speed: B=10:9, B=20:12, B=30:12, B=50:12, B=100:15, B=150:15, B=200:15, B=300:15, B=400:16
+  C: denominator of tau vs q(v): {'den(tau) == q': 174, 'den(tau) > q': 48503} (den(tau) < q is impossible: tau is in Safe)
+
+==============================================================================
+[extended] n = 3, max speed <= 150: 461266 primitive sets (56.2s); threshold 1/4
+  checks passed: Safe nonempty (LRC) for all; 0 < tau < 1/2 for all; tau >= 1/(N*vmin) for all
+  tau == 1/(N*vmin) ('lonely at first chance'): 266546 of 461266
+  MAX tau = 7/16 = 0.437500; extremizers: [(1, 3, 12)]
+  top 10 values of tau:
+         7/16 = 0.437500  [1 sets; stored 1: contain 1: 1, contain a multiple of 4: 1]  (1, 3, 12)
+        41/96 = 0.427083  [1 sets; stored 1: contain 1: 1, contain a multiple of 4: 1]  (1, 3, 24)
+       61/144 = 0.423611  [1 sets; stored 1: contain 1: 1, contain a multiple of 4: 1]  (1, 3, 36)
+        27/64 = 0.421875  [1 sets; stored 1: contain 1: 1, contain a multiple of 4: 1]  (1, 3, 48)
+      101/240 = 0.420833  [1 sets; stored 1: contain 1: 1, contain a multiple of 4: 1]  (1, 3, 60)
+      121/288 = 0.420139  [1 sets; stored 1: contain 1: 1, contain a multiple of 4: 1]  (1, 3, 72)
+       47/112 = 0.419643  [1 sets; stored 1: contain 1: 1, contain a multiple of 4: 1]  (1, 3, 84)
+      161/384 = 0.419271  [1 sets; stored 1: contain 1: 1, contain a multiple of 4: 1]  (1, 3, 96)
+      181/432 = 0.418981  [1 sets; stored 1: contain 1: 1, contain a multiple of 4: 1]  (1, 3, 108)
+       67/160 = 0.418750  [1 sets; stored 1: contain 1: 1, contain a multiple of 4: 1]  (1, 3, 120)
+  max tau over sets with vmin >= 2: 9/32 = 0.281250 at (2, 5, 8)
+  C: q(v) histogram: {2: 64554, 3: 121152, 4: 105381, 5: 22016, 6: 26485, 7: 61411, 8: 22475, 9: 11620, 10: 7893, 11: 10998, 12: 3397, 13: 2020, 14: 1042, 15: 389, 16: 285, 17: 89, 18: 32, 19: 17, 20: 2, 21: 5, 23: 2, 27: 1}
+  C: MAX q = 27 at (67, 72, 139)
+     q = 23: (11, 72, 83), (71, 72, 143)
+     q = 21: (3, 119, 144), (11, 133, 144), (19, 57, 144), (47, 72, 119), (57, 121, 144)
+     q = 20: (33, 41, 144), (51, 72, 133)
+  C: running max q by max speed: B=10:11, B=20:15, B=30:17, B=50:18, B=100:23, B=150:27
+  C: denominator of tau vs q(v): {'den(tau) == q': 2119, 'den(tau) > q': 459147} (den(tau) < q is impossible: tau is in Safe)
+
+==============================================================================
+[extended] n = 4, max speed <= 60: 455041 primitive sets (32.4s); threshold 1/5
+  checks passed: Safe nonempty (LRC) for all; 0 < tau < 1/2 for all; tau >= 1/(N*vmin) for all
+  tau == 1/(N*vmin) ('lonely at first chance'): 264857 of 455041
+  MAX tau = 11/25 = 0.440000; extremizers: [(1, 3, 4, 5), (1, 3, 5, 8)]
+  top 10 values of tau:
+        11/25 = 0.440000  [2 sets; stored 2: contain 1: 2, contain a multiple of 5: 2]  (1, 3, 4, 5), (1, 3, 5, 8)
+        21/50 = 0.420000  [1 sets; stored 1: contain 1: 1, contain a multiple of 5: 1]  (1, 3, 4, 10)
+        31/75 = 0.413333  [1 sets; stored 1: contain 1: 1, contain a multiple of 5: 1]  (1, 3, 4, 15)
+       41/100 = 0.410000  [1 sets; stored 1: contain 1: 1, contain a multiple of 5: 1]  (1, 3, 4, 20)
+       51/125 = 0.408000  [1 sets; stored 1: contain 1: 1, contain a multiple of 5: 1]  (1, 3, 4, 25)
+       61/150 = 0.406667  [1 sets; stored 1: contain 1: 1, contain a multiple of 5: 1]  (1, 3, 4, 30)
+       71/175 = 0.405714  [1 sets; stored 1: contain 1: 1, contain a multiple of 5: 1]  (1, 3, 4, 35)
+       81/200 = 0.405000  [1 sets; stored 1: contain 1: 1, contain a multiple of 5: 1]  (1, 3, 4, 40)
+       91/225 = 0.404444  [1 sets; stored 1: contain 1: 1, contain a multiple of 5: 1]  (1, 3, 4, 45)
+      101/250 = 0.404000  [1 sets; stored 1: contain 1: 1, contain a multiple of 5: 1]  (1, 3, 4, 50)
+  max tau over sets with vmin >= 2: 11/40 = 0.275000 at (2, 5, 8, 19)
+  C: q(v) histogram: {2: 27179, 3: 81616, 4: 96614, 5: 100678, 6: 10856, 7: 45103, 8: 25568, 9: 37527, 10: 13155, 11: 7364, 12: 3113, 13: 4442, 14: 982, 15: 425, 16: 236, 17: 137, 18: 27, 19: 16, 21: 2, 22: 1}
+  C: MAX q = 22 at (13, 20, 33, 53)
+     q = 21: (11, 19, 41, 60), (15, 37, 45, 60)
+     q = 19: (5, 11, 16, 27), (7, 13, 17, 60), (7, 15, 45, 60), (7, 21, 28, 50), (7, 45, 54, 60), (8, 29, 37, 45), ... (16 sets)
+     q = 18: (1, 11, 58, 60), (2, 45, 48, 60), (7, 28, 32, 60), (8, 37, 41, 45), (9, 11, 20, 29), (9, 14, 40, 49), ... (27 sets)
+  C: running max q by max speed: B=10:15, B=20:17, B=30:19, B=50:19, B=60:22
+  C: denominator of tau vs q(v): {'den(tau) == q': 7321, 'den(tau) > q': 447720} (den(tau) < q is impossible: tau is in Safe)
+
+==============================================================================
+[extended] n = 5, max speed <= 36: 367616 primitive sets (21.3s); threshold 1/6
+  checks passed: Safe nonempty (LRC) for all; 0 < tau < 1/2 for all; tau >= 1/(N*vmin) for all
+  tau == 1/(N*vmin) ('lonely at first chance'): 215500 of 367616
+  MAX tau = 19/42 = 0.452381; extremizers: [(1, 5, 6, 7, 8)]
+  top 10 values of tau:
+        19/42 = 0.452381  [1 sets; stored 1: contain 1: 1, contain a multiple of 6: 1]  (1, 5, 6, 7, 8)
+       79/180 = 0.438889  [1 sets; stored 1: contain 1: 1, contain a multiple of 6: 1]  (1, 3, 4, 5, 30)
+        13/30 = 0.433333  [6 sets; stored 6: contain 1: 6, contain a multiple of 6: 6]  (1, 3, 4, 5, 6), (1, 3, 4, 5, 12), (1, 3, 4, 5, 18), (1, 3, 4, 5, 24), (1, 3, 4, 5, 36), (1, 3, 5, 8, 18)
+         5/12 = 0.416667  [3 sets; stored 3: contain 1: 3, contain a multiple of 6: 3]  (1, 3, 4, 6, 10), (1, 4, 6, 8, 10), (1, 6, 8, 10, 18)
+         7/18 = 0.388889  [1 sets; stored 1: contain 1: 1, contain a multiple of 6: 1]  (1, 3, 4, 6, 15)
+        25/66 = 0.378788  [2 sets; stored 2: contain 1: 2, contain a multiple of 6: 2]  (1, 4, 6, 10, 11), (1, 9, 10, 11, 12)
+       43/114 = 0.377193  [1 sets; stored 1: contain 1: 1, contain a multiple of 6: 1]  (1, 4, 6, 10, 19)
+       49/132 = 0.371212  [1 sets; stored 1: contain 1: 1, contain a multiple of 6: 1]  (1, 4, 6, 10, 22)
+        31/84 = 0.369048  [2 sets; stored 2: contain 1: 2, contain a multiple of 6: 2]  (1, 4, 6, 10, 14), (1, 4, 6, 14, 20)
+       73/198 = 0.368687  [1 sets; stored 1: contain 1: 1, contain a multiple of 6: 1]  (1, 4, 6, 10, 33)
+  max tau over sets with vmin >= 2: 13/42 = 0.309524 at (2, 5, 7, 9, 12)
+  C: q(v) histogram: {2: 8562, 3: 40919, 4: 64140, 5: 85819, 6: 44811, 7: 21382, 8: 21768, 9: 29573, 10: 18794, 11: 23438, 12: 2350, 13: 3143, 14: 1165, 15: 769, 16: 552, 17: 350, 18: 28, 19: 25, 20: 11, 21: 10, 22: 4, 23: 2, 27: 1}
+  C: MAX q = 27 at (10, 13, 23, 33, 36)
+     q = 23: (8, 11, 19, 27, 30), (11, 13, 17, 24, 30)
+     q = 22: (1, 6, 18, 24, 30), (6, 11, 18, 24, 30), (6, 18, 23, 24, 30), (7, 10, 14, 17, 24)
+     q = 21: (1, 9, 10, 11, 36), (1, 10, 11, 30, 36), (1, 11, 13, 24, 30), (4, 11, 13, 17, 30), (5, 6, 11, 16, 17), (10, 11, 12, 14, 17), ... (10 sets)
+  C: running max q by max speed: B=10:12, B=20:21, B=30:23, B=36:27
+  C: denominator of tau vs q(v): {'den(tau) == q': 5064, 'den(tau) > q': 362552} (den(tau) < q is impossible: tau is in Safe)
+
+==============================================================================
+[extended] n = 6, max speed <= 24: 133644 primitive sets (6.7s); threshold 1/7
+  checks passed: Safe nonempty (LRC) for all; 0 < tau < 1/2 for all; tau >= 1/(N*vmin) for all
+  tau == 1/(N*vmin) ('lonely at first chance'): 85037 of 133644
+  MAX tau = 19/42 = 0.452381; extremizers: [(1, 3, 4, 5, 7, 18)]
+  top 10 values of tau:
+        19/42 = 0.452381  [1 sets; stored 1: contain 1: 1, contain a multiple of 7: 1]  (1, 3, 4, 5, 7, 18)
+        22/49 = 0.448980  [3 sets; stored 3: contain 1: 3, contain a multiple of 7: 3]  (1, 3, 4, 5, 6, 7), (1, 3, 4, 5, 7, 12), (1, 3, 4, 5, 7, 24)
+        43/98 = 0.438776  [1 sets; stored 1: contain 1: 1, contain a multiple of 7: 1]  (1, 3, 4, 5, 6, 14)
+       64/147 = 0.435374  [1 sets; stored 1: contain 1: 1, contain a multiple of 7: 1]  (1, 3, 4, 5, 6, 21)
+        32/77 = 0.415584  [1 sets; stored 1: contain 1: 1, contain a multiple of 7: 1]  (1, 6, 8, 10, 14, 22)
+        29/70 = 0.414286  [1 sets; stored 1: contain 1: 1, contain a multiple of 7: 1]  (1, 4, 6, 8, 10, 14)
+       43/112 = 0.383929  [2 sets; stored 2: contain 1: 2, contain a multiple of 7: 2]  (1, 4, 6, 10, 14, 16), (1, 4, 6, 14, 16, 20)
+         8/21 = 0.380952  [1 sets; stored 1: contain 1: 1, contain a multiple of 7: 1]  (1, 3, 4, 6, 10, 14)
+        29/77 = 0.376623  [1 sets; stored 1: contain 1: 1, contain a multiple of 7: 1]  (1, 4, 6, 10, 11, 14)
+       50/133 = 0.375940  [1 sets; stored 1: contain 1: 1, contain a multiple of 7: 1]  (1, 4, 6, 10, 14, 19)
+  max tau over sets with vmin >= 2: 29/105 = 0.276190 at (2, 6, 9, 12, 15, 21)
+  C: q(v) histogram: {2: 924, 3: 7952, 4: 16742, 5: 32033, 6: 18882, 7: 28276, 8: 3026, 9: 8479, 10: 3090, 11: 8824, 12: 1152, 13: 3609, 14: 386, 15: 53, 16: 43, 17: 70, 18: 12, 19: 67, 20: 10, 21: 6, 23: 3, 24: 1, 25: 3, 26: 1}
+  C: MAX q = 26 at (3, 5, 8, 13, 18, 21)
+     q = 25: (5, 8, 13, 14, 18, 21), (5, 8, 13, 17, 18, 21), (11, 13, 14, 17, 20, 24)
+     q = 24: (7, 11, 13, 18, 19, 20)
+     q = 23: (6, 11, 13, 14, 17, 20), (11, 12, 13, 14, 17, 20), (11, 13, 14, 17, 18, 20)
+  C: running max q by max speed: B=10:13, B=20:24, B=24:26
+  C: denominator of tau vs q(v): {'den(tau) == q': 6891, 'den(tau) > q': 126753} (den(tau) < q is impossible: tau is in Safe)
+
+==============================================================================
+[extended] n = 7, max speed <= 20: 77400 primitive sets (3.9s); threshold 1/8
+  checks passed: Safe nonempty (LRC) for all; 0 < tau < 1/2 for all; tau >= 1/(N*vmin) for all
+  tau == 1/(N*vmin) ('lonely at first chance'): 49141 of 77400
+  MAX tau = 49/104 = 0.471154; extremizers: [(1, 5, 6, 7, 8, 11, 13)]
+  top 10 values of tau:
+       49/104 = 0.471154  [1 sets; stored 1: contain 1: 1, contain a multiple of 8: 1]  (1, 5, 6, 7, 8, 11, 13)
+        25/56 = 0.446429  [4 sets; stored 4: contain 1: 4, contain a multiple of 8: 4]  (1, 3, 4, 5, 6, 7, 8), (1, 3, 4, 5, 6, 7, 16), (1, 3, 4, 5, 7, 8, 12), (1, 3, 4, 5, 7, 12, 16)
+         7/16 = 0.437500  [1 sets; stored 1: contain 1: 1, contain a multiple of 8: 1]  (1, 3, 4, 5, 6, 8, 14)
+        33/80 = 0.412500  [2 sets; stored 2: contain 1: 2, contain a multiple of 8: 2]  (1, 4, 6, 8, 10, 14, 16), (1, 6, 8, 10, 11, 13, 14)
+        25/64 = 0.390625  [1 sets; stored 1: contain 1: 1, contain a multiple of 8: 1]  (1, 4, 6, 8, 14, 16, 20)
+       49/128 = 0.382812  [1 sets; stored 1: contain 1: 1, contain a multiple of 8: 1]  (1, 3, 4, 6, 14, 15, 16)
+       41/112 = 0.366071  [4 sets; stored 4: contain 1: 4, contain a multiple of 8: 4]  (1, 4, 6, 7, 10, 14, 16), (1, 4, 6, 7, 14, 16, 20), (1, 4, 6, 10, 14, 15, 16), (1, 4, 6, 14, 15, 16, 20)
+       57/160 = 0.356250  [1 sets; stored 1: contain 1: 1, contain a multiple of 8: 1]  (1, 4, 5, 6, 7, 16, 20)
+        17/48 = 0.354167  [6 sets; stored 6: contain 1: 6, contain a multiple of 8: 6]  (1, 4, 5, 6, 7, 8, 13), (1, 4, 5, 6, 7, 10, 16), (1, 4, 5, 6, 7, 13, 16), (1, 4, 6, 7, 9, 10, 16), (1, 5, 6, 7, 8, 13, 15), (1, 5, 6, 7, 8, 13, 19)
+       49/152 = 0.322368  [4 sets; stored 4: contain 1: 4, contain a multiple of 8: 4]  (1, 5, 7, 8, 12, 13, 19), (1, 5, 7, 12, 13, 16, 19), (1, 7, 10, 16, 17, 18, 19), (1, 7, 16, 17, 18, 19, 20)
+  max tau over sets with vmin >= 2: 33/112 = 0.294643 at (2, 6, 8, 9, 11, 14, 15)
+  C: q(v) histogram: {2: 120, 3: 3430, 4: 6196, 5: 10318, 6: 13146, 7: 20978, 8: 10539, 9: 1449, 10: 1613, 11: 4900, 12: 954, 13: 2491, 14: 529, 15: 376, 16: 143, 17: 13, 18: 10, 19: 78, 20: 53, 21: 34, 22: 15, 23: 15}
+  C: MAX q = 23 at (1, 2, 12, 13, 14, 15, 16), (1, 5, 7, 11, 16, 17, 18), (1, 13, 14, 15, 16, 17, 18), (2, 10, 12, 13, 14, 15, 16), (3, 7, 12, 13, 16, 19, 20), (4, 8, 12, 13, 14, 16, 20), (4, 8, 12, 14, 15, 16, 20), (4, 12, 14, 15, 16, 18, 20), (7, 11, 12, 13, 16, 19, 20), (7, 11, 14, 16, 17, 18, 20), (7, 12, 13, 14, 16, 19, 20), (7, 12, 13, 16, 17, 19, 20), ... (15 sets)
+     q = 22: (1, 5, 6, 7, 11, 16, 17), (1, 5, 7, 11, 12, 16, 17), (5, 6, 7, 11, 13, 16, 19), (5, 12, 14, 15, 16, 17, 20), (6, 7, 8, 11, 13, 15, 19), (6, 7, 10, 11, 13, 16, 19), ... (15 sets)
+     q = 21: (1, 5, 13, 14, 15, 16, 18), (1, 9, 12, 13, 14, 15, 16), (1, 11, 12, 13, 14, 15, 16), (1, 12, 13, 14, 15, 16, 18), (1, 12, 13, 14, 15, 16, 20), (2, 9, 12, 13, 14, 15, 16), ... (34 sets)
+     q = 20: (1, 3, 12, 13, 14, 15, 16), (1, 4, 12, 13, 14, 15, 16), (1, 5, 6, 13, 14, 15, 16), (1, 5, 12, 13, 14, 15, 16), (1, 6, 7, 13, 14, 15, 16), (1, 6, 12, 13, 14, 15, 16), ... (53 sets)
+  C: running max q by max speed: B=10:14, B=20:23
+  C: denominator of tau vs q(v): {'den(tau) == q': 3303, 'den(tau) > q': 74097} (den(tau) < q is impossible: tau is in Safe)
+
+Total time 137.4s
+exit=0
