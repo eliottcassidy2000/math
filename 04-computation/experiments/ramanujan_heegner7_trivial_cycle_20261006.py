@@ -5,14 +5,15 @@ Session opus-2026-10-06-S17.  Note: 05-knowledge/results/ramanujan_heegner7_triv
 Builds on collatz_paley_bridge_20261001.md (the trivial cycle's real code {1,2,4}/7 and 2-adic code -{1,2,4}/7).
 
 Sections:
- 1. Heegner table: j(tau_d), e^(pi sqrt d) vs -j + 744, splitting of 2 and 3, parity of j.
+ 1. Heegner table: j(tau_d), e^(pi sqrt d) vs -j + 744, splitting of 2 and 3, parity of j (also the 4 non-maximal orders).
  2. Gross-Zagier (1985) check: primes dividing j(tau_d) are non-split in Q(sqrt(-d)) and Q(sqrt(-3)).
  3. Q(sqrt(-7)) from the trivial cycle: decomposition group <2> = {1,2,4}; the Gauss period g = z + z^2 + z^4
     satisfies g^2 + g + 2 = 0, g + 1 = tau_7 (a Heegner point) and j(g) = -15^3; Paley spectrum; F_8 trace;
     2-adic roots of x^2 + x + 2 and the 2-adic code Phi(1) = -1/7 = (1 + 2g)^(-2).
  4. Visibility: a Heegner field lies in a decomposition field of 2 iff 2 splits in it, i.e. only for d = 7;
     class numbers of squarefree d = 7 mod 8; the norm lemma (smallest split prime = (d+1)/4).
- 5. Gauss periods of the codes of every integer cycle, in both codings: degree, half-plane, CM point or not.
+ 5. Gauss periods of the codes of every integer cycle, in both codings: exact degree, CM point or not; Propositions 4-5:
+    census of all doubling orbits mod odd m < 3001 (CM periods, class number one, which are codes of T-cycles).
  6. Ordinary elliptic curves over F_2 (all 32 Weierstrass tuples) and E_7 = 49a1 over F_(2^k).
  7. E_7 over F_p: a_p = 0 iff p = 3,5,6 mod 7; 4p = a_p^2 + 7B^2 on split p.
  8. Klein quartic x^3y + y^3z + z^3x = 0: over F_p (cubic-twist formula) and over F_(2^n) (L(T) = 1 + 5T^3 + 8T^6).
@@ -24,7 +25,7 @@ Sections:
 14. Landau-Ramanujan constant of Q(sqrt(-7)).
 15. Numerology probes.
 
-Reproduce: python3 04-computation/experiments/ramanujan_heegner7_trivial_cycle_20261006.py   (about 5 minutes)
+Reproduce: python3 04-computation/experiments/ramanujan_heegner7_trivial_cycle_20261006.py   (a few minutes)
 """
 import math, cmath
 from collections import Counter
@@ -89,6 +90,14 @@ for d in HEEGNER:
           f'  2: {["inert", "ramified", "split"][kron(D, 2) + 1]:8s} 3: {["inert", "ramified", "split"][kron(D, 3) + 1]:8s}'
           f'  j odd: {jr % 2 == 1}')
 print('   (for d = 1, 2 the point is i sqrt d and q > 0, so the comparison there is with j - 744, not -j + 744)')
+NONMAX = {-12: (mp.mpc(0, mp.sqrt(3)), 54000), -16: (mp.mpc(0, 2), 287496),
+          -27: (mp.mpc(mp.mpf(1) / 2, 3 * mp.sqrt(3) / 2), -12288000), -28: (mp.mpc(0, mp.sqrt(7)), 16581375)}
+for D, (t, jk) in NONMAX.items():
+    jr = int(mp.nint(mp.re(mp.kleinj(t) * 1728)))
+    check(f'j({D})', jr == jk)
+    print(f'   non-maximal order D = {D}: j = {jr} = {sp.factorint(jr) if jr > 0 else "-" + str(sp.factorint(-jr))}, odd: {jr % 2 == 1}')
+odd13 = sorted([disc(d) for d in HEEGNER if JKNOWN[d] % 2] + [D for D, (t, jk) in NONMAX.items() if jk % 2])
+print('   among all 13 class-number-one discriminants, j is odd exactly for D =', odd13, '(the two orders of Q(sqrt(-7)))', check('odd13', odd13 == [-28, -7]))
 
 print('\n== 2. Gross-Zagier: primes dividing j(tau_d) are non-split in Q(sqrt(-d)) and in Q(sqrt(-3))')
 for d in HEEGNER:
@@ -223,6 +232,35 @@ def n_distinct(vals, dec):
     return len({(round(v.real, dec), round(v.imag, dec)) for v in vals})
 
 
+def prime_1_mod(m, start=10 ** 18):
+    k = start // m + 1
+    while not sp.isprime(k * m + 1):
+        k += 1
+    return k * m + 1
+
+
+def exact_degree(orbit, m):
+    """Exact degree of sum_{c in orbit} zeta_m^c (orbit stable under x2): reduce Z[zeta_m] -> F_l (l = 1 mod m prime),
+    count distinct images of the conjugates sigma_a, a over U/<2>.  Distinct images => distinct conjugates, so the count is a
+    lower bound for the degree; the number of cosets is an upper bound.  Equality = exact degree."""
+    l = prime_1_mod(m)
+    qs = list(sp.factorint(m))
+    a0 = 2
+    while True:
+        w = pow(a0, (l - 1) // m, l)
+        if all(pow(w, m // q, l) != 1 for q in qs):
+            break
+        a0 += 1
+    H = {pow(2, i, m) for i in range(sp.n_order(2, m))}
+    seen, reps = set(), []
+    for a in range(1, m):
+        if math.gcd(a, m) == 1 and a not in seen:
+            reps.append(a)
+            seen.update(a * h % m for h in H)
+    vals = {sum(pow(w, a * c % m, l) for c in orbit) % l for a in reps}
+    return len(vals), len(reps)
+
+
 for name, f, n0 in [('T', T_ns, 1), ('T', T_ns, -1), ('T', T_ns, -5), ('T', T_ns, -17),
                     ('T_1', T_sc, 1), ('T_1', T_sc, -1), ('T_1', T_sc, -5), ('T_1', T_sc, -17)]:
     cyc = cycle_of(f, n0)
@@ -244,7 +282,9 @@ for name, f, n0 in [('T', T_ns, 1), ('T', T_ns, -1), ('T', T_ns, -5), ('T', T_ns
         kind = ('imaginary quadratic (a CM point after conj/translation)' if deg5 == 2 and abs(G0.imag) > 1e-6 else
                 'rational' if deg5 == 1 else
                 f'degree {deg5} (not quadratic: j there is transcendental by Schneider if Im > 0)')
-        out.append(f'{lab}: period {G0.real:+.6f}{G0.imag:+.6f}i, conjugates {deg5} (={deg8} at 1e-8) -> {kind}')
+        lo, hi = exact_degree(R, m)
+        check(f'exact degree {n0} {lab}', lo == hi == deg5)
+        out.append(f'{lab}: period {G0.real:+.6f}{G0.imag:+.6f}i, conjugates {deg5} (={deg8} at 1e-8; exact: {lo} distinct mod a prime l = 1 mod m, of {hi} cosets) -> {kind}')
     print(f'   {name:3s} cycle from {n0} (L = {L}, word {"".join(map(str, w))}), m = {m} = {sp.factorint(m)}')
     for s in out:
         print('      ' + s)
@@ -260,6 +300,62 @@ for p in sp.primerange(3, 400):
         cmrows.append((p, (p - 1) // 2, classno(-p)))
 print('   primes p = 7 mod 8 with ord_p(2) = (p-1)/2 (a doubling orbit of size (p-1)/2 whose Gauss period is the CM point (-1+sqrt(-p))/2),')
 print('   as (p, orbit size, h(-p)):', cmrows, ';  class number 1 only at p = 7:', check('cm census', [r for r in cmrows if r[2] == 1] == [(7, 3, 1)]))
+# Propositions 4-5: census of all unit cosets of <2> mod m (odd m < 3001) = real codes of all rational cycles of T_1 (lowest terms).
+# A coset is the code of a T-cycle iff its word has no "11" iff no element c has c/m > 3/4.
+MC = 3001
+cm_rows, t_codes, bad6 = [], [], []
+for m in range(3, MC, 2):
+    U = [a for a in range(1, m) if math.gcd(a, m) == 1]
+    H = [pow(2, i, m) for i in range(sp.n_order(2, m))]
+    lab = {}
+    cos = []
+    for a in U:
+        if a not in lab:
+            cs = sorted({a * h % m for h in H})
+            for c in cs:
+                lab[c] = len(cos)
+            cos.append(cs)
+    if len(cos) == 1:
+        continue
+    zz = np.exp(2j * np.pi * np.arange(m) / m)
+    ids = np.array([lab[a] for a in U])
+    Ua = np.array(U)
+    per = np.bincount(ids, weights=zz[Ua].real) + 1j * np.bincount(ids, weights=zz[Ua].imag)
+    keys = {(round(v.real, 7), round(v.imag, 7)) for v in per}
+    if len(keys) == 2 and abs(per[0].imag) > 1e-6:
+        sqf = max(sp.factorint(m).values()) == 1
+        D = int(round(((per[0] - per[1]) ** 2).real))
+        mu = int(sp.mobius(m))
+        ok6 = sqf and len(cos) == 2 and abs(per[0] + per[1] - mu) < 1e-8 and D % 8 == 1 and max(sp.factorint(-D).values()) == 1
+        if not ok6:
+            bad6.append(m)
+        hD = classno(D)
+        cm_rows.append((m, D, hD))
+        for cs, pv in zip(cos, per):
+            if not any(4 * c > 3 * m for c in cs):
+                t_codes.append((m, cs, D, hD))
+print(f'   Proposition 4 census, odd m < {MC}: {len(cm_rows)} denominators with an imaginary quadratic Gauss period;',
+      'all with m squarefree, index 2, periods (mu(m) +- sqrt D)/2, D fundamental = 1 mod 8:', check('prop6', not bad6), bad6[:5])
+h1m = [r[0] for r in cm_rows if r[2] == 1]
+pred = [7] + [7 * p for p in sp.primerange(3, MC // 7 + 1) if p != 7 and sp.n_order(2, p) == p - 1 and p % 3 != 1 and 7 * p < MC]
+print('   class-number-one cases (all D = -7):', sorted({r[1] for r in cm_rows if r[2] == 1}), ';  denominators', h1m,
+      ';  = predicted {7} u {7p : 2 primitive mod p, p != 1 mod 3}:', check('h1 m list', h1m == pred), f'({len(pred) - 1} values 7p)')
+print('   Proposition 5: CM cosets that are codes of T-cycles (no "11"): ', [(m, cs, D, h) for m, cs, D, h in t_codes],
+      check('prop7', [(m, D) for m, cs, D, h in t_codes] == [(7, -7), (15, -15)]))
+# the T_1 cycle of 1/11 carries tau_7 itself
+from fractions import Fraction as Fr
+x = Fr(1, 11)
+cyc11, word11 = [], []
+while True:
+    cyc11.append(x)
+    word11.append(x.numerator % 2)
+    x = (3 * x + 1) / 2 if x.numerator % 2 else x / 2
+    if x == Fr(1, 11):
+        break
+z21 = mp.exp(2j * mp.pi / 21)
+g21 = sum(z21 ** k for k in (1, 2, 4, 8, 16, 11))
+print('   T_1 cycle', [str(c) for c in cyc11], 'word', ''.join(map(str, word11)), ': code orbit {1,2,4,8,16,11}/21, Gauss period',
+      mp.nstr(g21, 15), '= tau_7:', check('g21', abs(g21 - tau_of(7)) < mp.mpf(10) ** -50))
 
 print('\n== 6. Ordinary elliptic curves over F_2, and E_7 = 49a1 over F_(2^k)')
 
@@ -333,6 +429,19 @@ print('   #E_7(F_(2^k)), k = 1..8, direct count:', direct, '  matches 2^k + 1 - 
 print('   k <= 36 with 7 | #E_7(F_(2^k)):', [k for k in rec if rec[k] % 7 == 0], '  = multiples of 3:',
       check('7 | #E iff 3 | k', [k for k in rec if rec[k] % 7 == 0] == list(range(3, 37, 3))))
 print('   (Frobenius pi = 1 + g acts on the 7-isogeny kernel E[sqrt(-7)] = Z/7 as multiplication by 4 = 2^(-1), an element of order 3 of <2>)')
+
+
+def ok_mul(x, y, mod):
+    # (a + b g)(c + d g) with g^2 = -g - 2
+    return ((x[0] * y[0] - 2 * x[1] * y[1]) % mod, (x[0] * y[1] + x[1] * y[0] - x[1] * y[1]) % mod)
+
+
+e_, ordpi = (1, 1), 1
+while e_ != (1, 0):
+    e_ = ok_mul(e_, (1, 1), 7)
+    ordpi += 1
+v7_21 = sp.multiplicity(7, rec[21])
+print('   order of pi = 1 + g in (O_K/7)^*:', ordpi, check('ord21', ordpi == 21), ' -> E[7] is rational over F_(2^k) iff 21 | k;  v_7 #E_7(F_(2^21)) =', v7_21, check('v7', v7_21 == 3))
 
 print('\n== 7. CM curve E_7 = 49a1: y^2 + xy = x^3 - x^2 - 2x - 1 (j = -3375)')
 
@@ -507,16 +616,28 @@ def weber_w(m):
 
 
 print('   f(sqrt(-m))/sqrt 2 for m = 7 mod 8 (2 splits in Q(sqrt(-m))): minimal polynomial found by an integer-relation search')
+units_all = True
 for m in (7, 15, 23, 31, 39, 47, 55, 71):
-    wv = weber_w(m)
     hm = classno(-4 * m)
-    found = None
-    for deg in range(1, 3 * hm + 1):
-        found = mp.findpoly(wv, deg, maxcoeff=10 ** 6)
-        if found:
-            break
-    unit = bool(found) and abs(found[0]) == 1 and abs(found[-1]) == 1
-    print(f'     m = {m:2d}: h(-4m) = {hm}, w = {mp.nstr(wv, 18)}, minimal polynomial (high to low) {found if found else "not found (degree <= 3h, |coeff| <= 10^6)"}, unit: {unit if found else "undecided"}')
+    with mp.workdps(200):
+        wv = weber_w(m)
+        found, var = None, 'w'
+        for deg in range(1, 3 * hm + 1):
+            found = mp.findpoly(wv, deg, maxcoeff=10 ** 4)
+            if found:
+                break
+        if not found:                       # PSLQ can miss a degree-12 relation; search in u = w^3 instead
+            var = 'w^3'
+            for deg in range(1, 3 * hm + 1):
+                found = mp.findpoly(wv ** 3, deg, maxcoeff=10 ** 4)
+                if found:
+                    break
+        resid = abs(mp.polyval(found, wv if var == 'w' else wv ** 3)) if found else None
+        wv_s = mp.nstr(wv, 18)
+    unit = bool(found) and abs(found[0]) == 1 and abs(found[-1]) == 1 and resid < mp.mpf(10) ** -150
+    units_all &= unit
+    print(f'     m = {m:2d}: h(-4m) = {hm}, w = {wv_s}, minimal polynomial of {var} (high to low) {found if found else "not found"}, residual {mp.nstr(resid, 3) if found else "-"}, unit: {unit if found else "undecided"}')
+print('   all eight are units:', check('weber units', units_all))
 
 print('\n== 12. Ramanujan tau mod 7 (and mod 49 on the non-residues)')
 NT, MOD = 6000, 49
@@ -567,6 +688,10 @@ print('   545140134 =', sp.factorint(Bc), ';  12 * 545140134 = 163 m:', check('1
 for p in sp.factorint(mroot):
     print(f'     p = {p:3d}: in Q(sqrt(-163)) {"inert" if kron(-163, p) == -1 else "split" if kron(-163, p) == 1 else "ram"}, in Q(i) {"inert" if kron(-4, p) == -1 else "split" if kron(-4, p) == 1 else "ram"}')
 check('GZ 1728', all(kron(-163, p) != 1 and kron(-4, p) != 1 for p in sp.factorint(mroot)))
+gzn = {y: 163 - y * y for y in range(0, 13)}
+print('   Gross-Zagier norms (d1 d2 - x^2)/4 = 163 - y^2 (d2 = 4, x = 2y):', {y: sp.factorint(v) for y, v in gzn.items()})
+print('   every prime of m divides some 163 - y^2:', check('GZ norms', all(any(v % p == 0 for v in gzn.values()) for p in sp.factorint(mroot))),
+      ';  127 = 163 - 6^2;  y with 7 | 163 - y^2:', [y for y in gzn if gzn[y] % 7 == 0], '(163 = 2 = 3^2 mod 7 is a square: 163 mod 7 lies in {1,2,4})')
 for K in range(1, 4):
     s = mp.fsum((-1) ** k * mp.factorial(6 * k) * (Ac + Bc * k) / (mp.factorial(3 * k) * mp.factorial(k) ** 3 * mp.mpf(C) ** (3 * k + mp.mpf(3) / 2)) for k in range(K))
     print(f'     {K} term(s): |12 S - 1/pi| = {mp.nstr(abs(12 * s - 1 / mp.pi), 5)}')
@@ -611,7 +736,7 @@ for n in range(1, X + 1):
     if n in checkpoints:
         checkpoints[n] = cnt
 for n, c in checkpoints.items():
-    print(f'   B_7({n:.0e}) = {c};  B * sqrt(log x)/x = {c * math.sqrt(math.log(n)) / n:.5f}')
+    print(f'   B_7({n:.0e}) = {c};  B * sqrt(log x)/x = {c * math.sqrt(math.log(n)) / n:.6f}')
 print('   (B_7(x) counts n <= x of the form x^2 + xy + 2y^2; convergence to C_7 is slow, with a 1/log x correction, as for sums of two squares)')
 
 print('\n== 15. Numerology probes')

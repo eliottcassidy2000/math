@@ -2032,6 +2032,55 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
+## MISTAKE-568 (2026-10-06, opus S17 Ramanujan's constant / Heegner-7 / trivial-cycle note; found by the session's independent adversarial audit, after the checkpoint of the first draft was pushed) -- two codings mixed in a uniqueness claim, the class-number-one list undercounted, the 7-torsion over F_8 overstated, two equal 24s called unrelated, a congruence taken mod the wrong ideal, and over-typed or misattributed sentences
+
+- **Claims (in `05-knowledge/results/ramanujan_heegner7_trivial_cycle_20261006.md`, first checkpoint):**
+  - (1) Section 7.3: "orbits mod 23, 47, 71, ... carry fields with h = 3, 5, 7, ... Class number one is what isolates the trivial cycle; integrality alone does not."
+    - The orbits mod 23, 47 and 71 contain the word `11`, so they are codes of shortcut-map (`T_1`) cycles, not of `T`-cycles.
+    - The isolation claim was unproved, and it is false under `T_1`. The point `τ_7` recurs on the cycle of `1/11` (word `110000`, `m = 21`) and at every `m = 7p` with 2 a primitive root mod `p` and `p ≢ 1 (mod 3)`: 21 such `m` below 3001.
+  - (2) Section 0.1 said "two of the nine class-number-one CM points", and section 0.3 said "`j(τ_7)` is the only odd Heegner `j`". There are thirteen class-number-one discriminants (adding −12, −16, −27, −28), and `j(sqrt(−7)) = 255^3` is also odd.
+  - (3) Section 4 said the trivial cycle's period is "the degree of the field extension `F_8/F_2` over which the 7-torsion becomes rational". Only the kernel `E[sqrt(−7)]` becomes rational there. `π` has order 21 in `(O_K/7)^*`, so the full `E[7]` needs `F_(2^21)`.
+  - (4) Section 7.4 called the 24s "unrelated". `τ(2) = −24` and the 24 in `e^(π sqrt 7) = 2^12 − 24 − ...` are the same 24, the exponent of `η` in `Δ`, since `f(τ)^24 = −Δ((τ+1)/2)/Δ(τ)`.
+  - (5) The proof of the `F_(2^k)` proposition wrote `g ≡ −1/2 ≡ 3 (mod 7)`. The congruence holds mod `sqrt(−7)`; in fact `g − 3 = sqrt(−7) τ_7`.
+  - (6) `B_7(10^4) sqrt(log x)/x` was given as `0.7879`. The value is `0.787848`; the figure had been rounded twice.
+  - (7) Typing and attribution:
+    - the point-level claim "the only class-number-one CM point a binary code can carry" was stated with only the field-level Proposition 3 behind it;
+    - "Every fact here is a face of three": `ord_7(2) = 3` and `χ_(−7)(2) = 1` are equivalent, and the Chudnovsky, E8/744 and `C_7` sections are not faces at all;
+    - "Typing. EXACT." is not a repo label;
+    - the Gauss-period degrees were typed NUMERICAL although 6 and 176 are provable and 7776 is checkable exactly;
+    - "Equivalently, the Jacobian is isogenous over Q to the restriction of scalars of `E_7`" claimed more than `p < 110` supports, and leaned on Elkies, who states only the geometric `J ~ E^3`;
+    - Chudnovsky's 7 and 127 were "explained" as "small primes `≡ 3 (mod 4)` inert in `Q(sqrt(−163))`", which is necessary, not explanatory;
+    - Lemma 2 lacked "squarefree";
+    - "optimal over `F_8`" was stated without "for this model" (Elkies' `F_2`-model is already optimal over `F_4`);
+    - "Ramanujan's list" (Ramanujan never mentioned `e^(π sqrt 163)`; the list is Heegner's);
+    - the name's coiner (Plouffe), and the Kolberg and Wilton credits, were missing;
+    - "sharpens the Paley note" overstated a complementary statement.
+- **Why it was wrong:**
+  - (1) the census of index-2 doubling orbits was run without the `T`-word restriction (no `11`), and the conclusion was transferred to `T`;
+  - (2) "class number one" was read as "Heegner field" (maximal orders only);
+  - (3) the divisibility `7 | #E(F_8)` was read as rationality of the whole 7-torsion;
+  - (4) the 24s were typed without tracing each to its source;
+  - (5) the reduction was written mod the rational prime instead of the ramified prime above it;
+  - (6) a 5-decimal printout was rounded again;
+  - (7) the draft was typed before the proofs and sources were in hand.
+- **Correct framing:**
+  - **Proposition 4** (statement and outline from the audit, proof written out in the note): a doubling-orbit Gauss period is imaginary quadratic iff `m` is squarefree, `[U : <2>] = 2` and the character is odd. It then equals `(μ(m) ± sqrt D)/2` with `D` fundamental, so the only class-number-one CM point any binary code carries is `τ_7`, up to translation and conjugation.
+  - **Proposition 5** (proof from the audit): under `T` the trivial cycle is the only rational cycle whose code carries it. Under `T_1` it is not.
+  - The parity statement runs over all thirteen discriminants: `j` is odd exactly for −7 and −28.
+  - `E[sqrt(−7)]` becomes rational over `F_8` and `E[7]` over `F_(2^21)`.
+  - Two of the three 24s are the `η`-exponent.
+  - The congruence reads `g ≡ 3 (mod sqrt(−7))`.
+  - The value is `0.7878`.
+  - The degrees are now PROVED or FINITE-EXACT.
+  - The Klein quartic L-function identity is NUMERICAL, with Fité–Lorenzo García–Sutherland cited for the Q-isogeny class.
+  - Chudnovsky's 7 and 127 come from the Gross–Zagier norms `163 − y^2` (`127 = 163 − 6^2`; `7 | 163 − 3^2` because `163 mod 7` lies in `{1, 2, 4}`).
+- **What survives:** every computation; the audit reproduced all of them with independent code. Propositions 1, 3, 6 and 7, Lemma 2 (with "squarefree"), the visibility statement, the Weber and Ramanujan identities and every verdict also survive. The Weber-unit census was completed (`m = 39` resolved).
+- **Lesson:**
+  - When a statement is about cycles of one map, run its census inside that map's admissible words. `T` and `T_1` code different word sets.
+  - "Class number one" includes non-maximal orders.
+  - A divisibility of the group order is not rationality of the whole torsion subgroup.
+  - Trace every repeated constant to its source before calling repeats unrelated.
+
 ## MISTAKE-567 (2026-10-06, mac-mini six-seven session; found by the session's independent adversarial audit, after the checkpoint c76dac976 was pushed) -- tournament stars called Hall obstructions, a stalled optimiser point called a local maximum, a single continuation fit called a law, and several over-typed or misnamed sentences
 
 - **Claims (in `05-knowledge/results/sixes_and_sevens_20261006.md`, THM-4553 and HYP-9212, checkpoint c76dac976):**

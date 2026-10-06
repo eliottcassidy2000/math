@@ -9,6 +9,11 @@
    d= 67  j=         -147197952000  cube root    -5280  e^(pi sqrt d) - (-j + 744) =  -1.3375458e-6  2: inert    3: inert     j odd: False
    d=163  j=   -262537412640768000  cube root  -640320  e^(pi sqrt d) - (-j + 744) =  -7.499274e-13  2: inert    3: inert     j odd: False
    (for d = 1, 2 the point is i sqrt d and q > 0, so the comparison there is with j - 744, not -j + 744)
+   non-maximal order D = -12: j = 54000 = {2: 4, 3: 3, 5: 3}, odd: False
+   non-maximal order D = -16: j = 287496 = {2: 3, 3: 3, 11: 3}, odd: False
+   non-maximal order D = -27: j = -12288000 = -{2: 15, 3: 1, 5: 3}, odd: False
+   non-maximal order D = -28: j = 16581375 = {3: 3, 5: 3, 17: 3}, odd: True
+   among all 13 class-number-one discriminants, j is odd exactly for D = [-28, -7] (the two orders of Q(sqrt(-7))) True
 
 == 2. Gross-Zagier: primes dividing j(tau_d) are non-split in Q(sqrt(-d)) and in Q(sqrt(-3))
    d=  1: |j| = 2^6 * 3^3                    all non-split in both fields: True;  largest prime 3 <= 3|D|/4 = 3.0
@@ -56,30 +61,34 @@
 
 == 5. Gauss periods of the codes of every integer cycle (both codings)
    T   cycle from 1 (L = 3, word 100), m = 7 = {7: 1}
-      real: period -0.500000+1.322876i, conjugates 2 (=2 at 1e-8) -> imaginary quadratic (a CM point after conj/translation)
-      2-adic: period -0.500000-1.322876i, conjugates 2 (=2 at 1e-8) -> imaginary quadratic (a CM point after conj/translation)
+      real: period -0.500000+1.322876i, conjugates 2 (=2 at 1e-8; exact: 2 distinct mod a prime l = 1 mod m, of 2 cosets) -> imaginary quadratic (a CM point after conj/translation)
+      2-adic: period -0.500000-1.322876i, conjugates 2 (=2 at 1e-8; exact: 2 distinct mod a prime l = 1 mod m, of 2 cosets) -> imaginary quadratic (a CM point after conj/translation)
    T   cycle from -1 (L = 2, word 10), m = 3 = {3: 1}
-      real: period -1.000000+0.000000i, conjugates 1 (=1 at 1e-8) -> rational
-      2-adic: period -1.000000+0.000000i, conjugates 1 (=1 at 1e-8) -> rational
+      real: period -1.000000+0.000000i, conjugates 1 (=1 at 1e-8; exact: 1 distinct mod a prime l = 1 mod m, of 1 cosets) -> rational
+      2-adic: period -1.000000+0.000000i, conjugates 1 (=1 at 1e-8; exact: 1 distinct mod a prime l = 1 mod m, of 1 cosets) -> rational
    T   cycle from -5 (L = 5, word 10100), m = 31 = {31: 1}
-      real: period -1.648535+1.438448i, conjugates 6 (=6 at 1e-8) -> degree 6 (not quadratic: j there is transcendental by Schneider if Im > 0)
-      2-adic: period -1.648535-1.438448i, conjugates 6 (=6 at 1e-8) -> degree 6 (not quadratic: j there is transcendental by Schneider if Im > 0)
+      real: period -1.648535+1.438448i, conjugates 6 (=6 at 1e-8; exact: 6 distinct mod a prime l = 1 mod m, of 6 cosets) -> degree 6 (not quadratic: j there is transcendental by Schneider if Im > 0)
+      2-adic: period -1.648535-1.438448i, conjugates 6 (=6 at 1e-8; exact: 6 distinct mod a prime l = 1 mod m, of 6 cosets) -> degree 6 (not quadratic: j there is transcendental by Schneider if Im > 0)
    T   cycle from -17 (L = 18, word 101010100101010000), m = 262143 = {3: 3, 7: 1, 19: 1, 73: 1}
-      real: period -4.509313+4.190022i, conjugates 7776 (=7776 at 1e-8) -> degree 7776 (not quadratic: j there is transcendental by Schneider if Im > 0)
-      2-adic: period -4.513034-4.187078i, conjugates 7776 (=7776 at 1e-8) -> degree 7776 (not quadratic: j there is transcendental by Schneider if Im > 0)
+      real: period -4.509313+4.190022i, conjugates 7776 (=7776 at 1e-8; exact: 7776 distinct mod a prime l = 1 mod m, of 7776 cosets) -> degree 7776 (not quadratic: j there is transcendental by Schneider if Im > 0)
+      2-adic: period -4.513034-4.187078i, conjugates 7776 (=7776 at 1e-8; exact: 7776 distinct mod a prime l = 1 mod m, of 7776 cosets) -> degree 7776 (not quadratic: j there is transcendental by Schneider if Im > 0)
    T_1 cycle from 1 (L = 2, word 10), m = 3 = {3: 1}
-      real: period -1.000000+0.000000i, conjugates 1 (=1 at 1e-8) -> rational
-      2-adic: period -1.000000+0.000000i, conjugates 1 (=1 at 1e-8) -> rational
+      real: period -1.000000+0.000000i, conjugates 1 (=1 at 1e-8; exact: 1 distinct mod a prime l = 1 mod m, of 1 cosets) -> rational
+      2-adic: period -1.000000+0.000000i, conjugates 1 (=1 at 1e-8; exact: 1 distinct mod a prime l = 1 mod m, of 1 cosets) -> rational
    T_1 cycle [-1]: L = 1, m = 1, codes are integers; Gauss period 1 (rational)
    T_1 cycle from -5 (L = 3, word 110), m = 7 = {7: 1}
-      real: period -0.500000-1.322876i, conjugates 2 (=2 at 1e-8) -> imaginary quadratic (a CM point after conj/translation)
-      2-adic: period -0.500000+1.322876i, conjugates 2 (=2 at 1e-8) -> imaginary quadratic (a CM point after conj/translation)
+      real: period -0.500000-1.322876i, conjugates 2 (=2 at 1e-8; exact: 2 distinct mod a prime l = 1 mod m, of 2 cosets) -> imaginary quadratic (a CM point after conj/translation)
+      2-adic: period -0.500000+1.322876i, conjugates 2 (=2 at 1e-8; exact: 2 distinct mod a prime l = 1 mod m, of 2 cosets) -> imaginary quadratic (a CM point after conj/translation)
    T_1 cycle from -17 (L = 11, word 11110111000), m = 2047 = {23: 1, 89: 1}
-      real: period +1.230326-2.244811i, conjugates 176 (=176 at 1e-8) -> degree 176 (not quadratic: j there is transcendental by Schneider if Im > 0)
-      2-adic: period +1.345352+2.414680i, conjugates 176 (=176 at 1e-8) -> degree 176 (not quadratic: j there is transcendental by Schneider if Im > 0)
+      real: period +1.230326-2.244811i, conjugates 176 (=176 at 1e-8; exact: 176 distinct mod a prime l = 1 mod m, of 176 cosets) -> degree 176 (not quadratic: j there is transcendental by Schneider if Im > 0)
+      2-adic: period +1.345352+2.414680i, conjugates 176 (=176 at 1e-8; exact: 176 distinct mod a prime l = 1 mod m, of 176 cosets) -> degree 176 (not quadratic: j there is transcendental by Schneider if Im > 0)
    control, rational cycle 1/5 of T (word 1000): Gauss period of {1,2,4,8}/15 = (0.5 + 1.93649167310371j) = (1 + sqrt(-15))/2: True (the unit sum is mu(15) = +1, not -1);  h(-15) = 2
    primes p = 7 mod 8 with ord_p(2) = (p-1)/2 (a doubling orbit of size (p-1)/2 whose Gauss period is the CM point (-1+sqrt(-p))/2),
    as (p, orbit size, h(-p)): [(7, 3, 1), (23, 11, 3), (47, 23, 5), (71, 35, 7), (79, 39, 5), (103, 51, 5), (167, 83, 11), (191, 95, 13), (199, 99, 9), (239, 119, 15), (263, 131, 13), (271, 135, 11), (311, 155, 19), (359, 179, 19), (367, 183, 9), (383, 191, 17)] ;  class number 1 only at p = 7: True
+   Proposition 4 census, odd m < 3001: 269 denominators with an imaginary quadratic Gauss period; all with m squarefree, index 2, periods (mu(m) +- sqrt D)/2, D fundamental = 1 mod 8: True []
+   class-number-one cases (all D = -7): [-7] ;  denominators [7, 21, 35, 77, 203, 371, 413, 581, 707, 749, 917, 1043, 1211, 1253, 1379, 1589, 1883, 2051, 2219, 2429, 2723, 2933] ;  = predicted {7} u {7p : 2 primitive mod p, p != 1 mod 3}: True (21 values 7p)
+   Proposition 5: CM cosets that are codes of T-cycles (no "11"):  [(7, [1, 2, 4], -7, 1), (15, [1, 2, 4, 8], -15, 2)] True
+   T_1 cycle ['1/11', '7/11', '16/11', '8/11', '4/11', '2/11'] word 110000 : code orbit {1,2,4,8,16,11}/21, Gauss period (0.5 + 1.3228756555323j) = tau_7: True
 
 == 6. Ordinary elliptic curves over F_2, and E_7 = 49a1 over F_(2^k)
    16 smooth Weierstrass tuples over F_2; ordinary (trace odd): 8, all with a1 = 1: True;  traces [(-1, 4), (1, 4)];  Frobenius discriminants a^2 - 8: [-7]
@@ -87,6 +96,7 @@
    #E_7(F_(2^k)), k = 1..8, direct count: {1: 2, 2: 8, 3: 14, 4: 16, 5: 22, 6: 56, 7: 142, 8: 288}   matches 2^k + 1 - t_k (t_k = t_(k-1) - 2 t_(k-2)): True
    k <= 36 with 7 | #E_7(F_(2^k)): [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36]   = multiples of 3: True
    (Frobenius pi = 1 + g acts on the 7-isogeny kernel E[sqrt(-7)] = Z/7 as multiplication by 4 = 2^(-1), an element of order 3 of <2>)
+   order of pi = 1 + g in (O_K/7)^*: 21 True  -> E[7] is rational over F_(2^k) iff 21 | k;  v_7 #E_7(F_(2^21)) = 3 True
 
 == 7. CM curve E_7 = 49a1: y^2 + xy = x^3 - x^2 - 2x - 1 (j = -3375)
    a_p for p < 60: {2: 1, 3: 0, 5: 0, 11: 4, 13: 0, 17: 0, 19: 0, 23: 8, 29: 2, 31: 0, 37: -6, 41: 0, 43: -12, 47: 0, 53: -10, 59: 0}
@@ -144,14 +154,15 @@
    singular modulus k_7 = theta_2^2/theta_3^2 = 0.06262291254316797010266468 = (3 - sqrt 7)/(4 sqrt 2): True ;  4 k^2 k'^2 = 0.015625 = 1/64 = G_7^(-24)
    Ramanujan (1914): sum (42k+5) ((1/2)_k/k!)^3 / 64^k = 5.09295817894065074460428042792045958510270866 ;  16/pi = 5.09295817894065074460428042792045958510270866 True
    f(sqrt(-m))/sqrt 2 for m = 7 mod 8 (2 splits in Q(sqrt(-m))): minimal polynomial found by an integer-relation search
-     m =  7: h(-4m) = 1, w = 1.0, minimal polynomial (high to low) [-1, 1], unit: True
-     m = 15: h(-4m) = 2, w = 1.17398499670532851, minimal polynomial (high to low) [1, 0, 0, -1, 0, 0, -1], unit: True
-     m = 23: h(-4m) = 3, w = 1.32471795724474603, minimal polynomial (high to low) [-1, 0, 1, 1], unit: True
-     m = 31: h(-4m) = 3, w = 1.46557123187676803, minimal polynomial (high to low) [-1, 1, 0, 1], unit: True
-     m = 39: h(-4m) = 4, w = 1.60142641126521337, minimal polynomial (high to low) not found (degree <= 3h, |coeff| <= 10^6), unit: undecided
-     m = 47: h(-4m) = 5, w = 1.73469134569246955, minimal polynomial (high to low) [1, 0, -1, -2, -2, -1], unit: True
-     m = 55: h(-4m) = 4, w = 1.86676039917386209, minimal polynomial (high to low) [-1, 2, 0, -1, 1], unit: True
-     m = 71: h(-4m) = 7, w = 2.13060682983889533, minimal polynomial (high to low) [-1, 2, 1, -1, -1, -1, 1, 1], unit: True
+     m =  7: h(-4m) = 1, w = 1.0, minimal polynomial of w (high to low) [-1, 1], residual 6.53e-201, unit: True
+     m = 15: h(-4m) = 2, w = 1.17398499670532851, minimal polynomial of w (high to low) [1, 0, 0, -1, 0, 0, -1], residual 8.98e-200, unit: True
+     m = 23: h(-4m) = 3, w = 1.32471795724474603, minimal polynomial of w (high to low) [-1, 0, 1, 1], residual 3.1e-200, unit: True
+     m = 31: h(-4m) = 3, w = 1.46557123187676803, minimal polynomial of w (high to low) [-1, 1, 0, 1], residual 3.43e-200, unit: True
+     m = 39: h(-4m) = 4, w = 1.60142641126521337, minimal polynomial of w^3 (high to low) [1, -3, -4, -2, -1], residual 9.95e-198, unit: True
+     m = 47: h(-4m) = 5, w = 1.73469134569246955, minimal polynomial of w (high to low) [1, 0, -1, -2, -2, -1], residual 4.13e-199, unit: True
+     m = 55: h(-4m) = 4, w = 1.86676039917386209, minimal polynomial of w (high to low) [-1, 2, 0, -1, 1], residual 6.37e-200, unit: True
+     m = 71: h(-4m) = 7, w = 2.13060682983889533, minimal polynomial of w (high to low) [-1, 2, 1, -1, -1, -1, 1, 1], residual 1.39e-198, unit: True
+   all eight are units: True
 
 == 12. Ramanujan tau mod 7 (and mod 49 on the non-residues)
    tau(1..10) mod 49 agree with the known values: True
@@ -168,6 +179,8 @@
      p =  11: in Q(sqrt(-163)) inert, in Q(i) inert
      p =  19: in Q(sqrt(-163)) inert, in Q(i) inert
      p = 127: in Q(sqrt(-163)) inert, in Q(i) inert
+   Gross-Zagier norms (d1 d2 - x^2)/4 = 163 - y^2 (d2 = 4, x = 2y): {0: {163: 1}, 1: {2: 1, 3: 4}, 2: {3: 1, 53: 1}, 3: {2: 1, 7: 1, 11: 1}, 4: {3: 1, 7: 2}, 5: {2: 1, 3: 1, 23: 1}, 6: {127: 1}, 7: {2: 1, 3: 1, 19: 1}, 8: {3: 2, 11: 1}, 9: {2: 1, 41: 1}, 10: {3: 2, 7: 1}, 11: {2: 1, 3: 1, 7: 1}, 12: {19: 1}}
+   every prime of m divides some 163 - y^2: True ;  127 = 163 - 6^2;  y with 7 | 163 - y^2: [3, 4, 10, 11] (163 = 2 = 3^2 mod 7 is a square: 163 mod 7 lies in {1,2,4})
      1 term(s): |12 S - 1/pi| = 5.9811e-15
      2 term(s): |12 S - 1/pi| = 3.1192e-29
      3 term(s): |12 S - 1/pi| = 1.7433e-43
@@ -176,10 +189,10 @@
 == 14. Landau-Ramanujan constant of Q(sqrt(-7))
    C_7 = (1/sqrt(pi)) * sqrt( L(1,chi_-7) * 7/6 * prod_{q=3,5,6 mod 7} (1-q^-2)^-1 ) = 0.724719515604  (Euler product truncated at 2*10^6)
    control: Landau-Ramanujan K (sums of two squares) by the same formula = 0.764223647406  (known 0.764223653589...)
-   B_7(1e+04) = 2596;  B * sqrt(log x)/x = 0.78785
-   B_7(1e+05) = 22737;  B * sqrt(log x)/x = 0.77148
-   B_7(1e+06) = 204805;  B * sqrt(log x)/x = 0.76124
-   B_7(1e+07) = 1880073;  B * sqrt(log x)/x = 0.75480
+   B_7(1e+04) = 2596;  B * sqrt(log x)/x = 0.787848
+   B_7(1e+05) = 22737;  B * sqrt(log x)/x = 0.771482
+   B_7(1e+06) = 204805;  B * sqrt(log x)/x = 0.761244
+   B_7(1e+07) = 1880073;  B * sqrt(log x)/x = 0.754799
    (B_7(x) counts n <= x of the form x^2 + xy + 2y^2; convergence to C_7 is slow, with a 1/log x correction, as for sums of two squares)
 
 == 15. Numerology probes
