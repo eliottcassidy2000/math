@@ -272,7 +272,27 @@ census = Counter(kind(D) for D in mins)
 print("  beta(P_7) =", beta, "; minimum blocking sets:", len(mins), dict(census))
 check(beta == 6 and len(mins) == 63 and census == Counter({"star": 7, "two sources": 21, "two sinks": 21,
                                                           "three vertices, one common out- or in-neighbour": 14}),
-      "beta(P_7) = 6 = hall = N - 1; 63 minimum sets, all Hall obstructions: 7 stars, 21 + 21 two sources/sinks, 14 triples")
+      "beta(P_7) = 6 = hall = N - 1; 63 minimum sets: 7 stars, 21 + 21 two sources/sinks, 14 triples")
+
+
+def has_path_cycle_factor(A):
+    """a spanning subgraph whose components are one directed path (possibly a single vertex) and directed cycles"""
+    out = {u: [v for (x, v) in A if x == u] for u in range(7)}
+    for succ in itertools.product(*[out[u] + [None] for u in range(7)]):   # successor map, None = path end
+        if sum(1 for t in succ if t is None) != 1:
+            continue
+        if len({t for t in succ if t is not None}) != 6:
+            continue
+        return True
+    return False
+
+
+stars = [D for D in mins if kind(D) == "star"]
+others = [D for D in mins if kind(D) != "star"]
+check(all(has_path_cycle_factor([a for i, a in enumerate(arcs) if i not in D]) for D in stars),
+      "each star leaves a 1-path-cycle factor (the isolated vertex as the path + two cyclic triangles): exotic minima, NOT Hall obstructions")
+check(not any(has_path_cycle_factor([a for i, a in enumerate(arcs) if i not in D]) for D in others),
+      "the other 56 minimum sets kill every 1-path-cycle factor: Hall obstructions")
 print("H. spectra: the 7x7 knight torus is the finite Euclidean graph E_7(5), a Kloosterman / Ramanujan graph")
 import cmath, math
 R = 2 * math.sqrt(7)

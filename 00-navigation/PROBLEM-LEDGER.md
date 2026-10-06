@@ -762,7 +762,7 @@ all heights (THM-1289, published), δ ineffective.
   queen = Paley(49), nightrider = its complement, the only order-8 rotation. One point-stripping ladder:
   `PSL(2,7)` > Borel `= Aut(P_7)` > split torus `= Aut(P_7 - 0)` (THM-4524) = the Collatz Frobenius of the S15
   nineteenth note; octonionic `J` at `e_0` = Fano matching `q -> 3q` (`QR_7 -> NQR_7`). Lean: `beta(P_7) = 6`,
-  63 minima in four Hall types. S6 manuscript: ANALOGY only. Lyapunov `n = 6` OPEN (stripping law along the KV branch).
+  63 minima (56 Hall obstructions + 7 exotic stars). S6 manuscript: ANALOGY only. Lyapunov `n = 6` OPEN (stripping law along the KV branch).
   No Collatz, LRC or Hopf consequence.
 
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`

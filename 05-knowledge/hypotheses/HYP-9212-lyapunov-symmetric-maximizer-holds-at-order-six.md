@@ -29,9 +29,13 @@ related:
 
    If a run succeeded at order 6 with probability `>= 0.1%`, zero hits in 6000 would have probability `< 0.25%`.
 2. **The KV basin cannot be stripped to order 6.**
-   * Put `μ(A) = λ_min(A^T A + A A^T)/|A|_F^2`. It vanishes iff `A` is orthogonally `A_6 ⊕ 0`, which is a counterexample iff `A_6` is (padding block identity; reflection, section 8.1).
-   * Maximise `h = log(σ_skew/σ_sym)` subject to `μ <= m` along the KV branch: `h ≈ 0.146 m^1.47` as `m -> 0`.
-   * The stripped 6x6 block always has `h ≈ -4 h_7 < 0`, and local re-optimisation never crosses 0 (26 values of `m`, 7 starts each).
+   * Put `μ(A) = λ_min(A^T A + A A^T)/|A|_F^2`. It vanishes iff `A` is orthogonally `A_6 ⊕ 0`, which is a counterexample iff `A_6` is.
+     * Forward: the padding block identity (reflection, section 8.1).
+     * Converse: `||L_A|Sym||^2 >= 2||A||_2^2` via `X = v v^T`, so the cross block never decides.
+   * Maximise `h = log(σ_skew/σ_sym)` subject to `μ <= m` along the KV branch. The margin tends to 0 as `m -> 0`, but the rate depends on the optimizer:
+     * our continuation gives `h ≈ 0.146 m^1.47`;
+     * the audit found larger feasible values (log-slope 1.2–1.3).
+   * The stripped 6x6 block always has `h < 0` (ratio to `h_7` drifting from `-1` to `-7`), and local re-optimisation never crosses 0 (26 values of `m`, 7 starts each).
 3. **Structure of the counterexamples found (order 7; 20 collected in 1000 further runs).**
    * The strongest ones fall into one recurrent top basin (gap `~6.2e-3`, reached 7 times), with normalised singular values `(1, .85, .85, .74, .69, .14, .05)`. That is five large ones and two small ones, like KV's rank-5 matrix.
    * Weaker counterexamples do **not** share this profile. One has smallest singular value `0.185`, another `(.., .365, .003)`.

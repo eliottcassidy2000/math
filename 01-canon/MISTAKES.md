@@ -2032,6 +2032,43 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
+## MISTAKE-567 (2026-10-06, mac-mini six-seven session; found by the session's independent adversarial audit, after the checkpoint c76dac976 was pushed) -- tournament stars called Hall obstructions, a stalled optimiser point called a local maximum, a single continuation fit called a law, and several over-typed or misnamed sentences
+
+- **Claims (in `05-knowledge/results/sixes_and_sevens_20261006.md`, THM-4553 and HYP-9212, checkpoint c76dac976):**
+  - (1) "The 63 minimum [Hamiltonian-path blocking] sets [of `P_7`] are all Hall obstructions", in "four Hall types", including the 7 stars. Under HYP-9168's definition (a Hall obstruction kills every 1-path-cycle factor), the stars are not Hall obstructions. The isolated vertex is a one-vertex path and `P_7 - v` has two cyclic triangles, so a factor survives. They are the chessboard note's "exotic minima". The correct split is 56 Hall obstructions plus 7 exotic stars.
+  - (2) "Its local maximum has `h = 7.31e-3`" (the KV basin). This was an L-BFGS-B stopping point. Perturbation and further ascent reach `h = 7.759e-3`.
+  - (3) The stripping "law" `h_7 ≈ 0.146 m^1.47` with `h_6 ≈ -4 h_7` came from one SLSQP continuation. The audit's feasible points are larger (log-slope 1.2–1.3), and `h_6/h_7` drifts from `-1` to `-6.8`. Only the qualitative facts survive: decay to 0, negative stripped blocks, and re-optimised blocks staying below 0.
+  - (4) Smaller slips:
+    - "the knight's own step 8 -> 7 is the same move" was typed ANALOGY; it is NUMEROLOGY (`|P^1(F_7)| = 8` = knight degree).
+    - The ladder table tied `PSL(2,7)` to the queen/knight 4+4 slope split, which is not `PSL(2,7)`-invariant (stabiliser of order 4).
+    - The Deligne–Lusztig remark called `μ_8` and `<x2>` "the two tori of `GL_2(F_7)`". They are the norm-one subgroup of the non-split torus `F_49^*` and the image of `SL_2`'s split torus.
+    - "`χ = 2` forces `n = 2, d = 1`" omitted that `(n, d) = (1, 2)` is excluded only by irreducibility.
+    - The antipodal orbit's oddness was credited to HYP-9167 instead of THM-4524.
+    - "AG(2,6)" should be "an affine plane of order 6".
+    - A paraphrase of note 19 was put in quotation marks.
+    - "7 translations" should be "6 non-trivial translations".
+    - `T` named both the torus and the Collatz map.
+    - "for every `m`" should be "for every `d <= m`".
+    - 104053 was omitted from the ramified primes.
+- **Why it was wrong:**
+  - (1) "Hall obstruction" was used loosely (any degree or neighbourhood starvation) instead of with the definition of the hypothesis being cited;
+  - (2) optimiser convergence was not tested by perturbation;
+  - (3) a single-optimiser frontier fit was read as a law;
+  - (4) typing and naming were written before the objects were checked.
+- **Correct framing:** applied in the note, THM-4553 and HYP-9212.
+  - `β(P_7) = 6`, with 56 Hall obstructions and 7 exotic stars; the Python check confirms that each star leaves a 1-path-cycle factor.
+  - The KV basin reaches at least `h = 7.759e-3`.
+  - The stripping data are optimizer-dependent lower bounds on the frontier.
+- **What survives:** every exact computation, confirmed by the audit with independent code:
+  - the knight-torus censuses (the audit independently completed `n = 5, 6, 7` and the `n = 8` six-sets);
+  - `G_6 = C_4 × Paley(9)`, the `F_49` facts, transversality, the automorphism and linear-stabiliser tables;
+  - the `PSL(2,7)` ladder, the octonion pairing, the count 63, and the Lean certificate;
+  - the octic class group, the 18/19 derivation, and the cycle-search comparison.
+- **Lesson:**
+  - When citing a repo hypothesis's notion (here "Hall obstruction" from HYP-9168), use its definition and test each case against it.
+  - Call a numerical point a local maximum only after perturbation tests.
+  - Present one optimiser's constrained frontier as a lower bound, not a law.
+
 ## MISTAKE-566 (2026-10-06, opus S16 11-square octic / Collatz note; found by the session's independent adversarial audit, after the checkpoint d3a512214 was pushed) -- a withdrawn E_inf equivalence restated as fact, E_inf's rational points misdescribed, a classical cycle bound credited to the wrong convergent bracket, and a cosmetic factor read as structure
 
 - **Claims (in `05-knowledge/results/square11_octic_langlands_collatz_20261006.md`, checkpoint d3a512214):**

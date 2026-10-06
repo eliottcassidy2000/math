@@ -53,7 +53,9 @@ Because `C_4 = K_{2,2}` has twins, every square `x` has the same 8 neighbours as
   * `16 · 100` at `n = 10`.
 * For `n <= 26`, the linear maps of `Z_n^2` preserving `K` form `D4` (order 8) except at `n ∈ {5, 6, 7, 8, 10}`. An element of order 8 occurs only at `n = 5` and `n = 7`.
 
-**(v) Blocking (FINITE-EXACT).** For `n = 5, 6, 7, 8` the fewest deletions leaving `G_n` without a Hamiltonian cycle is `β(n) = 7`. The minimum sets are exactly the `8 n^2` stars (all but one move at a square). At `n = 8` this covers all 8,637,487,551 six-sets and all 359,895,314,625 seven-sets through a fixed move.
+**(v) Blocking (FINITE-EXACT; plus a PROVED 2-factor statement).** For `n = 5, 6, 7, 8` the fewest deletions leaving `G_n` without a Hamiltonian cycle is `β(n) = 7`. The minimum sets are exactly the `8 n^2` stars (all but one move at a square). At `n = 8` this covers all 8,637,487,551 six-sets and all 359,895,314,625 seven-sets through a fixed move.
+
+For even `n`, Ore's bipartite `f`-factor count gives: deleting `d` edges kills every 2-factor only if `d >= 6(|S| - |T|) + 1 >= 7`. Equality forces `|S| = |T| + 1`, `N(T) = S`, and an 8-edge boundary of `S ∪ T`. The restricted edge connectivity of `G_n` is 14 for `n = 5, 6, 7, 8, 10, 12` (max-flow, FINITE-EXACT). So for even `n ∈ {6, 8, 10, 12}`, the 7-sets killing every 2-factor are exactly the stars.
 
 **(vi) Seven is a Kloosterman graph; the Ramanujan knight tori (PROVED; CITED Weil).**
 
@@ -104,4 +106,4 @@ The CP-SAT lazy-cut model independently gives `β(5) = 7` with stars only.
   * (i) is the "two places" of the eighteenth S15 Collatz note (`n < 6^L` is fixed by its residues mod `2^L`, `3^L`) at `L = 1`. This is an ANALOGY: the parts are a rook and a bishop, not halving and tripling.
   * (ii) puts the knight on the `NQR_7` side and the queen on the `QR_7` side. That is the same quadratic character as the nineteenth note's real/2-adic codes of the trivial cycle, an EXPLAINED COINCIDENCE with no map between cycles and leaps.
 * **Langlands-adjacent reading of (vi) (typed).** `Kl_7(c)` is the trace of Frobenius at `c` on Deligne's rank-2 Kloosterman sheaf over `G_m/F_7`, whose Riemann hypothesis is the Weil bound (CITED). Kloosterman sheaves are geometric-Langlands eigensheaves (Heinloth–Ngô–Yun, CITED). So the 7x7 knight torus is a finite graph whose spectrum is a Frobenius-trace table, and whose expansion is a Riemann hypothesis. This is an exact identification, with no consequence for tours or for Collatz.
-* Six fails every field-like structure that seven has: transversality (iii), toroidal queens (`gcd(n, 6) = 1`, Pólya, CITED), and orthogonal Latin squares / `AG(2, 6)` (Tarry, CITED).
+* Six fails every field-like structure that seven has: transversality (iii), toroidal queens (`gcd(n, 6) = 1`, Pólya, CITED), and orthogonal Latin squares / an affine plane of order 6 (Tarry, CITED).

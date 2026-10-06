@@ -1,4 +1,4 @@
-# Sixes and sevens: stripping one square is the knight's Hall law on every torus; the 6x6 and 7x7 knight tori are the two-place product and the Paley torus; one point-stripping ladder (PSL(2,7) > Borel > torus) carries Paley, THM-4524, the Collatz Frobenius and the octonionic J; the S6 manuscript and the Lyapunov n = 6 case
+# Sixes and sevens: stripping one square is the knight's Hall law on every torus tested; the 6x6 and 7x7 knight tori are the two-place product and the Paley torus; one point-stripping ladder (PSL(2,7) > Borel > torus) carries Paley, THM-4524, the Collatz Frobenius and the octonionic J; the S6 manuscript and the Lyapunov n = 6 case
 
 **Session:** mac-mini-2026-10-06-sixseven (worktree `math-wt-chessboard-20261006`), 2026-10-06. This continues the chessboard session ([chessboard_weave_20261006.md](chessboard_weave_20261006.md)).
 
@@ -49,18 +49,16 @@
    * Strip `∞`. The stabiliser is the Borel subgroup (order 21) `= Aut(P_7)`, whose only invariant tournaments are `P_7` and its reverse.
    * Strip `0`. The stabiliser is the split torus `{x ↦ 2^k x}` (order 3) `= Aut(P_7 − 0)`. Here `P_7 − 0` is THM-4524's unique all-odd 6-tournament.
 
-   The same order-3 group is note 19's Frobenius, the Collatz map on its trivial cycle `{1, 4, 2}`. On the octonion side, the three Fano lines through a point pair its out-neighbours `QR_7` with its in-neighbours `NQR_7` by `q ↦ 3q`. That pairing is the almost-complex structure `J` of `S^6` on the tangent space at a basis point. The knight's "strip one square" is the same gesture one level down, as an ANALOGY only: blocking costs `8 − 1` because a square must be starved.
-4. **Tournaments are less rigid.** In the Paley tournament `P_7` the Hamiltonian-path blocking number is also its Hall bound (`6 = N − 1`). But its 63 minimum blocking sets come in four Hall types:
-   * 7 stars;
-   * 21 "two sources";
-   * 21 "two sinks";
-   * 14 "three vertices with one common out- or in-neighbour".
+   The same order-3 group is note 19's Frobenius, the Collatz map on its trivial cycle `{1, 4, 2}`. On the octonion side, the three Fano lines through a point pair its out-neighbours `QR_7` with its in-neighbours `NQR_7` by `q ↦ 3q`. That pairing is the almost-complex structure `J` of `S^6` on the tangent space at a basis point. That the knight's degree 8 equals `|P^1(F_7)|` is NUMEROLOGY: the knight's "strip one square" is a degree count, not this ladder.
+4. **Tournaments are less rigid.** In the Paley tournament `P_7` the Hamiltonian-path blocking number is 6, its Hall bound `N − 1`. Of its 63 minimum blocking sets:
+   * 56 are Hall obstructions: 21 "two sources", 21 "two sinks", and 14 "three vertices with one common out- or in-neighbour";
+   * 7 are stars. A star blocks by isolating a vertex but leaves a 1-path-cycle factor (the vertex plus two cyclic triangles), so it is an "exotic minimum" in the chessboard note's sense.
 
-   On the knight torus only stars occur. Lean-checked.
+   On the knight torus the star *is* the Hall (2-factor) obstruction, and nothing else blocks. The count 63 and the star are Lean-checked; the type split is checked in Python.
 5. **The S6 manuscript.** The relation is a typed ANALOGY: the manuscript puts all of `χ(S^6) = 2` in one singular fibre (repo ledger: `χ(W) = 2`; THM-3991's one-Euler-fibre grammar), and the knight torus puts its entire 2-factor deficiency at one square. Both are local–global index counts with one nonzero local term. Nothing transfers in either direction. The manuscript's status in the repo, MANUSCRIPT CLAIM / UNDER AUDIT, is unchanged.
 6. **Lyapunov, 6 against 7 (HYP-9212).** The search uses Kressner–Vandereycken's own discovery recipe (Adam on the gap, which escapes the "equality ridge" that L-BFGS cannot leave). It finds order-7 counterexamples in 37 of 1712 runs, order-8 in 25 of 100, and order-9 in 4 of 9, but **0 of 6000 at order 6**.
 
-   Along the KV branch, the 7x7 margin decays like `0.15 m^1.47` as the matrix is pushed toward `A_6 ⊕ 0`, and every stripped 6x6 block falls short. The strongest order-7 counterexamples share KV's shape (five large singular values and two small), but weaker ones do not, so there is no `5 + 2` mechanism.
+   Along the KV branch, the 7x7 margin found by continuation decays to 0 as the matrix is pushed toward `A_6 ⊕ 0` (log-slope 1.2–1.5, optimizer-dependent), and every stripped 6x6 block falls short. The strongest order-7 counterexamples share KV's shape (five large singular values and two small), but weaker ones do not, so there is no `5 + 2` mechanism.
 
    This is evidence, not proof: `n = 6` stays OPEN, now recorded as HYP-9212 ("the conjecture holds at 6").
 
@@ -121,7 +119,7 @@ Full automorphism groups (nauty), with generic value `8 n^2`:
 
 **Transversality lemma (PROVED).** The pairwise determinants of the four knight directions `(1,2), (2,1), (1,−2), (2,−1)` are `±3, ±4, ±5`. So every two direction classes of `n`-cycles form a grid (each cycle of one class meets each cycle of the other once) iff `gcd(n, 30) = 1`. The least such `n > 1` is 7.
 
-Compare the toroidal `n`-queens problem, solvable iff `gcd(n, 6) = 1` (Pólya, CITED), and Euler's 36 officers: there are no two orthogonal Latin squares of order 6, so no affine plane `AG(2, 6)` (Tarry, CITED). Six fails every one of these field-like structures, and seven has all of them.
+Compare the toroidal `n`-queens problem, solvable iff `gcd(n, 6) = 1` (Pólya, CITED), and Euler's 36 officers: there are no two orthogonal Latin squares of order 6, so no affine plane of order 6 (Tarry, CITED). Six fails every one of these field-like structures, and seven has all of them.
 
 **Typed bridge to note 19.** Note 19 ([collatz_paley_bridge_20261001.md](collatz_paley_bridge_20261001.md)) reads the trivial Collatz cycle as the code `QR_7` (real place) and `NQR_7` (2-adic place). The 7×7 torus reads the queen as `QR_7` and the knight as `NQR_7`. Both splits are exact. The coincidence of labels is an EXPLAINED COINCIDENCE: both are the quadratic character of `F_7`. There is no map between Collatz cycles and leaps.
 
@@ -147,12 +145,12 @@ The 7x7 knight torus adds a function-field rung: a rank-2 local system on `G_m/F
 
 | step | object | symmetry | repo item |
 |---|---|---|---|
-| 8 points | `P^1(F_7)` | `PSL(2,7)`, order 168, 2-transitive, so no invariant tournament | knight slopes vs queen slopes (2.2) |
+| 8 points | `P^1(F_7)` | `PSL(2,7)`, order 168, 2-transitive, so no invariant tournament | the 8 slopes of the 7x7 torus (2.2); the queen/knight 4+4 split is **not** `PSL(2,7)`-invariant (stabiliser of order 4; 8 in `PGL(2,7)`) |
 | strip `∞` (7 points) | Paley `P_7` on `F_7` | Borel `{x ↦ ax + b : a ∈ QR_7}`, order 21 `= Aut(P_7)`; its 2 orbitals give exactly `P_7` and its reverse | flip-rank apex, LRC Paley heptagon |
 | strip `0` (6 points) | `P_7 − 0` | split torus `{x ↦ x, 2x, 4x}`, order 3 `= Aut(P_7 − 0)` | THM-4524's unique all-odd 6-tournament |
 | the torus acting on `QR_7` | `{1, 2, 4}` | `x ↦ 2x` | note 19 Prop. 5: Collatz `T` on its trivial cycle |
 
-So the Frobenius that, by note 19, is "the only part of Aut(P_7) Collatz realises" is exactly the full automorphism group of THM-4524's 6-tournament. The 7 translations that the carry kills are the unipotent radical of the Borel. Note 19's "maximal symmetry against no symmetry" is, in this language, Borel against torus.
+So the Frobenius `<x2>`, which by note 19 (Proposition 5) is the part of `Aut(P_7)` that Collatz realises on its trivial cycle, is exactly the full automorphism group of THM-4524's 6-tournament. The 6 non-trivial translations that the carry kills make up, with the identity, the unipotent radical of the Borel. Note 19's "maximal symmetry against no symmetry" is, in this language, Borel against torus.
 
 **Modular curves (CITED, standard; typed DICTIONARY).** The Borel is `Γ_0(7)` mod 7, and the torus is `Γ_0(7) ∩ Γ^0(7)` mod 7, conjugate to `Γ_0(49)`. The ladder `8 -> 7 -> 6` is therefore the tower `X(1) <- X_0(7) <- X_0(49)`, ending at the genus-1 CM curve 49a1 (CM by `Q(sqrt(-7))`). `QR_7`, the code of the trivial Collatz cycle, is the set of residues of the primes split in `Q(sqrt(-7))`. In this reading, the symmetry the trivial cycle keeps is the one uniformising a CM elliptic curve, a GL(1)-over-`Q(sqrt(-7))` Langlands object. This is consistent with S16's finding that all exact Collatz arithmetic is abelian. No Collatz consequence follows.
 
@@ -162,7 +160,7 @@ Within `P_7 − 0`:
 
 * `QR_7` and `NQR_7` are cyclic triangles;
 * the Fano matching arcs run `QR → NQR`;
-* the only `NQR → QR` arcs are the antipodal arcs `u → −u`, the orbit HYP-9167 proves odd.
+* the only `NQR → QR` arcs are the antipodal arcs `u → −u`, the orbit proved odd in THM-4524 (recorded in HYP-9167).
 
 **Typed.** All identities are exact. "S^6 is the octonionic shadow of THM-4524's tournament" is an ANALOGY: no parity statement about Hamiltonian paths follows from `J`, and `J` is not integrable (the repo's Nijenhuis check, 2026-08-24).
 
@@ -174,16 +172,21 @@ For the Paley tournament `P_7`, Hamiltonian-path blocking:
 * the star at a vertex blocks;
 * exactly 63 six-arc sets block.
 
-So `β(P_7) = 6 = hall = N − 1`, as the chessboard session proved for every regular tournament (`hall = N − 1`). The 63 minimum sets are all Hall obstructions:
+So `β(P_7) = 6 = hall = N − 1`, as the chessboard session proved for every regular tournament (`hall = N − 1`). The 63 minimum sets split as follows. Hall obstruction means: kills every 1-path-cycle factor (HYP-9168).
 
-| type | count | Hall set |
+| type | count | Hall obstruction? |
 |---|---|---|
-| strip a vertex (star) | 7 | `|S| = 1` |
-| two sources | 21 | `|S| = 2`, empty in-neighbourhood |
-| two sinks | 21 | `|S| = 2`, empty out-neighbourhood |
-| three vertices with one common out- (or in-)neighbour | 14 | `|S| = 3`, neighbourhood of size 1 |
+| two sources | 21 | yes: `|S| = 2`, empty in-neighbourhood |
+| two sinks | 21 | yes: `|S| = 2`, empty out-neighbourhood |
+| three vertices with one common out- (or in-)neighbour | 14 | yes: `|S| = 3`, neighbourhood of size 1 |
+| strip a vertex (star) | 7 | **no**: exotic. The isolated vertex is a 1-vertex path and `P_7 − v` has two cyclic triangles, so a 1-path-cycle factor survives; Hamiltonian paths die simply because the isolated vertex has no arcs |
 
-On the 8-regular bipartite knight torus, Ore's count `d ≥ 6(|S| − |T|) + 1` reaches 7 only when `|S| = |T| + 1` and `N(T) = S`. The obvious solutions (`T = ∅`, or `T` = a colour class minus a square) both produce the star, and the census shows nothing else blocks. On a 3-regular tournament, by contrast, Hall sets of sizes 1, 2 and 3 all cost exactly `2k = 6`.
+On the 8-regular bipartite knight torus, Ore's count `d ≥ 6(|S| − |T|) + 1` reaches 7 only when `|S| = |T| + 1`, `N(T) = S`, and the vertex set `S ∪ T` has exactly 8 boundary edges.
+
+* The two trivial cases (`T = ∅`, or `T` = a colour class minus a square) both produce the star.
+* Any other case needs an 8-edge cut with at least 2 vertices on each side. But the restricted edge connectivity of `G_n` is 14 (every cut separating two disjoint moves has `>= 14` edges) for `n = 5, 6, 7, 8, 10, 12`, by our max-flow computation, which reproduces the audit's.
+
+So for even `n ∈ {6, 8, 10, 12}`, the 7-sets killing every 2-factor are exactly the stars (PROVED, given the cut computation). The census shows the same for Hamiltonian cycles at `n <= 8`. On a 3-regular tournament, by contrast, Hall sets of sizes 1, 2 and 3 all cost exactly `2k = 6`, and stars are exotic.
 
 The knight's "only one way" is a degree-ratio phenomenon (8 against 2), not a 6- or 7-phenomenon. The "only stars" pattern has one more repo precedent: Sumner `n = 5` fails on 7-vertex tournaments only at the regular ones and only for the pure stars (degree 3 against the star's 4; [sumner_t5_petersen_collatz_20261005.md](sumner_t5_petersen_collatz_20261005.md): "exactly the 3 regular 7-tournaments, exactly the two pure stars").
 
@@ -195,8 +198,8 @@ The manuscript [*The (3,4,∞) modular family of 2-tori, completed at its three 
 |---|---|---|
 | global question: is there a closed tour (2-factor plus connectivity)? | is the compactified torus family `X` homeomorphic to `S^6`? | — |
 | index: Ore/Tutte deficiency, a sum of local terms | Euler characteristic: `χ(X) = Σ χ(singular fibres)` because the 2-torus fibres have `χ = 0` | ANALOGY |
-| the whole deficiency at one square (the star) | the whole `χ = 2` in the cusp fibre `W` (ledger: `χ(W) = 2`, homology ranks `(1,2,4,2,1)`; bielliptic fibres contribute 0) | ANALOGY, exact on each side |
-| "only stars" (no other minimum) | THM-3991: one-Euler-fibre periodic toric cusps have `χ(W) = d·n!`, so `χ = 2` forces torus dimension `n = 2`, `d = 1` | ANALOGY ("uniqueness of the place where the index lives") |
+| the whole deficiency at one square (the star) | the whole `χ = 2` in the cusp fibre `W` (ledger: `χ(W) = 2` given the manuscript's stated quotient, homology ranks `(1,2,4,2,1)`; bielliptic fibres contribute 0) | ANALOGY |
+| "only stars" (no other minimum) | THM-3991: one-Euler-fibre periodic toric cusps have `χ(W) = d·n!`. For an irreducible fibre (`d = 1`), `χ = 2` forces torus dimension `n = 2`; `(n, d) = (1, 2)` is excluded by irreducibility | ANALOGY ("uniqueness of the place where the index lives") |
 | 8 moves, blocking `8 − 1` | `S^6 ⊂ Im 𝕆 = R^7 ⊂ 𝕆 = R^8`; `T_x S^6 = C^3` from the 3 Fano lines through `x` (section 3) | exact on the octonion side only |
 
 **Numerology rejected.** The knight's pairwise determinants 3, 4, 5 set beside the manuscript's triangle group `Δ(3,4,∞)` and `p = 12ℓ_0 − 4ℓ_1 − 3ℓ_2` is NUMEROLOGY. Its orbifold orders come from the monodromy matrices `T_1^3 = T_2^4 = 1`, not from any leap.
@@ -207,11 +210,15 @@ The manuscript [*The (3,4,∞) modular family of 2-tori, completed at its three 
 
 The setting is the symmetric-maximizer conjecture for `L_A(X) = AX + XA^T` ([octonions reflection, section 8](../../07-reflections/octonions-at-the-center-s6-bott-lyapunov-and-class-rank-frontiers-root-20260824.md); Kressner–Vandereycken, arXiv:2608.20875): it is known for `n ≤ 5`, false for `n ≥ 7`, and open at `n = 6`. We maximise `h(A) = log(σ_skew/σ_sym)` with exact gradients.
 
-* **The KV basin.** KV's integer matrix has `h = 1.80e−4`. Its local maximum has `h = 7.31e−3`, so `σ_skew/σ_sym = 1.0073`, about 40 times KV's margin. The structure is unchanged: two near-zero rows and a lower block pattern 2 → 3 → 2.
-* **Stripping a dimension.** Put `μ(A) = λ_min(A^T A + A A^T)/|A|_F^2`. This is zero iff `A` is orthogonally a padded 6×6 matrix `A_6 ⊕ 0`, which is a counterexample iff `A_6` is (padding block identity, reflection section 8.1). Along the branch, maximise `h` subject to `μ ≤ m`:
-  * `h ≈ 0.146 · m^1.47` as `m → 0` (26 continuation steps, `0.15 ≥ m ≥ 0.0032`);
-  * at every step the stripped 6×6 block has `h ≈ −4 h_7`;
-  * 7 local re-optimisations of the stripped block never exceed `−1.3e−6`.
+* **The KV basin.** KV's integer matrix has `h = 1.80e−4`. L-BFGS-B ascent from it stops at `h = 7.31e−3`, which is **not** a local maximum: the audit's ascent reaches `h = 7.759e−3` (ratio `1.00779`, about 43 times KV's margin). The structure persists: two near-zero rows and a lower block pattern 2 → 3 → 2.
+* **Stripping a dimension.** Put `μ(A) = λ_min(A^T A + A A^T)/|A|_F^2`. This is zero iff `A` is orthogonally a padded 6×6 matrix `A_6 ⊕ 0`, which is a counterexample iff `A_6` is.
+  * The forward direction is the reflection's padding identity (section 8.1).
+  * Converse: `||L_A|Sym||^2 >= 2||A||_2^2` (take `X = v v^T` for a top right singular vector `v`), so the cross block, of norm `||A||_2`, never decides.
+
+  Along the branch, maximise `h` subject to `μ ≤ m` (26 continuation steps, `0.15 ≥ m ≥ 0.0032`). Our continuation gives `h_7 ≈ 0.146 · m^1.47`. These are optimizer-dependent lower bounds on the frontier: the audit's feasible points are larger (`3.94e−3` at `m = 0.06`, `8.09e−4` at `0.015`, `1.09e−4` at `0.0032`; log-slope 1.2–1.3), and the ratio `h_6/h_7` drifts from `−1.0` to `−6.8`. What is robust:
+  * `h_7 → 0` as `m → 0`;
+  * every stripped 6×6 block has `h < 0`;
+  * 7 local re-optimisations of each stripped block never exceed `−1.3e−6`.
 
   So, numerically, this basin's counterexamples need the seventh dimension: by the fit, their margin tends to 0 as it is removed.
 * **L-BFGS / structured random searches.**
@@ -235,7 +242,7 @@ The setting is the symmetric-maximizer conjecture for `L_A(X) = AX + XA^T` ([oct
   * The `5 + 2` profile is a feature of the top basin, not a necessary condition.
   * A rank-constrained Adam (`A = U V^T`) failed its own `n = 7` control (0/200), so its order-6 runs (0/1200) are not counted.
 
-**Verdict.** No 6x6 counterexample. With working positive controls at orders 7, 8 and 9, the order-6 failure rate is real evidence, recorded as **HYP-9212 (the conjecture holds at `n = 6`)**. `n = 6` is still OPEN; a rarer basin cannot be excluded. The KV-branch stripping law `h_7 ~ m^1.5` and the top-basin singular profile are the new structural data. In this note's motif, removing the seventh coordinate kills the 7x7 phenomenon here, just as removing one square kills every tour. That shared motif is an ANALOGY.
+**Verdict.** No 6x6 counterexample. With working positive controls at orders 7, 8 and 9, the order-6 failure rate is real evidence, recorded as **HYP-9212 (the conjecture holds at `n = 6`)**. `n = 6` is still OPEN; a rarer basin cannot be excluded. The decay of the KV-branch margin under stripping and the top-basin singular profile are the new structural data. In this note's motif, removing the seventh coordinate kills the 7x7 phenomenon here, just as removing one square kills every tour. That shared motif is an ANALOGY.
 
 **Next experiment.** Run Adam at order 6 with structured starts near the stripped top basin (`A_7` with `μ` small) and with step-size schedules tuned on the order-7 hit rate. Seek a classification of the order-7 basins (the top basin recurs; how many others?).
 
@@ -250,7 +257,7 @@ The setting is the symmetric-maximizer conjecture for `L_A(X) = AX + XA^T` ([oct
 * Splitting:
   * `2 = 𝔭^4` (`f = 2`);
   * 3 has Frobenius type `(6,2)`, 7 has `(7,1)`, 11 has `(4,3,1)`, 19 has `(4,2,1,1)`;
-  * 5 and 31 ramify with `e = 2` at one prime each.
+  * 5, 31 and 104053 each ramify with `e = 2` at one prime.
 
 So the optimal 11-square side lives in an S8 octic with trivial class group, while its quadratic resolvent `Q(√−16128215)` has class number 5444 (S16).
 
@@ -265,7 +272,7 @@ S16 read 18 and 19 as the procgen sessions S18 (Artin, `20/19`) and S19 (Mazur).
 | Lemma 11 splits at order `m/9`: charge low orders per output, count high orders globally | the quantifier exchange (note 18, Prop. 2): below depth `log_3 n` witnesses are shared, beyond it the only witness is `n` itself | ANALOGY ("sharing horizon"); no Collatz bound follows |
 | strings over a 10-letter alphabet, Kronecker/Yates encodings | cycle words over `{0,1}`, codes as `×2`-orbits mod `2^L − 1` (note 19) | no correspondence: the recursion is not shift-invariant and the codes are |
 
-**Where the paper's 18 and 19 come from (PROVED from the paper's displays).** Leaves of order `d` number `β_d = C(L, m−d) 9^(L−m+d)`, with ratio `β_d/β_(d−1) = 9(m−d+1)/(L−m+d) ≤ 9m/(L−m+1)`. This is below `1/2` for every `m` iff `L − m + 1 > 18m`. So `L = 19m` is the least integer ratio, `19 = 2·9 + 1`, where 9 is the number of outer-product terms `P_ij` of Schönhage's identity. The exponent in `N ≥ D^18` then makes a tile fit, `N ≥ K N_0 = C(19m, m) 3^(18m)`, because `C(19m, m) 3^(18m) ≤ (19e · 3^18)^m ≤ 4^(18m) = D^18`, and makes the encodings affordable (the paper's (6)). Both are presentation constants (the paper says so); they carry no Collatz content.
+**Where the paper's 18 and 19 come from (PROVED from the paper's displays).** Leaves of order `d` number `β_d = C(L, m−d) 9^(L−m+d)`, with ratio `β_d/β_(d−1) = 9(m−d+1)/(L−m+d) ≤ 9m/(L−m+1)`. This is below `1/2` for every `1 <= d <= m`, uniformly in `m`, iff `L − m + 1 > 18m`. So `L = 19m` is the least integer ratio, `19 = 2·9 + 1`, where 9 is the number of outer-product terms `P_ij` of Schönhage's identity. The exponent in `N ≥ D^18` then makes a tile fit, `N ≥ K N_0 = C(19m, m) 3^(18m)`, because `C(19m, m) 3^(18m) ≤ (19e · 3^18)^m ≤ 4^(18m) = D^18`, and makes the encodings affordable (the paper's (6)). Both are presentation constants (the paper says so); they carry no Collatz content.
 
 **Collatz 18/19 ledger (NUMEROLOGY, recorded so it is not re-derived):**
 
@@ -298,9 +305,9 @@ Real cycle exclusion (Eliahou, Simons–de Weger, Hercher) does not enumerate wo
 | `G_7 = E_7(5)`: spectrum `= {8} ∪ {-Kl_7(c)}` (each ×8), Ramanujan by Weil; Ramanujan knight tori exactly `n ∈ {5,6,7,8,10}` | PROVED (CITED Weil, Kloosterman norm identity) |
 | ladder `PSL(2,7) > Borel = Aut(P_7) > torus = Aut(P_7 − 0) = note 19's Frobenius` | PROVED + LEAN-CHECKED (orders 21, 3) |
 | octonionic `J` at `e_0` = Fano matching `q ↦ 3q`, `QR → NQR` | PROVED |
-| `β(P_7) = 6`, 63 minima in four Hall types | FINITE-EXACT + LEAN-CHECKED |
+| `β(P_7) = 6`, 63 minima: 56 Hall obstructions (three types) and 7 exotic stars | FINITE-EXACT (count and star LEAN-CHECKED; types in Python) |
 | knight sentence vs S6 manuscript | ANALOGY (index localisation); manuscript status unchanged |
-| Lyapunov `n = 6` | OPEN (HYP-9212: holds); FINITE-NUMERICAL: Adam 0/6000 at `n = 6` against 37/1712, 25/100, 4/9 at `n = 7, 8, 9`; stripping law `h ~ 0.146 m^1.47` |
+| Lyapunov `n = 6` | OPEN (HYP-9212: holds); FINITE-NUMERICAL: Adam 0/6000 at `n = 6` against 37/1712, 25/100, 4/9 at `n = 7, 8, 9`; KV-branch margin `-> 0` under stripping (optimizer-dependent rate) |
 | octic: polredabs model, `h(K) = 1` certified, unit rank 4 | FINITE-EXACT |
 | 3SUM paper vs S15 notes 18/19 | ANALOGY (private leaf / sharing horizon); 18, 19 = presentation constants; cycle-search map exact, gain none |
 
@@ -308,12 +315,44 @@ Real cycle exclusion (Eliahou, Simons–de Weger, Hercher) does not enumerate wo
 
 * **D-a (HYP-9211).** Prove `β(n) = 7` for all `n ≥ 5`. Exclusion of non-star 7-sets needs a robustness lemma: an 8-regular, edge-transitive, 8-connected graph stays Hamiltonian after any 6 deletions. Possible routes are Hamilton-connectedness of `G_n − v` or a Pósa-rotation argument. For odd `n`, a Tutte `f`-factor count would replace Ore's.
 * **D-b.** Does the twin structure of `G_6` (pairs `x, x + (3,3)`) force a parity law for 6×6 torus tours, in the way THM-4524's antipodal orbit forces oddness?
-* **D-c.** Is there a ladder statement one level up? The non-split torus `μ_8` (knight) against the split torus `⟨2⟩` (Collatz trivial cycle) of `GL_2(F_7)` are the two tori whose characters index, respectively, the cuspidal and principal-series representations (Deligne–Lusztig for `GL_2(F_q)`, CITED). This is a dictionary only; is there any finite statement it predicts?
+* **D-c.** Is there a ladder statement one level up? The knight lives on `μ_8`, the norm-one subgroup of the non-split torus `F_49^*` (order 48). The Collatz trivial cycle lives on `<x2>`, the image in `PSL_2(F_7)` of `SL_2`'s split torus, inside the split torus `F_7^* × F_7^*` of `GL_2` (order 36). The cuspidal and principal-series representations of `GL_2(F_7)` are indexed by characters of these two maximal tori (Deligne–Lusztig, CITED). This is a dictionary only; is there any finite statement it predicts?
 * **D-d (Lyapunov, HYP-9212).** Classify the order-7 counterexample basins (one recurrent top basin with KV's rank-5 shape, plus weaker ones). Then run seeded order-6 searches from each basin's stripped limit.
 
 ## 10. Audit record
 
-*(to be filled by the independent audit)*
+**Audit 1** (2026-10-06, blind subagent, own code in the session scratchpad `audit_sixseven/`; none of the author's scripts run).
+
+**Reproduced:**
+
+* THM-4552 (i)–(iv): the CRT isomorphism (nauty canonical forms), 18 twin pairs, `|Aut(G_6)| = 2^18·144`; the `F_49` facts, including `z` square iff `N(z)^3 = 1` on all 48 units; transversality for `n = 5..60`; the `|Aut|/n^2` table; the linear stabilisers to `n = 26`.
+* The blocking census, by an independent method (branching on an unhit Hamiltonian cycle, validated against brute force and CP-SAT on 1,350 instances): `n = 5, 6, 7` stars only, `n = 8` all six-sets. There were also about 800k structured and random spot checks at `n = 7, 8`. The Ore count was checked.
+* THM-4553 (i)–(iii): the `PSL(2,7)` ladder, the associator alternating on all 512 basis triples, and `J`.
+* `H(P_7) = 189`, the count 63, and the Lean file (no `sorryAx`).
+* The octic data, including `h(Q(√−16128215)) = 5444`.
+* The 18/19 derivation (`L = 19m` is the least `L` for every `m <= 199`), the numerology ledger, and the cycle-composition formula (at `(L, p) = (11, 7)` the search returns exactly the `−17` cycle).
+* The KV certificate.
+
+**Corrections applied (MISTAKE-567):**
+
+* The 7 stars of `P_7` are exotic minima, not Hall obstructions. The split is 56 + 7.
+* The KV-basin point was not a local maximum: ascent reaches `7.759e−3`.
+* The stripping "law" was retyped as optimizer-dependent lower bounds.
+* "8 → 7" is NUMEROLOGY.
+* The 4+4 slope split is not `PSL(2,7)`-invariant.
+* The Deligne–Lusztig tori were renamed correctly.
+* `χ = 2` forces `n = 2` only for irreducible fibres.
+* Credit for the antipodal orbit goes to THM-4524.
+* Smaller wording fixes: affine plane of order 6; 6 non-trivial translations; torus symbol `H`; "every `d <= m`"; 104053 added to the ramified primes.
+
+**Items the audit flagged that were already fixed before it finished:**
+
+* the `n = 7` row;
+* the `n = 8` census, completed with 14 stars among `C(255,6)` seven-sets and recorded in the `.out`;
+* "order 8 only at 7" changed to "among `n >= 6`".
+
+The audit also supplied the restricted-edge-connectivity value 14, which this session re-derived after fixing a multi-edge bug in its own first attempt (13 by mistake), and the padding converse.
+
+**Audit 2** (the late additions: section 2.3 Kloosterman/Ramanujan, the modular-curve dictionary, the Ore/λ' paragraph, the Adam table and HYP-9212): *(in progress)*
 
 ## 11. Reproduction
 

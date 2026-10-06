@@ -5,7 +5,8 @@ status: >
   OPEN. FINITE-EXACT (stars only) for n = 5, 6, 7, 8 (census in
   04-computation/experiments/sixseven_20261006_knight_torusblock_n.out). Upper bound 7 trivial (a star);
   the 2-factor (Hall) bound is 7 for even n by Ore's bipartite f-factor count (d >= 6(|S|-|T|)+1); its
-  obvious tight witnesses (T empty, or T a colour class minus a square) both give the star.
+  obvious tight witnesses (T empty, or T a colour class minus a square) both give the star, and with restricted
+  edge connectivity 14 (n = 5..8, 10, 12) no other 7-set kills every 2-factor for even n in {6, 8, 10, 12}.
 source: mac-mini-2026-10-06-sixseven, 05-knowledge/results/sixes_and_sevens_20261006.md, section 1
 related:
   - 01-canon/theorems/THM-4552-exceptional-knight-tori-six-is-a-two-place-product-seven-is-a-paley-torus.md

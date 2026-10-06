@@ -46,7 +46,9 @@ F. octonions from the Fano plane
   ok   the only I -> O arcs are the antipodal arcs u -> -u
 G. Paley P_7: Hamiltonian-path blocking
   beta(P_7) = 6 ; minimum blocking sets: 63 {'two sinks': 21, 'star': 7, 'two sources': 21, 'three vertices, one common out- or in-neighbour': 14}
-  ok   beta(P_7) = 6 = hall = N - 1; 63 minimum sets, all Hall obstructions: 7 stars, 21 + 21 two sources/sinks, 14 triples
+  ok   beta(P_7) = 6 = hall = N - 1; 63 minimum sets: 7 stars, 21 + 21 two sources/sinks, 14 triples
+  ok   each star leaves a 1-path-cycle factor (the isolated vertex as the path + two cyclic triangles): exotic minima, NOT Hall obstructions
+  ok   the other 56 minimum sets kill every 1-path-cycle factor: Hall obstructions
 H. spectra: the 7x7 knight torus is the finite Euclidean graph E_7(5), a Kloosterman / Ramanujan graph
   ok   Ramanujan knight tori (all nontrivial |lambda| <= 2 sqrt 7), n = 5..60: [5, 6, 7, 8, 10]
   ok   for n >= 12 the character (1,0) alone gives 4cos(2pi/n) + 4cos(4pi/n) >= 2 + 2 sqrt 3 > 2 sqrt 7 (checked to 2000; monotone)
