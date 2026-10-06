@@ -2032,6 +2032,19 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
+## MISTAKE-563 (2026-10-05, mac-mini trees/tournaments session; found while answering the owner's exotic-sphere prompt) -- the legacy exotic-sphere script `04-computation/surgery_exotic_23.py` (opus S84, 2026-03-14) has wrong Kervaire--Milnor orders and other arithmetic errors, and its "(2,3) lens" readings were logged as CONFIRMED hypotheses without typing
+
+- **Claims (historical, untyped; HYP-1196/1197/1198/1210 in the historical index call them CONFIRMED):**
+  - (1) Part 2 of the script applies both the factor `a_k = 2` and `numerator(4 B_{2k}/k)` in `|bP_{4k}|`, so every odd `k` is doubled: it prints `|bP_12| = 1984`, `|bP_20| = 523264`, `|bP_28| = 134201344` (`surgery_exotic_23.out:84, 94, 104`); the correct orders are `992`, `261632`, `67100672` (`|bP_{4k}| = 2^{2k-2}(2^{2k-1}-1) num(4B_k/k)`, `B_k = |B_{2k}|`; checked against `|Theta_19| = 523264 = 2 |bP_20|`, `|Theta_23| = 69524373504 = 48 |bP_24|`, A001676).
+  - (2) It hard-codes `bP_20 = 130816` with `|coker J_19| = 4` (py:191, 548-549, 566); correct: `261632` and `Z/2`.
+  - (3) "Milnor's mu invariant = signature of the bounding manifold mod 7" (py:399): Milnor's `lambda` is `2 p_1^2 - sigma (mod 7)`, the Eells--Kuiper `mu` is mod 28.
+  - (4) `|pi_1(Sigma(2,3,7))| = 42`, `|pi_1(Sigma(2,3,11))| = 132` (`knot_3manifold_23.py:343-346`): both groups are infinite (only `Sigma(2,3,5)` has finite `pi_1`, of order 120).
+  - (5) `sig(K3) = -16` beside "+-24 corresponds to K3" (py:311-313); image-of-J orders list "240" for the 8th term where `16320` is meant (`homotopy_species_23.out:97`); the Kervaire-invariant status "MAYBE 126" predates Lin--Wang--Xu 2024.
+  - (6) The readings "28 = KEY1^2 (KEY1^KEY2 - 1)", "7 = H_forb_1 controls the exotic 7-spheres", "R(3,8) = 28 = |Theta_7|" were recorded as CONFIRMED hypotheses; they are coincidences of small numbers with no map (MISTAKE-028's "one data point is not a pattern" applies).
+- **Why it was wrong:** the `bP` formula was assembled from two secondary statements of the Kervaire--Milnor order that use incompatible conventions (one already absorbs `a_k`); none of the printed values was checked against a reference table; the "(2,3) lens" labels were promoted without a typed map.
+- **Correct framing:** `|bP_{4k}| = 2^{2k-2}(2^{2k-1}-1) num(4B_k/k)`; `|Theta_7| = 28`, `|Theta_11| = 992`, `|Theta_15| = 16256 = 2 * 8128`; the Euclid factor `2^{p-1}(2^p-1)` is perfect exactly when `2^p - 1` is a Mersenne prime (`p = 3, 5, 7, 13`), which is the entire content of "exotic sphere counts contain perfect numbers"; `992 = sigma(496)` and `16256 = sigma(8128)` arise from different mechanisms (the Bernoulli numerator vs `coker J`). Trees are plumbing graphs: the three 5-vertex trees are `A_5, D_5, D~_4` with Cartan determinants `6, 4, 0`; `E_8` is the unique unimodular tree on 8 vertices. See `05-knowledge/results/collatz_last_dip_cst_alphabet_exotic_20261005.md` section 3 and `trees5_dynkin_kervaire_milnor_20261005.{py,out}`.
+- **Lesson:** a numerical table copied into a script is a claim; print the reference values beside the computed ones and `check` them, and never log a numeral coincidence as CONFIRMED without the map.
+
 ## MISTAKE-562 (2026-10-05, opus S12 Syracuse window-alphabet note; found by the session's own adversarial subagent audit) -- a letter concatenation was read as an orbit valuation word, and a stale docstring contradicting the script's own output was pushed
 
 - **Claims:**
