@@ -34,6 +34,14 @@ transports existing floors across guarded edges or common futures. None starts
 a floor at an arbitrary unknown source. The new step here is a quantitative,
 source-only reverse compiler. Its finite tests do not upgrade its premise.
 
+The closing incoming audit `e0777a399` repairs the shadow note's whole-tail,
+asymptotic-density, and slope-converse overclaims. In particular the actual
+17-step rise165->167 has affine slope `3^17/2^27<1`: its carry prevents size
+descent. Our induction checks the actual endpoint against the actual source;
+a contracting coefficient is not substituted for that rank condition. The
+same audit's visit-count correction confirms that repeated states must be
+retained in an occupation ledger rather than erased by a set quotient.
+
 The portfolio is: **anchor**, close an independent measurement obligation;
 **niche**, a localizing-matrix certificate; **wildcard**, a global Poisson
 subsolution. The board is **deadline / hidden counter budget / signed
