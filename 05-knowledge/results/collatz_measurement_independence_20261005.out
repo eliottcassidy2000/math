@@ -1,0 +1,40 @@
+== S1. Shadow theorem: exhaustive residue audit, words of length <= 7 ==
+  458 rising words; 2281464 forward residue checks; 2368206 backward residue checks; no exceptions
+== S2. Segment ledger: direct predecessor audit, starts below 2^16 ==
+  rule stopping    : K W_sigma(y) = through(y) + exits(y) and defect = nu(y) - exits(y) at 2046 targets (direct enumeration of 52062 recorded predecessors)
+  rule single-rise : K W_sigma(y) = through(y) + exits(y) and defect = nu(y) - exits(y) at 2046 targets (direct enumeration of 43697 recorded predecessors)
+== S3. Beatty cones: primitive rising word exists at depth l iff {l log2 3} < log2(3/2) ==
+  depths with primitive cones (constructive), l<=60: [1, 2, 4, 6, 7, 9, 11, 12, 14, 16, 18, 19, 21, 23, 24, 26, 28, 30, 31, 33, 35, 36, 38, 40, 42, 43, 45, 47, 48, 50, 52, 53, 55, 57, 59, 60]
+== S4. Cone classes to depth 16 (numba) and the descent census to 2^28 ==
+  rising words visited: 2999301 (0.9s); new classes per depth: [1, 1, 0, 1, 0, 2, 8, 0, 28, 0, 124, 602, 0, 2498, 0, 12319]
+  cone density series: 1:0.33333 2:0.44444 3:0.44444 4:0.45679 5:0.45679 6:0.45953 7:0.46319 8:0.46319 9:0.46461 10:0.46461 11:0.46531 12:0.46645 13:0.46645 14:0.46697 15:0.46697 16:0.46726
+  descent set D below 2^28 (4.8s): density 0.468669 (units 0.703004); last blocks: [2^24): 0.46866 [2^25): 0.46867 [2^26): 0.46867 [2^27): 0.46867
+== S5. W-mass by class below 2^22: leaves / descent set / basin minima ==
+  root                                         1.000000  (35.08% of head 2.850934)
+  leaves (lambda head)                         0.656784  (23.04% of head 2.850934)
+  descent set D                                1.016542  (35.66% of head 2.850934)
+  basin minima (units, no smaller ancestor)    0.177608  (6.23% of head 2.850934)
+  counts: units 1398101, basin minima 415230 (0.2970 of units), D 982870
+== S6. Rising parity prefixes N(A) versus the exact first-descent census below 2^24 ==
+  h* = H(log_3 2) = 0.949956; log2 N(A)/A at A=30,60,120: 0.7869 0.8496 0.8891
+  A : #{n<2^24 odd, sigma_T(n) > A} vs N(A) 2^-(A-1) * (odd count)
+     4 :    3145728  vs      3145727.6   ratio 1.0000
+     8 :    1245184  vs      1245183.9   ratio 1.0000
+    12 :     925696  vs       925695.9   ratio 1.0000
+    16 :     541184  vs       541183.9   ratio 1.0000
+    20 :     437248  vs       437247.9   ratio 1.0000
+    23 :     337614  vs       337614.0   ratio 1.0000
+    30 :     199643  vs       199551.1   ratio 1.0005
+    40 :      97226  vs        97699.5   ratio 0.9952
+    60 :      31749  vs        32249.0   ratio 0.9845
+    80 :      11006  vs        11146.8   ratio 0.9874
+   100 :       3845  vs         4004.4   ratio 0.9602
+  max first-descent time below 2^24: 287 T-steps
+== S7. Codex kernel readout A_(m,d) = 9H_(d+1) - 8H_d from a certified bank ==
+  bank: rooted leaves below 2^18, certified mass 0.621951, uncertified/unenumerated mass u = 0.378049
+  targets outside the bank (indices [43691, 43704, 43717, 43730]): readout 9c-8b < 0 for d in {0,5,10,20,40} (never certified)
+  target 27 inside the bank: readouts at d=0,10,20,40,80,120: ['-6.24e+00', '-1.11e-04', '-1.21e-06', '-7.20e-11', '8.87e-11', '8.87e-11']
+  (lambda(27) = 8.870e-11; the readout needs 8(16/25)^d below the atom: d >~ 57)
+== Summary ==
+  checks: 4658591, total time 9.8s
+  json written: 05-knowledge/results/collatz_measurement_independence_20261005.json

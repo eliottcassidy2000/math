@@ -200,6 +200,10 @@ The wordwise converse fails:165 reaches167 in17 steps with total valuation27
 and slope `3^17/2^27<1`; the carry produces the size increase. This does not
 exclude a different rising ancestor of167, but equality of the two sets
 requires a replacement argument that is not supplied here.
+Within every rising cone the chain exists without exception: the exhaustive
+residue audit of the S7 note checks all 458 rising words of length at most 7
+over complete residue systems. The audit says nothing about descents through
+non-rising words, which is the open direction above.
 The census to `2^24` by the stopping-segment sieve gives
 
 | quantity | value |
