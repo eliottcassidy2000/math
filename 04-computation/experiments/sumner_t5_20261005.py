@@ -227,4 +227,68 @@ for hi, missed in missing_hosts[5]:
     print(f"  host #{hi:3d} scores {scores(out,5)}  misses {len(missed)}: " + "; ".join(guest_label(plans[g][0], plans[g][1]) for g in missed))
 print(f"  {len(missing_hosts[5])} of 12 classes miss something")
 
+
+print("\n" + "=" * 78)
+print("E. The Collatz functional digraph as a host for the 27 oriented 5-trees")
+print("=" * 78)
+# arcs n -> C(n), C(n) = n/2 (n even), 3n+1 (n odd), on {1..NMAX} (arcs leaving the range dropped)
+NMAX = 200000
+succ = {}
+pred = defaultdict(list)
+for n in range(1, NMAX + 1):
+    c = n // 2 if n % 2 == 0 else 3 * n + 1
+    if c <= NMAX:
+        succ[n] = c
+        pred[c].append(n)
+indeg = Counter(len(v) for v in pred.values())
+check(max(indeg) == 2, "in-degree <= 2")
+branch = [v for v, p in pred.items() if len(p) == 2]
+check(all(v % 6 == 4 for v in branch), "branch vertices are exactly 4 mod 6 (in range)")
+check(all(len(pred.get(q, [])) <= 1 for v in branch for q in pred[v]), "no two branch vertices adjacent")
+d2 = sum(1 for v in branch for q in pred[v] for r in pred.get(q, []) if len(pred.get(r, [])) == 2)
+check(d2 > 0, "branch vertices at distance 2 occur")
+print(f"  vertices 1..{NMAX}: in-degrees {dict(sorted(indeg.items()))}, out-degree <= 1; branch vertices (in-degree 2) are the n = 4 mod 6;")
+print(f"  no two branch vertices are adjacent (the preimages 2n = 2 mod 6 and (n-1)/3 odd are not 4 mod 6); distance-2 pairs: {d2}")
+
+def embeds_sparse(D):
+    root, plan = bfs_plan(D)
+    pos = {}
+    def rec(k, used):
+        if k == len(plan):
+            return True
+        c, p, fwd = plan[k]
+        v0 = pos[p]
+        cands = ([succ[v0]] if (fwd and v0 in succ) else []) if fwd else pred.get(v0, [])
+        for v in cands:
+            if v in used: continue
+            pos[c] = v
+            if rec(k + 1, used | {v}):
+                return True
+        return False
+    # roots: only need to try vertices with the right local shape; try all up to a bound
+    for r in range(1, 5000):
+        pos[root] = r
+        if rec(0, {r}):
+            return r
+    return None
+
+found = []
+for nm, D in guests:
+    r = embeds_sparse(D)
+    outd = max(d for _, d in D.out_degree()); ind = max(d for _, d in D.in_degree())
+    functional = outd <= 1 and ind <= 2
+    # adjacent branch vertices in the guest?
+    br = [v for v in D if D.in_degree(v) == 2]
+    adj_branch = any(D.has_edge(a, b) or D.has_edge(b, a) for a in br for b in br if a != b)
+    predicted = functional and not adj_branch
+    check((r is not None) == predicted, f"Collatz host prediction for {guest_label(nm, D)}")
+    if r is not None:
+        found.append(guest_label(nm, D))
+print(f"  oriented 5-trees embedded in the Collatz digraph: {len(found)} of 27:")
+for lab in found:
+    print("    ", lab)
+print("  = exactly the in-trees with in-degree <= 2 and no two adjacent branch vertices (PROVED for the host;")
+print("    the fork rooted at the middle of its long leg needs two adjacent branch vertices and is the one binary in-tree excluded).")
+print("  Compare: TT_5 hosts 27/27, the regular 5-tournament 17/27, the Collatz digraph 5/27.")
+
 print(f"\nALL {CHECKS} CHECKS PASSED")
