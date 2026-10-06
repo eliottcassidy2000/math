@@ -1,0 +1,33 @@
+=== Prop 3.1: cycles of T on Z from |x0| <= 10^5 ===
+cycle min -136: length 11, elements [-136, -91, -82, -68, -61, -55, -41, -37, -34, -25, -17], shape (p,A)=(7,11), |2^A-3^p|=139
+cycle min -10: length 3, elements [-10, -7, -5], shape (p,A)=(2,3), |2^A-3^p|=1
+cycle min -1: length 1, elements [-1], shape (p,A)=(1,1), |2^A-3^p|=1
+cycle min 0: length 1, elements [0], shape (p,A)=(0,1), |2^A-3^p|=1
+cycle min 1: length 2, elements [1, 2], shape (p,A)=(1,2), |2^A-3^p|=1
+solutions of |2^A - 3^p| = 1, A>=1, p<400, A<700: [(0, 1), (1, 1), (1, 2), (2, 3)]
+Q^n (0,1)^T, n=0..6: [(0, 1), (1, 1), (1, 2), (2, 3), (3, 5), (5, 8), (8, 13)]
+(L_4, L_5) = (7, 11)  (2,3)+(5,8) = (7, 11)  (2,3)+(3,5) = (5, 8)
+log_2 3 continued fraction (exact): [1, 1, 1, 2, 2, 3, 1, 5, 2]
+convergents A/p of log_2 3 as (p,A): [(1, 1), (1, 2), (2, 3), (5, 8), (12, 19), (41, 65)]
+convergents of phi as (p,A): [(1, 1), (1, 2), (2, 3), (3, 5), (5, 8), (8, 13), (13, 21)]
+integer points on cycles of shape (5,8): set()  (2^8-3^5 = 13 )
+integer points on cycles of shape (3,5): set()  (2^5-3^3 = 5 )
+all integers lying on T-cycles with A <= 18 (any word): [-136, -91, -82, -68, -61, -55, -41, -37, -34, -25, -17, -10, -7, -5, -1, 0, 1, 2]
+=== Syracuse leaps ===
+v_2(3n+1) census over odd n < 2^20 (v: count, expected 2^(19-v)): [(1, 262144, 262144), (2, 131072, 131072), (3, 65536, 65536), (4, 32768, 32768), (5, 16384, 16384), (6, 8192, 8192), (7, 4096, 4096)]
+density of 'first k leaps in {1,2}' = (3/4)^k exactly over odd residues mod 2^(2k+1): checked k=1..8
+=== Prop 3.2 ===
+Prop 3.2 checked k=1..8 (and 2 primitive root mod 3^r, r<=15)
+--- informational: spectrum of P g(x) = (g(3x+1) + g(x/2))/2 ---
+k=1 Z/3^k: |lambda| multiset {np.float64(0.5): 2, np.float64(1.0): 1}; real eigenvalues [np.float64(-0.5), np.float64(0.5), np.float64(1.0)]
+k=1 units: |lambda| multiset {np.float64(0.5): 1, np.float64(1.0): 1}; real eigenvalues [np.float64(-0.5), np.float64(1.0)]
+k=2 Z/3^k: |lambda| multiset {np.float64(0.5): 8, np.float64(1.0): 1}; real eigenvalues [np.float64(-0.5), np.float64(0.5), np.float64(1.0)]
+k=2 units: |lambda| multiset {np.float64(0.5): 5, np.float64(1.0): 1}; real eigenvalues [np.float64(-0.5), np.float64(1.0)]
+k=3 Z/3^k: |lambda| multiset {np.float64(0.5): 26, np.float64(1.0): 1}; real eigenvalues [np.float64(-0.5), np.float64(0.5), np.float64(1.0)]
+k=3 units: |lambda| multiset {np.float64(0.5): 17, np.float64(1.0): 1}; real eigenvalues [np.float64(-0.5), np.float64(1.0)]
+k=4 Z/3^k: |lambda| multiset {np.float64(0.5): 80, np.float64(1.0): 1}; real eigenvalues [np.float64(-0.5), np.float64(0.5), np.float64(1.0)]
+k=4 units: |lambda| multiset {np.float64(0.5): 53, np.float64(1.0): 1}; real eigenvalues [np.float64(-0.5), np.float64(1.0)]
+k=5 Z/3^k: |lambda| multiset {np.float64(0.5): 242, np.float64(1.0): 1}; real eigenvalues [np.float64(-0.5), np.float64(0.5), np.float64(1.0)]
+k=5 units: |lambda| multiset {np.float64(0.5): 161, np.float64(1.0): 1}; real eigenvalues [np.float64(-0.5), np.float64(1.0)]
+
+TOTAL FAILURES: 0

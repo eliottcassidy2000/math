@@ -1,0 +1,23 @@
+=== Prop 1.1 ===
+N=8: grid edges 112, ring edges 64, spokes 48, by pair {(2, 3): 24, (1, 2): 16, (0, 1): 8}
+N=8 colour 0: anti-diagonal lengths [1, 3, 5, 7, 7, 5, 3, 1], diagonal lengths [2, 4, 6, 8, 6, 4, 2]
+N=8 colour 1: anti-diagonal lengths [2, 4, 6, 8, 6, 4, 2], diagonal lengths [1, 3, 5, 7, 7, 5, 3, 1]
+N=8: odd lines 16 census {1: 4, 3: 4, 5: 4, 7: 4}; even lines 14 census {2: 4, 4: 4, 6: 4, 8: 2}
+N=8: length-1 lines = [(0, 0), (0, 7), (7, 0), (7, 7)] rings [3, 3, 3, 3]
+Prop 1.1 checked for N = 2..40 (even)
+=== Prop 1.2 ===
+Prop 1.2 + affine identity checked for N = 2..40 (even), all squares
+8x8 bishop reach by ring: [(0, 13), (1, 11), (2, 9), (3, 7)]
+=== Prop 1.3 ===
+N=8 knight pair profile: {(0, 1): 16, (0, 2): 16, (1, 1): 8, (1, 2): 32, (1, 3): 32, (2, 2): 8, (2, 3): 48, (3, 3): 8} total 168
+Prop 1.3 totals checked for N = 2..40 (even)
+--- within-ring knight graph structure ---
+ring-1 within-ring 4-cycle (central-4x4 local coords): [(0, 1), (1, 3), (3, 2), (2, 0)] -> square
+ring-1 within-ring 4-cycle (central-4x4 local coords): [(0, 2), (1, 0), (3, 1), (2, 3)] -> square
+all knight 4-cycles of a 4x4 block:
+    ((0, 0), (1, 2), (2, 1), (3, 3)) diamond(rhombus)  corners/centre involved: True
+    ((0, 1), (1, 3), (2, 0), (3, 2)) square  corners/centre involved: False
+    ((0, 2), (1, 0), (2, 3), (3, 1)) square  corners/centre involved: False
+    ((0, 3), (1, 1), (2, 2), (3, 0)) diamond(rhombus)  corners/centre involved: True
+
+TOTAL FAILURES: 0

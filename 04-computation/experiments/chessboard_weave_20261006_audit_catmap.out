@@ -1,0 +1,17 @@
+Q^n = F_{n-1} I and Q^{2n} = (-1)^n I (mod F_n): checked n=3..40
+Pisano periods pi(F_n), n=3..30: {3: 3, 4: 8, 5: 20, 6: 12, 7: 28, 8: 16, 9: 36, 10: 20, 11: 44, 12: 24, 13: 52, 14: 28, 15: 60, 16: 32, 17: 68, 18: 36, 19: 76, 20: 40, 21: 84, 22: 44, 23: 92, 24: 48, 25: 100, 26: 52, 27: 108, 28: 56, 29: 116, 30: 60}
+orbit lengths of Q on (Z/8)^2: [1, 3, 6, 6, 12, 12, 12, 12]
+orbit of (0,1): [(0, 1), (1, 1), (1, 2), (2, 3), (3, 5), (5, 0), (0, 5), (5, 5), (5, 2), (2, 7), (7, 1), (1, 0)]
+|Fix(Q^j) on Z_8^2|, j=1..24: [1, 1, 4, 1, 1, 16, 1, 1, 4, 1, 1, 64, 1, 1, 4, 1, 1, 16, 1, 1, 4, 1, 1, 64]
+Q^12 - I = [[88, 144], [144, 232]]  invariant factors: (8, 40)
+Fix(Q^j on Z_N^2) = prod gcd(d_i,N): checked 1044 pairs (N=2..30, j=1..36)
+orbits of length >1 inside a single ring: []
+Q(ring 0) meets rings [2, 3]
+Q(ring 1) meets rings [1, 2, 3]
+Q(ring 2) meets rings [0, 1, 2, 3]
+Q(ring 3) meets rings [0, 1, 2, 3]
+blocks of the join (orbits v rings): 1
+w with (v -> Qv+w) commuting with the central half-turn: []
+squares whose colour Q changes: 32/64; colour changed by Q^3: 0/64; parity class moved by Q^3: 0/64
+
+TOTAL FAILURES: 0

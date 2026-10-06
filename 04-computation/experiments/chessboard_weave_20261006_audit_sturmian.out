@@ -1,0 +1,38 @@
+iota o rho (iota = letter inversion): {'a': 'cac', 'c': 'cacac'}
+iota o rho (iota = w -> w^-1):        {'a': 'cac', 'c': 'cacac'}
+q^3: {'a': 'cac', 'c': 'accac'}  Inn(cac) q^3 (w -> g w g^-1): {'a': 'cac', 'c': 'cacac'}
+E phi phi phit E: {'a': 'cac', 'c': 'cacac'}  q'q'q: {'a': 'cac', 'c': 'cacac'}
+n=0: |sigma^n(a)|=1, |sigma^n(c)|=1, cut identities OK=True, corners 0,0
+n=1: |sigma^n(a)|=3, |sigma^n(c)|=5, cut identities OK=True, corners 0,0
+n=2: |sigma^n(a)|=13, |sigma^n(c)|=21, cut identities OK=True, corners 0,0
+n=3: |sigma^n(a)|=55, |sigma^n(c)|=89, cut identities OK=True, corners 0,0
+n=4: |sigma^n(a)|=233, |sigma^n(c)|=377, cut identities OK=True, corners 0,0
+n=5: |sigma^n(a)|=987, |sigma^n(c)|=1597, cut identities OK=True, corners 0,0
+n=6: |sigma^n(a)|=4181, |sigma^n(c)|=6765, cut identities OK=True, corners 0,0
+n=7: |sigma^n(a)|=17711, |sigma^n(c)|=28657, cut identities OK=True, corners 0,0
+n=8: |sigma^n(a)|=75025, |sigma^n(c)|=121393, cut identities OK=True, corners 0,0
+x prefix (length 121393) equals the centred rounding word round((k+1)/phi)-round(k/phi): True
+first 40 letters of x: cacaccaccacaccaccacaccacaccaccacaccacacc
+characteristic word c_{1/phi} (first 40): caccacaccaccacaccacaccaccacaccaccacaccac
+   even F_3=2: disagreements (round-half-up convention) at k = []
+   even F_6=8: disagreements (round-half-up convention) at k = [4]
+   even F_9=34: disagreements (round-half-up convention) at k = []
+   even F_12=144: disagreements (round-half-up convention) at k = [72]
+step (iii): round(k/phi) = round(k F_{m-1}/F_m) for 0<=k<=F_m whenever F_m odd, m<=26: OK
+step (iv): cut(p,q) = rounding word with slope q/(p+q) for coprime p+q odd, p,q<40: checked
+corner iff p,q both odd (single corner, at the midpoint): checked coprime p,q<60
+tie resolution of x at prefixes of length F_{3k}, k=1..8: ['ca', 'ac', 'ca', 'ac', 'ca', 'ac', 'ca', 'ac']
+sigma^6(a) (length 4181) balanced: True
+sigma^6(c) (length 6765) balanced: True
+Sturmian morphisms with matrix Q^3 (a->1a2c, c->2a3c): 7 [('acc', 'acacc'), ('acc', 'accac'), ('cac', 'accac'), ('cac', 'cacac'), ('cac', 'cacca'), ('cca', 'cacca'), ('cca', 'ccaca')]
+with both images palindromes: [('cac', 'cacac')]
+conjugation chain: [('cac', 'cacca'), ('acc', 'accac'), ('cca', 'ccaca'), ('cac', 'cacac'), ('acc', 'acacc'), ('cca', 'cacca'), ('cac', 'accac')]
+q'^3 = ('cac', 'cacca')  q^3 = ('cac', 'accac')  sigma position in chain: 3
+Q on nonzero classes mod 2: [(1, 0), (0, 1), (1, 1), (1, 0)]
+delta(F_n,F_{n+1}) claim checked n<=30 (exact candidate evaluation for n<=13): ['0', '1/2', '1/3', '2/5', '1/2', '6/13']
+T^0(c_alpha) [intercept 1*alpha mod 1]: palindromic prefix lengths (>=2, <=20000): [1595, 2582, 4179, 6763, 10944, 17709] count 18
+T^1(c_alpha) [intercept 2*alpha mod 1]: palindromic prefix lengths (>=2, <=20000): [1593, 2580, 4177, 6761, 10942, 17707] count 17
+T^2(c_alpha) [intercept 3*alpha mod 1]: palindromic prefix lengths (>=2, <=20000): [1591, 2578, 4175, 6759, 10940, 17705] count 17
+T^3(c_alpha) [intercept 4*alpha mod 1]: palindromic prefix lengths (>=2, <=20000): [1589, 2576, 4173, 6757, 10938, 17703] count 17
+
+TOTAL FAILURES: 0

@@ -1,13 +1,16 @@
 ---
 id: HYP-9210
-title: "The latest first lonely time. For a primitive set v of n positive speeds let tau(v) = min{t > 0 : min_i ||t v_i|| >= 1/(n+1)} (the first time the rider t v enters the central cube; 'slide until the obstruction is reached'). Conjecture: tau*(n) = sup_v tau(v) equals 4/9, 7/16, 11/25, 19/42, 19/42, 49/104 for n = 2..7, every extremizer contains 1 and a multiple of n+1 and has its lonely set in (0,1/2] a single interval just below 1/2, and 1/2 - tau*(n) = Theta(1/n)"
+title: "The latest first lonely time. For a primitive set v of n positive speeds let tau(v) = min{t > 0 : min_i ||t v_i|| >= 1/(n+1)} (the first time the rider t v enters the central cube; 'slide until the obstruction is reached'). tau*(2) = 4/9 and tau*(3) = 7/16 are PROVED; conjecture: tau*(n) = sup_v tau(v) equals 11/25, 19/42, 19/42, 49/104 for n = 4..7, every extremizer contains 1 and a multiple of n+1 and has its lonely set in (0,1/2] a single interval just below 1/2, and 1/2 - tau*(n) = Theta(1/n)"
 status: >
   OPEN, with PROVED parts:
   - n = 2 exactly: tau*(2) = 4/9, attained only at the camel (1,3);
     tau(1,3k) = 1/3 + 1/(9k), tau(a,b) = 1/(3a) for a < b < 2a,
     tau(a,b) <= 2/(3a) for a >= 2, b > 2a (THM-4550 when promoted;
     chessboard_weave_20261006.md Theorem 2.4).
-  - n = 3 restricted to sets containing 1: maximum 7/16, only (1,3,12).
+  - n = 3 exactly: tau*(3) = 7/16, attained only at (1,3,12) (sets containing 1: lane proof
+    split on the middle speed; sets with smallest speed a >= 2: tau <= 3/8 -- a = 2 by LRC for
+    four runners (Betke-Wills 1972, Cusick 1974) plus time symmetry, a = 3 by interval covering
+    and two computed triples, a >= 4 by a ratio argument giving tau <= 3/(4a); see the note).
   - Lower bound for every n: the progression with 2 removed,
     F_N = {1,3,4,...,N} (n = N-1), has lonely set in (0,1/2] equal to
     [tau_N, 1/2 - 1/(4N)] with tau_N = 1/2 - 1/(2N) + 1/N^2 (N odd),
@@ -54,8 +57,7 @@ So the rider has to slide almost to the half-way point. The camel `(1,3)` is the
 `n = 5, 6` the swaps reach only `79/180` and `22/49`, below the census maxima, so another
 mechanism is also in play there.
 
-**Open.** Exact `tau*(n)` for `n >= 3` (for `n = 3` only sets with smallest speed `>= 2`
-are missing); whether `1/2 - tau*(n)` is of order exactly `1/n`; whether every extremizer
+**Open.** Exact `tau*(n)` for `n >= 4` (`n = 2, 3` are proved); whether `1/2 - tau*(n)` is of order exactly `1/n`; whether every extremizer
 contains 1 and a multiple of `n + 1`.
 
 **Hostile/limit.** Statements about `tau` say nothing about LRC itself: they presuppose a
