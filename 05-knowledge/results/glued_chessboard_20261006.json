@@ -1,0 +1,2129 @@
+{
+ "boards": {
+  "plane": {
+   "label": "disk",
+   "chi": 1,
+   "orientable": true,
+   "colour": [],
+   "isom": 8,
+   "cell_orbits": 10
+  },
+  "cylinder": {
+   "label": "annulus",
+   "chi": 0,
+   "orientable": true,
+   "colour": [
+    0
+   ],
+   "isom": 32,
+   "cell_orbits": 4
+  },
+  "mobius": {
+   "label": "Mobius band",
+   "chi": 0,
+   "orientable": false,
+   "colour": [
+    1
+   ],
+   "isom": 32,
+   "cell_orbits": 4
+  },
+  "mobius_diag": {
+   "label": "Mobius band",
+   "chi": 0,
+   "orientable": false,
+   "colour": [
+    0
+   ],
+   "isom": 2,
+   "cell_orbits": 36
+  },
+  "torus": {
+   "label": "torus (o, p1)",
+   "chi": 0,
+   "orientable": true,
+   "colour": [
+    0,
+    0
+   ],
+   "isom": 512,
+   "cell_orbits": 1
+  },
+  "torus_k1": {
+   "label": "torus (o, p1)",
+   "chi": 0,
+   "orientable": true,
+   "colour": [
+    1,
+    0
+   ],
+   "isom": 128,
+   "cell_orbits": 1
+  },
+  "torus_k2": {
+   "label": "torus (o, p1)",
+   "chi": 0,
+   "orientable": true,
+   "colour": [
+    0,
+    0
+   ],
+   "isom": 128,
+   "cell_orbits": 1
+  },
+  "torus_k4": {
+   "label": "torus (o, p1)",
+   "chi": 0,
+   "orientable": true,
+   "colour": [
+    0,
+    0
+   ],
+   "isom": 256,
+   "cell_orbits": 1
+  },
+  "klein": {
+   "label": "Klein bottle (xx, pg)",
+   "chi": 0,
+   "orientable": false,
+   "colour": [
+    0,
+    1
+   ],
+   "isom": 64,
+   "cell_orbits": 2
+  },
+  "klein_cc": {
+   "label": "Klein bottle (xx, pg)",
+   "chi": 0,
+   "orientable": false,
+   "colour": [
+    0,
+    0
+   ],
+   "isom": 64,
+   "cell_orbits": 3
+  },
+  "klein_diag": {
+   "label": "Klein bottle (xx, pg)",
+   "chi": 0,
+   "orientable": false,
+   "colour": [
+    0,
+    0
+   ],
+   "isom": 32,
+   "cell_orbits": 5
+  },
+  "rp2": {
+   "label": "projective plane (22x, pgg)",
+   "chi": 1,
+   "orientable": false,
+   "colour": [
+    1,
+    1
+   ],
+   "isom": 8,
+   "cell_orbits": 10
+  },
+  "rp2_fold": {
+   "label": "projective plane (22x, pgg)",
+   "chi": 1,
+   "orientable": false,
+   "colour": [
+    1,
+    0,
+    0
+   ],
+   "isom": 8,
+   "cell_orbits": 10
+  },
+  "sphere442": {
+   "label": "sphere (442, p4)",
+   "chi": 2,
+   "orientable": true,
+   "colour": [
+    1,
+    1
+   ],
+   "isom": 4,
+   "cell_orbits": 20
+  },
+  "pillow": {
+   "label": "sphere (2222, p2)",
+   "chi": 2,
+   "orientable": true,
+   "colour": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "isom": 16,
+   "cell_orbits": 6
+  },
+  "pillow_cyl": {
+   "label": "sphere (2222, p2)",
+   "chi": 2,
+   "orientable": true,
+   "colour": [
+    0,
+    0,
+    0
+   ],
+   "isom": 8,
+   "cell_orbits": 8
+  }
+ },
+ "lines": {
+  "plane": {
+   "orth": {
+    "open 8": 16
+   },
+   "diag": {
+    "open 1": 4,
+    "open 2": 4,
+    "open 3": 4,
+    "open 4": 4,
+    "open 5": 4,
+    "open 6": 4,
+    "open 7": 4,
+    "open 8": 2
+   }
+  },
+  "cylinder": {
+   "orth": {
+    "closed 8": 8,
+    "open 8": 8
+   },
+   "diag": {
+    "open 8": 16
+   }
+  },
+  "mobius": {
+   "orth": {
+    "closed 16": 4,
+    "open 8": 8
+   },
+   "diag": {
+    "open 8": 16
+   }
+  },
+  "mobius_diag": {
+   "orth": {
+    "open 16(15 cells)": 8
+   },
+   "diag": {
+    "closed 4": 1,
+    "closed 8": 4,
+    "open 1": 1,
+    "open 2": 1,
+    "open 3": 1,
+    "open 4": 1,
+    "open 5": 1,
+    "open 6": 1,
+    "open 7": 1,
+    "open 8": 8
+   }
+  },
+  "torus": {
+   "orth": {
+    "closed 8": 16
+   },
+   "diag": {
+    "closed 8": 16
+   }
+  },
+  "torus_k1": {
+   "orth": {
+    "closed 8": 8,
+    "closed 64": 1
+   },
+   "diag": {
+    "closed 64": 2
+   }
+  },
+  "torus_k2": {
+   "orth": {
+    "closed 8": 8,
+    "closed 32": 2
+   },
+   "diag": {
+    "closed 32": 4
+   }
+  },
+  "torus_k4": {
+   "orth": {
+    "closed 8": 8,
+    "closed 16": 4
+   },
+   "diag": {
+    "closed 16": 8
+   }
+  },
+  "klein": {
+   "orth": {
+    "closed 8": 8,
+    "closed 16": 4
+   },
+   "diag": {
+    "closed 16": 8
+   }
+  },
+  "klein_cc": {
+   "orth": {
+    "closed 8": 10,
+    "closed 16": 3
+   },
+   "diag": {
+    "closed 16(14 cells)": 8
+   }
+  },
+  "klein_diag": {
+   "orth": {
+    "closed 16(15 cells)": 8
+   },
+   "diag": {
+    "closed 4": 2,
+    "closed 8": 15
+   }
+  },
+  "rp2": {
+   "orth": {
+    "closed 16": 8
+   },
+   "diag": {
+    "closed 8 fold": 2,
+    "closed 16": 7
+   }
+  },
+  "rp2_fold": {
+   "orth": {
+    "closed 16": 8
+   },
+   "diag": {
+    "closed 8 fold": 2,
+    "closed 16": 7
+   }
+  },
+  "sphere442": {
+   "orth": {
+    "closed 16(15 cells)": 8
+   },
+   "diag": {
+    "closed 8 fold": 2,
+    "closed 16": 7
+   }
+  },
+  "pillow": {
+   "orth": {
+    "closed 16": 8
+   },
+   "diag": {
+    "closed 4 fold": 4,
+    "closed 8": 14
+   }
+  },
+  "pillow_cyl": {
+   "orth": {
+    "closed 8": 8,
+    "closed 16": 4
+   },
+   "diag": {
+    "closed 8 fold": 4,
+    "closed 16": 6
+   }
+  }
+ },
+ "graphs": {
+  "plane": {
+   "W": {
+    "E": 112,
+    "deg": {
+     "2": 4,
+     "3": 24,
+     "4": 36
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     14
+    ],
+    "mean_dist": 5.3333
+   },
+   "F": {
+    "E": 98,
+    "deg": {
+     "1": 4,
+     "2": 24,
+     "4": 36
+    },
+    "comps": [
+     32,
+     32
+    ],
+    "diam": [
+     7
+    ]
+   },
+   "K": {
+    "E": 210,
+    "deg": {
+     "3": 4,
+     "5": 24,
+     "8": 36
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     7
+    ],
+    "mean_dist": 3.75
+   },
+   "R": {
+    "E": 448,
+    "deg": {
+     "14": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     2
+    ]
+   },
+   "B": {
+    "E": 280,
+    "deg": {
+     "7": 28,
+     "9": 20,
+     "11": 12,
+     "13": 4
+    },
+    "comps": [
+     32,
+     32
+    ],
+    "diam": [
+     2
+    ]
+   },
+   "Q": {
+    "E": 728,
+    "deg": {
+     "21": 28,
+     "23": 20,
+     "25": 12,
+     "27": 4
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     2
+    ]
+   }
+  },
+  "cylinder": {
+   "W": {
+    "E": 120,
+    "deg": {
+     "3": 16,
+     "4": 48
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     11
+    ],
+    "mean_dist": 4.6984
+   },
+   "F": {
+    "E": 112,
+    "deg": {
+     "2": 16,
+     "4": 48
+    },
+    "comps": [
+     32,
+     32
+    ],
+    "diam": [
+     7
+    ]
+   },
+   "K": {
+    "E": 232,
+    "deg": {
+     "5": 16,
+     "8": 48
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     7
+    ],
+    "mean_dist": 3.2857
+   },
+   "R": {
+    "E": 448,
+    "deg": {
+     "14": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     2
+    ]
+   },
+   "B": {
+    "E": 416,
+    "deg": {
+     "13": 64
+    },
+    "comps": [
+     32,
+     32
+    ],
+    "diam": [
+     2
+    ]
+   },
+   "Q": {
+    "E": 864,
+    "deg": {
+     "27": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     2
+    ]
+   }
+  },
+  "mobius": {
+   "W": {
+    "E": 120,
+    "deg": {
+     "3": 16,
+     "4": 48
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     7
+    ],
+    "mean_dist": 4.3175
+   },
+   "F": {
+    "E": 112,
+    "deg": {
+     "2": 16,
+     "4": 48
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     8
+    ]
+   },
+   "K": {
+    "E": 232,
+    "deg": {
+     "5": 16,
+     "8": 48
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     7
+    ],
+    "mean_dist": 3.2063
+   },
+   "R": {
+    "E": 672,
+    "deg": {
+     "21": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     2
+    ]
+   },
+   "B": {
+    "E": 448,
+    "deg": {
+     "14": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     2
+    ]
+   },
+   "Q": {
+    "E": 1056,
+    "deg": {
+     "33": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     2
+    ]
+   }
+  },
+  "mobius_diag": {
+   "W": {
+    "E": 120,
+    "deg": {
+     "2": 1,
+     "3": 14,
+     "4": 49
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     11
+    ],
+    "mean_dist": 4.619
+   },
+   "F": {
+    "E": 113,
+    "deg": {
+     "1": 1,
+     "2": 12,
+     "3": 3,
+     "4": 48
+    },
+    "comps": [
+     32,
+     32
+    ],
+    "diam": [
+     7
+    ]
+   },
+   "K": {
+    "E": 233,
+    "deg": {
+     "3": 1,
+     "5": 12,
+     "6": 2,
+     "7": 1,
+     "8": 48
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     7
+    ],
+    "mean_dist": 3.2842
+   },
+   "R": {
+    "E": 812,
+    "deg": {
+     "14": 8,
+     "27": 56
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     2
+    ]
+   },
+   "B": {
+    "E": 376,
+    "deg": {
+     "7": 1,
+     "8": 2,
+     "9": 3,
+     "10": 10,
+     "11": 7,
+     "12": 8,
+     "13": 33
+    },
+    "comps": [
+     32,
+     32
+    ],
+    "diam": [
+     2
+    ]
+   },
+   "Q": {
+    "E": 1124,
+    "deg": {
+     "27": 8,
+     "33": 1,
+     "34": 2,
+     "35": 5,
+     "36": 20,
+     "37": 28
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     2
+    ]
+   }
+  },
+  "torus": {
+   "W": {
+    "E": 128,
+    "deg": {
+     "4": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     8
+    ],
+    "mean_dist": 4.0635
+   },
+   "F": {
+    "E": 128,
+    "deg": {
+     "4": 64
+    },
+    "comps": [
+     32,
+     32
+    ],
+    "diam": [
+     4
+    ]
+   },
+   "K": {
+    "E": 256,
+    "deg": {
+     "8": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     4
+    ],
+    "mean_dist": 2.7302
+   },
+   "R": {
+    "E": 448,
+    "deg": {
+     "14": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     2
+    ]
+   },
+   "B": {
+    "E": 416,
+    "deg": {
+     "13": 64
+    },
+    "comps": [
+     32,
+     32
+    ],
+    "diam": [
+     2
+    ]
+   },
+   "Q": {
+    "E": 864,
+    "deg": {
+     "27": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     2
+    ]
+   }
+  },
+  "torus_k1": {
+   "W": {
+    "E": 128,
+    "deg": {
+     "4": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     7
+    ],
+    "mean_dist": 4.0
+   },
+   "F": {
+    "E": 128,
+    "deg": {
+     "4": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     8
+    ]
+   },
+   "K": {
+    "E": 256,
+    "deg": {
+     "8": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     4
+    ],
+    "mean_dist": 2.7302
+   },
+   "R": {
+    "E": 2016,
+    "deg": {
+     "63": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     1
+    ]
+   },
+   "B": {
+    "E": 2016,
+    "deg": {
+     "63": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     1
+    ]
+   },
+   "Q": {
+    "E": 2016,
+    "deg": {
+     "63": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     1
+    ]
+   }
+  },
+  "torus_k2": {
+   "W": {
+    "E": 128,
+    "deg": {
+     "4": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     7
+    ],
+    "mean_dist": 3.9683
+   },
+   "F": {
+    "E": 128,
+    "deg": {
+     "4": 64
+    },
+    "comps": [
+     32,
+     32
+    ],
+    "diam": [
+     4
+    ]
+   },
+   "K": {
+    "E": 256,
+    "deg": {
+     "8": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     4
+    ],
+    "mean_dist": 2.7302
+   },
+   "R": {
+    "E": 1120,
+    "deg": {
+     "35": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     2
+    ]
+   },
+   "B": {
+    "E": 992,
+    "deg": {
+     "31": 64
+    },
+    "comps": [
+     32,
+     32
+    ],
+    "diam": [
+     1
+    ]
+   },
+   "Q": {
+    "E": 1632,
+    "deg": {
+     "51": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     2
+    ]
+   }
+  },
+  "torus_k4": {
+   "W": {
+    "E": 128,
+    "deg": {
+     "4": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     6
+    ],
+    "mean_dist": 3.873
+   },
+   "F": {
+    "E": 128,
+    "deg": {
+     "4": 64
+    },
+    "comps": [
+     32,
+     32
+    ],
+    "diam": [
+     4
+    ]
+   },
+   "K": {
+    "E": 256,
+    "deg": {
+     "8": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     4
+    ],
+    "mean_dist": 2.7302
+   },
+   "R": {
+    "E": 672,
+    "deg": {
+     "21": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     2
+    ]
+   },
+   "B": {
+    "E": 736,
+    "deg": {
+     "23": 64
+    },
+    "comps": [
+     32,
+     32
+    ],
+    "diam": [
+     2
+    ]
+   },
+   "Q": {
+    "E": 1312,
+    "deg": {
+     "41": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     2
+    ]
+   }
+  },
+  "klein": {
+   "W": {
+    "E": 128,
+    "deg": {
+     "4": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     7
+    ],
+    "mean_dist": 3.9365
+   },
+   "F": {
+    "E": 128,
+    "deg": {
+     "4": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     8
+    ]
+   },
+   "K": {
+    "E": 256,
+    "deg": {
+     "8": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     4
+    ],
+    "mean_dist": 2.7302
+   },
+   "R": {
+    "E": 672,
+    "deg": {
+     "21": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     2
+    ]
+   },
+   "B": {
+    "E": 864,
+    "deg": {
+     "27": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     2
+    ]
+   },
+   "Q": {
+    "E": 1376,
+    "deg": {
+     "43": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     2
+    ]
+   }
+  },
+  "klein_cc": {
+   "W": {
+    "E": 128,
+    "deg": {
+     "4": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     8
+    ],
+    "mean_dist": 3.9683
+   },
+   "F": {
+    "E": 128,
+    "deg": {
+     "4": 64
+    },
+    "comps": [
+     32,
+     32
+    ],
+    "diam": [
+     4
+    ]
+   },
+   "K": {
+    "E": 256,
+    "deg": {
+     "8": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     4
+    ],
+    "mean_dist": 2.7302
+   },
+   "R": {
+    "E": 616,
+    "deg": {
+     "14": 16,
+     "21": 48
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     2
+    ]
+   },
+   "B": {
+    "E": 656,
+    "deg": {
+     "13": 16,
+     "23": 48
+    },
+    "comps": [
+     32,
+     32
+    ],
+    "diam": [
+     2
+    ]
+   },
+   "Q": {
+    "E": 1168,
+    "deg": {
+     "27": 16,
+     "39": 32,
+     "41": 16
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     2
+    ]
+   }
+  },
+  "klein_diag": {
+   "W": {
+    "E": 128,
+    "deg": {
+     "4": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     8
+    ],
+    "mean_dist": 4.1429
+   },
+   "F": {
+    "E": 128,
+    "deg": {
+     "4": 64
+    },
+    "comps": [
+     32,
+     32
+    ],
+    "diam": [
+     5,
+     6
+    ]
+   },
+   "K": {
+    "E": 256,
+    "deg": {
+     "8": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     6
+    ],
+    "mean_dist": 2.873
+   },
+   "R": {
+    "E": 812,
+    "deg": {
+     "14": 8,
+     "27": 56
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     2
+    ]
+   },
+   "B": {
+    "E": 404,
+    "deg": {
+     "10": 8,
+     "13": 56
+    },
+    "comps": [
+     32,
+     32
+    ],
+    "diam": [
+     2
+    ]
+   },
+   "Q": {
+    "E": 1140,
+    "deg": {
+     "27": 8,
+     "36": 8,
+     "37": 48
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     2
+    ]
+   }
+  },
+  "rp2": {
+   "W": {
+    "E": 126,
+    "deg": {
+     "3": 4,
+     "4": 60
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     7
+    ],
+    "mean_dist": 4.0605
+   },
+   "F": {
+    "E": 126,
+    "deg": {
+     "3": 4,
+     "4": 60
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     7
+    ]
+   },
+   "K": {
+    "E": 252,
+    "deg": {
+     "6": 4,
+     "8": 60
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     7
+    ],
+    "mean_dist": 2.9127
+   },
+   "R": {
+    "E": 864,
+    "deg": {
+     "27": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     2
+    ]
+   },
+   "B": {
+    "E": 816,
+    "deg": {
+     "21": 16,
+     "27": 48
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     2
+    ]
+   },
+   "Q": {
+    "E": 1440,
+    "deg": {
+     "43": 16,
+     "45": 32,
+     "47": 16
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     2
+    ]
+   }
+  },
+  "rp2_fold": {
+   "W": {
+    "E": 126,
+    "deg": {
+     "3": 4,
+     "4": 60
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     7
+    ],
+    "mean_dist": 4.0605
+   },
+   "F": {
+    "E": 126,
+    "deg": {
+     "3": 4,
+     "4": 60
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     7
+    ]
+   },
+   "K": {
+    "E": 252,
+    "deg": {
+     "6": 4,
+     "8": 60
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     7
+    ],
+    "mean_dist": 2.9127
+   },
+   "R": {
+    "E": 864,
+    "deg": {
+     "27": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     2
+    ]
+   },
+   "B": {
+    "E": 816,
+    "deg": {
+     "21": 16,
+     "27": 48
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     2
+    ]
+   },
+   "Q": {
+    "E": 1440,
+    "deg": {
+     "43": 16,
+     "45": 32,
+     "47": 16
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     2
+    ]
+   }
+  },
+  "sphere442": {
+   "W": {
+    "E": 125,
+    "deg": {
+     "2": 2,
+     "3": 2,
+     "4": 60
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     14
+    ],
+    "mean_dist": 4.6295
+   },
+   "F": {
+    "E": 126,
+    "deg": {
+     "3": 4,
+     "4": 60
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     7
+    ]
+   },
+   "K": {
+    "E": 245,
+    "deg": {
+     "3": 2,
+     "6": 6,
+     "8": 56
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     7
+    ],
+    "mean_dist": 3.2401
+   },
+   "R": {
+    "E": 812,
+    "deg": {
+     "14": 8,
+     "27": 56
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     2
+    ]
+   },
+   "B": {
+    "E": 816,
+    "deg": {
+     "21": 16,
+     "27": 48
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     2
+    ]
+   },
+   "Q": {
+    "E": 1392,
+    "deg": {
+     "33": 8,
+     "43": 8,
+     "45": 32,
+     "46": 16
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     2
+    ]
+   }
+  },
+  "pillow": {
+   "W": {
+    "E": 124,
+    "deg": {
+     "3": 8,
+     "4": 56
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     8
+    ],
+    "mean_dist": 4.3333
+   },
+   "F": {
+    "E": 124,
+    "deg": {
+     "3": 8,
+     "4": 56
+    },
+    "comps": [
+     32,
+     32
+    ],
+    "diam": [
+     7
+    ]
+   },
+   "K": {
+    "E": 248,
+    "deg": {
+     "6": 8,
+     "8": 56
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     7
+    ],
+    "mean_dist": 3.0952
+   },
+   "R": {
+    "E": 864,
+    "deg": {
+     "27": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     2
+    ]
+   },
+   "B": {
+    "E": 392,
+    "deg": {
+     "10": 16,
+     "13": 48
+    },
+    "comps": [
+     32,
+     32
+    ],
+    "diam": [
+     2
+    ]
+   },
+   "Q": {
+    "E": 1152,
+    "deg": {
+     "35": 16,
+     "36": 32,
+     "37": 16
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     2
+    ]
+   }
+  },
+  "pillow_cyl": {
+   "W": {
+    "E": 124,
+    "deg": {
+     "3": 8,
+     "4": 56
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     11
+    ],
+    "mean_dist": 4.5873
+   },
+   "F": {
+    "E": 124,
+    "deg": {
+     "3": 8,
+     "4": 56
+    },
+    "comps": [
+     32,
+     32
+    ],
+    "diam": [
+     7
+    ]
+   },
+   "K": {
+    "E": 248,
+    "deg": {
+     "6": 8,
+     "8": 56
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     7
+    ],
+    "mean_dist": 3.2302
+   },
+   "R": {
+    "E": 672,
+    "deg": {
+     "21": 64
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     2
+    ]
+   },
+   "B": {
+    "E": 672,
+    "deg": {
+     "19": 32,
+     "23": 32
+    },
+    "comps": [
+     32,
+     32
+    ],
+    "diam": [
+     2
+    ]
+   },
+   "Q": {
+    "E": 1168,
+    "deg": {
+     "36": 32,
+     "37": 32
+    },
+    "comps": [
+     64
+    ],
+    "diam": [
+     2
+    ]
+   }
+  }
+ },
+ "alpha": {
+  "plane": {
+   "K": {
+    "alpha": 16,
+    "count": 281571
+   },
+   "R": {
+    "alpha": 8,
+    "count": 40320
+   },
+   "B": {
+    "alpha": 14,
+    "count": 256
+   },
+   "Q": {
+    "alpha": 8,
+    "count": 92
+   }
+  },
+  "cylinder": {
+   "K": {
+    "alpha": 16,
+    "count": 4460
+   },
+   "R": {
+    "alpha": 8,
+    "count": 40320
+   },
+   "B": {
+    "alpha": 8,
+    "count": 147456
+   },
+   "Q": {
+    "alpha": 6,
+    "count": 3072
+   }
+  },
+  "mobius": {
+   "K": {
+    "alpha": 16,
+    "count": 1636
+   },
+   "R": {
+    "alpha": 4,
+    "count": 26880
+   },
+   "B": {
+    "alpha": 8,
+    "count": 40320
+   },
+   "Q": {
+    "alpha": 4,
+    "count": 3328
+   }
+  },
+  "mobius_diag": {
+   "K": {
+    "alpha": 16,
+    "count": 2984
+   },
+   "R": {
+    "alpha": 8,
+    "count": 1
+   },
+   "B": {
+    "alpha": 8,
+    "count": 771696
+   },
+   "Q": {
+    "alpha": 4,
+    "count": 1782
+   }
+  },
+  "torus": {
+   "K": {
+    "alpha": 16,
+    "count": 60
+   },
+   "R": {
+    "alpha": 8,
+    "count": 40320
+   },
+   "B": {
+    "alpha": 8,
+    "count": 147456
+   },
+   "Q": {
+    "alpha": 6,
+    "count": 3072
+   }
+  },
+  "torus_k1": {
+   "K": {
+    "alpha": 16,
+    "count": 32
+   },
+   "R": {
+    "alpha": 1,
+    "count": 64
+   },
+   "B": {
+    "alpha": 1,
+    "count": 64
+   },
+   "Q": {
+    "alpha": 1,
+    "count": 64
+   }
+  },
+  "torus_k2": {
+   "K": {
+    "alpha": 16,
+    "count": 32
+   },
+   "R": {
+    "alpha": 2,
+    "count": 896
+   },
+   "B": {
+    "alpha": 2,
+    "count": 1024
+   },
+   "Q": {
+    "alpha": 2,
+    "count": 384
+   }
+  },
+  "torus_k4": {
+   "K": {
+    "alpha": 16,
+    "count": 36
+   },
+   "R": {
+    "alpha": 4,
+    "count": 26880
+   },
+   "B": {
+    "alpha": 4,
+    "count": 16384
+   },
+   "Q": {
+    "alpha": 4,
+    "count": 256
+   }
+  },
+  "klein": {
+   "K": {
+    "alpha": 16,
+    "count": 32
+   },
+   "R": {
+    "alpha": 4,
+    "count": 26880
+   },
+   "B": {
+    "alpha": 4,
+    "count": 6144
+   },
+   "Q": {
+    "alpha": 3,
+    "count": 1024
+   }
+  },
+  "klein_cc": {
+   "K": {
+    "alpha": 16,
+    "count": 40
+   },
+   "R": {
+    "alpha": 5,
+    "count": 53760
+   },
+   "B": {
+    "alpha": 8,
+    "count": 256
+   },
+   "Q": {
+    "alpha": 4,
+    "count": 1792
+   }
+  },
+  "klein_diag": {
+   "K": {
+    "alpha": 16,
+    "count": 2
+   },
+   "R": {
+    "alpha": 8,
+    "count": 1
+   },
+   "B": {
+    "alpha": 8,
+    "count": 258048
+   },
+   "Q": {
+    "alpha": 4,
+    "count": 1600
+   }
+  },
+  "rp2": {
+   "K": {
+    "alpha": 16,
+    "count": 4
+   },
+   "R": {
+    "alpha": 4,
+    "count": 6144
+   },
+   "B": {
+    "alpha": 4,
+    "count": 10752
+   },
+   "Q": {
+    "alpha": 3,
+    "count": 768
+   }
+  },
+  "rp2_fold": {
+   "K": {
+    "alpha": 16,
+    "count": 4
+   },
+   "R": {
+    "alpha": 4,
+    "count": 6144
+   },
+   "B": {
+    "alpha": 4,
+    "count": 10752
+   },
+   "Q": {
+    "alpha": 3,
+    "count": 768
+   }
+  },
+  "sphere442": {
+   "K": {
+    "alpha": 16,
+    "count": 62
+   },
+   "R": {
+    "alpha": 8,
+    "count": 1
+   },
+   "B": {
+    "alpha": 4,
+    "count": 10752
+   },
+   "Q": {
+    "alpha": 4,
+    "count": 128
+   }
+  },
+  "pillow": {
+   "K": {
+    "alpha": 16,
+    "count": 2
+   },
+   "R": {
+    "alpha": 4,
+    "count": 6144
+   },
+   "B": {
+    "alpha": 8,
+    "count": 451584
+   },
+   "Q": {
+    "alpha": 4,
+    "count": 1088
+   }
+  },
+  "pillow_cyl": {
+   "K": {
+    "alpha": 16,
+    "count": 4
+   },
+   "R": {
+    "alpha": 4,
+    "count": 26880
+   },
+   "B": {
+    "alpha": 4,
+    "count": 25600
+   },
+   "Q": {
+    "alpha": 4,
+    "count": 768
+   }
+  }
+ },
+ "sat": {
+  "plane": {
+   "gamma_K": 9,
+   "gamma_R": "8 (line formula)",
+   "gamma_B": 8,
+   "gamma_Q": 5,
+   "chi_W": "2",
+   "chi_F": "2",
+   "chi_K": "4",
+   "chi_R": "8",
+   "chi_B": "8",
+   "chi_Q": "9"
+  },
+  "cylinder": {
+   "gamma_K": 9,
+   "gamma_R": "8 (line formula)",
+   "gamma_B": "8 (line formula)",
+   "gamma_Q": 4,
+   "chi_W": "2",
+   "chi_F": "2",
+   "chi_K": "4",
+   "chi_R": "8",
+   "chi_B": "8",
+   "chi_Q": "11"
+  },
+  "mobius": {
+   "gamma_K": 9,
+   "gamma_R": "4 (line formula)",
+   "gamma_B": "8 (line formula)",
+   "gamma_Q": 4,
+   "chi_W": "3",
+   "chi_F": "2",
+   "chi_K": "4",
+   "chi_R": "16",
+   "chi_B": "8",
+   "chi_Q": "16"
+  },
+  "mobius_diag": {
+   "gamma_K": 9,
+   "gamma_R": 4,
+   "gamma_B": 8,
+   "gamma_Q": 3,
+   "chi_W": "2",
+   "chi_F": "3",
+   "chi_K": "5",
+   "chi_R": "15",
+   "chi_B": "8",
+   "chi_Q": "16"
+  },
+  "torus": {
+   "gamma_K": 8,
+   "gamma_R": "8 (line formula)",
+   "gamma_B": "8 (line formula)",
+   "gamma_Q": 4,
+   "chi_W": "2",
+   "chi_F": "2",
+   "chi_K": "4",
+   "chi_R": "8",
+   "chi_B": "8",
+   "chi_Q": "11"
+  },
+  "torus_k1": {
+   "gamma_K": 8,
+   "gamma_R": "1 (line formula)",
+   "gamma_B": "1 (line formula)",
+   "gamma_Q": 1,
+   "chi_W": "3",
+   "chi_F": "2",
+   "chi_K": "4",
+   "chi_R": "64",
+   "chi_B": "64",
+   "chi_Q": "64"
+  },
+  "torus_k2": {
+   "gamma_K": 8,
+   "gamma_R": "2 (line formula)",
+   "gamma_B": "2 (line formula)",
+   "gamma_Q": 2,
+   "chi_W": "2",
+   "chi_F": "2",
+   "chi_K": "4",
+   "chi_R": "32",
+   "chi_B": "32",
+   "chi_Q": "32"
+  },
+  "torus_k4": {
+   "gamma_K": 8,
+   "gamma_R": "4 (line formula)",
+   "gamma_B": "4 (line formula)",
+   "gamma_Q": 2,
+   "chi_W": "2",
+   "chi_F": "2",
+   "chi_K": "4",
+   "chi_R": "16",
+   "chi_B": "16",
+   "chi_Q": "16"
+  },
+  "klein": {
+   "gamma_K": 9,
+   "gamma_R": "4 (line formula)",
+   "gamma_B": "4 (line formula)",
+   "gamma_Q": 3,
+   "chi_W": "3",
+   "chi_F": "2",
+   "chi_K": "4",
+   "chi_R": "16",
+   "chi_B": "16",
+   "chi_Q": "22"
+  },
+  "klein_cc": {
+   "gamma_K": 9,
+   "gamma_R": "5 (line formula)",
+   "gamma_B": 4,
+   "gamma_Q": 3,
+   "chi_W": "2",
+   "chi_F": "2",
+   "chi_K": "4",
+   "chi_R": "16",
+   "chi_B": "14",
+   "chi_Q": "24"
+  },
+  "klein_diag": {
+   "gamma_K": 8,
+   "gamma_R": 4,
+   "gamma_B": "8 (line formula)",
+   "gamma_Q": 3,
+   "chi_W": "2",
+   "chi_F": "3",
+   "chi_K": "5",
+   "chi_R": "15",
+   "chi_B": "8",
+   "chi_Q": "16"
+  },
+  "rp2": {
+   "gamma_K": 9,
+   "gamma_R": "4 (line formula)",
+   "gamma_B": "4 (line formula)",
+   "gamma_Q": 2,
+   "chi_W": "4",
+   "chi_F": "3",
+   "chi_K": "4",
+   "chi_R": "16",
+   "chi_B": "16",
+   "chi_Q": "22"
+  },
+  "sphere442": {
+   "gamma_K": 9,
+   "gamma_R": 4,
+   "gamma_B": "4 (line formula)",
+   "gamma_Q": 3,
+   "chi_W": "3",
+   "chi_F": "3",
+   "chi_K": "5",
+   "chi_R": "15",
+   "chi_B": "16",
+   "chi_Q": "<= 20 (>= 19)"
+  },
+  "pillow": {
+   "gamma_K": 8,
+   "gamma_R": "4 (line formula)",
+   "gamma_B": "8 (line formula)",
+   "gamma_Q": 3,
+   "chi_W": "2",
+   "chi_F": "3",
+   "chi_K": "5",
+   "chi_R": "16",
+   "chi_B": "8",
+   "chi_Q": "16"
+  },
+  "pillow_cyl": {
+   "gamma_K": 8,
+   "gamma_R": "4 (line formula)",
+   "gamma_B": "4 (line formula)",
+   "gamma_Q": 3,
+   "chi_W": "2",
+   "chi_F": "3",
+   "chi_K": "4",
+   "chi_R": "16",
+   "chi_B": "16",
+   "chi_Q": "16"
+  }
+ }
+}

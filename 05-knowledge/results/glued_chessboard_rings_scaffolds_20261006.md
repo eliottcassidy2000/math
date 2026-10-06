@@ -4,7 +4,7 @@
 
 **PROVED (elementary):** Theorems 1-6 and the mechanisms marked so. **FINITE-EXACT:** every table (exact enumeration on 16 boards; independence counts by two independent algorithms, isometry groups by two independent algorithms). **CITED:** Polya 1918 and Monsky 1989 (toroidal queens, OEIS A085801), Burger-Mynhardt 2003 / Mynhardt 2003 (toroidal queen domination, OEIS A279402), G. Arizmendi Echegaray, "Queens on surfaces" (Bridges 2026 art exhibition: 8x8 torus 6, Mobius band 4, Klein bottle 3 queens). **NUMEROLOGY guard:** no small-number coincidence below is typed as a dictionary without a mechanism. Nothing here touches LRC(14).
 
-Script and saved output: [glued_chessboard_20261006.py](../../04-computation/experiments/glued_chessboard_20261006.py) / [out](glued_chessboard_20261006.out) / [json](glued_chessboard_20261006.json); the SAT-heavy domination and colouring runs are in [glued_chessboard_sat_20261006.json](glued_chessboard_sat_20261006.json).
+Script and saved output: [glued_chessboard_20261006.py](../../04-computation/experiments/glued_chessboard_20261006.py) / [out](glued_chessboard_20261006.out) / [json](glued_chessboard_20261006.json). The `.out` is the `--sat` run, which adds the SAT cross-checks, domination numbers and chromatic numbers. Interactive explorer of all fifteen boards (private artifact, owner's account): https://claude.ai/artifact/MGq9PVXHNFpGv3iuqSsest
 
 ## 1. Inheritance and portfolio
 
@@ -13,6 +13,11 @@ Script and saved output: [glued_chessboard_20261006.py](../../04-computation/exp
 - **Corrected near miss.** The seed's `{1,3,5,5,3,1}` is the inner 6x6 board; see section 2.
 - **Least-used sidecars.** The line multigraph of a slider (section 8) and the colour cover (section 7).
 - **Observer lens.** The owner's rings are what an observer at the board's centre point sees; every result below is phrased by where that observer's view wraps (ring 4) or where the board's curvature sits (cone points).
+- **Concurrent work (same day; pulled mid-session).** The mac-mini note [chessboard_weave_20261006.md](chessboard_weave_20261006.md) answers a sibling owner prompt (knight tours, the Fibonacci monotile, open problems; scaffold already written `{1,3,5,7,7,5,3,1}` there).
+  - Its Prop. 1.1(a,b,d) and Prop. 1.2 are this note's section 2 and Theorem 1, found independently. Their proof sums ray lengths; this note's proof gives the L-infinity = rotated L1 mechanism.
+  - Their torus is the lonely runner's continuous `R^n/Z^n` and their 6x6 knight-torus blocking census uses one gluing. Neither studies the pac-man gluings catalogued here.
+  - Their leaper colour rule (Cor. 4.2: a leap `(p,q)` keeps colour iff `p+q` is even) is the colour character of section 7 evaluated on a translation `(p,q)`.
+  - No statement of either note contradicts the other.
 
 Portfolio. **Anchor:** make the rings and scaffolds exact and catalogue what every geometric gluing does to them and to each piece. **Niche:** the colour cover as the home of the bishop (section 7). **Wildcard:** which gluings a slider cannot tell apart (section 8).
 
@@ -20,11 +25,11 @@ Portfolio. **Anchor:** make the rings and scaffolds exact and catalogue what eve
 
 Cells `(x,y)`, `0 <= x,y <= 7`. Ring `k` (k = 1..4) is the set of cells at Chebyshev distance `k - 1/2` from the centre point `(4,4)`; it has `8(k - 1/2) = 8k - 4` cells: **4, 12, 20, 28**. The orthogonal-step (wazir) graph is exactly four disjoint cycles `C4, C12, C20, C28` plus `8k` spokes between ring `k` and ring `k+1` (8, 16, 24; total 48 + 64 = 112 edges).
 
-**Correction.** On the 8x8 board each colour class has diagonals of lengths **{1,3,5,7,7,5,3,1}** in one direction and **{2,4,6,8,6,4,2}** in the other (the two colours swap roles). The seed's `{1,3,5,5,3,1}` (with `{2,4,6,4,2}`) is the scaffold of the 6x6 board, i.e. of rings 1-3. In 45-degree coordinates `u=(x+y)/2, v=(x-y)/2` each colour is a diamond-shaped board whose rows and columns are exactly those diagonals; diagonal steps become orthogonal steps there. The two scaffolds are planar duals: every interior cell of one colour is a face of the other colour's diagonal grid (32 vertices, 49 edges, 18 bounded faces).
+**Correction.** On the 8x8 board each colour class has diagonals of lengths **{1,3,5,7,7,5,3,1}** in one direction and **{2,4,6,8,6,4,2}** in the other (the two colours swap roles). The seed's `{1,3,5,5,3,1}` (with `{2,4,6,4,2}`) is the scaffold of the 6x6 board, i.e. of rings 1-3. In 45-degree coordinates `u=(x+y)/2, v=(x-y)/2` each colour is a diamond-shaped board whose rows and columns are exactly those diagonals; diagonal steps become orthogonal steps there. Up to the boundary, the two scaffolds are planar duals: the bounded faces of one colour's diagonal grid are exactly the interior cells of the other colour (32 vertices, 49 edges, 18 bounded faces, 18 interior cells).
 
 Moves: wazir W (orthogonal step), ferz F (diagonal step), king K = W + F; rook R, bishop B, queen Q slide along straight lines through any seam until a wall. On a closed line nothing obstructs the slide except the piece's own square, so the slider reaches the whole line.
 
-## 3. Theorem 1: the rings are the bishop's mobility shells (PROVED)
+## 3. Theorem 1: the rings are the bishop's mobility shells (PROVED; independently also mac-mini Prop. 1.2)
 
 On the plane board a cell of ring `k` has bishop mobility `15 - 2k` (13, 11, 9, 7) and queen mobility `29 - 2k` (27, 25, 23, 21).
 
@@ -131,7 +136,7 @@ So **fusion is not topological**:
 The klein_cc board, whose colour is preserved, correctly fails against the Klein cover (hostile control).
 
 - **The Klein bottle's bishop lives on a torus**, `Z^2/<(4,4),(8,-8)>`. Every axis line of that torus has length 16, so it has no 8x8 window: it is not one of the window tori above.
-- **RP^2 and the 442 sphere share their colour cover.** In both cases `G0` is the p2 group generated by the translations `16Z^2` and the half-turns about `8Z^2`. Its quotient is the 128-cell pillowcase: two chessboards sewn back to back along all four edges. RP^2 is that pillowcase modulo an antipodal glide, and the sphere is the pillowcase modulo a quarter turn; both maps swap the colours. Hence `F(rp2) = F(sphere442)` (isomorphic). Their bishop graphs are even **literally equal** as sets of attacked squares, because in both gluings the diagonal `x - y = d` (d not 0) closes into one line with the same four board segments `{x-y = d, x-y = -d, x+y = d-1, x+y = 15-d}` (traced by hand; FINITE-EXACT). The two main diagonals fold back at cone points in both. A bishop cannot tell the projective plane from the sphere.
+- **RP^2 and the 442 sphere share their colour cover.** In both cases `G0` is the p2 group generated by the translations `16Z^2` and the half-turns about `8Z^2`. Its quotient is the 128-cell pillowcase: two chessboards sewn back to back along all four edges. RP^2 is that pillowcase modulo an antipodal glide, and the sphere is the pillowcase modulo a quarter turn; both maps swap the colours. Hence `F(rp2) = F(sphere442)` (isomorphic). Their bishop graphs are even **literally equal** as sets of attacked squares. In both gluings, for `d = 1..7`, the diagonals `x - y = +-d` close into one line together with the anti-diagonals `x + y = d - 1` and `x + y = 15 - d`: lengths `2(8-d) + 2d = 16` (traced by hand; FINITE-EXACT). The two main diagonals fold back at cone points in both. A bishop cannot tell the projective plane from the sphere.
 
 ## 8. Sliding: lines become loops, and sliders only see which segments were joined
 
@@ -210,7 +215,7 @@ Domination numbers `gamma` (minimum pieces covering every square) and chromatic 
 
 `gamma` = minimum pieces attacking or occupying every square, with the number of minimum sets where the enumeration finished (capped at 5000 or 20000). `chi_col` = chromatic number of the move graph. All values are SAT (glucose4 / CaDiCaL).
 
-- Every queen chromatic number below is pinned exactly: SAT colours with `ceil(64/alpha)` (or `omega`) colours, and that number is a proven lower bound.
+- Every queen chromatic number below except sphere442's is pinned exactly: SAT colours with `ceil(64/alpha)` (or `omega`) colours, and that number is a proven lower bound. On sphere442, 16, 17 and 18 colours are UNSAT and 20 colours are SAT; 19 is still open (see the table).
 - For the torus and cylinder, `gamma(B) = 8` is by proof rather than SAT. Per colour, every diagonal meets every anti-diagonal, so an empty diagonal and an empty anti-diagonal would leave their intersection undominated. A dominating set therefore fills all four of one family in each colour.
 
 | board | gamma K | gamma R | gamma B | gamma Q | chi W | chi F | chi K | chi R | chi B | chi Q |
@@ -227,7 +232,7 @@ Domination numbers `gamma` (minimum pieces covering every square) and chromatic 
 | klein_cc | 9 (>=20000) | 5 | 4 | 3 (288) | 2 | 2 | 4 | 16 | 14 | 24 |
 | klein_diag | 8 (18) | 4 | 8 | 3 (744) | 2 | 3 | **5** | 15 | 8 | 16 |
 | rp2 | 9 (>=5000) | 4 | 4 | **2 (48)** | **4** | 3 | 4 | 16 | 16 | **22** |
-| sphere442 | 9 (>=5000) | 4 | 4 | 3 (>=5000) | 3 | 3 | **5** | 15 | 16 | 19 or 20 (pending) |
+| sphere442 | 9 (>=5000) | 4 | 4 | 3 (>=5000) | 3 | 3 | **5** | 15 | 16 | 19 or 20 (OPEN) |
 | pillow | 8 (12) | 4 | 8 | 3 (640) | 2 | 3 | **5** | 16 | 8 | 16 |
 | pillow_cyl | 8 (8) | 4 | 4 | 3 (832) | 2 | 3 | 4 | 16 | 16 | 16 |
 

@@ -1,0 +1,333 @@
+PAC-MAN CHESSBOARDS (opus-2026-10-06-S15)
+
+== 0. The owner's structures on the plane board
+   rings (Chebyshev radius k-1/2 about the centre point): {4: 28, 3: 20, 2: 12, 1: 4}
+   ring cycles: internal W-edges {4: 28, 3: 20, 2: 12, 1: 4}  spokes {(3, 4): 24, (2, 3): 16, (1, 2): 8}
+   colour 0: diagonal (x-y) lengths [2, 4, 6, 8, 6, 4, 2]  anti-diagonal (x+y) lengths [1, 3, 5, 7, 7, 5, 3, 1]
+   colour 1: diagonal (x-y) lengths [1, 3, 5, 7, 7, 5, 3, 1]  anti-diagonal (x+y) lengths [2, 4, 6, 8, 6, 4, 2]
+   bishop mobility by ring: {4: [7], 3: [9], 2: [11], 1: [13]}  queen: {4: [21], 3: [23], 2: [25], 1: [27]}
+
+== 1. Boards: surface, Euler characteristic, orientability, colour character, isometries
+   plane        disk                         chi= 1 orientable=True  colour-char=[] |Isom|=  8 cell-orbits=10  vertex classes by #corners {1: 4, 2: 28, 4: 49}
+   cylinder     annulus                      chi= 0 orientable=True  colour-char=[0] |Isom|= 32 cell-orbits= 4  vertex classes by #corners {2: 16, 4: 56}
+   mobius       Mobius band                  chi= 0 orientable=False colour-char=[1] |Isom|= 32 cell-orbits= 4  vertex classes by #corners {2: 16, 4: 56}
+   mobius_diag  Mobius band                  chi= 0 orientable=False colour-char=[0] |Isom|=  2 cell-orbits=36  vertex classes by #corners {1: 1, 2: 14, 3: 1, 4: 56}
+   torus        torus (o, p1)                chi= 0 orientable=True  colour-char=[0, 0] |Isom|=512 cell-orbits= 1  vertex classes by #corners {4: 64}
+   torus_k1     torus (o, p1)                chi= 0 orientable=True  colour-char=[1, 0] |Isom|=128 cell-orbits= 1  vertex classes by #corners {4: 64}
+   torus_k2     torus (o, p1)                chi= 0 orientable=True  colour-char=[0, 0] |Isom|=128 cell-orbits= 1  vertex classes by #corners {4: 64}
+   torus_k4     torus (o, p1)                chi= 0 orientable=True  colour-char=[0, 0] |Isom|=256 cell-orbits= 1  vertex classes by #corners {4: 64}
+   klein        Klein bottle (xx, pg)        chi= 0 orientable=False colour-char=[0, 1] |Isom|= 64 cell-orbits= 2  vertex classes by #corners {4: 64}
+   klein_cc     Klein bottle (xx, pg)        chi= 0 orientable=False colour-char=[0, 0] |Isom|= 64 cell-orbits= 3  vertex classes by #corners {4: 64}
+   klein_diag   Klein bottle (xx, pg)        chi= 0 orientable=False colour-char=[0, 0] |Isom|= 32 cell-orbits= 5  vertex classes by #corners {4: 64}
+   rp2          projective plane (22x, pgg)  chi= 1 orientable=False colour-char=[1, 1] |Isom|=  8 cell-orbits=10  vertex classes by #corners {2: 2, 4: 63}
+   rp2_fold     projective plane (22x, pgg)  chi= 1 orientable=False colour-char=[1, 0, 0] |Isom|=  8 cell-orbits=10  vertex classes by #corners {2: 2, 4: 63}
+   sphere442    sphere (442, p4)             chi= 2 orientable=True  colour-char=[1, 1] |Isom|=  4 cell-orbits=20  vertex classes by #corners {1: 2, 2: 1, 4: 63}
+   pillow       sphere (2222, p2)            chi= 2 orientable=True  colour-char=[0, 0, 0, 0] |Isom|= 16 cell-orbits= 6  vertex classes by #corners {2: 4, 4: 62}
+   pillow_cyl   sphere (2222, p2)            chi= 2 orientable=True  colour-char=[0, 0, 0] |Isom|=  8 cell-orbits= 8  vertex classes by #corners {2: 4, 4: 62}
+
+== 2. Seam localisation: rings 1-3 untouched; ring 4 carries the topology
+   plane        ring-internal W-edges {4: 28, 3: 20, 2: 12, 1: 4}  spokes {(3, 4): 24, (2, 3): 16, (1, 2): 8}  chi(ring 4 region)= 0  chi(inner 6x6)=1
+   cylinder     ring-internal W-edges {4: 36, 3: 20, 2: 12, 1: 4}  spokes {(3, 4): 24, (2, 3): 16, (1, 2): 8}  chi(ring 4 region)=-1  chi(inner 6x6)=1
+   mobius       ring-internal W-edges {4: 36, 3: 20, 2: 12, 1: 4}  spokes {(3, 4): 24, (2, 3): 16, (1, 2): 8}  chi(ring 4 region)=-1  chi(inner 6x6)=1
+   mobius_diag  ring-internal W-edges {4: 36, 3: 20, 2: 12, 1: 4}  spokes {(3, 4): 24, (2, 3): 16, (1, 2): 8}  chi(ring 4 region)=-1  chi(inner 6x6)=1
+   torus        ring-internal W-edges {4: 44, 3: 20, 2: 12, 1: 4}  spokes {(3, 4): 24, (2, 3): 16, (1, 2): 8}  chi(ring 4 region)=-1  chi(inner 6x6)=1
+   torus_k1     ring-internal W-edges {4: 44, 3: 20, 2: 12, 1: 4}  spokes {(3, 4): 24, (2, 3): 16, (1, 2): 8}  chi(ring 4 region)=-1  chi(inner 6x6)=1
+   torus_k2     ring-internal W-edges {4: 44, 3: 20, 2: 12, 1: 4}  spokes {(3, 4): 24, (2, 3): 16, (1, 2): 8}  chi(ring 4 region)=-1  chi(inner 6x6)=1
+   torus_k4     ring-internal W-edges {4: 44, 3: 20, 2: 12, 1: 4}  spokes {(3, 4): 24, (2, 3): 16, (1, 2): 8}  chi(ring 4 region)=-1  chi(inner 6x6)=1
+   klein        ring-internal W-edges {4: 44, 3: 20, 2: 12, 1: 4}  spokes {(3, 4): 24, (2, 3): 16, (1, 2): 8}  chi(ring 4 region)=-1  chi(inner 6x6)=1
+   klein_cc     ring-internal W-edges {4: 44, 3: 20, 2: 12, 1: 4}  spokes {(3, 4): 24, (2, 3): 16, (1, 2): 8}  chi(ring 4 region)=-1  chi(inner 6x6)=1
+   klein_diag   ring-internal W-edges {4: 44, 3: 20, 2: 12, 1: 4}  spokes {(3, 4): 24, (2, 3): 16, (1, 2): 8}  chi(ring 4 region)=-1  chi(inner 6x6)=1
+   rp2          ring-internal W-edges {4: 42, 3: 20, 2: 12, 1: 4}  spokes {(3, 4): 24, (2, 3): 16, (1, 2): 8}  chi(ring 4 region)= 0  chi(inner 6x6)=1
+   rp2_fold     ring-internal W-edges {4: 42, 3: 20, 2: 12, 1: 4}  spokes {(3, 4): 24, (2, 3): 16, (1, 2): 8}  chi(ring 4 region)= 0  chi(inner 6x6)=1
+   sphere442    ring-internal W-edges {4: 41, 3: 20, 2: 12, 1: 4}  spokes {(3, 4): 24, (2, 3): 16, (1, 2): 8}  chi(ring 4 region)= 1  chi(inner 6x6)=1
+   pillow       ring-internal W-edges {4: 40, 3: 20, 2: 12, 1: 4}  spokes {(3, 4): 24, (2, 3): 16, (1, 2): 8}  chi(ring 4 region)= 1  chi(inner 6x6)=1
+   pillow_cyl   ring-internal W-edges {4: 40, 3: 20, 2: 12, 1: 4}  spokes {(3, 4): 24, (2, 3): 16, (1, 2): 8}  chi(ring 4 region)= 1  chi(inner 6x6)=1
+
+== 3. King shells about every vertex class (cone points show their angle)
+   plane        centre point: (4, 12, 20, 28)
+   cylinder     centre point: (4, 12, 20, 28)
+   mobius       centre point: (4, 12, 20, 28)
+   mobius_diag  centre point: (4, 12, 20, 28)
+   torus        centre point: (4, 12, 20, 28)
+   torus_k1     centre point: (4, 12, 20, 28)
+   torus_k2     centre point: (4, 12, 20, 28)
+   torus_k4     centre point: (4, 12, 20, 28)
+   klein        centre point: (4, 12, 20, 28)
+   klein_cc     centre point: (4, 12, 20, 28)
+   klein_diag   centre point: (4, 12, 20, 28)
+   rp2          centre point: (4, 12, 20, 28)
+                cone point, 2 corner(s) at [(0, 0), (8, 8)]: (2, 6, 10, 14, 14, 10, 6, 2)
+                cone point, 2 corner(s) at [(0, 8), (8, 0)]: (2, 6, 10, 14, 14, 10, 6, 2)
+   rp2_fold     centre point: (4, 12, 20, 28)
+                cone point, 2 corner(s) at [(4, 0)]: (2, 6, 10, 14, 14, 10, 6, 2)
+                cone point, 2 corner(s) at [(4, 8)]: (2, 6, 10, 14, 14, 10, 6, 2)
+   sphere442    centre point: (4, 12, 20, 28)
+                cone point, 1 corner(s) at [(0, 0)]: (1, 3, 5, 7, 9, 11, 13, 15)
+                cone point, 2 corner(s) at [(0, 8), (8, 0)]: (2, 6, 10, 14, 14, 10, 6, 2)
+                cone point, 1 corner(s) at [(8, 8)]: (1, 3, 5, 7, 9, 11, 13, 15)
+   pillow       centre point: (4, 12, 20, 28)
+                cone point, 2 corner(s) at [(0, 4)]: (2, 6, 10, 14, 14, 10, 6, 2)
+                cone point, 2 corner(s) at [(4, 0)]: (2, 6, 10, 14, 14, 10, 6, 2)
+                cone point, 2 corner(s) at [(4, 8)]: (2, 6, 10, 14, 14, 10, 6, 2)
+                cone point, 2 corner(s) at [(8, 4)]: (2, 6, 10, 14, 14, 10, 6, 2)
+   pillow_cyl   centre point: (4, 12, 20, 28)
+                cone point, 2 corner(s) at [(0, 0), (8, 0)]: (2, 6, 10, 14, 8, 8, 8, 8)
+                cone point, 2 corner(s) at [(0, 8), (8, 8)]: (2, 6, 10, 14, 8, 8, 8, 8)
+                cone point, 2 corner(s) at [(4, 0)]: (2, 6, 10, 14, 8, 8, 8, 8)
+                cone point, 2 corner(s) at [(4, 8)]: (2, 6, 10, 14, 8, 8, 8, 8)
+
+== 4. Scaffold fusion: W bipartite <=> F has two components <=> colour character trivial
+   plane        colour character []  W bipartite True   F components 2  (each F component bipartite: [True, True])
+   cylinder     colour character [0]  W bipartite True   F components 2  (each F component bipartite: [True, True])
+   mobius       colour character [1]  W bipartite False  F components 1  (each F component bipartite: [True])
+   mobius_diag  colour character [0]  W bipartite True   F components 2  (each F component bipartite: [False, True])
+   torus        colour character [0, 0]  W bipartite True   F components 2  (each F component bipartite: [True, True])
+   torus_k1     colour character [1, 0]  W bipartite False  F components 1  (each F component bipartite: [True])
+   torus_k2     colour character [0, 0]  W bipartite True   F components 2  (each F component bipartite: [True, True])
+   torus_k4     colour character [0, 0]  W bipartite True   F components 2  (each F component bipartite: [True, True])
+   klein        colour character [0, 1]  W bipartite False  F components 1  (each F component bipartite: [True])
+   klein_cc     colour character [0, 0]  W bipartite True   F components 2  (each F component bipartite: [True, True])
+   klein_diag   colour character [0, 0]  W bipartite True   F components 2  (each F component bipartite: [False, True])
+   rp2          colour character [1, 1]  W bipartite False  F components 1  (each F component bipartite: [False])
+   rp2_fold     colour character [1, 0, 0]  W bipartite False  F components 1  (each F component bipartite: [False])
+   sphere442    colour character [1, 1]  W bipartite False  F components 1  (each F component bipartite: [False])
+   pillow       colour character [0, 0, 0, 0]  W bipartite True   F components 2  (each F component bipartite: [False, False])
+   pillow_cyl   colour character [0, 0, 0]  W bipartite True   F components 2  (each F component bipartite: [False, False])
+
+== 5. Diagonal worlds are rotated colour covers
+   torus     colour cover Z^2/<[(8, 0), (0, 8)]> -> rotated <[(4, 4), (4, -4)]>:  F ~ W(cover) [True, True]   bishop lines ~ rook lines(cover) [True, True]
+   torus_k2  colour cover Z^2/<[(8, 2), (0, 8)]> -> rotated <[(5, 3), (4, -4)]>:  F ~ W(cover) [True, True]   bishop lines ~ rook lines(cover) [True, True]
+   torus_k4  colour cover Z^2/<[(8, 4), (0, 8)]> -> rotated <[(6, 2), (4, -4)]>:  F ~ W(cover) [True, True]   bishop lines ~ rook lines(cover) [True, True]
+   torus_k1  colour cover Z^2/<[(16, 2), (0, 8)]> -> rotated <[(9, 7), (4, -4)]>:  F ~ W(cover) [True]   bishop lines ~ rook lines(cover) [True]
+   klein     colour cover Z^2/<[(8, 0), (0, 16)]> -> rotated <[(4, 4), (8, -8)]>:  F ~ W(cover) [True]   bishop lines ~ rook lines(cover) [True]
+   hostile control: klein_cc (colour preserved) vs the klein cover: [False, False]
+   F(rp2) ~ F(sphere442): True
+
+== 6. Straight lines (sliding): census (closed/open, length, distinct cells, folds back)
+   plane        orth {'open 8': 16}
+                diag {'open 1': 4, 'open 2': 4, 'open 3': 4, 'open 4': 4, 'open 5': 4, 'open 6': 4, 'open 7': 4, 'open 8': 2}
+   cylinder     orth {'closed 8': 8, 'open 8': 8}
+                diag {'open 8': 16}
+   mobius       orth {'closed 16': 4, 'open 8': 8}
+                diag {'open 8': 16}
+   mobius_diag  orth {'open 16(15 cells)': 8}
+                diag {'closed 4': 1, 'closed 8': 4, 'open 1': 1, 'open 2': 1, 'open 3': 1, 'open 4': 1, 'open 5': 1, 'open 6': 1, 'open 7': 1, 'open 8': 8}
+   torus        orth {'closed 8': 16}
+                diag {'closed 8': 16}
+   torus_k1     orth {'closed 8': 8, 'closed 64': 1}
+                diag {'closed 64': 2}
+   torus_k2     orth {'closed 8': 8, 'closed 32': 2}
+                diag {'closed 32': 4}
+   torus_k4     orth {'closed 8': 8, 'closed 16': 4}
+                diag {'closed 16': 8}
+   klein        orth {'closed 8': 8, 'closed 16': 4}
+                diag {'closed 16': 8}
+   klein_cc     orth {'closed 8': 10, 'closed 16': 3}
+                diag {'closed 16(14 cells)': 8}
+   klein_diag   orth {'closed 16(15 cells)': 8}
+                diag {'closed 4': 2, 'closed 8': 15}
+   rp2          orth {'closed 16': 8}
+                diag {'closed 8 fold': 2, 'closed 16': 7}
+   rp2_fold     orth {'closed 16': 8}
+                diag {'closed 8 fold': 2, 'closed 16': 7}
+   sphere442    orth {'closed 16(15 cells)': 8}
+                diag {'closed 8 fold': 2, 'closed 16': 7}
+   pillow       orth {'closed 16': 8}
+                diag {'closed 4 fold': 4, 'closed 8': 14}
+   pillow_cyl   orth {'closed 8': 8, 'closed 16': 4}
+                diag {'closed 8 fold': 4, 'closed 16': 6}
+
+== 7. Line multigraphs (vertices = lines, edges = squares); slider graph = its line graph
+   plane bishop scaffold component: 15 lines, 0 loops, line lengths [8, 7, 7, 6, 6, 5, 5, 4, 4, 3, 3, 2, 2, 1, 1]
+   plane bishop scaffold component: 15 lines, 0 loops, line lengths [8, 7, 7, 6, 6, 5, 5, 4, 4, 3, 3, 2, 2, 1, 1]
+   R: isomorphism classes of line multigraphs: [['plane', 'cylinder', 'torus'], ['mobius', 'torus_k4', 'klein', 'pillow_cyl'], ['mobius_diag', 'klein_diag', 'sphere442'], ['torus_k1'], ['torus_k2'], ['klein_cc'], ['rp2', 'pillow']]
+   B: isomorphism classes of line multigraphs: [['plane'], ['cylinder', 'torus'], ['mobius'], ['mobius_diag'], ['torus_k1'], ['torus_k2'], ['torus_k4'], ['klein'], ['klein_cc'], ['klein_diag'], ['rp2', 'sphere442'], ['pillow'], ['pillow_cyl']]
+   W: boards with literally identical attack sets: []
+   F: boards with literally identical attack sets: []
+   K: boards with literally identical attack sets: []
+   R: boards with literally identical attack sets: [['plane', 'cylinder', 'torus'], ['mobius_diag', 'klein_diag'], ['klein', 'pillow_cyl'], ['rp2', 'rp2_fold', 'pillow']]
+   B: boards with literally identical attack sets: [['cylinder', 'torus'], ['rp2', 'sphere442']]
+   Q: boards with literally identical attack sets: [['cylinder', 'torus']]
+
+== 8. Basic move-graph data (edges, degree histogram, components, diameter)
+   plane        W:E112 deg{2: 4, 3: 24, 4: 36} c[64] d[14] m5.3333  F:E98 deg{1: 4, 2: 24, 4: 36} c[32, 32] d[7]  K:E210 deg{3: 4, 5: 24, 8: 36} c[64] d[7] m3.75  R:E448 deg{14: 64} c[64] d[2]  B:E280 deg{7: 28, 9: 20, 11: 12, 13: 4} c[32, 32] d[2]  Q:E728 deg{21: 28, 23: 20, 25: 12, 27: 4} c[64] d[2]  [W loops/repeats 0/0, F loops 0]
+   cylinder     W:E120 deg{3: 16, 4: 48} c[64] d[11] m4.6984  F:E112 deg{2: 16, 4: 48} c[32, 32] d[7]  K:E232 deg{5: 16, 8: 48} c[64] d[7] m3.2857  R:E448 deg{14: 64} c[64] d[2]  B:E416 deg{13: 64} c[32, 32] d[2]  Q:E864 deg{27: 64} c[64] d[2]  [W loops/repeats 0/0, F loops 0]
+   mobius       W:E120 deg{3: 16, 4: 48} c[64] d[7] m4.3175  F:E112 deg{2: 16, 4: 48} c[64] d[8]  K:E232 deg{5: 16, 8: 48} c[64] d[7] m3.2063  R:E672 deg{21: 64} c[64] d[2]  B:E448 deg{14: 64} c[64] d[2]  Q:E1056 deg{33: 64} c[64] d[2]  [W loops/repeats 0/0, F loops 0]
+   mobius_diag  W:E120 deg{2: 1, 3: 14, 4: 49} c[64] d[11] m4.619  F:E113 deg{1: 1, 2: 12, 3: 3, 4: 48} c[32, 32] d[7]  K:E233 deg{3: 1, 5: 12, 6: 2, 7: 1, 8: 48} c[64] d[7] m3.2842  R:E812 deg{14: 8, 27: 56} c[64] d[2]  B:E376 deg{7: 1, 8: 2, 9: 3, 10: 10, 11: 7, 12: 8, 13: 33} c[32, 32] d[2]  Q:E1124 deg{27: 8, 33: 1, 34: 2, 35: 5, 36: 20, 37: 28} c[64] d[2]  [W loops/repeats 0/0, F loops 0]
+   torus        W:E128 deg{4: 64} c[64] d[8] m4.0635  F:E128 deg{4: 64} c[32, 32] d[4]  K:E256 deg{8: 64} c[64] d[4] m2.7302  R:E448 deg{14: 64} c[64] d[2]  B:E416 deg{13: 64} c[32, 32] d[2]  Q:E864 deg{27: 64} c[64] d[2]  [W loops/repeats 0/0, F loops 0]
+   torus_k1     W:E128 deg{4: 64} c[64] d[7] m4.0  F:E128 deg{4: 64} c[64] d[8]  K:E256 deg{8: 64} c[64] d[4] m2.7302  R:E2016 deg{63: 64} c[64] d[1]  B:E2016 deg{63: 64} c[64] d[1]  Q:E2016 deg{63: 64} c[64] d[1]  [W loops/repeats 0/0, F loops 0]
+   torus_k2     W:E128 deg{4: 64} c[64] d[7] m3.9683  F:E128 deg{4: 64} c[32, 32] d[4]  K:E256 deg{8: 64} c[64] d[4] m2.7302  R:E1120 deg{35: 64} c[64] d[2]  B:E992 deg{31: 64} c[32, 32] d[1]  Q:E1632 deg{51: 64} c[64] d[2]  [W loops/repeats 0/0, F loops 0]
+   torus_k4     W:E128 deg{4: 64} c[64] d[6] m3.873  F:E128 deg{4: 64} c[32, 32] d[4]  K:E256 deg{8: 64} c[64] d[4] m2.7302  R:E672 deg{21: 64} c[64] d[2]  B:E736 deg{23: 64} c[32, 32] d[2]  Q:E1312 deg{41: 64} c[64] d[2]  [W loops/repeats 0/0, F loops 0]
+   klein        W:E128 deg{4: 64} c[64] d[7] m3.9365  F:E128 deg{4: 64} c[64] d[8]  K:E256 deg{8: 64} c[64] d[4] m2.7302  R:E672 deg{21: 64} c[64] d[2]  B:E864 deg{27: 64} c[64] d[2]  Q:E1376 deg{43: 64} c[64] d[2]  [W loops/repeats 0/0, F loops 0]
+   klein_cc     W:E128 deg{4: 64} c[64] d[8] m3.9683  F:E128 deg{4: 64} c[32, 32] d[4]  K:E256 deg{8: 64} c[64] d[4] m2.7302  R:E616 deg{14: 16, 21: 48} c[64] d[2]  B:E656 deg{13: 16, 23: 48} c[32, 32] d[2]  Q:E1168 deg{27: 16, 39: 32, 41: 16} c[64] d[2]  [W loops/repeats 0/0, F loops 0]
+   klein_diag   W:E128 deg{4: 64} c[64] d[8] m4.1429  F:E128 deg{4: 64} c[32, 32] d[5, 6]  K:E256 deg{8: 64} c[64] d[6] m2.873  R:E812 deg{14: 8, 27: 56} c[64] d[2]  B:E404 deg{10: 8, 13: 56} c[32, 32] d[2]  Q:E1140 deg{27: 8, 36: 8, 37: 48} c[64] d[2]  [W loops/repeats 0/0, F loops 0]
+   rp2          W:E126 deg{3: 4, 4: 60} c[64] d[7] m4.0605  F:E126 deg{3: 4, 4: 60} c[64] d[7]  K:E252 deg{6: 4, 8: 60} c[64] d[7] m2.9127  R:E864 deg{27: 64} c[64] d[2]  B:E816 deg{21: 16, 27: 48} c[64] d[2]  Q:E1440 deg{43: 16, 45: 32, 47: 16} c[64] d[2]  [W loops/repeats 0/4, F loops 4]
+   rp2_fold     W:E126 deg{3: 4, 4: 60} c[64] d[7] m4.0605  F:E126 deg{3: 4, 4: 60} c[64] d[7]  K:E252 deg{6: 4, 8: 60} c[64] d[7] m2.9127  R:E864 deg{27: 64} c[64] d[2]  B:E816 deg{21: 16, 27: 48} c[64] d[2]  Q:E1440 deg{43: 16, 45: 32, 47: 16} c[64] d[2]  [W loops/repeats 0/4, F loops 4]
+   sphere442    W:E125 deg{2: 2, 3: 2, 4: 60} c[64] d[14] m4.6295  F:E126 deg{3: 4, 4: 60} c[64] d[7]  K:E245 deg{3: 2, 6: 6, 8: 56} c[64] d[7] m3.2401  R:E812 deg{14: 8, 27: 56} c[64] d[2]  B:E816 deg{21: 16, 27: 48} c[64] d[2]  Q:E1392 deg{33: 8, 43: 8, 45: 32, 46: 16} c[64] d[2]  [W loops/repeats 4/2, F loops 4]
+   pillow       W:E124 deg{3: 8, 4: 56} c[64] d[8] m4.3333  F:E124 deg{3: 8, 4: 56} c[32, 32] d[7]  K:E248 deg{6: 8, 8: 56} c[64] d[7] m3.0952  R:E864 deg{27: 64} c[64] d[2]  B:E392 deg{10: 16, 13: 48} c[32, 32] d[2]  Q:E1152 deg{35: 16, 36: 32, 37: 16} c[64] d[2]  [W loops/repeats 0/8, F loops 8]
+   pillow_cyl   W:E124 deg{3: 8, 4: 56} c[64] d[11] m4.5873  F:E124 deg{3: 8, 4: 56} c[32, 32] d[7]  K:E248 deg{6: 8, 8: 56} c[64] d[7] m3.2302  R:E672 deg{21: 64} c[64] d[2]  B:E672 deg{19: 32, 23: 32} c[32, 32] d[2]  Q:E1168 deg{36: 32, 37: 32} c[64] d[2]  [W loops/repeats 0/8, F loops 8]
+
+== 9. Non-attacking pieces: maximum and number of maximum placements (exact DP)
+   plane        K: 16 in  281571 ways  R:  8 in   40320 ways  B: 14 in     256 ways  Q:  8 in      92 ways
+   cylinder     K: 16 in    4460 ways  R:  8 in   40320 ways  B:  8 in  147456 ways  Q:  6 in    3072 ways
+   mobius       K: 16 in    1636 ways  R:  4 in   26880 ways  B:  8 in   40320 ways  Q:  4 in    3328 ways
+   mobius_diag  K: 16 in    2984 ways  R:  8 in       1 ways  B:  8 in  771696 ways  Q:  4 in    1782 ways
+   torus        K: 16 in      60 ways  R:  8 in   40320 ways  B:  8 in  147456 ways  Q:  6 in    3072 ways
+   torus_k1     K: 16 in      32 ways  R:  1 in      64 ways  B:  1 in      64 ways  Q:  1 in      64 ways
+   torus_k2     K: 16 in      32 ways  R:  2 in     896 ways  B:  2 in    1024 ways  Q:  2 in     384 ways
+   torus_k4     K: 16 in      36 ways  R:  4 in   26880 ways  B:  4 in   16384 ways  Q:  4 in     256 ways
+   klein        K: 16 in      32 ways  R:  4 in   26880 ways  B:  4 in    6144 ways  Q:  3 in    1024 ways
+   klein_cc     K: 16 in      40 ways  R:  5 in   53760 ways  B:  8 in     256 ways  Q:  4 in    1792 ways
+   klein_diag   K: 16 in       2 ways  R:  8 in       1 ways  B:  8 in  258048 ways  Q:  4 in    1600 ways
+   rp2          K: 16 in       4 ways  R:  4 in    6144 ways  B:  4 in   10752 ways  Q:  3 in     768 ways
+   rp2_fold     K: 16 in       4 ways  R:  4 in    6144 ways  B:  4 in   10752 ways  Q:  3 in     768 ways
+   sphere442    K: 16 in      62 ways  R:  8 in       1 ways  B:  4 in   10752 ways  Q:  4 in     128 ways
+   pillow       K: 16 in       2 ways  R:  4 in    6144 ways  B:  8 in  451584 ways  Q:  4 in    1088 ways
+   pillow_cyl   K: 16 in       4 ways  R:  4 in   26880 ways  B:  4 in   25600 ways  Q:  4 in     768 ways
+
+== 10. Mobility maps (row 7 on top) where they are not constant
+   plane B:
+       7  7  7  7  7  7  7  7
+       7  9  9  9  9  9  9  7
+       7  9 11 11 11 11  9  7
+       7  9 11 13 13 11  9  7
+       7  9 11 13 13 11  9  7
+       7  9 11 11 11 11  9  7
+       7  9  9  9  9  9  9  7
+       7  7  7  7  7  7  7  7
+   plane Q:
+      21 21 21 21 21 21 21 21
+      21 23 23 23 23 23 23 21
+      21 23 25 25 25 25 23 21
+      21 23 25 27 27 25 23 21
+      21 23 25 27 27 25 23 21
+      21 23 25 25 25 25 23 21
+      21 23 23 23 23 23 23 21
+      21 21 21 21 21 21 21 21
+   rp2 B:
+      21 27 27 27 27 27 27 21
+      27 21 27 27 27 27 21 27
+      27 27 21 27 27 21 27 27
+      27 27 27 21 21 27 27 27
+      27 27 27 21 21 27 27 27
+      27 27 21 27 27 21 27 27
+      27 21 27 27 27 27 21 27
+      21 27 27 27 27 27 27 21
+   rp2 Q:
+      43 45 45 47 47 45 45 43
+      45 43 47 45 45 47 43 45
+      45 47 43 45 45 43 47 45
+      47 45 45 43 43 45 45 47
+      47 45 45 43 43 45 45 47
+      45 47 43 45 45 43 47 45
+      45 43 47 45 45 47 43 45
+      43 45 45 47 47 45 45 43
+   rp2_fold B:
+      27 27 27 21 21 27 27 27
+      27 27 21 27 27 21 27 27
+      27 21 27 27 27 27 21 27
+      21 27 27 27 27 27 27 21
+      21 27 27 27 27 27 27 21
+      27 21 27 27 27 27 21 27
+      27 27 21 27 27 21 27 27
+      27 27 27 21 21 27 27 27
+   rp2_fold Q:
+      47 45 45 43 43 45 45 47
+      45 47 43 45 45 43 47 45
+      45 43 47 45 45 47 43 45
+      43 45 45 47 47 45 45 43
+      43 45 45 47 47 45 45 43
+      45 43 47 45 45 47 43 45
+      45 47 43 45 45 43 47 45
+      47 45 45 43 43 45 45 47
+   sphere442 R:
+      27 27 27 27 27 27 27 14
+      27 27 27 27 27 27 14 27
+      27 27 27 27 27 14 27 27
+      27 27 27 27 14 27 27 27
+      27 27 27 14 27 27 27 27
+      27 27 14 27 27 27 27 27
+      27 14 27 27 27 27 27 27
+      14 27 27 27 27 27 27 27
+   sphere442 B:
+      21 27 27 27 27 27 27 21
+      27 21 27 27 27 27 21 27
+      27 27 21 27 27 21 27 27
+      27 27 27 21 21 27 27 27
+      27 27 27 21 21 27 27 27
+      27 27 21 27 27 21 27 27
+      27 21 27 27 27 27 21 27
+      21 27 27 27 27 27 27 21
+   sphere442 Q:
+      43 45 46 45 45 45 46 33
+      45 43 45 46 45 45 33 46
+      46 45 43 46 45 33 45 45
+      45 46 46 43 33 45 45 45
+      45 45 45 33 43 46 46 45
+      45 45 33 45 46 43 45 46
+      46 33 45 45 46 45 43 45
+      33 46 45 45 45 46 45 43
+   pillow B:
+      13 13 13 10 10 13 13 13
+      13 13 10 13 13 10 13 13
+      13 10 13 13 13 13 10 13
+      10 13 13 13 13 13 13 10
+      10 13 13 13 13 13 13 10
+      13 10 13 13 13 13 10 13
+      13 13 10 13 13 10 13 13
+      13 13 13 10 10 13 13 13
+   pillow Q:
+      37 36 36 35 35 36 36 37
+      36 37 35 36 36 35 37 36
+      36 35 37 36 36 37 35 36
+      35 36 36 37 37 36 36 35
+      35 36 36 37 37 36 36 35
+      36 35 37 36 36 37 35 36
+      36 37 35 36 36 35 37 36
+      37 36 36 35 35 36 36 37
+   klein_cc R:
+      21 21 21 14 21 21 21 14
+      21 21 21 14 21 21 21 14
+      21 21 21 14 21 21 21 14
+      21 21 21 14 21 21 21 14
+      21 21 21 14 21 21 21 14
+      21 21 21 14 21 21 21 14
+      21 21 21 14 21 21 21 14
+      21 21 21 14 21 21 21 14
+   klein_cc B:
+      23 23 23 13 23 23 23 13
+      23 23 23 13 23 23 23 13
+      23 23 23 13 23 23 23 13
+      23 23 23 13 23 23 23 13
+      23 23 23 13 23 23 23 13
+      23 23 23 13 23 23 23 13
+      23 23 23 13 23 23 23 13
+      23 23 23 13 23 23 23 13
+   klein_cc Q:
+      39 41 39 27 39 41 39 27
+      39 41 39 27 39 41 39 27
+      39 41 39 27 39 41 39 27
+      39 41 39 27 39 41 39 27
+      39 41 39 27 39 41 39 27
+      39 41 39 27 39 41 39 27
+      39 41 39 27 39 41 39 27
+      39 41 39 27 39 41 39 27
+
+== 11. SAT: alpha cross-check (no larger set; counts re-enumerated when <= 20000), domination and chromatic numbers
+   plane        alpha confirmed; gamma K,R,B,Q = 9, 8 (line formula), 8, 5;  chi W,F,K,R,B,Q = 2, 2, 4, 8, 8, 9
+   cylinder     alpha confirmed; gamma K,R,B,Q = 9, 8 (line formula), 8 (line formula), 4;  chi W,F,K,R,B,Q = 2, 2, 4, 8, 8, 11
+   mobius       alpha confirmed; gamma K,R,B,Q = 9, 4 (line formula), 8 (line formula), 4;  chi W,F,K,R,B,Q = 3, 2, 4, 16, 8, 16
+   mobius_diag  alpha confirmed; gamma K,R,B,Q = 9, 4, 8, 3;  chi W,F,K,R,B,Q = 2, 3, 5, 15, 8, 16
+   torus        alpha confirmed; gamma K,R,B,Q = 8, 8 (line formula), 8 (line formula), 4;  chi W,F,K,R,B,Q = 2, 2, 4, 8, 8, 11
+   torus_k1     alpha confirmed; gamma K,R,B,Q = 8, 1 (line formula), 1 (line formula), 1;  chi W,F,K,R,B,Q = 3, 2, 4, 64, 64, 64
+   torus_k2     alpha confirmed; gamma K,R,B,Q = 8, 2 (line formula), 2 (line formula), 2;  chi W,F,K,R,B,Q = 2, 2, 4, 32, 32, 32
+   torus_k4     alpha confirmed; gamma K,R,B,Q = 8, 4 (line formula), 4 (line formula), 2;  chi W,F,K,R,B,Q = 2, 2, 4, 16, 16, 16
+   klein        alpha confirmed; gamma K,R,B,Q = 9, 4 (line formula), 4 (line formula), 3;  chi W,F,K,R,B,Q = 3, 2, 4, 16, 16, 22
+   klein_cc     alpha confirmed; gamma K,R,B,Q = 9, 5 (line formula), 4, 3;  chi W,F,K,R,B,Q = 2, 2, 4, 16, 14, 24
+   klein_diag   alpha confirmed; gamma K,R,B,Q = 8, 4, 8 (line formula), 3;  chi W,F,K,R,B,Q = 2, 3, 5, 15, 8, 16
+   rp2          alpha confirmed; gamma K,R,B,Q = 9, 4 (line formula), 4 (line formula), 2;  chi W,F,K,R,B,Q = 4, 3, 4, 16, 16, 22
+   sphere442    alpha confirmed; gamma K,R,B,Q = 9, 4, 4 (line formula), 3;  chi W,F,K,R,B,Q = 3, 3, 5, 15, 16, <= 20 (>= 19)
+   pillow       alpha confirmed; gamma K,R,B,Q = 8, 4 (line formula), 8 (line formula), 3;  chi W,F,K,R,B,Q = 2, 3, 5, 16, 8, 16
+   pillow_cyl   alpha confirmed; gamma K,R,B,Q = 8, 4 (line formula), 4 (line formula), 3;  chi W,F,K,R,B,Q = 2, 3, 4, 16, 16, 16
+
+[done in 1231.4s]
