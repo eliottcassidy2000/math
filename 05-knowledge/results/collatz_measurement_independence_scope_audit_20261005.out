@@ -1,0 +1,151 @@
+{
+  "bank_forward_closure": {
+    "bank": [
+      5
+    ],
+    "its_successor": 1,
+    "member": 5,
+    "repair": "Close a certified bank under its known suffixes before using forward closure.",
+    "rooted_source_avoiding_bank": 21,
+    "successor_is_in_reach_bank": false
+  },
+  "checks": 89,
+  "clock_and_carry": {
+    "first_exit_not_ROOT_time": {
+      "odd_ROOT_time": 40,
+      "shortcut_exit": 2,
+      "source": 41
+    },
+    "later_contracting_growth": {
+      "P": 129140163,
+      "Q": 134217728,
+      "carry": 1106233681,
+      "endpoint": 167,
+      "source": 165,
+      "word": [
+        4,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        3
+      ]
+    },
+    "root_boundary": {
+      "endpoint": 1,
+      "shortcut_depth": 2,
+      "slope": "3/4",
+      "source": 1
+    },
+    "scope": "The 165 witness is a later prefix, not a counterexample to first-exit equality above ROOT."
+  },
+  "finite_bank": {
+    "bank": {
+      "0": "1/2"
+    },
+    "degree_one_coupled_witness": "-640/729",
+    "positive_completion_readout": "1/2",
+    "scope": "These completions preserve bank data and normalization, not every canonical Collatz identity.",
+    "separate_lower": "-4",
+    "target": 1,
+    "zero_completion_readout": "0"
+  },
+  "one_step_ray": [
+    {
+      "j": 1,
+      "source": 5,
+      "source_sensitive_lower": "1/3",
+      "tau": 1,
+      "weight": "1/3"
+    },
+    {
+      "j": 2,
+      "source": 21,
+      "source_sensitive_lower": "1/6",
+      "tau": 1,
+      "weight": "1/6"
+    },
+    {
+      "j": 3,
+      "source": 85,
+      "source_sensitive_lower": "1/15",
+      "tau": 1,
+      "weight": "1/10"
+    },
+    {
+      "j": 4,
+      "source": 341,
+      "source_sensitive_lower": "1/30",
+      "tau": 1,
+      "weight": "1/15"
+    },
+    {
+      "j": 5,
+      "source": 1365,
+      "source_sensitive_lower": "1/70",
+      "tau": 1,
+      "weight": "1/21"
+    },
+    {
+      "j": 6,
+      "source": 5461,
+      "source_sensitive_lower": "1/140",
+      "tau": 1,
+      "weight": "1/28"
+    },
+    {
+      "j": 7,
+      "source": 21845,
+      "source_sensitive_lower": "1/315",
+      "tau": 1,
+      "weight": "1/36"
+    },
+    {
+      "j": 8,
+      "source": 87381,
+      "source_sensitive_lower": "1/630",
+      "tau": 1,
+      "weight": "1/45"
+    },
+    {
+      "j": 9,
+      "source": 349525,
+      "source_sensitive_lower": "1/1386",
+      "tau": 1,
+      "weight": "1/55"
+    },
+    {
+      "j": 10,
+      "source": 1398101,
+      "source_sensitive_lower": "1/2772",
+      "tau": 1,
+      "weight": "1/66"
+    },
+    {
+      "j": 11,
+      "source": 5592405,
+      "source_sensitive_lower": "1/6006",
+      "tau": 1,
+      "weight": "1/78"
+    },
+    {
+      "j": 12,
+      "source": 22369621,
+      "source_sensitive_lower": "1/12012",
+      "tau": 1,
+      "weight": "1/91"
+    }
+  ],
+  "scope": "Quantitative deadline converse repaired with source height; coefficient/actual/ROOT clocks separated; bank-only information scoped."
+}

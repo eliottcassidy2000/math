@@ -1,76 +1,54 @@
-# Measurement independence: no certified bank certifies outside itself; the floor problem worked backwards; owed audits closed
+# Measurement independence: finite-bank scope, source-dependent deadlines, and retained carry
 
-2026-10-05, opus session `opus-2026-10-05-S7` (measurement-independence).
-Owner's seed: "work what remains owed and new relevant tasks as they appear;
-think about ways the required positive measurement bound could be proven or
-computed, avoiding certificate recycling; reframe by assuming the positive
-measurement bound with unique certificates and work backwards to fill the gap."
+2026-10-05, original opus session `opus-2026-10-05-S7`; current scope repair
+by Codex after incoming commit `e60612700`.
 
-**Status.** PROVED (elementary): Proposition F (measurement independence),
-Corollary F1 (bank-based kernel readouts), Lemma T4b sufficiency (constructive
-Beatty words), the equivalence chain of section 3. FINITE-EXACT: the exhaustive
-residue audit of the shadow theorem, the direct audit of the segment ledger,
-cone classes to depth 16, the descent census to `2^28`, the first-descent
-census to `2^24`, the mass split below `2^22`. VERIFIED numerical: the kernel
-readouts of S7. CITED and typed: the four concurrent Codex notes of section 1.
-**OPEN:** a certificate-free positive floor at any unresolved source; universal
-Collatz. Not a canon promotion.
+**Current status. PROVED:** the finite-atom-data obstruction F, the separate
+moment lower bound F1, and the source-dependent deadline equivalence in
+section 3. **CONDITIONAL:** their application when the stated atom data or
+deadline is independently certified. **FINITE-EXACT:** the new minimal scope
+audit. The original cone and ledger computations retain their declared finite
+universes; large int64 censuses are reported rather than independently audited
+for overflow here. **NUMERICAL:** the original floating kernel readouts, mass totals,
+and entropy comparisons. **OPEN:** independently positive bounds at every
+source and universal Collatz. This is not a canon promotion.
 
-## 0. Answers
+**Correction lineage.** The original Proposition F quantified over every
+proved identity while changing a fixed deterministic orbit's fate; its proof
+did not construct such alternative models. It is replaced below by an exact
+statement about *only* fixed finite atom data and normalization. The original
+F1 bound was a lower estimate, not an upper bound on the actual measurement.
+The converse from an odd-step deadline reversed an upper weight inequality:
+21 has one odd step and weight1/6, below the asserted1/3. Coefficient-cone
+exit, actual first descent, and ROOT hitting time are distinct. The original
+all-positive-integer equivalence using `E_inf` is withdrawn. The failed
+statements remain recoverable at `e60612700`; their mechanisms and strongest
+survivors are recorded in `01-canon/MISTAKES.md` and this current text.
 
-**How could the positive measurement bound be proven or computed?** Not from
-measurements of the injection measure. Proposition F: every functional of
-`lambda` computable from a certified bank, together with every proved global
-identity, takes the same value whether an uncertified source is rooted or not,
-because its forward orbit avoids the bank. Corollary F1 makes this concrete for
-the Codex kernel readout `A_(m,d)=9H_(m,d+1)-8H_(m,d)`: computed from a bank
-with uncertified mass `u`, the readout at any target outside the bank is at
-most `-8u<0`, at every degree. S7 shows it on the bank of rooted leaves below
-`2^18`: four targets just above the bank read negative at `d=0..40`; the
-in-bank leaf 27 reads negative through `d=40` and equals its atom `8.87e-11`
-at `d=80`. A readout certifies exactly the bank. The only non-recycling
-content a floor can carry is a deadline, a bound on the odd stopping time
-(T2 of the previous note, sharpened by Codex F1 to `W(n)<=2/((N+1)(N+2))`,
-`N=L+K`); a proof of a deadline need not run the orbit, but every known
-deadline is membership in a descent cylinder:
-forward (Terras cylinders, the Codex controllers, their SF5 tree of
-monotonically decreasing orbits) or backward (the shadows of the previous
-note). Both are decidable families; neither reaches every integer.
+[Exact scope audit](collatz_measurement_independence_scope_audit_20261005.out)
+([script](../../04-computation/experiments/collatz_measurement_independence_scope_audit_20261005.py)).
 
-**The reframing.** Assume (PMB): every source `n` has an independently
-justified floor `epsilon(n)>0` on its weight, with the unique ROOT word as its
-certificate. Working backwards gives the exact chain
+## 0. What working backward now gives
 
-    PMB  <=>  a computable deadline B(n) >= tau(n) for every n
-         <=>  no positive integer lies in E_inf,
+An independently established positive source floor forces a finite ROOT
+deadline. Conversely, an independently established deadline gives a floor
+through the source-dependent
+[backward compiler](collatz_backward_measurement_compiler_20261005.md). The source coordinate
+cannot be erased: sources `(4^(j+1)-1)/3`, j>=1, all have one odd step, while their
+weights `2/((j+1)(j+2))` tend to zero.
 
-where `E_inf` is the set of 2-adic integers whose parity vector is rising at
-every prefix, a compact set of Hausdorff dimension `h*=H(log_3 2)=0.9500`
-(the Eggleston dimension of the information-dimension note). The deadline is
-the depth at which `n` leaves the last rising cone that contains it. Any floor
-function must therefore (i) have unbounded registers (the lookahead theorem),
-(ii) respect the shadow order of Lemma B, and (iii) be logarithmic at best:
-the records (`27` leaves at 96 T-steps, the maximum below `2^24` is 287)
-force `B(n)>=c log n` with `c` at least the record constant. The gap is a
-single counting statement: for `A` beyond about `log_2 X/(1-h*)`, no integer
-below `X` lies in the depth-`A` rising cones. Section 3 measures how far the
-exact census is from that statement: for `A<=23` the integers below `2^24` in
-depth-`A` cones number exactly `N(A) 2^(24-A)` (ratio 1.0000 to the
-rising-prefix count), and the thinning that must eventually reach zero is only
-4% at `A=100`.
+A finite bank and normalization alone admit a zero atom at any unlisted
+target. This prevents that observation scheme from proving positivity there.
+It does not prevent a new arithmetic argument, a global dual inequality, or a
+family induction from certifying additional sources. The mixed four-child
+family in the backward compiler provides exactly such a separately proved
+proper domain. Its scope is not universal coverage.
 
-**Owed items closed.** The shadow theorem passes an exhaustive residue audit:
-within every rising cone the chain exists with no exceptions. The converse,
-that every smaller ancestor comes through a rising word, is false wordwise
-(Codex integration audit, same day: 165 reaches 167 in 17 odd steps with
-total valuation 27, slope below one, the carry producing the size increase)
-and open setwise; the descent set contains the cone union, and my earlier
-sentence claiming equality, as well as this session's first attempt to
-"withdraw" the exception caveat, are both wrong and are corrected here. The
-segment ledger passes a direct predecessor audit; the Beatty rule is proved in both directions by an explicit
-word; the cone series reaches depth 16 (`0.46726`) against the census
-`0.468669` at `2^28`; the basin minima are 29.7% of units and carry 6.2% of
-the `W` head mass.
+The exact all-source residual can be stated using actual descent: every odd
+`n>1` must have a strictly smaller actual iterate. Coefficient cylinders are
+useful sufficient regions only after their carry threshold is retained.
+Neither uniqueness of a ROOT word nor uniqueness of a finite optimizer proves
+that its certificate exists or has the required sign.
 
 ## 1. Inheritance, new tasks as they appeared, and the board
 
@@ -84,7 +62,7 @@ Four Codex notes landed during the previous session and were read as input:
   decreasing orbits with the source-only floor `W(n)>=w(3b,9b+1)`,
   `b=bitlength(n)`, recognized by a terminating descent. SF5 is a genuine
   non-recycling floor on an explicit infinite family; the family is defined by
-  the very property (monotone descent to 5) that certifies it.
+  a guarded monotone-descent construction to5 that certifies it.
 - [floor transport deadlines](collatz_floor_transport_deadlines_20261005.md):
   F1 `tau<=N` and `W(n)<=2/((N+1)(N+2))`, sharper than T2's `2/(L+2)`; F2 the
   superlevel set `{W>=epsilon}` is finite with largest element `S^B(1)`; F4
@@ -111,118 +89,145 @@ statements of this note are made within those scopes.
 Closest proved mechanism: Codex's criterion `(8)-(10)` and SF4. Canonical
 hostile: the deleted geometric atom (every residue class positive, atom zero).
 Corrected near miss: reading a bank-based readout as information about targets
-outside the bank. Least-used sidecar: the forward orbit of the target as the
-only object that can connect it to a bank. Board: **certified bank / forward
+outside the bank. Least-used sidecar: the retained actual source and its guarded relation to a grounded bank. Board: **certified bank / forward
 orbit avoidance / kernel readout / deadline / rising cone / Beatty depth /
 basin minimum.**
 
-## 2. Proposition F: measurement independence
+## 2. Proposition F: the observation model must be retained
 
-Fix a finite set `C` of certified sources (orbits run to 1) and let `R(C)` be
-all integers whose orbit meets `C`; these are exactly the sources certified by
-`C` through transport, and `R(C)` is closed under `U`. Let `m` be a source
-whose forward orbit avoids `C`, equivalently `m` is not in `R(C)`.
+Let `B` be a finite set of atom indices. Suppose the only supplied constraints
+are `p_j=a_j>=0` for `j in B`, and `sum_j p_j=1`. Put
+`u=1-sum_B a_j>=0`. The admissible class in this proposition is all probability
+sequences satisfying exactly those constraints; it is not asserted to be the
+class of canonical Collatz measures.
 
-**Proposition F (PROVED).** Every quantity determined by the orbits of the
-elements of `C`, and every proved identity among the weights (`sum lambda=1`,
-the exact fibre rows, the counter formulas, the transport ratios), takes the
-same value under the hypothesis "`m` is rooted" and under "`m` is unrooted".
-Hence no lower bound on `W(m)` or on `lambda(m)` is derivable from `C` and
-those identities.
+**F — PROVED, finite-atom-data scope.** For any `m not in B`, the possible
+values of `p_m` form `[0,u]`. Indeed distribute the residual mass between m
+and one other unlisted index. In particular these constraints alone cannot
+force a positive target atom. Additional arithmetic, operator, or global
+moment constraints may shrink this class and must be audited separately.
 
-*Proof.* The orbit of `m` is disjoint from `C` by assumption, so changing the
-fate of `m` (rooted with its actual word, or unrooted with weight zero) changes
-no orbit of an element of `C` and no counter of such an element. The identities
-hold for every potential `G lambda'` of every nonnegative leaf measure
-`lambda'` (Proposition C of the Pascal note, Codex P5), so they are satisfied
-in both worlds. A derivation that used only these data would therefore prove
-the same lower bound in a world where `W(m)=0`. QED.
+The original orbit-based proof cannot justify a stronger statement. With
+`C={5}`, source21 avoids C but reaches1, and `R(C)` is not forward closed:
+5 belongs to it but its image1 does not. If C is forward closed and contains1,
+then the full predecessor set `R(C)` is already the entire ROOT basin, rather
+than a finite epistemic bank. Arbitrary potentials `G lambda'` preserve a
+weaker flow equation, not all canonical Collatz counter identities. Changing
+an unknown deterministic orbit's fate does not preserve the full operator by
+assertion. Transport can validly certify sources outside a supplied finite
+bank once their connecting relation is independently checked.
 
-**Corollary F1 (bank readouts; PROVED).** Let `p_j=lambda(6j+3)`, let `B` be
-the set of bank indices, `u=1-sum_(j in B) p_j` the uncertified mass (exact,
-since `sum p=1` is proved), and `h_m(j)=4t/(1+t)^2`, `t=2^(m-j)`. The best
-bank-derived bounds are `H_(m,d+1) >= c := sum_B p_j h^(d+1)` and
-`H_(m,d) <= b := sum_B p_j h^d + u sup_(j not in B) h_m(j)^d`. For a target
-`m` outside the bank the supremum is attained at `j=m` and equals 1, so
+Let `h=h_m(j)=4t/(1+t)^2`, `t=2^(m-j)`, and
+`q_d(j)=(9h-8)h^d`. Write `A_B=sum_B a_j q_d(j)` and
+`v=sup_(j not in B) h_m(j)`.
 
-    9c - 8b = sum_B p_j h^d (9h-8) - 8u <= -8u < 0,
+**F1 — PROVED, two different lower estimates.** Separate enclosures of the
+two moments give the valid lower bound
 
-because `9h-8<=0` at every bank index (`h<=8/9` off the target). For a target
-inside the bank the supremum is `h_m(j_max+1)`, exponentially small, and the
-readout converges to the atom as in Codex's (4). QED.
+    L_sep = A_B - 8u v^d <= A_(m,d).
 
-S7 (VERIFIED numerical): bank = rooted leaves below `2^18`, certified mass
-`0.621951`, `u=0.378049`; targets at indices `43691, 43704, 43717, 43730` read
-negative at `d in {0,5,10,20,40}`; the leaf 27 reads
-`-6.2, -1.1e-4, -1.2e-6, -7.2e-11, 8.87e-11, 8.87e-11` at
-`d=0,10,20,40,80,120`, the last two equal to `lambda(27)`; the threshold
-`8(16/25)^d < lambda(27)` is `d>=57`.
+If `m not in B`, then `v=1`, every bank summand is nonpositive, and
+`L_sep<=-8u`. This says that *this lower bound* fails; it does not say that the
+actual readout is negative. For example B={0}, a_0=1/2, m=1, d=1 and residual
+mass1/2 at m give `L_sep=-4` but `A_(1,1)=1/2`.
 
-Consequence. "Avoiding certificate recycling" has exactly one admissible
-meaning: produce a deadline from the arithmetic of the source. A deadline is
-a bound `tau(n)<=B(n)`; by F1 it gives the floor `2/((B+1)(B+2))`, and by F2
-it is found by at most `B` forward steps. Every known deadline is a descent
-cylinder: forward cylinders where the first `A` parity bits force a drop
-(Terras; THM-4512's least-representative test; the controllers and SF5), or
-backward cones where a smaller ancestor exists (the shadow theorem). Each
-covers a decidable set of positive density, none covers every integer, and the
-union over all depths of the forward cylinders is exactly the complement of
-`E_inf`.
+The sharp lower envelope using the joint information is instead
 
-## 3. Working backwards from PMB with unique certificates
+    inf A_(m,d) = A_B + u inf_(j not in B) q_d(j),
 
-Let `E_inf` be the set of 2-adic integers all of whose parity prefixes are
-rising (`3^(k_j) > 2^j` for every prefix length `j`, `k_j` ones). The rising
-prefixes of length `A` number `N(A)`, computed by a two-dimensional lattice
-count; `log_2 N(A)/A` is `0.7869, 0.8496, 0.8891` at `A=30,60,120` and tends
-to `h*=0.9500` (the polynomial ballot factor is large). Each rising prefix is
-one residue class of odd integers modulo `2^A`.
+and the analogous supremum uses `sup q_d`. These are sharp as infimum and
+supremum, whether or not an endpoint is attained. They can be much tighter
+than separate moment bounds. They still cannot force a positive atom outside
+B, since F supplies a zero-target completion in this observation class.
 
-**Equivalences (PROVED).** (a) PMB gives, by F1, a computable `B(n)` with
-`tau(n)<=B(n)`; conversely such a `B` gives the floor `2/((B+1)(B+2))`, which
-is independently justified by the orbit replay of length `B`. (b) A computable
-deadline exists for every `n` iff every positive odd integer leaves every
-rising cone at a finite depth, i.e. `E_inf` contains no positive integer:
-the integers in `E_inf` are exactly those whose orbit never drops below the
-start, the divergent orbits and nontrivial cycles. (c) Unique certificates are
-automatic: the ROOT word is the orbit.
+If `m in B`, the missing index nearest m determines `v<1`, and
+`L_sep -> a_m`. The formula `h_m(max(B)+1)` applies to a contiguous initial
+bank, not an arbitrary finite bank. B={0,2}, m=0 is the minimal gap witness:
+the missing index1 has h=8/9, larger than h_0(3)=32/81.
 
-**Where the gap sits (FINITE-EXACT profile).** The number of odd `n<X` with
-first-descent time `sigma_T(n)>A` equals `N(A) X/2^A` whenever `A<=log_2 X`,
-up to least representatives, because the event depends only on `n mod 2^A`.
-The census below `2^24`:
+The original S7 output computes L_sep with float64 bank weights, not a
+certified evaluation of A. Its apparent equality with an atom at finite degree
+is rounding. For the actual law, there are infinitely many known positive
+leaf atoms; for every finite d at least one has `0<h<8/9`, making the exact
+actual readout strictly smaller than the target atom. The numerical output is
+retained as an experiment, not as an interval certificate.
 
-| `A` | census `#{sigma_T>A}` | `N(A) 2^(24-A)` | ratio |
-|---:|---:|---:|---:|
-| 4 | 3,145,728 | 3,145,727.6 | 1.0000 |
-| 12 | 925,696 | 925,695.9 | 1.0000 |
-| 23 | 337,614 | 337,614.0 | 1.0000 |
-| 30 | 199,643 | 199,551 | 1.0005 |
-| 60 | 31,749 | 32,249 | 0.9845 |
-| 100 | 3,845 | 4,004 | 0.9602 |
+## 3. Working backward with unique certificates
 
-The maximum first-descent time below `2^24` is 287 T-steps. The statement to
-be proved is that the census column reaches zero at a finite `A_0(X)` for
-every `X`; the heuristic `N(A) X/2^A < 1` gives `A_0 ~ log_2 X/(1-h*)`, about
-`20 log_2 X`, while the records grow like a smaller multiple. Between
-`A=log_2 X` and `A_0` the integers in the cones are the least representatives
-of their classes, and nothing but their archimedean size distinguishes them
-from the 2-adic points of `E_inf` (THM-4027/4026 "archimedean alignment", in
-the Sun thread, is the same shape). The previous note's T1 says that this
-2-adic tower is, after the prefix price, the 3-adic residue tower of the
-images; the 3-adic shadows of the same rising words (the descent set `D`) are
-where the induction can be fed from below, and section 4 shows how much of the
-mass they carry.
+For the actual strict ROOT word, put `tau=length`, `L=tau-1`,
+`K=sum floor((a_i-1)/2)`, and `N=L+K`. The inherited bound is
 
-**What a floor function must look like.** Any `epsilon(n)` satisfying PMB
-must (i) depend on unboundedly many digits of `n` (the finite-lookahead
-theorem, in its specified-observer scope), (ii) satisfy
-`epsilon(2*3^l-1)` consistent with `W(2*3^l-1)>=W(2^(l+1)-1)` for every `l`
-(Lemma B), and (iii) be at least as large as the records along their sequence; no bound of
-the form `tau = O(log n)` is proved anywhere in the thread, and none is
-assumed here.
-The Codex SF5 floor `w(3b,9b+1)` has all three properties on its tree; the
-problem is its domain. No floor on all integers is proposed here.
+    W(n) <= 2/((N+1)(N+2)),       tau<=N.
+
+An independently proved `W(n)>=epsilon(n)>0` therefore supplies a computable
+upper deadline. The reverse implication cannot reverse this upper inequality.
+For n21 the word is(6), tau1, K2, and W1/6. Along the entire one-step ray
+`n=(4^(j+1)-1)/3`, j>=1, W tends to zero with tau fixed.
+
+**Correct converse — PROVED, conditional on the deadline.** If n>1 and an
+independent argument proves `tau(n)<=T`, the telescoping identity gives
+
+    A=sum a_i <= floor(log2(n(10/3)^T)).
+
+With `e=#{even a_i}>=1`, the exact identity is
+`N=(A+tau-e)/2-1`. The
+[backward compiler, sections 2-3](collatz_backward_measurement_compiler_20261005.md)
+computes an integer upper bound C(n,T) for N and the explicit floor
+
+    eta(n,T) = 2 / ((C+2) binom(C+1,floor((C+1)/2))) > 0.
+
+The source and deadline are both necessary inputs to this proof. ROOT1 has
+weight1 separately. Thus an everywhere computable, independently valid
+positive rational floor is equivalent to an everywhere computable, independently
+valid ROOT deadline. Existence of such a deadline is equivalent to Collatz:
+if all sources reach1, literal search is a total algorithm; this conditional
+observation is not a present proof of its totality.
+
+A second valid equivalent is that **every odd n>1 has an actual strict
+first descent**. Sufficiency is strong induction on n, and necessity follows
+from reaching1. A computable bound on first descent gives a ROOT deadline by
+recursing on the actual smaller endpoint. One local descent time is not the
+whole ROOT time:41 first descends in two shortcut steps,41->62->31, but takes
+40 odd steps to reach1.
+
+### Keep coefficient survival separate
+
+For the shortcut map T(n)=(3n+1)/2 on odd n and n/2 on even n, a prefix of
+length j with k odd steps has
+
+    T^j(n)=(3^k n+B_j)/2^j,       B_j>=0.
+
+Actual descent requires `(2^j-3^k)n>B_j`. Define `E_inf` using the coefficient
+condition `3^(k_j)>2^j` at every nonempty prefix. Every positive integer in
+E_inf has no actual first descent. The converse has not been proved: a
+coefficient exit alone omits the carry. Even at ROOT, bits10 give coefficient
+3/4 and endpoint1. A hypothetical nontrivial positive cycle would have a
+minimum with no strict descent, but its whole-cycle coefficient is below1;
+such a cycle would not be excluded merely by ruling out positive E_inf.
+
+[THM-4512, coefficient-descent classes](../../01-canon/theorems/THM-4512-coefficient-descent-classes-one-member.md)
+explicitly retains the carry threshold and leaves universal coefficient/actual
+stopping-time equality OPEN. Its small exceptional representative is useful
+for future certificate synthesis, not permission to erase the exception.
+The [sibling dimension ladder, Theorem1(a)](collatz_procgen_20260922_sibling_dimension_ladder.md)
+proves the dimension `H(log_3 2)` for this coefficient-survival set. That
+valid dimension statement and the coefficient-count heuristic do not establish
+an integer-avoidance theorem or a ROOT deadline. A finite-looking cone-exit test
+must still be connected to actual descent and then to the inductive suffix.
+
+### What the original census actually checks
+
+The original S6 script compares an exact integer first-descent count in its
+finite tested universe with a floating predicted count based on coefficient
+prefixes. Its tolerance is `0.02*predicted+50`; the printed ratio1.0000 is not
+an exact equality check. It scales that prediction by `2^(head_bits-1)-1` and omits1 from the
+actual first-descent census. Exact coefficient-cylinder counts in a complete
+dyadic interval use `N(A) 2^(head_bits-A)` when A<=head_bits; this explains
+the fractional discrepancy in the original prediction column. The retained figures are finite
+observations: maximum287 shortcut steps below2^24, and the printed near-unit
+ratios. They prove no universal equality of the two predicates or limiting
+dimension statement. The finite regression audit here uses Python integers;
+it does not rerun or independently certify the large original censuses.
 
 ## 4. Owed items
 
@@ -264,7 +269,7 @@ cone classes vanish exactly at the inadmissible depths through 16.
 **Cone series and census (finite proportions, not proved densities).** New cone classes per depth through 16:
 `1,1,0,1,0,2,8,0,28,0,124,602,0,2498,0,12319` (2,999,301 rising words
 visited); the cone density series reaches `0.46726` at depth 16; the sieve
-density of `D` below `2^28` is `0.468669` (units `0.703004`), constant to five
+proportion of `D` below `2^28` is `0.468669` (units `0.703004`), constant to five
 digits across the last four dyadic blocks. The remaining `0.0014` is carried by
 deeper rising cones and, possibly, by non-rising descents outside every cone.
 
@@ -272,27 +277,40 @@ deeper rising cones and, possibly, by non-rising descents outside every cone.
 0.656784 (23.0%), descent set 1.016542 (35.7%), basin minima 0.177608 (6.2%).
 Basin minima are 415,230 of 1,398,101 units (29.7%) but carry only 6.2% of the
 head mass: they are mass-poor because their atoms are sums over leaves above
-them, all larger. This answers obligation (iii) of the previous note at head
-level: the part of the weight that no induction from below can reach is small
-in mass and large in count.
+them, all larger. This gives a numerical head profile for obligation (iii). No smaller
+ancestor in the declared graph is a particular induction obstruction, not a
+proof that every other induction or global inequality must fail there.
 
 ## 5. What remains
 
-1. The counting statement of section 3 at the first unresolved scale: for a
-   fixed `X` (say `2^24`), the census column is known to reach zero at
-   `A=288`; a proof that it reaches zero for every `X` is the conjecture. The
-   honest intermediate target is the growth of the record `A_max(X)` against
-   `log_2 X/(1-h*)`; THM-4476/4499 (thin divergence, `o(X^(h*))`) are the
-   current upper bounds on the census column at large `A`.
-2. The exact value of `dens(D)`: the series over admissible Beatty depths
-   converges; its terms at depths 14 and 16 (`2498/3^14`, `12319/3^16`)
-   suggest a geometric tail, which would give a closed interval.
-3. Codex SF4's energy `E_m` is the quantity a non-recycling argument would
-   have to bound; Proposition F says it cannot be bounded from a bank. A
-   source-only argument must bound `sum (1/c_(i+1)-1/c_i)` along the 3-adic
-   tower of the images (T1), which is the deadline in disguise.
+1. Prove actual first descent on more source domains, retaining a proper
+   decreasing rank and grounded seeds. For each finite X, eventual vanishing
+   of the actual no-descent census over odd3<=n<X is the correct bounded
+   obligation. Proving it for every X is equivalent to Collatz. A logarithmic
+   deadline is not proved or required by this equivalence.
+2. Supply independent moment inequalities or global bounded Poisson duals
+   that exclude the zero-target completion at residual sources. Proposition F
+   restricts the data-only model, not these stronger arithmetic premises.
+3. Preserve the domain of every new family. The
+   [mixed four-child construction](collatz_inductive_floor_receipts_20261005.md)
+   and [unique finite-degree optimizer](collatz_moment_localizer_feasibility_20261005.md)
+   give respectively a proper positivity domain and a canonical optimization
+   problem. Neither supplies the missing sign at every source.
+4. Improve cone-density tail bounds while keeping their residual ordinary
+   representatives and carry. Finite proportions and mass splits remain
+   separate from limiting densities and universal coverage.
 
 ## 6. Reproduction and scope
+
+The new minimal audit passes89 exact Python-integer/Fraction checks, with
+normal, optimized, and saved output agreeing:
+
+```text
+python -B 04-computation/experiments/collatz_measurement_independence_scope_audit_20261005.py
+python -B -O 04-computation/experiments/collatz_measurement_independence_scope_audit_20261005.py
+```
+
+The following original large runs are retained as their producer's record:
 
 [Script](../../04-computation/experiments/collatz_measurement_independence_20261005.py),
 [output](collatz_measurement_independence_20261005.out),
@@ -303,10 +321,11 @@ python3 04-computation/experiments/collatz_measurement_independence_20261005.py 
 python3 -O 04-computation/experiments/collatz_measurement_independence_20261005.py --cone-depth 10 --sieve-bits 20 --head-bits 18 --audit-len 5
 ```
 
-4,658,591 explicit checks in 11 s (numba for the cone DFS, the sieves, the
+The original saved run reports 4,658,591 explicit checks in 9.8 s (numba for the cone DFS, the sieves, the
 counters and the first-descent census; exact integers and Fractions for the
 audits). Hostiles: the inadmissible Beatty depths must give zero new classes;
 the out-of-bank readouts must be negative at every tested degree; the census
-and the prefix count must agree to four digits for `A<=23`. Limits: the
-readouts are float64; the census is exact in its range; no finite statement is
-read as an unbounded one, and nothing here certifies any new source.
+and prefix comparison uses the tolerance quoted in section 3, not exact equality. Limits: the
+readouts are float64; large trajectory censuses use int64 and have not been
+independently overflow-audited in this repair. No finite statement is read as
+an unbounded one, and the original bank experiment certifies no new source.

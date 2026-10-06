@@ -117,7 +117,7 @@ length `L` with `a` odd steps. A cycle element `y>0` satisfies `y(2^L-q^a)=B>0` 
 (`a>=1`, since `L` halvings cannot fix `y>0`). So `q^a<2^L`. The parity word is eventually periodic
 with density of ones `a/L < log_q 2`, so `S_s -> -infinity` and the start is not in `Bad(q)`. For
 Collatz: if `n>=2` reaches 1, then at its stopping time `T^s(n)=(3^a n+B)/2^s<n` with `B>=0`, so
-`3^a<2^s`; and `1` descends at `s=2`. ∎
+`3^a<2^s`; and `1` exits the coefficient barrier at `s=2` (its actual endpoint is still1). ∎
 
 *Proof of (d).* `n in Bad(q)` forces `n mod 2^m` into `Bad_m(q)`, a set of density `f_m`; and
 `f_m -> 0` for `q=3`. ∎

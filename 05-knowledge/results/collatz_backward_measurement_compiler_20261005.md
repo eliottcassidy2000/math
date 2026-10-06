@@ -42,6 +42,15 @@ a contracting coefficient is not substituted for that rank condition. The
 same audit's visit-count correction confirms that repeated states must be
 retained in an occupation ledger rather than erased by a set quotient.
 
+The next incoming [measurement-independence note](collatz_measurement_independence_20261005.md)
+required a separate scope repair. Its time-only converse fails on21 (one odd
+step, weight1/6), and its finite-bank lower estimate was not the actual
+readout. Our source-size budget is precisely the missing coordinate in that
+converse. Fixed bank data alone admit a zero-target completion; extra family
+induction or globally proved operator inequalities can legitimately remove
+that completion. The corrected note also keeps coefficient exit, actual
+first descent, and ROOT time separate, as required by THM-4512.
+
 The portfolio is: **anchor**, close an independent measurement obligation;
 **niche**, a localizing-matrix certificate; **wildcard**, a global Poisson
 subsolution. The board is **deadline / hidden counter budget / signed
