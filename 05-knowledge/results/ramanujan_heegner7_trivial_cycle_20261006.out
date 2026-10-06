@@ -1,0 +1,193 @@
+== 1. Heegner table
+   d=  1  j=                  1728  cube root       12  e^(pi sqrt d) - (-j + 744) =      1007.1407  2: ramified 3: inert     j odd: False
+   d=  2  j=                  8000  cube root       20  e^(pi sqrt d) - (-j + 744) =      7341.0197  2: ramified 3: split     j odd: False
+   d=  3  j=                     0  cube root        0  e^(pi sqrt d) - (-j + 744) =     -513.23541  2: inert    3: ramified  j odd: False
+   d=  7  j=                 -3375  cube root      -15  e^(pi sqrt d) - (-j + 744) =     -47.067905  2: split    3: inert     j odd: True
+   d= 11  j=                -32768  cube root      -32  e^(pi sqrt d) - (-j + 744) =     -5.8569344  2: inert    3: split     j odd: False
+   d= 19  j=               -884736  cube root      -96  e^(pi sqrt d) - (-j + 744) =    -0.22231985  2: inert    3: inert     j odd: False
+   d= 43  j=            -884736000  cube root     -960  e^(pi sqrt d) - (-j + 744) = -0.00022253397  2: inert    3: inert     j odd: False
+   d= 67  j=         -147197952000  cube root    -5280  e^(pi sqrt d) - (-j + 744) =  -1.3375458e-6  2: inert    3: inert     j odd: False
+   d=163  j=   -262537412640768000  cube root  -640320  e^(pi sqrt d) - (-j + 744) =  -7.499274e-13  2: inert    3: inert     j odd: False
+   (for d = 1, 2 the point is i sqrt d and q > 0, so the comparison there is with j - 744, not -j + 744)
+
+== 2. Gross-Zagier: primes dividing j(tau_d) are non-split in Q(sqrt(-d)) and in Q(sqrt(-3))
+   d=  1: |j| = 2^6 * 3^3                    all non-split in both fields: True;  largest prime 3 <= 3|D|/4 = 3.0
+   d=  2: |j| = 2^6 * 5^3                    all non-split in both fields: True;  largest prime 5 <= 3|D|/4 = 6.0
+   d=3: j = 0 (tau is the cube root of unity point)
+   d=  7: |j| = 3^3 * 5^3                    all non-split in both fields: True;  largest prime 5 <= 3|D|/4 = 5.25
+   d= 11: |j| = 2^15                         all non-split in both fields: True;  largest prime 2 <= 3|D|/4 = 8.25
+   d= 19: |j| = 2^15 * 3^3                   all non-split in both fields: True;  largest prime 3 <= 3|D|/4 = 14.25
+   d= 43: |j| = 2^18 * 3^3 * 5^3             all non-split in both fields: True;  largest prime 5 <= 3|D|/4 = 32.25
+   d= 67: |j| = 2^15 * 3^3 * 5^3 * 11^3      all non-split in both fields: True;  largest prime 11 <= 3|D|/4 = 50.25
+   d=163: |j| = 2^18 * 3^3 * 5^3 * 23^3 * 29^3 all non-split in both fields: True;  largest prime 29 <= 3|D|/4 = 122.25
+   d = 7: the only primes <= 21/4 that are non-split in Q(sqrt(-7)) are 3 and 5 (2 splits), and j(tau_7) = -3^3 5^3.
+
+== 3. Q(sqrt(-7)) as the decomposition field of 2 for the trivial cycle
+   doubling orbit of 1 mod 7: [1, 2, 4]  = quadratic residues mod 7: [1, 2, 4]   ord_7(2) = 3 = (7 - 1)/2
+   Gauss period g = z + z^2 + z^4 = -0.500000000000+1.322875655532j;  (-1 + sqrt(-7))/2 = -0.500000000000+1.322875655532j;  |g^2 + g + 2| = 6.66e-16;  g*conj(g) = 2.000000000000
+   Im g = sqrt(7)/2 > 0: True ;  g + 1 = tau_7 = (1 + sqrt(-7))/2: True ;  j(g) = (-3375.0 - 1.966693969767821675092666e-57j) True
+   Paley P7 = Cay(Z7,{1,2,4}) eigenvalues: [(-0.5-1.322875656j), (-0.5-1.322875656j), (-0.5-1.322875656j), (-0.5+1.322875656j), (-0.5+1.322875656j), (-0.5+1.322875656j), (3+0j)]  = 3, g (x3), conj g (x3)
+   trace Tr_{F8/F2}(a^i) for a^3+a+1=0: {1: 0, 2: 0, 3: 1, 4: 0, 5: 1, 6: 1}  -> trace-zero exponents [1, 2, 4]
+   2-adic root of x^2+x+2: g = 763670323290 mod 2^40, v_2(g) = 1;  (1 + 2g)^2 = -7 mod 2^40: True;  Frobenius 1 + g = -conj(g) is a 2-adic unit
+   2-adic root of x^2+x+2: g = 335841304485 mod 2^40, v_2(g) = 0;  (1 + 2g)^2 = -7 mod 2^40: True;  Frobenius 1 + g = -conj(g) is a 2-adic non-unit
+   Phi(1) = sum parity_i 2^i = -1/7 mod 2^40: True ;  (1 + 2g)^2 Phi(1) = 1 mod 2^40 for both roots g: True
+   real numerators {1,2,4} and 2-adic numerators -{1,2,4} = {3,5,6} are the two cosets of <2> in (Z/7)^*, i.e. the two primes above 2; complex conjugation x -> -x swaps them: [3, 5, 6]
+
+== 4. Visibility: which Heegner fields lie inside a decomposition field of 2?
+   Q(sqrt D) lies in Q(zeta_m)^<2> (m odd) iff |D| divides m and chi_D(2) = +1 (2 splits).
+   D =    -4: chi_D(2) = +0;  odd conductor: False;  visible to binary codes: False
+   D =    -8: chi_D(2) = +0;  odd conductor: False;  visible to binary codes: False
+   D =    -3: chi_D(2) = -1;  odd conductor: True;  visible to binary codes: False
+   D =    -7: chi_D(2) = +1;  odd conductor: True;  visible to binary codes: True
+   D =   -11: chi_D(2) = -1;  odd conductor: True;  visible to binary codes: False
+   D =   -19: chi_D(2) = -1;  odd conductor: True;  visible to binary codes: False
+   D =   -43: chi_D(2) = -1;  odd conductor: True;  visible to binary codes: False
+   D =   -67: chi_D(2) = -1;  odd conductor: True;  visible to binary codes: False
+   D =  -163: chi_D(2) = -1;  odd conductor: True;  visible to binary codes: False
+   sanity: h(-3), h(-4), h(-7), h(-23), h(-31), h(-163) = [1, 1, 1, 3, 3, 1]
+   squarefree d = 7 mod 8 (2 splits in Q(sqrt(-d))), d <= 20000, with class number 1: [7]
+   norm lemma: if p splits in Q(sqrt(-d)) with h = 1 then p = x^2 + xy + ((d+1)/4) y^2 with y != 0, so p >= (d+1)/4:
+     d =   7: smallest split prime   2;  (d+1)/4 =   2;  equal: True
+     d =  11: smallest split prime   3;  (d+1)/4 =   3;  equal: True
+     d =  19: smallest split prime   5;  (d+1)/4 =   5;  equal: True
+     d =  43: smallest split prime  11;  (d+1)/4 =  11;  equal: True
+     d =  67: smallest split prime  17;  (d+1)/4 =  17;  equal: True
+     d = 163: smallest split prime  41;  (d+1)/4 =  41;  equal: True
+
+== 5. Gauss periods of the codes of every integer cycle (both codings)
+   T   cycle from 1 (L = 3, word 100), m = 7 = {7: 1}
+      real: period -0.500000+1.322876i, conjugates 2 (=2 at 1e-8) -> imaginary quadratic (a CM point after conj/translation)
+      2-adic: period -0.500000-1.322876i, conjugates 2 (=2 at 1e-8) -> imaginary quadratic (a CM point after conj/translation)
+   T   cycle from -1 (L = 2, word 10), m = 3 = {3: 1}
+      real: period -1.000000+0.000000i, conjugates 1 (=1 at 1e-8) -> rational
+      2-adic: period -1.000000+0.000000i, conjugates 1 (=1 at 1e-8) -> rational
+   T   cycle from -5 (L = 5, word 10100), m = 31 = {31: 1}
+      real: period -1.648535+1.438448i, conjugates 6 (=6 at 1e-8) -> degree 6 (not quadratic: j there is transcendental by Schneider if Im > 0)
+      2-adic: period -1.648535-1.438448i, conjugates 6 (=6 at 1e-8) -> degree 6 (not quadratic: j there is transcendental by Schneider if Im > 0)
+   T   cycle from -17 (L = 18, word 101010100101010000), m = 262143 = {3: 3, 7: 1, 19: 1, 73: 1}
+      real: period -4.509313+4.190022i, conjugates 7776 (=7776 at 1e-8) -> degree 7776 (not quadratic: j there is transcendental by Schneider if Im > 0)
+      2-adic: period -4.513034-4.187078i, conjugates 7776 (=7776 at 1e-8) -> degree 7776 (not quadratic: j there is transcendental by Schneider if Im > 0)
+   T_1 cycle from 1 (L = 2, word 10), m = 3 = {3: 1}
+      real: period -1.000000+0.000000i, conjugates 1 (=1 at 1e-8) -> rational
+      2-adic: period -1.000000+0.000000i, conjugates 1 (=1 at 1e-8) -> rational
+   T_1 cycle [-1]: L = 1, m = 1, codes are integers; Gauss period 1 (rational)
+   T_1 cycle from -5 (L = 3, word 110), m = 7 = {7: 1}
+      real: period -0.500000-1.322876i, conjugates 2 (=2 at 1e-8) -> imaginary quadratic (a CM point after conj/translation)
+      2-adic: period -0.500000+1.322876i, conjugates 2 (=2 at 1e-8) -> imaginary quadratic (a CM point after conj/translation)
+   T_1 cycle from -17 (L = 11, word 11110111000), m = 2047 = {23: 1, 89: 1}
+      real: period +1.230326-2.244811i, conjugates 176 (=176 at 1e-8) -> degree 176 (not quadratic: j there is transcendental by Schneider if Im > 0)
+      2-adic: period +1.345352+2.414680i, conjugates 176 (=176 at 1e-8) -> degree 176 (not quadratic: j there is transcendental by Schneider if Im > 0)
+   control, rational cycle 1/5 of T (word 1000): Gauss period of {1,2,4,8}/15 = (0.5 + 1.93649167310371j) = (1 + sqrt(-15))/2: True (the unit sum is mu(15) = +1, not -1);  h(-15) = 2
+   primes p = 7 mod 8 with ord_p(2) = (p-1)/2 (a doubling orbit of size (p-1)/2 whose Gauss period is the CM point (-1+sqrt(-p))/2),
+   as (p, orbit size, h(-p)): [(7, 3, 1), (23, 11, 3), (47, 23, 5), (71, 35, 7), (79, 39, 5), (103, 51, 5), (167, 83, 11), (191, 95, 13), (199, 99, 9), (239, 119, 15), (263, 131, 13), (271, 135, 11), (311, 155, 19), (359, 179, 19), (367, 183, 9), (383, 191, 17)] ;  class number 1 only at p = 7: True
+
+== 6. Ordinary elliptic curves over F_2, and E_7 = 49a1 over F_(2^k)
+   16 smooth Weierstrass tuples over F_2; ordinary (trace odd): 8, all with a1 = 1: True;  traces [(-1, 4), (1, 4)];  Frobenius discriminants a^2 - 8: [-7]
+   supersingular (trace even): [(-2, 2), (0, 4), (2, 2)]  -> every ordinary curve over F_2 has Frobenius (+-1 +- sqrt(-7))/2 in Q(sqrt(-7)); x^2 - x + 2 has roots -g, -conj(g)
+   #E_7(F_(2^k)), k = 1..8, direct count: {1: 2, 2: 8, 3: 14, 4: 16, 5: 22, 6: 56, 7: 142, 8: 288}   matches 2^k + 1 - t_k (t_k = t_(k-1) - 2 t_(k-2)): True
+   k <= 36 with 7 | #E_7(F_(2^k)): [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36]   = multiples of 3: True
+   (Frobenius pi = 1 + g acts on the 7-isogeny kernel E[sqrt(-7)] = Z/7 as multiplication by 4 = 2^(-1), an element of order 3 of <2>)
+
+== 7. CM curve E_7 = 49a1: y^2 + xy = x^3 - x^2 - 2x - 1 (j = -3375)
+   a_p for p < 60: {2: 1, 3: 0, 5: 0, 11: 4, 13: 0, 17: 0, 19: 0, 23: 8, 29: 2, 31: 0, 37: -6, 41: 0, 43: -12, 47: 0, 53: -10, 59: 0}
+   a_p = 0 exactly for p = 3,5,6 mod 7 (p < 400, p != 7): violations []
+   4p = a_p^2 + 7B^2 on split p < 400: violations []
+
+== 8. Klein quartic x^3 y + y^3 z + z^3 x = 0
+   (p, #X(F_p), p+1-3a_p [untwisted], p+1-a_p(1+chi+chi^2) [cubic twist]): [(2, 3, 0, 3), (3, 4, 4, 4), (5, 6, 6, 6), (11, 12, 0, 12), (13, 14, 14, 14), (17, 18, 18, 18), (19, 20, 20, 20), (23, 24, 0, 24), (29, 24, 24, 24), (31, 32, 32, 32), (37, 38, 56, 38), (41, 42, 42, 42), (43, 80, 80, 80), (47, 48, 48, 48), (53, 54, 84, 54), (59, 60, 60, 60), (61, 62, 62, 62), (67, 68, 56, 68), (71, 24, 24, 24), (73, 74, 74, 74), (79, 80, 56, 80), (83, 84, 84, 84), (89, 90, 90, 90), (97, 98, 98, 98), (101, 102, 102, 102), (103, 104, 104, 104), (107, 108, 168, 108), (109, 110, 56, 110)]
+   untwisted formula holds for all p: False    cubic-twist formula holds for all p < 110: True    #X = p+1 exactly unless p = 1 mod 7: True
+   #X(F_(2^n)), n = 1..6, direct: {1: 3, 2: 5, 3: 24, 4: 17, 5: 33, 6: 38} ;  from L(T) = 1 + 5T^3 + 8T^6: {1: 3, 2: 5, 3: 24, 4: 17, 5: 33, 6: 38} True
+   Serre bound over F_8 for genus 3: 8 + 1 + 3*floor(2 sqrt 8) = 24 -> the Klein quartic is maximal over F_8
+
+== 9. Supersingular congruences
+   p= 5 supersingular j: [0];  j(163) mod p = 0 (ss, 163 inert);  j(7) mod p = 0 (ss, 7 inert)
+   p= 7 supersingular j: [6];  j(163) mod p = 6 (ss, 163 inert);  j(7) mod p = 6 (ss, 7 ram)
+   p=11 supersingular j: [0, 1];  j(163) mod p = 1 (ss, 163 inert);  j(7) mod p = 2 (ord, 7 split)
+   p=13 supersingular j: [5];  j(163) mod p = 5 (ss, 163 inert);  j(7) mod p = 5 (ss, 7 inert)
+   p=17 supersingular j: [0, 8];  j(163) mod p = 8 (ss, 163 inert);  j(7) mod p = 8 (ss, 7 inert)
+   p=19 supersingular j: [7, 18];  j(163) mod p = 18 (ss, 163 inert);  j(7) mod p = 7 (ss, 7 inert)
+   p=23 supersingular j: [0, 3, 19];  j(163) mod p = 0 (ss, 163 inert);  j(7) mod p = 6 (ord, 7 split)
+   p=29 supersingular j: [0, 2, 25];  j(163) mod p = 0 (ss, 163 inert);  j(7) mod p = 18 (ord, 7 split)
+   p=31 supersingular j: [2, 4, 23];  j(163) mod p = 4 (ss, 163 inert);  j(7) mod p = 4 (ss, 7 inert)
+   p=37 supersingular j: [8];  j(163) mod p = 8 (ss, 163 inert);  j(7) mod p = 29 (ord, 7 split)
+   p=41 supersingular j: [0, 3, 28, 32];  j(163) mod p = 10 (ord, 163 split);  j(7) mod p = 28 (ss, 7 inert)
+   p=43 supersingular j: [8, 41];  j(163) mod p = 1 (ord, 163 split);  j(7) mod p = 22 (ord, 7 split)
+   p=47 supersingular j: [0, 9, 10, 36, 44];  j(163) mod p = 42 (ord, 163 split);  j(7) mod p = 9 (ss, 7 inert)
+   p=53 supersingular j: [0, 46, 50];  j(163) mod p = 33 (ord, 163 split);  j(7) mod p = 17 (ord, 7 split)
+   p=59 supersingular j: [0, 15, 17, 28, 47, 48];  j(163) mod p = 48 (ss, 163 inert);  j(7) mod p = 47 (ss, 7 inert)
+   p=61 supersingular j: [9, 41, 50];  j(163) mod p = 34 (ord, 163 split);  j(7) mod p = 41 (ss, 7 inert)
+   p=67 supersingular j: [53, 66];  j(163) mod p = 66 (ss, 163 inert);  j(7) mod p = 42 (ord, 7 split)
+   p=71 supersingular j: [0, 17, 24, 40, 41, 48, 66];  j(163) mod p = 36 (ord, 163 split);  j(7) mod p = 33 (ord, 7 split)
+   Deuring pattern (supersingular iff non-split) holds for j(163) at 5 <= p < 72: True ;  for j(7) (p != 7): True
+   first prime split in Q(sqrt(-163)): 41   (all primes < 41 inert: Euler n^2+n+41 / Rabinowitsch)
+   ord_163(2) = 162  (2 is a primitive root mod 163: a doubling orbit mod 163 is all of (Z/163)^*, decomposition field Q)
+
+== 10. E8 chain from {1,2,4}; gamma_2 = E4/eta^8
+   Hamming [7,4,3] weight distribution: {0: 1, 3: 7, 4: 7, 7: 1} ; extended [8,4,4]: {0: 1, 4: 14, 8: 1}
+   E8 = Construction A (x in Z^8, x mod 2 in H8, norm x.x/2): norm-2 vectors = 16 + 14*16 = 240 True
+   q^(1/3) gamma_2 = (theta_E8)(q^(1/3)/eta^8) = 1 + 248q + ... : [1, 248, 4124, 34752] ;  248 = 240 + 8: 248
+   q j = (q^(1/3) gamma_2)^3 = [1, 744, 196884, 21493760] ;  744 = 3*248: True  196884: True
+   gamma_2((3 + i sqrt 163)/2) = (-640320.0 + 1.615890227231311650598e-56j)  (expected -640320)
+   gamma_2((1 + i sqrt 163)/2) = (320160.0 - 554533.3865512517542957j)  (= 640320 e^(-i pi/3): gamma_2(tau + 1) = e^(-2 pi i/3) gamma_2(tau))
+   gamma_2((3 + i sqrt 7)/2) = (-15.0 - 2.932346641884431767303e-60j)  (expected -15)
+   gamma_2(i sqrt 7) = (255.0 + 0.0j)  (expected 255)
+   640320 = {2: 6, 3: 1, 5: 1, 23: 1, 29: 1} ; Ramanujan constant e^(pi sqrt 163) = 262537412640768743.9999999999992500725972
+
+== 11. Weber: f(sqrt(-7))^24 = 2^12 and the d = 7 near-integers
+   f(sqrt(-7))^24 = e^(pi sqrt 7) prod (1 + e^(-(2n-1) pi sqrt 7))^24 = 4096.0 True
+   x f^24 = prod (1 + x^(2n-1))^24 =  [1, 24, 276, 2048, 11202]  -> e^(pi sqrt 7) = 2^12 - 24 - 276 x - 2048 x^2 - ..., x = e^(-pi sqrt 7)
+   e^(pi sqrt 7) = 4071.932095225261098524568 ;  minus 4072 = -0.0679047747389 ;  minus (4096 - 24 - 276x - 2048x^2) = -1.66097e-7
+   j(sqrt(-7)) = (16581375.0 + 0.0j) = 255^3 = 16581375 True ;  (4096 - 16)^3/4096 = 16581375  (Weber j = (f^24 - 16)^3/f^24)
+   e^(2 pi sqrt 7) = e^(pi sqrt 28) = 16580630.988125584819 ;  minus (255^3 - 744) = -0.01187441518
+   roots of (X - 16)^3 = 255^3 X: [4096, -2024 - 765*sqrt(7), -2024 + 765*sqrt(7)] -> the only positive root is 4096 = 2^12
+   gamma_2: -15 = -(2^4 - 1) at (3 + sqrt(-7))/2, 255 = 2^8 - 1 at sqrt(-7);  Ramanujan G_7 = 2^(-1/4) f(sqrt(-7)) = 1.1892071150027210667 = 2^(1/4) = 1.1892071150027210667
+   singular modulus k_7 = theta_2^2/theta_3^2 = 0.06262291254316797010266468 = (3 - sqrt 7)/(4 sqrt 2): True ;  4 k^2 k'^2 = 0.015625 = 1/64 = G_7^(-24)
+   Ramanujan (1914): sum (42k+5) ((1/2)_k/k!)^3 / 64^k = 5.09295817894065074460428042792045958510270866 ;  16/pi = 5.09295817894065074460428042792045958510270866 True
+   f(sqrt(-m))/sqrt 2 for m = 7 mod 8 (2 splits in Q(sqrt(-m))): minimal polynomial found by an integer-relation search
+     m =  7: h(-4m) = 1, w = 1.0, minimal polynomial (high to low) [-1, 1], unit: True
+     m = 15: h(-4m) = 2, w = 1.17398499670532851, minimal polynomial (high to low) [1, 0, 0, -1, 0, 0, -1], unit: True
+     m = 23: h(-4m) = 3, w = 1.32471795724474603, minimal polynomial (high to low) [-1, 0, 1, 1], unit: True
+     m = 31: h(-4m) = 3, w = 1.46557123187676803, minimal polynomial (high to low) [-1, 1, 0, 1], unit: True
+     m = 39: h(-4m) = 4, w = 1.60142641126521337, minimal polynomial (high to low) not found (degree <= 3h, |coeff| <= 10^6), unit: undecided
+     m = 47: h(-4m) = 5, w = 1.73469134569246955, minimal polynomial (high to low) [1, 0, -1, -2, -2, -1], unit: True
+     m = 55: h(-4m) = 4, w = 1.86676039917386209, minimal polynomial (high to low) [-1, 2, 0, -1, 1], unit: True
+     m = 71: h(-4m) = 7, w = 2.13060682983889533, minimal polynomial (high to low) [-1, 2, 1, -1, -1, -1, 1, 1], unit: True
+
+== 12. Ramanujan tau mod 7 (and mod 49 on the non-residues)
+   tau(1..10) mod 49 agree with the known values: True
+   tau(n) = n sigma_9(n) mod 7 for all n <= 6000: True ;  mod 49 for all n = 3,5,6 mod 7: True   (mod 49 fails for 1379 other n <= 6000)
+   residues mod 7 of primes p <= 6000 with tau(p) = 0 mod 7: [0, 3, 5, 6] ;  with tau(p) != 0 mod 7: [1, 2, 4] True
+   tau(p) = 2p mod 7 for p = 1,2,4 mod 7: True ;  mechanism: tau(p) = p + p^4 = p(1 + p^3) mod 7 and p^3 = (p/7) mod 7 (Euler, exponent 3 = (7-1)/2)
+
+== 13. Chudnovsky: 1/pi = 12 sum (-1)^k (6k)! (13591409 + 545140134 k) / ((3k)! k!^3 640320^(3k+3/2))
+   1728 - j(tau_163) = 640320^3 + 1728 = 163 * m^2 with m = 40133016 {2: 3, 3: 3, 7: 1, 11: 1, 19: 1, 127: 1} True
+   545140134 = {2: 1, 3: 2, 7: 1, 11: 1, 19: 1, 127: 1, 163: 1} ;  12 * 545140134 = 163 m: True ;  13591409 = {13: 1, 1045493: 1}
+     p =   2: in Q(sqrt(-163)) inert, in Q(i) ram
+     p =   3: in Q(sqrt(-163)) inert, in Q(i) inert
+     p =   7: in Q(sqrt(-163)) inert, in Q(i) inert
+     p =  11: in Q(sqrt(-163)) inert, in Q(i) inert
+     p =  19: in Q(sqrt(-163)) inert, in Q(i) inert
+     p = 127: in Q(sqrt(-163)) inert, in Q(i) inert
+     1 term(s): |12 S - 1/pi| = 5.9811e-15
+     2 term(s): |12 S - 1/pi| = 3.1192e-29
+     3 term(s): |12 S - 1/pi| = 1.7433e-43
+   j(tau_163) = 1728 mod 7^2: True (7 | m; 7 is inert in Q(sqrt(-163)) because -163 = 5 mod 7 is a non-residue)
+
+== 14. Landau-Ramanujan constant of Q(sqrt(-7))
+   C_7 = (1/sqrt(pi)) * sqrt( L(1,chi_-7) * 7/6 * prod_{q=3,5,6 mod 7} (1-q^-2)^-1 ) = 0.724719515604  (Euler product truncated at 2*10^6)
+   control: Landau-Ramanujan K (sums of two squares) by the same formula = 0.764223647406  (known 0.764223653589...)
+   B_7(1e+04) = 2596;  B * sqrt(log x)/x = 0.78785
+   B_7(1e+05) = 22737;  B * sqrt(log x)/x = 0.77148
+   B_7(1e+06) = 204805;  B * sqrt(log x)/x = 0.76124
+   B_7(1e+07) = 1880073;  B * sqrt(log x)/x = 0.75480
+   (B_7(x) counts n <= x of the form x^2 + xy + 2y^2; convergence to C_7 is slow, with a 1/log x correction, as for sums of two squares)
+
+== 15. Numerology probes
+   Heegner numbers of the form |2^A - 3^l| (A, l): {1: (1, 0), 2: (0, 1), 3: (2, 0), 7: (1, 2), 11: (4, 3), 19: (3, 3), 43: None, 67: None, 163: None} ;  share of 1..20 of that form: 11 / 20
+   163 mod 7 = 2 (a residue: 163 splits in Q(sqrt(-7)), 163 = 10^2 + 7*3^2 = 163 );  7 in Q(sqrt(-163)): inert  (reciprocity twins: (-7/163) = (163/7), (-163/7) = (7/163))
+   640320 mod 7 = 2 ; j(163) mod 7 = 6 = 1728 mod 7 = 6 (the only supersingular j mod 7)
+   2^18 - 1 (code denominator of the -17 cycle under T) = {3: 3, 7: 1, 19: 1, 73: 1} ;  2^4 - 1 = 15, 2^8 - 1 = 255 (gamma_2 values at the two d = -7, -28 points)
+   smallest squarefree d with both 2 and 3 split in Q(sqrt(-d)): [23, 47, 71, 95] ;  h(-23) = 3
+
+FAILED CHECKS: none
+ALL CHECKS PASSED
