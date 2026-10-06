@@ -740,6 +740,21 @@ all heights (THM-1289, published), δ ineffective.
   35-54%, the 6-bit band reproduces the magnitude, deep descenders cancel slowly; targets (T1) cancellation of deep descents,
   (T2) band residue of order P_h, OPEN. S22 (section 2d; synthesis 2af; T1559): the exponent walk read from the top splits the coefficient by the number J of bottom levels at negative exponents; Lemma G (one-step gap <= 0.809 on half the units, resonant set named), Lemma R' (|c_J| <= mass_h(J) Ntilde_(J-1)) and the Chernoff mass law PROVED; Theorem C: if the weighted negative-power norm Ntilde_n decays at any rate below log2 3 - 1 = 0.585 (VERIFIED to n = 320, rate 0.568-0.574, margin 1.3%; the family sits at the Parseval scale up to travelling ridges = multiplier-family coincidences u 2^Q = -+1 mod 3^n0, e.g. v_3(55 2^423 + 1) = 15, OBSERVED, MISTAKE-550), the resonant window decays at the rate 3^(h*-1) with a constant prefactor (CONDITIONAL); (T1)'s ceiling part reduces to that hypothesis, its floor part is observed negligible, (T2) reduces to one constant. Note: `collatz_five_mirrors_20260929.md`. S23 (2026-09-29, three Chocian preprints as mirrors; note `collatz_three_mirrors_20260929.md`; synthesis 2ag; T1560): the character spectrum of the law -- Theorem 1 (PROVED, VERIFIED to five digits against S19): sum over primitive characters of E[psi(Y_n)] = rho_n(1) - rho_(n-1)(1), the parity-twisted sum = rho_n(-1) - rho_(n-1)(-1); the full-period one-pole recursion (exact, no truncation) reproduces the S20 FFT maxima to 18 and gives M(19) at +-2^24; the ridge seeds are Poisson 3-adic coincidences (16.7 million pairs); e^-I 3^(theta*/ln 2) = log2 3 - 1 (H's margin = Parseval vs Chernoff); 1729 = 1 + 12^3 is the midpoint of the saddle chain 1 + 3^j 4^(6-j), dens B(1729) = 0.0044 to 2^30, X_0(1729) > 2^30 for Krasikov-Lagarias; (4,3,17) still UNVERIFIED.
 
+- **The owner's 8x8 board as an instrument (mac-mini, 2026-10-06; [chessboard weave](../05-knowledge/results/chessboard_weave_20261006.md), THM-4550, THM-4551, HYP-9210).**
+  Rings `4, 12, 20, 28` = Chebyshev shells = lonely-runner level sets = level sets of the bishop's reach
+  (`13 - 2 ring = 6 + 16 lambda`); the rook sees none of it. Two-speed loneliness lives on the anti-diagonal
+  (`floor((a+b)/2)/(a+b)`), the knight is the unique tight rider and the only one never reaching the 8x8 centre;
+  the scaffold lengths are the two LRC extremes and their weave is the tight progression. Beck–Everett's harmful
+  (odd-sum) relations are exactly colour-switching relations (the LRC(14) relation lane, `sum m^2 <= 65`, reads
+  as "a short knight-like relation"). New object: the first lonely time (camel `4/9` at two speeds; the progressions
+  with 2 removed push it to `1/2 - O(1/n)`; HYP-9210). Weave law: every closed knight tour stalls inside the outer
+  ring exactly as often as inside rings 1-2, and at least once (`4 + 28 = 12 + 20`). The monotile's boundary words are
+  the centre-to-centre flights of colour-changing Fibonacci leapers (`sigma`: rook step -> knight/zebra flight).
+  Knight-torus blocking number `7` = Hall bound (only vertex-starving sets), the knight form of HYP-9168.
+  HYP-9168 (blocking number = Hall bound) is now FINITE-EXACT for all 9,733,056 tournaments on 10 vertices (was
+  `N <= 9`), random-verified to `N = 14`, and shown false for oriented graphs that are not tournaments.
+  No LRC(14), Collatz or `H >= disc` consequence.
+
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`
 (ranks HN > reconstruction > Kakeya/Falconer > sunflower > Caccetta–Häggkvist > … ).
 

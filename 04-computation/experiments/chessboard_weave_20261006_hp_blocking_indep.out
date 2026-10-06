@@ -1,0 +1,2 @@
+independent check N=10: 111 classes tested (stride 97333 plus hall=8 classes found by sparse scan), beta >= hall (hence beta = hall) for all; hall histogram {1: 1, 2: 3, 3: 11, 4: 29, 5: 39, 6: 15, 7: 2, 8: 11}; max lazy cuts 405; 173s
+command: python3 chessboard_weave_20261006_hp_blocking_indep.py 97333 12   (173 s, one thread)
