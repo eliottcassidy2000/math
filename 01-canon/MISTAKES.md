@@ -2032,6 +2032,16 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
+## MISTAKE-562 (2026-10-05, opus S12 Syracuse window-alphabet note; found by the session's own adversarial subagent audit) -- a letter concatenation was read as an orbit valuation word, and a stale docstring contradicting the script's own output was pushed
+
+- **Claims:**
+  - (1) The draft of `syracuse_window_alphabet_20261005.md` section 5 and section F of the script read "H G = (1,2,1,1,1,2,1,2)" and "G H" as the valuation words of H-then-G and G-then-H credit episodes and concluded that every 4-window of such an episode is STRONG. The credit note (`adaptive_credit_potential_20261004.md`, section 5) replaces the suffix (b, tail) by (v, b+2, tail): an H-then-G episode has the orbit word (1,2,1,1,1,2, b+2, 2, ...) with b+2 >= 3 at the junction. Witness x = 12443 (= 155 mod 2048, H(x) = 8859 = 11 mod 16): Syracuse word (1,2,1,1,1,2,3,2,1), whose junction windows are C3 over sink, TT4 and source over C3. The letter-word statement survives only for the letter words; the episode statement is the opposite of what was drafted.
+  - (2) The script docstring's item D (pushed in checkpoint 94b56b3ec) said time reversal "exchanges TT4 <-> STRONG and fixes the vortices (the B2 complement)"; the script's own section D output shows both vortices go to STRONG and STRONG goes to TT4 or STRONG. The printed text was right, the docstring stale. Fixed before the note was published.
+- **What survives:** Theorems 1, 2, 5 and Propositions 3, 4 of the note; the census; the letter-word reading.
+- **Rule:**
+  - A word built by concatenating the letters of two operations is not the orbit word of their composition when the composition rule rewrites the junction; read the receipt rule before assigning valuations to an episode.
+  - A docstring that summarises a check must be regenerated from the check's output, not from the hypothesis the check was written to test (same family as MISTAKE-561 (2)).
+
 ## MISTAKE-561 (2026-10-05, opus S11 trees-versus-4-tournaments note; found by the session's own adversarial subagent audit before publication, except one line already pushed) -- a "no involution" claim made from the wrong level, a quotient involution misnamed, a failure threshold placed one size too early, and a classical attribution blurred
 
 - **Claims:**

@@ -98,13 +98,31 @@ Realizable chord patterns (generic bits): 49 of 1024
 
 ## F. The credit-grammar words read through the 4-window alphabet (generic bits)
 
+Letter words (concatenations of the valuation letters of G = (1,2) and v = (1,2,1,1,1,2); NOT orbit words of episodes):
   G = (1,2)                  (shorter than a 4-window)
   G G = (1,2,1,2)            (1, 2, 1)->(0,0)=STRONG; (2, 1, 2)->(0,0)=STRONG
-  H = (1,2,1,1,1,2)          (1, 2, 1)->(0,0)=STRONG; (2, 1, 1)->(0,0)=STRONG; (1, 1, 1)->(0,0)=STRONG; (1, 1, 2)->(0,0)=STRONG
-  H G = (1,2,1,1,1,2,1,2)    (1, 2, 1)->(0,0)=STRONG; (2, 1, 1)->(0,0)=STRONG; (1, 1, 1)->(0,0)=STRONG; (1, 1, 2)->(0,0)=STRONG; (1, 2, 1)->(0,0)=STRONG; (2, 1, 2)->(0,0)=STRONG
-  G H = (1,2,1,2,1,1,1,2)    (1, 2, 1)->(0,0)=STRONG; (2, 1, 2)->(0,0)=STRONG; (1, 2, 1)->(0,0)=STRONG; (2, 1, 1)->(0,0)=STRONG; (1, 1, 1)->(0,0)=STRONG; (1, 1, 2)->(0,0)=STRONG
-Every 4-window inside H and G is STRONG: no 2-step descent (a1+a2 >= 4) occurs in these words, since
-they contain no consecutive valuations summing to 4 or more; the credit words are ascent-only at the
-2-step scale, and the descent they pay for is carried by the common-future dependency, not by the window.
+  v = (1,2,1,1,1,2)          (1, 2, 1)->(0,0)=STRONG; (2, 1, 1)->(0,0)=STRONG; (1, 1, 1)->(0,0)=STRONG; (1, 1, 2)->(0,0)=STRONG
+  v.G letters (1,2,1,1,1,2,1,2) (1, 2, 1)->(0,0)=STRONG; (2, 1, 1)->(0,0)=STRONG; (1, 1, 1)->(0,0)=STRONG; (1, 1, 2)->(0,0)=STRONG; (1, 2, 1)->(0,0)=STRONG; (2, 1, 2)->(0,0)=STRONG
+  G.v letters (1,2,1,2,1,1,1,2) (1, 2, 1)->(0,0)=STRONG; (2, 1, 2)->(0,0)=STRONG; (1, 2, 1)->(0,0)=STRONG; (2, 1, 1)->(0,0)=STRONG; (1, 1, 1)->(0,0)=STRONG; (1, 1, 2)->(0,0)=STRONG
+Every 4-window inside these letter words is STRONG: no two consecutive letters sum to 4 or more.
+
+Actual H-then-G episode (credit note section 5: the receipt replaces the suffix (b, tail) by (v, b+2, tail)):
+  x = 12443 = 155 mod 2048, H(x) = 8859 = 11 mod 16 (G legal after H); Syracuse word [1, 2, 1, 1, 1, 2, 3, 2, 1]
+  4-windows along the orbit: [1, 2, 1]->STRONG; [2, 1, 1]->STRONG; [1, 1, 1]->STRONG; [1, 1, 2]->STRONG; [1, 2, 3]->IN; [2, 3, 2]->TT4; [3, 2, 1]->OUT
+  The junction valuation b+2 = 3 carries C3-over-sink (1,2,3), TT4 (2,3,2) and source-over-C3 (3,2,1): the descent the
+  episode pays for shows up exactly at the junction, not inside the letter words.
+
+## G. Exactness of the generic bits beyond the census
+
+A k-step chord starting at odd y with valuation word w, total s = sum(w) and 2^s > 3^k satisfies y > S^k y iff
+(2^s - 3^k) y > c_w, where c_w = sum_i 3^(k-1-i) 2^(w_1+...+w_i) is the constant of S^k y = (3^k y + c_w)/2^s;
+if 2^s < 3^k the chord always ascends. So a non-generic chord needs y < c_w/(2^s - 3^k):
+  k = 2: max_w c_w/(2^s - 3^k) = 11/7 = 1.57 at w = (3, 1)
+  k = 3: max_w c_w/(2^s - 3^k) = 49/5 = 9.80 at w = (3, 1, 1)
+  k = 4: max_w c_w/(2^s - 3^k) = 331/47 = 7.04 at w = (4, 1, 1, 1)
+  k = 5: max_w c_w/(2^s - 3^k) = 1121/13 = 86.23 at w = (4, 1, 1, 1, 1)
+Every odd y < 2^22 is a window start in the census, so the chord patterns realised below 2^22 are the only
+ones realised anywhere (m <= 6); the occurring class sets are exact for all odd x. The order-laws note's
+short-lag genericity (lag < 17 on the plus sheet) gives the same for every window of at most 12 odd iterates.
 
 ALL ASSERTIONS PASSED (N = 22)

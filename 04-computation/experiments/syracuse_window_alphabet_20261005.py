@@ -20,10 +20,20 @@ Checks (all assertions raise on failure):
   B. m = 4, gauge ASC: only TT4 (iff a1+a2+a3 <= 4) and STRONG occur (generic law, exceptions listed).
   C. Haar law (valuation word i.i.d. geometric): TT4 11/32, each vortex 5/32, STRONG 11/32; census
      frequencies below 2^N compared.
-  D. Time reversal of the window (same gauge) exchanges TT4 <-> STRONG and fixes the vortices (the B2
-     complement); converse = negation o time reversal exchanges the vortices (the a <-> b swap).
+  D. Time reversal of the window read with the same gauge equals the converse of the opposite-gauge
+     reading (exact arc identity), so under DESC it is TT4 iff a1+a2+a3 <= 4 and STRONG otherwise (it is
+     not an involution of the DESC alphabet); the converse of the DESC reading (= negation o time
+     reversal, Redei note) exchanges the two vortices: the a <-> b swap of B2.
   E. m = 5, 6: which of the 12 / 56 classes occur, their Haar law and census frequencies.
-  F. The credit-grammar words G = (1,2) and H = (1,2,1,1,1,2): the 4-window classes they contain.
+  F. The credit-grammar letter words G = (1,2), v = (1,2,1,1,1,2) (the common-future word of H) and their
+     concatenations contain only STRONG 4-windows; but an actual H-then-G episode has the orbit word
+     (1,2,1,1,1,2, b+2, 2, ...) with b+2 >= 3 at the junction (credit note, section 5 receipt rule), so it
+     carries a C3-over-sink window followed by a TT4 window there (witness x = 12443).
+  G. Exactness beyond the census: a chord of length k with 2^s > 3^k can disagree with its generic bit
+     only if its start value is below max_w c_w / (2^s - 3^k) (printed, < 90 for k <= 5), and every odd
+     start value below 2^N is itself a window start in the census; so for m <= 6 the realizable chord
+     patterns and the occurring classes are exact for all odd x (the order-laws note's short-lag
+     genericity, lag < 17, gives the same for every window of at most 12 odd iterates).
 
 Run:  python -X utf8 syracuse_window_alphabet_20261005.py [--N 22] [--save]
 """
@@ -202,7 +212,8 @@ def main(N, do_save):
     say()
     say("## C. Haar law from the valuation word (a_i i.i.d., P(a = k) = 2^-k), generic comparisons")
     say()
-    CAP = 8
+    CAP = 8  # exact lumping for m <= 6 only: needs 2^CAP > 3^(m-1) (2^8 = 256 > 243); raise to >= 10 for m = 7
+    assert 2 ** CAP > 3 ** 5
 
     def mass(a):
         return Fraction(1, 2 ** a) if a < CAP else Fraction(1, 2 ** (CAP - 1))
@@ -292,8 +303,9 @@ def main(N, do_save):
     # ------------------------------------------------------------------ F: credit words
     say("## F. The credit-grammar words read through the 4-window alphabet (generic bits)")
     say()
-    for wname, w in (("G = (1,2)", (1, 2)), ("G G = (1,2,1,2)", (1, 2, 1, 2)), ("H = (1,2,1,1,1,2)", (1, 2, 1, 1, 1, 2)),
-                     ("H G = (1,2,1,1,1,2,1,2)", (1, 2, 1, 1, 1, 2, 1, 2)), ("G H = (1,2,1,2,1,1,1,2)", (1, 2, 1, 2, 1, 1, 1, 2))):
+    say("Letter words (concatenations of the valuation letters of G = (1,2) and v = (1,2,1,1,1,2); NOT orbit words of episodes):")
+    for wname, w in (("G = (1,2)", (1, 2)), ("G G = (1,2,1,2)", (1, 2, 1, 2)), ("v = (1,2,1,1,1,2)", (1, 2, 1, 1, 1, 2)),
+                     ("v.G letters (1,2,1,1,1,2,1,2)", (1, 2, 1, 1, 1, 2, 1, 2)), ("G.v letters (1,2,1,2,1,1,1,2)", (1, 2, 1, 2, 1, 1, 1, 2))):
         wins = []
         for i in range(len(w) - 2):
             avs = w[i:i + 3]
@@ -301,9 +313,46 @@ def main(N, do_save):
             b = 1 if avs[1] + avs[2] >= 4 else 0
             wins.append("%s->(%d,%d)=%s" % (avs, a, b, table_B2(a, b).split(" ")[0]))
         say("  %-26s %s" % (wname, "; ".join(wins) if wins else "(shorter than a 4-window)"))
-    say("Every 4-window inside H and G is STRONG: no 2-step descent (a1+a2 >= 4) occurs in these words, since")
-    say("they contain no consecutive valuations summing to 4 or more; the credit words are ascent-only at the")
-    say("2-step scale, and the descent they pay for is carried by the common-future dependency, not by the window.")
+    say("Every 4-window inside these letter words is STRONG: no two consecutive letters sum to 4 or more.")
+    say()
+    say("Actual H-then-G episode (credit note section 5: the receipt replaces the suffix (b, tail) by (v, b+2, tail)):")
+    x = 12443
+    assert x % 2048 == 155 and ((729 * x + 669) // 1024) % 16 == 11
+    vals, avs = window(x, 10)
+    say("  x = %d = 155 mod 2048, H(x) = %d = 11 mod 16 (G legal after H); Syracuse word %s" % (x, (729 * x + 669) // 1024, avs))
+    cls = []
+    for i in range(len(avs) - 2):
+        a = 1 if avs[i] + avs[i + 1] >= 4 else 0
+        b = 1 if avs[i + 1] + avs[i + 2] >= 4 else 0
+        cls.append("%s->%s" % (avs[i:i + 3], table_B2(a, b).split(" ")[0]))
+    say("  4-windows along the orbit: " + "; ".join(cls))
+    assert cls[4].endswith("IN") and cls[5].endswith("TT4") and cls[6].endswith("OUT")
+    say("  The junction valuation b+2 = 3 carries C3-over-sink (1,2,3), TT4 (2,3,2) and source-over-C3 (3,2,1): the descent the")
+    say("  episode pays for shows up exactly at the junction, not inside the letter words.")
+
+    # ------------------------------------------------------------------ G: exactness bound
+    say()
+    say("## G. Exactness of the generic bits beyond the census")
+    say()
+    say("A k-step chord starting at odd y with valuation word w, total s = sum(w) and 2^s > 3^k satisfies y > S^k y iff")
+    say("(2^s - 3^k) y > c_w, where c_w = sum_i 3^(k-1-i) 2^(w_1+...+w_i) is the constant of S^k y = (3^k y + c_w)/2^s;")
+    say("if 2^s < 3^k the chord always ascends. So a non-generic chord needs y < c_w/(2^s - 3^k):")
+    for k in range(2, 6):
+        best = Fraction(0)
+        bestw = None
+        for w in itertools.product(range(1, 9), repeat=k):
+            sgm = sum(w)
+            if 2 ** sgm <= 3 ** k:
+                continue
+            c = sum(3 ** (k - 1 - i) * 2 ** sum(w[:i]) for i in range(k))
+            r = Fraction(c, 2 ** sgm - 3 ** k)
+            if r > best:
+                best, bestw = r, w
+        say("  k = %d: max_w c_w/(2^s - 3^k) = %s = %.2f at w = %s" % (k, best, float(best), bestw))
+        assert best < 90
+    say("Every odd y < 2^%d is a window start in the census, so the chord patterns realised below 2^%d are the only" % (N, N))
+    say("ones realised anywhere (m <= 6); the occurring class sets are exact for all odd x. The order-laws note's")
+    say("short-lag genericity (lag < 17 on the plus sheet) gives the same for every window of at most 12 odd iterates.")
 
     say()
     say("ALL ASSERTIONS PASSED (N = %d)" % N)
