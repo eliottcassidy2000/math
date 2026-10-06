@@ -1,0 +1,217 @@
+==============================================================================
+A. Unlabeled trees on n vertices (networkx.nonisomorphic_trees), n = 1..10
+==============================================================================
+n      :    1    2    3    4    5    6    7    8    9   10
+trees  :    1    1    1    2    3    6   11   23   47  106   (= A000055)
+
+The three trees on 5 vertices:
+  path P_5               degrees=[2, 2, 2, 1, 1] diameter=4 leaves=2 |Aut|=2  labeled copies=60  added-edge cycle lengths [(3, 3), (4, 2), (5, 1)]
+  spider/fork deg=[3, 2, 1, 1, 1] degrees=[3, 2, 1, 1, 1] diameter=3 leaves=3 |Aut|=2  labeled copies=60  added-edge cycle lengths [(3, 4), (4, 2)]
+  star K_{1,4}           degrees=[4, 1, 1, 1, 1] diameter=2 leaves=4 |Aut|=24  labeled copies=5  added-edge cycle lengths [(3, 6)]
+
+==============================================================================
+B. Tournaments on n vertices: iso classes, self-converse, converse classes (n <= 6)
+==============================================================================
+n  iso(A000568)  self-converse(A002785)  converse-classes  trees(n+1)  match?
+1             1                       1                 1           1  YES
+2             1                       1                 1           1  YES
+3             2                       2                 2           2  YES
+4             4                       2                 3           3  YES
+5            12                       8                10           6  no
+6            56                      12                34          11  no
+7           456                      88               272          23  no   (OEIS values, not recomputed here)
+Converse-class counts 1,1,2,3,10,34,272 vs trees 1,1,2,3,6,11,23: equal exactly for n <= 4.
+
+==============================================================================
+C. Arc-reversal metagraph on 4 vertices and its converse quotient
+==============================================================================
+class            scores      labeled  |Aut|  3-cycles  Ham.paths  cycle lengths  converse
+TT4              (0, 1, 2, 3)       24      1         0          1  []             self
+B=C3+sink        (0, 2, 2, 2)        8      3         1          3  [3]            A=C3+source
+S4 (strong)      (1, 1, 2, 2)       24      1         2          5  [3, 4]         self
+A=C3+source      (1, 1, 1, 3)        8      3         1          3  [3]            B=C3+sink
+
+Weighted arc-reversal metagraph (row = class of a representative, entry = # of its 6 arcs
+whose reversal lands in the column class):
+                           TT4   A=C3+source     B=C3+sink   S4 (strong)
+TT4                          3             1             1             1
+A=C3+source                  3             0             0             3
+B=C3+sink                    3             0             0             3
+S4 (strong)                  1             1             1             3
+Labeled-flow symmetry labeled(r)*W[r][c] = labeled(c)*W[c][r] holds for all pairs.
+
+Converse quotient (merge A and B into M):
+  TT4  -> TT4:3, M:2, S4:1
+  M    -> TT4:3, M:0, S4:3
+  S4   -> TT4:1, M:2, S4:3
+  Quotient is a TRIANGLE (every pair adjacent) with loops at TT4 and S4 and no loop at M.
+
+Edge-rotation graph of the 3 trees on 5 vertices (remove one edge, add one edge, stay a tree):
+  path P_5               -> path P_5:8, spider/fork deg=[3, 2, 1, 1, 1]:8
+  spider/fork deg=[3, 2, 1, 1, 1] -> path P_5:8, spider/fork deg=[3, 2, 1, 1, 1]:5, star K_{1,4}:1
+  star K_{1,4}           -> spider/fork deg=[3, 2, 1, 1, 1]:12
+  Rotation graph is a PATH (path -- fork -- star) with loops at all three nodes: NOT the triangle above.
+
+==============================================================================
+D. Erdos--Sos at t = 5: ex(n, T) for the three trees, n <= 7 (exhaustive over the graph atlas)
+==============================================================================
+n   3n/2    floor  | ex(n,star)  ex(n,fork)  ex(n,path)  | 3-regular graph on n exists?  extremal graphs attaining floor(3n/2)
+5     7.5     7   |         7          6           6   |  NO (handshake: 3n odd)  attained by: ['star K_{1,4}']
+      witness for path P_5              : 6 edges, degrees [3, 3, 3, 3, 0], components [4, 1]
+      witness for spider/fork deg=[3, 2, 1, 1, 1]: 6 edges, degrees [3, 3, 3, 3, 0], components [4, 1]
+      witness for star K_{1,4}          : 7 edges, degrees [3, 3, 3, 3, 2], components [5]
+6     9.0     9   |         9          7           7   |  yes                     attained by: ['star K_{1,4}']
+      witness for path P_5              : 7 edges, degrees [3, 3, 3, 3, 1, 1], components [4, 2]
+      witness for spider/fork deg=[3, 2, 1, 1, 1]: 7 edges, degrees [3, 3, 3, 3, 1, 1], components [4, 2]
+      witness for star K_{1,4}          : 9 edges, degrees [3, 3, 3, 3, 3, 3], components [6]
+7    10.5    10   |        10          9           9   |  NO (handshake: 3n odd)  attained by: ['star K_{1,4}']
+      witness for path P_5              : 9 edges, degrees [3, 3, 3, 3, 2, 2, 2], components [4, 3]
+      witness for spider/fork deg=[3, 2, 1, 1, 1]: 9 edges, degrees [3, 3, 3, 3, 2, 2, 2], components [4, 3]
+      witness for star K_{1,4}          : 10 edges, degrees [3, 3, 3, 3, 3, 3, 2], components [7]
+Erdos--Sos for all trees on 5 vertices is a THEOREM (paths: Erdos--Gallai 1959; stars: degree count;
+fork = diameter-3 spider: McLennan 2005 / spider results).  The bound 3n/2 is attained with equality
+only when 3n is even; the star attains floor(3n/2) for every n >= 5 (near-regular graphs of max degree 3);
+the path and fork attain 3n/2 only at 4 | n (disjoint K4's) in the range checked.
+
+==============================================================================
+E. The forcing threshold E*(n) = floor(3n/2)+1 as a Collatz composite (all n <= 10^6)
+==============================================================================
+odd n : E*(n) = (3n+1)/2  = halve after 3x+1  (the Collatz odd step T(n))
+even n: E*(n) = 3(n/2)+1  = 3x+1 after halving (3x+1 applied to T(n) = n/2)
+Both are the two orders of composing {x -> 3x+1, x -> x/2}; this is shared syntax ((t-2)/2 = 3/2
+and rounding), not a transfer of structure.  Typed: ELEMENTARY IDENTITY / SYNTAX-LEVEL.
+
+mod-4 modes of 3n/2 at t = 5:
+  n= 4  3n/2=  6.0  E*=  7  0 mod 4: whole, (t-1)|n, disjoint K4 extremal for ALL three trees
+  n= 5  3n/2=  7.5  E*=  8  odd    : half, no 3-regular graph (handshake), star alone reaches the floor
+  n= 6  3n/2=  9.0  E*= 10  2 mod 4: whole, 3-regular graphs exist but (t-1) does not divide n: star-only equality
+  n= 7  3n/2= 10.5  E*= 11  odd    : half, no 3-regular graph (handshake), star alone reaches the floor
+  n= 8  3n/2= 12.0  E*= 13  0 mod 4: whole, (t-1)|n, disjoint K4 extremal for ALL three trees
+  n= 9  3n/2= 13.5  E*= 14  odd    : half, no 3-regular graph (handshake), star alone reaches the floor
+  n=10  3n/2= 15.0  E*= 16  2 mod 4: whole, 3-regular graphs exist but (t-1) does not divide n: star-only equality
+  n=11  3n/2= 16.5  E*= 17  odd    : half, no 3-regular graph (handshake), star alone reaches the floor
+  n=12  3n/2= 18.0  E*= 19  0 mod 4: whole, (t-1)|n, disjoint K4 extremal for ALL three trees
+
+ALL 1000058 CHECKS PASSED
+
+==============================================================================
+F. Otter's recursion: the parity-alternating half term (n <= 10)
+==============================================================================
+n  r_n   (1/2)sum r_i r_{n-i}   [n even] r_{n/2}/2   t_n = r_n - sum/2 + half-term   (A000055)
+ 1    1        0.0                0.0               1
+ 2    1        0.5                0.5               1
+ 3    2        1.0                0.0               1
+ 4    4        2.5                0.5               2
+ 5    9        6.0                0.0               3
+ 6   20       15.0                1.0               6
+ 7   48       37.0                0.0              11
+ 8  115       94.0                2.0              23
+ 9  286      239.0                0.0              47
+10  719      617.5                4.5             106
+The half term r_{n/2}/2 is present exactly for even n (a bicentroid = symmetric central edge exists
+only when the two halves have n/2 vertices each).  Otter 1948, CITED; values VERIFIED n <= 10.
+
+Center / centroid of the three trees on 5 vertices:
+  path P_5               diameter=4  center size=1 (central)  centroid size=1
+  spider/fork deg=[3, 2, 1, 1, 1] diameter=3  center size=2 (bicentral)  centroid size=1
+  star K_{1,4}           diameter=2  center size=1 (central)  centroid size=1
+
+==============================================================================
+G. Regular tournaments and the mean score (m-1)/2 (m <= 7)
+==============================================================================
+  m=3: mean score  1.0 = e(K_m)/m = Erdos--Sos density (t-2)/2 for t = m+1 = 4:  whole (regular tournaments exist)
+  m=4: mean score  1.5 = e(K_m)/m = Erdos--Sos density (t-2)/2 for t = m+1 = 5:  half (no regular tournament; near-regular only)
+  m=5: mean score  2.0 = e(K_m)/m = Erdos--Sos density (t-2)/2 for t = m+1 = 6:  whole (regular tournaments exist)
+  m=6: mean score  2.5 = e(K_m)/m = Erdos--Sos density (t-2)/2 for t = m+1 = 7:  half (no regular tournament; near-regular only)
+  m=7: mean score  3.0 = e(K_m)/m = Erdos--Sos density (t-2)/2 for t = m+1 = 8:  whole (regular tournaments exist)
+  The unique near-regular tournament on 4 vertices is S4 (scores 1,1,2,2); the unique
+  acyclic one is TT4; the converse pair A/B sits between them.
+
+==============================================================================
+H. Linear-order dictionary TT_m <-> P_{m+1}: cycles created by one reversal / one added edge
+==============================================================================
+  m=3: reversing arc (i,j) of TT_3 (distance d=j-i) creates exactly C(d-1, L-2) cycles of each
+        length L = 3..d+1 (total 2^(d-1)-1, zero for d=1); adding edge (u,v) to P_4 (distance d)
+        creates exactly one cycle, of length d+1.  VERIFIED all arcs/non-edges.
+  m=4: reversing arc (i,j) of TT_4 (distance d=j-i) creates exactly C(d-1, L-2) cycles of each
+        length L = 3..d+1 (total 2^(d-1)-1, zero for d=1); adding edge (u,v) to P_5 (distance d)
+        creates exactly one cycle, of length d+1.  VERIFIED all arcs/non-edges.
+  m=5: reversing arc (i,j) of TT_5 (distance d=j-i) creates exactly C(d-1, L-2) cycles of each
+        length L = 3..d+1 (total 2^(d-1)-1, zero for d=1); adding edge (u,v) to P_6 (distance d)
+        creates exactly one cycle, of length d+1.  VERIFIED all arcs/non-edges.
+  m=6: reversing arc (i,j) of TT_6 (distance d=j-i) creates exactly C(d-1, L-2) cycles of each
+        length L = 3..d+1 (total 2^(d-1)-1, zero for d=1); adding edge (u,v) to P_7 (distance d)
+        creates exactly one cycle, of length d+1.  VERIFIED all arcs/non-edges.
+
+==============================================================================
+I. Collatz inverse step integrality: period-2 rhythm from ord_3(2) = 2 (m odd, m <= 10^5)
+==============================================================================
+  n = (2^k m - 1)/3 is whole iff 2^k m = 1 (mod 3): k even for m = 1 (mod 3), k odd for m = 2 (mod 3),
+  never for 3 | m.  Period 2 = ord_3(2).  The Erdos--Sos alternation is 2 | 3n, i.e. 2 | n: period 2
+  from the prime 2 itself.  Same period, different mechanism (multiplicative order vs divisibility).
+
+ALL 1050172 CHECKS PASSED (final)
+
+==============================================================================
+J. The Klein-group dictionary: end-folds of P_5 vs boundary arc flips of TT_4
+==============================================================================
+  P5 after id: path P_5               diameter 4  (u = 4 - diameter = 0)
+  P5 after L : spider/fork deg=[3, 2, 1, 1, 1] diameter 3  (u = 4 - diameter = 1)
+  P5 after R : spider/fork deg=[3, 2, 1, 1, 1] diameter 3  (u = 4 - diameter = 1)
+  P5 after LR: star K_{1,4}           diameter 2  (u = 4 - diameter = 2)
+  TT4 after id: scores (0, 1, 2, 3)  TT4 (u=0)
+  TT4 after L : scores (0, 2, 2, 2)  3-cycle over sink (u=1)
+  TT4 after R : scores (1, 1, 1, 3)  source over 3-cycle (u=1)
+  TT4 after LR: scores (1, 1, 2, 2)  strong S4 (u=2)
+  rho(i) = 5-i is an automorphism of the path but an anti-automorphism of TT4: it identifies
+  fork_L with fork_R, and identifies the two diamonds only after converse-merging.  Merged label
+  u = #boundary defects (THM-584) <-> 4 - diameter;  H = 2u+1 = 1,3,5;  leaves = u+2 = 2,3,4.
+
+==============================================================================
+K. Fork-free structure lemma and exact ex(n, fork) = ex(n, P5) = 6 floor(n/4) + C(n mod 4, 2)
+==============================================================================
+  structure lemma agrees with direct subgraph search on all 1252 atlas graphs (<= 7 vertices)
+  and on 3000 random graphs with 8..12 vertices
+  Proof: a vertex c of degree >= 3 whose neighbour a has a neighbour outside N[c] gives a fork; so N[c] is a
+  component; if deg c >= 4 any edge inside N(c) gives a fork, so the component is a star; if deg c = 3 the
+  component has 4 vertices.  Hence fork-free components are stars, paths, cycles or <= 4 vertices, and the
+  maximum edge count is 6 floor(n/4) + C(r,2): disjoint K4's plus a clique on the remainder (Erdos--Gallai/
+  Faudree--Schelp give the same value for P5).
+
+  n   3n/2   ex(star)  ex(path)=ex(fork)   deficit star   deficit path/fork
+   4    6.0       6            6             0.0            0.0
+   5    7.5       7            6             0.5            1.5
+   6    9.0       9            7             0.0            2.0
+   7   10.5      10            9             0.5            1.5
+   8   12.0      12           12             0.0            0.0
+   9   13.5      13           12             0.5            1.5
+  10   15.0      15           13             0.0            2.0
+  11   16.5      16           15             0.5            1.5
+  12   18.0      18           18             0.0            0.0
+  13   19.5      19           18             0.5            1.5
+  14   21.0      21           19             0.0            2.0
+  15   22.5      22           21             0.5            1.5
+  16   24.0      24           24             0.0            0.0
+  deficit(star) has period 2 (handshake parity); deficit(path/fork) has period 4 (K4 packing residue).
+
+ALL 1054437 CHECKS PASSED (final, with J and K)
+
+==============================================================================
+L. The end-defect Klein group for every m >= 4: TT_m with flips (1,3),(m-2,m); P_{m+1} with end folds
+==============================================================================
+ m  classes TT,B,A,S distinct?  A=conv(B)?  TT,S self-conv?  H(TT),H(B),H(A),H(S)   trees: path,forkL~forkR,double-fold  diameters  u=m-diam
+ 4   True                    True        True            [1, 3, 3, 5]           3 trees (one pair merged by rho)    [4, 3, 2]    [0,1,2]
+ 5   True                    True        True            [1, 3, 3, 9]           3 trees (one pair merged by rho)    [5, 4, 3]    [0,1,2]
+ 6   True                    True        True            [1, 3, 3, 9]           3 trees (one pair merged by rho)    [6, 5, 4]    [0,1,2]
+ 7   True                    True        True            [1, 3, 3, 9]           3 trees (one pair merged by rho)    [7, 6, 5]    [0,1,2]
+ For every m the end-defect group (Z_2)^2 gives 4 tournament classes (one converse pair) and 3 trees; the
+ merged label u = #end defects = m - diameter.  At m = 4 these exhaust all classes/trees; for m >= 5 they
+ are the boundary layer only (10 merged classes vs 6 trees at m = 5).  H(B_m) = H(A_m) = 3 for all m;
+ H(S_m) = 5 at m = 4 (the two flips interlock) and 9 for every m >= 5 (verified m <= 7).
+
+Spectral obstruction to any map between the merged 4-metagraph and the three-row automaton:
+  merged metagraph (weighted, as above) eigenvalues: [-2.0, 2.0, 6.0]  (real; THM-584 V+ = {-2,2,6})
+  three-row rotation eigenvalues: [(-0.5-0.866j), (-0.5+0.866j), (1+0j)]  (cube roots of unity)
+  A symmetric 3-node graph with two loops cannot be carried onto a directed 3-cycle: shared datum is only '3'.
+
+ALL 1054454 CHECKS PASSED (final, with L)
