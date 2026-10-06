@@ -1,4 +1,4 @@
-# The 11-square packing octic has Galois group S8 and its only unconditional Langlands piece is a Dirichlet character of conductor 16128215; the formalization's root isolation, reused on log2 3, gives a Lean certificate of the S9 expense records; the 3SUM paper read against S18 (Artin, 20/19) and S19 (Mazur, Lean)
+# The 11-square packing octic has Galois group S8 and its only unconditional Langlands piece is a Dirichlet character of conductor 16128215; the formalization's root isolation, reused on log2 3, gives a Lean-checked certificate of the S9 expense records; the 3SUM paper read against S18 (Artin, 20/19) and S19 (Mazur, Lean)
 
 2026-10-06, session opus-2026-10-06-S16 (worktree `codex/session-square-packing-langlands-20261006`).
 
@@ -13,8 +13,9 @@ Owner's seed (verbatim): "consider the below formalization of the 11 square pack
   - the glue lemma of the certificate.
 - **FINITE-EXACT:** the field discriminant and ramification (Dedekind criterion), the class number of the quadratic resolvent, the Chebotarev and trace-moment statistics, the exact S8 entanglement table, and the S9 record list for `l <= 320`.
 - **LEAN-CHECKED:** `04-computation/lean/standalone/collatz_expense_records_certificate_20261006.lean`. It uses core Lean 4.30 with `native_decide`, has no `sorry`, and rests on one native-decide axiom per theorem.
+- **AUDITED:** an independent adversarial audit re-derived every computation with its own code and confirmed all computational and literature claims; its corrections to the Collatz statements and wording are applied in place (section 7) and logged as MISTAKE-566.
 - **CITED:**
-  - the packing formalization;
+  - the packing formalization, whose optimality claim is not re-verified here (Friedman's 2005 survey still lists `s(11)` as unproven);
   - Stromquist, and Goebel's `s(5)`;
   - Trump's 11-square packing;
   - Eliahou 1993;
@@ -41,24 +42,24 @@ Scripts:
    - `Gal(K^gal/Q) = S8`.
    - `d_K = -2^8 * 5 * 31 * 104053`.
    - Signature `(2, 3)`.
-   - The earlier proven optima `s(5) = 2 + 1/sqrt 2` (Goebel) and `s(10) = 3 + 1/sqrt 2` (Stromquist, EJC 2003) live in `Q(sqrt 2)`, with Galois group `C2`. The jump to S8 at `n = 11` tracks the first irregular tilt (Trump's angle; neither a rational multiple of `pi` nor constructible, Corollary in section 2), not anything packing-specific.
+   - The earlier proven optima `s(5) = 2 + 1/sqrt 2` (Goebel) and `s(10) = 3 + 1/sqrt 2` (Stromquist, EJC 2003) live in `Q(sqrt 2)`, with Galois group `C2`. S8 is the generic Galois group of a degree-8 polynomial. The contrast is that those optima use only 0 and 45 degree tilts, while `n = 11` needs Trump's angle, which is neither a rational multiple of `pi` nor constructible (Corollary in section 2).
 2. **Langlands, honestly.**
    - `zeta_K = zeta * L(s, rho_std)` with `rho_std` the 7-dimensional standard representation of S8, of Artin conductor `|d_K| = 4128823040`. Its traces `a_p = #{roots of P mod p} - 1` have the predicted moments `0, 1, 1, 4`; observed to `10^6`: `-0.003, 0.998, 0.975, 3.89`.
    - The only unconditionally automorphic piece is GL(1). The sign character of S8 is the Kronecker character of `Q(sqrt(-16128215))`, class number 5444, verified as the Frobenius parity on 2258 primes.
    - Automorphy of `rho_std` on GL(7) is open, and Dedekind's conjecture for `K` is not covered by the known theorems (Galois case or solvable closure).
-   - This sits on the repo's existing Langlands ladder. Collatz's exact arithmetic is abelian (GL(1)). The level-22 oldform bridge used GL(2) (`X_0(11)`, modularity known). The octic is a GL(7) Artin case (unknown).
+   - This sits on the repo's existing Langlands ladder. Every exact algebraic number found in the Collatz notes generates an abelian field (GL(1)); this rests on a search, not a proof. The level-22 oldform bridge used GL(2) (`X_0(11)`, modularity known). The octic is a GL(7) Artin case (unknown).
    - The oldform bridge's lesson holds again: Frobenius data see the field and its conjugacy classes, never which conjugate (side length versus `-1.853` versus `u`) or the geometry.
 3. **S18 revisited.**
    - Artin's `20/19` correction for base 5 is entanglement through `Q(sqrt 5)`, which lies inside `Q(zeta_5)`.
-   - The octic has the same phenomenon through its quadratic resolvent. For example, P has exactly one root mod p with density `31/84` when `(D/p) = +1` and `11/30` when `(D/p) = -1`, against `103/280` overall.
+   - The octic has the same phenomenon through the quadratic subfield of its Galois closure (`K` itself has no proper subfields, since S7 is maximal in S8). For example, P has exactly one root mod p with density `31/84` when `(D/p) = +1` and `11/30` when `(D/p) = -1`, against `103/280` overall.
    - S18's Collatz verdict stands: no 2-adic correction exists, and all entanglement is 3-adic.
 4. **What the formalization's method buys Collatz.**
    - The packing proof has four parts: (a) a finite closed-cell cover, (b) certified slack on every cell, (c) one exactly isolated algebraic endpoint (`u` in `(9/25, 37/100)`), (d) `native_decide` certificates.
-   - (a) has no Collatz analogue for descent. Stopping times are unbounded, so no finite set of descent cylinders covers the positive integers (Proposition 5.1). The zero-slack set is not one rigid point but `E_inf` (dimension `h* = 0.950`).
-   - (c) and (d) transfer exactly. Isolating `log2 3` once, between the convergents `16785921/10590737` and `301994/190537` (the pair behind Eliahou's cycle lengths `301994a + 17087915b + 85137581c`), certifies all 320 S9 expense values and their eleven records in Lean in 12 s. This removes S9's 50-digit-float caveat beyond `l = 94`.
+   - (a) has no Collatz analogue for descent. Stopping times are unbounded, so no finite set of descent cylinders covers all large positive integers (Proposition 5.1). The coefficient-survival set `E_inf` (dimension `h* = 0.950`) is uncountable, not one rigid point. Even it does not capture actual descent, because coefficient exit ignores the carry (section 5).
+   - (c) and (d) transfer. Isolating `log2 3` once, between the consecutive convergents `16785921/10590737` and `301994/190537`, decides all 320 S9 expense values and their eleven records. The decidable part is checked in Lean in seconds; the monotonicity glue is a two-line paper proof. This independently confirms S9's table; S9's 60-digit evaluations were already safe, since the closest value to an integer is `0.0019` at `l = 76`.
 5. **The 3SUM paper.** Of its seven themes:
-   - **one is an exact transfer, already made:** wanted entries; mac-mini Proposition 5.1;
-   - **four are typed analogies:**
+   - **five are typed analogies:**
+     - computing only wanted entries (mac-mini's Proposition 5.1 is a proved Collatz statement in that spirit, but the link to the paper is an analogy: there is no product or identity);
      - identity-driven recursion with pruning (the S14 two-sheet fusion relation);
      - amortized encoding across products (banks);
      - lopsidedness (2-adic sources against 3-adic landings, S15 and S18);
@@ -69,7 +70,7 @@ Scripts:
    - S18 is the Artin directive with "19/20", where 19 = `5^2 - 5 - 1`.
    - S19 is the Mazur Lean-checked positive-density paper.
    - The paper's 18, in `N >= D^18` and the `D^(1/18)` saving, is unrelated to S18 as a number (NUMEROLOGY).
-   - It matches S18's directive as a theme: a small correction factor that unlocks a recursion, found by pruning. S18's own result says a Collatz pruning of that kind can only be 3-adic.
+   - Thematically, both S18's directive and the paper are about a small gain unlocked by restructuring a recursion. The paper's gain is a polynomial saving, which is a different kind of object from an Artin density factor. S18's evidence (2-adic statistics exactly Haar under population measures) suggests that a Collatz analogue would have to be 3-adic; no theorem says so.
 
 ## 1. Inheritance and portfolio
 
@@ -185,9 +186,9 @@ This is the oldform bridge's lesson in a new setting. Commutative, conjugacy-inv
 
 ## 4. S18 revisited: entanglement, exactly (FINITE-EXACT)
 
-Artin's base-5 correction `A * 20/19` arises because "`p = 1 mod 5`" and "`5` is a square mod `p`" both say that `p` splits in `Q(sqrt 5)`, which sits inside `Q(zeta_5)`. Its `19` is `q^2 - q - 1` at `q = 5`.
+Artin's base-5 correction `A * 20/19` arises because "`p = 1 mod 5`" implies that `p` splits in `Q(sqrt 5)`, and "`5` is a square mod `p`" says exactly that; and `Q(sqrt 5)` sits inside `Q(zeta_5)`. Its `19` is `q^2 - q - 1` at `q = 5`.
 
-The octic has the same structure through its only abelian subfield `Q(sqrt D)`. Densities of `#roots of P mod p`, exact from S8:
+The octic has the same structure through `Q(sqrt D)`, the quadratic subfield of its Galois closure. It is not a subfield of `K`, which has no proper subfields because S7 is maximal in S8. Densities of `#roots of P mod p`, exact from S8:
 
 | roots | all p | `(D/p) = +1` (even) | `(D/p) = -1` (odd) |
 |---|---|---|---|
@@ -200,11 +201,11 @@ The octic has the same structure through its only abelian subfield `Q(sqrt D)`. 
 | 6 | 1/1440 | 0 | 1/720 |
 | 8 | 1/40320 | 1/20160 | 0 |
 
-The analogue of "`20/19`" for the event "P has a root mod p" given `(D/p) = +1` is `25494/25487 = 1 + 7/25487`. The 7 is `e_8 - o_8 = -(n-1)` up to sign: even derangements number 7413, odd ones 7420.
+The analogue of "`20/19`" for the event "P has a root mod p" given `(D/p) = +1` is `(12747/20160)/(25487/40320) = 3642/3641 = 1 + 1/3641`. (Even derangements number 7413 and odd ones 7420; the common factor 7 cancels, so it carries no meaning here.)
 
 Principle: Chebotarev conditions entangle exactly through the intersection with the maximal abelian subextension, which for an S8 closure is the quadratic resolvent alone. `K^gal` meets `Q(zeta_m)` in `Q(sqrt D)` when `16128215 | m`, and in `Q` otherwise. So for `m` prime to the conductor, conditions on `p mod m` are independent of the Frobenius class, the root count included.
 
-S18's Collatz answer is the opposite extreme. The 2-adic side is exactly Haar under population measures (no correction), and all entanglement is 3-adic, attached to one orbit's past. So a Collatz "Artin correction" would have to be a 3-adic, orbit-coupled factor (THM-4506), not a population constant.
+*Interpretation (not FINITE-EXACT).* S18's Collatz answer is the opposite extreme. Under population measures the 2-adic side shows no correction, and all observed entanglement is 3-adic, attached to one orbit's past. That suggests a Collatz "Artin correction" would have to be a 3-adic, orbit-coupled factor (THM-4506) rather than a population constant; nothing proves it.
 
 ## 5. The formalization's method, mapped onto Collatz
 
@@ -212,21 +213,24 @@ S18's Collatz answer is the opposite extreme. The 2-adic side is exactly Haar un
 |---|---|---|---|
 | finite closed-cell cover of configuration space | compactness | 2-adic cylinders mod `2^k` | **no** for descent (Proposition 5.1) |
 | certified positive slack on every non-optimal cell | quantitative gap | descent margin `A - l log2 3 > 0` on a first-descent segment | yes, segment by segment (S8-S10) |
-| one rigid zero-slack configuration, an algebraic endpoint of degree 8 | the optimum | zero-slack set `E_inf` (`h* = 0.950`); its rational points are the cycle points `x_w = c_w/(2^A - 3^l)` (S6, S19 Theorem B) | **no**: uncountable, not rigid |
+| one rigid zero-slack configuration, an algebraic endpoint of degree 8 | the optimum | coefficient-survival set `E_inf` (`h* = 0.950`); its periodic points are the negative cycle points `x_w = c_w/(2^A - 3^l)` with `3^l > 2^A` (S6, S19 Theorem B), and it also contains preperiodic rationals such as `-11/3 -> -5` | **no**: uncountable, not rigid, and it ignores the carry |
 | root isolation `u in (9/25, 37/100)` | exactness | isolation of `log2 3` between convergents | **yes** (section 5.1) |
 | `native_decide` certificates, trust = kernel + native compiler | checking | repo template `LrcExtremalCert.lean`, standalone descent certificates | yes, already practised |
 
-**Proposition 5.1 (PROVED, elementary).** No finite set of 2-adic cylinders, each certified to descend within its own bounded number of steps, covers the positive integers.
+**Proposition 5.1 (PROVED, elementary).** No finite set of 2-adic cylinders, each certified to descend within its own bounded number of steps, covers all sufficiently large positive integers.
 
 *Proof.* A finite family has a largest certified descent time `K`. Take `n = 2^(K+1) - 1`. Under `T(n) = (3n+1)/2` its first `K+1` iterates are `3^j 2^(K+1-j) - 1` (`j = 1..K+1`), all above `n`. So `n` does not descend within `K` steps, and no member of the family covers it. QED.
 
-The packing proof's compactness has no descent analogue. The uncovered remainder is organised by `E_inf` and the measurement-independence obstruction of [S7](collatz_measurement_independence_20261005.md): PMB is equivalent to a computable deadline, which is equivalent to "no integer in `E_inf`". **Collatz is exactly the statement that the zero-slack set has no positive integer points besides the trivial cycle.** The packing proof's step "the zero-slack configuration is unique and algebraic" corresponds to that statement. It is not finite.
+The packing proof's compactness has no descent analogue. The valid reformulations are those of the current [S7](collatz_measurement_independence_20261005.md) text: Collatz is equivalent to a computable deadline for every source, and to "every odd `n > 1` has an actual strict first descent".
+
+- "No positive integer in `E_inf`" is necessary (positive integers in `E_inf` cannot descend), but not known to be sufficient. Coefficient exit ignores the carry: a nontrivial cycle's minimum has whole-cycle coefficient below 1, so it lies outside `E_inf`. (An earlier equivalence with `E_inf` was withdrawn in S7.)
+- The packing proof's step "the zero-slack configuration is unique and algebraic" has no finite Collatz counterpart.
 
 ### 5.1 The transferred piece: a Lean certificate of the S9 expense records (LEAN-CHECKED)
 
 S9's segment expense is `q(l, A) = ceil(l/(A - l log2 3))`; its worst type at length `l` is `A = A_min(l)`. S9 computed the record lengths by exact power comparisons. For `q` beyond `l = 94` it used 50-digit floats, exact "unless within `10^-50` of an integer".
 
-The certificate replaces all of this by one isolation:
+The certificate decides all of these values from one isolation:
 
 - **(B)** `2^16785921 < 3^10590737` and `3^190537 < 2^301994`, i.e. `16785921/10590737 < log2 3 < 301994/190537`. These are consecutive convergents; the width is `4.96e-13`.
 - **(A)** For each `l`: `2^(A-1) < 3^l < 2^A`.
@@ -236,7 +240,9 @@ Glue: (B) and (Q) imply `q = q_max(l)`, by monotonicity. This is PROVED in the c
 
 Certified records `(l, A, q_max)`: `(1,2,3), (3,5,13), (5,8,67), (17,27,306), (29,46,804), (41,65,2480), (94,149,6951), (147,233,13984), (200,317,26668), (253,401,56382), (306,485,207489)`. This is S9's table exactly.
 
-**Exact link to classical cycle bounds (CITED).** Eliahou (1993): a nontrivial cycle with minimum above `2^40` has length `301994a + 17087915b + 85137581c` (`b >= 1`, `ac = 0`). Here `301994` is the bracket's upper numerator, and `17087915 = 16785921 + 301994` is the mediant of the bracket, which is the next convergent `17087915/10781274`. So the single isolation that certifies S9's expense records is the one that bounds cycle lengths.
+**Relation to classical cycle bounds (CITED, corrected after audit).** Eliahou (1993): a nontrivial cycle with minimum above `2^40` has length `301994a + 17087915b + 85137581c` (`b >= 1`, `ac = 0`). His generators are the numerators of the convergents `c13 = 301994/190537`, `c15 = 17087915/10781274` (the mediant of this bracket) and `c16 = 85137581/53715833` (below `log2 3`). `16785921 = c14` is not among them.
+
+This bracket cannot reproduce his theorem. At `(l, A) = (190537, 301994)` it only gives `0 < A - l log2 3 < 9.44e-8`, while excluding that shape for minima above `2^40` needs a certified lower bound above `8.33e-8` (the true value is `9.31e-8`). Certifying Eliahou's Diophantine step needs a sharper bracket built from `c15` and `c16`.
 
 ## 6. arXiv:2610.06783 (Alman-Vassilevska Williams) against the Collatz work
 
@@ -249,10 +255,10 @@ The paper: truly subquadratic 3SUM (`O(n^1.9992)`) and subcubic APSP (`O(n^2.999
 
 | theme | Collatz counterpart | type |
 |---|---|---|
-| compute only wanted entries | stopping-time records empty the residual windows ([five papers](collatz_five_papers_synthesis_20261006.md), Prop. 5.1) | **EXACT transfer (mac-mini)** |
+| compute only wanted entries | stopping-time records empty the residual windows ([five papers](collatz_five_papers_synthesis_20261006.md), Prop. 5.1, a proved Collatz statement) | ANALOGY (no product or identity in Collatz) |
 | an algebraic identity with one contributing term per output enables pruning | the two-sheet fusion relation (one relation for the 3x-1-rooted multipliers) and the carry cocycle | ANALOGY (no saving shown) |
 | amortized encoding (`N >= D^18`) | banks of certified excursions buy coverage, not deadline (S8/S9) | ANALOGY |
-| lopsided thin products (`D <= N^0.12`) | sources are 2-adic, landings are 3-adic (S15, S18): two short lists against one long hovering list (five-papers section 5) | ANALOGY, precise |
+| lopsided thin products (`D <= N^0.12`) | sources are 2-adic, landings are 3-adic (S15, S18): two short lists against one long hovering list (five-papers section 5) | ANALOGY |
 | refuting standing hypotheses | the repo's refutation culture (S7 measurement independence, MISTAKE ledger) | meta |
 | AI discovery, then human simplification and verification | S19 (Mazur: AI-assisted, Lean-checked); the 11-square formalization; this note's Lean certificate | meta |
 | a finite or algorithmic reduction behind each success | packing: compactness; 3SUM: an algorithm; Mazur: positive density with explicit constants; Collatz: no finite reduction (Proposition 5.1) | the dividing line |
@@ -262,17 +268,17 @@ The paper: truly subquadratic 3SUM (`O(n^1.9992)`) and subcubic APSP (`O(n^2.999
 - **S18** was the owner's "Artin's conjecture and 19/20" directive. `20/19 = 1 + 1/(5^2 - 5 - 1)` is the entanglement correction for base 5 (section 4).
 - **S19** was the Mazur digest.
 - **The paper's 18** is the amortization exponent (`N >= D^18`, saving `D^(1/18)`; `eps < 0.1204`). As a number it has no relation to S18 or S19 (NUMEROLOGY).
-- **As a theme it matches the S18 directive:** "correction factors that may unlock recursion". The paper's saving is literally a small correction factor bought by pruning a recursion to the leaves that matter.
-- **S18's own verdict says where a Collatz version could live.** A pruning that lowers THM-4499's exponent must be orbit-coupled and 3-adic (THM-4506), because the 2-adic side is exactly Haar under population measures. Cheapest decisive test (open): does the landing tree (THM-4506) admit a Schonhage-type sparsity, i.e. one ancestor class contributing to each wanted landing class mod `3^k`?
+- **As a theme it resembles the S18 directive** ("correction factors that may unlock recursion"). The paper's gain is a polynomial saving bought by pruning a recursion to the leaves that matter. That is a different kind of object from an Artin density factor, so this is a loose ANALOGY.
+- **Where a Collatz version could live (heuristic).** S18 found the 2-adic side exactly Haar under population measures, so a pruning that lowers THM-4499's exponent would presumably have to be orbit-coupled and 3-adic (THM-4506). No theorem forces this. Cheapest decisive test (open): does the landing tree (THM-4506) admit a Schonhage-type sparsity, i.e. one ancestor class contributing to each wanted landing class mod `3^k`?
 
 ## 7. Verification, hostile controls, open threads
 
 **Independent paths.**
 
 - `Gal = S8` by an explicit-prime proof and by Chebotarev frequencies on 17979 primes;
-- `d_K` by Dedekind's criterion and by `disc U` (which shares the squarefree part);
+- `d_K` by Dedekind's criterion; `disc U` independently confirms only its odd part (`disc U / d_K = 2^24`); the audit's Eisenstein check confirms `v_2(d_K) = 8`;
 - the sign character by Kronecker symbols against Frobenius parity;
-- the records by Python bracket arithmetic, by S9's table, and by Lean;
+- the records by Python bracket arithmetic, by S9's table, by Lean, and by the audit's 200-digit recomputation;
 - the trace moments against exact S8 values.
 
 **Hostile controls.**
@@ -288,9 +294,22 @@ The paper: truly subquadratic 3SUM (`O(n^1.9992)`) and subcubic APSP (`O(n^2.999
 - "11" squares versus the conductor 11 of `X_0(11)` (S8 crossings) is NUMEROLOGY.
 - The 19 of `20/19` versus 19 in S19 is NUMEROLOGY.
 
+**Audit (2026-10-06, independent code).**
+
+- *Confirmed:* every computation (irreducibility, resultant, `Gal = S8` primes, discriminants, Dedekind criterion, `d_K`, class number by two Dirichlet-sum formulas, Frobenius parity on 17979 primes, the S8 table, Chebotarev and moment figures, the Lean file including rejection of false variants, a 200-digit recomputation of the 11 records), Proposition 5.1, the Corollary, and every citation.
+- *Corrected (MISTAKE-566):*
+  - the withdrawn `E_inf` equivalence restated as fact;
+  - `E_inf`'s rational points misdescribed;
+  - the Eliahou link overclaimed;
+  - a cosmetic "7" in the entanglement factor;
+  - `Q(sqrt D)` called a subfield of `K`;
+  - an overstated float caveat in S9;
+  - several over-typed connections in sections 0, 4 and 6;
+  - Proposition 5.1 needed "sufficiently large".
+
 **Open threads.**
 
-1. Extend the Lean certificate to the Diophantine core of Eliahou's theorem (all `(l, A)` with `0 < A - l log2 3 < delta`, `l <= 10^7`) using the same bracket.
+1. Extend the Lean certificate to the Diophantine core of Eliahou's theorem (all `(l, A)` with `0 < A - l log2 3 < delta`, `l <= 10^7`), using a sharper bracket from the convergents `c15`, `c16`.
 2. A Collatz-derived polynomial with non-abelian Galois group. Candidates: generalized Collatz maps on rings of integers of non-Galois fields. None is known here, and the Langlands ladder predicts nothing beyond GL(1) without one.
 3. The Schonhage-sparsity test of section 6 on THM-4506's landing tree.
 4. A polredabs-type small model of `K`, and its class group (PARI was not available in this session).

@@ -4,14 +4,15 @@ COLLATZ EXPENSE RECORDS CERTIFICATE (opus-2026-10-06-S16).
 The S9 note (05-knowledge/results/collatz_expense_diophantine_20261005.md) defines, for a first-descent segment
 type (l, A) with 2^A > 3^l, the least admissible rate q(l, A) = ceil(l / (A - l log2 3)).  The worst type at
 length l has A = A_min(l), the least A with 2^A > 3^l, and q_max(l) = q(l, A_min(l)).  S9 listed the records of
-q_max for l <= 320 (exact power comparisons for the record lengths; q beyond l = 94 from 50-digit floats).
+q_max for l <= 320 (exact power comparisons for the record lengths; q beyond l = 94 from 60-digit evaluations,
+which were safe: the closest value to an integer is 0.0019, at l = 76).
 
 This file re-derives every q_max(l), l = 1..320, from ONE isolation of theta = log2 3, in the style of the
 eleven-square packing formalization (github.com/Queuingtheorydotcom/11SquaresFormalized), which isolates its
 degree-8 algebraic endpoint u in (9/25, 37/100) and then argues by exact arithmetic:
 
   (B) bracket   2^PLO < 3^QLO  and  3^QHI < 2^PHI,  i.e.  PLO/QLO < theta < PHI/QHI,
-                with PLO/QLO = 16785921/10590737 and PHI/QHI = 301994/190537 consecutive convergents
+                with PLO/QLO = 16785921/10590737 and PHI/QHI = 301994/190537 consecutive convergents (c14, c13)
                 of theta (width 4.96e-13);
   (A) for each l:  2^(A-1) < 3^l < 2^A   (A = A_min(l));
   (Q) f(t) = l / (A - l t) is increasing on t < A/l, so f(PLO/QLO) < q-value < f(PHI/QHI); with
@@ -66,7 +67,7 @@ theorem records_320 : recordsUpTo 320 =
     [(1, 2, 3), (3, 5, 13), (5, 8, 67), (17, 27, 306), (29, 46, 804), (41, 65, 2480), (94, 149, 6951),
      (147, 233, 13984), (200, 317, 26668), (253, 401, 56382), (306, 485, 207489)] := by native_decide
 
-/-- theta-free cross-check for the first four records: q = least m with 3^(m l) < 2^(m A - l)
+/-- theta-free cross-check for the first six records: q = least m with 3^(m l) < 2^(m A - l)
     (monotone in m because 3^l < 2^A). -/
 def directOK (l A q : Nat) : Bool :=
   decide (3 ^ (q * l) < 2 ^ (q * A - l)) && !decide (3 ^ ((q - 1) * l) < 2 ^ ((q - 1) * A - l))

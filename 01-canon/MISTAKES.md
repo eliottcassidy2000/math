@@ -2032,6 +2032,38 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
+## MISTAKE-566 (2026-10-06, opus S16 11-square octic / Collatz note; found by the session's independent adversarial audit, after the checkpoint d3a512214 was pushed) -- a withdrawn E_inf equivalence restated as fact, E_inf's rational points misdescribed, a classical cycle bound credited to the wrong convergent bracket, and a cosmetic factor read as structure
+
+- **Claims (in `05-knowledge/results/square11_octic_langlands_collatz_20261006.md`, checkpoint d3a512214):**
+  - (1) Section 5, in bold: "Collatz is exactly the statement that the zero-slack set `E_inf` has no positive integer points besides the trivial cycle". This was taken from a memory note. The S7 note itself had already withdrawn the equivalence.
+  - (2) "the rational points of `E_inf` are the cycle points `x_w`". This is false: `-11/3` lies in `E_inf` and maps to the `-5` cycle, so it is preperiodic, not periodic.
+  - (3) Sections 0 and 5.1 called the bracket `16785921/10590737 < log2 3 < 301994/190537` "the pair behind Eliahou's cycle lengths", and open thread 1 proposed certifying Eliahou "with the same bracket". Eliahou's generators are the numerators of the convergents `c13`, `c15`, `c16`, and `16785921` (`c14`) is not one of them. At `(l, A) = (190537, 301994)` the bracket only gives `0 < A - l log2 3 < 9.44e-8`, while excluding that shape needs a certified lower bound above `8.33e-8`.
+  - (4) The entanglement factor was written `1 + 7/25487`, with the 7 read as the even-odd derangement difference. The 7 cancels: the factor is `3642/3641`.
+  - (5) Smaller slips:
+    - `Q(sqrt D)` was called a subfield of `K`; `K` has no proper subfields;
+    - "p = 1 mod 5" was said to "say" that p splits in `Q(sqrt 5)`; it implies it;
+    - the certificate was said to "remove" a float caveat in S9 that never mattered (S9 used 60-digit evaluations, never within 0.0019 of an integer);
+    - "EXACT transfer" and "ANALOGY, precise" over-typed the 3SUM themes;
+    - a "must be 3-adic" claim had no theorem behind it;
+    - "Collatz's exact arithmetic is abelian" was stated without the search qualifier;
+    - Proposition 5.1 lacked "sufficiently large" (it is trivially true because `n = 1` never descends).
+- **Why it was wrong:**
+  - (1) the memory index line still carried the withdrawn chain, and the note was written from memory instead of from the S7 text;
+  - (2) "zero-slack" was identified with "periodic" without testing a preperiodic rational;
+  - (3) a convergent pair that shares one numerator with Eliahou's generators was read as his pair, and the precision needed by his argument was never computed;
+  - (4) an integer that appears in a numerator was interpreted before the fraction was reduced.
+- **Correct framing:**
+  - Collatz is equivalent to a computable deadline for every source, and to "every odd `n > 1` has an actual strict first descent" (current S7). "No positive integer in `E_inf`" is necessary only, because coefficient exit ignores the carry.
+  - The periodic points of `E_inf` are the negative cycle points with `3^l > 2^A`.
+  - The bracket certifies the S9 expense records only. Eliahou's step needs a sharper bracket from `c15` and `c16`.
+  - The entanglement factor is `3642/3641`.
+  - The memory index line for S7 is corrected.
+- **What survives:** every computation (`Gal = S8`, `d_K`, `h(D) = 5444`, the Chebotarev and moment figures, the S8 table, the Lean certificate and its records), Proposition 5.1 with "sufficiently large", the non-constructibility corollary, and every citation. The audit confirmed all of them with independent code.
+- **Lesson:**
+  - Before restating a reformulation of Collatz, re-read its current canonical text; memory lines lag corrections.
+  - Before tying a computation to a classical theorem, recompute the precision that theorem needs.
+  - Reduce fractions before reading meaning into their numerators.
+
 ## MISTAKE-565 (2026-10-06, opus S15 glued-chessboard note; found by the session's independent adversarial audit, after some lines were already pushed in checkpoints ef1c5e80b and b06ecb3c2) -- a placeholder and an unproved "pinned by ceil(64/alpha)" claim in a pushed table, a theorem stated without its hypothesis, a false mechanism sentence, and double rounding
 
 - **Claims (in `05-knowledge/results/glued_chessboard_rings_scaffolds_20261006.md`):**
