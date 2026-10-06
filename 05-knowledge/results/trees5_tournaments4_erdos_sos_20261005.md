@@ -132,6 +132,31 @@ the `TT_4 – S_4` edge (reverse the source–sink arc; THM-220's near-transitiv
 side does not. Destroyed by the dictionary: adjacency and loop structure. Sidecar restoring the
 tournament side: the second coordinate `w = x - y ∈ {-1, 0, 1}` of THM-584.
 
+### 2a. Concurrent checkpoint (opus-2026-10-05-S11, commit `f754765b6d`, same seed, read after pushing)
+
+S11's `trees5_tournaments4_converse_20261005.out` and `trees5_tournaments4_oriented_diametral_20261005.out`
+(scripts in `04-computation/experiments/`) were produced independently and agree on every shared fact:
+the census (equal iff `m ≤ 4`, extended there to `3528 vs 47` at `m = 8`), the flip metagraph `K_4 - e`
+with quotient `K_3`, the tree rotation path, the Rédei counts `1, 3, 3, 5`, and the middle node: the
+converse pair corresponds to the fork. S11 adds: score sequences are a complete class invariant iff
+`m ≤ 4` and degree sequences identify trees iff `N ≤ 5` (the same threshold); marking a vertex breaks
+the coincidence (6 vertex-marked merged 4-classes vs 9 rooted 5-trees); the Berggren leg swap acts on
+the three branches as one fixed branch plus one swapped pair, the opposite pattern. S11's
+**oriented diametral path** double cover is the tree-side realization of the converse: at `N = 5` the
+path and star are reversal-fixed and the fork has two orientations exchanged by reversal — exactly
+Proposition 1(d) read from the other side (`fork_L`, `fork_R` and the automorphism `ρ`); the
+`Z/2`-sets are isomorphic for `N ≤ 5` only, matching "boundary layer only" above.
+
+One difference of orientation, recorded as such: S11 matches the two chains by **cycle content**
+(cycle spectrum `{} ⊂ {3} ⊂ {3,4}` against creatable spectrum `{3} ⊂ {3,4} ⊂ {3,4,5}`), giving
+`TT_4 ↔ star`, `S_4 ↔ path`; Proposition 1 matches them by the **end-defect action**, giving
+`TT_4 ↔ path`, `S_4 ↔ star`. A 3-chain has two isomorphisms onto another 3-chain, and the two
+readings differ by the chain reversal; they agree on the only non-trivial identification (the middle).
+The end-defect reading carries a map (the `V_4` action and the distance-`d` cycle dictionary of §3,
+which pairs the linear orders `TT_m` and `P_{m+1}`); the cycle-content reading is an order
+isomorphism of labels. Both are consistent with THM-584's `u`; the tree-side `u` is `m - diameter`
+here and `diameter - 2` there.
+
 ## 3. Proposition 2 (PROVED): "add an edge, get a cycle" — the linear-order dictionary
 
 Trees are the maximal acyclic graphs; transitive tournaments are the acyclic tournaments. The one-step
