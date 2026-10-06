@@ -1,0 +1,65 @@
+===== 8x8: 168 knight edges, rings 0..3 =====
+within-ring edges: 24
+ ring 0: |R|=4 within-edges=0 covered squares=0 uncovered=4 matching=True within-degree hist={}
+    (none)
+    uncovered squares: d4 e4 d5 e5
+ ring 1: |R|=12 within-edges=8 covered squares=8 uncovered=4 matching=False within-degree hist={2: 8}
+    component C4: d3 f4 c5 e6   edges: d3-f4 d3-c5 f4-e6 c5-e6   board-degrees: 8,8,8,8
+    component C4: e3 c4 f5 d6   edges: e3-c4 e3-f5 c4-d6 f5-d6   board-degrees: 8,8,8,8
+    uncovered squares: c3 f3 c6 f6
+ ring 2: |R|=20 within-edges=8 covered squares=16 uncovered=4 matching=True within-degree hist={1: 16}
+    component K2: c2 b4   edges: c2-b4   board-degrees: 6,6
+    component K2: d2 b3   edges: d2-b3   board-degrees: 6,6
+    component K2: e2 g3   edges: e2-g3   board-degrees: 6,6
+    component K2: f2 g4   edges: f2-g4   board-degrees: 6,6
+    component K2: b5 c7   edges: b5-c7   board-degrees: 6,6
+    component K2: g5 f7   edges: g5-f7   board-degrees: 6,6
+    component K2: b6 d7   edges: b6-d7   board-degrees: 6,6
+    component K2: g6 e7   edges: g6-e7   board-degrees: 6,6
+    uncovered squares: b2 g2 b7 g7
+ ring 3: |R|=28 within-edges=8 covered squares=16 uncovered=12 matching=True within-degree hist={1: 16}
+    component K2: b1 a3   edges: b1-a3   board-degrees: 3,4
+    component K2: c1 a2   edges: c1-a2   board-degrees: 4,3
+    component K2: f1 h2   edges: f1-h2   board-degrees: 4,3
+    component K2: g1 h3   edges: g1-h3   board-degrees: 3,4
+    component K2: a6 b8   edges: a6-b8   board-degrees: 4,3
+    component K2: h6 g8   edges: h6-g8   board-degrees: 4,3
+    component K2: a7 c8   edges: a7-c8   board-degrees: 3,4
+    component K2: h7 f8   edges: h7-f8   board-degrees: 3,4
+    uncovered squares: a1 d1 e1 h1 a4 h4 a5 h5 a8 d8 e8 h8
+ low-degree squares: deg2 rings [(3, 4)]  deg3 rings [(3, 8)]
+
+===== 6x6: 80 knight edges, rings 0..2 =====
+within-ring edges: 16
+ ring 0: |R|=4 within-edges=0 covered squares=0 uncovered=4 matching=True within-degree hist={}
+    (none)
+    uncovered squares: c3 d3 c4 d4
+ ring 1: |R|=12 within-edges=8 covered squares=8 uncovered=4 matching=False within-degree hist={2: 8}
+    component C4: c2 e3 b4 d5   edges: c2-e3 c2-b4 e3-d5 b4-d5   board-degrees: 6,6,6,6
+    component C4: d2 b3 e4 c5   edges: d2-b3 d2-e4 b3-c5 e4-c5   board-degrees: 6,6,6,6
+    uncovered squares: b2 e2 b5 e5
+ ring 2: |R|=20 within-edges=8 covered squares=16 uncovered=4 matching=True within-degree hist={1: 16}
+    component K2: b1 a3   edges: b1-a3   board-degrees: 3,4
+    component K2: c1 a2   edges: c1-a2   board-degrees: 4,3
+    component K2: d1 f2   edges: d1-f2   board-degrees: 4,3
+    component K2: e1 f3   edges: e1-f3   board-degrees: 3,4
+    component K2: a4 b6   edges: a4-b6   board-degrees: 4,3
+    component K2: f4 e6   edges: f4-e6   board-degrees: 4,3
+    component K2: a5 c6   edges: a5-c6   board-degrees: 3,4
+    component K2: f5 d6   edges: f5-d6   board-degrees: 3,4
+    uncovered squares: a1 f1 a6 f6
+ low-degree squares: deg2 rings [(2, 4)]  deg3 rings [(2, 8)]
+
+===== forced relations for a closed 8x8 tour (PROVED by half-edge counting) =====
+m_rs = number of tour moves between rings r and s (r<=s). Each square has tour-degree 2,
+so ring r carries 2|R_r| half-edges: 2 m_rr + sum_{s!=r} m_rs = 2|R_r| = 8, 24, 40, 56.
+No knight edges inside ring 0 or between rings 0 and 3, hence
+   ring 0:  m01 + m02                 = 8
+   ring 1:  2 m11 + m01 + m12 + m13   = 24
+   ring 2:  2 m22 + m02 + m12 + m23   = 40
+   ring 3:  2 m33 + m13 + m23         = 56
+   total moves = 64.
+Cut parity (a cycle crosses every cut an even number of times):
+   {0,1} | {2,3}:  m02 + m12 + m13 even;  {3} | rest: m13 + m23 even;  {0} | rest: 8.
+Ring blocks (maximal same-ring runs on the cyclic tour) = number of ring-changing moves
+   = 64 - (m11 + m22 + m33)   (a closed tour always changes ring, ring 0 has no inner edge).

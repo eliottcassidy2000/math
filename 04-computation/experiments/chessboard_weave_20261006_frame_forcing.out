@@ -1,0 +1,7 @@
+frame: 48 squares, 64 knight edges; 8 inside ring 3, 8 inside ring 2
+forced edges: 48 ; every square has exactly 2 forced edges: True
+forced 2-factor cycle lengths: [12, 12, 12, 12] -> Hamiltonian: False
+    a1 b3 a5 b7 d8 f7 h8 g6 h4 g2 e1 c2
+    a2 b4 a6 b8 d7 f8 h7 g5 h3 g1 e2 c1
+    a3 b5 a7 c8 e7 g8 h6 g4 h2 f1 d2 b1
+    a4 b2 d1 f2 h1 g3 h5 g7 e8 c7 a8 b6

@@ -1,0 +1,63 @@
+5x6 undirected closed knight's tours: 8  (known: 8 )
+3x10 undirected closed knight's tours: 16  (known: 16 )
+3x12 undirected closed knight's tours: 176  (known: 176 )
+5x8 undirected closed knight's tours: 44202  (known: 44202 )
+6x6 undirected closed knight's tours: 9862  (known: 9862)
+tour set D4-invariant: True (checked on 500 tours x 8 maps)
+
+== c(e) = number of undirected closed tours through edge e ==
+sum c(e) = 355032 = 36 x 9862 = 355032
+D4-invariance of c: True (10 edge orbits)
+rep edge   orbit  rings   degs   c(e) parity
+b2-d3          8 (0, 1) (4, 8)   2424 even
+c2-d4          8 (0, 1) (6, 8)    620 even
+b1-c3          8 (0, 2) (3, 8)   4918 even
+c1-d3          8 (0, 2) (4, 8)   1900 even
+c2-e3          8 (1, 1) (6, 6)    636 even
+a1-c2          8 (1, 2) (2, 6)   9862 even
+c1-e2          8 (1, 2) (4, 4)   7438 even
+b1-d2          8 (1, 2) (3, 6)   6195 odd
+c1-b3          8 (1, 2) (4, 6)   1775 odd
+b1-a3          8 (2, 2) (3, 4)   8611 odd
+edges with odd c(e): 24 of 80;  per ring pair: {(1, 2): 16, (2, 2): 8}
+check sum_{e at v} c(e) = 2*9862 at every square: True
+odd-c subgraph: degree of each square (row 6 at top):
+    0 2 2 2 2 0
+    2 0 2 2 0 2
+    2 2 0 0 2 2
+    2 2 0 0 2 2
+    2 0 2 2 0 2
+    0 2 2 2 2 0
+
+== ring statistics over the 9862 tours ==
+ring pairs with knight edges: [(0, 1), (0, 2), (1, 1), (1, 2), (2, 2)]  edge counts: {(0, 1): 16, (0, 2): 16, (1, 1): 8, (1, 2): 32, (2, 2): 8}
+  m01: min 0 max 4  distribution {0: 160, 1: 1264, 2: 3524, 3: 3616, 4: 1298}
+  m02: min 4 max 8  distribution {4: 1298, 5: 3616, 6: 3524, 7: 1264, 8: 160}
+  m11: min 0 max 3  distribution {0: 5434, 1: 3792, 2: 612, 3: 24}
+  m12: min 17 max 24  distribution {17: 16, 18: 336, 19: 1560, 20: 3094, 21: 2944, 22: 1516, 23: 360, 24: 36}
+  m22: min 4 max 8  distribution {4: 36, 5: 448, 6: 2088, 7: 4344, 8: 2946}
+within-ring moves W=m11+m22: distribution {4: 36, 5: 360, 6: 1516, 7: 2944, 8: 3094, 9: 1560, 10: 336, 11: 16}
+ring blocks: distribution {25: 16, 26: 336, 27: 1560, 28: 3094, 29: 2944, 30: 1516, 31: 360, 32: 36}  (= 36 - W: True )
+|ring change|=2 moves (= m02): distribution {4: 1298, 5: 3616, 6: 3524, 7: 1264, 8: 160}
+distinct ring-transition vectors ('m01', 'm02', 'm11', 'm12', 'm22'): 14
+    (0, 8, 0, 24, 4) 36
+    (0, 8, 1, 22, 5) 88
+    (0, 8, 2, 20, 6) 28
+    (0, 8, 3, 18, 7) 8
+    (1, 7, 0, 23, 5) 360
+    (1, 7, 1, 21, 6) 632
+    (1, 7, 2, 19, 7) 256
+    (1, 7, 3, 17, 8) 16
+    (2, 6, 0, 22, 6) 1428
+    (2, 6, 1, 20, 7) 1768
+    (2, 6, 2, 18, 8) 328
+    (3, 5, 0, 21, 7) 2312
+    (3, 5, 1, 19, 8) 1304
+    (4, 4, 0, 20, 8) 1298
+identities (PROVED by half-edge counting) hold on all tours: True
+count-admissible vectors (half-edge identities + edge supplies): 15; realised 14; admissible but NOT realised: [(0, 8, 4, 16, 8)]
+ring-2 within edges: ['b1-a3', 'c1-a2', 'd1-f2', 'e1-f3', 'a4-b6', 'f4-e6', 'a5-c6', 'f5-d6']  c(e): [8611, 8611, 8611, 8611, 8611, 8611, 8611, 8611]
+ring-1 within edges (two C4): ['c2-e3', 'c2-b4', 'd2-b3', 'd2-e4', 'b3-c5', 'e3-d5', 'b4-d5', 'e4-c5']  c(e): [636, 636, 636, 636, 636, 636, 636, 636]
+
+6x6 directed Hamiltonian paths (open tours): 6637920  (known 6637920)
+c(uv) == #directed Ham paths u->v for every knight edge: True

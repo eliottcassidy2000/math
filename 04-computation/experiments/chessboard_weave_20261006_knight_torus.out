@@ -1,0 +1,52 @@
+1. 6x6 torus knight graph: 36 vertices, 144 edges, degrees [8] ; bipartite by (i+j) mod 2: True
+   edge orbit of e0 = (0, 8) under translations + D4 has size 144 -> edge-transitive: True
+
+2. K = 6: every 6-edge deletion containing e0
+   6x6 torus knight graph: 36 vertices, 144 edges (8-regular). e0 = {0,8}
+   initial pool: 1000 random Hamiltonian cycles
+   TOTAL 6-sets containing e0 checked: 464306843
+   finder calls 2, final pool 1002, BLOCKING sets 0 (vertex-isolating type 0), UNRESOLVED 0 
+   (16s)
+   independent re-verification: all 1002 pool masks are Hamiltonian cycles of G: True
+   pool alone certifies 20000/20000 random 6-sets containing e0 (rest handled by the C finder)
+
+3. K = 7 (negative control): 7-sets containing e0 that leave NO Hamiltonian cycle
+   TOTAL 7-sets containing e0 checked: 10679057389
+   finder calls 24, final pool 1010, BLOCKING sets 14 (vertex-isolating type 14), UNRESOLVED 0 
+   (329s)
+    BLOCKING (vertex-isolating) D = {0,8} {0,13} {0,32} {0,25} {0,10} {0,17} {0,34}
+    BLOCKING (vertex-isolating) D = {0,8} {0,13} {0,32} {0,25} {0,10} {0,17} {0,29}
+    BLOCKING (vertex-isolating) D = {0,8} {0,13} {0,32} {0,25} {0,10} {0,34} {0,29}
+    BLOCKING (vertex-isolating) D = {0,8} {0,13} {0,32} {0,25} {0,17} {0,34} {0,29}
+    BLOCKING (vertex-isolating) D = {0,8} {0,13} {0,32} {0,10} {0,17} {0,34} {0,29}
+    BLOCKING (vertex-isolating) D = {0,8} {0,13} {0,25} {0,10} {0,17} {0,34} {0,29}
+    BLOCKING (vertex-isolating) D = {0,8} {0,32} {0,25} {0,10} {0,17} {0,34} {0,29}
+    BLOCKING (vertex-isolating) D = {0,8} {4,8} {8,16} {8,21} {8,33} {8,12} {8,19}
+    BLOCKING (vertex-isolating) D = {0,8} {4,8} {8,16} {8,21} {8,33} {8,12} {8,31}
+    BLOCKING (vertex-isolating) D = {0,8} {4,8} {8,16} {8,21} {8,33} {8,19} {8,31}
+    BLOCKING (vertex-isolating) D = {0,8} {4,8} {8,16} {8,21} {8,12} {8,19} {8,31}
+    BLOCKING (vertex-isolating) D = {0,8} {4,8} {8,16} {8,33} {8,12} {8,19} {8,31}
+    BLOCKING (vertex-isolating) D = {0,8} {4,8} {8,21} {8,33} {8,12} {8,19} {8,31}
+    BLOCKING (vertex-isolating) D = {0,8} {8,16} {8,21} {8,33} {8,12} {8,19} {8,31}
+
+4. Hamiltonian PATHS after deleting each blocking 7-set (CP-SAT):
+    HC: INFEASIBLE  HP: OPTIMAL  D-edges [0, 1, 2, 3, 4, 5, 6]
+    HC: INFEASIBLE  HP: OPTIMAL  D-edges [0, 1, 2, 3, 4, 5, 7]
+    HC: INFEASIBLE  HP: OPTIMAL  D-edges [0, 1, 2, 3, 4, 6, 7]
+    HC: INFEASIBLE  HP: OPTIMAL  D-edges [0, 1, 2, 3, 5, 6, 7]
+    HC: INFEASIBLE  HP: OPTIMAL  D-edges [0, 1, 2, 4, 5, 6, 7]
+    HC: INFEASIBLE  HP: OPTIMAL  D-edges [0, 1, 3, 4, 5, 6, 7]
+    HC: INFEASIBLE  HP: OPTIMAL  D-edges [0, 2, 3, 4, 5, 6, 7]
+    HC: INFEASIBLE  HP: OPTIMAL  D-edges [0, 36, 60, 61, 62, 63, 64]
+    HC: INFEASIBLE  HP: OPTIMAL  D-edges [0, 36, 60, 61, 62, 63, 65]
+    HC: INFEASIBLE  HP: OPTIMAL  D-edges [0, 36, 60, 61, 62, 64, 65]
+    HC: INFEASIBLE  HP: OPTIMAL  D-edges [0, 36, 60, 61, 63, 64, 65]
+    HC: INFEASIBLE  HP: OPTIMAL  D-edges [0, 36, 60, 62, 63, 64, 65]
+    HC: INFEASIBLE  HP: OPTIMAL  D-edges [0, 36, 61, 62, 63, 64, 65]
+    HC: INFEASIBLE  HP: OPTIMAL  D-edges [0, 60, 61, 62, 63, 64, 65]
+
+5. independent CP-SAT checks of 6-sets (all must be FEASIBLE/OPTIMAL):
+   6 edges at one vertex: OPTIMAL
+   3+3 at two adjacent vertices: OPTIMAL
+   4+2 at two adjacent vertices: OPTIMAL
+   30 random 6-sets: {'OPTIMAL': 30}

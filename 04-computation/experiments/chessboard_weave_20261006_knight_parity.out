@@ -1,0 +1,131 @@
+===== 3x4: 16 directed Ham paths = 8 undirected (even); closed tours 0; degrees {2: 8, 3: 4}
+  T1 (even-degree-end paths from each x even): True;  T2 (lollipop, fixed first edge): True
+  endpoint pairs with D(u,v)>0: 7; odd D(u,v): 6; GF(2)-rank of [D mod 2]: 4
+  odd-D pairs by sorted (deg u, deg v): {(2, 2): 6}
+  H(x) (paths ending at x) odd at 0 squares; H mod 2 by degree: {(2, 0): 8, (3, 0): 4}
+  edges: 14; edges with odd h(e) (Ham paths through e): 0; edges with h(e)=0: 0
+===== 3x7: 104 directed Ham paths = 52 undirected (even); closed tours 0; degrees {2: 8, 3: 4, 4: 9}
+  T1 (even-degree-end paths from each x even): True;  T2 (lollipop, fixed first edge): True
+  endpoint pairs with D(u,v)>0: 17; odd D(u,v): 0; GF(2)-rank of [D mod 2]: 0
+  odd-D pairs by sorted (deg u, deg v): {}
+  H(x) (paths ending at x) odd at 0 squares; H mod 2 by degree: {(2, 0): 8, (3, 0): 4, (4, 0): 9}
+  edges: 32; edges with odd h(e) (Ham paths through e): 0; edges with h(e)=0: 0
+===== 3x8: 792 directed Ham paths = 396 undirected (even); closed tours 0; degrees {2: 8, 3: 4, 4: 12}
+  T1 (even-degree-end paths from each x even): True;  T2 (lollipop, fixed first edge): True
+  endpoint pairs with D(u,v)>0: 72; odd D(u,v): 14; GF(2)-rank of [D mod 2]: 4
+  odd-D pairs by sorted (deg u, deg v): {(2, 2): 2, (2, 4): 12}
+  H(x) (paths ending at x) odd at 0 squares; H mod 2 by degree: {(2, 0): 8, (3, 0): 4, (4, 0): 12}
+  edges: 38; edges with odd h(e) (Ham paths through e): 0; edges with h(e)=0: 0
+===== 3x9: 1120 directed Ham paths = 560 undirected (even); closed tours 0; degrees {2: 8, 3: 4, 4: 15}
+  T1 (even-degree-end paths from each x even): True;  T2 (lollipop, fixed first edge): True
+  endpoint pairs with D(u,v)>0: 50; odd D(u,v): 0; GF(2)-rank of [D mod 2]: 0
+  odd-D pairs by sorted (deg u, deg v): {}
+  H(x) (paths ending at x) odd at 0 squares; H mod 2 by degree: {(2, 0): 8, (3, 0): 4, (4, 0): 15}
+  edges: 44; edges with odd h(e) (Ham paths through e): 0; edges with h(e)=0: 0
+===== 3x10: 6096 directed Ham paths = 3048 undirected (even); closed tours 16; degrees {2: 8, 3: 4, 4: 18}
+  T1 (even-degree-end paths from each x even): True;  T2 (lollipop, fixed first edge): True
+  endpoint pairs with D(u,v)>0: 147; odd D(u,v): 0; GF(2)-rank of [D mod 2]: 0
+  odd-D pairs by sorted (deg u, deg v): {}
+  H(x) (paths ending at x) odd at 0 squares; H mod 2 by degree: {(2, 0): 8, (3, 0): 4, (4, 0): 18}
+  edges: 50; edges with odd h(e) (Ham paths through e): 0; edges with h(e)=0: 0
+  edges with odd c(e) (closed tours through e): 0: 
+===== 3x11: 21344 directed Ham paths = 10672 undirected (even); closed tours 0; degrees {2: 8, 3: 4, 4: 21}
+  T1 (even-degree-end paths from each x even): True;  T2 (lollipop, fixed first edge): True
+  endpoint pairs with D(u,v)>0: 130; odd D(u,v): 0; GF(2)-rank of [D mod 2]: 0
+  odd-D pairs by sorted (deg u, deg v): {}
+  H(x) (paths ending at x) odd at 0 squares; H mod 2 by degree: {(2, 0): 8, (3, 0): 4, (4, 0): 21}
+  edges: 56; edges with odd h(e) (Ham paths through e): 0; edges with h(e)=0: 0
+===== 3x12: 114496 directed Ham paths = 57248 undirected (even); closed tours 176; degrees {2: 8, 3: 4, 4: 24}
+  T1 (even-degree-end paths from each x even): True;  T2 (lollipop, fixed first edge): True
+  endpoint pairs with D(u,v)>0: 293; odd D(u,v): 14; GF(2)-rank of [D mod 2]: 4
+  odd-D pairs by sorted (deg u, deg v): {(2, 2): 2, (2, 4): 12}
+  H(x) (paths ending at x) odd at 0 squares; H mod 2 by degree: {(2, 0): 8, (3, 0): 4, (4, 0): 24}
+  edges: 62; edges with odd h(e) (Ham paths through e): 0; edges with h(e)=0: 0
+  edges with odd c(e) (closed tours through e): 0: 
+===== 4x5: 164 directed Ham paths = 82 undirected (even); closed tours 0; degrees {2: 4, 3: 8, 4: 6, 6: 2}
+  T1 (even-degree-end paths from each x even): True;  T2 (lollipop, fixed first edge): True
+  endpoint pairs with D(u,v)>0: 18; odd D(u,v): 10; GF(2)-rank of [D mod 2]: 4
+  odd-D pairs by sorted (deg u, deg v): {(2, 3): 8, (3, 3): 2}
+  H(x) (paths ending at x) odd at 4 squares; H mod 2 by degree: {(2, 0): 4, (3, 0): 4, (3, 1): 4, (4, 0): 6, (6, 0): 2}
+  edges: 34; edges with odd h(e) (Ham paths through e): 14; edges with h(e)=0: 0
+===== 4x6: 1488 directed Ham paths = 744 undirected (even); closed tours 0; degrees {2: 4, 3: 8, 4: 8, 6: 4}
+  T1 (even-degree-end paths from each x even): True;  T2 (lollipop, fixed first edge): True
+  endpoint pairs with D(u,v)>0: 32; odd D(u,v): 0; GF(2)-rank of [D mod 2]: 0
+  odd-D pairs by sorted (deg u, deg v): {}
+  H(x) (paths ending at x) odd at 0 squares; H mod 2 by degree: {(2, 0): 4, (3, 0): 8, (4, 0): 8, (6, 0): 4}
+  edges: 44; edges with odd h(e) (Ham paths through e): 8; edges with h(e)=0: 0
+===== 4x7: 12756 directed Ham paths = 6378 undirected (even); closed tours 0; degrees {2: 4, 3: 8, 4: 10, 6: 6}
+  T1 (even-degree-end paths from each x even): True;  T2 (lollipop, fixed first edge): True
+  endpoint pairs with D(u,v)>0: 49; odd D(u,v): 18; GF(2)-rank of [D mod 2]: 8
+  odd-D pairs by sorted (deg u, deg v): {(2, 2): 2, (2, 3): 8, (2, 4): 4, (3, 3): 2, (4, 4): 2}
+  H(x) (paths ending at x) odd at 4 squares; H mod 2 by degree: {(2, 0): 4, (3, 0): 4, (3, 1): 4, (4, 0): 10, (6, 0): 6}
+  edges: 54; edges with odd h(e) (Ham paths through e): 6; edges with h(e)=0: 0
+===== 4x8: 62176 directed Ham paths = 31088 undirected (even); closed tours 0; degrees {2: 4, 3: 8, 4: 12, 6: 8}
+  T1 (even-degree-end paths from each x even): True;  T2 (lollipop, fixed first edge): True
+  endpoint pairs with D(u,v)>0: 64; odd D(u,v): 0; GF(2)-rank of [D mod 2]: 0
+  odd-D pairs by sorted (deg u, deg v): {}
+  H(x) (paths ending at x) odd at 0 squares; H mod 2 by degree: {(2, 0): 4, (3, 0): 8, (4, 0): 12, (6, 0): 8}
+  edges: 64; edges with odd h(e) (Ham paths through e): 0; edges with h(e)=0: 0
+===== 5x5: 1728 directed Ham paths = 864 undirected (even); closed tours 0; degrees {2: 4, 3: 8, 4: 8, 6: 4, 8: 1}
+  T1 (even-degree-end paths from each x even): True;  T2 (lollipop, fixed first edge): True
+  endpoint pairs with D(u,v)>0: 42; odd D(u,v): 0; GF(2)-rank of [D mod 2]: 0
+  odd-D pairs by sorted (deg u, deg v): {}
+  H(x) (paths ending at x) odd at 0 squares; H mod 2 by degree: {(2, 0): 4, (3, 0): 8, (4, 0): 8, (6, 0): 4, (8, 0): 1}
+  edges: 48; edges with odd h(e) (Ham paths through e): 0; edges with h(e)=0: 0
+===== 5x6: 37568 directed Ham paths = 18784 undirected (even); closed tours 8; degrees {2: 4, 3: 8, 4: 10, 6: 6, 8: 2}
+  T1 (even-degree-end paths from each x even): True;  T2 (lollipop, fixed first edge): True
+  endpoint pairs with D(u,v)>0: 178; odd D(u,v): 16; GF(2)-rank of [D mod 2]: 4
+  odd-D pairs by sorted (deg u, deg v): {(2, 3): 8, (2, 4): 8}
+  H(x) (paths ending at x) odd at 0 squares; H mod 2 by degree: {(2, 0): 4, (3, 0): 8, (4, 0): 10, (6, 0): 6, (8, 0): 2}
+  edges: 62; edges with odd h(e) (Ham paths through e): 16; edges with h(e)=0: 0
+  edges with odd c(e) (closed tours through e): 0: 
+===== 5x7: 1245736 directed Ham paths = 622868 undirected (even); closed tours 0; degrees {2: 4, 3: 8, 4: 12, 6: 8, 8: 3}
+  T1 (even-degree-end paths from each x even): True;  T2 (lollipop, fixed first edge): True
+  endpoint pairs with D(u,v)>0: 153; odd D(u,v): 48; GF(2)-rank of [D mod 2]: 8
+  odd-D pairs by sorted (deg u, deg v): {(2, 4): 16, (4, 4): 16, (4, 6): 8, (4, 8): 8}
+  H(x) (paths ending at x) odd at 0 squares; H mod 2 by degree: {(2, 0): 4, (3, 0): 8, (4, 0): 12, (6, 0): 8, (8, 0): 3}
+  edges: 76; edges with odd h(e) (Ham paths through e): 0; edges with h(e)=0: 0
+===== 6x6: 6637920 directed Ham paths = 3318960 undirected (even); closed tours 9862; degrees {2: 4, 3: 8, 4: 12, 6: 8, 8: 4}
+  T1 (even-degree-end paths from each x even): True;  T2 (lollipop, fixed first edge): True
+  endpoint pairs with D(u,v)>0: 324; odd D(u,v): 136; GF(2)-rank of [D mod 2]: 24
+  odd-D pairs by sorted (deg u, deg v): {(2, 3): 8, (2, 4): 16, (3, 3): 8, (3, 4): 16, (3, 6): 32, (3, 8): 8, (4, 4): 16, (4, 6): 32}
+  H(x) (paths ending at x) odd at 8 squares; H mod 2 by degree: {(2, 0): 4, (3, 0): 8, (4, 0): 4, (4, 1): 8, (6, 0): 8, (8, 0): 4}
+  edges: 80; edges with odd h(e) (Ham paths through e): 32; edges with h(e)=0: 0
+  edges with odd c(e) (closed tours through e): 24: b1-d2:6195 b1-a3:8611 c1-a2:8611 c1-b3:1775 d1-f2:8611 d1-e3:1775 e1-c2:6195 e1-f3:8611 a2-b4:6195 c2-a3:1775 d2-f3:1775 f2-e4:6195 b3-a5:6195 e3-f5:6195 a4-c5:1775 a4-b6:8611 b4-c6:1775 e4-d6:1775 f4-d5:1775 f4-e6:8611 a5-c6:8611 c5-e6:6195 d5-b6:6195 f5-d6:8611
+
+SUMMARY  board | undirected HPs | closed tours | T1 | T2 | #odd D(u,v) | #odd h(e)/edges | #odd c(e)
+  3x4            8        0  True  True      6     0/14    None
+  3x7           52        0  True  True      0     0/32    None
+  3x8          396        0  True  True     14     0/38    None
+  3x9          560        0  True  True      0     0/44    None
+  3x10        3048       16  True  True      0     0/50       0
+  3x11       10672        0  True  True      0     0/56    None
+  3x12       57248      176  True  True     14     0/62       0
+  4x5           82        0  True  True     10    14/34    None
+  4x6          744        0  True  True      0     8/44    None
+  4x7         6378        0  True  True     18     6/54    None
+  4x8        31088        0  True  True      0     0/64    None
+  5x5          864        0  True  True      0     0/48    None
+  5x6        18784        8  True  True     16    16/62       0
+  5x7       622868        0  True  True     48     0/76    None
+  6x6      3318960     9862  True  True    136    32/80      24
+
+ANTI-REDEI (PROVED): for every R x C board with R, C >= 2 the number of undirected
+Hamiltonian paths of the knight graph is EVEN.  Proof: the Klein group V4 = {id, left-right
+mirror, up-down mirror, half-turn} acts faithfully on the squares.  If g != id maps an
+undirected Hamiltonian path P to itself it must reverse P (preserving the direction would fix
+every square).  Two distinct non-identity elements cannot both reverse P (their product would
+preserve P, hence be the identity).  So every V4-orbit of paths has size 2 or 4.
+(Consistent with every row of the table above.)
+
+== closed tours through each edge, c(e) mod 2, on boards with closed tours ==
+  3x10: 16 closed tours, 50 edges, odd c(e) on 0 edges; odd-c subgraph degrees [], component sizes []
+  5x6: 8 closed tours, 62 edges, odd c(e) on 0 edges; odd-c subgraph degrees [], component sizes []
+  3x12: 176 closed tours, 62 edges, odd c(e) on 0 edges; odd-c subgraph degrees [], component sizes []
+  6x6: 9862 closed tours, 80 edges, odd c(e) on 24 edges; odd-c subgraph degrees [(2, 24)], component sizes [6, 6, 6, 6]; e.g. b1-d2 c=6195
+  3x14: 1536 closed tours, 74 edges, odd c(e) on 0 edges; odd-c subgraph degrees [], component sizes []
+  5x8: 44202 closed tours, 90 edges, odd c(e) on 28 edges; odd-c subgraph degrees [(2, 20), (4, 4)], component sizes [24]; e.g. b1-d2 c=35453
+  3x16: 15424 closed tours, 86 edges, odd c(e) on 0 edges; odd-c subgraph degrees [], component sizes []
+  6x7: 1067638 closed tours, 98 edges, odd c(e) on 40 edges; odd-c subgraph degrees [(2, 24), (4, 8)], component sizes [16, 16]; e.g. c1-a2 c=965577
+  5x10: 13311268 closed tours, 118 edges, odd c(e) on 56 edges; odd-c subgraph degrees [(2, 16), (4, 16), (8, 2)], component sizes [34]; e.g. b1-d2 c=10585989
+  (the odd-c edge set is always an even subgraph: sum_{e at v} c(e) = 2 x #tours)

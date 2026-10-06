@@ -99,6 +99,7 @@ Scripts `..._fib_sturmian.py`, `..._fib_catmap.py`, `..._fib_lonely.py` (each un
 | `m_23` | 48 | 17 | 40 |
 
 The four extremal witnesses are valid closed tours (re-validated by the orchestrator) and are embedded in the companion page. Every witness satisfies Theorem 5.1 (`m_33 = m_11 + m_12 + m_22`: `1 = 0+1+0`, `8 = 4+0+4`, `8 = 6+2+0`, `3 = 0+0+3`).
+**Every bound in the table is also PROVED by hand (lane `knight`), from Theorem 5.1 and two local facts.** The within-ring count is `W = m_11 + m_22 + m_33 = 2 m_33 - m_12`, so `W in [1, 16]` and `m_12 <= m_33 <= 8`; `m_11 <= 6` because ring 1's internal moves form two 4-cycles and a tour contains no 4-cycle; `m_13 = 16 + m_02 + m_22 - m_11 - m_33 >= 2 + m_02`; and `m_23 >= 16`, with equality only at the vector `(m_01, ..., m_33) = (0,8,0,0,24,8,16,8)`, where degree forcing produces a unique 2-factor of cycles `12, 20, 20, 12`, so `m_23 >= 17`. A second CP-SAT formulation (degrees plus flow, no circuit constraint) reproduces the six nontrivial bounds. **Census of ring-transition vectors (FINITE-EXACT, 33 s):** of the 1485 vectors `(m_01, m_02, m_11, m_12, m_13, m_22, m_23, m_33)` allowed by the counting identities and edge supplies, 1435 occur; the 50 that do not are 36 with `m_11 >= 7`, 9 with `m_33 = 0` (Theorem 5.1), and five sporadic ones, all with `m_11 = m_12 = 0`: `(8,0,0,0,16,1,38,1)`, `(1,7,0,0,23,8,17,8)` and `(0,8,0,0,24,k,32-2k,k)` for `k = 6, 7, 8`.
 
 ## 6. First passage, good periods and tight riders in `n` dimensions (anchor; lane `lrc`)
 
@@ -121,4 +122,68 @@ Scripts `..._lrc_core.py` (exact library, brute-force self-tests), `..._lrc_A_de
 
 **LRC(14) consequence: none.** These are bounded-`n` facts about first passage and periods. The contrast they make exact is the owner's local/global thesis: lonely-runner first passage is uniformly bounded (`< 1/2`) though its supremum creeps up to `1/2`, while Collatz first-descent times are unbounded (`2^k - 1` rises for `k` odd steps before it can fall).
 
-<!-- sections 7-8 below are filled from the parallel lanes -->
+## 7. Tours and obstructions: the tournament blocking conjecture (niche; lanes `knight` and `hp_blocking`)
+
+The owner's knight's tour is a Hamiltonian cycle; the repository's tournament work counts Hamiltonian paths (Rédei: `H(T)` odd), their arc parities (THM-4524, HYP-9167) and their blocking (HYP-9168). The knight lane tested each of these on knight graphs; the `hp_blocking` lane attacked HYP-9168 itself.
+
+**Proposition 7.1 (anti-Rédei; PROVED, lane `knight`).** For every `R x C` board with `R, C >= 2`, the number of undirected Hamiltonian paths of the knight graph is even. *Proof.* The Klein group `{id, left-right mirror, up-down mirror, half-turn}` acts faithfully on the squares. A non-identity element fixing an undirected path must reverse it (preserving the direction would fix every square), and two distinct non-identity elements cannot both reverse it (their product would fix it with direction). So every orbit has size 2 or 4. ∎ Consistent with every board in the census (`3x4` through `6x6`; `..._knight_parity.out`). **Typed connection:** this is THM-4524 (C1)'s mechanism — a group acting on Hamiltonian objects without fixed points forces even counts (Cayley tournaments of odd abelian groups have every arc count even) — and Rédei's oddness for tournaments is exactly what orientation buys by killing the reversing symmetries. Lollipop parity (Thomason) holds on every board (positive control).
+
+**Per-edge tour parities (FINITE-EXACT).** On 6x6 (all 9862 closed tours enumerated; counts 8, 16, 176, 44202, 9862 reproduced for `5x6, 3x10, 3x12, 5x8, 6x6`) the numbers `c(e)` of closed tours through an edge are `D_4`-invariant on 10 edge orbits; exactly 24 of the 80 edges have odd `c(e)`: the eight corner moves inside the outer ring (`c = 8611` each) and two orbits of ring-1-to-ring-2 moves (`6195`, `1775`), forming four disjoint 6-cycles (an even subgraph, as it must be: `sum_{e at v} c(e) = 2 x 9862`). Larger boards: `5x8` 28 odd edges, `6x7` 40, `5x10` 56; `3xC` boards none. No knight board has every edge odd (the HYP-9167 property), so the tournament phenomenon "all arcs odd iff `N = 2 (mod 4)`" has no knight counterpart in this census.
+
+**The knight-torus blocking number (FINITE-EXACT; a knight analogue of HYP-9168).** On the `6x6` torus the knight graph is 8-regular and edge-transitive. Every 6-edge deletion leaves a Hamiltonian cycle (all `464,306,843` 6-sets containing a fixed edge checked, with a pool of 1002 independently re-verified cycles plus a C finder), and the 7-edge deletions that kill every Hamiltonian cycle are exactly the 14 that strip a vertex down to degree 1 (all `10,679,057,389` 7-sets containing the fixed edge checked). So the blocking number is `7 = deg - 1`, attained only by starving a vertex (exactly the 288 sets "all but one edge at a square"), and it equals the Hall bound (the fewest deletions destroying every 2-factor). Proof of the bound: by Ore's bipartite `f`-factor criterion with `f = 2`, a 2-factor fails to exist after deleting `D` only if some `S` in one colour class and `T` in the other have `2|S| - 2|T| > e(S, T^c) - d`, with `d` the deleted edges between `S` and `T^c`; this needs `|S| > |T|`, and 8-regularity gives `e(S, T^c) >= 8(|S| - |T|)`, so `d >= 6(|S| - |T|) + 1 >= 7`. (The 2-factor bound only bounds `beta` from above; `beta >= 7` is the exhaustive computation.) Each minimum blocking set still leaves an open tour; the fewest deletions killing every open tour is 8. This is the knight form of HYP-9168: the cheapest way to kill every Hamiltonian object is a Hall obstruction. (On the bounded boards the blocking number is 1, trivially: a corner has degree 2.) The 6x6 per-edge closed-tour counts by orbit are `a1-c2: 9862, b1-a3: 8611, c1-e2: 7438, b1-d2: 6195, b1-c3: 4918, b2-d3: 2424, c1-d3: 1900, c1-b3: 1775, c2-e3: 636, c2-d4: 620`; the odd ones form four hexagons such as `b1-d2-f3-e1-c2-a3`, each with 2 moves inside the outer ring and 4 ring-1/ring-2 moves.
+
+**The frame (closed: PROVED by forcing; open: FINITE-EXACT; lane `knight`).** The two-square-wide frame (rings 2 and 3, 48 squares) has no knight tour, open or closed (exact DFS and CP-SAT for both). For closed tours there is a short proof: by the size identity (`e(ring 3) - e(ring 2) = 28 - 20 = 8`, and ring 3 has only 8 internal knight moves) a closed tour of the frame would need all 8 moves inside ring 3 and none inside ring 2; degree forcing then fixes all 48 tour edges and splits the frame into four forced 12-cycles (for example `a1 b3 a5 b7 d8 f7 h8 g6 h4 g2 e1 c2`), re-derived independently by the orchestrator (`..._frame_forcing.out`). The board minus its central 2x2 has closed tours (witness in `..._knight_holes.out`); the central 4x4 and rings 1-2 alone have none.
+
+<!-- HYP-9168 lane results are added below when that lane reports -->
+
+## 8. Verdicts
+
+| claim | status |
+|---|---|
+| rings = 2-factor `C_4 + C_12 + C_20 + C_28`; scaffolds = colour classes with the owner's line lengths; odd/even diagonal partitions | PROVED (Prop. 1.1) |
+| bishop reach = `13 - 2 ring` = `6 + 16 lambda`; rook reach constant | PROVED (Prop. 1.2) |
+| knight ring law `8(m-1) + 16 C(m,2) + 16 C(m-1,2)` on every `2m x 2m` board | PROVED (Prop. 1.3) |
+| two-speed loneliness `floor((a+b)/2)/(a+b)`; knight unique tight; colour-preserving iff `1/2` | PROVED (Thm 2.1; classical, re-derived) |
+| odd lengths lonely at `1/2`, even lengths and their weave tight | PROVED (Thm 2.2) |
+| only the knight misses the 8x8 centre; 8x8 smallest board with an exception | PROVED (Cor. 2.3) |
+| first lonely time: camel `4/9` at `n = 2`; `7/16` at `n = 3` with `1 in v`; `{1,3,...,N}` gives `1/2 - O(1/N)`; census to `n = 7` | PROVED / FINITE-EXACT / HYP-9210 |
+| good period unbounded for every `n >= 2`; `q <= 2 max v` under LRC | PROVED |
+| five integer Collatz cycles = rook, bishop, knight, zebra, `(7,11)`; Gersonides = Fibonacci leapers | EXACT dictionary (renaming of THM-4484 + continued fractions) |
+| Syracuse step = `(1,v)`-leap, mean = knight | EXACT (Terras) |
+| 3-adic valuation shells = single `h`-cycles ("rings" of the loosened walk) | PROVED (Prop. 3.2) |
+| monotile boundary words = centre-to-centre flights of colour-changing Fibonacci leapers; `sigma` = knight/zebra flight substitution; corners = colour-preserving = perfectly lonely | PROVED (Thm 4.1, Cor. 4.2) + FINITE-EXACT to length 121393 |
+| cat map on the board: Pisano, orbit census, `Fix(Q^j)` = 8-torsion of `O_j`; no ring alignment | PROVED + FINITE-EXACT (Prop. 4.3) |
+| weave law: moves inside ring 3 = moves inside rings 1-2 = `k >= 1`, all `k = 1..8` occur | PROVED (Thm 5.1) + FINITE-EXACT |
+| CP-SAT ring profile of closed 8x8 tours | FINITE-EXACT (solver-optimal) |
+| orientation/colour alternation in the monotile tower | ANALOGY (exact `Z/2` core) |
+| any consequence for LRC(14), Collatz, H >= disc | none claimed; all OPEN |
+
+## 9. Directions
+
+* **D1 (`tau*(n)` exactly).** Close `n = 3` (sets with smallest speed `>= 2`), then decide whether `1/2 - tau*(n)` is `Theta(1/n)` and whether every extremizer is a swap of a tight set or a member of `F_N`. A first-passage theory for LRC is a natural companion to the repository's good-period work (THM-762/764).
+* **D2 (weave laws on other boards).** The 8x8 weave law uses `4 + 28 = 12 + 20`. Classify, over all `2m x 2m` boards and all leapers, the ring partitions `S` with `|S| = |S^c|` whose `S`-internal moves are few, and the lower bounds they force on every tour.
+* **D3 (the flight dictionary beyond Fibonacci).** Theorem 4.1 is the `M = Q^3` case of a general question: which Sturmian morphisms with matrix `M` send rook steps to the centre-to-centre flights of the columns of `M`? (Among the seven with matrix `Q^3` only the palindromic one does.) The Collatz critical line has slope `log_2 3 = [1;1,1,2,2,3,1,5,...]`; its mechanical words are the repository's Beatty/hovering words (increments of `ceil(j log_2 3)`), and the standard S-adic expansion (one Sturmian generator block per partial quotient) renormalizes that line as `sigma` renormalizes the monotile's boundary. Test whether the rising-cone and last-dip statements are statements about centre-to-centre flights of the convergent leapers `(1,1), (1,2), (2,3), (5,8), (12,19), (41,65), ...` (not claimed).
+* **D4 (Hall genus).** HYP-9168 (section 7), the weave law's Hall form, and the knight-torus blocking census are three faces of one obstruction: kill every Hamiltonian object by starving a set. Look for the tournament analogue of the weave law: two `Z/2` gradings, one flipped by every arc of a Hamiltonian path.
+
+## 10. Reproduction
+
+```
+python3 04-computation/experiments/chessboard_weave_20261006_census.py
+python3 04-computation/experiments/chessboard_weave_20261006_general_boards.py
+python3 04-computation/experiments/chessboard_weave_20261006_rider_rings.py
+python3 04-computation/experiments/chessboard_weave_20261006_tau2_check.py
+python3 04-computation/experiments/chessboard_weave_20261006_collatz_leapers.py
+python3 04-computation/experiments/chessboard_weave_20261006_fib_sturmian.py
+python3 04-computation/experiments/chessboard_weave_20261006_fib_catmap.py
+python3 04-computation/experiments/chessboard_weave_20261006_fib_lonely.py
+python3 04-computation/experiments/chessboard_weave_20261006_lrc_A_delta.py
+python3 04-computation/experiments/chessboard_weave_20261006_lrc_BC_tau_period.py
+python3 04-computation/experiments/chessboard_weave_20261006_lrc_B_proofs.py
+python3 04-computation/experiments/chessboard_weave_20261006_lrc_D_parity.py
+python3 04-computation/experiments/chessboard_weave_20261006_weave_law.py
+python3 04-computation/experiments/chessboard_weave_20261006_weave_values.py
+python3 04-computation/experiments/chessboard_weave_20261006_nowithin_check.py
+python3 04-computation/experiments/chessboard_weave_20261006_nowithin_witness.py
+python3 04-computation/experiments/chessboard_weave_20261006_knight_cpsat8.py
+```
+Each writes the matching `.out` in the same directory (CP-SAT runs with 2 workers). The companion interactive page (private artifact, "Knight's Weave") renders every lens of this note from the same data.
