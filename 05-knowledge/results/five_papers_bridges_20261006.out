@@ -1,0 +1,46 @@
+# Five-paper bridge checks (S14, 2026-10-06)
+
+## A. The Collatz backward tree never splits completely (Golod-Shafarevich bridge)
+
+Compressed map T(x) = x/2 (x even), (3x+1)/2 (x odd); preimages of y: 2y always, (2y-1)/3 iff y = 2 mod 3.
+PROVED (congruence): if y = 2 mod 3 then 2y = 1 mod 3, so the even child of a branching vertex never branches;
+hence no vertex has a complete binary backward subtree of depth 2, and no 'section splits completely at every level'.
+FINITE-EXACT: maximal complete-splitting depth over all starts below 10^5 = 1.
+Backward layer sizes from 8, depth 0..40: [1, 2, 3, 4, 5, 6, 8, 12, 18, 24, 31, 39, 50, 68, 91, 120, 159, 211, 282, 381, 505, 665, 885, 1187, 1590, 2122, 2829, 3765, 5014, 6682, 8902, 11878, 15844, 21122, 28150, 37536, 50067, 66763, 89009, 118631, 158171]
+Successive ratios at depth 30..40: [1.3343, 1.3339, 1.3331, 1.3327, 1.3334, 1.3338, 1.3335, 1.3332, 1.3328, 1.3333] (mean branching 1 + P(y = 2 mod 3) = 4/3 = 1.3333)
+
+## B. Near-zero-sum reading of the gate crossings (3SUM / Exact-Triangle bridge)
+
+A k-step word w with sum s closes a cycle iff (2^s - 3^k) y = c_w exactly (an exact zero sum of the two ledgers plus
+the correction); a gate crossing is an approximate zero sum: y < c_w/(2^s - 3^k).  Margin 2^(t_k)/3^k - 1 and gate
+radius R_k = c_max/(2^(t_k) - 3^k), c_max = 3^(k-1) + 2^(t_k-k+1)(3^(k-1) - 2^(k-1)), for the lags with margin < 0.06:
+  k= 5 t_k=  8 margin=0.0535 R_k=86.2  (none: no lattice point below the gate)
+  k=17 t_k= 27 margin=0.0393 R_k=17344.6  (12 exceptions)
+  k=29 t_k= 46 margin=0.0253 R_k=3449770.4  (56)
+  k=41 t_k= 65 margin=0.0115 R_k=970158188.7  (62)
+The small-margin lags below 45 are exactly 5, 17, 29, 41 (the upper semiconvergents 8/5, 27/17, 46/29, 65/41 of log2 3);
+exceptions exist at 17, 29, 41 and not at 5, so the margin is necessary and the cylinder offset decides (S13).
+
+## C. The first pinched windows: which chord separates, and whether the actual pattern is word-realisable
+
+  plus sheet x=165 word [4, 1, 1, 1, 1, 2, 2, 1, 2, 1, 1, 2, 1, 1, 1, 2, 3]: differing chord [(0, 17)] (sum 27 = t_17); actual pattern word-realisable: False
+  plus sheet x=171 word [1, 2, 2, 2, 3, 2, 1, 1, 1, 1, 2, 2, 1, 2, 1, 1, 2]: differing chord [(0, 17)] (sum 27 = t_17); actual pattern word-realisable: False
+  plus sheet x=231 word [1, 1, 2, 1, 1, 2, 6, 1, 1, 1, 1, 2, 2, 1, 2, 1, 1]: differing chord [(0, 17)] (sum 27 = t_17); actual pattern word-realisable: False
+  plus sheet x=257 word [2, 2, 2, 3, 2, 1, 1, 1, 1, 2, 2, 1, 2, 1, 1, 2, 1]: differing chord [(0, 17)] (sum 27 = t_17); actual pattern word-realisable: False
+  plus sheet x=259 word [1, 4, 2, 1, 1, 3, 1, 1, 1, 2, 2, 1, 2, 1, 1, 2, 1]: differing chord [(0, 17)] (sum 27 = t_17); actual pattern word-realisable: False
+  plus sheet x=387 word [1, 4, 3, 2, 1, 1, 1, 1, 2, 2, 1, 2, 1, 1, 2, 1, 1]: differing chord [(0, 17)] (sum 27 = t_17); actual pattern word-realisable: False
+  plus sheet x=389 word [4, 2, 1, 1, 3, 1, 1, 1, 2, 2, 1, 2, 1, 1, 2, 1, 1]: differing chord [(0, 17)] (sum 27 = t_17); actual pattern word-realisable: False
+  plus sheet x=391 word [1, 1, 2, 6, 1, 1, 1, 1, 2, 2, 1, 2, 1, 1, 2, 1, 1]: differing chord [(0, 17)] (sum 27 = t_17); actual pattern word-realisable: False
+  plus sheet x=437 word [5, 2, 1, 1, 1, 1, 2, 2, 1, 2, 1, 1, 2, 1, 1, 1, 2]: differing chord [(0, 17)] (sum 27 = t_17); actual pattern word-realisable: True
+  plus sheet x=581 word [4, 3, 2, 1, 1, 1, 1, 2, 2, 1, 2, 1, 1, 2, 1, 1, 1]: differing chord [(0, 17)] (sum 27 = t_17); actual pattern word-realisable: False
+  plus sheet x=587 word [1, 2, 6, 1, 1, 1, 1, 2, 2, 1, 2, 1, 1, 2, 1, 1, 1]: differing chord [(0, 17)] (sum 27 = t_17); actual pattern word-realisable: False
+  plus sheet x=589 word [3, 3, 1, 3, 1, 1, 1, 2, 2, 1, 2, 1, 1, 2, 1, 1, 1]: differing chord [(0, 17)] (sum 27 = t_17); actual pattern word-realisable: False
+  -> at m = 18 the plus sheet gains exactly 11 non-generic chord patterns (only 437's actual pattern is word-realisable).
+  minus sheet x=165 word [1, 2, 1, 1, 2, 2, 1, 1, 5, 1, 1, 1]: differing chord [(0, 12)] (sum 19 = t_12); realisable: True
+  minus sheet x=309 word [1, 2, 4, 1, 1, 1, 1, 1, 2, 1, 3, 1]: differing chord [(0, 12)] (sum 19 = t_12); realisable: False
+  minus sheet x=549 word [1, 2, 1, 1, 6, 1, 1, 1, 1, 1, 2, 1]: differing chord [(0, 12)] (sum 19 = t_12); realisable: True
+  -> at m = 13 the minus sheet gains exactly 1 non-generic pattern (309's).
+In every crossing only the long chord (0, m-1) separates from the word prediction: the pinch is the single gate of the
+whole window, and the sub-windows are generic (short-lag genericity).
+
+ALL ASSERTIONS PASSED
