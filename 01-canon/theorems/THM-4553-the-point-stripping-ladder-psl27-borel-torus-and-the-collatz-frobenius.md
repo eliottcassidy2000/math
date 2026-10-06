@@ -1,7 +1,7 @@
 ---
 id: THM-4553
 title: "The point-stripping ladder: PSL(2,7) on P^1(F_7) (2-transitive, no invariant tournament) > Borel = Aut(P_7) (its only invariant tournaments are P_7 and its reverse) > split torus <x -> 2x> = Aut(P_7 - 0), the automorphism group of THM-4524's unique all-odd 6-tournament and the Collatz Frobenius of the S15 nineteenth note; the octonionic J at e_0 is the Fano matching q -> 3q (QR_7 -> NQR_7); beta(P_7) = 6 with 63 minimum sets (56 Hall obstructions of three types and 7 exotic stars)"
-status: "PROVED (i)-(iv); FINITE-EXACT + LEAN-CHECKED (v) and the orders in (i)-(ii); independent audit: see the results note, section 10"
+status: "PROVED (i)-(iv); FINITE-EXACT + LEAN-CHECKED (v) and the orders in (i)-(ii); INDEPENDENTLY AUDITED twice (2026-10-06; corrections in MISTAKE-567; results note, section 10)"
 session: mac-mini-2026-10-06-sixseven
 source: 05-knowledge/results/sixes_and_sevens_20261006.md
 scripts:

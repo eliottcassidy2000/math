@@ -2050,6 +2050,12 @@ were unaffected; successful explicit-path replays did not validate the prose.
     - `T` named both the torus and the Collatz map.
     - "for every `m`" should be "for every `d <= m`".
     - 104053 was omitted from the ramified primes.
+  - (5) Found by the second audit, in the same pushed checkpoints (the Kloosterman additions):
+    - the spectrum was called "the six Kloosterman sums" while the listed values were `-Kl_7(c)`; it is the negated sums;
+    - "among primes only `p = 7` has the knight set as the whole circle" is false at `p = 2, 3`, which are the CRT factors of `G_6`; this led to THM-4552 (vii);
+    - Kloosterman sheaves were called geometric-Langlands eigensheaves; they are the Hecke eigenvalues of the Heinloth–Ngô–Yun eigensheaves;
+    - Deligne's sign normalization was missing;
+    - Ore's equality case was written `N(T) = S` instead of `N(T) ⊆ S`.
 - **Why it was wrong:**
   - (1) "Hall obstruction" was used loosely (any degree or neighbourhood starvation) instead of with the definition of the hypothesis being cited;
   - (2) optimiser convergence was not tested by perturbation;

@@ -27,7 +27,9 @@ related:
    | 7 | 37 / 1712 (three step-size settings) | `7.7e-3` |
    | **6** | **0 / 6000** (step sizes 0.01, 0.02, 0.05; two run lengths) | the best runs end on the equality ridge `g = 0` to machine precision (`~2e-15`) |
 
-   If a run succeeded at order 6 with probability `>= 0.1%`, zero hits in 6000 would have probability `< 0.25%`.
+   If a run succeeded at order 6 with probability `>= 0.1%`, zero hits in 6000 would have probability `< 0.25%`. This bounds the recipe's per-run rate, not existence.
+
+   An independent replication (audit 2, own batched implementation) found order 7: 51/2000, order 8: 30/100, order 6: **0/5250**. Combined, order 6 stands at 0 of 11,250.
 2. **The KV basin cannot be stripped to order 6.**
    * Put `μ(A) = λ_min(A^T A + A A^T)/|A|_F^2`. It vanishes iff `A` is orthogonally `A_6 ⊕ 0`, which is a counterexample iff `A_6` is.
      * Forward: the padding block identity (reflection, section 8.1).

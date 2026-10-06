@@ -308,7 +308,7 @@ for n in range(5, 61):
               if abs(eig(n, a, b) - 8) > 1e-9 and abs(eig(n, a, b) + 8) > 1e-9)
     if lam <= R + 1e-9:
         ram.append(n)
-check(ram == [5, 6, 7, 8, 10], f"Ramanujan knight tori (all nontrivial |lambda| <= 2 sqrt 7), n = 5..60: {ram}")
+check(ram == [5, 6, 7, 8, 10], f"Ramanujan knight tori (all |lambda| <= 2 sqrt 7 except the trivial 8, and -8 for even n where G_n is bipartite), n = 5..60: {ram}")
 check(all(4 * math.cos(2 * math.pi / n) + 4 * math.cos(4 * math.pi / n) > R for n in range(12, 2000)),
       "for n >= 12 the character (1,0) alone gives 4cos(2pi/n) + 4cos(4pi/n) >= 2 + 2 sqrt 3 > 2 sqrt 7 (checked to 2000; monotone)")
 e7 = lambda t: cmath.exp(2j * math.pi * t / 7)
@@ -319,7 +319,10 @@ check(max(abs(v) for v in Kl.values()) <= R, f"Weil bound |Kl_7(c)| <= 2 sqrt 7 
 check(sorted(set(n for n in range(5, 61) if len({(a % n, b % n) for a, b in MOVES}) == 8 and
                  {(a % n, b % n) for a, b in MOVES} == {(x, y) for x in range(n) for y in range(n) if (x * x + y * y) % n == 5 % n}
                  and n in (5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59))) == [7],
-      "among primes p <= 59 the knight set is the whole 'sphere' {x^2 + y^2 = 5} only for p = 7 (p + 1 = 8)")
+      "among primes 5 <= p <= 59 the knight set is the whole circle {x^2 + y^2 = 5} only for p = 7 (p + 1 = 8)")
+
+circ = [n for n in range(2, 201) if {(a % n, b % n) for a, b in MOVES} == {(x, y) for x in range(n) for y in range(n) if (x * x + y * y - 5) % n == 0}]
+check(circ == [2, 3, 6, 7], f"the knight set mod n is the whole circle x^2 + y^2 = 5 over Z_n exactly for n in {circ} (n <= 200): for n >= 5 only n = 6 = 2*3 (C_4 x Paley(9)) and n = 7")
 
 print("I. the modular-curve reading of the ladder (PARI/GP)")
 gpout = subprocess.run(["gp", "-q"], input='E=ellinit([1,-1,0,-2,-1]); print(ellglobalred(E)[1]); print(E.j); print(mfdim([49,2],1)); print(mfdim([7,2],1)); print(Set(apply(p->p%7, select(p->kronecker(-7,p)==1, primes(200)))));quit\n',

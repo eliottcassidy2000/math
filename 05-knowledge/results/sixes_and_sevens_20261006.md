@@ -9,6 +9,8 @@
 **Status.**
 
 * **PROVED (elementary):**
+  * the knight's circles: for `n >= 5`, the knight set is the whole circle `x^2 + y^2 = 5` iff `n ∈ {6, 7}`;
+  * the Kloosterman spectrum of `G_7` (CITED Weil);
   * the CRT isomorphism `G_6 ≅ C_4 × Paley(9)`;
   * the `F_49` description of `G_7`;
   * the transversality lemma;
@@ -24,7 +26,7 @@
 * **LEAN-CHECKED:** the `P_7` facts, in [sixseven_20261006_paley_seven_certificate.lean](../../04-computation/lean/standalone/sixseven_20261006_paley_seven_certificate.lean). It uses core Lean 4.30 and `native_decide`; each theorem rests on `propext` and its own native axiom, with no `sorry`.
 * **FINITE-NUMERICAL:** the Lyapunov `n = 6` searches, with positive controls at `n = 7, 8, 9` (HYP-9212).
 * **ANALOGY / NUMEROLOGY:** typed where they occur.
-* **Audit:** the independent audit is in section 10.
+* **Audit:** independently audited twice (section 10); corrections in MISTAKE-567.
 
 **Scripts:**
 
@@ -39,11 +41,11 @@
    * `n = 5, 6, 7, 8` exhaustively, stars only. On `8×8`, for example, all `8,637,487,551` six-sets through a fixed move leave a closed tour, and of the `359,895,314,625` seven-sets exactly 14 block, all stars.
    * The 7 is `8 − 1`, the knight's degree minus one. It is the knight's Hall law, the same one HYP-9168 states for tournaments.
    * Conjecture: this holds for all `n ≥ 5` (HYP-9211).
-2. **But 6 and 7 are exactly the exceptional knight tori, in opposite ways.**
+2. **But 6 and 7 are exactly the exceptional knight tori.** They are the only boards (`n >= 5`) on which the knight's 8 moves are a *whole circle* `x^2 + y^2 = 5` over `Z_n`: `G_6` and `G_7` are full finite Euclidean graphs (THM-4552 (vii)). They are exceptional in opposite ways:
    * **`G_6` is a two-place product.** The 6×6 knight graph is, by CRT, the tensor product `C_4 × Paley(9)` of a mod-2 rook step and a mod-3 bishop step. Squares `x` and `x + (3,3)` are twins with identical neighbourhoods, and `|Aut| = 2^18 · 144`. This is the shape of note 18's "two places" (`n < 6^L` is fixed by its residues mod `2^L` and `3^L`) at the first level, typed ANALOGY in 2.1.
-   * **`G_7` is a Paley torus.** On `7×7 = F_49`, the eight knight moves are the elements of norm 5, a coset of the norm-one torus `μ_8`, and all of them are non-squares. The nightrider graph is the complement of Paley(49), and the queen graph is Paley(49). The queen and nightrider slopes split `P^1(F_7)` four and four, by `QR_7` against `NQR_7`. Among `n >= 6`, only here does the knight torus gain an order-8 "45-degree rotation" `ω = 5 + 5i` (stabiliser of order 16). It is the same quadratic character as note 19's `QR_7 | NQR_7` split of the trivial cycle's codes, an EXPLAINED COINCIDENCE (2.2).
+   * **`G_7` is a Paley torus.** On `7×7 = F_49`, the eight knight moves are the elements of norm 5, a coset of the norm-one torus `μ_8`, and all of them are non-squares. The nightrider graph is the complement of Paley(49), and the queen graph is Paley(49). The queen and nightrider slopes split `P^1(F_7)` four and four, by `QR_7` against `NQR_7`. Among `6 <= n <= 26`, only here does the knight torus gain an order-8 "45-degree rotation" `ω = 5 + 5i` (stabiliser of order 16). It is the same quadratic character as note 19's `QR_7 | NQR_7` split of the trivial cycle's codes, an EXPLAINED COINCIDENCE (2.2).
    * 7 is also the least `n > 1` with `gcd(n, 30) = 1`, so the four knight direction classes are pairwise transversal (pairwise determinants 3, 4, 5).
-   * **Langlands-adjacent: `G_7` is a Kloosterman graph.** It is the finite Euclidean graph "squared distance 5" over `F_7`. Its nontrivial eigenvalues are exactly the Kloosterman sums `-Kl_7(c)`, so Weil's bound `2 sqrt 7` makes it Ramanujan. The Ramanujan knight tori are exactly `n = 5, 6, 7, 8, 10` (section 2.3).
+   * **Langlands-adjacent: `G_7` is a Kloosterman graph.** It is the finite Euclidean graph "squared distance 5" over `F_7`. Its nontrivial eigenvalues are exactly the negated Kloosterman sums `-Kl_7(c)`, which are Frobenius traces of Deligne's Kloosterman sheaf, so Weil's bound `2 sqrt 7` makes it Ramanujan. The Ramanujan knight tori are exactly `n = 5, 6, 7, 8, 10` (section 2.3).
 3. **The repo's 6/7 phenomena are one ladder of point-strippings** (THM-4553). The steps:
    * `PSL(2,7)` acts 2-transitively on the 8 points of `P^1(F_7)`, so it preserves no tournament.
    * Strip `∞`. The stabiliser is the Borel subgroup (order 21) `= Aut(P_7)`, whose only invariant tournaments are `P_7` and its reverse.
@@ -55,8 +57,8 @@
    * 7 are stars. A star blocks by isolating a vertex but leaves a 1-path-cycle factor (the vertex plus two cyclic triangles), so it is an "exotic minimum" in the chessboard note's sense.
 
    On the knight torus the star *is* the Hall (2-factor) obstruction, and nothing else blocks. The count 63 and the star are Lean-checked; the type split is checked in Python.
-5. **The S6 manuscript.** The relation is a typed ANALOGY: the manuscript puts all of `χ(S^6) = 2` in one singular fibre (repo ledger: `χ(W) = 2`; THM-3991's one-Euler-fibre grammar), and the knight torus puts its entire 2-factor deficiency at one square. Both are local–global index counts with one nonzero local term. Nothing transfers in either direction. The manuscript's status in the repo, MANUSCRIPT CLAIM / UNDER AUDIT, is unchanged.
-6. **Lyapunov, 6 against 7 (HYP-9212).** The search uses Kressner–Vandereycken's own discovery recipe (Adam on the gap, which escapes the "equality ridge" that L-BFGS cannot leave). It finds order-7 counterexamples in 37 of 1712 runs, order-8 in 25 of 100, and order-9 in 4 of 9, but **0 of 6000 at order 6**.
+5. **The S6 manuscript.** The relation is a typed ANALOGY: the manuscript puts all of `χ(S^6) = 2` in one singular fibre (repo ledger: `χ(W) = 2` given the manuscript's stated quotient; THM-3991's one-Euler-fibre grammar), and the knight torus puts its entire 2-factor deficiency at one square. Both are local–global index counts with one nonzero local term. Nothing transfers in either direction. The manuscript's status in the repo, MANUSCRIPT CLAIM / UNDER AUDIT, is unchanged.
+6. **Lyapunov, 6 against 7 (HYP-9212).** The search uses Kressner–Vandereycken's own discovery recipe (Adam on the gap, which escapes the "equality ridge" that L-BFGS cannot leave). It finds order-7 counterexamples in 37 of 1712 runs, order-8 in 25 of 100, and order-9 in 4 of 9, but **0 of 6000 at order 6** (0 of 11,250 including the audit's independent replication).
 
    Along the KV branch, the 7x7 margin found by continuation decays to 0 as the matrix is pushed toward `A_6 ⊕ 0` (log-slope 1.2–1.5, optimizer-dependent), and every stripped 6x6 block falls short. The strongest order-7 counterexamples share KV's shape (five large singular values and two small), but weaker ones do not, so there is no `5 + 2` mechanism.
 
@@ -77,7 +79,7 @@ The method is a pool of about 1000 random Hamiltonian cycles. Nested loops keep,
 
 The cross-check is a CP-SAT lazy-cut hitting-set model ([knight_torus_block.py](../../04-computation/experiments/sixseven_20261006_knight_torus_block.py)): the master problem is a minimum hitting set of the pool's `Z_n^2 ⋊ D4` orbits, and the oracle is `AddCircuit`. It independently gives `β(5) = 7` with stars only.
 
-Each star leaves 14 blocking 7-sets through `e0`: 2 endpoints of `e0`, times 7 choices of which move survives. In total there are `8 n^2` minimum sets. On `6×6` the Hall (2-factor) bound is also 7, by Ore's bipartite `f`-factor criterion (chessboard note, section 7). For even `n`, the same count gives `d ≥ 6(|S| − |T|) + 1 ≥ 7`. Equality needs `|N(T)| = |T| + 1` with exactly 8 edges leaving `N(T)`; `T = ∅` and `T = B − b` both give the star. Whether any intermediate `T` is tight is left to the census, which finds only stars.
+Each star leaves 14 blocking 7-sets through `e0`: 2 endpoints of `e0`, times 7 choices of which move survives. In total there are `8 n^2` minimum sets. On `6×6` the Hall (2-factor) bound is also 7, by Ore's bipartite `f`-factor criterion (chessboard note, section 7). For even `n`, the same count gives `d ≥ 6(|S| − |T|) + 1 ≥ 7`. Section 4 shows that the tight cases are exactly the stars for even `n ∈ {6, 8, 10, 12}`.
 
 **Reading.** The sentence's 7 is `8 − 1` and its "strip one square" is the min-degree Hall obstruction. Neither depends on the board being 6×6. The sentence is the knight case of the repo's Hall genus (HYP-9168: the cheapest way to kill every Hamiltonian object is to starve a set).
 
@@ -125,13 +127,20 @@ Compare the toroidal `n`-queens problem, solvable iff `gcd(n, 6) = 1` (Pólya, C
 
 ### 2.3 Seven is a Kloosterman graph, hence Ramanujan (PROVED; CITED Weil)
 
-`G_7 = Cay(F_49, {N = 5})` is the finite Euclidean graph `E_7(5)` of Medrano–Myers–Stark–Terras: the squares at squared distance `5 = 1^2 + 2^2`. The prime 7 is the only one where the knight set is the whole sphere (`p + 1 = 8` points).
+`G_7 = Cay(F_49, {N = 5})` is the finite Euclidean graph `E_7(5)` of Medrano–Myers–Stark–Terras: the squares at squared distance `5 = 1^2 + 2^2`.
 
-* **Spectrum.** Its eigenvalue at the character `(a_1, a_2)` is `-Kl_7(3 N(a))`, with `Kl_7(c) = Σ_x e((x + c/x)/7)`. So apart from 8, the spectrum is the six Kloosterman sums over `F_7` (values `-2.049, 2.357, 1.604, 2.692, -4.494, -1.110` for `c = 1..6`), each with multiplicity 8.
-* **Ramanujan.** Weil's bound `|Kl_q| <= 2 sqrt q` makes `G_7` a Ramanujan graph, because the Ramanujan bound `2 sqrt(d - 1)` for `d = 8` is Weil's `2 sqrt q` for `q = 7`.
-* **Census.** The Ramanujan knight tori are exactly `n ∈ {5, 6, 7, 8, 10}`. These are the same five `n` that carry extra linear symmetries (2.2), a finite coincidence with no mechanism claimed. For `n >= 12` the character `(1,0)` already exceeds `2 sqrt 7`.
+**The knight's circles (THM-4552 (vii)).** For `n >= 5`, the knight set is the whole circle `{x^2 + y^2 = 5}` over `Z_n` exactly for `n = 6` and `n = 7`. The circle sizes `|C_n|` are multiplicative, with `|C_2| = 2`, `|C_3| = 4`, `|C_7| = 8`, and all other prime-power values not usable to reach 8. Over `F_2` and `F_3` the circles are the CRT factors `C_4` and `Paley(9)` of `G_6`. So the two exceptional tori of section 2 are the two ways a circle of 8 points arises: one prime with `p + 1 = 8`, or `2 · 4` over `Z_2 × Z_3`.
 
-**This is the Langlands-adjacent face of the knight question (typed MAP, exact).** `Kl_7(c)` is the trace of Frobenius on Deligne's rank-2 Kloosterman sheaf, and the Weil bound is its Riemann hypothesis. Kloosterman sheaves are geometric-Langlands eigensheaves (Heinloth–Ngô–Yun). So the expansion of the 7x7 knight torus is literally a Riemann hypothesis over `F_7`.
+* **Spectrum.** Its eigenvalue at the character `(a_1, a_2)` is `-Kl_7(3 N(a))`, with `Kl_7(c) = Σ_x e((x + c/x)/7)`. So apart from 8, the spectrum is the six negated Kloosterman sums `-Kl_7(c)`, each with multiplicity 8. Their values for `c = 1..6` are `-2.049, 2.357, 1.604, 2.692, -4.494, -1.110`.
+* **Ramanujan.** Weil's bound `|Kl_q| <= 2 sqrt q` gives `|λ| <= 2 sqrt 7` for every nontrivial eigenvalue, so `G_7` is a Ramanujan graph: the Ramanujan bound `2 sqrt(d - 1)` for `d = 8` is Weil's `2 sqrt q` for `q = 7`.
+* **Census.** The Ramanujan knight tori are exactly `n ∈ {5, 6, 7, 8, 10}`, where for even `n` the graph is bipartite and `±8` count as trivial. These are the same five `n` that carry extra linear symmetries (2.2), a finite coincidence with no mechanism claimed. For `n >= 12` the character `(1,0)` already exceeds `2 sqrt 7`.
+
+**This is the Langlands-adjacent face of the knight question (typed MAP, exact).**
+
+* In Deligne's normalization, `Tr(Frob_c | Kl_2) = -Kl_7(c)` for the rank-2 Kloosterman sheaf on `G_m/F_7`. So each eigenvalue of `G_7` is exactly a Frobenius trace, at `c = 3 N(a)`, and the Weil bound is the sheaf's Riemann hypothesis (purity of weight 1).
+* Kloosterman sheaves are the Hecke eigenvalues (local systems on `G_m`) of the automorphic eigensheaves on `Bun_G` constructed by Heinloth–Ngô–Yun.
+
+So the expansion of the 7x7 knight torus is literally a Riemann hypothesis over `F_7`.
 
 Compare the repo's Langlands ladder in S16's note:
 
@@ -152,7 +161,7 @@ The 7x7 knight torus adds a function-field rung: a rank-2 local system on `G_m/F
 
 So the Frobenius `<x2>`, which by note 19 (Proposition 5) is the part of `Aut(P_7)` that Collatz realises on its trivial cycle, is exactly the full automorphism group of THM-4524's 6-tournament. The 6 non-trivial translations that the carry kills make up, with the identity, the unipotent radical of the Borel. Note 19's "maximal symmetry against no symmetry" is, in this language, Borel against torus.
 
-**Modular curves (CITED, standard; typed DICTIONARY).** The Borel is `Γ_0(7)` mod 7, and the torus is `Γ_0(7) ∩ Γ^0(7)` mod 7, conjugate to `Γ_0(49)`. The ladder `8 -> 7 -> 6` is therefore the tower `X(1) <- X_0(7) <- X_0(49)`, ending at the genus-1 CM curve 49a1 (CM by `Q(sqrt(-7))`). `QR_7`, the code of the trivial Collatz cycle, is the set of residues of the primes split in `Q(sqrt(-7))`. In this reading, the symmetry the trivial cycle keeps is the one uniformising a CM elliptic curve, a GL(1)-over-`Q(sqrt(-7))` Langlands object. This is consistent with S16's finding that all exact Collatz arithmetic is abelian. No Collatz consequence follows.
+**Modular curves (CITED, standard; typed DICTIONARY).** The Borel is `Γ_0(7)` mod 7, and the torus is `Γ_0(7) ∩ Γ^0(7)` mod 7, conjugate to `Γ_0(49)`. The ladder `8 -> 7 -> 6` is therefore the tower `X(1) <- X_0(7) <- X_0(49)` (degrees 8 and 7; the second arrow is `τ -> 7τ`), ending at the genus-1 CM curve 49a1 (CM by `Q(sqrt(-7))`). `QR_7`, the code of the trivial Collatz cycle, is the set of residues of the primes split in `Q(sqrt(-7))`. In this reading, the symmetry the trivial cycle keeps is the one uniformising a CM elliptic curve, a GL(1)-over-`Q(sqrt(-7))` Langlands object. This is consistent with S16's finding that all exact Collatz arithmetic is abelian. No Collatz consequence follows.
 
 **Octonions (PROVED).** Take the octonion table `e_x e_{x+1} = e_{x+3}` (indices mod 7; the alternative law was checked exactly on random elements). The lines are translates of `{0, 1, 3}`, and `{1, 2, 4}` is one of them. The three lines through 0 are `{0,1,3}, {0,2,6}, {0,4,5}`. They pair each out-neighbour `q ∈ QR_7` of 0 in `P_7` with the in-neighbour `3q ∈ NQR_7`. Left multiplication `J = L_{e_0}` on `T_{e_0}S^6 = span(e_1, ..., e_6)` sends `e_q ↦ e_{3q}` and `e_{3q} ↦ −e_q`. So the almost-complex structure of `S^6` at a basis point is the Fano matching of the six stripped points, `QR → NQR`. The torus `x ↦ 2x` permutes the three complex lines cyclically.
 
@@ -181,10 +190,10 @@ So `β(P_7) = 6 = hall = N − 1`, as the chessboard session proved for every re
 | three vertices with one common out- (or in-)neighbour | 14 | yes: `|S| = 3`, neighbourhood of size 1 |
 | strip a vertex (star) | 7 | **no**: exotic. The isolated vertex is a 1-vertex path and `P_7 − v` has two cyclic triangles, so a 1-path-cycle factor survives; Hamiltonian paths die simply because the isolated vertex has no arcs |
 
-On the 8-regular bipartite knight torus, Ore's count `d ≥ 6(|S| − |T|) + 1` reaches 7 only when `|S| = |T| + 1`, `N(T) = S`, and the vertex set `S ∪ T` has exactly 8 boundary edges.
+On the 8-regular bipartite knight torus, Ore's count `d ≥ 6(|S| − |T|) + 1` reaches 7 only when `|S| = |T| + 1`, `N(T) ⊆ S`, and the vertex set `S ∪ T` has exactly 8 boundary edges.
 
 * The two trivial cases (`T = ∅`, or `T` = a colour class minus a square) both produce the star.
-* Any other case needs an 8-edge cut with at least 2 vertices on each side. But the restricted edge connectivity of `G_n` is 14 (every cut separating two disjoint moves has `>= 14` edges) for `n = 5, 6, 7, 8, 10, 12`, by our max-flow computation, which reproduces the audit's.
+* Any other case needs an 8-edge cut with at least 2 vertices on each side. A side with no internal edge is independent, with boundary `8|W| >= 16`, so both sides contain an edge. But the restricted edge connectivity of `G_n` is 14 (every cut separating two disjoint moves has `>= 14` edges) for `n = 5, 6, 7, 8, 10, 12`, by our max-flow computation; the audits also found 14 at `n = 9, 11, 14, 16`.
 
 So for even `n ∈ {6, 8, 10, 12}`, the 7-sets killing every 2-factor are exactly the stars (PROVED, given the cut computation). The census shows the same for Hamiltonian cycles at `n <= 8`. On a 3-regular tournament, by contrast, Hall sets of sizes 1, 2 and 3 all cost exactly `2k = 6`, and stars are exotic.
 
@@ -235,7 +244,9 @@ The setting is the symmetric-maximizer conjecture for `L_A(X) = AX + XA^T` ([oct
   | 7 | 37 / 1712 | `7.7e-3` |
   | **6** | **0 / 6000** | runs end on the ridge, `~2e-15` |
 
-  A success probability of 0.1% per run at order 6 would give zero hits in 6000 with probability 0.25%.
+  A success probability of 0.1% per run at order 6 would give zero hits in 6000 with probability 0.25%. This bounds the recipe's per-run success rate, not the existence of a counterexample.
+
+  **Independent replication (audit 2, own batched implementation):** order 7: 51/2000; order 8: 30/100; order 6: **0/5250**. Combined, order 6 stands at 0 of 11,250 runs.
 * **Shape of the counterexamples found.**
   * In 1000 more order-7 runs, 20 counterexamples were collected.
   * The recurrent top basin (gap `~6.2e-3`, reached 7 times) has normalised singular values `(1, .85, .85, .74, .69, .14, .05)`, five large and two small like KV's rank-5 matrix. Weaker counterexamples do not: one has smallest singular value `0.185`.
@@ -288,7 +299,13 @@ A Collatz cycle with shortcut word `w` (length `L`, `p` odd steps) exists iff `c
 
 `c_w = 3^(p_2 + p_3) c_(w_1) + 2^(L_1) 3^(p_3) c_(w_2) + 2^(L_1 + L_2) c_(w_3)`.
 
-So exhaustive cycle search at fixed `(L, p)` is literally modular 3SUM on lists of size `n_3 ≈ C(L/3, p/3) ≈ 2^(H L/3)`, with `H = H(p/L)`. Two halves give modular 2SUM on lists of size `n_2 ≈ 2^(H L/2)`, solvable by hashing in `O~(n_2)`. Any 3SUM algorithm of exponent `2 − ε` costs `2^((2 − ε) H L/3)`, which exceeds `2^(H L/2)` whenever `ε < 1/2`. The new exponent (`ε = 0.0008`) therefore gives no gain over meet-in-the-middle.
+So exhaustive cycle search at fixed `(L, p)` is literally modular 3SUM on lists of size `n_3 ≈ C(L/3, p/3) ≈ 2^(H L/3)`, with `H = H(p/L)`.
+
+* **Two halves.** These give modular 2SUM on lists of size `n_2 ≈ 2^(H L/2)`, solvable by hashing in `O~(n_2)`. Cycle words are closed under rotation, and some rotation puts `⌊p/2⌋` or `⌈p/2⌉` odd steps in each half, so balanced halves suffice (the audit checked this exhaustively for `L <= 16`).
+* **Three thirds.** Rotation cannot always balance them (e.g. `111000000000`); the unbalanced splits only make the 3SUM route costlier.
+* **Comparison.** Any 3SUM algorithm of exponent `2 − ε` costs `2^((2 − ε) H L/3)`, which exceeds `2^(H L/2)` whenever `ε < 1/2`. At `p/L = 1/log_2 3` the exponents are `0.475 L` against `0.633 L`.
+
+The new exponent (`ε = 0.0008`, from `O(n^1.9992)`) therefore gives no gain over meet-in-the-middle.
 
 Real cycle exclusion (Eliahou, Simons–de Weger, Hercher) does not enumerate words at all; it uses Diophantine bounds. **Typed:** an exact MAP whose consequence is negative.
 
@@ -302,6 +319,7 @@ Real cycle exclusion (Eliahou, Simons–de Weger, Hercher) does not enumerate wo
 | `G_7`: knight = norm-5 coset of `μ_8` (non-squares), nightrider/queen = Paley(49) complement/Paley(49), order-8 rotation `ω` | PROVED + FINITE-EXACT |
 | extra linear symmetries only at `n ∈ {5,6,7,8,10}`, order 8 only at 5 and 7 (`n ≤ 26`) | FINITE-EXACT |
 | transversality iff `gcd(n, 30) = 1` | PROVED |
+| knight set = whole circle `x^2 + y^2 = 5` over `Z_n` (`n >= 5`) iff `n ∈ {6, 7}` | PROVED (+ census `n <= 200`) |
 | `G_7 = E_7(5)`: spectrum `= {8} ∪ {-Kl_7(c)}` (each ×8), Ramanujan by Weil; Ramanujan knight tori exactly `n ∈ {5,6,7,8,10}` | PROVED (CITED Weil, Kloosterman norm identity) |
 | ladder `PSL(2,7) > Borel = Aut(P_7) > torus = Aut(P_7 − 0) = note 19's Frobenius` | PROVED + LEAN-CHECKED (orders 21, 3) |
 | octonionic `J` at `e_0` = Fano matching `q ↦ 3q`, `QR → NQR` | PROVED |
@@ -352,7 +370,27 @@ Real cycle exclusion (Eliahou, Simons–de Weger, Hercher) does not enumerate wo
 
 The audit also supplied the restricted-edge-connectivity value 14, which this session re-derived after fixing a multi-edge bug in its own first attempt (13 by mistake), and the padding converse.
 
-**Audit 2** (the late additions: section 2.3 Kloosterman/Ramanujan, the modular-curve dictionary, the Ore/λ' paragraph, the Adam table and HYP-9212): *(in progress)*
+**Audit 2** (the late additions: section 2.3 Kloosterman/Ramanujan, the modular-curve dictionary, the Ore/λ' paragraph, the Adam table and HYP-9212, section 7.3; blind subagent, own code in `audit2_sixseven/`).
+
+No mathematical conclusion failed. **Reproduced:**
+
+* every step of the Kloosterman proof and the whole 49x49 spectrum (error `7e-15`);
+* the Ramanujan census to `n = 60`;
+* the modular-curve facts (the images of `Γ_0(7)` and `Γ_0(7) ∩ Γ^0(7)`, the conjugation, `dim S_2(Γ_0(49)) = 1`, and 49a1 with `j = −3375` and CM by `−7`);
+* `λ' = 14`;
+* the Adam table (independently: `51/2000`, `30/100`, `0/5250`);
+* the split formula (2000 random words; the cycles `1, −1, −5, −17`).
+
+**Corrections applied:**
+
+* the spectrum is the *negated* Kloosterman sums;
+* the bipartite `±8` convention made explicit;
+* "only at `p = 7`" restricted to `p >= 5`, since `p = 2, 3` are the factors of `G_6`; this led to the circle statement (vii);
+* the Deligne sign normalization and the Heinloth–Ngô–Yun phrasing;
+* `N(T) ⊆ S`, with the independent-side argument added;
+* the §1 sentence superseded;
+* rotation balancing in 7.3;
+* the statistical sentence qualified (per-run rate, not existence).
 
 ## 11. Reproduction
 

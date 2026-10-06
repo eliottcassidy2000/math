@@ -50,11 +50,12 @@ G. Paley P_7: Hamiltonian-path blocking
   ok   each star leaves a 1-path-cycle factor (the isolated vertex as the path + two cyclic triangles): exotic minima, NOT Hall obstructions
   ok   the other 56 minimum sets kill every 1-path-cycle factor: Hall obstructions
 H. spectra: the 7x7 knight torus is the finite Euclidean graph E_7(5), a Kloosterman / Ramanujan graph
-  ok   Ramanujan knight tori (all nontrivial |lambda| <= 2 sqrt 7), n = 5..60: [5, 6, 7, 8, 10]
+  ok   Ramanujan knight tori (all |lambda| <= 2 sqrt 7 except the trivial 8, and -8 for even n where G_n is bipartite), n = 5..60: [5, 6, 7, 8, 10]
   ok   for n >= 12 the character (1,0) alone gives 4cos(2pi/n) + 4cos(4pi/n) >= 2 + 2 sqrt 3 > 2 sqrt 7 (checked to 2000; monotone)
   ok   every nontrivial eigenvalue of G_7 at the character (a1,a2) is -Kl_7(3 N(a)), Kl_7(c) = sum_x e((x + c/x)/7)
   ok   Weil bound |Kl_7(c)| <= 2 sqrt 7 (max 4.4940): G_7 is Ramanujan because d - 1 = 7 = q
-  ok   among primes p <= 59 the knight set is the whole 'sphere' {x^2 + y^2 = 5} only for p = 7 (p + 1 = 8)
+  ok   among primes 5 <= p <= 59 the knight set is the whole circle {x^2 + y^2 = 5} only for p = 7 (p + 1 = 8)
+  ok   the knight set mod n is the whole circle x^2 + y^2 = 5 over Z_n exactly for n in [2, 3, 6, 7] (n <= 200): for n >= 5 only n = 6 = 2*3 (C_4 x Paley(9)) and n = 7
 I. the modular-curve reading of the ladder (PARI/GP)
   ok   49a1: conductor 49, j = -3375 (CM by Q(sqrt(-7))); genus X_0(49) = 1, genus X_0(7) = 0
   ok   primes splitting in Q(sqrt(-7)) are 1, 2, 4 mod 7 = QR_7 = the trivial cycle's code
