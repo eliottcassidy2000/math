@@ -1,0 +1,8 @@
+G': edges 144 ; degree-2 squares: ['a1', 'a2', 'a7', 'a8', 'b1', 'b8', 'g1', 'g8', 'h1', 'h2', 'h7', 'h8']
+squares receiving two forced edges (saturated): {'c3': ['a2', 'b1'], 'c6': ['a7', 'b8'], 'f3': ['g1', 'h2'], 'f6': ['g8', 'h7']}
+colour 0: min |N(X)| - |X| = 0 (OPTIMAL); witness |X|=16 |N(X)|=16
+   X = a1 a3 a5 a7 b8 c1 d4 d8 e1 e5 f8 g1 h2 h4 h6 h8
+   N(X) = b3 b5 b7 c2 c4 c6 d3 d7 e2 e6 f3 f5 f7 g2 g4 g6
+colour 1: min |N(X)| - |X| = 0 (OPTIMAL); witness |X|=16 |N(X)|=16
+   X = a2 a4 a6 a8 b1 c8 d1 d5 e4 e8 f1 g8 h1 h3 h5 h7
+   N(X) = b2 b4 b6 c3 c5 c7 d2 d6 e3 e7 f2 f4 f6 g3 g5 g7

@@ -1,0 +1,4 @@
+8x8 knight graph: 168 edges; 24 within-ring edges
+  [all 168 edges (positive control)] Hamiltonian cycle found after 8 cuts
+  [minus the 24 within-ring edges] UNSAT after 3 subtour cuts: no Hamiltonian cycle
+RESULT: positive control found a tour: True | tour avoiding every within-ring move exists: False

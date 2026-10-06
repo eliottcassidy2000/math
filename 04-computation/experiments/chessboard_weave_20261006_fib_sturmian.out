@@ -1,0 +1,148 @@
+== A. sigma inside the Sturmian monoid <E, phi, phit> ==
+E o phi o phi o phit o E = {'a': 'cac', 'c': 'cacac'}  equals sigma: True
+q = E o phit o E: True ; q' := E o phi o E = {'a': 'c', 'c': 'ca'} = mirror of q: True
+sigma = q' o q' o q: True
+q^3 = {'a': 'cac', 'c': 'accac'} ; sigma(x).cac == cac.q^3(x) for x in {a,c}: True
+matrix(sigma) = ((1, 2), (2, 3)) (rows #a,#c; columns images of a,c) = Q^3 = [[F2,F3],[F3,F4]]
+distinct morphisms in <E,phi,phit> (words of length <= 7) with matrix Q^3: 7  (Seebold: |f(a)|+|f(c)|-1 = 7)
+conjugate chain f_0..f_6 (f_{i+1}(x) = f_i(x) with first letter moved to the end):
+   f_0: a->cac  c->cacca  in St: True  
+   f_1: a->acc  c->accac  in St: True  
+   f_2: a->cca  c->ccaca  in St: True  
+   f_3: a->cac  c->cacac  in St: True  = sigma both images palindromes
+   f_4: a->acc  c->acacc  in St: True  
+   f_5: a->cca  c->cacca  in St: True  
+   f_6: a->cac  c->accac  in St: True  = q^3
+set of chain == set found: True
+the 8 words of length 3 in {q, q'} and the conjugate they give:
+   q o q o q    -> f_6
+   q o q o q'   -> f_3
+   q o q' o q   -> f_4
+   q o q' o q'  -> f_1
+   q' o q o q   -> f_5
+   q' o q o q'  -> f_2
+   q' o q' o q  -> f_3
+   q' o q' o q' -> f_0
+each f_i maps the length-3000 prefix of a Sturmian word to a balanced word: True
+
+== sanity of the central-word test: #central words of length n == totient(n+2) ==
+n = 0..14 all match: True
+
+== B. the boundary words sigma^n(a), sigma^n(c), n = 0..8 ==
+sigma^0(a): len      1 = F_1; Parikh (#a,#c) = (1,0) = Q^{3n} column 1: True
+     palindrome True, centre letter a; balanced (brute force, 0.0s) True; gcd(#a,#c) = 1
+     Christoffel a.P.c of slope #c/#a = 0/1: P palindrome True, P central True; w = rotation of it by 0 (predicted None); palindromic rotations of the class: [0]
+     w central: True; w[1:-1] central: None; w == rounding word: True; w == cut(1,0): True (corner ties 0); w == prefix of x: False
+     w = a
+sigma^0(c): len      1 = F_2; Parikh (#a,#c) = (0,1) = Q^{3n} column 2: True
+     palindrome True, centre letter c; balanced (brute force, 0.0s) True; gcd(#a,#c) = 1
+     Christoffel a.P.c of slope #c/#a = 1/0: P palindrome True, P central True; w = rotation of it by 0 (predicted None); palindromic rotations of the class: [0]
+     w central: True; w[1:-1] central: None; w == rounding word: True; w == cut(0,1): True (corner ties 0); w == prefix of x: True
+     w = c
+sigma^1(a): len      3 = F_4; Parikh (#a,#c) = (1,2) = Q^{3n} column 1: True
+     palindrome True, centre letter a; balanced (brute force, 0.0s) True; gcd(#a,#c) = 1
+     Christoffel a.P.c of slope #c/#a = 2/1: P palindrome True, P central True; w = rotation of it by 2 (predicted 2); palindromic rotations of the class: [2]
+     w central: True; w[1:-1] central: True; w == rounding word: True; w == cut(1,2): True (corner ties 0); w == prefix of x: True
+     w = cac
+sigma^1(c): len      5 = F_5; Parikh (#a,#c) = (2,3) = Q^{3n} column 2: True
+     palindrome True, centre letter c; balanced (brute force, 0.0s) True; gcd(#a,#c) = 1
+     Christoffel a.P.c of slope #c/#a = 3/2: P palindrome True, P central True; w = rotation of it by 4 (predicted 4); palindromic rotations of the class: [4]
+     w central: True; w[1:-1] central: True; w == rounding word: True; w == cut(2,3): True (corner ties 0); w == prefix of x: True
+     w = cacac
+sigma^2(a): len     13 = F_7; Parikh (#a,#c) = (5,8) = Q^{3n} column 1: True
+     palindrome True, centre letter a; balanced (brute force, 0.0s) True; gcd(#a,#c) = 1
+     Christoffel a.P.c of slope #c/#a = 8/5: P palindrome True, P central True; w = rotation of it by 4 (predicted 4); palindromic rotations of the class: [4]
+     w central: False; w[1:-1] central: False; w == rounding word: True; w == cut(5,8): True (corner ties 0); w == prefix of x: True
+     w = cacaccaccacac
+sigma^2(c): len     21 = F_8; Parikh (#a,#c) = (8,13) = Q^{3n} column 2: True
+     palindrome True, centre letter c; balanced (brute force, 0.0s) True; gcd(#a,#c) = 1
+     Christoffel a.P.c of slope #c/#a = 13/8: P palindrome True, P central True; w = rotation of it by 4 (predicted 4); palindromic rotations of the class: [4]
+     w central: False; w[1:-1] central: False; w == rounding word: True; w == cut(8,13): True (corner ties 0); w == prefix of x: True
+     w = cacaccaccacaccaccacac
+sigma^3(a): len     55 = F_10; Parikh (#a,#c) = (21,34) = Q^{3n} column 1: True
+     palindrome True, centre letter a; balanced (brute force, 0.0s) True; gcd(#a,#c) = 1
+     Christoffel a.P.c of slope #c/#a = 34/21: P palindrome True, P central True; w = rotation of it by 38 (predicted 38); palindromic rotations of the class: [38]
+     w central: False; w[1:-1] central: False; w == rounding word: True; w == cut(21,34): True (corner ties 0); w == prefix of x: True
+sigma^3(c): len     89 = F_11; Parikh (#a,#c) = (34,55) = Q^{3n} column 2: True
+     palindrome True, centre letter c; balanced (brute force, 0.0s) True; gcd(#a,#c) = 1
+     Christoffel a.P.c of slope #c/#a = 55/34: P palindrome True, P central True; w = rotation of it by 72 (predicted 72); palindromic rotations of the class: [72]
+     w central: False; w[1:-1] central: False; w == rounding word: True; w == cut(34,55): True (corner ties 0); w == prefix of x: True
+sigma^4(a): len    233 = F_13; Parikh (#a,#c) = (89,144) = Q^{3n} column 1: True
+     palindrome True, centre letter a; balanced (brute force, 0.0s) True; gcd(#a,#c) = 1
+     Christoffel a.P.c of slope #c/#a = 144/89: P palindrome True, P central True; w = rotation of it by 72 (predicted 72); palindromic rotations of the class: [72]
+     w central: False; w[1:-1] central: False; w == rounding word: True; w == cut(89,144): True (corner ties 0); w == prefix of x: True
+sigma^4(c): len    377 = F_14; Parikh (#a,#c) = (144,233) = Q^{3n} column 2: True
+     palindrome True, centre letter c; balanced (brute force, 0.0s) True; gcd(#a,#c) = 1
+     Christoffel a.P.c of slope #c/#a = 233/144: P palindrome True, P central True; w = rotation of it by 72 (predicted 72); palindromic rotations of the class: [72]
+     w central: False; w[1:-1] central: False; w == rounding word: True; w == cut(144,233): True (corner ties 0); w == prefix of x: True
+sigma^5(a): len    987 = F_16; Parikh (#a,#c) = (377,610) = Q^{3n} column 1: True
+     palindrome True, centre letter a; balanced (brute force, 0.0s) True; gcd(#a,#c) = 1
+     Christoffel a.P.c of slope #c/#a = 610/377: P palindrome True, P central True; w = rotation of it by 682 (predicted 682); palindromic rotations of the class: [682]
+     w central: False; w[1:-1] central: False; w == rounding word: True; w == cut(377,610): True (corner ties 0); w == prefix of x: True
+sigma^5(c): len   1597 = F_17; Parikh (#a,#c) = (610,987) = Q^{3n} column 2: True
+     palindrome True, centre letter c; balanced (brute force, 0.0s) True; gcd(#a,#c) = 1
+     Christoffel a.P.c of slope #c/#a = 987/610: P palindrome True, P central True; w = rotation of it by 1292 (predicted 1292); palindromic rotations of the class: [1292]
+     w central: False; w[1:-1] central: False; w == rounding word: True; w == cut(610,987): True (corner ties 0); w == prefix of x: True
+sigma^6(a): len   4181 = F_19; Parikh (#a,#c) = (1597,2584) = Q^{3n} column 1: True
+     palindrome True, centre letter a; balanced (brute force, 0.0s) True; gcd(#a,#c) = 1
+     Christoffel a.P.c of slope #c/#a = 2584/1597: P palindrome True, P central True; w = rotation of it by 1292 (predicted 1292); palindromic rotations of the class: [1292]
+     w central: False; w[1:-1] central: False; w == rounding word: True; w == cut(1597,2584): True (corner ties 0); w == prefix of x: True
+sigma^6(c): len   6765 = F_20; Parikh (#a,#c) = (2584,4181) = Q^{3n} column 2: True
+     palindrome True, centre letter c; balanced (brute force, 0.0s) True; gcd(#a,#c) = 1
+     Christoffel a.P.c of slope #c/#a = 4181/2584: P palindrome True, P central True; w = rotation of it by 1292 (predicted 1292); palindromic rotations of the class: [1292]
+     w central: False; w[1:-1] central: False; w == rounding word: True; w == cut(2584,4181): True (corner ties 0); w == prefix of x: True
+sigma^7(a): len  17711 = F_22; Parikh (#a,#c) = (6765,10946) = Q^{3n} column 1: True
+     palindrome True, centre letter a; balanced (brute force, 0.1s) True; gcd(#a,#c) = 1
+     Christoffel a.P.c of slope #c/#a = 10946/6765: P palindrome True, P central True; w = rotation of it by 12238 (predicted 12238); palindromic rotations of the class: [12238]
+     w central: False; w[1:-1] central: False; w == rounding word: True; w == cut(6765,10946): True (corner ties 0); w == prefix of x: True
+sigma^7(c): len  28657 = F_23; Parikh (#a,#c) = (10946,17711) = Q^{3n} column 2: True
+     palindrome True, centre letter c; balanced (brute force, 0.3s) True; gcd(#a,#c) = 1
+     Christoffel a.P.c of slope #c/#a = 17711/10946: P palindrome True, P central True; w = rotation of it by 23184 (predicted 23184); palindromic rotations of the class: [23184]
+     w central: False; w[1:-1] central: False; w == rounding word: True; w == cut(10946,17711): True (corner ties 0); w == prefix of x: True
+sigma^8(a): len  75025 = F_25; Parikh (#a,#c) = (28657,46368) = Q^{3n} column 1: True
+     palindrome True, centre letter a; balanced (brute force, 1.5s) True; gcd(#a,#c) = 1
+     Christoffel a.P.c of slope #c/#a = 46368/28657: P palindrome True, P central True; w = rotation of it by 23184 (predicted 23184); palindromic rotations of the class: [23184]
+     w central: False; w[1:-1] central: False; w == rounding word: True; w == cut(28657,46368): True (corner ties 0); w == prefix of x: True
+sigma^8(c): len 121393 = F_26; Parikh (#a,#c) = (46368,75025) = Q^{3n} column 2: True
+     palindrome True, centre letter c; balanced (brute force, 3.8s) True; gcd(#a,#c) = 1
+     Christoffel a.P.c of slope #c/#a = 75025/46368: P palindrome True, P central True; w = rotation of it by 23184 (predicted 23184); palindromic rotations of the class: [23184]
+     w central: False; w[1:-1] central: False; w == rounding word: True; w == cut(46368,75025): True (corner ties 0); w == prefix of x: True
+summary: all Parikh == Q^{3n} columns: True; all palindromes: True; all balanced: True; all in Christoffel class: True; all == centre-to-centre cut with no corner: True; all prefixes of x: True
+
+== C. the fixed point x = lim sigma^n(c) ==
+sigma^8(c) (len 121393) == prefix of s_{1/phi,1/2}, x(k) = round((k+1)/phi) - round(k/phi): True
+sigma(x) == x on the first 121393 letters: True
+letter frequencies in sigma^8(c): a 0.381966011 (1/phi^2 = 0.381966011), c 0.618033989 (1/phi = 0.618033989)
+x       = cacaccaccacaccaccacaccacaccaccacaccacaccaccacaccaccacaccacac
+c_alpha = caccacaccaccacaccacaccaccacaccaccacaccacaccaccacaccacaccacca (Fibonacci/characteristic word, same slope: different word)
+lengths l <= 121393 with x[0:l] a palindrome (Manacher, odd and even): [1, 3, 5, 13, 21, 55, 89, 233, 377, 987, 1597, 4181, 6765, 17711, 28657, 75025, 121393]
+odd Fibonacci numbers F_m (m>=2, 3 !| m) <= 121393: [1, 3, 5, 13, 21, 55, 89, 233, 377, 987, 1597, 4181, 6765, 17711, 28657, 75025, 121393]  equal: True
+brute-force cross-check of the Manacher list for l <= 3000: True
+prefixes x[0:F_m] vs centre-to-centre flights cut(F_{m-2},F_{m-1}), m = 2..26:
+   m= 2 len F_m=      1 leaper (     0,     1) colour-changing  : equal: True
+   m= 3 len F_m=      2 leaper (     1,     1) colour-preserving: flight meets a corner (1 tie); x-prefix = resolution 'ca' at the corner: True
+   m= 4 len F_m=      3 leaper (     1,     2) colour-changing  : equal: True
+   m= 5 len F_m=      5 leaper (     2,     3) colour-changing  : equal: True
+   m= 6 len F_m=      8 leaper (     3,     5) colour-preserving: flight meets a corner (1 tie); x-prefix = resolution 'ac' at the corner: True
+   m= 7 len F_m=     13 leaper (     5,     8) colour-changing  : equal: True
+   m= 8 len F_m=     21 leaper (     8,    13) colour-changing  : equal: True
+   m= 9 len F_m=     34 leaper (    13,    21) colour-preserving: flight meets a corner (1 tie); x-prefix = resolution 'ca' at the corner: True
+   m=10 len F_m=     55 leaper (    21,    34) colour-changing  : equal: True
+   m=11 len F_m=     89 leaper (    34,    55) colour-changing  : equal: True
+   m=12 len F_m=    144 leaper (    55,    89) colour-preserving: flight meets a corner (1 tie); x-prefix = resolution 'ac' at the corner: True
+   m=13 len F_m=    233 leaper (    89,   144) colour-changing  : equal: True
+   m=14 len F_m=    377 leaper (   144,   233) colour-changing  : equal: True
+   m=15 len F_m=    610 leaper (   233,   377) colour-preserving: flight meets a corner (1 tie); x-prefix = resolution 'ca' at the corner: True
+   m=16 len F_m=    987 leaper (   377,   610) colour-changing  : equal: True
+   m=17 len F_m=   1597 leaper (   610,   987) colour-changing  : equal: True
+   m=18 len F_m=   2584 leaper (   987,  1597) colour-preserving: flight meets a corner (1 tie); x-prefix = resolution 'ac' at the corner: True
+   m=19 len F_m=   4181 leaper (  1597,  2584) colour-changing  : equal: True
+   m=20 len F_m=   6765 leaper (  2584,  4181) colour-changing  : equal: True
+   m=21 len F_m=  10946 leaper (  4181,  6765) colour-preserving: flight meets a corner (1 tie); x-prefix = resolution 'ca' at the corner: True
+   m=22 len F_m=  17711 leaper (  6765, 10946) colour-changing  : equal: True
+   m=23 len F_m=  28657 leaper ( 10946, 17711) colour-changing  : equal: True
+   m=24 len F_m=  46368 leaper ( 17711, 28657) colour-preserving: flight meets a corner (1 tie); x-prefix = resolution 'ac' at the corner: True
+   m=25 len F_m=  75025 leaper ( 28657, 46368) colour-changing  : equal: True
+   m=26 len F_m= 121393 leaper ( 46368, 75025) colour-changing  : equal: True
+bi-infinite fixed point rev(x).x: unique seed c.c (sigma(y) ends with c, sigma(z) starts with c); 'cc' occurs in x: True
+elapsed 6.9s

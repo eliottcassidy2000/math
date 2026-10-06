@@ -1,0 +1,72 @@
+== (a) Q^n mod F_n and the Pisano period of F_n ==
+n = 1..60: Q^n == F_{n-1} I mod F_n: True; Cassini: True; Q^{2n} == (-1)^n I mod F_n: True
+ n   F_n  pi(F_n)  4n  pi | 4n  rule(2n even>=4, 4n odd>=5)
+ 1     1      1     4   True   -
+ 2     1      1     8   True   -
+ 3     2      3    12   True   -
+ 4     3      8    16   True   8
+ 5     5     20    20   True   20
+ 6     8     12    24   True   12
+ 7    13     28    28   True   28
+ 8    21     16    32   True   16
+ 9    34     36    36   True   36
+10    55     20    40   True   20
+11    89     44    44   True   44
+12   144     24    48   True   24
+13   233     52    52   True   52
+14   377     28    56   True   28
+15   610     60    60   True   60
+16   987     32    64   True   32
+17  1597     68    68   True   68
+18  2584     36    72   True   36
+19  4181     76    76   True   76
+20  6765     40    80   True   40
+all n <= 20 consistent: True (exceptions of the rule: pi(F_1)=pi(F_2)=1, pi(F_3)=pi(2)=3)
+
+== (b) N = 8: cycle decomposition of Q on the 64 squares ==
+orbit length multiset: [(1, 1), (3, 1), (6, 2), (12, 4)]  #orbits: 8  order of Q mod 8: 12
+  len  1 start (0, 0): colour(0,1) = (1,0); mod-2 classes {(0, 0): 1}; rings {3: 1}
+      orbit: [(0, 0)]
+  len  3 start (0, 4): colour(0,1) = (3,0); mod-2 classes {(0, 0): 3}; rings {0: 1, 3: 2}
+      orbit: [(0, 4), (4, 4), (4, 0)]
+  len  6 start (0, 2): colour(0,1) = (6,0); mod-2 classes {(0, 0): 6}; rings {1: 2, 2: 2, 3: 2}
+      orbit: [(0, 2), (2, 2), (2, 4), (4, 6), (6, 2), (2, 0)]
+  len  6 start (0, 6): colour(0,1) = (6,0); mod-2 classes {(0, 0): 6}; rings {1: 1, 2: 3, 3: 2}
+      orbit: [(0, 6), (6, 6), (6, 4), (4, 2), (2, 6), (6, 0)]
+  len 12 start (0, 1): colour(0,1) = (4,8); mod-2 classes {(0, 1): 4, (1, 0): 4, (1, 1): 4}; rings {1: 4, 2: 2, 3: 6}
+      orbit: [(0, 1), (1, 1), (1, 2), (2, 3), (3, 5), (5, 0), (0, 5), (5, 5), (5, 2), (2, 7), (7, 1), (1, 0)]
+  len 12 start (0, 3): colour(0,1) = (4,8); mod-2 classes {(0, 1): 4, (1, 0): 4, (1, 1): 4}; rings {0: 1, 1: 1, 2: 3, 3: 7}
+      orbit: [(0, 3), (3, 3), (3, 6), (6, 1), (1, 7), (7, 0), (0, 7), (7, 7), (7, 6), (6, 5), (5, 3), (3, 0)]
+  len 12 start (1, 3): colour(0,1) = (4,8); mod-2 classes {(0, 1): 4, (1, 0): 4, (1, 1): 4}; rings {0: 2, 1: 2, 2: 2, 3: 6}
+      orbit: [(1, 3), (3, 4), (4, 7), (7, 3), (3, 2), (2, 5), (5, 7), (7, 4), (4, 3), (3, 7), (7, 2), (2, 1)]
+  len 12 start (1, 4): colour(0,1) = (4,8); mod-2 classes {(0, 1): 4, (1, 0): 4, (1, 1): 4}; rings {1: 2, 2: 8, 3: 2}
+      orbit: [(1, 4), (4, 5), (5, 1), (1, 6), (6, 7), (7, 5), (5, 4), (4, 1), (1, 5), (5, 6), (6, 3), (3, 1)]
+image of ring r under Q, ring histogram: {0: [(2, 1), (3, 3)], 1: [(1, 4), (2, 4), (3, 4)], 2: [(0, 1), (1, 4), (2, 11), (3, 4)], 3: [(0, 3), (1, 4), (2, 4), (3, 17)]}
+ring constant on some orbit of length > 1: False
+blocks of the join (finest partition coarser than both orbits and rings): 1
+blocks of the join of orbits and colours: 1
+translations w with (v -> Qv+w) commuting with the central half-turn v -> (7,7)-v: [] (needs 2w = (Q-I)(1,1) = (0,1) mod 8: impossible)
+colour of Q(v) equals column parity of v (x mod 2): True
+Q^3 and -Q^3 preserve every colour class and every class mod 2 on Z_8^2: True
+
+== (c) |Fix(Q^j on Z_N^2)| = prod gcd(d_i, N) with the invariant factors of O_j (Prop. 7.3) ==
+SNF(Q^j - I) == Prop. 7.3 factors and |O_j| = |L_j - 1 - (-1)^j| for j = 1..60; failures: []
+pairs (N,j) checked: 1044 ; |Fix| and group type Z/gcd(d1,N) + Z/gcd(d2,N) mismatches: []
+chessboard N = 8: |Fix(Q^j)| for j = 1..24: [1, 1, 4, 1, 1, 16, 1, 1, 4, 1, 1, 64, 1, 1, 4, 1, 1, 16, 1, 1, 4, 1, 1, 64]
+
+== (d) Q mod 2 and the Fibonacci leapers ==
+Q mod 2 on the nonzero classes: (1, 0) -> (0, 1) -> (1, 1) -> (1, 0) ; order of Q mod 2: 3
+  n= 0 Q^n(0,1) = (  0,  1) rook/wazir   mod 2 = (0, 1)  colour-preserving: False  n = 1 mod 3: False
+  n= 1 Q^n(0,1) = (  1,  1) bishop/ferz  mod 2 = (1, 1)  colour-preserving: True   n = 1 mod 3: True
+  n= 2 Q^n(0,1) = (  1,  2) knight       mod 2 = (1, 0)  colour-preserving: False  n = 1 mod 3: False
+  n= 3 Q^n(0,1) = (  2,  3) zebra        mod 2 = (0, 1)  colour-preserving: False  n = 1 mod 3: False
+  n= 4 Q^n(0,1) = (  3,  5)              mod 2 = (1, 1)  colour-preserving: True   n = 1 mod 3: True
+  n= 5 Q^n(0,1) = (  5,  8)              mod 2 = (1, 0)  colour-preserving: False  n = 1 mod 3: False
+  n= 6 Q^n(0,1) = (  8, 13)              mod 2 = (0, 1)  colour-preserving: False  n = 1 mod 3: False
+  n= 7 Q^n(0,1) = ( 13, 21)              mod 2 = (1, 1)  colour-preserving: True   n = 1 mod 3: True
+  n= 8 Q^n(0,1) = ( 21, 34)              mod 2 = (1, 0)  colour-preserving: False  n = 1 mod 3: False
+  n= 9 Q^n(0,1) = ( 34, 55)              mod 2 = (0, 1)  colour-preserving: False  n = 1 mod 3: False
+  n=10 Q^n(0,1) = ( 55, 89)              mod 2 = (1, 1)  colour-preserving: True   n = 1 mod 3: True
+  n=11 Q^n(0,1) = ( 89,144)              mod 2 = (1, 0)  colour-preserving: False  n = 1 mod 3: False
+  n=12 Q^n(0,1) = (144,233)              mod 2 = (0, 1)  colour-preserving: False  n = 1 mod 3: False
+Q^3 = ((1, 2), (2, 3)) (columns: knight (1,2), zebra (2,3));  -Q^3 mod 2 = ((1, 0), (0, 1)) = I

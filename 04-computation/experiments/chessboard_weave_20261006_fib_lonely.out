@@ -1,0 +1,34 @@
+ n   (F_n, F_n+1)        leaper    delta (exact)           = floor((a+b)/2)/(a+b)  attained at k/(a+b)  colour-pres.  delta = 1/2
+ 0 (       0,       1) rook     0                      True   -                    False         False
+ 1 (       1,       1) bishop   1/2                    True   1/2                  True          True
+ 2 (       1,       2) knight   1/3                    True   1/3                  False         False
+ 3 (       2,       3) zebra    2/5                    True   1/5                  False         False
+ 4 (       3,       5)          1/2                    True   4/8                  True          True
+ 5 (       5,       8)          6/13                   True   4/13                 False         False
+ 6 (       8,      13)          10/21                  True   4/21                 False         False
+ 7 (      13,      21)          1/2                    True   17/34                True          True
+ 8 (      21,      34)          27/55                  True   17/55                False         False
+ 9 (      34,      55)          44/89                  True   17/89                False         False
+10 (      55,      89)          1/2                    True   72/144               True          True
+11 (      89,     144)          116/233                True   72/233               False         False
+12 (     144,     233)          188/377                True   72/377               False         False
+13 (     233,     377)          1/2                    True   305/610              True          True
+14 (     377,     610)          493/987                True   305/987              False         False
+15 (     610,     987)          798/1597               True   305/1597             False         False
+16 (     987,    1597)          1/2                    True   1292/2584            True          True
+17 (    1597,    2584)          2090/4181              True   1292/4181            False         False
+18 (    2584,    4181)          3382/6765              True   1292/6765            False         False
+19 (    4181,    6765)          1/2                    True   5473/10946           True          True
+20 (    6765,   10946)          8855/17711             True   5473/17711           False         False
+21 (   10946,   17711)          14328/28657            True   5473/28657           False         False
+22 (   17711,   28657)          1/2                    True   23184/46368          True          True
+23 (   28657,   46368)          37512/75025            True   23184/75025          False         False
+24 (   46368,   75025)          60696/121393           True   23184/121393         False         False
+25 (   75025,  121393)          1/2                    True   98209/196418         True          True
+26 (  121393,  196418)          158905/317811          True   98209/317811         False         False
+27 (  196418,  317811)          257114/514229          True   98209/514229         False         False
+28 (  317811,  514229)          1/2                    True   416020/832040        True          True
+29 (  514229,  832040)          673134/1346269         True   416020/1346269       False         False
+30 (  832040, 1346269)          1089154/2178309        True   416020/2178309       False         False
+all n = 0..30: global max over all breakpoints == max over k/(a+b) == floor((a+b)/2)/(a+b), and delta = 1/2 exactly iff a+b even (colour-preserving): True
+for a+b odd: delta = 1/2 - 1/(2(a+b)); e.g. knight 1/3, zebra 2/5, (5,8): 6/13, (8,13): 10/21

@@ -1,0 +1,2 @@
+8x8: 60 random closed tours; law (#inside ring 3) == (#inside rings 1-2) >= 1 holds: True ; k values seen: [4, 5, 6, 7, 8]
+6x6: 60 random closed tours; law (#inside ring 2) == 4 + (#inside rings 0-1) holds: True ; outer-ring stays seen: [5, 6, 7, 8]
