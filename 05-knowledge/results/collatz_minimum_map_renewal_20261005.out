@@ -1,0 +1,88 @@
+== Law of first-descent blocks (DP to l=200): total 0.99999995, E[l]=3.49264, E[A]=6.98528, E[A]/E[l]=2.00000 (Wald: 2), E[excess]=1.44958 = (2-log2 3)E[l]=1.44958
+   tails p_q = P(block rate > q): 3:0.25903 8:0.17631 16:0.08008 32:0.05545 100:0.00668
+   naive prediction c_q = -log2(1-p_q)/E[excess]: 3:0.2984 8:0.1930 16:0.0831 32:0.0568 100:0.0067
+   killed-renewal prediction (root of sum_good p(t) 2^(c excess) = 1): 3:0.2275 8:0.1559 16:0.0751 32:0.0527 100:0.0066
+   census below 2^22 in 2s
+== R1. Block types along the chain, sources in [2^21, 2^22) ==
+   block 1: 1048576 sources, TV distance to the cylinder law 0.0010, mean length 3.492 (law 3.493)
+   block 2: 1048576 sources, TV distance to the cylinder law 0.0030, mean length 3.480 (law 3.493)
+   block 3: 1048562 sources, TV distance to the cylinder law 0.0044, mean length 3.478 (law 3.493)
+   block 4: 1048489 sources, TV distance to the cylinder law 0.0072, mean length 3.484 (law 3.493)
+   block 5: 1048126 sources, TV distance to the cylinder law 0.0129, mean length 3.476 (law 3.493)
+   block 6: 1046984 sources, TV distance to the cylinder law 0.0259, mean length 3.489 (law 3.493)
+   block 2 given block 1 of type (1, 2): 262144 sources, TV to the unconditional law 0.0022
+   block 2 given block 1 of type (1, 3): 131072 sources, TV to the unconditional law 0.0034
+   block 2 given block 1 of type (2, 4): 65536 sources, TV to the unconditional law 0.0048
+   block 2 given block 1 of type (5, 8): 28672 sources, TV to the unconditional law 0.0088
+== R2. Number of running minima and odd time per dyadic block ==
+   [2^ 8,2^ 9): mean blocks 5.539 (renewal 5.864), mean tau 21.90 (renewal 20.48)
+   [2^ 9,2^10): mean blocks 6.312 (renewal 6.554), mean tau 24.55 (renewal 22.89)
+   [2^10,2^11): mean blocks 7.102 (renewal 7.243), mean tau 27.47 (renewal 25.30)
+   [2^11,2^12): mean blocks 7.815 (renewal 7.933), mean tau 30.14 (renewal 27.71)
+   [2^12,2^13): mean blocks 8.490 (renewal 8.623), mean tau 32.26 (renewal 30.12)
+   [2^13,2^14): mean blocks 9.106 (renewal 9.313), mean tau 34.20 (renewal 32.53)
+   [2^14,2^15): mean blocks 9.765 (renewal 10.003), mean tau 36.27 (renewal 34.94)
+   [2^15,2^16): mean blocks 10.501 (renewal 10.693), mean tau 38.82 (renewal 37.35)
+   [2^16,2^17): mean blocks 11.181 (renewal 11.383), mean tau 41.37 (renewal 39.76)
+   [2^17,2^18): mean blocks 11.862 (renewal 12.072), mean tau 43.78 (renewal 42.16)
+   [2^18,2^19): mean blocks 12.551 (renewal 12.762), mean tau 46.19 (renewal 44.57)
+   [2^19,2^20): mean blocks 13.240 (renewal 13.452), mean tau 48.52 (renewal 46.98)
+   [2^20,2^21): mean blocks 13.931 (renewal 14.142), mean tau 50.92 (renewal 49.39)
+   [2^21,2^22): mean blocks 14.623 (renewal 14.832), mean tau 53.33 (renewal 51.80)
+== R3. Coverage of F_q per dyadic block and fitted exponents ==
+   q=  3: coverage at 2^10..2^21: 0.2051 0.1289 0.0806 0.0504 ; fitted exponent 0.2250, killed-renewal 0.2275, naive 0.2984
+   q=  8: coverage at 2^10..2^21: 0.3555 0.2549 0.1807 0.1318 ; fitted exponent 0.1577, killed-renewal 0.1559, naive 0.1930
+   q= 16: coverage at 2^10..2^21: 0.5449 0.4783 0.4021 0.3471 ; fitted exponent 0.0727, killed-renewal 0.0751, naive 0.0831
+   q= 32: coverage at 2^10..2^21: 0.6895 0.6113 0.5463 0.4924 ; fitted exponent 0.0507, killed-renewal 0.0527, naive 0.0568
+   q=100: coverage at 2^10..2^21: 0.9863 0.9712 0.9594 0.9465 ; fitted exponent 0.0062, killed-renewal 0.0066, naive 0.0067
+== R4. Popularity T(x) = number of sources below 2^22 whose chain passes through x ==
+   total chain visits (excluding ROOT) 27121498; top 15 running minima:
+     x=      5 T= 1967555 (0.9382 of sources) own block (l,A)=(1,4) q_own=1 q(x)=1
+     x=     23 T=  909054 (0.4335 of sources) own block (l,A)=(3,7) q_own=2 q(x)=2
+     x=     11 T=  532035 (0.2537 of sources) own block (l,A)=(3,6) q_own=3 q(x)=3
+     x=     61 T=  469990 (0.2241 of sources) own block (l,A)=(1,3) q_own=1 q(x)=2
+     x=      7 T=  401346 (0.1914 of sources) own block (l,A)=(4,7) q_own=7 q(x)=7
+     x=     19 T=  375802 (0.1792 of sources) own block (l,A)=(2,4) q_own=3 q(x)=3
+     x=     37 T=  368480 (0.1757 of sources) own block (l,A)=(1,4) q_own=1 q(x)=7
+     x=     47 T=  198791 (0.0948 of sources) own block (l,A)=(34,55) q_own=31 q(x)=31
+     x=     31 T=  194671 (0.0928 of sources) own block (l,A)=(35,56) q_own=67 q(x)=67
+     x=     91 T=  184195 (0.0878 of sources) own block (l,A)=(28,45) q_own=46 q(x)=46
+     x=     59 T=  159437 (0.0760 of sources) own block (l,A)=(4,8) q_own=3 q(x)=3
+     x=     49 T=  147525 (0.0703 of sources) own block (l,A)=(1,2) q_own=3 q(x)=7
+     x=     43 T=  144797 (0.0690 of sources) own block (l,A)=(3,5) q_own=13 q(x)=13
+     x=     65 T=  143004 (0.0682 of sources) own block (l,A)=(1,2) q_own=3 q(x)=7
+     x=     29 T=  124018 (0.0591 of sources) own block (l,A)=(1,3) q_own=1 q(x)=3
+   share of all visits at the top    10 minima: 0.2065
+   share of all visits at the top   100 minima: 0.3766
+   share of all visits at the top  1000 minima: 0.5512
+   share of all visits at the top 10000 minima: 0.7277
+   fraction of x in [2^8,2^16) with T(x) >=    10: 0.99825
+   fraction of x in [2^8,2^16) with T(x) >=   100: 0.62629
+   fraction of x in [2^8,2^16) with T(x) >=  1000: 0.09127
+   fraction of x in [2^8,2^16) with T(x) >= 10000: 0.00607
+== R5. In-degrees of the minimum map among sources below 2^22 ==
+   leaves have in-degree 0; units: mean in-degree 1.500, fraction with in-degree 0: 0.3587, max 34 at x=17711
+== R4b. Renewal density: chain visits per dyadic block per source starting above 2^(k+6) ==
+   block [2^8,2^9): visits per source above = 0.6654 (renewal 1/E[excess] = 0.6899)
+   block [2^10,2^11): visits per source above = 0.6967 (renewal 1/E[excess] = 0.6899)
+   block [2^12,2^13): visits per source above = 0.6681 (renewal 1/E[excess] = 0.6899)
+   block [2^14,2^15): visits per source above = 0.6867 (renewal 1/E[excess] = 0.6899)
+   block [2^16,2^17): visits per source above = 0.6961 (renewal 1/E[excess] = 0.6899)
+   in-degree at odd Fibonacci numbers: [(233, 13), (377, 10), (987, 0), (1597, 11), (4181, 8), (6765, 0), (17711, 34), (28657, 8), (75025, 7), (121393, 4), (317811, 0), (514229, 2)] ; mean in-degree of units in the same range 3.569, 99.9th percentile 20
+   percentile rank of the unit Fibonacci in-degrees within a factor-2 window: 233:13(0.362) 377:10(0.106) 1597:11(0.463) 4181:8(0.230) 17711:34(1.000) 28657:8(0.648) 75025:7(0.711) 121393:4(0.303) 514229:2(0.249)
+== R6. Probes: Hankel determinants of the exact block-length law c_l, and the Kraft deficit ==
+   exact c_l, l=1..10: 1/2 1/8 1/8 3/64 7/128 3/128 15/1024 85/4096 173/16384 119/8192
+   Hankel determinants H_k, k=1..8: 1/2 3/64 1/1024 -171/16777216 -44143/274877906944 79541867/36028797018963968 559443728387/75557863725914323419136 4862652388148177/633825300114114700748351602688
+   (alpha,beta) Somos-4 fit from H_5,H_6: alpha=-16562823927/15463321088 beta=-153592604497/247413137408; holds at H_7,H_8: False
+   Kraft deficit 1 - sum_{l<=L} c_l (exact law): L=5: 1.484e-01 L=10: 6.451e-02 L=20: 1.925e-02 L=40: 2.986e-03 L=60: 6.152e-04
+== R7. Hankel transforms of block-length laws at rational slopes p/q (control for the irrational case) ==
+   slope 2/1: c_l = 1/2 1/8 1/16 5/128 7/256 21/1024 ...; H_1..H_10 = 1/2 1/64 1/32768 1/268435456 1/35184372088832 1/73786976294838206464 1/2475880078570760549798248448 1/1329227995784915872903807060280344576 1/11417981541647679048466287755595961091061972992 1/1569275433846670190958947355801916604025588861116008628224; Somos-4 fit holds to H_10: None; all H>0: True
+   slope 3/2: c_l = 1/2 1/4 1/16 1/16 3/128 7/256 ...; H_1..H_10 = 1/2 -1/32 -1/1024 3/1048576 141/34359738368 -611/1125899906842624 -10335/295147905179352825856 256785/1237940039285380274899124224 49752659/83076749736557242056487941267521536 -7067804205/44601490397061246283071436545296723011960832; Somos-4 fit holds to H_10: False; all H>0: False
+   slope 8/5: c_l = 1/2 1/8 1/8 3/64 7/128 3/128 ...; H_1..H_10 = 1/2 3/64 1/1024 -171/16777216 -44143/274877906944 79541867/36028797018963968 559443728387/75557863725914323419136 4862652388148177/633825300114114700748351602688 -247207215098265619351/85070591730234615865843651857942052864 -400036375667633373747033219/182687704666362864775460604089535377456991567872; Somos-4 fit holds to H_10: False; all H>0: False
+   slope 19/12: c_l = 1/2 1/8 1/8 3/64 7/128 3/128 ...; H_1..H_10 = 1/2 3/64 1/1024 -171/16777216 -44143/274877906944 79541867/36028797018963968 -356710410253/75557863725914323419136 -19232334978905959/633825300114114700748351602688 -793056006006319073151/10633823966279326983230456482242756608 3429729171513839067101021403/45671926166590716193865151022383844364247891968; Somos-4 fit holds to H_10: False; all H>0: False
+   slope 65/41: c_l = 1/2 1/8 1/8 3/64 7/128 3/128 ...; H_1..H_10 = 1/2 3/64 1/1024 -171/16777216 -44143/274877906944 79541867/36028797018963968 559443728387/75557863725914323419136 4862652388148177/633825300114114700748351602688 39754776151267907037/2658455991569831745807614120560689152 -4421909695033352125108102521/45671926166590716193865151022383844364247891968; Somos-4 fit holds to H_10: False; all H>0: False
+   slope 2/1 identity: H_k = 2^(-k(2k-1)) for k<=10 and H_n H_(n-4) = 2^-12 H_(n-1) H_(n-3): Somos-4 with beta = 0 (FINITE-EXACT)
+   slope log2 3: H_1..H_10 signs = +++--++++-; Somos-4 fit holds to H_10: False
+== Summary ==
+   checks: 12, total time 4.3s
+   json written: 05-knowledge/results/collatz_minimum_map_renewal_20261005.json
