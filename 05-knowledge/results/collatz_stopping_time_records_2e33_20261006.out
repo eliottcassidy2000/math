@@ -1,0 +1,55 @@
+max sigma_T below 2^1 (2): 0
+record: sigma_T(3) = 4
+max sigma_T below 2^2 (4): 4
+record: sigma_T(7) = 7
+max sigma_T below 2^3 (8): 7
+max sigma_T below 2^4 (16): 7
+record: sigma_T(27) = 59
+max sigma_T below 2^5 (32): 59
+max sigma_T below 2^6 (64): 59
+max sigma_T below 2^7 (128): 59
+max sigma_T below 2^8 (256): 59
+max sigma_T below 2^9 (512): 59
+record: sigma_T(703) = 81
+max sigma_T below 2^10 (1024): 81
+max sigma_T below 2^11 (2048): 81
+max sigma_T below 2^12 (4096): 81
+max sigma_T below 2^13 (8192): 81
+record: sigma_T(10087) = 105
+max sigma_T below 2^14 (16384): 105
+max sigma_T below 2^15 (32768): 105
+record: sigma_T(35655) = 135
+max sigma_T below 2^16 (65536): 135
+max sigma_T below 2^17 (131072): 135
+max sigma_T below 2^18 (262144): 135
+record: sigma_T(270271) = 164
+record: sigma_T(362343) = 165
+record: sigma_T(381727) = 173
+max sigma_T below 2^19 (524288): 173
+record: sigma_T(626331) = 176
+record: sigma_T(1027431) = 183
+max sigma_T below 2^20 (1048576): 183
+record: sigma_T(1126015) = 224
+max sigma_T below 2^21 (2097152): 224
+max sigma_T below 2^22 (4194304): 224
+record: sigma_T(8088063) = 246
+max sigma_T below 2^23 (8388608): 246
+record: sigma_T(13421671) = 287
+max sigma_T below 2^24 (16777216): 287
+record: sigma_T(20638335) = 292
+record: sigma_T(26716671) = 298
+max sigma_T below 2^25 (33554432): 298
+record: sigma_T(56924955) = 308
+record: sigma_T(63728127) = 376
+max sigma_T below 2^26 (67108864): 376
+max sigma_T below 2^27 (134217728): 376
+record: sigma_T(217740015) = 395
+max sigma_T below 2^28 (268435456): 395
+max sigma_T below 2^29 (536870912): 395
+max sigma_T below 2^30 (1073741824): 395
+record: sigma_T(1200991791) = 398
+record: sigma_T(1827397567) = 433
+max sigma_T below 2^31 (2147483648): 433
+record: sigma_T(2788008987) = 447
+max sigma_T below 2^32 (4294967296): 447
+max sigma_T below X=8589934592: 447

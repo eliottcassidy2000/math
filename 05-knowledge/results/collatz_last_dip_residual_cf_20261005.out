@@ -48,4 +48,8 @@ X = 2.8E+19: lengths l (= q) surviving (R1) at n = X, with window [X, N_l]
    l = 64021008208555  A = 101470897268921  delta_l = 1.145e-14  n in [2.8E+19, 1863570006211759996460080482]  log2 N_l = 90.6
   smallest residual length: l = 6586818670  (an excursion of 6586818670 odd steps above n, returning to n exactly)
 
-Any violation of the last-dip lemma with source above X must use one of the listed (l, A) and lie in its n-window.
+CAVEAT (2026-10-06): the Beatty gate 1 - {l log2 3} < (l+2)/(3 X ln 2) is linear in l, so sums and small multiples of
+qualifying lengths qualify as well: the residual set is the Bohr set B(X) = {l : 1 - {l log2 3} < (l+2)/(3 X ln 2)},
+of which this list shows only the convergents and intermediate fractions.  The SMALLEST residual length is still the
+first upper convergent denominator past sqrt(3 X ln 2 / 2), because below that bound the gate forces a convergent.
+The brute-force script (collatz_last_dip_residual_20261005.py) enumerates B(X) exactly for l <= 1e5.

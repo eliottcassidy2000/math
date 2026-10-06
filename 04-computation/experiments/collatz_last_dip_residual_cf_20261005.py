@@ -101,4 +101,8 @@ for X in [2 ** 28, Decimal("2.8e19")]:
     if survivors:
         lmin = min(s[0] for s in survivors)
         print(f"  smallest residual length: l = {lmin}  (an excursion of {lmin} odd steps above n, returning to n exactly)")
-print("\nAny violation of the last-dip lemma with source above X must use one of the listed (l, A) and lie in its n-window.")
+print("\nCAVEAT (2026-10-06): the Beatty gate 1 - {l log2 3} < (l+2)/(3 X ln 2) is linear in l, so sums and small multiples of")
+print("qualifying lengths qualify as well: the residual set is the Bohr set B(X) = {l : 1 - {l log2 3} < (l+2)/(3 X ln 2)},")
+print("of which this list shows only the convergents and intermediate fractions.  The SMALLEST residual length is still the")
+print("first upper convergent denominator past sqrt(3 X ln 2 / 2), because below that bound the gate forces a convergent.")
+print("The brute-force script (collatz_last_dip_residual_20261005.py) enumerates B(X) exactly for l <= 1e5.")

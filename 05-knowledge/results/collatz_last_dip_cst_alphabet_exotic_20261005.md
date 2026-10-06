@@ -15,7 +15,7 @@ Kervaire–Milnor 1963; Milnor 1956; Brieskorn 1966. FINITE-EXACT: the C sweeps 
 (143,745,904 and 2,300,119,872 last-dip segments, no violation); `|F_m| = 2, 4, 11, 37, 143, 622` for `m = 3..8`; the Cartan
 determinants; the Kervaire–Milnor orders `k ≤ 7`. Typed verdicts in §5. Collatz OPEN; the Lemma's residual is
 explicit (§1.4) and is a statement about orbits with stopping time above `6.6·10^9`. Audit OWED on Props. 1.1–1.2.
-Scripts in `04-computation/experiments/`: `collatz_last_dip_sweep_20261005.c`, `collatz_last_dip_residual_20261005.py`,
+Scripts in `04-computation/experiments/`: `collatz_last_dip_sweep_20261005.c`, `collatz_stopping_time_records_20261006.c`, `collatz_last_dip_residual_20261005.py`,
 `collatz_last_dip_residual_cf_20261005.py`, `syracuse_window_alphabet_order_plus_path_macmini_20261005.py`, `order_plus_path_F8_macmini_20261005.py`,
 `trees5_dynkin_kervaire_milnor_20261005.py`; outputs `*.out` in this directory (§7).
 
@@ -102,16 +102,28 @@ note (`c_w/3^l ≤ (l/3) e^{l/(3n)}`) proves the Lemma for `l ≤ 3` outright an
 ### 1.4 The explicit residual (FINITE-EXACT via the continued fraction of `log_2 3`)
 
 `log_2 3 = [1; 1, 1, 2, 2, 3, 1, 5, 2, 23, 2, 2, 1, 1, 55, 1, 4, 3, 1, 1, 15, …]`. The Beatty gate at `n ≥ X` forces
-`1 - {l log_2 3} < (l+2)/(3 X ln 2)`, which for `l < √(3X ln 2/2)` makes `l` a convergent denominator of an upper
-convergent (`2^A > 3^l`), and in general an upper convergent or intermediate fraction. The surviving lengths with
-nonempty windows `[X, N_l]`:
+`1 - {l log_2 3} < (l+2)/(3 X ln 2)`. The residual length set is therefore the **Bohr set**
+`B(X) = {l : 1 - {l log_2 3} < (l+2)/(3 X ln 2)}`; since the gate is linear in `l`, sums and small multiples of
+qualifying lengths qualify too (at `X = 2^28`: `15601, 31202, 46803, 47468 = 15601 + 31867, 62404, 63069, …`).
+Below `√(3X ln 2/2)` the gate is stronger than `1/(2l)`, so there `l` must be an upper convergent denominator; hence the
+**smallest** residual length is the first upper convergent denominator past that bound. The table lists the smallest
+lengths and the convergent/intermediate-fraction members with nonempty windows `[X, N_l]`:
 
 | after sources `≤ X` are excluded | residual lengths `l` (odd steps of the excursion) | first window |
 |---|---|---|
 | `X = 2^20` (Python sweep) | 2291 lengths `≤ 10^5`, smallest `l = 2966` (`A = 4701`) | `n ∈ [2^20, 1.16·10^6]` |
-| `X = 2^28` (C sweep) | 21 lengths `≤ 10^14`; smallest `l = 15601` (`A = 24727`), then 47468, 79335, 190537, 10781274, … | `n ∈ [2^28, 2.86·10^8]` |
-| `X = 2^32` (C sweep) | smallest `l = 79335` (`A = 125743`, `δ_l = 3.7·10^{-6}`), then 190537, 10781274, … | `n ∈ [2^32, 7.2·10^9]` |
-| `X = 2.8·10^19` (CST, Rozier–Terracol) | 12 lengths `≤ 10^14`; smallest **`l = 6,586,818,670`** (`A = 10,439,860,591`, `δ_l = 1.0·10^{-11}`), then 72057431991, 137528045312, … | `n ∈ [2.8·10^19, 2.2·10^20]` |
+| `X = 2^28` (C sweep) | 12 lengths `≤ 10^5` (exact Bohr set); smallest `l = 15601` (`A = 24727`), then 31202, 46803, 47468, …, 79335; convergent members `≤ 10^14`: 15601, 47468, 79335, 190537, 10781274, … | `n ∈ [2^28, 2.86·10^8]` |
+| `X = 2^32` (C sweep) | one length `≤ 10^5`: `l = 79335` (`A = 125743`, `δ_l = 3.7·10^{-6}`); then 190537, 10781274, … | `n ∈ [2^32, 7.2·10^9]` |
+| `X = 2.8·10^19` (CST, Rozier–Terracol) | smallest **`l = 6,586,818,670`** (`A = 10,439,860,591`, `δ_l = 1.0·10^{-11}`), then its small multiples and 72057431991, 137528045312, … | `n ∈ [2.8·10^19, 2.2·10^20]` |
+
+**Independent stopping-time route (FINITE-EXACT, "wanted entries only").** A violation in the window `(l, A, [X, N_l])`
+needs a source `m* < N_l` with `T`-stopping time `σ_T(m*) > A`. The record sweep `collatz_stopping_time_records_20261006.c`
+gives `max σ_T(m) = 447` for `m < 2^32` (record holder `2788008987`; `183` below `2^20`, `287` below `2^24`, `395` below
+`2^28`), against `A ≥ 4701` for every residual length at `X = 2^20`, `A ≥ 24727` at `2^28`, `A = 125743` at `2^32`. So
+every residual window with `N_l ≤ 2^32` is empty without the CST input, and the two routes (direct last-dip sweep,
+stopping-time maxima) agree below `2^32`. The record is unchanged below `2^33` (still `447`), which empties the
+`l = 79335` window `[2^32, 7.2·10^9]`: the lemma holds for all `n < 2^33` with no CST input
+(`collatz_five_papers_synthesis_20261006.md` §5.1).
 
 So any violation of the last-dip lemma (and any non-cone element of `D`) is an orbit that stays above its
 target for at least `6.6·10^9` odd steps, i.e. has stopping time above `10^10`, starting from `m* > 2.8·10^19`.

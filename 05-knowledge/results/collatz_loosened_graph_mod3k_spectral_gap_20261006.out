@@ -1,0 +1,38 @@
+Loosened Collatz graph E_k on the units of Z/3^k: generators f(x) = 3x+1 (3-to-1 onto 1 mod 3), h(x) = x/2 (a single cycle)
+ k   |U_k|  gap lam2(NormLap)   Cheeger in [g/2, sqrt(2g)]  |lam2| directed  TV after 4k  TV after 8k  cycle-only gap
+ 2       6           0.666667             [0.3333, 1.1547]         0.500000     5.77e-03     1.74e-05        5.00e-01
+      directed spectrum moduli: {'=1': 1, '=1/2': 5, '=0': 0, 'other': 0};  TV after k, 2k steps: 3.690e-01, 7.143e-02;  stationary max/min: 8.000
+      predicted spectrum (1, -1/2, and e^(2 pi i j/L_m)/2 for 2<=m<=k, 3 does not divide j) matches: True  (max dev 1.7763568394002505e-15)
+ 3      18           0.333047             [0.1665, 0.8161]         0.500000     1.24e-03     3.15e-07        6.03e-02
+      directed spectrum moduli: {'=1': 1, '=1/2': 17, '=0': 0, 'other': 0};  TV after k, 2k steps: 4.723e-01, 8.256e-02;  stationary max/min: 28.787
+      predicted spectrum (1, -1/2, and e^(2 pi i j/L_m)/2 for 2<=m<=k, 3 does not divide j) matches: True  (max dev 1.764171984283214e-15)
+ 4      54           0.172529             [0.0863, 0.5874]         0.500000     2.95e-04     5.40e-09        6.76e-03
+      directed spectrum moduli: {'=1': 1, '=1/2': 53, '=0': 0, 'other': 0};  TV after k, 2k steps: 5.395e-01, 5.669e-02;  stationary max/min: 78.215
+      predicted spectrum (1, -1/2, and e^(2 pi i j/L_m)/2 for 2<=m<=k, 3 does not divide j) matches: True  (max dev 1.9038382692174193e-15)
+ 5     162           0.108801             [0.0544, 0.4665]         0.500000     8.91e-05     1.72e-10        7.52e-04
+      directed spectrum moduli: {'=1': 1, '=1/2': 161, '=0': 0, 'other': 0};  TV after k, 2k steps: 6.532e-01, 4.950e-02;  stationary max/min: 138.222
+      predicted spectrum (1, -1/2, and e^(2 pi i j/L_m)/2 for 2<=m<=k, 3 does not divide j) matches: True  (max dev 4.6696229858900045e-15)
+ 6     486           0.080115             [0.0401, 0.4003]         0.500000     2.99e-05     5.59e-12        8.36e-05
+      directed spectrum moduli: {'=1': 1, '=1/2': 485, '=0': 0, 'other': 0};  TV after k, 2k steps: 7.246e-01, 4.356e-02;  stationary max/min: 302.766
+      predicted spectrum (1, -1/2, and e^(2 pi i j/L_m)/2 for 2<=m<=k, 3 does not divide j) matches: True  (max dev 3.2085733530535506e-14)
+ 7    1458           0.065249             [0.0326, 0.3612]         0.500000     1.02e-05     1.63e-13        9.29e-06
+      directed spectrum moduli: {'=1': 1, '=1/2': 1457, '=0': 0, 'other': 0};  TV after k, 2k steps: 7.850e-01, 4.088e-02;  stationary max/min: 658.660
+      predicted spectrum (1, -1/2, and e^(2 pi i j/L_m)/2 for 2<=m<=k, 3 does not divide j) matches: True  (max dev 1.0074568568967719e-12)
+ 8    4374           0.055555             [0.0278, 0.3333]         0.500000     3.43e-06     4.92e-15        1.03e-06
+      directed spectrum moduli: {'=1': 1, '=1/2': 4373, '=0': 0, 'other': 0};  TV after k, 2k steps: 8.351e-01, 3.919e-02;  stationary max/min: 1210.143
+      predicted spectrum (1, -1/2, and e^(2 pi i j/L_m)/2 for 2<=m<=k, 3 does not divide j) matches: True  (max dev 4.733137455505489e-11)
+ 9   13122           0.047902             [0.0240, 0.3095]    (n too large)     1.16e-06     2.33e-15        1.15e-07
+
+If the gap stays bounded below as k grows, E_k is an expander family (a KLS-type dimension-free constant);
+if it decays like 1/k or 1/3^k it is not.  The cycle-only column is the control (gap ~ 1/|U_k|^2).
+log-log slope of the undirected gap vs |Z/3^k| over k >= 4: -0.224  (0 = expander, -1 = cycle-like in 1/N, -2 = pure cycle; -log_3 2 = -0.631 = halving per level)
+successive gap ratios gap_k/gap_(k+1): ['2.0017', '1.9304', '1.5857', '1.3581', '1.2278', '1.1745', '1.1598']
+
+Comparison: Chung--Diaconis--Graham affine walk x -> 2x, x -> 2x+1 on all of Z/3^k (classical fast mixer)
+  k=2: N=     9  NormLap gap 0.349580   directed |lam2| 0.5   spectrum {'=1': 1, '=1/2': 8, '=0': 0, 'other': 0}
+  k=3: N=    27  NormLap gap 0.208842   directed |lam2| 0.5   spectrum {'=1': 1, '=1/2': 26, '=0': 0, 'other': 0}
+  k=4: N=    81  NormLap gap 0.125584   directed |lam2| 0.5   spectrum {'=1': 1, '=1/2': 80, '=0': 0, 'other': 0}
+  k=5: N=   243  NormLap gap 0.082043   directed |lam2| 0.5   spectrum {'=1': 1, '=1/2': 242, '=0': 0, 'other': 0}
+  k=6: N=   729  NormLap gap 0.057302   directed |lam2| 0.5   spectrum {'=1': 1, '=1/2': 728, '=0': 0, 'other': 0}
+  k=7: N=  2187  NormLap gap 0.042137   directed |lam2| 0.5   spectrum {'=1': 1, '=1/2': 2186, '=0': 0, 'other': 0}
+  k=8: N=  6561  NormLap gap 0.032185   directed |lam2| None   spectrum None
