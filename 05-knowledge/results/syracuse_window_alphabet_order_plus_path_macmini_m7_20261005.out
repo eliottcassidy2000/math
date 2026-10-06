@@ -1,0 +1,155 @@
+theta = log2 3 = 1.584963
+
+==============================================================================
+m = 3: letters lumped above cap C_m = 3; 16 word types
+==============================================================================
+  |W_m^DESC| = 2  |W_m^ASC| = 2  |F_m| = 2  |all classes| = 2   distinct labeled DESC windows = 2, ASC = 2
+  W_m^DESC == F_m ? True      W_m^DESC == W_m^ASC (as sets)? True      converse(W_m^DESC) in F_m: True   |W_m^DESC u W_m^ASC| = 2
+  DESC alphabet (scores, c3, largest strong comp L, self-converse?, Haar mass, in ASC alphabet?):
+     (1, 1, 1)                  c3= 1 L=3  self-conv=True   mass=         1/2 = 0.50000   in ASC: True
+     (0, 1, 2)                  c3= 0 L=1  self-conv=True   mass=         1/2 = 0.50000   in ASC: True
+  regular 3-tournaments: 1 classes; in F_m: 1; in W_m^DESC: 1
+
+==============================================================================
+m = 4: letters lumped above cap C_m = 3; 64 word types
+==============================================================================
+  |W_m^DESC| = 4  |W_m^ASC| = 2  |F_m| = 4  |all classes| = 4   distinct labeled DESC windows = 5, ASC = 5
+  W_m^DESC == F_m ? True      W_m^DESC == W_m^ASC (as sets)? False      converse(W_m^DESC) in F_m: True   |W_m^DESC u W_m^ASC| = 4
+  DESC alphabet (scores, c3, largest strong comp L, self-converse?, Haar mass, in ASC alphabet?):
+     (1, 1, 2, 2)               c3= 2 L=4  self-conv=True   mass=       11/32 = 0.34375   in ASC: True
+     (0, 1, 2, 3)               c3= 0 L=1  self-conv=True   mass=       11/32 = 0.34375   in ASC: True
+     (1, 1, 1, 3)               c3= 1 L=3  self-conv=False  mass=        5/32 = 0.15625   in ASC: False
+     (0, 2, 2, 2)               c3= 1 L=3  self-conv=False  mass=        5/32 = 0.15625   in ASC: False
+
+==============================================================================
+m = 5: letters lumped above cap C_m = 4; 625 word types
+==============================================================================
+  |W_m^DESC| = 8  |W_m^ASC| = 7  |F_m| = 11  |all classes| = 12   distinct labeled DESC windows = 16, ASC = 16
+  W_m^DESC == F_m ? False      W_m^DESC == W_m^ASC (as sets)? False      converse(W_m^DESC) in F_m: True   |W_m^DESC u W_m^ASC| = 10
+  classes in F_m but not in the DESC Haar alphabet: 3
+  DESC alphabet (scores, c3, largest strong comp L, self-converse?, Haar mass, in ASC alphabet?):
+     (1, 1, 2, 3, 3)            c3= 3 L=5  self-conv=True   mass=       19/64 = 0.29688   in ASC: True
+     (0, 1, 2, 3, 4)            c3= 0 L=1  self-conv=True   mass=       13/64 = 0.20312   in ASC: True
+     (1, 1, 1, 3, 4)            c3= 1 L=3  self-conv=False  mass=         1/8 = 0.12500   in ASC: False
+     (0, 1, 3, 3, 3)            c3= 1 L=3  self-conv=False  mass=         1/8 = 0.12500   in ASC: False
+     (1, 1, 2, 2, 4)            c3= 2 L=4  self-conv=False  mass=        5/64 = 0.07812   in ASC: True
+     (0, 2, 2, 3, 3)            c3= 2 L=4  self-conv=False  mass=        5/64 = 0.07812   in ASC: True
+     (1, 2, 2, 2, 3)            c3= 4 L=5  self-conv=True   mass=        3/64 = 0.04688   in ASC: True
+     (0, 2, 2, 2, 4)            c3= 1 L=3  self-conv=True   mass=        3/64 = 0.04688   in ASC: False
+  regular 5-tournaments: 1 classes; in F_m: 0; in W_m^DESC: 0
+
+==============================================================================
+m = 6: letters lumped above cap C_m = 4; 3125 word types
+==============================================================================
+  |W_m^DESC| = 25  |W_m^ASC| = 26  |F_m| = 37  |all classes| = 56   distinct labeled DESC windows = 49, ASC = 49
+  W_m^DESC == F_m ? False      W_m^DESC == W_m^ASC (as sets)? False      converse(W_m^DESC) in F_m: True   |W_m^DESC u W_m^ASC| = 33
+  classes in F_m but not in the DESC Haar alphabet: 12
+  DESC alphabet (scores, c3, largest strong comp L, self-converse?, Haar mass, in ASC alphabet?):
+     (1, 1, 2, 3, 4, 4)         c3= 4 L=6  self-conv=True   mass=      73/512 = 0.14258   in ASC: True
+     (0, 1, 2, 3, 4, 5)         c3= 0 L=1  self-conv=True   mass=      33/256 = 0.12891   in ASC: True
+     (1, 1, 2, 2, 4, 5)         c3= 2 L=4  self-conv=False  mass=       9/128 = 0.07031   in ASC: True
+     (1, 1, 1, 3, 4, 5)         c3= 1 L=3  self-conv=False  mass=       9/128 = 0.07031   in ASC: False
+     (0, 1, 3, 3, 4, 4)         c3= 2 L=4  self-conv=False  mass=       9/128 = 0.07031   in ASC: True
+     (0, 1, 2, 4, 4, 4)         c3= 1 L=3  self-conv=False  mass=       9/128 = 0.07031   in ASC: False
+     (1, 1, 2, 3, 3, 5)         c3= 3 L=5  self-conv=False  mass=      35/512 = 0.06836   in ASC: True
+     (0, 2, 2, 3, 4, 4)         c3= 3 L=5  self-conv=False  mass=      35/512 = 0.06836   in ASC: True
+     (1, 1, 1, 4, 4, 4)         c3= 2 L=3  self-conv=True   mass=      13/256 = 0.05078   in ASC: False
+     (0, 2, 2, 2, 4, 5)         c3= 1 L=3  self-conv=False  mass=       5/128 = 0.03906   in ASC: False
+     (0, 1, 3, 3, 3, 5)         c3= 1 L=3  self-conv=False  mass=       5/128 = 0.03906   in ASC: False
+     (1, 1, 2, 3, 4, 4)         c3= 4 L=6  self-conv=False  mass=       7/256 = 0.02734   in ASC: True
+     (1, 1, 2, 3, 4, 4)         c3= 4 L=6  self-conv=False  mass=       7/256 = 0.02734   in ASC: True
+     (0, 2, 2, 3, 3, 5)         c3= 2 L=4  self-conv=True   mass=      11/512 = 0.02148   in ASC: True
+     (1, 2, 2, 2, 3, 5)         c3= 4 L=5  self-conv=False  mass=        1/64 = 0.01562   in ASC: False
+     (0, 2, 3, 3, 3, 4)         c3= 4 L=5  self-conv=False  mass=        1/64 = 0.01562   in ASC: False
+     (1, 2, 2, 2, 4, 4)         c3= 5 L=6  self-conv=False  mass=       3/256 = 0.01172   in ASC: True
+     (1, 1, 3, 3, 3, 4)         c3= 5 L=6  self-conv=False  mass=       3/256 = 0.01172   in ASC: True
+     (1, 2, 2, 3, 3, 4)         c3= 6 L=6  self-conv=True   mass=       1/128 = 0.00781   in ASC: True
+     (1, 2, 2, 3, 3, 4)         c3= 6 L=6  self-conv=True   mass=       1/128 = 0.00781   in ASC: True
+     (1, 2, 2, 3, 3, 4)         c3= 6 L=6  self-conv=False  mass=       1/128 = 0.00781   in ASC: True
+     (1, 2, 2, 3, 3, 4)         c3= 6 L=6  self-conv=False  mass=       1/128 = 0.00781   in ASC: True
+     (1, 2, 2, 2, 4, 4)         c3= 5 L=6  self-conv=False  mass=       1/128 = 0.00781   in ASC: True
+     (1, 1, 3, 3, 3, 4)         c3= 5 L=6  self-conv=False  mass=       1/128 = 0.00781   in ASC: True
+     (1, 2, 2, 3, 3, 4)         c3= 6 L=6  self-conv=True   mass=       1/256 = 0.00391   in ASC: True
+
+==============================================================================
+m = 7: letters lumped above cap C_m = 5; 46656 word types
+==============================================================================
+  |W_m^DESC| = 64  |W_m^ASC| = 70  |F_m| = 143  |all classes| = 456   distinct labeled DESC windows = 145, ASC = 145
+  W_m^DESC == F_m ? False      W_m^DESC == W_m^ASC (as sets)? False      converse(W_m^DESC) in F_m: True   |W_m^DESC u W_m^ASC| = 105
+  classes in F_m but not in the DESC Haar alphabet: 79
+  DESC alphabet (scores, c3, largest strong comp L, self-converse?, Haar mass, in ASC alphabet?):
+     (1, 1, 2, 3, 4, 5, 5)      c3= 5 L=7  self-conv=True   mass=    125/1024 = 0.12207   in ASC: True
+     (0, 1, 2, 3, 4, 5, 6)      c3= 0 L=1  self-conv=True   mass=     81/1024 = 0.07910   in ASC: True
+     (1, 1, 2, 3, 3, 5, 6)      c3= 3 L=5  self-conv=False  mass=       7/128 = 0.05469   in ASC: True
+     (0, 1, 3, 3, 4, 5, 5)      c3= 3 L=5  self-conv=False  mass=       7/128 = 0.05469   in ASC: True
+     (1, 1, 1, 3, 4, 5, 6)      c3= 1 L=3  self-conv=False  mass=     47/1024 = 0.04590   in ASC: False
+     (0, 1, 2, 3, 5, 5, 5)      c3= 1 L=3  self-conv=False  mass=     47/1024 = 0.04590   in ASC: False
+     (1, 1, 2, 2, 4, 5, 6)      c3= 2 L=4  self-conv=False  mass=      19/512 = 0.03711   in ASC: True
+     (0, 1, 2, 4, 4, 5, 5)      c3= 2 L=4  self-conv=False  mass=      19/512 = 0.03711   in ASC: True
+     (1, 1, 2, 3, 4, 5, 5)      c3= 5 L=7  self-conv=True   mass=      17/512 = 0.03320   in ASC: True
+     (0, 1, 3, 3, 3, 5, 6)      c3= 1 L=3  self-conv=True   mass=     33/1024 = 0.03223   in ASC: False
+     (1, 1, 2, 2, 5, 5, 5)      c3= 3 L=4  self-conv=False  mass=       7/256 = 0.02734   in ASC: False
+     (1, 1, 1, 4, 4, 5, 5)      c3= 3 L=4  self-conv=False  mass=       7/256 = 0.02734   in ASC: False
+     (1, 1, 1, 3, 5, 5, 5)      c3= 2 L=3  self-conv=True   mass=     25/1024 = 0.02441   in ASC: False
+     (1, 1, 2, 3, 4, 4, 6)      c3= 4 L=6  self-conv=False  mass=      11/512 = 0.02148   in ASC: False
+     (0, 2, 2, 3, 4, 5, 5)      c3= 4 L=6  self-conv=False  mass=      11/512 = 0.02148   in ASC: False
+     (0, 2, 2, 2, 4, 5, 6)      c3= 1 L=3  self-conv=False  mass=      11/512 = 0.02148   in ASC: False
+     (0, 1, 2, 4, 4, 4, 6)      c3= 1 L=3  self-conv=False  mass=      11/512 = 0.02148   in ASC: False
+     (0, 2, 2, 3, 3, 5, 6)      c3= 2 L=4  self-conv=False  mass=     19/1024 = 0.01855   in ASC: True
+     (0, 1, 3, 3, 4, 4, 6)      c3= 2 L=4  self-conv=False  mass=     19/1024 = 0.01855   in ASC: True
+     (1, 2, 2, 2, 4, 5, 5)      c3= 6 L=7  self-conv=False  mass=        1/64 = 0.01562   in ASC: True
+     (1, 1, 2, 4, 4, 4, 5)      c3= 6 L=7  self-conv=False  mass=        1/64 = 0.01562   in ASC: True
+     (1, 1, 1, 4, 4, 4, 6)      c3= 2 L=3  self-conv=False  mass=        1/64 = 0.01562   in ASC: False
+     (0, 2, 2, 3, 4, 4, 6)      c3= 3 L=5  self-conv=True   mass=        1/64 = 0.01562   in ASC: True
+     (0, 2, 2, 2, 5, 5, 5)      c3= 2 L=3  self-conv=False  mass=        1/64 = 0.01562   in ASC: False
+     (1, 2, 2, 2, 3, 5, 6)      c3= 4 L=5  self-conv=False  mass=       7/512 = 0.01367   in ASC: False
+     (0, 1, 3, 4, 4, 4, 5)      c3= 4 L=5  self-conv=False  mass=       7/512 = 0.01367   in ASC: False
+     (1, 1, 2, 3, 4, 4, 6)      c3= 4 L=6  self-conv=False  mass=      9/1024 = 0.00879   in ASC: False
+     (0, 2, 2, 3, 4, 5, 5)      c3= 4 L=6  self-conv=False  mass=      9/1024 = 0.00879   in ASC: False
+     (1, 2, 3, 3, 3, 4, 5)      c3= 9 L=7  self-conv=True   mass=       1/128 = 0.00781   in ASC: False
+     (1, 2, 2, 3, 4, 4, 5)      c3= 8 L=7  self-conv=True   mass=       1/128 = 0.00781   in ASC: True
+     (1, 2, 2, 3, 4, 4, 5)      c3= 8 L=7  self-conv=True   mass=       1/128 = 0.00781   in ASC: False
+     (1, 2, 2, 3, 4, 4, 5)      c3= 8 L=7  self-conv=True   mass=       1/128 = 0.00781   in ASC: False
+     (1, 2, 2, 3, 3, 5, 5)      c3= 7 L=7  self-conv=False  mass=       1/128 = 0.00781   in ASC: True
+     (1, 2, 2, 3, 3, 5, 5)      c3= 7 L=7  self-conv=False  mass=       1/128 = 0.00781   in ASC: False
+     (1, 1, 3, 3, 4, 4, 5)      c3= 7 L=7  self-conv=False  mass=       1/128 = 0.00781   in ASC: True
+     (1, 1, 3, 3, 4, 4, 5)      c3= 7 L=7  self-conv=False  mass=       1/128 = 0.00781   in ASC: False
+     (1, 1, 3, 3, 3, 5, 5)      c3= 6 L=7  self-conv=True   mass=       1/128 = 0.00781   in ASC: False
+     (1, 1, 2, 3, 4, 4, 6)      c3= 4 L=6  self-conv=False  mass=      5/1024 = 0.00488   in ASC: True
+     (0, 2, 3, 3, 3, 4, 6)      c3= 4 L=5  self-conv=True   mass=      5/1024 = 0.00488   in ASC: False
+     (0, 2, 2, 3, 4, 5, 5)      c3= 4 L=6  self-conv=False  mass=      5/1024 = 0.00488   in ASC: True
+     (1, 2, 2, 2, 4, 4, 6)      c3= 5 L=6  self-conv=False  mass=       1/256 = 0.00391   in ASC: False
+     (1, 1, 2, 3, 4, 5, 5)      c3= 5 L=7  self-conv=True   mass=       1/256 = 0.00391   in ASC: True
+     (0, 2, 2, 4, 4, 4, 5)      c3= 5 L=6  self-conv=False  mass=       1/256 = 0.00391   in ASC: False
+     (1, 1, 3, 3, 3, 4, 6)      c3= 5 L=6  self-conv=False  mass=      3/1024 = 0.00293   in ASC: False
+     (0, 2, 3, 3, 3, 5, 5)      c3= 5 L=6  self-conv=False  mass=      3/1024 = 0.00293   in ASC: False
+     (1, 2, 2, 3, 3, 4, 6)      c3= 6 L=6  self-conv=False  mass=       1/512 = 0.00195   in ASC: True
+     (1, 2, 2, 3, 3, 4, 6)      c3= 6 L=6  self-conv=False  mass=       1/512 = 0.00195   in ASC: True
+     (1, 2, 2, 3, 3, 4, 6)      c3= 6 L=6  self-conv=False  mass=       1/512 = 0.00195   in ASC: False
+     (1, 2, 2, 3, 3, 4, 6)      c3= 6 L=6  self-conv=False  mass=       1/512 = 0.00195   in ASC: False
+     (1, 2, 2, 3, 3, 4, 6)      c3= 6 L=6  self-conv=False  mass=       1/512 = 0.00195   in ASC: False
+     (1, 1, 3, 3, 3, 4, 6)      c3= 5 L=6  self-conv=False  mass=       1/512 = 0.00195   in ASC: False
+     (0, 2, 3, 3, 4, 4, 5)      c3= 6 L=6  self-conv=False  mass=       1/512 = 0.00195   in ASC: True
+     (0, 2, 3, 3, 4, 4, 5)      c3= 6 L=6  self-conv=False  mass=       1/512 = 0.00195   in ASC: True
+     (0, 2, 3, 3, 4, 4, 5)      c3= 6 L=6  self-conv=False  mass=       1/512 = 0.00195   in ASC: False
+     (0, 2, 3, 3, 4, 4, 5)      c3= 6 L=6  self-conv=False  mass=       1/512 = 0.00195   in ASC: False
+     (0, 2, 3, 3, 4, 4, 5)      c3= 6 L=6  self-conv=False  mass=       1/512 = 0.00195   in ASC: False
+     (0, 2, 3, 3, 3, 5, 5)      c3= 5 L=6  self-conv=False  mass=       1/512 = 0.00195   in ASC: False
+     (1, 2, 2, 2, 4, 5, 5)      c3= 6 L=7  self-conv=False  mass=      1/1024 = 0.00098   in ASC: True
+     (1, 2, 2, 2, 4, 4, 6)      c3= 5 L=6  self-conv=False  mass=      1/1024 = 0.00098   in ASC: True
+     (1, 1, 3, 3, 3, 5, 5)      c3= 6 L=7  self-conv=True   mass=      1/1024 = 0.00098   in ASC: True
+     (1, 1, 2, 4, 4, 4, 5)      c3= 6 L=7  self-conv=False  mass=      1/1024 = 0.00098   in ASC: True
+     (1, 1, 2, 3, 4, 5, 5)      c3= 5 L=7  self-conv=False  mass=      1/1024 = 0.00098   in ASC: True
+     (1, 1, 2, 3, 4, 5, 5)      c3= 5 L=7  self-conv=False  mass=      1/1024 = 0.00098   in ASC: True
+     (0, 2, 2, 4, 4, 4, 5)      c3= 5 L=6  self-conv=False  mass=      1/1024 = 0.00098   in ASC: True
+  regular 7-tournaments: 3 classes; in F_m: 0; in W_m^DESC: 0
+
+==============================================================================
+summary: m, |W_m^DESC|, |F_m| (order + Hamiltonian path), |classes|, labeled DESC windows
+   (3, 2, 2, 2, 2)
+   (4, 4, 4, 4, 5)
+   (5, 8, 11, 12, 16)
+   (6, 25, 37, 56, 49)
+   (7, 64, 143, 456, 145)
+
+ALL 23 CHECKS PASSED

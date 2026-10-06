@@ -42,10 +42,10 @@ def N_l(l, delta):
     # largest n with 2 + delta*n <= n((1+1/(3n))^l - 1); the right side -> l/3 as n -> inf; solve by bisection
     def ok(n):
         n = Decimal(n)
-        return 2 + delta * n <= n * ((1 + 1 / (3 * n)) ** l - 1)
-    if not ok(3):
-        # maybe ok for larger n? right side increases to l/3; left increases linearly: check n where RHS ~ l/3
-        pass
+        e = Decimal(l) * (1 + 1 / (3 * n)).ln()
+        if e > 200:
+            return True
+        return 2 + delta * n <= n * (e.exp() - 1)
     lo, hi = 3, 10 ** 30
     if not ok(lo):
         # find any ok n by scanning powers of two

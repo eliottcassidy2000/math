@@ -1,0 +1,38 @@
+==============================================================================
+A. Cartan determinants of trees (plumbing intersection forms with Euler number 2)
+==============================================================================
+  A_5                    vertices=5  det C =   6   boundary of the plumbing: rational homology sphere, |H_3| = 6
+  D_5                    vertices=5  det C =   4   boundary of the plumbing: rational homology sphere, |H_3| = 4
+  D4~ (star K_{1,4})     vertices=5  det C =   0   boundary of the plumbing: H_3 infinite (affine)
+  E_6                    vertices=6  det C =   3   boundary of the plumbing: rational homology sphere, |H_3| = 3
+  E_7                    vertices=7  det C =   2   boundary of the plumbing: rational homology sphere, |H_3| = 2
+  E_8                    vertices=8  det C =   1   boundary of the plumbing: homotopy sphere
+  D_4                    vertices=4  det C =   4   boundary of the plumbing: rational homology sphere, |H_3| = 4
+  D_8                    vertices=8  det C =   4   boundary of the plumbing: rational homology sphere, |H_3| = 4
+  A_8                    vertices=8  det C =   9   boundary of the plumbing: rational homology sphere, |H_3| = 9
+  E7~ (8 vertices)       vertices=8  det C =   0   boundary of the plumbing: H_3 infinite (affine)
+  D7~ (8 vertices)       vertices=8  det C =   0   boundary of the plumbing: H_3 infinite (affine)
+  All 23 trees on 8 vertices: determinants of their Cartan matrices (positive definite iff Dynkin: A_8, D_8, E_8)
+   det -> count: {-192: 1, -112: 1, -64: 1, -60: 1, -48: 2, -32: 1, -28: 1, -27: 1, -20: 1, -16: 2, -12: 2, -11: 1, -8: 1, -4: 1, -3: 1, 0: 2, 1: 1, 4: 1, 9: 1}
+   positive definite (finite Dynkin) trees on 8 vertices: 3  (A_8, D_8, E_8)
+
+==============================================================================
+B. Kervaire--Milnor orders |bP_4k| = 2^(2k-2)(2^(2k-1)-1) num(4 B_k/k), perfect-number factor
+==============================================================================
+  k=2: dim 4k-1 =  7  B_k = 1/30  Euclid factor 2^2(2^3-1) =        28 (perfect: 2^3-1 prime)  num(4B_k/k) = 1  |bP_8| = 28
+  k=3: dim 4k-1 = 11  B_k = 1/42  Euclid factor 2^4(2^5-1) =       496 (perfect: 2^5-1 prime)  num(4B_k/k) = 2  |bP_12| = 992
+  k=4: dim 4k-1 = 15  B_k = 1/30  Euclid factor 2^6(2^7-1) =      8128 (perfect: 2^7-1 prime)  num(4B_k/k) = 1  |bP_16| = 8128
+  k=5: dim 4k-1 = 19  B_k = 5/66  Euclid factor 2^8(2^9-1) =    130816 (not perfect: 2^9-1 = 511 composite)  num(4B_k/k) = 2  |bP_20| = 261632
+  k=6: dim 4k-1 = 23  B_k = 691/2730  Euclid factor 2^10(2^11-1) =   2096128 (not perfect: 2^11-1 = 2047 composite)  num(4B_k/k) = 691  |bP_24| = 1448424448
+  k=7: dim 4k-1 = 27  B_k = 7/6  Euclid factor 2^12(2^13-1) =  33550336 (perfect: 2^13-1 prime)  num(4B_k/k) = 2  |bP_28| = 67100672
+  Theta_7 = bP_8 = 28;  Theta_11 = bP_12 = 992;  Theta_15 = bP_16 + Z/2 = 2*8128 = 16256.
+  28 = 2^2*7, 992 = 2*2^4*31, 16256 = 2*2^6*127: the perfect numbers enter through Euclid's factor,
+  and only because 7, 31, 127 are Mersenne primes; at k = 5, 6 (511, 2047 composite) the factor is not perfect.
+
+==============================================================================
+C. The numeral 28 in this session's objects
+==============================================================================
+  C(8,2) = 28 arcs of an 8-tournament (the Sumner host at n = 5); E_8 has 8 vertices;
+  2^28 = labeled 8-tournaments; 6880 classes.  No map carries |Theta_7| = 28 to either: NUMEROLOGY.
+
+ALL 11 CHECKS PASSED

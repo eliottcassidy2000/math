@@ -1,0 +1,55 @@
+Continued fraction of log2 3 (convergents p/q; upper = p/q > log2 3):
+   1/1  (lower; 1-{q log2 3} = 5.850e-01)
+   2/1  (upper; 1-{q log2 3} = 4.150e-01)
+   3/2  (lower; 1-{q log2 3} = 1.699e-01)
+   8/5  (upper; 1-{q log2 3} = 7.519e-02)
+   19/12  (lower; 1-{q log2 3} = 1.955e-02)
+   65/41  (upper; 1-{q log2 3} = 1.654e-02)
+   84/53  (lower; 1-{q log2 3} = 3.013e-03)
+   485/306  (upper; 1-{q log2 3} = 1.475e-03)
+   1054/665  (lower; 1-{q log2 3} = 6.298e-05)
+   24727/15601  (upper; 1-{q log2 3} = 2.625e-05)
+   50508/31867  (lower; 1-{q log2 3} = 1.048e-05)
+   125743/79335  (upper; 1-{q log2 3} = 5.287e-06)
+
+X = 2^20: lengths l <= 100000 surviving (R1) with window [X, N_l] nonempty: 2291
+   l =     2966  A =     4701  delta_l = 8.480e-04  n in [1048576, 1164041]  (log2 N_l = 20.15)
+   l =     3631  A =     5755  delta_l = 8.043e-04  n in [1048576, 1502962]  (log2 N_l = 20.52)
+   l =     4296  A =     6809  delta_l = 7.606e-04  n in [1048576, 1880802]  (log2 N_l = 20.84)
+   l =     4961  A =     7863  delta_l = 7.169e-04  n in [1048576, 2304673]  (log2 N_l = 21.14)
+   l =     5626  A =     8917  delta_l = 6.732e-04  n in [1048576, 2783532]  (log2 N_l = 21.41)
+   l =     5932  A =     9402  delta_l = 1.697e-03  n in [1048576, 1165221]  (log2 N_l = 20.15)
+   l =     6291  A =     9971  delta_l = 6.296e-04  n in [1048576, 3328821]  (log2 N_l = 21.67)
+   l =     6597  A =    10456  delta_l = 1.653e-03  n in [1048576, 1330234]  (log2 N_l = 20.34)
+   l =     6956  A =    11025  delta_l = 5.859e-04  n in [1048576, 3955396]  (log2 N_l = 21.92)
+   l =     7262  A =    11510  delta_l = 1.609e-03  n in [1048576, 1504206]  (log2 N_l = 20.52)
+   l =     7621  A =    12079  delta_l = 5.422e-04  n in [1048576, 4682894]  (log2 N_l = 22.16)
+   l =     7927  A =    12564  delta_l = 1.566e-03  n in [1048576, 1687889]  (log2 N_l = 20.69)
+   l =     8233  A =    13049  delta_l = 2.590e-03  n in [1048576, 1060241]  (log2 N_l = 20.02)
+   l =     8286  A =    13133  delta_l = 4.985e-04  n in [1048576, 5537835]  (log2 N_l = 22.40)
+   l =     8592  A =    13618  delta_l = 1.522e-03  n in [1048576, 1882117]  (log2 N_l = 20.84)
+   l =     8898  A =    14103  delta_l = 2.546e-03  n in [1048576, 1165614]  (log2 N_l = 20.15)
+   l =     8951  A =    14187  delta_l = 4.548e-04  n in [1048576, 6556924]  (log2 N_l = 22.64)
+   l =     9257  A =    14672  delta_l = 1.478e-03  n in [1048576, 2087827]  (log2 N_l = 20.99)
+   l =     9563  A =    15157  delta_l = 2.502e-03  n in [1048576, 1274669]  (log2 N_l = 20.28)
+   l =     9616  A =    15241  delta_l = 4.112e-04  n in [1048576, 7792453]  (log2 N_l = 22.89)
+   ... 2271 more
+X = 2^28: lengths l <= 100000 surviving (R1) with window [X, N_l] nonempty: 12
+   l =    15601  A =    24727  delta_l = 1.819e-05  n in [268435456, 285707665]  (log2 N_l = 28.09)
+   l =    31202  A =    49454  delta_l = 3.639e-05  n in [268435456, 285762626]  (log2 N_l = 28.09)
+   l =    46803  A =    74181  delta_l = 5.459e-05  n in [268435456, 285780947]  (log2 N_l = 28.09)
+   l =    47468  A =    75235  delta_l = 1.093e-05  n in [268435456, 1447499246]  (log2 N_l = 30.43)
+   l =    62404  A =    98908  delta_l = 7.278e-05  n in [268435456, 285790107]  (log2 N_l = 28.09)
+   l =    63069  A =    99962  delta_l = 2.912e-05  n in [268435456, 721769837]  (log2 N_l = 29.43)
+   l =    78005  A =   123635  delta_l = 9.098e-05  n in [268435456, 285795603]  (log2 N_l = 28.09)
+   l =    78670  A =   124689  delta_l = 4.732e-05  n in [268435456, 554141611]  (log2 N_l = 29.05)
+   l =    79335  A =   125743  delta_l = 3.665e-06  n in [268435456, 7215556750]  (log2 N_l = 32.75)
+   l =    93606  A =   148362  delta_l = 1.092e-04  n in [268435456, 285799267]  (log2 N_l = 28.09)
+   l =    94271  A =   149416  delta_l = 6.552e-05  n in [268435456, 479621838]  (log2 N_l = 28.84)
+   l =    94936  A =   150470  delta_l = 2.186e-05  n in [268435456, 1447590740]  (log2 N_l = 30.43)
+X = 2^32: lengths l <= 100000 surviving (R1) with window [X, N_l] nonempty: 1
+   l =    79335  A =   125743  delta_l = 3.665e-06  n in [4294967296, 7215556750]  (log2 N_l = 32.75)
+X = 2^36: lengths l <= 100000 surviving (R1) with window [X, N_l] nonempty: 0
+
+The lemma's residual after a sweep to X is the union of these (l, [X, N_l]) windows: an excursion of l odd
+steps above n, returning to n exactly, with A = ceil(l log2 3) halvings and a non-rising word.
