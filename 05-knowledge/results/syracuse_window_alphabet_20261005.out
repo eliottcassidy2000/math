@@ -1,0 +1,110 @@
+# The Syracuse (odd-to-odd) window alphabet: time arcs plus numerical order
+
+Universe: all odd x < 2^22; S(x) = (3x+1)/2^v2(3x+1); windows (x, Sx, ..., S^(m-1) x).
+
+## A. m = 4, gauge DESC (order arcs from the larger to the smaller value)
+
+| class | count | frequency | Haar prediction |
+|---|---|---|---|
+| TT4 | 720845 | 0.343734 | 11/32 = 0.343750 |
+| IN (C3 over sink) | 327680 | 0.156254 | 5/32 = 0.156250 |
+| OUT (source over C3) | 327679 | 0.156253 | 5/32 = 0.156250 |
+| STRONG | 720896 | 0.343759 | 11/32 = 0.343750 |
+
+degenerate windows (a repeated value, the orbit reaches 1 inside the window): 52, first ones [1, 3, 5, 13, 21, 53, 85, 113]
+exceptions to the B2 law table(a,b): 0 -> []
+
+Marked vertices (score of the past x, score of the present S^3 x) per class:
+  TT4                    {(3, 0): 720845}
+  IN (C3 over sink)      {(2, 0): 327680}
+  OUT (source over C3)   {(3, 1): 327679}
+  STRONG                 {(1, 2): 655360, (2, 1): 65536}
+
+## B. m = 4, gauge ASC (order arcs from the smaller to the larger value)
+
+  TT4                    655360
+  IN (C3 over sink)      0
+  OUT (source over C3)   0
+  STRONG                 1441740
+exceptions to the law (TT4 iff a1+a2+a3 <= 4, else STRONG): 0 -> []
+
+## D. Time reversal of the window (same gauge DESC)
+
+  TT4                    -> {'STRONG': 720845}
+  IN (C3 over sink)      -> {'STRONG': 327680}
+  OUT (source over C3)   -> {'STRONG': 327679}
+  STRONG                 -> {'TT4': 655360, 'STRONG': 65536}
+Exact identity (asserted for every window): the time-reversed window read with the same gauge is the
+converse of the original window read with the opposite gauge; so under DESC it is TT4 iff a1+a2+a3 <= 4
+and STRONG otherwise (pure time reversal is not an involution of the DESC alphabet). The converse of the
+DESC reading (= negation o time reversal, Redei note) exchanges the two vortices: the a <-> b swap of B2.
+
+## C. Haar law from the valuation word (a_i i.i.d., P(a = k) = 2^-k), generic comparisons
+
+m = 4 DESC: IN (C3 over sink) 5/32, OUT (source over C3) 5/32, STRONG 11/32, TT4 11/32
+m = 4 ASC : STRONG 11/16, TT4 5/16
+Census deviation at 2^22: TT4 -1.58e-05, IN (C3 over sink) +3.87e-06, OUT (source over C3) +3.40e-06, STRONG +8.52e-06
+
+## E. Longer windows, gauge DESC: which classes occur
+
+m = 5: 8 of 12 classes occur (census 16 distinct chord patterns, 155 degenerate windows); Haar support 8 classes
+| class | scores | c3 | L | self-converse | converse partner occurs | Haar mass | census frequency |
+|---|---|---|---|---|---|---|---|
+| 5 | (1, 1, 2, 3, 3) | 3 | 5 | True | yes | 19/64 = 0.29688 | 0.29690 |
+| 0 | (0, 1, 2, 3, 4) | 0 | 1 | True | yes | 13/64 = 0.20312 | 0.20308 |
+| 4 | (1, 1, 1, 3, 4) | 1 | 3 | False | yes | 1/8 = 0.12500 | 0.12500 |
+| 8 | (0, 1, 3, 3, 3) | 1 | 3 | False | yes | 1/8 = 0.12500 | 0.12501 |
+| 2 | (1, 1, 2, 2, 4) | 2 | 4 | False | yes | 5/64 = 0.07812 | 0.07813 |
+| 6 | (0, 2, 2, 3, 3) | 2 | 4 | False | yes | 5/64 = 0.07812 | 0.07813 |
+| 7 | (0, 2, 2, 2, 4) | 1 | 3 | True | yes | 3/64 = 0.04688 | 0.04688 |
+| 9 | (1, 2, 2, 2, 3) | 4 | 5 | True | yes | 3/64 = 0.04688 | 0.04688 |
+Occurring set closed under converse: True
+Missing classes (4): 1 (1, 1, 2, 3, 3) L=5, 3 (1, 2, 2, 2, 3) L=5, 10 (2, 2, 2, 2, 2) L=5, 11 (1, 2, 2, 2, 3) L=5
+Occurring classes: 8 = 4 self-converse + 2 converse pairs -> 6 modulo converse; by L: {1: 1, 3: 2, 4: 1, 5: 2}
+Realizable chord patterns (generic bits): 16 of 64
+
+m = 6: 25 of 56 classes occur (census 49 distinct chord patterns, 406 degenerate windows); Haar support 25 classes
+| class | scores | c3 | L | self-converse | converse partner occurs | Haar mass | census frequency |
+|---|---|---|---|---|---|---|---|
+| 44 | (1, 1, 2, 3, 4, 4) | 4 | 6 | True | yes | 73/512 = 0.14258 | 0.14261 |
+| 0 | (0, 1, 2, 3, 4, 5) | 0 | 1 | True | yes | 33/256 = 0.12891 | 0.12878 |
+| 4 | (1, 1, 2, 2, 4, 5) | 2 | 4 | False | yes | 9/128 = 0.07031 | 0.07031 |
+| 8 | (1, 1, 1, 3, 4, 5) | 1 | 3 | False | yes | 9/128 = 0.07031 | 0.07030 |
+| 18 | (0, 1, 3, 3, 4, 4) | 2 | 4 | False | yes | 9/128 = 0.07031 | 0.07033 |
+| 20 | (0, 1, 2, 4, 4, 4) | 1 | 3 | False | yes | 9/128 = 0.07031 | 0.07032 |
+| 10 | (1, 1, 2, 3, 3, 5) | 3 | 5 | False | yes | 35/512 = 0.06836 | 0.06837 |
+| 17 | (0, 2, 2, 3, 4, 4) | 3 | 5 | False | yes | 35/512 = 0.06836 | 0.06837 |
+| 51 | (1, 1, 1, 4, 4, 4) | 2 | 3 | True | yes | 13/256 = 0.05078 | 0.05079 |
+| 16 | (0, 2, 2, 2, 4, 5) | 1 | 3 | False | yes | 5/128 = 0.03906 | 0.03907 |
+| 19 | (0, 1, 3, 3, 3, 5) | 1 | 3 | False | yes | 5/128 = 0.03906 | 0.03907 |
+| 9 | (1, 1, 2, 3, 4, 4) | 4 | 6 | False | yes | 7/256 = 0.02734 | 0.02735 |
+| 12 | (1, 1, 2, 3, 4, 4) | 4 | 6 | False | yes | 7/256 = 0.02734 | 0.02735 |
+| 14 | (0, 2, 2, 3, 3, 5) | 2 | 4 | True | yes | 11/512 = 0.02148 | 0.02149 |
+| 36 | (1, 2, 2, 2, 3, 5) | 4 | 5 | False | yes | 1/64 = 0.01562 | 0.01563 |
+| 52 | (0, 2, 3, 3, 3, 4) | 4 | 5 | False | yes | 1/64 = 0.01562 | 0.01563 |
+| 23 | (1, 2, 2, 2, 4, 4) | 5 | 6 | False | yes | 3/256 = 0.01172 | 0.01172 |
+| 35 | (1, 1, 3, 3, 3, 4) | 5 | 6 | False | yes | 3/256 = 0.01172 | 0.01172 |
+| 5 | (1, 2, 2, 2, 4, 4) | 5 | 6 | False | yes | 1/128 = 0.00781 | 0.00781 |
+| 11 | (1, 1, 3, 3, 3, 4) | 5 | 6 | False | yes | 1/128 = 0.00781 | 0.00781 |
+| 27 | (1, 2, 2, 3, 3, 4) | 6 | 6 | False | yes | 1/128 = 0.00781 | 0.00781 |
+| 33 | (1, 2, 2, 3, 3, 4) | 6 | 6 | False | yes | 1/128 = 0.00781 | 0.00781 |
+| 40 | (1, 2, 2, 3, 3, 4) | 6 | 6 | True | yes | 1/128 = 0.00781 | 0.00781 |
+| 41 | (1, 2, 2, 3, 3, 4) | 6 | 6 | True | yes | 1/128 = 0.00781 | 0.00781 |
+| 21 | (1, 2, 2, 3, 3, 4) | 6 | 6 | True | yes | 1/256 = 0.00391 | 0.00391 |
+Occurring set closed under converse: True
+Missing classes (31): 1 (1, 1, 2, 3, 4, 4) L=6, 2 (1, 1, 2, 3, 3, 5) L=5, 3 (1, 2, 2, 3, 3, 4) L=6, 6 (1, 2, 2, 2, 3, 5) L=5, 7 (1, 2, 2, 3, 3, 4) L=6, 13 (0, 2, 2, 3, 4, 4) L=5, 15 (0, 2, 3, 3, 3, 4) L=5, 22 (2, 2, 2, 3, 3, 3) L=6, 24 (2, 2, 2, 2, 3, 4) L=6, 25 (2, 2, 2, 2, 3, 4) L=6, 26 (1, 2, 2, 3, 3, 4) L=6, 28 (1, 2, 3, 3, 3, 3) L=6, 29 (1, 2, 2, 3, 3, 4) L=6, 30 (1, 2, 2, 3, 3, 4) L=6, 31 (1, 2, 3, 3, 3, 3) L=6, 32 (1, 2, 2, 2, 4, 4) L=6, 34 (1, 1, 3, 3, 3, 4) L=6, 37 (2, 2, 2, 2, 3, 4) L=6, 38 (2, 2, 2, 2, 2, 5) L=5, 39 (1, 2, 2, 3, 3, 4) L=6, 42 (1, 2, 2, 2, 3, 5) L=5, 43 (1, 2, 2, 3, 3, 4) L=6, 45 (2, 2, 2, 3, 3, 3) L=6, 46 (2, 2, 2, 3, 3, 3) L=6, 47 (1, 2, 3, 3, 3, 3) L=6, 48 (1, 2, 3, 3, 3, 3) L=6, 49 (2, 2, 2, 2, 3, 4) L=6, 50 (2, 2, 2, 3, 3, 3) L=6, 53 (0, 3, 3, 3, 3, 3) L=5, 54 (0, 2, 3, 3, 3, 4) L=5, 55 (2, 2, 2, 3, 3, 3) L=6
+Occurring classes: 25 = 7 self-converse + 9 converse pairs -> 16 modulo converse; by L: {1: 1, 3: 3, 4: 2, 5: 2, 6: 8}
+Realizable chord patterns (generic bits): 49 of 1024
+
+## F. The credit-grammar words read through the 4-window alphabet (generic bits)
+
+  G = (1,2)                  (shorter than a 4-window)
+  G G = (1,2,1,2)            (1, 2, 1)->(0,0)=STRONG; (2, 1, 2)->(0,0)=STRONG
+  H = (1,2,1,1,1,2)          (1, 2, 1)->(0,0)=STRONG; (2, 1, 1)->(0,0)=STRONG; (1, 1, 1)->(0,0)=STRONG; (1, 1, 2)->(0,0)=STRONG
+  H G = (1,2,1,1,1,2,1,2)    (1, 2, 1)->(0,0)=STRONG; (2, 1, 1)->(0,0)=STRONG; (1, 1, 1)->(0,0)=STRONG; (1, 1, 2)->(0,0)=STRONG; (1, 2, 1)->(0,0)=STRONG; (2, 1, 2)->(0,0)=STRONG
+  G H = (1,2,1,2,1,1,1,2)    (1, 2, 1)->(0,0)=STRONG; (2, 1, 2)->(0,0)=STRONG; (1, 2, 1)->(0,0)=STRONG; (2, 1, 1)->(0,0)=STRONG; (1, 1, 1)->(0,0)=STRONG; (1, 1, 2)->(0,0)=STRONG
+Every 4-window inside H and G is STRONG: no 2-step descent (a1+a2 >= 4) occurs in these words, since
+they contain no consecutive valuations summing to 4 or more; the credit words are ascent-only at the
+2-step scale, and the descent they pay for is carried by the common-future dependency, not by the window.
+
+ALL ASSERTIONS PASSED (N = 22)
