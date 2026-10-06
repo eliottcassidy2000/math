@@ -1,0 +1,37 @@
+X = 1048576: last-dip segments checked: 561601; non-rising (violations): 0; 1.1s
+top segments by 2^A/3^l (all < 1):
+   2^84/3^53 = 0.997914   m* = 468287, n = 469271, l = 53, A = 84, A/l = 1.58491  (log2 3 = 1.58496)
+   2^84/3^53 = 0.997914   m* = 336667, n = 337375, l = 53, A = 84, A/l = 1.58491  (log2 3 = 1.58496)
+   2^84/3^53 = 0.997914   m* = 334847, n = 335549, l = 53, A = 84, A/l = 1.58491  (log2 3 = 1.58496)
+   2^84/3^53 = 0.997914   m* = 294911, n = 295529, l = 53, A = 84, A/l = 1.58491  (log2 3 = 1.58496)
+   2^84/3^53 = 0.997914   m* = 283375, n = 283969, l = 53, A = 84, A/l = 1.58491  (log2 3 = 1.58496)
+   2^84/3^53 = 0.997914   m* = 240879, n = 241385, l = 53, A = 84, A/l = 1.58491  (log2 3 = 1.58496)
+   2^84/3^53 = 0.997914   m* = 161535, n = 161875, l = 53, A = 84, A/l = 1.58491  (log2 3 = 1.58496)
+   2^84/3^53 = 0.997914   m* = 150015, n = 150331, l = 53, A = 84, A/l = 1.58491  (log2 3 = 1.58496)
+   2^84/3^53 = 0.997914   m* = 145055, n = 145361, l = 53, A = 84, A/l = 1.58491  (log2 3 = 1.58496)
+   2^84/3^53 = 0.997914   m* = 135655, n = 135941, l = 53, A = 84, A/l = 1.58491  (log2 3 = 1.58496)
+   2^84/3^53 = 0.997914   m* = 122815, n = 123077, l = 53, A = 84, A/l = 1.58491  (log2 3 = 1.58496)
+   2^84/3^53 = 0.997914   m* = 93119, n = 93317, l = 53, A = 84, A/l = 1.58491  (log2 3 = 1.58496)
+the extremal segments follow the convergents of log2 3 (84/53, 65/41, 19/12, 8/5, ...): the Lemma's margin is Diophantine.
+
+If a violating excursion of length l used the non-rising word nearest to balance, with delta_w = 2^A/3^l - 1,
+then n < l/(3 ln(1 + delta_w)).  For the upper convergents (2^A > 3^l) of log2 3:
+   (A, l) = (2, 1): delta_w = 3.333e-01  =>  a violation needs n < 1.159e+00   (excluded by the sweep)
+   (A, l) = (5, 3): delta_w = 1.852e-01  =>  a violation needs n < 5.886e+00   (excluded by the sweep)
+   (A, l) = (27, 17): delta_w = 3.932e-02  =>  a violation needs n < 1.469e+02   (excluded by the sweep)
+   (A, l) = (485, 306): delta_w = 1.023e-03  =>  a violation needs n < 9.978e+04   (excluded by the sweep)
+   (A, l) = (24727, 15601): delta_w = 1.819e-05  =>  a violation needs n < 2.858e+08   (NOT excluded by the sweep)
+So every violation has excursion length l >= 6 and uses a non-rising word closer to balance than 485/306; the first
+convergent not excluded is 24727/15601 (an excursion of 15601 odd steps above n, returning to n exactly, with n < 2.9e8).
+
+Small excursion lengths: a violation needs 2 <= c_w/3^l <= (l/3) e^(l/(3n)).
+   l = 1: bound 0.373 for n >= 3 (excluded); bound 0.3333 for n >= 1048576 (excluded)
+   l = 2: bound 0.833 for n >= 3 (excluded); bound 0.6667 for n >= 1048576 (excluded)
+   l = 3: bound 1.396 for n >= 3 (excluded); bound 1.0000 for n >= 1048576 (excluded)
+   l = 4: bound 2.079 for n >= 3 (open); bound 1.3333 for n >= 1048576 (excluded)
+   l = 5: bound 2.905 for n >= 3 (open); bound 1.6667 for n >= 1048576 (excluded)
+   l = 6: bound 3.895 for n >= 3 (open); bound 2.0000 for n >= 1048576 (open)
+   l = 7: bound 5.079 for n >= 3 (open); bound 2.3333 for n >= 1048576 (open)
+So the Lemma is PROVED for l <= 3 outright and for l <= 5 given the sweep; l >= 6 is the Diophantine regime.
+
+ALL 2 CHECKS PASSED

@@ -1,0 +1,10 @@
+sweep to X = 65536 done in 0.0s
+odd n < X: 32767; prime to 3: 21845; |D| = 15321 (density among odd 0.467574, among units 0.701350)
+n in D with a rising smaller-ancestor word: 15321
+CANDIDATES (in D, every smaller-ancestor word non-rising): 0
+new primitive cone classes per depth l (should match S6/S7: 1,1,0,1,0,2,8,0,28,0,124,602,0,2498,0,12319):
+   [1, 1, 0, 1, 0, 2, 8, 0, 28, 0, 124, 602]
+candidates not in any rising cone of depth <= 12: 0
+sanity: of 2000 sampled D-elements (1 mod 3) with a rising word, 29 are outside all cones of depth <= 12 (expected: only those whose rising words are longer than 12)
+
+ALL 3 CHECKS PASSED
