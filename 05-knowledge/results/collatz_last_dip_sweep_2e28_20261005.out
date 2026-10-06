@@ -1,0 +1,3 @@
+X=268435456 last-dip segments=143745904 violations=0
+largest A - l*log2(3) = -0.003012538 at m*=93119 n=93317 l=53 A=84  (2^A/3^l = 0.997914046)
+longest orbit prefix stored=249, max orbit value=2134932387040421
