@@ -1,0 +1,37 @@
+== 1. rings (Chebyshev shells) ==
+ring sizes: [4, 12, 20, 28] (owner: 4,12,20,28)
+  ring 0: |V|=4 |E|=4 components=1 degrees={2: 4} -> cycle C_4: True
+  ring 1: |V|=12 |E|=12 components=1 degrees={2: 12} -> cycle C_12: True
+  ring 2: |V|=20 |E|=20 components=1 degrees={2: 20} -> cycle C_20: True
+  ring 3: |V|=28 |E|=28 components=1 degrees={2: 28} -> cycle C_28: True
+  wazir edges between rings (spokes): {(2, 3): 24, (1, 2): 16, (0, 1): 8} total wazir edges 112
+
+== 2. ferz scaffolds (diagonal one-step) ==
+components: 2 sizes [32, 32]
+  colour {0}: anti-diagonal lengths [1, 3, 5, 7, 7, 5, 3, 1]; diagonal lengths [2, 4, 6, 8, 6, 4, 2]
+  colour {1}: anti-diagonal lengths [2, 4, 6, 8, 6, 4, 2]; diagonal lengths [1, 3, 5, 7, 7, 5, 3, 1]
+  odd-length diagonals: 16 lines; every square covered exactly once: True
+  even-length diagonals: 14 lines; every square covered exactly once: True
+  odd line lengths: [1, 1, 1, 1, 3, 3, 3, 3, 5, 5, 5, 5, 7, 7, 7, 7]
+  ring k size 4(2k+1) = 4 x (odd line length 2k+1): [True, True, True, True]
+
+== 3. knight graph: weave of scaffolds and rings ==
+knight edges: 168  degree histogram: {2: 4, 3: 8, 4: 20, 6: 16, 8: 16}
+every knight edge joins the two colours (scaffolds): True
+knight edges by ring pair: {(0, 1): 16, (0, 2): 16, (1, 1): 8, (1, 2): 32, (1, 3): 32, (2, 2): 8, (2, 3): 48, (3, 3): 8}
+ring-incidence matrix (half-edges, row r = edges leaving ring r):
+    [0, 16, 16, 0]  row sum 32  ring size 4
+    [16, 16, 32, 32]  row sum 96  ring size 12
+    [16, 32, 16, 48]  row sum 112  ring size 20
+    [0, 32, 48, 16]  row sum 96  ring size 28
+|ring change| of knight edges: {0: 24, 1: 96, 2: 48}
+
+== 4. D4 orbits by ring ==
+orbits: 10  per ring: [1, 2, 3, 4]  orbit sizes: [4, 4, 4, 4, 8, 8, 8, 8, 8, 8]
+
+== 5. sliding lines (rook/bishop/queen on the empty board) ==
+  rook: total moves 896 (edges 448); mobility by ring {3: {14}, 2: {14}, 1: {14}, 0: {14}}
+  bishop: total moves 560 (edges 280); mobility by ring {3: {7}, 2: {9}, 1: {11}, 0: {13}}
+  queen: total moves 1456 (edges 728); mobility by ring {3: {21}, 2: {23}, 1: {25}, 0: {27}}
+  bishop mobility = 7 + 2*ring (ring = 0..3)? True (bishop: 13,11,9,7 by ring 0..3)
+  king mobility by ring: {0: [8], 1: [8], 2: [8], 3: [3, 5]}

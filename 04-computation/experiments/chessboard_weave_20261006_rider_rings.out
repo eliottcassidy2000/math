@@ -1,0 +1,8 @@
+delta(a,b) = floor((a+b)/2)/(a+b) verified for all coprime 1<=a<b<=40: 489 pairs
+2m= 4: riders (a<b<=40 coprime) NOT reaching the closed central 2x2 block: []  (predicted: odd a+b < 2)
+2m= 6: riders (a<b<=40 coprime) NOT reaching the closed central 2x2 block: []  (predicted: odd a+b < 3)
+2m= 8: riders (a<b<=40 coprime) NOT reaching the closed central 2x2 block: [(1, 2)]  (predicted: odd a+b < 4)
+2m=10: riders (a<b<=40 coprime) NOT reaching the closed central 2x2 block: [(1, 2)]  (predicted: odd a+b < 5)
+2m=12: riders (a<b<=40 coprime) NOT reaching the closed central 2x2 block: [(1, 2), (1, 4), (2, 3)]  (predicted: odd a+b < 6)
+2m=16: riders (a<b<=40 coprime) NOT reaching the closed central 2x2 block: [(1, 2), (1, 4), (1, 6), (2, 3), (2, 5), (3, 4)]  (predicted: odd a+b < 8)
+8x8: knight (1,2) deepest ring = 1 ; zebra (2,3): 0 ; giraffe (1,4): 0 ; camel (1,3): 0

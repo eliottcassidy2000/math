@@ -1,0 +1,31 @@
+1. cycles of T(n) = n/2 or (3n+1)/2 met from |x0| <= 1e5:
+   min -136: T-period 11, odd steps p=7, halvings A=11, leaper (p,A)=(7,11), 2^A-3^p=-139
+   min  -10: T-period  3, odd steps p=2, halvings A=3, leaper (p,A)=(2,3), 2^A-3^p=-1
+   min   -1: T-period  1, odd steps p=1, halvings A=1, leaper (p,A)=(1,1), 2^A-3^p=-1
+   min    0: T-period  1, odd steps p=0, halvings A=1, leaper (p,A)=(0,1), 2^A-3^p=1
+   min    1: T-period  2, odd steps p=1, halvings A=2, leaper (p,A)=(1,2), 2^A-3^p=1
+
+2. |2^A - 3^p| = 1 with A<400, p<260: [(1, 0), (1, 1), (2, 1), (3, 2)]
+   Fibonacci leapers Q^n(0,1) = (F_n, F_{n+1}), n=0..5: [(0, 1), (1, 1), (1, 2), (2, 3), (3, 5), (5, 8)]
+   Gersonides solutions with A>=1 as (p,A): [(0, 1), (1, 1), (1, 2), (2, 3)] == first four Fibonacci leapers: True
+   the -17 cycle (p,A) = (7,11) = (L_4, L_5): (7, 11)  mediant of (2,3) and (5,8): (7, 11)
+
+3. log2 3 = [1, 1, 1, 2, 2, 3, 1, 5, 2, 23]  convergents A/p: [(1, 1), (2, 1), (3, 2), (8, 5), (19, 12), (65, 41), (84, 53), (485, 306)]
+   phi = [1, 1, 1, 1, 1, 1, 1, 1]  convergents: [(1, 1), (2, 1), (3, 2), (5, 3), (8, 5), (13, 8), (21, 13)]
+
+4. Syracuse step S(n) = (3n+1)/2^v for odd n: exponent move (-v,+1)
+   v=1: bishop (1,1)   density 1/2 (exact 2^-v = 1/2)
+   v=2: knight (1,2)   density 1/4 (exact 2^-v = 1/4)
+   v=3: camel (1,3)    density 1/8 (exact 2^-v = 1/8)
+   v=4: giraffe (1,4)  density 1/16 (exact 2^-v = 1/16)
+   v=5: (1,5)-leaper   density 1/32 (exact 2^-v = 1/32)
+   v=6: (1,6)-leaper   density 1/64 (exact 2^-v = 1/64)
+   mean leap = (-E v, +1) = (-2, +1) = the knight; log-drift per odd step = log(3/4) = -0.2876820724517809
+   critical slope log2 3 = 1.584962500721156 lies strictly between bishop (1) and knight (2)
+
+5. 3n+1 maps every odd n to an even number (colour switch): checked n < 1e5
+   k= 1: density of odd n (mod 2^4) with k bishop/knight leaps = 3/4 (3/4)^k = 3/4
+   k= 2: density of odd n (mod 2^6) with k bishop/knight leaps = 9/16 (3/4)^k = 9/16
+   k= 4: density of odd n (mod 2^10) with k bishop/knight leaps = 81/256 (3/4)^k = 81/256
+   k= 8: density of odd n (mod 2^18) with k bishop/knight leaps = 6561/65536 (3/4)^k = 6561/65536
+   k=12: density of odd n (mod 2^26) with k bishop/knight leaps = 531441/16777216 (3/4)^k = 531441/16777216
