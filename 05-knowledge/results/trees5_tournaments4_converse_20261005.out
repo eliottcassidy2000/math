@@ -1,0 +1,110 @@
+# trees on n+1 vertices vs n-tournaments modulo converse  (exact census)
+
+## A. Tournament classes, self-converse classes, merged (mod converse) classes
+
+| n | classes | self-converse | converse pairs | merged = (classes+SC)/2 | score sequences | score seqs mod complement | trees on n+1 |
+|---|---|---|---|---|---|---|---|
+| 1 | 1 | 1 | 0 | 1 | 1 | 1 | 1 |
+| 2 | 1 | 1 | 0 | 1 | 1 | 1 | 1 |
+| 3 | 2 | 2 | 0 | 2 | 2 | 2 | 2 |
+| 4 | 4 | 2 | 1 | 3 | 4 | 3 | 3 |
+| 5 | 12 | 8 | 2 | 10 | 9 | 7 | 6 |
+| 6 | 56 | 12 | 22 | 34 | 22 | 14 | 11 |
+| 7 | 456 | 88 | 184 | 272 | 59 | 37 | 23 |
+| 8 | 6880 | 176 | 3352 | 3528 | 167 | 93 | 47 |
+
+Coincidence merged(n) == trees(n+1): n=1:YES, n=2:YES, n=3:YES, n=4:YES, n=5:no (10 vs 6), n=6:no (34 vs 11), n=7:no (272 vs 23), n=8:no (3528 vs 47)
+Score sequence is a complete class invariant iff n <= 4: n=1:complete, n=2:complete, n=3:complete, n=4:complete, n=5:incomplete, n=6:incomplete, n=7:incomplete, n=8:incomplete
+
+## B. The four 4-tournaments and the three 5-vertex trees
+
+| class | scores | c3 | largest strong comp L | cycle spectrum | self-converse | |Aut| | converse |
+|---|---|---|---|---|---|---|---|
+| TT4 (transitive) | (0, 1, 2, 3) | 0 | 1 | {} | True | 1 | TT4 (transitive) |
+| STRONG | (1, 1, 2, 2) | 2 | 4 | (3, 4) | True | 1 | STRONG |
+| out-vortex (source over C3) | (1, 1, 1, 3) | 1 | 3 | (3,) | False | 3 | in-vortex (C3 over sink) |
+| in-vortex (C3 over sink) | (0, 2, 2, 2) | 1 | 3 | (3,) | False | 3 | out-vortex (source over C3) |
+
+H = 1 + 2 c3 on these classes (OCF at n=4): [1, 5, 3, 3]
+
+| tree | degrees | leaves | max degree | diameter | cycle lengths creatable by one added edge |
+|---|---|---|---|---|---|
+| path P5 | (2, 2, 2, 1, 1) | 2 | 2 | 4 | (3, 4, 5) |
+| fork (chair) | (3, 2, 1, 1, 1) | 3 | 3 | 3 | (3, 4) |
+| star K_{1,4} | (4, 1, 1, 1, 1) | 4 | 4 | 2 | (3,) |
+
+Both sides are 3-chains: tournament cycle spectra {} < {3} < {3,4}; tree creatable spectra {3} < {3,4} < {3,4,5}.
+The merged converse pair (out/in vortex) is the middle grade L = 3 <-> the fork (diameter 3).
+
+## C. The two gradings for every n: largest strong component L (tournaments mod converse) and diameter (trees on n+1)
+
+Camion-Moon: a tournament's cycle spectrum is {3..L} (empty iff L = 1); a tree's creatable
+spectrum is {3..diam+1}. Both chains have n-1 values for n >= 3. Fibre sizes:
+
+n=3: merged tournaments by L: {1: 1, 3: 1}   (by c3: {0: 1, 1: 1})
+      trees on 4 by diameter:   {2: 1, 3: 1}   degree sequences 2 vs trees 2
+n=4: merged tournaments by L: {1: 1, 3: 1, 4: 1}   (by c3: {0: 1, 1: 1, 2: 1})
+      trees on 5 by diameter:   {2: 1, 3: 1, 4: 1}   degree sequences 3 vs trees 3
+n=5: merged tournaments by L: {1: 1, 3: 2, 4: 1, 5: 6}   (by c3: {0: 1, 1: 2, 2: 1, 3: 2, 4: 3, 5: 1})
+      trees on 6 by diameter:   {2: 1, 3: 2, 4: 2, 5: 1}   degree sequences 5 vs trees 6
+n=6: merged tournaments by L: {1: 1, 3: 3, 4: 2, 5: 6, 6: 22}   (by c3: {0: 1, 1: 2, 2: 3, 3: 2, 4: 6, 5: 4, 6: 8, 7: 4, 8: 4})
+      trees on 7 by diameter:   {2: 1, 3: 2, 4: 5, 5: 2, 6: 1}   degree sequences 7 vs trees 11
+n=7: merged tournaments by L: {1: 1, 3: 5, 4: 3, 5: 12, 6: 35, 7: 216}   (by c3: {0: 1, 1: 3, 2: 4, 3: 5, 4: 10, 5: 14, 6: 21, 7: 20, 8: 35, 9: 38, 10: 42, 11: 31, 12: 32, 13: 13, 14: 3})
+      trees on 8 by diameter:   {2: 1, 3: 3, 4: 8, 5: 7, 6: 3, 7: 1}   degree sequences 11 vs trees 23
+n=8: merged tournaments by L: {1: 1, 3: 7, 4: 7, 5: 18, 6: 57, 7: 353, 8: 3085}   (by c3: {0: 1, 1: 3, 2: 7, 3: 7, 4: 16, 5: 22, 6: 46, 7: 54, 8: 96, 9: 110, 10: 210, 11: 198, 12: 320, 13: 314, 14: 460, 15: 370, 16: 481, 17: 311, 18: 321, 19: 131, 20: 50})
+      trees on 9 by diameter:   {2: 1, 3: 3, 4: 14, 5: 14, 6: 11, 7: 3, 8: 1}   degree sequences 15 vs trees 47
+
+Both gradings are bijective (every fibre a singleton) exactly for n <= 4; for n >= 5 the
+fibre over the middle grade (L = 3, diameter 3) already has >= 2 elements on each side.
+Degree sequences identify trees on N vertices iff N <= 5 (N = 6: 5 sequences, 6 trees).
+
+Witnesses (proof of the boundary, verified non-isomorphic here):
+  n=5: 2 distinct merged classes with L=3 from C3 inserted into TT2; 2 distinct double stars of diameter 3 on 6 vertices
+  n=6: 2 distinct merged classes with L=3 from C3 inserted into TT3; 2 distinct double stars of diameter 3 on 7 vertices
+  n=7: 3 distinct merged classes with L=3 from C3 inserted into TT4; 3 distinct double stars of diameter 3 on 8 vertices
+  n=8: 3 distinct merged classes with L=3 from C3 inserted into TT5; 3 distinct double stars of diameter 3 on 9 vertices
+
+## D. Metagraphs: one arc reversal (tournaments) and one edge rotation (trees)
+
+n=4 flip graph on the 4 classes (edges):
+   TT4 (transitive) -- STRONG   (delta c3 = +2)
+   TT4 (transitive) -- out-vortex (source over C3)   (delta c3 = +1)
+   TT4 (transitive) -- in-vortex (C3 over sink)   (delta c3 = +1)
+   STRONG -- out-vortex (source over C3)   (delta c3 = +1)
+   STRONG -- in-vortex (C3 over sink)   (delta c3 = +1)
+=> K4 minus the vortex-vortex edge; the vortices are at flip distance 2 (Redei-note distance lemma).
+   Modulo converse: the triangle TT -- V -- STRONG -- TT.  Unit steps (|delta c3| = 1): the path TT -- V -- STRONG.
+
+5-vertex trees under one edge rotation (remove an edge, add an edge keeping a tree):
+   path P5 -- fork (chair)
+   fork (chair) -- star K_{1,4}
+=> the path star -- fork -- path (a rotation changes the maximum degree by at most 1).
+
+Next size: 6-vertex tree rotation graph has 6 vertices and 10 edges; 5-tournament flip graph on classes has 12 vertices and 30 edges (mod converse: 10 vertices).
+
+## E. Marked (observer) versions at the coincidence size
+
+rooted trees on 5 vertices: 9 (A000081)
+vertex-marked 4-tournaments up to isomorphism: 12
+vertex-marked 4-tournaments modulo converse: 6   (rooted trees on 5 vertices: 9)  -> the coincidence does NOT survive marking a vertex
+
+## F. The ordered full ternary tree (credit grammar S = e | H S G S G S) and the 3-chain of slots
+
+Fuss-Catalan counts of ordered full ternary trees by internal nodes m=0..5: [1, 1, 3, 12, 55, 273] (sum through m=5: 345)
+The three child slots of a node are entered at prefix balances +2, +1, 0 (after H, after the first G, after the second G): a 3-chain,
+ordered, with no involution of the grammar exchanging two slots (reversal of a word is not a parse).
+Unordered full ternary trees by internal nodes m=0..5: [1, 1, 1, 2, 4, 8]  (ordered/unordered quotient; m=2: 3 ordered -> 1 unordered)
+
+## G. Summary of exact facts
+
+1. merged(n) = (A000568(n) + A002785(n))/2 = 1,1,2,3,10,34,272,3528; trees(n+1) = 1,1,2,3,6,11,23,47.
+   Equal exactly for n <= 4. The owner's 3 = 3 is the last member of a four-term coincidence, not a bijection family.
+2. At n = 4 both sides are graded 3-chains by cycle content: tournaments by largest strong component L in {1,3,4}
+   (= cycle spectrum {}, {3}, {3,4}; = c3 in {0,1,2}); trees by diameter in {2,3,4} (= creatable spectrum {3}, {3,4}, {3,4,5}).
+   The converse pair sits at the middle grade and corresponds to the fork.
+3. For every n the two gradings land on (n-1)-chains; they are bijective iff n <= 4 (witnesses above).
+4. Flip metagraph at n=4: K4 - e, quotient K3 by converse; unit-c3 steps give the path TT -- V -- STRONG = the tree rotation graph star -- fork -- path.
+5. First-moment fields: score sequences are complete iff n <= 4; degree sequences are complete for trees iff N <= 5. Same threshold.
+6. Marking a vertex breaks the coincidence (6 vs 9).
+
+ALL ASSERTIONS PASSED (n_max tournaments = 8, trees to 9 vertices)

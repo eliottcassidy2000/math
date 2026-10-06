@@ -1,0 +1,32 @@
+# Oriented diametral paths: the double cover of trees that carries the converse
+
+| N | tree classes | oriented classes | reversal-fixed | swapped pairs | n=N-1 tournament classes | self-converse | converse pairs | Z/2-sets isomorphic |
+|---|---|---|---|---|---|---|---|---|
+| 4 | 2 | 2 | 2 | 0 | 2 | 2 | 0 | YES |
+| 5 | 3 | 4 | 2 | 1 | 4 | 2 | 1 | YES |
+| 6 | 6 | 8 | 4 | 2 | 12 | 8 | 2 | no |
+| 7 | 11 | 17 | 5 | 6 | 56 | 12 | 22 | no |
+| 8 | 23 | 38 | 10 | 14 | 456 | 88 | 184 | no |
+
+  N=4 path             diam=3  oriented=1 fixed=1 pairs=0
+  N=4 star             diam=2  oriented=1 fixed=1 pairs=0
+  N=5 path             diam=4  oriented=1 fixed=1 pairs=0
+  N=5 fork             diam=3  oriented=2 fixed=0 pairs=1
+  N=5 star             diam=2  oriented=1 fixed=1 pairs=0
+  N=6 path             diam=5  oriented=1 fixed=1 pairs=0
+  N=6 deg=(3, 2, 2, 1, 1, 1) diam=4  oriented=2 fixed=0 pairs=1
+  N=6 deg=(3, 3, 1, 1, 1, 1) diam=3  oriented=1 fixed=1 pairs=0
+  N=6 deg=(3, 2, 2, 1, 1, 1) diam=4  oriented=1 fixed=1 pairs=0
+  N=6 deg=(4, 2, 1, 1, 1, 1) diam=3  oriented=2 fixed=0 pairs=1
+  N=6 star             diam=2  oriented=1 fixed=1 pairs=0
+
+At N = 5: star and path are reversal-fixed, the fork has two orientations exchanged by reversal:
+exactly the pattern (TT4 fixed, STRONG fixed, vortex pair swapped) of the four 4-tournaments under converse.
+At N = 6, 7, 8 the Z/2-sets differ from the 5-, 6-, 7-tournaments (counts above).
+
+Berggren matrices A, B, C and the leg swap S = (a b): S A S = C, S B S = B, S C S = A  -> True
+The leg swap acts on the three Berggren branches as the transposition (A C) fixing B: one fixed branch and one swapped pair,
+the opposite pattern to the tournament converse on the merged grades (trivial) and on the four classes (two fixed, one pair).
+(3,4,5) children: A -> [5, 12, 13]  B -> [21, 20, 29]  C -> [15, 8, 17]
+
+ALL ASSERTIONS PASSED
