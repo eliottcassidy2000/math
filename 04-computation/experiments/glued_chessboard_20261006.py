@@ -574,6 +574,10 @@ def sat_parts(name, b, dp, budget=20_000_000):
         clique = max(nx.find_cliques(G), key=len)
         alpha = len(indep_poly(adj)) - 1
         lb = max(len(clique), -(-len(F) // alpha))
+        if kind == 'Q':
+            chi_f, ok, _, _ = fractional_chromatic(adj)     # exact certificate (section 12)
+            if ok:
+                lb = max(lb, -(-chi_f.numerator // chi_f.denominator))
         trail = []
         for k in range(lb, len(F) + 1):
             def v_(v, c):
@@ -590,6 +594,50 @@ def sat_parts(name, b, dp, budget=20_000_000):
         exact = all(t == 'unsat' for t in trail[:-1])
         out['chi_' + kind] = f'{k}' if exact else f'<= {k} (>= {lb + trail.index("unknown")})'
     return out
+
+
+def fractional_chromatic(adj):
+    """exact fractional chromatic number: LP over all independent sets (scipy/HiGHS), then the optimal
+    weights are rationalised and every constraint re-checked in exact arithmetic (a certificate)."""
+    import numpy as np
+    from scipy.optimize import linprog
+    sets = []
+
+    def rec(i, cur, banned):
+        if cur:
+            sets.append(tuple(cur))
+        for j in range(i, len(F)):
+            v = F[j]
+            if v not in banned:
+                rec(j + 1, cur + [v], banned | adj[v] | {v})
+    rec(0, [], frozenset())
+    A = np.zeros((len(sets), len(F)))
+    for r, s in enumerate(sets):
+        for v in s:
+            A[r, IDX[v]] = 1
+    res = linprog(-np.ones(len(F)), A_ub=A, b_ub=np.ones(len(sets)), bounds=[(0, None)] * len(F), method='highs')
+    w = [Fr(x).limit_denominator(36) for x in res.x]
+    ok = all(sum(w[IDX[v]] for v in s) <= 1 for s in sets)
+    return sum(w), ok, len(sets), Counter(w)
+
+
+def k_colouring(adj, k):
+    from pysat.solvers import Solver
+    G = nxg(adj)
+    clique = max(nx.find_cliques(G), key=len)
+
+    def v_(v, c):
+        return IDX[v] * k + c + 1
+    cl = [[v_(v, c) for c in range(k)] for v in F]
+    cl += [[-v_(v, c), -v_(e, c)] for v in F for e in adj[v] if IDX[e] > IDX[v] for c in range(k)]
+    cl += [[v_(v, i)] for i, v in enumerate(clique)]
+    with Solver(name='cadical153', bootstrap_with=cl) as s:
+        if not s.solve():
+            return None
+        m = s.get_model()
+    col = {v: next(c for c in range(k) if m[v_(v, c) - 1] > 0) for v in F}
+    assert all(col[v] != col[e] for v in F for e in adj[v])
+    return col
 
 
 # ----------------------------------------------------------------------------- main report
@@ -791,6 +839,19 @@ def main():
             J['sat'][n] = r
             print(f'   {n:12s} alpha confirmed; gamma K,R,B,Q = {r["gamma_K"]}, {r["gamma_R"]}, {r["gamma_B"]}, {r["gamma_Q"]};'
                   f'  chi W,F,K,R,B,Q = {r["chi_W"]}, {r["chi_F"]}, {r["chi_K"]}, {r["chi_R"]}, {r["chi_B"]}, {r["chi_Q"]}', flush=True)
+
+    if sat or '--frac' in sys.argv:
+        print('\n== 12. Fractional chromatic number of the queen graph (exact LP certificate) and a matching colouring')
+        J['queen_fractional'] = {}
+        for n in DISTINCT:
+            adj = boards[n].graph('Q')
+            val, ok, nsets, dist = fractional_chromatic(adj)
+            k = -(-val.numerator // val.denominator)
+            col = k_colouring(adj, k)
+            J['queen_fractional'][n] = dict(chi_f=str(val), certified=ok, independent_sets=nsets,
+                                            weights={str(a): b for a, b in sorted(dist.items())}, colouring_with_ceil=col is not None)
+            print(f'   {n:12s} chi_f(Q) = {val} (every one of {nsets} independent sets weighs <= 1: {ok}; weights {dict((str(a), b) for a, b in sorted(dist.items()))});'
+                  f'  {k}-colouring exists: {col is not None}  =>  chi(Q) = {k if col is not None else "?"}', flush=True)
 
     with open(sys.argv[sys.argv.index('--json') + 1] if '--json' in sys.argv else 'glued_chessboard_20261006.json', 'w') as f:
         json.dump(J, f, indent=1, default=str)

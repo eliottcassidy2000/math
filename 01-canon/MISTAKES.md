@@ -2032,6 +2032,39 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
+## MISTAKE-565 (2026-10-06, opus S15 glued-chessboard note; found by the session's independent adversarial audit, after some lines were already pushed in checkpoints ef1c5e80b and b06ecb3c2) -- a placeholder and an unproved "pinned by ceil(64/alpha)" claim in a pushed table, a theorem stated without its hypothesis, a false mechanism sentence, and double rounding
+
+- **Claims (in `05-knowledge/results/glued_chessboard_rings_scaffolds_20261006.md`):**
+  - (1) Section 9a pushed the sphere442 queen chromatic number first as a literal placeholder ("SPHEREQ", then "19 or 20 (pending/OPEN)"). The text also said every queen chromatic number "is pinned exactly: SAT colours with ceil(64/alpha) (or omega) colours, and that number is a proven lower bound". This is false for two boards:
+    - the ordinary board: `ceil(64/8) = omega = 8`, but chi = 9, which needs the UNSAT certificate at 8;
+    - sphere442: `ceil(64/alpha) = 16`, but chi = 20.
+  - (2) Theorem 5 ("one colour class of `X0 = Z^2/ker chi` maps bijectively onto X") was stated without the hypothesis that chi is not identically 0. When chi = 0, `X0 = X` and a colour class is half the board. The section-4 sentence "window = fundamental domain of G on Z^2" also ignored the four boards with walls.
+  - (3) Section 10 explained the 442 sphere's wazir diameter 14 by "nothing far away is brought close". That is false: `a8` and `h1` are 14 apart on the plane and adjacent on the sphere.
+  - (4) Smaller slips:
+    - Theorem 1's proof displayed `14 - (2k-1) - 1 = 15 - 2k` (arithmetically false; the statement was right);
+    - the bishop-segment formula was written for `x - y = d (d != 0)` but is valid only for `d > 0`;
+    - three means were rounded twice from printed 4-decimal values (mobius 4.318, rp2 4.060, sphere442 4.630 instead of 4.317, 4.061, 4.629);
+    - a link pointed at a JSON file that was never written;
+    - "all values are SAT" hid that most rook and bishop domination numbers come from a line-domination lemma;
+    - overclaims: the two scaffolds were called planar duals (only the interior corresponds); "every slider has diameter 2" (the bishop graph is disconnected when the scaffolds are separate); "the cut locus is the image of the boundary" (false on the shifted tori and klein_cc, whose Dirichlet domain is a hexagon); Bridges' Klein value 3 was attached to all Klein gluings (klein_cc and klein_diag allow 4); the toroidal queen-domination value was credited to Burger-Mynhardt 2003, a 3k x 3k paper.
+- **Why it was wrong:**
+  - (1) a lower bound that held on most boards was promoted to all boards before the last solver run finished, and a provisional cell was pushed;
+  - (2) the theorem was written from the fused case and the separate case was patched with a parenthesis;
+  - (3) the mechanism sentence was written from the picture of folded edges, not from the computed adjacencies;
+  - (4) values were copied from rounded printouts and citations from search snippets.
+- **Correct framing:**
+  - sphere442 chi(Q) = 20 exactly. The fractional chromatic number is exactly 20: weights 2/3 on 16 squares and 1/3 on 28 squares, every one of the 1776 independent sets weighing at most 1 in exact rationals. The audit found this certificate and the session re-derived it by LP. A 20-colouring was found by SAT and verified. The script now prints this certificate (section 12) and uses ceil(chi_f) as the starting bound.
+  - The ordinary board's fractional value is 76/9, a short certificate for the classical chi(Q8) = 9.
+  - Theorem 5 is restated in two cases (chi not 0: double cover; chi = 0: two colour classes), for the developed region.
+  - The sphere's diameter comes from the seams preserving `x + y`.
+  - The other slips are corrected in place, and section 12 of the note lists them.
+- **What survives:** every theorem statement except Theorem 5's missing case, and every count, maximum and isomorphism class. The audit independently confirmed queens/rooks/kings maxima and counts, the literal rp2 = sphere442 bishop identity, chi(W, rp2) = 4 (Youngs), gamma(Q, rp2) = 2 (48 ways), the shell sequences, the Klein instance of Theorem 5, and all four citations.
+- **Lesson:**
+  - never push a table cell as a placeholder; write "OPEN" with the proven bracket;
+  - a lower bound that is tight on most rows is not a theorem about all rows; for colourings, compute the fractional chromatic number before calling a value pinned;
+  - state each case of a dichotomy theorem as its own bullet;
+  - round from exact fractions, not from printed decimals.
+
 ## MISTAKE-564 (2026-10-06, mac-mini chessboard-weave session; found by the session's independent adversarial audit, after some lines were already pushed in checkpoints) -- a Sturmian intercept step asserted without proof, a classical colour-lock argument presented without credit, and four small misstatements in the chessboard note
 
 - **Claims (in `05-knowledge/results/chessboard_weave_20261006.md`, checkpoints 6df5f0c1b2..9f5abf3a3b):**

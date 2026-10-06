@@ -2,7 +2,7 @@
 
 2026-10-06, session opus-2026-10-06-S15 (worktree `codex/session-glued-chessboard-20261006`). Owner's seed (verbatim): "Consider an 8 by 8 grid of 64 squares. Their horizontal and vertical connections form a set of concentric rings of size 4, 12,20,28 and their diagonal connections form 2 interwoven but isolated scaffoldings of {1,3,5,5,3,1} by {2,4,6,8,6,4,2} and consider the ability to move along these horizontal/vertical/diagonals one step at a time or unlimited amounts until an obstruction is reached, also consider the outcomes of connecting various edges of the 8 by 8 grid together in various mathematically interesting ways so that they loop together and allow pac man style teleportation"
 
-**PROVED (elementary):** Theorems 1-6 and the mechanisms marked so. **FINITE-EXACT:** every table (exact enumeration on 16 boards; independence counts by two independent algorithms, isometry groups by two independent algorithms). **CITED:** Polya 1918 and Monsky 1989 (toroidal queens, OEIS A085801), Burger-Mynhardt 2003 / Mynhardt 2003 (toroidal queen domination, OEIS A279402), G. Arizmendi Echegaray, "Queens on surfaces" (Bridges 2026 art exhibition: 8x8 torus 6, Mobius band 4, Klein bottle 3 queens). **NUMEROLOGY guard:** no small-number coincidence below is typed as a dictionary without a mechanism. Nothing here touches LRC(14).
+**PROVED (elementary):** Theorems 1-6 and the mechanisms marked so. **FINITE-EXACT:** every table (exact enumeration on 16 boards; independence counts by two independent algorithms, isometry groups by two independent algorithms). **CITED:** Polya 1918 and Monsky 1989 (toroidal queens, OEIS A085801); OEIS A279402 (toroidal queen domination, a(8) = 4) and A075458 (queen domination of the ordinary board, 5); Youngs 1996 (projective quadrangulations); G. Arizmendi Echegaray, "Queens on surfaces" (Bridges 2026 art exhibition: 8x8 torus 6, Mobius band 4, Klein bottle 3 queens; the gluings are not stated). **AUDITED:** an independent adversarial audit re-derived the core claims with its own code; its corrections are applied in place and logged as MISTAKE-565 (section 12). **NUMEROLOGY guard:** no small-number coincidence below is typed as a dictionary without a mechanism. Nothing here touches LRC(14).
 
 Script and saved output: [glued_chessboard_20261006.py](../../04-computation/experiments/glued_chessboard_20261006.py) / [out](glued_chessboard_20261006.out) / [json](glued_chessboard_20261006.json). The `.out` is the `--sat` run, which adds the SAT cross-checks, domination numbers and chromatic numbers. Interactive explorer of all fifteen boards (private artifact, owner's account): https://claude.ai/artifact/MGq9PVXHNFpGv3iuqSsest
 
@@ -25,7 +25,7 @@ Portfolio. **Anchor:** make the rings and scaffolds exact and catalogue what eve
 
 Cells `(x,y)`, `0 <= x,y <= 7`. Ring `k` (k = 1..4) is the set of cells at Chebyshev distance `k - 1/2` from the centre point `(4,4)`; it has `8(k - 1/2) = 8k - 4` cells: **4, 12, 20, 28**. The orthogonal-step (wazir) graph is exactly four disjoint cycles `C4, C12, C20, C28` plus `8k` spokes between ring `k` and ring `k+1` (8, 16, 24; total 48 + 64 = 112 edges).
 
-**Correction.** On the 8x8 board each colour class has diagonals of lengths **{1,3,5,7,7,5,3,1}** in one direction and **{2,4,6,8,6,4,2}** in the other (the two colours swap roles). The seed's `{1,3,5,5,3,1}` (with `{2,4,6,4,2}`) is the scaffold of the 6x6 board, i.e. of rings 1-3. In 45-degree coordinates `u=(x+y)/2, v=(x-y)/2` each colour is a diamond-shaped board whose rows and columns are exactly those diagonals; diagonal steps become orthogonal steps there. Up to the boundary, the two scaffolds are planar duals: the bounded faces of one colour's diagonal grid are exactly the interior cells of the other colour (32 vertices, 49 edges, 18 bounded faces, 18 interior cells).
+**Correction.** On the 8x8 board each colour class has diagonals of lengths **{1,3,5,7,7,5,3,1}** in one direction and **{2,4,6,8,6,4,2}** in the other (the two colours swap roles). The seed's `{1,3,5,5,3,1}` (with `{2,4,6,4,2}`) is the scaffold of the 6x6 board, i.e. of rings 1-3. In 45-degree coordinates `u=(x+y)/2, v=(x-y)/2` each colour is a diamond-shaped board whose rows and columns are exactly those diagonals; diagonal steps become orthogonal steps there. The two scaffolds are dual only in the interior. The 18 bounded faces of one colour's diagonal grid (32 vertices, 49 edges) correspond exactly to the 18 interior cells of the other colour. The other colour's 14 border cells all sit on the outer face, so the two graphs are not literally planar duals (the dual graph has 19 vertices, the other scaffold 32).
 
 Moves: wazir W (orthogonal step), ferz F (diagonal step), king K = W + F; rook R, bishop B, queen Q slide along straight lines through any seam until a wall. On a closed line nothing obstructs the slide except the piece's own square, so the slider reaches the whole line.
 
@@ -33,13 +33,13 @@ Moves: wazir W (orthogonal step), ferz F (diagonal step), king K = W + F; rook R
 
 On the plane board a cell of ring `k` has bishop mobility `15 - 2k` (13, 11, 9, 7) and queen mobility `29 - 2k` (27, 25, 23, 21).
 
-*Proof.* With `a = x - 7/2, b = y - 7/2` the two diagonals through the cell have lengths `8 - |a-b|` and `8 - |a+b|`, and `|a-b| + |a+b| = 2 max(|a|,|b|) = 2k - 1`. So the bishop sees `14 - (2k-1) - 1 = 15 - 2k` squares; add the rook's constant 14. QED.
+*Proof.* With `a = x - 7/2, b = y - 7/2` the two diagonals through the cell have lengths `8 - |a-b|` and `8 - |a+b|`, and `|a-b| + |a+b| = 2 max(|a|,|b|) = 2k - 1`. So the bishop sees `(7 - |a-b|) + (7 - |a+b|) = 14 - (2k-1) = 15 - 2k` squares; add the rook's constant 14. QED.
 
 **Mechanism.** The king's (Chebyshev) norm is the taxicab norm in diagonal coordinates. The rings that the orthogonal moves draw are the level sets of the total scaffold length through a cell, `L_diag + L_anti = 17 - 2k`.
 
 ## 4. The boards
 
-A gluing is a group `G` of lattice isometries `c -> Ac + t` (A a signed permutation) acting freely on cells with the window as fundamental domain; unglued edges are walls. Sixteen boards were built and checked (`chi` = Euler characteristic of the glued square complex, computed from the identifications; `|Isom|` = automorphisms of the square-tiled surface, by developing maps and independently by VF2 on the W/F edge-coloured graph):
+A gluing is a group `G` of lattice isometries `c -> Ac + t` (A a signed permutation) acting freely on the cells of its developed region, with the window as fundamental domain there. The developed region is the whole plane for the closed boards, and a strip or staircase for the four boards with walls (plane, cylinder, mobius, mobius_diag); unglued edges are walls. Sixteen boards were built and checked (`chi` = Euler characteristic of the glued square complex, computed from the identifications; `|Isom|` = automorphisms of the square-tiled surface, by developing maps and independently by VF2 on the W/F edge-coloured graph):
 
 | board | gluing | surface (orbifold) | chi | colour char. | \|Isom\| | cell orbits | cone points |
 |---|---|---|---|---|---|---|---|
@@ -69,7 +69,7 @@ A seam step leaves the window from a border cell and enters at a border cell, so
 
 annulus (plane, chi 0); pair of pants (cylinder) or punctured Mobius band (chi -1); one-holed torus or Klein bottle (-1); **Mobius band** (rp2, 0); **disk** (the spheres, +1). Computed directly on all 16 boards.
 
-**Observer reading.** The centre observer sees three honest rings; the fourth ring is where its view wraps (the cut locus of the centre is the image of the board's boundary). The gluing type is exactly how that ring is stitched.
+**Observer reading.** The centre observer sees three honest rings; the fourth ring is where its view wraps, and the gluing type is exactly how that ring is stitched. The cut locus of the centre is the image of the board's boundary when the window is the Dirichlet domain of its centre. That holds for every board here except the shifted tori and klein_cc, where the Dirichlet domain is a hexagon.
 
 ## 6. Theorem 3: curvature shows up as ring growth (PROVED; FINITE-EXACT check)
 
@@ -79,7 +79,9 @@ Around a lattice point where `m` cell corners meet (cone angle `m * 90` degrees)
 - `2, 6, 10, 14` at a half-turn point (m = 2, angle pi);
 - `1, 3, 5, 7` at a quarter-turn point (m = 1, angle pi/2).
 
-These hold until the shells reach other cone points.
+These hold until the shells reach other cone points or walls.
+
+**Hostile control.** The unglued plane's corner, a boundary point with angle 90 degrees, also gives `1, 3, 5, ..., 15`, and a boundary edge midpoint gives `2, 6, 10, 14, 8, 8, 8, 8`. Shell sizes measure the total angle at the point, boundary or not. What a gluing adds is that the shells close up: at a quarter-turn cone point the L-shaped shells are odd cycles `C1, C3, ..., C15`, while at the plane's corner they are paths.
 
 *Proof.* Near the point, the developing map identifies the board with the plane modulo the rotation group of order `4/m`. That group acts freely on the cells of each square shell of size `4(2j+1)`. QED. Gauss-Bonnet in this setting reads `sum over vertices of (4 - m) = 4 chi`: rp2 has two points with m = 2, giving 2 + 2 = 4 = 4 x 1, and sphere442 has 3 + 3 + 2 = 8 = 4 x 2. Observed full sequences:
 
@@ -118,10 +120,11 @@ So **fusion is not topological**:
 
 **Refinement (FINITE-EXACT).** When the scaffolds stay separate they are congruent on every board except `klein_diag` and `mobius_diag`. There the glide axis runs along a diagonal of one colour. That colour's scaffold contains the one-sided core curve and is non-bipartite, while the other scaffold is bipartite (and on klein_diag the two have different ferz diameters, 5 and 6). The two scaffolds are isolated but no longer alike.
 
-**Theorem 5 (double-cover principle).** Let `G0 = ker chi` and `X0 = Z^2/G0`.
+**Theorem 5 (double-cover principle).** Let `G0 = ker chi` and let `X0` be the quotient of the developed region by `G0`.
 
-- One colour class of `X0` maps bijectively onto `X`, and the map is a local isometry. So `F(X)` is the ferz graph of that colour class, and `B(X)` is its bishop graph (when chi = 0 these are the two components).
-- In 45-degree coordinates the colour class is the rotated lattice `L` and `G0` acts on it by lattice isometries. Hence `F(X) = W(L/G0)` and `B(X) = R(L/G0)`: the diagonal world of a board is the orthogonal world of its rotated colour cover.
+- **If chi is not identically 0,** `X0 -> X` is a double cover and one colour class of `X0` maps bijectively onto `X` by a local isometry. So `F(X)` is the ferz graph of that colour class, and `B(X)` is its bishop graph.
+- **If chi = 0,** then `X0 = X`, and `F(X)`, `B(X)` are the disjoint unions of the ferz and bishop graphs of the two colour classes of `X`.
+- In either case, in 45-degree coordinates a colour class is the rotated lattice `L` (cut down to the developed region when there are walls), and `G0` acts on it by lattice isometries. Hence `F(X) = W(L/G0)` and `B(X) = R(L/G0)`, one copy per colour when chi = 0: the diagonal world of a board is the orthogonal world of its rotated colour cover.
 
 *Proof.* Path lifting for the double cover, plus the fact that the 45-degree rotation conjugates D4 to itself. QED. FINITE-EXACT checks by graph and line-multigraph isomorphism:
 
@@ -207,15 +210,19 @@ Proved pieces:
 - **Kings: always 16.** The window's sixteen 2x2 blocks are king cliques on every board. The count drops from 281571 to 2, so gluing rigidifies king packings.
 - **Rooks.** At most one rook per line. When 4 lines of 16 each meet 8 lines of 8 twice (mobius, klein, torus_k4, pillow_cyl), the count is `C(8,4) 4! 2^4 = 26880`. When 4 row-loops meet 4 column-loops in 4 cells each (rp2, pillow), it is `4! 4^4 = 6144`.
 - **Rooks on the figure-eight boards: exactly one maximum placement.** There are 8 lines, a cell on a self-crossing uses one line, every other cell uses two, so 8 rooks force all of them onto the eight crossings (the fold diagonal).
-- **Only the plane holds 8 queens.** On the torus (and hence the cylinder) Polya's parity argument applies. If the rows, columns, `x+y` and `x-y` were all permutations mod 8, then `sum(x+y) = 2 sum(x)` would force `sum_{i<8} i = 28 = 0 mod 8`, which is false. The maxima 6 (torus; Monsky, A085801 a(8) = 6), 4 (Mobius) and 3 (Klein) agree with Arizmendi Echegaray's 2026 Bridges piece. The rp2 maximum is also 3.
+- **Only the plane holds 8 queens.** On the torus (and hence the cylinder) Polya's parity argument applies. If the rows, columns, `x+y` and `x-y` were all permutations mod 8, then `sum(x+y) = 2 sum(x)` would force `sum_{i<8} i = 28 = 0 mod 8`, which is false. The maxima 6 (torus; Monsky, A085801 a(8) = 6), 4 (Mobius) and 3 (Klein) agree with Arizmendi Echegaray's 2026 Bridges piece. The artwork does not state its gluings. The 3 is for the usual grid-line-flip Klein bottle; klein_cc and klein_diag allow 4. The rp2 maximum is also 3.
 
-Domination numbers `gamma` (minimum pieces covering every square) and chromatic numbers `chi_col`, all by SAT (glucose4); the table is in section 9a below.
+Domination numbers `gamma` (minimum pieces covering every square) and chromatic numbers `chi_col` are in section 9a below.
 
 ## 9a. Domination and colouring
 
-`gamma` = minimum pieces attacking or occupying every square, with the number of minimum sets where the enumeration finished (capped at 5000 or 20000). `chi_col` = chromatic number of the move graph. All values are SAT (glucose4 / CaDiCaL).
+`gamma` = minimum pieces attacking or occupying every square, with the number of minimum sets where the enumeration finished (capped at 5000 or 20000). `chi_col` = chromatic number of the move graph.
 
-- Every queen chromatic number below except sphere442's is pinned exactly: SAT colours with `ceil(64/alpha)` (or `omega`) colours, and that number is a proven lower bound. On sphere442, 16, 17 and 18 colours are UNSAT and 20 colours are SAT; 19 is still open (see the table).
+- **Rook and bishop domination** mostly come from the line-domination formula, a proved lemma. If every line of one family meets every line of the other, then `gamma = min(|A|, |B|)` per component: one piece per line of the smaller family suffices, and with fewer pieces an empty line of each family meets in an undominated square. The script reports which values used it. The rest are SAT (glucose4 / CaDiCaL).
+
+- **Every queen chromatic number below is exact.** The upper bound is a SAT colouring. The lower bound is `max(omega, ceil(64/alpha))` for every board except two:
+  - the plane: 8 colours UNSAT; also the fractional chromatic number is `76/9 > 8`;
+  - sphere442: there `ceil(64/alpha) = 16`, but the fractional chromatic number is exactly 20. Weights `2/3` on 16 squares and `1/3` on 28 squares total 20, and every one of the 1776 nonempty independent sets weighs at most 1, checked in exact rationals. This was found by the audit and re-derived by LP. So `chi(Q) = 20`.
 - For the torus and cylinder, `gamma(B) = 8` is by proof rather than SAT. Per colour, every diagonal meets every anti-diagonal, so an empty diagonal and an empty anti-diagonal would leave their intersection undominated. A dominating set therefore fills all four of one family in each colour.
 
 | board | gamma K | gamma R | gamma B | gamma Q | chi W | chi F | chi K | chi R | chi B | chi Q |
@@ -232,7 +239,7 @@ Domination numbers `gamma` (minimum pieces covering every square) and chromatic 
 | klein_cc | 9 (>=20000) | 5 | 4 | 3 (288) | 2 | 2 | 4 | 16 | 14 | 24 |
 | klein_diag | 8 (18) | 4 | 8 | 3 (744) | 2 | 3 | **5** | 15 | 8 | 16 |
 | rp2 | 9 (>=5000) | 4 | 4 | **2 (48)** | **4** | 3 | 4 | 16 | 16 | **22** |
-| sphere442 | 9 (>=5000) | 4 | 4 | 3 (>=5000) | 3 | 3 | **5** | 15 | 16 | 19 or 20 (OPEN) |
+| sphere442 | 9 (>=5000) | 4 | 4 | 3 (>=5000) | 3 | 3 | **5** | 15 | 16 | **20** |
 | pillow | 8 (12) | 4 | 8 | 3 (640) | 2 | 3 | **5** | 16 | 8 | 16 |
 | pillow_cyl | 8 (8) | 4 | 4 | 3 (832) | 2 | 3 | 4 | 16 | 16 | 16 |
 
@@ -240,8 +247,8 @@ Domination numbers `gamma` (minimum pieces covering every square) and chromatic 
 
 **Readings.**
 
-- **Two queens dominate the projective plane** (48 ways). A queen's lines there are 16-loops, so two well-placed queens see everything. The plane needs 5 and the torus 4, matching OEIS A279402 (Burger-Mynhardt).
-- **Colouring the queens of the Klein bottle or projective plane takes 22 colours** (plane 9, torus 11). This is forced by `alpha(Q) = 3`, since `ceil(64/3) = 22`, and SAT meets the bound.
+- **Two queens dominate the projective plane** (48 ways). Most of a queen's lines there are 16-loops (only the two fold diagonals have 8 squares), so two well-placed queens see everything. The plane needs 5 (OEIS A075458) and the torus 4 (OEIS A279402).
+- **Colouring the queens of the Klein bottle or projective plane takes 22 colours** (plane 9, torus 11, sphere442 20). This is forced by `alpha(Q) = 3`, since `ceil(64/3) = 22`, and SAT meets the bound.
 - **The orthogonal-step graph of the projective-plane board needs 4 colours, never 3.** This is Youngs' theorem (J. Graph Theory 21 (1996) 219-227): a non-bipartite quadrangulation of the projective plane is 4-chromatic. Our wazir graph is such a quadrangulation once the double edge at each cone point is merged into a neighbouring square. The non-bipartite Klein bottle, Mobius band and helical torus manage with 3.
 - **The king needs a fifth colour on pillow, klein_diag, mobius_diag and sphere442.**
   - *Mechanism, boards without cone points (klein_diag):* a proper 4-colouring of the infinite king graph is row-periodic or column-periodic (if a row shows three consecutive distinct colours, the columns alternate). The lift of a board colouring must be G-invariant, and a diagonal glide swaps the two families; the only colourings in both families are the four-colour 2x2 patterns, and the glide breaks those too.
@@ -253,18 +260,18 @@ Domination numbers `gamma` (minimum pieces covering every square) and chromatic 
 |---|---|---|
 | plane | 14 / 5.333 | 7 / 3.750 |
 | cylinder | 11 / 4.698 | 7 / 3.286 |
-| mobius | 7 / 4.318 | 7 / 3.206 |
+| mobius | 7 / 4.317 | 7 / 3.206 |
 | torus | 8 / 4.063 | 4 / 2.730 |
 | torus_k4 | 6 / 3.873 | 4 / 2.730 |
 | klein | 7 / 3.937 | 4 / 2.730 |
 | klein_diag | 8 / 4.143 | 6 / 2.873 |
-| rp2 | 7 / 4.060 | 7 / 2.913 |
-| sphere442 | **14** / 4.630 | 7 / 3.240 |
+| rp2 | 7 / 4.061 | 7 / 2.913 |
+| sphere442 | **14** / 4.629 | 7 / 3.240 |
 | pillow | 8 / 4.333 | 7 / 3.095 |
 
-Every slider has diameter 2, or 1 on the helical torus.
+Every connected component of every slider graph has diameter 2, or 1 on the helical torus and within a colour on torus_k2. The bishop graph is disconnected whenever the scaffolds are separate.
 
-- **The 442 sphere keeps the plane's wazir diameter 14.** Its gluings fold each edge onto the adjacent edge at matching distance from the corner, so nothing far away is brought close.
+- **The 442 sphere keeps the plane's wazir diameter 14.** Both quarter-turn seams preserve `x + y`, while every step inside the window changes `x + y` by 1. So `a1` (x+y = 0) and `h8` (x+y = 14) stay 14 steps apart, even though some far pairs do become neighbours: `a8` and `h1` are adjacent across the seam. (Exact means: mobius `272/63`, rp2 `4093/1008`, sphere442 `1037/224`.)
 - **King mean exactly 172/63 on torus, torus_k1, torus_k2, torus_k4, klein and klein_cc.** On these boards the king balls of radius 3 embed: 49 cells, then 15 cells at distance 4. klein_diag is the exception (diameter 6).
 
 ## 11. Loss ledger (quotient typing)
@@ -288,7 +295,11 @@ Every slider has diameter 2, or 1 on the helical torus.
 - **Hostile controls:**
   - klein_cc and klein_diag: non-orientable, chi = 0, scaffolds separate;
   - the klein_cc cover test fails as it should;
-  - rp2_fold is isomorphic to rp2 (same board, different window).
+  - rp2_fold is isomorphic to rp2 (same board, different window);
+  - the plane's corner shells (Theorem 3 control).
+- **Independent adversarial audit.** The audit ran its own engine on plane, torus, klein, rp2, sphere442 and pillow: corner steps taken in both orders, reversibility checked, counts by two algorithms, SAT and LP.
+  - *Confirmed:* fusion data; every queen, rook and king maximum and count on those boards; the literal rp2 = sphere442 bishop identity and its segment formula; chi(W, rp2) = 4; the king chromatic numbers; gamma(Q, rp2) = 2 in 48 ways; the shell sequences; the Klein instance of Theorem 5; all four citations.
+  - *Corrected (MISTAKE-565):* a table placeholder (sphere442 chi(Q) is 20, by a fractional certificate the audit found); the claim that `ceil(64/alpha)` pins every queen chromatic number; an arithmetic slip in the proof of Theorem 1; Theorem 5 stated without the hypothesis chi not 0; the sign range of the bishop-segment formula; a false explanation of the sphere's diameter; three rounding errors; a link to a nonexistent file; and overclaims (planar duality, slider diameters, cut locus, Bridges' Klein value, a domination citation).
 
 ## 13. Open threads
 
@@ -296,3 +307,4 @@ Every slider has diameter 2, or 1 on the helical torus.
 - **Mirror (billiard) edges.** Reflection in a grid line has chi = 1, so a reflecting bishop changes colour. Compare with the fairy-chess reflecting bishop.
 - **Cube surface (six boards).** Three cells meet at each corner (cone angle 270 degrees), so the diagonal step through a corner is undefined: discrete curvature that the ferz cannot cross.
 - **A count-level explanation** of the king-packing numbers: 60 on the torus, 2 on the pillow and klein_diag, 62 on the 442 sphere.
+- **Why the sphere's queens need 20 colours** when `ceil(64/alpha)` predicts 16. The extremal fractional weighting found by LP puts 0 on 20 squares (including the whole fold diagonal a1-h8), 1/3 on 28 and 2/3 on 16. Find the structural reason.
