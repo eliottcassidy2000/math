@@ -1,0 +1,21 @@
+chessboard_weave_20261006_hp_blocking_structured.py
+
+Structured families for HYP-9168 (beta = hall), C engine mode bnb with root symmetry breaking
+(full automorphism group from networkx).  Part 3c of chessboard_weave_20261006_hp_blocking_run.py
+(that run was stopped after part 3b for time):
+  * all 32 circulant tournaments on Z_11 (regular: hall = 10 is forced),
+  * circulant tournaments on Z_13: one representative of each of the 6 orbits of the 64
+    connection sets under multiplication by Z_13^* (S -> aS is an isomorphism, S -> -S gives
+    the converse, which has the same beta and hall), so all 64 are covered,
+  * Paley QR_11 and QR_11 minus a vertex,
+  * transitive TT_N and TT_N with one reversed arc (all choices), N = 10, 11, 12,
+  * compositions h -> A => B -> h (hubs h transitive; A, B cyclic triangles / regular 5-, 7-
+    tournaments / transitive), N <= 14, node limit 3e6 per instance (ABORTED is reported).
+
+all 32 circulants on Z_11: 32 tournaments; beta == hall proved: 32; aborted: 0; counterexamples: 0; obstruction verified: 32/32; hall histogram {10: 32}; 6.6s
+Z_13: 64 connection sets in 6 multiplier orbits; representatives [[1, 2, 3, 4, 5, 6], [1, 2, 3, 4, 5, 7], [1, 2, 3, 4, 6, 8], [1, 2, 3, 5, 6, 9], [1, 2, 3, 5, 7, 9], [1, 2, 6, 8, 9, 10]]
+circulants on Z_13 (orbit representatives): 6 tournaments; beta == hall proved: 6; aborted: 0; counterexamples: 0; obstruction verified: 6/6; hall histogram {12: 6}; 31.6s
+Paley QR_11: 1 tournaments; beta == hall proved: 1; aborted: 0; counterexamples: 0; obstruction verified: 1/1; hall histogram {10: 1}; 0.1s
+QR_11 minus a vertex: 1 tournaments; beta == hall proved: 1; aborted: 0; counterexamples: 0; obstruction verified: 1/1; hall histogram {8: 1}; 0.0s
+TT_N and TT_N with one reversed arc (all), N = 10, 11, 12: 169 tournaments; beta == hall proved: 169; aborted: 0; counterexamples: 0; obstruction verified: 169/169; hall histogram {1: 157, 2: 12}; 0.0s
+compositions h -> A => B -> h (1-3 hubs; A, B in C3, R5, R7, TT1-3; N = 7..14): 72 tournaments; beta == hall proved: 72; aborted: 0; counterexamples: 0; obstruction verified: 72/72; hall histogram {3: 22, 4: 4, 5: 22, 6: 11, 7: 9, 8: 3, 10: 1}; 3.4s

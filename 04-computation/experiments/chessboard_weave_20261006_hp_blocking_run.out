@@ -1,0 +1,59 @@
+chessboard_weave_20261006_hp_blocking_run.py
+
+HYP-9168: beta(T) (fewest arcs whose deletion kills every Hamiltonian path) equals
+hall(T) (Hall-deficiency bound) for every tournament T.
+
+Parts
+  1. Konig identity: hall(T) = min_{|A|+|B|=N+2} e_T(A,B)  (= min deletions killing every
+     1-path-cycle factor) against the literal (X,Y) definition, in- AND out-versions,
+     Y allowed to meet X.  Pure-Python reference on all labeled N <= 5, C engine on all
+     labeled N <= 6, all classes N = 7, random labeled N = 7, 8.
+  2. Exact beta: branch and bound (C engine) against brute-force subset enumeration on all
+     classes N <= 7 (infeasibility of hall-1 AND iterative deepening), and on 5000
+     lightly damaged tournaments (general oriented graphs, so feasible answers occur).
+  3. beta = hall at N = 10..14: uniform random labeled tournaments, random regular /
+     almost-regular tournaments (score-preserving 3-cycle-reversal walk), and structured
+     families (all circulants on Z_11 and Z_13, Paley QR_11, QR_11 - v, transitive,
+     one/two reversed arcs of the transitive tournament, compositions with cyclic
+     triangles and regular blocks, lexicographic products).
+  4. Gutin route data: for every class N <= 7, ALL minimum blocking sets D (|D| = beta):
+     how many are of "multipartite type" (deleted pairs = disjoint union of cliques, so
+     T - D is a multipartite tournament) and how many leave a 1-path-cycle factor.
+
+==============================================================================
+PART 1. Konig identity hall = min_{|A|+|B|=N+2} e(A,B); in/out versions agree
+==============================================================================
+1a pure Python, all labeled tournaments N=2..5 (1098): hall_in == hall_out == Konig formula (and == brute-force min deletions killing all 1-path-cycle factors for N <= 4): ALL AGREE
+1b C engine, all 8 labeled tournaments N=3: formula == in-version == out-version and optimal (A,B) kills every HP and every 1-path-cycle factor: 8/8
+1b C engine, all 64 labeled tournaments N=4: formula == in-version == out-version and optimal (A,B) kills every HP and every 1-path-cycle factor: 64/64
+1b C engine, all 1024 labeled tournaments N=5: formula == in-version == out-version and optimal (A,B) kills every HP and every 1-path-cycle factor: 1024/1024
+1b C engine, all 32768 labeled tournaments N=6: formula == in-version == out-version and optimal (A,B) kills every HP and every 1-path-cycle factor: 32768/32768
+1b C engine, all 456 classes N=7: agree 456/456
+1b C engine, 3000 random labeled N=7: agree 3000/3000
+1b C engine, 1000 random labeled N=8: agree 1000/1000
+
+==============================================================================
+PART 2. exact beta: branch and bound vs brute-force subset enumeration
+==============================================================================
+N=3: 2 classes; brute-force beta == hall: 2/2; B&B(hall-1 infeasible) == brute: 2/2; B&B deepening == brute: 2/2
+N=4: 4 classes; brute-force beta == hall: 4/4; B&B(hall-1 infeasible) == brute: 4/4; B&B deepening == brute: 4/4
+N=5: 12 classes; brute-force beta == hall: 12/12; B&B(hall-1 infeasible) == brute: 12/12; B&B deepening == brute: 12/12
+N=6: 56 classes; brute-force beta == hall: 56/56; B&B(hall-1 infeasible) == brute: 56/56; B&B deepening == brute: 56/56
+N=7: 456 classes; brute-force beta == hall: 456/456; B&B(hall-1 infeasible) == brute: 456/456; B&B deepening == brute: 456/456
+classes N<=7 with nontrivial Aut: 80; deepening WITH root symmetry breaking == brute: 80/80
+damaged tournaments (T minus 0..N/2 random arcs), N=6,7,8, 5000 digraphs: B&B deepening == brute force on 5000/5000; beta histogram {0: 79, 1: 789, 2: 1879, 3: 1629, 4: 559, 5: 60, 6: 5}
+  (side remark) beta < hall on 20 of these NON-tournaments, e.g. T minus ONE arc: 111011110010011 D:4>3 hall=3 beta=2; 001010100010101 D:2>1 hall=4 beta=3; 110011110111101 D:2>4 hall=4 beta=3
+
+==============================================================================
+PART 3. beta = hall at N = 10..14
+==============================================================================
+3a uniform random labeled N=10: 10000 tournaments; beta == hall: 10000/10000; hall obstruction verified: 10000/10000; hall<sigma: 0; hall histogram {1: 14, 2: 206, 3: 1194, 4: 3090, 5: 3498, 6: 1772, 7: 222, 8: 4}; max nodes 2461; 4.9s
+3a uniform random labeled N=11: 10000 tournaments; beta == hall: 10000/10000; hall obstruction verified: 10000/10000; hall<sigma: 0; hall histogram {2: 83, 3: 501, 4: 1986, 5: 3405, 6: 2997, 7: 913, 8: 115}; max nodes 2587; 16.5s
+3a uniform random labeled N=12: 10000 tournaments; beta == hall: 10000/10000; hall obstruction verified: 10000/10000; hall<sigma: 0; hall histogram {2: 26, 3: 220, 4: 994, 5: 2589, 6: 3447, 7: 2120, 8: 567, 9: 37}; max nodes 6607; 65.7s
+3a uniform random labeled N=13: 1000 tournaments; beta == hall: 1000/1000; hall obstruction verified: 1000/1000; hall<sigma: 0; hall histogram {2: 1, 3: 7, 4: 35, 5: 148, 6: 296, 7: 315, 8: 163, 9: 34, 10: 1}; max nodes 12234; 26.0s
+3a uniform random labeled N=14: 200 tournaments; beta == hall: 200/200; hall obstruction verified: 200/200; hall<sigma: 0; hall histogram {4: 1, 5: 21, 6: 48, 7: 56, 8: 54, 9: 17, 10: 3}; max nodes 16756; 19.0s
+3b random almost-regular N=10: 300 tournaments; beta == hall: 300/300; hall obstruction verified: 300/300; hall<sigma: 0; hall histogram {8: 300}; max nodes 3008; 5.4s
+3b random regular N=11: 300 tournaments; beta == hall: 300/300; hall obstruction verified: 300/300; hall<sigma: 0; hall histogram {10: 300}; max nodes 32245; 135.7s
+3b random almost-regular N=12: 200 tournaments; beta == hall: 200/200; hall obstruction verified: 200/200; hall<sigma: 0; hall histogram {10: 200}; max nodes 27230; 136.2s
+
+[run stopped here for time after part 3b; part 3c: chessboard_weave_20261006_hp_blocking_structured.out; part 4 (Gutin-route data): chessboard_weave_20261006_hp_blocking_theory.out sections A, D]

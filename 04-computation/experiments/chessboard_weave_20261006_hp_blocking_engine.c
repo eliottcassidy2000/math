@@ -422,6 +422,56 @@ static int bnb(int b) {
     return res;
 }
 
+/* enumerate ALL blocking sets of size exactly all_target (each exactly once, by the
+   protection scheme); for each, record whether T - D still has a 1-path-cycle factor
+   and whether D is the star of a vertex */
+static int all_target;
+static long long all_count, all_exotic, all_exotic_star, all_star;
+static int max_matching(const mask *out);
+static void bnb_all(int b) {
+    nodes++;
+    int path[MAXN], cnt;
+    int t = packing(b + 1, path, &cnt);
+    if (t < 0) {
+        if (cur_n == all_target) {
+            all_count++;
+            int mm = max_matching(G_out);
+            int deg[MAXN];
+            memset(deg, 0, sizeof deg);
+            for (int i = 0; i < cur_n; i++) { deg[cur_u[i]]++; deg[cur_v[i]]++; }
+            int star = 0;  /* D = all N-1 arcs at one vertex (isolates it) */
+            for (int v = 0; v < N; v++) if (deg[v] == cur_n && cur_n == N - 1) star = 1;
+            all_star += star;
+            if (mm >= N - 1) {
+                all_exotic++;
+                all_exotic_star += star;
+                if (!star) {
+                    printf("EXOTIC_NONSTAR D=");
+                    for (int i = 0; i < cur_n; i++) printf("%d>%d%s", cur_u[i], cur_v[i], i + 1 < cur_n ? "," : "");
+                    printf(" ");
+                }
+            }
+        }
+        return;
+    }
+    if (b == 0 || t > b) return;
+    int ua[MAXN], ub[MAXN], m = 0;
+    for (int i = 0; i + 1 < N; i++) {
+        int a = path[i], c = path[i + 1];
+        if (!((PR[a] >> c) & 1)) { ua[m] = a; ub[m] = c; m++; }
+    }
+    for (int i = 0; i < m; i++) {
+        int a = ua[i], c = ub[i];
+        G_out[a] &= ~(1u << c); G_in[c] &= ~(1u << a);
+        cur_u[cur_n] = a; cur_v[cur_n] = c; cur_n++;
+        bnb_all(b - 1);
+        cur_n--;
+        G_out[a] |= 1u << c; G_in[c] |= 1u << a;
+        PR[a] |= 1u << c;
+    }
+    for (int j = 0; j < m; j++) PR[ua[j]] &= ~(1u << ub[j]);
+}
+
 /* root with symmetry breaking via arc orbits under the supplied automorphisms */
 static int arc_orbit[MAXN][MAXN];
 static int feasible(int k) {
@@ -668,6 +718,19 @@ int main(int argc, char **argv) {
             memset(BASE_PR, 0, sizeof BASE_PR);
             printf("%s N=%d K=%d hall_K=%d beta_K=%d beta_K_brute=%d %s\n", keep, N0, K, hK, kk, bbrute,
                    kk == hK ? "EQ" : "NEQ");
+            fflush(stdout);
+        } else if (!strcmp(mode, "allmin")) {
+            /* all minimum blocking sets via the enumerating branch and bound (beta = hall assumed
+               only as the target size; verified by the absence of smaller sets in bnbq runs) */
+            memcpy(G_out, T_out, sizeof(mask) * N);
+            memcpy(G_in, T_in, sizeof(mask) * N);
+            memset(PR, 0, sizeof PR);
+            cur_n = 0; nodes = 0;
+            all_target = h; all_count = all_exotic = all_exotic_star = all_star = 0;
+            printf("%s ", keep);
+            bnb_all(h);
+            printf("N=%d hall=%d min_sets=%lld isolating_stars=%lld with_1pcf=%lld with_1pcf_isolating_star=%lld nodes=%lld\n",
+                   N, h, all_count, all_star, all_exotic, all_exotic_star, nodes);
             fflush(stdout);
         } else if (!strcmp(mode, "minsets")) {
             int bt = beta_brute(N);

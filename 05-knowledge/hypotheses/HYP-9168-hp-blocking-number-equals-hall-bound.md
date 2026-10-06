@@ -39,6 +39,19 @@ status: >
     multipartite type; the single-factor merge count (blocking all simple merges of a
     path with each cycle) falls short of hall at N = 6 (3 classes) and N = 7 (65
     classes, deficit up to 3).
+  - PROVED partial theorem: beta >= min(hall, 3), i.e. HYP-9168 holds for every tournament
+    with hall <= 3 (any N). Mechanism: merge the cycles of a 1-path-cycle factor into its path;
+    each of the |C| diagonals of P x C carries a simple merge, so a stuck merge costs at least
+    |C| >= 3 deletions. Exact merge-blocking cost MB(P,C) = sum over diagonals of
+    (1 + ascents). The single-factor count fails beyond hall 3 (regular N = 7 witness).
+  - PROVED: hall = N - 1 exactly for regular tournaments (k-regular bipartite double), so the
+    regular corollary is HYP-9168 restricted to regular tournaments; VERIFIED on 300 random
+    regular N = 11, all 32 circulants on Z_11 and all 64 on Z_13 (FINITE-EXACT).
+  - Minimum blocking sets need not be Hall obstructions (exotic minima at N = 5, 6, 7: vertex
+    stars and source-plus-sink shapes; none at N = 8); the equality also fails for semicomplete
+    digraphs with 2-cycles (210 of 58025 labeled at N = 5).
+  - Strengthening: beta_k = min over |A| + |B| = N + k + 1 of e(A, B) for covers by <= k paths,
+    FINITE-EXACT for k = 2, 3 and N <= 7.
   Notes: 05-knowledge/results/chessboard_weave_20261006.md section 7; scripts
   04-computation/experiments/chessboard_weave_20261006_hp_blocking_*.
 source: collatz-procgen-20260922 session, selfie lane (2026-10-01), Conjecture D1; promoted with THM-4524

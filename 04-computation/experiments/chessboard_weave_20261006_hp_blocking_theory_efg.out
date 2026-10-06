@@ -1,0 +1,64 @@
+chessboard_weave_20261006_hp_blocking_theory_efg.py
+
+Runs sections E, F, G of chessboard_weave_20261006_hp_blocking_theory.py (the first full run of
+that script was stopped inside section E by a bug: k-path with k >= N has no blocking set, so
+the deepening loop never ended; fixed by skipping k >= N).  Sections A-D are in
+chessboard_weave_20261006_hp_blocking_theory.out.
+
+chessboard_weave_20261006_hp_blocking_theory.py
+
+Checks for the proof attempts on HYP-9168 (beta(T) = hall(T)).
+
+ A. Gutin's theorem (SIAM J. Discrete Math. 6 (1993), Corollary 1: a complete multipartite
+    digraph has a Hamiltonian path iff it has a spanning path + disjoint cycles) on every
+    multipartite tournament obtainable as T - (arcs inside the parts of a partition), all
+    classes T with N <= 7 and all set partitions.  Consequences checked: cluster-type
+    blocking sets are never cheaper than hall; the cheapest cluster-type blocking set vs beta.
+ B. MERGE LEMMA.  P = p_1..p_m a path, C = c_0..c_{k-1} a cycle of a tournament T, disjoint.
+    The "simple merges" of P and C are: c_i -> p_1 (front), p_m -> c_i (back),
+    p_j -> c_i & c_{i-1} -> p_{j+1} (middle).  For the diagonal class delta (pairs {p_j,c_i}
+    with i+j = delta mod k) let x_j = [p_j -> c_{delta-j} in T].  Claim: the minimum number of
+    arcs of E(V(P),V(C)) whose deletion blocks every simple merge is
+         MB(P,C) = sum_delta (1 + asc_delta),   asc_delta = #{j<m : x_j = 0, x_{j+1} = 1}
+    (>= k).  Verified against brute force on random instances.
+ C. The single-factor merge argument would prove HYP-9168 if
+         (MB inequality)  hall(T) <= sum_i MB(P, C_i)  for every spanning 1-path-cycle factor
+    P + C_1 + ... + C_r (r >= 1) of T.  Tested on all classes N <= 7; failures show where the
+    argument breaks (explicit witness: a set D_F of size sum MB blocking every simple merge of F
+    while T - D_F still has a Hamiltonian path).
+ D. Census of the minimum blocking sets D that leave a 1-path-cycle factor (N <= 7) by shape.
+ E. k-path generalization: beta_k (fewest deletions leaving no cover by <= k vertex-disjoint
+    paths) vs hall_k = min_{|A|+|B| = N+k+1} e(A,B) (fewest deletions leaving no path-cycle
+    subgraph with <= k paths), k = 2, 3, all classes N <= 7 (brute force cross-check N <= 6).
+ F. The analogue for semicomplete digraphs (2-cycles allowed), all labeled ones with N <= 5.
+ G. On the exotic minima (N <= 7): the merge count of a fewest-cycle (hence stuck) factor vs |D|.
+sections run: EFG
+
+==============================================================================
+E. k-path generalization beta_k = hall_k (k = 2, 3)
+==============================================================================
+N=3 k=2: beta_k == hall_k on 2/2 classes; B&B == brute force on 2/2
+N=4 k=2: beta_k == hall_k on 4/4 classes; B&B == brute force on 4/4
+N=4 k=3: beta_k == hall_k on 4/4 classes; B&B == brute force on 4/4
+N=5 k=2: beta_k == hall_k on 12/12 classes; B&B == brute force on 12/12
+N=5 k=3: beta_k == hall_k on 12/12 classes; B&B == brute force on 12/12
+N=6 k=2: beta_k == hall_k on 56/56 classes; B&B == brute force on 56/56
+N=6 k=3: beta_k == hall_k on 56/56 classes; B&B == brute force on 56/56
+N=7 k=2: beta_k == hall_k on 456/456 classes
+N=7 k=3: beta_k == hall_k on 456/456 classes
+
+==============================================================================
+F. the statement is special to tournaments: semicomplete digraphs (2-cycles allowed)
+==============================================================================
+N=3: all 19 labeled semicomplete digraphs with >= 1 two-cycle: beta < hall for 0
+N=4: all 665 labeled semicomplete digraphs with >= 1 two-cycle: beta < hall for 30; e.g. 001020 (pairs i<j: 1 = i->j, 0 = j->i, 2 = both) hall=3 beta=2 blocking set 3>2,0>3
+N=5: all 58025 labeled semicomplete digraphs with >= 1 two-cycle: beta < hall for 210; e.g. 0011202202 (pairs i<j: 1 = i->j, 0 = j->i, 2 = both) hall=5 beta=4 blocking set 1>0,2>0,0>3,0>4
+
+==============================================================================
+G. merge count on the exotic minima: fewest-cycle 1-path-cycle factor F of T - D (stuck), |D| vs sum MB(F)
+==============================================================================
+N=5: (|D|, fewest cycles r, min sum MB, max sum MB over such factors) -> count: {(3, 1, 3, 3): 4, (4, 1, 4, 4): 10}
+N=6: (|D|, fewest cycles r, min sum MB, max sum MB over such factors) -> count: {(3, 1, 3, 3): 2, (4, 1, 3, 3): 2, (4, 1, 4, 4): 2}
+N=7: (|D|, fewest cycles r, min sum MB, max sum MB over such factors) -> count: {(6, 1, 6, 6): 21}
+
+total time 5.6s

@@ -752,7 +752,8 @@ all heights (THM-1289, published), δ ineffective.
   the centre-to-centre flights of colour-changing Fibonacci leapers (`sigma`: rook step -> knight/zebra flight).
   Knight-torus blocking number `7` = Hall bound (only vertex-starving sets), the knight form of HYP-9168.
   HYP-9168 (blocking number = Hall bound) is now FINITE-EXACT for all 9,733,056 tournaments on 10 vertices (was
-  `N <= 9`), random-verified to `N = 14`, and shown false for oriented graphs that are not tournaments.
+  `N <= 9`), PROVED whenever `hall <= 3` (`beta >= min(hall, 3)` by a merge count), random-verified to `N = 14`, and
+  false for oriented graphs that are not tournaments.
   No LRC(14), Collatz or `H >= disc` consequence.
 
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`
