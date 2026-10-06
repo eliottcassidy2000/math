@@ -1,0 +1,112 @@
+### part 1
+== 1. The two octics
+P irreducible over Q: True   U irreducible over Q: True
+real roots of U: [-0.54609398166022488256, 0.36576930760467729339]
+root of U in (9/25, 37/100): [0.365769307604677293388545018143]
+T = (6u+4)/(1+2u-u^2): [3.87708359002281417730789706010]   P(T) = [1.7516e-46]
+Res_u(U, (1+2u-u^2)s-(6u+4)) = (-1792, [(s**8 - 20*s**7 + 178*s**6 - 842*s**5 + 1923*s**4 - 496*s**3 - 6754*s**2 + 12420*s - 6865, 1)])
+degree check: [Q(T):Q] = 8 = [Q(u):Q], so Q(T) = Q(u) (T is a rational function of u)
+
+== 2. Discriminants
+disc P = -209869400103889499760776960 = {2: 8, 5: 1, 31: 1, 367: 2, 104053: 1, 614321: 2, -1: 1}
+disc U = -69270155967856640 = {2: 32, 5: 1, 31: 1, 104053: 1, -1: 1}
+disc P is a square: False   sign: -1
+real roots of P: 2  signature (r1, r2) = (2, 3)
+real roots of P: [-1.85303247897251, 3.87708359002281]
+
+== 3. Frobenius cycle types (Chebotarev), primes p <= 200000 not dividing disc P
+primes used: 17979
+   (7, 1)                          2542  0.14139
+   (8,)                            2222  0.12359
+   (5, 2, 1)                       1732  0.09633
+   (6, 2)                          1515  0.08426
+   (4, 3, 1)                       1514  0.08421
+   (6, 1, 1)                       1491  0.08293
+   (5, 3)                          1228  0.06830
+   (4, 2, 1, 1)                    1188  0.06608
+   (3, 2, 2, 1)                     756  0.04205
+   (5, 1, 1, 1)                     594  0.03304
+   (4, 2, 2)                        565  0.03143
+   (3, 3, 2)                        544  0.03026
+   (3, 2, 1, 1, 1)                  532  0.02959
+   (4, 4)                           521  0.02898
+   (3, 3, 1, 1)                     457  0.02542
+   (2, 2, 2, 1, 1)                  193  0.01073
+   (4, 1, 1, 1, 1)                  184  0.01023
+   (2, 2, 1, 1, 1, 1)                98  0.00545
+   (2, 2, 2, 2)                      48  0.00267
+   (3, 1, 1, 1, 1, 1)                46  0.00256
+   (2, 1, 1, 1, 1, 1, 1)              9  0.00050
+P has a root mod p: 0.63051   (S8: 1 - D_8/8! = 0.63212)
+P irreducible mod p: 0.12359   (S8: 1/8 = 0.125)
+
+== 4. Block systems from 60-digit roots (subfield test)
+block systems found: none (sum and product invariants, all 35 + 105 candidates)
+
+### part 2
+disc P = -209869400103889499760776960 {2: 8, 5: 1, 31: 1, 367: 2, 104053: 1, 614321: 2, -1: 1}
+
+== Gal(P) = S8 certificate (Dedekind: unramified Frobenius cycle type = factorisation type mod p)
+smallest unramified primes with these factorisation types: {'(7,1)': 7, '(2,1^6)': 8017, '(8)': 29, '(5,3)': 23}
+Proof: P irreducible => G transitive; Frobenius at p = 7 is a 7-cycle => G 2-transitive => primitive; Frobenius at p = 8017 is a transposition; a primitive group containing a transposition is S_n (Jordan). So G = S8.
+
+== Dedekind criterion: is Z[T] p-maximal?
+   p =       2: v_p(disc P) = 8, factorisation mod p = [(2, 4)], Z[T] p-maximal: True
+   p =       5: v_p(disc P) = 1, factorisation mod p = [(1, 1), (1, 2), (5, 1)], Z[T] p-maximal: True
+   p =      31: v_p(disc P) = 1, factorisation mod p = [(1, 1), (1, 2), (5, 1)], Z[T] p-maximal: True
+   p =     367: v_p(disc P) = 2, factorisation mod p = [(1, 2), (3, 1), (3, 1)], Z[T] p-maximal: False
+   p =  104053: v_p(disc P) = 1, factorisation mod p = [(1, 2), (6, 1)], Z[T] p-maximal: True
+   p =  614321: v_p(disc P) = 2, factorisation mod p = [(1, 1), (1, 1), (1, 2), (2, 1), (2, 1)], Z[T] p-maximal: False
+
+   Conclusion for d_K (disc P = index^2 * d_K):
+   p-maximal at p  =>  v_p(d_K) = v_p(disc P); not p-maximal with v_p(disc P) = 2  =>  v_p(d_K) = 0 (index divisible by p).
+
+== Quadratic resolvent (sign character of S8 = the GL(1) piece)
+squarefree part of disc P: -16128215   quadratic resolvent field Q(sqrt( -16128215 )), fundamental discriminant -16128215
+class number h(Q(sqrt(D))) = 5444
+sign of Frobenius = Kronecker (D/p) on 2258 primes: mismatches 0
+
+== Artin-type entanglement: root count of P mod p, conditioned on the sign character (exact, S8)
+   0 roots mod p: density 2119/5760 = 0.367882;  given (D/p)=+1: 353/960 = 0.367708;  given (D/p)=-1: 53/144 = 0.368056
+   1 roots mod p: density 103/280 = 0.367857;  given (D/p)=+1: 31/84 = 0.369048;  given (D/p)=-1: 11/30 = 0.366667
+   2 roots mod p: density 53/288 = 0.184028;  given (D/p)=+1: 13/72 = 0.180556;  given (D/p)=-1: 3/16 = 0.187500
+   3 roots mod p: density 11/180 = 0.061111;  given (D/p)=+1: 1/15 = 0.066667;  given (D/p)=-1: 1/18 = 0.055556
+   4 roots mod p: density 1/64 = 0.015625;  given (D/p)=+1: 1/96 = 0.010417;  given (D/p)=-1: 1/48 = 0.020833
+   5 roots mod p: density 1/360 = 0.002778;  given (D/p)=+1: 1/180 = 0.005556;  given (D/p)=-1: 0 = 0.000000
+   6 roots mod p: density 1/1440 = 0.000694;  given (D/p)=+1: 0 = 0.000000;  given (D/p)=-1: 1/720 = 0.001389
+   8 roots mod p: density 1/40320 = 0.000025;  given (D/p)=+1: 1/20160 = 0.000050;  given (D/p)=-1: 0 = 0.000000
+
+### part 3
+S8 moments of a = fix - 1: {1: '0', 2: '1', 3: '1', 4: '4'}
+primes 3 <= p < 1000000, p not dividing disc: 78492
+observed moments: {1: -0.00278, 2: 0.99766, 3: 0.97513, 4: 3.89186}
+small primes (p, a_p, factor degrees): [(3, -1, [2, 6]), (7, 0, [1, 7]), (11, 0, [1, 3, 4]), (13, 0, [1, 7]), (17, 0, [1, 7]), (19, 1, [1, 1, 2, 4]), (23, -1, [3, 5]), (29, -1, [8]), (37, 0, [1, 2, 2, 3]), (41, -1, [2, 6]), (43, 1, [1, 1, 3, 3]), (47, -1, [8]), (53, 0, [1, 3, 4]), (59, -1, [2, 6])]
+u = 0.3657693076046772933885450181433113152391
+tilt angle 2 atan(u) = 40.18193729032971646523034236806062154252 degrees
+T = 3.877083590022814177307897060100962706376    (2 + 2 cos t + 3 sin t)/(sin t + cos t) = 3.877083590022814177307897060100962706376
+
+### expense records (bracket)
+continued fraction of log2 3: [1, 1, 1, 2, 2, 3, 1, 5, 2, 23, 2, 2, 1, 1, 55, 1]
+convergents: [(1, 1), (2, 1), (3, 2), (8, 5), (19, 12), (65, 41), (84, 53), (485, 306), (1054, 665), (24727, 15601), (50508, 31867), (125743, 79335), (176251, 111202), (301994, 190537), (16785921, 10590737), (17087915, 10781274)]
+bracket 16785921/10590737 < log2 3 < 301994/190537: certified by exact powers = True (0.0s); width 4.956e-13
+failures (bracket insufficient): none
+records of q_max(l), l <= 320:
+   l =    1  A =    2  (2/1)  q_max = 3
+   l =    3  A =    5  (5/3)  q_max = 13
+   l =    5  A =    8  (8/5)  q_max = 67
+   l =   17  A =   27  (27/17)  q_max = 306
+   l =   29  A =   46  (46/29)  q_max = 804
+   l =   41  A =   65  (65/41)  q_max = 2480
+   l =   94  A =  149  (149/94)  q_max = 6951
+   l =  147  A =  233  (233/147)  q_max = 13984
+   l =  200  A =  317  (317/200)  q_max = 26668
+   l =  253  A =  401  (401/253)  q_max = 56382
+   l =  306  A =  485  (485/306)  q_max = 207489
+
+### Lean certificate (axiom audit)
+'bracket_lo' depends on axioms: [bracket_lo._native.native_decide.ax_1_1]
+'bracket_hi' depends on axioms: [bracket_hi._native.native_decide.ax_1_1]
+'all_lengths_certified' depends on axioms: [all_lengths_certified._native.native_decide.ax_1_1]
+'records_320' depends on axioms: [records_320._native.native_decide.ax_1_1]
+'direct_small_records' depends on axioms: [direct_small_records._native.native_decide.ax_1_1]
+lean exit: 0
