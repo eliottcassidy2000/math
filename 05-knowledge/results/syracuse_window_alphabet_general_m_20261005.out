@@ -163,6 +163,13 @@ density of the smallest occurring class: 1/4096
 | 8 | 458 | 194 / 6880 | 20 | 87 | 6686 | 5925 | 81 / 194 |
 
 realised-pattern counts: 5, 16, 49, 145, 458
+
+## Chord-wise genericity (actual chord direction versus the word prediction, all odd starts below 2^20)
+
+plus sheet 3x+1: 10998667 chords of lag 2..7 checked inside transient prefixes (before the first repeated value; a cycle point sits on the tie point of its own word), 0 non-generic
+minus sheet 3x-1: 10991912 chords of lag 2..7 checked inside transient prefixes (before the first repeated value; a cycle point sits on the tie point of its own word), 0 non-generic
+With the gate bound (a non-generic chord of lag k <= 7 needs a start below max_w c_w/|2^s - 3^k| < 90), this
+certifies that the generic alphabets above are the exact alphabets for all odd x and every m <= 8 on both sheets.
 strong occurring classes by size: 3: 1 of 1, 4: 1 of 1, 5: 2 of 6, 6: 12 of 35, 7: 19 of 353, 8: 83 of 6008
 
 ## The 3x-1 sheet (odd x, S^-(x) = (3x-1)/2^v), same thresholds

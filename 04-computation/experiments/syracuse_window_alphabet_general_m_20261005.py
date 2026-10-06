@@ -108,6 +108,42 @@ def census(m, N, step):
     return cnt, degen
 
 
+def chordwise_genericity(m, N, step):
+    """Chord-wise check: for every odd start below 2^N and every chord of lag 2..m-1 whose two values are
+    distinct (prefixes of degenerate windows included), the actual direction equals the word prediction
+    [A(i,j) >= t_(j-i)].  Returns (chords checked, mismatches, first mismatch)."""
+    checked = 0
+    bad = 0
+    first = None
+    for x in range(1, 1 << N, 2):
+        vals = [x]
+        avs = []
+        for _ in range(m - 1):
+            y, a = step(vals[-1])
+            vals.append(y)
+            avs.append(a)
+        # transient prefix: stop at the first repeated value (a value on a cycle sits exactly on the
+        # tie point of its own word, e.g. the minus-sheet fixed point 1 with word (1), so chords into
+        # a cycle are not predicted by the word; the order-laws genericity is stated on transients)
+        seen = set()
+        r = m
+        for k, v in enumerate(vals):
+            if v in seen:
+                r = k
+                break
+            seen.add(v)
+        for i in range(r):
+            for j in range(i + 2, r):
+                actual = 1 if vals[i] > vals[j] else 0
+                generic = 1 if sum(avs[i:j]) >= threshold(j - i) else 0
+                checked += 1
+                if actual != generic:
+                    bad += 1
+                    if first is None:
+                        first = (x, i, j, avs[i:j])
+    return checked, bad, first
+
+
 def main(N, mmax, do_minus, do_save):
     say("# The Syracuse m-window alphabet, m = 4..%d (gauge DESC: forward chord = descent)" % mmax)
     say()
@@ -183,6 +219,7 @@ def main(N, mmax, do_minus, do_save):
         cyc_nt = Counter(len(c) for c in nx.simple_cycles(Nt))
         say("nearly transitive tournament (TT_%d with 0->%d reversed): class %d, scores %s, cycles %s, occurs: %s, same class as all-ascent: %s" % (
             m, m - 1, nt_idx, scores(Nt), dict(sorted(cyc_nt.items())), nt_idx in occ, nt_idx == asc_cls))
+        assert (nt_idx == asc_cls) == (m == 4) and (nt_idx in occ) == (m == 4)
         # (ii) TT_m density = transfer matrix over capped letters with all consecutive sums >= 4
         Mt = [[Fraction(0)] * 4 for _ in range(4)]
         mass4 = [Fraction(1, 2), Fraction(1, 4), Fraction(1, 8), Fraction(1, 8)]
@@ -251,7 +288,7 @@ def main(N, mmax, do_minus, do_save):
                             k = C.find(H)
                             if k in mis_here:
                                 say("    reversing the 3-cycle (%d,%d,%d) of the occurring class %d gives the missing class %d (Ryser interchange)" % (u, v, w, i, k))
-                assert all(len(occ_here) == 1 for _ in [0])
+                assert len(occ_here) == 1
         say()
     say("## Summary")
     say()
@@ -261,6 +298,17 @@ def main(N, mmax, do_minus, do_save):
         say("| %d | %d | %d / %d | %d | %d | %d | %d | %d / %d |" % (m, npat, nocc, nall, sc, pr, nmiss, smiss, ssep, nocc))
     say()
     say("realised-pattern counts: " + ", ".join(str(s[1]) for s in summary))
+    # chord-wise genericity below 2^N on both sheets, lags 2..mmax-1, degenerate prefixes included
+    say()
+    say("## Chord-wise genericity (actual chord direction versus the word prediction, all odd starts below 2^%d)" % N)
+    say()
+    for label, step in (("plus sheet 3x+1", syr_plus), ("minus sheet 3x-1", syr_minus)):
+        checked, bad, first = chordwise_genericity(mmax, N, step)
+        say("%s: %d chords of lag 2..%d checked inside transient prefixes (before the first repeated value; a cycle point sits on the tie point of its own word), %d non-generic%s" % (
+            label, checked, mmax - 1, bad, "" if bad == 0 else ", first at x=%d chord (%d,%d) word %s" % first))
+        assert bad == 0
+    say("With the gate bound (a non-generic chord of lag k <= 7 needs a start below max_w c_w/|2^s - 3^k| < 90), this")
+    say("certifies that the generic alphabets above are the exact alphabets for all odd x and every m <= %d on both sheets." % mmax)
     say("strong occurring classes by size: " + ", ".join("%d: %d of %d" % (k, len(strong_occ[k]), sum(1 for G in TC[k].reps if largest_strong(G) == k)) for k in sorted(strong_occ)))
     # minus sheet comparison
     if do_minus:
