@@ -1,0 +1,275 @@
+{
+  "actual_examples": [
+    {
+      "counter_bound": 0,
+      "green_floor": "1",
+      "inverse_path": [
+        1
+      ],
+      "mixture_floor": "1",
+      "source": 1,
+      "word": []
+    },
+    {
+      "counter_bound": 2,
+      "green_floor": "1/4",
+      "inverse_path": [
+        1,
+        3
+      ],
+      "mixture_floor": "1/6",
+      "source": 3,
+      "word": [
+        1,
+        4
+      ]
+    },
+    {
+      "counter_bound": 1,
+      "green_floor": "1/2",
+      "inverse_path": [
+        1
+      ],
+      "mixture_floor": "1/3",
+      "source": 5,
+      "word": [
+        4
+      ]
+    },
+    {
+      "counter_bound": 6,
+      "green_floor": "1/64",
+      "inverse_path": [
+        1,
+        3,
+        17,
+        11,
+        7
+      ],
+      "mixture_floor": "1/140",
+      "source": 7,
+      "word": [
+        1,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "counter_bound": 48,
+      "green_floor": "1/281474976710656",
+      "inverse_path": [
+        1,
+        3,
+        35,
+        23,
+        15,
+        81,
+        433,
+        577,
+        769,
+        2051,
+        1367,
+        911,
+        607,
+        1619,
+        1079,
+        719,
+        479,
+        319,
+        425,
+        283,
+        377,
+        251,
+        167,
+        111,
+        593,
+        395,
+        263,
+        175,
+        233,
+        155,
+        103,
+        137,
+        91,
+        121,
+        161,
+        107,
+        71,
+        47,
+        31,
+        41,
+        27
+      ],
+      "mixture_floor": "1/1580132580471900",
+      "source": 27,
+      "word": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        3,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        4,
+        2,
+        2,
+        4,
+        3,
+        1,
+        1,
+        5,
+        4
+      ]
+    },
+    {
+      "counter_bound": 37,
+      "green_floor": "1/137438953472",
+      "inverse_path": [
+        1,
+        3,
+        35,
+        23,
+        15,
+        81,
+        433,
+        577,
+        769,
+        2051,
+        1367,
+        911,
+        607,
+        1619,
+        1079,
+        719,
+        479,
+        319,
+        425,
+        283,
+        377,
+        251,
+        167,
+        111,
+        593,
+        395,
+        263,
+        175,
+        233,
+        155
+      ],
+      "mixture_floor": "1/689232644100",
+      "source": 155,
+      "word": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        3,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        4,
+        2,
+        2,
+        4,
+        3,
+        1,
+        1,
+        5,
+        4
+      ]
+    }
+  ],
+  "actual_sources": {
+    "control_base_depth_cap": 256,
+    "count": 128,
+    "odd_below": 256
+  },
+  "checks": 26112,
+  "deleted_target_controls": 124,
+  "exact_columns": 48,
+  "invalid_inputs": 11,
+  "positive_regularization_zero_limit": [
+    {
+      "epsilon": "1",
+      "off_root_weight": "2"
+    },
+    {
+      "epsilon": "1/2",
+      "off_root_weight": "1"
+    },
+    {
+      "epsilon": "1/4",
+      "off_root_weight": "1/2"
+    },
+    {
+      "epsilon": "1/8",
+      "off_root_weight": "1/4"
+    },
+    {
+      "epsilon": "1/16",
+      "off_root_weight": "1/8"
+    },
+    {
+      "epsilon": "1/32",
+      "off_root_weight": "1/16"
+    },
+    {
+      "epsilon": "1/64",
+      "off_root_weight": "1/32"
+    },
+    {
+      "epsilon": "1/128",
+      "off_root_weight": "1/64"
+    },
+    {
+      "epsilon": "1/256",
+      "off_root_weight": "1/128"
+    }
+  ],
+  "status": "PROVED dual compiler; independent global positive witnesses OPEN",
+  "synthetic_exact_Poisson_duals": 3412,
+  "synthetic_functional_graphs": 700,
+  "typed_selector_regroupings": 27,
+  "unbounded_harmonic_ray_controls": 16
+}
+PASS

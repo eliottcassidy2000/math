@@ -1,0 +1,80 @@
+{
+  "status": "PROVED conditional reverse compiler; all-source premise OPEN",
+  "checks": 29343,
+  "controls": [
+    {
+      "source": 3,
+      "premise_odd_steps": 2,
+      "leaf": 3,
+      "total_counter_ceiling": 2,
+      "conditional_floor": "1/6",
+      "degree": 11,
+      "scope": "known route used only to validate this finite control"
+    },
+    {
+      "source": 5,
+      "premise_odd_steps": 1,
+      "leaf": 3,
+      "total_counter_ceiling": 2,
+      "conditional_floor": "1/6",
+      "degree": 11,
+      "scope": "known route used only to validate this finite control"
+    },
+    {
+      "source": 7,
+      "premise_odd_steps": 5,
+      "leaf": 9,
+      "total_counter_ceiling": 8,
+      "conditional_floor": "1/630",
+      "degree": 21,
+      "scope": "known route used only to validate this finite control"
+    },
+    {
+      "source": 27,
+      "premise_odd_steps": 41,
+      "leaf": 27,
+      "total_counter_ceiling": 56,
+      "conditional_floor": "1/435975364243345080",
+      "degree": 98,
+      "scope": "known route used only to validate this finite control"
+    },
+    {
+      "source": 85,
+      "premise_odd_steps": 1,
+      "leaf": 453,
+      "total_counter_ceiling": 5,
+      "conditional_floor": "1/70",
+      "degree": 16,
+      "scope": "known route used only to validate this finite control"
+    }
+  ],
+  "missing_guard_hostiles": [
+    {
+      "candidate": "bitlength",
+      "first_failed_source_in_universe": 7,
+      "proposed_deadline": 3,
+      "actual_odd_steps": 5
+    },
+    {
+      "candidate": "twice bitlength",
+      "first_failed_source_in_universe": 27,
+      "proposed_deadline": 10,
+      "actual_odd_steps": 41
+    },
+    {
+      "candidate": "four bitlength plus one",
+      "first_failed_source_in_universe": 27,
+      "proposed_deadline": 21,
+      "actual_odd_steps": 41
+    }
+  ],
+  "proved_hybrid_control": {
+    "source": 739,
+    "leaf": 15765,
+    "independent_family_deadline": 61,
+    "degree": 151,
+    "positive_readout_floor": "1/18896590674334720869280143840",
+    "scope": "structural family proof; no target ROOT record or moment input"
+  },
+  "unique": "least degree for one supplied deadline; not unique existence of a deadline"
+}

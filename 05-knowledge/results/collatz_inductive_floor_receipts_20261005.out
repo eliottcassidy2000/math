@@ -1,0 +1,241 @@
+{
+  "binary_family": {
+    "first_children": [
+      35,
+      2275
+    ],
+    "levels": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256
+    ],
+    "localized_measurement_controls": [
+      {
+        "degree": 89,
+        "floor_denominator_bits": 53,
+        "leaf": 3,
+        "source": 5
+      },
+      {
+        "degree": 160,
+        "floor_denominator_bits": 99,
+        "leaf": 93,
+        "source": 35
+      },
+      {
+        "degree": 301,
+        "floor_denominator_bits": 190,
+        "leaf": 3033,
+        "source": 2275
+      },
+      {
+        "degree": 254,
+        "floor_denominator_bits": 160,
+        "leaf": 663,
+        "source": 995
+      },
+      {
+        "degree": 395,
+        "floor_denominator_bits": 250,
+        "leaf": 339813,
+        "source": 63715
+      },
+      {
+        "degree": 512,
+        "floor_denominator_bits": 326,
+        "leaf": 5522013,
+        "source": 2070755
+      },
+      {
+        "degree": 652,
+        "floor_denominator_bits": 416,
+        "leaf": 176704473,
+        "source": 132528355
+      },
+      {
+        "degree": 324,
+        "floor_denominator_bits": 205,
+        "leaf": 150933,
+        "source": 7075
+      },
+      {
+        "degree": 606,
+        "floor_denominator_bits": 386,
+        "leaf": 77283933,
+        "source": 28981475
+      },
+      {
+        "degree": 676,
+        "floor_denominator_bits": 431,
+        "leaf": 154652823,
+        "source": 231979235
+      },
+      {
+        "degree": 816,
+        "floor_denominator_bits": 522,
+        "leaf": 79182245733,
+        "source": 14846671075
+      },
+      {
+        "degree": 769,
+        "floor_denominator_bits": 492,
+        "leaf": 40210073973,
+        "source": 3769694435
+      },
+      {
+        "degree": 910,
+        "floor_denominator_bits": 582,
+        "leaf": 5146889469333,
+        "source": 241260443875
+      },
+      {
+        "degree": 746,
+        "floor_denominator_bits": 477,
+        "leaf": 5026260573,
+        "source": 1884847715
+      },
+      {
+        "degree": 887,
+        "floor_denominator_bits": 567,
+        "leaf": 160840338393,
+        "source": 120630253795
+      }
+    ],
+    "max_source_bits": 114,
+    "sources": 511
+  },
+  "checks": 14225,
+  "finite_induction": [
+    {
+      "cap": 1,
+      "first_pending_anchors": [
+        3,
+        7,
+        11,
+        15,
+        19,
+        23,
+        27,
+        31
+      ],
+      "grounded": 21,
+      "literal_queries": 255,
+      "local_receipts": 127,
+      "pending_anchor_count": 128,
+      "sources": 256
+    },
+    {
+      "cap": 2,
+      "first_pending_anchors": [
+        7,
+        11,
+        15,
+        23,
+        27,
+        31,
+        39,
+        43
+      ],
+      "grounded": 29,
+      "literal_queries": 383,
+      "local_receipts": 159,
+      "pending_anchor_count": 96,
+      "sources": 256
+    },
+    {
+      "cap": 4,
+      "first_pending_anchors": [
+        27,
+        31,
+        39,
+        47,
+        63,
+        71,
+        79,
+        91
+      ],
+      "grounded": 126,
+      "literal_queries": 543,
+      "local_receipts": 203,
+      "pending_anchor_count": 52,
+      "sources": 256
+    },
+    {
+      "cap": 8,
+      "first_pending_anchors": [
+        27,
+        31,
+        47,
+        63,
+        71,
+        91,
+        103,
+        111
+      ],
+      "grounded": 150,
+      "literal_queries": 696,
+      "local_receipts": 229,
+      "pending_anchor_count": 26,
+      "sources": 256
+    },
+    {
+      "cap": 16,
+      "first_pending_anchors": [
+        27,
+        31,
+        47,
+        63,
+        71,
+        91,
+        103,
+        111
+      ],
+      "grounded": 165,
+      "literal_queries": 848,
+      "local_receipts": 241,
+      "pending_anchor_count": 14,
+      "sources": 256
+    }
+  ],
+  "hostiles": 16,
+  "hybrid_family": {
+    "degree": 371,
+    "leaf": 15765,
+    "levels": [
+      1,
+      4,
+      16,
+      64,
+      256,
+      1024
+    ],
+    "mixed_witness": 739,
+    "sources": 1365,
+    "word": [
+      1,
+      8,
+      3,
+      4
+    ]
+  },
+  "scope": "Infinite proper induction domain and positive exact measurement guarantees; universal descent-template coverage remains OPEN.",
+  "seven": {
+    "conditional_floor": "1/84",
+    "descent": [
+      [
+        1,
+        1,
+        2,
+        3
+      ],
+      5
+    ],
+    "grounded_weight": "1/84"
+  }
+}
