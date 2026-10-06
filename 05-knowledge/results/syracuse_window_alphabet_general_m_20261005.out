@@ -1,0 +1,174 @@
+# The Syracuse m-window alphabet, m = 4..8 (gauge DESC: forward chord = descent)
+
+thresholds t_k (least s with 2^s > 3^k): t_1 = 2, t_2 = 4, t_3 = 5, t_4 = 7, t_5 = 8, t_6 = 10, t_7 = 12, t_8 = 13
+Sturmian differences t_(k+1) - t_k: 2, 1, 2, 1, 2, 2, 1
+
+## m = 4  (n = 4 vertices, 4 classes)
+
+chord patterns realised: 5 of 8 (DP support = census support below 2^20; 44 degenerate windows)
+classes occurring: 4 of 4 = 2 self-converse + 1 converse pairs -> 3 modulo converse
+occurring by largest strong component L: {1: 1, 3: 2, 4: 1}
+missing: 0 classes, by L: {}; strong among the missing: 0; regular tournament occurs: False
+score-separated (distinct score sequences among occurring classes / occurring classes): 4 / 4
+TT_4 density (all chords descend): 11/32 = 0.34375
+all-ascent class (every chord backward): scores (1, 1, 2, 2), c3 = 2, L = 4, density 11/32 = 0.34375
+largest class density: 11/32 (scores (1, 1, 2, 2)); max |density - census frequency| = 5.3e-05
+all-ascent class cycle counts by length: {3: 2, 4: 1} = Moon bound m-k+1 at every length (interval cycles)
+nearly transitive tournament (TT_4 with 0->3 reversed): class 1, scores (1, 1, 2, 2), cycles {3: 2, 4: 1}, occurs: True, same class as all-ascent: True
+TT_4 density equals the transfer-matrix value for 'all consecutive valuation pairs sum to >= 4' (char. poly. 32x^3 - 16x^2 - 4x + 1, top root 0.6203)
+densities by class (index, scores, L, self-converse, density, census frequency):
+    0 (0, 1, 2, 3) L=1 sc=True  11/32 = 0.34375  | 0.34370
+    1 (1, 1, 2, 2) L=4 sc=True  11/32 = 0.34375  | 0.34378
+    2 (1, 1, 1, 3) L=3 sc=False  5/32 = 0.15625  | 0.15626
+    3 (0, 2, 2, 2) L=3 sc=False  5/32 = 0.15625  | 0.15626
+
+## m = 5  (n = 5 vertices, 12 classes)
+
+chord patterns realised: 16 of 64 (DP support = census support below 2^20; 122 degenerate windows)
+classes occurring: 8 of 12 = 4 self-converse + 2 converse pairs -> 6 modulo converse
+occurring by largest strong component L: {1: 1, 3: 3, 4: 2, 5: 2}
+missing: 4 classes, by L: {5: 4}; strong among the missing: 4; regular tournament occurs: False
+score-separated (distinct score sequences among occurring classes / occurring classes): 8 / 8
+TT_5 density (all chords descend): 13/64 = 0.20312
+all-ascent class (every chord backward): scores (1, 1, 2, 3, 3), c3 = 3, L = 5, density 19/64 = 0.29688
+largest class density: 19/64 (scores (1, 1, 2, 3, 3)); max |density - census frequency| = 1.5e-04
+all-ascent class cycle counts by length: {3: 3, 4: 2, 5: 1} = Moon bound m-k+1 at every length (interval cycles)
+nearly transitive tournament (TT_5 with 0->4 reversed): class 1, scores (1, 1, 2, 3, 3), cycles {3: 3, 4: 3, 5: 1}, occurs: False, same class as all-ascent: False
+TT_5 density equals the transfer-matrix value for 'all consecutive valuation pairs sum to >= 4' (char. poly. 32x^3 - 16x^2 - 4x + 1, top root 0.6203)
+condensation multiplicativity holds: a class occurs iff each of its strong blocks is an occurring strong window class of its size (all 12 classes checked)
+densities by class (index, scores, L, self-converse, density, census frequency):
+    5 (1, 1, 2, 3, 3) L=5 sc=True  19/64 = 0.29688  | 0.29694
+    0 (0, 1, 2, 3, 4) L=1 sc=True  13/64 = 0.20312  | 0.20297
+    4 (1, 1, 1, 3, 4) L=3 sc=False  1/8 = 0.12500  | 0.12500
+    8 (0, 1, 3, 3, 3) L=3 sc=False  1/8 = 0.12500  | 0.12502
+    2 (1, 1, 2, 2, 4) L=4 sc=False  5/64 = 0.07812  | 0.07814
+    6 (0, 2, 2, 3, 3) L=4 sc=False  5/64 = 0.07812  | 0.07814
+    7 (0, 2, 2, 2, 4) L=3 sc=True  3/64 = 0.04688  | 0.04689
+    9 (1, 2, 2, 2, 3) L=5 sc=True  3/64 = 0.04688  | 0.04689
+
+Exotic twins at m = 5 (same score sequence, different class):
+  scores (1, 1, 2, 3, 3): classes [1, 5], occurring [5], missing [1]
+    reversing the 3-cycle (0,3,4) of the occurring class 5 gives the missing class 1 (Ryser interchange)
+  scores (1, 2, 2, 2, 3): classes [3, 9, 11], occurring [9], missing [3, 11]
+    reversing the 3-cycle (0,1,3) of the occurring class 9 gives the missing class 3 (Ryser interchange)
+    reversing the 3-cycle (1,3,4) of the occurring class 9 gives the missing class 3 (Ryser interchange)
+
+## m = 6  (n = 6 vertices, 56 classes)
+
+chord patterns realised: 49 of 1024 (DP support = census support below 2^20; 298 degenerate windows)
+classes occurring: 25 of 56 = 7 self-converse + 9 converse pairs -> 16 modulo converse
+occurring by largest strong component L: {1: 1, 3: 5, 4: 3, 5: 4, 6: 12}
+missing: 31 classes, by L: {5: 8, 6: 23}; strong among the missing: 23; regular tournament occurs: False
+score-separated (distinct score sequences among occurring classes / occurring classes): 17 / 25
+TT_6 density (all chords descend): 33/256 = 0.12891
+all-ascent class (every chord backward): scores (1, 1, 2, 3, 4, 4), c3 = 4, L = 6, density 73/512 = 0.14258
+largest class density: 73/512 (scores (1, 1, 2, 3, 4, 4)); max |density - census frequency| = 3.5e-04
+all-ascent class cycle counts by length: {3: 4, 4: 3, 5: 2, 6: 1} = Moon bound m-k+1 at every length (interval cycles)
+nearly transitive tournament (TT_6 with 0->5 reversed): class 1, scores (1, 1, 2, 3, 4, 4), cycles {3: 4, 4: 6, 5: 4, 6: 1}, occurs: False, same class as all-ascent: False
+TT_6 density equals the transfer-matrix value for 'all consecutive valuation pairs sum to >= 4' (char. poly. 32x^3 - 16x^2 - 4x + 1, top root 0.6203)
+condensation multiplicativity holds: a class occurs iff each of its strong blocks is an occurring strong window class of its size (all 56 classes checked)
+densities by class (index, scores, L, self-converse, density, census frequency):
+   44 (1, 1, 2, 3, 4, 4) L=6 sc=True  73/512 = 0.14258  | 0.14266
+    0 (0, 1, 2, 3, 4, 5) L=1 sc=True  33/256 = 0.12891  | 0.12855
+    4 (1, 1, 2, 2, 4, 5) L=4 sc=False  9/128 = 0.07031  | 0.07031
+    8 (1, 1, 1, 3, 4, 5) L=3 sc=False  9/128 = 0.07031  | 0.07028
+   18 (0, 1, 3, 3, 4, 4) L=4 sc=False  9/128 = 0.07031  | 0.07035
+   20 (0, 1, 2, 4, 4, 4) L=3 sc=False  9/128 = 0.07031  | 0.07033
+   10 (1, 1, 2, 3, 3, 5) L=5 sc=False  35/512 = 0.06836  | 0.06839
+   17 (0, 2, 2, 3, 4, 4) L=5 sc=False  35/512 = 0.06836  | 0.06840
+   51 (1, 1, 1, 4, 4, 4) L=3 sc=True  13/256 = 0.05078  | 0.05081
+   16 (0, 2, 2, 2, 4, 5) L=3 sc=False  5/128 = 0.03906  | 0.03910
+   19 (0, 1, 3, 3, 3, 5) L=3 sc=False  5/128 = 0.03906  | 0.03907
+    9 (1, 1, 2, 3, 4, 4) L=6 sc=False  7/256 = 0.02734  | 0.02736
+   12 (1, 1, 2, 3, 4, 4) L=6 sc=False  7/256 = 0.02734  | 0.02736
+   14 (0, 2, 2, 3, 3, 5) L=4 sc=True  11/512 = 0.02148  | 0.02150
+   36 (1, 2, 2, 2, 3, 5) L=5 sc=False  1/64 = 0.01562  | 0.01563
+   52 (0, 2, 3, 3, 3, 4) L=5 sc=False  1/64 = 0.01562  | 0.01563
+   23 (1, 2, 2, 2, 4, 4) L=6 sc=False  3/256 = 0.01172  | 0.01173
+   35 (1, 1, 3, 3, 3, 4) L=6 sc=False  3/256 = 0.01172  | 0.01173
+    5 (1, 2, 2, 2, 4, 4) L=6 sc=False  1/128 = 0.00781  | 0.00782
+   11 (1, 1, 3, 3, 3, 4) L=6 sc=False  1/128 = 0.00781  | 0.00782
+   27 (1, 2, 2, 3, 3, 4) L=6 sc=False  1/128 = 0.00781  | 0.00782
+   33 (1, 2, 2, 3, 3, 4) L=6 sc=False  1/128 = 0.00781  | 0.00782
+   40 (1, 2, 2, 3, 3, 4) L=6 sc=True  1/128 = 0.00781  | 0.00782
+   41 (1, 2, 2, 3, 3, 4) L=6 sc=True  1/128 = 0.00781  | 0.00782
+   21 (1, 2, 2, 3, 3, 4) L=6 sc=True  1/256 = 0.00391  | 0.00391
+
+## m = 7  (n = 7 vertices, 456 classes)
+
+chord patterns realised: 145 of 32768 (DP support = census support below 2^20; 607 degenerate windows)
+classes occurring: 64 of 456 = 14 self-converse + 25 converse pairs -> 39 modulo converse
+occurring by largest strong component L: {1: 1, 3: 8, 4: 6, 5: 6, 6: 24, 7: 19}
+missing: 392 classes, by L: {5: 12, 6: 46, 7: 334}; strong among the missing: 334; regular tournament occurs: False
+score-separated (distinct score sequences among occurring classes / occurring classes): 37 / 64
+TT_7 density (all chords descend): 81/1024 = 0.07910
+all-ascent class (every chord backward): scores (1, 1, 2, 3, 4, 5, 5), c3 = 5, L = 7, density 125/1024 = 0.12207
+largest class density: 125/1024 (scores (1, 1, 2, 3, 4, 5, 5)); max |density - census frequency| = 5.5e-04
+all-ascent class cycle counts by length: {3: 5, 4: 4, 5: 3, 6: 2, 7: 1} = Moon bound m-k+1 at every length (interval cycles)
+nearly transitive tournament (TT_7 with 0->6 reversed): class 1, scores (1, 1, 2, 3, 4, 5, 5), cycles {3: 5, 4: 10, 5: 10, 6: 5, 7: 1}, occurs: False, same class as all-ascent: False
+TT_7 density equals the transfer-matrix value for 'all consecutive valuation pairs sum to >= 4' (char. poly. 32x^3 - 16x^2 - 4x + 1, top root 0.6203)
+condensation multiplicativity holds: a class occurs iff each of its strong blocks is an occurring strong window class of its size (all 456 classes checked)
+twelve densest classes (index, scores, L, self-converse, density):
+  186 (1, 1, 2, 3, 4, 5, 5) L=7 sc=True  125/1024 = 0.12207
+    0 (0, 1, 2, 3, 4, 5, 6) L=1 sc=True  81/1024 = 0.07910
+   20 (1, 1, 2, 3, 3, 5, 6) L=5 sc=False  7/128 = 0.05469
+   44 (0, 1, 3, 3, 4, 5, 5) L=5 sc=False  7/128 = 0.05469
+   16 (1, 1, 1, 3, 4, 5, 6) L=3 sc=False  47/1024 = 0.04590
+   47 (0, 1, 2, 3, 5, 5, 5) L=3 sc=False  47/1024 = 0.04590
+    8 (1, 1, 2, 2, 4, 5, 6) L=4 sc=False  19/512 = 0.03711
+   45 (0, 1, 2, 4, 4, 5, 5) L=4 sc=False  19/512 = 0.03711
+  258 (1, 1, 2, 3, 4, 5, 5) L=7 sc=True  17/512 = 0.03320
+   43 (0, 1, 3, 3, 3, 5, 6) L=3 sc=True  33/1024 = 0.03223
+  189 (1, 1, 2, 2, 5, 5, 5) L=4 sc=False  7/256 = 0.02734
+  259 (1, 1, 1, 4, 4, 5, 5) L=4 sc=False  7/256 = 0.02734
+density of the smallest occurring class: 1/1024
+
+## m = 8  (n = 8 vertices, 6880 classes)
+
+chord patterns realised: 458 of 2097152 (DP support = census support below 2^20; 1115 degenerate windows)
+classes occurring: 194 of 6880 = 20 self-converse + 87 converse pairs -> 107 modulo converse
+occurring by largest strong component L: {1: 1, 3: 12, 4: 12, 5: 12, 6: 36, 7: 38, 8: 83}
+missing: 6686 classes, by L: {5: 24, 6: 69, 7: 668, 8: 5925}; strong among the missing: 5925; regular tournament occurs: False
+score-separated (distinct score sequences among occurring classes / occurring classes): 81 / 194
+TT_8 density (all chords descend): 101/2048 = 0.04932
+all-ascent class (every chord backward): scores (1, 1, 2, 3, 4, 5, 6, 6), c3 = 6, L = 8, density 687/8192 = 0.08386
+largest class density: 687/8192 (scores (1, 1, 2, 3, 4, 5, 6, 6)); max |density - census frequency| = 9.5e-04
+all-ascent class cycle counts by length: {3: 6, 4: 5, 5: 4, 6: 3, 7: 2, 8: 1} = Moon bound m-k+1 at every length (interval cycles)
+nearly transitive tournament (TT_8 with 0->7 reversed): class 1, scores (1, 1, 2, 3, 4, 5, 6, 6), cycles {3: 6, 4: 15, 5: 20, 6: 15, 7: 6, 8: 1}, occurs: False, same class as all-ascent: False
+TT_8 density equals the transfer-matrix value for 'all consecutive valuation pairs sum to >= 4' (char. poly. 32x^3 - 16x^2 - 4x + 1, top root 0.6203)
+condensation multiplicativity holds: a class occurs iff each of its strong blocks is an occurring strong window class of its size (all 6880 classes checked)
+twelve densest classes (index, scores, L, self-converse, density):
+  1458 (1, 1, 2, 3, 4, 5, 6, 6) L=8 sc=True  687/8192 = 0.08386
+    0 (0, 1, 2, 3, 4, 5, 6, 7) L=1 sc=True  101/2048 = 0.04932
+   40 (1, 1, 2, 3, 3, 5, 6, 7) L=5 sc=False  63/2048 = 0.03076
+  102 (0, 1, 2, 4, 4, 5, 6, 6) L=5 sc=False  63/2048 = 0.03076
+   32 (1, 1, 1, 3, 4, 5, 6, 7) L=3 sc=False  57/2048 = 0.02783
+  105 (0, 1, 2, 3, 4, 6, 6, 6) L=3 sc=False  57/2048 = 0.02783
+   16 (1, 1, 2, 2, 4, 5, 6, 7) L=4 sc=False  51/2048 = 0.02490
+  103 (0, 1, 2, 3, 5, 5, 6, 6) L=4 sc=False  51/2048 = 0.02490
+   93 (0, 1, 3, 3, 3, 5, 6, 7) L=3 sc=False  73/4096 = 0.01782
+  101 (0, 1, 2, 4, 4, 4, 6, 7) L=3 sc=False  73/4096 = 0.01782
+  1265 (1, 1, 1, 3, 4, 6, 6, 6) L=3 sc=True  17/1024 = 0.01660
+  1262 (1, 1, 1, 4, 4, 5, 6, 6) L=5 sc=False  67/4096 = 0.01636
+density of the smallest occurring class: 1/4096
+
+## Summary
+
+| m | patterns realised | classes occurring / all | self-converse | pairs | missing | strong among missing | score-separated |
+|---|---|---|---|---|---|---|---|
+| 4 | 5 | 4 / 4 | 2 | 1 | 0 | 0 | 4 / 4 |
+| 5 | 16 | 8 / 12 | 4 | 2 | 4 | 4 | 8 / 8 |
+| 6 | 49 | 25 / 56 | 7 | 9 | 31 | 23 | 17 / 25 |
+| 7 | 145 | 64 / 456 | 14 | 25 | 392 | 334 | 37 / 64 |
+| 8 | 458 | 194 / 6880 | 20 | 87 | 6686 | 5925 | 81 / 194 |
+
+realised-pattern counts: 5, 16, 49, 145, 458
+strong occurring classes by size: 3: 1 of 1, 4: 1 of 1, 5: 2 of 6, 6: 12 of 35, 7: 19 of 353, 8: 83 of 6008
+
+## The 3x-1 sheet (odd x, S^-(x) = (3x-1)/2^v), same thresholds
+
+m = 4: census patterns 5, plus-sheet patterns 5, supports equal: True, extra minus-sheet patterns: 0, 62 degenerate windows, max |density - frequency| = 3.3e-05
+m = 5: census patterns 16, plus-sheet patterns 16, supports equal: True, extra minus-sheet patterns: 0, 188 degenerate windows, max |density - frequency| = 9.5e-05
+m = 6: census patterns 49, plus-sheet patterns 49, supports equal: True, extra minus-sheet patterns: 0, 466 degenerate windows, max |density - frequency| = 3.0e-04
+
+ALL ASSERTIONS PASSED (N = 20, mmax = 8)

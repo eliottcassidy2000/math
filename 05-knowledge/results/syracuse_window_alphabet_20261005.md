@@ -84,7 +84,7 @@ For the m-window the chord {S^i x, S^j x} is forward (a descent) iff A(i, j) = a
 
 | m | chord patterns realised | classes occurring | self-converse | converse pairs | modulo converse | missing classes |
 |---|---|---|---|---|---|---|
-| 4 | 4 of 8 | 4 of 4 | 2 | 1 | 3 | none |
+| 4 | 5 of 8 (corrected by S13: the (0,0) cell realises both long-chord orientations) | 4 of 4 | 2 | 1 | 3 | none |
 | 5 | 16 of 64 | 8 of 12 | 4 | 2 | 6 | 4, all strong, among them the regular tournament (2,2,2,2,2) |
 | 6 | 49 of 1024 | 25 of 56 | 7 | 9 | 16 | 31, all with largest strong component >= 5 (8 with L = 5, 23 with L = 6) |
 
