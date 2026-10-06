@@ -476,8 +476,10 @@ def main(do_n8=False):
     fc = [comb(3 * m, m) // (2 * m + 1) for m in range(6)]
     say("Fuss-Catalan counts of ordered full ternary trees by internal nodes m=0..5: %s (sum through m=5: %d)" % (fc, sum(fc)))
     assert fc == [1, 1, 3, 12, 55, 273] and sum(fc) == 345
-    say("The three child slots of a node are entered at prefix balances +2, +1, 0 (after H, after the first G, after the second G): a 3-chain,")
-    say("ordered, with no involution of the grammar exchanging two slots (reversal of a word is not a parse).")
+    say("The three child slots of a node are entered at prefix balances +2, +1, 0 (after H, after the first G, after the second G): a 3-chain.")
+    say("No letter-level symmetry (reversal, H<->G swap, or both) preserves the language; the planar mirror (reverse the child order")
+    say("recursively) is an involution of the language exchanging slots 1 and 3 and fixing slot 2 (orbit type (1,2); corrected wording,")
+    say("see trees5_tournaments4_audit_extras_20261005.out section E).")
     # unordered full ternary trees with m internal nodes
     def unordered_full_ternary(m):
         # canonical multiset recursion

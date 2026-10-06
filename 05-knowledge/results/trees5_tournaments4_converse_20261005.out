@@ -91,8 +91,10 @@ vertex-marked 4-tournaments modulo converse: 6   (rooted trees on 5 vertices: 9)
 ## F. The ordered full ternary tree (credit grammar S = e | H S G S G S) and the 3-chain of slots
 
 Fuss-Catalan counts of ordered full ternary trees by internal nodes m=0..5: [1, 1, 3, 12, 55, 273] (sum through m=5: 345)
-The three child slots of a node are entered at prefix balances +2, +1, 0 (after H, after the first G, after the second G): a 3-chain,
-ordered, with no involution of the grammar exchanging two slots (reversal of a word is not a parse).
+The three child slots of a node are entered at prefix balances +2, +1, 0 (after H, after the first G, after the second G): a 3-chain.
+No letter-level symmetry (reversal, H<->G swap, or both) preserves the language; the planar mirror (reverse the child order
+recursively) is an involution of the language exchanging slots 1 and 3 and fixing slot 2 (orbit type (1,2); corrected wording,
+see trees5_tournaments4_audit_extras_20261005.out section E).
 Unordered full ternary trees by internal nodes m=0..5: [1, 1, 1, 2, 4, 8]  (ordered/unordered quotient; m=2: 3 ordered -> 1 unordered)
 
 ## G. Summary of exact facts

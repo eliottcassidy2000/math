@@ -1,0 +1,71 @@
+## A. Centre-marked trees with the centre-swap involution
+
+| N | trees | centre-marked | swap-fixed | orbits | n=N-1: classes | self-converse | merged | equal |
+|---|---|---|---|---|---|---|---|---|
+| 4 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | YES |
+| 5 | 3 | 4 | 2 | 3 | 4 | 2 | 3 | YES |
+| 6 | 6 | 7 | 5 | 6 | 12 | 8 | 10 | no |
+| 7 | 11 | 15 | 7 | 11 | 56 | 12 | 34 | no |
+| 8 | 23 | 30 | 16 | 23 | 456 | 88 | 272 | no |
+
+Centre-marked trees reproduce (classes, self-converse, merged) exactly for N <= 5 (n <= 4) and fail from N = 6.
+At N = 5: star and path have a unique centre (fixed); the fork is bicentral with inequivalent centres (a swapped pair).
+
+## B. Arc-flip label law delta c3 = s_u - s_v - 1
+
+verified on 10566 (class, arc) pairs, n <= 7. Proof: c3 = C(n,3) - sum C(s_w,2); the flip changes s_u -> s_u - 1, s_v -> s_v + 1, so
+delta c3 = C(s_u,2) + C(s_v,2) - C(s_u-1,2) - C(s_v+1,2) = (s_u - 1) - s_v.
+
+## C. Hostiles: positive local readings without strong connectivity
+
+| n | no source, no sink, not strong | ... mod converse | every vertex on a 3-cycle, not strong | every arc on a 3-cycle, not strong |
+|---|---|---|---|---|
+| 3 | 0 | 0 | 0 | 0 |
+| 4 | 0 | 0 | 0 | 0 |
+| 5 | 0 | 0 | 0 | 0 |
+| 6 | 1 | 1 | 1 | 0 |
+| 7 | 3 | 2 | 2 | 0 |
+| 8 | 16 | 9 | 13 | 0 |
+n = 8 census: no-source-no-sink non-strong = 16 (Theorem A of the synthesis predicted 16), every-vertex-on-3-cycle non-strong = 13 (predicted 13)
+
+Minimal order 6, unique witness C3 => C3 (scores 1,1,1,4,4,4). 'Every arc on a 3-cycle' forces strong for all n: an arc between
+distinct strong components lies on no cycle, so all arcs are internal and there is one component. (PROVED; census agrees.)
+
+## D. Palindromic slack (self-complementary score sequence) versus self-converse, class level
+
+| n | classes with self-complementary scores | of which self-converse | failures |
+|---|---|---|---|
+| 3 | 2 | 2 | 0 |
+| 4 | 2 | 2 | 0 |
+| 5 | 8 | 8 | 0 |
+| 6 | 24 | 12 | 12 |
+| 7 | 200 | 88 | 112 |
+
+First class-level failure at n = 6: scores (1, 2, 2, 3, 3, 4), arcs [(0, 1), (0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (2, 5), (3, 4), (3, 5), (4, 5), (5, 0), (5, 1)]
+(self-converse => palindromic slack always; the converse holds at the class level iff n <= 5; at the score level for all n by Eplett 1979, CITED)
+
+## E. Credit grammar S = e | H S G S G S: letter-level symmetries and the planar mirror
+
+m=1: 1 words; reversal preserves 0, H<->G swap preserves 0, both 0; planar mirror is an involution of the language with 1 fixed trees
+m=2: 3 words; reversal preserves 0, H<->G swap preserves 0, both 0; planar mirror is an involution of the language with 1 fixed trees
+m=3: 12 words; reversal preserves 0, H<->G swap preserves 0, both 0; planar mirror is an involution of the language with 2 fixed trees
+m=4: 55 words; reversal preserves 0, H<->G swap preserves 0, both 0; planar mirror is an involution of the language with 3 fixed trees
+m=5: 273 words; reversal preserves 0, H<->G swap preserves 0, both 0; planar mirror is an involution of the language with 7 fixed trees
+Mirror-fixed counts 1,1,2,3,7 for m=1..5 (A047749 'symmetric ternary trees' starts 1,1,1,2,3,7 with m=0). The mirror permutes the
+three slots by (1 3)(2) and reverses the entry-balance chain +2,+1,0: orbit type (1,2), like the Berggren leg swap.
+
+## F. Converse-invariant orientations of the three 5-vertex trees
+
+path: 10 orientation classes, 2 converse-invariant, 6 modulo converse
+fork: 12 orientation classes, 0 converse-invariant, 6 modulo converse
+star: 5 orientation classes, 1 converse-invariant, 3 modulo converse
+The fork, the tree at the merged (converse-pair) grade, is the only 5-vertex tree with no converse-invariant orientation:
+its unique degree-3 vertex has out-degree in {0,1,2,3}, and reversal sends out-degree k to 3-k, never equal (PROVED).
+
+## G. The unit-step restriction is one-sided
+
+merged flip metagraph at n = 4: 3 nodes, 3 edges (K3)
+5-vertex trees: every class-changing edge rotation changes the diameter by exactly [1]
+So 'P3 = P3' needs the unit-c3 restriction on the tournament side only; the owner's merged metagraph is the triangle K3.
+
+ALL ASSERTIONS PASSED (n_max = 8)

@@ -2032,6 +2032,20 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
+## MISTAKE-561 (2026-10-05, opus S11 trees-versus-4-tournaments note; found by the session's own adversarial subagent audit before publication, except one line already pushed) -- a "no involution" claim made from the wrong level, a quotient involution misnamed, a failure threshold placed one size too early, and a classical attribution blurred
+
+- **Claims:**
+  - (1) The pushed census output `trees5_tournaments4_converse_20261005.out` (checkpoint f754765b6, section F) said the credit grammar `S = e | H S G S G S` has "no involution of the grammar exchanging two slots". The planar mirror (reverse the child order recursively) is an involution of the language exchanging slots 1 and 3 and fixing slot 2. What is true is that no letter-level symmetry (word reversal, H<->G swap, or both) preserves the language. Regenerated output corrected; see `trees5_tournaments4_audit_extras_20261005.out` section E.
+  - (2) The draft note summarised the free-gas reflection as "converse = complement" of B2. The complement of B2 exchanges {} and {a,b} (TT4 and STRONG); the converse is the a<->b swap, which fixes them. (OEIS A059735 does call converse pairs "complementary pairs", meaning arc-set complement; the two uses of "complement" must be kept apart.)
+  - (3) The draft stated that "palindromic slack path implies self-converse" fails from n = 5. It holds at n = 5 (all eight palindromic classes are self-converse because every strong 5-tournament is) and fails from n = 6 (12 of 24). At the score level it holds for all n (Eplett 1979).
+  - (4) The draft wrote "Camion-Moon pancyclicity". Camion 1959 is Hamiltonicity of strong tournaments; cycles of every length 3..n (vertex-pancyclicity) is Moon 1966, also Harary-Moser 1966.
+- **What survives:** every theorem of the note; the census; the corrected statements are in the published note and outputs.
+- **Rule:**
+  - "No involution" is a claim about a declared class of operations; name the level (letters, words, plane trees) before asserting it.
+  - When a reflection names an involution on a Boolean lattice, check which elements it fixes before calling it the complement.
+  - A "first failure at n" needs the n-1 case verified as holding, not inferred from the next size's count.
+  - Cite the theorem that gives the property actually used (every length versus Hamiltonian), not the pair of names that usually travel together.
+
 ## MISTAKE-560 (2026-10-02, opus S15 Camion/Busch note; found by the independent audit) -- a classical theorem's bound taken from a canon derivation instead of the source, so the place where the direct count fails was misplaced; analogies typed as exact instances; a congruence pattern stated from two data points per class
 
 - **Claims:**
