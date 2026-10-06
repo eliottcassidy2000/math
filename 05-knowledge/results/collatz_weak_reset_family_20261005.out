@@ -1,0 +1,31 @@
+== S1. Segments, positive rational cycle points, admissibility, deadline inequality ==
+  321236 chained segments below 2^16: non-rising words, descent iff start > x_w = c_w/(2^A-3^l) > 0, cylinder residue and forward formula exact
+  segment inequality y^(2q) 2^l <= x^(2q) holds at the least admissible q for all 317954 segments with x >= q
+  examples (source: chain of (start, word, end) with per-segment least q):
+       5: q(n)=1, tau=1 : 5-4->1 q1
+       7: q(n)=7, tau=5 : 7-1123->5 q7; 5-4->1 q1
+      23: q(n)=2, tau=4 : 23-115->5 q2; 5-4->1 q1
+      27: q(n)=104, tau=41 : 27-1211112212112111231121211111311142243->23 q104; 23-115->5 q2; 5-4->1 q1
+      47: q(n)=31, tau=38 : 47-1112212112111231121211111311142243->23 q31; 23-115->5 q2; 5-4->1 q1
+      55: q(n)=31, tau=41 : 55-113->47 q13; 47-1112212112111231121211111311142243->23 q31; 23-115->5 q2; 5-4->1 q1
+     739: q(n)=1, tau=4 : 739-18->13 q1; 13-3->5 q1; 5-4->1 q1
+== S2. Source-only deadlines and compiled floors for members ==
+   n=    5 q=   1 tau=  1 T_q=    4 T'_q=    8 C=   10 log10 eta=     -3.4 log10 W=   -0.5 leaf=     3 log10 eta_leaf=     -3.8 degree=26
+   n=    7 q=   7 tau=  5 T_q=   41 T'_q=   61 C=   83 log10 eta=    -25.9 log10 W=   -1.9 leaf=     9 log10 eta_leaf=    -26.2 degree=142
+   n=   23 q=   2 tau=  4 T_q=   18 T'_q=   15 C=   21 log10 eta=     -6.9 log10 W=   -2.1 leaf=    15 log10 eta_leaf=     -7.2 degree=44
+   n=   27 q= 104 tau= 41 T_q= 1032 T'_q=  584 C=  800 log10 eta=   -242.2 log10 W=  -10.1 leaf=    27 log10 eta_leaf=   -242.2 degree=1256
+   n=   47 q=  31 tau= 38 T_q=  385 T'_q=  226 C=  310 log10 eta=    -94.5 log10 W=   -9.8 leaf=   501 log10 eta_leaf=    -95.4 degree=499
+   n=   55 q=  31 tau= 41 T_q=  399 T'_q=  234 C=  321 log10 eta=    -97.8 log10 W=  -10.8 leaf=  1173 log10 eta_leaf=    -99.0 degree=517
+   n=  739 q=   1 tau=  4 T_q=   19 T'_q=   16 C=   25 log10 eta=     -8.1 log10 W=   -2.8 leaf= 15765 log10 eta_leaf=     -9.1 degree=53
+   n= 1161 q= 169 tau= 66 T_q= 3485 T'_q= 1874 C= 2568 log10 eta=   -774.7 log10 W=  -16.8 leaf=  1161 log10 eta_leaf=   -774.7 degree=4003
+== S3. Census of q(n) below 2^20 ==
+  proportion with q(n) <= q: 1:0.0016 2:0.0032 3:0.0609 4:0.0665 6:0.0808 8:0.1487 12:0.1609 16:0.3656 24:0.4028 32:0.5105 48:0.5732 64:0.5770 100:0.9508 150:0.9647 200:0.9734 300:0.9742 500:0.9961
+  max q(n) = 6951 at n = 432923 (critical segment start 432923, longest segment 94, tau 142)
+  exact integer verification of q(n) at 7, 27, 55 and the maximizer: agrees with the float census
+  Codex run-block tree: 3859 members below 2^20 (incl. 5), all with q(n) <= 3; F_3 has 31920 members
+  deadline tau(n) <= floor(2 q(n) log2 n) + max tau below q(n): holds for all 524287 sources
+  sharp deadline tau(n) <= floor(1.051 q(n) log2 n) + max tau below 10 q(n): holds for all sources; worst ratio 0.692
+  sources with q(n) >= 50: 0.42679 of the census; their longest segment has mean length 23.4 (overall mean 18.63)
+== Summary ==
+  checks: 1602929, total time 99.5s
+  json written: 05-knowledge/results/collatz_weak_reset_family_20261005.json
