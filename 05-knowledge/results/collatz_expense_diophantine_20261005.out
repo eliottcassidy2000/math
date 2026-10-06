@@ -1,0 +1,53 @@
+== Q1. The expense depends only on (l,A); records at upper best approximations of log2 3 ==
+  q(l,A) = ceil(l/(A - l log2 3)) matches the exact integer bisection for l<=120, A in [A_min, A_min+3]
+  record lengths (l, A_min, q_max, 2^A - 3^l): [(1, 2, 3, 1), (3, 5, 13, 5), (5, 8, 67, 13), (17, 27, 306, '5.08e+06'), (29, 46, 804, '1.74e+12'), (41, 65, 2480, '4.20e+17'), (94, 149, 6951, '6.66e+42'), (147, 233, 13984, '1.00e+68'), (200, 317, 26668, '1.38e+93'), (253, 401, 56382, '1.60e+118'), (306, 485, 207489, '1.02e+143')]
+  these are exactly the denominators of the best upper approximations p/l > log2 3: ['2/1', '5/3', '8/5', '27/17', '46/29', '65/41', '149/94', '233/147', '317/200', '401/253', '485/306']
+== Q2. Exact segment-level tail: density of sources whose own first segment has q > Q ==
+  DP over 8200 first-descent types with l<=200 (0.1s): total density 1.000000 (deficit 5.46e-08 = sources whose first descent is later than 200 odd steps, plus the capped terminal valuations)
+  exact density of {q_seg > Q}: 2:0.63006 3:0.25903 7:0.18743 8:0.17631 13:0.08182 31:0.05549 67:0.00696 104:0.00646 310:0.00093 800:0.00078 2000:0.00018 6951:0.00000
+  record types' own densities N(l,A_min)/2^A:
+    l=  1 A=  2 N=1 density=2.500e-01 q=3
+    l=  5 A=  8 N=7 density=2.734e-02 q=67
+    l= 17 A= 27 N=312455 density=2.328e-03 q=306
+    l= 29 A= 46 N=38036848410 density=5.405e-04 q=804
+    l= 41 A= 65 N=6113392816333320 density=1.657e-04 q=2480
+    l= 94 A=149 N=1851651965537096155939804262166579952960 density=2.595e-06 q=6951
+  census below 2^20, proportion with own-segment q > Q: 2:0.63009 3:0.25900 7:0.18711 8:0.17598 13:0.08138 31:0.05526 67:0.00686 104:0.00643 310:0.00088 800:0.00072 2000:0.00015 6951:0.00000
+  type frequencies (l,A) with A<=16: max |census - exact| = 1.43e-06
+== Q3. Inheritance: popular hard excursions below 2^20 ==
+  top hard excursions (start x, own segment (l,A), q, inheritors = sources below 2^20 with x as a running minimum):
+    x=     47 (l,A)=(34,55) q=31 inheritors=49927 (0.095 of census)
+    x=     31 (l,A)=(35,56) q=67 inheritors=48898 (0.093 of census)
+    x=     91 (l,A)=(28,45) q=46 inheritors=45951 (0.088 of census)
+    x=     95 (l,A)=(5,8) q=67 inheritors=27694 (0.053 of census)
+    x=    379 (l,A)=(5,8) q=67 inheritors=11384 (0.022 of census)
+    x=    103 (l,A)=(26,42) q=33 inheritors=11201 (0.021 of census)
+    x=    847 (l,A)=(5,8) q=67 inheritors=6664 (0.013 of census)
+    x=    455 (l,A)=(5,8) q=67 inheritors=5349 (0.010 of census)
+    x=     71 (l,A)=(32,51) q=114 inheritors=4479 (0.009 of census)
+    x=    335 (l,A)=(5,8) q=67 inheritors=4025 (0.008 of census)
+    x=   1243 (l,A)=(5,8) q=67 inheritors=3766 (0.007 of census)
+    x=   1711 (l,A)=(5,8) q=67 inheritors=3321 (0.006 of census)
+  sources with q(n) > 30: 289666 (0.5525); own segment hard: 29072; the rest inherit
+== Q4. Two-tier families F(q_hi, Y): rate q_hi for segments starting at or above Y, table below ==
+  Y=2^6 : coverage among sources >= Y: q_hi=3: 0.1121 q_hi=8: 0.2163 q_hi=16: 0.4742 q_hi=32: 0.5705
+  Y=2^8 : coverage among sources >= Y: q_hi=3: 0.1496 q_hi=8: 0.2860 q_hi=16: 0.5470 q_hi=32: 0.6493
+  Y=2^10: coverage among sources >= Y: q_hi=3: 0.2043 q_hi=8: 0.3462 q_hi=16: 0.6046 q_hi=32: 0.7000
+  Y=2^12: coverage among sources >= Y: q_hi=3: 0.2763 q_hi=8: 0.4183 q_hi=16: 0.6611 q_hi=32: 0.7486
+  Y=2^14: coverage among sources >= Y: q_hi=3: 0.3732 q_hi=8: 0.5147 q_hi=16: 0.7310 q_hi=32: 0.8040
+  Y=2^16: coverage among sources >= Y: q_hi=3: 0.4935 q_hi=8: 0.6234 q_hi=16: 0.8007 q_hi=32: 0.8568
+  two-tier deadline tau(n) <= floor(1.051 q_hi log2 n) + max tau(odd < Y') holds for all members at every tested (Y, q_hi)
+  bank-relative coverage of rate-3 families: segments starting at a banked x end the chain
+    bank = top     0 hard excursions, rate q_hi=3: coverage 0.0609
+    bank = top     0 hard excursions, rate q_hi=8: coverage 0.1487
+    bank = top    10 hard excursions, rate q_hi=3: coverage 0.0960
+    bank = top    10 hard excursions, rate q_hi=8: coverage 0.2274
+    bank = top   100 hard excursions, rate q_hi=3: coverage 0.1228
+    bank = top   100 hard excursions, rate q_hi=8: coverage 0.2721
+    bank = top  1000 hard excursions, rate q_hi=3: coverage 0.1660
+    bank = top  1000 hard excursions, rate q_hi=8: coverage 0.3310
+    bank = top 10000 hard excursions, rate q_hi=3: coverage 0.2332
+    bank = top 10000 hard excursions, rate q_hi=8: coverage 0.4056
+== Summary ==
+  checks: 2121, total time 3.3s
+  json written: 05-knowledge/results/collatz_expense_diophantine_20261005.json
