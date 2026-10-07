@@ -97,5 +97,5 @@ The same pair, advanced one Terras step at a time, has relation `x_s = 3^(j_s) y
 * **Scope.** Concurrent work by opus-2026-10-07-S20 (THM-4565) shows that the coupling sits at every **window overlap**, not only at exact alignments.
   * The later-starting reader is fresh given the joint past. The other reads `min(fresh, M)` with a past-written saturation depth `M`. The covariance is `2 − 6·2^(−M)` at every overlapping pair.
   * Statements (2)–(3) here are its `λ = 0` case. Offset overlaps are 2/3 of all coupling events.
-  * Read the title's "coupled only at tape alignments" as "coupled only at window overlaps". The lockstep cap (4), causality (5) and perpetuity (6) are not in THM-4565.
+  * Read the title's "coupled only at tape alignments" as "coupled only at window overlaps". The lockstep recursion (4) (min-depth rule off the equality branch, per the integration audit), causality (5) and the comparison perpetuity (6) are not in THM-4565.
 * **The merge is almost sure** (THM-4581 (3), in the Terras clock). After it, the two exponent streams coincide exactly, shifted by the merge lag. So at long gaps the cross-covariance vanishes away from overlaps, and at the merge lag the correlation tends to 1, with a `T^(−1/2+o(1))` deficit.
