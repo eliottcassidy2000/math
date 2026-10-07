@@ -81,3 +81,13 @@ Niven/Dehn lattice-escape, not anything internal to a lattice.
 HYP-2275 (Niven=Dehn-triviality=THM-416 cap=HN lattice-escape), THM-416/HYP-2274 (CM
 density-quantum totient cap), HYP-2265 (LRC=HN=unit-distance Cayley + Delsarte), de Grey 2018,
 Moser spindle, classical: triangular grid is 3-chromatic / `χ(ℚ²)=2`.
+
+---
+
+## Update (2026-10-06, mac-mini-2026-10-06-oaimath2; THM-4558)
+
+**The dichotomy extends from lattices to whole field planes.** By reduction modulo a prime fixed by complex conjugation (Madore's technique, 2015; THM-4558's Lemma R):
+* the plane over `Q(√−d)` is at most 3-chromatic, and bipartite if `d ≡ 1, 2 (mod 4)`;
+* `Q(√2)² = Q(ζ_8)` is 2-chromatic, and `Q(√3)² = Q(ζ_12)` (which contains both lattices at every scale and rotation) is 3-chromatic (both KNOWN, Madore 2015).
+
+The square-lattice 2-adic recursion and the triangular 3-adic recursion above are both ramified cases of that lemma, at `(1 + i)` over 2 and at `(√−3)` over 3.

@@ -1,0 +1,21 @@
+n=8 m=3: V=64 E=256 triangles=0; seeded 40 HCs
+  7 path representatives
+      round 1: pool 106 cycles; DONE uncertified=0 leaves=8301429675 (43s) => CERTIFIED
+   P=[(0, 0), (1, 2), (7, 3), (6, 1)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (43s, stored HCs 40)
+      round 1: pool 100; 6 uncertified listed (41s); resolving
+      round 2: pool 138 cycles; DONE uncertified=0 leaves=8301429675 (60s) => CERTIFIED
+   P=[(0, 0), (1, 2), (2, 0), (3, 2)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (101s, stored HCs 46)
+      round 1: pool 117; 1 uncertified listed (47s); resolving
+      round 2: pool 124 cycles; DONE uncertified=0 leaves=8301429675 (49s) => CERTIFIED
+   P=[(0, 0), (1, 2), (2, 0), (0, 1)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (97s, stored HCs 47)
+      round 1: pool 154 cycles; DONE uncertified=0 leaves=8301429675 (58s) => CERTIFIED
+   P=[(0, 0), (1, 2), (2, 0), (0, 7)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (58s, stored HCs 47)
+      round 1: pool 134; 4 uncertified listed (53s); resolving
+      round 2: pool 152 cycles; DONE uncertified=0 leaves=8301429675 (57s) => CERTIFIED
+   P=[(0, 0), (1, 2), (3, 1), (4, 3)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (110s, stored HCs 51)
+      round 1: pool 114; 3 uncertified listed (46s); resolving
+      round 2: pool 127 cycles; DONE uncertified=0 leaves=8301429675 (48s) => CERTIFIED
+   P=[(0, 0), (1, 2), (3, 1), (2, 3)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (94s, stored HCs 54)
+      round 1: pool 142 cycles; DONE uncertified=0 leaves=8301429675 (42s) => CERTIFIED
+   P=[(0, 0), (1, 2), (7, 1), (0, 3)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (42s, stored HCs 54)
+  SUMMARY n=8 m=3: {(6, 'beta=lambda'): 7}  total 586s

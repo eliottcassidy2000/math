@@ -102,3 +102,15 @@ and full type — the THM-460 tower ladder becomes the natural home).
 **Cross-refs:** THM-465 (the rung below), THM-469 (which refinements are not
 instantly dead: sum-free gradings), THM-453 F/G (invariant game, n=2 equality),
 HYP-2392/2393 (resolved here), HYP-2396 (opened here).
+
+---
+
+## Correction and update (2026-10-06, mac-mini-2026-10-06-oaimath2; MISTAKE-577, THM-4560)
+
+* **Correction to A3's parenthesis.** Finv, the fully gap-determined algebra (an edge depends only on `y − x`), is **not** "the translation-invariant game of THM-453 F at n = 3". THM-453 F/G's witnesses are only row-invariant (`R_a = R`, `B_(a,a') = B_(a'−a)` with arbitrary column relations).
+  * The two games differ already at `n = 2`. Fully gap-determined: SAT at `t = 3`, UNSAT at `t = 4`. Row-invariant: SAT at 4, UNSAT at 5 (THM-453 G).
+  * Both were recomputed with CaDiCaL in `04-computation/experiments/oai2_20261006_fields_ramsey_checks.py`.
+  * C's "INV(3,4) agrees with invQ(3,4)" compared the two different games. Both are SAT, so nothing false followed.
+* **Update to C: `t_dead(Finv) < ∞` for every `n` (PROVED, THM-4560).** Every gap-determined triangle-free graph on `N^n` has an independent binary subgrid. The proof uses a chain of minimal idempotent ultrafilters on the level semigroups.
+  * With A2, the infinite-witness question for every gap-determined algebra is settled negatively.
+  * At `n = 3`, `t_dead(Finv) ∈ [7, ∞)`. The session reader found `Q_inv(3,t)` SAT for `t = 4, 5, 6` (witnesses brute-checked), and `(3,7)` is still undecided.

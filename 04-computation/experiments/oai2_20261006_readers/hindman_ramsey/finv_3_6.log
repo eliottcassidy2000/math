@@ -1,0 +1,23 @@
+n=3 t=6: 665 gap classes
+triangle clauses: 124930
+row subgrids (height 2): 3375
+  iter 10: clauses 639, |E|=212, indep rows 3375, 1s
+  iter 20: clauses 1268, |E|=211, indep rows 3375, 1s
+  iter 30: clauses 1893, |E|=202, indep rows 3375, 1s
+  iter 40: clauses 2511, |E|=139, indep rows 3375, 1s
+  iter 50: clauses 3117, |E|=137, indep rows 3375, 1s
+  iter 60: clauses 3602, |E|=58, indep rows 1845, 1s
+  iter 70: clauses 4228, |E|=48, indep rows 1723, 1s
+  iter 80: clauses 4847, |E|=44, indep rows 1265, 1s
+  iter 90: clauses 5471, |E|=50, indep rows 642, 1s
+  iter 100: clauses 6085, |E|=45, indep rows 1648, 1s
+  iter 110: clauses 6723, |E|=42, indep rows 2385, 1s
+  iter 120: clauses 7377, |E|=33, indep rows 1009, 1s
+  iter 130: clauses 8013, |E|=31, indep rows 337, 1s
+  iter 140: clauses 8576, |E|=44, indep rows 270, 1s
+  iter 150: clauses 9119, |E|=59, indep rows 270, 1s
+  iter 160: clauses 9695, |E|=77, indep rows 270, 1s
+  iter 170: clauses 10258, |E|=84, indep rows 270, 1s
+  iter 180: clauses 10777, |E|=92, indep rows 270, 1s
+  iter 190: clauses 11298, |E|=98, indep rows 270, 1s
+SAT: Q_inv(3,6) TRUE; witness |E|=108 (196 iterations, 1s)

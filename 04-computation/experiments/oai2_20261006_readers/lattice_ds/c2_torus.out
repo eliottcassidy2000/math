@@ -1,0 +1,12 @@
+hex torus alpha=2+w (N=7)          N= 7 al=1.00  E(A)=0.159595266964  best=0.159595266964  best-E(A)=+0.00e+00  below=0/60  E(A/Lam)-E(A)=+5.6e-17
+hex torus alpha=3+w (N=13)         N=13 al=1.00  E(A)=0.159595266964  best=0.159595266964  best-E(A)=+8.33e-17  below=0/40  E(A/Lam)-E(A)=+1.7e-16
+hex torus alpha=4+w (N=21)         N=21 al=1.00  E(A)=0.159595266964  best=0.159595266964  best-E(A)=+1.39e-16  below=0/30  E(A/Lam)-E(A)=+5.6e-17
+thin torus Zu+Z21v (N=21)          N=21 al=1.00  E(A)=0.159595266964  best=0.159595266964  best-E(A)=+9.71e-16  below=0/30  E(A/Lam)-E(A)=+1.1e-16
+square torus area 7                N= 7 al=1.00  E(A)=0.159595266964  best=0.192372396122  best-E(A)=+3.28e-02  below=0/60
+square torus area 21               N=21 al=1.00  E(A)=0.159595266964  best=0.171867542837  best-E(A)=+1.23e-02  below=0/30
+hex torus alpha=2+w (N=7)          N= 7 al=2.00  E(A)=0.004238959299  best=0.004238959299  best-E(A)=+3.47e-18  below=0/60  E(A/Lam)-E(A)=+3.5e-18
+hex torus alpha=3+w (N=13)         N=13 al=2.00  E(A)=0.004238959299  best=0.004238959299  best-E(A)=+1.21e-17  below=0/40  E(A/Lam)-E(A)=+7.8e-18
+hex torus alpha=4+w (N=21)         N=21 al=2.00  E(A)=0.004238959299  best=0.004238959299  best-E(A)=+3.99e-17  below=0/30  E(A/Lam)-E(A)=+3.5e-18
+thin torus Zu+Z21v (N=21)          N=21 al=2.00  E(A)=0.004238959299  best=0.004238959299  best-E(A)=+3.50e-16  below=0/30  E(A/Lam)-E(A)=+6.1e-18
+square torus area 7                N= 7 al=2.00  E(A)=0.004238959299  best=0.008909272140  best-E(A)=+4.67e-03  below=0/60
+square torus area 21               N=21 al=2.00  E(A)=0.004238959299  best=0.006040068715  best-E(A)=+1.80e-03  below=0/30

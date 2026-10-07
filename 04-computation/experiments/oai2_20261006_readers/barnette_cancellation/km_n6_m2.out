@@ -1,0 +1,4 @@
+    round 1: pool 428; DONE uncertified=0 leaves=10230985051 local_uncertified=43; unresolved non-local 0 (202s)
+  P=[(0, 0), (1, 2), (2, 4)] lambda=6 [starve]: non-local minimum blocking sets: 0 (202s)
+    round 1: pool 438; DONE uncertified=0 leaves=10230985051 local_uncertified=45; unresolved non-local 0 (175s)
+  P=[(0, 0), (1, 2), (5, 3)] lambda=6 [starve]: non-local minimum blocking sets: 0 (175s)

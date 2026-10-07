@@ -1,0 +1,22 @@
+closed form r_i(y) = w_i(y) - 2 sum ... verified k = 1..8
+RS(y) = (-1)^{sum y_m y_{m+1}} verified k <= 11
+k=1 N=2: Golay complementary pairs among the 2N rows+columns: 4  example (2, 3)
+k=2 N=4: Golay complementary pairs among the 2N rows+columns: 4  example (5, 7)
+k=3 N=8: Golay complementary pairs among the 2N rows+columns: 0  example None
+k=4 N=16: Golay complementary pairs among the 2N rows+columns: 0  example None
+k=5 N=32: Golay complementary pairs among the 2N rows+columns: 0  example None
+k=6 N=64: Golay complementary pairs among the 2N rows+columns: 0  example None
+k=7 N=128: Golay complementary pairs among the 2N rows+columns: 0  example None
+k N | switched rows: Fmin Fmean Fmax | sup/sqrtN max over rows (grid, ub) | bound (1+sqrt2)^2 sqrt2 = 8.2426 | min|P|/sqrtN min over rows
+ 1      2 | 2.0000 2.0000 2.0000 | 1.4211 | min-mod (grid) 0.00e+00 median-row-min 0.000 [0.0s]
+ 2      4 | 4.0000 4.0000 4.0000 | 1.3362 | min-mod (grid) 4.81e-01 median-row-min 0.481 [0.0s]
+ 3      8 | 0.8889 1.9556 2.6667 | 1.8385 | min-mod (grid) 0.00e+00 median-row-min 0.000 [0.0s]
+ 4     16 | 0.7273 1.6269 3.2000 | 2.1953 | min-mod (grid) 0.00e+00 median-row-min 0.064 [0.0s]
+ 5     32 | 0.7356 1.3449 2.9091 | 2.3085 | min-mod (grid) 0.00e+00 median-row-min 0.000 [0.0s]
+ 6     64 | 0.6975 1.3494 3.0476 | 2.5121 | min-mod (grid) 0.00e+00 median-row-min 0.021 [0.0s]
+ 7    128 | 0.7181 1.2979 2.9767 | 2.5473 | min-mod (grid) 0.00e+00 median-row-min 0.018 [0.0s]
+ 8    256 | 0.7274 1.3093 3.0118 | 2.7633 | min-mod (grid) 0.00e+00 median-row-min 0.017 [0.0s]
+ 9    512 | 0.7441 1.2993 2.9942 | 2.7915 | min-mod (grid) 0.00e+00 median-row-min 0.012 [0.1s]
+10   1024 | 0.7487 1.3031 3.0029 | 2.8889 | min-mod (grid) 0.00e+00 median-row-min 0.009 [0.6s]
+11   2048 | 0.7515 1.3009 2.9985 | 2.8894 | min-mod (grid) 0.00e+00 median-row-min 0.006 [4.2s]
+12   4096 | 0.7527 1.3019 3.0007 | 2.9950 | min-mod (grid) 0.00e+00 median-row-min 0.007 [2.3s]

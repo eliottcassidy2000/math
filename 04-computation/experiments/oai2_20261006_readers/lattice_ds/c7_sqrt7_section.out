@@ -1,0 +1,9 @@
+check: e(tri) = 3  e(hex7) = 12
+K3 x K3 (N=9): |S| = 9  sqrt7-unit distances = 18   (Cartesian-product prediction 18)
+K3 x H7 (N=21): |S| = 21  sqrt7-unit distances = 57   (Cartesian-product prediction 57)
+H7 x H7 (N=49): |S| = 49  sqrt7-unit distances = 168   (Cartesian-product prediction 168)
+N=9: Harborth penny (D=1 sections) = 16 ; u(N) = 18
+N=21: Harborth penny (D=1 sections) = 47 ; u(N) = 57
+N=49: Harborth penny (D=1 sections) = 122 
+distance-norm census of K3 x H7: [(1, 12), (3, 12), (4, 6), (7, 57), (9, 3), (12, 12), (13, 9), (16, 12), (19, 6), (21, 18), (25, 12), (27, 12)]
+float check: pairs at Euclidean distance sqrt(7): 57

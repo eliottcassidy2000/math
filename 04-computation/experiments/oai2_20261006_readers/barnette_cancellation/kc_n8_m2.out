@@ -1,0 +1,15 @@
+n=8 m=2: V=64 E=256 triangles=0; seeded 40 HCs
+  6 path representatives
+      round 1: pool 738 cycles; DONE uncertified=0 leaves=8468125050 (194s) => CERTIFIED
+   P=[(0, 0), (1, 2), (2, 4)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (194s, stored HCs 40)
+      round 1: pool 716 cycles; DONE uncertified=0 leaves=8468125050 (186s) => CERTIFIED
+   P=[(0, 0), (1, 2), (3, 3)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (186s, stored HCs 40)
+      round 1: pool 678 cycles; DONE uncertified=0 leaves=8468125050 (152s) => CERTIFIED
+   P=[(0, 0), (1, 2), (0, 4)]: lambda=6 [close], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (152s, stored HCs 40)
+      round 1: pool 761 cycles; DONE uncertified=0 leaves=8468125050 (191s) => CERTIFIED
+   P=[(0, 0), (1, 2), (7, 3)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (191s, stored HCs 40)
+      round 1: pool 772 cycles; DONE uncertified=0 leaves=8468125050 (246s) => CERTIFIED
+   P=[(0, 0), (1, 2), (2, 0)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (246s, stored HCs 40)
+      round 1: pool 694 cycles; DONE uncertified=0 leaves=8468125050 (216s) => CERTIFIED
+   P=[(0, 0), (1, 2), (7, 1)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (217s, stored HCs 40)
+  SUMMARY n=8 m=2: {(6, 'beta=lambda'): 6}  total 1214s

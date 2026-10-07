@@ -1,0 +1,6 @@
+cube: |V(G)|=8, k=4; states=2, pairs=2; non-integral J: 0; cyclic-Q_s with nonzero partner sum: 0; pairs with Q_s a forest: 2; forest s with nonzero coefficient: 2/2
+prism6: |V(G)|=12, k=6; states=3, pairs=2; non-integral J: 0; cyclic-Q_s with nonzero partner sum: 0; pairs with Q_s a forest: 2; forest s with nonzero coefficient: 2/3
+prism8: |V(G)|=16, k=8; states=4, pairs=2; non-integral J: 0; cyclic-Q_s with nonzero partner sum: 0; pairs with Q_s a forest: 2; forest s with nonzero coefficient: 2/4
+prism10: |V(G)|=20, k=10; states=5, pairs=2; non-integral J: 0; cyclic-Q_s with nonzero partner sum: 0; pairs with Q_s a forest: 2; forest s with nonzero coefficient: 2/5
+prism12: |V(G)|=24, k=12; states=6, pairs=2; non-integral J: 0; cyclic-Q_s with nonzero partner sum: 0; pairs with Q_s a forest: 2; forest s with nonzero coefficient: 2/6
+truncated_octahedron: |V(G)|=24, k=12; states=16, pairs=4; non-integral J: 0; cyclic-Q_s with nonzero partner sum: 0; pairs with Q_s a forest: 4; forest s with nonzero coefficient: 4/16

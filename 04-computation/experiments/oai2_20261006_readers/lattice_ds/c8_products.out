@@ -1,0 +1,5 @@
+norm-91 directions: [(5, 6), (9, 1), (10, -1), (11, -6)] [91, 91, 91, 91]
+K3^3 at D=91: |S| = 27 (product 27); unit distances = 81; Cartesian prediction = 81; 3N = 81
+K3^2 x W7 at D=91: |S| = 63 (product 63); unit distances = 234; Cartesian prediction = 234; 3N = 189
+K3^4 at D=91: |S| = 81 (product 81); unit distances = 324; Cartesian prediction = 324; 3N = 243
+K3 x W7 at D=7: |S| = 21 (product 21); unit distances = 57; Cartesian prediction = 57; 3N = 63

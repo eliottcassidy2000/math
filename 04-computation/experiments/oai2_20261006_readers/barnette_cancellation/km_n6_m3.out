@@ -1,0 +1,8 @@
+    round 1: pool 62; DONE uncertified=3001 leaves=687230597 local_uncertified=1; unresolved non-local 3000 (2s)
+    round 2: pool 314; DONE uncertified=8 leaves=9798689908 local_uncertified=84; unresolved non-local 8 (193s)
+    round 3: pool 346; DONE uncertified=0 leaves=9798689908 local_uncertified=84; unresolved non-local 0 (402s)
+  P=[(0, 0), (1, 2), (2, 4), (3, 0)] lambda=6 [starve]: non-local minimum blocking sets: 0 (402s)
+    round 1: pool 168; DONE uncertified=252 leaves=9798689908 local_uncertified=89; unresolved non-local 252 (109s)
+    round 2: pool 307; DONE uncertified=4 leaves=9798689908 local_uncertified=86; unresolved non-local 4 (260s)
+    round 3: pool 316; DONE uncertified=0 leaves=9798689908 local_uncertified=86; unresolved non-local 0 (388s)
+  P=[(0, 0), (1, 2), (3, 3), (1, 4)] lambda=6 [starve]: non-local minimum blocking sets: 0 (388s)

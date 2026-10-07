@@ -1,0 +1,18 @@
+n=6: V=36, seeded 30 HCs
+  m=1: 1 path classes; 0 needed a new CP-SAT call; NOT contained in any Hamiltonian cycle: 0 [] (2s)
+  m=2: 6 path classes; 0 needed a new CP-SAT call; NOT contained in any Hamiltonian cycle: 0 [] (2s)
+  m=3: 28 path classes; 0 needed a new CP-SAT call; NOT contained in any Hamiltonian cycle: 0 [] (2s)
+  m=4: 173 path classes; 1 needed a new CP-SAT call; NOT contained in any Hamiltonian cycle: 0 [] (2s)
+  m=5: 1088 path classes; 90 needed a new CP-SAT call; NOT contained in any Hamiltonian cycle: 0 [] (6s)
+n=7: V=49, seeded 30 HCs
+  m=1: 1 path classes; 0 needed a new CP-SAT call; NOT contained in any Hamiltonian cycle: 0 [] (7s)
+  m=2: 6 path classes; 0 needed a new CP-SAT call; NOT contained in any Hamiltonian cycle: 0 [] (7s)
+  m=3: 28 path classes; 0 needed a new CP-SAT call; NOT contained in any Hamiltonian cycle: 0 [] (7s)
+  m=4: 184 path classes; 0 needed a new CP-SAT call; NOT contained in any Hamiltonian cycle: 0 [] (7s)
+  m=5: 1160 path classes; 78 needed a new CP-SAT call; NOT contained in any Hamiltonian cycle: 0 [] (13s)
+n=8: V=64, seeded 30 HCs
+  m=1: 1 path classes; 0 needed a new CP-SAT call; NOT contained in any Hamiltonian cycle: 0 [] (21s)
+  m=2: 6 path classes; 0 needed a new CP-SAT call; NOT contained in any Hamiltonian cycle: 0 [] (21s)
+  m=3: 28 path classes; 0 needed a new CP-SAT call; NOT contained in any Hamiltonian cycle: 0 [] (21s)
+  m=4: 181 path classes; 0 needed a new CP-SAT call; NOT contained in any Hamiltonian cycle: 0 [] (21s)
+  m=5: 1166 path classes; 53 needed a new CP-SAT call; NOT contained in any Hamiltonian cycle: 0 [] (27s)

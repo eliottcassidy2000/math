@@ -1,0 +1,75 @@
+n=6 m=3: V=36 E=144 triangles=0; seeded 40 HCs
+  28 path representatives
+      round 1: pool 60; 400 uncertified listed (1s); resolving
+      round 2: pool 214 cycles; DONE uncertified=0 leaves=432295143 (6s) => CERTIFIED
+   P=[(0, 0), (1, 2), (2, 4), (3, 0)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (8s, stored HCs 80)
+      round 1: pool 122; 3 uncertified listed (4s); resolving
+      round 2: pool 130 cycles; DONE uncertified=0 leaves=432295143 (3s) => CERTIFIED
+   P=[(0, 0), (1, 2), (2, 4), (4, 5)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (7s, stored HCs 83)
+      round 1: pool 134; 2 uncertified listed (3s); resolving
+      round 2: pool 141 cycles; DONE uncertified=0 leaves=432295143 (4s) => CERTIFIED
+   P=[(0, 0), (1, 2), (2, 4), (1, 0)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (7s, stored HCs 85)
+      round 1: pool 124; 1 uncertified listed (4s); resolving
+      round 2: pool 125 cycles; DONE uncertified=0 leaves=432295143 (4s) => CERTIFIED
+   P=[(0, 0), (1, 2), (2, 4), (0, 5)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (8s, stored HCs 86)
+      round 1: pool 139 cycles; DONE uncertified=0 leaves=432295143 (4s) => CERTIFIED
+   P=[(0, 0), (1, 2), (2, 4), (3, 2)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (4s, stored HCs 86)
+      round 1: pool 149; 1 uncertified listed (4s); resolving
+      round 2: pool 150 cycles; DONE uncertified=0 leaves=432295143 (4s) => CERTIFIED
+   P=[(0, 0), (1, 2), (2, 4), (4, 3)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (8s, stored HCs 87)
+      round 1: pool 141 cycles; DONE uncertified=0 leaves=432295143 (3s) => CERTIFIED
+   P=[(0, 0), (1, 2), (2, 4), (0, 3)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (3s, stored HCs 87)
+      round 1: pool 124; 2 uncertified listed (3s); resolving
+      round 2: pool 132 cycles; DONE uncertified=0 leaves=432295143 (3s) => CERTIFIED
+   P=[(0, 0), (1, 2), (3, 3), (4, 5)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (6s, stored HCs 89)
+      round 1: pool 101; 20 uncertified listed (2s); resolving
+      round 2: pool 148 cycles; DONE uncertified=0 leaves=432295143 (4s) => CERTIFIED
+   P=[(0, 0), (1, 2), (3, 3), (2, 5)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (6s, stored HCs 109)
+      round 1: pool 167; 1 uncertified listed (4s); resolving
+      round 2: pool 168 cycles; DONE uncertified=0 leaves=432295143 (4s) => CERTIFIED
+   P=[(0, 0), (1, 2), (3, 3), (1, 4)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (7s, stored HCs 110)
+      round 1: pool 135; 2 uncertified listed (3s); resolving
+      round 2: pool 141 cycles; DONE uncertified=0 leaves=432295143 (3s) => CERTIFIED
+   P=[(0, 0), (1, 2), (3, 3), (4, 1)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (6s, stored HCs 112)
+      round 1: pool 142; 1 uncertified listed (3s); resolving
+      round 2: pool 145 cycles; DONE uncertified=0 leaves=432295143 (3s) => CERTIFIED
+   P=[(0, 0), (1, 2), (3, 3), (5, 2)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (7s, stored HCs 113)
+      round 1: pool 166; 1 uncertified listed (4s); resolving
+      round 2: pool 169 cycles; DONE uncertified=0 leaves=432295143 (4s) => CERTIFIED
+   P=[(0, 0), (1, 2), (3, 3), (2, 1)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (7s, stored HCs 114)
+      round 1: pool 174 cycles; DONE uncertified=0 leaves=432295143 (4s) => CERTIFIED
+   P=[(0, 0), (1, 2), (0, 4), (1, 0)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (4s, stored HCs 114)
+      round 1: pool 175 cycles; DONE uncertified=0 leaves=432295143 (4s) => CERTIFIED
+   P=[(0, 0), (1, 2), (0, 4), (2, 5)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (4s, stored HCs 114)
+      round 1: pool 168; 1 uncertified listed (4s); resolving
+      round 2: pool 169 cycles; DONE uncertified=0 leaves=432295143 (4s) => CERTIFIED
+   P=[(0, 0), (1, 2), (0, 4), (2, 3)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (7s, stored HCs 115)
+      round 1: pool 155; 1 uncertified listed (3s); resolving
+      round 2: pool 156 cycles; DONE uncertified=0 leaves=432295143 (3s) => CERTIFIED
+   P=[(0, 0), (1, 2), (0, 4), (5, 2)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (6s, stored HCs 116)
+      round 1: pool 160 cycles; DONE uncertified=0 leaves=432295143 (4s) => CERTIFIED
+   P=[(0, 0), (1, 2), (0, 4), (4, 3)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (4s, stored HCs 116)
+      round 1: pool 152 cycles; DONE uncertified=0 leaves=432295143 (5s) => CERTIFIED
+   P=[(0, 0), (1, 2), (5, 3), (0, 5)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (5s, stored HCs 116)
+      round 1: pool 158 cycles; DONE uncertified=0 leaves=432295143 (4s) => CERTIFIED
+   P=[(0, 0), (1, 2), (5, 3), (1, 4)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (4s, stored HCs 116)
+      round 1: pool 168 cycles; DONE uncertified=0 leaves=432295143 (5s) => CERTIFIED
+   P=[(0, 0), (1, 2), (5, 3), (0, 1)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (5s, stored HCs 116)
+      round 1: pool 171 cycles; DONE uncertified=0 leaves=432295143 (6s) => CERTIFIED
+   P=[(0, 0), (1, 2), (5, 3), (4, 1)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (6s, stored HCs 116)
+      round 1: pool 148; 1 uncertified listed (5s); resolving
+      round 2: pool 152 cycles; DONE uncertified=0 leaves=432295143 (4s) => CERTIFIED
+   P=[(0, 0), (1, 2), (2, 0), (3, 2)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (9s, stored HCs 117)
+      round 1: pool 171; 1 uncertified listed (4s); resolving
+      round 2: pool 175 cycles; DONE uncertified=0 leaves=432295143 (4s) => CERTIFIED
+   P=[(0, 0), (1, 2), (2, 0), (0, 1)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (8s, stored HCs 118)
+      round 1: pool 168 cycles; DONE uncertified=0 leaves=432295143 (4s) => CERTIFIED
+   P=[(0, 0), (1, 2), (2, 0), (0, 5)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (4s, stored HCs 118)
+      round 1: pool 176 cycles; DONE uncertified=0 leaves=432295143 (5s) => CERTIFIED
+   P=[(0, 0), (1, 2), (3, 1), (4, 3)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (5s, stored HCs 118)
+      round 1: pool 163; 2 uncertified listed (4s); resolving
+      round 2: pool 167 cycles; DONE uncertified=0 leaves=432295143 (4s) => CERTIFIED
+   P=[(0, 0), (1, 2), (3, 1), (2, 3)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (8s, stored HCs 120)
+      round 1: pool 184 cycles; DONE uncertified=0 leaves=432295143 (4s) => CERTIFIED
+   P=[(0, 0), (1, 2), (5, 1), (0, 3)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (4s, stored HCs 120)
+  SUMMARY n=6 m=3: {(6, 'beta=lambda'): 28}  total 173s

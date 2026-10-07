@@ -1,0 +1,20 @@
+1. max N of a Turan-type (B_{n-1},B_n)-good colouring vs target 4n-2:
+   n= 2: max N=  4 (parts [2, 2]); max(2n,3n-3)=  4; target 4n-2=6
+   n= 3: max N=  6 (parts [3, 3]); max(2n,3n-3)=  6; target 4n-2=10
+   n= 4: max N=  9 (parts [3, 3, 3]); max(2n,3n-3)=  9; target 4n-2=14
+   n= 5: max N= 12 (parts [4, 4, 4]); max(2n,3n-3)= 12; target 4n-2=18
+   n= 6: max N= 15 (parts [5, 5, 5]); max(2n,3n-3)= 15; target 4n-2=22
+   n= 7: max N= 18 (parts [6, 6, 6]); max(2n,3n-3)= 18; target 4n-2=26
+   n= 8: max N= 21 (parts [7, 7, 7]); max(2n,3n-3)= 21; target 4n-2=30
+   n= 9: max N= 24 (parts [8, 8, 8]); max(2n,3n-3)= 24; target 4n-2=34
+   n=10: max N= 27 (parts [9, 9, 9]); max(2n,3n-3)= 27; target 4n-2=38
+   n=100 (formula): Turan-type max = 297 vertices vs 398 needed
+   explicit check n=4: three red K_3 (N=9) valid: True; adding one vertex to a part valid: False
+   explicit check n=5: three red K_4 (N=12) valid: True; adding one vertex to a part valid: False
+   explicit check n=6: three red K_5 (N=15) valid: True; adding one vertex to a part valid: False
+   explicit check n=7: three red K_6 (N=18) valid: True; adding one vertex to a part valid: False
+2. stored witness n=12, N=46: |U0|=10 |U1|=12 |D|=11; valid (no red B_11, no blue B_12): True
+   red degrees [21, 23]; omega(red)=5, alpha(red)=6; omega(blue)=6, alpha(blue)=5
+   cycle-clique => red graph (alpha=6) contains C_m for m in [7, 8] (needs m>=s=7); all these pairs (m,s) have s<=7 -> pre-2026 literature: True
+   cycle-clique => blue graph (alpha=5) contains C_m for m in [6, 7, 8, 9, 10] (needs m>=s=6); all these pairs (m,s) have s<=7 -> pre-2026 literature: True
+   direct red cycle lengths 3..12 present: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12]

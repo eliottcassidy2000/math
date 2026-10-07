@@ -1,0 +1,45 @@
+1. the doubling, as polynomials
+  ok   rows of H_(2N): r_j (1 + w), (r_j - 2 z^j)(1 - w); columns c_j -+ w r_j; c_j = 2 z^j - r_j (k = 1..9)
+2. closed form of the tower rows
+  ok   r_i(y) = w_i(y) - 2 sum_(l: i_l = 1) [y = i mod 2^l] (-1)^(sum_(m>=l) i_m y_m) for every row, k = 1..11
+3. the Morse-step transfer identity
+  ok   ||y||_4^4 = 6||x||_4^4 + 8 eps S and S_y = ||x||_4^4 + 4 eps S for y = (x, eps x): 910 sequences (all of length <= 8, 400 random up to 300) [i.e. R' = (3/2 + 2 eps s) R, s' = (1 + 4 eps s)/(6 + 8 eps s)]
+  ok   F(x (1 + eps z^m)) <= 2F/(F+1) < 2 for every x of length >= 2 among the same sequences (Cauchy-Schwarz)
+  ok   every row of H_(2^k) has F < 2, k = 2..11 (rows only: columns are Golay-type steps, and columns of H_4, H_8 reach F = 4)
+  ok   Walsh (Sylvester) rows: F <= 1/((3/2)^floor(k/2) - 1), k = 2..12
+4. tower rows: the Thue-Morse regime (NUMERICAL)
+   k= 8 N=  256: max F 0.2362, mean F 0.0845, min over rows of sup/sqrtN <= 4.17
+   k= 9 N=  512: max F 0.1600, mean F 0.0572, min over rows of sup/sqrtN <= 5.10
+   k=10 N= 1024: max F 0.1266, mean F 0.0390, min over rows of sup/sqrtN <= 6.20
+   k=11 N= 2048: max F 0.0932, mean F 0.0268, min over rows of sup/sqrtN <= 7.59
+   k=12 N= 4096: max F 0.0725, mean F 0.0185, min over rows of sup/sqrtN <= 9.28
+   k=13 N= 8192: max F 0.0551, mean F 0.0128, min over rows of sup/sqrtN <= 11.36
+  ok   max row F strictly decreasing for k = 8..13
+5. Rudin-Shapiro switching flattens every row
+   k= 3: max over rows sup/sqrtN <= 1.860; F in [0.8889, 2.6667], mean 1.9556
+   k= 4: max over rows sup/sqrtN <= 2.218; F in [0.7273, 3.2000], mean 1.6269
+   k= 5: max over rows sup/sqrtN <= 2.335; F in [0.7356, 2.9091], mean 1.3449
+   k= 6: max over rows sup/sqrtN <= 2.549; F in [0.6975, 3.0476], mean 1.3494
+   k= 7: max over rows sup/sqrtN <= 2.585; F in [0.7181, 2.9767], mean 1.2979
+   k= 8: max over rows sup/sqrtN <= 2.804; F in [0.7274, 3.0118], mean 1.3093
+   k= 9: max over rows sup/sqrtN <= 2.831; F in [0.7441, 2.9942], mean 1.2993
+   k=10: max over rows sup/sqrtN <= 2.931; F in [0.7487, 3.0029], mean 1.3031
+   k=11: max over rows sup/sqrtN <= 2.919; F in [0.7515, 2.9985], mean 1.3009
+   k=12: max over rows sup/sqrtN <= 2.995; F in [0.7527, 3.0007], mean 1.3019
+  ok   every row of D H D has sup/sqrtN <= (3 + 2 sqrt2) sqrt2 = 8.2426 and F >= 1/(33 + 24 sqrt2) = 0.0149, k <= 12
+6. Golay pairs
+  ok   no Golay complementary pair among the rows and columns of H_(2^k), 3 <= k <= 7
+7. bent switchings of order 16
+  ok   #d (d_0 = 1) with |H_16 d| = 4 entrywise: tower 0, Sylvester 448; best tower min |(Hd)_i| = 2
+8. Legendre rotations that are Barker sequences
+  ok   p = 3 mod 4 < 200 with a Barker rotation of the Legendre sequence: [3, 7, 11]
+9. cyclotomic stacking partition
+   s=2: failures [3, 5]
+   s=3: failures [7, 13]
+   s=4: failures [5, 13, 17, 41]
+   s=5: failures [11, 31, 41, 61, 71, 101]
+   s=6: failures [7, 13, 19, 31, 37, 43, 61, 73, 97, 109, 157, 277]
+   s=7: failures [29, 43, 71, 113, 127, 491]
+   s=8: failures [17, 41, 89, 97, 113, 257, 337]
+  ok   every failure (s <= 8, q < 6000) violates q - 3s + 1 > (s-1)(s-2) sqrt q (the bound is never contradicted)
+ALL CHECKS PASSED

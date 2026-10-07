@@ -1,0 +1,24 @@
+(con:identity) xy - z(z+1) = p^2 (H + p u): True
+Delta s = -3p^2 x u^2: True
+Delta F = (6sx+3)u^2: True
+Delta J = 3x^2u^2: True
+Delta H = p^3: True
+Delta^2 H = 0: True
+  Delta^4 s = 0
+  Delta^2 u = 0
+  Delta^7 F = 0
+  Delta^4 J = 0
+det of (F,J)->(L,M) = 1: True
+inverse formulas: True
+(con:h-expansion) H(L) = L - p u + p^2 Q(L) + p^4 F(L)^3: True
+C = Q(0) = M^2(2x0+6sx0^2+4s^2x0^3-x0^4): True
+Q1 polynomial: True
+(con:root-divisibility) H(L*) in p^3 B: True
+H(L) + p^3 w = L - p h: True
+(con:e-certificate) p^3 e0 - (L - L*) = (p^2 Q1 - 1)(H(L) + p^3 w): True
+W(Z) = -H(L*+p^3 Z)/p^3 is a polynomial: True
+xy = z(z+1) in R~: True
+f = C1 v: True
+g = b^2 v: True
+v = alpha f + beta g: True
+alpha C1 + beta b^2 = 1: True

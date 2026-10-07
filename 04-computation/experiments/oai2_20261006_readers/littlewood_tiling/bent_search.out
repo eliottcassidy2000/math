@@ -1,0 +1,3 @@
+m=4 N=16: best over quadratic(+affine) sign vectors of min_i |(H d)_i| / sqrtN = 0.000
+m=6 N=64: best over quadratic(+affine) sign vectors of min_i |(H d)_i| / sqrtN = 0.000
+m=8 N=256: best over quadratic(+affine) sign vectors of min_i |(H d)_i| / sqrtN = 0.000

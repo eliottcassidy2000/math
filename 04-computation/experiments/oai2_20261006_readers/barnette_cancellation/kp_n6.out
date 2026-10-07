@@ -1,0 +1,11 @@
+n=6: V=36 E=144 triangles=0 |group used|=288
+  seeded 20 Hamiltonian cycles (1s)
+-- prescribed paths with 1 edges: 1 representatives
+Traceback (most recent call last):
+  File "/private/tmp/claude-501/-Users-e-Documents-GitHub-math/f1b41b3c-5f00-4184-8c88-059bb9352d19/scratchpad/oai2/bc/knight_paths2.py", line 303, in <module>
+    main()
+  File "/private/tmp/claude-501/-Users-e-Documents-GitHub-math/f1b41b3c-5f00-4184-8c88-059bb9352d19/scratchpad/oai2/bc/knight_paths2.py", line 292, in main
+    beta, B, loc, psize = eng.beta(path)
+  File "/private/tmp/claude-501/-Users-e-Documents-GitHub-math/f1b41b3c-5f00-4184-8c88-059bb9352d19/scratchpad/oai2/bc/knight_paths2.py", line 218, in beta
+    assert st == "OK", st
+AssertionError: UNKNOWN

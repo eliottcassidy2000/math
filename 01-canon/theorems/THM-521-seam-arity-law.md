@@ -95,3 +95,12 @@ constructive-strong-Specker handoff). This is the algebraic backbone the snippet
 "explain the v₂/v₃ asymmetry" (char-2, §B) and "climb to a t-uniform rung → constructive strong
 Specker" (the rung must be non-valuation, §D). Cross-links: THM-469, THM-453, HYP-2396/2558,
 T778, the-three-twos (the "2 of pair-composition" = the Schur arity here).
+
+---
+
+## Update (2026-10-06, mac-mini-2026-10-06-oaimath2; THM-4560)
+
+**Corollary D now holds unconditionally.** THM-4560 proves directly that every gap-determined (translation-invariant) triangle-free graph on `N^n` has an independent binary subgrid, for every `n`.
+* No gap-determined strong witness exists, valuation-graded or not. This needs neither HYP-2396's linear wall nor the identification "invariant witnesses = valuation gradings".
+* What remains open is HYP-2558: a non-invariant, value-dependent strong witness (Larson partial sums). HYP-2396 (the exact cutoff `R(n,2) = 2n+1`) is also still open.
+* Note THM-470's Finv label (MISTAKE-577): the "invariant algebra dies at t = 7" evidence concerned the fully gap-determined algebra, and its `(3,7)` instance is still undecided.

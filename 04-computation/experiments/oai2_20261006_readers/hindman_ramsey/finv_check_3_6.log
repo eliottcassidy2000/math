@@ -1,0 +1,3 @@
+triangle-free: OK
+binary subgrids: 170859375, missed (independent): 0
+python3 finv_check.py finv_witness_n3_t6.txt 6  17.42s user 0.09s system 97% cpu 18.028 total

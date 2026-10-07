@@ -1,0 +1,6 @@
+n=5: V=25, seeded 30 HCs
+  m=1: 1 path classes; 0 needed a new CP-SAT call; NOT contained in any Hamiltonian cycle: 0 [] (1s)
+  m=2: 6 path classes; 0 needed a new CP-SAT call; NOT contained in any Hamiltonian cycle: 0 [] (1s)
+  m=3: 26 path classes; 0 needed a new CP-SAT call; NOT contained in any Hamiltonian cycle: 0 [] (1s)
+  m=4: 162 path classes; 5 needed a new CP-SAT call; NOT contained in any Hamiltonian cycle: 0 [] (1s)
+  m=5: 930 path classes; 104 needed a new CP-SAT call; NOT contained in any Hamiltonian cycle: 0 [] (5s)

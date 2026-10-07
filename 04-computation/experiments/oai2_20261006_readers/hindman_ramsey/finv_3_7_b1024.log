@@ -1,0 +1,46 @@
+n=3 t=7: 1098 gap classes
+triangle clauses: 340299
+row subgrids (height 2): 9261
+  iter 10: clauses 10072, |E|=301, indep rows 9261, 2s
+  iter 20: clauses 19168, |E|=286, indep rows 9261, 3s
+  iter 30: clauses 28222, |E|=280, indep rows 9261, 4s
+  iter 40: clauses 37784, |E|=106, indep rows 6072, 4s
+  iter 50: clauses 47534, |E|=56, indep rows 6942, 4s
+  iter 60: clauses 56720, |E|=64, indep rows 1214, 5s
+  iter 70: clauses 65262, |E|=83, indep rows 7576, 7s
+  iter 80: clauses 71848, |E|=54, indep rows 4233, 9s
+  iter 90: clauses 79991, |E|=65, indep rows 8055, 13s
+  iter 100: clauses 87093, |E|=57, indep rows 7875, 21s
+  iter 110: clauses 93274, |E|=64, indep rows 7875, 21s
+  iter 120: clauses 99113, |E|=67, indep rows 7875, 22s
+  iter 130: clauses 106395, |E|=62, indep rows 8055, 38s
+  iter 140: clauses 112738, |E|=64, indep rows 8055, 39s
+  iter 150: clauses 119114, |E|=69, indep rows 4725, 45s
+  iter 160: clauses 125190, |E|=71, indep rows 4725, 49s
+  iter 170: clauses 130994, |E|=67, indep rows 4725, 52s
+  iter 180: clauses 137020, |E|=69, indep rows 4725, 105s
+  iter 190: clauses 143010, |E|=59, indep rows 8055, 130s
+  iter 200: clauses 148878, |E|=64, indep rows 7875, 141s
+  iter 210: clauses 154271, |E|=67, indep rows 7875, 141s
+  iter 220: clauses 159760, |E|=68, indep rows 7875, 143s
+  iter 230: clauses 165240, |E|=67, indep rows 7875, 143s
+  iter 240: clauses 170345, |E|=73, indep rows 7875, 144s
+  iter 250: clauses 175768, |E|=70, indep rows 7875, 145s
+  iter 260: clauses 180822, |E|=68, indep rows 7875, 146s
+  iter 270: clauses 185681, |E|=68, indep rows 7875, 148s
+  iter 280: clauses 190427, |E|=72, indep rows 7875, 149s
+  iter 290: clauses 194954, |E|=71, indep rows 7875, 152s
+  iter 300: clauses 199883, |E|=65, indep rows 7875, 157s
+  iter 310: clauses 205177, |E|=73, indep rows 7875, 248s
+  iter 320: clauses 209906, |E|=75, indep rows 7875, 250s
+  iter 330: clauses 214432, |E|=71, indep rows 7875, 252s
+  iter 340: clauses 219034, |E|=69, indep rows 8055, 462s
+  iter 350: clauses 223602, |E|=73, indep rows 8055, 467s
+  iter 360: clauses 228303, |E|=72, indep rows 8055, 479s
+  iter 370: clauses 232769, |E|=72, indep rows 8055, 483s
+  iter 380: clauses 237590, |E|=73, indep rows 8055, 715s
+  iter 390: clauses 242027, |E|=72, indep rows 8055, 818s
+  iter 400: clauses 246280, |E|=75, indep rows 8055, 892s
+  iter 410: clauses 250028, |E|=72, indep rows 7875, 1074s
+  iter 420: clauses 253538, |E|=73, indep rows 7875, 1115s
+  iter 430: clauses 256936, |E|=72, indep rows 7875, 1138s

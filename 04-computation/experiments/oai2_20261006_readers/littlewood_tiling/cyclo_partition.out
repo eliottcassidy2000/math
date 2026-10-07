@@ -1,0 +1,7 @@
+s=2: primes q=1 mod s below 6000: 780 OK; failures: [3, 5] (largest 5); s^4 = 16
+s=3: primes q=1 mod s below 6000: 382 OK; failures: [7, 13] (largest 13); s^4 = 81
+s=4: primes q=1 mod s below 6000: 379 OK; failures: [5, 13, 17, 41] (largest 41); s^4 = 256
+s=5: primes q=1 mod s below 6000: 188 OK; failures: [11, 31, 41, 61, 71, 101] (largest 101); s^4 = 625
+s=6: primes q=1 mod s below 6000: 372 OK; failures: [37, 43, 61, 73, 97, 109, 157, 277] (largest 277); s^4 = 1296
+s=7: primes q=1 mod s below 6000: 120 OK; failures: [29, 43, 71, 113, 127, 491] (largest 491); s^4 = 2401
+s=8: primes q=1 mod s below 6000: 179 OK; failures: [17, 41, 89, 97, 113, 257, 337] (largest 337); s^4 = 4096

@@ -1,0 +1,23 @@
+transfer identity verified for all sign patterns, k <= 8
+k= 1 N=2^1: max over Walsh products F = 2.000000   ratio to (4/(1+sqrt17))^k: 2.5616
+k= 2 N=2^2: max over Walsh products F = 1.333333   ratio to (4/(1+sqrt17))^k: 2.1872
+k= 3 N=2^3: max over Walsh products F = 0.727273   ratio to (4/(1+sqrt17))^k: 1.5280
+k= 4 N=2^4: max over Walsh products F = 0.516129   ratio to (4/(1+sqrt17))^k: 1.3888
+k= 5 N=2^5: max over Walsh products F = 0.351648   ratio to (4/(1+sqrt17))^k: 1.2119
+k= 6 N=2^6: max over Walsh products F = 0.259109   ratio to (4/(1+sqrt17))^k: 1.1437
+k= 7 N=2^7: max over Walsh products F = 0.189630   ratio to (4/(1+sqrt17))^k: 1.0721
+k= 8 N=2^8: max over Walsh products F = 0.142937   ratio to (4/(1+sqrt17))^k: 1.0350
+k= 9 N=2^9: max over Walsh products F = 0.107858   ratio to (4/(1+sqrt17))^k: 1.0003
+k=10 N=2^10: max over Walsh products F = 0.082428   ratio to (4/(1+sqrt17))^k: 0.9791
+k=11 N=2^11: max over Walsh products F = 0.063142   ratio to (4/(1+sqrt17))^k: 0.9606
+k=12 N=2^12: max over Walsh products F = 0.048661   ratio to (4/(1+sqrt17))^k: 0.9481
+k=13 N=2^13: max over Walsh products F = 0.037576   ratio to (4/(1+sqrt17))^k: 0.9377
+k=14 N=2^14: max over Walsh products F = 0.029106   ratio to (4/(1+sqrt17))^k: 0.9303
+k=15 N=2^15: max over Walsh products F = 0.022578   ratio to (4/(1+sqrt17))^k: 0.9242
+k=16 N=2^16: max over Walsh products F = 0.017543   ratio to (4/(1+sqrt17))^k: 0.9198
+k=17 N=2^17: max over Walsh products F = 0.013644   ratio to (4/(1+sqrt17))^k: 0.9162
+k=18 N=2^18: max over Walsh products F = 0.010622   ratio to (4/(1+sqrt17))^k: 0.9135
+k=19 N=2^19: max over Walsh products F = 0.008274   ratio to (4/(1+sqrt17))^k: 0.9114
+k=20 N=2^20: max over Walsh products F = 0.006448   ratio to (4/(1+sqrt17))^k: 0.9097
+k=21 N=2^21: max over Walsh products F = 0.005027   ratio to (4/(1+sqrt17))^k: 0.9084
+k=22 N=2^22: max over Walsh products F = 0.003921   ratio to (4/(1+sqrt17))^k: 0.9074

@@ -60,6 +60,10 @@ should be retired in favor of this one. Grades: **PROVED** (in-repo proof) ·
 ### A1. Jacobian Conjecture (JC_n) — DISPROVED (n≥3), verified in-repo.
 THM-1300: the owner map F:ℂ³→ℂ³ has det JF≡−2 + triple collision (six independent
 in-repo verifications). JC_n false ∀n≥3 by stabilization. JC_2 survives (A9).
+2026-10-06 (THM-4562): slice lemma — a locally nilpotent dual field reduces JC_n to
+cancellation in dimension n−1 plus JC on the slice; THM-1300 is fully non-slice (fibre
+counts over F_q), consistent with JC_2 surviving. openai/math #047's exotic 4-space
+(cancellation fails in dimension 4, CONDITIONAL) raises HYP-9216: is D(X) ≅ A_4?
 
 ### A2. Dixmier Conjecture (DC_n) — DC_{n≥3} constructively FALSE (PROVED); DC_1, DC_2 OPEN.
 - **THM-1300 §1** — explicit A₃ Weyl endomorphism φ(X_i)=F_i, φ(D_j)=Σ B_jk D_k,
@@ -208,8 +212,11 @@ all heights (THM-1289, published), δ ineffective.
   secondary vein (~70 files). THM-412 density quantization (w | r_Q(D), triangular
   lattice skips densities 4,5, first density 6 at the split prime D=7); the HN field
   tower (HYP-2276/2277): the most rigid χ=4 junctions land on the Heegner numbers
-  {7,11,19,43,67,163}; 3n floor bounds (THM-421); u21=57, u22 (THM-431/440); the
-  J₀ spectral floor χ(ℝ²)≥3.48. The self-audit `missed-important-problem-frontier-s657`
+  {7,11,19,43,67,163} [**2026-10-06: the Heegner roadmap is REFUTED** — residue colourings
+  (THM-4558, MISTAKE-576): Q(√−3,√−19) is 3-chromatic, the whole Heegner compositum is
+  4-chromatic, and the 5-chromatic step needs √−15]; 3n floor bounds (THM-421); u21=57, u22
+  (THM-431/440; the triangular lattice attains u(21), MISTAKE-575); the J₀ spectral floor
+  χ(ℝ²)≥3.48. The self-audit `missed-important-problem-frontier-s657`
   ranks HN #1 for stride potential. ★ Promote to a first-class thread.
 - **Three-gap / three-distance (Steinhaus)** [REFRAMED, clean] — the Eisenstein/cusp
   dichotomy IS the three-distance theorem; the LRC-AP tight locus ⟺ ≤3-gap config
@@ -782,6 +789,15 @@ all heights (THM-1289, published), δ ineffective.
   - THM-4557: doubling a DRT keeps Aut (new proof of Hanaki 2020), so HYP-9162 is closed.
   - From the openai/math reading: a negacyclic 3-adic clock (19*27 = 2^9+1), Catalan's 2^3+1 = 3^2 behind 63, collisions as vanishing {2,3}-unit sums, and negative cycles blocking information-only proofs.
   - No Collatz consequence.
+- **openai/math, second reading (mac-mini, 2026-10-06; [note](../05-knowledge/results/oai2_openai_math_second_reading_20261006.md), THM-4558–4562, HYP-9215, HYP-9216, MISTAKE-574–577).** Twelve manuscripts, six lanes.
+  - Crossing (#165, Lean): THM-922 (III) for every n; parity drawing of K_(m,m) has exactly Z(m,m) crossings; 2-page Zarankiewicz CONDITIONAL; THM-913 = DDS construction.
+  - Lattice (#090): the triangular lattice attains u(21) = 57 (THM-431 corrected).
+  - Littlewood (#076): THM-4561, the skew tower's rows are Thue–Morse; Rudin–Shapiro switching flattens every row to <= 8.24 sqrt N.
+  - Plane colouring (#158): THM-4558 residue colourings (Madore's technique) give exact chi for the HN field tower; the Heegner roadmap is false.
+  - Ramsey (#172): THM-4559, every algebraic spherical set is Ramsey (CONDITIONAL on #172).
+  - Erdős 592 (#164's ultrafilter ancestry): THM-4560, every gap-determined triangle-free grid graph leaves a binary subgrid independent; t_dead(Finv) < infinity; THM-521 D unconditional; THM-470 Finv label corrected.
+  - Barnette (#180): HYP-9215 knight-torus blocking law. Cancellation (#047): THM-4562 slice lemma, THM-1300 fully non-slice; HYP-9216.
+  - The rational plane reduces mod 7 onto the 7 x 7 knight torus: z -> (1+2i) z.
 
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`
 (ranks HN > reconstruction > Kakeya/Falconer > sunflower > Caccetta–Häggkvist > … ).

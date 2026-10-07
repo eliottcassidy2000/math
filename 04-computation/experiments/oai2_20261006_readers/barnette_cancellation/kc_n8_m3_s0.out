@@ -1,0 +1,20 @@
+n=8 m=3: V=64 E=256 triangles=0; seeded 40 HCs
+  7 path representatives
+      round 1: pool 104 cycles; DONE uncertified=0 leaves=8301429675 (42s) => CERTIFIED
+   P=[(0, 0), (1, 2), (2, 4), (3, 6)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (42s, stored HCs 40)
+      round 1: pool 116; 2 uncertified listed (49s); resolving
+      round 2: pool 127 cycles; DONE uncertified=0 leaves=8301429675 (53s) => CERTIFIED
+   P=[(0, 0), (1, 2), (2, 4), (4, 5)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (102s, stored HCs 42)
+      round 1: pool 92; 4 uncertified listed (40s); resolving
+      round 2: pool 102 cycles; DONE uncertified=0 leaves=8301429675 (43s) => CERTIFIED
+   P=[(0, 0), (1, 2), (2, 4), (1, 6)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (83s, stored HCs 46)
+      round 1: pool 122 cycles; DONE uncertified=0 leaves=8301429675 (49s) => CERTIFIED
+   P=[(0, 0), (1, 2), (2, 4), (0, 5)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (49s, stored HCs 46)
+      round 1: pool 129; 2 uncertified listed (50s); resolving
+      round 2: pool 137 cycles; DONE uncertified=0 leaves=8301429675 (54s) => CERTIFIED
+   P=[(0, 0), (1, 2), (2, 4), (3, 2)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (104s, stored HCs 48)
+      round 1: pool 130 cycles; DONE uncertified=0 leaves=8301429675 (51s) => CERTIFIED
+   P=[(0, 0), (1, 2), (2, 4), (4, 3)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (51s, stored HCs 48)
+      round 1: pool 129 cycles; DONE uncertified=0 leaves=8301429675 (52s) => CERTIFIED
+   P=[(0, 0), (1, 2), (2, 4), (0, 3)]: lambda=6 [starve], local set blocks: True; all 5-sets leave an HC through P: True -> beta=lambda (52s, stored HCs 48)
+  SUMMARY n=8 m=3: {(6, 'beta=lambda'): 7}  total 524s

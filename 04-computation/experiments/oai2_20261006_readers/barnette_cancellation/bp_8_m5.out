@@ -1,0 +1,5 @@
+N=8 m=1: 21 path classes (D4 x reversal): {'ext': 21, 'nonext_local': 0, 'nonext_NONLOCAL': 0, 'local_says_bad_but_ext': 0}; nonlocal examples [] (1s)
+N=8 m=2: 110 path classes (D4 x reversal): {'ext': 99, 'nonext_local': 11, 'nonext_NONLOCAL': 0, 'local_says_bad_but_ext': 0}; nonlocal examples [] (3s)
+N=8 m=3: 520 path classes (D4 x reversal): {'ext': 419, 'nonext_local': 101, 'nonext_NONLOCAL': 0, 'local_says_bad_but_ext': 0}; nonlocal examples [] (13s)
+N=8 m=4: 2499 path classes (D4 x reversal): {'ext': 1690, 'nonext_local': 809, 'nonext_NONLOCAL': 0, 'local_says_bad_but_ext': 0}; nonlocal examples [] (57s)
+N=8 m=5: 11659 path classes (D4 x reversal): {'ext': 6536, 'nonext_local': 5123, 'nonext_NONLOCAL': 0, 'local_says_bad_but_ext': 0}; nonlocal examples [] (219s)

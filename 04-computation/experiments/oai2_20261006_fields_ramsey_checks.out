@@ -1,0 +1,21 @@
+1. kappa(q) = chi(Cay(F_(q^2), mu_(q+1)))
+   q= 2: |V| = 4, degree 3, clique found 3; 4-colourable: True; 3-colourable: False
+   q= 3: |V| = 9, degree 4, clique found 2; 3-colourable: True; 2-colourable: False
+   q= 4: |V| = 16, degree 5, clique found 2; 4-colourable: True; 3-colourable: False
+   q= 5: |V| = 25, degree 6, clique found 3; 4-colourable: True; 3-colourable: False
+   q= 7: |V| = 49, degree 8, clique found 2; 4-colourable: True; 3-colourable: False
+   q= 8: |V| = 64, degree 9, clique found 3; 4-colourable: True; 3-colourable: False
+   q= 9: |V| = 81, degree 10, clique found 2; 3-colourable: True; 2-colourable: False
+   q=11: |V| = 121, degree 12, clique found 3; 5-colourable: True; 4-colourable: False
+   q=16: |V| = 256, degree 17, clique found 2; 4-colourable: True; 3-colourable: False
+  ok   kappa(q) = 4 (q=2), 3 (q=3), 4 (q=4), 4 (q=5), 4 (q=7), 4 (q=8), 3 (q=9), 5 (q=11), 4 (q=16)
+  ok   the 7x7 knight set is the circle x^2 + y^2 = 5 in F_7^2 (THM-4552), i.e. alpha*mu_8 in F_7(i) with N(alpha) = 5; so G_7 = Cay(F_49, mu_8) up to the additive automorphism z -> alpha z, and chi(G_7) = kappa(7) = 4
+2. Lemma R in Q(sqrt-3, sqrt-D) at the prime over 3 (D = 7, 19, 43, 67, 163: N = (D+1)/4 = 2 mod 3)
+  ok   2000 unit vectors u = z/conj(z): N(u) = 1, coordinates 3-integral, residue in mu_4 subset F_9 (so chi <= kappa(3) = 3)
+3. Erdos 592 on [t]^2: fully gap-determined vs row-invariant
+   fully gap-determined: SAT at t=3: True, t=4: False;  row-invariant: SAT at t=4: True, t=5: False
+  ok   fully gap-determined cutoff 4 (Q_inv(2,3) SAT, Q_inv(2,4) UNSAT); row-invariant cutoff 5 (THM-453 G): different games
+4. Schur triples with 3-smooth summands
+  ok   least N forcing a monochromatic {a, b, a+b} (a, b 3-smooth) in every 2-colouring of [N]: 5 with a = b allowed, 13 with a != b
+  ok   3-smooth solutions of x + y = z below 10^12 reduce to [(1, 1), (1, 2), (1, 3), (1, 8)]; the colouring Omega mod 2 has no monochromatic Schur triple in S
+ALL CHECKS PASSED

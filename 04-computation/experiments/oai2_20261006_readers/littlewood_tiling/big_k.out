@@ -1,0 +1,6 @@
+tower    k=13 N=8192: rows Fmax 0.0551 Fmean 0.0128 Fmin 0.000183; best-row sup/sqrtN (ub) 10.7051; sum_rows sumC^2 = 43009509490688  [10s]
+switched k=13 N=8192: rows Fmin 0.7534 Fmean 1.3014 Fmax 2.9996; worst-row sup/sqrtN (ub) 3.0108  [19s]
+tower    k=14 N=16384: rows Fmax 0.0428 Fmean 0.0089 Fmin 0.000092; best-row sup/sqrtN (ub) 13.1039; sum_rows sumC^2 = 517207712333824  [43s]
+switched k=14 N=16384: rows Fmin 0.7537 Fmean 1.3017 Fmax 3.0002; worst-row sup/sqrtN (ub) 3.0269  [85s]
+tower    k=12 N=4096: rows Fmax 0.0725 Fmean 0.0185 Fmin 0.000366; best-row sup/sqrtN (ub) 8.7394; sum_rows sumC^2 = 3572784594944  [4s]
+switched k=12 N=4096: rows Fmin 0.7527 Fmean 1.3019 Fmax 3.0007; worst-row sup/sqrtN (ub) 2.9950  [7s]

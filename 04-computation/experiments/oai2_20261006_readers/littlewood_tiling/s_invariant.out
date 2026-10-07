@@ -1,0 +1,16 @@
+Walsh k=5: s in [0.001458, 0.249634]   min R = 3.8438  (1.5^(k/2) = 2.7557)
+Walsh k=10: s in [0.000001, 0.250000]   min R = 13.1318  (1.5^(k/2) = 7.5938)
+Walsh k=15: s in [0.000000, 0.250000]   min R = 45.2911  (1.5^(k/2) = 20.9259)
+Walsh k=20: s in [0.000000, 0.250000]   min R = 156.0819  (1.5^(k/2) = 57.6650)
+tower k= 1: rows s in [+0.1667,+0.1667], flipped s in [+0.1667,+0.1667], min R rows 1.5000
+tower k= 2: rows s in [+0.0714,+0.2273], flipped s in [-0.1000,-0.1000], min R rows 1.7500
+tower k= 3: rows s in [+0.1957,+0.2442], flipped s in [-0.0833,+0.1429], min R rows 2.1250, min_i R_k(i)/max(R_(k-2) ancestors) = 1.4167
+tower k= 4: rows s in [+0.0882,+0.2485], flipped s in [-0.0479,+0.2282], min R rows 1.8750, min_i R_k(i)/max(R_(k-2) ancestors) = 0.6818
+tower k= 5: rows s in [+0.0209,+0.2496], flipped s in [-0.0161,+0.2431], min R rows 2.3594, min_i R_k(i)/max(R_(k-2) ancestors) = 0.8169
+tower k= 6: rows s in [+0.0068,+0.2499], flipped s in [-0.0007,+0.2449], min R rows 2.9336, min_i R_k(i)/max(R_(k-2) ancestors) = 0.9058
+tower k= 7: rows s in [+0.0050,+0.2500], flipped s in [+0.0102,+0.2455], min R rows 4.4346, min_i R_k(i)/max(R_(k-2) ancestors) = 1.1076
+tower k= 8: rows s in [+0.0045,+0.2500], flipped s in [+0.0060,+0.2470], min R rows 5.2341, min_i R_k(i)/max(R_(k-2) ancestors) = 1.2549
+tower k= 9: rows s in [+0.0030,+0.2500], flipped s in [+0.0026,+0.2488], min R rows 7.2495, min_i R_k(i)/max(R_(k-2) ancestors) = 1.3674
+tower k=10: rows s in [+0.0012,+0.2500], flipped s in [+0.0011,+0.2497], min R rows 8.9016, min_i R_k(i)/max(R_(k-2) ancestors) = 1.4450
+tower k=11: rows s in [+0.0003,+0.2500], flipped s in [+0.0003,+0.2502], min R rows 11.7344, min_i R_k(i)/max(R_(k-2) ancestors) = 1.4719
+tower k=12: rows s in [-0.0002,+0.2500], flipped s in [-0.0003,+0.2502], min R rows 14.7953, min_i R_k(i)/max(R_(k-2) ancestors) = 1.4836

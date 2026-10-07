@@ -1,0 +1,5 @@
+p=2: lattice sum (inner disk + tail integral) = 5.783359299644;  6 b^p zeta(p) L(p,chi_-3) = 5.7833592996787
+p=3: lattice sum (inner disk + tail integral) = 4.141256547203;  6 b^p zeta(p) L(p,chi_-3) = 4.1412565472034
+theta_A(1)-1 via r(D) = 0.159595266963928
+BHS C_log = 2log2 + (1/2)log(2/3) + 3log(sqrt(pi)/Gamma(1/3)) = -0.0556053049433925
+|eta(rho)| = 0.800579402820038  vs 3^(1/8) Gamma(1/3)^(3/2)/(2 pi) = 0.800579402820038

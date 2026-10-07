@@ -1,0 +1,22 @@
+N=7: w -> 5;  images of the six units w^k: [1, 5, 4, 6, 2, 3]
+   minimal-distance graph: circulant C_7[1, 1, 2, 2, 3, 3]; edges = 21; degree 6
+   120-degree directions 1,w^2,w^4 -> [1, 2, 4]
+   up-triangle base [0, 1, 5]: differences [1, 2, 3, 4, 5, 6]  perfect difference set: True
+   down-triangle base [0, 4, 5]: differences [1, 2, 3, 4, 5, 6]  perfect difference set: True
+   QR_7 = [1, 2, 4]  orientation = Paley P_7: True
+   affine maps preserving P_7: 21 (F_21 order 21);  multipliers: [1, 2, 4]
+   rotation by w sends {1,2,4} to [3, 5, 6] (= non-residues -> converse tournament)
+   up-triangle lines: [[0, 1, 5], [1, 2, 6], [0, 2, 3], [1, 3, 4], [2, 4, 5], [3, 5, 6], [0, 4, 6]]
+   every pair of points on exactly one line: True
+N=21: w -> 17;  images of the six units w^k: [1, 17, 16, 20, 4, 5]
+   minimal-distance graph: circulant C_21[1, 1, 4, 4, 5, 5]; edges = 63; degree 6
+   120-degree directions 1,w^2,w^4 -> [1, 4, 16]
+   up-triangle base [0, 1, 17]: differences [1, 4, 5, 16, 17, 20]  perfect difference set: False
+   down-triangle base [0, 16, 17]: differences [1, 4, 5, 16, 17, 20]  perfect difference set: False
+   multiplicative order of w^2 image: 3 ; subgroup <4> = [1, 4, 16]
+   faces (triangles): 42 ; Euler V-E+F = 0
+N=13: w -> 10;  images of the six units w^k: [1, 10, 9, 12, 3, 4]
+   minimal-distance graph: circulant C_13[1, 1, 3, 3, 4, 4]; edges = 39; degree 6
+   120-degree directions 1,w^2,w^4 -> [1, 3, 9]
+   up-triangle base [0, 1, 10]: differences [1, 3, 4, 9, 10, 12]  perfect difference set: False
+   down-triangle base [0, 9, 10]: differences [1, 3, 4, 9, 10, 12]  perfect difference set: False

@@ -1,0 +1,7 @@
+deep well {1..12,182}        n=13 delta=14/183  sum|B|=1.9891 sum pair-overlaps=2.4274 (indep 1.8260, ratio 1.329)  |union|=1.0000 (indep model 0.8845)
+AP {1..13}                   n=13 delta=1/14    sum|B|=1.8571 sum pair-overlaps=2.2017 (indep 1.5918, ratio 1.383)  |union|=1.0000 (indep model 0.8652)
+AP {1..13} at 14/183         n=13 delta=14/183  sum|B|=1.9891 sum pair-overlaps=2.4292 (indep 1.8260, ratio 1.330)  |union|=1.0000 (indep model 0.8845)
+{1..11,13,84}                n=13 delta=14/183  sum|B|=1.9891 sum pair-overlaps=2.3009 (indep 1.8260, ratio 1.260)  |union|=0.9990 (indep model 0.8845)
+random 13-set #0             n=13 delta=14/183  sum|B|=1.9891 sum pair-overlaps=1.8805 (indep 1.8260, ratio 1.030)  |union|=0.8875 (indep model 0.8845)
+random 13-set #1             n=13 delta=14/183  sum|B|=1.9891 sum pair-overlaps=1.8554 (indep 1.8260, ratio 1.016)  |union|=0.8831 (indep model 0.8845)
+random 13-set #2             n=13 delta=14/183  sum|B|=1.9891 sum pair-overlaps=1.8743 (indep 1.8260, ratio 1.026)  |union|=0.8927 (indep model 0.8845)

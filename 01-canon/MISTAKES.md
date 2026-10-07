@@ -2032,6 +2032,43 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
+## MISTAKE-577 (2026-10-06, found by mac-mini-2026-10-06-oaimath2's reader of openai/math #164 and re-computed in the session; concerns THM-470 A3/C of kind-pasteur-2026-06-11-S1) -- the fully gap-determined algebra Finv identified with the row-invariant game of THM-453 F, two games with different cutoffs
+
+- **Claim (THM-470 A3):** "The finest gap-determined algebra is Finv: phi = identity on the gap vector (= the translation-invariant game of THM-453 F at n=3)". THM-470 C also calls INV(3,4) "agreeing with mac-mini's independent invQ(3,4) implementation".
+- **Why it is wrong.**
+  - THM-453 F/G's "translation-invariant" witnesses are only **row-invariant**: `R_a = R` and `B_(a,a') = B_(a'-a)`. The within-row graph `R` and the cross-row relations `B_g` are arbitrary relations on column values.
+  - Finv is **fully gap-determined**: an edge depends only on the gap vector `y - x`.
+  - At `n = 2` the two games have different cutoffs. Fully gap-determined: `Q_inv(2,3)` SAT, `Q_inv(2,4)` UNSAT, cutoff 4. Row-invariant: SAT at 4, UNSAT at 5, cutoff 5, as THM-453 G says.
+  - Recomputed independently with CaDiCaL: `04-computation/experiments/oai2_20261006_fields_ramsey_checks.py`, part 3.
+  - The `INV(3,4)` / `invQ(3,4)` "agreement" compared two different games. Both are SAT, so no false conclusion followed.
+- **Correct framing (applied):**
+  - THM-470 carries a correction block.
+  - THM-4560 proves that `t_dead(Finv) < ∞` for every `n` (an independent binary subgrid always exists for a gap-determined triangle-free graph). The row-invariant game is a strictly less restrictive family (its rules may depend on column values), hence its larger cutoff.
+- **Lesson:** "translation-invariant" needs its group named, whether first-coordinate translations or all translations. Cross-checks between implementations are only checks when both implement the same game.
+
+## MISTAKE-576 (2026-10-06, found by mac-mini-2026-10-06-oaimath2's reader of openai/math #158 and verified in the session; concerns HYP-2276 (claude S687), HYP-2277 (claude S688 / opus S699m) and HYP-2278 (opus S699n), all 2026-06-06, historical index only) -- the "Heegner roadmap" for the chromatic number of the plane, and "measure cannot reach 5"
+
+- **Claims (historical HYP index, 2026-06-06):**
+  - HYP-2277 (S699m): "conjecture each chromatic step adjoins a class-number-1 (Heegner) rotation field, chi(R^2) = 5 -> sqrt-19".
+  - HYP-2278 (4): "HEEGNER ROADMAP (conjectural): chi = 2 + (#independent Heegner rotations)".
+  - HYP-2276: "chi(R^2) is bounded below by the number of pairwise-incommensurate imaginary-quadratic rotations forceable into one unit-distance graph".
+  - HYP-2278 (1): "RIGOROUS (given m_1 in [.2293, .2598]) ... the fractional/spectral/measure bound CANNOT reach 5; the chi >= 5 lower bound and ALL of the {5,6,7} distinction is IRREDUCIBLY COMBINATORIAL ... no analytic method can narrow it".
+- **Why they are wrong (THM-4558).**
+  - Reduction modulo a prime fixed by complex conjugation (Madore's technique, 2015) bounds the chromatic number of every field plane.
+  - `Q(sqrt-3, sqrt-(4N-1))` is 3-colourable for every `N = 2 (mod 3)`. That covers the Heegner rungs `sqrt-7`, `sqrt-19`, `sqrt-43`, `sqrt-67`, `sqrt-163`, so the `sqrt-19` rung adds nothing.
+  - The compositum of all six Heegner fields with `d = 3 (mod 8)` is 4-colourable: 2 is inert everywhere and `Frob_2` is complex conjugation.
+  - The 5-chromatic graphs need the class-number-2 field `Q(sqrt-15)` (Heule's `omega_4`), and the Polymath field `Q(sqrt-3, sqrt-11, sqrt-15)` is exactly 5-chromatic.
+  - For HYP-2278 (1):
+    - Falconer (1981) already proved the measurable chromatic number is at least 5 by measure theory.
+    - The upper bound `m_1 <= 0.2598` was out of date: `m_1(R^2) <= 0.247 < 1/4` (Ambrus-Csiszarik-Matolcsi-Varga-Zsamboki, arXiv:2207.14179), which gives `chi_m >= 5` by density alone.
+    - openai/math #158 (unrefereed) claims `chi(R^2) >= 6` by ergodic, measure and topological arguments.
+    - What is true: density alone cannot give 6, since `m_1 >= 0.2293 > 1/5` (Croft).
+- **Correct framing (applied):**
+  - THM-4558 records the field-plane values and the refutation.
+  - The PROBLEM-LEDGER line on the HN Heegner tower carries a pointer.
+  - The historical index is left as written (it is an archive).
+- **Lesson:** a field-tower story for a chromatic number must be tested against residue colourings. One prime fixed by conjugation with a small residue field caps chi for the whole field. And "no analytic method can" claims need a literature check, here Falconer 1981.
+
 ## MISTAKE-575 (2026-10-06, found by mac-mini-2026-10-06-oaimath2's reader of openai/math #090; concerns THM-431 of monad-explorer S710, 2026-06-06) -- "the triangular lattice is NOT optimal at N = 21 (max over all lattice sections = 47, gap 10)", from a search over disk-shaped patches only
 
 - **Claims (THM-431, `THM-431-unit-distance-u21-equals-57.md`, and the historical HYP index line for HYP-2267):**
