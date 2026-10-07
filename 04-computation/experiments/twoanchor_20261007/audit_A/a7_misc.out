@@ -1,0 +1,3 @@
+(i) lag-one form: x-1 = 3z+1; D=1 chain = (x, x-1) chain from time 1 on (3000 sources); x=5 mod 8 merges at Terras time 3 (1449 cases); residual x=1 mod 8 (1551 cases)
+tiling-compiler rule 2^1459-1 ~> 2^1457-1: actual words match the compiler; the D=2 chain from the run ends absorbs at equal Terras time 24 with zero debt (sum u + 1 = 24)
+DONE

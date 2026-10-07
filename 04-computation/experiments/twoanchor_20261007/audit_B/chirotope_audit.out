@@ -1,0 +1,25 @@
+== Part 1: the 64 labelled 4-tournaments ==
+  TT4                        c3=0  Pf distribution {-1: 12, 1: 12}
+  3-cycle+source             c3=1  Pf distribution {-3: 4, 3: 4}
+  strong (2 three-cycles)    c3=2  Pf distribution {-1: 12, 1: 12}
+  3-cycle+sink               c3=1  Pf distribution {-3: 4, 3: 4}
+  CONFIRMED: Pf in {+-1,+-3}; |Pf|=3 iff exactly one 3-cycle (3-cycle+source or 3-cycle+sink); Pf(B^sigma)=sgn(sigma)Pf(B); switching a vertex negates Pf
+== Part 2a: exhaustive over ALL labelled tournaments, n = 4..7 ==
+  n=4: 64 tournaments; #(a realisable, certified) = #(b all |Pf|=1) = #(c LT) = 48  [(n-1)! 2^(n-1) = 48]  sets identical: True
+  n=5: 1024 tournaments; #(a realisable, certified) = #(b all |Pf|=1) = #(c LT) = 384  [(n-1)! 2^(n-1) = 384]  sets identical: True
+  n=6: 32768 tournaments; #(a realisable, certified) = #(b all |Pf|=1) = #(c LT) = 3840  [(n-1)! 2^(n-1) = 3840]  sets identical: True
+  n=7: 2097152 tournaments; #(a realisable, certified) = #(b all |Pf|=1) = #(c LT) = 46080  [(n-1)! 2^(n-1) = 46080]  sets identical: True
+== Part 2b: random tests, n = 4..9 (seed 20261007) ==
+  n=4: {'rand': 3000, 'rand_lt': 2238, 'planar': 600, 'switchedTT': 600, 'dfs': 300}  -> (a)<=>(b)<=>(c) on every sample; every (b)-member realised by integer vectors
+  n=5: {'rand': 3000, 'rand_lt': 1101, 'planar': 600, 'switchedTT': 600, 'dfs': 300}  -> (a)<=>(b)<=>(c) on every sample; every (b)-member realised by integer vectors
+  n=6: {'rand': 3000, 'rand_lt': 363, 'planar': 600, 'switchedTT': 600, 'dfs': 300}  -> (a)<=>(b)<=>(c) on every sample; every (b)-member realised by integer vectors
+  n=7: {'rand': 3000, 'rand_lt': 62, 'planar': 600, 'switchedTT': 600, 'dfs': 300}  -> (a)<=>(b)<=>(c) on every sample; every (b)-member realised by integer vectors
+  n=8: {'rand': 1500, 'rand_lt': 5, 'planar': 600, 'switchedTT': 600, 'dfs': 300}  -> (a)<=>(b)<=>(c) on every sample; every (b)-member realised by integer vectors
+  n=9: {'rand': 1500, 'rand_lt': 1, 'planar': 600, 'switchedTT': 600, 'dfs': 300}  -> (a)<=>(b)<=>(c) on every sample; every (b)-member realised by integer vectors
+== Part 3: totally positive part and SL2 friezes ==
+  R: the chart (1,x_1<...<x_m),(0,1) has transitive pattern (infinity = sink), m = 2..9
+  Conway-Coxeter positive integer friezes with n points (width n-3): (n, #friezes, C_(n-2)) = [(3, 1, 1), (4, 2, 2), (5, 5, 5), (6, 14, 14), (7, 42, 42), (8, 132, 132), (9, 429, 429)]
+  odd n (5..11): 800 random TP points, each torus-normalises to a unique positive real frieze (closure checked)
+  even n (4..10): 800/800 random TP points are NOT torus-equivalent to any frieze (alternating-product obstruction p12 p34.. = p23 p45.. p1n)
+  n=4: all width-1 friezes (a,2/a,a,2/a) have the same cross-ratio 1/2 -> the frieze slice is NOT Gr+(2,4)/T
+ALL CHIROTOPE CHECKS PASSED

@@ -1,0 +1,14 @@
+   validity exhaustive mod 27*2^12: (4,1,1) iff x=1 mod 128 (32 classes yes, 480 no); same for y_4 (2,2,1,1)
+   840 random sources, K in [4, 5, 6, 7, 8, 13, 40, 200, 777, 1500], j in [7, 8, 9, 10, 11, 12, 13, 14, 20, 33, 64, 120, 301, 302] (J = 3..150): D=3 state (3,-26) and words ok; D=4 same state and same Y (K >= 5)
+   D=5, J=3: end-of-run states [(6, -296)]
+   D=5, J=4: end-of-run states [(6, -404)]
+   D=5, J=5: end-of-run states [(6, -485)]
+   D=5, J=6: end-of-run states [(6, -728)]
+   D=5, J=>=7: end-of-run states [(6, -728)]
+   D=6, J=3: end-of-run states [(6, -296)]
+   D=6, J=4: end-of-run states [(6, -404)]
+   D=6, J=5: end-of-run states [(6, -485)]
+   D=6, J=6: end-of-run states [(6, -728)]
+   D=6, J=>=7: end-of-run states [(6, -728)]
+   J = 6 exactly: D = 5, 6 in (6, -728)
+ALL (iii) CHECKS PASSED (6697 assertions)

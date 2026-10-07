@@ -3,7 +3,7 @@
 Odd K: n = 2^K - 1 has run end x = 2*3^(K-1) - 1 with j = v2(x-1) = 3 + m, J = 1 + floor(m/2), r = 1 + (m mod 2).
 For m >= 4 the K -> K-3 chain (child 2^(K-3) - 1) is in the universal state (3, 1-27) at the end of the two-run;
 its post-run absorption law should not depend on m (THM-4601 (v)). Also lists the exponents certified by the two
-explicit doubly-uniform head pairs (post-run depth 11 for r = 1, 9 for r = 2)."""
+explicit doubly-uniform head pairs (post-run depth 12 for r = 1, 11 for r = 2)."""
 import sys
 from collections import defaultdict
 def v2(x): return (x & -x).bit_length() - 1
@@ -28,11 +28,11 @@ for K in range(17, KMAX, 2):
     shell[m][0] += 1
     if dep is not None:
         shell[m][1] += 1
-        if dep <= 11: shell[m][2] += 1; explicit.append((K, m, dep))
+        if dep <= 12: shell[m][2] += 1; explicit.append((K, m, dep))
 print(f"odd K < {KMAX}, shells m = v2(K-1) >= 4; K -> K-3 certified within post-run depth {S}:")
 for m in sorted(shell):
     c, a, e = shell[m]
-    print(f"  m={m:2d} (r={1+(m%2)}): {a}/{c} = {a/c:.3f}   (post-run depth <= 11: {e})")
+    print(f"  m={m:2d} (r={1+(m%2)}): {a}/{c} = {a/c:.3f}   (post-run depth <= 12: {e})")
 tot = [sum(shell[m][i] for m in shell if (m % 2) == par) for par in (0, 1) for i in (0, 1)]
 print(f"  pooled r=1 (m even): {tot[1]}/{tot[0]} = {tot[1]/tot[0]:.3f};  r=2 (m odd): {tot[3]}/{tot[2]} = {tot[3]/tot[2]:.3f}")
 print("  shortest certificates (K, m, post-run depth):", sorted(explicit, key=lambda z: z[2])[:10])

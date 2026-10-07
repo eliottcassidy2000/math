@@ -1,0 +1,40 @@
+(v) end-of-run states
+   j= 3 (J=1, r=1): D1:(1, 1)  D2:(2, 4)  D3:(3, 13)  D4:(4, 40)  D5:(5, 121)  D6:(6, 364)  D7:(7, 1093)  D8:(8, 3280)
+   j= 4 (J=1, r=2): D1:(1, 1)  D2:(2, 4)  D3:(3, 13)  D4:(4, 40)  D5:(5, 121)  D6:(6, 364)  D7:(7, 1093)  D8:(8, 3280)
+   j= 5 (J=2, r=1): D1:(2, 1)  D2:(2, 1)  D3:(4, 10)  D4:(4, 10)  D5:(6, 91)  D6:(6, 91)  D7:(8, 820)  D8:(8, 820)
+   j= 6 (J=2, r=2): D1:(2, 1)  D2:(2, 1)  D3:(4, 10)  D4:(4, 10)  D5:(6, 91)  D6:(6, 91)  D7:(8, 820)  D8:(8, 820)
+   j= 7 (J=3, r=1): D1:(3, 1)  D2:(3, 1)  D3:(3, -26)  D4:(3, -26)  D5:(6, -296)  D6:(6, -296)  D7:(8, -1025)  D8:(8, -1025)
+   j= 8 (J=3, r=2): D1:(3, 1)  D2:(3, 1)  D3:(3, -26)  D4:(3, -26)  D5:(6, -296)  D6:(6, -296)  D7:(8, -1025)  D8:(8, -1025)
+   j= 9 (J=4, r=1): D1:(4, 1)  D2:(4, 1)  D3:(3, -26)  D4:(3, -26)  D5:(6, -404)  D6:(6, -404)  D7:(8, -4049)  D8:(8, -4049)
+   j=10 (J=4, r=2): D1:(4, 1)  D2:(4, 1)  D3:(3, -26)  D4:(3, -26)  D5:(6, -404)  D6:(6, -404)  D7:(8, -4049)  D8:(8, -4049)
+   j=11 (J=5, r=1): D1:(5, 1)  D2:(5, 1)  D3:(3, -26)  D4:(3, -26)  D5:(6, -485)  D6:(6, -485)  D7:(8, -6317)  D8:(8, -6317)
+   j=12 (J=5, r=2): D1:(5, 1)  D2:(5, 1)  D3:(3, -26)  D4:(3, -26)  D5:(6, -485)  D6:(6, -485)  D7:(8, -6317)  D8:(8, -6317)
+   j=13 (J=6, r=1): D1:(6, 1)  D2:(6, 1)  D3:(3, -26)  D4:(3, -26)  D5:(6, -728)  D6:(6, -728)  D7:(8, -8018)  D8:(8, -8018)
+   j=14 (J=6, r=2): D1:(6, 1)  D2:(6, 1)  D3:(3, -26)  D4:(3, -26)  D5:(6, -728)  D6:(6, -728)  D7:(8, -8018)  D8:(8, -8018)
+   j=25 (J=12, r=1): D1:(12, 1)  D2:(12, 1)  D3:(3, -26)  D4:(3, -26)  D5:(6, -728)  D6:(6, -728)  D7:(8, -6560)  D8:(8, -6560)
+   j=26 (J=12, r=2): D1:(12, 1)  D2:(12, 1)  D3:(3, -26)  D4:(3, -26)  D5:(6, -728)  D6:(6, -728)  D7:(8, -6560)  D8:(8, -6560)
+   type j>=7, r=1, D=1: 5 distinct end states over j in [7, 9, 11, 13, 25]
+   type j>=7, r=1, D=2: 5 distinct end states over j in [7, 9, 11, 13, 25]
+   type j>=7, r=1, D=3: 1 distinct end states over j in [7, 9, 11, 13, 25]
+   type j>=7, r=1, D=4: 1 distinct end states over j in [7, 9, 11, 13, 25]
+   type j>=7, r=1, D=5: 4 distinct end states over j in [7, 9, 11, 13, 25]
+   type j>=7, r=1, D=6: 4 distinct end states over j in [7, 9, 11, 13, 25]
+   type j>=7, r=1, D=7: 5 distinct end states over j in [7, 9, 11, 13, 25]
+   type j>=7, r=1, D=8: 5 distinct end states over j in [7, 9, 11, 13, 25]
+   type j>=7, r=2, D=1: 5 distinct end states over j in [8, 10, 12, 14, 26]
+   type j>=7, r=2, D=2: 5 distinct end states over j in [8, 10, 12, 14, 26]
+   type j>=7, r=2, D=3: 1 distinct end states over j in [8, 10, 12, 14, 26]
+   type j>=7, r=2, D=4: 1 distinct end states over j in [8, 10, 12, 14, 26]
+   type j>=7, r=2, D=5: 4 distinct end states over j in [8, 10, 12, 14, 26]
+   type j>=7, r=2, D=6: 4 distinct end states over j in [8, 10, 12, 14, 26]
+   type j>=7, r=2, D=7: 5 distinct end states over j in [8, 10, 12, 14, 26]
+   type j>=7, r=2, D=8: 5 distinct end states over j in [8, 10, 12, 14, 26]
+   end-of-run state depends on (J, D) only (identical for r = 1, 2 at equal J)
+(vi) Mersenne shells
+   (vi a) q -> w'(q) mod 2^L well defined and bijective on odd residues for m = 4..10, L = 1..14
+   (vi b) 162 Mersenne exponents K < 2600 with m >= 4: universal state and Y_end = 1 + 2^r w'(q) exact
+   (vi c) 2^1889-1 ~> 2^1886-1: words 1^1888 2^3 (10) 3  and  1^1885 (4,1,1) 2^0 (3,1,1,3) 5; common odd endpoint has 2983 bits; odd steps 1893
+   (vi c) 2^5249-1 ~> 2^5246-1: words 1^5248 2^4 (10) 1  and  1^5245 (4,1,1) 2^1 (3,1,1,3) 3; common odd endpoint has 8310 bits; odd steps 5254
+   (vi d) shells K < 12000, depth 200: m=4: 106/375=0.283, m=5: 53/187=0.283, m=6: 24/94=0.255, m=7: 15/47=0.319, m=8: 7/23=0.304, m=9: 5/12=0.417, m=10: 1/6=0.167, m=11: 0/3=0.000, m=12: 0/1=0.000, m=13: 0/1=0.000
+          pooled r=1 (m even) 138/499 = 0.277; r=2 (m odd) 73/250 = 0.292
+ALL (v)/(vi) CHECKS PASSED (574167 assertions)

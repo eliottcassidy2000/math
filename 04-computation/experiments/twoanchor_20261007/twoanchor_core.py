@@ -111,6 +111,7 @@ def part_C(rnd):
     print("C  universal residual state: D=3,4 -> (3, 1-27), D=5,6 -> (6, 1-729) at the end of every two-run tested")
 
 # ---------------- D: doubly-uniform collisions ----------------
+# heads (1,10)~(1,1,2,2,3) [r=1, absorbs at post-run Terras depth 12] and (10)~(3,1,1,3) [r=2, depth 11]; final letters (c, c+2)
 PAIRS = {1: ((1, 10, 1), (1, 1, 2, 2, 3, 3)), 2: ((10, 2), (3, 1, 1, 3, 4))}
 def part_D(rnd):
     # algebra: clearing segment and anchor
@@ -139,7 +140,8 @@ def part_D(rnd):
                 for a in bu[:-1]: zx = U(zx)
                 zy = Ye
                 for a in bv[:-1]: zy = U(zy)
-                if v2(3*zx+1) >= bu[-1] and v2(3*zy+1) >= bv[-1] and (3*zx+1)*2**bv[-1] == (3*zy+1)*2**bu[-1]:
+                # final letters (c, c+2) with c >= 1 free: the head identity gives zy = 4 zx + 1 (audit A: c = 1 valid)
+                if zy == 4*zx + 1:
                     good.append(wp)
         classes[r] = (mod, good)
     # random sources across K, J

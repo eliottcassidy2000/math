@@ -1,0 +1,13 @@
+r=1: 461 absorbing patterns up to post-run depth 19; total conditional mass 0.010353; general head identity holds on all: True
+   child-ladder  i=1:   371 patterns, mass 0.008537 (82.5%); shallowest example (depth, u, v) = (12, (1, 10), (1, 1, 2, 2, 3))
+   child-ladder  i=2:    56 patterns, mass 0.000961 (9.3%); shallowest example (depth, u, v) = (15, (1, 3, 5, 5), (1, 1, 3, 1, 1, 1, 2))
+   child-ladder  i=3:    22 patterns, mass 0.000755 (7.3%); shallowest example (depth, u, v) = (13, (1, 2, 9), (1, 1, 1, 1, 1, 1))
+   source-ladder i=1:    12 patterns, mass 0.000099 (1.0%); shallowest example (depth, u, v) = (18, (1, 12, 1, 1), (1, 1, 2, 2, 3, 2, 6))
+   session grammar (child-ladder, i=1) captures 82.5% of the absorbing mass up to depth 19
+r=2: 364 absorbing patterns up to post-run depth 19; total conditional mass 0.023499; general head identity holds on all: True
+   child-ladder  i=1:   321 patterns, mass 0.022141 (94.2%); shallowest example (depth, u, v) = (11, (10,), (3, 1, 1, 3))
+   child-ladder  i=2:    15 patterns, mass 0.000763 (3.2%); shallowest example (depth, u, v) = (15, (6, 1, 4, 3), (3, 1, 1, 1, 1, 1, 2))
+   child-ladder  i=3:     1 patterns, mass 0.000031 (0.1%); shallowest example (depth, u, v) = (18, (6, 1, 2, 1, 4, 3), (3, 1, 1, 1, 1, 1, 1, 1, 1))
+   source-ladder i=1:    27 patterns, mass 0.000565 (2.4%); shallowest example (depth, u, v) = (17, (12, 1, 1), (3, 1, 1, 3, 2, 6))
+   session grammar (child-ladder, i=1) captures 94.2% of the absorbing mass up to depth 19
+generalized compiler (ladder index i, either side) is an identity of affine maps for all 825 patterns (random K, J, c)

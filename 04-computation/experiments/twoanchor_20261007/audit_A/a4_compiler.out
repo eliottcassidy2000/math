@@ -1,0 +1,8 @@
+a,b  explicit heads: data ok; identity of affine maps ok on 13272 (K, J, c) triples (K <= 1001, J <= 150)
+a'   own search: 14 head pairs with sum(u) <= 13 (14 with matching run type); the compiler identity holds for every one (random K, J, c); first: [((10,), (3, 1, 1, 3)), ((1, 10), (1, 1, 2, 2, 3)), ((9, 2), (3, 1, 1, 3, 1)), ((8, 4), (3, 1, 1, 4, 1))]
+c    validity lemma: 1202 random (word, odd start) with odd integer endpoint; actual word = given word in all
+d    native classes of w' mod 2^14 (8192 odd classes): r=1 (u=(1,10)): c>=1 8, c>=2 4; r=2 (u=(10)): c>=1 32, c>=2 16  [measure 2^(r - sum u): r=1 8, r=2 32]
+e    random sources: {1: 160, 2: 160} certified (K up to 1001, J up to 150), words exact, endpoints equal;
+     final letters seen (r, c): [((1, 1), 82), ((1, 2), 43), ((1, 3), 21), ((1, 4), 9), ((1, 5), 4), ((1, 6), 1), ((2, 1), 82), ((2, 2), 31), ((2, 3), 24), ((2, 4), 8), ((2, 5), 5), ((2, 6), 5), ((2, 7), 2), ((2, 8), 2), ((2, 9), 1)]
+     D=3 absorption (r, post-run Terras depth = time - 2J, time - j): [((1, 12, 11), 160), ((2, 11, 9), 160)]
+ALL (iv) CHECKS PASSED (16778 assertions)

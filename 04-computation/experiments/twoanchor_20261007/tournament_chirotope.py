@@ -5,7 +5,8 @@
     Hence T is a rank-2 chirotope (sign pattern det(v_i, v_j) of vectors in R^2) iff all 4-Pfaffians are +-1
     iff T is locally transitive.
 (2) Legendre chirotopes: for p = 3 mod 4 the Paley tournament plus a sink is the chi-pattern of P^1(F_p);
-    the elliptic constant-quiddity (Chebyshev) SL2-frieze over F_p realises the whole switching class.
+    Singer frieze strips through all p+1 points (PGL2 non-split torus) realise the whole switching class (as does any
+    ordering; the Singer strip also closes as a frieze, see audit_B). (b) => (a) of THM-4602 (2) is tested in audit_B.
 """
 import itertools, random
 def pf4(b, i, j, k, l): return b[i][j]*b[k][l] - b[i][k]*b[j][l] + b[i][l]*b[j][k]
@@ -52,7 +53,7 @@ for n in (5, 6, 7, 8):
         assert allpm1 == lt
         if trial % 2 == 0: assert lt
         CH += 1
-print("(1) 4-Pfaffian criterion: |Pf|=3 iff exactly one 3-cycle (all 64 labelled 4-tournaments); LT <=> all 4-Pfaffians +-1 <=> realizable (800 random + 800 planar configurations)")
+print("(1) 4-Pfaffian criterion: |Pf|=3 iff exactly one 3-cycle (all 64 labelled 4-tournaments); LT <=> all 4-Pfaffians +-1 on 800 random tournaments; 800 planar configurations are LT (realizable => LT); the converse is in audit_B")
 
 # (2) Legendre chirotopes and the Paley frieze
 def legendre(a, p):

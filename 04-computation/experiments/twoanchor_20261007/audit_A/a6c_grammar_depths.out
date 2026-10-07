@@ -1,0 +1,12 @@
+r=1 by post-run depth 12: child-ladder i=1 mass 0.000977; all shapes 0.000977; i=1 share 100.0%
+r=1 by post-run depth 20: child-ladder i=1 mass 0.010284; all shapes 0.012386; i=1 share 83.0%
+r=1 by post-run depth 21: child-ladder i=1 mass 0.012060; all shapes 0.014616; i=1 share 82.5%
+r=1 by post-run depth 22: child-ladder i=1 mass 0.013902; all shapes 0.016943; i=1 share 82.0%
+r=1 by post-run depth 23: child-ladder i=1 mass 0.015796; all shapes 0.019347; i=1 share 81.6%
+r=1: i=1 absorbing patterns with depth <= 22 (= sum(u) <= 21): 3691
+r=2 by post-run depth 12: child-ladder i=1 mass 0.005859; all shapes 0.005859; i=1 share 100.0%
+r=2 by post-run depth 20: child-ladder i=1 mass 0.024620; all shapes 0.026512; i=1 share 92.9%
+r=2 by post-run depth 21: child-ladder i=1 mass 0.027058; all shapes 0.029545; i=1 share 91.6%
+r=2 by post-run depth 22: child-ladder i=1 mass 0.029463; all shapes 0.032581; i=1 share 90.4%
+r=2 by post-run depth 23: child-ladder i=1 mass 0.031807; all shapes 0.035631; i=1 share 89.3%
+r=2: i=1 absorbing patterns with depth <= 22 (= sum(u) <= 21): 2546

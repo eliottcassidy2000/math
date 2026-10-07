@@ -251,7 +251,7 @@ all heights (THM-1289, published), δ ineffective.
   A 2-adic sign barrier constrains 2-adic certificates; 3-adic refinement removes it.
   [The 2026-10-07 two-anchor session](../05-knowledge/results/twoanchor_reset2_friezes_20261007.md)
   makes the residual first-reset-2 rule uniform in both run lengths (THM-4600/4601): after any two-run the
-  K -> K-3 debt is the fixed state (3, 1-27); no deletion rule beats the two-run length (+1 barrier, D <= 3000).
+  K -> K-3 debt is the fixed state (3, 1-27); no 2-adic deletion rule beats the two-run length (+1 barrier, D <= 8000).
   [The 2026-09-17 audit](../05-knowledge/results/arithmetic_braids_20260917_collatz.md)
   gives the full triadic inverse-fibre braid, exact exponent-word cylinders,
   and a periodic-weight obstruction. [The continuation](../05-knowledge/results/arithmetic_braids2_20260917_synthesis.md)

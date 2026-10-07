@@ -1,0 +1,61 @@
+== (a) Legendre pattern of the standard chart = Paley + sink; (b) rescaling switches ==
+  CONFIRMED for all 17 primes p = 3 mod 4, p <= 131
+== (c) random SL2 frieze strips (distinct points) = switched induced subtournaments ==
+  CONFIRMED on 360 random strips (p = 7..43, 3..12 points)
+== (d) Singer strips through all p+1 points; independent switching-isomorphism test ==
+  p=  3: Singer g = companion(x^2-1x+2); strip covers P^1; closes antiperiodically (v_(p+1) = -v_0): True; quiddity values [1, 2] (2-periodic: True, a*b = t^2/d: True); switching-iso to Paley+sink: yes (2 search nodes); random orderings also switching-iso: 5/5; random orderings closing as frieze: 400/400
+  p=  7: Singer g = companion(x^2-1x+3); strip covers P^1; closes antiperiodically (v_(p+1) = -v_0): True; quiddity values [1, 5] (2-periodic: True, a*b = t^2/d: True); switching-iso to Paley+sink: yes (3 search nodes); random orderings also switching-iso: 5/5; random orderings closing as frieze: 118/400
+  p= 11: Singer g = companion(x^2-1x+7); strip covers P^1; closes antiperiodically (v_(p+1) = -v_0): True; quiddity values [1, 8] (2-periodic: True, a*b = t^2/d: True); switching-iso to Paley+sink: yes (3 search nodes); random orderings also switching-iso: 5/5; random orderings closing as frieze: 43/400
+  p= 19: Singer g = companion(x^2-1x+2); strip covers P^1; closes antiperiodically (v_(p+1) = -v_0): True; quiddity values [1, 10] (2-periodic: True, a*b = t^2/d: True); switching-iso to Paley+sink: yes (3 search nodes); random orderings also switching-iso: 5/5; random orderings closing as frieze: 19/400
+  p= 23: Singer g = companion(x^2-1x+7); strip covers P^1; closes antiperiodically (v_(p+1) = -v_0): True; quiddity values [1, 10] (2-periodic: True, a*b = t^2/d: True); switching-iso to Paley+sink: yes (3 search nodes); random orderings also switching-iso: 5/5; random orderings closing as frieze: 15/400
+  p= 31: Singer g = companion(x^2-1x+12); strip covers P^1; closes antiperiodically (v_(p+1) = -v_0): True; quiddity values [1, 13] (2-periodic: True, a*b = t^2/d: True); switching-iso to Paley+sink: yes (3 search nodes); random orderings also switching-iso: 5/5; random orderings closing as frieze: 12/400
+  p= 43: Singer g = companion(x^2-1x+3); strip covers P^1; closes antiperiodically (v_(p+1) = -v_0): True; quiddity values [1, 29] (2-periodic: True, a*b = t^2/d: True); switching-iso to Paley+sink: yes (3 search nodes); random orderings also switching-iso: 5/5; random orderings closing as frieze: 9/400
+  p= 47: Singer g = companion(x^2-1x+13); strip covers P^1; closes antiperiodically (v_(p+1) = -v_0): True; quiddity values [1, 29] (2-periodic: True, a*b = t^2/d: True); switching-iso to Paley+sink: yes (3 search nodes); random orderings also switching-iso: 5/5; random orderings closing as frieze: 4/400
+  p= 59: Singer g = companion(x^2-1x+2); strip covers P^1; closes antiperiodically (v_(p+1) = -v_0): True; quiddity values [1, 30] (2-periodic: True, a*b = t^2/d: True); switching-iso to Paley+sink: yes (3 search nodes); random orderings also switching-iso: 2/2; random orderings closing as frieze: 2/400
+  p= 67: Singer g = companion(x^2-1x+5); strip covers P^1; closes antiperiodically (v_(p+1) = -v_0): True; quiddity values [1, 27] (2-periodic: True, a*b = t^2/d: True); switching-iso to Paley+sink: yes (3 search nodes); random orderings also switching-iso: 2/2; random orderings closing as frieze: 10/400
+  p= 71: Singer g = companion(x^2-1x+11); strip covers P^1; closes antiperiodically (v_(p+1) = -v_0): True; quiddity values [1, 13] (2-periodic: True, a*b = t^2/d: True); switching-iso to Paley+sink: yes (3 search nodes); random orderings also switching-iso: 2/2; random orderings closing as frieze: 9/400
+  p= 79: Singer g = companion(x^2-1x+3); strip covers P^1; closes antiperiodically (v_(p+1) = -v_0): True; quiddity values [1, 53] (2-periodic: True, a*b = t^2/d: True); switching-iso to Paley+sink: yes (3 search nodes); random orderings also switching-iso: 2/2; random orderings closing as frieze: 3/400
+  p= 83: Singer g = companion(x^2-1x+2); strip covers P^1; closes antiperiodically (v_(p+1) = -v_0): True; quiddity values [1, 42] (2-periodic: True, a*b = t^2/d: True); switching-iso to Paley+sink: yes (3 search nodes); random orderings also switching-iso: 2/2; random orderings closing as frieze: 3/400
+  p=103: Singer g = companion(x^2-1x+5); strip covers P^1; closes antiperiodically (v_(p+1) = -v_0): True; quiddity values [1, 62] (2-periodic: True, a*b = t^2/d: True); switching-iso to Paley+sink: yes (3 search nodes); random orderings also switching-iso: 2/2; random orderings closing as frieze: 7/400
+  p=107: Singer g = companion(x^2-1x+5); strip covers P^1; closes antiperiodically (v_(p+1) = -v_0): True; quiddity values [1, 43] (2-periodic: True, a*b = t^2/d: True); switching-iso to Paley+sink: yes (3 search nodes); random orderings also switching-iso: 2/2; random orderings closing as frieze: 4/400
+  p=127: Singer g = companion(x^2-1x+3); strip covers P^1; closes antiperiodically (v_(p+1) = -v_0): True; quiddity values [1, 85] (2-periodic: True, a*b = t^2/d: True); switching-iso to Paley+sink: yes (3 search nodes); random orderings also switching-iso: 2/2; random orderings closing as frieze: 2/400
+  p=131: Singer g = companion(x^2-1x+14); strip covers P^1; closes antiperiodically (v_(p+1) = -v_0): True; quiddity values [1, 103] (2-periodic: True, a*b = t^2/d: True); switching-iso to Paley+sink: yes (3 search nodes); random orderings also switching-iso: 2/2; random orderings closing as frieze: 3/400
+== (e) constant-quiddity strips: orbit of e1 under g = [[a,-1],[1,0]] on P^1(F_p) ==
+  p=7: elliptic a: orbit sizes [2, 4] (max 4 = (p+1)/2 = 4), SL2 orders [4, 8], PSL2 orders [2, 4]; parabolic a=+-2: orbit [7] (= p, not (p+1)/2); hyperbolic max orbit 3 (<= (p-1)/2 = 3)
+  p=11: elliptic a: orbit sizes [2, 3, 6] (max 6 = (p+1)/2 = 6), SL2 orders [3, 4, 6, 12], PSL2 orders [2, 3, 6]; parabolic a=+-2: orbit [11] (= p, not (p+1)/2); hyperbolic max orbit 5 (<= (p-1)/2 = 5)
+  p=19: elliptic a: orbit sizes [2, 5, 10] (max 10 = (p+1)/2 = 10), SL2 orders [4, 5, 10, 20], PSL2 orders [2, 5, 10]; parabolic a=+-2: orbit [19] (= p, not (p+1)/2); hyperbolic max orbit 9 (<= (p-1)/2 = 9)
+  p=23: elliptic a: orbit sizes [2, 3, 4, 6, 12] (max 12 = (p+1)/2 = 12), SL2 orders [3, 4, 6, 8, 12, 24], PSL2 orders [2, 3, 4, 6, 12]; parabolic a=+-2: orbit [23] (= p, not (p+1)/2); hyperbolic max orbit 11 (<= (p-1)/2 = 11)
+  p=31: elliptic a: orbit sizes [2, 4, 8, 16] (max 16 = (p+1)/2 = 16), SL2 orders [4, 8, 16, 32], PSL2 orders [2, 4, 8, 16]; parabolic a=+-2: orbit [31] (= p, not (p+1)/2); hyperbolic max orbit 15 (<= (p-1)/2 = 15)
+  p=43: elliptic a: orbit sizes [2, 11, 22] (max 22 = (p+1)/2 = 22), SL2 orders [4, 11, 22, 44], PSL2 orders [2, 11, 22]; parabolic a=+-2: orbit [43] (= p, not (p+1)/2); hyperbolic max orbit 21 (<= (p-1)/2 = 21)
+  p=47: elliptic a: orbit sizes [2, 3, 4, 6, 8, 12, 24] (max 24 = (p+1)/2 = 24), SL2 orders [3, 4, 6, 8, 12, 16, 24, 48], PSL2 orders [2, 3, 4, 6, 8, 12, 24]; parabolic a=+-2: orbit [47] (= p, not (p+1)/2); hyperbolic max orbit 23 (<= (p-1)/2 = 23)
+  CONFIRMED: quiddity a = -2 (parabolic) gives a CLOSED SL2 frieze of width p-3 through p of the p+1 points, whose Legendre pattern is switching-isomorphic to QR_p itself (all p = 3 mod 4, 7 <= p <= 131)
+  CONFIRMED: elliptic torus of SL2(F_p) has order p+1, image (p+1)/2 in PSL2 (p = 7, 11, 19, 23)
+== Reading: chi-positive strips (all pairwise determinants residues) vs transitive subtournaments ==
+  (p, tt(QR_p), max chi-positive strip [brute force, p<=43], log2 p, 2 sqrt(p)+1):
+    (3, 2, 3, 1.58, 4.5)
+    (7, 3, 4, 2.81, 6.3)
+    (11, 4, 5, 3.46, 7.6)
+    (19, 5, 6, 4.25, 9.7)
+    (23, 5, 6, 4.52, 10.6)
+    (31, 7, 8, 4.95, 12.1)
+    (43, 7, 8, 5.43, 14.1)
+    (47, 7, None, 5.55, 14.7)
+    (59, 9, None, 5.88, 16.4)
+    (67, 8, None, 6.07, 17.4)
+    (71, 9, None, 6.15, 17.9)
+    (79, 9, None, 6.3, 18.8)
+    (83, 8, None, 6.38, 19.2)
+    (103, 11, None, 6.69, 21.3)
+    (107, 9, None, 6.74, 21.7)
+    (127, 11, None, 6.99, 23.5)
+    (131, 11, None, 7.03, 23.9)
+    (139, 11, None, 7.12, 24.6)
+    (151, 11, None, 7.24, 25.6)
+    (163, 11, None, 7.35, 26.5)
+    (167, 11, None, 7.38, 26.8)
+    (179, 12, None, 7.48, 27.8)
+    (191, 11, None, 7.58, 28.6)
+    (199, 11, None, 7.64, 29.2)
+  CONFIRMED: max chi-positive strip = tt(QR_p) + 1 = tt(Paley+sink) for p <= 43 (brute force).
+  NOTE: proved upper bound is tt(QR_p) <= 2 sqrt(p) + 1 (bilinear character sum); a logarithmic bound is OPEN.
+ALL LEGENDRE CHECKS PASSED

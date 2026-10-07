@@ -2044,6 +2044,41 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
+## MISTAKE-586 (2026-10-07, mac-mini-2026-10-07-twoanchor; found by the session's independent audits A (Collatz) and B (tournaments/friezes) after checkpoint 2ba93dab07 was pushed) -- wrong post-run depths and a class count, a false "no re-anchoring" claim, a state table claimed uniform too early, a "complete" grammar that was neither complete nor at the stated bound, a barrier stated beyond its setting, unconstrained-bit numbers presented as realisable, KNOWN theorems typed as new packaging, a retracted mechanism reused, and a total-positivity reading the data reject
+
+- **THM-4601 (iv), depths and counts.**
+  - The explicit heads absorb at post-run Terras depth `Σu + 1` = 12 (r = 1) and 11 (r = 2), i.e. at Terras time j + 11 and j + 9 after the run end. They had been reported as 11 and 9, measured from time j instead of from the end of the two-run.
+  - The r = 2 native class count is 32 of 8192, not 16: the final letter c = 1 is valid.
+- **Re-anchoring.** "No transition from anchor +1 to anchor −1" (THM-4600 Reading, results §7) is false.
+  - Positivity constrains only the source's own limit chain.
+  - A long post-run ones-run of the child (`Y ≡ −1 mod 2^L`) takes (3, 1−27) to (−5, 3^(−5)−1) in 12 Terras steps, via the limit pair (−53, −1).
+- **THM-4601 (v).** "The end-of-run state depends only on the run type" is false for D ≥ 5. It depends on (D, J) and is constant only for J ≥ J_0(D) (= 6 for D = 5, 6). For example D = 5 gives (6,−296), (6,−404), (6,−485) for J = 3, 4, 5 before (6,−728).
+- **Head grammar.**
+  - The script built totals ≤ SMAX − 1, so "Σu ≤ 22" was Σu ≤ 21.
+  - "Complete" was wrong: child ladders with i ≥ 2 and source ladders (the 4z+1 ladder at either end) also absorb. The i = 1 grammar carries 82–90% of the absorbed mass by depth 22.
+  - The comparison with the BFS mass 0.0241 mixed unconstrained and realisable bits.
+- **Barrier scope.** "Every K-uniform rule has depth ≥ the two-run" is false once 3-adic conditions are allowed: `(2n−1)/3` certifies at depth 0 when 3 | t. The barrier holds for generalized deletion children on unrefined 2-adic classes.
+  - "(ii) is sharp" is sharp only up to an additive constant.
+  - `k_inf/D → 1` was placed inside a PROVED item; it is NUMERICAL.
+  - The HYP-9240 sufficient condition needed `excess < s_0/2`, not `< ⌈s_0/2⌉`.
+- **Numbers.** The fair-bit absorption figures (0.18 / 0.53 / 0.72; "shortest pattern 9") are for unconstrained bits. The length-9 pattern starts with an even bit, impossible after a two-run.
+  - Realisable values: ρ_1 = 0.172, 0.519 and ρ_2 = 0.184, 0.529 at s = 100, 1000.
+- **THM-4602.**
+  - Statements (1), (2), (3)(a)–(b) are themselves KNOWN (Babai–Cameron 2000; Gunderson–Semeraro 2017; arXiv:2204.10775), not just their ingredients.
+  - Positive real friezes are a slice `p_(i,i+1) = p_(1n) = 1` of the totally positive part, not the whole part.
+  - Any ordering of P^1(F_p) gives the Paley class. What the Singer ordering adds is closure as a frieze.
+  - Constant quiddities cover at most (p+1)/2 points; the parabolic −2 covers p.
+  - "Paley = finite-field totally positive tournament" is an ANALOGY. The counterpart of total positivity is a transitive subtournament of size ≤ tt(QR_p) + 1.
+- **Catalan.** The "dictionary" between THM-438 and Conway–Coxeter friezes reused the plane-tree mechanism retracted in MISTAKE-060/061: THM-438's C_k is a signed Möbius sum over even-series patterns. It is now a NUMERICAL COINCIDENCE.
+- **HYP-9241.** First filed as a "Karlin–McGregor / total-positivity law". The data show independent pair events instead: `q_2 = q_01 q_12 q_02` within 3%, whereas Karlin–McGregor would give π/4 for Brownian walkers. Renamed to the pair-independence product law.
+- **Reusable rules.**
+  - Measure certificate depths from a stated origin (run end vs time j) and test the earliest example.
+  - Before asserting that a transition cannot occur, check both orbits' long runs, not only the source's.
+  - Recompute a "constant from" claim at the smallest J for every D in the table.
+  - Never call a finite enumeration "complete" without an exhaustive absorbing-pattern cross-check.
+  - Read a theorem's ADDENDA before citing its mechanism.
+  - A shared exponent does not establish a determinantal structure; compare the constants.
+
 ## MISTAKE-585 (2026-10-07, mac-mini-2026-10-07-golden; found by the session's independent audit A2 of its core-side filings) -- a published sieve rule overlooked (novelty and gain overstated), a barrier claimed beyond its setting, a false equivalence, a decay law fitted with the wrong approximation, an uncited prior result, and a "for every" without witnesses
 
 - **THM-4594, novelty.**

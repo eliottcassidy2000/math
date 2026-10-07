@@ -1,0 +1,20 @@
+B  limit chains D=1..3000: absorbed []; to0 [1, 2]; in-phase 2288; out-of-phase 710
+   min in-phase debt (3, 3) (all D with that debt: [3, 4]); min debt seen by any out-of-phase chain 13; min debt over all D>=3 (incl. oscillation) 3
+   max landing N_D = 880 (at D = 253); landing time s0 in [6, 5924]
+   in-phase k/D: min 0.750 (D=4), max 1.471 (D=17)
+     D in [3,50): in-phase k/D in [0.750, 1.471], mean 1.072
+     D in [50,100): in-phase k/D in [0.763, 1.200], mean 0.992
+     D in [100,500): in-phase k/D in [0.902, 1.112], mean 1.017
+     D in [500,1000): in-phase k/D in [0.922, 1.052], mean 0.998
+     D in [1000,2000): in-phase k/D in [0.955, 1.058], mean 1.002
+     D in [2000,3001): in-phase k/D in [0.971, 1.045], mean 1.002
+   HYP-9240 'in-phase debts within 0.75D-1.1D': 22 violations, e.g. [(5, 6), (7, 8), (9, 10), (11, 15), (12, 15), (15, 19), (16, 19), (17, 25)]; largest violating D = 162
+   entry time se(D) for D=3..12: [(3, 6), (4, 6), (5, 12), (6, 12), (7, 15), (8, 15), (9, 19), (10, 19), (11, 30), (12, 30)]
+   J0(D) = ceil(se/2) for D=3..12: [(3, 3), (4, 3), (5, 6), (6, 6), (7, 8), (8, 8), (9, 10), (10, 10), (11, 15), (12, 15)]; max J0 over D<=3000: 2965
+   odd-step excess of N_D (odd - sigma/2): max 7.0 at N=327; min -2.5; required (landing debt) ceil(s0/2) min over D>=3: 3
+   max excess over all N <= 880: (9.0, 871)
+   first records (D, s0, N_D, se, inphase, k): [(1, 1, 0, 1, None, 1), (2, 3, 0, 3, None, 2), (3, 6, 1, 6, True, 3), (4, 6, 1, 6, True, 3), (5, 12, 1, 12, True, 6), (6, 12, 1, 12, True, 6), (7, 14, 4, 15, True, 8), (8, 14, 4, 15, True, 8), (9, 18, 4, 19, True, 10), (10, 18, 4, 19, True, 10), (11, 30, 1, 30, True, 15), (12, 30, 1, 30, True, 15), (13, 24, 10, 28, False, 13), (14, 24, 10, 28, False, 13), (15, 37, 3, 41, True, 19), (16, 37, 3, 41, True, 19)]
+R  finite-j reduction: 8947 actual D-chains (400 sources, j in [3,40], K in [2,45], D <= min(K-1,40)):
+   state(actual) == state(limit) for all s <= j: yes; first disagreement - j: [(1, 8947)] (8947 chains disagree by s = j+3)
+   absorbed within j+250: 765; min (absorption time - j) = 5; distribution of smallest values: [(5, 2), (7, 4), (11, 2), (13, 4), (14, 4), (15, 8), (17, 4), (19, 4)]
+ALL BARRIER CHECKS PASSED

@@ -1,0 +1,4 @@
+1  run transparency: a=1..8 random exact (k in [-12,12]), exhaustive a<=10 mod 2^14: ok
+2  periodic anchors: integral examples -1,+1,-5,-17 ok; 3000 random words ok; boundary v2 = sum(w) never reads w (348 cases: condition is sharp, no off-by-one); 2348/2348 rotation points read a rotated word (so 'c a point of that cycle' must be c = c_w)
+3  Borel-torus: conjugation formula / fixed iff anchored / commutes iff anchored ok (3000 random); THM-4581 chain over a common letter = conjugation (4000 pairs); exit law L = min(run(v), floor((v2(eps)-1)/a)) exact (3000 cases)
+ALL THM-4600 CHECKS PASSED (138502 assertions)

@@ -1,0 +1,6 @@
+n=4: |B| (all 4-Pfaffians +-1) = 48, |C| (LT, independent enumeration) = 48, (n-1)! 2^(n-1) = 48; B-members failing LT: 0, failing integer realisation: 0 -> OK
+n=5: |B| (all 4-Pfaffians +-1) = 384, |C| (LT, independent enumeration) = 384, (n-1)! 2^(n-1) = 384; B-members failing LT: 0, failing integer realisation: 0 -> OK
+n=6: |B| (all 4-Pfaffians +-1) = 3840, |C| (LT, independent enumeration) = 3840, (n-1)! 2^(n-1) = 3840; B-members failing LT: 0, failing integer realisation: 0 -> OK
+n=7: |B| (all 4-Pfaffians +-1) = 46080, |C| (LT, independent enumeration) = 46080, (n-1)! 2^(n-1) = 46080; B-members failing LT: 0, failing integer realisation: 0 -> OK
+n=8: |B| (all 4-Pfaffians +-1) = 645120, |C| (LT, independent enumeration) = 645120, (n-1)! 2^(n-1) = 645120; B-members failing LT: 0, failing integer realisation: 0 -> OK
+n=9: |B| (all 4-Pfaffians +-1) = 10321920, |C| (LT, independent enumeration) = 10321920, (n-1)! 2^(n-1) = 10321920; B-members failing LT: 0, failing integer realisation: 0 -> OK

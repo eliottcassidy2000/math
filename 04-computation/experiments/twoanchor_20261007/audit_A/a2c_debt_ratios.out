@@ -1,0 +1,9 @@
+in-phase D >= 3: k/D in [0.750, 1.471]  argmin D=4, argmax D=17
+in-phase D >= 100: k/D in [0.902, 1.112]  argmin D=244, argmax D=161
+in-phase D >= 163: k/D in [0.902, 1.098]  argmin D=244, argmax D=163
+in-phase D >= 500: k/D in [0.922, 1.058]  argmin D=514, argmax D=1137
+out-of-phase k/D range: [0.800, 1.097]
+violations of 0.75D-1.1D (in-phase): [5, 7, 9, 11, 12, 15, 16, 17, 18, 21, 22, 25, 26, 27, 28, 53, 54, 65, 66, 139, 161, 162]
+landing time s0/D for D >= 100: [1.793, 2.224]
+max odd-step excess over N <= 880: 9.0 at N = 871
+max odd-step excess over N <= 2527: 10.5 at N = 2463

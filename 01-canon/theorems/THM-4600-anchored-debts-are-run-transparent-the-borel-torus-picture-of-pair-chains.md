@@ -4,7 +4,10 @@ title: "Anchored debts are run-transparent: if odd u, v satisfy u - c_a = 3^k (v
 status: >
   PROVED (elementary 2-adic algebra; random exact checks of the lemma for a = 1..8, k <= 12, run lengths <= 6 in
   04-computation/experiments/twoanchor_20261007/twoanchor_core.py part A). The general periodic-anchor form (2) is PROVED by the same
-  computation; the Borel/torus statement (3) is PROVED; the comparison with the sextic torus-packet paper is ANALOGY.
+  computation; the Borel/torus statement (3) is PROVED; the comparison with the sextic torus-packet paper is ANALOGY. Independently audited
+  2026-10-07 (audit A: 138,502 exact checks incl. negative k, exhaustive mod 2^14; (2) sharp; corrections: which cycle point in (2), the
+  +1 -> -1 transition remark; MISTAKE-586). Novelty: new in the repo (elementary; no literature search); finite precursor in
+  collatz_collision_dp_20261007.md (pure-two prefixes of lengths 1..16).
 session: mac-mini-2026-10-07-twoanchor
 source: 05-knowledge/results/twoanchor_reset2_friezes_20261007.md
 scripts:
@@ -33,7 +36,8 @@ related:
 
 2. **Periodic anchors (PROVED).**
    * Let w be a word, `F_w(x) = (3^|w| x + B_w)/2^(Σw)`, and let `c_w = B_w/(2^(Σw) − 3^|w|)` be its rational cycle point.
-   * If `u − c = 3^k (v − c)` with c a point of that cycle, and `v2(v − c) > Σw`, then u, v and c share the word w.
+   * Let `c = c_w` be the point of the cycle at which w is read. From another cycle point, read the corresponding rotation of w.
+   * If `u − c = 3^k (v − c)` and `v2(v − c) > Σw`, then u, v and c share the word w. The condition is sharp: all 348 boundary cases fail (audit A).
    * Moreover `F_w(u) − F_w(c) = 3^k (F_w(v) − F_w(c))`: the anchor moves around the cycle.
    * Integral examples: −1 (w = 1), +1 (w = 2), −5 (w = 12), −17 (w = 1112114).
 
@@ -61,8 +65,10 @@ related:
 * **a = 1** is the mechanism of THM-4555. Deleting D ones relates n and `(n+1)/2^D − 1` by `x + 1 = 3^D (y + 1)` at the run ends, an anchored state at −1. That is why the tiling compiler of `collatz_reset2_rules_20261007.md` is uniform in the run length K.
 * **a = 2** anchors at the trivial cycle: `u − 1 = 3^k (v − 1)` survives arbitrarily long runs of the letter 2. THM-4601 uses this to make certificates uniform in the second run length of the first-reset-2 branch.
 * **Transitions between anchors** are finite word pairs (THM-4601 (iii): `(2,2,2) ~ (4,1,1)` takes "−1, debt 3" to "+1, debt 3").
-  * The Terras map preserves positivity of rational limit points.
-  * So a positive anchor (+1) can never pass to a negative one (−1, −5, −17) for a positive limit child.
+  * Transitions occur in both directions.
+  * The residual source's own limit chain (x* = 1) is positive and never reaches a negative anchor.
+  * After the two-run, however, the post-run bits are arbitrary. A long post-run ones-run of the child (`Y ≡ −1 mod 2^L`, r = 1) takes the state (3, 1−27) to `(−5, 3^(−5) − 1)`, anchored at −1, in 12 Terras steps, via the limit pair (−53, −1). The rest of that ones-run is then transparent.
+  * Corrected after audit A; MISTAKE-586.
 * **ANALOGY** (primitive sextic torus packets, §7):
   * a run is a long diagonal segment;
   * ε is the cross-root coordinate;
