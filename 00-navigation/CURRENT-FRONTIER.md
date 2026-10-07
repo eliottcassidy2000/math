@@ -378,6 +378,12 @@ lift/phase clocks.
 - **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383: localization, owner/ANOVA/rectangle/reference inversion; realization/stable diagonal open. THM-2646: modular/exponent `B3` conjugacy, not Markov invariance.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.
 - **Collatz:** [Guarded frontier routes](../05-knowledge/results/collatz_golden_routing_synthesis_20261007.md): +131 ROOT certificates FINITE-EXACT; Haar coalescence PROVED (THM-4581); integer coverage OPEN.
+- **Collatz classes and the sign barrier:**
+  - [THM-4590](../01-canon/theorems/THM-4590-collatz-classes-are-equidistributed-residues-windows-slowly-varying-density.md): every union of Collatz classes is equidistributed and slowly varying.
+  - [THM-4594](../01-canon/theorems/THM-4594-the-maximal-class-decided-collatz-sieve-and-the-sign-barrier.md): a maximal certificate sieve confines a minimal counterexample to 6,915,181 classes mod 2^30, given 2^71. Its sign barrier: -1 is never certified, so any proof must use n > 0.
+  - THM-4591: the only cycles to period 301,993 are the five Pythagorean ones.
+  - HYP-9230: the resonance spectrum of class densities sits at the commas of log2 3.
+  - [Note](../05-knowledge/results/golden_collatz_resonance_20261007.md).
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
 - **Rule 30:** [THM-4210](../01-canon/theorems/THM-4210-rule30-lossless-dyadic-block-current-cartier-tree.md) gives the forward current tree; THM-4204/4206 are inverse/Haar carriers. THM-4263 adds a fibre-cap density pullback, not a prize solution. All prizes remain **OPEN**.
 - **Two Hopf problems:** the `S2 x S2` curvature and `S6` complex-structure

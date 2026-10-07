@@ -237,6 +237,12 @@ CrocSwap's gain came from direct nonadjacent swaps (`O(d)`) replacing chains of 
 * So the bound is a Diophantine statement about the walk of `k·log_2 3 mod 1` over one orbit. It is pathwise, not averaged, which is exactly Baker-type territory.
 * No such bound is known. Stating it precisely is the next obligation.
 
+## 12a. Concurrent work on the same prompt
+
+The `tiling-modular-atoms` session ([guarded frontier routes](collatz_golden_routing_synthesis_20261007.md), [uncovered join routes](collatz_uncovered_join_routes_20261007.md)) works the certificate side under a frozen adaptive policy, and adds +131 ROOT completions (FINITE-EXACT).
+* Its finding that the 223/233 progression's certificate is already covered by descent agrees with §5.
+* THM-4594's maximal sieve is the policy-free, class-decided upper envelope of such certificate families. Its sign barrier applies to every policy.
+
 ## 13. Typing summary
 
 | Claim | Type |

@@ -244,6 +244,11 @@ all heights (THM-1289, published), δ ineffective.
   `C T^-1/2 (log T)^2` (THM-4581; upper bound at sketch level; independently audited 2026-10-07). So `n` and `n+1` meet for
   a density-one set of `n`, and HYP-9213/9214/9220 are resolved. These are
   measure statements; no individual orbit is decided.
+  [The 2026-10-07 golden session](../05-knowledge/results/golden_collatz_resonance_20261007.md)
+  turns this into integer structure. Every Collatz class is equidistributed (THM-4590).
+  A minimal counterexample lies in 6,915,181 residues mod 2^30 (THM-4594, given
+  Barina's 2^71). Integer cycles to period 301,993 are the five known (THM-4591).
+  A sign barrier shows any proof must use positivity beyond the first log2 n bits.
   [The 2026-09-17 audit](../05-knowledge/results/arithmetic_braids_20260917_collatz.md)
   gives the full triadic inverse-fibre braid, exact exponent-word cylinders,
   and a periodic-weight obstruction. [The continuation](../05-knowledge/results/arithmetic_braids2_20260917_synthesis.md)
