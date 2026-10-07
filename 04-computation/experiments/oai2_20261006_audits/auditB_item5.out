@@ -1,0 +1,36 @@
+(a) Davenport law: max m (all nonempty subset sums in one v_p level)
+    p=2: level v=0 -> 1, v=1 -> 1  (p-1 = 1)
+    p=3: level v=0 -> 2, v=1 -> 2  (p-1 = 2)
+    p=5: level v=0 -> 4, v=1 -> 4  (p-1 = 4)
+    p=7: level v=0 -> 6, v=1 -> 6  (p-1 = 6)
+    p=11: level v=0 -> 10, v=1 -> 10  (p-1 = 10)
+    integer check p=3, m=2: example with all subset sums in one level: (1, 1)
+    integer check p=3, m=3: example with all subset sums in one level: None
+    integer check p=5, m=4: example with all subset sums in one level: (1, 1, 1, 1)
+    integer check p=5, m=5: example with all subset sums in one level: None
+(b) clique number of v_p(|x-y|) = v
+    p=2, v=0, on [0,7): clique number 2
+    p=2, v=1, on [0,13): clique number 2
+    p=3, v=0, on [0,10): clique number 3
+    p=3, v=1, on [0,28): clique number 3
+    p=5, v=0, on [0,16): clique number 5
+    p=5, v=1, on [0,76): clique number 5
+(c) least N forcing monochromatic {a, b, a+b}, a, b 3-smooth
+    a = b allowed: True -> least N = 5
+    a = b allowed: False -> least N = 13
+(d) primitive x + y = z in 3-smooth numbers <= 1e15: [(1, 1), (1, 2), (1, 3), (1, 8)]
+    monochromatic Schur triples (a <= b, all in S) under Omega mod 2: [] 0
+    2-colouring (S with even Omega | rest): monochromatic quartets {a,b,a+b,ab}, a,b in S <= 1e7: 0
+(e) Turan-type colourings for (B_{n-1}, B_n)
+    n=3: red cliques/blue multipartite max N = 6 (3, 3);  max(2n,3n-3) = 6;  swapped orientation max N = 8 (4, 4)
+    n=4: red cliques/blue multipartite max N = 9 (3, 3, 3);  max(2n,3n-3) = 9;  swapped orientation max N = 10 (5, 5)
+    n=5: red cliques/blue multipartite max N = 12 (4, 4, 4);  max(2n,3n-3) = 12;  swapped orientation max N = 12 (6, 6)
+    n=6: red cliques/blue multipartite max N = 15 (5, 5, 5);  max(2n,3n-3) = 15;  swapped orientation max N = 14 (7, 7)
+    n=7: red cliques/blue multipartite max N = 18 (6, 6, 6);  max(2n,3n-3) = 18;  swapped orientation max N = 16 (8, 8)
+    n=8: red cliques/blue multipartite max N = 21 (7, 7, 7);  max(2n,3n-3) = 21;  swapped orientation max N = 18 (9, 9)
+    n=9: red cliques/blue multipartite max N = 24 (8, 8, 8);  max(2n,3n-3) = 24;  swapped orientation max N = 21 (7, 7, 7)
+    n=10: red cliques/blue multipartite max N = 27 (9, 9, 9);  max(2n,3n-3) = 27;  swapped orientation max N = 24 (8, 8, 8)
+    n=11: red cliques/blue multipartite max N = 30 (10, 10, 10);  max(2n,3n-3) = 30;  swapped orientation max N = 27 (9, 9, 9)
+    n=12: red cliques/blue multipartite max N = 33 (11, 11, 11);  max(2n,3n-3) = 33;  swapped orientation max N = 30 (10, 10, 10)
+    n=16: red cliques/blue multipartite max N = 45 (15, 15, 15);  max(2n,3n-3) = 45;  swapped orientation max N = 42 (14, 14, 14)
+    n=20: red cliques/blue multipartite max N = 57 (19, 19, 19);  max(2n,3n-3) = 57;  swapped orientation max N = 54 (18, 18, 18)

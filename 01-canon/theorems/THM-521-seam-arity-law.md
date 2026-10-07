@@ -100,7 +100,14 @@ T778, the-three-twos (the "2 of pair-composition" = the Schur arity here).
 
 ## Update (2026-10-06, mac-mini-2026-10-06-oaimath2; THM-4560)
 
-**Corollary D now holds unconditionally.** THM-4560 proves directly that every gap-determined (translation-invariant) triangle-free graph on `N^n` has an independent binary subgrid, for every `n`.
+**Corollary D now holds unconditionally for fully gap-determined witnesses.** THM-4560 proves directly that every gap-determined triangle-free graph on `N^n` (edge iff `y − x ∈ E`) has an independent binary subgrid, for every `n`.
 * No gap-determined strong witness exists, valuation-graded or not. This needs neither HYP-2396's linear wall nor the identification "invariant witnesses = valuation gradings".
-* What remains open is HYP-2558: a non-invariant, value-dependent strong witness (Larson partial sums). HYP-2396 (the exact cutoff `R(n,2) = 2n+1`) is also still open.
-* Note THM-470's Finv label (MISTAKE-577): the "invariant algebra dies at t = 7" evidence concerned the fully gap-determined algebra, and its `(3,7)` instance is still undecided.
+* **Scope (audit 2026-10-06).** D's premise "the `p=2` grading runs out at the linear wall `t=2n+1`" holds at `n = 2` only for THM-453 G's *row-invariant* dyadic family (cutoff 5).
+  * The gap-determined `(sign, v₂)` algebra dies at `t = 4 = 2n` (SAT at 3, UNSAT at 4, exhaustive).
+  * So for row-invariant witnesses (THM-453 F/G) the barrier is **not** covered by THM-4560 and remains conditional on HYP-2396 / open.
+* **Withdrawn and qualified sentences of D.**
+  * "This *explains* the `t=7` wall (the invariant algebra is exactly the sum-free `p=2` grading …)" is WITHDRAWN. Finv is the full gap algebra, not the `p=2` grading, and its `(3,7)` instance is undecided.
+  * "can use **only the `p=2` grading**" is true only for bare valuation gradings. The leading-digit gradings are sum-free for every `p` (THM-469 A2/E).
+* What remains open:
+  * HYP-2558 (the strong-Specker barrier entry; the historical index also has an unrelated HYP-2558): a strong witness that is not fully gap-determined. That includes row-invariant and value-dependent (Larson partial sums) ones.
+  * HYP-2396, the exact cutoff `R(n,2) = 2n+1`, also still open.

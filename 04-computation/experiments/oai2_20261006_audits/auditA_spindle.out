@@ -1,0 +1,4 @@
+N=3: field Q(sqrt-3, sqrt-11); tips [(-2, 1), (-1, -1), (-1, 2)]...; |V|=37 |E|=90; 3-colourable: False
+N=9: field Q(sqrt-3, sqrt-35); tips [(-3, 0), (-3, 3), (0, -3)]...; |V|=73 |E|=186; 3-colourable: False
+N=21: field Q(sqrt-3, sqrt-83); tips [(-5, 1), (-5, 4), (-4, -1)]...; |V|=181 |E|=492; 3-colourable: False
+N=27: field Q(sqrt-3, sqrt-107); tips [(-6, 3), (-3, -3), (-3, 6)]...; |V|=253 |E|=690; 3-colourable: False

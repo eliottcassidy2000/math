@@ -1,0 +1,2 @@
+(1) all primitive Pythagorean unit vectors (m<60): 7 not | c, residue on circle: True ; |circle| = 8 ; image under (1+2i) = knight set: True
+(2) heptagon r=3: e idempotent, m(e)=1; tensor evaluations vanish with e: True ; evaluations nonzero without e: 4 of 7

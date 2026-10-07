@@ -1,7 +1,7 @@
 ---
 id: THM-4559
 title: "Conditional on the tensor classification of finite Euclidean Ramsey sets (openai/math #172), every finite spherical set with algebraic coordinates is Ramsey: the separability idempotent of a number field turns the sphere equation into the required tensor certificate (Graham's spherical conjecture holds for algebraic configurations; Palvolgyi's non-Ramsey heptagon needs a transcendental radius)"
-status: "CONDITIONAL on openai/math #172 (unrefereed preprint, 2026-09; its release ships a Lean development of the classification, whose comparator statement ComparatorChallenges/EuclideanRamsey.lean was read here and matches the paper; the development was not built here). The deduction from #172 is PROVED (three lines). Exact certificates checked by the session's reader for two configurations. Not found stated in #172 or in Palvolgyi's abstract; literature search not exhaustive. Independent audit: see the results note."
+status: "CONDITIONAL on openai/math #172 (unrefereed preprint, 2026-09; its release ships a Lean development of the classification, whose comparator statement ComparatorChallenges/EuclideanRamsey.lean was read here and matches the paper; the development was not built here). The deduction from #172 is PROVED (three lines). Exact certificates checked by the session's reader for two configurations and by the audit for Palvolgyi's heptagon with algebraic radius r = 3. Not found stated in #172 nor anywhere in Palvolgyi's paper (main text or appendix); literature search not exhaustive. INDEPENDENTLY AUDITED 2026-10-06 (audit A: PASS; criterion transcription, deduction, representative independence and algebraic realization checked line by line)."
 session: mac-mini-2026-10-06-oaimath2 (found by the session's reader of openai/math #172; re-derived here)
 source: 05-knowledge/results/oai2_openai_math_second_reading_20261006.md
 related:
@@ -36,7 +36,8 @@ If `A` is spherical and its coordinates are algebraic, then `A` is Ramsey.
 
 ## Consequences (CONDITIONAL on #172)
 
-* **Graham's spherical conjecture holds for algebraic configurations.** Every non-Ramsey spherical set is transcendental.
+* **Graham's spherical conjecture holds for algebraic configurations.** Every non-Ramsey spherical set has a transcendental squared distance.
+  * Subsets of regular polygons were already Ramsey unconditionally (Kříž 1991).
   * This matches Pálvölgyi's heptagon (non-Ramsey for every transcendental radius `r > 2`) and #172's own negative examples (nine algebraically independent parameters; a Liouville angle).
   * Both use derivations or algebraic independence, and derivations vanish on number fields.
 * **Our configurations.**
@@ -53,6 +54,6 @@ If `A` is spherical and its coordinates are algebraic, then `A` is Ramsey.
 * Nothing about transcendental spherical sets beyond #172 itself.
 * Nothing unconditional: if #172's sufficiency direction fails, this theorem fails with it.
 * Whether 6 generic concyclic points are Ramsey is decidable by the criterion but not settled here.
-  * At most 5 concyclic points are Ramsey (#172).
+  * Every set of at most 5 concyclic points is Ramsey (#172).
   * Generic 7-point sets are not, per the appendix of Pálvölgyi's paper (a claim he marks as unchecked).
   * Any superset of a non-Ramsey set is non-Ramsey.

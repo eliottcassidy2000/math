@@ -1,7 +1,7 @@
 ---
 id: THM-4561
-title: "The Sierpinski skew-Hadamard tower in the Littlewood problem: its rows are Walsh rows plus sparse dyadic spike trains, every doubling step is a Morse step x -> x(1 +- z^m) up to one flipped entry, so every row has merit factor < 2 and the rows are Thue-Morse-like (max F -> 0, sup/sqrtN -> infinity); the Rudin-Shapiro switching D H D of the same tower has every row sup <= (3 + 2 sqrt2) sqrt(2N), i.e. merit factor >= 1/(33 + 24 sqrt2)"
-status: "PROVED (elementary: closed form by induction, a two-line autocorrelation transfer identity, Cauchy-Schwarz, Golay/Davis-Jedwab pieces); 'max F -> 0' PROVED up to a perturbation sketch (one flipped entry per step is an O(N^(-1/2)) relative change of (R, s)). NUMERICAL: the rates. FINITE-EXACT: H_16 has no bent switching. Found by the session's reader of openai/math #076 (Littlewood polynomials) and re-checked independently. Independent audit: see the results note."
+title: "The Sierpinski skew-Hadamard tower in the Littlewood problem: its rows are Walsh rows plus sparse dyadic spike trains, every doubling step is a Morse step x -> x(1 +- z^m) up to one flipped entry, so every row has merit factor < 2 and the rows are Thue-Morse-like (max F -> 0, sup/sqrtN -> infinity, up to a perturbation sketch); the Rudin-Shapiro switching D H D of the same tower has every row sup <= (3 + 2 sqrt2) sqrt(2N), i.e. merit factor >= 1/(33 + 24 sqrt2)"
+status: "PROVED (elementary: closed form by induction, a two-line autocorrelation transfer identity, Cauchy-Schwarz, Golay/Davis-Jedwab pieces); 'max F -> 0' PROVED up to a perturbation sketch (one flipped entry per step is an O(N^(-1/2)) relative change of (R, s)). NUMERICAL: the rates. FINITE-EXACT: H_16 has no bent switching. Found by the session's reader of openai/math #076 (Littlewood polynomials) and re-checked independently. INDEPENDENTLY AUDITED 2026-10-06 (audit A: doubling, closed form, transfer identity, Walsh bound, Golay claim and the (3 + 2 sqrt2) sqrt(2N) bound re-derived; PASS WITH CORRECTIONS, applied: the F-range, wording, typing of the column remark)."
 session: mac-mini-2026-10-06-oaimath2
 source: 05-knowledge/results/oai2_openai_math_second_reading_20261006.md
 scripts:
@@ -26,7 +26,7 @@ related:
 1. **Doubling.**
    * Rows of `H_(2N)` are `r_j (1 + w)` and `(r_j − 2z^j)(1 − w)`.
    * Columns are `c_j ∓ w r_j`, with `c_j = 2z^j − r_j`.
-   * So rows take Morse steps. On columns the step has the Rudin–Shapiro/Golay form, but `(c_j, r_j)` is an anti-aligned pair, so it does not flatten.
+   * So rows take Morse steps. On columns the step has the Rudin–Shapiro/Golay form, but `(c_j, r_j)` is an anti-aligned pair, and numerically it does not flatten (NUMERICAL: max column `F` = 4, 4, 1.10, 0.68, 0.46, 0.30, 0.23 for `k = 2..8`).
 2. **Closed form.** `r_i(y) = w_i(y) − 2 Σ_(l : i_l = 1) [y ≡ i (mod 2^l)] (−1)^(Σ_(m ≥ l) i_m y_m)`, with `w_i(y) = (−1)^(popcount(i & y))`. That is, a Walsh row plus sparse dyadic spike trains. (Induction on `k` using 1.)
 3. **Morse transfer.** For `y = (x, εx)`: `‖y‖₄⁴ = 6‖x‖₄⁴ + 8εS` and `S_y = ‖x‖₄⁴ + 4εS`. Hence `R′ = (3/2 + 2εs)R` and `s′ = f(εs)`, with `f(t) = (1 + 4t)/(6 + 8t)`.
 4. **Merit factor below 2.**
@@ -45,7 +45,7 @@ related:
    * *Proof.* By 2, `RS ⊙ r_i` is `±RS ⊙ w_i` (a Golay sequence, `|·|² ≤ 2N`) plus, for each `l ≥ 1` with `i_l = 1`, a term `2z^(i mod 2^l) G_l(z^(2^l))`.
    * On the progression `y ≡ i (mod 2^l)` the Rudin–Shapiro form restricts to a path form plus a linear form. So `G_l` is a Davis–Jedwab Golay sequence of length `N/2^l`.
    * Sum: `√(2N)(1 + 2Σ_(l ≥ 1) 2^(−l/2)) = (3 + 2√2)√(2N)`. ∎
-   * NUMERICAL (`k ≤ 12`): the worst row has `sup ≤ 3.0√N`, and `F ∈ [0.75, 3.0]` with mean 1.30.
+   * NUMERICAL: the worst row has `sup ≤ 3.0√N` (`k ≤ 12`), and `F ∈ [0.70, 3.20]` for `3 ≤ k ≤ 12` (at `k = 12`: `[0.753, 3.001]`, mean 1.30).
 
 ## FINITE-EXACT and conditional remarks
 
@@ -58,4 +58,4 @@ related:
 
 ## Not claimed
 
-Nothing about the merit-factor or ultraflatness problems themselves. The tower is a specific dyadic family, and its rows sit in the Riesz-product (singular) regime, while the RS-switched rows are √2-flat Golay mixtures.
+Nothing about the merit-factor or ultraflatness problems themselves. The tower is a specific dyadic family, and its rows sit in the Riesz-product (singular) regime. The RS-switched rows are sums of `√2`-flat Golay pieces, with proven `sup ≤ 8.24√N` (observed about `3.0√N`).

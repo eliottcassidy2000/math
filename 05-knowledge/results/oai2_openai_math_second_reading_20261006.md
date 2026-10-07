@@ -33,13 +33,13 @@
 | The triangular lattice attains `u(21) = 57` (THM-431 said 47) | FINITE-EXACT correction (MISTAKE-575) | §2 |
 | The skew tower's rows are Thue–Morse-like; Rudin–Shapiro switching flattens all rows to `≤ 8.24√N` | PROVED (THM-4561) | §3 |
 | Explicit cyclotomic replacement for #155's random stacking partition | PROVED (its use in #155 CONDITIONAL) | §3 |
-| Residue colourings of field planes (Lemma R); exact `χ` for the HN field tower | PROVED (THM-4558); technique KNOWN (Madore 2015) | §4 |
+| The Heegner rungs `Q(√−3, √−(4N−1))`, `N ≡ 2 (mod 3)`, are 3-chromatic; the Polymath field is 5-chromatic | PROVED (THM-4558); the residue-colouring lemma is KNOWN (Woodall … Madore 2015, hn-2adic, decalion89) | §4 |
 | Our Heegner roadmap for `χ(R²)` is false; "measure cannot reach 5" is false | correction (MISTAKE-576) | §4 |
 | Every algebraic spherical set is Euclidean Ramsey | CONDITIONAL on #172 (Lean); deduction PROVED (THM-4559) | §4 |
-| Every gap-determined triangle-free graph on `N^n` has an independent binary subgrid; THM-521 D unconditional | PROVED (THM-4560) | §5 |
+| Every gap-determined triangle-free graph on `N^n` has an independent binary subgrid; THM-521 D unconditional for gap-determined witnesses | PROVED (THM-4560) | §5 |
 | THM-470's Finv is not THM-453 F's game (cutoffs 4 vs 5 at `n = 2`) | correction (MISTAKE-577) | §5 |
 | Davenport law for FS-sets in one `v_p`-level; 3-smooth Schur thresholds 5 and 13 | PROVED / FINITE-EXACT | §5 |
-| Prescribed-path blocking law on knight tori | HYP-9215 (FINITE-EXACT evidence) | §6 |
+| Prescribed-path blocking law on knight tori (paths of at most 4 moves); knight tori are P7-Hamiltonian | HYP-9215 (FINITE-EXACT evidence) | §6 |
 | Slice lemma; THM-1300's counterexample is fully non-slice | PROVED (THM-4562) | §6 |
 | `D(X) ≅ A_4` for #047's exotic 4-space? | HYP-9216 (open question) | §6 |
 | The rational plane reduces mod 7 onto the 7 × 7 knight torus | PROVED (one line) | §7 |
@@ -62,7 +62,7 @@ Both papers are unrefereed. Everything below that uses their lower bounds is typ
 * Both results are claimed **Lean-formalized**: `OAI.Zarankiewicz.mainTarget_proof` in `lean/OAI/Combinatorics/Crossing` (339 files) and `OAI.Paper170.complete_graph_crossing_number` in `lean/OAI/Combinatorics/CompleteCrossing` (46 files).
 * We read the comparator statement `ComparatorChallenges/BipartiteCrossing.lean`. It is faithful: admissible drawings by injective continuous paths, finitely many proper crossings, no triple points; crossings counted as points; both the attaining drawing and the universal lower bound.
 * A textual scan of all 385 files finds no `sorry`, `axiom` or `admit`. We did not rebuild them.
-* So "CONDITIONAL" here means conditional on a formally verified theorem whose statement we checked, not on an unchecked manuscript.
+* So "CONDITIONAL" here means conditional on a *claimed* formal verification, not only on an unchecked manuscript. We did not rebuild it, and of the comparator statements we read only the bipartite one.
 
 **Prior art for THM-913 (found this session).** The upper-bound drawing of the `K_n` paper is our THM-913's "parallel-class book drawing" exactly. Edge `ij` lies in the matching `M_s`, `s = i + j mod n`, and the pages are contiguous blocks of matchings.
 * This is the classical **DDS construction**: Damiani–D'Antona–Salemi 1994, after Blažek–Koman 1964, in the geometric form of Shahrokhi–Sýkora–Székely–Vrt'o.
@@ -71,11 +71,15 @@ Both papers are unrefereed. Everything below that uses their lower bounds is typ
 
 **What closes (PROVED unless typed).**
 1. **The DDS drawing has exactly `Z(n)` crossings for every `n`, even included.** This is classical (DPS 2012), re-proved in the `K_n` paper, and checked here directly for `3 <= n <= 120`.
-   * With Ábrego–Aichholzer–Fernández-Merchant–Ramos–Salazar (2012: `ν_2(K_n) = Z(n)`), THM-922 (III)'s class-coloring minimum is `Z(n)` for every `n`, **unconditionally**. THM-922 (III) had only `n <= 14`.
-2. **The parity-bipartite drawing has exactly `Z(m,m)` crossings for every `m` (new proof; the construction was not found in DPS 2012/2014).**
+   * With Ábrego–Aichholzer–Fernández-Merchant–Ramos–Salazar (`ν_2(K_n) = Z(n)`; arXiv:1206.5669, DCG 49 (2013)), THM-922 (III)'s class-coloring minimum is `Z(n)` for every `n`, **unconditionally**: class colourings are 2-page drawings, and the DDS split attains `Z(n)`. THM-922 (III) had only `n <= 14`.
+2. **The parity-bipartite drawing has exactly `Z(m,m)` crossings for every `m`.**
+   * The bound `ν_2(K_(m,n)) ≤ Z(m,n)` itself is classical: Zarankiewicz's drawings adapt to 2 pages (de Klerk–Pasechnik–Salazar 2014).
+   * New here is this explicit sum-class form and its exact count, which we did not find in DPS 2012 or 2014.
    * Put `Z_(2m)` on the spine with parts = parities. `K_(m,m)` is then the union of the `m` odd sum classes. Split them contiguously into two pages, `floor(m/2)` classes and the rest.
    * A crossing is a 4-set whose two alternating diagonals are both bipartite and lie on one page.
-   * With cyclic gaps `g_1..g_4`, bipartiteness forces `k = g_1 + g_3 = 2κ`. There are `G(κ) = 2κ(m−κ) − m` gap choices, and the number of same-page residues is `m − 2 min(κ, m−κ)`.
+   * Write the cyclic gaps as `g_1..g_4`. If the two diagonals lie in sum classes `s_1 < s_2`, then `s_2 − s_1 = g_1 + g_3 = 2κ`.
+   * **Each unordered pair of classes at cyclic distance `κ` carries exactly `G(κ) = 2κ(m−κ) − m` crossings**, and pairs inside one class carry none (verified for all pairs, `m ≤ 25`, by the audit).
+   * The number of same-page class pairs at distance `κ` is `m − 2κ` for `κ ≤ K`.
    * So the count is a telescoping sum:
 
          c = Σ_(κ=1)^K (2κ(m−κ) − m)(m − 2κ) = K^2 (m − K − 1)^2,    K = floor((m−1)/2),
@@ -83,8 +87,13 @@ Both papers are unrefereed. Everything below that uses their lower bounds is typ
      which is `(floor((m−1)/2) floor(m/2))^2 = d_m^2 = Z(m,m)` exactly.
    * The drawing is the DDS drawing of `K_(2m)` restricted to its even–odd edges. So in that drawing exactly `d_m^2` of the `Z(2m)` crossings are bipartite–bipartite; for example 4 of 18 at `n = 8`, and 81 of 315 at `n = 14`.
 3. **CONDITIONAL on #165 (`cr(K_(m,n)) = Z(m,n)`).**
-   * The **2-page Zarankiewicz conjecture** `ν_2(K_(m,n)) = Z(m,n)` holds for all `m, n`. De Klerk–Pasechnik–Salazar (2014) state it as open, verified for `min(m,n) <= 6` and a few `(7..8, 7..10)` cases. The upper bound is classical, and `ν_2 >= cr`.
-   * THM-922 (I)'s class-coloring minimum is `Z(m,m)` for every `m`, attained by the contiguous split (item 2). Enumeration had reached `m <= 7`.
+   * The **2-page Zarankiewicz conjecture** `ν_2(K_(m,n)) = Z(m,n)` holds for all `m, n`.
+     * De Klerk–Pasechnik–Salazar, *Book drawings of complete bipartite graphs* (arXiv:1210.2918, DAM 167 (2014)), state it as open.
+     * Zarankiewicz's conjecture is verified for `min(m,n) <= 6` (Kleitman) and for `(7,7..10)`, `(8,8..10)` (Woodall).
+     * The upper bound is classical, and `ν_2 >= cr`.
+   * THM-922 (I)'s class-coloring minimum is `Z(m,m)` for every `m`, attained by the contiguous split (item 2).
+     * It is unconditional for `m <= 8` (Kleitman, Woodall).
+     * Enumeration had reached `m <= 7`. The audit's enumeration adds `m = 8`: 144 = `Z(8,8)`.
 4. **CONDITIONAL on the `K_n` paper.** THM-913's drawing is optimal among all plane drawings, not only 2-page ones.
 
 **Typing of the method's relevance to our other problems.**
@@ -105,10 +114,10 @@ Script: [oai2_20261006_crossing_books.py](../../04-computation/experiments/oai2_
 The method is a linear-programming bound with cardinal interpolation and computer-certified sign checks. The node sets are periodic supersets of the shell values: residues mod 12, and mod 36 in the "atomic certificate" version, verified in exact rational arithmetic. There are no modular forms. The representation numbers `r_Q(D)` enter only the value of the minimum.
 
 **Correction to THM-431 (FINITE-EXACT; MISTAKE-575).** Reading #090 against THM-412 and THM-431, the session's reader found that the triangular lattice attains `u(21) = 57`.
-* The 21 Eisenstein integers `(2+ω)p + (3−ω)q`, with `p ∈ {0, 1, ω}` and `q ∈ {0} ∪ units`, have exactly 57 pairs at distance `√7`.
+* With `ω = e^(iπ/3)`, the 21 Eisenstein integers `(2+ω)p + (3−ω)q`, with `p ∈ {0, 1, ω}` and `q ∈ {0} ∪ units`, have exactly 57 pairs at distance `√7`. They are distinct, and 57 is the generic product count `3·7 + 12·3`.
 * This is the Erdős product triangle × `W_6` at the resonant angle `arccos(11/14)`.
 * THM-431's claim (2) ("NOT optimal; max section 47; gap 10") came from a disk-patch-only search. Corrected in both THM-431 files and HYP-2267.
-* The same product gives `W_6 × W_6`: 49 lattice points with `168 > 3N` unit distances.
+* The same product gives `W_6 × W_6`: 49 lattice points with `168 > 3N` unit distances (generic count `12·7 + 12·7`). Both counts were re-verified by the audit.
 * The reader's searches find the lattice attaining `u(N)` for every `N <= 12` and at `N = 21`, and one edge short for `13 <= N <= 20` (NUMERICAL; OPEN).
 
 **A torus corollary (CONDITIONAL on #090; reader's derivation, not audited).** For `N` points on a torus of area `N`, the periodic energy for every completely monotone potential is at least the triangular lattice's. Equality holds when the period lattice lies inside the triangular lattice.
@@ -158,8 +167,8 @@ So the tower is Thue–Morse in effect:
 
       sup_(|z|=1) |row of D H_(2^k) D| ≤ (3 + 2√2)·√(2N) ≈ 8.24 √N,   F ≥ 1/(33 + 24√2).
 
-  * Numerically, the worst row is `≤ 3.0√N` and `F ∈ [0.75, 3.0]` for `k ≤ 12`.
-  * So the same tournament is Thue–Morse in its natural signing and √2-Golay in the Rudin–Shapiro signing.
+  * Numerically, the worst row is `≤ 3.0√N` (`k ≤ 12`), and `F ∈ [0.70, 3.20]` for `3 ≤ k ≤ 12` (`[0.753, 3.001]` at `k = 12`).
+  * So the same tournament is Thue–Morse in its natural signing and Golay-flat (`sup ≤ 8.24√N`) in the Rudin–Shapiro signing.
 * **FINITE-EXACT.** The tower's `H_16` has no bent switching: no `±1` vector `d` with `|H_16 d| ≡ 4`, while Sylvester's has 448.
 * **Open.** Does every `T_k` have a switching with all rows two-sided flat, or ultraflat? Getting one ultraflat row is trivial given #076.
 
@@ -178,7 +187,7 @@ So the tower is Thue–Morse in effect:
 **What does not transfer.**
 * #076's sequences are one per length, non-algebraic and without a rate. The tower needs a family closed under its dyadic twists, and Golay is the only such family we have; it gives only `√2`-flatness.
 * #155's aperiodicity is p-adic (`p > 200`; `p = 2` is excluded). THM-4551's monotile boundary words are Sturmian. That link is ANALOGY only.
-* In the plane, translation tiles admit periodic tilings (Bhattacharya; Beauquier–Nivat), so a translation-only Fibonacci monotile cannot exist there.
+* In `Z²`, translation tiles admit periodic tilings (Bhattacharya), as do polyominoes and topological discs in the plane (Beauquier–Nivat). So a translation-only Fibonacci monotile of these kinds cannot exist there.
 * Nothing reaches the H-spectrum (THM-1370); the shared "7" (Barker 7 = `P_7`) is NUMEROLOGY there.
 
 ## 4. The plane is not 5-colourable (#158) and the Euclidean Ramsey classification (#172), against our Hadwiger–Nelson field tower
@@ -204,7 +213,7 @@ So the tower is Thue–Morse in effect:
     * nine generic concyclic points are not Ramsey;
     * a twelve-point Liouville configuration is not Ramsey.
 
-### 4.2 Residue colourings of field planes (THM-4558, PROVED; technique KNOWN)
+### 4.2 Residue colourings of the field tower (THM-4558; the lemma is KNOWN)
 
 **Lemma R.** If `L ⊂ C` is a number field with `c(L) = L`, and `𝔓` is a prime of `L` fixed by complex conjugation, then:
 * every unit vector (`u c(u) = 1`) is a `𝔓`-unit;
@@ -215,58 +224,68 @@ So the tower is Thue–Morse in effect:
 | ramified | 2 (residue characteristic 2) or 3 |
 | inert, residue field `F_q` in `L⁺` | `κ(q) = χ(Cay(F_(q²), μ_(q+1)))` |
 
-**`κ(q)` (FINITE-EXACT).** For `q = 2, 3, 4, 5, 7, 8, 9, 11, 16` it is `4, 3, 4, 4, 4, 4, 3, 5, 4`. Two independent SAT computations agree (`oai2_20261006_fields_ramsey_checks.py`, part 1).
+**Credit (the session's reader rediscovered this; audit A found the prior art).**
+* The coset/additive-colouring mechanism goes back to:
+  * Woodall 1973 (`Q²` mod 2);
+  * K. G. Fischer 1990 (Discrete Math. 82, Thm 1);
+  * Moorhouse 2010;
+  * Madore 2015 (arXiv:1509.07023, Prop. 3.2).
+* In the present conjugation-stable form it is **Proposition A** of decalion89's `notes/local_colourings.md` (dated 2026-09-24), together with:
+  * `χ(Q(√−3, √−11)) = 4` (Thm 1);
+  * `χ(Q(√−3, √−11, √−247)) = 5` (Thm 2);
+  * a `χ(G_q) = κ(q)` table, with `κ(13) = 6` by a completed SAT run, `κ(17) ∈ [5, 6]` and `κ(19) = 5`;
+  * Prop. B (`κ(q) ≥ 6` for every prime `q ≥ 53`);
+  * a field screen.
+* At places over 2 it is Theorem A/A′ of the MildlyMeticulous hn-2adic-obstruction repository (July 2026). Its Cor. B/B′ gives `χ(Q(√3, √11)²) = 4` and `χ ≤ 4` whenever all `√d` have `d ≡ 1, 3 (mod 8)`; its Thm C is the spindling dichotomy.
+* `χ(Q(√3, √11)²) = 4` itself is due to K. G. Fischer (1994, Congr. Numer. 104). We know it only through the zbMATH review that decalion89 quotes; Madore had listed it as open.
+* The Moser *ring* `Z[ω₁, ω₃]` was 4-coloured in Polymath16 (Gibbs, a four-element group, per Goucher; Speyer, reduction mod 2, per decalion89).
 
-**Credit.**
-* For `K²` with the form `x² + y²` and an anisotropic residue form, this is **Madore's reduction** (arXiv:1509.07023, 2015). Madore gets `χ(Q(√2)²) = 2`, `χ(Q(√3)²) = χ(Q(√7)²) = 3`, and `4 ≤ χ(Q(√3, √11)²) ≤ 5` (the upper bound via `F_11`), and lists the exact value as open.
-* **That value is 4: K. G. Fischer, 1994** (Congressus Numerantium 104). The decalion89 repository (v1.1.0, 2026; Lean) gives a new short proof by reduction at a place over 2. That repository also has `χ(Q(√2, √3)²) = 4` and `χ(Q(√−3, √−11, √−247)) = 5`.
-* Gibbs (Polymath16) 4-coloured the *ring* `Z[ω₁, ω₃]` by the same `F_4` homomorphism.
-* Our formulation works with an arbitrary conjugation-stable `L` instead of `K(i)`. That is what lets primes over 2 (where `x² + y²` degenerates) and fields not containing `i` be handled uniformly.
+**`κ(q)`.**
+* FINITE-EXACT, three independent SAT runs: `4, 3, 4, 4, 4, 4, 3, 5, 4` for `q = 2, 3, 4, 5, 7, 8, 9, 11, 16`.
+* `κ(13), κ(17) ∈ [5, 6]` (no 4-colouring; explicit 6-colourings found by the audit and, for 17, by this session). 5-colourability is undecided after 25–30-minute runs; `κ(13) = 6` per decalion89.
 
-**Exact values for our fields (PROVED).**
-
-| plane | χ |
-|---|---|
-| `Q(√−d)` | `≤ 3`, `≤ 2` if `d ≡ 1, 2 (mod 4)` (field version of THM-418) |
-| Moser field `Q(√−3, √−11)`, and `Q(√3, √11)²` | 4 (KNOWN, Fischer 1994) |
-| `Q(√−3, √−(4N−1))`, `N ≡ 2 (mod 3)`: the rungs `√−7, √−19, √−43, √−67, √−163` | **3** |
-| the same with `N = 3n`, `n` odd and Loeschian (`N = 3` is Moser) | 4 |
-| the Heegner compositum `Q(√−3, √−11, √−19, √−43, √−67, √−163)` | **4** (2 is inert in every factor and `Frob_2 = c`) |
-| `Q(ζ_6, ω_t : t odd)`, finite subgraphs | `≤ 4` |
-| the Polymath field `Q(√−3, √−11, √−15)` | **5** (upper: the prime over 11, `κ(11) = 5`; lower: Heule's graphs, cited) |
-
-* `G_7`, the 7 × 7 knight torus of THM-4552, is `Cay(F_49, μ_8)`, so `χ(G_7) = κ(7) = 4` (§7).
-* A Hilbert-90 test (2000 unit vectors `z/c(z)` in `Q(√−3, √−D)`, `D = 7, 19, 43, 67, 163`) finds every residue in `μ_4 ⊂ F_9`, as the lemma predicts (FINITE-EXACT).
-* The reader also checked each colouring on exact-arithmetic unit-distance patches (865–1500 points), with no monochromatic edge.
-
-**Corollary.** If a field plane contains a graph with `χ ≥ 4`, then `L/L⁺` is unramified at every finite prime, so `h⁺(L⁺)` is even. For example, the Moser field is the genus field of `Q(√33)`.
+**What is new in THM-4558 (PROVED).**
+* **The Heegner rungs.** `Q(√−3, √−(4N−1))` is **3-chromatic for every `N ≡ 2 (mod 3)`**. That is every lucky-Euler / Heegner rung `√−7, √−19, √−43, √−67, √−163` except Moser's `√−11`.
+  * The proof: 3 is inert in `Q(√−(4N−1))` and ramified in `Q(√−3)`, so the prime over 3 is inert over `L⁺`, and `κ(3) = 3`.
+  * Neither prior repository treats these fields.
+* **The `N = 3n` rungs.** For `n` odd and Loeschian, the rung is 4-chromatic.
+  * Upper bound: hn-2adic's 2-adic bound.
+  * Lower bound: a generalized spindle (two rigid Eisenstein patches through a point at squared distance `N`, one rotated by `ω_N`), checked exactly for `N = 3, 9, 21, 27` by the audit.
+* **Two explicit values.** The Heegner compositum `Q(√−3, √−11, √−19, √−43, √−67, √−163)` is 4-chromatic (the bound is implied by hn-2adic Cor. B′). The Polymath field `Q(√−3, √−11, √−15)` is exactly 5-chromatic: the upper bound is Lemma R at 11, the lower bound Heule's graphs in `Z[ω₁, ω₃, ω₄]`.
+* **Class-number parity.** If a field plane has `χ ≥ 4`, then `L/L⁺` is unramified at every finite prime, so `h⁺(L⁺)` is even. For example, the Moser field is the genus field of `Q(√33)`.
+* **Two further facts.**
+  * `Q(√−d)` is `≤ 3`-chromatic, and bipartite if `d ≡ 1, 2 (mod 4)` (field version of THM-418).
+  * The 7 × 7 knight torus is `G_7 = Cay(F_49, μ_8)`, so `χ(G_7) = κ(7) = 4` (§7).
 
 ### 4.3 Corrections to our canon (MISTAKE-576)
 
 * **The Heegner roadmap is false.**
-  * HYP-2277 conjectured "each chromatic step adjoins a class-number-one rotation field; χ = 5 ↦ √−19". But `Q(√−3, √−19)` is 3-colourable.
-  * HYP-2278 (4) conjectured "χ = 2 + #Heegner rotations". But all six together give 4.
-  * The 5-chromatic step needs the class-number-two field `Q(√−15)` (Heule's `ω₄`).
-  * What governs `χ` is how 2, 3, 5, 7 and 11 decompose in `L/L⁺`, not class numbers.
-* **"Measure cannot reach 5" (HYP-2278 (1)) is false.**
-  * Falconer (1981) proved `χ_m ≥ 5` by measure theory.
-  * `m₁(R²) ≤ 0.247 < 1/4` (Ambrus et al., arXiv:2207.14179) gives it by density alone.
-  * #158 claims 6 by ergodic and topological means.
-  * What survives: **density alone cannot give 6** (PROVED; Croft's `m₁ ≥ 0.2293 > 1/5`). So #158's sixth colour is necessarily topological, and `J₀` enters #158 only through its decay.
-* Our spectral floor `3.48` (HYP-2278) would, under #158's transfer theorem, apply to all colourings; it still rounds to 4.
+  * HYP-2277 claimed that the `χ = 4` junction fields are exactly the class-number-one fields, and that `χ = 5 ↦ √−19`. But `Q(√−3, √−19)` and every other `N ≡ 2 (mod 3)` rung are 3-colourable; those `N` are not even Eisenstein norms.
+  * HYP-2278 (4) conjectured "χ = 2 + #Heegner rotations". But the six rotation fields with `d ≡ 3 (mod 8)` together give 4.
+* **Class number does not govern the 5-chromatic step.** 5-chromatic graphs are known in `Q(√−3, √−11, √−15)` (Heule; `h(−15) = 2`) and in `Q(√−3, √−11, √−247)` (Exoo–Ismailescu 2020; `h(−247) = 6`). decalion89 reports one in `Q(√−3, √−7, √−11)`.
+  * What bounds `χ` from above is how small primes decompose in `L/L⁺`.
+* **HYP-2278 (1).** Its fractional statement is true: `χ_f(R²) ≤ 4.36 < 5`, and in fact `4 ≤ χ_f(R²) ≤ 4.36`. The errors:
+  * "`χ_f = 1/m₁`" is not a known identity. `1/m₁` is the measurable fractional bound.
+  * "measure cannot reach 5" is false for the measurable chromatic number. Falconer (1981) proved `χ_m ≥ 5`, and `m₁ ≤ 0.247 < 1/4` (Ambrus et al., arXiv:2207.14179) gives it by density alone.
+  * "no analytic method can narrow `{5,6,7}`", read for all colourings, is refuted only CONDITIONALLY, by #158's transfer theorem. Unconditionally, `χ(R²) ≥ 5` is still known only combinatorially.
+* **What survives.** Density alone cannot give 6 (PROVED; Croft's `m₁ ≥ 0.2293 > 1/5`). So any sixth colour cannot come from the density bound alone.
+  * The session reader's reading that `J₀` enters #158 only through its decay is unverified.
+  * Our spectral floor `3.48` (HYP-2278) would, under #158's transfer theorem, apply to all colourings; it still rounds to 4.
 
-### 4.4 Where #158's graph can live (CONDITIONAL on #158)
+### 4.4 Where #158's graph can be realized (CONDITIONAL on #158)
 
-* The compactness graph `H` has real-algebraic coordinates (Tarski). By Lemma R its field avoids the Moser, Heegner and Polymath fields and the whole odd-`t` compositum.
-* The smallest Polymath-ladder fields that the residue test (`p ≤ 400`) does not exclude are `Frac Z[ω₁, ω₂, ω₃]`, `Frac Z[ω₁, ω₃, ω₄, ω₅]` and `Frac Z[ω₁, ω₂, ω₃, ω₄]`. Their conjugation-stable residue fields give only `κ(17) ∈ [5, 7]` and `κ(29), κ(41) ≥ 5` (Hoffman).
-* These are the natural places to search for an explicit 6-chromatic graph.
+* The compactness graph `H` can be realized with real-algebraic coordinates (Tarski–Seidenberg; Madore §5.4). By Lemma R, no such realization lies in the Moser, Heegner or Polymath fields or in the odd-`t` compositum.
+* The next fields up the Polymath ladder, by added rotation `t`, are not excluded by the residue test (`p ≤ 400`): `Frac Z[ω₁, ω₂, ω₃]`, `Frac Z[ω₁, ω₃, ω₄, ω₅]` and `Frac Z[ω₁, ω₂, ω₃, ω₄]`. Their first conjugation-stable primes are 17, 29 and 41.
+  * The residue caps there are only `κ(17) ∈ [5, 6]`, and `κ(29), κ(41) ≥ 6` (decalion89, three-point bound).
+  * This screen reproduces decalion89's §5 (same fields, same primes). decalion89 also exhibits a 5-chromatic graph in `Q(√−3, √−7, √−11) = Frac Z[ω₁, ω₂, ω₃]`, so that field is 5- or 6-chromatic, and exactly 5 if `κ(17) = 5`.
+* These fields are the natural places to search for an explicit 6-chromatic graph.
 
 ### 4.5 Algebraic spherical sets are Ramsey (THM-4559, CONDITIONAL on #172; the deduction PROVED)
 
 * For a number field `F`, the separability idempotent `e ∈ F ⊗_Q F` has `m(e) = 1` and `e·(x ⊗ y) = e·(xy ⊗ 1)`.
 * So `P = e·(H ⊗ 1)`, with `H` the sphere matrix, is a certificate for every spherical `A` with algebraic coordinates.
 * **Graham's spherical conjecture therefore holds for algebraic configurations; every non-Ramsey spherical set is transcendental.** This matches Pálvölgyi's heptagon (arXiv:2609.23327, non-Ramsey for every transcendental radius) and #172's own examples, both driven by derivations, which vanish on number fields.
-* We did not find it stated in #172 or in Pálvölgyi's abstract.
+* We did not find it stated in #172, nor anywhere in Pálvölgyi's paper (main text and appendix, per audit A). Audit A also checked the certificate on Pálvölgyi's heptagon with the algebraic radius `r = 3`.
 * *Our configurations.*
   * Every spherical configuration in the repo's unit-distance work (Eisenstein, Moser, Heegner fields, `P_7` heptagon subsets) is Ramsey.
   * THM-431/440's extremal sets are not spherical, hence not Ramsey (unconditional, EGMRSS).
@@ -290,29 +309,36 @@ So the tower is Thue–Morse in effect:
 * **Sharp log exponents (skimmed).** `r(s, t) = t^(s−1)/(log t)^(s−2+o(1))` for fixed `s ≥ 6` (and `s = 5` in a companion). The lower bound uses random ordered incident flags in `PG(d, q)`, the upper bound Ajtai–Komlós–Szemerédi.
   * The only link to our triangle-case front is an ANALOGY: the height-1 row of our tree-grid numbers is `r(3, b)`.
 
-### 5.2 Erdős 592: invariant witnesses always die (THM-4560, PROVED)
+### 5.2 Erdős 592: gap-determined witnesses always die (THM-4560, PROVED)
 
-* *The idea comes from Hindman's own original method, not from #164's.* Take a chain of minimal idempotent ultrafilters `q_1 ≤ … ≤ q_n` on the level semigroups `S_ℓ` (lex-positive vectors of level `≥ ℓ`), with `P^(ℓ) ∈ q_ℓ`.
+* *The method is the Galvin–Glazer idempotent-ultrafilter proof of Hindman's theorem*, not Hindman's 1974 combinatorial proof and not #164's. Take a chain of minimal idempotent ultrafilters `q_1 ≤ … ≤ q_n` on the level semigroups `S_ℓ` (lex-positive vectors of level `≥ ℓ`), with `P^(ℓ) ∈ q_ℓ`.
 * A sum-free gap set `E` lies in no idempotent (Galvin–Glazer). So gaps of any prescribed level word can be chosen with **every contiguous sum outside `E`**.
 * With the ruler word `n − v_2(i)`, the prefix sums are the leaves of a binary subgrid whose pairwise gaps are exactly those contiguous sums. **Every gap-determined triangle-free graph on `N^n` has an independent binary subgrid.**
 * Consequences:
   * `t_dead(Finv) < ∞` for every `n` (with THM-470 A2);
   * every gap-determined feature algebra dies at a finite `t` (A3);
-  * **THM-521 D's strong-Specker barrier holds unconditionally**, without HYP-2396 or "invariant = valuation gradings".
-  * A strong witness, if one exists, must be value-dependent (HYP-2558, open).
-  * The 2-adic seam is exactly what keeps `E` out of every idempotent: it can delay the death of an invariant witness but not prevent it.
+  * **THM-521 D's strong-Specker barrier holds unconditionally for fully gap-determined witnesses**, i.e. every valuation grading of the gap vector, without HYP-2396.
+    * For *row-invariant* witnesses (THM-453 F/G, including the dyadic `B_(v_2 g)` family, whose `n = 2` cutoff is 5 = 2n+1) it remains conditional/open.
+    * A strong witness, if one exists, is not fully gap-determined (HYP-2558, open).
+  * Sum-freeness keeps `E` out of every idempotent. The exact criterion is that `E` contains no IP set.
+    * The 2-adic seam (one source of sum-free gradings, THM-469) can delay the death of a gap-determined witness but not prevent it.
 * *Finite data (FINITE-EXACT).*
   * Fully gap-determined at `n = 2`: SAT at `t = 3`, UNSAT at `t = 4` (CaDiCaL here, and the reader).
-  * At `n = 3`: SAT for `t = 4, 5, 6`, with `|E| = 34, 70, 109`; witnesses were brute-verified, including all `1.7·10^8` binary subgrids at `t = 6`.
-  * `(3, 7)` is undecided after three CaDiCaL runs of 15–32 minutes, plus the repo's 2-hour run. So `t_dead(Finv) ∈ [7, ∞)` at `n = 3`, finite by the theorem.
-* *Correction (MISTAKE-577).* THM-470 identified Finv with "the translation-invariant game of THM-453 F", which is only row-invariant. At `n = 2` the row-invariant cutoff is 5 (THM-453 G, recomputed) and the fully gap-determined cutoff is 4.
+  * The gap-determined `(sign, v_2)` algebra also dies at `t = 4 = 2n` (SAT at 3, UNSAT at 4, exhaustive; audit, new).
+  * At `n = 3`: SAT for `t = 4, 5, 6`, with `|E| = 34, 70, 109`.
+    * This was already implied by THM-470 B (F2J SAT, A3), so the new runs are confirmations.
+    * Witnesses were brute-verified twice, independently, including all `1.7·10^8` binary subgrids at `t = 6`.
+  * `(3, 7)` is undecided: the reader's runs were one 60-minute timeout and two runs stopped at about 14 and 19 minutes, plus the repo's earlier 2-hour run. So `t_dead(Finv) ∈ [7, ∞)` at `n = 3`, finite by the theorem.
+* *Correction (MISTAKE-577).* THM-470 identified Finv with "the translation-invariant game of THM-453 F", which is only row-invariant.
+  * At `n = 2` the row-invariant cutoff is 5 (THM-453 G, recomputed) and the fully gap-determined cutoff is 4 = 2n.
+  * So the "linear wall `2n+1`" evidence for HYP-2396 concerns the row-invariant family, not Finv.
 
 ### 5.3 The Davenport law for FS-sets in one valuation level (PROVED, elementary)
 
 * The largest `m` such that all nonempty subset sums of `a_1, …, a_m` have the same `p`-adic valuation is **`p − 1 = D(Z/p) − 1`**, the Davenport constant of `Z/p` minus one. Taking all `a_i ≡ 1 (mod p)` attains it.
 * If FS∪FP lies in one level and `m ≥ 2`, that level must be `v = 0`.
 * The graph `v_p(|x − y|) = v` has clique number exactly `p`.
-* **THM-469 A1 ("`L_v` is sum-free for every `v` iff `p = 2`") is exactly the case `D(Z/2) − 1 = 1`.** #164's Cor. 2.4 runs on the same mechanism (`v = 2v mod q` forces `v = 0`): any homomorphic grading pushes FS∪FP sets into its identity class.
+* **THM-469 A1 ("`L_v` is sum-free for every `v` iff `p = 2`") is exactly the case `D(Z/2) − 1 = 1`.** #164's Corollary 2.6 runs on the same mechanism (`v = 2v mod q` forces `v = 0`): any homomorphic grading pushes FS∪FP sets into its identity class.
 
 ### 5.4 3-smooth numbers: no Hindman theorem (PROVED / FINITE-EXACT)
 
@@ -320,7 +346,7 @@ So the tower is Thue–Morse in effect:
   * Hence two distinct elements of `S` whose `Ω` has the same parity never sum into `S`.
   * So colouring `S` by `Ω mod 2` leaves no monochromatic Schur triple inside `S`.
 * **Three colours.** `Ω mod 2` on `S`, plus a third colour elsewhere, avoids every `{a, b, a+b}` with `a, b ∈ S`.
-* **Two colours, quartets.** Two colours avoid every quartet `{a, b, a+b, ab}` with `a, b ∈ S`.
+* **Two colours, quartets.** The colouring `{x ∈ S : Ω(x) even}` | everything else avoids every monochromatic quartet `{a, b, a+b, ab}` with `a, b ∈ S`.
 * **Two colours, Schur forced.** Two colours do force a monochromatic `{a, b, a+b}` with `a, b ∈ S`. The least forcing `N` is **5** if `a = b` is allowed and **13** if not (FINITE-EXACT; reader and this session agree).
 * **Folkman.** With `m = 3` and 3-smooth generators, Folkman is 2-colourable up to `2^20` (SAT), and an explicit rule works to `2^40` (FINITE-EXACT, reader). Extending it to all `N` needs every solution of `x + y = z + w` in `S`.
 * **#164 avoids 3-smooth numbers.** Each `a_d` in #164's construction has a prime factor `> w`.
@@ -330,7 +356,7 @@ So the tower is Thue–Morse in effect:
 
 ### 5.5 Book Ramsey (PROVED; FINITE-EXACT for `n ≤ 10`)
 
-* **Turán-type colourings fall short.** Take red disjoint cliques and blue complete multipartite graphs, for `(B_(n−1), B_n)`. They reach only `N ≤ max(2n, 3n − 3)`. At `n = 100` that is 297, against the 398 we need. So our (94, 104) search is quasirandom territory that #189's method does not see.
+* **Turán-type colourings fall short.** Take red disjoint cliques and blue complete multipartite graphs, for `(B_(n−1), B_n)`. They reach only `N ≤ max(2n, 3n − 3)`. With the colours swapped the bound is `max(2n+2, 3n−6)`, so the overall Turán-type maximum is `max(2n+2, 3n−3)` (audit). At `n = 100` that is 297, against the 398 we need. So our (94, 104) search is quasirandom territory that #189's method does not see.
 * **The stored witness.** The `n = 12` witness (`N = 46`) verifies. #189's consequences for it (red `C_7`, `C_8`; blue `C_6`–`C_10`) were all already known.
 
 ## 6. Barnette's conjecture (#180) and affine cancellation (#047): knight tours and the Jacobian ecosystem
@@ -355,15 +381,16 @@ So the tower is Thue–Morse in effect:
 * **The dictionary.**
   * `β_P` is the fewest edges, disjoint from a prescribed path `P`, whose deletion kills every Hamiltonian cycle through `P`.
   * `λ_P` is the cheapest local obstruction: starve one square, or force an early closing.
-  * #180's corollaries are `β_∅ = λ_∅ = k − 1 = 2` and `β_(P_4) = λ_(P_4) = k − 2 = 1` in the cubic case. HYP-9211 is `β_∅ = 7 = k − 1` at `k = 8`.
+  * In a Barnette graph (cubic, bipartite, planar, 3-connected; `k = 3`), #180's corollaries (CONDITIONAL) give `β_∅ = λ_∅ = k − 1 = 2`, and in the Pfaffian case `β_(P_4) = λ_(P_4) = k − 2 = 1`. HYP-9211 is `β_∅ = 7 = k − 1` at `k = 8`.
 * **Data on the knight torus `G_n`** (FINITE-EXACT, reader):
-  * `β_P = λ_P` for every class of 1-move paths at `n = 6`, and every class of 2- and 3-move paths at `n = 5..8`;
-  * minimum blocking sets are exactly the local ones in three sampled classes at `n = 6` (43, 45 and 84 sets);
-  * every path of `≤ 5` moves lies in a closed tour, `n = 5..8`.
-  * This is filed as **HYP-9215**.
-* **"Stars only" is not Barnette-like.** In a 14-vertex Barnette graph with a nontrivial 3-edge cut, 15 of 57 minimum blocking pairs are not stars. On the knight torus the locality comes from its restricted edge connectivity 14 (THM-4552 v).
+  * `β_P = λ_P` for the 1-move class at `n = 5..8` (up to `3.6·10^11` six-sets), every class of 2- and 3-move paths at `n = 5..8`, and every class of 4-move paths at `n = 6, 7, 8` (173, 184 and 181 classes, `λ ∈ {5, 6}`);
+  * minimum blocking sets are exactly the local ones for all 35 classes of 1- to 3-move paths at `n = 6`;
+  * every path of `≤ 6` moves lies in a closed tour, `n = 5..8`: the knight tori are P7-Hamiltonian, the degree-8 analogue of #180's P4 property.
+  * Partial: 216 of the 1088 classes of 5-move paths at `n = 6` have `β = λ = 5`.
+  * This is filed as **HYP-9215** (paths of at most 4 moves).
+* **"Stars only" is not Barnette-like.** In the 14-vertex Barnette graph "cube with one vertex replaced by `Q_3 − v`", 15 of the 57 minimum blocking pairs are not stars (audit-confirmed). On the knight torus the locality plausibly reflects its restricted edge connectivity 14 (THM-4552 v). This is a heuristic, not a proof.
   * #180's disk identity cannot transfer either: `genus(G_n) ≥ 1 + n²/2`.
-* **On the real 8 × 8 board,** every non-extendable path of 1 to 5 moves (0, 11, 101, 809 and 5123 classes) is caught by iterated local forcing (FINITE-EXACT).
+* **On the real 8 × 8 board,** every non-extendable path of 1 to 5 moves (0, 11, 101, 809 and 5123 classes) is caught by iterated local forcing (FINITE-EXACT). The 10 × 10 board is local up to 4 moves. On the 6 × 6 board, non-local failures appear already at 4 moves (1 of 594 classes); these were not analysed.
   * The first *global* obstruction is our weave law (THM-4550 W): 9 moves inside rings 1–2 force `k ≥ 9 > 8`.
   * Example: the path `(6,2),(5,4),(3,5),(1,6),(2,4),(3,2),(1,1),(2,3),(4,2),(6,3)` passes every local test and still extends to no tour (PROVED by the weave law).
   * So the weave law is a genuinely global, Pósa-type obstruction.
@@ -393,26 +420,27 @@ So the tower is Thue–Morse in effect:
 **7.1 The rational plane reduces mod 7 onto the 7 × 7 knight torus (PROVED, one line).**
 * 7 is inert in `Q(i)`. So by Lemma R every rational unit vector `(a/c, b/c)` (`a² + b² = c²`) has `7 ∤ c`, and reduces to a point of the circle `x² + y² = 1` over `F_7`: `(±1, 0), (0, ±1), (±2, ±2)`.
 * Multiplication by `1 + 2i` in `F_49 = F_7(i)` (norm 5) maps this circle onto the knight's moves `(±1, ±2), (±2, ±1)`, the circle `x² + y² = 5` of THM-4552.
-* So **`z ↦ (1 + 2i) z mod 7` maps every rational unit-distance pair to a knight move on the 7 × 7 torus**: a graph homomorphism from the unit-distance graph of `Q²` (each coset of the unit-vector group) onto `G_7`.
+* So **on each component `z₀ + Γ` of the unit-distance graph of `Q²`, the map `z ↦ (1 + 2i)(z − z₀) mod 7` sends every rational unit-distance pair to a knight move on the 7 × 7 torus.** Here `Γ ⊂ Z_(7)[i]` is the group generated by the rational unit vectors, and a base point per coset is needed (`z = 1/7` has no residue).
+  * This is a graph homomorphism onto `G_7`: all 8 residues occur, e.g. `(3/5, 4/5) ↦ (2, −2)`. The audit checked every primitive Pythagorean triple with `m < 60`.
 * The same reduction gives:
   * mod 3: the `3 × 3` rook torus `K_3 □ K_3`;
   * mod 11: a 5-chromatic residue graph.
 * The exceptional knight torus of THM-4552 is the residue graph of the plane at the prime 7, which is why `χ(G_7) = κ(7) = 4` appears in both places.
 
-**7.2 Idempotents as certificates.** Three of the session's results turn on an idempotent:
+**7.2 Finite certificates (ANALOGY).** Two of the session's results turn on an idempotent, and a third on a residue map:
 * the separability idempotent `e ∈ F ⊗ F`, which turns sphericity into #172's tensor certificate (THM-4559);
 * minimal idempotent ultrafilters on the level semigroups, which choose gaps avoiding a sum-free set (THM-4560);
-* reduction modulo a conjugation-stable prime, a ring projection onto a finite field, which turns an infinite field plane into a finite Cayley graph (THM-4558).
+* reduction modulo a conjugation-stable prime, a residue map (not an idempotent), which turns an infinite field plane into a finite Cayley graph (THM-4558).
 
 #164 proves Hindman's FS∪FP conjecture *without* idempotent ultrafilters, while #172's sufficiency direction uses Ellis's idempotent lemma. In each case the infinite statement is certified by one finite or algebraic object: a residue graph, a tensor, or a level word. That is the "information compression" reading of these results.
 
 **7.3 Sevens (ANALOGY, with PROVED or classical ingredients).** The prime 7 recurs across the session:
 * `G_7 = Cay(F_49, μ_8)` (§7.1, PROVED);
 * `#090`'s `N = 7` torus is `K_7`, whose two triangle classes are the two Fano planes; oriented at 120°, it is `P_7` with symmetry `F_21` (FINITE-EXACT, reader);
-* `u(21) = 57` is attained by the Minkowski product of the norm-7 directions `2 + ω, 3 − ω` at angle `arccos(11/14)` (§2);
+* `u(21) = 57` is attained by the Minkowski sum (Erdős product) along the norm-7 directions `2 + ω, 3 − ω` at angle `arccos(11/14)` (§2);
 * the Legendre/Barker 7 is a row of `P_7 = T_3` (§3), and `Aut(T_k) = F_21` (THM-4557).
 
-Isbell's 7-colouring uses the *split* prime `2 − ω` of norm 7, so it is a lattice quotient, not a Lemma R reduction (split primes are not conjugation-stable). Reading these as one phenomenon is NUMEROLOGY.
+Isbell's 7-colouring uses the *split* prime `2 + ω` of norm 7 (`ω = e^(iπ/3)`; `2 − ω` in the convention `ω = e^(2πi/3)`), so it is a lattice quotient, not a Lemma R reduction (split primes are not conjugation-stable). Reading these as one phenomenon is NUMEROLOGY.
 
 **7.4 The 2-adic seam (ANALOGY).** Several 2-adic objects appear in the session:
 * Erdős 592's 2-adic seam (THM-469; the Davenport law at `p = 2`);
@@ -430,9 +458,9 @@ In each, a quadratic or valuation structure at 2 is either the obstruction or th
 | #022 weak inhomogeneous Duffin–Schaeffer | **Typed negative** for LRC: finite speed sets are invisible to almost-everywhere theorems; the deep well's overlaps run 1.33 times independent. |
 | #076 + companions (Littlewood) | **New theorem** about the tower (THM-4561); the method does not transfer. |
 | #155 aperiodic monotile in `Z³` | Explicit cyclotomic stacking partition (PROVED); the monotile link is ANALOGY. |
-| #158 plane not 5-colourable (Lean) | **Corrections** (MISTAKE-576) and **exact field-plane values** (THM-4558; technique Madore's). Where a 6-chromatic graph can live is CONDITIONAL. |
+| #158 plane not 5-colourable (Lean) | **Corrections** (MISTAKE-576) and **exact values for the Heegner rungs** (THM-4558). The residue-colouring technique and several values were already known (Fischer, Madore, hn-2adic, decalion89). Where a 6-chromatic graph can be realized is CONDITIONAL. |
 | #172 Euclidean Ramsey classification (Lean) | **Conditional extension:** algebraic spherical sets are Ramsey (THM-4559). |
-| #164 Hindman FS∪FP | **Method transfer** (the classical idempotent route): THM-4560 makes THM-521 D unconditional and gives `t_dead(Finv) < ∞`. Davenport law. No 3-smooth Hindman theorem. |
+| #164 Hindman FS∪FP | **Method transfer** (the classical idempotent route): THM-4560 makes THM-521 D unconditional for gap-determined witnesses and gives `t_dead(Finv) < ∞`. Davenport law. No 3-smooth Hindman theorem. |
 | #189 cycle–clique | No help for our book-Ramsey search (Turán-type colourings stop at `3n − 3`). |
 | sharp log exponents | ANALOGY only. |
 | #180 Barnette | A blocking-law dictionary from `k = 3` to `k = 8`: HYP-9215. The weave law is a global obstruction. |
@@ -440,7 +468,47 @@ In each, a quadratic or valuation structure at 2 is either the obstruction or th
 
 ## 9. Audit record
 
-(pending: two independent audits, filled in below before canon)
+Two independent adversarial audits ran after the checkpoint `9258bf9d52` was pushed (labelled "audit in progress"). Each used its own code, read only.
+
+**Audit A (algebra and number theory).** THM-4558, THM-4559, THM-4561, THM-4562, MISTAKE-576, the THM-418 update, and §§3, 4, 7.
+* **Verdicts.** THM-4559 PASS. Everything else PASS WITH CORRECTIONS.
+* **Confirmed:**
+  * every prime decomposition (own decomposition/inertia-group code for every prime `≤ 400`);
+  * the `κ` table (third independent SAT run) and the Hoffman bounds;
+  * the generalized spindle for `N = 3, 9, 21, 27`;
+  * all of THM-4561 except the `F`-range;
+  * the fibre counts for every `q` prime to 6 (brute force at `q = 25, 49, 121, 125` as well);
+  * the Russell-cylinder change of variables;
+  * the §7.1 reduction.
+* **Corrections, all applied (MISTAKE-579):**
+  * the prior art for Lemma R (decalion89, hn-2adic, Woodall, Fischer 1990, Moorhouse);
+  * the false "`Q(√−15)` is needed" claim (Exoo–Ismailescu);
+  * Corollary 1's overclaim;
+  * the vacuous iff in THM-4562;
+  * the `F`-range, `κ(17)`, and Fischer 1994 being second-hand;
+  * the full quote of HYP-2278 (1) and its exact error;
+  * wording ("realization", "each prime over 2", "rigid patch", base points, "Minkowski sum"), and the ANALOGY typing of §7.2.
+
+**Audit B (combinatorics).** THM-4560, MISTAKE-577 and its blocks, §1 crossing numbers, §2 `u(21)`, §§5.3–5.5, HYP-9215.
+* **Verdicts.** All PASS WITH CORRECTIONS.
+* **Confirmed:**
+  * every step of THM-4560;
+  * the `n = 2` cutoffs 4 and 5 (two solvers, plus exhaustive enumeration of all `2^24` gap sets);
+  * the `n = 3` witnesses, including all `1.7·10^8` subgrids;
+  * the crossing counts (`m ≤ 40`; DDS at every offset, `n ≤ 60`), the telescoping identity, and `m = 8`: 144;
+  * `u(21) = 57` and 168;
+  * the Davenport law, the Schur thresholds 5 and 13, and `max(2n, 3n−3)`;
+  * HYP-9215's `λ` values and its `n = 6` one-move case, by a CEGAR hitting-set proof.
+* **Corrections, all applied (MISTAKE-577 sharpened, MISTAKE-579):**
+  * THM-4560 makes THM-521 D unconditional for gap-determined witnesses only. New FINITE-EXACT datum: the gap-determined `(sign, v_2)` algebra dies at `t = 4`.
+  * the THM-470 Honesty line;
+  * the Ábrego arXiv number, and the reference for de Klerk–Pasechnik–Salazar 2014;
+  * the classical status of `ν_2(K_(m,n)) ≤ Z(m,n)`;
+  * the `ω` convention;
+  * #164 Cor. 2.6;
+  * the Galvin–Glazer attribution;
+  * the `(3,7)` run description;
+  * the Barnette-graph (not "cubic") phrasing and the heuristic status of the locality remark in HYP-9215.
 
 ## 10. Reproduction
 
@@ -450,17 +518,21 @@ Session scripts, each with a `.out` and ending in ALL CHECKS PASSED:
 * [oai2_20261006_littlewood_tower.py](../../04-computation/experiments/oai2_20261006_littlewood_tower.py): §3, THM-4561.
 * [oai2_20261006_fields_ramsey_checks.py](../../04-computation/experiments/oai2_20261006_fields_ramsey_checks.py): §4–5, THM-4558, THM-4560, MISTAKE-577.
 
-The six readers' own scripts, logs and witnesses, as run, are in [oai2_20261006_readers/](../../04-computation/experiments/oai2_20261006_readers/), one folder per lane. Their absolute scratch paths may need adjusting. The OpenAI LaTeX sources the readers worked from are not committed: they are public at github.com/openai/math.
+The six readers' own scripts, logs and witnesses, as run, are in [oai2_20261006_readers/](../../04-computation/experiments/oai2_20261006_readers/), one folder per lane. The two audits' reports and check scripts are in [oai2_20261006_audits/](../../04-computation/experiments/oai2_20261006_audits/). Their absolute scratch paths may need adjusting. The OpenAI LaTeX sources the readers worked from are not committed: they are public at github.com/openai/math.
 
 **Sources.**
 * openai/math manuscripts #165, #090, #022, #076 (+2), #155, #158, #172, #164, #189, #180, #047, accessed 2026-10-06.
 * D. A. Madore, arXiv:1509.07023.
-* K. G. Fischer, Congr. Numer. 104 (1994).
-* github.com/decalion89/chromatic-number-of-the-plane (v1.1.0).
+* D. R. Woodall (1973); K. G. Fischer, Discrete Math. 82 (1990); K. G. Fischer, Congr. Numer. 104 (1994) (via zbMATH review); G. E. Moorhouse (2010 draft).
+* github.com/decalion89/chromatic-number-of-the-plane (v1.1.0; notes/local_colourings.md, 2026-09-24).
+* github.com/MildlyMeticulous/hn-2adic-obstruction (2026-07).
+* G. Exoo, D. Ismailescu, arXiv:1805.00157 (DCG 64 (2020)).
+* A. K. Dutta, A. Lahiri, JPAA 225 (2021) 106707.
 * D. Pálvölgyi, arXiv:2609.23327.
 * G. Ambrus, A. Csiszárik, M. Matolcsi, D. Varga, P. Zsámboki, arXiv:2207.14179.
 * de Klerk–Pasechnik–Salazar, arXiv:1207.5701.
-* Ábrego et al., arXiv:1210.2918.
+* Ábrego, Aichholzer, Fernández-Merchant, Ramos, Salazar, *The 2-page crossing number of K_n*, arXiv:1206.5669 (DCG 49 (2013)).
+* de Klerk–Pasechnik–Salazar, *Book drawings of complete bipartite graphs*, arXiv:1210.2918 (DAM 167 (2014)).
 * Alexeev–Mixon–Parshall, arXiv:2412.11914.
 * Hindman–Strauss, *Algebra in the Stone–Čech Compactification*.
 * Davis–Jedwab (1999); Turyn–Storer (1961); Falconer (1981); Fujita (1979); Miyanishi–Sugie (1980).

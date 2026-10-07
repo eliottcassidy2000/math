@@ -1,0 +1,2 @@
+    round 1: pool 2880; DONE uncertified=0 leaves=209004408899 local_uncertified=274; unresolved non-local 0 (621s)
+  P=[(0, 0), (1, 2)] lambda=7 [starve]: non-local minimum blocking sets: 0 (621s)

@@ -2032,6 +2032,26 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
+## MISTAKE-579 (2026-10-06/07, mac-mini-2026-10-06-oaimath2's own checkpoint 9258bf9d52, pushed "audit in progress"; found by the session's two independent adversarial audits; renumbered from 578, which opus S19 claimed concurrently) -- a known lemma presented as new, a false claim about the 5-chromatic step, a vacuous iff, an overbroad corollary scope, and citation errors
+
+- **What the audits found (all corrected before the final commit).**
+  - **THM-4558: missing prior art.** The residue-colouring lemma ("Lemma R") was presented as the reader's own, with only Madore's reduction credited.
+    - It is Proposition A of decalion89's `notes/local_colourings.md` (2026-09-24) and Theorem A/A′ of the MildlyMeticulous hn-2adic-obstruction repository (2026-07). Its mechanism goes back to Woodall 1973, Fischer 1990 and Moorhouse 2010.
+    - Those sources also contain the Moser-field value, the Heegner-compositum bound (hn-2adic Cor. B′) and Corollary 1, a `kappa(q)` table with `kappa(13) = 6`, and the same field screen.
+    - THM-4558 is retitled and retyped. Its new content is the Heegner rungs (3-chromatic for `N = 2 mod 3`), the `N = 3n` family, the explicit Polymath-field value and the class-number-parity remark.
+  - **THM-4558, MISTAKE-576 draft, note §4.3: a false claim.** "The 5-chromatic step needs the class-number-2 field `Q(sqrt-15)`" is false: Exoo–Ismailescu's 5-chromatic graph lives in `Q(sqrt-3, sqrt-11, sqrt-247)`. Corollary 1's "a 5-chromatic graph needs `omega_t` with `t` even" was overclaimed for the same reason.
+  - **THM-4560 / THM-521 update: corollary scope too broad.** THM-4560 makes THM-521 D unconditional only for fully gap-determined witnesses. Row-invariant witnesses (THM-453 F/G, `n = 2` cutoff 5) are not covered. The gap-determined `(sign, v_2)` algebra dies at `t = 4 = 2n` (audit, exhaustive).
+  - **THM-4562: a vacuous iff.** "`V_j` locally nilpotent iff `C[x] = R[F_j]` for some subring `R` containing the other `F_i`" holds trivially with `R = C[x]`. It needs "`F_j` algebraically independent over `R`".
+  - **Citations and ranges.**
+    - Ábrego et al. was cited as arXiv:1210.2918; it is arXiv:1206.5669, and 1210.2918 is de Klerk–Pasechnik–Salazar 2014.
+    - #164's "Cor. 2.4" should be Cor. 2.6.
+    - THM-4561's `F`-range `[0.75, 3.0]` was the `k = 12` range only.
+    - `kappa(17)` was listed as 5–7; it is 5–6.
+    - Note §7.3 used `2 − omega` with the wrong `omega` convention.
+    - Note §5.2 attributed the idempotent method to "Hindman's own original method" instead of Galvin–Glazer.
+- **Why:** the readers' outputs were drafted into canon before a full prior-art search; the literature check was a few web searches. The decalion89 repository had been found, but it was read only for two values.
+- **Lesson:** when a repository or paper is found for one value, read its notes in full before claiming adjacent results. A lemma that makes "our" field computations easy is likely already in it. The two-auditor pattern (one algebra and number theory, one combinatorics) caught everything here; keep pushing pre-audit checkpoints labelled "audit in progress".
+
 ## MISTAKE-578 (2026-10-06, found by opus-2026-10-06-S19 while classifying the fixed points of Chamberland's map; concerns opus S15's fifteenth note `05-knowledge/results/collatz_one_out_edge_systems_20260930.md`, section 5 "The real line", its INDEX line and its broadcast letter of 2026-09-30) -- the attracting and repelling members of a mirror pair of fixed points swapped
 
 - **Claim:** "The only attracting real fixed point is 0.278 (multiplier 0.386); its mirror −1.278 is repelling (1.614)."
@@ -2051,9 +2071,11 @@ were unaffected; successful explicit-path replays did not validate the prose.
 - **Why it is wrong.**
   - THM-453 F/G's "translation-invariant" witnesses are only **row-invariant**: `R_a = R` and `B_(a,a') = B_(a'-a)`. The within-row graph `R` and the cross-row relations `B_g` are arbitrary relations on column values.
   - Finv is **fully gap-determined**: an edge depends only on the gap vector `y - x`.
-  - At `n = 2` the two games have different cutoffs. Fully gap-determined: `Q_inv(2,3)` SAT, `Q_inv(2,4)` UNSAT, cutoff 4. Row-invariant: SAT at 4, UNSAT at 5, cutoff 5, as THM-453 G says.
+  - At `n = 2` the two games have different cutoffs. Fully gap-determined (`Q_gap`, THM-4560): `Q_gap(2,3)` SAT, `Q_gap(2,4)` UNSAT, cutoff 4. Row-invariant: SAT at 4, UNSAT at 5, cutoff 5, as THM-453 G says.
   - Recomputed independently with CaDiCaL: `04-computation/experiments/oai2_20261006_fields_ramsey_checks.py`, part 3.
-  - The `INV(3,4)` / `invQ(3,4)` "agreement" compared two different games. Both are SAT, so no false conclusion followed.
+  - The `INV(3,4)` / `invQ(3,4)` "agreement" compared two different games. That comparison itself (both SAT) drew no false conclusion.
+  - But the identification also produced two false items. One is THM-470's Honesty line "invariant = free cutoff at n = 2"; it holds for the row-invariant game only, since Finv has cutoff 4 < 5. The other is the use of a `2n+1` gap-determined wall as HYP-2396 evidence, and in THM-521 D's premise.
+  - For gap-determined rules the `n = 2` wall is `4 = 2n`; the gap-determined `(sign, v_2)` algebra also dies at 4 (independent audit, exhaustive). So THM-521 D is unconditional (THM-4560) only for gap-determined witnesses; for row-invariant ones it stays conditional.
 - **Correct framing (applied):**
   - THM-470 carries a correction block.
   - THM-4560 proves that `t_dead(Finv) < ∞` for every `n` (an independent binary subgrid always exists for a gap-determined triangle-free graph). The row-invariant game is a strictly less restrictive family (its rules may depend on column values), hence its larger cutoff.
@@ -2062,25 +2084,27 @@ were unaffected; successful explicit-path replays did not validate the prose.
 ## MISTAKE-576 (2026-10-06, found by mac-mini-2026-10-06-oaimath2's reader of openai/math #158 and verified in the session; concerns HYP-2276 (claude S687), HYP-2277 (claude S688 / opus S699m) and HYP-2278 (opus S699n), all 2026-06-06, historical index only) -- the "Heegner roadmap" for the chromatic number of the plane, and "measure cannot reach 5"
 
 - **Claims (historical HYP index, 2026-06-06):**
+  - HYP-2277 (S688): "the chi=4 junction field ranges over EXACTLY the class-number-one (UFD) imaginary-quadratic fields Q(sqrt-7, -11, -19, -43, -67, -163)".
   - HYP-2277 (S699m): "conjecture each chromatic step adjoins a class-number-1 (Heegner) rotation field, chi(R^2) = 5 -> sqrt-19".
   - HYP-2278 (4): "HEEGNER ROADMAP (conjectural): chi = 2 + (#independent Heegner rotations)".
   - HYP-2276: "chi(R^2) is bounded below by the number of pairwise-incommensurate imaginary-quadratic rotations forceable into one unit-distance graph".
-  - HYP-2278 (1): "RIGOROUS (given m_1 in [.2293, .2598]) ... the fractional/spectral/measure bound CANNOT reach 5; the chi >= 5 lower bound and ALL of the {5,6,7} distinction is IRREDUCIBLY COMBINATORIAL ... no analytic method can narrow it".
+  - HYP-2278 (1), in full: "RIGOROUS (given known m_1 in [.2293, .2598]): chi_f(R^2) = 1/m_1 <= 4.36 < 5 => the fractional/spectral/measure bound CANNOT reach 5; the chi >= 5 lower bound & ALL of the {5,6,7} distinction is IRREDUCIBLY COMBINATORIAL = the LRC Vitali-wall integrality gap ... no analytic method can narrow it".
 - **Why they are wrong (THM-4558).**
-  - Reduction modulo a prime fixed by complex conjugation (Madore's technique, 2015) bounds the chromatic number of every field plane.
-  - `Q(sqrt-3, sqrt-(4N-1))` is 3-colourable for every `N = 2 (mod 3)`. That covers the Heegner rungs `sqrt-7`, `sqrt-19`, `sqrt-43`, `sqrt-67`, `sqrt-163`, so the `sqrt-19` rung adds nothing.
+  - Reduction modulo a prime fixed by complex conjugation (a known technique: Woodall 1973, Fischer 1990, Madore 2015; decalion89 Prop. A, hn-2adic Thm A) bounds the chromatic number of every field plane.
+  - `Q(sqrt-3, sqrt-(4N-1))` is 3-colourable for every `N = 2 (mod 3)`. That covers the Heegner rungs `sqrt-7`, `sqrt-19`, `sqrt-43`, `sqrt-67`, `sqrt-163` (these `N` are not even Eisenstein norms), so the `sqrt-19` rung adds nothing, and the S688 "exactly the class-number-one fields" claim fails.
   - The compositum of all six Heegner fields with `d = 3 (mod 8)` is 4-colourable: 2 is inert everywhere and `Frob_2` is complex conjugation.
-  - The 5-chromatic graphs need the class-number-2 field `Q(sqrt-15)` (Heule's `omega_4`), and the Polymath field `Q(sqrt-3, sqrt-11, sqrt-15)` is exactly 5-chromatic.
+  - Class number does not govern the 5-chromatic step. 5-chromatic graphs are known in `Q(sqrt-3, sqrt-11, sqrt-15)` (Heule; `h(-15) = 2`; exactly 5-chromatic) and in `Q(sqrt-3, sqrt-11, sqrt-247)` (Exoo-Ismailescu 2020; `h(-247) = 6`). An earlier draft of this entry said "the 5-chromatic graphs need `Q(sqrt-15)`"; the session's audit refuted that (MISTAKE-579).
   - For HYP-2278 (1):
-    - Falconer (1981) already proved the measurable chromatic number is at least 5 by measure theory.
-    - The upper bound `m_1 <= 0.2598` was out of date: `m_1(R^2) <= 0.247 < 1/4` (Ambrus-Csiszarik-Matolcsi-Varga-Zsamboki, arXiv:2207.14179), which gives `chi_m >= 5` by density alone.
-    - openai/math #158 (unrefereed) claims `chi(R^2) >= 6` by ergodic, measure and topological arguments.
+    - The fractional statement itself is TRUE: `chi_f(R^2) <= 4.36 < 5`, now `4 <= chi_f(R^2) <= 4.36`.
+    - But "`chi_f = 1/m_1`" is not a known identity; `1/m_1` is the measurable fractional bound.
+    - The error is integrality. `m_1(R^2) <= 0.247 < 1/4` (Ambrus-Csiszarik-Matolcsi-Varga-Zsamboki, arXiv:2207.14179; the quoted `0.2598` was out of date) forces `chi_m >= 5` by density alone, and `chi_m >= 5` was already Falconer 1981.
+    - "No analytic method can narrow {5,6,7}", read for all colourings, is refuted only CONDITIONALLY, by openai/math #158's transfer theorem (unrefereed). Unconditionally, `chi(R^2) >= 5` is still known only combinatorially.
     - What is true: density alone cannot give 6, since `m_1 >= 0.2293 > 1/5` (Croft).
 - **Correct framing (applied):**
   - THM-4558 records the field-plane values and the refutation.
   - The PROBLEM-LEDGER line on the HN Heegner tower carries a pointer.
   - The historical index is left as written (it is an archive).
-- **Lesson:** a field-tower story for a chromatic number must be tested against residue colourings. One prime fixed by conjugation with a small residue field caps chi for the whole field. And "no analytic method can" claims need a literature check, here Falconer 1981.
+- **Lesson:** a field-tower story for a chromatic number must be tested against residue colourings. One prime fixed by conjugation with a small residue field caps chi for the whole field. That technique is classical (Woodall 1973, Fischer 1990, Madore 2015; recent: hn-2adic, decalion89). And "no analytic method can" claims need a literature check, here Falconer 1981.
 
 ## MISTAKE-575 (2026-10-06, found by mac-mini-2026-10-06-oaimath2's reader of openai/math #090; concerns THM-431 of monad-explorer S710, 2026-06-06) -- "the triangular lattice is NOT optimal at N = 21 (max over all lattice sections = 47, gap 10)", from a search over disk-shaped patches only
 
@@ -2088,7 +2112,7 @@ were unaffected; successful explicit-path replays did not validate the prose.
   - "(2) The triangular lattice is NOT optimal at N=21 [PROVED here, exact integer]. The maximum over **all** triangular-lattice (Eisenstein) sections is Harborth's penny number 47 … the gap is 10 … HYP-2267 … resolves NEGATIVELY."
   - Separately: "none [of the 5 extremal graphs is] a section of any single lattice."
 - **The counterexample (FINITE-EXACT; `04-computation/experiments/oai2_20261006_lattice_u21.py`).**
-  - Take `α = 2 + ω` and `ᾱ = 3 − ω` (both of norm 7; `cos ∠(α, ᾱ) = 11/14`).
+  - Take `ω = e^(iπ/3)`, `α = 2 + ω` and `ᾱ = 3 − ω` (both of norm 7; `cos ∠(α, ᾱ) = 11/14`). The count was re-verified by the session's independent audit: 21 distinct points, 57 pairs, the generic product count `3·7 + 12·3`.
   - The 21 Eisenstein integers `αp + ᾱq`, with `p ∈ {0, 1, ω}` and `q ∈ {0} ∪ units`, have exactly 57 pairs at distance `√7`. Since `u(21) = 57` (Alexeev–Mixon–Parshall 2024), the triangular lattice attains it.
   - The set is the Erdős product triangle × `W_6`, i.e. the extremal graph that THM-431's sibling file already described "at generic angle".
   - The same construction gives `W_6 × W_6`: 49 lattice points with 168 > `3N` unit distances.
@@ -2103,7 +2127,7 @@ were unaffected; successful explicit-path replays did not validate the prose.
 
 - **Claims.**
   - THM-913 ("THE PARALLEL-CLASS BOOK DRAWING — for odd n, the 2-page book drawing of K_n on a cyclic spine with pages = a CONTIGUOUS SPLIT of the parallel-class circle achieves Guy's Z(n)") cited Ábrego et al. (2012) only for the lower bound. It presented the drawing itself as new.
-  - THM-922 called the general-`m` bipartite case "open" without naming the literature conjecture it is: the 2-page Zarankiewicz conjecture `ν_2(K_(m,n)) = Z(m,n)` of de Klerk–Pasechnik–Salazar (2014).
+  - THM-922 called the general-`m` bipartite case "open" without naming the literature conjecture it is: the 2-page Zarankiewicz conjecture `ν_2(K_(m,n)) = Z(m,n)` of de Klerk–Pasechnik–Salazar, *Book drawings of complete bipartite graphs*, arXiv:1210.2918 (DAM 167 (2014)).
 - **The prior art.**
   - The drawing is the **DDS construction**: Damiani, D'Antona and Salemi (1994); first 2-page drawings with `Z(n)` crossings by Blažek and Koman (1964); geometric form by Shahrokhi, Sýkora, Székely and Vrt'o.
   - de Klerk–Pasechnik–Salazar, arXiv:1207.5701, Section 5.1, describe it word for word: matchings `M_i` of endpoint sum `i mod n`, consecutive blocks per page. They compute its `k`-page crossing count for all `n`.

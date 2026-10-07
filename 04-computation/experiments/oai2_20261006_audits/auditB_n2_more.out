@@ -1,0 +1,5 @@
+F2 n=2 t=3: SAT (12 classes)
+F2 n=2 t=4: UNSAT (12 classes)
+dyad n=2 t=3: SAT (21 classes)
+dyad n=2 t=4: SAT (38 classes)
+dyad n=2 t=5: UNSAT (85 classes)

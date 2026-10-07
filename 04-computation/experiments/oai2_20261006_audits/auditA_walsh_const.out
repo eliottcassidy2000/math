@@ -1,0 +1,19 @@
+k= 4: states      8, best F = 0.516129, F/lam^k = 1.38884
+k= 5: states     16, best F = 0.351648, F/lam^k = 1.21192
+k= 6: states     32, best F = 0.259109, F/lam^k = 1.14373
+k= 7: states     64, best F = 0.189630, F/lam^k = 1.07206
+k= 8: states    128, best F = 0.142937, F/lam^k = 1.03498
+k= 9: states    256, best F = 0.107858, F/lam^k = 1.00025
+k=10: states    512, best F = 0.082428, F/lam^k = 0.97905
+k=11: states   1024, best F = 0.063142, F/lam^k = 0.96056
+k=12: states   2048, best F = 0.048661, F/lam^k = 0.94811
+k=13: states   4096, best F = 0.037576, F/lam^k = 0.93770
+k=14: states   8192, best F = 0.029106, F/lam^k = 0.93028
+k=15: states  16384, best F = 0.022578, F/lam^k = 0.92424
+k=16: states  32768, best F = 0.017543, F/lam^k = 0.91977
+k=17: states  65536, best F = 0.013644, F/lam^k = 0.91620
+k=18: states 131072, best F = 0.010622, F/lam^k = 0.91349
+k=19: states 262144, best F = 0.008274, F/lam^k = 0.91135
+k=20: states 524288, best F = 0.006448, F/lam^k = 0.90971
+k=21: states 1048576, best F = 0.005027, F/lam^k = 0.90842
+k=22: states 2097152, best F = 0.003921, F/lam^k = 0.90743

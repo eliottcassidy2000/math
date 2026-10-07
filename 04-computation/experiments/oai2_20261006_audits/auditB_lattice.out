@@ -1,0 +1,5 @@
+alpha*conj(alphab) = (3, 5) -> cos angle = 11/14
+21-point set: distinct = 21  pairs at distance sqrt7 = 57
+49-point set W6 x W6: distinct = 49  pairs at distance sqrt7 = 168  3N = 147
+generic product counts: tri x W6 = 57  W6 x W6 = 168
+distance^2 multiset (21 pts), top: [(7, 57), (21, 18), (25, 12), (27, 12), (16, 12), (3, 12)]

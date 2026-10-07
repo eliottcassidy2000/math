@@ -1,0 +1,8 @@
+q=5 (p=5, m=1): F1: zero 41 (exp 41), nonzero [21] (exp 21) ok; F2: zero 21 (exp 21), nonzero [26] (exp 26) ok; F3: zero 45 (exp 45), nonzero [20] (exp 20) ok
+q=7 (p=7, m=1): F1: zero 85 (exp 85), nonzero [43] (exp 43) ok; F2: zero 43 (exp 43), nonzero [50] (exp 50) ok; F3: zero 91 (exp 91), nonzero [42] (exp 42) ok
+q=11 (p=11, m=1): F1: zero 221 (exp 221), nonzero [111] (exp 111) ok; F2: zero 111 (exp 111), nonzero [122] (exp 122) ok; F3: zero 231 (exp 231), nonzero [110] (exp 110) ok
+q=13 (p=13, m=1): F1: zero 313 (exp 313), nonzero [157] (exp 157) ok; F2: zero 157 (exp 157), nonzero [170] (exp 170) ok; F3: zero 325 (exp 325), nonzero [156] (exp 156) ok
+q=25 (p=5, m=2): F1: zero 1201 (exp 1201), nonzero [601] (exp 601) ok; F2: zero 601 (exp 601), nonzero [626] (exp 626) ok; F3: zero 1225 (exp 1225), nonzero [600] (exp 600) ok
+q=49 (p=7, m=2): F1: zero 4705 (exp 4705), nonzero [2353] (exp 2353) ok; F2: zero 2353 (exp 2353), nonzero [2402] (exp 2402) ok; F3: zero 4753 (exp 4753), nonzero [2352] (exp 2352) ok
+q=121 (p=11, m=2): F1: zero 29041 (exp 29041), nonzero [14521] (exp 14521) ok; F2: zero 14521 (exp 14521), nonzero [14642] (exp 14642) ok; F3: zero 29161 (exp 29161), nonzero [14520] (exp 14520) ok
+q=125 (p=5, m=3): F1: zero 31001 (exp 31001), nonzero [15501] (exp 15501) ok; F2: zero 15501 (exp 15501), nonzero [15626] (exp 15626) ok; F3: zero 31125 (exp 31125), nonzero [15500] (exp 15500) ok

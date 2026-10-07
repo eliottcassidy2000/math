@@ -1,7 +1,7 @@
 ---
 id: THM-4560
-title: "Every translation-invariant (gap-determined) triangle-free graph on N^n has an independent binary subgrid, for every n: a chain of minimal idempotent ultrafilters q_1 <= ... <= q_n on the level semigroups chooses the gaps of any prescribed tree shape so that every contiguous gap sum avoids the sum-free gap set; hence t_dead(Finv) < infinity for every n, and the strong-Specker barrier of THM-521 D holds unconditionally (Erdos 592)"
-status: "PROVED (idempotent-ultrafilter argument; Hindman-Strauss Ch. 1-4 facts cited). Found by the session's reader of openai/math #164 (Hindman's FS+FP conjecture), whose own proof uses no idempotents; the method here is the classical Galvin-Glazer one. FINITE-EXACT companions: fully gap-determined Q_inv(2,3) SAT, Q_inv(2,4) UNSAT (independent CaDiCaL run here); Q_inv(3,t) SAT for t = 4, 5, 6 (reader's two runs, witnesses brute-verified). Independent audit: see the results note."
+title: "Every translation-invariant (gap-determined) triangle-free graph on N^n has an independent binary subgrid, for every n: a chain of minimal idempotent ultrafilters q_1 <= ... <= q_n on the level semigroups chooses the gaps of any prescribed tree shape so that every contiguous gap sum avoids the sum-free gap set; hence t_dead(Finv) < infinity for every n, and the strong-Specker barrier of THM-521 D holds unconditionally for fully gap-determined witnesses (Erdos 592; row-invariant witnesses are not covered)"
+status: "PROVED (idempotent-ultrafilter argument; Hindman-Strauss Ch. 1-5 facts cited). Found by the session's reader of openai/math #164 (Hindman's FS+FP conjecture), whose own proof uses no idempotents; the method here is the classical Galvin-Glazer one, and the chain-of-minimal-idempotents device is standard in Milliken-Taylor / variable-word proofs (e.g. Bergelson-Blass-Hindman 1994). FINITE-EXACT companions: Q_gap(2,3) SAT, Q_gap(2,4) UNSAT (this session, the reader, and the audit: two solvers plus exhaustive enumeration of all 2^24 gap sets); Q_gap(3,t) SAT for t = 4, 5, 6 (witnesses brute-verified twice, independently). INDEPENDENTLY AUDITED 2026-10-06 (audit B: every step of the proof checked; PASS WITH CORRECTIONS, applied: the scope of the THM-521 D corollary, notation, wording)."
 session: mac-mini-2026-10-06-oaimath2
 source: 05-knowledge/results/oai2_openai_math_second_reading_20261006.md
 scripts:
@@ -20,6 +20,8 @@ related:
 * `N^n` is ordered lexicographically. `P_n` is the set of lex-positive vectors of `Z^n`, and `lev(v)` is the index of the first nonzero coordinate.
 * A graph on `N^n` is **gap-determined** if `x ~ y` (`x <_lex y`) iff `y − x ∈ E`, for a fixed `E ⊆ P_n`.
 * It is triangle-free iff `E` is **sum-free**: there are no `d₁, d₂ ∈ E` (equal allowed) with `d₁ + d₂ ∈ E`.
+* **`Q_gap(n,t)`** is the finite game for gap-determined rules on `[t]^n`: the rule must be triangle-free and hit every binary subgrid. This is THM-470's Finv instance.
+  * **Warning.** It is *not* THM-453 G's `invQ(n,t)`, which is the *row-invariant* game (`R_a = R`, `B_(a,a') = B_(a'−a)`, arbitrary column relations). See MISTAKE-577.
 * A **binary subgrid** is the 2^n-leaf set of a height-`n` tree that picks two children at every node (THM-453 C).
 
 ## Theorem (PROVED)
@@ -49,19 +51,23 @@ Let `E ⊆ P_n` be sum-free and `w ∈ [n]^k` any word. Then there are `δ_1, �
 **Corollary 2 (Erdős 592).**
 * No gap-determined strong witness exists on `N^n`, for any `n`.
 * By König (THM-470 A2), **`t_dead(Finv) < ∞` for every `n`**. By the coarsening collapse (THM-470 A3), every gap-determined feature algebra (`(sign, v₂)`, jets, cross-gap, leading digit, …) dies at a finite `t`.
-* **THM-521 D (the strong-Specker barrier) holds without HYP-2396 and without "invariant witnesses = valuation gradings".** A strong witness, if one exists, must use value-dependent features (Larson partial sums; HYP-2558 stays open).
+* **THM-521 D (the strong-Specker barrier) holds unconditionally for fully gap-determined witnesses**, including every valuation grading of the gap vector, without HYP-2396.
+  * For *row-invariant* witnesses (THM-453 F/G, including the dyadic `B_(v₂ g)` family, whose `n = 2` cutoff is `5 = 2n+1`) the barrier is not covered here and remains conditional/open.
+  * A strong witness, if one exists, is not fully gap-determined. Value-dependent features such as Larson's partial sums are one possibility; HYP-2558 (the strong-Specker barrier entry) stays open.
 
-**Corollary 3 (the role of the seam).** Sum-freeness is exactly what keeps `E` out of every idempotent ultrafilter. So the 2-adic seam (THM-469) can delay the death of an invariant witness but never prevent it.
+**Corollary 3 (the role of the seam).** Sum-freeness keeps `E` out of every idempotent ultrafilter (the exact criterion is that `E` contains no IP set). So the 2-adic seam (THM-469), one source of sum-free gradings, can delay the death of a gap-determined witness but never prevent it.
 
 ## Finite data (FINITE-EXACT)
 
-* **`n = 2`, fully gap-determined:** `Q_inv(2,3)` SAT, `Q_inv(2,4)` UNSAT, so the cutoff is 4 (CaDiCaL here; the reader agrees).
-  * The *row-invariant* game of THM-453 F/G has cutoff 5 (SAT at 4, UNSAT at 5, recomputed here).
-  * These are different games (MISTAKE-577).
-* **`n = 3`, fully gap-determined:** `Q_inv(3,t)` is SAT for `t = 4, 5, 6`, with `|E| = 34, 70, 109`.
+* **`n = 2`, fully gap-determined:** `Q_gap(2,3)` SAT, `Q_gap(2,4)` UNSAT, so the cutoff is `4 = 2n`.
+  * Confirmed by CaDiCaL here, by the reader, and by the audit (CaDiCaL and Glucose, plus exhaustive enumeration: 75 winning `E` of `2^12` at `t = 3`, none of `2^24` at `t = 4`).
+  * The gap-determined `(sign, v₂)` algebra also has cutoff 4 (audit, exhaustive).
+  * The *row-invariant* game of THM-453 F/G has cutoff 5 (SAT at 4, UNSAT at 5, recomputed here and by the audit). These are different games (MISTAKE-577).
+* **`n = 3`, fully gap-determined:** `Q_gap(3,t)` is SAT for `t = 4, 5, 6`, with `|E| = 34, 70, 109`.
+  * This was already implied by THM-470 B (F2J SAT at `(3,4..6)`, A3), so these runs are confirmations.
   * Two independent runs produced different witnesses.
-  * Every witness was brute-checked, including all `1.7·10^8` binary subgrids at `t = 6`.
-  * `(3,7)` is undecided. By the theorem, `t_dead(Finv)` at `n = 3` lies in `[7, ∞)` and is finite.
+  * Every witness was brute-checked twice, independently, including all `1.7·10^8` binary subgrids at `t = 6`.
+  * `(3,7)` is undecided: one 60-minute timeout and two runs stopped at about 14 and 19 minutes. By the theorem, `t_dead(Finv)` at `n = 3` lies in `[7, ∞)` and is finite.
 
 ## Not claimed
 

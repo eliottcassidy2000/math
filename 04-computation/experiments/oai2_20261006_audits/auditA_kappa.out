@@ -1,0 +1,9 @@
+q=2: |V|=4, deg=3, triangle=yes, results {2: False, 3: False, 4: True}, 0.0s
+q=3: |V|=9, deg=4, triangle=yes, results {2: False, 3: True}, 0.0s
+q=4: |V|=16, deg=5, triangle=no, results {2: False, 3: False, 4: True}, 0.0s
+q=5: |V|=25, deg=6, triangle=yes, results {2: False, 3: False, 4: True}, 0.0s
+q=7: |V|=49, deg=8, triangle=no, results {2: False, 3: False, 4: True}, 0.0s
+q=8: |V|=64, deg=9, triangle=yes, results {2: False, 3: False, 4: True}, 0.0s
+q=9: |V|=81, deg=10, triangle=yes, results {2: False, 3: True}, 0.0s
+q=11: |V|=121, deg=12, triangle=yes, results {2: False, 3: False, 4: False, 5: True}, 0.1s
+q=16: |V|=256, deg=17, triangle=no, results {2: False, 3: False, 4: True}, 0.0s

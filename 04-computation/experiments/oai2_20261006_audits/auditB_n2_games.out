@@ -1,0 +1,10 @@
+free t=3: vars=36 clauses=111 | cadical153: SAT (0.00s) brute-verified=True |true classes|=12 graph-edges=12 | glucose4: SAT (0.00s) brute-verified=True |true classes|=9 graph-edges=9
+free t=4: vars=120 clauses=776 | cadical153: SAT (0.00s) brute-verified=True |true classes|=37 graph-edges=37 | glucose4: SAT (0.00s) brute-verified=True |true classes|=37 graph-edges=37
+free t=5: vars=300 clauses=3300 | cadical153: UNSAT (0.41s) | glucose4: UNSAT (0.26s)
+row  t=3: vars=21 clauses=82 | cadical153: SAT (0.00s) brute-verified=True |true classes|=8 graph-edges=15 | glucose4: SAT (0.00s) brute-verified=True |true classes|=4 graph-edges=9
+row  t=4: vars=54 clauses=444 | cadical153: SAT (0.00s) brute-verified=True |true classes|=16 graph-edges=38 | glucose4: SAT (0.00s) brute-verified=True |true classes|=13 graph-edges=31
+row  t=5: vars=110 clauses=1550 | cadical153: UNSAT (0.01s) | glucose4: UNSAT (0.01s)
+gap  t=2: vars=4 clauses=3 | cadical153: SAT (0.00s) brute-verified=True |true classes|=2 graph-edges=4 | glucose4: SAT (0.00s) brute-verified=True |true classes|=1 graph-edges=2
+gap  t=3: vars=12 clauses=38 | cadical153: SAT (0.00s) brute-verified=True |true classes|=5 graph-edges=17 | glucose4: SAT (0.00s) brute-verified=True |true classes|=3 graph-edges=11
+gap  t=4: vars=24 clauses=158 | cadical153: UNSAT (0.00s) | glucose4: UNSAT (0.00s)
+gap  t=5: vars=40 clauses=456 | cadical153: UNSAT (0.00s) | glucose4: UNSAT (0.00s)

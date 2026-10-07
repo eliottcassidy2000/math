@@ -1,0 +1,12 @@
+(A) DDS contiguous half-split of K_n has exactly Z(n) crossings for 4 <= n <= 60: True []
+(B) parity-bipartite contiguous split has exactly d_m^2 = Z(m,m) crossings, = telescoping sum, 2 <= m <= 40: True []
+(B') class pair at cyclic distance kappa has G(kappa) = 2kappa(m-kappa)-m crossings (0 within a class); same-page pairs at distance kappa = m - 2kappa; 2 <= m <= 25: True []
+(C) n = 8: DDS crossings 18 (Z(n) = 18), bipartite-bipartite 4 (d_m^2 = 4)
+(C) n = 14: DDS crossings 315 (Z(n) = 315), bipartite-bipartite 81 (d_m^2 = 81)
+(D) m = 3: min over all 2^3 class colourings = 1, Z(m,m) = 1
+(D) m = 4: min over all 2^4 class colourings = 4, Z(m,m) = 4
+(D) m = 5: min over all 2^5 class colourings = 16, Z(m,m) = 16
+(D) m = 6: min over all 2^6 class colourings = 36, Z(m,m) = 36
+(D) m = 7: min over all 2^7 class colourings = 81, Z(m,m) = 81
+(D) m = 8: min over all 2^8 class colourings = 144, Z(m,m) = 144
+ALL OK

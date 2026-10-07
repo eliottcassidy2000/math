@@ -1,0 +1,2 @@
+t=3: 12 gap vectors, 26 Schur-triple masks, 12 distinct hitting masks -> 75 winning sets E; e.g. [(0, 1), (1, -2), (2, -2)]
+t=4: 24 gap vectors, 104 Schur-triple masks, 54 distinct hitting masks -> 0 winning sets E

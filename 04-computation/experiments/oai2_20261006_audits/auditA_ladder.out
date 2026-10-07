@@ -1,0 +1,27 @@
+one extra rotation over Z[w1,w3]:
+  + w2: gens [-3, -11, -7]: NOT excluded; first c-stable primes [17, 41, 83]
+  + w4: gens [-3, -11, -15]: excluded chi<=5 via p=11
+  + w5: gens [-3, -11, -19]: excluded chi<=4 via p=2
+  + w6: gens [-3, -11, -23]: excluded chi<=5 via p=11
+  + w7: gens [-3, -11]: excluded chi<=4 via p=2
+  + w8: gens [-3, -11, -31]: excluded chi<=5 via p=11
+  + w9: gens [-3, -11, -35]: excluded chi<=4 via p=2
+  + w10: gens [-3, -11, -39]: NOT excluded; first c-stable primes [17, 29, 101]
+  + w11: gens [-3, -11, -43]: excluded chi<=4 via p=2
+  + w12: gens [-3, -11, -47]: excluded chi<=5 via p=11
+  + w13: gens [-3, -11, -51]: excluded chi<=4 via p=2
+  + w14: gens [-3, -11, -55]: excluded chi<=5 via p=11
+  + w15: gens [-3, -11, -59]: excluded chi<=4 via p=2
+one extra rotation over Z[w1,w3,w4]:
+  + w2: gens [-3, -11, -15, -7]: NOT excluded; first c-stable primes [41, 101, 131]
+  + w5: gens [-3, -11, -15, -19]: NOT excluded; first c-stable primes [29, 41, 281]
+  + w6: gens [-3, -11, -15, -23]: excluded chi<=5 via p=11
+  + w7: gens [-3, -11, -15]: excluded chi<=5 via p=11
+  + w8: gens [-3, -11, -15, -31]: excluded chi<=5 via p=11
+  + w9: gens [-3, -11, -15, -35]: NOT excluded; first c-stable primes [41, 101, 131]
+  + w10: gens [-3, -11, -15, -39]: NOT excluded; first c-stable primes [29, 101, 131]
+  + w11: gens [-3, -11, -15, -43]: NOT excluded; first c-stable primes [29, 131, 149]
+  + w12: gens [-3, -11, -15, -47]: excluded chi<=5 via p=11
+  + w13: gens [-3, -11, -15, -51]: NOT excluded; first c-stable primes [101, 149, 239]
+  + w14: gens [-3, -11, -15]: excluded chi<=5 via p=11
+  + w15: gens [-3, -11, -15, -59]: excluded chi<=5 via p=11

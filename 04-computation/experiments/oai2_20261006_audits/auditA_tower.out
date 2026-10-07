@@ -1,0 +1,29 @@
+closed form k<=9: True
+transfer identity (300 random x, both eps): True
+F(x(1+-z^m)) <= 2F/(F+1) < 2: True
+k=2: max row F = 1.3333, max column F = 4.0000
+k=3: max row F = 0.8889, max column F = 4.0000
+k=4: max row F = 1.1429, max column F = 1.1034
+k=5: max row F = 0.7356, max column F = 0.6845
+k=6: max row F = 0.5172, max column F = 0.4642
+k=7: max row F = 0.2912, max column F = 0.3038
+k=8: max row F = 0.2362, max column F = 0.2339
+row sums: r_0(1)=N, r_i(1)=0 (i>0), k<=10: True
+k=2: max_rows sup/sqrtN <= 1.336  (bound 8.243)
+k=3: max_rows sup/sqrtN <= 1.838  (bound 8.243)
+k=4: max_rows sup/sqrtN <= 2.195  (bound 8.243)
+k=5: max_rows sup/sqrtN <= 2.309  (bound 8.243)
+k=6: max_rows sup/sqrtN <= 2.512  (bound 8.243)
+k=7: max_rows sup/sqrtN <= 2.547  (bound 8.243)
+k=8: max_rows sup/sqrtN <= 2.763  (bound 8.243)
+k=9: max_rows sup/sqrtN <= 2.791  (bound 8.243)
+k=10: max_rows sup/sqrtN <= 2.889  (bound 8.243)
+k=11: max_rows sup/sqrtN <= 2.889  (bound 8.243)
+k=6: best Walsh row F = 0.25911, /lam^k = 1.1437; best tower row F = 0.51717, ratio tower/Walsh = 1.996
+k=7: best Walsh row F = 0.18963, /lam^k = 1.0721; best tower row F = 0.29116, ratio tower/Walsh = 1.535
+k=8: best Walsh row F = 0.14294, /lam^k = 1.0350; best tower row F = 0.23618, ratio tower/Walsh = 1.652
+k=9: best Walsh row F = 0.10786, /lam^k = 1.0003; best tower row F = 0.16001, ratio tower/Walsh = 1.484
+k=10: best Walsh row F = 0.08243, /lam^k = 0.9791; best tower row F = 0.12656, ratio tower/Walsh = 1.535
+k=11: best Walsh row F = 0.06314, /lam^k = 0.9606; best tower row F = 0.09316, ratio tower/Walsh = 1.475
+k=12: best Walsh row F = 0.04866, /lam^k = 0.9481; best tower row F = 0.07249, ratio tower/Walsh = 1.490
+k=13: best Walsh row F = 0.03758, /lam^k = 0.9377; best tower row F = 0.05511, ratio tower/Walsh = 1.467

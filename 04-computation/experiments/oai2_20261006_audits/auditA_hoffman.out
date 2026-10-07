@@ -1,0 +1,37 @@
+p=  3 lambda_min= -2.000000  -2sqrt(p)=  -3.464  Hoffman 1+d/|l|=3.000000  => kappa >= 3
+p=  5 lambda_min= -2.618034  -2sqrt(p)=  -4.472  Hoffman 1+d/|l|=3.291796  => kappa >= 4
+p=  7 lambda_min= -4.493959  -2sqrt(p)=  -5.292  Hoffman 1+d/|l|=2.780167  => kappa >= 3
+p= 11 lambda_min= -4.795755  -2sqrt(p)=  -6.633  Hoffman 1+d/|l|=3.502213  => kappa >= 4
+p= 13 lambda_min= -6.296230  -2sqrt(p)=  -7.211  Hoffman 1+d/|l|=3.223553  => kappa >= 4
+p= 17 lambda_min= -6.560737  -2sqrt(p)=  -8.246  Hoffman 1+d/|l|=3.743594  => kappa >= 4
+p= 19 lambda_min= -7.609729  -2sqrt(p)=  -8.718  Hoffman 1+d/|l|=3.628215  => kappa >= 4
+p= 23 lambda_min= -7.960687  -2sqrt(p)=  -9.592  Hoffman 1+d/|l|=4.014815  => kappa >= 5
+p= 29 lambda_min= -9.068242  -2sqrt(p)= -10.770  Hoffman 1+d/|l|=4.308249  => kappa >= 5
+p= 31 lambda_min=-10.666510  -2sqrt(p)= -11.136  Hoffman 1+d/|l|=4.000044  => kappa >= 5
+p= 37 lambda_min=-11.472583  -2sqrt(p)= -12.166  Hoffman 1+d/|l|=4.312244  => kappa >= 5
+p= 41 lambda_min=-11.336395  -2sqrt(p)= -12.806  Hoffman 1+d/|l|=4.704881  => kappa >= 5
+p= 43 lambda_min=-11.962230  -2sqrt(p)= -13.115  Hoffman 1+d/|l|=4.678244  => kappa >= 5
+p= 47 lambda_min=-12.846528  -2sqrt(p)= -13.711  Hoffman 1+d/|l|=4.736418  => kappa >= 5
+p= 53 lambda_min=-12.170129  -2sqrt(p)= -14.560  Hoffman 1+d/|l|=5.437093  => kappa >= 6
+p= 59 lambda_min=-14.917577  -2sqrt(p)= -15.362  Hoffman 1+d/|l|=5.022101  => kappa >= 6
+p= 61 lambda_min=-14.751941  -2sqrt(p)= -15.620  Hoffman 1+d/|l|=5.202837  => kappa >= 6
+p= 67 lambda_min=-15.056703  -2sqrt(p)= -16.371  Hoffman 1+d/|l|=5.516261  => kappa >= 6
+p= 71 lambda_min=-14.172834  -2sqrt(p)= -16.852  Hoffman 1+d/|l|=6.080141  => kappa >= 7
+p= 73 lambda_min=-15.941248  -2sqrt(p)= -17.088  Hoffman 1+d/|l|=5.642046  => kappa >= 6
+p= 79 lambda_min=-17.101925  -2sqrt(p)= -17.776  Hoffman 1+d/|l|=5.677836  => kappa >= 6
+p= 83 lambda_min=-17.708728  -2sqrt(p)= -18.221  Hoffman 1+d/|l|=5.743424  => kappa >= 6
+p= 89 lambda_min=-17.014643  -2sqrt(p)= -18.868  Hoffman 1+d/|l|=6.289562  => kappa >= 7
+p= 97 lambda_min=-18.610820  -2sqrt(p)= -19.698  Hoffman 1+d/|l|=6.265754  => kappa >= 7
+p=101 lambda_min=-18.836455  -2sqrt(p)= -20.100  Hoffman 1+d/|l|=6.415032  => kappa >= 7
+p=103 lambda_min=-20.032189  -2sqrt(p)= -20.298  Hoffman 1+d/|l|=6.191644  => kappa >= 7
+p=107 lambda_min=-19.049535  -2sqrt(p)= -20.688  Hoffman 1+d/|l|=6.669430  => kappa >= 7
+p=109 lambda_min=-19.644685  -2sqrt(p)= -20.881  Hoffman 1+d/|l|=6.599479  => kappa >= 7
+p=113 lambda_min=-19.673071  -2sqrt(p)= -21.260  Hoffman 1+d/|l|=6.794723  => kappa >= 7
+p=127 lambda_min=-21.621302  -2sqrt(p)= -22.539  Hoffman 1+d/|l|=6.920087  => kappa >= 7
+p=131 lambda_min=-21.108297  -2sqrt(p)= -22.891  Hoffman 1+d/|l|=7.253465  => kappa >= 8
+p=137 lambda_min=-23.062776  -2sqrt(p)= -23.409  Hoffman 1+d/|l|=6.983668  => kappa >= 7
+p=139 lambda_min=-21.083029  -2sqrt(p)= -23.580  Hoffman 1+d/|l|=7.640412  => kappa >= 8
+
+kappa >= 5 (Hoffman) for p: [23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139]
+kappa >= 6 (Hoffman) for p: [53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139]
+margin at p=31: [4.392426183574827e-05]

@@ -1,0 +1,15 @@
+file finv_witness_n3_t4.txt: |E| = 34
+triangles: 0
+2-level subgrids: 216, internally independent: 12
+binary subgrids of [t]^3: 279936 (= C(t,2)^7 = 279936); independent (missed): 0
+VERDICT: WITNESS OK
+file finv_witness_n3_t5.txt: |E| = 70
+triangles: 0
+2-level subgrids: 1000, internally independent: 84
+binary subgrids of [t]^3: 10000000 (= C(t,2)^7 = 10000000); independent (missed): 0
+VERDICT: WITNESS OK
+file finv_witness_n3_t6.txt: |E| = 109
+triangles: 0
+2-level subgrids: 3375, internally independent: 288
+binary subgrids of [t]^3: 170859375 (= C(t,2)^7 = 170859375); independent (missed): 0
+VERDICT: WITNESS OK

@@ -214,7 +214,8 @@ all heights (THM-1289, published), δ ineffective.
   tower (HYP-2276/2277): the most rigid χ=4 junctions land on the Heegner numbers
   {7,11,19,43,67,163} [**2026-10-06: the Heegner roadmap is REFUTED** — residue colourings
   (THM-4558, MISTAKE-576): Q(√−3,√−19) is 3-chromatic, the whole Heegner compositum is
-  4-chromatic, and the 5-chromatic step needs √−15]; 3n floor bounds (THM-421); u21=57, u22
+  4-chromatic, and 5-chromatic graphs live in non-Heegner fields (√−15: Heule; √−247:
+  Exoo–Ismailescu)]; 3n floor bounds (THM-421); u21=57, u22
   (THM-431/440; the triangular lattice attains u(21), MISTAKE-575); the J₀ spectral floor
   χ(ℝ²)≥3.48. The self-audit `missed-important-problem-frontier-s657`
   ranks HN #1 for stride potential. ★ Promote to a first-class thread.
@@ -793,9 +794,9 @@ all heights (THM-1289, published), δ ineffective.
   - Crossing (#165, Lean): THM-922 (III) for every n; parity drawing of K_(m,m) has exactly Z(m,m) crossings; 2-page Zarankiewicz CONDITIONAL; THM-913 = DDS construction.
   - Lattice (#090): the triangular lattice attains u(21) = 57 (THM-431 corrected).
   - Littlewood (#076): THM-4561, the skew tower's rows are Thue–Morse; Rudin–Shapiro switching flattens every row to <= 8.24 sqrt N.
-  - Plane colouring (#158): THM-4558 residue colourings (Madore's technique) give exact chi for the HN field tower; the Heegner roadmap is false.
+  - Plane colouring (#158): THM-4558, residue colourings at conjugation-stable primes (KNOWN technique: Woodall, Fischer, Madore; hn-2adic and decalion89 repositories 2026). New here: the Heegner rungs Q(sqrt-3, sqrt-(4N-1)), N = 2 mod 3, are 3-chromatic. So the Heegner roadmap is false.
   - Ramsey (#172): THM-4559, every algebraic spherical set is Ramsey (CONDITIONAL on #172).
-  - Erdős 592 (#164's ultrafilter ancestry): THM-4560, every gap-determined triangle-free grid graph leaves a binary subgrid independent; t_dead(Finv) < infinity; THM-521 D unconditional; THM-470 Finv label corrected.
+  - Erdős 592 (#164's ultrafilter ancestry): THM-4560, every gap-determined triangle-free grid graph leaves a binary subgrid independent; t_dead(Finv) < infinity; THM-521 D unconditional for gap-determined witnesses (row-invariant ones not covered); THM-470 Finv label corrected (n = 2 cutoffs: gap-determined 4, row-invariant 5).
   - Barnette (#180): HYP-9215 knight-torus blocking law. Cancellation (#047): THM-4562 slice lemma, THM-1300 fully non-slice; HYP-9216.
   - The rational plane reduces mod 7 onto the 7 x 7 knight torus: z -> (1+2i) z.
 

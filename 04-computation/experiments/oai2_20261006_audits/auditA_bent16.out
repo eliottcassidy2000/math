@@ -1,0 +1,2 @@
+tower: #d (d0=1) with |Hd| = 4 entrywise: 0; max_d min_i |(Hd)_i| = 2
+sylvester: #d (d0=1) with |Hd| = 4 entrywise: 448; max_d min_i |(Hd)_i| = 4

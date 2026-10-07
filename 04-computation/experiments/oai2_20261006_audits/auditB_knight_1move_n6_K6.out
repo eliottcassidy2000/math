@@ -1,0 +1,6 @@
+G_6: 36 vertices, 144 edges, 8-regular, triangles = 0
+(i) e0 lies in a Hamiltonian cycle: yes
+(ii) local set: the 7 other moves at (0,0) -> Hamiltonian cycle through e0 exists: False (degree of (0,0) after deletion = 1)
+(iii) n=6: does a set of <= 6 moves (avoiding e0) block every tour through e0? -> UNSAT; iterations 6, cycle pool 412, SAT fallbacks 1, 531s
+     => beta_P >= 7 for the 1-move path at n = 6; with (ii), beta_P = lambda_P = 7
+timeout 620 python3 auditB_knight_1move.py 6 6 560  478.16s user 4.26s system 90% cpu 8:51.02 total

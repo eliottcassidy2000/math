@@ -1,2 +1,5 @@
 n=8 m=1: V=64 E=256 triangles=0; seeded 40 HCs
   1 path representatives
+      round 1: pool 5120 cycles; DONE uncertified=0 leaves=359895314625 local_uncertified=0 (711s) => CERTIFIED
+   P=[(0, 0), (1, 2)]: lambda=7 [starve], local set blocks: True; all 6-sets leave an HC through P: True -> beta=lambda (711s, stored HCs 40)
+  SUMMARY n=8 m=1: {(7, 'beta=lambda'): 1}  total 737s

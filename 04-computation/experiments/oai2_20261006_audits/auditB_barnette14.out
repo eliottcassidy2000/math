@@ -1,0 +1,6 @@
+perm (1, 2, 4): planar=True bipartite=True 3-conn=True V=14 E=21 single blockers=0 blocking pairs=57 stars=42 non-stars=15
+perm (1, 4, 2): planar=True bipartite=True 3-conn=True V=14 E=21 single blockers=0 blocking pairs=57 stars=42 non-stars=15
+perm (2, 1, 4): planar=True bipartite=True 3-conn=True V=14 E=21 single blockers=0 blocking pairs=57 stars=42 non-stars=15
+perm (2, 4, 1): planar=True bipartite=True 3-conn=True V=14 E=21 single blockers=0 blocking pairs=57 stars=42 non-stars=15
+perm (4, 1, 2): planar=True bipartite=True 3-conn=True V=14 E=21 single blockers=0 blocking pairs=57 stars=42 non-stars=15
+perm (4, 2, 1): planar=True bipartite=True 3-conn=True V=14 E=21 single blockers=0 blocking pairs=57 stars=42 non-stars=15

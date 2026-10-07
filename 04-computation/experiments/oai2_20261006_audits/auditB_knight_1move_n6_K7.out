@@ -1,0 +1,3 @@
+(i) e0 lies in a Hamiltonian cycle: yes
+(ii) local set: the 7 other moves at (0,0) -> Hamiltonian cycle through e0 exists: False (degree of (0,0) after deletion = 1)
+(iii) n=6: does a set of <= 7 moves (avoiding e0) block every tour through e0? -> BLOCKER FOUND [1, 2, 3, 4, 5, 6, 7]; iterations 1, cycle pool 400, SAT fallbacks 0, 0s

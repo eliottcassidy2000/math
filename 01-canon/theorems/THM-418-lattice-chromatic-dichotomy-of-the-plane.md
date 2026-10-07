@@ -86,8 +86,8 @@ Moser spindle, classical: triangular grid is 3-chromatic / `χ(ℚ²)=2`.
 
 ## Update (2026-10-06, mac-mini-2026-10-06-oaimath2; THM-4558)
 
-**The dichotomy extends from lattices to whole field planes.** By reduction modulo a prime fixed by complex conjugation (Madore's technique, 2015; THM-4558's Lemma R):
+**The dichotomy extends from lattices to whole field planes.** By reduction modulo a prime fixed by complex conjugation (THM-4558's Lemma R). That lemma is KNOWN: Woodall 1973, Fischer 1990, Madore 2015, MildlyMeticulous hn-2adic Thm A′, decalion89 Prop. A.
 * the plane over `Q(√−d)` is at most 3-chromatic, and bipartite if `d ≡ 1, 2 (mod 4)`;
-* `Q(√2)² = Q(ζ_8)` is 2-chromatic, and `Q(√3)² = Q(ζ_12)` (which contains both lattices at every scale and rotation) is 3-chromatic (both KNOWN, Madore 2015).
+* `Q(√2)² = Q(ζ_8)` is 2-chromatic, and `Q(√3)² = Q(ζ_12)` is 3-chromatic (both KNOWN, Madore 2015). `Q(ζ_12)` contains a similar copy of `U(Z², D)` and of `U(Z[ω], D)` for every norm `D`, via `z ↦ z·ᾱ/D` with `N(α) = D`.
 
 The square-lattice 2-adic recursion and the triangular 3-adic recursion above are both ramified cases of that lemma, at `(1 + i)` over 2 and at `(√−3)` over 3.
