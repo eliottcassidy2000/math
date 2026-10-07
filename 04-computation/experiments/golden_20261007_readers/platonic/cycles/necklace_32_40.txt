@@ -1,0 +1,10 @@
+L=32 lyndon_leaves(j>=L/2)=76499520 count_check=OK frontier=16510
+L=33 lyndon_leaves(j>=L/2)=130150493 count_check=OK frontier=16510
+L=34 lyndon_leaves(j>=L/2)=286960946 count_check=OK frontier=16510
+L=35 lyndon_leaves(j>=L/2)=490853403 count_check=OK frontier=16510
+L=36 lyndon_leaves(j>=L/2)=1080476338 count_check=OK frontier=16510
+L=37 lyndon_leaves(j>=L/2)=1857283155 count_check=OK frontier=16510
+L=38 lyndon_leaves(j>=L/2)=4081876927 count_check=OK frontier=16510
+L=39 lyndon_leaves(j>=L/2)=7048151355 count_check=OK frontier=16510
+L=40 lyndon_leaves(j>=L/2)=15466961537 count_check=OK frontier=16510
+./necklace 32 40 4  319.82s user 1.90s system 390% cpu 1:22.30 total

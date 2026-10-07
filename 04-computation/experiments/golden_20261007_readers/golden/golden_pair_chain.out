@@ -1,0 +1,8 @@
+(1) chain table matches direct orbits: 300 pairs x 200 steps, 0 mismatches
+(2) BFS: states (0,e), |a|,|b| <= 12: 624 reach (0,0); failures: []
+(3) Monte Carlo from (k,e)=(0, (1, 0)): merged 1960/2000 by T=40000; median merge time 18
+     T=   100  P(no merge by T)=0.2935  sqrt(T)*q=2.93
+     T=   400  P(no merge by T)=0.1725  sqrt(T)*q=3.45
+     T=  1600  P(no merge by T)=0.1025  sqrt(T)*q=4.10
+     T=  6400  P(no merge by T)=0.0475  sqrt(T)*q=3.80
+     T= 25600  P(no merge by T)=0.0240  sqrt(T)*q=3.84

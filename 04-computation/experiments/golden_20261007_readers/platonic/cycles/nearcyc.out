@@ -1,0 +1,12 @@
+(L,k)=(11,7) m=-139={139: 1}  Lyndon words=30  denominators<|m| realised: [(1, 1)]
+     closest-to-integer x_w: c_w=18904, x_w=-136.000000 (dist 0/|m|), word=00011110111
+(L,k)=(13,8) m=1631={7: 1, 233: 1}  Lyndon words=99  denominators<|m| realised: [(233, 15)]
+     closest-to-integer x_w: c_w=66868, x_w=40.998161 (dist 3/|m|), word=0011001110111
+(L,k)=(14,9) m=-3299={3299: 1}  Lyndon words=143  denominators<|m| realised: []
+     closest-to-integer x_w: c_w=122090, x_w=-37.008184 (dist 27/|m|), word=01011010111011
+(L,k)=(16,10) m=6487={13: 1, 499: 1}  Lyndon words=497  denominators<|m| realised: [(499, 41)]
+     closest-to-integer x_w: c_w=1719056, x_w=265.000154 (dist 1/|m|), word=0000111001111111
+(L,k)=(19,12) m=-7153={23: 1, 311: 1}  Lyndon words=2652  denominators<|m| realised: [(23, 8), (311, 117)]
+     closest-to-integer x_w: c_w=8884024, x_w=-1241.999720 (dist 2/|m|), word=0001011111110001111
+(L,k)=(27,17) m=5077565={5: 1, 71: 1, 14303: 1}  Lyndon words=312455  denominators<|m| realised: [(5, 2), (71, 5), (355, 16), (14303, 843), (71515, 3415), (1015513, 60499)]
+     closest-to-integer x_w: c_w=6758239024, x_w=1331.000002 (dist 9/|m|), word=000011110100011111101110111

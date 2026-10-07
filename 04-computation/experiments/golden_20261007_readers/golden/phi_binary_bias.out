@@ -1,0 +1,12 @@
+  n prime                      N=  2262  P(F prime)=0.0946  heuristic 2/lnF=0.0828
+  n composite                  N= 17737  P(F prime)=0.0771  heuristic 2/lnF=0.0798
+  n even composite             N=  9999  P(F prime)=0.0788  heuristic 2/lnF=0.0801
+  n odd composite              N=  7738  P(F prime)=0.0750  heuristic 2/lnF=0.0795
+  P(2 | F(n)): given 2|n: 0.0000   given 2!|n: 0.0000
+  P(3 | F(n)): given 3|n: 0.3579   given 3!|n: 0.3583
+  P(5 | F(n)): given 5|n: 0.1713   given 5!|n: 0.2071
+  P(7 | F(n)): given 7|n: 0.1362   given 7!|n: 0.1440
+  P(11 | F(n)): given 11|n: 0.1656   given 11!|n: 0.0808
+  P(13 | F(n)): given 13|n: 0.0819   given 13!|n: 0.0781
+  #n with n | F(n): 10  examples [11, 19, 25, 33, 55, 57, 341, 969, 2255]
+  P(gcd(F(n), n) > 1 | n composite) = 0.2246;  P(gcd(F(p),p)>1 | p prime) = 0.001326259946949602

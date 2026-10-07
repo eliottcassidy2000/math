@@ -1,0 +1,71 @@
+== Standard orbits (3n+1, n/2), golden-tagged values
+332: length 112, peak 9232; tagged: 47(L_8)@8, 322(L_12)@13, 242(3^5-1)@16, 121(11^2)@17, 233(F_13)@29, 377(F_14)@49, 5(F_5)@107, 8(F_6)@109, 4(L_3)@110
+233: length 83, peak 9232; tagged: 233(F_13)@0, 377(F_14)@20, 5(F_5)@78, 8(F_6)@80, 4(L_3)@81
+223: length 70, peak 9232; tagged: 5(F_5)@65, 8(F_6)@67, 4(L_3)@68
+425: length 58, peak 9232; tagged: 5(F_5)@53, 8(F_6)@55, 4(L_3)@56
+105: length 38, peak 808; tagged: 76(L_9)@16, 29(L_7)@20, 11(L_5)@24, 34(F_9)@25, 13(F_7)@29, 5(F_5)@33, 8(F_6)@35, 4(L_3)@36
+27: length 111, peak 9232; tagged: 47(L_8)@7, 322(L_12)@12, 242(3^5-1)@15, 121(11^2)@16, 233(F_13)@28, 377(F_14)@48, 5(F_5)@106, 8(F_6)@108, 4(L_3)@109
+   332 joins the 27-trajectory at 94 after 7 steps
+   233 joins the 27-trajectory at 233 after 0 steps
+   223 joins the 27-trajectory at 850 after 11 steps
+   425 joins the 27-trajectory at 425 after 0 steps
+   105 joins the 27-trajectory at 40 after 30 steps
+
+== Odd-map words
+   83 -> 233: word [1, 3, 1, 1, 1, 2, 2, 1, 2, 1, 1] (r=11, A=16)
+   233 -> 425: word [2, 1, 1, 1, 2, 3, 1, 1, 2, 1] (r=10, A=15)
+   223 -> 425: word [1, 1, 1, 1, 3] (r=5, A=7)
+   105 -> 1: word [2, 1, 1, 1, 3, 4, 1, 3, 1, 2, 3, 4] (r=12, A=26)
+   233 -> 377: word [2, 1, 1, 1, 2, 3, 1, 1] (r=8, A=12)
+   377 -> 425: word [2, 1] (r=2, A=3)
+
+== Terras times / odd counts to the meeting points
+   T^t(332) = 233: (t, odd steps) = (18, 11)
+   T^t(233) = 425: (t, odd steps) = (15, 10)
+   T^t(223) = 425: (t, odd steps) = (7, 5)
+   T^t(332) = 425: (t, odd steps) = (33, 21)
+
+== Pair-chain data at the meetings (THM-4581 language)
+   223 vs 233 meet at 425: Terras times 7,15; clock shift 8; equal-time pair (u,v)=(223,668) merges at Terras time 7; k0 = -1, e0 = u - 3^k0 v = 1/3
+      chain state at time 7: (k,e) = (0,0), u_t = v_t = 425
+   332 vs 233 meet at 233: Terras times 18,0; clock shift 18; equal-time pair (u,v)=(233,233) merges at Terras time 0; k0 = 0, e0 = u - 3^k0 v = 0
+      chain state at time 0: (k,e) = (0,0), u_t = v_t = 233
+
+== 2-adic proximity (common Terras parity prefix length = v_2(a-b))
+   v2(223-31) = 6; T^6: 121 vs 850, difference 729 = 3^5 * 3
+   v2(105-41) = 6; T^6: 161 vs 404, difference 243 = 3^5 * 1
+   v2(233-41) = 6; T^6: 161 vs 890, difference 729 = 3^5 * 3
+   v2(425-41) = 7; T^7: 242 vs 2429, difference 2187 = 3^6 * 3
+   v2(233-105) = 7; T^7: 202 vs 445, difference 243 = 3^5 * 1
+   v2(425-105) = 6; T^6: 404 vs 1619, difference 1215 = 3^5 * 5
+   v2(425-233) = 6; T^6: 890 vs 1619, difference 729 = 3^5 * 3
+   residues mod 64: {27: 27, 31: 31, 41: 41, 105: 41, 223: 31, 233: 41, 332: 12, 425: 41}  mod 128: {27: 27, 31: 31, 41: 41, 105: 105, 223: 95, 233: 105, 332: 76, 425: 41}
+
+== Base rates (standard orbits of n in [200,500])
+   P(orbit contains 233=F13) = 0.296
+   P(orbit contains 377=F14) = 0.342
+   P(orbit contains 47=L8) = 0.153
+   P(orbit contains 322=L12) = 0.176
+   P(orbit contains 121=11^2) = 0.183
+   P(orbit contains 242=3^5-1) = 0.183
+   P(orbit contains 425) = 0.362
+   P(orbit contains 9232 (27-trunk peak)) = 0.385
+   shift +0: mean # of (golden+shift) values >=29 per orbit = 2.39; 332 has 6, 233 has 2; fraction of orbits with >= 6: 0.153
+   shift +1: mean # of (golden+shift) values >=29 per orbit = 1.34; 332 has 2, 233 has 2; fraction of orbits with >= 6: 0.000
+   shift -1: mean # of (golden+shift) values >=29 per orbit = 1.52; 332 has 3, 233 has 2; fraction of orbits with >= 6: 0.000
+   shift +2: mean # of (golden+shift) values >=29 per orbit = 0.99; 332 has 3, 233 has 1; fraction of orbits with >= 6: 0.000
+   shift -2: mean # of (golden+shift) values >=29 per orbit = 1.12; 332 has 3, 233 has 1; fraction of orbits with >= 6: 0.000
+   shift +3: mean # of (golden+shift) values >=29 per orbit = 2.11; 332 has 3, 233 has 3; fraction of orbits with >= 6: 0.000
+   consecutive Fibonacci pairs with F_{k+1} on orbit(F_k): [(233, 377)]
+   control: P(round(phi a) in orbit(a)), a in [150,400] = 0.036
+   control: P(round(c a) in orbit(a)), c in {1.5,1.6,1.7} = 0.118
+   n <= 1000 whose orbits pass 9232 (the 27-trunk): 368
+
+== 105: odd orbit [105, 79, 119, 179, 269, 101, 19, 29, 11, 17, 13, 5, 1]  length 38
+   P(orbit of n in [80,130] contains 101) = 0.118
+   P(orbit of n in [80,130] contains 19) = 0.137
+   P(orbit of n in [80,130] contains 29) = 0.196
+   P(orbit of n in [80,130] contains 11) = 0.392
+   P(orbit of n in [80,130] contains 17) = 0.412
+   P(orbit of n in [80,130] contains 13) = 0.431
+   P(orbit of n in [80,130] contains 76) = 0.137

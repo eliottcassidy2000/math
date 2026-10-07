@@ -1,0 +1,8 @@
+P(Galois primes {5,7,11} subset of C(alpha)), alpha~U[1.5,1.66667]: 0.601
+P(Galois primes {5,7,11} subset of C(alpha)), alpha~U[1.2,1.9]: 0.564
+P({12} subset of C(alpha)), alpha~U[1.5,1.66667]: 0.172
+P({12} subset of C(alpha)), alpha~U[1.2,1.9]: 0.201
+P({8,12} subset of C(alpha)), alpha~U[1.5,1.66667]: 0.170
+P({8,12} subset of C(alpha)), alpha~U[1.2,1.9]: 0.042
+P({7,11} (the -17 cycle shape) subset of C(alpha)), alpha~U[1.5,1.66667]: 0.601
+P({7,11} (the -17 cycle shape) subset of C(alpha)), alpha~U[1.2,1.9]: 0.561

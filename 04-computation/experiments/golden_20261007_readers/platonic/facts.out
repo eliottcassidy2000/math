@@ -1,0 +1,33 @@
+2^11-3^7 = -139  2^11+3^7 = 4235 {5: 1, 7: 1, 11: 2}
+ord_11(2), ord_11(3): 10 5  3^5-1 = 242 {2: 1, 11: 2}
+Fermat quotients mod 11: q(2) = 5  q(3) = 0
+ternary Golay sphere 1+2*11+4*C(11,2) = 243 = 3^5? True
+binary Golay sphere 1+23+C(23,2)+C(23,3) = 2048 = 2^11? True
+Hamming sphere 1+7 = 8
+base-3 repunits (3^j-1)/2: [(1, 1, {}), (2, 4, {2: 2}), (3, 13, {13: 1}), (4, 40, {2: 3, 5: 1}), (5, 121, {11: 2}), (6, 364, {2: 2, 7: 1, 13: 1}), (7, 1093, {1093: 1}), (8, 3280, {2: 4, 5: 1, 41: 1})]
+1093 Wieferich base 2: True  11 Wieferich base 3: True
+-1/2 mod 3^5 = 121
+phi^10 - 1 - 11 phi^5 = 0
+(4-phi)(3+phi) = -GoldenRatio**2 + GoldenRatio + 12
+phi mod 11 roots of x^2-x-1: [4, 8]  orders: [5, 10]
+Legendre (3|11),(5|11),(-1|11): 1 1 -1
+p=5 |Borel|=10 C(p,2)=10 regular on pairs (orbit of {0,1} free & full): False ; <2>=squares? False <3>=squares? False
+p=7 |Borel|=21 C(p,2)=21 regular on pairs (orbit of {0,1} free & full): True ; <2>=squares? True <3>=squares? False
+p=11 |Borel|=55 C(p,2)=55 regular on pairs (orbit of {0,1} free & full): True ; <2>=squares? False <3>=squares? True
+p=13 |Borel|=78 C(p,2)=78 regular on pairs (orbit of {0,1} free & full): False ; <2>=squares? False <3>=squares? False
+p=23 |Borel|=253 C(p,2)=253 regular on pairs (orbit of {0,1} free & full): True ; <2>=squares? True <3>=squares? True
+-17 cycle: [-17, -25, -37, -55, -82, -41, -61, -91, -136, -68, -34]
+  z = 2x+1: [-33, -49, -73, -109, -163, -81, -121, -181, -271, -135, -67]
+  y = x+1 : [-16, -24, -36, -54, -81, -40, -60, -90, -135, -67, -33]
+  odd-run starts: [-17, -41]  4|m|-1: [67, 163]
+  -5 cycle odd-run start -5: 4*5-1 = 19
+Euler lucky numbers (n^2+n+m prime for 0<=n<=m-2), m<100: [2, 3, 5, 11, 17, 41]
+discriminants |D| <= 8000 with class-group exponent <= 2: count = 101, max = 7392
+  odd |D|: 36 ; |D| = 0 mod 4: 65
+idoneal numbers (n = |D|/4): 65 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 15, 16, 18, 21, 22, 24, 25, 28, 30, 33, 37, 40, 42, 45, 48, 57, 58, 60, 70, 72, 78, 85, 88, 93, 102, 105, 112, 120, 130, 133, 165, 168, 177, 190, 210, 232, 240, 253, 273, 280, 312, 330, 345, 357, 385, 408, 462, 520, 760, 840, 1320, 1365, 1848]
+idoneal counts mod 8: {0: 20, 1: 10, 2: 8, 3: 1, 4: 4, 5: 12, 6: 8, 7: 2}
+idoneal n = 2 mod 4 (16): [2, 6, 10, 18, 22, 30, 42, 58, 70, 78, 102, 130, 190, 210, 330, 462]
+squarefree idoneal n = 1 mod 4 (19): [1, 5, 13, 21, 33, 37, 57, 85, 93, 105, 133, 165, 177, 253, 273, 345, 357, 385, 1365]  non-squarefree removed: [9, 25, 45]
+idoneal n>9 with n = 2 mod 3: []
+odd |D| = 7 mod 8 (2 split): [7, 15]
+exponent-2 |D| with an odd prime p, p^2 < |D|/4, split: []

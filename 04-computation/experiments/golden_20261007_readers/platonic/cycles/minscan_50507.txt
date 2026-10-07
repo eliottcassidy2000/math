@@ -1,0 +1,5 @@
+CYCLE sign=+ min|x|=1 period L=2 odd k=1 word=10
+CYCLE sign=- min|x|=1 period L=1 odd k=1 word=1
+CYCLE sign=- min|x|=5 period L=3 odd k=2 word=110
+CYCLE sign=- min|x|=17 period L=11 odd k=7 word=11110111000
+done XB=285817587 YB=212965505 LMAX=50507 capped=0 overflow=0 max_stop_pos=395 max_stop_neg=321

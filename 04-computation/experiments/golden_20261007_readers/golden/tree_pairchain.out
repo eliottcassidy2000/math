@@ -1,0 +1,8 @@
+T(223) = 335  T^9(233) = 334  odd steps of 233 in 9: 6
+T^6(334) = 425  T^6(335) = 425  first equal time: 6
+residues v mod 64 with (v, v+1) merged by time 6: 18 /64; 334 mod 64 = 14 in list: True
+family (223 + 31104 s, 233 + 32768 s): T(n) = T^9(m) + 1 and T^7(n) = T^15(m) for s < 3000: True
+prior family (223 + 62208 t, 233 + 65536 t) meets at 425 + 118098 t for t < 3000: True
+Terras times to {1,2}: 105 -> 25 ending at 2 ; 233 -> 53 ending at 2
+first t with T^t(105) = T^t(233): 53
+T^7(105), T^7(233) = 202 445  diff = 243

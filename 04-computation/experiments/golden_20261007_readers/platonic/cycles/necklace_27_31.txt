@@ -1,0 +1,5 @@
+L=27 lyndon_leaves(j>=L/2)=2485504 count_check=OK frontier=16409
+L=28 lyndon_leaves(j>=L/2)=5509504 count_check=OK frontier=16492
+L=29 lyndon_leaves(j>=L/2)=9256395 count_check=OK frontier=16492
+L=30 lyndon_leaves(j>=L/2)=20480421 count_check=OK frontier=16508
+L=31 lyndon_leaves(j>=L/2)=34636833 count_check=OK frontier=16508

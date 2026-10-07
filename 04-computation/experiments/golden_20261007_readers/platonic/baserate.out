@@ -1,0 +1,9 @@
+C(log2 3) up to 120 : [1, 2, 3, 5, 7, 8, 11, 12, 17, 19, 27, 29, 41, 46, 53, 65, 84, 94]
+Platonic V/E/F + rotation orders + binary orders     obs=2 ([8, 12])  null[1.5,1.66667]: mean=2.02  P(>=obs)=0.779
+Platonic V/E/F + rotation orders + binary orders     obs=2 ([8, 12])  null[1.2,1.9]: mean=2.19  P(>=obs)=0.810
+  ... plus Galois primes 5,7,11                      obs=5 ([5, 7, 8, 11, 12])  null[1.5,1.66667]: mean=4.47  P(>=obs)=0.623
+  ... plus Galois primes 5,7,11                      obs=5 ([5, 7, 8, 11, 12])  null[1.2,1.9]: mean=4.71  P(>=obs)=0.577
+rotation group orders only {12,24,60}                obs=1 ([12])  null[1.5,1.66667]: mean=0.25  P(>=obs)=0.255
+rotation group orders only {12,24,60}                obs=1 ([12])  null[1.2,1.9]: mean=0.41  P(>=obs)=0.366
+Ellison x,y values {13,14,16,19,27,8,9,10,12,17}     obs=5 ([8, 12, 17, 19, 27])  null[1.5,1.66667]: mean=4.23  P(>=obs)=0.374
+Ellison x,y values {13,14,16,19,27,8,9,10,12,17}     obs=5 ([8, 12, 17, 19, 27])  null[1.2,1.9]: mean=4.00  P(>=obs)=0.297

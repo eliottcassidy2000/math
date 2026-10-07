@@ -1,0 +1,6 @@
+CYCLE sign=+ min|x|=1 period L=2 odd k=1 word=10
+CYCLE sign=- min|x|=1 period L=1 odd k=1 word=1
+CYCLE sign=- min|x|=5 period L=3 odd k=2 word=110
+CYCLE sign=- min|x|=17 period L=11 odd k=7 word=11110111000
+done XB=7216102493 YB=10295871817 LMAX=301993 capped=0 overflow=0 max_stop_pos=447 max_stop_neg=508
+./minscan_mt 7216102493 10295871817 301993 4  155.70s user 0.90s system 391% cpu 40.005 total

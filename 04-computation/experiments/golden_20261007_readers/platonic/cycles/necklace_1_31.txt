@@ -1,0 +1,36 @@
+FOUND L=1 k=0 x=0 word=0
+FOUND L=1 k=1 x=-1 word=1
+L=1 lyndon_leaves(j>=L/2)=2 count_check=OK frontier=2
+FOUND L=2 k=1 x=2 word=01
+L=2 lyndon_leaves(j>=L/2)=1 count_check=OK frontier=2
+FOUND L=3 k=2 x=-10 word=011
+L=3 lyndon_leaves(j>=L/2)=1 count_check=OK frontier=2
+L=4 lyndon_leaves(j>=L/2)=2 count_check=OK frontier=2
+L=5 lyndon_leaves(j>=L/2)=3 count_check=OK frontier=2
+L=6 lyndon_leaves(j>=L/2)=6 count_check=OK frontier=2
+L=7 lyndon_leaves(j>=L/2)=9 count_check=OK frontier=2
+L=8 lyndon_leaves(j>=L/2)=19 count_check=OK frontier=2
+L=9 lyndon_leaves(j>=L/2)=28 count_check=OK frontier=2
+L=10 lyndon_leaves(j>=L/2)=62 count_check=OK frontier=2
+FOUND L=11 k=7 x=-136 word=00011110111
+L=11 lyndon_leaves(j>=L/2)=93 count_check=OK frontier=2
+L=12 lyndon_leaves(j>=L/2)=205 count_check=OK frontier=2
+L=13 lyndon_leaves(j>=L/2)=315 count_check=OK frontier=2
+L=14 lyndon_leaves(j>=L/2)=703 count_check=OK frontier=2
+L=15 lyndon_leaves(j>=L/2)=1091 count_check=OK frontier=2
+L=16 lyndon_leaves(j>=L/2)=2440 count_check=OK frontier=2
+L=17 lyndon_leaves(j>=L/2)=3855 count_check=OK frontier=2
+L=18 lyndon_leaves(j>=L/2)=8616 count_check=OK frontier=2
+L=19 lyndon_leaves(j>=L/2)=13797 count_check=OK frontier=2
+L=20 lyndon_leaves(j>=L/2)=30801 count_check=OK frontier=2
+L=21 lyndon_leaves(j>=L/2)=49929 count_check=OK frontier=2
+L=22 lyndon_leaves(j>=L/2)=111311 count_check=OK frontier=2
+L=23 lyndon_leaves(j>=L/2)=182361 count_check=OK frontier=15359
+L=24 lyndon_leaves(j>=L/2)=405751 count_check=OK frontier=16120
+L=25 lyndon_leaves(j>=L/2)=671088 count_check=OK frontier=16120
+L=26 lyndon_leaves(j>=L/2)=1490409 count_check=OK frontier=16409
+L=27 lyndon_leaves(j>=L/2)=2485504 count_check=OK frontier=16409
+L=28 lyndon_leaves(j>=L/2)=5509504 count_check=OK frontier=16492
+L=29 lyndon_leaves(j>=L/2)=9256395 count_check=OK frontier=16492
+L=30 lyndon_leaves(j>=L/2)=20480421 count_check=OK frontier=16508
+L=31 lyndon_leaves(j>=L/2)=34636833 count_check=OK frontier=16508

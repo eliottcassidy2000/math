@@ -1,0 +1,6 @@
+Fibonacci values in [29,1e4]: [34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765]
+Lucas values in [29,1e4]: [29, 47, 76, 123, 199, 322, 521, 843, 1364, 2207, 3571, 5778, 9349]
+observed Fib/Lucas hits on 27-trajectory: [47, 233, 322, 377] = 4
+null: two random ratio-phi sequences: mean hits 2.14, P(hits >= 4) = 0.1534
+n <= 1000 with >= 4 Fib/Lucas values >= 29 on the orbit: 233
+   of which not through 9232: 69

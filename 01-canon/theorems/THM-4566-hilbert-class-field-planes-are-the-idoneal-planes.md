@@ -73,3 +73,28 @@ All upper bounds come from Lemma R (THM-4558), recomputed independently in `oai3
 * The sentence "no conjugation-fixed prime below 60" was false for 105 (59) and 357 (47, 59) and is corrected (MISTAKE-583).
 * For these 19 planes, `χ = 2` iff `m` has no prime factor `≡ 3 (mod 4)`. A prime `p ≡ 3 (mod 4)` with `√p ∈ F` gives a `p`-cycle.
 * The `m = 165` lower bound (Heule's graphs) is cited, not re-verified.
+
+---
+
+## Addendum (2026-10-07, mac-mini-2026-10-07-golden, platonic reader): the 18 and the 19 are two 2-adic slices of Euler's list
+
+**Theorem (PROVED; the explicit list relies on the completeness of the idoneal numbers, i.e. on openai/math #003 as above).**
+`n` is **not** of the form `xy + yz + zx` with `x, y, z ≥ 1` iff `n ∈ {1, 4}`, or `n ≡ 2 (mod 4)` and `n` is idoneal.
+
+*Proof sketch.*
+* Odd `n ≥ 3` is `1·y + y·1 + 1·1`. If `4 | n` and `n ≥ 8`, take `(2, (n−4)/4, 2)`.
+* For `n ≡ 2 (mod 4)`: `n = xy + yz + zx` with `x, y, z ≥ 0` iff the form `(x+z)X² − 2zXY + (y+z)Y²` (determinant `n`) has an obtuse superbase with Selling parameters `(x, y, z)`. These parameters are a class invariant (Conway).
+* So `n` is an exception iff every integral form of determinant `n` is diagonal. The primitive diagonal reduced forms number `2^r`, which equals the number of genera exactly when `n′ ≡ 2 (mod 4)`. So all forms are diagonal iff `n′` is idoneal, and exponent `≤ 2` descends to `n/g²`.
+
+**FINITE-EXACT checks.**
+* A brute force over `n ≤ 2·10^5` gives exactly the 18 exceptions.
+* For `|D| ≤ 30000` there are exactly 101 discriminants of exponent `≤ 2` (65 even, 36 odd).
+
+**Reading.**
+* The 18 Borwein–Choi exceptions are the 16 idoneal `n ≡ 2 (mod 4)` together with 1 and 4. The 19 planes are the squarefree idoneal `m ≡ 1 (mod 4)`. Both are 2-adic slices of one 65-element list, because `m ≡ 1 (mod 4)` ⟺ `−4` is the 2-adic prime discriminant ⟺ `i` lies in the genus field.
+* So the counts 18 and 19 carry no mechanism linking them to the Collatz mod-18/19 clock tower (`ord_19(2) = 18`): NUMEROLOGY.
+* The one generic DICTIONARY item: on the planes 57 and 133, the 19-genus character `(a|19)` equals `(−1)^(ind_2 a)`, the parity bit of the mod-19 clock. This holds at any prime where 2 is a primitive root.
+
+**Split-prime lemma (PROVED, elementary).** In an order of exponent `≤ 2`, a split prime `p` satisfies `p² ≥ |D|/4`. So for idoneal `n > 9` the prime 3 does not split (`n ≢ 2 mod 3`), and 2 splits only for `|D| ∈ {7, 15}`. In large exponent-2 fields, 2 and 3 are inert or ramified.
+
+Scripts: `04-computation/experiments/golden_20261007_readers/platonic/idoneal.py` (+ `.out`).
