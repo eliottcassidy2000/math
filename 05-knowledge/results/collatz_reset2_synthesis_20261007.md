@@ -46,7 +46,8 @@ and family coverage are different conclusions.
 ## A complete finite parser replaces the fixed partner list
 
 The [collision dynamic program](collatz_collision_dp_20261007.md) works at
-the exact rational anchor `f_w(-1)=N/2^E`. Every proper predecessor has
+the exact rational anchor `f_w(-1)=N/2^E`, for reduced words whose first
+letter is at least 2, with odd N and E=sum(w)-1>=1. Every proper predecessor has
 
     denominator exponent f<E,
     numerator (N-2^f)/3, with 3 dividing N-2^f,

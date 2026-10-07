@@ -376,7 +376,7 @@ lift/phase clocks.
 - **AMM:** [THM-4086](../01-canon/theorems/THM-4086-rule-a-transition-clock-and-phase-cocycle.md) proves a fixed-policy `R=32768` clock/cocycle; no global monotonicity, all-`R`, or `C*` result.
 - **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383: localization, owner/ANOVA/rectangle/reference inversion; realization/stable diagonal open. THM-2646: modular/exponent `B3` conjugacy, not Markov invariance.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.
-- **Collatz:** [Atlas](../05-knowledge/results/collatz_grounding_synthesis_20261007.md): odd n<=32767 FINITE-EXACT; infinite completed subfamilies PROVED; coverage OPEN.
+- **Collatz:** [Reset-two continuation](../05-knowledge/results/collatz_reset2_synthesis_20261007.md): guarded rules PROVED; ROOT words FINITE-EXACT; coverage OPEN.
 - [Collatz classes](../05-knowledge/results/golden_collatz_resonance_20261007.md): THM-4590 equidistribution, THM-4594 sieve/2-adic sign barrier, THM-4591 cycles through301993; HYP-9230 resonance OPEN.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
 - **Rule 30:** [THM-4210](../01-canon/theorems/THM-4210-rule30-lossless-dyadic-block-current-cartier-tree.md) gives the forward current tree; THM-4204/4206 are inverse/Haar carriers. THM-4263 adds a fibre-cap density pullback, not a prize solution. All prizes remain **OPEN**.
