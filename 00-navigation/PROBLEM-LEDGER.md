@@ -248,7 +248,7 @@ all heights (THM-1289, published), δ ineffective.
   turns this into integer structure. Every Collatz class is equidistributed (THM-4590).
   A minimal counterexample lies in 6,915,181 residues mod 2^30 (THM-4594, given
   Barina's 2^71). Integer cycles to period 301,993 are the five known (THM-4591).
-  A sign barrier shows any proof must use positivity beyond the first log2 n bits.
+  A 2-adic sign barrier constrains 2-adic certificates; 3-adic refinement removes it.
   [The 2026-09-17 audit](../05-knowledge/results/arithmetic_braids_20260917_collatz.md)
   gives the full triadic inverse-fibre braid, exact exponent-word cylinders,
   and a periodic-weight obstruction. [The continuation](../05-knowledge/results/arithmetic_braids2_20260917_synthesis.md)

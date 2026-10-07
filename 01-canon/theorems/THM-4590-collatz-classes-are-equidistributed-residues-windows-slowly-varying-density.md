@@ -67,7 +67,7 @@ related:
 **4.**
 * For `γ = +1` this is 1.
 * For `γ(n) = 3n`, use THM-4581 (6b) at `(1, 0)`: the pair chain of `(3n, n)` is absorbed within `K` steps outside a residue set of density `q_(1,0)(K) → 0`, and the counting is as in 1.
-* A general `γ` reduces to these through THM-4581 (6b)'s routing.
+* A general `γ` reduces to these through THM-4581 (6b)'s routing. When the driver is confined to a coset, the routed chains are still absorbed almost surely, by THM-4581 (3) and the strong Markov property (sentence added after audit A2).
 * A composition of `m` maps costs `m` density-0 sets. ∎
 
 **5.**
@@ -91,11 +91,11 @@ related:
   |---|---|---|---|---|---|---|---|---|---|---|---|---|
   | deviation | 0.0006 | 0.0008 | 0.0015 | 0.0036 | 0.0004 | 0.0007 | 0.0013 | 0.0032 | 0.0002 | 0.0009 | 0.0002 | 0.0007 |
 
-* The cut fraction falls slowly, as predicted. Unmerged pairs land in basins roughly independently, so cuts ≈ `(1 − Σ d_i²)·q(4.8 log_2 x) ≈ 0.67·q`, which gives 0.41 at `k = 10` and 0.34 at `k = 28`.
+* The cut fraction falls slowly, as predicted. Unmerged pairs land in basins roughly independently, so cuts ≈ `(1 − Σ d_i²)·q(4.8 log_2 x) ≈ 0.67·q`. That gives 0.36 at `k = 10` and 0.30 at `k = 28` (`q(46) ≈ 0.54`, `q(132) ≈ 0.46`), against 0.41 and 0.34 measured. The heuristic reproduces the slow decline, not the level (corrected after audit A2).
 * **Multiplicative windows at `k = 28`** (64 windows of width 1.09%). The −1 basin ranges over `[0.257, 0.370]`. This is not yet uniform, because the cut fraction is still 0.34. The non-uniformity is a sharp log-periodic spectrum (HYP-9230), decaying with scale.
 
 **Positive integers: entry classes** (`posentry85.c`, all `n ≤ 2^28`).
-* Entry via 5 has density 0.9380; entry via 85 has 0.0236; both are stable from `k = 18` to `k = 28`. (21 is never an entry, since `21 ≡ 0 mod 3`.)
+* Entry via 5 has density 0.9380; entry via 85 has 0.0236; both are stable from `k = 18` to `k = 28`. (21 is the entry only of the density-zero class `{21·2^j}`, since `21 ≡ 0 mod 3` has no odd predecessor; corrected after audit A2.)
 * The cut fraction is 0.0707 at `k = 16` and 0.0593 at `k = 28`, slowly falling.
 
 ## Scope
@@ -104,3 +104,5 @@ related:
 * It constrains any counterexample. The basin of a hypothetical nontrivial cycle or divergent class must be equidistributed modulo every `M`, uniform across multiplicative windows, slowly varying in density, and almost invariant under `n ↦ 3n` and `n ↦ n + c`.
 * It does not give a natural density. A slowly varying `β` need not converge.
 * The rates are not uniform: see HYP-9230 for the Diophantine resonance spectrum.
+
+**Audit (2026-10-07, independent audit A2).** Statements 1–5 CONFIRMED: no circularity, and statement 3 is a full limit, uniform in `c`. The negative-basin table was reproduced to four decimals for `k ≤ 24` by independent code with a different labelling method. Corrected above: the cut-fraction heuristic numbers, the entry-21 remark, and the coset sentence in proof 4 (MISTAKE-585).

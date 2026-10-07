@@ -1,0 +1,4 @@
+mers_D7_witness.txt partners 4 bits 1537 forced prefix [1, 0, 1, 0] none absorbed: True all equal at t0: True first all-equal time: 1534 state k = -25
+   direct 2-adic orbits (mod 2^80 after t0 steps): all partners equal: True  driver differs: True
+mers_D61_witness.txt partners 31 bits 2377 forced prefix [1, 0, 1, 0] none absorbed: True all equal at t0: True first all-equal time: 2372 state k = -30
+   direct 2-adic orbits (mod 2^80 after t0 steps): all partners equal: True  driver differs: True

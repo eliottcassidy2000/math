@@ -1,0 +1,10 @@
+shape (11,7) gap -139: Lyn=30  reduced denominators < |gap| (count): {1: 1}   full-gap words: 29
+shape (12,7) gap 1909: Lyn=66  reduced denominators < |gap| (count): {83: 2}   full-gap words: 64
+shape (13,8) gap 1631: Lyn=99  reduced denominators < |gap| (count): {233: 15}   full-gap words: 84
+shape (14,9) gap -3299: Lyn=143  reduced denominators < |gap| (count): {}   full-gap words: 143
+shape (16,10) gap 6487: Lyn=497  reduced denominators < |gap| (count): {499: 41}   full-gap words: 456
+shape (19,12) gap -7153: Lyn=2652  reduced denominators < |gap| (count): {23: 8, 311: 117}   full-gap words: 2527
+    3x+23 cycles (on NEGATIVE integers) at (19,12): elements closest to 0 = [-4819, -3743, -3415, -3091, -2963, -2743, -2359, -2263]
+shape (27,17) gap 5077565: Lyn=312455  reduced denominators < |gap| (count): {5: 2, 71: 5, 355: 16, 14303: 843, 71515: 3415, 1015513: 60499}   full-gap words: 247675
+    3x+5 cycle from rational 2992/5: min 187, period 27, odd 17
+    3x+5 cycle from rational 2872/5: min 347, period 27, odd 17

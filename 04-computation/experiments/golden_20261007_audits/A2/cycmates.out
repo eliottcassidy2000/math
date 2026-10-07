@@ -1,0 +1,13 @@
+p=-1: uncertified (exhaustive) for every depth s<=40; total backward nodes 860
+p=-7: certified by DESCENT at depth s=2 (a=1)
+p=-10: certified by DESCENT at depth s=1 (a=0)
+p=-25: certified by BRANCH at depth s=9 (a=6), nodes 6
+p=-37: certified by DESCENT at depth s=8 (a=5)
+p=-55: certified by DESCENT at depth s=2 (a=1)
+p=-82: certified by DESCENT at depth s=1 (a=0)
+p=-41: certified by DESCENT at depth s=5 (a=3)
+p=-61: certified by DESCENT at depth s=4 (a=2)
+p=-91: certified by DESCENT at depth s=2 (a=1)
+p=-136: certified by DESCENT at depth s=1 (a=0)
+p=-68: certified by DESCENT at depth s=1 (a=0)
+p=-34: certified by DESCENT at depth s=1 (a=0)

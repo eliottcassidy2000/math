@@ -1,0 +1,8 @@
+n = 0 mod 8: diag == #genera in 0 of 375 cases
+n = 1 mod 8: diag == #genera in 1 of 375 cases
+n = 2 mod 8: diag == #genera in 375 of 375 cases
+n = 3 mod 8: diag == #genera in 375 of 375 cases
+n = 4 mod 8: diag == #genera in 375 of 375 cases
+n = 5 mod 8: diag == #genera in 0 of 375 cases
+n = 6 mod 8: diag == #genera in 375 of 375 cases
+n = 7 mod 8: diag == #genera in 375 of 375 cases

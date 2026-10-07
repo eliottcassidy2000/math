@@ -1,0 +1,13 @@
+T= 4 N_T=        12 q_inf=N_T/2^T=0.7500
+T= 6 N_T=        38 q_inf=N_T/2^T=0.5938
+T= 8 N_T=       127 q_inf=N_T/2^T=0.4961
+T=10 N_T=       438 q_inf=N_T/2^T=0.4277
+T=12 N_T=      1535 q_inf=N_T/2^T=0.3748
+T=14 N_T=      5425 q_inf=N_T/2^T=0.3311
+T=16 N_T=     19275 q_inf=N_T/2^T=0.2941
+T=18 N_T=     68835 q_inf=N_T/2^T=0.2626
+T=20 N_T=    246912 q_inf=N_T/2^T=0.2355
+brute T= 4: fraction never merging with any y+r (r<=2^(T+2)) = 0.7500
+brute T= 6: fraction never merging with any y+r (r<=2^(T+2)) = 0.5938
+brute T= 8: fraction never merging with any y+r (r<=2^(T+2)) = 0.4961
+brute T=10: fraction never merging with any y+r (r<=2^(T+2)) = 0.4277

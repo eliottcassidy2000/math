@@ -30,13 +30,15 @@ related:
 2. **Coalescence lower bound (PROVED, given a witness).** Suppose on a cylinder `{y ≡ ρ mod 2^(t_0)}` all partners have merged with each other by time `t_0` while `y` has merged with none. Then `q_P(T) ≥ 2^(−t_0)·c·T^(−1/2)` for `T ≥ t_0`. From then on `y` faces a single cluster, i.e. one adjacent `±1` walk, and the SRW-skeleton bound of THM-4581 (4) applies.
    * Witnesses exist for every `R ≤ 32` and for the Mersenne lag sets `D ≤ 7` and `D ≤ 61`. They were found by search and verified exactly.
    * `R = 2`: for `y ≡ 21 (mod 32)`, at time 5 both `y + 1` and `y + 2` equal `27q + 20` while `y` is at `3q + 2`. The chain state is `(2, 2)`, so `q_2(T) ≥ 2^(−5)·2√(2/(πT)) ≈ 0.05 T^(−1/2)`. Re-checked here for 2000 lifts.
-   * With THM-4581 (4), `α_P = 1/2` for every such finite `P` (sketch level). The claim "nonadjacent lags give `α > 1/2`" is false.
+   * A witness for a lag set is also a witness for every subset, so `D ≤ 61` covers every nonempty set of odd lags `D ≤ 61`, including S19's `D ≤ 41` run (audit A2).
+   * With THM-4581 (4), `α_P = 1/2` for every `P` that has a witness (sketch level). For general finite `P`, `α_P ≥ 1/2` holds at sketch level, and `= 1/2` is a CONJECTURE. The claim "nonadjacent lags give `α > 1/2`" is false for every witnessed `P`.
 3. **All translation lags (PROVED).** Let `w` be the length-`T` parity word of `y`, with weight `a`, and put `c(w) = 2^T T^T(y) − 3^a y`.
    * `y` merges with some `y + r` (`r ≥ 1`) by time `T` iff some word `w′` of weight `a` has `c(w′) ≡ c(w) (mod 3^a)` and `c(w′) < c(w)`. The partner is then `r = (c(w) − c(w′))/3^a`. Equal-time merges with unequal odd counts are Haar-null.
    * Hence `q_∞(T) = N_T/2^T`, with `N_T = #{(a, c mod 3^a)} ≤ Σ_a min(C(T,a), 3^a) ≤ (T+1)·2^(H(x*)T)`.
    * Here `x* = 0.60909` solves `H(x) = x log_2 3`, so the decay rate is `1 − H(x*) = 0.0346` bits per step.
    * By symmetry the same count governs merging with some *smaller* translate `y − r`.
    * Exact values: `q_∞(T) = 0.4961, 0.3748, 0.2941, 0.2355` at `T = 8, 12, 16, 20` (re-computed here), and `0.1915` at `T = 24` (core reader).
+   * The bound `(T+1)2^(−0.0346T)` is vacuous for `T ≲ 230`; it is an asymptotic statement.
 4. **The −1 shadow (PROVED).** During a run of `L` odd steps of `y`, no chain is absorbed and every flip lowers `k`. Afterwards the partners' levels are exactly `O_L(r−1) − L`.
    * There is no positive-measure set of permanent joint failure, since each chain is absorbed almost surely.
    * Near −1 the relations fail together only on sets of measure `2^(−L)`. This affects the constant, not the exponent.
@@ -60,3 +62,12 @@ related:
 * The CrocSwap analogy holds in a precise sense. A bounded number of extra partners ("nonadjacent lags") buys only a constant factor of about `R`, because the partners coalesce among themselves (Arratia-type).
 * Only exponentially many lags, `r` up to `2^T`, change the decay from polynomial to exponential.
 * That is the sieve regime of THM-4594.
+
+**Audit (2026-10-07, independent audit A2).** CONFIRMED throughout:
+* all 31 translation witnesses and both Mersenne witnesses;
+* the all-lags identity against brute force for `T ≤ 10` and the values to `T = 24`;
+* `x* = 0.60909` and the rate 0.0346;
+* the −1 shadow;
+* Monte Carlo for `R = 1, 2, 4, 8`.
+
+Added: the subset property, and the precise scope of `α_P = 1/2`.

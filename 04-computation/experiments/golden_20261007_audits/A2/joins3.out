@@ -1,0 +1,6 @@
+K=15  +depth1=1101  depth1+joins=924  depth1+OEE=806  depth1+OEE+joins=806  (depth1/OEE not in maximal: 0)
+K=15 descent_unc=1295 descent+joins_unc=1049 maximal_unc=802 maximal+joins_unc=802 join_only(not branch)=0
+maximal-certified but NOT descent/depth1/OEE/joins at K=15: 11247 12191 12799 23743  (total 4)
+K=16  +depth1=1856  depth1+joins=1562  depth1+OEE=1370  depth1+OEE+joins=1370  (depth1/OEE not in maximal: 0)
+K=16 descent_unc=2114 descent+joins_unc=1720 maximal_unc=1363 maximal+joins_unc=1363 join_only(not branch)=0
+maximal-certified but NOT descent/depth1/OEE/joins at K=16: 12191 20383 44015 45567 52207 56511 64703  (total 7)

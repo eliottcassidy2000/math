@@ -1,0 +1,10 @@
+m=    1: real root for some th in (0,1): True; min over th of s_- = 0.26816376357519056 at th=0.999; s<1 possible: True
+m=    2: real root for some th in (0,1): True; min over th of s_- = 0.5858705863057161 at th=0.999; s<1 possible: True
+m=    3: real root for some th in (0,1): True; min over th of s_- = 0.8759303641605364 at th=0.247; s<1 possible: True
+m=  3.5: real root for some th in (0,1): True; min over th of s_- = 0.9480047190137335 at th=0.086; s<1 possible: True
+m=  3.9: real root for some th in (0,1): True; min over th of s_- = 0.9907425718011522 at th=0.014; s<1 possible: True
+m= 3.99: real root for some th in (0,1): True; min over th of s_- = 0.9991101630430435 at th=0.001; s<1 possible: True
+m=    4: real root for some th in (0,1): True; min over th of s_- = 1.0006933874625807 at th=0.001; s<1 possible: False
+m= 4.01: real root for some th in (0,1): False; min over th of s_- = None at th=None; s<1 possible: False
+m=    5: real root for some th in (0,1): False; min over th of s_- = None at th=None; s<1 possible: False
+m=3: max over th in (0,1) of s(th) = 0.999738472235956

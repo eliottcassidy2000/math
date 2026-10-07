@@ -1,0 +1,7 @@
+--- integer cycles via Lyndon words, all k, L <= 20 ---
+  L=1 k=0 x=0 word=0
+  L=1 k=1 x=-1 word=1
+  L=2 k=1 x=2 word=01
+  L=3 k=2 x=-10 word=011
+  L=11 k=7 x=-136 word=00011110111
+  words enumerated: 111013

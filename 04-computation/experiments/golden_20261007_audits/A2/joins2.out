@@ -1,0 +1,8 @@
+K=16  +depth1=1856  depth1+joins=1562  depth1+OEE=1370  depth1+OEE+joins=1370  (depth1/OEE not in maximal: 0)
+K=16 descent_unc=2114 descent+joins_unc=1720 maximal_unc=1363 maximal+joins_unc=1363 join_only(not branch)=0
+K=20  +depth1=22485  depth1+joins=18947  depth1+OEE=16264  depth1+OEE+joins=16226  (depth1/OEE not in maximal: 0)
+K=20 descent_unc=27328 descent+joins_unc=22244 maximal_unc=15870 maximal+joins_unc=15870 join_only(not branch)=0
+K=22  +depth1=73939  depth1+joins=62385  depth1+OEE=53561  depth1+OEE+joins=53393  (depth1/OEE not in maximal: 0)
+K=22 descent_unc=93222 descent+joins_unc=75969 maximal_unc=52176 maximal+joins_unc=52176 join_only(not branch)=0
+K=24  +depth1=244392  depth1+joins=206402  depth1+OEE=178304  depth1+OEE+joins=177588  (depth1/OEE not in maximal: 0)
+K=24 descent_unc=286581 descent+joins_unc=234156 maximal_unc=172868 maximal+joins_unc=172868 join_only(not branch)=0

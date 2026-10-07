@@ -1,0 +1,5 @@
+CYCLE start=-1 period=1 odd=1 elems: -1
+CYCLE start=-5 period=3 odd=2 elems: -5 -7 -10
+CYCLE start=-17 period=11 odd=7 elems: -17 -25 -37 -55 -82 -41 -61 -91 -136 -68 -34
+CYCLE start=1 period=2 odd=1 elems: 1 2
+done N=10000000 CAP=1000000 capped=0 big=0 max_steps_to_return_or_descent=273

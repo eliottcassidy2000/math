@@ -13,17 +13,23 @@ Linked sources were treated as trusted. Three readers ran (core, golden, platoni
 
 * **The Collatz conjecture remains OPEN.** This session proves no part of it for individual integers. What it does prove moves the frontier and locates the gap exactly.
   1. **Every Collatz class is equidistributed (THM-4590, PROVED from THM-4581).** Any union of grand-orbit classes, such as the basin of a hypothetical second cycle, has `o(x)` cuts `n | n+1`. It is equidistributed modulo every `M`, uniform across multiplicative windows, slowly varying in density, and almost invariant under `n ↦ 3n`, `n ↦ n+1`. A counterexample's basin cannot hide in residues or leading digits.
-  2. **The approach to that uniformity is a tuning spectrum (HYP-9230, NUMERICAL).** Collatz moves by fifths up (`×3/2`) and octaves down (`×1/2`). Class densities oscillate log-periodically at the equal temperaments 5, 12, 41 and 53 (the commas of `log_2 3`), decaying like `exp(−C‖f log_2 3‖² log_2 x)`.
-     * Ellison's exceptions (16,10), (19,12) and (27,17) are three of these resonances.
+  2. **The approach to that uniformity is a tuning spectrum (HYP-9230, NUMERICAL).** Collatz moves by fifths up (`×3/2`) and octaves down (`×1/2`). Class densities oscillate log-periodically at frequencies `f` with small `‖f log_2 3‖`:
+     * 12-, 41- and 53-TET;
+     * the semiconvergents 94, 147, 200, 253 and 359;
+     * harmonics such as 106 = 2·53.
+
+     Each mode decays at the exact characteristic root of the fifth/octave walk, which matches every measurable mode.
      * The Mercator comma `3^53 ≈ 2^84` mode is essentially undamped at accessible scales.
+     * Ellison's exceptions share the same continued fraction: a common cause, not independent evidence.
+     * A log-periodic correction is already known for the predecessor density (Berg–Krüppel 1998; Tavares 2026).
   3. **The integer cycles are the Pythagorean intervals (THM-4591, FINITE-EXACT to period 301,993).** The octave, fifth, fourth and whole tone are Gersonides' gap-1 shapes (THM-4484). The −17 cycle is the apotome 2187:2048. That is why the cycle periods are exactly {1, 2, 3, 11}.
   4. **The eleven squares are the period-5 cycles (THM-4592).** The paper's eleven Fibonacci-torus cells are 0, the 1/13 cycle (the quadratic residues mod 11) and the −5 cycle (the non-residues). Its group `G_5` is `BS(1,3)` mod 11, the relation group of THM-4581.
   5. **Nonadjacent lags (THM-4593).** Following CrocSwap's insight, extra relations were tried as "nonadjacent lags". Finitely many improve only the constant: the partners coalesce first, and the exponent stays 1/2. Exponentially many give exponential decay.
      * HYP-9217's any-lag 0.69 was a coalescence transient.
-  6. **A sharper verification sieve and the sign barrier (THM-4594).** A maximal class-decided sieve beats descent by a factor of about 1.8.
-     * It confines a minimal counterexample to 6,915,181 classes mod `2^30`, given Barina's `2^71`.
-     * It proves that any Collatz proof must use the sign of `n`: the 2-adic point −1 is never certified, and −5 and −17 are not certified to depth ~90.
-* **The precise remaining gap (§12).** Collatz is equivalent to "the positive integers avoid the closed Haar-null set `U_∞` of never-certified 2-adic classes". That set contains −1 and the negative cycles' minima. Measure methods cannot see the sign.
+  6. **A sharper verification sieve and a 2-adic sign barrier (THM-4594).** A maximal class-decided sieve beats descent by a factor of about 1.85, but beats Angeltveit's published 2-adic rules by only about 4.5% (0.957× at `2^30`).
+     * It confines a minimal counterexample to 6,915,181 classes mod `2^30`, given Barina's `2^71`. The first exclusions beyond published rules appear at `2^15`.
+     * For 2-adic certificates alone it proves a sign barrier: the class of −1 is never certified, and −5 and −17 are not certified to depth 120. With 3-adic refinement all three are certified at depth 0, so the barrier is a statement about 2-adic methods.
+* **The precise remaining gap (§12).** Collatz is equivalent to "every positive integer `n > 2^71` has a class-decided certificate whose threshold is below `n`". The weaker statement "`Z_{>0}` avoids the null set `U_∞` of never-certified 2-adic classes" does not rule out cycles, because a cycle minimum sits exactly at its certificate's threshold. Measure methods see neither the sign nor the thresholds.
 
 ## 1. From coalescence to the integers: Collatz classes are equidistributed (THM-4590)
 
@@ -62,7 +68,8 @@ The window statement uses only two exact identities, `T(2n) = n` and `T(2j+1) = 
 
 **The approach to uniformity is a tuning spectrum.**
 * At accessible scales the window uniformity of THM-4590 is far from reached: the −1 basin ranges over `[0.257, 0.370]` across 1% windows at `2^27`.
-* The non-uniformity is a sharp log-periodic spectrum. Its frequencies `f` (cycles per octave) are exactly where `‖f log_2 3‖` is small: the continued-fraction denominators of `log_2 3` and their sums.
+* The non-uniformity is a sharp log-periodic spectrum. Its frequencies `f` (cycles per octave) are exactly where `‖f log_2 3‖` is small: the continued-fraction denominators of `log_2 3`, the semiconvergents, and harmonics.
+* Audit A2 extended the scan to `f ≤ 1100`. The −1 basin's largest mode for `k ≥ 20` is `f = 106 = 2·53`. Next come 53, 12, 253, 265, 147, 94 and 306, and `A_665 ≈ 0.009` is nonzero. The table below lists the low modes (`f ≤ 70`).
 
 | `f` | `‖f log_2 3‖` | comma | −1 basin amplitude, `2^16 → 2^28` | entry via 85, `2^16 → 2^28` |
 |---|---|---|---|---|
@@ -74,12 +81,29 @@ The window statement uses only two exact identities, `T(2n) = n` and `T(2j+1) = 
 | 17 | 0.0556 | `3^17 ≈ 2^27` | 0.0140 → … | 0.0067 → … |
 | 5 | 0.0752 | `3^5 ≈ 2^8` | 0.0131 → … | — |
 
-* **Ellison's exceptions are structural, not numerology.** Three of the five, `(16, 10) = 2·(8, 5)`, `(19, 12)` and `(27, 17)`, are the modes 5, 12 and 17. `(13, 8)` and `(14, 9)` (`‖f log_2 3‖ = 0.32` and `0.26`) are small-`x` artifacts of Ellison's `e^(−x/10)` threshold, not resonances.
-* **The decay is ordered by `‖f log_2 3‖²`.**
-  * Mode 53 has a phase drift of only 0.003 per fifth; it is essentially undamped to `2^28`, and the measured odd-step characteristic function decays 0.993–0.998 per octave against 0.995 predicted.
-  * Modes 12 and 41 decay about half as fast as the naive Gaussian model (an open factor 2: the odd-step count distribution is non-Gaussian at that resolution).
+* **Ellison's exceptions: a common cause, not evidence.**
+  * Three of the five, `(16, 10) = 2·(8, 5)`, `(19, 12)` and `(27, 17)`, sit at the low modes 10, 12 and 17. Both lists are small values of `‖y log_2 3‖`, i.e. the same continued fraction.
+  * `(13, 8)` and `(14, 9)` are small-`x` artifacts of Ellison's `e^(−x/10)` threshold.
+  * The dominant large-scale modes (53, 106, 253, 306) are not Ellison exceptions. (Corrected after audit A2: the earlier text called this "structural, not numerology".)
+* **The decay law (audit A2).** A mode near `f` decays at `Re w`, where `w` is the root, continued from 0, of `e^(2πiθ + w log_2(3/2)) + e^(−w) = 2`. This is the exact characteristic root of the fifth/octave walk `ψ(u) = ½ψ(u + log_2(3/2)) + ½ψ(u − 1)`.
+  * It matches every measurable mode, and the phase drift too:
+
+    | `f` | predicted decay/octave | measured |
+    |---|---|---|
+    | 12 | .105 | .105 / .106 |
+    | 41 | .085 | .088 / .084 |
+    | 65 | .124 | .118 / .125 |
+    | 147 | .044 | .046 / .045 |
+    | 265 | .075 | .073 / .082 |
+
+  * The phase drift at `f = 12` is 0.0327 predicted against 0.0324 measured, in cycles per octave.
+  * The earlier "factor 2" was the Gaussian approximation failing: resolved.
+  * Mode 53 (`θ = 0.003`) is essentially undamped to `2^28`.
 * **The longest-lived modes sit at the next convergents.** `485/306`, `1054/665` (partial quotient 23, `θ = 6.3·10^-5`) and `24727/15601` would persist for `10^5` octaves or more. Any quantitative THM-4590 must therefore depend on the irrationality measure of `log_2 3`: Baker, Rhin, Ellison.
-* **Benford's law is the same rotation.** Kontorovich–Miller and Lagarias–Soundararajan prove Benford behavior for 3x+1 iterates using this rotation mechanism. The resonance spectrum of *class* densities, and its musical identification, were not found in short searches.
+* **Prior art.**
+  * Benford behavior of 3x+1 iterates (Kontorovich–Miller; Lagarias–Soundararajan) uses the same rotation.
+  * A log-periodic correction is known in Wirsching's predecessor-density program: Berg–Krüppel 1998, and Tavares, arXiv:2608.27617 (2026), as a Fourier series proved non-constant.
+  * No earlier spectrum of *class* densities, or its musical identification, was found.
 
 ## 3. The integer cycles are Pythagorean intervals; {2,3,11} are the cycle periods (THM-4591)
 
@@ -173,9 +197,9 @@ The window statement uses only two exact identities, `T(2n) = n` and `T(2j+1) = 
 ## 8. Platonic solids, Ellison, mod 18/19
 
 * **Platonic solids.** Polyhedral numbers hit the convergents of `log_2 3` at the base rate (`p = 0.78`). 12-TET ↔ the icosahedron's 12 vertices cannot be equivariant, since `A_5 × C_2` has no element of order 12.
-* **Ellison's exceptions are structural twice over.**
-  * They are the five shapes with the largest expected integer-cycle count (THM-4591 (3)). They carry the 3x+5 cycles (27,17), and eight 3x+23 cycles on the negative integers (19,12).
-  * Three of them, (16,10), (19,12) and (27,17), are resonance frequencies 5, 12 and 17 of Collatz class densities (§2).
+* **Ellison's exceptions.**
+  * They are the five shapes with the largest expected integer-cycle count (THM-4591 (3)): DICTIONARY, since both measure `|2^x − 3^y|/2^x`. They carry the 3x+5 cycles (27,17), and eight 3x+23 cycles on the negative integers (19,12).
+  * Three of them sit at low resonance frequencies of class densities (§2). That is a common cause (the continued fraction of `log_2 3`), not independent evidence.
 * **Mod 18 and mod 19.**
   * The 18 Borwein–Choi exceptions are `{1, 4}` together with the idoneal `n ≡ 2 (mod 4)`. This is KNOWN (Borwein–Choi 2000); the platonic reader's Selling-parameter argument is an alternative proof. The 19 HCF planes are the squarefree idoneal `m ≡ 1 (mod 4)`. Both are 2-adic slices of one 65-element list.
   * The link to the mod-18/19 Collatz clock (`ord_19(2) = 18`) is NUMEROLOGY.
@@ -205,21 +229,25 @@ CrocSwap's gain came from direct nonadjacent swaps (`O(d)`) replacing chains of 
 * The CrocSwap effect is real, but it needs exponentially many lags.
 
 **THM-4594 (the maximal sieve).**
-* It certifies `n mod 2^K` by every smaller number reachable backward from any orbit point the class decides. Prior sieves used translation joins (Roosendaal, Barina 2020) and depth-1 predecessors (Angeltveit 2026).
-* Uncertified fractions: 0.644% at `2^30` and 0.493% at `2^34`, against 0.884% for descent.
-* **Minimal counterexample (PROVED given `2^71`):** it lies in 6,915,181 classes mod `2^30`, with `n_0 mod 9 ∈ {0, 1, 3, 6, 7}` and `n_0 ≢ 539, 615 (mod 1024)`.
+* It certifies `n mod 2^K` by every smaller number reachable backward from any orbit point the class decides.
+* Prior sieves used translation joins (Roosendaal, Barina 2020/2025), and depth-1 path merging plus the odd-even-even rule (Angeltveit 2026).
+* Uncertified fractions: 0.644% at `2^30` and 0.493% at `2^34`, against 0.884% for descent. The gain over Angeltveit's 2-adic rules is about 4.5% (0.957× at `2^30`).
+* **Minimal counterexample (PROVED given `2^71`):** it lies in 6,915,181 classes mod `2^30`, with `n_0 mod 9 ∈ {0, 1, 3, 6, 7}`.
+  * `539, 615 (mod 1024)` are already excluded by Angeltveit's rule.
+  * The first exclusions beyond published rules are `11247, 12191, 12799, 23743 (mod 2^15)`.
 * The rate `2^(−0.0500K)` is unchanged; only the constant improves.
 * HYP-9231 (survivor lemma, FINITE-EXACT `s ≤ 30`) would make translation joins always redundant.
 
-**The sign barrier (THM-4594 (4)).**
-* The class of the 2-adic fixed point −1 is never certified (PROVED).
-* −5 and −17 stay uncertified to depths 93 and 88 (FINITE-EXACT), while their cycle mates are certified by depth 9.
+**The 2-adic sign barrier (THM-4594 (4)).**
+* For unrefined 2-adic classes, the class of the 2-adic fixed point −1 is never certified (PROVED). −5 and −17 stay uncertified to depth 120 (FINITE-EXACT), while their cycle mates are certified by depth 9.
+* With 3-adic refinement, all three classes are certified at depth 0, by `(2n−1)/3`, `(8n−5)/9` and `(2048n−2363)/2187`. So the barrier constrains 2-adic methods only.
 * No weight `log n + g(n mod M)` and no pair-chain-state weight can decrease (PROVED).
 * Certificate depth for stopping-time records is 0.77–1.00 × `σ(n)`, up to 12.4 × `log_2 n`.
 
 ## 12. What remains for a Collatz proof
 
-**The single remaining conjecture (equivalent to Collatz).** Every positive integer `n > 2^71` has a class-decided certificate, at some finite depth, with threshold below `n`. Equivalently, `U_∞ ∩ Z_{>0} = ∅`.
+**The single remaining conjecture (equivalent to Collatz).** Every positive integer `n > 2^71` has a class-decided certificate, at some finite depth, with threshold below `n`.
+* "`U_∞ ∩ Z_{>0} = ∅`" is implied by Collatz but is weaker. A positive cycle's minimum lies in a descent-certified class whose threshold equals it (audit A2).
 
 **What is now in place.**
 * **2-adic coalescence (THM-4581).** Almost every pair merges.
@@ -229,8 +257,9 @@ CrocSwap's gain came from direct nonadjacent swaps (`O(d)`) replacing chains of 
 
 **Why this does not close the gap.**
 * Each statement is about measure, density or finitely many residues.
-* A counterexample is a single positive integer whose 2-adic class lies in `U_∞`, a null set that genuinely contains −1, −5 and −17.
-* The barrier results (THM-4594 (4)) show that any proof must distinguish the tail `…000` of positive integers from `…111`, using archimedean size beyond the first `log_2 n` bits. Certificates need depth up to `12 log_2 n`.
+* A counterexample is a single positive integer: either in a never-certified class, or a cycle element sitting exactly at its certificate's threshold.
+* The barrier results (THM-4594 (4)) show that a proof using only 2-adic class certificates must distinguish the tail `…000` of positive integers from `…111`. 3-adic data or archimedean thresholds are the other ways around the barrier.
+* Certificates need depth up to `12 log_2 n`, beyond the digit horizon where density methods stop.
 
 **The most promising creative bridge (HEURISTIC; owner-facing).** A two-place weight `log n + λ·(certificate-depth deficit)`, monotone along certified classes and fed by an archimedean bound on the deficit.
 * The musical picture says where such a bound must come from. The deficit grows only when the orbit's fifths keep failing to close.
@@ -241,7 +270,7 @@ CrocSwap's gain came from direct nonadjacent swaps (`O(d)`) replacing chains of 
 
 The `tiling-modular-atoms` session ([guarded frontier routes](collatz_golden_routing_synthesis_20261007.md), [uncovered join routes](collatz_uncovered_join_routes_20261007.md)) works the certificate side under a frozen adaptive policy, and adds +131 ROOT completions (FINITE-EXACT).
 * Its finding that the 223/233 progression's certificate is already covered by descent agrees with §5.
-* THM-4594's maximal sieve is the policy-free, class-decided upper envelope of such certificate families. Its sign barrier applies to every policy.
+* THM-4594's maximal sieve is the policy-free, class-decided upper envelope of such 2-adic certificate families. Its 2-adic sign barrier applies to every such policy.
 
 ## 13. Typing summary
 
@@ -249,7 +278,8 @@ The `tiling-modular-atoms` session ([guarded frontier routes](collatz_golden_rou
 |---|---|
 | Collatz classes equidistributed, slowly varying, almost affine-invariant | PROVED (THM-4590, from THM-4581) |
 | Negative-basin and entry-class numerics | FINITE-EXACT / NUMERICAL |
-| Musical resonance spectrum; Ellison ↔ modes 5, 12, 17 | NUMERICAL + HEURISTIC (HYP-9230); arithmetic PROVED |
+| Musical resonance spectrum; exact-root decay law | NUMERICAL + HEURISTIC (HYP-9230); arithmetic PROVED |
+| Ellison ↔ low modes | common cause (DICTIONARY) |
 | Integer cycles to period 301,993; periods {1, 2, 3, 11} | FINITE-EXACT (THM-4591) |
 | Cycles = Pythagorean intervals | DICTIONARY (with THM-4484) |
 | Eleven squares = period-5 cycles; `G_5 = BS(1,3)` mod 11 | PROVED + FINITE-EXACT (THM-4592) |
@@ -258,7 +288,7 @@ The `tiling-modular-atoms` session ([guarded frontier routes](collatz_golden_rou
 | Finite lag sets: exponent 1/2 | lower bound PROVED; upper at sketch level (THM-4593) |
 | All lags: `≤ (T+1) 2^(−0.0346T)` | PROVED (THM-4593) |
 | Maximal sieve; minimal-counterexample residues | FINITE-EXACT; PROVED given `2^71` (THM-4594) |
-| Sign barrier | PROVED (THM-4594 (4)) |
+| Sign barrier | PROVED for 2-adic (unrefined) certificates only (THM-4594 (4)) |
 | Survivor lemma | CONJECTURE, FINITE-EXACT `s ≤ 30` (HYP-9231) |
 | Borwein–Choi exceptions = `{1, 4}` + idoneal `≡ 2 (mod 4)` | KNOWN (Borwein–Choi 2000); alternative proof |
 | 223/233/332/425 on 27's trunk; (334, 335) coalescence | FINITE-EXACT; golden features NUMEROLOGY |
@@ -278,7 +308,16 @@ The `tiling-modular-atoms` session ([guarded frontier routes](collatz_golden_rou
   * THM-4592 notation and the factor-2 twist;
   * the `0 < s < 1` qualifier;
   * the `R_18` retyping.
-* **Audit A2** (THM-4590, HYP-9230 numerics, THM-4593, THM-4594, HYP-9231, HYP-9217 update): see below when complete.
+* **Audit A2** (THM-4590, HYP-9230 numerics, THM-4593, THM-4594, HYP-9231, HYP-9217 update). Ten corrections were applied (MISTAKE-585).
+  * **Confirmed:** THM-4590's proofs (statement 3 a full limit); the THM-4593 witnesses and all-lags identity; the THM-4594 counts to `K = 34`; the thresholds (`≤ 2^6.755`); HYP-9231 (`s ≤ 28`).
+  * **Corrected:**
+    * HYP-9230's decay law (now the exact root) and its missed modes (106, 253, 265, …);
+    * the Ellison "common cause" and the uncited prior art (Berg–Krüppel; Tavares);
+    * THM-4594's 539/615 claim (already in Angeltveit) and its sieve gain (4.5%, not 18%, over published rules);
+    * the sign barrier, restricted to 2-adic certificates;
+    * the false `U_∞` equivalence;
+    * HYP-9217's "every finite lag set";
+    * THM-4590's heuristic cut numbers and its entry-21 remark.
 
 ## 15. Reproduction
 

@@ -2038,6 +2038,28 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
+## MISTAKE-585 (2026-10-07, mac-mini-2026-10-07-golden; found by the session's independent audit A2 of its core-side filings) -- a published sieve rule overlooked (novelty and gain overstated), a barrier claimed beyond its setting, a false equivalence, a decay law fitted with the wrong approximation, an uncited prior result, and a "for every" without witnesses
+
+- **THM-4594, novelty.**
+  - The exclusions `539, 615 (mod 1024)` were called new. They are excluded by Angeltveit's odd-even-even rule (arXiv:2602.10466 §2.4), which the theorem omitted.
+  - The maximal sieve's gain over the best published rules is 0.957× at `K = 30` (about 4.5%), not the 0.825× (18%) obtained by comparing against an incomplete rule set.
+  - The first genuinely new exclusions are at `2^15`: 11247, 12191, 12799, 23743.
+- **THM-4594, sign barrier.** "Any proof must use the sign of `n`" holds only for unrefined 2-adic classes. With 3-adic refinement, the classes of −1, −5 and −17 are certified at depth 0 by `(2n−1)/3`, `(8n−5)/9` and `(2048n−2363)/2187`.
+- **THM-4594, equivalence.** "Collatz ⟺ `U_∞ ∩ Z_{>0} = ∅`" is false as an equivalence: a positive cycle's minimum lies in a descent-certified class whose threshold equals it. The threshold form is the correct equivalent.
+- **HYP-9230.**
+  - **The decay law.** It was fitted as `exp(−Cθ² log x)` with an "open factor 2". The exact characteristic root of the fifth/octave walk, `e^(2πiθ + w log2(3/2)) + e^(−w) = 2`, matches every measurable mode; the quadratic approximation was simply too crude.
+  - **Missed modes.** The spectrum was truncated at `f = 70`, so it missed the dominant mode 106 and the semiconvergent modes.
+  - **Ellison.** Calling Ellison's exceptions "structural, not numerology" overstated a common cause: the same continued fraction.
+  - **Prior art.** The log-periodic correction in Wirsching's predecessor density (Berg–Krüppel 1998; Tavares, arXiv:2608.27617) went uncited.
+- **HYP-9217 Update 3.** "Every finite lag set has `α = 1/2`" needs a witness. It is proved for every nonempty set of odd lags `D ≤ 61`; in general it is a conjecture.
+- **THM-4590.** The heuristic cut numbers (0.36 and 0.30, not 0.41 and 0.34) were wrong, and so was the remark "21 is never an entry".
+- **Reusable rules.**
+  - When comparing a sieve against prior work, implement every published rule of the cited paper, not the first one.
+  - A "barrier" must state its information setting (2-adic only, or 2-and-3-adic).
+  - Never write "equivalently" without checking cycles.
+  - Scan a spectrum to the Nyquist limit before naming its dominant modes.
+  - Fit decay with the exact transfer root, not its quadratic expansion.
+
 ## MISTAKE-584 (2026-10-07, mac-mini-2026-10-07-golden; found by the session's independent audit B of its golden/platonic filings) -- a known theorem presented as proved here, a false "exactly when" in a proof sketch, a proof sentence wrong for one sign, a cycle family on the wrong sign, and notation clashes
 
 - **THM-4566 addendum.**

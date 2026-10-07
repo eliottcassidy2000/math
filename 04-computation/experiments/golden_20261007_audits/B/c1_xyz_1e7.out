@@ -1,0 +1,5 @@
+non-representable n <= 10000000: 1 2 4 6 10 18 22 30 42 58 70 78 102 130 190 210 330 462
+count = 18
+idoneal n = 2 mod 4, n <= 10000000: 2 6 10 18 22 30 42 58 70 78 102 130 190 210 330 462
+count = 16
+characterization mismatches for n <= 10000000: 0

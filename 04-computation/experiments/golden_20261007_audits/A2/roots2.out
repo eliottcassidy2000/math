@@ -1,0 +1,17 @@
+theta=0.0030  mu=-0.0048  nu_shift=+0.0071  effective C=-mu/theta^2=  532.8  gauss 552.7*th^2=0.0050
+theta=0.0060  mu=-0.0175  nu_shift=+0.0135  effective C=-mu/theta^2=  485.7  gauss 552.7*th^2=0.0199
+theta=0.0105  mu=-0.0444  nu_shift=+0.0215  effective C=-mu/theta^2=  402.4  gauss 552.7*th^2=0.0609
+theta=0.0135  mu=-0.0643  nu_shift=+0.0258  effective C=-mu/theta^2=  352.5  gauss 552.7*th^2=0.1007
+theta=0.0165  mu=-0.0844  nu_shift=+0.0295  effective C=-mu/theta^2=  309.9  gauss 552.7*th^2=0.1505
+theta=0.0196  mu=-0.1049  nu_shift=+0.0327  effective C=-mu/theta^2=  273.1  gauss 552.7*th^2=0.2123
+theta=0.0226  mu=-0.1243  nu_shift=+0.0354  effective C=-mu/theta^2=  243.3  gauss 552.7*th^2=0.2823
+theta=0.0361  mu=-0.2040  nu_shift=+0.0443  effective C=-mu/theta^2=  156.6  gauss 552.7*th^2=0.7203
+theta=0.0391  mu=-0.2202  nu_shift=+0.0458  effective C=-mu/theta^2=  144.0  gauss 552.7*th^2=0.8450
+theta=0.0556  mu=-0.3006  nu_shift=+0.0516  effective C=-mu/theta^2=   97.3  gauss 552.7*th^2=1.7086
+theta=0.0587  mu=-0.3144  nu_shift=+0.0524  effective C=-mu/theta^2=   91.2  gauss 552.7*th^2=1.9044
+theta=0.0750  mu=-0.3809  nu_shift=+0.0555  effective C=-mu/theta^2=   67.7  gauss 552.7*th^2=3.1089
+12 [(-0.1046, 0.0327)]
+17 [(-0.3008, -0.0516)]
+24 [(-0.2202, 0.0458)]
+36 [(-0.3142, 0.0524)]
+53 [(-0.0048, 0.0071)]

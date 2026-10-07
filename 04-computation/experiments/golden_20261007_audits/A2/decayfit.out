@@ -1,0 +1,33 @@
+== -1 basin: per-octave decay rate, least squares on k=16..28 vs exact root vs Gaussian 552.7 th^2
+  f=  12 theta=+0.01955  observed 0.1049  exact-root 0.1046 (freq shift +0.0327)  Gaussian 0.2112   amp k16->k28: 0.1249->0.0354
+  f=  24 theta=+0.03910  observed 0.2074  exact-root 0.2202 (freq shift +0.0458)  Gaussian 0.8450   amp k16->k28: 0.0459->0.0040
+  f=  29 theta=-0.03609  observed 0.2056  exact-root 0.2040 (freq shift -0.0443)  Gaussian 0.7198   amp k16->k28: 0.0281->0.0025
+  f=  41 theta=-0.01654  observed 0.0883  exact-root 0.0846 (freq shift -0.0295)  Gaussian 0.1512   amp k16->k28: 0.0402->0.0141
+  f=  53 theta=+0.00301  observed 0.0057  exact-root 0.0048 (freq shift +0.0071)  Gaussian 0.0050   amp k16->k28: 0.0596->0.0567
+  f=  65 theta=+0.02256  observed 0.1176  exact-root 0.1240 (freq shift +0.0354)  Gaussian 0.2814   amp k16->k28: 0.0578->0.0134
+  f=  94 theta=-0.01352  observed 0.0587  exact-root 0.0644 (freq shift -0.0258)  Gaussian 0.1011   amp k16->k28: 0.0466->0.0235
+  f= 106 theta=+0.00603  observed 0.0184  exact-root 0.0176 (freq shift +0.0136)  Gaussian 0.0201   amp k16->k28: 0.0923->0.0754
+  f= 118 theta=+0.02558  observed 0.1387  exact-root 0.1429 (freq shift +0.0378)  Gaussian 0.3615   amp k16->k28: 0.0266->0.0053
+  f= 147 theta=-0.01051  observed 0.0455  exact-root 0.0444 (freq shift -0.0215)  Gaussian 0.0611   amp k16->k28: 0.0393->0.0235
+  f= 159 theta=+0.00904  observed 0.0478  exact-root 0.0350 (freq shift +0.0191)  Gaussian 0.0451   amp k16->k28: 0.0256->0.0139
+  f= 200 theta=-0.00750  observed 0.0310  exact-root 0.0258 (freq shift -0.0164)  Gaussian 0.0311   amp k16->k28: 0.0166->0.0120
+  f= 212 theta=+0.01205  observed 0.0737  exact-root 0.0546 (freq shift +0.0238)  Gaussian 0.0803   amp k16->k28: 0.0154->0.0062
+  f= 253 theta=-0.00449  observed 0.0052  exact-root 0.0103 (freq shift -0.0104)  Gaussian 0.0111   amp k16->k28: 0.0357->0.0344
+  f= 265 theta=+0.01506  observed 0.0730  exact-root 0.0747 (freq shift +0.0278)  Gaussian 0.1254   amp k16->k28: 0.0713->0.0293
+  f= 306 theta=-0.00147  observed 0.0087  exact-root 0.0012 (freq shift -0.0035)  Gaussian 0.0012   amp k16->k28: 0.0219->0.0191
+  f= 318 theta=+0.01808  observed 0.0940  exact-root 0.0949 (freq shift +0.0312)  Gaussian 0.1806   amp k16->k28: 0.0443->0.0140
+== entry via 85: per-octave decay rate, least squares on k=16..28 vs exact root vs Gaussian 552.7 th^2
+  f=  12 theta=+0.01955  observed 0.1059  exact-root 0.1046 (freq shift +0.0327)  Gaussian 0.2112   amp k16->k28: 0.0263->0.0073
+  f=  41 theta=-0.01654  observed 0.0841  exact-root 0.0846 (freq shift -0.0295)  Gaussian 0.1512   amp k16->k28: 0.0329->0.0118
+  f=  53 theta=+0.00301  observed 0.0064  exact-root 0.0048 (freq shift +0.0071)  Gaussian 0.0050   amp k16->k28: 0.0334->0.0306
+  f=  65 theta=+0.02256  observed 0.1249  exact-root 0.1240 (freq shift +0.0354)  Gaussian 0.2814   amp k16->k28: 0.0113->0.0025
+  f=  94 theta=-0.01352  observed 0.0613  exact-root 0.0644 (freq shift -0.0258)  Gaussian 0.1011   amp k16->k28: 0.0244->0.0115
+  f= 106 theta=+0.00603  observed 0.0203  exact-root 0.0176 (freq shift +0.0136)  Gaussian 0.0201   amp k16->k28: 0.0324->0.0252
+  f= 118 theta=+0.02558  observed 0.1467  exact-root 0.1429 (freq shift +0.0378)  Gaussian 0.3615   amp k16->k28: 0.0154->0.0026
+  f= 147 theta=-0.01051  observed 0.0450  exact-root 0.0444 (freq shift -0.0215)  Gaussian 0.0611   amp k16->k28: 0.0348->0.0200
+  f= 159 theta=+0.00904  observed 0.0366  exact-root 0.0350 (freq shift +0.0191)  Gaussian 0.0451   amp k16->k28: 0.0253->0.0163
+  f= 200 theta=-0.00750  observed 0.0242  exact-root 0.0258 (freq shift -0.0164)  Gaussian 0.0311   amp k16->k28: 0.0190->0.0141
+  f= 212 theta=+0.01205  observed 0.0553  exact-root 0.0546 (freq shift +0.0238)  Gaussian 0.0803   amp k16->k28: 0.0084->0.0043
+  f= 253 theta=-0.00449  observed 0.0074  exact-root 0.0103 (freq shift -0.0104)  Gaussian 0.0111   amp k16->k28: 0.0150->0.0130
+  f= 265 theta=+0.01506  observed 0.0816  exact-root 0.0747 (freq shift +0.0278)  Gaussian 0.1254   amp k16->k28: 0.0149->0.0054
+  f= 306 theta=-0.00147  observed -0.0006  exact-root 0.0012 (freq shift -0.0035)  Gaussian 0.0012   amp k16->k28: 0.0135->0.0131

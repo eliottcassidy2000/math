@@ -1,0 +1,35 @@
+chain vs direct orbit mismatches: 0
+R=2 witness states at t=5: {1: (2, Fraction(2, 1)), 2: (2, Fraction(2, 1))}
+direct: y,y+1,y+2 at t=5 = 3q+2, 27q+20, 27q+20 for random lifts: OK
+R= 2 t0=  5 none_absorbed=True all_equal_at_t0=True first_all_equal=5 state=(k=2, e=2) direct_ok=True
+R= 3 t0=197 none_absorbed=True all_equal_at_t0=True first_all_equal=197 state=(k=-8, e=5662/6561) direct_ok=True
+R= 4 t0= 24 none_absorbed=True all_equal_at_t0=True first_all_equal=24 state=(k=-1, e=19/3) direct_ok=True
+R= 5 t0= 52 none_absorbed=True all_equal_at_t0=True first_all_equal=52 state=(k=14, e=-5535844) direct_ok=True
+R= 6 t0= 15 none_absorbed=True all_equal_at_t0=True first_all_equal=15 state=(k=-1, e=4/3) direct_ok=True
+R= 7 t0=262 none_absorbed=True all_equal_at_t0=True first_all_equal=262 state=(k=-22, e=41757147655/31381059609) direct_ok=True
+R= 8 t0=127 none_absorbed=True all_equal_at_t0=True first_all_equal=127 state=(k=-8, e=4492/6561) direct_ok=True
+R= 9 t0=108 none_absorbed=True all_equal_at_t0=True first_all_equal=108 state=(k=-14, e=4910362/4782969) direct_ok=True
+R=10 t0=162 none_absorbed=True all_equal_at_t0=True first_all_equal=162 state=(k=3, e=-16) direct_ok=True
+R=11 t0=131 none_absorbed=True all_equal_at_t0=True first_all_equal=131 state=(k=-5, e=379/243) direct_ok=True
+R=12 t0=126 none_absorbed=True all_equal_at_t0=True first_all_equal=126 state=(k=4, e=-304) direct_ok=True
+R=13 t0=108 none_absorbed=True all_equal_at_t0=True first_all_equal=108 state=(k=-1, e=-47/3) direct_ok=True
+R=14 t0=389 none_absorbed=True all_equal_at_t0=True first_all_equal=389 state=(k=5, e=-574) direct_ok=True
+R=15 t0= 66 none_absorbed=True all_equal_at_t0=True first_all_equal=66 state=(k=-1, e=4/3) direct_ok=True
+R=16 t0=121 none_absorbed=True all_equal_at_t0=True first_all_equal=121 state=(k=6, e=-1168) direct_ok=True
+R=17 t0=258 none_absorbed=True all_equal_at_t0=True first_all_equal=258 state=(k=13, e=-1488148) direct_ok=True
+R=18 t0=287 none_absorbed=True all_equal_at_t0=True first_all_equal=287 state=(k=-24, e=211262715028/282429536481) direct_ok=True
+R=19 t0=198 none_absorbed=True all_equal_at_t0=True first_all_equal=198 state=(k=-4, e=59/81) direct_ok=True
+R=20 t0= 55 none_absorbed=True all_equal_at_t0=True first_all_equal=55 state=(k=8, e=-2896) direct_ok=True
+R=21 t0=304 none_absorbed=True all_equal_at_t0=True first_all_equal=304 state=(k=-16, e=37364183/43046721) direct_ok=True
+R=22 t0=155 none_absorbed=True all_equal_at_t0=True first_all_equal=155 state=(k=-13, e=1430690/1594323) direct_ok=True
+R=23 t0=389 none_absorbed=True all_equal_at_t0=True first_all_equal=389 state=(k=0, e=-54) direct_ok=True
+R=24 t0=255 none_absorbed=True all_equal_at_t0=True first_all_equal=255 state=(k=15, e=-16601821) direct_ok=True
+R=25 t0=284 none_absorbed=True all_equal_at_t0=True first_all_equal=284 state=(k=12, e=-2475826) direct_ok=True
+R=26 t0=213 none_absorbed=True all_equal_at_t0=True first_all_equal=213 state=(k=4, e=-709) direct_ok=True
+R=27 t0=110 none_absorbed=True all_equal_at_t0=True first_all_equal=110 state=(k=-4, e=73/81) direct_ok=True
+R=28 t0=199 none_absorbed=True all_equal_at_t0=True first_all_equal=199 state=(k=18, e=-1237014241) direct_ok=True
+R=29 t0=342 none_absorbed=True all_equal_at_t0=True first_all_equal=342 state=(k=-21, e=17674130222/10460353203) direct_ok=True
+R=30 t0=185 none_absorbed=True all_equal_at_t0=True first_all_equal=185 state=(k=-8, e=28646/6561) direct_ok=True
+R=31 t0=391 none_absorbed=True all_equal_at_t0=True first_all_equal=391 state=(k=-16, e=33923365/43046721) direct_ok=True
+R=32 t0=272 none_absorbed=True all_equal_at_t0=True first_all_equal=272 state=(k=6, e=-8404) direct_ok=True
+-1 shadow: k_L = O_L(r-1) - L holds for 40/40 partners (L=30)

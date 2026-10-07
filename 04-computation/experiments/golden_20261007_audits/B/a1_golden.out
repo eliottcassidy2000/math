@@ -1,0 +1,55 @@
+=== Statement 1/2: equivariance and bijectivity, n = 1..22 ===
+n= 1 L_n=     1 |R_n|=     1 classes=     1 surj=True collapsed=[] equivariant=True other_collisions=0
+n= 2 L_n=     3 |R_n|=     1 classes=     1 surj=True collapsed=[['-2', '-1', '0']] equivariant=True other_collisions=0
+n= 3 L_n=     4 |R_n|=     4 classes=     4 surj=True collapsed=[] equivariant=True other_collisions=0
+n= 4 L_n=     7 |R_n|=     5 classes=     5 surj=True collapsed=[['-2', '-1', '0']] equivariant=True other_collisions=0
+n= 5 L_n=    11 |R_n|=    11 classes=    11 surj=True collapsed=[] equivariant=True other_collisions=0
+n= 6 L_n=    18 |R_n|=    16 classes=    16 surj=True collapsed=[['-2', '-1', '0']] equivariant=True other_collisions=0
+n= 7 L_n=    29 |R_n|=    29 classes=    29 surj=True collapsed=[] equivariant=True other_collisions=0
+n= 8 L_n=    47 |R_n|=    45 classes=    45 surj=True collapsed=[['-2', '-1', '0']] equivariant=True other_collisions=0
+n= 9 L_n=    76 |R_n|=    76 classes=    76 surj=True collapsed=[] equivariant=True other_collisions=0
+n=10 L_n=   123 |R_n|=   121 classes=   121 surj=True collapsed=[['-2', '-1', '0']] equivariant=True other_collisions=0
+n=11 L_n=   199 |R_n|=   199 classes=   199 surj=True collapsed=[] equivariant=True other_collisions=0
+n=12 L_n=   322 |R_n|=   320 classes=   320 surj=True collapsed=[['-2', '-1', '0']] equivariant=True other_collisions=0
+n=13 L_n=   521 |R_n|=   521 classes=   521 surj=True collapsed=[] equivariant=True other_collisions=0
+n=14 L_n=   843 |R_n|=   841 classes=   841 surj=True collapsed=[['-2', '-1', '0']] equivariant=True other_collisions=0
+n=15 L_n=  1364 |R_n|=  1364 classes=  1364 surj=True collapsed=[] equivariant=True other_collisions=0
+n=16 L_n=  2207 |R_n|=  2205 classes=  2205 surj=True collapsed=[['-2', '-1', '0']] equivariant=True other_collisions=0
+n=17 L_n=  3571 |R_n|=  3571 classes=  3571 surj=True collapsed=[] equivariant=True other_collisions=0
+n=18 L_n=  5778 |R_n|=  5776 classes=  5776 surj=True collapsed=[['-2', '-1', '0']] equivariant=True other_collisions=0
+n=19 L_n=  9349 |R_n|=  9349 classes=  9349 surj=True collapsed=[] equivariant=True other_collisions=0
+n=20 L_n= 15127 |R_n|= 15125 classes= 15125 surj=True collapsed=[['-2', '-1', '0']] equivariant=True other_collisions=0
+n=21 L_n= 24476 |R_n|= 24476 classes= 24476 surj=True collapsed=[] equivariant=True other_collisions=0
+n=22 L_n= 39603 |R_n|= 39601 classes= 39601 surj=True collapsed=[['-2', '-1', '0']] equivariant=True other_collisions=0
+
+=== Statement 3: n = 5 labels in F_11 (phi -> 4) ===
+R_5 HNF d1,d2 = 1 11  phi^5-1 = (2, 5)  phi^3*(4-phi) = (2, 5)
+cycle (C-order): ['1/13', '16/13', '8/13', '4/13', '2/13'] labels: [3, 1, 4, 5, 9] label set == H: True  == -H: False
+cycle (C-order): ['-5', '-14', '-7', '-20', '-10'] labels: [8, 10, 7, 6, 2] label set == H: False  == -H: True
+table order 1/13,2/13,4/13,8/13,16/13 -> [3, 9, 5, 4, 1]
+table order -5,-14,-7,-20,-10 -> [8, 10, 7, 6, 2]
+label(0) = 0 ; 4 has order 5
+C acts as x4 on labels: True
+4^4 mod 11 = 3 ; <3> = [1, 3, 4, 5, 9] ; <4> = [1, 3, 4, 5, 9] ; <5> = [1, 3, 4, 5, 9]
+
+=== Statement 4: G_5 ===
+|<x+1,4x>| = 55  |<x+1,3x>| = 55  equal: True  == {ax+b: a in H}: True
+orbit of {0,1}: 55 of 55  stabilizer size: 1
+orbit of arc (0,1) == Paley QR_11 arcs: True  |arcs| = 55
+Borel(PSL(2,11)) on F_11 == G_5: False  |Borel| = 11
+
+=== Statement 5: n = 10 ===
+phi^10-1 = (33, 55)  = 11*phi^5 = (33, 55)  HNF d1,d2,x = 11 11 0
+#points period|10 = 123  #primitive period 10 = 110
+primitive points -> distinct cells: True  all beta != 0: True
+points in beta=0 cells: ['-1', '-10', '-14', '-2', '-20', '-5', '-7', '0', '1/13', '16/13', '2/13', '4/13', '8/13'] count 13
+C^5 acts as (a,b)->(a,-b) on the 110 primitive points (direct iteration): True
+period-5 point with R_5-label l sits in R_10 cell (2l, 0): True
+  e.g. 1/13 (label 3, in H) -> cell (6, 0) ; paper projection (a,b)->a gives base cell 6 in H? False
+#C^5-orbits = 55  Psi_- images distinct pairs = 55
+
+=== Remark: R_18 and the -17 cycle ===
+phi^18-1 = (1596, 2584)  76*phi^9 = (1596, 2584)  L_9 = 76
+-17: C^18(-17) == -17: True  minimal period: 18  odd steps: 7  even: 11
+19 splits in Z[phi]: x^2-x-1 roots mod 19: [5, 15]
+|R_18| = 5776 = 76^2: True  HNF: 76 76
