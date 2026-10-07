@@ -1,5 +1,6 @@
 0. the doubling of HYP-9162 reproduces the tower: T_(k+1) = D(T_k) up to the index map
-  ok   D(T_k) is a doubly regular tournament with |Aut D(T_k)| = |Aut T_(k+1)|, k = 2..7
+  ok   D(T_k) = T_(k+1) exactly (entrywise, under i -> i, 0' -> 2^k, i' -> 2^k + i), k = 1..8
+  ok   T_k is a doubly regular tournament for k = 2..9
 1-2. out-neighbourhoods of second-copy vertices
    T_3: n = 7, checked all 7 second-copy vertices
    T_4: n = 15, checked all 15 second-copy vertices
@@ -17,6 +18,6 @@
   ok   rank_F2(J - I) = m - 1 for odd m <= 39 (so a skew +-1 matrix of odd order m has rank exactly m - 1)
 3. automorphism groups
    |Aut T_3| = 21 = |Aut D(T_3)|, |Aut T_4| = 21 = |Aut D(T_4)|, |Aut T_5| = 21 = |Aut D(T_5)|, |Aut T_6| = 21 = |Aut D(T_6)|, |Aut T_7| = 21 = |Aut D(T_7)|, |Aut P_7| = 21 = |Aut D(P_7)|, |Aut P_11| = 55 = |Aut D(P_11)|, |Aut P_19| = 171 = |Aut D(P_19)|, |Aut P_23| = 253 = |Aut D(P_23)|, |Aut P_31| = 465 = |Aut D(P_31)|, |Aut P_43| = 903 = |Aut D(P_43)|, |Aut D(P_7)| = 21 = |Aut D(D(P_7))|, |Aut D(P_11)| = 55 = |Aut D(D(P_11))|
-  ok   |Aut D(T)| = |Aut T| for every doubly regular T tested (orders 7 to 87)
+  ok   |Aut D(T)| = |Aut T| for every doubly regular T tested (orders 7 to 127; doublings up to 255)
   ok   |Aut T_k| = 21 for k = 3..8 (consistent with Aut(T_k) = F_21 for all k >= 3)
 ALL CHECKS PASSED

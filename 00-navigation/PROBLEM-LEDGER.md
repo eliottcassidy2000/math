@@ -775,6 +775,13 @@ all heights (THM-1289, published), δ ineffective.
   maps (3x+1)/2^c, with partner (n+1)/2^D - 1 (trailing ones deleted). The reset switch is the root collision. Reset-2
   sources have only upward root collisions; sporadic collisions relieve 15% of them (16/239 seeds), and there is no uniform
   3-multiple switch. No Collatz consequence.
+- **Seven and twenty-one / openai/math (mac-mini, 2026-10-06; [note](../05-knowledge/results/seven_twentyone_mersenne_openai_math_20261006.md), THM-4556, THM-4557, HYP-9213, HYP-9214).**
+  - THM-4556: the Mersenne line is a chain of debt states. Odd-exponent switches have odd least shift, landing on 2^(2k)-1 = 3(4^k-1)/3.
+  - sigma(2^a-1) plateaus: 104 values for a <= 6000. Switches are periodic mod 2^(K-2), with certified density 15719/131072.
+  - HYP-9214: reset-2 debt resolution rises with size, 0.19 to 0.91 from 16 to 8192 bits. A log-density proof would make the rewrite obstruction density zero.
+  - THM-4557: doubling a DRT keeps Aut (new proof of Hanaki 2020), so HYP-9162 is closed.
+  - From the openai/math reading: a negacyclic 3-adic clock (19*27 = 2^9+1), Catalan's 2^3+1 = 3^2 behind 63, collisions as vanishing {2,3}-unit sums, and negative cycles blocking information-only proofs.
+  - No Collatz consequence.
 
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`
 (ranks HN > reconstruction > Kakeya/Falconer > sunflower > Caccetta–Häggkvist > … ).

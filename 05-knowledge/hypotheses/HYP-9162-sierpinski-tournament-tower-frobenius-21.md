@@ -2,8 +2,9 @@
 id: HYP-9162
 title: "The Sierpinski tournament tower: H_2 = [[1,1],[-1,1]], H_(2n) = [[H,H],[-H^T,H^T]] gives skew Hadamard matrices of every order 2^k and hence doubly regular tournaments T_k of every Mersenne order 2^k - 1 (the zero-triangle sides of Gilbreath's single-seed sea); T_3 is the Paley heptagon, Aut(T_k) contains its Frobenius group F_21 for all k >= 3, and the conjecture is that Aut(T_k) = F_21 exactly for all k >= 3 (so T_k would never be Paley for k >= 4; T_5 != P_31 and T_7 != P_127 are established outright by the automorphism orders)"
 status: >
-  RESOLVED 2026-10-06: PROVED by THM-4557 (doubling a doubly regular tournament on >= 7 vertices keeps its
-  automorphism group; Aut(T_k) = F_21 for all k >= 3). History: PROVED: the doubling preserves skewness and orthogonality (two-line check),
+  RESOLVED 2026-10-06: PROVED (THM-4557). The key fact is A. Hanaki, arXiv:2011.06141 (2020), Thm 3.4
+  (doubling a doubly regular tournament on >= 7 vertices keeps its automorphism group), so the conjecture
+  already followed from the literature when posed; THM-4557 gives an independent proof. Aut(T_k) = F_21 for all k >= 3. History: PROVED: the doubling preserves skewness and orthogonality (two-line check),
   double regularity is the classical skew-Hadamard correspondence, the
   recursion T_(k+1) = T_k + {0'} + T_k' is explicit, and every automorphism of
   T_k extends diagonally, so F_21 <= Aut(T_k) for k >= 3. FINITE-EXACT:
@@ -73,3 +74,5 @@ tournament) and shows what symmetry the tower keeps: the heptagon's.
 * `S_R ≡ J − I (mod 2)` has `F_2`-rank `m − 1`, so `ker S_R = span(1)`. But `|O_j| = t + 1`.
 
 Hence `Aut(D(T)) = Aut(T)`, and `Aut(T_k) = F_21` for all `k >= 3`.
+
+**Prior art (found by the independent audit; MISTAKE-571).** The theorem is Theorem 3.4 of A. Hanaki, arXiv:2011.06141 (2020), proved there with triple intersection numbers. The intransitivity is already in Faradžev–Klin–Muzichuk (1994), Theorem 2.6.6. This hypothesis was a corollary of the literature when it was posed.

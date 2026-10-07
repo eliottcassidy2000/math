@@ -2032,6 +2032,74 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
+## MISTAKE-572 (2026-10-06, mac-mini seven/twenty-one session; found by the session's independent adversarial audit of THM-4556, after the checkpoint 0d8aa0df3f was pushed) -- a false "every switch" remark, a census share misstated (0.95 for 0.980), an equivalence proved in one direction stated as both, missing hypotheses in a propagation corollary, and tables not regenerable from committed code
+
+- **Claims (in THM-4556, HYP-9213, HYP-9214, checkpoint 0d8aa0df3f):**
+  - (1) "(iii) says every odd-exponent Mersenne switch lands on such a 'bipolar' number [2^(2k) − 1 = 3a_k]". False: `M_31` merges with `M_30` and `M_29`, and `2^29 − 1` is not divisible by 3. Only the least-shift switch must land on an even exponent. Partner sets are unions of reset pairs.
+  - (2) "The share of odd `a` sharing `σ` with a smaller exponent is about 0.95 for `a` between `10^3` and `6·10^3`." The value is 2450/2500 = 0.980 (and 2204/2500 = 0.882 with `a − 1`). The 0.95 did not come from any committed output.
+  - (3) "(ii) `σ(M_a) = σ(M_(a−1))` iff the debt state resolves with lag 1, i.e. its orbit meets … one step later". Only the stopping-time equivalence is proved. "Equal `σ` implies a merge before 1" is a FINITE-EXACT check (odd `a <= 6000`). HYP-9213's title likewise said "merges" where only "shares `σ`" follows.
+  - (4) The (iv) propagation corollary omitted two things:
+    - the hypothesis `|u'| = |u| + D`;
+    - the condition that the merge value is not 1 (`3^(a−1+|u|) > 2^K`).
+    It also said "at equal time `(a−1)+|u|`" where "by" is correct, with exactly that time only if `u` is the shortest colliding prefix.
+  - (5) Smaller slips:
+    - "least partner `M_b` (b even)" for the nearest partner;
+    - "density `>= 0.1199` of switching exponents" without "among odd exponents" (exact value `15719/131072`);
+    - "least certified `D` is odd" is vacuous, because the search used only odd `D`;
+    - "2-adic poles" (`−1` is a repelling fixed point; `−1/3` is where `v_2(3x+1) = ∞`);
+    - "A193688's `a(2n) = 1 + a(2n−1)`" missing "for `n >= 2`";
+    - HYP-9214's median-lag row presented as precise (noisy: 33–50 in replicates at `B = 128`);
+    - "share of merges within 10 steps ~0.12" (it is a share of sources);
+    - "A merge requires … `L = 2k`" (the sibling `k` ranges over `Z \ {0}`, and `k < 0` in about 2/3 of merges);
+    - HYP-9214's table and the `a <= 6000` census could not be regenerated from committed code.
+- **Why it was wrong:**
+  - (1) a rule proved for the least partner was quoted for all partners;
+  - (2) a census share was typed from memory of a fast run instead of from output;
+  - (3) "equal stopping times" was silently equated with "merging before 1";
+  - (4) the corollary was stated before its hypotheses were reread;
+  - (5) wording was not reread against the data.
+- **Correct framing (applied):**
+  - (1) "the least-shift switch lands on `2^(2k) − 1`; other switches need not";
+  - (2) 0.980 and 0.882, now computed by the committed script `sevens_20261006_mersenne_plateaus.py 6000`;
+  - (3) the stopping-time equivalence is PROVED, and the merge converse is FINITE-EXACT;
+  - (4) the full hypotheses and "by step";
+  - (5) all wording fixed. The new script `sevens_20261006_debt_resolution_trend.py` regenerates HYP-9214's table exactly.
+- **What survives:** all the mathematics. The audit reproduced `σ(M_a)` for `a <= 6000` independently, matching the OEIS A193688 b-file. It also confirmed:
+  - the odd least shift for all odd `a <= 6000`;
+  - the periodicity and propagation (600 further representatives);
+  - the exact certified fractions;
+  - every census count.
+- **Lesson:**
+  - Quote a lemma's conclusion with its quantifier ("least", "nearest"), not as "every".
+  - Never type a census share without the output line that prints it.
+  - Keep "equal stopping time" and "merge before 1" apart: they differ by the predecessor of 1.
+
+## MISTAKE-571 (2026-10-06, mac-mini seven/twenty-one session; found by the session's independent audit of THM-4557, after the checkpoint 0d8aa0df3f was pushed) -- a known theorem (Hanaki 2020) presented as new and called "possibly folklore" without a search, and a hypothesis (HYP-9162) open in the repo for ten days although it was a corollary of the literature
+
+- **Claims:**
+  - THM-4557 ("doubling a doubly regular tournament on >= 7 vertices keeps its automorphism group; Aut(T_k) = F_21 for all k >= 3") was pushed with the remark "We have not found the theorem in the literature on Reid–Brown doubling. It may be folklore." No search had been made.
+  - HYP-9162 (opus, 2026-09-26) had posed the corollary as open. The mod-18 note (2026-10-06) reduced it to a lemma, also without a literature search.
+- **The prior art:**
+  - A. Hanaki, *Non-symmetric class 2 association schemes obtained by doubling of skew-Hadamard matrices are non-schurian*, arXiv:2011.06141 (2020), Theorem 3.4. His (3.1) is `D(T)` verbatim, and his hypothesis `m >= 7` is ours.
+  - He fixes the apex with triple intersection numbers (Lemma 3.1) and gets the diagonal form from invertibility of the adjacency matrix (Lemma 3.3).
+  - His footnote credits the intransitivity to Faradžev–Klin–Muzichuk (1994), Theorem 2.6.6.
+  - His Remark 3.5 is the Fano/`P_7` case.
+  - (Checked against the arXiv PDF.)
+- **Why it was wrong:**
+  - A doubly regular tournament is a non-symmetric class-2 association scheme. The search terms "automorphism group", "doubling" and "skew-Hadamard" would have found the paper.
+  - The tournament phrasing (Reid–Brown) hid the association-scheme literature.
+- **Correct framing (applied):**
+  - THM-4557 is typed "PROVED (known: Hanaki 2020, Thm 3.4; new proof)", with a prior-art section and the FKM citation.
+  - HYP-9162's resolution says it was a corollary of the literature when posed.
+  - The new content is the proof:
+    - Steps 1–2 identify `N^+(x')` with `T` reversed on `N^−(x)` and exclude double regularity through the kernel of an odd skew matrix;
+    - Step 4 uses closed in-neighbourhoods.
+  - The audit checked this proof on 438 further doubly regular tournaments.
+- **What survives:** the proof, every computation, and HYP-9162's corollary `Aut(T_k) = F_21`.
+- **Lesson:**
+  - Before calling a structural theorem new or "folklore", search its other names; tournament results often live as association-scheme or design results.
+  - A repo hypothesis should carry a literature check before it is posed.
+
 ## MISTAKE-570 (2026-10-06, mac-mini mod 18/19/7/63 session; found by the session's independent adversarial audit of THM-4555, after the checkpoint 674d847518 was pushed) -- an undefined "uniform", a census convention left implicit, a one-step argument presented as complete, scope words dropped, and a 2016 prior art missed
 
 - **Claims (in THM-4555 and section 6b of `05-knowledge/results/mod18_mod19_seven_sixtythree_fractal_20261006.md`, checkpoint 674d847518):**

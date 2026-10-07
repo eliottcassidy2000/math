@@ -23,7 +23,7 @@ sigma(n) = number of odd steps (U-steps) from n to 1 (OEIS A390816 for n = M_a; 
   6. Plateaus (FINITE-EXACT): sigma(M_a), a <= AMAX, takes very few values (104 for a <= 6000, 58 for a <= 1200).
   7. Debt resolution grows with size (NUMERICAL, seeded): a random first-reset-2 source n of B bits merges at
      equal odd-step time with (n-1)/2 with frequency rising from about 0.19 (B = 16) to about 0.8 (B = 2048).
-Run: python3 sevens_20261006_mersenne_plateaus.py [AMAX]   (AMAX = 1200: about 10 s)
+Run: python3 sevens_20261006_mersenne_plateaus.py [AMAX]   (AMAX = 1200: about 10 s; the committed .out uses AMAX = 6000, about 2 min)
 """
 import sys, random, math
 from collections import defaultdict
@@ -196,9 +196,18 @@ check(abs(dens[9] - 1 / 64) < 1e-12 and abs(dens[20] - 0.1199) < 1e-4 and all(de
       "certified densities " + ", ".join(f"K={K}: {d:.4f}" for K, d in dens.items()))
 
 print("6. plateaus of sigma on the Mersenne line")
-for A in (100, 400, 1200):
+for A in (100, 200, 400, 800, 1200, 1600, 3200, 6000):
     if A <= AMAX:
         print(f"   a <= {A}: {len({sig[a] for a in range(1, A + 1)})} distinct values of sigma(2^a - 1)")
+if AMAX >= 6000:
+    first = {}
+    for a in range(1, AMAX + 1):
+        first.setdefault(sig[a], a)
+    win = [a for a in range(1001, 6000, 2)]
+    shared = sum(first[sig[a]] < a for a in win)
+    with_prev = sum(sig[a] == sig[a - 1] for a in win)
+    check(len({sig[a] for a in range(1, 6001)}) == 104 and shared == 2450 and with_prev == 2204,
+          f"a <= 6000: 104 distinct values; of the {len(win)} odd a in [10^3, 6*10^3], {shared} share sigma with a smaller exponent, {with_prev} with a - 1")
 lev = defaultdict(list)
 for a in range(1, AMAX + 1):
     lev[sig[a]].append(a)

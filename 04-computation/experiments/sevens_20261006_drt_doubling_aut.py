@@ -13,6 +13,8 @@ D(T) = T + {0'} + T' with T' the converse of T, i -> j' iff (i -> j or i = j), i
   3. Hence the set of vertices with doubly regular out-neighbourhood contains 0', misses T', and 0' is its unique
      source; with the diagonal-stabiliser lemma, Aut(D(T)) = Aut(T) (checked with nauty: T_3..T_8 and Paley P_p,
      p = 7, 11, 19, 23, 31, 43, and D(D(P_7)), D(D(P_11))).
+  The theorem is KNOWN: A. Hanaki, arXiv:2011.06141 (2020), Theorem 3.4 (different proof); this script checks the
+  new proof's steps.
 Run: python3 sevens_20261006_drt_doubling_aut.py   (needs nauty's dreadnaut; about 1 min)
 """
 import subprocess, re
@@ -74,10 +76,9 @@ def tower(k):
 
 
 print("0. the doubling of HYP-9162 reproduces the tower: T_(k+1) = D(T_k) up to the index map")
-good = True
-for k in range(2, 8):
-    good &= aut_order(double(tower(k))) == aut_order(tower(k + 1)) and is_drt(double(tower(k)))
-check(good, "D(T_k) is a doubly regular tournament with |Aut D(T_k)| = |Aut T_(k+1)|, k = 2..7")
+good = all(np.array_equal(double(tower(k)), tower(k + 1)) for k in range(1, 9))
+check(good, "D(T_k) = T_(k+1) exactly (entrywise, under i -> i, 0' -> 2^k, i' -> 2^k + i), k = 1..8")
+check(all(is_drt(tower(k)) for k in range(2, 10)), "T_k is a doubly regular tournament for k = 2..9")
 
 print("1-2. out-neighbourhoods of second-copy vertices")
 cases = [("T_%d" % k, tower(k)) for k in range(3, 8)] + [("P_%d" % p, paley(p)) for p in (7, 11, 19, 23, 31, 43)]
@@ -139,6 +140,6 @@ for name, A in cases + [("D(P_7)", double(paley(7))), ("D(P_11)", double(paley(1
     rows.append((name, a, b))
     good &= a == b
 print("   " + ", ".join(f"|Aut {nm}| = {a} = |Aut D({nm})|" for nm, a, b in rows))
-check(good, "|Aut D(T)| = |Aut T| for every doubly regular T tested (orders 7 to 87)")
+check(good, "|Aut D(T)| = |Aut T| for every doubly regular T tested (orders 7 to 127; doublings up to 255)")
 check(all(aut_order(tower(k)) == 21 for k in range(3, 9)), "|Aut T_k| = 21 for k = 3..8 (consistent with Aut(T_k) = F_21 for all k >= 3)")
 print("ALL CHECKS PASSED" if OK else "SOME CHECK FAILED")
