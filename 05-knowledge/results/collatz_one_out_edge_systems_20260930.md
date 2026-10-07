@@ -195,9 +195,12 @@ points in `[-6, 6]` are `-5.468, -4.540, -3.446, -2.577, -1.278, 0.278,
 1.577, 2.446, 3.540, 4.468, 5.526`, and the fixed-point equation
 `cos^2(πx/2) = (x + 1)/(2x + 1)` is invariant under `x ↦ -1 - x`, which swaps
 the integer fixed points `0` and `-1`: the real extension glues the sheets
-about `-1/2`, not about `0`. The only attracting real fixed point is
-`0.278` (multiplier `0.386`); its mirror `-1.278` is repelling (`1.614`). The
-synthesis's record stands: every continuous extension has all periods on
+about `-1/2`, not about `0`. *Corrected 2026-10-06 (MISTAKE-578):* the
+non-integer attracting fixed point is `-1.278` (multiplier `0.386`) and its
+mirror `0.278` is repelling (`1.614`); the attracting fixed points are exactly
+`0` and `-1.2777...`, because `C'(-1-x) = 2 - C'(x)` (the displacement is even
+about `-1/2`; S19 note `collatz_cycles_tubes_debt_walk_openai_20261006.md`
+section 2.2). The synthesis's record stands: every continuous extension has all periods on
 both sides (Sharkovskii gives nothing), and the sign decides stability.
 
 ## 6. Verdicts

@@ -2032,6 +2032,19 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
+## MISTAKE-578 (2026-10-06, found by opus-2026-10-06-S19 while classifying the fixed points of Chamberland's map; concerns opus S15's fifteenth note `05-knowledge/results/collatz_one_out_edge_systems_20260930.md`, section 5 "The real line", its INDEX line and its broadcast letter of 2026-09-30) -- the attracting and repelling members of a mirror pair of fixed points swapped
+
+- **Claim:** "The only attracting real fixed point is 0.278 (multiplier 0.386); its mirror −1.278 is repelling (1.614)."
+- **Why it is wrong.**
+  - `C′(0.2777338) = 1.6143` (repelling) and `C′(−1.2777338) = 0.3857` (attracting). The two multipliers were attached to the wrong points.
+  - Dumont–Reiter 2003, Table 4, lists `0.385708` at `−1.27773`. Chamberland 1996 (via Lagarias's entry 35) has `[0, μ1)` attracted to the fixed point 0, which already requires `μ1 = 0.2777` to be repelling.
+  - "Only attracting real fixed point" also omitted the integer fixed point 0 (multiplier 1/2).
+- **Correct framing (applied):**
+  - The displacement `C(x) − x = 1/4 − (u/2) sin(πu)`, `u = x + 1/2`, is even in `u`, so `C′(−1 − x) = 2 − C′(x)`.
+  - The attracting fixed points of `C` are exactly 0 and `−1.2777337662` (PROVED in `collatz_cycles_tubes_debt_walk_openai_20261006.md` §2.2, script `chamberland_tubes_dumont_reiter_20261006.py` A).
+  - The S15 note and its INDEX line now say so, with a pointer to this entry.
+- **Lesson:** when a mirror symmetry pairs two objects, state which member carries which invariant and recompute both. A symmetric pair invites exactly this swap.
+
 ## MISTAKE-577 (2026-10-06, found by mac-mini-2026-10-06-oaimath2's reader of openai/math #164 and re-computed in the session; concerns THM-470 A3/C of kind-pasteur-2026-06-11-S1) -- the fully gap-determined algebra Finv identified with the row-invariant game of THM-453 F, two games with different cutoffs
 
 - **Claim (THM-470 A3):** "The finest gap-determined algebra is Finv: phi = identity on the gap vector (= the translation-invariant game of THM-453 F at n=3)". THM-470 C also calls INV(3,4) "agreeing with mac-mini's independent invQ(3,4) implementation".

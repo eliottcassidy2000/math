@@ -1,0 +1,8 @@
+C odd critical points n <= 2001: {'A2': 3, 'A1': 998}
+   A2-captured odd n: [1, 3, 5]
+   max xi along orbits: 0.7037; entry xi range [2.78e-09, 0.543]
+C even critical points m <= 300: fates {'A1': 150}; escaped near-integer regime: 7/150
+D odd critical points n <= 2001: {'A1': 1001}
+   A2-captured odd n: []
+   max xi along orbits: 0.4559; entry xi range [2.96e-12, 0.393]
+D even critical points m <= 300: fates {'A1': 150}; escaped near-integer regime: 32/150
