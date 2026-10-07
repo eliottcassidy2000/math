@@ -1,0 +1,33 @@
+{
+  "checks": 1667,
+  "greedy_chain_leave": 4,
+  "isolating_interval": [
+    5,
+    6
+  ],
+  "lattice_subsets": 512,
+  "moser_chromatic_number": 4,
+  "moser_edges": 11,
+  "moser_four_colouring": [
+    0,
+    0,
+    1,
+    2,
+    1,
+    2,
+    3
+  ],
+  "moser_vertices": 7,
+  "optimal_chain_leave": 1,
+  "primitive_polynomial": [
+    64,
+    0,
+    -28,
+    0,
+    1
+  ],
+  "refutation_nodes": 139,
+  "status": "Exact certificate controls; no six-chromatic witness claimed",
+  "triangle_occurrences_in_subsets": 512,
+  "typed_geometry_hostiles": 15
+}

@@ -1,0 +1,9 @@
+STORAGE: four explicit words, 12 input tokens; exact shortest tape ABaBbA length 6
+OCCURRENCES: [(0, 3), (1, 4), (2, 5), (3, 6)] ; polynomial inverses and all64 chart cocycles checked
+HOLONOMY: shear degrees2..9; first commutator defect degree2m-1, yet (1,0) maps to(0,1)
+INVERSE RECEIPTS: declared bound works at2/4 for triangular/noncommuting examples; support bound is not inferred
+GROUP HOSTILE: all6 S3 substitutions fail exponent-sum-one equation; overgroup realization remains a different target
+FILTERED HOSTILE: Z9 and Z3xZ3 share two Z3 graded factors, but differ on order3 lifts
+QUADRATIC UNIVERSAL: six parameters; Keller ideal basis=(2a+e,b+2f,2cd+ef,ce+2f^2,4df-e^2)
+QUADRATIC INVERSE: all18 cubic/quartic coefficient remainders zero; two-way generator and coefficient identities verified
+CHECKS 279 ; all explicit controls passed

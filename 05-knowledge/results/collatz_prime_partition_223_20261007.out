@@ -1,0 +1,13 @@
+PROVED elementary transfers; accepted paper theorems are premises, not audited
+numeric_roles: carries223/233; F13=233; L12=322; even322->161->233
+carry_parity_universe: lengths1..5, exponents1..4; words=1364
+pair_fiber: sources223+62208t,233+65536t; endpoint425+118098t
+triple_fiber: odd161+33554432t,223+45349632t,233+47775744t
+triple_endpoint=425+86093442t; even_source=322+67108864t
+source_preserving_ROOT_splices_t0..63=64
+independent_endpoint_iff_tests=60000
+odd_primes3..5000=668; initial_tube_points=1313
+hostile_prime_labels59/233: same_kernel29, opposite_first_drift
+hostile_reverse_injection: two_valid_ROOT_records, both_wrong_source_fibers
+typed_and_source_hostiles=10
+checks=68370

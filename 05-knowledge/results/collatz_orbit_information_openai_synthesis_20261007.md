@@ -245,8 +245,10 @@ The incoming concurrent
 [THM-4580, 5-adic tree and larger verification](../../01-canon/theorems/THM-4580-zeroless-powers-of-two-the-5-adic-tree-and-verification-to-1-1e11.md)
 records a substantially larger finite scan, 87<=n<1.1e11, and a stronger
 computer-assisted counting exponent0.93783. Those are its recorded
-computations, not additional runs performed by this package; its checkpoint
-was marked audit pending. Our short parity-weight proof and its bounded
+computations, not additional runs performed by this package. The subsequent
+audit confirms the stated finite range and records that the last-251-digit
+bound applies for 957<=n<1.1e11, not beyond the verified range. Our short
+parity-weight proof and its bounded
 independent controls are retained. Both routes still leave the infinite
 cutoff and the height-sensitive diagonal open.
 
