@@ -100,6 +100,7 @@ Session mac-mini-2026-10-07-oaimath3, the third openai/math session.
 * Run lengths have mean 2.00 at every level, under the bound `m_h + 1`.
 * Survival from `(0, 1)`: `√T q(T) = 11.2, 11.0` at `T = 6400, 25600`.
 * Chain-free check: actual big-integer orbits of `y` against `y + 1`, `3y`, `y/3`, `9y + 5`, `y − 7` and `27y + 1/3` merge within 8000 steps in 80–89% of 120 trials each.
+* Exact residue census: for every `n mod 2^K` with `K ≤ 20`, chain absorption by step `K` equals an actual integer merge of `n` and `n + 1`, with 0 disagreements. The unmerged fraction is `626933/2^20 = 0.598` at `K = 20`.
 
 **What it gives.**
 
@@ -163,6 +164,23 @@ Session mac-mini-2026-10-07-oaimath3, the third openai/math session.
 * What remains is fine structure: an invariance principle with variance 4 per odd step, and the exact flip density 1/2 (measured 0.5002).
 
 ### 1.3 The answer
+
+**The answer as a table (NUMERICAL).** S19's pair: `y` a random 8000-bit odd integer, `x = 3·2^v y + 1`, 1500 pairs, 1200 odd steps. Script: `oai3_20261007_coalescence/lag_correlation_profile.py`.
+* Every one of the 1053 merges has lag 1: `x_s = y_(s+1)` from then on.
+* The correlation sits at the merge lag only, and tracks the merged share.
+
+| odd-step window `s` | merged share | `Corr(b_s, a_(s+d))`, `d = −2` | `−1` | `0` | `+1` | `+2` | `+3` |
+|---|---|---|---|---|---|---|---|
+| [5, 15) | 0.109 | +0.001 | +0.005 | +0.013 | **+0.152** | +0.023 | +0.000 |
+| [30, 50) | 0.241 | −0.000 | −0.007 | +0.009 | **+0.262** | +0.002 | +0.001 |
+| [100, 150) | 0.391 | −0.001 | −0.003 | +0.005 | **+0.422** | −0.006 | +0.001 |
+| [300, 400) | 0.531 | −0.004 | −0.003 | +0.000 | **+0.560** | −0.000 | −0.002 |
+| [800, 1000) | 0.664 | −0.000 | +0.002 | −0.002 | **+0.676** | +0.001 | +0.003 |
+| [1100, 1195) | 0.697 | −0.001 | +0.004 | −0.000 | **+0.702** | −0.000 | +0.003 |
+
+* Off the merge lag: zero to three decimals.
+* At the merge lag: the merged share (which tends to 1, THM-4581), plus a small pre-merge excess. The excess is largest early, from near-merge locking at small `L`.
+
 
 **Over long gaps the two orbits' exponents are uncorrelated until the orbits merge, and the merge is almost sure.**
 * Before the merge, every correlation is carried either by the predictable disagreement bit (Terras clock), which decides *when* the odd-step difference moves but never *which way*, or by ultrametric locking at window overlaps (odd-step clock).

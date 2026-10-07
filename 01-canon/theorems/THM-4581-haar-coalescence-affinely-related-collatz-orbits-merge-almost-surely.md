@@ -5,14 +5,16 @@ status: >
   PROVED (elementary probability: a bounded-increment martingale, an explicit Lyapunov weight s^|k|, optional stopping,
   Levy's 0-1 law): statements 1-3, 5, 6. PROVED at sketch level (standard Foster-Lyapunov and first-passage estimates):
   the rate (4). Local lemmas checked exhaustively on all 336,040 (state, bit) pairs with |k| <= 10, |3^max(0,-k) e| <= 4000.
-  The chain was matched against direct 2-adic orbits on 450,000 steps with 0 mismatches. NUMERICAL: the return drift is 0.59-0.61
+  The chain was matched against direct 2-adic orbits on 450,000 steps with 0 mismatches.
+  FINITE-EXACT (6c): for every residue n mod 2^K and every even K in [2, 20], chain absorption by step K equals
+  an actual integer merge of n and n+1 (n = 2^(K+40) + r): 0 disagreements; unmerged fraction 626933/2^20 = 0.598 at K = 20. NUMERICAL: the return drift is 0.59-0.61
   against the proved 0.634. Direct big-integer orbits for six relations merge within 8000 steps in 80-89% of 120 trials each.
   HEURISTIC + NUMERICAL: the one-big-jump constant (7). Found by the session's pick reader (pair-chain lane); the proof was
   re-derived and re-checked here, and the rate (4) was added here. Independent audit pending at checkpoint.
 session: mac-mini-2026-10-07-oaimath3
 source: 05-knowledge/results/oai3_two_orbits_twos_and_threes_20261007.md
 scripts:
-  - 04-computation/experiments/oai3_20261007_coalescence/ (coal_check.py: chain vs direct orbits, run lengths, return drift, survival; lemmas_exhaustive.py; direct_merge.py: chain-free merges; excursions_J.py: E[J] and the one-big-jump constant; + .out)
+  - 04-computation/experiments/oai3_20261007_coalescence/ (coal_check.py: chain vs direct orbits, run lengths, return drift, survival; lemmas_exhaustive.py; direct_merge.py: chain-free merges; excursions_J.py: E[J] and the one-big-jump constant; residue_exact.py: exact residue census for (6c); + .out)
   - 04-computation/experiments/oai3_20261007_readers/pick/ (the lane's pair_chain_*.py and outputs: integer check, chain vs direct merges on 3000 random 404-bit p, lemma check, exact dyadic values, Monte Carlo, flip autocorrelation, drift test)
 related:
   - THM-4569 (the same chain in the notation (j, c); this theorem closes its box recurrence (5) and its index question (7))
