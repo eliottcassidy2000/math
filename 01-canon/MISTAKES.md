@@ -2032,6 +2032,43 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
+## MISTAKE-570 (2026-10-06, mac-mini mod 18/19/7/63 session; found by the session's independent adversarial audit of THM-4555, after the checkpoint 674d847518 was pushed) -- an undefined "uniform", a census convention left implicit, a one-step argument presented as complete, scope words dropped, and a 2016 prior art missed
+
+- **Claims (in THM-4555 and section 6b of `05-knowledge/results/mod18_mod19_seven_sixtythree_fractal_20261006.md`, checkpoint 674d847518):**
+  - (1) "Uniform switch" was used throughout without a definition. Every statement is about run-shift families: a fixed reduced pair `u`, `u'` and a fixed shift `s`, for infinitely many `r`.
+  - (2) "No uniform switch is special to multiples of 3" was justified only by the residue-class fact. The conclusion also needs three more steps:
+    - (iii): a uniform switch firing on them is a collision;
+    - (v): a longer partner fires only on `n ≡ −1 (mod 3)`;
+    - a partner of length `<= j` acts on the whole family.
+    The note's heading "No 3-multiple switch (PROVED)" dropped "uniform".
+  - (3) The census "every equal-length merge of `n` with some `(n+1)/2^D − 1` is a collision; there are no sporadic exceptions" holds only for orbits stopped at 1. That convention was not stated. Under the theorem's own `U(1) = 1`, every partner meets `n` at 1, giving 4415 non-collision merges among the reset-2 sources (the first is `n = 7`, `m = 3` at step 5). The collision counts 377, 16 and 37 are unaffected.
+  - (4) "A uniform rewrite for [a reset-2 source] therefore needs a sporadic collision" dropped "equal-length". By (v), the root collision itself gives longer-partner joins on `n ≡ 8 (mod 9)`.
+  - (5) The 2-adic clock remark ("up to total `K` ... `a mod 2^(K−2)`") needs `K >= 3`. The mirror remark omitted "to depth `k`".
+  - (6) The root case of the switch, i.e. the reset switch of `checked_switch_phase19` and its upward reading for reset 2, is Theorem 2.1 of M. M. Ahmed, arXiv:1602.01617 (2016). Neither note cited it.
+  - (7) Smaller points:
+    - (i) was worded almost as a tautology;
+    - its converse omitted why `I_w(z)` is positive;
+    - the status line pointed to an audit record that did not exist yet.
+- **Why it was wrong:**
+  - (1), (4) a working notion was used before it was defined;
+  - (2) the theorem's own items (iii) and (v) were not invoked;
+  - (3) the census script's stop-at-1 convention was not carried into the statement;
+  - (5) a small-case exception was not checked;
+  - (6) no literature search was done for the elementary root case before writing.
+- **Correct framing (applied):**
+  - "uniform" is defined as a run-shift family;
+  - the 3-multiple argument is completed, and the heading reads "No uniform 3-multiple switch";
+  - the census states "orbits stopped at 1" and records the `U(1) = 1` caveat;
+  - "equal-length" is inserted;
+  - `K >= 3` and "to depth `k`" are added;
+  - Ahmed's theorem is cited, checked against the PDF;
+  - (i) is restated with an explicit positivity argument.
+- **What survives:** all the mathematics. The audit ran over `10^7` independent tests of the switch (iv) with no failure, and it reproduced every census number exactly.
+- **Lesson:**
+  - Define a working adjective ("uniform") in the statement before using it in a negative claim.
+  - When a census depends on an orbit-termination convention, state that convention in the theorem.
+  - Search for prior art on the base case of any new rewrite rule, even an elementary one.
+
 ## MISTAKE-569 (2026-10-06, mac-mini mod 18/19/7/63 session; found by the session's independent adversarial audit, after the checkpoint e383ff193a was pushed) -- four bounds rounded inward, a tail bound paraphrased into a false form, a repo table on the wrong clock, a numerical fit typed FINITE-EXACT, "same lattice paths" for mirror families, a wrong citation, and several overclaims
 
 - **Claims (in THM-4554, `05-knowledge/results/mod18_mod19_seven_sixtythree_fractal_20261006.md` and the HYP-9162 update, checkpoint e383ff193a):**

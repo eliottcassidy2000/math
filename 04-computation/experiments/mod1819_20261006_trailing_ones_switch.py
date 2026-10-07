@@ -18,11 +18,14 @@ and its word is 1^r u with u reduced (r = number of leading exponents 1).
      (2, c, .) ~ (c+2, .) points the wrong way; shifted by 3 it fires exactly on n = 8 (mod 9).
   5. Sporadic collisions exist, e.g. (8, c) ~ (4, 1, 1, c+2) (both give 125/2^(7+c); 125 = 2^7 - 3 = 2^5 + 3*2^4 +
      9*2^3 - 27), hence (2, 6, c) ~ (4, 1, 1, c+2): reset-2 sources (1^r, 2, 6, c) switch to (n-1)/2 at depth r+3.
-  6. Census: reset-2 sources n < 2*10^4: uniform trailing-ones switches for 377 of 2500; every equal-length merge
+  6. Census (orbits STOPPED AT 1; under U(1) = 1 every partner would also meet n at 1, e.g. n = 7, m = 3 at step 5,
+     which is not a collision; the collision counts below are the same under both conventions):
+     reset-2 sources n < 2*10^4: uniform trailing-ones switches for 377 of 2500; every equal-length merge
      of n with some (n+1)/2^D - 1 is a collision.  The 239 residual seeds: 16 (10 multiples of 3).  Odd Mersenne
      numbers 2^a - 1 (a reset-2 family): 37 of the 60 odd a in [3, 121] switch to 2^(a-D) - 1, always with D odd
      (an even Mersenne number, which the reset switch takes one step further).
-Run: python3 mod1819_20261006_trailing_ones_switch.py   (about 1 min)
+  Prior art for the root case (the reset switch): M. M. Ahmed, arXiv:1602.01617 (2016), Theorem 2.1.
+Run: python3 mod1819_20261006_trailing_ones_switch.py   (about 10 s)
 """
 import itertools, json
 from fractions import Fraction

@@ -220,7 +220,7 @@ The tower `T_(k+1) = T_k + {0'} + T_k'` (doubly regular, order `2^k − 1`, `T_3
 
 The first next step asked for forward joins for the backward-minimal reset-2 sources, and for a "3-multiple switch". The attempt produced a classification of every switch that is uniform in the run length, the kind the reset switch is.
 
-* **Endpoint progression (PROVED).** Write `n = 2^(r+1)t − 1` with word `1^r u`, `u` reduced (first letter `>= 2`). The endpoints `z = U^j(n)` are exactly `z ≡ f_u(−1) (mod 3^(r+|u|))`, where `f_c(x) = (3x+1)/2^c`. The reason: the word map is affine with slope `3^j/2^A`, and `f_1` fixes `−1`, so `n + 1 = 2^A (z − f_u(−1))/3^j`.
+* **Endpoint progression (PROVED).** Write `n = 2^(r+1)t − 1` with word `1^r u`, `u` reduced (first letter `>= 2`). The endpoints `z = U^j(n)` are exactly the positive odd `z ≡ f_u(−1) (mod 3^(r+|u|))`, where `f_c(x) = (3x+1)/2^c`. The reason: the word map is affine with slope `3^j/2^A`, and `f_1` fixes `−1`, so `n + 1 = 2^A (z − f_u(−1))/3^j`.
 * **Uniform families are collisions (PROVED).** Two families `1^r u` and `1^(r+s) u'` share endpoints for infinitely many `r` iff `f_u(−1) = f_u'(−1)`. Colliding reduced words have equal totals, because the denominator of `f_u(−1)` is exactly `2^(A_u − 1)`.
 * **The switch (PROVED).** If `u ~ u'` and `|u'| = |u| + D`, `D >= 1`, then every `n` with word `1^r u`, `r >= D`, merges at equal length `j = r + |u|` with
   * `m = (n+1)/2^D − 1`, i.e. `n` with `D` trailing binary ones deleted.
@@ -228,18 +228,21 @@ The first next step asked for forward joins for the backward-minimal reset-2 sou
 * **Reset 2 (PROVED).**
   * For a reset-2 source the root collision `(2, c, ·) ~ (c+2, ·)` points upward: it is the reset switch read backwards.
   * Any longer partner fires only on `n ≡ −1 (mod 3^(k−j))`, where `(2n−1)/3 < n` already. Shifted by 3, the root collision fires exactly on `n ≡ 8 (mod 9)`: 1/9 of reset-2 sources, none of them backward-minimal, hence none of the 239 seeds.
-* **No 3-multiple switch (PROVED).** Within any family the multiples of 3 form one class of the endpoint progression mod `3^(j+1)`. The switch applies to them like any other source, so D-α has a negative answer in the uniform sense.
+* **No uniform 3-multiple switch (PROVED).**
+  * Within any family the multiples of 3 form one class of the endpoint progression mod `3^(j+1)`.
+  * By (iii) a uniform switch firing on them is a collision. A longer partner fires only on `n ≡ −1 (mod 3)`, and a partner of length `<= j` acts on the whole family.
+  * So D-α has a negative answer in the uniform sense. (10 of the 153 seeds do have a uniform switch.)
 * **Sporadic collisions (FINITE-EXACT).**
   * `(8, c) ~ (4, 1, 1, c+2)`, both `125/2^(7+c)` (`125 = 2^7 − 3 = 2^5 + 3·2^4 + 9·2^3 − 27`). Composed with the root collision, `(2, 6, c) ~ (4, 1, 1, c+2)`, so reset-2 sources `1^r (2, 6, c)` switch to `(n−1)/2` at depth `r + 3`.
   * Among reduced words of length `<= 6`, letters `<= 8`, 774 of the 28014 collision values are not explained by the root collision.
 * **Census (FINITE-EXACT).**
-  * Reset-2 sources `n < 2·10^4`: 377 of 2500 (15.1%) have a uniform trailing-ones switch. Every equal-length merge of `n` with some `(n+1)/2^D − 1` is a collision.
+  * Reset-2 sources `n < 2·10^4`: 377 of 2500 (15.1%) have a uniform trailing-ones switch. With orbits stopped at 1, every equal-length merge of `n` with some `(n+1)/2^D − 1` is a collision.
   * The 239 residual seeds: 16, including 10 of the 153 multiples of 3.
   * Odd Mersenne numbers: 37 of the 60 odd `a` in `[3, 121]` switch to `2^(a−D) − 1`, always with `D` odd. The partner is an even Mersenne number, which the reset switch then shortens.
 * **What it means.**
-  * The reset-2 "debt" is the absence of a downward root collision. Uniform relief must come from sporadic collisions: Diophantine coincidences `−3^(p−1) + Σ 3^(p−1−i) 2^(A_i)` with two representations. These cover about 15% of reset-2 sources in the census.
+  * The reset-2 "debt" is the absence of a downward root collision. Uniform equal-length relief must come from sporadic collisions: Diophantine coincidences `−3^(p−1) + Σ 3^(p−1−i) 2^(A_i)` with two representations. These cover about 15% of reset-2 sources in the census.
   * The remaining rewrites must depend on the run length (the debt states of `checked_switch_phase19` (4)–(5)) or use partners other than trailing-ones deletions.
-  * Mirror: the forward words of `2^a − 1` run on the 2-adic clock of 3 (`a mod 2^(K−2)`), while their backward-minimality runs on the 3-adic clock of 2 (`a mod 2·3^(k−1)`, THM-4554(v)).
+  * Mirror: the forward words of `2^a − 1` run on the 2-adic clock of 3 (`a mod 2^(K−2)`, `K >= 3`), while their backward-minimality runs on the 3-adic clock of 2 (to depth `k`: `a mod 2·3^(k−1)`, THM-4554(v)).
 
 ## 7. Verdicts
 
@@ -253,15 +256,15 @@ The first next step asked for forward joins for the backward-minimal reset-2 sou
 | all 239 compiler residual seeds backward-minimal (a proper subset of the backward-minimal sources) | FINITE-EXACT |
 | Sierpiński arc rule; fixed set `≅ T_(k−3)`; `F_21 <= Aut(T_k)`; `|Aut| = 21`, 63 = 8·7 + 7 | PROVED, except `|Aut| = 21`: FINITE-EXACT (`k <= 8`) |
 | HYP-9162 ⇐ the second-copy lemma; lemma verified `k <= 9` | PROVED reduction; FINITE-EXACT lemma |
-| uniform switches ⟺ collisions at −1; switch `m = (n+1)/2^D − 1`; reset switch = root collision; reset 2 has no downward root collision; no uniform 3-multiple switch | PROVED (THM-4555) |
-| sporadic collisions; 377/2500 reset-2 sources, 16/239 seeds, 37/60 odd Mersenne exponents have uniform switches | FINITE-EXACT (THM-4555(vi)) |
+| uniform (run-shift) switches ⟺ collisions at −1 (downward equal-length ones: `D >= 1`); switch `m = (n+1)/2^D − 1`; reset switch = root collision (root case: Ahmed, arXiv:1602.01617, Thm 2.1); reset 2 has no downward equal-length root switch (longer-partner joins only on `n ≡ 8 mod 9`); no uniform 3-multiple switch | PROVED (THM-4555) |
+| sporadic collisions; 377/2500 reset-2 sources, 16/239 seeds, 37/60 odd Mersenne exponents have uniform switches (orbits stopped at 1) | FINITE-EXACT (THM-4555(vi)) |
 | Heegner primes `7, 19, 163` on the tower (stops at 163); `63 = 56 + 7` in two places | NUMEROLOGY |
 | Collatz | OPEN |
 
 ## 8. Directions
 
 * **D-α.** A "3-multiple switch": a uniform common-future rule for reset-2 multiples of 3 (the 153 seeds). *Answered negatively in the uniform sense by THM-4555(iv): uniform switches are collisions at −1, and multiples of 3 are not special within a family.*
-* **D-ε (new).** The sporadic collisions of the rational tree of −1: is their set described by finitely many parametric families? The numerators `N = −3^(p−1) + Σ 3^(p−1−i) 2^(A_i)` resemble the sums in the Collatz cycle equation; a collision is one `N` with two such representations. Their density decides how much of the reset-2 debt is uniformly payable.
+* **D-ε (new).** The sporadic collisions of the rational tree of −1: is their set described by finitely many parametric families? The numerators `N = −3^(p−1) + Σ 3^(p−1−i) 2^(A_i)` resemble the sums in the Collatz cycle equation; a sporadic collision is one `N` with two such representations (not related by `−1 = −3 + 2`) at a common final exponent `E` above both last exponents. The values carrying primitive sporadic pairs grow about ×1.9 per unit of total (1, 3, 6, …, 1665 for totals 9–20), so finitely many parametric families look implausible. Their density decides how much of the reset-2 debt is uniformly payable.
 * **D-β.** HYP-9162 via the triple-intersection variance on the arc rule.
 * **D-γ.** The census constant `C(d)`: is it a continuous function of `{d log_2 3}` (a Sturmian modulation)?
 * **D-δ.** The level primes of the tower (`7`, `19 & 73`, `87211 & 262657`, `163 & …`): is there a uniform role for the "Artin primes" `p = 2·3^k + 1` (2 primitive) in the mod-`p` observers, beyond `p = 19`?
@@ -302,6 +305,21 @@ The first next step asked for forward joins for the backward-minimal reset-2 sou
   * Corrections: write out the arc-rule proof (induction on the top bit using skewness); type the self-similarity PROVED (`q(8x, 8y) = q(x, y)`); and make the reduction independent of the `k <= 9` characterization of `D`. All three are done in section 5 and the HYP-9162 update.
 * **Overclaims (corrected).** These were "every repo appearance", "a proof cannot come from the backward side", the "interlock only through size" sentence (deleted), "the residual task is exactly", "density `2s_∞`", the setting of note 18's Proposition 3 (or divisible by 3), and the last-dip measure sentence.
 * **Confirmed:** the survival-conditioned tail at `d = 18, 19` is about 21–24% of the unconditioned mass (section 6, step 3).
+
+**Second independent audit (2026-10-06, THM-4555 and section 6b; own code only).** **Verdict: all the mathematics holds.** No counterexample was found to the switch (iv) in over `10^7` tests:
+* 1.12M checks on the collision catalogue (D = 1, 2, 3);
+* 44283 colliding pairs of total `<= 17`;
+* an exhaustive sweep over odd `n < 3·10^6` and all prefixes.
+
+Required corrections, all applied and logged as MISTAKE-570:
+* define "uniform" (run-shift families);
+* complete the argument for "no uniform 3-multiple switch";
+* state the census convention: merges are counted on orbits stopped at 1. Under `U(1) = 1` every partner eventually meets `n` at 1; the collision counts 377, 16 and 37 are unchanged;
+* qualify "needs a sporadic collision" by "equal-length";
+* `K >= 3` in the 2-adic clock remark;
+* cite the prior art for the root case: Ahmed, arXiv:1602.01617, Theorem 2.1 (checked against the PDF).
+
+Data for D-ε: the values carrying primitive sporadic pairs number 1, 3, 6, 12, 22, 39, 72, 131, 243, 461, 875, 1665 for totals 9 to 20.
 
 ## 10. Reproduction
 
