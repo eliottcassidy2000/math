@@ -2032,6 +2032,75 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
+## MISTAKE-573 (2026-10-06, opus S18 seven/twenty-one / parity-law / openai/math note; found by the session's independent adversarial audit, after the checkpoint 427adb74e was pushed) -- a published lemma labelled new, a theorem stated without its two boundary cases, a bound quoted for all exponents that holds for odd ones, a wrong window description, an unsupported fit exponent, and overclaims that an earlier audit had already removed
+
+**Claims (in `05-knowledge/results/mersenne_switch_parity_f21_compression_20261006.md`, checkpoint 427adb74e):**
+
+1. *Lemma 1 marked new.* The sibling form of the reset switch, `U^r(2m+1) = 4U^r(m) + 1` iff the reset is at least 3, was labelled "*new*". It is Ahmed 2016 (arXiv:1602.01617), Theorem 2.1, essentially verbatim, together with the general form `U^r(2m+1) = 2^(e(m)) U^r(m) + 1`. It is also in `checked_switch_phase19` (3)–(4). The note cited Ahmed only for "the root case".
+2. *Theorem 2 without its boundary cases.* It read "`L(n)` is a union of pairs `{D, D+1}` with `D` good", and the title and §0 said lags "come in consecutive pairs" for "any odd `n`". This fails in two places:
+   - for every reset-`>= 3` source, where lag 1 is bad and its partner 0 is not a lag;
+   - when a good top lag `r − 1` is in `L(n)`, because its partner `r` is outside the range. This happens for 148 of 2500 sources.
+   The statement also needs `r >= 2`.
+3. *A bound stated for all exponents.* "Every least-lag merge happens at a value `>= 911`" holds only for odd `a <= 2000`. Even `a` merge with `a − 1` at 5, 91, 205 (`a = 4, 6, 8`). The bound was also not computed by the script.
+4. *Three slips in the census numbers.*
+   - "Windows of 500 odd exponents" should have read 500 consecutive exponents (250 odd).
+   - "A power-law fit gives `A^0.35`" was a two-point estimate; least squares gives 0.36–0.37.
+   - Class-count conventions were mixed: 68 counts exponents from 2, while HYP-9213's 104 counts from 1.
+5. *Overclaims and mistyping.*
+   - Proposition 5 (CRT independence) was called "a barrier statement … a proof must use size", and the clocks were said to "interact only through size". MISTAKE-569 had already removed these overclaims from the mod18/19 note.
+   - "HYP-9213 is essentially `μ_2(S) = 1`" asserted an equivalence where only one direction holds.
+   - A `K^(−0.6)` extrapolation of the certified share was used, although the local exponent drifts from 1.0 to 0.45.
+   - "The mechanism … is about 7 and 21" and "conjugation" over-typed a DICTIONARY link and a pointwise intertwining.
+   - "Hash/birthday compression" was untyped.
+   - "`o(A)` certificates" was stated without OPEN.
+   - Several FINITE-EXACT claims (the windows, the fit, the roots count, the ratios, the Gibbs check, the collision check) were not in the script.
+6. *Citations of openai/math papers.*
+   - Pro-modularity lacked "two-dimensional", and its method was said to use patching.
+   - The dimension-`<= 5` Hodge result was given the signature condition it does not have.
+   - The multiplication paper's frames were put on wires instead of vertices.
+   - That paper was said to "refute an `Ω(n log n)` lower bound" instead of to disprove the optimality conjecture.
+   - The Paley-bridge difference-set statement was cited as "Proposition 3" instead of the paragraph after it.
+
+**Why it was wrong:**
+
+- (1) Prior art was checked only for the root case. The cited paper was not re-read for the general statement.
+- (2) The closure argument was checked inside the open range, and its two ends were not stated.
+- (3) The verification loop ran over odd `a` only, and the sentence generalized it.
+- (4) A windowing variable was misdescribed, and a quick two-point fit was reported as "a power-law fit".
+- (5) Phrasing drifted from what was proved. An earlier audit's correction was not re-read.
+- (6) Abstracts and descriptions were paraphrased from memory.
+
+**Correct framing (applied):**
+
+- Lemma 1 is restated with full credit to Ahmed (Theorem 2.1).
+- Theorem 2 now reads: for `r >= 2`, `L+(n) = L(n) ∪ {0 if e(n) >= 3}` is a union of pairs `{D, D+1}` with `D` good, except possibly an unpaired good top lag `r − 1`. The least lag of every reset-2 source is odd, and `1 ∈ L(n)` for every reset-`>= 3` source.
+  - Its parts 2–3 (closure, and odd least lag for general `t`) remain new. Part 1 is Ahmed iterated.
+- The 911 bound is restricted to odd `a`.
+- The census figures are corrected: windows of 500 consecutive exponents, least-squares fit 0.36, conventions stated.
+- Proposition 5 is stated without "barrier".
+- Proposition 6 (`μ_2(S) = 1 ⟹ HYP-9213`) replaces the equivalence.
+- The extrapolation is withdrawn.
+- The analogies are typed.
+- Every FINITE-EXACT claim is now printed by the script (ALL CHECKS PASSED). The script's node-budget fallback, which counted `None` as backward-minimal, now records such cases as undecided.
+- The citations are fixed.
+
+**What survives:**
+
+- every computation; the audit reproduced all of them with independent code, including the certified densities to `K = 27`;
+- Theorem 2's proof, and its data clean to `2·10^6`;
+- Proposition 3 (`<2x+1, 4x+1>` mod 7 is `F_21 = Aut(P_7)`, and only at `k = 3`);
+- Proposition 5;
+- the collision table;
+- the `a ≡ 95 (mod 128)` family;
+- every openai/math mechanism the audit checked against the sources.
+
+**Lesson:**
+
+- When labelling a lemma new, re-read the prior-art paper for the general statement, not only the special case already cited.
+- State a closure theorem together with its two boundary cases.
+- A bound verified on a subfamily must be stated for that subfamily.
+- Re-read the latest audit corrections of the inherited notes before re-using their phrasing.
+
 ## MISTAKE-572 (2026-10-06, mac-mini seven/twenty-one session; found by the session's independent adversarial audit of THM-4556, after the checkpoint 0d8aa0df3f was pushed) -- a false "every switch" remark, a census share misstated (0.95 for 0.980), an equivalence proved in one direction stated as both, missing hypotheses in a propagation corollary, and tables not regenerable from committed code
 
 - **Claims (in THM-4556, HYP-9213, HYP-9214, checkpoint 0d8aa0df3f):**

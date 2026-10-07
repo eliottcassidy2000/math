@@ -5,12 +5,15 @@
    non-switching odd a: [3, 5, 7, 9, 11, 15, 17, 19, 21, 23, 25, 27, 33, 43, 53, 65, 67, 69, 75, 81, 87, 103, 113]
 
 == B. Parity law for every odd source n < 2*10^4 with run r >= 2
-   sources: 2500; good-parity prediction failures: 0 True ; pair violations: 0 True
+   sources: 2500; good-parity prediction failures: 0 True ; pair violations (closure inside 1..r-1): 0 True
    reset-2 sources: 1250, with a trailing-ones equal-time partner: 202; least lag odd for all: True True
+   corrected form (L+ = L u {0 if reset >= 3}): violations 0 True ; unpaired good top lags r-1: 148 sources
+   wider convention (runs >= 1, D <= r): reset-2 sources 2500, with a partner 377; least lag odd for all: True True
 
 == C. Sibling form of the reset switch
    odd n < 2*10^5, run >= 1: U^r(n) = 4 U^r(m) + 1 (m = (n-1)/2) iff reset(n) >= 3: True; merge at r+1 in all 24998 reset>=3 cases: True
    example: U^3(15) = 53 = 4*U^3(7) + 1 = 53
+   Ahmed 2016 Thm 2.1, general form U^r(2m+1) = 2^(e(m)) U^r(m) + 1 (odd n < 2*10^5, run >= 1): True
 
 == D. {7, 21}: the two append maps
    p = 2^3 - 1 = 7: |<A_1, R>| = 21 (= kp = 21); inside Aut(P_p): True; |Aut(P_p)| = 21; equal: True
@@ -26,12 +29,19 @@
    classes among exponents 2..A: {100: 22, 400: 36, 1200: 57, 2000: 68}  (THM-4556 (vi) counts 23, 37, 58 for A = 100, 400, 1200 including a = 1)
    equal-time meeting <=> equal odd-step time (a, b <= 80): True
    switching odd a <= 1200: 543; template total at the least-lag merge: median 247, share <= 20: 0.110 of all odd a (certified density 0.1199 at K = 20)
+   odd a <= 2000 with a switch: 932; least-lag merge value >= 911 (attained at a = 107) True ; every least-lag switch is a collision (A_n - A_m = D): True
+   even a merge with a - 1 (reset switch) at values: {4: 5, 6: 91, 8: 205}
+   classes N(A) among exponents 2..A: {100: 22, 200: 30, 400: 36, 800: 49, 1000: 53, 1600: 62, 2000: 68, 3000: 78, 4000: 86}  N(2A)/N(A): {100: 1.364, 200: 1.2, 400: 1.361, 800: 1.265, 1000: 1.283, 2000: 1.265}
+   least-squares log-log fit of N(A), A in [100, 4000]: exponent 0.360 (HYP-9213: about 0.37)
+   share of odd a switching, windows of 500 consecutive exponents (250 odd each), up to 4000: [0.847, 0.944, 0.968, 0.972, 0.988, 0.972, 0.992, 0.976]
 
 == F. CRT independence of the mirror clocks (forward switching vs backward-minimality, depth 30)
+   undecided (node budget exhausted): [] True
    backward-minimal to depth 30, odd 3 <= a <= 119: 35 of 59 (THM-4554 (vi): 35) True
    odd a in [3,121]: P(switch) = 0.617, P(bmin) = 0.583, P(both) = 0.367, product = 0.360
    odd a in [3,401]: P(switch) = 0.825, P(bmin) = 0.590, P(both) = 0.495, product = 0.487
    odd a in [123,401]: P(switch) = 0.914, P(bmin) = 0.593, P(both) = 0.550, product = 0.542
+   class roots (odd, <= 401) that are backward-minimal to depth 30: 19 of 35
 
 == G. The word map at -1 (reduced words, first letter >= 2)
     A |       M |       V |  pairs | sporadic | V/M   | H2 - log2 M
@@ -51,6 +61,12 @@
    certified share of odd exponents, K = 9..18: [0.0156, 0.0312, 0.0469, 0.0605, 0.0713, 0.0801, 0.0879, 0.095, 0.1016, 0.108] True
    a = 95: post-run words [2, 6, 1] and (partner 2^94 - 1) [4, 1, 1, 3] ; f(-1) = 125/256 125/256 ; normal forms (8, 1) (4, 1, 1, 3)
    a = 95 + 128t, t = 0..7 (a up to 991): 2^a - 1 and 2^(a-1) - 1 meet at time a + 2: True
+
+== I. openai/math spot checks
+   Barker 7: |C_k| <= 1: True; minus set translate of QR: True; plus set translate of QR: False; smaller set a (7,3,{1}) difference set
+   Barker 11: |C_k| <= 1: True; minus set translate of QR: False; plus set translate of QR: True; smaller set a (11,5,{2}) difference set
+   Barker 13: |C_k| <= 1: True; minus set translate of QR: False; plus set translate of QR: False; smaller set a (13,4,{1}) difference set
+   Gibbs/Kraft identity max_q e^H(q) prod A_i^q_i = sum A_i at q_i = A_i/sum A: 5.350000000000 vs 5.350000000000 True
 
 FAILED CHECKS: none
 ALL CHECKS PASSED
