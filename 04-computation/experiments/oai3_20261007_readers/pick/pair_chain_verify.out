@@ -1,0 +1,3 @@
+relation u_n = 3^k_n v_n + e_n violated in 0 of 2000 integer trials (300 steps each)
+states entering (0,0) in one step (k, e, beta): [(-1, '-1/3', 0), (1, '1', 1)]
+(0,0) absorbing: [(0, 0), (0, 0)]

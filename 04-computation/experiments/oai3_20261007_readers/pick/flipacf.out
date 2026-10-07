@@ -1,0 +1,11 @@
+paths alive on [500,4500): 400; flip density 0.5001, var 0.2500
+  lag   1: corr(sigma_m, sigma_m+j) = +0.0000   E[dk_m dk_m+j] = -0.0012   E[dk_m sigma_m+j] = +0.0003
+  lag   2: corr(sigma_m, sigma_m+j) = +0.0006   E[dk_m dk_m+j] = -0.0015   E[dk_m sigma_m+j] = -0.0004
+  lag   3: corr(sigma_m, sigma_m+j) = -0.0004   E[dk_m dk_m+j] = -0.0002   E[dk_m sigma_m+j] = +0.0001
+  lag   4: corr(sigma_m, sigma_m+j) = +0.0008   E[dk_m dk_m+j] = -0.0003   E[dk_m sigma_m+j] = +0.0002
+  lag   8: corr(sigma_m, sigma_m+j) = +0.0005   E[dk_m dk_m+j] = +0.0003   E[dk_m sigma_m+j] = -0.0001
+  lag  16: corr(sigma_m, sigma_m+j) = +0.0007   E[dk_m dk_m+j] = +0.0003   E[dk_m sigma_m+j] = +0.0002
+  lag  32: corr(sigma_m, sigma_m+j) = -0.0005   E[dk_m dk_m+j] = +0.0001   E[dk_m sigma_m+j] = +0.0003
+  lag  64: corr(sigma_m, sigma_m+j) = +0.0019   E[dk_m dk_m+j] = +0.0005   E[dk_m sigma_m+j] = +0.0001
+  (s.e. of a correlation ~ 0.0008 if independent)
+python3 pair_chain_flipacf.py 400 500 4500 21  6.07s user 0.05s system 90% cpu 6.799 total

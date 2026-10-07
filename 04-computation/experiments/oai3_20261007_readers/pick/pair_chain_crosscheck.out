@@ -1,0 +1,3 @@
+chain vs direct merge time agree on 3000/3000 random 404-bit p (merged by 300: 1332)
+lag-1 Syracuse merge U^i(p)=U^(i+1)(q) found for 46/46 chain-merged samples
+exhaustive: P(merged by n=20) = 7958/65536 = 0.121429  (DP gave 0.121429)

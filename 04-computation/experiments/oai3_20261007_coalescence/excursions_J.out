@@ -1,0 +1,2 @@
+start (0,1): E[J] = 9.833 (unabsorbed by 200000: 107/4000); P(J=1) = 0.246; flip share of steps = 0.5002
+heuristic c1 = E[J] * sqrt(4/pi) = 11.10  (measured sqrt(T) q(T) ~ 11.0)

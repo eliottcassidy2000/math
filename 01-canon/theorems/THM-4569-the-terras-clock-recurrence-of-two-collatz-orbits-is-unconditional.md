@@ -70,3 +70,18 @@ related:
 * In the Terras clock, every correlation between the two parity streams, at every gap, is carried by the predictable bit `ε_s = c_s mod 2`. It decides *when* the odd-step difference moves, never *which way*.
 * Coupling can change the clock: the disagreement density, measured at 0.5006, is equivalent to THM-4564's variance 4 per odd step. It cannot destroy recurrence.
 * The rate (`T^(−1/2)` with constant about 16.7) depends on the clock running at density 1/2 and on box recurrence. That is where THM-4564's Haar-alignment law (HYP-9218) enters.
+
+---
+
+## Update (2026-10-07, same session): box recurrence and index 1 PROVED (THM-4581)
+
+* **Box recurrence (5) holds, so the chain merges almost surely from every admissible start** (THM-4581 (3)).
+  * The weight `|c·3^(−max(j,0))|^θ s^|j|`, with `s = 2^θ(1 − √(1 − (3/4)^θ))`, is a martingale on flips. A move of `j` toward 0 is exactly the ×3/2 branch.
+  * Runs cost fresh coins per continuation beyond `v_2(3^|j| − 1) − 1` steps.
+  * Together these give `E|c_return|^θ ≤ 0.634 |c|^θ + C` along the returns of `j` to 0. That is the archimedean control (5) asked for.
+* **Consequences.** All equivalent statements in (7) hold:
+  * the index `[R_A : R_C] = 1`;
+  * `y ~ y + 1` almost everywhere (HYP-9220);
+  * every element of `Γ_C` merges almost everywhere.
+* **The rate lower bound (4) is sharp up to logarithms:** `P(no merge by T) ≤ C T^(−1/2) (log T)^2` (THM-4581 (4)).
+* **The value-iteration lower bounds of (5) are superseded:** the merge probabilities are 1. They remain valid finite-box certificates.

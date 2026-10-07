@@ -1,0 +1,14 @@
+n=  4  P(merged by n) = 0  = 0.0000000   flip density at step 3: 1.00000   live states 1
+n=  8  P(merged by n) = 0  = 0.0000000   flip density at step 7: 1.00000   live states 16
+n= 12  P(merged by n) = 19/256  = 0.0742188   flip density at step 11: 0.68750   live states 130
+n= 16  P(merged by n) = 207/2048  = 0.1010742   flip density at step 15: 0.52743   live states 734
+n= 20  P(merged by n) = 3979/32768  = 0.1214294   flip density at step 19: 0.52010   live states 4148
+n= 24  P(merged by n) = 144605/1048576  = 0.1379061   flip density at step 23: 0.51330   live states 23838
+n= 25  P(merged by n) = 297107/2097152  = 0.1416717   flip density at step 24: 0.51061   live states 36960
+n= 26  P(merged by n) = 609505/4194304  = 0.1453173   flip density at step 25: 0.51066   live states 57184
+n= 27  P(merged by n) = 1248667/8388608  = 0.1488527   flip density at step 26: 0.51042   live states 88681
+n= 28  P(merged by n) = 1277537/8388608  = 0.1522943   flip density at step 27: 0.51006   live states 137611
+n= 29  P(merged by n) = 1305625/8388608  = 0.1556426   flip density at step 28: 0.50975   live states 213561
+n= 30  P(merged by n) = 10663965/67108864  = 0.1589055   flip density at step 29: 0.50961   live states 332056
+n= 31  P(merged by n) = 21755073/134217728  = 0.1620879   flip density at step 30: 0.50934   live states 516928
+python3 pair_chain_exact2.py 31  1.38s user 0.04s system 93% cpu 1.521 total

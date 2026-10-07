@@ -1,0 +1,16 @@
+u=3v             S(n): 100:0.567(sqrt n S=5.7)  400:0.407(sqrt n S=8.1)  1600:0.263(sqrt n S=10.5)  6400:0.155(sqrt n S=12.4)
+u=v+2^20         S(n): 100:0.935(sqrt n S=9.4)  400:0.688(sqrt n S=13.8)  1600:0.445(sqrt n S=17.8)  6400:0.247(sqrt n S=19.7)
+u=v+1            S(n): 100:0.435(sqrt n S=4.3)  400:0.322(sqrt n S=6.4)  1600:0.227(sqrt n S=9.1)  6400:0.137(sqrt n S=10.9)
+(5,7)            S(n): 100:0.903(sqrt n S=9.0)  400:0.677(sqrt n S=13.5)  1600:0.468(sqrt n S=18.7)  6400:0.245(sqrt n S=19.6)
+u=v/27+1/27      S(n): 100:0.788(sqrt n S=7.9)  400:0.592(sqrt n S=11.8)  1600:0.392(sqrt n S=15.7)  6400:0.217(sqrt n S=17.3)
+lag-9 Mersenne   S(n): 100:0.955(sqrt n S=9.5)  400:0.783(sqrt n S=15.7)  1600:0.527(sqrt n S=21.1)  6400:0.293(sqrt n S=23.5)
+theta=0.5: s=0.8966, lambda=2^-theta s=0.6340
+  E=1.000e+03: E|e_next|^1/2 =        17.67   |E|^1/2 =        31.62   ratio = 0.5589   (returns 2995)
+  E=1.000e+05: E|e_next|^1/2 =       155.56   |E|^1/2 =       316.23   ratio = 0.4919   (returns 2998)
+  E=1.000e+07: E|e_next|^1/2 =      1471.48   |E|^1/2 =      3162.28   ratio = 0.4653   (returns 2996)
+  E=1.000e+09: E|e_next|^1/2 =     13300.51   |E|^1/2 =     31622.78   ratio = 0.4206   (returns 2999)
+  E=1.000e+12: E|e_next|^1/2 =    380896.29   |E|^1/2 =   1000000.00   ratio = 0.3809   (returns 2998)
+  E=1.000e+15: E|e_next|^1/2 =  10883448.30   |E|^1/2 =  31622776.60   ratio = 0.3442   (returns 2996)
+  E=2.059e+14: E|e_next|^1/2 =   8230590.01   |E|^1/2 =  14348907.00   ratio = 0.5736   (returns 2998)
+  E=1.100e+12: E|e_next|^1/2 =    138191.99   |E|^1/2 =   1048576.00   ratio = 0.1318   (returns 3000)
+python3 pair_chain_drift_test.py  35.68s user 0.20s system 98% cpu 36.470 total

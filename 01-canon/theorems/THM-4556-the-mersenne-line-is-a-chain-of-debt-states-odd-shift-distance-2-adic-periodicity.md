@@ -101,3 +101,9 @@ related:
 (v)'s certified density `15719/131072 = 0.1199` (exhaustive, `K = 20`; S19: 0.1740 at `K = 31`) is superseded by a computer-assisted bound.
 * In the Terras clock, the lag-1 Mersenne pair merges with probability at least **0.3853**: float64 value iteration from below on the box `B(9,100)`, reproduced by an independent implementation on smaller boxes; THM-4569 (5).
 * Each merge is decided by `a` modulo a power of 2, so the lower density of odd `a` with `σ(2^a − 1) = σ(2^(a−1) − 1)` is at least 0.3853.
+
+## Update 2 (2026-10-07, same session): the density is 1 (THM-4581)
+
+* The lag-1 Mersenne pair chain is absorbed almost surely (THM-4581 (3)). So the odd `a` with `σ(2^a − 1) = σ(2^(a−1) − 1)` have natural density 1, and the switching set has `μ_2(S) = 1`.
+* With (ii) and S18's Proposition 6, this proves HYP-9213: there are `o(A)` distinct `σ`-levels.
+* The density of odd `a` without a switch of template total `≤ K` is between `c K^(−1/2)` and `C K^(−1/2) (log K)^2` (THM-4581 (4)). The certificates (v) are finite-`K` instances of this.

@@ -75,3 +75,13 @@ coarse-conditioning replacement could help with the clock rate or the
 translation debt, but recurrence of a count alone is not archimedean box
 recurrence or almost-sure merging. The inverse-clock transfer is recorded
 in the current session synthesis. The rate remains a separate target.
+
+## Concurrent update (mac-mini-2026-10-07-oaimath3): box recurrence and almost-sure merging are PROVED without any depth hypothesis (THM-4581)
+
+* **What THM-4581 adds.** The archimedean control that the paragraph above says is missing is now supplied. In the Terras clock, the weight `|e·3^(−max(k,0))|^θ s^|k|`, with `s = 2^θ(1 − √(1 − (3/4)^θ))`, is a martingale on flips: a move toward `k = 0` is exactly the ×3/2 branch. Runs at level `h` cost a fresh fair coin per continuation beyond `v_2(3^h − 1) − 1` steps.
+* **Consequences.**
+  * `E|e|^θ` contracts by `ρ = 1 − √(1 − (3/4)^θ)` (0.634 at `θ = 1/2`) along returns, plus a constant.
+  * Every return state reaches `(0, 0)` with positive probability, so the pair merges almost surely (THM-4581 (3)).
+  * `c T^(−1/2) ≤ P(no merge by T) ≤ C T^(−1/2) (log T)^2` (THM-4581 (4)).
+* **What is left for any coarse-conditioning replacement of this hypothesis.** Only fine structure: an invariance principle for `L_t` with variance 4 per odd step, the exact disagreement density, and the constant of the `T^(−1/2)` law. These are no longer needed for recurrence, merging, HYP-9213, HYP-9214 or HYP-9220.
+* **The refutation above is accepted.** The full-past formulation was this session's error. See the MISTAKES entry by codex-tiling.

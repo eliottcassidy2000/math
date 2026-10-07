@@ -2,10 +2,11 @@
 id: HYP-9217
 title: "Debt recurrence law: in the 2-adic Haar model the lag-1 Mersenne debt merges almost surely with P(no merge by template total T) = c1 T^(-1/2)(1 + o(1)), c1 ~ 14-17, and the any-lag Mersenne non-switch probability is q(T) = T^(-alpha + o(1)) with alpha ~ 0.7 +- 0.1; hence mu_2(S) = 1 and HYP-9213 (o(A) new sigma-levels)"
 status: >
-  OPEN. NUMERICAL (two committed seeded Haar Monte Carlo runs: N = 3000 to total 19 924 and N = 1200 to 9600, with bootstrap
-  intervals) + PROVED structure (Theorem D of the source note: D = 0 iff the next relation is the identity, forcing a sibling pair;
-  other merges have Haar measure 0; for integer debts the debt's odd part runs U kicked by 2^(L'-w'); the walk bookkeeping is
-  mac-mini's HYP-9214 model). Independently audited twice, 2026-10-07 (corrections in MISTAKE-580).
+  PARTLY RESOLVED 2026-10-07 (THM-4581). PROVED: almost-sure lag-1 merging, hence mu_2(S) = 1 and HYP-9213; the decay exponent
+  is exactly 1/2: c T^(-1/2) <= q1(T) <= C T^(-1/2) (log T)^2 in template total (= Terras time of the merge); if the any-lag
+  exponent alpha exists then alpha >= 1/2. OPEN: q1(T) ~ c1 T^(-1/2) with c1 ~ 16.7 (NUMERICAL; HEURISTIC one-big-jump form
+  c1 = E[J] sqrt(4/pi), THM-4581 (7)) and the value of alpha (NUMERICAL 0.66-0.78). Earlier evidence: two committed seeded Haar
+  Monte Carlo runs (N = 3000 to total 19 924, N = 1200 to 9600), audited twice (MISTAKE-580).
 source: opus-2026-10-06-S19, 05-knowledge/results/collatz_cycles_tubes_debt_walk_openai_20261006.md, section 1
 related:
   - 05-knowledge/hypotheses/HYP-9213-mersenne-collatz-trajectories-coalesce-plateaus-of-odd-step-time.md
@@ -57,3 +58,18 @@ scripts:
   * Computer-assisted: the lag-1 merge probability is at least 0.3853, so the lower density of odd `a` with a lag-1 switch is at least 0.3853.
 * **Rate (NUMERICAL).** An exact Terras-clock sampler (20,000 paths) reproduces this hypothesis's `q₁(T)` to within about 3% and extends it: `√T q₁ = 16.77, 16.74, 16.68` at `T = 5·10⁴, 10⁵, 2·10⁵`, with tail exponent 0.476.
 * **What is still needed for (1).** The `T^(−1/2)` rate: the disagreement clock must run at density 1/2 (THM-4564; HYP-9218), with uniform per-visit success.
+
+---
+
+## Update 2 (2026-10-07, mac-mini-2026-10-07-oaimath3): almost-sure merging and the exponent PROVED (THM-4581)
+
+* **Almost-sure merging (THM-4581 (3)).** The Terras-clock pair chain is absorbed almost surely from every admissible start.
+  * The proof combines the recurrence of `k` (THM-4569) with tightness of `|e|` at returns. Tightness comes from a Lyapunov weight `|f|^θ s^|k|`, a martingale on flips, plus fresh-coin control of runs.
+  * This is the "uniform per-visit success" that the update above asked for. It holds in the averaged form `E|e_return|^θ ≤ 0.634 |e|^θ + C`.
+* **Exponent (THM-4581 (4)).** `c T^(−1/2) ≤ q₁(T) ≤ C T^(−1/2) (log T)^2`.
+  * The upper bound uses geometric tails for the number of excursions to absorption, plus excursion-length tails `≤ C (log t / t)^(1/2)`.
+  * HYP-9218 is not needed.
+* **The constant (HEURISTIC + NUMERICAL).** One big jump: `q(T) ~ E[J] √(4/(πT))`.
+  * For `y` vs `y + 1`: `E[J] = 9.83` gives 11.10, against 11.0 measured.
+  * For S19's constant 16.7 it predicts `E[J] ≈ 14.8` for the lag-1 start.
+  * Proving the `(1 + o(1))` form needs a subexponential renewal argument for the Markov-modulated excursion sums.

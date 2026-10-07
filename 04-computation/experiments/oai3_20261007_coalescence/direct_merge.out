@@ -1,0 +1,6 @@
+y vs y+1      : merged within 8000 steps: 105/120 = 0.875; median merge time 13; chain-predicted unmerged ~ c/sqrt(8000) = c*0.0112
+y vs 3y       : merged within 8000 steps: 107/120 = 0.892; median merge time 147; chain-predicted unmerged ~ c/sqrt(8000) = c*0.0112
+y vs y/3      : merged within 8000 steps: 96/120 = 0.800; median merge time 171; chain-predicted unmerged ~ c/sqrt(8000) = c*0.0112
+y vs 9y+5     : merged within 8000 steps: 102/120 = 0.850; median merge time 142; chain-predicted unmerged ~ c/sqrt(8000) = c*0.0112
+y vs y-7      : merged within 8000 steps: 101/120 = 0.842; median merge time 216; chain-predicted unmerged ~ c/sqrt(8000) = c*0.0112
+y vs 27y+1/3  : merged within 8000 steps: 96/120 = 0.800; median merge time 574; chain-predicted unmerged ~ c/sqrt(8000) = c*0.0112

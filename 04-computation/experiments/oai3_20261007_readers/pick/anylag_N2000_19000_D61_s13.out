@@ -1,0 +1,12 @@
+N=2000 NMAX=19000 odd D<=61 seed=13
+  T=    27  q(T)=0.8510  q1(T)=0.8605  sqrtT q1=  4.47
+  T=   100  q(T)=0.6055  q1(T)=0.7230  sqrtT q1=  7.23
+  T=   400  q(T)=0.2960  q1(T)=0.5435  sqrtT q1= 10.87
+  T=  1600  q(T)=0.1055  q1(T)=0.3445  sqrtT q1= 13.78
+  T=  3200  q(T)=0.0655  q1(T)=0.2635  sqrtT q1= 14.91
+  T=  6400  q(T)=0.0450  q1(T)=0.1970  sqrtT q1= 15.76
+  T= 12800  q(T)=0.0280  q1(T)=0.1445  sqrtT q1= 16.35
+  T= 19000  q(T)=0.0225  q1(T)=0.1170  sqrtT q1= 16.13
+  least-squares exponent alpha on T>=400: 0.663
+  first-switch lag shares: {1: 0.537, 3: 0.154, 5: 0.1, 7: 0.066, 9: 0.037, 11: 0.025}
+python3 pair_chain_anylag.py 2000 19000 61 13  37.76s user 0.18s system 95% cpu 39.920 total

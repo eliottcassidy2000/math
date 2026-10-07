@@ -1,0 +1,26 @@
+[runs] level h: count, mean run length, max, bound m_h+1
+  h=  1 n= 212648 mean=1.996 max= 18 bound=2
+  h=  2 n= 195425 mean=2.150 max= 23 bound=4
+  h=  3 n= 191333 mean=2.001 max= 21 bound=2
+  h=  4 n= 182660 mean=1.879 max= 21 bound=5
+  h=  5 n= 184356 mean=2.001 max= 19 bound=2
+  h=  6 n= 179653 mean=2.018 max= 18 bound=4
+  h=  7 n= 180583 mean=1.994 max= 20 bound=2
+  h=  8 n= 174988 mean=1.989 max= 18 bound=6
+  h=  9 n= 170832 mean=1.997 max= 18 bound=2
+  h= 10 n= 166581 mean=2.006 max= 18 bound=4
+  h= 11 n= 162162 mean=2.001 max= 19 bound=2
+  h= 12 n= 157882 mean=2.003 max= 19 bound=5
+  h= 13 n= 153378 mean=2.000 max= 17 bound=2
+  h= 14 n= 148879 mean=2.005 max= 17 bound=4
+  h= 15 n= 145142 mean=1.995 max= 17 bound=2
+  h= 16 n= 142000 mean=2.002 max= 18 bound=7
+  h= 17 n= 138326 mean=2.000 max= 18 bound=2
+  h= 18 n= 135079 mean=1.998 max= 18 bound=4
+  h= 19 n= 131652 mean=2.001 max= 18 bound=2
+  h= 20 n= 127850 mean=2.000 max= 19 bound=5
+  h= 21 n= 124400 mean=2.000 max= 20 bound=2
+  h= 22 n= 121092 mean=1.997 max= 17 bound=4
+  h= 23 n= 117481 mean=2.002 max= 16 bound=2
+  h= 24 n= 113782 mean=1.999 max= 19 bound=6
+[runs] mean <= m_h + 1 at all levels: True

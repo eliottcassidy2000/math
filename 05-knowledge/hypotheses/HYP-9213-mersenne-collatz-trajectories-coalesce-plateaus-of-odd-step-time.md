@@ -2,8 +2,10 @@
 id: HYP-9213
 title: "Mersenne coalescence: the odd-step stopping time sigma(2^a - 1) takes o(A) distinct values for a <= A (empirically about A^0.37: 23, 37, 58, 104 values for A = 100, 400, 1200, 6000), so almost every reset pair {2^(2k-1) - 1, 2^(2k) - 1} shares sigma with a smaller Mersenne number (for a <= 6000 every such coincidence is an equal-time merge)"
 status: >
-  OPEN. FINITE-EXACT census to a = 6000 (independently audited 2026-10-06; corrections in MISTAKE-572); certified lower density
-  15719/131072 of switching odd exponents (THM-4556 (v)); the pairing and odd least shift are PROVED (THM-4556 (ii)-(iii)). No proof of o(A).
+  RESOLVED 2026-10-07: PROVED (THM-4581 (6d)). The lag-1 Mersenne switch is the pair chain from (1, 2) on (p, q_1), absorbed
+  almost surely, so mu_2(S) = 1, and S18 Proposition 6 (with THM-4556 (ii), (iv)) gives o(A) distinct values. The finer count
+  ~ A^0.37 (exponent 1 - alpha) remains NUMERICAL/HEURISTIC; THM-4581 (6f) gives alpha >= 1/2 if alpha exists. Earlier:
+  FINITE-EXACT census to a = 6000 (audited, MISTAKE-572); certified lower densities 0.1199 (THM-4556 (v)) and 0.3853 (THM-4569).
 source: mac-mini-2026-10-06-mod1819, 05-knowledge/results/seven_twentyone_mersenne_openai_math_20261006.md, section 1
 related:
   - 01-canon/theorems/THM-4556-the-mersenne-line-is-a-chain-of-debt-states-odd-shift-distance-2-adic-periodicity.md
@@ -27,3 +29,12 @@ related:
 * For `a <= 6000`, every `σ`-coincidence is an equal-time merge: the 102 pairs that start a new level are exactly the 102 non-merging pairs.
 
 **Remark.** Conjecture HYP-9214 (debt resolution tends to 1 for generic large sources) would make this plausible but does not imply it, because the Mersenne family is thin.
+
+---
+
+## Update (2026-10-07, mac-mini-2026-10-07-oaimath3): PROVED (THM-4581)
+
+* **The switch is a chain absorption.** S19's lag-1 switch `U^i(2X − 1) = U^(i+1)(2X/3 − 1)` (with `X = 3^(a−1)`) is absorption at `(0, 0)` of the Terras-clock pair chain from `(1, 2)`.
+* **Theorem H (THM-4581 (3)).** That chain is absorbed almost surely. `X` is Haar on `1 + 8Z_2` as `a` runs over the odd 2-adic integers, and the four forced parities of `q_1` do not matter.
+* **So the switching set has full measure:** `μ_2(S) = 1`. S18's Proposition 6 then gives the conjecture: the odd `a` with `σ(M_a) ≠ σ(M_(a−1))` have density 0, and the number of `σ`-levels is `o(A)`.
+* **Still open.** The empirical count `A^0.37` corresponds to an any-lag exponent `α ≈ 0.63`. THM-4581 gives only `α ≥ 1/2`.

@@ -2,9 +2,10 @@
 id: HYP-9214
 title: "Reset-2 debt resolves almost surely for large sources: for a uniformly random first-reset-2 odd n of B bits, P(n and (n-1)/2 merge at equal odd-step time before 1) -> 1 as B -> infinity (empirically 0.19, 0.33, 0.41, 0.50, 0.61, 0.70, 0.79, 0.82 for B = 16, 32, ..., 2048; 0.88 at 4096, 0.91 at 8192)"
 status: >
-  OPEN. NUMERICAL (seeded Monte Carlo, 1000 samples per size, 600 at B = 2048; script sevens_20261006_debt_resolution_trend.py);
-  the merges are collision switches in the sense of THM-4555 (independently audited 2026-10-06: every sampled merge up to
-  B = 2048 is a collision; corrections in MISTAKE-572).
+  RESOLVED 2026-10-07: PROVED (THM-4581 (6e)). The pair (n, (n-1)/2) is the Terras-clock pair chain from (0, 1) on (n, n - 1),
+  absorbed almost surely; the first-reset-2 condition is a positive-measure union of residue classes and B-bit sources are uniform
+  mod 2^K for K < B, so P_B -> 1. Rate: the non-merge share is O(B^(-1/2) polylog B) heuristically (a merge must occur within about
+  4.8 B Terras steps, before 1); the measured B^(-0.4) is consistent at these sizes. Earlier: NUMERICAL table (seeded Monte Carlo).
 source: mac-mini-2026-10-06-mod1819, 05-knowledge/results/seven_twentyone_mersenne_openai_math_20261006.md, section 1
 related:
   - 01-canon/theorems/THM-4555-uniform-switches-are-collisions-at-minus-one-trailing-ones-deletion.md
@@ -38,3 +39,12 @@ A second run (seed 99, 400 samples each) extends the table: 0.838 at `B = 2048`,
 * Recurrence of `L` makes repeated attempts likely. The open question is whether the per-visit success probability stays bounded below while `|Δ|` fluctuates.
 
 **Consequence if true.** Combined with THM-4555 (iv), the trailing-ones switch `n => (n−1)/2` would certify almost all large reset-2 sources by collisions. The obstruction to a total rewrite family would then be a density-zero set, not a positive fraction.
+
+---
+
+## Update (2026-10-07, mac-mini-2026-10-07-oaimath3): PROVED (THM-4581)
+
+* **Absorption is the merge.** Put `v = n − 1`, so that `T(v) = (n−1)/2` by an even step. Absorption of the chain `(u, v) = (n, n − 1)` from `(0, 1)` at time `t` is `T^t(n) = T^(t−1)((n−1)/2)` with equal odd counts. That is the conjectured equal-odd-step-time merge, and it happens before 1 when `t ≪ B`.
+* **Theorem H (THM-4581 (3)).** Absorption is almost sure under Haar measure, hence also under Haar conditioned on the positive-measure first-reset-2 set.
+* **Transfer to integers.** Absorption by `K` depends only on `n mod 2^K`, and uniform `B`-bit sources are uniform on residues. So `liminf_B P_B ≥ P(absorbed by K | condition)`, which tends to 1.
+* **The parity effect is consistent.** The even/odd debt-height gap shrinks, as both shares tend to 1.
