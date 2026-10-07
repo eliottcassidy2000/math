@@ -16,7 +16,7 @@ gates are not danger.
 
 - **CITED:** LRC through 13 total runners; see
   [Sungkawichai–Trakulthongchai](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture).
-- **PROVED + FINITE-EXACT:** THM-741/2883/2888/2892/2893/885 close `2002` nine- and `3003` eight-body roots; audited THM-2923 closes `3432` seven-body roots.  Prior splits are intermediate.
+- **PROVED + FINITE-EXACT:** THM-741/2883/2888/2892/2893/885 close `2002` nine- and `3003` eight-body roots. Prior splits are intermediate.
 - **PROVED:** THM-965/2051--2092/2074 give relation, pair-floor, rank and ledger
   reductions; THM-2148/2168 reach scalar `5+3`. THM-2054 decorrelates at
   `H=2^19` subject to MISTAKE-080/082; endpoint/child transport remains.
@@ -28,10 +28,9 @@ gates are not danger.
 Direct frontier: `<=6`, projected caps `1579/216`; THM-3378 leaves 12 rows.
 THM-3349--3453/3665--3731 give support controls and 165 valuation orbits, but
 arbitrary rungs, owner/word transport and entry remain (MISTAKE-281/300/310/313).
-[THM-4009](../01-canon/theorems/THM-4009-euclidean-covering-transference-short-relation-compression.md)
-gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target.
+THM-4009 gives square sum `<=195`; THM-4019 refutes its sharp arbitrary-lattice target.
 
-### Independent routes that remain live
+### Live routes
 
 - **Short-relation/decoder lane (PROVED + CITED):** [THM-4009](../01-canon/theorems/THM-4009-euclidean-covering-transference-short-relation-compression.md) gives square norm `<=195`; THM-2052 is terminal at rank twelve.
   THM-3793/3818/[3825](../01-canon/theorems/THM-3825-prime-colour-valuation-two-cube-decoder.md) recover both scales at `91^6` except one congruence fibre. THM-3878/3910/4002--4004 leave 17 `11+2` types and owner/arrival.
@@ -377,8 +376,8 @@ lift/phase clocks.
 - **AMM:** [THM-4086](../01-canon/theorems/THM-4086-rule-a-transition-clock-and-phase-cocycle.md) proves a fixed-policy `R=32768` clock/cocycle; no global monotonicity, all-`R`, or `C*` result.
 - **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383: localization, owner/ANOVA/rectangle/reference inversion; realization/stable diagonal open. THM-2646: modular/exponent `B3` conjugacy, not Markov invariance.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.
-- **Collatz:** [Grounded atlas](../05-knowledge/results/collatz_grounding_synthesis_20261007.md): all odd n<=32767 FINITE-EXACT; infinite completed subfamilies PROVED; universal coverage OPEN.
-- **Collatz classes:** [THM-4590](../01-canon/theorems/THM-4590-collatz-classes-are-equidistributed-residues-windows-slowly-varying-density.md) gives equidistribution/slow variation; [THM-4594](../01-canon/theorems/THM-4594-the-maximal-class-decided-collatz-sieve-and-the-sign-barrier.md) leaves6,915,181 classes mod2^30 conditional on verification through2^71, with -1 surviving all depths. The [golden note](../05-knowledge/results/golden_collatz_resonance_20261007.md) routes THM-4591 (five integer Terras cycles through period301993) and HYP-9230 (log2(3) resonance).
+- **Collatz:** [Atlas](../05-knowledge/results/collatz_grounding_synthesis_20261007.md): odd n<=32767 FINITE-EXACT; infinite completed subfamilies PROVED; coverage OPEN.
+- [Collatz classes](../05-knowledge/results/golden_collatz_resonance_20261007.md): THM-4590 equidistribution, THM-4594 sieve/sign barrier, THM-4591 cycles through301993; HYP-9230 resonance OPEN.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
 - **Rule 30:** [THM-4210](../01-canon/theorems/THM-4210-rule30-lossless-dyadic-block-current-cartier-tree.md) gives the forward current tree; THM-4204/4206 are inverse/Haar carriers. THM-4263 adds a fibre-cap density pullback, not a prize solution. All prizes remain **OPEN**.
 - **Two Hopf problems:** the `S2 x S2` curvature and `S6` complex-structure
