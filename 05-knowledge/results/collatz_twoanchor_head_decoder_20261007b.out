@@ -1,0 +1,15 @@
+PROVED: unique positive-word decoder and exact finite sibling-gap partner list.
+Decoder independent composition universe 26332 ; complete small data triples 30464
+Head universe: letters1..12, lengths1..4; heads 22620 ; partners 274 ; r1 269
+Counts(length,gap) [((1, 1), 1), ((2, 1), 7), ((3, 1), 40), ((3, 3), 1), ((4, 1), 221), ((4, 2), 3), ((4, 3), 1)]
+r1 prefix-minimal nonpadding antichain 221 ; rows ((1, 33, ((11, 1), (12, 1), (13, 3), (14, 6), (15, 8), (16, 5), (17, 3), (18, 3), (19, 2), (20, 1)), Fraction(1913, 524288)), (3, 188, ((10, 1), (11, 1), (12, 2), (13, 5), (14, 8), (15, 14), (16, 19), (17, 27), (18, 26), (19, 23), (20, 23), (21, 15), (22, 11), (23, 8), (24, 4), (25, 1)), Fraction(139281, 8388608)))
+all-gap prefix-minimal nonpadding antichain 225 ; rows ((1, 35, ((11, 1), (12, 2), (13, 3), (14, 7), (15, 8), (16, 5), (17, 3), (18, 3), (19, 2), (20, 1)), Fraction(2233, 524288)), (3, 190, ((10, 1), (11, 1), (12, 2), (13, 5), (14, 9), (15, 15), (16, 19), (17, 27), (18, 26), (19, 23), (20, 23), (21, 15), (22, 11), (23, 8), (24, 4), (25, 1)), Fraction(142353, 8388608)))
+Conditional weights are native head-cylinder masses; no Mersenne/payment coverage inference here.
+New r1 examples: [((1, 10), (1, 1, 2, 2, 3)), ((3, 12), (4, 1, 5, 2, 1)), ((4, 12), (3, 6, 1, 3, 1)), ((5, 8), (3, 1, 3, 3, 1)), ((8, 4), (3, 1, 1, 4, 1)), ((9, 2), (3, 1, 1, 3, 1))]
+New nonpadding higher gaps: [((1, 2, 9), 3, (1, 1, 1, 1, 1, 1)), ((1, 3, 5, 5), 2, (1, 1, 3, 1, 1, 1, 2)), ((4, 1, 5, 5), 2, (3, 2, 1, 1, 1, 1, 2)), ((6, 1, 4, 3), 2, (3, 1, 1, 1, 1, 1, 2))]
+Short-head independent child compositions 53130 ; unique pairs [((10,), (3, 1, 1, 3)), ((1, 10), (1, 1, 2, 2, 3))]
+All-height native exports 548 checked instances; x=27y-26; terminal oddness excludes ROOT padding.
+Supplied-child example63829 ->281 <-2365; authenticated child ROOT word yields15 source edges.
+Hostiles: formal value at1 is not actual; missing/forged partner, source guard and ROOT suffix are rejected.
+No universal head success, no new Mersenne guard claim, no ROOT discovery in production.
+Exact checks 195307

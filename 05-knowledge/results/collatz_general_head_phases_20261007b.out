@@ -1,0 +1,9 @@
+PROVED general native phase: period2^(2J+A-2), finite cutoffK-1>=2A+J.
+FINITE-EXACT eight heads, J3..18, three parameters including10^30.
+Literal controls(head,gap,K,terminal): [((10,), 1, 1889, 3), ((1, 10), 1, 6129, 1), ((9, 2), 1, 14177, 2), ((1, 2, 9), 3, 32945, 2)]
+New symbolic rays(head,gap,least-selected-K,period): [((9, 2), 1, 46945, 23887872), ((1, 2, 9), 3, 98481, 47775744)]
+Finite bank rows(first,count,shellmass,new-relative-to-entry-bank): [(1, 35, Fraction(2233, 524288), Fraction(1083005, 382205952)), (3, 190, Fraction(142353, 8388608), Fraction(7671245, 679477248))]
+All225 exponent guards disjoint atJ3,7; each has old-entry split243/1/485.
+Finite bank maxcost25; no head matchesK17,33,49. No positive native member is cut.
+No ROOT search; finite bank mass is paid-dependency coverage, not ROOT completion.
+Checks: 2240565

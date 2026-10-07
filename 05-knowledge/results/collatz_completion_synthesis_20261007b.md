@@ -8,8 +8,9 @@ required smaller child's first-hit certificate is supplied. **OPEN:** a
 rule or well-founded family covering every positive integer.
 
 The main advance is actual coverage beyond a declared existing entry bank:
-explicit phases in every long first-reset shell admit a paid four-bit
-deletion. Their children have reset length two. The completion-first idea
+a finite bank of 225 decoded heads gives explicit phases in every long
+first-reset shell that admit a paid four-bit deletion. Their Mersenne
+children have reset length two. The completion-first idea
 also becomes an exact research method: retain the artificial edges of a
 completed model, then compute and discharge their defects at the original
 source. The digit-factorial examples give a fully solved test of that method.
@@ -84,6 +85,90 @@ without routing back to the original source. Grounding the child remains
 a separate obligation. An infinite schema of children is not a finite
 list of already certified seeds.
 
+### From two special heads to a rule generator
+
+The [head decoder](collatz_twoanchor_head_decoder_20261007b.md) turns the
+affine partner search into forced carry peeling. For a positive word of
+length `L`, its carry satisfies
+
+\[
+B_w=3^{L-1}+2^{a_1}B_{\rm tail}.
+\]
+
+The tail carry is odd, so the first letter is forced by the valuation of
+`B_w-3^(L-1)`. Repeat; the remaining total cost determines the last letter.
+This inherited carry mechanism gives an iff decoder for each prescribed
+length, cost and carry, with at most one word.
+
+For a supplied head `u` of length `ell`, cost `A`, and carry `B`, a partner
+at positive sibling gap r must have length `ell+3`, cost `C=A-2r`, and carry
+
+\[
+B_v=B-26\,3^\ell+2^C(4^r-1)/3.
+\]
+
+There are only finitely many possible r because `C>=ell+3`. This is
+complete for the specified affine template, not for every possible
+common-future relation. New examples include `(5,8)` paired with
+`(3,1,3,3,1)` at gap one, and `(1,2,9)` paired with six ones at gap three.
+The decoder also proves, without a search cutoff, that the earlier shapes
+`(a)` and `(1,a)` work at gap one only at `a=10`.
+
+The [general phase transfer](collatz_general_head_phases_20261007b.md)
+converts every nonpadding decoded head into an authenticated Mersenne
+guard. Let `x_u` be the head's native odd source residue modulo
+`2^(A+1)`. For any `J>=3`, the phase is exactly
+
+\[
+3^{K-1}\equiv
+1+2^{2J-1}(x_u-1)3^{-J}\pmod {2^{2J+A}}.
+\]
+
+It has a unique exponent class of minimal period `2^(2J+A-2)`. The
+explicit sufficient cutoff `K-1>=2A+J` keeps every source prefix through
+the head above its starting value; child integrality and first-hit
+legality then follow from the affine identity and the final odd endpoint.
+The final valuation is read from that same source, not prescribed by
+changing the parameter. Removing finitely many initial phase members does
+not change its relative natural density.
+
+The exhaustive head universe, letters 1 through 12 and lengths 1 through
+4, yields 274 pairs. Removing initial-two padding and keeping prefix-minimal
+heads gives 225 disjoint guards. Their exact phase-union densities are:
+
+| Exponent shell | Heads | Relative paid phase density | Earlier single head |
+|---|---:|---:|---:|
+| `v2(K-1)=2J-2` | 35 | `2233/524288` | `1/1024` |
+| `v2(K-1)=2J-1` | 190 | `142353/8388608` | `1/256` |
+
+These improve both finite banks by more than a factor of four. Within
+each union, exactly `485/729` misses the declared inverse-generator entry
+bank, by the independent odd-modulus parameter split. This is an exact
+comparison of explicit exponent sets. The majority of each shell still
+lies outside these particular guards.
+
+For this particular 225-head bank, **the cutoff removes no positive native
+member**. The maximum cost is 25, so every `J>=4` shell already exceeds
+the threshold. At `J=3` the only possible exceptions are `K=17,33,49`;
+none matches any bank head. Two new progressions outside both the old
+entry bank and the corresponding original single-head phase are
+`K=46945+23887872s` and `K=98481+47775744s`, `s>=0`, using heads `(9,2)`
+and `(1,2,9)` respectively.
+
+There is also an all-height export without a Mersenne assumption. Appending
+terminal letters 1 and `1+2r` gives actual common-future receipts from
+`27y-26` to the smaller y on an explicit native progression. Odd terminal
+letters exclude any hidden ROOT padding. For example, the supplied proof
+of child 2365 grounds source 63829 through their common future 281. This
+is a sound route for every member whose child proof is supplied; it does
+not furnish those infinitely many child proofs.
+
+The run-clearing lift also works at `n=2^K*t-1` with odd `t>=1`, `K>=5`,
+and `J>=3`, whenever its actual prefix `1^(K-1),2^J,u` avoids ROOT. This
+retains a usable interface for children that have left Mersenne form.
+An observed ROOT hit is returned directly, without padding. The special
+reset-length-two conclusion is restricted to `t=1`.
+
 ## 3. Sufficient depth is an exact request, not an available rule
 
 Suppose a legal inverse word at parent `m` gives child `h<m`. The
@@ -113,8 +198,9 @@ not an assertion that a seven-bit deletion has been authenticated.
 The [factorion model](factorion_completion_defects_20261007b.md) proves a
 global entry bound for the base-b digit-factorial map `F_b`. With
 `M=(b-1)!` and least `D>=2` satisfying `b^(D-1)>D*M`, every source enters
-the forward-invariant core `1..(D-1)*M`. Above it, digit count strictly
-decreases. Within it, a finite graph rank completes the all-source proof.
+the forward-invariant core `1..(D-1)*M`. At `D` or more digits, digit count
+strictly decreases; once at most `D-1` digits remain, the next image is in
+the core. Within it, a finite graph rank completes the all-source proof.
 
 Digit histograms provide a cycle-preserving compression because
 `F_b=E o H` and the histogram map is `H o E`. This preserves the whole
@@ -207,9 +293,9 @@ preserve neither exact source membership nor a ROOT receipt by themselves.
 
 ## 7. Precise next targets
 
-1. Compile further two-anchor heads into exact exponent guards, using the
-   original source parameter throughout. Compare the union of guards,
-   with overlaps removed, against the remaining shells.
+1. Study the complement of the 225-head bank at the original source.
+   The new decoder makes each longer-head test finite and exact; a global
+   escape bound for the complement would be stronger than another census.
 2. Ground the resulting reset-length-two children or give each a smaller
    authenticated obligation. This is a concrete change-of-type target,
    stronger than asking for another copy of the original long-run rule.
@@ -220,3 +306,29 @@ preserve neither exact source membership nor a ROOT receipt by themselves.
 
 No source-average, finite census, conditional child proof, or 2-adic
 intersection is promoted here to universal positive-integer coverage.
+
+## 8. Reproduction and publication record
+
+Each script below has a paired result note and saved `.out` under
+`05-knowledge/results`, with its exact universe, controls, proof boundary
+and normalized-LF output hash. All six were run normally and with Python
+optimization; the outputs agree. Independent peer review checked the
+mathematical interfaces and the optimized outputs.
+
+| Script under `04-computation/experiments` | Exact checks |
+|---|---:|
+| `collatz_completion_anchor_20261007b.py` | 1,008,509 |
+| `collatz_completion_paper24_23_20261007b.py` | 51,610 |
+| `collatz_self_describing_runs_20261007b.py` | 11,905 |
+| `factorion_completion_defects_20261007b.py` | 3,049,061 |
+| `collatz_twoanchor_head_decoder_20261007b.py` | 195,307 |
+| `collatz_general_head_phases_20261007b.py` | 2,240,565 |
+| **Total** | **6,556,957** |
+
+Reproduce any row with `python -B <script>` and `python -B -O <script>`;
+the tests do not use removable Python assertions. Counts describe these
+declared computations, not the number of newly proved Collatz sources.
+The first four packets and this synthesis's initial version were published
+in `d31f29725`; the follow-on decoder/phase transfer and the digit-threshold
+wording correction are a separate checkpoint. The correction's witness
+and unchanged component theorem are recorded in `01-canon/MISTAKES.md`.
