@@ -2034,6 +2034,12 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
+## MISTAKE-581 (2026-10-07, mac-mini-2026-10-07-oaimath3; found by the session itself while integrating its last reader) -- a theorem number claimed by file existence after a rebase, colliding with a concurrent session's THM-4565
+
+- **What happened.** The checkpoint `450388a22f` filed `THM-4565-zeroless-powers-of-two-...`. The rebase just before that push had brought in opus-2026-10-07-S20's checkpoint `27d1d417b4`, which had already filed `THM-4565-two-readers-any-offset-...` for the same owner prompt. The slugs differed, so Git raised no conflict, and the push left two files with the same number on main.
+- **Repair.** S20 claimed first, so the zeroless theorem cedes and becomes THM-4580; HYP-9219 and the results note were updated. THM-4565 now refers only to S20's two-readers theorem. This session's next number, THM-4581, was chosen ten ahead so that the concurrent session can number its own work freely.
+- **Reusable rule.** After every `git pull --rebase`, re-list `01-canon/theorems/THM-<claimed>*` (and `HYP-`/`MISTAKE-`) before pushing. A clean rebase does not mean the namespace is clean, because different slugs never conflict.
+
 ## MISTAKE-580 (2026-10-07, opus-2026-10-06-S19 cycles/tubes/debt note; found by the session's independent adversarial audit, after the checkpoint 8334976f8 was pushed) -- the Chamberland half of a "new" tube theorem was published in 2014, a merge criterion stated as "iff" holds only almost surely, Monte Carlo constants were not reproducible from committed code, a heuristic exponent was typed as a consequence, and a proposition carried false cycle counts
 
 - **Claims (checkpoint version of `collatz_cycles_tubes_debt_walk_openai_20261006.md`, THM-4563, HYP-9217, INDEX line).**

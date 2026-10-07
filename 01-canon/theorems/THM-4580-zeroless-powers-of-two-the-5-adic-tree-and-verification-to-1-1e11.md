@@ -1,5 +1,5 @@
 ---
-id: THM-4565
+id: THM-4580
 title: "Zeroless powers of two: the trailing digits of 2^n form a 5-adic tree in which every zeroless class has 4 or 5 zeroless lifts according to one parity bit; Z_k = #(zeroless k-digit multiples of 2^k) satisfies Z_(k+1) = (9 Z_k + Delta_k)/2 with Delta_k a cyclotomic-unit trace; the growth rate lies in [4.47848, 4.52386] and the exponent set has 5-adic dimension in [0.93156, 0.93782]; every 2^n with 87 <= n < 1.1e11 contains a 0; no argument using finitely many leading or trailing digits can settle the conjecture"
 status: "PROVED: lift lemma, bijection, recursion, unit formula (checked for m <= 12), doubling criterion, finite-digit obstruction. FINITE-EXACT: Z_k for k <= 40 (Z_1..Z_26 = OEIS A181610; Z_1..Z_9 re-enumerated independently here); verification of 87 <= n < 1.1e11 (session reader's C verifier, validated against Python big integers, end states checked against exact 2^N mod 10^288; independently re-verified here for n < 2e9 with separate code, reproducing OEIS A031142 records 24-38). PROVED (computer-assisted): the growth and dimension brackets. The conjecture itself (no zeroless 2^n with n > 86) is OPEN. KNOWN context: OEIS A007377 records a check to 1e10 (Radcliffe 2022); A031142's record table (Griffiths 2012), if complete, implies the conjecture for n < 7.88e12."
 session: mac-mini-2026-10-07-oaimath3 (owner prompt "investigate whether every power of two above 2^86 contains a zero"; work by the session's zeroless reader, re-checked here)
@@ -14,7 +14,7 @@ related:
   - OEIS A007377, A181610, A031142
 ---
 
-# THM-4565 — the 5-adic tree of zeroless powers of two
+# THM-4580 — the 5-adic tree of zeroless powers of two
 
 ## Statements
 
