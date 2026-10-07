@@ -1,0 +1,39 @@
+two-orbit exponent coupling: NPAIRS=3000 BITS=20000 SEED=2028 NPROC=10
+1. exact checks
+  ok   ultrametric coupling law b_t = f(a_s, delta) holds at all 1659753 exact alignments
+  ok   lockstep recursion delta' = min(delta - a, v_2(3^k - 1)) (tie: delta' > v_2(3^k - 1)) holds at all 554893 continuation alignments
+  ok   rho_(t+1) = (3/2^a_t) rho_t - 1 + 2^(-L_(t+1)) exactly, first 200 steps of every pair
+  ok   kappa and delta are unchanged when the tape above the alignment position is replaced (104 alignments in 8 pairs)
+   steps 5575005, alignments 1659753 (0.298 per step)  [22s]
+2. the law of delta at exact alignments (Haar: P(delta >= d) = 2^(1-d))
+   all            n= 1659753  P(delta>=d)/2^(1-d), d=1..8: 1.000 1.002 1.006 1.000 1.012 1.000 1.029 0.953   Cov(a_s,b_t) = +0.0033 (pred from delta +0.0029)
+   k odd          n=  834606  P(delta>=d)/2^(1-d), d=1..8: 1.000 1.003 1.011 0.995 1.016 1.022 1.065 0.956   Cov(a_s,b_t) = +0.0073 (pred from delta +0.0039)
+   k = 2 mod 4    n=  417996  P(delta>=d)/2^(1-d), d=1..8: 1.000 1.005 1.011 1.012 1.022 0.966 0.988 0.944   Cov(a_s,b_t) = +0.0024 (pred from delta +0.0061)
+   k = 0 mod 4    n=  407151  P(delta>=d)/2^(1-d), d=1..8: 1.000 0.999 0.993 0.995 0.993 0.991 0.997 0.957   Cov(a_s,b_t) = -0.0042 (pred from delta -0.0024)
+   L_s in [8,32)  n=  250926  P(delta>=d)/2^(1-d), d=1..8: 1.000 0.999 1.004 1.006 1.010 1.016 1.012 0.925   Cov(a_s,b_t) = +0.0023 (pred from delta +0.0007)
+   L_s >= 32      n= 1339620  P(delta>=d)/2^(1-d), d=1..8: 1.000 1.001 0.998 0.998 0.997 0.994 1.005 0.998   Cov(a_s,b_t) = +0.0002 (pred from delta +0.0003)
+   L_s < 8        n=   69207  P(delta>=d)/2^(1-d), d=1..8: 1.000 1.036 1.165 1.014 1.317 1.051 1.558 0.191   Cov(a_s,b_t) = +0.0657 (pred from delta +0.0629)
+   fresh, L>=8    n= 1062363  P(delta>=d)/2^(1-d), d=1..8: 1.000 1.000 1.000 0.999 1.000 1.002 1.008 0.982   Cov(a_s,b_t) = +0.0005 (pred from delta +0.0002)
+   cont., L>=8    n=  528183  P(delta>=d)/2^(1-d), d=1..8: 1.000 1.001 0.998 0.999 0.998 0.990 1.002 0.996   Cov(a_s,b_t) = +0.0007 (pred from delta +0.0005)
+   fresh k odd L>=8 n=  530582  P(delta>=d)/2^(1-d), d=1..8: 1.000 1.000 1.000 0.998 1.003 1.007 1.009 0.999   Cov(a_s,b_t) = +0.0029 (pred from delta -0.0001)
+   fresh k even L>=8 n=  531781  P(delta>=d)/2^(1-d), d=1..8: 1.000 1.001 1.000 1.001 0.996 0.997 1.006 0.964   Cov(a_s,b_t) = -0.0019 (pred from delta +0.0006)
+   joint law of (a_s, b_t) at alignments with L_s >= 8 vs independent Geom x Geom: chi^2 = 66.2 on 48 dof (n = 1590546); P(b_t = a_s) = 0.33343 (independent: 1/3)
+   E[2^(1-delta)] = 0.66569 +- 0.00028  (Haar value 2/3; aligned covariance = 2 - 3 E = +0.00292)
+   lag distribution at alignment: k / L_s mean = 0.511, median k for L_s in [30,34]: 16.0
+3. cross-covariance Cov(a_s, b_(s+k)) by L_s-bin (s.e. ~ 2/sqrt(n))
+   L in [8,16)    n0=  168242  k=0:-0.0027 k=1:+0.0031 k=2:-0.0034 k=4:-0.0031 k=8:-0.0021 k=12:+0.0011 k=16:-0.0008 k=24:-0.0017 k=32:-0.0011 k=48:-0.0023 k=64:-0.0027 k=96:-0.0103 k=128:-0.0046 k=160:-0.0039
+      window k in [1,14] around L/2: max |Cov| = 0.0124, sum = +0.0205
+   L in [16,32)   n0=  333073  k=0:-0.0014 k=1:-0.0070 k=2:-0.0022 k=4:+0.0025 k=8:+0.0066 k=12:+0.0006 k=16:+0.0028 k=24:-0.0031 k=32:+0.0025 k=48:+0.0030 k=64:-0.0042 k=96:+0.0004 k=128:-0.0000 k=160:+0.0070
+      window k in [4,20] around L/2: max |Cov| = 0.0066, sum = +0.0005
+   L in [32,64)   n0=  607672  k=0:-0.0001 k=1:-0.0011 k=2:+0.0054 k=4:+0.0011 k=8:+0.0014 k=12:-0.0022 k=16:-0.0049 k=24:-0.0003 k=32:-0.0024 k=48:+0.0061 k=64:-0.0021 k=96:+0.0013 k=128:-0.0044 k=160:-0.0012
+      window k in [16,32] around L/2: max |Cov| = 0.0054, sum = -0.0001
+   L in [64,128)  n0=  887744  k=0:-0.0004 k=1:-0.0021 k=2:+0.0007 k=4:-0.0016 k=8:-0.0018 k=12:-0.0005 k=16:+0.0001 k=24:+0.0013 k=32:+0.0016 k=48:-0.0013 k=64:+0.0014 k=96:-0.0029 k=128:-0.0045 k=160:-0.0038
+      window k in [40,56] around L/2: max |Cov| = 0.0049, sum = +0.0058
+   all L          n0= 5575005  k=0:-0.0005 k=1:-0.0001 k=2:+0.0000 k=4:-0.0014 k=8:+0.0005 k=12:-0.0010 k=16:-0.0006 k=24:+0.0002 k=32:+0.0004 k=48:+0.0003 k=64:-0.0011 k=96:-0.0012 k=128:-0.0005 k=160:-0.0008
+4. block variances Var(L_(t+K) - L_t)/K, blocks starting at L >= 40
+   K=   1: n=2541123  Var/K = 4.0019
+   K=   4: n= 635253  Var/K = 4.0023
+   K=  16: n= 158548  Var/K = 4.0169
+   K=  64: n=  39590  Var/K = 4.0660
+   K= 256: n=   9579  Var/K = 3.9977
+[24s]  ALL CHECKS PASSED

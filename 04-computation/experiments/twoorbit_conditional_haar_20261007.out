@@ -1,0 +1,4 @@
+consecutive fresh alignments with L >= 8: n = 638702; joint (delta_j, delta_(j+1)) vs Haar x Haar: chi^2 = 32.6 on 35 dof
+   P(delta' >= d | delta >= 3) / 2^(1-d), d = 1..6: 1.000 0.999 1.000 0.993 0.981 0.978   (n = 159604)
+   P(delta' >= d | delta = 1) / 2^(1-d), d = 1..6: 1.000 1.001 0.999 0.997 0.998 0.995   (n = 319279)
+   corr(2^(1-delta_j), 2^(1-delta_(j+1))) = -0.0004  (s.e. ~ 0.0013)
