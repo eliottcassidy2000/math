@@ -254,6 +254,10 @@ sharpens the estimate to absolute covariance at most twice the overlap
 probability. It also specifies why the full joint past cannot be the
 conditioning field for a random law of a depth it already determines.
 
+The [Terras inverse-clock bridge](collatz_terras_inverse_clock_bridge_20261007.md)
+separately proves bounded synchronous imbalance returns on nonmerge paths
+in the Haar model. Translation control at those returns remains open.
+
 ## 7. Finite-exact controls
 
 The universe comprises five affine couplings

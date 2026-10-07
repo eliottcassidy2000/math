@@ -193,5 +193,8 @@ The focused next task is to choose a coarse conditioning that retains the
 debt-return obligation while leaving the comparison depth genuinely
 unrevealed, then prove quantitative depth-tail bounds under that choice.
 The full diagonal profile in (4) is a stronger diagnostic than the three
-redundant scalar summaries. Recurrence additionally needs control after
-failed merge attempts; neither unconditional mixing nor (3) supplies it.
+redundant scalar summaries. The later
+[Terras inverse-clock bridge](collatz_terras_inverse_clock_bridge_20261007.md)
+proves bounded imbalance returns separately. What still needs control
+after failed merge attempts is the translation coordinate, so those
+returns reach a bounded region with a usable merge chance.

@@ -3,16 +3,17 @@
 **Current status, October 7, 2026:** elementary results below are PROVED with
 FINITE-EXACT controls; the requested OpenAI paper statements are CITED and
 accepted as premises for this session, without re-auditing their proofs.
-Universal Collatz coverage, the debt recurrence conjecture, the decimal
+Universal Collatz coverage, archimedean box recurrence/merging, the decimal
 cutoff at exponent 86, and the full selected prize targets remain OPEN here.
 
 ## What changed
 
 The main gain is an exact account of which information two Collatz orbits
 share, when a finite observation is forgotten, and when an adaptive query
-draws fresh randomness. This strengthens the October 6 numerical debt-walk
-work into several quantitative statements, while locating the remaining
-return problem more precisely.
+draws fresh randomness. The latest Terras-clock integration additionally
+closes bounded returns of the exponent imbalance in the Haar model, with
+the alternative that the pair has already merged. Controlling translation
+debt at those returns remains the missing archimedean condition.
 
 The assigned anchor is source-specific Collatz coverage. The niche is the
 decimal digit problem. The wildcard is a group of transfers from the supplied
@@ -120,13 +121,24 @@ All three statistics use only E[2^(-D)]. The full diagonal profile
 `P(F=R=j)=2^(-j)P(D>j)` recovers the whole depth law and is the sharper
 diagnostic for the next experiment.
 
-**Next proof obligation.** Use this exact conditional law, together with
-the affine residue/debt, to bound returns to a state with a usable merge
-chance. An iid fresh-input representation alone does not force recurrence
-of an arbitrary controller driven by that input. Finite variance estimates
-or a central limit theorem alone would not settle that return obligation
-either. The arithmetic transfer from Haar statements to the intended
-integer sources remains separately necessary.
+**Concurrent return advance.** The newly fetched
+[THM-4569, Terras clock](../../01-canon/theorems/THM-4569-the-terras-clock-recurrence-of-two-collatz-orbits-is-unconditional.md)
+gives a simple random walk on predictable disagreement times. Its core
+transition/recurrence proof was independently checked here. A separate
+[inverse-clock argument](collatz_terras_inverse_clock_bridge_20261007.md)
+transfers recurrent count ties to infinitely many odd-event pairs whose
+times differ by at most one. Thus the appropriate synchronous exponent
+imbalance returns to {-1,0,1} infinitely often, unless the aligned pair
+has already merged. This uses a fresh conditional success chance at
+separated stopping times, not a variance fit.
+
+**Next proof obligation.** Control the affine translation at those returns,
+so the pair visits a bounded state region with a usable merge chance.
+Count recurrence alone does not bound this second coordinate. The
+arithmetic transfer from Haar statements to the intended integer sources
+remains separately necessary. Our depth diagnostics can target that
+conditional translation control; they are no longer needed merely to
+justify the count's recurrence.
 
 ## 3. Decimal zero-free powers: a proved sparse residual
 
@@ -163,6 +175,15 @@ length m>=2 a full counterexample must have its canonical suffix phase
 e=n in the short band 10^(m-1)<=2^e<10^m, with m<=e<4m. Most suffix
 survivors lie far outside this band.
 [Full proof, accepted entropy-dimension comparison, and census](powers_two_decimal_windows_20261007.md).
+
+The incoming concurrent
+[THM-4580, 5-adic tree and larger verification](../../01-canon/theorems/THM-4580-zeroless-powers-of-two-the-5-adic-tree-and-verification-to-1-1e11.md)
+records a substantially larger finite scan, 87<=n<1.1e11, and a stronger
+computer-assisted counting exponent0.93783. Those are its recorded
+computations, not additional runs performed by this package; its checkpoint
+was marked audit pending. Our short parity-weight proof and its bounded
+independent controls are retained. Both routes still leave the infinite
+cutoff and the height-sensitive diagonal open.
 
 This connects to Collatz in a precise methodological way. A small total
 exceptional mass need not exclude a designated integer; retaining the
@@ -240,14 +261,15 @@ quantifiers, while finite controls check boundaries, carry, types and
 independent enumerations. No accepted OpenAI theorem is claimed proved by
 these tests. Agent audits checked the newly derived interfaces.
 
-The six packages pass **86,113 exact checks** in both normal and optimized
+The seven packages pass **217,070 exact checks** in both normal and optimized
 Python, with matching saved outputs. The navigation check also passes;
 an inherited line-budget excess was repaired by joining wrapped lines in
 the hypothesis index without changing its mathematical text.
 
-The next priority is to specify a coarse conditioning which retains the
-debt-return obligation while leaving the overlap depth unrevealed, then
-bound its full depth profile and return law. The orthogonal digit target is a surviving-phase bound
+The next priority is translation tightness at recurrent count/imbalance
+returns. A coarse conditioning that leaves the overlap depth unrevealed
+may support that estimate; its full depth profile is the useful diagnostic.
+The orthogonal digit target is a surviving-phase bound
 in the actual-height band. The positive-measure arithmetic route remains
 target absence implying a controlled arithmetic collapse, so that a
 nonzero small determinant could force a contradiction. These are precise

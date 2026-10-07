@@ -9,7 +9,7 @@ scripts:
   - 04-computation/experiments/oai3_20261007_tclock_vi.py (independent value iteration)
 related:
   - THM-4564 (the same pair in the odd-step clock: alignment coupling; disagreement density 1/2 <=> variance 4 per odd step)
-  - HYP-9217 (the debt recurrence law; its recurrence half is now PROVED here, its rate half remains), HYP-9218 (now needed only for the rate), HYP-9220 (y ~ y+1 a.e.)
+  - HYP-9217 (the debt recurrence law; its recurrence half is now PROVED here, its rate half remains), HYP-9218 (full-past formulation refuted; a coarse-conditioning replacement may inform the rate), HYP-9220 (y ~ y+1 a.e.)
   - THM-4556 (v) (certified Mersenne switch density 15719/131072 = 0.1199; S19: 0.1740 at K = 31)
   - Terras (1976) (the parity-vector map is a measure-preserving bijection of Z_2); Lagarias (1985, 1990); Matui (2015) (topological full group of the full shift = Thompson's V); Dougherty-Jackson-Kechris (hyperfiniteness of tail relations)
 ---
@@ -20,6 +20,7 @@ related:
 
 * `T(x) = x/2` for even `x`, and `(3x+1)/2` for odd `x`, on `Z_2`.
 * Two orbits `x_s = T^s(x)`, `y_s = T^s(y)`, related by `x_s = 3^(j_s) y_s + c_s`, with `c_s ∈ Z_2` (in `Z[1/3]` for rational initial relations).
+* The initial relation parameters are fixed, or determined by a finite already revealed parity prefix after which the source is Haar. Arbitrary dependence of `c_0` on unrevealed source digits would not make the disagreement clock predictable.
 * `p_s = y_s mod 2`, and `ε_s = c_s mod 2`.
 * For Haar `y` the parities `p_s` are i.i.d. fair coins (Terras), and `ε_s` is a function of the past.
 
@@ -41,7 +42,7 @@ related:
    * By optional skipping, `j_s = j_0 + S_(N_s)`, with `S` a simple random walk and `N_s = Σ_(r<s) ε_r`.
    * So `j` is a martingale and `Var j_s = E N_s`.
 3. **Dichotomy (PROVED).**
-   * Merges happen a.s. at equal T-time and are the hits of `(j, c) = (0, 0)`.
+   * Up to a Haar-null set of isolated value coincidences, any merge is an equal-T-time identity hit of `(j, c) = (0, 0)`. This statement does not assert that a merge occurs almost surely; that is the open box-recurrence question below.
    * If the orbits never merge, then `N_s → ∞`. Otherwise the parity vectors would eventually agree forever, and injectivity of the parity map (Terras) would force equality.
    * Hence **almost surely the pair either merges or `j` visits every integer infinitely often**. This is the recurrence half of S19's next step 2, unconditional, with no input from HYP-9218.
 4. **Rate lower bound (PROVED).** `P(no merge by T) ≥ P(S avoids −j_* for T steps)`. For S19's lag-1 pair (`j_* = 2` after its forced prefix) this gives `q₁(T) ≥ (1.59 + o(1)) T^(−1/2)`, so HYP-9217's exponent cannot exceed 1/2. For `x = y + 1` it gives `(0.80 + o(1)) T^(−1/2)`.
@@ -67,16 +68,23 @@ related:
 
 ## How the two orbits' exponents correlate over long gaps (with THM-4564)
 
+The [inverse-clock bridge](../../05-knowledge/results/collatz_terras_inverse_clock_bridge_20261007.md)
+supplies the separate transfer: recurrent count ties give, with conditional
+probability at least one half per disjoint trial, matched odd-event times
+within one step. Thus the corresponding synchronous valuation-sum debt
+returns to `{-1,0,1}` infinitely often on the nonmerge alternative. This
+does not bound the translation coordinate or prove box recurrence.
+
 * In the Terras clock, every correlation between the two parity streams, at every gap, is carried by the predictable bit `ε_s = c_s mod 2`. It decides *when* the odd-step difference moves, never *which way*.
 * Coupling can change the clock: the disagreement density, measured at 0.5006, is equivalent to THM-4564's variance 4 per odd step. It cannot destroy recurrence.
-* The rate (`T^(−1/2)` with constant about 16.7) depends on the clock running at density 1/2 and on box recurrence. That is where THM-4564's Haar-alignment law (HYP-9218) enters.
+* The original full-past formulation of HYP-9218 is refuted: the conditioning already determines the depth. THM-4581 uses a different return-weight argument, rather than that hypothesis. The fitted constant16.7 remains distinct from the bounds below; see the [overlap integration](../../05-knowledge/results/collatz_overlap_kernel_integration_20261007.md).
 
 ---
 
 ## Update (2026-10-07, same session): box recurrence and index 1 PROVED (THM-4581)
 
 * **Box recurrence (5) holds, so the chain merges almost surely from every admissible start** (THM-4581 (3)).
-  * The weight `|c·3^(−max(j,0))|^θ s^|j|`, with `s = 2^θ(1 − √(1 − (3/4)^θ))`, is a martingale on flips. A move of `j` toward 0 is exactly the ×3/2 branch.
+  * The weight `|c·3^(−max(j,0))|^θ s^|j|`, with `s = 2^θ(1 − √(1 − (3/4)^θ))`, has its homogeneous term balanced on flips; the additive error is bounded separately. A move of `j` toward 0 is exactly the ×3/2 branch.
   * Runs cost fresh coins per continuation beyond `v_2(3^|j| − 1) − 1` steps.
   * Together these give `E|c_return|^θ ≤ 0.634 |c|^θ + C` along the returns of `j` to 0. That is the archimedean control (5) asked for.
 * **Consequences.** All equivalent statements in (7) hold:

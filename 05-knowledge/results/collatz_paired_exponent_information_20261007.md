@@ -1,7 +1,7 @@
 # Paired Collatz exponents: retained information and quantitative forgetting
 
 **Status:** PROVED elementary probability and cylinder statements below;
-FINITE-EXACT controls. Debt recurrence, almost-sure merging, and universal
+FINITE-EXACT controls. Archimedean box recurrence, almost-sure merging, and universal
 integer Collatz coverage remain OPEN. No novelty or priority claim is made.
 
 **Reproduction:** `python 04-computation/experiments/collatz_paired_exponent_information_20261007.py`
@@ -247,6 +247,11 @@ The subsequent [overlap-kernel integration](collatz_overlap_kernel_integration_2
 improves the covariance bound using the exact saturation law, and corrects
 the incoming full-past Haar-depth hypothesis. Equations (1)--(7) above
 remain valid; the stronger estimate is linear in overlap probability.
+
+The later [Terras inverse-clock bridge](collatz_terras_inverse_clock_bridge_20261007.md)
+proves bounded returns of the synchronous exponent imbalance in the Haar
+model, outside the merge alternative. The unresolved return obligation
+is now the simultaneous control of the translation coordinate.
 
 ## 7. Finite controls and audit
 
