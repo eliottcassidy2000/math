@@ -1,0 +1,8 @@
+PROVED: weighted four/six-point windows glue by (z,s)*(z',s')=(z+s*z',s*s').
+Window universe: 1088 words, lengths3/5 and letters1..4; sign patterns all transitive.
+Six-vertex masks344/345: same full4-motif census1,2,2,10 and H43; cross-sector arcs differ.
+D8 fixed windows: source4+6 vertices; child6+6+4+4; formal T=(2/3)^e,C=2^c retained.
+Exact identity: z_child=(z_source+255)/256, s_child=s_source/256; ordered words and guards retained.
+Literal receipt controls 16 ; symbolic child exponent924745897 remains OPEN and unexpanded.
+Checks {'composition': 128, 'four_flip': 2, 'hostile': 9, 'literal': 48, 'order_loss': 1, 'six_collision': 10, 'summary': 1088, 'symbolic': 3, 'terminal_loss': 2, 'transitive': 1088, 'window_decode': 1088}
+Total checks 3467

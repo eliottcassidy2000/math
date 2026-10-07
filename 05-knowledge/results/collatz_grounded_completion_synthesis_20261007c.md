@@ -8,6 +8,9 @@ grounding/substitution rules. **CONDITIONAL:** unsupplied terminal children
 of these infinite families still need certificates. **OPEN:** universal
 coverage and a well-founded completion rule for every positive integer.
 
+Current continuation: [recursive child compression](collatz_child_compression_synthesis_20261007d.md)
+adds guarded16/34-bit exits, exact parameter readers and marked four-/six-point gluing.
+
 The concrete gain is threefold. Selected two-twos obligations now have
 stored proofs to 1. A rule outside the finite head bank adds genuine guard
 coverage. Composing a new child rule with an existing parent rule gives

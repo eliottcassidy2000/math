@@ -1,0 +1,11 @@
+D16 uniform inverse limit: 5 94 ;joint exponent/period bits 376 376
+D16 uniform inverse limit: 17 168 ;joint exponent/period bits 1939 1942
+PROVED context cancellation:deletions add, source-head length drops, native bit cost is unchanged.
+PROVED D15/D16 phase K=924745905mod2^79;source head (2, 2, 2, 1, 2, 9, 16, 1, 1, 2, 1, 1, 2, 1, 1, 2, 1, 3, 2, 3, 2, 3, 3, 3, 1, 3, 4, 1, 1, 3, 2)
+FINITE-EXACT24 literal compositions,6 mixed inverse transports;ROOT terminal remains OPEN.
+FINITE-EXACT D16 child returns toJ3 but misses all225 declared head phases.
+PROVED recursive D34 phase K=924745905mod2^551;heads242/276,costs553/551.
+D34 uniform inverse limits G5^200/G17^358;4 literal recursive compositions,2 inverse transports.
+Coverage tradeoff:old parameter t needs47 bits for D16,519 bits for D34;no universal closure.
+Independent D34 guard pullback:t=0mod2^519;exact polynomial readout degree16.
+Exact checks 3365

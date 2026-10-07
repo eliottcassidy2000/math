@@ -1,0 +1,11 @@
+PROVED marked endpoint j(t)=[3^(924745911+2^32*t)-8589800907]/2^34.
+PROVED v2(j(t)-j(s))=v2(t-s); every2^h quotient is one cycle of length2^h.
+Newton reader minimal degree ceil(h/34); at47bits exactlyquadratic; linear hostile at35bits,t2.
+Continuation words begin>=3; costA gives unique tphase modulo2^(A-2), formal guards with strict cutoff retained.
+FINITE-EXACT continuation words: 93 ; full quotient permutations through10bits.
+Actual39letter/cost81 child rule leaves24letter/cost49 suffix: t=0mod2^47.
+Same low46bit coordinate t0/t2^46 disagrees on newguard; retain refinement bits.
+Marked M tensor I16 recovers M; conjugate words12/21 have disjoint native cells11/9mod16.
+Bott/Clifford stabilization is cited background, not an8-step Collatz return or positivity theorem.
+No astronomical Mersenne expansion, ROOT discovery, or universal coverage assertion.
+Exact checks 6940
