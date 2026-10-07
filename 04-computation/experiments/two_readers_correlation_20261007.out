@@ -1,0 +1,116 @@
+(K) universal comparison kernel, exact enumeration over z mod 2^22
+     (l, j, Delta) = (0, 0, 2): m = 1, Cov = -0.9998, kernel = -1.0000
+     (l, j, Delta) = (0, 0, 4): m = 2, Cov = +0.5000, kernel = +0.5000
+     (l, j, Delta) = (0, 0, 8): m = 3, Cov = +1.2498, kernel = +1.2500
+     (l, j, Delta) = (0, 0, 16): m = 4, Cov = +1.6247, kernel = +1.6250
+     (l, j, Delta) = (0, 0, -2): m = 1, Cov = -0.9998, kernel = -1.0000
+     (l, j, Delta) = (0, 0, -4): m = 2, Cov = +0.5000, kernel = +0.5000
+     (l, j, Delta) = (0, 1, 2): m = 2, Cov = +0.5000, kernel = +0.5000
+     (l, j, Delta) = (0, 1, 10): m = 2, Cov = +0.5000, kernel = +0.5000
+     (l, j, Delta) = (0, 2, 10): m = 1, Cov = -0.9998, kernel = -1.0000
+     (l, j, Delta) = (0, 3, 8): m = 1, Cov = -0.9998, kernel = -1.0000
+     (l, j, Delta) = (1, 0, 1): m = 0, Cov = +0.0000, kernel = +0.0000
+     (l, j, Delta) = (2, 0, 5): m = 0, Cov = +0.0000, kernel = +0.0000
+     (l, j, Delta) = (2, 0, -3): m = 0, Cov = +0.0000, kernel = +0.0000
+     (l, j, Delta) = (2, 1, 3): m = -1, Cov = +0.0000, kernel = +0.0000
+     (l, j, Delta) = (3, 1, 7): m = -2, Cov = +0.0000, kernel = +0.0000
+     (l, j, Delta) = (1, 1, 3): m = 1, Cov = -0.9998, kernel = -1.0000
+     (l, j, Delta) = (2, 2, -9): m = -1, Cov = +0.0000, kernel = +0.0000
+     (l, j, Delta) = (0, 0, 0): m = inf, Cov = +1.9978, kernel = +2.0000
+     (l, j, Delta) = (4, 0, 5): m = inf, Cov = +1.9978, kernel = +2.0000
+     (l, j, Delta) = (6, 0, 21): m = inf, Cov = +1.9978, kernel = +2.0000
+  ok   Cov(e(z), e(2^l 3^j z + Delta)) = (2 - 6 2^-m) 1{m >= 1} (m = inf -> 2) for all listed maps (truncation error < 3e-3)
+     (12000 pairs, 3000-bit y, 600 steps; merged within 600 steps: 0.6203)
+(R) one source, two readers
+  ok   whenever y leads (L_t >= 0) and the lagger does not tie, B_t equals its prediction from the pinned debt (all steps, all pairs)
+     leader y (L>=0): P(A=k) k=1..5: 0.5002, 0.2500, 0.1248, 0.0623, 0.0312;  leader x (L<0): P(B=k): 0.5006, 0.2500, 0.1244, 0.0629, 0.0310
+  ok   the leader's exponent is Geom(1/2) in both regimes (NUMERICAL, within 0.004/0.006)
+(G) all pairs (s, k), |k - s| <= 40, 10 <= s < 560
+  ok   pointwise: the reading windows overlap iff the saturation depth M >= 1 (every overlapping pair and its non-overlapping neighbours: 8121017 overlaps, 12966272 neighbours)
+  ok   pointwise reading identity away from ties: B_k = min(lam + A_s, mu) (lam >= 0), A_s = -lam + min(B_k, mu) (lam < 0)
+  ok   pointwise BSC identity on every overlap: 1{R = 1} = 1{F = 1} XOR 1{M = 1} (F fresh exponent, R re-read exponent minus offset)
+     law of M on overlapping pairs by time-lag class (Geom: 0.5, 0.25, 0.125, 0.0625, P(7 <= M < inf) = 1/64; E[2^-M] = 1/3; E[kappa] = 0):
+     d=-1 merged       n =   3215968: P(M=1..4) = 0.0000, 0.0000, 0.0000, 0.0000, P(7<=M<inf) = 0.0000, P(M=inf) = 1.0000; E[2^-M] = 0.0000; E[kappa] = +2.0000, E[(A-2)(B-2)] = +1.9922; max|P(F,R) - P(F)P(R)| = 0.2500; first-bit BSC 1 - h2(P(M=1)) = 1.00000 bits
+     d=-1 pre-merge    n =    109590: P(M=1..4) = 0.5240, 0.2349, 0.1420, 0.0242, P(7<=M<inf) = 0.0013, P(M=inf) = 0.0515; E[2^-M] = 0.3406; E[kappa] = -0.0439, E[(A-2)(B-2)] = -0.0474; max|P(F,R) - P(F)P(R)| = 0.0120; first-bit BSC 1 - h2(P(M=1)) = 0.00166 bits
+     d=0               n =    126803: P(M=1..4) = 0.4722, 0.2700, 0.1804, 0.0402, P(7<=M<inf) = 0.0026, P(M=inf) = 0.0000; E[2^-M] = 0.3296; E[kappa] = +0.0222, E[(A-2)(B-2)] = +0.0252; max|P(F,R) - P(F)P(R)| = 0.0139; first-bit BSC 1 - h2(P(M=1)) = 0.00223 bits
+     d=-2,+1           n =    250807: P(M=1..4) = 0.4848, 0.2613, 0.1359, 0.0583, P(7<=M<inf) = 0.0043, P(M=inf) = 0.0000; E[2^-M] = 0.3299; E[kappa] = +0.0208, E[(A-2)(B-2)] = +0.0118; max|P(F,R) - P(F)P(R)| = 0.0076; first-bit BSC 1 - h2(P(M=1)) = 0.00067 bits
+     2<=|d+1/2|<=5     n =    741631: P(M=1..4) = 0.5096, 0.2497, 0.1180, 0.0585, P(7<=M<inf) = 0.0188, P(M=inf) = 0.0000; E[2^-M] = 0.3370; E[kappa] = -0.0218, E[(A-2)(B-2)] = -0.0257; max|P(F,R) - P(F)P(R)| = 0.0048; first-bit BSC 1 - h2(P(M=1)) = 0.00026 bits
+     6<=|d+1/2|<=12    n =   1472757: P(M=1..4) = 0.5012, 0.2488, 0.1241, 0.0633, P(7<=M<inf) = 0.0157, P(M=inf) = 0.0000; E[2^-M] = 0.3336; E[kappa] = -0.0016, E[(A-2)(B-2)] = -0.0043; max|P(F,R) - P(F)P(R)| = 0.0006; first-bit BSC 1 - h2(P(M=1)) = 0.00000 bits
+     13<=|d+1/2|<=40   n =   2203461: P(M=1..4) = 0.4993, 0.2502, 0.1252, 0.0625, P(7<=M<inf) = 0.0158, P(M=inf) = 0.0000; E[2^-M] = 0.3331; E[kappa] = +0.0016, E[(A-2)(B-2)] = +0.0024; max|P(F,R) - P(F)P(R)| = 0.0003; first-bit BSC 1 - h2(P(M=1)) = 0.00000 bits
+  ok   at time lags |d + 1/2| >= 6 the saturation depth on overlaps is Geom(1/2) within 4 s.e. and never infinite (NUMERICAL)
+     pre-merge overlaps by alignment type (lam = 0: exact alignment, the case of THM-4564; lam != 0: offset overlap):
+       |d+1/2| < 6  lam = 0 : n =   483441 (share 0.331); P(M=1..3) = 0.4920, 0.2445, 0.1397; E[kappa] = +0.0230, E[(A-2)(B-2)] = +0.0228; E|kappa| = 1.007, E[I(F;R | past)] = 1.341 bits
+       |d+1/2| < 6  lam != 0: n =   978135 (share 0.669); P(M=1..3) = 0.5107, 0.2564, 0.1237; E[kappa] = -0.0380, E[(A-2)(B-2)] = -0.0432; E|kappa| = 0.984, E[I(F;R | past)] = 1.321 bits
+       |d+1/2| >= 6 lam = 0 : n =  1145613 (share 0.333); P(M=1..3) = 0.5003, 0.2492, 0.1252; E[kappa] = +0.0003, E[(A-2)(B-2)] = +0.0005; E|kappa| = 1.001, E[I(F;R | past)] = 1.333 bits
+       |d+1/2| >= 6 lam != 0: n =  2292213 (share 0.667); P(M=1..3) = 0.4994, 0.2504, 0.1251; E[kappa] = +0.0011, E[(A-2)(B-2)] = +0.0004; E|kappa| = 1.000, E[I(F;R | past)] = 1.334 bits
+  ok   offset overlaps (lam != 0) outnumber exact alignments and carry conditional coupling E|kappa(M)| > 0.5 (exact kernel; counts NUMERICAL)
+     covariance at lag d (pooled over s): full Cov(A_s, B_(s+d)), its overlap part, the kernel prediction, P(overlap):
+       d =  -8: Cov = +0.0008, overlap part = +0.0001, E[kappa(M) 1_O] = +0.0001 (s.e. of difference 0.0001), P(O) = 0.0131
+       d =  -7: Cov = +0.0007, overlap part = -0.0002, E[kappa(M) 1_O] = -0.0001 (s.e. of difference 0.0002), P(O) = 0.0138
+       d =  -6: Cov = -0.0011, overlap part = -0.0003, E[kappa(M) 1_O] = -0.0001 (s.e. of difference 0.0002), P(O) = 0.0145
+       d =  -5: Cov = -0.0003, overlap part = -0.0011, E[kappa(M) 1_O] = -0.0012 (s.e. of difference 0.0002), P(O) = 0.0148
+       d =  -4: Cov = -0.0010, overlap part = -0.0004, E[kappa(M) 1_O] = -0.0003 (s.e. of difference 0.0002), P(O) = 0.0160
+       d =  -3: Cov = -0.0010, overlap part = +0.0006, E[kappa(M) 1_O] = +0.0008 (s.e. of difference 0.0002), P(O) = 0.0170
+       d =  -2: Cov = -0.0000, overlap part = +0.0002, E[kappa(M) 1_O] = +0.0003 (s.e. of difference 0.0002), P(O) = 0.0172
+       d =  -1: Cov = +0.9697, overlap part = +0.9699, E[kappa(M) 1_O] = +0.9738 (s.e. of difference 0.0016), P(O) = 0.5039
+       d =  +0: Cov = -0.0002, overlap part = +0.0005, E[kappa(M) 1_O] = +0.0004 (s.e. of difference 0.0002), P(O) = 0.0192
+       d =  +1: Cov = -0.0014, overlap part = +0.0003, E[kappa(M) 1_O] = +0.0004 (s.e. of difference 0.0002), P(O) = 0.0208
+       d =  +2: Cov = -0.0024, overlap part = -0.0003, E[kappa(M) 1_O] = -0.0003 (s.e. of difference 0.0002), P(O) = 0.0214
+       d =  +3: Cov = -0.0017, overlap part = -0.0016, E[kappa(M) 1_O] = -0.0014 (s.e. of difference 0.0002), P(O) = 0.0213
+       d =  +4: Cov = -0.0010, overlap part = -0.0000, E[kappa(M) 1_O] = -0.0001 (s.e. of difference 0.0002), P(O) = 0.0219
+       d =  +5: Cov = -0.0005, overlap part = -0.0001, E[kappa(M) 1_O] = -0.0001 (s.e. of difference 0.0002), P(O) = 0.0216
+       d =  +6: Cov = +0.0007, overlap part = +0.0004, E[kappa(M) 1_O] = +0.0002 (s.e. of difference 0.0002), P(O) = 0.0213
+       d =  +7: Cov = -0.0006, overlap part = -0.0001, E[kappa(M) 1_O] = -0.0001 (s.e. of difference 0.0002), P(O) = 0.0203
+       d = -12: Cov = +0.0007, overlap part = -0.0000, E[kappa(M) 1_O] = +0.0001 (s.e. of difference 0.0001), P(O) = 0.0103
+       d = +11: Cov = -0.0004, overlap part = -0.0002, E[kappa(M) 1_O] = -0.0001 (s.e. of difference 0.0002), P(O) = 0.0171
+       d = -20: Cov = -0.0006, overlap part = -0.0000, E[kappa(M) 1_O] = -0.0000 (s.e. of difference 0.0001), P(O) = 0.0059
+       d = +19: Cov = -0.0008, overlap part = -0.0001, E[kappa(M) 1_O] = +0.0001 (s.e. of difference 0.0001), P(O) = 0.0107
+       d = -30: Cov = +0.0007, overlap part = -0.0000, E[kappa(M) 1_O] = +0.0000 (s.e. of difference 0.0001), P(O) = 0.0026
+       d = +29: Cov = -0.0011, overlap part = +0.0000, E[kappa(M) 1_O] = +0.0000 (s.e. of difference 0.0001), P(O) = 0.0052
+       d = -40: Cov = -0.0005, overlap part = +0.0000, E[kappa(M) 1_O] = +0.0000 (s.e. of difference 0.0000), P(O) = 0.0010
+  ok   window-overlap identity at every listed lag (agreement within 4 s.e. = 0.0031; exact by proof)
+  ok   overlap part = E[kappa(M) 1_O] at every listed lag (within 4 s.e. of the pairwise difference; exact by proof)
+(W) window-overlap identity over t in [8, 200] (independent tally, includes s < 10)
+     d = -6: Cov = -0.0020, E[(A-2)(B-2)1_O] = -0.0005, P(overlap) = 0.0236 (s.e. 0.0013)
+     d = -3: Cov = +0.0003, E[(A-2)(B-2)1_O] = +0.0012, P(overlap) = 0.0322 (s.e. 0.0013)
+     d = -1: Cov = +0.7155, E[(A-2)(B-2)1_O] = +0.7152, P(overlap) = 0.3924 (s.e. 0.0013)
+     d = +0: Cov = -0.0011, E[(A-2)(B-2)1_O] = +0.0009, P(overlap) = 0.0389 (s.e. 0.0013)
+     d = +1: Cov = -0.0003, E[(A-2)(B-2)1_O] = +0.0009, P(overlap) = 0.0423 (s.e. 0.0013)
+     d = +6: Cov = +0.0002, E[(A-2)(B-2)1_O] = +0.0013, P(overlap) = 0.0393 (s.e. 0.0013)
+  ok   Cov and its overlap part agree within 4 s.e. at every tested lag
+(S) same-step kernel and saturation law (strictly pre-merge steps t < tau - 1 with L_t >= 0, t >= 3; tau = merge time)
+     merging steps (D_t = 0) by L_t: L=-8: 1, L=-6: 48, L=-4: 164, L=-2: 4548, L=2: 2553, L=4: 97, L=6: 32, L=8: 1
+  ok   every merging step has L_t even and nonzero: the relation one step before the merge is a sibling relation, x_t = 4^k y_(t+1) + (4^k - 1)/3 (L_t = 2k) or y_(t+1) = 4^k x_t + (4^k - 1)/3 (L_t = -2k)
+     L in [0,0]: n = 31943, P(m>=1) = 1.0000, P(m=1..4 | m>=1) = 0.586, 0.307, 0.062, 0.039; predicted E[kappa(m)] = -0.2800, measured Cov(A_(t+1), B_t) = -0.2759; first-bit BSC 1 - h2(P(m=1 | m>=1)) = 0.0214 bits
+     L in [1,4]: n = 196201, P(m>=1) = 0.2125, P(m=1..4 | m>=1) = 0.538, 0.209, 0.201, 0.019; predicted E[kappa(m)] = -0.0190, measured Cov(A_(t+1), B_t) = -0.0182; first-bit BSC 1 - h2(P(m=1 | m>=1)) = 0.0041 bits
+     L in [5,12]: n = 427796, P(m>=1) = 0.0074, P(m=1..4 | m>=1) = 0.602, 0.131, 0.242, 0.010; predicted E[kappa(m)] = -0.0014, measured Cov(A_(t+1), B_t) = +0.0021; first-bit BSC 1 - h2(P(m=1 | m>=1)) = 0.0305 bits
+     L in [13,1000000]: n = 1650475, P(m>=1) = 0.0000, P(m=1..4 | m>=1) = 0.583, 0.083, 0.333, 0.000; predicted E[kappa(m)] = -0.0000, measured Cov(A_(t+1), B_t) = -0.0002; first-bit BSC 1 - h2(P(m=1 | m>=1)) = 0.0201 bits
+  ok   same-step covariance = E[kappa(m_t)] in every L-bin (within 4 s.e.)
+     P(m >= 1 | L = l): l=0: 1.0000, l=1: 0.4786, l=2: 0.1959, l=3: 0.1635, l=4: 0.0446, l=5: 0.0332, l=6: 0.0093, l=7: 0.0081, l=8: 0.0031, l=9: 0.0030, l=10: 0.0008, l=11: 0.0007, l=12: 0.0002
+  ok   saturation P(m >= 1 | L = l) is of order 2^-l (at most 2^(1-l) + 0.01)
+(C) Cov(A_(t+1), B_(t+d) | L_t in bin, not merged by t), d = -8..8, past conditioning only, t in [10, 590)
+     L in [-1000000,-9] (n = 1004588): -0.004 +0.001 -0.000 -0.006 -0.002 -0.003 +0.002 +0.000 -0.002 -0.001 -0.002 -0.004 -0.001 +0.001 -0.001 +0.000 +0.001
+     L in [-8,-1] (n = 292209): +0.005 +0.006 +0.010 +0.007 -0.012 -0.004 +0.012 +0.003 +0.005 -0.006 -0.002 +0.000 +0.004 +0.002 +0.002 +0.001 -0.001
+     L in [0,0] (n = 29803): +0.021 -0.006 +0.010 +0.001 -0.001 -0.006 -0.018 -0.002 -0.271 -0.009 -0.015 +0.011 -0.006 +0.013 -0.007 -0.010 -0.018
+     L in [1,8] (n = 371082): -0.000 -0.002 +0.002 +0.004 -0.001 -0.005 -0.004 -0.002 +0.006 +0.009 +0.005 -0.005 -0.030 +0.000 -0.001 +0.001 -0.002
+     L in [9,1000000] (n = 1819567): -0.001 +0.000 +0.000 -0.000 +0.002 +0.002 -0.001 -0.001 -0.001 -0.002 -0.001 -0.004 -0.000 -0.002 -0.002 +0.000 -0.001
+(P) the near-synchronous coupling resolved by single L_t = l (not merged by t): Cov(A_(t+1), B_(t+d)), d = -2..8
+     L =  -4 (n =  37445, s.e. 0.0103): -0.010 -0.068 -0.016 -0.009 -0.002 +0.002 -0.001 -0.001 +0.008 +0.009 -0.002   max |Cov|/s.e. = 6.6
+     L =  -3 (n =  38182, s.e. 0.0102): +0.039 -0.007 -0.071 +0.016 +0.011 -0.000 +0.020 -0.010 +0.000 +0.006 -0.006   max |Cov|/s.e. = 6.9
+     L =  -2 (n =  38726, s.e. 0.0102): +0.060 +0.181 +0.107 -0.023 +0.010 +0.008 +0.003 +0.001 -0.002 +0.005 +0.010   max |Cov|/s.e. = 17.8
+     L =  -1 (n =  38969, s.e. 0.0101): -0.079 +0.030 +0.035 -0.012 -0.020 +0.009 +0.003 +0.026 +0.005 +0.015 -0.001   max |Cov|/s.e. = 7.8
+     L =  +1 (n =  41035, s.e. 0.0099): -0.006 -0.000 +0.047 -0.086 +0.020 -0.019 -0.017 +0.008 -0.011 -0.010 -0.019   max |Cov|/s.e. = 8.8
+     L =  +2 (n =  44137, s.e. 0.0095): -0.010 -0.001 +0.083 +0.149 +0.028 +0.009 -0.009 -0.003 -0.000 -0.004 -0.008   max |Cov|/s.e. = 15.7
+     L =  +3 (n =  45217, s.e. 0.0094): -0.005 -0.005 -0.071 -0.016 +0.025 -0.054 -0.010 -0.017 -0.002 +0.015 -0.000   max |Cov|/s.e. = 7.6
+     L =  +4 (n =  46623, s.e. 0.0093): +0.020 +0.010 -0.020 +0.003 +0.070 +0.056 -0.043 +0.008 -0.016 -0.009 +0.002   max |Cov|/s.e. = 7.5
+     L =  +5 (n =  47456, s.e. 0.0092): -0.000 -0.005 +0.002 -0.020 -0.016 -0.046 -0.024 -0.012 +0.006 -0.024 -0.002   max |Cov|/s.e. = 5.1
+     L =  +6 (n =  48476, s.e. 0.0091): -0.011 +0.005 -0.002 +0.033 -0.037 +0.018 -0.087 +0.023 -0.013 -0.001 +0.002   max |Cov|/s.e. = 9.6
+     L =  +7 (n =  48490, s.e. 0.0091): -0.005 -0.001 +0.002 +0.006 -0.018 +0.003 -0.032 +0.003 -0.003 +0.025 +0.009   max |Cov|/s.e. = 3.5
+     L =  +8 (n =  49648, s.e. 0.0090): -0.010 -0.015 +0.012 -0.004 -0.025 -0.011 -0.013 -0.009 +0.029 +0.015 -0.004   max |Cov|/s.e. = 3.2
+     L =  +9 (n =  49700, s.e. 0.0090): +0.005 -0.002 -0.001 -0.005 -0.013 +0.005 -0.002 -0.002 +0.002 +0.018 -0.020   max |Cov|/s.e. = 2.2
+     L = +10 (n =  50314, s.e. 0.0089): -0.001 +0.002 +0.004 +0.005 -0.010 -0.001 +0.015 +0.009 +0.011 +0.014 +0.003   max |Cov|/s.e. = 1.6
+     L = +11 (n =  49856, s.e. 0.0090): -0.009 +0.007 -0.009 -0.005 +0.009 +0.002 -0.010 -0.001 +0.005 +0.000 +0.008   max |Cov|/s.e. = 1.2
+     L = +12 (n =  49123, s.e. 0.0090): -0.000 -0.011 -0.002 -0.014 -0.006 -0.011 -0.007 +0.014 -0.011 +0.002 +0.005   max |Cov|/s.e. = 1.6
+  ok   for L_t = 9..12 no cross-covariance at lags -2..8 exceeds 4.5 s.e. (NUMERICAL)
+
+ALL CHECKS PASSED  (82s)
