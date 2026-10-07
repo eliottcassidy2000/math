@@ -1,0 +1,3 @@
+(1) 4-Pfaffian criterion: |Pf|=3 iff exactly one 3-cycle (all 64 labelled 4-tournaments); LT <=> all 4-Pfaffians +-1 <=> realizable (800 random + 800 planar configurations)
+(2) Legendre chirotopes: Singer frieze strips through all p+1 points of P^1(F_p) give Paley+sink up to switching for p = [3, 7, 11, 19, 23, 31, 43, 47, 59, 67, 71, 79, 83] ; any frieze strip = switched induced subtournament (200 random strips)
+ALL CHECKS PASSED (1877)

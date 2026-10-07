@@ -378,6 +378,7 @@ lift/phase clocks.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.
 - **Collatz:** [Child closure](../05-knowledge/results/collatz_child_closure_synthesis_20261007.md): guarded exits and seed-family closure PROVED; universal coverage OPEN.
 - [Collatz classes](../05-knowledge/results/golden_collatz_resonance_20261007.md): THM-4590 equidistribution, THM-4594 sieve/2-adic sign barrier, THM-4591 cycles through301993; HYP-9230 resonance OPEN.
+- [Collatz two anchors](../05-knowledge/results/twoanchor_reset2_friezes_20261007.md): THM-4600 run transparency, THM-4601 reset-two rule uniform in both runs (universal state (3,1-27)), THM-4602 chirotopes/Legendre friezes; HYP-9240/9241 OPEN.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
 - **Rule 30:** [THM-4210](../01-canon/theorems/THM-4210-rule30-lossless-dyadic-block-current-cartier-tree.md) gives the forward current tree; THM-4204/4206 are inverse/Haar carriers. THM-4263 adds a fibre-cap density pullback, not a prize solution. All prizes remain **OPEN**.
 - **Two Hopf problems:** the `S2 x S2` curvature and `S6` complex-structure

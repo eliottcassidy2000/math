@@ -1,0 +1,13 @@
+odd K < 12000, shells m = v2(K-1) >= 4; K -> K-3 certified within post-run depth 200:
+  m= 4 (r=1): 106/375 = 0.283   (post-run depth <= 11: 0)
+  m= 5 (r=2): 53/187 = 0.283   (post-run depth <= 11: 1)
+  m= 6 (r=1): 24/94 = 0.255   (post-run depth <= 11: 0)
+  m= 7 (r=2): 15/47 = 0.319   (post-run depth <= 11: 1)
+  m= 8 (r=1): 7/23 = 0.304   (post-run depth <= 11: 0)
+  m= 9 (r=2): 5/12 = 0.417   (post-run depth <= 11: 0)
+  m=10 (r=1): 1/6 = 0.167   (post-run depth <= 11: 0)
+  m=11 (r=2): 0/3 = 0.000   (post-run depth <= 11: 0)
+  m=12 (r=1): 0/1 = 0.000   (post-run depth <= 11: 0)
+  m=13 (r=2): 0/1 = 0.000   (post-run depth <= 11: 0)
+  pooled r=1 (m even): 138/499 = 0.277;  r=2 (m odd): 73/250 = 0.292
+  shortest certificates (K, m, post-run depth): [(1889, 5, 11), (5249, 7, 11)]
