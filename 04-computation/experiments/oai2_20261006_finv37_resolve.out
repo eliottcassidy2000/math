@@ -1,0 +1,1 @@
+solver=cadical153 vars=1098 clauses=669086 result=UNSAT time=1379s

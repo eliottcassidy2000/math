@@ -38,7 +38,7 @@
 | Every algebraic spherical set is Euclidean Ramsey | CONDITIONAL on #172 (Lean); deduction PROVED (THM-4559) | §4 |
 | Every gap-determined triangle-free graph on `N^n` has an independent binary subgrid; THM-521 D unconditional for gap-determined witnesses | PROVED (THM-4560) | §5 |
 | THM-470's Finv is not THM-453 F's game (cutoffs 4 vs 5 at `n = 2`) | correction (MISTAKE-577) | §5 |
-| THM-470's master experiment decided: Finv at `(3,7)` is UNSAT, so `t_dead(Finv) = 7` at `n = 3` | FINITE-EXACT (certified CNF, two solvers, all clauses validated) | §5 |
+| THM-470's master experiment decided: Finv at `(3,7)` is UNSAT, so `t_dead(Finv) = 7` at `n = 3` | FINITE-EXACT (certified CNF, three solver builds, all clauses validated twice) | §5 |
 | Davenport law for FS-sets in one `v_p`-level; 3-smooth Schur thresholds 5 and 13 | PROVED / FINITE-EXACT | §5 |
 | Prescribed-path blocking law on knight tori (paths of at most 4 moves); knight tori are P7-Hamiltonian | HYP-9215 (FINITE-EXACT evidence) | §6 |
 | Slice lemma; THM-1300's counterexample is fully non-slice | PROVED (THM-4562) | §6 |
@@ -331,7 +331,7 @@ So the tower is Thue–Morse in effect:
     * Witnesses were brute-verified twice, independently, including all `1.7·10^8` binary subgrids at `t = 6`.
   * **`(3, 7)` is UNSAT, so `t_dead(Finv) = 7` at `n = 3`.** This settles THM-470 C's timed-out master experiment.
     * The reader's CEGAR loop with coordinate-reflection images returned UNSAT after 467 iterations (CaDiCaL 1.9.5).
-    * The dumped 669,086-clause certificate was re-solved UNSAT from scratch by MapleChrono.
+    * The dumped 669,086-clause certificate was re-solved UNSAT from scratch by MapleChrono (reader) and by CaDiCaL 1.5.3 (this session, 1,379 s).
     * Every clause was validated as a genuine constraint, by the reader's audit script and independently by this session's validator.
     * There is no DRAT proof.
     * The gap-determined walls are 3, 4, 7 for `n = 1, 2, 3`. Matching `2n+1` at `n = 1, 3` but not `n = 2` is NUMEROLOGY for now. The free game `Q(3,7)` is untouched.
