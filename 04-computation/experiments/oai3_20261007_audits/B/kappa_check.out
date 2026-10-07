@@ -1,0 +1,7 @@
+q= 3: |V|=9, deg=4, 2-colourable: False  (0.0s)
+q= 3: |V|=9, deg=4, 3-colourable: True  (0.0s)
+q= 7: |V|=49, deg=8, 3-colourable: False  (0.0s)
+q= 7: |V|=49, deg=8, 4-colourable: True  (0.0s)
+q=11: |V|=121, deg=12, 4-colourable: False  (0.0s)
+q=11: |V|=121, deg=12, 5-colourable: True  (0.0s)
+q=19: |V|=361, deg=20, 5-colourable: True  (4.9s)

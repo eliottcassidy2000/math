@@ -1,13 +1,13 @@
 ---
 id: THM-4567
 title: "THM-1300's Keller map at the prime 2: F mod 2 is dominant and purely inseparable of degree 2 (F_2 y^2 + F_2^3 + F_1^2 F_3 = 0 mod 2); the number of 2-adic integral preimages of w depends only on w mod 8; the image of Z_2^3 has Haar measure 11/32 and a random 2-adic point has 0, 1, 2 other preimages with probabilities 7/16, 3/8, 3/16; and for every odd w there is an integer triple collision F(0, 2w, -(63w^2+1)/4) = F(1, (w-3)/2, (13-3w)/2) = F(-1, (w+3)/2, (13+3w)/2) = ((w^2-1)/4, 2w, 0)"
-status: "PROVED (Hensel with det JF = -2; the mod-2 identity verified symbolically; the collision family by substitution). FINITE-EXACT: the mod-8 fibre census and the image fraction 176/512 = 11/32 (stable for k = 3..6; re-counted independently here mod 2^k, k = 3..6); the merge-partner law (two independent checks by the session's alg reader, one counting 2-adic roots of the fibre cubic). Found by the session's reader of openai/math #193 (Serre positivity), which itself gives no leverage here."
+status: "PROVED (Hensel with det JF = -2; the mod-2 identity verified symbolically; the collision family by substitution). FINITE-EXACT: the mod-8 fibre census and the image fraction 176/512 = 11/32 (stable for k = 3..6; re-counted independently here mod 2^k, k = 3..6); the merge-partner law (two independent checks by the session's alg reader, one counting 2-adic roots of the fibre cubic), upgraded to PROVED by audit B. Level-2 Hensel: `F(c + 2^k Z_2³) = F(c) + 2^k J(c) Z_2³` for `k ≥ 2`. The exact 64-class enumeration mod 4 then gives `N = 0, 1, 2, 3` on 336, 112, 48 and 16 of the 512 classes. Found by the session's reader of openai/math #193 (Serre positivity), which itself gives no leverage here."
 session: mac-mini-2026-10-07-oaimath3
 source: 05-knowledge/results/oai3_two_orbits_twos_and_threes_20261007.md
 scripts:
   - 04-computation/experiments/oai3_20261007_readers/alg/ (c1_fibre_multiplicities.py, c2_mod2_and_2adic.py, c3_check_cubic.py, c4_integer_collisions_and_mod2.py, c5_mixed_char_conservation.py, + .out)
 related:
-  - THM-1300 (the map: u = 1 + xy, F = (u^3 z + y^2 u (4+3xy), y + 3x u^2 z + 3x y^2 (4+3xy), 2x - 3x^2 y - x^3 z)), THM-1310 (odd p: N in {0,1,3}), THM-1345 (plane family), THM-4562 (fibre counts over F_q)
+  - THM-1300 (the map: u = 1 + xy, F = (u^3 z + y^2 u (4+3xy), y + 3x u^2 z + 3x y^2 (4+3xy), 2x - 3x^2 y - x^3 z)), THM-1310 (odd p: N in {0,1,3}), THM-1345 (plane family; the file `THM-1345-plane-family-section-radical-inverse-trace-module.md`, as THM-1345 is a known double ID), THM-4562 (fibre counts over F_q)
 ---
 
 # THM-4567 — the Jacobian counterexample at the prime 2
@@ -29,3 +29,9 @@ related:
 
    e.g. `F(1, −1, 5) = F(−1, 2, 8) = F(0, 2, −16) = (0, 2, 0)`. This is THM-1345's plane family at `s = 2`. The smallest integer collision is `F(2, −1, 2) = F(0, −1, −4)`. THM-1300 records only the non-integral collision.
 5. **Local multiplicities.** At the three points of THM-1300's triple collision each local length is 1 with no higher Tor (FINITE-EXACT). Serre's intersection multiplicity adds nothing for this étale map.
+
+**Audit (2026-10-07, independent audit B).**
+* All five statements are CONFIRMED.
+* The mod-2 statement additionally uses `x²(F_2 + y² F_3) ≡ F_3` and `x⁶ z² ≡ F_3² + x⁴ y² (mod 2)` and a nonzero 2×2 minor mod 2. Together these give `[K : F_2(F)] = 2`, purely inseparable.
+* The image measure 11/32 is exact by level-2 Hensel, and direct counts are stable for `k = 3..7`.
+* The collision family was checked symbolically for every odd `w`. The smallest collision by max-norm is `F(2,−1,2) = F(0,−1,−4)`, with its mirror.

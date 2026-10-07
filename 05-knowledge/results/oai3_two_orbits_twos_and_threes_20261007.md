@@ -257,7 +257,7 @@ Session mac-mini-2026-10-07-oaimath3, the third openai/math session.
 * The session's sieve over negative discriminants up to `2.34·10^14` finds exactly the 101 discriminants of exponent at most 2, among them the 65 idoneal numbers.
 * **Corollaries, modulo #003:**
   * the idoneal list is complete;
-  * the Borwein–Choi problem is closed;
+  * the Borwein–Choi problem is closed: every positive integer except the 18 numbers 1, 2, 4, 6, 10, 18, 22, 30, 42, 58, 70, 78, 102, 130, 190, 210, 330, 462 is `xy + yz + zx` with `x, y, z ≥ 1`;
   * the exponent-4 and exponent-8 field lists (EKN) are complete;
   * class-group exponents tend to infinity effectively.
 
@@ -268,15 +268,23 @@ Session mac-mini-2026-10-07-oaimath3, the third openai/math session.
   * the plane `Q(√3,√5,√11)² = H(Q(√−165))`, which contains the Polymath field and has `χ = 5`.
 * Chromatic numbers:
   * 2 for `m = 1, 5, 13, 37, 85`;
-  * 3 for `m = 21, 57, 93, 133, 273` (`m = 133` through Madore's `χ(Q(√7)²) = 3`);
-  * bounds for the rest.
+  * 3 for `m = 21, 57, 93, 133, 273` (`m = 133` through an explicit 7-cycle in `Q(√7)²`; cf. Madore);
+  * 4 for `m = 33` and `177` (`m = 177` by the generalized spindle `N = 723`, found in audit B);
+  * 5 for `m = 165`;
+  * 4–5 for 345, `≥ 4` for 105, 357 and 1365, 3–4 for 253, 3–5 for 385;
+  * for these planes `χ = 2` iff `m` has no prime factor `≡ 3 (mod 4)`.
 
 **Also.** Ellison's 1971 bound on `|2^x − 3^y|` gives a shorter all-length closure of THM-4512, without the `2^42` bridge or Matveev. Its exceptions were re-checked to `x = 20000`.
 
 ## 5. Serre's intersection multiplicity (#193), Hilbert's tenth problem over Q (#004), Kaplansky (#197)
 
 **Serre positivity: no leverage here.**
-* It has content only for non-Cohen–Macaulay modules in dimension at least 4 over a ramified base.
+* Positivity was already known in several cases:
+  * equicharacteristic, and power series over any complete DVR (Serre);
+  * when both modules are Cohen–Macaulay;
+  * for `dim R ≤ 4` (small CM modules plus Roberts/Gillet–Soulé vanishing);
+  * the Skalit and KC–Soto Levins cases.
+* #193's new content lies in ramified mixed characteristic with `dim R ≥ 5` and a prime quotient of dimension `≥ 3`. (Corrected after audit B: the earlier "dimension at least 4" was not sharp.)
 * Every intersection in our fronts is a curve, a complete intersection, or over an unramified base.
 * For two "orbit curves" Serre's `χ` is 0.
 * Recorded as a guardrail.
@@ -291,7 +299,7 @@ Session mac-mini-2026-10-07-oaimath3, the third openai/math session.
   * The gap lemma makes Collatz collisions decidable length by length.
   * The collision is `(2,2,10,a) ~ (6,3,2,1,a+2)`, with value `8207/2^(13+a)`. It gives a real switch: 53803 and 26901 meet at `U⁵ = 25`.
 * **Idoneal labels in #004.** The contact points of #004's height bound are CM points labelled 30, 42, 70, 105, 210, all idoneal. This is forced by the paper's own Riemann–Hurwitz count (PROVED modulo Shimura reciprocity).
-* **#197's Fano gadget** is the closed in-neighbourhood design of the Paley tournament `P_7 = T_3`. Every doubly regular tournament of order `≡ 7 (mod 8)` gives the same gadget. DICTIONARY.
+* **#197's Fano gadget** is the closed in-neighbourhood design of the Paley tournament `P_7 = T_3`. Every doubly regular tournament of order `n ≡ 7 (mod 8)` gives an even gadget of the same kind: a 2-`(n, (n+1)/2, (n+1)/4)` design with even blocks and intersections, spanning a self-orthogonal `F_2`-code of dimension `(n−1)/2` (proved in audit B). DICTIONARY.
 
 ## 6. Free group factors, Thompson's F, amenability (#287, #248, #251, #253, #258, #288)
 
@@ -428,7 +436,21 @@ Three independent adversarial audits were launched at checkpoint `7439e77cd7`. C
   * THM-4580: outward brackets, entries 24–42, and `957 ≤ n < 1.1·10^11`;
   * HYP-9219: "Equivalently" and the scope of the sufficient condition.
 
-**Audit B: THM-4566, THM-4567 and the THM-4555/4512/4558 updates.** See below.
+**Audit B: THM-4566, THM-4567 and the THM-4555/4512/4558 updates.**
+* No wrong mathematics in the core claims.
+* Confirmed with independent code:
+  * the identification (plus the "F Galois ⇒ c central" step);
+  * the 19 values, by enumerating all discriminants to `2.1·10^11` (exactly 101 = A003171);
+  * completeness modulo #003, against the EKN and #003 texts;
+  * every chromatic upper bound, and `κ(3), κ(7), κ(11) = 3, 4, 5` and `κ(19) ≤ 5` by SAT;
+  * all of THM-4567: 11/32 exact by level-2 Hensel, so the partner law is now PROVED;
+  * the THM-4555 gap lemma, the 8207 collision (symbolically) and the switch 53803/26901;
+  * the Ellison citation (verbatim in Waldschmidt) and its exceptions.
+* Corrections applied:
+  * THM-4566: "no conjugation-fixed prime below 60" was false for 105 and 357; `m = 177` is exactly 4; 345, 357 and 253 are sharpened.
+  * THM-4512: the constant `1.11·e^(−0.535j)` did not follow and becomes `e^(0.1)·e^(−0.5346j) ≤ 8.93·10^(−16)`.
+  * This note: Borwein–Choi wording, the Serre threshold, the Fano gadget.
+  * MISTAKE-583 covers these too.
 
 ## 12. Reproduction
 

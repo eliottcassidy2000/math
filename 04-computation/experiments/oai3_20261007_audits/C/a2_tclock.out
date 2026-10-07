@@ -1,0 +1,6 @@
+(A) relation x_s = 3^j_s y_s + c_s and parity rule checked on 100000 steps; failures 0; j up 19845 down 19889 flat 60266
+(A) S19 lag-1 start (1,2) after forced prefix 1000 -> (2, Fraction(1, 1))
+    parities of q=5+16k for 4 steps: [1, 0, 0, 0]
+    (0,1) after p=0: (1, Fraction(2, 1))  after p=1: (-1, Fraction(1, 3))
+(B) box B(3,30): 4747 states, 4000 sweeps:  (0,1): VI 0.457151 / solve 0.457151;  (2,1): VI 0.193941 / solve 0.193941;  (1,1): VI 0.594232 / solve 0.594232;  min B(1,10): VI 0.130370 / solve 0.130370
+(B) box B(4,100): 48209 states, 4000 sweeps:  (0,1): VI 0.490248 / solve 0.490248;  (2,1): VI 0.243208 / solve 0.243208;  (1,1): VI 0.618992 / solve 0.618992;  min B(1,10): VI 0.194891 / solve 0.194891

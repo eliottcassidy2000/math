@@ -103,4 +103,4 @@ The record planes here are Hilbert class fields of idoneal discriminants:
 * `Q(√3, √11)² = H(Q(√−33))` (χ = 4);
 * `Q(√3, √5, √11)² = H(Q(√−165))`, which contains the Polymath field and has χ = 5.
 
-THM-4566 classifies all 19 planes `F²` whose `F(i)` is an abelian Hilbert class field (`m` squarefree idoneal, `m ≡ 1 mod 4`). The classification is complete modulo openai/math #003, and THM-4566 gives their chromatic numbers.
+THM-4566 classifies all 19 planes `F²` whose `F(i)` is an abelian Hilbert class field (`m` squarefree idoneal, `m ≡ 1 mod 4`). The classification is complete modulo openai/math #003, and THM-4566 gives their chromatic numbers. This theorem's generalized spindle gives `χ ≥ 4` for `m = 33` (the Moser plane), 105 and 1365 (`N = 9`), 177 (exactly 4; `N = 723`, audit B), 345 (`N = 144`) and 357 (`N = 3600`). `m = 165` is 5 by Heule's graphs. The spindle's `n`-odd condition is needed only for the upper bound.

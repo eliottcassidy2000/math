@@ -1,0 +1,5 @@
+family identity (symbolic in t, w = 2t+1): True
+coordinates integral for integer t: [0, 4*t + 2, -63*t**2 - 63*t - 16, 1, t - 1, 5 - 3*t, -1, t + 2, 3*t + 8]
+example w=1: (0, 2, 0) (0, 2, 0) (0, 2, 0)
+collision (max-norm 4): (0, -1, 0) <- [(0, -1, -4), (2, -1, 2)]
+collision (max-norm 4): (0, 1, 0) <- [(-2, 1, 2), (0, 1, -4)]

@@ -170,5 +170,5 @@ every odd `3 <= n <= 10^7` (maximal `sigma_T = 246`); the Syracuse equality to
 
 The all-length clause can be closed without the `2^42` rational-log bridge and without Matveev.
 * **Input.** Ellison's 1971 bound `|2^x − 3^y| > 2^x e^(−x/10)` for `x ≥ 12`, except `x = 13, 14, 16, 19, 27` (via Waldschmidt's survey of Pillai's equation, arXiv:0908.4031). The exception list was re-checked here in exact integers for `12 ≤ x ≤ 20000`: exactly those five.
-* **Consequence.** For `j ≥ 65` with `A = bitlen(3^j)`, it gives `Λ > e^(−A/10)`, hence `N(w)/2^A < 1.11·e^(−0.535 j) < 10^(−15)`. The finite check `j ≤ 64` covers the rest.
+* **Consequence.** For `j ≥ 65` with `A = bitlen(3^j)`, it gives `Λ > e^(−A/10)`, hence `N(w)/2^A < 2^(−j) e^(A/10) ≤ e^(0.1)·e^(−0.5346 j) ≤ 8.93·10^(−16) < 10^(−15)`. (Corrected after audit B: `ln 2 − (log_2 3)/10 = 0.53465 < 0.535`, so the earlier constant did not follow; the conclusion stands. The Ellison citation is verbatim in Waldschmidt's survey, and the exceptions `{13, 14, 16, 19, 27}` are exact on `[12, 20000]`, with none found to `10^6`.) The finite check `j ≤ 64` covers the rest.
 * **Status.** This is an alternative proof route (CITED input, elementary rest), not a change to the theorem.

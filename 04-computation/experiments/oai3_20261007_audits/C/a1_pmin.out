@@ -1,0 +1,26 @@
+admissibility violations: [] 0
+rank-bound violations: [] equalities: [(1, 1)]
+(1+1/(3m))^3 == 1+1/m for m in 1..19: []  -> the cube step is STRICT
+D_a^min / a^(4/3) at a=1,2,10,100: [1.0, 1.3228342099734995, 1.6057429785356934, 1.6723103681389344]
+min-shift gadget violations (m<=10, a,h<120): [] 0
+shift one less than minimal violated by P_min at (m,a) [h=200]: [(2, 2), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (2, 8), (2, 9), (2, 10), (2, 11), (2, 12), (2, 13)] 56
+9^(m-1) sigma_m: [Fraction(1, 1), Fraction(12, 1), Fraction(126, 1), Fraction(1260, 1), Fraction(12285, 1), Fraction(117936, 1), Fraction(1120392, 1), Fraction(10563696, 1), Fraction(99034650, 1), Fraction(924323400, 1)]
+GF check: True
+lD check a=50: 3.7338e-60
+omega_2 = 2.73746786818
+omega_186 = 2.37156301829
+omega_187 = 2.37144872349
+omega_188 = 2.37133524568
+omega_189 = 2.37122257457
+omega_190 = 2.37111070003
+omega_191 = 2.37099961213
+omega_595974 = 2.30000000332
+omega_595975 = 2.29999999719
+omega_595976 = 2.29999999106
+omega_2 exact = 3 ln3/ln(10/3) = 2.737467868  log2 7 = 2.807354922
+omega_a strictly decreasing for 2<=a<5000: True
+K = 0.684347890891
+  a=1e3: (omega_a - 9/4) ln a = 0.6475394385
+  a=1e6: (omega_a - 9/4) ln a = 0.6656065667
+  a=1e12: (omega_a - 9/4) ln a = 0.674847316
+  a=1e30: (omega_a - 9/4) ln a = 0.6805157406

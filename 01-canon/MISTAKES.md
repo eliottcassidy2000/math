@@ -2038,7 +2038,7 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
-## MISTAKE-583 (2026-10-07, mac-mini-2026-10-07-oaimath3; found by the session's independent audits A and C, with an overlapping codex-tiling audit) -- overclaims around a correct coalescence theorem, a mislabelled record, inward-rounded "PROVED" brackets, and an out-of-range digit claim
+## MISTAKE-583 (2026-10-07, mac-mini-2026-10-07-oaimath3; found by the session's independent audits A, B and C, with an overlapping codex-tiling audit) -- overclaims around a correct coalescence theorem, a mislabelled record, inward-rounded "PROVED" brackets, and an out-of-range digit claim
 
 - **THM-4581 (almost-sure coalescence; the core is correct per audits A and codex-tiling).**
   - "Merge … with equal odd-step counts" is false for `k_0 ≠ 0`, since `u` makes exactly `k_0` fewer odd steps. Witness: `T^6(45) = T^6(15) = 20` after 3 and 4 odd steps.
@@ -2061,8 +2061,13 @@ were unaffected; successful explicit-path replays did not validate the prose.
   - "Entries 24–41" should be 24–42.
   - "For `n ≥ 957` the zero is among the last 251 digits" is false beyond the verified range (A031142(43) = 181477218727, digit 261).
   - HYP-9219's "Equivalently" conflated continuity of the density with the `O(0.4^k)` rate.
+- **THM-4566, THM-4512 and the note (audit B).**
+  - "No conjugation-fixed prime below 60" was false for `m = 105` (59) and `m = 357` (47, 59). The cause: the planes script printed "None" both when no prime qualified and when `κ` was unknown. It also searched only spindle sizes `n ∈ {3, 7, 9, 13}`, so it missed `m = 177` (exactly 4, `N = 723`) and the improvements for 345, 357 and 253.
+  - THM-4512's constant `1.11·e^(−0.535j)` did not follow (`0.53465 < 0.535`); the conclusion survives.
+  - In the note: Borwein–Choi read as "except the number 18"; the Serre threshold "dimension ≥ 4" should be ≥ 5; and "the same gadget" should be "a gadget of the same kind".
 - **Reusable rules.**
   - Round certified brackets outward.
+  - Never let one sentinel (`None`) encode two different states.
   - Restrict finite-verification side claims to the verified range.
   - Check which clock a "time" or "total" refers to before identifying two.
   - Carry "sketch level" into every downstream citation.

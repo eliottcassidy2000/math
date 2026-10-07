@@ -1,0 +1,1 @@
+[mersenne lag-1, odd a in [5,1201]] {'absorbed': 453, 'switch': 453, 'abs_and_switch': 453, 'abs_no_switch': 0, 'switch_no_abs': 0, 'tt_eq_t+v2': 453, 'tt_ne': 0, 'sigma_eq_given_abs': 453, 'sigma_ne_given_abs': 0, 'q_mod16': {5}, 'odd_counts_ok': 0}

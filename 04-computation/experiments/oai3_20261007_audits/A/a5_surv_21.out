@@ -1,0 +1,19 @@
+start (k0,N0)=(2,1): paths 150000, cap 409601 steps, absorbed by cap 146168, truncated 3832
+  T=     100  q=0.70489  sqrtT*q=7.049  (+-0.012)
+  T=     400  q=0.52841  sqrtT*q=10.568  (+-0.026)
+  T=    1600  q=0.34455  sqrtT*q=13.782  (+-0.049)
+  T=    6400  q=0.19586  sqrtT*q=15.669  (+-0.082)
+  T=   25600  q=0.10259  sqrtT*q=16.414  (+-0.125)
+  T=  102400  q=0.05165  sqrtT*q=16.529  (+-0.183)
+  T=  409600  q=0.02555  sqrtT*q=16.350  (+-0.261)
+  E[J] (departures counted up to cap) = 12.4174
+    E[J counted by T=100] = 2.6526
+    E[J counted by T=400] = 5.0327
+    E[J counted by T=1600] = 7.6958
+    E[J counted by T=6400] = 9.8646
+    E[J counted by T=25600] = 11.2575
+    E[J counted by T=102400] = 12.0254
+    E[J counted by T=409600] = 12.4174
+  P(J > r): r=0:0.9967 r=4:0.6920 r=8:0.5004 r=12:0.3622 r=16:0.2632 r=20:0.1914 r=24:0.1388 r=28:0.1011 r=32:0.0735 r=36:0.0535 
+  completed excursions 1859277; P(X > 2^i) * 2^(i/2): i=4:1.124 i=6:1.104 i=8:1.098 i=10:1.077 i=12:1.018 i=14:0.905 i=16:0.671 i=18:0.220
+./a5_chain_sim 2 1 150000 409601 77  68.86s user 0.16s system 99% cpu 1:09.36 total

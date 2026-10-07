@@ -1,0 +1,6 @@
+equal time n=40: corr(beta, beta^sigma) = 0.4427; 1-2P(sigma=1) = 0.4427
+distinct times: corr(u-parity at 40, v-parity at 39) = -0.0004  (s.e. ~ 0.0032)
+distinct times: corr(u-parity at 39, v-parity at 40) = +0.0038  (s.e. ~ 0.0032)
+distinct times: corr(u-parity at 40, v-parity at 35) = -0.0018  (s.e. ~ 0.0032)
+distinct times: corr(u-parity at 35, v-parity at 40) = +0.0025  (s.e. ~ 0.0032)
+distinct times: corr(u-parity at 42, v-parity at 40) = -0.0011  (s.e. ~ 0.0032)

@@ -1,0 +1,9 @@
+Haar model, 8000 samples, precision 6464 bits, odd D <= 31:
+  T=  100: lag-1 q1=0.7109 (sqrtT q1=  7.11)   any-lag q=0.6005 (sqrtT q=  6.01)
+  T=  200: lag-1 q1=0.6266 (sqrtT q1=  8.86)   any-lag q=0.4330 (sqrtT q=  6.12)
+  T=  400: lag-1 q1=0.5381 (sqrtT q1= 10.76)   any-lag q=0.2900 (sqrtT q=  5.80)
+  T=  800: lag-1 q1=0.4447 (sqrtT q1= 12.58)   any-lag q=0.1851 (sqrtT q=  5.24)
+  T= 1600: lag-1 q1=0.3445 (sqrtT q1= 13.78)   any-lag q=0.1124 (sqrtT q=  4.50)
+  T= 3200: lag-1 q1=0.2641 (sqrtT q1= 14.94)   any-lag q=0.0691 (sqrtT q=  3.91)
+  T= 6400: lag-1 q1=0.1966 (sqrtT q1= 15.73)   any-lag q=0.0428 (sqrtT q=  3.42)
+python3 a12_anylag.py 6464 8000  269.26s user 0.65s system 99% cpu 4:32.30 total

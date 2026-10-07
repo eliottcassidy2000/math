@@ -1,0 +1,6 @@
+start (0,1/9): admissible after max 4 / mean 2.63 steps (300/300 paths became admissible); absorbed within 3000 steps: 228/300
+start (0,1/3): admissible after max 1 / mean 1.00 steps (300/300 paths became admissible); absorbed within 3000 steps: 248/300
+start (2,1/3): admissible after max 6 / mean 1.93 steps (300/300 paths became admissible); absorbed within 3000 steps: 210/300
+start (0,5/81): admissible after max 16 / mean 6.53 steps (300/300 paths became admissible); absorbed within 3000 steps: 213/300
+start (-1,1/27): admissible after max 7 / mean 3.35 steps (300/300 paths became admissible); absorbed within 3000 steps: 227/300
+start (3,-7/243): admissible after max 20 / mean 9.78 steps (300/300 paths became admissible); absorbed within 3000 steps: 189/300

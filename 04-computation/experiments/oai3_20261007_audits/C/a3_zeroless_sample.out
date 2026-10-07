@@ -1,0 +1,6 @@
+zeroless 2^n for n < 1000: 36 largest 86 True
+n in [957,1e6]: zero within last 251 digits fails at [] ; records (n, zeroless suffix): [(957, 26), (1026, 53), (1757, 59), (1958, 93), (7931, 115), (57356, 119), (269518, 120), (411658, 121), (675531, 136), (749254, 138)]
+check 2^1e6 state: True
+random/targeted sample: violations (>=251 zeroless trailing digits): []  max zeroless suffix seen (80, 60326843152)
+R1 final low 18 digits check: 2^1e10 mod 10^18 = 374549681787109376 == 374549681787109376: True
+elapsed 2.2s

@@ -1,0 +1,12 @@
+  ***   Warning: new maximum stack size = 1000013824 (953.688 Mbytes).
+Q(sqrt5)^2: 440 unit vectors; odd closed walk forced: 0
+  *** matsolvemod: Warning: increasing stack size to 16000000.
+Q(sqrt13)^2: 504 unit vectors; odd closed walk forced: 0
+Q(sqrt37)^2: 512 unit vectors; odd closed walk forced: 0
+Q(sqrt17)^2: 512 unit vectors; odd closed walk forced: 0
+Q(sqrt7)^2: 464 unit vectors; odd closed walk forced: 1
+Q(sqrt11)^2: 488 unit vectors; odd closed walk forced: 1
+Q(sqrt23)^2: 512 unit vectors; odd closed walk forced: 1
+Q(sqrt3)^2: 304 unit vectors; odd closed walk forced: 1
+Q(sqrt2)^2: 300 unit vectors; odd closed walk forced: 0
+11-cycle closes: 1; all steps unit: 1; distinct vertices: 1

@@ -1,0 +1,5 @@
+[reset-2 condition] odd n = 3 mod 4 below 2e5: mismatches 0
+[B=   32] sources 3000: sampler merge 940, chain absorbed (values > 2) 941, both 940, absorbed-but-no-sampler-merge 1, sampler-merge-but-not-absorbed 0
+[B=   64] sources 3000: sampler merge 1254, chain absorbed (values > 2) 1255, both 1254, absorbed-but-no-sampler-merge 1, sampler-merge-but-not-absorbed 0
+[B=  256] sources 3000: sampler merge 1783, chain absorbed (values > 2) 1783, both 1783, absorbed-but-no-sampler-merge 0, sampler-merge-but-not-absorbed 0
+[B= 1024] sources 800: sampler merge 611, chain absorbed (values > 2) 611, both 611, absorbed-but-no-sampler-merge 0, sampler-merge-but-not-absorbed 0

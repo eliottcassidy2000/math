@@ -1,0 +1,4 @@
+n=15: T^6(3n) = T^6(n) = 20; odd steps of 3n: 3, of n: 4 (difference -1 = -k0)
+n=23: T^5(3n) = T^5(n) = 20; odd steps of 3n: 2, of n: 3 (difference -1 = -k0)
+n=30: T^7(3n) = T^7(n) = 20; odd steps of 3n: 3, of n: 4 (difference -1 = -k0)
+Mersenne a=13: p=1062881, q_1=354293: first Terras merge at t=44 (value 5690), odd steps p 23, q 24; first common odd value 2845 at Terras time 45

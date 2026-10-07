@@ -1,6 +1,6 @@
 ---
 id: THM-4566
-title: "Hilbert-class-field planes are the idoneal planes: for an imaginary quadratic K, H(K) is the plane F(i) of a real field F Galois over Q iff K = Q(sqrt-m) with m squarefree, m = 1 mod 4 and idoneal, and then F = Q(sqrt p : p | m); there are exactly 19 such m (complete modulo openai/math #003, the quasi-Riemann hypothesis); their chromatic numbers: 2 for m = 1, 5, 13, 37, 85; 3 for m = 21, 57, 93, 133, 273; 4 for m = 33 (Fischer); 5 for m = 165 (the Heule/Polymath plane); bounds for the rest"
+title: "Hilbert-class-field planes are the idoneal planes: for an imaginary quadratic K, H(K) is the plane F(i) of a real field F Galois over Q iff K = Q(sqrt-m) with m squarefree, m = 1 mod 4 and idoneal, and then F = Q(sqrt p : p | m); there are exactly 19 such m (complete modulo openai/math #003, the quasi-Riemann hypothesis); their chromatic numbers: 2 for m = 1, 5, 13, 37, 85; 3 for m = 21, 57, 93, 133, 273; 4 for m = 33 (Fischer) and m = 177; 5 for m = 165 (the Heule/Polymath plane); bounds for the rest; chi = 2 iff m has no prime factor = 3 mod 4"
 status: "PROVED: the identification (genus theory). FINITE-EXACT: the list of 65 idoneal numbers and the 19 values (sieve of all negative discriminants to 2.34e14 by the session's nt reader, equal to OEIS A003171 / A000926). Completeness PROVED modulo openai/math #003 (accepted per owner directive 2026-10-07): the zero-free half-plane Re s > 7/8 excludes Siegel zeros, so Tatuzawa / Elsenhans-Kluners-Nicolae (2020) apply without exception. #003's own 11/12 paper states the idoneal consequence. Chromatic values PROVED via Lemma R (THM-4558; a known technique) with the lower bounds cited; my own decomposition-group computation reproduces every upper bound."
 session: mac-mini-2026-10-07-oaimath3 (owner listed the 65 idoneal numbers in the prompt; nt reader + this session)
 source: 05-knowledge/results/oai3_two_orbits_twos_and_threes_20261007.md
@@ -19,6 +19,7 @@ related:
 
 Let `K = Q(√−m)` be imaginary quadratic.
 * `H(K)` is abelian over Q iff `H(K)` is the genus field, iff `Cl(K)` has exponent at most 2.
+* If `H(K) = F(i)` with `F` real and Galois over Q, then `F = H ∩ R` and `⟨c⟩ = Gal(H/F)` is normal of order 2. So complex conjugation `c` is central in `Gal(H/Q) = Cl(K) ⋊ ⟨c⟩`, where it acts by inversion, and the exponent is at most 2. (Step added after audit B.)
 * `i ∈ H(K)` iff the prime discriminant `−4` divides `d_K`, iff `m ≡ 1 (mod 4)` (with `m` squarefree, or `K = Q(i)`).
 * In that case the genus field is `Q(i, √p : p | m)`.
 
@@ -41,15 +42,15 @@ All upper bounds come from Lemma R (THM-4558), recomputed independently in `oai3
 |---|---|---|---|
 | 1, 5, 13, 37, 85 | no prime `≡ 3 (mod 4)` | **2** | 2 ramifies in `F(i)/F` |
 | 21, 57, 93, 273 | contains `√3` | **3** | equilateral triangles; the prime over 3 is inert, `κ(3) = 3` |
-| 133 | `Q(√7, √19)` | **3** | `χ(Q(√7)²) = 3` (Madore 2015, a 9-cycle); the prime over 3 is inert |
+| 133 | `Q(√7, √19)` | **3** | `χ(Q(√7)²) ≥ 3` by the explicit 7-cycle `(0,0) → (√7/4, 3/4) → (√7/2, 3/2) → (√7/4, 9/4) → (0,3) → (0,2) → (0,1) → (0,0)` (audit B; cf. Madore 2015); the prime over 3 is inert |
 | 33 | `Q(√3, √11)` | **4** | KNOWN (Fischer 1994; THM-4558) |
 | 165 | `Q(√3, √5, √11)` | **5** | contains the Polymath field `Q(√−3, √−11, √−15)` (Heule's graphs); the prime over 11 is inert, `κ(11) = 5` |
-| 177 | `Q(√3, √59)` | 3–4 | triangle; prime over 2 |
-| 253 | `Q(√11, √23)` | 2–4 | prime over 7 |
-| 345 | `Q(√3, √5, √23)` | 3–5 | prime over 11 |
+| 177 | `Q(√3, √59)` | **4** | generalized spindle `N = 723 = 3·241` (THM-4558), since `Q(√−3, √−59) ⊂ F(i)`; SAT-UNSAT for 3 colours (audit B); prime over 2 |
+| 253 | `Q(√11, √23)` | 3–4 | 11-cycle in `Q(√11)²` (audit B); prime over 7 |
+| 345 | `Q(√3, √5, √23)` | 4–5 | generalized spindle `N = 144`, since `Q(√−3, √−23) ⊂ F(i)` (audit B); prime over 11 |
 | 385 | `Q(√5, √7, √11)` | 3–5 | `Q(√7)²`; prime over 19 (`κ(19) = 5` per decalion89) |
-| 105, 1365 | contain `√3, √5, √7` | `≥ 4` | the spindle field `Q(√−3, √−35)` (THM-4558, `N = 9`); no conjugation-fixed prime below 60 |
-| 357 | `Q(√3, √7, √17)` | `≥ 3` | no conjugation-fixed prime below 60 |
+| 105, 1365 | contain `√3, √5, √7` | `≥ 4` | the spindle field `Q(√−3, √−35)` (THM-4558, `N = 9`); no usable conjugation-fixed prime (for 105 the only one below 60 is 59, where `κ(59)` is unknown; for 1365 none below 131) |
+| 357 | `Q(√3, √7, √17)` | `≥ 4` | generalized spindle `N = 3600`, since `Q(√−3, √−119) ⊂ F(i)` (audit B); its conjugation-fixed primes below 60 (47, 59) have unknown `κ` |
 
 * The two "record" planes of the Hadwiger–Nelson field tower are both Hilbert class fields of idoneal discriminants: the Moser plane (`m = 33`, χ = 4) and the plane of the Polymath field (`m = 165`, χ = 5).
 * Any further pattern linking χ to the class number (1, 2, 4, 8, 16) is NUMEROLOGY.
@@ -59,3 +60,16 @@ All upper bounds come from Lemma R (THM-4558), recomputed independently in `oai3
 * **Borwein–Choi.** Every positive integer outside `{1, 2, 4, 6, 10, 18, 22, 30, 42, 58, 70, 78, 102, 130, 190, 210, 330, 462}` is `xy + yz + zx` with `x, y, z ≥ 1`. Borwein–Choi (2000) had left at most one possible further exception.
 * **Euler/Cox.** The `n` for which `p = x² + ny²` is decided by congruences mod `4n` are exactly the 65 idoneal numbers.
 * **EKN.** The lists of imaginary quadratic fields with class-group exponent 4 (203) and 8 (778) are complete.
+
+**Audit (2026-10-07, independent audit B).**
+* CONFIRMED:
+  * the identification, with the "F Galois ⇒ c central" step added;
+  * the 19 values, by an independent enumeration of all discriminants to `2.1·10^11` (exactly 101, equal to A003171);
+  * completeness modulo #003, checked against EKN and #003's 11/12 paper; EKN's threshold is `d_11 = 200560490130`;
+  * every upper bound and its prime;
+  * `κ(3) = 3`, `κ(7) = 4`, `κ(11) = 5` and `κ(19) ≤ 5` by SAT;
+  * the `χ = 3` rows, and `m = 33` without Fischer (spindle UNSAT).
+* Improved here from the repo's own spindle construction (the `n`-odd condition of THM-4558 is needed only for upper bounds): `m = 177` is exactly 4, `m = 345` is 4–5, `m = 357` is `≥ 4`, and `m = 253` is 3–4.
+* The sentence "no conjugation-fixed prime below 60" was false for 105 (59) and 357 (47, 59) and is corrected (MISTAKE-583).
+* For these 19 planes, `χ = 2` iff `m` has no prime factor `≡ 3 (mod 4)`. A prime `p ≡ 3 (mod 4)` with `√p ∈ F` gives a `p`-cycle.
+* The `m = 165` lower bound (Heule's graphs) is cited, not re-verified.

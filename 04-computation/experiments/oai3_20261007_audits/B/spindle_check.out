@@ -1,0 +1,5 @@
+{'N': 3, 'n': 1, 'v': (-2, -1), 'sqrt_part': 11, 'omega_N_unit': 1, 'dist2': 1, 'vertices': 39, 'edges': 87, 'three_colourable': False}
+{'N': 9, 'n': 3, 'v': (-3, 0), 'sqrt_part': 35, 'omega_N_unit': 1, 'dist2': 1, 'vertices': 35, 'edges': 75, 'three_colourable': False}
+{'N': 144, 'n': 48, 'v': (-12, 0), 'sqrt_part': 575, 'omega_N_unit': 1, 'dist2': 1, 'vertices': 89, 'edges': 201, 'three_colourable': False}
+{'N': 723, 'n': 241, 'v': (-31, -14), 'sqrt_part': 2891, 'omega_N_unit': 1, 'dist2': 1, 'vertices': 1155, 'edges': 3267, 'three_colourable': False}
+{'N': 3600, 'n': 1200, 'v': (-60, 0), 'sqrt_part': 14399, 'omega_N_unit': 1, 'dist2': 1, 'vertices': 377, 'edges': 873, 'three_colourable': False}

@@ -1,0 +1,19 @@
+m= 1: 2^(1-m) Tr P_m = -1.000000 (imag  1.2e-16)   Delta_0 = -1   OK   max|P_m| = 1  -> rho = 1.000
+m= 2: 2^(1-m) Tr P_m = -0.000000 (imag  0.0e+00)   Delta_1 = 0   OK   max|P_m| = 1  -> rho = 1.000
+m= 3: 2^(1-m) Tr P_m = -0.000000 (imag -2.2e-16)   Delta_2 = 0   OK   max|P_m| = 1  -> rho = 1.000
+m= 4: 2^(1-m) Tr P_m = -1.000000 (imag -5.3e-15)   Delta_3 = -1   OK   max|P_m| = 5.027  -> rho = 1.497
+m= 5: 2^(1-m) Tr P_m =  0.000000 (imag  7.1e-15)   Delta_4 = 0   OK   max|P_m| = 8.164  -> rho = 1.522
+m= 6: 2^(1-m) Tr P_m = -0.000000 (imag  3.6e-15)   Delta_5 = 0   OK   max|P_m| = 8.66  -> rho = 1.433
+m= 7: 2^(1-m) Tr P_m =  1.000000 (imag -9.2e-14)   Delta_6 = 1   OK   max|P_m| = 63.19  -> rho = 1.808
+m= 8: 2^(1-m) Tr P_m =  6.000000 (imag -3.0e-12)   Delta_7 = 6   OK   max|P_m| = 567.6  -> rho = 2.209
+m= 9: 2^(1-m) Tr P_m = -10.000000 (imag  1.3e-11)   Delta_8 = -10   OK   max|P_m| = 589.1  -> rho = 2.031
+m=10: 2^(1-m) Tr P_m = -3.000000 (imag -1.3e-12)   Delta_9 = -3   OK   max|P_m| = 4079  -> rho = 2.296
+m=11: 2^(1-m) Tr P_m =  13.000000 (imag  9.5e-11)   Delta_10 = 13   OK   max|P_m| = 4221  -> rho = 2.136
+m=12: 2^(1-m) Tr P_m = -19.000000 (imag -5.7e-10)   Delta_11 = -19   OK   max|P_m| = 1.53e+04  -> rho = 2.232
+m=13: 2^(1-m) Tr P_m =  5.000000 (imag  6.9e-10)   Delta_12 = 5   OK   max|P_m| = 2.328e+04  -> rho = 2.167
+m=14: 2^(1-m) Tr P_m =  34.000000 (imag  4.9e-09)   Delta_13 = 34   OK   max|P_m| = 7.547e+04  -> rho = 2.231
+m=15: 2^(1-m) Tr P_m = -6.000000 (imag -1.6e-08)   Delta_14 = -6   OK   max|P_m| = 1.817e+05  -> rho = 2.242
+m=16: 2^(1-m) Tr P_m =  20.000000 (imag -1.0e-07)   Delta_15 = 20   OK   max|P_m| = 1.635e+06  -> rho = 2.445
+m=17: 2^(1-m) Tr P_m =  315.000000 (imag  2.2e-06)   Delta_16 = 315   OK   max|P_m| = 1.471e+07  -> rho = 2.640
+m=18: 2^(1-m) Tr P_m = -700.000000 (imag -5.6e-06)   Delta_17 = -700   OK   max|P_m| = 1.987e+07  -> rho = 2.544
+ALL OK

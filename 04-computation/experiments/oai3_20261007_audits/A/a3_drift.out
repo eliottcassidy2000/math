@@ -1,0 +1,26 @@
+theta=1/2: s=0.896575 rho=0.633975  C_exc=58.345  C=58.711  C/(1-rho)=160.40
+[visits] 20000 excursions (53 capped at 200000 steps); E[#visits to level h] (claim 2), steps/visit (claim <= m_h+2):
+   h=  1: visits 1.988   steps/visit 2.029   m_h+2 = 3
+   h=  2: visits 1.979   steps/visit 1.912   m_h+2 = 5
+   h=  3: visits 1.981   steps/visit 1.984   m_h+2 = 3
+   h=  4: visits 1.983   steps/visit 1.900   m_h+2 = 6
+   h=  5: visits 1.979   steps/visit 1.985   m_h+2 = 3
+   h=  6: visits 1.969   steps/visit 1.982   m_h+2 = 5
+   h=  8: visits 1.976   steps/visit 2.001   m_h+2 = 7
+   h= 12: visits 1.995   steps/visit 1.993   m_h+2 = 6
+   h= 16: visits 1.981   steps/visit 2.006   m_h+2 = 8
+   h= 24: visits 1.990   steps/visit 2.004   m_h+2 = 7
+   h= 32: visits 1.977   steps/visit 2.000   m_h+2 = 9
+[drift] E|e_ret|^1/2 / |e|^1/2 against rho = 0.6340, and E|e_ret|^1/2 - rho|e|^1/2 against C = 58.71
+   e0=               1: ratio 1.7404   excess    1.106   (n=3987, capped=13)
+   e0=              -1: ratio 1.8960   excess    1.262   (n=3989, capped=11)
+   e0=               3: ratio 1.3947   excess    1.318   (n=3996, capped=4)
+   e0=               7: ratio 1.0467   excess    1.092   (n=3991, capped=9)
+   e0=              21: ratio 0.8496   excess    0.988   (n=3987, capped=13)
+   e0=            1001: ratio 0.6310   excess   -0.095   (n=3993, capped=7)
+   e0=           -1001: ratio 0.6135   excess   -0.648   (n=3987, capped=13)
+   e0=         1048577: ratio 0.5784   excess  -56.891   (n=3993, capped=7)
+   e0=   1000000000039: ratio 0.5912   excess -42768.630   (n=3990, capped=10)
+   e0=  -1000000000039: ratio 0.5849   excess -49110.584   (n=3988, capped=12)
+   e0=12157665459056928801: ratio 0.5813   excess -183738218.621   (n=3988, capped=12)
+   e0=         2^200+1: ratio 0.5853   excess -61707881031323792450537914368.000   (n=3986, capped=14)

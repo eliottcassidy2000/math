@@ -1,0 +1,6 @@
+[n vs n+1] K= 8: unmerged residues 174/256 = 0.67969; disagreements 0
+[n vs n+1] K=12: unmerged residues 2620/4096 = 0.63965; disagreements 0
+[n vs n+1] K=16: unmerged residues 40295/65536 = 0.61485; disagreements 0
+[n vs 3n] K= 8: unmerged residues 225/256 = 0.87891; disagreements 0
+[n vs 3n] K=12: unmerged residues 3329/4096 = 0.81274; disagreements 0
+[n vs 3n] K=16: unmerged residues 50911/65536 = 0.77684; disagreements 0

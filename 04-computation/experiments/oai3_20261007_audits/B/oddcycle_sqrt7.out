@@ -1,0 +1,11 @@
+Q(sqrt7)^2: unit vectors generated: 136
+all unit: 1
+no bipartition functional (odd closed walk exists): 1   rank 4
+odd relation among the 8 lowest-height vectors; closed walk length 7
+   1 x (0 + 0 r7, -1 + 0 r7)
+   -2 x (0 + 0 r7, 1 + 0 r7)
+   -1 x (0 + -1/4 r7, -3/4 + 0 r7)
+   1 x (0 + -1/4 r7, 3/4 + 0 r7)
+   -1 x (0 + 1/4 r7, -3/4 + 0 r7)
+   1 x (0 + 1/4 r7, 3/4 + 0 r7)
+   sum check: [0, 0, 0, 0]~

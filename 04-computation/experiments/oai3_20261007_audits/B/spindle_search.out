@@ -1,0 +1,11 @@
+m=   21: smallest spindle n, N=3n, 4N-1 = None
+m=   33: smallest spindle n, N=3n, 4N-1 = (1, 3, 11, {11: 1})
+m=   57: smallest spindle n, N=3n, 4N-1 = None
+m=   93: smallest spindle n, N=3n, 4N-1 = None
+m=  105: smallest spindle n, N=3n, 4N-1 = (3, 9, 35, {5: 1, 7: 1})
+m=  165: smallest spindle n, N=3n, 4N-1 = (1, 3, 11, {11: 1})
+m=  177: smallest spindle n, N=3n, 4N-1 = (241, 723, 2891, {7: 2, 59: 1})
+m=  273: smallest spindle n, N=3n, 4N-1 = None
+m=  345: smallest spindle n, N=3n, 4N-1 = (48, 144, 575, {5: 2, 23: 1})
+m=  357: smallest spindle n, N=3n, 4N-1 = (1200, 3600, 14399, {7: 1, 11: 2, 17: 1})
+m= 1365: smallest spindle n, N=3n, 4N-1 = (3, 9, 35, {5: 1, 7: 1})

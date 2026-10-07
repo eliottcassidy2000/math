@@ -1,0 +1,8 @@
+f_(2,2,10,a)(-1) = 8207*2**(-a - 13) ; equal to f_(6,3,2,1,a+2)(-1): True ; equals 8207/2^(13+a): True
+53803 orbit [53803, 80705, 60529, 45397, 133, 25, 19] exponents [1, 2, 2, 10, 4, 2]
+26901 orbit [26901, 1261, 473, 355, 533, 25, 19] exponents [6, 3, 2, 1, 6, 2]
+m = (n+1)/2 - 1 = 26901 ; U^5 equal: True ; first meeting index: 5
+letters <= 8: sporadic N-values (>= 2 root classes): 12
+letters <= 22: sporadic N-values (>= 2 root classes): 27
+   with a letter > 8: 15 ; of which in the (2,6,c)~(4,1,1,c+2) family: 14
+   the others: [(8207, [(2, 2, 10), (4, 10), (6, 3, 2, 1)])]

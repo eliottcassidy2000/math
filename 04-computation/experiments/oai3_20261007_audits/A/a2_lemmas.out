@@ -1,0 +1,3 @@
+[lemmas] (state, bit) pairs checked: 700048; failures: {'size': 0, 'dep': 0, 'dir': 0, 'k0run': 0, 'runval': 0, 'flipdrift': 0, 'rundrift': 0, 'k0drift': 0, 'away_add_1/18': 0, 'fair': 0}
+[lemmas] worst slack of E[V'] - V - eps_h at flips: 4.335e-16; at runs vs 0.966V+eps/2: 4.371e-16
+[lemmas] s = 0.896575, rho = 0.633975, run bracket = 0.965926
