@@ -362,7 +362,10 @@ Each front of this session turned on the same structure. One object is read by t
 * **This session's additions on top:**
   * the Terras-clock coalescence theorem (THM-4581) with its rate and corollaries;
   * the orbit-equivalence form (THM-4569 (7)).
-  * Neither concurrent note claims merging or recurrence.
+  * Neither concurrent note claimed merging or recurrence before THM-4581.
+* **After THM-4581 was pushed, both concurrent sessions built on it.**
+  * S20 (THM-4565, Corollary 6) and codex-tiling (orbit-information synthesis) derive the long-time limit `Cov(a_s, b_(s+d)) → 2·1{d = −1}`, conditional on THM-4581. The table in §1.3 measures the same limit in correlation form: `Corr(b_s, a_(s+1)) →` merged share `→ 1`.
+  * codex-tiling also audited THM-4581 independently, with two readers. The core passed. It found the same odd-count and template-clock corrections as audit A and supplied the example `p = 2417`, `q = 805` (§11).
 
 ## 10. Typing summary
 
@@ -385,7 +388,47 @@ Each front of this session turned on the same structure. One object is read by t
 
 ## 11. Audit record
 
-(Three independent adversarial audits launched at checkpoint `7439e77cd7`: A, THM-4581 and its corollaries; B, THM-4566, THM-4567 and the THM-4555/4512/4558 updates; C, THM-4568, THM-4569, THM-4580 and HYP-9219. Results are recorded below when complete.)
+Three independent adversarial audits were launched at checkpoint `7439e77cd7`. Corrections are recorded in MISTAKE-583.
+
+**Audit A: THM-4581 and its corollaries.**
+* Verdict: **statement 3 (almost-sure coalescence) CORRECT**; statements 1, 2 and 5 correct; statement 4 sound as a sketch; corollaries 6(a)–(f) hold.
+* Independent checks:
+  * the chain against direct orbits on 660,000 steps over 15 starts;
+  * the local lemmas on 700,048 (state, bit) pairs, including the one-step drift at `θ = 1/2`;
+  * Green-function visits about 2 per level, return ratio 0.58–0.63;
+  * descent from every `(0, e)` with `|e| ≤ 10^4`;
+  * GMP simulation of 400,000 paths: `√T q = 10.98–11.18` to `T = 1.6·10^6`, geometric `J` (ratio 0.924);
+  * integer checks for 6(c)–(e).
+* Corrections applied:
+  * odd-step counts differ by `k_0`;
+  * the 3-adic excess extension (3');
+  * the grand-orbit reading of 6(b), with the explicit reduction;
+  * the HYP-9214 sampler gap (odd value 1);
+  * template total = merge time + `v_2(merge value)`;
+  * `E[J] ≈ 9.93` for `(0,1)`, and `12.8` with constant `(|k_0| + E[J])·√(4/π) = 16.7` for the lag-1 pair;
+  * "sketch level" carried downstream;
+  * THM-4556's any-lag lower bound withdrawn (any-lag exponent about 0.69).
+* Prior art: six searches plus Akin's paper found nothing.
+
+**Codex-tiling's audit of THM-4581 (concurrent, independent).**
+* The local Lyapunov bound, run cost, return drift and absorption pass.
+* It found the same corrections, plus the clock example `2417/805` and the remark that an all-integer equal-time statement fails (`(1,2)` alternates with `(2,1)`).
+
+**Audit C: THM-4568, THM-4569, THM-4580, HYP-9219.**
+* Nothing refuted in substance.
+* Confirmed with independent code:
+  * the least profile, its admissibility and minimality (with the auditor's off-diagonal proof), the gadget barrier, and the constants;
+  * the box certificates: B(3,30) and B(4,100) exactly, and B(9,100) gives 0.586175, 0.385315 and 0.344618;
+  * `Z_1..Z_40` by two independent methods;
+  * the unit formula, now PROVED for all `m`;
+  * every `n ∈ [87, 10^6]` plus 6000 sampled exponents.
+* Nine corrections applied:
+  * THM-4568: the equality chain, the record labels (Alman et al. SODA 2025; Dupont et al. 2026 beaten at `a = 190`), and the ANALOGY tag with fixed point −1/2 vs −1;
+  * THM-4569: `√(2/π) ≈ 0.797`, and `O_2`/`V` attributed to the Deaconu–Renault groupoid;
+  * THM-4580: outward brackets, entries 24–42, and `957 ≤ n < 1.1·10^11`;
+  * HYP-9219: "Equivalently" and the scope of the sufficient condition.
+
+**Audit B: THM-4566, THM-4567 and the THM-4555/4512/4558 updates.** See below.
 
 ## 12. Reproduction
 
