@@ -1,0 +1,11 @@
+PROVED guards: every shell m>=4 has a head phase; child exponent K-D, D=3 or4.
+FINITE-EXACT both branches J=3..32 and five parameters; all baseline splits243/1/485.
+Odd-shell first rows: [(3, 1889, 16384), (4, 5249, 65536), (5, 50689, 262144), (6, 67585, 1048576), (7, 90113, 4194304), (8, 11304961, 16777216), (9, 15073281, 67108864), (10, 109576193, 268435456)]
+Even-shell first rows: [(3, 6129, 32768), (4, 52545, 131072), (5, 517889, 524288), (6, 865281, 2097152), (7, 6746113, 8388608), (8, 8994817, 33554432)]
+FINITE-EXACT shells m=4..20: inverse-entry bank244/729, complement485/729.
+Literal selected receipts (K,J,branch,c,childK,old entry): [(1889, 3, 2, 3, 1886, 5), (5249, 4, 2, 1, 5246, 5), (18273, 3, 2, 1, 18270, None), (6129, 3, 1, 1, 6126, None)]
+PROVED excluded ray: K=18273+11943936*s, s>=0; all have the new paid dependency.
+PROVED even-shell excluded ray: K=6129+23887872*s, s>=0.
+D4 normalizes every phase to two twos; excluded ray then has child(2^(K-1)-13)/9 viaG5.
+No child ROOT word discovered or assumed; completion requires a supplied certificate.
+Checks: 1008509

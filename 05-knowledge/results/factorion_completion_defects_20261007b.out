@@ -1,0 +1,9 @@
+BASE 6 CYCLES ((1,), (2,), (25,), (26,))
+MODIFIED_ROOT_DEFECTS [(2, 1), (25, 1), (26, 1)]
+BASE 10 CYCLES ((1,), (2,), (145,), (169, 363601, 1454), (871, 45361), (872, 45362), (40585,))
+MODIFIED_ROOT_DEFECTS [(2, 1), (145, 1), (169, 3), (871, 2), (872, 2), (40585, 1)]
+GLOBAL_PORTRAIT_ROWS(base,digit_cut,integer_core,histograms,image,cycles,max_modified_rank) [(6, 5, 480, 205, 97, 4, 8), (10, 8, 2540160, 19440, 8503, 7, 59)]
+PROVED: every positive integer enters the completely classified finite cycle portrait
+COMPLETION: every artificial root edge remains marked; its defect equals its original cycle length
+COLLATZ_TRANSFER_OPEN: an authenticated all-source absorbing core or pointwise paid rank is still needed
+CHECKS 3049061

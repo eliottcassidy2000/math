@@ -6,6 +6,11 @@ closure of the explicitly grounded seed families described below.
 computation universes. **OPEN:** closure of the entire arbitrary-source
 obligation graph, and therefore a Collatz proof for every integer.
 
+**Forward route:** [Completion-first research and paid exponent phases](collatz_completion_synthesis_20261007b.md)
+adds explicit exits in every long reset shell, exact fixed-source deletion
+requests, and a fully solved digit-factorial comparison model. Arbitrary-source
+Collatz coverage remains open.
+
 The new progress is a way to continue after a child changes shape. Its
 return to a larger Mersenne parent can be composed with a stronger existing
 deletion, giving an obligation smaller than the changed child itself.

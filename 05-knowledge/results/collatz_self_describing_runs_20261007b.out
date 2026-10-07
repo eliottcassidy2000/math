@@ -1,0 +1,16 @@
+collatz_self_describing_runs_20261007b
+STATUS: FINITE-EXACT clocks; PROVED ordered-run compiler and height/factor obstructions
+alphabet (1, 2) N 2 runs/transitions/complete/last_observed/full/deficit (2, 1, 1, 1, 2, 1) count_first_symbol 1
+alphabet (1, 2) N 200000 runs/transitions/complete/last_observed/full/deficit (133321, 133320, 133321, 1, 1, 0) count_first_symbol 100010
+alphabet (1, 2) N 10000000 runs/transitions/complete/last_observed/full/deficit (6666660, 6666659, 6666660, 2, 2, 0) count_first_symbol 5000046
+alphabet (2, 3) N 2 runs/transitions/complete/last_observed/full/deficit (1, 0, 1, 2, 2, 0) count_first_symbol 2
+alphabet (2, 3) N 200000 runs/transitions/complete/last_observed/full/deficit (80001, 80000, 80001, 3, 3, 0) count_first_symbol 100007
+independent generator agreement: first10000 A000002 digits
+imbalance transport: E(S(r))=D(r), r1..2048; phase/deficit identity at N1..4096
+forbidden derivation:12 words; full length9 universe512; surviving necessary factors42
+Kolakoski12 valuation9-block slope >=19683/16384; this is not a density-limit claim
+Kolakoski23 actual r-prefix source lower bound: n>=1+2*(4/3)^r; no infinite positive realization
+ordered run packets: 514 ; two native positive lifts per packet; explicit ROOT padding rejection
+hostiles:200k transitions !=runs;12212 passes necessary local tests; order and terminal deficit are required
+paper interfaces: ordered exact matching and retained output mean/entropy; noisy observation is no exact guard
+exact checks: 11905
