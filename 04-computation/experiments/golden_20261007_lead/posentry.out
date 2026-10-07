@@ -1,0 +1,7 @@
+k=16  P(entry via 5)=0.9362 P(via 21)=0.0000  cuts 0.0707  top modes of P(via 21) (freq/octave:amp):  25:0.0001  15:0.0001  19:0.0001  17:0.0001  2:0.0001
+k=18  P(entry via 5)=0.9371 P(via 21)=0.0000  cuts 0.0672  top modes of P(via 21) (freq/octave:amp):  23:0.0000  12:0.0000  14:0.0000  9:0.0000  28:0.0000
+k=20  P(entry via 5)=0.9381 P(via 21)=0.0000  cuts 0.0645  top modes of P(via 21) (freq/octave:amp):  12:0.0000  34:0.0000  23:0.0000  30:0.0000  31:0.0000
+k=22  P(entry via 5)=0.9382 P(via 21)=0.0000  cuts 0.0633  top modes of P(via 21) (freq/octave:amp):  2:0.0000  35:0.0000  3:0.0000  18:0.0000  21:0.0000
+k=24  P(entry via 5)=0.9381 P(via 21)=0.0000  cuts 0.0617  top modes of P(via 21) (freq/octave:amp):  7:0.0000  34:0.0000  32:0.0000  13:0.0000  30:0.0000
+k=26  P(entry via 5)=0.9380 P(via 21)=0.0000  cuts 0.0605  top modes of P(via 21) (freq/octave:amp):  11:0.0000  8:0.0000  23:0.0000  27:0.0000  39:0.0000
+k=28  P(entry via 5)=0.9380 P(via 21)=0.0000  cuts 0.0593  top modes of P(via 21) (freq/octave:amp):  21:0.0000  36:0.0000  15:0.0000  38:0.0000  9:0.0000

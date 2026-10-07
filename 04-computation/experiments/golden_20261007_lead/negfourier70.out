@@ -1,0 +1,7 @@
+k=16 mean(-1 basin)=0.3321  top Fourier modes (freq per octave: amplitude):  12:0.1248  53:0.0595  65:0.0571  24:0.0461  36:0.0435  41:0.0404  29:0.0284  17:0.0140  5:0.0131
+k=18 mean(-1 basin)=0.3287  top Fourier modes (freq per octave: amplitude):  12:0.1010  53:0.0610  65:0.0416  41:0.0342  24:0.0331  36:0.0223  29:0.0199  17:0.0085  5:0.0078
+k=20 mean(-1 basin)=0.3269  top Fourier modes (freq per octave: amplitude):  12:0.0815  53:0.0597  65:0.0334  41:0.0283  24:0.0211  29:0.0127  36:0.0101  17:0.0052  11:0.0032
+k=22 mean(-1 basin)=0.3271  top Fourier modes (freq per octave: amplitude):  12:0.0658  53:0.0584  65:0.0276  41:0.0238  24:0.0143  29:0.0081  36:0.0061  17:0.0033  13:0.0025
+k=24 mean(-1 basin)=0.3270  top Fourier modes (freq per octave: amplitude):  53:0.0579  12:0.0536  65:0.0219  41:0.0197  24:0.0090  29:0.0056  36:0.0030  17:0.0020  11:0.0020
+k=26 mean(-1 basin)=0.3268  top Fourier modes (freq per octave: amplitude):  53:0.0574  12:0.0436  65:0.0170  41:0.0166  24:0.0059  29:0.0036  11:0.0016  36:0.0016  13:0.0016
+k=28 mean(-1 basin)=0.3268  top Fourier modes (freq per octave: amplitude):  53:0.0570  12:0.0354  41:0.0141  65:0.0132  24:0.0040  29:0.0025  11:0.0013  13:0.0013  36:0.0008
