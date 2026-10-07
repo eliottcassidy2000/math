@@ -178,7 +178,7 @@ The statements "overlap iff `M ≥ 1`", the reading identity and the XOR identit
 
 **Relation to THM-4564 (mac-mini, same prompt, concurrent).**
 * Their statement 2 (ultrametric law at exact alignments) and statement 3 (Haar depth iff independence) are THM-4565 (2)–(3) at `λ = 0`.
-* Their lockstep cap `δ' = min(δ − a, v_2(3^k − 1))`, their one-sided causality, and their Kesten perpetuity (tail index 1, from the mean-one martingale `3^j/2^(A_j)`) are not in THM-4565. They are complementary.
+* Their lockstep minimum rule away from the equality/cancellation branch, one-sided causality, and unforced comparison perpetuity are complementary to THM-4565. There is no unconditional depth cap, and the actual debt retains a forcing term; see the [integration audit](collatz_overlap_kernel_integration_20261007.md).
 * THM-4565 adds:
   * the general offset (two thirds of all coupling events);
   * the exact identity `Cov = E[κ(M); overlap]` at every pair;
@@ -194,7 +194,7 @@ The statements "overlap iff `M ≥ 1`", the reading identity and the XOR identit
 
 **What the exact theory buys for HYP-9217.**
 * The increments `A_(t+1) − B_t` of `L` have exactly computable correlations: `κ`-averages of past-written depths.
-* The pairwise structure is solved. The remaining content is a 2-adic equidistribution statement for the past-written comparison strings: their first 1 should be `Geom(1/2)` conditionally on the past, at bit-gap `≥ 9`.
+* The pairwise structure is solved. The remaining content is a 2-adic equidistribution statement for the past-written comparison strings: their first 1 should be tested for a geometric law under a specified coarser conditioning or averaged offset class. Conditioning on the full past already determines this depth; the original HYP-9218 formulation cannot hold. A numerical threshold near bit-gap9 is not a proved uniform bound.
 * Conditional dependence is real (4/3 bits per overlap). A proof must therefore run in the filtration where the later reader is fresh (Theorem 1), not by independence of the streams.
 
 ## 5. Connections

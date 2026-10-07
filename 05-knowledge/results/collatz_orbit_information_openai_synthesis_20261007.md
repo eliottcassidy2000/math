@@ -92,6 +92,34 @@ For fixed v and any epsilon>0, this proves exponential decorrelation as
 s grows, uniformly for t>=(1+epsilon)s. The band near matching times is
 the unresolved region; numerical smallness there is not used as a theorem.
 
+### Integration with the new concurrent overlap kernel
+
+The subsequently fetched THM-4564/4565 checkpoints provide the complementary
+local law inside an overlap. Independent checking confirms the kernel
+`Cov(fresh,re-read | depth D)=2-6*2^(-D)`. Combining it with our exact
+negative-binomial bound improves the estimate to
+
+\[
+|\operatorname{Cov}(a_s,b_t)|\le2\Pr(\text{window overlap})
+\le2\Pr(A_s>B_{t-1}-v).
+\]
+
+The [integration note](collatz_overlap_kernel_integration_20261007.md)
+records the stronger bound and two needed repairs. The full joint past
+already determines the comparison depth, so HYP-9218's proposed geometric
+law conditioned on that full past cannot approach its target. A replacement
+must keep some depth information unobserved by specifying a coarser field.
+The lockstep clock bound also has an equality/cancellation exception,
+realized by a small lawful integer example. Exact local identities survive.
+
+A useful infinite family shows why richer data matter: at initial alignments
+with v=4k for odd k, depth probabilities 1/3 at1 and2/3 at2 give zero
+covariance, agreement1/3 and average conditional
+information4/3bits, just like geometric depth. The pair is still dependent.
+All three statistics use only E[2^(-D)]. The full diagonal profile
+`P(F=R=j)=2^(-j)P(D>j)` recovers the whole depth law and is the sharper
+diagnostic for the next experiment.
+
 **Next proof obligation.** Use this exact conditional law, together with
 the affine residue/debt, to bound returns to a state with a usable merge
 chance. An iid fresh-input representation alone does not force recurrence
@@ -212,13 +240,14 @@ quantifiers, while finite controls check boundaries, carry, types and
 independent enumerations. No accepted OpenAI theorem is claimed proved by
 these tests. Agent audits checked the newly derived interfaces.
 
-The five packages pass **83,428 exact checks** in both normal and optimized
+The six packages pass **86,113 exact checks** in both normal and optimized
 Python, with matching saved outputs. The navigation check also passes;
 an inherited line-budget excess was repaired by joining wrapped lines in
 the hypothesis index without changing its mathematical text.
 
-The next priority is the conditional debt return bound under the adaptive
-precision state. The orthogonal digit target is a surviving-phase bound
+The next priority is to specify a coarse conditioning which retains the
+debt-return obligation while leaving the overlap depth unrevealed, then
+bound its full depth profile and return law. The orthogonal digit target is a surviving-phase bound
 in the actual-height band. The positive-measure arithmetic route remains
 target absence implying a controlled arithmetic collapse, so that a
 nonzero small determinant could force a contradiction. These are precise

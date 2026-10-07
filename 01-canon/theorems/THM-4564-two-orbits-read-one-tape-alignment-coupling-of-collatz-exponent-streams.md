@@ -1,6 +1,6 @@
 ---
 id: THM-4564
-title: "Two orbits read one 2-adic tape: the exponent streams of two Collatz orbits related by x = 2^L y + Delta are coupled only at tape alignments, where x_t = 3^k y_s + kappa with kappa fixed by the past and the exponents obey an ultrametric law of depth delta = v_2(3 kappa + 1 - 3^k); averaging this law over a Haar-distributed depth gives exactly independent Geom(1/2) pairs; lockstep continuations obey E' = 3E/2^a - (3^k - 1), so the depth is capped by v_2(3^k - 1) (the 2-adic clock of 3) and Haar-ness is preserved; the archimedean side of the debt is a Kesten perpetuity driven by one stream only, with the Moran function of THM-4554 as moment function and tail index exactly 1"
+title: "Two orbits read one 2-adic tape: the exponent streams of two Collatz orbits related by x = 2^L y + Delta have an exact law at tape alignments, where x_t = 3^k y_s + kappa with kappa fixed by the past and the exponents obey an ultrametric law of depth delta = v_2(3 kappa + 1 - 3^k); averaging this law over a Haar-distributed depth gives exactly independent Geom(1/2) pairs; lockstep continuations obey E' = 3E/2^a - (3^k - 1), with the min-depth rule away from equality, unbounded cancellation possible at equality, and conditional preservation of a Haar depth input; the normalized debt has an exact forced recurrence, and its unforced comparison perpetuity has the Moran moment function of THM-4554"
 status: "PROVED (elementary, 2-adic). FINITE-EXACT: every identity checked on exact integer orbits of S19's lag-1 Mersenne debt pairs: the coupling law at all 1,659,753 exact alignments, the lockstep recursion at all 554,893 continuations, past-measurability of kappa, the rho recursion; 3000 pairs, 20,000-bit sources, 5.58M steps. NUMERICAL: the law of delta at alignments, cross-covariances, block variances, the decay profile, the perpetuity law. Session mac-mini-2026-10-07-oaimath3. Independent audit: see the results note."
 session: mac-mini-2026-10-07-oaimath3 (owner prompt "figure out how the two orbits' exponents correlate over long gaps")
 source: 05-knowledge/results/oai3_two_orbits_twos_and_threes_20261007.md
@@ -16,6 +16,8 @@ related:
 ---
 
 # THM-4564 — two orbits read one tape
+
+**Correction, 2026-10-07:** [the integration audit](../../05-knowledge/results/collatz_overlap_kernel_integration_20261007.md) repairs the lockstep equality branch, numerical-to-exact summary, full-past conditioning, and actual-debt/perpetuity distinction. The exact local identities survive.
 
 ## Setting
 
@@ -40,14 +42,14 @@ related:
    `E' = 3E/2^(a_s) − (3^k − 1)`.
    So `δ' = min(δ − a_s, ν_k)` when `δ − a_s ≠ ν_k`, and `δ' > ν_k` when they are equal, where
    `ν_k = v_2(3^k − 1) = 1` (`k` odd) and `= 2 + v_2(k)` (`k` even).
-   * Lockstep runs therefore lock at most `ν_k` digits deep after their first step.
+   * The bound by `ν_k` holds only when `δ - a_s != ν_k`. At equality, cancellation can give `δ' > ν_k`; there is no unconditional depth cap. The lawful states `y_s=17, x_t=49`, `k=1`, give `E=-8, δ=3, a_s=2` and `E'=-8, δ'=3>ν_1=1`. See the integration audit linked below.
    * If `E/2^(a_s)` is Haar on `2Z_2`, so is `E'`. Lockstep preserves Haar depth.
 5. **One-sided causality.** If `b_t ≤ L_t` (the `x`-orbit's next read stays inside the digits the `y`-orbit has already read), then `b_t` is a function of `a_0, …, a_(t−1)`. Hence `Cov(a_(t'), b_t 1{b_t ≤ L_t}) = 0` for every `t' ≥ t`.
-6. **The archimedean side is a perpetuity driven by `y` alone.** The normalized debt `ρ_t = D_t/2^(L_t)`, with `D_t = 3Δ_t + 1 − 2^(L_t)`, satisfies exactly
+6. **The forced normalized-debt recurrence and its unforced comparison perpetuity.** The normalized debt `ρ_t = D_t/2^(L_t)`, with `D_t = 3Δ_t + 1 − 2^(L_t)`, satisfies exactly
    `ρ_(t+1) = (3/2^(a_t)) ρ_t − 1 + 2^(−L_(t+1))`.
    * For `M = 3/2^a` with `a ~ Geom(1/2)`, `E[M^θ] = 3^θ/(2^(θ+1) − 1)`. This is THM-4554's Moran function `ρ(θ+1)`.
    * It equals 1 at `θ = 0` and at `θ = 1`, because `3 = 2² − 1`. So `Π_(i<j) M_i = 3^j/2^(A_j)` is a mean-one martingale.
-   * By Ville's inequality and optional stopping with overshoot at most `3/2`: `2/(3u) ≤ P(sup_j 3^j/2^(A_j) ≥ u) ≤ 1/u`.
+   * For `u>=1`, by Ville's inequality and optional stopping with overshoot at most `3/2`: `2/(3u) ≤ P(sup_j 3^j/2^(A_j) ≥ u) ≤ 1/u`.
    * The stationary perpetuity `Y = Σ_j 3^j 2^(−A_j)` (`ρ ≈ −Y` for `L ≫ 0`) has tail index exactly 1: `P(Y > u) ≍ 1/u` (Kesten–Goldie, lattice case).
 
 ## Numbers (S19's lag-1 Mersenne pairs; 3000 pairs, 20,000-bit sources)
@@ -70,14 +72,14 @@ related:
 * The two exponent streams interact only where one orbit re-reads digits the other has already read.
   * That happens at gap `k ≈ L/2`.
   * There the interaction is the ultrametric law with depth `δ`.
-  * Lockstep caps that depth by the 2-adic order structure of 3 in the gap: `v_2(3^k − 1)`.
-* Away from merges the depth is Haar-distributed to 0.1%. By statement 3 that makes the aligned exponents exactly independent, so the streams are uncorrelated at every lag. The difference walk is diffusive with variance `2 + 2 = 4` per step.
-* The only correlation is the merge mechanism itself, at `L ≤ 8`, where even gaps lock.
-* The size of the debt forgets everything except the last few dozen `y`-exponents: it is a Kesten perpetuity with tail `≍ 1/u`.
+  * Lockstep follows the min-depth rule away from equality; the equality branch permits cancellation beyond `v_2(3^k − 1)`.
+* The reported finite tables agree with a geometric depth law to about 0.1%. An exact geometric mixing law would give independence at the corresponding aligned pair; these tables do not prove that law, all-lag independence, a variance-four limit, or recurrence.
+* The recorded numerical deviations are concentrated near small `L`, with an even-gap phase pattern. No exact cutoff at `L=8` has been proved.
+* The unforced comparison perpetuity has the stated tail law. Applying it to the actual debt requires control of the retained `2^(-L_next)` forcing; the finite comparison is numerical.
 
 ## Not claimed
 
-* That the depth is Haar conditionally on the past for every large `L`. That is HYP-9218, and it would reduce HYP-9217 (1) to an invariance principle plus mac-mini's per-visit merge success.
+* A geometric depth law after conditioning on the full joint past: the depth is already measurable there, so that formulation of HYP-9218 is refuted. A useful replacement requires a specified coarser conditioning; recurrence and per-visit success remain separate obligations.
 * Anything about actual integers beyond the Haar model.
 
 ---

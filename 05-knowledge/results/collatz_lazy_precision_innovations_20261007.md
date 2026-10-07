@@ -249,6 +249,11 @@ conditional drift for it, or a convergence result on individual sources.
 The next missing input is control of the joint residue state on repeated
 overlap returns.
 
+The subsequent [overlap-kernel integration](collatz_overlap_kernel_integration_20261007.md)
+sharpens the estimate to absolute covariance at most twice the overlap
+probability. It also specifies why the full joint past cannot be the
+conditioning field for a random law of a depth it already determines.
+
 ## 7. Finite-exact controls
 
 The universe comprises five affine couplings

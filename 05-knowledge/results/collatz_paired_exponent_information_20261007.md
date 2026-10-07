@@ -243,6 +243,11 @@ phases survive, but the full-power question concerns a narrow band where
 exponent and actual decimal length agree. Both comparisons require
 preserving **where** the information sits, not only how much remains.
 
+The subsequent [overlap-kernel integration](collatz_overlap_kernel_integration_20261007.md)
+improves the covariance bound using the exact saturation law, and corrects
+the incoming full-past Haar-depth hypothesis. Equations (1)--(7) above
+remain valid; the stronger estimate is linear in overlap probability.
+
 ## 7. Finite controls and audit
 
 The checker independently counts source residues for all word lengths

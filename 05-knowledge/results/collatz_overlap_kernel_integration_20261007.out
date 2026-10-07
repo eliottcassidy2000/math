@@ -1,0 +1,39 @@
+{
+  "agreement": "1/3",
+  "cap_hostile": {
+    "E": -8,
+    "E_next": "-8",
+    "X": [
+      229,
+      43,
+      65,
+      49,
+      37
+    ],
+    "Y": [
+      29,
+      11,
+      17,
+      13,
+      5
+    ],
+    "a": 2,
+    "delta": 3,
+    "nu": 1,
+    "raw_source": 19,
+    "s": 2,
+    "t": 3,
+    "v": 2
+  },
+  "checks": 2685,
+  "conditional_information_bits": "4/3",
+  "covariance": "0",
+  "dependent_p11": "1/3",
+  "dependent_p22": "0",
+  "depth_mixture": {
+    "1": "1/3",
+    "2": "2/3"
+  },
+  "literal_precision_bits": 10,
+  "status": "PASS; depth law and return control remain OPEN"
+}

@@ -7,7 +7,7 @@ source: 05-knowledge/results/two_readers_exponent_correlation_20261007.md
 scripts:
   - 04-computation/experiments/two_readers_correlation_20261007.py (+ .out; ALL CHECKS PASSED, about 85 s on 12 cores)
 related:
-  - THM-4564 (mac-mini: the lam = 0 case, i.e. exact tape alignments; lockstep cap v_2(3^k - 1); one-sided causality; Kesten perpetuity) - statements (2)-(4) below reduce to its statements 2-3 at lam = 0
+  - THM-4564 (mac-mini: the lam = 0 case, i.e. exact tape alignments; lockstep min-depth rule with an equality/cancellation exception; one-sided causality; Kesten perpetuity) - statements (2)-(4) below reduce to its statements 2-3 at lam = 0
   - HYP-9217 (debt recurrence law), HYP-9218 (asymptotic Haar alignment; should be read for all overlaps, see the note)
   - 05-knowledge/results/collatz_cycles_tubes_debt_walk_openai_20261006.md (S19: Theorem D, the debt walk, the two streams)
 ---
@@ -53,7 +53,7 @@ related:
    `Cov(A_s, B_k) = E[κ(M_(s,k)); M_(s,k) ≥ 1] = 6·E[(1/3 − 2^−M); overlap]`.
    * Non-overlapping windows never contribute.
    * `−P(overlap) ≤ Cov(A_s, B_k) ≤ 2·P(overlap)`.
-   * The covariance vanishes iff `E[2^−M | overlap] = 1/3`, the `Geom(1/2)` value.
+   * If `P(overlap)>0`, the covariance vanishes iff `E[2^−M | overlap] = 1/3`, the `Geom(1/2)` value. If overlap has probability zero, covariance is zero without defining that conditional law.
 5. **Static form.** For `n` Haar on `Z_2` (or uniform on `[1, N]`, `N → ∞`) and fixed `h`: `Cov(v_2(n), v_2(n + h)) = 2 − 3·2^−v_2(h)`. Averaging over a Haar shift `h` gives 0. Statements 2–4 are this two-point function of `v_2`, read along two affine forms of one Haar variable whose shift `E` is written by the past.
 
 **Remark (S19 Theorem D, both signs).** One step before the merge (the first `t` with `x_t = y_(t+1)`), the relation is a sibling relation:
@@ -88,6 +88,6 @@ So `L_t` is even and nonzero there.
 
 ## Not claimed
 
-* That `M` is Geom conditionally on the past at every long gap. That is the offset version of HYP-9218.
+* A geometric law for `M` conditional on the full joint past: `M` is measurable in that past. The original HYP-9218 formulation is refuted; a replacement must specify a coarser conditioning or an averaged offset class. See [the integration audit](../../05-knowledge/results/collatz_overlap_kernel_integration_20261007.md).
 * Anything beyond the Haar model.
 * That zero covariance of the raw pair `(A_s, B_k)` implies its independence. The offset class is past-measurable but correlated with both exponents; independence is asserted only for `(F, R)` within an offset class.
