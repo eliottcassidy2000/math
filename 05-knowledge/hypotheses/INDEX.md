@@ -34,13 +34,9 @@ A hypothesis is unresolved unless a proved leaf is named explicitly. Search its 
 ## Results that change the live graph
 - **THM-2081--2087 (PROVED):** relative Hunter, residue blindness, the height-57 cut, and modular/lacunary closures reduce rank-seven containment; a three-coordinate relation may have zero guard coefficient.
 - **THM-2088--2090 and THM-2092/2093 (PROVED):** flat persistence, the global splice, height transfer, and dyadic cocircuit flags make every no-pair cut branch finite. The banks are not enumerated.
-- **THM-2091/THM-2094/THM-2096 (PROVED):** centered energy is necessary, the four-`7|q` branch is empty, and Cayley-tree variance raises bounded-bank
-  thresholds; complete maximum-tree information can be stronger.
+- **THM-2091/THM-2094/THM-2096 (PROVED):** centered energy is necessary, the four-`7|q` branch is empty, and Cayley-tree variance raises bounded-bank thresholds; complete maximum-tree information can be stronger.
 - **THM-2097/2100/2112 (PROVED):** every depth-four rank-seven template has an explicit whole-row finite box, but no box is enumerated or proved empty.
-- **THM-2098/2099/2103/2119 (PROVED):** guarded sizes `8..10` split into pure,
-  low-mixed, and high-vertical lanes; only pure rows inherit the collision
-  budget. Pair trees miss dyadic rows; pure-transverse rank eight is
-  projectively three-sparse under THM-2119's exact hypotheses.
+- **THM-2098/2099/2103/2119 (PROVED):** guarded sizes `8..10` split into pure, low-mixed, and high-vertical lanes; only pure rows inherit the collision budget. Pair trees miss dyadic rows; pure-transverse rank eight is projectively three-sparse under THM-2119's exact hypotheses.
 - **THM-2104/2105 (PROVED):** quotient valuations cross `2,3,5` walls, and emptiness forces exact affine carriers through denominator fourteen.
 - **THM-2114/2115 (PROVED):** finite-ring needles force `13`- and `11`-content
   blockers; a joint Toeplitz certificate closes a row missed by scalar clocks.

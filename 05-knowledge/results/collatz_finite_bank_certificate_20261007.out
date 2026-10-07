@@ -1,0 +1,12 @@
+PROVED: explicit signed finite-bank absorption cylinder; no individual-integer theorem
+universe: e=-512..-1,1..512; translations=1024
+direct_positive_integer_lifts=3072
+all_parity_words_lengths0..9=1023
+maximum_constructed_length=23; first_translation=-511
+L(e)<=kappa*log2(abs(e))+3; kappa=2/log2(4/3)<5
+bank_radius512: exact_integer_deadline=48
+sharp_boundary: e=1, bits001, source4mod8, mass1/8
+hostile: source1 with e1 stays the out-of-phase pair(1,2)
+clock_hostile: pair2417/805 firstTerrasMerge9at128; firstOddMerge16at1
+typed_and_phase_hostiles=10
+checks=31873

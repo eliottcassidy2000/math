@@ -3,7 +3,11 @@
 **Status:** PROVED in the Haar model, with FINITE-EXACT transition and
 indexing controls. The alternatives are aligned merging or recurrent
 bounded debt. Almost-sure merging, a return-time asymptotic, and universal
-positive-integer convergence are not concluded.
+positive-integer convergence are not concluded by this argument alone.
+**Subsequent integration:** the independently audited core of
+[THM-4581](../../01-canon/theorems/THM-4581-haar-coalescence-affinely-related-collatz-orbits-merge-almost-surely.md)
+now proves Haar-almost-sure merging by controlling translation size at
+count returns. The inverse-clock proof below remains independently valid.
 
 **Reproduction:** run the matching experiment
     python 04-computation/experiments/collatz_terras_inverse_clock_bridge_20261007.py
@@ -162,18 +166,21 @@ alternative, the stated synchronous debt returns to a fixed finite band
 infinitely often in the Haar model. No alignment or independence conjecture
 is needed for this conclusion.
 
-What remains is control of the translation coordinate along these returns.
+The obligation left by this argument is control of the translation coordinate along these returns.
 A return to a fixed j-level does not bound the real size of c, and a bounded
 valuation-sum debt does not make the affine identity hold. The relevant
-remaining target is archimedean box recurrence or another uniform way of
+target was archimedean box recurrence or another uniform way of
 turning these returns into successful merges. The merge-rate asymptotic
 and the transfer from Haar-almost-everywhere to specified integer sources
-are separate obligations.
+are separate obligations. THM-4581 subsequently supplied the translation
+control in the Haar model; the individual-integer obligation remains.
 
 The phrase “merges happen almost surely at equal T-time” in the incoming
-statement is read as a statement about the clock of a merge, up to null
+original THM-4569 statement was read as a statement about the clock of a merge, up to null
 exceptional coincidences; it is not read as claiming probability-one
-merging, which that same theorem leaves as a box-recurrence question.
+merging, which its original checkpoint left as a box-recurrence question.
+Its later THM-4581 update changes the probability-one status, not this
+proof's interpretation of the count and inverse clocks.
 
 ## 5. Checks and scope
 

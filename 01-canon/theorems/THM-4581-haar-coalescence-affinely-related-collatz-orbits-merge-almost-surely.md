@@ -1,6 +1,6 @@
 ---
 id: THM-4581
-title: "Haar coalescence: two Collatz (Terras) orbits related by u = 3^k v + e with e in Z[1/3] merge almost surely, at equal time and with equal odd-step counts; P(no merge by T) lies between c T^(-1/2) and C T^(-1/2) (log T)^2; hence y and y+1 merge for almost every 2-adic y (HYP-9220), the Collatz grand-orbit relation on Z_2 equals the orbit relation of Z[1/6] x| <2,3> up to null sets, the Mersenne switching set has full measure, HYP-9213 and HYP-9214 hold, and HYP-9217's decay exponent is 1/2"
+title: "Haar coalescence: two Collatz (Terras) orbits related by u = 3^k v + e with e in Z[1/3] merge almost surely, at equal time with odd-count difference minus initial k; P(no merge by T) lies between c T^(-1/2) and C T^(-1/2) (log T)^2; hence y and y+1 merge for almost every 2-adic y (HYP-9220), the Collatz grand-orbit relation on Z_2 equals the orbit relation of Z[1/6] x| <2,3> up to null sets, the Mersenne switching set has full measure, HYP-9213 and HYP-9214 hold, and HYP-9217's decay exponent is 1/2"
 status: >
   PROVED (elementary probability: a bounded-increment martingale, an explicit Lyapunov weight s^|k|, optional stopping,
   Levy's 0-1 law): statements 1-3, 5, 6. PROVED at sketch level (standard Foster-Lyapunov and first-passage estimates):
@@ -10,7 +10,9 @@ status: >
   an actual integer merge of n and n+1 (n = 2^(K+40) + r): 0 disagreements; unmerged fraction 626933/2^20 = 0.598 at K = 20. NUMERICAL: the return drift is 0.59-0.61
   against the proved 0.634. Direct big-integer orbits for six relations merge within 8000 steps in 80-89% of 120 trials each.
   HEURISTIC + NUMERICAL: the one-big-jump constant (7). Found by the session's pick reader (pair-chain lane); the proof was
-  re-derived and re-checked here, and the rate (4) was added here. Independent audit pending at checkpoint.
+  re-derived and re-checked here, and the rate (4) was added here. Independent two-reader audit of the
+  local Lyapunov bound, run cost, return drift, and absorption proof passed on October 7, 2026;
+  the rate remains a sketch and the constant is not promoted.
 session: mac-mini-2026-10-07-oaimath3
 source: 05-knowledge/results/oai3_two_orbits_twos_and_threes_20261007.md
 scripts:
@@ -42,7 +44,7 @@ related:
 
   * The state is `F_n`-measurable.
   * The parity of `u_n` is `β_n ⊕ σ_n`.
-  * `(0, 0)` is absorbing. Absorption means `u_n = v_n`, a merge at equal Terras time with equal odd-step counts.
+  * `(0, 0)` is absorbing. Absorption means `u_n = v_n`, a merge at equal Terras time. Since `k_n = k_0 + N_u(n) - N_v(n)`, its cumulative odd-count difference is `N_u(n) - N_v(n) = -k_0`; the counts are equal only when `k_0 = 0`.
   * At `k = 0` the coordinate `e` is an integer, and `3^max(0,−k) e` is always an integer.
 * **Notation.**
   * Level `h = |k|`.
@@ -61,7 +63,7 @@ related:
    * (d) **Runs at level `h ≥ 1`.** Let `w = v_2(e)`.
      * If `w < m_h`, the next valuation is `w − 1` for either coin.
      * If `w ≥ m_h`, each step leaves the regime `{w ≥ m_h}` with probability exactly 1/2, landing at `m_h − 1`. (At `w > m_h` it leaves on `c = 1`; at `w = m_h` it leaves on `c = 0`, and `c = 1` resets `w` to some value `≥ m_h`; `e = 0` counts as `w = ∞`.)
-     * Hence, conditionally on the past, a run has length `R ≤ m_h − 1 + G` with `G ~ Geom(1/2)`. At odd `h` it is exactly `R ~ Geom(1/2)`.
+     * Hence, conditionally on the past, a run has length stochastically dominated by `m_h − 1 + G` with `G ~ Geom(1/2)`. A nonempty run at odd `h` is exactly `Geom(1/2)`; a visit that arrives with odd `e` has run length zero.
 2. **Return drift (PROVED).** Let `τ_0 < τ_1 < …` be the successive arrival times at `k = 0`: time 0 if `k_0 = 0`, then every step from `k = ±1` into `k = 0`. After absorption, set `τ_(j+1) = τ_j + 1`. Then for `0 < θ < 1`:
 
        E[ |e_(τ_(j+1))|^θ | F_(τ_j) ]  ≤  ρ(θ) |e_(τ_j)|^θ + C(θ),   C(θ) < ∞.
@@ -89,7 +91,7 @@ related:
      * The first-reset-2 condition (`n = 2^(r+1) t − 1`, `r ≥ 1`, `v_2(3^r t − 1) ≥ 2`) is a positive-measure union of residue classes, and `B`-bit sources are uniform on residues mod `2^K` for `K < B`.
      * Hence `liminf_B P_B ≥ P(absorbed by K | condition)`, which tends to 1 as `K` grows.
    * (f) **HYP-9217.**
-     * (1) Almost-sure merging and `c T^(−1/2) ≤ q₁(T) ≤ C T^(−1/2)(log T)^2` are PROVED in Terras time. The template total is the Terras time of the merge: the number of 2-adic digits read, THM-4556 (iv).
+     * (1) Almost-sure merging and `c T^(−1/2) ≤ q₁(T) ≤ C T^(−1/2)(log T)^2` follow in the odd-template clock, with the rate at sketch level as in (4). If identity absorption occurs at Terras time `tau`, its first common odd endpoint is at `K = tau + R`, where `R = v_2(v_tau)` and `P(R=r)=2^(-r-1)` for `r>=0`. Include the fixed four-step prefix if `tau` starts at the fresh Mersenne state. Template confirmation requires `K+1` source bits (THM-4556 (iv)), not merely `tau` bits. The geometric delay preserves the rate exponent; see proof (6f).
      * The constant `c₁` is still open.
      * (2) If the any-lag exponent `α` exists, then `α ≥ 1/2`, since `q ≤ q₁`.
 7. **One big jump (HEURISTIC + NUMERICAL).** `P(no merge by T) ~ E[J]·√(4/(πT))`, where `J` is the number of excursions of `k` before absorption and `√(4/(πT))` is the tail of one excursion: a first-passage tail `√(2/(πn))` at `n ≈ T/2` flips, since flips are half the steps.
@@ -123,7 +125,7 @@ related:
   * If it converges, flips stop from some `N` on, so `u_N` and `v_N` have the same parity vector, and `u_N = v_N` by injectivity of the parity map.
   * Then either `k_N = 0` (absorption), or `v_N = −e_N/(3^(k_N) − 1)`. The latter is an `F_N`-measurable value, which `v_N` (Haar given `F_N`) takes with probability 0.
   * So off absorption, `k` returns to 0 infinitely often (THM-4569 (3)).
-* **(ii) Tightness at returns.** By 2, `sup_j E|e_(τ_j)|^θ ≤ max(|e_(τ_0)|^θ, C/(1 − ρ)) < ∞`. By Fatou, `liminf_j |e_(τ_j)| < ∞` almost surely. So almost surely there is an `M` with `|e_(τ_j)| ≤ M` for infinitely many `j`. These are finitely many states, since `e` is an integer at `k = 0`.
+* **(ii) Tightness at returns.** If `k_0 != 0`, first condition on the finite first return state at `τ_0`; it is an integer translation at level zero, and future parity bits are fresh. By 2, `sup_j E[|e_(τ_j)|^θ | F_(τ_0)] ≤ max(|e_(τ_0)|^θ, C/(1 − ρ)) < ∞`. Conditional Fatou gives `liminf_j |e_(τ_j)| < ∞` almost surely. So almost surely there is an `M` with `|e_(τ_j)| ≤ M` for infinitely many `j`. These are finitely many states, since `e` is an integer at `k = 0`.
 * **(iii) Every state at `k = 0` reaches `(0, 0)` with positive probability.**
   * For odd `e > 0`, use `c = 0` (to `(1, (3e+1)/2)`), then `c = 0` halvings at level 1, then `c = 1`. This lands at `(0, (U(e) − 1)/2)`, where `U(e) = oddpart(3e+1)` and `0 ≤ (U(e) − 1)/2 ≤ (3e − 1)/4 < e`.
   * `c = 0` halvings at `k = 0` then reach the odd part. So `e` decreases strictly to 0 along a finite bit string.
@@ -154,6 +156,8 @@ related:
 
     Take `r = ⌈(log T)/(2c_1)⌉`. The middle term is `≤ r C_3 2^(−θ(T/(3r) − 1))` by Markov and 2, so the total is `O(T^(−1/2) (log T)^2)`. ∎
 
+For an initial level `k_0 != 0`, include the first passage to level zero before these return segments. Its killed-walk Green function is `G(|k_0|,h)=2 min(|k_0|,h)`. The same summable error calculation gives a finite first-return fractional moment; the first-passage and holding-time estimate is `O(sqrt(log T/T))` with a start-dependent constant. Adding that initial term does not change the displayed upper rate.
+
 **5.**
 * For `m > m'`, `β_m` is fresh given `F_m ∋ (β_(m'), σ_m)`, so `β_m ⊕ σ_m` is fair and independent of `β_(m')`. The case `m < m'` is symmetric.
 * At equal times, `Cov(β, β ⊕ σ) = (1 − 2P(σ = 1))/4`, and both variances are `1/4`.
@@ -168,11 +172,16 @@ related:
   * So `q_1` is Haar on a coset of `16Z_2`. Four forced parities are followed by fair ones, and 3 applies from the post-prefix state.
   * Proposition 6 then needs only `μ_2(S) = 1` and the periodicity THM-4556 (iv).
 * (e) Absorption at time `t` gives `T^t(n) = T^(t−1)((n−1)/2)` with equal odd counts, hence `U^j(n) = U^j((n−1)/2)`. The merge value exceeds 1 when `t ≪ B`.
-* (f) follows from (d) and 4. ∎
+* (f) Retain the endpoint convention. Given the stopped past at identity absorption, the common current state is Haar, so `R=v_2(v_tau)` has the stated geometric law and is independent of that past. Put `q_tau(T)=P(tau>T)` and `q_K(T)=P(tau+R>T)`. With `H=floor(T/2)`,
+
+      q_tau(T) <= q_K(T) <= q_tau(H) + 2^(-(T-H+1)).
+
+  Thus (4) transfers to the odd-template clock. The fixed prefix changes only constants. A lawful Mersenne-coset example is `p=2417`, `q=805`, with `p=3q+2` and `q=5 mod16`: identity absorption occurs at time9 at128, but the first common odd endpoint is at time16 at1. The odd words are `(2,6,8)` and `(4,1,1,10)`, both total16. The exact timing and the finite-bank constructive audit are reproduced in `04-computation/experiments/collatz_finite_bank_certificate_20261007.py`. ∎
 
 ## What this does and does not say
 
 * **It is a measure statement about 2-adic integers.** Its integer forms are density-one statements. It says nothing about any particular integer, and the Collatz conjecture is untouched.
+  * An all-integer equal-time version is actually false: the pair `(1,2)` alternates with `(2,1)` under T and never merges at equal time, although both reach ROOT. An integer coverage target must allow the clock shift or pass to the odd map.
 * **It answers the long-gap question.**
   * In Terras time the two parity streams are exactly pairwise independent at distinct times.
   * They become identical after an almost-sure merge, whose waiting time has a `T^(−1/2+o(1))` tail.

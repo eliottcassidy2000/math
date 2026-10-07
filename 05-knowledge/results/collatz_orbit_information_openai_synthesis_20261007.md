@@ -3,17 +3,18 @@
 **Current status, October 7, 2026:** elementary results below are PROVED with
 FINITE-EXACT controls; the requested OpenAI paper statements are CITED and
 accepted as premises for this session, without re-auditing their proofs.
-Universal Collatz coverage, archimedean box recurrence/merging, the decimal
-cutoff at exponent 86, and the full selected prize targets remain OPEN here.
+Haar-almost-sure coalescence is now PROVED by the independently audited
+core of incoming THM-4581. Universal integer Collatz coverage, the decimal
+cutoff at exponent 86, and the full selected prize targets remain OPEN.
 
 ## What changed
 
 The main gain is an exact account of which information two Collatz orbits
 share, when a finite observation is forgotten, and when an adaptive query
-draws fresh randomness. The latest Terras-clock integration additionally
-closes bounded returns of the exponent imbalance in the Haar model, with
-the alternative that the pair has already merged. Controlling translation
-debt at those returns remains the missing archimedean condition.
+draws fresh randomness. The latest Terras-clock integration first closed
+bounded returns of the exponent imbalance. Incoming THM-4581 then supplied
+the missing translation control and almost-sure merging in the Haar model.
+The remaining main target is transfer to each specified positive integer.
 
 The assigned anchor is source-specific Collatz coverage. The niche is the
 decimal digit problem. The wildcard is a group of transfers from the supplied
@@ -90,8 +91,9 @@ fixed deterministic delay: the remaining correlation occupies a random
 overlap region of consumed binary positions.
 
 For fixed v and any epsilon>0, this proves exponential decorrelation as
-s grows, uniformly for t>=(1+epsilon)s. The band near matching times is
-the unresolved region; numerical smallness there is not used as a theorem.
+s grows, uniformly for t>=(1+epsilon)s. The band near matching times requires
+the additional local structure below; numerical smallness there is not used
+as a theorem.
 
 ### Integration with the new concurrent overlap kernel
 
@@ -132,13 +134,59 @@ imbalance returns to {-1,0,1} infinitely often, unless the aligned pair
 has already merged. This uses a fresh conditional success chance at
 separated stopping times, not a variance fit.
 
-**Next proof obligation.** Control the affine translation at those returns,
-so the pair visits a bounded state region with a usable merge chance.
-Count recurrence alone does not bound this second coordinate. The
-arithmetic transfer from Haar statements to the intended integer sources
-remains separately necessary. Our depth diagnostics can target that
-conditional translation control; they are no longer needed merely to
-justify the count's recurrence.
+**The translation condition is now closed in the Haar model.** Incoming
+[THM-4581, Haar coalescence](../../01-canon/theorems/THM-4581-haar-coalescence-affinely-related-collatz-orbits-merge-almost-surely.md)
+uses a weighted fractional moment of the translation. At count level h,
+the expected holding time is at most v2(3^h-1)+1; the killed random walk
+visits each level an expected two times. A geometric weight s^h therefore
+makes the total accumulated translation error summable. At successive
+returns to level zero the resulting bound is
+
+\[
+\mathbb E[|e_{j+1}|^{1/2}\mid\mathcal F_j]
+\le\frac{3-\sqrt3}{2}|e_j|^{1/2}+C,\qquad C<\infty.
+\]
+
+This gives infinitely many visits to some finite bank of integer
+translations. Every bank state has a finite positive-probability merge
+word; repeated opportunities imply absorption almost surely. Two independent
+audits here verified the core argument and repaired its odd-count offset
+and first-return conditioning. We do not upgrade the separate rate sketch
+or its conjectured leading constant.
+
+**Constructive positivity at every bank state.** Our new
+[finite-bank certificate](collatz_finite_bank_certificate_20261007.md)
+makes its accessibility step quantitative. At k=0, halve an even translation
+e using driver bit0. For odd positive e, the driver word 0^a1, where
+a=v2(3e+1), returns to level zero with
+
+\[
+e'=\frac{\operatorname{oddpart}(3e+1)-1}{2}<\frac34e.
+\]
+
+The auxiliary translation strictly decreases; no Collatz convergence
+assumption is used. Mirror the two orbits for negative e. Telescoping
+the bit costs proves
+
+\[
+L(e)\le\kappa\log_2|e|+3,\quad
+\kappa=\frac2{\log_2(4/3)}<5,\qquad
+\delta_M\ge\frac1{8M^\kappa}.
+\]
+
+Here delta_M is a uniform conditional probability of absorbing by the
+finite deadline floor(kappa log2 M+3), from each state with |e|<=M.
+The compiler supplies the actual driver residue class, retaining the
+source guard. The different states need not share the same certificate.
+
+The result explains eventual agreement of the exponent streams, with
+the fixed ordinal offset retained. It does not supply the prescribed
+parity continuation of a particular integer. There is a decisive boundary:
+the positive pair 1 and2 never merges at equal Terras time, because its
+ordered states alternate (1,2) and(2,1). Both still reach ROOT. Thus an
+all-integer equal-clock coalescence upgrade would be false. The useful
+integer target must allow a certified clock shift, or use the odd map
+where ROOT is a fixed point. Source-specific ROOT coverage remains OPEN.
 
 ## 3. Decimal zero-free powers: a proved sparse residual
 
@@ -261,15 +309,20 @@ quantifiers, while finite controls check boundaries, carry, types and
 independent enumerations. No accepted OpenAI theorem is claimed proved by
 these tests. Agent audits checked the newly derived interfaces.
 
-The seven packages pass **217,070 exact checks** in both normal and optimized
+The eight packages pass **248,943 exact checks** in both normal and optimized
 Python, with matching saved outputs. The navigation check also passes;
 an inherited line-budget excess was repaired by joining wrapped lines in
 the hypothesis index without changing its mathematical text.
 
-The next priority is translation tightness at recurrent count/imbalance
-returns. A coarse conditioning that leaves the overlap depth unrevealed
-may support that estimate; its full depth profile is the useful diagnostic.
-The orthogonal digit target is a surviving-phase bound
+The next priority is source-specific, phase-aware transfer of the now-proved
+Haar coalescence mechanism. A finite bank can supply an explicit merge word
+and positive cylinder mass; an integer has a fixed continuation, so a
+further arithmetic hitting argument is needed. A sufficient certificate
+is T^a(n)=T^b(m) with m<n and m already certified; preserve a,b and the
+actual legal words, then use well-founded induction. This avoids the false
+demand of equal-clock merging for every pair. Overlap-depth diagnostics
+remain useful for finer correlations, but the failed full-past geometric
+law is not required for coalescence. The orthogonal digit target is a surviving-phase bound
 in the actual-height band. The positive-measure arithmetic route remains
 target absence implying a controlled arithmetic collapse, so that a
 nonzero small determinant could force a contradiction. These are precise
