@@ -1,0 +1,21 @@
+TERMINAL RAYS source,ROOT length/cost,descent length/cost,least
+3 (2, 5) (2, 5) 3
+27 (41, 70) (37, 59) 27
+91 (33, 59) (28, 45) 91
+111 (24, 45) (19, 31) 111
+223 (24, 46) (19, 32) 223
+4591 (61, 109) (41, 65) 4591
+32767 (44, 85) (32, 52) 32767
+RESET new local reductions beyond the prior31: [63, 1407, 2111, 4095, 5503, 6143, 8415, 9183, 9215, 13823, 14559, 15871, 17919, 19327, 20735, 23007, 24895, 25407, 26879, 27103, 28991, 31039]
+CAP ESCAPE exponent 1458 old word length 1024 new receipt lengths 1458 1458
+CAP ESCAPE exponent 2916 old word length 1024 new receipt lengths 2916 2916
+CAP ESCAPE exponent 4374 old word length 1024 new receipt lengths 4374 4374
+CAP ESCAPE exponent 7290 old word length 1024 new receipt lengths 7290 7290
+SPORADIC CAP ESCAPE exponent 10207 receipt length 10209
+GROUNDED REPRESENTATIVE LIFTS [4591, 9663, 10087, 12447, 13551, 15519, 16551, 17439, 17647, 17691, 18943, 20095, 20895, 21231, 21351, 21787, 25243, 25927, 26047, 26623, 26863, 27135, 27327, 27367, 28207, 28671, 28783, 28911, 28923, 30439, 30879, 31167, 31215, 31743, 31903, 31911, 32767]
+Full/short word costs: [(4591, 109, 65), (9663, 118, 54), (10087, 142, 108), (12447, 120, 46), (13551, 155, 67), (15519, 79, 53), (16551, 79, 62), (17439, 100, 34), (17647, 176, 74), (17691, 100, 64), (18943, 146, 50), (20095, 154, 52), (20895, 162, 72), (21231, 124, 70), (21351, 162, 67), (21787, 86, 49), (25243, 110, 62), (25927, 102, 47), (26047, 110, 59), (26623, 194, 65), (26863, 118, 42), (27135, 164, 73), (27327, 110, 53), (27367, 94, 66), (28207, 72, 25), (28671, 107, 77), (28783, 126, 70), (28911, 88, 37), (28923, 102, 70), (30439, 107, 36), (30879, 123, 58), (31167, 96, 43), (31215, 134, 48), (31743, 142, 46), (31903, 123, 67), (31911, 104, 64), (32767, 85, 52)]
+Guard-width exponent savings: 17 129
+COMPLETED SUBFAMILIES all37 representatives; exact modular verification without expansion.
+CONTRACTING WORDS alphabet1..4 length1..4: 317
+No universal coverage: first-reset2 branch and grounding of arbitrary children remain open.
+CHECKS 209051

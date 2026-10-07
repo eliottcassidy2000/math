@@ -1,0 +1,30 @@
+Finite grounding, endpoint charges and exact residual energy
+Imported six paper headlines accepted; only elementary transfer controls below
+Complete simple-graph universe: n2..5, 1098 graphs, fixed distinct terminals
+Two rational trials per graph; both forward/reverse interior elimination orders
+Disconnected lengthL chain: pointwise residual1/L, trial energy1/L, exact capacity0
+Macro refinement: unit-resistance expansion has capacity1/L; resistance-preserving expansion retains1
+L parallel L-edge paths: capacity1 while shortest path lengthL; L1..7
+Authenticated7--3--5--1: clocks(5, 0), first-hit word(1, 1, 2, 3, 4)
+Reverse seam3--7--1: clocks(2, 0), first-hit word(1, 4)
+Frozen partial4591->2717873: word(1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 2, 1, 2, 1, 1, 1, 1), isolatedROOT gives capacity0
+No new ROOT coverage, global positivity, or universal deadline claimed
+Kron_boundary_preservation: 2196
+Thomson_lower_certificate: 1856
+actual_receipt_export: 5
+capacity_has_no_uniform_path_deadline: 14
+cycle_has_zero_boundary: 2
+cylinder_is_not_fixed_ROOT: 32
+grounding_iff: 2196
+harmonic_equations: 2196
+malformed_or_unpaid_receipt: 14
+nonnegative_energy: 2196
+profinite_near_ROOT_not_ROOT: 32
+refinement_resistance: 64
+residual_identity: 4392
+retained_unresolved_prefix: 4
+separating_cut: 340
+slow_drift_not_finite_hit: 32
+small_residual_hostile: 64
+unit_boundary: 1856
+TOTAL: 17491

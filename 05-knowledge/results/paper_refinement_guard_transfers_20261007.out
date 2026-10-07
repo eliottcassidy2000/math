@@ -1,0 +1,11 @@
+PROVED symbolic rows: original source, exact prefix, sibling depth, strict cuts retained.
+FINITE-EXACT words length0..5 over1..4: 2730 rows; 16380 positive lifts.
+Independent literal membership iff controls: 20560
+Recovered frontier: 111 + 1073741824 *t -> 81 + 774840978 *t; t>=0.
+Short row15+64t ->13+54t; odd t has actual1113 and all source prefixes growing.
+Residual b>=1: exact frequency2^-b; extra j siblings frequency4^-j; 15360 controls.
+Three-state rational posterior/grid controls: 2270
+Hostiles: 12 ; no ROOT oracle or independent-child assumption in production.
+Paper headlines are trusted premises; their global theorems are not re-audited here.
+No new global Collatz coverage; named111 row is inherited, now generically compiled.
+CHECKS 1536257
