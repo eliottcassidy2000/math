@@ -1,17 +1,29 @@
 # The excess-rate family F_q: weak resets paid by a 1/q deadline
 
+**Current correction digest (2026-10-05).** The original proof used the false
+scalar comparison `exp(t/30) <= 2^(0.048 t)` for positive `t`. The valid
+contraction constant is `197/207`, obtained from `ln 2 > 69/100`; its reciprocal
+`207/197 < 1.051` preserves the stated coarser deadline. All deadline claims
+using a finite seed table require that table to be supplied and checked; no
+uniform all-`q` table generator is assumed. The current numerical census uses
+floating-point ceilings and is VERIFIED, not an exact all-input deadline
+implementation. The companion [amortized credit compiler](collatz_amortized_excess_budget_20261005.md)
+provides a finite bank interface, integer source cap, and a strictly larger
+bank-relative family at fixed rate. Its source-only budget retains credit
+across weak resets rather than charging the worst segment everywhere.
+
 2026-10-05, opus session `opus-2026-10-05-S8` (weak-reset family). Owner's seed:
 continue the proved-family program whose "next precise target is a cost bound
 admitting weaker resets such as 55 -> 47" (Codex,
 [run-block family, section 6](collatz_run_block_family_20261005.md)).
 
 **Status.** PROVED (elementary): the positive-cycle-point characterization of
-first descents (Proposition R), the segment inequality and the two source-only
-deadlines (Theorem D), the compiled floor on `F_q` through the backward
+first descents (Proposition R), the repaired segment inequality and the two source-only
+deadlines conditional on supplied finite seed certificates (Theorem D), the compiled floor on `F_q` through the backward
 compiler, nesting and the inheritance of `q` along running minima, and
-containment of the run-block tree in `F_3`. FINITE-EXACT: all declared
-checks (1,602,929), including the exhaustive segment audit below `2^16`.
-VERIFIED: the census of `q(n)` below `2^20` (float excess, exactly re-verified
+containment of the run-block tree in `F_3`. FINITE-EXACT: the integer segment/cylinder audits below `2^16`.
+VERIFIED: the aggregate of 1,602,929 checks, the floating-point
+deadline comparisons, and the census of `q(n)` below `2^20` (float excess, exactly re-verified
 at the reported sources). **OPEN:** universal entry; no single `F_q` covers
 every source, and the union over `q` is exactly the rooted sources. Not a canon
 promotion.
@@ -25,7 +37,7 @@ is at least `l/q`. Let `F_q` be the odd sources all of whose chained first-
 descent segments (the running minima of the orbit, down to ROOT) are
 `q`-admissible, and `q(n)` the least such `q`. Then:
 
-- every `n` in `F_q` has the source-only deadline
+- given a checked ROOT table for every odd source below `10q`, every `n` in `F_q` has the source-only deadline
   `tau(n) <= floor(1.051 q log_2 n) + max{tau(y): y odd, y < 10q}`, hence,
   through Codex's backward compiler, the positive floor
   `W(n) >= eta(n, T'_q(n)) = 2/((C+2) binom(C+1, floor((C+1)/2)))`;
@@ -37,7 +49,7 @@ descent segments (the running minima of the orbit, down to ROOT) are
   (segment `(1,1,2,3)`), `27` at `q = 104` (its 37-step excursion), `739` at
   `q = 1`;
 - the families are nested, closed under passing to running minima, and
-  exhaust the rooted sources as `q -> infinity`; their complement at any
+  exhaust the rooted sources as `q -> infinity`; their complement within the ROOT basin at any
   finite `q` is the set of sources whose running-minimum chain contains a
   segment of excess rate below `1/q`, and these are 2-adic shadows of large
   positive rational cycle points (Proposition R): weak resets are
@@ -92,9 +104,10 @@ Let `w = (a_1, ..., a_l)` be a valuation word with `A = sum a_i`, carry
 **Proposition R (PROVED).** For an odd `x` that follows `w`, the endpoint
 `y = (3^l x + c_w)/2^A` satisfies `y < x` iff `x > x_w`. The sources following
 `w` are the cylinder `x = x_w mod 2^(A+1)`; its members below `x_w` do not
-descend along `w` (these are the exceptional members of THM-4512), and the
-rational point `x_w` is a positive cycle of the `3x+1` map on `Q` with period
-word `w`.
+descend along `w` (these are the exceptional members of [THM-4512: coefficient-descent-classes-one-member](../../01-canon/theorems/THM-4512-coefficient-descent-classes-one-member.md)), and the
+rational point `x_w` is a positive word-realizing fixed point of the
+composed `3x+1` map on `Q`. Its least period may divide the length of `w`;
+no primitive-period claim is made.
 
 *Proof.* `y < x` is `c_w < (2^A - 3^l) x`. The cylinder statement is the
 shadow theorem's forward half, valid for any word; `x_w` is the fixed point
@@ -105,9 +118,10 @@ non-rising words, the descent criterion, the forward formula and the cylinder
 residue, and tests the non-descent of cylinder members below `x_w`. Example:
 `55 -> 83 -> 125 -> 47` has `w = (1,1,3)`, `c_w = 19`, `2^5 - 3^3 = 5`,
 `x_w = 19/5 = 3.8`; the block of Codex's section 6 is the shadow of the
-rational cycle `19/5`. The weaker the reset (the smaller `2^A - 3^l` relative
-to `c_w`), the larger the cycle point and the more cylinder members fail to
-descend. Together with the shadow theorem this gives one picture: rising
+rational cycle `19/5`. The value `x_w` is the exact final-descent threshold for this word.
+Comparing numbers of exceptional positive sources across different words also
+requires their cylinder moduli and residues; no cross-word monotonicity is
+asserted. Together with the shadow theorem this gives one picture: rising
 words are shadows of negative rational cycles (ancestors from below),
 non-rising words are shadows of positive rational cycles (descents from
 above), and the integers sit between the two.
@@ -125,25 +139,34 @@ chain (`q(1) = 0`).
 **Lemma D1 (segment inequality; PROVED).** If a segment from `x` is
 `q`-admissible and `x >= q`, then `y^(2q) 2^l <= x^(2q)`, i.e.
 `log_2 y <= log_2 x - l/(2q)`. If `x >= 10q`, then
-`log_2 y <= log_2 x - 0.952 l/q`.
+`log_2 y <= log_2 x - (197/207) l/q`.
 
-*Proof.* Along the segment every state satisfies `x_i >= x`, so
+*Proof.* Along the segment every preterminal state satisfies `x_i >= x`, so
 `2^(a_i) x_i = 3x_(i-1) + 1 <= 3x_(i-1)(1 + 1/(3x))` and
 `y <= x (3^l/2^A)(1 + 1/(3x))^l <= x 2^(-l/q) e^(l/(3x))`. For `x >= q`,
-`e^(l/(3x)) <= 2^(l/(2q))`; for `x >= 10q`, `<= 2^(0.048 l/q)`. QED. (Checked
+`e^(l/(3x)) <= 2^(l/(2q))`; for `x >= 10q`,
+`exp(l/(3x)) <= 2^((10/207) l/q)` because `ln 2 > 69/100`.
+For example, the positive series for `2 atanh(1/3)` gives
+`ln 2 > 2(1/3+1/81) = 56/81 > 69/100`. Subtraction gives `197/207`.
+The old `0.048` comparison is false: the same series gives
+`ln 2 < 25/36`, hence `1/(30 ln 2) > 6/125 = 0.048`. QED. (Checked
 exactly as `y^(2q) 2^l <= x^(2q)` on all 317,954 segments below `2^16` with
 `x >= q`.)
 
-**Theorem D (source-only deadline; PROVED).** Let `n` be in `F_q` and let
-`t_q = max{tau(y): y odd, y < q}`, `t_(10q)` likewise below `10q` (finite
-tables; every odd source below `2^20` is rooted, which covers `q <= 10^5`).
+**Theorem D (source-only deadline; PROVED conditional on checked seeds).**
+Fix `q` and supply strict ROOT certificates for every positive odd `y < q`
+for the first bound, or for every positive odd `y < 10q` for the second.
+Let `t_q` and `t_(10q)` be the corresponding maximum certificate lengths,
+with maximum of an empty table equal to zero. Let `n` be in `F_q`.
+The historical finite computation below `2^20` supports the stated table
+range `q <= 10^5`; it is not a proof of finite tables for arbitrary `q`.
 Then
 
     tau(n) <= floor(2 q log_2 n) + t_q,
     tau(n) <= floor(1.051 q log_2 n) + t_(10q).
 
 *Proof.* Sum Lemma D1 over the segments whose start is at least the threshold:
-the total length is at most `2q log_2 n`, respectively `1.0504 q log_2 n`,
+the total length is at most `2q log_2 n`, respectively `(207/197) q log_2 n < 1.051 q log_2 n`,
 because the logarithms telescope from `log_2 n` down to a positive number.
 Once a running minimum falls below the threshold, the remaining odd steps are
 those of that source's own orbit, bounded by the table. QED. (Both deadlines
@@ -155,7 +178,10 @@ sharp one is attained to a ratio `0.692` at worst.)
 and `W(n) >= eta(n,T) = 2/((C+2) binom(C+1, floor((C+1)/2))) > 0`; for the
 designated leaf `z = rho(n)` the same at `T+1`, and the localized selector
 degree `d` with `8(16/25)^d <= eta_z/2`. No ROOT word of `n` enters the
-formula; membership in `F_q` is decided by at most `T'_q(n)` forward steps.
+formula; with the checked seed table, membership in `F_q` is decided by at most
+`T'_q(n)` forward steps, including checking the segment guards in the selected
+seed suffix. Without those seed certificates this remains a conditional
+formula, not an executable all-`q` convergence argument.
 
 **Proposition D3 (structure; PROVED).** `F_q` is contained in `F_(q+1)`; if
 `y` is a running minimum of `n` then `q(n) >= q(y)`, so `F_q` is closed under
@@ -165,7 +191,18 @@ sources, and `q(n)` is finite exactly when `n` is rooted. The run-block tree
 is contained in `F_3`: its blocks are first-descent segments with excess
 `>= 0.415 (r+1) >= (r+1)/3`, and its base `5 -> 1` is `1`-admissible.
 
-## 4. Numbers
+For completeness, every fixed `F_q` has infinitely many positive sources
+outside it without presupposing anything about their later convergence.
+Choose an integer `l >= q`; use proper-prefix valuation sums
+`A_i = floor(i log_2 3)` for `1 <= i < l` and final sum
+`A_l = ceil(l log_2 3)`. All letters are positive, every proper-prefix slope
+exceeds one, and the final excess lies strictly between zero and one, hence
+is less than `l/q`. The exact dyadic word cylinder has infinitely many positive
+members. Above its finite final descent threshold they all have this actual
+first-descent word, which fails the `q` guard. This proves properness, not
+nonconvergence of any excluded source.
+
+## 4. Historical numerical results
 
 Examples (chain of segments with per-segment least `q`):
 
@@ -255,3 +292,12 @@ run-block recognizer is re-implemented from the published grammar (blocks
 `(1^r, a)`, `a >= r+2`, unit parents, base 5), not imported. Hostiles: the
 cylinder members below `x_w` must not descend; the deadlines must hold at every
 source with its actual `q(n)`; the floors must not exceed the actual weights.
+
+## Corrected replay, completed before the 2026-10-07 continuation
+
+The full corrected census below2^20 was rerun in normal and optimized Python.
+Both outputs and JSON agree, with1,602,929 checks and all524,287 seed-table
+checks in each deadline comparison covered (zero skipped). The missing
+last-odd-seed index is repaired; the numerical result rows did not change.
+Runtime-only text was removed for reproducibility. Floating comparisons
+remain VERIFIED rather than exact real inequalities.

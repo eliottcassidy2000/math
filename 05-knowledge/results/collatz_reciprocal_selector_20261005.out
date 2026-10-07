@@ -1,0 +1,47 @@
+{
+  "checks": 2332,
+  "coefficient_norm_bound": "<512",
+  "degrees": "0..31",
+  "reversal_l1_tail_bound": "65536/(15*2^N), N>=5",
+  "rooted_ray_controls": [
+    {
+      "index": 3,
+      "inverse_first_moment_term_log2_lower": -2,
+      "mass": "1/6",
+      "source": 21,
+      "t": 1
+    },
+    {
+      "index": 227,
+      "inverse_first_moment_term_log2_lower": 220,
+      "mass": "1/21",
+      "source": 1365,
+      "t": 2
+    },
+    {
+      "index": 14563,
+      "inverse_first_moment_term_log2_lower": 14555,
+      "mass": "1/45",
+      "source": 87381,
+      "t": 3
+    },
+    {
+      "index": 932067,
+      "inverse_first_moment_term_log2_lower": 932058,
+      "mass": "1/78",
+      "source": 5592405,
+      "t": 4
+    },
+    {
+      "index": 59652323,
+      "inverse_first_moment_term_log2_lower": 59652314,
+      "mass": "1/120",
+      "source": 357913941,
+      "t": 5
+    }
+  ],
+  "shift_degrees": "0..18",
+  "status": "PASS; finite identities, no positivity oracle",
+  "type_hostiles": 8,
+  "universal_Collatz_coverage": "OPEN"
+}

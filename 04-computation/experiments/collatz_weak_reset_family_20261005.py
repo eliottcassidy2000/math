@@ -10,7 +10,7 @@ whose chained segments (down to ROOT) are q-admissible; q(n) is the least such q
 Theorem (deadline). For n in F_q: every segment with start x >= q satisfies
 y^(2q) 2^l <= x^(2q), hence sum of those lengths <= 2q log_2 n, and the segments
 starting below q are bounded by the finite table of odd sources below q. A
-source-only deadline T_q(n) follows, and Codex's backward compiler turns it
+source-only deadline T_q(n) follows conditional on a supplied checked finite seed table, and Codex's backward compiler turns it
 into a positive weight floor eta(n, T) = 2/((C+2) binom(C+1, floor((C+1)/2))).
 
 Also: a first-descent word w (non-rising, 2^A > 3^l) descends from x exactly
@@ -24,7 +24,6 @@ from fractions import Fraction as F
 from math import comb, factorial, log, log2, ceil
 import argparse
 import json
-import time
 
 import numpy as np
 
@@ -184,13 +183,16 @@ def _census(limit):
 # the deadline, the compiled floor (Codex backward compiler, sections 2-3)
 # ---------------------------------------------------------------------------
 def deadline(n, q, tau_table_max):
-    """T_q(n) = floor(2 q log2 n) + max tau over odd sources below q (0 if q<=1)."""
+    """Historical numerical formula, conditional on a truthful checked seed maximum.
+    Floating log2 is for the finite display, not an all-input exact certificate.
+    """
     return int(2 * q * log2(n)) + tau_table_max
 
 
 def deadline_sharp(n, q, tau_table_max_10q):
     """T'_q(n) = floor(1.051 q log2 n) + max tau over odd sources below 10q:
-    for x >= 10q the carry factor e^(l/(3x)) <= 2^(0.048 l/q)."""
+    conditional on checked seeds; the repaired contraction is 197/207,
+    whose reciprocal 207/197 is below 1.051. This display uses floating log2."""
     return int(1.051 * q * log2(n)) + tau_table_max_10q
 
 
@@ -343,27 +345,38 @@ def section_census(bits, qn, tau, lmax, crit):
     # deadline theorem over the census: tau(n) <= floor(2 q log2 n) + max tau below q
     tau_prefix_max = np.maximum.accumulate(tau)   # max tau over odd y <= 2i+1
     bad = 0
+    skipped = 0
     for i in range(1, len(qn)):
         q = int(qn[i])
         nn = 2 * i + 1
-        tmax = int(tau_prefix_max[(q - 1) // 2 - 1]) if q >= 3 else 0  # odd y < q  -> index (q-1)//2 - 1 at most
+        j = (q - 2) // 2
+        if j >= len(tau):
+            skipped += 1
+            continue
+        tmax = int(tau_prefix_max[j]) if j >= 0 else 0
         if int(tau[i]) > int(2 * q * log2(nn)) + tmax:
             bad += 1
     require(bad == 0, ("deadline violations", bad))
-    print("  deadline tau(n) <= floor(2 q(n) log2 n) + max tau below q(n): holds for all %d sources" % (len(qn) - 1))
+    print("  deadline below-q table: checked %d sources; skipped %d whose required seed table exceeds this census" %
+          (len(qn) - 1 - skipped, skipped))
     bad = 0
+    skipped = 0
     worst = 0.0
     for i in range(1, len(qn)):
         q = int(qn[i])
         nn = 2 * i + 1
-        j = min((10 * q - 1) // 2 - 1, len(tau) - 1)
+        j = (10 * q - 2) // 2
+        if j >= len(tau):
+            skipped += 1
+            continue
         tmax = int(tau_prefix_max[j]) if 10 * q >= 3 else 0
         Ts = int(1.051 * q * log2(nn)) + tmax
         if int(tau[i]) > Ts:
             bad += 1
         worst = max(worst, int(tau[i]) / max(Ts, 1))
     require(bad == 0, ("sharp deadline violations", bad))
-    print("  sharp deadline tau(n) <= floor(1.051 q(n) log2 n) + max tau below 10 q(n): holds for all sources; worst ratio %.3f" % worst)
+    print("  sharp deadline below-10q table: checked %d sources; skipped %d whose required table exceeds this census; worst ratio %.3f" %
+          (len(qn) - 1 - skipped, skipped, worst))
     # distribution of the critical segment length among hard sources
     hard = qs >= 50
     print("  sources with q(n) >= 50: %.5f of the census; their longest segment has mean length %.1f (overall mean %.2f)"
@@ -376,13 +389,12 @@ def main():
     ap.add_argument('--census-bits', type=int, default=20)
     ap.add_argument('--json', type=str, default='')
     args = ap.parse_args()
-    t0 = time.time()
-    section_theory(1 << 16)
+    section_theory(1 << min(16, args.census_bits))
     qn, tau, lmax, crit = _census(1 << args.census_bits)
     rows = section_floors(tau)
     cover, extra = section_census(args.census_bits, qn, tau, lmax, crit)
     print("== Summary ==")
-    print("  checks: %d, total time %.1fs" % (CHECKS, time.time() - t0))
+    print("  checks: %d" % CHECKS)
     if args.json:
         with open(args.json, 'w') as fh:
             json.dump(dict(checks=CHECKS, coverage=cover, extra=extra,

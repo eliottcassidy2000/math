@@ -1,0 +1,15 @@
+Exact funding family: n=(47*2^(13+2t)-1)/3, t>=0; q3, credit0, bank{1,23}.
+  47 -> 23: length34/cost55, least individual rate31; source ROOT rank39.
+  least source128341: cumulative deadline57; q31 bit-bound1058; exact structural rank39.
+  singleton bank{23} gives deadline44, using its actual minimum endpoint; threshold30 cannot be substituted.
+  selected leaf=2737941, degree=148; source floor=1/142707391328010742671022200.
+  a11 source32085 fails credit0, requires exactly4 initial binary credit units.
+  source-only ray test:3n+1=47*2^a, odd a>=3; least q3 credit=max(0,37-3a).
+  phases a3,5,7,9,11 have singleton-bank deadline42; fixed shared excursion/seed costs retained.
+  fixed q1 also works on the phase a=37+2t, with the same finite excursion and seed.
+Finite universe:1009 odd sources31..2047; explicit15-seed bank1..29, max seed rank=41.
+  membership counts={'individual/B0': 306, 'cumulative/B0': 367, 'cumulative/B4': 492, 'cumulative/B16': 664}
+  newly queried odd edges by policy={'individual/B0': 10029, 'cumulative/B0': 11602, 'cumulative/B4': 15117, 'cumulative/B16': 20371}; seed verification separate.
+  least extra203:124 ->43,122 ->37,4 -> checked seed7; first ten extras=[203, 229, 271, 305, 317, 361, 407, 481, 541, 563].
+  summary associativity:64 triples; generic summaries do not supply source legality.
+PASS: 4175 exact checks; no assertion statements; no target ROOT words supplied to recognition.

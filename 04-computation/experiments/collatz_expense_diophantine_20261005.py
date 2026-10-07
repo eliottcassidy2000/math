@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""Diophantine structure of the excess-rate expense, the exact segment-level
+"""CORRECTED: exact record/type algebra; truncated tail intervals; finite census.
+
+The full tail has jumps at every realized rate, not only record rates. No
+stretched-exponential law, logarithmic bank law, or universal adaptive-method
+obstruction is inferred. The natural-density extension is proved in the note.
+
+Diophantine structure of the excess-rate expense, the exact segment-level
 tail, inheritance of hard excursions, and bank-relative two-tier families.
 
 Inherits F_q from collatz_weak_reset_family_20261005.py: a first-descent segment
@@ -17,12 +23,13 @@ running minima. New here:
   Q3  inheritance: popularity of hard excursions as running minima.
   Q4  two-tier families F(q_hi, Y): rate q_hi above Y, table below; coverage and
       the two-tier deadline tau <= floor(1.051 q_hi log2 n) + max tau(odd < Y') (the bank
-      buys coverage, not deadline length: the last admissible segment may land far below Y').
+      displayed telescoping bound uses log2(n), since its final drop can cross Y').
 Companion note: 05-knowledge/results/collatz_expense_diophantine_20261005.md
 Usage: python3 <this file> [--census-bits 20] [--json PATH]
 """
 from fractions import Fraction as F
 from math import log2, ceil, log
+from functools import lru_cache
 import argparse
 import json
 import time
@@ -52,18 +59,35 @@ def admissible(l, A, q):
     return q * A - l >= 0 and (1 << (q * A - l)) >= 3 ** (q * l)
 
 
-import mpmath as mp
-mp.mp.dps = 60
-ALPHA_MP = mp.log(3) / mp.log(2)
+@lru_cache(None)
+def alpha_interval(terms=80):
+    """Rational enclosure of log2(3), from the positive atanh series."""
+    def log_interval(t):
+        lower = 2*sum((t**(2*j+1)/(2*j+1) for j in range(terms)), F(0))
+        upper = lower+2*t**(2*terms+1)/((2*terms+1)*(1-t*t))
+        return lower, upper
+    l2,u2 = log_interval(F(1,3))
+    l3,u3 = log_interval(F(1,2))
+    return l3/u2,u3/l2
 
 
+@lru_cache(None)
 def q_seg_exact(l, A):
     """Least q with 2^(qA-l) >= 3^(ql), i.e. ceil(l/(A - l log2 3)) since log2 3 is irrational.
-    Computed at 60 digits; confirmed by the exact integer test whenever qA <= 2e6 bits."""
+    Certified by rational log enclosures; small cases get an independent integer test."""
     require((1 << A) > 3 ** l, ("not a descent type", l, A))
-    exc = A - l * ALPHA_MP
-    q = int(mp.ceil(l / exc))
-    if q * A <= 2 * 10 ** 6:
+    terms = 80
+    while True:
+        lo,hi = alpha_interval(terms)
+        if A-l*hi > 0:
+            left,right = l/(A-l*lo),l/(A-l*hi)
+            qlo = -(-left.numerator//left.denominator)
+            qhi = -(-right.numerator//right.denominator)
+            if qlo == qhi:
+                q = qlo
+                break
+        terms *= 2
+    if q * A <= 50000:
         require(admissible(l, A, q) and not admissible(l, A, q - 1), ("exact confirmation", l, A, q))
     return q
 
@@ -77,14 +101,13 @@ def A_min(l):
 # ---------------------------------------------------------------------------
 def continued_fraction_upper(limit_den):
     """Best upper approximations p/q > log2 3 with q <= limit_den (semiconvergents of upper type)."""
-    # exact convergents via the integer test 2^p vs 3^q
+    # Scan normalized upper errors; subtracting alpha does not change order.
     best = []
     # brute force: for each q, the least p with 2^p > 3^q; record if p/q - alpha is a new minimum
     rec = None
     for q in range(1, limit_den + 1):
         p = A_min(q)
-        # compare excess p - q alpha exactly through 2^p/3^q = 2^(p - q alpha) : smaller ratio = smaller excess
-        ratio = F(1 << p, 3 ** q)
+        ratio = F(p, q)
         if rec is None or ratio < rec:
             rec = ratio
             best.append((p, q))
@@ -99,7 +122,7 @@ def section_diophantine(lmax=320):
             qe = q_seg_exact(l, A)
             qf = ceil(l / (A - l * ALPHA) - 1e-9)
             require(qe == qf or qe == qf + 1, (l, A, qe, qf))
-    print("  q(l,A) = ceil(l/(A - l log2 3)) matches the exact integer bisection for l<=120, A in [A_min, A_min+3]")
+    print("  rates certified by rational log intervals; independent integer checks when qA<=50000")
     # records of q_max(l) = q(l, A_min(l))
     records = []
     best = 0
@@ -144,7 +167,7 @@ def first_descent_counts(lmax):
 
 
 def section_tail(lmax, census_qseg, census_lA, census_bits=20):
-    print("== Q2. Exact segment-level tail: density of sources whose own first segment has q > Q ==")
+    print("== Q2. Rigorous truncated tail intervals, with total omitted mass retained ==")
     t0 = time.time()
     N = first_descent_counts(lmax)
     # total mass of first-descent types with l <= lmax (as a proportion of odd sources)
@@ -154,19 +177,23 @@ def section_tail(lmax, census_qseg, census_lA, census_bits=20):
         for A, cnt in N[l].items():
             total += F(cnt, 1 << A)
             types.append((l, A, cnt))
-    print("  DP over %d first-descent types with l<=%d (%.1fs): total density %.6f"
-          " (deficit %.2e = sources whose first descent is later than %d odd steps, plus the capped terminal valuations)"
-          % (len(types), lmax, time.time() - t0, float(total), 1 - float(total), lmax))
+    print("  DP over %d first-descent types with l<=%d: total density %.6f"
+          " (deficit %.2e = later coefficient exits plus capped terminal valuations)"
+          % (len(types), lmax, float(total), 1 - float(total)))
     # q for each type via the ceil formula (exact bisection for the small-excess ones)
     tail_at = {}
     thresholds = [2, 3, 7, 8, 13, 31, 67, 104, 310, 800, 2000, 6951]
     for Q in thresholds:
         s = F(0)
         for (l, A, cnt) in types:
-            if ceil(l / (A - l * ALPHA) - 1e-9) > Q:
+            if q_seg_exact(l,A) > Q:
                 s += F(cnt, 1 << A)
         tail_at[Q] = s
-    print("  exact density of {q_seg > Q}:", " ".join("%d:%.5f" % (Q, float(tail_at[Q])) for Q in thresholds))
+    omitted = 1-total
+    print("  truncated lower sums for {q_seg > Q}:", " ".join("%d:%.5f" % (Q, float(tail_at[Q])) for Q in thresholds))
+    print("  every full tail lies between its lower sum and lower sum + %.12g" % float(omitted))
+    require(N[4][7] == 3 and q_seg_exact(4,7) == 7, "nonrecord-rate jump")
+    print("  hostile to record-only staircase: N(4,7)=3, rate7, mass3/128")
     # the staircase: contribution of each record type (l, A_min)
     print("  record types' own densities N(l,A_min)/2^A:")
     for l in (1, 5, 17, 29, 41, 94):
@@ -186,7 +213,9 @@ def section_tail(lmax, census_qseg, census_lA, census_bits=20):
             worst = max(worst, abs(emp - float(F(cnt, 1 << A))))
     print("  type frequencies (l,A) with A<=%d: max |census - exact| = %.2e" % (census_bits - 4, worst))
     require(worst < 1e-4, ("type frequencies", worst))
-    return {Q: str(v) for Q, v in tail_at.items()}
+    return {"lower_sums":{Q:str(v) for Q,v in tail_at.items()},
+            "omitted_mass_upper":str(omitted),
+            "interpretation":"Each full natural-density tail is between lower_sum and lower_sum+omitted_mass_upper."}
 
 
 # ---------------------------------------------------------------------------
@@ -218,6 +247,8 @@ def _census(limit, thresholds):
             l = 0
             A = 0
             while True:
+                if v > 3074457345618258602:
+                    raise OverflowError("3v+1 exceeds signed int64")
                 tt = 3 * v + 1
                 a = 0
                 while (tt & 1) == 0:
@@ -314,6 +345,8 @@ def _coverage_with_bank(limit, bankflag, qh):
             l = 0
             A = 0
             while True:
+                if v > 3074457345618258602:
+                    raise OverflowError("3v+1 exceeds signed int64")
                 tt = 3 * v + 1
                 a = 0
                 while (tt & 1) == 0:
@@ -342,16 +375,20 @@ def main():
     records = section_diophantine(320)
     thresholds = np.array([1 << 6, 1 << 8, 1 << 10, 1 << 12, 1 << 14, 1 << 16], dtype=np.int64)
     own_l, own_A, own_q, qn, tau, qabove, inherit = _census(1 << args.census_bits, thresholds)
+    observed = set(zip(map(int,own_l[1:]),map(int,own_A[1:]),map(int,own_q[1:])))
+    for l,A,q in observed:
+        require(q_seg_exact(l,A) == q, ("census floating rate validated exactly",l,A,q))
+    print("  every observed census type/rate independently certified: %d types" % len(observed))
     n = 2 * np.arange(len(qn)) + 1
     sel = n > 1
     tail = section_tail(200, own_q[sel], np.stack([own_l[sel], own_A[sel]], axis=1), args.census_bits)
     section_inheritance(args.census_bits, own_l, own_A, own_q, qn, tau, qabove, inherit, thresholds)
     print("== Summary ==")
-    print("  checks: %d, total time %.1fs" % (CHECKS, time.time() - t0))
+    print("  checks: %d" % CHECKS)
     if args.json:
         with open(args.json, 'w') as fh:
             json.dump(dict(checks=CHECKS, records=records, tail=tail,
-                           status="PROVED Diophantine structure and exact tail; FINITE-EXACT; census VERIFIED"),
+                           status="PROVED record/type identities and density series; exact truncated tail intervals; finite census only; no universal adaptive no-go"),
                       fh, indent=1, default=str)
         print("  json written:", args.json)
 

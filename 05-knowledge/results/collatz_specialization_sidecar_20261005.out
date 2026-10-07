@@ -1,0 +1,129 @@
+{
+  "checks": 3519,
+  "contraction_bounds": {
+    "12": "760688608955285055080040265802/1531904209838569164276123046875",
+    "7": "3635701142046192706/3707501605224609375",
+    "8": "94201852583192956894/111662942047119140625"
+  },
+  "everywhere_positive_field_missing_atom": {
+    "coefficient_norm": {
+      "denominator_bits": 1972,
+      "dyadic_lower": "1998917/1048576",
+      "dyadic_upper": "999459/524288",
+      "numerator_bits": 1973
+    },
+    "lower": "0",
+    "power_remainder": {
+      "denominator_bits": 2107,
+      "dyadic_lower": "9/1048576",
+      "dyadic_upper": "5/524288",
+      "numerator_bits": 2090
+    },
+    "tail_bill": {
+      "denominator_bits": 1995,
+      "dyadic_lower": "0",
+      "dyadic_upper": "1/1048576",
+      "numerator_bits": 1973
+    },
+    "upper": {
+      "denominator_bits": 24582,
+      "dyadic_lower": "9/1048576",
+      "dyadic_upper": "5/524288",
+      "numerator_bits": 24565
+    }
+  },
+  "noisy_positive_control": {
+    "coefficient_norm": {
+      "denominator_bits": 2719,
+      "dyadic_lower": "2195995/1048576",
+      "dyadic_upper": "548999/262144",
+      "numerator_bits": 2720
+    },
+    "lower": {
+      "denominator_bits": 59124,
+      "dyadic_lower": "32713/524288",
+      "dyadic_upper": "65427/1048576",
+      "numerator_bits": 59120
+    },
+    "power_remainder": {
+      "denominator_bits": 2807,
+      "dyadic_lower": "475/1048576",
+      "dyadic_upper": "119/262144",
+      "numerator_bits": 2796
+    },
+    "tail_bill": {
+      "denominator_bits": 2734,
+      "dyadic_lower": "67/1048576",
+      "dyadic_upper": "17/262144",
+      "numerator_bits": 2720
+    },
+    "upper": {
+      "denominator_bits": 3369,
+      "dyadic_lower": "66057/1048576",
+      "dyadic_upper": "33029/524288",
+      "numerator_bits": 3365
+    }
+  },
+  "positive_control": {
+    "coefficient_norm": {
+      "denominator_bits": 2719,
+      "dyadic_lower": "2195995/1048576",
+      "dyadic_upper": "548999/262144",
+      "numerator_bits": 2720
+    },
+    "lower": {
+      "denominator_bits": 59124,
+      "dyadic_lower": "65437/1048576",
+      "dyadic_upper": "32719/524288",
+      "numerator_bits": 59120
+    },
+    "power_remainder": {
+      "denominator_bits": 2807,
+      "dyadic_lower": "475/1048576",
+      "dyadic_upper": "119/262144",
+      "numerator_bits": 2796
+    },
+    "tail_bill": {
+      "denominator_bits": 2734,
+      "dyadic_lower": "67/1048576",
+      "dyadic_upper": "17/262144",
+      "numerator_bits": 2720
+    },
+    "upper": {
+      "denominator_bits": 59124,
+      "dyadic_lower": "33023/524288",
+      "dyadic_upper": "66047/1048576",
+      "numerator_bits": 59120
+    }
+  },
+  "positive_control_addresses": 94,
+  "precision_plans_epsilon_1_over_256": [
+    {
+      "address_radius": 1356,
+      "degree": 7,
+      "depth": 339,
+      "epsilon": "1/256",
+      "measurement_width": "71800463178416669/2847361232812500000000",
+      "radius": 4
+    },
+    {
+      "address_radius": 117,
+      "degree": 8,
+      "depth": 39,
+      "epsilon": "1/256",
+      "measurement_width": "17461089463926183731/85757139492187500000000",
+      "radius": 3
+    },
+    {
+      "address_radius": 27,
+      "degree": 12,
+      "depth": 9,
+      "epsilon": "1/256",
+      "measurement_width": "771215600883284109196082781073/1176502433156021118164062500000000",
+      "radius": 3
+    }
+  ],
+  "scope": "Truthful simultaneous neighboring measurements remain a premise; no ROOT inputs or new Collatz coverage.",
+  "status": "PROVED conditional spatial inversion; FINITE-EXACT synthetic laws only",
+  "synthetic_brackets": 840
+}

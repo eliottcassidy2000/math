@@ -1,0 +1,43 @@
+{
+  "checks": 705,
+  "coarse_plans_not_expanded": [
+    {
+      "address_count_bound": 286525153,
+      "approximation_bound": "33142604560375/93248822544393",
+      "depth": 5969274,
+      "per_measurement_error": "29643/7511084970803200000",
+      "radius": 24,
+      "tolerance": "1"
+    },
+    {
+      "address_count_bound": 661544901,
+      "approximation_bound": "10311421249953125/58898411402125979",
+      "depth": 13230898,
+      "per_measurement_error": "62411/69368010611097600000",
+      "radius": 25,
+      "tolerance": "1/2"
+    },
+    {
+      "address_count_bound": 6388478265,
+      "approximation_bound": "2520647382000625/116582190025350159",
+      "depth": 114079969,
+      "per_measurement_error": "173721/14290783968428032000000",
+      "radius": 28,
+      "tolerance": "1/16"
+    },
+    {
+      "address_count_bound": 117893518721,
+      "approximation_bound": "58311645230123996875/43218450304857188051253",
+      "depth": 1842086230,
+      "per_measurement_error": "8385483/202539522926823499366400000",
+      "radius": 32,
+      "tolerance": "1/256"
+    }
+  ],
+  "coercivity_lower": "1/200000",
+  "finite_LDL_sizes": "1..12",
+  "operator_upper": 9,
+  "scope": "First-moment field identifies the law; source positivity remains OPEN",
+  "signed_vectors": 243,
+  "status": "PASS; finite spectral and parameter controls, no moment oracle"
+}

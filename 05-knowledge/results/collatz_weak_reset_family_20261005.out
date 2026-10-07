@@ -23,9 +23,9 @@
   max q(n) = 6951 at n = 432923 (critical segment start 432923, longest segment 94, tau 142)
   exact integer verification of q(n) at 7, 27, 55 and the maximizer: agrees with the float census
   Codex run-block tree: 3859 members below 2^20 (incl. 5), all with q(n) <= 3; F_3 has 31920 members
-  deadline tau(n) <= floor(2 q(n) log2 n) + max tau below q(n): holds for all 524287 sources
-  sharp deadline tau(n) <= floor(1.051 q(n) log2 n) + max tau below 10 q(n): holds for all sources; worst ratio 0.692
+  deadline below-q table: checked 524287 sources; skipped 0 whose required seed table exceeds this census
+  sharp deadline below-10q table: checked 524287 sources; skipped 0 whose required table exceeds this census; worst ratio 0.692
   sources with q(n) >= 50: 0.42679 of the census; their longest segment has mean length 23.4 (overall mean 18.63)
 == Summary ==
-  checks: 1602929, total time 99.5s
+  checks: 1602929
   json written: 05-knowledge/results/collatz_weak_reset_family_20261005.json

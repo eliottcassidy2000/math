@@ -1,10 +1,13 @@
 == Q1. The expense depends only on (l,A); records at upper best approximations of log2 3 ==
-  q(l,A) = ceil(l/(A - l log2 3)) matches the exact integer bisection for l<=120, A in [A_min, A_min+3]
+  rates certified by rational log intervals; independent integer checks when qA<=50000
   record lengths (l, A_min, q_max, 2^A - 3^l): [(1, 2, 3, 1), (3, 5, 13, 5), (5, 8, 67, 13), (17, 27, 306, '5.08e+06'), (29, 46, 804, '1.74e+12'), (41, 65, 2480, '4.20e+17'), (94, 149, 6951, '6.66e+42'), (147, 233, 13984, '1.00e+68'), (200, 317, 26668, '1.38e+93'), (253, 401, 56382, '1.60e+118'), (306, 485, 207489, '1.02e+143')]
   these are exactly the denominators of the best upper approximations p/l > log2 3: ['2/1', '5/3', '8/5', '27/17', '46/29', '65/41', '149/94', '233/147', '317/200', '401/253', '485/306']
-== Q2. Exact segment-level tail: density of sources whose own first segment has q > Q ==
-  DP over 8200 first-descent types with l<=200 (0.1s): total density 1.000000 (deficit 5.46e-08 = sources whose first descent is later than 200 odd steps, plus the capped terminal valuations)
-  exact density of {q_seg > Q}: 2:0.63006 3:0.25903 7:0.18743 8:0.17631 13:0.08182 31:0.05549 67:0.00696 104:0.00646 310:0.00093 800:0.00078 2000:0.00018 6951:0.00000
+  every observed census type/rate independently certified: 657 types
+== Q2. Rigorous truncated tail intervals, with total omitted mass retained ==
+  DP over 8200 first-descent types with l<=200: total density 1.000000 (deficit 5.46e-08 = later coefficient exits plus capped terminal valuations)
+  truncated lower sums for {q_seg > Q}: 2:0.63006 3:0.25903 7:0.18743 8:0.17631 13:0.08182 31:0.05549 67:0.00696 104:0.00646 310:0.00093 800:0.00078 2000:0.00018 6951:0.00000
+  every full tail lies between its lower sum and lower sum + 5.45674968957e-08
+  hostile to record-only staircase: N(4,7)=3, rate7, mass3/128
   record types' own densities N(l,A_min)/2^A:
     l=  1 A=  2 N=1 density=2.500e-01 q=3
     l=  5 A=  8 N=7 density=2.734e-02 q=67
@@ -49,5 +52,5 @@
     bank = top 10000 hard excursions, rate q_hi=3: coverage 0.2332
     bank = top 10000 hard excursions, rate q_hi=8: coverage 0.4056
 == Summary ==
-  checks: 2121, total time 3.3s
+  checks: 17611
   json written: 05-knowledge/results/collatz_expense_diophantine_20261005.json

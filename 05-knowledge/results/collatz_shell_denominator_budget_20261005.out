@@ -1,0 +1,53 @@
+{
+  "checks": 2465,
+  "damped_rows": [
+    {
+      "N": 3,
+      "damped_bound_below_power_two": 0,
+      "degree": 9,
+      "denominator_bits": 9,
+      "k": 6,
+      "undamped_cleared_error_bits": 13
+    },
+    {
+      "N": 5,
+      "damped_bound_below_power_two": -3,
+      "degree": 12,
+      "denominator_bits": 27,
+      "k": 7,
+      "undamped_cleared_error_bits": 26
+    },
+    {
+      "N": 9,
+      "damped_bound_below_power_two": -9,
+      "degree": 18,
+      "denominator_bits": 87,
+      "k": 9,
+      "undamped_cleared_error_bits": 64
+    },
+    {
+      "N": 15,
+      "damped_bound_below_power_two": -18,
+      "degree": 27,
+      "denominator_bits": 237,
+      "k": 12,
+      "undamped_cleared_error_bits": 151
+    },
+    {
+      "N": 25,
+      "damped_bound_below_power_two": -33,
+      "degree": 42,
+      "denominator_bits": 647,
+      "k": 17,
+      "undamped_cleared_error_bits": 376
+    }
+  ],
+  "denominator_universe": "N1..25",
+  "extension_controls": "N1,3,5,7,9;25 normalized rational quadratics each",
+  "moment_oracle_inputs": 0,
+  "positive_pole_controls": 48,
+  "prime_valuation_universe": "N1..50, odd primes<100",
+  "small_noninteger_hostile": "-14336/15625",
+  "status": "PASS; coefficient lattice is distinct from readout integrality",
+  "type_hostiles": 9
+}
