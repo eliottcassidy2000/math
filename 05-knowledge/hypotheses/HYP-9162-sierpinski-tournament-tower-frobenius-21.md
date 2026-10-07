@@ -48,3 +48,17 @@ single-seed sea are exactly the Mersenne numbers `2^m - 1` (session note
 doubling of the sea itself read with signs: it makes the owner's "zeros of
 tournament size edged by 2s" precise (each such size carries a doubly regular
 tournament) and shows what symmetry the tower keeps: the heptagon's.
+
+**Update 2026-10-06 (mac-mini, [mod 18/19/7/63 note](../results/mod18_mod19_seven_sixtythree_fractal_20261006.md), section 5).**
+
+* **Arc rule (PROVED, checked `k <= 9`).** `H_(2^k)(x,y) = (-1)^q(x,y)`, where `q(x,y) = sum over bits l with x_l = 1 of (1 + y_l + [x, y differ below bit l])` over `F_2`.
+* **Orbit structure (FINITE-EXACT `k <= 8`).**
+  * `Aut(T_k)` has `2^(k-3)` orbits of size 7 and `2^(k-3) - 1` fixed points (H-index `= 0 mod 8`).
+  * The fixed points induce exactly `T_(k-3)`.
+  * At 63 vertices: `63 = 8·7 + 7`, with a fixed Paley heptagon.
+* **Reduction (PROVED).** The conjecture follows from one lemma: *no vertex of the second copy `T_k'` has a doubly regular out-neighbourhood* (FINITE-EXACT `k <= 9`). The argument:
+  * The vertices with doubly regular out-neighbourhood are exactly the base heptagon plus the apex chain (`k <= 9`).
+  * The top apex dominates all of them, so it is the unique source of that `Aut`-invariant set and is fixed by every automorphism.
+  * The audit's stabiliser result and induction then finish the proof.
+* **The lemma's failures.** They occur only at pairs `(x, y')` with `x ∈ N^+(i)` and `y ∈ N^-(i)`. Their common-out-neighbour count has exact average `λ`, so the lemma is a variance statement about triple intersections.
+* **Status.** OPEN.
