@@ -27,3 +27,17 @@ The dichotomy underneath (IV): on odd n a 4-subset's three pairings contain exac
 crossing and at most one parallel pairing, never the same one — additive coincidence and
 geometric crossing are mutually exclusive, which is why sum classes are page-friendly
 bundles in every variant.
+
+## Update 2026-10-06 (mac-mini-2026-10-06-oaimath2; `05-knowledge/results/oai2_openai_math_second_reading_20261006.md`, section 1)
+
+**(III) for every `n` (PROVED).** The DDS drawing (THM-913, a classical construction) has exactly `Z(n)` crossings for every `n`, even included. This is classical, and checked here for `n <= 120`. With Ábrego–Aichholzer–Fernández-Merchant–Ramos–Salazar (2012: `ν_2(K_n) = Z(n)`), the class-coloring minimum is `Z(n)` for every `n`, unconditionally. The enumeration above had covered `n <= 14`.
+
+**(I) for every `m`.**
+* *The upper bound is PROVED.* The contiguous split of the odd sum classes on `Z_(2m)` has exactly `d_m^2 = Z(m,m)` crossings for every `m`, by a telescoping count:
+
+      Σ_(κ=1)^K (2κ(m−κ) − m)(m − 2κ) = K^2 (m−K−1)^2,   K = floor((m−1)/2).
+
+  It is the DDS drawing of `K_(2m)` restricted to its even–odd edges.
+* *The lower bound is CONDITIONAL on openai/math #165* (`cr(K_(m,n)) = Z(m,n)`). With it, the class-coloring minimum is `Z(m,m)` for every `m`, and the 2-page Zarankiewicz conjecture `ν_2(K_(m,n)) = Z(m,n)` of de Klerk–Pasechnik–Salazar (2014) holds for all `m, n`.
+
+Script: `04-computation/experiments/oai2_20261006_crossing_books.py` (+ `.out`).

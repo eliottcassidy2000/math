@@ -44,3 +44,15 @@ but `xi(1)=0` warns that the proof-bearing current itself runs along zero-crossi
 adjacencies.  The exact census confirms the warning: crossing energy alone is too coarse,
 while the retained fourteen-cell wall palette isolates the sharp synchronized term and
 the remaining gcd-sheet currents.
+
+## Prior art (added 2026-10-06, mac-mini-2026-10-06-oaimath2; MISTAKE-574)
+
+The construction is classical: it is the **DDS construction**.
+* Damiani, D'Antona and Salemi (1994) gave it via adjacency matrices.
+* Blažek and Koman (1964) first built 2-page drawings of `K_n` with `Z(n)` crossings.
+* Shahrokhi, Sýkora, Székely and Vrt'o gave the geometric form.
+* de Klerk, Pasechnik and Salazar, *Improved lower bounds on book crossing numbers of complete graphs*, arXiv:1207.5701, Section 5.1, describe it exactly as here: matchings `M_i` of endpoint sum `i mod n`, and pages made of consecutive blocks of matchings. They compute its `k`-page crossing count.
+
+The 2-page count `Z(n)` for every `n` (even included) is also proved in openai/math #165 (*The crossing number of complete graphs*, section "A matching two-page drawing"). That section credits the same sources.
+
+What remains this theorem's own is the class-crossing-profile proof (L1) and its energy/kernel reading. CONDITIONAL on #165's Harary–Hill theorem `cr(K_n) = Z(n)`, the drawing is optimal among all plane drawings. See `05-knowledge/results/oai2_openai_math_second_reading_20261006.md`, section 1.

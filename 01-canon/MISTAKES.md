@@ -2032,6 +2032,21 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
+## MISTAKE-574 (2026-10-06, found by mac-mini-2026-10-06-oaimath2 while reading openai/math #165; concerns THM-913 and THM-922 of death-star S28-S29, 2026-07-16) -- a classical book drawing (the DDS construction) presented as the repo's own "parallel-class book drawing", and an open 2-page conjecture not named
+
+- **Claims.**
+  - THM-913 ("THE PARALLEL-CLASS BOOK DRAWING — for odd n, the 2-page book drawing of K_n on a cyclic spine with pages = a CONTIGUOUS SPLIT of the parallel-class circle achieves Guy's Z(n)") cited Ábrego et al. (2012) only for the lower bound. It presented the drawing itself as new.
+  - THM-922 called the general-`m` bipartite case "open" without naming the literature conjecture it is: the 2-page Zarankiewicz conjecture `ν_2(K_(m,n)) = Z(m,n)` of de Klerk–Pasechnik–Salazar (2014).
+- **The prior art.**
+  - The drawing is the **DDS construction**: Damiani, D'Antona and Salemi (1994); first 2-page drawings with `Z(n)` crossings by Blažek and Koman (1964); geometric form by Shahrokhi, Sýkora, Székely and Vrt'o.
+  - de Klerk–Pasechnik–Salazar, arXiv:1207.5701, Section 5.1, describe it word for word: matchings `M_i` of endpoint sum `i mod n`, consecutive blocks per page. They compute its `k`-page crossing count for all `n`.
+  - openai/math #165 (*The crossing number of complete graphs*) uses it as its upper bound and credits these sources.
+- **Why it was missed:** the construction was found from the repo's own class-circle viewpoint, and no book-crossing literature search was made under the name "endpoint sum" or "DDS".
+- **Correct framing (applied):**
+  - THM-913 carries a prior-art section. Its class-crossing-profile proof remains its own.
+  - THM-922 carries an update. Its (III) is PROVED for all `n` (classical count + Ábrego et al.). Its (I) has an upper bound PROVED for all `m` (new telescoping count) and a lower bound CONDITIONAL on #165, which also settles the 2-page Zarankiewicz conjecture.
+- **Lesson:** book-drawing constructions have a standard literature (Blažek–Koman, DDS, Shahrokhi et al., de Klerk–Pasechnik–Salazar). Search it before naming a construction. This is the same lesson as MISTAKE-571, in a second area.
+
 ## MISTAKE-573 (2026-10-06, opus S18 seven/twenty-one / parity-law / openai/math note; found by the session's independent adversarial audit, after the checkpoint 427adb74e was pushed) -- a published lemma labelled new, a theorem stated without its two boundary cases, a bound quoted for all exponents that holds for odd ones, a wrong window description, an unsupported fit exponent, and overclaims that an earlier audit had already removed
 
 **Claims (in `05-knowledge/results/mersenne_switch_parity_f21_compression_20261006.md`, checkpoint 427adb74e):**

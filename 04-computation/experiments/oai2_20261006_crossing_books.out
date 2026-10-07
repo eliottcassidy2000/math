@@ -1,0 +1,13 @@
+1. DDS two-page drawing of K_n
+  ok   c(DDS K_n) = Z(n) = (1/4) floor(n/2) floor((n-1)/2) floor((n-2)/2) floor((n-3)/2), 3 <= n <= 120
+2. parity-bipartite endpoint-sum drawing of K_{m,m}
+  ok   c = d_m^2 = Z(m,m) for 1 <= m <= 60
+  ok   sum_(kappa=1)^K (2 kappa (m-kappa) - m)(m - 2 kappa) = K**2*(-K + m - 1)**2
+  ok   at K = floor((m-1)/2): K^2 (m-K-1)^2 = d_m^2 for m odd and even
+  ok   the parity drawing is the DDS drawing of K_(2m) restricted to the even-odd edges: d_m^2 of its Z(2m) crossings, 2 <= m <= 30
+   e.g. Z(2m) vs d_m^2: [(6, 3, 1), (8, 18, 4), (10, 60, 16), (12, 150, 36), (14, 315, 81), (16, 588, 144)]
+3. class-coloring minima (exhaustive, small cases; THM-922 re-check)
+  ok   min over all 2-page class colorings of K_n = Z(n), 5 <= n <= 11 (with Abrego et al. 2012: every n)
+4. the rank inequality of #165 (sanity)
+  ok   300 random instances (m <= 5, N <= 4): sum_(i,j) dim(U_i n V_j) <= floor(m^2/4) N whenever U_i n V_i = 0
+ALL CHECKS PASSED
