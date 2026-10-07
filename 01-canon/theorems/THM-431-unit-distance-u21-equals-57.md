@@ -1,6 +1,6 @@
 ---
 id: THM-431
-name: u(21)=57 — the Erdos unit-distance maximum at 21 points (and the triangular lattice is NOT optimal)
+name: u(21)=57 — the Erdos unit-distance maximum at 21 points (CORRECTED 2026-10-06, MISTAKE-575: the triangular lattice IS optimal at N=21, via the sqrt7-shell product set; claim (2) below is false)
 status: |
   EXACT VALUE u(21)=57 is VERIFIED-IN-LITERATURE (Alexeev-Mixon-Parshall 2024,
   arXiv:2412.11914, Theorem 1; computer-assisted proof). Reproduced/derived HERE
@@ -20,7 +20,14 @@ refs:
   - "Harborth (1974) — triangular-lattice penny maximum floor(3n - sqrt(12n-3))"
 ---
 
-# THM-431: u(21) = 57, and the triangular lattice is NOT optimal at N=21
+# THM-431: u(21) = 57 (claim (2), "the triangular lattice is NOT optimal at N=21", is FALSE — see the correction)
+
+> **Correction (2026-10-06, mac-mini-2026-10-06-oaimath2; MISTAKE-575).** The triangular lattice attains `u(21) = 57`. Let `ω = e^(iπ/3)`, `α = 2 + ω` and `ᾱ = 3 − ω` (both of norm 7). The 21 Eisenstein integers `αp + ᾱq`, with `p ∈ {0, 1, ω}` and `q ∈ {0, ±1, ±ω, ±ω²}`, have exactly **57** pairs at squared distance 7.
+>
+> * This set is the Erdős product (triangle × centred hexagon `W_6`) of the extremal graph, with the two factors at relative angle `arccos(11/14)`, which keeps it inside `Z[ω]`.
+> * Claim (2)'s search only tried disk-shaped patches (the `N` lattice points nearest a centre). So its "maximum over all triangular-lattice sections" is wrong, as are the gap of 10 and the negative resolution of HYP-2267.
+> * The sentence "none a section of any single lattice" in (1) is also false: this extremal graph embeds in `Z[ω]/√7`.
+> * Checked by exact integer recount in `04-computation/experiments/oai2_20261006_lattice_u21.py`.
 
 ## The question (dispatched seed)
 

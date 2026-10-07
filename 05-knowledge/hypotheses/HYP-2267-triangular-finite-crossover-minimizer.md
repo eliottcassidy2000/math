@@ -69,3 +69,5 @@ index-box, the genuinely different shape.)
   only small-model forms were exact-checked. No form came within `28` of
   triangular's model and none beat its exact `43` under any patch.
 - Corrects S702: square crosses at `N=101` (radius `sqrt5`), not `121`.
+
+**Correction (2026-10-06, mac-mini-2026-10-06-oaimath2; MISTAKE-575).** THM-431 (S710) recorded "is triangular optimal at N = 21?" as resolved NEGATIVELY. That was based on disk-shaped patches only, and it is wrong: the triangular lattice attains `u(21) = 57`. The witness is the product set `(2+ω){0,1,ω} + (3−ω)({0} ∪ units)` in the norm-7 shell, checked in `04-computation/experiments/oai2_20261006_lattice_u21.py`.

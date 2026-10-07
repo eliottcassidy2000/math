@@ -54,7 +54,7 @@ unit-distance graph, so
 ```
 
 (21 distinct vertices `= 3·7`; no edge collisions at generic angle — the standard
-Erdos product construction.) **Note vs canon:** the S630 reflection's reading
+Erdos product construction.) **Note (2026-10-06, MISTAKE-575):** the "generic" angle can be taken to be `arccos(11/14)`, the angle between the norm-7 Eisenstein integers `2 + ω` and `3 − ω`. The product then lies in `Z[ω]` scaled to distance `√7`, so the triangular lattice attains `u(21) = 57` (contrary to the sibling file's claim (2)). **Note vs canon:** the S630 reflection's reading
 `57 = 20 + 37` (Hamiltonian-spine + centered-hex bulk) is *not* the structure of
 the proven extremal graph; the correct split is the product split `57 = 21 + 36`
 (`e(T)n(W) + n(T)e(W)`). Most AMP extremal graphs `n ≤ 21` live in Engel's "Moser

@@ -1,0 +1,6 @@
+  ok   N(2 + w) = N(3 - w) = 7
+  ok   cos(angle(alpha, alphabar)) = 0.785714285714 = 11/14
+  ok   triangle x W_6: 21 points, 57 pairs at distance sqrt7 = u(21) = 57
+  ok   factors: triangle 3 edges, W_6 12 edges; 3*12 + 7*3 = 57
+  ok   W_6 x W_6: 49 points, 168 pairs (> 3N = 147)
+ALL CHECKS PASSED

@@ -2032,6 +2032,23 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
+## MISTAKE-575 (2026-10-06, found by mac-mini-2026-10-06-oaimath2's reader of openai/math #090; concerns THM-431 of monad-explorer S710, 2026-06-06) -- "the triangular lattice is NOT optimal at N = 21 (max over all lattice sections = 47, gap 10)", from a search over disk-shaped patches only
+
+- **Claims (THM-431, `THM-431-unit-distance-u21-equals-57.md`, and the historical HYP index line for HYP-2267):**
+  - "(2) The triangular lattice is NOT optimal at N=21 [PROVED here, exact integer]. The maximum over **all** triangular-lattice (Eisenstein) sections is Harborth's penny number 47 … the gap is 10 … HYP-2267 … resolves NEGATIVELY."
+  - Separately: "none [of the 5 extremal graphs is] a section of any single lattice."
+- **The counterexample (FINITE-EXACT; `04-computation/experiments/oai2_20261006_lattice_u21.py`).**
+  - Take `α = 2 + ω` and `ᾱ = 3 − ω` (both of norm 7; `cos ∠(α, ᾱ) = 11/14`).
+  - The 21 Eisenstein integers `αp + ᾱq`, with `p ∈ {0, 1, ω}` and `q ∈ {0} ∪ units`, have exactly 57 pairs at distance `√7`. Since `u(21) = 57` (Alexeev–Mixon–Parshall 2024), the triangular lattice attains it.
+  - The set is the Erdős product triangle × `W_6`, i.e. the extremal graph that THM-431's sibling file already described "at generic angle".
+  - The same construction gives `W_6 × W_6`: 49 lattice points with 168 > `3N` unit distances.
+- **Why it was wrong:** the search script `unit_distance_u21_constructions_s710.py` tried only the `N` lattice points nearest a centre, at several norms. "The maximum over all sections" was never searched. The product structure and its resonant angle inside `Z[ω]` were not tried.
+- **Correct framing (applied):**
+  - THM-431 (both files) and HYP-2267 carry the correction.
+  - The live claim is now: the triangular lattice attains `u(N)` at `N = 21` (and, per the reader's search, at every `N <= 12`; one edge short for `13 <= N <= 20` in two searches, NUMERICAL, OPEN).
+  - THM-431 (C) and HYP-2301 (searches restricted to the `√7` disk family) should be re-audited with product sets.
+- **Lesson:** a claim of the form "maximum over all lattice sections" needs a search over all shapes. Algebraic constructions such as Minkowski products at resonant angles beat disk patches.
+
 ## MISTAKE-574 (2026-10-06, found by mac-mini-2026-10-06-oaimath2 while reading openai/math #165; concerns THM-913 and THM-922 of death-star S28-S29, 2026-07-16) -- a classical book drawing (the DDS construction) presented as the repo's own "parallel-class book drawing", and an open 2-page conjecture not named
 
 - **Claims.**
