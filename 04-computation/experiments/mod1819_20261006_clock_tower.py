@@ -8,14 +8,18 @@
      (21 = 63/3, 87381 = (2^18-1)/3 = 9*7*19*73); a_j is a dead end (multiple of 3, no odd predecessor) iff 3 | j.
   C. Mersenne numbers 2^a - 1 and the backward sieve: a even -> multiple of 3 (no ancestors; reset switch
      2^a - 1 => 2^(a-1) - 1); a = 5 mod 6 -> = 4 mod 9 -> smaller ancestor (8n-5)/9 at depth 2;
-     a = 1, 3 mod 6 -> backward-minimal except a = 13, 67 (= 13 mod 54, word (2,2,1,1)), 69, 103 (a <= 120);
-     for each depth k the set of odd a with a subcritical legal word of length <= k is periodic mod 2*3^(k-1)
-     with density exactly 1 - 2 s(k) (s = backward-sieve survival, mod1819_20261006_backward_sieve.py).
+     a = 1, 3 mod 6 -> backward-minimal except a = 13, 67 (class 13 mod 54, 54 = ord_81(2); word (2,2,1,1)), 69, 103
+     (odd 3 <= a <= 119); for each depth k the set of odd a with a subcritical legal word of length <= k is periodic
+     mod 2*3^(k-1) with density exactly 1 - 2 s(k) (s = backward-sieve survival, mod1819_20261006_backward_sieve.py).
   D. the rewrite compiler's 239 residual seeds (checked_switch_phase19_20261004.json, n <= 10000) are all
-     backward-minimal: 153 multiples of 3 and 86 others with no smaller ancestor (depth 40); base rate 0.294.
-  E. the Sierpinski tower (HYP-9162): explicit arc rule over F_2, Aut orbit structure, self-similarity of the
-     fixed set (T_(k-3)), the distinguished set D (base heptagon + apex chain), and the reduction of HYP-9162 to
-     "no vertex of the second copy has a doubly regular out-neighbourhood" (verified k <= 9).
+     backward-minimal: 153 multiples of 3 and 86 others with no smaller ancestor (depth 40 and 60); base rate
+     245/834; the seeds are a proper subset of the backward-minimal comparable sources (153 of 416 multiples of 3,
+     86 of 245 others); 992/3332 of the odd n in [5, 10^4] prime to 3 are backward-minimal (depth 40).
+  E. the Sierpinski tower (HYP-9162): explicit arc rule over F_2 (proof: induction on the top bit, using that H is
+     skew off the diagonal, H + H^T = 2I), q(8x, 8y) = q(x, y) (the multiples of 8 induce T_(k-3) for every k),
+     F_21 = Aut(P_7) acting on the low three bits is a group of automorphisms of every T_k, Aut orbit structure
+     (|Aut| = 21 for k <= 7 by nauty), the distinguished set D (base heptagon + apex chain), and the reduction of
+     HYP-9162 to "no vertex of the second copy has a doubly regular out-neighbourhood" (verified k <= 9).
 Run: python3 mod1819_20261006_clock_tower.py   (~3 min; needs sympy, numpy, nauty's dreadnaut)
 """
 import math, json, subprocess, re
@@ -96,9 +100,10 @@ res = {aa: ancestor_word(2 ** aa - 1) for aa in range(3, 121, 2)}
 check(all(res[aa] is not None and res[aa][0] == 2 for aa in res if aa % 6 == 5), "a = 5 mod 6: 2^a - 1 = 4 mod 9, smaller ancestor (8n-5)/9 at depth 2")
 exc = [aa for aa in res if aa % 6 in (1, 3) and res[aa] is not None]
 check(exc == [13, 67, 69, 103] and res[13][1] == res[67][1] == (2, 2, 1, 1),
-      f"a = 1, 3 mod 6, a <= 120: backward-minimal except {exc}; a = 13, 67 (= 13 mod 54 = ord_81(2)) share the word (2,2,1,1)")
+      f"a = 1, 3 mod 6, odd 3 <= a <= 119: backward-minimal except {exc}; a = 13, 67 (class 13 mod 54, 54 = ord_81(2)) share the word (2,2,1,1)")
 bm = [aa for aa in res if res[aa] is None]
-print(f"   backward-minimal odd exponents a <= 120: {len(bm)} of {len(res)} = {len(bm) / len(res):.3f}  (3-adic prediction 2 s_inf in [0.5764, 0.5982])")
+print(f"   backward-minimal odd exponents 3 <= a <= 119: {len(bm)} of {len(res)} = {len(bm) / len(res):.3f}"
+      "  (at depth k the exact density is 2 s(k), tending to 2 s_inf in [0.5764, 0.5983])")
 check(all(sorted({pow(2, aa, 3 ** k) for aa in range(1, 2 * 3 ** (k - 1) + 1, 2)}) == sorted(x for x in range(3 ** k) if x % 3 == 2) for k in range(1, 8)),
       "odd a mod 2*3^(k-1) -> 2^a mod 3^k is a bijection onto the classes = 2 mod 3: Mersenne numbers sample the 3-adic classes = 1 mod 3 uniformly")
 
@@ -109,6 +114,7 @@ mult3 = [n for n in seeds if n % 3 == 0]
 other = [n for n in seeds if n % 3]
 check(len(seeds) == 239 and len(mult3) == 153 and all(ancestor_word(n, 40) is None for n in other),
       f"all 239 residual seeds are backward-minimal: {len(mult3)} multiples of 3 (no ancestors) + {len(other)} with no smaller ancestor (depth 40)")
+check(all(ancestor_word(n, 60) is None for n in other), f"the {len(other)} seeds prime to 3 still have no smaller ancestor at depth 60")
 
 
 def first_reset(n):
@@ -122,8 +128,15 @@ def first_reset(n):
 
 
 pop = [n for n in range(3, 10001, 2) if n % 3 and n % 4 == 3 and first_reset(n)[1] == 2]
-rate = sum(ancestor_word(n, 40) is None for n in pop) / len(pop)
-print(f"   base rate: odd n <= 10000, 3 not dividing n, first reset 2: {len(pop)} numbers, backward-minimal fraction {rate:.3f}")
+pop_bm = {n for n in pop if ancestor_word(n, 40) is None}
+pop3 = {n for n in range(3, 10001, 2) if n % 3 == 0 and n % 4 == 3 and first_reset(n)[1] == 2}
+print(f"   base rate: odd n <= 10000, 3 not dividing n, = 3 mod 4, first reset 2: {len(pop)} numbers, backward-minimal {len(pop_bm)}/{len(pop)} = {len(pop_bm) / len(pop):.3f}")
+check(all(n % 4 == 3 and first_reset(n)[1] == 2 for n in seeds) and set(mult3) < pop3 and set(other) < pop_bm,
+      f"the seeds are all = 3 mod 4 with first reset 2, and a proper subset of the backward-minimal comparable sources:"
+      f" {len(mult3)} of the {len(pop3)} multiples of 3, {len(other)} of the {len(pop_bm)} others")
+allu = [n for n in range(5, 10001, 2) if n % 3]
+nbm = sum(ancestor_word(n, 40) is None for n in allu)
+print(f"   all odd n in [5, 10^4] prime to 3: backward-minimal {nbm}/{len(allu)} = {nbm / len(allu):.4f} (depth 40; 3-adic 1 - s_inf in [0.70088, 0.71180] is the measure of the complement)")
 
 print("E. the Sierpinski tower (HYP-9162)")
 
@@ -143,8 +156,28 @@ def qform(k, x, y):
     return s
 
 
-check(all(((Hmat(k)[x, y] == 1) == (qform(k, x, y) == 0)) for k in range(1, 8) for x in range(2 ** k) for y in range(2 ** k)),
-      "arc rule: H_(2^k)(x,y) = (-1)^q(x,y), q = sum over bits l with x_l = 1 of (1 + y_l + [x, y differ below bit l])  (k <= 7)")
+check(all((Hmat(k) + Hmat(k).T == 2 * np.eye(2 ** k, dtype=int)).all() for k in range(1, 11)),
+      "H_(2^k) + H_(2^k)^T = 2I (skew off the diagonal; induction: H_2n + H_2n^T = [[H + H^T, 0], [0, H + H^T]]), k <= 10")
+HM = {k: Hmat(k) for k in range(1, 10)}
+check(all(((HM[k][x, y] == 1) == (qform(k, x, y) == 0)) for k in range(1, 10) for x in range(2 ** k) for y in range(2 ** k)),
+      "arc rule: H_(2^k)(x,y) = (-1)^q(x,y), q = sum over bits l with x_l = 1 of (1 + y_l + [x, y differ below bit l])  (k <= 9;"
+      " proof: top bit 0 -> H_n(x',y'); top bit 1 -> -/+ H_n(y',x') = (-1)^[x' != y'] H_n(x',y') by skewness)")
+check(all(qform(k, 8 * x, 8 * y) == qform(k - 3, x, y) for k in range(4, 11) for x in range(2 ** (k - 3)) for y in range(2 ** (k - 3))),
+      "q(8x, 8y) = q(x, y) (k <= 10): the multiples of 8 induce T_(k-3) in T_k for every k (PROVED: bits shift by 3)")
+import itertools
+P7 = [[qform(3, x, y) == 0 and x != y for y in range(1, 8)] for x in range(1, 8)]
+AutP7 = [p for p in itertools.permutations(range(7)) if all(P7[p[i]][p[j]] == P7[i][j] for i in range(7) for j in range(7))]
+
+
+def lift(p, x):
+    lo = x & 7
+    return x if lo == 0 else (x & ~7) | (p[lo - 1] + 1)
+
+
+check(len(AutP7) == 21 and all(qform(k, lift(p, x), lift(p, y)) == qform(k, x, y)
+                                for k in range(3, 9) for p in AutP7 for x in range(1, 2 ** k) for y in range(1, 2 ** k)),
+      "Aut(T_3) = Aut(P_7) has order 21, and each automorphism acting on the low three bits (fixing multiples of 8) is an"
+      " automorphism of T_k (k <= 8; PROVED for all k: q = q_3(x mod 8, y mod 8) + terms depending on high bits and [x != y mod 8])")
 
 
 def tower(k):
@@ -211,6 +244,7 @@ for k in range(4, 10):
     check(D == list(range(7)) + apexes and all(A[top, v] for v in D if v != top),
           f"T_{k}: vertices with doubly regular out-neighbourhood = base heptagon + apex chain {apexes}; the top apex dominates all of them"
           " (so it is the unique source of T[D] and every automorphism fixes it)")
-print("   => HYP-9162 follows from the lemma 'no vertex of the second copy T_k' has a doubly regular out-neighbourhood' (verified k <= 9);")
-print("      the stabiliser of 0' is exactly the diagonal extensions (audit of HYP-9162), so Aut(T_(k+1)) = Aut(T_k) = F_21 by induction.")
+print("   => HYP-9162 follows from the lemma 'no vertex of the second copy T_k' has a doubly regular out-neighbourhood' (verified k <= 9):")
+print("      N+(0') = T_k is doubly regular, so 0' is in D; the lemma gives D inside T_k + {0'}; since 0' -> T_k, 0' is the unique")
+print("      source of the Aut-invariant set D; the stabiliser theorem (audit of HYP-9162) and induction from Aut(P_7) = F_21 finish.")
 print("ALL CHECKS PASSED" if OK else "SOME CHECK FAILED")

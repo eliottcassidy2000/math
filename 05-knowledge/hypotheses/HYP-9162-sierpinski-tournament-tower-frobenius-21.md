@@ -49,16 +49,19 @@ doubling of the sea itself read with signs: it makes the owner's "zeros of
 tournament size edged by 2s" precise (each such size carries a doubly regular
 tournament) and shows what symmetry the tower keeps: the heptagon's.
 
-**Update 2026-10-06 (mac-mini, [mod 18/19/7/63 note](../results/mod18_mod19_seven_sixtythree_fractal_20261006.md), section 5).**
+**Update 2026-10-06 (mac-mini, [mod 18/19/7/63 note](../results/mod18_mod19_seven_sixtythree_fractal_20261006.md), section 5; independently audited, corrections in MISTAKE-569).**
 
-* **Arc rule (PROVED, checked `k <= 9`).** `H_(2^k)(x,y) = (-1)^q(x,y)`, where `q(x,y) = sum over bits l with x_l = 1 of (1 + y_l + [x, y differ below bit l])` over `F_2`.
-* **Orbit structure (FINITE-EXACT `k <= 8`).**
-  * `Aut(T_k)` has `2^(k-3)` orbits of size 7 and `2^(k-3) - 1` fixed points (H-index `= 0 mod 8`).
-  * The fixed points induce exactly `T_(k-3)`.
-  * At 63 vertices: `63 = 8·7 + 7`, with a fixed Paley heptagon.
-* **Reduction (PROVED).** The conjecture follows from one lemma: *no vertex of the second copy `T_k'` has a doubly regular out-neighbourhood* (FINITE-EXACT `k <= 9`). The argument:
-  * The vertices with doubly regular out-neighbourhood are exactly the base heptagon plus the apex chain (`k <= 9`).
-  * The top apex dominates all of them, so it is the unique source of that `Aut`-invariant set and is fixed by every automorphism.
-  * The audit's stabiliser result and induction then finish the proof.
-* **The lemma's failures.** They occur only at pairs `(x, y')` with `x ∈ N^+(i)` and `y ∈ N^-(i)`. Their common-out-neighbour count has exact average `λ`, so the lemma is a variance statement about triple intersections.
+* **Arc rule (PROVED; checked `k <= 9`).** `H_(2^k)(x,y) = (-1)^q(x,y)`, where `q(x,y) = sum over bits l with x_l = 1 of (1 + y_l + [x, y differ below bit l])` over `F_2`.
+  * Proof: induction on the top bit. `H` is skew off the diagonal (`H + H^T = 2I`, by induction from the block form).
+  * If `x`'s top bit is 0, the entry is `H_n(x', y')`. If it is 1, the entry is `∓H_n(y', x') = ∓(-1)^[x' ≠ y'] H_n(x', y')`, which is the new top-bit term of `q`.
+* **Self-similarity (PROVED).** `q(8x, 8y) = q(x, y)`, so for every `k` the multiples of 8 induce exactly `T_(k-3)`.
+* **Frobenius action (PROVED).** `q(x,y)` is `q_3(x mod 8, y mod 8)` plus terms that depend only on the high bits and on `[x ≢ y (mod 8)]`. Hence every automorphism of `T_3 = P_7`, acting on the low three bits and fixing the multiples of 8, is an automorphism of every `T_k`. So `F_21 <= Aut(T_k)`, with `2^(k-3)` orbits `{8m+1, ..., 8m+7}` of size 7 and `2^(k-3) - 1` fixed points.
+* **Equality `|Aut(T_k)| = 21` (FINITE-EXACT `k <= 8`, nauty).** At 63 vertices this is `63 = 8·7 + 7`: eight heptagon orbits around a fixed Paley heptagon.
+* **Reduction (PROVED).** Let `D` be the set of vertices with a doubly regular out-neighbourhood. The conjecture follows from one lemma: *no vertex of the second copy `T_k'` lies in `D`* (FINITE-EXACT `k <= 9`).
+  * `N^+(0') = T_k` is doubly regular, so `0' ∈ D`.
+  * The lemma gives `D ⊆ T_k ∪ {0'}`.
+  * Since `0' -> T_k`, `0'` is the unique source of the `Aut`-invariant set `D`.
+  * The stabiliser theorem of this hypothesis's audit (`Stab(0')` = the diagonal extensions of `Aut(T_k)`) and induction from `Aut(P_7) = F_21` finish the proof.
+  * Separately, `D` is exactly the base heptagon plus the apex chain for `k <= 9` (FINITE-EXACT). The reduction does not use this.
+* **The lemma's failures.** They occur only at pairs `(x, y')` with `x ∈ N^+(i)` and `y ∈ N^-(i)`. Pairs of other types provably have count `λ`, and the failing type's average is exactly `λ` (double counting). So the lemma is a variance statement about triple intersections.
 * **Status.** OPEN.

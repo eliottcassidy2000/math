@@ -762,8 +762,16 @@ all heights (THM-1289, published), δ ineffective.
   queen = Paley(49), nightrider = its complement, the only order-8 rotation. One point-stripping ladder:
   `PSL(2,7)` > Borel `= Aut(P_7)` > split torus `= Aut(P_7 - 0)` (THM-4524) = the Collatz Frobenius of the S15
   nineteenth note; octonionic `J` at `e_0` = Fano matching `q -> 3q` (`QR_7 -> NQR_7`). Lean: `beta(P_7) = 6`,
-  63 minima (56 Hall obstructions + 7 exotic stars). S6 manuscript: ANALOGY only. Lyapunov `n = 6` OPEN (stripping law along the KV branch).
+  63 minima (56 Hall obstructions + 7 exotic stars). S6 manuscript: ANALOGY only. Lyapunov `n = 6` OPEN (HYP-9212: KV's Adam recipe finds 0/11250 at `n = 6` against ~2% at `n = 7`).
   No Collatz, LRC or Hopf consequence.
+- **Mod 18 / mod 19 / 7 / 63 / fractal recursion (mac-mini, 2026-10-06; [note](../05-knowledge/results/mod18_mod19_seven_sixtythree_fractal_20261006.md), THM-4554, HYP-9162 update).**
+  One 3-adic clock tower L_n = ord_{3^n}(2) = 2·3^(n-1) carries 63 (level 2), mod 18 and 19 (level 3: ord_27(2) = ord_19(2) = 18).
+  D62 answered: the minimal counterexample's backward sieve keeps a positive proportion, s_inf in [0.28820, 0.29912]
+  (THM-4554, independently audited; MISTAKE-569). Its rate 3^-(1-h) mirrors the forward glide rate 2^-(1-h): mirror
+  families on opposite sides of 2^K = 3^d, with the same Moran function g. The rewrite program's residual seeds
+  (239/239 below 10^4, a proper subset of the backward-minimal sources) are backward-minimal, so every remaining
+  obligation needs a forward join. Odd Mersenne numbers sample the 3-adic classes uniformly. HYP-9162 is reduced to one
+  lemma (verified k <= 9). No Collatz consequence.
 
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`
 (ranks HN > reconstruction > Kakeya/Falconer > sunflower > Caccetta–Häggkvist > … ).

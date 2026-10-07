@@ -2032,6 +2032,89 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
+## MISTAKE-569 (2026-10-06, mac-mini mod 18/19/7/63 session; found by the session's independent adversarial audit, after the checkpoint e383ff193a was pushed) -- four bounds rounded inward, a tail bound paraphrased into a false form, a repo table on the wrong clock, a numerical fit typed FINITE-EXACT, "same lattice paths" for mirror families, a wrong citation, and several overclaims
+
+- **Claims (in THM-4554, `05-knowledge/results/mod18_mod19_seven_sixtythree_fractal_20261006.md` and the HYP-9162 update, checkpoint e383ff193a):**
+  - (1) Rounding inward:
+    - the bracket's lower end `0.28821`, although `s(16)` minus the tail is `0.2882095614`;
+    - `1 − s_∞ <= 0.71179` and `2s_∞ <= 0.5982`;
+    - the lower bounds `s_∞ >= 0.22426` (note §3) and `>= 0.2243` (§0).
+  - (2) "The dropped window and the depth tail are bounded by `R(θ) 2^(-θh)` ... contributing `< 10^-29`."
+    - As written this is false: the measured dropped mass is about `0.152·2^-W` (at `W = 20`, `1.45e-7` against `R·2^-30 = 1.7e-8`).
+    - It reused `h`, the exceptional dimension's symbol, for the excess, and gave `ρ(3/2) = 0.9474` instead of `0.94729`.
+    - The script's actual bound, `Σ_d N_(d-1) (1/2) 3^(1-d) R 2^(-θ e_d)/(1 - 2^-θ) = 4.1e-30`, was valid all along.
+  - (3) The repo's backward-sieve table (`collatz_connectivity_from_rigidity_20261001.out`, section D) was called a "T-depth table" that "agrees". It counts `3n+1` and `n/2` as separate steps (depth `D = K + d`), so its entries are `s(max{d : d + ⌊d log_2 3⌋ <= D})`.
+  - (4) The backward census and the glide law:
+    - the census law `m_d ~ C(d) d^(-3/2) 3^-(1-h)d` was typed FINITE-EXACT and called "exactly the forward glide law", although only `m_d <= (3/2) 3^-(1-h)d` is proved (a free fit gives the exponent `-1.52`);
+    - "both count the same lattice paths" is false: glide words keep their density of ones above `log_3 2` on every prefix, while backward first-passage words keep it below until the last step;
+    - `W_k = Θ(2^(hk) k^(-3/2))` was cited to THM-4504; it is THM-4495.
+  - (5) Overclaims:
+    - "every repo appearance of 18, 19, 7 and 63 is a level of a single tower" (`checked_switch_phase19` itself flags its count of 19 debt heights as non-structural);
+    - "a proof cannot come from the backward side";
+    - "the quantitative content of 'interlock only through size'";
+    - "the residual task is exactly: forward joins for backward-minimal reset-2 sources";
+    - "backward-minimal with density `2s_∞`";
+    - "`D` has measure `1 − s_∞`";
+    - "a minimal counterexample must lie in this set".
+  - (6) Ranges, conventions and citations:
+    - "odd `a <= 120`" for the 59 exponents;
+    - "`13 mod 54 = ord_81(2)`";
+    - "7 is the first backward-minimal Mersenne number";
+    - the hexagon polynomial cited only to THM-4521;
+    - "the `−17` cycle's `2^18 − 1`" without naming the map;
+    - the Heegner numerology left open-ended;
+    - "29.77%" without saying that `n = 1` is excluded.
+  - (7) The HYP-9162 reduction:
+    - its PROVED argument leaned on the FINITE-EXACT (`k <= 9`) characterization of the distinguished set;
+    - the arc rule was typed PROVED with no written proof;
+    - the self-similarity was typed FINITE-EXACT, although `q(8x, 8y) = q(x, y)` proves it.
+- **Why it was wrong:**
+  - (1) bounds were rounded to nearest instead of outward;
+  - (2) the script's bound was paraphrased from memory instead of from the code;
+  - (3) the clock of an old table was not checked before saying "agrees";
+  - (4) a slope agreeing to `10^-5` was typed as data, the slogan was written before checking each family's prefix constraint, and the citation was from memory;
+  - (5) finite or local evidence was phrased as universal;
+  - (6) ranges and conventions were not re-read from the output;
+  - (7) the typing was done before the proofs were written.
+- **Correct framing (applied):**
+  - Bounds: `0.28820 <= s_∞ <= 0.29912`, `s_∞ >= 0.22425`, `1 − s_∞ <= 0.71180`, `2s_∞ <= 0.5983`. The scripts now print bounds floored or ceiled.
+  - Tails: the dropped window is bounded by the script's formula above, and the depth tail by `(3/2) ρ^1501/(1 − ρ) = 1.4e-34`.
+  - The repo table is relabelled to standard-map depth; the script reproduces all ten entries.
+  - The census law is a numerical fit with the upper bound proved. Glide words and backward first-passage words are mirror families on opposite sides of the critical line `2^K = 3^d`, sharing its Cramér rate. THM-4495 is cited.
+  - Scope:
+    - "the appearances surveyed";
+    - "no argument using only the 3-adic backward sieve";
+    - the "interlock" sentence is deleted;
+    - the residual task is a finite statement, and the 239 seeds are a proper subset of the backward-minimal sources (153 of 416 comparable multiples of 3, 86 of 245 comparable others);
+    - "density `2s(k)` at each depth `k`, tending to `2s_∞`";
+    - `D` is an integer set and `1 − s_∞` is the Haar measure of its 3-adic analogue (equality of densities unproved);
+    - note 18's minimal counterexample lies in the survivor set or is divisible by 3.
+  - Facts:
+    - odd `3 <= a <= 119`;
+    - "class `13 mod 54` (`54 = ord_81(2)`)";
+    - 7 is the first with odd `a >= 3` (`3 = 2^2 − 1` also qualifies);
+    - THM-4520 and THM-4521 are cited;
+    - `2^18 − 1` is for the unaccelerated map (`2^11 − 1` for the shortcut map);
+    - the Heegner coincidence stops at 163 (`86093443 = 2·3^16 + 1` is not Heegner);
+    - `992/3332`, excluding `n = 1`.
+  - Sierpiński tower:
+    - the arc rule is proved by induction on the top bit using skewness `H + H^T = 2I`;
+    - the self-similarity and `F_21 <= Aut(T_k)` are PROVED;
+    - the reduction now reads: `N^+(0') = T_k` is doubly regular, so `0' ∈ D`; the lemma gives `D ⊆ T_k ∪ {0'}`; `0'` is the unique source of the `Aut`-invariant `D`; the stabiliser theorem and induction finish.
+- **What survives:** all the mathematics. The audit reproduced every computation with independent code (Python, GMP C, PARI, dreadnaut), including:
+  - the sixteen exact `s(r)`;
+  - the first moment `0.77574081479760749602…`;
+  - the Moran identity, and `min ρ = 3^-(1-h)`;
+  - the Mersenne and seed censuses, and the clock-tower identities;
+  - the tower's arc rule, orbits and `Stab(0')`.
+- **Lesson:**
+  - Round every bound outward, and print bounds from the script already floored or ceiled.
+  - Paraphrase a bound only from the code that computes it.
+  - Check an old table's clock before saying it "agrees".
+  - A fit is a fit even when its slope agrees to `10^-5`.
+  - "Mirror" families are not "the same" family: check the prefix constraint of each.
+  - Write the proof of every PROVED item before typing it, and keep it independent of FINITE-EXACT data it could lean on.
+
 ## MISTAKE-568 (2026-10-06, opus S17 Ramanujan's constant / Heegner-7 / trivial-cycle note; found by the session's independent adversarial audit, after the checkpoint of the first draft was pushed) -- two codings mixed in a uniqueness claim, the class-number-one list undercounted, the 7-torsion over F_8 overstated, two equal 24s called unrelated, a congruence taken mod the wrong ideal, and over-typed or misattributed sentences
 
 - **Claims (in `05-knowledge/results/ramanujan_heegner7_trivial_cycle_20261006.md`, first checkpoint):**

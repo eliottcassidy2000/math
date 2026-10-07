@@ -1,16 +1,19 @@
 1. legality: every word of length d is legal on exactly one unit class mod 3^d
   ok   d = 1..5, exponents 1..6: each word legal on exactly 1 of the 2*3^(d-1) unit classes (weight (1/2) 3^(1-d))
 2. first moment over first-passage words (exact rationals, explicit tails)
-   sum_(d <= 1500) (1/2)3^(1-d) F_d = 0.7757408148;  dropped-window bound 4.1e-30;  depth tail 8.7e-38
+   sum_(d <= 1500) (1/2)3^(1-d) F_d = 0.7757408148;  dropped-window bound 4.1e-30;  depth tail 1.4e-34
   ok   P(smaller predecessor) <= 0.7757408148 < 1, so lim s(r) >= 0.2242591852 > 0  (D62: positive)
+   rho(3/2) = 0.94729
    F_d, d = 1..14: [1, 1, 0, 2, 0, 7, 30, 0, 113, 0, 525, 2652, 0, 11433]
 3. exact survival fractions s(r) (vectorised recursion) and an independent brute force
    s(r): {1: 0.5, 2: 0.333333, 3: 0.333333, 4: 0.314815, 5: 0.314815, 6: 0.3107, 7: 0.305213, 8: 0.305213, 9: 0.303079, 10: 0.303079, 11: 0.302029, 12: 0.30033, 13: 0.30033, 14: 0.299546, 15: 0.299546, 16: 0.299117}
+   s(r) exactly: 1/2, 1/3, 1/3, 17/54, 17/54, 151/486, 445/1458, 445/1458, 3977/13122, 3977/13122, 35669/118098, 106405/354294, 106405/354294, 955147/3188646, 955147/3188646, 4292002/14348907
   ok   brute force r <= 8 agrees: [0.5, 0.333333, 0.333333, 0.314815, 0.314815, 0.3107, 0.305213, 0.305213]
-  ok   bracket: 0.28821 <= lim s(r) <= 0.29912  (s(16) minus the first-moment tail 0.010907 beyond depth 16)
-   (the repo's T-depth table 0.500, 0.333, 0.333, 0.31481, 0.31481, 0.31481, 0.31070, 0.30521 is the same sequence on a coarser clock)
+  ok   bracket: 0.28820 <= lim s(r) <= 0.29912  (s(16) = 0.2991170 minus the first-moment tail 0.0109074 beyond depth 16: 0.2882095614; rounded outward)
+  ok   the repo's table (standard-map depth D = K + d) is s(max{d : d + floor(d log2 3) <= D}): D=4->s(1), D=6->s(2), D=8->s(3), D=10->s(4), D=12->s(5), D=14->s(5), D=16->s(6), D=18->s(7), D=20->s(8), D=22->s(8)
 4. Moran duality and the 2 <-> 3 mirror of the exponent 1 - h
   ok   rho(theta) - 1 = 2^theta (g(theta) - 1)/(2^theta - 1): same zero set {1, 2} as THM-4504's Moran function
   ok   min rho = rho(theta*) = 0.946504577 = 3^-(1-h), h = H(log_3 2) = 0.949956, theta* = log2(log2 3/(log2 3 - 1)) = 1.438033
-  ok   first-passage mass ~ d^-3/2 3^-(1-h)d: fitted slope -0.054987 vs -(1-h) ln 3 = -0.054979 over 877 nonzero terms d <= 1500 (the 3-adic mirror of the forward glide law W_k = Theta(2^(hk) k^(-3/2)), THM-4504)
+  ok   first-passage mass ~ d^-3/2 3^-(1-h)d (numerical fit): slope -0.054987 vs -(1-h) ln 3 = -0.054979 over 877 nonzero terms d <= 1500 (numerically matches the forward glide law W_k = Theta(2^(hk) k^(-3/2)), THM-4495, under 2 <-> 3)
+  ok   proved bound m_d <= (3/2) 3^(-(1-h)d) holds termwise for d < 200
 ALL CHECKS PASSED

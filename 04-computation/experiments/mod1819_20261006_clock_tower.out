@@ -17,14 +17,20 @@ B. the trunk (4^j - 1)/3 and its dead ends
   ok   a_j is a dead end (multiple of 3: no odd predecessor) iff 3 | j
 C. Mersenne numbers and the backward sieve
   ok   a = 5 mod 6: 2^a - 1 = 4 mod 9, smaller ancestor (8n-5)/9 at depth 2
-  ok   a = 1, 3 mod 6, a <= 120: backward-minimal except [13, 67, 69, 103]; a = 13, 67 (= 13 mod 54 = ord_81(2)) share the word (2,2,1,1)
-   backward-minimal odd exponents a <= 120: 35 of 59 = 0.593  (3-adic prediction 2 s_inf in [0.5764, 0.5982])
+  ok   a = 1, 3 mod 6, odd 3 <= a <= 119: backward-minimal except [13, 67, 69, 103]; a = 13, 67 (class 13 mod 54, 54 = ord_81(2)) share the word (2,2,1,1)
+   backward-minimal odd exponents 3 <= a <= 119: 35 of 59 = 0.593  (at depth k the exact density is 2 s(k), tending to 2 s_inf in [0.5764, 0.5983])
   ok   odd a mod 2*3^(k-1) -> 2^a mod 3^k is a bijection onto the classes = 2 mod 3: Mersenne numbers sample the 3-adic classes = 1 mod 3 uniformly
 D. the rewrite compiler's residual seeds are backward-minimal
   ok   all 239 residual seeds are backward-minimal: 153 multiples of 3 (no ancestors) + 86 with no smaller ancestor (depth 40)
-   base rate: odd n <= 10000, 3 not dividing n, first reset 2: 834 numbers, backward-minimal fraction 0.294
+  ok   the 86 seeds prime to 3 still have no smaller ancestor at depth 60
+   base rate: odd n <= 10000, 3 not dividing n, = 3 mod 4, first reset 2: 834 numbers, backward-minimal 245/834 = 0.294
+  ok   the seeds are all = 3 mod 4 with first reset 2, and a proper subset of the backward-minimal comparable sources: 153 of the 416 multiples of 3, 86 of the 245 others
+   all odd n in [5, 10^4] prime to 3: backward-minimal 992/3332 = 0.2977 (depth 40; 3-adic 1 - s_inf in [0.70088, 0.71180] is the measure of the complement)
 E. the Sierpinski tower (HYP-9162)
-  ok   arc rule: H_(2^k)(x,y) = (-1)^q(x,y), q = sum over bits l with x_l = 1 of (1 + y_l + [x, y differ below bit l])  (k <= 7)
+  ok   H_(2^k) + H_(2^k)^T = 2I (skew off the diagonal; induction: H_2n + H_2n^T = [[H + H^T, 0], [0, H + H^T]]), k <= 10
+  ok   arc rule: H_(2^k)(x,y) = (-1)^q(x,y), q = sum over bits l with x_l = 1 of (1 + y_l + [x, y differ below bit l])  (k <= 9; proof: top bit 0 -> H_n(x',y'); top bit 1 -> -/+ H_n(y',x') = (-1)^[x' != y'] H_n(x',y') by skewness)
+  ok   q(8x, 8y) = q(x, y) (k <= 10): the multiples of 8 induce T_(k-3) in T_k for every k (PROVED: bits shift by 3)
+  ok   Aut(T_3) = Aut(P_7) has order 21, and each automorphism acting on the low three bits (fixing multiples of 8) is an automorphism of T_k (k <= 8; PROVED for all k: q = q_3(x mod 8, y mod 8) + terms depending on high bits and [x != y mod 8])
   ok   T_3 (7 vertices): |Aut| = 21, orbits: 1 of size 7 + 0 fixed points
   ok   T_4 (15 vertices): |Aut| = 21, orbits: 2 of size 7 + 1 fixed points
   ok   T_5 (31 vertices): |Aut| = 21, orbits: 4 of size 7 + 3 fixed points
@@ -41,6 +47,7 @@ E. the Sierpinski tower (HYP-9162)
   ok   T_7: vertices with doubly regular out-neighbourhood = base heptagon + apex chain [7, 15, 31, 63]; the top apex dominates all of them (so it is the unique source of T[D] and every automorphism fixes it)
   ok   T_8: vertices with doubly regular out-neighbourhood = base heptagon + apex chain [7, 15, 31, 63, 127]; the top apex dominates all of them (so it is the unique source of T[D] and every automorphism fixes it)
   ok   T_9: vertices with doubly regular out-neighbourhood = base heptagon + apex chain [7, 15, 31, 63, 127, 255]; the top apex dominates all of them (so it is the unique source of T[D] and every automorphism fixes it)
-   => HYP-9162 follows from the lemma 'no vertex of the second copy T_k' has a doubly regular out-neighbourhood' (verified k <= 9);
-      the stabiliser of 0' is exactly the diagonal extensions (audit of HYP-9162), so Aut(T_(k+1)) = Aut(T_k) = F_21 by induction.
+   => HYP-9162 follows from the lemma 'no vertex of the second copy T_k' has a doubly regular out-neighbourhood' (verified k <= 9):
+      N+(0') = T_k is doubly regular, so 0' is in D; the lemma gives D inside T_k + {0'}; since 0' -> T_k, 0' is the unique
+      source of the Aut-invariant set D; the stabiliser theorem (audit of HYP-9162) and induction from Aut(P_7) = F_21 finish.
 ALL CHECKS PASSED
