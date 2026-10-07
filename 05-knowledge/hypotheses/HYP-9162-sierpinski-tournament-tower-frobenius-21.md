@@ -2,7 +2,8 @@
 id: HYP-9162
 title: "The Sierpinski tournament tower: H_2 = [[1,1],[-1,1]], H_(2n) = [[H,H],[-H^T,H^T]] gives skew Hadamard matrices of every order 2^k and hence doubly regular tournaments T_k of every Mersenne order 2^k - 1 (the zero-triangle sides of Gilbreath's single-seed sea); T_3 is the Paley heptagon, Aut(T_k) contains its Frobenius group F_21 for all k >= 3, and the conjecture is that Aut(T_k) = F_21 exactly for all k >= 3 (so T_k would never be Paley for k >= 4; T_5 != P_31 and T_7 != P_127 are established outright by the automorphism orders)"
 status: >
-  PROVED: the doubling preserves skewness and orthogonality (two-line check),
+  RESOLVED 2026-10-06: PROVED by THM-4557 (doubling a doubly regular tournament on >= 7 vertices keeps its
+  automorphism group; Aut(T_k) = F_21 for all k >= 3). History: PROVED: the doubling preserves skewness and orthogonality (two-line check),
   double regularity is the classical skew-Hadamard correspondence, the
   recursion T_(k+1) = T_k + {0'} + T_k' is explicit, and every automorphism of
   T_k extends diagonally, so F_21 <= Aut(T_k) for k >= 3. FINITE-EXACT:
@@ -64,4 +65,11 @@ tournament) and shows what symmetry the tower keeps: the heptagon's.
   * The stabiliser theorem of this hypothesis's audit (`Stab(0')` = the diagonal extensions of `Aut(T_k)`) and induction from `Aut(P_7) = F_21` finish the proof.
   * Separately, `D` is exactly the base heptagon plus the apex chain for `k <= 9` (FINITE-EXACT). The reduction does not use this.
 * **The lemma's failures.** They occur only at pairs `(x, y')` with `x ∈ N^+(i)` and `y ∈ N^-(i)`. Pairs of other types provably have count `λ`, and the failing type's average is exactly `λ` (double counting). So the lemma is a variance statement about triple intersections.
-* **Status.** OPEN.
+* **Status.** OPEN at the time of this update; RESOLVED later the same day (see below).
+
+**Resolution 2026-10-06 (mac-mini, [THM-4557](../../01-canon/theorems/THM-4557-doubling-a-doubly-regular-tournament-keeps-its-automorphism-group-hyp-9162.md)).** The second-copy lemma is PROVED, for every doubly regular tournament `T` on `n = 4t+3 >= 7` vertices.
+* `N^+(x')` is `T` with the arcs inside `N^−(x)` reversed.
+* Double regularity would force `S_R 1_(O_j) = 0` for the skew matrix `S_R` of `R = T[N^−(x)]`, which has odd order.
+* `S_R ≡ J − I (mod 2)` has `F_2`-rank `m − 1`, so `ker S_R = span(1)`. But `|O_j| = t + 1`.
+
+Hence `Aut(D(T)) = Aut(T)`, and `Aut(T_k) = F_21` for all `k >= 3`.

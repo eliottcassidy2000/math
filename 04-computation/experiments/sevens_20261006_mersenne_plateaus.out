@@ -1,0 +1,23 @@
+1-2. ternary repunits and the reset pairing
+  ok   U^a(2^a - 1) = oddpart(3^a - 1) for 2 <= a < 200
+  ok   R_a = 3 R_(a-1) + 1 (R_0 = 0)
+  ok   U(R_(2k-1)) = oddpart(R_(2k)) for 2 <= k < 300 (R_(2k-1) is odd)
+  ok   odd a: R_a = 3 * 2^v * oddpart(R_(a-1)) + 1 with v = 1 + v_2(a-1) (a debt state (1, v))
+  ok   sigma(M_(2k)) = sigma(M_(2k-1)) for 2 <= k <= 600
+  ok   agrees with the 57 data terms of OEIS A390816
+3. odd shift distances; partners are multiples of 3
+  ok   odd a <= 400: every odd partner b also has partner b + 1; least D always odd; the least partner 2^b - 1 = 3 (4^(b/2) - 1)/3
+   odd a in [3, 400] with an equal-time Mersenne partner: 164 of 199; in [3, 121]: 37 of 60
+4. 2-adic periodicity of the reduced words and propagation of switches
+  ok   reduced (2-adic) word of 2^a - 1 up to total K depends only on a mod 2^(K-2) (3 <= K <= 11, 3 <= a < 250; words continued past 1 with U(1) = 1)
+  ok   collisions (a0, D, K) = (95, 1, 9), (159, 1, 10), (31, 1, 11) propagate along a0 + t 2^(K-2), t = 0..3, merging at step (a - 1) + |u|
+5. certified density of switching exponents (classes mod 2^(K-2), D odd <= 31)
+  ok   certified densities K=9: 0.0156, K=10: 0.0312, K=11: 0.0469, K=12: 0.0605, K=13: 0.0713, K=14: 0.0801, K=15: 0.0879, K=16: 0.0950, K=17: 0.1016, K=18: 0.1080, K=19: 0.1141, K=20: 0.1199
+6. plateaus of sigma on the Mersenne line
+   a <= 100: 23 distinct values of sigma(2^a - 1)
+   a <= 400: 37 distinct values of sigma(2^a - 1)
+   a <= 1200: 58 distinct values of sigma(2^a - 1)
+  ok   every level set {a : sigma(M_a) = s} (a >= 3) is a union of reset pairs {2k-1, 2k}
+7. debt resolution grows with size (NUMERICAL, seeded)
+  ok   equal-time merge rate of reset-2 sources with (n-1)/2: B=16: 0.180, B=64: 0.410, B=256: 0.640
+ALL CHECKS PASSED
