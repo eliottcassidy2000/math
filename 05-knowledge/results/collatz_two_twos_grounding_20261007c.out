@@ -1,0 +1,10 @@
+GROUNDED childE/parentK/rank/childcost/parentcost/peakbits: 6125 6129 28762 51712 51716 9709
+GROUNDED childE/parentK/rank/childcost/parentcost/peakbits: 18269 18273 90248 161309 161313 28956
+GROUNDED childE/parentK/rank/childcost/parentcost/peakbits: 46941 46945 226498 405932 405936 74402
+GROUNDED childE/parentK/rank/childcost/parentcost/peakbits: 98477 98481 475425 852008 852012 156086
+PROVED paid exit E=18269mod2^48 -> E-1; head lengths24/25,costs50/48.
+GROUNDED by reverse transport: E18268, rank 90248 cost 161308
+PROVED two-stage excluded ray: K=18273+729*2^48*t -> K-4 -> K-5.
+HOSTILES: (1,12) has E5mod16; (1,1,14) phase misses all225 emitted parent phases.
+No universal coverage: finite ROOT evidence and infinite paid schemas remain distinct.
+Checks: 11862707

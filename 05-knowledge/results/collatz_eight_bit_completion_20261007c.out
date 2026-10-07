@@ -1,0 +1,8 @@
+PROVED D8 phase K= 924745905 mod 4294967296 ; heads (2, 2, 2, 1, 2, 9, 16) (2, 2, 4, 1, 3, 3, 1, 3, 3, 1, 1, 1, 2, 2, 3)
+Discovery: D4 through J3 head129, then D4 through J2 head1^8,22; exact one-edge middle alignment.
+FINITE-EXACT literal ordinary-source controls 16 ; no astronomical Mersenne expansion.
+Mixed inverse transports(label,length,required_depth,CRT_residue_bits,period_bits): [(5, 36, 7, 137, 145), (17, 64, 7, 740, 741), (5, 5, 2, 51, 52)]
+PROVED at-most13 inverse letters fit D8; G5^36 andG17^64 now have actual guarded payment.
+FINITE-EXACT next-child probe:271 signed J2 packets, heads1..12,length1..3,nonpadding;0 phase intersections.
+ROOT suffixes remain supplied obligations; no ROOT discovery, no universal coverage claim.
+Exact checks 1584

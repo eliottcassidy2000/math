@@ -7,6 +7,9 @@ computations linked below. **CONDITIONAL:** Collatz ROOT completion when a
 required smaller child's first-hit certificate is supplied. **OPEN:** a
 rule or well-founded family covering every positive integer.
 
+Current continuation: [grounded children and marked completion](collatz_grounded_completion_synthesis_20261007c.md)
+supplies selected child ROOT words, new complement guards and eight-bit payment.
+
 The main advance is actual coverage beyond a declared existing entry bank:
 a finite bank of 225 decoded heads gives explicit phases in every long
 first-reset shell that admit a paid four-bit deletion. Their Mersenne

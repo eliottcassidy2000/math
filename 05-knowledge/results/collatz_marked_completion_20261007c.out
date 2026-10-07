@@ -1,0 +1,9 @@
+Selected-plan universe: 64 choices on ports 3, 5, 7, plus literal ROOT
+Port traces: {'CYCLE': 36, 'GROUNDED': 142, 'OPEN': 78}
+Local-paid substitution hostile: 3 -> 5 -> 3 remains CYCLE
+Supplied ROOT(5) repairs the open plan; exported ROOT(3) word=(1, 4)
+Native head: source63829 / child2365 / join281; supplied child proof exports15 edges
+Frozen J2 integration: M6125 ROOT rank28762/cost51712 closes M6129 rank28762/cost51716
+The immutable earlier M6125 port remains OPEN in its original plan; no orbit discovery
+Checks: {'J2_integration': 7, 'clocks': 142, 'conditional': 138, 'cycle_hostile': 7, 'exports': 256, 'malformed': 25, 'monotone': 126, 'native_head': 3, 'plans': 336, 'root_boundary': 1}
+Total checks: 1041
