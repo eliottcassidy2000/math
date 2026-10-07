@@ -1,0 +1,30 @@
+ 1 alive          1  max certificate threshold at depth t: 2^0.00   running max 2^0.00
+ 2 alive          1  max certificate threshold at depth t: 2^0.00   running max 2^0.00
+ 3 alive          2  max certificate threshold at depth t: 2^0.00   running max 2^0.00
+ 4 alive          3  max certificate threshold at depth t: 2^-0.49   running max 2^0.00
+ 5 alive          4  max certificate threshold at depth t: 2^2.20   running max 2^2.20
+ 6 alive          7  max certificate threshold at depth t: 2^1.14   running max 2^2.20
+ 7 alive         11  max certificate threshold at depth t: 2^0.85   running max 2^2.20
+ 8 alive         16  max certificate threshold at depth t: 2^4.62   running max 2^4.62
+ 9 alive         27  max certificate threshold at depth t: 2^4.10   running max 2^4.62
+10 alive         46  max certificate threshold at depth t: 2^1.88   running max 2^4.62
+11 alive         80  max certificate threshold at depth t: 2^1.49   running max 2^4.62
+12 alive        144  max certificate threshold at depth t: 2^3.88   running max 2^4.62
+13 alive        242  max certificate threshold at depth t: 2^3.88   running max 2^4.62
+14 alive        436  max certificate threshold at depth t: 2^3.88   running max 2^4.62
+15 alive        802  max certificate threshold at depth t: 2^3.88   running max 2^4.62
+16 alive       1363  max certificate threshold at depth t: 2^4.52   running max 2^4.62
+17 alive       2499  max certificate threshold at depth t: 2^4.26   running max 2^4.62
+18 alive       4600  max certificate threshold at depth t: 2^3.88   running max 2^4.62
+19 alive       8463  max certificate threshold at depth t: 2^3.88   running max 2^4.62
+20 alive      15870  max certificate threshold at depth t: 2^4.16   running max 2^4.62
+21 alive      28147  max certificate threshold at depth t: 2^4.16   running max 2^4.62
+22 alive      52176  max certificate threshold at depth t: 2^4.16   running max 2^4.62
+23 alive      97978  max certificate threshold at depth t: 2^4.75   running max 2^4.75
+24 alive     172868  max certificate threshold at depth t: 2^4.75   running max 2^4.75
+25 alive     322021  max certificate threshold at depth t: 2^4.75   running max 2^4.75
+26 alive     602780  max certificate threshold at depth t: 2^4.75   running max 2^4.75
+27 alive    1061510  max certificate threshold at depth t: 2^6.76   running max 2^6.76
+28 alive    1976972  max certificate threshold at depth t: 2^6.62   running max 2^6.76
+29 alive    3699761  max certificate threshold at depth t: 2^5.99   running max 2^6.76
+30 alive    6915181  max certificate threshold at depth t: 2^5.21   running max 2^6.76

@@ -2,7 +2,7 @@
 id: HYP-9217
 title: "Debt recurrence law: in the 2-adic Haar model the lag-1 Mersenne debt merges almost surely with P(no merge by template total T) = c1 T^(-1/2)(1 + o(1)), c1 ~ 14-17, and the any-lag Mersenne non-switch probability is q(T) = T^(-alpha + o(1)) with alpha ~ 0.7 +- 0.1; hence mu_2(S) = 1 and HYP-9213 (o(A) new sigma-levels)"
 status: >
-  PARTLY RESOLVED 2026-10-07 (THM-4581). PROVED: almost-sure lag-1 merging, hence mu_2(S) = 1 and HYP-9213; the decay exponent
+  PARTLY RESOLVED 2026-10-07 (THM-4581, THM-4593: every finite lag set has alpha = 1/2; the 0.69 was a transient). PROVED: almost-sure lag-1 merging, hence mu_2(S) = 1 and HYP-9213; the decay exponent
   is exactly 1/2, with the upper bound at sketch level: c T^(-1/2) <= q1(T) <= C T^(-1/2) (log T)^2 in Terras time. Template total =
   Terras merge time + v_2(merge value), with a Geom(1/2) overshoot, so the bounds transfer (audit A). If the any-lag exponent
   alpha exists then alpha >= 1/2 (sketch level). OPEN: q1(T) ~ c1 T^(-1/2) with c1 ~ 16.7 (NUMERICAL; HEURISTIC one-big-jump form
@@ -74,3 +74,12 @@ scripts:
   * For `y` vs `y + 1`: `E[J] ≈ 9.93` (truncation-corrected) gives 11.2, against 11.06–11.18 measured (audit A).
   * For S19's lag-1 start, the post-prefix state is `(2, 1)` with `E[J] ≈ 12.8`. The constant is `(|k_0| + E[J])·√(4/π) = (2 + 12.8)·1.128 = 16.7`, which is S19's value (audit A). The earlier "`E[J] ≈ 14.8`" ignored the `|k_0|` term.
   * Proving the `(1 + o(1))` form needs a subexponential renewal argument for the Markov-modulated excursion sums.
+
+---
+
+## Update 3 (2026-10-07, mac-mini-2026-10-07-golden; THM-4593): the any-lag exponent of every finite lag set is 1/2, and 0.69 is a coalescence transient
+
+* **Lower bound (PROVED, THM-4593 (2)).** For the lag sets `D ≤ 7` and `D ≤ 61` there are explicit witness classes on which the partners merge with each other before the source merges with any of them. From there the source faces one cluster, i.e. one adjacent `±1` walk, so `q(T) ≥ c·T^(−1/2)`. With THM-4581 (4), `α = 1/2` for every finite lag set (sketch level).
+* **NUMERICAL.** `D ≤ 61` has local slopes 0.70, 0.69, 0.64, 0.59, 0.51, then 0.48 ± 0.03 across `[4·10^2, 10^6]` (2·10^5 paths), with plateau `√T q ≈ 2.6`. Lag 1 alone gives `√T q_1 → 16.7`. So the measured `α ≈ 0.69` (and the earlier 0.66–0.78) was the pre-asymptotic transient while partners coalesce.
+* **OPEN.** Unbounded lag sets: `D ≤ 241` still has slope 0.59 ± 0.06 on `[10^5, 10^6]`, and `√T q` (1.8 at `10^6`) is still falling. A coalescing-front heuristic predicts 1/2.
+* **Consequence for HYP-9213's finer count.** The heuristic `#σ`-levels `≈ A^(1−α)` would then be `≈ A^(1/2)` asymptotically; the empirical `A^0.37` is likewise pre-asymptotic. (HYP-9213 itself, the `o(A)` statement, is PROVED by THM-4581.)

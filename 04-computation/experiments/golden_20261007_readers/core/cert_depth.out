@@ -1,0 +1,37 @@
+n=         27 log2n=  4.8 sigma=  59 K(n)=59 descent  K/sigma=1.00  K/log2n=12.41
+n=        255 log2n=  8.0 sigma=  13 K(n)=10 branch m=191  K/sigma=0.77  K/log2n=1.25
+n=        447 log2n=  8.8 sigma=  40 K(n)=39 branch m=307  K/sigma=0.97  K/log2n=4.43
+n=        639 log2n=  9.3 sigma=  23 K(n)=23 descent  K/sigma=1.00  K/log2n=2.47
+n=        703 log2n=  9.5 sigma=  81 K(n)=81 descent  K/sigma=1.00  K/log2n=8.56
+n=       1819 log2n= 10.8 sigma=  61 K(n)=57 branch m=1775  K/sigma=0.93  K/log2n=5.26
+n=       4255 log2n= 12.1 sigma=  70 K(n)=70 descent  K/sigma=1.00  K/log2n=5.81
+n=       4591 log2n= 12.2 sigma=  65 K(n)=58 branch m=4251  K/sigma=0.89  K/log2n=4.77
+n=       9663 log2n= 13.2 sigma=  54 K(n)=54 descent  K/sigma=1.00  K/log2n=4.08
+n=      20895 log2n= 14.4 sigma=  72 K(n)=72 descent  K/sigma=1.00  K/log2n=5.02
+n=      26623 log2n= 14.7 sigma=  65 K(n)=65 descent  K/sigma=1.00  K/log2n=4.42
+n=      31911 log2n= 15.0 sigma=  59 K(n)=59 descent  K/sigma=1.00  K/log2n=3.94
+n=      60975 log2n= 15.9 sigma= 127 K(n)=127 descent  K/sigma=1.00  K/log2n=7.99
+n=      77671 log2n= 16.2 sigma= 105 K(n)=105 descent  K/sigma=1.00  K/log2n=6.46
+n=     113383 log2n= 16.8 sigma= 110 K(n)=101 branch m=102375  K/sigma=0.92  K/log2n=6.02
+n=     138367 log2n= 17.1 sigma=  59 K(n)=58 branch m=113863  K/sigma=0.98  K/log2n=3.40
+n=     159487 log2n= 17.3 sigma=  72 K(n)=72 descent  K/sigma=1.00  K/log2n=4.17
+n=     270271 log2n= 18.0 sigma= 164 K(n)=161 branch m=190615  K/sigma=0.98  K/log2n=8.92
+n=     665215 log2n= 19.3 sigma= 140 K(n)=134 branch m=650139  K/sigma=0.96  K/log2n=6.93
+n=     704511 log2n= 19.4 sigma=  73 K(n)=73 descent  K/sigma=1.00  K/log2n=3.76
+n=    1042431 log2n= 20.0 sigma= 170 K(n)=170 descent  K/sigma=1.00  K/log2n=8.50
+n=    1212415 log2n= 20.2 sigma= 105 K(n)=105 descent  K/sigma=1.00  K/log2n=5.20
+n=    1441407 log2n= 20.5 sigma= 149 K(n)=148 branch m=1128263  K/sigma=0.99  K/log2n=7.23
+n=    1875711 log2n= 20.8 sigma=  97 K(n)=95 branch m=1784183  K/sigma=0.98  K/log2n=4.56
+n=    1988859 log2n= 20.9 sigma= 135 K(n)=135 descent  K/sigma=1.00  K/log2n=6.45
+n=    2643183 log2n= 21.3 sigma= 183 K(n)=183 descent  K/sigma=1.00  K/log2n=8.58
+n=    2684647 log2n= 21.4 sigma=  99 K(n)=99 descent  K/sigma=1.00  K/log2n=4.64
+n=    3041127 log2n= 21.5 sigma=  99 K(n)=98 branch m=2440741  K/sigma=0.99  K/log2n=4.55
+n=    3873535 log2n= 21.9 sigma= 124 K(n)=120 branch m=3545131  K/sigma=0.97  K/log2n=5.48
+n=    4637979 log2n= 22.1 sigma= 156 K(n)=144 branch m=3630383  K/sigma=0.92  K/log2n=6.50
+n=    5656191 log2n= 22.4 sigma= 200 K(n)=200 descent  K/sigma=1.00  K/log2n=8.92
+n=    6416623 log2n= 22.6 sigma= 140 K(n)=139 branch m=5952733  K/sigma=0.99  K/log2n=6.15
+n=    6631675 log2n= 22.7 sigma= 222 K(n)=185 branch m=6000255  K/sigma=0.83  K/log2n=8.16
+n=   19638399 log2n= 24.2 sigma= 264 K(n)=264 descent  K/sigma=1.00  K/log2n=10.90
+n=   38595583 log2n= 25.2 sigma= 181 K(n)=181 descent  K/sigma=1.00  K/log2n=7.18
+n=   80049391 log2n= 26.3 sigma= 243 K(n)=243 descent  K/sigma=1.00  K/log2n=9.26
+n=  120080895 log2n= 26.8 sigma= 203 K(n)=203 descent  K/sigma=1.00  K/log2n=7.56

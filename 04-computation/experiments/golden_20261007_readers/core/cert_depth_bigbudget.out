@@ -1,0 +1,5 @@
+n=         27 log2n=  4.8 sigma=  59 K(n)=59 descent  K/sigma=1.00  K/log2n=12.41
+n=        703 log2n=  9.5 sigma=  81 K(n)=81 descent  K/sigma=1.00  K/log2n=8.56
+n=       1819 log2n= 10.8 sigma=  61 K(n)=57 branch m=1775  K/sigma=0.93  K/log2n=5.26
+n=       4255 log2n= 12.1 sigma=  70 K(n)=70 descent  K/sigma=1.00  K/log2n=5.81
+n=      60975 log2n= 15.9 sigma= 127 K(n)=127 descent  K/sigma=1.00  K/log2n=7.99
