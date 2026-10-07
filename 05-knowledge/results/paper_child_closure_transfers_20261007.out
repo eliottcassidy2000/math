@@ -1,0 +1,13 @@
+paper_child_closure_transfers_20261007
+STATUS: PROVED elementary normal form / CONDITIONAL ROOT splicing / FINITE-EXACT controls
+complete literal universe: 10000 positive odd sources below 20000
+prefix-pair controls: 574
+receiver guard comparisons: 76320
+Mersenne-child controls: odd K=5..605, legal depths: 112
+supplied ROOT transport controls, canonical cores below512: 252
+depth counts q=0,1,2,3,>=4 on4096 normalized odd residues: [3584, 448, 56, 7, 1]
+hostile: 3067 --(12)^3--> 4369 --2--> 3277; core descends, original source unpaid
+receiver word2: r2 payment iff13*n>319; r3 slope2187/2048 forbids payment
+boundary: signed -5 --1--> -7 --2--> -5 is excluded; no finite dyadic depth decoder
+paper transfer: exact boundary / fixed lattice / retained conditioning / fixed-word scope
+exact checks: 140447

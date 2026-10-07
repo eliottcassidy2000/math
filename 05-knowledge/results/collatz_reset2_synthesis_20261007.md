@@ -5,6 +5,10 @@
 experiments. **OPEN:** coverage and recursive grounding for every positive
 integer. The named obstruction `2^1459-1` is now fully grounded.
 
+The [child-closure continuation](collatz_child_closure_synthesis_20261007.md)
+now gives paid mixed-word returns to smaller Mersennes and closed grounded
+seed families. Arbitrary-source recursive coverage remains OPEN.
+
 ## The residual branch now has two deeper rules
 
 The [arithmetic package](collatz_reset2_rules_20261007.md) supplies:

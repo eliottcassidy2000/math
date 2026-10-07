@@ -1,0 +1,10 @@
+STATUS: PROVED symbolic guarded-family closure; FINITE-EXACT controls
+QUOTIENT_DIRECT_CASES 1512
+LITERAL_GROUNDED_CHILD_POINTS 441
+SYMBOLIC_REFINEMENTS 306
+SUPPLIED_SEED 1457 7347 13102
+GROUNDED_CHILD_ROWS(name,bits,steps,cost,parameter_phase) [('h1', 1457, 7349, 13105, 0), ('z', 1454, 7356, 13113, 0)]
+SOURCE_PRESERVING_GUARD_HOSTILE: seed 3 cannot take G1 at parameter 0
+RESEEDING: zero phase preserves every member; nonzero phase shares only the base point
+OPEN: covering an arbitrary supplied source by these grounded families
+CHECKS 322863

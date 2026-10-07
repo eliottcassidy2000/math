@@ -1,0 +1,12 @@
+PROVED: pay after composition against the mixed source, not the larger middle.
+D6 strip budget: r1..35 pay for X>=8192; every r>=36 is unpaid for all positive X.
+FINITE-EXACT native deep cell: r1..36, two ternary units, lifts0/2;140 paid and4 unpaid receipts.
+SYMBOLIC phases: r1..40, two units, lifts0/1/3; no astronomical Mersenne source expansion.
+MIXED WORD CONTROLS:16 selected words, two native lifts; 26 paid and 6 unpaid. Maximum funded length63, uniquely G17^63 at that length.
+ORDERED HEIGHT HOSTILE: G17 then G5^34 needs X>=2726; reverse order needs X>=3244.
+NORMALIZER at K1459: G5,J^5,G5; state residues mod2187 (1093, 242, 1885, 1918)
+Final z=(2048*2^(K-2)-29455)/19683; z1mod9 stops both inverse guards, but composed D6 exit is paid.
+ROOT point h1 odd rank 7349 valuation cost 13105 word SHA256 fcbd66f0a384942db5e77ddbd2c9ed87bfc0865a05ff0f1c65eed0263809a191
+ROOT point z odd rank 7356 valuation cost 13113 word SHA256 efb8f824798f6e98523ee59c33efc1b8c27c47cf322de5986e0eef228c9976f6
+HOSTILES 14 rejected. No global closure or unsupplied child ROOT is asserted.
+CHECKS 23593
