@@ -1,0 +1,19 @@
+PROVED pending cylinder 91 mod2^38 ; macro guards ((91, 0, 10, 'repeat12'), (103, 3, 10, 'repeat112'), (175, 7, 8, 'core:45'), (167, 15, 10, 'repeat112'), (283, 19, 10, 'repeat12'), (319, 22, 10, 'repeat1'), (2429, 27, 5, 'step'), (911, 30, 7, 'core:29'))
+PROVED added AP: 91 + 22265110462464 *t; t>=0.
+PROVED pending cylinder 111 mod2^28 ; macro guards ((111, 0, 10, 'repeat1'), (377, 3, 3, 'step'), (283, 5, 10, 'repeat12'), (319, 8, 10, 'repeat1'), (2429, 13, 5, 'step'), (911, 16, 7, 'core:29'), (577, 23, 3, 'step'), (433, 25, 3, 'step'))
+PROVED added AP: 111 + 587068342272 *t; t>=0.
+FINITE-EXACT odd1..32767: priorROOT/reduced 16141 ; priorPENDING 243 ; new dependencies [91, 111, 8191] ; remainingPENDING 240 ; first [27, 31, 47, 63, 71, 103, 155, 223, 447, 671, 703, 871]
+Finite additions also fail old_partition and the complete early-reroute selector.
+Augmented finite baseline plus old_partition, early.candidates and H/L:116 pending ->113.
+Final-boundary inspection:pending frontiers with siblings 62 ; paid sibling frontiers 30 ; union with two rows 31 ; paid frontier sources [111, 223, 447, 671, 871, 1307, 2559, 7323, 8191, 8679, 10407, 12287, 16155, 17823, 18431, 24859, 25343, 25839, 25883, 26271, 26735, 27647, 27815, 28315, 29511, 29543, 30823, 30943, 31935, 32751]
+GROUNDED ascending closure seeds (1,) suffix_memory False ; baseline / two rows / plus frontier (10343, 10343, 10474) ; final new sources [111, 223, 297, 447, 671, 1189, 1585, 1789, 2113, 2385, 2559, 2817, 3171, 4167, 4227, 4757, 4771, 5275, 5635, 5935]
+GROUNDED ascending closure seeds (1, 27) suffix_memory False ; baseline / two rows / plus frontier (11290, 11290, 11423) ; final new sources [111, 223, 297, 447, 671, 1189, 1585, 1789, 2113, 2385, 2559, 2817, 3171, 4167, 4227, 4757, 4771, 5275, 5635, 5935]
+GROUNDED ascending closure seeds (1, 27) suffix_memory True ; baseline / two rows / plus frontier (15257, 15258, 15463) ; final new sources [111, 223, 297, 447, 671, 871, 1161, 1189, 1307, 1585, 1789, 2113, 2323, 2385, 2559, 2817, 3097, 3171, 3485, 4129]
+FINITE fixed point:second pass leaves entire certificate dictionaries unchanged; (22964, 22965, 23418)
+GROUNDED comparison tuples: [(10343, 10343, 10474), (11290, 11290, 11423), (15257, 15258, 15463)]
+Supplied27 certificate used identically: (1, 2, 1, 1, 1, 1, 2, 2, 1, 2, 1, 1, 2, 1, 1, 1, 2, 3, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 3, 1, 1, 1, 4, 2, 2, 4, 3, 1, 1, 5, 4)
+Family replay512; exact pending-lift controls16; supplied-child discharges3; hostiles9.
+332 has primitive odd part83;425 descends at step1. Neither is promoted as new coverage.
+Permutation-family controls t0..255 all already reduced by this baseline.
+No unconditional ROOT claim for arbitrary child; no universal guard coverage.
+CHECKS 17878968

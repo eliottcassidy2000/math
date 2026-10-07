@@ -1,0 +1,31 @@
+Exact labelled routing and guarded ordered packet compiler
+Imported multiplication and square-packing theorems: accepted, not re-audited
+Axis dimensions: 0..32; strict valuation words: letters 1..4, lengths 0..5
+Native H/G/A/B/L programs: lengths 0..4; native guards and token budgets retained
+12 versus 21: same (P,Q)=(9,8), carries 5/7, guards 11/9 mod16
+42: root-padding source5 rejected by exact strict cut5; source133 ->19 accepted
+LB empty; LG: (81x+53)/128 on219 mod256, delta3, need0
+Whole-block replacement: 257727+1048576t joins its smaller child n-4; t0..15 checked
+Tree updates: logarithmically many packet combinations; no unit-bit-cost or coverage claim
+changing_fixed_point_charts: 78
+expose_restore_payloads: 561
+full_native_word_guard: 1364
+generalized_CRT: 2025
+generic_associativity: 1000
+generic_integrality: 1400
+generic_pullback_semantics: 5400
+labelled_axis_reversal: 66
+literal_strict_root_replay: 8163
+malformed_exact_inputs: 13
+native_guard_and_budget: 21456
+native_guard_cancellation: 3
+native_tree_reassociation: 781
+nonunit_pullback: 2
+off_guard: 1364
+order_hostile: 2
+ordered_reassociation: 1365
+root_padding_hostile: 2
+source_guard_updates: 5456
+whole_block_growth: 192
+whole_block_replacement: 34
+TOTAL: 50727

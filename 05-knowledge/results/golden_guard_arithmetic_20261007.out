@@ -1,0 +1,7 @@
+JOINT CLOCKS (modulus, golden, binary, joint): [(3, 8, 2, 8), (5, 20, 4, 20), (7, 16, 3, 48), (11, 10, 10, 10), (19, 18, 18, 18), (105, 80, 12, 240), (223, 448, 37, 16576), (233, 52, 29, 1508), (425, 900, 40, 1800)]
+MIXED CLOCKS (modulus, golden, preperiod, joint period): [(18, 24, 1, 24), (332, 168, 2, 6888)]
+NUMERIC ROWS (n, initial halvings, (A,B,D), odd rank, valuation cost): [(105, 0, (10, 15, 65), 12, 26), (223, 0, (18, 28, 149), 24, 46), (233, 0, (18, 28, 159), 29, 54), (322, 1, (18, 30, 244), 35, 63), (332, 2, (20, 32, 248), 40, 70), (425, 0, (26, 41, 317), 19, 39)]
+332->425: initial halvings2, odd word (1, 3, 1, 1, 1, 2, 2, 1, 2, 1, 1, 2, 1, 1, 1, 2, 3, 1, 1, 2, 1) ; Terras clock33
+UNIVERSES: signed polynomials length0..5; binary products length0..3; sources0..4095; guards1..10 bits
+RECEIPTS: all512 odd sources<1024, prefixes1..6; all nontrivial midpoint splits;10 hostile APIs
+CHECKS 52488 ; PROVED identities plus FINITE-EXACT controls; no new universal coverage

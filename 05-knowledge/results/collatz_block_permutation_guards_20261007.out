@@ -1,0 +1,21 @@
+SWAPS 35400 ; independent carry, exact defect and divisibility checked
+BLOCK (1, 1, 1, 1, 1, 2, 2, 2, 3, 1, 1, 3) => (1, 2, 1, 3, 1, 3, 1, 2, 1, 1, 2, 1)
+FAMILY n=257727+1048576t; child=n-4; endpoint=261245+1062882t; t>=0
+ALL12 source prefixes grow; every nontrivial single transposition is nonintegral
+FINITE ROOT controls:128 parameters; authentic child words reproduce literal source words
+CENSUS length,total_words,prefix_slope_growing_sources,with_smaller_permutation
+1 3 1 0
+2 9 2 0
+3 27 3 0
+4 81 7 0
+5 243 12 0
+6 729 29 0
+7 2187 76 0
+8 6561 154 0
+9 19683 393 0
+10 59049 791 0
+11 177147 2022 0
+12 531441 5452 1
+FINITE universe total words 797160
+SCOPE: direct12 coverage is extended; inherited adaptive selector already covers t=0
+CHECKS 79311
