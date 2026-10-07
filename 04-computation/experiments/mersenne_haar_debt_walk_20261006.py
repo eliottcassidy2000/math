@@ -102,7 +102,7 @@ def debt_pair(s, exact_steps=60):
     yy = t3 >> a0
     L = v + a0
     stats = {'trans': True, 'kick_tested': 0, 'kick_ok': True, 'merge_ok': None}
-    incs, Ls, streams = [], [L], []
+    incs, Ls, streams, ab = [], [L], [], []
     merged = None
     maxsteps = int(BITS_B / 2.5)
     prev = None
@@ -142,8 +142,9 @@ def debt_pair(s, exact_steps=60):
         yy = ny
         L = L + ay - bx
         incs.append((Ls[-1], ay - bx))
+        ab.append((ay, bx))
         Ls.append(L)
-    return merged, stats, incs, Ls, streams
+    return merged, stats, incs, Ls, streams, ab
 
 
 # ------------------------------------------------------------------ D. actual exponents
@@ -188,6 +189,12 @@ if __name__ == '__main__':
     q, q1 = shares(least, least1, grid)
     for T, a, b in zip(grid, q, q1):
         print(f'     T = {T:5d}: non-switch q(T) = {a:.4f}   lag-1 non-merge q1(T) = {b:.4f}   sqrt(T) q1 = {math.sqrt(T) * b:6.2f}')
+    def median_T(qs):
+        for (T1, v1), (T2, v2) in zip(zip(grid, qs), list(zip(grid, qs))[1:]):
+            if v1 >= 0.5 >= v2:
+                return math.exp(math.log(T1) + (math.log(T2) - math.log(T1)) * (v1 - 0.5) / (v1 - v2))
+        return None
+    print(f'     smallest reachable total over samples: {reach}; median merge total (log-interpolated): any lag {median_T(q):.0f}, lag 1 {median_T(q1):.0f}')
     s27 = 1 - q[0]
     sd = math.sqrt(s27 * (1 - s27) / N_A)
     check(abs(s27 - 0.1556) < 3 * sd + 0.005, f'Haar switch share at T = 27 is {s27:.4f} +- {sd:.4f}; certified exact share at K = 27 is 0.1556 (consistent)')
@@ -259,7 +266,48 @@ if __name__ == '__main__':
     mw = sum(ws) / len(ws); vw = sum((x - mw) ** 2 for x in ws) / len(ws)
     ac = sum((ws[i] - mw) * (ws[i + 1] - mw) for i in range(len(ws) - 1)) / (len(ws) - 1) / vw
     print(f'     independence of a and w: chi^2 = {chi:.1f} on 9 dof; mean w = {mw:.4f}, var w = {vw:.3f}, lag-1 autocorrelation of w = {ac:+.4f}')
+    print('     (these are consistency checks of exact Haar facts: in generic steps w = b is the x-orbit\'s own exponent, and x_0 = 3 2^v y_0 + 1')
+    print('      is Haar on a coset, so its exponent stream is i.i.d. Geom(1/2); same-step independence of a and w is also exact)')
     check(all(s[2] == s[1] for s in st), 'b = w (= v_2(D)) in every generic step, as Theorem D(c) says')
+    # the open question: long-lag joint law of the two exponent streams. L_t - L_0 = (sum of y-exponents) - (sum of x-exponents)
+    print('     block variances Var(L_(t+K) - L_t)/K over disjoint blocks starting at L >= 40 (i.i.d. increments give 4 for every K);')
+    print('     in brackets: blocks required to stay at L >= 16 throughout (a conditioning that biases the variance down for large K):')
+    bv = []
+    for K in (1, 4, 16, 64, 256):
+        diffs, diffs_c = [], []
+        for p in pairs:
+            Ls = p[3]
+            for t0b in range(0, len(Ls) - K, K):
+                if Ls[t0b] >= 40:
+                    diffs.append(Ls[t0b + K] - Ls[t0b])
+                if Ls[t0b] >= 16 and min(Ls[t0b:t0b + K + 1]) >= 16:
+                    diffs_c.append(Ls[t0b + K] - Ls[t0b])
+        if len(diffs) > 30:
+            mdf = sum(diffs) / len(diffs)
+            vK = sum((d - mdf) ** 2 for d in diffs) / len(diffs) / K
+            se = vK * math.sqrt(2 / len(diffs))
+            mdc = sum(diffs_c) / len(diffs_c)
+            vc = sum((d - mdc) ** 2 for d in diffs_c) / len(diffs_c) / K
+            bv.append((K, vK, se, len(diffs)))
+            print(f'        K = {K:3d}: {vK:.3f} (+- {se:.3f}, {len(diffs)} blocks)   [{vc:.3f}, {len(diffs_c)} blocks]')
+    # lagged cross-covariances of the two streams inside the L >= 16 regime: Cov(a_s, b_(s+k)) and Cov(b_s, a_(s+k))
+    def cov(u, v):
+        mu, mv = sum(u) / len(u), sum(v) / len(v)
+        return sum((x - mu) * (y - mv) for x, y in zip(u, v)) / len(u)
+    lagc_out = []
+    for k in (1, 2, 4, 8, 16, 32, 64):
+        A1, B1, A2, B2 = [], [], [], []
+        for p in pairs:
+            Ls, ab = p[3], p[5]
+            for s in range(len(ab) - k):
+                if Ls[s] >= 16 and Ls[s + k] >= 16:
+                    A1.append(ab[s][0]); B1.append(ab[s + k][1])
+                    A2.append(ab[s + k][0]); B2.append(ab[s][1])
+        if len(A1) > 100:
+            lagc_out.append((k, cov(A1, B1), cov(B2, A2), 2 / math.sqrt(len(A1))))
+    print('     cross-covariances in the L >= 16 regime, Cov(a_s, b_(s+k)) / Cov(b_s, a_(s+k)) (s.e. ~ 2/sqrt(n)):')
+    print('        ' + '; '.join(f'k={k}: {c1:+.4f}/{c2:+.4f} (s.e. {se:.4f})' for k, c1, c2, se in lagc_out))
+    check(all(abs(v - 4) < 4 * se + 0.15 for K, v, se, n in bv), 'block variances consistent with 4 for K up to 256 (NUMERICAL)')
     print('     L one step before merge:', Counter(p[3][p[0] - 1] for p in mg).most_common(8))
     for T in [100, 300, 1000, 3000, 4800]:
         nm = sum(1 for p in pairs if p[0] is None or p[0] > T) / N_B
@@ -287,6 +335,12 @@ if __name__ == '__main__':
           f'{levels[98]}, {levels[398]}, {levels[998]}, {levels[-1]}')
     predlev = {A: 2 + sum(min(1.0, Cq * post[a] ** -alpha) for a in range(3, A + 1, 2)) for A in (100, 400, 1000, 2001)}
     print('     Haar-predicted level counts:', {A: round(v, 1) for A, v in predlev.items()})
+    obs = {100: levels[98], 400: levels[398], 1000: levels[998], 2001: levels[-1]}
+    def logslope(d):
+        pts = [(math.log(A), math.log(v)) for A, v in d.items()]
+        n_ = len(pts); mx_ = sum(u for u, _ in pts) / n_; my_ = sum(w for _, w in pts) / n_
+        return sum((u - mx_) * (w - my_) for u, w in pts) / sum((u - mx_) ** 2 for u, _ in pts)
+    print(f'     log-log slope of level counts over A = 100..2001: observed {logslope(obs):.3f}, predicted {logslope(predlev):.3f} (fit of this run)')
     check(abs(share - pred) < 0.03, 'Haar model predicts the switching share of actual exponents within 0.03 (NUMERICAL agreement)')
     check(levels[98] == 23 and levels[398] == 37, 'sigma(M_a) takes 23 and 37 values for a <= 100, 400 (THM-4556 (vi), HYP-9213)')
     print(f'\n{"ALL CHECKS PASSED" if not FAIL else "FAILURES: " + str(FAIL)}  ({time.time() - t0:.0f}s)')

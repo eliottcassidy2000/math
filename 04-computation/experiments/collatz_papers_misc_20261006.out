@@ -9,7 +9,7 @@
   ok   |3/2|_R |3/2|_2 |3/2|_3 = (3/2)(2)(1/3) = 1; Dulac exponent log 3/log 2 = log_2 3
 (P) Paley tournaments: two witnessed choices (a vertex, an out-neighbour) + colour refinement
   ok   155 primes p = 3 mod 4 below 2000: one individualized vertex leaves 3 classes; one individualized arc 0 -> 1 gives a discrete colouring
-(L) round 2 reads the Legendre family Y^2 = X(X-1)(X-x)
-  ok   8 N_(e,d)(x) = p - ed - e - d + ed S(x) + O(1) with |O(1)| <= 12, S(x) = -a_p(Legendre E_x), for p in {7, 11, 19, 23, 43, 47}
+(L) round 2 reads the Legendre family Y^2 = X(X-1)(X-x): exact identity, boundary term constant on round-1 classes
+  ok   8 N_(e,d)(x) = p - ed - e - d + ed S(x) - [(1-d)(1-chi(x)) + (1+e)(1-chi(x-1)) + (1+e chi(x))(1+d chi(x-1))] exactly, S(x) = -a_p(Legendre E_x); all p = 3 mod 4 in [7, 400), 27484 cases (the bracket depends only on the round-1 class)
 
 ALL CHECKS PASSED

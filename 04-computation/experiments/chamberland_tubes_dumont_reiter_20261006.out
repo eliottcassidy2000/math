@@ -1,12 +1,13 @@
 A. Chamberland: mirror law and attracting fixed points
   ok   displacement g(x) = C(x) - x is even about -1/2: max |g(-1/2+u) - g(-1/2-u)| = 1.7e-38 (identity: g(-1/2+u) = 1/4 - (u/2) sin(pi u))
   ok   mirror multipliers sum to 2 at all 41 fixed points in [-20, 20]  (C'(-1-x) = 2 - C'(x))
-     at a fixed point C' = 1 - 1/(2w) +- (pi/4) sqrt(w^2-1), w = 2x+1; |C'| < 1 forces |w| < 3.3365, x in (-2.1682, 1.1682)
-  ok   fixed points of C with |2x+1| < 3.3365: exactly 4 (each candidate cluster has g' excluding 0 and a sign change)
+     at a fixed point C' = 1 - 1/(2w) +- (pi/4) sqrt(w^2-1), w = 2x+1; |C'| < 1 forces |w| < sqrt(1 + 100/pi^2) = 3.33648, x in (-2.1682, 1.1682)
+  ok   fixed points of C with |2x+1| < 3.33645: exactly 4 (each candidate cluster has g' excluding 0 and a sign change)
   ok   interval multipliers: attracting exactly at 0 (C' in [0.4991, 0.5012]) and -1.27773 (C' in [0.3833, 0.3914]); 0.27773 and -1 repelling
      attracting fixed points (40 digits): [(-1.2777337662, 0.385708463), (-0.0, 0.5)]; 0.2777338 has C' = 1.614292 (repelling)
 B. Chamberland: negative Schwarzian on [0, oo)
   ok   Q(w) < 0 on [pi/2, 2 sqrt3] (x in [0, 0.6027]) by 4000 interval cells; for w > 2 sqrt3, Q <= -w^2/2 + (3 sqrt3/4) w + 3/2 < 0
+  ok   Q(pi/2) = -0.3506 (x = 0); the sign change of Q nearest 0 is at x = -0.0217160 (Q > 0 just left of it)
   ok   identity 2C'C''' - 3C''^2 = pi^2 Q(pi(x+1/2)) at sample points (max err 4.7e-37)
 C. Tube theorem (both maps, every integer m >= 1)
   ok   scaled maps O, E agree with direct evaluation (48 cases)
@@ -18,6 +19,8 @@ C. Tube theorem (both maps, every integer m >= 1)
   ok   D (a = 0.6): D'(m) = 3/2 > 0, D'(m + a/(2m+1)) < 0 and D'' < 0 on tau(m) for all odd m: unique critical point c_m in tau(m)
   ok   D, a = 0.7: same three inequalities (1200 boxes)
   ok   D (a = 0.7): D'(m) = 3/2 > 0, D'(m + a/(2m+1)) < 0 and D'' < 0 on tau(m) for all odd m: unique critical point c_m in tau(m)
+     upper bounds of the images (interval enclosures): C O a=0.8 0.7223, C E a=0.8 0.7347, C E a=0.9 0.8977, D O a=0.6 0.5176, D E a=0.6 0.3595, D E a=0.7 0.4561
+  ok   the constant a = 0.95 fails for C at m = 2: E(0.95, 1/5) = [0.9827, 0.9827] > 0.95
 D. Dumont-Reiter: tau(1) is contracted to (1,2); the Odd Critical Point Conjecture
   ok   W_D(xi)/xi < 1 on (0, 0.6] (W_D = E(., 1/5) o O(., 1/3) is D^2 on tau(1) in scaled form): every point of tau(1) -> (1,2)
   ok   D fixed points mu1, mu2 = 0.3158162033, 1.5155526112: tau(1) = [1, 1.2] lies in (mu1, mu2), tau(m) lies in [2, oo) for m >= 2
@@ -40,4 +43,4 @@ F. Census (NUMERICAL)
 G. Flip lemma for even integers (rigorous): left deviations in [-1.3, -0.45] are thrown into the right tube
   ok   for every even k >= 2 and xi in [-1.3, -0.45]: 0 <= E(xi, 1/(2k+1)) <= 0.8 (4000 boxes): the point k + xi/(2k+1) maps into tau(T(k)) and shadows forever (THM-4563)
 
-ALL CHECKS PASSED  (26s)
+ALL CHECKS PASSED  (24s)

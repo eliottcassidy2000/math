@@ -13,8 +13,8 @@ Rigorous parts use mpmath interval arithmetic (iv); numerical parts are labelled
      D likewise (a = 0.6, also 0.7); the odd critical point lies in tau(n); D'' < 0 on odd tubes (a = 0.6 and 0.7).
   D. Dumont-Reiter: D^2 contracts tau(1) to the cycle (1,2); hence their Odd Critical Point Conjecture (ii), (iii) (real sense)
      hold for every odd n, and (i) holds iff the Collatz orbit of n reaches 1.
-  E. Chamberland: in tau(1) the scaled return map W has a repelling fixed point (IVT, rigorous; value 0.0710583 NUMERICAL) and
-     A2 (0.5775957); every odd n >= 7 with a Collatz orbit reaching 1 sends c_n to A1 (tails through 13, 21, 40, 64);
+  E. Chamberland: in tau(1) the scaled return map W has a fixed point in (0.0705, 0.3) (IVT, rigorous; value 0.0710583 and
+     repulsion W' = 1.2148 NUMERICAL) and A2 (0.5775957, NUMERICAL); every odd n >= 7 with a Collatz orbit reaching 1 sends c_n to A1 (tails through 13, 21, 40, 64);
      c_1, c_3, c_5 -> A2 (interval enclosures).
   F. Census (NUMERICAL): odd shadow deviations; the even critical point c_54 leaves the shadow; c_382, c_496, c_502 -> A2.
   G. Flip lemma (rigorous): a point at scaled position xi in [-1.3, -0.45] left of an even integer k >= 2 is mapped into the
@@ -189,7 +189,7 @@ pairs_ok = all(abs(Cpp(r) + Cpp(-1 - r) - 2) < mpf(10) ** -25 for r in fps)
 check(pairs_ok, f'mirror multipliers sum to 2 at all {len(fps)} fixed points in [-20, 20]  (C\'(-1-x) = 2 - C\'(x))')
 # rigorous classification: |C'| < 1 at a fixed point forces |2x+1| < sqrt(1 + 100/pi^2) = 3.3359
 wmax = sqrt(1 + 100 / pi ** 2)
-print(f'     at a fixed point C\' = 1 - 1/(2w) +- (pi/4) sqrt(w^2-1), w = 2x+1; |C\'| < 1 forces |w| < {float(wmax):.4f}, x in ({float((-wmax-1)/2):.4f}, {float((wmax-1)/2):.4f})')
+print(f'     at a fixed point C\' = 1 - 1/(2w) +- (pi/4) sqrt(w^2-1), w = 2x+1; |C\'| < 1 forces |w| < sqrt(1 + 100/pi^2) = {float(wmax):.5f}, x in ({float((-wmax-1)/2):.4f}, {float((wmax-1)/2):.4f})')
 # all zeros of g(x) = (2x+1)cos(pi x) - 1 in that window, isolated rigorously: interval grid, then on each cluster of
 # candidate cells the interval derivative g'(x) = 2 cos(pi x) - pi (2x+1) sin(pi x) excludes 0 and g changes sign at the ends
 lo, hi = (-wmax - 1) / 2, (wmax - 1) / 2
@@ -219,7 +219,7 @@ for a, b in clusters:
     if not ((dg.a > 0 or dg.b < 0) and ((ga.b < 0 and gb.a > 0) or (ga.a > 0 and gb.b < 0))):
         iso_ok = False
     mults.append((float(a), float(b), Cp_iv_global(X)))
-check(iso_ok and len(clusters) == 4, f'fixed points of C with |2x+1| < 3.3365: exactly {len(clusters)} (each candidate cluster has g\' excluding 0 and a sign change)')
+check(iso_ok and len(clusters) == 4, f'fixed points of C with |2x+1| < 3.33645: exactly {len(clusters)} (each candidate cluster has g\' excluding 0 and a sign change)')
 attr_iv = [(a, b, M) for a, b, M in mults if M.a > -1 and M.b < 1]
 rep_iv = [(a, b, M) for a, b, M in mults if M.a > 1 or M.b < -1]
 check(len(attr_iv) == 2 and len(rep_iv) == 2 and attr_iv[0][0] < -1.2777337 < attr_iv[0][1] and attr_iv[1][0] <= 0 <= attr_iv[1][1],
@@ -240,6 +240,10 @@ def Qw(w):
 w0 = 2 * sqrt(3)
 okB, nb = cover(lambda X, H: Qw(X).b < 0, mp.pi / 2, w0 + mpf('0.01'), 0, 1, 4000, 1)
 check(okB, f'Q(w) < 0 on [pi/2, 2 sqrt3] (x in [0, 0.6027]) by {nb} interval cells; for w > 2 sqrt3, Q <= -w^2/2 + (3 sqrt3/4) w + 3/2 < 0')
+Qpt = lambda w: -(mpf(1) / 2 + sin(w) ** 2 / 4) * w * w + cos(w) * (1 + sin(w)) * w + mpf(3) / 2 * (sin(w) ** 2 + 2 * sin(w) - 2)
+wstar = findroot(Qpt, mpf('1.50'))
+check(Qpt(pi / 2) < 0 and abs(wstar / pi - mpf(1) / 2 + mpf('0.0217160')) < 1e-6,
+      f'Q(pi/2) = {float(Qpt(pi / 2)):.4f} (x = 0); the sign change of Q nearest 0 is at x = {float(wstar / pi - mpf(1) / 2):.7f} (Q > 0 just left of it)')
 from mpmath import diff
 f1 = lambda x: diff(Cpt, x, 1); f2 = lambda x: diff(Cpt, x, 2); f3 = lambda x: diff(Cpt, x, 3)
 idt = max(abs(2 * f1(x) * f3(x) - 3 * f2(x) ** 2 - pi ** 2 * (lambda w: -(mpf(1)/2 + sin(w)**2/4)*w*w + cos(w)*(1+sin(w))*w + mpf(3)/2*(sin(w)**2 + 2*sin(w) - 2))(pi * (x + mpf(1) / 2))) for x in [mpf('0.13'), mpf('1.7'), mpf('9.31')])
@@ -278,6 +282,24 @@ for s_a in ('0.6', '0.7'):
     rd2 = cover(lambda X, H: hD2_odd(X, H).b < 0, 0, A.b, 0, H3, 40, 10)
     check(rd1[0] and rd2[0], f"D (a = {s_a}): D'(m) = 3/2 > 0, D'(m + a/(2m+1)) < 0 and D'' < 0 on tau(m) for all odd m: unique critical point c_m in tau(m)")
 aC, aD = mpf('0.8'), mpf('0.6')
+
+
+def max_enclosure(fun, a_b, hmax, nx=80, nh=20):
+    m = mpf(-10)
+    for i in range(nx):
+        for j in range(nh):
+            X = iv.mpf([a_b * i / nx, a_b * (i + 1) / nx])
+            H = iv.mpf([hmax * j / nh, hmax * (j + 1) / nh])
+            m = max(m, fun(X, H).b)
+    return m
+
+
+print('     upper bounds of the images (interval enclosures): ' + ', '.join(
+    f'{nm} {float(max_enclosure(fn, iv.mpf(sa).b, hm)):.4f}' for nm, fn, sa, hm in
+    (('C O a=0.8', C_odd, '0.8', H3), ('C E a=0.8', C_even, '0.8', H5), ('C E a=0.9', C_even, '0.9', H5),
+     ('D O a=0.6', D_odd, '0.6', H3), ('D E a=0.6', D_even, '0.6', H5), ('D E a=0.7', D_even, '0.7', H5))))
+E095 = C_even(iv.mpf('0.95'), iv.mpf(1) / 5)
+check(E095.a > iv.mpf('0.95').b, f'the constant a = 0.95 fails for C at m = 2: E(0.95, 1/5) = [{float(E095.a):.4f}, {float(E095.b):.4f}] > 0.95')
 
 # ================================================================== D
 print('D. Dumont-Reiter: tau(1) is contracted to (1,2); the Odd Critical Point Conjecture')
@@ -321,7 +343,7 @@ def W_C_ratio(X):
 
 
 cut = mpf('0.0705')
-rA1 = cover(lambda X, H: W_C_ratio(X).b < 1, 0, cut, 0, 1, 400, 1)
+rA1 = cover(lambda X, H: W_C_ratio(X).b < 1, 0, iv.mpf('0.0705').b, 0, 1, 400, 1)
 W03 = W_C(iv.mpf('0.3'))
 check(rA1[0] and W03.a > mpf('0.3'), f'W_C(xi) < xi on (0, {cut}] (and W_C >= 0): [0, {cut}] lies in the basin of A1; W_C(0.3) > 0.3, '
       f'so a fixed point (the separatrix) lies in ({cut}, 0.3) by the IVT')
@@ -346,7 +368,7 @@ for node, path in tails.items():
         X = iv.mpf([top * k / K, top * (k + 1) / K])
         sup = max(sup, push(X, path).b)
     worst[node] = sup
-check(all(v < cut for v in worst.values()), 'tube points at 13, 21, 40, 64 enter tau(1) at xi <= ' + ', '.join(f'{k}: {float(v):.5f}' for k, v in worst.items()) + f' < {cut}')
+check(all(v < iv.mpf('0.0705').a for v in worst.values()), 'tube points at 13, 21, 40, 64 enter tau(1) at xi <= ' + ', '.join(f'{k}: {float(v):.5f}' for k, v in worst.items()) + f' < {cut}')
 
 
 # backward-tree claim (finite, exact): odd n >= 7 never meets 3, 6, 12, ...; the tree of 1 to depth 7 has exactly these frontier nodes
@@ -481,6 +503,6 @@ def C_even_signed(xi, h):  # exact scaled even map, valid for xi of either sign
 
 
 A08 = iv.mpf('0.8')
-rG = cover(lambda X, H: (lambda v: v.a >= 0 and v.b <= A08.a)(C_even_signed(X, H)), mpf('-1.3'), mpf('-0.45'), 0, H5, 200, 20)
+rG = cover(lambda X, H: (lambda v: v.a >= 0 and v.b <= A08.a)(C_even_signed(X, H)), iv.mpf('-1.3').a, iv.mpf('-0.45').b, 0, H5, 200, 20)
 check(rG[0], f'for every even k >= 2 and xi in [-1.3, -0.45]: 0 <= E(xi, 1/(2k+1)) <= 0.8 ({rG[1]} boxes): the point k + xi/(2k+1) maps into tau(T(k)) and shadows forever (THM-4563)')
 print(f'\n{"ALL CHECKS PASSED" if not FAIL else "FAILURES: " + str(FAIL)}  ({time.time() - t0:.0f}s)')

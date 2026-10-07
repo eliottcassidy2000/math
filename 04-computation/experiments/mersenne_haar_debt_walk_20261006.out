@@ -9,6 +9,7 @@ A. Haar model of Mersenne switching (NUMERICAL, seed 2026, N = 1200, 12000-bit 2
      T =  3200: non-switch q(T) = 0.0725   lag-1 non-merge q1(T) = 0.2600   sqrt(T) q1 =  14.71
      T =  6400: non-switch q(T) = 0.0400   lag-1 non-merge q1(T) = 0.1817   sqrt(T) q1 =  14.53
      T =  9600: non-switch q(T) = 0.0267   lag-1 non-merge q1(T) = 0.1467   sqrt(T) q1 =  14.37
+     smallest reachable total over samples: 11927; median merge total (log-interpolated): any lag 157, lag 1 548
   ok   Haar switch share at T = 27 is 0.1525 +- 0.0104; certified exact share at K = 27 is 0.1556 (consistent)
      LS fit of q(T) on T in [400, 9600]: q ~ 37.34 T^-0.782, bootstrap 95% [0.689, 0.900]
      sqrt(T) q1(T) at T = 9600: 14.37, bootstrap 95% [12.41, 16.33]
@@ -32,7 +33,19 @@ C. The L-walk and the two exponent streams (NUMERICAL)
         k = 4: 0.0624  0.0624  0.0625
         k = 5: 0.0311  0.0311  0.0312
      independence of a and w: chi^2 = 7.4 on 9 dof; mean w = 1.9993, var w = 1.996, lag-1 autocorrelation of w = -0.0019
+     (these are consistency checks of exact Haar facts: in generic steps w = b is the x-orbit's own exponent, and x_0 = 3 2^v y_0 + 1
+      is Haar on a coset, so its exponent stream is i.i.d. Geom(1/2); same-step independence of a and w is also exact)
   ok   b = w (= v_2(D)) in every generic step, as Theorem D(c) says
+     block variances Var(L_(t+K) - L_t)/K over disjoint blocks starting at L >= 40 (i.i.d. increments give 4 for every K);
+     in brackets: blocks required to stay at L >= 16 throughout (a conditioning that biases the variance down for large K):
+        K =   1: 4.013 (+- 0.008, 485584 blocks)   [3.956, 616792 blocks]
+        K =   4: 4.014 (+- 0.016, 121362 blocks)   [3.940, 152076 blocks]
+        K =  16: 4.011 (+- 0.033, 30314 blocks)   [3.894, 36850 blocks]
+        K =  64: 4.016 (+- 0.065, 7565 blocks)   [3.825, 8625 blocks]
+        K = 256: 4.123 (+- 0.138, 1783 blocks)   [3.786, 1796 blocks]
+     cross-covariances in the L >= 16 regime, Cov(a_s, b_(s+k)) / Cov(b_s, a_(s+k)) (s.e. ~ 2/sqrt(n)):
+        k=1: +0.0025/+0.0013 (s.e. 0.0025); k=2: +0.0058/-0.0020 (s.e. 0.0026); k=4: -0.0016/-0.0034 (s.e. 0.0026); k=8: -0.0019/-0.0045 (s.e. 0.0026); k=16: -0.0011/-0.0005 (s.e. 0.0026); k=32: -0.0006/+0.0037 (s.e. 0.0026); k=64: -0.0026/+0.0004 (s.e. 0.0026)
+  ok   block variances consistent with 4 for K up to 256 (NUMERICAL)
      L one step before merge: [(-2, 489), (2, 301), (-4, 20), (4, 11), (6, 7), (-6, 5), (-8, 1)]
      P(no merge by step   100) = 0.6270   sqrt(T) P =  6.27
      P(no merge by step   300) = 0.4900   sqrt(T) P =  8.49
@@ -43,7 +56,8 @@ D. Actual exponents: sigma(M_a) census for a <= 2001 vs the Haar prediction
      odd a in [1001, 2001]: share with a smaller sigma-partner 0.970 (Haar prediction 0.974); share with sigma(M_(a-1)) 0.824 (Haar prediction 0.864 with sqrt(T) q1 = 14.37)
      post-run template total / a = 7.678;  #distinct sigma values for a <= 100, 400, 1000, 2001: 23, 37, 54, 69
      Haar-predicted level counts: {100: 24.2, 400: 41.4, 1000: 55.8, 2001: 68.6}
+     log-log slope of level counts over A = 100..2001: observed 0.370, predicted 0.349 (fit of this run)
   ok   Haar model predicts the switching share of actual exponents within 0.03 (NUMERICAL agreement)
   ok   sigma(M_a) takes 23 and 37 values for a <= 100, 400 (THM-4556 (vi), HYP-9213)
 
-ALL CHECKS PASSED  (91s)
+ALL CHECKS PASSED  (92s)

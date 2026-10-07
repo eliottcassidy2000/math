@@ -198,9 +198,11 @@ the integer fixed points `0` and `-1`: the real extension glues the sheets
 about `-1/2`, not about `0`. *Corrected 2026-10-06 (MISTAKE-578):* the
 non-integer attracting fixed point is `-1.278` (multiplier `0.386`) and its
 mirror `0.278` is repelling (`1.614`); the attracting fixed points are exactly
-`0` and `-1.2777...`, because `C'(-1-x) = 2 - C'(x)` (the displacement is even
-about `-1/2`; S19 note `collatz_cycles_tubes_debt_walk_openai_20261006.md`
-section 2.2). The synthesis's record stands: every continuous extension has all periods on
+`0` and `-1.2777...` (interval root isolation, S19 note
+`collatz_cycles_tubes_debt_walk_openai_20261006.md` section 2.2; the mirror law
+`C'(-1-x) = 2 - C'(x)`, from the evenness of the displacement about `-1/2`, shows
+at most one member of each mirror pair is attracting; both are in Lygeros-Rozier
+2014, (5.2)-(5.3)). The synthesis's record stands: every continuous extension has all periods on
 both sides (Sharkovskii gives nothing), and the sign decides stability.
 
 ## 6. Verdicts

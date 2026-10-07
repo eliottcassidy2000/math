@@ -7,8 +7,8 @@ Note: 05-knowledge/results/collatz_cycles_tubes_debt_walk_openai_20261006.md, se
       g^a(2^a - 1) = 3^a - 1 (2-adic depth a in, 3-adic depth a out); the product formula for 3/2.
   (P) Paley tournaments P_p, p = 3 mod 4 prime < 2000: colour refinement after individualizing one vertex gives 3 classes;
       after individualizing the arc 0 -> 1 (two witnessed symmetric choices: a vertex, then an out-neighbour) it is discrete.
-  (L) Round 2 of that refinement reads the Legendre family: 8 N_(e,d)(x) = p - ed - e - d + ed S(x) + O(1), where
-      S(x) = sum_y chi(y(y-1)(y-x)) = -a_p(Y^2 = X(X-1)(X-x)) and the O(1) term (from y in {0,1,x}) is constant on round-1 classes.
+  (L) Round 2 of that refinement reads the Legendre family: 8 N_(e,d)(x) = p - ed - e - d + ed S(x) - B(e,d;chi(x),chi(x-1)), where
+      S(x) = sum_y chi(y(y-1)(y-x)) = -a_p(Y^2 = X(X-1)(X-x)) and the explicit boundary term B (from y in {0,1,x}) depends only on the round-1 class.
 Prints ALL CHECKS PASSED.  Runtime about 30 s."""
 from math import gcd
 import numpy as np
@@ -121,18 +121,21 @@ def chi(a, p):
     return 0 if a == 0 else (1 if pow(a, (p - 1) // 2, p) == 1 else -1)
 
 
-print('(L) round 2 reads the Legendre family Y^2 = X(X-1)(X-x)')
-okL = True
-for p in (7, 11, 19, 23, 43, 47):
+print('(L) round 2 reads the Legendre family Y^2 = X(X-1)(X-x): exact identity, boundary term constant on round-1 classes')
+okL, ncase = True, 0
+for p in primerange(7, 400):
+    if p % 4 != 3:
+        continue
+    chis = [chi(t, p) for t in range(p)]
     for x in range(2, p):
-        S = sum(chi(y * (y - 1) * (y - x), p) for y in range(p))
-        bds = set()
+        S = sum(chis[(y * (y - 1) * (y - x)) % p] for y in range(p))
+        cx, cx1 = chis[x % p], chis[(x - 1) % p]
         for e in (1, -1):
             for dd in (1, -1):
-                N = sum(1 for y in range(p) if y not in (0, 1, x) and chi(y, p) == e and chi(y - 1, p) == dd and chi(y - x, p) == 1)
-                full = sum((1 + e * chi(y, p)) * (1 + dd * chi(y - 1, p)) * (1 + chi(y - x, p)) for y in range(p) if y not in (0, 1, x))
-                okL &= (8 * N == full)
-                bd = full - (p - e * dd - e - dd + e * dd * S)
-                okL &= abs(bd) <= 12
-check(okL, '8 N_(e,d)(x) = p - ed - e - d + ed S(x) + O(1) with |O(1)| <= 12, S(x) = -a_p(Legendre E_x), for p in {7, 11, 19, 23, 43, 47}')
+                N = sum(1 for y in range(p) if y not in (0, 1, x) and chis[y] == e and chis[(y - 1) % p] == dd and chis[(y - x) % p] == 1)
+                bd = (1 - dd) * (1 - cx) + (1 + e) * (1 - cx1) + (1 + e * cx) * (1 + dd * cx1)
+                okL &= (8 * N == p - e * dd - e - dd + e * dd * S - bd)
+                ncase += 1
+check(okL, f'8 N_(e,d)(x) = p - ed - e - d + ed S(x) - [(1-d)(1-chi(x)) + (1+e)(1-chi(x-1)) + (1+e chi(x))(1+d chi(x-1))] '
+      f'exactly, S(x) = -a_p(Legendre E_x); all p = 3 mod 4 in [7, 400), {ncase} cases (the bracket depends only on the round-1 class)')
 print(f'\n{"ALL CHECKS PASSED" if not FAIL else "FAILURES: " + str(FAIL)}')

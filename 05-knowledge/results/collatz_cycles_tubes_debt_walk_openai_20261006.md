@@ -2,7 +2,7 @@
 
 Session opus-2026-10-06-S19. Owner prompt: "work the next steps as they emerge, also mix in and extend ideas from more papers": witnessed symmetric choice vs CPT, the additive indecomposability of the primes, two limit cycles for quintic Liénard systems, and uniform bounds for planar polynomial limit cycles (openai/math, 24 September 2026), "etc at your discretion, let your mathematical hypotheses grow freely into many proofs".
 
-Scripts (each prints ALL CHECKS PASSED; outputs committed next to them):
+Scripts (outputs committed next to them; the proof, Haar and side-check scripts print ALL CHECKS PASSED, the census scripts print data):
 * `04-computation/experiments/chamberland_tubes_dumont_reiter_20261006.py` (about 30 s; mpmath interval arithmetic), for section 2.
 * `04-computation/experiments/chamberland_dumont_reiter_critical_census_20261006.py`: NUMERICAL census, run as `2001 1500`.
 * `04-computation/experiments/chamberland_even_critical_fates_20261006.py`: NUMERICAL, even critical points, run as `1200`.
@@ -12,7 +12,7 @@ Scripts (each prints ALL CHECKS PASSED; outputs committed next to them):
 
 Status words follow the repo: PROVED, PROVED (computer-assisted, interval arithmetic), FINITE-EXACT, NUMERICAL, HEURISTIC, ANALOGY, DICTIONARY, CITED, KNOWN. The openai/math preprints are AI-written and unrefereed; their results are reported as claims.
 
-**Independently audited** (section 7). The first version missed the decisive prior art, **Lygerōs–Rozier 2014**, for the Chamberland half. Corrections are logged as MISTAKE-580.
+**Independently audited twice** (section 7). The first version missed the decisive prior art, **Lygerōs–Rozier 2014**, for the Chamberland half. Corrections are logged as MISTAKE-580.
 
 ## 0. Answers
 
@@ -37,7 +37,7 @@ Status words follow the repo: PROVED, PROVED (computer-assisted, interval arithm
 * New, rigorous:
   * `c_1`, `c_3` and `c_5` go to `A2 = {1.19253…, 2.13866…}` (interval trap; these were numerical);
   * a **flip lemma**: a point within scaled distance `ξ ∈ [−1.3, −0.45]` left of an even integer is thrown into the right tube, and shadows from then on;
-  * a **Singer refinement**: an attracting cycle whose immediate basin contains an odd critical point is `A1`, `A2`, or lives in the tubes of a nontrivial positive integer cycle.
+  * a **Singer dichotomy**: every attracting or neutral cycle other than `A1`, `A2` either lives in the tubes of a nontrivial positive integer cycle, or has only even critical points in its immediate basin.
 * NUMERICAL:
   * On `τ(1)` the scaled return map has a repelling separatrix at `ξ = 0.0710584`, Lygerōs–Rozier's `x1 = 1.023686`, and `A2` at `ξ = 0.5775957`. In these coordinates `A2` is the satellite of `A1` in its own tubes.
   * Even critical points can leave the shadow (`c_54`). Some even ones go to `A2` (`c_382`, `c_496`, `c_502`; as in Lygerōs–Rozier).
@@ -54,12 +54,13 @@ Status words follow the repo: PROVED, PROVED (computer-assisted, interval arithm
   * The non-switch share decays like `T^(−α)`: `α = 0.68` (large run) and `0.78` (small run), with bootstrap intervals together spanning about `[0.63, 0.90]`.
   * The lag-1 non-merge share fits `T^(−1/2)`: tail exponent `0.48`–`0.52`, `√T·q₁ ≈ 14–17`.
 * **Theorem D** (PROVED; the bookkeeping is mac-mini's HYP-9214 model, made exact).
-  * With `x = 2^L y + Δ` and the debt `D = 3Δ + 1 − 2^L`, the next relation is the identity iff `D = 0`, and then `L = 2k ≠ 0` and `x = 4^k y + (4^k − 1)/3` (a sibling pair).
+  * With `x = 2^L y + Δ` and the debt `D = 3Δ + 1 − 2^L`, the next relation is the identity iff `D = 0`. Then `L = 2k` and `x = 4^k y + (4^k − 1)/3` (a sibling pair), with `k ≠ 0` unless the current relation is already the identity.
   * A merge with `D ≠ 0` is a value coincidence of Haar measure 0. All 834 sampled merges pass through `D = 0`.
   * For integer debts the debt's odd part runs the Collatz map kicked by a power of two: `D′_odd = U(D_odd) − 2^(L′−w′)`.
-* **The two exponent streams** (NUMERICAL).
-  * In generic steps with `L ≥ 8`, the debt exponent `w` is `Geom(1/2)`-distributed to four decimals, independent of the partner exponent `a` (`χ² = 7.4` on 9 dof), with autocorrelation `−0.002`.
-  * So far from 0, `L` is statistically the symmetric random walk with i.i.d. increments `a − w` (variance 4.00).
+* **The two exponent streams.**
+  * `L_t − L_0` is the difference of the bit-consumption counts of the two coupled orbits `y` and `x = 3·2^v y + 1`.
+  * Each stream is marginally i.i.d. `Geom(1/2)` exactly (Haar on cosets). In generic steps the debt exponent is `x`'s own exponent `b`.
+  * The open question is their long-lag joint law. Numerically (NUMERICAL), block variances `Var(L_(t+K) − L_t)/K` are 4.01–4.12 for `K ≤ 256`, and lagged cross-covariances `|Cov(a_s, b_(s+k))| ≤ 0.006`: consistent with a symmetric random walk.
 * **HYP-9217** (lag-1 debt merges almost surely with a `T^(−1/2)` tail; the switching set has full measure) would give `μ_2(S) = 1` and hence HYP-9213.
 * **Against actual exponents** (NUMERICAL).
   * The model predicts the switching share (0.968–0.974 predicted, 0.970 observed) and the `σ`-level counts (`23, 37, 54, 69` observed, `22–24, 40–41, 56, 69–72` predicted).
@@ -104,7 +105,7 @@ The committed S18 numba search, run as `9 31` (output `mersenne_certified_densit
 |---|---|---|---|---|---|
 | certified share | 5221376/33554432 = 0.1556 | 10757550/67108864 = 0.1603 | 22135584/134217728 = 0.1649 | 45495372/268435456 = 0.1695 | 93407400/536870912 = 0.1740 |
 
-The increments are about 0.0046 per unit of `K`, consistent with the Haar curve. Exhaustive certification cannot reach the median merge total (several hundred).
+The increments are about 0.0046 per unit of `K`, consistent with the Haar curve. Exhaustive certification cannot reach the median merge totals: from the printed curves, about 157 (any lag) and 548 (lag 1) in the small run, 167 and 563 in the large run.
 
 ### 1.3 Monte Carlo (NUMERICAL; two committed runs)
 
@@ -154,13 +155,13 @@ The relation `x = 2^L y + Δ`, the update `L′ = L + a − b`, `Δ′ = D/2^b`,
 * (b) `x′ − y′ = (2^(L′) − 1) y′ + Δ′`. This vanishes identically in `y′` iff `L′ = 0` and `Δ′ = 0`, i.e. `D = 0`. Then `3Δ = 2^L − 1`, and `Δ ∈ Z[1/2]` forces `3 | 2^|L| − 1`, i.e. `L` even.
 * (c) `D′ = 3D/2^b + 1 − 2^(L′) = 3D_odd + 1 − 2^(L′)`. If `L′ > w′`, factor `2^(w′)`. ∎
 
-**Scope.** (c) needs an integer debt. Over the 1000 sampled pairs, steps with `L ≤ 0` (where `D` may be dyadic) are about 45% of all steps.
+**Scope.** (c) needs an integer debt. Since `D = 3x + 1 − 2^(L+a) y′`, that holds iff `L + a ≥ 0`. Over the 1000 sampled pairs, steps with `L ≤ 0` are 45% of all steps (593 893 of 1 310 586, table in 1.5); the kicked law needs the rest.
 
 **Checks** (FINITE-EXACT; `mersenne_haar_debt_walk_20261006.py` B). Over 1000 lag-1 pairs `x_0 = 3·2^v y_0 + 1`, the Mersenne debt states of THM-4556 (ii):
 * the transition law holds on all first-60 steps;
 * the kicked law holds in all 28 693 generic integer-debt steps tested;
 * all 834 merges pass through `D = 0` with `L` even and nonzero.
-* `L` one step before a merge is `−2` (489), `+2` (301), `−4` (20), `+4` (11), `±6` and `−8`. About 61% have `k < 0`, matching mac-mini's "about 2/3".
+* `L` one step before a merge is `−2` (489), `+2` (301), `−4` (20), `+4` (11), `±6` and `−8`. About 62% (515 of 834) have `k < 0`, matching mac-mini's "about 2/3".
 
 ### 1.5 The walk and its two exponent streams (NUMERICAL)
 
@@ -172,18 +173,22 @@ Over all steps of the 1000 pairs (12 000-bit sources, up to 4800 steps each):
 | variance | 3.98 | 4.04 | 4.01 | 4.02 | **4.002** |
 
 * Globally the walk has mean 0 and variance 4. In the merge region `L ∈ [1, 6]` it has a small negative drift (about 5 s.e.), which is where the merges and ties act.
-* **The two streams.** In the 672 443 generic integer-debt steps with `L ≥ 8`, the increment is `a − w`. Here `a` is the partner's exponent and `w = v_2(D) = b` is the debt's own exponent; `b = w` in every such step, as (c) says.
-  * `P(w = k) = 0.5001, 0.2500, 0.1250, 0.0624, 0.0311` for `k = 1, …, 5`, against `2^(−k)`.
-  * `a` and `w` are independent: `χ² = 7.4` on 9 dof.
-  * `w` has lag-1 autocorrelation `−0.002`.
-  * Far from 0, `L` is statistically a symmetric random walk with i.i.d. `Geom − Geom` increments. A HEURISTIC reason: Haar measure is invariant under `U`, and the kicks rewrite only bits at depth `L′ − w′`, so the debt's low bits stay Haar-distributed.
+* **The two streams.** In the 672 443 generic integer-debt steps with `L ≥ 8`, the increment is `a − w`. Here `a` is the partner's (`y`'s) exponent and `w = v_2(D)`; `b = w` in every such step, as (c) says, so `w` is the `x`-orbit's own exponent.
+  * **Exact facts** (PROVED; the numbers are consistency checks):
+    * `x_0 = 3·2^v y_0 + 1` is Haar on a coset and `U` preserves Haar, so `x`'s exponent stream is i.i.d. `Geom(1/2)` (after about `v/2` steps), like `y`'s;
+    * when `L_t > w_t`, `w_t` is fixed by bits already revealed while `a_(t+1)` is fresh, so same-step independence is exact.
+    * Checks: `P(w = k) = 0.5001, 0.2500, 0.1250, 0.0624, 0.0311` for `k = 1, …, 5`; `χ² = 7.4` on 9 dof; lag-1 autocorrelation of `w` `−0.002`.
+  * **The open question** is the long-lag joint law of the two streams: `L_t − L_0 = Σ a − Σ b` is the difference of the bit-consumption counts of `y` and `x`, and the kicks at depth `L′ − w′` surface after about `L/2` steps.
+  * Evidence (NUMERICAL), block variances `Var(L_(t+K) − L_t)/K` over disjoint blocks starting at `L ≥ 40`: 4.013, 4.014, 4.011, 4.016 and 4.12 ± 0.14 for `K = 1, 4, 16, 64, 256`. Requiring blocks to stay at `L ≥ 16` biases these down, to 3.96 → 3.79.
+  * The lagged cross-covariances `Cov(a_s, b_(s+k))` and `Cov(b_s, a_(s+k))` for `k = 1, …, 64` are all within `±0.006` (s.e. 0.0026).
+  * So far from 0, `L` is numerically indistinguishable from a symmetric random walk.
 * In steps, `P(no merge by t)` is 0.627, 0.490, 0.324, 0.216 and 0.166 at `t = 100, 300, 1000, 3000, 4800`; `√t·P` is 6.3, 8.5, 10.3, 11.8 and 11.5.
 
 **HEURISTIC mechanism.**
 * A symmetric walk with finite variance is recurrent.
 * The debt is pinned to the scale `|D| ≈ 2^L` (the kick `2^(L′)` dominates in (c)). So returns of `L` to `{±2, ±4}` bring the debt to small values, where `D = 0` has positive chance.
 * That gives `P(no merge by t) ≈ c·t^(−1/2)`.
-* Not proved: the asymptotic independence and fairness of the debt's exponent stream, a deterministic Collatz orbit randomized only through the kicks. This is mac-mini's open question (per-visit success bounded below).
+* Not proved: the long-lag joint law of the exponent streams of `y` and `3·2^v y + 1`, i.e. recurrence of the difference of their bit-consumption counts, together with mac-mini's per-visit success bounded below. The marginal laws are exact.
 
 ### 1.6 HYP-9217 (the debt recurrence law)
 
@@ -200,7 +205,7 @@ For `2 ≤ a ≤ 2001` the script computes `σ(M_a)` and the post-run template t
 * **Any partner.** For odd `a ∈ [1001, 2001]` the share with a smaller `σ`-partner is 0.970. The Haar prediction `1 − mean q(T_post(a))` is 0.974 with the small run's fit and 0.968 with the large run's. mac-mini's `[10^3, 6·10^3]` census gives 0.980.
 * **Level counts.** Distinct `σ` values for `a ≤ 100, 400, 1000, 2001` (counting `a = 1`) are `23, 37, 54, 69`.
   * Predicted `2 + Σ_(odd a) q(T_post(a))`: `24.2, 41.4, 55.8, 68.6` (small fit) and `21.9, 39.5, 56.0, 72.0` (large fit).
-  * In this window both fits grow like `A^0.35`, partly through the cap `min(1, ·)` and the offset. So the agreement does not pin `α`.
+  * Log-log slopes over `A = 100..2001`: observed 0.370; predicted 0.349 (small fit) and 0.398 (large fit). The cap `min(1, ·)` and the offset matter in this window, so the agreement does not pin `α`.
 * **Lag 1.** The share with `σ(M_(a−1))` is 0.824. Predicted: 0.864 with the small run's `c₁ = 14.4`, 0.846 with the large run's 16.3.
   * The model over-predicts lag-1 merging by 0.02–0.04 (1.3–2.3σ). Actual orbits end, so their effective time is shorter than `T_post`.
   * The ratio of the observed lag-1 failure shares in `[1001, 2001]` and in mac-mini's `[10^3, 6·10^3]` (0.176/0.118 = 1.49) matches the `a^(−1/2)` law's 1.43.
@@ -231,11 +236,11 @@ The uniform-bounds preprint's local model `ẋ = x, ẏ = −λy` (flight time `
   * `[μ1, μ3]` is invariant, with a.e. point going to `A1` or `A2`;
   * a nontrivial positive cycle of `T` would be attracting;
   * the "Critical Points" conjecture: all `c_n` go to `A1` or `A2`.
-  * The survey calls the two-cycle conjecture "equivalent to the 3x+1 problem"; by 2.6 (e) it implies the cycle half.
+  * The survey calls the two-cycle conjecture "equivalent to the 3x+1 problem". It implies the cycle half immediately, because positive integer cycles are attracting (Lygerōs–Rozier say so after their Conjecture 2.1). 2.6 (e) is needed only for the converse.
 * **Dumont–Reiter 2003** (Dyn. Contin. Discrete Impuls. Syst. Ser. A 10, 875–893; preprint read):
   * negative Schwarzian of `D` for `x ≥ 0` (Theorem 5);
   * `c_n = n − (−1)^n (2/(π² ln 3))/n + O(n⁻²)` (Theorem 6);
-  * every point of `(μ1, μ3)` is attracted to `(1,2)` (Theorem 8);
+  * every point of `(μ1, μ3)` is attracted to `(1,2)` (Theorem 8; literally false at `μ2` and its preimages, proof graphical; not used here);
   * total stopping time of real `x` = least `k` with `μ1 < D^k(x) < μ2`;
   * **Conjecture 1 (Odd Critical Point Conjecture)**: for odd `n`, (i) `c_n` is attracted to `(1,2)`; (ii) `c_n` and `n` have the same total stopping time; (iii) `c_n` is in the immediate basin of total stopping time equal to the value at `n`.
   * Evidence: odd `n < 180 000` and Vyssotsky's `n_V`. The even `c_54` fails to shadow (their Table 6).
@@ -256,7 +261,7 @@ We found no proof of the Odd Critical Point Conjecture in the sources checked: t
 
 With `u = x + 1/2`, `C(x) − x = 1/4 − (u/2) sin(πu)`, which is even in `u`. So `C′(−1 − x) = 2 − C′(x)` at mirror fixed points, checked at all 41 fixed points in `[−20, 20]`.
 
-At a fixed point, `cos πx = 1/w` with `w = 2x + 1`, so `C′ = 1 − 1/(2w) ± (π/4)√(w² − 1)`. Then `|C′| < 1` forces `|w| < √(1 + 100/π²) = 3.3365`.
+At a fixed point, `cos πx = 1/w` with `w = 2x + 1`, so `C′ = 1 − 1/(2w) ± (π/4)√(w² − 1)`. Then `|C′| < 1` forces `|w| < √(1 + 100/π²) = 3.33645`.
 
 Interval root isolation in that window finds exactly four fixed points. Each candidate cluster has an interval derivative excluding 0 and a sign change. Interval multipliers:
 * attracting at `0` (`C′ ∈ [0.4991, 0.5012]`) and `−1.2777338` (`[0.3833, 0.3914]`);
@@ -296,15 +301,17 @@ Here `S = sinc(πξh/2)`, `σ = sin²(πξh/2)`, `φ(y) = (1 − e^(−y))/y` an
 
 **Proof.**
 * Outward-rounded interval arithmetic on box covers, 1200 boxes per constant.
-* `sinc`, `φ` and `ψ` are enclosed by monotonicity on the ranges used (`sinc` up to 0.84; `φ`, `ψ` up to 0.23).
+* `sinc`, `φ` and `ψ` are enclosed by monotonicity on the ranges used (`sinc` up to 0.95; `φ`, `ψ` up to 0.23).
 * The tube constants are exact decimals: boxes cover up to the interval enclosure's upper end, and images are compared with its lower end.
 * Because `h` runs over the continuum `[0, 1/3] ∋ 1/(2m+1)`, all integers are covered at once. ∎
 
 **Numbers.**
 * For `C`, `ξ_0 = (2n+1)(c_n − n) → 6/π² = 0.6079`, and the peak image is `6.75/π² = 0.6839`.
 * The largest scaled deviation along all orbits of odd `n ≤ 401` is 0.7037 (`C`) and 0.4559 (`D`).
-* The audit's independent enclosures give maxima: `O` 0.716 (`C`) and 0.509 (`D`); `E` 0.734 / 0.8965 (`C`, `a = 0.8 / 0.9`) and 0.456 / 0.587 (`D`).
-* In the limit the maximal invariant interval for `C` is `[0, 12/π²)`, matching Lygerōs–Rozier's `a < 6`. At `m = 2`, `a = 0.95` fails.
+* Upper bounds of the images, printed by the script (interval enclosures):
+  * `C`: `O` 0.7223 (`a = 0.8`); `E` 0.7347 / 0.8977 (`a = 0.8 / 0.9`);
+  * `D`: `O` 0.5176 (`a = 0.6`); `E` 0.3595 / 0.4561 (`a = 0.6 / 0.7`).
+* In the limit the maximal invariant interval for `C` is `[0, 12/π²)`, matching Lygerōs–Rozier's `a < 6`. At `m = 2`, `a = 0.95` fails: `E(0.95, 1/5) = 0.9827` (printed).
 * Lygerōs–Rozier's `[n, n + a_LR/(π²n)]` corresponds to `a ≈ 2a_LR/π²`, so their `7/2` gives `a ≈ 0.709`.
 
 ### 2.5 Corollary DR (the Odd Critical Point Conjecture; PROVED, new)
@@ -343,12 +350,15 @@ So Conjecture 1 (ii) and (iii) (real sense) are theorems, and Conjecture 1 (i) f
   * if `n` never reaches 1, `c_n` stays in tubes of integers `≥ 3`;
   * if `n` diverges, `c_n → ∞`;
   * if `n` enters a nontrivial cycle `Γ`, `c_n` accumulates in `Γ`'s tubes.
-* **(e) Singer refinement (PROVED, using Singer 1978).**
+* **(e) Singer dichotomy (PROVED, using Singer 1978).**
   * Let `Γ*` be an attracting or neutral cycle of `C` in `(0, ∞)` other than `A1`, `A2`, with `[0, μ1)` the basin of 0.
   * Its immediate-basin components are bounded open intervals in `(0, ∞)`. An unbounded one would contain the start of a divergent orbit, and divergent orbits start beyond every bound by the intermediate-value chains through `[2j+2, 2j+3]` (Theorem K(c) of the Kawasaki audit note).
   * So Singer's argument (`C` is `C³`, `SC < 0` by C2, `C([0, ∞)) ⊂ [0, ∞)`) puts a critical point in the immediate basin.
-  * If that critical point is odd, `c_n`, then `n` cannot reach 1 (by (a), (b)) and cannot diverge, so `n` enters a nontrivial positive cycle `Γ`, and `Γ*` lies in the closed tubes of `Γ`.
-  * Lygerōs–Rozier already note that every positive integer cycle's immediate basin contains a critical point. This is the converse direction for odd critical points.
+  * Dichotomy:
+    * if the immediate basin contains an odd critical point `c_n`, then `n` cannot reach 1 (by (a), (b)) and cannot diverge, so `n` enters a nontrivial positive cycle `Γ`, and `Γ*` lies in the closed tubes of `Γ`;
+    * otherwise all critical points in the basin are even.
+  * The first alternative, for a cycle known to capture an odd critical point, needs only Theorem T and (a), (b). It is close to Lygerōs–Rozier's Lemma 2.4 with Theorem 3.3. Singer's theorem is what forces one of the two alternatives.
+  * Lygerōs–Rozier note the forward direction: every positive integer cycle's immediate basin contains a critical point.
 * **(f) Even critical points** (`c_m` just left of even `m`, `ξ_0 → −2/π²`) are not controlled by tubes.
   * The left side of an odd integer expands: `O(ξ) < (9/4)ξ` for `ξ < 0`.
   * `c_54` leaves the near-integer regime at step 9, at the integer 242.
@@ -476,16 +486,30 @@ It found no false mathematics in the tube theorem. Its findings and our response
    * `D″ < 0` checked at `a = 0.7`.
    * The even critical points sent to `A2`.
 
-Added after the audit, not re-audited (all mechanical or FINITE-EXACT):
-* the flip lemma (2.6 (f));
-* the exponent-stream statistics (1.5);
-* the Legendre round-2 identity and the Paley range to 2000 (§5);
-* the interval root isolation of C1.
+**Second audit** (independent, 2026-10-07; on the corrected version 785e3ccf9).
+
+It reran the scripts (exact reproduction), reread Lygerōs–Rozier and Dumont–Reiter in full, and found no false mathematics. Its findings (all applied; MISTAKE-580, second-audit addendum):
+
+1. **MAJOR: the exponent-stream statistics test exact Haar facts, not the open question.** In generic steps `w = b` is `x`'s own exponent. *Applied:* retyped. The block-variance and cross-covariance tests of the long-lag coupling are added to the script (1.5).
+2. **The "Singer refinement" did not need Singer.** *Applied:* now the Singer dichotomy (2.6 (e), THM-4563 (vii)).
+3. **Two-cycle conjecture ⟹ cycle half** is credited to the attracting-cycle fact (2.1).
+4. **The separatrix's repulsion** is typed NUMERICAL.
+5. **Theorem D wording** ("`k ≠ 0` unless already the identity"; integer debt iff `L + a ≥ 0`).
+6. **A direct proof** that `D` has a unique critical point in `[n − 1/2, n + 1/2]` (THM-4563 (iii)).
+7. **MISTAKE-580's Monte Carlo item** corrected (the error was irreproducibility).
+8. **Unprinted numbers** are now printed: the Schwarzian sign change, `Q(π/2)`, the image upper bounds, `a = 0.95`, reachable totals, medians and level-count slopes. Also "61%" → 62%.
+9. **Audit labels.**
+10. **Header wording.**
+11. **Interval endpoints of the covers**, and 3.33645.
+12. **The exact boundary term of the Legendre identity**, now checked in 27 484 cases.
+13. **Wording**: Dumont–Reiter Theorem 8, the S15 correction, the `sinc` range, the INDEX.
+
+Its novelty check found none of the items claimed as new (the `D`-map results, the interval certification, the rigorous `A2` capture, the flip lemma, the Singer dichotomy) in Lygerōs–Rozier or Dumont–Reiter. Lagarias's bibliography II (entry 30) lists Dumont–Reiter's conjecture as open, and no later proof was found.
 
 ## 8. Next steps
 
 1. **Even critical points.** Classify their fates by the parity sequence of `T(m)`. By the flip lemma, an odd-step run that ends with the left deviation in `[−1.3, −0.45]` captures the point. Escape needs the run to overshoot.
-2. **A rigorous HYP-9217 (1).** Prove the `T^(−1/2)` first-passage law for the kicked debt process, or for a model in which the debt's exponents are fresh `Geom(1/2)` draws.
+2. **A rigorous HYP-9217 (1).** Both exponent streams are marginally i.i.d. `Geom(1/2)` exactly. Prove that their long-lag coupling, through `x = 3·2^v y + 1`, keeps the difference walk recurrent with the `T^(−1/2)` first-passage law.
 3. **Paley canonization for all `p`.** Joint distribution of the Legendre traces `a_p(E_x)` and their higher-round analogues.
 4. **More openai/math.** The CPT noncapture companion over `F_3` and the Weisfeiler–Leman complexity papers (#133), against the repo's tournament automorphism results (THM-4557).
 

@@ -5,7 +5,7 @@ status: >
   OPEN. NUMERICAL (two committed seeded Haar Monte Carlo runs: N = 3000 to total 19 924 and N = 1200 to 9600, with bootstrap
   intervals) + PROVED structure (Theorem D of the source note: D = 0 iff the next relation is the identity, forcing a sibling pair;
   other merges have Haar measure 0; for integer debts the debt's odd part runs U kicked by 2^(L'-w'); the walk bookkeeping is
-  mac-mini's HYP-9214 model). Independently audited 2026-10-07 (corrections in MISTAKE-580).
+  mac-mini's HYP-9214 model). Independently audited twice, 2026-10-07 (corrections in MISTAKE-580).
 source: opus-2026-10-06-S19, 05-knowledge/results/collatz_cycles_tubes_debt_walk_openai_20261006.md, section 1
 related:
   - 05-knowledge/hypotheses/HYP-9213-mersenne-collatz-trajectories-coalesce-plateaus-of-odd-step-time.md
@@ -31,11 +31,14 @@ scripts:
 * The finer count `#{σ(M_a) : a ≤ A} ≈ A^(1−α)` is HEURISTIC. It needs the Haar model to govern actual exponents at `T_post(a)`, which holds only approximately (source note §1.7).
 
 **Mechanism (PROVED pieces + HEURISTIC).**
-* **Debt.** With `x = 2^L y + Δ` and `D = 3Δ + 1 − 2^L`: `D = 0` iff the next relation is the identity, and then `x = 4^k y + (4^k − 1)/3` with `k = L/2 ≠ 0`. Merges with `D ≠ 0` are value coincidences of Haar measure 0. All 834 sampled merges pass through `D = 0`.
+* **Debt.** With `x = 2^L y + Δ` and `D = 3Δ + 1 − 2^L`: `D = 0` iff the next relation is the identity, and then `x = 4^k y + (4^k − 1)/3` with `k = L/2`. Here `k ≠ 0` unless the current relation is already the identity. Merges with `D ≠ 0` are value coincidences of Haar measure 0. All 834 sampled merges pass through `D = 0`.
 * **Integer debts.** `D′_odd = U(D_odd) − 2^(L′ − w′)` with `w′ = v_2(3D_odd + 1)`, and `L′ = L + a − v_2(D)`.
-* **The two streams.** In 672 443 generic steps with `L ≥ 8`, the debt exponent `w` has the `Geom(1/2)` law to four decimals, is independent of the partner exponent `a` (`χ² = 7.4` on 9 dof), and has lag-1 autocorrelation `−0.002`. The increments `a − w` have mean 0 and variance 4.00.
+* **The two streams.** `L_t − L_0` is the difference of the bit-consumption counts (exponent sums) of the two coupled orbits `y` and `x = 3·2^v y + 1`.
+  * Each stream is marginally i.i.d. `Geom(1/2)` exactly (each orbit is Haar on a coset, and `U` preserves Haar). In generic steps the "debt exponent" `w = v_2(D)` is just `b`, the `x`-orbit's own exponent, and same-step independence of `a` and `w` is also exact.
+  * The 672 443-step table (`P(w = k)`, `χ² = 7.4`, autocorrelation `−0.002`) is therefore a consistency check, not evidence.
+  * The evidence on the open coupling is the block variances `Var(L_(t+K) − L_t)/K = 4.013, 4.014, 4.011, 4.016, 4.12 ± 0.14` for `K = 1, 4, 16, 64, 256` (blocks starting at `L ≥ 40`), and the lagged cross-covariances `|Cov(a_s, b_(s+k))| ≤ 0.006` for `k ≤ 64` (s.e. 0.0026).
 * **Heuristic.** This is a recurrent walk. Returns to `L ∈ {±2, ±4}` bring the debt to small values, where `D = 0` has positive chance, which gives the `T^(−1/2)` law.
-* **Unproved.** The asymptotic fairness and independence of the debt's exponent stream.
+* **Unproved.** The long-lag joint law of the two exponent streams, i.e. recurrence of the difference of the bit-consumption counts of `y` and `3·2^v y + 1`. The marginal laws are exact.
 
 **Evidence against actual exponents (NUMERICAL).**
 * **Any partner.** For odd `a ∈ [1001, 2001]` the share with a smaller `σ`-partner is 0.970, against a Haar prediction of 0.968–0.974.

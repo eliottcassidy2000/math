@@ -1,7 +1,7 @@
 ---
 id: THM-4563
 title: "Tube theorem for real extensions of the Collatz map: Lygeros-Rozier's tube lemma for Chamberland's C(x) = x + 1/4 - (2x+1)/4 cos(pi x) (2014; re-proved here with interval arithmetic for all integers at once, a = 0.8, 0.9) and its analogue for the Dumont-Reiter 3-power extension D(x) = (3^s x + s)/2 (a = 0.6, 0.7), which proves Dumont-Reiter's Odd Critical Point Conjecture (ii) and (iii) (real sense) for every odd n and shows (i) is equivalent to n reaching 1; on the Chamberland side, rigorous c_1, c_3, c_5 -> A2 and an even-side flip lemma"
-status: "PROVED (computer-assisted: mpmath interval arithmetic over the continuum h = 1/(2m+1) in [0, 1/3]). For C: KNOWN (Lygeros-Rozier 2014, Lemma 2.4, Theorem 3.3, Corollary 3.4; small odd n there checked in floating point), re-proved with full interval certification. For D: no prior proof found (Dumont-Reiter 2003 conjectured it; Lygeros-Rozier footnote 4 mention it), proved here by Lygeros-Rozier's method. Singer corollary uses Singer 1978 (CITED). INDEPENDENTLY AUDITED (2026-10-07; corrections in MISTAKE-580)."
+status: "PROVED (computer-assisted: mpmath interval arithmetic over the continuum h = 1/(2m+1) in [0, 1/3]). For C: KNOWN (Lygeros-Rozier 2014, Lemma 2.4, Theorem 3.3, Corollary 3.4; small odd n there checked in floating point), re-proved with full interval certification. For D: no prior proof found (Dumont-Reiter 2003 conjectured it; Lygeros-Rozier footnote 4 mention it), proved here by Lygeros-Rozier's method. Singer dichotomy uses Singer 1978 (CITED). INDEPENDENTLY AUDITED TWICE (2026-10-07; corrections in MISTAKE-580)."
 session: opus-2026-10-06-S19
 source: 05-knowledge/results/collatz_cycles_tubes_debt_walk_openai_20261006.md (section 2)
 scripts:
@@ -43,7 +43,11 @@ related:
 * For odd `n`, `F′(n) = 3/2` and `F′(n + a/(2n+1)) < 0`, and `F″ < 0` on `τ_a(n)`.
 * So `F` has a unique critical point `c_n` (a local maximum) in `τ_a(n)`.
   * For `C`, cf. Lygerōs–Rozier, Lemma 2.3.
-  * For `D` it is Dumont–Reiter's `c_n` (their Theorem 6, CITED: `μ_n ≤ c_n ≤ μ_(n+1)`; the tube lies in `(μ_n, μ_(n+1))`).
+  * For `D` it is the unique critical point in `[n − 1/2, n + 1/2]`, Dumont–Reiter's "associated" `c_n` (consistent with their Theorem 6). Directly:
+    * `2D′(n + ε) = 3^(1−σ)(1 − ln3 (π/2) sin(πε)(n + ε)) − (π/2) sin(πε)`.
+    * It is positive on `[−1/2, 0]`, where the bracket is at least 1.
+    * On `(0, 1/2]` it is strictly decreasing wherever the bracket is positive (positive decreasing factors, minus an increasing term), and negative elsewhere.
+    * It is negative at `ε = 1/2`, where the bracket is `1 − ln3 (π/2)(n + 1/2) < 0`.
 * Therefore `0 ≤ F^k(c_n) − T^k(n) ≤ a/(2T^k(n) + 1)` for all `k ≥ 0`.
 
 **(iv) Dumont–Reiter's Odd Critical Point Conjecture.** Total stopping time is measured by entry into `(μ1, μ2) = (0.3158162, 1.5155526)`.
@@ -55,15 +59,18 @@ related:
 **(v) Chamberland's map.** Known parts are Lygerōs–Rozier 2014, Theorem 3.3 and Corollary 3.4, re-proved here with interval arithmetic.
 * For every odd `n ≥ 7` whose orbit reaches 1, `c_n → A1 = {1,2}`. The orbit passes through 13, 21, 40 or 64, and those tubes enter `τ(1)` at `ξ ≤ 0.0572 < 0.0705`, where `[0, 0.0705]` lies in `A1`'s basin.
 * `c_1`, `c_3` and `c_5` go to `A2`: interval enclosures enter a trap `J = [0.55, 0.60]` with `|W′| ≤ 0.377`. This was numerical in Chamberland and Lygerōs–Rozier.
-* `W_C` has a repelling fixed point in `(0.0705, 0.3)` (IVT; numerically `0.0710584`, Lygerōs–Rozier's `x1 = 1.023686`) and the `A2` fixed point `0.5775957` (NUMERICAL).
+* `W_C` has a fixed point in `(0.0705, 0.3)` (IVT). NUMERICALLY it is `0.0710584`, repelling (`W′ = 1.2148`), Lygerōs–Rozier's `x1 = 1.023686`; the `A2` fixed point is `0.5775957`.
 * Hence the 3x+1 conjecture holds iff every odd critical point `c_n`, `n ≥ 7`, of `C` is attracted to `{1,2}` (Lygerōs–Rozier, Corollary 3.4).
 
 **(vi) Flip lemma (PROVED, computer-assisted; new).** For every even `k ≥ 2` and `ξ ∈ [−1.3, −0.45]`, `0 ≤ E(ξ, 1/(2k+1)) ≤ 0.8`. So a point at scaled position `ξ` left of `k` is mapped into `τ(T(k))`, and from then on shadows the orbit of `T(k)`.
 
-**(vii) Singer corollary (PROVED, using Singer 1978).**
+**(vii) Singer dichotomy (PROVED, using Singer 1978).**
 * `C` has negative Schwarzian on `[0, ∞)`: `2C′C‴ − 3C″² = π²Q(π(x+1/2))`, with `Q < 0` for `x ≥ 0`. This re-proves Chamberland's claim, used by Lygerōs–Rozier as (2.3).
 * Every immediate-basin component of an attracting cycle in `(0, ∞)` is bounded. This uses Theorem K(c) of the Kawasaki audit note: intermediate-value chains through `[2j+2, 2j+3]` give divergent orbits starting beyond any bound. So Singer's compact-interval argument applies.
-* Hence an attracting or neutral cycle of `C` in `(0, ∞)` other than `A1`, `A2` whose immediate basin contains an odd critical point lies in the closed tubes of a nontrivial positive integer cycle of `T`.
+* Hence every attracting or neutral cycle of `C` in `(0, ∞)` other than `A1`, `A2` has a critical point in its immediate basin, and one of two things holds:
+  * it lies in the closed tubes of a nontrivial positive integer cycle of `T` (if that critical point can be taken odd: then `c_n` shadows `n`, which neither reaches 1 nor diverges);
+  * or its immediate basin contains only even critical points.
+* The first alternative alone, for a cycle known to capture an odd critical point, needs only (ii)–(v). Singer's theorem supplies the dichotomy.
 * Even critical points are not controlled. `c_54` leaves the near-integer regime, and `c_382`, `c_496`, `c_502` go to `A2` (NUMERICAL, as in Lygerōs–Rozier).
 
 ## Proofs
@@ -90,6 +97,14 @@ related:
 
 * **What is new.**
   * For `D`, everything: Dumont–Reiter conjectured (i)–(iii) with evidence to `n < 180 000`. Lygerōs–Rozier's footnote 4 mentions the conjecture without proving it, and no other proof was found.
-  * For `C`: the full interval certification for all `n` (Lygerōs–Rozier used analytic bounds plus floating-point checks at `n = 1, 3, 5, 7, 9`), the rigorous `A2` capture of `c_1, c_3, c_5`, the flip lemma, and the Singer refinement (vii).
-* **Scope.** Chamberland's survey calls his two-cycle conjecture "equivalent to the 3x+1 problem". By (vii) it implies the cycle half. The converse would need control of the even critical points, and it says nothing about divergence (Lygerōs–Rozier relate divergence to wandering intervals).
+  * For `C`:
+    * the full interval certification for all `n` (Lygerōs–Rozier used analytic bounds plus floating-point checks at `n = 1, 3, 5, 7, 9`);
+    * the rigorous `A2` capture of `c_1, c_3, c_5`;
+    * the flip lemma;
+    * the Singer dichotomy (vii).
+  * The audit found none of these in Lygerōs–Rozier or Dumont–Reiter, though the first alternative of (vii) is close to Lygerōs–Rozier's Lemma 2.4 with Theorem 3.3.
+* **Scope.** Chamberland's survey calls his two-cycle conjecture "equivalent to the 3x+1 problem".
+  * It implies the cycle half immediately, because positive integer cycles are attracting (Chamberland; Lygerōs–Rozier, after their Conjecture 2.1).
+  * By the dichotomy (vii), the converse would also need control of the even critical points.
+  * It says nothing about divergence (Lygerōs–Rozier relate divergence to wandering intervals).
 * These statements transport the Collatz question into critical-orbit language exactly. They do not prove that any orbit reaches 1. Collatz is OPEN.
