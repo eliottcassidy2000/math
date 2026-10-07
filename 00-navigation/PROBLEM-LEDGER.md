@@ -771,7 +771,10 @@ all heights (THM-1289, published), δ ineffective.
   families on opposite sides of 2^K = 3^d, with the same Moran function g. The rewrite program's residual seeds
   (239/239 below 10^4, a proper subset of the backward-minimal sources) are backward-minimal, so every remaining
   obligation needs a forward join. Odd Mersenne numbers sample the 3-adic classes uniformly. HYP-9162 is reduced to one
-  lemma (verified k <= 9). No Collatz consequence.
+  lemma (verified k <= 9). THM-4555: switches that are uniform in the run length are exactly collisions at -1 of the rational
+  maps (3x+1)/2^c, with partner (n+1)/2^D - 1 (trailing ones deleted). The reset switch is the root collision. Reset-2
+  sources have only upward root collisions; sporadic collisions relieve 15% of them (16/239 seeds), and there is no uniform
+  3-multiple switch. No Collatz consequence.
 
 **Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`
 (ranks HN > reconstruction > Kakeya/Falconer > sunflower > Caccetta–Häggkvist > … ).

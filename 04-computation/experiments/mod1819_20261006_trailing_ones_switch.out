@@ -1,0 +1,18 @@
+1. the endpoints of the sources with word 1^r u are z = f_u(-1) (mod 3^(r+|u|))
+  ok   tau(1^r u) = B 2^-A = f_u(-1) mod 3^(r+|u|) for every reduced u of length <= 4 (letters <= 5), r <= 3
+2. f_u(-1) = N/2^(A_u - 1), N odd, for reduced u; collisions have equal totals
+  ok   every reduced word of length <= 6 with letters <= 8: denominator exactly 2^(A_u - 1), odd numerator
+  ok   28014 colliding values: all colliding words share their total
+  ok   sporadic collision (8, c) ~ (4, 1, 1, c+2): 125/2^(7+c), 125 = 2^7 - 3 = 2^5 + 3*2^4 + 9*2^3 - 27; and (2, 6, c) ~ (8, c)
+   words of length <= 6, letters <= 8: 28014 colliding values, 774 not explained by the root collision alone
+3. a collision u ~ u' with |u'| = |u| + D gives U^j(n) = U^j((n+1)/2^D - 1) on the whole family 1^r u, r >= D
+  ok   750 sources in 5 collision families x 6 run lengths: the partner is exactly m = (n+1)/2^D - 1, same endpoint, same length
+  ok   the reset switch (checked_switch (3)) is the collision (a) ~ (2, a-2), D = 1, m = (n-1)/2
+4. a longer partner (k > j) fires only on n = -1 mod 3^(k-j); for reset 2 the shifted root collision gives n = 8 mod 9
+  ok   reset-2 sources n < 10^5 (12498): the shifted root-collision join fires on 1388 = 0.1111, all = 8 mod 9 (they have (2n-1)/3 < n)
+5. census of uniform trailing-ones switches
+  ok   reset-2 sources n < 2*10^4: 377 of 2500 have a uniform trailing-ones switch; non-collision equal-length merges: 0
+  ok   residual seeds with a uniform switch: 16 of 239 (10 multiples of 3): [1135, 1647, 1791, 1983, 2719, 2799, 5023, 5103, 5535, 5743, 5823, 6127, 6783, 7839, 8871, 9127]
+  ok   odd Mersenne 2^a - 1 (a reset-2 family): 37 of 60 odd a in [3, 121] switch to some 2^(a-D) - 1; the least D is always odd (an even Mersenne number, which the reset switch takes to 2^(a-D-1) - 1); all are collisions
+   first cases (a: least D, merge depth beyond the run): [(13, 1, 23), (29, 3, 48), (31, 1, 3), (35, 1, 81), (37, 1, 75), (39, 1, 9), (41, 1, 23), (45, 1, 44), (47, 1, 11), (49, 1, 39)]
+ALL CHECKS PASSED
