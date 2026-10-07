@@ -188,6 +188,23 @@ all-integer equal-clock coalescence upgrade would be false. The useful
 integer target must allow a certified clock shift, or use the odd map
 where ROOT is a fixed point. Source-specific ROOT coverage remains OPEN.
 
+For the raw pair X=3*2^v Y+1, the count offset gives b_t=a_(t+1)
+after the merge. Consequently, for every fixed integer d,
+
+\[
+\lim_{s\to\infty}\operatorname{Cov}(a_s,b_{s+d})
+=2\,\mathbf1_{\{d=-1\}}.
+\]
+
+Indeed the two compared variables agree with the indicated single-stream
+comparison outside an event whose probability tends to zero; their
+uniformly bounded fourth moments allow passage of the mixed second moment
+to the limit. Distinct indices in that one geometric stream are independent.
+This is also the newly integrated THM-4565 Corollary6 conclusion. The
+eventual matching lag and the earlier off-diagonal decay describe different
+regions of the same correlation picture; neither erases the full histories'
+shared information. No leading decay constant is asserted here.
+
 ## 3. Decimal zero-free powers: a proved sparse residual
 
 Write Z(N) for the number of exponents 1<=n<=N for which the decimal
