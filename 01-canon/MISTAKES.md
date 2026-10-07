@@ -2036,6 +2036,45 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
+## MISTAKE-582 (2026-10-07, opus-2026-10-07-S20 two-readers note and THM-4565; found by the session's independent adversarial audit after the checkpoint 27d1d417b was pushed; two points also raised independently by codex-tiling's integration audit) -- an "iff"-type merge remark stated pointwise, half-integer lag classes cut at integers so that "Geom to four decimals at |d+1/2| >= 6" hid single-lag deviations, "pairwise independent" from zero covariance, and moment-only summaries offered as evidence of a geometric depth law
+
+- **What was claimed (checkpoint `27d1d417b`).**
+  * The merge remark derived the sibling relation one step before a merge from the *value* identity `x_tau = y_(tau+1)`.
+  * The lag classes, labelled "6 <= |d+1/2| <= 12" and "13 <= |d+1/2| <= 40", were said to be Geom(1/2) "to four decimals".
+  * Section 0 said the streams are "pairwise independent but conditionally dependent".
+  * The offset overlaps' `E|kappa| = 1.00` and "4/3 bits" were quoted next to the Geom law as if they supported it.
+  * Smaller items:
+    * the truncated float enumeration was typed FINITE-EXACT;
+    * the (R) check covered only `L >= 0`;
+    * the lag letter `d` meant `k - s` in one table and `k - s + 1` in another;
+    * the exponent map `Psi` was called measure-preserving on `Geom^N` without `v`;
+    * the relation chain was called "null-recurrent and absorbed";
+    * amenability of `BS(1,2)` was set beside a polynomial return rate;
+    * "act by conjugation" was used for `g -> F_b g F_a^(-1)`;
+    * the one-orbit mechanism was not credited (Terras, Everett, Lagarias, Bernstein-Lagarias, Tao).
+- **Why it was wrong.**
+  * **Merge remark.** The value identity gives the map identity only when `D_(tau-1) = 0`. Integer coincidences through the trivial cycle merge without it (`y = 1, v = 2`: `tau = 2`, `L_1 = 3`, `D_1 = -16`). This is MISTAKE-580's lesson, re-learned.
+  * **Lag classes.** `|d+1/2|` is a half-integer, but the code cut at 5 and 12. So the "6-12" class contained the strongly deviating lags `d = 5, -6`. Single lags `d = -8, -7, -6, 5` deviate at high `chi^2`; pooling hid this, and the check tested only `P(M=1)` and `E[2^-M]`.
+  * **"Pairwise independent".** The Geom depth law is NUMERICAL, and Theorem 3(d) concerns `(F, R)` within an offset class, not the raw pair.
+  * **Moment-only summaries.** Covariance, agreement `P(F = R)` and the average conditional information are all affine in `E[2^-M]`. codex-tiling's two-depth law (masses 1/3, 2/3 at 1, 2) has all three "Geom values" yet is dependent.
+- **Repair.**
+  * The remark now says "almost surely (Haar model)", and the script asserts `D = 0` at all 7444 merges.
+  * The classes are relabelled by explicit `d`-sets. A per-lag Pearson `chi^2` (cells `M = 1..6, >= 7`, 6 dof) is reported: every lag with `d >= 6` or `d <= -9` passes, deviating lags are `d in [-8, 5]`, and the effect `sqrt(chi^2/n)` about halves per lag.
+  * The long-gap statement is typed as an ensemble average at `s >= 10`. codex-tiling's `v = 4k` cylinders show it cannot be uniform.
+  * "Pairwise independent" is removed; the whole processes are totally dependent (`B` is a function of `(v, A)`).
+  * The other items are corrected:
+    * the kernel algebra is now FINITE-EXACT in rational arithmetic, and the enumeration is VERIFIED;
+    * the mirror-case lagger check and small-index Theorem 4 checks are added;
+    * `M = infinity` only at `d = -1` is now PROVED (mod 3);
+    * `Psi` is now `(v-1, A) -> (B_0-1, B_1, ...)`;
+    * section 5 is retyped;
+    * credits are added.
+- **Survivor.** Theorems 1-5 and the covariance identity at every pair were confirmed by the audit and independently by codex-tiling. The answer to the owner's question stands in its corrected, per-lag form.
+- **Reusable rule.**
+  * When a statistic lives on half-integers or other non-integer grids, print the class membership explicitly and test single classes before pooling.
+  * A geometric-law claim needs the full cell profile, not one moment, because covariance, agreement and conditional information all read `E[2^-M]`.
+  * Any "the relation is X one step before Y" derived from a value coincidence needs "almost surely".
+
 ## MISTAKE-581 (2026-10-07, mac-mini-2026-10-07-oaimath3; found by the session itself while integrating its last reader) -- a theorem number claimed by file existence after a rebase, colliding with a concurrent session's THM-4565
 
 - **What happened.** The checkpoint `450388a22f` filed `THM-4565-zeroless-powers-of-two-...`. The rebase just before that push had brought in opus-2026-10-07-S20's checkpoint `27d1d417b4`, which had already filed `THM-4565-two-readers-any-offset-...` for the same owner prompt. The slugs differed, so Git raised no conflict, and the push left two files with the same number on main.
