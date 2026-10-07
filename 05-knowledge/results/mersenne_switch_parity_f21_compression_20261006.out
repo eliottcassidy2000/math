@@ -1,0 +1,56 @@
+== A. THM-4555 (vi) census reproduced
+   odd a in [3,121]: 60; with an equal-time Mersenne partner: 37 True
+   least lag odd for all: True
+   lag sets are unions of pairs {D, D+1}, D odd: True
+   non-switching odd a: [3, 5, 7, 9, 11, 15, 17, 19, 21, 23, 25, 27, 33, 43, 53, 65, 67, 69, 75, 81, 87, 103, 113]
+
+== B. Parity law for every odd source n < 2*10^4 with run r >= 2
+   sources: 2500; good-parity prediction failures: 0 True ; pair violations: 0 True
+   reset-2 sources: 1250, with a trailing-ones equal-time partner: 202; least lag odd for all: True True
+
+== C. Sibling form of the reset switch
+   odd n < 2*10^5, run >= 1: U^r(n) = 4 U^r(m) + 1 (m = (n-1)/2) iff reset(n) >= 3: True; merge at r+1 in all 24998 reset>=3 cases: True
+   example: U^3(15) = 53 = 4*U^3(7) + 1 = 53
+
+== D. {7, 21}: the two append maps
+   p = 2^3 - 1 = 7: |<A_1, R>| = 21 (= kp = 21); inside Aut(P_p): True; |Aut(P_p)| = 21; equal: True
+   p = 2^5 - 1 = 31: |<A_1, R>| = 155 (= kp = 155); inside Aut(P_p): True; |Aut(P_p)| = 465; equal: False
+   p = 2^7 - 1 = 127: |<A_1, R>| = 889 (= kp = 889); inside Aut(P_p): True; |Aut(P_p)| = 8001; equal: False
+   k <= 300 with 2^(k-1) - 1 = k (<2> = QR_p): [3]
+   k <= 300 with (4^k-1)/3 = k(2^k-1), i.e. 2^k + 1 = 3k: [1, 3] True
+   A_1^3(n) - n = 7(n+1), R^3(n) - n = 21(3n+1): True
+   mod 63: A_1^6 = id, R^3 = x + 21: True
+   fixed points: A_1 fixes -1 (limit of 2^a - 1), R fixes -1/3 (limit of (4^k-1)/3); mod 7: A_1 fixes 6, R fixes 2
+
+== E. Equal-time classes of Mersenne numbers (sigma level sets)
+   classes among exponents 2..A: {100: 22, 400: 36, 1200: 57, 2000: 68}  (THM-4556 (vi) counts 23, 37, 58 for A = 100, 400, 1200 including a = 1)
+   equal-time meeting <=> equal odd-step time (a, b <= 80): True
+   switching odd a <= 1200: 543; template total at the least-lag merge: median 247, share <= 20: 0.110 of all odd a (certified density 0.1199 at K = 20)
+
+== F. CRT independence of the mirror clocks (forward switching vs backward-minimality, depth 30)
+   backward-minimal to depth 30, odd 3 <= a <= 119: 35 of 59 (THM-4554 (vi): 35) True
+   odd a in [3,121]: P(switch) = 0.617, P(bmin) = 0.583, P(both) = 0.367, product = 0.360
+   odd a in [3,401]: P(switch) = 0.825, P(bmin) = 0.590, P(both) = 0.495, product = 0.487
+   odd a in [123,401]: P(switch) = 0.914, P(bmin) = 0.593, P(both) = 0.550, product = 0.542
+
+== G. The word map at -1 (reduced words, first letter >= 2)
+    A |       M |       V |  pairs | sporadic | V/M   | H2 - log2 M
+    8 |      64 |      32 |     32 |        0 | 0.500 | -1.000
+    9 |     128 |      63 |     68 |        1 | 0.492 | -1.044
+   10 |     256 |     124 |    144 |        4 | 0.484 | -1.087
+   11 |     512 |     245 |    300 |       11 | 0.479 | -1.119
+   12 |    1024 |     484 |    624 |       28 | 0.473 | -1.150
+   13 |    2048 |     958 |   1288 |       66 | 0.468 | -1.175
+   14 |    4096 |    1899 |   2644 |      149 | 0.464 | -1.196
+   15 |    8192 |    3765 |   5424 |      332 | 0.460 | -1.217
+   16 |   16384 |    7471 |  11088 |      724 | 0.456 | -1.235
+   17 |   32768 |   14830 |  22640 |     1564 | 0.453 | -1.252
+   18 |   65536 |   29442 |  46180 |     3353 | 0.449 | -1.269
+
+== H. Exact certified 2-adic switching density and the a = 95 (mod 128) family
+   certified share of odd exponents, K = 9..18: [0.0156, 0.0312, 0.0469, 0.0605, 0.0713, 0.0801, 0.0879, 0.095, 0.1016, 0.108] True
+   a = 95: post-run words [2, 6, 1] and (partner 2^94 - 1) [4, 1, 1, 3] ; f(-1) = 125/256 125/256 ; normal forms (8, 1) (4, 1, 1, 3)
+   a = 95 + 128t, t = 0..7 (a up to 991): 2^a - 1 and 2^(a-1) - 1 meet at time a + 2: True
+
+FAILED CHECKS: none
+ALL CHECKS PASSED
