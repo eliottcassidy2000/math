@@ -1,0 +1,15 @@
+  ok   every merging step has L even and nonzero (7444 merges)
+merge side by merge time tau (L at the merging step):
+  tau in [1,5]: +side 24, -side 1128, ratio -/+ = 47.00   detail {-2: 1128, 2: 24}
+  tau in [6,20]: +side 355, -side 887, ratio -/+ = 2.50   detail {-6: 2, -4: 20, -2: 865, 2: 352, 4: 3}
+  tau in [21,60]: +side 593, -side 751, ratio -/+ = 1.27   detail {-8: 1, -6: 11, -4: 49, -2: 690, 2: 578, 4: 10, 6: 5}
+  tau in [61,200]: +side 904, -side 1034, ratio -/+ = 1.14   detail {-6: 18, -4: 52, -2: 964, 2: 841, 4: 45, 6: 18}
+  tau in [201,600]: +side 807, -side 961, ratio -/+ = 1.19   detail {-6: 17, -4: 43, -2: 901, 2: 758, 4: 39, 6: 9, 8: 1}
+merge side by start offset L0 = v + A_0:
+  L0 = 3: pairs 2982, merged 2220, +side 614, -side 1606
+  L0 = 4: pairs 3040, merged 1817, +side 685, -side 1132
+  L0 = 5: pairs 2237, merged 1355, +side 521, -side 834
+  L0 = 6: pairs 1569, merged 901, +side 378, -side 523
+  L0 = 7: pairs 850, merged 478, +side 193, -side 285
+  L0 = 8: pairs 552, merged 295, +side 124, -side 171
+ALL CHECKS PASSED

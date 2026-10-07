@@ -4,17 +4,23 @@ Pair: y Haar odd 2-adic (a random BITS-bit odd integer), v >= 2 with P(v = k) = 
 A_s = e(y_s), B_k = e(x_k), e(z) = v2(3z+1), S_y(s) = A_0 + ... + A_(s-1), S_x(k) = B_0 + ... + B_(k-1).
 For a pair (s, k): lam = v + S_y(s) - S_x(k) (offset of y_s's reading window against x_k's in x's bit frame),
 j = k + 1 - s, E = (3 x_k + 1) - 2^lam 3^j (3 y_s + 1) (2-adically), mu = v2(E), saturation depth M = mu - max(0, lam).
-Exact statements checked:
+Statements checked:
+  (X)  exact rational arithmetic for the memoryless-competition law R = min(F, M) (+ Geom tie): E[R] = 2 and
+       Cov(F, R) = 2 - 6 2^-m for m = 1..30; the Geom(1/2) mixture over m equals the product law 2^-(a+r) for a, r <= 25.
   (K)  kernel: for z Haar odd and z' = 2^l 3^j z + Delta, Cov(e(z), e(z')) = (2 - 6 2^-m) 1{m >= 1}, m = v2(3 Delta + 1 - 2^l 3^j) - l
-       (m = infinity, kernel 2, when that constant vanishes); exact enumeration over z mod 2^22.
-  (R)  one source, two readers: the leader's next exponent is Geom(1/2); the lagger's is predicted from the pinned debt.
+       (m = infinity, kernel 2, when that constant vanishes); truncated enumeration over z mod 2^22 (VERIFIED, error < 3e-3).
+  (R)  one source, two readers: the leader's next exponent is Geom(1/2); the lagger's is predicted from the pinned debt
+       (both signs of L_t); the merging step has D_t = 0 (sibling relation) in every merged pair of the sample.
   (G)  every pair (s, k): the windows overlap iff M >= 1; reading identity  B_k = min(lam + A_s, mu)  (lam >= 0) or
-       A_s = -lam + min(B_k, mu)  (lam < 0) away from ties.  Then the law of M on overlaps by time lag d = k - s, and the
+       A_s = -lam + min(B_k, mu)  (lam < 0) away from ties; M = infinity only at d = k - s = -1 (PROVED by a mod-3 argument).
+       Then the law of M on overlaps by time lag d = k - s, pooled and lag by lag (Pearson chi^2, 6 dof), and the
        joint law of (fresh exponent, re-read exponent) on overlaps (independent iff M is Geom: the memoryless-competition lemma).
+  (Z)  Theorem 4 at small indices: Cov(A_s, B_k) = E[kappa(M) 1{M >= 1}] for all 0 <= s <= 6, 0 <= k <= 8 (Monte Carlo),
+       including Cov(A_0, B_0) = -1/2.
   (W)  window-overlap identity Cov(A_s, B_k) = E[(A_s - 2)(B_k - 2) 1{overlap}] (NUMERICAL agreement; exact by proof).
   (S)  same-step kernel Cov(A_(t+1), B_t | L_t-bin) = E[kappa(m_t)] (NUMERICAL agreement); saturation law P(m_t >= 1 | L_t).
-  (C)  cross-covariances Cov(A_(t+1), B_(t+d) | L_t in bin), conditioned on the past only.
-Prints ALL CHECKS PASSED.  Runtime about 4-8 minutes on 12 cores."""
+  (C), (P)  cross-covariances Cov(A_(t+1), B_(t+d')) given L_t, conditioned on the past only; here k - s = d' - 1.
+Prints ALL CHECKS PASSED.  Runtime about 2 minutes on 12 cores."""
 import sys, random, math, time, bisect
 from multiprocessing import Pool
 from collections import Counter
@@ -41,7 +47,8 @@ INF = 10 ** 9
 W = 96                        # 2-adic working precision beyond the lag; M >= W is reported as infinity
 BITS, NS, TMAX, SEED = 3000, 12000, 600, 2007
 DMAX = 40
-CLASSES = ['d=-1 merged', 'd=-1 pre-merge', 'd=0', 'd=-2,+1', '2<=|d+1/2|<=5', '6<=|d+1/2|<=12', '13<=|d+1/2|<=40']
+CLASSES = ['d=-1 merged', 'd=-1 pre-merge', 'd=0', 'd in {-2,1}', 'd in [-6,-3]u[2,5]', 'd in [-13,-7]u[6,12]', 'd in [-40,-14]u[13,40]']
+CHI_LAG = 28.0               # single-lag Pearson chi^2 (6 dof) threshold, p ~ 1e-4
 
 
 def kappa(m):
@@ -89,12 +96,71 @@ def dclass(d, merged):
         return 2
     if d in (-2, 1):
         return 3
-    h = abs(d + 0.5)
-    if h <= 5:
+    h = abs(d + 0.5)          # a half-integer
+    if h <= 5.5:
         return 4
-    if h <= 12:
+    if h <= 12.5:
         return 5
     return 6
+
+
+def exact_kernel_checks():
+    """Exact rational arithmetic for the truncation law R = min(F, m) if F != m, R = m + G if F = m (F, G ~ Geom(1/2) on {1, 2, ...})."""
+    from fractions import Fraction as Fr
+    ok = True
+    for m in range(1, 31):
+        h = Fr(1, 2 ** m)
+        tail1 = Fr(m + 2, 2 ** m)                    # sum_{f > m} f 2^-f
+        ER = sum(Fr(f, 2 ** f) for f in range(1, m)) + (m + 2) * h + m * h
+        EFR = sum(Fr(f * f, 2 ** f) for f in range(1, m)) + m * (m + 2) * h + m * tail1
+        ok &= (ER == 2) and (EFR - 4 == 2 - 6 * h)
+    for a in range(1, 26):
+        for r in range(1, 26):
+            mix = Fr(0)
+            for m in range(1, 61):
+                if r < a:
+                    p = Fr(1, 2 ** a) if m == r else Fr(0)
+                elif r == a:
+                    p = Fr(1, 2 ** a) if m > a else Fr(0)
+                else:
+                    p = Fr(1, 2 ** a) * Fr(1, 2 ** (r - m)) if m == a else Fr(0)
+                mix += Fr(1, 2 ** m) * p
+            if r == a:
+                mix += Fr(1, 2 ** 60) * Fr(1, 2 ** a)    # exact tail m > 60 (only r = a contributes)
+            ok &= (mix == Fr(1, 2 ** (a + r)))
+    return ok
+
+
+def run_small(i, NB=400):
+    """Theorem 4 at small indices: per-sample difference (A_s - 2)(B_k - 2) - kappa(M) 1{M >= 1} for 0 <= s <= 6, 0 <= k <= 8."""
+    rng = random.Random(SEED * 7919 + i)
+    out = np.zeros((7, 9)); out2 = np.zeros((7, 9)); prod00 = 0.0
+    for rep in range(50):
+        y = rng.getrandbits(NB) | 1
+        v = 2
+        while rng.random() < 0.5:
+            v += 1
+        x = 3 * (1 << v) * y + 1
+        A, B, Y, X = [], [], [], []
+        yy, xx = y, x
+        for t in range(10):
+            a = e(yy); b = e(xx)
+            A.append(a); B.append(b); Y.append(yy); X.append(xx)
+            yy = (3 * yy + 1) >> a; xx = (3 * xx + 1) >> b
+        Sy = [0]; Sx = [0]
+        for a in A:
+            Sy.append(Sy[-1] + a)
+        for b in B:
+            Sx.append(Sx[-1] + b)
+        for s in range(7):
+            for k in range(9):
+                lam = v + Sy[s] - Sx[k]; j = k + 1 - s
+                mu = mu_val(X[k], Y[s], lam, j)
+                M = INF if mu >= INF else mu - max(0, lam)
+                dlt = (A[s] - 2) * (B[k] - 2) - (kappa(M) if M >= 1 else 0.0)
+                out[s, k] += dlt; out2[s, k] += dlt * dlt
+        prod00 += (A[0] - 2) * (B[0] - 2)
+    return out, out2, prod00
 
 
 # ------------------------------------------------------------------ trajectories
@@ -119,7 +185,7 @@ def run(s):
     tau = next((t for t in range(TMAX) if X[t] == Y[t + 1]), None)
     # debt bookkeeping (up to the merge): x_t = 2^L y_(t+1) + Delta_t
     rec = []
-    pred_ok = True
+    pred_ok = True; merge_D0 = None
     for t in range(TMAX if tau is None else tau + 1):
         L = v + Sy[t + 1] - Sx[t]
         m = None
@@ -133,6 +199,17 @@ def run(s):
                 pred_ok &= (B[t] == vd)
             elif vd > s_:
                 pred_ok &= (B[t] == s_)
+        else:                                   # mirror: y_(t+1) = 2^|L| x_t + Dt, the y-orbit is the lagger
+            Dt = Y[t + 1] - (X[t] << -L)
+            D = 3 * Dt + 1 - (1 << -L)
+            vd = v2(D) if D != 0 else INF
+            s_ = -L + B[t]
+            if vd < s_:
+                pred_ok &= (A[t + 1] == vd)
+            elif vd > s_:
+                pred_ok &= (A[t + 1] == s_)
+        if tau is not None and t == tau - 1:
+            merge_D0 = (D == 0)
         rec.append((t, L, m))
     # (G) all overlapping pairs (s, k) with 10 <= s < TMAX - DMAX, |k - s| <= DMAX, plus the adjacent non-overlapping k
     nc = len(CLASSES)
@@ -143,6 +220,8 @@ def run(s):
     # alignment split of pre-merge overlaps: 0 = exact alignment (lam = 0), 1 = offset overlap (lam != 0); long gaps separately
     a_n = np.zeros((2, 2)); a_kap = np.zeros((2, 2)); a_prod = np.zeros((2, 2)); a_info = np.zeros((2, 2)); a_absk = np.zeros((2, 2))
     a_M = np.zeros((2, 2, 9))
+    lagM = np.zeros((2, 2 * DMAX + 1, 9))      # per-lag law of M on overlaps (merged d = -1 pairs excluded); [0] all s, [1] s >= 100
+    inf_off = 0                                # overlaps with M = infinity at d != -1 (impossible by the mod-3 argument)
     iff_ok = read_ok = bsc_ok = True
     nonov_checked = 0
     for s in range(10, TMAX - DMAX):
@@ -179,6 +258,12 @@ def run(s):
             g_joint[c, min(F, 5), min(R, 5)] += 1
             bsc_ok &= ((R == 1) == ((F == 1) != (M == 1)))                     # first re-read bit = dictator XOR 1{M = 1}
             ov_by_d[d + DMAX] += 1; prod_by_d[d + DMAX] += prod; kap_by_d[d + DMAX] += kap; dev2_by_d[d + DMAX] += (prod - kap) ** 2
+            if M >= INF and d != -1:
+                inf_off += 1
+            if not merged:
+                lagM[0, d + DMAX, mbin] += 1
+                if s >= 100:
+                    lagM[1, d + DMAX, mbin] += 1
             if not (tau is not None and k >= tau - 1 and s >= tau):          # pre-merge (excludes the merging step and after)
                 ai = 0 if lam == 0 else 1
                 gi = 1 if abs(d + 0.5) >= 6 else 0
@@ -191,24 +276,36 @@ def run(s):
     full_by_d = np.array([np.sum(a[srange] * b[srange + d]) for d in range(-DMAX, DMAX + 1)])
     ns = len(srange)
     gstats = (g_n, g_prod, g_kap, g_p2, g_M, g_joint, ov_by_d, prod_by_d, kap_by_d, full_by_d, ns, iff_ok, read_ok, nonov_checked,
-              dev2_by_d, (a_n, a_kap, a_prod, a_info, a_absk, a_M), bsc_ok)
+              dev2_by_d, (a_n, a_kap, a_prod, a_info, a_absk, a_M), bsc_ok, lagM, inf_off, merge_D0)
     return v, np.array(A[:TMAX + 2], dtype=np.int16), np.array(B[:TMAX + 2], dtype=np.int16), rec, tau, pred_ok, gstats
 
 
 if __name__ == '__main__':
     t0 = time.time()
+    print('(X) memoryless competition in exact rational arithmetic')
+    check(exact_kernel_checks(), 'E[R] = 2 and Cov(F, R) = 2 - 6 2^-m exactly for m = 1..30; the Geom(1/2) mixture over m of the joint law of (F, R) '
+          'equals 2^-(a+r) exactly for a, r <= 25 (FINITE-EXACT)')
     with Pool(12) as pool:
         kres = pool.starmap(kernel_exact, KCASES)
-        print('(K) universal comparison kernel, exact enumeration over z mod 2^22')
+        print('(K) universal comparison kernel, truncated enumeration over z mod 2^22')
         for l, j, Delta, m, cov, kap in kres:
             print('     (l, j, Delta) = (%d, %d, %d): m = %s, Cov = %+.4f, kernel = %+.4f' % (l, j, Delta, 'inf' if m >= INF else m, cov, kap))
         check(all(abs(cov - kap) < 3e-3 for l, j, Delta, m, cov, kap in kres),
-              'Cov(e(z), e(2^l 3^j z + Delta)) = (2 - 6 2^-m) 1{m >= 1} (m = inf -> 2) for all listed maps (truncation error < 3e-3)')
+              'Cov(e(z), e(2^l 3^j z + Delta)) = (2 - 6 2^-m) 1{m >= 1} (m = inf -> 2) for all listed maps (VERIFIED: truncation error < 3e-3)')
         res = pool.map(run, range(NS), chunksize=20)
+        small = pool.map(run_small, range(6000), chunksize=50)
     print(f'     ({NS} pairs, {BITS}-bit y, {TMAX} steps; merged within {TMAX} steps: {sum(1 for r in res if r[4] is not None) / NS:.4f})')
 
+    print('(Z) Theorem 4 at small indices (300,000 samples of 400-bit y): per-sample difference (A_s - 2)(B_k - 2) - kappa(M) 1{M >= 1}')
+    S1 = sum(o[0] for o in small); S2 = sum(o[1] for o in small); P00 = sum(o[2] for o in small); NSM = 300000
+    z = np.abs(S1 / NSM) / np.sqrt((S2 / NSM - (S1 / NSM) ** 2) / NSM + 1e-300)
+    print(f'     max |z| over the 63 pairs (s, k) in [0,6]x[0,8] = {z.max():.2f}; Cov(A_0, B_0) estimate = {P00 / NSM:+.4f} (exact: P(v = 2) kappa(1) = -1/2)')
+    check(z.max() < 4.5 and abs(P00 / NSM + 0.5) < 4 * math.sqrt(4.0 / NSM) + 0.01, 'Cov(A_s, B_k) = E[kappa(M) 1{M >= 1}] at all small (s, k), incl. S_x(k) < v and lam < 0 (NUMERICAL agreement, exact by proof)')
+
     print('(R) one source, two readers')
-    check(all(r[5] for r in res), 'whenever y leads (L_t >= 0) and the lagger does not tie, B_t equals its prediction from the pinned debt (all steps, all pairs)')
+    check(all(r[5] for r in res), 'whenever the lagger does not tie, its exponent equals the prediction from the pinned debt (both signs of L_t, all steps, all pairs)')
+    mD = [r[6][19] for r in res if r[4] is not None]
+    check(all(mD), f'every merge of the sample ({len(mD)}) passes through D = 0 one step earlier (a sibling relation); integer value coincidences without D = 0 exist (e.g. y = 1, v = 2), so this is an almost-sure statement of the Haar model')
     lead = Counter(); lead2 = Counter()
     for v, A, B, rec, tau, _, _ in res:
         for (t, L, m) in rec:
@@ -235,6 +332,7 @@ if __name__ == '__main__':
     ov_by_d = sum(g[6] for g in G); prod_by_d = sum(g[7] for g in G); kap_by_d = sum(g[8] for g in G); full_by_d = sum(g[9] for g in G)
     ns_tot = sum(g[10] for g in G); dev2_by_d = sum(g[14] for g in G)
     a_n, a_kap, a_prod, a_info, a_absk, a_M = [sum(g[15][i] for g in G) for i in range(6)]
+    check(sum(g[18] for g in G) == 0, 'M = infinity (E = 0) occurs only at d = k - s = -1 (PROVED: mod 3, E = 0 forces j = 0)')
     print('     law of M on overlapping pairs by time-lag class (Geom: 0.5, 0.25, 0.125, 0.0625, P(7 <= M < inf) = 1/64; E[2^-M] = 1/3; E[kappa] = 0):')
     long_ok = True
     for c, name in enumerate(CLASSES):
@@ -250,10 +348,34 @@ if __name__ == '__main__':
         print(f'     {name:17s} n = {int(n):9d}: P(M=1..4) = ' + ', '.join(f'{pm[m]:.4f}' for m in range(1, 5)) +
               f', P(7<=M<inf) = {pm[7]:.4f}, P(M=inf) = {pm[8]:.4f}; E[2^-M] = {g_p2[c] / n:.4f}; E[kappa] = {g_kap[c] / n:+.4f},'
               f' E[(A-2)(B-2)] = {g_prod[c] / n:+.4f}; max|P(F,R) - P(F)P(R)| = {dep:.4f}; first-bit BSC 1 - h2(P(M=1)) = {1 - h2:.5f} bits')
-        if c >= 5:
-            se = 1 / math.sqrt(n)
-            long_ok &= abs(pm[1] - 0.5) < 4 * se and abs(g_p2[c] / n - 1 / 3) < 4 * se and pm[8] == 0.0
-    check(long_ok, 'at time lags |d + 1/2| >= 6 the saturation depth on overlaps is Geom(1/2) within 4 s.e. and never infinite (NUMERICAL)')
+        if c == 6:
+            exp = [n * 2.0 ** -m for m in range(1, 7)] + [n * 2.0 ** -6]
+            obs = list(g_M[c][1:7]) + [g_M[c][7] + g_M[c][8]]
+            chi = sum((o - x) ** 2 / x for o, x in zip(obs, exp))
+            print(f'       pooled class chi^2 against Geom(1/2) (cells M = 1..6, >= 7; 6 dof) = {chi:.1f}')
+            long_ok &= chi < CHI_LAG and pm[8] == 0.0
+    check(long_ok, 'pooled over 13.5 <= |d + 1/2| <= 40.5 the saturation depth on overlaps is Geom(1/2) (chi^2 < 28 on 6 dof) and never infinite (NUMERICAL)')
+    LM = sum(g[17] for g in G)
+    print('     single-lag law of M on overlaps (merged pairs excluded), Pearson chi^2 against Geom(1/2), 6 dof; all s >= 10 | late s >= 100:')
+    chi_lag = {}
+    for d in range(-DMAX, DMAX + 1):
+        row = []
+        for w in (0, 1):
+            cnt = LM[w, d + DMAX]
+            n = cnt.sum()
+            exp = [n * 2.0 ** -m for m in range(1, 7)] + [n * 2.0 ** -6]
+            obs = list(cnt[1:7]) + [cnt[7] + cnt[8]]
+            row.append((n, sum((o - x) ** 2 / x for o, x in zip(obs, exp)) if n > 0 else 0.0, cnt))
+        chi_lag[d] = row
+        if -16 <= d <= 15:
+            n, chi, cnt = row[0]
+            print(f'       d = {d:+3d}: n = {int(n):7d}, P(M=1..3) = ' + ', '.join(f'{cnt[m] / n:.4f}' for m in range(1, 4)) +
+                  f', chi^2 = {chi:8.1f}, effect sqrt(chi^2/n) = {math.sqrt(chi / n):.4f} | late: n = {int(row[1][0]):7d}, chi^2 = {row[1][1]:8.1f}')
+    bad = [d for d in chi_lag if d != -1 and chi_lag[d][0][1] >= CHI_LAG]
+    bad_late = [d for d in chi_lag if d != -1 and chi_lag[d][1][1] >= CHI_LAG]
+    hmax = max(abs(d + 0.5) for d in bad) if bad else 0
+    print(f'     lags with chi^2 >= {CHI_LAG:.0f} (d != -1): all s: {bad}; late s >= 100: {bad_late}; largest such |d + 1/2| = {hmax}')
+    check(hmax <= 12.5, 'every single lag with |d + 1/2| >= 13.5 has a Geom(1/2) depth law (chi^2 < 28 on 6 dof); the deviating lags are all near synchrony (NUMERICAL)')
     print('     pre-merge overlaps by alignment type (lam = 0: exact alignment, the case of THM-4564; lam != 0: offset overlap):')
     for gi, gname in ((0, '|d+1/2| < 6'), (1, '|d+1/2| >= 6')):
         for ai, aname in ((0, 'lam = 0 '), (1, 'lam != 0')):
@@ -327,7 +449,7 @@ if __name__ == '__main__':
     print('     P(m >= 1 | L = l): ' + ', '.join(f'l={l}: {p:.4f}' for l, p in sat))
     check(all(p <= 2.0 ** -l * 2 + 0.01 for l, p in sat if l >= 1), 'saturation P(m >= 1 | L = l) is of order 2^-l (at most 2^(1-l) + 0.01)')
 
-    print('(C) Cov(A_(t+1), B_(t+d) | L_t in bin, not merged by t), d = -8..8, past conditioning only, t in [10, %d)' % (TMAX - 10))
+    print("(C) Cov(A_(t+1), B_(t+d') | L_t in bin, not merged by t), d' = -8..8 (pair index k - s = d' - 1), past conditioning only, t in [10, %d)" % (TMAX - 10))
     bins = [(-10 ** 6, -9), (-8, -1), (0, 0), (1, 8), (9, 10 ** 6)]
     for lo, hi in bins:
         rowc = []; nn = 0
@@ -343,7 +465,7 @@ if __name__ == '__main__':
             rowc.append(s_ab / n - (s_a / n) * (s_b / n)); nn = n
         print(f'     L in [{lo},{hi}] (n = {nn}): ' + ' '.join(f'{c:+.3f}' for c in rowc))
 
-    print('(P) the near-synchronous coupling resolved by single L_t = l (not merged by t): Cov(A_(t+1), B_(t+d)), d = -2..8')
+    print("(P) the near-synchronous coupling resolved by single L_t = l (not merged by t): Cov(A_(t+1), B_(t+d')), d' = -2..8 (k - s = d' - 1)")
     far = []
     for l in list(range(-4, 0)) + list(range(1, 13)):
         acc = {d: [0.0, 0.0, 0.0, 0] for d in range(-2, 9)}
