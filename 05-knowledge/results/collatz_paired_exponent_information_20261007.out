@@ -1,0 +1,126 @@
+{
+  "affine_maps": [
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      3,
+      0,
+      0
+    ],
+    [
+      -1,
+      0,
+      0
+    ],
+    [
+      3,
+      1,
+      1
+    ],
+    [
+      3,
+      2,
+      1
+    ],
+    [
+      3,
+      5,
+      1
+    ]
+  ],
+  "checks": 21018,
+  "flush_worst_steps_by_known_bits": {
+    "0": 0,
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4,
+    "5": 5,
+    "6": 6,
+    "7": 7,
+    "8": 8,
+    "9": 9,
+    "10": 10,
+    "11": 11
+  },
+  "joint_word_max_sum": 6,
+  "long_gap_bounds": [
+    {
+      "covariance_squared_upper": "19/4096",
+      "s": 1,
+      "t": 16,
+      "v": 2
+    },
+    {
+      "covariance_squared_upper": "19/268435456",
+      "s": 1,
+      "t": 32,
+      "v": 2
+    },
+    {
+      "covariance_squared_upper": "19/1152921504606846976",
+      "s": 1,
+      "t": 64,
+      "v": 2
+    },
+    {
+      "covariance_squared_upper": "19/21267647932558653966460912964485513216",
+      "s": 1,
+      "t": 128,
+      "v": 2
+    },
+    {
+      "covariance_squared_upper": "3591/2048",
+      "s": 4,
+      "t": 16,
+      "v": 2
+    },
+    {
+      "covariance_squared_upper": "38855/134217728",
+      "s": 4,
+      "t": 32,
+      "v": 2
+    },
+    {
+      "covariance_squared_upper": "359879/576460752303423488",
+      "s": 4,
+      "t": 64,
+      "v": 2
+    },
+    {
+      "covariance_squared_upper": "3093447/10633823966279326983230456482242756608",
+      "s": 4,
+      "t": 128,
+      "v": 2
+    },
+    {
+      "covariance_squared_upper": "4",
+      "s": 16,
+      "t": 16,
+      "v": 2
+    },
+    {
+      "covariance_squared_upper": "4",
+      "s": 16,
+      "t": 32,
+      "v": 2
+    },
+    {
+      "covariance_squared_upper": "241988957532649/144115188075855872",
+      "s": 16,
+      "t": 64,
+      "v": 2
+    },
+    {
+      "covariance_squared_upper": "24848598064655384893/2658455991569831745807614120560689152",
+      "s": 16,
+      "t": 128,
+      "v": 2
+    }
+  ],
+  "scope": "Whole-history information coupling does not determine near-diagonal recurrence",
+  "status": "PASS; exact prefix laws and long-lag bounds, recurrence OPEN"
+}

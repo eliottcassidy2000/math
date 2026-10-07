@@ -1,0 +1,9 @@
+Primitive reduced forms: every n=1..1848; exactly the supplied 65 pass ambiguity.
+  n11: three classes; n105: eight classes. Idoneal is not class number one.
+Legal affine-cylinder controls: 120 words, five actual sources each; determinant=2B.
+  word12: n=11+16t, endpoint=13+18t, determinant10; t>=1 avoids ROOT padding.
+Weight multiplicativity obstruction: W15=1/252 != W3*W5=1/18.
+Jacobsthal interface: word12, prime filter{3,5,7,11}, all 2310 parameters checked.
+Serre toy interface: every listed affine graph/diagonal intersection has length1;
+  anchors -1,-5,5/23 retain neither positive-integer existence nor descent.
+PASS: 6865 exact transfer controls; accepted external theorems were not audited.

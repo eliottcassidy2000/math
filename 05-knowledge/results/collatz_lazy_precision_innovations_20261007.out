@@ -1,0 +1,9 @@
+PROVED lazy precision innovations; no synchronous recurrence conclusion
+universe=5 affine couplings; both prefix lengths0..2; valuations1..3
+compatible_atoms=223; fresh_queries=280; determined_queries=166
+fresh_law=P(G=j)=2^-j; precision_increment=G; stopped-stream_scope=retained
+same_budget_hostile=[{"bits": 3, "kind": "fresh", "precision": 3, "shift": 3, "source_residue": 11}, {"bits": 3, "kind": "determined", "precision": 3, "source_residue": 9, "valuation": 1}]
+v1_A1_B2: exactly_one_equals1; E_product=3; covariance=-1
+off_diagonal_bounds=[{"covariance_squared": "817/524288", "overlap": "43/1048576", "s": 1, "t": 20, "threshold": 20, "v": 1}, {"covariance_squared": "13376369873/137438953472", "overlap": "704019467/274877906944", "s": 10, "t": 31, "threshold": 40, "v": 1}, {"covariance_squared": "57116728460922753281/151115727451828646838272", "overlap": "3006143603206460699/302231454903657293676544", "s": 20, "t": 61, "threshold": 80, "v": 1}, {"covariance_squared": "1414552209747576227883937424102984473729/182687704666362864775460604089535377456991567872", "overlap": "74450116302504011993891443373841288091/365375409332725729550921208179070754913983135744", "s": 40, "t": 121, "threshold": 160, "v": 1}, {"covariance_squared": "4", "overlap": "1", "s": 20, "t": 21, "threshold": 40, "v": 1}, {"covariance_squared": "4", "overlap": "1", "s": 40, "t": 41, "threshold": 80, "v": 1}]
+typed_hostiles=8
+checks=19667
