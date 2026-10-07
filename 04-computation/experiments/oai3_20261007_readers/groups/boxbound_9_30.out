@@ -1,0 +1,9 @@
+box B(9,30): 3542839 states (built in 5 s)
+  after    200 sweeps: M1 (0,1) >= 0.53873;  S19 lag-1 after prefix (2,1) >= 0.31495;  (1,1) >= 0.65526;  (0,-1) >= 0.53873;  min over B(1,10) >= 0.23009
+  after    800 sweeps: M1 (0,1) >= 0.54593;  S19 lag-1 after prefix (2,1) >= 0.32489;  (1,1) >= 0.66045;  (0,-1) >= 0.54593;  min over B(1,10) >= 0.23959
+  after   3200 sweeps: M1 (0,1) >= 0.54593;  S19 lag-1 after prefix (2,1) >= 0.32489;  (1,1) >= 0.66045;  (0,-1) >= 0.54593;  min over B(1,10) >= 0.23959
+  (each value is P(merge within 3200 steps without leaving B(9,30)), a certified lower bound)
+
+real	1m31.548s
+user	1m8.976s
+sys	0m19.766s

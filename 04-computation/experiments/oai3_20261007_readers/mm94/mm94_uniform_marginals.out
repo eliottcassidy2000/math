@@ -1,0 +1,2 @@
+uniform-marginal law exists for all 1 <= a <= b <= 30 except: []
+explicit a=2 law P(0,j)=(b-j)/(b(b+1)), P(1,j)=(j+1)/(b(b+1)) has uniform marginals for b<60: True

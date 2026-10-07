@@ -1,0 +1,19 @@
+m=    1 F=Q(sqrt [])  lower >= 2   Lemma R upper <= 2 via q=(2, 'ramified')
+m=    5 F=Q(sqrt [5])  lower >= 2   Lemma R upper <= 2 via q=(2, 'ramified')
+m=   13 F=Q(sqrt [13])  lower >= 2   Lemma R upper <= 2 via q=(2, 'ramified')
+m=   21 F=Q(sqrt [3, 7])  lower >= 3   Lemma R upper <= 3 via q=(3, 'inert')
+m=   33 F=Q(sqrt [3, 11])  lower >= 4   Lemma R upper <= 4 via q=(2, 'inert')
+m=   37 F=Q(sqrt [37])  lower >= 2   Lemma R upper <= 2 via q=(2, 'ramified')
+m=   57 F=Q(sqrt [3, 19])  lower >= 3   Lemma R upper <= 3 via q=(3, 'inert')
+m=   85 F=Q(sqrt [5, 17])  lower >= 2   Lemma R upper <= 2 via q=(2, 'ramified')
+m=   93 F=Q(sqrt [3, 31])  lower >= 3   Lemma R upper <= 3 via q=(3, 'inert')
+m=  105 F=Q(sqrt [3, 5, 7])  lower >= 4   Lemma R upper <= None via q=None
+m=  133 F=Q(sqrt [7, 19])  lower >= 3   Lemma R upper <= 3 via q=(3, 'inert')
+m=  165 F=Q(sqrt [3, 5, 11])  lower >= 5   Lemma R upper <= 5 via q=(11, 'inert')
+m=  177 F=Q(sqrt [3, 59])  lower >= 3   Lemma R upper <= 4 via q=(2, 'inert')
+m=  253 F=Q(sqrt [11, 23])  lower >= 2   Lemma R upper <= 4 via q=(7, 'inert')
+m=  273 F=Q(sqrt [3, 7, 13])  lower >= 3   Lemma R upper <= 3 via q=(3, 'inert')
+m=  345 F=Q(sqrt [3, 5, 23])  lower >= 3   Lemma R upper <= 5 via q=(11, 'inert')
+m=  357 F=Q(sqrt [3, 7, 17])  lower >= 3   Lemma R upper <= None via q=None
+m=  385 F=Q(sqrt [5, 7, 11])  lower >= 3   Lemma R upper <= 5 via q=(19, 'inert')
+m= 1365 F=Q(sqrt [3, 5, 7, 13])  lower >= 4   Lemma R upper <= None via q=None

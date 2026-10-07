@@ -92,3 +92,16 @@ Here `n + 1` is an integer and `Q` has a power-of-2 denominator, so `z ≡ Q (mo
   * Backward-minimality of `2^a − 1` to depth `k` (odd `a`) instead depends only on `a mod 2·3^(k−1)` (THM-4554(v)), the 3-adic clock of 2. The forward switches and the backward sieve of the same family run on the two mirror clocks.
 * **Prior art.** The root case is Theorem 2.1 of M. M. Ahmed, *The intricate labyrinth of Collatz sequences*, arXiv:1602.01617 (2016). That theorem covers the reset switch (3) and its upward reading for reset 2: `N` and `2N + 1` merge when `N`'s first reset is 2, and `4N + 3` merges with `2N + 1` otherwise. We know of no source for the general collision switch (iv).
 * **Scope.** These are statements about rewrite rules. Each uniform switch transports a supplied certificate for the smaller `m`; nothing here proves a certificate exists. Collatz is OPEN.
+
+---
+
+## Update (2026-10-07, mac-mini-2026-10-07-oaimath3; found by the session's reader of openai/math #004)
+
+* **Gap lemma (PROVED, elementary).**
+  * Set `N_w = −3^(p−1) + Σ_(i<p) 3^(p−1−i) 2^(S_i − 1)`, where `S_i` are the partial sums of the word. Then `u ~ u'` iff `N_u = N_(u')` and the totals agree; the last letter is free.
+  * If the merged signed `{2,3}`-sum has no vanishing initial segment, every exponent gap is at most `log_2 Σ|c_j|`.
+  * So for fixed word lengths the collision cores are finite and effectively listable: collisions are decidable length by length.
+* **A new sporadic core outside (vi)'s window** (FINITE-EXACT census: lengths `≤ 5`, non-final letters `≤ 22`, 27 sporadic values against 12 with letters `≤ 8`):
+  * `(2, 2, 10, a) ~ (6, 3, 2, 1, a + 2)`, with value `8207/2^(13+a)`.
+  * It gives a `D = 1` uniform switch. Example: `n = 53803` and `m = 26901` meet at `U⁵ = 25`, with exponent words `1, 2, 2, 10, 4` and `6, 3, 2, 1, 6` (re-verified here).
+  * Fourteen of the other new values belong to the `(2, 6, c) ~ (4, 1, 1, c+2)` family.

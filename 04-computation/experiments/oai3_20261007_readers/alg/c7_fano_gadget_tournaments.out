@@ -1,0 +1,17 @@
+Fano check: P_7 closed in-neighbourhoods vs complements of the lines {i+1, i+2, i+4}
+  closed in-neighbourhoods == Fano line complements (as set systems): True
+
+Gadget table
+  T_3        n=  7  n mod 8=7  tournament=True DRT=True | block sizes [np.int64(4)], pairwise intersections [np.int64(2)], point degrees [np.int64(4)], pair degrees [2], even gadget=True, F2-rank=3
+  T_4        n= 15  n mod 8=7  tournament=True DRT=True | block sizes [np.int64(8)], pairwise intersections [np.int64(4)], point degrees [np.int64(8)], pair degrees [4], even gadget=True, F2-rank=7
+  T_5        n= 31  n mod 8=7  tournament=True DRT=True | block sizes [np.int64(16)], pairwise intersections [np.int64(8)], point degrees [np.int64(16)], pair degrees [8], even gadget=True, F2-rank=15
+  T_6        n= 63  n mod 8=7  tournament=True DRT=True | block sizes [np.int64(32)], pairwise intersections [np.int64(16)], point degrees [np.int64(32)], pair degrees [16], even gadget=True, F2-rank=31
+  T_7        n=127  n mod 8=7  tournament=True DRT=True | block sizes [np.int64(64)], pairwise intersections [np.int64(32)], point degrees [np.int64(64)], pair degrees [32], even gadget=True, F2-rank=63
+  Paley P_11 n= 11  n mod 8=3  tournament=True DRT=True | block sizes [np.int64(6)], pairwise intersections [np.int64(3)], point degrees [np.int64(6)], pair degrees [3], even gadget=False, F2-rank=10
+  Paley P_19 n= 19  n mod 8=3  tournament=True DRT=True | block sizes [np.int64(10)], pairwise intersections [np.int64(5)], point degrees [np.int64(10)], pair degrees [5], even gadget=False, F2-rank=18
+  Paley P_23 n= 23  n mod 8=7  tournament=True DRT=True | block sizes [np.int64(12)], pairwise intersections [np.int64(6)], point degrees [np.int64(12)], pair degrees [6], even gadget=True, F2-rank=11
+  Paley P_31 n= 31  n mod 8=7  tournament=True DRT=True | block sizes [np.int64(16)], pairwise intersections [np.int64(8)], point degrees [np.int64(16)], pair degrees [8], even gadget=True, F2-rank=15
+  Paley P_43 n= 43  n mod 8=3  tournament=True DRT=True | block sizes [np.int64(22)], pairwise intersections [np.int64(11)], point degrees [np.int64(22)], pair degrees [11], even gadget=False, F2-rank=42
+  Paley P_47 n= 47  n mod 8=7  tournament=True DRT=True | block sizes [np.int64(24)], pairwise intersections [np.int64(12)], point degrees [np.int64(24)], pair degrees [12], even gadget=True, F2-rank=23
+  Paley P_71 n= 71  n mod 8=7  tournament=True DRT=True | block sizes [np.int64(36)], pairwise intersections [np.int64(18)], point degrees [np.int64(36)], pair degrees [18], even gadget=True, F2-rank=35
+  Paley P_79 n= 79  n mod 8=7  tournament=True DRT=True | block sizes [np.int64(40)], pairwise intersections [np.int64(20)], point degrees [np.int64(40)], pair degrees [20], even gadget=True, F2-rank=39

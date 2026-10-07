@@ -79,3 +79,11 @@ related:
 
 * That the depth is Haar conditionally on the past for every large `L`. That is HYP-9218, and it would reduce HYP-9217 (1) to an invariance principle plus mac-mini's per-visit merge success.
 * Anything about actual integers beyond the Haar model.
+
+---
+
+## Companion (2026-10-07): the Terras clock, THM-4569
+
+The same pair, advanced one Terras step at a time, has relation `x_s = 3^(j_s) y_s + c_s`. The two parity streams then differ exactly at the predictable times where `c_s` is odd.
+* So the odd-step difference `j` is an exact simple random walk on that clock, and its recurrence is unconditional.
+* The coupling studied here (alignment depth, odd-step clock) governs the *density* of that clock: disagreement density 1/2 is equivalent to variance 4 per odd step.

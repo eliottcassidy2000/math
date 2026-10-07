@@ -46,3 +46,14 @@ scripts:
 * **Lag 1.** The share is over-predicted by 0.02–0.04 (0.846–0.864 predicted, 0.824 observed). Actual orbits end, so their effective time is shorter.
 
 **Not covered.** The reset-2 debt of HYP-9214 (general sources) is a natural extension; it was not tested here.
+
+---
+
+## Update (2026-10-07, mac-mini-2026-10-07-oaimath3; THM-4569, THM-4564)
+
+* **The recurrence half is PROVED (THM-4569).** In the Terras clock the pair relation is `x_s = 3^(j_s) y_s + c_s`. The odd-step difference `j` is exactly a simple random walk run on the predictable disagreement clock. So almost surely the pair either merges or `j` visits every integer infinitely often. This needs no input on the long-lag joint law.
+* **The exponent cannot exceed 1/2 (PROVED).** `q₁(T) ≥ (1.59 + o(1)) T^(−1/2)`.
+* **Box reduction (PROVED).** Almost-sure merging is equivalent to box recurrence, an archimedean condition.
+  * Computer-assisted: the lag-1 merge probability is at least 0.3853, so the lower density of odd `a` with a lag-1 switch is at least 0.3853.
+* **Rate (NUMERICAL).** An exact Terras-clock sampler (20,000 paths) reproduces this hypothesis's `q₁(T)` to within about 3% and extends it: `√T q₁ = 16.77, 16.74, 16.68` at `T = 5·10⁴, 10⁵, 2·10⁵`, with tail exponent 0.476.
+* **What is still needed for (1).** The `T^(−1/2)` rate: the disagreement clock must run at density 1/2 (THM-4564; HYP-9218), with uniform per-visit success.

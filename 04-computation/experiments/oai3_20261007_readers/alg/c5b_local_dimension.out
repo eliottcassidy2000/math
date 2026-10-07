@@ -1,0 +1,11 @@
+F2*y^2 + F2^3 + F1^2*F3 mod 2 is zero: True
+x(y^2+F2 y+F1) - (F2+y) mod 2 zero: True
+x^3 z - (x^2 y + F3) mod 2 zero: True
+Pb = (0, 0, 0)  dim F_2[x,y,z]/(I + m^K), K = 4,8,12,16: [4, 8, 12, 16] -> grows: Pb lies on a curve of the mod-2 fibre
+Pb = (0, 0, 1)  dim F_2[x,y,z]/(I + m^K), K = 4,8,12,16: [4, 8, 12, 16] -> grows: Pb lies on a curve of the mod-2 fibre
+Pb = (0, 1, 0)  dim F_2[x,y,z]/(I + m^K), K = 4,8,12,16: [2, 2, 2, 2] -> isolated (length 2)
+Pb = (0, 1, 1)  dim F_2[x,y,z]/(I + m^K), K = 4,8,12,16: [2, 2, 2, 2] -> isolated (length 2)
+Pb = (1, 0, 0)  dim F_2[x,y,z]/(I + m^K), K = 4,8,12,16: [4, 8, 12, 16] -> grows: Pb lies on a curve of the mod-2 fibre
+Pb = (1, 0, 1)  dim F_2[x,y,z]/(I + m^K), K = 4,8,12,16: [2, 2, 2, 2] -> isolated (length 2)
+Pb = (1, 1, 0)  dim F_2[x,y,z]/(I + m^K), K = 4,8,12,16: [4, 8, 12, 16] -> grows: Pb lies on a curve of the mod-2 fibre
+Pb = (1, 1, 1)  dim F_2[x,y,z]/(I + m^K), K = 4,8,12,16: [4, 8, 12, 16] -> grows: Pb lies on a curve of the mod-2 fibre

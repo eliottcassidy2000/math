@@ -93,3 +93,11 @@ related:
 * **Mirror clocks.** Forward switches of `M_a` run on the 2-adic clock of 3 (`a mod 2^(K−2)`, (iv)). Backward-minimality of `M_a` to depth `k` runs on the 3-adic clock of 2 (`a mod 2·3^(k−1)`, THM-4554 (v)).
 * **Concurrent extension.** The opus-2026-10-06-S18 note `05-knowledge/results/mersenne_switch_parity_f21_compression_20261006.md` (Theorem 2, parity law) proves that trailing-ones lags come in pairs `{D, D+1}` for every source, so the least lag is odd for every reset-2 source. (iii) is its Mersenne case `t = 1`. The same note certifies 0.1556 at template total 27, extending (v).
 * **Scope.** These are statements about the Mersenne family and its rewrite rules. They transport certificates; they do not prove that any `M_a` reaches 1. Collatz is OPEN.
+
+---
+
+## Update (2026-10-07, mac-mini-2026-10-07-oaimath3): the switch density rises to 0.385
+
+(v)'s certified density `15719/131072 = 0.1199` (exhaustive, `K = 20`; S19: 0.1740 at `K = 31`) is superseded by a computer-assisted bound.
+* In the Terras clock, the lag-1 Mersenne pair merges with probability at least **0.3853**: float64 value iteration from below on the box `B(9,100)`, reproduced by an independent implementation on smaller boxes; THM-4569 (5).
+* Each merge is decided by `a` modulo a power of 2, so the lower density of odd `a` with `σ(2^a − 1) = σ(2^(a−1) − 1)` is at least 0.3853.

@@ -39,3 +39,10 @@ related:
 **What a proof needs.**
 * A 2-adic equidistribution statement for the "private predictions" (targets) of two readers of a Haar tape that have not been in lockstep for `≈ L` digits.
 * Equivalently: the low digits of the integer debt `D_t` are asymptotically uniform given its archimedean size. By THM-4564 (6), the size is a perpetuity in the recent `y`-exponents, while the low digits were written about `L/2` steps earlier.
+
+---
+
+## Update (2026-10-07, same session): scope narrowed by THM-4569
+
+* Recurrence no longer needs this hypothesis: in the Terras clock the odd-step difference is an exact simple random walk on the predictable disagreement clock (THM-4569 (2)–(3)).
+* This hypothesis is now needed only for the **rate**: the disagreement density 1/2 (measured 0.5006, equivalent to the variance 4 per odd step here), and through it the `T^(−1/2)` law of HYP-9217 (1).

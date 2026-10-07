@@ -1,0 +1,14 @@
+(a) F mod 2:
+   F1 mod 2 = x**3*y**3*z + x**2*y**4 + x**2*y**2*z + x*y**3 + x*y*z + z
+   F2 mod 2 = x**3*y**2*z + x**2*y**3 + x*z + y
+   F3 mod 2 = x**3*z + x**2*y
+   on the surface y = xz: [x**2*z**2 + z, 0, 0]
+
+(b) #F((Z/2^k)^3) / 8^k  (-> mu(F(Z_2^3)); injective a.e. iff limit = 1/2)
+   k=1  image=6  ratio=0.750000  fibre-size histogram (size:count) {1: 5, 3: 1}
+   k=2  image=28  ratio=0.437500  fibre-size histogram (size:count) {2: 26, 6: 2}
+   k=3  image=176  ratio=0.343750  fibre-size histogram (size:count) {2: 112, 4: 48, 6: 16}
+   k=4  image=1408  ratio=0.343750  fibre-size histogram (size:count) {2: 896, 4: 384, 6: 128}
+   k=5  image=11264  ratio=0.343750  fibre-size histogram (size:count) {2: 7168, 4: 3072, 6: 1024}
+   k=6  image=90112  ratio=0.343750  fibre-size histogram (size:count) {2: 57344, 4: 24576, 6: 8192}
+   k=7  image=720896  ratio=0.343750  fibre-size histogram (size:count) {2: 458752, 4: 196608, 6: 65536}

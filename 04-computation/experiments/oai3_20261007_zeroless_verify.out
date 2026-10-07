@@ -1,0 +1,23 @@
+# independent verifier (oai3_20261007_zeroless_verify.c), compiled with cc -O3; start state 2^957 mod 10^288 from Python;
+# exact big-integer check for 87 <= n < 957 (Python): no zeroless 2^n.  Run: ./zl 957 2000000000 < start957.txt  (112 s)
+zeroless 2^n for 87<=n<957: []
+n=957 rightmost_zero_position=27
+n=1026 rightmost_zero_position=54
+n=1757 rightmost_zero_position=60
+n=1958 rightmost_zero_position=94
+n=7931 rightmost_zero_position=116
+n=57356 rightmost_zero_position=120
+n=269518 rightmost_zero_position=121
+n=411658 rightmost_zero_position=122
+n=675531 rightmost_zero_position=137
+n=749254 rightmost_zero_position=139
+n=4400728 rightmost_zero_position=165
+n=18894561 rightmost_zero_position=175
+n=33250486 rightmost_zero_position=177
+n=58903708 rightmost_zero_position=192
+n=297751737 rightmost_zero_position=197
+n=325226398 rightmost_zero_position=213
+n=781717865 rightmost_zero_position=218
+done n in [957, 2000000000): record rightmost-zero position 218 (every 2^n in range has a 0 within its last 288 digits)
+# records from n >= 957 on agree with OEIS A031142 entries 24-38 (1757, 1958, 7931, ..., 781717865); 1026 is a record only
+# relative to the start n = 957 (A031142's global record before 1757 is n = 700).

@@ -1,0 +1,40 @@
+prefixes enumerated: 234256  (word lengths 1..5, non-final letters <= 22)
+values N hit by >= 2 prefixes: 10140
+colliding prefix pairs: 10195 ; prefix-indecomposable (no vanishing initial segment): 10195
+gap lemma holds on all indecomposable pairs; largest merged gap 3 at ((8,), (4, 1, 1), 125, 5.25)
+indecomposable collisions using a non-final letter > 8 (outside THM-4555's letters <= 8 window): 9732
+   prefixes (9,) ~ (2, 7)  N = 253
+   prefixes (10,) ~ (2, 8)  N = 509
+   prefixes (11,) ~ (2, 9)  N = 1021
+   prefixes (12,) ~ (2, 10)  N = 2045
+   prefixes (13,) ~ (2, 11)  N = 4093
+   prefixes (14,) ~ (2, 12)  N = 8189
+   prefixes (15,) ~ (2, 13)  N = 16381
+   prefixes (16,) ~ (2, 14)  N = 32765
+   prefixes (17,) ~ (2, 15)  N = 65533
+   prefixes (18,) ~ (2, 16)  N = 131069
+   prefixes (19,) ~ (2, 17)  N = 262141
+   prefixes (20,) ~ (2, 18)  N = 524285
+smallest-|N| sporadic examples (both prefixes nonempty, indecomposable):
+    (3,) ~ (2, 1)  N = 1
+    (4,) ~ (2, 2)  N = 5
+    (3, 1) ~ (2, 1, 1)  N = 11
+    (5,) ~ (2, 3)  N = 13
+    (3, 2) ~ (2, 1, 2)  N = 19
+    (6,) ~ (2, 4)  N = 29
+    (4, 1) ~ (2, 2, 1)  N = 31
+    (3, 3) ~ (2, 1, 3)  N = 35
+    (4, 2) ~ (2, 2, 2)  N = 47
+    (3, 1, 1) ~ (2, 1, 1, 1)  N = 49
+letters <=  8, word length <= 5: values with >= 2 root-classes (sporadic): 12
+letters <= 22, word length <= 5: values with >= 2 root-classes (sporadic): 27
+   sporadic values whose class representatives use a letter > 8: 15
+   max number of vanishing blocks: 1 ; max internal gap within a block: 3
+      (2, 2, 10) ~ (6, 3, 2, 1)  N = 8207  blocks = 1  max internal gap = 3
+      (2, 6, 7) ~ (4, 1, 1, 9)  N = 16759  blocks = 1  max internal gap = 2
+      (2, 6, 8) ~ (4, 1, 1, 10)  N = 33143  blocks = 1  max internal gap = 2
+      (2, 6, 9) ~ (4, 1, 1, 11)  N = 65911  blocks = 1  max internal gap = 2
+      (2, 6, 10) ~ (4, 1, 1, 12)  N = 131447  blocks = 1  max internal gap = 2
+      (2, 6, 11) ~ (4, 1, 1, 13)  N = 262519  blocks = 1  max internal gap = 2
+      (2, 6, 12) ~ (4, 1, 1, 14)  N = 524663  blocks = 1  max internal gap = 2
+      (2, 6, 13) ~ (4, 1, 1, 15)  N = 1048951  blocks = 1  max internal gap = 2

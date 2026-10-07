@@ -1,0 +1,15 @@
+  ***   Warning: new stack size = 200000000 (190.735 Mbytes).
+F(0,0,-1/4) = [-1/4, 0, 0]  F(1,-3/2,13/2) = [-1/4, 0, 0]  F(-1,3/2,13/2) = [-1/4, 0, 0]
+source-Haar sample of 4000 points P: #(integral preimages of F(P)) histogram N=0..3: [0, 1739, 1526, 735]
+   (number of Q_2-roots of the fibre cubic, 0..3): [0, 1639, 0, 2361]
+   predicted from mod-2^k census: N=1: 7/16 = 1750.0000000000000000000000000000000000, N=2: 3/8 = 1500.0000000000000000000000000000000000, N=3: 3/16 = 750.00000000000000000000000000000000000
+example P = [2369, 360, 4079]: N = 2
+   preimage mod 2^20: [2369, 360, 4079]
+   preimage mod 2^20: [727773, 543410, 419781]
+Z_(2)-collision: F[-1, -2, -4] = F[0, -14, -772] = F[1, -5, 17] = [12, -14, 0]   check: 1
+Z_(2)-collision: F[-1, -1, -1] = F[0, -10, -394] = F[1, -4, 14] = [6, -10, 0]   check: 1
+Z_(2)-collision: F[-1, 0, 2] = F[0, -6, -142] = F[1, -3, 11] = [2, -6, 0]   check: 1
+Z_(2)-collision: F[1, 0, 2] = F[-1, 3, 11] = F[0, 6, -142] = [2, 6, 0]   check: 1
+Z_(2)-collision: F[1, 1, -1] = F[-1, 4, 14] = F[0, 10, -394] = [6, 10, 0]   check: 1
+Z_(2)-collision: F[1, 2, -4] = F[-1, 5, 17] = F[0, 14, -772] = [12, 14, 0]   check: 1
+rational Z_(2)^3 triple collisions found (|coords| <= 6 for P): 6

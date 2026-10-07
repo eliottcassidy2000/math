@@ -1,0 +1,21 @@
+LP_n = min P(n,n) over the paper's hypotheses on an N x N grid, vs closed form D_n^min
+  n=  2 N=   7: LP = 3.3333333333   with k=5,7 gadgets & N+20: 3.3333333333   D_n^min =                   10/3 = 3.3333333333   |diff| = 0.0e+00
+  n=  3 N=  11: LP = 6.2222222222   with k=5,7 gadgets & N+20: 6.2222222222   D_n^min =                   56/9 = 6.2222222222   |diff| = 8.9e-16
+  n=  4 N=  15: LP = 9.5061728395   with k=5,7 gadgets & N+20: 9.5061728395   D_n^min =                 770/81 = 9.5061728395   |diff| = 1.8e-15
+  n=  5 N=  19: LP = 13.1069958848   with k=5,7 gadgets & N+20: 13.1069958848   D_n^min =               3185/243 = 13.1069958848   |diff| = 5.3e-15
+  n=  8 N=  31: LP = 25.3989737337   with k=5,7 gadgets & N+20: 25.3989737337   D_n^min =           499928/19683 = 25.3989737337   |diff| = 7.1e-15
+  n= 12 N=  47: LP = 44.4513369555   with k=5,7 gadgets & N+20: 44.4513369555   D_n^min =     637828100/14348907 = 44.4513369555   |diff| = 5.7e-14
+  n= 16 N=  63: LP = 65.8527221358   with k=5,7 gadgets & N+20: 65.8527221358   D_n^min = 688842732920/10460353203 = 65.8527221358   |diff| = 2.8e-14
+  n= 20 N=  79: LP = 89.1739416024   with k=5,7 gadgets & N+20: 89.1739416024   D_n^min = 680004584809550/7625597484987 = 89.1739416024   |diff| = 8.4e-13
+  n= 25 N=  99: LP = 120.6162607834   with k=5,7 gadgets & N+20: 120.6162607834   D_n^min = 2011539297019634200/16677181699666569 = 120.6162607834   |diff| = 8.5e-14
+Truncation check (grid too small: N < 4n-1 drops the tripling constraint P(n,4n-1) >= 3P(n,n)):
+  n=5 N=12: LP = 13.029982  vs D_n^min = 13.106996
+  n=5 N=16: LP = 13.106996  vs D_n^min = 13.106996
+  n=5 N=19: LP = 13.106996  vs D_n^min = 13.106996
+  n=8 N=24: LP = 25.389199  vs D_n^min = 25.398974
+  n=8 N=31: LP = 25.398974  vs D_n^min = 25.398974
+Rank-bound feasibility threshold t_N (bisection) vs omega_a/3 at a = (N+1)/4:
+  N=  39: t_N = 0.817662  (3 t_N = 2.452987);  omega_a/3 at a=10: 0.830894
+  N=  79: t_N = 0.806768  (3 t_N = 2.420303);  omega_a/3 at a=20: 0.815831
+  N= 119: t_N = 0.801816  (3 t_N = 2.405447);  omega_a/3 at a=30: 0.809243
+At t = 3/4 the grid LP is feasible for every N (witness: P_min).  Check N=119: True

@@ -1,0 +1,6 @@
+box B(3,30): 4747 states (built in 0 s)
+  after    250 sweeps: M1 (0,1) >= 0.45715;  S19 lag-1 after prefix (2,1) >= 0.19394;  (1,1) >= 0.59423;  (0,-1) >= 0.45715;  min over B(1,10) >= 0.13037
+  after   1000 sweeps: M1 (0,1) >= 0.45715;  S19 lag-1 after prefix (2,1) >= 0.19394;  (1,1) >= 0.59423;  (0,-1) >= 0.45715;  min over B(1,10) >= 0.13037
+  after   4000 sweeps: M1 (0,1) >= 0.45715;  S19 lag-1 after prefix (2,1) >= 0.19394;  (1,1) >= 0.59423;  (0,-1) >= 0.45715;  min over B(1,10) >= 0.13037
+  (each value is P(merge within 4000 steps without leaving B(3,30)), a certified lower bound)
+python3 tclock_boxbound.py 3 30 4000  0.16s user 0.01s system 86% cpu 0.198 total

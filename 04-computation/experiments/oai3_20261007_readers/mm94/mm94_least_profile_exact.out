@@ -1,0 +1,41 @@
+[1] P_min satisfies (S),(B),(C),(T) on a<=60, b<4N (exact): OK
+[2] every inequality in the proof of Lemma 4.1 is an equality on P_min: True
+[3] sum_a D_a^min x^(a-1) = (1+x)(1-x)^(-7/3): True;  sigma_a = [x^(a-1)](1-x)^(-4/3): True
+    D_1..D_8 = ['1', '10/3', '56/9', '770/81', '3185/243', '12376/729', '138320/6561', '499928/19683']
+    9^(a-1) sigma_a (integers?) = ['1', '12', '126', '1260', '12285', '117936', '1120392', '10563696', '99034650']
+[4] P_min(a,b)^3 <= (a+b-1)^4 on a<=60, a<=b<4N (exact): True; equality only at [(1, 1)]
+[5] P_min satisfies all odd k-block gadgets and random alternating F/T decompositions: True
+    hypothetical 2-fold gadget P(a,2h+floor(a/2)) >= 2P(a,h) violated by P_min at 0 pairs, e.g. []
+[6] FLOAT flattening profile sqrt(ab(a+b-1)) satisfies (C), all k-block and random F/T gadgets: True; dominates P_min: True
+    shift a-2 instead of a-1 is refuted by flattening ranks at (a,h) = [(2, 1000), (2, 10000), (2, 100000), (5, 1000), (5, 10000), (5, 100000), (20, 1000), (20, 10000), (20, 100000)]
+[7] FLOAT grid a<=1200: rank bound at t=3/4, concavity, tripling: True
+[8] D_a^min ~ (3/(2 Gamma(4/3))) a^(4/3) = 1.679770 a^(4/3);  rank bound at t=3/4 on diagonal: 2^(4/3) a^(4/3) = 2.519842 a^(4/3)
+    omega_a = 3 log(2a-1)/log D_a^min (each is a valid bound omega <= omega_a, using only C(a',b'), a'<=a, b'<=4a-1):
+      a =              2: omega_a = 2.737468   [paper's crude a^(4/3): 3.566166]
+      a =              3: omega_a = 2.641126   [paper's crude a^(4/3): 3.296190]
+      a =              4: omega_a = 2.592310   [paper's crude a^(4/3): 3.158274]
+      a =              5: omega_a = 2.561718   [paper's crude a^(4/3): 3.071728]
+      a =             10: omega_a = 2.492682   [paper's crude a^(4/3): 2.877196]
+      a =             20: omega_a = 2.447493   [paper's crude a^(4/3): 2.751586]
+      a =             50: omega_a = 2.407598   [paper's crude a^(4/3): 2.642883]
+      a =            100: omega_a = 2.386366   [paper's crude a^(4/3): 2.586210]
+      a =           1000: omega_a = 2.343741   [paper's crude a^(4/3): 2.475610]
+      a =          10000: omega_a = 2.321288   [paper's crude a^(4/3): 2.419317]
+      a =        1000000: omega_a = 2.298178   [paper's crude a^(4/3): 2.362886]
+      a =     1000000000: omega_a = 2.282414   [paper's crude a^(4/3): 2.325257]
+      a =  1000000000000: omega_a = 2.274463   [paper's crude a^(4/3): 2.306443]
+    exact: omega_2 = 3 log 3 / log(10/3) = 2.737468 < log2 7 = 2.807355
+    (thresholds below use mpmath at 300 digits; float lgamma differences are unreliable beyond a ~ 1e12)
+    first a with omega_a < Strassen log2 7: a = 2  (log10 a = 0.30103)
+    first a with omega_a < 2.5: a = 10  (log10 a = 1.0)
+    first a with omega_a < Coppersmith-Winograd 2.375477: a = 156  (log10 a = 2.19312)
+    first a with omega_a < Alman et al. 2025: 2.371339: a = 188  (log10 a = 2.27416)
+    first a with omega_a < Dupont et al. 2026: 2.371177: a = 190  (log10 a = 2.27875)
+    first a with omega_a < companion every-field 2.371054886006746: a = 191  (log10 a = 2.28103)
+    first a with omega_a < 2.30: a = 595975  (log10 a = 5.77523)
+    first a with omega_a < 2.28: a = 5470324627  (log10 a = 9.73801)
+    first a with omega_a < 2.26: a = 356380512662711976869623105992  (log10 a = 29.5519)
+    first a with omega_a < companion C: 2.258: a = 9596807116707318157832864412694724326  (log10 a = 36.9821)
+    omega_a = 9/4 + K/ln a + O(1/ln^2 a), K = (9/4)(ln 2 - (3/4) ln(3/(2 Gamma(4/3)))) = 0.6843478909
+
+ALL CHECKS PASSED

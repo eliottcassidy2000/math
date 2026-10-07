@@ -163,3 +163,12 @@ below `2^A`. Rigorous census for `j <= 14` (stopping rule `2^A - 3^j > S_j`,
 representative is `1`. `T`-coded Terras equality `tau_T = sigma_T` holds for
 every odd `3 <= n <= 10^7` (maximal `sigma_T = 246`); the Syracuse equality to
 `10^7` is the weaker statement.
+
+---
+
+## Alternative closure (2026-10-07, mac-mini-2026-10-07-oaimath3; suggested by the session's nt reader)
+
+The all-length clause can be closed without the `2^42` rational-log bridge and without Matveev.
+* **Input.** Ellison's 1971 bound `|2^x − 3^y| > 2^x e^(−x/10)` for `x ≥ 12`, except `x = 13, 14, 16, 19, 27` (via Waldschmidt's survey of Pillai's equation, arXiv:0908.4031). The exception list was re-checked here in exact integers for `12 ≤ x ≤ 20000`: exactly those five.
+* **Consequence.** For `j ≥ 65` with `A = bitlen(3^j)`, it gives `Λ > e^(−A/10)`, hence `N(w)/2^A < 1.11·e^(−0.535 j) < 10^(−15)`. The finite check `j ≤ 64` covers the rest.
+* **Status.** This is an alternative proof route (CITED input, elementary rest), not a change to the theorem.

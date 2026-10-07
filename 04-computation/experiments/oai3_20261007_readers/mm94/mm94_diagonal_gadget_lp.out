@@ -1,0 +1,10 @@
+m=3 u=4.0: min P(n,n) = [27.127, 68.349, 117.358]; local exponents 1.3332, 1.3333; predicted kappa = 1.3333 -> omega <= 2.2500; flattening-consistent: True
+m=2 u=2.5: min P(n,n) = [27.077, 68.205, 117.104]; local exponents 1.3328, 1.3332; predicted kappa = 1.3333 -> omega <= 2.2500; flattening-consistent: True
+m=2 u=2.4: min P(n,n) = [31.111, 83.527, 148.993]; local exponents 1.4248, 1.4273; predicted kappa = 1.4286 -> omega <= 2.1000; flattening-consistent: True
+m=3 u=3.8: min P(n,n) = [31.111, 83.527, 148.993]; local exponents 1.4248, 1.4273; predicted kappa = 1.4286 -> omega <= 2.1000; flattening-consistent: True
+paper crude a^(4/3): first a with bound < 2.371339: 381959
+m=2: flattening-minimal u=2.3723, best omega from a diagonal-only m-gadget = 2.0584
+m=3: flattening-minimal u=3.7720, best omega from a diagonal-only m-gadget = 2.0790
+m=4: flattening-minimal u=5.1789, best omega from a diagonal-only m-gadget = 2.0895
+m=5: flattening-minimal u=6.5887, best omega from a diagonal-only m-gadget = 2.0958
+m=10: flattening-minimal u=13.6510, best omega from a diagonal-only m-gadget = 2.1085

@@ -94,3 +94,13 @@ Let `𝔓` be a prime of `L` with `c(𝔓) = 𝔓`.
 * Nothing here bounds `χ(R²)`. Every finite unit-distance graph has a realization in some conjugation-stable number field, but no single prime works for all fields.
 * openai/math #158 (unrefereed; its Lean development was not built here) claims `χ(R²) ≥ 6`. If true, its compactness graph `H` can be realized with real-algebraic coordinates. Lemma R excludes realizations in the Moser, Heegner and Polymath fields and in the whole odd-`t` compositum (CONDITIONAL on #158).
 * Fields with no conjugation-stable prime of small residue field are untouched. The field screen of decalion89 (§5) and the results note list the first open cases.
+
+---
+
+## Update (2026-10-07, mac-mini-2026-10-07-oaimath3): the idoneal planes, THM-4566
+
+The record planes here are Hilbert class fields of idoneal discriminants:
+* `Q(√3, √11)² = H(Q(√−33))` (χ = 4);
+* `Q(√3, √5, √11)² = H(Q(√−165))`, which contains the Polymath field and has χ = 5.
+
+THM-4566 classifies all 19 planes `F²` whose `F(i)` is an abelian Hilbert class field (`m` squarefree idoneal, `m ≡ 1 mod 4`). The classification is complete modulo openai/math #003, and THM-4566 gives their chromatic numbers.
