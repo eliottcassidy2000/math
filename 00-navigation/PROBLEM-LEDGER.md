@@ -238,6 +238,12 @@ all heights (THM-1289, published), δ ineffective.
 - **Collatz conjecture — OPEN.** The finite-segment rapidity identity and
   its exact rational form are proved; a uniform harmonic-defect bound is
   conjectural, and the theta=2 excursion exponent belongs to an iid model.
+  [The 2026-10-07 two-orbit session](../05-knowledge/results/oai3_two_orbits_twos_and_threes_20261007.md):
+  in the 2-adic Haar model, any two orbits related by `u = 3^k v + e` (`e` in
+  `Z[1/3]`) merge almost surely, with tail between `c T^-1/2` and
+  `C T^-1/2 (log T)^2` (THM-4581, audit at checkpoint). So `n` and `n+1` meet for
+  a density-one set of `n`, and HYP-9213/9214/9220 are resolved. These are
+  measure statements; no individual orbit is decided.
   [The 2026-09-17 audit](../05-knowledge/results/arithmetic_braids_20260917_collatz.md)
   gives the full triadic inverse-fibre braid, exact exponent-word cylinders,
   and a periodic-weight obstruction. [The continuation](../05-knowledge/results/arithmetic_braids2_20260917_synthesis.md)
