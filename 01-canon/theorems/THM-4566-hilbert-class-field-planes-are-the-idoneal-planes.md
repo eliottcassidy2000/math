@@ -78,13 +78,17 @@ All upper bounds come from Lemma R (THM-4558), recomputed independently in `oai3
 
 ## Addendum (2026-10-07, mac-mini-2026-10-07-golden, platonic reader): the 18 and the 19 are two 2-adic slices of Euler's list
 
-**Theorem (PROVED; the explicit list relies on the completeness of the idoneal numbers, i.e. on openai/math #003 as above).**
+**Theorem (KNOWN: Borwein–Choi, Exp. Math. 9 (2000), Thm 3.1 [squarefree `n ≡ 2 mod 4`: exception iff `−4n` has one class per genus], Thm 2.6 [the only non-squarefree exceptions are 4 and 18], Lemma 2.2; re-proved below by an independent Selling-parameter argument. The explicit list relies on the completeness of the idoneal numbers, i.e. on openai/math #003 as above.)**
 `n` is **not** of the form `xy + yz + zx` with `x, y, z ≥ 1` iff `n ∈ {1, 4}`, or `n ≡ 2 (mod 4)` and `n` is idoneal.
 
 *Proof sketch.*
 * Odd `n ≥ 3` is `1·y + y·1 + 1·1`. If `4 | n` and `n ≥ 8`, take `(2, (n−4)/4, 2)`.
 * For `n ≡ 2 (mod 4)`: `n = xy + yz + zx` with `x, y, z ≥ 0` iff the form `(x+z)X² − 2zXY + (y+z)Y²` (determinant `n`) has an obtuse superbase with Selling parameters `(x, y, z)`. These parameters are a class invariant (Conway).
-* So `n` is an exception iff every integral form of determinant `n` is diagonal. The primitive diagonal reduced forms number `2^r`, which equals the number of genera exactly when `n′ ≡ 2 (mod 4)`. So all forms are diagonal iff `n′` is idoneal, and exponent `≤ 2` descends to `n/g²`.
+* So `n` is an exception iff every positive definite integral form of determinant `n` is `GL_2(Z)`-equivalent to a diagonal form (a zero Selling parameter).
+* Such a form is `g·f′`, with odd content `g` and `f′` primitive of discriminant `−4n′`, where `n′ = n/g² ≡ 2 (mod 4)` (so `f′` is Gauss-primitive).
+* For `n′ ≡ 2 (mod 4)` the reduced primitive diagonal forms number `2^r`, with `r` the number of odd primes dividing `n′`. That is the number of genera (`μ = r + 1`), hence by Gauss the number of ambiguous classes. Diagonal classes are ambiguous, so they are exactly the ambiguous classes.
+* Hence all forms are diagonal iff `Cl(−4n′)` has exponent `≤ 2`, i.e. iff `n′` is idoneal. Exponent `≤ 2` descends from `n` to `n/g²`, because `Cl(−4n) ↠ Cl(−4n/g²)`.
+* The count equality also holds for `n′ ≡ 3 (mod 4)` and `n′ ≡ 4 (mod 8)`. The earlier text's "exactly when" was false; corrected after audit B.
 
 **FINITE-EXACT checks.**
 * A brute force over `n ≤ 2·10^5` gives exactly the 18 exceptions.
@@ -92,9 +96,14 @@ All upper bounds come from Lemma R (THM-4558), recomputed independently in `oai3
 
 **Reading.**
 * The 18 Borwein–Choi exceptions are the 16 idoneal `n ≡ 2 (mod 4)` together with 1 and 4. The 19 planes are the squarefree idoneal `m ≡ 1 (mod 4)`. Both are 2-adic slices of one 65-element list, because `m ≡ 1 (mod 4)` ⟺ `−4` is the 2-adic prime discriminant ⟺ `i` lies in the genus field.
-* So the counts 18 and 19 carry no mechanism linking them to the Collatz mod-18/19 clock tower (`ord_19(2) = 18`): NUMEROLOGY.
+* So the counts 18 and 19 carry no mechanism linking them to the Collatz mod-18/19 clock tower (`ord_19(2) = 18`): NUMEROLOGY. (1 lies in both slices.)
 * The one generic DICTIONARY item: on the planes 57 and 133, the 19-genus character `(a|19)` equals `(−1)^(ind_2 a)`, the parity bit of the mod-19 clock. This holds at any prime where 2 is a primitive root.
 
-**Split-prime lemma (PROVED, elementary).** In an order of exponent `≤ 2`, a split prime `p` satisfies `p² ≥ |D|/4`. So for idoneal `n > 9` the prime 3 does not split (`n ≢ 2 mod 3`), and 2 splits only for `|D| ∈ {7, 15}`. In large exponent-2 fields, 2 and 3 are inert or ramified.
+**Split-prime lemma (PROVED, elementary).** In an order of exponent `≤ 2`, a split prime `p` satisfies `p² ≥ |D|/4`. Proof: `𝔭` is invertible and `𝔭² = (α)`. Since `𝔭² ≠ (p)` for split `p`, `α ∉ Z`. So `α = (a + b√D)/2` with `b ≠ 0`, and `p² = N(α) = (a² + |D|b²)/4 ≥ |D|/4`. So for idoneal `n > 9` the prime 3 does not split (`n ≢ 2 mod 3`), and 2 splits only for `|D| ∈ {7, 15}`. In large exponent-2 fields, 2 and 3 are inert or ramified.
 
 Scripts: `04-computation/experiments/golden_20261007_readers/platonic/idoneal.py` (+ `.out`).
+
+**Audit of the addendum (2026-10-07, independent audit B).**
+* The characterization was brute-forced to `n ≤ 10^7` with an independent idoneal test: 0 mismatches.
+* There are 101 discriminants of exponent `≤ 2`, and the split-prime lemma is checked.
+* Prior art: Borwein–Choi 2000. The theorem is retyped KNOWN, and the proof sketch is repaired (MISTAKE-584).

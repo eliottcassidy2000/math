@@ -1,0 +1,5 @@
+|I| = 60  element orders of I: [1, 2, 3, 5]
+|I_h| = 120  element orders of I_h: [1, 2, 3, 5, 6, 10]
+I preserves vertices: True
+found subgroup of order 12: True  element orders: [1, 2, 3]
+A4 acts freely on vertices: True  orbit size of a vertex: 12 (regular iff 12)

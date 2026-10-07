@@ -2038,6 +2038,27 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
+## MISTAKE-584 (2026-10-07, mac-mini-2026-10-07-golden; found by the session's independent audit B of its golden/platonic filings) -- a known theorem presented as proved here, a false "exactly when" in a proof sketch, a proof sentence wrong for one sign, a cycle family on the wrong sign, and notation clashes
+
+- **THM-4566 addendum.**
+  - The characterization of the Borwein–Choi exceptions ({1, 4} together with the idoneal `n ≡ 2 mod 4`) is Borwein–Choi, Exp. Math. 9 (2000), Thm 3.1, Thm 2.6 and Lemma 2.2. It was filed as PROVED-here. It is now KNOWN, and the Selling-parameter argument is kept as an alternative proof.
+  - The sketch claimed "#diagonal = #genera exactly when `n′ ≡ 2 (mod 4)`". Equality also holds for `n′ ≡ 3 (mod 4)` and `n′ ≡ 4 (mod 8)`. Only the needed direction is now used.
+- **THM-4591.**
+  - The lemma's proof said "the largest factor is at the minimal `|x|`". For negative cycles that factor is the smallest. The bounds were right.
+  - The eight 3x+23 cycles at shape (19,12) lie on the negative integers, since `2^19 < 3^12`.
+- **THM-4592.**
+  - It wrote `T` for the standard map `C` (THM-4591's `T` is the Terras map).
+  - It stated bijectivity for all odd `n` while the evidence is FINITE-EXACT `n ≤ 22`.
+  - It called the paper's `P` ×4, but `P` is ×5; ×4 is the paper's `Q`.
+  - It omitted the factor-2 twist: a period-5 point sits in cell `(2κ_5(x), 0)`, over the opposite colour.
+  - It said "`m < 4` iff solvable" without `0 < s < 1`.
+  - It called 5x+1 divergence a fact; it is a conjecture.
+- **Reusable rules.**
+  - Search the classical literature for a characterization before typing it PROVED-here. Experimental Mathematics papers often hold exactly such lists.
+  - Check every monotonicity claim for both signs.
+  - Fix one letter per map across a session's theorems.
+  - Keep "iff" claims to the direction the proof uses.
+
 ## MISTAKE-583 (2026-10-07, mac-mini-2026-10-07-oaimath3; found by the session's independent audits A, B and C, with an overlapping codex-tiling audit) -- overclaims around a correct coalescence theorem, a mislabelled record, inward-rounded "PROVED" brackets, and an out-of-range digit claim
 
 - **THM-4581 (almost-sure coalescence; the core is correct per audits A and codex-tiling).**

@@ -4,37 +4,26 @@ Session mac-mini-2026-10-07-golden. The repo was read only. Collatz remains OPEN
 
 ## 0. Bottom line
 
-1. **Integer-cycle census (FINITE-EXACT).** The Terras map has exactly five integer cycles of period L ≤ 301,993: {0}, {−1}, {1,2}, {−5,−7,−10} and the 11-cycle through −17.
-   * The periods are exactly {1,2,3,11} in that range.
-   * Two independent programs agree for L ≤ 40.
-   * This extends THM-4484's census, which stopped at p ≤ 90.
-2. **Platonic solids against log₂3 and Ellison's list: NUMEROLOGY.**
-   * The base-rate test gives p = 0.78.
+1. **Census (FINITE-EXACT).** The Terras map has exactly five integer cycles of period L ≤ 301,993: {0}, {−1}, {1,2}, {−5,−7,−10} and the cycle through −17. So the periods are exactly {1,2,3,11}. Two independent programs agree for L ≤ 40. This extends THM-4484's p ≤ 90.
+2. **Platonic solids against log₂3 and Ellison's list: NUMEROLOGY** (base rate p = 0.78).
    * 19/12 ↔ 12-TET is one inequality (KNOWN).
-   * 12-TET ↔ the icosahedron's 12 vertices is NUMEROLOGY, and no equivariant identification exists: no symmetry of the icosahedron has order 12 (PROVED).
+   * 12-TET ↔ the icosahedron's 12 vertices cannot be equivariant, since no symmetry of the icosahedron has order 12 (PROVED).
 3. **The only honest Ellison link is heuristic.**
-   * Ellison's five exceptions are exactly the five shapes with L ≥ 12 of largest naive expected cycle count Lyn(L,k)/|2^L−3^k| (FINITE-EXACT for L ≤ 1500).
+   * Ellison's five exceptions are the five shapes with L ≥ 12 of largest naive cycle count Lyn/|2^L−3^k| (FINITE-EXACT).
    * None of them carries an integer cycle.
-   * (27,17) carries the two KNOWN 3x+5 cycles; (19,12) carries eight 3x+23 cycles.
-4. **{2,3,11} core: one equation, 3⁵ = 1 + 2·11².** It is at once:
-   * Ljunggren's square repunit 11111₃ = 11²;
-   * the perfectness of the ternary Golay code;
-   * the base-3 Wieferich property of 11;
-   * the congruence s* = −1/2 ≡ 11² (mod 3⁵).
-
-   Related facts:
-   * ord₁₁(3) = 5 makes G₅ = ⟨x+1, 3x⟩ the Borel subgroup of PSL(2,11). This is the coordinate symmetry group of the Golay code.
-   * (3|11) = (5|11) = 1 and 11 ≡ 3 (mod 4) are exactly the hypotheses of the χ ≤ 5 bound for m = 165.
-
-   These are STRUCTURAL inside number theory. Every link to the Collatz periods is NUMEROLOGY.
+   * (27,17) carries the KNOWN 3x+5 cycles.
+4. **{2,3,11} core: 3⁵ = 1 + 2·11².** This one equation is Ljunggren's 11111₃ = 11², the perfectness of the ternary Golay code, the base-3 Wieferich property of 11, and s* = −1/2 ≡ 11² (mod 3⁵).
+   * ord₁₁(3) = 5 makes G₅ = ⟨x+1, 3x⟩ the Borel subgroup of PSL(2,11), which acts by coordinate symmetries on the Golay code.
+   * (3|11) = (5|11) = 1 and 11 ≡ 3 (mod 4) are the hypotheses of the χ ≤ 5 bound for m = 165.
+   * STRUCTURAL inside number theory. Every link to the Collatz periods is NUMEROLOGY.
 5. **Idoneal slices (PROVED).**
-   * Borwein–Choi exceptions = {1,4} ∪ {idoneal n ≡ 2 (mod 4)}. The proof uses Selling parameters and the genus count.
-   * The 19 planes = the squarefree idoneal m ≡ 1 (mod 4) (THM-4566).
-   * Both are 2-adic slices of one finite list. The counts 18 and 19 have no bridge to ord₁₉(2) = ord₁₉(3) = 18: NUMEROLOGY.
-6. **The 9/4 thread.**
-   * The owner's restatement matches THM-4568 as corrected: the identity is PROVED, and "traces back to" is ANALOGY.
-   * The point −1/2 (equivalently −1) organizes the odd runs of every cycle (Steiner circuits, KNOWN), but it does not select the periods.
-   * One striking post-hoc pattern, typed NUMEROLOGY: at the even predecessors of the odd-run starts of the negative cycles, 2x+1 takes the values −19, −67 and −163, all Heegner numbers.
+   * Borwein–Choi exceptions = {1,4} ∪ idoneal(2 mod 4).
+   * The planes = squarefree idoneal(1 mod 4).
+   * These are 2-adic slices, so 18 and 19 are artifacts. NUMEROLOGY against ord₁₉(2) = 18.
+6. **9/4 thread.**
+   * The owner's restatement matches THM-4568 as corrected: PROVED identity, ANALOGY link.
+   * −1/2 (≡ −1 halved) organizes the odd runs (Steiner circuits, KNOWN) but does not select the periods.
+   * Heegner values −19, −67, −163 of 2x+1 in the negative cycles are NUMEROLOGY.
 
 ## 1. What the sources say (two sweeps, about 70 threads)
 
@@ -126,7 +115,7 @@ Separately, 7153 = 3¹² − 2¹⁹ is the gap of the Pythagorean comma. That is
 
 **Verdict: NUMEROLOGY.**
 * Galois's exceptional actions (p = 5, 7, 11, with stabilizers A₄, S₄, A₅) are STRUCTURAL and KNOWN. But {5,7,11} ⊂ C(α) holds for 60% of random α.
-* **12-TET ↔ icosahedron: PROVED non-equivariant.** I_h = A₅ × C₂ has element orders {1,2,3,5,6,10}, so the fifths cycle (order 12) is not a symmetry. Only A₄, acting regularly on the 12 vertices, matches the count, and A₄ ≇ C₁₂.
+* **12-TET ↔ icosahedron: PROVED non-equivariant.** I_h = A₅ × C₂ has element orders {1,2,3,5,6,10}, so the fifths cycle (order 12) is not a symmetry. The tetrahedral A₄ does act regularly on the 12 vertices, but A₄ ≇ C₁₂.
 * **McKay.** The E₈ exponents (the units mod 30) contain every prime in [7,29], so their overlap with 7, 11, 13, 17, 19 is NUMEROLOGY.
 
 ### 2.4 {2,3,11} catalogue (task 2)
@@ -136,16 +125,14 @@ Separately, 7153 = 3¹² − 2¹⁹ is the gap of the Pythagorean comma. That is
 | periods {1,2,3}: \|2^L−3^k\| = 1 | inside Collatz | PROVED (THM-4484) |
 | period 11: semiconvergent 11/7, gap −139, 1 necklace of 30 (E = 0.22) | inside Collatz; a Diophantine accident | PROVED/FINITE-EXACT |
 | **3⁵ = 1+2·11²**: 11111₃ = 11² (Ljunggren) ⟺ Σ_{i≤2}C(11,i)2^i = 3⁵ (ternary Golay perfect) ⟹ 3⁵ ≡ 1 mod 121 ⟺ −1/2 ≡ 121 mod 3⁵ | yes, the same equation | KNOWN + DICTIONARY |
-| ord₁₁(3) = 5 ⟹ ⟨x+1,3x⟩ = Borel(PSL(2,11)) = G₅ = the symmetry of the ternary QR (Golay) code, with the multiplier 3 acting as Frobenius; Gleason–Prange: PSL(2,11) acts on [12,6,6]₃, Aut = 2.M₁₂ | yes | KNOWN |
-| p ≡ 3 mod 4 ⟹ the Borel (order C(p,2)) is regular on pairs. p = 7, 11, 23 give the perfect QR codes (binary Hamming, ternary Golay, binary Golay), with Collatz multipliers 2, 3, {2,3} | yes | PROVED (checked)/KNOWN |
+| ord₁₁(3) = 5 ⟹ ⟨x+1,3x⟩ = Borel(PSL(2,11)) = G₅, which acts by coordinate symmetries on the ternary QR (Golay) code; multiplication by 3 is its Frobenius. Gleason–Prange: PSL(2,11) acts on [12,6,6]₃, whose Aut = 2.M₁₂ | yes | KNOWN |
+| p ≡ 3 mod 4 ⟹ the Borel (order C(p,2)) is regular on pairs. p = 7, 11, 23 give the perfect QR codes (binary Hamming, ternary Golay, binary Golay); in each, the field size q ∈ {2,3} is a Collatz multiplier generating the squares (2 mod 7, 3 mod 11, 2 and 3 mod 23) | yes | PROVED (checked)/KNOWN |
 | φ ≡ 4, 8 mod 11; 11 = N(4−φ); φ¹⁰ − 1 = 11φ⁵ | yes, in Z[φ] | KNOWN |
 | Δ(2,3,11) ↠ PSL(2,11); A₅ = stabilizer in Galois's 11-point action | yes | KNOWN |
 | m = 165: F = Q(φ)·Q(√3,√11) (golden field times Moser plane). The prime over 11 used for χ ≤ 5 needs (3\|11) = (5\|11) = 1 (residue degree 1) and 11 ≡ 3 mod 4 (inert in F(i)) | yes | PROVED (checks the hypotheses of THM-4558's Lemma R) |
 | Moser spindle: sin²θ = 11/36, i.e. 11 = 4·3 − 1 | in the geometry | PROVED |
 | j((1+√−11)/2) = −2¹⁵ | CM (Gross–Zagier) | KNOWN |
-| 2¹¹ + 3⁷ = 5·7·11² (a 1-in-11 event: q₁₁(2) ≡ 5) | no | NUMEROLOGY |
-| (3⁷−1)/2 = 1093 (Wieferich base 2) against k = 7 | no | NUMEROLOGY |
-| 11 as the −17 period against 11 as a Golay length, the PSL(2,11) level, or Heegner | no | NUMEROLOGY |
+| 2¹¹ + 3⁷ = 5·7·11² (a 1-in-11 event, q₁₁(2) ≡ 5); (3⁷−1)/2 = 1093 (Wieferich base 2) against k = 7; the 11 of the −17 period against the Golay length, the PSL(2,11) level, or Heegner | no | NUMEROLOGY |
 
 ### 2.5 Idoneal slices (task 3)
 
@@ -179,11 +166,10 @@ So 2 and 3 are non-split in every large exponent-2 field. That is the real "{2,3
 ### 2.6 Mod 18/19 bridges (task 3): NUMEROLOGY
 
 * **The counts.** 18 = 16 + {1,4} and 19 = 22 − {9,25,45} are slice counts of a 65-element list.
-* **Primitive roots.** Among the 10 plane primes > 3, both 2 and 3 are primitive only for 5 and 19. The base rate is 23%.
+* **Primitive roots.** Among the 10 plane primes > 3, both 2 and 3 are primitive roots only for 5 and 19; the base rate is 23%.
 * **The prime 19.** 19 divides 57 and 133, but every prime ≤ 31 divides some idoneal number.
-* **Generic DICTIONARY.** On the planes 57 and 133 the 19-genus character equals (−1)^{ind₂ a}, the parity bit of the mod-19 clock. This holds at any prime where 2 is a primitive root.
-* **Residues.** The 101 discriminants show no structure mod 18 or mod 19.
-* **253.** 253 = C(23,2) = |Borel(PSL(2,23))| = 11·23 is the product of the two Golay lengths. NUMEROLOGY.
+* **Generic DICTIONARY.** On the planes 57 and 133, the 19-genus character is (−1)^{ind₂ a}, the parity bit of the mod-19 clock. This holds at any prime where 2 is a primitive root.
+* **Residues and 253.** The 101 discriminants show no structure mod 18 or 19. 253 = C(23,2) = |Borel(PSL(2,23))| = 11·23 is the product of the Golay lengths: NUMEROLOGY.
 
 ### 2.7 The −1/2 thread (task 4)
 
@@ -242,4 +228,4 @@ So 2 and 3 are non-split in every large exponent-2 field. That is the real "{2,3
   * `minscan.c`, `minscan_mt.c`, `minscan_{24726,50507,301993}.txt`;
   * `bounds{,2,3}.py`, `bounds3.out`;
   * `heuristic{,2}.py`, `nearcyc{,2}.py`, each with its `.out`.
-* `baserate{,2}.py`, `idoneal.py`, `facts.py`, each with its `.out`.
+* `baserate{,2}.py`, `idoneal.py`, `facts.py`, `icosa.py` (element orders of I and I_h; A₄ regular on vertices), each with its `.out`.
