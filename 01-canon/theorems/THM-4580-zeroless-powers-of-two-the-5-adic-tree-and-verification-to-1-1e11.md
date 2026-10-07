@@ -1,7 +1,7 @@
 ---
 id: THM-4580
-title: "Zeroless powers of two: the trailing digits of 2^n form a 5-adic tree in which every zeroless class has 4 or 5 zeroless lifts according to one parity bit; Z_k = #(zeroless k-digit multiples of 2^k) satisfies Z_(k+1) = (9 Z_k + Delta_k)/2 with Delta_k a cyclotomic-unit trace; the growth rate lies in [4.47848, 4.52386] and the exponent set has 5-adic dimension in [0.93156, 0.93782]; every 2^n with 87 <= n < 1.1e11 contains a 0; no argument using finitely many leading or trailing digits can settle the conjecture"
-status: "PROVED: lift lemma, bijection, recursion, unit formula (checked for m <= 12), doubling criterion, finite-digit obstruction. FINITE-EXACT: Z_k for k <= 40 (Z_1..Z_26 = OEIS A181610; Z_1..Z_9 re-enumerated independently here); verification of 87 <= n < 1.1e11 (session reader's C verifier, validated against Python big integers, end states checked against exact 2^N mod 10^288; independently re-verified here for n < 2e9 with separate code, reproducing OEIS A031142 records 24-38). PROVED (computer-assisted): the growth and dimension brackets. The conjecture itself (no zeroless 2^n with n > 86) is OPEN. KNOWN context: OEIS A007377 records a check to 1e10 (Radcliffe 2022); A031142's record table (Griffiths 2012), if complete, implies the conjecture for n < 7.88e12."
+title: "Zeroless powers of two: the trailing digits of 2^n form a 5-adic tree in which every zeroless class has 4 or 5 zeroless lifts according to one parity bit; Z_k = #(zeroless k-digit multiples of 2^k) satisfies Z_(k+1) = (9 Z_k + Delta_k)/2 with Delta_k a cyclotomic-unit trace; the growth rate lies in [4.47847, 4.52387] and the exponent set has 5-adic dimension in [0.93155, 0.93783]; every 2^n with 87 <= n < 1.1e11 contains a 0; no argument using finitely many leading or trailing digits can settle the conjecture"
+status: "PROVED: lift lemma, bijection, recursion, unit formula (PROVED for all m by a character sum, audit C; checked for m <= 18), doubling criterion, finite-digit obstruction. FINITE-EXACT: Z_k for k <= 40 (Z_1..Z_26 = OEIS A181610; Z_1..Z_9 re-enumerated independently here); verification of 87 <= n < 1.1e11 (session reader's C verifier, validated against Python big integers, end states checked against exact 2^N mod 10^288; independently re-verified here for n < 2e9 with separate code, reproducing OEIS A031142 records 24-38). PROVED (computer-assisted): the growth and dimension brackets. The conjecture itself (no zeroless 2^n with n > 86) is OPEN. KNOWN context: OEIS A007377 records a check to 1e10 (Radcliffe 2022); A031142's record table (Griffiths 2012), if complete, implies the conjecture for n < 7.88e12."
 session: mac-mini-2026-10-07-oaimath3 (owner prompt "investigate whether every power of two above 2^86 contains a zero"; work by the session's zeroless reader, re-checked here)
 source: 05-knowledge/results/oai3_two_orbits_twos_and_threes_20261007.md
 scripts:
@@ -32,12 +32,12 @@ related:
    * `|Δ_k|^(1/k) ≈ 1.6`, far below the `≈ 2.12` of a random parity.
    * `c = lim (2/9)^k Z_k = 0.8876940431151482645` (NUMERICAL, `±3·10^(−19)`).
 5. **Brackets (PROVED, computer-assisted).**
-   * The growth rate lies in `[4.47848, 4.52386]`.
-   * `dim_H` of the 5-adic exponent set lies in `[0.93156, 0.93782]`.
+   * The growth rate lies in `[4.47847, 4.52387]`.
+   * `dim_H` of the 5-adic exponent set lies in `[0.93155, 0.93783]`.
    * `#{n ≤ x : 2^n zeroless} ≪ x^0.93783`, the decimal analogue of Narkiewicz's ternary bound.
 6. **Doubling criterion (PROVED).** For zeroless `x`, `2x` is zeroless iff `x` contains none of the blocks `51, 52, 53, 54` and does not end in 5. A zero arises exactly at a 5 that receives no carry. This explains runs such as `n = 31, …, 37`.
-7. **Verification (FINITE-EXACT).** Every `2^n` with `87 ≤ n < 1.1·10^11` contains a 0. For `n ≥ 957` the 0 lies among the last 251 digits.
-   * The rightmost-zero records reproduce OEIS A031142 entries 24–41, including `n = 103233492954` (249 zeroless trailing digits) and `n = 109171987836` (250).
+7. **Verification (FINITE-EXACT).** Every `2^n` with `87 ≤ n < 1.1·10^11` contains a 0. For `957 ≤ n < 1.1·10^11` the 0 lies among the last 251 digits. (Corrected after audit C: beyond the verified range this fails, since A031142(43) = 181477218727 has its first zero at digit 261.)
+   * The rightmost-zero records reproduce OEIS A031142 entries 24–42, including `n = 103233492954` (249 zeroless trailing digits) and `n = 109171987836` (250).
    * An independent verifier written in this session confirms `n < 2·10^9` (records `1757, …, 781717865`).
 8. **Finite-digit obstruction (PROVED, elementary).** For every `k` the zeroless tail classes are nonempty and the exponent set is perfect. Every leading-digit set has positive measure. So no argument using finitely many trailing digits, or finitely many leading digits, can settle the conjecture.
    * A proof must couple 5-adic and archimedean information through the middle digits.
@@ -46,7 +46,7 @@ related:
 ## Heuristic (HEURISTIC)
 
 * The model is `P(2^n zeroless) ≈ τλ·0.9^(D(n))`, where `D(n)` is the digit count, `τ = 5c/4 = 1.10962` is the 5-adic end factor, and `λ = 1.08453` is the Benford end factor (leading digits).
-* It predicts 33.9 cases with `n ≤ 86`; there are 36.
+* It predicts 33.9 cases with `n ≤ 86` (the refined finite-`k` lead×trail model; the displayed one-line formula gives 34.16); there are 36.
 * It predicts 2.31 cases beyond 86, so an empty tail was a 10–15% event a priori. Beyond `1.1·10^11` it predicts about `10^(−1.5·10^9)`.
 * The joint frequency of zeroless leading and trailing digit blocks factorizes. For fixed block lengths this is PROVED (Weyl). Up to `n = 10^10` it holds NUMERICALLY deep into the tail, answering Lagarias's (2009) question empirically in base 10.
 
@@ -55,3 +55,13 @@ related:
 * The conjecture itself.
 * That the growth rate is exactly 9/2 (HYP-9219).
 * That openai/math helps: none of its 722 manuscripts concerns decimal digits.
+
+**Audit (2026-10-07, independent audit C).**
+* CONFIRMED:
+  * the lift lemma, bijection and doubling criterion (brute force);
+  * the unit formula, now PROVED for all `m`;
+  * `Z_1..Z_24` by an independent dense DP equal to the OEIS A181610 b-file;
+  * `Z_17..Z_40` reproduced exactly by an independent meet-in-the-middle with a different split (`m = 16`);
+  * every `n ∈ [87, 10^6]` directly, plus 6000 random and targeted exponents up to `1.1·10^11`;
+  * the KNOWN context (A007377, A031142).
+* Corrected above: the brackets were rounded inward and are now outward, `[4.4784752, 4.5238605]` and `[0.9315567, 0.9378217]`; the record entries are 24–42; the "last 251 digits" claim is limited to the verified range (MISTAKE-583).

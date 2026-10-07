@@ -46,7 +46,7 @@ Session mac-mini-2026-10-07-oaimath3, the third openai/math session.
    * Before the merge they are uncorrelated at long gaps:
      * in Terras time, parities at distinct times are exactly pairwise independent;
      * in odd-step time, exponents couple only at window overlaps, and the measured depth law there is Haar to 0.1% away from small gaps.
-   * The probability of no merge by time `T` decays like `T^(−1/2)`. This is PROVED up to a `(log T)^2` factor. The constant (11.0 for `y` vs `y + 1`, 16.7 for S19's lag-1 Mersenne pair) obeys a one-big-jump law: `E[#excursions]·√(4/π)`.
+   * The probability of no merge by time `T` decays like `T^(−1/2)`. The lower bound is PROVED, and the upper bound holds up to a `(log T)^2` factor at sketch level. The constant (about 11.1 for `y` vs `y + 1`, 16.7 for S19's lag-1 Mersenne pair) obeys a one-big-jump law: `(|k_0| + E[#excursions])·√(4/π)`.
    * Consequences: HYP-9213, HYP-9214 and HYP-9220 are proved, and so is the exponent half of HYP-9217.
 2. **Does every `2^n` above `2^86` contain a zero?**
    * OPEN, but verified for `87 ≤ n < 1.1·10^11`. This is an independent confirmation, not a record.
@@ -90,7 +90,7 @@ Session mac-mini-2026-10-07-oaimath3, the third openai/math session.
   * So along returns to `k = 0`, `E|e|^θ` contracts by `ρ = 1 − √(1 − (3/4)^θ)`, plus a constant: 0.634 at `θ = 1/2`, against 0.59–0.61 measured.
 * *Lemma.* Runs of non-flip steps at level `h` cannot be stretched adversarially. Beyond `v_2(3^h − 1) − 1` steps, every continuation costs a fresh fair coin. So the expected time per level is bounded, and the additive errors sum.
 * *Conclusion.* `|e|` at returns is tight. Every state at `k = 0` reaches `(0, 0)` with positive probability. Lévy's 0–1 law gives absorption almost surely.
-* *Rate (THM-4581 (4)).* `c T^(−1/2) ≤ P(no merge by T) ≤ C T^(−1/2) (log T)^2`.
+* *Rate (THM-4581 (4); upper bound at sketch level).* `c T^(−1/2) ≤ P(no merge by T) ≤ C T^(−1/2) (log T)^2`.
   * The lower bound: the walk must return to 0.
   * The upper bound: geometric tails for the number of excursions, plus first-passage tails for their lengths.
 
@@ -108,16 +108,18 @@ Session mac-mini-2026-10-07-oaimath3, the third openai/math session.
 |---|---|---|
 | HYP-9220 | `y` and `y + 1` merge for almost every 2-adic `y` | PROVED |
 | THM-4569 (7) | Index `[R_A : R_C] = 1`: up to null sets, the Collatz grand-orbit relation on `Z_2` is the orbit relation of the affine group `Z[1/6] ⋊ ⟨2,3⟩` | PROVED |
-| Integers | `n` and `n + 1` (also `n` and `3n`) meet at equal Terras time for a set of `n` of natural density 1; the exceptional residues mod `2^K` have density `≤ C K^(−1/2)(log K)^2` | PROVED |
+| Integers | `n` and `n + 1` (also `n` and `3n`) meet at equal Terras time for a set of `n` of natural density 1; the exceptional residues mod `2^K` have density `≤ C K^(−1/2)(log K)^2` | PROVED (density 1); the bound at sketch level |
 | HYP-9213 | Mersenne `σ`-levels are `o(A)`: S19's lag-1 switch is a chain absorption, so `μ_2(S) = 1`, then S18 Prop. 6 | PROVED |
 | HYP-9214 | the reset-2 debt resolves with probability tending to 1: `(n, (n−1)/2)` is the chain from `(0, 1)`, then a clopen transfer | PROVED |
-| HYP-9217 (1) | almost-sure merging, and decay exponent exactly 1/2 (up to logs) | PROVED |
+| HYP-9217 (1) | almost-sure merging | PROVED |
+| HYP-9217 (1) | decay exponent exactly 1/2 (up to logs) | PROVED at sketch level |
 | HYP-9217 (1) | the constant `c₁` | OPEN |
-| HYP-9217 (2) | any-lag `α ≥ 1/2` | PROVED |
+| HYP-9217 (2) | any-lag `α ≥ 1/2` | PROVED at sketch level |
 
 **The constant (HEURISTIC + NUMERICAL, THM-4581 (7)).**
-* A long survival is one long excursion: `q(T) ~ E[J]·√(4/(πT))`, where `J` is the number of excursions before absorption.
-* For `(0, 1)`: `E[J] = 9.83` (4000 paths), predicting 11.10 against 11.0 measured.
+* A long survival is one long excursion: `q(T) ~ (|k_0| + E[J])·√(4/(πT))`, where `J` is the number of excursions from 0 before absorption.
+* For `(0, 1)`: `E[J] ≈ 9.93` (9.83 in 4000 paths to `T = 2·10^5`, truncation-corrected by audit A), predicting 11.2 against 11.06–11.18 measured to `T = 1.6·10^6`.
+* For S19's lag-1 pair (post-prefix state `(2, 1)`): `E[J] ≈ 12.8`, predicting `(2 + 12.8)·1.128 = 16.7`, which is S19's constant (audit A).
 
 **Correlations in this clock (THM-4581 (5)).**
 * Parities at distinct times are exactly pairwise independent.
@@ -185,7 +187,7 @@ Session mac-mini-2026-10-07-oaimath3, the third openai/math session.
 **Over long gaps the two orbits' exponents are uncorrelated until the orbits merge, and the merge is almost sure.**
 * Before the merge, every correlation is carried either by the predictable disagreement bit (Terras clock), which decides *when* the odd-step difference moves but never *which way*, or by ultrametric locking at window overlaps (odd-step clock).
 * After the merge, the streams coincide exactly, shifted by the merge lag.
-* So the long-gap correlation at the merge lag tends to 1. Its deficit is the non-merge probability, of order `T^(−1/2)` (logarithms aside), with constant `≈ √(4/π)·E[J]`.
+* So the long-gap correlation at the merge lag tends to 1. Its deficit is the non-merge probability, of order `T^(−1/2)` (logarithms aside, upper bound at sketch level), with constant `≈ (|k_0| + E[J])·√(4/π)`.
 
 ---
 
@@ -194,7 +196,7 @@ Session mac-mini-2026-10-07-oaimath3, the third openai/math session.
 **Status: OPEN.** None of openai/math's 722 manuscripts concerns decimal digits.
 
 **Verification (FINITE-EXACT).**
-* `2^n` contains a 0 for every `87 ≤ n < 1.1·10^11`. For `n ≥ 957` the 0 lies among the last 251 digits.
+* `2^n` contains a 0 for every `87 ≤ n < 1.1·10^11`. For `957 ≤ n < 1.1·10^11` the 0 lies among the last 251 digits. This fails beyond the range: A031142(43) = 181477218727 has its first zero at digit 261.
 * This was the zeroless reader's C verifier, validated against Python big integers and checked against exact end states.
 * An independent verifier written in this session confirms `n < 2·10^9` and reproduces OEIS A031142's rightmost-zero records 24–38.
 * Context:
@@ -234,11 +236,11 @@ Session mac-mini-2026-10-07-oaimath3, the third openai/math session.
 * The lemma's hypotheses have a closed-form least profile `σ_m(2M + m − 1)/2`, built from Γ-function ratios. It meets the rank bound exactly at `t = 3/4`.
 * So **9/4 is precisely the ceiling of the paper's argument**, and scale-free gadgets of this kind cannot do better.
 * Finite-size corollary (modulo #107): `ω ≤ 9/4 + 0.684/ln a`.
-  * At `a = 188` this already beats the pre-#107 record 2.371339.
+  * At `a = 188` this beats 2.371339 (Alman et al., SODA 2025). At `a = 190` it beats 2.371177 (Dupont et al. 2026), the latest pre-#107 bound that #107 cites.
   * The paper's crude bound needs `a ≈ 382,000` for that.
 
 **The Collatz relation.**
-* **Exact identity (ANALOGY in use).** The paper's gadgets are the affine maps conjugate to multiplication through the repelling fixed point `−1/2`. This is the same Schröder linearization as `T(n) + 1 = (3/2)(n + 1)`, which drives the Mersenne chain (THM-4556).
+* **Exact identity (ANALOGY in use).** The paper's gadgets are the affine maps conjugate to multiplication through the repelling fixed point `−1/2`. In Collatz terms this is the unhalved odd step `3h + 1 + 1/2 = 3(h + 1/2)`, with fixed point `−1/2` (THM-4555). Its halved form `T(n) + 1 = (3/2)(n + 1)`, with fixed point `−1`, drives the Mersenne chain (THM-4556).
 * **Instructive difference.**
   * The paper's maps commute and share one fixed point, so a closed-form extremal profile exists.
   * Collatz words have word-dependent fixed points `c_w/(2^L − 3^w)` (the rational cycles), so no simultaneous linearization exists.
@@ -302,7 +304,7 @@ Session mac-mini-2026-10-07-oaimath3, the third openai/math session.
   * The Collatz pair merges at a `T^(−1/2)` rate, because its fibre coordinate contracts and is slaved to the height. THM-4581's weight `s^|k|` makes that slaving quantitative.
 
 **Dictionary.**
-* The Collatz orbit relation is hyperfinite of type III_(1/2), with C*-algebra `O_2` and topological full group Thompson's `V`.
+* The Collatz orbit relation is hyperfinite of type III_(1/2), with `L(R_C) ≅ R_(1/2)`. Its Deaconu–Renault groupoid, the full-2-shift groupoid, has C*-algebra `O_2` and topological full group Thompson's `V`.
 * #287 asks whether adjoining a generator enlarges `L(F_n)`. Our index question asked whether adjoining `y ↦ y + 1` enlarges the Collatz relation. THM-4581 answers it: **no**, the index is 1.
 * The Stein groups `F_(2,3)` contain `F`, so they are nonamenable modulo #248.
 * Compression by `t = 2/3` sends `r − 1` to `(9/4)(r − 1)` (NUMEROLOGY).
@@ -369,7 +371,7 @@ Each front of this session turned on the same structure. One object is read by t
 | Almost-sure coalescence of `u = 3^k v + e` (`e ∈ Z[1/3]`) | PROVED (THM-4581 (3)) |
 | `c T^(−1/2) ≤ q(T) ≤ C T^(−1/2)(log T)²` | PROVED at sketch level (THM-4581 (4)) |
 | HYP-9213, HYP-9214, HYP-9220; index 1 | PROVED (corollaries) |
-| Constant `c₁ = √(4/π)·E[J]` | HEURISTIC + NUMERICAL |
+| Constant `c₁ = (|k_0| + E[J])·√(4/π)` | HEURISTIC + NUMERICAL |
 | Recurrence of the odd-count difference | PROVED (THM-4569) |
 | Window-overlap law, covariance kernel | PROVED (THM-4564/4565) |
 | Long-gap Haar depth, `Var/K = 4` | NUMERICAL |

@@ -3,8 +3,9 @@ id: HYP-9217
 title: "Debt recurrence law: in the 2-adic Haar model the lag-1 Mersenne debt merges almost surely with P(no merge by template total T) = c1 T^(-1/2)(1 + o(1)), c1 ~ 14-17, and the any-lag Mersenne non-switch probability is q(T) = T^(-alpha + o(1)) with alpha ~ 0.7 +- 0.1; hence mu_2(S) = 1 and HYP-9213 (o(A) new sigma-levels)"
 status: >
   PARTLY RESOLVED 2026-10-07 (THM-4581). PROVED: almost-sure lag-1 merging, hence mu_2(S) = 1 and HYP-9213; the decay exponent
-  is exactly 1/2: c T^(-1/2) <= q1(T) <= C T^(-1/2) (log T)^2 in template total (= Terras time of the merge); if the any-lag
-  exponent alpha exists then alpha >= 1/2. OPEN: q1(T) ~ c1 T^(-1/2) with c1 ~ 16.7 (NUMERICAL; HEURISTIC one-big-jump form
+  is exactly 1/2, with the upper bound at sketch level: c T^(-1/2) <= q1(T) <= C T^(-1/2) (log T)^2 in Terras time. Template total =
+  Terras merge time + v_2(merge value), with a Geom(1/2) overshoot, so the bounds transfer (audit A). If the any-lag exponent
+  alpha exists then alpha >= 1/2 (sketch level). OPEN: q1(T) ~ c1 T^(-1/2) with c1 ~ 16.7 (NUMERICAL; HEURISTIC one-big-jump form
   c1 = E[J] sqrt(4/pi), THM-4581 (7)) and the value of alpha (NUMERICAL 0.66-0.78). Earlier evidence: two committed seeded Haar
   Monte Carlo runs (N = 3000 to total 19 924, N = 1200 to 9600), audited twice (MISTAKE-580).
 source: opus-2026-10-06-S19, 05-knowledge/results/collatz_cycles_tubes_debt_walk_openai_20261006.md, section 1
@@ -70,6 +71,6 @@ scripts:
   * The upper bound uses geometric tails for the number of excursions to absorption, plus excursion-length tails `≤ C (log t / t)^(1/2)`.
   * HYP-9218 is not needed.
 * **The constant (HEURISTIC + NUMERICAL).** One big jump: `q(T) ~ E[J] √(4/(πT))`.
-  * For `y` vs `y + 1`: `E[J] = 9.83` gives 11.10, against 11.0 measured.
-  * For S19's constant 16.7 it predicts `E[J] ≈ 14.8` for the lag-1 start.
+  * For `y` vs `y + 1`: `E[J] ≈ 9.93` (truncation-corrected) gives 11.2, against 11.06–11.18 measured (audit A).
+  * For S19's lag-1 start, the post-prefix state is `(2, 1)` with `E[J] ≈ 12.8`. The constant is `(|k_0| + E[J])·√(4/π) = (2 + 12.8)·1.128 = 16.7`, which is S19's value (audit A). The earlier "`E[J] ≈ 14.8`" ignored the `|k_0|` term.
   * Proving the `(1 + o(1))` form needs a subexponential renewal argument for the Markov-modulated excursion sums.

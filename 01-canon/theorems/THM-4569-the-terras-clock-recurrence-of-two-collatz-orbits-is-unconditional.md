@@ -19,7 +19,7 @@ related:
 ## Setting
 
 * `T(x) = x/2` for even `x`, and `(3x+1)/2` for odd `x`, on `Z_2`.
-* Two orbits `x_s = T^s(x)`, `y_s = T^s(y)`, related by `x_s = 3^(j_s) y_s + c_s`, with `c_s ∈ Z_2` (in `Z[1/3]` for rational initial relations).
+* Two orbits `x_s = T^s(x)`, `y_s = T^s(y)`, related by `x_s = 3^(j_s) y_s + c_s`, with `c_s ∈ Z_2` (in `Z[1/3]` when `c_0 ∈ Z[1/3]`).
 * The initial relation parameters are fixed, or determined by a finite already revealed parity prefix after which the source is Haar. Arbitrary dependence of `c_0` on unrevealed source digits would not make the disagreement clock predictable.
 * `p_s = y_s mod 2`, and `ε_s = c_s mod 2`.
 * For Haar `y` the parities `p_s` are i.i.d. fair coins (Terras), and `ε_s` is a function of the past.
@@ -42,10 +42,10 @@ related:
    * By optional skipping, `j_s = j_0 + S_(N_s)`, with `S` a simple random walk and `N_s = Σ_(r<s) ε_r`.
    * So `j` is a martingale and `Var j_s = E N_s`.
 3. **Dichotomy (PROVED).**
-   * Up to a Haar-null set of isolated value coincidences, any merge is an equal-T-time identity hit of `(j, c) = (0, 0)`. This statement does not assert that a merge occurs almost surely; that is the open box-recurrence question below.
+   * Up to a Haar-null set of isolated value coincidences, any merge is an equal-T-time identity hit of `(j, c) = (0, 0)`. This statement does not assert that a merge occurs almost surely; that is the box-recurrence question below, now PROVED by THM-4581.
    * If the orbits never merge, then `N_s → ∞`. Otherwise the parity vectors would eventually agree forever, and injectivity of the parity map (Terras) would force equality.
    * Hence **almost surely the pair either merges or `j` visits every integer infinitely often**. This is the recurrence half of S19's next step 2, unconditional, with no input from HYP-9218.
-4. **Rate lower bound (PROVED).** `P(no merge by T) ≥ P(S avoids −j_* for T steps)`. For S19's lag-1 pair (`j_* = 2` after its forced prefix) this gives `q₁(T) ≥ (1.59 + o(1)) T^(−1/2)`, so HYP-9217's exponent cannot exceed 1/2. For `x = y + 1` it gives `(0.80 + o(1)) T^(−1/2)`.
+4. **Rate lower bound (PROVED).** `P(no merge by T) ≥ P(S avoids −j_* for T steps)`. For S19's lag-1 pair (`j_* = 2` after its forced prefix `(1,2) → (1,2) → (1,1) → (2,2) → (2,1)`) this gives `q₁(T) ≥ (2√(2/π) + o(1)) T^(−1/2) ≈ 1.596 T^(−1/2)`, so HYP-9217's exponent cannot exceed 1/2. For `x = y + 1` (`j_* = 1`) it gives `(√(2/π) + o(1)) T^(−1/2) ≈ 0.797 T^(−1/2)`. (Corrected after audit C: the earlier "0.80" rounded a lower bound up.)
 5. **Box reduction (PROVED) and computer-assisted bounds.**
    * Let `B(J, C) = {|j| ≤ J, |c·3^max(0,−j)| ≤ C·3^|j|}`.
    * By Lévy's 0–1 law, the chain merges a.s. on the event that it visits `B(1,10)` infinitely often. So **almost-sure merging ⟺ box recurrence**, an archimedean condition (`|c|` does not blow up along the returns of `j`).
@@ -54,10 +54,10 @@ related:
      * `P(y and y+1 merge)` ≥ 0.5861;
      * S19's lag-1 Mersenne pair merges with probability ≥ 0.3853.
    * Each merge is decided by the exponent `a` modulo a power of 2 (S19 §1.1). So the **lower density of odd `a` with `σ(2^a − 1) = σ(2^(a−1) − 1)` is at least 0.3853**, against the previously certified 0.1740 (S19, `K = 31`, exhaustive).
-6. **The real place (PROVED).** `ρ = c/3^j` obeys `ρ' = ρ/2` or `ρ' = (3/2)ρ − 1/2`, up to `O(3^(−j))`. This is the real Terras iterated function system: mean multiplier 1 and tail index 1, i.e. THM-4564 (6) seen in this clock.
+6. **The real place (PROVED).** For `j ≥ 0`, `ρ = c/3^j` obeys `ρ' = ρ/2` or `ρ' = (3/2)ρ − 1/2`, up to an additive error `≤ 3^(−j)/2` (exact in rows (0,0) and (1,1)); so the statement holds as `j → +∞`. This is the real Terras iterated function system: mean multiplier 1 and tail index 1, i.e. THM-4564 (6) seen in this clock.
 7. **Orbit-equivalence form (PROVED from KNOWN facts).**
    * Let `R_C` be the T-grand-orbit relation on `(Z_2, Haar)`, and `R_A` the orbit relation of `Γ_C = Z[1/6] ⋊ ⟨2, 3⟩` restricted to `Z_2`. Then `R_C ⊆ R_A`.
-   * Both are ergodic, hyperfinite and of type III_(1/2). Via Lagarias's conjugacy with the full shift, `R_C` has C*-algebra `O_2`, topological full group Thompson's `V` (Matui), and the Powers factor `R_(1/2)`.
+   * Both are ergodic, hyperfinite and of type III_(1/2). Via Lagarias's conjugacy, the Deaconu–Renault groupoid of `(Z_2, T)` is the full-2-shift groupoid. Its C*-algebra is `O_2` and its topological full group is Thompson's `V` (Matui 2015; also Nekrashevych 2004). Its orbit relation `R_C` is the ergodic hyperfinite III_(1/2) relation, with `L(R_C) ≅ R_(1/2)`, the Powers factor. (Corrected after audit C: `O_2` and `V` belong to the groupoid, not to the measured relation.)
    * The index `[R_A : R_C]` is a.e. constant. The following are equivalent:
      * the index is 1;
      * `y` and `y + 1` merge for a.e. 2-adic `y` (HYP-9220);
@@ -87,9 +87,13 @@ does not bound the translation coordinate or prove box recurrence.
   * The weight `|c·3^(−max(j,0))|^θ s^|j|`, with `s = 2^θ(1 − √(1 − (3/4)^θ))`, has its homogeneous term balanced on flips; the additive error is bounded separately. A move of `j` toward 0 is exactly the ×3/2 branch.
   * Runs cost fresh coins per continuation beyond `v_2(3^|j| − 1) − 1` steps.
   * Together these give `E|c_return|^θ ≤ 0.634 |c|^θ + C` along the returns of `j` to 0. That is the archimedean control (5) asked for.
-* **Consequences.** All equivalent statements in (7) hold:
+* **Consequences.** All equivalent statements in (7) hold, in the grand-orbit sense. THM-4581 (6b) writes out the reduction that (7) left implicit: for `g(y) = 2^a 3^b y + c_0/(2^m 3^l)`, route through `y' = 2^(M+a) y` and `3^l 2^M g(y)`. Equal-time merging fails when the multiplier has a nontrivial power of 2; `y` and `2y` a.s. never merge at equal time.
   * the index `[R_A : R_C] = 1`;
   * `y ~ y + 1` almost everywhere (HYP-9220);
   * every element of `Γ_C` merges almost everywhere.
-* **The rate lower bound (4) is sharp up to logarithms:** `P(no merge by T) ≤ C T^(−1/2) (log T)^2` (THM-4581 (4)).
+* **The rate lower bound (4) is sharp up to logarithms:** `P(no merge by T) ≤ C T^(−1/2) (log T)^2` (THM-4581 (4), PROVED at sketch level).
 * **The value-iteration lower bounds of (5) are superseded:** the merge probabilities are 1. They remain valid finite-box certificates.
+
+**Audit (2026-10-07, independent audit C).**
+* CONFIRMED: transitions (100,000 steps against direct orbits), (2), (3), box validity, and the certificates. B(3,30) and B(4,100) were reproduced exactly by independent code. B(9,100) gives 0.586175, 0.385315 and 0.344618, above the claimed 0.5861, 0.3853 and 0.3446.
+* Corrected above: (4) constants, (7) groupoid wording, (6) range of validity (MISTAKE-583).

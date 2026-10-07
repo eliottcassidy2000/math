@@ -46,5 +46,8 @@ A second run (seed 99, 400 samples each) extends the table: 0.838 at `B = 2048`,
 
 * **Absorption is the merge.** Put `v = n − 1`, so that `T(v) = (n−1)/2` by an even step. Absorption of the chain `(u, v) = (n, n − 1)` from `(0, 1)` at time `t` is `T^t(n) = T^(t−1)((n−1)/2)` with equal odd counts. That is the conjectured equal-odd-step-time merge, and it happens before 1 when `t ≪ B`.
 * **Theorem H (THM-4581 (3)).** Absorption is almost sure under Haar measure, hence also under Haar conditioned on the positive-measure first-reset-2 set.
-* **Transfer to integers.** Absorption by `K` depends only on `n mod 2^K`, and uniform `B`-bit sources are uniform on residues. So `liminf_B P_B ≥ P(absorbed by K | condition)`, which tends to 1.
+* **Transfer to integers.** Absorption by `K` depends only on `n mod 2^K`, and uniform `B`-bit sources are uniform on residues.
+  * The sampler counts a merge only when the common odd value is not 1. Witness (audit A): `n = 3465223915` is absorbed at value 128.
+  * Sources whose merge value is a power of 2 have share `O((B + K) 2^(K−B))`. The residue tail `v_2(n+1) > K − 3` has mass `≤ 2^(3−K)`.
+  * So `liminf_B P_B ≥ P(absorbed by K | condition) − O(2^(−K))`, which tends to 1. Agreement of the sampler with chain absorption: 940/941, 1254/1255, 1783/1783 and 611/611 at `B = 32, 64, 256, 1024` (audit A).
 * **The parity effect is consistent.** The even/odd debt-height gap shrinks, as both shares tend to 1.

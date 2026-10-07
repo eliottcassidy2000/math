@@ -106,4 +106,5 @@ related:
 
 * The lag-1 Mersenne pair chain is absorbed almost surely (THM-4581 (3)). So the odd `a` with `σ(2^a − 1) = σ(2^(a−1) − 1)` have natural density 1, and the switching set has `μ_2(S) = 1`.
 * With (ii) and S18's Proposition 6, this proves HYP-9213: there are `o(A)` distinct `σ`-levels.
-* The density of odd `a` without a switch of template total `≤ K` is between `c K^(−1/2)` and `C K^(−1/2) (log K)^2` (THM-4581 (4)). The certificates (v) are finite-`K` instances of this.
+* The density of odd `a` without a **lag-1** switch of template total `≤ K` is between `c K^(−1/2)` and `C K^(−1/2) (log K)^2` (THM-4581 (4); upper bound at sketch level).
+* For switches at any lag, which is what (v) certifies, only the upper bound follows. Numerically the any-lag share decays faster, like `K^(−0.69)` (audit A; HYP-9217 (2)). (Corrected after audit A: the lower bound was first stated for all lags.)

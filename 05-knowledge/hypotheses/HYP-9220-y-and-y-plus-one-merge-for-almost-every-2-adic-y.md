@@ -3,9 +3,9 @@ id: HYP-9220
 title: "M1: for Haar-almost every 2-adic integer y, the Collatz (Terras) orbits of y and y+1 merge; P(no merge by T) ~ 10.8 T^(-1/2); equivalently the Collatz orbit relation has index 1 in the orbit relation of Z[1/6] x| <2,3> on Z_2"
 status: >
   RESOLVED 2026-10-07: PROVED (THM-4581 (3), (6a); the pair chain from (0, 1) is absorbed almost surely; Lyapunov weight
-  s^|k| with return drift rho = 0.634 at theta = 1/2). The rate is PROVED up to logarithms: P(no merge by T) is between
-  c T^(-1/2) and C T^(-1/2) (log T)^2 (THM-4581 (4)). The constant 10.8-11.0 is NUMERICAL, explained HEURISTICALLY by one big
-  jump: E[J] sqrt(4/pi) = 11.10 with E[J] = 9.83 excursions (THM-4581 (7)). Earlier: COMPUTER-ASSISTED lower bound 0.5861
+  s^|k| with return drift rho = 0.634 at theta = 1/2). The rate holds up to logarithms, with the upper bound PROVED at sketch level: P(no merge by T) is between
+  c T^(-1/2) and C T^(-1/2) (log T)^2 (THM-4581 (4)). The constant is about 11.1-11.2 (NUMERICAL, audit A, to T = 1.6e6), explained HEURISTICALLY by one big
+  jump: E[J] sqrt(4/pi) = 11.2 with E[J] ~ 9.93 excursions, truncation-corrected (THM-4581 (7)). Earlier: COMPUTER-ASSISTED lower bound 0.5861
   (THM-4569).
 source: mac-mini-2026-10-07-oaimath3 (groups reader), 05-knowledge/results/oai3_two_orbits_twos_and_threes_20261007.md
 related:
@@ -40,5 +40,5 @@ related:
 * **Consequences.**
   * The index `[R_A : R_C] = 1`.
   * Every `u = 3^k y + e` with `e ∈ Z[1/3]` merges almost everywhere (for example `y` and `3y`).
-  * The integers `n` whose trajectories meet `n + 1`'s at equal Terras time have natural density 1, with exceptional residue fraction `q(K) ≤ C K^(−1/2) (log K)^2` mod `2^K`.
+  * The integers `n` whose trajectories meet `n + 1`'s at equal Terras time have natural density 1, with exceptional residue fraction `q(K) → 0` mod `2^K`; the bound `q(K) ≤ C K^(−1/2) (log K)^2` holds at sketch level.
 * **Still open.** The exact constant (regular variation) of `q(T)`.

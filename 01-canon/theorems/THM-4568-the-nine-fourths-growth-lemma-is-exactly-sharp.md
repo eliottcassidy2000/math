@@ -32,19 +32,19 @@ related:
    * Here `σ_m = Π_(j<m)(1 + 1/(3j)) = Γ(m + 1/3)/(Γ(4/3)Γ(m))`, which is OEIS A004991(m−1)/9^(m−1).
    * Diagonal values: `1, 10/3, 56/9, 770/81, 3185/243, …`, with generating function `(1+x)(1−x)^(−7/3)`.
    * `P_min(a,a) ~ (3/(2Γ(4/3))) a^(4/3)`.
-2. **Exact ceiling.** `P_min(a,b) ≤ (a+b−1)^(4/3)` everywhere, with equality only at `(1,1)`. So the lemma's hypotheses together with the rank bound are consistent exactly for `t ≤ 3/4`: **9/4 is the ceiling of the argument**. Every inequality in the paper's chain is an equality on `P_min`.
+2. **Exact ceiling.** `P_min(a,b) ≤ (a+b−1)^(4/3)` everywhere, with equality only at `(1,1)`. So the lemma's hypotheses together with the rank bound are consistent exactly for `t ≤ 3/4`: **9/4 is the ceiling of the argument**. Every inequality in the paper's chain up to `H_a ≥ Π_(m<a)(1 + 1/(3m))` is an equality on `P_min`. The two final simplifications, `(1 + 1/(3m))³ ≥ 1 + 1/m` and `(3a − 1)/2 ≥ a`, are strict (e.g. `P_min(2,2) = 10/3 > 2^(4/3)`). They cost only the constant `3/(2Γ(4/3)) ≈ 1.68`, not the exponent. (Corrected after audit C, 2026-10-07; "everywhere" holds by Wendel's inequality `Γ(m+1/3)/Γ(m) ≤ m^(1/3)`.)
 3. **Gadget barrier.**
    * Shared-leg gadgets `P(a, mh + c_a) ≥ mP(a,h)` that are valid for all characters need `c_a ≥ (m−1)(a−1)/2`, so the paper's shift `a − 1` is minimal. All such gadgets are pinned at 9/4.
    * Diagonal-only gadgets give at best `κ = 2(m−1)/(u−1)` subject to `u(u+1) ≥ 2m²`, and so can never get below about 2.058.
 4. **Fixed point.**
    * Rescaled to aspect ratios, tripling is `s ↦ 3s + 1 − 1/a`; at `a = 2` it is literally `h ↦ 3h + 1`.
    * `b ↦ 3b + a − 1` is conjugate to `ũ ↦ 3ũ` through its repelling fixed point `−(a−1)/2`, and `κ* = 4/3 = 2/(1 − s*)` with `s* = −1/2`.
-   * This is the Schröder linearization of the Collatz odd step, `T(n) + 1 = (3/2)(n + 1)`, which drives THM-4556's Mersenne chain.
+   * (ANALOGY) The unhalved odd step satisfies `3h + 1 + 1/2 = 3(h + 1/2)`, with fixed point `−1/2` (THM-4555). In the halved normalization this is `T(n) + 1 = (3/2)(n + 1)`, with fixed point `−1`, which drives THM-4556's Mersenne chain. (Corrected after audit C: the earlier text paired `s* = −1/2` with the identity whose fixed point is `−1`.)
    * The difference: #107's gadgets commute and share one fixed point, which is why a closed-form least element exists. Collatz words have word-dependent fixed points `c_w/(2^L − 3^w)` (the rational cycles), so no simultaneous linearization exists.
 5. **Finite size (PROVED modulo #107).**
    * `ω ≤ ω_a := 3 ln(2a−1)/ln P_min(a,a)`, using only `C(a′, b′)` with `a′ ≤ a` and `b′ ≤ 4a − 1`.
    * `ω_2 = 2.7375 < log₂ 7`.
-   * `ω_188 < 2.371339`, the bound that preceded #107.
+   * `ω_188 < 2.371339` (Alman–Duan–Vassilevska Williams–Xu–Xu–Zhou, SODA 2025), and `ω_190 < 2.371177` (Dupont et al. 2026, the latest pre-#107 bound that #107 cites). (Corrected after audit C: 2.371339 is not the bound immediately preceding #107.)
    * `ω_a < 2.30` from `a = 595,975` on.
    * `ω_a = 9/4 + 0.6843/ln a + O(1/ln² a)`.
 
@@ -61,3 +61,5 @@ Related numbers:
 * `4/9` is also the latest first lonely time `τ*(2)` (HYP-9210).
 
 All agree only because `3 = 1 + 2` in both settings. NUMEROLOGY.
+
+**Audit (2026-10-07, independent audit C).** Statements 1 and 3, the identities (OEIS A004991), the constants (`K = 0.684348`, `ω_188 = 2.371335`, `ω_190 = 2.371111`) and the numerology register are CONFIRMED. The auditor added a proof of minimality off the diagonal, by induction in `h` from the diagonal LP bound, and a tangent-line proof that minimal-shift gadgets are pinned at 9/4 when `mh + c ≥ a − 1`. Statements 2, 4 and 5 are corrected above (MISTAKE-583).
