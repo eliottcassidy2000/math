@@ -1,13 +1,18 @@
 """The 2-adic Haar model of Mersenne switching and the debt walk (session opus-2026-10-06-S19).
 Note: 05-knowledge/results/collatz_cycles_tubes_debt_walk_openai_20261006.md, section 1.
+Usage:  python3 <this> [N_A M_A DMAX SEED_A]      defaults 1200 12000 41 2026 (about 2 minutes on 12 cores)
+        the large run of the note:  python3 <this> 3000 20000 61 7   (about 15 minutes; output in <this>_large.out)
   A. Haar model of THM-4556 (iv): odd a <-> X = 3^(a-1) Haar on 1 + 8Z_2; post-run starts p = 2X - 1, q_D = 2X 3^(-D) - 1;
-     switch at lag D iff U^i(p) = U^(i+D)(q_D).  Monte Carlo of the non-switch share q(T) and the lag-1 non-merge share.
-  B. Exact debt bookkeeping for lag-1 pairs x0 = 3 2^v y0 + 1 (x_t vs y_(t+1)): relation x = 2^L y + Delta, D = 3 Delta + 1 - 2^L,
-     transition b = v_2(2^(L+a) y' + D); merge iff D = 0 one step earlier, with L even and Delta = (2^L - 1)/3;
-     the debt's odd part runs the Collatz map: D'_odd = U(D_odd) - 2^(L' - w') in generic steps (w' = v_2(3 D_odd + 1) < L').
-  C. The L-walk: increments mean 0, variance 4 (= Var(Geom - Geom)); sqrt(t) P(no merge by t) plateaus (t^(-1/2) law).
-  D. Actual exponents a in [1001, 2001]: sigma(M_a) census vs the Haar prediction 1 - mean q(T_post(a)).
-Exact claims print ok/FAIL; Monte Carlo numbers are NUMERICAL (seeded).  Runtime about 3-5 minutes on 12 cores."""
+     switch at lag D iff U^i(p) = U^(i+D)(q_D).  Monte Carlo of the non-switch share q(T) and the lag-1 non-merge share q1(T),
+     least-squares exponent on T >= 400 with a bootstrap interval, sqrt(T) q1(T) with a bootstrap interval, least-total lags.
+  B. Exact debt bookkeeping for lag-1 pairs x0 = 3 2^v y0 + 1 (x_t against y_(t+1)), cf. mac-mini's HYP-9214 model:
+     relation x = 2^L y + Delta, debt D = 3 Delta + 1 - 2^L, transition b = v_2(2^(L+a) y' + D);
+     D = 0 iff the next relation is the identity (L' = 0, Delta' = 0); a merge with D != 0 needs the value coincidence
+     y' = -Delta'/(2^(L') - 1) (Haar measure 0).  Kicked law (integer D, i.e. L >= 0; v_2(D) < L + a; L' > w'):
+     D'_odd = U(D_odd) - 2^(L' - w'), w' = v_2(3 D_odd + 1).
+  C. The L-walk: increments by L-range; the two exponent streams (debt exponent w vs partner exponent a) in generic steps.
+  D. Actual exponents a <= 2001: sigma(M_a) census vs the Haar prediction 1 - mean q(T_post(a)).
+Exact claims print ok/FAIL; Monte Carlo numbers are NUMERICAL (seeded)."""
 import sys, random, math, time
 from fractions import Fraction
 from multiprocessing import Pool
@@ -32,8 +37,10 @@ def U(x):
 
 
 # ------------------------------------------------------------------ A. Haar model
-M_A, N_A, DMAX, SEED_A = 12000, 1200, 41, 2026
+_args = [int(a) for a in sys.argv[1:5]]
+N_A, M_A, DMAX, SEED_A = (_args + [1200, 12000, 41, 2026][len(_args):])[:4]
 MARGIN = 64
+TGRID = [27, 50, 100, 200, 400, 800, 1600, 3200, 6400, 9600, 12800, 19000]
 
 
 def orbit(x, prec):
@@ -94,8 +101,8 @@ def debt_pair(s, exact_steps=60):
     a0 = v2(t3)
     yy = t3 >> a0
     L = v + a0
-    stats = {'rel': True, 'trans': True, 'kick_tested': 0, 'kick_ok': True, 'merge_ok': None}
-    incs, Ls = [], [L]
+    stats = {'trans': True, 'kick_tested': 0, 'kick_ok': True, 'merge_ok': None}
+    incs, Ls, streams = [], [L], []
     merged = None
     maxsteps = int(BITS_B / 2.5)
     prev = None
@@ -105,40 +112,38 @@ def debt_pair(s, exact_steps=60):
             Lp, Dp, Deltap = prev
             stats['merge_ok'] = (Dp == 0 and Lp % 2 == 0 and Lp != 0 and Deltap == (Fraction(2) ** Lp - 1) / 3)
             break
-        if t < exact_steps or True:
-            Delta = Fraction(x) - Fraction(2) ** L * yy
-            D = 3 * Delta + 1 - Fraction(2) ** L
-            prev = (L, D, Delta)
+        Delta = Fraction(x) - Fraction(2) ** L * yy
+        D = 3 * Delta + 1 - Fraction(2) ** L
+        prev = (L, D, Delta)
         bx, ay = v2(3 * x + 1), v2(3 * yy + 1)
         ny = (3 * yy + 1) >> ay
+        if D != 0 and D.denominator == 1 and L >= 8:
+            w = v2(abs(D.numerator))
+            if w < L + ay:
+                streams.append((ay, w, bx))           # generic step: b = w
         if t < exact_steps:
-            # transition law: b = v_2(2^(L+a) y' + D)   (D is dyadic; scale to integers)
-            Fr = Fraction(2) ** (L + ay) * ny + D
-            num, den = Fr.numerator, Fr.denominator
-            vb = v2(num) - v2(den)
+            Fr = Fraction(2) ** (L + ay) * ny + D       # transition law: b = v_2(2^(L+a) y' + D)
+            vb = v2(Fr.numerator) - v2(Fr.denominator)
             if vb != bx:
                 stats['trans'] = False
-            # kicked-Collatz law in the generic case: D != 0, v(D) < L + a, L' > w'
-            if D != 0:
-                vD = v2(D.numerator) - v2(D.denominator)
+            if D != 0 and D.denominator == 1:          # kicked law (integer debt)
+                vD = v2(abs(D.numerator))
                 Lnew = L + ay - bx
-                if D.denominator == 1 and vD < L + ay:
+                if vD < L + ay:
                     Dodd = D.numerator >> vD if D.numerator > 0 else -((-D.numerator) >> vD)
                     w = v2(3 * Dodd + 1)
                     if Lnew > w:
                         stats['kick_tested'] += 1
-                        Dnext = 3 * (Fraction(x) * 0 + Fraction((3 * x + 1) >> bx) - Fraction(2) ** Lnew * ny) + 1 - Fraction(2) ** Lnew
-                        Dnext_odd_pred = U(Dodd) - 2 ** (Lnew - w)
+                        Dnext = 3 * (Fraction((3 * x + 1) >> bx) - Fraction(2) ** Lnew * ny) + 1 - Fraction(2) ** Lnew
                         vn = v2(Dnext.numerator) - v2(Dnext.denominator)
-                        ok = (vn == w) and (Dnext / Fraction(2) ** vn == Dnext_odd_pred)
-                        if not ok:
+                        if not ((vn == w) and (Dnext / Fraction(2) ** vn == U(Dodd) - 2 ** (Lnew - w))):
                             stats['kick_ok'] = False
         x = (3 * x + 1) >> bx
         yy = ny
         L = L + ay - bx
         incs.append((Ls[-1], ay - bx))
         Ls.append(L)
-    return merged, stats, incs, Ls
+    return merged, stats, incs, Ls, streams
 
 
 # ------------------------------------------------------------------ D. actual exponents
@@ -155,6 +160,20 @@ def sigma_and_post_total(a):
     return s, tot
 
 
+def ls_fit(points):
+    n = len(points)
+    mx = sum(p[0] for p in points) / n; my = sum(p[1] for p in points) / n
+    a = -sum((p[0] - mx) * (p[1] - my) for p in points) / sum((p[0] - mx) ** 2 for p in points)
+    return a, math.exp(my + a * mx)
+
+
+def shares(least, least1, grid):
+    n = len(least)
+    q = [sum(1 for v in least if v is None or v > T) / n for T in grid]
+    q1 = [sum(1 for v in least1 if v is None or v > T) / n for T in grid]
+    return q, q1
+
+
 if __name__ == '__main__':
     t0 = time.time()
     print('A. Haar model of Mersenne switching (NUMERICAL, seed %d, N = %d, %d-bit 2-adic precision, odd D <= %d)' % (SEED_A, N_A, M_A, DMAX))
@@ -163,36 +182,59 @@ if __name__ == '__main__':
         pairs = pool.map(debt_pair, range(N_B), chunksize=8)
         sig = pool.map(sigma_and_post_total, range(2, 2002), chunksize=16)
     reach = min(o[1] for o in out)
-    rows = []
-    for T in [27, 50, 100, 200, 400, 800, 1600, 3200, 6400, 9600]:
-        if T > reach:
-            break
-        nos = sum(1 for r, _ in out if not any(v is not None and v <= T for v in r.values())) / N_A
-        no1 = sum(1 for r, _ in out if not (r[1] is not None and r[1] <= T)) / N_A
-        rows.append((T, nos, no1))
-        print(f'     T = {T:5d}: non-switch q(T) = {nos:.4f}   lag-1 non-merge = {no1:.4f}   sqrt(T)*lag1 = {math.sqrt(T) * no1:6.2f}')
-    s27 = 1 - rows[0][1]
+    grid = [T for T in TGRID if T <= reach]
+    least = [min([v for v in r.values() if v is not None], default=None) for r, _ in out]
+    least1 = [r[1] for r, _ in out]
+    q, q1 = shares(least, least1, grid)
+    for T, a, b in zip(grid, q, q1):
+        print(f'     T = {T:5d}: non-switch q(T) = {a:.4f}   lag-1 non-merge q1(T) = {b:.4f}   sqrt(T) q1 = {math.sqrt(T) * b:6.2f}')
+    s27 = 1 - q[0]
     sd = math.sqrt(s27 * (1 - s27) / N_A)
-    check(abs(s27 - 10757550 / 67108864 * 0 - 0.1556) < 3 * sd + 0.005,
-          f'Haar switch share at T = 27 is {s27:.4f} +- {sd:.4f}; certified exact share at K = 27 is 0.1556 (consistent)')
-    # power-law fit of q(T) on T >= 400
-    pts = [(math.log(T), math.log(q)) for T, q, _ in rows if T >= 400 and q > 0]
-    n = len(pts)
-    mx = sum(p[0] for p in pts) / n; my = sum(p[1] for p in pts) / n
-    alpha = -sum((p[0] - mx) * (p[1] - my) for p in pts) / sum((p[0] - mx) ** 2 for p in pts)
-    Cq = math.exp(my + alpha * mx)
-    print(f'     LS fit on T >= 400: q(T) ~ {Cq:.2f} T^-{alpha:.3f}   (the S19 large run, seed 7, N = 3000, 20000 bits, D <= 61: alpha ~ 0.66)')
+    check(abs(s27 - 0.1556) < 3 * sd + 0.005, f'Haar switch share at T = 27 is {s27:.4f} +- {sd:.4f}; certified exact share at K = 27 is 0.1556 (consistent)')
+    fitT = [T for T in grid if T >= 400]
+    alpha, Cq = ls_fit([(math.log(T), math.log(v)) for T, v in zip(grid, q) if T >= 400])
+    tailT = [T for T in grid if T >= 3200]
+    rng = random.Random(1)
+    boots, boots_c1, boots_tail = [], [], []
+    for _ in range(400):
+        idx = [rng.randrange(N_A) for _ in range(N_A)]
+        bq, bq1 = shares([least[i] for i in idx], [least1[i] for i in idx], grid)
+        if min(v for T, v in zip(grid, bq) if T >= 400) > 0:
+            boots.append(ls_fit([(math.log(T), math.log(v)) for T, v in zip(grid, bq) if T >= 400])[0])
+        boots_c1.append(math.sqrt(grid[-1]) * bq1[-1])
+        if len(tailT) >= 2:
+            boots_tail.append(ls_fit([(math.log(T), math.log(v)) for T, v in zip(grid, bq1) if T >= 3200])[0])
+    boots.sort(); boots_c1.sort(); boots_tail.sort()
+    ci = lambda L: (L[int(0.025 * len(L))], L[int(0.975 * len(L)) - 1])
+    print(f'     LS fit of q(T) on T in [{fitT[0]}, {fitT[-1]}]: q ~ {Cq:.2f} T^-{alpha:.3f}, bootstrap 95% [{ci(boots)[0]:.3f}, {ci(boots)[1]:.3f}]')
+    print(f'     sqrt(T) q1(T) at T = {grid[-1]}: {math.sqrt(grid[-1]) * q1[-1]:.2f}, bootstrap 95% [{ci(boots_c1)[0]:.2f}, {ci(boots_c1)[1]:.2f}]')
+    if boots_tail:
+        a1t, _ = ls_fit([(math.log(T), math.log(v)) for T, v in zip(grid, q1) if T >= 3200])
+        print(f'     lag-1 tail exponent on T >= 3200: {a1t:.3f}, bootstrap 95% [{ci(boots_tail)[0]:.3f}, {ci(boots_tail)[1]:.3f}]')
+    a1all, _ = ls_fit([(math.log(T), math.log(v)) for T, v in zip(grid, q1) if T >= 400])
+    print(f'     lag-1 exponent on T >= 400: {a1all:.3f}')
+    lagc = Counter()
+    for r, _ in out:
+        best = None
+        for D, v in r.items():
+            if v is not None and (best is None or v < best[1]):
+                best = (D, v)
+        if best:
+            lagc[best[0]] += 1
+    tot = sum(lagc.values())
+    print('     least-total lag among switching samples: ' + ', '.join(f'D={D}: {c / tot:.3f}' for D, c in sorted(lagc.items())[:6]))
 
     print('B. Exact debt bookkeeping for lag-1 pairs x0 = 3 2^v y0 + 1')
-    rel_ok = all(p[1]['trans'] for p in pairs)
-    check(rel_ok, f'transition law b_t = v_2(2^(L+a) y\' + D) exact on the first 60 steps of all {N_B} pairs')
+    check(all(p[1]['trans'] for p in pairs), f'transition law b_t = v_2(2^(L+a) y\' + D) exact on the first 60 steps of all {N_B} pairs')
     kt = sum(p[1]['kick_tested'] for p in pairs)
     check(all(p[1]['kick_ok'] for p in pairs) and kt > 1000,
-          f'kicked-Collatz law D\'_odd = U(D_odd) - 2^(L\'-w\'), v_2(D\') = w\' = v_2(3 D_odd + 1), in all {kt} generic steps tested')
+          f'kicked-Collatz law D\'_odd = U(D_odd) - 2^(L\'-w\'), v_2(D\') = w\' = v_2(3 D_odd + 1), in all {kt} generic integer-debt steps tested')
     mg = [p for p in pairs if p[0] is not None]
-    check(all(p[1]['merge_ok'] for p in mg), f'every one of the {len(mg)} merges: one step earlier D = 0, L even and nonzero, Delta = (2^L - 1)/3 (a sibling x = 4^k y + (4^k-1)/3, k = L/2)')
+    check(all(p[1]['merge_ok'] for p in mg),
+          f'all {len(mg)} sampled merges pass through D = 0 one step earlier (L even, nonzero, Delta = (2^L - 1)/3: a sibling pair); '
+          'value-coincidence merges with D != 0 have Haar measure 0')
 
-    print('C. The L-walk (NUMERICAL)')
+    print('C. The L-walk and the two exponent streams (NUMERICAL)')
     by = {}
     for p in pairs:
         for Lp, d in p[2]:
@@ -200,10 +242,24 @@ if __name__ == '__main__':
             by.setdefault(key, []).append(d)
     for k in ['<= 0', '1-6', '7-15', '>= 16']:
         d = by[k]; m = sum(d) / len(d); var = sum((x - m) ** 2 for x in d) / len(d)
-        print(f'     L {k:5s}: {len(d):8d} steps, mean increment {m:+.4f}, variance {var:.3f}')
+        print(f'     L {k:5s}: {len(d):8d} steps, mean increment {m:+.4f} (s.e. {math.sqrt(var / len(d)):.4f}), variance {var:.3f}')
     allinc = [d for v in by.values() for d in v]
     m = sum(allinc) / len(allinc); var = sum((x - m) ** 2 for x in allinc) / len(allinc)
     check(abs(m) < 0.02 and abs(var - 4) < 0.1, f'all increments: mean {m:+.4f}, variance {var:.3f} (Var of a difference of two Geom(1/2) = 4)')
+    st = [s for p in pairs for s in p[4]]
+    nst = len(st)
+    W = Counter(s[1] for s in st); Aa = Counter(s[0] for s in st)
+    print(f'     generic integer-debt steps with L >= 8: {nst}; P(w = k), P(a = k), 2^-k for k = 1..5:')
+    for k in range(1, 6):
+        print(f'        k = {k}: {W[k] / nst:.4f}  {Aa[k] / nst:.4f}  {2 ** -k:.4f}')
+    J = Counter((min(s[0], 4), min(s[1], 4)) for s in st)
+    mA = Counter(min(s[0], 4) for s in st); mW = Counter(min(s[1], 4) for s in st)
+    chi = sum((J[(i, j)] - mA[i] * mW[j] / nst) ** 2 / (mA[i] * mW[j] / nst) for i in mA for j in mW)
+    ws = [s[1] for s in st]
+    mw = sum(ws) / len(ws); vw = sum((x - mw) ** 2 for x in ws) / len(ws)
+    ac = sum((ws[i] - mw) * (ws[i + 1] - mw) for i in range(len(ws) - 1)) / (len(ws) - 1) / vw
+    print(f'     independence of a and w: chi^2 = {chi:.1f} on 9 dof; mean w = {mw:.4f}, var w = {vw:.3f}, lag-1 autocorrelation of w = {ac:+.4f}')
+    check(all(s[2] == s[1] for s in st), 'b = w (= v_2(D)) in every generic step, as Theorem D(c) says')
     print('     L one step before merge:', Counter(p[3][p[0] - 1] for p in mg).most_common(8))
     for T in [100, 300, 1000, 3000, 4800]:
         nm = sum(1 for p in pairs if p[0] is None or p[0] > T) / N_B
@@ -213,8 +269,7 @@ if __name__ == '__main__':
     sig_of = {a: s for a, (s, _) in zip(range(2, 2002), sig)}
     post = {a: tot for a, (_, tot) in zip(range(2, 2002), sig)}
     seen = {0}                        # sigma(M_1) = sigma(1) = 0 (the convention of THM-4556 (vi) counts a >= 1)
-    levels = []
-    new_level = {}
+    levels, new_level = [], {}
     for a in range(2, 2002):
         new_level[a] = sig_of[a] not in seen
         seen.add(sig_of[a])
@@ -224,12 +279,10 @@ if __name__ == '__main__':
     lag1 = sum(1 for a in odd if sig_of[a] == sig_of[a - 1]) / len(odd)
     ratio = sum(post[a] / a for a in odd) / len(odd)
     pred = 1 - sum(min(1.0, Cq * post[a] ** -alpha) for a in odd) / len(odd)
-    c1 = sum(math.sqrt(T) * nm for T, nm in [(T, sum(1 for p in pairs if p[0] is None or p[0] > T) / N_B) for T in (3000, 4800)]) / 2
-    no1_T = [(T, q1) for T, _, q1 in rows if T >= 3200]
-    c1h = sum(math.sqrt(T) * q1 for T, q1 in no1_T) / len(no1_T)
+    c1h = math.sqrt(grid[-1]) * q1[-1]
     pred1 = 1 - sum(min(1.0, c1h / math.sqrt(post[a])) for a in odd) / len(odd)
     print(f'     odd a in [1001, 2001]: share with a smaller sigma-partner {share:.3f} (Haar prediction {pred:.3f}); '
-          f'share with sigma(M_(a-1)) {lag1:.3f} (Haar prediction {pred1:.3f} from sqrt(T) q1(T) = {c1h:.2f})')
+          f'share with sigma(M_(a-1)) {lag1:.3f} (Haar prediction {pred1:.3f} with sqrt(T) q1 = {c1h:.2f})')
     print(f'     post-run template total / a = {ratio:.3f};  #distinct sigma values for a <= 100, 400, 1000, 2001: '
           f'{levels[98]}, {levels[398]}, {levels[998]}, {levels[-1]}')
     predlev = {A: 2 + sum(min(1.0, Cq * post[a] ** -alpha) for a in range(3, A + 1, 2)) for A in (100, 400, 1000, 2001)}

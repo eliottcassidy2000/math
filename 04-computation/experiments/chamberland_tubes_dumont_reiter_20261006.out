@@ -2,29 +2,32 @@ A. Chamberland: mirror law and attracting fixed points
   ok   displacement g(x) = C(x) - x is even about -1/2: max |g(-1/2+u) - g(-1/2-u)| = 1.7e-38 (identity: g(-1/2+u) = 1/4 - (u/2) sin(pi u))
   ok   mirror multipliers sum to 2 at all 41 fixed points in [-20, 20]  (C'(-1-x) = 2 - C'(x))
      at a fixed point C' = 1 - 1/(2w) +- (pi/4) sqrt(w^2-1), w = 2x+1; |C'| < 1 forces |w| < 3.3365, x in (-2.1682, 1.1682)
-  ok   interval grid: 6 cells may contain zeros; known fixed points in window: [-1.277734, -1.0, -0.0, 0.277734]
-  ok   attracting fixed points: [(-1.277733766, 0.385708463), (-0.0, 0.5)]  (0.2777... is REPELLING, C' = 1.614292)
+  ok   fixed points of C with |2x+1| < 3.3365: exactly 4 (each candidate cluster has g' excluding 0 and a sign change)
+  ok   interval multipliers: attracting exactly at 0 (C' in [0.4991, 0.5012]) and -1.27773 (C' in [0.3833, 0.3914]); 0.27773 and -1 repelling
+     attracting fixed points (40 digits): [(-1.2777337662, 0.385708463), (-0.0, 0.5)]; 0.2777338 has C' = 1.614292 (repelling)
 B. Chamberland: negative Schwarzian on [0, oo)
   ok   Q(w) < 0 on [pi/2, 2 sqrt3] (x in [0, 0.6027]) by 4000 interval cells; for w > 2 sqrt3, Q <= -w^2/2 + (3 sqrt3/4) w + 3/2 < 0
   ok   identity 2C'C''' - 3C''^2 = pi^2 Q(pi(x+1/2)) at sample points (max err 4.7e-37)
 C. Tube theorem (both maps, every integer m >= 1)
   ok   scaled maps O, E agree with direct evaluation (48 cases)
   ok   C, a = 0.8: odd m >= 1: 0 < O(xi) <= a on (0,a]; even m >= 2: 0 <= E(xi) <= a  (1200 boxes)
-  ok   C, a = 0.9: odd m >= 1: 0 < O(xi) <= a on (0,a]; even m >= 2: 0 <= E(xi) <= a  (1200 boxes)
   ok   C'(m) = 3/2 > 0 and C'(m + a/(2m+1)) < 0 for all odd m (a = 0.8); C'' < 0 on [m, m+1/2) (analytic): unique critical point c_m in tau(m)
+  ok   C, a = 0.9: odd m >= 1: 0 < O(xi) <= a on (0,a]; even m >= 2: 0 <= E(xi) <= a  (1200 boxes)
+  ok   C'(m) = 3/2 > 0 and C'(m + a/(2m+1)) < 0 for all odd m (a = 0.9); C'' < 0 on [m, m+1/2) (analytic): unique critical point c_m in tau(m)
   ok   D, a = 0.6: same three inequalities (1200 boxes)
+  ok   D (a = 0.6): D'(m) = 3/2 > 0, D'(m + a/(2m+1)) < 0 and D'' < 0 on tau(m) for all odd m: unique critical point c_m in tau(m)
   ok   D, a = 0.7: same three inequalities (1200 boxes)
-  ok   D'(m) = 3/2 > 0, D'(m + a/(2m+1)) < 0 and D'' < 0 on tau(m) for all odd m: unique critical point c_m in tau(m)
+  ok   D (a = 0.7): D'(m) = 3/2 > 0, D'(m + a/(2m+1)) < 0 and D'' < 0 on tau(m) for all odd m: unique critical point c_m in tau(m)
 D. Dumont-Reiter: tau(1) is contracted to (1,2); the Odd Critical Point Conjecture
   ok   W_D(xi)/xi < 1 on (0, 0.6] (W_D = E(., 1/5) o O(., 1/3) is D^2 on tau(1) in scaled form): every point of tau(1) -> (1,2)
   ok   D fixed points mu1, mu2 = 0.3158162033, 1.5155526112: tau(1) = [1, 1.2] lies in (mu1, mu2), tau(m) lies in [2, oo) for m >= 2
      => (ii) total stopping time of c_n equals that of n (finite or infinite) for EVERY odd n >= 1;
-        (iii) tau(n) is a connected set containing n and c_n on which the total stopping time is constant;
-        (i) c_n -> (1,2) iff the Collatz orbit of n reaches 1.
+        (iii) (real sense) tau(n) is a connected set containing n and c_n on which the total stopping time is constant;
+        (i) c_n -> (1,2) iff the Collatz orbit of n reaches 1 (otherwise c_n stays in tubes of integers >= 3).
 E. Chamberland: the return map on tau(1); A1, the separatrix and A2; where odd critical orbits go
-  ok   repelling fixed point of W at xi_R = 0.0710583593 (W' = 1.214780)
-  ok   A2 at xi = 0.5775957211 (W' = -0.230753); critical point of W at xi_c1 = 0.5428161
-  ok   W_C(xi) < xi on (0, 0.0705] and W_C increasing there (xi_c1 > cut): [0, 0.0705] lies in the basin of A1
+     NUMERICAL (40 digits): repelling fixed point of W at xi_R = 0.0710583593 (W' = 1.214780); A2 at xi = 0.5775957211 (W' = -0.230753); critical point of W at xi_c1 = 0.5428161
+  ok   the two nonzero fixed points of W located (NUMERICAL); the rigorous statements follow
+  ok   W_C(xi) < xi on (0, 0.0705] (and W_C >= 0): [0, 0.0705] lies in the basin of A1; W_C(0.3) > 0.3, so a fixed point (the separatrix) lies in (0.0705, 0.3) by the IVT
   ok   tube points at 13, 21, 40, 64 enter tau(1) at xi <= 13: 0.05716, 40: 0.02912, 21: 0.01379, 64: 0.00757 < 0.0705
   ok   every odd 7 <= n <= 200001 passes through 13, 21, 40 or 64 (and the backward tree: 20 <- 13, 40; 32 <- 21, 64; 5 <- 10, 3; 3 is reached only from 3*2^k)
      => for every odd n >= 7 whose Collatz orbit reaches 1, the critical point c_n of C is attracted to A1 = {1,2}.
@@ -33,5 +36,8 @@ E. Chamberland: the return map on tau(1); A1, the separatrix and A2; where odd c
 F. Census (NUMERICAL)
   ok   odd n <= 401: scaled shadow deviation stays in tau along the whole orbit (max 0.7037 for C, 0.4559 for D)
   ok   C: the even critical point c_54 = 53.998141 leaves the near-integer regime at step 9 (integer 242, real 241.9929): even critical points need not shadow
+  ok   C: even critical points c_382, c_496, c_502 -> {382: 'A2', 496: 'A2', 502: 'A2'} (NUMERICAL, 1500 digits; as in Lygeros-Rozier 2014)
+G. Flip lemma for even integers (rigorous): left deviations in [-1.3, -0.45] are thrown into the right tube
+  ok   for every even k >= 2 and xi in [-1.3, -0.45]: 0 <= E(xi, 1/(2k+1)) <= 0.8 (4000 boxes): the point k + xi/(2k+1) maps into tau(T(k)) and shadows forever (THM-4563)
 
-ALL CHECKS PASSED  (25s)
+ALL CHECKS PASSED  (26s)

@@ -190,7 +190,7 @@ plus sheet none beyond the unit clock of `{1}`).
 
 **The real line.** Chamberland's extension
 `f(x) = (x/2) cos^2(πx/2) + ((3x+1)/2) sin^2(πx/2)` carries both sheets on one
-line (`f(1) = 2, f(2) = 1, f(-5) = -7, f(-7) = -10, f(-10) = -5`). Its fixed
+line (`f(1) = 2, f(2) = 1, f(-5) = -7, f(-7) = -10, f(-10) = -5`). Its non-integer fixed
 points in `[-6, 6]` are `-5.468, -4.540, -3.446, -2.577, -1.278, 0.278,
 1.577, 2.446, 3.540, 4.468, 5.526`, and the fixed-point equation
 `cos^2(πx/2) = (x + 1)/(2x + 1)` is invariant under `x ↦ -1 - x`, which swaps
@@ -228,7 +228,9 @@ both sides (Sharkovskii gives nothing), and the sign decides stability.
   periodic would refute the periodicity conjecture.
 * **D51.** The exact symmetry behind the `x ↦ -1 - x` invariance of
   Chamberland's fixed-point equation, and whether the attracting real fixed
-  point `0.278` has a basin that meets `Z` (it cannot, since integers map to
+  point `-1.278` (corrected from `0.278`, MISTAKE-578; the symmetry is the evenness of
+  the displacement about `-1/2`, Lygeros-Rozier 2014 (5.2) and the S19 note section 2.2)
+  has a basin that meets `Z` (it cannot, since integers map to
   integers), i.e. how the integer cycles sit among the real basins.
 * **D52.** A mixed-radix digit system in which `T` is a sliding-block code,
   or a proof that none exists (the carry's non-locality quantified by the

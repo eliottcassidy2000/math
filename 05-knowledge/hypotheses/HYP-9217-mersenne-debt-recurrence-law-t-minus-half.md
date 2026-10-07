@@ -1,37 +1,45 @@
 ---
 id: HYP-9217
-title: "Debt recurrence law: in the 2-adic Haar model the lag-1 Mersenne debt (and the reset-2 debt of HYP-9214) merges almost surely with P(no merge by template total T) ~ c1 T^(-1/2) (c1 ~ 16.3), and the any-lag Mersenne non-switch probability is q(T) = T^(-alpha + o(1)) with alpha ~ 0.68 (bootstrap [0.63, 0.75]); hence mu_2(S) = 1 and HYP-9213, with level-count exponent 1 - alpha"
+title: "Debt recurrence law: in the 2-adic Haar model the lag-1 Mersenne debt merges almost surely with P(no merge by template total T) = c1 T^(-1/2)(1 + o(1)), c1 ~ 14-17, and the any-lag Mersenne non-switch probability is q(T) = T^(-alpha + o(1)) with alpha ~ 0.7 +- 0.1; hence mu_2(S) = 1 and HYP-9213 (o(A) new sigma-levels)"
 status: >
-  OPEN. NUMERICAL (seeded Haar Monte Carlo, N = 3000, totals to 19 924; committed rerun N = 1200) + PROVED structure
-  (Theorem D of the source note: merge iff the debt D = 3 Delta + 1 - 2^L vanishes, forcing a sibling pair;
-  the debt's odd part runs the Collatz map kicked by 2^(L'-w'); the walk L moves by the partner's exponent minus the debt's).
+  OPEN. NUMERICAL (two committed seeded Haar Monte Carlo runs: N = 3000 to total 19 924 and N = 1200 to 9600, with bootstrap
+  intervals) + PROVED structure (Theorem D of the source note: D = 0 iff the next relation is the identity, forcing a sibling pair;
+  other merges have Haar measure 0; for integer debts the debt's odd part runs U kicked by 2^(L'-w'); the walk bookkeeping is
+  mac-mini's HYP-9214 model). Independently audited 2026-10-07 (corrections in MISTAKE-580).
 source: opus-2026-10-06-S19, 05-knowledge/results/collatz_cycles_tubes_debt_walk_openai_20261006.md, section 1
 related:
   - 05-knowledge/hypotheses/HYP-9213-mersenne-collatz-trajectories-coalesce-plateaus-of-odd-step-time.md
-  - 05-knowledge/hypotheses/HYP-9214 (reset-2 debt resolves almost surely)
+  - 05-knowledge/hypotheses/HYP-9214-reset-two-debt-resolves-with-probability-tending-to-one.md (mac-mini; the walk model)
   - 01-canon/theorems/THM-4556-the-mersenne-line-is-a-chain-of-debt-states-odd-shift-distance-2-adic-periodicity.md ((iv) 2-adic periodicity)
 scripts:
-  - 04-computation/experiments/mersenne_haar_debt_walk_20261006.py (+ .out, ALL CHECKS PASSED)
+  - 04-computation/experiments/mersenne_haar_debt_walk_20261006.py (+ .out default run, + _large.out for "3000 20000 61 7"; ALL CHECKS PASSED)
 ---
 
 # HYP-9217 — the debt recurrence law
 
-**Haar model.** For odd `a`, `X = 3^(a−1)` is Haar on `1 + 8Z_2`. The Mersenne switch at lag `D` is the event `U^i(2X − 1) = U^(i+D)(2X·3^(−D) − 1)` for some `i`. By THM-4556 (iv), a switch of template total `T` is a clopen event (it depends only on `a mod 2^(T−2)`), and the certified share at `K` is the Haar measure of "switch with total `≤ K`".
+**Haar model.** For odd `a`, `X = 3^(a−1)` is Haar on `1 + 8Z_2`. The Mersenne switch at lag `D` is the event `U^i(2X − 1) = U^(i+D)(2X·3^(−D) − 1)` for some `i`. By THM-4556 (iv), a switch of template total `T` is a clopen event: it depends only on `a mod 2^(T−2)`. The certified share at `K` is the Haar measure of "switch with total `≤ K`".
 
 **Conjecture.**
-1. Let `q₁(T)` be the probability of no lag-1 merge with total `≤ T`. Then `q₁(T) ~ c₁ T^(−1/2)`. Numerically `√T q₁(T) = 15.6, 16.1, 16.2, 16.3` at `T = 3200, 6400, 12 800, 19 000`. The over-`T ≥ 400` exponent 0.40 is pre-asymptotic, matching HYP-9214's `B^(−0.4)`.
-2. The any-lag non-switch probability satisfies `q(T) = T^(−α + o(1))` with `α ≈ 0.68` (least squares over `[400, 19 000]`, bootstrap 95% `[0.63, 0.75]`).
+1. Let `q₁(T)` be the probability of no lag-1 merge with total `≤ T`. Then `q₁(T) = c₁ T^(−1/2)(1 + o(1))`.
+   * Large run: `√T q₁(T) = 15.6, 16.1, 16.2, 16.3` at `T = 3200, 6400, 12 800, 19 000`.
+   * Small run: `14.7, 14.5, 14.4` at `3200, 6400, 9600`, with bootstrap interval `[12.4, 16.3]` at 9600.
+   * Tail exponents on `T ≥ 3200` are 0.477 (large, `[0.435, 0.520]`) and 0.521 (small, `[0.435, 0.609]`); `√T q₁` at 19 000 is 16.27 (`[14.70, 17.87]`).
+2. The any-lag non-switch probability satisfies `q(T) = T^(−α + o(1))` with `α ≈ 0.7 ± 0.1`: least squares on `T ≥ 400` gives 0.679 (large run, bootstrap `[0.625, 0.745]`) and 0.782 (small run, bootstrap `[0.689, 0.900]`).
 
-**Consequences.** `μ_2(S) = 1` (the switching set has full 2-adic measure). By S18 Proposition 6 this gives HYP-9213, with `#{σ(M_a) : a ≤ A} ≈ A^(1−α + o(1))`, consistent with the observed exponent 0.36.
+**Consequences.**
+* (2) gives `μ_2(S) = 1`, the switching set having full 2-adic measure. By S18 Proposition 6 this gives HYP-9213: `o(A)` new `σ`-levels.
+* The finer count `#{σ(M_a) : a ≤ A} ≈ A^(1−α)` is HEURISTIC. It needs the Haar model to govern actual exponents at `T_post(a)`, which holds only approximately (source note §1.7).
 
 **Mechanism (PROVED pieces + HEURISTIC).**
-* **Debt.** Write `x = 2^L y + Δ` and `D = 3Δ + 1 − 2^L`. The two orbits merge at the next step iff `D = 0`, which forces `L = 2k ≠ 0` and `x = 4^k y + (4^k − 1)/3`.
-* **Generic steps.** Here `D′_odd = U(D_odd) − 2^(L′ − w′)` with `w′ = v_2(3D_odd + 1)`, and `L′ = L + a − v_2(D)`.
-* **The walk.** `L` moves by the partner's exponent minus the debt's exponent. Measured mean `+0.0004`, variance `4.002 = Var(Geom − Geom)`.
-* **Heuristic.** This is a recurrent walk. Returns to `L ∈ {±2, ±4}` bring the debt to small integers, where `D = 0` has positive chance. That gives the `T^(−1/2)` law.
-* **Unproved.** That the debt's exponent stream (a deterministic Collatz orbit randomized only through the kicks) is asymptotically fair and independent.
+* **Debt.** With `x = 2^L y + Δ` and `D = 3Δ + 1 − 2^L`: `D = 0` iff the next relation is the identity, and then `x = 4^k y + (4^k − 1)/3` with `k = L/2 ≠ 0`. Merges with `D ≠ 0` are value coincidences of Haar measure 0. All 834 sampled merges pass through `D = 0`.
+* **Integer debts.** `D′_odd = U(D_odd) − 2^(L′ − w′)` with `w′ = v_2(3D_odd + 1)`, and `L′ = L + a − v_2(D)`.
+* **The two streams.** In 672 443 generic steps with `L ≥ 8`, the debt exponent `w` has the `Geom(1/2)` law to four decimals, is independent of the partner exponent `a` (`χ² = 7.4` on 9 dof), and has lag-1 autocorrelation `−0.002`. The increments `a − w` have mean 0 and variance 4.00.
+* **Heuristic.** This is a recurrent walk. Returns to `L ∈ {±2, ±4}` bring the debt to small values, where `D = 0` has positive chance, which gives the `T^(−1/2)` law.
+* **Unproved.** The asymptotic fairness and independence of the debt's exponent stream.
 
 **Evidence against actual exponents (NUMERICAL).**
 * **Any partner.** For odd `a ∈ [1001, 2001]` the share with a smaller `σ`-partner is 0.970, against a Haar prediction of 0.968–0.974.
 * **Level counts.** `σ`-levels for `a ≤ 100, 400, 1000, 2001` are `23, 37, 54, 69`, against predicted `22–24, 40–41, 56, 69–72`.
-* **Lag 1.** The share is over-predicted by about 0.04 (0.863 predicted, 0.824 observed). Actual orbits end, so their effective time is shorter.
+* **Lag 1.** The share is over-predicted by 0.02–0.04 (0.846–0.864 predicted, 0.824 observed). Actual orbits end, so their effective time is shorter.
+
+**Not covered.** The reset-2 debt of HYP-9214 (general sources) is a natural extension; it was not tested here.

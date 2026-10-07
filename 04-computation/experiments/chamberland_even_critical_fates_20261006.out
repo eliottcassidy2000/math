@@ -1,0 +1,3 @@
+actual: Counter({'left-to-1': 373, 'flip': 114, 'escape': 113})
+scaled-map prediction agrees on 600 of 600
+disagreements (first 10): []

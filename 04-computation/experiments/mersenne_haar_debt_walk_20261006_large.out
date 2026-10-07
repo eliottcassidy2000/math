@@ -1,20 +1,22 @@
-A. Haar model of Mersenne switching (NUMERICAL, seed 2026, N = 1200, 12000-bit 2-adic precision, odd D <= 41)
-     T =    27: non-switch q(T) = 0.8475   lag-1 non-merge q1(T) = 0.8567   sqrt(T) q1 =   4.45
-     T =    50: non-switch q(T) = 0.7558   lag-1 non-merge q1(T) = 0.7917   sqrt(T) q1 =   5.60
-     T =   100: non-switch q(T) = 0.6042   lag-1 non-merge q1(T) = 0.7117   sqrt(T) q1 =   7.12
-     T =   200: non-switch q(T) = 0.4450   lag-1 non-merge q1(T) = 0.6225   sqrt(T) q1 =   8.80
-     T =   400: non-switch q(T) = 0.3233   lag-1 non-merge q1(T) = 0.5425   sqrt(T) q1 =  10.85
-     T =   800: non-switch q(T) = 0.2067   lag-1 non-merge q1(T) = 0.4492   sqrt(T) q1 =  12.70
-     T =  1600: non-switch q(T) = 0.1200   lag-1 non-merge q1(T) = 0.3475   sqrt(T) q1 =  13.90
-     T =  3200: non-switch q(T) = 0.0725   lag-1 non-merge q1(T) = 0.2600   sqrt(T) q1 =  14.71
-     T =  6400: non-switch q(T) = 0.0400   lag-1 non-merge q1(T) = 0.1817   sqrt(T) q1 =  14.53
-     T =  9600: non-switch q(T) = 0.0267   lag-1 non-merge q1(T) = 0.1467   sqrt(T) q1 =  14.37
-  ok   Haar switch share at T = 27 is 0.1525 +- 0.0104; certified exact share at K = 27 is 0.1556 (consistent)
-     LS fit of q(T) on T in [400, 9600]: q ~ 37.34 T^-0.782, bootstrap 95% [0.689, 0.900]
-     sqrt(T) q1(T) at T = 9600: 14.37, bootstrap 95% [12.41, 16.33]
-     lag-1 tail exponent on T >= 3200: 0.521, bootstrap 95% [0.435, 0.609]
-     lag-1 exponent on T >= 400: 0.416
-     least-total lag among switching samples: D=1: 0.566, D=3: 0.156, D=5: 0.097, D=7: 0.048, D=9: 0.040, D=11: 0.026
+A. Haar model of Mersenne switching (NUMERICAL, seed 7, N = 3000, 20000-bit 2-adic precision, odd D <= 61)
+     T =    27: non-switch q(T) = 0.8497   lag-1 non-merge q1(T) = 0.8587   sqrt(T) q1 =   4.46
+     T =    50: non-switch q(T) = 0.7550   lag-1 non-merge q1(T) = 0.7967   sqrt(T) q1 =   5.63
+     T =   100: non-switch q(T) = 0.6150   lag-1 non-merge q1(T) = 0.7220   sqrt(T) q1 =   7.22
+     T =   200: non-switch q(T) = 0.4600   lag-1 non-merge q1(T) = 0.6437   sqrt(T) q1 =   9.10
+     T =   400: non-switch q(T) = 0.3113   lag-1 non-merge q1(T) = 0.5480   sqrt(T) q1 =  10.96
+     T =   800: non-switch q(T) = 0.1907   lag-1 non-merge q1(T) = 0.4507   sqrt(T) q1 =  12.75
+     T =  1600: non-switch q(T) = 0.1167   lag-1 non-merge q1(T) = 0.3557   sqrt(T) q1 =  14.23
+     T =  3200: non-switch q(T) = 0.0757   lag-1 non-merge q1(T) = 0.2757   sqrt(T) q1 =  15.59
+     T =  6400: non-switch q(T) = 0.0443   lag-1 non-merge q1(T) = 0.2017   sqrt(T) q1 =  16.13
+     T =  9600: non-switch q(T) = 0.0370   lag-1 non-merge q1(T) = 0.1650   sqrt(T) q1 =  16.17
+     T = 12800: non-switch q(T) = 0.0290   lag-1 non-merge q1(T) = 0.1433   sqrt(T) q1 =  16.22
+     T = 19000: non-switch q(T) = 0.0223   lag-1 non-merge q1(T) = 0.1180   sqrt(T) q1 =  16.27
+  ok   Haar switch share at T = 27 is 0.1503 +- 0.0065; certified exact share at K = 27 is 0.1556 (consistent)
+     LS fit of q(T) on T in [400, 19000]: q ~ 17.88 T^-0.679, bootstrap 95% [0.625, 0.745]
+     sqrt(T) q1(T) at T = 19000: 16.27, bootstrap 95% [14.70, 17.87]
+     lag-1 tail exponent on T >= 3200: 0.477, bootstrap 95% [0.435, 0.520]
+     lag-1 exponent on T >= 400: 0.402
+     least-total lag among switching samples: D=1: 0.522, D=3: 0.170, D=5: 0.094, D=7: 0.061, D=9: 0.045, D=11: 0.028
 B. Exact debt bookkeeping for lag-1 pairs x0 = 3 2^v y0 + 1
   ok   transition law b_t = v_2(2^(L+a) y' + D) exact on the first 60 steps of all 1000 pairs
   ok   kicked-Collatz law D'_odd = U(D_odd) - 2^(L'-w'), v_2(D') = w' = v_2(3 D_odd + 1), in all 28693 generic integer-debt steps tested
@@ -40,10 +42,10 @@ C. The L-walk and the two exponent streams (NUMERICAL)
      P(no merge by step  3000) = 0.2160   sqrt(T) P = 11.83
      P(no merge by step  4800) = 0.1660   sqrt(T) P = 11.50
 D. Actual exponents: sigma(M_a) census for a <= 2001 vs the Haar prediction
-     odd a in [1001, 2001]: share with a smaller sigma-partner 0.970 (Haar prediction 0.974); share with sigma(M_(a-1)) 0.824 (Haar prediction 0.864 with sqrt(T) q1 = 14.37)
+     odd a in [1001, 2001]: share with a smaller sigma-partner 0.970 (Haar prediction 0.968); share with sigma(M_(a-1)) 0.824 (Haar prediction 0.846 with sqrt(T) q1 = 16.27)
      post-run template total / a = 7.678;  #distinct sigma values for a <= 100, 400, 1000, 2001: 23, 37, 54, 69
-     Haar-predicted level counts: {100: 24.2, 400: 41.4, 1000: 55.8, 2001: 68.6}
+     Haar-predicted level counts: {100: 21.9, 400: 39.5, 1000: 56.0, 2001: 72.0}
   ok   Haar model predicts the switching share of actual exponents within 0.03 (NUMERICAL agreement)
   ok   sigma(M_a) takes 23 and 37 values for a <= 100, 400 (THM-4556 (vi), HYP-9213)
 
-ALL CHECKS PASSED  (91s)
+ALL CHECKS PASSED  (749s)

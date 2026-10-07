@@ -1,12 +1,15 @@
-(H) one-run cycles of 3x+d
-  ok   R = 3: d = 35 (gcd(d,6) = 1) has 3 distinct positive one-run cycles, periods [2, 4, 5]
-  ok   R = 5: d = 21385 (gcd(d,6) = 1) has 5 distinct positive one-run cycles, periods [2, 4, 5, 7, 8]
-  ok   R = 7: d = 2408613935 (gcd(d,6) = 1) has 7 distinct positive one-run cycles, periods [2, 4, 5, 7, 8, 10, 12]
-  ok   R = 9: d = 1468678841619535 (gcd(d,6) = 1) has 9 distinct positive one-run cycles, periods [2, 4, 5, 7, 8, 10, 12, 13, 15]
+(H) one-run cycles of 3x+d from d_R = lcm(Delta_r): at least R, all non-primitive
+  ok   R = 3: d = 35 carries 3 distinct one-run cycles, periods [2, 4, 5], gcd(x, d) = [35, 5, 7] (non-primitive)
+  ok   R = 5: d = 21385 carries 5 distinct one-run cycles, periods [2, 4, 5, 7, 8], gcd(x, d) = [21385, 3055, 4277, 455, 1645] (non-primitive)
+  ok   R = 7: d = 2408613935 carries 7 distinct one-run cycles, periods [2, 4, 5, 7, 8, 10, 12], gcd(x, d) = [2408613935, 344087705, 481722787, 51247105, 185277995, 40823965, 1261715] (non-primitive)
+  ok   R = 9: d = 1468678841619535 carries 9 distinct one-run cycles, periods [2, 4, 5, 7, 8, 10, 12, 13, 15], gcd(x, d) = [1468678841619535, 209811263088505, 293735768323907, 31248485991905, 112975295509195, 24892861722365, 769344600115, 900477523985, 112241409371] (non-primitive)
+  ok   3x+35: positive cycles met from starts < 20000 have minima [7, 13, 17, 25, 35, 133, 161, 1309, 2429] (9 cycles); primitive (gcd 1 with 35): [13, 17]; the construction yields only non-primitive ones (minima 35, 25, 7 type)
 (S) the Mersenne run is an exact saddle passage at the fixed point -1 of g(x) = (3x+1)/2
   ok   g^a(2^a - 1) = 3^a - 1 for 2 <= a < 60 (entry: 2-adic distance 2^-a from -1; exit: 3-adic distance 3^-a from -1)
-  ok   |3/2|_R |3/2|_2 |3/2|_3 = (3/2)(2)(1/3) = 1: the run is volume-neutral on R x Q_2 x Q_3; Dulac exponent log 3/log 2 = log_2 3
-(P) Paley tournaments: one witnessed arc choice + colour refinement
-  ok   40 primes p = 3 mod 4 below 400: one individualized vertex leaves 3 classes; one individualized arc gives a discrete colouring
+  ok   |3/2|_R |3/2|_2 |3/2|_3 = (3/2)(2)(1/3) = 1; Dulac exponent log 3/log 2 = log_2 3
+(P) Paley tournaments: two witnessed choices (a vertex, an out-neighbour) + colour refinement
+  ok   155 primes p = 3 mod 4 below 2000: one individualized vertex leaves 3 classes; one individualized arc 0 -> 1 gives a discrete colouring
+(L) round 2 reads the Legendre family Y^2 = X(X-1)(X-x)
+  ok   8 N_(e,d)(x) = p - ed - e - d + ed S(x) + O(1) with |O(1)| <= 12, S(x) = -a_p(Legendre E_x), for p in {7, 11, 19, 23, 43, 47}
 
 ALL CHECKS PASSED
