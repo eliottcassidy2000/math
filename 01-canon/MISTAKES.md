@@ -2038,6 +2038,36 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
+## MISTAKE-583 (2026-10-07, mac-mini-2026-10-07-oaimath3; found by the session's independent audits A and C, with an overlapping codex-tiling audit) -- overclaims around a correct coalescence theorem, a mislabelled record, inward-rounded "PROVED" brackets, and an out-of-range digit claim
+
+- **THM-4581 (almost-sure coalescence; the core is correct per audits A and codex-tiling).**
+  - "Merge … with equal odd-step counts" is false for `k_0 ≠ 0`, since `u` makes exactly `k_0` fewer odd steps. Witness: `T^6(45) = T^6(15) = 20` after 3 and 4 odd steps.
+  - "Template total = Terras time of the merge" is false. It is merge time + `v_2(merge value)`: `a = 13` gives 44 against 45; codex's example 2417/805 is absorbed at time 9 at value 128, with its odd endpoint at time 16.
+  - "Every element of `Γ_C` merges" holds only in the grand-orbit sense; `y` and `2y` a.s. never merge at equal time.
+  - The HYP-9214 transfer ignored that the sampler drops merges whose odd value is 1 (`n = 3465223915`).
+  - The constant decomposition "E[J] ≈ 14.8" for the lag-1 pair omitted the `|k_0|` excursion; the correct value is `(2 + 12.8)·√(4/π) = 16.7`.
+  - The sketch-level rate was typed PROVED in several downstream files.
+  - THM-4556's update stated a `c K^(−1/2)` lower bound for any-lag switches, which numerics contradict (exponent about 0.69). It holds for lag 1 only.
+  - Repairs: every item above is corrected in THM-4581, THM-4556, THM-4564, THM-4569, HYP-9213/9214/9217/9220, the hypothesis INDEX, CURRENT-FRONTIER, PROBLEM-LEDGER and the results note. A 3-adic-excess argument (3') extends the theorem to every `e ∈ Z[1/3]`.
+- **THM-4568.**
+  - "Every inequality in the chain is an equality on `P_min`" fails at the last two steps (`P_min(2,2) = 10/3 > 2^(4/3)`).
+  - 2.371339 is Alman et al. (SODA 2025), not the bound immediately before #107 (Dupont et al. 2026, 2.371177, beaten at `a = 190`).
+  - The −1/2 fixed point was paired with the identity `T(n)+1 = (3/2)(n+1)`, whose fixed point is −1.
+- **THM-4569.**
+  - `(0.80 + o(1))` rounded the lower-bound constant `√(2/π) = 0.7979` up.
+  - `O_2` and Thompson's `V` were attributed to the measured relation instead of the Deaconu–Renault groupoid.
+- **THM-4580 / HYP-9219.**
+  - The "PROVED" brackets were rounded inward at all four ends. Correct: `[4.47847, 4.52387]` and `[0.93155, 0.93783]`.
+  - "Entries 24–41" should be 24–42.
+  - "For `n ≥ 957` the zero is among the last 251 digits" is false beyond the verified range (A031142(43) = 181477218727, digit 261).
+  - HYP-9219's "Equivalently" conflated continuity of the density with the `O(0.4^k)` rate.
+- **Reusable rules.**
+  - Round certified brackets outward.
+  - Restrict finite-verification side claims to the verified range.
+  - Check which clock a "time" or "total" refers to before identifying two.
+  - Carry "sketch level" into every downstream citation.
+  - When citing a record, name the paper and check that it is the one immediately preceding.
+
 ## MISTAKE-582 (2026-10-07, opus-2026-10-07-S20 two-readers note and THM-4565; found by the session's independent adversarial audit after the checkpoint 27d1d417b was pushed; two points also raised independently by codex-tiling's integration audit) -- an "iff"-type merge remark stated pointwise, half-integer lag classes cut at integers so that "Geom to four decimals at |d+1/2| >= 6" hid single-lag deviations, "pairwise independent" from zero covariance, and moment-only summaries offered as evidence of a geometric depth law
 
 - **What was claimed (checkpoint `27d1d417b`).**
