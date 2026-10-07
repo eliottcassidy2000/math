@@ -1,0 +1,9 @@
+COMPLETE COMPOSITION CENSUS {"total_cost": [2, 15], "words": 16383, "anchor_values": 7602}
+ALL-TWO PREFIXES FINITE ONLY [[1, 1], [2, 2], [3, 3], [4, 4], [5, 5], [6, 6], [7, 7], [8, 8], [9, 9], [10, 10], [11, 11], [12, 12], [13, 13], [14, 14], [15, 15], [16, 16]]
+MERSENNE SELECTOR [{"K": 7, "reason": "ROOT_CERTIFIED", "core": [2, 4, 3, 3, 3, 1, 2, 3, 4], "partner": [], "deletion": null}, {"K": 31, "reason": "PAID", "core": [2, 6, 3], "partner": [2, 2, 1, 1, 5], "deletion": 2}, {"K": 1459, "reason": "PAID", "core": [2, 3, 2, 2, 2, 2, 1, 5, 1, 1, 2, 6], "partner": [2, 2, 2, 1, 2, 2, 2, 1, 1, 3, 1, 1, 1, 8], "deletion": 2}]
+MIXED BINARY AND TERNARY CONTROLS [[5, 1, 5], [29, 2, 29], [245, 3, 245], [2189, 4, 2189]]
+SYMBOLIC MIXED PHASES depths1..12, both nonzero ternary digits, three lifts
+FINITE SOURCE UNIVERSE 3 MOD4 THROUGH511 {"COST_FRONTIER": 1, "LETTER_FRONTIER": 53, "PAID": 66, "ROOT_CERTIFIED": 8}
+ITS FIRST-RESET-2 SUBSET {"COST_FRONTIER": 1, "LETTER_FRONTIER": 53, "PAID": 2, "ROOT_CERTIFIED": 8}
+CACHE CacheInfo(hits=57215, misses=60242, maxsize=None, currsize=60242)
+ALL CHECKS PASSED 119313

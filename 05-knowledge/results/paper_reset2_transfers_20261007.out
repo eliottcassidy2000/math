@@ -1,0 +1,36 @@
+Exact reset-two Mersenne phase compiler; supplied four paper headlines accepted
+K odd>=3; z=(3^K-1)/2; normalized exponent chart is a 2-adic isometry
+portal (1, 1) tail (1, 6) phase None named residual None
+portal (1, 2) tail (2, 1, 6, 4) phase (5589, 8192) named residual (4470229, 5971968)
+portal (1, 3) tail (2, 2, 1, 2, 9) phase (32945, 65536) named residual (34373809, 47775744)
+portal (1, 4) tail (2, 2, 2, 1, 14) phase (1035585, 2097152) named residual (546295105, 1528823808)
+portal (2, 1) tail (6,) phase (31, 64) named residual (10207, 46656)
+portal (2, 2) tail (2, 10) phase (1289, 4096) named residual (1545481, 2985984)
+portal (2, 3) tail (2, 2, 10) phase (1889, 16384) named residual (7161697, 11943936)
+portal (2, 4) tail (2, 2, 2, 3, 1, 11) phase (1522049, 2097152) named residual (481769857, 1528823808)
+parent D2 tail (3, 2, 2, 2, 2, 1, 5, 1, 1, 2) phase (1459, 2097152) named residual (1459, 1528823808)
+seven portals odd-K mass 16849/524288 six beyond old31/64 465/524288
+with separately proved parent D2 row 33699/1048576 uncovered 1014877/1048576
+complement dyadic leaves 86 largest modulus 1048576
+Whole original sources preserved; smaller dependencies are not ROOT certificates
+actual_parent_D2_join 1
+actual_whole_join 4
+complement_disjoint 86
+disjoint_portal_mass 1
+duplicate_not_new_coverage 1
+full_union_mass 1
+inherited_portal_carry 56
+large_symbolic_receipt 28
+ledger_partition 4096
+literal_tail_iff 5440
+malformed_or_wrong_guard 11
+modular_next_valuation 217
+normalized_chart_bijection 10
+odd_power_phase_iff 8184
+parent_D2_affine_identity 7
+parent_D2_phase 1
+portal_phases 8
+repeated_event_not_independent 24
+residual_CRT 28
+singleton_survival_hostile 24
+CHECKS 18228

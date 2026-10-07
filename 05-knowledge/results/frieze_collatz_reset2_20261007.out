@@ -1,0 +1,19 @@
+Frieze / first-reset2 exact guarded interfaces
+Marked charts: lengths 0..5, alphabet 1..4: 1365
+Pentagon coordinate flips: 1280
+Single-ear endpoint obstructions: a,b=1..16: 256
+Ear descendants of block11; columns: length,total,compatible11,compatible111 after prefix1
+2 1 0 0
+3 1 0 0
+4 2 0 0
+5 5 0 0
+6 14 0 0
+7 42 1 0
+8 132 5 1
+9 429 20 4
+Constructively recognized marked quiddities: 626
+Compatible reset2 join: (2583211, 4194304, 7183, 11664, 24245, 39366)
+No added first-descent coverage: its third actual endpoint is already smaller.
+All-height direct-quiddity obstruction: every n=7 mod8.
+No assertion that a smaller-child certificate is a completed ROOT certificate.
+Exact checks: 160656

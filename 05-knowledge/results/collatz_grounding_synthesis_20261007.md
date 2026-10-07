@@ -159,21 +159,28 @@ This agrees with retaining full supports rather than pretending duplicated
 observations are independent. Its all-lag Haar bound is not a pointwise
 positive-integer certificate.
 
-The second identifies a sign barrier for bounded class-decided arguments.
+The second identifies a sign barrier for **unrefined 2-adic** class-decided arguments.
 The negative2-adic point-1 shadows arbitrarily long positive leading-one
 runs. Our fixed-cap examples make a corresponding implementation failure
 explicit, and the variable-length rules pass beyond that cap for selected
 positive families. They do not prove that all residual positive branches
 eventually reach a payable guard. The incoming maximal sieve is stronger
 than our particular B8 comparator; no novelty against that full sieve is
-claimed here.
+claimed here. The subsequent A2 correction (MISTAKE-585) is essential:
+3-adic refinement does certify the classes of -1, -5 and -17, by negative-cycle
+inverse branches. The earlier broad phrase "bounded class-decided arguments"
+was therefore too strong; the repaired scope here follows the audited theorem.
 
 The next decisive target is a **variable-depth, sign-sensitive completion
 rule for the residual first-reset2 branch**, retaining original height,
 native guards and an actual terminal extraction rule. Finite atlas grounding
-is complete; fixed-depth refinements alone meet the demonstrated barrier.
+is complete; unrefined binary classes meet the demonstrated barrier.
 This identifies what a global proof still needs rather than recycling the
 now-discharged finite terminal assumptions.
+
+The [reset-two continuation](collatz_reset2_synthesis_20261007.md) repairs
+the named 1459 phase, grounds its concrete child, and combines variable
+core depth with retained ternary labels.
 
 ## Validation and provenance
 

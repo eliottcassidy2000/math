@@ -1,0 +1,14 @@
+PROVED conditional collision families; inherited THM4555 minus-one switch mechanism.
+RULE 1459-D1 head lengths/costs 11 23 12 21 native residue 4662161 modulus bits 24 K phase 1459 mod 2^21
+RULE 1459-D2 head lengths/costs 11 23 13 21 native residue 4662161 modulus bits 24 K phase 1459 mod 2^21
+RULE 1457-D6 head lengths/costs 61 128 67 126 native residue 420960162085323720610343395041256925057 modulus bits 129 K phase 1457 mod 2^126
+BASELINE: eight adaptive macros, cap128, inverse91/111 and frontier; two old uncapped rules. Both named seeds miss it.
+Baseline-disjoint rays: K=1459+729*2^21*s and K=1457+729*2^126*s, s>=0.
+FINITE-EXACT K1457, D1..64, reduced source depth<=256: first joins ((62, 3), (62, 4), (62, 5), (62, 6), (81, 1), (81, 2)) total drops with a join 6
+PROVED residual sidecar: for m=v2(K-1), initial reduced2-run has floor(m/2)+1 letters.
+ROOT point exponent 1459 odd steps 7347 valuation cost 13104 peak bits 2312 word SHA256 d6162e0f0b7b9e30aa6d4ba8123fe31a7953ea22ef7d79403c5436eff3b5602f
+ROOT point exponent 1457 odd steps 7347 valuation cost 13102 peak bits 2309 word SHA256 c760aaeae378b55cbb71176a93f24ae56571069505ee10d3021c094e226300c7
+ROOT point exponent 1451 odd steps 7347 valuation cost 13096 peak bits 2301 word SHA256 8b1440aae209f0996466cab4289a27b9a9c33abb4c97da7a39e126ce57b730ec
+Frozen JSON SHA256 5c7ab32ea775b9d4e86e14fb916a648c5d5ad1017d9f25cba05e75c5a23f50ee
+HOSTILES 14 rejected; arbitrary family children remain supplied obligations.
+CHECKS 33518
