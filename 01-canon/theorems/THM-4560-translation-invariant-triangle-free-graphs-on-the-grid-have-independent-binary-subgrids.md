@@ -67,7 +67,11 @@ Let `E ⊆ P_n` be sum-free and `w ∈ [n]^k` any word. Then there are `δ_1, �
   * This was already implied by THM-470 B (F2J SAT at `(3,4..6)`, A3), so these runs are confirmations.
   * Two independent runs produced different witnesses.
   * Every witness was brute-checked twice, independently, including all `1.7·10^8` binary subgrids at `t = 6`.
-  * `(3,7)` is undecided: one 60-minute timeout and two runs stopped at about 14 and 19 minutes. By the theorem, `t_dead(Finv)` at `n = 3` lies in `[7, ∞)` and is finite.
+  * **`Q_gap(3,7)` is UNSAT (2026-10-07), so `t_dead(Finv) = 7` at `n = 3`.**
+    * How it was certified UNSAT: a CEGAR loop that also adds the 7 coordinate-reflected copies of each subgrid clause returned UNSAT after 467 iterations (CaDiCaL 1.9.5, 2,864 s, deterministic rerun); the dumped 669,086-clause set was re-solved UNSAT from scratch by MapleChrono (1,668 s); every clause was validated as a genuine constraint (340,299 realizable triangles, 328,787 binary-subgrid clauses) by the reader's audit script and independently by `04-computation/experiments/oai2_20261006_finv37_validate.py`; no DRAT proof.
+    * The certificate is in `04-computation/experiments/oai2_20261006_readers/hindman_ramsey/finv_unsat_n3_t7.{cnf,leaves}.gz`.
+    * Earlier runs without the reflection images, and the repo's 2-hour run, had timed out.
+* **Summary.** The fully gap-determined game dies at `t = 3, 4, 7` for `n = 1, 2, 3`. This matches `2n+1` at `n = 1, 3` but not at `n = 2` (NUMEROLOGY for now). It says nothing about the free game `Q(3,7)` (HYP-2396).
 
 ## Not claimed
 

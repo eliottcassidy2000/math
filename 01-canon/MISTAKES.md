@@ -2076,6 +2076,7 @@ were unaffected; successful explicit-path replays did not validate the prose.
   - The `INV(3,4)` / `invQ(3,4)` "agreement" compared two different games. That comparison itself (both SAT) drew no false conclusion.
   - But the identification also produced two false items. One is THM-470's Honesty line "invariant = free cutoff at n = 2"; it holds for the row-invariant game only, since Finv has cutoff 4 < 5. The other is the use of a `2n+1` gap-determined wall as HYP-2396 evidence, and in THM-521 D's premise.
   - For gap-determined rules the `n = 2` wall is `4 = 2n`; the gap-determined `(sign, v_2)` algebra also dies at 4 (independent audit, exhaustive). So THM-521 D is unconditional (THM-4560) only for gap-determined witnesses; for row-invariant ones it stays conditional.
+  - Later (2026-10-07): at `n = 3` the gap-determined wall is `7 = 2n+1` (`Q_gap(3,7)` UNSAT, certified; THM-470 update). So the gap-determined walls are 3, 4, 7 for `n = 1, 2, 3`.
 - **Correct framing (applied):**
   - THM-470 carries a correction block.
   - THM-4560 proves that `t_dead(Finv) < ∞` for every `n` (an independent binary subgrid always exists for a gap-determined triangle-free graph). The row-invariant game is a strictly less restrictive family (its rules may depend on column values), hence its larger cutoff.

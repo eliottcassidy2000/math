@@ -106,7 +106,8 @@ T778, the-three-twos (the "2 of pair-composition" = the Schur arity here).
   * The gap-determined `(sign, v₂)` algebra dies at `t = 4 = 2n` (SAT at 3, UNSAT at 4, exhaustive).
   * So for row-invariant witnesses (THM-453 F/G) the barrier is **not** covered by THM-4560 and remains conditional on HYP-2396 / open.
 * **Withdrawn and qualified sentences of D.**
-  * "This *explains* the `t=7` wall (the invariant algebra is exactly the sum-free `p=2` grading …)" is WITHDRAWN. Finv is the full gap algebra, not the `p=2` grading, and its `(3,7)` instance is undecided.
+  * "This *explains* the `t=7` wall (the invariant algebra is exactly the sum-free `p=2` grading …)" is WITHDRAWN as an explanation. Finv is the full gap algebra, not the `p=2` grading.
+    * The wall itself is real: Finv's `(3,7)` instance is UNSAT (2026-10-07, certified; THM-470 update), so `t_dead(Finv) = 7` at `n = 3`.
   * "can use **only the `p=2` grading**" is true only for bare valuation gradings. The leading-digit gradings are sum-free for every `p` (THM-469 A2/E).
 * What remains open:
   * HYP-2558 (the strong-Specker barrier entry; the historical index also has an unrelated HYP-2558): a strong witness that is not fully gap-determined. That includes row-invariant and value-dependent (Larson partial sums) ones.

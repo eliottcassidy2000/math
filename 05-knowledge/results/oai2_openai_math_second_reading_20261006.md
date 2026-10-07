@@ -38,6 +38,7 @@
 | Every algebraic spherical set is Euclidean Ramsey | CONDITIONAL on #172 (Lean); deduction PROVED (THM-4559) | §4 |
 | Every gap-determined triangle-free graph on `N^n` has an independent binary subgrid; THM-521 D unconditional for gap-determined witnesses | PROVED (THM-4560) | §5 |
 | THM-470's Finv is not THM-453 F's game (cutoffs 4 vs 5 at `n = 2`) | correction (MISTAKE-577) | §5 |
+| THM-470's master experiment decided: Finv at `(3,7)` is UNSAT, so `t_dead(Finv) = 7` at `n = 3` | FINITE-EXACT (certified CNF, two solvers, all clauses validated) | §5 |
 | Davenport law for FS-sets in one `v_p`-level; 3-smooth Schur thresholds 5 and 13 | PROVED / FINITE-EXACT | §5 |
 | Prescribed-path blocking law on knight tori (paths of at most 4 moves); knight tori are P7-Hamiltonian | HYP-9215 (FINITE-EXACT evidence) | §6 |
 | Slice lemma; THM-1300's counterexample is fully non-slice | PROVED (THM-4562) | §6 |
@@ -328,7 +329,12 @@ So the tower is Thue–Morse in effect:
   * At `n = 3`: SAT for `t = 4, 5, 6`, with `|E| = 34, 70, 109`.
     * This was already implied by THM-470 B (F2J SAT, A3), so the new runs are confirmations.
     * Witnesses were brute-verified twice, independently, including all `1.7·10^8` binary subgrids at `t = 6`.
-  * `(3, 7)` is undecided: the reader's runs were one 60-minute timeout and two runs stopped at about 14 and 19 minutes, plus the repo's earlier 2-hour run. So `t_dead(Finv) ∈ [7, ∞)` at `n = 3`, finite by the theorem.
+  * **`(3, 7)` is UNSAT, so `t_dead(Finv) = 7` at `n = 3`.** This settles THM-470 C's timed-out master experiment.
+    * The reader's CEGAR loop with coordinate-reflection images returned UNSAT after 467 iterations (CaDiCaL 1.9.5).
+    * The dumped 669,086-clause certificate was re-solved UNSAT from scratch by MapleChrono.
+    * Every clause was validated as a genuine constraint, by the reader's audit script and independently by this session's validator.
+    * There is no DRAT proof.
+    * The gap-determined walls are 3, 4, 7 for `n = 1, 2, 3`. Matching `2n+1` at `n = 1, 3` but not `n = 2` is NUMEROLOGY for now. The free game `Q(3,7)` is untouched.
 * *Correction (MISTAKE-577).* THM-470 identified Finv with "the translation-invariant game of THM-453 F", which is only row-invariant.
   * At `n = 2` the row-invariant cutoff is 5 (THM-453 G, recomputed) and the fully gap-determined cutoff is 4 = 2n.
   * So the "linear wall `2n+1`" evidence for HYP-2396 concerns the row-invariant family, not Finv.
@@ -460,7 +466,7 @@ In each, a quadratic or valuation structure at 2 is either the obstruction or th
 | #155 aperiodic monotile in `Z³` | Explicit cyclotomic stacking partition (PROVED); the monotile link is ANALOGY. |
 | #158 plane not 5-colourable (Lean) | **Corrections** (MISTAKE-576) and **exact values for the Heegner rungs** (THM-4558). The residue-colouring technique and several values were already known (Fischer, Madore, hn-2adic, decalion89). Where a 6-chromatic graph can be realized is CONDITIONAL. |
 | #172 Euclidean Ramsey classification (Lean) | **Conditional extension:** algebraic spherical sets are Ramsey (THM-4559). |
-| #164 Hindman FS∪FP | **Method transfer** (the classical idempotent route): THM-4560 makes THM-521 D unconditional for gap-determined witnesses and gives `t_dead(Finv) < ∞`. Davenport law. No 3-smooth Hindman theorem. |
+| #164 Hindman FS∪FP | **Method transfer** (the classical idempotent route): THM-4560 makes THM-521 D unconditional for gap-determined witnesses and gives `t_dead(Finv) < ∞`; the reader's certified UNSAT run gives `t_dead(Finv) = 7` at `n = 3`. Davenport law. No 3-smooth Hindman theorem. |
 | #189 cycle–clique | No help for our book-Ramsey search (Turán-type colourings stop at `3n − 3`). |
 | sharp log exponents | ANALOGY only. |
 | #180 Barnette | A blocking-law dictionary from `k = 3` to `k = 8`: HYP-9215. The weave law is a global obstruction. |

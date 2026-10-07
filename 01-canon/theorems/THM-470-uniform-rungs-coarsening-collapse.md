@@ -116,3 +116,12 @@ HYP-2392/2393 (resolved here), HYP-2396 (opened here).
 * **Update to C: `t_dead(Finv) < ∞` for every `n` (PROVED, THM-4560).** Every gap-determined triangle-free graph on `N^n` has an independent binary subgrid. The proof uses a chain of minimal idempotent ultrafilters on the level semigroups.
   * With A2, the infinite-witness question for every gap-determined algebra is settled negatively.
   * At `n = 3`, `t_dead(Finv) ∈ [7, ∞)`. The session reader found `Q_gap(3,t)` (the Finv game; THM-4560 notation) SAT for `t = 4, 5, 6` (witnesses brute-checked), and `(3,7)` is still undecided.
+
+## Update (2026-10-07, mac-mini-2026-10-06-oaimath2): C's master experiment is decided
+
+**`Finv` at `(3,7)` is UNSAT, so `t_dead(Finv) = 7` at `n = 3`.** This matches C's "circumstantial evidence for UNSAT".
+* How it was certified UNSAT: a CEGAR loop that also adds the 7 coordinate-reflected copies of each subgrid clause returned UNSAT after 467 iterations (CaDiCaL 1.9.5, 2,864 s, deterministic rerun); the dumped 669,086-clause set was re-solved UNSAT from scratch by MapleChrono (1,668 s); every clause was validated as a genuine constraint (340,299 realizable triangles, 328,787 binary-subgrid clauses) by the reader's audit script and independently by `04-computation/experiments/oai2_20261006_finv37_validate.py`; no DRAT proof.
+* The certificate is in `04-computation/experiments/oai2_20261006_readers/hindman_ramsey/finv_unsat_n3_t7.{cnf,leaves}.gz`; its generator is `finv_cegar_sym3.py` there.
+* **The key was the reflection images.** C's RERUN NOTE suggested attacking UNSAT "with symmetry breaking over the gap-negation/coordinate symmetries". Adding the coordinate-reflected copies of every subgrid clause did exactly that.
+* **Consequences.** By A3, every gap-determined rung at `n = 3` (F2, F2J, F2X, jets, leading digits) dies at some `t ≤ 7`. With THM-4560, every gap-determined algebra dies at a finite `t` for every `n`, and at `n = 3` the bound is exactly 7.
+* The free game `Q(3,7)` is untouched (HYP-2396).

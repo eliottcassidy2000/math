@@ -796,7 +796,7 @@ all heights (THM-1289, published), δ ineffective.
   - Littlewood (#076): THM-4561, the skew tower's rows are Thue–Morse; Rudin–Shapiro switching flattens every row to <= 8.24 sqrt N.
   - Plane colouring (#158): THM-4558, residue colourings at conjugation-stable primes (KNOWN technique: Woodall, Fischer, Madore; hn-2adic and decalion89 repositories 2026). New here: the Heegner rungs Q(sqrt-3, sqrt-(4N-1)), N = 2 mod 3, are 3-chromatic. So the Heegner roadmap is false.
   - Ramsey (#172): THM-4559, every algebraic spherical set is Ramsey (CONDITIONAL on #172).
-  - Erdős 592 (#164's ultrafilter ancestry): THM-4560, every gap-determined triangle-free grid graph leaves a binary subgrid independent; t_dead(Finv) < infinity; THM-521 D unconditional for gap-determined witnesses (row-invariant ones not covered); THM-470 Finv label corrected (n = 2 cutoffs: gap-determined 4, row-invariant 5).
+  - Erdős 592 (#164's ultrafilter ancestry): THM-4560, every gap-determined triangle-free grid graph leaves a binary subgrid independent; t_dead(Finv) < infinity; THM-521 D unconditional for gap-determined witnesses (row-invariant ones not covered); THM-470 Finv label corrected (n = 2 cutoffs: gap-determined 4, row-invariant 5); THM-470's master experiment decided: Finv (3,7) UNSAT (certified), t_dead(Finv) = 7 at n = 3.
   - Barnette (#180): HYP-9215 knight-torus blocking law. Cancellation (#047): THM-4562 slice lemma, THM-1300 fully non-slice; HYP-9216.
   - The rational plane reduces mod 7 onto the 7 x 7 knight torus: z -> (1+2i) z.
 
