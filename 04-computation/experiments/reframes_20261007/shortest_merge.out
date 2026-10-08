@@ -1,0 +1,15 @@
+p= 3: shortest absorption from (0,1) at Terras time 3, 1 absorbing sequences of that length -> q_p >= 1/2^3 = 0.12500
+p= 5: shortest absorption from (0,1) at Terras time 11, 1 absorbing sequences of that length -> q_p >= 1/2^11 = 0.00049
+p= 7: shortest absorption from (0,1) at Terras time 4, 1 absorbing sequences of that length -> q_p >= 1/2^4 = 0.06250
+p= 9: shortest absorption from (0,1) at Terras time 11, 2 absorbing sequences of that length -> q_p >= 2/2^11 = 0.00098
+p=11: shortest absorption from (0,1) at Terras time 18, 3 absorbing sequences of that length -> q_p >= 3/2^18 = 0.00001
+p=13: shortest absorption from (0,1) at Terras time 23, 3 absorbing sequences of that length -> q_p >= 3/2^23 = 0.00000
+p=15: shortest absorption from (0,1) at Terras time 5, 1 absorbing sequences of that length -> q_p >= 1/2^5 = 0.03125
+p=17: shortest absorption from (0,1) at Terras time 13, 1 absorbing sequences of that length -> q_p >= 1/2^13 = 0.00012
+p=19: none within depth or state cap
+p=21: shortest absorption from (0,1) at Terras time 8, 1 absorbing sequences of that length -> q_p >= 1/2^8 = 0.00391
+p=23: shortest absorption from (0,1) at Terras time 18, 1 absorbing sequences of that length -> q_p >= 1/2^18 = 0.00000
+p=25: none within depth or state cap
+p=27: none within depth or state cap
+p=29: none within depth or state cap
+p=31: shortest absorption from (0,1) at Terras time 6, 1 absorbing sequences of that length -> q_p >= 1/2^6 = 0.01562

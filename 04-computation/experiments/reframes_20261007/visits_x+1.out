@@ -1,0 +1,5 @@
+x+1: rank 0, contracting; 2000 samples
+  T=     16  P(no merge) = 0.0000   mean visits of debt to 1 =     2.02   /sqrt(T) = 0.506   /log(T) = 0.729
+  T=     64  P(no merge) = 0.0000   mean visits of debt to 1 =     2.02   /sqrt(T) = 0.253   /log(T) = 0.486
+  T=    256  P(no merge) = 0.0000   mean visits of debt to 1 =     2.02   /sqrt(T) = 0.126   /log(T) = 0.365
+  T=   1024  P(no merge) = 0.0000   mean visits of debt to 1 =     2.02   /sqrt(T) = 0.063   /log(T) = 0.292

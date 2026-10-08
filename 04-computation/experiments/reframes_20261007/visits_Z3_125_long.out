@@ -1,0 +1,8 @@
+Z3_125: rank 2, contracting; 500 samples
+  T=     16  P(no merge) = 0.5980   mean visits of debt to 1 =     0.57   /sqrt(T) = 0.142   /log(T) = 0.205
+  T=     64  P(no merge) = 0.5240   mean visits of debt to 1 =     0.73   /sqrt(T) = 0.091   /log(T) = 0.176
+  T=    256  P(no merge) = 0.4800   mean visits of debt to 1 =     0.88   /sqrt(T) = 0.055   /log(T) = 0.159
+  T=   1024  P(no merge) = 0.4420   mean visits of debt to 1 =     1.02   /sqrt(T) = 0.032   /log(T) = 0.147
+  T=   4096  P(no merge) = 0.3940   mean visits of debt to 1 =     1.17   /sqrt(T) = 0.018   /log(T) = 0.141
+  T=  16384  P(no merge) = 0.3660   mean visits of debt to 1 =     1.28   /sqrt(T) = 0.010   /log(T) = 0.132
+  T=  65536  P(no merge) = 0.3380   mean visits of debt to 1 =     1.36   /sqrt(T) = 0.005   /log(T) = 0.122

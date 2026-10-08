@@ -1,0 +1,5 @@
+p= 5: merged 1667/200000  q_p = 0.00834 +- 0.00020; latest merge time 188; merge-time histogram (first 12): [11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11]
+p= 7: merged 21685/200000  q_p = 0.10842 +- 0.00070; latest merge time 52; merge-time histogram (first 12): [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+p= 9: merged 451/200000  q_p = 0.00226 +- 0.00011; latest merge time 40; merge-time histogram (first 12): [11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11]
+p=11: merged 5/200000  q_p = 0.00003 +- 0.00001; latest merge time 25; merge-time histogram (first 12): [18, 18, 18, 20, 25]
+p=13: merged 1/200000  q_p = 0.00001 +- 0.00000; latest merge time 24; merge-time histogram (first 12): [24]

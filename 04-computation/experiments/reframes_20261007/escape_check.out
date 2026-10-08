@@ -1,0 +1,19 @@
+(A) growth lemma |e*| >= (p/4)|e| - 1 with e* != 0, all odd p in [5,31], 1 <= |e| <= 2000: PASS
+(B) p=5 start (0, 1): reaches (0,10) via coins 1101
+(B) p=5 start (0, 2): reaches (0,5) via coins 1
+(B) p=5 start (0, 3): reaches (0,10) via coins 101
+(B) p=5 start (0, 4): reaches (0,10) via coins 1
+(B) p=5 start (0,-1): reaches (0,-10) via coins 0111
+(B) p=5 start (0,-2): reaches (0,-5) via coins 1
+(B) p=5 start (0,-3): reaches (0,-10) via coins 011
+(B) p=5 start (0,-4): reaches (0,-10) via coins 1
+(B) p=7 start (0, 1): reaches (0,2) via coins 10
+(B) p=7 start (0, 2): reaches (0,7) via coins 1
+(B) p=7 start (0, 3): reaches (0,5) via coins 01
+(B) p=7 start (0, 4): reaches (0,2) via coins 0
+(B) p=7 start (0,-1): reaches (0,-2) via coins 01
+(B) p=7 start (0,-2): reaches (0,-7) via coins 1
+(B) p=7 start (0,-3): reaches (0,-5) via coins 10
+(B) p=7 start (0,-4): reaches (0,-2) via coins 0
+(B) small starts: PASS
+(C) step multipliers (20000 random states, |k| <= 6): PASS

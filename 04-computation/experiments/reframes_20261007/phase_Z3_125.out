@@ -1,0 +1,8 @@
+Z3_125: rank 2, contracting; 1000 samples, start (M, e) = (1, 1)
+  T=      4  P(no merge by T) = 0.7020   sqrt(T)*q =   1.404   log(T)*q =  0.973
+  T=     16  P(no merge by T) = 0.6170   sqrt(T)*q =   2.468   log(T)*q =  1.711
+  T=     64  P(no merge by T) = 0.5610   sqrt(T)*q =   4.488   log(T)*q =  2.333
+  T=    256  P(no merge by T) = 0.5100   sqrt(T)*q =   8.160   log(T)*q =  2.828
+  T=   1024  P(no merge by T) = 0.4740   sqrt(T)*q =  15.168   log(T)*q =  3.286
+  T=   4096  P(no merge by T) = 0.4410   sqrt(T)*q =  28.224   log(T)*q =  3.668
+  T=  16384  P(no merge by T) = 0.4160   sqrt(T)*q =  53.248   log(T)*q =  4.037

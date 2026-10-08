@@ -1,0 +1,6 @@
+K in [2,12800]: sigma(M_K) < sigma(M_(K-1)) occurs 291 times; first: [(7, 39, 15), (15, 56, 44), (19, 80, 61), (25, 174, 162), (27, 162, 138), (55, 309, 210), (65, 309, 306), (67, 306, 256)]
+distribution of sigma(M_K) - sigma(M_(K-1)) (most common): [(0, 12120), (253, 18), (-253, 16), (489, 11), (347, 9), (270, 9), (-1255, 9), (1255, 9), (-489, 8), (954, 8), (2151, 8), (1169, 8)]
+river classes: 136; size histogram (top): [(1, 1), (2, 15), (4, 3), (6, 3), (8, 2), (10, 7), (12, 5), (14, 1), (20, 1), (22, 3)] ... max 532
+rivers that are not intervals: 115; examples [[25, 26, 29, 30, 31, 32], [43, 44, 45, 46, 47, 48, 49, 50], [53, 54, 57, 58, 59, 60, 61, 62], [69, 70, 71, 72, 73, 74, 77, 78]]
+K lying in interval rivers: 0.009
+river minima in K order: 136; sigma decreases between consecutive river minima 25 times

@@ -1,0 +1,27 @@
+(a) rivers = level sets of the odd count: confirmed (sigma_T - K is a function of o for K >= 5)
+    river span (max K - min K) / sqrt(max K), by max-K window:
+      maxK in [100,400): 13 rivers, span/sqrt(K): mean 1.85, max 5.00
+      maxK in [400,1600): 27 rivers, span/sqrt(K): mean 2.11, max 4.84
+      maxK in [1600,6400): 44 rivers, span/sqrt(K): mean 2.38, max 5.29
+      maxK in [6400,12801): 31 rivers, span/sqrt(K): mean 2.68, max 5.87
+    widest rivers (maxK, minK, size, span/sqrt(maxK)): [(10972, 10367, 360, 5.78), (8298, 7763, 532, 5.87), (9800, 9317, 356, 4.88), (8932, 8549, 332, 4.05), (12390, 12007, 364, 3.44), (10408, 10029, 324, 3.71)]
+(b) staircase jumps by window (rate, rate*sqrt(Kmid)):
+      K in [100,400): 33 jumps, rate 0.1100, rate*sqrt(Kmid) 1.74
+      K in [400,1600): 117 jumps, rate 0.0975, rate*sqrt(Kmid) 3.08
+      K in [1600,6400): 261 jumps, rate 0.0544, rate*sqrt(Kmid) 3.44
+      K in [6400,12801): 241 jumps, rate 0.0377, rate*sqrt(Kmid) 3.69
+      rivers started by K <= 400: 36   (R/X^0.41 = 3.09, R/sqrt X = 1.80)
+      rivers started by K <= 1600: 62   (R/X^0.41 = 3.01, R/sqrt X = 1.55)
+      rivers started by K <= 6400: 106   (R/X^0.41 = 2.92, R/sqrt X = 1.32)
+      rivers started by K <= 12800: 136   (R/X^0.41 = 2.82, R/sqrt X = 1.20)
+(c) landing integers N_D for 3 <= D <= 4000: nonpositive 0; max 880; median 4; s_0/D in [1.500, 2.882]
+      P(N_D >     2) = 0.7549   n*P = 1.510
+      P(N_D >     4) = 0.4342   n*P = 1.737
+      P(N_D >     8) = 0.3487   n*P = 2.789
+      P(N_D >    16) = 0.2201   n*P = 3.522
+      P(N_D >    32) = 0.1136   n*P = 3.634
+      P(N_D >    64) = 0.0560   n*P = 3.586
+      P(N_D >   128) = 0.0195   n*P = 2.497
+      P(N_D >   256) = 0.0110   n*P = 2.817
+      P(N_D >   512) = 0.0075   n*P = 3.842
+      P(N_D >  1024) = 0.0000   n*P = 0.000

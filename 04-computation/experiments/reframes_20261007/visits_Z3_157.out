@@ -1,0 +1,6 @@
+Z3_157: rank 2, expanding; 400 samples
+  T=     16  P(no merge) = 1.0000   mean visits of debt to 1 =     0.65   /sqrt(T) = 0.161   /log(T) = 0.233
+  T=     64  P(no merge) = 1.0000   mean visits of debt to 1 =     1.07   /sqrt(T) = 0.134   /log(T) = 0.257
+  T=    256  P(no merge) = 1.0000   mean visits of debt to 1 =     1.56   /sqrt(T) = 0.098   /log(T) = 0.282
+  T=   1024  P(no merge) = 1.0000   mean visits of debt to 1 =     2.00   /sqrt(T) = 0.062   /log(T) = 0.289
+  T=   4096  P(no merge) = 1.0000   mean visits of debt to 1 =     2.70   /sqrt(T) = 0.042   /log(T) = 0.324
