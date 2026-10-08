@@ -1,0 +1,8 @@
+start (M, e) = (6, 0): coupling (M mod 5, e mod 5) = (1, 0)  agreement 1
+  digit 0: u-digit 0, new state (6, 0), coupling (1, 0), agreement 1
+  digit 0: u-digit 0, new state (6, 0), coupling (1, 0), agreement 1
+  digit 0: u-digit 0, new state (6, 0), coupling (1, 0), agreement 1
+  digit 0: u-digit 0, new state (6, 0), coupling (1, 0), agreement 1
+  digit 0: u-digit 0, new state (6, 0), coupling (1, 0), agreement 1
+  digit 0: u-digit 0, new state (6, 0), coupling (1, 0), agreement 1
+reachable example (e0, digit word, M with e = 0, M = 1 mod 5, M != 1): [(1, (0, 3, 0, 2), Fraction(2, 7)), (1, (3, 0, 4, 4), Fraction(2, 7))]

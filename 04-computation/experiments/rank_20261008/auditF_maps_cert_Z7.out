@@ -1,2 +1,7 @@
 Z7_1_2_3_5_1_1_1: d = 7, m = [1, 2, 3, 5, 1, 1, 1], r = [0, 5, 1, 6, 3, 2, 1], rank 3, Lambda = -1.4600, coupling group [1, 2, 3, 4, 5, 6], property (i) holds
    pilot: level-2 optimum -0.28894
+   round 0: nodes refined per level [1809, 76668, 0]; 1885416 distinct leaf blocks; leaf optimum -0.03631
+   round 1: nodes refined per level [855, 9020, 0]; 238361 distinct leaf blocks; leaf optimum -0.03631
+   round 2: nodes refined per level [855, 9036, 0]; 238745 distinct leaf blocks; leaf optimum -0.03631
+   round 3: nodes refined per level [855, 9036, 0]; 238745 distinct leaf blocks; leaf optimum -0.03631
+   not certified with lengths 2..4  [343s]

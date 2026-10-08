@@ -1,0 +1,15 @@
+Z5_123711: d = 5, m = [1, 2, 3, 7, 11], r = [0, 3, 4, 4, 1], residues [1, 2, 3, 2, 1], Lambda = -0.3823, rank 4, independent configuration True (repeated value 1, 4 others), coords den 1
+   coupling group [1, 2, 3, 4]; property (i) True (zero-root non-identity couplings []); min one-step coupling rank 2 at [(4, 0), (4, 1), (4, 2), (4, 3), (4, 4)]
+   form Q = [[4, -1, -1, -1], [-1, 4, -1, -1], [-1, -1, 4, -1], [-1, -1, -1, 4]], det 125, leading minors [4, 15, 50, 125]
+   k = 2: 500 states (|H_k| = 20), zero blocks at [(1, 0)] (1 zero), 250 distinct nonzero blocks, min exact rank 4
+   EXACT balance by Q of every nonzero block: True (0 failures); float margin of this Q +0.05873, alpha_max of this Q 0.1248  [0.0s]
+Z7_11123511: d = 7, m = [1, 1, 1, 2, 3, 5, 11], r = [0, 6, 5, 1, 2, 3, 4], residues [1, 1, 1, 2, 3, 5, 4], Lambda = -1.1175, rank 4, independent configuration True (repeated value 1, 4 others), coords den 1
+   coupling group [1, 2, 3, 4, 5, 6]; property (i) True (zero-root non-identity couplings []); min one-step coupling rank 2 at [(6, 1), (6, 2), (6, 3)]
+   form Q = [[5, -1, -2, -1], [-1, 5, 0, -1], [-2, 0, 6, -1], [-1, -1, -1, 5]], det 504, leading minors [5, 24, 124, 504]
+   k = 2: 2058 states (|H_k| = 42), zero blocks at [(1, 0)] (1 zero), 1048 distinct nonzero blocks, min exact rank 4
+   EXACT balance by Q of every nonzero block: True (0 failures); float margin of this Q +0.05173, alpha_max of this Q 0.1091  [0.0s]
+Z5_12371: d = 5, m = [1, 2, 3, 7, 1], r = [0, 3, 4, 4, 1], residues [1, 2, 3, 2, 1], Lambda = -0.8619, rank 3, independent configuration True (repeated value 1, 3 others), coords den 1
+   coupling group [1, 2, 3, 4]; property (i) True (zero-root non-identity couplings []); min one-step coupling rank 1 at [(4, 4)]
+   form Q = [[20, -4, -8], [-4, 15, -3], [-8, -3, 20]], det 4348, leading minors [20, 284, 4348]
+   k = 4: 312500 states (|H_k| = 500), zero blocks at [(1, 0)] (1 zero), 156557 distinct nonzero blocks, min exact rank 3
+   EXACT balance by Q of every nonzero block: True (0 failures); float margin of this Q +0.00303, alpha_max of this Q 0.0061  [2.0s]

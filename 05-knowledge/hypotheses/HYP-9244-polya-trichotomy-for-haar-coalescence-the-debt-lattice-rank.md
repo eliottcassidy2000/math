@@ -9,11 +9,12 @@ status: >
   three classes (THM-4609 statements 4-5: translation-only maps, i.e. all m_i congruent mod d, from rank 3 when d >= 5; odd-order
   coupling groups from rank 5; every map from rank 6), by one-step Lamperti forms valid against any coupling sequence, with
   contracting examples such as Z_5 (1,1,6,11,16) and Z_7 (1,2,3,5,11,13,17); and map by map, where one-step forms are impossible,
-  by exact fixed-length or adaptive block certificates (THM-4611; not yet independently audited at the time of writing): this file's
+  by exact fixed-length or adaptive block certificates (THM-4611; audited by audit H, which re-verified every certificate): this file's
   rank-3 evidence map Z_5 (1,2,3,7,1), all of audit F's rank >= 3 maps (including Z_4 (1,3,5,7)),
   and all 18 maps of a seeded Z_5 census. Accessibility: a second, twisted obstruction (audit G)
   shows that excluding the constant-c obstruction is not enough (Z_3 (1,1,5), r = (0,2,5), contracting: odd offsets never merge).
-  Open: rank 1 for d >= 3 (sketch-level route; THM-4610 reserved by opus-2026-10-08-S22), rank 2, a general theorem for ranks 3-5
+  Rank one on Z_p is PROVED for the base-p Collatz maps C_p (multipliers 1 and p + 1), every odd prime p, by THM-4610
+  (opus-2026-10-08-S22; its audit was pending when this line was written). Open: rank 1 for other maps with d >= 3, rank 2, a general theorem for ranks 3-5
   with an even-order coupling group, dependent multipliers or composite d (so far certificates are found map by map; every map tested
   has one), and a complete accessibility criterion.
   Earlier PROVED parts:
@@ -32,7 +33,9 @@ status: >
   walks also use degenerate laws, outside those theorems; their Theorem 1.3 trace criterion is the tool of THM-4609), and zero-drift walks in d = 2 can be transient (Georgiou-Menshikov-Mijatovic-
   Wade, Adv. Appl. Probab. 48A (2016) 99-118). Independently audited 2026-10-08 (audit F): first filed without the accessibility clause
   and with a false 'sheet-blind' reading; corrected (MISTAKE-589). The 2026-10-08 update was audited by audit G: CORRECT WITH FIXES
-  (per-offset expanding claim, the twisted obstruction, a wrong 'mu <= d^2' caveat, the involution-rank claim; MISTAKE-590).
+  (per-offset expanding claim, the twisted obstruction, a wrong 'mu <= d^2' caveat, the involution-rank claim; MISTAKE-590). The
+  block-certificate additions were audited by audit H: CORRECT WITH FIXES (overgeneralized squares-group forms, sharpness scope,
+  a numerical adversary claim stated as fact, 'semi-decidable' misused; MISTAKE-591).
 source: mac-mini-2026-10-08-reframes, 05-knowledge/results/coalescence_phase_diagram_20261008.md
 related:
   - 01-canon/theorems/THM-4606-coalescence-needs-contraction-px-plus-one-orbits-fail-to-merge-for-p-at-least-five.md
@@ -196,7 +199,7 @@ Author's runs and audit F's independent integer-orbit runs. Visit window = mean 
 | expanding (`Λ > 0`), any rank | PROVED for every map: `q(e) → 0` as `\|e\| → ∞`; `q(e) < 1` at every offset for `px + 1` (`r_0 = 0`, `r_1 = 1`) and for rank zero; elsewhere at small offsets NUMERICAL | THM-4607 |
 | `d = 2`, positive multipliers | PROVED: contracting maps coalesce a.s. iff the offset is accessible (explicit divisibility); expanding maps as in the row above | THM-4608 |
 | rank 0, contracting | PROVED for every `d`: a.s. iff 0 is reachable from every reachable offset | THM-4609 (2) |
-| rank 1, `d ≥ 3` | OPEN; sketch-level route for two-valued translation-only maps (below); NUMERICAL `T^(−1/2)` | — |
+| rank 1, `d ≥ 3` | PROVED for the base-p Collatz maps `C_p` (multipliers 1 and `p + 1` on `Z_p`, every odd prime `p`; opus-2026-10-08-S22, audit pending at the time of writing); OPEN for other rank-one maps (sketch-level route below); NUMERICAL `T^(−1/2)` | THM-4610 |
 | rank 2 | OPEN (critical) | — |
 | rank ≥ 3, independent multipliers, prime `d` | PROVED transient for translation-only maps (all `m_i` congruent mod `d`; `d ≥ 5`), for odd-order coupling groups from rank 5, and for every map from rank 6 | THM-4609 (3)–(6) |
 | ranks 3–5 with an even-order coupling group | PROVED map by map through exact block certificates, fixed-length or adaptive: the evidence-table representative `Z_5` (1, 2, 3, 7, 1), all of audit F's rank ≥ 3 maps, and all 18 maps of a seeded `Z_5` census (six with coupling group `{±1}`); OPEN as a general theorem | THM-4611 (2)–(6) |
@@ -205,11 +208,11 @@ Author's runs and audit F's independent integer-orbit runs. Visit window = mean 
 **Structural facts used (PROVED, THM-4609 (1)).**
 * For every map, the coupling at each step is affine, `π(j) = M̄ j + ē (mod d)` with `M̄` in the coupling group `G = ⟨m_i/m_j mod d⟩`. The debt step is uniform over its roots `v_π(j) − v_j`.
 * For independent multipliers its covariance is `(1/d)(2I_nf − A_π)`, with `A_π` the cycle graph of `π` on the non-unit positions (with multiplicity), so its spectrum lies in `[0, 4]`.
-* The value 4 needs an even cycle; a fixed point (any `M̄ ≠ 1`) costs one dimension of trace. Hence the standard form `Q = I` balances translations from rank 4, odd-order coupling groups from rank 5 and all couplings from rank 6 (exact for `d = 7, 11, 13`, sharp for the standard form).
-* Rank 3 translation-only maps have two universal families (AP / non-AP positions), each with an explicit integer form. Rank-4 maps with coupling group the squares mod 7 or 11 have explicit forms (`8I − J` for `d = 7`).
+* The value 4 needs an even cycle; a fixed point (any `M̄ ≠ 1`) costs one dimension of trace. Hence the standard form `Q = I` balances translations from rank 4, odd-order coupling groups from rank 5 and all couplings from rank 6. This is exact for `d = 7, 11, 13` and sharp for the standard form at those `d`. For Fermat primes the odd-order class is just the translations.
+* Rank 3 translation-only maps have two universal families (AP / non-AP positions), each with an explicit integer form. With the squares as coupling group, rank-4 forms exist for the unit sets `{0, 1, 2}` mod 7 (`8I − J`) and `{0..6}`, `{0..5, 7}` mod 11. The other rank-4 orbit mod 7, `{0, 1, 3}`, has a rank-2 squares-group coupling, so no one-step form exists there; two orbits mod 11 are undecided (audit H).
 
 **The minimal open requirements.**
-1. **Rank 1, `d ≥ 3`.** Two-valued translation-only maps (multipliers 1 and `μ`) have an exactly fair SRW debt skeleton: along every lag cycle the transitions from unit positions to `μ`-positions equal those back.
+1. **Rank 1, `d ≥ 3`.** THM-4610 (opus-2026-10-08-S22) carries this route out for the base-p Collatz maps `C_p` on `Z_p` (multipliers 1 and `p + 1`, every odd prime `p`), with a level weight `s < 1`. What follows remains for other rank-one maps. Two-valued translation-only maps (multipliers 1 and `μ`) have an exactly fair SRW debt skeleton: along every lag cycle the transitions from unit positions to `μ`-positions equal those back.
    * Away from departures, the offset multiplier is `v`'s `m_j/d` at positive debt and `u`'s `m_i/d` at negative debt, so its conditional `θ`-moment is exactly `κ(θ) = (1/d)Σ(m_i/d)^θ < 1` whatever the lag. At departures it is `1/d`, and at zero debt the moment is at most `κ(θ)`.
    * So THM-4581's architecture should transfer for every `μ`: at level weight `s = 1` the per-step weighted moment equals `κ(θ) < 1` for every lag, so a weight `s^|k|` with `s` just below 1 leaves room (audit G, `rank_20261008/audit_G/rank1_weight_check.py`). An earlier version of this item claimed the route needs `μ ≤ d²`; that was wrong (MISTAKE-590).
    * NUMERICAL (`rank_20261008/rank1_two_valued.out`, exact pair chain, 1500 chains): `√T·P(no merge by T)` stays within 1.37–1.64 for `(1, 1, 4)` on `Z_3`, 1.20–1.96 for `(1, 1, 1, 1, 26)` on `Z_5` (`μ > d²`), and 0.79–1.02 for `(1, 1, 1, 1, 6)` on `Z_5`, for `T = 16 … 16384`; for `(1, 4, 4)` on `Z_3` it rises from 2.5 to 7.9, 9.1, 8.1 at `T = 1024, 4096, 16384` (a long pre-asymptotic phase, `Λ = −0.174`).
@@ -217,9 +220,9 @@ Author's runs and audit F's independent integer-orbit runs. Visit window = mean 
 2. **Rank 2.** A critical two-dimensional criterion. It needs the lag process to be asymptotically uncorrelated with the direction of the debt, or a common isotropizing form. The two families `{2I − E, 2I}` cannot share one.
 3. **Ranks 3–5, even-order coupling groups.** A one-step form needs every coupling covariance to have rank ≥ 3 (since `tr Σ ≤ rank·λ_max`). An involution `j ↦ −j + b` on prime `d` has one fixed point and `(d − 1)/2` transpositions, so its covariance has rank ≤ `(d − 1)/2`. One-step balance is therefore impossible for `d = 5` whenever `−1 ∈ G` (every non-translation map on `Z_5`), and in general whenever some coupling's covariance has rank ≤ 2. For `d ≥ 7` the standard form covers every coupling from rank 6.
    * **Block certificates (THM-4611).** Given the past, the `k`-step debt increment has second moment `d^(−k) A_k(h)`, an integer matrix determined by the hidden state `h = (M, e) mod d^k`. If one form balances every nonzero `A_k(h)`, the debt walk escapes against any hidden digits. Exact certificates exist for `Z_5` (1, 2, 3, 7, 1) (`k = 4`), (1, 1, 2, 3, 7) (`k = 5`), (1, 2, 3, 7, 11) (`k = 2`), `Z_7` (1, 1, 1, 1, 2, 3, 5) (`k = 4`) and (1, 1, 1, 2, 3, 5, 11) (`k = 2`).
-   * **The obstacle is sticky reflections.** If the residue pattern is symmetric under `j ↦ b − j`, that reflection always maps to another reflection, and only the hidden digits decide whether it repeats. On `Z_5` every map with coupling group `{±1}` has one (every subset of `Z/5` is symmetric under some reflection). The sampled maps of that class have no fixed-length certificate for `k ≤ 4`.
-   * **Adaptive blocks** (block length chosen by the hidden state, a stopping rule; THM-4611 (2′)) certify every sampled map, including all six `{±1}` maps, with lengths 3–5.
+   * **The obstacle is sticky reflections.** If the residue pattern is symmetric under `j ↦ b − j`, that reflection always maps to another reflection, and only the hidden digits decide whether it repeats. On `Z_5` every map with coupling group `{±1}` has one, because every subset of `Z/5` is symmetric under some reflection. This is special to `Z_5`: 28 of 128 subsets of `Z/7` are not. The six sampled maps of that class have no fixed-length certificate for `k ≤ 4`, proved exactly by rank arguments and dual certificates (audit H).
+   * **Adaptive blocks** (block length chosen by the hidden state, a stopping rule; THM-4611 (2′)) certify every sampled map, including all six `{±1}` maps, with lengths 3–5 (re-verified independently by audit H).
    * **Every fixed-length certificate must balance the translation family** (identity runs end in a single translation). So `Z_4` (1, 3, 5, 7) has none, but an adaptive certificate with base length 1 exists: identity steps become zero blocks, a built-in time change.
-   * **The hidden-digit arithmetic is essential.** Multiplier-only certificates, against an adversary choosing the next translation part, fail for every map tested.
-   * The refined, semi-decidable question: does every contracting map of rank ≥ 3 have an adaptive block certificate? Every map tested so far has one.
+   * **The hidden-digit arithmetic seems essential (NUMERICAL).** Against an adversary choosing the next translation part, each map's certificate form fails for every `k ≤ 8`. Only one form per map was tried.
+   * The refined question: does every contracting map of rank ≥ 3 have an adaptive block certificate? For a single map, existence is semi-decidable, since each finite check is a semialgebraic feasibility problem. The universal question is not semi-decidable as stated. Every map tested so far has one.
 4. **Accessibility.** The constant-`c` and twisted obstruction lemmas are both cocycle invariants. Is every inaccessible start detected by one mod some `ℓ^k`?

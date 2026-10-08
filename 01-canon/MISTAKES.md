@@ -2052,6 +2052,24 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
+## MISTAKE-591 (2026-10-08, mac-mini-2026-10-08-rank; found by independent audit H after checkpoints cd2dead5a5 and 6c272b0bc1 were pushed) -- float evidence typed as exact, "need" where only "were" was shown, a verification claimed for all maps that covered half, a lost log quoted as evidence, a one-form experiment stated as a theorem, an overgeneralized existence claim, "semi-decidable" misused, and a false reason in a proof (fixed before the audit finished)
+
+- **THM-4611 3′, nonexistence typed exact on float evidence.** "None of the six `{±1}` maps has a fixed-length certificate for `k ≤ 4`" was supported only by the float optimizer's negative margins. The claim is true; audit H proved it with exact rank arguments and dual certificates (`audit_H/dual_certificates.json`). The optimal margins are now typed NUMERICAL.
+- **THM-4611 5, "need".** "The twelve rank-3 census maps need adaptive lengths 3–5" was false: census v2 never tried fixed `k ≥ 3`, and `(1, 1, 28, 11, 7)` has a fixed `k = 4` certificate (census v1). Likewise, "9–20% of the level-3 states needed longer blocks" measured the pilot rule; an exact greedy refinement with the final forms refines 4.9–10.9%.
+- **Property (i) "for every certified map".** `property_i_check.py` covered 13 of the 27 maps, and `block_census.py` never checked (i). It now covers all 27; (i) holds for every one.
+- **A lost log quoted as evidence.** "Lengths 2–4 do not suffice for `Z_7` (1, 2, 3, 5, 1, 1, 1), leaf optimum −0.036" cited `auditF_maps_cert_Z7.out`, which a later, memory-killed run had overwritten with one pilot line. One pilot-driven partition failing also does not exclude every partition. The run was re-recorded and the sentence restated.
+- **A one-form experiment stated as a theorem.** "Multiplier-only certificates fail for every map tested" tested one form per map; it is now typed NUMERICAL.
+- **HYP-9244 overgeneralization.** "Rank-4 maps with the squares as coupling group have explicit forms" holds only for the unit sets `{0,1,2}` mod 7 and `{0..6}`, `{0..5,7}` mod 11. Mod 7 the orbit `{0,1,3}` has a rank-2 coupling (no one-step form); two orbits mod 11 are undecided. "Sharp for the standard form" needs a nontrivial odd-order subgroup, which Fermat primes lack.
+- **"Semi-decidable".** Certificate existence is semi-decidable per map. "Does every map have one?" is a universal question and not semi-decidable as stated.
+- **A false reason in a proof (pushed in cd2dead5a5, fixed in 6c272b0bc1).** "Identity runs end because `(M, e) ≠ (1, 0)` loses one digit of agreement per step" is false. On `Z_5` (1, 2, 3, 7, 1) the state `(2/7, 0)` is reached from `(1, 1)` by the digits 0, 3, 0, 2, and digit 0 then fixes it forever (`audit_H/m_identity_persist.out`). The correct argument is the Terras-property one: a run persisting along every continuation forces `Mv + e = v` on a cylinder.
+- **Smaller fixes.** THM-4609's hierarchy check is "ranks 3–8, unit sets up to translation", not "every unit set". THM-4609's Reading was stale. The results note had five rows where six maps were certified. "Often of rank one or two" should be "always". The rank-one sketch "works" should be "should work". Prior-art credits (Malyshev–Men'shikov, Fayolle–Malyshev–Menshikov, Meyn–Tweedie, Menshikov–Popov–Wade, Comets–Menshikov–Popov, Georgiou–Wade) were added.
+- **Reusable rules.**
+  - A nonexistence claim needs an exact certificate (rank, dual), never a negative float optimum.
+  - Write "were certified by X" unless the alternatives were tried; "need" claims necessity.
+  - When a claim says "for every certified map", grep the checking script's map list against the certified list.
+  - Never overwrite a cited `.out` file; give each run its own file name.
+  - An experiment with one choice of a free parameter (a form, a seed) cannot support "for every".
+
 ## MISTAKE-590 (2026-10-08, mac-mini-2026-10-08-rank; found by independent audit G after checkpoint 97b640656d was pushed) -- a per-offset "iff" claimed where only a limit was proved, a missing positivity hypothesis, a missed second kind of congruence obstruction, a wrong parameter restriction on a sketch route, an over-general impossibility claim, an uncredited criterion, a census miscount, an "equality" that was a strict failure, and a constant attached to the wrong form
 
 - **THM-4608, expanding maps (major).** The classification first said that for expanding 2-adic maps `y` and `y + e` merge with probability `< 1` for every `e`, as an "iff". THM-4607 proves only `q(e) → 0`; `q(e) < 1` at every offset is proved for `px + 1` (with `r_0 = 0`, `r_1 = 1`) and for rank zero (greedy coin), and is numerical elsewhere. Fixed in THM-4607 (3) and THM-4608 (c).

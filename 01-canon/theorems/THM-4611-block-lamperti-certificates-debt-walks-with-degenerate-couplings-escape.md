@@ -2,13 +2,17 @@
 id: THM-4611
 title: "Block Lamperti certificates: if one quadratic form balances every block covariance of the debt walk, for blocks of a fixed length k or of a length chosen by the hidden state (M, e) mod d^K, then translates of Haar orbits fail to merge with positive probability; exact certificates prove this for 27 contracting maps where one-step forms are impossible (coupling group containing -1): fixed-length ones for Z_5 (1,2,3,7,1) (k = 4, HYP-9244's rank-3 evidence map), (1,1,2,3,7) (k = 5), (1,2,3,7,11) (k = 2), Z_7 (1,1,1,1,2,3,5) (k = 4), (1,1,1,2,3,5,11) (k = 2); adaptive ones for six Z_5 maps with coupling group {+-1} and sticky reflections, for Z_4 (1,3,5,7), which provably has no fixed-length certificate, for three more of audit F's evidence maps (so all of them), and for all 18 maps of a seeded Z_5 census"
 status: >
-  PROVED: statements 1, 2, 2' and 4 (martingale second moments, the strong Markov property at block ends, Lamperti's
-  Lyapunov function sampled at block ends as in THM-4609 (3), optional stopping, the identity-run computation). FINITE-EXACT: statement 3 (integer block matrices from an exact
-  recursion over all residues; one integer form per map, verified with exact integer arithmetic via Sylvester's criterion on
-  tr(A adj Q) Q - 2 det(Q) A, the last minor through float64 with an explicit rounding bound and an integer fallback); statement 4's
-  Z_4 computation for k <= 5; the census of statement 5 and the certificates of statement 6; the adaptive certificates of statement 3' (block_adaptive.py: every leaf block of the refinement tree
-  verified exactly with the same integer test); property (i) for every certified map (property_i_check.py). The census of statement 5 is a seeded sample (18 maps, all certified); it estimates nothing about
-  the unsampled maps. Not yet independently audited.
+  PROVED: statements 1, 2, 2' and the identity-run part of 4, for every k (martingale second moments, the strong Markov
+  property at block ends, Lamperti's Lyapunov function sampled at block ends as in THM-4609 (3), optional stopping, the
+  identity-run computation). FINITE-EXACT: the certificates of statements 3, 3', 4 (adaptive Z_4), 5 and 6: integer block matrices from an
+  exact recursion over all residues; one integer form per map (adaptive: per refinement-tree partition); verified with exact integer
+  arithmetic via the leading minors of tr(A adj Q) Q - 2 det(Q) A (rank 3: the 3x3 determinant through float64 with an explicit
+  rounding bound and an integer fallback; rank 4: exact integer 3x3 and 4x4 minors); property (i) for all 27 maps (property_i_check.py);
+  the nonexistence of fixed-length certificates for k <= 4 in 3' and for k = 2, 3 for Z_5 (1,2,3,7,1) (exact rank arguments and dual
+  certificates, audit H). NUMERICAL: the quoted optimal margins of non-certifiable block lengths; the multiplier-only experiment in the
+  Reading. The census of statement 5 is a seeded sample (18 maps, all certified); it estimates nothing about the unsampled maps.
+  Independently audited 2026-10-08 (audit H): CORRECT WITH FIXES (minor; every certificate re-verified with independent code, the
+  recursion checked against exact simulation of the pair chain); fixes applied, MISTAKE-591.
 session: mac-mini-2026-10-08-rank
 source: 05-knowledge/results/debt_rank_least_requirements_20261008.md (section 6b)
 scripts:
@@ -21,6 +25,9 @@ related:
   - THM-4609 (root laws, cycle-graph covariances, one-step forms; this theorem is its multi-step extension)
   - HYP-9244 (open requirement 3: even-order coupling groups at ranks 3-5)
   - Peres, Popov and Sousi (2013), Theorem 1.3 (the trace criterion, here applied to block increments)
+  - State-dependent (multi-step) Lyapunov drift: Malyshev and Men'shikov, Trudy MMO 39 (1979); Fayolle, Malyshev and Menshikov, Topics in the Constructive Theory of Countable Markov Chains (CUP 1995); Meyn and Tweedie, Ann. Appl. Probab. 4 (1994)
+  - The |x|^(-alpha) method in many dimensions: Lamperti (1960); Menshikov, Popov and Wade, Non-homogeneous Random Walks (CUP 2016); Georgiou, Menshikov, Mijatovic and Wade, Adv. Appl. Probab. 48A (2016)
+  - Walks with internal states: Comets, Menshikov and Popov, Ann. Probab. 26 (1998); Georgiou and Wade, Stoch. Proc. Appl. 124 (2014) (internal states not assumed Markov); Kramli and Szasz (1983); Markov additive processes
 ---
 
 # THM-4611 — block Lamperti certificates
@@ -52,7 +59,7 @@ related:
    * (ii) for some `k` one form `Q` balances every nonzero block matrix `A_k(h)`.
 
    Let `B` bound the roots in the norm `|·|_(Q^(−1))`. Then:
-   * For `0 < α < min_h tr/λ_max − 2` there is `r_1` such that, from debt `x` with `|x|_(Q^(−1)) = r > r_1 + kB`, the debt comes within `r_1` of 0 with probability at most `((r_1 + kB)/r)^α`, whatever happens at the hidden digits.
+   * For `0 < α < min_h tr/λ_max − 2` there is `r_1` such that, from debt `x` with `|x|_(Q^(−1)) = r > r_1 + kB`, the debt comes within `r_1` of 0 with probability at most `((r_1 + kB)/r)^α`, uniformly in the hidden state at block starts.
    * Every non-absorbed state is absorbed with probability `< 1`. In particular `y` and `y + e` merge at equal time with probability `< 1` for every `e ≠ 0`.
 2'. **Adaptive blocks (PROVED).** Let `K0 ≤ K`. Take a partition of `H_K × Z/d^K` into residue classes, each the set of states lying over some `h ∈ H_s × Z/d^s` with `K0 ≤ s ≤ K` (the leaves of a refinement tree). Use block length `s` from states in that class. If (i) holds and one form `Q` balances every nonzero leaf block matrix `A_s(h)`, the conclusions of statement 2 hold with `kB` replaced by `KB`.
 
@@ -70,8 +77,12 @@ related:
    * "Impossible" means some coupling covariance has rank ≤ 2, so no one-step form exists (`tr ≤ rank·λ_max`).
    * The `Z_5` map `(1, 2, 3, 7, 1)` is the rank-3 representative of HYP-9244's evidence table (`q` frozen at 0.6855).
 3'. **Adaptive certificates for the coupling group `{±1}` (FINITE-EXACT; six maps; `block_adaptive.py`; sticky reflections from `sticky_reflections.py`).**
-   * The six `Z_5` maps below have coupling group `{±1}` and a sticky reflection (Reading). None has a fixed-length certificate for `k ≤ 4` (optimal margins at `k = 4` from −0.045 to −0.107).
-   * Each has an exactly verified adaptive certificate with `K0 = 3`, `K = 5`. A level-`s` node is refined when its margin under a pilot form is below 0.02. "Refined" counts the level-3 and level-4 nodes replaced by their 25 lifts.
+   * The six `Z_5` maps below have coupling group `{±1}` and a sticky reflection (Reading).
+   * **None has a fixed-length certificate for `k ≤ 4`**, exactly (audit H):
+     * at `k = 1` some block has rank 1 for each map, and at `k = 2` some block of `(1, 6, 11, 11, 4)` has rank 2;
+     * every other pair (map, `k ≤ 4`) has a dual certificate: rational `z_l` and weights `c_l ≥ 0` with `Σ c_l [A_l − 2(A_l z_l)(A_l z_l)^T/(z_l^T A_l z_l)]` negative definite. No form satisfies it, because a balancing `P = Q^(−1)` would make every `⟨A_l − 2(A_l z_l)(A_l z_l)^T/(z_l^T A_l z_l), P⟩` positive (`audit_H/dual_certificates.json`, re-checked by `audit_H/l_verify_certs.py`).
+   * The optimal margins at `k = 4` (−0.045 to −0.107) are NUMERICAL.
+   * Each has an exactly verified adaptive certificate with `K0 = 3`, `K = 5`. A level-`s` node is refined when its margin under a pilot form is below 0.02. "Refined" counts the level-3 and level-4 nodes replaced by their 25 lifts. Audit H re-verified all six with an independent exact greedy refinement.
    * Constants are standard (`r_i = −m_i i mod 5`).
 
    | multipliers | `Λ` | sticky reflection (rank) | refined (level 3, level 4) | distinct leaf blocks | form `Q` |
@@ -86,7 +97,7 @@ related:
 4. **Every fixed-length certificate must balance the translation family; none exists on `Z_4`, but an adaptive one does (PROVED + FINITE-EXACT).**
    * For `b ≢ 0 (mod d)` and every `k`, the hidden state `(M, e) ≡ (1, b d^(k−1))` runs `k − 1` identity couplings: `M` is unchanged, and `e` loses one factor of `d` per step. It then takes one translation by `b·Π m̄_(j_s)`. So `A_k = Σ_paths D(j ↦ j + bΠ m̄_(j_s))`.
    * Hence a fixed-length certificate, for any `k`, must balance these combinations of translation covariances. For prime `d ≥ 5` and independent multipliers of rank ≥ 3, THM-4609 (4) shows they can be balanced.
-   * On `Z_4` with multipliers `(1, 3, 5, 7)` (rank 3, contracting, `Λ = −0.223`) and `b = 2`: `2·Π m̄ ≡ 2 (mod 4)`, so `A_k = 4^(k−1) D(j ↦ j + 2)`, which has rank 2 for every `k`. Checked exactly for `k ≤ 5` (`d4_obstruction.py`).
+   * On `Z_4` with multipliers `(1, 3, 5, 7)` (rank 3, contracting, `Λ = −0.223`) and `b = 2`: `2·Π m̄ ≡ 2 (mod 4)`, so `A_k = 4^(k−1) D(j ↦ j + 2)`, which has rank 2 for every `k` (proved by the identity-run computation; checked exactly for `k ≤ 5` in `d4_obstruction.py`, and to `k = 8` by audit H).
    * So no fixed-length certificate exists there.
    * **An adaptive certificate does exist** (`block_adaptive_Z4.out`): `K0 = 1`, `K = 6`, form `[[48,−13,−21],[−13,50,−14],[−21,−14,48]]`, with 2,529,032 distinct leaf blocks verified exactly.
      * With `K0 = 1`, the identity coupling `(1, 0) mod 4` is a leaf of length one with a zero block. So every block restarts after an identity run: a built-in time change.
@@ -96,13 +107,13 @@ related:
    * Population: the 50,268 contracting maps with `m_0 = 1`, multipliers in `[1, 39]` prime to 5, standard constants, rank ≥ 3, and coupling group `{±1}` or all units. These are exactly the maps that one-step forms cannot reach. By class (rank, `|G|`): (3, 2): 2,652; (3, 4): 44,208; (4, 4): 3,408.
    * A seeded random sample of six per class was taken. **All 18 are certified.**
      * The six rank-4 maps certify with fixed `k = 2`, five of them by the same form `5I − J`.
-     * The twelve rank-3 maps need adaptive lengths 3–5.
+     * The twelve rank-3 maps were certified with adaptive lengths 3–5. Fixed lengths `k ≥ 3` were not tried in this version. One of them, `(1, 1, 28, 11, 7)`, also has a fixed `k = 4` certificate, `Q = [[23,−4,−8],[−4,20,−4],[−8,−4,24]]` (census version 1; verified exactly by audit H, margin 0.0053).
    * The sample is too small to estimate a failure rate; the conclusion is only that no sampled map resisted.
 6. **Audit F's numerical rank-3 evidence becomes proof (FINITE-EXACT; `auditF_maps_cert.py`).** HYP-9244's audit F measured frozen merge probabilities for several rank-3 maps. Beyond those covered above (`Z_5` (1, 2, 3, 7, 1), (1, 2, 3, 7, 11), `Z_4` (1, 3, 5, 7)) and by THM-4609 (`Z_5` (1, 6, 11, 16, 1)), three more now have adaptive certificates, with their constants as in audit F:
    * `Z_5` (1, 8, 3, 7, 12), `r = (0, −3, 4, 4, 2)`, `Λ = −0.088`: lengths 2–5, 1,164,894 leaf blocks, `Q = [[43,0,−11],[0,50,−16],[−11,−16,27]]`;
    * `Z_5` (1, 2, 3, 7, 6), `r = (0, 3, 4, 4, 1)`, `Λ = −0.504`: lengths 2–5, 19,481 leaf blocks, `Q = [[40,5,−9],[5,34,−11],[−9,−11,20]]`.
 
-   * `Z_7` (1, 2, 3, 5, 1, 1, 1), `r = (0, 5, 1, 6, 3, 2, 1)`, `Λ = −1.460`: lengths 3–5, 1,258,461 leaf blocks, `Q = [[49,−5,−21],[−5,32,−6],[−21,−6,50]]` (`auditF_maps_cert_Z7_k5.out`; lengths 2–4 do not suffice, leaf optimum −0.036, `auditF_maps_cert_Z7.out`). It differs from the certified `(1, 1, 1, 1, 2, 3, 5)` by a rotation with standard constants, which is not a conjugacy.
+   * `Z_7` (1, 2, 3, 5, 1, 1, 1), `r = (0, 5, 1, 6, 3, 2, 1)`, `Λ = −1.460`: lengths 3–5, 1,258,461 leaf blocks, `Q = [[49,−5,−21],[−5,32,−6],[−21,−6,50]]` (`auditF_maps_cert_Z7_k5.out`). The pilot construction with lengths 2–4 did not certify it (`auditF_maps_cert_Z7.out`). That does not exclude a certificate with lengths ≤ 4, because refinement is not monotone. It differs from the certified `(1, 1, 1, 1, 2, 3, 5)` by a rotation with standard constants, which is not a conjugacy.
    * So every rank ≥ 3 map in audit F's numerical evidence for HYP-9244 is now proved to fail to coalesce.
 
 ## Proofs
@@ -137,7 +148,7 @@ related:
 **3.**
 * `block_lmi2.py` computes all `A_k(h)` exactly in `int64` (bounds asserted) and keeps the distinct nonzero ones.
 * The form maximizing the margin is quasi-concave to find: in `P = Q^(−1)`, each constraint `λ_max(A^(1/2) P A^(1/2)) ≤ ½(1 − μ) tr(AP)` is convex. The script finds it by the central-cut ellipsoid method on an active set, re-checked on all matrices.
-* The form is rounded to integers and verified exactly. With `S' = tr(A adj Q) Q − 2 det(Q) A` (integer entries below `2^50`), the first two leading minors are integers. The third is evaluated in `float64` with an explicit bound of `48ε` times the sum of the absolute expansion terms; no minor needed the integer fallback.
+* The form is rounded to integers and verified exactly. With `S' = tr(A adj Q) Q − 2 det(Q) A` (integer entries below `2^50`), the first two leading minors are integers. For rank 3 the third is evaluated in `float64` with an explicit bound of `48ε` times the sum of the absolute expansion terms; no minor needed the integer fallback. For rank 4 the 3×3 and 4×4 minors are computed in exact integers.
 * Property (i) holds for independent multipliers of rank ≥ 2 on prime `d`, by THM-4609 (1): a coupling all of whose roots vanish fixes every non-unit position, and a non-identity affine map has at most one fixed point. ∎
 
 **4.**
@@ -147,21 +158,24 @@ related:
 
 ## Reading
 
+* **What is classical and what is new.**
+  * The probabilistic tools are classical: multi-step and state-dependent Lyapunov drift (Malyshev–Men'shikov; Fayolle–Malyshev–Menshikov; Meyn–Tweedie), Lamperti's `|x|^(−α)` method in many dimensions (Menshikov–Popov–Wade; Georgiou–Menshikov–Mijatović–Wade), the trace criterion (Peres–Popov–Sousi), and Lyapunov functions for walks with internal states (Comets–Menshikov–Popov; Georgiou–Wade, with internal states not assumed Markov).
+  * The new content is arithmetic: the exact recursion for block covariances over hidden residues, the certificates, adaptive refinement over residue classes, sticky reflections, and the `Z_4` identity-run obstruction.
 * **The least requirement for rank ≥ 3.**
   * HYP-9244's premise asks the coupling state to equidistribute independently of the debt. A block certificate asks much less, and finitely: from every hidden state, the next `k` couplings must spread their covariance enough that one fixed form sees every block as "at least three-dimensional in trace".
-  * No randomness of the hidden digits, no mixing rate and no independence enter. The hidden state may be adversarial.
+  * The fresh digits are i.i.d. uniform (the Terras property). But no mixing of the hidden state enters, and no independence of it from the debt: `M mod d^k` is even a function of the debt, so only `e` is free. The drift bound holds uniformly in the hidden state at block starts.
 * **Why longer blocks help, and what is sticky.**
   * In `Z_5 (1, 2, 3, 7, 1)` the residues `(1, 2, 3, 2, 1)` are mirror-symmetric. So the rank-one involution `j ↦ 4 − j` always maps to another involution (`a' = 4` for every digit), and only the hidden digits decide whether it repeats.
-  * The optimal margin is −0.275, −0.091, +0.0136 for `k = 2, 3, 4` as such runs get diluted. A random local search had reported −0.078 at `k = 4`; the quasi-concave optimum is what counts.
-* **Adaptive blocks spend length only where it is needed.**
+  * The optimal margin climbs as such runs get diluted. Audit H bracketed it in (−0.27465, −0.27462], (−0.09107, −0.09106] and (+0.01354, +0.01438] for `k = 2, 3, 4`; the upper ends at `k = 2, 3` are proved by dual certificates, so those lengths have no certificate. A random local search had reported −0.078 at `k = 4`; the quasi-concave optimum is what counts.
+* **Adaptive blocks spend length only where a pilot form sees trouble.**
   * A sticky reflection makes a fixed block length pay everywhere for the few hidden states that keep the coupling degenerate.
-  * A refinement tree lengthens the blocks only there. For the six `{±1}` maps of 3′ (6,250 hidden states mod `5^3`), 9–20% of the level-3 states needed longer blocks, and 13–24% of their lifts were refined again.
+  * A refinement tree lengthens the blocks only there. For the six `{±1}` maps of 3′ (6,250 hidden states mod `5^3`), the pilot rule refined 9–20% of the level-3 states and 13–24% of their lifts. With the final forms, an exact greedy refinement refines only 4.9–10.9% of the level-3 states and 1.0–9.3% of their lifts (audit H).
   * The rule "refine where the margin is small" is chosen before the final form is optimized, so the certificate is a finite exact object: a partition, an integer form, and one inequality per leaf.
-* **The arithmetic of the hidden digits is essential.**
+* **The arithmetic of the hidden digits seems essential (NUMERICAL).**
   * Replace the hidden digits by an adversary who picks the translation part of every next coupling, with identity steps deleted. A certificate would then depend on the multipliers alone and hold for every choice of constants.
-  * It fails for every map tested (`adversarial_cert.out`), even `Z_7` (1, 1, 1, 1, 2, 3, 5), which has no sticky reflection. There the adversary keeps the rank-one reflection `j ↦ 3 − j` on 5 of 7 branches, and the badness grows linearly in `k`.
-  * The certificates use the actual pair-chain arithmetic.
+  * With each map's statement-3 form, the adversarial bound stays positive for every `k ≤ 8` (`adversarial_cert.out`), even for `Z_7` (1, 1, 1, 1, 2, 3, 5), which has no sticky reflection. There the adversary keeps the rank-one reflection `j ↦ 3 − j` on 5 of 7 branches, and the badness grows linearly in `k`.
+  * Only one form per map was tried, so this does not exclude every form. It is evidence, not proof, that the certificates need the actual pair-chain arithmetic.
 * **What a certificate cannot do.**
   * A certificate proves transience, never recurrence, so it says nothing about rank 2.
   * A fixed-length certificate needs (statement 4) every translation family to be balanceable on its own. That fails on `Z_4`, where the translation by 2 has rank 2. An adaptive certificate with base length 1, which turns identity steps into zero blocks (a built-in time change), avoids the issue.
-* **Within HYP-9244.** The rank ≥ 3 row is now proved for 27 maps with even-order coupling groups, where no one-step argument exists. They include its evidence-table representative, a composite base and dependent multipliers. The open question becomes a concrete, semi-decidable one: does every contracting map of rank ≥ 3 have an adaptive block certificate? Every map tested has one.
+* **Within HYP-9244.** The rank ≥ 3 row is now proved for 27 maps with even-order coupling groups, where no one-step argument exists. They include its evidence-table representative, a composite base and dependent multipliers. For a single map, the existence of a certificate is semi-decidable: each finite check is a semialgebraic feasibility problem, so search succeeds if one exists. Whether every contracting map of rank ≥ 3 has one is a universal question, not semi-decidable as stated. Every map tested has one.

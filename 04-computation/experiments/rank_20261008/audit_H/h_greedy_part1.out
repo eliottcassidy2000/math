@@ -1,0 +1,22 @@
+Z4_1357: d = 4, m = [1, 3, 5, 7], r = [0, 1, 2, 3], rank 3, Lambda = -0.2228, |H_s| = [2, 8, 32, 128, 512, 2048], form [[48, -13, -21], [-13, 50, -14], [-21, -14, 48]], levels 1..6
+   property (i) True; greedy exact refinement: nodes refined per level [7, 50, 400, 1200, 1819] (levels 1..5); level-6 nodes not balanced: 0; zero-block leaves 1; leaves cover 8388608 of 8388608 states mod d^6: True; 26004 distinct nonzero leaf blocks, ALL exactly balanced: True; float margin of the form over these leaves +0.00002  [0.3s]
+Z5_1_6_4_31_1: d = 5, m = [1, 6, 4, 31, 1], r = [0, 4, 2, 2, 1], rank 3, Lambda = -0.2870, |H_s| = [2, 10, 50, 250, 1250], form [[256, -31, -111], [-31, 191, -60], [-111, -60, 243]], levels 3..5
+   property (i) True; greedy exact refinement: nodes refined per level [632, 1463] (levels 3..4); level-5 nodes not balanced: 0; zero-block leaves 1; leaves cover 3906250 of 3906250 states mod d^5: True; 28428 distinct nonzero leaf blocks, ALL exactly balanced: True; float margin of the form over these leaves +0.00002  [0.2s]
+        0.62 real         0.49 user         0.07 sys
+           203309056  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               19836  page reclaims
+                  17  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                 236  voluntary context switches
+                 899  involuntary context switches
+          6915992185  instructions retired
+          1822175877  cycles elapsed
+           133383744  peak memory footprint

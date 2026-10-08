@@ -1,0 +1,5 @@
+Z5_1_1_28_11_7_k4: d = 5, m = [1, 1, 28, 11, 7], r = [0, 4, 4, 2, 2], residues [1, 1, 3, 1, 2], Lambda = -0.0742, rank 3, independent configuration True (repeated value 1, 3 others), coords den 1
+   coupling group [1, 2, 3, 4]; property (i) True (zero-root non-identity couplings []); min one-step coupling rank 1 at [(4, 1)]
+   form Q = [[23, -4, -8], [-4, 20, -4], [-8, -4, 24]], det 8752, leading minors [23, 444, 8752]
+   k = 4: 312500 states (|H_k| = 500), zero blocks at [(1, 0)] (1 zero), 156556 distinct nonzero blocks, min exact rank 3
+   EXACT balance by Q of every nonzero block: True (0 failures); float margin of this Q +0.00529, alpha_max of this Q 0.0106  [1.4s]

@@ -1,0 +1,9 @@
+  coupling (1,1): strict
+  coupling (2,0): EQUALITY (PSD singular)
+  coupling (2,1): EQUALITY (PSD singular)
+  coupling (3,0): EQUALITY (PSD singular)
+  coupling (3,1): EQUALITY (PSD singular)
+  coupling (4,0): EQUALITY (PSD singular)
+  coupling (4,1): EQUALITY (PSD singular)
+m = [1, 2, 3, 7, 11]: 5I - J certifies k = 2 for 2950 of 3125 lifts r mod 25 (standard constants: True)  [9.2s]
+m = [1, 6, 11, 7, 2]: 5I - J certifies k = 2 for 3000 of 3125 lifts r mod 25 (standard constants: True)  [9.3s]

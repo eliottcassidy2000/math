@@ -1,0 +1,30 @@
+Z5_1_4_1_11_34: m = [1, 4, 1, 11, 34], r = [0, 1, 3, 2, 4], residues [1, 4, 1, 1, 4], Lambda = -0.1473, rank 3, coords [(0, 0, 0), (1, 0, 0), (0, 0, 0), (0, 1, 0), (0, 0, 1)] (den 1), G = [1, 4], |H_s| s=1..5: [2, 10, 50, 250, 1250], property (i) True, sticky reflections (b, rank) [(0, 2)]
+   fixed k = 1: 7 distinct nonzero blocks, min exact rank 1, zero states 1, blocks balanced by the 3' form: 1/7
+   fixed k = 2: 121 distinct nonzero blocks, min exact rank 3, zero states 1, blocks balanced by the 3' form: 71/121
+   fixed k = 3: 3144 distinct nonzero blocks, min exact rank 3, zero states 1, blocks balanced by the 3' form: 2984/3144
+   fixed k = 4: 78394 distinct nonzero blocks, min exact rank 3, zero states 1, blocks balanced by the 3' form: 78350/78394
+   greedy exact refinement with the 3' form: refined per level [304, 77] (level-5 nodes not balanced: 0); leaves cover 3906250 of 3906250 level-5 states: True; 7761 distinct nonzero leaf blocks, all exactly balanced; float margin of the form over the leaves +0.00013  [0.5s]
+Z5_1_6_11_11_4: m = [1, 6, 11, 11, 4], r = [0, 4, 3, 2, 4], residues [1, 1, 1, 1, 4], Lambda = -0.0147, rank 3, coords [(0, 0, 0), (1, 0, 0), (0, 1, 0), (0, 1, 0), (0, 0, 1)] (den 1), G = [1, 4], |H_s| s=1..5: [2, 10, 50, 250, 1250], property (i) True, sticky reflections (b, rank) [(3, 2)]
+   fixed k = 1: 7 distinct nonzero blocks, min exact rank 1, zero states 1, blocks balanced by the 3' form: 0/7
+   fixed k = 2: 123 distinct nonzero blocks, min exact rank 2, zero states 1, blocks balanced by the 3' form: 76/123
+   fixed k = 3: 3119 distinct nonzero blocks, min exact rank 3, zero states 1, blocks balanced by the 3' form: 2913/3119
+   fixed k = 4: 78328 distinct nonzero blocks, min exact rank 3, zero states 1, blocks balanced by the 3' form: 77899/78328
+   greedy exact refinement with the 3' form: refined per level [393, 826] (level-5 nodes not balanced: 0); leaves cover 3906250 of 3906250 level-5 states: True; 17820 distinct nonzero leaf blocks, all exactly balanced; float margin of the form over the leaves +0.00002  [0.5s]
+Z5_1_1_6_39_11: m = [1, 1, 6, 39, 11], r = [0, 4, 3, 3, 1], residues [1, 1, 1, 4, 1], Lambda = -0.0388, rank 3, coords [(0, 0, 0), (0, 0, 0), (1, 0, 0), (0, 1, 0), (0, 0, 1)] (den 1), G = [1, 4], |H_s| s=1..5: [2, 10, 50, 250, 1250], property (i) True, sticky reflections (b, rank) [(1, 1)]
+   fixed k = 1: 7 distinct nonzero blocks, min exact rank 1, zero states 1, blocks balanced by the 3' form: 0/7
+   fixed k = 2: 123 distinct nonzero blocks, min exact rank 3, zero states 1, blocks balanced by the 3' form: 58/123
+   fixed k = 3: 3142 distinct nonzero blocks, min exact rank 3, zero states 1, blocks balanced by the 3' form: 2787/3142
+   fixed k = 4: 78379 distinct nonzero blocks, min exact rank 3, zero states 1, blocks balanced by the 3' form: 77691/78379
+   greedy exact refinement with the 3' form: refined per level [682, 1352] (level-5 nodes not balanced: 0); leaves cover 3906250 of 3906250 level-5 states: True; 27637 distinct nonzero leaf blocks, all exactly balanced; float margin of the form over the leaves +0.00000  [0.6s]
+Z5_1_14_4_1_29: m = [1, 14, 4, 1, 29], r = [0, 1, 2, 2, 4], residues [1, 4, 4, 1, 4], Lambda = -0.1309, rank 3, coords [(0, 0, 0), (1, 0, 0), (0, 1, 0), (0, 0, 0), (0, 0, 1)] (den 1), G = [1, 4], |H_s| s=1..5: [2, 10, 50, 250, 1250], property (i) True, sticky reflections (b, rank) [(3, 1)]
+   fixed k = 1: 7 distinct nonzero blocks, min exact rank 1, zero states 1, blocks balanced by the 3' form: 0/7
+   fixed k = 2: 121 distinct nonzero blocks, min exact rank 3, zero states 1, blocks balanced by the 3' form: 57/121
+   fixed k = 3: 3116 distinct nonzero blocks, min exact rank 3, zero states 1, blocks balanced by the 3' form: 2768/3116
+   fixed k = 4: 78348 distinct nonzero blocks, min exact rank 3, zero states 1, blocks balanced by the 3' form: 77656/78348
+   greedy exact refinement with the 3' form: refined per level [677, 1369] (level-5 nodes not balanced: 0); leaves cover 3906250 of 3906250 level-5 states: True; 27722 distinct nonzero leaf blocks, all exactly balanced; float margin of the form over the leaves +0.00001  [0.6s]
+Z5_1_4_31_1_6: m = [1, 4, 31, 1, 6], r = [0, 1, 3, 2, 1], residues [1, 4, 1, 1, 1], Lambda = -0.2870, rank 3, coords [(0, 0, 0), (1, 0, 0), (0, 1, 0), (0, 0, 0), (0, 0, 1)] (den 1), G = [1, 4], |H_s| s=1..5: [2, 10, 50, 250, 1250], property (i) True, sticky reflections (b, rank) [(2, 2)]
+   fixed k = 1: 7 distinct nonzero blocks, min exact rank 1, zero states 1, blocks balanced by the 3' form: 1/7
+   fixed k = 2: 128 distinct nonzero blocks, min exact rank 3, zero states 1, blocks balanced by the 3' form: 78/128
+   fixed k = 3: 3138 distinct nonzero blocks, min exact rank 3, zero states 1, blocks balanced by the 3' form: 2950/3138
+   fixed k = 4: 78388 distinct nonzero blocks, min exact rank 3, zero states 1, blocks balanced by the 3' form: 78090/78388
+   greedy exact refinement with the 3' form: refined per level [360, 588] (level-5 nodes not balanced: 0); leaves cover 3906250 of 3906250 level-5 states: True; 14553 distinct nonzero leaf blocks, all exactly balanced; float margin of the form over the leaves +0.00002  [0.5s]

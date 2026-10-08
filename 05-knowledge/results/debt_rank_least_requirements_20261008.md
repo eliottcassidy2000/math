@@ -1,6 +1,6 @@
 # The debt-lattice rank with the least proof requirements: every expanding map escapes, Z_2 is classified, and one-step and block Lamperti forms make debt walks of rank three or more transient (THM-4607, THM-4608, THM-4609, THM-4611)
 
-Session `mac-mini-2026-10-08-rank`, 2026-10-08. Independently audited by audit G (CORRECT WITH FIXES; MISTAKE-590). Sections 3.4, 4 and 5 were added after the audit and are not independently audited.
+Session `mac-mini-2026-10-08-rank`, 2026-10-08. Independently audited by audit G (CORRECT WITH FIXES; MISTAKE-590). Sections 3.4, 3.5 (non-translation rows), 4, 5 and 6b were added after audit G and audited by audit H (CORRECT WITH FIXES, minor; MISTAKE-591; report in `audit_H/REPORT.md`, which re-verifies every certificate with independent code).
 
 Brief from the owner: "keep investigating the structure of the debt lattice rank and coming up with creative new angles to satisfy the least proof requirements".
 
@@ -118,7 +118,7 @@ For prime `d`, independent multipliers of rank `ρ`, and a coupling `π ≠ id`:
 | odd-order coupling group | rank 5 | `λ_max < 4 ≤ ρ − 1 ≤ ½ tr` |
 | every map | rank 6 | `λ_max ≤ 4 < 5 ≤ ρ − 1 ≤ ½ tr` |
 
-- `rank_hierarchy.py` checks every unit set of each rank for `d = 7, 11, 13` exactly. The standard form fails somewhere at ranks 3, 4 and 5 respectively, so the thresholds are sharp for it.
+- `rank_hierarchy.py` checks ranks 3–8 and every unit set up to translation for `d = 7, 11, 13` exactly; audit H checked every unit set and rank for `d = 7, 11`. At these `d` the standard form fails somewhere at ranks 3, 4 and 5 respectively, so the thresholds are sharp for it. For Fermat primes the odd-order class is just the translations.
 - Below the thresholds explicit forms can exist (`squares_group_examples.py`, exact): for `G` the squares, rank 4, `Q = 8I − J` on `Z_7` (units `{0, 1, 2}`), and integer forms on `Z_11` (units `{0..6}` and `{0..5, 7}`).
 - One-step balance needs every coupling covariance to have rank ≥ 3 (`tr Σ ≤ rank·λ_max`). Involutions `j ↦ −j + b` have rank ≤ `(d − 1)/2`, so on `Z_5` every map with `−1 ∈ G` (every non-translation map there) is out of reach of one-step forms. `coupling_groups.out` lists searches by subgroup; its "no" entries are proofs only when the minimal covariance rank is ≤ 2. Its `|G| = 1` "no" at `d = 7`, units `(0, 1, 2, 3)`, is a search miss: `Q_AP` balances that configuration exactly.
 
@@ -165,14 +165,14 @@ Audit G: `0.140 ± 0.008` at `T = 16384` from offset 1, and ten other offsets fl
 | `Z_5` (1, 1, 1, 1, 6) | 6 < 25 | −1.251 | 0.79–1.02 |
 | `Z_3` (1, 4, 4) | — | −0.174 | 2.5 rising to 7.9, 9.1, 8.1 at `T = 1024, 4096, 16384` |
 
-All four are consistent with the `T^(−1/2)` tail. The sketch route (THM-4581's architecture with a level weight `s^|k|`) works for every `μ`: at `s = 1` the per-step weighted moment equals `κ(θ) < 1` for every lag, so `s` just below 1 leaves room (audit G). An earlier version of this note restricted the route to `μ ≤ d²`; that was wrong.
+All four are consistent with the `T^(−1/2)` tail. The sketch route (THM-4581's architecture with a level weight `s^|k|`) should work for every `μ`; THM-4610 (opus-2026-10-08-S22) carries it out for the base-p Collatz maps: at `s = 1` the per-step weighted moment equals `κ(θ) < 1` for every lag, so `s` just below 1 leaves room (audit G). An earlier version of this note restricted the route to `μ ≤ d²`; that was wrong.
 
 ## 6. What remains (the minimal open requirements)
 
 1. **Rank 1, `d ≥ 3`.** Write the THM-4581 transfer for two-valued translation-only maps (section 5), then general rank-one maps.
 2. **Rank 2.** The critical two-dimensional case. The two lag families `{2I − E, 2I}` cannot share an isotropizing form. Recurrence needs decorrelation between the lag process and the debt direction.
-3. **Ranks 3–5 with an even-order coupling group** (all non-translation maps on `Z_5`, such as `Z_5` (1, 2, 3, 7, 1)). One-step forms are impossible when an involution's covariance has rank ≤ 2; a multi-step form must use how the coupling state moves.
-4. **Dependent multipliers and composite `d`** (e.g. `d = 4` with multipliers 1, 3, 5, 7, contracting of rank 3).
+3. **Ranks 3–5 with an even-order coupling group** (all non-translation maps on `Z_5`). One-step forms are impossible when an involution's covariance has rank ≤ 2. Block certificates (section 6b, THM-4611) settle such maps one at a time, 27 so far, including `Z_5` (1, 2, 3, 7, 1). A general theorem is open; the full-rank `Z_5` case looks within reach.
+4. **Dependent multipliers and composite `d`.** These are covered map by map, e.g. `Z_4` (1, 3, 5, 7), which has an adaptive but no fixed-length certificate, and `Z_5` (1, 6, 11, 11, 4). A general statement is open.
 5. **Accessibility.** Is every inaccessible start detected by a cocycle invariant mod some `ℓ^k`?
 
 ## 6b. Block certificates for degenerate couplings (THM-4611; added after audit G, not yet independently audited)
@@ -200,12 +200,13 @@ The second row is HYP-9244's rank-3 evidence map. Its `q` freezes at 0.6855 nume
 **Sticky reflections.**
 - If the residue pattern `m̄` is symmetric under `j ↦ b − j`, the reflection coupling `(−1, b)` always maps to another reflection (`a' = −m̄_(b−j)/m̄_j = −1` for every digit). Only the hidden digits decide whether `b` repeats.
 - In `Z_5` (1, 2, 3, 7, 1) the residues `(1, 2, 3, 2, 1)` are symmetric under `b = 4`, and that reflection has a rank-one covariance. The optimal margin climbs −0.275, −0.091, +0.0136 for `k = 2, 3, 4` as such runs are diluted.
-- On `Z_5` every subset of positions is symmetric under some reflection, so every map with coupling group `{±1}` has a sticky reflection, often of rank one or two.
+- On `Z_5` every subset of positions is symmetric under some reflection, so every map with coupling group `{±1}` has a sticky reflection. Its covariance has rank 1 or 2, since reflection covariances on `Z_5` have rank ≤ 2 and are nonzero under (i). This is special to `Z_5`: 28 of the 128 subsets of `Z/7` and 1,364 of the 2,048 subsets of `Z/11` are symmetric under no reflection (audit H).
 
 **Adaptive blocks.**
 - A block length chosen by the current hidden state is a stopping rule. So it is enough to cover the hidden states by a refinement tree whose leaves (residue classes mod `d^s`, `K0 ≤ s ≤ K`) all have balanced blocks for one form.
 - Refine only where a pilot form sees a small margin, then optimize the form over the leaves, then verify each leaf exactly (`block_adaptive.py`; full tables are stored only below the top level, and top-level leaf blocks come from the recursion).
-- This certifies all five sampled `Z_5` maps with coupling group `{±1}` that fail every fixed `k ≤ 4` (THM-4611 3′). Block lengths are 3–5, and 9–20% of the 6,250 level-3 hidden states need longer blocks.
+- This certifies all six sampled `Z_5` maps with coupling group `{±1}`. None of them has a fixed-length certificate for `k ≤ 4`; audit H proved that exactly with rank arguments and dual certificates (THM-4611 3′). Block lengths are 3–5.
+- The pilot rule refined 9–20% of the 6,250 level-3 hidden states. With the final forms, an exact greedy refinement refines only 4.9–10.9% (audit H), so those percentages measure the pilot, not a necessity.
 
 | multipliers | `Λ` | sticky reflection (rank) | refined (level 3, level 4) | leaf blocks | form |
 |---|---|---|---|---|---|
@@ -214,6 +215,7 @@ The second row is HYP-9244's rank-3 evidence map. Its `q` freezes at 0.6855 nume
 | `(1, 1, 6, 39, 11)` | −0.039 | `j ↦ 1 − j` (1) | 1,121, 6,737 | 97,657 | `[[19,−4,−9],[−4,15,−3],[−9,−3,20]]` |
 | `(1, 14, 4, 1, 29)` | −0.131 | `j ↦ 3 − j` (1) | 1,218, 6,621 | 97,318 | `[[46,−22,−9],[−22,50,−8],[−9,−8,35]]` |
 | `(1, 4, 31, 1, 6)` | −0.287 | `j ↦ 2 − j` (2) | 601, 2,218 | 37,045 | `[[30,−12,−5],[−12,32,−7],[−5,−7,25]]` |
+| `(1, 6, 4, 31, 1)` | −0.287 | `j ↦ 4 − j` (1) | 1,014, 5,159 | 77,493 | `[[256,−31,−111],[−31,191,−60],[−111,−60,243]]` |
 
 **Identity runs force the translation family.** The hidden state `(M, e) ≡ (1, b d^(k−1))` runs `k − 1` identity couplings and then one translation. So every certificate must balance the translation covariances on their own (THM-4609 (4) does this for prime `d ≥ 5`). On `Z_4` (1, 3, 5, 7) the translation by 2 has rank 2, so no fixed-length certificate exists for any `k` (`d4_obstruction.out`, exact for `k ≤ 5`). **An adaptive certificate exists**, with lengths 1–6 and form `[[48,−13,−21],[−13,50,−14],[−21,−14,48]]` over 2,529,032 leaf blocks (`block_adaptive_Z4.out`). With base length 1 the identity coupling is a one-step leaf with a zero block, so blocks restart after identity runs: the time change comes for free. The argument never uses primality of `d`.
 
@@ -222,10 +224,10 @@ The second row is HYP-9244's rank-3 evidence map. Its `q` freezes at 0.6855 nume
 | class (rank, coupling group) | population | sampled | certified by |
 |---|---|---|---|
 | (3, `{±1}`) | 2,652 | 6 | adaptive lengths 3–5 (all six; fixed `k ≤ 4` fails for each, `block_census_fixed_k4.out`) |
-| (3, all units) | 44,208 | 6 | adaptive lengths 3–5 |
+| (3, all units) | 44,208 | 6 | adaptive lengths 3–5 (fixed `k ≥ 3` not tried; `(1, 1, 28, 11, 7)` also has a fixed `k = 4` certificate, verified by audit H) |
 | (4, all units) | 3,408 | 6 | fixed `k = 2`; five of six by the same form `5I − J` |
 
-**Audit F's evidence maps.** Audit F measured frozen merge probabilities for several rank ≥ 3 maps. **All of them are now proved non-coalescing**: `Z_5` (1, 2, 3, 7, 1), (1, 2, 3, 7, 11) and `Z_4` (1, 3, 5, 7) above; `Z_5` (1, 6, 11, 16, 1) by THM-4609; and by adaptive certificates `Z_5` (1, 8, 3, 7, 12) with `r = (0, −3, 4, 4, 2)` and (1, 2, 3, 7, 6) (`auditF_maps_cert_Z5.out`) and `Z_7` (1, 2, 3, 5, 1, 1, 1) (lengths 3–5, 1,258,461 leaf blocks, `auditF_maps_cert_Z7_k5.out`; lengths 2–4 do not suffice).
+**Audit F's evidence maps.** Audit F measured frozen merge probabilities for several rank ≥ 3 maps. **All of them are now proved non-coalescing**: `Z_5` (1, 2, 3, 7, 1), (1, 2, 3, 7, 11) and `Z_4` (1, 3, 5, 7) above; `Z_5` (1, 6, 11, 16, 1) by THM-4609; and by adaptive certificates `Z_5` (1, 8, 3, 7, 12) with `r = (0, −3, 4, 4, 2)` and (1, 2, 3, 7, 6) (`auditF_maps_cert_Z5.out`) and `Z_7` (1, 2, 3, 5, 1, 1, 1) (lengths 3–5, 1,258,461 leaf blocks, `auditF_maps_cert_Z7_k5.out`). The pilot construction with lengths 2–4 did not certify it (`auditF_maps_cert_Z7.out`), which does not exclude some other partition with lengths ≤ 4.
 
 **Why `5I − J` keeps appearing at rank 4 on `Z_5` (exact, `a4_metric.out`).** When all five log-multipliers are affinely independent, `5I − J` is the `S_5`-symmetric metric of the root lattice `A_4`. In it:
 - every translation covariance is strictly balanced (`½ tr = 1 > λ_max = 0.724`, in units of `1/d`);
@@ -236,7 +238,7 @@ By subadditivity of `λ_max − ½ tr`, a 2-step block is therefore strictly bal
 - A theorem for every full-rank `Z_5` map would need certificates uniform over residue classes of `m` and `r`. The deeper digits of `m` and `r` are fixed parameters, not adversarial ones, so they would join the hidden state.
 - That is a concrete next step, not done here.
 
-**The hidden-digit arithmetic is essential.** If an adversary chooses the translation part of every next coupling (identity steps deleted), a certificate would depend on the multipliers only. That fails for every map tested, even without sticky reflections: for `Z_7` (1, 1, 1, 1, 2, 3, 5) the adversary repeats a rank-one reflection on 5 of 7 branches (`adversarial_cert.out`).
+**The hidden-digit arithmetic seems essential (NUMERICAL).** If an adversary chooses the translation part of every next coupling (identity steps deleted), a certificate would depend on the multipliers only. With each map's certificate form, the adversarial bound stays positive for every `k ≤ 8`, even without sticky reflections: for `Z_7` (1, 1, 1, 1, 2, 3, 5) the adversary repeats a rank-one reflection on 5 of 7 branches (`adversarial_cert.out`). Only one form per map was tried, so this does not exclude every form.
 
 ## 7. Audit G and the corrections (MISTAKE-590)
 

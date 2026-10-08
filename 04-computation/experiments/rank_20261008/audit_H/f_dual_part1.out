@@ -1,0 +1,2 @@
+Z_5 m = [1, 2, 3, 7, 1], k = 2: 249 blocks; LP max-min s = -0.068844; margin at that P -0.37427; dual certificate with 6 cuts: sum c B negative definite EXACTLY: True (eigs [-0.068844, -0.068844, -0.068844])  [4.0s]
+Z_5 m = [1, 2, 3, 7, 1], k = 3: 6305 blocks; LP max-min s = -0.023684; margin at that P -0.11256; dual certificate with 6 cuts: sum c B negative definite EXACTLY: True (eigs [-0.023684, -0.023684, -0.023684])  [7.1s]

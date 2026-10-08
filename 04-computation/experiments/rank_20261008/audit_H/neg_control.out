@@ -1,0 +1,9 @@
+Q = [[20, -4, -8], [-4, 15, -3], [-8, -3, 20]], k = 2: 249 blocks, exact-balanced 135, float margin min -0.44581, exact/float agree away from 0: True, min rank 3, #rank<3 0
+Q = [[20, -4, -8], [-4, 15, -3], [-8, -3, 20]], k = 3: 6305 blocks, exact-balanced 6028, float margin min -0.14649, exact/float agree away from 0: True, min rank 3, #rank<3 0
+Q = [[20, -4, -8], [-4, 15, -3], [-8, -3, 20]], k = 4: 156557 blocks, exact-balanced 156557, float margin min +0.00303, exact/float agree away from 0: True, min rank 3, #rank<3 0
+Q = [[1, 0, 0], [0, 1, 0], [0, 0, 1]], k = 2: 249 blocks, exact-balanced 101, float margin min -0.64773, exact/float agree away from 0: True, min rank 3, #rank<3 0
+Q = [[1, 0, 0], [0, 1, 0], [0, 0, 1]], k = 3: 6305 blocks, exact-balanced 4064, float margin min -0.43391, exact/float agree away from 0: True, min rank 3, #rank<3 0
+Q = [[1, 0, 0], [0, 1, 0], [0, 0, 1]], k = 4: 156557 blocks, exact-balanced 130216, float margin min -0.30087, exact/float agree away from 0: True, min rank 3, #rank<3 0
+Q = [[20, -4, -8], [-4, 16, -3], [-8, -3, 20]], k = 2: 249 blocks, exact-balanced 136, float margin min -0.45501, exact/float agree away from 0: True, min rank 3, #rank<3 0
+Q = [[20, -4, -8], [-4, 16, -3], [-8, -3, 20]], k = 3: 6305 blocks, exact-balanced 5994, float margin min -0.15995, exact/float agree away from 0: True, min rank 3, #rank<3 0
+Q = [[20, -4, -8], [-4, 16, -3], [-8, -3, 20]], k = 4: 156557 blocks, exact-balanced 156543, float margin min -0.01118, exact/float agree away from 0: True, min rank 3, #rank<3 0

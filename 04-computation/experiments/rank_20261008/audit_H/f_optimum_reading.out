@@ -1,0 +1,2 @@
+Z_5 m = [1, 2, 3, 7, 1], k = 2: 249 blocks; optimal margin in (-0.27465, -0.27462]  (upper end exact by dual certificate, lower end float)  [50.9s]
+Z_5 m = [1, 2, 3, 7, 1], k = 3: 6305 blocks; optimal margin in (-0.09107, -0.09106]  (upper end exact by dual certificate, lower end float)  [95.0s]

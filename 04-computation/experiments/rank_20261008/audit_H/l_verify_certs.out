@@ -1,0 +1,20 @@
+m = [1, 2, 3, 7, 1], k = 2: 6 cuts, all blocks genuine: True, sum negative definite: True -> no fixed-length-2 certificate: True
+m = [1, 2, 3, 7, 1], k = 3: 6 cuts, all blocks genuine: True, sum negative definite: True -> no fixed-length-3 certificate: True
+m = [1, 4, 1, 11, 34], k = 2: 6 cuts, all blocks genuine: True, sum negative definite: True -> no fixed-length-2 certificate: True
+m = [1, 4, 1, 11, 34], k = 3: 6 cuts, all blocks genuine: True, sum negative definite: True -> no fixed-length-3 certificate: True
+m = [1, 4, 1, 11, 34], k = 4: 6 cuts, all blocks genuine: True, sum negative definite: True -> no fixed-length-4 certificate: True
+m = [1, 6, 11, 11, 4], k = 2: rank obstruction, min block rank 2
+m = [1, 6, 11, 11, 4], k = 3: 6 cuts, all blocks genuine: True, sum negative definite: True -> no fixed-length-3 certificate: True
+m = [1, 6, 11, 11, 4], k = 4: 6 cuts, all blocks genuine: True, sum negative definite: True -> no fixed-length-4 certificate: True
+m = [1, 1, 6, 39, 11], k = 2: 6 cuts, all blocks genuine: True, sum negative definite: True -> no fixed-length-2 certificate: True
+m = [1, 1, 6, 39, 11], k = 3: 6 cuts, all blocks genuine: True, sum negative definite: True -> no fixed-length-3 certificate: True
+m = [1, 1, 6, 39, 11], k = 4: 6 cuts, all blocks genuine: True, sum negative definite: True -> no fixed-length-4 certificate: True
+m = [1, 14, 4, 1, 29], k = 2: 6 cuts, all blocks genuine: True, sum negative definite: True -> no fixed-length-2 certificate: True
+m = [1, 14, 4, 1, 29], k = 3: 6 cuts, all blocks genuine: True, sum negative definite: True -> no fixed-length-3 certificate: True
+m = [1, 14, 4, 1, 29], k = 4: 6 cuts, all blocks genuine: True, sum negative definite: True -> no fixed-length-4 certificate: True
+m = [1, 4, 31, 1, 6], k = 2: 6 cuts, all blocks genuine: True, sum negative definite: True -> no fixed-length-2 certificate: True
+m = [1, 4, 31, 1, 6], k = 3: 6 cuts, all blocks genuine: True, sum negative definite: True -> no fixed-length-3 certificate: True
+m = [1, 4, 31, 1, 6], k = 4: 6 cuts, all blocks genuine: True, sum negative definite: True -> no fixed-length-4 certificate: True
+m = [1, 6, 4, 31, 1], k = 2: 6 cuts, all blocks genuine: True, sum negative definite: True -> no fixed-length-2 certificate: True
+m = [1, 6, 4, 31, 1], k = 3: 6 cuts, all blocks genuine: True, sum negative definite: True -> no fixed-length-3 certificate: True
+m = [1, 6, 4, 31, 1], k = 4: 6 cuts, all blocks genuine: True, sum negative definite: True -> no fixed-length-4 certificate: True

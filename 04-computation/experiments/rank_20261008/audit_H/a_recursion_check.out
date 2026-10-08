@@ -1,0 +1,28 @@
+Z_5 m = [1, 2, 3, 7, 1] r = [0, 3, 4, 4, 1] primes [2, 3, 7] rank 3
+   k = 2: 30 random exact states (+30 perturbed twins): S1 = S2 = A_k(h) and mean 0: all OK  [0.0s]
+   k = 3: 30 random exact states (+30 perturbed twins): S1 = S2 = A_k(h) and mean 0: all OK  [0.4s]
+   k = 4: 30 random exact states (+30 perturbed twins): S1 = S2 = A_k(h) and mean 0: all OK  [5.9s]
+Z_5 m = [1, 1, 2, 3, 7] r = [0, 4, 1, 1, 2] primes [2, 3, 7] rank 3
+   k = 2: 30 random exact states (+30 perturbed twins): S1 = S2 = A_k(h) and mean 0: all OK  [6.0s]
+   k = 3: 30 random exact states (+30 perturbed twins): S1 = S2 = A_k(h) and mean 0: all OK  [6.3s]
+   k = 4: 30 random exact states (+30 perturbed twins): S1 = S2 = A_k(h) and mean 0: all OK  [11.8s]
+Z_7 m = [1, 1, 1, 2, 3, 5, 11] r = [0, 6, 5, 1, 2, 3, 4] primes [2, 3, 5, 11] rank 4
+   k = 2: 30 random exact states (+30 perturbed twins): S1 = S2 = A_k(h) and mean 0: all OK  [11.8s]
+   k = 3: 30 random exact states (+30 perturbed twins): S1 = S2 = A_k(h) and mean 0: all OK  [13.0s]
+Z_4 m = [1, 3, 5, 7] r = [0, 1, 2, 3] primes [3, 5, 7] rank 3
+   k = 2: 30 random exact states (+30 perturbed twins): S1 = S2 = A_k(h) and mean 0: all OK  [13.0s]
+   k = 3: 30 random exact states (+30 perturbed twins): S1 = S2 = A_k(h) and mean 0: all OK  [13.1s]
+   k = 4: 30 random exact states (+30 perturbed twins): S1 = S2 = A_k(h) and mean 0: all OK  [13.8s]
+special states Z_5 m = [1, 2, 3, 7, 1] k = 2: 9 states, mismatches 0
+special states Z_5 m = [1, 2, 3, 7, 1] k = 3: 9 states, mismatches 0
+special states Z_5 m = [1, 2, 3, 7, 1] k = 4: 9 states, mismatches 0
+special states Z_5 m = [1, 2, 3, 7, 1] k = 5: 9 states, mismatches 0
+special states Z_5 m = [1, 2, 3, 7, 11] k = 2: 9 states, mismatches 0
+special states Z_5 m = [1, 2, 3, 7, 11] k = 3: 9 states, mismatches 0
+special states Z_5 m = [1, 2, 3, 7, 11] k = 4: 9 states, mismatches 0
+special states Z_5 m = [1, 2, 3, 7, 11] k = 5: 9 states, mismatches 0
+special states Z_4 m = [1, 3, 5, 7] k = 2: 8 states, mismatches 0
+special states Z_4 m = [1, 3, 5, 7] k = 3: 8 states, mismatches 0
+special states Z_4 m = [1, 3, 5, 7] k = 4: 8 states, mismatches 0
+special states Z_4 m = [1, 3, 5, 7] k = 5: 8 states, mismatches 0
+special states Z_4 m = [1, 3, 5, 7] k = 6: 8 states, mismatches 0

@@ -12,8 +12,9 @@ status: >
   audit G: 0.140 +- 0.008 at T = 16384 from e = 1, ten other offsets 0.045-0.274 flat; every orbit from n <= 20000 reaches one
   of four cycles); adversarial couplings (audit G: six adversaries, no late returns in rank 3). Independently audited 2026-10-08
   (audit G) for statements 1-4 and the translation-only examples: CORRECT WITH FIXES (PPS attribution, census count, the AP
-  equality claim, alpha values, wording); MISTAKE-590. Statement 5 (the hierarchy) and the non-translation examples in statement
-  6 were added after audit G and are not yet independently audited.
+  equality claim, alpha values, wording); MISTAKE-590. Statement 5 (the hierarchy), the non-translation examples in statement 6
+  and the "all m_i congruent mod d" setting were added after audit G and audited by audit H (2026-10-08): CORRECT (nits: scope of
+  the exact check, sharpness for Fermat primes, the stale Reading; fixed, MISTAKE-591).
 session: mac-mini-2026-10-08-rank
 source: 05-knowledge/results/debt_rank_least_requirements_20261008.md
 scripts:
@@ -82,10 +83,13 @@ related:
    | all affine couplings, i.e. every map | `ρ ≥ 6` | `λ_max ≤ 4 < 5 ≤ ρ − 1 ≤ ½ tr` |
 
    * By statement 3, every map in these classes has a transient debt walk.
-   * Checked exactly for every unit set with `d = 7, 11, 13` (`rank_hierarchy.py`). The thresholds are sharp for the standard form: it fails somewhere at rank 3, 4 and 5 respectively.
+   * Checked exactly for ranks 3–8 and every unit set up to translation, for `d = 7, 11, 13` (`rank_hierarchy.py`; translation is a valid reduction because the coupling class is affinely invariant). Audit H checked every unit set and every rank `3..d − 1` for `d = 7, 11`.
+   * For these `d` the thresholds are sharp for the standard form: it fails somewhere at rank 3, 4 and 5 respectively.
+   * For a Fermat prime `d` (5, 17, 257, 65537) the only odd-order coupling group is trivial. That class is then just the translations, where `Q = I` works from rank 4.
    * Below the thresholds, explicit forms can still exist. For `G` the squares mod 7 or mod 11, rank 4:
      * `d = 7`, units `{0, 1, 2}`: `Q = 8I − J`;
      * `d = 11`, units `{0..6}` and `{0..5, 7}`: integer forms in `squares_group_examples.out`.
+     * For `d = 7` the other rank-4 orbit, units `{0, 1, 3}`, has a squares-group coupling of covariance rank 2, so no one-step form exists there. For `d = 11` the orbits `{0..5, 8}` and `{0..4, 6, 7}` are undecided (audit H).
 6. **Contracting maps whose translates fail to merge (PROVED).** In each map below, Haar `y` and `y + e` merge at equal time with probability `< 1`, although the map contracts.
 
    | `d` | multipliers by residue | `Λ` | rank | coupling class | form |
@@ -157,8 +161,8 @@ related:
 * **What costs dimension.** In the cycle-graph Laplacian `D_π`:
   * a fixed point of the coupling (any `a ≠ 1`) removes one dimension from the trace;
   * an even cycle (present exactly when `G` contains an element of even order, e.g. `−1`) lets `λ_max` reach 4.
-  * That is the whole hierarchy: translation-only maps need rank 4 (rank 3 with a tilted form), odd-order coupling groups need rank 5, and every map is covered from rank 6.
+  * That is the whole hierarchy for the standard form: it covers translation-only maps from rank 4, odd-order coupling groups from rank 5, and every map from rank 6. Tilted forms do better in places: rank 3 for translations, and rank 4 for some unit sets with the squares group.
 * **Contraction and coalescence come apart.**
   * On `Z_2` they coincide (THM-4608).
   * From `d = 5` on there are contracting maps whose translates fail to merge. On `Z_7`, examples exist for every coupling type up to the full unit group.
-  * Still open: general maps of rank 3–5 with even-order coupling groups (e.g. `Z_5` with multipliers `1, 2, 3, 7, 1`, where involutions give rank-2 covariances), and `d = 4` maps such as multipliers `(1, 3, 5, 7)`. Numerically they behave the same way (HYP-9244).
+  * Maps of rank 3–5 with even-order coupling groups, where involutions give low-rank covariances, are beyond one-step forms. Block certificates (THM-4611) now cover them map by map: 27 maps, including `Z_5` with multipliers `1, 2, 3, 7, 1` and the composite-base `Z_4` map `(1, 3, 5, 7)`. A general theorem for that class remains open (HYP-9244).

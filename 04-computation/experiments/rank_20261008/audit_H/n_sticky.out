@@ -1,0 +1,10 @@
+d = 5: subsets of Z/5 not invariant under any reflection j -> b - j: 0 of 32
+d = 7: subsets of Z/7 not invariant under any reflection j -> b - j: 28 of 128
+d = 11: subsets of Z/11 not invariant under any reflection j -> b - j: 1364 of 2048
+m = [1, 4, 1, 11, 34]: residues [1, 4, 1, 1, 4], sticky b [0], all digits keep a = -1 from (M,e) = (-1, b): True; reflection covariance ranks by b: [2, 2, 1, 2, 2]
+m = [1, 6, 11, 11, 4]: residues [1, 1, 1, 1, 4], sticky b [3], all digits keep a = -1 from (M,e) = (-1, b): True; reflection covariance ranks by b: [1, 2, 2, 2, 2]
+m = [1, 1, 6, 39, 11]: residues [1, 1, 1, 4, 1], sticky b [1], all digits keep a = -1 from (M,e) = (-1, b): True; reflection covariance ranks by b: [2, 1, 2, 2, 2]
+m = [1, 14, 4, 1, 29]: residues [1, 4, 4, 1, 4], sticky b [3], all digits keep a = -1 from (M,e) = (-1, b): True; reflection covariance ranks by b: [2, 2, 2, 1, 2]
+m = [1, 4, 31, 1, 6]: residues [1, 4, 1, 1, 1], sticky b [2], all digits keep a = -1 from (M,e) = (-1, b): True; reflection covariance ranks by b: [2, 2, 2, 1, 2]
+m = [1, 6, 4, 31, 1]: residues [1, 1, 4, 1, 1], sticky b [4], all digits keep a = -1 from (M,e) = (-1, b): True; reflection covariance ranks by b: [2, 2, 2, 2, 1]
+m = [1, 2, 3, 7, 1]: residues [1, 2, 3, 2, 1], sticky b [4], all digits keep a = -1 from (M,e) = (-1, b): True; reflection covariance ranks by b: [2, 2, 2, 2, 1]

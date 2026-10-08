@@ -1,0 +1,20 @@
+Z7_1_2_3_5_1_1_1: d = 7, m = [1, 2, 3, 5, 1, 1, 1], r = [0, 5, 1, 6, 3, 2, 1], rank 3, Lambda = -1.4600, |H_s| = [6, 42, 294, 2058, 14406], form [[49, -5, -21], [-5, 32, -6], [-21, -6, 50]], levels 3..5
+   property (i) True; greedy exact refinement: nodes refined per level [3198, 2389] (levels 3..4); level-5 nodes not balanced: 0; zero-block leaves 1; leaves cover 242121642 of 242121642 states mod d^5: True; 184908 distinct nonzero leaf blocks, ALL exactly balanced: True; float margin of the form over these leaves +0.00002  [3.9s]
+        4.03 real         2.87 user         0.92 sys
+          1289027584  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              420668  page reclaims
+                 478  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                 139  voluntary context switches
+                6822  involuntary context switches
+         41463210110  instructions retired
+         12682438295  cycles elapsed
+          1159072960  peak memory footprint

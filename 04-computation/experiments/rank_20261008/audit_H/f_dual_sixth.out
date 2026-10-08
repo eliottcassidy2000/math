@@ -1,0 +1,4 @@
+Z_5 m = [1, 6, 4, 31, 1], k = 1: 7 blocks; a block of exact rank 1 -> no form (exact by rank)
+Z_5 m = [1, 6, 4, 31, 1], k = 2: 123 blocks; LP max-min s = -0.080594; dual certificate with 6 cuts: negative definite EXACTLY: True  [3.6s]
+Z_5 m = [1, 6, 4, 31, 1], k = 3: 3098 blocks; LP max-min s = -0.047396; dual certificate with 6 cuts: negative definite EXACTLY: True  [5.1s]
+Z_5 m = [1, 6, 4, 31, 1], k = 4: 78296 blocks; LP max-min s = -0.026886; dual certificate with 6 cuts: negative definite EXACTLY: True  [40.7s]

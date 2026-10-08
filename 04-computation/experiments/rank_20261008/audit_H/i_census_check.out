@@ -1,0 +1,43 @@
+independent class sizes (rank, |G|): {(3, 2): 2652, (3, 4): 44208, (4, 4): 3408} [2.7s]
+m = [1, 6, 11, 11, 4]: property (i) True; adaptive 3..5, form [[33, -15, -13], [-15, 40, -11], [-13, -11, 32]]:
+tmp: d = 5, m = [1, 6, 11, 11, 4], r = [0, 4, 3, 2, 4], rank 3, Lambda = -0.0147, |H_s| = [2, 10, 50, 250, 1250], form [[33, -15, -13], [-15, 40, -11], [-13, -11, 32]], levels 3..5
+   property (i) True; greedy exact refinement: nodes refined per level [393, 826] (levels 3..4); level-5 nodes not balanced: 0; zero-block leaves 1; leaves cover 3906250 of 3906250 states mod d^5: True; 17820 distinct nonzero leaf blocks, ALL exactly balanced: True; float margin of the form over these leaves +0.00002  [0.1s]
+m = [1, 1, 6, 39, 11]: property (i) True; adaptive 3..5, form [[19, -4, -9], [-4, 15, -3], [-9, -3, 20]]:
+tmp: d = 5, m = [1, 1, 6, 39, 11], r = [0, 4, 3, 3, 1], rank 3, Lambda = -0.0388, |H_s| = [2, 10, 50, 250, 1250], form [[19, -4, -9], [-4, 15, -3], [-9, -3, 20]], levels 3..5
+   property (i) True; greedy exact refinement: nodes refined per level [682, 1352] (levels 3..4); level-5 nodes not balanced: 0; zero-block leaves 1; leaves cover 3906250 of 3906250 states mod d^5: True; 27637 distinct nonzero leaf blocks, ALL exactly balanced: True; float margin of the form over these leaves +0.00000  [0.2s]
+m = [1, 14, 4, 1, 29]: property (i) True; adaptive 3..5, form [[46, -22, -9], [-22, 50, -8], [-9, -8, 35]]:
+tmp: d = 5, m = [1, 14, 4, 1, 29], r = [0, 1, 2, 2, 4], rank 3, Lambda = -0.1309, |H_s| = [2, 10, 50, 250, 1250], form [[46, -22, -9], [-22, 50, -8], [-9, -8, 35]], levels 3..5
+   property (i) True; greedy exact refinement: nodes refined per level [677, 1369] (levels 3..4); level-5 nodes not balanced: 0; zero-block leaves 1; leaves cover 3906250 of 3906250 states mod d^5: True; 27722 distinct nonzero leaf blocks, ALL exactly balanced: True; float margin of the form over these leaves +0.00001  [0.2s]
+m = [1, 4, 31, 1, 6]: property (i) True; adaptive 3..5, form [[30, -12, -5], [-12, 32, -7], [-5, -7, 25]]:
+tmp: d = 5, m = [1, 4, 31, 1, 6], r = [0, 1, 3, 2, 1], rank 3, Lambda = -0.2870, |H_s| = [2, 10, 50, 250, 1250], form [[30, -12, -5], [-12, 32, -7], [-5, -7, 25]], levels 3..5
+   property (i) True; greedy exact refinement: nodes refined per level [360, 588] (levels 3..4); level-5 nodes not balanced: 0; zero-block leaves 1; leaves cover 3906250 of 3906250 states mod d^5: True; 14553 distinct nonzero leaf blocks, ALL exactly balanced: True; float margin of the form over these leaves +0.00002  [0.1s]
+m = [1, 4, 1, 11, 34]: property (i) True; adaptive 3..5, form [[19, -4, -5], [-4, 23, -9], [-5, -9, 24]]:
+tmp: d = 5, m = [1, 4, 1, 11, 34], r = [0, 1, 3, 2, 4], rank 3, Lambda = -0.1473, |H_s| = [2, 10, 50, 250, 1250], form [[19, -4, -5], [-4, 23, -9], [-5, -9, 24]], levels 3..5
+   property (i) True; greedy exact refinement: nodes refined per level [304, 77] (levels 3..4); level-5 nodes not balanced: 0; zero-block leaves 1; leaves cover 3906250 of 3906250 states mod d^5: True; 7761 distinct nonzero leaf blocks, ALL exactly balanced: True; float margin of the form over these leaves +0.00013  [0.1s]
+m = [1, 6, 4, 31, 1]: property (i) True; adaptive 3..5, form [[256, -31, -111], [-31, 191, -60], [-111, -60, 243]]:
+tmp: d = 5, m = [1, 6, 4, 31, 1], r = [0, 4, 2, 2, 1], rank 3, Lambda = -0.2870, |H_s| = [2, 10, 50, 250, 1250], form [[256, -31, -111], [-31, 191, -60], [-111, -60, 243]], levels 3..5
+   property (i) True; greedy exact refinement: nodes refined per level [632, 1463] (levels 3..4); level-5 nodes not balanced: 0; zero-block leaves 1; leaves cover 3906250 of 3906250 states mod d^5: True; 28428 distinct nonzero leaf blocks, ALL exactly balanced: True; float margin of the form over these leaves +0.00002  [0.2s]
+m = [1, 1, 28, 11, 7]: property (i) True; adaptive 3..5, form [[19, -3, -8], [-3, 14, -3], [-8, -3, 20]]:
+tmp: d = 5, m = [1, 1, 28, 11, 7], r = [0, 4, 4, 2, 2], rank 3, Lambda = -0.0742, |H_s| = [4, 20, 100, 500, 2500], form [[19, -3, -8], [-3, 14, -3], [-8, -3, 20]], levels 3..5
+   property (i) True; greedy exact refinement: nodes refined per level [1064, 346] (levels 3..4); level-5 nodes not balanced: 0; zero-block leaves 1; leaves cover 7812500 of 7812500 states mod d^5: True; 23299 distinct nonzero leaf blocks, ALL exactly balanced: True; float margin of the form over these leaves +0.00000  [0.2s]
+m = [1, 3, 7, 24, 1]: property (i) True; adaptive 3..5, form [[16, -3, -6], [-3, 11, -2], [-6, -2, 14]]:
+tmp: d = 5, m = [1, 3, 7, 24, 1], r = [0, 2, 1, 3, 1], rank 3, Lambda = -0.3649, |H_s| = [4, 20, 100, 500, 2500], form [[16, -3, -6], [-3, 11, -2], [-6, -2, 14]], levels 3..5
+   property (i) True; greedy exact refinement: nodes refined per level [1002, 324] (levels 3..4); level-5 nodes not balanced: 0; zero-block leaves 1; leaves cover 7812500 of 7812500 states mod d^5: True; 22297 distinct nonzero leaf blocks, ALL exactly balanced: True; float margin of the form over these leaves +0.00006  [0.2s]
+m = [1, 6, 8, 21, 3]: property (i) True; adaptive 3..5, form [[20, -9, -8], [-9, 17, -3], [-8, -3, 15]]:
+tmp: d = 5, m = [1, 6, 8, 21, 3], r = [0, 4, 4, 2, 3], rank 3, Lambda = -0.0066, |H_s| = [4, 20, 100, 500, 2500], form [[20, -9, -8], [-9, 17, -3], [-8, -3, 15]], levels 3..5
+   property (i) True; greedy exact refinement: nodes refined per level [229] (levels 3..4); level-5 nodes not balanced: 0; zero-block leaves 1; leaves cover 7812500 of 7812500 states mod d^5: True; 9084 distinct nonzero leaf blocks, ALL exactly balanced: True; float margin of the form over these leaves +0.00009  [0.1s]
+m = [1, 3, 9, 7, 11]: property (i) True; adaptive 3..5, form [[64, -11, -14], [-11, 14, -2], [-14, -2, 15]]:
+tmp: d = 5, m = [1, 3, 9, 7, 11], r = [0, 2, 2, 4, 1], rank 3, Lambda = -0.0815, |H_s| = [4, 20, 100, 500, 2500], form [[64, -11, -14], [-11, 14, -2], [-14, -2, 15]], levels 3..5
+   property (i) True; greedy exact refinement: nodes refined per level [279] (levels 3..4); level-5 nodes not balanced: 0; zero-block leaves 1; leaves cover 7812500 of 7812500 states mod d^5: True; 9652 distinct nonzero leaf blocks, ALL exactly balanced: True; float margin of the form over these leaves +0.00015  [0.2s]
+m = [1, 11, 1, 21, 2]: property (i) True; adaptive 3..5, form [[22, -6, -4], [-6, 31, -13], [-4, -13, 32]]:
+tmp: d = 5, m = [1, 11, 1, 21, 2], r = [0, 4, 3, 2, 2], rank 3, Lambda = -0.3823, |H_s| = [4, 20, 100, 500, 2500], form [[22, -6, -4], [-6, 31, -13], [-4, -13, 32]], levels 3..5
+   property (i) True; greedy exact refinement: nodes refined per level [1264, 1253] (levels 3..4); level-5 nodes not balanced: 0; zero-block leaves 1; leaves cover 7812500 of 7812500 states mod d^5: True; 36539 distinct nonzero leaf blocks, ALL exactly balanced: True; float margin of the form over these leaves +0.00004  [0.3s]
+m = [1, 2, 3, 14, 8]: property (i) True; adaptive 3..5, form [[128, -20, -11], [-20, 15, -3], [-11, -3, 13]]:
+tmp: d = 5, m = [1, 2, 3, 14, 8], r = [0, 3, 4, 3, 3], rank 3, Lambda = -0.3074, |H_s| = [4, 20, 100, 500, 2500], form [[128, -20, -11], [-20, 15, -3], [-11, -3, 13]], levels 3..5
+   property (i) True; greedy exact refinement: nodes refined per level [525, 25] (levels 3..4); level-5 nodes not balanced: 0; zero-block leaves 1; leaves cover 7812500 of 7812500 states mod d^5: True; 12943 distinct nonzero leaf blocks, ALL exactly balanced: True; float margin of the form over these leaves +0.00008  [0.2s]
+m = [1, 12, 2, 17, 7]: property (i) True; fixed k = 2 form [[4, -1, -1, -1], [-1, 4, -1, -1], [-1, -1, 4, -1], [-1, -1, -1, 4]]: all 255 nonzero blocks exactly balanced: True (zero states 1)
+m = [1, 23, 2, 3, 21]: property (i) True; fixed k = 2 form [[4, -1, -1, -1], [-1, 4, -1, -1], [-1, -1, 4, -1], [-1, -1, -1, 4]]: all 231 nonzero blocks exactly balanced: True (zero states 1)
+m = [1, 7, 19, 11, 2]: property (i) True; fixed k = 2 form [[4, -1, -1, -1], [-1, 4, -1, -1], [-1, -1, 4, -1], [-1, -1, -1, 4]]: all 241 nonzero blocks exactly balanced: True (zero states 1)
+m = [1, 2, 3, 31, 14]: property (i) True; fixed k = 2 form [[4, -1, -1, -1], [-1, 4, -1, -1], [-1, -1, 4, -1], [-1, -1, -1, 4]]: all 249 nonzero blocks exactly balanced: True (zero states 1)
+m = [1, 7, 2, 22, 6]: property (i) True; fixed k = 2 form [[10, -2, -3, -2], [-2, 8, -2, -2], [-3, -2, 10, -2], [-2, -2, -2, 10]]: all 247 nonzero blocks exactly balanced: True (zero states 1)
+m = [1, 6, 11, 7, 2]: property (i) True; fixed k = 2 form [[4, -1, -1, -1], [-1, 4, -1, -1], [-1, -1, 4, -1], [-1, -1, -1, 4]]: all 257 nonzero blocks exactly balanced: True (zero states 1)
