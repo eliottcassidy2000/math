@@ -1,0 +1,14 @@
+PROVED even-reset first-crossing inverse entries; supplied source retained; ROOT terminal remains OPEN.
+Entry G17 word length/cost 7 11 parameter phase 696 mod 729
+Entry a=2 word length/cost 2 3 parameter phase 1 mod 3
+Entry a=4 word length/cost 6 9 parameter phase 84 mod 243
+Entry a=6 word length/cost 9 14 parameter phase 1007 mod 6561
+Entry a=8 word length/cost 12 19 parameter phase 34786 mod 177147
+Entry a=10 word length/cost 16 25 parameter phase 1025955 mod 14348907
+Entry a=12 word length/cost 19 30 parameter phase 111363584 mod 387420489
+Old G5/G17 mass244/729; a4/a6 union2224/6561; strict gain28/6561.
+Through a12: seven labelled alternatives, six counting cells; mass131325004/387420489; least hole t=0.
+Any finite dyadic guard fuses by exact CRT; union density beta+tau-beta*tau, only parameter measure.
+Endpoint Y always5mod9: G1 gives a multiple3; all inverse words of length<=E-16 cannot pay M_E.
+No giant source expansion, no ROOT search, no claim that guard mass proves universal completion.
+Exact checks 27274

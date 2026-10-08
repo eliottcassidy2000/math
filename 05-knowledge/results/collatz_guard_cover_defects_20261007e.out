@@ -1,0 +1,14 @@
+PROVED all-label dyadic partition and exact finite-cut strata; provenance is not ROOT evidence.
+Small complete universe: 576 banks from15cells, up to3rules; parameters0..23.
+PROVED exact Kraft mass, finite interval counts, and least uncovered parameter without common-modulus expansion.
+Hostiles: full asymptotic mass misses finite t0; increasing mass1 limit can still miss t0.
+Actual N(t)=8t+3: nested word14 adds zero guard mass but grounds source3; contained rules cannot be proof-pruned.
+All-alternatives cut checks EVERY dependency; supplied ROOT5 breaks actual3/5 proof cycle.
+Authenticated new bank429rows plus old0/2^47: routed mass 87577585436686537861655933644679889301594718852088371532346146423787809/441711766194596082395824375185729628956870974218904739530401550323154944
+Additional mass beyond old cell 87577585436683399310788240304297971406883115018880320354623914406531361/441711766194596082395824375185729628956870974218904739530401550323154944
+Exact frontier:27254labelled cells,26825uncovered; maximum238bits; least missingt4 liesin4mod512.
+Coarsest uncovered cells36mod128,116mod128; sample431/1024uncovered. Child obligations remain OPEN.
+Separate signed extension137rows: combined mass 18586253367357114421148541493625804803744351710128648996318170170253700712816141251912802345491812357163609908531624053201154156030590977/93035356709837681990313447409664580397266094167976711716030745495121828878514934185752454491361736391777602765602070775492429008462675968
+Combined labelled leaves 38259 uncovered 37693 least missing4 cell Cell(bits=9, residue=4) sample missing 294
+Checks {'actual_receipts': 3, 'arithmetic_bank': 10, 'arithmetic_points': 1024, 'density': 576, 'finite_count': 576, 'finite_cut': 1, 'hostile': 12, 'kraft': 1591, 'least': 576, 'limit': 128, 'network': 3, 'partition': 576, 'pointwise': 13824, 'retained_alternative': 5, 'signed_bank': 5, 'signed_labels': 566, 'size': 1591}
+Total checks 21067

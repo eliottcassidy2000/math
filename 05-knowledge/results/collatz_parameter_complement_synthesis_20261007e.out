@@ -1,0 +1,15 @@
+PROVED: source-owned binary/ternary union, including two shrinking-tail grammars.
+Further targets (t,drop,depth,bits) [(12, 8, 217, 379), (24, 6, 136, 260), (27, 50, 651, 1348), (32, 24, 686, 1328)]
+Positive grammar added mass 1/1024 after 8 disjoint tail
+Mirrored grammar added mass 1/16384 after 1 disjoint future prefix
+finite binary 0.199776235881211
+full binary 0.200813833537461
+ternary 0.338972789846435
+combined 0.471716197989945
+inherited combined 0.334705075445821
+gain 0.137011122544124
+Least uncovered t 23 exponent 99708993705
+Entire uncovered cylinder: t=23 modulo13824 (binary precision9, ternary precision3).
+No collision at t23 in the declared D1..128, source depth0..1024, precision8192 box.
+Checks 1276
+OPEN: larger templates at t23, all residual parameters, and emitted child ROOT obligations.

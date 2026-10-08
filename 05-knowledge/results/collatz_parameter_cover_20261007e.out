@@ -1,0 +1,15 @@
+PROVED exact finite dyadic union: 87577585436686537861655933644679889301594718852088371532346146423787809/441711766194596082395824375185729628956870974218904739530401550323154944
+Decimal mass (display only): 0.19826862705329032
+Increment beyond old0mod2^47: 87577585436683399310788240304297971406883115018880320354623914406531361/441711766194596082395824375185729628956870974218904739530401550323154944
+Retained rules/prefix-free guards: 429 429
+FINITE-EXACT sample covered/1024: 593 (not a density estimate)
+FINITE-EXACT proposal attempts/misses: 860 431
+Independent modest-source and symbolic rule controls: 429
+PROVED infinite run grammar mass: 1/16
+Exact grammar overlap / increment: 63/1024 1/1024
+PROVED finite bank plus run grammar: 88008944583360948098370605886072203392372913162849020692043804187775265/441711766194596082395824375185729628956870974218904739530401550323154944
+Combined decimal mass (display only): 0.19924518955329032
+Residual whole cell: t=4mod512; grammar generic API retains conservative finite cuts.
+Coarse cell:t1mod16; ROOT children remain marked obligations.
+No universal coverage, no sampled-frequency extrapolation, no enormous integer expansion.
+Checks: 1081001
