@@ -1,0 +1,18 @@
+class sizes: {(3, 2): 2652, (3, 4): 44208, (4, 4): 3408}
+rank 3 |G| = 2  m = [1, 6, 11, 11, 4] r = [0, 4, 3, 2, 4] Lambda = -0.015: not certified for k <= 4 (best margin at k = 4: -0.07607757537084514)  [77s]
+rank 3 |G| = 2  m = [1, 1, 6, 39, 11] r = [0, 4, 3, 3, 1] Lambda = -0.039: not certified for k <= 4 (best margin at k = 4: -0.07045330757477264)  [79s]
+rank 3 |G| = 2  m = [1, 14, 4, 1, 29] r = [0, 1, 2, 2, 4] Lambda = -0.131: not certified for k <= 4 (best margin at k = 4: -0.08989235730016731)  [78s]
+rank 3 |G| = 2  m = [1, 4, 31, 1, 6] r = [0, 1, 3, 2, 1] Lambda = -0.287: not certified for k <= 4 (best margin at k = 4: -0.05488191437417833)  [77s]
+rank 3 |G| = 2  m = [1, 4, 1, 11, 34] r = [0, 1, 3, 2, 4] Lambda = -0.147: not certified for k <= 4 (best margin at k = 4: -0.04536833860642364)  [76s]
+rank 3 |G| = 2  m = [1, 6, 4, 31, 1] r = [0, 4, 2, 2, 1] Lambda = -0.287: not certified for k <= 4 (best margin at k = 4: -0.10743606679260376)  [76s]
+rank 3 |G| = 4  m = [1, 1, 28, 11, 7] r = [0, 4, 4, 2, 2] Lambda = -0.074: CERTIFIED k = 4, margin +0.0229, Q = [[23, -4, -8], [-4, 20, -4], [-8, -4, 24]], 156556 blocks, frozen 1  [85s]
+rank 3 |G| = 4  m = [1, 3, 7, 24, 1] r = [0, 2, 1, 3, 1] Lambda = -0.365: not certified for k <= 4 (best margin at k = 4: -0.0013196522981659964)  [85s]
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math-wt-chessboard-20261006/04-computation/experiments/rank_20261008/block_census.py", line 54, in <module>
+    k, mg, Qi, nU, frozen = certify(d, m, r, kmax)
+  File "/Users/e/Documents/GitHub/math-wt-chessboard-20261006/04-computation/experiments/rank_20261008/block_census.py", line 27, in certify
+    ok, _ = exact_check_vec(Qi, U)
+  File "/Users/e/Documents/GitHub/math-wt-chessboard-20261006/04-computation/experiments/rank_20261008/block_lmi2.py", line 88, in exact_check_vec
+    assert all(det_int([row[:t] for row in Qi[:t]]) > 0 for t in range(1, rho + 1))
+AssertionError
+(run stopped at map 8 by an assertion on a rounded form that was not positive definite; fixed in block_lmi2.exact_check_vec, superseded by block_census.py v2 with adaptive blocks)

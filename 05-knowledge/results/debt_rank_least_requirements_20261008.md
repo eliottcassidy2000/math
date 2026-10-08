@@ -171,6 +171,60 @@ All four are consistent with the `T^(−1/2)` tail. The sketch route (THM-4581's
 4. **Dependent multipliers and composite `d`** (e.g. `d = 4` with multipliers 1, 3, 5, 7, contracting of rank 3).
 5. **Accessibility.** Is every inaccessible start detected by a cocycle invariant mod some `ℓ^k`?
 
+## 6b. Block certificates for degenerate couplings (THM-4611; added after audit G, not yet independently audited)
+
+**The obstacle.** When the coupling group contains `−1`, some coupling covariances have rank ≤ 2, and no single form can balance them one step at a time. On `Z_5` that is every map that is not translation-only.
+
+**The angle.** Do not ask every step to be balanced; ask every block of `k` steps to be, from every hidden state.
+- Given the past, the `k`-step debt increment has mean 0 and second moment `Σ_(s<k) E[C_(π_(t+s)) | F_t]`; the cross terms vanish because each step is a martingale difference.
+- That sum depends on the past only through the hidden state `h = (M, e) mod d^k`. It equals `d^(−k) A_k(h)` for an integer matrix computed by an exact recursion over all `|H_k| d^k` states (`H_k` = the ratio group mod `d^k`).
+- If one form balances every nonzero `A_k(h)`, Lamperti's function sampled at block ends is a supermartingale far out, whatever the hidden digits do. So the walk escapes, and translates fail to merge with positive probability.
+- Finding the best form is quasi-concave: in `P = Q^(−1)` each constraint `λ_max(A^(1/2) P A^(1/2)) ≤ ½(1 − μ) tr(AP)` is convex. The central-cut ellipsoid method gives the true optimum. A random local search had reported −0.078 for a block length where the optimum is +0.0136.
+
+**Certificates (exact; `block_certificates.py` re-verifies all five).**
+
+| map | rank | `Λ` | min one-step coupling rank | `k` | distinct blocks | integer form | margin (float optimum) |
+|---|---|---|---|---|---|---|---|
+| `Z_5` (1, 2, 3, 7, 11) | 4 | −0.382 | 2 | 2 | 250 | `5I − J` | 0.097 |
+| `Z_5` (1, 2, 3, 7, 1) | 3 | −0.862 | 1 | 4 | 156,557 | `[[20,−4,−8],[−4,15,−3],[−8,−3,20]]` | 0.0136 |
+| `Z_5` (1, 1, 2, 3, 7) | 3 | −0.862 | 1 | 5 | 3,907,806 | `[[8,−2,−3],[−2,6,−1],[−3,−1,8]]` | 0.054 |
+| `Z_7` (1, 1, 1, 1, 2, 3, 5) | 3 | −1.460 | 1 | 4 | 2,471,816 | `[[6,−1,−1],[−1,5,−1],[−1,−1,6]]` | 0.069 |
+| `Z_7` (1, 1, 1, 2, 3, 5, 11) | 4 | −1.118 | 2 | 2 | 1,048 | `[[5,−1,−2,−1],[−1,5,0,−1],[−2,0,6,−1],[−1,−1,−1,5]]` | 0.104 |
+
+The second row is HYP-9244's rank-3 evidence map. Its `q` freezes at 0.6855 numerically, and it is now proved to stay below 1.
+
+**Sticky reflections.**
+- If the residue pattern `m̄` is symmetric under `j ↦ b − j`, the reflection coupling `(−1, b)` always maps to another reflection (`a' = −m̄_(b−j)/m̄_j = −1` for every digit). Only the hidden digits decide whether `b` repeats.
+- In `Z_5` (1, 2, 3, 7, 1) the residues `(1, 2, 3, 2, 1)` are symmetric under `b = 4`, and that reflection has a rank-one covariance. The optimal margin climbs −0.275, −0.091, +0.0136 for `k = 2, 3, 4` as such runs are diluted.
+- On `Z_5` every subset of positions is symmetric under some reflection, so every map with coupling group `{±1}` has a sticky reflection, often of rank one or two.
+
+**Adaptive blocks.**
+- A block length chosen by the current hidden state is a stopping rule. So it is enough to cover the hidden states by a refinement tree whose leaves (residue classes mod `d^s`, `K0 ≤ s ≤ K`) all have balanced blocks for one form.
+- Refine only where a pilot form sees a small margin, then optimize the form over the leaves, then verify each leaf exactly (`block_adaptive.py`; full tables are stored only below the top level, and top-level leaf blocks come from the recursion).
+- This certifies all five sampled `Z_5` maps with coupling group `{±1}` that fail every fixed `k ≤ 4` (THM-4611 3′). Block lengths are 3–5, and 9–20% of the 6,250 level-3 hidden states need longer blocks.
+
+| multipliers | `Λ` | sticky reflection (rank) | refined (level 3, level 4) | leaf blocks | form |
+|---|---|---|---|---|---|
+| `(1, 4, 1, 11, 34)` | −0.147 | `j ↦ −j` (2) | 578, 1,823 | 32,055 | `[[19,−4,−5],[−4,23,−9],[−5,−9,24]]` |
+| `(1, 6, 11, 11, 4)` | −0.015 | `j ↦ 3 − j` (2) | 776, 3,339 | 52,655 | `[[33,−15,−13],[−15,40,−11],[−13,−11,32]]` |
+| `(1, 1, 6, 39, 11)` | −0.039 | `j ↦ 1 − j` (1) | 1,121, 6,737 | 97,657 | `[[19,−4,−9],[−4,15,−3],[−9,−3,20]]` |
+| `(1, 14, 4, 1, 29)` | −0.131 | `j ↦ 3 − j` (1) | 1,218, 6,621 | 97,318 | `[[46,−22,−9],[−22,50,−8],[−9,−8,35]]` |
+| `(1, 4, 31, 1, 6)` | −0.287 | `j ↦ 2 − j` (2) | 601, 2,218 | 37,045 | `[[30,−12,−5],[−12,32,−7],[−5,−7,25]]` |
+
+**Identity runs force the translation family.** The hidden state `(M, e) ≡ (1, b d^(k−1))` runs `k − 1` identity couplings and then one translation. So every certificate must balance the translation covariances on their own (THM-4609 (4) does this for prime `d ≥ 5`). On `Z_4` (1, 3, 5, 7) the translation by 2 has rank 2, so no fixed-length certificate exists for any `k` (`d4_obstruction.out`, exact for `k ≤ 5`). **An adaptive certificate exists**, with lengths 1–6 and form `[[48,−13,−21],[−13,50,−14],[−21,−14,48]]` over 2,529,032 leaf blocks (`block_adaptive_Z4.out`). With base length 1 the identity coupling is a one-step leaf with a zero block, so blocks restart after identity runs: the time change comes for free. The argument never uses primality of `d`.
+
+**Census on `Z_5`** (`block_census.out`; a seeded sample of the 50,268 contracting maps with `m_0 = 1`, multipliers ≤ 39, standard constants, rank ≥ 3 and an even-order coupling group, i.e. exactly the maps out of reach of one-step forms): **all 18 sampled maps are certified.**
+
+| class (rank, coupling group) | population | sampled | certified by |
+|---|---|---|---|
+| (3, `{±1}`) | 2,652 | 6 | adaptive lengths 3–5 (all six; fixed `k ≤ 4` fails for each, `block_census_fixed_k4.out`) |
+| (3, all units) | 44,208 | 6 | adaptive lengths 3–5 |
+| (4, all units) | 3,408 | 6 | fixed `k = 2`; five of six by the same form `5I − J` |
+
+**Audit F's evidence maps.** Audit F measured frozen merge probabilities for several rank-3 maps. All of them except one are now proved non-coalescing: `Z_5` (1, 2, 3, 7, 1), (1, 2, 3, 7, 11) and `Z_4` (1, 3, 5, 7) above; `Z_5` (1, 6, 11, 16, 1) by THM-4609; and `Z_5` (1, 8, 3, 7, 12) with `r = (0, −3, 4, 4, 2)` and (1, 2, 3, 7, 6) by adaptive certificates (`auditF_maps_cert_Z5.out`). The remaining one, `Z_7` (1, 2, 3, 5, 1, 1, 1), is not certified with lengths 2–4 (leaf optimum −0.036); a run with lengths up to 5 was killed by memory pressure and is pending.
+
+**The hidden-digit arithmetic is essential.** If an adversary chooses the translation part of every next coupling (identity steps deleted), a certificate would depend on the multipliers only. That fails for every map tested, even without sticky reflections: for `Z_7` (1, 1, 1, 1, 2, 3, 5) the adversary repeats a rank-one reflection on 5 of 7 branches (`adversarial_cert.out`).
+
 ## 7. Audit G and the corrections (MISTAKE-590)
 
 Audit G (independent, 2026-10-08; report in `audit_G/REPORT.md`) found the mathematics of THM-4607–4609 correct and required these fixes, all applied:

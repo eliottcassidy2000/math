@@ -1,0 +1,5 @@
+Z5_11237 m = [1, 1, 2, 3, 7] r = [0, 4, 1, 1, 2] rank 3 Lambda = -0.8619; k = 5: 7812500 states, 1 frozen, 3907806 distinct nonzero blocks  [13.7s]
+   round 0: active 40000, active-set optimum +0.07536, full minimum +0.01646
+   round 1: active 59812, active-set optimum +0.05356, full minimum +0.05356
+   optimal margin +0.05356 (alpha_max 0.1132); Q ~ [[1.0, -0.2285, -0.381], [-0.2285, 0.7473, -0.1389], [-0.381, -0.1389, 0.9558]]  [114.4s]
+   EXACT: integer form Q = [[8, -2, -3], [-2, 6, -1], [-3, -1, 8]] balances all 3907806 distinct block matrices (0 minors needed exact integers)  [118.3s]

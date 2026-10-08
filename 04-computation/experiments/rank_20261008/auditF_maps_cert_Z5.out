@@ -1,0 +1,8 @@
+Z5_1_8_3_7_12: d = 5, m = [1, 8, 3, 7, 12], r = [0, -3, 4, 4, 2], rank 3, Lambda = -0.0877, coupling group [1, 2, 3, 4], property (i) holds
+   pilot: level-2 optimum -0.20309
+   round 0: nodes refined per level [359, 5912, 90732, 0]; 1164894 distinct leaf blocks; leaf optimum +0.00619
+   EXACT: integer form Q = [[43, 0, -11], [0, 50, -16], [-11, -16, 27]] balances all 1164894 distinct leaf blocks (block lengths 2..5; nodes refined per level [359, 5912, 90732, 0]; leaf margin +0.0062)  [92s]
+Z5_1_2_3_7_6: d = 5, m = [1, 2, 3, 7, 6], r = [0, 3, 4, 4, 1], rank 3, Lambda = -0.5036, coupling group [1, 2, 3, 4], property (i) holds
+   pilot: level-2 optimum -0.20817
+   round 0: nodes refined per level [229, 882, 482, 0]; 19481 distinct leaf blocks; leaf optimum +0.02023
+   EXACT: integer form Q = [[40, 5, -9], [5, 34, -11], [-9, -11, 20]] balances all 19481 distinct leaf blocks (block lengths 2..5; nodes refined per level [229, 882, 482, 0]; leaf margin +0.0202)  [17s]
