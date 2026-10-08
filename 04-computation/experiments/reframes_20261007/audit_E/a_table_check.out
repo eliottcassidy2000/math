@@ -1,0 +1,22 @@
+(A1) table vs direct 2-adic step, 60000 random (p,k,e,y) incl. p=1, k in [-6,6], e in Z_(2) cap Q: mismatches 0; branch counts {(0, 0): 14922, (0, 1): 14811, (1, 0): 14917, (1, 1): 15350}
+(A2) Proof 1 displayed formulas vs table on 200000 random states (|k|<=8, e incl. non-Z[1/p]): formula mismatches 0; flip move k'=k+1-2beta violations 0; departures with lambda != 1/2 0; non-departure states without one 1/2 and one p/2 0; |eta| > 1/2 + 1/(2p) found: none
+(A2) sup |eta| observed per branch (key = (k-range, sigma, beta)); compare analytic sup:
+      ('k<=-1', 0, 0): 0.000000
+      ('k<=-1', 0, 1): 0.500000
+      ('k<=-1', 1, 0): 0.500000
+      ('k<=-1', 1, 1): 0.055556
+      ('k=0', 0, 0): 0.000000
+      ('k=0', 0, 1): 0.000000
+      ('k=0', 1, 0): 0.166667
+      ('k=0', 1, 1): 0.166667
+      ('k>=1', 0, 0): 0.000000
+      ('k>=1', 0, 1): 0.500000
+      ('k>=1', 1, 0): 0.055556
+      ('k>=1', 1, 1): 0.500000
+(A2) analytic |eta| per branch: k>=1: (0,0) 0; (0,1) (1-p^-k)/2 < 1/2; (1,0) 1/(2p^(k+1)) <= 1/(2p^2); (1,1) 1/2 exactly. k<=-1: (0,0) 0; (0,1) (1-p^k)/2 < 1/2; (1,0) 1/2 exactly; (1,1) p^(k-1)/2 <= 1/(2p^2). k=0: (0,·) 0; flips 1/(2p). So max|eta| = 1/2 (attained), which is <= 1/2 + 1/(2p): the stated bound is TRUE but not sharp.
+(A3) chain (integer coords) vs actual big-integer orbits: 3000 pairs x <= 300 steps, p in 3..13, k0 in 0..3: relation failures 0, odd-count identity failures 0, (u_n = v_n) != absorbed mismatches 0; absorbed pairs 308
+(A3') chain with k0 < 0 vs 2-adic orbits mod 2^800: 4000 pairs x 60 steps: failures 0
+(A4) p=5: P(up | flip) by sign of k: k<0: 0.5003 (n=361683), k=0: 0.4970 (n=26480), k>0: 0.5015 (n=358372); lag-1 correlation of successive flip coins +0.0008 (n=745035)
+(A4) p=7: P(up | flip) by sign of k: k<0: 0.4983 (n=175952), k=0: 0.4987 (n=16542), k>0: 0.4996 (n=168125); lag-1 correlation of successive flip coins -0.0015 (n=359119)
+(A4) p=9: P(up | flip) by sign of k: k<0: 0.5002 (n=132124), k=0: 0.5023 (n=15846), k>0: 0.4962 (n=127531); lag-1 correlation of successive flip coins -0.0001 (n=274001)
+ALL A CHECKS PASS

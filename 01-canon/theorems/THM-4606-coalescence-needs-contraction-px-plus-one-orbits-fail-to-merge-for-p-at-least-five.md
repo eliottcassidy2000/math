@@ -1,26 +1,36 @@
 ---
 id: THM-4606
-title: "Coalescence needs contraction: for the px+1 Terras maps on Z_2 with p >= 5 odd, the orbits of Haar y and y+e (e a nonzero integer) ever meet with probability q_p(e) < 1, and q_p(e) -> 0 as |e| -> infinity; for p = 1 and p = 3 they meet almost surely (p = 3 is THM-4581). So among the px+1 maps, Haar coalescence holds exactly at the contracting multipliers p < 4. Mechanism: away from departures at zero debt, every pair-chain step multiplies the normalized offset f by 1/2 or p/2 on a fresh fair coin, a walk with drift (1/2)ln(p/4) > 0; departures are visits of a simple random walk to 0, so they are o(n); a growth lemma plus explicit short paths carry every integer start into the escape region"
+title: "Coalescence needs contraction: for the px+1 Terras maps on Z_2 with p >= 5 odd, the orbits of Haar y and y+e (e a nonzero integer) ever meet with probability q_p(e) < 1, and q_p(e) -> 0 as |e| -> infinity; for p = 1 and p = 3 they meet almost surely (p = 3 is THM-4581). So among the px+1 maps with p >= 1 odd, Haar coalescence holds exactly at the contracting multipliers p < 4 (the Matthews-Watts threshold m_0 m_1 < d^d = 4). Mechanism: away from departures at zero debt, every pair-chain step multiplies the normalized offset f by 1/2 or p/2 on a fresh fair coin, a walk with drift (1/2)ln(p/4) > 0; departures are visits of a simple random walk to 0, so they are o(n); a growth lemma plus explicit short paths carry every integer start into the escape region"
 status: >
   PROVED (elementary probability: the pair-chain table of THM-4581 with 3 replaced by p, optional skipping, Hoeffding's
-  inequality, the simple-random-walk return tail P(tau > 2m) = C(2m,m)/4^m, induction). FINITE-EXACT (escape_check.py, ALL PASS):
-  the growth lemma for every odd p in [5, 31] and 1 <= |e| <= 2000; explicit escape paths from every start (0, e) with
-  1 <= |e| <= 4 for p = 5 and p = 7 (the only multipliers whose growth threshold 4/(p-4) exceeds 1); the step-multiplier table on
-  20,000 random states. NUMERICAL (qp_estimate.py, 200,000 Haar pairs each): q_5 = 0.00834 +- 0.00020, q_7 = 0.1084 +- 0.0007,
-  q_9 = 0.00226 +- 0.00011, q_11 = 2.5e-5, q_13 = 5e-6. Exact first-merge times from (0, 1) (shortest_merge.py): 3, 11, 4, 11, 18,
-  23, 5, 13 for p = 3, 5, ..., 17; for p = 2^a - 1 the reset path of length a + 1 gives q_p >= 2^-(a+1), whence the spikes at p = 3, 7, 15.
-  Not yet independently audited.
+  inequality, the simple-random-walk return tail P(tau > 2m) = C(2m,m)/4^m, induction). The escape lemma is qualitative: its
+  constant A_p(1/2) is astronomically large (about 10^981058 for p = 5; audit E). FINITE-EXACT (escape_check.py, ALL PASS):
+  the growth lemma for every odd p in [5, 31] and 1 <= |e| <= 2000 (audit E: odd p <= 63, |e| <= 5000, 300,000 starts); explicit
+  escape paths from every start (0, e) with 1 <= |e| <= 4 for p = 5 and p = 7 (the only multipliers whose growth threshold
+  4/(p-4) is at least 1); the step-multiplier table on 20,000 random states (audit E: 200,000 states, and the chain against
+  actual big-integer orbits). Rigorous lower bounds by exact enumeration (audit E): q_5 >= 18401/2^22 = 0.004387,
+  q_7 >= 449933/2^22 = 0.10727, q_9 >= 36571/2^24 = 0.002180, q_11 >= 2.356e-5, q_13 >= 1.059e-6. NUMERICAL: the author's
+  200,000 chain paths per p (random coins, equal in law to Haar pairs) and audit E's 10.3 million actual orbit pairs plus
+  exact-mass-and-tail estimates: q_5 = 0.00833 +- 0.00005, q_7 = 0.10857 +- 0.00005, q_9 = 0.00225 +- 0.00001,
+  q_11 = 2.43e-5 +- 0.04e-5, q_13 = (1.6 +- 0.4)e-6. First merge times from (0, 1), confirmed by audit E's rigorously pruned
+  search: 3, 11, 4, 11, 18, 23, 5, 13, 8, 18, 6 for p = 3, 5, 7, 9, 11, 13, 15, 17, 21, 23, 31; none up to depth 26 for
+  p = 19, 25, 27, 29 (none up to 30 for p = 19). Independently audited 2026-10-08 (audit E): corrections applied (statement 5
+  restricted to e = +-1 for the numerical bound, q_11 and q_13, the run argument in proof 3, the p = 3 tail typing, the scope
+  of sheet-blindness, labels); MISTAKE-589.
 session: mac-mini-2026-10-08-reframes
 source: 05-knowledge/results/coalescence_phase_diagram_20261008.md
 scripts:
   - 04-computation/experiments/reframes_20261007/escape_check.py (+ escape_check.out)
   - 04-computation/experiments/reframes_20261007/qp_estimate.py (+ qp_estimate.out), shortest_merge.py (+ shortest_merge.out)
   - 04-computation/experiments/reframes_20261007/coalescence_phase.py, coalescence_visits.py (the phase diagram of HYP-9244)
+  - 04-computation/experiments/reframes_20261007/audit_E/ (REPORT.md; table, escape, growth, density-transfer and direct-orbit checks; exact enumerations)
 related:
   - THM-4581 (Haar coalescence for p = 3; the pair chain, its table and its corollaries; this theorem is its converse side)
   - HYP-9244 (the Polya trichotomy: contraction plus recurrence of the debt walk; rank of the debt lattice)
   - HYP-9242 (the orphan law: its exponent 1/2 is the first-return exponent of a rank-one debt walk)
   - Lagarias (1985), Terras (1976) (the parity-vector map of any px+1 map, p odd, is a measure-preserving bijection of Z_2)
+  - Kontorovich and Lagarias, arXiv:0910.1944 (the 2-adic 3x+1 and 5x+1 maps are measure-theoretically conjugate)
+  - Matthews and Watts (Acta Arith. 43, 1984) (the contraction criterion); Homburg and Kalle (Adv. Math. 2025) (synchronization of random affine IFS)
 ---
 
 # THM-4606 — coalescence needs contraction
@@ -48,45 +58,49 @@ related:
 ## Statements
 
 1. **Step table (PROVED).**
-   * In every state, `f' = λf + η` with `λ ∈ {1/2, p/2}` and `|η| ≤ 1/2 + 1/(2p) < 1`.
-   * Except at departures, the two coin values give the two multipliers, one each.
+   * In every state, `f' = λf + η` with `λ ∈ {1/2, p/2}` and `|η| ≤ 1/2` (sharp).
+   * For `p ≥ 3`, except at departures, the two coin values give the two multipliers, one each. For `p = 1` the multipliers coincide.
    * At a departure both coin values give `λ = 1/2`.
    * Flips move `k` by ±1 on a fresh fair coin. So the values of `k` at successive flips form a simple random walk (SRW).
-2. **Escape lemma (PROVED, `p ≥ 5`).**
+2. **Escape lemma (PROVED, `p ≥ 5`; qualitative).**
    * For every `η ∈ (0, 1)` there is `A_p(η)` such that, from every state with `|f_0| ≥ A_p(η)`, with probability at least `1 − η`:
      * the chain is never absorbed; and
      * `|f_n| ≥ 4 e^(Λ_p n/3)` for all `n`.
    * This holds for every `k_0`, and for every `e_0 ∈ Z_2 ∩ Q`.
+   * The constant the proof produces is astronomically large (about `10^981058` for `p = 5`, `η = 1/2`). The lemma gives existence, not a numerical bound.
 3. **Integer translations (PROVED, `p ≥ 5`).**
    * For every `e ∈ Z ∖ {0}`, `q_p(e) := μ{y : T_p^n(y) = T_p^n(y + e) for some n} < 1`, and `q_p(e) → 0` as `|e| → ∞`.
    * Meetings at unequal times, `T_p^m(y) = T_p^n(y + e)` with `m ≠ n`, form a null set. So `q_p(e)` is also the probability that the two orbits ever meet.
 4. **The dichotomy in p (PROVED).**
    * For `p = 1` and `p = 3`, `y` and `y + e` meet almost surely:
      * `p = 1` with a geometric tail;
-     * `p = 3` by THM-4581, with tail `≍ T^(−1/2)`.
-   * Hence, among the maps `px + 1` (p odd), Haar coalescence of translates holds iff `p < 4`, i.e. iff the map contracts on average.
+     * `p = 3` by THM-4581, with `c T^(−1/2) ≤ P(no merge by T) ≤ C T^(−1/2)(log T)²` (the upper bound at sketch level).
+   * Hence, among the maps `px + 1` with `p ≥ 1` odd, Haar coalescence of translates holds iff `p < 4`, i.e. iff the map contracts on average. This is the Matthews–Watts contraction threshold `m_0 m_1 < d^d = 4`.
 5. **Integers (PROVED; the transfer of THM-4581 6(c)).**
    * For every `K ≥ 1` and `e ≠ 0`, the natural density of `n ∈ N` with `T_p^t(n) = T_p^t(n + e)` for some `t ≤ K` equals `P(absorbed by K) ≤ q_p(e)`.
-   * For `p = 5` this density is below 0.0087 for every `K`, numerically.
-6. **Sheet-blindness (PROVED).**
+   * For `p = 5` and `e = ±1` this density is below 0.0087 for every `K`, numerically (`q_5 = 0.00833 ± 0.00005`).
+   * For other `e` it can be much larger: `q_5(3) ≥ 1/32`, since the whole class `n ≡ 16 (mod 32)` merges with `n + 3` at `t = 5` (e.g. `T^5(16) = T^5(19) = 3`). At `K = 14` the exact densities are 0.0444 for `e = ±3`, 0.0230 for `e = 6` and 0.00995 for `e = 5` (audit E).
+6. **Sheet-blindness (PROVED, with this scope).**
    * `x ↦ rx` (r odd) conjugates `px + 1` to `px + r` on `Z_2` and preserves Haar measure.
-   * So statements 1–5 hold verbatim for `px + r`, with the translation `e` replaced by `re`.
+   * So statements 1–5 hold for `px + r` after conjugating back: translations by `re` with `e` a nonzero integer behave exactly as translations by `e` for `px + 1`. In the `px + r` coordinates the additive error is `|η| ≤ |r|/2`.
+   * Translations not divisible by `r` correspond to non-integer `e`. The growth lemma's integrality does not cover them, so they are not covered here.
+     * Audit E's breadth-first search found escape paths for `e = ±1/3, ±2/3` (`p = 5, 7`) and `e = ±1/7, ±2/7` (`p = 5`). The extension is very likely true but unproved.
 7. **Numerics (NUMERICAL / FINITE-EXACT).**
 
-   | p | q_p = P(y, y+1 meet) | first merge time from (0,1) | exact lower bound |
+   | p | q_p = P(y, y+1 meet) | first merge time from (0,1) | rigorous lower bound (exact enumeration, audit E) |
    |---|---|---|---|
    | 3 | 1 (THM-4581) | 3 | — |
-   | 5 | 0.00834 ± 0.00020 | 11 | `2^-11` |
-   | 7 | 0.1084 ± 0.0007 | 4 | `2^-4` |
-   | 9 | 0.00226 ± 0.00011 | 11 | `2·2^-11` |
-   | 11 | 2.5·10^-5 (5 of 200,000) | 18 | `3·2^-18` |
-   | 13 | 5·10^-6 (1 of 200,000) | 23 | `3·2^-23` |
-   | 15 | — | 5 | `2^-5` |
-   | 17 | — | 13 | `2^-13` |
+   | 5 | 0.00833 ± 0.00005 | 11 | `18401/2^22 = 0.004387` |
+   | 7 | 0.10857 ± 0.00005 | 4 | `449933/2^22 = 0.10727` |
+   | 9 | 0.00225 ± 0.00001 | 11 | `36571/2^24 = 0.002180` |
+   | 11 | (2.43 ± 0.04)·10^-5 | 18 | `101183/2^32 = 2.356·10^-5` |
+   | 13 | (1.6 ± 0.4)·10^-6 | 23 | `9099/2^33 = 1.059·10^-6` |
+   | 15 | — | 5 | `2^-5` (reset path) |
+   | 17 | — | 13 | — |
 
-   * For `p = 2^a − 1` the reset path has length `a + 1`: `(0,1) → (1, 2^(a−1)) → … → (1, 1) → (0, 0)`, with `a − 1` halvings. It gives `q_p ≥ 2^(−a−1) = 1/(2(p+1))`.
+   * For `p = 2^a − 1` the reset path has length `a + 1`: `(0,1) → (1, 2^(a−1)) → … → (1, 1) → (0, 0)`, with `a − 1` halvings. It gives `q_p ≥ 2^(−a−1) = 1/(2(p+1))`. Audit E checked it for `a = 2..7`.
    * This is why `q_p` is not monotone in `p`.
-   * Merges for `p = 5` occurred as late as Terras time 188 in the sample; none later.
+   * In audit E's 1.9 million `p = 5` samples, merges occurred as late as Terras time 352, and none after 400.
 
 ## Proofs
 
@@ -105,7 +119,8 @@ related:
   * `(0,1)`: `pe/2`.
   * `(1,0)`: `k = 1`, `f' = e/2 + 1/(2p)`.
   * `(1,1)`: `k = −1`, `f' = e/2 − 1/(2p)`.
-* A flip at `k ≥ 1` goes up on `β = 0` and down on `β = 1`. At `k ≤ −1` it goes toward 0 on `β = 0`. At `k = 0` it goes up on `β = 0`. Each is fair.
+* All additive terms are at most 1/2 in absolute value. The value 1/2 is attained.
+* A flip at `k ≥ 1` goes up on `β = 0` and down on `β = 1`. At `k ≤ −1` it goes toward 0 on `β = 0`. At `k = 0` it goes up on `β = 0`. Each is fair; in every case `k' = k + 1 − 2β`.
 * At the stopping times of flips the coins are still fresh and fair (optional skipping). So the skeleton of `k` is a SRW. ∎
 
 **2.**
@@ -133,18 +148,21 @@ related:
   * at the first odd `e`, depart with `β = 1` to `k = −1`, where `e_1 = (e − 1/p)/2`;
   * at `k = −1`, take `β = 1` on runs: `e ↦ (pe + 1 − p^(−1))/2`;
   * at the first flip, take `β = 0` to return to `k = 0`: `e ↦ (pe + 1)/2`.
-* The path either stays at `k = −1` with `|f|` growing geometrically, or returns at `(0, e*)` with
-  `e* = (p/2)^(j+1) e_1 + A_j`, where `0 < A_j < (p/2)^(j+1)/(p − 2)`.
-* So `|e*| ≥ (p/4)|e| − 1` in both signs:
-  * `e > 0`: `e* ≥ pe/4 − 1/4`;
-  * `e < 0`: `|e*| ≥ (p/2)(|e|/2 + 1/(2p) − 1/(p−2))`.
+* **The run at `k = −1` is finite** (audit E).
+  * In the variable `E = pe` the run map is `E ↦ (pE + p − 1)/2`. Its length is exactly `v_2((p − 2)·pe_1 + p − 1)`.
+  * So it is infinite only at the fixed point `pe_1 = −(p − 1)/(p − 2)`.
+  * For odd integer `e`, `pe_1 = (pe − 1)/2` is an integer, while `(p − 1)/(p − 2) = 1 + 1/(p − 2)` is not an integer for `p ≥ 5`. Hence for integer `e` the run is finite and the path returns to `(0, e*)`.
+  * For non-integer `e` the run can be infinite. For example, `p = 5`, `e = −1/3` sits at `(−1, −4/15)` forever, with `f` constant.
+* **The bound.** The return is `e* = (p/2)^(j+1) e_1 + A_j`, where `0 < A_j < (p/2)^(j+1)/(p − 2)`. So `|e*| ≥ (p/4)|e| − 1` in both signs:
+  * `e > 0`: `e* ≥ pe/4 − 1/4`.
+  * `e < 0`: `|e*| ≥ (p/2)(|e|/2 + 1/(2p) − 1/(p−2)) = (p/4)|e| + 1/4 − p/(2(p−2))`. This is `≥ (p/4)|e| − 1` because `p/(2(p−2)) ≤ 5/4` exactly when `p ≥ 10/3`; it fails at `p = 3`.
 * The path never visits `(0, 0)`.
-* Above the fixed point `x* = 4/(p − 4)` of `x ↦ (p/4)x − 1`, the distance to `x*` grows by the factor `p/4` per lap.
+* **Iteration.** Above the fixed point `x* = 4/(p − 4)` of `x ↦ (p/4)x − 1`, the distance to `x*` grows by the factor `p/4` per lap.
   * For `p ≥ 9`, `x* < 1 ≤ |e|`.
   * For `p = 5` (`x* = 4`) and `p = 7` (`x* = 4/3`), escape_check.py (B) exhibits paths from every start with `|e| ≤ 4` to `|e'| > x*`.
 * Hence from every `(0, e)` there is a positive-probability path, avoiding absorption, to a state with `|f| ≥ A_p(1/2)`. By 2, `q_p(e) ≤ 1 − 2^(−N(e))/2 < 1`.
 * For `|e| ≥ A_p(η)`, 2 gives `q_p(e) ≤ η`.
-* **Unequal times.** For fixed `m ≠ n` and fixed parity vectors, `T^m(y) = T^n(y + e)` is an affine equation in `y` with slopes `p^o 2^(−m) ≠ p^(o') 2^(−n)` (p odd). So it has at most one solution. Equal times with unequal odd counts are excluded likewise. Equal times with equal odd counts are the chain's merges; a merge at `k_n ≠ 0` pins `v_n` to an `F_n`-measurable value, which is null (THM-4581 3(i)). ∎
+* **Unequal times and unequal odd counts.** For fixed times `m, n` and fixed parity vectors with `p^o 2^(−m) ≠ p^(o') 2^(−n)`, the equation `T^m(y) = T^n(y + e)` is affine in `y` with distinct slopes, so it has at most one solution. This covers `m ≠ n` (`p` odd), and also equal times with unequal odd counts, i.e. a merge at `k_n ≠ 0`. Countably many such equations give a null set. The remaining case, equal times and equal odd counts, is the chain's absorption. ∎
 
 **4.**
 * For `p = 1`, `k` plays no role. The relation is `u = v + e`, with `e ↦ e/2` on equal parities and `e ↦ (e ± 1)/2` on unequal ones, fair.
@@ -153,7 +171,9 @@ related:
 * For `p = 3`, apply THM-4581 3 and 4. ∎
 
 **5.**
-* Absorption by time `K` depends only on `n mod 2^K`, and residues are uniform (statement 1's Terras property). For integers it is literally the merge `T^t(n) = T^t(n + e)`. ∎
+* Absorption by time `K` depends only on `n mod 2^K`, and residues are uniform (statement 1's Terras property).
+* For integers, absorption is literally a merge `T^t(n) = T^t(n + e)` with equal odd counts.
+* An equal-time integer merge with unequal odd counts solves an affine equation with distinct slopes. So it occurs for at most one integer per (time, parity word); it has density zero and does not change the density (audit E found none for `n ≤ 2^16`, `t ≤ 40`). ∎
 
 **6.**
 * `T_(p,r)(rx) = r T_(p,1)(x)`, and parities agree since `r` is odd.
@@ -163,15 +183,21 @@ related:
 
 * **The difference process is the size process.**
   * At zero debt, `e = u − v` is multiplied by 1/2 or `p/2` whenever the two parities agree. That is, the offset between two orbits is driven by the same multipliers as the orbits' real size.
-  * Two orbits coalesce exactly when that common dynamics contracts. For `p = 3` the geometric mean `√3/2 < 1` contracts. For `p ≥ 5`, `√p/2 > 1` expands.
-  * THM-4581's Lyapunov weight `|f|^θ s^|k|`, with `ρ(θ) = 1 − √(1 − (3/4)^θ)`, is built on the factor 3/4. Here `p/4 > 1` reverses it, and `|f|^(−θ)` is the escaping quantity.
+  * Within the `px + 1` family, two orbits coalesce exactly when that common dynamics contracts. For `p = 3` the geometric mean `√3/2 < 1` contracts. For `p ≥ 5`, `√p/2 > 1` expands.
+  * Outside the family, contraction alone is not enough: HYP-9244 has a contracting rank-3 map on `Z_5` that numerically does not coalesce.
+  * HEURISTIC: THM-4581's Lyapunov weight `|f|^θ s^|k|`, with `ρ(θ) = 1 − √(1 − (3/4)^θ)`, is built on the factor 3/4. Here `p/4 > 1` reverses it, and `|f|^(−θ)` behaves as the escaping quantity. That is not proved: at departures it grows by `2^θ` for both coins. The proof above uses the coin walk instead.
+* **A pair property that measure conjugacy does not see.**
+  * Kontorovich and Lagarias note that the 2-adic `3x + 1` and `5x + 1` maps are measure-theoretically conjugate (both are the shift in parity coordinates).
+  * THM-4581 and this theorem separate them by a property of pairs `(y, y + e)`. The additive structure is not preserved by the conjugacy.
+  * This matches the two-point-motion picture for random iterated function systems, where synchronization goes with a negative Lyapunov exponent (e.g. Homburg–Kalle 2025).
 * **Rank one.**
   * The debt group of `px + 1` is `p^Z`, of rank one. Its walk is a SRW in flip time.
-  * For `p = 3` the merge tail `T^(−1/2)` is that walk's first-return tail. The orphan law's exponent 1/2 (HYP-9242) is the same number.
+  * For `p = 3` the merge tail `T^(−1/2)` is that walk's first-return tail (the upper bound at sketch level). HEURISTIC: the orphan law's measured exponents (0.42–0.63, HYP-9242) sit near the same number.
   * HYP-9244 conjectures the general picture:
-    * coalescence = contraction × recurrence of the debt walk;
+    * coalescence = accessibility × contraction × recurrence of the debt walk. For `px + 1` with integer offsets there is no congruence obstruction, so accessibility is automatic here;
     * the tail is set by the rank of the debt lattice: exponential, `T^(−1/2)`, `1/log T`, then failure from rank 3 on.
   * Simulations of maps on `Z_3` and `Z_5` show all five regimes.
 * **What it is not.**
   * A statement about 2-adic Haar measure and its density shadows: no individual orbit is decided.
   * For integers under `5x + 1`, merges at unequal times inside cycles are not excluded, and the theorem says nothing about divergence.
+  * Novelty: no prior statement was found in brief searches (audit E). The ingredients are classical.

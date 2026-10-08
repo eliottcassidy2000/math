@@ -1,0 +1,7 @@
+p=5 e0=1 npaths=400000 TMAX=50000 cut=1e40 seed=2201: merged 3324 -> q = 0.008310 +- 0.000144; escaped 396676, timed out 0; merges after t=100: 45, after 200: 1, after 400: 0, after 1000: 0; latest 202; max log10|f| (sampled every 16 steps) on a path that later merged: 4.3; runtime 154s
+  merge times > 200: [202]
+  merges with t <= 22: 1741; after 22: 1583; per-time t<=22: {11: 189, 12: 93, 13: 264, 14: 141, 15: 145, 16: 126, 17: 146, 18: 171, 19: 105, 20: 142, 21: 99, 22: 120}
+p=5 nsamp=400000 N=400 B=1024 seed=505: merged 3365 -> q_p(N) = 0.008412 +- 0.000144; unequal-time meetings 0; latest merge 227; earliest 11; median 21; runtime 101s
+  merge-time bins: [1,10]: 0, [11,20]: 1593, [21,40]: 1215, [41,80]: 468, [81,160]: 83, [161,320]: 6, [321,inf]: 0
+  first merge times (count): 11:208, 12:107, 13:246, 14:148, 15:175, 16:128, 17:158, 18:144, 19:151, 20:128, 21:97, 22:103, 23:98, 24:95, 25:93
+DONE

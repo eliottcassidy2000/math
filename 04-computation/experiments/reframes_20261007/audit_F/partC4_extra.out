@@ -1,0 +1,20 @@
+=== 3x+5 with offset 5 (conjugate to 3x+1 with offset 1): should merge
+3x+5: d=2 m=[1, 3] r=[0, 5] Lambda=-0.1438 primes=[3]; 2000 samples, offset 5, N=T+64, B=296, seed 230; 2.7s
+   meetings with nonzero debt (non-Haar coincidences): 0
+  T=     4  q=0.8130 +- 0.0087  sqrt(T)q=  1.626  1/q= 1.230  visits(all)=  0.496  visits(unmerged)=  0.380  window(T/4,T]/alive=  0.496  win/sqrtT=0.248
+  T=    16  q=0.6180 +- 0.0109  sqrt(T)q=  2.472  1/q= 1.618  visits(all)=  1.355  visits(unmerged)=  1.256  window(T/4,T]/alive=  1.057  win/sqrtT=0.264
+  T=    64  q=0.5135 +- 0.0112  sqrt(T)q=  4.108  1/q= 1.947  visits(all)=  3.050  visits(unmerged)=  3.542  window(T/4,T]/alive=  2.743  win/sqrtT=0.343
+  T=   256  q=0.4115 +- 0.0110  sqrt(T)q=  6.584  1/q= 2.430  visits(all)=  5.708  visits(unmerged)=  7.776  window(T/4,T]/alive=  5.177  win/sqrtT=0.324
+  T=  1024  q=0.2755 +- 0.0100  sqrt(T)q=  8.816  1/q= 3.630  visits(all)=  9.247  visits(unmerged)= 13.428  window(T/4,T]/alive=  8.599  win/sqrtT=0.269
+  T=  4096  q=0.1605 +- 0.0082  sqrt(T)q= 10.272  1/q= 6.231  visits(all)= 12.438  visits(unmerged)= 17.735  window(T/4,T]/alive= 11.584  win/sqrtT=0.181
+=== product-like Z_6 map m_i = alpha(i mod 2) beta(i mod 3), alpha=(1,5), beta=(1,1,7): rank 2
+6:1,0;5,1;7,4;5,3;1,2;35,5: d=6 m=[1, 5, 7, 5, 1, 35] r=[0, 1, 4, 3, 2, 5] Lambda=-0.3384 primes=[5, 7]; 1000 samples, offset 1, N=T+64, B=114, seed 231; 39.1s
+   meetings with nonzero debt (non-Haar coincidences): 0
+  T=     4  q=0.9350 +- 0.0078  sqrt(T)q=  1.870  1/q= 1.070  visits(all)=  0.195  visits(unmerged)=  0.136  window(T/4,T]/alive=  0.195  win/sqrtT=0.098
+  T=    16  q=0.8900 +- 0.0099  sqrt(T)q=  3.560  1/q= 1.124  visits(all)=  0.501  visits(unmerged)=  0.398  window(T/4,T]/alive=  0.327  win/sqrtT=0.082
+  T=    64  q=0.8620 +- 0.0109  sqrt(T)q=  6.896  1/q= 1.160  visits(all)=  0.801  visits(unmerged)=  0.669  window(T/4,T]/alive=  0.337  win/sqrtT=0.042
+  T=   256  q=0.8340 +- 0.0118  sqrt(T)q= 13.344  1/q= 1.199  visits(all)=  1.137  visits(unmerged)=  1.006  window(T/4,T]/alive=  0.390  win/sqrtT=0.024
+  T=  1024  q=0.8160 +- 0.0123  sqrt(T)q= 26.112  1/q= 1.225  visits(all)=  1.420  visits(unmerged)=  1.298  window(T/4,T]/alive=  0.339  win/sqrtT=0.011
+  T=  4096  q=0.7970 +- 0.0127  sqrt(T)q= 51.008  1/q= 1.255  visits(all)=  1.675  visits(unmerged)=  1.553  window(T/4,T]/alive=  0.312  win/sqrtT=0.005
+  T= 16384  q=0.7790 +- 0.0131  sqrt(T)q= 99.712  1/q= 1.284  visits(all)=  1.946  visits(unmerged)=  1.813  window(T/4,T]/alive=  0.340  win/sqrtT=0.003
+DONE

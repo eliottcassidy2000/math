@@ -1,0 +1,9 @@
+3x+1 pair chain from (0, E): 2000 samples, cap 16000
+  E=2^1+1: median merge time 93  median/(ln E)^2 = 93.00  sqrt(T)q(1000)=  8.73  sqrt(T)q(4000)= 10.12  sqrt(T)q(16000)= 10.94
+  E=2^2+1: median merge time 340  median/(ln E)^2 = 131.26  sqrt(T)q(1000)= 11.57  sqrt(T)q(4000)= 13.82  sqrt(T)q(16000)= 14.67
+  E=2^4+1: median merge time 580  median/(ln E)^2 = 72.26  sqrt(T)q(1000)= 13.25  sqrt(T)q(4000)= 15.87  sqrt(T)q(16000)= 17.01
+  E=2^8+1: median merge time 820  median/(ln E)^2 = 26.63  sqrt(T)q(1000)= 14.69  sqrt(T)q(4000)= 17.39  sqrt(T)q(16000)= 18.85
+  E=2^16+1: median merge time 1053  median/(ln E)^2 = 8.56  sqrt(T)q(1000)= 16.14  sqrt(T)q(4000)= 18.72  sqrt(T)q(16000)= 21.06
+  E=2^32+1: median merge time 1417  median/(ln E)^2 = 2.88  sqrt(T)q(1000)= 17.69  sqrt(T)q(4000)= 20.81  sqrt(T)q(16000)= 22.33
+  E=2^64+1: median merge time 2223  median/(ln E)^2 = 1.13  sqrt(T)q(1000)= 21.23  sqrt(T)q(4000)= 24.95  sqrt(T)q(16000)= 27.76
+  E=2^128+1: median merge time 3399  median/(ln E)^2 = 0.43  sqrt(T)q(1000)= 25.68  sqrt(T)q(4000)= 29.47  sqrt(T)q(16000)= 31.43

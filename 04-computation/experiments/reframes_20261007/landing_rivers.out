@@ -1,0 +1,7 @@
+D in [3,4500): 195 rivers (distinct (N_D, s0)); consecutive D with equal key: 3929/4496
+largest rivers: [144, 126, 124, 114, 114, 94, 90, 88, 84, 80, 74, 72]
+   per-river P(N >   4) = 0.4667   stationary C/x = 0.7167
+   per-river P(N >  16) = 0.2205   stationary C/x = 0.1792
+   per-river P(N >  64) = 0.0667   stationary C/x = 0.0448
+   per-river P(N > 256) = 0.0256   stationary C/x = 0.0112
+rivers with the largest N (N, minD, maxD, size): [(880, 253, 268, 8), (732, 815, 852, 22), (412, 43, 44, 2), (327, 129, 134, 4), (304, 641, 648, 8), (217, 3287, 3338, 30), (169, 149, 154, 4), (120, 2837, 2902, 32)]

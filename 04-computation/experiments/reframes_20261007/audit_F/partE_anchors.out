@@ -1,0 +1,10 @@
+cycles (primitive necklaces, sum <= 9, length <= 4): 82; legal anchors (first letter >= 2): 154; first letter 2: 60; >= 3: 94
+outcomes over (anchor, D <= 40): {'DRIFT': 1450, 'ANCHOR': 192, 'SHIFT': 4222, 'ABSORB': 296}  (total 6160)
+first letter >= 3: 94 anchors; absorbed at D = 1 at time 3: 94
+first letter 2: 60 anchors; never absorbed for D <= 40: 43; absorbed for some D: 17
+   barriers: ['1', '-7', '-29/11', '37/5', '29/5', '53/37', '85/101', '29/37', '29/101', '37/101', '37/485', '53/229', '53/485', '-103/49', '-143/17', '-103/17', '223/47', '383/175', '103/47', '103/175', '103/431', '151/47', '43/35', '175/47', '143/47', '119/47', '239/175', '223/175', '367/431', '383/431', '41/25', '17/25', '415/431', '511/431', '119/431', '143/175', '151/175', '151/431', '143/431', '215/431', '175/431', '239/431', '287/431']
+   anchor 7/23: absorbing (D, time) = [(5, 33), (6, 33)]
+   anchor 7/503: absorbing (D, time) = [(15, 57), (16, 57), (17, 57), (18, 57), (25, 102), (26, 102), (35, 129), (36, 129)]
+   anchor 1: absorbing (D, time) = []
+three-step merge c = 5 mod 8 (integers c < 49152 with 3 | c-2): failures 0; parity pattern (u,v) per step: {((1, 1), (0, 0), (0, 1)): 2048}
+DONE

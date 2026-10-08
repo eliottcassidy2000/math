@@ -1,0 +1,28 @@
+p=3 (a=2): word 001 absorbed at time 3 (claimed a+1=3)
+p=7 (a=3): word 0001 absorbed at time 4 (claimed a+1=4)
+p=15 (a=4): word 00001 absorbed at time 5 (claimed a+1=5)
+p=31 (a=5): word 000001 absorbed at time 6 (claimed a+1=6)
+p=63 (a=6): word 0000001 absorbed at time 7 (claimed a+1=7)
+p=127 (a=7): word 00000001 absorbed at time 8 (claimed a+1=8)
+p= 3 L=3: first absorption at t=3 with 1 words -> exact bound 1*2^-3; P(absorbed by 3) = 1.250000e-01 (exact: 1/8); absorptions by time: {3: 1}; max frontier 3
+p= 5 L=11: first absorption at t=11 with 1 words -> exact bound 1*2^-11; P(absorbed by 11) = 4.882812e-04 (exact: 1/2048); absorptions by time: {11: 1}; max frontier 99
+p= 7 L=4: first absorption at t=4 with 1 words -> exact bound 1*2^-4; P(absorbed by 4) = 6.250000e-02 (exact: 1/16); absorptions by time: {4: 1}; max frontier 4
+p= 9 L=11: first absorption at t=11 with 2 words -> exact bound 2*2^-11; P(absorbed by 11) = 9.765625e-04 (exact: 1/1024); absorptions by time: {11: 2}; max frontier 105
+p=11 L=18: first absorption at t=18 with 3 words -> exact bound 3*2^-18; P(absorbed by 18) = 1.144409e-05 (exact: 3/262144); absorptions by time: {18: 3}; max frontier 1947
+p=13 L=23: first absorption at t=23 with 3 words -> exact bound 3*2^-23; P(absorbed by 23) = 3.576279e-07 (exact: 3/8388608); absorptions by time: {23: 3}; max frontier 16623
+p=15 L=5: first absorption at t=5 with 1 words -> exact bound 1*2^-5; P(absorbed by 5) = 3.125000e-02 (exact: 1/32); absorptions by time: {5: 1}; max frontier 6
+p=17 L=13: first absorption at t=13 with 1 words -> exact bound 1*2^-13; P(absorbed by 13) = 1.220703e-04 (exact: 1/8192); absorptions by time: {13: 1}; max frontier 175
+p=21 L=8: first absorption at t=8 with 1 words -> exact bound 1*2^-8; P(absorbed by 8) = 3.906250e-03 (exact: 1/256); absorptions by time: {8: 1}; max frontier 11
+p=23 L=18: first absorption at t=18 with 1 words -> exact bound 1*2^-18; P(absorbed by 18) = 3.814697e-06 (exact: 1/262144); absorptions by time: {18: 1}; max frontier 912
+p=31 L=6: first absorption at t=6 with 1 words -> exact bound 1*2^-6; P(absorbed by 6) = 1.562500e-02 (exact: 1/64); absorptions by time: {6: 1}; max frontier 8
+p=19 L=26: NO absorption at any time <= 26 (rigorous); max frontier 37970
+p=25 L=26: NO absorption at any time <= 26 (rigorous); max frontier 21315
+p=27 L=26: NO absorption at any time <= 26 (rigorous); max frontier 20232
+p=29 L=26: NO absorption at any time <= 26 (rigorous); max frontier 20753
+p= 5 L=22: first absorption at t=11 with 1 words -> exact bound 1*2^-11; P(absorbed by 22) = 4.387140e-03 (exact: 18401/4194304); absorptions by time: {11: 1, 12: 1, 13: 5, 14: 6, 15: 14, 16: 21, 17: 48, 18: 95, 19: 170, 20: 341, 21: 579, 22: 1159}; max frontier 7990
+p= 7 L=22: first absorption at t=4 with 1 words -> exact bound 1*2^-4; P(absorbed by 22) = 1.072724e-01 (exact: 449933/4194304); absorptions by time: {4: 1, 6: 1, 7: 1, 8: 1, 9: 2, 10: 3, 11: 5, 12: 7, 13: 12, 14: 18, 15: 31, 16: 43, 17: 81, 18: 125, 19: 196, 20: 344, 21: 551, 22: 911}; max frontier 8852
+p= 9 L=24: first absorption at t=11 with 2 words -> exact bound 2*2^-11; P(absorbed by 24) = 2.179801e-03 (exact: 36571/16777216); absorptions by time: {11: 2, 13: 2, 14: 5, 15: 5, 16: 7, 17: 17, 18: 19, 19: 22, 20: 57, 21: 68, 22: 100, 23: 190, 24: 287}; max frontier 26110
+p=11 L=28: first absorption at t=18 with 3 words -> exact bound 3*2^-18; P(absorbed by 28) = 2.245605e-05 (exact: 1507/67108864); absorptions by time: {18: 3, 20: 1, 21: 8, 22: 5, 23: 6, 24: 24, 25: 38, 26: 41, 27: 69, 28: 174}; max frontier 150069
+p=13 L=30: first absorption at t=23 with 3 words -> exact bound 3*2^-23; P(absorbed by 30) = 9.639189e-07 (exact: 1035/1073741824); absorptions by time: {23: 3, 24: 3, 25: 1, 26: 5, 27: 24, 28: 15, 29: 21, 30: 53}; max frontier 354612
+p=19 L=30: NO absorption at any time <= 30 (rigorous); max frontier 207426
+DONE

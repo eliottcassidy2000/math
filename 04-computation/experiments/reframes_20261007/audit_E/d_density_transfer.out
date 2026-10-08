@@ -1,0 +1,28 @@
+(D1) p= 5 e= 1 K=16: absorbed residues 161/2^16 = 0.002457; chain-vs-direct-integer disagreements 0; lift-dependence 0
+(D1) p= 7 e= 1 K=16: absorbed residues 6881/2^16 = 0.104996; chain-vs-direct-integer disagreements 0; lift-dependence 0
+(D1) p= 9 e= 1 K=16: absorbed residues 117/2^16 = 0.001785; chain-vs-direct-integer disagreements 0; lift-dependence 0
+(D1) p= 5 e=-1 K=14: absorbed residues 28/2^14 = 0.001709; chain-vs-direct-integer disagreements 0; lift-dependence 0
+(D1) p= 5 e= 2 K=14: absorbed residues 88/2^14 = 0.005371; chain-vs-direct-integer disagreements 0; lift-dependence 0
+(D1) p= 5 e= 3 K=14: absorbed residues 727/2^14 = 0.044373; chain-vs-direct-integer disagreements 0; lift-dependence 0
+(D1) p= 7 e=-3 K=14: absorbed residues 192/2^14 = 0.011719; chain-vs-direct-integer disagreements 0; lift-dependence 0
+(D1) p=11 e= 1 K=16: absorbed residues 0/2^16 = 0.000000; chain-vs-direct-integer disagreements 0; lift-dependence 0
+(D1) p=13 e= 1 K=16: absorbed residues 0/2^16 = 0.000000; chain-vs-direct-integer disagreements 0; lift-dependence 0
+(D2) p=5 e=1: n in [1, 2^16], t <= 40: equal-time integer merges with unequal odd counts (k_t != 0): 0; first few (n, t, k_t, value): []
+(D2) p=7 e=1: n in [1, 2^16], t <= 40: equal-time integer merges with unequal odd counts (k_t != 0): 0; first few (n, t, k_t, value): []
+(D2) p=9 e=1: n in [1, 2^16], t <= 40: equal-time integer merges with unequal odd counts (k_t != 0): 0; first few (n, t, k_t, value): []
+(D2) p=5 e=3: n in [1, 2^16], t <= 40: equal-time integer merges with unequal odd counts (k_t != 0): 0; first few (n, t, k_t, value): []
+(D3) p=5, e=  1: K=5: 0/2^5=0.00000; K=8: 0/2^8=0.00000; K=12: 3/2^12=0.00073; K=14: 28/2^14=0.00171
+(D3) p=5, e=  2: K=5: 0/2^5=0.00000; K=8: 0/2^8=0.00000; K=12: 17/2^12=0.00415; K=14: 88/2^14=0.00537
+(D3) p=5, e=  3: K=5: 1/2^5=0.03125; K=8: 10/2^8=0.03906; K=12: 178/2^12=0.04346; K=14: 727/2^14=0.04437  <-- exceeds 0.0087
+(D3) p=5, e= -3: K=5: 1/2^5=0.03125; K=8: 10/2^8=0.03906; K=12: 178/2^12=0.04346; K=14: 727/2^14=0.04437  <-- exceeds 0.0087
+(D3) p=5, e=  5: K=5: 0/2^5=0.00000; K=8: 1/2^8=0.00391; K=12: 35/2^12=0.00854; K=14: 163/2^14=0.00995  <-- exceeds 0.0087
+(D3) p=5, e=  6: K=5: 0/2^5=0.00000; K=8: 5/2^8=0.01953; K=12: 89/2^12=0.02173; K=14: 377/2^14=0.02301  <-- exceeds 0.0087
+(D3) p=5, e= 13: K=5: 0/2^5=0.00000; K=8: 0/2^8=0.00000; K=12: 2/2^12=0.00049; K=14: 22/2^14=0.00134
+(D3) witness: for p = 5, e = 3 the class n = 16 mod 32 merges at t = 5: [16, 48, 80, 112, 144, 176] ...; e.g. T^5(16) = T^5(19) = 3
+(D4) T_(p,r)(r x) = r T_(p,1)(x) mod 2^511 on 20000 random 2-adic x, r odd incl. negative: failures 0
+(D4) residues mod 2^12 merging by K: p=5, px+3 with translation 3: 3; px+1 with translation 1: 3 -> equal
+(D4) residues mod 2^12 merging by K: p=5, px+-1 with translation -1: 3; px+1 with translation 1: 3 -> equal
+(D4) residues mod 2^12 merging by K: p=7, px+5 with translation 5: 413; px+1 with translation 1: 413 -> equal
+(D4) residues mod 2^12 merging by K: p=5, px+3 with translation 6: 17; px+1 with translation 2: 17 -> equal
+(D5) p=5 integers: unequal-time meetings T^m(n) = T^m'(n+1), m != m' (inside cycles): first examples (n, m, m', value) [(1, 4, 0, 2), (2, 2, 0, 3), (3, 2, 0, 4), (15, 8, 1, 8), (22, 7, 0, 23)]
+D: chain/direct agreement and conjugation checks PASS

@@ -1,0 +1,36 @@
+Z3_125: d=3 m=[1, 2, 5] r=[0, 1, 2] rank=2 Lambda=-0.3311; 600 chains, T=16384, seed 301; whitening from 4134266 steps; R0=6.0
+   step covariance (lattice coords) = [[0.4448, -0.2225], [-0.2225, 0.4447]]
+   all  : steps   4121279  d_eff =  2.001 +- 0.001   identity-coupling share 0.1665   E|xi_w|^2 = 2.0000
+   M>1  : steps   1959080  d_eff =  2.001 +- 0.001   identity-coupling share 0.1661   E|xi_w|^2 = 2.0013
+   M<1  : steps   2162199  d_eff =  2.002 +- 0.001   identity-coupling share 0.1669   E|xi_w|^2 = 1.9987
+   x0>0 : steps   2089363  d_eff =  2.001 +- 0.001   identity-coupling share 0.1664   E|xi_w|^2 = 1.9992
+   x0<0 : steps   2031916  d_eff =  2.002 +- 0.001   identity-coupling share 0.1667   E|xi_w|^2 = 2.0007
+Z5_12311: d=5 m=[1, 2, 3, 1, 1] r=[0, 3, 4, 2, 1] rank=2 Lambda=-1.2511; 600 chains, T=16384, seed 302; whitening from 2463261 steps; R0=6.0
+   step covariance (lattice coords) = [[0.32, -0.0802], [-0.0802, 0.3204]]
+   all  : steps   2457673  d_eff =  2.001 +- 0.001   identity-coupling share 0.0498   E|xi_w|^2 = 2.0001
+   M>1  : steps   1166150  d_eff =  2.002 +- 0.002   identity-coupling share 0.0499   E|xi_w|^2 = 2.0010
+   M<1  : steps   1291523  d_eff =  2.000 +- 0.002   identity-coupling share 0.0497   E|xi_w|^2 = 1.9992
+   x0>0 : steps   1182423  d_eff =  2.002 +- 0.002   identity-coupling share 0.0497   E|xi_w|^2 = 2.0004
+   x0<0 : steps   1275250  d_eff =  2.000 +- 0.002   identity-coupling share 0.0499   E|xi_w|^2 = 1.9997
+Z5_12371: d=5 m=[1, 2, 3, 7, 1] r=[0, 3, 4, 4, 1] rank=3 Lambda=-0.8619; 600 chains, T=16384, seed 303; whitening from 6963338 steps; R0=6.0
+   step covariance (lattice coords) = [[0.3204, -0.08, -0.0801], [-0.08, 0.3197, -0.0798], [-0.0801, -0.0798, 0.3199]]
+   all  : steps   6960425  d_eff =  2.999 +- 0.001   identity-coupling share 0.0497   E|xi_w|^2 = 3.0000
+   M>1  : steps   3541050  d_eff =  2.999 +- 0.002   identity-coupling share 0.0497   E|xi_w|^2 = 2.9996
+   M<1  : steps   3419375  d_eff =  2.998 +- 0.002   identity-coupling share 0.0498   E|xi_w|^2 = 3.0005
+   x0>0 : steps   3480154  d_eff =  2.998 +- 0.002   identity-coupling share 0.0499   E|xi_w|^2 = 2.9997
+   x0<0 : steps   3480271  d_eff =  2.999 +- 0.002   identity-coupling share 0.0496   E|xi_w|^2 = 3.0004
+4:1,0;3,1;5,2;7,3: d=4 m=[1, 3, 5, 7] r=[0, 1, 2, 3] rank=3 Lambda=-0.2228; 600 chains, T=16384, seed 304; whitening from 8431606 steps; R0=6.0
+   step covariance (lattice coords) = [[0.375, -0.125, -0.1251], [-0.125, 0.3749, -0.125], [-0.1251, -0.125, 0.3751]]
+   all  : steps   8429251  d_eff =  2.999 +- 0.001   identity-coupling share 0.1251   E|xi_w|^2 = 3.0000
+   M>1  : steps   3960949  d_eff =  2.997 +- 0.002   identity-coupling share 0.1252   E|xi_w|^2 = 2.9992
+   M<1  : steps   4468302  d_eff =  3.001 +- 0.002   identity-coupling share 0.1250   E|xi_w|^2 = 3.0007
+   x0>0 : steps   4145013  d_eff =  3.000 +- 0.002   identity-coupling share 0.1251   E|xi_w|^2 = 2.9997
+   x0<0 : steps   4284238  d_eff =  2.998 +- 0.002   identity-coupling share 0.1251   E|xi_w|^2 = 3.0003
+3:1,0;2,1;11,2: d=3 m=[1, 2, 11] r=[0, 1, 2] rank=2 Lambda=-0.0683; 400 chains, T=16384, seed 305; whitening from 4815053 steps; R0=6.0
+   step covariance (lattice coords) = [[0.4448, -0.2225], [-0.2225, 0.4445]]
+   all  : steps   4802339  d_eff =  2.001 +- 0.001   identity-coupling share 0.1663   E|xi_w|^2 = 2.0000
+   M>1  : steps   2336316  d_eff =  2.001 +- 0.001   identity-coupling share 0.1657   E|xi_w|^2 = 2.0015
+   M<1  : steps   2466023  d_eff =  2.000 +- 0.001   identity-coupling share 0.1669   E|xi_w|^2 = 1.9986
+   x0>0 : steps   2520110  d_eff =  2.001 +- 0.001   identity-coupling share 0.1665   E|xi_w|^2 = 1.9995
+   x0<0 : steps   2282229  d_eff =  2.001 +- 0.001   identity-coupling share 0.1662   E|xi_w|^2 = 2.0007
+DONE

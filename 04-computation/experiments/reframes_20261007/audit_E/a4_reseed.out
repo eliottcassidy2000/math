@@ -1,0 +1,12 @@
+--- seed 1001
+(A4) p=5: P(up | flip) by sign of k: k<0: 0.4997 (n=356694), k=0: 0.5048 (n=25922), k>0: 0.5007 (n=360640); lag-1 correlation of successive flip coins +0.0001 (n=741756)
+(A4) p=7: P(up | flip) by sign of k: k<0: 0.4996 (n=175142), k=0: 0.4922 (n=17127), k>0: 0.5000 (n=172551); lag-1 correlation of successive flip coins -0.0006 (n=363320)
+(A4) p=9: P(up | flip) by sign of k: k<0: 0.4990 (n=128218), k=0: 0.5051 (n=15341), k>0: 0.5010 (n=133311); lag-1 correlation of successive flip coins -0.0005 (n=275370)
+--- seed 1002
+(A4) p=5: P(up | flip) by sign of k: k<0: 0.5002 (n=361952), k=0: 0.4958 (n=26564), k>0: 0.5000 (n=356728); lag-1 correlation of successive flip coins -0.0004 (n=743744)
+(A4) p=7: P(up | flip) by sign of k: k<0: 0.4995 (n=171899), k=0: 0.4999 (n=16629), k>0: 0.4994 (n=169004); lag-1 correlation of successive flip coins -0.0011 (n=356032)
+(A4) p=9: P(up | flip) by sign of k: k<0: 0.5007 (n=130406), k=0: 0.4985 (n=15769), k>0: 0.4996 (n=130996); lag-1 correlation of successive flip coins +0.0009 (n=275671)
+--- seed 1003
+(A4) p=5: P(up | flip) by sign of k: k<0: 0.5005 (n=347673), k=0: 0.5079 (n=26038), k>0: 0.5000 (n=370970); lag-1 correlation of successive flip coins +0.0000 (n=743181)
+(A4) p=7: P(up | flip) by sign of k: k<0: 0.4979 (n=178520), k=0: 0.4968 (n=16099), k>0: 0.5001 (n=164053); lag-1 correlation of successive flip coins -0.0020 (n=357172)
+(A4) p=9: P(up | flip) by sign of k: k<0: 0.4981 (n=135922), k=0: 0.4939 (n=15280), k>0: 0.5007 (n=125221); lag-1 correlation of successive flip coins +0.0006 (n=274923)

@@ -1,0 +1,202 @@
+=== C1 obstruction maps (proof + simulation)
+(1) exact identity e_n - (1-M_n)c = P_n e_0 (mod p) along 200 random chain paths of 300 steps, start (1, 1):
+   3x+5 (p=5,c=0)                             m=[1, 3] r=[0, 5] Lambda=-0.144: 60000 steps, identity violations 0, absorptions 0
+   Z3 (1,1,5) r=(0,2,2) (p=2,c=0)             m=[1, 1, 5] r=[0, 2, 2] Lambda=-0.562: 60000 steps, identity violations 0, absorptions 0
+   Z3 (1,2,5) r=(0,7,14) (p=7,c=0)            m=[1, 2, 5] r=[0, 7, 14] Lambda=-0.331: 60000 steps, identity violations 0, absorptions 0
+   Z3 (1,2,5) r=(9,1,5) (p=7,c=1)             m=[1, 2, 5] r=[9, 1, 5] Lambda=-0.331: 60000 steps, identity violations 0, absorptions 0
+   Z5 (1,2,3,7,1) r=0 mod 11 (p=11,c=0)       m=[1, 2, 3, 7, 1] r=[0, 33, 44, 44, 11] Lambda=-0.862: 60000 steps, identity violations 0, absorptions 0
+(2)/(3) direct big-integer orbits of y, y+1 (y uniform mod d^(T+64)), 400 samples, T = 4096:
+   3x+5 (p=5,c=0)                                             met    0/400 (nonzero-debt meetings 0); q(16)=1.000 q(256)=1.000 q(4096)=1.000
+   Z3 (1,1,5) r=(0,2,2) (p=2,c=0)                             met    0/400 (nonzero-debt meetings 0); q(16)=1.000 q(256)=1.000 q(4096)=1.000
+   Z3 (1,2,5) r=(0,7,14) (p=7,c=0)                            met    0/400 (nonzero-debt meetings 0); q(16)=1.000 q(256)=1.000 q(4096)=1.000
+   Z3 (1,2,5) r=(9,1,5) (p=7,c=1)                             met    0/400 (nonzero-debt meetings 0); q(16)=1.000 q(256)=1.000 q(4096)=1.000
+   Z5 (1,2,3,7,1) r=0 mod 11 (p=11,c=0)                       met    0/400 (nonzero-debt meetings 0); q(16)=1.000 q(256)=1.000 q(4096)=1.000
+   3x+1 (control)                                             met  331/400 (nonzero-debt meetings 0); q(16)=0.610 q(256)=0.412 q(4096)=0.172
+   Z3 (1,1,5) r=(0,-1,-1) (control)                           met  389/400 (nonzero-debt meetings 0); q(16)=0.287 q(256)=0.105 q(4096)=0.028
+   Z3 (1,2,5) r=(0,1,2) (control = HYP map)                   met  238/400 (nonzero-debt meetings 0); q(16)=0.603 q(256)=0.490 q(4096)=0.405
+   Z5 (1,2,3,7,1) r=(0,3,4,4,1) (control = HYP rank-3 map)    met  125/400 (nonzero-debt meetings 0); q(16)=0.713 q(256)=0.695 q(4096)=0.688
+=== C2 further contracting maps, direct big-integer orbits
+5:1,0;2,3;2,1;2,4;2,2: d=5 m=[1, 2, 2, 2, 2] r=[0, 3, 1, 4, 2] Lambda=-1.0549 primes=[2]; 1000 samples, offset 1, N=T+64, B=128, seed 201; 1.7s
+   meetings with nonzero debt (non-Haar coincidences): 0
+  T=     4  q=0.4360 +- 0.0157  sqrt(T)q=  0.872  1/q= 2.294  visits(all)=  0.867  visits(unmerged)=  0.353  window(T/4,T]/alive=  0.444  win/sqrtT=0.222
+  T=    16  q=0.3230 +- 0.0148  sqrt(T)q=  1.292  1/q= 3.096  visits(all)=  1.250  visits(unmerged)=  0.731  window(T/4,T]/alive=  0.878  win/sqrtT=0.220
+  T=    64  q=0.1720 +- 0.0119  sqrt(T)q=  1.376  1/q= 5.814  visits(all)=  1.769  visits(unmerged)=  1.157  window(T/4,T]/alive=  1.607  win/sqrtT=0.201
+  T=   256  q=0.0850 +- 0.0088  sqrt(T)q=  1.360  1/q=11.765  visits(all)=  2.041  visits(unmerged)=  1.141  window(T/4,T]/alive=  1.581  win/sqrtT=0.099
+  T=  1024  q=0.0410 +- 0.0063  sqrt(T)q=  1.312  1/q=24.390  visits(all)=  2.187  visits(unmerged)=  1.171  window(T/4,T]/alive=  1.718  win/sqrtT=0.054
+  T=  4096  q=0.0150 +- 0.0038  sqrt(T)q=  0.960  1/q=66.667  visits(all)=  2.267  visits(unmerged)=  1.333  window(T/4,T]/alive=  1.951  win/sqrtT=0.030
+  T= 16384  q=0.0070 +- 0.0026  sqrt(T)q=  0.896  1/q=142.857  visits(all)=  2.288  visits(unmerged)=  1.429  window(T/4,T]/alive=  1.400  win/sqrtT=0.011
+3:1,0;2,1;7,1: d=3 m=[1, 2, 7] r=[0, 1, 1] Lambda=-0.2189 primes=[2, 7]; 1000 samples, offset 1, N=T+64, B=186, seed 202; 19.3s
+   meetings with nonzero debt (non-Haar coincidences): 0
+  T=     4  q=0.8530 +- 0.0112  sqrt(T)q=  1.706  1/q= 1.172  visits(all)=  0.404  visits(unmerged)=  0.271  window(T/4,T]/alive=  0.404  win/sqrtT=0.202
+  T=    16  q=0.7980 +- 0.0127  sqrt(T)q=  3.192  1/q= 1.253  visits(all)=  0.668  visits(unmerged)=  0.486  window(T/4,T]/alive=  0.309  win/sqrtT=0.077
+  T=    64  q=0.7530 +- 0.0136  sqrt(T)q=  6.024  1/q= 1.328  visits(all)=  0.999  visits(unmerged)=  0.799  window(T/4,T]/alive=  0.415  win/sqrtT=0.052
+  T=   256  q=0.7120 +- 0.0143  sqrt(T)q= 11.392  1/q= 1.404  visits(all)=  1.321  visits(unmerged)=  1.086  window(T/4,T]/alive=  0.428  win/sqrtT=0.027
+  T=  1024  q=0.6910 +- 0.0146  sqrt(T)q= 22.112  1/q= 1.447  visits(all)=  1.660  visits(unmerged)=  1.428  window(T/4,T]/alive=  0.476  win/sqrtT=0.015
+  T=  4096  q=0.6680 +- 0.0149  sqrt(T)q= 42.752  1/q= 1.497  visits(all)=  1.904  visits(unmerged)=  1.693  window(T/4,T]/alive=  0.353  win/sqrtT=0.006
+  T= 16384  q=0.6450 +- 0.0151  sqrt(T)q= 82.560  1/q= 1.550  visits(all)=  2.166  visits(unmerged)=  1.955  window(T/4,T]/alive=  0.392  win/sqrtT=0.003
+3:1,0;4,-1;5,-1: d=3 m=[1, 4, 5] r=[0, -1, -1] Lambda=-0.1000 primes=[2, 5]; 1000 samples, offset 1, N=T+64, B=186, seed 203; 27.3s
+   meetings with nonzero debt (non-Haar coincidences): 0
+  T=     4  q=1.0000 +- 0.0000  sqrt(T)q=  2.000  1/q= 1.000  visits(all)=  0.104  visits(unmerged)=  0.104  window(T/4,T]/alive=  0.104  win/sqrtT=0.052
+  T=    16  q=0.9810 +- 0.0043  sqrt(T)q=  3.924  1/q= 1.019  visits(all)=  0.385  visits(unmerged)=  0.366  window(T/4,T]/alive=  0.281  win/sqrtT=0.070
+  T=    64  q=0.9590 +- 0.0063  sqrt(T)q=  7.672  1/q= 1.043  visits(all)=  0.846  visits(unmerged)=  0.807  window(T/4,T]/alive=  0.470  win/sqrtT=0.059
+  T=   256  q=0.9390 +- 0.0076  sqrt(T)q= 15.024  1/q= 1.065  visits(all)=  1.423  visits(unmerged)=  1.358  window(T/4,T]/alive=  0.602  win/sqrtT=0.038
+  T=  1024  q=0.9310 +- 0.0080  sqrt(T)q= 29.792  1/q= 1.074  visits(all)=  1.887  visits(unmerged)=  1.828  window(T/4,T]/alive=  0.494  win/sqrtT=0.015
+  T=  4096  q=0.9170 +- 0.0087  sqrt(T)q= 58.688  1/q= 1.091  visits(all)=  2.370  visits(unmerged)=  2.298  window(T/4,T]/alive=  0.519  win/sqrtT=0.008
+  T= 16384  q=0.9090 +- 0.0091  sqrt(T)q=116.352  1/q= 1.100  visits(all)=  2.779  visits(unmerged)=  2.705  window(T/4,T]/alive=  0.446  win/sqrtT=0.003
+3:1,0;2,1;11,2: d=3 m=[1, 2, 11] r=[0, 1, 2] Lambda=-0.0683 primes=[2, 11]; 1000 samples, offset 1, N=T+64, B=186, seed 204; 23.4s
+   meetings with nonzero debt (non-Haar coincidences): 0
+  T=     4  q=0.8480 +- 0.0114  sqrt(T)q=  1.696  1/q= 1.179  visits(all)=  0.215  visits(unmerged)=  0.074  window(T/4,T]/alive=  0.215  win/sqrtT=0.107
+  T=    16  q=0.8090 +- 0.0124  sqrt(T)q=  3.236  1/q= 1.236  visits(all)=  0.465  visits(unmerged)=  0.328  window(T/4,T]/alive=  0.295  win/sqrtT=0.074
+  T=    64  q=0.7940 +- 0.0128  sqrt(T)q=  6.352  1/q= 1.259  visits(all)=  0.845  visits(unmerged)=  0.770  window(T/4,T]/alive=  0.470  win/sqrtT=0.059
+  T=   256  q=0.7820 +- 0.0131  sqrt(T)q= 12.512  1/q= 1.279  visits(all)=  1.249  visits(unmerged)=  1.230  window(T/4,T]/alive=  0.509  win/sqrtT=0.032
+  T=  1024  q=0.7790 +- 0.0131  sqrt(T)q= 24.928  1/q= 1.284  visits(all)=  1.679  visits(unmerged)=  1.759  window(T/4,T]/alive=  0.550  win/sqrtT=0.017
+  T=  4096  q=0.7740 +- 0.0132  sqrt(T)q= 49.536  1/q= 1.292  visits(all)=  2.125  visits(unmerged)=  2.319  window(T/4,T]/alive=  0.573  win/sqrtT=0.009
+  T= 16384  q=0.7690 +- 0.0133  sqrt(T)q= 98.432  1/q= 1.300  visits(all)=  2.569  visits(unmerged)=  2.873  window(T/4,T]/alive=  0.574  win/sqrtT=0.004
+5:1,0;3,2;9,2;2,4;1,1: d=5 m=[1, 3, 9, 2, 1] r=[0, 2, 2, 4, 1] Lambda=-0.8116 primes=[2, 3]; 1000 samples, offset 1, N=T+64, B=128, seed 205; 15.8s
+   meetings with nonzero debt (non-Haar coincidences): 0
+  T=     4  q=0.6350 +- 0.0152  sqrt(T)q=  1.270  1/q= 1.575  visits(all)=  0.380  visits(unmerged)=  0.024  window(T/4,T]/alive=  0.222  win/sqrtT=0.111
+  T=    16  q=0.5720 +- 0.0156  sqrt(T)q=  2.288  1/q= 1.748  visits(all)=  0.511  visits(unmerged)=  0.107  window(T/4,T]/alive=  0.206  win/sqrtT=0.052
+  T=    64  q=0.5270 +- 0.0158  sqrt(T)q=  4.216  1/q= 1.898  visits(all)=  0.626  visits(unmerged)=  0.199  window(T/4,T]/alive=  0.201  win/sqrtT=0.025
+  T=   256  q=0.4900 +- 0.0158  sqrt(T)q=  7.840  1/q= 2.041  visits(all)=  0.718  visits(unmerged)=  0.249  window(T/4,T]/alive=  0.175  win/sqrtT=0.011
+  T=  1024  q=0.4610 +- 0.0158  sqrt(T)q= 14.752  1/q= 2.169  visits(all)=  0.805  visits(unmerged)=  0.315  window(T/4,T]/alive=  0.178  win/sqrtT=0.006
+  T=  4096  q=0.4300 +- 0.0157  sqrt(T)q= 27.520  1/q= 2.326  visits(all)=  0.887  visits(unmerged)=  0.381  window(T/4,T]/alive=  0.178  win/sqrtT=0.003
+  T= 16384  q=0.4060 +- 0.0155  sqrt(T)q= 51.968  1/q= 2.463  visits(all)=  0.969  visits(unmerged)=  0.446  window(T/4,T]/alive=  0.191  win/sqrtT=0.001
+4:1,0;3,1;5,2;1,1: d=4 m=[1, 3, 5, 1] r=[0, 1, 2, 1] Lambda=-0.7093 primes=[3, 5]; 1000 samples, offset 1, N=T+64, B=148, seed 206; 10.1s
+   meetings with nonzero debt (non-Haar coincidences): 0
+  T=     4  q=0.6320 +- 0.0153  sqrt(T)q=  1.264  1/q= 1.582  visits(all)=  0.468  visits(unmerged)=  0.103  window(T/4,T]/alive=  0.287  win/sqrtT=0.143
+  T=    16  q=0.5490 +- 0.0157  sqrt(T)q=  2.196  1/q= 1.821  visits(all)=  0.616  visits(unmerged)=  0.171  window(T/4,T]/alive=  0.234  win/sqrtT=0.059
+  T=    64  q=0.4750 +- 0.0158  sqrt(T)q=  3.800  1/q= 2.105  visits(all)=  0.767  visits(unmerged)=  0.227  window(T/4,T]/alive=  0.275  win/sqrtT=0.034
+  T=   256  q=0.4210 +- 0.0156  sqrt(T)q=  6.736  1/q= 2.375  visits(all)=  0.880  visits(unmerged)=  0.285  window(T/4,T]/alive=  0.238  win/sqrtT=0.015
+  T=  1024  q=0.3750 +- 0.0153  sqrt(T)q= 12.000  1/q= 2.667  visits(all)=  0.967  visits(unmerged)=  0.325  window(T/4,T]/alive=  0.207  win/sqrtT=0.006
+  T=  4096  q=0.3400 +- 0.0150  sqrt(T)q= 21.760  1/q= 2.941  visits(all)=  1.049  visits(unmerged)=  0.391  window(T/4,T]/alive=  0.219  win/sqrtT=0.003
+  T= 16384  q=0.3090 +- 0.0146  sqrt(T)q= 39.552  1/q= 3.236  visits(all)=  1.118  visits(unmerged)=  0.417  window(T/4,T]/alive=  0.203  win/sqrtT=0.002
+7:1,0;2,5;3,1;4,2;6,4;1,2;1,1: d=7 m=[1, 2, 3, 4, 6, 1, 1] r=[0, 5, 1, 2, 4, 2, 1] Lambda=-1.2359 primes=[2, 3]; 1000 samples, offset 1, N=T+64, B=104, seed 207; 18.8s
+   meetings with nonzero debt (non-Haar coincidences): 0
+  T=     4  q=0.6730 +- 0.0148  sqrt(T)q=  1.346  1/q= 1.486  visits(all)=  0.329  visits(unmerged)=  0.003  window(T/4,T]/alive=  0.062  win/sqrtT=0.031
+  T=    16  q=0.6120 +- 0.0154  sqrt(T)q=  2.448  1/q= 1.634  visits(all)=  0.401  visits(unmerged)=  0.013  window(T/4,T]/alive=  0.107  win/sqrtT=0.027
+  T=    64  q=0.5590 +- 0.0157  sqrt(T)q=  4.472  1/q= 1.789  visits(all)=  0.466  visits(unmerged)=  0.020  window(T/4,T]/alive=  0.106  win/sqrtT=0.013
+  T=   256  q=0.5110 +- 0.0158  sqrt(T)q=  8.176  1/q= 1.957  visits(all)=  0.533  visits(unmerged)=  0.045  window(T/4,T]/alive=  0.120  win/sqrtT=0.007
+  T=  1024  q=0.4730 +- 0.0158  sqrt(T)q= 15.136  1/q= 2.114  visits(all)=  0.590  visits(unmerged)=  0.063  window(T/4,T]/alive=  0.112  win/sqrtT=0.003
+  T=  4096  q=0.4370 +- 0.0157  sqrt(T)q= 27.968  1/q= 2.288  visits(all)=  0.642  visits(unmerged)=  0.076  window(T/4,T]/alive=  0.110  win/sqrtT=0.002
+  T= 16384  q=0.4060 +- 0.0155  sqrt(T)q= 51.968  1/q= 2.463  visits(all)=  0.692  visits(unmerged)=  0.099  window(T/4,T]/alive=  0.114  win/sqrtT=0.001
+5:1,0;6,4;11,3;1,2;1,1: d=5 m=[1, 6, 11, 1, 1] r=[0, 4, 3, 2, 1] Lambda=-0.7715 primes=[2, 3, 11]; 1000 samples, offset 1, N=T+64, B=128, seed 208; 13.9s
+   meetings with nonzero debt (non-Haar coincidences): 0
+  T=     4  q=0.5510 +- 0.0157  sqrt(T)q=  1.102  1/q= 1.815  visits(all)=  0.523  visits(unmerged)=  0.094  window(T/4,T]/alive=  0.223  win/sqrtT=0.112
+  T=    16  q=0.4900 +- 0.0158  sqrt(T)q=  1.960  1/q= 2.041  visits(all)=  0.733  visits(unmerged)=  0.259  window(T/4,T]/alive=  0.381  win/sqrtT=0.095
+  T=    64  q=0.4560 +- 0.0158  sqrt(T)q=  3.648  1/q= 2.193  visits(all)=  0.902  visits(unmerged)=  0.441  window(T/4,T]/alive=  0.345  win/sqrtT=0.043
+  T=   256  q=0.4290 +- 0.0157  sqrt(T)q=  6.864  1/q= 2.331  visits(all)=  1.036  visits(unmerged)=  0.587  window(T/4,T]/alive=  0.294  win/sqrtT=0.018
+  T=  1024  q=0.3930 +- 0.0154  sqrt(T)q= 12.576  1/q= 2.545  visits(all)=  1.205  visits(unmerged)=  0.794  window(T/4,T]/alive=  0.394  win/sqrtT=0.012
+  T=  4096  q=0.3670 +- 0.0152  sqrt(T)q= 23.488  1/q= 2.725  visits(all)=  1.317  visits(unmerged)=  0.907  window(T/4,T]/alive=  0.285  win/sqrtT=0.004
+  T= 16384  q=0.3410 +- 0.0150  sqrt(T)q= 43.648  1/q= 2.933  visits(all)=  1.422  visits(unmerged)=  0.991  window(T/4,T]/alive=  0.286  win/sqrtT=0.002
+3:1,0;2,4;5,2: d=3 m=[1, 2, 5] r=[0, 4, 2] Lambda=-0.3311 primes=[2, 5]; 1000 samples, offset 1, N=T+64, B=186, seed 209; 18.6s
+   meetings with nonzero debt (non-Haar coincidences): 0
+  T=     4  q=0.8440 +- 0.0115  sqrt(T)q=  1.688  1/q= 1.185  visits(all)=  0.279  visits(unmerged)=  0.139  window(T/4,T]/alive=  0.279  win/sqrtT=0.140
+  T=    16  q=0.7840 +- 0.0130  sqrt(T)q=  3.136  1/q= 1.276  visits(all)=  0.467  visits(unmerged)=  0.281  window(T/4,T]/alive=  0.223  win/sqrtT=0.056
+  T=    64  q=0.7400 +- 0.0139  sqrt(T)q=  5.920  1/q= 1.351  visits(all)=  0.710  visits(unmerged)=  0.493  window(T/4,T]/alive=  0.310  win/sqrtT=0.039
+  T=   256  q=0.7010 +- 0.0145  sqrt(T)q= 11.216  1/q= 1.427  visits(all)=  0.960  visits(unmerged)=  0.738  window(T/4,T]/alive=  0.338  win/sqrtT=0.021
+  T=  1024  q=0.6800 +- 0.0148  sqrt(T)q= 21.760  1/q= 1.471  visits(all)=  1.150  visits(unmerged)=  0.957  window(T/4,T]/alive=  0.271  win/sqrtT=0.008
+  T=  4096  q=0.6540 +- 0.0150  sqrt(T)q= 41.856  1/q= 1.529  visits(all)=  1.400  visits(unmerged)=  1.239  window(T/4,T]/alive=  0.368  win/sqrtT=0.006
+  T= 16384  q=0.6340 +- 0.0152  sqrt(T)q= 81.152  1/q= 1.577  visits(all)=  1.562  visits(unmerged)=  1.382  window(T/4,T]/alive=  0.248  win/sqrtT=0.002
+3:1,0;2,1;5,-1: d=3 m=[1, 2, 5] r=[0, 1, -1] Lambda=-0.3311 primes=[2, 5]; 1000 samples, offset 1, N=T+64, B=186, seed 210; 16.1s
+   meetings with nonzero debt (non-Haar coincidences): 0
+  T=     4  q=0.8610 +- 0.0109  sqrt(T)q=  1.722  1/q= 1.161  visits(all)=  0.268  visits(unmerged)=  0.135  window(T/4,T]/alive=  0.268  win/sqrtT=0.134
+  T=    16  q=0.7690 +- 0.0133  sqrt(T)q=  3.076  1/q= 1.300  visits(all)=  0.398  visits(unmerged)=  0.176  window(T/4,T]/alive=  0.151  win/sqrtT=0.038
+  T=    64  q=0.6880 +- 0.0147  sqrt(T)q=  5.504  1/q= 1.453  visits(all)=  0.574  visits(unmerged)=  0.291  window(T/4,T]/alive=  0.229  win/sqrtT=0.029
+  T=   256  q=0.6320 +- 0.0153  sqrt(T)q= 10.112  1/q= 1.582  visits(all)=  0.710  visits(unmerged)=  0.378  window(T/4,T]/alive=  0.198  win/sqrtT=0.012
+  T=  1024  q=0.5820 +- 0.0156  sqrt(T)q= 18.624  1/q= 1.718  visits(all)=  0.848  visits(unmerged)=  0.481  window(T/4,T]/alive=  0.218  win/sqrtT=0.007
+  T=  4096  q=0.5370 +- 0.0158  sqrt(T)q= 34.368  1/q= 1.862  visits(all)=  0.992  visits(unmerged)=  0.579  window(T/4,T]/alive=  0.247  win/sqrtT=0.004
+  T= 16384  q=0.4990 +- 0.0158  sqrt(T)q= 63.872  1/q= 2.004  visits(all)=  1.101  visits(unmerged)=  0.643  window(T/4,T]/alive=  0.203  win/sqrtT=0.002
+3:1,0;2,-2;5,5: d=3 m=[1, 2, 5] r=[0, -2, 5] Lambda=-0.3311 primes=[2, 5]; 1000 samples, offset 1, N=T+64, B=186, seed 211; 20.2s
+   meetings with nonzero debt (non-Haar coincidences): 0
+  T=     4  q=0.9320 +- 0.0080  sqrt(T)q=  1.864  1/q= 1.073  visits(all)=  0.215  visits(unmerged)=  0.158  window(T/4,T]/alive=  0.215  win/sqrtT=0.107
+  T=    16  q=0.8740 +- 0.0105  sqrt(T)q=  3.496  1/q= 1.144  visits(all)=  0.458  visits(unmerged)=  0.347  window(T/4,T]/alive=  0.261  win/sqrtT=0.065
+  T=    64  q=0.8150 +- 0.0123  sqrt(T)q=  6.520  1/q= 1.227  visits(all)=  0.736  visits(unmerged)=  0.571  window(T/4,T]/alive=  0.318  win/sqrtT=0.040
+  T=   256  q=0.7720 +- 0.0133  sqrt(T)q= 12.352  1/q= 1.295  visits(all)=  1.034  visits(unmerged)=  0.811  window(T/4,T]/alive=  0.366  win/sqrtT=0.023
+  T=  1024  q=0.7400 +- 0.0139  sqrt(T)q= 23.680  1/q= 1.351  visits(all)=  1.263  visits(unmerged)=  1.009  window(T/4,T]/alive=  0.297  win/sqrtT=0.009
+  T=  4096  q=0.7010 +- 0.0145  sqrt(T)q= 44.864  1/q= 1.427  visits(all)=  1.508  visits(unmerged)=  1.248  window(T/4,T]/alive=  0.331  win/sqrtT=0.005
+  T= 16384  q=0.6780 +- 0.0148  sqrt(T)q= 86.784  1/q= 1.475  visits(all)=  1.674  visits(unmerged)=  1.379  window(T/4,T]/alive=  0.237  win/sqrtT=0.002
+4:1,0;3,1;5,2;7,3: d=4 m=[1, 3, 5, 7] r=[0, 1, 2, 3] Lambda=-0.2228 primes=[3, 5, 7]; 1000 samples, offset 1, N=T+64, B=148, seed 212; 30.1s
+   meetings with nonzero debt (non-Haar coincidences): 0
+  T=     4  q=0.9110 +- 0.0090  sqrt(T)q=  1.822  1/q= 1.098  visits(all)=  0.225  visits(unmerged)=  0.147  window(T/4,T]/alive=  0.225  win/sqrtT=0.113
+  T=    16  q=0.8740 +- 0.0105  sqrt(T)q=  3.496  1/q= 1.144  visits(all)=  0.299  visits(unmerged)=  0.182  window(T/4,T]/alive=  0.081  win/sqrtT=0.020
+  T=    64  q=0.8630 +- 0.0109  sqrt(T)q=  6.904  1/q= 1.159  visits(all)=  0.337  visits(unmerged)=  0.212  window(T/4,T]/alive=  0.043  win/sqrtT=0.005
+  T=   256  q=0.8560 +- 0.0111  sqrt(T)q= 13.696  1/q= 1.168  visits(all)=  0.365  visits(unmerged)=  0.236  window(T/4,T]/alive=  0.032  win/sqrtT=0.002
+  T=  1024  q=0.8530 +- 0.0112  sqrt(T)q= 27.296  1/q= 1.172  visits(all)=  0.377  visits(unmerged)=  0.238  window(T/4,T]/alive=  0.014  win/sqrtT=0.000
+  T=  4096  q=0.8510 +- 0.0113  sqrt(T)q= 54.464  1/q= 1.175  visits(all)=  0.382  visits(unmerged)=  0.241  window(T/4,T]/alive=  0.006  win/sqrtT=0.000
+  T= 16384  q=0.8500 +- 0.0113  sqrt(T)q=108.800  1/q= 1.176  visits(all)=  0.387  visits(unmerged)=  0.246  window(T/4,T]/alive=  0.006  win/sqrtT=0.000
+5:1,0;8,-3;3,4;7,4;12,2: d=5 m=[1, 8, 3, 7, 12] r=[0, -3, 4, 4, 2] Lambda=-0.0877 primes=[2, 3, 7]; 1000 samples, offset 1, N=T+64, B=128, seed 213; 45.1s
+   meetings with nonzero debt (non-Haar coincidences): 0
+  T=     4  q=0.9930 +- 0.0026  sqrt(T)q=  1.986  1/q= 1.007  visits(all)=  0.017  visits(unmerged)=  0.010  window(T/4,T]/alive=  0.017  win/sqrtT=0.009
+  T=    16  q=0.9850 +- 0.0038  sqrt(T)q=  3.940  1/q= 1.015  visits(all)=  0.064  visits(unmerged)=  0.050  window(T/4,T]/alive=  0.047  win/sqrtT=0.012
+  T=    64  q=0.9840 +- 0.0040  sqrt(T)q=  7.872  1/q= 1.016  visits(all)=  0.088  visits(unmerged)=  0.072  window(T/4,T]/alive=  0.024  win/sqrtT=0.003
+  T=   256  q=0.9840 +- 0.0040  sqrt(T)q= 15.744  1/q= 1.016  visits(all)=  0.109  visits(unmerged)=  0.093  window(T/4,T]/alive=  0.021  win/sqrtT=0.001
+  T=  1024  q=0.9840 +- 0.0040  sqrt(T)q= 31.488  1/q= 1.016  visits(all)=  0.116  visits(unmerged)=  0.101  window(T/4,T]/alive=  0.007  win/sqrtT=0.000
+  T=  4096  q=0.9840 +- 0.0040  sqrt(T)q= 62.976  1/q= 1.016  visits(all)=  0.118  visits(unmerged)=  0.103  window(T/4,T]/alive=  0.002  win/sqrtT=0.000
+  T= 16384  q=0.9840 +- 0.0040  sqrt(T)q=125.952  1/q= 1.016  visits(all)=  0.122  visits(unmerged)=  0.107  window(T/4,T]/alive=  0.004  win/sqrtT=0.000
+5:1,0;2,3;3,4;7,4;6,1: d=5 m=[1, 2, 3, 7, 6] r=[0, 3, 4, 4, 1] Lambda=-0.5036 primes=[2, 3, 7]; 1000 samples, offset 1, N=T+64, B=128, seed 214; 34.4s
+   meetings with nonzero debt (non-Haar coincidences): 0
+  T=     4  q=0.9120 +- 0.0090  sqrt(T)q=  1.824  1/q= 1.096  visits(all)=  0.098  visits(unmerged)=  0.011  window(T/4,T]/alive=  0.098  win/sqrtT=0.049
+  T=    16  q=0.8790 +- 0.0103  sqrt(T)q=  3.516  1/q= 1.138  visits(all)=  0.153  visits(unmerged)=  0.036  window(T/4,T]/alive=  0.060  win/sqrtT=0.015
+  T=    64  q=0.8630 +- 0.0109  sqrt(T)q=  6.904  1/q= 1.159  visits(all)=  0.192  visits(unmerged)=  0.056  window(T/4,T]/alive=  0.044  win/sqrtT=0.006
+  T=   256  q=0.8500 +- 0.0113  sqrt(T)q= 13.600  1/q= 1.176  visits(all)=  0.224  visits(unmerged)=  0.069  window(T/4,T]/alive=  0.037  win/sqrtT=0.002
+  T=  1024  q=0.8430 +- 0.0115  sqrt(T)q= 26.976  1/q= 1.186  visits(all)=  0.239  visits(unmerged)=  0.076  window(T/4,T]/alive=  0.018  win/sqrtT=0.001
+  T=  4096  q=0.8420 +- 0.0115  sqrt(T)q= 53.888  1/q= 1.188  visits(all)=  0.242  visits(unmerged)=  0.077  window(T/4,T]/alive=  0.004  win/sqrtT=0.000
+  T= 16384  q=0.8420 +- 0.0115  sqrt(T)q=107.776  1/q= 1.188  visits(all)=  0.242  visits(unmerged)=  0.077  window(T/4,T]/alive=  0.000  win/sqrtT=0.000
+7:1,0;2,5;3,1;5,6;1,3;1,2;1,1: d=7 m=[1, 2, 3, 5, 1, 1, 1] r=[0, 5, 1, 6, 3, 2, 1] Lambda=-1.4600 primes=[2, 3, 5]; 1000 samples, offset 1, N=T+64, B=104, seed 215; 18.3s
+   meetings with nonzero debt (non-Haar coincidences): 0
+  T=     4  q=0.5280 +- 0.0158  sqrt(T)q=  1.056  1/q= 1.894  visits(all)=  0.499  visits(unmerged)=  0.032  window(T/4,T]/alive=  0.086  win/sqrtT=0.043
+  T=    16  q=0.4910 +- 0.0158  sqrt(T)q=  1.964  1/q= 2.037  visits(all)=  0.558  visits(unmerged)=  0.057  window(T/4,T]/alive=  0.112  win/sqrtT=0.028
+  T=    64  q=0.4660 +- 0.0158  sqrt(T)q=  3.728  1/q= 2.146  visits(all)=  0.595  visits(unmerged)=  0.064  window(T/4,T]/alive=  0.075  win/sqrtT=0.009
+  T=   256  q=0.4580 +- 0.0158  sqrt(T)q=  7.328  1/q= 2.183  visits(all)=  0.608  visits(unmerged)=  0.072  window(T/4,T]/alive=  0.028  win/sqrtT=0.002
+  T=  1024  q=0.4520 +- 0.0157  sqrt(T)q= 14.464  1/q= 2.212  visits(all)=  0.616  visits(unmerged)=  0.073  window(T/4,T]/alive=  0.017  win/sqrtT=0.001
+  T=  4096  q=0.4510 +- 0.0157  sqrt(T)q= 28.864  1/q= 2.217  visits(all)=  0.618  visits(unmerged)=  0.075  window(T/4,T]/alive=  0.004  win/sqrtT=0.000
+  T= 16384  q=0.4470 +- 0.0157  sqrt(T)q= 57.216  1/q= 2.237  visits(all)=  0.624  visits(unmerged)=  0.076  window(T/4,T]/alive=  0.013  win/sqrtT=0.000
+5:1,0;6,4;11,3;16,2;1,1: d=5 m=[1, 6, 11, 16, 1] r=[0, 4, 3, 2, 1] Lambda=-0.2170 primes=[2, 3, 11]; 1000 samples, offset 1, N=T+64, B=128, seed 216; 33.7s
+   meetings with nonzero debt (non-Haar coincidences): 0
+  T=     4  q=0.7810 +- 0.0131  sqrt(T)q=  1.562  1/q= 1.280  visits(all)=  0.245  visits(unmerged)=  0.033  window(T/4,T]/alive=  0.038  win/sqrtT=0.019
+  T=    16  q=0.7740 +- 0.0132  sqrt(T)q=  3.096  1/q= 1.292  visits(all)=  0.315  visits(unmerged)=  0.110  window(T/4,T]/alive=  0.090  win/sqrtT=0.022
+  T=    64  q=0.7700 +- 0.0133  sqrt(T)q=  6.160  1/q= 1.299  visits(all)=  0.378  visits(unmerged)=  0.177  window(T/4,T]/alive=  0.081  win/sqrtT=0.010
+  T=   256  q=0.7680 +- 0.0133  sqrt(T)q= 12.288  1/q= 1.302  visits(all)=  0.415  visits(unmerged)=  0.217  window(T/4,T]/alive=  0.048  win/sqrtT=0.003
+  T=  1024  q=0.7680 +- 0.0133  sqrt(T)q= 24.576  1/q= 1.302  visits(all)=  0.433  visits(unmerged)=  0.241  window(T/4,T]/alive=  0.023  win/sqrtT=0.001
+  T=  4096  q=0.7670 +- 0.0134  sqrt(T)q= 49.088  1/q= 1.304  visits(all)=  0.438  visits(unmerged)=  0.244  window(T/4,T]/alive=  0.007  win/sqrtT=0.000
+  T= 16384  q=0.7670 +- 0.0134  sqrt(T)q= 98.176  1/q= 1.304  visits(all)=  0.442  visits(unmerged)=  0.249  window(T/4,T]/alive=  0.005  win/sqrtT=0.000
+5:1,0;2,3;3,4;7,4;11,1: d=5 m=[1, 2, 3, 7, 11] r=[0, 3, 4, 4, 1] Lambda=-0.3823 primes=[2, 3, 7, 11]; 1000 samples, offset 1, N=T+64, B=128, seed 217; 40.4s
+   meetings with nonzero debt (non-Haar coincidences): 0
+  T=     4  q=0.9560 +- 0.0065  sqrt(T)q=  1.912  1/q= 1.046  visits(all)=  0.062  visits(unmerged)=  0.019  window(T/4,T]/alive=  0.062  win/sqrtT=0.031
+  T=    16  q=0.9530 +- 0.0067  sqrt(T)q=  3.812  1/q= 1.049  visits(all)=  0.084  visits(unmerged)=  0.039  window(T/4,T]/alive=  0.023  win/sqrtT=0.006
+  T=    64  q=0.9510 +- 0.0068  sqrt(T)q=  7.608  1/q= 1.052  visits(all)=  0.097  visits(unmerged)=  0.050  window(T/4,T]/alive=  0.014  win/sqrtT=0.002
+  T=   256  q=0.9500 +- 0.0069  sqrt(T)q= 15.200  1/q= 1.053  visits(all)=  0.101  visits(unmerged)=  0.054  window(T/4,T]/alive=  0.004  win/sqrtT=0.000
+  T=  1024  q=0.9490 +- 0.0070  sqrt(T)q= 30.368  1/q= 1.054  visits(all)=  0.102  visits(unmerged)=  0.054  window(T/4,T]/alive=  0.001  win/sqrtT=0.000
+  T=  4096  q=0.9490 +- 0.0070  sqrt(T)q= 60.736  1/q= 1.054  visits(all)=  0.102  visits(unmerged)=  0.054  window(T/4,T]/alive=  0.000  win/sqrtT=0.000
+  T= 16384  q=0.9490 +- 0.0070  sqrt(T)q=121.472  1/q= 1.054  visits(all)=  0.102  visits(unmerged)=  0.054  window(T/4,T]/alive=  0.000  win/sqrtT=0.000
+3:1,0;2,1;11,2: d=3 m=[1, 2, 11] r=[0, 1, 2] Lambda=-0.0683 primes=[2, 11]; 600 samples, offset 1, N=T+64, B=186, seed 218; 121.9s
+   meetings with nonzero debt (non-Haar coincidences): 0
+  T=     4  q=0.8300 +- 0.0153  sqrt(T)q=  1.660  1/q= 1.205  visits(all)=  0.233  visits(unmerged)=  0.076  window(T/4,T]/alive=  0.233  win/sqrtT=0.117
+  T=    16  q=0.7783 +- 0.0170  sqrt(T)q=  3.113  1/q= 1.285  visits(all)=  0.483  visits(unmerged)=  0.317  window(T/4,T]/alive=  0.301  win/sqrtT=0.075
+  T=    64  q=0.7633 +- 0.0174  sqrt(T)q=  6.107  1/q= 1.310  visits(all)=  0.772  visits(unmerged)=  0.664  window(T/4,T]/alive=  0.370  win/sqrtT=0.046
+  T=   256  q=0.7583 +- 0.0175  sqrt(T)q= 12.133  1/q= 1.319  visits(all)=  1.138  visits(unmerged)=  1.112  window(T/4,T]/alive=  0.480  win/sqrtT=0.030
+  T=  1024  q=0.7567 +- 0.0175  sqrt(T)q= 24.213  1/q= 1.322  visits(all)=  1.550  visits(unmerged)=  1.637  window(T/4,T]/alive=  0.543  win/sqrtT=0.017
+  T=  4096  q=0.7483 +- 0.0177  sqrt(T)q= 47.893  1/q= 1.336  visits(all)=  2.048  visits(unmerged)=  2.236  window(T/4,T]/alive=  0.659  win/sqrtT=0.010
+  T= 16384  q=0.7433 +- 0.0178  sqrt(T)q= 95.147  1/q= 1.345  visits(all)=  2.493  visits(unmerged)=  2.821  window(T/4,T]/alive=  0.595  win/sqrtT=0.005
+  T= 65536  q=0.7350 +- 0.0180  sqrt(T)q=188.160  1/q= 1.361  visits(all)=  2.928  visits(unmerged)=  3.340  window(T/4,T]/alive=  0.585  win/sqrtT=0.002
+5:1,0;8,-3;3,4;7,4;12,2: d=5 m=[1, 8, 3, 7, 12] r=[0, -3, 4, 4, 2] Lambda=-0.0877 primes=[2, 3, 7]; 600 samples, offset 1, N=T+64, B=128, seed 219; 298.7s
+   meetings with nonzero debt (non-Haar coincidences): 0
+  T=     4  q=0.9883 +- 0.0044  sqrt(T)q=  1.977  1/q= 1.012  visits(all)=  0.023  visits(unmerged)=  0.012  window(T/4,T]/alive=  0.023  win/sqrtT=0.012
+  T=    16  q=0.9817 +- 0.0055  sqrt(T)q=  3.927  1/q= 1.019  visits(all)=  0.050  visits(unmerged)=  0.032  window(T/4,T]/alive=  0.027  win/sqrtT=0.007
+  T=    64  q=0.9800 +- 0.0057  sqrt(T)q=  7.840  1/q= 1.020  visits(all)=  0.063  visits(unmerged)=  0.044  window(T/4,T]/alive=  0.014  win/sqrtT=0.002
+  T=   256  q=0.9800 +- 0.0057  sqrt(T)q= 15.680  1/q= 1.020  visits(all)=  0.073  visits(unmerged)=  0.054  window(T/4,T]/alive=  0.010  win/sqrtT=0.001
+  T=  1024  q=0.9800 +- 0.0057  sqrt(T)q= 31.360  1/q= 1.020  visits(all)=  0.075  visits(unmerged)=  0.056  window(T/4,T]/alive=  0.002  win/sqrtT=0.000
+  T=  4096  q=0.9800 +- 0.0057  sqrt(T)q= 62.720  1/q= 1.020  visits(all)=  0.075  visits(unmerged)=  0.056  window(T/4,T]/alive=  0.000  win/sqrtT=0.000
+  T= 16384  q=0.9800 +- 0.0057  sqrt(T)q=125.440  1/q= 1.020  visits(all)=  0.075  visits(unmerged)=  0.056  window(T/4,T]/alive=  0.000  win/sqrtT=0.000
+  T= 65536  q=0.9800 +- 0.0057  sqrt(T)q=250.880  1/q= 1.020  visits(all)=  0.075  visits(unmerged)=  0.056  window(T/4,T]/alive=  0.000  win/sqrtT=0.000
+4:1,0;3,1;5,2;7,3: d=4 m=[1, 3, 5, 7] r=[0, 1, 2, 3] Lambda=-0.2228 primes=[3, 5, 7]; 600 samples, offset 1, N=T+64, B=148, seed 220; 165.3s
+   meetings with nonzero debt (non-Haar coincidences): 0
+  T=     4  q=0.8933 +- 0.0126  sqrt(T)q=  1.787  1/q= 1.119  visits(all)=  0.253  visits(unmerged)=  0.157  window(T/4,T]/alive=  0.253  win/sqrtT=0.127
+  T=    16  q=0.8650 +- 0.0140  sqrt(T)q=  3.460  1/q= 1.156  visits(all)=  0.303  visits(unmerged)=  0.170  window(T/4,T]/alive=  0.056  win/sqrtT=0.014
+  T=    64  q=0.8533 +- 0.0144  sqrt(T)q=  6.827  1/q= 1.172  visits(all)=  0.350  visits(unmerged)=  0.209  window(T/4,T]/alive=  0.054  win/sqrtT=0.007
+  T=   256  q=0.8483 +- 0.0146  sqrt(T)q= 13.573  1/q= 1.179  visits(all)=  0.375  visits(unmerged)=  0.232  window(T/4,T]/alive=  0.029  win/sqrtT=0.002
+  T=  1024  q=0.8450 +- 0.0148  sqrt(T)q= 27.040  1/q= 1.183  visits(all)=  0.398  visits(unmerged)=  0.256  window(T/4,T]/alive=  0.028  win/sqrtT=0.001
+  T=  4096  q=0.8433 +- 0.0148  sqrt(T)q= 53.973  1/q= 1.186  visits(all)=  0.403  visits(unmerged)=  0.257  window(T/4,T]/alive=  0.006  win/sqrtT=0.000
+  T= 16384  q=0.8433 +- 0.0148  sqrt(T)q=107.947  1/q= 1.186  visits(all)=  0.403  visits(unmerged)=  0.257  window(T/4,T]/alive=  0.000  win/sqrtT=0.000
+  T= 65536  q=0.8433 +- 0.0148  sqrt(T)q=215.893  1/q= 1.186  visits(all)=  0.407  visits(unmerged)=  0.261  window(T/4,T]/alive=  0.004  win/sqrtT=0.000
+DONE

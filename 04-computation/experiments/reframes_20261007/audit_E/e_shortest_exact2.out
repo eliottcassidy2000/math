@@ -1,0 +1,3 @@
+p=11 L=32: first absorption at t=18 with 3 words -> exact bound 3*2^-18; P(absorbed by 32) = 2.355850e-05 (exact: 101183/4294967296); absorptions by time: {18: 3, 20: 1, 21: 8, 22: 5, 23: 6, 24: 24, 25: 38, 26: 41, 27: 69, 28: 174, 29: 187, 30: 292, 31: 604, 32: 863}; max frontier 835769
+p=13 L=33: first absorption at t=23 with 3 words -> exact bound 3*2^-23; P(absorbed by 33) = 1.059263e-06 (exact: 9099/8589934592); absorptions by time: {23: 3, 24: 3, 25: 1, 26: 5, 27: 24, 28: 15, 29: 21, 30: 53, 31: 105, 32: 103, 33: 193}; max frontier 1209823
+DONE

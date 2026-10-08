@@ -1,0 +1,13 @@
+3x+1     : 7938 steps; branch-rule mismatches 0; identity u = M v + e failures 0; B_n e_n non-integer 0; steps at M = 1: 269
+3x+5     : 24000 steps; branch-rule mismatches 0; identity u = M v + e failures 0; B_n e_n non-integer 0; steps at M = 1: 1250
+Z3_124   : 3582 steps; branch-rule mismatches 0; identity u = M v + e failures 0; B_n e_n non-integer 0; steps at M = 1: 88
+Z3_125   : 13236 steps; branch-rule mismatches 0; identity u = M v + e failures 0; B_n e_n non-integer 0; steps at M = 1: 57
+Z5_12311 : 7495 steps; branch-rule mismatches 0; identity u = M v + e failures 0; B_n e_n non-integer 0; steps at M = 1: 59
+Z5_12471 : 15812 steps; branch-rule mismatches 0; identity u = M v + e failures 0; B_n e_n non-integer 0; steps at M = 1: 50
+Z5_12371 : 17645 steps; branch-rule mismatches 0; identity u = M v + e failures 0; B_n e_n non-integer 0; steps at M = 1: 27
+5x+1     : 24000 steps; branch-rule mismatches 0; identity u = M v + e failures 0; B_n e_n non-integer 0; steps at M = 1: 1276
+Z3_1416  : 21226 steps; branch-rule mismatches 0; identity u = M v + e failures 0; B_n e_n non-integer 0; steps at M = 1: 631
+Z3_157   : 24000 steps; branch-rule mismatches 0; identity u = M v + e failures 0; B_n e_n non-integer 0; steps at M = 1: 106
+offset e0 = 7 for Z3_125 and Z5_12371:
+Z3_125   : 19022 steps; branch-rule mismatches 0; identity u = M v + e failures 0; B_n e_n non-integer 0; steps at M = 1: 51
+Z5_12371 : 22512 steps; branch-rule mismatches 0; identity u = M v + e failures 0; B_n e_n non-integer 0; steps at M = 1: 14

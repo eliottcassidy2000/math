@@ -1,0 +1,15 @@
+(B1) P(tau>2m) = C(2m,m)/4^m exact for m<=30: PASS; min over m<=1e6 of [C(2m,m)/4^m]/[1/(2 sqrt m)] = 1.000000 at m=1 (>=1 needed; -> 2/sqrt(pi)=1.128)
+(B2) exact SRW visit law, n <= 400: max over (n,m) of P(V_n >= m) / exp(-(m-1)/(2 sqrt n)) = 1.0000 at (n,m)=(1, 1) (PASS: must be <= 1)
+(B3) ln(1-x) >= -2x on [0,1/2] (grid of 1e5 points; also concavity argument): PASS
+(B4) p= 5: Lambda=0.11157, eps=0.02311, n0(delta1<=1/4)=1,403,518, C'(delta2<=1/4)~86.5;  A_p(1/2) = 10^981,058  (finite; purely qualitative)
+(B4) p= 7: Lambda=0.27981, eps=0.04793, n0(delta1<=1/4)=255,572, C'(delta2<=1/4)~57.7;  A_p(1/2) = 10^216,011  (finite; purely qualitative)
+(B4) p= 9: Lambda=0.40547, eps=0.06151, n0(delta1<=1/4)=141,627, C'(delta2<=1/4)~38.4;  A_p(1/2) = 10^135,166  (finite; purely qualitative)
+(B4) p=13: Lambda=0.58933, eps=0.07659, n0(delta1<=1/4)=83,983, C'(delta2<=1/4)~38.4;  A_p(1/2) = 10^93,571  (finite; purely qualitative)
+(B5) p=5: P(xi = ln(p/2)) at departures 0.5035 (n=9244), off departures 0.4992 (n=525337); lag-1 corr of xi +0.0009
+(B5) p=7: P(xi = ln(p/2)) at departures 0.5039 (n=5862), off departures 0.5002 (n=199281); lag-1 corr of xi +0.0006
+(B5) p=9: P(xi = ln(p/2)) at departures 0.4887 (n=4950), off departures 0.4990 (n=141755); lag-1 corr of xi -0.0027
+(B5) violations: D_n > V_n: 0; ln lambda < xi - ln p 1{dep}: 0; induction step inequalities at |f|>=4: 0 of 866535 steps checked
+(B6) p=5: e0=1: absorbed 0.0100, envelope held 0.000; e0=4: absorbed 0.0105, envelope held 0.039; e0=16: absorbed 0.0075, envelope held 0.130; e0=256: absorbed 0.0005, envelope held 0.462; e0=4096: absorbed 0.0005, envelope held 0.673; e0=1048576: absorbed 0.0000, envelope held 0.899; e0=1099511627776: absorbed 0.0000, envelope held 0.996
+(B6) p=7: e0=1: absorbed 0.1190, envelope held 0.000; e0=4: absorbed 0.0435, envelope held 0.095; e0=16: absorbed 0.0065, envelope held 0.350; e0=256: absorbed 0.0010, envelope held 0.747; e0=4096: absorbed 0.0005, envelope held 0.919; e0=1048576: absorbed 0.0000, envelope held 0.992; e0=1099511627776: absorbed 0.0000, envelope held 1.000
+(B6) p=9: e0=1: absorbed 0.0030, envelope held 0.000; e0=4: absorbed 0.0000, envelope held 0.150; e0=16: absorbed 0.0005, envelope held 0.418; e0=256: absorbed 0.0000, envelope held 0.801; e0=4096: absorbed 0.0000, envelope held 0.952; e0=1048576: absorbed 0.0000, envelope held 0.998; e0=1099511627776: absorbed 0.0000, envelope held 1.000
+ALL B CHECKS PASS

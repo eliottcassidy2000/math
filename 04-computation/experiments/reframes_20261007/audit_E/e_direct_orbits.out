@@ -1,0 +1,19 @@
+p=5 nsamp=600000 N=1000 B=1536 seed=501: merged 4970 -> q_p(N) = 0.008283 +- 0.000117; unequal-time meetings 0; latest merge 225; earliest 11; median 22; runtime 521s
+  merge-time bins: [1,10]: 0, [11,20]: 2255, [21,40]: 1876, [41,80]: 703, [81,160]: 128, [161,320]: 8, [321,inf]: 0
+  first merge times (count): 11:310, 12:147, 13:359, 14:214, 15:236, 16:167, 17:218, 18:226, 19:189, 20:189, 21:160, 22:165, 23:130, 24:124, 25:120
+p=7 nsamp=600000 N=400 B=1024 seed=701: merged 65220 -> q_p(N) = 0.108700 +- 0.000402; unequal-time meetings 0; latest merge 78; earliest 4; median 4; runtime 144s
+  merge-time bins: [1,10]: 57983, [11,20]: 6171, [21,40]: 1014, [41,80]: 52, [81,160]: 0, [161,320]: 0, [321,inf]: 0
+  first merge times (count): 4:37393, 6:9328, 7:4654, 8:2397, 9:2363, 10:1848, 11:1496, 12:1046, 13:855, 14:688, 15:606, 16:382, 17:364, 18:320, 19:222
+p=9 nsamp=600000 N=400 B=1024 seed=901: merged 1369 -> q_p(N) = 0.002282 +- 0.000062; unequal-time meetings 0; latest merge 52; earliest 11; median 13; runtime 166s
+  merge-time bins: [1,10]: 0, [11,20]: 1267, [21,40]: 101, [41,80]: 1, [81,160]: 0, [161,320]: 0, [321,inf]: 0
+  first merge times (count): 11:572, 13:164, 14:165, 15:97, 16:79, 17:85, 18:40, 19:26, 20:39, 21:23, 22:13, 23:9, 24:13, 25:10, 26:6
+p=11 nsamp=4000000 N=200 B=512 seed=1101: merged 109 -> q_p(N) = 0.000027 +- 0.000003; unequal-time meetings 0; latest merge 40; earliest 18; median 20; runtime 364s
+  merge-time bins: [1,10]: 0, [11,20]: 59, [21,40]: 50, [41,80]: 0, [81,160]: 0, [161,320]: 0, [321,inf]: 0
+  first merge times (count): 18:53, 20:6, 21:19, 22:3, 23:2, 24:2, 25:9, 26:1, 27:1, 28:2, 29:1, 30:4, 31:1, 32:2, 36:2
+p=13 nsamp=4000000 N=200 B=512 seed=1301: merged 8 -> q_p(N) = 0.000002 +- 0.000001; unequal-time meetings 0; latest merge 40; earliest 23; median 27; runtime 375s
+  merge-time bins: [1,10]: 0, [11,20]: 0, [21,40]: 8, [41,80]: 0, [81,160]: 0, [161,320]: 0, [321,inf]: 0
+  first merge times (count): 23:2, 24:2, 27:1, 31:1, 36:1, 40:1
+p=5 nsamp=100000 N=400 B=3000 seed=503: merged 788 -> q_p(N) = 0.007880 +- 0.000280; unequal-time meetings 0; latest merge 156; earliest 11; median 21; runtime 57s
+  merge-time bins: [1,10]: 0, [11,20]: 375, [21,40]: 285, [41,80]: 108, [81,160]: 20, [161,320]: 0, [321,inf]: 0
+  first merge times (count): 11:57, 12:29, 13:60, 14:31, 15:38, 16:35, 17:26, 18:40, 19:28, 20:31, 21:20, 22:24, 23:32, 24:23, 25:28
+DONE

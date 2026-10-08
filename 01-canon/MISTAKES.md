@@ -2052,6 +2052,40 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
+## MISTAKE-589 (2026-10-08, mac-mini-2026-10-08-reframes; found by independent audits E (THM-4606) and F (HYP-9244 and the results note) after checkpoint 8de8989efb was pushed) -- a conjecture stated without an accessibility clause, a false "sheet-blind" reading, a diagnostic that could not show what was claimed, a single-event estimate, an "exact" label on a pruned search, a density bound stated for all offsets, a proof sentence wrong for non-integer starts, heuristics stated as identities, and a per-depth tail read from correlated samples
+
+- **HYP-9244, accessibility (major).** "Contraction and recurrence decide coalescence" is false as first stated.
+  - Congruence obstruction: if a prime `ℓ ∤ d·Πm_i` and some `c` satisfy `(m_i − d)c + r_i ≡ 0 (mod ℓ)` for all branches, then `e_n − (1 − M_n)c ≡ (Π m/d) e_0 (mod ℓ)`. So the merge state is never reached from offsets prime to `ℓ`.
+  - Example: under `3x + 5`, `y` and `y + 1` never meet. Likewise `Z_3` (1,2,5) with `r = (0,7,14)`, among others.
+  - The "non-degenerate" clause excluded nothing.
+  - Fix: an accessibility clause, the obstruction lemma (PROVED), and the mechanism stated as accessibility × contraction × recurrence.
+- **"Sheet-blind" (major).** The note and the HYP said coalescence depends only on the multipliers.
+  - Same multipliers, different sheets, give different outcomes: `3x + 5` from offset 1 never coalesces, and `Z_3` (1,2,5) sheets give `q(16384)` from 0.42 to 1.
+  - Only invariance under affine conjugacy (offsets rescale) holds. THM-4606 statement 6 had this right; the summaries dropped the rescaling.
+- **Visits diagnostic.** "Debt visits ~√T" for contracting rank-1 maps is not what the diagnostic measured. Its all-sample mean freezes at absorption and saturates. Replaced by the per-survivor visit window (rank 1 about 8–13, rank 2 flat at 0.21–0.26, rank 3 decaying to 0.001).
+- **Headline numbers.**
+  - The rank-2 headline came from the lowest of three runs; pooled values with errors replace it.
+  - `q_13 ≈ 5·10^-6` rested on one event; it is `(1.6 ± 0.4)·10^-6`, with rigorous floor `1.06·10^-6`.
+  - Statement 5's density bound 0.0087 holds only for `e = ±1`: `q_5(3) ≥ 1/32`.
+- **THM-4606 wording.**
+  - "Exact" first-merge times came from a search pruned at `|f| > 10^4`. Audit E confirmed every value with a rigorous pruning.
+  - "The run at `k = −1` either stays with `|f|` growing or returns" is wrong for non-integer starts. The run is infinite only at the fixed point `pe_1 = −(p−1)/(p−2)`, where `f` is constant. That point is never integral for `p ≥ 5`.
+  - The `p = 3` tail was typed `≍ T^(−1/2)`; the upper bound is at sketch level.
+  - The additive error bound was not sharp (it is 1/2).
+  - The escape lemma was not flagged as purely qualitative (`A_5(1/2) ≈ 10^981058`).
+- **Heuristics stated as identities.**
+  - "The orphan law's 1/2 is the rank-one exponent": the measured exponents are 0.42–0.63.
+  - "River spans are `O(√K)`": the mean ratio rises about 2σ, so only `span/√K ≤ 5.9` for `K ≤ 12800` is supported.
+  - "A third unit gives rank two": the debt rank is at most `d − 1`.
+- **Correlated samples.** The +1-barrier landing tail was first read per depth (`n·P ≈ 3`). Depths in one river are one sample: 40 distinct `N_D` values, 195 landings for `D < 4500`. Corrected in the working tree before the audit finished; the per-river fit is loose at 64–256.
+- **Proof-sketch step count.** The classical three-step merge was written as four steps. It is (odd, odd), (even, even), (u even, v odd).
+- **Reusable rules.**
+  - Before conjecturing that a property of random-walk type holds a.s., look for invariants mod primes: a conserved residue can make the target unreachable.
+  - Never report a frequency from one or two events.
+  - Do not call a search "exact" if it prunes without a proof that the pruned states cannot succeed.
+  - Count correlated samples (rivers, partner classes) once.
+  - A visit count frozen at absorption cannot show recurrence; measure it among survivors.
+
 ## MISTAKE-588 (2026-10-07, opus-2026-10-07-S21 Mersenne-line barriers note, THM-4605 and HYP-9243; found by the session's independent adversarial audit after checkpoint 023a49bcf was pushed) -- an absorbed block assumed to be an interval, a "collapse together" claim no committed code checked, a band "agreement" with the orphan law that was a bookkeeping artifact, a provable consequence typed as heuristic, an uncited published algorithm, and a Mahler analogy at the wrong place; then (second audit) a misstated trivial-cycle case and a missed canon theorem (THM-4593)
 
 - **What was claimed (checkpoint `023a49bcf`).**

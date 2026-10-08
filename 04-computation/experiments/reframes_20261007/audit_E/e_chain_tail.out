@@ -1,0 +1,7 @@
+p=5 e0=1 npaths=400000 TMAX=50000 cut=1e40 seed=2101: merged 3433 -> q = 0.008582 +- 0.000146; escaped 396567, timed out 0; merges after t=100: 45, after 200: 3, after 400: 0, after 1000: 0; latest 352; max log10|f| (sampled every 16 steps) on a path that later merged: 7.3; runtime 156s
+  merge times > 200: [204, 206, 352]
+p=7 e0=1 npaths=400000 TMAX=20000 cut=1e40 seed=2102: merged 43458 -> q = 0.108645 +- 0.000492; escaped 356542, timed out 0; merges after t=100: 0, after 200: 0, after 400: 0, after 1000: 0; latest 68; max log10|f| (sampled every 16 steps) on a path that later merged: 2.4; runtime 54s
+  merge times > 200: []
+p=9 e0=1 npaths=400000 TMAX=20000 cut=1e40 seed=2103: merged 877 -> q = 0.002193 +- 0.000074; escaped 399123, timed out 0; merges after t=100: 0, after 200: 0, after 400: 0, after 1000: 0; latest 38; max log10|f| (sampled every 16 steps) on a path that later merged: 1.9; runtime 41s
+  merge times > 200: []
+DONE

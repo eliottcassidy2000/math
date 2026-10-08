@@ -1,0 +1,30 @@
+[landing] N_D for 1 <= D <= 4499 via 2-adic truncation + parity-vector formula: 35.4s
+   3 <= D <= 4499: nonpositive 0; max 880 (at D = [253, 254, 255, 256, 263]); median 4; s_0/D in [1.500, 2.882]
+   bound N_D < (3/2)^D violated for D in [] (all D in 1..4499); N_D for D=1..12: [0, 0, 1, 1, 1, 1, 4, 4, 4, 4, 1, 1]
+      P(N_D >     2) = 0.7821   n*P = 1.564   count 3517
+      P(N_D >     4) = 0.4439   n*P = 1.775   count 1996
+      P(N_D >     8) = 0.3447   n*P = 2.757   count 1550
+      P(N_D >    16) = 0.2224   n*P = 3.558   count 1000
+      P(N_D >    32) = 0.1276   n*P = 4.085   count 574
+      P(N_D >    64) = 0.0640   n*P = 4.099   count 288
+      P(N_D >   128) = 0.0173   n*P = 2.220   count 78
+      P(N_D >   256) = 0.0098   n*P = 2.505   count 44
+      P(N_D >   512) = 0.0067   n*P = 3.416   count 30
+      P(N_D >  1024) = 0.0000   n*P = 0.000   count 0
+   distinct values 41 among 4497; most common [(1, 980), (3, 807), (4, 714), (7, 398), (13, 176), (10, 166), (22, 136), (28, 114), (9, 104), (48, 74), (37, 72), (12, 72)]
+   largest values with multiplicity: [(880, 8), (732, 22), (412, 2), (327, 4), (304, 8), (217, 30), (169, 4), (120, 32), (111, 50), (106, 64), (100, 38), (90, 2)]
+   N_D = N_(D+1) for 4012 of 4496 consecutive pairs
+   D with N_D > 512: 30; first 30: [253, 254, 255, 256, 263, 264, 267, 268, 815, 816, 817, 818, 819, 820, 821, 822, 823, 824, 829, 830, 831, 832, 833, 834, 835, 836, 849, 850, 851, 852]
+   D in [3,4001): 186 distinct landings (N_D, s_0); consecutive pairs sharing: 3467/3997; largest classes [144, 126, 114, 114, 104, 90, 88, 80]
+      records (N, minD, maxD, size): [(880, 253, 268, 8), (732, 815, 852, 22), (412, 43, 44, 2), (327, 129, 134, 4), (304, 641, 648, 8), (217, 3287, 3338, 30)]
+      per-class P(N >   4) = 0.4677   (2.87/n = 0.7175)
+      per-class P(N >  16) = 0.2258   (2.87/n = 0.1794)
+      per-class P(N >  64) = 0.0645   (2.87/n = 0.0448)
+      per-class P(N > 256) = 0.0269   (2.87/n = 0.0112)
+   D in [3,4500): 195 distinct landings (N_D, s_0); consecutive pairs sharing: 3929/4496; largest classes [144, 126, 124, 114, 114, 94, 90, 88]
+      records (N, minD, maxD, size): [(880, 253, 268, 8), (732, 815, 852, 22), (412, 43, 44, 2), (327, 129, 134, 4), (304, 641, 648, 8), (217, 3287, 3338, 30)]
+      per-class P(N >   4) = 0.4667   (2.87/n = 0.7175)
+      per-class P(N >  16) = 0.2205   (2.87/n = 0.1794)
+      per-class P(N >  64) = 0.0667   (2.87/n = 0.0448)
+      per-class P(N > 256) = 0.0256   (2.87/n = 0.0112)
+   max over 1 <= N <= 880 of odd(N) - sigma_T(N)/2 = 8.5 at N = 871

@@ -91,3 +91,19 @@ For K ≥ 9, 1/2 is rejected. For K = 2 the orphan event is exactly the failure 
 * The deletion certificate is the absorption of the pair chain's debt walk, which has zero drift and a T^(−1/2) non-absorption tail (THM-4581).
 * The available time is about 4.8 times the child's bit length. This is the single-chain prediction.
 * With many children the observed decay is faster (effective exponent ≈ 0.6), plausibly because several weakly correlated debt walks must all fail.
+
+## Sheet diagnostic (2026-10-08, mac-mini-2026-10-08-reframes; NUMERICAL)
+
+* Atlas P1 requires 2-adic statements to be sheet-blind. The conjugate of the Mersenne line under 3x − 1 is `P_K = 2^K + 1`.
+  * Its deletion children are `P_(K−D)`, and its run ends are `2·3^(K−1) + 1`.
+  * Its orbits end in the three positive 3x − 1 cycles, with shares 1037/1096/866 for `K ≤ 3000`.
+  * Its residual (first-letter-2) class is the even `K`; the odd `K` always merge with `K − 1` three steps after the run.
+* In the residual class, `K ≤ 3000`, the orphan counts are 75 (3x − 1) against 77 (3x + 1). The window fractions are:
+
+  | window | 3x − 1 | 3x + 1 |
+  |---|---|---|
+  | [100, 400) | 0.107 | 0.093 |
+  | [400, 1600) | 0.040 | 0.043 |
+  | [1600, 3000] | 0.020 | 0.023 |
+
+* So the orphan law is sheet-blind within noise. Script: `04-computation/experiments/reframes_20261007/sheet_diagnostic.py` (+ `.out`).

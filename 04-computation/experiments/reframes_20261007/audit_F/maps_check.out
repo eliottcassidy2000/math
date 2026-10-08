@@ -1,0 +1,11 @@
+x+1       d=2 m=[1, 1] r=[0, 1]: d|m_i i+r_i True, onto Z_d (mod d^K, K<=4) True, rank 0 (primes []; claimed 0), Lambda = -0.6931 (claimed sign -1) -> OK
+3x+1      d=2 m=[1, 3] r=[0, 1]: d|m_i i+r_i True, onto Z_d (mod d^K, K<=4) True, rank 1 (primes [3]; claimed 1), Lambda = -0.1438 (claimed sign -1) -> OK
+Z3_124    d=3 m=[1, 2, 4] r=[0, 1, 1]: d|m_i i+r_i True, onto Z_d (mod d^K, K<=4) True, rank 1 (primes [2]; claimed 1), Lambda = -0.4055 (claimed sign -1) -> OK
+Z3_125    d=3 m=[1, 2, 5] r=[0, 1, 2]: d|m_i i+r_i True, onto Z_d (mod d^K, K<=4) True, rank 2 (primes [2, 5]; claimed 2), Lambda = -0.3311 (claimed sign -1) -> OK
+Z5_12311  d=5 m=[1, 2, 3, 1, 1] r=[0, 3, 4, 2, 1]: d|m_i i+r_i True, onto Z_d (mod d^K, K<=4) True, rank 2 (primes [2, 3]; claimed 2), Lambda = -1.2511 (claimed sign -1) -> OK
+Z5_12471  d=5 m=[1, 2, 4, 7, 1] r=[0, 3, 2, 4, 1]: d|m_i i+r_i True, onto Z_d (mod d^K, K<=4) True, rank 2 (primes [2, 7]; claimed 2), Lambda = -0.8044 (claimed sign -1) -> OK
+Z5_12371  d=5 m=[1, 2, 3, 7, 1] r=[0, 3, 4, 4, 1]: d|m_i i+r_i True, onto Z_d (mod d^K, K<=4) True, rank 3 (primes [2, 3, 7]; claimed 3), Lambda = -0.8619 (claimed sign -1) -> OK
+5x+1      d=2 m=[1, 5] r=[0, 1]: d|m_i i+r_i True, onto Z_d (mod d^K, K<=4) True, rank 1 (primes [5]; claimed 1), Lambda = +0.1116 (claimed sign +1) -> OK
+Z3_1416   d=3 m=[1, 4, 16] r=[0, 2, 1]: d|m_i i+r_i True, onto Z_d (mod d^K, K<=4) True, rank 1 (primes [2]; claimed 1), Lambda = +0.2877 (claimed sign +1) -> OK
+Z3_157    d=3 m=[1, 5, 7] r=[0, 1, 1]: d|m_i i+r_i True, onto Z_d (mod d^K, K<=4) True, rank 2 (primes [5, 7]; claimed 2), Lambda = +0.0865 (claimed sign +1) -> OK
+ALL MAP CHECKS PASSED

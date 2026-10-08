@@ -1,0 +1,6 @@
+3x-1 on 2^K+1, K <= 3000: cycle shares {5: 1096, 17: 866, 1: 1037}; residual (even) K 1500; orphans among them 75; orphans among all K 77 (odd: 2)
+3x+1 on 2^K-1: orphans among all K 78 (even: 1)
+3x+1 on 2^K-1, K <= 3000: orphans 77
+   K in [100,400): residual-class orphan fraction 3x-1 0.1067 (x sqrt K 1.69)   3x+1 0.0933 (x sqrt K 1.48)
+   K in [400,1600): residual-class orphan fraction 3x-1 0.0400 (x sqrt K 1.26)   3x+1 0.0433 (x sqrt K 1.37)
+   K in [1600,3001): residual-class orphan fraction 3x-1 0.0200 (x sqrt K 0.96)   3x+1 0.0229 (x sqrt K 1.10)

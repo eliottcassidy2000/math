@@ -1,0 +1,24 @@
+[landing] N_D for 1 <= D <= 4000 via 2-adic truncation + parity-vector formula: 25.2s
+   3 <= D <= 4000: nonpositive 0; max 880 (at D = [253, 254, 255, 256, 263]); median 4; s_0/D in [1.500, 2.882]
+   bound N_D < (3/2)^D violated for D in [] (all D in 1..4000); N_D for D=1..12: [0, 0, 1, 1, 1, 1, 4, 4, 4, 4, 1, 1]
+      P(N_D >     2) = 0.7549   n*P = 1.510   count 3018
+      P(N_D >     4) = 0.4342   n*P = 1.737   count 1736
+      P(N_D >     8) = 0.3487   n*P = 2.789   count 1394
+      P(N_D >    16) = 0.2201   n*P = 3.522   count 880
+      P(N_D >    32) = 0.1136   n*P = 3.634   count 454
+      P(N_D >    64) = 0.0560   n*P = 3.586   count 224
+      P(N_D >   128) = 0.0195   n*P = 2.497   count 78
+      P(N_D >   256) = 0.0110   n*P = 2.817   count 44
+      P(N_D >   512) = 0.0075   n*P = 3.842   count 30
+      P(N_D >  1024) = 0.0000   n*P = 0.000   count 0
+   distinct values 40 among 3998; most common [(1, 980), (3, 672), (4, 610), (7, 294), (13, 168), (10, 138), (22, 136), (28, 114), (9, 104), (48, 74), (37, 72), (12, 72)]
+   largest values with multiplicity: [(880, 8), (732, 22), (412, 2), (327, 4), (304, 8), (217, 30), (169, 4), (120, 32), (111, 50), (100, 38), (90, 2), (67, 24)]
+   N_D = N_(D+1) for 3545 of 3997 consecutive pairs
+   D with N_D > 512: 30; first 30: [253, 254, 255, 256, 263, 264, 267, 268, 815, 816, 817, 818, 819, 820, 821, 822, 823, 824, 829, 830, 831, 832, 833, 834, 835, 836, 849, 850, 851, 852]
+   D in [3,4001): 186 distinct landings (N_D, s_0); consecutive pairs sharing: 3467/3997; largest classes [144, 126, 114, 114, 104, 90, 88, 80]
+      records (N, minD, maxD, size): [(880, 253, 268, 8), (732, 815, 852, 22), (412, 43, 44, 2), (327, 129, 134, 4), (304, 641, 648, 8), (217, 3287, 3338, 30)]
+      per-class P(N >   4) = 0.4677   (2.87/n = 0.7175)
+      per-class P(N >  16) = 0.2258   (2.87/n = 0.1794)
+      per-class P(N >  64) = 0.0645   (2.87/n = 0.0448)
+      per-class P(N > 256) = 0.0269   (2.87/n = 0.0112)
+   max over 1 <= N <= 880 of odd(N) - sigma_T(N)/2 = 8.5 at N = 871
