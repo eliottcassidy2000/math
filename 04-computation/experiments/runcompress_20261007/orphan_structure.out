@@ -1,0 +1,3 @@
+orphans (n=53): mean max post-run ones-run 14.19, median 14, mean #runs>=12 3.70, mean Terras length 26470
+non-orphans (n=159): mean max post-run ones-run 14.52, median 14, mean #runs>=12 3.97, mean Terras length 29178
+Mann-Whitney z (orphans larger) = -0.63

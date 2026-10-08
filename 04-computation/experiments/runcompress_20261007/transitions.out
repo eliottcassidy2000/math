@@ -1,0 +1,598 @@
+55 cycles (U-words with sum <= 8, length <= 4, plus 0)
+   word (1,): point -1, period 1, odd density 1
+   word (2,): point 1, period 2, odd density 1/2
+   word (3,): point 1/5, period 3, odd density 1/3
+   word (4,): point 1/13, period 4, odd density 1/4
+   word (5,): point 1/29, period 5, odd density 1/5
+   word (6,): point 1/61, period 6, odd density 1/6
+   word (7,): point 1/125, period 7, odd density 1/7
+   word (8,): point 1/253, period 8, odd density 1/8
+   word (1, 2): point -5, period 3, odd density 2/3
+   word (1, 3): point 5/7, period 4, odd density 1/2
+   word (1, 4): point 5/23, period 5, odd density 2/5
+   word (1, 5): point 1/11, period 6, odd density 1/3
+   word (1, 6): point 5/119, period 7, odd density 2/7
+   word (1, 7): point 5/247, period 8, odd density 1/4
+   word (2, 3): point 7/23, period 5, odd density 2/5
+   word (2, 4): point 7/55, period 6, odd density 1/3
+   word (2, 5): point 1/17, period 7, odd density 2/7
+   word (2, 6): point 7/247, period 8, odd density 1/4
+   word (3, 4): point 11/119, period 7, odd density 2/7
+   word (3, 5): point 11/247, period 8, odd density 1/4
+   word (1, 1, 2): point -19/11, period 4, odd density 3/4
+   word (1, 1, 3): point 19/5, period 5, odd density 3/5
+   word (1, 1, 4): point 19/37, period 6, odd density 1/2
+   word (1, 1, 5): point 19/101, period 7, odd density 3/7
+   word (1, 1, 6): point 19/229, period 8, odd density 3/8
+   word (1, 2, 2): point 23/5, period 5, odd density 3/5
+   word (1, 2, 3): point 23/37, period 6, odd density 1/2
+   word (1, 2, 4): point 23/101, period 7, odd density 3/7
+   word (1, 2, 5): point 23/229, period 8, odd density 3/8
+   word (1, 3, 2): point 31/37, period 6, odd density 1/2
+   word (1, 3, 3): point 31/101, period 7, odd density 3/7
+   word (1, 3, 4): point 31/229, period 8, odd density 3/8
+   word (1, 4, 2): point 47/101, period 7, odd density 3/7
+   word (1, 4, 3): point 47/229, period 8, odd density 3/8
+   word (1, 5, 2): point 79/229, period 8, odd density 3/8
+   word (2, 2, 3): point 37/101, period 7, odd density 3/7
+   word (2, 2, 4): point 37/229, period 8, odd density 3/8
+   word (2, 3, 3): point 53/229, period 8, odd density 3/8
+   word (1, 1, 1, 2): point -65/49, period 5, odd density 4/5
+   word (1, 1, 1, 3): point -65/17, period 6, odd density 2/3
+   word (1, 1, 1, 4): point 65/47, period 7, odd density 4/7
+   word (1, 1, 1, 5): point 13/35, period 8, odd density 1/2
+   word (1, 1, 2, 2): point -73/17, period 6, odd density 2/3
+   word (1, 1, 2, 3): point 73/47, period 7, odd density 4/7
+   word (1, 1, 2, 4): point 73/175, period 8, odd density 1/2
+   word (1, 1, 3, 2): point 89/47, period 7, odd density 4/7
+   word (1, 1, 3, 3): point 89/175, period 8, odd density 1/2
+   word (1, 1, 4, 2): point 121/175, period 8, odd density 1/2
+   word (1, 2, 1, 3): point 85/47, period 7, odd density 4/7
+   word (1, 2, 1, 4): point 17/35, period 8, odd density 1/2
+   word (1, 2, 2, 2): point 101/47, period 7, odd density 4/7
+   word (1, 2, 2, 3): point 101/175, period 8, odd density 1/2
+   word (1, 2, 3, 2): point 19/25, period 8, odd density 1/2
+   word (1, 3, 2, 2): point 157/175, period 8, odd density 1/2
+   word (0,): point 0, period 1, odd density 0
+
+== state universal (3,1-27): u = 3^3 v + -26
+  child  run on (1,): ANCHOR entry t=  12 k_entry=  -5 period=1 drift/step=0
+  source run on (1,): DRIFT  entry t=   8 k_entry=   6 period=2 drift/step=1/2
+  child  run on (2,): ANCHOR entry t=   0 k_entry=   3 period=2 drift/step=0
+  source run on (2,): ANCHOR entry t=   0 k_entry=   3 period=2 drift/step=0
+  child  run on (3,): ANCHOR entry t=  15 k_entry=   4 period=3 drift/step=0
+  source run on (3,): SHIFT  entry t=   9 k_entry=   2 period=3 drift/step=0
+  child  run on (4,): ANCHOR entry t=  25 k_entry=   9 period=4 drift/step=0
+  source run on (4,): ANCHOR entry t=   5 k_entry=   3 period=4 drift/step=0
+  child  run on (5,): DRIFT  entry t=   9 k_entry=   6 period=60 drift/step=7/15
+  source run on (5,): DRIFT  entry t=  12 k_entry=   1 period=85 drift/step=-28/85
+  child  run on (6,): ANCHOR entry t=  85 k_entry=  30 period=6 drift/step=0
+  source run on (6,): ANCHOR entry t=  91 k_entry= -30 period=6 drift/step=0
+  child  run on (7,): DRIFT  entry t=  44 k_entry=  14 period=231 drift/step=100/231
+  source run on (7,): DRIFT  entry t=   5 k_entry=   1 period=231 drift/step=-100/231
+  child  run on (8,): DRIFT  entry t=  23 k_entry=  10 period=648 drift/step=275/648
+  source run on (8,): DRIFT  entry t=  26 k_entry=  -7 period=648 drift/step=-275/648
+  child  run on (1, 2): SHIFT  entry t=  14 k_entry=  -1 period=3 drift/step=0
+  source run on (1, 2): DRIFT  entry t=   6 k_entry=   3 period=6 drift/step=1/6
+  child  run on (1, 3): SHIFT  entry t=  31 k_entry=   4 period=4 drift/step=0
+  source run on (1, 3): SHIFT  entry t=   4 k_entry=   2 period=4 drift/step=0
+  child  run on (1, 4): SHIFT  entry t=  23 k_entry=   4 period=5 drift/step=0
+  source run on (1, 4): SHIFT  entry t=  27 k_entry=  -1 period=5 drift/step=0
+  child  run on (1, 5): SHIFT  entry t=  18 k_entry=   4 period=6 drift/step=0
+  source run on (1, 5): DRIFT  entry t=   3 k_entry=   2 period=42 drift/step=-5/21
+  child  run on (1, 6): DRIFT  entry t=  34 k_entry=  11 period=525 drift/step=48/175
+  source run on (1, 6): DRIFT  entry t=  12 k_entry=  -2 period=525 drift/step=-48/175
+  child  run on (1, 7): SHIFT  entry t=  24 k_entry=  10 period=8 drift/step=0
+  source run on (1, 7): SHIFT  entry t=  39 k_entry=  -7 period=8 drift/step=0
+  child  run on (2, 3): SHIFT  entry t=  26 k_entry=   5 period=5 drift/step=0
+  source run on (2, 3): SHIFT  entry t=   7 k_entry=   3 period=5 drift/step=0
+  child  run on (2, 4): SHIFT  entry t=  24 k_entry=   8 period=12 drift/step=0
+  source run on (2, 4): ABSORB at time 25
+  child  run on (2, 5): ANCHOR entry t=  52 k_entry=  16 period=7 drift/step=0
+  source run on (2, 5): SHIFT  entry t=   9 k_entry=   2 period=7 drift/step=0
+  child  run on (2, 6): SHIFT  entry t=  37 k_entry=   9 period=8 drift/step=0
+  source run on (2, 6): ABSORB at time 17
+  child  run on (3, 4): SHIFT  entry t=  17 k_entry=   7 period=7 drift/step=0
+  source run on (3, 4): DRIFT  entry t=   0 k_entry=   3 period=273 drift/step=-16/91
+  child  run on (3, 5): DRIFT  entry t=  43 k_entry=   9 period=56 drift/step=9/28
+  source run on (3, 5): DRIFT  entry t=   9 k_entry=   2 period=56 drift/step=-9/28
+  child  run on (1, 1, 2): DRIFT  entry t=  30 k_entry=  -5 period=12 drift/step=-5/12
+  source run on (1, 1, 2): DRIFT  entry t=   8 k_entry=   4 period=28 drift/step=5/28
+  child  run on (1, 1, 3): DRIFT  entry t=  13 k_entry=  -2 period=15 drift/step=-4/15
+  source run on (1, 1, 3): SHIFT  entry t=  12 k_entry=   4 period=5 drift/step=0
+  child  run on (1, 1, 4): ABSORB at time 23
+  source run on (1, 1, 4): SHIFT  entry t=  15 k_entry=   7 period=6 drift/step=0
+  child  run on (1, 1, 5): SHIFT  entry t=  73 k_entry=   8 period=14 drift/step=0
+  source run on (1, 1, 5): SHIFT  entry t=  12 k_entry=   3 period=7 drift/step=0
+  source run on (1, 1, 6): SHIFT  entry t=   3 k_entry=   4 period=8 drift/step=0
+  child  run on (1, 2, 2): DRIFT  entry t=  26 k_entry=  -1 period=15 drift/step=-4/15
+  source run on (1, 2, 2): SHIFT  entry t=   2 k_entry=   3 period=5 drift/step=0
+  child  run on (1, 2, 3): SHIFT  entry t=  65 k_entry=  10 period=6 drift/step=0
+  source run on (1, 2, 3): SHIFT  entry t=  16 k_entry=   4 period=6 drift/step=0
+  child  run on (1, 2, 4): SHIFT  entry t=  30 k_entry=   4 period=7 drift/step=0
+  source run on (1, 2, 4): SHIFT  entry t=  28 k_entry=  -2 period=7 drift/step=0
+  child  run on (1, 2, 5): SHIFT  entry t=  54 k_entry=  10 period=8 drift/step=0
+  source run on (1, 2, 5): ABSORB at time 20
+  child  run on (1, 3, 2): SHIFT  entry t=  39 k_entry=   7 period=6 drift/step=0
+  source run on (1, 3, 2): SHIFT  entry t=   5 k_entry=   3 period=6 drift/step=0
+  child  run on (1, 3, 3): SHIFT  entry t=  52 k_entry=  10 period=14 drift/step=0
+  source run on (1, 3, 3): SHIFT  entry t=   4 k_entry=   2 period=14 drift/step=0
+  source run on (1, 3, 4): SHIFT  entry t=  16 k_entry=   0 period=8 drift/step=0
+  child  run on (1, 4, 2): SHIFT  entry t=  80 k_entry=  11 period=14 drift/step=0
+  source run on (1, 4, 2): SHIFT  entry t=  11 k_entry=   2 period=7 drift/step=0
+  child  run on (1, 4, 3): SHIFT  entry t=  20 k_entry=   4 period=8 drift/step=0
+  source run on (1, 4, 3): SHIFT  entry t=  24 k_entry=  -2 period=8 drift/step=0
+  child  run on (1, 5, 2): SHIFT  entry t=  38 k_entry=   9 period=8 drift/step=0
+  source run on (1, 5, 2): ABSORB at time 31
+  child  run on (2, 2, 3): SHIFT  entry t=  64 k_entry=  12 period=14 drift/step=0
+  source run on (2, 2, 3): SHIFT  entry t=   5 k_entry=   3 period=14 drift/step=0
+  source run on (2, 2, 4): ABSORB at time 33
+  child  run on (2, 3, 3): SHIFT  entry t=  41 k_entry=   7 period=8 drift/step=0
+  source run on (2, 3, 3): ABSORB at time 27
+  child  run on (1, 1, 1, 2): DRIFT  entry t=  90 k_entry= -18 period=190 drift/step=-21/95
+  source run on (1, 1, 1, 2): DRIFT  entry t=  22 k_entry=  10 period=190 drift/step=21/95
+  child  run on (1, 1, 1, 3): DRIFT  entry t=  34 k_entry=  -5 period=42 drift/step=-8/21
+  source run on (1, 1, 1, 3): DRIFT  entry t=  17 k_entry=   7 period=42 drift/step=8/21
+  child  run on (1, 1, 1, 4): SHIFT  entry t=  58 k_entry=   3 period=7 drift/step=0
+  source run on (1, 1, 1, 4): SHIFT  entry t=  10 k_entry=   4 period=7 drift/step=0
+  child  run on (1, 1, 1, 5): SHIFT  entry t=  36 k_entry=   2 period=8 drift/step=0
+  source run on (1, 1, 1, 5): SHIFT  entry t=  31 k_entry=   2 period=8 drift/step=0
+  child  run on (1, 1, 2, 2): DRIFT  entry t=  32 k_entry=  -3 period=42 drift/step=-8/21
+  source run on (1, 1, 2, 2): DRIFT  entry t=  12 k_entry=   5 period=42 drift/step=8/21
+  child  run on (1, 1, 2, 3): DRIFT  entry t=  10 k_entry=   0 period=126 drift/step=-23/126
+  source run on (1, 1, 2, 3): DRIFT  entry t=   6 k_entry=   4 period=126 drift/step=23/126
+  child  run on (1, 1, 2, 4): SHIFT  entry t=  35 k_entry=  -3 period=8 drift/step=0
+  source run on (1, 1, 2, 4): SHIFT  entry t=   3 k_entry=   4 period=8 drift/step=0
+  child  run on (1, 1, 3, 2): SHIFT  entry t=  34 k_entry=  -2 period=28 drift/step=0
+  source run on (1, 1, 3, 2): SHIFT  entry t=   9 k_entry=   4 period=7 drift/step=0
+  child  run on (1, 1, 3, 3): SHIFT  entry t=  50 k_entry=   6 period=24 drift/step=0
+  source run on (1, 1, 3, 3): SHIFT  entry t=  28 k_entry=   5 period=8 drift/step=0
+  child  run on (1, 1, 4, 2): ABSORB at time 37
+  source run on (1, 1, 4, 2): SHIFT  entry t=   8 k_entry=   4 period=24 drift/step=0
+  child  run on (1, 2, 1, 3): SHIFT  entry t=  39 k_entry=   3 period=7 drift/step=0
+  source run on (1, 2, 1, 3): DRIFT  entry t=  10 k_entry=   3 period=126 drift/step=23/126
+  child  run on (1, 2, 1, 4): SHIFT  entry t=  38 k_entry=   2 period=8 drift/step=0
+  source run on (1, 2, 1, 4): SHIFT  entry t=   6 k_entry=   3 period=8 drift/step=0
+  child  run on (1, 2, 2, 2): SHIFT  entry t=  19 k_entry=   2 period=7 drift/step=0
+  source run on (1, 2, 2, 2): SHIFT  entry t=   0 k_entry=   3 period=28 drift/step=0
+  child  run on (1, 2, 2, 3): SHIFT  entry t=  19 k_entry=   3 period=24 drift/step=0
+  source run on (1, 2, 2, 3): SHIFT  entry t=  37 k_entry=   2 period=8 drift/step=0
+  child  run on (1, 2, 3, 2): SHIFT  entry t=  16 k_entry=   4 period=16 drift/step=0
+  source run on (1, 2, 3, 2): SHIFT  entry t=  70 k_entry=  -6 period=8 drift/step=0
+  child  run on (1, 3, 2, 2): SHIFT  entry t=  29 k_entry=   1 period=8 drift/step=0
+  source run on (1, 3, 2, 2): SHIFT  entry t=   2 k_entry=   3 period=24 drift/step=0
+  child  run on (0,): DRIFT  entry t=   5 k_entry=   5 period=3 drift/step=2/3
+  source run on (0,): DRIFT  entry t=   5 k_entry=   0 period=2 drift/step=-1/2
+
+== state J=2 (4,10): u = 3^4 v + 10
+  child  run on (1,): ANCHOR entry t=  14 k_entry=  -5 period=1 drift/step=0
+  source run on (1,): DRIFT  entry t=   9 k_entry=   9 period=2 drift/step=1/2
+  child  run on (2,): SHIFT  entry t=  58 k_entry=   8 period=2 drift/step=0
+  source run on (2,): ANCHOR entry t=   2 k_entry=   3 period=2 drift/step=0
+  child  run on (3,): DRIFT  entry t=  37 k_entry=  12 period=15 drift/step=4/15
+  source run on (3,): SHIFT  entry t=   9 k_entry=   2 period=3 drift/step=0
+  child  run on (4,): DRIFT  entry t=   0 k_entry=   4 period=8 drift/step=3/8
+  source run on (4,): ANCHOR entry t=   5 k_entry=   3 period=4 drift/step=0
+  child  run on (5,): DRIFT  entry t=  23 k_entry=  11 period=85 drift/step=28/85
+  source run on (5,): DRIFT  entry t=  12 k_entry=   1 period=85 drift/step=-28/85
+  child  run on (6,): ANCHOR entry t=  55 k_entry=  20 period=6 drift/step=0
+  source run on (6,): ANCHOR entry t=  91 k_entry= -30 period=6 drift/step=0
+  child  run on (7,): DRIFT  entry t= 103 k_entry=  43 period=231 drift/step=100/231
+  source run on (7,): DRIFT  entry t=   5 k_entry=   1 period=231 drift/step=-100/231
+  child  run on (8,): DRIFT  entry t=  39 k_entry=  19 period=648 drift/step=275/648
+  source run on (8,): DRIFT  entry t=  26 k_entry=  -7 period=648 drift/step=-275/648
+  child  run on (1, 2): DRIFT  entry t=   5 k_entry=   1 period=33 drift/step=-1/33
+  source run on (1, 2): DRIFT  entry t=   5 k_entry=   5 period=6 drift/step=1/6
+  child  run on (1, 3): SHIFT  entry t=  25 k_entry=   1 period=4 drift/step=0
+  source run on (1, 3): SHIFT  entry t=  13 k_entry=   5 period=4 drift/step=0
+  child  run on (1, 4): SHIFT  entry t=  26 k_entry=   6 period=5 drift/step=0
+  source run on (1, 4): SHIFT  entry t=   8 k_entry=   3 period=5 drift/step=0
+  child  run on (1, 5): DRIFT  entry t=  21 k_entry=   6 period=42 drift/step=5/21
+  source run on (1, 5): SHIFT  entry t=   6 k_entry=   2 period=6 drift/step=0
+  child  run on (1, 6): DRIFT  entry t=   7 k_entry=   5 period=175 drift/step=48/175
+  source run on (1, 6): DRIFT  entry t=   4 k_entry=   3 period=175 drift/step=-48/175
+  child  run on (1, 7): DRIFT  entry t=   7 k_entry=   5 period=56 drift/step=9/28
+  source run on (1, 7): SHIFT  entry t=  47 k_entry=  -7 period=8 drift/step=0
+  child  run on (2, 3): SHIFT  entry t=  41 k_entry=   9 period=5 drift/step=0
+  source run on (2, 3): SHIFT  entry t=   7 k_entry=   3 period=5 drift/step=0
+  child  run on (2, 4): SHIFT  entry t=  29 k_entry=   7 period=6 drift/step=0
+  source run on (2, 4): ABSORB at time 25
+  child  run on (2, 5): SHIFT  entry t=  15 k_entry=   5 period=7 drift/step=0
+  source run on (2, 5): SHIFT  entry t=   9 k_entry=   2 period=7 drift/step=0
+  child  run on (2, 6): ANCHOR entry t=  65 k_entry=  18 period=8 drift/step=0
+  source run on (2, 6): ABSORB at time 17
+  child  run on (3, 4): DRIFT  entry t=  16 k_entry=   6 period=273 drift/step=16/91
+  source run on (3, 4): DRIFT  entry t=   2 k_entry=   3 period=273 drift/step=-16/91
+  child  run on (3, 5): DRIFT  entry t=  63 k_entry=  18 period=56 drift/step=9/28
+  source run on (3, 5): DRIFT  entry t=   9 k_entry=   2 period=56 drift/step=-9/28
+  child  run on (1, 1, 2): DRIFT  entry t=  34 k_entry=  -5 period=12 drift/step=-5/12
+  source run on (1, 1, 2): DRIFT  entry t=   7 k_entry=   7 period=12 drift/step=5/12
+  child  run on (1, 1, 3): ABSORB at time 15
+  source run on (1, 1, 3): DRIFT  entry t=   8 k_entry=   6 period=15 drift/step=4/15
+  child  run on (1, 1, 4): SHIFT  entry t=  16 k_entry=   2 period=6 drift/step=0
+  source run on (1, 1, 4): SHIFT  entry t=   4 k_entry=   5 period=6 drift/step=0
+  child  run on (1, 1, 5): SHIFT  entry t=  57 k_entry=  10 period=7 drift/step=0
+  source run on (1, 1, 5): SHIFT  entry t=  32 k_entry=   3 period=7 drift/step=0
+  source run on (1, 1, 6): SHIFT  entry t=  57 k_entry=  -5 period=8 drift/step=0
+  child  run on (1, 2, 2): DRIFT  entry t=   0 k_entry=   4 period=135 drift/step=4/135
+  source run on (1, 2, 2): DRIFT  entry t=   1 k_entry=   4 period=15 drift/step=4/15
+  child  run on (1, 2, 3): SHIFT  entry t=  36 k_entry=   3 period=6 drift/step=0
+  source run on (1, 2, 3): SHIFT  entry t=  37 k_entry=   2 period=6 drift/step=0
+  child  run on (1, 2, 4): SHIFT  entry t=  10 k_entry=   2 period=7 drift/step=0
+  source run on (1, 2, 4): SHIFT  entry t=  31 k_entry=   1 period=14 drift/step=0
+  child  run on (1, 2, 5): SHIFT  entry t=  54 k_entry=  10 period=8 drift/step=0
+  source run on (1, 2, 5): ABSORB at time 36
+  child  run on (1, 3, 2): SHIFT  entry t=  28 k_entry=   4 period=6 drift/step=0
+  source run on (1, 3, 2): SHIFT  entry t=  15 k_entry=   5 period=6 drift/step=0
+  source run on (1, 3, 3): SHIFT  entry t=  17 k_entry=   3 period=14 drift/step=0
+  child  run on (1, 3, 4): SHIFT  entry t=  38 k_entry=   6 period=8 drift/step=0
+  source run on (1, 3, 4): SHIFT  entry t=   3 k_entry=   4 period=8 drift/step=0
+  child  run on (1, 4, 2): SHIFT  entry t=  59 k_entry=  11 period=14 drift/step=0
+  source run on (1, 4, 2): SHIFT  entry t=  21 k_entry=   0 period=7 drift/step=0
+  child  run on (1, 4, 3): SHIFT  entry t=  48 k_entry=   9 period=8 drift/step=0
+  source run on (1, 4, 3): SHIFT  entry t=  44 k_entry=  -4 period=8 drift/step=0
+  child  run on (1, 5, 2): SHIFT  entry t=  50 k_entry=  10 period=8 drift/step=0
+  source run on (1, 5, 2): ABSORB at time 23
+  child  run on (2, 2, 3): SHIFT  entry t=  57 k_entry=  12 period=14 drift/step=0
+  source run on (2, 2, 3): SHIFT  entry t=   5 k_entry=   3 period=14 drift/step=0
+  source run on (2, 2, 4): ABSORB at time 33
+  child  run on (2, 3, 3): SHIFT  entry t=  33 k_entry=   7 period=8 drift/step=0
+  source run on (2, 3, 3): ABSORB at time 27
+  child  run on (1, 1, 1, 2): DRIFT  entry t=  47 k_entry= -10 period=190 drift/step=-21/95
+  source run on (1, 1, 1, 2): DRIFT  entry t=  12 k_entry=  10 period=190 drift/step=21/95
+  child  run on (1, 1, 1, 3): DRIFT  entry t=  52 k_entry=  -5 period=42 drift/step=-8/21
+  source run on (1, 1, 1, 3): DRIFT  entry t=  25 k_entry=  12 period=42 drift/step=8/21
+  child  run on (1, 1, 1, 4): SHIFT  entry t=  79 k_entry=   3 period=7 drift/step=0
+  source run on (1, 1, 1, 4): SHIFT  entry t=   6 k_entry=   6 period=28 drift/step=0
+  child  run on (1, 1, 1, 5): SHIFT  entry t=  43 k_entry=   3 period=8 drift/step=0
+  source run on (1, 1, 1, 5): SHIFT  entry t=  11 k_entry=   7 period=8 drift/step=0
+  child  run on (1, 1, 2, 2): DRIFT  entry t=  38 k_entry=  -3 period=42 drift/step=-8/21
+  source run on (1, 1, 2, 2): DRIFT  entry t=   1 k_entry=   4 period=42 drift/step=8/21
+  child  run on (1, 1, 2, 3): SHIFT  entry t=   9 k_entry=   1 period=7 drift/step=0
+  source run on (1, 1, 2, 3): DRIFT  entry t=  15 k_entry=   6 period=126 drift/step=23/126
+  child  run on (1, 1, 2, 4): SHIFT  entry t=  55 k_entry=   2 period=8 drift/step=0
+  source run on (1, 1, 2, 4): SHIFT  entry t=   6 k_entry=   5 period=16 drift/step=0
+  child  run on (1, 1, 3, 2): SHIFT  entry t=  24 k_entry=   0 period=7 drift/step=0
+  source run on (1, 1, 3, 2): SHIFT  entry t=   8 k_entry=   5 period=28 drift/step=0
+  child  run on (1, 1, 3, 3): SHIFT  entry t=  20 k_entry=   2 period=8 drift/step=0
+  source run on (1, 1, 3, 3): SHIFT  entry t=  19 k_entry=   7 period=8 drift/step=0
+  child  run on (1, 1, 4, 2): SHIFT  entry t=  19 k_entry=   1 period=8 drift/step=0
+  source run on (1, 1, 4, 2): SHIFT  entry t=   5 k_entry=   4 period=24 drift/step=0
+  child  run on (1, 2, 1, 3): DRIFT  entry t=  45 k_entry=   0 period=126 drift/step=-23/126
+  source run on (1, 2, 1, 3): DRIFT  entry t=   9 k_entry=   5 period=126 drift/step=23/126
+  child  run on (1, 2, 1, 4): SHIFT  entry t=  37 k_entry=   2 period=8 drift/step=0
+  source run on (1, 2, 1, 4): SHIFT  entry t=   3 k_entry=   4 period=8 drift/step=0
+  child  run on (1, 2, 2, 2): SHIFT  entry t=  52 k_entry=   0 period=28 drift/step=0
+  source run on (1, 2, 2, 2): SHIFT  entry t=  10 k_entry=   4 period=7 drift/step=0
+  child  run on (1, 2, 2, 3): SHIFT  entry t=  32 k_entry=   6 period=24 drift/step=0
+  source run on (1, 2, 2, 3): SHIFT  entry t=   7 k_entry=   4 period=8 drift/step=0
+  child  run on (1, 2, 3, 2): SHIFT  entry t=  21 k_entry=   3 period=8 drift/step=0
+  source run on (1, 2, 3, 2): SHIFT  entry t=  12 k_entry=   7 period=16 drift/step=0
+  child  run on (1, 3, 2, 2): SHIFT  entry t= 107 k_entry=  12 period=24 drift/step=0
+  source run on (1, 3, 2, 2): SHIFT  entry t=   1 k_entry=   4 period=24 drift/step=0
+  child  run on (0,): DRIFT  entry t=   4 k_entry=   5 period=2 drift/step=1/2
+  source run on (0,): DRIFT  entry t=   8 k_entry=   0 period=2 drift/step=-1/2
+
+== state J=1 D=3 (3,13): u = 3^3 v + 13
+  child  run on (1,): DRIFT  entry t=   1 k_entry=   2 period=3 drift/step=-1/3
+  source run on (1,): DRIFT  entry t=   5 k_entry=   5 period=2 drift/step=1/2
+  child  run on (2,): SHIFT  entry t=   6 k_entry=   1 period=2 drift/step=0
+  source run on (2,): ANCHOR entry t=   4 k_entry=   3 period=2 drift/step=0
+  child  run on (3,): DRIFT  entry t=   1 k_entry=   2 period=15 drift/step=4/15
+  source run on (3,): ANCHOR entry t=  13 k_entry=   4 period=3 drift/step=0
+  child  run on (4,): ANCHOR entry t=  13 k_entry=   3 period=4 drift/step=0
+  source run on (4,): ANCHOR entry t=  13 k_entry=   3 period=4 drift/step=0
+  child  run on (5,): DRIFT  entry t=  48 k_entry=  16 period=85 drift/step=28/85
+  source run on (5,): DRIFT  entry t=  46 k_entry= -10 period=85 drift/step=-28/85
+  child  run on (6,): ANCHOR entry t=  61 k_entry=  20 period=6 drift/step=0
+  source run on (6,): ABSORB at time 19
+  child  run on (7,): DRIFT  entry t=  37 k_entry=  14 period=231 drift/step=100/231
+  source run on (7,): DRIFT  entry t=  11 k_entry=   0 period=231 drift/step=-100/231
+  child  run on (8,): DRIFT  entry t=  13 k_entry=   5 period=648 drift/step=275/648
+  source run on (8,): DRIFT  entry t=  15 k_entry=  -2 period=648 drift/step=-275/648
+  child  run on (1, 2): DRIFT  entry t=   1 k_entry=   2 period=33 drift/step=-1/33
+  source run on (1, 2): DRIFT  entry t=   2 k_entry=   4 period=3 drift/step=2/3
+  child  run on (1, 3): SHIFT  entry t=  14 k_entry=   1 period=4 drift/step=0
+  source run on (1, 3): SHIFT  entry t=   5 k_entry=   3 period=4 drift/step=0
+  child  run on (1, 4): SHIFT  entry t=  19 k_entry=   4 period=5 drift/step=0
+  source run on (1, 4): SHIFT  entry t=   4 k_entry=   3 period=5 drift/step=0
+  child  run on (1, 5): DRIFT  entry t=  14 k_entry=   4 period=42 drift/step=5/21
+  source run on (1, 5): SHIFT  entry t=   7 k_entry=   3 period=6 drift/step=0
+  child  run on (1, 6): DRIFT  entry t=  34 k_entry=  11 period=525 drift/step=48/175
+  source run on (1, 6): DRIFT  entry t=  30 k_entry=  -3 period=525 drift/step=-48/175
+  source run on (1, 7): SHIFT  entry t=  55 k_entry=  -7 period=8 drift/step=0
+  child  run on (2, 3): SHIFT  entry t=  15 k_entry=   3 period=5 drift/step=0
+  source run on (2, 3): SHIFT  entry t=   7 k_entry=   3 period=5 drift/step=0
+  child  run on (2, 4): SHIFT  entry t=   8 k_entry=   3 period=12 drift/step=0
+  source run on (2, 4): ABSORB at time 25
+  child  run on (2, 5): DRIFT  entry t=   1 k_entry=   2 period=217 drift/step=64/217
+  source run on (2, 5): SHIFT  entry t=   9 k_entry=   2 period=7 drift/step=0
+  child  run on (2, 6): SHIFT  entry t=  37 k_entry=   9 period=8 drift/step=0
+  source run on (2, 6): ABSORB at time 17
+  child  run on (3, 4): DRIFT  entry t=  17 k_entry=   6 period=273 drift/step=16/91
+  source run on (3, 4): DRIFT  entry t=  33 k_entry=   1 period=273 drift/step=-16/91
+  child  run on (3, 5): DRIFT  entry t=  71 k_entry=  18 period=56 drift/step=9/28
+  source run on (3, 5): DRIFT  entry t=  31 k_entry=   0 period=56 drift/step=-9/28
+  child  run on (1, 1, 2): DRIFT  entry t=  12 k_entry=  -2 period=12 drift/step=-5/12
+  source run on (1, 1, 2): DRIFT  entry t=   2 k_entry=   4 period=12 drift/step=5/12
+  child  run on (1, 1, 3): ABSORB at time 20
+  source run on (1, 1, 3): DRIFT  entry t=   7 k_entry=   4 period=15 drift/step=4/15
+  child  run on (1, 1, 4): SHIFT  entry t=  22 k_entry=   2 period=6 drift/step=0
+  source run on (1, 1, 4): ABSORB at time 31
+  child  run on (1, 1, 5): SHIFT  entry t=  52 k_entry=   8 period=14 drift/step=0
+  source run on (1, 1, 5): SHIFT  entry t=   8 k_entry=   2 period=7 drift/step=0
+  child  run on (1, 1, 6): SHIFT  entry t=  33 k_entry=   5 period=8 drift/step=0
+  source run on (1, 1, 6): SHIFT  entry t=  49 k_entry=  -5 period=8 drift/step=0
+  child  run on (1, 2, 2): SHIFT  entry t=  33 k_entry=   0 period=5 drift/step=0
+  source run on (1, 2, 2): SHIFT  entry t=  10 k_entry=   3 period=5 drift/step=0
+  child  run on (1, 2, 3): SHIFT  entry t=  39 k_entry=   4 period=6 drift/step=0
+  source run on (1, 2, 3): SHIFT  entry t=  37 k_entry=   2 period=6 drift/step=0
+  source run on (1, 2, 4): SHIFT  entry t=   5 k_entry=   4 period=14 drift/step=0
+  child  run on (1, 2, 5): SHIFT  entry t=  14 k_entry=   3 period=8 drift/step=0
+  source run on (1, 2, 5): ABSORB at time 36
+  child  run on (1, 3, 2): SHIFT  entry t=  13 k_entry=   1 period=6 drift/step=0
+  source run on (1, 3, 2): SHIFT  entry t=   4 k_entry=   3 period=6 drift/step=0
+  source run on (1, 3, 3): SHIFT  entry t=   5 k_entry=   3 period=14 drift/step=0
+  child  run on (1, 3, 4): SHIFT  entry t=  38 k_entry=   6 period=8 drift/step=0
+  source run on (1, 3, 4): SHIFT  entry t=  16 k_entry=   0 period=8 drift/step=0
+  source run on (1, 4, 2): SHIFT  entry t=   4 k_entry=   3 period=7 drift/step=0
+  child  run on (1, 4, 3): SHIFT  entry t=  48 k_entry=   9 period=8 drift/step=0
+  source run on (1, 4, 3): SHIFT  entry t=  44 k_entry=  -4 period=8 drift/step=0
+  source run on (1, 5, 2): ABSORB at time 23
+  child  run on (2, 2, 3): SHIFT  entry t=   6 k_entry=   1 period=7 drift/step=0
+  source run on (2, 2, 3): SHIFT  entry t=   5 k_entry=   3 period=14 drift/step=0
+  source run on (2, 2, 4): ABSORB at time 33
+  child  run on (2, 3, 3): SHIFT  entry t=  41 k_entry=   7 period=8 drift/step=0
+  source run on (2, 3, 3): ABSORB at time 27
+  child  run on (1, 1, 1, 2): DRIFT  entry t=  42 k_entry= -10 period=190 drift/step=-21/95
+  source run on (1, 1, 1, 2): DRIFT  entry t=  17 k_entry=  10 period=190 drift/step=21/95
+  child  run on (1, 1, 1, 3): ABSORB at time 12
+  source run on (1, 1, 1, 3): DRIFT  entry t=  17 k_entry=   7 period=42 drift/step=8/21
+  child  run on (1, 1, 1, 4): ABSORB at time 20
+  source run on (1, 1, 1, 4): SHIFT  entry t=  10 k_entry=   4 period=7 drift/step=0
+  child  run on (1, 1, 1, 5): SHIFT  entry t=  10 k_entry=   1 period=8 drift/step=0
+  source run on (1, 1, 1, 5): SHIFT  entry t=  31 k_entry=   2 period=8 drift/step=0
+  child  run on (1, 1, 2, 2): DRIFT  entry t=  14 k_entry=  -3 period=42 drift/step=-8/21
+  source run on (1, 1, 2, 2): DRIFT  entry t=   6 k_entry=   3 period=186 drift/step=8/93
+  child  run on (1, 1, 2, 3): DRIFT  entry t=  63 k_entry=   1 period=126 drift/step=-23/126
+  source run on (1, 1, 2, 3): SHIFT  entry t=   8 k_entry=   3 period=7 drift/step=0
+  child  run on (1, 1, 2, 4): SHIFT  entry t=  63 k_entry=   2 period=8 drift/step=0
+  source run on (1, 1, 2, 4): SHIFT  entry t=  10 k_entry=   4 period=8 drift/step=0
+  child  run on (1, 1, 3, 2): ABSORB at time 12
+  source run on (1, 1, 3, 2): SHIFT  entry t=   7 k_entry=   2 period=7 drift/step=0
+  child  run on (1, 1, 3, 3): ABSORB at time 21
+  source run on (1, 1, 3, 3): SHIFT  entry t=  10 k_entry=   3 period=8 drift/step=0
+  child  run on (1, 1, 4, 2): SHIFT  entry t=  81 k_entry=   4 period=8 drift/step=0
+  source run on (1, 1, 4, 2): SHIFT  entry t=   9 k_entry=   2 period=16 drift/step=0
+  child  run on (1, 2, 1, 3): DRIFT  entry t=   9 k_entry=  -1 period=126 drift/step=-23/126
+  source run on (1, 2, 1, 3): DRIFT  entry t=  18 k_entry=   7 period=126 drift/step=23/126
+  child  run on (1, 2, 1, 4): SHIFT  entry t=  45 k_entry=   2 period=8 drift/step=0
+  source run on (1, 2, 1, 4): SHIFT  entry t=  20 k_entry=   7 period=8 drift/step=0
+  child  run on (1, 2, 2, 2): SHIFT  entry t=  31 k_entry=   0 period=28 drift/step=0
+  source run on (1, 2, 2, 2): SHIFT  entry t=  13 k_entry=   7 period=28 drift/step=0
+  child  run on (1, 2, 2, 3): SHIFT  entry t=  40 k_entry=   4 period=24 drift/step=0
+  source run on (1, 2, 2, 3): SHIFT  entry t=  64 k_entry=   2 period=8 drift/step=0
+  child  run on (1, 2, 3, 2): SHIFT  entry t=  63 k_entry=   8 period=8 drift/step=0
+  source run on (1, 2, 3, 2): SHIFT  entry t=   5 k_entry=   4 period=16 drift/step=0
+  child  run on (1, 3, 2, 2): SHIFT  entry t=  45 k_entry=   1 period=8 drift/step=0
+  source run on (1, 3, 2, 2): SHIFT  entry t=   5 k_entry=   3 period=24 drift/step=0
+  child  run on (0,): DRIFT  entry t=   6 k_entry=   5 period=2 drift/step=1/2
+  source run on (0,): DRIFT  entry t=   4 k_entry=   0 period=2 drift/step=-1/2
+
+== state re-anchored (-5, 3^-5 - 1): u = 3^-5 v + -242/243
+  child  run on (1,): ANCHOR entry t=   0 k_entry=  -5 period=1 drift/step=0
+  source run on (1,): ANCHOR entry t=   0 k_entry=  -5 period=1 drift/step=0
+  child  run on (2,): ANCHOR entry t=  12 k_entry=  -6 period=2 drift/step=0
+  source run on (2,): SHIFT  entry t=  62 k_entry=  -8 period=2 drift/step=0
+  child  run on (3,): DRIFT  entry t=  11 k_entry=  -1 period=15 drift/step=4/15
+  source run on (3,): DRIFT  entry t=   0 k_entry=  -5 period=27 drift/step=-8/27
+  child  run on (4,): ANCHOR entry t=   9 k_entry=  -3 period=4 drift/step=0
+  source run on (4,): DRIFT  entry t=  11 k_entry=  -7 period=8 drift/step=-3/8
+  child  run on (5,): DRIFT  entry t=  27 k_entry=  -1 period=85 drift/step=28/85
+  source run on (5,): DRIFT  entry t=  48 k_entry= -16 period=85 drift/step=-28/85
+  child  run on (6,): ABSORB at time 25
+  source run on (6,): DRIFT  entry t=  19 k_entry= -10 period=66 drift/step=-5/11
+  child  run on (7,): DRIFT  entry t=  51 k_entry=  14 period=231 drift/step=100/231
+  source run on (7,): DRIFT  entry t= 103 k_entry= -43 period=231 drift/step=-100/231
+  child  run on (8,): DRIFT  entry t=  34 k_entry=   7 period=648 drift/step=275/648
+  source run on (8,): DRIFT  entry t= 105 k_entry= -51 period=648 drift/step=-275/648
+  child  run on (1, 2): DRIFT  entry t=   8 k_entry=  -6 period=6 drift/step=-1/6
+  source run on (1, 2): DRIFT  entry t=  21 k_entry=   2 period=3 drift/step=-1/3
+  child  run on (1, 3): SHIFT  entry t=   6 k_entry=  -4 period=4 drift/step=0
+  source run on (1, 3): SHIFT  entry t=  42 k_entry=  -2 period=4 drift/step=0
+  child  run on (1, 4): SHIFT  entry t=  13 k_entry=  -3 period=5 drift/step=0
+  source run on (1, 4): SHIFT  entry t=  29 k_entry=  -6 period=5 drift/step=0
+  child  run on (1, 5): DRIFT  entry t=   9 k_entry=  -4 period=42 drift/step=5/21
+  source run on (1, 5): DRIFT  entry t=  18 k_entry=  -6 period=42 drift/step=-5/21
+  child  run on (1, 6): DRIFT  entry t=  15 k_entry=  -4 period=525 drift/step=48/175
+  source run on (1, 6): DRIFT  entry t=  32 k_entry= -11 period=175 drift/step=-48/175
+  child  run on (1, 7): SHIFT  entry t=  11 k_entry=  -3 period=8 drift/step=0
+  child  run on (2, 3): ABSORB at time 33
+  source run on (2, 3): SHIFT  entry t=  27 k_entry=  -5 period=5 drift/step=0
+  child  run on (2, 4): SHIFT  entry t=  18 k_entry=  -6 period=6 drift/step=0
+  source run on (2, 4): SHIFT  entry t=  32 k_entry=  -8 period=12 drift/step=0
+  child  run on (2, 5): DRIFT  entry t=  13 k_entry=  -4 period=217 drift/step=64/217
+  source run on (2, 5): DRIFT  entry t=  19 k_entry=  -7 period=217 drift/step=-64/217
+  child  run on (2, 6): ABSORB at time 33
+  source run on (2, 6): DRIFT  entry t=  18 k_entry=  -6 period=56 drift/step=-9/28
+  child  run on (3, 4): DRIFT  entry t=  13 k_entry=  -1 period=273 drift/step=16/91
+  source run on (3, 4): DRIFT  entry t=  84 k_entry= -27 period=273 drift/step=-16/91
+  child  run on (3, 5): DRIFT  entry t=  23 k_entry=   0 period=56 drift/step=9/28
+  source run on (3, 5): DRIFT  entry t=  63 k_entry= -18 period=56 drift/step=-9/28
+  child  run on (1, 1, 2): DRIFT  entry t=  13 k_entry=  -8 period=28 drift/step=-5/28
+  source run on (1, 1, 2): DRIFT  entry t=  48 k_entry=   7 period=12 drift/step=5/12
+  child  run on (1, 1, 3): DRIFT  entry t=   6 k_entry=  -4 period=15 drift/step=-4/15
+  source run on (1, 1, 3): SHIFT  entry t=  52 k_entry=   0 period=5 drift/step=0
+  child  run on (1, 1, 4): SHIFT  entry t=  10 k_entry=  -5 period=6 drift/step=0
+  source run on (1, 1, 4): SHIFT  entry t=  57 k_entry=  -5 period=6 drift/step=0
+  child  run on (1, 1, 5): SHIFT  entry t=   9 k_entry=  -5 period=7 drift/step=0
+  source run on (1, 1, 5): SHIFT  entry t=  45 k_entry=  -8 period=14 drift/step=0
+  child  run on (1, 1, 6): SHIFT  entry t=   8 k_entry=  -3 period=8 drift/step=0
+  child  run on (1, 2, 2): DRIFT  entry t=  16 k_entry=  -9 period=15 drift/step=-4/15
+  source run on (1, 2, 2): DRIFT  entry t=   4 k_entry=  -4 period=135 drift/step=-4/135
+  child  run on (1, 2, 3): SHIFT  entry t=  21 k_entry=  -8 period=6 drift/step=0
+  source run on (1, 2, 3): SHIFT  entry t=  23 k_entry=   2 period=6 drift/step=0
+  child  run on (1, 2, 4): SHIFT  entry t=  19 k_entry=  -4 period=14 drift/step=0
+  child  run on (1, 2, 5): SHIFT  entry t=  18 k_entry=  -8 period=8 drift/step=0
+  source run on (1, 2, 5): SHIFT  entry t=  16 k_entry=  -4 period=8 drift/step=0
+  child  run on (1, 3, 2): SHIFT  entry t=  10 k_entry=  -5 period=6 drift/step=0
+  source run on (1, 3, 2): SHIFT  entry t=  67 k_entry=  -7 period=6 drift/step=0
+  child  run on (1, 3, 3): SHIFT  entry t=   5 k_entry=  -4 period=14 drift/step=0
+  source run on (1, 3, 3): SHIFT  entry t=  31 k_entry=  -5 period=7 drift/step=0
+  child  run on (1, 3, 4): SHIFT  entry t=  24 k_entry=   0 period=8 drift/step=0
+  child  run on (1, 4, 2): SHIFT  entry t=  18 k_entry=  -2 period=7 drift/step=0
+  source run on (1, 4, 2): SHIFT  entry t=  66 k_entry= -11 period=14 drift/step=0
+  child  run on (1, 4, 3): SHIFT  entry t=   6 k_entry=  -4 period=16 drift/step=0
+  source run on (1, 4, 3): SHIFT  entry t=  48 k_entry=  -9 period=8 drift/step=0
+  child  run on (1, 5, 2): SHIFT  entry t=  63 k_entry=   6 period=16 drift/step=0
+  source run on (1, 5, 2): SHIFT  entry t=  24 k_entry=  -6 period=16 drift/step=0
+  child  run on (2, 2, 3): SHIFT  entry t=  20 k_entry=  -5 period=14 drift/step=0
+  child  run on (2, 2, 4): SHIFT  entry t=  14 k_entry=  -6 period=8 drift/step=0
+  source run on (2, 2, 4): SHIFT  entry t=  47 k_entry= -12 period=8 drift/step=0
+  child  run on (2, 3, 3): SHIFT  entry t=   8 k_entry=  -4 period=16 drift/step=0
+  child  run on (1, 1, 1, 2): DRIFT  entry t=  13 k_entry=  -8 period=190 drift/step=-21/95
+  source run on (1, 1, 1, 2): DRIFT  entry t=  47 k_entry=  10 period=190 drift/step=21/95
+  child  run on (1, 1, 1, 3): DRIFT  entry t=   7 k_entry=  -4 period=42 drift/step=-8/21
+  source run on (1, 1, 1, 3): DRIFT  entry t=  58 k_entry=   5 period=42 drift/step=8/21
+  child  run on (1, 1, 1, 4): SHIFT  entry t=  13 k_entry=  -6 period=28 drift/step=0
+  source run on (1, 1, 1, 4): SHIFT  entry t=  30 k_entry=   3 period=28 drift/step=0
+  child  run on (1, 1, 1, 5): SHIFT  entry t=  18 k_entry=  -6 period=8 drift/step=0
+  source run on (1, 1, 1, 5): SHIFT  entry t=  43 k_entry=  -3 period=8 drift/step=0
+  child  run on (1, 1, 2, 2): DRIFT  entry t=  11 k_entry=  -8 period=42 drift/step=-8/21
+  source run on (1, 1, 2, 2): DRIFT  entry t=  44 k_entry=   3 period=42 drift/step=8/21
+  child  run on (1, 1, 2, 3): DRIFT  entry t=  15 k_entry=  -6 period=126 drift/step=-23/126
+  source run on (1, 1, 2, 3): DRIFT  entry t=  63 k_entry=  -1 period=126 drift/step=23/126
+  child  run on (1, 1, 2, 4): SHIFT  entry t=  15 k_entry=  -4 period=16 drift/step=0
+  source run on (1, 1, 2, 4): SHIFT  entry t=  44 k_entry=  -2 period=8 drift/step=0
+  child  run on (1, 1, 3, 2): SHIFT  entry t=  10 k_entry=  -6 period=28 drift/step=0
+  source run on (1, 1, 3, 2): SHIFT  entry t=  33 k_entry=  -2 period=7 drift/step=0
+  child  run on (1, 1, 3, 3): SHIFT  entry t=  20 k_entry=  -5 period=8 drift/step=0
+  source run on (1, 1, 3, 3): SHIFT  entry t=  77 k_entry=  -6 period=24 drift/step=0
+  child  run on (1, 1, 4, 2): SHIFT  entry t=  16 k_entry=  -4 period=24 drift/step=0
+  source run on (1, 1, 4, 2): SHIFT  entry t=  73 k_entry=  -4 period=8 drift/step=0
+  child  run on (1, 2, 1, 3): SHIFT  entry t=   7 k_entry=  -4 period=7 drift/step=0
+  source run on (1, 2, 1, 3): DRIFT  entry t=  48 k_entry=  -1 period=126 drift/step=23/126
+  child  run on (1, 2, 1, 4): SHIFT  entry t=  33 k_entry=  -3 period=8 drift/step=0
+  source run on (1, 2, 1, 4): SHIFT  entry t=  67 k_entry=  -6 period=8 drift/step=0
+  child  run on (1, 2, 2, 2): SHIFT  entry t=  11 k_entry=  -6 period=28 drift/step=0
+  source run on (1, 2, 2, 2): SHIFT  entry t=  21 k_entry=  -1 period=28 drift/step=0
+  child  run on (1, 2, 2, 3): SHIFT  entry t=  20 k_entry=  -7 period=8 drift/step=0
+  source run on (1, 2, 2, 3): SHIFT  entry t=  35 k_entry=  -5 period=24 drift/step=0
+  child  run on (1, 2, 3, 2): SHIFT  entry t=  20 k_entry=  -7 period=16 drift/step=0
+  source run on (1, 2, 3, 2): SHIFT  entry t=  39 k_entry=  -1 period=16 drift/step=0
+  child  run on (1, 3, 2, 2): SHIFT  entry t=   8 k_entry=  -4 period=24 drift/step=0
+  source run on (1, 3, 2, 2): SHIFT  entry t=  89 k_entry=  -5 period=8 drift/step=0
+  child  run on (0,): DRIFT  entry t=  11 k_entry=   0 period=2 drift/step=1/2
+  source run on (0,): DRIFT  entry t=  61 k_entry= -39 period=2 drift/step=-1/2
+
+== state reset (1,1): u = 3^1 v + 1
+  child  run on (1,): ABSORB at time 1
+  source run on (1,): DRIFT  entry t=   2 k_entry=   2 period=1 drift/step=1
+  child  run on (2,): ABSORB at time 1
+  source run on (2,): DRIFT  entry t=   0 k_entry=   1 period=2 drift/step=1/2
+  child  run on (3,): ABSORB at time 1
+  source run on (3,): SHIFT  entry t=   3 k_entry=   1 period=3 drift/step=0
+  child  run on (4,): ABSORB at time 1
+  source run on (4,): ABSORB at time 9
+  child  run on (5,): ABSORB at time 1
+  source run on (5,): DRIFT  entry t=   3 k_entry=   1 period=85 drift/step=-28/85
+  child  run on (6,): ABSORB at time 1
+  source run on (6,): ABSORB at time 7
+  child  run on (7,): ABSORB at time 1
+  source run on (7,): DRIFT  entry t=   3 k_entry=   1 period=231 drift/step=-100/231
+  child  run on (8,): ABSORB at time 1
+  source run on (8,): DRIFT  entry t=   7 k_entry=  -2 period=648 drift/step=-275/648
+  child  run on (1, 2): ABSORB at time 1
+  source run on (1, 2): DRIFT  entry t=   1 k_entry=   2 period=3 drift/step=-1/3
+  child  run on (1, 3): ABSORB at time 1
+  source run on (1, 3): SHIFT  entry t=   7 k_entry=   2 period=4 drift/step=0
+  child  run on (1, 4): ABSORB at time 1
+  source run on (1, 4): SHIFT  entry t=   2 k_entry=   2 period=5 drift/step=0
+  child  run on (1, 5): ABSORB at time 1
+  source run on (1, 5): DRIFT  entry t=   5 k_entry=   0 period=42 drift/step=-5/21
+  child  run on (1, 6): ABSORB at time 1
+  source run on (1, 6): ABSORB at time 8
+  child  run on (1, 7): ABSORB at time 1
+  source run on (1, 7): SHIFT  entry t=  31 k_entry=  -7 period=8 drift/step=0
+  child  run on (2, 3): ABSORB at time 1
+  source run on (2, 3): SHIFT  entry t=   5 k_entry=   2 period=5 drift/step=0
+  child  run on (2, 4): ABSORB at time 1
+  source run on (2, 4): ABSORB at time 19
+  child  run on (2, 5): ABSORB at time 1
+  source run on (2, 5): SHIFT  entry t=   5 k_entry=   2 period=7 drift/step=0
+  child  run on (2, 6): ABSORB at time 1
+  source run on (2, 6): ABSORB at time 17
+  child  run on (3, 4): ABSORB at time 1
+  source run on (3, 4): DRIFT  entry t=   3 k_entry=   1 period=273 drift/step=-16/91
+  child  run on (3, 5): ABSORB at time 1
+  source run on (3, 5): DRIFT  entry t=   7 k_entry=   0 period=56 drift/step=-9/28
+  child  run on (1, 1, 2): ABSORB at time 1
+  source run on (1, 1, 2): DRIFT  entry t=   4 k_entry=   2 period=12 drift/step=5/12
+  child  run on (1, 1, 3): ABSORB at time 1
+  source run on (1, 1, 3): SHIFT  entry t=   8 k_entry=   2 period=5 drift/step=0
+  child  run on (1, 1, 4): ABSORB at time 1
+  source run on (1, 1, 4): SHIFT  entry t=   4 k_entry=   2 period=6 drift/step=0
+  child  run on (1, 1, 5): ABSORB at time 1
+  source run on (1, 1, 5): SHIFT  entry t=  11 k_entry=   3 period=7 drift/step=0
+  child  run on (1, 1, 6): ABSORB at time 1
+  source run on (1, 1, 6): SHIFT  entry t=   2 k_entry=   2 period=8 drift/step=0
+  child  run on (1, 2, 2): ABSORB at time 1
+  source run on (1, 2, 2): SHIFT  entry t=   6 k_entry=   1 period=5 drift/step=0
+  child  run on (1, 2, 3): ABSORB at time 1
+  source run on (1, 2, 3): SHIFT  entry t=  11 k_entry=   2 period=6 drift/step=0
+  child  run on (1, 2, 4): ABSORB at time 1
+  source run on (1, 2, 4): SHIFT  entry t=   2 k_entry=   2 period=7 drift/step=0
+  child  run on (1, 2, 5): ABSORB at time 1
+  source run on (1, 2, 5): ABSORB at time 12
+  child  run on (1, 3, 2): ABSORB at time 1
+  source run on (1, 3, 2): SHIFT  entry t=  31 k_entry=  -1 period=6 drift/step=0
+  child  run on (1, 3, 3): ABSORB at time 1
+  source run on (1, 3, 3): SHIFT  entry t=   3 k_entry=   1 period=14 drift/step=0
+  child  run on (1, 3, 4): ABSORB at time 1
+  source run on (1, 3, 4): SHIFT  entry t=   2 k_entry=   2 period=8 drift/step=0
+  child  run on (1, 4, 2): ABSORB at time 1
+  source run on (1, 4, 2): SHIFT  entry t=   2 k_entry=   2 period=7 drift/step=0
+  child  run on (1, 4, 3): ABSORB at time 1
+  source run on (1, 4, 3): SHIFT  entry t=  18 k_entry=  -1 period=8 drift/step=0
+  child  run on (1, 5, 2): ABSORB at time 1
+  source run on (1, 5, 2): ABSORB at time 9
+  child  run on (2, 2, 3): ABSORB at time 1
+  source run on (2, 2, 3): SHIFT  entry t=   7 k_entry=   3 period=14 drift/step=0
+  child  run on (2, 2, 4): ABSORB at time 1
+  source run on (2, 2, 4): ABSORB at time 33
+  child  run on (2, 3, 3): ABSORB at time 1
+  source run on (2, 3, 3): ABSORB at time 19
+  child  run on (1, 1, 1, 2): ABSORB at time 1
+  source run on (1, 1, 1, 2): DRIFT  entry t=  27 k_entry=  10 period=190 drift/step=21/95
+  child  run on (1, 1, 1, 3): ABSORB at time 1
+  source run on (1, 1, 1, 3): DRIFT  entry t=   5 k_entry=   3 period=42 drift/step=8/21
+  child  run on (1, 1, 1, 4): ABSORB at time 1
+  source run on (1, 1, 1, 4): SHIFT  entry t=   7 k_entry=   2 period=28 drift/step=0
+  child  run on (1, 1, 1, 5): ABSORB at time 1
+  source run on (1, 1, 1, 5): SHIFT  entry t=   7 k_entry=   2 period=8 drift/step=0
+  child  run on (1, 1, 2, 2): ABSORB at time 1
+  source run on (1, 1, 2, 2): DRIFT  entry t=  11 k_entry=   3 period=42 drift/step=8/21
+  child  run on (1, 1, 2, 3): ABSORB at time 1
+  source run on (1, 1, 2, 3): DRIFT  entry t=  11 k_entry=   3 period=126 drift/step=23/126
+  child  run on (1, 1, 2, 4): ABSORB at time 1
+  source run on (1, 1, 2, 4): SHIFT  entry t=  11 k_entry=   3 period=8 drift/step=0
+  child  run on (1, 1, 3, 2): ABSORB at time 1
+  source run on (1, 1, 3, 2): SHIFT  entry t=   4 k_entry=   2 period=28 drift/step=0
+  child  run on (1, 1, 3, 3): ABSORB at time 1
+  source run on (1, 1, 3, 3): ABSORB at time 56
+  child  run on (1, 1, 4, 2): ABSORB at time 1
+  source run on (1, 1, 4, 2): SHIFT  entry t=   4 k_entry=   2 period=8 drift/step=0
+  child  run on (1, 2, 1, 3): ABSORB at time 1
+  source run on (1, 2, 1, 3): SHIFT  entry t=   3 k_entry=   1 period=7 drift/step=0
+  child  run on (1, 2, 1, 4): ABSORB at time 1
+  source run on (1, 2, 1, 4): SHIFT  entry t=   2 k_entry=   2 period=8 drift/step=0
+  child  run on (1, 2, 2, 2): ABSORB at time 1
+  source run on (1, 2, 2, 2): SHIFT  entry t=   6 k_entry=   1 period=7 drift/step=0
+  child  run on (1, 2, 2, 3): ABSORB at time 1
+  source run on (1, 2, 2, 3): SHIFT  entry t=  13 k_entry=   2 period=8 drift/step=0
+  child  run on (1, 2, 3, 2): ABSORB at time 1
+  source run on (1, 2, 3, 2): SHIFT  entry t=   2 k_entry=   2 period=16 drift/step=0
+  child  run on (1, 3, 2, 2): ABSORB at time 1
+  source run on (1, 3, 2, 2): SHIFT  entry t=   2 k_entry=   2 period=16 drift/step=0
+  child  run on (0,): DRIFT  entry t=   0 k_entry=   1 period=2 drift/step=1/2
+  source run on (0,): ABSORB at time 1

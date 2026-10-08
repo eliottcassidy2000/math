@@ -1,0 +1,3 @@
+orphans: 53, rescued by a smaller backward node within depth 36: 0.377; depths [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+all odd K sample: rescue rate 0.400
+doubly uncovered orphan exponents: [1081, 1113, 1137, 1329, 1335, 1719, 1803, 1909, 1929, 2209, 2349, 2593, 2725, 2781, 2871, 2971, 3163, 3243, 3525, 3543, 3805, 3861, 4111, 4233, 4305, 4401, 4459, 4849, 5281, 5371, 5547, 5793, 6301]

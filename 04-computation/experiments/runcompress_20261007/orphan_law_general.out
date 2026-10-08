@@ -1,0 +1,12 @@
+K= 9 B=  25: orphan fraction 0.557 (x sqrt(K+B) = 3.25);  reset pair D<=2 merges 0.303
+K= 9 B=  50: orphan fraction 0.417 (x sqrt(K+B) = 3.20);  reset pair D<=2 merges 0.400
+K= 9 B= 100: orphan fraction 0.340 (x sqrt(K+B) = 3.55);  reset pair D<=2 merges 0.477
+K= 9 B= 200: orphan fraction 0.217 (x sqrt(K+B) = 3.13);  reset pair D<=2 merges 0.560
+K= 9 B= 400: orphan fraction 0.157 (x sqrt(K+B) = 3.17);  reset pair D<=2 merges 0.653
+K= 9 B= 800: orphan fraction 0.087 (x sqrt(K+B) = 2.47);  reset pair D<=2 merges 0.733
+K=17 B=  25: orphan fraction 0.427 (x sqrt(K+B) = 2.77);  reset pair D<=2 merges 0.373
+K=17 B=  50: orphan fraction 0.327 (x sqrt(K+B) = 2.67);  reset pair D<=2 merges 0.437
+K=17 B= 100: orphan fraction 0.203 (x sqrt(K+B) = 2.20);  reset pair D<=2 merges 0.560
+K=17 B= 200: orphan fraction 0.170 (x sqrt(K+B) = 2.50);  reset pair D<=2 merges 0.577
+K=17 B= 400: orphan fraction 0.087 (x sqrt(K+B) = 1.77);  reset pair D<=2 merges 0.690
+K=17 B= 800: orphan fraction 0.070 (x sqrt(K+B) = 2.00);  reset pair D<=2 merges 0.763

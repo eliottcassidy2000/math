@@ -34,6 +34,12 @@ scripts:
 * So HYP-9240 follows from `excess(N_D) < s_0(D)/2`, equivalently `odd(N_D) < ⌈(s_0 + σ_T(N_D))/2⌉`. The excess of N is odd(N) − σ_T(N)/2.
 * The weaker bound `excess < ⌈s_0/2⌉` is not sufficient: when s_0 and σ_T are both odd, excess = s_0/2 gives zero debt (audit A).
 
+**Nature of the problem (remark, 2026-10-07 continuation).**
+* The clearing word of `y* = −1 + 2·3^(−D)` is the parity vector of a 2-adic integer. So the landing N_D and the entry debt are functions of the 2-adic expansion of `3^(−D)` alone.
+* Real-size bounds give only `1 ≤ N_D + 1 ≤ (3/2)^D`: in the coordinate `w = y + 1`, the steps are `w ↦ 3w/2` or `w ↦ (w+1)/2`.
+* A proof for all D therefore needs control of a digit statistic of `3^(−D)` in base 2. That is a problem of the same type as the zeroless-power questions (THM-4580).
+* The finite range D ≤ 8000 is settled by exact computation.
+
 **Evidence.**
 * For D ≤ 3000 every landing satisfies `N_D ≤ 880`, and for D ≤ 8000 `N_D ≤ 2527`.
 * The odd-step excess of every N ≤ 880 is at most 9 (attained at N = 871), while the required excess is about D.

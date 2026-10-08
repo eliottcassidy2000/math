@@ -1,0 +1,4 @@
+normalized post-run length (sigma_T - K)/K: orphans mean 7.839 (n=53), non-orphans 7.661 (n=2647)
+  short third  (0.00..7.58): orphan rate 0.0056  (n=900)
+  middle third (7.58..7.74): orphan rate 0.0111  (n=900)
+  long third   (7.74..99.00): orphan rate 0.0422  (n=900)
