@@ -1,0 +1,8 @@
+CITED input: Beukers-Schlickewei Theorem1.1, at most2^(8r+8) solutions.
+PROVED specialization: fixed middle head => at most2^32 Mersenne exponents.
+Normalized group generators: (2,1), (1,3), (1/C,-1/C); rank<=3.
+FINITE-EXACT universe: 256 heads; E2..12; terminal1..24.
+Endpoint-equation solutions: 8 ; strict first-hit solutions: 2
+Hostile: M2 head(4,2) terminal2 satisfies equation but pads ROOT.
+No height bound, exhaustive solution algorithm, or universal obstruction to variable heads.
+Checks: 338747

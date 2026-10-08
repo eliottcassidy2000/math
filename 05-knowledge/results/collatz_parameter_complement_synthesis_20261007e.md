@@ -6,6 +6,11 @@ their exact combined parameter density, and an explicit uncovered cylinder.
 **CONDITIONAL:** every emitted child's ROOT certificate remains an obligation.
 **OPEN:** coverage and grounding of every parameter, and universal Collatz.
 
+Current continuation: [grounded ports and a residual exit](collatz_grounding_progress_20261007f.md)
+adds a paid t23 subphase and explicit ordinary ROOT families; original giant
+child grounding remains OPEN. The banks and residual claims below retain
+their specified earlier scope.
+
 For the actual child family `n(t)=2^E(t)-1`,
 `E(t)=924745897+2^32 t`, t>=0, the specified paid rule union now has natural
 parameter density

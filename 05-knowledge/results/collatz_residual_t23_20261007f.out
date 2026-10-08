@@ -1,0 +1,10 @@
+PROVED paid exit: E=924745897+2^32*t, t=23 mod2^6518.
+Retained child deletions: (3, 4, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28)
+Strongest child exponent: 99708993677; original parent pays36 bits.
+Exact source/partner head costs6552/6550; clocks3317/(3317+D); gap1.
+Shared partner suffix3014 letters; all24 child alternatives retained.
+Ordinary-source stream controls (bits,left rank,right rank): ((19657, 16422, 16422), (19657, 16422, 16422))
+Finite proposal box: one seed, D1..256, source depths0..4096,16384bits.
+Anchored phase agrees with12 independent inherited discrete-log compilations.
+OPEN: all original giant child ROOT ports; universal coverage and grounding.
+Checks: 4163
