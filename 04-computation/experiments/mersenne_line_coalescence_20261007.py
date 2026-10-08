@@ -3,12 +3,18 @@ Note: 05-knowledge/results/mersenne_line_barriers_20261007.md.  Uses the engines
   (L) local hardness below the t = 23 source: odd exponents in [TOP - 19999, TOP] with no exit (D <= 64) within W = 4096.
   (Q) deep exits for the 30 progression members that need W > 16384 (fast parity, D <= 256, W <= 2^22), and the
       negative for t = 3525143 within 2^26.
-  (S) coalescence profiles below six random odd exponents in [10^10, 10^11] (seed 77): contiguous absorbed extent S(T)
-      at T = 2^j, j = 4..21, for deletions D <= 2048 (NUMERICAL).
-  (V) level 2 below the fan: the chains for D = 1911, 1912, 2500, 4000 of the fan bottom are not absorbed within 2^27.
-Prints ALL CHECKS PASSED.  Runtime about 12 minutes; memory about 3 GB."""
-import sys, time, random, importlib.util, os
-import numpy as np
+  (S) coalescence profiles below six random odd exponents in [10^10, 10^11] (seed 77), deletions D <= 2048, at
+      T = 2^j, j = 4..20: contiguous absorbed extent S(T), absorbed cluster size N(T) (number of D <= 2048 whose chains are
+      absorbed by T, i.e. the source's cluster below it), and the number of unabsorbed groups (NUMERICAL).
+  (H2) exact horizon clusters for K <= 12800 from mac-mini's runcompress_20261007/mersenne_sigma_12800.txt: by the
+      stopping-time invariant (note section 4) the clusters are the level sets of (sigma_T(M_K) - K, odd count of M_K);
+      per window: median horizon T = sigma_T(x_K), median contiguous extent S and cluster size below K over sqrt(T),
+      orphan fraction per odd K against 2 / (mean cluster size), and the even cluster bottoms.
+  Level 2 below the fan is in mersenne_fan_block_20261007.py (merge at 4,474,989) and mersenne_fan_level2_20261007.py (2^29).
+A negative "within W" means: no absorption at any Terras time <= W - 9 (<= W - 8 in deep_exit, which also checks the final state).
+Prints ALL CHECKS PASSED.  Runtime about 6 minutes; memory about 3 GB."""
+import sys, time, random, os, math, statistics
+from collections import defaultdict
 from multiprocessing import Pool
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -58,6 +64,9 @@ def deep_exit(E, logWs=(20, 22), DMAX=256):
                 n += 1
                 if n >= N:
                     break
+        for D, (k, av) in alive.items():          # the state after the last coin
+            if k == 0 and av == 0:
+                return LOGW, n, sorted(groups[D])
     return None, None, None
 
 
@@ -90,31 +99,9 @@ def job_profile(E, LOGW=21, DMAX=2048):
             S = 0
             while S + 1 <= DMAX and (S + 1) in abs_time:
                 S += 1
-            out.append((n + 1, S, len(alive)))
+            out.append((n + 1, S, len(abs_time), len(alive)))
             nextck *= 2
     return E, out
-
-
-COINS2 = None
-
-
-def init_level2():
-    global COINS2
-    COINS2 = F.coins_of(99708993677, (1 << 27) - 8)
-
-
-def job_level2(D):
-    k, av = -D, 1 - F.P3[D]; kmin = k
-    n = 0; N = len(COINS2)
-    while n < N:
-        for b in COINS2[n:n + 65536].tolist():
-            if k == 0 and av == 0:
-                return D, n, kmin
-            k, av = F.stepf(k, av, b)
-            if k < kmin:
-                kmin = k
-            n += 1
-    return D, None, kmin
 
 
 if __name__ == '__main__':
@@ -140,22 +127,53 @@ if __name__ == '__main__':
         rng = random.Random(77)
         Es = [rng.randrange(10 ** 10, 10 ** 11) | 1 for _ in range(6)]
         profs = pool.map(job_profile, Es)
-        meds = {}
+        meds = {}; medN = {}
         for E, out in profs:
-            print(f'     E = {E}: (T, S(T), live groups) = {out}')
-            for T, S, g in out:
-                meds.setdefault(T, []).append(S)
+            print(f'     E = {E}: (T, S(T), N(T), unabsorbed groups) = {out}')
+            for T, S, Nc, g in out:
+                meds.setdefault(T, []).append(S); medN.setdefault(T, []).append(Nc)
         med = {T: sorted(v)[len(v) // 2] for T, v in meds.items()}
-        print('     median S(T):', {T: med[T] for T in sorted(med) if T >= 4096})
-        check(med[1 << 20] >= 2 * med[1 << 12] and med[1 << 20] <= 64 * med[1 << 12] + 64,
-              'median absorbed extent grows between T = 2^12 and 2^20 at a sub-linear rate (NUMERICAL)')
+        mdN = {T: sorted(v)[len(v) // 2] for T, v in medN.items()}
+        print('     upper median S(T):', {T: med[T] for T in sorted(med) if T >= 4096})
+        print('     upper median N(T):', {T: mdN[T] for T in sorted(mdN) if T >= 4096})
+        print('     upper median N(T)/sqrt(T):', {T: round(mdN[T] / math.sqrt(T), 3) for T in sorted(mdN) if T >= 4096})
+        print('     unabsorbed groups at 2^20:', [out[-1][3] for E, out in profs])
+        check(med[1 << 20] >= 2 * med[1 << 12] and med[1 << 20] <= 64 * med[1 << 12] + 64 and mdN[1 << 20] > mdN[1 << 12],
+              'median absorbed extent and cluster size grow between T = 2^12 and 2^20 at a sub-linear rate (NUMERICAL)')
     print('(Q2) the remaining member at 2^26')
     t = 3525143
     r = deep_exit(924745897 + (1 << 32) * t, logWs=(26,))
     check(r[0] is None, f't = {t}: no exit with D <= 256 within 2^26')
-    print('(V) level 2 below the fan, W = 2^27')
-    with Pool(4, initializer=init_level2) as pool:
-        lv = pool.map(job_level2, [1911, 1912, 2500, 4000])
-    print('     ', lv)
-    check(all(n is None for D, n, kmin in lv), 'the chains for D = 1911, 1912, 2500, 4000 of the fan bottom are not absorbed within 2^27 steps')
+    print('(H2) exact horizon clusters for K <= 12800 (mac-mini table)')
+    rows = {}
+    with open(os.path.join(HERE, 'runcompress_20261007', 'mersenne_sigma_12800.txt')) as f:
+        for line in f:
+            q = line.split()
+            if len(q) >= 3:
+                rows[int(q[0])] = (int(q[1]), int(q[2]))
+    key = {K: (t - K, o) for K, (o, t) in rows.items()}
+    cl = defaultdict(list)
+    for K in sorted(rows):
+        cl[key[K]].append(K)
+    bottom = {min(v) for v in cl.values()}
+    even_bottoms = sorted(K for K in bottom if K % 2 == 0 and K >= 4)
+    print(f'     {len(cl)} clusters among K = 2..12800; even cluster bottoms with K >= 4: {even_bottoms}')
+    edges = [400, 800, 1600, 3200, 6400, 12801]
+    print('     window | odd K | median T | median S/sqrtT | median N_below/sqrtT | orphan fraction x sqrtK | 2/(mean size) x sqrtK')
+    for lo, hi in zip(edges, edges[1:]):
+        Ss = []; Ns = []; Ts = []
+        oddK = [K for K in range(lo | 1, hi, 2) if K in rows]
+        for K in oddK:
+            Tk = rows[K][1] - (K - 1)
+            S = 0
+            while (K - S - 1) in key and key[K - S - 1] == key[K]:
+                S += 1
+            Nb = sum(1 for K2 in cl[key[K]] if K2 < K)
+            Ss.append(S / math.sqrt(Tk)); Ns.append(Nb / math.sqrt(Tk)); Ts.append(Tk)
+        orph = sum(1 for K in oddK if K in bottom) / len(oddK)
+        sizes = [len(v) for v in cl.values() if lo <= min(v) < hi]
+        kmid = math.sqrt(lo * hi)
+        print(f'     [{lo},{hi}) {len(oddK):5d} {statistics.median(Ts):9.0f} {statistics.median(Ss):8.3f} {statistics.median(Ns):8.3f} '
+              f'{orph * math.sqrt(kmid):8.3f} {2 / statistics.mean(sizes) * math.sqrt(kmid):8.3f}')
+    check(not even_bottoms, 'every cluster bottom with K >= 4 is odd (so the orphan fraction per odd K is about 2 / (mean cluster size))')
     print(f'\n{"ALL CHECKS PASSED" if not FAIL else "FAILURES: " + str(FAIL)}  ({time.time() - t0:.0f}s)')

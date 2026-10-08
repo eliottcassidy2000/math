@@ -1,18 +1,23 @@
 (A) pair chain vs direct orbits
   ok   large E (200..259, D <= 40, 392 steps): chain absorption time = first equal-time coincidence of the direct orbits in all 2400 cases (202 merges)
   ok   small E (8..39): all 306 disagreements are trivial-cycle value coincidences (merge value <= 2) that the relation chain does not claim
+(A2) no-meeting lemma
+  ok   E in [1500, 1520), D <= 40, N = 600 (E >= 2.27 N + D + 2): the 556 chains not absorbed by N have disjoint orbit segments (first N + 1 iterates of x and y); the 244 absorbed chains meet only at equal times, first at the absorption time
 (B) reset rule on the Mersenne line
   ok   for even E < 3000, M_E ~> M_(E-1) at Terras time 3 (w = 3^(E-2) = 1 mod 8: both reach (9w-1)/4); for odd E never
 (C) the supplied residual t = 23
   ok   E = 99708993705: exits exactly D in {3,4,7,...,28}, all absorbed at Terras time 6553 (reproduces the 24 children)
-  ok   original parent E = 99708993713: D = 36 (to the fan bottom 99708993677) absorbed at 6553; its exits [1, 2, 3, 4, 5, 6, 7, 8]...
+  ok   original parent E = 99708993713: D = 36 (to the fan bottom 99708993677) absorbed at 6553; D = 8 (to the source) at 35
+     all exits of the parent with D <= 64 within W = 8000 (D: Terras time): {1: 19, 2: 19, 3: 19, 4: 19, 5: 6553, 6: 6553, 7: 35, 8: 35, 11: 6553, 12: 6553, 15: 6553, 16: 6553, 17: 6553, 18: 6553, 19: 6553, 20: 6553, 21: 6553, 22: 6553, 23: 6553, 24: 6553, 25: 6553, 26: 6553, 27: 6553, 28: 6553, 29: 6553, 30: 6553, 31: 6553, 32: 6553, 33: 6553, 34: 6553, 35: 6553, 36: 6553}
 (D) the fan of the 24 children
-  ok   within W = 16384 and D <= 128 every exit of every child lands on another fan member, and the bottom M_99708993677 has no exit
+  ok   within W = 16384 and D <= 128 the exits of each child are exactly the fan members below it, and the bottom M_99708993677 has no exit
      exits per child (D: count): {3: 23, 4: 22, 7: 21, 8: 20, 9: 19, 10: 18, 11: 17, 12: 16, 13: 15, 14: 14, 15: 13, 16: 12, 17: 11, 18: 10, 19: 9, 20: 8, 21: 7, 22: 6, 23: 5, 24: 4, 25: 3, 26: 2, 27: 1, 28: 0}
+     merge times of the exits among the children (Terras time: number of exits): {3: 12, 9: 4, 25: 4, 57: 8, 76: 8, 111: 12, 123: 4, 131: 4, 276: 16, 362: 40, 512: 84, 644: 80}
 (E) the unpaid progression t = 13847 mod 27648: first 2000 members
   ok   1970 of 2000 members certified with W <= 16384 (median cheapest merge time 157, max 16151); 30 need the deep script
      members needing W > 16384 (index, t): [(55, 1534487), (127, 3525143), (181, 5018135), (247, 6842903), (263, 7285271), (300, 8308247), (365, 10105367), (371, 10271255), (465, 12870167), (469, 12980759), (509, 14086679), (523, 14473751), (727, 20113943), (860, 23791127), (916, 25339415), (943, 26085911), (949, 26251799), (1045, 28906007), (1101, 30454295), (1269, 35099159), (1431, 39578135), (1451, 40131095), (1509, 41734679), (1524, 42149399), (1595, 44112407), (1620, 44803607), (1675, 46324247), (1759, 48646679), (1800, 49780247), (1854, 51273239)]
      first members: [(13847, 6, 273), (41495, 36, 957), (69143, 4, 73), (96791, 12, 129)] (t, D, merge time)
+     certified members by first successful W: {256: 1258, 1024: 489, 4096: 169, 16384: 54}
 (F) random giant odd exponents: cheapest exit depth (W = 4096, D <= 64)
      P(no exit by 128) = 0.540
      P(no exit by 256) = 0.383
@@ -20,5 +25,11 @@
      P(no exit by 1024) = 0.160
      P(no exit by 2048) = 0.092
      P(no exit by 4096) = 0.047
+(M) the stopping-time invariant
+  ok   4 <= E <= 160, D <= E - 2: 919 chain absorptions; the 919 with merge value >= 3 are exactly the pairs with sigma_T(x_E) = sigma_T(x_(E-D)) and equal odd-step counts of M_E, M_(E-D) to 1; 0 absorptions at the trivial cycle (sigma_T differs there by up to 0)
+  ok   sigma_T(x_K) for K <= 2000 agrees with the mac-mini table; max sigma_T(x_K) = 15575 for K <= 2000 and 97982 for K <= 12800; since sigma_T(x_E) > (E - 1) log2 3, no route of certificates with merge values >= 3 from any E > 9828 (resp. E > 61821) reaches any K <= 2000 (resp. K <= 12800)
+     residual horizon: mean sigma_T(x_K)/K = 7.6438 over 1000 <= K <= 12800 (6.95212 ln 3 = 7.6377); std of (sigma_T(x_K) - cK)/sqrt(K) = 10.627; cluster span/sqrt(bottom) for bottoms >= 1000: mean 2.60, max 6.08 (83 clusters); clusters meeting K = 33..42 have bottoms [33]
+  ok   trivial-cycle absorptions (equal 2o - s, different s) among K <= 12800: 0 pairs
+  ok   M_100000 = 2^100000 - 1 (Ren 2018): 863323 Terras steps (= halvings), 481603 odd steps; sigma_T/K = 8.6332
 
-ALL CHECKS PASSED  (21s)
+ALL CHECKS PASSED  (25s)

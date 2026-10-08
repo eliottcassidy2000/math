@@ -5,15 +5,16 @@ Fast Terras parity vectors by divide and conquer: for x known mod 2^n, par(x, n)
 a its weight, and T^n(x') = (3^a x' + c)/2^n for all x' = x mod 2^n; halves combine by x_mid = (3^a1 x + c1) >> n1,
 a = a1 + a2, c = 3^a2 c1 + 2^n1 c2.  O(M(n) log n) with python-flint (FLINT fmpz).
 Checks:
-  (P) par agrees with naive iteration (random x, n <= 5000; a Mersenne source at n = 19992).
+  (P) par agrees with naive iteration (random x, n <= 5000; the fan bottom's source, n = 2^17).
   (G) the fan bottom M_99708993677: source-reference chains for D = 1..256 with collapse of identical states, W = 2^25:
       all 256 chains collapse into one by step 2^22 and that chain is absorbed at Terras time 19,000,765
       (so M_99708993677 ~> M_(99708993677 - D) for every D <= 256).
   (H) independent residue check from affine maps (not the chain): T^n(x) = T^n(y_D) mod 2^(2^20) at n = 19,000,765 for
       D = 1 and D = 256, with odd-step counts differing by exactly D; the same residues differ at n - 1.
-  (I) the edge of the absorbed block: the chains for D = 1500, 1910 collapse into the D = 1 chain before 19,000,765;
-      the chain for D = 1911 does not (it stays a separate chain through 19,000,765).
-Prints ALL CHECKS PASSED.  Runtime about 6 minutes (single process plus 3 workers); memory about 2 GB."""
+  (I) the contiguous edge of the absorbed block: the chains for D = 1500, 1910 collapse into the D = 1 chain before
+      19,000,765; the chain for D = 1911 does not (it stays a separate chain through 19,000,765).  The absorbed group is not
+      an interval: the full block D <= 4000 is run in mersenne_fan_block_20261007.py (members 1..1910, 1929..1932, 1935, 1936).
+Prints ALL CHECKS PASSED.  Runtime about 2 minutes (single process plus 3 workers); memory about 2 GB."""
 import sys, time, random
 import numpy as np
 from multiprocessing import Pool
@@ -131,14 +132,17 @@ if __name__ == '__main__':
     for n in (100, 1000, 5000):
         x = rng.getrandbits(n) | 1
         okp &= par(x, n) == par_small(x, n)
-    W = 20000
+    W = (1 << 17) + 8
     z = (2 * pow(3, E0 - 1, 1 << W) - 1) % (1 << W)
     Vn, _, _ = par(z, W - 8)
-    zz = z; okc = True
+    bits = bytearray(W - 8); zz = z
     for i in range(W - 8):
-        okc &= ((Vn >> i) & 1) == (zz & 1)
-        zz = ((3 * zz + 1) >> 1) if zz & 1 else (zz >> 1)
-    check(okp and okc, 'divide-and-conquer parity vectors equal naive iteration (random x, n <= 5000; the fan bottom, n = 19992)')
+        b = zz & 1
+        bits[i] = b
+        zz = ((3 * zz + 1) >> 1) if b else (zz >> 1)
+    Vnaive = int.from_bytes(np.packbits(np.frombuffer(bytes(bits), dtype=np.uint8), bitorder='little').tobytes(), 'little')
+    okc = Vnaive == int(Vn)
+    check(okp and okc, 'divide-and-conquer parity vectors equal naive iteration (random x, n <= 5000; the fan bottom, n = 2^17 = 131072)')
 
     print('(G) the fan bottom, chains D = 1..256 to W = 2^25 with state collapse')
     LOGW = 25

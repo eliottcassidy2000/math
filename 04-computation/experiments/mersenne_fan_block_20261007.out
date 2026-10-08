@@ -1,0 +1,19 @@
+coins of the fan bottom to 19000781 steps [9s]
+(J)/(K) collapsing search
+     step 2741940: levels of the chains of D = 1, 1911, 2895: {1: -1131, 1911: -2938, 2895: -4121}  (live groups 3) [39s]
+(J) at step 2741940: group of D = 1 has 1916 members, those above 1910: [1929, 1930, 1931, 1932, 1935, 1936]; its last merge at step 2741933; other clusters (min D, max D, size): [(1911, 2902, 982), (2895, 4000, 1102)]
+  ok   the group of D = 1 is exactly {1..1910} u {1929..1932, 1935, 1936} (1916 members, last merge at 2,741,933); the other 2084 chains form two clusters; no absorption yet
+     step 4474989: levels of the chains of D = 1, 1911, 2895: {1: -2335, 1911: -4101, 2895: -4101}  (live groups 2) [50s]
+     step 8388608: levels of the chains of D = 1, 1911, 2895: {1: -1448, 1911: -5689, 2895: -5689}  (live groups 2) [68s]
+     step 16777216: levels of the chains of D = 1, 1911, 2895: {1: -2608, 1911: -7453, 2895: -7453}  (live groups 2) [114s]
+     step 19000765: levels of the chains of D = 1, 1911, 2895: {1: 0, 1911: -6133, 2895: -6133}  (live groups 2) [126s]
+(K) to step 19,000,766
+     merge events of marked chains (step, surviving, joining): [(773555, [2895], [4000]), (1338070, [1911], [2902]), (2741933, [1], [1910]), (4474989, [1911, 2902], [2895, 4000])]
+     the two lower clusters merge at step 4474989: level-2 cluster of 2084 members, D in [1911, 4000]
+     D = 1 group absorbed at Terras time 19000765; level-2 cluster absorbed: None; maximum level of the D = 1911 chain over [0, 19000765]: -1910; its level at 19000765: -6133
+  ok   the two lower clusters merge at 4,474,989 (2084 members: level 2); the D = 1 group (1916 members) is absorbed at Terras time 19,000,765, certifying M_99708993677 ~> M_(99708993677 - D) for D in {1..1910, 1929..1932, 1935, 1936} (deepest: M_99708991741); the level-2 cluster is not absorbed by 19,000,766
+(N) odd-step counts at Terras time 19,000,765
+     odd steps of x_E0, y_1, y_256 over 19,000,765 Terras steps: 9500295, 9500296, 9500551
+  ok   the odd-step counts differ by exactly D (relation level 0 at absorption)
+
+ALL CHECKS PASSED  (154s)

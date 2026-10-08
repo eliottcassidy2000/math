@@ -1,0 +1,13 @@
+parity vector of the fan bottom to 2^29: 275s, weight 268442025
+  step 67108864: level -10129, range [-12297, -1910]  [480s]
+  step 134217728: level -4992, range [-12297, -1910]  [593s]
+  step 201326592: level -10606, range [-12297, -1910]  [699s]
+  step 268435456: level -20388, range [-21668, -1910]  [840s]
+  step 335544320: level -10200, range [-22403, -1910]  [982s]
+  step 402653184: level -26321, range [-26495, -1910]  [1122s]
+  step 469762048: level -27962, range [-31536, -1910]  [1331s]
+D = 4000 chain collapsed into the D = 1911 chain at step 4474989
+outcome: not absorbed within 536870904 steps; level range [-31536, -1910]
+  ok   the D = 4000 chain collapses into the D = 1911 chain before 2^27 (consistent with the companion script)
+
+ALL CHECKS PASSED  (1519s)

@@ -2052,6 +2052,81 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
+## MISTAKE-588 (2026-10-07, opus-2026-10-07-S21 Mersenne-line barriers note, THM-4605 and HYP-9243; found by the session's independent adversarial audit after checkpoint 023a49bcf was pushed) -- an absorbed block assumed to be an interval, a "collapse together" claim no committed code checked, a band "agreement" with the orphan law that was a bookkeeping artifact, a provable consequence typed as heuristic, an uncited published algorithm, and a Mahler analogy at the wrong place; then (second audit) a misstated trivial-cycle case and a missed canon theorem (THM-4593)
+
+- **What was claimed (checkpoint `023a49bcf`).**
+  * **Block edge.** "D = 1910 (1911 is outside this event)", hence "the deepest certified jump is M_99708993677 ~> M_99708991767". The committed check (I) tested only D = 1500, 1910 and 1911. The edge came from a scratch bisection that assumed an interval.
+  * **Level 2.** "The chains D = 1911, 1912, 2500, 4000 collapse together", while check (V) ran each chain separately.
+  * **HYP-9243.**
+    * The orphan fraction was given as `1/(c sqrt(8.64 K))` = `(0.76-1.1)/sqrt(K)`, and "HYP-9242's 0.89-1.14 lies inside that band".
+    * "Two independent computations at scales 10^4 and 10^11 agree".
+    * `S(T) ~ sqrt(T)` was claimed for the contiguous absorbed extent, and the fan was compared at its coalescence time 2.74e6 rather than its absorption time.
+  * **The consequence.** "Consequence (HEURISTIC): deletion certificates alone cannot ground a generic giant Mersenne number."
+  * **Prior art.** The fast parity vectors were presented without prior art, as "orders of magnitude cheaper".
+  * **Mahler.** "A uniform bound on barrier depths ... the same kind of statement as the Z-number and Mahler problems."
+  * **Smaller items.**
+    * Numbers in the note that appeared in no `.out`: the odd-step counts, the W-split, the parent's exits, the cascade times.
+    * "Within 2^27" actually meant "at times <= 2^27 - 9".
+    * Stale runtimes and "negatives to 2^20".
+    * The constant c was given three ways.
+    * "1-4 clusters cover 2048 deletions" counted unabsorbed groups only.
+    * "25 - (index) exits" for the children.
+    * "About W^(-0.9)": the local exponents are 0.50-0.97, about 0.70 overall.
+    * "Local slope of the median 0.4-0.6": the slopes are 0.75, then 0.39.
+    * The removal-paper analogy used an uncovered measure "C/W", against the note's own tails.
+    * Iitaka's inequality was read as a splitting.
+    * "Variable heads escape the first wall".
+    * S19's debt L was identified with the chain level k.
+    * S20's pair covariance was read as a statement about clusters.
+    * The mechanism (THM-4581 (1b)) was typed as if it held for integers.
+- **Why it was wrong.**
+  * **Interval assumption.** The full run of all 4000 chains gives an absorbed group of 1916 members, `{1..1910} u {1929-1932, 1935, 1936}`. Otherwise `D >= 1911` forms two interleaved clusters, 1911-2902 and 2895-4000. The certified class therefore reaches `M_99708991741`.
+  * **Band agreement.**
+    * HYP-9242's fraction is per odd K, and every cluster bottom is odd. So the fraction equals 2/(mean cluster size), not 1/(size).
+    * S is measured after the `E - 1` rising steps, so the horizon is 7.64 K, not 8.64 K.
+    * The median contiguous extent is not the cluster size.
+    * The band's top was 1.134, so 1.14 was outside it; and 0.89-1.14 holds only for `K >= 800`.
+    * Once the clusters are identified as the stopping-time level sets, the orphan fraction is 2/(mean size) identically. There was no independent agreement to report.
+  * **S(T).** At the true horizon the median `S/sqrt(T)` rises from 0.08 to 0.27, a local exponent of about 0.97. Only the cluster size behaves like `sqrt(T)`.
+  * **Consequence.** Certificates merge far above 2, so they preserve `sigma_T(x_K)` and the odd count (THM-4605 statement 8). Since `sigma_T(x_E) > (E - 1) log2 3`, no deletion route from a giant E reaches any K with a known orbit. This holds for every `E > 61821`, not just generic ones.
+  * **Prior art.**
+    * Elsenhans (arXiv:2502.16743, 2025) uses the same recursive composition of affine maps on the low bits.
+    * The affine form and parity vectors are due to Terras, Everett and Lagarias; divide and conquer on low bits to Bernstein-Yang.
+    * The chain itself is THM-4581 (6d), and density-one exits are THM-4581 (6d) with THM-4556 (iv).
+  * **Mahler.** Barrier depth depends on E only through `3^(E-1) mod 2^n`, a 2-adic function of E. Depth is unbounded as E approaches 1 2-adically: by THM-4601 (ii) there is no absorption at times `<= 3 + v2(E - 1)`. This is not a real-place problem.
+- **Repair.**
+  * **New committed script** `mersenne_fan_block_20261007.py`:
+    * (J) the full block D <= 4000;
+    * (K) the clusters, the level-2 merge at 4,474,989, and the absorption of all 1916 members at 19,000,765;
+    * (N) the odd-step counts.
+    * THM-4605 statements 6 and 7 are restated, with the 1949-exponent class.
+  * **New PROVED statements.**
+    * The no-meeting lemma (THM-4605 statement 2): without absorption the two orbits share no value in the window, so the negatives are negatives for orbit meetings.
+    * The stopping-time invariant and its corollaries (statement 8). Checks (A2) and (M) test them; the threshold E > 61821 comes from mac-mini's exact table.
+  * **HYP-9243** is restated for the cluster size N(T), with the horizon clusters computed exactly in (H2).
+    * Agreement with HYP-9242 is claimed only in the exponent.
+    * The mechanism is typed as an assumption for integers.
+    * The refutation criteria are fixed.
+  * **The note.**
+    * Every number is now printed by a committed script.
+    * Negatives are stated with their exact last checked time.
+    * Credits are added: Elsenhans, Terras, Everett, Lagarias, Bernstein-Yang, Garner, Elia-Tucker, Kontorovich-Lagarias, OEIS A075485 and A390816, Ren 2018 (recomputed in (M)), Barina, Arratia, Bramson-Griffeath.
+    * The Mahler analogy is withdrawn; the PDF analogies and the two-walls reading are retyped.
+  * **A second, focused audit** ran after these corrections and before commit. It reproduced the escape, the block and level 2 to `2^26` with independently computed coins. It found two more errors, both fixed before commit:
+    * Proposition 4.1 (c) said that cycle absorptions occur after both orbits have reached 1. In fact they occur at value 2, with one orbit one step from 1 (iff `s` differs and `2o - s` agrees), and none occurs for K <= 12800 (now checked in (M)).
+    * The tail exponent 0.69 was matched to THM-4581 (6f) and read as steepening. Canon THM-4593 already treats this statistic (Mersenne lags D <= 61): 0.69 is a coalescence transient, and the exponent is 1/2. THM-4593 is now cited, and HYP-9243 is scoped against it (cluster growth and horizon level sets, not the no-exit tail).
+    * It also asked for:
+      * qualifiers ("merge value >= 3", "whose orbit reaches 1");
+      * the last checked times of the negatives;
+      * labels on the estimates;
+      * a committed naive-iteration comparison in (P) instead of an audit figure;
+      * a regenerated level-2 output after a docstring edit.
+- **Reusable rules.**
+  * A bisection edge is a contiguous extent, not a group boundary. List group members from a complete run.
+  * Before comparing a "predicted" constant with a measured one, check that both count the same objects over the same denominator: per odd K or per K; cluster size or extent; horizon after or including the rising phase.
+  * When a heuristic consequence concerns a quantity the dynamics conserves exactly, look for the conservation law first. Here every certificate conserved the stopping time.
+  * Search canon for the statistic itself, not only for the object. The tail had been studied as "Mersenne lag sets" in THM-4593.
+
 ## MISTAKE-587 (2026-10-07, mac-mini-2026-10-07-twoanchor continuation; found by independent audits C (Collatz) and D (reducible locus) after checkpoint a0a33b38cd was pushed) -- an orphan-law exponent claimed from data that cannot fix it, a selection artifact read as a signal, a classification typed PROVED that rests on an open periodicity question, non-realisable transitions listed, a lemma stated without its scope, and a frieze "reading" that was wrong about where friezes live and what minors see
 
 - **HYP-9242, exponent.** "About 1/2" was not supported.
