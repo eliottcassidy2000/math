@@ -1,0 +1,12 @@
+(P) fast parity vectors
+  ok   divide-and-conquer parity vectors equal naive iteration (random x, n <= 5000; the fan bottom, n = 19992)
+(G) the fan bottom, chains D = 1..256 to W = 2^25 with state collapse
+     coins computed (33554424 steps, odd density 0.50001) [12s]
+  ok   all 256 chains collapse into one by step 2741933 (<= 2^22) and it is absorbed at Terras time 19000765: M_99708993677 ~> M_(99708993677 - D) for every D <= 256; minimum level of the collapsed chain -3867
+(H) independent residue check from affine maps
+  ok   T^n(x) = T^n(y_D) mod 2^(2^20) at n = 19000765 for D = 1, 256 (odd-step count differences [1, 256]); the residues differ at n - 1
+(I) the edge of the absorbed block
+      {1500: ('collapsed', 2741933), 1910: ('collapsed', 2741933), 1911: ('separate through the absorption time', 19000765)}
+  ok   D = 1500 and 1910 collapse into the absorbed chain before 19,000,765; D = 1911 stays separate: M_99708993677 ~> M_99708991767 (D = 1910) is certified, M_99708991766 is not reached by this event
+
+ALL CHECKS PASSED  (123s)

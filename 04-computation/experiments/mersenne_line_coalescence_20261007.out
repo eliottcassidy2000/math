@@ -1,0 +1,50 @@
+(L) local hardness below the t = 23 source
+  ok   581 of 20000 exponents (0.0290) have no exit with D <= 64 within 4096, all odd; first offsets [0, 28, 46, 66, 86, 140, 162, 230]
+(Q) deep exits for the progression members needing W > 16384
+     t = 1534487: absorbed at 25003 (W = 2^20), absorbed group max D 66, size 38
+     t = 3525143: no exit with D <= 256 within 2^22
+     t = 5018135: absorbed at 22826 (W = 2^20), absorbed group max D 108, size 96
+     t = 6842903: absorbed at 255733 (W = 2^20), absorbed group max D 104, size 94
+     t = 7285271: absorbed at 524259 (W = 2^20), absorbed group max D 256, size 256
+     t = 8308247: absorbed at 467619 (W = 2^20), absorbed group max D 256, size 256
+     t = 10105367: absorbed at 33297 (W = 2^20), absorbed group max D 22, size 16
+     t = 10271255: absorbed at 38910 (W = 2^20), absorbed group max D 158, size 144
+     t = 12870167: absorbed at 39314 (W = 2^20), absorbed group max D 148, size 144
+     t = 12980759: absorbed at 19022 (W = 2^20), absorbed group max D 76, size 74
+     t = 14086679: absorbed at 32470 (W = 2^20), absorbed group max D 104, size 32
+     t = 14473751: absorbed at 23608 (W = 2^20), absorbed group max D 38, size 36
+     t = 20113943: absorbed at 20779 (W = 2^20), absorbed group max D 182, size 174
+     t = 23791127: absorbed at 38601 (W = 2^20), absorbed group max D 100, size 98
+     t = 25339415: absorbed at 20617 (W = 2^20), absorbed group max D 134, size 126
+     t = 26085911: absorbed at 22705 (W = 2^20), absorbed group max D 94, size 72
+     t = 26251799: absorbed at 194371 (W = 2^20), absorbed group max D 256, size 256
+     t = 28906007: absorbed at 91420 (W = 2^20), absorbed group max D 124, size 40
+     t = 30454295: absorbed at 73296 (W = 2^20), absorbed group max D 212, size 202
+     t = 35099159: absorbed at 2520494 (W = 2^22), absorbed group max D 120, size 96
+     t = 39578135: absorbed at 100284 (W = 2^20), absorbed group max D 256, size 256
+     t = 40131095: absorbed at 41877 (W = 2^20), absorbed group max D 134, size 102
+     t = 41734679: absorbed at 21345 (W = 2^20), absorbed group max D 144, size 144
+     t = 42149399: absorbed at 1539236 (W = 2^22), absorbed group max D 256, size 256
+     t = 44112407: absorbed at 98862 (W = 2^20), absorbed group max D 256, size 232
+     t = 44803607: absorbed at 16615 (W = 2^20), absorbed group max D 50, size 42
+     t = 46324247: absorbed at 333020 (W = 2^20), absorbed group max D 212, size 146
+     t = 48646679: absorbed at 28364 (W = 2^20), absorbed group max D 144, size 78
+     t = 49780247: absorbed at 494678 (W = 2^20), absorbed group max D 228, size 224
+     t = 51273239: absorbed at 108488 (W = 2^20), absorbed group max D 148, size 148
+  ok   29 of the 30 members needing W > 16384 are certified within 2^22; the remaining one is t = [3525143]
+(S) coalescence profiles below six random odd exponents
+     E = 47791912765: (T, S(T), live groups) = [(16, 0, 918), (32, 0, 851), (64, 0, 725), (128, 0, 556), (256, 0, 386), (512, 0, 253), (1024, 0, 152), (2048, 0, 82), (4096, 0, 57), (8192, 0, 36), (16384, 0, 21), (32768, 0, 13), (65536, 0, 9), (131072, 0, 7), (262144, 0, 5), (524288, 0, 4), (1048576, 0, 3)]
+     E = 37169560031: (T, S(T), live groups) = [(16, 2, 917), (32, 2, 824), (64, 2, 716), (128, 2, 559), (256, 2, 394), (512, 2, 257), (1024, 2, 165), (2048, 2, 101), (4096, 36, 62), (8192, 36, 42), (16384, 78, 25), (32768, 78, 15), (65536, 78, 11), (131072, 78, 8), (262144, 78, 7), (524288, 78, 4), (1048576, 78, 4)]
+     E = 36802715565: (T, S(T), live groups) = [(16, 0, 921), (32, 0, 829), (64, 0, 700), (128, 0, 541), (256, 0, 366), (512, 2, 247), (1024, 2, 150), (2048, 2, 96), (4096, 2, 61), (8192, 2, 38), (16384, 2, 30), (32768, 2, 19), (65536, 2, 13), (131072, 312, 7), (262144, 312, 5), (524288, 312, 4), (1048576, 312, 4)]
+     E = 49148895517: (T, S(T), live groups) = [(16, 0, 922), (32, 0, 835), (64, 4, 731), (128, 4, 557), (256, 4, 417), (512, 6, 261), (1024, 6, 153), (2048, 6, 100), (4096, 8, 64), (8192, 8, 40), (16384, 8, 26), (32768, 50, 15), (65536, 50, 13), (131072, 50, 6), (262144, 304, 3), (524288, 304, 2), (1048576, 304, 2)]
+     E = 42690426595: (T, S(T), live groups) = [(16, 0, 918), (32, 2, 843), (64, 2, 711), (128, 2, 567), (256, 2, 406), (512, 2, 259), (1024, 2, 158), (2048, 2, 95), (4096, 10, 56), (8192, 10, 37), (16384, 10, 23), (32768, 10, 17), (65536, 10, 10), (131072, 212, 6), (262144, 212, 5), (524288, 212, 3), (1048576, 212, 3)]
+     E = 83639239217: (T, S(T), live groups) = [(16, 0, 921), (32, 0, 845), (64, 0, 715), (128, 0, 567), (256, 2, 398), (512, 6, 259), (1024, 6, 161), (2048, 6, 82), (4096, 68, 51), (8192, 68, 31), (16384, 68, 22), (32768, 68, 16), (65536, 68, 11), (131072, 136, 9), (262144, 262, 4), (524288, 608, 3), (1048576, 1796, 1)]
+     median S(T): {4096: 10, 8192: 10, 16384: 10, 32768: 50, 65536: 50, 131072: 136, 262144: 262, 524288: 304, 1048576: 304}
+  ok   median absorbed extent grows between T = 2^12 and 2^20 at a sub-linear rate (NUMERICAL)
+(Q2) the remaining member at 2^26
+  ok   t = 3525143: no exit with D <= 256 within 2^26
+(V) level 2 below the fan, W = 2^27
+      [(1911, None, -12297), (1912, None, -12297), (2500, None, -12297), (4000, None, -12297)]
+  ok   the chains for D = 1911, 1912, 2500, 4000 of the fan bottom are not absorbed within 2^27 steps
+
+ALL CHECKS PASSED  (638s)
