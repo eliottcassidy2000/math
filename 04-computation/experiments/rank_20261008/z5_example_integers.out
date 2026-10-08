@@ -1,0 +1,6 @@
+map: ['(1x+0)/5', '(1x+4)/5', '(6x+3)/5', '(11x+2)/5', '(16x+1)/5']  Lambda = -0.217
+integers (2000 base-5 digits): fraction of n merging with n+1 within 100 steps: 0.128
+integers (2000 base-5 digits): fraction of n merging with n+1 within 1000 steps: 0.130
+integers (2000 base-5 digits): fraction of n merging with n+1 within 4000 steps: 0.135
+cycles reached from n <= 20000 (min element: count): {1: 7819, 8: 111, 9: 10004, 33: 2066} ... 4 cycles
+n <= 20000: fraction with T^t(n) = T^t(n+1) for some t <= 3000: 0.286

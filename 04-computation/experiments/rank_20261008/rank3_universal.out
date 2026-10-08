@@ -1,0 +1,14 @@
+AP: Q = I balanced? False
+   integer balanced forms found: 25; smallest-trace examples: [[[6, -2, 0], [-2, 6, -1], [0, -1, 5]], [[6, -1, 0], [-1, 6, -2], [0, -2, 6]], [[6, -1, 0], [-1, 6, -2], [0, -2, 7]]]
+AP without 2I (d = 5): Q = I balanced? False
+   integer balanced forms found: 134; smallest-trace examples: [[[4, -2, 0], [-2, 4, -1], [0, -1, 3]], [[3, -2, 0], [-2, 6, -2], [0, -2, 3]], [[4, -2, 1], [-2, 4, -2], [1, -2, 4]]]
+non-AP (d >= 11): Q = I balanced? False
+   integer balanced forms found: 122; smallest-trace examples: [[[4, -1, -1], [-1, 5, 0], [-1, 0, 5]], [[4, -1, -1], [-1, 5, 0], [-1, 0, 6]], [[5, -1, -1], [-1, 5, 0], [-1, 0, 5]]]
+non-AP (d = 7): Q = I balanced? False
+   integer balanced forms found: 251; smallest-trace examples: [[[3, -1, -1], [-1, 4, 0], [-1, 0, 4]], [[4, 0, -1], [0, 4, -1], [-1, -1, 3]], [[4, 0, -1], [0, 4, -1], [-1, -1, 3]]]
+rank 4: max eigenvalue of 2I - A(paths) <= 3.6180 < tr/2 = 4  -> standard form balanced: True
+rank 5: max eigenvalue of 2I - A(paths) <= 3.7321 < tr/2 = 5  -> standard form balanced: True
+rank 6: max eigenvalue of 2I - A(paths) <= 3.8019 < tr/2 = 6  -> standard form balanced: True
+rank 7: max eigenvalue of 2I - A(paths) <= 3.8478 < tr/2 = 7  -> standard form balanced: True
+rank 8: max eigenvalue of 2I - A(paths) <= 3.8794 < tr/2 = 8  -> standard form balanced: True
+rank >= 4 standard-form claim: True

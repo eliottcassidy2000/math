@@ -1,0 +1,2 @@
+states checked 35007: off-departure states with |f| > 100 R violating 'two coins = two multipliers, bounded error': 0
+departure states: 1575, all with both coins giving min(m0,m1)/2 up to bounded error: True (1575/1575)

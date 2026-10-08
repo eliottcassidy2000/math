@@ -1,0 +1,6 @@
+d = 5: 321 contracting translation-only maps (up to dihedral symmetry)
+   ('balanced', 3): 49 maps; examples [(1, 1, 6, 11, 16), (1, 1, 6, 11, 21), (1, 1, 6, 11, 31), (1, 1, 6, 11, 41)]; margins [0.1894, 0.216, 0.1408, 0.1279]
+   ('rank<3', 0): 1
+   ('rank<3', 1): 44
+   ('rank<3', 2): 222
+   ('unbalanced?', 3): 5 maps; examples [(1, 1, 6, 11, 26), (1, 6, 1, 11, 26), (1, 6, 11, 1, 21), (1, 6, 21, 1, 16)]; margins [-0.0006, -0.0006, -0.0005, -0.0005]
