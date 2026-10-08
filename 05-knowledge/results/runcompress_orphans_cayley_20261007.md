@@ -14,7 +14,7 @@ COLLATZ IS STILL OPEN.
 |---|---|---|
 | [THM-4603](../../01-canon/theorems/THM-4603-run-compressed-pair-chains-drift-lemma-ladder-completeness-and-long-run-transitions.md) (1) | **Drift lemma.** If `u − c = 3^k(v − c′)` with c, c′ cycle points of words w, w′, the orbits run their patterns in lockstep and the debt drifts by `|w|/Σw − |w′|/Σw′` per Terras step. THM-4600 is the zero-drift case. | PROVED; 720 exact tests |
 | THM-4603 (2) | **Ladder completeness.** Every equal-time merge, from any state, is a ladder collision: the last distinct odd values are U-preimages of the first common odd value, `z′ = 4^i z + (4^i−1)/3`. So the ladder compiler of THM-4601 (iv) (all i, child and source ladders) is complete. | PROVED; all 1651 observed merges |
-| THM-4603 (3) | **Long-run transitions.** A long run of any periodic pattern sends any state to absorption, re-anchoring, an out-of-phase state, or a linear debt drift. From the universal state: a child ones-run re-anchors at −1 with debt −5; a source ones-run drifts at +1/2. | PROVED classification; FINITE-EXACT table (5 states × 55 cycles); actual-integer checks |
+| THM-4603 (3) | **Long-run transitions.** Given an authenticated eventually periodic rational limit pair, its transition is absorption, re-anchoring, a noncoincident zero-drift pair, or nonzero drift. Zero drift allows distinct equal-density cycles. From the universal state: a child ones-run re-anchors at −1 with debt −5; a source ones-run drifts at +1/2. | CONDITIONAL general classification; FINITE-EXACT table (5 states × 55 cycles); actual-integer checks |
 | [THM-4604](../../01-canon/theorems/THM-4604-collatz-words-are-the-reducible-locus-carries-are-the-extension-cocycle-and-traces-only-hear-the-tuning.md) | **Collatz is the reducible locus.** Carries form a twisted 1-cocycle, trivialised on ⟨w⟩ by the cycle point c_w. Traces depend only on (\|w\|, Σw) and equal 2cosh(δ/2), where δ is the tuning error. Every pair of words lies on the Cayley cubic x²+y²+z²−xyz = 4 (tr[A,B] = 2). Markov / Conway–Coxeter structures live at tr[A,B] = −2 instead. | PROVED (elementary, standard); the frieze reading is DICTIONARY |
 | [HYP-9242](../hypotheses/HYP-9242-orphan-law-deletion-orphans-decay-like-inverse-square-root-of-log-n.md) | **Orphan law.** The fraction of residual sources with no deletion partner decays like `(log n)^(−1/2)`. On the Mersenne line it is about 1/√K (orbits to K = 12800). Orphans are 10× enriched among long orbits, and about 40% are rescued by 3-adic predecessors. | NUMERICAL |
 
@@ -39,6 +39,15 @@ COLLATZ IS STILL OPEN.
 So source ladders are almost as common as child ladders.
 
 ## 2. Drift and long-run transitions (THM-4603 (1), (3))
+
+**Correction, 2026-10-07.** The general transition classification requires
+an eventual-periodicity witness for the rational limit pair. Bounded
+denominators alone do not imply such a witness, and a bounded search can
+return UNRESOLVED. Also SHIFT means a noncoincident zero-drift pair, not
+necessarily two phases on one cycle. The universal state's child run on
+`(2,4)` supplies distinct cycles of periods12 and6, both density1/3.
+The finite table's values survive. See
+[the focused correction and exact controls](collatz_run_classification_scope_20261007e.md).
 
 **The drift lemma.**
 * Debts change at the rate of the difference of the odd densities of the two cycles the orbits are near.

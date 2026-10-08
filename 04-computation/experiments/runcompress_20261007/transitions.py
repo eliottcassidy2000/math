@@ -3,11 +3,14 @@
 
 State: u = A(v) = 3^k v + e (k integer, e rational with odd denominator); Terras map T on Q ∩ Z_(2); debt k changes by
 par(u) - par(v) per step.  A long run of the CHILD near the periodic orbit of c' forces the source near A(c'); the exact
-limit pair (A(c'), c') is iterated until it becomes jointly periodic.  Outcomes:
+limit pair (A(c'), c') is iterated up to the explicit cap, retaining an
+observed joint period when one is found. Bounded denominators do not prove
+eventual repetition. Outcomes:
   ABSORB  : u_s == v_s with k_s == 0 inside the run (a certificate uniform in the run length)
   ANCHOR  : the source limit enters the same cycle in phase: state becomes anchored (rho = 0), fixed debt
-  SHIFT   : same cycle, out of phase (rho = 0, bounded oscillation, not anchored)
-  DRIFT   : the source limit lands on a different cycle: debt drifts at rate rho = dens(source cycle) - dens(child cycle)
+  SHIFT   : noncoincident zero-drift pair, possibly distinct equal-density cycles
+  DRIFT   : different odd densities: rho = dens(source cycle) - dens(child cycle)
+  UNRESOLVED: no absorption or periodic witness within the explicit cap
 Symmetrically for a long run of the SOURCE near c (child limit A^{-1}(c)).
 """
 from fractions import Fraction as Fr

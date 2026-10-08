@@ -192,6 +192,37 @@ cover the residual source addresses with native paid rules, and ground
 the resulting dependency graph without circular certificates. The present
 work settles neither obligation universally.
 
+## Incoming carry and run-compression ideas
+
+Incoming [THM-4604, the reducible locus and carry cocycle](../../01-canon/theorems/THM-4604-collatz-words-are-the-reducible-locus-carries-are-the-extension-cocycle-and-traces-only-hear-the-tuning.md)
+has a direct witness inside this bank. The words `(1,2)` and `(2,1)` have
+the same diagonal `(P,Q)=(9,8)`, hence the same trace and slope, but carries
+5 and7. Their inverse guards are n=4 and2 modulo9 respectively. The first
+admits Mersenne exponents E=5 mod6; the second admits none, since it would
+require `2^E=3 mod9`. Losing the carry can therefore erase even the existence
+of a source phase. This elementary trace/carry connection is sufficient;
+no broader claim about all cluster or frieze coordinates is needed.
+
+Incoming [THM-4603, run-compressed pair chains](../../01-canon/theorems/THM-4603-run-compressed-pair-chains-drift-lemma-ladder-completeness-and-long-run-transitions.md)
+suggests periodic continuations as the next search scale. A focused audit
+found that its original general classification assumed rational limit
+orbits must repeat because their denominators stay bounded. That implication
+does not hold without a numerator bound or a supplied finite lasso. The
+classification is repaired to retain this premise, and its SHIFT class now
+also allows distinct cycles with equal odd density. Exact finite transitions
+survive; our coverage proofs use none of the missing universal premise.
+The [scope packet](collatz_run_classification_scope_20261007e.md) records
+both the correction and the concrete trace/carry example.
+Its independent bounded reader authenticates all550 declared finite
+transitions. Among280 zero-drift pairs,224 occupy distinct cycles. Equal
+drift therefore cannot replace cycle identity in a reusable run certificate.
+
+The next constructive test on (6) is therefore a **certified periodic
+continuation**: supply its actual rational lasso, retain its phase and odd
+counts, transport the exact carry through the run, then test the resulting
+signed ladder at the immutable parameter. A negative average debt drift
+without those marks would still not be a paid child certificate.
+
 ## Exact evidence and connection contract
 
 All packages have ordinary/optimized agreement and independent peer
@@ -206,6 +237,7 @@ outputs, raw words and exact rational densities are saved beside the notes.
 | Complete bounded inverse bank |15689|`8e326732f6a321e2f197376e3d02497d623fb634596646be0fa698a764269115`|
 | Labelled finite-cover defects |21067|`396366856be8b61b05d17040c85f5f4a298d40be88340da3508cf21916830e42`|
 | Mixed integration and residual cylinder |1291|`38a5df779f4e2b43b836040d1a381495deb5e326068d919d0dfbb404fcbb920a`|
+| Incoming lasso and carry scope |882261|`e243c8235d3d6ace77b702996b5483ca843f51f3733f7a01124c9537a63ae48e`|
 
 Reproduce the integration with
 `python -B 04-computation/experiments/collatz_parameter_complement_synthesis_20261007e.py`,

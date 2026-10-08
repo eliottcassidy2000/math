@@ -1,0 +1,9 @@
+Universal periodicity is NOT deduced from bounded rational denominators.
+Bounded n27/child-1 reader: PENDING after10 transitions; no claim about eventual fate.
+Simple disjoint zero-drift cycles:19/37 versus23/37; period6, equal odd count3.
+Universal childrun(2,4): entry24,debt8,pair(2/55,7/55),jointperiod12,drift0; distinct cycles12/6.
+FINITE-EXACT lasso census:55cycles,5states,2sides; outcomes [('absorbed', 96), ('anchored', 24), ('nonzero-drift', 150), ('zero-drift-pair', 280)]
+Zero-drift outcomes on distinct cycles: 224 largest verified transition count: 753
+Trace12/21:P9,Q8,B5/7; forward native11/9mod16; only12 inverse Mersenne phase E5mod6.
+No universal lasso termination, no broad ladder-completeness audit, no trace-only guard inference.
+Exact checks: 882261

@@ -1,8 +1,8 @@
 ---
 id: THM-4603
-title: "Run-compressed pair chains: (1) drift lemma - if u - c = 3^k (v - c') with c, c' cycle points of U-words w, w' and v2(v - c') > j*lcm(Sum w, Sum w'), both orbits run their periodic patterns in lockstep for j common periods and the debt drifts by |w|/Sum w - |w'|/Sum w' per Terras step (THM-4600 is the case w = w'); (2) ladder completeness - every equal-time merge of two pair-chain orbits, from any state, is a ladder collision: the last distinct odd values are U-preimages of the first common odd value, z' = 4^i z + (4^i - 1)/3 for some i >= 1 (child or source ladder), so the ladder compiler of THM-4601 (iv), with all i and both directions, is complete; (3) a long run of any periodic pattern in either orbit sends any state, after a bounded transient, to absorption, to a re-anchored state, to an out-of-phase state, or to a linear debt drift; from the universal state (3, 1-27) a child ones-run re-anchors at -1 with debt -5 and a source ones-run drifts at +1/2 (the mechanism of the heavy tail)"
+title: "Run-compressed pair chains: drift lemma, ladder completeness, and long-run transitions conditional on an authenticated periodic limit pair"
 status: >
-  PROVED: (1) and (2) (elementary); (3) the classification (the finite-L reduction is that of THM-4601 (ii)). FINITE-EXACT: (1) on 720 exact
+  PROVED: (1) and (2) (elementary). CONDITIONAL: (3) the classification requires a supplied or independently proved eventual-periodicity witness for the rational limit pair; bounded denominators alone do not provide one. OPEN: unconditional eventual periodicity for every such limit pair. FINITE-EXACT: (1) on 720 exact
   integer tests over 36 word pairs; (2) on all 1651 merges observed from the universal state in 3000 residual sources (child ladders i = 1, 2, 3:
   870, 50, 18; source ladders i = 1, 2, 3, 4: 672, 33, 7, 1); (3) the exact limit-transition table for 5 states x 55 cycles (U-words with sum <= 8,
   length <= 4, and the halving point 0), with the two universal-state transitions re-checked on 40 + 40 actual sources.
@@ -17,6 +17,14 @@ related:
 ---
 
 # THM-4603 — run-compressed pair chains
+
+**Scope correction, 2026-10-07:** part (3)'s original bounded-denominator
+argument did not prove eventual repetition. Its general classification is
+conditional on an authenticated finite lasso. Also, a zero-drift periodic
+pair can occupy distinct cycles of equal odd density; it need not be the
+same cycle out of phase. The finite transition values remain unchanged.
+See [the focused scope controls](../../05-knowledge/results/collatz_run_classification_scope_20261007e.md).
+Parts (1) and (2) are not modified by this correction.
 
 ## Setting
 
@@ -48,14 +56,20 @@ related:
 * For a state anchored at a point c* the head identity reads `F_(h_v)(c*) = 4^i F_(h_u)(c*) + (4^i−1)/3`, or its mirror for source ladders.
 * So the ladder compiler of THM-4601 (iv) (anchor +1, debt 3), with every index i and both directions, is complete: its pairs are exactly the absorbing post-run patterns. The same holds for the compiler at −1 of `collatz_reset2_rules_20261007.md` once every i and the source ladders are included.
 
-**(3) Long-run transitions.**
+**(3) Long-run transitions, conditional on a periodic limit witness.**
 * Let a state A be given, and let one orbit run near the periodic orbit of a cycle point c′ for L Terras steps (2-adically within `2^(−L)`).
 * The other orbit is then near the rational point `A(c′)` (child run) or `A^(−1)(c′)` (source run). For s < L the chain follows the exact limit pair.
-* After a transient τ that does not depend on L, exactly one of the following holds:
+* Additionally suppose the rational limit pair has a supplied or independently
+  proved finite eventual-periodicity witness. Then, after its transient τ
+  independent of L, the marked limit transition has one of the following forms:
   * **absorption at a fixed time**: a periodic head;
   * **re-anchoring**: both limits on the same cycle in phase, so the state at the run end is a fixed anchored state, depending only on L mod the period;
-  * **out-of-phase**: same cycle, with bounded periodic debt;
-  * **drift**: the limits land on different cycles. The debt at the run end is `k_τ + ρ(L − τ) + O(1)`, with ρ the difference of odd densities.
+  * **noncoincident zero drift (SHIFT)**: bounded periodic debt, either on the
+    same cycle out of phase or on distinct cycles with equal odd density;
+  * **nonzero drift**: the limit cycles have different odd densities. The debt
+    at the run end is `k_τ + ρ(L − τ) + O(1)`, with ρ their density difference.
+* Without such a witness, the outcome is **UNRESOLVED**. A finite search bound
+  or a fixed denominator does not supply the missing witness.
 * From the universal residual state (3, 1−27) of THM-4601, among the transitions for the 55 cycles (exact table in transitions.out):
   * **child ones-run**: re-anchors at −1 with debt −5 after 12 steps, via the limit pair (−53, −1);
   * **source ones-run**: drift +1/2 after an 8-step transient (debt 6 at step 8), via the child limit 25/27 on the trivial cycle;
@@ -78,7 +92,22 @@ related:
 * The odd U-preimages of Z are `(2^a Z − 1)/3` for a in an arithmetic progression with difference 2. Hence `z_(j+1) = 4z_j + 1`, and `z′ = 4^i z + (4^i−1)/3`.
 * The equal-time and debt conditions give the head relations. The anchored form follows from the slope identities of THM-4601 (iv).
 
-**(3).** The limit pair is a pair of rational orbits with bounded denominators. It is iterated exactly until the pair (u, v) repeats; the drift over the period is then read off. ∎
+**(3), repaired.** Read the supplied eventual-periodicity witness and verify
+every exact rational transition. The difference of odd-step counts over its
+period gives the debt increment, and division by the period gives ρ.
+Classify coincidence, phase and density separately. The finite-L shadowing
+then transfers this authenticated limit calculation to the guarded long run.
+Bounded denominators do not imply bounded numerators or repetition. In fact
+`A(v)=v+n+1` and the fixed child limit `v=-1` give the limit pair `(n,-1)`
+for any positive odd n; an unconditional eventual-periodicity conclusion
+would settle the open no-divergence question for arbitrary integer orbits.
+The original universal inference is therefore not supplied by this proof. ∎
+
+For the zero-drift boundary, the actual universal state `(3,-26)` with
+child cycle point `7/55` reaches the limit pair `(2/55,7/55)` at time24,
+with debt8. The two cycles have periods12 and6, both odd density1/3,
+and are disjoint. This is a SHIFT entry in the existing exact table, not
+an example of two phases of one cycle.
 
 ## Reading
 

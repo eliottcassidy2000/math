@@ -30,8 +30,7 @@
 A hypothesis is unresolved unless a proved leaf is named explicitly. Search its slug and [MISTAKES.md](../../01-canon/MISTAKES.md) before inheritance. [September6 audited advances](../results/open_frontier_sep06_board.md): sharp global root-stability constant SOLVED; nonunit decoder, inert lengths and anchored Laurent advances retain their stated scopes. LRC14 and actual two-rung separation remain OPEN.
 
 ## Optional alternate formalization routes
-- **HYP-8946:** `X^M-tR` irreducibility over `F(t)` is kernel-checked and used by THM-2101; degree-dropping Hensel factorization is now optional.
-- **HYP-8960:** reciprocal monicization constructs the simple-root lifts; simultaneous branch products and the Wiener--Hopf identity remain open.
+- **HYP-8946:** `X^M-tR` irreducibility over `F(t)` is kernel-checked and used by THM-2101; degree-dropping Hensel factorization is now optional. **HYP-8960:** reciprocal monicization constructs the simple-root lifts; simultaneous branch products and the Wiener--Hopf identity remain open.
 - **THM-2101:** strict DvdK has three product-free paper proofs; wrappers remain Lean assembly, while `GMC2Main.gmc2` is unconditional.
 
 ## Results that change the live graph
