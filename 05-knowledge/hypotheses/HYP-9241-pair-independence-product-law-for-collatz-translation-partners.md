@@ -8,7 +8,8 @@ status: >
   Local-slope ratios 1 : 2.91 : 5.6-5.8. For three Brownian vicious walkers the Karlin-McGregor ratio q_2/(q_01 q_12 q_02) tends to pi/4;
   the data reject that constant. No unequal-time merges occur (impossible at these sizes: |m ln 3 - n ln 2| >= 4.4e-5 for |m| <= 2048).
   The asymptotic regime is not reached (single-pair local slope 0.30-0.35 at T ~ 2000; THM-4593 gives 1/2 at T ~ 1e6).
-  Reframed after audit B (MISTAKE-586): first filed as a "Karlin-McGregor / total-positivity law".
+  Reframed after audit B (MISTAKE-586): first filed as a "Karlin-McGregor / total-positivity law". Direct product test at R = 2, 3
+  (10000 samples): R = 2 ratio 0.95 -> 1.00 (T = 32..1024); R = 3 ratio 0.97-1.13 (T <= 256), 1.4 +- 0.25 at T >= 512 (few events).
 source: mac-mini-2026-10-07-twoanchor, 05-knowledge/results/twoanchor_reset2_friezes_20261007.md (section 8.5)
 related:
   - 01-canon/theorems/THM-4593-partner-coalescence-pins-the-diffusive-exponent-and-all-lags-merge-exponentially.md (its q_R is "y merges with none"; here "no two merge")
@@ -43,6 +44,16 @@ scripts:
 * See the status field.
 * `q_2/q_1^3` is stable to within about 7% over T = 16..2048 in three independent runs.
 * The R = 3 ratio rises toward the lag-product value of about 2.
+* **Direct product test** (2026-10-07 continuation, `pair_product_R3.py`, 10,000 samples of 2048-bit y; a ratio of 1 means independent pairs):
+
+  | T | 32 | 64 | 128 | 256 | 512 | 1024 |
+  |---|---|---|---|---|---|---|
+  | q_2 / (q_01 q_12 q_02) | 0.953 | 0.964 | 0.985 | 0.987 | 1.003 | 1.004 |
+  | q_3 / (product of all six pair survivals) | 0.977 | 0.973 | 1.128 | 1.107 | 1.45 | 1.43 |
+  | R = 3 events | 593 | 335 | 192 | 83 | 37 | 10 |
+
+  * For R = 2 the product law holds to within 5%, and the ratio tends to 1.
+  * For R = 3 it holds to within about 13% for T ≤ 256. The values at T ≥ 512 rest on few events, so whether a mild positive correlation appears at large T is OPEN.
 
 ## Open
 

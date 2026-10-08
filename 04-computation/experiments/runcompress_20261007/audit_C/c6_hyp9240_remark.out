@@ -1,0 +1,6 @@
+D = 1..3000: denominator cleared by exactly D odd steps, N_D >= 0: all
+archimedean bound 1 <= N_D + 1 <= (3/2)^D: failures 0
+max over 10 <= D <= 3000 of log(N_D+1)/log((3/2)^D) = 0.4549 (at D = 13)
+clearing word = parity vector of -1 + 2*(3^-D mod 2^(s0+1)), and N_D = (2 - 3^D + B_word)/2^s0: all D
+max N_D = 880 at D = 253;  s_0/D in [1.000, 2.882] overall, [1.793, 2.224] for D >= 100
+python3 c6_hyp9240_remark.py 3000  8.79s user 0.02s system 99% cpu 8.856 total

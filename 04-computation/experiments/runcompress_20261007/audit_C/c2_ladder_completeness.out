@@ -1,0 +1,21 @@
+per state: (fully verified ladder merges, edge merges with an orbit lacking an odd value before the merge, trials)
+  universal (3,-26)                (248, 0, 500)
+  re-anchored (-5, 3^-5 - 1)       (218, 0, 500)
+  (4,10)                           (214, 0, 500)
+  (6,-728)                         (182, 0, 500)
+  D=1 chain (1,2)                  (356, 31, 500)
+  D=2 chain (2,8)                  (274, 0, 500)
+  (-2, 1/9 - 1)                    (280, 0, 500)
+  (J,1) J=5                        (236, 0, 500)
+  reset (1,1)                      (27, 452, 500)
+  translation (0,1)                (331, 0, 500)
+  random admissible (k in [-6,6])  None
+stats: {'anchored identity at c* checked': 2569, 'merges fully verified': 2948, 'merge at an odd value (final letter c = 1)': 1502, 'coincidence with nonzero debt at a value <= 2 (trivial cycle)': 1517, 'merge at an even value': 1446, 'edge: an orbit has no odd value before the merge': 483}
+ladder kinds (kind, i): {('child', 1): 1253, ('child', 2): 61, ('child', 3): 21, ('source', 1): 1545, ('source', 2): 52, ('source', 3): 16}
+edge example (k0,e0) = (-1,-1/3), v = 16, u = 5: merge at s = 1 debt 0 value 8 ; v has no odd value before the merge (z_v undefined)
+inadmissible starts with an ODD letter difference at the merge (not a 4z+1 ladder): 3
+   state (-2, -320/81), v = 305219629581: merge at s = 7, letters differ by b = 3, z_u = 42921510409/3, z_v = 114457361093, z_v = 2^b z_u + (2^b-1)/3: True
+   state (3, -641/3), v = 408163344177: merge at s = 11, letters differ by b = 3, z_u = 32286358279/3, z_v = 86096955413, z_v = 2^b z_u + (2^b-1)/3: True
+   state (3, 265/9), v = 1054735043049: merge at s = 7, letters differ by b = 1, z_u = 4004697116581/3, z_v = 2669798077721, z_v = 2^b z_u + (2^b-1)/3: True
+ALL ASSERTIONS PASSED
+python3 c2_ladder_completeness.py  10.35s user 0.02s system 99% cpu 10.416 total

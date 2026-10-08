@@ -1,0 +1,7 @@
+drift lemma exact tests: {'A': 1184, 'B': 464, 'C': 800, 'D': 300, 'E': 2}
+A: random word pairs, k in [-9,9], N = v2(v-c') > jLam (incl. jLam+1): U-words, relation, debt formula, common exit time N
+B: N = jLam exactly: relation and drift still hold after jLam Terras steps, last U-letter not exact
+C: integral cycle points {-1,1,-5,-17}, actual integers, k in [-7,7]
+D: Terras form with the halving point 0 (density 0), incl. the (J,1) collapse drift +1/2
+E: a different odd point of the cycle reads a rotation of w
+ALL CHECKS PASSED

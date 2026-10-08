@@ -1,0 +1,2 @@
+session data K=9: counts [167, 125, 102, 65, 47, 26]/300; alpha_hat = 0.530, 95% interval [0.460, 0.600], log-lik drop at 1/2 = 0.33
+session data K=17: counts [128, 98, 61, 51, 26, 21]/300; alpha_hat = 0.635, 95% interval [0.535, 0.735], log-lik drop at 1/2 = 3.44

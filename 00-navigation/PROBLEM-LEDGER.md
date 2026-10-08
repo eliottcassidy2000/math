@@ -253,7 +253,7 @@ all heights (THM-1289, published), δ ineffective.
   makes the residual first-reset-2 rule uniform in both run lengths (THM-4600/4601): after any two-run the
   K -> K-3 debt is the fixed state (3, 1-27); no 2-adic deletion rule beats the two-run length (+1 barrier, D <= 8000).
   [The continuation](../05-knowledge/results/runcompress_orphans_cayley_20261007.md) proves every merge is a 4z+1 ladder (THM-4603)
-  and measures the integer obstruction: deletion orphans decay like (log n)^-1/2 (HYP-9242), enriched among long orbits.
+  and measures the integer obstruction: deletion orphans decay like a negative power of log n (HYP-9242; Mersenne exponent ~0.6).
   [The 2026-09-17 audit](../05-knowledge/results/arithmetic_braids_20260917_collatz.md)
   gives the full triadic inverse-fibre braid, exact exponent-word cylinders,
   and a periodic-weight obstruction. [The continuation](../05-knowledge/results/arithmetic_braids2_20260917_synthesis.md)

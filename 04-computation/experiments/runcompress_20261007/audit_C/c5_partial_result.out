@@ -1,0 +1,20 @@
+(a) K=2: 8192 t; driving bits = fixed prefix (1, 0, 0) + all 8192 patterns once; conditionally uniform after the two-run and post-run prefix for every (J, r) with room: True
+(a) K=3: 8192 t; driving bits = fixed prefix (1, 0, 0) + all 8192 patterns once; conditionally uniform after the two-run and post-run prefix for every (J, r) with room: True
+(a) K=5: 8192 t; driving bits = fixed prefix (1, 0, 0) + all 8192 patterns once; conditionally uniform after the two-run and post-run prefix for every (J, r) with room: True
+K=2 L=  100: P(D=1 chain not absorbed by L-K-2) = 0.710 (x sqrt(L) = 7.10); P(orphan) = 0.490; J >= 3 share 0.050 (4^-2 = 0.0625)
+K=2 L=  200: P(D=1 chain not absorbed by L-K-2) = 0.628 (x sqrt(L) = 8.89); P(orphan) = 0.437; J >= 3 share 0.057 (4^-2 = 0.0625)
+K=2 L=  400: P(D=1 chain not absorbed by L-K-2) = 0.550 (x sqrt(L) = 11.00); P(orphan) = 0.343; J >= 3 share 0.057 (4^-2 = 0.0625)
+K=2 L=  800: P(D=1 chain not absorbed by L-K-2) = 0.477 (x sqrt(L) = 13.48); P(orphan) = 0.237; J >= 3 share 0.060 (4^-2 = 0.0625)
+K=2 L= 1600: P(D=1 chain not absorbed by L-K-2) = 0.357 (x sqrt(L) = 14.27); P(orphan) = 0.160; J >= 3 share 0.047 (4^-2 = 0.0625)
+K=5 L=  100: P(D=1 chain not absorbed by L-K-2) = 0.725 (x sqrt(L) = 7.25); P(orphan) = 0.410; J >= 3 share 0.057 (4^-2 = 0.0625)
+K=5 L=  200: P(D=1 chain not absorbed by L-K-2) = 0.615 (x sqrt(L) = 8.70); P(orphan) = 0.298; J >= 3 share 0.067 (4^-2 = 0.0625)
+K=5 L=  400: P(D=1 chain not absorbed by L-K-2) = 0.550 (x sqrt(L) = 11.00); P(orphan) = 0.247; J >= 3 share 0.052 (4^-2 = 0.0625)
+K=5 L=  800: P(D=1 chain not absorbed by L-K-2) = 0.420 (x sqrt(L) = 11.88); P(orphan) = 0.153; J >= 3 share 0.063 (4^-2 = 0.0625)
+K=5 L= 1600: P(D=1 chain not absorbed by L-K-2) = 0.323 (x sqrt(L) = 12.93); P(orphan) = 0.090; J >= 3 share 0.053 (4^-2 = 0.0625)
+K=9 L=  100: P(D=1 chain not absorbed by L-K-2) = 0.717 (x sqrt(L) = 7.17); P(orphan) = 0.280; J >= 3 share 0.058 (4^-2 = 0.0625)
+K=9 L=  200: P(D=1 chain not absorbed by L-K-2) = 0.650 (x sqrt(L) = 9.19); P(orphan) = 0.213; J >= 3 share 0.063 (4^-2 = 0.0625)
+K=9 L=  400: P(D=1 chain not absorbed by L-K-2) = 0.580 (x sqrt(L) = 11.60); P(orphan) = 0.167; J >= 3 share 0.062 (4^-2 = 0.0625)
+K=9 L=  800: P(D=1 chain not absorbed by L-K-2) = 0.443 (x sqrt(L) = 12.54); P(orphan) = 0.123; J >= 3 share 0.037 (4^-2 = 0.0625)
+K=9 L= 1600: P(D=1 chain not absorbed by L-K-2) = 0.387 (x sqrt(L) = 15.47); P(orphan) = 0.093; J >= 3 share 0.063 (4^-2 = 0.0625)
+ALL CHECKS PASSED
+python3 c5_partial_result.py  1.80s user 0.01s system 98% cpu 1.833 total

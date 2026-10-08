@@ -16,7 +16,7 @@ def make_source(K, J, r, cls_mod, cls_val):
     Mx = 1 << (j + cls_mod.bit_length() + 8)
     x = (1 + (1 << j) * u) % Mx
     t = (pow(3, -(K-1), Mx) * ((x + 1) // 2)) % Mx       # 2*3^(K-1)*t - 1 = x  (mod)
-    if t % 2 == 0: t += Mx
+    # (t parity is fixed by the class construction)
     t += Mx * rnd.getrandbits(30)
     return t
 ok_a = ok_b = 0

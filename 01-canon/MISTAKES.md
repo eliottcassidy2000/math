@@ -2052,6 +2052,39 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
+## MISTAKE-587 (2026-10-07, mac-mini-2026-10-07-twoanchor continuation; found by independent audits C (Collatz) and D (reducible locus) after checkpoint a0a33b38cd was pushed) -- an orphan-law exponent claimed from data that cannot fix it, a selection artifact read as a signal, a classification typed PROVED that rests on an open periodicity question, non-realisable transitions listed, a lemma stated without its scope, and a frieze "reading" that was wrong about where friezes live and what minors see
+
+- **HYP-9242, exponent.** "About 1/2" was not supported.
+  - The Mersenne fit is 0.59 (95% CI [0.42, 0.75]).
+  - For general sources the effective exponents are 0.42 (K = 2, 3) and 0.54–0.63 (K = 9–33), excluding 1/2.
+  - Small-L estimates are biased downward: the single-chain case K = 2 measures 0.42.
+- **HYP-9242, "10× enriched among long orbits."** This is a selection artifact.
+  - Partners share σ_T − K exactly, so non-orphans inherit their post-run length from a smaller exponent; a null model reproduces the terciles.
+  - The real signal: orphans' lengths are +1.0 SD against random orbits of the same size.
+- **HYP-9242, other fixes.**
+  - The partner criterion was cited to THM-4556 (ii). It is in fact exact for every K, by an elementary argument.
+  - "Haar-random t" should read "t uniform among the odd L-bit integers in the residual class".
+  - The scaled constants are not constant.
+- **THM-4603 (3).**
+  - The four-way classification of long-run transitions was typed PROVED. It is conditional on eventual periodicity of the rational limit orbit, an open 3x+d question that for c′ = −1 contains Collatz on negative integers.
+  - The universal-state lists were incomplete. Four of the eight listed absorptions start with the letter 2 and cannot follow a two-run.
+  - "SHIFT" mostly meant different cycles of equal odd density.
+  - "The mechanism of the heavy tail" was an overclaim: positive-drift runs explain unbounded debt, not the s^(−1/2) tail.
+- **THM-4603 (2).** Ladder completeness was stated for "any state". It needs admissibility (3^max(0,−k) e ∈ Z) and an odd value of each orbit before the merge. The reset state (1,1) and inadmissible starts are counterexamples. The ladder itself is classical.
+- **THM-4604, the frieze reading.**
+  - "Conway–Coxeter friezes live at tr[A,B] = −2" is false: tr[M(a), M(b)] = 2 + (a−b)².
+  - "Frieze coordinates are blind to merges" is false. Frieze minors of the carry configuration are carries, satisfying the carry exchange relation.
+  - "No Collatz word closes a frieze" is true only for the transfer matrices. Valuation words read as quiddities can close friezes, e.g. the U-words of 7183 and 2583211.
+  - "w ↦ G_w is a representation" needed the anti-homomorphism caveat, and it is faithful.
+  - The title said "are the reducible locus"; it should say "lie on".
+  - The substance is KNOWN (Böhm–Sontacchi, Lagarias, Goldman, Cohn).
+- **Reusable rules.**
+  - Fit exponents with confidence intervals before naming one.
+  - When comparing a statistic between partners and non-partners, check whether partnership shares the statistic.
+  - Classification theorems over rational orbits are conditional on periodicity.
+  - Restrict transition tables to realisable first letters.
+  - Before writing that a structure is "blind", compute what its minors are.
+
 ## MISTAKE-586 (2026-10-07, mac-mini-2026-10-07-twoanchor; found by the session's independent audits A (Collatz) and B (tournaments/friezes) after checkpoint 2ba93dab07 was pushed) -- wrong post-run depths and a class count, a false "no re-anchoring" claim, a state table claimed uniform too early, a "complete" grammar that was neither complete nor at the stated bound, a barrier stated beyond its setting, unconstrained-bit numbers presented as realisable, KNOWN theorems typed as new packaging, a retracted mechanism reused, and a total-positivity reading the data reject
 
 - **THM-4601 (iv), depths and counts.**

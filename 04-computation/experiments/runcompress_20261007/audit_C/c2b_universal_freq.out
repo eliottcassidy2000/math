@@ -1,0 +1,4 @@
+1607 merges in 3000 sources (0.536; session 1651/3000 = 0.550)
+by (kind, i): {('child', 1): 848, ('child', 2): 57, ('child', 3): 9, ('child', 4): 1, ('source', 1): 656, ('source', 2): 30, ('source', 3): 6}
+i = 1 share 0.936 (session 0.934); source share 0.431 (session 0.432)
+python3 c2b_universal_freq.py  0.90s user 0.01s system 99% cpu 0.907 total

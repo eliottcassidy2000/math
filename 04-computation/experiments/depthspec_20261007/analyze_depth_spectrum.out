@@ -1,0 +1,13 @@
+odd K in [1001, 3999]: 1500
+  D=1 merges: 0.869; D=3 merges: 0.813; either: 0.905
+  median best deletion depth 204.5, mean 1086; median descent depth 7264.0 (= 2.81 K)
+  deletion certificate shorter than descent: 0.872
+  survival P(best deletion depth > s), counting 'no merge' as infinite:
+    s=    10: 0.9533   p*sqrt(s) = 3.01
+    s=    30: 0.8260   p*sqrt(s) = 4.52
+    s=   100: 0.6540   p*sqrt(s) = 6.54
+    s=   300: 0.4907   p*sqrt(s) = 8.50
+    s=  1000: 0.3080   p*sqrt(s) = 9.74
+    s=  3000: 0.1707   p*sqrt(s) = 9.35
+    s= 10000: 0.1107   p*sqrt(s) = 11.07
+  quantiles of best depth / K: [0.007, 0.019, 0.086, 0.402, 1.15, 4.73]

@@ -1,0 +1,9 @@
+odd K in [1000, 6400]: 2700; orphans 53
+orphans rescued within depth 36: 20/53 = 0.377
+all odd K rescued within depth 36: 1089/2700 = 0.403
+non-orphans rescued: 1069/2647 = 0.404
+rescue depth distribution (all odd K): [(3, 900), (6, 100), (9, 22), (11, 28), (14, 10), (17, 8), (19, 13), (22, 5), (25, 1), (28, 1), (33, 1)]
+depth-3 rescues are exactly K = 5 mod 6: True
+doubly uncovered (orphan and not rescued): 33 of 2700 = 0.0122: [1081, 1113, 1137, 1329, 1335, 1719, 1803, 1909, 1929, 2209, 2349, 2593, 2725, 2781, 2871, 2971, 3163, 3243, 3525, 3543, 3805, 3861, 4111, 4233, 4305, 4401, 4459, 4849, 5281, 5371, 5547, 5793, 6301]
+hypergeometric P(rescued orphans <= 20) = 0.405
+time 2.2s

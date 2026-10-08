@@ -1,0 +1,31 @@
+K= 9 B=   25: orphans 1033/2000 = 0.5165, x sqrt(K+B) = 3.012
+K= 9 B=   50: orphans 844/2000 = 0.4220, x sqrt(K+B) = 3.241
+K= 9 B=  100: orphans 604/2000 = 0.3020, x sqrt(K+B) = 3.153
+K= 9 B=  200: orphans 422/2000 = 0.2110, x sqrt(K+B) = 3.050
+K= 9 B=  400: orphans 276/2000 = 0.1380, x sqrt(K+B) = 2.791
+K= 9 B=  800: orphans 185/2000 = 0.0925, x sqrt(K+B) = 2.631
+K= 9 B= 1600: orphans 119/2000 = 0.0595, x sqrt(K+B) = 2.387
+K= 9 B= 3200: orphans 90/2000 = 0.0450, x sqrt(K+B) = 2.549
+K=9 (all B): alpha_hat = 0.540, 95% profile interval [0.520, 0.560], log-lik drop at 1/2 = 5.75
+K=9 (B >= 200): alpha_hat = 0.590, 95% profile interval [0.530, 0.655], log-lik drop at 1/2 = 3.89
+K=17 B=   25: orphans 841/2000 = 0.4205, x sqrt(K+B) = 2.725
+K=17 B=   50: orphans 655/2000 = 0.3275, x sqrt(K+B) = 2.681
+K=17 B=  100: orphans 466/2000 = 0.2330, x sqrt(K+B) = 2.520
+K=17 B=  200: orphans 319/2000 = 0.1595, x sqrt(K+B) = 2.350
+K=17 B=  400: orphans 218/2000 = 0.1090, x sqrt(K+B) = 2.226
+K=17 B=  800: orphans 142/2000 = 0.0710, x sqrt(K+B) = 2.029
+K=17 B= 1600: orphans 80/2000 = 0.0400, x sqrt(K+B) = 1.608
+K=17 B= 3200: orphans 65/2000 = 0.0325, x sqrt(K+B) = 1.843
+K=17 (all B): alpha_hat = 0.605, 95% profile interval [0.580, 0.635], log-lik drop at 1/2 = 24.79
+K=17 (B >= 200): alpha_hat = 0.630, 95% profile interval [0.555, 0.705], log-lik drop at 1/2 = 5.44
+K=33 B=   25: orphans 655/2000 = 0.3275, x sqrt(K+B) = 2.494
+K=33 B=   50: orphans 543/2000 = 0.2715, x sqrt(K+B) = 2.473
+K=33 B=  100: orphans 376/2000 = 0.1880, x sqrt(K+B) = 2.168
+K=33 B=  200: orphans 263/2000 = 0.1315, x sqrt(K+B) = 2.007
+K=33 B=  400: orphans 193/2000 = 0.0965, x sqrt(K+B) = 2.008
+K=33 B=  800: orphans 136/2000 = 0.0680, x sqrt(K+B) = 1.963
+K=33 B= 1600: orphans 89/2000 = 0.0445, x sqrt(K+B) = 1.798
+K=33 B= 3200: orphans 49/2000 = 0.0245, x sqrt(K+B) = 1.393
+K=33 (all B): alpha_hat = 0.620, 95% profile interval [0.585, 0.655], log-lik drop at 1/2 = 20.49
+K=33 (B >= 200): alpha_hat = 0.595, 95% profile interval [0.515, 0.675], log-lik drop at 1/2 = 2.44
+python3 c4_general_exponent.py 2000 202 9,17,33  12.13s user 0.05s system 99% cpu 12.235 total

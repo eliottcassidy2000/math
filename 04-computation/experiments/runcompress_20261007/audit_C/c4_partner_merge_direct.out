@@ -1,0 +1,8 @@
+(P) partner pairs tested: 173; merge (zero debt, value >= 2): 173; failures 0; first common odd value Z = 1 in 0 of them; min merge value 8039378
+(N) non-partner pairs tested: 35; no coincidence before 1: 35; contradictions 0
+(N2) non-partner pairs with D uniform in [1, K-2]: 120; no coincidence before 1: 120; contradictions 0
+(O) orphan K = 1039: coincidences before 1 over all D in [1, 1037]: []
+(O) orphan K = 1081: coincidences before 1 over all D in [1, 1079]: []
+(O) orphan K = 1113: coincidences before 1 over all D in [1, 1111]: []
+time 12.4s
+python3 c4_partner_merge_direct.py  12.47s user 0.03s system 99% cpu 12.543 total

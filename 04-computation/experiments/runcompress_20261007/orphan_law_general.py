@@ -12,7 +12,7 @@ def ot(n):
             z = v2(n); n >>= z; t += z
     return o, t
 rnd = random.Random(int(sys.argv[2]) if len(sys.argv) > 2 else 7)
-N = int(sys.argv[1]) if len(sys.argv) > 1 else 200
+N = int(sys.argv[1]) if len(sys.argv) > 1 else 300
 for K in (9, 17):
     for B in (25, 50, 100, 200, 400, 800):
         orph = 0; d1 = 0; tot = 0

@@ -1,0 +1,4 @@
+orphans n=53: mean longest post-run ones-run 14.19, median 14
+non-orphans n=2647: mean 14.40, median 14
+Mann-Whitney z (orphans larger) = -0.38; permutation p (two-sided, difference of means) = 0.532
+python3 c4_ones_runs.py  27.45s user 0.08s system 97% cpu 28.262 total

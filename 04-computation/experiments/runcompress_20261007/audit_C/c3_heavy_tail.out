@@ -1,0 +1,10 @@
+paths 3000; survivors at S = 3000: 949 (0.316); sqrt(S) x survival = 17.33
+  longest source ones-run >=  8: all paths 0.997, survivors 0.996; P(survive | run >= 8) = 0.316 vs P(survive) = 0.316
+  longest source ones-run >= 10: all paths 0.774, survivors 0.774; P(survive | run >= 10) = 0.316 vs P(survive) = 0.316
+  longest source ones-run >= 12: all paths 0.304, survivors 0.306; P(survive | run >= 12) = 0.318 vs P(survive) = 0.316
+  longest source ones-run >= 14: all paths 0.086, survivors 0.097; P(survive | run >= 14) = 0.358 vs P(survive) = 0.316
+  longest source ones-run >= 16: all paths 0.022, survivors 0.033; P(survive | run >= 16) = 0.463 vs P(survive) = 0.316
+median longest source ones-run: all 11, survivors 11
+survival among paths with NO source ones-run >= 14: 0.312 (n = 2743): the tail is essentially unchanged
+max debt: survivors median 40, all paths median 12
+python3 c3_heavy_tail.py  8.61s user 0.02s system 99% cpu 8.687 total

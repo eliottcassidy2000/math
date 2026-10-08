@@ -1,0 +1,15 @@
+K= 9 B=  25: orphan fraction 0.548 (329/600), x sqrt(K+B) = 3.20; reset pair D<=2 merges 0.320
+K= 9 B=  50: orphan fraction 0.398 (239/600), x sqrt(K+B) = 3.06; reset pair D<=2 merges 0.433
+K= 9 B= 100: orphan fraction 0.300 (180/600), x sqrt(K+B) = 3.13; reset pair D<=2 merges 0.513
+K= 9 B= 200: orphan fraction 0.190 (114/600), x sqrt(K+B) = 2.75; reset pair D<=2 merges 0.582
+K= 9 B= 400: orphan fraction 0.157 (94/600), x sqrt(K+B) = 3.17; reset pair D<=2 merges 0.680
+K= 9 B= 800: orphan fraction 0.097 (58/600), x sqrt(K+B) = 2.75; reset pair D<=2 merges 0.787
+K=17 B=  25: orphan fraction 0.433 (260/600), x sqrt(K+B) = 2.81; reset pair D<=2 merges 0.393
+K=17 B=  50: orphan fraction 0.303 (182/600), x sqrt(K+B) = 2.48; reset pair D<=2 merges 0.492
+K=17 B= 100: orphan fraction 0.257 (154/600), x sqrt(K+B) = 2.78; reset pair D<=2 merges 0.503
+K=17 B= 200: orphan fraction 0.140 (84/600), x sqrt(K+B) = 2.06; reset pair D<=2 merges 0.632
+K=17 B= 400: orphan fraction 0.090 (54/600), x sqrt(K+B) = 1.84; reset pair D<=2 merges 0.682
+K=17 B= 800: orphan fraction 0.073 (44/600), x sqrt(K+B) = 2.10; reset pair D<=2 merges 0.757
+K=9: alpha_hat = 0.535, 95% profile interval [0.485, 0.590]; log-lik drop at alpha = 1/2: 0.90
+K=17: alpha_hat = 0.630, 95% profile interval [0.565, 0.700]; log-lik drop at alpha = 1/2: 6.71
+python3 c4_general_sources.py 600 11  0.89s user 0.01s system 97% cpu 0.933 total

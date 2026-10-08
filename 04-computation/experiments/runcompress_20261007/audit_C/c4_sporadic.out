@@ -1,0 +1,3 @@
+orphans (odd K <= 12800): 135
+orphans with a sporadic equal-time coincidence (equal Terras offset, unequal odd count): 0 []
+non-orphans that also have a sporadic coincidence with some other K': 0

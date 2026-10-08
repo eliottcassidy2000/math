@@ -1,0 +1,68 @@
+== windows (odd K) ==
+ window          #oddK  orphans  fraction  x sqrt(geo-mid)  x sqrt(arith-mid)   Poisson 95% (count)
+ [    3,   50)      24      14   0.5833    2.041           3.003            [6.7, 21.3]
+ [   50,  100)      25       7   0.2800    2.355           2.425            [1.8, 12.2]
+ [  100,  200)      50       8   0.1600    1.903           1.960            [2.5, 13.5]
+ [  200,  400)     100       6   0.0600    1.009           1.039            [1.2, 10.8]
+ [  400,  800)     200      13   0.0650    1.546           1.592            [5.9, 20.1]
+ [  800, 1600)     400      13   0.0325    1.093           1.126            [5.9, 20.1]
+ [ 1600, 3200)     800      17   0.0213    1.011           1.041            [8.9, 25.1]
+ [ 3200, 6400)    1600      27   0.0169    1.135           1.169            [16.8, 37.2]
+ [ 6400,12801)    3200      30   0.0094    0.892           0.919            [19.3, 40.7]
+
+== Bernoulli MLE on odd K in [200, 12800] (n = 6300, orphans = 106) ==
+  power law C K^-alpha: alpha_hat = 0.59 (C = 2.20), 95% profile interval [0.42, 0.75]
+  log-likelihood drop at alpha = 1/2: 0.55 (1.92 = 95% threshold)
+  C K^-1/2              : C =   1.0721, log-lik =   -518.27 (best power law   -517.72; difference +0.55)
+  C K^-0.6              : C =   2.3794, log-lik =   -517.73 (best power law   -517.72; difference +0.01)
+  C K^-0.7              : C =   5.2066, log-lik =   -518.59 (best power law   -517.72; difference +0.87)
+  C log K / K^0.6       : C =   0.3008, log-lik =   -518.68 (best power law   -517.72; difference +0.96)
+  C log K / K^0.7       : C =   0.6704, log-lik =   -517.70 (best power law   -517.72; difference -0.02)
+  C / (K^0.5 log K)     : C =   8.4293, log-lik =   -517.93 (best power law   -517.72; difference +0.21)
+  C (log K)^2 / K^0.75  : C =   0.1262, log-lik =   -518.37 (best power law   -517.72; difference +0.65)
+
+== Bernoulli MLE on odd K in [400, 12800] (n = 6200, orphans = 100) ==
+  power law C K^-alpha: alpha_hat = 0.64 (C = 3.36), 95% profile interval [0.44, 0.83]
+  log-likelihood drop at alpha = 1/2: 0.94 (1.92 = 95% threshold)
+  C K^-1/2              : C =   1.0754, log-lik =   -495.46 (best power law   -494.52; difference +0.94)
+  C K^-0.6              : C =   2.4292, log-lik =   -494.60 (best power law   -494.52; difference +0.08)
+  C K^-0.7              : C =   5.4338, log-lik =   -494.68 (best power law   -494.52; difference +0.16)
+  C log K / K^0.6       : C =   0.2997, log-lik =   -495.89 (best power law   -494.52; difference +1.37)
+  C log K / K^0.7       : C =   0.6788, log-lik =   -494.78 (best power law   -494.52; difference +0.26)
+  C / (K^0.5 log K)     : C =   8.6853, log-lik =   -494.51 (best power law   -494.52; difference -0.01)
+  C (log K)^2 / K^0.75  : C =   0.1259, log-lik =   -495.60 (best power law   -494.52; difference +1.08)
+
+== Bernoulli MLE on odd K in [800, 12800] (n = 6000, orphans = 87) ==
+  power law C K^-alpha: alpha_hat = 0.58 (C = 2.00), 95% profile interval [0.32, 0.84]
+  log-likelihood drop at alpha = 1/2: 0.19 (1.92 = 95% threshold)
+  C K^-1/2              : C =   1.0257, log-lik =   -446.47 (best power law   -446.29; difference +0.19)
+  C K^-0.6              : C =   2.3632, log-lik =   -446.29 (best power law   -446.29; difference +0.01)
+  C K^-0.7              : C =   5.4101, log-lik =   -446.65 (best power law   -446.29; difference +0.36)
+  C log K / K^0.6       : C =   0.2842, log-lik =   -446.58 (best power law   -446.29; difference +0.29)
+  C log K / K^0.7       : C =   0.6556, log-lik =   -446.28 (best power law   -446.29; difference -0.01)
+  C / (K^0.5 log K)     : C =   8.5152, log-lik =   -446.34 (best power law   -446.29; difference +0.05)
+  C (log K)^2 / K^0.75  : C =   0.1197, log-lik =   -446.43 (best power law   -446.29; difference +0.15)
+
+local exponent [800,1600) -> [6400,12800]: 0.598, 95% interval [0.28, 0.91]
+
+nearest partner, odd K >= 1000: non-orphans 5817, D = 1 for 5350 (0.920); top: [(1, 5350), (3, 196), (5, 101), (7, 52), (9, 30), (11, 22), (13, 19), (15, 7)]
+
+shells m = v2(K-1), odd K in [600, 6400]:  #K, D in {1,2}, D in {3,4}, any D
+  m=1 :  1450  0.906  0.848  0.983
+  m=2 :   725  0.862  0.823  0.974
+  m=3 :   363  0.857  0.854  0.981
+  m=4 :   181  0.823  0.823  0.961
+  m=5 :    91  0.846  0.846  0.956
+  m=6+:    90  0.867  0.878  0.978
+
+length terciles of (sigma_T - K)/K, odd K in [1000, 6400] (cuts 7.581, 7.742): 5/900 = 0.56%, 10/900 = 1.11%, 38/900 = 4.22%
+
+length terciles of (sigma_T - K)/K, odd K in [1000, 12800] (cuts 7.579, 7.696): 6/1966 = 0.31%, 18/1967 = 0.92%, 59/1967 = 3.00%
+frac(K log2 3) quarters, odd K in [1000, 6400]: Q1: 14/676 = 2.07%, Q2: 13/676 = 1.92%, Q3: 11/673 = 1.63%, Q4: 15/675 = 2.22%
+frac(K log2 3) quarters, odd K in [1000, 12800]: Q1: 23/1475 = 1.56%, Q2: 23/1475 = 1.56%, Q3: 20/1478 = 1.35%, Q4: 17/1472 = 1.15%
+frac(K log2 3) quarters, odd K in [200, 12800]: Q1: 29/1575 = 1.84%, Q2: 29/1575 = 1.84%, Q3: 27/1577 = 1.71%, Q4: 21/1573 = 1.34%
+
+K mod 6 among orphans in [1000,6400]: {1: 18, 3: 19, 5: 16}  all odd K: {1: 900, 3: 900, 5: 900}
+orphans in [1000, 6400]: [1039, 1081, 1113, 1137, 1225, 1329, 1335, 1451, 1547, 1661, 1719, 1803, 1909, 1929, 1943, 2117, 2209, 2349, 2545, 2593, 2659, 2725, 2781, 2871, 2971, 3163, 3243, 3525, 3543, 3665, 3805, 3861, 3881, 4111, 4233, 4305, 4401, 4459, 4589, 4667, 4849, 4853, 4973, 5075, 5281, 5371, 5547, 5793, 5825, 5951, 6131, 6209, 6301]
+
+all orphans K >= 6400: [6433, 6507, 6693, 6877, 6957, 7093, 7293, 7331, 7627, 7763, 8285, 8549, 8853, 9181, 9317, 9533, 9795, 9835, 10029, 10367, 10417, 10969, 11141, 11367, 11639, 11695, 12007, 12371, 12485, 12757]

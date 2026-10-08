@@ -1,0 +1,343 @@
+55 cycles (primitive U-words with Sum <= 8, length <= 4, plus 0)
+outcome counts over 5 states x 55 cycles x 2: {'ANCHOR': 24, 'DRIFT': 150, 'SHIFT': 56, 'DRIFT0': 224, 'ABSORB': 96}
+session table lines compared: 532; agree (time / entry / k_entry / rate): 532; disagree: 0
+label differences (session label -> audit label): 206
+    ('universal (3,-26)', (1, 4), 'source') SHIFT -> DRIFT0
+    ('universal (3,-26)', (1, 7), 'source') SHIFT -> DRIFT0
+    ('universal (3,-26)', (2, 3), 'child') SHIFT -> DRIFT0
+    ('universal (3,-26)', (2, 3), 'source') SHIFT -> DRIFT0
+    ('universal (3,-26)', (2, 4), 'child') SHIFT -> DRIFT0
+    ('universal (3,-26)', (1, 1, 5), 'child') SHIFT -> DRIFT0
+    ('universal (3,-26)', (1, 1, 5), 'source') SHIFT -> DRIFT0
+    ('universal (3,-26)', (1, 1, 6), 'source') SHIFT -> DRIFT0
+    ('universal (3,-26)', (1, 2, 2), 'source') SHIFT -> DRIFT0
+    ('universal (3,-26)', (1, 2, 3), 'child') SHIFT -> DRIFT0
+    ('universal (3,-26)', (1, 2, 3), 'source') SHIFT -> DRIFT0
+    ('universal (3,-26)', (1, 2, 4), 'child') SHIFT -> DRIFT0
+    ('universal (3,-26)', (1, 2, 4), 'source') SHIFT -> DRIFT0
+    ('universal (3,-26)', (1, 2, 5), 'child') SHIFT -> DRIFT0
+    ('universal (3,-26)', (1, 3, 2), 'child') SHIFT -> DRIFT0
+    ('universal (3,-26)', (1, 3, 2), 'source') SHIFT -> DRIFT0
+    ('universal (3,-26)', (1, 3, 3), 'child') SHIFT -> DRIFT0
+    ('universal (3,-26)', (1, 3, 3), 'source') SHIFT -> DRIFT0
+    ('universal (3,-26)', (1, 3, 4), 'source') SHIFT -> DRIFT0
+    ('universal (3,-26)', (1, 4, 2), 'child') SHIFT -> DRIFT0
+    ('universal (3,-26)', (1, 4, 2), 'source') SHIFT -> DRIFT0
+    ('universal (3,-26)', (1, 4, 3), 'child') SHIFT -> DRIFT0
+    ('universal (3,-26)', (1, 4, 3), 'source') SHIFT -> DRIFT0
+    ('universal (3,-26)', (1, 5, 2), 'child') SHIFT -> DRIFT0
+    ('universal (3,-26)', (2, 2, 3), 'child') SHIFT -> DRIFT0
+    ('universal (3,-26)', (2, 2, 3), 'source') SHIFT -> DRIFT0
+    ('universal (3,-26)', (2, 3, 3), 'child') SHIFT -> DRIFT0
+    ('universal (3,-26)', (1, 1, 1, 5), 'source') SHIFT -> DRIFT0
+    ('universal (3,-26)', (1, 1, 2, 4), 'child') SHIFT -> DRIFT0
+    ('universal (3,-26)', (1, 1, 2, 4), 'source') SHIFT -> DRIFT0
+    ('universal (3,-26)', (1, 1, 3, 2), 'child') SHIFT -> DRIFT0
+    ('universal (3,-26)', (1, 1, 3, 3), 'child') SHIFT -> DRIFT0
+    ('universal (3,-26)', (1, 1, 3, 3), 'source') SHIFT -> DRIFT0
+    ('universal (3,-26)', (1, 1, 4, 2), 'source') SHIFT -> DRIFT0
+    ('universal (3,-26)', (1, 2, 1, 3), 'child') SHIFT -> DRIFT0
+    ('universal (3,-26)', (1, 2, 1, 4), 'child') SHIFT -> DRIFT0
+    ('universal (3,-26)', (1, 2, 2, 2), 'child') SHIFT -> DRIFT0
+    ('universal (3,-26)', (1, 2, 2, 2), 'source') SHIFT -> DRIFT0
+    ('universal (3,-26)', (1, 2, 2, 3), 'child') SHIFT -> DRIFT0
+    ('universal (3,-26)', (1, 2, 2, 3), 'source') SHIFT -> DRIFT0
+    ('universal (3,-26)', (1, 2, 3, 2), 'child') SHIFT -> DRIFT0
+    ('universal (3,-26)', (1, 3, 2, 2), 'child') SHIFT -> DRIFT0
+    ('universal (3,-26)', (1, 3, 2, 2), 'source') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 4), 'child') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 4), 'source') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 7), 'source') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (2, 3), 'source') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 1, 4), 'child') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 1, 4), 'source') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 1, 5), 'child') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 1, 5), 'source') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 1, 6), 'source') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 2, 3), 'child') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 2, 3), 'source') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 2, 4), 'child') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 2, 4), 'source') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 2, 5), 'child') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 3, 2), 'child') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 3, 2), 'source') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 3, 3), 'source') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 3, 4), 'child') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 3, 4), 'source') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 4, 2), 'child') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 4, 2), 'source') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 4, 3), 'child') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 4, 3), 'source') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 5, 2), 'child') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (2, 2, 3), 'child') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (2, 2, 3), 'source') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (2, 3, 3), 'child') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 1, 1, 4), 'source') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 1, 1, 5), 'child') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 1, 2, 3), 'child') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 1, 2, 4), 'child') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 1, 2, 4), 'source') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 1, 3, 2), 'child') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 1, 3, 2), 'source') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 1, 3, 3), 'child') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 1, 3, 3), 'source') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 1, 4, 2), 'child') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 1, 4, 2), 'source') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 2, 1, 4), 'source') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 2, 2, 2), 'child') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 2, 2, 2), 'source') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 2, 2, 3), 'child') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 2, 2, 3), 'source') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 2, 3, 2), 'source') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 3, 2, 2), 'child') SHIFT -> DRIFT0
+    ('J=2 (4,10)', (1, 3, 2, 2), 'source') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 4), 'child') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 4), 'source') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 7), 'source') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (2, 3), 'source') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (2, 4), 'child') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 1, 4), 'child') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 1, 5), 'child') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 1, 5), 'source') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 1, 6), 'child') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 1, 6), 'source') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 2, 2), 'child') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 2, 2), 'source') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 2, 3), 'child') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 2, 3), 'source') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 2, 4), 'source') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 2, 5), 'child') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 3, 2), 'child') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 3, 2), 'source') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 3, 3), 'source') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 3, 4), 'child') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 3, 4), 'source') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 4, 2), 'source') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 4, 3), 'child') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 4, 3), 'source') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (2, 2, 3), 'child') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (2, 2, 3), 'source') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (2, 3, 3), 'child') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 1, 1, 5), 'child') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 1, 1, 5), 'source') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 1, 2, 3), 'source') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 1, 2, 4), 'child') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 1, 2, 4), 'source') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 1, 3, 2), 'source') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 1, 3, 3), 'source') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 1, 4, 2), 'child') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 1, 4, 2), 'source') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 2, 1, 4), 'source') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 2, 2, 2), 'child') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 2, 2, 2), 'source') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 2, 2, 3), 'child') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 2, 2, 3), 'source') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 2, 3, 2), 'source') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 3, 2, 2), 'child') SHIFT -> DRIFT0
+    ('J=1 D=3 (3,13)', (1, 3, 2, 2), 'source') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 4), 'child') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 4), 'source') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 7), 'child') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (2, 4), 'source') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 1, 4), 'child') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 1, 5), 'child') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 1, 5), 'source') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 1, 6), 'child') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 2, 3), 'child') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 2, 3), 'source') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 2, 4), 'child') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 2, 5), 'child') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 2, 5), 'source') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 3, 2), 'child') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 3, 2), 'source') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 3, 3), 'child') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 3, 3), 'source') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 3, 4), 'child') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 4, 2), 'child') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 4, 2), 'source') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 4, 3), 'child') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 4, 3), 'source') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 5, 2), 'child') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 5, 2), 'source') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (2, 2, 3), 'child') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (2, 2, 4), 'child') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (2, 2, 4), 'source') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (2, 3, 3), 'child') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 1, 1, 4), 'child') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 1, 1, 4), 'source') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 1, 1, 5), 'source') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 1, 2, 4), 'child') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 1, 2, 4), 'source') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 1, 3, 2), 'child') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 1, 3, 2), 'source') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 1, 3, 3), 'child') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 1, 3, 3), 'source') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 1, 4, 2), 'child') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 1, 4, 2), 'source') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 2, 1, 3), 'child') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 2, 2, 2), 'child') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 2, 2, 2), 'source') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 2, 2, 3), 'child') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 2, 2, 3), 'source') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 2, 3, 2), 'child') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 2, 3, 2), 'source') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 3, 2, 2), 'child') SHIFT -> DRIFT0
+    ('re-anchored (-5, 3^-5 - 1)', (1, 3, 2, 2), 'source') SHIFT -> DRIFT0
+    ('reset (1,1)', (1, 4), 'source') SHIFT -> DRIFT0
+    ('reset (1,1)', (1, 7), 'source') SHIFT -> DRIFT0
+    ('reset (1,1)', (1, 1, 4), 'source') SHIFT -> DRIFT0
+    ('reset (1,1)', (1, 1, 5), 'source') SHIFT -> DRIFT0
+    ('reset (1,1)', (1, 1, 6), 'source') SHIFT -> DRIFT0
+    ('reset (1,1)', (1, 2, 2), 'source') SHIFT -> DRIFT0
+    ('reset (1,1)', (1, 2, 3), 'source') SHIFT -> DRIFT0
+    ('reset (1,1)', (1, 2, 4), 'source') SHIFT -> DRIFT0
+    ('reset (1,1)', (1, 3, 2), 'source') SHIFT -> DRIFT0
+    ('reset (1,1)', (1, 3, 3), 'source') SHIFT -> DRIFT0
+    ('reset (1,1)', (1, 3, 4), 'source') SHIFT -> DRIFT0
+    ('reset (1,1)', (1, 4, 2), 'source') SHIFT -> DRIFT0
+    ('reset (1,1)', (1, 4, 3), 'source') SHIFT -> DRIFT0
+    ('reset (1,1)', (2, 2, 3), 'source') SHIFT -> DRIFT0
+    ('reset (1,1)', (1, 1, 1, 4), 'source') SHIFT -> DRIFT0
+    ('reset (1,1)', (1, 1, 1, 5), 'source') SHIFT -> DRIFT0
+    ('reset (1,1)', (1, 1, 2, 4), 'source') SHIFT -> DRIFT0
+    ('reset (1,1)', (1, 1, 3, 2), 'source') SHIFT -> DRIFT0
+    ('reset (1,1)', (1, 1, 4, 2), 'source') SHIFT -> DRIFT0
+    ('reset (1,1)', (1, 2, 1, 3), 'source') SHIFT -> DRIFT0
+    ('reset (1,1)', (1, 2, 1, 4), 'source') SHIFT -> DRIFT0
+    ('reset (1,1)', (1, 2, 2, 2), 'source') SHIFT -> DRIFT0
+    ('reset (1,1)', (1, 2, 2, 3), 'source') SHIFT -> DRIFT0
+    ('reset (1,1)', (1, 2, 3, 2), 'source') SHIFT -> DRIFT0
+    ('reset (1,1)', (1, 3, 2, 2), 'source') SHIFT -> DRIFT0
+
+== complete universal-state lists (R = realisable right at the end of the two-run) ==
+ABSORB (8):
+     source (2, 4) t=25 -
+     source (2, 6) t=17 -
+     child (1, 1, 4) t=23 R
+     source (1, 2, 5) t=20 R
+     source (1, 5, 2) t=31 R
+     source (2, 2, 4) t=33 -
+     source (2, 3, 3) t=27 -
+     child (1, 1, 4, 2) t=37 R
+ANCHOR (9):
+     child (1,) k=-5 t=12 R
+     child (2,) k=3 t=0 -
+     source (2,) k=3 t=0 -
+     child (3,) k=4 t=15 R
+     child (4,) k=9 t=25 R
+     source (4,) k=3 t=5 R
+     child (6,) k=30 t=85 R
+     source (6,) k=-30 t=91 R
+     child (2, 5) k=16 t=52 -
+DRIFT+ (14):
+     source (1,) +0.500 R
+     child (5,) +0.467 R
+     child (7,) +0.433 R
+     child (8,) +0.424 R
+     source (1, 2) +0.167 R
+     child (1, 6) +0.274 R
+     child (3, 5) +0.321 R
+     source (1, 1, 2) +0.179 R
+     source (1, 1, 1, 2) +0.221 R
+     source (1, 1, 1, 3) +0.381 R
+     source (1, 1, 2, 2) +0.381 R
+     source (1, 1, 2, 3) +0.183 R
+     source (1, 2, 1, 3) +0.183 R
+     child (0,) +0.667 -
+DRIFT- (15):
+     source (5,) -0.329 R
+     source (7,) -0.433 R
+     source (8,) -0.424 R
+     source (1, 5) -0.238 R
+     source (1, 6) -0.274 R
+     source (3, 4) -0.176 R
+     source (3, 5) -0.321 R
+     child (1, 1, 2) -0.417 R
+     child (1, 1, 3) -0.267 R
+     child (1, 2, 2) -0.267 R
+     child (1, 1, 1, 2) -0.221 R
+     child (1, 1, 1, 3) -0.381 R
+     child (1, 1, 2, 2) -0.381 R
+     child (1, 1, 2, 3) -0.183 R
+     source (0,) -0.500 -
+DRIFT0 (46):
+     source (1, 4) R
+     source (1, 7) R
+     child (2, 3) -
+     source (2, 3) -
+     child (2, 4) -
+     child (1, 1, 5) R
+     source (1, 1, 5) R
+     child (1, 1, 6) R
+     source (1, 1, 6) R
+     source (1, 2, 2) R
+     child (1, 2, 3) R
+     source (1, 2, 3) R
+     child (1, 2, 4) R
+     source (1, 2, 4) R
+     child (1, 2, 5) R
+     child (1, 3, 2) R
+     source (1, 3, 2) R
+     child (1, 3, 3) R
+     source (1, 3, 3) R
+     child (1, 3, 4) R
+     source (1, 3, 4) R
+     child (1, 4, 2) R
+     source (1, 4, 2) R
+     child (1, 4, 3) R
+     source (1, 4, 3) R
+     child (1, 5, 2) R
+     child (2, 2, 3) -
+     source (2, 2, 3) -
+     child (2, 2, 4) -
+     child (2, 3, 3) -
+     source (1, 1, 1, 5) R
+     child (1, 1, 2, 4) R
+     source (1, 1, 2, 4) R
+     child (1, 1, 3, 2) R
+     child (1, 1, 3, 3) R
+     source (1, 1, 3, 3) R
+     source (1, 1, 4, 2) R
+     child (1, 2, 1, 3) R
+     child (1, 2, 1, 4) R
+     child (1, 2, 2, 2) R
+     source (1, 2, 2, 2) R
+     child (1, 2, 2, 3) R
+     source (1, 2, 2, 3) R
+     child (1, 2, 3, 2) R
+     child (1, 3, 2, 2) R
+     source (1, 3, 2, 2) R
+SHIFT (18):
+     source (3,) R
+     child (1, 2) R
+     child (1, 3) R
+     source (1, 3) R
+     child (1, 4) R
+     child (1, 5) R
+     child (1, 7) R
+     source (2, 5) -
+     child (2, 6) -
+     child (3, 4) R
+     source (1, 1, 3) R
+     source (1, 1, 4) R
+     child (1, 1, 1, 4) R
+     source (1, 1, 1, 4) R
+     child (1, 1, 1, 5) R
+     source (1, 1, 3, 2) R
+     source (1, 2, 1, 4) R
+     source (1, 2, 3, 2) R
+
+child ones-run: ANCHOR entry 12 k -5 limit pair start -53 -1
+source ones-run: DRIFT entry 8 k 6 rate 1/2 child limit 25/27
+child run (3,): ANCHOR entry 15 k 4
+child run (4,): ANCHOR entry 25 k 9
+actual integers: child run letter 3: debt 4 at step 15, anchored at the limit cycle point: 25/25 sources pass
+actual integers: child run letter 4: debt 9 at step 25, anchored: 25/25 sources pass
+actual integers: child run letter 5: debt 6 at step 9, +28 per 60 steps (rate 7/15): 25/25 sources pass
+actual integers: child run (1,1,4): absorbed exactly at step 23: 25/25 sources pass
+actual integers: source run (1,2,5): absorbed exactly at step 20: 25/25 sources pass
+actual integers: child ones-run: debt -5 at step 12, anchored at -1: 25/25 sources pass
+actual integers: source ones-run: debt 6 at step 8, then +1 per 2 steps (200 steps): 25/25 sources pass
+source run (2,6): v2(c - 1) = 4 but v2(X - 1) = r in {1,2} at the end of every two-run: not realisable
+ALL CHECKS PASSED
+python3 c3_transitions.py  0.30s user 0.01s system 91% cpu 0.339 total

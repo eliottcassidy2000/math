@@ -1,0 +1,2 @@
+python3 c4_mersenne_orbits.py 2 9500 c4_mersenne_part1.txt  16.27s user 0.06s system 99% cpu 16.393 total
+python3 c4_mersenne_orbits.py 9501 12800 c4_mersenne_part2.txt  20.90s user 0.08s system 99% cpu 21.066 total

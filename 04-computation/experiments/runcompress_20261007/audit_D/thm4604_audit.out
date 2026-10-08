@@ -1,0 +1,63 @@
+THM-4604 audit D: all assertions passed
+  A1 G_a = E^(a-1) O = [[3,1],[0,2^a]]: 12
+  A2 G_w = [[3^|w|, B_w],[0, 2^Sw]] with B_w = repo carry (recursion = closed form): 3000
+  A3 projective action of G_w on (n,1) = actual U^r(n) (F_w(x) = (3^m x + B_w)/2^S): 3000
+  A4 THM-4555 inverse I_w(z) = (2^A_w z - B_w)/3^|w| recovers the source: 3000
+  A5 O/E Terras matrices act chronologically (R = T_last ... T_first): 1000
+  B1 cocycle B_uv = 3^|v| B_u + 2^Su B_v: 4000
+  B2 G_(uv) = G_v G_u (chronological composition; see H1 for non-commutativity): 4000
+  B3 z(uv) = z(u) + (2^Su/3^|u|) z(v) for z = B/3^|w| (frieze note's marked coordinate): 4000
+  B4 B_w > 0, odd, prime to 3 (nonempty w): 4000
+  B5 T_c^-1 G T_c changes B by c(chi1 - chi2); T_c G T_c^-1 by c(chi2 - chi1) (same set of coboundaries): 500
+  B6 cocycle is not a global coboundary (c_1 = -1 != c_2 = +1): the extension is non-split: 1
+  C1 2^S != 3^m and c_w != 0 for nonempty w: 1500
+  C2 G_w (c_w,1)^T = 2^S (c_w,1)^T: 1500
+  C3 B_(w^j) = c_w (2^(jS) - 3^(jm)), j = 0..4: 7500
+  C4 c_w is a 2-adic unit with U-word w repeated, returning to c_w (rational cycle point): 1500
+  C5 [[p, c_w(r-p)],[0,r]] commutes with G_w: 1500
+  C6 the centraliser element fixes c_w and infinity: 1500
+  C7 commuting condition is one nonzero linear equation (centraliser = 2-dim torus): 1500
+  C8 anchored states x -> c_w + 3^k (x - c_w) lie in the centraliser torus: 6000
+  C9 group element G_(1,2) G_(2,1)^-1 = translation x -> x - 1/4 (unipotent; centraliser not a torus): 1
+  D1 tr G_w = 3^m + 2^S, det = 3^m 2^S: 1500
+  D2 t(w) = tr/sqrt(det) = 2cosh(delta/2), delta = m ln3 - S ln2 (60 digits): 1500
+  D3 trace of any group word = 3^(sum e|w|) + 2^(sum e Sw) (character of the semisimplification): 800
+  D4 t(w) determines (|w|, Sw) (no two count pairs share a trace; t > 2): 4230
+  E1 Fricke identity tr[A,B] = x^2+y^2+z^2-xyz-2 (normalised traces, random GL2+ matrices): 500
+  E2 Collatz pair: kappa = 4 and tr[G_u, G_v] = 2 (commutator unipotent): 2000
+  E3 products of several words: (t(uv), t(x), t(uvx)) also on the cubic: 2000
+  E4 (a+1/a, b+1/b, ab+1/(ab)) on the Cayley cubic: 6x6 grid => polynomial identity: 36
+  E5 example (O,E): (5/sqrt6, 3/sqrt2, 7/sqrt12), 25/6 + 9/2 + 49/12 - 105/12 = 4: 1
+  E6 Cohn pair: traces (3,3,3), tr[A,B] = -2: 1
+  E7 positive solutions of x^2+y^2+z^2 = xyz (<200) are exactly 3 x Markov triples: 1
+  F1 tr(G_(u u v)) = tr(G_u) tr(G_(uv)) - det(G_u) tr(G_v) (=> t(u.uv) = t(u)t(uv) - t(v)): 1000
+  F2 mutation (x,y,z) -> (x, z, xz - y) is (u,v) -> (u,uv) (float check): 1000
+  F3 Christoffel basis pairs from (O,E) have Farey-neighbour slopes m/L (|mu Lv - mv Lu| = 1): 1023
+  F4 left mutation (x, z, xz - y) gives t(u.uv): 1023
+  F5 right mutation (z, y, yz - x) gives t(uv.v): 1023
+  F6 values are 2cosh(delta/2) at the mediant slope (mu+mv)/(Lu+Lv): 1023
+  F7 Christoffel-tree nodes checked (depth 10): 1023
+  F8 HYP-9230 theta_f = delta/ln2 exactly when Sw = round(f log2 3) (nearest-integer words only): 8
+  G1 quiddity (1,1,1) = triangle: M(1)^3 = -I: 1
+  G2 Collatz valuation word (1,2,2,2,2,2,2,1,7) is a fan quiddity with M-product -I (frieze note (15)): 1
+  G3 2583211 has U-word (1,2,2,2,2,2,2,1,7), 7183 has (1,1,1), both reach 24245 (a merge of frieze-closing words): 1
+  G4 G_w is never +-I nor scalar (diagonal 3^m != 2^S): 2000
+  G5 ear identity M(a)M(b) = M(a+1)M(1)M(b+1): 64
+  G6 the ear move is not a G-relation: it changes (|w|, Sw) by (+1, +3), so traces already differ: 64
+  G7 det((3^i,B_i),(3^j,B_j)) = 3^i 2^(A_i) B_(w[i+1..j]) > 0: 10585
+  G8 three-term Pluecker (type-A cluster exchange) relation holds among carries of overlapping subwords: 29178
+  G9 2-adic decoder recovers w from (|w|, Sw, B_w): 65535
+  G10 w -> G_w injective on all words with Sw <= 16 (projectively too: scalar would need 3^dm = 2^dS): 1
+  G10 words enumerated: 65535
+  G11 equal counts => equal traces, different carries; F_u(n) = F_v(h) iff 9(n - h) = B_v - B_u = 126: 1
+  G12 an actual equal-count merge exists (sources n, n-14 with U-words (1,7), (7,1)): 1
+  G12 first equal-count merge (n, h, common value): (483, 469, Fraction(17, 1))
+  H1 G_(1,2) = G_2 G_1 = [[9,5],[0,8]] differs from G_1 G_2 = [[9,7],[0,8]] (anti-homomorphism is not cosmetic): 1
+  H2 tr[M(a),M(b)] = 2 + (a-b)^2: frieze transfer pairs are irreducible for a != b, never at the Markov level -2: 324
+  H3 U-letters (1),(2): traces/dets (5,6), (7,12), (17,72) and kappa = 4: 1
+  H4 THM-4600 integral anchors: c_1 = -1, c_2 = 1, c_12 = -5, c_1112114 = -17: 4
+  H5 c_w = c_w' iff same primitive root (Sw <= 12): the cocycle splits exactly on submonoids of <p>: 1
+  H5 distinct cycle points (Sw <= 12): 4016
+  H6 endpoint label mod 3 = (-1)^(a_last) mod 3: 2000
+  H7 equal counts, different labels: (1,2) and (2,1) have equal traces but labels 1 and 2 mod 3: 1
+  H8 carry exchange relation B_xy B_yz = B_y B_xyz + 3^|y| 2^(Sy) B_x B_z (a cluster identity ON the cocycle side): 5000

@@ -1,0 +1,31 @@
+K= 2 B=   25: orphans 1419/2000 = 0.7095, x sqrt(K+B) = 3.687
+K= 2 B=   50: orphans 1237/2000 = 0.6185, x sqrt(K+B) = 4.460
+K= 2 B=  100: orphans 1031/2000 = 0.5155, x sqrt(K+B) = 5.206
+K= 2 B=  200: orphans 827/2000 = 0.4135, x sqrt(K+B) = 5.877
+K= 2 B=  400: orphans 616/2000 = 0.3080, x sqrt(K+B) = 6.175
+K= 2 B=  800: orphans 487/2000 = 0.2435, x sqrt(K+B) = 6.896
+K= 2 B= 1600: orphans 344/2000 = 0.1720, x sqrt(K+B) = 6.884
+K= 2 B= 3200: orphans 253/2000 = 0.1265, x sqrt(K+B) = 7.158
+K=2 (all B): alpha_hat = 0.330, 95% profile interval [0.320, 0.340], log-lik drop at 1/2 = 321.23
+K=2 (B >= 200): alpha_hat = 0.420, 95% profile interval [0.385, 0.455], log-lik drop at 1/2 = 9.25
+K= 3 B=   25: orphans 1399/2000 = 0.6995, x sqrt(K+B) = 3.701
+K= 3 B=   50: orphans 1254/2000 = 0.6270, x sqrt(K+B) = 4.565
+K= 3 B=  100: orphans 1014/2000 = 0.5070, x sqrt(K+B) = 5.145
+K= 3 B=  200: orphans 846/2000 = 0.4230, x sqrt(K+B) = 6.027
+K= 3 B=  400: orphans 619/2000 = 0.3095, x sqrt(K+B) = 6.213
+K= 3 B=  800: orphans 497/2000 = 0.2485, x sqrt(K+B) = 7.042
+K= 3 B= 1600: orphans 367/2000 = 0.1835, x sqrt(K+B) = 7.347
+K= 3 B= 3200: orphans 240/2000 = 0.1200, x sqrt(K+B) = 6.791
+K=3 (all B): alpha_hat = 0.330, 95% profile interval [0.315, 0.340], log-lik drop at 1/2 = 326.81
+K=3 (B >= 200): alpha_hat = 0.425, 95% profile interval [0.395, 0.460], log-lik drop at 1/2 = 7.95
+K= 5 B=   25: orphans 1211/2000 = 0.6055, x sqrt(K+B) = 3.316
+K= 5 B=   50: orphans 1005/2000 = 0.5025, x sqrt(K+B) = 3.727
+K= 5 B=  100: orphans 757/2000 = 0.3785, x sqrt(K+B) = 3.878
+K= 5 B=  200: orphans 562/2000 = 0.2810, x sqrt(K+B) = 4.023
+K= 5 B=  400: orphans 429/2000 = 0.2145, x sqrt(K+B) = 4.317
+K= 5 B=  800: orphans 298/2000 = 0.1490, x sqrt(K+B) = 4.228
+K= 5 B= 1600: orphans 238/2000 = 0.1190, x sqrt(K+B) = 4.767
+K= 5 B= 3200: orphans 153/2000 = 0.0765, x sqrt(K+B) = 4.331
+K=5 (all B): alpha_hat = 0.420, 95% profile interval [0.405, 0.435], log-lik drop at 1/2 = 38.21
+K=5 (B >= 200): alpha_hat = 0.455, 95% profile interval [0.410, 0.500], log-lik drop at 1/2 = 1.76
+python3 c4_general_exponent.py 2000 101 2,3,5  7.82s user 0.03s system 99% cpu 7.906 total

@@ -1,0 +1,10 @@
+observed terciles [1000,6400]: 0.56%, 1.11%, 4.22%
+observed terciles [1000,12800]: 0.31%, 0.92%, 3.00%
+null replica 0: [1000,6400] 0.33%, 1.78%, 3.78% | [1000,12800] 0.25%, 1.22%, 2.75%
+null replica 1: [1000,6400] 0.44%, 1.56%, 3.89% | [1000,12800] 0.36%, 0.86%, 3.00%
+null replica 2: [1000,6400] 0.44%, 1.56%, 3.89% | [1000,12800] 0.56%, 0.76%, 2.90%
+null replica 3: [1000,6400] 0.44%, 1.67%, 3.78% | [1000,12800] 0.25%, 0.97%, 3.00%
+null replica 4: [1000,6400] 0.11%, 1.78%, 4.00% | [1000,12800] 0.36%, 0.66%, 3.20%
+orphans K >= 1000 (n = 83): z-score of the actual post-run length vs random orbits of the same size: mean +1.02, median +0.94, fraction z > 0: 0.86
+non-orphans (150 sampled, K >= 1000): z-score mean -0.01, median +0.02
+python3 c4_length_selection.py  24.56s user 0.05s system 99% cpu 24.721 total

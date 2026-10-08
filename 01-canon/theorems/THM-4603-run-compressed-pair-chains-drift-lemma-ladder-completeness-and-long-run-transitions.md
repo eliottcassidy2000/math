@@ -1,119 +1,100 @@
 ---
 id: THM-4603
-title: "Run-compressed pair chains: drift lemma, ladder completeness, and long-run transitions conditional on an authenticated periodic limit pair"
+title: "Run-compressed pair chains: (1) drift lemma - if u - c = 3^k (v - c') with c, c' T-periodic points (e.g. cycle points of U-words w, w', or the halving point 0) and v2(v - c') >= j*Lambda (Lambda = lcm of the Terras periods), both orbits run their periodic patterns in lockstep for j common periods and the debt drifts by the difference of the odd densities per Terras step (THM-4600 is the zero-drift case); (2) ladder completeness - in an admissible pair-chain state (3^max(0,-k) e in Z), every equal-time merge in which both orbits have an odd value before the merge is a ladder collision: the last distinct odd values satisfy z' = 4^i z + (4^i - 1)/3, i >= 1 (child or source ladder), so the ladder compiler of THM-4601 (iv), with all i and both directions, is complete, and together with the concurrent signed-gap decoder it enumerates all class-decided common futures from a marked state; (3) conditional on eventual periodicity of the rational limit orbit, a long run of any periodic pattern in either orbit sends any state to absorption, re-anchoring, zero drift without anchoring, or a linear debt drift; from the universal state (3, 1-27) a child ones-run re-anchors at -1 with debt -5 and a source ones-run drifts at +1/2 (a mechanism for unbounded post-run debt)"
 status: >
-  PROVED: (1) and (2) (elementary). CONDITIONAL: (3) the classification requires a supplied or independently proved eventual-periodicity witness for the rational limit pair; bounded denominators alone do not provide one. OPEN: unconditional eventual periodicity for every such limit pair. FINITE-EXACT: (1) on 720 exact
-  integer tests over 36 word pairs; (2) on all 1651 merges observed from the universal state in 3000 residual sources (child ladders i = 1, 2, 3:
-  870, 50, 18; source ladders i = 1, 2, 3, 4: 672, 33, 7, 1); (3) the exact limit-transition table for 5 states x 55 cycles (U-words with sum <= 8,
-  length <= 4, and the halving point 0), with the two universal-state transitions re-checked on 40 + 40 actual sources.
+  PROVED: (1); (2) for admissible states in which both orbits have an odd value before the merge (the 4z+1 ladder and the odd predecessors
+  (2^a m - 1)/3 are classical; (1) and (2) are elementary bookkeeping on classical facts); (3) the finite-L reduction (that of THM-4601 (ii))
+  and the classification conditional on the eventual periodicity of the rational limit orbit (open in general: a 3x+d periodicity question,
+  which contains the Collatz problem on negative integers when c' = -1). FINITE-EXACT: (1) on 720 session tests (k in [0,6]) and 2,748 exact
+  tests by audit C (k in [-9,9], boundary precision, integral cycle points, the halving point 0); (2) on 1651 session merges and 2,948 audit
+  merges from 10 named and 1,500 random admissible states; (3) all 532 table lines re-derived by audit C, 550 limit pairs all periodic,
+  9 transitions checked on actual integers. Independently audited 2026-10-07 (audit C); corrections applied (scope of (2), conditional
+  classification, realisable lists, SHIFT label, heavy-tail wording); MISTAKE-587. The same scope correction to (3) was made independently and
+  concurrently by codex-complement (05-knowledge/results/collatz_run_classification_scope_20261007e.md): without an authenticated
+  eventual-periodicity witness the outcome is UNRESOLVED; its exact control is the universal-state child run on (2,4), which lands on
+  distinct cycles of periods 12 and 6, both of odd density 1/3.
 session: mac-mini-2026-10-07-twoanchor (continuation)
 source: 05-knowledge/results/runcompress_orphans_cayley_20261007.md
 scripts:
-  - 04-computation/experiments/runcompress_20261007/ladder_and_drift.py (ALL CHECKS PASSED)
-  - 04-computation/experiments/runcompress_20261007/transitions.py (+ transitions.out), drift_check_actual.py (ALL CHECKS PASSED)
+  - 04-computation/experiments/runcompress_20261007/ladder_and_drift.py, drift_check_actual.py (ALL CHECKS PASSED), transitions.py (+ .out)
+  - 04-computation/experiments/runcompress_20261007/audit_C/ (c1_drift_lemma.py, c2_ladder_completeness.py, c3_transitions.py, c3_heavy_tail.py, REPORT.md)
 related:
-  - THM-4600 (run transparency: the case w = w'); THM-4601 (the residual branch; (iv) the ladder compiler, made complete here)
+  - THM-4600 (run transparency: the zero-drift case); THM-4601 (the residual branch; (iv) the ladder compiler, made complete here)
   - THM-4581 (the pair chain); THM-4594 (class-decided certificates)
+  - 05-knowledge/results/collatz_twoanchor_head_decoder_20261007b.md and collatz_complement_ladders_20261007c.md (concurrent signed-gap decoder)
 ---
 
 # THM-4603 — run-compressed pair chains
 
-**Scope correction, 2026-10-07:** part (3)'s original bounded-denominator
-argument did not prove eventual repetition. Its general classification is
-conditional on an authenticated finite lasso. Also, a zero-drift periodic
-pair can occupy distinct cycles of equal odd density; it need not be the
-same cycle out of phase. The finite transition values remain unchanged.
-See [the focused scope controls](../../05-knowledge/results/collatz_run_classification_scope_20261007e.md).
-Parts (1) and (2) are not modified by this correction.
-
 ## Setting
 
-* T is the Terras map on `Q ∩ Z_(2)`, and U is the odd-to-odd map.
-* A pair-chain state is the relation `u = A(v) = 3^k v + e`, with Terras times aligned and debt k. The debt changes by `par(u) − par(v)` per step.
-* For a U-word w, let `c_w = B_w/(2^(Σw) − 3^|w|)` be its rational cycle point. This is the point at which w is read; its odd density is `|w|/Σw`.
+* T is the Terras map on `Q ∩ Z_(2)`.
+* A pair-chain state is the relation `u = A(v) = 3^k v + e` at aligned Terras times. The debt k changes by `par(u) − par(v)` per step.
+* The state is **admissible** if `3^max(0,−k) e ∈ Z`.
+* A T-periodic point c has a Terras period P_c and an odd density. Examples:
+  * the cycle point `c_w = B_w/(2^(Σw) − 3^|w|)` of a U-word w, with density |w|/Σw;
+  * the halving point 0, with density 0.
 
 ## Statements
 
 **(1) Drift lemma.**
-* Let w, w′ be U-words, `c = c_w`, `c′ = c_(w′)`, and `Λ = lcm(Σw, Σw′)`.
-* Suppose odd u, v satisfy `u − c = 3^k (v − c′)` and `v2(v − c′) > jΛ`. Then:
-  * for the first jΛ Terras steps, u follows `w^(jΛ/Σw)` and v follows `w′^(jΛ/Σw′)`;
-  * `T^(jΛ)(u) − c = 3^(k′) (T^(jΛ)(v) − c′)` with `k′ = k + jΛ(|w|/Σw − |w′|/Σw′)`.
-* Both deviations lose one bit of 2-adic precision per Terras step, so the two runs end together.
-* THM-4600 is the case w = w′ (zero drift).
-* The case of the source on +1 (density 1/2) and the child near the halving point 0 (density 0) gives drift +1/2. This is exactly the collapse of the reset children D ≤ 2 in THM-4601 (ii)/(v), whose debt grows like J.
+* Let c, c′ be T-periodic points and `Λ = lcm(P_c, P_(c′))`.
+* Suppose `u − c = 3^k (v − c′)` (k ∈ Z) and `v2(v − c′) ≥ jΛ`. Then:
+  * for jΛ Terras steps both orbits follow the periodic parity patterns of c and c′;
+  * `T^(jΛ)(u) − c = 3^(k′)(T^(jΛ)(v) − c′)` with `k′ = k + jΛ(dens(c) − dens(c′))`.
+* Strict inequality `>` is needed only for an exact last U-letter.
+* Both deviations lose one bit of 2-adic precision per Terras step, so the runs end together.
+* THM-4600 is the case c = c′.
+* The case of the source on +1 (density 1/2) and the child near 0 (density 0) gives drift +1/2. This is the collapse of the reset children D ≤ 2 in THM-4601 (v), whose debt grows like J.
 
 **(2) Ladder completeness.**
-* Suppose two orbits u, v in any pair-chain state first coincide at Terras time s with zero debt.
-* Let Z be their first common odd value, and z_u, z_v their last odd values before s.
-* Then `z_u ≠ z_v`, and both are U-preimages of Z. Hence for some i ≥ 1, either:
-  * `z_v = 4^i z_u + (4^i−1)/3` (child ladder), with letters c and c+2i at z_u and z_v; or
+* Let the state at time 0 be admissible. Suppose the two orbits first coincide at Terras time s with zero debt, and each orbit has an odd value in [0, s). After a two-run both orbits start odd, so this holds there.
+* Let Z be the first common odd value, and z_u, z_v the last odd values before s. Then `z_u ≠ z_v`, both map to Z under U, and for some i ≥ 1 either:
+  * `z_v = 4^i z_u + (4^i−1)/3` (child ladder, letters c and c+2i); or
   * the same relation with u and v exchanged (source ladder).
-* Writing u's and v's words before z_u, z_v as heads `h_u`, `h_v` (Terras lengths `Σh_u`, `Σh_v`):
-  * `|h_v| = |h_u| + k_0`, where k_0 is the debt at the start;
-  * the equal-time condition is `Σh_u = Σh_v + 2i` (child ladder) or `Σh_v = Σh_u + 2i` (source ladder);
-  * the merge time is `s = max(Σh_u, Σh_v) + 1`, independent of the final letter c.
-* For a state anchored at a point c* the head identity reads `F_(h_v)(c*) = 4^i F_(h_u)(c*) + (4^i−1)/3`, or its mirror for source ladders.
-* So the ladder compiler of THM-4601 (iv) (anchor +1, debt 3), with every index i and both directions, is complete: its pairs are exactly the absorbing post-run patterns. The same holds for the compiler at −1 of `collatz_reset2_rules_20261007.md` once every i and the source ladders are included.
+* The heads `h_u`, `h_v` before z_u, z_v satisfy:
+  * `|h_v| = |h_u| + k_0`;
+  * `Σh_u = Σh_v ± 2i` (equal time; for an even start, Σh includes the initial halvings);
+  * merge time `s = max(Σh_u, Σh_v) + 1`, independent of the final letter;
+  * at an anchored state with anchor c*, `F_(h_v)(c*) = 4^i F_(h_u)(c*) + (4^i−1)/3`, or the mirror for source ladders.
+* Both hypotheses are needed:
+  * the reset state (1,1), where u = 3v + 1 with v odd, merges at s = 1 with no odd value before s;
+  * inadmissible starts give half-ladders `z′ = 2^b z + (2^b−1)/3` with b odd (audit C: b = 1, 3).
+* **Consequences.**
+  * The ladder compiler of THM-4601 (iv) (anchor +1, debt 3), with every i and both directions, is complete.
+  * The concurrent signed-gap decoder (collatz_twoanchor_head_decoder_20261007b.md, collatz_complement_ladders_20261007c.md) is complete for the identity `F_v(Y) = S^r(F_u(X))`, `S(z) = 4z + 1`, at a fixed marked state. It states that it is "not for arbitrary common-future diagrams". (2) supplies exactly that step: every such merge has this form, with r ≠ 0 at the last distinct odd values.
 
-**(3) Long-run transitions, conditional on a periodic limit witness.**
-* Let a state A be given, and let one orbit run near the periodic orbit of a cycle point c′ for L Terras steps (2-adically within `2^(−L)`).
-* The other orbit is then near the rational point `A(c′)` (child run) or `A^(−1)(c′)` (source run). For s < L the chain follows the exact limit pair.
-* Additionally suppose the rational limit pair has a supplied or independently
-  proved finite eventual-periodicity witness. Then, after its transient τ
-  independent of L, the marked limit transition has one of the following forms:
-  * **absorption at a fixed time**: a periodic head;
-  * **re-anchoring**: both limits on the same cycle in phase, so the state at the run end is a fixed anchored state, depending only on L mod the period;
-  * **noncoincident zero drift (SHIFT)**: bounded periodic debt, either on the
-    same cycle out of phase or on distinct cycles with equal odd density;
-  * **nonzero drift**: the limit cycles have different odd densities. The debt
-    at the run end is `k_τ + ρ(L − τ) + O(1)`, with ρ their density difference.
-* Without such a witness, the outcome is **UNRESOLVED**. A finite search bound
-  or a fixed denominator does not supply the missing witness.
-* From the universal residual state (3, 1−27) of THM-4601, among the transitions for the 55 cycles (exact table in transitions.out):
-  * **child ones-run**: re-anchors at −1 with debt −5 after 12 steps, via the limit pair (−53, −1);
-  * **source ones-run**: drift +1/2 after an 8-step transient (debt 6 at step 8), via the child limit 25/27 on the trivial cycle;
-  * **child runs of letter 3 or 4**: re-anchor with debts 4 and 9;
-  * **positive drift**: child runs of letters 5, 7, 8 and (1,6), (3,5), between +0.27 and +0.47 per step;
-  * **negative drift (debt paid down)**: source runs of letters 5, 7 and of (1,5), (3,4), (3,5), between −0.18 and −0.43 per step;
-  * **absorption at a fixed time**: source runs of (2,4), (2,6), (1,2,5), (1,5,2), (2,2,4), (2,3,3), and child runs of (1,1,4), (1,1,4,2) (times 17–37).
+**(3) Long-run transitions** (conditional).
+* Let one orbit run near the periodic orbit of c′ for L Terras steps. The other is then near the rational point `A(c′)` (child run) or `A^(−1)(c′)` (source run), and for s < L the chain follows the exact limit pair.
+* If the limit pair is eventually periodic, and an authenticated witness is supplied (true in all 550 computed cases; open in general), then after a transient τ independent of L exactly one of the following holds. Without a witness the outcome is UNRESOLVED (collatz_run_classification_scope_20261007e.md).
+  * **absorption** at a fixed time;
+  * **re-anchoring**: same cycle, in phase, giving a fixed anchored state depending only on L mod the period;
+  * **zero drift, not anchored**: same cycle out of phase, or a different cycle of equal odd density;
+  * **drift**: different densities, debt `k_τ + ρ(L − τ) + O(1)` with ρ the density difference.
+* After a two-run the first post-run letter is 1 or ≥ 3, so runs beginning with the letter 2, and runs near 0, cannot start there.
+* From the universal state (3, 1−27), the realisable transitions among the tabulated cycles (one phase each; `transitions.out`) are:
+
+  | outcome | child runs | source runs |
+  |---|---|---|
+  | re-anchoring | letters 3, 4, 6 (debts 4, 9, 30); the ones-run re-anchors at −1 with debt −5 after 12 steps (limit pair (−53, −1)) | letters 4, 6 (debts 3, −30) |
+  | positive drift, +0.167 … +0.5 per step | 5, 7, 8, (1,6), (3,5) | 1 (+1/2; debt 6 at step 8; child limit 25/27 → trivial cycle), (1,2), (1,1,2), (1,1,1,2), (1,1,2,3), (1,2,1,3), (1,1,1,3), (1,1,2,2) |
+  | negative drift, −0.176 … −0.433 per step (debt paid down) | (1,1,2), (1,1,3), (1,2,2), (1,1,1,2), (1,1,1,3), (1,1,2,2), (1,1,2,3) | 5, 7, 8, (1,5), (1,6), (3,4), (3,5) |
+  | absorption at a fixed time | (1,1,4) at 23, (1,1,4,2) at 37 | (1,2,5) at 20, (1,5,2) at 31 |
 
 ## Proofs
 
-**(1).** Repeat THM-4600 (2) along both cycles:
-* `F_w(u) − c = (3^|w|/2^(Σw))(u − c)`, and likewise for v.
-* Over Λ steps the factors are `3^(|w|Λ/Σw)/2^Λ` and `3^(|w′|Λ/Σw′)/2^Λ`. Their ratio is `3^(drift·Λ)`.
-* The precision condition is THM-4600 (2) iterated j times.
+**(1).** Iterate `T_β(u) − T_β(c) = λ_β(u − c)` with λ ∈ {3/2, 1/2} along both periodic patterns. The ratio of the accumulated factors over Λ steps is `3^(Λ·(dens(c) − dens(c′)))`.
 
-**(2).** Strictly before the coincidence the orbits differ.
-* Just before a coincidence at an odd value w, one orbit is at 2w and the other at the odd value (2w−1)/3.
-* At an even value, the common halving chain leads to Z.
-* Either way, z_u and z_v are distinct odd U-preimages of Z.
-* The odd U-preimages of Z are `(2^a Z − 1)/3` for a in an arithmetic progression with difference 2. Hence `z_(j+1) = 4z_j + 1`, and `z′ = 4^i z + (4^i−1)/3`.
-* The equal-time and debt conditions give the head relations. The anchored form follows from the slope identities of THM-4601 (iv).
+**(2).**
+* Strictly before s the orbits differ.
+* Their last odd values are distinct and lead, via halving chains, to the common odd value Z.
+* For integers the ladder is the classical description of the odd U-preimages of Z.
+* In general, the equal-time and debt conditions give `3^(|h_u|+1) e_0 + 3·2^(g_u) B_u + 2^(t_u) = 3·2^(g_v) B_v + 2^(t_v)`, where t is the Terras time of the last odd value and g counts initial halvings. By admissibility the first term is ≡ 0 mod 3. So `2^(t_u) ≡ 2^(t_v)` mod 3, the letter difference is even, and the relation is a ladder.
 
-**(3), repaired.** Read the supplied eventual-periodicity witness and verify
-every exact rational transition. The difference of odd-step counts over its
-period gives the debt increment, and division by the period gives ρ.
-Classify coincidence, phase and density separately. The finite-L shadowing
-then transfers this authenticated limit calculation to the guarded long run.
-Bounded denominators do not imply bounded numerators or repetition. In fact
-`A(v)=v+n+1` and the fixed child limit `v=-1` give the limit pair `(n,-1)`
-for any positive odd n; an unconditional eventual-periodicity conclusion
-would settle the open no-divergence question for arbitrary integer orbits.
-The original universal inference is therefore not supplied by this proof. ∎
-
-For the zero-drift boundary, the actual universal state `(3,-26)` with
-child cycle point `7/55` reaches the limit pair `(2/55,7/55)` at time24,
-with debt8. The two cycles have periods12 and6, both odd density1/3,
-and are disjoint. This is a SHIFT entry in the existing exact table, not
-an example of two phases of one cycle.
+**(3).** Exact rational iteration of the limit pair until (u, v) repeats; the drift over the period is then read off. ∎
 
 ## Reading
 
-* The pair chain is a debt walk whose long-run increments are differences of odd densities.
-  * Re-anchoring keeps the debt bounded.
-  * Drift moves it linearly in the run length.
-* The heavy tail of THM-4601's post-run problem therefore has an identified source: post-run runs with positive drift. Above all, a long source ones-run is a new Mersenne-like excursion, during which the debt grows by L/2.
-* A complete variable-depth rule needs a mechanism that pays such debts. Candidates are negative-drift runs and re-anchoring.
-* Ladder completeness turns "find a certificate" into "find a ladder pair", at every anchor.
+* The pair chain is a debt walk whose long-run increments are differences of odd densities. Re-anchoring keeps the debt bounded; drift moves it linearly in the run length.
+* **Positive-drift runs explain why no bounded post-run depth suffices.** A source ones-run of length L raises the debt by about L/2: a new Mersenne-like excursion.
+* **They do not cause the s^(−1/2) tail.** Such runs have Haar probability 2^(−L); the tail is the diffusive return time of the zero-drift debt walk (THM-4581). From the universal state, survival to s = 3000 is 0.316 overall and 0.312 among paths with no source ones-run ≥ 14 (audit C).

@@ -1,0 +1,7 @@
+N = 10000
+T=   32: q2=0.1988 prod3=0.2087 ratio=0.953 | q3=0.05930 prod6=0.06072 ratio=0.977 (events 593)
+T=   64: q2=0.1518 prod3=0.1574 ratio=0.964 | q3=0.03350 prod6=0.03444 ratio=0.973 (events 335)
+T=  128: q2=0.1103 prod3=0.1120 ratio=0.985 | q3=0.01920 prod6=0.01702 ratio=1.128 (events 192)
+T=  256: q2=0.0736 prod3=0.0745 ratio=0.987 | q3=0.00830 prod6=0.00750 ratio=1.107 (events 83)
+T=  512: q2=0.0438 prod3=0.0436 ratio=1.003 | q3=0.00370 prod6=0.00255 ratio=1.448 (events 37)
+T= 1024: q2=0.0230 prod3=0.0229 ratio=1.004 | q3=0.00100 prod6=0.00070 ratio=1.427 (events 10)

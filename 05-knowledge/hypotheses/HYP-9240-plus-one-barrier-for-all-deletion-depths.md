@@ -34,11 +34,11 @@ scripts:
 * So HYP-9240 follows from `excess(N_D) < s_0(D)/2`, equivalently `odd(N_D) < ⌈(s_0 + σ_T(N_D))/2⌉`. The excess of N is odd(N) − σ_T(N)/2.
 * The weaker bound `excess < ⌈s_0/2⌉` is not sufficient: when s_0 and σ_T are both odd, excess = s_0/2 gives zero debt (audit A).
 
-**Nature of the problem (remark, 2026-10-07 continuation).**
-* The clearing word of `y* = −1 + 2·3^(−D)` is the parity vector of a 2-adic integer. So the landing N_D and the entry debt are functions of the 2-adic expansion of `3^(−D)` alone.
-* Real-size bounds give only `1 ≤ N_D + 1 ≤ (3/2)^D`: in the coordinate `w = y + 1`, the steps are `w ↦ 3w/2` or `w ↦ (w+1)/2`.
-* A proof for all D therefore needs control of a digit statistic of `3^(−D)` in base 2. That is a problem of the same type as the zeroless-power questions (THM-4580).
-* The finite range D ≤ 8000 is settled by exact computation.
+**Nature of the problem (remark, 2026-10-07 continuation; corrected after audit C).**
+* The clearing word of `y* = −1 + 2·3^(−D)` is the Terras parity vector of `−1 + 2·(3^(−D) mod 2^(s_0+1))`. So the landing `N_D = (2 − 3^D + B_word)/2^(s_0)` and the entry debt are functions of D and of the first s_0 binary digits of 3^(−D) (checked for D ≤ 3000).
+* Real-size bounds give only `N_D + 1 < (3/2)^D`: with `w = y + 1`, `max(w, 1)` never grows under `w ↦ (w+1)/2` and grows by at most 3/2 per odd step. Observed landings are far smaller: `log(N_D + 1)/log((3/2)^D) ≤ 0.455`.
+* An all-D proof needs 2-adic control of the orbit of `−1 + 2·3^(−D)` up to its clearing time s_0 (1.79D–2.22D for 100 ≤ D ≤ 3000), i.e. of a nonlinear function of the first s_0 binary digits of 3^(−D). We know no method. The zeroless-power problems (THM-4580) are an analogy, not a reduction.
+* The finite range D ≤ 8000 is settled exactly.
 
 **Evidence.**
 * For D ≤ 3000 every landing satisfies `N_D ≤ 880`, and for D ≤ 8000 `N_D ≤ 2527`.
