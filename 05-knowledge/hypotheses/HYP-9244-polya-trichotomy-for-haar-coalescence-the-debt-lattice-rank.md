@@ -10,8 +10,8 @@ status: >
   coupling groups from rank 5; every map from rank 6), by one-step Lamperti forms valid against any coupling sequence, with
   contracting examples such as Z_5 (1,1,6,11,16) and Z_7 (1,2,3,5,11,13,17); and map by map, where one-step forms are impossible,
   by exact fixed-length or adaptive block certificates (THM-4611; not yet independently audited at the time of writing): this file's
-  rank-3 evidence map Z_5 (1,2,3,7,1), audit F's rank-3 maps including Z_4 (1,3,5,7) (all but Z_7 (1,2,3,5,1,1,1), pending), and all
-  18 maps of a seeded Z_5 census. Accessibility: a second, twisted obstruction (audit G)
+  rank-3 evidence map Z_5 (1,2,3,7,1), all of audit F's rank >= 3 maps (including Z_4 (1,3,5,7)),
+  and all 18 maps of a seeded Z_5 census. Accessibility: a second, twisted obstruction (audit G)
   shows that excluding the constant-c obstruction is not enough (Z_3 (1,1,5), r = (0,2,5), contracting: odd offsets never merge).
   Open: rank 1 for d >= 3 (sketch-level route; THM-4610 reserved by opus-2026-10-08-S22), rank 2, a general theorem for ranks 3-5
   with an even-order coupling group, dependent multipliers or composite d (so far certificates are found map by map; every map tested
@@ -199,7 +199,7 @@ Author's runs and audit F's independent integer-orbit runs. Visit window = mean 
 | rank 1, `d ≥ 3` | OPEN; sketch-level route for two-valued translation-only maps (below); NUMERICAL `T^(−1/2)` | — |
 | rank 2 | OPEN (critical) | — |
 | rank ≥ 3, independent multipliers, prime `d` | PROVED transient for translation-only maps (all `m_i` congruent mod `d`; `d ≥ 5`), for odd-order coupling groups from rank 5, and for every map from rank 6 | THM-4609 (3)–(6) |
-| ranks 3–5 with an even-order coupling group | PROVED map by map through exact block certificates, fixed-length or adaptive: the evidence-table representative `Z_5` (1, 2, 3, 7, 1), audit F's rank-3 maps (all but one `Z_7` map, pending), and all 18 maps of a seeded `Z_5` census (six with coupling group `{±1}`); OPEN as a general theorem | THM-4611 (2)–(6) |
+| ranks 3–5 with an even-order coupling group | PROVED map by map through exact block certificates, fixed-length or adaptive: the evidence-table representative `Z_5` (1, 2, 3, 7, 1), all of audit F's rank ≥ 3 maps, and all 18 maps of a seeded `Z_5` census (six with coupling group `{±1}`); OPEN as a general theorem | THM-4611 (2)–(6) |
 | dependent multipliers; composite `d` | `Z_4` (1, 3, 5, 7): no fixed-length certificate exists, but an adaptive one does, so it is PROVED non-coalescing; dependent multipliers covered map by map (e.g. `Z_5` (1, 6, 11, 11, 4)); OPEN in general | THM-4611 (3′), (4) |
 
 **Structural facts used (PROVED, THM-4609 (1)).**

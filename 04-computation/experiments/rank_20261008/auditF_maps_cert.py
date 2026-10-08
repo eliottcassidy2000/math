@@ -18,7 +18,7 @@ Lam = sum(math.log(x / d) for x in m) / d
 bad = [(a, b) for a in G for b in range(d) if (a, b) != (1, 0) and all(m[(a * j + b) % d] == m[j] for j in range(d))]
 t0 = time.time()
 print(f"{name}: d = {d}, m = {m}, r = {r}, rank {rho}, Lambda = {Lam:+.4f}, coupling group {G}, property (i) {'holds' if not bad else 'FAILS ' + str(bad)}", flush=True)
-res = adaptive_certify(d, m, r, K0, KMAX, 0.02, log=lambda x: print(x, flush=True))
+res = adaptive_certify(d, m, r, K0, KMAX, 0.02, log=lambda x: print(x, flush=True), lean=True)
 if res:
     Qi, nU, counts, mgl = res
     print(f"   EXACT: integer form Q = {Qi} balances all {nU} distinct leaf blocks (block lengths {K0}..{KMAX}; nodes refined per level {counts}; leaf margin {mgl:+.4f})  [{time.time() - t0:.0f}s]", flush=True)

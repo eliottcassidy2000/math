@@ -64,10 +64,29 @@ class Recursor:
             A = A + As[idx, e2]
         return A
 
-def adaptive_certify(d, m, r, K0, KMAX, TAU, rounds=4, log=print):
+def block_arrays_lean(d, m, r, v, rho, k, chunk=128):
+    """Same table as block_balance2.block_arrays(d, m, r, v, rho, k), built level by level in int32 with chunked in-place
+    accumulation (memory about half, no full-size temporaries).  Values are asserted to fit in int32."""
+    R = Recursor(d, m, r, v, rho)
+    Hp, Ap = None, None
+    for s in range(1, k + 1):
+        mod = d ** s; H = np.array(ratio_group(m, mod), dtype=np.int64); E = np.arange(mod, dtype=np.int64)
+        A = np.empty((len(H), mod, rho, rho), dtype=np.int32)
+        for c0 in range(0, len(H), chunk):
+            Mt = H[c0:c0 + chunk][:, None] * np.ones((1, mod), dtype=np.int64); Et = np.ones((Mt.shape[0], 1), dtype=np.int64) * E[None, :]
+            if s == 1:
+                blk = R.D[Mt % d, Et % d]
+            else:
+                blk = R.next_level(Hp, Ap, s - 1, Mt, Et)
+            assert np.abs(blk).max() < 2 ** 31
+            A[c0:c0 + chunk] = blk
+        Hp, Ap = H, A
+    return Hp, Ap
+
+def adaptive_certify(d, m, r, K0, KMAX, TAU, rounds=4, log=print, lean=False, chunk=20000):
     """Return (Qi, nleaf_blocks, counts, leaf_margin) for an exactly verified adaptive certificate, or None."""
     rho, v = int_coords(m)
-    T = {s: block_arrays(d, m, r, v, rho, s) for s in range(K0, KMAX)}
+    T = {s: (block_arrays_lean(d, m, r, v, rho, s) if lean else block_arrays(d, m, r, v, rho, s)) for s in range(K0, KMAX)}
     R = Recursor(d, m, r, v, rho)
     H0, A0 = T[K0]
     flat0 = A0.reshape(-1, rho, rho)
@@ -91,19 +110,27 @@ def adaptive_certify(d, m, r, K0, KMAX, TAU, rounds=4, log=print):
             Hn = np.array(ratio_group(m, d ** (s + 1)), dtype=np.int64)
             red = Hn % d ** s
             order = np.argsort(red); red_sorted = red[order]
-            lo = np.searchsorted(red_sorted, Mf, side='left'); hi = np.searchsorted(red_sorted, Mf, side='right')
-            Mt_list = []; Et_list = []
-            for t in range(d):
-                for off in range(int((hi - lo).max())):
-                    sel = lo + off < hi
-                    Mt_list.append(Hn[order[(lo + off)[sel]]]); Et_list.append(Ef[sel] + d ** s * t)
-            Mt = np.concatenate(Mt_list); Et = np.concatenate(Et_list)
-            blocks = R.next_level(Hs, As, s, Mt, Et)
-            mgn = margins_Q(Q, blocks)
             final = (s + 1 == KMAX)
-            badn = (mgn < TAU) & (not final)
-            gb = blocks[~badn]; leaves.append(gb[np.any(gb.reshape(len(gb), -1) != 0, axis=1)])
-            Mf, Ef = Mt[badn], Et[badn]
+            newM = []; newE = []
+            # process the frontier in chunks; lifts of a chunk are built, evaluated and reduced to unique leaves at once
+            for c0 in range(0, len(Mf), chunk):
+                Mc, Ec = Mf[c0:c0 + chunk], Ef[c0:c0 + chunk]
+                lo = np.searchsorted(red_sorted, Mc, side='left'); hi = np.searchsorted(red_sorted, Mc, side='right')
+                Mt_list = []; Et_list = []
+                for t in range(d):
+                    for off in range(int((hi - lo).max())):
+                        sel = lo + off < hi
+                        Mt_list.append(Hn[order[(lo + off)[sel]]]); Et_list.append(Ec[sel] + d ** s * t)
+                Mt = np.concatenate(Mt_list); Et = np.concatenate(Et_list)
+                blocks = R.next_level(Hs, As, s, Mt, Et)
+                mgn = margins_Q(Q, blocks)
+                badn = (mgn < TAU) & (not final)
+                gb = blocks[~badn]
+                gb = gb[np.any(gb.reshape(len(gb), -1) != 0, axis=1)]
+                if len(gb): leaves.append(np.unique(gb.reshape(-1, rho * rho), axis=0))
+                newM.append(Mt[badn]); newE.append(Et[badn])
+            Mf = np.concatenate(newM) if newM else np.zeros(0, dtype=np.int64)
+            Ef = np.concatenate(newE) if newE else np.zeros(0, dtype=np.int64)
             counts.append(len(Mf))
         U = np.unique(np.concatenate([x.reshape(-1, rho * rho) for x in leaves]), axis=0).reshape(-1, rho, rho)
         Uf = U.astype(float); Uf /= np.trace(Uf, axis1=1, axis2=2)[:, None, None]

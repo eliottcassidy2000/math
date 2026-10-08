@@ -1,4 +1,4 @@
-# The debt-lattice rank with the least proof requirements: every expanding map escapes, Z_2 is classified, and one-step Lamperti forms make debt walks of rank three or more transient (THM-4607, THM-4608, THM-4609)
+# The debt-lattice rank with the least proof requirements: every expanding map escapes, Z_2 is classified, and one-step and block Lamperti forms make debt walks of rank three or more transient (THM-4607, THM-4608, THM-4609, THM-4611)
 
 Session `mac-mini-2026-10-08-rank`, 2026-10-08. Independently audited by audit G (CORRECT WITH FIXES; MISTAKE-590). Sections 3.4, 4 and 5 were added after the audit and are not independently audited.
 
@@ -22,6 +22,10 @@ Scripts are in `04-computation/experiments/rank_20261008/`.
   - For prime `d` and independent multipliers, the standard form `Q = I` balances every coupling from rank 4 (translation-only maps), rank 5 (odd-order coupling groups) and rank 6 (every map). Rank-3 translation-only maps have two universal families with explicit integer forms.
   - Hence contracting maps whose translates fail to merge: `x/5, (x + 4)/5, (6x + 3)/5, (11x + 2)/5, (16x + 1)/5` (`Λ = −0.217`), and on `Z_7` the generic map with multipliers `1, 2, 3, 5, 11, 13, 17` (`Λ = −0.346`).
   - Rank zero coalesces almost surely iff a finite offset chain reaches 0.
+- **THM-4611 (section 6b; added after audit G).** Block Lamperti certificates.
+  - Given the past, a `k`-step debt increment has second moment `d^(−k) A_k(h)`, an integer matrix of the hidden state `h = (M, e) mod d^k`.
+  - One form balancing every block (of fixed length, or of a length chosen by the hidden state) gives escape. The best form is a quasi-concave optimization in `Q^(−1)`.
+  - This proves non-coalescence map by map where one-step forms are impossible. That includes HYP-9244's rank-3 evidence map `Z_5` (1, 2, 3, 7, 1), the composite-base map `Z_4` (1, 3, 5, 7) (which provably has no fixed-length certificate), and all 18 maps of a seeded `Z_5` census.
 
 **The structural picture.**
 - The debt walk is a random walk on (a projection of) the root lattice `A_(d−1)`. Its step under coupling `π` is a root `v_π(j) − v_j`, and its covariance is the transported Laplacian of the cycle graph of `π`.
@@ -221,7 +225,16 @@ The second row is HYP-9244's rank-3 evidence map. Its `q` freezes at 0.6855 nume
 | (3, all units) | 44,208 | 6 | adaptive lengths 3–5 |
 | (4, all units) | 3,408 | 6 | fixed `k = 2`; five of six by the same form `5I − J` |
 
-**Audit F's evidence maps.** Audit F measured frozen merge probabilities for several rank-3 maps. All of them except one are now proved non-coalescing: `Z_5` (1, 2, 3, 7, 1), (1, 2, 3, 7, 11) and `Z_4` (1, 3, 5, 7) above; `Z_5` (1, 6, 11, 16, 1) by THM-4609; and `Z_5` (1, 8, 3, 7, 12) with `r = (0, −3, 4, 4, 2)` and (1, 2, 3, 7, 6) by adaptive certificates (`auditF_maps_cert_Z5.out`). The remaining one, `Z_7` (1, 2, 3, 5, 1, 1, 1), is not certified with lengths 2–4 (leaf optimum −0.036); a run with lengths up to 5 was killed by memory pressure and is pending.
+**Audit F's evidence maps.** Audit F measured frozen merge probabilities for several rank ≥ 3 maps. **All of them are now proved non-coalescing**: `Z_5` (1, 2, 3, 7, 1), (1, 2, 3, 7, 11) and `Z_4` (1, 3, 5, 7) above; `Z_5` (1, 6, 11, 16, 1) by THM-4609; and by adaptive certificates `Z_5` (1, 8, 3, 7, 12) with `r = (0, −3, 4, 4, 2)` and (1, 2, 3, 7, 6) (`auditF_maps_cert_Z5.out`) and `Z_7` (1, 2, 3, 5, 1, 1, 1) (lengths 3–5, 1,258,461 leaf blocks, `auditF_maps_cert_Z7_k5.out`; lengths 2–4 do not suffice).
+
+**Why `5I − J` keeps appearing at rank 4 on `Z_5` (exact, `a4_metric.out`).** When all five log-multipliers are affinely independent, `5I − J` is the `S_5`-symmetric metric of the root lattice `A_4`. In it:
+- every translation covariance is strictly balanced (`½ tr = 1 > λ_max = 0.724`, in units of `1/d`);
+- every coupling with multiplier 2, 3 or 4 is at exact equality (`½ tr = λ_max = 0.8`), because 4-cycles and transpositions are even cycles;
+- different involutions have no common top eigenvector.
+
+By subadditivity of `λ_max − ½ tr`, a 2-step block is therefore strictly balanced unless every next coupling is non-translation (or the identity) and shares a top eigenvector with the first. This explains why five of the six rank-4 census maps certify at `k = 2` with this one form. The 2-step blocks depend on the constants only through `r mod 25`. Over all 3,125 lifts of the constants mod 25, `5I − J` certifies at `k = 2` for 2,950–3,000 lifts for each of seven rank-4 maps (`a4_lifts.out`). The 125–175 failing lifts per map look like a codimension-2 condition.
+- A theorem for every full-rank `Z_5` map would need certificates uniform over residue classes of `m` and `r`. The deeper digits of `m` and `r` are fixed parameters, not adversarial ones, so they would join the hidden state.
+- That is a concrete next step, not done here.
 
 **The hidden-digit arithmetic is essential.** If an adversary chooses the translation part of every next coupling (identity steps deleted), a certificate would depend on the multipliers only. That fails for every map tested, even without sticky reflections: for `Z_7` (1, 1, 1, 1, 2, 3, 5) the adversary repeats a rank-one reflection on 5 of 7 branches (`adversarial_cert.out`).
 
@@ -248,6 +261,13 @@ All runs were in `04-computation/experiments/rank_20261008/`, with Python 3.10, 
 | `python3 twisted_check.py` | not recorded | the twisted invariant along the chain; merge counts by offset |
 | `python3 rank1_two_valued.py 1500 16384` | not recorded | rank-one tails |
 | `python3 z5_types_exact.py` | about 1 min | |
+| `python3 block_lmi2.py Z5_12371 4` (also `Z5_11237 5`, `Z7_1111235 4`, `Z7_11123511 2`) | 1.5–2 min each; up to about 2 GB | fixed-length block certificates (THM-4611 (3)) |
+| `python3 block_certificates.py` | about 1 min after the tables (0.5–2 GB) | re-verifies the five fixed-length certificates from scratch; integer-form margins 0.059, 0.0030, 0.031, 0.030, 0.052 |
+| `python3 block_adaptive.py Z4_1357 1 6 0.02` | about 2 min, 0.6 GB | adaptive certificate for `Z_4` (1, 3, 5, 7) |
+| `python3 block_census.py 6 3 5` | about 30 min | seeded `Z_5` census, fixed `k = 2` then adaptive 3..5 |
+| `python3 auditF_maps_cert.py NAME K0 K` | 0.3–40 min | adaptive certificates for audit F's evidence maps |
+| `python3 d4_obstruction.py`, `sticky_reflections.py`, `property_i_check.py`, `a4_metric.py` | seconds to 1 min | structural checks (fixed-length obstruction on `Z_4`, sticky reflections, property (i), the `A_4` metric) |
+| `python3 adversarial_cert.py`, `a4_lifts.py` | about 2 and 15 min | multiplier-only certificates fail; the `A_4` form over all lifts of the constants mod 25 |
 | `python3 adversarial_lag.py` | about 5 min | |
 | `python3 z5_example_integers.py` | about 10 min | |
 
