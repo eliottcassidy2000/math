@@ -1,0 +1,42 @@
+== (b) explicit forms on the universal families ==
+Q_AP posdef: True  det = 154
+Q_nonAP posdef: True  det = 90
+  Q_AP on AP family: balanced = True;  alpha_max = 0.0388
+  Q_AP on AP minus 2I: balanced = True;  alpha_max = 0.0388
+  Q_nonAP on nonAP family: balanced = True;  alpha_max = 0.0784
+  Q_nonAP on nonAP minus 2I: balanced = True;  alpha_max = 0.0784
+     AP member 0: tr(KQ^-1) = 75/77, leading minors of S = ['71/77', '5037/5929', '3011/23716']
+     AP member 1: tr(KQ^-1) = 89/77, leading minors of S = ['113/77', '4848/5929', '2507/23716']
+     AP member 2: tr(KQ^-1) = 13/11, leading minors of S = ['17/11', '120/121', '197/484']
+     nonAP member 0: tr(KQ^-1) = 58/45, leading minors of S = ['26/45', '1174/2025', '407/2025']
+     nonAP member 1: tr(KQ^-1) = 62/45, leading minors of S = ['34/45', '1249/2025', '808/2025']
+     nonAP member 2: tr(KQ^-1) = 58/45, leading minors of S = ['26/45', '589/2025', '407/2025']
+     nonAP member 3: tr(KQ^-1) = 7/5, leading minors of S = ['4/5', '71/100', '33/100']
+== (f) Q = I on the families: equality or strict failure? ==
+  AP member 0: eigenvalues [0.5858, 2.0, 3.4142], tr/2 = 3.0000, lambda_max - tr/2 = +0.4142
+  AP member 1: eigenvalues [1.0, 2.0, 3.0], tr/2 = 3.0000, lambda_max - tr/2 = +0.0000
+  AP member 2: eigenvalues [2.0, 2.0, 2.0], tr/2 = 3.0000, lambda_max - tr/2 = -1.0000
+  nonAP member 0: eigenvalues [1.0, 2.0, 3.0], tr/2 = 3.0000, lambda_max - tr/2 = +0.0000
+  nonAP member 1: eigenvalues [1.0, 2.0, 3.0], tr/2 = 3.0000, lambda_max - tr/2 = +0.0000
+  nonAP member 2: eigenvalues [1.0, 2.0, 3.0], tr/2 = 3.0000, lambda_max - tr/2 = +0.0000
+  nonAP member 3: eigenvalues [2.0, 2.0, 2.0], tr/2 = 3.0000, lambda_max - tr/2 = -1.0000
+== (a),(c) every 3-subset of non-unit positions, primes d <= 31: covariance formula, paths, balance ==
+  d =  5: 3-sets AP 10, nonAP 0;  covariance-formula mismatches 0; non-path lag graphs 0; NOT balanced by the explicit form: 0
+  d =  7: 3-sets AP 21, nonAP 14;  covariance-formula mismatches 0; non-path lag graphs 0; NOT balanced by the explicit form: 0
+  d = 11: 3-sets AP 55, nonAP 110;  covariance-formula mismatches 0; non-path lag graphs 0; NOT balanced by the explicit form: 0
+  d = 13: 3-sets AP 78, nonAP 208;  covariance-formula mismatches 0; non-path lag graphs 0; NOT balanced by the explicit form: 0
+  d = 17: 3-sets AP 136, nonAP 544;  covariance-formula mismatches 0; non-path lag graphs 0; NOT balanced by the explicit form: 0
+  d = 19: 3-sets AP 171, nonAP 798;  covariance-formula mismatches 0; non-path lag graphs 0; NOT balanced by the explicit form: 0
+  d = 23: 3-sets AP 253, nonAP 1518;  covariance-formula mismatches 0; non-path lag graphs 0; NOT balanced by the explicit form: 0
+  d = 29: 3-sets AP 406, nonAP 3248;  covariance-formula mismatches 0; non-path lag graphs 0; NOT balanced by the explicit form: 0
+  d = 31: 3-sets AP 465, nonAP 4030;  covariance-formula mismatches 0; non-path lag graphs 0; NOT balanced by the explicit form: 0
+== (d) rank >= 4 with Q = I, every unit set up to AGL(1,d) ==
+  d = 5: 1 AGL-orbits with rank >= 4; Q = I fails on 0; max lambda_max(2I - A) = 3.6180 (< 4)
+  d = 7: 4 AGL-orbits with rank >= 4; Q = I fails on 0; max lambda_max(2I - A) = 3.8019 (< 4)
+  d = 11: 24 AGL-orbits with rank >= 4; Q = I fails on 0; max lambda_max(2I - A) = 3.9190 (< 4)
+  d = 13: 67 AGL-orbits with rank >= 4; Q = I fails on 0; max lambda_max(2I - A) = 3.9419 (< 4)
+== (e) Z empty: d independent multipliers, shifted by -v_0 ==
+  d = 5: rank 4, Q = I balanced: True
+  d = 7: rank 6, Q = I balanced: True
+  d = 11: rank 10, Q = I balanced: True
+  d = 13: rank 12, Q = I balanced: True

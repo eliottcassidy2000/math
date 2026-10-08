@@ -1,0 +1,45 @@
+d = 5: 2 AGL(1,5)-orbits of unit-position sets with rank >= 3
+   units at (0, 1) (rank 3): whitened margin +0.2030  exact: BALANCED (den 1)  distinct lag spectra x5: 2
+   units at (0,) (rank 4): whitened margin +0.1389  exact: BALANCED (den 1)  distinct lag spectra x5: 1
+d = 7: 6 AGL(1,7)-orbits of unit-position sets with rank >= 3
+   units at (0, 1, 2, 3) (rank 3): whitened margin +0.0855  exact: BALANCED (den 10)  distinct lag spectra x7: 3
+   units at (0, 1, 2, 4) (rank 3): whitened margin +0.2896  exact: BALANCED (den 1)  distinct lag spectra x7: 1
+   units at (0, 1, 2) (rank 4): whitened margin +0.6253  exact: BALANCED (den 1)  distinct lag spectra x7: 3
+   units at (0, 1, 3) (rank 4): whitened margin +0.4117  exact: BALANCED (den 1)  distinct lag spectra x7: 1
+   units at (0, 1) (rank 5): whitened margin +0.4428  exact: BALANCED (den 1)  distinct lag spectra x7: 3
+   units at (0,) (rank 6): whitened margin +0.2284  exact: BALANCED (den 1)  distinct lag spectra x7: 1
+d = 11: 26 AGL(1,11)-orbits of unit-position sets with rank >= 3
+   units at (0, 1, 2, 3, 4, 5, 6, 7) (rank 3): whitened margin +0.0531  exact: BALANCED (den 10)  distinct lag spectra x11: 3
+   units at (0, 1, 2, 3, 4, 5, 6, 8) (rank 3): whitened margin +0.1444  exact: BALANCED (den 10)  distinct lag spectra x11: 2
+   units at (0, 1, 2, 3, 4, 5, 6) (rank 4): whitened margin +0.6654  exact: BALANCED (den 1)  distinct lag spectra x11: 4
+   units at (0, 1, 2, 3, 4, 5, 7) (rank 4): whitened margin +0.6380  exact: BALANCED (den 1)  distinct lag spectra x11: 3
+   units at (0, 1, 2, 3, 4, 5, 8) (rank 4): whitened margin +0.1500  exact: BALANCED (den 1)  distinct lag spectra x11: 3
+   units at (0, 1, 2, 3, 4, 6, 7) (rank 4): whitened margin +0.8346  exact: BALANCED (den 1)  distinct lag spectra x11: 2
+   units at (0, 1, 2, 3, 4, 5) (rank 5): whitened margin +0.8370  exact: BALANCED (den 1)  distinct lag spectra x11: 5
+   units at (0, 1, 2, 3, 4, 6) (rank 5): whitened margin +0.7525  exact: BALANCED (den 1)  distinct lag spectra x11: 4
+   units at (0, 1, 2, 3, 4, 7) (rank 5): whitened margin +0.3466  exact: BALANCED (den 1)  distinct lag spectra x11: 4
+   units at (0, 1, 2, 3, 5, 6) (rank 5): whitened margin +0.4449  exact: BALANCED (den 1)  distinct lag spectra x11: 4
+   units at (0, 1, 2, 3, 5, 9) (rank 5): whitened margin +0.5858  exact: BALANCED (den 1)  distinct lag spectra x11: 4
+   units at (0, 1, 2, 4, 5, 7) (rank 5): whitened margin +0.1801  exact: BALANCED (den 1)  distinct lag spectra x11: 1
+   units at (0, 1, 2, 3, 4) (rank 6): whitened margin +0.3867  exact: BALANCED (den 1)  distinct lag spectra x11: 5
+   units at (0, 1, 2, 3, 5) (rank 6): whitened margin +0.3405  exact: BALANCED (den 1)  distinct lag spectra x11: 5
+   units at (0, 1, 2, 3, 6) (rank 6): whitened margin +0.2754  exact: BALANCED (den 1)  distinct lag spectra x11: 4
+   units at (0, 1, 2, 3, 7) (rank 6): whitened margin +0.4033  exact: BALANCED (den 1)  distinct lag spectra x11: 4
+   units at (0, 1, 2, 4, 5) (rank 6): whitened margin +0.4576  exact: BALANCED (den 1)  distinct lag spectra x11: 4
+   units at (0, 1, 2, 4, 7) (rank 6): whitened margin +0.2318  exact: BALANCED (den 1)  distinct lag spectra x11: 1
+   units at (0, 1, 2, 3) (rank 7): whitened margin +0.3567  exact: BALANCED (den 1)  distinct lag spectra x11: 5
+   units at (0, 1, 2, 4) (rank 7): whitened margin +0.2592  exact: BALANCED (den 1)  distinct lag spectra x11: 5
+   units at (0, 1, 2, 5) (rank 7): whitened margin +0.3004  exact: BALANCED (den 1)  distinct lag spectra x11: 4
+   units at (0, 1, 3, 4) (rank 7): whitened margin +0.2553  exact: BALANCED (den 1)  distinct lag spectra x11: 5
+d = 7: subgroups of (Z/7)^* by order: [[1], [1, 6], [1, 2, 4], [1, 2, 3, 4, 5, 6]]
+   units at (0, 1, 2, 3) (rank 3): |G|=1: no (min cov rank 3); |G|=2: no (min cov rank 1); |G|=3: no (min cov rank 2); |G|=6: no (min cov rank 1)
+   units at (0, 1, 2, 4) (rank 3): |G|=1: BAL (min cov rank 3); |G|=2: no (min cov rank 2); |G|=3: no (min cov rank 2); |G|=6: no (min cov rank 2)
+   units at (0, 1, 2) (rank 4): |G|=1: BAL (min cov rank 4); |G|=2: no (min cov rank 2); |G|=3: BAL (min cov rank 3); |G|=6: no (min cov rank 2)
+   units at (0, 1, 3) (rank 4): |G|=1: BAL (min cov rank 4); |G|=2: no (min cov rank 2); |G|=3: no (min cov rank 2); |G|=6: no (min cov rank 2)
+d = 11: subgroups of (Z/11)^* by order: [[1], [1, 10], [1, 3, 4, 5, 9], [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]]
+   units at (0, 1, 2, 3, 4, 5, 6, 7) (rank 3): |G|=1: no (min cov rank 3); |G|=2: no (min cov rank 1); |G|=5: no (min cov rank 2); |G|=10: no (min cov rank 1)
+   units at (0, 1, 2, 3, 4, 5, 6, 8) (rank 3): |G|=1: BAL (min cov rank 3); |G|=2: no (min cov rank 2); |G|=5: no (min cov rank 2); |G|=10: no (min cov rank 2)
+   units at (0, 1, 2, 3, 4, 5, 6) (rank 4): |G|=1: BAL (min cov rank 4); |G|=2: no (min cov rank 2); |G|=5: BAL (min cov rank 3); |G|=10: no (min cov rank 2)
+   units at (0, 1, 2, 3, 4, 5, 7) (rank 4): |G|=1: BAL (min cov rank 4); |G|=2: no (min cov rank 2); |G|=5: BAL (min cov rank 3); |G|=10: no (min cov rank 2)
+   units at (0, 1, 2, 3, 4, 5, 8) (rank 4): |G|=1: BAL (min cov rank 4); |G|=2: no (min cov rank 2); |G|=5: no (min cov rank 3); |G|=10: no (min cov rank 2)
+   units at (0, 1, 2, 3, 4, 6, 7) (rank 4): |G|=1: BAL (min cov rank 4); |G|=2: no (min cov rank 2); |G|=5: no (min cov rank 3); |G|=10: no (min cov rank 2)

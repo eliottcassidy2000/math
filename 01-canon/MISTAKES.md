@@ -2052,6 +2052,29 @@ were unaffected; successful explicit-path replays did not validate the prose.
   instead proves its uniform variance and O(1/n) zero-event bound from
   finite colored overlaps; no Poisson independence premise enters it.
 
+## MISTAKE-590 (2026-10-08, mac-mini-2026-10-08-rank; found by independent audit G after checkpoint 97b640656d was pushed) -- a per-offset "iff" claimed where only a limit was proved, a missing positivity hypothesis, a missed second kind of congruence obstruction, a wrong parameter restriction on a sketch route, an over-general impossibility claim, an uncredited criterion, a census miscount, an "equality" that was a strict failure, and a constant attached to the wrong form
+
+- **THM-4608, expanding maps (major).** The classification first said that for expanding 2-adic maps `y` and `y + e` merge with probability `< 1` for every `e`, as an "iff". THM-4607 proves only `q(e) → 0`; `q(e) < 1` at every offset is proved for `px + 1` (with `r_0 = 0`, `r_1 = 1`) and for rank zero (greedy coin), and is numerical elsewhere. Fixed in THM-4607 (3) and THM-4608 (c).
+- **THM-4608, positive multipliers.** Matthews–Watts maps allow negative multipliers. `(1, −3)` and `(−1, 3)` contract with rank one, are not affinely conjugate to `3x + s`, and are numerically diffusive. The theorem is now stated for positive multipliers.
+- **HYP-9244, accessibility (major).** The update did not know a second obstruction: if `ℓ ∤ d`, all `m_i ≡ d (mod ℓ)` and `r_i ≡ d·ψ(m_i)` for a homomorphism `ψ`, then `e_n − ψ(M_n) ≡ e_0 (mod ℓ)`.
+  - The evidence row "`Z_3` (1, 5, 7): 1.000" was this obstruction at `ℓ = 2`, not expansion; even offsets merge (`q(2) = 0.032`).
+  - `Z_3` (1, 1, 5), r = (0, 2, 5), is contracting with no constant-`c` obstruction, yet odd offsets never merge. So "no constant-`c` obstruction implies accessible" is false.
+- **HYP-9244 and the note, rank one.** The sketch route was said to need `μ ≤ d²`. At level weight `s = 1` the per-step weighted moment already equals `κ(θ) < 1` for every lag, so `s` just below 1 works for every `μ`.
+- **HYP-9244, involutions.** "Involution couplings have covariance rank ≤ `⌊d/2⌋`, so one-step balance fails" is true only when that rank is ≤ 2 (one-step balance needs rank ≥ 3 for every coupling). It covers every non-translation map on `Z_5`, not general `d`; for `d ≥ 7` the standard form balances every coupling from rank 6 (THM-4609 (5)).
+- **THM-4609 attribution.** "Balanced" is exactly the trace condition of Peres, Popov and Sousi (2013), Theorem 1.3, proved with the same Lyapunov function. Now credited; the new content is the root laws, the cycle-graph covariances and the lag-0 freeze.
+- **THM-4609 numbers and wording.**
+  - The census at `d = 11` has 26 AGL-orbits, not 24; `balanced_types.out` verifies 22 (ranks 8–10 skipped), audit G all 26.
+  - "`Q = I` gives equality" for the AP family is a strict failure at the `P_3` lags (equality only at the single-edge lags).
+  - `α_max ≈ 0.21` belongs to a form valid only for `d = 5`; for `Q_AP` it is 0.039 and for `Q_nonAP` 0.078.
+  - "2000-digit integers" meant 2000 base-5 digits, with 400 samples per horizon.
+  - Rank-zero and transience sentences were sharpened (return bound and `P(absorb) < 1`, not "transient" for a killed chain).
+- **Process.** Audit G downloaded a survey PDF (about 450 KB) with curl without asking, against the download-permission rule, and deleted it after extracting the definition.
+- **Reusable rules.**
+  - A limit statement (`q(e) → 0`) is not a per-offset statement (`q(e) < 1` for all `e`); check that the proof covers small offsets before writing "iff".
+  - When an obstruction lemma is found, search for its twisted variants: invariants can read the exponents of `M` in the debt lattice, not only its residue.
+  - A parameter restriction on a sketch ("needs `μ ≤ d²`") must be tested at the boundary value of the weight (`s = 1`) before it is written.
+  - Rank bounds that make a one-step criterion impossible must be compared with the criterion's real threshold (rank ≥ 3), not with a convenient general formula.
+
 ## MISTAKE-589 (2026-10-08, mac-mini-2026-10-08-reframes; found by independent audits E (THM-4606) and F (HYP-9244 and the results note) after checkpoint 8de8989efb was pushed) -- a conjecture stated without an accessibility clause, a false "sheet-blind" reading, a diagnostic that could not show what was claimed, a single-event estimate, an "exact" label on a pruned search, a density bound stated for all offsets, a proof sentence wrong for non-integer starts, heuristics stated as identities, and a per-depth tail read from correlated samples
 
 - **HYP-9244, accessibility (major).** "Contraction and recurrence decide coalescence" is false as first stated.

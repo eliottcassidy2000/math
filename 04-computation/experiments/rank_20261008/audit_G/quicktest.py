@@ -1,0 +1,16 @@
+import time
+from mwsim import *
+z5 = MW(5, [1,1,6,11,16], [0,4,3,2,1])
+t0 = time.time()
+print("pair-chain mismatches (Z5 ex, e=1, 300 steps x 40):", pair_chain_check(z5, 1, 300, 40, 1))
+print("pair-chain mismatches (Z5 ex, e=7, 300 steps x 40):", pair_chain_check(z5, 7, 300, 40, 2))
+z3 = MW(3, [1,5,7], [0,1,1])
+print("pair-chain mismatches (Z3 1,5,7, e=1, 300 x 40):", pair_chain_check(z3, 1, 300, 40, 3))
+z5e = MW(5, [3,4,6,7,9], [0,1,3,4,4])
+print("pair-chain mismatches (Z5 3,4,6,7,9, e=2, 300 x 40):", pair_chain_check(z5e, 2, 300, 40, 4))
+c = MW(2, [1,3], [0,1])
+print("pair-chain mismatches (3x+1, e=1, 300 x 40):", pair_chain_check(c, 1, 300, 40, 5))
+print("time", time.time()-t0)
+t0 = time.time()
+res = run_pairs(z5, 1, 1024, 200, 7, [64, 256, 1024])
+print("\n".join(fmt_run(res, [64,256,1024])), "time", time.time()-t0)

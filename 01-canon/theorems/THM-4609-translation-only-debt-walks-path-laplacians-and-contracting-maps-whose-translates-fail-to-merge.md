@@ -1,113 +1,164 @@
 ---
 id: THM-4609
-title: "Translation-only debt walks: if every multiplier is 1 mod d, the coupling of two Haar d-adic orbits is a translation by e mod d and the debt step is uniform over the cyclic roots v_(j+b) - v_j, with covariance (1/d)(2I - A_b) for independent multipliers (A_b = adjacency of the lag-b cycle with the unit positions deleted, a union of paths for prime d); a one-step Lamperti form makes the debt walk transient against ANY sequence of lags; for prime d >= 5 every independent configuration of rank >= 3 has one (the standard form for rank >= 4, two explicit integer forms for the two rank-3 types), so contracting maps such as x/5, (x+4)/5, (6x+3)/5, (11x+2)/5, (16x+1)/5 have translates that fail to merge with positive probability; rank zero merges almost surely iff a finite offset chain reaches 0"
+title: "Root-law debt walks and one-step transience: for every Matthews-Watts map the debt step of two Haar d-adic orbits is uniform over the roots v_pi(j) - v_j of the current affine coupling pi(j) = M j + e (mod d), with scale-free covariance D = 2 I_nf - A (the cycle graph of pi on the non-unit positions; spectrum in [0, 4]); a single form balancing every possible coupling makes the debt walk transient against any coupling sequence (the Peres-Popov-Sousi trace criterion). For prime d and multiplicatively independent multipliers the standard form already works from rank 4 for translation-only maps (all m_i congruent mod d), from rank 5 when the ratios of the multiplier residues generate an odd-order group, and from rank 6 for every map; rank 3 translation-only maps have two explicit integer forms. Hence contracting maps whose translates fail to merge exist, e.g. x/5, (x+4)/5, (6x+3)/5, (11x+2)/5, (16x+1)/5 and the generic Z_7 map with multipliers 1, 2, 3, 5, 11, 13, 17; rank zero merges almost surely iff 0 is reachable from every reachable offset"
 status: >
-  PROVED: statements 1-5 (elementary: d-adic Terras property, Lamperti's Lyapunov function |x|^(-alpha), optional stopping,
-  path-graph spectra 2 - 2cos(pi m/(n+1)) < 4, exact Sylvester checks of the explicit 3x3 forms). FINITE-EXACT: the two
-  rank-3 forms (rank3_universal.py); every AGL(1,d)-type of independent configuration with rank >= 3 for d = 5, 7, 11 has an
-  exactly verified form (balanced_types.py: 2 + 6 + 24 types). NUMERICAL: for the Z_5 example, 12.8-13.5% of 2000-digit integers
-  n merge with n+1 within 100-4000 steps (flat), while every orbit from n <= 20000 reaches one of four cycles; an adversarial
-  lag chooser does not stop the escape (median |x|_A = 24 after 4000 steps). Not yet independently audited.
+  PROVED: statements 1-6 (elementary: the d-adic Terras property, Lamperti's Lyapunov function |x|^(-alpha) as in Peres, Popov and
+  Sousi, Bull. Braz. Math. Soc. 44 (2013), Theorem 1.3, optional stopping, cycle and path spectra, exact Sylvester checks).
+  FINITE-EXACT: the two rank-3 forms (rank3_universal.py; audit G: all 12,065 three-point configurations for prime 5 <= d <= 31);
+  the census of AGL(1,d)-orbits of independent configurations of rank >= 3 (balanced_types.py: d = 5: 2 of 2, d = 7: 6 of 6,
+  d = 11: 22 of 26 checked by the author (ranks <= 7), all 26 by audit G); the standard-form hierarchy for every unit set with
+  d = 7, 11, 13 (rank_hierarchy.py); explicit rank-4 forms for odd-order coupling groups (squares_group_examples.py).
+  NUMERICAL: the Z_5 example (12.8-13.5% of n with 2000 base-5 digits merge with n+1 within 100-4000 steps, 400 per T, flat;
+  audit G: 0.140 +- 0.008 at T = 16384 from e = 1, ten other offsets 0.045-0.274 flat; every orbit from n <= 20000 reaches one
+  of four cycles); adversarial couplings (audit G: six adversaries, no late returns in rank 3). Independently audited 2026-10-08
+  (audit G) for statements 1-4 and the translation-only examples: CORRECT WITH FIXES (PPS attribution, census count, the AP
+  equality claim, alpha values, wording); MISTAKE-590. Statement 5 (the hierarchy) and the non-translation examples in statement
+  6 were added after audit G and are not yet independently audited.
 session: mac-mini-2026-10-08-rank
 source: 05-knowledge/results/debt_rank_least_requirements_20261008.md
 scripts:
-  - 04-computation/experiments/rank_20261008/rank3_universal.py, balanced_types.py, balanced_lamperti.py, balanced_whitened.py (+ .out)
-  - 04-computation/experiments/rank_20261008/z5_types_exact.py, adversarial_lag.py, z5_example_integers.py (+ .out)
+  - 04-computation/experiments/rank_20261008/rank3_universal.py, balanced_types.py, rank_hierarchy.py, squares_group_examples.py (+ .out)
+  - 04-computation/experiments/rank_20261008/z5_types_exact.py, adversarial_lag.py, z5_example_integers.py, coupling_groups.py (+ .out)
+  - 04-computation/experiments/rank_20261008/balanced_lamperti.py, balanced_whitened.py (per-map searches; outputs partial or superseded)
+  - 04-computation/experiments/rank_20261008/audit_G/ (REPORT.md; forms_exact.py, run_z5.py, run_z7_hunt.py, adversary.py)
 related:
-  - HYP-9244 (the trichotomy; this proves its rank >= 3 row for the translation-only class, without any mixing hypothesis)
+  - HYP-9244 (the trichotomy; this proves its rank >= 3 row for the classes above, without any mixing hypothesis)
   - THM-4607 (expanding maps), THM-4608 (Z_2), THM-4581 (rank one, d = 2)
-  - Lamperti (1960); Menshikov, Popov and Wade, Non-homogeneous Random Walks (2016); Peres, Popov and Sousi (2013) (adaptive laws)
+  - Peres, Popov and Sousi (2013), Theorem 1.3; Lamperti (1960); Menshikov, Popov and Wade, Non-homogeneous Random Walks (2016)
 ---
 
-# THM-4609 — translation-only debt walks
+# THM-4609 — root-law debt walks and one-step transience
 
 ## Setting
 
-* A Matthews–Watts map `T(x) = (m_i x + r_i)/d` on `x ≡ i mod d` is **translation-only** if every `m_i ≡ 1 (mod d)`.
-* Pair chain `u = M v + e` (HYP-9244). Let `v_j` be the log-vector of `m_j` in `Γ ⊗ R`, where `Γ = ⟨m_a/m_b⟩` has rank `ρ`.
-* **Lag covariance:** `C_b = (1/d) Σ_j (v_(j+b) − v_j)(v_(j+b) − v_j)^T` for `b ∈ Z/d`.
-* **Independent configuration:** the multipliers equal 1 at a set `Z` of positions, and the remaining `ρ = d − |Z|` multipliers are multiplicatively independent. Only differences `v_(j+b) − v_j` matter, so any single repeated value can play the role of 1.
-* **Balanced:** some positive definite `Q` has
-
-      S_b := ½ tr(C_b Q^(−1)) Q − C_b  ≻ 0   for every b with C_b ≠ 0.
+* **The map.** A Matthews–Watts map `T(x) = (m_i x + r_i)/d` on `x ≡ i mod d`, with positive multipliers prime to `d`. The pair chain is that of HYP-9244: `u = M v + e`, `M' = M m_i/m_j`, `e' = (m_i e + r_i − (m_i/m_j) M r_j)/d`.
+* **Couplings.** `u`'s digit is `i = π_t(j)`, with `π_t(j) = M̄ j + ē (mod d)`. Here `j` is `v`'s fresh uniform digit, and `M̄ = M mod d` lies in the coupling group `G := ⟨m_i/m_j mod d⟩`, generated by the ratios of the multiplier residues.
+  * **Translation-only:** `G = {1}`, i.e. all `m_i` are congruent mod `d` (for example all `≡ 1`). Then `M ≡ 1 (mod d)` at all times.
+* **Root vectors.** `v_j` is the log-vector of `m_j` in `Γ ⊗ R`, where `Γ = ⟨m_a/m_b⟩` has rank `ρ`.
+* **Independent configuration:** the multipliers equal 1 on a set `Z` of positions, and the other `ρ = d − |Z|` are multiplicatively independent. Only differences matter, so one repeated value can play the role of 1.
+* **Root-law covariance** of a coupling `π`: `C_π = (1/d) Σ_j (v_π(j) − v_j)(v_π(j) − v_j)^T`.
+* **Balanced:** a positive definite `Q` has `S_π := ½ tr(C_π Q^(−1)) Q − C_π ≻ 0` for every coupling `π` with `C_π ≠ 0` in the class considered. For `π_b(j) = j + b` write `C_b`.
 
 ## Statements
 
-1. **Translation coupling (PROVED).**
-   * For a translation-only map, `M ≡ 1 (mod d)` always, so `u`'s digit is `i = j + ē`, where `ē = e mod d` is past-measurable and `j` is fresh and uniform.
-   * So given the past, the debt step `v_(j+ē) − v_j` is uniform over the `d` cyclic roots of lag `ē`. Its covariance is `C_ē`; at `ē = 0` the step is 0.
-   * For independent configurations, in the basis of the independent vectors, `C_b = (1/d)(2I − A_b)`. Here `A_b` is the adjacency matrix of the graph on the non-unit positions, with `p ~ p'` iff `p' − p ≡ ±b`.
-   * For prime `d` and `b ≠ 0`, this graph is the `d`-cycle `j → j + b` with the unit positions deleted, a disjoint union of paths. So `C_b` has spectrum `(1/d)(2 − 2cos(πm/(n+1)))` over paths of `n` vertices, all eigenvalues are `< 4/d`, and `tr C_b = 2ρ/d`.
+1. **Root laws and cycle-graph covariances (PROVED).**
+   * Given the past, the debt step is uniform over the `d` roots `v_π(j) − v_j` of the current coupling `π = π_t`. At the identity coupling it is 0.
+   * For an independent configuration, in the basis of the independent vectors, `C_π = (1/d) D_π` with `D_π = 2 I_nf − A_π`:
+     * `I_nf` is the identity on non-unit positions not fixed by `π`;
+     * `A_π` is the adjacency matrix, with multiplicity, of the cycle graph `{j, π(j)}` restricted to non-unit positions.
+   * The spectrum of `D_π` lies in `[0, 4]`:
+     * the value 4 needs an even cycle (for example a transposition) lying entirely in non-unit positions;
+     * paths and odd cycles stay below 4.
+   * `tr D_π = 2·#(non-unit positions not fixed by π)`.
+   * For a translation `π_b`, `b ≠ 0`, and prime `d`, the cycle graph is one `d`-cycle. With the unit positions deleted it is a union of paths, so `C_b = (1/d)(2I − A_b)` and `λ_max(C_b) < 4/d`.
 2. **Rank zero (PROVED; any d).**
-   * If all `m_i` equal `m`, then `M ≡ 1`. The offset is an integer chain `e' = (m e + r_(j+e) − r_j)/d` driven by the fresh digit `j`.
-   * If `m < d` (contracting), `|e|` enters `{|e| ≤ 2R/(d − m)}` and the chain is a finite Markov chain.
-   * `y` and `y + e_0` merge almost surely iff `0` is reachable from every state reachable from `e_0`, with a geometric tail. Otherwise they merge with probability `< 1`.
-   * The congruence obstruction of HYP-9244 produces closed classes avoiding 0.
-3. **Lamperti transience (PROVED).**
-   * If a translation-only map is balanced, choose `0 < α < min_b tr(C_b Q^(−1))/λ_max(C_b Q^(−1)) − 2` and put `V(x) = (x^T Q^(−1) x)^(−α/2)` on the debt lattice.
-   * There is `r_1` such that, while `|x| ≥ r_1`, `E[V(x_(t+1)) − V(x_t) | F_t] ≤ 0` whatever the lag `ē_t` is.
-   * Hence, from debt `x` with `|x|_(Q^(−1)) = r > r_1 + B` (B the step bound), the debt walk ever comes within `r_1` of the origin with probability at most `(r_1/(r − B))^α`.
-   * Since absorption needs debt 0, every non-absorbed start, in particular `(1, e_0)` with `e_0 ≠ 0`, is absorbed with probability `< 1`. No hypothesis on how the lag `ē_t` evolves is used: an adversary choosing the lag at every step cannot prevent the escape.
-4. **The balance criterion for prime `d ≥ 5` (PROVED + FINITE-EXACT).** Every independent configuration of rank `ρ ≥ 3` is balanced.
-   * **`ρ ≥ 4`.** The standard form `Q = I` works, since `λ_max(C_b) < 4/d ≤ ρ/d = tr C_b/2`.
-   * **`ρ = 3`.** By statement 1, the lag covariances are scale-free members of one of two universal families:
-     * AP type (the three positions form an arithmetic progression mod d; for `d = 5` every 3-set does): `{2I − A(P_3), 2I − E_13, 2I}`. Here `Q = I` gives equality. The form
-       `Q_AP = [[6, −2, 0], [−2, 6, −1], [0, −1, 5]]` (basis: end, middle, end) is balanced.
-     * Non-AP type: `{2I − E_12, 2I − E_23, 2I − E_13, 2I}`. Again `Q = I` gives equality. The form
-       `Q_nonAP = [[4, −1, −1], [−1, 5, 0], [−1, 0, 5]]` is balanced.
-     * Both forms are verified exactly by Sylvester's criterion (`rank3_universal.py`). A form valid for the larger family covers the cases where `2I` does not occur (`d = 5`, `d = 7`).
-5. **Contracting maps whose translates fail to merge (PROVED).**
-   * `Z_5`, multipliers `(1, 1, 6, 11, 16)`: `T(x) = x/5, (x + 4)/5, (6x + 3)/5, (11x + 2)/5, (16x + 1)/5`. `Λ = −0.217`, rank 3 (6, 11, 16 independent; AP type).
-   * `Z_7`, multipliers `(1, 1, 1, 1, 8, 15, 22)` (rank 3, `Λ = −0.820`) and `(1, 1, 1, 8, 15, 22, 29)` (rank 4, `Λ = −0.339`). For both, `r_i = (0, 6, 5, 4, 3, 2, 1)`.
-   * In each, Haar `y` and `y + e` merge at equal time with probability `< 1`, although the map contracts. The same holds for every contracting translation-only map of independent rank `≥ 3` on a prime base `d ≥ 5`.
-   * NUMERICAL, `Z_5` example:
-     * only 12.8–13.5% of random 2000-digit integers `n` merge with `n + 1` within 100–4000 steps (flat);
-     * every orbit from `n ≤ 20000` reaches one of four cycles (minimal elements 1, 8, 9, 33);
-     * 28.6% of consecutive pairs `n ≤ 20000` merge at equal time.
+   * If all `m_i` equal `m`, then `M ≡ 1`, couplings are translations, and the offset is an integer chain `e' = (m e + r_(j+e) − r_j)/d`.
+   * If `m < d`, it enters `{|e| ≤ 2R/(d − m)}`, a finite Markov chain.
+   * `y` and `y + e_0` merge almost surely iff 0 is reachable from every state reachable from `e_0`, and then with a geometric tail. Otherwise they merge with probability `< 1`.
+   * If `m > d`, THM-4607 (3) gives `q(e) < 1` for every `e ≠ 0`.
+3. **One-step Lamperti transience (PROVED; the trace criterion of Peres–Popov–Sousi 2013, Theorem 1.3, with the lag-0 freeze added).**
+   * Suppose one form `Q` balances every non-identity coupling `j ↦ aj + b` with `a ∈ G`.
+   * Choose `0 < α < min_π tr(C_π Q^(−1))/λ_max(C_π Q^(−1)) − 2` and `V(x) = (x^T Q^(−1) x)^(−α/2)`.
+   * There is `r_1` such that `E[ΔV | F_t] ≤ 0` whenever `|x_t|_(Q^(−1)) ≥ r_1`, whatever coupling occurs.
+   * So from debt `x` with `|x|_(Q^(−1)) = r > r_1 + B` (`B` the step bound in the same norm), the debt comes within `r_1` of the origin with probability at most `(r_1/(r − B))^α`.
+   * Every non-absorbed start, in particular `(1, e_0)` with `e_0 ≠ 0`, is absorbed with probability `< 1`.
+   * The far-out bound holds against any sequence of couplings, including adversarial ones.
+4. **Translation-only maps on a prime base `d ≥ 5` (PROVED + FINITE-EXACT).** Every independent configuration of rank `ρ ≥ 3` is balanced.
+   * **`ρ ≥ 4`:** `Q = I`, since `λ_max(D_b) < 4 ≤ ρ = ½ tr D_b`.
+   * **`ρ = 3`:** two scale-free families.
+     * AP positions (`p, p+c, p+2c`; every 3-set of `Z/5` is one): `{2I − A(P_3), 2I − E_13, 2I}`.
+       * `Q = I` fails strictly at the `P_3` lags (`λ_max − ½ tr = √2 − 1` in `D`-units) and with equality at the single-edge lags.
+       * `Q_AP = [[6, −2, 0], [−2, 6, −1], [0, −1, 5]]` (end, middle, end) is balanced, with `α_max = 0.039`.
+     * Non-AP positions: `{2I − E_12, 2I − E_23, 2I − E_13, 2I}`.
+       * `Q = I` gives equality.
+       * `Q_nonAP = [[4, −1, −1], [−1, 5, 0], [−1, 0, 5]]` is balanced, with `α_max = 0.078`.
+   * Sylvester's test confirms both exactly.
+5. **Standard-form hierarchy (PROVED + FINITE-EXACT).** For prime `d` and an independent configuration of rank `ρ`, `Q = I` balances every coupling of the class:
+
+   | coupling class | condition on `ρ` | why |
+   |---|---|---|
+   | translations (translation-only maps) | `ρ ≥ 4` | no fixed points: `½ tr = ρ`, and `λ_max < 4` |
+   | `a ∈ G` with `G` of odd order (`−1 ∉ G`) | `ρ ≥ 5` | no even cycles, so `λ_max < 4 ≤ ρ − 1 ≤ ½ tr` |
+   | all affine couplings, i.e. every map | `ρ ≥ 6` | `λ_max ≤ 4 < 5 ≤ ρ − 1 ≤ ½ tr` |
+
+   * By statement 3, every map in these classes has a transient debt walk.
+   * Checked exactly for every unit set with `d = 7, 11, 13` (`rank_hierarchy.py`). The thresholds are sharp for the standard form: it fails somewhere at rank 3, 4 and 5 respectively.
+   * Below the thresholds, explicit forms can still exist. For `G` the squares mod 7 or mod 11, rank 4:
+     * `d = 7`, units `{0, 1, 2}`: `Q = 8I − J`;
+     * `d = 11`, units `{0..6}` and `{0..5, 7}`: integer forms in `squares_group_examples.out`.
+6. **Contracting maps whose translates fail to merge (PROVED).** In each map below, Haar `y` and `y + e` merge at equal time with probability `< 1`, although the map contracts.
+
+   | `d` | multipliers by residue | `Λ` | rank | coupling class | form |
+   |---|---|---|---|---|---|
+   | 5 | `(1, 1, 6, 11, 16)` | −0.217 | 3 | translation-only, AP | `Q_AP` |
+   | 7 | `(1, 1, 1, 1, 8, 15, 22)` | −0.820 | 3 | translation-only, AP | `Q_AP` |
+   | 7 | `(1, 1, 1, 8, 15, 22, 29)` | −0.339 | 4 | translation-only | `Q = I` |
+   | 7 | `(1, 1, 1, 2, 11, 23, 29)` | −0.575 | 4 | residues in `{1, 2, 4}` | `8I − J` |
+   | 7 | `(1, 1, 2, 11, 23, 29, 37)` | −0.060 | 5 | residues in `{1, 2, 4}` | `Q = I` |
+   | 7 | `(1, 2, 3, 5, 11, 13, 17)` | −0.346 | 6 | `G` = all units | `Q = I` |
+
+   * The `Z_5` row is the map `x/5, (x + 4)/5, (6x + 3)/5, (11x + 2)/5, (16x + 1)/5`.
+   * In every row `r_i ≡ −m_i i (mod d)`.
 
 ## Proofs
 
 **1.**
-* `M` is a product of ratios of multipliers `≡ 1`, so `M ≡ 1 (mod d)`. The coupling `i ≡ M j + e` is then a translation.
-* `j` is fresh and uniform (d-adic Terras), and `ē` is `F_t`-measurable.
-* **Covariance.** Each non-unit position `p` lies in exactly two lag-`b` roots, `v_p − v_(p−b)` and `v_(p+b) − v_p`, with coefficients `±1` on its basis vector. Hence the diagonal is `2/d`.
-* An off-diagonal entry is `−1/d` for each root `±(e_p' − e_p)`, i.e. each `p' − p ≡ ±b`.
-* For prime `d` and `b ≠ 0`, `j ↦ j + b` is one `d`-cycle. Deleting `|Z| ≥ 1` vertices leaves paths. If `Z` is empty, shift all vectors by `−v_0` to get `|Z| = 1`.
-* Path adjacency spectra are `2cos(πm/(n+1)) > −2`. ∎
+* `j` is fresh and uniform. `M̄` and `ē` are past-measurable, so `π_t` is, and the step `v_π(j) − v_j` is uniform over the roots.
+* For a non-unit position `p` not fixed by `π`, the coordinate `e_p` appears in exactly two roots, `v_p − v_(π^(−1)(p))` and `v_π(p) − v_p`, with coefficients `±1`. So `D_pp = 2`. A fixed non-unit position gives `D_pp = 0`.
+* `D_pq = −#{j : {j, π(j)} = {p, q}}`, which is `−A_π[p, q]`.
+* On each cycle of `π`, `D` is `2I − A(cycle)`, or the same restricted to the paths left by deleting unit positions.
+  * A cycle of length `ℓ` has eigenvalues `2 − 2cos(2πk/ℓ) ∈ [0, 4]`, with 4 iff `ℓ` is even.
+  * A transposition gives `[[2, −2], [−2, 2]]`, with eigenvalues `{0, 4}`.
+  * A path `P_n` has eigenvalues `2 − 2cos(πk/(n+1)) < 4`.
+* For prime `d`, a translation `j ↦ j + b` (`b ≠ 0`) is one odd `d`-cycle. If `Z` is empty, shift by `−v_0`. ∎
 
 **2.**
-* `e' = u' − v'` is an integer: `m e + r_i − r_j ≡ m(e − i + j) ≡ 0 (mod d)`, using `r_i ≡ −m i`.
-* `|e'| ≤ (m|e| + 2R)/d` with `m < d`.
-* Finite-state Markov chain theory gives the rest. ∎
+* `m e + r_i − r_j ≡ m(e − i + j) ≡ 0 (mod d)`, using `r_i ≡ −m i` and `i = j + ē`. So `e'` is an integer, and `|e'| ≤ (m|e| + 2R)/d`.
+* Finite-state Markov chain theory gives the rest. For `m > d` use THM-4607 (3). ∎
 
 **3.**
-* In the coordinates `y = Q^(−1/2) x`, the step `η` has conditional mean 0, covariance `Σ = Q^(−1/2) C_ē Q^(−1/2)` and is bounded.
+* In coordinates `y = Q^(−1/2) x` the step has conditional mean 0, covariance `Σ = Q^(−1/2) C_π Q^(−1/2)`, and is bounded.
 * Taylor expansion gives
 
-      E[ΔV] = −(α/2)|y|^(−α−2)(tr Σ − (α + 2) ŷ^T Σ ŷ) + O(|y|^(−α−3))
-            ≤ −(α/2)|y|^(−α−2)(tr Σ − (α + 2)λ_max(Σ)) + O(|y|^(−α−3)).
+      E[ΔV] ≤ −(α/2)|y|^(−α−2)(tr Σ − (α + 2)λ_max Σ) + O(|y|^(−α−3)).
 
-* Balance is equivalent to `tr Σ > 2λ_max Σ` for each `Σ ≠ 0`: `λ_max(Σ) = max_w w^T C w/w^T Q w`, and `S_b ≻ 0` says this is `< ½ tr`. So the bracket is positive for small `α`, and `E[ΔV] ≤ 0` for `|y| ≥ r_1`. When `ē = 0` the step is 0.
+* `S_π ≻ 0` is equivalent to `tr Σ > 2λ_max Σ`, since `λ_max Σ = max_w w^T C_π w/w^T Q w`. With a finite set of couplings, one `α` works for all.
+* The identity coupling gives a zero step.
 * Optional stopping for the bounded supermartingale `V(x_(t∧τ))` gives the return bound.
 * **Escape with positive probability, from any non-absorbed state.**
-  * At debt 0 with `ē = 0`, `e' = m_j e/d` lowers `v_d(e)`, so the walk moves within `v_d(e)` steps.
-  * Elsewhere, staying unmoved forever along every continuation would make a positive-measure cylinder merge with `M ≠ 1`, which is null.
-  * At each moving step some root of the current lag has `⟨ξ, x⟩_(Q^(−1)) ≥ 0`. The roots of a lag span the lattice and have mean 0, and for `x = 0` any nonzero root will do.
-  * Each such root raises `|x|²` by at least `min |ξ|² > 0`, and the debt never revisits 0 along the way.
-  * So a finite digit word reaches `|x| ≥ r` without absorption. Then apply the return bound. ∎
+  * At debt 0 with `ē = 0`, `e' = m_j e/d` lowers `v_d(e)`, so the coupling stops being the identity after at most `v_d(e)` steps.
+  * At any state, the identity coupling cannot persist along every continuation: then `u` and `v` would share all digits on a cylinder of positive measure, a null merge with `M ≠ 1`.
+  * At a moving step some root of `π` has `⟨ξ, x⟩_(Q^(−1)) ≥ 0`. The roots have mean 0; if all have `⟨ξ, x⟩ ≤ 0` they all have `⟨ξ, x⟩ = 0`, and then any nonzero root raises `|x|`.
+  * Such a step raises `|x|²` by at least `min|ξ|² > 0`, and the debt never revisits 0.
+  * So a finite digit word reaches `|x| ≥ r` without absorption. ∎
 
 **4.**
-* `ρ ≥ 4`: `λ_max(2I − A_b) < 4 ≤ ρ = ½ tr(2I − A_b)`.
-* `ρ = 3`: the lag graphs on three positions are as listed. A 2-edge path occurs exactly at the lags `±c` of an arithmetic progression with difference `c`, and its end-to-end edge at `±2c`. For a non-AP set the three pair differences are distinct up to sign.
-* The exact checks are in `rank3_universal.py`. ∎
+* `ρ ≥ 4` follows from statement 1.
+* `ρ = 3`: the lag graphs on three positions are as listed.
+  * For an AP with difference `c`, the lags `±c` give the path, the lags `±2c` give the end-to-end edge, and the other lags give nothing. For `d ≥ 5`, `±c` and `±2c` are distinct, and the middle element is unique.
+  * For a non-AP set the three pair differences are distinct up to sign, so no lag carries two edges.
+* The two forms pass Sylvester's test in exact arithmetic (`rank3_universal.py`; audit G, `forms_exact.py`). ∎
 
 **5.**
-* `6 = 2·3`, `11` and `16 = 2^4` are independent. So are `8 = 2^3`, `15 = 3·5`, `22 = 2·11` and `29`.
-* `Λ < 0` is direct: `Π m_i = 1056 < 5^5`, `2640 < 7^7` and `76560 < 7^7`.
-* Apply 3 and 4. ∎
+* From statement 1: `λ_max(D_π) ≤ 4`, strictly below 4 when `π` has no even cycle.
+* `tr D_π ≥ 2(ρ − 1)`, since an affine `π ≠ id` on `Z/d` has at most one fixed point; for translations, `tr D_π = 2ρ`.
+* If `G` has odd order, every non-translation coupling has cycles of length `ord(a)`, which is odd. Translations have one odd cycle.
+* Exact confirmation: `rank_hierarchy.py`. ∎
+
+**6.**
+* Independence: `6 = 2·3`, `11` and `16 = 2^4`; `8 = 2^3`, `15 = 3·5`, `22 = 2·11`, `29`; and the primes `2, 3, 5, 11, 13, 17, 23, 29, 37`.
+* The residues lie in the stated groups.
+* `Λ < 0`: in every row `Π m_i < d^d`.
+* Then apply 3 with the forms of 4 and 5. ∎
 
 ## Reading
 
-* **The least-requirement principle.** For translation-only maps every possible one-step law of the debt is a cyclic-root law. So one fixed quadratic form controls all of them at once: no mixing, equidistribution or decorrelation of the coupling state is needed. This is why rank `≥ 3` transience is provable here, while for general maps (couplings `j ↦ aj + b`, including involutions with rank-2 covariances) it is still a conjecture.
-* **Path Laplacians.** The debt covariance is the Laplacian-like matrix `2I − A` of a path system cut out of a cycle. A path's spectrum never reaches 4, so from rank 4 on the walk escapes by pure dimension counting. Rank 3 needs a tilted form because the path `P_3` and the single edge saturate the standard inequality.
-* **What this does to the conjecture.** The rank `≥ 3` row of HYP-9244 holds for the whole translation-only class, with no hypothesis on the coupling dynamics. Contraction does not imply coalescence once the digit base allows three independent multiplier directions. On `Z_2` it does (THM-4608).
+* **The least-requirement principle.** Every possible one-step law of the debt is a root law of an affine coupling. So one fixed quadratic form can control all of them at once. No mixing, equidistribution or decorrelation of the coupling state is needed: the coupling may even be chosen adversarially.
+* **What costs dimension.** In the cycle-graph Laplacian `D_π`:
+  * a fixed point of the coupling (any `a ≠ 1`) removes one dimension from the trace;
+  * an even cycle (present exactly when `G` contains an element of even order, e.g. `−1`) lets `λ_max` reach 4.
+  * That is the whole hierarchy: translation-only maps need rank 4 (rank 3 with a tilted form), odd-order coupling groups need rank 5, and every map is covered from rank 6.
+* **Contraction and coalescence come apart.**
+  * On `Z_2` they coincide (THM-4608).
+  * From `d = 5` on there are contracting maps whose translates fail to merge. On `Z_7`, examples exist for every coupling type up to the full unit group.
+  * Still open: general maps of rank 3–5 with even-order coupling groups (e.g. `Z_5` with multipliers `1, 2, 3, 7, 1`, where involutions give rank-2 covariances), and `d = 4` maps such as multipliers `(1, 3, 5, 7)`. Numerically they behave the same way (HYP-9244).

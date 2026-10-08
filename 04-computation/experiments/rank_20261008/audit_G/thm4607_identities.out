@@ -1,0 +1,5 @@
+Delta = 0.3: integral of H'' over [0, inf) = 0.746574, B_H formula = 0.746574
+Delta = 1.0: integral of H'' over [0, inf) = 1.096574, B_H formula = 1.096574
+Delta = 2.5: integral of H'' over [0, inf) = 1.846574, B_H formula = 1.846574
+Delta = 5.0: integral of H'' over [0, inf) = 3.096574, B_H formula = 3.096574
+failures: ln-mu identity 0 | rho bounds 0 | g'' bound 0 | B_H integral 0 | H Taylor lower bound 0 | F' >= mu F - R/d 0 | Z_2 departure rule (exact) 0

@@ -1,0 +1,4 @@
+d = 7, G = squares [1, 2, 4], units at [0, 1, 2] (rank 4): 20 couplings; whitened margin +0.1219; exact balanced form: [['7', '-1', '-1', '-1'], ['-1', '7', '-1', '-1'], ['-1', '-1', '7', '-1'], ['-1', '-1', '-1', '7']]
+d = 11, G = squares [1, 3, 4, 5, 9], units at [0, 1, 2, 3, 4, 5, 6] (rank 4): 54 couplings; whitened margin +0.0747; exact balanced form: [['13', '-1', '-1', '-2'], ['-1', '12', '-1', '-1'], ['-1', '-1', '12', '-1'], ['-2', '-1', '-1', '12']]
+d = 11, G = squares [1, 3, 4, 5, 9], units at [0, 1, 2, 3, 4, 5, 7] (rank 4): 54 couplings; whitened margin +0.0774; exact balanced form: [['13', '-1', '-1', '-2'], ['-1', '12', '-1', '-1'], ['-1', '-1', '12', '-2'], ['-2', '-1', '-2', '12']]
+Z_7 example m = [1, 1, 1, 2, 11, 23, 29] residues [1, 1, 1, 2, 4, 2, 1] Lambda = -0.5754 r_i = [0, 6, 5, 1, 5, 4, 1]

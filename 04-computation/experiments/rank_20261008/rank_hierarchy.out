@@ -1,0 +1,18 @@
+d = 7, rank 3: standard form balances every coupling? translations False, odd-order group False, all affine couplings False
+d = 7, rank 4: standard form balances every coupling? translations True, odd-order group False, all affine couplings False
+d = 7, rank 5: standard form balances every coupling? translations True, odd-order group True, all affine couplings False
+d = 7, rank 6: standard form balances every coupling? translations True, odd-order group True, all affine couplings True
+d = 11, rank 3: standard form balances every coupling? translations False, odd-order group False, all affine couplings False
+d = 11, rank 4: standard form balances every coupling? translations True, odd-order group False, all affine couplings False
+d = 11, rank 5: standard form balances every coupling? translations True, odd-order group True, all affine couplings False
+d = 11, rank 6: standard form balances every coupling? translations True, odd-order group True, all affine couplings True
+d = 11, rank 7: standard form balances every coupling? translations True, odd-order group True, all affine couplings True
+d = 11, rank 8: standard form balances every coupling? translations True, odd-order group True, all affine couplings True
+d = 13, rank 3: standard form balances every coupling? translations False, odd-order group False, all affine couplings False
+d = 13, rank 4: standard form balances every coupling? translations True, odd-order group False, all affine couplings False
+d = 13, rank 5: standard form balances every coupling? translations True, odd-order group True, all affine couplings False
+d = 13, rank 6: standard form balances every coupling? translations True, odd-order group True, all affine couplings True
+d = 13, rank 7: standard form balances every coupling? translations True, odd-order group True, all affine couplings True
+d = 13, rank 8: standard form balances every coupling? translations True, odd-order group True, all affine couplings True
+example Z_7 m = [1, 2, 3, 5, 11, 13, 17]: residues [1, 2, 3, 5, 4, 6, 3], Lambda = -0.3463, r_i = [0, 5, 1, 6, 5, 5, 3]
+example Z_7 m = [1, 1, 2, 11, 23, 29, 37]: residues [1, 1, 2, 4, 2, 1, 2], Lambda = -0.0595, r_i = [0, 6, 3, 2, 6, 2, 2]

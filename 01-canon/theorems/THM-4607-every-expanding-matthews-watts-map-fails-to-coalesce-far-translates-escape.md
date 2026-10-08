@@ -5,8 +5,10 @@ status: >
   PROVED (elementary: conditional uniformity of both digits, convexity of g(y) = ln(1 + e^y), optional sampling for the
   debt skeleton, a convex-function occupation bound, Azuma-Hoeffding, Markov's inequality on dyadic blocks, induction).
   Qualitative constants. Generalizes THM-4606 (the case d = 2, m = (1, p)) to every digit base and every rank; for d = 2 the
-  departure rule is checked exactly in z2_step_table.py (35,007 states; departures give min(m_0, m_1)/2 for both coins).
-  Not yet independently audited.
+  departure rule is checked in z2_step_table.py (35,007 states; departures give min(m_0, m_1)/2 for both coins; exact, the
+  additive term being constant: audit G); it is not needed in the proof. Independently audited 2026-10-08 (audit G): CORRECT WITH
+  FIXES (scope of the reading, proof nits); MISTAKE-590. Context: the real-line synchronization dichotomy for random affine IFS
+  (Homburg and Kalle, Adv. Math. 2025, arXiv:2207.09987).
 session: mac-mini-2026-10-08-rank
 source: 05-knowledge/results/debt_rank_least_requirements_20261008.md
 scripts:
@@ -46,7 +48,12 @@ Assume `Λ > 0`.
    * For integer offsets, `q(e) := P(y and y + e ever meet at equal time) ≤ η` once `|e| ≥ 2A(η)`. So `q(e) → 0`, and the map is not coalescent.
    * Meetings with `M ≠ 1` are null, so this is also the probability of any equal-time meeting.
 3. **Small offsets.** `q(e) < 1` for every start from which some finite digit word leads, without absorption, to a state with `F ≥ A(1/2)`.
-   * For `px + 1` on `Z_2` this holds for every nonzero integer offset (THM-4606).
+   * For `px + 1` on `Z_2` (with `r_0 = 0`, `r_1 = 1`) this holds for every nonzero integer offset (THM-4606).
+   * **Rank zero, any `d`** (all `m_i = m > d`): it holds for every nonzero integer offset. The proof is greedy:
+     * if `ē = 0`, then `e' = m e/d` exactly;
+     * otherwise `e' = (m e + r_(j+ē) − r_j)/d`. The terms `r_(j+ē) − r_j` sum to 0 over `j`, so some `j` gives an additive term of the sign of `e`, and `|e'| ≥ (m/d)|e|`.
+     * So `|e|` grows geometrically along a positive-probability path without reaching 0 (idea from audit G, for `d = 2`).
+   * For other expanding maps, `q(e) < 1` at small offsets is checked by simulation only (audit G: `q(e) ≤ 0.28` in every tested case), not proved.
 
 ## Proof
 
@@ -57,7 +64,9 @@ Assume `Λ > 0`.
       ln μ = (1 − g'(x)) ln(m_i/d) + g'(x) ln(m_j/d) − ρ,
       ρ = g(x + δ) − g(x) − g'(x)δ ∈ [0, (δ²/2) max_[x, x+δ] g''].
 
+* Here `[x, x + δ]` means the segment between `x` and `x + δ`, of either sign.
 * Since `g'' ≤ min(1/4, e^(−|y|))`, we have `ρ ≤ (Δ²/2) φ(x)` with `φ(x) = min(1/4, e^(Δ − |x|))`. Also `ρ = 0` when `δ = 0`.
+* In rank zero the debt never moves: then `ρ ≡ 0`, `δ_min` is not needed, and the skeleton step below is void.
 
 **Exact conditional mean.**
 * Given `F_t`, the digit `j` is uniform, and `i = π_t(j)` is uniform as well.
@@ -68,6 +77,7 @@ Assume `Λ > 0`.
 * Let `X_k` be the value of `x` after the `k`-th time the debt moves (`δ ≠ 0`).
 * Its increments lie in `[δ_min, Δ]` in absolute value.
 * It is a martingale: for every `t`, `E[δ_t 1{the next move after a given move happens at t}] = E[1{no move before t} E[δ_t | F_t]] = 0`, using `δ_t 1{δ_t ≠ 0} = δ_t`.
+* If the debt moves only finitely often, use the skeleton stopped at its last move. The bounds below hold for sums over the moves that actually occur.
 
 **Occupation bound.**
 * Let `H` be the even convex function with `H'' = κ min(1/4, e^(2Δ − |y|))`. Then `|H'| ≤ B_H` with `B_H = κ((2Δ + ln 4)/4 + 1/4)`.
@@ -99,4 +109,7 @@ Assume `Λ > 0`.
 * **Where the debt matters.**
   * In the normalization `F = |e|/(1 + M)`, the debt enters only through the convexity of `ln(1 + M)`, and that is felt only while `M` is near 1.
   * A martingale with increments bounded away from 0 spends only `O(√n)` moves in any window. So expansion wins whatever the debt walk does, whether recurrent (rank ≤ 2) or transient.
-* **Within HYP-9244.** The expanding row of the trichotomy is now a theorem for every map. The remaining open rows are contracting.
+* **Within HYP-9244.**
+  * For every expanding map, far translates are now proved to escape: `q(e) → 0`.
+  * `q(e) < 1` at every offset is proved for `px + 1` and for rank zero. For other expanding maps it is proved at offsets with an escape word, and otherwise checked numerically.
+  * The remaining open rows are contracting.

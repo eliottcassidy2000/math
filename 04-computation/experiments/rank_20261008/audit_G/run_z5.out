@@ -1,0 +1,26 @@
+Lambda = -0.216989219580859
+(A) offset e = 1, N = 2000, T up to 16384:
+    T=16: merged 0.1150+-0.0071, no-merge 0.8850; visits/(unmerged@T/4) in (T/4,T] 0.059; P(debt visit in (T/2,T] | unmerged@T/2) 0.032
+    T=64: merged 0.1300+-0.0075, no-merge 0.8700; visits/(unmerged@T/4) in (T/4,T] 0.048; P(debt visit in (T/2,T] | unmerged@T/2) 0.014
+    T=256: merged 0.1350+-0.0076, no-merge 0.8650; visits/(unmerged@T/4) in (T/4,T] 0.039; P(debt visit in (T/2,T] | unmerged@T/2) 0.012
+    T=1024: merged 0.1370+-0.0077, no-merge 0.8630; visits/(unmerged@T/4) in (T/4,T] 0.016; P(debt visit in (T/2,T] | unmerged@T/2) 0.006
+    T=4096: merged 0.1380+-0.0077, no-merge 0.8620; visits/(unmerged@T/4) in (T/4,T] 0.011; P(debt visit in (T/2,T] | unmerged@T/2) 0.002
+    T=16384: merged 0.1400+-0.0078, no-merge 0.8600; visits/(unmerged@T/4) in (T/4,T] 0.006; P(debt visit in (T/2,T] | unmerged@T/2) 0.002
+    merge-time quantiles (50/90/99/max): 4 36 4741 13898   [746s]
+(A) e =     2: merged by T = [16, 64, 256, 1024, 4096]: [0.141, 0.151, 0.155, 0.157, 0.158];  visits in (1024,4096] per unmerged 0.008; latest merge 1347  [770s]
+(A) e =     3: merged by T = [16, 64, 256, 1024, 4096]: [0.105, 0.121, 0.125, 0.126, 0.127];  visits in (1024,4096] per unmerged 0.017; latest merge 1844  [795s]
+(A) e =     4: merged by T = [16, 64, 256, 1024, 4096]: [0.255, 0.267, 0.273, 0.273, 0.274];  visits in (1024,4096] per unmerged 0.007; latest merge 1760  [819s]
+(A) e =     5: merged by T = [16, 64, 256, 1024, 4096]: [0.087, 0.1, 0.105, 0.107, 0.109];  visits in (1024,4096] per unmerged 0.013; latest merge 1467  [845s]
+(A) e =     6: merged by T = [16, 64, 256, 1024, 4096]: [0.101, 0.116, 0.118, 0.118, 0.12];  visits in (1024,4096] per unmerged 0.010; latest merge 2703  [871s]
+(A) e =    10: merged by T = [16, 64, 256, 1024, 4096]: [0.064, 0.08, 0.083, 0.085, 0.085];  visits in (1024,4096] per unmerged 0.002; latest merge 779  [898s]
+(A) e =    25: merged by T = [16, 64, 256, 1024, 4096]: [0.086, 0.099, 0.107, 0.11, 0.11];  visits in (1024,4096] per unmerged 0.008; latest merge 398  [923s]
+(A) e =   125: merged by T = [16, 64, 256, 1024, 4096]: [0.044, 0.053, 0.061, 0.069, 0.071];  visits in (1024,4096] per unmerged 0.005; latest merge 3182  [950s]
+(A) e =  1000: merged by T = [16, 64, 256, 1024, 4096]: [0.014, 0.032, 0.038, 0.044, 0.045];  visits in (1024,4096] per unmerged 0.007; latest merge 1135  [978s]
+(A) e =    -1: merged by T = [16, 64, 256, 1024, 4096]: [0.118, 0.132, 0.134, 0.136, 0.138];  visits in (1024,4096] per unmerged 0.013; latest merge 2495  [1003s]
+(B) 2000-base-5-digit n, n+1 merge within 100: 0.1370 +- 0.0109  [1003s]
+(B) 2000-base-5-digit n, n+1 merge within 1000: 0.1360 +- 0.0108  [1006s]
+(B) 2000-base-5-digit n, n+1 merge within 4000: 0.1490 +- 0.0113  [1018s]
+(C) cycles (min element: count) from 1..20000: {1: 7819, 8: 111, 9: 10004, 33: 2066}
+    cycles: {1: [1], 8: [8, 18, 40], 9: [9, 29, 93, 205, 41], 33: [33, 73, 161]}
+(C) consecutive pairs n < 20000 merging at equal time within 3000 steps: 5717/19999 = 0.2859
+(C) same with n <= 20000: 5717/20000 = 0.2858   [1045s]

@@ -1,0 +1,9 @@
+pair-chain mismatches (Z5 ex, e=1, 300 steps x 40): 0
+pair-chain mismatches (Z5 ex, e=7, 300 steps x 40): 0
+pair-chain mismatches (Z3 1,5,7, e=1, 300 x 40): 0
+pair-chain mismatches (Z5 3,4,6,7,9, e=2, 300 x 40): 0
+pair-chain mismatches (3x+1, e=1, 300 x 40): 0
+time 0.7077031135559082
+T=64: merged 0.1400+-0.0245, no-merge 0.8600; visits/(unmerged@T/4) in (T/4,T] 0.028; P(debt visit in (T/2,T] | unmerged@T/2) 0.006
+T=256: merged 0.1400+-0.0245, no-merge 0.8600; visits/(unmerged@T/4) in (T/4,T] 0.017; P(debt visit in (T/2,T] | unmerged@T/2) 0.000
+T=1024: merged 0.1400+-0.0245, no-merge 0.8600; visits/(unmerged@T/4) in (T/4,T] 0.000; P(debt visit in (T/2,T] | unmerged@T/2) 0.000 time 0.38636207580566406

@@ -1,0 +1,7 @@
+invariant e_t = e_0 + A_t + B_t (mod 2): 450000 chain steps checked, violations 0; absorptions from odd e_0: 0
+constant-c lemma at l = 2 applicable: False
+   Z3 (1,5,7) r=(0,1,1): mod-2 twisted obstruction for odd offsets: True
+   Z3 (1,1,5) r=(0,2,2): mod-2 twisted obstruction for odd offsets: True
+   Z3 (1,5,7) r=(0,4,1): mod-2 twisted obstruction for odd offsets: True
+   Z5 (3,4,6,7,9): mod-2 twisted obstruction for odd offsets: None
+   3x+1 (d=2): mod-2 twisted obstruction for odd offsets: None

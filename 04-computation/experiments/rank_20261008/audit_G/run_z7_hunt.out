@@ -1,0 +1,152 @@
+Z7 rank 3 (THM-4609 ex.): m = [1, 1, 1, 1, 8, 15, 22], r = [0, 6, 5, 4, 3, 2, 1], Lambda = -0.8204, e = 1, N = 500  [126s]
+     T=64: merged 0.4160+-0.0220, no-merge 0.5840; visits/(unmerged@T/4) in (T/4,T] 0.047; P(debt visit in (T/2,T] | unmerged@T/2) 0.024
+     T=256: merged 0.4200+-0.0221, no-merge 0.5800; visits/(unmerged@T/4) in (T/4,T] 0.024; P(debt visit in (T/2,T] | unmerged@T/2) 0.003
+     T=1024: merged 0.4260+-0.0221, no-merge 0.5740; visits/(unmerged@T/4) in (T/4,T] 0.017; P(debt visit in (T/2,T] | unmerged@T/2) 0.007
+     T=4096: merged 0.4260+-0.0221, no-merge 0.5740; visits/(unmerged@T/4) in (T/4,T] 0.014; P(debt visit in (T/2,T] | unmerged@T/2) 0.007
+     T=16384: merged 0.4260+-0.0221, no-merge 0.5740; visits/(unmerged@T/4) in (T/4,T] 0.007; P(debt visit in (T/2,T] | unmerged@T/2) 0.007
+     nonzero-debt merges 0; latest merge 998
+Z7 rank 4 (THM-4609 ex.): m = [1, 1, 1, 8, 15, 22, 29], r = [0, 6, 5, 4, 3, 2, 1], Lambda = -0.3394, e = 1, N = 500  [323s]
+     T=64: merged 0.2220+-0.0186, no-merge 0.7780; visits/(unmerged@T/4) in (T/4,T] 0.000; P(debt visit in (T/2,T] | unmerged@T/2) 0.000
+     T=256: merged 0.2220+-0.0186, no-merge 0.7780; visits/(unmerged@T/4) in (T/4,T] 0.008; P(debt visit in (T/2,T] | unmerged@T/2) 0.000
+     T=1024: merged 0.2220+-0.0186, no-merge 0.7780; visits/(unmerged@T/4) in (T/4,T] 0.000; P(debt visit in (T/2,T] | unmerged@T/2) 0.000
+     T=4096: merged 0.2220+-0.0186, no-merge 0.7780; visits/(unmerged@T/4) in (T/4,T] 0.000; P(debt visit in (T/2,T] | unmerged@T/2) 0.000
+     T=16384: merged 0.2220+-0.0186, no-merge 0.7780; visits/(unmerged@T/4) in (T/4,T] 0.000; P(debt visit in (T/2,T] | unmerged@T/2) 0.000
+     nonzero-debt merges 0; latest merge 14
+hunt d=5 #1 rank 3: m = [16, 6, 31, 1, 1], r = [-5, -1, -2, -3, 6], Lambda = -0.0098, e = 3, N = 400  [335s]
+     T=64: merged 0.0125+-0.0056, no-merge 0.9875; visits/(unmerged@T/4) in (T/4,T] 0.121; P(debt visit in (T/2,T] | unmerged@T/2) 0.038
+     T=256: merged 0.0125+-0.0056, no-merge 0.9875; visits/(unmerged@T/4) in (T/4,T] 0.035; P(debt visit in (T/2,T] | unmerged@T/2) 0.013
+     T=1024: merged 0.0125+-0.0056, no-merge 0.9875; visits/(unmerged@T/4) in (T/4,T] 0.008; P(debt visit in (T/2,T] | unmerged@T/2) 0.003
+     T=4096: merged 0.0125+-0.0056, no-merge 0.9875; visits/(unmerged@T/4) in (T/4,T] 0.013; P(debt visit in (T/2,T] | unmerged@T/2) 0.008
+     nonzero-debt merges 0; latest merge 47
+hunt d=5 #2 rank 3: m = [11, 1, 6, 1, 16], r = [0, 4, 8, 2, 6], Lambda = -0.2170, e = 5, N = 400  [346s]
+     T=64: merged 0.0350+-0.0092, no-merge 0.9650; visits/(unmerged@T/4) in (T/4,T] 0.070; P(debt visit in (T/2,T] | unmerged@T/2) 0.021
+     T=256: merged 0.0350+-0.0092, no-merge 0.9650; visits/(unmerged@T/4) in (T/4,T] 0.039; P(debt visit in (T/2,T] | unmerged@T/2) 0.010
+     T=1024: merged 0.0350+-0.0092, no-merge 0.9650; visits/(unmerged@T/4) in (T/4,T] 0.021; P(debt visit in (T/2,T] | unmerged@T/2) 0.003
+     T=4096: merged 0.0350+-0.0092, no-merge 0.9650; visits/(unmerged@T/4) in (T/4,T] 0.005; P(debt visit in (T/2,T] | unmerged@T/2) 0.000
+     nonzero-debt merges 0; latest merge 32
+hunt d=5 #3 rank 3: m = [6, 1, 1, 11, 46], r = [5, 4, 3, 7, 6], Lambda = -0.0058, e = 5, N = 400  [357s]
+     T=64: merged 0.0725+-0.0130, no-merge 0.9275; visits/(unmerged@T/4) in (T/4,T] 0.105; P(debt visit in (T/2,T] | unmerged@T/2) 0.030
+     T=256: merged 0.0750+-0.0132, no-merge 0.9250; visits/(unmerged@T/4) in (T/4,T] 0.054; P(debt visit in (T/2,T] | unmerged@T/2) 0.011
+     T=1024: merged 0.0750+-0.0132, no-merge 0.9250; visits/(unmerged@T/4) in (T/4,T] 0.032; P(debt visit in (T/2,T] | unmerged@T/2) 0.000
+     T=4096: merged 0.0750+-0.0132, no-merge 0.9250; visits/(unmerged@T/4) in (T/4,T] 0.005; P(debt visit in (T/2,T] | unmerged@T/2) 0.003
+     nonzero-debt merges 0; latest merge 72
+hunt d=5 #4 rank 3: m = [26, 1, 6, 11, 1], r = [0, -1, -2, -3, 6], Lambda = -0.1199, e = 1, N = 400  [369s]
+     T=64: merged 0.0200+-0.0070, no-merge 0.9800; visits/(unmerged@T/4) in (T/4,T] 0.094; P(debt visit in (T/2,T] | unmerged@T/2) 0.020
+     T=256: merged 0.0200+-0.0070, no-merge 0.9800; visits/(unmerged@T/4) in (T/4,T] 0.097; P(debt visit in (T/2,T] | unmerged@T/2) 0.020
+     T=1024: merged 0.0200+-0.0070, no-merge 0.9800; visits/(unmerged@T/4) in (T/4,T] 0.010; P(debt visit in (T/2,T] | unmerged@T/2) 0.003
+     T=4096: merged 0.0200+-0.0070, no-merge 0.9800; visits/(unmerged@T/4) in (T/4,T] 0.010; P(debt visit in (T/2,T] | unmerged@T/2) 0.008
+     nonzero-debt merges 0; latest merge 28
+hunt d=5 #5 rank 3: m = [1, 11, 31, 1, 6], r = [0, 4, 8, 7, -4], Lambda = -0.0847, e = 5, N = 400  [382s]
+     T=64: merged 0.0100+-0.0050, no-merge 0.9900; visits/(unmerged@T/4) in (T/4,T] 0.106; P(debt visit in (T/2,T] | unmerged@T/2) 0.035
+     T=256: merged 0.0100+-0.0050, no-merge 0.9900; visits/(unmerged@T/4) in (T/4,T] 0.048; P(debt visit in (T/2,T] | unmerged@T/2) 0.008
+     T=1024: merged 0.0100+-0.0050, no-merge 0.9900; visits/(unmerged@T/4) in (T/4,T] 0.040; P(debt visit in (T/2,T] | unmerged@T/2) 0.008
+     T=4096: merged 0.0100+-0.0050, no-merge 0.9900; visits/(unmerged@T/4) in (T/4,T] 0.013; P(debt visit in (T/2,T] | unmerged@T/2) 0.003
+     nonzero-debt merges 0; latest merge 13
+hunt d=5 #6 rank 3: m = [1, 16, 31, 6, 1], r = [5, 9, 8, 7, 1], Lambda = -0.0098, e = 1, N = 400  [394s]
+     T=64: merged 0.0025+-0.0025, no-merge 0.9975; visits/(unmerged@T/4) in (T/4,T] 0.098; P(debt visit in (T/2,T] | unmerged@T/2) 0.020
+     T=256: merged 0.0025+-0.0025, no-merge 0.9975; visits/(unmerged@T/4) in (T/4,T] 0.078; P(debt visit in (T/2,T] | unmerged@T/2) 0.008
+     T=1024: merged 0.0025+-0.0025, no-merge 0.9975; visits/(unmerged@T/4) in (T/4,T] 0.008; P(debt visit in (T/2,T] | unmerged@T/2) 0.000
+     T=4096: merged 0.0025+-0.0025, no-merge 0.9975; visits/(unmerged@T/4) in (T/4,T] 0.015; P(debt visit in (T/2,T] | unmerged@T/2) 0.005
+     nonzero-debt merges 0; latest merge 13
+hunt d=5 #7 rank 3: m = [1, 21, 6, 1, 16], r = [5, 4, 8, 7, -4], Lambda = -0.0877, e = 5, N = 400  [407s]
+     T=64: merged 0.0100+-0.0050, no-merge 0.9900; visits/(unmerged@T/4) in (T/4,T] 0.111; P(debt visit in (T/2,T] | unmerged@T/2) 0.023
+     T=256: merged 0.0100+-0.0050, no-merge 0.9900; visits/(unmerged@T/4) in (T/4,T] 0.078; P(debt visit in (T/2,T] | unmerged@T/2) 0.015
+     T=1024: merged 0.0100+-0.0050, no-merge 0.9900; visits/(unmerged@T/4) in (T/4,T] 0.005; P(debt visit in (T/2,T] | unmerged@T/2) 0.005
+     T=4096: merged 0.0100+-0.0050, no-merge 0.9900; visits/(unmerged@T/4) in (T/4,T] 0.008; P(debt visit in (T/2,T] | unmerged@T/2) 0.000
+     nonzero-debt merges 0; latest merge 10
+hunt d=5 #8 rank 3: m = [1, 26, 6, 11, 1], r = [0, 4, 8, -3, -4], Lambda = -0.1199, e = 2, N = 400  [419s]
+     T=64: merged 0.0150+-0.0061, no-merge 0.9850; visits/(unmerged@T/4) in (T/4,T] 0.098; P(debt visit in (T/2,T] | unmerged@T/2) 0.023
+     T=256: merged 0.0150+-0.0061, no-merge 0.9850; visits/(unmerged@T/4) in (T/4,T] 0.041; P(debt visit in (T/2,T] | unmerged@T/2) 0.005
+     T=1024: merged 0.0150+-0.0061, no-merge 0.9850; visits/(unmerged@T/4) in (T/4,T] 0.023; P(debt visit in (T/2,T] | unmerged@T/2) 0.008
+     T=4096: merged 0.0175+-0.0066, no-merge 0.9825; visits/(unmerged@T/4) in (T/4,T] 0.018; P(debt visit in (T/2,T] | unmerged@T/2) 0.000
+     nonzero-debt merges 0; latest merge 1349
+hunt d=7 #1 rank 3: m = [1, 1, 92, 1, 36, 190, 1], r = [7, -1, 12, -3, -4, -5, 8], Lambda = -0.0384, e = 2, N = 400  [431s]
+     T=64: merged 0.1875+-0.0195, no-merge 0.8125; visits/(unmerged@T/4) in (T/4,T] 0.089; P(debt visit in (T/2,T] | unmerged@T/2) 0.037
+     T=256: merged 0.1875+-0.0195, no-merge 0.8125; visits/(unmerged@T/4) in (T/4,T] 0.052; P(debt visit in (T/2,T] | unmerged@T/2) 0.018
+     T=1024: merged 0.1875+-0.0195, no-merge 0.8125; visits/(unmerged@T/4) in (T/4,T] 0.034; P(debt visit in (T/2,T] | unmerged@T/2) 0.006
+     T=4096: merged 0.1875+-0.0195, no-merge 0.8125; visits/(unmerged@T/4) in (T/4,T] 0.018; P(debt visit in (T/2,T] | unmerged@T/2) 0.003
+     nonzero-debt merges 0; latest merge 6
+hunt d=7 #2 rank 3: m = [64, 1, 50, 1, 1, 197, 1], r = [0, 13, 5, 4, 10, 2, -6], Lambda = -0.0382, e = 7, N = 400  [446s]
+     T=64: merged 0.0150+-0.0061, no-merge 0.9850; visits/(unmerged@T/4) in (T/4,T] 0.127; P(debt visit in (T/2,T] | unmerged@T/2) 0.035
+     T=256: merged 0.0150+-0.0061, no-merge 0.9850; visits/(unmerged@T/4) in (T/4,T] 0.066; P(debt visit in (T/2,T] | unmerged@T/2) 0.015
+     T=1024: merged 0.0150+-0.0061, no-merge 0.9850; visits/(unmerged@T/4) in (T/4,T] 0.033; P(debt visit in (T/2,T] | unmerged@T/2) 0.008
+     T=4096: merged 0.0150+-0.0061, no-merge 0.9850; visits/(unmerged@T/4) in (T/4,T] 0.003; P(debt visit in (T/2,T] | unmerged@T/2) 0.000
+     nonzero-debt merges 0; latest merge 39
+hunt d=7 #3 rank 3: m = [1, 1, 1, 8, 99, 141, 1], r = [0, -1, -2, 4, 10, 2, 1], Lambda = -0.2854, e = 3, N = 400  [457s]
+     T=64: merged 0.1950+-0.0198, no-merge 0.8050; visits/(unmerged@T/4) in (T/4,T] 0.071; P(debt visit in (T/2,T] | unmerged@T/2) 0.015
+     T=256: merged 0.2050+-0.0202, no-merge 0.7950; visits/(unmerged@T/4) in (T/4,T] 0.084; P(debt visit in (T/2,T] | unmerged@T/2) 0.019
+     T=1024: merged 0.2050+-0.0202, no-merge 0.7950; visits/(unmerged@T/4) in (T/4,T] 0.053; P(debt visit in (T/2,T] | unmerged@T/2) 0.006
+     T=4096: merged 0.2050+-0.0202, no-merge 0.7950; visits/(unmerged@T/4) in (T/4,T] 0.025; P(debt visit in (T/2,T] | unmerged@T/2) 0.000
+     nonzero-debt merges 0; latest merge 194
+hunt d=7 #4 rank 3: m = [1, 1, 57, 64, 1, 1, 85], r = [-7, -1, 5, 11, -4, -5, 8], Lambda = -0.1395, e = 7, N = 400  [469s]
+     T=64: merged 0.1250+-0.0165, no-merge 0.8750; visits/(unmerged@T/4) in (T/4,T] 0.177; P(debt visit in (T/2,T] | unmerged@T/2) 0.046
+     T=256: merged 0.1250+-0.0165, no-merge 0.8750; visits/(unmerged@T/4) in (T/4,T] 0.077; P(debt visit in (T/2,T] | unmerged@T/2) 0.017
+     T=1024: merged 0.1250+-0.0165, no-merge 0.8750; visits/(unmerged@T/4) in (T/4,T] 0.057; P(debt visit in (T/2,T] | unmerged@T/2) 0.011
+     T=4096: merged 0.1250+-0.0165, no-merge 0.8750; visits/(unmerged@T/4) in (T/4,T] 0.003; P(debt visit in (T/2,T] | unmerged@T/2) 0.000
+     nonzero-debt merges 0; latest merge 9
+hunt d=7 #5 rank 3: m = [1, 1, 176, 1, 8, 1, 155], r = [7, 13, -2, 4, -4, 2, 1], Lambda = -0.1897, e = 1, N = 400  [483s]
+     T=64: merged 0.0325+-0.0089, no-merge 0.9675; visits/(unmerged@T/4) in (T/4,T] 0.114; P(debt visit in (T/2,T] | unmerged@T/2) 0.026
+     T=256: merged 0.0325+-0.0089, no-merge 0.9675; visits/(unmerged@T/4) in (T/4,T] 0.134; P(debt visit in (T/2,T] | unmerged@T/2) 0.021
+     T=1024: merged 0.0325+-0.0089, no-merge 0.9675; visits/(unmerged@T/4) in (T/4,T] 0.028; P(debt visit in (T/2,T] | unmerged@T/2) 0.005
+     T=4096: merged 0.0325+-0.0089, no-merge 0.9675; visits/(unmerged@T/4) in (T/4,T] 0.036; P(debt visit in (T/2,T] | unmerged@T/2) 0.000
+     nonzero-debt merges 0; latest merge 12
+hunt d=7 #6 rank 3: m = [162, 1, 1, 1, 43, 1, 78], r = [7, 13, 5, 4, -4, 2, 8], Lambda = -0.0594, e = 7, N = 400  [496s]
+     T=64: merged 0.1100+-0.0156, no-merge 0.8900; visits/(unmerged@T/4) in (T/4,T] 0.213; P(debt visit in (T/2,T] | unmerged@T/2) 0.037
+     T=256: merged 0.1100+-0.0156, no-merge 0.8900; visits/(unmerged@T/4) in (T/4,T] 0.042; P(debt visit in (T/2,T] | unmerged@T/2) 0.008
+     T=1024: merged 0.1100+-0.0156, no-merge 0.8900; visits/(unmerged@T/4) in (T/4,T] 0.056; P(debt visit in (T/2,T] | unmerged@T/2) 0.011
+     T=4096: merged 0.1100+-0.0156, no-merge 0.8900; visits/(unmerged@T/4) in (T/4,T] 0.037; P(debt visit in (T/2,T] | unmerged@T/2) 0.003
+     nonzero-debt merges 0; latest merge 13
+hunt d=7 #7 rank 3: m = [1, 78, 57, 1, 1, 71, 1], r = [7, 13, 12, 11, -4, 2, -6], Lambda = -0.1370, e = 2, N = 400  [508s]
+     T=64: merged 0.1475+-0.0177, no-merge 0.8525; visits/(unmerged@T/4) in (T/4,T] 0.155; P(debt visit in (T/2,T] | unmerged@T/2) 0.015
+     T=256: merged 0.1475+-0.0177, no-merge 0.8525; visits/(unmerged@T/4) in (T/4,T] 0.070; P(debt visit in (T/2,T] | unmerged@T/2) 0.015
+     T=1024: merged 0.1475+-0.0177, no-merge 0.8525; visits/(unmerged@T/4) in (T/4,T] 0.047; P(debt visit in (T/2,T] | unmerged@T/2) 0.006
+     T=4096: merged 0.1475+-0.0177, no-merge 0.8525; visits/(unmerged@T/4) in (T/4,T] 0.006; P(debt visit in (T/2,T] | unmerged@T/2) 0.000
+     nonzero-debt merges 0; latest merge 16
+hunt d=7 #8 rank 3: m = [57, 1, 1, 1, 29, 169, 1], r = [-7, -1, 5, -3, 3, 9, 8], Lambda = -0.1544, e = 1, N = 400  [522s]
+     T=64: merged 0.0175+-0.0066, no-merge 0.9825; visits/(unmerged@T/4) in (T/4,T] 0.102; P(debt visit in (T/2,T] | unmerged@T/2) 0.020
+     T=256: merged 0.0225+-0.0074, no-merge 0.9775; visits/(unmerged@T/4) in (T/4,T] 0.069; P(debt visit in (T/2,T] | unmerged@T/2) 0.010
+     T=1024: merged 0.0225+-0.0074, no-merge 0.9775; visits/(unmerged@T/4) in (T/4,T] 0.008; P(debt visit in (T/2,T] | unmerged@T/2) 0.000
+     T=4096: merged 0.0225+-0.0074, no-merge 0.9775; visits/(unmerged@T/4) in (T/4,T] 0.026; P(debt visit in (T/2,T] | unmerged@T/2) 0.005
+     nonzero-debt merges 0; latest merge 130
+hunt d=11 #1 rank 3: m = [1, 287, 1, 155, 1, 1, 45, 1, 1, 1, 1], r = [-11, -1, -2, 19, -4, -5, 16, -7, 14, -9, 12], Lambda = -1.0788, e = 1, N = 400  [532s]
+     T=64: merged 0.3000+-0.0229, no-merge 0.7000; visits/(unmerged@T/4) in (T/4,T] 0.098; P(debt visit in (T/2,T] | unmerged@T/2) 0.028
+     T=256: merged 0.3150+-0.0232, no-merge 0.6850; visits/(unmerged@T/4) in (T/4,T] 0.136; P(debt visit in (T/2,T] | unmerged@T/2) 0.025
+     T=1024: merged 0.3200+-0.0233, no-merge 0.6800; visits/(unmerged@T/4) in (T/4,T] 0.066; P(debt visit in (T/2,T] | unmerged@T/2) 0.007
+     T=4096: merged 0.3200+-0.0233, no-merge 0.6800; visits/(unmerged@T/4) in (T/4,T] 0.015; P(debt visit in (T/2,T] | unmerged@T/2) 0.011
+     nonzero-debt merges 0; latest merge 554
+hunt d=11 #2 rank 3: m = [78, 1, 1, 1, 1, 133, 254, 1, 1, 1, 1], r = [11, -1, 9, 8, -4, -5, 16, 15, -8, 2, 12], Lambda = -1.0539, e = 11, N = 400  [544s]
+     T=64: merged 0.1750+-0.0190, no-merge 0.8250; visits/(unmerged@T/4) in (T/4,T] 0.158; P(debt visit in (T/2,T] | unmerged@T/2) 0.024
+     T=256: merged 0.1825+-0.0193, no-merge 0.8175; visits/(unmerged@T/4) in (T/4,T] 0.036; P(debt visit in (T/2,T] | unmerged@T/2) 0.003
+     T=1024: merged 0.1850+-0.0194, no-merge 0.8150; visits/(unmerged@T/4) in (T/4,T] 0.067; P(debt visit in (T/2,T] | unmerged@T/2) 0.018
+     T=4096: merged 0.1875+-0.0195, no-merge 0.8125; visits/(unmerged@T/4) in (T/4,T] 0.061; P(debt visit in (T/2,T] | unmerged@T/2) 0.006
+     nonzero-debt merges 0; latest merge 1748
+hunt d=11 #3 rank 3: m = [1, 1, 298, 1, 1, 1, 309, 89, 1, 1, 1], r = [-11, 21, 20, -3, -4, 6, -6, -7, 14, 2, 12], Lambda = -0.9507, e = 11, N = 400  [556s]
+     T=64: merged 0.1650+-0.0186, no-merge 0.8350; visits/(unmerged@T/4) in (T/4,T] 0.208; P(debt visit in (T/2,T] | unmerged@T/2) 0.036
+     T=256: merged 0.1675+-0.0187, no-merge 0.8325; visits/(unmerged@T/4) in (T/4,T] 0.135; P(debt visit in (T/2,T] | unmerged@T/2) 0.024
+     T=1024: merged 0.1700+-0.0188, no-merge 0.8300; visits/(unmerged@T/4) in (T/4,T] 0.063; P(debt visit in (T/2,T] | unmerged@T/2) 0.009
+     T=4096: merged 0.1700+-0.0188, no-merge 0.8300; visits/(unmerged@T/4) in (T/4,T] 0.039; P(debt visit in (T/2,T] | unmerged@T/2) 0.003
+     nonzero-debt merges 0; latest merge 273
+hunt d=11 #4 rank 4: m = [56, 1, 1, 78, 1, 1, 276, 320, 1, 1, 1], r = [11, -1, -2, -3, -4, 17, -6, -7, 3, 2, 12], Lambda = -0.6006, e = 3, N = 400  [568s]
+     T=64: merged 0.2400+-0.0214, no-merge 0.7600; visits/(unmerged@T/4) in (T/4,T] 0.049; P(debt visit in (T/2,T] | unmerged@T/2) 0.007
+     T=256: merged 0.2400+-0.0214, no-merge 0.7600; visits/(unmerged@T/4) in (T/4,T] 0.013; P(debt visit in (T/2,T] | unmerged@T/2) 0.000
+     T=1024: merged 0.2400+-0.0214, no-merge 0.7600; visits/(unmerged@T/4) in (T/4,T] 0.000; P(debt visit in (T/2,T] | unmerged@T/2) 0.000
+     T=4096: merged 0.2400+-0.0214, no-merge 0.7600; visits/(unmerged@T/4) in (T/4,T] 0.000; P(debt visit in (T/2,T] | unmerged@T/2) 0.000
+     nonzero-debt merges 0; latest merge 44
+Z7 (1,1,1,8,8,15,22) rank 3, NOT independent: m = [1, 1, 1, 8, 8, 15, 22], r = [0, 6, 5, 4, 3, 2, 1], Lambda = -0.5233, e = 1, N = 600  [583s]
+     T=64: merged 0.2183+-0.0169, no-merge 0.7817; visits/(unmerged@T/4) in (T/4,T] 0.082; P(debt visit in (T/2,T] | unmerged@T/2) 0.028
+     T=256: merged 0.2233+-0.0170, no-merge 0.7767; visits/(unmerged@T/4) in (T/4,T] 0.034; P(debt visit in (T/2,T] | unmerged@T/2) 0.006
+     T=1024: merged 0.2233+-0.0170, no-merge 0.7767; visits/(unmerged@T/4) in (T/4,T] 0.021; P(debt visit in (T/2,T] | unmerged@T/2) 0.009
+     T=4096: merged 0.2267+-0.0171, no-merge 0.7733; visits/(unmerged@T/4) in (T/4,T] 0.013; P(debt visit in (T/2,T] | unmerged@T/2) 0.002
+     nonzero-debt merges 0; latest merge 1332
+Z7 (1,1,8,1,8,15,22) rank 3, NOT independent: m = [1, 1, 8, 1, 8, 15, 22], r = [0, 6, 5, 4, 3, 2, 1], Lambda = -0.5233, e = 1, N = 600  [600s]
+     T=64: merged 0.1433+-0.0143, no-merge 0.8567; visits/(unmerged@T/4) in (T/4,T] 0.051; P(debt visit in (T/2,T] | unmerged@T/2) 0.012
+     T=256: merged 0.1567+-0.0148, no-merge 0.8433; visits/(unmerged@T/4) in (T/4,T] 0.043; P(debt visit in (T/2,T] | unmerged@T/2) 0.020
+     T=1024: merged 0.1633+-0.0151, no-merge 0.8367; visits/(unmerged@T/4) in (T/4,T] 0.020; P(debt visit in (T/2,T] | unmerged@T/2) 0.004
+     T=4096: merged 0.1650+-0.0152, no-merge 0.8350; visits/(unmerged@T/4) in (T/4,T] 0.020; P(debt visit in (T/2,T] | unmerged@T/2) 0.004
+     nonzero-debt merges 0; latest merge 2115
+Z5 (1,6,6,11,1)? rank 2 control: m = [1, 6, 6, 11, 1], r = [0, 4, 3, 2, 1], Lambda = -0.4132, e = 1, N = 600  [608s]
+     T=64: merged 0.4200+-0.0201, no-merge 0.5800; visits/(unmerged@T/4) in (T/4,T] 0.425; P(debt visit in (T/2,T] | unmerged@T/2) 0.109
+     T=256: merged 0.4633+-0.0204, no-merge 0.5367; visits/(unmerged@T/4) in (T/4,T] 0.368; P(debt visit in (T/2,T] | unmerged@T/2) 0.091
+     T=1024: merged 0.4917+-0.0204, no-merge 0.5083; visits/(unmerged@T/4) in (T/4,T] 0.404; P(debt visit in (T/2,T] | unmerged@T/2) 0.089
+     T=4096: merged 0.5250+-0.0204, no-merge 0.4750; visits/(unmerged@T/4) in (T/4,T] 0.502; P(debt visit in (T/2,T] | unmerged@T/2) 0.085
+     nonzero-debt merges 0; latest merge 3976

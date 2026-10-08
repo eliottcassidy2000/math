@@ -1,0 +1,7 @@
+rank 3 (AP, Z_5 example), uniform : mean returns in 10000 steps 0.55; P(return in second half) 0.000
+rank 3 (AP, Z_5 example), radialE : mean returns in 10000 steps 0.67; P(return in second half) 0.000
+rank 3 (AP, Z_5 example), radialQ : mean returns in 10000 steps 0.84; P(return in second half) 0.000
+rank 3 (AP, Z_5 example), greedyV : mean returns in 10000 steps 1.69; P(return in second half) 0.000
+rank 3 (AP, Z_5 example), nearest : mean returns in 10000 steps 1.60; P(return in second half) 0.020
+rank 2 control (non-units 3,4), radialE: mean returns 5.85; P(return in second half) 0.160
+rank 2 control (non-units 3,4), uniform: mean returns 3.83; P(return in second half) 0.060

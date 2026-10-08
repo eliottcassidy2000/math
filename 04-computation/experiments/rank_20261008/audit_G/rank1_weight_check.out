@@ -1,0 +1,20 @@
+Z_3 m = [1, 1, 16] (mu = 16 > d^2 = 9), theta = 0.1: kappa = 0.99138;  pure-flip drift min_s = (mu/d^2)^(theta/2) = 1.02919
+   s = 1.0: max over levels/lags of per-step drift = 0.99138;  max movers-only drift = 1.03909
+   s = 0.995: max over levels/lags of per-step drift = 0.99187;  max movers-only drift = 1.03982
+   s = 0.98: max over levels/lags of per-step drift = 0.99345;  max movers-only drift = 1.04220
+Z_5 m = [1, 1, 1, 1, 26] (mu = 26 > d^2 = 25), theta = 0.1: kappa = 0.91692;  pure-flip drift min_s = (mu/d^2)^(theta/2) = 1.00196
+   s = 1.0: max over levels/lags of per-step drift = 0.91692;  max movers-only drift = 1.01529
+   s = 0.995: max over levels/lags of per-step drift = 0.91725;  max movers-only drift = 1.01612
+   s = 0.98: max over levels/lags of per-step drift = 0.91833;  max movers-only drift = 1.01881
+Z_5 m = [1, 26, 1, 1, 1] (mu = 26 > d^2 = 25), theta = 0.1: kappa = 0.91692;  pure-flip drift min_s = (mu/d^2)^(theta/2) = 1.00196
+   s = 1.0: max over levels/lags of per-step drift = 0.91692;  max movers-only drift = 1.01529
+   s = 0.995: max over levels/lags of per-step drift = 0.91725;  max movers-only drift = 1.01612
+   s = 0.98: max over levels/lags of per-step drift = 0.91833;  max movers-only drift = 1.01881
+Z_3 m = [1, 1, 4] (mu = 4 <= d^2 = 9), theta = 0.1: kappa = 0.94037;  pure-flip drift min_s = (mu/d^2)^(theta/2) = 0.96026
+   s = 1.0: max over levels/lags of per-step drift = 0.94037;  max movers-only drift = 0.96257
+   s = 0.995: max over levels/lags of per-step drift = 0.94060;  max movers-only drift = 0.96292
+   s = 0.98: max over levels/lags of per-step drift = 0.94140;  max movers-only drift = 0.96411
+Z_7 m = [1, 1, 1, 1, 1, 1, 64] (mu = 64 > d^2 = 49), theta = 0.1: kappa = 0.88382;  pure-flip drift min_s = (mu/d^2)^(theta/2) = 1.01344
+   s = 1.0: max over levels/lags of per-step drift = 0.88382;  max movers-only drift = 1.03543
+   s = 0.995: max over levels/lags of per-step drift = 0.88413;  max movers-only drift = 1.03651
+   s = 0.98: max over levels/lags of per-step drift = 0.88510;  max movers-only drift = 1.03993
