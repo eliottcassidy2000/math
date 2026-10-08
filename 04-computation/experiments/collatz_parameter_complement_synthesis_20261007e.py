@@ -7,6 +7,7 @@ import sys
 import collatz_parameter_cover_20261007e as positive
 import collatz_signed_parameter_fill_20261007e as signed
 import collatz_complement_guard_fusion_20261007e as ternary
+import collatz_bounded_inverse_cover_20261007e as inverse
 import collatz_eight_child_routes_20261007d as reader
 
 DATA=Path(__file__).resolve().parents[2]/'05-knowledge/results/collatz_parameter_complement_synthesis_20261007e.json'
@@ -71,6 +72,7 @@ def main(rediscover=False):
     neg,six=signed.load()
     neg=neg+(six,)
     three=ternary.entries(12)
+    ternary_cells=inverse.combined_cells()
     cells=[(r.parameter_residue,r.parameter_bits) for r in pos+targets]
     cells += [(r.residue,r.bits) for r in neg]
     finite=signed.mass(cells)
@@ -81,7 +83,8 @@ def main(rediscover=False):
     c,d=signed.word_guard(signed.mirrored_base().left)
     need((a-c)%(1 << min(b,d))!=0,'two countable families are disjoint')
     beta=finite+run_gain+mirror_gain
-    tau=ternary.coverage_mass(three)
+    tau=inverse.cell_mass(ternary_cells)
+    need(tau==F(150929272,387420489),'complete short-word bank plus reset-indexed entries')
     joint=1-(1-beta)*(1-tau)
     old_tau=F(244,729)
     old_joint=1-(1-F(1,1 << 47))*(1-old_tau)
@@ -108,7 +111,7 @@ def main(rediscover=False):
     need(control_rows==[(12,8,217,379),(24,6,136,260),(27,50,651,1348),(32,24,686,1328)],'exact target scopes')
     def covered(t):
         return any(t%(1 << bits)==residue for residue,bits in cells) or any(
-            t%e.parameter_period==e.parameter_residue for e in three)
+            t%period==residue for residue,period in ternary_cells)
     first=next(t for t in range(64) if not covered(t))
     need(first==23 and all(covered(t) for t in range(23)),'first finite-bank+ternary defect')
     need(first%(1 << b)!=a and first%(1 << d)!=c,'neither infinite grammar reaches first defect')
@@ -121,14 +124,14 @@ def main(rediscover=False):
             result+=1
         return result
     binary_separation=max(valuation(first-r,2)+1 for r,_ in cells+[(a,b),(c,d)])
-    ternary_separation=max(valuation(first-e.parameter_residue,3)+1 for e in three)
+    ternary_separation=max(valuation(first-r,3)+1 for r,_ in ternary_cells)
     defect_period=(1 << binary_separation)*3**ternary_separation
     need((binary_separation,ternary_separation,defect_period)==(9,3,13824),'complete mixed defect cylinder')
     for r,bits in cells+[(a,b),(c,d)]:
         need((first-r)%(1 << min(binary_separation,bits))!=0,'whole defect avoids each binary guard')
-    for e in three:
-        m=min(3**ternary_separation,e.parameter_period)
-        need((first-e.parameter_residue)%m!=0,'whole defect avoids each ternary guard')
+    for r,period in ternary_cells:
+        m=min(3**ternary_separation,period)
+        need((first-r)%m!=0,'whole defect avoids each ternary guard')
     # Independent exact CRT intersections for a compact cross-bank selection.
     for r in pos[:8]+targets:
         for e in three:

@@ -11,7 +11,7 @@ For the actual child family `n(t)=2^E(t)-1`,
 parameter density
 
 \[
-                    \boxed{0.471716197989945\ldots}.                \tag{1}
+                    \boxed{0.512156650248071\ldots}.                \tag{1}
 \]
 
 This is an exact rational quantity, saved in the
@@ -41,7 +41,7 @@ different part of that board.
 
 The old known source-level G5/G17 bank plus `t=0 mod2^47` has parameter
 density approximately0.334705075445821. The new specified union improves
-that declared comparison by approximately0.137011122544124, or13.7011
+that declared comparison by approximately0.177451574802250, or17.7452
 percentage points. This comparison is against named banks, not against
 every certificate anywhere in the repository.
 
@@ -110,11 +110,31 @@ uses the word `1^k,a`, where a>=2 is even and k is the least integer with
 Minimality makes the positivity bound uniform over every positive native
 source. The concrete a=4 and a=6 entries reach `t=84 mod243` and
 `t=1007 mod6561`, disjoint from inherited G5/G17. Through a=12, retaining
-G17 gives seven labelled alternatives and exact union
+G17 gives seven labelled alternatives and union `131325004/387420489`.
+The [complete bounded inverse-word bank](collatz_bounded_inverse_cover_20261007e.md)
+then enumerates every positive word of length at most8 with contracting
+inverse slope:953 words,252 compatible Mersenne phases,12 counting cells.
+Combining it with the reset-indexed bank leaves14 counting cells and gives
 
 \[
-                  \tau=\frac{131325004}{387420489}.                 \tag{4}
+                  \tau=\frac{150929272}{387420489}.                 \tag{4}
 \]
+
+The extra ternary mass is exactly332/6561. This is a complete declared
+finite-word comparison, not a novelty claim for every inverse identity.
+For instance its large added cell `t=3 mod27` comes from the already known
+F91 word `(1,1,2,2)` and child `(64n-73)/81`. The progress is pulling known
+and newly enumerated words into one authenticated source chart and counting
+their exact union. All252 labelled children remain available.
+
+A useful general positivity simplification emerged: full odd inverse
+integrality forces every intermediate inverse value to be odd and integral;
+each reverse step from a positive odd integer remains positive. Thus any
+contracting positive valuation word already has `0<h<n` on every positive
+native source. There is no additional lost finite native head. The theorem
+does not cover all sources:7 has no smaller positive odd ancestor, although
+its forward orbit reaches1. Complementary certificate constructions remain
+necessary.
 
 For example the formerly least binary hole t=4 is already paid by G5,
 because4=1 mod3. The new child is `(8n-5)/9`, an actual odd integer; it is
@@ -183,8 +203,9 @@ outputs, raw words and exact rational densities are saved beside the notes.
 | Positive bank and run grammar |1081001|`043c43dd4dfa97b6a915569515710d744fd9bc372ef379879ea040beadf4d18b`|
 | Signed fills and mirrored grammar |19901|`25901418577cfd067c0d68727ba500d0a533f58c601564f0b601eeef8cbbabbd`|
 | Ternary source fusion |27274|`72d74873360e5f60bbf87613b194ed4b7dbe3429686df64ca508528677dada79`|
+| Complete bounded inverse bank |15689|`8e326732f6a321e2f197376e3d02497d623fb634596646be0fa698a764269115`|
 | Labelled finite-cover defects |21067|`396366856be8b61b05d17040c85f5f4a298d40be88340da3508cf21916830e42`|
-| Mixed integration and residual cylinder |1276|`3ca9235d7e1a785c7ba2689a3033a2c29d6afa1835684c75c6cd12282a18eae4`|
+| Mixed integration and residual cylinder |1291|`38a5df779f4e2b43b836040d1a381495deb5e326068d919d0dfbb404fcbb920a`|
 
 Reproduce the integration with
 `python -B 04-computation/experiments/collatz_parameter_complement_synthesis_20261007e.py`,

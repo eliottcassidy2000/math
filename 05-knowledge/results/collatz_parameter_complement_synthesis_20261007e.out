@@ -4,12 +4,12 @@ Positive grammar added mass 1/1024 after 8 disjoint tail
 Mirrored grammar added mass 1/16384 after 1 disjoint future prefix
 finite binary 0.199776235881211
 full binary 0.200813833537461
-ternary 0.338972789846435
-combined 0.471716197989945
+ternary 0.389574832218024
+combined 0.512156650248071
 inherited combined 0.334705075445821
-gain 0.137011122544124
+gain 0.177451574802250
 Least uncovered t 23 exponent 99708993705
 Entire uncovered cylinder: t=23 modulo13824 (binary precision9, ternary precision3).
 No collision at t23 in the declared D1..128, source depth0..1024, precision8192 box.
-Checks 1276
+Checks 1291
 OPEN: larger templates at t23, all residual parameters, and emitted child ROOT obligations.
