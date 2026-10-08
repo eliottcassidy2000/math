@@ -1,0 +1,28 @@
+     p = 7: orbits of R_K for K <= 8000 computed [236s]
+     p = 11: orbits of R_K for K <= 8000 computed [623s]
+     p = 13: orbits of R_K for K <= 8000 computed [1089s]
+(R1) terminal cycles
+     p = 7: terminal cycles (min: count) {1: 8000}
+     p = 11: terminal cycles (min: count) {1: 7950, 642: 50}
+     p = 13: terminal cycles (min: count) {1: 8000}
+     p = 11: 50 repunits end in the 642-cycle; their partner classes (bottom, size): [(16, 3), (109, 16), (191, 5), (1013, 5), (3605, 21)]
+  ok   every R_K (K <= 8000) ends in a known cycle; p = 7, 13: all in the trivial cycle; p = 11: some end in the 642-cycle
+(R2) partner classes are rivers (level sets of n_mult within a terminal cycle)
+     p = 7: (n_mult, cycle) levels carrying more than one partner key: 0 []
+     p = 11: (n_mult, cycle) levels carrying more than one partner key: 1 [((24, 1), [3, 4], [(24, 24, 9, 1), (24, 24, 10, 1)], True)]
+     p = 13: (n_mult, cycle) levels carrying more than one partner key: 0 []
+  ok   within each terminal cycle the partner key is a function of n_mult (FINITE-EXACT, K <= 8000), except p = 11, K = 3, 4: same height and n_mult, entering the trivial cycle at 9 and 10
+(R3) residual steps per digit
+     p = 7: mean (n - K + 1)/K over K >= 2000 = 12.690; ln(p+1)/|Lambda_p| = 12.716
+     p = 11: mean (n - K + 1)/K over K >= 2000 = 17.889; ln(p+1)/|Lambda_p| = 17.891
+     p = 13: mean (n - K + 1)/K over K >= 2000 = 20.452; ln(p+1)/|Lambda_p| = 20.474
+  ok   the residual horizon matches ln(p+1)/|Lambda_p| within 2% (NUMERICAL)
+(R4) orphan fractions
+     p = 7: 136 classes; orphan fraction (x sqrt K): [100,200): 0.0800 (0.951); [200,400): 0.0750 (1.261); [400,800): 0.0375 (0.892); [800,1600): 0.0175 (0.589); [1600,3200): 0.0119 (0.565); [3200,6400): 0.0081 (0.547); [6400,8001): 0.0069 (0.581)
+            local exponents between windows: [0.09, 1.0, 1.1, 0.56, 0.55, 0.37]
+     p = 11: 165 classes; orphan fraction (x sqrt K): [100,200): 0.1200 (1.427); [200,400): 0.0650 (1.093); [400,800): 0.0425 (1.011); [800,1600): 0.0238 (0.799); [1600,3200): 0.0163 (0.773); [3200,6400): 0.0100 (0.673); [6400,8001): 0.0069 (0.581)
+            local exponents between windows: [0.88, 0.61, 0.84, 0.55, 0.7, 0.82]
+     p = 13: 172 classes; orphan fraction (x sqrt K): [100,200): 0.1500 (1.784); [200,400): 0.0750 (1.261); [400,800): 0.0375 (0.892); [800,1600): 0.0262 (0.883); [1600,3200): 0.0144 (0.684); [3200,6400): 0.0097 (0.652); [6400,8001): 0.0075 (0.634)
+            local exponents between windows: [1.0, 1.0, 0.51, 0.87, 0.57, 0.56]
+
+ALL CHECKS PASSED  (1089s)
