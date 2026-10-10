@@ -6,6 +6,12 @@ marked norm coordinates; and, using a cited theorem, a finite fixed-head
 limitation. **FINITE-EXACT:** the declared controls and bounded searches.
 **OPEN:** grounding the original giant child ports and universal Collatz.
 
+**Current continuation (2026-10-09):** the
+[incoming-thread integration](collatz_fundamental_integration_20261009.md)
+incorporates the audited 1,949-exponent fan and its stopping-time invariant.
+It adds source-evaluated joins, composable clock defects, and terminal
+cycle/phase observers; the giant class still has no ROOT certificate.
+
 The main pointwise gain is that the previously missing source
 `M_99708993705` now has a checked smaller-child implication, with strongest
 retained child `M_99708993677`. This does not yet give either source a

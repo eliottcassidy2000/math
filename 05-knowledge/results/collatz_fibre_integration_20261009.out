@@ -1,0 +1,8 @@
+PROVED: authenticated pre-ROOT Mersenne receipt defects add under exact clock alignment.
+Hostile: M_3=7 ->5 <-3=M_2 has defect (5,3); normalized M_4 ->M_3 has (0,0).
+FINITE-EXACT controls: exponents2..96; 95 supplied ROOT words; 22 fibres; largest14.
+Pairs: {'crossing': 4138, 'zero': 327} ; composed receipts: 435
+Inherited fan accounting only:1949 labels, bottom M_99708991741; giant ROOT remains OPEN.
+Necessary net time defect to bank K<=12800 with max residual97982: 157872472274
+No giant orbit replay; finite literal exponent cap: 4096
+Exact checks: 40094204

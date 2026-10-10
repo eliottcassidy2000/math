@@ -175,7 +175,7 @@ All four are consistent with the `T^(−1/2)` tail. The sketch route (THM-4581's
 4. **Dependent multipliers and composite `d`.** These are covered map by map, e.g. `Z_4` (1, 3, 5, 7), which has an adaptive but no fixed-length certificate, and `Z_5` (1, 6, 11, 11, 4). A general statement is open.
 5. **Accessibility.** Is every inaccessible start detected by a cocycle invariant mod some `ℓ^k`?
 
-## 6b. Block certificates for degenerate couplings (THM-4611; added after audit G, not yet independently audited)
+## 6b. Block certificates for degenerate couplings (THM-4611; independently audited by audit H, MISTAKE-591)
 
 **The obstacle.** When the coupling group contains `−1`, some coupling covariances have rank ≤ 2, and no single form can balance them one step at a time. On `Z_5` that is every map that is not translation-only.
 

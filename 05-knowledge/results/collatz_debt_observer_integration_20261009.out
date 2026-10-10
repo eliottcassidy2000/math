@@ -1,0 +1,11 @@
+Complete transcript universe: lengths 0..6, all ordered parity-word pairs, offsets -3,-2,0,1,2,16.
+Compiled packets: 32766
+Singleton 23/7: first equal T-time 5 at 20; first common odd time 7 at 5; frame (1/3,40/3).
+Supplied ROOT(7) transports to ROOT(23)=(1,1,5,4). Native lift 55/39 does not meet at this horizon.
+Whole cell: y=49+128t, x=y+2, common endpoint 11+27t after 7 half steps, t>=0.
+Precision hostile: all 510 binary driver words through length 8; positive growing witnesses K=1..48.
+Frames (1,0) and (1,2^K) have identical first K debt increments and zero K-block covariance, but different next couplings.
+Z5 translation couplings +/-1: identical 3x3 path covariance; E[xi1^2 xi2]=+/-1/5.
+Hostile controls: 21 type, source, grounding, precision-domain, and ROOT-padding rejections.
+CHECKS 104130
+Scope: exact finite transcript compiler and observer losses; no universal ROOT or Haar-to-integer inference.

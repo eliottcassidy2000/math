@@ -1,0 +1,10 @@
+Exact supplied cycles: p=3, minimum 7, length 9; p=11, minimum 642, length 57.
+Merge 30/7 -> 10 is in the wrong p=3 basin; merge 10/3 -> 5 is in the p=2 ROOT basin.
+Both actual merges retain formal debt k=-1; exact reference evaluation detects equality.
+Frame controls: 9278 admissible grid states and 360 post-merge steps.
+Finite observer collisions: 108; mixed marked norm collisions: 88.
+Rational p-adic ROOT-preimage edges: 1952; each depth-N layer has exactly p^N points.
+Grounded factory 151/75: odd ROOT ranks 3/3, shortcut ROOT clocks 12/11, distinct synchronous phases.
+Malformed/false receipt controls: 18.
+Scope: supplied finite paths/cycles and observer theorems; no Haar proof audit or new ROOT coverage.
+ALL 23113 CHECKS PASSED
