@@ -1,0 +1,9 @@
+universe: palettes=(2,3), all labelled graphs/compatible labels n<=4 packets= 49885 girth-safe= 34555
+C5 complete product-colouring controls: 3120 required girth (2,3)/(3,2)/(3,3)= (5, 6, 7)
+tight concrete control: Mycielski(C5), vertices/edges/omega/chi= (11, 20, 2, 4) joint conflict=K4
+fixed-context hostile: C8 chi=2, chosen two-bit quotient chi=4
+edge-union sharp product controls: 2x2=4, 2x3=6, 3x3=9>3+3; maps= 354
+overlap hostile: length-2 and length-3 paths share only their ends; union C5
+typed malformed packets rejected: 13
+exact checks: 140950
+scope: mixed-palette closure and fixed-state compression; no plane six-colouring

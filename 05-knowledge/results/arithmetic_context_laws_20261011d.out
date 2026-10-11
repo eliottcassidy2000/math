@@ -1,0 +1,14 @@
+Arithmetic context laws: exact sampling, squarefree conditioning, and pair-wheel transfer
+Sample columns: E[tau], E[omega], E[Omega], P(prime), P(squarefree); uniform1..N
+N 100 : 241/50, 171/100, 239/100, 1/4, 61/100
+N 1000 : 7069/1000, 1063/500, 2877/1000, 21/125, 76/125
+N 10000 : 23417/2500, 243/100, 6397/2000, 1229/10000, 6083/10000
+Squarefree finite-wheel (primes,modulus,admissible): [((2,), 4, 3), ((2, 3), 36, 24), ((2, 3, 5), 900, 576), ((2, 3, 5, 7), 44100, 27648)]
+Conditional divisibility probabilities: p2=1/3,p3=1/4,p5=1/6,p7=1/8; fixed-set product law
+Lemoine N / Goldbach2N: oddN1..65, five wheels; 165 contexts; 84414 full residue inverse controls
+Same unit marginals on wheel30: Goldbach30 joint8, Goldbach32 joint3
+Actual comparison (odd N, ordered Goldbach2N count, LemoineN count): [(7, 3, 1), (9, 4, 2), (11, 5, 2), (13, 5, 2), (15, 6, 2), (21, 8, 3), (35, 10, 3), (105, 38, 12)]
+Inherited roles2/3/11: U2 matrix reduces modulo3 to golden matrix of order8; conductor11 retained
+Golden quotient (prime,(type,roots,phi-order,root-orders)): ((2, ('inert', (), 3, ())), (3, ('inert', (), 8, ())), (5, ('ramified', (3,), 20, (4,))), (7, ('inert', (), 16, ())), (11, ('split', (4, 8), 10, (5, 10))), (13, ('inert', (), 28, ())))
+Checks: 86338
+Scope: exact finite laws only; PNT/mean asymptotics cited, Goldbach/Lemoine/Hardy-Littlewood still conjectural, Chen is prime+P2

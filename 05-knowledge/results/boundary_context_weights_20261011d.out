@@ -1,0 +1,10 @@
+Boundary contexts, weighted lifts, and unit-separation testers
+Complete weighted tables: 4396 (all labelled graphs n=0..4, all boundaries, k=1..4)
+Abstract singleton selectors: 116 (boundary size0..4, k=1..6)
+Two-port fibre products: 256
+Hidden-leaf versus isolate contexts: 320 (16 contexts, k=2..6, r=0..3)
+Single-Kempe-swap separator inputs: 32438 (all proper k=2..4 colourings, n=2..4, every nonedge)
+Geometric positive controls: unit triangle and every one of 11 exact spindle edge deletions.
+PROVED scope: Boolean context equivalence, weighted gluing/projection, abstract minimality.
+OPEN: a six-colour equality tester whose distinct ports have unit separation.
+Always-active exact checks: 51658

@@ -1,0 +1,193 @@
+{
+  "scope": "type converse via confluent factors; labelled marked fan lift",
+  "checks": 48711,
+  "complete_orders": "0..6",
+  "counts": [
+    {
+      "n": 0,
+      "types": 1,
+      "fixed": 1,
+      "strong_fixed": 0
+    },
+    {
+      "n": 1,
+      "types": 1,
+      "fixed": 1,
+      "strong_fixed": 1
+    },
+    {
+      "n": 2,
+      "types": 1,
+      "fixed": 1,
+      "strong_fixed": 0
+    },
+    {
+      "n": 3,
+      "types": 2,
+      "fixed": 2,
+      "strong_fixed": 1
+    },
+    {
+      "n": 4,
+      "types": 4,
+      "fixed": 2,
+      "strong_fixed": 1
+    },
+    {
+      "n": 5,
+      "types": 12,
+      "fixed": 8,
+      "strong_fixed": 6
+    },
+    {
+      "n": 6,
+      "types": 56,
+      "fixed": 12,
+      "strong_fixed": 9
+    }
+  ],
+  "exchanged_graph_masks": {
+    "0": [],
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+      [
+        3,
+        7
+      ]
+    ],
+    "5": [
+      [
+        3,
+        15
+      ],
+      [
+        29,
+        54
+      ]
+    ],
+    "6": [
+      [
+        3,
+        31
+      ],
+      [
+        7,
+        15
+      ],
+      [
+        61,
+        102
+      ],
+      [
+        106,
+        122
+      ],
+      [
+        110,
+        123
+      ],
+      [
+        111,
+        126
+      ],
+      [
+        127,
+        238
+      ],
+      [
+        246,
+        685
+      ],
+      [
+        254,
+        1743
+      ],
+      [
+        510,
+        693
+      ],
+      [
+        659,
+        695
+      ],
+      [
+        694,
+        701
+      ],
+      [
+        762,
+        1887
+      ],
+      [
+        763,
+        1749
+      ],
+      [
+        923,
+        7101
+      ],
+      [
+        954,
+        1781
+      ],
+      [
+        959,
+        1759
+      ],
+      [
+        1751,
+        4063
+      ],
+      [
+        1789,
+        2015
+      ],
+      [
+        1885,
+        2046
+      ],
+      [
+        1917,
+        2012
+      ],
+      [
+        5941,
+        6011
+      ]
+    ]
+  },
+  "lyndon_cut_schedule_controls": 97,
+  "context_pairs": 209,
+  "context_triples": 435,
+  "chromatic_hostile": {
+    "source_mask": 110,
+    "target_mask": 123,
+    "chi": [
+      2,
+      3
+    ]
+  },
+  "labelled_fans": [
+    {
+      "n": 4,
+      "paths_with_isolates": 12,
+      "stars": 4,
+      "retained_pair_fibre": 3
+    },
+    {
+      "n": 5,
+      "paths_with_isolates": 30,
+      "stars": 5,
+      "retained_pair_fibre": 6
+    },
+    {
+      "n": 6,
+      "paths_with_isolates": 60,
+      "stars": 6,
+      "retained_pair_fibre": 10
+    }
+  ],
+  "frame_covariance_controls": 47088
+}
