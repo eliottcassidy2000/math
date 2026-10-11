@@ -1,0 +1,11 @@
+PROVED: H(+2), G(-1), R_r(+1) retain E=(x+5)(9/8)^credit and the original source.
+Sharp R ratio57/64 at283->223; R4+2 gives1+9/[16(n+5)]>1, least513/512.
+R outputs15mod16: G is not native, so this is not a legal RGG overspend example.
+Native zero-credit episode language splits: H/G only or R only. No new mixed switching claim.
+Old five-letter outputsmod9=(3,4,2,5,6); no two-old-letter prefix can enter R.
+Isolated pre-funded ray:251+288t --G-->283+324t --R4-->223+256t.
+Neutral inverse-G(+1)/G(-1) cycles preserve E forever; they are excluded from the finite-episode theorem.
+H/G native funded controls: 168 ; R native controls: 845 ; repeated R rays:100.
+Supplied ROOT exports:283 rank/cost 20 40 ;155 rank/cost 30 55
+No new source-guard mass, universal coverage, or giant ROOT proof.
+Checks: 10450

@@ -1,0 +1,11 @@
+Three gauges: positive simplex / spherical octant / cubical patches, with exact marked transition.
+Boundary section controls: 372; polar simplex grid controls: 19530.
+Marked (current,source,1) retains every tested native valuation and payment sign.
+Unmarked (3,5)=(9,15) as a direction, but actual current valuations differ: 1 versus 2.
+Factory 151 and75 retain separate source markers after their supplied ROOT words.
+Polar checks: regular simplex reflected scaling; cube versus crosspolytope; square exception.
+Marker-height controls: 2883; squared floor eta gives max(current,source) <= isqrt(floor(1/eta)).
+Interior markers can approach zero; a pointwise chart membership is not a uniform orbit-height bound.
+Hostiles: boundary ties, irrational sphere coordinates, nonunimodular dual transport, malformed packets.
+ALL 43642 CHECKS PASSED
+Scope: exact representation transport and classical polarity; no new ROOT coverage or uniform orbit bound.

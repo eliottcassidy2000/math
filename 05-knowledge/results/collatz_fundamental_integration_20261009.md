@@ -7,6 +7,11 @@ their declared controls. **INHERITED:** the corrected October7–8 canon.
 This integration adds certificate mechanisms and sharpens the obstruction;
 it does not increase the previously proved universal coverage.
 
+Continuation: the [October11 shape/receipt integration](collatz_shapes_and_completion_20261011.md)
+adds 36 ungrounded run-child ports, an adaptive rank transfer under exact
+refinement, and arithmetic boundary/credit obstructions. This packet remains
+the inherited source for the original 1,949-label component and its clocks.
+
 ## What arrived, and what each object represents
 
 The session integrated17 commits after the October7 checkpoint `9cee9ff4c`

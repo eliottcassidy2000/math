@@ -1,0 +1,9 @@
+PROVED/FINITE-EXACT: real boundary collapse and retained arithmetic fibre
+Odd residues through depth9; three unbounded lifts each; valuation1..16 progressions.
+Marked branch transport: currents1..44, original1..23, all three charts.
+Same slope9/16, carries5/11, native residues modulo32: [(19, 19), (29, 29)]
+Mersenne exponents2..64: first E Terras parity bits are1; no earlier positive descent.
+Mersenne midpoint monitors k1..64 approach the fixed boundary with two minus-one addresses.
+The boundary kills carry; adding the 2-adic driver keeps branch dynamics continuous.
+No source-specific ROOT proof or universal coverage theorem inferred.
+PASS: 14369 exact checks

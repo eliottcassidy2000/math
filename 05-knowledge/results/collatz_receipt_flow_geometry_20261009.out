@@ -1,0 +1,9 @@
+PROVED/FINITE-EXACT: finite authenticated policy geometry; no universal Collatz claim.
+Directed support census: 512 ; interior square policies:81; robust vertices:4.
+Square h(ROOT,3,5,7)=(0,8,5,9); robust h=(0,32,25,33); ROOT7 word (1, 1, 2, 3, 4)
+Closed27/31 cannot compile. Supplied27 rank41/cost70 gives h=(0,3,4); ROOT31 rank/cost 39 67
+Adaptive p_t=1/(t+2)^2: survival_N=(N+2)/(2N+2) ->1/2 despite each frozen policy proper.
+Uniform floor1/4: all-policy tail <=(63/64)^floor(t/3); 49 exact horizon controls.
+Hidden-mode refinement: 192 exact pushforward certificates; common rank gives tail <=h(source)*(32/33)^t.
+Infinite biased walk: every state has ROOT path, but hit probability at n is2^-n.
+Checks: 2206

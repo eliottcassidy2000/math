@@ -1,0 +1,13 @@
+All-height formula controls: 845 rows; r=4..16, parameter0..64; actual strict word replay.
+Least member:283 ->425 <-223; G5 instead selects251. Supplied ROOT223 gives ROOT283, ranks24->20, costs46->40.
+Convex midpoint(445,351,668) retains both affine equations/payment but loses exact odd-word guards.
+Repeated family:13891+26244s ->10975+20736s ->8671+16384s, runs(4,4), defect(-12,-8).
+Small symbolic/literal Mersenne ports: 18 ; exponents2..1000, seven moduli each.
+Inherited fan:1949 exact labels;36 new non-Mersenne ports; maximal-fuel histogram {4: 24, 5: 8, 6: 3, 7: 1}
+Eligible exponent/run pairs: ((99708991793, 4), (99708991847, 5), (99708991901, 4), (99708991955, 4), (99708992009, 6), (99708992063, 4), (99708992117, 4), (99708992171, 5), (99708992225, 4), (99708992279, 4), (99708992333, 5), (99708992387, 4), (99708992441, 4), (99708992495, 7), (99708992549, 4), (99708992603, 4), (99708992657, 5), (99708992711, 4), (99708992765, 4), (99708992819, 5), (99708992873, 4), (99708992927, 4), (99708992981, 6), (99708993035, 4), (99708993089, 4), (99708993143, 5), (99708993197, 4), (99708993251, 4), (99708993305, 5), (99708993359, 4), (99708993413, 4), (99708993467, 6), (99708993521, 4), (99708993575, 4), (99708993629, 5), (99708993683, 4))
+Best leading factor512/2187 at E99708992495,R7. Every port exceeds existing minimum M_99708991741.
+All36 port ROOT obligations remain OPEN; no giant source or certificate was materialized.
+Further inherited inverse paths: ((99708992225, (5,)), (99708992711, (5, 5)), (99708992819, (5,)), (99708993197, (5, 1)), (99708993683, (5,)))
+All53 initial run choices normalize by G1 to the same36 maximal ports and their recorded continuations.
+All36 stop under this declared run/G1/G5/G17 bank; five improved terminals are divisible3. Other rule banks remain untested.
+Exact checks: 25595
