@@ -189,9 +189,16 @@ not polynomial. This is the exact cancellation boundary.
 At b=0 the construction fixes one elliptic source and agrees with the
 previous inversion-type symmetry, after its parameter is matched. The
 new useful case is b nonzero, especially the polynomial a=0 subfamily.
-Transporting a Keller complement, if one is supplied, through(10) is
-legitimate because the Jacobian is1. The map does not create such a
-complement, prove it exists, or settle the general Jacobian conjecture.
+Transport through(10) preserves a constant Jacobian bracket. The later
+[composition and critical-fibre audit](genus_two_transfer_words_20261011.md)
+shows that every polynomial G_H itself has an affine critical point, so
+the suggestion of supplying a polynomial Keller complement for these
+particular polynomials is vacuous. Their auxiliary source-normal
+transformation problem remains meaningful. On the b-nonzero genus-two
+branch, the same audit proves the stronger absence of even a rational
+mate from the holomorphic generic time form; this survives every
+birational symplectic change. The larger three-charge carrier is already
+closed by THM-3772, cited there. None of this settles JC(2).
 
 This is the constructive reroute after P1: change the actual source
 pencil, retain its affine offset, and compose two sign-reversing operations.
