@@ -1,4 +1,48 @@
-# The minimum map: renewal structure of hard excursions along running minima, coverage decay as a killed renewal, and five structural rhymes
+# The minimum map: renewal structure, with integer/model scopes separated
+
+**CURRENT-TRUTH WARNING — scope correction, 2026-10-11.** The October5
+study below supplied the renewal idea and useful finite probes, but its
+integer renewal proof switched clocks and its front matter overstated
+model rates. The repaired proof is
+[Renewal laws, integer sources, and adaptive expense budgets](collatz_renewal_source_20261011.md).
+The original text is retained below solely as historical provenance;
+its broader claims are superseded by this digest.
+
+- **PROVED:** positive geometric valuation digits have a complete
+  coefficient first-descent code and iid blocks under odd2-adic Haar law.
+  For any fixed number of blocks, the joint law of actual first-descending
+  excursions over positive odd sources converges in natural density to
+  that law. Exact completed odd words require their final odd bit.
+- **PROVED:** each fixed expense cap with a fixed finite terminal bank,
+  including the stated fixed two-tier families, has natural density zero.
+  The new finite-dictionary argument proves this without a moving-depth
+  exceptional-source estimate.
+- **NOT ESTABLISHED HERE:** an explicit power-law rate for those integer
+  families, a flat asymptotic integer visit density, a global minimum-map
+  tree rooted at1, or universal coincidence of coefficient/actual exits.
+  The minimum map is partial outside a domain with proved first descent;
+  its ROOT component is a tree. Its visit limits remain open.
+- **MODEL / NUMERICAL:** killed-iid-renewal exponents and their fitted
+  agreement with the integer census. The Cramer-root statement is for
+  the stochastic model with its renewal hypotheses, not a transfer to
+  all integer scales. A weak law alone gives no exponential error rate.
+- **FINITE-EXACT / VERIFIED as originally scoped:** the bounded block-law,
+  Hankel and integer census artifacts below. Nonzero Hankel determinants
+  through order10 and failure of fitted Somos parameters do not prove
+  absence of all finite-rank/algebraic descriptions. No full rerun of the
+  old floating census is claimed by the October11 correction.
+- **ANALOGY ONLY:** the five paper connections. In particular, translating
+  one floor/ceiling prime interval by its parent label does not conjugate
+  the entire prime-parent trees; the shifted parent may not be prime.
+
+Minimal clock witness:13 has odd word(3), ending at5, but its shortcut
+coefficient exit is13->20->10. Conditioning on a one-letter block fitting
+A<=3 gives probability2/3 for a=2, rather than the unconditioned1/4.
+The one-exception-per-word theorem does not bound all original sources
+whose later minima hit that exception. These are the missing coordinates,
+not counterexamples to the repaired qualitative density-zero theorem.
+
+## Historical October5 study — superseded where it exceeds the digest
 
 2026-10-05, opus session `opus-2026-10-05-S10` (minimum-map renewal). Owner's
 seed: "work the renewal structure of hard excursions along running minima;

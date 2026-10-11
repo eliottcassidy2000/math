@@ -1,0 +1,197 @@
+{
+  "adaptive_length_cutoffs_epsilon_1_over_16": [
+    97,
+    109,
+    117,
+    124,
+    130,
+    136,
+    140,
+    144,
+    148,
+    151
+  ],
+  "atomic_source_controls": [
+    {
+      "alias_bound": "3/2097152",
+      "atom": "3/4",
+      "conditional_floor": "524288/524289",
+      "index": 0,
+      "q": 128
+    },
+    {
+      "alias_bound": "3/2097152",
+      "atom": "13/1764",
+      "conditional_floor": "6815744/6817067",
+      "index": 5,
+      "q": 128
+    }
+  ],
+  "checks": 2485,
+  "code_words_total_at_most_11": 99,
+  "law_head": [
+    {
+      "amin": 2,
+      "length": 1,
+      "mass": "1/2",
+      "prefix_count": 1,
+      "survival": "1/2"
+    },
+    {
+      "amin": 4,
+      "length": 2,
+      "mass": "1/8",
+      "prefix_count": 1,
+      "survival": "3/8"
+    },
+    {
+      "amin": 5,
+      "length": 3,
+      "mass": "1/8",
+      "prefix_count": 2,
+      "survival": "1/4"
+    },
+    {
+      "amin": 7,
+      "length": 4,
+      "mass": "3/64",
+      "prefix_count": 3,
+      "survival": "13/64"
+    },
+    {
+      "amin": 8,
+      "length": 5,
+      "mass": "7/128",
+      "prefix_count": 7,
+      "survival": "19/128"
+    },
+    {
+      "amin": 10,
+      "length": 6,
+      "mass": "3/128",
+      "prefix_count": 12,
+      "survival": "1/8"
+    },
+    {
+      "amin": 12,
+      "length": 7,
+      "mass": "15/1024",
+      "prefix_count": 30,
+      "survival": "113/1024"
+    },
+    {
+      "amin": 13,
+      "length": 8,
+      "mass": "85/4096",
+      "prefix_count": 85,
+      "survival": "367/4096"
+    },
+    {
+      "amin": 15,
+      "length": 9,
+      "mass": "173/16384",
+      "prefix_count": 173,
+      "survival": "1295/16384"
+    },
+    {
+      "amin": 16,
+      "length": 10,
+      "mass": "119/8192",
+      "prefix_count": 476,
+      "survival": "1057/16384"
+    },
+    {
+      "amin": 18,
+      "length": 11,
+      "mass": "961/131072",
+      "prefix_count": 961,
+      "survival": "7495/131072"
+    },
+    {
+      "amin": 20,
+      "length": 12,
+      "mass": "663/131072",
+      "prefix_count": 2652,
+      "survival": "427/8192"
+    }
+  ],
+  "ordered_frames": {
+    "1132": [
+      81,
+      89,
+      128,
+      247
+    ],
+    "2113": [
+      81,
+      103,
+      128,
+      73
+    ]
+  },
+  "pair_controls": 78,
+  "repeat_113_addresses": [
+    {
+      "k": 1,
+      "modulus": 64,
+      "residue": 55
+    },
+    {
+      "k": 2,
+      "modulus": 2048,
+      "residue": 823
+    },
+    {
+      "k": 3,
+      "modulus": 65536,
+      "residue": 13111
+    },
+    {
+      "k": 4,
+      "modulus": 2097152,
+      "residue": 1258295
+    },
+    {
+      "k": 5,
+      "modulus": 67108864,
+      "residue": 53687095
+    },
+    {
+      "k": 6,
+      "modulus": 2147483648,
+      "residue": 858993463
+    },
+    {
+      "k": 7,
+      "modulus": 68719476736,
+      "residue": 13743895351
+    },
+    {
+      "k": 8,
+      "modulus": 2199023255552,
+      "residue": 1319413953335
+    },
+    {
+      "k": 9,
+      "modulus": 70368744177664,
+      "residue": 56294995342135
+    },
+    {
+      "k": 10,
+      "modulus": 2251799813685248,
+      "residue": 900719925474103
+    },
+    {
+      "k": 11,
+      "modulus": 72057594037927936,
+      "residue": 14411518807585591
+    },
+    {
+      "k": 12,
+      "modulus": 2305843009213693952,
+      "residue": 1383505805528216375
+    }
+  ],
+  "status": "FINITE-EXACT controls; universal claims require the companion proof",
+  "tail_length_120": "912743179901920342498263790994221516927561982610785/98079714615416886934934209737619787751599303819750539264"
+}
