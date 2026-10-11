@@ -1,0 +1,7 @@
+PROVED/FINITE-EXACT: exact boundary palette relations and liftable gluing
+Graphs on0..4 vertices: 76 ; all boundary subsets, palettes1..3: 3297
+Shared two-port gluing controls:192; count-only, local-two-colour, missing-state and forgotten-port hostiles retained.
+Exact Moser circle profile (centre,degree,three-colour boundary partitions): [(0, 4, 4), (1, 3, 1), (2, 3, 1), (3, 3, 1), (4, 3, 1), (5, 3, 1), (6, 3, 1)]
+Saturated partitions (boundary,palette): {(5, 5): 1, (6, 5): 15, (7, 5): 140, (6, 6): 1, (7, 6): 21}
+No six-chromatic graph or universal Collatz coverage is claimed.
+PASS: 14884 exact checks

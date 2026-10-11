@@ -8,6 +8,8 @@ Fetching `origin/main` found no commits beyond the inherited `7231241adc90`
 before these additions; mathematical connections below come from targeted
 recovery of existing work and new proofs, not invented incoming results.
 
+Continuation: [paid bridges and constructive interfaces](constructive_interfaces_and_bridges_20261011.md) crosses the direct native-guard barrier with forward connectors, grounds an infinite family through223, and adds checked colouring and proof-storage interfaces. The giant component remains open.
+
 ## The fundamental object and the live portfolio
 
 The useful object is a **guarded proof implication with an original source,

@@ -1,0 +1,9 @@
+Multiplication-inspired retained-recipe / last-consumer certificate routing
+Pinned external main: 12a4934d15006e8c10f9b2264f13f8f341be802b (2026-10-10T14:13:23Z)
+9-node supplied receipt DAG: retain-all slots 9 ; reused slots 3 ; word cells 147 -> 83
+Same exact requested output metadata: True
+7-node all-topological-order controls: 40 ; peak histogram [(3, 40)]
+Root-ray schema controls k=2..65: 65 nodes including ROOT; peak slots 2
+All chronological words and full immutable recipes retained; no new source coverage.
+Cost model: payload slots/cells only; excludes recipe, verifier transients and emitted output storage.
+Checks: 114

@@ -1,0 +1,21 @@
+{
+  "scope": "finite critical extraction and exact algebraic controls; no six-chromatic graph supplied",
+  "checks": 8548,
+  "small_graphs": 1099,
+  "nonbipartite_small_graphs": 672,
+  "critical_sizes": [
+    3,
+    5
+  ],
+  "moser": {
+    "vertices": 7,
+    "edges": 11,
+    "chromatic": 4,
+    "refutation_nodes": 139,
+    "deletion_colourings": 7,
+    "cnf_variables": 21,
+    "cnf_clauses": 61,
+    "one_hot_assignments": 2187
+  },
+  "malformed_controls": 17
+}

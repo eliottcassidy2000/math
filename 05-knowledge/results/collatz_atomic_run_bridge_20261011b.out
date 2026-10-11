@@ -1,0 +1,11 @@
+Atomic run bridges: exact guarded old-prefix / U_a / R_r batches.
+R4 complete classes: H a52mod54; G a0mod18 positive; A a8mod54; B a32mod54; L empty; LG a36mod54.
+Finite controls: 112 classified R4 lifts; 100 arbitrary-run lifts; 18 G exponent families.
+G: n=(2264*2^(18j)-23)/27+96*2^(18j)*t, j>=1,t>=0; child223+256t.
+G j1 base21981259, period25165824, ROOT rank23/cost61 from supplied ROOT223.
+G inverse-bank complements by j mod3=1,2,0: 485/729, 1, 0; all old HABL entry guards missed.
+A8/R5: 81851+131072t ->319+512t; base ROOT rank18/cost45 from prior ROOT319 suffix.
+LG36/R5: 21972133598683+35184372088832t ->319+512t; base ROOT rank18/cost73.
+Incoming integer-rank bridge: unchanged credit; sharp first ratio228/21981264; at least399 rank units paid.
+No all-parameter ROOT conclusion; no new guard mass over the full ordinary-descent algorithm.
+PASS: 4238 exact checks.
