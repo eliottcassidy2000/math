@@ -1,0 +1,14 @@
+Universe: every labelled simple graph on 2..5 vertices; every nonedge port pair.
+Partition counts in palettes2..7; independent literal fixed-port enumeration on2..4.
+Enumerated 1098 graphs and 5325 marked nonedge cases.
+k6 equal coefficients: [1, 5, 20, 60, 120, 120]
+k6 different coefficients: [1, 4, 12, 24, 24]
+Abstract K7-minus-edge fixed-port counts: (120, 0)
+Fixed-universe Moser-minus-(0, 2), palette3: 243->0; (edge,residual,factor)=[((0, 3), 162, '2/3'), ((2, 3), 81, '1/2'), ((0, 5), 54, '2/3'), ((0, 6), 36, '2/3'), ((5, 6), 18, '1/2'), ((1, 2), 12, '2/3'), ((1, 3), 6, '1/2'), ((1, 4), 4, '2/3'), ((4, 5), 2, '1/2'), ((4, 6), 0, '0')]
+Fixed-universe Moser-minus-(0, 2), palette6: 7776->1056; (edge,residual,factor)=[((0, 3), 6480, '5/6'), ((2, 3), 5184, '4/5'), ((0, 5), 4320, '5/6'), ((0, 6), 3600, '5/6'), ((5, 6), 2880, '4/5'), ((1, 2), 2400, '5/6'), ((1, 3), 1920, '4/5'), ((1, 4), 1600, '5/6'), ((4, 5), 1328, '83/100'), ((4, 6), 1056, '66/83')]
+Shrikhande16 saturates cherry count; extreme-point geometry excludes its unit embedding.
+CITED: Kostochka-Yancey7-critical edge lower bound ceil((10n-7)/3).
+CITED: Alexeev-Mixon-Parshall2412.11914v2 Theorem1 unit-edge upper bounds.
+n25/26/27 (critical requirement, unit upper): [(25, 81, 78), (26, 85, 84), (27, 88, 90)]
+Necessary six-colour unit-separated equality tester order >=27; no tester constructed.
+PASS: 48734 exact checks. No unproved geometry is certified by count receipts.

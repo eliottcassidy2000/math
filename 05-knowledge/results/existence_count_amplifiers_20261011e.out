@@ -1,0 +1,8 @@
+existence_count_amplifiers_20261011e
+scope: exact finite two-port counts; no six-colour plane tester
+pair cases=1792; edge expression/palette cases=255; cone cases=380
+critical degree positive controls=63; malformed controls=14
+unit-separated k3 controls=[((0, 2), 4), ((0, 3), 4), ((0, 5), 4), ((0, 6), 4), ((1, 2), 4), ((1, 3), 4), ((1, 4), 4), ((2, 3), 4), ((4, 5), 4), ((4, 6), 4), ((5, 6), 4)]
+k6 common-neighbour bank p_D: 5/6,4/5,16/21; k7 ratio5/6; k8 ratio6/7
+diamond opposite-port counts=(2,0), adjacent-port counts=(0,1); k6 abstract selector=(120,0)
+exact checks=11443

@@ -1,0 +1,202 @@
+{
+  "scope": "exact candidates inside the common rational Moser field",
+  "checks": 2701,
+  "leading_parity_states": 16,
+  "unit_rotation_controls": 168,
+  "candidate_sets": [
+    {
+      "name": "triangular_radius1",
+      "vertices": 7,
+      "unit_edges": 12,
+      "components": 1,
+      "palette_used": [
+        4,
+        4
+      ],
+      "six_forced_equal_omissions": 0
+    },
+    {
+      "name": "triangular_radius2",
+      "vertices": 19,
+      "unit_edges": 42,
+      "components": 1,
+      "palette_used": [
+        4,
+        4
+      ],
+      "six_forced_equal_omissions": 0
+    },
+    {
+      "name": "moser_spindle",
+      "vertices": 7,
+      "unit_edges": 11,
+      "components": 1,
+      "palette_used": [
+        4,
+        4
+      ],
+      "six_forced_equal_omissions": 0
+    },
+    {
+      "name": "two_triangular_shells",
+      "vertices": 13,
+      "unit_edges": 24,
+      "components": 1,
+      "palette_used": [
+        4,
+        4
+      ],
+      "six_forced_equal_omissions": 0
+    },
+    {
+      "name": "wheel_plus_rotated_triangle",
+      "vertices": 21,
+      "unit_edges": 57,
+      "components": 1,
+      "palette_used": [
+        4,
+        4
+      ],
+      "six_forced_equal_omissions": 0
+    },
+    {
+      "name": "wheel_plus_rotated_wheel",
+      "vertices": 49,
+      "unit_edges": 180,
+      "components": 1,
+      "palette_used": [
+        4,
+        4
+      ],
+      "six_forced_equal_omissions": 0
+    },
+    {
+      "name": "six_rotated_spindles",
+      "vertices": 22,
+      "unit_edges": 41,
+      "components": 1,
+      "palette_used": [
+        4,
+        4
+      ],
+      "six_forced_equal_omissions": 0
+    },
+    {
+      "name": "coefficient_box_minus1_to1",
+      "vertices": 81,
+      "unit_edges": 312,
+      "components": 1,
+      "palette_used": [
+        4,
+        4
+      ],
+      "six_forced_equal_omissions": 0
+    },
+    {
+      "name": "half_translated_spindle",
+      "vertices": 7,
+      "unit_edges": 11,
+      "components": 1,
+      "palette_used": [
+        4,
+        4
+      ],
+      "six_forced_equal_omissions": 0
+    },
+    {
+      "name": "halved_spindle",
+      "vertices": 7,
+      "unit_edges": 0,
+      "components": 7,
+      "palette_used": [
+        1,
+        1
+      ],
+      "six_forced_equal_omissions": 0
+    }
+  ],
+  "all_unit_edge_omissions": 690,
+  "spindle_three_colour_equalities": [
+    [
+      [
+        0,
+        1
+      ],
+      12
+    ],
+    [
+      [
+        0,
+        2
+      ],
+      12
+    ],
+    [
+      [
+        0,
+        4
+      ],
+      12
+    ],
+    [
+      [
+        0,
+        5
+      ],
+      12
+    ],
+    [
+      [
+        1,
+        2
+      ],
+      12
+    ],
+    [
+      [
+        1,
+        3
+      ],
+      12
+    ],
+    [
+      [
+        2,
+        3
+      ],
+      12
+    ],
+    [
+      [
+        3,
+        6
+      ],
+      12
+    ],
+    [
+      [
+        4,
+        5
+      ],
+      12
+    ],
+    [
+      [
+        4,
+        6
+      ],
+      12
+    ],
+    [
+      [
+        5,
+        6
+      ],
+      12
+    ]
+  ],
+  "shared_refutation_nodes": 139,
+  "six_equality_found": false,
+  "stopping_reason": "explicit full-unit-graph four-colour certificate",
+  "plane_six_or_seven": "not decided"
+}

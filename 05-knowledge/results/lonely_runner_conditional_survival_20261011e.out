@@ -1,0 +1,13 @@
+Lonely runner: conditional survival, residue profiles, and closed walls
+Independent continuous cases: 704 (all subsets of1..10 of size0..3; four radii)
+Two-speed all-wrap controls:930 plus corrected50/51 and signed-covariance hostiles
+Tight AP (total runners, isolated safe points): [(3, 2), (4, 2), (5, 4), (6, 2), (7, 6), (8, 4), (9, 6), (10, 4), (11, 10), (12, 4), (13, 12), (14, 6), (15, 8), (16, 8), (17, 16), (18, 6), (19, 18), (20, 8)]
+AP12 actual conditional mass factors: (Fraction(5, 6), Fraction(9, 10), Fraction(23, 27), Fraction(20, 23), Fraction(19, 25), Fraction(33, 38), Fraction(41, 66), Fraction(397, 574), Fraction(1219, 2382), Fraction(671, 1219), Fraction(0, 1))
+AP14 actual conditional mass factors: (Fraction(6, 7), Fraction(11, 12), Fraction(29, 33), Fraction(26, 29), Fraction(53, 65), Fraction(48, 53), Fraction(41, 56), Fraction(521, 656), Fraction(3194, 4689), Fraction(1217, 1597), Fraction(10931, 26774), Fraction(6617, 10931), Fraction(0, 1))
+Complete source-clock equivalence cases: 123 (subsets1..6,size1..3; radii1/7,1/3,2/5)
+Complete conditional CRT set pairs: 3844 (both moduli1..5, all subsets)
+Native common-clock cases: 288 (six speed tuples, clocks1..48)
+Coprime cofactor families (moduli,exact survival,witness): [((2, 3, 5), Fraction(4, 15), Fraction(1, 30)), ((5, 7, 11), Fraction(48, 77), Fraction(1, 385)), ((2, 17, 19), Fraction(112, 323), Fraction(3, 646))]
+Same marginal profile hostile: conditional survival1 versus0; bad grid retains no global verdict
+Always-active exact checks: 13842
+Scope: finite source certificates and conditional theorems; no product proof of LRC14
