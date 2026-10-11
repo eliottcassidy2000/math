@@ -1,0 +1,57 @@
+{
+  "scope": "marked F2 pants holonomy, fixed seam bands, and actual binary-fragment lifts",
+  "checks": 14857,
+  "pants_controls": {
+    "theta": {
+      "pants": 2,
+      "seams": 3,
+      "genus": 2,
+      "cuff_states": 4,
+      "seam_states_per_cuff": 4,
+      "surface_characters": 16
+    },
+    "separating_cuff": {
+      "pants": 2,
+      "seams": 3,
+      "genus": 2,
+      "cuff_states": 4,
+      "seam_states_per_cuff": 4,
+      "surface_characters": 16
+    },
+    "tetrahedral_dual": {
+      "pants": 4,
+      "seams": 6,
+      "genus": 3,
+      "cuff_states": 8,
+      "seam_states_per_cuff": 8,
+      "surface_characters": 64
+    },
+    "K33_dual": {
+      "pants": 6,
+      "seams": 9,
+      "genus": 4,
+      "cuff_states": 16,
+      "seam_states_per_cuff": 16,
+      "surface_characters": 256
+    },
+    "cube_dual": {
+      "pants": 8,
+      "seams": 12,
+      "genus": 5,
+      "cuff_states": 32,
+      "seam_states_per_cuff": 32,
+      "surface_characters": 1024
+    }
+  },
+  "seam_layers": "N=0..16",
+  "signed_connected_graph_instances": 647,
+  "hostiles": [
+    "zero cuffs with nontrivial seam holonomy",
+    "returning same-cuff wave",
+    "odd endpoint sum",
+    "bipartite fragments forming a triangle",
+    "incompatible multiple ports",
+    "typed malformed records"
+  ],
+  "plane_colour_consequence": "none without actual colouring or noncolourability certificates"
+}

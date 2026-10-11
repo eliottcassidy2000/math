@@ -1,0 +1,8 @@
+PROVED elementary: 2r-colours iff r labels with bipartite monochromatic graph.
+Graph census orders1..5: [1, 2, 8, 64, 1024] sum 1099 ; decimal1000+100-10=1090.
+Complete palette/channel tables: 3297 ; even-subgraph parity checked independently.
+Basis hostile: original K4 star-cycle NAE clauses miss its monochromatic residual triangle.
+Geometry controls: exact induced unit C5 and Moser spindle; triangle-only test fails on C5.
+Abstract K7 negative control:35 learned odd-cycle constraints; no unit-distance claim.
+No plane-six/seven decision, no universal Collatz result, no speed benchmark.
+PASS: 8382 exact checks

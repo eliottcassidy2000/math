@@ -1,0 +1,11 @@
+Plane six reframes: signed boundary parity and exact odd-cycle lifts
+Labelled simple graphs, orders 1..5: 1099
+Ternary assignments modulo global S3: 42925; extendible=37821, obstructed=5104
+Complete boundary relations: 128730; authenticated colouring lifts: 814385
+Two-port gluings: 5184; compatible=4977, obstructed=207
+Unit-triangle hostile: same boundary connectivity, opposite parity; lifted odd cycle (0, 2, 1, 0)
+Graph products: K3[K2]=K6; categorical K3 x K2=C6; a triangle separates them
+Arithmetic: 10^3+10^2-10=1090; sum(n=1..5) 2^binom(n,2)=1099
+Typed/provenance hostiles rejected: 18
+Checks: 2040717
+Scope: complete fixed-label gluing; no universal six-colouring of unit-distance graphs proved

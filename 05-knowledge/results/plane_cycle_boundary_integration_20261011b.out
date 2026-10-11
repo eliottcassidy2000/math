@@ -1,0 +1,10 @@
+Adaptive odd-cycle search with exact signed-boundary oracle
+Graphs orders1..4: 75; all channel/label oracle controls: 6594
+Adaptive search comparisons for channels1..3: 225; positive=201, negative=24
+unit C5 / one channel: negative; learned cycles integrated/direct=1/1
+unit spindle / two channels: positive; learned cycles integrated/direct=3/4
+abstract K7 / three channels: negative; learned cycles integrated/direct=35/35
+Negative certificates recheck all channel assignments; deleting a necessary cycle is rejected
+Edges partition deterministically; exactly shared endpoints are ports; isolates retained on the left
+Checks: 13811
+Scope: finite exact oracle integration; no speed claim or plane six/seven decision

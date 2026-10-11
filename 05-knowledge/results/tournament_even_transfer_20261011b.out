@@ -1,0 +1,50 @@
+{
+  "scope": "counts versus marked finite colouring certificates; no plane six/seven witness",
+  "checks": 19067,
+  "small_count_table": [
+    {
+      "n": 1,
+      "labelled_tournaments": 1,
+      "labelled_automorphism_even": 1,
+      "labelled_eulerian": 1,
+      "tournament_types": 1,
+      "automorphism_even_types": 1,
+      "eulerian_types": 1
+    },
+    {
+      "n": 2,
+      "labelled_tournaments": 2,
+      "labelled_automorphism_even": 1,
+      "labelled_eulerian": 1,
+      "tournament_types": 1,
+      "automorphism_even_types": 1,
+      "eulerian_types": 1
+    },
+    {
+      "n": 3,
+      "labelled_tournaments": 8,
+      "labelled_automorphism_even": 4,
+      "labelled_eulerian": 2,
+      "tournament_types": 2,
+      "automorphism_even_types": 2,
+      "eulerian_types": 2
+    },
+    {
+      "n": 4,
+      "labelled_tournaments": 64,
+      "labelled_automorphism_even": 20,
+      "labelled_eulerian": 8,
+      "tournament_types": 4,
+      "automorphism_even_types": 4,
+      "eulerian_types": 3
+    }
+  ],
+  "graph_palette_universe": 450,
+  "proper_colour_lifts": 15496,
+  "triangle_six_colourings": 120,
+  "crt_same_support_weights": [
+    "-1/125",
+    "1/15625"
+  ],
+  "critical_flow_dimension": "beta >= (k-3)n/2+1 for connected k-critical graphs"
+}

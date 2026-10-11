@@ -1,0 +1,12 @@
+PROVED: fixed h>0 and sufficiently large girth force 2-degeneracy and 3-colourability.
+Sufficient thresholds from exact strict packing inequalities:
+h= 1  radius= 6  girth>= 14  implies 3-colourability
+h= 1/2  radius= 9  girth>= 20  implies 3-colourability
+h= 1/10  radius= 15  girth>= 32  implies 3-colourability
+h= 1/100  radius= 23  girth>= 48  implies 3-colourability
+h= 1/1000  radius= 31  girth>= 64  implies 3-colourability
+Critical chromatic k controls at separation h=1/1000:
+k= 6  radius= 15  girth>= 32  is excluded
+k= 7  radius= 13  girth>= 28  is excluded
+No plane chromatic decision, realized witness, or optimal threshold claimed.
+PASS: 2309 exact checks
