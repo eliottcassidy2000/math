@@ -1,3 +1,23 @@
+> **CURRENT SCOPE CORRECTION — 2026-10-11.** The original reflection below
+> is historical analogy, not a chain of proved equivalences. In particular:
+> a measurable representative set for C/Z[i] is the half-open unit square;
+> sorted tournament score classes are not generally binary linear-code
+> cosets (the transitive three-vertex score fibre has six members, and the
+> labelled regular five-vertex fibre has twenty-four); and
+> translates by q in Q intersect [-1,1] of a Vitali selector in [0,1]
+> cover [0,1] inside [-1,2], rather than having union exactly [0,1]. The discrete lattice
+> quotient must not be conflated with the dense rational quotient.
+> For the precise finite observer and actual tail-equivalence mechanisms,
+> use [the current recovery](../05-knowledge/results/vitali_atom_recovery_20261011.md)
+> and its audited source links. The speculative Cayley–Dickson, chemistry,
+> moonshine, and tournament identifications below are not proved by a
+> shared use of “choice” or “+1.” Other historical assertions here are not
+> promoted by this targeted correction.
+
+---
+
+**HISTORICAL BOUNDARY — original reflection retained for provenance.**
+
 # The Vitali Atom
 
 **Session:** kind-pasteur-2026-03-21-S18l

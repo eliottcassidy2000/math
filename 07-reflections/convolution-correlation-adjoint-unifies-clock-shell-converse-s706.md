@@ -1,20 +1,26 @@
 ---
 source: opus-2026-06-07-S706 (user seed: cross-correlation is the adjoint of convolution)
-status: SYNTHESIS — the convolution/cross-correlation ADJOINT duality is the single operator-theoretic
-  root of my recent trilogy and several older repo threads. (D1) ⟨h*a,b⟩=⟨a,h⋆b⟩ so correlation =
-  adjoint of convolution; (D2) h⋆g=(σh̄)*g, so the antipodal σ (S702) IS the adjoint reflection.
-  REPO MAP: shell face (sums v_i+v_j mod 2n−1, S700) = convolution 1_S*1_S; clock face (differences
-  v_i−v_j mod n, S701) = cross-correlation 1_S⋆1_S; they are ADJOINT, related by σ (S702). Tournament
-  converse (HYP-2283) = adjoint of the circulant adjacency-convolution; self-converse worry-set
-  (THM-402) = self-adjoint; skew-adjacency S*=−S. Additive energy = ‖autocorrelation‖² = Σ|F|^4
-  (Wiener–Khinchin) = the unit-distance/Cayley object (S599). All Fourier-diagonal; adjoint = conjugate
-  the symbol (S599g). THM-441, HYP-2311. All identities verified exactly.
+status: HISTORICAL SYNTHESIS; targeted 2026-10-11 correction below supersedes the self-adjointness, extremality, and cross-carrier overclaims. Use repaired THM-441.
 tags: [convolution, cross-correlation, autocorrelation, adjoint, fourier, wiener-khinchin, additive-energy,
   antipodal, sigma, clock-shell, converse, self-adjoint, worry-set, unit-distance, cayley, spectral,
   positive-definite, synthesis, lonely-runner, tournaments]
 ---
 
 # Cross-correlation is the adjoint of convolution — and that is the whole engine room
+
+> **CURRENT CORRECTION — 2026-10-11.** Use the repaired
+> [THM-441](../01-canon/theorems/THM-441-convolution-correlation-adjoint-duality-unifies-the-repo.md).
+> Self-converse means permutation-conjugate to the transpose, not self-adjoint:
+> the directed triangle already separates them. Its spectrum need not be real.
+> Positivity of autocorrelation is universal and does not prove extremality.
+> Adjoint identities on different moduli need an explicit common carrier;
+> additive energy and unit-distance count are different correlation functionals.
+> The energy Fourier formula also needs its normalization factor. The classical
+> convolution/correlation identities survive; the stronger slogans below are
+> historical, superseded claims. The universal finite-moment no-go is separately
+> corrected in THM-406.
+
+**HISTORICAL BOUNDARY — original synthesis follows.**
 
 **Prompt (user):** for complex-valued functions the cross-correlation operator is the adjoint of the
 convolution operator; integrate both, their relation, and how they fit in and extend the repo.

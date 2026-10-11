@@ -1,0 +1,69 @@
+{
+  "algebraic_words_not_claimed_native": 1463,
+  "anchor_interval": [
+    "-16/17",
+    "482/295"
+  ],
+  "authenticated_or_inherited_pairs": 250,
+  "checks": 16854,
+  "elliptic_singular_parameters": [
+    "0",
+    "-1"
+  ],
+  "fibre_affine_stabilizers": 4,
+  "highest_t_degree_cap": 9,
+  "integrand_constants": [
+    "5346/5605",
+    "121/119"
+  ],
+  "matrix_cases": {
+    "a_zero": {
+      "affine_solvable": false,
+      "homogeneous_dimension": 1
+    },
+    "affine": {
+      "affine_solvable": false,
+      "homogeneous_dimension": 1
+    },
+    "anti": {
+      "affine_solvable": true,
+      "homogeneous_dimension": 1
+    },
+    "diagonal": {
+      "affine_solvable": false,
+      "homogeneous_dimension": 1
+    },
+    "generic": {
+      "affine_solvable": false,
+      "homogeneous_dimension": 1
+    },
+    "identity": {
+      "affine_solvable": true,
+      "homogeneous_dimension": 13
+    },
+    "lower": {
+      "affine_solvable": true,
+      "homogeneous_dimension": 1
+    },
+    "minus_identity": {
+      "affine_solvable": true,
+      "homogeneous_dimension": 13
+    },
+    "scaled_anti": {
+      "affine_solvable": true,
+      "homogeneous_dimension": 1
+    },
+    "upper": {
+      "affine_solvable": false,
+      "homogeneous_dimension": 1
+    }
+  },
+  "polynomial_basis_size": 13,
+  "r6_conditional_distortion_decimal": 1.5649321040356967,
+  "r6_conditional_distortion_exact": "3386710815021851649544932672734375/2164126358126396733488476149423744",
+  "sorted_score_fibres_n3": {
+    "(0, 1, 2)": 6,
+    "(1, 1, 1)": 2
+  },
+  "status": "FINITE-EXACT; universal proofs in companion notes"
+}
