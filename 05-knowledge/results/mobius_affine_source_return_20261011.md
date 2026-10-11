@@ -2,7 +2,9 @@
 
 2026-10-11. **PROVED, scoped and self-audited:** M1–M3 below over any
 characteristic-zero field K; M4 adds the fibre-affine stabilizer and its
-elliptic interpretation. **FINITE-EXACT:** independent coefficient tests
+elliptic interpretation. **PROVED with CITED input:** M5 removes the
+fibre-affine restriction for this fixed invariant using the classical
+Legendre Mordell–Weil group. **FINITE-EXACT:** independent coefficient tests
 in the stated bounded universe. **OPEN:** other changing-generator groups,
 the remaining planar source problem, and the planar Jacobian conjecture.
 
@@ -265,6 +267,58 @@ V. This gives an explicit further changing-generator construction; the
 finite group itself and its classification in (6) are defined over any
 characteristic-zero K.
 
+## M5. The known Legendre section group closes the unrestricted fixed-invariant case
+
+A final literature pass strengthens M4 rather than leaving a weaker
+classification as the frontier. The **CITED** input is
+
+\[
+ E(K(\kappa))=\{O,(0,0),(1,0),(-\kappa,0)\}\cong(\mathbf Z/2)^2
+ \quad\text{for } E:Y^2=X(X-1)(X+\kappa),                         \tag{9}
+\]
+
+over a characteristic-zero constant field K. It is the classical Legendre
+group: see Logan–Weinstein, *Higher modularity of elliptic curves over
+function fields*, [Section4.3 and Proposition4.1.3](https://arxiv.org/html/2211.11149v2#S4.SS3).
+Their parameter is -kappa. The geometric group over an algebraic closure
+of K already has exactly these four points, and all four are K-rational.
+Ulmer's [Corollary11.3 and Theorem12.1(1)](https://dlulmer.github.io/research/papers/2014a.pdf)
+also give rank zero in characteristic zero through every Kummer extension
+of the Legendre parameter. Rank zero alone would not determine the
+torsion group; (9) retains that additional input.
+
+**Consequence, PROVED with (9).** Among all K-birational maps of the
+(x,t)-plane preserving I=u+p exactly, there are eight. Precisely the
+four in (6) are symplectic. Thus allowing x' to depend on t produces no
+additional rational symplectic symmetry of this same invariant.
+
+**Proof.** The generic fibre chart in M4 identifies K(x,t), over K(I),
+with the function field of E. A birational map fixing I induces an
+automorphism of the smooth projective generic fibre. Such an automorphism
+sends O to a rational point P. Composing with translation by -P gives
+an origin-fixing automorphism.
+
+The generic j-invariant is nonconstant, so the latter automorphism is
+±1. This can also be checked in the short Weierstrass model: both its
+linear and constant coefficients are nonzero in K(kappa). An origin-
+preserving automorphism scales X,Y by a²,a³, and preserving those two
+coefficients forces a⁴=a⁶=1, hence a²=1. This standard curve-automorphism
+argument uses characteristic zero and the generic fibre, not the special
+j=0 or1728 numerical fibres.
+
+By (9) there are four possibilities for P and two signs. The positive
+sign gives exactly the four translations already computed. Inversion
+(X,Y)->(X,-Y) is (x,t)->(-x,t), with Jacobian -1. Composing it with
+any of the four translations remains antisymplectic. All eight maps
+are distinct and rational; their explicit representatives are checked
+in the program. This proves the claim. QED.
+
+This classification is pointwise in the **generic invariant**: it fixes
+I as a rational function. It does not classify maps changing I, maps
+between different G_H, or isolated automorphisms of one specialized
+numerical fibre. The cited section-group calculation is not being
+advertised as a new arithmetic theorem.
+
 ## What this changes, and the next test
 
 The useful reroute is concrete: replace the homogeneous intersection test
@@ -273,11 +327,13 @@ survives; claiming an all-source repair from it would fail. The involution
 has a pole at x=0 and does not solve planar JC.
 
 M4 carries out the next enlargement: adding a fibre offset enlarges the
-stabilizer from one involution to a Klein four group. A further family
-must either let x' depend on t, change the source, or leave the rational
-fibre-affine class. First identify its transformed G0 offset and where
-that offset can cancel the leading poles. M3 and M4 are complete
-boundaries for their declared classes, not for every symplectic map.
+stabilizer from one involution to a Klein four group. M5 then closes
+**every rational symplectic map preserving this particular I**, so merely
+allowing x' to depend on t is no longer a productive next target here.
+The next family must change the source/invariant or its base field and
+then prove any descent back to the original rational source problem.
+First identify its transformed G0 offset and where that offset can cancel
+the leading poles. Cross-source transfers and general planar JC remain open.
 
 This operation matches the useful part of the
 [Vitali recovery](vitali_atom_recovery_20261011.md): preserve a missing
@@ -288,7 +344,7 @@ It does not identify finite observation loss with nonmeasurability.
 
 [Program](../../04-computation/experiments/mobius_source_anchor_weights_20261011.py),
 [output](mobius_source_anchor_weights_20261011.json). The shared checker
-has 16,854 always-active gates. Ten exact rational matrices are tested by
+has 16,872 always-active gates. Ten exact rational matrices are tested by
 independent linear equations in x,t using all 13 basis elements of
 highest t-degree <=9. This finite experiment supports, but does not replace,
 the proofs for arbitrary degree. Symbolic composition, Jacobian, four

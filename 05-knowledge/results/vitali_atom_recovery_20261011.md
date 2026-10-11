@@ -117,7 +117,11 @@ the explicit involution(x,t)->(-1/x,x²t), preserving -(u+p)/2.
 Adding rational fibre offsets reveals its full fibre-affine stabilizer:
 a Klein four group of rational symplectic maps. On
 Y²=X(X-1)(X+kappa), these are translations by the three nonzero points
-of order two. This identification is proved by the chord formulas.
+of order two. This identification is proved by the chord formulas. A final primary-source
+check of the known Legendre section group strengthens it: M5 classifies
+all rational symplectic maps fixing this invariant, not only the
+fibre-affine ones. The next source search must therefore change the
+invariant rather than rediscover symmetries of this already closed family.
 
 Thus (1) and (2) provide an actual shared composition law. The target
 predicates are different: Collatz needs a native integer dependency with

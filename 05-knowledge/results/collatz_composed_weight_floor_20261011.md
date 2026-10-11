@@ -165,6 +165,13 @@ establish the child floor, and it does not identify a merely positive
 component score with ROOT. The acceptance condition must remain a literal
 checked terminal or an independently justified ROOT event.
 
+Equation (5) transports the measure of a specified child function. For
+the ROOT indicator, native common-future coalescence identifies the source
+and child values exactly. For a discounted or randomized controller score,
+one must additionally retain its routing probability and clock multiplier
+before identifying that transported function with the actual source score.
+Weight distortion alone does not preserve those different score semantics.
+
 The mechanism also says exactly why two tempting shortcuts fail:
 
 * More letters shrink A^(r+1). Bounded relative distortion does not create
@@ -227,7 +234,7 @@ into a ROOT proof.
 ## Reproduction
 
 [Program](../../04-computation/experiments/mobius_source_anchor_weights_20261011.py),
-[output](mobius_source_anchor_weights_20261011.json). The shared16,854 gates
+[output](mobius_source_anchor_weights_20261011.json). The shared16,872 gates
 include1,463 algebraic words of length1–3 (explicitly not all native),
 250 actual or inherited source-child pairs, four exact integer r values,
 and independent valuation replays for R, GR, J, and the two-run family.

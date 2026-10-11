@@ -169,6 +169,16 @@ def main():
         check(s.cancel(sub(oldY, pair)-expectedY) == 0, 'ambient map induces torsion ordinate')
     check(s.expand(s.discriminant(cubic, X)-kappa**2*(kappa+1)**2) == 0,
           'exact singular-fibre boundary')
+    eight = four+[tuple(sub(f, (-x, t)) for f in pair) for pair in four]
+    check(len({tuple(str(s.cancel(f)) for f in pair) for pair in eight}) == 8,
+          'four translations and their four inversion cosets are distinct')
+    for index, (xx, tt) in enumerate(eight):
+        check(sub(invariant, (xx, tt)) == s.expand(invariant), 'all eight fix the invariant')
+        jac = s.cancel(s.diff(xx, x)*s.diff(tt, t)-s.diff(xx, t)*s.diff(tt, x))
+        check(jac == (1 if index < 4 else -1), 'symplectic versus antisymplectic halves')
+    short = s.Poly(s.expand(cubic.subs(X, X-(kappa-1)/3)), X)
+    check(short.coeff_monomial(X**2) == 0 and short.coeff_monomial(X) != 0
+          and short.coeff_monomial(1) != 0, 'generic short model has both coefficients nonzero')
 
     low, high = -Q(16, 17), Q(482, 295)
     actions = [('H', Q(729, 1024), Q(241, 512)), ('GR', Q(8, 9), Q(0))]
@@ -281,6 +291,7 @@ def main():
                       'checks': checks, 'polynomial_basis_size': len(basis),
                       'highest_t_degree_cap': 9, 'matrix_cases': rows,
                       'fibre_affine_stabilizers': 4,
+                      'invariant_birational_automorphisms_with_cited_MW_input': 8,
                       'elliptic_singular_parameters': ['0', '-1'],
                       'algebraic_words_not_claimed_native': compositions,
                       'authenticated_or_inherited_pairs': len(pairs),

@@ -5,7 +5,7 @@
     "482/295"
   ],
   "authenticated_or_inherited_pairs": 250,
-  "checks": 16854,
+  "checks": 16872,
   "elliptic_singular_parameters": [
     "0",
     "-1"
@@ -16,6 +16,7 @@
     "5346/5605",
     "121/119"
   ],
+  "invariant_birational_automorphisms_with_cited_MW_input": 8,
   "matrix_cases": {
     "a_zero": {
       "affine_solvable": false,
