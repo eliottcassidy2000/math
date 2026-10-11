@@ -182,7 +182,50 @@ certificate for the declared episode grammar, not for all Collatz orbits.
 To use it for universal proof coverage, every stopped obligation must
 receive a supplied terminal or a separately ranked authenticated bridge.
 
-## Next test and validation
+## A4. The source prior pays the actual episode rank
+
+There is an unconditional averaging statement for this particular
+controller, without assuming a universal ROOT rank. Sample the source
+N=2m+1 from nu_r conditioned on m>=55, and start with zero credit.
+The conditioning mass is exactly 56^{-r}. Sources with no permitted
+first action have episode length zero. For j>=1 set
+
+\[
+ M_j=\left\lceil58\kappa^{-j}-3\right\rceil,
+       B_N=b(N+5),\qquad\kappa=2349/2560.
+\]
+
+The definition of b gives the exact equivalence B_N>=j iff m>=M_j.
+Telescoping the source prior, and using
+M_j+1>=58kappa^{-j}-2>=56kappa^{-j}, gives
+
+\[
+ \Pr(B_N\ge j\mid m\ge55)
+   =\left(\frac{56}{M_j+1}\right)^r\le\kappa^{rj}.       \tag{6}
+\]
+
+For any legal history-dependent selector, let L be the number of
+completed episode actions. A3 gives L<=3B_N pointwise. Therefore
+
+\[
+ \Pr(L>t)\le\kappa^{r(\lfloor t/3\rfloor+1)},\qquad
+ \mathbb E L\le\frac{3\kappa^r}{1-\kappa^r}.            \tag{7}
+\]
+
+Under nu_2 the last bound is exactly
+16553403/1035799<16 completed actions. This is a bound under the declared
+source distribution, including sources whose episode stops immediately.
+Conditioning further on a guard or on survival changes the law and does
+not retain this number automatically. The source measure is explicit;
+no random-trajectory hypothesis or Haar-to-integer transfer enters (6).
+
+The geometric tail here is consistent with A1's warning: it averages
+over a specified source law, whereas no geometric bound uniform over
+all fixed starting sources was asserted. The terminal remains the end of
+an episode, which can be ungrounded. Thus (7) pays controller work, not
+the missing ROOT bridge or the physical Collatz stopping time.
+
+## Next obligation and reproduction
 
 The next concrete target is a native bridge that strictly lowers (5), or
 comes with a second well-founded account that pays any temporary increase.
@@ -195,9 +238,10 @@ turn a neutral loop or an ungrounded component into a terminal.
 check the potential-to-rank conversion and exact moment boundary terms;
 the underlying full receipt authentication is inherited from the linked
 packets, not claimed to have been independently reimplemented here.
-Normal and optimized runs agree byte for byte on 2,248 always-active
-exact checks, including 768 guarded action examples and 320 finite
-moment identities. No independent peer audit is claimed.
+Normal and optimized runs agree byte for byte on 2,633 always-active
+exact checks, including 768 guarded action examples, 320 finite
+moment identities, and 96 source-rank tail thresholds. No independent
+peer audit is claimed.
 
 ```text
 python3 -B 04-computation/experiments/collatz_atomic_rank_interface_20261011.py

@@ -5,8 +5,9 @@
     "H": 160,
     "R": 320
   },
-  "checks": 2248,
+  "checks": 2633,
   "moment_identity_gates": 320,
+  "nu2_mean_action_bound": "16553403/1035799",
   "rank_examples": {
     "(111, 2)": 8,
     "(155, 0)": 9,
@@ -14,5 +15,6 @@
     "(251, 1)": 31,
     "(283, 0)": 30
   },
+  "source_rank_tail_cases": 96,
   "status": "FINITE-EXACT arithmetic interfaces; ROOT coverage remains OPEN"
 }

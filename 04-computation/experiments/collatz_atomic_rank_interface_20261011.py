@@ -5,6 +5,8 @@ This checks arithmetic interfaces; it does not discover or export ROOT words.
 Universe: 32 H and GR lifts at credits0..4; 32 G lifts at credits1..4;
 run lengths4..7,16 cofactor lifts,credits0..4; r2..5 moment identities
 through cutoff32 and powers1..r-1; neutral recycling and countdown hostiles.
+Source-rank tail thresholds: r1..3, j1..32, with exact cutoff boundaries
+and a separate finite telescoping reconstruction of the tail mass.
 """
 from fractions import Fraction as F
 import json
@@ -89,8 +91,23 @@ def main():
         start=horizon+1
         check(start-horizon==1,'countdown survives every fixed global horizon')
         check(sum(1 for t in range(start))==start,'pointwise countdown expectation')
+    tail_cases=0
+    for r in range(1,4):
+        for j in range(1,33):
+            threshold=58/KAPPA**j-3
+            m=-(-threshold.numerator//threshold.denominator)
+            check(rank(2*m+1,0)>=3*j,'source-rank upper threshold')
+            check(rank(2*m-1,0)<3*j,'source-rank preceding threshold')
+            tail=F(56,m+1)**r
+            check(tail<=KAPPA**(r*j),'source-rank geometric tail')
+            partial=sum((F(1,(v+1)**r)-F(1,(v+2)**r) for v in range(m,m+8)),F(0))
+            check(56**r*(partial+F(1,(m+9)**r))==tail,'tail mass with finite remainder')
+            tail_cases+=1
+    work_bound=3*KAPPA**2/(1-KAPPA**2)
+    check(work_bound==F(16553403,1035799) and work_bound<16,'nu2 episode work bound')
     print(json.dumps({'status':'FINITE-EXACT arithmetic interfaces; ROOT coverage remains OPEN',
                       'checks':checks,'action_counts':counts,'moment_identity_gates':moment_gates,
+                      'source_rank_tail_cases':tail_cases,'nu2_mean_action_bound':str(work_bound),
                       'rank_examples':{str((x,k)):rank(x,k) for x,k in [(155,0),(111,2),(283,0),(251,1),(223,1)]}},
                      indent=2,sort_keys=True))
 
