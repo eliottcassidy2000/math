@@ -250,6 +250,6 @@ python3 -B 04-computation/experiments/source_frames_bridge_weights_20261011.py
 python3 -B -O 04-computation/experiments/source_frames_bridge_weights_20261011.py
 ```
 
-Both modes byte-agree on **2,905 always-active exact checks** across the
+Both modes byte-agree on **3,036 always-active exact checks** across the
 two notes. The local artifact links and agent-facing documentation gates
 also pass.

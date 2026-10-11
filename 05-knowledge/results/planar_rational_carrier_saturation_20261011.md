@@ -149,6 +149,14 @@ the universal condition prohibits. For the actual nonconstant H of the
 finite-response problem, one must solve its own {G_H,S} regularity and
 source/depth equations; the H=0 example does not do so.
 
+**October11 extension:** [source frames, F2--F3](source_frames_eit_20261011.md)
+now classifies every finite source-regularity jet for this particular
+generator u, and proves that its flow has no nonconstant polynomial H
+return at any nonzero scalar time. In the birational coordinates u,w=1/x,
+the flow is a translation in w; a highest-u-degree multiplicity bound
+excludes the return. Other generators and changing-generator compositions
+remain separate targets.
+
 This is the next productive branch: preserve the particular required
 source with its labelled companion, or change the coordinate algebra and
 explicitly pay descent back to the original one. A finite composition may

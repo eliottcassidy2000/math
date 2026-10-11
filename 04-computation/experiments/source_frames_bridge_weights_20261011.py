@@ -114,6 +114,68 @@ def main():
     check(s.cancel(bracket(p**2*D, p**2*y*D)
                    + p**2*D**2*(5*p**3-2*y**2)) == 0, 'leading commutator')
 
+    # Independently iterate the rational derivation, not the Euler formula.
+    def euler(f):
+        return s.expand(2*p*s.diff(f, p)+3*y*s.diff(f, y))
+
+    jet_candidates = [s.Integer(7), p, y, D, p*D, D**2, p*D**2,
+                      7+D**3*(1+p+y), D**2+D**3, D**4]
+    for H in jet_candidates:
+        current = H
+        falling = H
+        all_regular = True
+        constant = H.subs({p: 0, y: 0})
+        for depth in range(1, 5):
+            current = bracket(current, u)
+            falling = s.expand(euler(falling)-(depth-1)*falling)
+            check(s.cancel(current-(-p*y/D)**depth*falling) == 0,
+                  'iterated brackets equal falling Euler formula')
+            all_regular = all_regular and polynomial(current)
+            check(all_regular == polynomial((H-constant)/D**depth),
+                  'exact finite-jet cusp filtration')
+    for depth in range(1, 5):
+        h1, h2 = D**depth, p*D**depth
+        jac = s.diff(h1, p)*s.diff(h2, y)-s.diff(h1, y)*s.diff(h2, p)
+        check(s.expand(jac-2*depth*y*D**(2*depth-1)) == 0,
+              'delay frame Jacobian multiplicity')
+        for H in [h1, h2]:
+            current = H
+            for order in range(1, depth+2):
+                current = bracket(current, u)
+                check(polynomial(current) == (order <= depth),
+                      'first pole at exactly depth plus one')
+    check(s.cancel(bracket(bracket(D, u), u)-30*p**2*y**2/D) == 0,
+          'second derivative exposes the original hidden pole')
+
+    # Independent finite linear algebra: A and its translate intersect in K.
+    uu, ww = s.symbols('uu ww')
+    pp = uu*(1+uu)*ww**2
+    yy = uu**2*(1+uu)*ww**3
+    dd = uu**3*(1+uu)**2*ww**6
+    intersection_controls = []
+    for cap in [6, 12, 18]:
+        basis = []
+        for b in [0, 1]:
+            for c in range(cap//6+1):
+                for a in range(cap//2+1):
+                    if 2*a+3*b+6*c <= cap:
+                        basis.append(s.expand(pp**a*yy**b*dd**c))
+        for shift in [1, -2]:
+            columns = [s.Poly(f, uu, ww).as_dict() for f in basis]
+            columns += [s.Poly(f.subs(ww, ww-shift), uu, ww).as_dict()
+                        for f in basis]
+            rows = sorted(set().union(*(c.keys() for c in columns)))
+            matrix = s.Matrix([[col.get(row, 0) for col in columns] for row in rows])
+            from sympy.polys.matrices import DomainMatrix
+            rank = DomainMatrix.from_Matrix(matrix).rank()
+            check(2*len(basis)-rank == 1, 'only constant in finite translated intersection')
+            intersection_controls.append([cap, shift, len(basis), rank])
+    for degree in range(1, 13):
+        h = ww**degree*(ww+1)**degree
+        check(s.rem(h, ww**degree, ww) == 0
+              and s.rem(h.subs(ww, ww-1), ww**degree, ww) == 0,
+              'slope two hostile saturates the multiplicity budget')
+
     curves = {
         'p2_y_D': genus(2, 1, [1]),
         'p2_D_E': genus(2, 0, [1, 1]),
@@ -212,6 +274,7 @@ def main():
     check(0 < c6 < theta**-7*c6 < Q(1, 10**34), 'tiny import mass is not expansion')
 
     print(json.dumps({'checks': checks, 'curves': curves, 'divisor_profiles': profiles,
+                      'finite_translation_intersections': intersection_controls,
                       'bridge_distortion_theta': str(theta),
                       'r6_conditional_distortion_upper': str(theta**-7),
                       'r6_all_branch_scale': str(c6),
