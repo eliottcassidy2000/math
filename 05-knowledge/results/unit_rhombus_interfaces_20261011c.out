@@ -1,0 +1,8 @@
+Unit C4: diagonal squared lengths sum4; edge-presence states00,01,10, never11.
+Proper-colour C4 diagonal-difference states: k2 one, k3 three, k>=4 four.
+Every ternary label assignment on C4 lifts to six colours; no odd-cycle obstruction.
+Edge-sharing triangular strips orders3..7 have exactly6 labelled3-colourings.
+Unit diamond: k(k-1)(k-2)^2 colourings; opposite equality forced only at k3.
+Marked two-triangular-lattice cover exports six-colouring; exact spindle control: (0, 0, 1, 2, 3, 4, 5)
+No universal two-carrier cover or plane six/seven decision claimed.
+PASS: 243 exact checks

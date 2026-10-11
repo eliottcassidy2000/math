@@ -1,0 +1,14 @@
+ABC difference families: exact arithmetic and a geometric transfer boundary
+Twin-centre controls: even m=2..2000; 61 twin centres; unique overlapping pair 3-5-7
+Fibonacci/Lucas identities: n=1..500; explicit composite neighbours for every tested odd n>=9
+Proved Fibonacci twin-prime values: 3,5,13; prime-index hostiles F19=37*113, L23=139*461
+Conditional ABC only: log(rad(Fn*Ln))/log(Fn*Ln) tends to1; no primality conclusion
+Wheel / modulus / survivors / both-composite ray(first,period,q,r): ((), 2, 1, 34, 30, 3, 5)
+Wheel / modulus / survivors / both-composite ray(first,period,q,r): ((3,), 6, 1, 216, 210, 5, 7)
+Wheel / modulus / survivors / both-composite ray(first,period,q,r): ((3, 5), 30, 3, 120, 2310, 7, 11)
+Wheel / modulus / survivors / both-composite ray(first,period,q,r): ((3, 5, 7), 210, 15, 9450, 30030, 11, 13)
+Wheel / modulus / survivors / both-composite ray(first,period,q,r): ((3, 5, 7, 11), 2310, 135, 217140, 510510, 13, 17)
+Rational rotated-square controls: 91; exact unit edges: 364; all arithmetic two-colourings pass
+ABC-quality hostiles: 675+1=676 radical390; 243+2=245 radical210
+Checks: 5685
+Scope: no abc proof, no twin-prime infinitude, no plane six/seven witness, no new tournament count

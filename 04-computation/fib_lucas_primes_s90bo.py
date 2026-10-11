@@ -10,6 +10,10 @@ from math import log, sqrt
 phi = (1 + sqrt(5)) / 2
 
 print("""
+HISTORICAL EXPLORATION — scoped corrections applied 2026-10-11.
+The signed norm and gcd statements below are corrected. Probabilistic and
+geometric interpretations are historical heuristics, not proved consequences.
+Current audit: 05-knowledge/results/abc_difference_families_20261011c.md.
 
 
      FIBONACCI AND LUCAS: THE TWO HALVES OF PRIMALITY
@@ -75,7 +79,7 @@ THE FIBONACCI-LUCAS IDENTITY AND PRIMALITY
 
 F(p) and L(p) are connected by:
 
-  F(p)^2 * 5 = L(p)^2 + 4*(-1)^p    (for odd prime p: +4)
+  F(p)^2 * 5 = L(p)^2 - 4*(-1)^p    (for odd prime p: +4)
   F(p)^2 * 5 = L(p)^2 + 4.
   L(p)^2 = 5*F(p)^2 - 4.
 
@@ -141,9 +145,9 @@ Both grow at rate phi^n, but L is LARGER by factor sqrt(5).
 The "extra size" of L(n) means it has DIFFERENT divisibility properties.
 
 Specifically: F(n) and L(n) share NO common factor > 2.
-  gcd(F(n), L(n)) divides 2 (and equals 1 if n is odd, 2 if n is even).
+  gcd(F(n), L(n)) divides 2 (and equals 2 iff 3 divides n, otherwise 1).
 
-For ODD prime p: gcd(F(p), L(p)) = 1.
+For prime p > 3: gcd(F(p), L(p)) = 1; p=3 has gcd(2,4)=2.
   F(p) and L(p) are COPRIME.
 
 This means: F(p) and L(p) have COMPLETELY DISJOINT prime factorizations.
@@ -154,7 +158,7 @@ THE PRIME FACTORS OF F(p) AND L(p) ARE DISJOINT SETS.
 This is why they are complementary as primality detectors:
   The primes that "go into" F(p) are DIFFERENT from those in L(p).
   If F(p) happens to be prime, it absorbs ALL its own primality.
-  If L(p) also happens to be prime, it does so INDEPENDENTLY.
+  Coprimality does not establish independence of their primality events.
 
 
 THE GOLDEN SIEVE
@@ -168,7 +172,8 @@ At each prime index p:
   Stream F produces F(p), which is either prime or composite.
   Stream L produces L(p), which is either prime or composite.
 
-These two events are NEARLY INDEPENDENT (because gcd = 1).
+The following probability estimates are heuristic, not consequences of gcd=1.
+No independence or asymptotic density is established here.
 Each has probability roughly 1/ln(phi^p) = 1/(p*ln(phi)) of being prime.
 
 The probability that BOTH are prime: ~ 1/(p*ln(phi))^2.
@@ -208,7 +213,7 @@ print(f"""
 The golden ratio phi generates BOTH sequences.
 They are the antisymmetric (F) and symmetric (L) parts of phi^n.
 
-F(p) and L(p) are COPRIME (for odd p).
+F(p) and L(p) are COPRIME (for prime p > 3; p=3 is the exception).
 Their prime factorizations are DISJOINT.
 They form a COMPLEMENTARY PAIR of primality detectors.
 

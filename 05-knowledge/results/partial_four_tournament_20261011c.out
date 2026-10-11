@@ -1,0 +1,68 @@
+{
+  "scope": "marked partial-square tournament completions; no plane chromatic decision",
+  "checks": 5194,
+  "four_arc_universe": 240,
+  "labelled_square_orientations": 48,
+  "user_pattern_objects": 24,
+  "completion_table": [
+    {
+      "bits": [
+        0,
+        0
+      ],
+      "type": "T",
+      "scores": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "bits": [
+        1,
+        0
+      ],
+      "type": "+",
+      "scores": [
+        0,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "bits": [
+        0,
+        1
+      ],
+      "type": "-",
+      "scores": [
+        1,
+        1,
+        1,
+        3
+      ]
+    },
+    {
+      "bits": [
+        1,
+        1
+      ],
+      "type": "S",
+      "scores": [
+        1,
+        1,
+        2,
+        2
+      ]
+    }
+  ],
+  "square_orbit_sizes": {
+    "adjacent_source_sink": 24,
+    "opposite_source_sink": 12,
+    "directed_cycle": 6,
+    "alternating": 6
+  },
+  "boundary": "arc direction, edge presence, and colour equality are different ports"
+}

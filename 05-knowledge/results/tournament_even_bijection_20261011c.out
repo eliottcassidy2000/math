@@ -1,0 +1,93 @@
+{
+  "scope": "explicit inverse pair on types; atom-ranking is non-natural",
+  "checks": 84251,
+  "complete_orders": "0..6",
+  "type_counts": [
+    {
+      "n": 0,
+      "tournament_types": 1,
+      "even_types": 1,
+      "strong_types": 0,
+      "connected_even_types": 0
+    },
+    {
+      "n": 1,
+      "tournament_types": 1,
+      "even_types": 1,
+      "strong_types": 1,
+      "connected_even_types": 1
+    },
+    {
+      "n": 2,
+      "tournament_types": 1,
+      "even_types": 1,
+      "strong_types": 0,
+      "connected_even_types": 0
+    },
+    {
+      "n": 3,
+      "tournament_types": 2,
+      "even_types": 2,
+      "strong_types": 1,
+      "connected_even_types": 1
+    },
+    {
+      "n": 4,
+      "tournament_types": 4,
+      "even_types": 4,
+      "strong_types": 1,
+      "connected_even_types": 2
+    },
+    {
+      "n": 5,
+      "tournament_types": 12,
+      "even_types": 12,
+      "strong_types": 6,
+      "connected_even_types": 8
+    },
+    {
+      "n": 6,
+      "tournament_types": 56,
+      "even_types": 56,
+      "strong_types": 35,
+      "connected_even_types": 43
+    }
+  ],
+  "relabelled_roundtrip_controls": 83744,
+  "four_type_transversal": [
+    {
+      "a": 0,
+      "b": 0,
+      "tournament_mask": 0,
+      "graph_mask": 0
+    },
+    {
+      "a": 0,
+      "b": 1,
+      "tournament_mask": 16,
+      "graph_mask": 7
+    },
+    {
+      "a": 1,
+      "b": 0,
+      "tournament_mask": 2,
+      "graph_mask": 3
+    },
+    {
+      "a": 1,
+      "b": 1,
+      "tournament_mask": 18,
+      "graph_mask": 30
+    }
+  ],
+  "edge_parity_polynomial_F2": "b + a*b",
+  "order_join_hostile": {
+    "ab_graph_mask": 7,
+    "ba_graph_mask": 3
+  },
+  "equivariance_hostile_permutation": [
+    1,
+    2,
+    0
+  ]
+}
