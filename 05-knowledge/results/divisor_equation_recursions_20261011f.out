@@ -1,0 +1,14 @@
+divisor_equation_recursions_20261011f
+records through100000: ((1, 1), (2, 2), (4, 3), (6, 4), (12, 6), (24, 8), (36, 9), (48, 10), (60, 12), (120, 16), (180, 18), (240, 20), (360, 24), (720, 30), (840, 32), (1260, 36), (1680, 40), (2520, 48), (5040, 60), (7560, 64), (10080, 72), (15120, 80), (20160, 84), (25200, 90), (27720, 96), (45360, 100), (50400, 108), (55440, 120), (83160, 128))
+first13arguments: (1, 2, 4, 6, 12, 24, 36, 48, 60, 120, 180, 240, 360)
+first13values: (1, 2, 3, 4, 6, 8, 9, 10, 12, 16, 18, 20, 24)
+declared divisor vertices: 133 ; rational polynomial controls: 690
+curve: y^2=x(x^2+5x-32); seed(4,4); positive multiples1..24: (8, 15, 22)
+8P positive primitive triple: (301361533449900458837600, 49105016933436320224063, 316629033253501281102807)
+area squarefree D: 71013535489456671 ; factors: (3, 1237, 10193, 11329, 165713)
+unit rotation real: -4540156681460417/19131021815025140
+unit rotation sqrt(-D) coefficient: 69739671/19131021815025140
+field escape is not screen escape: retained p11 Legendre markers are both-1
+no positive solution with A+B<=999; no global leastness or rank claim
+no six-colour equality or plane chromatic conclusion
+exact checks: 1897

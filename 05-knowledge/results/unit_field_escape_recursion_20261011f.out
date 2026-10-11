@@ -1,0 +1,189 @@
+{
+  "scope": "exact field escape and geometric closure; no six-equality construction",
+  "checks": 2239,
+  "path_controls": [
+    {
+      "path_length": 2,
+      "D": 15,
+      "vertices": 5,
+      "edges": 5,
+      "six_colourings": 3120
+    },
+    {
+      "path_length": 3,
+      "D": 35,
+      "vertices": 7,
+      "edges": 7,
+      "six_colourings": 78120
+    }
+  ],
+  "diamond_chain_bank": [
+    {
+      "m": 1,
+      "D": 11,
+      "vertices": 7,
+      "unit_edges": 11,
+      "chromatic_number": 4,
+      "six_colourings": 31680
+    },
+    {
+      "m": 2,
+      "D": 47,
+      "vertices": 13,
+      "unit_edges": 21,
+      "chromatic_number": 4,
+      "six_colourings": 204779520
+    },
+    {
+      "m": 3,
+      "D": 107,
+      "vertices": 19,
+      "unit_edges": 31,
+      "chromatic_number": 4,
+      "six_colourings": 1310718689280
+    },
+    {
+      "m": 4,
+      "D": 191,
+      "vertices": 25,
+      "unit_edges": 41,
+      "chromatic_number": 4,
+      "six_colourings": 8388607916113920
+    },
+    {
+      "m": 5,
+      "D": 299,
+      "vertices": 31,
+      "unit_edges": 51,
+      "chromatic_number": 4,
+      "six_colourings": 53687091194631290880
+    },
+    {
+      "m": 6,
+      "D": 431,
+      "vertices": 37,
+      "unit_edges": 61,
+      "chromatic_number": 4,
+      "six_colourings": 343597383679656402616320
+    },
+    {
+      "m": 7,
+      "D": 587,
+      "vertices": 43,
+      "unit_edges": 71,
+      "chromatic_number": 4,
+      "six_colourings": 2199023255551978009767444480
+    },
+    {
+      "m": 8,
+      "D": 767,
+      "vertices": 49,
+      "unit_edges": 81,
+      "chromatic_number": 4,
+      "six_colourings": 14073748835532798592625116446720
+    },
+    {
+      "m": 9,
+      "D": 971,
+      "vertices": 55,
+      "unit_edges": 91,
+      "chromatic_number": 4,
+      "six_colourings": 90071992547409919909928007452590080
+    },
+    {
+      "m": 10,
+      "D": 1199,
+      "vertices": 61,
+      "unit_edges": 101,
+      "chromatic_number": 4,
+      "six_colourings": 576460752303423487994235392476965765120
+    },
+    {
+      "m": 11,
+      "D": 1451,
+      "vertices": 67,
+      "unit_edges": 111,
+      "chromatic_number": 4,
+      "six_colourings": 3689348814741910323199631065118525808967680
+    },
+    {
+      "m": 12,
+      "D": 1727,
+      "vertices": 73,
+      "unit_edges": 121,
+      "chromatic_number": 4,
+      "six_colourings": 23611832414348226068479976388167585651773931520
+    }
+  ],
+  "omitted_edges_separated": 792,
+  "extra_cross_edge_hostile": {
+    "vertices": 37,
+    "unit_edges": 90,
+    "unrecorded_by_skeleton": 5
+  },
+  "finite_prime_escape_hostiles": [
+    {
+      "selected_primes": [],
+      "m": 2,
+      "D": 47,
+      "symbolic_vertices": 13,
+      "chromatic_number": 4
+    },
+    {
+      "selected_primes": [
+        2
+      ],
+      "m": 2,
+      "D": 47,
+      "symbolic_vertices": 13,
+      "chromatic_number": 4
+    },
+    {
+      "selected_primes": [
+        2,
+        3
+      ],
+      "m": 6,
+      "D": 431,
+      "symbolic_vertices": 37,
+      "chromatic_number": 4
+    },
+    {
+      "selected_primes": [
+        2,
+        3,
+        5
+      ],
+      "m": 30,
+      "D": 10799,
+      "symbolic_vertices": 181,
+      "chromatic_number": 4
+    },
+    {
+      "selected_primes": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "m": 210,
+      "D": 529199,
+      "symbolic_vertices": 1261,
+      "chromatic_number": 4
+    },
+    {
+      "selected_primes": [
+        2,
+        3,
+        5,
+        7,
+        11
+      ],
+      "m": 2310,
+      "D": 64033199,
+      "symbolic_vertices": 13861,
+      "chromatic_number": 4
+    }
+  ],
+  "plane_six_or_seven": "not decided"
+}

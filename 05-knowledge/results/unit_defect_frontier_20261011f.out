@@ -1,0 +1,18 @@
+Universe: labelled graphs on0..4 vertices, palettes2..4, every edge-deletion context.
+Independent literal deletion comparisons: 2283
+Forgetting shared port patterns before gluing loses the triangle obstruction.
+Moser palette3: minimal defect supports=11, sizes=[1]
+Moser palette4: minimal defect supports=1, sizes=[0]
+Moser palette6: minimal defect supports=1, sizes=[0]
+K7 palette6:21 singleton minimal repairs; abstract, not planar unit geometry.
+Mycielski lift of any source with degree>=3 contains the unit-forbidden K2,3.
+Prime escape: (2,) rotation t,D= (2, 7) diamond family m,t,D= (2, 12, 47)
+Prime escape: (2, 3, 11) rotation t,D= (66, 263) diamond family m,t,D= (66, 13068, 52271)
+Prime escape: (2, 3, 5, 7, 11, 13, 17, 19) rotation t,D= (9699690, 38798759) diamond family m,t,D= (9699690, 282251958288300, 1129007833153199)
+Prime escape: (2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31) rotation t,D= (200560490130, 802241960519) diamond family m,t,D= (200560490130, 120673530603557482250700, 482694122414229929002799)
+Even t<=120 with a split-subfield certificate at every prime<=19: [22, 32, 38, 46, 60, 66, 68, 82, 90]
+First passing t22 has odd2-adic norm valuation; first surviving that necessary guard t60.
+t60 split certificates: ((2, (239, 'one mod eight')), (3, (11, 1)), (5, (11, 2)), (7, (3, 2)), (11, (239, 5)), (13, (3, 6)), (17, (239, 4)), (19, (3, 4)))
+Certified geometric parameter: z=sqrt33+3sqrt(-3), norm60; omega=(119+sqrt(-239))/120.
+No equality rigidity or high chromatic conclusion follows from the displacement.
+PASS: 2901 exact checks. Six-colour equality remains OPEN.

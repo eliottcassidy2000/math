@@ -1,0 +1,5 @@
+recursion_escape_atlas_20261011f
+[{"bound": 13, "copies": 3, "edges": 13, "name": "distance_one_fifth", "palette": 2, "proof_nodes": 51, "vertices": 13}, {"bound": 7, "copies": 1, "edges": 11, "name": "classical_diamond", "palette": 3, "proof_nodes": 139, "vertices": 7}, {"bound": 5, "copies": 1, "edges": 4, "name": "coincident_copies", "palette": 2, "proof_nodes": 11, "vertices": 4}]
+Scope: three supplied k=2/3 seeds; 54 rigid transports; no supplied six-equality seed.
+Coincidences retained; independent finite refutations and critical-edge extraction pass.
+Hostiles: 12; checks: 237
