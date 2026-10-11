@@ -1,0 +1,18 @@
+{
+  "action_counts": {
+    "G": 128,
+    "GR": 160,
+    "H": 160,
+    "R": 320
+  },
+  "checks": 2248,
+  "moment_identity_gates": 320,
+  "rank_examples": {
+    "(111, 2)": 8,
+    "(155, 0)": 9,
+    "(223, 1)": 28,
+    "(251, 1)": 31,
+    "(283, 0)": 30
+  },
+  "status": "FINITE-EXACT arithmetic interfaces; ROOT coverage remains OPEN"
+}

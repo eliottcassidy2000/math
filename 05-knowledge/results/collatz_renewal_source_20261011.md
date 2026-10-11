@@ -380,6 +380,12 @@ independently justified measurement remains the substantive Collatz target.
 
 ## Next productive targets and reproduction
 
+The [atomic-rank continuation](collatz_atomic_rank_interface_20261011.md)
+integrates the incoming October11 credit controllers. It gives an explicit
+unbounded integer rank for their legal episodes and the exact threshold
+beta<r for paying polynomial initial ranks under nu_r. These statements
+still require genuine ROOT terminals before they yield proof coverage.
+
 1. Combine (7) with a proved source-weighted, refinement-stable estimate.
    The r=2 atomic law in R6 gives a rational source floor and an8-fold
    improvement of its alias bound per extra bit. Seek an independent

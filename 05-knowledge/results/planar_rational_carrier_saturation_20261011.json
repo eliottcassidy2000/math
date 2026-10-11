@@ -1,0 +1,9 @@
+{
+  "checks": 239,
+  "independent_source_chart_cases": 18,
+  "pole_cases": 40,
+  "polynomial_cases": 32,
+  "positive_carriers": 16,
+  "squarefree_numerator_hostile": "{p,y}=p^2, S=1/p, {y,S}=1",
+  "status": "FINITE-EXACT interfaces; universal rational-time obstruction inherited; JC OPEN"
+}

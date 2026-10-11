@@ -3,10 +3,18 @@
 2026-10-11. **PROVED, using CITED curve theory:** the generic-curve genus
 formula and nonrationality at every nonzero time for the family below.
 **FINITE-EXACT:** independent chart, ramification and hostile controls.
-Section J5 extends the obstruction to the entire weighted-homogeneous
-universal source carrier. This is a research result with a self-audit, not an independent peer audit
-or canon promotion. **OPEN:** arbitrary universal carriers, compositions
-of different flows, useful rational replacements, and planar JC.
+Section J5 rederives the weighted-homogeneous part of an already stronger
+repository theorem. **SCOPE CORRECTION, 2026-10-11:** arbitrary polynomial
+universal carriers were already settled by the independently audited
+[September7 theorem](planar_jc48_sep07_universal_genus.md); the
+[September8 cusp-ideal theorem](planar_jc48_sep08_cusp_ideal.md) extends the
+nonrational-time obstruction to every nonconstant member of K+D K[p,y].
+The first checkpoint of this note incorrectly called mixed weighted
+degrees open. Its formulas survive as a rederivation and quantitative
+illustration, not a new enlargement of the known nonrational family.
+This packet has a self-audit, not an independent peer audit or canon
+promotion. **OPEN:** compositions of different flows, useful rational
+replacements outside the settled carrier, and planar JC.
 
 ## The precise connection to the shape proposal
 
@@ -28,9 +36,11 @@ hostile is a nonprimitive invariant: a larger Newton triangle can describe
 the same primitive curve, not a larger genus.
 
 The closest proved mechanism is the
-[September6 nonrational family](planar_jc_long_20260906_nonrational.md),
-which covers f(p^a(p^3-y^2)), a>=2. Its genus-zero rational Hamiltonian
-flow x^2t is the canonical hostile. The corrected near miss is
+[September7 universal exceptional-cover proof](planar_jc48_sep07_universal_genus.md),
+read together with its [independent audit](planar_jc48_sep07_universal_genus_audit.md)
+after the overly narrow initial inheritance pass was corrected. Its
+antecedent is the [September6 family](planar_jc_long_20260906_nonrational.md).
+The genus-zero rational Hamiltonian flow x^2t is the canonical hostile. The corrected near miss is
 non-local-nilpotence=>nonrationality. The underused sidecar is the
 three-point Kummer cover. Board: **primitive invariant / ramification /
 completion / displacement / finite specialization / source**.
@@ -67,9 +77,10 @@ because f(I)-f(0) belongs to p^2D K[p,y].
 and E_lambda(y) cannot both belong to K(p,y). Consequently this operation
 cannot specialize to a polynomial source map at that time.
 
-The new parameters b and c are unrestricted in the stated ranges. The
-September6 result is the subfamily b=0,c=1. No claim of literature priority
-is made; this is an extension of that repository proof mechanism.
+The parameters b and c are unrestricted in the stated ranges. The
+September6 result is the subfamily b=0,c=1; the September7 theorem already
+contains the entire present family and arbitrary polynomial multipliers.
+No claim of novelty or literature priority is made.
 
 ## J2. Strip the power before computing the curve
 
@@ -229,7 +240,13 @@ rational denominator therefore pulls source rationality back to Laurent
 rationality, already excluded. This does not identify the entire actual
 D-adic completion with the Laurent completion.
 
-## J4. A second extension: every multiplier depending only on p
+## J4. Recovered classification: every multiplier depending only on p
+
+This formula is equivalent to Theorem A' of
+[the September7 carrier classification](continuing9_20260907_flow_carrier_genus.md).
+If H=p^2 R, then deg H=deg R+2 and o(H) is the degree of the squarefree
+part of R. This exactly identifies the two formulas, rather than treating
+different notation as a new result.
 
 Let H(p) be a nonzero polynomial divisible by p^2 and let
 I=H(p)D. The same nonrationality conclusion holds for f(I) at every
@@ -334,18 +351,31 @@ x^2t has the rational non-LND flow
 \]
 
 so non-LND alone remains insufficient. The finite controls retain this
-hostile and the nonprimitive example(2,0,2). No theorem about every
-sum of monomial generators or composition of their flows follows: mixed
-invariants and cancellation between operations require their own audit.
+hostile and the nonprimitive example(2,0,2). The earlier universal and
+cusp-ideal theorems already cover every single polynomial generator in
+their stated ideals, including arbitrary sums. Compositions that change
+invariants and cancellations between operations require their own audit.
 
-The constructive next target is consequently sharper: seek a multiplier
-R(p,y) with genuinely different weighted degrees and y dependence, or an
-explicitly terminating composition, rather than another p-only multiplier
-or weighted-homogeneous carrier. Before testing a formal
-finite response, compute the **primitive generic fibre** and its boundary.
-If genus remains at least two, test whether the operation fixes that
-invariant; if it does, J3's argument excludes rational time. If an
-operation changes invariants, the present obstruction does not apply.
+The constructive next target is consequently outside this already closed
+lane: a rational Hamiltonian outside K+D K[p,y], or a composition changing
+invariants. It must still pay actual source preservation and later finite
+compatibility. The September8 theorem shows why genus alone is insufficient
+at the boundary: D has elliptic generic fibres, but its vector field has
+poles at p=0; a commuting selfmap must retain that pole divisor.
+
+The present z=y^2/p^3 chart and the earlier w=p^3/y^2 exceptional chart
+are related by w=1/z, while both use r=v=y/p. Thus the branch data are
+the same sphere with zero and infinity exchanged. The earlier proof
+additionally embeds a compact bordered cover into an actual nearby fibre,
+paying the local-to-global step for arbitrary polynomial tails. Replacing
+that embedded piece by an unlabelled triangle or circle would discard the
+component gcd and branch multiplicities that make the obstruction work.
+
+The [rational-carrier continuation](planar_rational_carrier_saturation_20261011.md)
+tests the suggested change of domain directly: three polynomial source
+responses force any rational Hamiltonian back into K+p^2D K[p,y]. A
+rational replacement must therefore weaken the universal source condition
+or change the source algebra, retaining a proof of the required final return.
 
 The [checker](../../04-computation/experiments/planar_triangle_carrier_20261011.py)
 and [output](planar_triangle_carrier_20261011.json) compare two derivations
