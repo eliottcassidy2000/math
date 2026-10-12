@@ -1,0 +1,14 @@
+Lemma V1 (ray components = step components), 300 random pawn sets x 3 piece types: True
+Lemma V2 (dark-bishop graph depends only on dark pawns): True
+
+Largest region sealable with p pawns (second-largest component size; number of optimal pawn sets):
+  rook          p=1: 0 (48; e.g. a2) | p=2: 0 (1128; e.g. a2 b2) | p=3: 1 (8; e.g. a2 b3 a4) | p=4: 2 (6; e.g. a2 b3 b4 a5)
+  bishop_dark   p=1: 1 (2; e.g. b2) | p=2: 2 (2; e.g. f2 g3) | p=3: 5 (2; e.g. d2 b4 d4) | p=4: 14 (2; e.g. d2 d4 e5 e7)
+  queen         p=1: 0 (48; e.g. a2) | p=2: 0 (1128; e.g. a2 b2) | p=3: 0 (17296; e.g. a2 b2 c2) | p=4: 0 (194580; e.g. a2 b2 c2 d2)
+
+Components of the pawn-conditioned visibility graphs (sizes, largest first):
+  initial: rook: [32, 8, 8]; bishop_dark: [16, 1, 1, 1, 1, 1, 1, 1, 1]; bishop_light: [16, 1, 1, 1, 1, 1, 1, 1, 1]; queen: [32, 8, 8]
+  French advance (e5/d4 vs e6/d5, c5/f6 absent): rook: [48]; bishop_dark: [20, 1, 1, 1, 1]; bishop_light: [20, 1, 1, 1, 1]; queen: [48]
+  Carlsbad (W: a2 b2 d4 e3 f2 g2 h2; B: a7 b7 c6 d5 e6 f7 g7 h7): rook: [23, 14, 12]; bishop_dark: [22, 1, 1, 1]; bishop_light: [18, 3, 1, 1, 1]; queen: [49]
+  Closed Ruy / KID wall (d5/e4 vs d6/e5): rook: [48]; bishop_dark: [20, 1, 1, 1, 1]; bishop_light: [21, 1, 1, 1]; queen: [48]
+  main diagonal a1-h8 (8 pawns): rook: [28, 28]; bishop_dark: [12, 12]; bishop_light: [32]; queen: [56]

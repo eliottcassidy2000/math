@@ -1,0 +1,40 @@
+[KQvK] enumerated 368452 positions in 1.3s
+  ... 250000/368452 (8s)
+[KQvK] graph: 368452 positions, 4869496 internal edges, 0 uncertified boundary moves, 0 escapes; 11.8s
+[KQvK] solved: win 144508, draw 23048, loss 200896; max DTM 20 plies; 1.5s
+  {'N': 368452, 'wtm_win': 144508, 'wtm_draw': 0, 'wtm_loss': 0, 'btm_win': 0, 'btm_draw': 23048, 'btm_loss': 200896, 'max_dtm_plies': 20, 'edges': 4869496}
+[KRvK] enumerated 399112 positions in 1.2s
+  ... 250000/399112 (7s)
+[KRvK] graph: 399112 positions, 4447032 internal edges, 0 uncertified boundary moves, 0 escapes; 11.5s
+[KRvK] solved: win 175168, draw 22244, loss 201700; max DTM 32 plies; 1.5s
+  {'N': 399112, 'wtm_win': 175168, 'wtm_draw': 0, 'wtm_loss': 0, 'btm_win': 0, 'btm_draw': 22244, 'btm_loss': 201700, 'max_dtm_plies': 32, 'edges': 4447032}
+[KBvK] enumerated 417228 positions in 1.2s
+  ... 250000/417228 (7s)
+[KBvK] graph: 417228 positions, 3946992 internal edges, 0 uncertified boundary moves, 0 escapes; 11.1s
+[KBvK] solved: win 0, draw 417228, loss 0; max DTM -1 plies; 0.3s
+  {'N': 417228, 'wtm_win': 0, 'wtm_draw': 193284, 'wtm_loss': 0, 'btm_win': 0, 'btm_draw': 223944, 'btm_loss': 0, 'max_dtm_plies': -1, 'edges': 3946992}
+[KNvK] enumerated 429440 positions in 1.2s
+  ... 250000/429440 (6s)
+[KNvK] graph: 429440 positions, 3521256 internal edges, 0 uncertified boundary moves, 0 escapes; 10.7s
+[KNvK] solved: win 0, draw 429440, loss 0; max DTM -1 plies; 0.3s
+  {'N': 429440, 'wtm_win': 0, 'wtm_draw': 205496, 'wtm_loss': 0, 'btm_win': 0, 'btm_draw': 223944, 'btm_loss': 0, 'max_dtm_plies': -1, 'edges': 3521256}
+[KPvK] enumerated 331352 positions in 0.9s
+  ... 250000/331352 (7s)
+[KPvK] graph: 331352 positions, 2125630 internal edges, 0 uncertified boundary moves, 0 escapes; 9.4s
+[KPvK] solved: win 124960, draw 108788, loss 97604; max DTM 38 plies; 0.7s
+  {'N': 331352, 'wtm_win': 124960, 'wtm_draw': 38368, 'wtm_loss': 0, 'btm_win': 0, 'btm_draw': 70420, 'btm_loss': 97604, 'max_dtm_plies': 38, 'edges': 2125630}
+
+KPvK by stratum (pawn square): positions, white-to-move wins, black-to-move draws
+   a2:1840/3441|2282/3496  b2:2316/3389|1927/3502  c2:2395/3392|1932/3502  d2:2536/3392|1921/3502  e2:2536/3392|1921/3502  f2:2395/3392|1932/3502  g2:2316/3389|1927/3502  h2:1840/3441|2282/3496
+   a3:1887/3441|2189/3496  b3:2186/3389|1933/3502  c3:2219/3392|1995/3502  d3:2337/3392|2046/3502  e3:2337/3392|2046/3502  f3:2219/3392|1995/3502  g3:2186/3389|1933/3502  h3:1887/3441|2189/3496
+   a4:2308/3441|1706/3496  b4:2369/3389|1667/3502  c4:2352/3392|1791/3502  d4:2395/3392|1839/3502  e4:2395/3392|1839/3502  f4:2352/3392|1791/3502  g4:2369/3389|1667/3502  h4:2308/3441|1706/3496
+   a5:2707/3441|1236/3496  b5:2639/3389|1333/3502  c5:2574/3392|1473/3502  d5:2558/3392|1574/3502  e5:2558/3392|1574/3502  f5:2574/3392|1473/3502  g5:2639/3389|1333/3502  h5:2707/3441|1236/3496
+   a6:3054/3441|806/3496  b6:2962/3389|929/3502  c6:2894/3392|1056/3502  d6:2922/3392|1147/3502  e6:2922/3392|1147/3502  f6:2894/3392|1056/3502  g6:2962/3389|929/3502  h6:3054/3441|806/3496
+   a7:3321/3438|444/3496  b7:3229/3384|578/3502  c7:3240/3386|708/3502  d7:3240/3386|698/3502  e7:3240/3386|698/3502  f7:3240/3386|708/3502  g7:3229/3384|578/3502  h7:3321/3438|444/3496
+KPvK internal edges: 2125630; king moves (stay in stratum): 1968490; pawn pushes (leave stratum): 157140
+every stratum-leaving internal move advances the pawn: True
+KQvK: longest DTM 20 plies at 7K/6Q1/8/8/8/8/2k5/8 b - - 0 1 (KPvK plies stop at the promotion boundary)
+KRvK: longest DTM 32 plies at 7K/8/8/8/8/8/8/1R1k4 b - - 0 1 (KPvK plies stop at the promotion boundary)
+KPvK: longest DTM 38 plies at 8/8/8/k7/8/K7/6P1/8 b - - 0 1 (KPvK plies stop at the promotion boundary)
+
+SUMMARY {'KQvK': {'N': 368452, 'wtm_win': 144508, 'wtm_draw': 0, 'wtm_loss': 0, 'btm_win': 0, 'btm_draw': 23048, 'btm_loss': 200896, 'max_dtm_plies': 20, 'edges': 4869496}, 'KRvK': {'N': 399112, 'wtm_win': 175168, 'wtm_draw': 0, 'wtm_loss': 0, 'btm_win': 0, 'btm_draw': 22244, 'btm_loss': 201700, 'max_dtm_plies': 32, 'edges': 4447032}, 'KBvK': {'N': 417228, 'wtm_win': 0, 'wtm_draw': 193284, 'wtm_loss': 0, 'btm_win': 0, 'btm_draw': 223944, 'btm_loss': 0, 'max_dtm_plies': -1, 'edges': 3946992}, 'KNvK': {'N': 429440, 'wtm_win': 0, 'wtm_draw': 205496, 'wtm_loss': 0, 'btm_win': 0, 'btm_draw': 223944, 'btm_loss': 0, 'max_dtm_plies': -1, 'edges': 3521256}, 'KPvK': {'N': 331352, 'wtm_win': 124960, 'wtm_draw': 38368, 'wtm_loss': 0, 'btm_win': 0, 'btm_draw': 70420, 'btm_loss': 97604, 'max_dtm_plies': 38, 'edges': 2125630}}

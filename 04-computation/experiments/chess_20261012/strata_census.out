@@ -1,0 +1,12 @@
+promotion=False: per-side signatures 648; by pawn count {0: 72, 1: 72, 2: 72, 3: 72, 4: 72, 5: 72, 6: 72, 7: 72, 8: 72}
+  pawnless-piece inventories (p=0 row): 72; joint signatures 419904
+  capture edges in the joint lattice: 3125952 (victim side x unchanged capturer side)
+  max units per side 15, so the capture DAG has height 30 and with promotions a chain of length <= 46
+promotion=True: per-side signatures 26298; by pawn count {0: 9160, 1: 6414, 2: 4344, 3: 2823, 4: 1740, 5: 999, 6: 518, 7: 228, 8: 72}
+  pawnless-piece inventories (p=0 row): 9160; joint signatures 691584804
+  capture edges in the joint lattice: 6129222264 (victim side x unchanged capturer side)
+  promotion edges in the joint lattice: 4506951240
+  max units per side 15, so the capture DAG has height 30 and with promotions a chain of length <= 46
+
+per-file lemma: max pawn moves on one file with neither pawn capturing: 10 (one of them captured), 4 (neither captured)
+bound: sum over files of pawn moves + non-pawn captures <= 10(8-k) + 12k + (30-k) = 110 + k <= 118
