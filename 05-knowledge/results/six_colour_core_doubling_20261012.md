@@ -2,13 +2,18 @@
 
 2026-10-12, opus-2026-10-12-S24. **PROVED:** the census, the doubling lemma
 and the extension theorem ([THM-4614](../../01-canon/theorems/THM-4614-three-colourable-contexts-cannot-change-the-six-colour-port-relation-in-q-zeta55.md)).
-**FINITE-EXACT:** the 570-pattern confirmation, five three-colourable probe
-contexts, and the Hoffman bound at the residue field of 109. **OPEN:**
+**FINITE-EXACT:** the 570-pattern confirmation and six three-colourable probe
+contexts. **NUMERICAL with margin:** the Hoffman bound at the residue field
+of 109. **OPEN:**
 three-colourability of every finite unit graph of `Q(zeta55)`
 ([HYP-9247](../hypotheses/HYP-9247-every-finite-unit-distance-graph-in-q-zeta55-is-three-colourable.md)),
-the field's chromatic number, six-colour forcing, and the plane. Self-audited;
-no independent peer audit, no literature priority claimed for the lemma
-(it is the standard product-of-palettes trick, applied to a fixed port set).
+the field's chromatic number, six-colour forcing, and the plane. Independently
+audited 2026-10-12 (CORRECT WITH FIXES: the census, witnesses, apexes, the
+570 patterns, the probes and the Hoffman bound were reproduced with
+independent code; a port quantifier, the residue-colouring scope and a
+transfer condition were corrected; MISTAKE-593). No literature priority is
+claimed for the lemma (it is the standard product-of-palettes trick, applied
+to a fixed port set).
 
 ## Inheritance and the changed question
 
@@ -61,8 +66,9 @@ prime `ell = 1 mod 55`.
 So the points of `L` at unit distance from two ports are the ports and nine
 further points, every one the fourth vertex of a unit rhombus spanned by two
 port edges at a common port (the five pentagram apexes and four completions
-at `0`); each sees exactly two ports, none sees three, and no two of the
-nine are at unit distance (complete unit graph on the seventeen points,
+at `0`); each sees exactly two ports, no point outside the port set sees
+three (the port `0` itself sees four), and no two of the nine are at unit
+distance (complete unit graph on the seventeen points,
 exact). The closed forms are checked against the census.
 
 ## 2. The doubling lemma, and the count fifteen
@@ -108,8 +114,8 @@ the fifth and eleventh roots of unity, the ten Mersenne directions
 `u_j = (2-gamma^j)/(2-gamma^(-j))` with denominators on `2047 = 23*89`, the
 thirds unit `(-5+sqrt(-11))/6`, and their negatives) has 846 vertices and
 2,187 complete unit edges, is three-colourable, peels to the eight ports at palette six, and has
-counts 30/180/247/113, the full relation, as the theorem requires. Four balls
-over the same directions are three-colourable too:
+counts 30/180/247/113, the full relation, as the theorem requires. Five balls
+over subsets of these directions are three-colourable too:
 
 | context | vertices | complete unit edges |
 |---|---:|---:|
@@ -117,6 +123,7 @@ over the same directions are three-colourable too:
 | radius 2, roots 10+11, Mersenne, thirds unit | 1,408 | 2,738 |
 | radius 3, roots 10 and Mersenne | 4,974 | 14,224 |
 | radius 3, roots 10+11 and thirds unit | 6,000 | 17,170 |
+| radius 4, roots 10 and Mersenne (declared `--large` run) | 38,514 | 143,614 |
 
 Edges are found by a bucketed version of the engine's two-prime filter
 (331, 661), every survivor receiving the exact norm; the bucketed finder is
@@ -130,10 +137,13 @@ least being 19. The least fixed prime of residue degree two is 109
 ([C3 of the palette-escape packet](cyclotomic_palette_escape_20261011.md)),
 and the residue colouring there is a proper colouring of the Cayley graph of
 `F_(109^2)` on its 110 norm-one residues; that graph is triangle-free, its
-least eigenvalue is `-19.64`, and Hoffman's bound gives chromatic number at
-least 7. So no residue colouring of `L` reaches six colours, and any
-three-colouring of `L`, if one exists, is a nonlinear rule like the periodic
-thirds rule. This is the content of HYP-9247.
+least eigenvalue is `-19.64` (floating-point character sums; the bound 6.60
+clears 6 with margin), and Hoffman's bound gives chromatic number at least 7.
+So the residue colouring with the smallest residue field does not reach six
+colours (the residue fields `F_(ell^10)` of 19, 29, 79 are unexamined), and
+any colouring of `L` with at most six colours, in particular any
+three-colouring, is a non-additive rule like the periodic thirds rule. This
+is the content of HYP-9247.
 
 ## 5. The reroute: what a forcing context must contain, and what the identities do not do
 
@@ -163,7 +173,9 @@ vertex, extension is unconditional when `m >= k(r+1)`; at `m = 2k` and
 `r <= 2` the double-port census decides. The repo's six-port conditional
 mechanism ([marked return thickness, section 4](marked_return_thickness_20261012a.md))
 therefore needs, for each of its 151 separating partitions, an eliminating
-fragment whose exterior is at least four-chromatic.
+fragment whose exterior is at least four-chromatic, whenever its six ports
+have fewer than fifteen double-port vertices (automatic for any six of the
+eight ports here; a different port set needs its own census).
 
 ## 6. Connection ledger
 
@@ -182,8 +194,9 @@ fragment whose exterior is at least four-chromatic.
     python3 -B -O 04-computation/experiments/six_colour_core_doubling_20261012.py
 
 [Script](../../04-computation/experiments/six_colour_core_doubling_20261012.py),
-[output](six_colour_core_doubling_20261012.json). Ordinary and `-O` runs agree
-byte for byte. All coordinates are exact 40-vectors over `Q(zeta55)` in the
+[output](six_colour_core_doubling_20261012.json), and the declared large run
+`python3 -B <script> --large` with [its output](six_colour_core_doubling_20261012_large.json)
+(adds the radius-four ball). Ordinary and `-O` runs agree byte for byte. All coordinates are exact 40-vectors over `Q(zeta55)` in the
 inherited engine; numerics (mpmath, 120 digits, PSLQ on the eight-term basis
 of `K`) only propose roots, which are then squared exactly. The output keeps
 the pair census with witnesses, the nine apex coordinates, their port pairs,

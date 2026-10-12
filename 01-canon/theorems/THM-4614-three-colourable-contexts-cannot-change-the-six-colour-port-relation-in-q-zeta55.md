@@ -1,6 +1,6 @@
 ---
 id: THM-4614
-title: "In Q(zeta55) no unit-distance context with a three-colourable exterior changes the six-colour boundary relation at the eight fixed ports: the points at unit distance from two ports are exactly the ports and nine rhombus completions (five pentagram apexes, four pentagon-rhombus apexes), no point of the field is adjacent to three ports, and the doubling lemma (three colour classes to three disjoint colour pairs; a blocking vertex kills six of the ninety options, so fewer than fifteen never block) extends every proper six-colouring of the ports to every finite G with G-B three-colourable; a forcing context therefore needs a four-chromatic subgraph of the triangle-free field graph, and none is known"
+title: "In Q(zeta55) no unit-distance context with a three-colourable exterior changes the six-colour boundary relation at the eight fixed ports: the points at unit distance from two ports are exactly the ports and nine rhombus completions (five pentagram apexes, four pentagon-rhombus apexes), no point of the field outside the ports is adjacent to three ports, and the doubling lemma (three colour classes to three disjoint colour pairs; a blocking vertex kills six of the ninety options, so fewer than fifteen never block) extends every proper six-colouring of the ports to every finite G with G-B three-colourable; a forcing context therefore needs a four-chromatic subgraph of the triangle-free field graph, and none is known"
 status: >
   PROVED: statements 2 and 3 (the doubling lemma and the extension theorem), given statement 1.
   PROVED + FINITE-EXACT: statement 1 (the census). Its completeness rests on the squareness criterion
@@ -10,7 +10,9 @@ status: >
   or beyond distance two.
   FINITE-EXACT: statement 4 (the 570-pattern SAT confirmation and the five three-colourable probe contexts).
   NUMERICAL with margin: the Hoffman bound at the minimal fixed prime (floating-point eigenvalues; the bound
-  6.60 exceeds 6 by 0.6). Self-audited; no independent peer audit.
+  6.60 exceeds 6 by 0.6). Independently audited 2026-10-12 (adversarial audit with its own exact arithmetic,
+  edge finder and SAT: every census entry, witness prime, apex, pattern count and probe reproduced; the port
+  quantifier and the residue-colouring scope corrected; CORRECT WITH FIXES, fixes applied, MISTAKE-593).
 session: opus-2026-10-12-S24
 source: 05-knowledge/results/six_colour_core_doubling_20261012.md
 scripts:
@@ -39,7 +41,7 @@ the unit pentagon and the unit rhombus sharing the vertex `0 = P_0`; `G[B]` has 
 1. **(Census of double-port vertices.)** A point `x` of `L` not in `B` is at unit distance from two ports if and only if it is one of the following nine points, each the fourth vertex of a unit rhombus spanned by two port edges at a common port:
    * the five pentagram apexes `P_j + alpha^(j+1)` (`j = 0,...,4`), i.e. `alpha`, `1+alpha^2`, `1+alpha+alpha^3`, `1+alpha+alpha^2+alpha^4`, `2+alpha+alpha^2+alpha^3`, completing the rhombi `P_j, P_(j+1), P_(j+2)`;
    * the four pentagon-rhombus apexes `1-eta`, `1-bar(eta)`, `P_4-eta`, `P_4-bar(eta)`, completing the rhombi at `0` spanned by `P_1` or `P_4` with `-eta` or `-bar(eta)`.
-   Each of the nine has exactly two port neighbours; no point of `L` is at unit distance from three ports; the nine are pairwise at non-unit distance. All other port pairs have no apex in `L`: the nine unit edges (an apex would close a unit triangle, impossible in `L`), the pairs `(0,3/4)` and `(-eta,-bar(eta))` whose apexes are ports, the pairs `(P_2,-eta)`, `(P_3,-eta)` at distance above two, and the six pairs `(P_1,3/4)`, `(P_2,3/4)`, `(P_3,3/4)`, `(P_4,3/4)`, `(P_2,-bar(eta))`, `(P_3,-bar(eta))`, for which `D(D-4)` is a quadratic non-residue at a split prime of `L` (witnesses 661, 661, 661, 2531, 991, 331).
+   Each of the nine has exactly two port neighbours; no point of `L` outside `B` is at unit distance from three ports (the port `0` sees four); the nine are pairwise at non-unit distance. All other port pairs have no apex in `L`: the nine unit edges (an apex would close a unit triangle, impossible in `L`), the pairs `(0,3/4)` and `(-eta,-bar(eta))` whose apexes are ports, the pairs `(P_2,-eta)`, `(P_3,-eta)` at distance above two, and the six pairs `(P_1,3/4)`, `(P_2,3/4)`, `(P_3,3/4)`, `(P_4,3/4)`, `(P_2,-bar(eta))`, `(P_3,-bar(eta))`, for which `D(D-4)` is a quadratic non-residue at a split prime of `L` (witnesses 661, 661, 661, 2531, 991, 331).
 
 2. **(Doubling lemma; any graph.)** Let `H` be a finite graph, `B` a subset of `V(H)`, `c` a proper 3-colouring of `H-B`, and suppose every vertex of `H-B` has at most two neighbours in `B`. Let `t` be a proper 6-colouring of `H[B]`. Call an *option* a perfect matching `M` of the six colours into three pairs together with a bijection `sigma` from the three classes of `c` to the pairs of `M` (90 options). A vertex `x` of `H-B` with two `B`-neighbours of distinct `t`-colours *blocks* the option when `sigma(c(x)) = t(N_B(x))`. If some option is blocked by no vertex, `t` extends to a proper 6-colouring of `H`. Each vertex blocks exactly six options, so fewer than fifteen blocking vertices never exhaust the options.
 
@@ -47,11 +49,11 @@ the unit pentagon and the unit rhombus sharing the vertex `0 = P_0`; `G[B]` has 
 
        R_6(G;B) = R_6(G[B];B).
 
-4. **(Confirmations and the shape of the obstruction; FINITE-EXACT.)**
+4. **(Confirmations and the shape of the obstruction; FINITE-EXACT, except the eigenvalue bound, which is NUMERICAL with margin.)**
    * For each of the 570 patterns, no assignment of classes to the nine apexes kills all 90 options (SAT, 570 instances), even with all nine present at once.
    * The apex context (ports, the nine apexes, and one layer of 52 directions: the fifth and eleventh roots of unity, the ten Mersenne directions `(2-gamma^j)/(2-gamma^(-j))`, the thirds unit `(-5+sqrt(-11))/6`, and their negatives; 846 vertices, 2,187 unit edges) is three-colourable, peels to the eight ports at palette six, and has the full relation with counts 30/180/247/113.
-   * Four balls of radius two and three over the same directions (1,304 / 1,408 / 4,974 / 6,000 vertices; 2,534 / 2,738 / 14,224 / 17,170 complete unit edges) are three-colourable.
-   * At the minimal conjugation-fixed prime of `L`, `ell = 109` (residue field `F_(109^2)`, 110 norm-one residues, triangle-free), the Cayley graph of the residue field on the norm-one residues has least eigenvalue `-19.64` against degree 110, so the Hoffman bound gives chromatic number at least 7: no residue colouring of `L` can give six colours, let alone show port freedom.
+   * Four balls of radius two and three over subsets of these directions (1,304 / 1,408 / 4,974 / 6,000 vertices; 2,534 / 2,738 / 14,224 / 17,170 complete unit edges) and the radius-four ball over the fifth roots of unity and the Mersenne directions (38,514 vertices, 143,614 edges; the declared `--large` run) are three-colourable.
+   * At the conjugation-fixed prime of `L` with the smallest residue field, `ell = 109` (residue field `F_(109^2)`, 110 norm-one residues, triangle-free), the Cayley graph of the residue field on the norm-one residues has least eigenvalue `-19.64` against degree 110, so the Hoffman bound gives chromatic number at least 7: the residue colouring with the smallest residue field cannot give six colours, let alone show port freedom. The other conjugation-fixed primes (19, 29, 79, residue fields `F_(ell^10)`) were not examined.
 
 ## Proof
 
@@ -71,4 +73,4 @@ because `(x-p)/(q-p)` is the unit-modulus number `1/2 +- i sqrt(4-D)/(2 sqrt D)`
 
 Every eleventh-root context filed so far has an explicit three-colouring: the 8,436-vertex mixed-generator graph, the 2,278-vertex thirds context, their 10,598-vertex union with 88 seam edges, the apex context and the four balls above. Statement 3 says their full boundary relations are not accidents of their generators or sizes: with the ports fixed, no three-colourable exterior can remove a pattern. The only lever a three-colourable exterior has is a double-port vertex, there are nine of them in the whole field, and fifteen would be needed.
 
-A context that changes `R_6(G;B)` must therefore contain a four-chromatic finite unit-distance graph of `L`. The field graph is triangle-free, additive colourings of its unit-path component need at least 19 colours (every prime below 19, and 2, 3, 5, 7, 11, 13, 17 in particular, divides some unit-direction denominator), and the smallest residue colouring is at least 7-chromatic; so a four-chromatic subgraph, if it exists, is a nonlinear object, and HYP-9247 conjectures that none exists. The general form of statement 2 (palette `m`, exterior chromatic number `k`, at most `r` port neighbours per exterior vertex: unconditional extension when `m >= k(r+1)`, and the blocking analysis at `m = 2k`, `r <= 2`) applies to any port set once its double-port census is known.
+A context that changes `R_6(G;B)` must therefore contain a four-chromatic finite unit-distance graph of `L`. The field graph is triangle-free, additive colourings of its unit-path component need at least 19 colours (every prime below 19, and 2, 3, 5, 7, 11, 13, 17 in particular, divides some unit-direction denominator), and the residue colouring with the smallest residue field is at least 7-chromatic; so any colouring of `L` with at most six colours is a non-additive rule, and HYP-9247 conjectures that no four-chromatic subgraph exists. The general form of statement 2 (palette `m`, exterior chromatic number `k`, at most `r` port neighbours per exterior vertex: unconditional extension when `m >= k(r+1)`, and the blocking analysis at `m = 2k`, `r <= 2`) applies to any port set once its double-port census is known.

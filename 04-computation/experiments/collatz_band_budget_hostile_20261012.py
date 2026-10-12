@@ -294,9 +294,21 @@ def source_187():
                 break
             rules_.append(rule)
             added.append(dict(source=n, head=list(rule.head), final_min=rule.final_min, drop=rule.drop, charge_cap=d['charge_cap']))
+        ledger = pe.grammar(8191, tuple(rules_), power)  # the ledger with every added rule
+        pending = [n for n in range(1, 8192, 2) if n not in ledger]
         auto[label] = dict(added=added, accepted=len(ledger), pending=pending[:8], uncompilable_source=stop)
     check(auto['auto-linear']['uncompilable_source'] == 235, 'source 235 has no linear own rule')
     check(auto['auto-quadratic']['uncompilable_source'] is None, 'quadratic auto-compiler ran twelve rules')
+    check(auto['auto-linear']['accepted'] == 1802 and auto['auto-quadratic']['accepted'] == 2100, 'auto-compiler reach')
+    check(auto['auto-quadratic']['pending'][0] == 411, 'first pending source after twelve quadratic rules')
+    steps235, charge235, h235, word235 = first_band_exit(235)
+    check((steps235, charge235, h235) == (8, 4, 95), 'source 235 first half-band exit')
+    x, w = 235, []
+    while x != 1:
+        a = tz(3*x+1)
+        x = (3*x+1) >> a
+        w.append(a)
+    check(len(w) == 46 and sum(a % 2 for a in w) == 31 > 3*E(235), 'source 235 total odd charge exceeds the linear budget')
     return dict(rules=rules, reach=reach, auto=auto)
 
 

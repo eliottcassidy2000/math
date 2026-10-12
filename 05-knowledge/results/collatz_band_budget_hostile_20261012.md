@@ -3,10 +3,15 @@
 2026-10-12, opus-2026-10-12-S24. **REFUTED, FINITE-EXACT:** the paid
 dyadic-band hypothesis (3) of [the three-problems packet, section 3](three_problems_marked_defects_20261012a.md)
 at coefficient 3 and at coefficient 4. **PROVED, scoped:** the two all-height
-rules for source 187 and the mechanism statement under the random model.
+rules for source 187. **HEURISTIC:** the mechanism statement (large-deviation
+reasoning in the random letter model, not a theorem even there).
 **HEURISTIC + NUMERICAL:** the threshold coefficient `c* = 4.6407`
 ([HYP-9248](../hypotheses/HYP-9248-first-band-exit-charge-threshold-coefficient.md)).
-No universal Collatz claim. Self-audited; no independent peer audit.
+No universal Collatz claim. Independently audited 2026-10-12 (CORRECT WITH
+FIXES: the witnesses, both scans, the tilt constant, the 187 rules and the
+ledgers were reproduced with independent code; the charge of 235, the
+auto-compiler count and the typing of the mechanism were corrected;
+MISTAKE-593).
 
 ## Inheritance and concept board
 
@@ -51,9 +56,11 @@ The word is saved in the output. The same scan to `2^33` (the 24 orbits that
 left int64 replayed with exact integers, none failing) finds exactly 37
 counterexamples and the largest ratio
 
-    charge/(E(n)^2-E(h)^2) = 176/51 = 3.451  at n = 96,883,183.
+    charge/(E(n)^2-E(h)^2) = 176/51 = 3.451,
 
-So the probe through `10^6` was simply below the first large deviation.
+first attained at `n = 96,883,183` and again at `n = 129,177,577` (same
+exit, charge 176). So the probe through `10^6` was simply below the first
+large deviation.
 
 **Glide records.** The 34 glide-record holders to `2.6 * 10^18` (Roosendaal's
 table, every glide recomputed exactly here) are the natural hostile
@@ -98,10 +105,11 @@ against the pure no-descent tilt (`f = 0.7304`, `KL = 0.05498`,
 first-exit charge below `N` grows like `9.28 E(n)`, while the budget of a
 drop-one exit is `3(2E-1) ~ 6E`. Both are linear in `E`; the ratio tends to
 `4.64`, and coefficient 3 had to fail. The observed drop-one ratios along the
-records rise from 3.08 at `E = 25` to 4.28 at `E = 49`, approaching the model
-from below (the longest prefix below `N` is `ln N/KL` only up to the
-first-passage correction `-(3/2) ln ln N`), with the record prefixes' odd
-fraction 0.72-0.75 matching the tilted law.
+records (3.08 at `E = 25` up to 4.28 at `E = 49`, then 3.81-3.95; not
+monotone) stay below the model's limit, which is approached slowly because
+the longest prefix below `N` is `ln N/KL` only up to a first-passage
+correction of order `ln ln N`; the record prefixes' odd fractions (0.65-0.76)
+scatter around the tilted law's 0.74.
 
 Consequence for the proof design: any potential `Phi(E)` that pays first exits
 must satisfy `Phi(E)-Phi(E-1) >= 9.28 E`, so `Phi(E) >= 4.64 E^2`. The
@@ -134,13 +142,15 @@ source inside the compiled height range) separates the two invoices:
 | invoice | own rules added | accepted through 8,191 | stops at |
 |---|---:|---:|---|
 | linear | 159, 187, 199, 219, 231 | 1,802 | 235: no compilable own rule |
-| quadratic | 187, 199, 219, 231, 235, 295, 303, 315, 327, 363, 367, 379 | 2,048 | none within twelve rules (pending 411) |
+| quadratic | 187, 199, 219, 231, 235, 295, 303, 315, 327, 363, 367, 379 | 2,100 | none within twelve rules (first pending 411) |
 
-Source 235 has total odd charge 30 against `3E(235) = 21`: its orbit exceeds
-the linear budget at every exit (first exit 95 with charge 4 at drop one,
-then 91, 103, 61, 5, 1), so under the linear invoice it can only be accepted
-through another source's rule and the `+16` seed slack. The quadratic
-invoice pays it at the first exit (`4 <= 3(49-36)`).
+Source 235 has total odd charge 31 against `3E(235) = 21`: at every
+candidate stopping state below 118 on its orbit (95, 91, 103, 61, 23, 35, 53,
+5, 1) the prefix charge exceeds three times the available bit drop (4 against
+3 at the first half-band exit 95; 31 against 21 at 1), so under the linear
+invoice it can only be accepted through another source's rule and the `+16`
+seed slack. The quadratic invoice pays it at the first exit
+(`4 <= 3(49-36)`).
 
 ## 4. Connection ledger
 

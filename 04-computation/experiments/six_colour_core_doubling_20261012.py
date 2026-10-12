@@ -7,7 +7,7 @@ Dependencies: the maintained exact Q(zeta55) engine
 (paid_exit_boundaries_20261012.py), SymPy, mpmath, PySAT.
 
 Exact arithmetic: every point is a 40-vector of rationals in the power basis
-of Q(zeta55).  Numerics (mpmath, 400 digits) are used only to *propose*
+of Q(zeta55).  Numerics (mpmath, 120 digits) are used only to *propose*
 square roots; every proposal is verified exactly, and every negative is
 certified by a quadratic non-residue witness at a split prime.
 """
@@ -350,7 +350,7 @@ def residue_graph_109():
                 chromatic_number_at_least=math.ceil(hoffman-1e-9))
 
 
-def main():
+def main(large=False):
     out = {}
     # 1. census of double-port vertices
     rows, D_points, _, apexes = apex_census()
@@ -415,6 +415,9 @@ def main():
     probes.append(rec)
     rec, _ = probe('ball radius 3: roots 10+11, thirds unit', ball(roots10+roots11+[v], 3))
     probes.append(rec)
+    if large:  # declared large run: python3 -B <script> --large (about one minute)
+        rec, _ = probe('ball radius 4: roots 10, Mersenne', ball(roots10+mers, 4))
+        probes.append(rec)
     out['probes'] = probes
     out['checks'] = CHECKS
     out['engine_checks'] = G.checks
@@ -422,5 +425,6 @@ def main():
 
 
 if __name__ == '__main__':
-    result = main()
+    import sys
+    result = main(large='--large' in sys.argv[1:])
     print(json.dumps(result, indent=1, sort_keys=True))

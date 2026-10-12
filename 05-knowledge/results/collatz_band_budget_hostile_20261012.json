@@ -1,5 +1,5 @@
 {
- "checks": 218,
+ "checks": 223,
  "exhaustive_scan": {
   "best_ratio": [
    176,
@@ -823,7 +823,7 @@
     "uncompilable_source": 235
    },
    "auto-quadratic": {
-    "accepted": 2048,
+    "accepted": 2100,
     "added": [
      {
       "charge_cap": 7,
@@ -1000,14 +1000,14 @@
      }
     ],
     "pending": [
-     379,
      411,
      423,
-     427,
      447,
      475,
      487,
-     495
+     495,
+     507,
+     511
     ],
     "uncompilable_source": null
    }
