@@ -1,27 +1,27 @@
 [KQvK] enumerated 368452 positions in 1.3s
-  ... 250000/368452 (8s)
-[KQvK] graph: 368452 positions, 4869496 internal edges, 0 uncertified boundary moves, 0 escapes; 11.8s
+  ... 250000/368452 (9s)
+[KQvK] graph: 368452 positions, 4869496 internal edges, 0 uncertified boundary moves, 0 escapes; 12.8s
 [KQvK] solved: win 144508, draw 23048, loss 200896; max DTM 20 plies; 1.5s
   {'N': 368452, 'wtm_win': 144508, 'wtm_draw': 0, 'wtm_loss': 0, 'btm_win': 0, 'btm_draw': 23048, 'btm_loss': 200896, 'max_dtm_plies': 20, 'edges': 4869496}
-[KRvK] enumerated 399112 positions in 1.2s
-  ... 250000/399112 (7s)
-[KRvK] graph: 399112 positions, 4447032 internal edges, 0 uncertified boundary moves, 0 escapes; 11.5s
-[KRvK] solved: win 175168, draw 22244, loss 201700; max DTM 32 plies; 1.5s
+[KRvK] enumerated 399112 positions in 1.3s
+  ... 250000/399112 (8s)
+[KRvK] graph: 399112 positions, 4447032 internal edges, 0 uncertified boundary moves, 0 escapes; 12.4s
+[KRvK] solved: win 175168, draw 22244, loss 201700; max DTM 32 plies; 1.6s
   {'N': 399112, 'wtm_win': 175168, 'wtm_draw': 0, 'wtm_loss': 0, 'btm_win': 0, 'btm_draw': 22244, 'btm_loss': 201700, 'max_dtm_plies': 32, 'edges': 4447032}
-[KBvK] enumerated 417228 positions in 1.2s
+[KBvK] enumerated 417228 positions in 1.3s
   ... 250000/417228 (7s)
-[KBvK] graph: 417228 positions, 3946992 internal edges, 0 uncertified boundary moves, 0 escapes; 11.1s
+[KBvK] graph: 417228 positions, 3946992 internal edges, 0 uncertified boundary moves, 0 escapes; 11.9s
 [KBvK] solved: win 0, draw 417228, loss 0; max DTM -1 plies; 0.3s
   {'N': 417228, 'wtm_win': 0, 'wtm_draw': 193284, 'wtm_loss': 0, 'btm_win': 0, 'btm_draw': 223944, 'btm_loss': 0, 'max_dtm_plies': -1, 'edges': 3946992}
-[KNvK] enumerated 429440 positions in 1.2s
-  ... 250000/429440 (6s)
-[KNvK] graph: 429440 positions, 3521256 internal edges, 0 uncertified boundary moves, 0 escapes; 10.7s
+[KNvK] enumerated 429440 positions in 1.3s
+  ... 250000/429440 (7s)
+[KNvK] graph: 429440 positions, 3521256 internal edges, 0 uncertified boundary moves, 0 escapes; 11.6s
 [KNvK] solved: win 0, draw 429440, loss 0; max DTM -1 plies; 0.3s
   {'N': 429440, 'wtm_win': 0, 'wtm_draw': 205496, 'wtm_loss': 0, 'btm_win': 0, 'btm_draw': 223944, 'btm_loss': 0, 'max_dtm_plies': -1, 'edges': 3521256}
-[KPvK] enumerated 331352 positions in 0.9s
-  ... 250000/331352 (7s)
-[KPvK] graph: 331352 positions, 2125630 internal edges, 0 uncertified boundary moves, 0 escapes; 9.4s
-[KPvK] solved: win 124960, draw 108788, loss 97604; max DTM 38 plies; 0.7s
+[KPvK] enumerated 331352 positions in 1.0s
+  ... 250000/331352 (8s)
+[KPvK] graph: 331352 positions, 2125630 internal edges, 0 uncertified boundary moves, 0 escapes; 10.0s
+[KPvK] solved: win 124960, draw 108788, loss 97604; max DTM 38 plies; 0.8s
   {'N': 331352, 'wtm_win': 124960, 'wtm_draw': 38368, 'wtm_loss': 0, 'btm_win': 0, 'btm_draw': 70420, 'btm_loss': 97604, 'max_dtm_plies': 38, 'edges': 2125630}
 
 KPvK by stratum (pawn square): positions, white-to-move wins, black-to-move draws

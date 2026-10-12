@@ -1,9 +1,9 @@
-[KRvK] O1 among win-preserving moves: starts 175168, mated 1720, cycled 173448, >200 plies 0, longest win 5 plies (120s) first cycling start: 8/8/8/8/8/8/8/k1KR4 w - - 0 1
-[KRvK] O2 among win-preserving moves: starts 175168, mated 2817, cycled 172351, >200 plies 0, longest win 11 plies (98s) first cycling start: 8/8/8/8/8/8/8/k3KR2 w - - 0 1
-[KRvK] O2 among nonincreasing moves: starts 175168, mated 175168, cycled 0, >200 plies 0, longest win 31 plies (32s)
-[KRvK] O2 among optimal moves: starts 175168, mated 175168, cycled 0, >200 plies 0, longest win 31 plies (32s)
-[KQvK] O1 among win-preserving moves: starts 144508, mated 3365, cycled 141143, >200 plies 0, longest win 11 plies (88s) first cycling start: 8/8/8/8/8/8/8/k2KQ3 w - - 0 1
-[KQvK] O2 among win-preserving moves: starts 144508, mated 7406, cycled 137102, >200 plies 0, longest win 21 plies (83s) first cycling start: 8/8/8/8/8/8/8/k2KQ3 w - - 0 1
-[KQvK] O2 among nonincreasing moves: starts 144508, mated 144508, cycled 0, >200 plies 0, longest win 19 plies (15s)
-[KQvK] O2 among optimal moves: starts 144508, mated 144508, cycled 0, >200 plies 0, longest win 19 plies (16s)
+[KRvK] O1 among win-preserving moves: starts 175168, mated 1720, cycled 173448, >200 plies 0, longest win 5 plies (104s) first cycling start: 8/8/8/8/8/8/8/k1KR4 w - - 0 1
+[KRvK] O2 among win-preserving moves: starts 175168, mated 2817, cycled 172351, >200 plies 0, longest win 11 plies (81s) first cycling start: 8/8/8/8/8/8/8/k3KR2 w - - 0 1
+[KRvK] O2 among nonincreasing moves: starts 175168, mated 41823, cycled 133345, >200 plies 0, longest win 49 plies (35s) first cycling start: 8/8/8/8/8/3K4/1R6/k7 w - - 0 1
+[KRvK] O2 among optimal moves: starts 175168, mated 175168, cycled 0, >200 plies 0, longest win 31 plies (27s)
+[KQvK] O1 among win-preserving moves: starts 144508, mated 3365, cycled 141143, >200 plies 0, longest win 11 plies (78s) first cycling start: 8/8/8/8/8/8/8/k2KQ3 w - - 0 1
+[KQvK] O2 among win-preserving moves: starts 144508, mated 7406, cycled 137102, >200 plies 0, longest win 21 plies (80s) first cycling start: 8/8/8/8/8/8/8/k2KQ3 w - - 0 1
+[KQvK] O2 among nonincreasing moves: starts 144508, mated 34719, cycled 109789, >200 plies 0, longest win 37 plies (40s) first cycling start: 8/8/8/8/8/8/8/k3KQ2 w - - 0 1
+[KQvK] O2 among optimal moves: starts 144508, mated 144508, cycled 0, >200 plies 0, longest win 19 plies (14s)
 [KPvK] greedy-optionality defender from all 70420 drawn Black-to-move positions: losses 0

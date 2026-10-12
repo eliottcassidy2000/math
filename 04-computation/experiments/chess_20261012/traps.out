@@ -1,5 +1,5 @@
 === 1. KPvK ===
-[KPvK whole class] trap: 108788 of 331352 positions survive (0.8s)
+[KPvK whole class] trap: 108788 of 331352 positions survive (0.9s)
   maximal trap of the whole class == exact not-lost set of the solve: True (trap 108788, not-lost 108788)
 [KPvK] enumerated 2507 positions in 0.1s
 [KPvK] graph: 2507 positions, 12273 internal edges, 0 uncertified boundary moves, 2511 escapes; 0.1s
@@ -18,49 +18,49 @@
   region "BK inside the square of the pawn, ahead of it": 116372 positions, exact not-lost 77736, maximal trap inside 64222, defender-to-move in trap 41090, min width 0
 
 === 2. KBPvK, dark-squared bishop, a-pawn ===
-[KBPvK] enumerated 72720 positions in 6.6s
-[KBPvK] graph: 72720 positions, 599180 internal edges, 0 uncertified boundary moves, 66843 escapes; 3.1s
+[KBPvK] enumerated 72720 positions in 5.7s
+[KBPvK] graph: 72720 positions, 599180 internal edges, 0 uncertified boundary moves, 66843 escapes; 2.7s
 [KBPvK wrong-bishop corner region] trap: 72720 of 72720 positions survive (0.1s)
   [KBPvK corner] trap size 72720: defender-to-move 40005, attacker-to-move 32715
    defender king squares in the trap: {'a7': 15291, 'a8': 22008, 'b7': 18474, 'b8': 16947}
    width (safe defender options) histogram: {0: 215, 1: 3027, 2: 14099, 3: 21350, 4: 1314}  min width 0
   positions of the region outside the trap: 0; examples: []
   dead by (side, check, BK, pawn): {}
-[KBPvK] enumerated 1182440 positions in 10.6s
-  ... 250000/1182440 (12s)
-  ... 500000/1182440 (25s)
-  ... 750000/1182440 (39s)
-  ... 1000000/1182440 (53s)
-[KBPvK] graph: 1182440 positions, 11479713 internal edges, 0 uncertified boundary moves, 0 escapes; 62.3s
+[KBPvK] enumerated 1182440 positions in 9.4s
+  ... 250000/1182440 (10s)
+  ... 500000/1182440 (22s)
+  ... 750000/1182440 (33s)
+  ... 1000000/1182440 (45s)
+[KBPvK] graph: 1182440 positions, 11479713 internal edges, 0 uncertified boundary moves, 0 escapes; 53.2s
   escapes (should be 0 since the sub-class is closed): 0
-[KBPvK] solved: win 418866, draw 357209, loss 406365; max DTM 38 plies; 4.4s
-  sub-class: 1182440 positions; not-lost for Black 357209 (30.21%)
-   not-lost by BK square (top 12): [('a8', 22008), ('b7', 18474), ('b8', 16947), ('c8', 16193), ('c6', 15657), ('a7', 15291), ('a6', 15182), ('c7', 14688), ('b6', 14044), ('d7', 12554), ('b5', 12230), ('d8', 10609)]
+[KBPvK] solved: win 418867, draw 357171, loss 406402; max DTM 38 plies; 3.7s
+  sub-class: 1182440 positions; not-lost for Black 357171 (30.21%)
+   not-lost by BK square (top 12): [('a8', 22008), ('b7', 18474), ('b8', 16947), ('c8', 16191), ('c6', 15657), ('a7', 15291), ('a6', 15182), ('c7', 14688), ('b6', 14044), ('d7', 12554), ('b5', 12230), ('d8', 10609)]
    corner-region positions 72720, not-lost among them 72720, trap found 72720
 
 === 3. KRvKB, dark-squared black bishop ===
-[KRvKB] enumerated 1604648 positions in 18.4s
-  ... 250000/1604648 (13s)
-  ... 500000/1604648 (27s)
-  ... 750000/1604648 (41s)
-  ... 1000000/1604648 (54s)
-  ... 1250000/1604648 (67s)
-  ... 1500000/1604648 (79s)
-[KRvKB] graph: 1604648 positions, 20459160 internal edges, 0 uncertified boundary moves, 979032 escapes; 84.7s
-[KRvKB light corner a8 (safe)] trap: 1237588 of 1604648 positions survive (5.2s)
+[KRvKB] enumerated 1604648 positions in 20.9s
+  ... 250000/1604648 (11s)
+  ... 500000/1604648 (23s)
+  ... 750000/1604648 (34s)
+  ... 1000000/1604648 (45s)
+  ... 1250000/1604648 (56s)
+  ... 1500000/1604648 (67s)
+[KRvKB] graph: 1604648 positions, 20459160 internal edges, 0 uncertified boundary moves, 979032 escapes; 71.8s
+[KRvKB light corner a8 (safe)] trap: 1237588 of 1604648 positions survive (4.9s)
   [KRvKB light corner a8 (safe)] trap size 1237588: defender-to-move 784046, attacker-to-move 453542
    defender king squares in the trap: {'a6': 134884, 'a7': 140309, 'a8': 145472, 'b6': 133045, 'b7': 144806, 'b8': 140309, 'c6': 130834, 'c7': 133045, 'c8': 134884}
    width (safe defender options) histogram: {0: 24, 1: 36342, 2: 64272, 3: 71650, 4: 64172, 5: 74052, 6: 83660, 7: 92350, 8: 89404, 9: 78416, 10: 54040, 11: 34958, 12: 20448, 13: 10654, 14: 5286, 15: 2690, 16: 1128, 17: 350, 18: 116, 19: 26, 20: 8}  min width 0
    trap members with BK within distance 1 of the corner: 570896 of 722442
-[KRvKB] enumerated 1599519 positions in 16.7s
-  ... 250000/1599519 (12s)
-  ... 500000/1599519 (25s)
-  ... 750000/1599519 (38s)
-  ... 1000000/1599519 (51s)
-  ... 1250000/1599519 (64s)
-  ... 1500000/1599519 (78s)
-[KRvKB] graph: 1599519 positions, 20368256 internal edges, 0 uncertified boundary moves, 979161 escapes; 82.8s
-[KRvKB dark corner a1 (wrong)] trap: 214316 of 1599519 positions survive (10.2s)
+[KRvKB] enumerated 1599519 positions in 14.2s
+  ... 250000/1599519 (10s)
+  ... 500000/1599519 (21s)
+  ... 750000/1599519 (32s)
+  ... 1000000/1599519 (43s)
+  ... 1250000/1599519 (54s)
+  ... 1500000/1599519 (65s)
+[KRvKB] graph: 1599519 positions, 20368256 internal edges, 0 uncertified boundary moves, 979161 escapes; 69.7s
+[KRvKB dark corner a1 (wrong)] trap: 214316 of 1599519 positions survive (9.0s)
   [KRvKB dark corner a1 (wrong)] trap size 214316: defender-to-move 201674, attacker-to-move 12642
    defender king squares in the trap: {'a1': 21089, 'a2': 23552, 'a3': 22811, 'b1': 23552, 'b2': 24903, 'b3': 26209, 'c1': 22811, 'c2': 26209, 'c3': 23180}
    width (safe defender options) histogram: {1: 177544, 2: 17005, 3: 4666, 4: 344, 5: 450, 6: 520, 7: 465, 8: 315, 9: 183, 10: 86, 11: 71, 12: 25}  min width 1

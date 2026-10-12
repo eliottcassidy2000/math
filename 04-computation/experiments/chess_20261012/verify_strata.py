@@ -43,7 +43,7 @@ for s in order:
                 n_int += 1
             else:
                 n_bnd += 1
-                assert pawn_sq[j] in verified or True  # pushes go to a higher rank, verified earlier
+                assert pawn_sq[j] in verified  # pushes go to a higher rank, verified earlier
             best = max(best, -int(val[j]))
         best = max(best, int(bnd_best[i]))   # boundary moves leaving the class (promotions / captures), from the tables
         okB &= (best == int(val[i]))

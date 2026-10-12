@@ -47,4 +47,4 @@ stratum  states  internal-edges  boundary-edges  T  B  R
      f2    6894           40641            6456  True True True
      g2    6891           40694            6450  True True True
      h2    6937           41794            6536  True True True
-all strata verified: True; 48 strata; max stratum size 6937; class size 331352; time 2.2s
+all strata verified: True; 48 strata; max stratum size 6937; class size 331352; time 2.3s

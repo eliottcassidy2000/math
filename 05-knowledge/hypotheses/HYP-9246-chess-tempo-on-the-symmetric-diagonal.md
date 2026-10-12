@@ -21,7 +21,7 @@ related:
 
 ## Setting
 
-`tau` is a value-negating involution of legal states: a board isometry composed with the colour swap, the side swap, the swap of castling rights and the reflection of the en-passant square (THM-4612 statement 6: the rank reflection always; the file reflection and the rotation without castling rights; all eight isometries without pawns). A board `B` with `tau(B) = B` has the **tempo** `t(B) = v(B, White to move) = -v(B, Black to move)`, the mover's value, in `{+1, 0, -1}`; `t = -1` is a mutual zugzwang.
+`tau` is a value-negating involution of legal states: a board isometry composed with the colour swap, the side swap, the swap of castling rights and the reflection of the en-passant square (THM-4612 statement 6: the rank reflection always; the file reflection and the rotation without castling rights; all eight isometries without pawns). A board `B` with `tau(B) = B` has the **tempo** `t(B) = V(B, White to move) = -V(B, Black to move)` (White's view), which is the mover's value `v` whichever side is to move, in `{+1, 0, -1}`; `t = -1` is a mutual zugzwang.
 
 ## Statements
 

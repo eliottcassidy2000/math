@@ -230,6 +230,10 @@ def solve(U, keys, G, verbose=True):
         val[i] = 0; dtm[i] = 0; resolved[i] = True
     for i in np.nonzero((term == 0) & (bnd_best == 1))[0]:
         val[i] = 1; dtm[i] = 1; resolved[i] = True; frontier.append(int(i))
+    # boundary-only losses: no internal successor and every boundary move loses (audit A, finding 1)
+    for i in np.nonzero((term == 0) & (np.diff(indptr) == 0) & (bnd_best == -1))[0]:
+        if not resolved[i]:
+            val[i] = -1; dtm[i] = 1; resolved[i] = True; frontier.append(int(i))
     while frontier:
         nxt = []
         for j in frontier:

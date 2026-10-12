@@ -8,7 +8,7 @@ Hence the pawn-conditioned visibility atlas is digital topology: rook components
 of the complement of P, bishop components = diagonal-step components of (colour c) minus P, queen components
 = 8-connected components.  Checked exhaustively on random pawn sets.
 Lemma V2 (colour locality): the bishop graph of colour c depends only on P intersect (colour c).
-Census: for p = 1..5 pawns on ranks 2-7, the largest region that can be sealed off (size of the largest
+Census: for p = 1..4 pawns on ranks 2-7, the largest region that can be sealed off (size of the largest
 component other than the main one; both components counted), per piece type.
 Named structures: the initial position and a few opening skeletons.
 """
