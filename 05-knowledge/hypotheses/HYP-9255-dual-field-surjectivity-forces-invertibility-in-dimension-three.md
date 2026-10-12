@@ -1,7 +1,7 @@
 ---
 id: HYP-9255
-title: "Dual-field surjectivity forces invertibility in dimension three: for every Keller map F : A^3 -> A^3 over a field of characteristic zero and every j, if the dual field V_j = d/dF_j is surjective on K[x, y, z] then F is an automorphism; equivalently (THM-4620(4)) no Keller map of A^3 has a coordinate-pair fibration whose generic fibre is a disjoint union of two or more lines"
-status: "OPEN (2026-10-12, mac-mini-2026-10-12-logic4). PROVED in the plane (THM-4620(5)). REFUTED in every dimension n >= 4 by padding: F = F' x id_(A^1) with F' a non-invertible Keller map of A^(n-1) (THM-1300 for n = 4) has V_n = d/dx_n surjective and generic fibre of (F_1, ..., F_(n-1)) equal to deg F' disjoint lines. Evidence in dimension three: THM-1300's three dual fields are all non-surjective with connected punctured-line fibres (THM-4621); Gao's degree-four map G (arXiv:2608.00222, section 3.5): all three coordinate-pair fibres are geometrically irreducible (two punctured lines, one conic), so no dual field is surjective (gao_degree4_fibrations.py); THM-4625 extends this to every member of the tangent-sweep family (the (F_1,F_2)-fibre is an irreducible hyperelliptic curve of genus floor((d-2)/2))."
+title: "Dual-field surjectivity forces invertibility in dimension three: for every Keller map F : A^3 -> A^3 over a field of characteristic zero and every j, if the dual field V_j = d/dF_j is surjective on K[x, y, z] then F is an automorphism; implied by (THM-4620(4)), and equivalent to if the sub-question below has a positive answer: no Keller map of A^3 has a coordinate-pair fibration whose generic fibre is a disjoint union of two or more lines"
+status: "OPEN (2026-10-12, mac-mini-2026-10-12-logic4). KNOWN in the plane (Gurjar-Masuda-Miyanishi 2013, Remark 2.5; THM-4620(5) re-proves it). REFUTED in every dimension n >= 4 by padding: F = F' x id_(A^1) with F' a non-invertible Keller map of A^(n-1) (THM-1300 for n = 4) has V_n = d/dx_n surjective and generic fibre of (F_1, ..., F_(n-1)) equal to deg F' disjoint lines. Evidence in dimension three: THM-1300's three dual fields are all non-surjective with connected punctured-line fibres (THM-4621); Gao's degree-four map G (arXiv:2608.00222, section 3.5): all three coordinate-pair fibres are geometrically irreducible (two punctured lines, one conic), so no dual field is surjective (gao_degree4_fibrations.py); THM-4625 extends this to every member of the tangent-sweep family (the (F_1,F_2)-fibre is an irreducible hyperelliptic curve of genus floor((d-2)/2))."
 session: mac-mini-2026-10-12-logic4
 related:
   - THM-4620 (surjective dual field => every geometric component of the generic fibre is a line and deg F = number of components)
@@ -19,8 +19,9 @@ its dual fields. If some `V_j` is surjective on `K[x, y, z]`, then `F` is an aut
 ## Reduction (THM-4620(4))
 
 If `V_j` is surjective, every geometric component of the generic fibre of `G_j = (F_i)_(i ≠ j)` is a
-line and `deg F = d_j`, the number of components. So the hypothesis is equivalent to: *the generic
-fibre of a coordinate pair of a Keller map of `A^3` is never a disjoint union of `d ≥ 2` lines.* When
+line and `deg F = d_j`, the number of components. So the hypothesis is *implied by*: *the generic fibre
+of a coordinate pair of a Keller map of `A^3` is never a disjoint union of `d ≥ 2` lines* (and is
+equivalent to it exactly when the sub-question below has a positive answer). When
 `V_j` is moreover locally nilpotent, THM-4562 gives `A^3 ≅ X_j × A^1` with `X_j ≅ A^2` (cancellation),
 and the statement reduces to `JC_2` for the induced Keller map `X_j → A^2`. The general (surjective
 but not locally nilpotent) case has no such reduction: the ring of constants `R_j` is then a
@@ -30,8 +31,9 @@ forces `R_j = K[G_j]`.
 
 ## Sub-question
 
-Does `μ_j = 0` (generic rank zero of `coker V_j`) already force `coker V_j = 0`, i.e. can the relative
-de Rham cohomology `H^1(K[x]/K[G_j])` of a Keller map be a nonzero torsion module over `K[G_j]`?
+Does `μ_j = 0` (generic rank zero of `coker V_j`) already force `coker V_j = 0` when `d_j ≥ 2`, i.e. can
+the relative de Rham cohomology `H^1(K[x]/K[G_j])` of a Keller map be a nonzero torsion module over
+`K[G_j]`? (For `d_j = 1`, `μ_j = 0` forces invertibility and hence `coker V_j = 0`: THM-4620(4).)
 
 ## Evidence and tests
 
@@ -40,4 +42,6 @@ de Rham cohomology `H^1(K[x]/K[G_j])` of a Keller map be a nonzero torsion modul
 * A decisive test for a candidate counterexample: compute the generic fibre of a coordinate pair
   (THM-4621's method: eliminate the third coordinate, parametrize) and count its geometric
   components. Gao's degree-four map `G = (γx, (p(w) + 2γ)/(γx), (q(w) + γw)/(γx)^2)` with
-  `p = w^3 - 6w^2 + 6w`, `q = (3/8)w^4 - 2w^3 + (3/2)w^2`, `γ = 2 - 4xy - x^2 z` is the next instance.
+  `p = w^3 - 6w^2 + 6w`, `q = (3/8)w^4 - 2w^3 + (3/2)w^2`, `γ = 2 - 4xy - x^2 z`, `u = 1 + xy`, `w = γu`
+  (polynomial of degrees 4, 11, 12, `det = 2`, generic fibre 4, fibre sizes `{4, 3, 2, 1, 0}`) was the
+  first instance tested (connected fibres, see above).

@@ -15,12 +15,14 @@ related:
 
 `length_(A_3)(V_F) = 4`.
 
-## What is proved (THM-4621(9))
+## What is proved (THM-4621(9), a sketch with standard D-module facts cited)
 
 `V_F ⊋ K[F] ≅ O`; `(V_F/O)|_U` is the irreducible rank-two local system of the standard
 representation of the monodromy group `S_3` over `U = A^3 ∖ {c_3 = 0}`; near a generic point of the
 Jelonek surface `V_F ≅ O ⊕ O[1/s] ⊕ j_+ L_(-1)` (one sheet stays, two escape with a transposition
-monodromy), so a delta module along the surface is a subquotient. Hence length `≥ 3`.
+monodromy), so a delta module along the surface is a subquotient. Hence length `≥ 3`. The singular
+locus of the Jelonek surface `{c_3 = 0}` is exactly the cusp curve `C` (audit A), so 'generic point of
+the surface' means 'point off `C`'.
 
 ## What decides it
 
@@ -28,9 +30,10 @@ The local structure of `V_F` at points of the cusp curve `C`, over which all thr
 (empty fibre). Compute the characteristic cycle or the nearby/vanishing cycles of the direct image
 along `F` near `C`; a transversal slice meets the Jelonek surface in a cuspidal curve, and the
 question is whether the direct image of `O` from the three escaping sheets contributes a constituent
-supported on `C` beyond the delta module of the surface. (For the sign local system around a cuspidal
-plane curve, `j_+ L_(-1)` is already the minimal extension because the Alexander polynomial of the
-trefoil does not vanish at `-1`; the trivial-monodromy part is where a cusp contribution could sit.)
+supported on `C` beyond the delta module of the surface. (Heuristic remark, not verified: if a
+transversal slice meets the Jelonek surface in a cuspidal curve, then for the sign local system
+`j_+ L_(-1)` would already be the minimal extension because the Alexander polynomial of the trefoil
+does not vanish at `-1`, and the trivial-monodromy part is where a cusp contribution could sit.)
 
 ## Decisive test
 

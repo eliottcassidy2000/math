@@ -11,9 +11,10 @@ J = sp.Matrix([[sp.diff(f,v) for v in (x,y,z)] for f in F]); B=(J.T).inv().apply
 def V(j,h): return sp.expand(sum(B[j,k]*sp.diff(h,v) for k,v in enumerate((x,y,z))))
 # (2) tangency polynomial
 Q = y**2 - b*y + 3*a; F3p = -(y-b)*(2*y**2-b*y+18*a-b**2)/(27*a**2)
-eq = sp.together((F3p - c).subs(y, b - 3*a*c/w)); num = sp.factor(sp.numer(eq))
-print("(2) cubic in w after y = b - 3ac/w:", num, " ; divided by -2a: ", sp.factor(sp.cancel(sp.numer(eq)/(-2*a))))
-print("    Gao tangency polynomial with (X,Y)=(bc, ac^2): w^3 - 2w^2 + bc w - 2ac^2 ; equal?", sp.expand(sp.cancel(sp.numer(eq)/(-2*a)) - (w**3-2*w**2+b*c*w-2*a*c**2))==0)
+eq = sp.cancel((F3p - c).subs(y, b - 3*a*c/w))
+T = w**3 - 2*w**2 + b*c*w - 2*a*c**2
+print("(2) F3(b - 3ac/w) - c =", sp.factor(eq))
+print("    equals -(c/w^3) * (w^3 - 2w^2 + bc w - 2ac^2) [Gao's tangency polynomial at (X,Y)=(bc, ac^2)]:", sp.cancel(eq + (c/w**3)*T)==0)
 # (3) x,y,z on the fibre vs polynomials in F3|fibre
 xp=(b-y)/Q; up=3*a/Q; zp=sp.cancel((a - y**2*up*(4+3*xp*y))/up**3)
 # z = alpha F3^2 + beta F3 + gamma ?  solve for alpha,beta,gamma in K(a,b)

@@ -1,26 +1,33 @@
 ---
 id: THM-4621
-title: "THM-1300's Keller map on its three coordinate-pair fibrations: each generic fibre is a punctured line on which the remaining coordinate is a degree-three function whose critical points are exactly the punctures — a cubic polynomial in y minus its two critical points for (F_1, F_2), 2aX + 2/X - c/X^2 on P^1 minus five points for (F_1, F_3), s(cs^2 - 2s + b)/2 on P^1 minus three points for (F_2, F_3); the fibre cubic is Gao's tangency polynomial w^3 - 2w^2 + bcw - 2ac^2 under w = 3ac/(b - y); the Jelonek set is {27a^2c^2 - 18abc + 16a + b^3c - b^2 = 0}, the image misses exactly the curve (4/(27t^2), 4/(3t), t), fibre sizes are 3, 1, 0; the Galois group of K(x,y,z)/K(F) is S_3; every ring of constants R_j is K[F_(i != j)], the locally nilpotent part of every dual field is K[F], x, y, z lie outside it, and no dual field is surjective (x^2 not in V_3 K[x], x not in V_2 K[x], x^2 not in V_1 K[x]); the Keller module has A_3-length at least three"
+title: "THM-1300's Keller map on its three coordinate-pair fibrations: each generic fibre is a punctured line on which the remaining coordinate is a degree-three function whose critical points are exactly the punctures — a cubic polynomial in y minus its two critical points for (F_1, F_2), 2aX + 2/X - c/X^2 on P^1 minus five points for (F_1, F_3), s(cs^2 - 2s + b)/2 on P^1 minus three points for (F_2, F_3); the fibre cubic is Gao's tangency polynomial w^3 - 2w^2 + bcw - 2ac^2 under w = 3ac/(b - y); the Jelonek set is {27a^2c^2 - 18abc + 16a + b^3c - b^2 = 0} (THM-1310's quartic L = Gao's c_3), the image misses exactly the curve (4/(27t^2), 4/(3t), t), fibre sizes are 3, 1, 0 (now including a = 0); the Galois group of K(x,y,z)/K(F) is S_3 (THM-1310; here from the fibre cubic); every ring of constants R_j is K[F_(i != j)], the locally nilpotent part of every dual field is K[F], x, y, z lie outside it, and no dual field is surjective (x^2 not in V_3 K[x], x not in V_2 K[x], x^2 not in V_1 K[x]); the Keller module has A_3-length at least three"
 status: >
   PROVED: the parametrizations, restrictions, derivative identities, the discriminant, the image
   complement and the tangency-polynomial identity are exact symbolic identities (sympy, rational
-  function arithmetic; 04-computation/experiments/logic4_20261012/thm1300_fibrations.py); the
-  consequences (fibre topology, Galois group, rings of constants, nilpotent parts, non-surjectivity
-  witnesses by residues, the length bound) are elementary arguments on top of THM-4620 and standard
-  facts (minimal extensions of local systems, j_+ of a rank-one local system). FINITE-EXACT hostile
-  controls: dim Ker V_3 on polynomials of degree <= 12 equals 4 = #{1, F_2, F_2^2, F_1}; iterate
-  degrees deg V_j^m(x_i), m <= 6, grow linearly with slopes 7, 8, 10. CITED: Gao, arXiv:2608.00222,
-  Theorem 3.4 (fibre stratification of F, the polynomial c_3, the cusp curve, the tangency polynomial;
-  derived here independently from the (F_1, F_2)-fibre cubic and found to agree), THM-1310 (fibre
-  sizes in {0, 1, 3} modulo odd primes), THM-4562 (no dual field is locally nilpotent), THM-4567.
-  Not independently audited yet (audit requested this session).
+  function arithmetic; 04-computation/experiments/logic4_20261012/thm1300_fibrations.py,
+  thm1300_module_checks.py; re-derived from scratch by audit A, audit_A_fibrations.py, all
+  assertions passed); the consequences (fibre topology, rings of constants, nilpotent parts,
+  non-surjectivity witnesses by residues) are elementary on top of THM-4620. Statement 9 (length
+  >= 3) is PROVED AS A SKETCH: an etale-local argument using standard D-module facts (CITED in the
+  proof). FINITE-EXACT hostile controls: dim Ker V_3 on polynomials of degree <= 12 equals
+  4 = #{1, F_2, F_2^2, F_1} (audit: 3, 3, 4 at D = 8, 10, 12 by a mod-p rank bound); iterate degrees
+  deg V_j^m(x_i), m <= 6, grow linearly with slopes 7, 8, 10. IN-REPO PRIOR ART: THM-1310
+  (kind-pasteur, 2026-07-19) already proved deg F = 3, the S_3 monodromy (resolvent), the Jelonek
+  quartic L = {27a^2g^2 - 18abg + 16a + b^3g - b^2 = 0} and the conic-pair elimination; statements 2
+  and 4 re-derive these from the fibre cubic. CITED: Gao, arXiv:2608.00222, Theorem 3.4 (the same
+  stratification; c_3 = L; the cusp curve; the tangency polynomial), THM-4562 (no dual field is
+  locally nilpotent), THM-4567. Independently audited 2026-10-12 (audit A: PASS WITH CORRECTIONS,
+  applied: the tangency identity's prefactor is -c/w^3, not 9c/2 (the first checkpoint's script
+  printed False for the mis-normalised check; MISTAKE-595); THM-1310 credited; the a = 0 stratum
+  proved in-repo by the audit; statement 9 retyped as a sketch; genericity conditions in 5 and 6).
 session: mac-mini-2026-10-12-logic4
 source: 05-knowledge/results/logic_lenses_jc2_collatz_hn_20261012.md
 scripts:
   - 04-computation/experiments/logic4_20261012/thm1300_fibrations.py (+ .out)
   - 04-computation/experiments/logic4_20261012/thm1300_module_checks.py (+ .out)
 related:
-  - THM-1300 (the map; det JF = -2 re-verified here), THM-1310, THM-4562, THM-4567
+  - THM-1300 (the map; det JF = -2 re-verified here), THM-1310 (THM-1310-jacobian-counterexample-fiber-geometry-S3-resolvent-jelonek.md: deg 3, S_3 resolvent, Jelonek quartic L = c_3), THM-4562, THM-4567
+  - 05-knowledge/results/logic_lenses_audit_A_20261012.md (+ audit_A_fibrations.py: the a = 0 stratum, Sing{c_3 = 0} = C)
   - THM-4620 (the general dictionary this instantiates)
   - HYP-9257 (the exact A_3-length)
   - THM-4625 (the same anatomy for every tangent-sweep Keller map; THM-1300 is the d = 2 member)
@@ -55,22 +62,31 @@ and `V_j F_i = δ_(ij)`.
 
    The fibre of `F` over `(a, b, c)` is the set of roots of the cubic `F_3(y) = c` minus the roots of
    `Q`: `F` restricted to the fibre is a cubic polynomial with its critical points deleted.
-2. **Fibres of `F`, Jelonek set, image (re-derived).** The discriminant of the cubic is
-   `-4 c_3(a, b, c)/(729 a^6)` with
+2. **Fibres of `F`, Jelonek set, image (re-derivation of THM-1310(3), (4), (6) and of Gao, Theorem 3.4).**
+   The discriminant of the cubic is `-4 c_3(a, b, c)/(729 a^6)` with
 
        c_3 = 27a^2 c^2 - 18abc + 16a + b^3 c - b^2,
 
-   Gao's `c_3(v)`. Hence (for `a ≠ 0`): three preimages when `c_3 ≠ 0`; exactly one when `c_3 = 0` and
-   `b^2 ≠ 12a` (a double root sits at a puncture); none on the curve `C = {(4/(27t^2), 4/(3t), t)}`
-   (`Q = (y - 2/(3t))^2`, `F_3(2/(3t)) = t`, the cubic has a triple root at the puncture). No fibre has
-   exactly two points. The Jelonek non-properness set is `{c_3 = 0}` and the image of `F` is
-   `A^3 ∖ C` (agreeing with Gao, Theorem 3.4, and with THM-1310's `N ∈ {0, 1, 3}`).
-3. **Tangency polynomial.** Under `w = 3ac/(b - y)` the equation `F_3(y) = c` becomes
-   `(9c/2)(w^3 - 2w^2 + bc·w - 2ac^2) = 0`: the fibre cubic is Gao's tangency polynomial
-   `w^3 - 2w^2 + Xw - 2Y` at the sweep target `(X, Y) = (bc, ac^2) = (F_2 F_3, F_1 F_3^2)`.
-4. **Galois group.** `K(x, y, z) = K(F)(y)`, the cubic is the minimal polynomial of `y` over `K(F)`,
-   `deg F = 3`, and since `c_3` is not a square in `K(a, b, c)` the Galois group of the Galois closure
-   of `K(x, y, z)/K(F)` is `S_3`. Equivalently the monodromy of the finite étale triple cover over
+   THM-1310's Jelonek quartic `L(a, b, g)` = Gao's `c_3(v)`. Hence (for `a ≠ 0`): three preimages when
+   `c_3 ≠ 0`; exactly one when `c_3 = 0` and `b^2 ≠ 12a` (a double root sits at a puncture); none on the
+   curve `C = {(4/(27t^2), 4/(3t), t)}` (`Q = (y - 2/(3t))^2`, `F_3(2/(3t)) = t`, the cubic has a triple
+   root at the puncture). For `a = 0` (audit A): the branch `u = 0` contributes exactly one point iff
+   `b ≠ 0` (`x = 2/b`, `y = -b/2`), the branch `u ≠ 0` forces `y = b` and `F_3 = c` becomes
+   `b(1 - bc)x^2 + 2(1 - bc)x - c = 0`, so the fibre has `3` points if `b(1 - bc) ≠ 0` and `1` point if
+   `b = 0` or `bc = 1`; `c_3|_(a=0) = b^2(bc - 1)`. So over all of `A^3`: fibre sizes `3`, `1`, `0`, never
+   `2`; the Jelonek non-properness set is `{c_3 = 0}`, whose singular locus is exactly `C`; and the image
+   of `F` is `A^3 ∖ C`.
+3. **Tangency polynomial.** Under `w = 3ac/(b - y)`,
+
+       F_3(b - 3ac/w) - c = -(c/w^3) · (w^3 - 2w^2 + bc·w - 2ac^2):
+
+   the fibre cubic is Gao's tangency polynomial `w^3 - 2w^2 + Xw - 2Y` at the sweep target
+   `(X, Y) = (bc, ac^2) = (F_2 F_3, F_1 F_3^2)`, up to the unit `-c/w^3`.
+4. **Galois group (THM-1310(4) by the resolvent; here from the fibre cubic).** `K(x, y, z) = K(F)(y)`
+   (`x` and `z` are rational in `y` on the fibre), `[K(x, y, z) : K(F)] = deg F = 3`, so the cubic is the
+   minimal polynomial of `y` over `K(F)` and is irreducible; its discriminant is `-(2/(27a^3))^2 c_3`, and
+   `-c_3` is not a square in `K(a, b, c)` (`c_3` is absolutely irreducible — `disc_a(c_3) = 4(4 - 3bc)^3` —
+   and appears to the first power), so the Galois group of the Galois closure of `K(x, y, z)/K(F)` is `S_3`. Equivalently the monodromy of the finite étale triple cover over
    `A^3 ∖ {c_3 = 0}` is the full symmetric group, and the local monodromy around a generic point of the
    Jelonek surface is a transposition (`c_3` divides the discriminant exactly once).
 5. **The `(F_1, F_3)`-fibration.** For `ac ≠ 0`, with `X = x/(1 + xy)` and `v = X/(aX^3 - X + c)`,
@@ -78,7 +94,8 @@ and `V_j F_i = δ_(ij)`.
 
        x = vX,   y = (v - 1)/x,   z = (2x - 3x^2 y - c)/x^3,
 
-   so it is `P^1_X` minus `{0, ∞}` and the three roots of `aX^3 - X + c` (five points generically).
+   so it is `P^1_X` minus `{0, ∞}` and the three roots of `aX^3 - X + c` (five points when `27ac^2 ≠ 4`,
+   four when the cubic has a double root).
    On it `F_2 = 2aX + 2/X - c/X^2` and `dF_2/dX = 2(aX^3 - X + c)/X^3`.
 6. **The `(F_2, F_3)`-fibration.** For `c ≠ 0`, with `w = xy`, the fibre `G_(23)^(-1)(b, c)` is the plane
    conic `b x^2 - (6 + 4w) x + 3c(1 + w)^2 = 0` (minus its point `(0, -1)`), parametrized by the lines
@@ -86,7 +103,8 @@ and `V_j F_i = δ_(ij)`.
 
        x = 2/(3cs^2 - 4s + b),   w = -1 + sx,   z = (2x - 3x^2 y - c)/x^3,
 
-   so it is `P^1_s` minus `{∞}` and the two roots of `3cs^2 - 4s + b` (three points). On it
+   so it is `P^1_s` minus `{∞}` and the two roots of `3cs^2 - 4s + b` (three points when `bc ≠ 4/3`, two
+   when the roots coincide). On it
    `F_1 = s(cs^2 - 2s + b)/2`, `dF_1/ds = (3cs^2 - 4s + b)/2`, and `u = 2s/(3cs^2 - 4s + b)`.
 7. **Rings of constants and nilpotent parts.** Each generic fibre is geometrically connected, so
    (THM-4620(1)) `R_1 = K[F_2, F_3]`, `R_2 = K[F_1, F_3]`, `R_3 = K[F_1, F_2]`, the locally nilpotent
@@ -102,7 +120,8 @@ and `V_j F_i = δ_(ij)`.
      (also `x^3`, `x^2 y`).
    So the first-order sentence `∀v ∃w (θw = v)` fails for `θ = V_1, V_2, V_3` and holds for the
    standard module (THM-4620, reading).
-9. **Length.** The twisted `A_3`-module `V_F = K[x, y, z]` has length at least three: the simple
+9. **Length (PROVED as a sketch; the D-module facts used are CITED in the proof).** The twisted
+   `A_3`-module `V_F = K[x, y, z]` has length at least three: the simple
    submodule `K[F]`, the minimal extension of the irreducible rank-two local system (the standard
    representation of the `S_3`-monodromy) on `A^3 ∖ {c_3 = 0}`, and a module supported on the Jelonek
    surface (at a generic point of it one sheet stays and the two escaping sheets are swapped by the
@@ -115,11 +134,9 @@ and `V_j F_i = δ_(ij)`.
 `(F_2 - y) u = 3x F_1` shows that `F_1 = a` and `F_2 = b` are equivalent on `{u ≠ 0}` to `(b - y) u = 3ax`
 together with `z = (a - y^2 u (4 + 3xy))/u^3`; the first equation is `x = (b - y)/Q` when `Q(y) ≠ 0`,
 and at a root `r` of `Q` it reads `b - r = 0`, impossible since `Q(b) = 3a ≠ 0`. Points with `u = 0`
-have `F_1 = 0 ≠ a`. The displayed `z` and `F_3` are the substitutions (exact, script). `F_3` is a
-polynomial in `y` because the fibre is a smooth affine curve on which the polynomial vector field
-`V_3` restricts to a derivation `c(y) d/dy` with `c = V_3(y)` regular; `V_3 F_3 = 1` forces
-`F_3'(y) = 1/c(y)` to have poles only where `F_3` has poles, and the computation shows there are none.
-`dF_3/dy = κQ` vanishes exactly at the punctures, as it must for an unramified `F`.
+have `F_1 = 0 ≠ a`. The displayed `z` and `F_3` are the substitutions (exact, script); `F_3` is a
+polynomial in `y` by direct computation (denominator `27a^2`). `dF_3/dy = κQ` vanishes exactly at the
+punctures, as it must for an unramified `F`.
 
 **(2).** The fibre over `(a, b, c)` is `{y : F_3(y) = c, Q(y) ≠ 0}`. A root of `F_3 - c` is multiple iff
 it is a root of `F_3' = κQ`, i.e. a puncture. If `Q` has distinct roots `r_1 ≠ r_2` with
@@ -127,10 +144,12 @@ it is a root of `F_3' = κQ`, i.e. a puncture. If `Q` has distinct roots `r_1 �
 `{c_3 = 0}` with `b^2 ≠ 12a` one double root is deleted and one simple root remains; over `C`
 (`b^2 = 12a`, `c = F_3(r)`) the cubic is `κ(y - r)^3/3` and the fibre is empty. The discriminant and the
 identity `disc = -4c_3/(729a^6)` are exact (script); `c_3` is irreducible and appears to the first
-power. The locus `a = 0` is excluded from the parametrization but carries no fibre of size two either
-(Gao, Theorem 3.4, whose stratification is complete).
+power. The locus `a = 0` is excluded from the parametrization; its fibres were computed directly by
+audit A (`audit_A_fibrations.py`) as displayed, and `Sing{c_3 = 0} = C` was verified there
+(`∇c_3 = 0 = c_3` has the unique solution family `(4/(27c^2), 4/(3c), c)`). Gao's Theorem 3.4 and
+THM-1310(6) give the same stratification.
 
-**(3)** is the substitution `y = b - 3ac/w` (exact; the factor `9c/2`). Gao's sweep coordinates are
+**(3)** is the substitution `y = b - 3ac/w` (exact; the prefactor is `-c/w^3`). Gao's sweep coordinates are
 `X = F_2 F_3`, `Y = F_1 F_3^2` (from his twisted form `F = (Y/C^2, X/C, C)`).
 
 **(4).** `x` and `z` are rational in `y` over `K(a, b)` on the fibre, so `K(x, y, z) = K(F)(y)`; the
@@ -172,15 +191,22 @@ finite set, a differential regular on `C` is exact iff its residues at the finit
 exact). The listed residues are exact rational functions of the symbolic roots (script); a nonzero
 value shows `q ∉ V_j K[x, y, z]`. The generic ranks are `2γ + r - 1 = 2, 4, 2` for `r = 3, 5, 3`.
 
-**(9).** Over `U = A^3 ∖ {c_3 = 0}` the map is finite étale of degree three with monodromy group
+**(9).** (Sketch; CITED facts: restriction of holonomic modules to an open or étale neighbourhood is
+exact and sends simple modules to simple modules or zero, so composition factors lift; for a smooth
+hypersurface `S = {s = 0}` with complement `j`, `j_+ O = O[1/s]`, `O[1/s]/O ≅ i_+ O_S` is simple, and
+`j_+ L = j_(!*) L` for a rank-one local system `L` with monodromy `-1`; direct images compose.) Over
+`U = A^3 ∖ {c_3 = 0}` the map is finite étale of degree three with monodromy group
 `S_3` (4), so `V_F|_U = O_U ⊕ T` with `T` the rank-two bundle with flat connection attached to the
 standard representation, irreducible; its minimal extension is a simple holonomic module distinct
 from `K[F] ≅ O`. Near a generic point of the Jelonek surface `S = {c_3 = 0}` with local equation `s`,
-the preimage of a small ball consists of one sheet mapping isomorphically and a connected double
-cover `W` of the ball minus `S` (the two roots that coalesce at the puncture are swapped by the local
-monodromy, (4)); the direct image of `O_W` is `j_+(O ⊕ L_(-1)) = O[1/s] ⊕ j_+ L_(-1)`, with `L_(-1)` the
-sign local system. So `V_F` has a subquotient `O[1/s]/O`, a nonzero module supported on `S`. Three
-pairwise non-isomorphic constituents give length `≥ 3`.  ∎
+the preimage of a small ball `B` around a point of `S ∖ C` (where `S` is smooth, as `Sing S = C`)
+consists of one sheet mapping isomorphically onto `B` (the fibre over `S ∩ B` is a single point) and a
+connected double cover `W` of `B ∖ S` (the two roots that coalesce at the puncture are swapped by the
+local monodromy, (4)); the direct image of `O_W` is `j_+(O ⊕ L_(-1)) = O[1/s] ⊕ j_+ L_(-1)`, with
+`L_(-1)` the sign local system. So `V_F|_B ≅ O ⊕ O[1/s] ⊕ j_+ L_(-1)` has local length four and the
+subquotient `O[1/s]/O ≅ i_+ O_(S ∩ B)`; globally the third constituent is the minimal extension of
+`i_+ O_(S ∖ C)`. Three pairwise non-isomorphic constituents (`O`, `j_(!*) T`, and one supported on `S`)
+give length `≥ 3`.  ∎
 
 ## Reading
 
