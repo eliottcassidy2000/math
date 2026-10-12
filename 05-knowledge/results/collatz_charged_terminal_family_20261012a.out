@@ -1,0 +1,16 @@
+Charged fixed-head ROOT completion; no all-source coverage assertion
+Head universe: 341 words, alphabet1..4, length0..4; three completions each
+Generic terminal phase, exact source decoder, symbolic modular reader: PASS
+75 family: k=4+9j; n=(2^(18j+11)-23)/27; ROOT word(1,2,18j+8)
+Odd charge1; minimum Z=1017/2048; every native refinement retains >2365/2373 of f
+New guarded dependency: n75mod128; exact(1,2,a),a>=4;4(h+1)<=n+1
+Same15seeds, depth8+39/43 baseline, odd1..8191: 1018 -> 1193, gain175
+First newly grounded requests: [75, 151, 201, 203, 331, 403, 407, 441, 459, 537, 541, 663, 715, 721, 805, 843]
+First still pending: 123
+Additional123mod512 policy: 1193 -> 1278, gain85; first pending127
+Least failure of proposed universal o<=floor(log2(n+1))+24:327, charge35
+Dynamics roles: quadratic cycle multiplier35/8; critical denominator growth; Collatz63 ROOT rank39
+Band-exit control odd3..1000001, cap10000: max ratio26/9 at55->23; C3 passes; max steps135
+Initial band universe odd3..100001: C1 failures136, least27; max steps96
+Source-owned band invoice: total ROOT-or-charge deadline; no assumed child ROOT
+checks=523424

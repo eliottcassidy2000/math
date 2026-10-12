@@ -1,0 +1,11 @@
+quadratic_clock_return_20261012a
+Parameters: -7/4, -29/16, 3/2; full structural controls at depths 1..4.
+Critical points at depth n: 2^n-1; distinct critical values and nodes: n.
+Return criterion: coefficient_j divisible by Delta_n^ceil(j/2).
+Every pair of full-field polynomial observables has zero Jacobian at each critical zero-section point.
+Compiled positive receipts: 48; independent coefficient controls: 288.
+Cycle multipliers: -7/4 parabolic cubic = 1; -29/16 rational triple = 35/8.
+Hostiles: repeated critical values retained; c=0 higher ramification; c=-2 finite postcritical orbit.
+Exact malformed/forged API controls: 13.
+No polynomial Keller map, birational inverse, source grounding, or JC(2) conclusion.
+Always-active exact checks: 1017

@@ -1,0 +1,12 @@
+fixed-scale Stechkin region-conflict graph: exact arithmetic
+directed offset counts: ((12, 12, 12), (12, 6, 3), (12, 3, 6))
+triangle-only: 7 regions, 12 edges, chi=4; refutation nodes: 103
+whole partition: 14 regions, 65 edges, chi=8
+K3 join remainder independent-set counts: (11, 26, 14, 0)
+capacity certificate: 11 > 2+2+3+3; arbitrary colour period excluded
+two-period upper quotient: 12 regions 54 edges
+one hexagon split: 15 pieces, 70 edges; verified seven-colouring: (0, 5, 6, 4, 5, 0, 3, 2, 1, 3, 3, 2, 1, 1, 0)
+even/even periodic split: 13 regions, 63 edges, no loops; K8 ports: (1, 2, 3, 4, 5, 6, 7, 8)
+global 8-colour rule: separate hex/triangle parity palettes; lexicographic hex vertices
+scope: interiors monochromatic; no eight-chromatic unit-point graph
+checks: 7008
