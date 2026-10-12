@@ -1,0 +1,11 @@
+[KPvKP sigma=rank] symmetric boards: 2184; up to the file reflection: 1092
+[KPvKP sigma=rank] evaluated representatives: 1092; mover wins 450, draw 642, mover loses (mutual zugzwang) 0
+[KPvKP sigma=rot] symmetric boards: 2716; up to the file reflection: 1358
+   sampled 300 of them (seed 2026)
+[KPvKP sigma=rot] evaluated representatives: 300; mover wins 83, draw 217, mover loses (mutual zugzwang) 0
+[KRvKR sigma=rank] symmetric boards: 2496; up to the file reflection: 1248
+   sampled 200 of them (seed 2026)
+[KRvKR sigma=rank] evaluated representatives: 200; mover wins 167, draw 33, mover loses (mutual zugzwang) 0
+[KQvKQ sigma=rank] symmetric boards: 2096; up to the file reflection: 1048
+   sampled 200 of them (seed 2026)
+[KQvKQ sigma=rank] evaluated representatives: 200; mover wins 175, draw 25, mover loses (mutual zugzwang) 0

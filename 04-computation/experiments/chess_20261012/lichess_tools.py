@@ -4,7 +4,7 @@ Every response is cached in a JSON file (argv) so that the archived file is the 
 
   python3 lichess_tools.py validate <scratch_dir> <cache.json> [n_per_class]
       sample positions from the locally solved classes and compare WDL (category) for the side to move.
-  python3 lichess_tools.py tempo <cache.json> <class> <symmetry>
+  python3 lichess_tools.py tempo <cache.json> <class> <symmetry> [sample]
       census of symmetric boards (fixed by sigma = board isometry o colour swap) in a 4-man class:
       class in {KPvKP, KRvKR, KQvKQ, KBvKB, KNvKN}; symmetry in {rank, rot, file, diag, rot90}.
       Prints the tempo value distribution (mover wins / draw / mover loses = mutual zugzwang) and lists the
@@ -43,7 +43,7 @@ def query(fen, cache, path, delay=0.12):
             return rec
         except urllib.error.HTTPError as e:
             if e.code == 429:
-                time.sleep(60); continue
+                time.sleep(20); continue
             raise
         except Exception:
             time.sleep(5)
@@ -112,7 +112,26 @@ def iso(sym, sq):
     else: raise ValueError(sym)
     return chess.square(f2, r2)
 
-def tempo(path, cls, sym):
+def mirror_fen(fen):
+    b = chess.Board(fen)
+    m = chess.Board(None)
+    for sq, pc in b.piece_map().items():
+        m.set_piece_at(chess.square(7 - chess.square_file(sq), chess.square_rank(sq)), pc)
+    m.turn = b.turn
+    return m.fen()
+
+def query_canon(fen, cache, path):
+    """File reflection preserves values (no castling rights here): use whichever orientation is cached, else query the one with the white king on files a-d."""
+    mf = mirror_fen(fen)
+    if fen in cache:
+        return cache[fen]
+    if mf in cache:
+        return cache[mf]
+    b = chess.Board(fen)
+    canon = fen if chess.square_file(b.king(chess.WHITE)) <= 3 else mf
+    return query(canon, cache, path)
+
+def tempo(path, cls, sym, sample=None):
     cache = load_cache(path)
     white_piece = {'KPvKP': 'P', 'KRvKR': 'R', 'KQvKQ': 'Q', 'KBvKB': 'B', 'KNvKN': 'N'}[cls]
     if white_piece == 'P' and sym not in ('rank', 'rot'):
@@ -134,13 +153,22 @@ def tempo(path, cls, sym):
             b.turn = chess.WHITE
             if not b.is_valid():
                 continue
-            fen = b.fen()
-            rec = query(fen, cache, path)
-            rows.append((fen, wdl_of(rec), rec))
+            rows.append(b.fen())
+    # canonical representatives under the file reflection (a value symmetry here)
+    canon = sorted({min(f, mirror_fen(f)) for f in rows})
+    print(f'[{cls} sigma={sym}] symmetric boards: {len(rows)}; up to the file reflection: {len(canon)}', flush=True)
+    if sample is not None and sample < len(canon):
+        random.seed(2026)
+        canon = sorted(random.sample(canon, sample))
+        print(f'   sampled {len(canon)} of them (seed 2026)', flush=True)
+    rows = []
+    for fen in canon:
+        rec = query_canon(fen, cache, path)
+        rows.append((fen, wdl_of(rec), rec))
     save_cache(path, cache)
     from collections import Counter
     c = Counter(v for _, v, _ in rows)
-    print(f'[{cls} sigma={sym}] symmetric boards: {len(rows)}; mover wins {c[1]}, draw {c[0]}, mover loses (mutual zugzwang) {c[-1]}')
+    print(f'[{cls} sigma={sym}] evaluated representatives: {len(rows)}; mover wins {c[1]}, draw {c[0]}, mover loses (mutual zugzwang) {c[-1]}', flush=True)
     mz = [(fen, rec) for fen, v, rec in rows if v == -1]
     for fen, rec in mz[:40]:
         print('   mutual zugzwang:', fen, rec)
@@ -155,4 +183,4 @@ if __name__ == '__main__':
     if cmd == 'validate':
         validate(sys.argv[2], sys.argv[3], int(sys.argv[4]) if len(sys.argv) > 4 else 120)
     elif cmd == 'tempo':
-        tempo(sys.argv[2], sys.argv[3], sys.argv[4])
+        tempo(sys.argv[2], sys.argv[3], sys.argv[4], int(sys.argv[5]) if len(sys.argv) > 5 else None)

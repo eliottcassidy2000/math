@@ -1,0 +1,67 @@
+region 1604648: trap 1237588, excluded 367060
+
+features (in-trap count, excluded count):
+  ('BTM', 'BK square', 'a6'): in 87479, out 8648, excluded share 9.0%
+  ('BTM', 'BK square', 'a7'): in 88720, out 4153, excluded share 4.5%
+  ('BTM', 'BK square', 'a8'): in 94632, out 4794, excluded share 4.8%
+  ('BTM', 'BK square', 'b6'): in 83003, out 5816, excluded share 6.5%
+  ('BTM', 'BK square', 'b7'): in 88686, out 2178, excluded share 2.4%
+  ('BTM', 'BK square', 'b8'): in 88720, out 4153, excluded share 4.5%
+  ('BTM', 'BK square', 'c6'): in 82324, out 9036, excluded share 9.9%
+  ('BTM', 'BK square', 'c7'): in 83003, out 5816, excluded share 6.5%
+  ('BTM', 'BK square', 'c8'): in 87479, out 8648, excluded share 9.0%
+  ('BTM', 'WK-BK distance', 2): in 100730, out 30958, excluded share 23.5%
+  ('BTM', 'WK-BK distance', 3): in 124168, out 4522, excluded share 3.5%
+  ('BTM', 'WK-BK distance', 4): in 155124, out 4630, excluded share 2.9%
+  ('BTM', 'WK-BK distance', 5): in 185944, out 5708, excluded share 3.0%
+  ('BTM', 'WK-BK distance', 6): in 141426, out 4686, excluded share 3.2%
+  ('BTM', 'WK-BK distance', 7): in 76654, out 2738, excluded share 3.4%
+  ('BTM', 'bishop attacked', False): in 595914, out 21950, excluded share 3.6%
+  ('BTM', 'bishop attacked', True): in 188132, out 31292, excluded share 14.3%
+  ('BTM', 'bishop undefended', False): in 82756, out 3188, excluded share 3.7%
+  ('BTM', 'bishop undefended', True): in 701290, out 50054, excluded share 6.7%
+  ('BTM', 'bishop-BK distance', 1): in 82756, out 3188, excluded share 3.7%
+  ('BTM', 'bishop-BK distance', 2): in 106794, out 5236, excluded share 4.7%
+  ('BTM', 'bishop-BK distance', 3): in 111374, out 9214, excluded share 7.6%
+  ('BTM', 'bishop-BK distance', 4): in 126618, out 10138, excluded share 7.4%
+  ('BTM', 'bishop-BK distance', 5): in 162688, out 13142, excluded share 7.5%
+  ('BTM', 'bishop-BK distance', 6): in 123842, out 7562, excluded share 5.8%
+  ('BTM', 'bishop-BK distance', 7): in 69974, out 4762, excluded share 6.4%
+  ('BTM', 'in check', False): in 636760, out 25656, excluded share 3.9%
+  ('BTM', 'in check', True): in 147286, out 27586, excluded share 15.8%
+  ('WTM', 'BK square', 'a6'): in 47405, out 40955, excluded share 46.4%
+  ('WTM', 'BK square', 'a7'): in 51589, out 33785, excluded share 39.6%
+  ('WTM', 'BK square', 'a8'): in 50840, out 41112, excluded share 44.7%
+  ('WTM', 'BK square', 'b6'): in 50042, out 30444, excluded share 37.8%
+  ('WTM', 'BK square', 'b7'): in 56120, out 27586, excluded share 33.0%
+  ('WTM', 'BK square', 'b8'): in 51589, out 33785, excluded share 39.6%
+  ('WTM', 'BK square', 'c6'): in 48510, out 34752, excluded share 41.7%
+  ('WTM', 'BK square', 'c7'): in 50042, out 30444, excluded share 37.8%
+  ('WTM', 'BK square', 'c8'): in 47405, out 40955, excluded share 46.4%
+  ('WTM', 'WK-BK distance', 2): in 46440, out 75076, excluded share 61.8%
+  ('WTM', 'WK-BK distance', 3): in 71948, out 50116, excluded share 41.1%
+  ('WTM', 'WK-BK distance', 4): in 94764, out 53606, excluded share 36.1%
+  ('WTM', 'WK-BK distance', 5): in 112658, out 61732, excluded share 35.4%
+  ('WTM', 'WK-BK distance', 6): in 83584, out 47216, excluded share 36.1%
+  ('WTM', 'WK-BK distance', 7): in 44148, out 26072, excluded share 37.1%
+  ('WTM', 'bishop attacked', False): in 433520, out 96620, excluded share 18.2%
+  ('WTM', 'bishop attacked', True): in 20022, out 217198, excluded share 91.6%
+  ('WTM', 'bishop undefended', False): in 71204, out 7738, excluded share 9.8%
+  ('WTM', 'bishop undefended', True): in 382338, out 306080, excluded share 44.5%
+  ('WTM', 'bishop-BK distance', 1): in 71204, out 7738, excluded share 9.8%
+  ('WTM', 'bishop-BK distance', 2): in 64856, out 37354, excluded share 36.5%
+  ('WTM', 'bishop-BK distance', 3): in 57148, out 56328, excluded share 49.6%
+  ('WTM', 'bishop-BK distance', 4): in 67092, out 61204, excluded share 47.7%
+  ('WTM', 'bishop-BK distance', 5): in 87646, out 72602, excluded share 45.3%
+  ('WTM', 'bishop-BK distance', 6): in 67910, out 50142, excluded share 42.5%
+  ('WTM', 'bishop-BK distance', 7): in 37686, out 28450, excluded share 43.0%
+  ('WTM', 'in check', False): in 401872, out 260544, excluded share 39.3%
+  ('WTM', 'in check', True): in 51670, out 53274, excluded share 50.8%
+
+human predicates (members of the predicate inside the trap / in the complement; coverage of the complement):
+  BTM: bishop attacked and undefended: in-trap 171488, excluded 30256, covers 8.2% of the complement, false positives (in-trap) 171488
+  BTM: in check: in-trap 147286, excluded 27586, covers 7.5% of the complement, false positives (in-trap) 147286
+  BTM: in check and bishop attacked: in-trap 15504, excluded 20948, covers 5.7% of the complement, false positives (in-trap) 15504
+  WTM: rook attacks bishop and bishop undefended: in-trap 3422, excluded 213896, covers 58.3% of the complement, false positives (in-trap) 3422
+  WTM: White can give check next move: in-trap 400938, excluded 258012, covers 70.3% of the complement, false positives (in-trap) 400938
+  any: bishop attacked by rook or king and undefended: in-trap 174910, excluded 244152, covers 66.5% of the complement, false positives (in-trap) 174910

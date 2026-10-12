@@ -1,0 +1,16 @@
+[KRvKN] enumerated 2178344 positions in 16.6s
+  ... 250000/2178344 (11s)
+  ... 500000/2178344 (22s)
+  ... 750000/2178344 (33s)
+  ... 1000000/2178344 (44s)
+  ... 1250000/2178344 (55s)
+  ... 1500000/2178344 (66s)
+  ... 1750000/2178344 (78s)
+  ... 2000000/2178344 (89s)
+[KRvKN] graph: 2178344 positions, 22889456 internal edges, 0 uncertified boundary moves, 5913408 escapes; 96.5s
+[KRvKN centre c3-f6 with knight within 2 of the king] trap: 1769224 of 2178344 positions survive (4.5s)
+  [centre c3-f6 with knight within 2 of the king] trap 1769224 of 2178344 (81.2%); Black to move 1111416, White to move 657808; closure violations 0
+   quiet attacker-to-move members (rook not attacked): 542280
+   defender-to-move members: {'internal safe move': 1087132, 'boundary move only': 24284}
+   width: min 1, median 4, max 13
+   attacker-to-move members by king-knight Chebyshev distance: {1: 307696, 2: 350112}

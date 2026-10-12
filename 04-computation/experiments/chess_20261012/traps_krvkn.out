@@ -1,0 +1,22 @@
+[KRvKN] enumerated 1421936 positions in 11.6s
+  ... 250000/1421936 (10s)
+  ... 500000/1421936 (21s)
+  ... 750000/1421936 (31s)
+  ... 1000000/1421936 (41s)
+  ... 1250000/1421936 (52s)
+[KRvKN] graph: 1421936 positions, 15606832 internal edges, 0 uncertified boundary moves, 2711800 escapes; 59.7s
+[KRvKN centre d4 e4 d5 e5] trap: 161464 of 1421936 positions survive (6.8s)
+  [centre d4 e4 d5 e5] trap 161464 of 1421936 (11.4%); Black to move 156096, White to move 5368; closure violations 0
+   quiet attacker-to-move members (rook not attacked): 0
+   defender-to-move members: {'internal safe move': 20340, 'boundary move only': 135756}
+   width: min 1, median 1, max 3
+   attacker-to-move members by king-knight Chebyshev distance: {1: 1120, 2: 1664, 3: 1696, 4: 888}
+[KRvKN] enumerated 387858 positions in 8.9s
+  ... 250000/387858 (10s)
+[KRvKN] graph: 387858 positions, 3953380 internal edges, 0 uncertified boundary moves, 457088 escapes; 16.4s
+[KRvKN corner a1 (control)] trap: 34699 of 387858 positions survive (1.6s)
+  [corner a1 (control)] trap 34699 of 387858 (8.9%); Black to move 33115, White to move 1584; closure violations 0
+   quiet attacker-to-move members (rook not attacked): 0
+   defender-to-move members: {'stalemate': 12, 'boundary move only': 25914, 'internal safe move': 7189}
+   width: min 1, median 1, max 3
+   attacker-to-move members by king-knight Chebyshev distance: {1: 14, 2: 62, 3: 188, 4: 352, 5: 486, 6: 322, 7: 160}
