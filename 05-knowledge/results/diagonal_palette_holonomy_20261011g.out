@@ -1,0 +1,8 @@
+Scope: fixed palette actions, a proved nine-colour control, finite seam systems.
+Two phase-three orbits: centralizer18; involution fixed-colour counts [0, 0, 0, 6]
+Three phase-three orbits: centralizer162; nine nonidentity reflections fix3 colours.
+Opposite half-plane phases commute with paired reflection; their axis still has no fixed colour.
+Cycle type3+1+1+1 admits the symmetry algebra; no metric colouring follows.
+Sharp positive control: square side3/5, colour(floor(5x/3),floor(5y/3)) mod3, palette9.
+Literal seam systems including loops and parallel constraints: 4165
+PASS: 9210 exact checks. Six-colour plane construction remains OPEN.

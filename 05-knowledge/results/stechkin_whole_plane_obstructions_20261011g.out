@@ -1,0 +1,10 @@
+Stechkin whole-plane obstruction controls
+Coordinates: u=(1,0), v=(1/2,sqrt(3)/2); triangle side=1/2
+242 translated interior unit triangles: PASS
+All 15 pairings of the original six whole classes: obstructed
+Normalization areas on [0,2]^2: T=1; intersection=1/4; missed=3/4
+Normalized cover density=13/16; missed density=3/16 (hex-centred dilation)
+Rational-direction parity controls: 300 parameter values, 183 distinct units
+Malformed/native guard hostiles: 13
+Scope: neither a six-colouring construction nor a seven-colour lower bound
+checks=3617

@@ -1,0 +1,103 @@
+{
+  "checks": 1307,
+  "orientation_completions": [
+    [
+      [
+        0,
+        0
+      ],
+      "T"
+    ],
+    [
+      [
+        0,
+        1
+      ],
+      "-"
+    ],
+    [
+      [
+        1,
+        0
+      ],
+      "+"
+    ],
+    [
+      [
+        1,
+        1
+      ],
+      "S"
+    ]
+  ],
+  "diamond_fixed_colour_counts": [
+    [
+      3,
+      2,
+      0
+    ],
+    [
+      4,
+      6,
+      2
+    ],
+    [
+      5,
+      12,
+      6
+    ],
+    [
+      6,
+      20,
+      12
+    ]
+  ],
+  "spindle_vertices_edges": [
+    7,
+    11
+  ],
+  "spindle_boundary_support": {
+    "3": [],
+    "4": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "6": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  "nae_labelled_port_assignments": 24,
+  "nae_extensions_each": 2,
+  "nae_pairwise_summary_equals_unconstrained": true,
+  "complete_join_contexts": 384,
+  "malformed_controls": 7,
+  "published_509_result_replayed": false,
+  "new_six_colour_equality": false
+}

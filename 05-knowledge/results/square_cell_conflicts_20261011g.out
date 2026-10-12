@@ -1,0 +1,9 @@
+square_cell_conflicts_20261011g
+model:40 half-open cells; constant per cell; colour period8a in both axes
+all real scales: S<8 interior conflict;8<=S<=36 K8;S>36 periodic self-conflict
+complete compact scale strata: 57 ; retained clique templates: 5 ; fixed-witness scale intervals: 7
+eight-colour positive control at a^2=1/8: (0, 1, 2, 3, 4, 4, 5, 5, 4, 4, 5, 5, 6, 6, 7, 7, 6, 6, 7, 7, 4, 4, 5, 5, 4, 4, 5, 5, 6, 6, 7, 7, 6, 6, 7, 7, 0, 1, 2, 3)
+critical K8: (0, 1, 2, 3, 4, 6, 12, 14)
+polychromatic thresholds: (Fraction(8, 1), Fraction(8, 1), Fraction(8, 1), Fraction(8, 1), Fraction(2, 1), Fraction(2, 1))
+larger colour periods, split cells, and Stechkin historical tiling are not classified
+hostiles: 13 ; exact checks: 10625

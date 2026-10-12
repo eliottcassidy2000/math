@@ -1,0 +1,193 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="690" viewBox="0 0 1500 690">
+<rect width="100%" height="100%" fill="#fafbfc"/>
+<text x="30" y="50" font-family="Segoe UI,Arial,sans-serif" font-size="30" fill="#182b3a">What the constructions preserve</text>
+<text x="30" y="86" font-family="Segoe UI,Arial,sans-serif" font-size="21" fill="#526776">Exact constraints, full-plane distance rules, and a restricted periodic model</text>
+<polyline points="510,115 510,650" fill="none" stroke="#d9e0e5" stroke-width="1"/>
+<polyline points="1000,115 1000,650" fill="none" stroke="#d9e0e5" stroke-width="1"/>
+<text x="30" y="145" font-family="Segoe UI,Arial,sans-serif" font-size="25" fill="#182b3a">Moser spindle</text>
+<text x="30" y="173" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">Two equality diamonds + one unit edge</text>
+<polyline points="287.0,540.0 72.0,540.0" fill="none" stroke="#526776" stroke-width="4"/>
+<polyline points="179.5,353.80453818634567 72.0,540.0" fill="none" stroke="#526776" stroke-width="4"/>
+<polyline points="179.5,353.80453818634567 287.0,540.0" fill="none" stroke="#526776" stroke-width="4"/>
+<polyline points="394.5,353.80453818634567 287.0,540.0" fill="none" stroke="#526776" stroke-width="4"/>
+<polyline points="394.5,353.80453818634567 179.5,353.80453818634567" fill="none" stroke="#526776" stroke-width="4"/>
+<polyline points="251.16666666666669,421.1542783455982 72.0,540.0" fill="none" stroke="#526776" stroke-width="4"/>
+<polyline points="58.65991924952701,325.41425432808717 72.0,540.0" fill="none" stroke="#526776" stroke-width="4"/>
+<polyline points="58.65991924952701,325.41425432808717 251.16666666666669,421.1542783455982" fill="none" stroke="#526776" stroke-width="4"/>
+<polyline points="237.82658591619366,206.5685326736853 394.5,353.80453818634567" fill="none" stroke="#c94b35" stroke-width="4"/>
+<polyline points="237.82658591619366,206.5685326736853 251.16666666666669,421.1542783455982" fill="none" stroke="#526776" stroke-width="4"/>
+<polyline points="237.82658591619366,206.5685326736853 58.65991924952701,325.41425432808717" fill="none" stroke="#526776" stroke-width="4"/>
+<circle cx="72.0" cy="540.0" r="6" fill="#182b3a"/>
+<circle cx="287.0" cy="540.0" r="6" fill="#182b3a"/>
+<circle cx="179.5" cy="353.80453818634567" r="6" fill="#182b3a"/>
+<circle cx="394.5" cy="353.80453818634567" r="6" fill="#182b3a"/>
+<circle cx="251.16666666666669" cy="421.1542783455982" r="6" fill="#182b3a"/>
+<circle cx="58.65991924952701" cy="325.41425432808717" r="6" fill="#182b3a"/>
+<circle cx="237.82658591619366" cy="206.5685326736853" r="6" fill="#182b3a"/>
+<text x="50.0" y="562.0" font-family="Segoe UI,Arial,sans-serif" font-size="22" fill="#182b3a">o</text>
+<text x="402.5" y="370.80453818634567" font-family="Segoe UI,Arial,sans-serif" font-size="22" fill="#182b3a">u</text>
+<text x="245.82658591619366" y="205.5685326736853" font-family="Segoe UI,Arial,sans-serif" font-size="22" fill="#182b3a">v</text>
+<text x="30" y="588" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">In 3 colours: o = u = v, but uv is an edge.</text>
+<text x="30" y="618" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">The same equality fails in larger palettes.</text>
+<text x="535" y="145" font-family="Segoe UI,Arial,sans-serif" font-size="25" fill="#182b3a">Stechkin triangle-region residual</text>
+<text x="535" y="173" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">A unit triangle lies inside one colour class</text>
+<polyline points="617.5,525.0 581.25,462.2131582256282 653.75,462.2131582256282 617.5,525.0" fill="none" stroke="#d2d9df" stroke-width="1"/>
+<polygon points="617.5,525.0 581.25,462.2131582256282 653.75,462.2131582256282" fill="#c1d9f0" stroke="#d2d9df" stroke-width="1"/>
+<polyline points="690.0,399.4263164512564 726.25,462.2131582256282 653.75,462.2131582256282 690.0,399.4263164512564" fill="none" stroke="#d2d9df" stroke-width="1"/>
+<polygon points="690.0,399.4263164512564 726.25,462.2131582256282 653.75,462.2131582256282" fill="#efcfbd" stroke="#d2d9df" stroke-width="1"/>
+<polyline points="690.0,399.4263164512564 653.75,336.63947467688456 726.25,336.63947467688456 690.0,399.4263164512564" fill="none" stroke="#d2d9df" stroke-width="1"/>
+<polygon points="690.0,399.4263164512564 653.75,336.63947467688456 726.25,336.63947467688456" fill="#c1d9f0" stroke="#d2d9df" stroke-width="1"/>
+<polyline points="762.5,273.8526329025128 798.75,336.63947467688456 726.25,336.63947467688456 762.5,273.8526329025128" fill="none" stroke="#d2d9df" stroke-width="1"/>
+<polygon points="762.5,273.8526329025128 798.75,336.63947467688456 726.25,336.63947467688456" fill="#efcfbd" stroke="#d2d9df" stroke-width="1"/>
+<polyline points="762.5,273.8526329025128 726.25,211.06579112814097 798.75,211.06579112814097 762.5,273.8526329025128" fill="none" stroke="#d2d9df" stroke-width="1"/>
+<polygon points="762.5,273.8526329025128 726.25,211.06579112814097 798.75,211.06579112814097" fill="#c1d9f0" stroke="#d2d9df" stroke-width="1"/>
+<polyline points="762.5,525.0 726.25,462.2131582256282 798.75,462.2131582256282 762.5,525.0" fill="none" stroke="#d2d9df" stroke-width="1"/>
+<polygon points="762.5,525.0 726.25,462.2131582256282 798.75,462.2131582256282" fill="#c1d9f0" stroke="#d2d9df" stroke-width="1"/>
+<polyline points="835.0,399.4263164512564 871.25,462.2131582256282 798.75,462.2131582256282 835.0,399.4263164512564" fill="none" stroke="#d2d9df" stroke-width="1"/>
+<polygon points="835.0,399.4263164512564 871.25,462.2131582256282 798.75,462.2131582256282" fill="#efcfbd" stroke="#d2d9df" stroke-width="1"/>
+<polyline points="835.0,399.4263164512564 798.75,336.63947467688456 871.25,336.63947467688456 835.0,399.4263164512564" fill="none" stroke="#d2d9df" stroke-width="1"/>
+<polygon points="835.0,399.4263164512564 798.75,336.63947467688456 871.25,336.63947467688456" fill="#c1d9f0" stroke="#d2d9df" stroke-width="1"/>
+<polyline points="907.5,273.8526329025128 943.75,336.63947467688456 871.25,336.63947467688456 907.5,273.8526329025128" fill="none" stroke="#d2d9df" stroke-width="1"/>
+<polygon points="907.5,273.8526329025128 943.75,336.63947467688456 871.25,336.63947467688456" fill="#efcfbd" stroke="#d2d9df" stroke-width="1"/>
+<polyline points="907.5,273.8526329025128 871.25,211.06579112814097 943.75,211.06579112814097 907.5,273.8526329025128" fill="none" stroke="#d2d9df" stroke-width="1"/>
+<polygon points="907.5,273.8526329025128 871.25,211.06579112814097 943.75,211.06579112814097" fill="#c1d9f0" stroke="#d2d9df" stroke-width="1"/>
+<polyline points="907.5,525.0 871.25,462.2131582256282 943.75,462.2131582256282 907.5,525.0" fill="none" stroke="#d2d9df" stroke-width="1"/>
+<polygon points="907.5,525.0 871.25,462.2131582256282 943.75,462.2131582256282" fill="#c1d9f0" stroke="#d2d9df" stroke-width="1"/>
+<polyline points="617.5,483.1421054837521 762.5,483.1421054837521 690.0,357.56842193500853 617.5,483.1421054837521" fill="none" stroke="#c94b35" stroke-width="4"/>
+<circle cx="617.5" cy="483.1421054837521" r="6" fill="#a73525"/>
+<circle cx="762.5" cy="483.1421054837521" r="6" fill="#a73525"/>
+<circle cx="690.0" cy="357.56842193500853" r="6" fill="#a73525"/>
+<text x="535" y="588" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">Keeping the four hexagon colours cannot</text>
+<text x="535" y="618" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">leave a two-colour repair for these regions.</text>
+<text x="1025" y="145" font-family="Segoe UI,Arial,sans-serif" font-size="25" fill="#182b3a">Two-size square pattern</text>
+<text x="1025" y="173" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">A valid 8-colour control at a = 1/sqrt(8)</text>
+<polyline points="1060,451 1144,451 1144,535 1060,535 1060,451" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1060,451 1144,451 1144,535 1060,535" fill="#99c6ed" stroke="#82919a" stroke-width="1"/>
+<text x="1096" y="498" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">1</text>
+<polyline points="1060,367 1144,367 1144,451 1060,451 1060,367" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1060,367 1144,367 1144,451 1060,451" fill="#d3e8f8" stroke="#82919a" stroke-width="1"/>
+<text x="1096" y="414" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">2</text>
+<polyline points="1144,451 1228,451 1228,535 1144,535 1144,451" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1144,451 1228,451 1228,535 1144,535" fill="#edae91" stroke="#82919a" stroke-width="1"/>
+<text x="1180" y="498" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">3</text>
+<polyline points="1144,367 1228,367 1228,451 1144,451 1144,367" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1144,367 1228,367 1228,451 1144,451" fill="#f8dcca" stroke="#82919a" stroke-width="1"/>
+<text x="1180" y="414" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">4</text>
+<polyline points="1060,325 1102,325 1102,367 1060,367 1060,325" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1060,325 1102,325 1102,367 1060,367" fill="#9dceb1" stroke="#82919a" stroke-width="1"/>
+<text x="1075" y="351" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">5</text>
+<polyline points="1060,283 1102,283 1102,325 1060,325 1060,283" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1060,283 1102,283 1102,325 1060,325" fill="#9dceb1" stroke="#82919a" stroke-width="1"/>
+<text x="1075" y="309" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">5</text>
+<polyline points="1060,241 1102,241 1102,283 1060,283 1060,241" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1060,241 1102,241 1102,283 1060,283" fill="#d5eddf" stroke="#82919a" stroke-width="1"/>
+<text x="1075" y="267" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">6</text>
+<polyline points="1060,199 1102,199 1102,241 1060,241 1060,199" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1060,199 1102,199 1102,241 1060,241" fill="#d5eddf" stroke="#82919a" stroke-width="1"/>
+<text x="1075" y="225" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">6</text>
+<polyline points="1102,325 1144,325 1144,367 1102,367 1102,325" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1102,325 1144,325 1144,367 1102,367" fill="#9dceb1" stroke="#82919a" stroke-width="1"/>
+<text x="1117" y="351" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">5</text>
+<polyline points="1102,283 1144,283 1144,325 1102,325 1102,283" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1102,283 1144,283 1144,325 1102,325" fill="#9dceb1" stroke="#82919a" stroke-width="1"/>
+<text x="1117" y="309" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">5</text>
+<polyline points="1102,241 1144,241 1144,283 1102,283 1102,241" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1102,241 1144,241 1144,283 1102,283" fill="#d5eddf" stroke="#82919a" stroke-width="1"/>
+<text x="1117" y="267" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">6</text>
+<polyline points="1102,199 1144,199 1144,241 1102,241 1102,199" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1102,199 1144,199 1144,241 1102,241" fill="#d5eddf" stroke="#82919a" stroke-width="1"/>
+<text x="1117" y="225" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">6</text>
+<polyline points="1144,325 1186,325 1186,367 1144,367 1144,325" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1144,325 1186,325 1186,367 1144,367" fill="#bea8d8" stroke="#82919a" stroke-width="1"/>
+<text x="1159" y="351" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">7</text>
+<polyline points="1144,283 1186,283 1186,325 1144,325 1144,283" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1144,283 1186,283 1186,325 1144,325" fill="#bea8d8" stroke="#82919a" stroke-width="1"/>
+<text x="1159" y="309" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">7</text>
+<polyline points="1144,241 1186,241 1186,283 1144,283 1144,241" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1144,241 1186,241 1186,283 1144,283" fill="#e4dcef" stroke="#82919a" stroke-width="1"/>
+<text x="1159" y="267" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">8</text>
+<polyline points="1144,199 1186,199 1186,241 1144,241 1144,199" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1144,199 1186,199 1186,241 1144,241" fill="#e4dcef" stroke="#82919a" stroke-width="1"/>
+<text x="1159" y="225" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">8</text>
+<polyline points="1186,325 1228,325 1228,367 1186,367 1186,325" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1186,325 1228,325 1228,367 1186,367" fill="#bea8d8" stroke="#82919a" stroke-width="1"/>
+<text x="1201" y="351" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">7</text>
+<polyline points="1186,283 1228,283 1228,325 1186,325 1186,283" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1186,283 1228,283 1228,325 1186,325" fill="#bea8d8" stroke="#82919a" stroke-width="1"/>
+<text x="1201" y="309" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">7</text>
+<polyline points="1186,241 1228,241 1228,283 1186,283 1186,241" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1186,241 1228,241 1228,283 1186,283" fill="#e4dcef" stroke="#82919a" stroke-width="1"/>
+<text x="1201" y="267" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">8</text>
+<polyline points="1186,199 1228,199 1228,241 1186,241 1186,199" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1186,199 1228,199 1228,241 1186,241" fill="#e4dcef" stroke="#82919a" stroke-width="1"/>
+<text x="1201" y="225" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">8</text>
+<polyline points="1228,493 1270,493 1270,535 1228,535 1228,493" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1228,493 1270,493 1270,535 1228,535" fill="#9dceb1" stroke="#82919a" stroke-width="1"/>
+<text x="1243" y="519" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">5</text>
+<polyline points="1228,451 1270,451 1270,493 1228,493 1228,451" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1228,451 1270,451 1270,493 1228,493" fill="#9dceb1" stroke="#82919a" stroke-width="1"/>
+<text x="1243" y="477" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">5</text>
+<polyline points="1228,409 1270,409 1270,451 1228,451 1228,409" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1228,409 1270,409 1270,451 1228,451" fill="#d5eddf" stroke="#82919a" stroke-width="1"/>
+<text x="1243" y="435" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">6</text>
+<polyline points="1228,367 1270,367 1270,409 1228,409 1228,367" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1228,367 1270,367 1270,409 1228,409" fill="#d5eddf" stroke="#82919a" stroke-width="1"/>
+<text x="1243" y="393" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">6</text>
+<polyline points="1270,493 1312,493 1312,535 1270,535 1270,493" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1270,493 1312,493 1312,535 1270,535" fill="#9dceb1" stroke="#82919a" stroke-width="1"/>
+<text x="1285" y="519" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">5</text>
+<polyline points="1270,451 1312,451 1312,493 1270,493 1270,451" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1270,451 1312,451 1312,493 1270,493" fill="#9dceb1" stroke="#82919a" stroke-width="1"/>
+<text x="1285" y="477" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">5</text>
+<polyline points="1270,409 1312,409 1312,451 1270,451 1270,409" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1270,409 1312,409 1312,451 1270,451" fill="#d5eddf" stroke="#82919a" stroke-width="1"/>
+<text x="1285" y="435" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">6</text>
+<polyline points="1270,367 1312,367 1312,409 1270,409 1270,367" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1270,367 1312,367 1312,409 1270,409" fill="#d5eddf" stroke="#82919a" stroke-width="1"/>
+<text x="1285" y="393" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">6</text>
+<polyline points="1312,493 1354,493 1354,535 1312,535 1312,493" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1312,493 1354,493 1354,535 1312,535" fill="#bea8d8" stroke="#82919a" stroke-width="1"/>
+<text x="1327" y="519" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">7</text>
+<polyline points="1312,451 1354,451 1354,493 1312,493 1312,451" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1312,451 1354,451 1354,493 1312,493" fill="#bea8d8" stroke="#82919a" stroke-width="1"/>
+<text x="1327" y="477" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">7</text>
+<polyline points="1312,409 1354,409 1354,451 1312,451 1312,409" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1312,409 1354,409 1354,451 1312,451" fill="#e4dcef" stroke="#82919a" stroke-width="1"/>
+<text x="1327" y="435" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">8</text>
+<polyline points="1312,367 1354,367 1354,409 1312,409 1312,367" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1312,367 1354,367 1354,409 1312,409" fill="#e4dcef" stroke="#82919a" stroke-width="1"/>
+<text x="1327" y="393" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">8</text>
+<polyline points="1354,493 1396,493 1396,535 1354,535 1354,493" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1354,493 1396,493 1396,535 1354,535" fill="#bea8d8" stroke="#82919a" stroke-width="1"/>
+<text x="1369" y="519" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">7</text>
+<polyline points="1354,451 1396,451 1396,493 1354,493 1354,451" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1354,451 1396,451 1396,493 1354,493" fill="#bea8d8" stroke="#82919a" stroke-width="1"/>
+<text x="1369" y="477" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">7</text>
+<polyline points="1354,409 1396,409 1396,451 1354,451 1354,409" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1354,409 1396,409 1396,451 1354,451" fill="#e4dcef" stroke="#82919a" stroke-width="1"/>
+<text x="1369" y="435" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">8</text>
+<polyline points="1354,367 1396,367 1396,409 1354,409 1354,367" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1354,367 1396,367 1396,409 1354,409" fill="#e4dcef" stroke="#82919a" stroke-width="1"/>
+<text x="1369" y="393" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">8</text>
+<polyline points="1228,283 1312,283 1312,367 1228,367 1228,283" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1228,283 1312,283 1312,367 1228,367" fill="#99c6ed" stroke="#82919a" stroke-width="1"/>
+<text x="1264" y="330" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">1</text>
+<polyline points="1228,199 1312,199 1312,283 1228,283 1228,199" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1228,199 1312,199 1312,283 1228,283" fill="#d3e8f8" stroke="#82919a" stroke-width="1"/>
+<text x="1264" y="246" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">2</text>
+<polyline points="1312,283 1396,283 1396,367 1312,367 1312,283" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1312,283 1396,283 1396,367 1312,367" fill="#edae91" stroke="#82919a" stroke-width="1"/>
+<text x="1348" y="330" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">3</text>
+<polyline points="1312,199 1396,199 1396,283 1312,283 1312,199" fill="none" stroke="#82919a" stroke-width="1"/>
+<polygon points="1312,199 1396,199 1396,283 1312,283" fill="#f8dcca" stroke="#82919a" stroke-width="1"/>
+<text x="1348" y="246" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">4</text>
+<polyline points="1060,199 1060,535" fill="none" stroke="#526776" stroke-width="2"/>
+<polyline points="1228,199 1228,535" fill="none" stroke="#526776" stroke-width="2"/>
+<polyline points="1396,199 1396,535" fill="none" stroke="#526776" stroke-width="2"/>
+<polyline points="1060,199 1396,199" fill="none" stroke="#526776" stroke-width="2"/>
+<polyline points="1060,367 1396,367" fill="none" stroke="#526776" stroke-width="2"/>
+<polyline points="1060,535 1396,535" fill="none" stroke="#526776" stroke-width="2"/>
+<text x="1025" y="588" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">Whole-cell, 8a-period colouring needs 8.</text>
+<text x="1025" y="618" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#182b3a">This does not rule out finer 6-colour designs.</text>
+<text x="30" y="672" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#526776">Illustrations only. Exact coordinates, boundary conventions and proofs are in the companion research packets.</text>
+</svg>
