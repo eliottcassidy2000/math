@@ -8,7 +8,9 @@ status: >
   eigenvalues, bound 6.60); the residue fields of 19, 29, 79 (degree ten) are unexamined. FINITE-EXACT:
   three-colourings of every tested context (8,436; 2,278; 10,598; 846; 1,304; 1,408; 4,974; 6,000; 38,514 vertices).
   Independently audited 2026-10-12 (the five default probes, the Hoffman bound and the prime criterion
-  reproduced; the residue scope corrected; MISTAKE-593).
+  reproduced; the residue scope corrected; MISTAKE-593). VERIFIED (same day, addendum): the smallest known
+  triangle-free four-chromatic unit graph EI17 has no placement in L with coordinate height below 1e63
+  (LLL at 2900 digits); its exact field is OPEN, the published S20 certificate being refuted.
   The conjecture is the upper bound 3. Its refutation needs a four-chromatic triangle-free unit-distance
   graph with coordinates in Q(zeta55); the known four-chromatic triangle-free unit graphs (Wormald, Chilakamarri,
   O'Donnell, Hochberg-O'Donnell) have not been placed in this field, and the repo's four-critical diamond chains
@@ -48,6 +50,6 @@ Triangle-free four-chromatic unit-distance graphs exist in the plane (Wormald 19
 
 ## Cheapest decisive tests
 
-* Place a known small four-chromatic triangle-free unit graph (the 17-vertex Exoo-Ismailescu graphs, the 23-vertex fish) in `L`: solve its rigidity equations over `L` with the exact engine; a solution refutes the conjecture and supplies the forcing context's first ingredient.
+* Place a known small four-chromatic triangle-free unit graph in `L`. **Done for EI17 (17 vertices, 31 edges, minimally rigid; [note](../results/ei17_placement_q_zeta55_20261012.md)):** in the gauge `v17 = 0`, `v11 = -1` its 31 edges carry 13 directions (nine unit 4-cycles are parallelograms), and integer LLL at 2900 digits on the `zeta55` power basis finds no relation for any non-gauge direction below the random height `1e69`; so no placement with coordinate height below about `1e63` exists (VERIFIED). The exact decision is OPEN: the published field certificate (arXiv:2607.19995, degree-20 polynomial with Galois group `S20`) does not vanish at the published coordinates (nearest root `8.8e-8` away) and cannot be cited. Next: the 19- and 21-vertex graphs, the 23-vertex fish; and an exact elimination of EI17's six-angle system with the collapsed components saturated.
 * Mycielski-type search: unit five-cycles in `L` with shadow vertices (the pentagram apexes are the shadows of the regular pentagon) and a common unit neighbour of the shadows; SAT over the exact unit graph of such configurations.
 * An additive proof of three-colourability is impossible, and a residue-type proof is impossible with the smallest residue field (above; the residue fields of 19, 29, 79 are unexamined); a proof would need a global nonlinear rule, for example a rule on the exact localization `S` built from the periodic thirds rule and the `alpha`-power rule `a+b+c+d mod 3` on `Z[alpha]`.
