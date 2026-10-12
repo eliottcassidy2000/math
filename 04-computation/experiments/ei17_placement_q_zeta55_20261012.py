@@ -23,9 +23,12 @@ Contents.
    Integer LLL on the 40-dimensional power basis at 2900 digits finds, for each of the twelve
    non-gauge directions, only vectors of the random height ~1e69: no placement with
    coordinate height below about 1e63.
-6. (--census) Real faithful realizations by the two-angle apex construction over all 2^13 sign
-   branches with a grid and Newton polishing: six non-congruent real faithful realizations
-   (grid 96), against the paper's "more than one".
+6. (--census g1,g2,...) Real faithful realizations by the two-angle apex construction over all
+   2^13 sign branches, seeded from grids over the two angles and Newton-polished in the full
+   system, merged over the grids by distance multiset (labelling-independent).  With the
+   seeding threshold 0.12, grids 96 and 160 find ten each and eleven in the union; the count
+   grows with the seeding and is a lower bound: at least eleven non-congruent real faithful
+   realizations against the paper's "more than one".  Run time about 35 minutes for 96,160.
 """
 import itertools, json, sys, time
 from fractions import Fraction
@@ -407,15 +410,15 @@ def np_resid(x):
     return np.array([((z[i]-z[j])**2).sum()-1 for i, j in E30])
 
 
-def census(ngrid):
+def census(ngrid, found=None, threshold=0.12):
+    found = {} if found is None else found
     t = np.linspace(0, 2*np.pi, ngrid, endpoint=False)
     T4, T5 = np.meshgrid(t, t, indexing='ij'); T4 = T4.ravel(); T5 = T5.ravel()
-    found = {}
     for signs in itertools.product((1, -1), repeat=13):
         z = tower(T4, T5, signs)
         c1 = np.abs(z[8]-z[1])**2-1; c2 = np.abs(z[15]-z[14])**2-1
         ok = np.isfinite(c1) & np.isfinite(c2)
-        for k in np.where(ok & (np.abs(c1) < 0.08) & (np.abs(c2) < 0.08))[0]:
+        for k in np.where(ok & (np.abs(c1) < threshold) & (np.abs(c2) < threshold))[0]:
             zz = tower(np.array([T4[k]]), np.array([T5[k]]), signs)
             x0 = np.array([[zz[v][0].real, zz[v][0].imag] for v in FREEV]).ravel()
             if not np.all(np.isfinite(x0)):
@@ -429,9 +432,9 @@ def census(ngrid):
                     continue
                 sig = tuple(np.round(np.sort(D[iu]), 6))
                 if sig not in found:
-                    found[sig] = dict(hits=0, v1=zs[1].tolist(), mindist=float(D[iu].min()), signs=signs,
+                    found[sig] = dict(hits={}, v1=zs[1].tolist(), mindist=float(D[iu].min()), signs=signs,
                                       coordinates={v: zs[v].tolist() for v in zs})
-                found[sig]['hits'] += 1
+                found[sig]['hits'][ngrid] = found[sig]['hits'].get(ngrid, 0)+1
     return found
 
 
@@ -455,15 +458,22 @@ def main(census_grid):
     out['algdep_lll_3000'] = algdep_search(z)
     out['placement_lll_2900'] = placement_test(z, reps, cls)
     if census_grid:
-        found = census(census_grid)
-        out['census'] = dict(grid=census_grid, non_congruent_real_faithful=len(found),
-                             realizations=[dict(hits=f['hits'], v1=f['v1'], mindist=f['mindist'], signs=list(f['signs']))
-                                           for f in found.values()])
-        check(any(abs(f['v1'][0]+2.498806168621063) < 1e-9 for f in found.values()), 'the certified realization is among them')
+        found = {}
+        for g in census_grid:
+            census(g, found)
+        out['census'] = dict(grids=census_grid, non_congruent_real_faithful_at_least=len(found),
+                             realizations=[dict(hits={str(k): v for k, v in f['hits'].items()}, v1=f['v1'], mindist=f['mindist'],
+                                                signs=list(f['signs'])) for f in found.values()])
+        # labelling-independent membership test: the certified point set's distance multiset
+        Pc = np.array([[float(TABLE[v][0]), float(TABLE[v][1])] for v in range(1, 18)])
+        Dc = np.sqrt(((Pc[:, None, :]-Pc[None, :, :])**2).sum(2))
+        sig_c = tuple(np.round(np.sort(Dc[np.triu_indices(17, 1)]), 6))
+        check(sig_c in found, 'the certified realization is among them (by distance multiset)')
+        out['census']['certified_entry_hits'] = {str(k): v for k, v in found[sig_c]['hits'].items()}
     out['checks'] = CHECKS
     return out
 
 
 if __name__ == '__main__':
-    grid = int(sys.argv[sys.argv.index('--census')+1]) if '--census' in sys.argv else 0
-    print(json.dumps(main(grid), indent=1, sort_keys=True, default=str))
+    grids = [int(g) for g in sys.argv[sys.argv.index('--census')+1].split(',')] if '--census' in sys.argv else []
+    print(json.dumps(main(grids), indent=1, sort_keys=True, default=str))

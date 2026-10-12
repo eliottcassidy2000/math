@@ -5,8 +5,8 @@ stated):** no placement of EI17 in `L = Q(zeta55)` with coordinate height below
 about `1e63`; the degree-20 polynomial published as the minimal polynomial of a
 coordinate does not vanish at the published realization. **PROVED:** the
 parallelogram structure (13 directions, 6 relations) and the exact facts about
-the published polynomial (irreducible, Galois group `S20`). **FINITE-EXACT /
-NUMERICAL:** the census of six non-congruent real faithful realizations.
+the published polynomial (irreducible, Galois group `S20`). **NUMERICAL (lower
+bound):** the census of at least eleven non-congruent real faithful realizations.
 **OPEN:** the exact coordinate field of EI17 and hence the exact placement
 decision. **CITED:** Exoo-Ismailescu, Geombinatorics 26 (2016) 49-64 (the graph);
 House of Graphs 51375 (adjacency, API read 2026-10-12);
@@ -105,21 +105,27 @@ Consequently HYP-9247 survives its cheapest decisive test, and the published
 exact obstruction cannot be cited for it. The honest status of "EI17 in `L`"
 is **excluded numerically to height `1e63`, exactly OPEN**.
 
-## 4. Six real faithful realizations, not two
+## 4. At least eleven real faithful realizations, not two
 
-The two-angle construction with all `2^13` apex sign branches, a `96 x 96`
-grid over the two angles and Newton polishing in the full system, finds **six
-non-congruent real faithful realizations** (all 17 points distinct, no extra
-unit distances; distinct distance multisets); the paper reports "more than
-one". Four of them have the certified `x_v1 = -2.4988` or its automorphic
-relabelling; the second realization sharing it differs from the certified one
-in exactly the four vertices `4, 6, 13, 16` (the free angle at `6` and the
-rhombus `6-16` re-placed), the other 13 vertices coinciding to `1e-16`. A
-random-start search over the full 31-dimensional system finds, by contrast,
-thousands of **collapsed** solutions (coincident non-adjacent vertices, many
-on positive-dimensional families: Jacobian ranks 28-30), which is why the
-unit-length system is not zero-dimensional and why an exact elimination must
-saturate the degenerate components.
+The two-angle construction with all `2^13` apex sign branches, seeded from a
+grid over the two angles where both closure residuals are small, and
+Newton-polished in the full system, finds non-congruent real faithful
+realizations (all 17 points distinct, no extra unit distances; distinct
+distance multisets, which are labelling-independent). With seeding threshold
+`0.08`: six at grid `96`, nine at grid `160`; with threshold `0.12` (the
+committed run): ten at each grid and **eleven in the union**, one of them
+seeded only at grid 96 and one only at grid 160; the paper reports "more than
+one". The count grows with the seeding and is only a lower bound; two of the
+realizations have a vertex pair just `0.0014` apart. A second realization
+shares the certified `x_v1 = -2.4988` (under the automorphic relabelling) and
+differs from the certified one in exactly the four vertices `4, 6, 13, 16`
+(the free angle at `6` and the rhombus `6-16` re-placed), the other 13
+vertices coinciding to `1e-16`. A random-start search over the full
+31-dimensional system finds, by contrast, thousands of **collapsed** solutions
+(coincident non-adjacent vertices, many on positive-dimensional families:
+Jacobian ranks 28-30), which is why the unit-length system is not
+zero-dimensional and why an exact elimination must saturate the degenerate
+components.
 
 ## 5. What would decide it exactly, and what the structure suggests
 
@@ -152,14 +158,14 @@ saturate the degenerate components.
 ## 7. Reproduction
 
     python3 -B 04-computation/experiments/ei17_placement_q_zeta55_20261012.py
-    python3 -B 04-computation/experiments/ei17_placement_q_zeta55_20261012.py --census 96
+    python3 -B 04-computation/experiments/ei17_placement_q_zeta55_20261012.py --census 96,160
 
 [Script](../../04-computation/experiments/ei17_placement_q_zeta55_20261012.py);
 [output](ei17_placement_q_zeta55_20261012.json) (fast part: isomorphisms,
 3000-digit refinement, 4-cycles and relations, the exact facts about `p` and
 its failure at `x_v1`, the LLL degree search, the placement LLL);
-[census output](ei17_placement_q_zeta55_20261012_census96.json) (adds the six
-real faithful realizations). The paper's coefficients were parsed from the PDF
+[census output](ei17_placement_q_zeta55_20261012_census.json) (adds the merged
+two-grid census of real faithful realizations, about 35 minutes). The paper's coefficients were parsed from the PDF
 text and agree with an independent transcription. Integer LLL uses sympy's
 `DomainMatrix.lll` (python-flint backend); mpmath Newton in the 30-equation
 system supplies the digits.
