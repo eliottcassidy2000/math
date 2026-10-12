@@ -1,0 +1,4 @@
+q   p^e  |V|   |Aut G_q|   q^2(q+1)2e  ratio  orbits  |Stab_0|  Stab orbits  1+FrobOrb  gens-ok  time(s)
+83  83^1  6889  1157352     1157352     1      1       168       83           83         True     0.7
+89  89^1  7921  1425780     1425780     1      1       180       89           89         True     0.9
+97  97^1  9409  1844164     1844164     1      1       196       97           97         True     1.1

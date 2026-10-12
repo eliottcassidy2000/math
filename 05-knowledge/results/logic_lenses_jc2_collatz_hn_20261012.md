@@ -104,9 +104,22 @@ functions on `Z_2` has `Ker ρ(θ) = K·1` if `ρ(1) = 0` and `0` otherwise.
 `K_4`, `K_3 □ K_3`, Clebsch, `H(3,4)`, ternary five-frame (automorphism groups `2^4 ⋊ S_5`, `S_4 ≀ S_3`,
 `F_3^4 ⋊ (S_5 × C_2)`). `κ(9) = 3` via a nowhere-zero functional; `κ(4) = κ(8) = 4`.
 
-### 4.6 Hypotheses
+### 4.6 THM-4625 — the whole tangent-sweep family (PROVED)
 
-* HYP-9255 — surjective dual field ⟹ automorphism in dimension three (refuted for `n ≥ 4` by padding).
+For every Keller map of Gao's shape with `deg p = d ≥ 2` (THM-1300 is `d = 2`, Gao's `G` is `d = 3`,
+Gallagher's family by Gao's account): the `(F_2, F_3)`-fibres are `P^1` minus `d+1` points carrying
+`F_1` as a degree-`(d+1)` polynomial minus its `d` critical points (`F_1' = (cb − p)/(2c^2)`), the
+`(F_1, F_3)`-fibres are `P^1` minus `d+3` points carrying `F_2` of degree `d+1`
+(`F_2' = −2(c^2a − q)/(cw^2)`), and the `(F_1, F_2)`-fibres are birational to `t^2 = b^2 − 8aP(w)/w^2`
+(`P = ∫p`; discriminant identity `disc = p^2(b^2w^2 − 8a(wp − 2q))`), irreducible hyperelliptic of
+genus `⌊(d−2)/2⌋`. So `deg F = d+1`, all rings of constants are `K[F_(≠j)]`, no dual field is
+surjective or locally nilpotent, no coordinate-pair fibre is a union of lines (HYP-9255 holds on the
+family), and the Galois group is `S_(d+1)` whenever the sweep curve is parametrized birationally
+(`S_3` for THM-1300, `S_4` for `G`).
+
+### 4.7 Hypotheses
+
+* HYP-9255 — surjective dual field ⟹ automorphism in dimension three (refuted for `n ≥ 4` by padding; holds in fibre form on the whole tangent-sweep family by THM-4625).
 * HYP-9256 — affine rigidity of `G_q` for all `q ∉ {4, 8, 9}`.
 * HYP-9257 — `length_(A_3) V_F = 4` for THM-1300.
 
@@ -117,6 +130,11 @@ functions on `Z_2` has `Ker ρ(θ) = K·1` if `ρ(1) = 0` and `0` otherwise.
     python3 thm1300_module_checks.py   # Ker V_3 in degree <= 12 (dim 4), tangency polynomial, x,y,z outside K[F]
     python3 gq_automorphisms.py        # nauty census q <= 81 (needs dreadnaut on PATH)
     python3 gq_exceptional.py          # Clebsch / H(3,4) / ternary frame isomorphisms, chi by SAT, frame colouring
+    python3 sweep_family_identities.py # derivative identities for generic p, d = 2..6
+    python3 sweep_family_discriminant.py # discriminant identity, wp - 2q = int p, generic genus, S_4 for Gao's G
+    python3 gao_degree4_fibrations.py  # Gao's degree-four map: three fibrations (its 'genus 2' line is a wrong sqf_part reading; see THM-4625)
+    python3 gq_census_extension.py     # nauty census for 83 <= q <= 128 (HYP-9256 evidence; background)
+    python3 kappa_sat.py 13 5 ; python3 kappa_sat.py 17 5   # CaDiCaL attempts at kappa(13), kappa(17) (background)
 
 Outputs are committed beside the scripts (`*.out`). Hostile controls: (i) `dim Ker V_3` on polynomials
 of degree `≤ 12` is `4 = #{1, F_2, F_2^2, F_1}` (a larger kernel would refute `R_3 = K[F_1, F_2]`);

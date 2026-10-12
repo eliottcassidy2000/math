@@ -1,7 +1,7 @@
 ---
 id: HYP-9255
 title: "Dual-field surjectivity forces invertibility in dimension three: for every Keller map F : A^3 -> A^3 over a field of characteristic zero and every j, if the dual field V_j = d/dF_j is surjective on K[x, y, z] then F is an automorphism; equivalently (THM-4620(4)) no Keller map of A^3 has a coordinate-pair fibration whose generic fibre is a disjoint union of two or more lines"
-status: "OPEN (2026-10-12, mac-mini-2026-10-12-logic4). PROVED in the plane (THM-4620(5)). REFUTED in every dimension n >= 4 by padding: F = F' x id_(A^1) with F' a non-invertible Keller map of A^(n-1) (THM-1300 for n = 4) has V_n = d/dx_n surjective and generic fibre of (F_1, ..., F_(n-1)) equal to deg F' disjoint lines. Evidence in dimension three: THM-1300's three dual fields are all non-surjective with connected punctured-line fibres (THM-4621); Gao's degree-four map G (arXiv:2608.00222, section 3.5) is untested."
+status: "OPEN (2026-10-12, mac-mini-2026-10-12-logic4). PROVED in the plane (THM-4620(5)). REFUTED in every dimension n >= 4 by padding: F = F' x id_(A^1) with F' a non-invertible Keller map of A^(n-1) (THM-1300 for n = 4) has V_n = d/dx_n surjective and generic fibre of (F_1, ..., F_(n-1)) equal to deg F' disjoint lines. Evidence in dimension three: THM-1300's three dual fields are all non-surjective with connected punctured-line fibres (THM-4621); Gao's degree-four map G (arXiv:2608.00222, section 3.5): all three coordinate-pair fibres are geometrically irreducible (two punctured lines, one conic), so no dual field is surjective (gao_degree4_fibrations.py); THM-4625 extends this to every member of the tangent-sweep family (the (F_1,F_2)-fibre is an irreducible hyperelliptic curve of genus floor((d-2)/2))."
 session: mac-mini-2026-10-12-logic4
 related:
   - THM-4620 (surjective dual field => every geometric component of the generic fibre is a line and deg F = number of components)
@@ -36,6 +36,7 @@ de Rham cohomology `H^1(K[x]/K[G_j])` of a Keller map be a nonzero torsion modul
 ## Evidence and tests
 
 * THM-1300: `μ_3 = 2`, `μ_2 = 4`, `μ_1 = 2` (punctured lines, connected); no `V_j` surjective.
+* THM-4625: for every tangent-sweep Keller map the three coordinate-pair fibres are irreducible and not lines, so the hypothesis holds on the whole Gao-Gallagher family; a counterexample must come from outside it.
 * A decisive test for a candidate counterexample: compute the generic fibre of a coordinate pair
   (THM-4621's method: eliminate the third coordinate, parametrize) and count its geometric
   components. Gao's degree-four map `G = (γx, (p(w) + 2γ)/(γx), (q(w) + γw)/(γx)^2)` with

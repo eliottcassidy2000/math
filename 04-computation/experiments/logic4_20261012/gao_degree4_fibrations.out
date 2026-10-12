@@ -1,0 +1,20 @@
+polynomial components: [True, True, False]  degrees: [4, 11, 12]
+det JG = 2
+q' = (w/2) p' : True
+
+(G1,G2)-fibre: G1,G2 = c X
+   G3|fibre = -w*(-4*X*c + w**3 - 8*w**2 + 12*w)/(8*c**2)  deg_w = 4  denominator: 8*c**2
+   dG3/dw = -(-X*c + w**3 - 6*w**2 + 6*w)/(2*c**2)   (= (cX - p(w))/(2c^2)? True )
+   punctures: w = infinity and the 3 roots of cX - p(w); connected (rational, parametrized by w); b_1 = 3
+
+(G1,G3)-fibre: G1,G3 = c Y
+   G2|fibre = (8*Y*c**2 + w**4 - 8*w**3 + 12*w**2)/(4*c*w)
+   dG2/dw = (-8*Y*c**2 + 3*w**4 - 16*w**3 + 12*w**2)/(4*c*w**2)
+   punctures: w = 0 (x=0), w = infinity, the 4 roots of c^2 Y - q(w); connected; b_1 = 5
+
+(G2,G3)-fibre: quadratic in x: A x^2 + B x + C with A,B,C as computed: True
+   disc degree in w: 10  factorization: (-1, [(w, 4), (-X**2 + 2*Y*w**2 - 16*Y*w + 24*Y, 1), (w**2 - 6*w + 6, 2)])
+   squarefree part degree: 5  => genus of the double cover = 2
+   disc a perfect square in Q(X,Y)[w]? False  (if yes the generic fibre would be disconnected)
+   A = -w**2*(-3*X**2*w**2 + 16*X**2*w - 12*X**2 + 8*Y*w**4 - 96*Y*w**3 + 384*Y*w**2 - 576*Y*w + 288*Y)/8
+   C = -w**2*(w - 6)*(w - 2)/2

@@ -1,0 +1,7 @@
+d=2: disc = p^2 (b^2 w^2 - 8a(wp-2q)): True ; wp - 2q = int_0^w p: True ; deg_w(b^2 - 8aP/w^2) = 1 ; its w-discriminant is a nonzero polynomial in (a,b,p_i): True => generic genus 0
+d=3: disc = p^2 (b^2 w^2 - 8a(wp-2q)): True ; wp - 2q = int_0^w p: True ; deg_w(b^2 - 8aP/w^2) = 2 ; its w-discriminant is a nonzero polynomial in (a,b,p_i): True => generic genus 0
+d=4: disc = p^2 (b^2 w^2 - 8a(wp-2q)): True ; wp - 2q = int_0^w p: True ; deg_w(b^2 - 8aP/w^2) = 3 ; its w-discriminant is a nonzero polynomial in (a,b,p_i): True => generic genus 1
+d=5: disc = p^2 (b^2 w^2 - 8a(wp-2q)): True ; wp - 2q = int_0^w p: True ; deg_w(b^2 - 8aP/w^2) = 4 ; its w-discriminant is a nonzero polynomial in (a,b,p_i): True => generic genus 1
+d=6: disc = p^2 (b^2 w^2 - 8a(wp-2q)): True ; wp - 2q = int_0^w p: True ; deg_w(b^2 - 8aP/w^2) = 5 ; its w-discriminant is a nonzero polynomial in (a,b,p_i): True => generic genus 2
+Gao G: resultant of (p(r1)-p(r2))/(r1-r2) and (q(r1)-q(r2))/(r1-r2) in r2 = 9*(r1**2 - 4*r1 - 2)*(r1**2 - 4*r1 + 2)**2/64 => critical values generically distinct: True
+   (critical value at a critical point r is q(r)/c^2; two coincide iff p(r1)=p(r2) and q(r1)=q(r2))

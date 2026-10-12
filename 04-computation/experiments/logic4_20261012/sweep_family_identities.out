@@ -1,0 +1,5 @@
+d=2: dF3/dw identity True (deg_w F3 = 3); dF2/dw identity True; leading coefficient of F2 at infinity = p2/(3*c)
+d=3: dF3/dw identity True (deg_w F3 = 4); dF2/dw identity True; leading coefficient of F2 at infinity = p3/(4*c)
+d=4: dF3/dw identity True (deg_w F3 = 5); dF2/dw identity True; leading coefficient of F2 at infinity = p4/(5*c)
+d=5: dF3/dw identity True (deg_w F3 = 6); dF2/dw identity True; leading coefficient of F2 at infinity = p5/(6*c)
+d=6: dF3/dw identity True (deg_w F3 = 7); dF2/dw identity True; leading coefficient of F2 at infinity = p6/(7*c)

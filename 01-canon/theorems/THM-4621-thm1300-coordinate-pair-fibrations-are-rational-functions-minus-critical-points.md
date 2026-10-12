@@ -23,6 +23,7 @@ related:
   - THM-1300 (the map; det JF = -2 re-verified here), THM-1310, THM-4562, THM-4567
   - THM-4620 (the general dictionary this instantiates)
   - HYP-9257 (the exact A_3-length)
+  - THM-4625 (the same anatomy for every tangent-sweep Keller map; THM-1300 is the d = 2 member)
   - S. Gao, Counterexamples to the Jacobian conjecture in dimensions greater than two, arXiv:2608.00222 (tangent sweep; Theorem 3.4)
 ---
 
@@ -183,6 +184,7 @@ pairwise non-isomorphic constituents give length `≥ 3`.  ∎
 
 ## Reading
 
+* **The whole family.** THM-4625 proves statements (1), (5), (6) for every member of Gao's tangent-sweep family with `deg p = d`: `P^1` minus `d+1` and `d+3` points carrying a degree-`(d+1)` function minus its critical points, and a hyperelliptic `(F_1, F_2)`-fibre of genus `⌊(d-2)/2⌋` (here `d = 2`: the conic of (6) is the `t^2 = b^2 - 8aP(w)/w^2` model with `P/w^2 = 2 - w`), with Galois group `S_(d+1)`.
 * **A uniform mechanism.** On every coordinate-pair fibre the picture is the same: a rational
   function of degree three on `P^1`, with its critical points deleted. Deleting the critical points
   removes the ramification and leaves an étale map which is not proper; over the critical values the
