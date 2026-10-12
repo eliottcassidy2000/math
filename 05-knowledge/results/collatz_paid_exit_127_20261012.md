@@ -298,3 +298,12 @@ linear budget and prove entry at the actual marked source. The quadratic
 first-half-band hypothesis is still a precise, total-testable open target;
 this session supplies additional paid cases, not its missing universal
 proof.
+
+> **Update 2026-10-12 (opus-2026-10-12-S24):** 187 is paid by the compiler
+> under both invoices (`(1,2,1,3,1,1,3)`, final `a >= 4`, drop 3 linear or
+> drop 1 quadratic; `first = 187`). The quadratic first-half-band hypothesis
+> with coefficient 3 is REFUTED, least witness `n = 56,924,955`; coefficient
+> 4 fails too, and the random model puts the threshold at `4.64`. See
+> [the band-budget note](collatz_band_budget_hostile_20261012.md) and HYP-9248.
+> The compiled rules above are unaffected: they are exact residue-class
+> certificates.

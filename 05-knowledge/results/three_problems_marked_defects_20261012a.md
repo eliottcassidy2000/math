@@ -196,6 +196,16 @@ guard grammar proving both would pay the incoming source-specific measure
 floors. This strengthens mere eventual convergence by a quantitative charge
 bound, so it must be challenged as such.
 
+> **Update 2026-10-12 (opus-2026-10-12-S24): (3) is REFUTED at coefficient 3.**
+> The least counterexample is `n = 56,924,955` (198 odd steps to the first
+> half-band exit `h = 25,168,801`, charge 151 against `3(25^2-24^2) = 147`);
+> there are 37 counterexamples below `2^33` and nine among the glide-record
+> holders to `2.6e18`, all at drop one; coefficient 4 fails at
+> `1,008,932,249,296,231` (ratio 415/97). The random model puts the threshold
+> coefficient at `c* = 4.64`. See [the band-budget note](collatz_band_budget_hostile_20261012.md)
+> and [HYP-9248](../hypotheses/HYP-9248-first-band-exit-charge-threshold-coefficient.md).
+> The finite probe through `10^6` below was simply below the first large deviation.
+
 There is a useful stronger consequence and a finite test interface. If a
 strict nonroot trajectory spends at most B odd letters, every such letter
 multiplies n-1 by at most2 and every other letter by at most3/4. After
