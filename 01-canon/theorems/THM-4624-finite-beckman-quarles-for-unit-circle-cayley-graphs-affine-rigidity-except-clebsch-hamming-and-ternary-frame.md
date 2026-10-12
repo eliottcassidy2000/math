@@ -12,7 +12,12 @@ status: >
   and Hamming groups are KNOWN), and the frame colouring of G_9. KNOWN context: Beckman-Quarles
   (1953) for R^n; Kiermaier-Kurz (Discrete Math. 309 (2009)) prove the analogous affine rigidity for
   the INTEGRAL-distance graph on F_q^2 (q = 3 mod 4, or q prime other than 5), a different graph.
-  Affine rigidity for q > 81 (all q not in {4, 8, 9}) is HYP-9256. Not independently audited yet.
+  Affine rigidity for all q not in {4, 8, 9} is HYP-9256. Independently audited 2026-10-12 (audit B:
+  PASS; every order, ratio, stabiliser order and orbit count re-derived with independent field
+  arithmetic and nauty driver for q = 2, 3, 4, 5, 7, 8, 9, 13, 16, 25, 27; the divisibility and frame
+  classification brute-forced for p <= 97, e <= 12; two wording nits in the Reading fixed). The audit
+  also extended the census: Aut(G_q) = Aff(q) for every prime power 83 <= q <= 256 (38 values;
+  audit_B_gq_census_*.out), so the FINITE-EXACT range is now q <= 256.
 session: mac-mini-2026-10-12-logic4
 source: 05-knowledge/results/logic_lenses_jc2_collatz_hn_20261012.md
 scripts:
@@ -52,10 +57,12 @@ acts faithfully on `G_q` by automorphisms; `|Aff(q)| = q^2 (q+1) · 2e`.
    | Aut/Aff | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
 
    Full orders: `|Aut G_q| = q^2(q+1)·2e` except `|Aut G_4| = 1920`, `|Aut G_8| = 82944`,
-   `|Aut G_9| = 19440`. In every case `G_q` is vertex-transitive and the stabiliser of `0` has
+   `|Aut G_9| = 19440`. Audit B extended the census: ratio `1` for every prime power `83 ≤ q ≤ 256`
+   (`83, 89, ..., 241, 243, 251, 256`, including the split-norm cases `q ≡ 1 (mod 4)`), with stabiliser
+   orbit counts `1 + #(Frobenius orbits on F_q^×)` throughout. In every case `G_q` is vertex-transitive and the stabiliser of `0` has
    `1 + (number of Frobenius orbits on F_q^×)` orbits in the affine cases (e.g. `q` orbits for prime
    `q`; `15, 6, 11, 28, 14, 24` for `q = 25, 16, 27, 49, 64, 81`) and `3, 4, 5` orbits for `q = 4, 8, 9`.
-2. **Affine rigidity.** For every prime power `q ≤ 81` with `q ∉ {4, 8, 9}`, `Aut(G_q) = Aff(q)`: every
+2. **Affine rigidity.** For every prime power `q ≤ 256` with `q ∉ {4, 8, 9}`, `Aut(G_q) = Aff(q)`: every
    automorphism of `G_q` is an affine semilinear map. (For `q = 2, 3` this holds although the graphs
    are `K_4` and `K_3 □ K_3`: `Aff(2) = S_4` and `Aff(3) = S_3 ≀ S_2`.)
 3. **Subfield lines.** Let `F_(p^f) ⊆ F_(q^2)` (`f | 2e`). Then `F_(p^f)^× ⊆ μ_(q+1)` iff `p^f - 1 | q + 1`,
@@ -139,14 +146,15 @@ re-checked. For `G_9` the functional `λ` is nowhere zero on the ten generators,
 ## Reading
 
 * **A finite Beckman–Quarles theorem, with exceptions that are geometry.** Over `R^2` every
-  unit-distance automorphism is an isometry; over `F_q` the same holds (for `q ≤ 81`) unless the unit
-  circle degenerates into a frame or a basis over a subfield, in which case the graph acquires the
-  symmetric group of the frame. The exceptions are exactly the small characteristics `2, 3` where the
-  prime field's units fit inside the circle.
+  unit-distance automorphism is an isometry; over `F_q` the same holds (for `q ≤ 256`) unless the unit
+  circle degenerates into a frame or a basis over a subfield (`q ∈ {2, 3, 4, 8, 9}`), in which case the
+  frame's symmetric group acts; for `q = 2, 3` that group is already `Aff(q)`, and only for
+  `q = 4, 8, 9` is it larger. Subfield lines exist in every characteristic `2` or `3` (`F_2^× = {1}`,
+  `F_3^× = {±1}` always lie in `μ_(q+1)`), but a frame or basis needs `e ≤ 3`.
 * **Why this matters for the field-plane programme.** THM-4558's bound `χ(G(L)) ≤ κ(q)` is the
   chromatic number of `G_q`; its symmetry group fixes the symmetry-breaking available to SAT searches
   for `κ(13)`, `κ(17)`, and the three exceptional identifications turn the table entries
   `κ(4) = κ(8) = 4`, `κ(9) = 3` into structure.
-* **Not claimed.** Nothing is claimed for `q > 81`; a proof of affine rigidity in general (HYP-9256)
+* **Not claimed.** Nothing is claimed for `q > 256`; a proof of affine rigidity in general (HYP-9256)
   would presumably follow Kiermaier–Kurz's method (directions determined by point sets; Paley
   cliques) adapted to the norm-one circle.

@@ -1,0 +1,16 @@
+2*B integral: True
+2 V_j(F_i): [[2, 0, 0], [0, 2, 0], [0, 0, 2]]
+D=8: #monomials=165, rank mod p=162, dim Ker (mod p) = 3 ; #{F1^i F2^j, 7i+6j<=D} = 3  (0.4s)
+D=10: #monomials=286, rank mod p=283, dim Ker (mod p) = 3 ; #{F1^i F2^j, 7i+6j<=D} = 3  (1.0s)
+D=12: #monomials=455, rank mod p=451, dim Ker (mod p) = 4 ; #{F1^i F2^j, 7i+6j<=D} = 4  (2.2s)
+
+iterate degrees:
+  deg V_1^m(x), m=1..4: [8, 15, 22, 29]
+  deg V_1^m(y), m=1..4: [6, 13, 20, 27]
+  deg V_1^m(z), m=1..4: [8, 15, 22, 29]
+  deg V_2^m(x), m=1..4: [9, 17, 25, 33]
+  deg V_2^m(y), m=1..4: [7, 15, 23, 31]
+  deg V_2^m(z), m=1..4: [9, 17, 25, 33]
+  deg V_3^m(x), m=1..4: [11, 21, 31, 41]
+  deg V_3^m(y), m=1..4: [9, 19, 29, 39]
+  deg V_3^m(z), m=1..4: [11, 21, 31, 41]

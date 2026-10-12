@@ -91,15 +91,17 @@ countable field planes are choice-free; `Aut(UD(R^2)) = Isom(R^2)` (KNOWN) versu
 
 ### 4.4 THM-4623 — Collatz under order and module lenses (PROVED, elementary)
 
-For any self-map: `P` dcpo ⟺ `Alex(P)` sober ⟺ directed sets have greatest elements ⟺ no divergent
-orbit; Collatz ⟺ `P` is a dcpo with a top. `|End(N, T)| = 2^(ℵ_0)` (collapse one ancestor tree onto
-the other preimage's tree) while `Aut = 1` (THM-4523). The Koopman operator on locally constant
+For any self-map: `P` dcpo ⟺ `Alex(P)` sober ⟺ nonempty directed sets have greatest elements ⟺ no
+divergent orbit; Collatz ⟺ `P` has a greatest element. `|End(N, T)| = 2^(ℵ_0)` (collapse the ancestor
+tree of `2m` onto that of `(m-1)/3` for a non-periodic `m ≡ 4, 16 (mod 18)`; for `m ≡ 10 (mod 18)` the
+collapse is unique — audit B) while `Aut = 1` (THM-4523). The level-`L` transpose of the Koopman
+operator is the Terras matrix with `P_L^L = J/2^L`. The Koopman operator on locally constant
 functions on `Z_2` has `Ker ρ(θ) = K·1` if `ρ(1) = 0` and `0` otherwise.
 
 ### 4.5 THM-4624 — finite Beckman–Quarles (FINITE-EXACT census + PROVED structure)
 
 `Aut(G_q) = Aff(q)` (order `q^2(q+1)·2e`) for every prime power `q ≤ 81` except `q = 4, 8, 9`
-(ratios 6, 24, 6). The unit circle is a union of subfield lines iff `p^f − 1 | q + 1`, possible only for
+(ratios 6, 24, 6); audit B extended this to every prime power `q ≤ 256`. The unit circle is a union of subfield lines iff `p^f − 1 | q + 1`, possible only for
 `(p, f) ∈ {(2,1), (2,2), (3,1)}`, and is a basis/frame exactly for `q ∈ {2, 3, 4, 8, 9}`:
 `K_4`, `K_3 □ K_3`, Clebsch, `H(3,4)`, ternary five-frame (automorphism groups `2^4 ⋊ S_5`, `S_4 ≀ S_3`,
 `F_3^4 ⋊ (S_5 × C_2)`). `κ(9) = 3` via a nowhere-zero functional; `κ(4) = κ(8) = 4`.
@@ -158,11 +160,25 @@ and the two bounds agree; (v) `det JF = −2` and the integer triple collision w
 * Shelah–Soifer (JCTA 103, 2003): axiom-dependence of the chromatic number of a distance graph on `R`.
 * Beckman–Quarles (Proc. AMS 4, 1953).
 
+**Note on CORE-PAPERS.** The startup byte budget (180,000 bytes, `agents/check_docs.py`) is already saturated, so no entry was added to `05-knowledge/reference/CORE-PAPERS.md`; section 6 above is the literature record for this session.
+
 ## 7. Audit
 
-Pending at the first checkpoint. Two independent adversarial audits were requested (A: THM-4620,
-THM-4621, HYP-9255, HYP-9257; B: THM-4622, THM-4623, THM-4624, HYP-9256); their findings and the
-fixes applied are recorded below when they return.
+Two independent adversarial audits were commissioned after the first checkpoint (`7f03d06bb8`).
+
+**Audit B** (THM-4622, THM-4623, THM-4624, HYP-9256; report
+[logic_lenses_audit_B_20261012.md](logic_lenses_audit_B_20261012.md), scripts `audit_B_*.py`):
+THM-4624 PASS (independent field arithmetic and nauty driver; divisibility and frame classification
+brute-forced for `p ≤ 97`, `e ≤ 12`); THM-4622 PASS WITH CORRECTIONS (Parts 509 / Heule 510;
+absoluteness restricted to computably presented fields; KNOWN typing; 'not in a line'; Shelah–Soifer
+2004); THM-4623 PASS WITH CORRECTIONS, two false sentences (the continuum count fails for
+`m ≡ 10 (mod 18)`, where the collapsing map is unique; the transpose of the Koopman operator is the
+Terras matrix with `P_L^L = J/2^L`, not THM-4520's 3-adic operator); HYP-9256 PASS WITH CORRECTIONS
+plus new evidence: `Aut(G_q) = Aff(q)` for all 38 prime powers `83 ≤ q ≤ 256`. All corrections applied;
+MISTAKE-594. The session's own partial census extension (`gq_census_extension.out`, `q ≤ 109`) is
+superseded by the audit's complete one.
+
+**Audit A** (THM-4620, THM-4621, HYP-9255, HYP-9257): see below when it returns.
 
 ## 8. Next obligations
 

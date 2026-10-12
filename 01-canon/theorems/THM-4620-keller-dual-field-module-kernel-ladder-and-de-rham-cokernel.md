@@ -28,6 +28,7 @@ related:
   - V. V. Bavula, Holonomic modules and 1-generation in the Jacobian Conjecture, arXiv:2112.03177; C. R. Math. 362 (2024)
   - A. van den Essen, A note on the fibers of a Keller map (D-modules), Pacific J. Math. 151 (1991)
   - M. Nagata, A. Nowicki, Rings of constants for k-derivations in k[x_1,...,x_n], J. Math. Kyoto Univ. 28 (1988)
+  - Cheng-McKay-Wang, Younger mates and the Jacobian conjecture, Proc. AMS 123 (1995); Moskowicz, arXiv:1802.04685 (Ker D_f = K[f]; THM-2230)
   - W. Zhang, Keller maps and holonomic D-modules, arXiv:2609.10180 (characteristic p analogue)
   - L. Chini, Model theory of generic vector space endomorphisms V, arXiv:2609.20184 (kernel identities)
 ---
@@ -194,9 +195,11 @@ everywhere: `F` is an automorphism. The local-nilpotence remark: `K[x] = R_j[F_j
 surjective on `K[x_1, ..., x_n]`, and the generic fibre of `(F', ) ∘ pr` is (generic fibre of `F'`)
 `× A^1`, a union of `deg F'` lines.
 
-**(5).** `R = Ker D_f` is a ring of constants of a nonzero derivation of `K[x, y]`, so it is `K` or
-`K[h]` for a single polynomial `h` (Nagata–Nowicki, CITED); `f ∈ R` gives `R = K[h]`, `f = p(h)`,
-and `1 = D_f g = p'(h) D_h g` forces `p'(h) ∈ K^×`, so `R = K[f]`, `L = K(f)`, `d = 1`.
+**(5).** `R = Ker D_f = K[f]` is KNOWN for a Keller component (Cheng–McKay–Wang 1995, Theorem 1; Moskowicz
+arXiv:1802.04685, Theorem 2.3; imported by THM-2230): `Jac(f, g) ∈ K^×` and `Jac(f, w) = 0` force `w ∈ K[f]`.
+Directly: `R` is a ring of constants of a nonzero derivation of `K[x, y]`, so it is `K` or `K[h]` for a
+single polynomial `h` (Nagata–Nowicki, CITED); `f ∈ R` gives `R = K[h]`, `f = p(h)`, and
+`1 = D_f g = p'(h) D_h g` forces `p'(h) ∈ K^×`, so `R = K[f]`, `L = K(f)`, `d = 1`.
 (a)⇒(b): if `F` is an automorphism then in the coordinates `(f, g)` the derivation `D_f` is `∂/∂g`.
 (b)⇒(c) is (3). (c)⇒(d): `coker D_f = 0` gives `μ(f) = 0` by (3). (d)⇒(a): by (4) with `d = 1`.
 (a)⇔(e)⇔(f) are classical. The Gauss–Manin statement: `coker D_f` is a holonomic `A_1`-module by (3)
