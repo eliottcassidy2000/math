@@ -1,0 +1,30 @@
+[KRvKB safe corner a8] trap: 1237588 of 1604648 positions survive (4.8s)
+  closure re-verified: violations 0
+  attacker-to-move members 453542: {'quiet (rook safe)': 347214, 'rook attacked but defended': 9668, 'rook en prise, undefended': 96660}
+  defender-to-move members 784046: {'internal safe moves only': 597242, 'boundary move only (captures the rook / forces a dead position)': 16720, 'internal safe move and a boundary draw': 170060, 'stalemate': 24}
+  quiet attacker-to-move members by BK square: {'a6': 36699, 'a7': 40099, 'a8': 39936, 'b6': 38152, 'b7': 41500, 'b8': 40099, 'c6': 35878, 'c7': 38152, 'c8': 36699}
+   BK a6: region 184487, trap 134884 (73.1%), attacker-to-move in trap 47405 of 88360
+   BK b6: region 169305, trap 133045 (78.6%), attacker-to-move in trap 50042 of 80486
+   BK c6: region 174622, trap 130834 (74.9%), attacker-to-move in trap 48510 of 83262
+   BK a7: region 178247, trap 140309 (78.7%), attacker-to-move in trap 51589 of 85374
+   BK b7: region 174570, trap 144806 (83.0%), attacker-to-move in trap 56120 of 83706
+   BK c7: region 169305, trap 133045 (78.6%), attacker-to-move in trap 50042 of 80486
+   BK a8: region 191378, trap 145472 (76.0%), attacker-to-move in trap 50840 of 91952
+   BK b8: region 178247, trap 140309 (78.7%), attacker-to-move in trap 51589 of 85374
+   BK c8: region 184487, trap 134884 (73.1%), attacker-to-move in trap 47405 of 88360
+  quiet examples: ['8/8/k7/8/8/8/8/b1KR4 w - - 0 1', '8/8/k7/8/8/8/8/b1K1R3 w - - 0 1', '8/8/k7/8/8/8/8/b2KR3 w - - 0 1', '8/8/k7/8/8/8/8/b1K2R2 w - - 0 1', '8/8/k7/8/8/8/8/b2K1R2 w - - 0 1']
+[KRvKB wrong corner a1] trap: 214316 of 1599519 positions survive (8.9s)
+  closure re-verified: violations 0
+  attacker-to-move members 12642: {'rook en prise, undefended': 10147, 'rook attacked but defended': 1232, 'quiet (rook safe)': 1263}
+  defender-to-move members 201674: {'boundary move only (captures the rook / forces a dead position)': 161410, 'internal safe move and a boundary draw': 24083, 'internal safe moves only': 16181}
+  quiet attacker-to-move members by BK square: {'a1': 135, 'a2': 154, 'a3': 155, 'b1': 154, 'b2': 114, 'b3': 147, 'c1': 155, 'c2': 147, 'c3': 102}
+   BK a1: region 184855, trap 21089 (11.4%), attacker-to-move in trap 1242 of 88628
+   BK b1: region 184703, trap 23552 (12.8%), attacker-to-move in trap 1376 of 88588
+   BK c1: region 178155, trap 22811 (12.8%), attacker-to-move in trap 1329 of 85150
+   BK a2: region 184703, trap 23552 (12.8%), attacker-to-move in trap 1376 of 88588
+   BK b2: region 169379, trap 24903 (14.7%), attacker-to-move in trap 1504 of 80704
+   BK c2: region 174596, trap 26209 (15.0%), attacker-to-move in trap 1630 of 83484
+   BK a3: region 178155, trap 22811 (12.8%), attacker-to-move in trap 1329 of 85150
+   BK b3: region 174596, trap 26209 (15.0%), attacker-to-move in trap 1630 of 83484
+   BK c3: region 170377, trap 23180 (13.6%), attacker-to-move in trap 1226 of 80268
+  quiet examples: ['8/8/8/8/3R4/2K5/8/bk6 w - - 0 1', '8/8/8/4R3/8/2K5/8/bk6 w - - 0 1', '8/8/8/4R3/3K4/8/8/bk6 w - - 0 1', '8/8/5R2/8/8/2K5/8/bk6 w - - 0 1', '8/8/5R2/8/3K4/8/8/bk6 w - - 0 1']

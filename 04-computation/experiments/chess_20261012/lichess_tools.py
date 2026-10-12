@@ -9,7 +9,7 @@ Every response is cached in a JSON file (argv) so that the archived file is the 
       class in {KPvKP, KRvKR, KQvKQ, KBvKB, KNvKN}; symmetry in {rank, rot, file, diag, rot90}.
       Prints the tempo value distribution (mover wins / draw / mover loses = mutual zugzwang) and lists the
       mutual zugzwangs.
-Rate: one request per 0.35 s, retry on HTTP 429.
+Rate: a 0.12 s pause after each request (about one request per second including latency), retry on HTTP 429.
 """
 import sys, json, time, os, random, itertools, pickle, urllib.request, urllib.parse
 import chess
@@ -28,7 +28,7 @@ def save_cache(path, cache):
         json.dump(cache, f)
     os.replace(tmp, path)
 
-def query(fen, cache, path, delay=0.35):
+def query(fen, cache, path, delay=0.12):
     if fen in cache:
         return cache[fen]
     for attempt in range(8):

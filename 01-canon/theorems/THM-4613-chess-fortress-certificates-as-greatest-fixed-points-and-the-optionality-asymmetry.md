@@ -1,15 +1,66 @@
 ---
 id: THM-4613
-title: "Fortress certificates as greatest fixed points: closed regions are sound and complete at-least-draw certificates, the maximal trap is the exact drawn set (KPvK), the wrong-bishop corner and the rook-pawn corner predicates are closed, the safe-corner region of KRvKB contains a certified fortress while the wrong corner does not, and value-preserving play ordered by optionality is safe for the defender but cycles for the attacker"
+title: "Fortress certificates as greatest fixed points: a closed region (trap) is a sound and complete at-least-draw certificate checkable by one move generation per state, traps form a lattice whose top is the exact not-lost set and which maximises the defender's width; the largest trap inside any candidate predicate is computable without a tablebase and equals the exact not-lost set on the whole KPvK class; the rook-pawn corner predicate (2,507 states) and the wrong-bishop corner predicate (72,720 states) are closed, the square-of-the-pawn predicate is not; the safe-corner region of KRvKB contains a certified fortress of 1,237,588 states while the wrong-corner region keeps 214,316 with only 12,642 attacker-to-move states; and value-preserving play ordered by optionality holds every draw but cycles from 98-99% of the winning KRvK and KQvK positions"
 status: >
-  RESERVED / UNPROVED EMPTY STUB (opus-2026-10-12-S23, reserved 2026-10-12). The statement, the proof of the
-  general parts and the exact computations are being filed from
-  05-knowledge/results/chess_proof_system_20261012.md; until this file is promoted it has no proved
-  dependencies and must not be cited as a result.
+  PROVED (elementary): statements 1 (traps), 2 (rankings) and 3(a),(c) (the optionality asymmetry for the
+  defender and under a ranking). FINITE-EXACT: statements 4-6 and the witnesses of 3(b) (scripts and saved
+  outputs listed below; the maximal-trap/retrograde agreement on KPvK is an independent-path check; the
+  closure of every extracted trap is re-verified by verify_trap). ASSUMED, flagged and sampled: the promotion
+  rule used only for the exact not-lost count of the whole KBPvK dark-bishop/a-pawn sub-class (357,209 of
+  1,182,440), checked against Syzygy on 120 random states and on 120 states with the pawn on a7 with 0
+  mismatches; the certified corner trap itself does not use the assumption. CITED: Syzygy WDL via
+  tablebase.lichess.ovh (responses archived). Self-audited; independent audit recorded in the results note
+  (section 13).
 session: opus-2026-10-12-S23
-source: 05-knowledge/results/chess_proof_system_20261012.md
+source: 05-knowledge/results/chess_proof_system_20261012.md (sections 4, 5, 6)
+scripts:
+  - 04-computation/experiments/chess_20261012/chesslib.py (extract_trap, verify_trap, solve)
+  - 04-computation/experiments/chess_20261012/traps.py (+ .out), traps_analysis.py (+ .out)
+  - 04-computation/experiments/chess_20261012/optionality.py (+ optionality.out, optionality_nonincreasing.out)
+  - 04-computation/experiments/chess_20261012/lichess_tools.py (+ lichess_validate.out, lichess_cache.json)
+related:
+  - THM-4612 (strata; the tables and the one-sided spuriousness used here)
+  - HYP-9246 (the tempo on the symmetric diagonal)
+  - Guid and Bratko, "Detecting fortresses in chess", Elektrotehniski vestnik 79 (2012) 35-40 (search-based detection; evidence, not certificate)
+  - Zielonka (1998) traps and attractors; Knaster-Tarski
 ---
 
-# THM-4613 — reserved
+# THM-4613 — fortress certificates as greatest fixed points, and the optionality asymmetry
 
-RESERVED / UNPROVED EMPTY STUB. No proved dependencies. Content follows in this session's close-out.
+## Setting
+
+`G_inf` and `v` as in THM-4612. Fix a defender `D` and attacker `A`. A set `F` of states is **closed** (a `D`-trap) if for every `s in F`: with `D` to move, `s` is a stalemate or a dead position or some legal move leads into `F`; with `A` to move, `s` has no legal move or every legal move leads into `F`. In the computations a move that leaves the material class is admitted into `F` when a certified boundary oracle (an exact table of a smaller class, the dead-position rule, or a one-ply escape into a dead position) returns at least a draw for `D`; an uncertified boundary move counts as unsafe (sound). The **width** `w_F(s)` of `F` at a `D`-to-move state is the number of legal moves into `F` plus one if a certified boundary draw exists.
+
+## Statement
+
+1. **(Traps.)** (a) Every state of a trap has `v_D >= 0`. (b) Unions of traps are traps; the not-lost set `W>=(D) = {v_D >= 0}` is a trap; hence it is the largest trap, the greatest fixed point of the safety operator `S(F)`, and every trap is contained in it. (c) Closure is checked by one move generation per state of `F`. (d) `F subset F'` implies `w_F <= w_F'` pointwise; the maximal trap maximises the defender's width. (e) For any finite region `R` the largest trap inside `R` is `nu X. (R intersect S(X))`, computed by iterated deletion from `R` (work-list over predecessors), and its members are certified at least draws by (a).
+2. **(Rankings.)** A set `W` with `rho : W -> N` such that at `D`-to-move states some move mates or reaches `W` with smaller `rho`, and at `A`-to-move states `A` is not stalemated and every move reaches `W` with smaller `rho`, certifies `v_D = +1` on `W`; `W_win(D)` with `rho = DTM` is the largest such set. A draw certificate is closed; a win certificate is well-founded.
+3. **(Optionality asymmetry.)** (a) From a state with `v_D >= 0`, every policy that always plays a value-preserving move (into `{v_D >= 0}`) holds at least a draw, whatever secondary criterion orders those moves. (b) From a state with `v_D = +1`, a policy that always plays a win-preserving move need not win: witnesses below cycle. (c) A policy that always plays a `DTM`-decreasing move wins, and any secondary criterion may break ties among `DTM`-optimal moves.
+   *Witnesses (FINITE-EXACT; White wins, Black defends `DTM`-optimally, deterministic tie-breaks; `O1` = White's mobility at the next turn minimised over Black's replies, `O2` = the number of win-preserving White moves at the next turn minimised over Black's replies):*
+   - KRvK (175,168 winning white-to-move states): `O1` among win-preserving moves mates from 1,720 and cycles from 173,448; `O2` mates from 2,817 and cycles from 172,351; `O2` among moves after which Black's best reply does not raise the DTM ("weak progress") mates from 41,823 and cycles from 133,345; `O2` among `DTM`-optimal moves mates from all 175,168 (longest line 31 plies).
+   - KQvK (144,508): `O1` 3,365 / 141,143; `O2` 7,406 / 137,102; weak progress 34,719 / 109,789; `DTM`-optimal all 144,508 (longest 19 plies).
+   - KPvK defender: from all 70,420 drawn black-to-move states the greedy-optionality defender (among drawing moves, maximise the number of drawing replies, against a White policy minimising it) never loses.
+4. **(KPvK.)** The largest trap of the whole class (331,352 states) has 108,788 states and equals exactly the not-lost set of the retrograde solve (independent path: the two algorithms share only the move generator). The rook-pawn corner predicate `{White pawn on the a-file; Black king on a8, b8, a7 or b7}` (2,507 states, 1,310 with Black to move) is closed: every state of it is drawn and none needs to leave it; widths: 2 stalemates, 41 states with one safe move, 239 with two, 975 with three, 53 with four; the h-file mirror gives 2,507. Other predicates (states / drawn / largest trap inside): Black king directly in front of the pawn 5,396 / 5,330 / 4,854; in front at distance at most 2: 9,820 / 9,742 / 8,024; on the queening square 5,536 / 4,612 / 870; inside the square of the pawn and ahead of it 116,372 / 77,736 / 64,222. None of these four is closed.
+5. **(KBPvK, dark bishop and a-pawn.)** The predicate `{Black king on a8, b8, a7 or b7}` (72,720 states, 40,005 with Black to move) is closed with the boundary oracle "KPvK table after a bishop capture, dead position after a pawn capture, one-ply capture into a dead position after a promotion": a fortress certified without any tablebase of the class. Widths: 215 stalemates, 3,027 states with one safe move, 14,099 with two, 21,350 with three, 1,314 with four. Under the flagged promotion assumption, the sub-class (1,182,440 states) has 357,209 not-lost states (30.21%), so the four-square predicate certifies 20.4% of the drawn set; the uncertified rest is the reachability statement "the king reaches the corner in time".
+6. **(KRvKB, dark bishop.)** With the Black king within Chebyshev distance 2 of the light corner a8 (1,604,648 states) the largest trap has 1,237,588 states (77.1%; 784,046 with Black to move, 453,542 with White to move; all nine king squares occur; 24 stalemates; widths 1-20, mode 7). With the king within distance 2 of the dark corner a1 (1,599,519 states) the largest trap has 214,316 states (13.4%; 201,674 with Black to move, only 12,642 with White to move; 177,544 of the Black-to-move members have a single safe option). Mechanism (`traps_analysis.py`; closure of both traps re-verified with `verify_trap`, 0 violations). Of the 453,542 attacker-to-move members of the safe-corner trap, 347,214 are quiet (the rook is not attacked), 9,668 have the rook attacked but defended and 96,660 have the rook en prise; of its 784,046 defender-to-move members, 597,242 rely on internal safe moves only, 170,060 have both an internal safe move and a boundary draw, 16,720 only a boundary draw (capturing the rook or forcing a dead position), and 24 are stalemates. Of the 12,642 attacker-to-move members of the wrong-corner trap, 10,147 have the rook en prise and only 1,263 are quiet; of its 201,674 defender-to-move members, 161,410 have nothing but an immediate boundary draw (a rook capture). The wrong-corner trap is tactical, the safe-corner trap is positional: 347,214 against 1,263 quiet attacker-to-move states, a factor of 275. The quiet wrong-corner states include the bishop sitting on the corner square itself with the king beside it (e.g. `8/8/8/8/3R4/2K5/8/bk6 w`: the rook cannot take the bishop because the king recaptures, and a first-rank check is met by the king stepping to a2); by king square they number between 102 (c3) and 155 (a3, c1).
+
+## Proof
+
+**1.** (a) `D` plays moves into `F`; by closure such a move exists whenever `D` is to move and not stalemated; `A`'s moves stay in `F`; a state where `D` is mated has `D` to move, no legal move and is not a stalemate, so it is not in `F`; infinite play is a draw in `G_inf`. (b) Closure is preserved by unions (each clause is existential in `F` for `D` and universal over moves, not over `F`, for `A`). `W>=(D)` is closed: by determinacy a non-losing `D` strategy from `s` moves into non-losing states, and every `A` move from a non-losing state reaches a non-losing state. Hence `W>=(D)` contains every trap by (a) and is itself a trap, so it is the greatest fixed point of `S` (Knaster-Tarski; `S` is monotone). (c) The clauses mention only `s` and its successors. (d) Immediate from the definition of `w`. (e) Iterated deletion from `R` computes `nu X.(R intersect S(X))` because `S` is monotone and `R` finite; its fixed point is closed, so (a) applies. ∎
+
+**2.** Induction on `rho`: at `D`-to-move states the chosen move mates or reaches a state of smaller `rho` already known to be won; at `A`-to-move states every move reaches such a state and `A` is not stalemated; so `D` forces a mate within `rho(s)` of its own moves. `DTM` is such a ranking on `W_win(D)`, and any ranked set is inside `W_win(D)` by the induction, so `W_win(D)` is the largest. ∎
+
+**3.** (a) is 1(a) applied to `F = {v_D >= 0}`. (c) `DTM` is a ranking and a `DTM`-optimal move decreases it by one; tie-breaks among such moves keep the descent. (b) is established by the witnesses: the simulations in `optionality.py` start from every winning white-to-move state of the exact tables of THM-4612, follow the stated policy against the `DTM`-maximising defence with deterministic tie-breaks, and report a cycle when a white-to-move state repeats (a repetition under deterministic policies is a cycle of the play). ∎
+
+**4-6.** Computation (`traps.py`, `traps_analysis.py`): regions are enumerated from a predicate on squares over all legal placements with both sides to move; the successor graph inside the region is built with python-chess move generation, moves leaving the region count as escapes and moves leaving the class are evaluated by the stated boundary oracles (exact tables of THM-4612; the dead-position rule; for promotions in 5 the one-ply escape oracle, which returns a draw only when the bare king captures the new piece into a dead position or is stalemated, and otherwise "uncertified"); `extract_trap` performs the deletion of 1(e); `verify_trap` re-checks closure of the result; the KPvK comparison reads the retrograde table of THM-4612. ∎
+
+## Scope and boundary
+
+- A trap certifies `v_D >= 0`; an exact draw needs a trap for each side.
+- Certified traps are stated for `G_inf`; they certify at least a draw in rule-chess as well (the extra rules only produce draws).
+- The complement of a trap inside its region is not classified by these computations (except in KPvK, where the exact table is available, and in the KBPvK sub-class under the flagged assumption).
+- The optionality witnesses use one deterministic tie-break and one defence; the counts are exact for that protocol. The conclusion 3(b) needs only one cycling start per class.
+
+## Reading
+
+A human fortress rule is a predicate; the predicate is a certificate iff it is closed; when it is not, the extractor returns its largest closed part, and the gap to the drawn set is the reachability part of the defence. The two layers compose as ranking-then-trap: reach the corner, then stay. The optionality principle of the owner's thread is co-inductively sound and inductively unsound: it is the right tie-break below a ranking and the wrong tie-break below a value.
