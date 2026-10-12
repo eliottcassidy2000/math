@@ -1,0 +1,7 @@
+(2) cubic in w after y = b - 3ac/w: -9*a*c*(-2*a*c**2 + b*c*w + w**3 - 2*w**2)  ; divided by -2a:  9*c*(-2*a*c**2 + b*c*w + w**3 - 2*w**2)/2
+    Gao tangency polynomial with (X,Y)=(bc, ac^2): w^3 - 2w^2 + bc w - 2ac^2 ; equal? False
+(3) z|fibre as a quadratic polynomial in F3|fibre: solutions = []
+    deg_y of z|fibre = 6 ; x|fibre has poles at the roots of Q (not a polynomial in y): 3*a - b*y + y**2
+(1) D=12: #monomials=455, image rank=451, dim Ker V_3 =4 (0.1s)
+    monomials F1^i F2^j of degree <= D: [(0, 0), (0, 1), (0, 2), (1, 0)] count = 4
+    V_3(F1^i F2^j) all zero: True

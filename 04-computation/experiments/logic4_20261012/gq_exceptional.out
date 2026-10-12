@@ -1,0 +1,8 @@
+q=4: |V|=16, degree=5, chi=4
+   G_4 isomorphic to Cay(F_2^4, {e1,e2,e3,e4,e1+e2+e3+e4}) (Clebsch): True
+   sum of mu_5 in F_16 = (0, 0, 0, 0)
+q=8: |V|=64, degree=9, chi=4
+   G_8 isomorphic to K4 x K4 x K4 = H(3,4): True
+q=9: |V|=81, degree=10, chi=3
+   G_9 isomorphic to Cay(F_3^4, {+-w_0..+-w_4}, sum w_j = 0): True
+   lambda nowhere zero on generators: True => proper 3-colouring of H by lambda: True

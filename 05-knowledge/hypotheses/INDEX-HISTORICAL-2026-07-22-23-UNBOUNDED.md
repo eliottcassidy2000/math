@@ -143,3 +143,8 @@ Record quantifiers, direction, mechanism, boundary, dependencies, hostile
 witness, and non-consequences. Lean needs satisfiable hypotheses and root reach;
 computation needs universe, controls, command, and output. Route `CLAIMED` and
 `RESERVED` files as unproved candidates, never canon.
+
+## Digest entries moved from INDEX.md on 2026-10-12 (line budget; mac-mini-2026-10-12-logic4)
+
+- **HYP-8960 / death-star-2026-07-22-S111 (RECIPROCAL-MONIC REPAIR, kernel-pure):** `GMC2Henselian` proves `F⟦s⟧` Henselian and lifts roots of units. Root-imported `GMC2ReciprocalSmallRoots` monicizes the genuine-degree reverse and now proves the concrete specialization: if `M<deg R`, `R(0)≠0`, `a^M=R(0)`, `a≠0`, and the characteristic does not divide `M`, then `Z^M-R(sZ)` has a power-series root reducing to `a`. All public theorems use only `[propext, Classical.choice, Quot.sound]`. This bypasses both the self-referential fixed-point proposal and unavailable degree-dropping factorization. Enumerating all branches and proving their product/Wiener--Hopf identity remain open only as an alternate route through historical THM-1550; they are not GMC(2) proof dependencies.
+- **HYP-8946 / boxeph-2026-07-22-S234 (ALGEBRAIC CORE COMPLETE; LOCAL ROUTE SUPERSEDED):** `GMC2PhiIrreducible.phi_irreducible_ratfunc` kernel-checks `X^M-tR(X)` over `F(t)` and supplies transitivity. Its original Hensel plan listed a missing local-ring instance and degree-dropping factorization; HYP-8960 now bypasses both by reciprocal monicization and directly constructs every chosen ramified root. Branch enumeration and a direct Wiener--Hopf presentation remain optional alternate packaging; the Ω-wiring closes the actual front door.

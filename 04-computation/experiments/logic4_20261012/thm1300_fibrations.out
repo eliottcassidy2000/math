@@ -1,0 +1,85 @@
+det JF = -2
+deg F1,F2,F3 = [7, 6, 4]
+identity (F2-y)(1+xy) - 3x F1 == 0: True
+
+=== fibration G12 = (F1,F2), fibre over (a,b), a != 0 ===
+u on fibre = 3*a/(3*a - b*y + y**2)
+z on fibre = -(3*a - b*y + y**2)*(-9*a**2 + 6*a*b*y + 30*a*y**2 - b**2*y**2 - b*y**3 + 2*y**4)/(27*a**2)
+F1,F2 on fibre: a b
+F3 on fibre = -(-b + y)*(18*a - b**2 - b*y + 2*y**2)/(27*a**2)  (polynomial in y? denominator: 27*a**2 )
+dF3/dy = -2*(3*a - b*y + y**2)/(9*a**2)
+kappa = dF3/dy / Q = -2/(9*a**2)
+F3 - kappa*(y^3/3 - b y^2/2 + 3 a y) = 2*b/(3*a) - b**3/(27*a**2)
+Q(b) = 3*a
+  residues of kappa*Q*(1) dy at r1,r2: [0, 0]
+  residues of kappa*Q*(x) dy at r1,r2: [0, 0]
+  residues of kappa*Q*(y) dy at r1,r2: [0, 0]
+  residues of kappa*Q*(z) dy at r1,r2: [0, 0]
+  residues of kappa*Q*(x^2) dy at r1,r2: [-2/(r1**2*(r1 - r2)), 2/(r2**2*(r1 - r2))]
+  residues of kappa*Q*(x*y) dy at r1,r2: [0, 0]
+  residues of kappa*Q*(x*z) dy at r1,r2: [0, 0]
+  residues of kappa*Q*(y^2) dy at r1,r2: [0, 0]
+  residues of kappa*Q*(x^2*y) dy at r1,r2: [-2/(r1*(r1 - r2)), 2/(r2*(r1 - r2))]
+  residues of kappa*Q*(x^3) dy at r1,r2: [2*(3*r1 - r2)/(r1**2*(r1**3 - 3*r1**2*r2 + 3*r1*r2**2 - r2**3)), 2*(r1 - 3*r2)/(r2**2*(r1**3 - 3*r1**2*r2 + 3*r1*r2**2 - r2**3))]
+
+=== fibration G13 = (F1,F3), fibre over (a,c), a,c != 0 ===
+F1,F3 on fibre: a c
+F2 on fibre = (2*X**3*a + 2*X - c)/X**2  = 2aX + 2/X - c/X^2 ? True
+dF2/dX = 2*(X**3*a - X + c)/X**3
+X recovered as x/(1+xy): X
+
+=== fibration G23 = (F2,F3), fibre over (b,c), c != 0 ===
+bracket = 4*w + 6
+F2,F3 on fibre: b c
+F1 on fibre = s*(b + c*s**2 - 2*s)/2
+dF1/ds = (b + 3*c*s**2 - 4*s)/2
+u = 1+xy on fibre = 2*s/(b + 3*c*s**2 - 4*s)
+
+=== generic degree and Galois group via the (F1,F2)-fibre cubic ===
+cubic in y: -2*y/(3*a) + b*y**2/(9*a**2) - 2*y**3/(27*a**2) + (-27*a**2*c + 18*a*b - b**3)/(27*a**2)
+discriminant = -4*(27*a**2*c**2 - 18*a*b*c + 16*a + b**3*c - b**2)/(729*a**6)
+discriminant numerator factor list: (-4, [(27*a**2*c**2 - 18*a*b*c + 16*a + b**3*c - b**2, 1)])
+disc is a perfect square in Q(a,b,c)? False => Galois group of K(x,y,z)/K(F) is S3
+Jelonek polynomial equals Gao's c_3(v): True  (num = -108*a**2*c**2 + 72*a*b*c - 64*a - 4*b**3*c + 4*b**2 )
+on C: Q = (3*t*y - 2)**2/(9*t**2) ; F3(r) - t = 0
+
+=== cokernel witnesses for V_2 on the (F1,F3)-fibre (residues of q*dF2 at X=0 and roots of aX^3-X+c) ===
+  q=1      res_0 = 0 ; res_rho = 0
+  q=x      res_0 = 2 ; res_rho = 0
+  q=y      res_0 = 6*a ; res_rho = 0
+  q=z      res_0 = 18*a**2*c ; res_rho = 0
+  q=x^2    res_0 = 0 ; res_rho = 2*rho/(3*a*rho**2 - 1)
+  q=x*y    res_0 = 0 ; res_rho = 0
+  q=y^2    res_0 = 6*a**2*c ; res_rho = 0
+  q=x*z    res_0 = 2*a*(-3*a*c**2 - 13) ; res_rho = 0
+  q=y*z    res_0 = a**2*(-48*a*c**2 - 114) ; res_rho = 0
+  q=z^2    res_0 = 90*a**3*c*(-a*c**2 - 8) ; res_rho = 0
+  q=x^2*y  res_0 = -2 ; res_rho = 2/(3*a*rho**2 - 1)
+  q=x*y^2  res_0 = -8*a ; res_rho = 0
+
+=== cokernel witnesses for V_1 on the (F2,F3)-fibre (residues of q*dF1 at the roots of 3cs^2-4s+b) ===
+  q=1      res_sigma = 0
+  q=x      res_sigma = 0
+  q=y      res_sigma = 0
+  q=z      res_sigma = 0
+  q=x^2    res_sigma = 1/(3*c*sigma - 2)
+  q=x*y    res_sigma = 0
+  q=y^2    res_sigma = 0
+  q=x*z    res_sigma = 0
+  q=y*z    res_sigma = 0
+  q=z^2    res_sigma = 0
+  q=x^3    res_sigma = -3*c/(3*c*sigma - 2)**3
+  q=x^2*y  res_sigma = sigma/(3*c*sigma - 2)
+
+=== dual fields and non-nilpotency ===
+V_j F_i = [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
+coefficients of V_j (polynomial?): [[1, 1, 1], [2, 2, 2], [2, 2, 2]]
+  deg V_1^m(x), m=1..6: [8, 15, 22, 29, 36, 43]
+  deg V_1^m(y), m=1..6: [6, 13, 20, 27, 34, 41]
+  deg V_1^m(z), m=1..6: [8, 15, 22, 29, 36, 43]
+  deg V_2^m(x), m=1..6: [9, 17, 25, 33, 41, 49]
+  deg V_2^m(y), m=1..6: [7, 15, 23, 31, 39, 47]
+  deg V_2^m(z), m=1..6: [9, 17, 25, 33, 41, 49]
+  deg V_3^m(x), m=1..6: [11, 21, 31, 41, 51, 61]
+  deg V_3^m(y), m=1..6: [9, 19, 29, 39, 49, 59]
+  deg V_3^m(z), m=1..6: [11, 21, 31, 41, 51, 61]
