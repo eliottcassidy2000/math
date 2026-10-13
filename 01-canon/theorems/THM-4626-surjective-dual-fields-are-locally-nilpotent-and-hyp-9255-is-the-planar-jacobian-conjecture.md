@@ -1,10 +1,13 @@
 ---
 id: THM-4626
-title: "Surjective dual fields are locally nilpotent: for a Keller map F : A^n -> A^n over a field of characteristic zero and any j, the dual field V_j = d/dF_j is surjective on K[x] iff it is locally nilpotent iff K[x] = R_j[F_j] (R_j = Ker V_j) iff the relative de Rham cohomology H^1(K[x]/K[F_(i != j)]) vanishes; the proof is a two-line filtration argument on the generic fibre (surjective => generic fibre a line, so K[x] sits in L_j[F_j]; the leading-coefficient modules M_n of the F_j-degree filtration satisfy M_n ⊆ M_(n-1) by differentiating and M_n ⊆ M_(n+1) by integrating, hence all equal R_j); consequently 'a surjective dual field forces invertibility' in dimension three (HYP-9255) is EQUIVALENT to the planar Jacobian conjecture, and in dimension n >= 4 it is false by padding. The dual-field hypothesis is essential: x d/dx - y d/dy + d/dz is a surjective divergence-free derivation of K[x,y,z] that is not locally nilpotent"
+title: "Line fibres make dual fields locally nilpotent: for a Keller map F : A^n -> A^n over a field of characteristic zero and any j, the following are equivalent for the dual field V_j = d/dF_j -- the generic fibre of (F_i)_(i != j) is a disjoint union of lines (generic rank zero of the cokernel), V_j is locally nilpotent, K[x] = R_j[F_j] (R_j = Ker V_j), V_j is surjective, and the relative de Rham cohomology H^1(K[x]/K[F_(i != j)]) vanishes; the proof is immediate from THM-4620(4): line fibres put K[x] inside L_j[F_j] with V_j = d/dF_j, so every polynomial is killed by a power of V_j; consequently 'a surjective dual field forces invertibility' in dimension three (HYP-9255) is EQUIVALENT to the planar Jacobian conjecture, and in dimension n >= 4 it is false by padding. The dual-field hypothesis is essential: x d/dx - y d/dy + d/dz is a surjective divergence-free derivation of K[x,y,z] that is not locally nilpotent"
 status: >
-  PROVED (elementary: THM-4620(3)-(4) for the embedding K[x] ⊂ L_j[F_j] with V_j = d/dF_j, then the
-  leading-coefficient filtration; THM-4562 and surface cancellation (Fujita; Miyanishi-Sugie, CITED)
-  for the dimension-three reduction; the padding example). KNOWN precursors in the plane: Stein
+  PROVED (elementary: THM-4620(3)-(4) give K[x] ⊂ L_j[F_j] with V_j = d/dF_j as soon as the generic
+  fibre consists of lines, which makes V_j locally nilpotent at once; THM-4562's slice theorem and
+  surface cancellation (Fujita; Miyanishi-Sugie, CITED) for the dimension-three reduction; the padding
+  example. A first version proved only 'surjective => locally nilpotent' by a leading-coefficient
+  filtration that used surjectivity needlessly; the direct argument below also settles HYP-9255's
+  sub-question: generic rank zero of the cokernel already forces the cokernel to vanish.) KNOWN precursors in the plane: Stein
   (1989, Jacobian derivations) and Berson-van den Essen-Maubach (Nijmegen report 9918 / J. Pure Appl.
   Algebra 2001): a surjective divergence-zero derivation of R[X,Y] is locally nilpotent;
   Gurjar-Masuda-Miyanishi 2013, Cor. 2.4. The dual-field statement in dimension n >= 3 was not found
@@ -36,8 +39,11 @@ As in THM-4620: `K` of characteristic zero, `F = (F_1, ..., F_n)` Keller, `V_j` 
 1. For every `j` the following are equivalent:
    * (a) `V_j` is surjective on `K[x]`;
    * (b) `coker V_j = H^1_dR(K[x]/K[G_j]) = 0`;
+   * (b') `μ_j = 0`: the generic fibre of `G_j` is a disjoint union of (`d_j`) lines, i.e. the cokernel has
+     generic rank zero;
    * (c) `K[x] = R_j[F_j]` (so `A^n ≅ Spec R_j × A^1` with `F_j` the second coordinate);
    * (d) `V_j` is locally nilpotent.
+   In particular a cokernel of generic rank zero is zero (no nonzero torsion cokernels occur, for any `d_j`).
 2. (Dimension three.) The statement "for every Keller map of `A^3` and every `j`, a surjective `V_j`
    forces `F` to be an automorphism" (HYP-9255) is equivalent to the planar Jacobian conjecture `JC_2`
    over `K`.
@@ -51,34 +57,21 @@ As in THM-4620: `K` of characteristic zero, `F = (F_1, ..., F_n)` Keller, `V_j` 
 
 ## Proof
 
-**(d) ⇒ (c) ⇒ (a) ⇒ (b)** are known or trivial: a locally nilpotent derivation with the slice `F_j` gives
-`K[x] = R_j[F_j]` (slice theorem, THM-4562); `∂/∂F_j` is surjective on `R_j[F_j]`; and `coker V_j` is the
-relative de Rham cohomology by THM-4620(3). It remains to prove **(b) ⇒ (c)**.
+**(d) ⇒ (c) ⇒ (a) ⇒ (b) ⇒ (b')** are known or trivial: a locally nilpotent derivation with the slice
+`F_j` gives `K[x] = R_j[F_j]` (slice theorem, THM-4562); `∂/∂F_j` is surjective on `R_j[F_j]`; `coker V_j`
+is the relative de Rham cohomology by THM-4620(3); and a zero module has generic rank zero. It remains to
+prove **(b') ⇒ (d)**.
 
-Assume `coker V_j = 0`. Then `μ_j = 0`, so by THM-4620(4) the generic fibre of `G_j` is `A^1_(L_j)` with
-coordinate `F_j`: writing `S = K[G_j] ∖ {0}`,
+Assume `μ_j = 0`. By THM-4620(4) the generic fibre of `G_j` is `A^1_(L_j)` with coordinate `F_j`: writing
+`S = K[G_j] ∖ {0}`,
 
-    K[x] ⊂ K[x]_S = L_j[F_j],   with V_j acting as ∂/∂F_j,   and K[x] ∩ L_j = R_j
+    K[x] ⊂ K[x]_S = L_j[F_j],   and V_j acts on L_j[F_j] as ∂/∂F_j
 
-(`K[x]` is torsion-free over `K[G_j]`, so it embeds in its localization; `V_j` kills `L_j` and
-`V_j F_j = 1`; `K[x] ∩ L_j` is the kernel of `∂/∂F_j` on `K[x]`). Write `F = F_j`, `A = K[x]`, `R = R_j`,
-`L = L_j`, and for `m ≥ 0` let `A_(≤m) = A ∩ L[F]_(≤m)` and
-
-    M_m = { coefficient of F^m in a : a ∈ A_(≤m) } ⊆ L,
-
-an `R`-submodule of `L` (closed under sums and under multiplication by `R ⊂ A`), hence a `K`-vector space.
-`M_0 = A ∩ L = R`.
-
-*Differentiating:* if `a ∈ A_(≤m)` has `F^m`-coefficient `c`, then `V_j a ∈ A_(≤m-1)` has
-`F^(m-1)`-coefficient `m c`; so `m M_m ⊆ M_(m-1)`, i.e. `M_m ⊆ M_(m-1)` for `m ≥ 1`.
-
-*Integrating (this is where surjectivity enters):* if `a ∈ A_(≤m)` has `F^m`-coefficient `c`, choose
-`a' ∈ A` with `V_j a' = a`; in `L[F]`, `∂_F a' = a` forces `deg_F a' ≤ m + 1` with `F^(m+1)`-coefficient
-`c/(m+1)`; so `M_m ⊆ M_(m+1)`.
-
-Hence `M_m = M_0 = R` for every `m`. Now induct on `deg_F a`: if `a ∈ A` has degree `m` and
-`F^m`-coefficient `c ∈ R`, then `c F^m ∈ R[F] ⊆ A`, so `a - cF^m ∈ A_(≤m-1)` lies in `R[F]` by induction.
-Thus `A = R[F]`, which is (c); and `∂/∂F` on `R[F]` is locally nilpotent, which is (d).
+(`K[x]` is torsion-free over `K[G_j]`, so it embeds in its localization; `V_j` kills `L_j`, the field of
+constants, and `V_j F_j = 1`, so it is `∂/∂F_j` on `L_j[F_j]`). Hence every `a ∈ K[x]` is a polynomial
+`Σ_(i ≤ m) c_i F_j^i` with `c_i ∈ L_j`, and `V_j^(m+1) a = 0`: `V_j` is locally nilpotent on `K[x]`.
+(Explicitly, `c_m = V_j^m a / m! ∈ K[x] ∩ L_j = R_j`, so `a - c_m F_j^m` has lower degree and `K[x] = R_j[F_j]`
+follows by induction, which is (c) directly.)
 
 **(2).** If `JC_2` holds and `V_j` is surjective, then by (1) `K[x, y, z] = R_j[F_j]`, so `A^3 ≅ X_j × A^1`
 with `X_j = Spec R_j`; surface cancellation (Fujita; Miyanishi–Sugie) gives `X_j ≅ A^2`, `G_j ∈ R_j`
@@ -97,9 +90,9 @@ surjective for `a = b`; so `D` is surjective. `D x = x` is not nilpotent, and `D
 
 * **What the generic fibre buys.** The toy derivation in (4) is surjective because, monomial by
   monomial, "`(a - b) + ∂_z`" is invertible; a dual field has no such diagonal part: its kernel has
-  transcendence degree `n - 1`, the generic fibre of the kernel fibration is a line as soon as the
-  cokernel vanishes, and on a line a surjective derivation with a slice is `d/dt`. The leading-coefficient
-  filtration transports the line's triviality to all of `K[x]`.
+  transcendence degree `n - 1`, and as soon as the generic fibre of the kernel fibration is a line every
+  polynomial is a polynomial in the slice `F_j` over the constants field, so a power of `V_j` kills it.
+  Line fibres over the generic point force a global product `Spec R_j × A^1`.
 * **For the plane.** `JC_2` is equivalent to the surjectivity of every Keller derivation (KNOWN,
   Gurjar–Masuda–Miyanishi), and now equally to HYP-9255 in dimension three: a surjective dual field in
   dimension three is a locally nilpotent one, which is THM-4562's slice case, which is a planar
@@ -107,7 +100,5 @@ surjective for `a = b`; so `D` is surjective. `D x = x` is not nilpotent, and `D
 * **For the counterexamples.** THM-4562's "no dual field of THM-1300 is locally nilpotent" now reads
   "no dual field of THM-1300, or of any tangent-sweep map (THM-4625), is surjective", without the
   residue witnesses of THM-4621(8) (which remain the explicit certificates).
-* **Still open.** Whether `μ_j = 0` alone (generic rank zero of the cokernel, i.e. line fibres) forces
-  `coker V_j = 0` when `d_j ≥ 2` (HYP-9255's former sub-question, now the only content left in that
-  file): equivalently, whether a dual field whose generic fibre is a disjoint union of lines is
-  locally nilpotent.
+* **Settled on the way.** HYP-9255's sub-question (does `μ_j = 0` force `coker V_j = 0` when `d_j ≥ 2`?) is
+  answered: yes, by (b') ⇒ (d) ⇒ (b). THM-4620's caveat about nonzero torsion cokernels is void.

@@ -240,11 +240,10 @@ Gauss–Manin connection, and the trace splits off `O_U`.  ∎
   three the generic fibre of a coordinate pair can be connected with positive `b_1` (THM-1300: all
   three fibrations are punctured lines with `b_1 = 2, 4, 2`), and whether it can be a union of
   several lines is HYP-9255.
-* **What is not claimed.** Nothing here bounds `μ(f)` for a hypothetical planar counterexample, and
-  for `d_j ≥ 2` it is not claimed that `μ_j = 0` implies `coker V_j = 0` (the cokernel could in
-  principle be a nonzero torsion module over `K[G_j]`); for `d_j = 1` it does, by (4).
-* **Sequel (THM-4626).** A surjective dual field is locally nilpotent in every dimension (`coker V_j = 0`
-  iff `K[x] = R_j[F_j]`), by a leading-coefficient filtration on `K[x] ⊂ L_j[F_j]`; so HYP-9255 is
+* **What is not claimed.** Nothing here bounds `μ(f)` for a hypothetical planar counterexample.
+* **Sequel (THM-4626).** `μ_j = 0` already forces `V_j` locally nilpotent and `K[x] = R_j[F_j]` (every
+  polynomial is a polynomial in `F_j` over `L_j`), so generic rank zero, surjectivity, vanishing of the
+  cokernel and local nilpotence of a dual field are all equivalent, in every dimension; HYP-9255 is
   equivalent to `JC_2`.
 * **Literature.** Gurjar–Masuda–Miyanishi prove the planar criterion and, more generally, that a
   normal affine curve with a surjective derivation is `A^1` (their Theorem 1.2, via
