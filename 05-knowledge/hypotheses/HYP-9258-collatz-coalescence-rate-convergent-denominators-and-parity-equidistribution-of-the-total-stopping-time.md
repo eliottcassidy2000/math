@@ -26,10 +26,10 @@ status: >
   of the exact operator to the class means modulo 2^j 3^k (exact 2-adically, closed 3-adically) has characteristic polynomial (scalar law) x prod (1 - (zeta^alpha e^(-s)/2)^(2 3^(i-1))) (PROVED),
   so no finite 3-adic closure of the tree changes the law and the modal expansion is exactly the 3-adic closure at infinite
   depth (the 2-adic identities are exact; audited, MISTAKE-598); the ordinary mean of (-1)^tau is the Cesaro shadow of the lines (amplitude 0.0015 at 26.5 cycles per octave; model +0.0016 at
-  2^34 against the census +0.00145), so the proved o(1) is approached at N^(-0.0018). The dyadic alternation of (iii) is the half-integer lattice.
-  S27 (collatz_parity_fast_modes_20261013.out): the prefix discrepancy eps_M = [3S(2M) + 3S(M) + S(3M)]/(6M) of the Codex identity (7)
-  falls like M^(-1/2) over 2^8..2^28 (rms per octave 6.4e-3 -> 9.1e-6), i.e. the signed mod-3 residue sum grows like X^(1/2): beta about
-  1/2 in P4, the square-root helper hypothesis, NUMERICAL; the class discrepancies of the parity bin means are at the sampling-noise floor.
+  2^34 against the census +0.00145), so the model predicts N^(-0.0018) decay for that line; the actual all-frequency rate remains OPEN. The dyadic alternation of (iii) is the half-integer lattice.
+  S27 (collatz_parity_fast_modes_20261013.out): the sampled prefix discrepancy eps_M = [3S(2M) + 3S(M) + S(3M)]/(6M) of the Codex identity (7)
+  has an octave-rms fit near M^(-1/2) over 2^8..2^28 (rms per octave 6.4e-3 -> 9.1e-6), consistent with a signed mod-3 residue sum of square-root scale:
+  beta about 1/2 in P4, NUMERICAL evidence for the square-root helper hypothesis, not a uniform bound; the class discrepancies of the parity bin means are at the sampling-noise floor.
 session: opus-2026-10-13-S25
 source: 05-knowledge/results/five_manuscripts_chowla_collatz_residue_bsd_20261013.md (sections 3.3-3.4)
 scripts:
@@ -62,3 +62,16 @@ related:
 ## Why
 
 THM-4627 makes `(-1)^tau` locally constant along lags on a density-one set; the three statements quantify the complement: how fast the exceptional density decays, what the exceptional differences are, and how the global average, which is not locally random, oscillates. The coarse parity bias excludes a simple independent-fluctuation explanation. The refined signed-scaling mechanism now separates a proved qualitative mean implication from the unproved rate and pointwise entry questions.
+
+## 2026-10-13 amplitude and discrepancy continuation
+
+[Boundary-current note](../results/collatz_amplitude_boundary_20261013c.md):
+FINITE-EXACT `|H(N)| < 1.5 sqrt(N)` for every1024<=N<=2^34, with two full
+jump-depth runs. PROVED finite-shell projection at every characteristic
+zero. An interval-verified **conditional** nonzero Mercator pole follows
+from `|H(x)| <= sqrt(x) log2(x)/4` for every x>=2^34; this infinite bound is
+OPEN. A direct finite numerator gives amplitude0.354674 at scale2^29 from
+data through2^26, without a sinusoidal fit (NUMERICAL). The conditional pole
+already forbids an ordinary-mean power saving greater than0.001790779...,
+without requiring a complete modal expansion. No universal source coverage
+or unconditional quantitative rate is claimed.

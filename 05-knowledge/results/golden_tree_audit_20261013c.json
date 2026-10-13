@@ -1,0 +1,58 @@
+{
+  "status": "FINITE-EXACT",
+  "controls": 742235,
+  "ray_bins_controlled": 8871,
+  "ray_source_limit_exclusive": 262144,
+  "trees": [
+    {
+      "depth": 0,
+      "count_per_root": 1,
+      "signed_per_root": 1,
+      "mean": 1.0
+    },
+    {
+      "depth": 1,
+      "count_per_root": 4,
+      "signed_per_root": -2,
+      "mean": -0.5
+    },
+    {
+      "depth": 2,
+      "count_per_root": 16,
+      "signed_per_root": 10,
+      "mean": 0.625
+    },
+    {
+      "depth": 3,
+      "count_per_root": 64,
+      "signed_per_root": -38,
+      "mean": -0.59375
+    },
+    {
+      "depth": 4,
+      "count_per_root": 256,
+      "signed_per_root": 154,
+      "mean": 0.6015625
+    },
+    {
+      "depth": 5,
+      "count_per_root": 1024,
+      "signed_per_root": -614,
+      "mean": -0.599609375
+    },
+    {
+      "depth": 6,
+      "count_per_root": 4096,
+      "signed_per_root": 2458,
+      "mean": 0.60009765625
+    },
+    {
+      "depth": 7,
+      "count_per_root": 16384,
+      "signed_per_root": -9830,
+      "mean": -0.5999755859375
+    }
+  ],
+  "formula": "per root: size=4^K, signed parity=(2+3(-4)^K)/5",
+  "scope": "certificate-depth balls; these are not integer-ray or Euclidean-box averages"
+}

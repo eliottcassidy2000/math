@@ -1,0 +1,28 @@
+{
+  "energy_hypothesis": "For every dyadic X >= 2^34, integral_X^(2X) H(floor(x))^2 dx <= 2 X^2",
+  "energy_hypothesis_amplitude_interval": [
+    "[0.32154188172234579638386094067561133468200124370 +/- 1.94e-48]",
+    "[0.38852305426275592309767187233996773576342570058 +/- 1.79e-48]"
+  ],
+  "status": "CONDITIONAL: rigorously interval-checked implication, NOT a proof of the discrepancy hypothesis or a modal expansion",
+  "hypothesis": "For every real x >= 2^34, |sum_{n<=x}(3*1_{n=2 mod3}-1)t(n)| <= sqrt(x)*log2(x)/4.",
+  "N": 17179869184,
+  "B": 131072,
+  "stronger_hypothesis": "|H(x)| <= 1.5 sqrt(x) for every x >= 2^34",
+  "stronger_hypothesis_amplitude_interval": [
+    "[0.31652868690206839533279976903446268689586104234 +/- 4.67e-48]",
+    "[0.39353624908303332414873304398131792668746212537 +/- 4.00e-48]"
+  ],
+  "independent_bit_moment_controls": 256,
+  "root_disk_center": "[0.99820922076525681364456393316750413764602813718 +/- 4.09e-49] + [240.24783014069124432530079038752871376736998479 +/- 4.78e-45]j",
+  "root_disk_radius": "[1.0000000000000000000000000000000000000000000000e-30 +/- 2.71e-79]",
+  "root_residual_upper": "[2.7565191029252581760260009093854317524723263373e-46 +/- 1.11e-93]",
+  "simple_root_derivative_lower": "[0.14492012701874946688421221519852447031625080879 +/- 4.49e-48]",
+  "numerator": "[0.00396 +/- 8.97e-6] + [0.0173 +/- 5.39e-5]j",
+  "quadrature_disk_error": "[8.287074810437212209074839140e-6 +/- 4.03e-34]",
+  "residue_before_future_tail": "[0.021 +/- 3.06e-4] + [0.183 +/- 2.99e-4]j",
+  "future_residue_radius": "[0.12204863413196978080853926743 +/- 4.06e-30]",
+  "twice_residue_amplitude_at_log2n29_lower": "[0.11936279332589042432557185298098417537662458726 +/- 3.14e-48]",
+  "twice_residue_amplitude_at_log2n29_upper": "[0.59070214265921129515596096004272300745096002860 +/- 4.37e-48]",
+  "moments_sha256": "54ca9bef99c8774bda6149b61ad45147a0256d4e8abecf5aaac4e04ce3d3d323"
+}

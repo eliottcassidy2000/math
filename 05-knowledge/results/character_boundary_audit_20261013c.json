@@ -1,0 +1,26 @@
+{
+  "status": "FINITE-EXACT",
+  "strict_source_universe": 65536,
+  "character_moduli": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "fraction_identity_moduli": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "controls": 6655589,
+  "terminal_defect": "1-zeta^(2 alpha+beta)",
+  "hostile_omega_parity_at_1": {
+    "chi_1": 1,
+    "branch_prediction": -1,
+    "defect": 2
+  }
+}

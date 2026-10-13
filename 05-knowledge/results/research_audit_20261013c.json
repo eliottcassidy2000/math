@@ -1,0 +1,50 @@
+{
+  "status": "FINITE-EXACT checks; decimal summaries are numerical; pole conclusions remain CONDITIONAL",
+  "all_prefix_population": 17179869184,
+  "full_jump_depths": [
+    12,
+    16
+  ],
+  "identical_rows": 35,
+  "strict_controls_per_full_run": 278563,
+  "latest_guard_build_prefix": 16777216,
+  "maximum_H_squared_over_n": {
+    "n": 28337297,
+    "H_abs": 7701,
+    "numerator": "59305401",
+    "denominator": "28337297"
+  },
+  "maximum_dyadic_energy_ratio": {
+    "X": 16777216,
+    "energy": "497862003258995",
+    "denominator": "281474976710656",
+    "decimal": 1.768761149133251
+  },
+  "last_dyadic_energy_ratio": 0.09538404680676367,
+  "normal_optimized_controls": {
+    "nested": 6293490,
+    "character": 6655589,
+    "golden": 742235
+  },
+  "interval_precision_bits": 160,
+  "bit_moment_controls": 256,
+  "hashes": {
+    "04-computation/experiments/character_boundary_audit_20261013c.py": "a10306727e57a6a7f6736c0382de92e2fb21f913c49899acea90f2dd70371421",
+    "04-computation/experiments/collatz_amplitude_20261013c.py": "2b708d60bcf32a9028974f099e05b5ec29b12d2232594f997ea845975c8364c8",
+    "04-computation/experiments/collatz_discrepancy_20261013c.cpp": "b6190fa263d13bdc9a6593d1652d91d0a4001477eb961563c3b254a0b14950e3",
+    "04-computation/experiments/collatz_pole_certificate_20261013c.py": "26216f17af98f22fcb755a68bf3430c248c89f9a422d69e021ef1987bc3a32ec",
+    "04-computation/experiments/golden_parity_ray_20261013c.cpp": "d05beee2c0c1541df7f71abb510c889d071c573f5620040f0e4cc39174862c09",
+    "04-computation/experiments/golden_spectra_20261013c.py": "84dfe987587b2fe671115a6fc452c96664d68b423177044454f0cd22abb5105a",
+    "04-computation/experiments/golden_tree_audit_20261013c.py": "dd468e8dbcbc37a9b3d2903ba5ada66477a5ecf395c96ac0b6aaa89950d2cf66",
+    "04-computation/experiments/nested_trees_20261013c.py": "dbe1347718f831c448ec19ec1af45ff5668a0ba7db4d54d03c605e3af0d86f3f",
+    "05-knowledge/results/character_boundary_audit_20261013c.json": "8a7c6feb54795f398124ec5a0fe28a8d5acba6a4b6eb55dea8a1496626b62a1a",
+    "05-knowledge/results/collatz_amplitude_20261013c.json": "bc7e975907ccac0ee6fc85f4f666ddb6c077fd235d6a684d03ad48ae54d1b6cf",
+    "05-knowledge/results/collatz_boundary_moments_20261013c.npz": "54ca9bef99c8774bda6149b61ad45147a0256d4e8abecf5aaac4e04ce3d3d323",
+    "05-knowledge/results/collatz_discrepancy_20261013c.json": "13a06afb8a5faac0101f8cf67d928b65fbbcc4bbdcc17bd5812a5fcb78c69f49",
+    "05-knowledge/results/collatz_pole_certificate_20261013c.json": "4c52a49f8bf9fe9db7df1f0c1a9b6f44bc209f39946f9f8cbcaf6b0efe1e6015",
+    "05-knowledge/results/golden_parity_ray_20261013c.json": "8875f6ea03a8bb6126ba1155cba10979b1b92b99e3eac2fc8560f6a76fec48be",
+    "05-knowledge/results/golden_spectra_20261013c.json": "d826fcc38a86abfa5f96aca189f79f39016d4fc5f5f2471d938d15c92cf65ed3",
+    "05-knowledge/results/golden_tree_audit_20261013c.json": "dae6e6cdb15759d3f3a1aff3599e1f8f62a01aee9d7700343fbca611d227bcef",
+    "05-knowledge/results/nested_trees_20261013c.json": "0a90f0d288ae2eae3e1238c6ed6fbbaf556ae2b2303a9711c23e14b7558363e2"
+  }
+}

@@ -411,3 +411,13 @@ than bounding it by all surviving pair mass; prove renewal estimates with
 the actual `(k,e)` return law; and attach an independently decreasing
 height to the marked integer source. None of the present averaged bounds
 supplies that last coordinate.
+
+## Continuation: signed discrepancy and amplitude projection
+
+[The boundary-current continuation](collatz_amplitude_boundary_20261013c.md)
+checks every mod-3 prefix through2^34, proves a finite-shell residue formula,
+and gives an Arb-verified nonzero Mercator pole **conditional on** the explicit
+future bound `|H(x)| <= sqrt(x) log2(x)/4` for all x>=2^34. The infinite bound
+and full modal expansion remain OPEN. It also extends the terminal defect
+to all `(tau,omega)` characters. This is stronger than fitting a line, and
+still does not prove universal ROOT entry.
