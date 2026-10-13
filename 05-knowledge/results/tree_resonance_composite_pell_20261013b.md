@@ -240,6 +240,40 @@ would have to retain and pay the extra source-dependent carry rather than
 silently replacing that expansion. The [ROOT-supported mean theorem](collatz_signed_resonance_pair_mass_20261013b.md)
 remains an averaged statement and does not provide this pointwise norm.
 
+### A family of certificate-bearing systems, and the linear-projection test
+
+The control generalizes to a precise elementary design rule. On the
+integer lattice of any number field K, take finitely many branches
+`x -> (a_j x+b)/m`, with m>0 an integer, digits b in a fixed finite set,
+and branch rules that keep the output integral. If every embedding sigma
+and branch obeys `|sigma(a_j)|<m`, then each embedding has a strict affine
+contraction bound. Choose radii strictly above all its limiting bounds.
+The resulting Minkowski box is finite and eventually traps every source.
+An explicit entry bound followed by its complete finite transition graph
+is a certificate to the corresponding cycle. This proves eventual
+periodicity for this whole family, not necessarily a unique cycle.
+
+For Collatz the additional datum must be an authenticated projection
+`pi` satisfying `pi(Gx)=T(pi(x))`, plus the source's actual lifted state.
+Merely tagging an unrelated contracting orbit with the integer n does
+not supply that equation.
+
+There is a sharp cheap obstruction to the simplest proposed projection.
+Suppose `pi(x)=Tr(c x)+d`, with c nonzero, and one fixed digit/branch agrees
+with the Collatz **odd** rule on a set of integral states whose differences
+span K over Q. Subtract the intertwining equations at two such states:
+
+    Tr(c a_j h)/m = (3/2)Tr(c h)   for every h in K.
+
+Nondegeneracy of the trace pairing forces `a_j=3m/2`. That branch therefore
+expands every embedding by3/2, contradicting the all-contracting criterion.
+This is a **PROVED scoped obstruction**, not a rejection of enriched
+representations. It locates the necessary reroute: a nonlinear projection,
+an invariant source subset with smaller affine span, infinitely many
+authenticated branches, or an explicit accumulated carry whose decrease
+is paid over several steps. The source subset and projection equation must
+remain part of the proposed structure.
+
 ## 6. Genus1 to genus9: the information added by one more bit
 
 The [marked fish cover](fish_marked_elliptic_cover_20261013.md) already

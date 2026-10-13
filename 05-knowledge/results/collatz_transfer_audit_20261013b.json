@@ -1,0 +1,8 @@
+{
+  "status": "FINITE-EXACT",
+  "strict_clock_sources": 786432,
+  "matched_transfer_rows": 19,
+  "rational_dirichlet_cutoffs": 252,
+  "checks": 1847714,
+  "terminal_defect": "1-zeta^2 at odd source1 only"
+}

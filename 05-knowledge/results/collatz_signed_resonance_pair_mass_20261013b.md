@@ -2,9 +2,10 @@
 
 2026-10-13. **PROVED, scoped:** the bounded-antifunction implication,
 the finite discrepancy inequalities, the signed model's characteristic
-equation, and the forward/backward pair-chain identity. **PROVED from an
-inherited input:** the ROOT-supported parity mean is zero using the
-almost-sure part of THM-4581, not its sketch-level rate. **FINITE-EXACT:**
+equation, the exact Dirichlet defect identity and its conditional
+continuation implication, and the forward/backward pair-chain identity. **PROVED from an
+inherited input:** all fixed stopping-time residue counts are balanced up to o(N) on ROOT
+using the almost-sure part of THM-4581, not its sketch-level rate. **FINITE-EXACT:**
 the census through `2^34` and pair masses through depth48. **NUMERICAL:**
 all fitted frequencies, decays, spectral amplitudes and effective exponents.
 Self-audited; no independent peer audit or formalization of this extension.
@@ -112,6 +113,47 @@ every fixed-width multiplicative window, without a decay rate.
 This separates a newly closed qualitative implication from the still-open
 quantitative envelope and the much stronger marked-source entry problem.
 
+### All fixed stopping-time moduli, with the terminal defect retained
+
+**P3 (PROVED from the same inherited input).** For every fixed integer
+r>=2 and every j modulo r, put
+
+    C_j(N)=#{n<=N: tau(n)<infinity, tau(n)=j mod r},
+    B(N)=#{n<=N: tau(n)<infinity}.
+
+Then `C_j(N)=B(N)/r+o(N)`. This is an absolute error statement; it does
+not assert that B(N)/N has a positive limit, and supplies no error uniform
+in r. Conditional on Collatz, all these ordinary densities are1/r.
+
+To prove it, let zeta be any nontrivial r-th root of unity and define
+`u(n)=zeta^tau(n)` on ROOT, zero outside. For n>2^K, absorption of the
+pair chain by K occurs before either source reaches1: `T^k(n)>=n/2^k>1`.
+Their finite stopping times are then equal, or neither is in ROOT.
+Consequently the adjacent variation of u has the unconditional finite
+bound
+
+    V_u(N)/N <= 2q_K+2^(K+2)/N,                     (6a)
+
+where the extra exceptional-height allowance is essential. By THM-4581
+it is o(1). The exact source equations are
+
+    u(2m)=zeta u(m),
+    u(2m-1)=zeta u(3m-1)+(1-zeta^2) 1_(m=1).        (6b)
+
+The correction vanishes for parity but not for, say, a primitive cube
+root. Applying the same neighbour/triple comparisons now gives
+
+    A_u(2M)=zeta A_u(M)+o(1),
+    A_u(3M)=A_u(M)+o(1).
+
+For the second identity the finite bound is
+`delta_u(3M)+2delta_u(2M)+|1-zeta^2|/M`. Choose arbitrarily close
+`2^a/3^b` with `a=1 mod r`, using density of
+`(rj+1)log(2)/log(3)` modulo1. Iteration and prefix continuity give
+`|1-zeta| limsup |A_u(N)|` arbitrarily small, hence zero. Fourier
+inversion on Z/r yields P3. This proves only the qualitative statement;
+the terminal/source correction cannot be discarded when seeking a rate.
+
 ## 2. Why neither candidate frequency is the exact model answer
 
 There is an exact finite identity, before any smoothing:
@@ -167,6 +209,64 @@ an expansion into particular decaying modes, let alone its nonzero
 coefficients. A rate-sensitive bound for the signed residue discrepancy
 in(7) is the remaining analytic target.
 
+### An exact Dirichlet identity turns that target into a continuation gate
+
+This is a zeta-adjacent connection with an explicit map and a retained
+arithmetic error, rather than a numerical analogy to an odd zeta value.
+For Re(s)>1 define the absolutely convergent series
+
+    F(s)=sum_(n>=1) t(n)n^(-s),
+    F_2(s)=sum_(n=2 mod3) t(n)n^(-s),
+    E(s)=F_2(s)-F(s)/3,
+    R(s)=sum_(n=2 mod3) t(n)n^(-s)
+             [(1-1/(2n))^(-s)-1].                   (9a)
+
+The bracket is O(1/n) uniformly on compact subsets of the s-plane, so
+R extends holomorphically to Re(s)>0 by absolute locally uniform
+convergence. Separating the even and odd sources using the **exact**
+parity recurrence gives
+
+    [1+2^(-s)+(3/2)^s/3] F(s)
+                  =-(3/2)^s [E(s)+R(s)].           (9b)
+
+For the odd part, substitute its endpoint n=3m-1, whose source is
+`(2n-1)/3`; the omitted +1 in a purely multiplicative model is exactly
+what R retains. There is no terminal defect for this parity function.
+
+**P4 (PROVED conditional implication).** If, for some fixed0<=beta<1,
+
+    sum_(n<=X) [1_(n=2 mod3)-1/3] t(n)=O(X^beta),    (9c)
+
+then E is holomorphic in Re(s)>beta by summation by parts, and(9b)
+meromorphically continues F to Re(s)>max(beta,0). Its possible poles are
+zeros of `D(s)=1+2^(-s)+(3/2)^s/3`. At a simple zero s0 its residue is
+
+    -(3/2)^s0 [E(s0)+R(s0)]/D'(s0).                 (9d)
+
+With `s=1+lambda/log(2)`, `D(s)=0` is exactly(8). Thus the model roots
+become **rigorously identified candidate singularities** under a single
+explicit cancellation hypothesis. The numerator can cancel a root;
+nonzero modal amplitudes are a separate test. Growth bounds and a justified
+inverse Mellin/Perron argument are still needed for a pointwise expansion.
+
+The low mode corresponds to Re(s) about0.694; a bound with beta below
+that line would make its candidate pole accessible. The26.5 mode lies
+much nearer Re(s)=1. A square-root-type bound in(9c) is a plausible helper
+hypothesis, not proved by the current finite data. This route retains both
+the additive residue character E and the affine correction R, exactly
+the coordinates discarded by the naive homogeneous transfer law.
+
+There is an explicit hostile to identifying every characteristic root
+with an actual mode. At theta0, equation(9) has **another** simple real
+root, `w=log(2)`, since `1/2+3/2=2`; its derivative is
+`-1/2+(3/2)alpha !=0`. Its continuation at sufficiently small theta has
+Re(w)>0. Half-integer f have arbitrarily small theta, so D has corresponding
+zeros with Re(s)>1. All of them are necessarily cancelled by E+R, because
+F is already holomorphic there by absolute convergence. This is a proved
+family of forced cancellations, without any new Collatz assumption.
+The decaying branch therefore also needs its numerator authenticated;
+the denominator alone never certifies a nonzero spectral contribution.
+
 ## 3. Census through 17,179,869,184 and the aliasing control
 
 The [C++ census](../../04-computation/experiments/collatz_parity_stream_20261013b.cpp)
@@ -216,6 +316,30 @@ below512 retained, the4096-bin residual is about0.157 over24..34, rather
 than0.006; much of the finer signal lies outside that model's bandwidth.
 The low mode is stable under this hostile check. The qualitative zero-mean
 proof does not assume any modal truncation is complete.
+
+**Direct signed-error measurement (FINITE-EXACT).** A further census
+retains `S(M),S(2M),S(3M)` and every adjacent sign cut up to3M for dyadic
+M through2^32. All earlier bins agree. Let
+`epsilon_M=A(2M)+A(M)/2+A(3M)/2`; its exact numerator is
+`3S(2M)+3S(M)+S(3M)` over6M. Selected values are:
+
+| log2(M) | epsilon_M | Variation bound V(3M)/(6M) |
+|---:|---:|---:|
+| 20 | -0.000147819519 | 0.259556135 |
+| 24 | -0.000040729841 | 0.246983588 |
+| 28 | +0.000004295260 | 0.237227863 |
+| 32 | -3460/(6*2^32) | 0.229293798 |
+
+At the last sample epsilon is about-1.343e-7, roughly1.7million times
+smaller than the variation bound. These are samples at specified scales,
+not a uniform bound or an estimated asymptotic exponent. They show why
+replacing the signed defect by the entire unmerged mass wastes almost
+all the observed cancellation. Up to sign, its numerator is the sum of
+`[3 1_(n=2 mod3)-1] t(n)` through3M, exactly the partial sums in(9c).
+An [independent strict-clock audit](../../04-computation/experiments/collatz_transfer_audit_20261013b.py)
+checks786,432 sources, reproduces all19 transfer rows through M2^18,
+and verifies252 finite-cutoff versions of(9b) with exact rational
+arithmetic at integer exponents1..4. [Output](collatz_transfer_audit_20261013b.json).
 
 ## 4. Exact unmerged mass through depth48
 

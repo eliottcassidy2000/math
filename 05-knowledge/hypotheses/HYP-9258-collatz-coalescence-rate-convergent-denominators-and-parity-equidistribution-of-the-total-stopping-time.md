@@ -6,6 +6,8 @@ status: >
   PROVED from THM-4581's almost-sure coalescence input: the ROOT-supported parity function, set to zero off
   the ROOT basin, has ordinary mean zero. The new bounded-antifunction lemma proves this from vanishing
   adjacent variation using incompatible signs under dilation by2 and3; no sketch-level rate is used.
+  The extension retains the terminal defect1-zeta^2 and proves every fixed stopping-time residue count
+  equals the ROOT count divided by its modulus, up to o(N); ROOT density1 is not asserted.
   FINITE-EXACT: two full parity censuses through2^34 agree on every1024-bin/octave sum; an independent
   jump16 run at4096 bins/octave verifies aggregation and exposes high-frequency aliases. Pair-chain
   unmerged mass is computed exactly through48 by forward/backward composition, with independent
@@ -42,6 +44,7 @@ related:
 
 - **Completed FINITE-EXACT:** unmerged masses for every depth through48, extending the requested26..40 range. At48, `q_48=150619085192045/2^48`. The finite effective exponent is about0.13, not an asymptotic-rate determination.
 - **Completed NUMERICAL comparison:** 1024 and4096 bins/octave through2^34, two exact jump algorithms, the signed characteristic equation and phase/decay fits. A scale holdout and the finer-bandwidth hostile are retained in the note.
+- **New exact analytic target:** the Dirichlet identity `D(s)F(s)=-(3/2)^s(E(s)+R(s))`, with `D(s)=1+2^(-s)+(3/2)^s/3`. A power bound for the mod3 signed discrepancy continues F meromorphically; roots need authenticated nonzero numerators, and the growing branch is necessarily cancelled.
 - **OPEN:** a rate for the signed residue discrepancy that survives refinement and implies the proposed modal expansion; rigorous renewal tail bounds; a source-specific decreasing certificate. The existing difference-count data in(ii) remain evidence, not a new theorem.
 
 ## Why

@@ -73,6 +73,28 @@ int main(int argc,char**argv){try{
   require(s.even_count==ev.count&&s.even_ones==ev.count-ev.ones,"exact even-bin doubling identity");
   out<<"["<<lo<<","<<hi<<","<<s.count<<","<<int64_t(s.count)-2*int64_t(s.ones)<<","<<s.even_count<<","<<int64_t(s.even_count)-2*int64_t(s.even_ones)<<"]"<<(j+1==edges.size()?"\n":",\n");
  }
- auto total=interval(1,N+1);out<<"],\"prefix_sum\":"<<int64_t(total.count)-2*int64_t(total.ones)<<"}\n";
+ auto cuts=[&](u64 lo,u64 hi){u64 count=0;
+  for(u64 w=lo>>6;w<=((hi-1)>>6);w++){
+   unsigned a=w==(lo>>6)?lo%64:0,b=w==((hi-1)>>6)?unsigned((hi-1)%64+1):64;
+   u64 take=(~0ULL<<a)&(b==64?~0ULL:((1ULL<<b)-1));
+   u64 adjacent=(bits[w]>>1)|((w+1<bits.size()?bits[w+1]:0ULL)<<63);
+   count+=__builtin_popcountll((bits[w]^adjacent)&take);
+  }return count;
+ };
+ for(u64 hi=2;hi<200;hi++){
+  u64 direct=0;for(u64 j=1;j<hi;j++)direct+=(parity(j)!=parity(j+1));
+  require(cuts(1,hi)==direct,"packed adjacent-cut control");
+ }
+ out<<"],\"dyadic_transfers\":[\n";
+ bool comma=false;
+ for(u64 M=1;3*M<=N;M*=2){
+  auto signed_sum=[&](u64 end){auto ss=interval(1,end+1);return int64_t(ss.count)-2*int64_t(ss.ones);};
+  int64_t s1=signed_sum(M),s2=signed_sum(2*M),s3=signed_sum(3*M);
+  int64_t numerator=3*s2+3*s1+s3;u64 changes=cuts(1,3*M);
+  require(numerator<=int64_t(2*changes)&&numerator>=-int64_t(2*changes),"exact signed-transfer variation bound");
+  if(comma)out<<",\n";comma=true;
+  out<<"["<<M<<","<<s1<<","<<s2<<","<<s3<<","<<changes<<","<<numerator<<"]";
+ }
+ auto total=interval(1,N+1);out<<"\n],\"prefix_sum\":"<<int64_t(total.count)-2*int64_t(total.ones)<<"}\n";
  std::cerr<<"complete; strict controls "<<controls<<" max tau "<<max_tau<<"\n";
  }catch(std::exception const&e){std::cerr<<"ERROR "<<e.what()<<"\n";return 1;}}
