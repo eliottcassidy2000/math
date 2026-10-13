@@ -88,3 +88,7 @@ scripts:
 * A proof of the transfer law for class densities: the walk model is heuristic for actual classes.
 * A characterization of which `A_f` vanish.
 * The relation to the Berg–Krüppel / Tavares log-periodic predecessor-density correction.
+
+## Signed extension and qualitative boundary (2026-10-13)
+
+[Signed resonance and exact pair mass](../results/collatz_signed_resonance_pair_mass_20261013b.md) applies the model to `t(Tn)=-t(n)`. The characteristic equation becomes `exp(-lambda)+exp(alpha lambda)=-2`; writing `lambda=2pi i f+w` at **half-integer** f gives the same root equation as above. The base5/2 root predicts frequency2.454923470 and decay0.212159672, supported by finer censuses through2^34. The stronger mode near26.5036 corresponds to the parity-compatible near-relation `3^53 approximately 2^84`. NUMERICAL spectral evidence is not a proof of an actual mode expansion. The note separately proves zero ordinary mean for the ROOT-supported sign using THM-4581's almost-sure input and signed2/3 scaling; that qualitative implication does not require this hypothesis or its rates. At1024 bins/octave, peaks above512 alias into the displayed band; the independent4096-bin run retains this limitation explicitly.

@@ -52,7 +52,7 @@ related:
 
 ## Scope and boundary
 
-- The theorem concerns colourings that factor through a residue field at a conjugation-fixed prime; colourings periodic under other sublattices (powers of `p`, composite moduli, primes not fixed by conjugation, where the unit circle does not reduce) are not covered.
+- The theorem here concerns colourings that factor through a residue field at a conjugation-fixed prime. The [2026-10-13 extension](../../05-knowledge/results/tree_resonance_composite_pell_20261013b.md) now covers arbitrary powers and products of these fixed primes: primitive higher-conductor character sums obey a stationary-phase bound, and the CRT tensor graph still needs at least7 colours. Conjugation-swapped or ramified prime factors, arbitrary additive periods and colourings retaining extra geometric information remain outside that extension.
 - Hoffman's bound is a lower bound; the exact chromatic numbers of `G_q` are not computed (S24 noted the same for `109`).
 - For `q` a prime power the identity is proved by the same count; the eigenvalues were not evaluated numerically there (only the Weil floor is used).
 

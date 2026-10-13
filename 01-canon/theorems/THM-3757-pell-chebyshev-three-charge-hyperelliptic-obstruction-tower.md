@@ -11,6 +11,10 @@ status: >
   nonzero logarithmic residues; for n>=2 it is a nonzero holomorphic
   differential on a positive-genus hyperelliptic generic fibre.  This is a
   counterexample-component obstruction tower, not a counterexample to JC(2).
+  PROVED scoped extension 2026-10-13 (self-audited): the generic degree is
+  exactly n+1 and genus exactly floor(n/2) at every depth, by the mixed
+  Chebyshev norm identity in section 3; independent polynomial expansion
+  checks all depths1..20 in residue_pell_checks_20261013b.py.
 source: root + jc_quartic_c3_construct / 2026-08-23
 audit: >
   PASS.  An independent hostile audit rederived the Chebyshev quotient and
@@ -72,8 +76,8 @@ Then:
 1. `Q_n` has no critical point in `k^2` for every `n>=1`.
 2. There is no `P in k(X,T)` with `J(P,Q_n) in k*`; in particular there is
    no polynomial Jacobian mate.
-3. The generic `Q_n`-fibre is hyperelliptic.  At `n>=2` its genus is at least
-   `floor(n/2)>=1`, and the mate equation would make its nonzero holomorphic
+3. The generic `Q_n`-fibre is hyperelliptic. Its genus is exactly
+   `floor(n/2)` (all-depth refinement 2026-10-13), and at `n>=2` the mate equation would make its nonzero holomorphic
    differential exact.  At `n=1` the same differential instead has two
    nonzero residues at infinity.
 
@@ -241,10 +245,26 @@ Now `G_n` has degree `n`, so `chi_n` has degree `n+1`.  The coefficient
 d_n=deg_z Delta_n >=n+1.                                (23)
 ```
 
-The smooth projective model of `(21)` has genus
-`floor((d_n-1)/2)`, which is at least `floor(n/2)`.  In fact the exact
-controls through depth eight find `d_n=n+1`, but the lower bound `(23)` is
-all that the proof needs and no all-depth equality is asserted here.
+The smooth projective model of `(21)` has genus `floor((d_n-1)/2)`.
+The original proof needed only the lower bound in `(23)` and checked
+equality through depth eight. The following all-depth identity now proves
+equality (2026-10-13; self-audited extension).
+
+Put `a=1/[2(n+1)]`, `b=1/(2n)`,
+`P=a C_(n+1)(tau)-b C_n(tau)` and `c=P(-1)`. Then `chi_n=P-c`, since
+`d_z P=U_n-U_(n-1)=G_n`. The mixed Chebyshev identity gives
+
+```text
+P^2-(tau^2-1)S_n^2=a^2+b^2-2ab tau,
+Delta_n=(Lambda+c)^2-2(Lambda+c)P+a^2+b^2-2ab tau.    (23a)
+```
+
+Its degree in z is exactly `n+1`, because `Lambda+c` is nonzero in the
+generic function field. Thus `g=floor(n/2)` for every n>=1. The
+[full derivation and controls](../../05-knowledge/results/tree_resonance_composite_pell_20261013b.md)
+retain the distinction between this exact genus calculation and the
+already stronger ansatz exclusion of THM-3765. The no-mate proof below is
+unchanged.
 
 ## 4. The mate equation is a forbidden exact differential
 

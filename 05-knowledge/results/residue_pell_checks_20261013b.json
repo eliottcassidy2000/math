@@ -1,0 +1,442 @@
+{
+  "checks": 154546,
+  "local_spectra_NUMERICAL": [
+    {
+      "p": 3,
+      "r": 1,
+      "vertices": 9,
+      "degree": 4,
+      "least_eigenvalue_numerical": -2.0,
+      "hoffman_numerical": 3.0
+    },
+    {
+      "p": 3,
+      "r": 2,
+      "vertices": 81,
+      "degree": 12,
+      "least_eigenvalue_numerical": -6.0,
+      "hoffman_numerical": 3.0
+    },
+    {
+      "p": 3,
+      "r": 3,
+      "vertices": 729,
+      "degree": 36,
+      "least_eigenvalue_numerical": -18.0,
+      "hoffman_numerical": 3.0
+    },
+    {
+      "p": 3,
+      "r": 4,
+      "vertices": 6561,
+      "degree": 108,
+      "least_eigenvalue_numerical": -54.0,
+      "hoffman_numerical": 3.0
+    },
+    {
+      "p": 7,
+      "r": 1,
+      "vertices": 49,
+      "degree": 8,
+      "least_eigenvalue_numerical": -4.493959207434934,
+      "hoffman_numerical": 2.780167471650515
+    },
+    {
+      "p": 7,
+      "r": 2,
+      "vertices": 2401,
+      "degree": 56,
+      "least_eigenvalue_numerical": -31.457714452044538,
+      "hoffman_numerical": 2.7801674716505156
+    },
+    {
+      "p": 7,
+      "r": 3,
+      "vertices": 117649,
+      "degree": 392,
+      "least_eigenvalue_numerical": -220.2040011643118,
+      "hoffman_numerical": 2.780167471650515
+    },
+    {
+      "p": 11,
+      "r": 1,
+      "vertices": 121,
+      "degree": 12,
+      "least_eigenvalue_numerical": -4.795754778231585,
+      "hoffman_numerical": 3.502213010237557
+    },
+    {
+      "p": 11,
+      "r": 2,
+      "vertices": 14641,
+      "degree": 132,
+      "least_eigenvalue_numerical": -52.753302560547425,
+      "hoffman_numerical": 3.5022130102375573
+    }
+  ],
+  "composite_spectra_NUMERICAL": [
+    {
+      "modulus": 21,
+      "degree": 32,
+      "vertices": 441,
+      "hoffman_numerical": 2.780167471650515
+    },
+    {
+      "modulus": 63,
+      "degree": 96,
+      "vertices": 3969,
+      "hoffman_numerical": 2.780167471650515
+    },
+    {
+      "modulus": 441,
+      "degree": 672,
+      "vertices": 194481,
+      "hoffman_numerical": 2.7801674716505156
+    },
+    {
+      "modulus": 297,
+      "degree": 432,
+      "vertices": 88209,
+      "hoffman_numerical": 3.0
+    }
+  ],
+  "fixed_prime_power": {
+    "p": 109,
+    "r": 2,
+    "vertices": 141158161,
+    "degree": 11990,
+    "exact_norm_points": 11990,
+    "sample_stationary_max_error": 1.423148728328679e-13,
+    "prime_least_eigenvalue_numerical": -19.644684726810294,
+    "prime_power_least_eigenvalue_numerical": -2141.270635222322,
+    "hoffman_numerical": 6.599479020901584,
+    "weil_hoffman_proved_floor": 6.268044568716332
+  },
+  "pell_exact": [
+    {
+      "depth": 1,
+      "generic_degree": 2,
+      "genus": 0
+    },
+    {
+      "depth": 2,
+      "generic_degree": 3,
+      "genus": 1
+    },
+    {
+      "depth": 3,
+      "generic_degree": 4,
+      "genus": 1
+    },
+    {
+      "depth": 4,
+      "generic_degree": 5,
+      "genus": 2
+    },
+    {
+      "depth": 5,
+      "generic_degree": 6,
+      "genus": 2
+    },
+    {
+      "depth": 6,
+      "generic_degree": 7,
+      "genus": 3
+    },
+    {
+      "depth": 7,
+      "generic_degree": 8,
+      "genus": 3
+    },
+    {
+      "depth": 8,
+      "generic_degree": 9,
+      "genus": 4
+    },
+    {
+      "depth": 9,
+      "generic_degree": 10,
+      "genus": 4
+    },
+    {
+      "depth": 10,
+      "generic_degree": 11,
+      "genus": 5
+    },
+    {
+      "depth": 11,
+      "generic_degree": 12,
+      "genus": 5
+    },
+    {
+      "depth": 12,
+      "generic_degree": 13,
+      "genus": 6
+    },
+    {
+      "depth": 13,
+      "generic_degree": 14,
+      "genus": 6
+    },
+    {
+      "depth": 14,
+      "generic_degree": 15,
+      "genus": 7
+    },
+    {
+      "depth": 15,
+      "generic_degree": 16,
+      "genus": 7
+    },
+    {
+      "depth": 16,
+      "generic_degree": 17,
+      "genus": 8
+    },
+    {
+      "depth": 17,
+      "generic_degree": 18,
+      "genus": 8
+    },
+    {
+      "depth": 18,
+      "generic_degree": 19,
+      "genus": 9
+    },
+    {
+      "depth": 19,
+      "generic_degree": 20,
+      "genus": 9
+    },
+    {
+      "depth": 20,
+      "generic_degree": 21,
+      "genus": 10
+    }
+  ],
+  "fish_exact": [
+    {
+      "rank": 3,
+      "genus": 1,
+      "character_quotient_genera": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "rank": 4,
+      "genus": 9,
+      "character_quotient_genera": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1
+      ]
+    }
+  ],
+  "golden_exact": {
+    "exact_vertices": 15,
+    "edges": [
+      {
+        "source": [
+          -2,
+          -3
+        ],
+        "target": [
+          -1,
+          -2
+        ],
+        "remaining_steps": 4
+      },
+      {
+        "source": [
+          -2,
+          -2
+        ],
+        "target": [
+          -1,
+          -1
+        ],
+        "remaining_steps": 3
+      },
+      {
+        "source": [
+          -1,
+          -3
+        ],
+        "target": [
+          -1,
+          -2
+        ],
+        "remaining_steps": 4
+      },
+      {
+        "source": [
+          -1,
+          -2
+        ],
+        "target": [
+          -1,
+          -1
+        ],
+        "remaining_steps": 3
+      },
+      {
+        "source": [
+          -1,
+          -1
+        ],
+        "target": [
+          0,
+          -1
+        ],
+        "remaining_steps": 2
+      },
+      {
+        "source": [
+          -1,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "remaining_steps": 1
+      },
+      {
+        "source": [
+          0,
+          -1
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "remaining_steps": 1
+      },
+      {
+        "source": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "remaining_steps": 0
+      },
+      {
+        "source": [
+          0,
+          1
+        ],
+        "target": [
+          1,
+          1
+        ],
+        "remaining_steps": 1
+      },
+      {
+        "source": [
+          1,
+          0
+        ],
+        "target": [
+          0,
+          1
+        ],
+        "remaining_steps": 2
+      },
+      {
+        "source": [
+          1,
+          1
+        ],
+        "target": [
+          1,
+          1
+        ],
+        "remaining_steps": 0
+      },
+      {
+        "source": [
+          1,
+          2
+        ],
+        "target": [
+          1,
+          2
+        ],
+        "remaining_steps": 0
+      },
+      {
+        "source": [
+          1,
+          3
+        ],
+        "target": [
+          2,
+          2
+        ],
+        "remaining_steps": 2
+      },
+      {
+        "source": [
+          2,
+          2
+        ],
+        "target": [
+          1,
+          1
+        ],
+        "remaining_steps": 1
+      },
+      {
+        "source": [
+          2,
+          3
+        ],
+        "target": [
+          2,
+          3
+        ],
+        "remaining_steps": 0
+      }
+    ],
+    "fixed_points": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "maximum_steps_inside_box": 4
+  }
+}

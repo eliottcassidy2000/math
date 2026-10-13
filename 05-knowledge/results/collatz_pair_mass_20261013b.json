@@ -1,0 +1,356 @@
+{
+  "scope": "unconditioned n,n+1 affine-cylinder pair chain; no rate theorem",
+  "back_depth": 17,
+  "forward_depth": 31,
+  "audit_checks": 7290,
+  "independent_integer_residues": 65536,
+  "back_state_counts": [
+    1,
+    2,
+    4,
+    11,
+    25,
+    66,
+    149,
+    378,
+    856,
+    2039,
+    4494,
+    10338,
+    22472,
+    51430,
+    112378,
+    251285,
+    543425,
+    1198189
+  ],
+  "forward_state_counts": [
+    1,
+    2,
+    4,
+    7,
+    11,
+    16,
+    25,
+    40,
+    63,
+    99,
+    151,
+    232,
+    361,
+    567,
+    879,
+    1368,
+    2120,
+    3318,
+    5208,
+    8210,
+    12864,
+    20210,
+    31782,
+    50001,
+    78650,
+    123702,
+    194905,
+    307570,
+    485701,
+    767150,
+    1214951,
+    1926627
+  ],
+  "rows": [
+    {
+      "depth": 0,
+      "unmerged_numerator": 1,
+      "denominator": 1
+    },
+    {
+      "depth": 1,
+      "unmerged_numerator": 2,
+      "denominator": 2,
+      "first_merge_numerator_at_this_depth": 0
+    },
+    {
+      "depth": 2,
+      "unmerged_numerator": 4,
+      "denominator": 4,
+      "first_merge_numerator_at_this_depth": 0
+    },
+    {
+      "depth": 3,
+      "unmerged_numerator": 7,
+      "denominator": 8,
+      "first_merge_numerator_at_this_depth": 1
+    },
+    {
+      "depth": 4,
+      "unmerged_numerator": 13,
+      "denominator": 16,
+      "first_merge_numerator_at_this_depth": 1
+    },
+    {
+      "depth": 5,
+      "unmerged_numerator": 24,
+      "denominator": 32,
+      "first_merge_numerator_at_this_depth": 2
+    },
+    {
+      "depth": 6,
+      "unmerged_numerator": 46,
+      "denominator": 64,
+      "first_merge_numerator_at_this_depth": 2
+    },
+    {
+      "depth": 7,
+      "unmerged_numerator": 89,
+      "denominator": 128,
+      "first_merge_numerator_at_this_depth": 3
+    },
+    {
+      "depth": 8,
+      "unmerged_numerator": 174,
+      "denominator": 256,
+      "first_merge_numerator_at_this_depth": 4
+    },
+    {
+      "depth": 9,
+      "unmerged_numerator": 342,
+      "denominator": 512,
+      "first_merge_numerator_at_this_depth": 6
+    },
+    {
+      "depth": 10,
+      "unmerged_numerator": 673,
+      "denominator": 1024,
+      "first_merge_numerator_at_this_depth": 11
+    },
+    {
+      "depth": 11,
+      "unmerged_numerator": 1327,
+      "denominator": 2048,
+      "first_merge_numerator_at_this_depth": 19
+    },
+    {
+      "depth": 12,
+      "unmerged_numerator": 2620,
+      "denominator": 4096,
+      "first_merge_numerator_at_this_depth": 34
+    },
+    {
+      "depth": 13,
+      "unmerged_numerator": 5180,
+      "denominator": 8192,
+      "first_merge_numerator_at_this_depth": 60
+    },
+    {
+      "depth": 14,
+      "unmerged_numerator": 10254,
+      "denominator": 16384,
+      "first_merge_numerator_at_this_depth": 106
+    },
+    {
+      "depth": 15,
+      "unmerged_numerator": 20318,
+      "denominator": 32768,
+      "first_merge_numerator_at_this_depth": 190
+    },
+    {
+      "depth": 16,
+      "unmerged_numerator": 40295,
+      "denominator": 65536,
+      "first_merge_numerator_at_this_depth": 341
+    },
+    {
+      "depth": 17,
+      "unmerged_numerator": 79967,
+      "denominator": 131072,
+      "first_merge_numerator_at_this_depth": 623
+    },
+    {
+      "depth": 18,
+      "unmerged_numerator": 158786,
+      "denominator": 262144,
+      "first_merge_numerator_at_this_depth": 1148
+    },
+    {
+      "depth": 19,
+      "unmerged_numerator": 315448,
+      "denominator": 524288,
+      "first_merge_numerator_at_this_depth": 2124
+    },
+    {
+      "depth": 20,
+      "unmerged_numerator": 626933,
+      "denominator": 1048576,
+      "first_merge_numerator_at_this_depth": 3963
+    },
+    {
+      "depth": 21,
+      "unmerged_numerator": 1246415,
+      "denominator": 2097152,
+      "first_merge_numerator_at_this_depth": 7451
+    },
+    {
+      "depth": 22,
+      "unmerged_numerator": 2478758,
+      "denominator": 4194304,
+      "first_merge_numerator_at_this_depth": 14072
+    },
+    {
+      "depth": 23,
+      "unmerged_numerator": 4930817,
+      "denominator": 8388608,
+      "first_merge_numerator_at_this_depth": 26699
+    },
+    {
+      "depth": 24,
+      "unmerged_numerator": 9810721,
+      "denominator": 16777216,
+      "first_merge_numerator_at_this_depth": 50913
+    },
+    {
+      "depth": 25,
+      "unmerged_numerator": 19524063,
+      "denominator": 33554432,
+      "first_merge_numerator_at_this_depth": 97379
+    },
+    {
+      "depth": 26,
+      "unmerged_numerator": 38861357,
+      "denominator": 67108864,
+      "first_merge_numerator_at_this_depth": 186769
+    },
+    {
+      "depth": 27,
+      "unmerged_numerator": 77363550,
+      "denominator": 134217728,
+      "first_merge_numerator_at_this_depth": 359164
+    },
+    {
+      "depth": 28,
+      "unmerged_numerator": 154035021,
+      "denominator": 268435456,
+      "first_merge_numerator_at_this_depth": 692079
+    },
+    {
+      "depth": 29,
+      "unmerged_numerator": 306733917,
+      "denominator": 536870912,
+      "first_merge_numerator_at_this_depth": 1336125
+    },
+    {
+      "depth": 30,
+      "unmerged_numerator": 610884166,
+      "denominator": 1073741824,
+      "first_merge_numerator_at_this_depth": 2583668
+    },
+    {
+      "depth": 31,
+      "unmerged_numerator": 1216765340,
+      "denominator": 2147483648,
+      "first_merge_numerator_at_this_depth": 5002992
+    },
+    {
+      "depth": 32,
+      "unmerged_numerator": 2423829673,
+      "denominator": 4294967296,
+      "first_merge_numerator_at_this_depth": 9701007
+    },
+    {
+      "depth": 33,
+      "unmerged_numerator": 4828827982,
+      "denominator": 8589934592,
+      "first_merge_numerator_at_this_depth": 18831364
+    },
+    {
+      "depth": 34,
+      "unmerged_numerator": 9621061933,
+      "denominator": 17179869184,
+      "first_merge_numerator_at_this_depth": 36594031
+    },
+    {
+      "depth": 35,
+      "unmerged_numerator": 19170941933,
+      "denominator": 34359738368,
+      "first_merge_numerator_at_this_depth": 71181933
+    },
+    {
+      "depth": 36,
+      "unmerged_numerator": 38203302552,
+      "denominator": 68719476736,
+      "first_merge_numerator_at_this_depth": 138581314
+    },
+    {
+      "depth": 37,
+      "unmerged_numerator": 76136573529,
+      "denominator": 137438953472,
+      "first_merge_numerator_at_this_depth": 270031575
+    },
+    {
+      "depth": 38,
+      "unmerged_numerator": 151746568543,
+      "denominator": 274877906944,
+      "first_merge_numerator_at_this_depth": 526578515
+    },
+    {
+      "depth": 39,
+      "unmerged_numerator": 302465523242,
+      "denominator": 549755813888,
+      "first_merge_numerator_at_this_depth": 1027613844
+    },
+    {
+      "depth": 40,
+      "unmerged_numerator": 602924248450,
+      "denominator": 1099511627776,
+      "first_merge_numerator_at_this_depth": 2006798034
+    },
+    {
+      "depth": 41,
+      "unmerged_numerator": 1201926912022,
+      "denominator": 2199023255552,
+      "first_merge_numerator_at_this_depth": 3921584878
+    },
+    {
+      "depth": 42,
+      "unmerged_numerator": 2396185682304,
+      "denominator": 4398046511104,
+      "first_merge_numerator_at_this_depth": 7668141740
+    },
+    {
+      "depth": 43,
+      "unmerged_numerator": 4777368400913,
+      "denominator": 8796093022208,
+      "first_merge_numerator_at_this_depth": 15002963695
+    },
+    {
+      "depth": 44,
+      "unmerged_numerator": 9525366558224,
+      "denominator": 17592186044416,
+      "first_merge_numerator_at_this_depth": 29370243602
+    },
+    {
+      "depth": 45,
+      "unmerged_numerator": 18993206205824,
+      "denominator": 35184372088832,
+      "first_merge_numerator_at_this_depth": 57526910624
+    },
+    {
+      "depth": 46,
+      "unmerged_numerator": 37873677919809,
+      "denominator": 70368744177664,
+      "first_merge_numerator_at_this_depth": 112734491839
+    },
+    {
+      "depth": 47,
+      "unmerged_numerator": 75526324598181,
+      "denominator": 140737488355328,
+      "first_merge_numerator_at_this_depth": 221031241437
+    },
+    {
+      "depth": 48,
+      "unmerged_numerator": 150619085192045,
+      "denominator": 281474976710656,
+      "first_merge_numerator_at_this_depth": 433564004317
+    }
+  ]
+}
