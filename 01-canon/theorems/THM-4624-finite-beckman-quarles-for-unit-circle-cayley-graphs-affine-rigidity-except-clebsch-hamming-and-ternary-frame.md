@@ -91,7 +91,11 @@ acts faithfully on `G_q` by automorphisms; `|Aff(q)| = q^2 (q+1) · 2e`.
    (a frame over `F_2` admits no nowhere-zero functional, since `λ(w_j) = 1` for all `j` contradicts
    `Σ w_j = 0` with five terms); `κ(9) = κ(3) = 3` come from a frame functional and from `K_3 □ K_3`.
    For the undecided `κ(13), κ(17) ∈ {5, 6}` of THM-4558 the symmetry group is exactly `Aff(13)`
-   (order 4732) and `Aff(17)` (order 10404).
+   (order 4732) and `Aff(17)` (order 10404). `κ(13) = 6` is decalion89's external computer proof
+   (`notes/g13_chi.md`: largest-class case split with lex-leader symmetry breaking under all 4,732
+   automorphisms, cube-and-conquer, kissat 4.0.4, about 470 solver-hours, DRAT-checked, proofs deleted);
+   in-repo, `α(G_13) ≥ 36` (FINITE-EXACT) so no counting or spectral bound can decide it, `G_13` is
+   triangle-free, and every union of at most ten norm circles is 5-colourable (session note, section 10).
 
 ## Proofs
 

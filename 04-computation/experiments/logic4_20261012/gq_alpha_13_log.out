@@ -1,0 +1,156 @@
+
+Starting CP-SAT solver v9.15.6755
+Parameters: max_time_in_seconds: 14400 log_search_progress: true num_search_workers: 4 symmetry_level: 2
+
+Initial optimization model '': (model_fingerprint: 0x3a5e88404aa3b345)
+#Variables: 169 (#bools: 169 in objective) (168 primary variables)
+  - 169 Booleans in [0,1]
+#kBoolOr: 1'183 (#literals: 2'366)
+#kLinear1: 1
+#kLinearN: 182 (#terms: 2'366)
+
+Starting presolve at 0.00s
+  7.80e-05s  0.00e+00d  [DetectDominanceRelations] 
+  7.63e-04s  0.00e+00d  [PresolveToFixPoint] #num_loops=2 #num_dual_strengthening=1 
+  5.00e-06s  0.00e+00d  [ExtractEncodingFromLinear] 
+  2.20e-05s  0.00e+00d  [DetectDuplicateColumns] 
+  4.80e-05s  0.00e+00d  [DetectDuplicateConstraints] #duplicates=91 
+[Symmetry] Graph for symmetry has 568 nodes and 3'360 arcs.
+[Symmetry] Symmetry computation done. time: 0.000795 dtime: 0.00225764
+[Symmetry] #generators: 3, average support size: 143.333
+[Symmetry] 11 orbits on 154 variables with sizes: 14,14,14,14,14,14,14,14,14,14,...
+[Symmetry] Num fixable by binary propagation in orbit: 1 / 14
+[Symmetry] Found orbitope of size 72 x 2
+[SAT presolve] num removable Booleans: 0 / 154
+[SAT presolve] num trivial clauses: 0
+[SAT presolve] [0s] clauses:987 literals:1'974 vars:154 one_side_vars:154 simple_definition:0 singleton_clauses:0
+[SAT presolve] [4.3e-05s] clauses:987 literals:1'974 vars:154 one_side_vars:154 simple_definition:0 singleton_clauses:0
+[SAT presolve] [5.3e-05s] clauses:987 literals:1'974 vars:154 one_side_vars:154 simple_definition:0 singleton_clauses:0
+  1.70e-05s  0.00e+00d  [DetectDuplicateConstraintsWithDifferentEnforcements] 
+  6.12e-04s  2.49e-04d  [Probe] #probed=308 
+  4.03e-04s  5.44e-04d  [MaxClique] 
+  6.20e-05s  0.00e+00d  [DetectDominanceRelations] 
+  2.83e-04s  0.00e+00d  [PresolveToFixPoint] #num_loops=1 #num_dual_strengthening=1 
+  3.27e-04s  0.00e+00d  [ProcessAtMostOneAndLinear] #num_changes=52 
+  2.50e-05s  0.00e+00d  [DetectDuplicateConstraints] 
+  2.00e-05s  0.00e+00d  [DetectDuplicateConstraintsWithDifferentEnforcements] 
+  1.20e-05s  6.08e-07d  [DetectDominatedLinearConstraints] #relevant_constraints=16 
+  5.00e-06s  0.00e+00d  [DetectDifferentVariables] 
+  1.42e-04s  1.96e-05d  [ProcessSetPPC] #relevant_constraints=1'003 #num_inclusions=192 
+  1.13e-04s  0.00e+00d  [TransformClausesToExactlyOne] #num_amos=987 
+  7.00e-06s  0.00e+00d  [DetectEncodedComplexDomains] 
+  4.00e-06s  0.00e+00d  [FindAlmostIdenticalLinearConstraints] 
+  8.10e-05s  5.61e-05d  [FindBigAtMostOneAndLinearOverlap] 
+  3.30e-05s  2.42e-05d  [FindBigVerticalLinearOverlap] 
+  6.00e-06s  1.00e-06d  [FindBigHorizontalLinearOverlap] #linears=16 
+  5.00e-06s  0.00e+00d  [MergeClauses] 
+  5.60e-05s  0.00e+00d  [DetectDominanceRelations] 
+  1.38e-04s  0.00e+00d  [PresolveToFixPoint] #num_loops=1 #num_dual_strengthening=1 
+  5.40e-05s  0.00e+00d  [DetectDominanceRelations] 
+  1.31e-04s  0.00e+00d  [PresolveToFixPoint] #num_loops=1 #num_dual_strengthening=1 
+  9.00e-06s  0.00e+00d  [DetectDuplicateColumns] 
+  1.30e-05s  0.00e+00d  [DetectDuplicateConstraints] 
+[Symmetry] Graph for symmetry has 493 nodes and 2'482 arcs.
+[Symmetry] Symmetry computation done. time: 0.000367 dtime: 0.00092893
+[Symmetry] #generators: 2, average support size: 143
+[Symmetry] 44 orbits on 154 variables with sizes: 4,4,4,4,4,4,4,4,4,4,...
+[SAT presolve] num removable Booleans: 0 / 154
+[SAT presolve] num trivial clauses: 0
+[SAT presolve] [0s] clauses:987 literals:1'974 vars:154 one_side_vars:154 simple_definition:0 singleton_clauses:0
+[SAT presolve] [4.2e-05s] clauses:987 literals:1'974 vars:154 one_side_vars:154 simple_definition:0 singleton_clauses:0
+[SAT presolve] [5.2e-05s] clauses:987 literals:1'974 vars:154 one_side_vars:154 simple_definition:0 singleton_clauses:0
+  1.50e-05s  0.00e+00d  [DetectDuplicateConstraintsWithDifferentEnforcements] 
+  5.14e-04s  2.22e-04d  [Probe] #probed=308 
+  4.18e-04s  5.44e-04d  [MaxClique] 
+  5.90e-05s  0.00e+00d  [DetectDominanceRelations] 
+  2.02e-04s  0.00e+00d  [PresolveToFixPoint] #num_loops=1 #num_dual_strengthening=1 
+  8.80e-05s  0.00e+00d  [ProcessAtMostOneAndLinear] 
+  2.40e-05s  0.00e+00d  [DetectDuplicateConstraints] 
+  2.00e-05s  0.00e+00d  [DetectDuplicateConstraintsWithDifferentEnforcements] 
+  1.20e-05s  6.08e-07d  [DetectDominatedLinearConstraints] #relevant_constraints=16 
+  7.00e-06s  0.00e+00d  [DetectDifferentVariables] 
+  1.56e-04s  1.96e-05d  [ProcessSetPPC] #relevant_constraints=1'003 #num_inclusions=192 
+  1.22e-04s  0.00e+00d  [TransformClausesToExactlyOne] #num_amos=987 
+  1.00e-05s  0.00e+00d  [DetectEncodedComplexDomains] 
+  5.00e-06s  0.00e+00d  [FindAlmostIdenticalLinearConstraints] 
+  8.30e-05s  5.61e-05d  [FindBigAtMostOneAndLinearOverlap] 
+  3.40e-05s  2.42e-05d  [FindBigVerticalLinearOverlap] 
+  8.00e-06s  1.00e-06d  [FindBigHorizontalLinearOverlap] #linears=16 
+  8.00e-06s  0.00e+00d  [MergeClauses] 
+  6.00e-05s  0.00e+00d  [DetectDominanceRelations] 
+  1.43e-04s  0.00e+00d  [PresolveToFixPoint] #num_loops=1 #num_dual_strengthening=1 
+  6.00e-06s  0.00e+00d  [MergeNoOverlap] 
+  6.00e-06s  0.00e+00d  [MergeNoOverlap2D] 
+  1.60e-05s  0.00e+00d  [ExpandObjective] 
+
+Presolve summary:
+  - 0 affine relations were detected.
+  - rule 'TODO dual: only one unspecified blocking constraint?' was applied 924 times.
+  - rule 'bool_or: always true' was applied 182 times.
+  - rule 'bool_or: implications' was applied 987 times.
+  - rule 'bool_or: only one literal' was applied 14 times.
+  - rule 'duplicate: removed constraint' was applied 91 times.
+  - rule 'linear + amo: extracted enforcement literal' was applied 84 times.
+  - rule 'linear + amo: fixed literal implied by enforcement' was applied 52 times.
+  - rule 'linear + amo: infeasible enforcement' was applied 1 time.
+  - rule 'linear + amo: trivial linear constraint' was applied 74 times.
+  - rule 'linear1: x in domain' was applied 1 time.
+  - rule 'linear: fixed or dup variables' was applied 98 times.
+  - rule 'objective: variable not used elsewhere' was applied 14 times.
+  - rule 'presolve: 15 unused variables removed.' was applied 1 time.
+  - rule 'presolve: iteration' was applied 2 times.
+
+Presolved optimization model '': (model_fingerprint: 0xf24a92fa06a2d1fd)
+#Variables: 154 (#bools: 154 in objective) (154 primary variables)
+  - 154 Booleans in [0,1]
+#kBoolAnd: 152 (#enforced: 152) (#literals: 1'139)
+#kLinearN: 16 (#terms: 200)
+[Symmetry] Graph for symmetry has 478 nodes and 2'482 arcs.
+[Symmetry] Symmetry computation done. time: 0.000372 dtime: 0.00092803
+[Symmetry] #generators: 2, average support size: 143
+[Symmetry] 44 orbits on 154 variables with sizes: 4,4,4,4,4,4,4,4,4,4,...
+
+Preloading model.
+#Bound   0.01s best:-inf  next:[1,155]    initial_domain
+#Model   0.01s var:154/154 constraints:168/168
+
+Starting search at 0.01s with 4 workers.
+3 full problem subsolvers: [core, default_lp, no_lp]
+1 first solution subsolver: [fj]
+9 interleaved subsolvers: [feasibility_pump, graph_arc_lns, graph_cst_lns, graph_dec_lns, graph_var_lns, ls, rins/rens, rnd_cst_lns, rnd_var_lns]
+3 helper subsolvers: [neighborhood_helper, synchronization_agent, update_gap_integral]
+
+#Bound   0.01s best:-inf  next:[1,79]     am1_presolve (num_literals=154 num_am1=76 increase=76 work_done=4102)
+#1       0.01s best:29    next:[30,79]    no_lp
+#Bound   0.01s best:29    next:[30,78]    bool_core (num_cores=1 [size:3 mw:1 d:2] a=76 d=2 fixed=0/231 clauses=89)
+#2       0.01s best:30    next:[31,78]    no_lp
+#3       0.01s best:33    next:[34,78]    no_lp
+#Bound   0.02s best:33    next:[34,77]    bool_core (num_cores=2 [size:5 mw:1 d:3] a=72 d=3 fixed=0/236 clauses=95)
+#Bound   0.02s best:33    next:[34,76]    bool_core (num_cores=3 [size:4 mw:1 d:3] a=69 d=3 fixed=0/242 clauses=103)
+#Bound   0.02s best:33    next:[34,75]    bool_core (num_cores=4 [size:6 mw:1 d:3] a=64 d=3 fixed=0/250 clauses=114)
+#Bound   0.02s best:33    next:[34,74]    bool_core (num_cores=5 [size:6 mw:1 d:3] a=59 d=3 fixed=0/259 clauses=124)
+#Bound   0.02s best:33    next:[34,73]    bool_core (num_cores=6 [size:6 mw:1 d:4] a=54 d=4 fixed=0/268 clauses=137)
+#Bound   0.02s best:33    next:[34,72]    bool_core (num_cores=7 [size:5 mw:1 d:5] a=50 d=5 fixed=0/278 clauses=157)
+#Bound   0.02s best:33    next:[34,71]    bool_core (num_cores=8 [size:6 mw:1 d:3] a=45 d=5 fixed=0/291 clauses=177)
+#Bound   0.02s best:33    next:[34,70]    bool_core (num_cores=9 [size:5 mw:1 d:3] a=41 d=5 fixed=0/299 clauses=190)
+#Bound   0.02s best:33    next:[34,69]    bool_core (num_cores=10 [size:5 mw:1 d:4] a=37 d=5 fixed=0/306 clauses=209)
+#Bound   0.02s best:33    next:[34,68]    bool_core (num_cores=11 [size:5 mw:1 d:3] a=33 d=5 fixed=0/315 clauses=227)
+#Bound   0.02s best:33    next:[34,67]    bool_core (num_cores=12 [size:5 mw:1 d:3] a=29 d=5 fixed=0/322 clauses=238)
+#Bound   0.02s best:33    next:[34,66]    bool_core (num_cores=13 [size:7 mw:1 d:3] a=23 d=5 fixed=0/331 clauses=256)
+#4       0.02s best:34    next:[35,66]    ls_restart_decay(batch:1 lin{mvs:23 evals:134} #w_updates:9 #perturb:0)
+#Bound   0.02s best:34    next:[35,65]    bool_core (num_cores=14 [size:6 mw:1 d:4] a=18 d=5 fixed=0/341 clauses=276)
+#Bound   0.02s best:34    next:[35,64]    bool_core (num_cores=15 [size:7 mw:1 d:4] a=12 d=5 fixed=0/354 clauses=291)
+#Bound   0.02s best:34    next:[35,63]    bool_core (num_cores=16 [size:4 mw:1 d:6] a=9 d=6 fixed=0/364 clauses=330)
+#Bound   0.02s best:34    next:[35,62]    bool_core (num_cores=17 [size:3 mw:1 d:5] a=7 d=6 fixed=0/373 clauses=388)
+#Bound   0.02s best:34    next:[35,61]    bool_core (num_cores=18 [size:3 mw:1 d:5] a=5 d=6 fixed=0/385 clauses=465)
+#Bound   0.02s best:34    next:[35,60]    bool_core (num_cores=19 [size:2 mw:1 d:5] a=4 d=6 fixed=0/393 clauses=573)
+#5       0.15s best:35    next:[36,54]    graph_cst_lns (d=7.07e-01 s=15 t=0.10 p=1.00 stall=1 h=base)
+#6       0.27s best:36    next:[37,51]    rnd_var_lns (d=8.14e-01 s=20 t=0.10 p=1.00 stall=1 h=base)
+#Bound   0.49s best:36    next:[37,50]    bool_core (num_cores=25 [size:1 mw:1] a=1 d=8 fixed=7/505 clauses=12'745) [skipped_logs=9]
+#Bound   1.66s best:36    next:[37,49]    bool_core (num_cores=26 [size:1 mw:1] a=1 d=8 fixed=8/517 clauses=24'780) [skipped_logs=0]
+#Bound   4.01s best:36    next:[37,48]    bool_core (num_cores=27 [size:1 mw:1] a=1 d=8 fixed=9/527 clauses=31'268)
+#Bound   8.33s best:36    next:[37,47]    bool_core (num_cores=28 [size:1 mw:1] a=1 d=8 fixed=10/536 clauses=39'666)
+#Bound  15.49s best:36    next:[37,46]    bool_core (num_cores=29 [size:1 mw:1] a=1 d=8 fixed=11/544 clauses=54'136)
+#Bound  29.60s best:36    next:[37,45]    bool_core (num_cores=30 [size:1 mw:1] a=1 d=8 fixed=12/551 clauses=72'545)
+#Bound  61.27s best:36    next:[37,44]    bool_core (num_cores=31 [size:1 mw:1] a=1 d=8 fixed=13/558 clauses=105'735)
+#Bound 132.97s best:36    next:[37,43]    bool_core (num_cores=32 [size:1 mw:1] a=1 d=8 fixed=14/563 clauses=149'278)

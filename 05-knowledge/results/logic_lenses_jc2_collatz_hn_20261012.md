@@ -233,6 +233,47 @@ member); the specialization step written out; MISTAKE-596. Statement (6) (fibre 
    singularities at the atypical values are the next object to type (what does `D_g` do to it?).
 5. Is `μ_j = 0` enough for `coker V_j = 0` (HYP-9255's sub-question)?
 
+## 10. κ(13) continuation: what is established, what it would cost (2026-10-12, continuation)
+
+**Goal.** Decide whether `G_13 = Cay(F_169, μ_14)` is 5-colourable (THM-4558's table: `κ(13) ∈ {5, 6}`, `6` per
+decalion89, not re-checked in-repo).
+
+**In-repo FINITE-EXACT facts (scripts `gq_alpha*.py`, `gq_indep_decision.py`, `gq_delsarte.py`,
+`kappa13_subgraphs.py`, `kappa13_cube_test.py`, `kappa_full_solver.py`, `kappa_cpsat.py`, outputs beside them).**
+* `α(G_13) ≥ 36`: CP-SAT finds an independent set of size 36 in 0.3 s (`gq_alpha_13_log.out`); an explicit
+  set of size 34 containing 0: `[0, 6, 10, 28, 30, 34, 36, 42, 45, 51, 53, 56, 63, 65, 71, 73, 80, 88, 90, 95, 99, 110, 114, 119, 129, 131, 134, 136, 138, 143, 146, 153, 164, 167]`. So `χ_f(G_13) ≤ 169/36 < 5`: no counting, ratio, Delsarte
+  (`α ≤ 52.43`, equal to the Hoffman ratio bound) or theta-type obstruction to 5-colourability exists.
+  CP-SAT's upper bound on `α` reached 43 after 133 s and 42 after about 5 minutes (gap halving roughly
+  every doubling of time; not pursued to the end). `α(G_17) ≥ 51` (three compatible parallel lines).
+* `G_13` is triangle-free (so every neighbourhood is independent) with common-neighbour counts in
+  `{0, 1, 2}`; `G_17` has 1,734 triangles. Lines in non-square-norm directions are independent sets of size
+  `q`; two of them are compatible for `q = 7, 11, 13`, three for `q = 17, 23`, four for `q = 19`.
+* **The obstruction, if any, is global:** the ball of radius 2 around 0 (113 vertices) and every union of
+  0 with 6, 7, 8, 9 or 10 of the 12 norm circles (all `C(12, s)` subsets; up to 141 vertices) is 5-colourable
+  (kissat, each instantly); unions of 11 circles (155 vertices) are undecided at 300,000 conflicts.
+* **Solver attempts on the full instance** (colour(0) = 0, colour(1) = 1): CaDiCaL 1.5.3, 68 min, undecided;
+  kissat 4.0.4 and CaDiCaL 1.9.5 (pysat), running at close-out (see their `.out` files for the final
+  status); CP-SAT with symmetry level 2, 3 workers, undecided. Cube timings: fixing the colours of all 14
+  neighbours of 0 leaves CaDiCaL about 10 s per cube (12 random cubes, all UNSAT) against roughly
+  4·10^5 cubes modulo `D_14 × S_4`; fixing 7 consecutive neighbours leaves more than 600 s per cube.
+  A naive cube-and-conquer is therefore of the order of 10^3 CPU-hours.
+* **The largest-class decomposition** (a 5-colouring has a class of size `s ≥ 34`, translatable to contain
+  0, enlargeable to a maximal independent set, so `s ≤ α`): phase 1 enumerates the maximal independent sets
+  of size `≥ 34` containing 0 modulo the stabiliser of 0 (`kappa13_mis_enum.py`, running at close-out),
+  phase 2 would test 4-colourability of each complement.
+
+**External computer proof (CITED, not re-run).** decalion89, `notes/g13_chi.md` (repository
+`chromatic-number-of-the-plane`, 27–29 September 2026): `χ(G_13) = 6`, by exactly this case split
+(`s = 34, 35, 36`, class 0 an independent dominating set, lex-leader under all 4,732 automorphisms,
+value precedence, totalizer cardinalities), cube-and-conquer with binary decision trees of depth
+`≤ 14` (4,823 leaves per formula, time-outs re-split to depth 5), kissat 4.0.4 with 120 s per leaf,
+141,374 DRAT refutations checked by drat-trim, about 470 kissat-hours and 500 drat-trim-hours on
+several dozen cloud machines; the proofs (about 1.2 TB) were deleted, the logs are archived; `α = 36`
+with cake_lpr-checked proofs. The note states it is unrefereed. **Verdict for the repo:** `κ(13) = 6` is
+an external computer proof; in-repo the status stays `κ(13) ∈ {5, 6}` with the FINITE-EXACT facts
+above, and a replication needs about 60 hours of wall time on this machine's 8 cores, which this session
+does not have.
+
 ## 9. META-PATTERNS candidate
 
 **Lens transfer from a logic paper.** Trigger: a paper classifies structures by a lattice of
