@@ -1,0 +1,22 @@
+tau to 2^29 in 3.9s (max 602)
+# (ii) commonest nonzero differences tau(n+h) - tau(n), n <= 2^27; share of nonzero differences in <8,19> (|d| <= 200)
+h=1: break density 0.48569; top [(19, 3006214), (-19, 2976360), (38, 2610418), (-38, 2598945), (27, 2052649), (-27, 2041736), (46, 1939887), (-46, 1905426), (8, 1720890), (-8, 1720554)]; share of |d|<=200 in <8,19>: 1.0000 (|d|<=200 covers 0.9979)
+h=2: break density 0.57521; top [(19, 3593938), (-19, 3566396), (38, 3104405), (-38, 3096168), (27, 2452946), (-27, 2446009), (46, 2297802), (-46, 2270899), (-8, 2056422), (8, 2052919)]; share of |d|<=200 in <8,19>: 1.0000 (|d|<=200 covers 0.9981)
+h=3: break density 0.66377; top [(19, 4159799), (-19, 4143414), (38, 3587961), (-38, 3583676), (27, 2840481), (-27, 2836227), (46, 2648420), (-46, 2633065), (-8, 2383614), (8, 2377630)]; share of |d|<=200 in <8,19>: 1.0000 (|d|<=200 covers 0.9981)
+h=4: break density 0.63430; top [(19, 3988969), (-19, 3968972), (38, 3432915), (-38, 3427677), (27, 2723241), (-27, 2717785), (46, 2534817), (-46, 2515128), (-8, 2284388), (57, 2277662)]; share of |d|<=200 in <8,19>: 1.0000 (|d|<=200 covers 0.9982)
+# (iii) E[(-1)^tau] by dyadic block [2^(j-1), 2^j) and cumulative
+ 2^16: block mean -0.019897  cumulative mean -0.006821
+ 2^17: block mean +0.018799  cumulative mean +0.005989
+ 2^18: block mean -0.015915  cumulative mean -0.004963
+ 2^19: block mean +0.011780  cumulative mean +0.003408
+ 2^20: block mean -0.008041  cumulative mean -0.002316
+ 2^21: block mean +0.004023  cumulative mean +0.000853
+ 2^22: block mean -0.000616  cumulative mean +0.000118
+ 2^23: block mean -0.002204  cumulative mean -0.001043
+ 2^24: block mean +0.004116  cumulative mean +0.001536
+ 2^25: block mean -0.005591  cumulative mean -0.002027
+ 2^26: block mean +0.006531  cumulative mean +0.002252
+ 2^27: block mean -0.007007  cumulative mean -0.002378
+ 2^28: block mean +0.007046  cumulative mean +0.002334
+ 2^29: block mean -0.006786  cumulative mean -0.002226
+done

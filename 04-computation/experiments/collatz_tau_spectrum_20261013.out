@@ -1,0 +1,28 @@
+tau to 2^29 in 5.5s
+176 bins of 1/16 octave; overall mean +0.00032; rms 0.05694
+per-octave rms of the binned bias:
+  [2^18, 2^19): rms 0.08184  mean +0.01214
+  [2^19, 2^20): rms 0.07223  mean -0.00851
+  [2^20, 2^21): rms 0.06492  mean +0.00452
+  [2^21, 2^22): rms 0.05906  mean -0.00115
+  [2^22, 2^23): rms 0.05458  mean -0.00166
+  [2^23, 2^24): rms 0.05115  mean +0.00363
+  [2^24, 2^25): rms 0.04864  mean -0.00511
+  [2^25, 2^26): rms 0.04664  mean +0.00605
+  [2^26, 2^27): rms 0.04524  mean -0.00657
+  [2^27, 2^28): rms 0.04428  mean +0.00665
+  [2^28, 2^29): rms 0.04365  mean -0.00641
+dominant frequencies (cycles per octave) and amplitudes:
+  f = 2.455  period 0.407 octaves  amplitude 0.04227   f*log2(3) mod 1 = 0.891
+  f = 2.540  period 0.394 octaves  amplitude 0.01797   f*log2(3) mod 1 = 0.026
+  f = 2.375  period 0.421 octaves  amplitude 0.01645   f*log2(3) mod 1 = 0.764
+  f = 1.520  period 0.658 octaves  amplitude 0.01330   f*log2(3) mod 1 = 0.409
+  f = 2.625  period 0.381 octaves  amplitude 0.00959   f*log2(3) mod 1 = 0.161
+  f = 2.295  period 0.436 octaves  amplitude 0.00911   f*log2(3) mod 1 = 0.637
+  f = 2.705  period 0.370 octaves  amplitude 0.00662   f*log2(3) mod 1 = 0.287
+  f = 2.215  period 0.451 octaves  amplitude 0.00657   f*log2(3) mod 1 = 0.511
+joint fit of top 4 modes: residual rms 0.04456 vs data rms 0.05694; constant term +0.00017
+logarithmic mean to 2^20: +0.03316
+logarithmic mean to 2^24: +0.02786
+logarithmic mean to 2^29: +0.02286
+done

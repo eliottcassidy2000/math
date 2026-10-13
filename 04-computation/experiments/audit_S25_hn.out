@@ -1,0 +1,33 @@
+# (1) (Z/55)^x: residues l whose decomposition group <l> contains conjugation -1 = 54
+   fixed residues (l mod 55: order): {19: 10, 24: 10, 29: 10, 39: 10, 54: 2}
+   orders occurring among fixed residues: [2, 10]
+   fixed residues of order 10 are exactly l = 4 mod 5 with l a primitive root mod 11: True ; residues: [19, 24, 29, 39]
+   2 mod 55: order 20 , 2^10 mod 55 = 34 , fixed: False
+   any residue of order 20 fixed: False ; any of order 4 fixed: False
+   ramified: D_5 contains (-1,-1) iff 10 in <5 mod 11> = [1, 3, 4, 5, 9]: False;  D_11 contains (-1,-1) iff 4 in <11 mod 5> = [1]: False
+   fixed primes <= 2500 (p, residue degree f = order):
+    [(19, 10, 'q=19^5'), (29, 10, 'q=29^5'), (79, 10, 'q=79^5'), (109, 2, 'q=109^1'), (139, 10, 'q=139^5'), (149, 10, 'q=149^5'), (239, 10, 'q=239^5'), (349, 10, 'q=349^5'), (359, 10, 'q=359^5'), (409, 10, 'q=409^5'), (439, 2, 'q=439^1'), (479, 10, 'q=479^5'), (569, 10, 'q=569^5'), (659, 2, 'q=659^1'), (739, 10, 'q=739^5'), (769, 2, 'q=769^1'), (809, 10, 'q=809^5'), (919, 10, 'q=919^5'), (1009, 10, 'q=1009^5'), (1019, 10, 'q=1019^5'), (1069, 10, 'q=1069^5'), (1129, 10, 'q=1129^5'), (1229, 10, 'q=1229^5'), (1249, 10, 'q=1249^5'), (1289, 10, 'q=1289^5'), (1319, 2, 'q=1319^1'), (1399, 10, 'q=1399^5'), (1429, 2, 'q=1429^1'), (1459, 10, 'q=1459^5'), (1559, 10, 'q=1559^5'), (1579, 10, 'q=1579^5'), (1619, 10, 'q=1619^5'), (1669, 10, 'q=1669^5'), (1759, 2, 'q=1759^1'), (1789, 10, 'q=1789^5'), (1889, 10, 'q=1889^5'), (1949, 10, 'q=1949^5'), (1979, 2, 'q=1979^1'), (1999, 10, 'q=1999^5'), (2089, 2, 'q=2089^1'), (2129, 10, 'q=2129^5'), (2239, 10, 'q=2239^5'), (2309, 2, 'q=2309^1'), (2339, 10, 'q=2339^5'), (2389, 10, 'q=2389^5'), (2459, 10, 'q=2459^5')]
+   residue-degree-two fixed primes <= 2000: [109, 439, 659, 769, 1319, 1429, 1759, 1979]
+   least q over all fixed primes: 109 (109 from the degree-two list; 19^5 = 2476099 )
+
+# (2) q = 109, d = 2: |N1| = 110; max spread of lambda within a norm class 1.78e-14; max |lambda + K(N(a))| = 1.42e-14
+   lambda_min = -19.6447  (= -max_c K(c) = -19.6447);  max |K| = 20.1781 <= 2 sqrt q = 20.8806
+   multiplicity of eigenvalue q+1 = 1 (connected iff 1);  Hoffman bound = 6.5995 -> chi >= 7;  Weil floor = 6.2680
+   the trivial-norm class: lambda at a = 0 is 110.0 = degree q+1
+
+# (2) q = 439, d = 3: |N1| = 440; max spread of lambda within a norm class 3.55e-14; max |lambda + K(N(a))| = 5.68e-14
+   lambda_min = -40.0880  (= -max_c K(c) = -40.0880);  max |K| = 41.5815 <= 2 sqrt q = 41.9047
+   multiplicity of eigenvalue q+1 = 1 (connected iff 1);  Hoffman bound = 11.9758 -> chi >= 12;  Weil floor = 11.5000
+   the trivial-norm class: lambda at a = 0 is 440.0 = degree q+1
+
+# (3) adjacency spectrum of Cay(F_(q^2), N1) versus character sums, small q
+   q = 7: regular of degree 8; max |sorted adjacency eigenvalues - sorted character sums| = 5.11e-15; least adjacency eigenvalue -4.493959 = -max K(c) = -4.493959; Hoffman 2.7802
+   q = 11: regular of degree 12; max |sorted adjacency eigenvalues - sorted character sums| = 1.95e-14; least adjacency eigenvalue -4.795755 = -max K(c) = -4.795755; Hoffman 3.5022
+   q = 23: regular of degree 24; max |sorted adjacency eigenvalues - sorted character sums| = 4.26e-14; least adjacency eigenvalue -7.960687 = -max K(c) = -7.960687; Hoffman 4.0148
+
+# (4) Weil floors 1 + (q+1)/(2 sqrt q)
+   q = 19^5 = 2476099: 787.8
+   q = 29^5 = 20511149: 2265.5
+   q = 79^5 = 3077056399: 27736.6
+   least integer q with floor > 6: 98 (floor at 97: 5.9752; at 101: 6.0747; at 109: 6.2680)
+done

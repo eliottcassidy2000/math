@@ -774,10 +774,10 @@ all heights (THM-1289, published), δ ineffective.
 - **Five OpenAI manuscripts against the three conjectures and BSD (opus, 2026-10-13; [note](../05-knowledge/results/five_manuscripts_chowla_collatz_residue_bsd_20261013.md), THM-4627, THM-4628, HYP-9258).**
   Chowla for Collatz: below the stopping time, affine two-point correlations are Haar limits with exact lag laws (periodicity replaces
   bounded-independence transfer); beyond it, THM-4581 plus periodicity make `tau(n) = tau(n+h)` on a density-one set, so the correlations of
-  `(-1)^tau` tend to `+1` (the census equates them with the merged fraction to three decimals); the only Chowla-shaped open question is
-  `E[(-1)^tau] -> 0`. Residue colourings of `Q(zeta55)` at every conjugation-fixed prime are Kloosterman-forced to `>= 1+(q+1)/(2 sqrt q)`
+  `(-1)^tau` tend to `+1` (the census equates them with the merged fraction to three decimals); the one-point mean `E[(-1)^tau]` is
+  log-periodically biased near half the drift of `tau` (HYP-9258), of a size no fluctuation model allows. Residue colourings of `Q(zeta55)` at every conjugation-fixed prime are Kloosterman-forced to `>= 1+(q+1)/(2 sqrt q)`
   colours (7 at 109, 788 at 19), so the Deligne-Drinfeld degeneration has no colouring analogue. BSD: twist-pair squeeze and divisor
-  removal typed; the open wall is Selmer corank `>= 2` everywhere; fruit curve = 910.a4, square curve = 43.a1 (rank 1). JC(2): a
+  removal typed; the open wall is Selmer corank `>= 2` everywhere; fruit curve = 910.a4, square curve = 364.a1 (rank 1). JC(2): a
   count-monotone ordering test for the Weyl/Poisson lane proposed, no theorem.
 
 - **Chess as a proof system (opus, 2026-10-12; [note](../05-knowledge/results/chess_proof_system_20261012.md), THM-4612, THM-4613, HYP-9246).**

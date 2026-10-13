@@ -1,0 +1,29 @@
+# (1) invariants
+  fruit y^2 = x^3 + 109x^2 + 224x: c4 = 179344, c6 = -75850048, Delta = 8818933760 = [(2, 14), (5, 1), (7, 2), (13, 3)] (sign +), j = 1408317602329/2153060 (denominator [(2, 2), (5, 1), (7, 2), (13, 3)])
+  LMFDB 910.a4 [1,0,1,-234,1352]: c4 = 11209, c6 = -1185157, Delta = 2153060 = [(2, 2), (5, 1), (7, 2), (13, 3)] (sign +), j = 1408317602329/2153060 (denominator [(2, 2), (5, 1), (7, 2), (13, 3)])
+  square, correct model Y^2 = X^3 + 4X^2 + 4: c4 = 256, c6 = -7552, Delta = -23296 = [(2, 8), (7, 1), (13, 1)] (sign -), j = -65536/91 (denominator [(7, 1), (13, 1)])
+  note claim Y^2 = X^3 + 4X^2 + 16: c4 = 256, c6 = -17920, Delta = -176128 = [(2, 12), (43, 1)] (sign -), j = -4096/43 (denominator [(43, 1)])
+  LMFDB 43.a1 [0,1,1,0,0]: c4 = 16, c6 = -280, Delta = -43 = [(43, 1)] (sign -), j = -4096/43 (denominator [(43, 1)])
+  LMFDB 364.a1 [0,1,0,-5,7]: c4 = 256, c6 = -7552, Delta = -23296 = [(2, 8), (7, 1), (13, 1)] (sign -), j = -65536/91 (denominator [(7, 1), (13, 1)])
+
+# (2) Q-isomorphism by (c4, c6) scaling (u^4, u^6)
+  fruit y^2 = x^3 + 109x^2 + 224x  ~  LMFDB 910.a4 [1,0,1,-234,1352]: (True, Fraction(1, 2))
+  square, correct model Y^2 = X^3 + 4X^2 + 4  ~  LMFDB 364.a1 [0,1,0,-5,7]: (True, Fraction(1, 1))
+  square, correct model Y^2 = X^3 + 4X^2 + 4  ~  LMFDB 43.a1 [0,1,1,0,0]: False
+  note claim Y^2 = X^3 + 4X^2 + 16  ~  LMFDB 43.a1 [0,1,1,0,0]: (True, Fraction(1, 2))
+
+# (3) substitution checks on y^2 = 2x^3 + 4x^2 + 1
+  x = -49/9: 16*(2x^3+4x^2+1) = -2370128/729; X^3+4X^2+16 = -583784/729; 4X^3+16X^2+16 = -2370128/729; 4*(2x^3+4x^2+1) = -592532/729; X^3+4X^2+4 = -592532/729
+  x = 17/3: 16*(2x^3+4x^2+1) = 213136/27; X^3+4X^2+16 = 53608/27; 4X^3+16X^2+16 = 213136/27; 4*(2x^3+4x^2+1) = 53284/27; X^3+4X^2+4 = 53284/27
+  x = 49: 16*(2x^3+4x^2+1) = 3918448; X^3+4X^2+16 = 979624; 4X^3+16X^2+16 = 3918448; 4*(2x^3+4x^2+1) = 979612; X^3+4X^2+4 = 979612
+
+# (4) torsion and points
+  fruit: (56,728) on curve: True; (-4,28) on curve: True
+  multiples of (56,728): [(1, ('56', '728')), (2, ('4', '52')), (3, ('0', '0')), (4, ('4', '-52')), (5, ('56', '-728')), (6, 'O')]
+  fruit 2-torsion: x(x^2+109x+224); disc of the quadratic = 10985 = [(5, 1), (13, 3)]; a square? False  -> exactly one rational 2-torsion point
+  fruit #E(F_p) at good p: [(3, 6), (11, 12), (17, 18), (19, 18), (23, 30), (29, 24), (31, 24)]; gcd = 6  (torsion order divides gcd; a point of order 6 exists => torsion = Z/6 iff gcd = 6)
+  square: (10,49) on y^2 = 2x^3+4x^2+1: True; image (20,98) on Y^2 = X^3+4X^2+4: True
+  Nagell-Lutz: 98^2 = 9604 divides |Delta| = 23296? False  -> (20,98) is NOT torsion -> rank >= 1 (PROVED, elementary)
+  square rational 2-torsion: integer roots of X^3+4X^2+4 among divisors of 4: [] (none -> no 2-torsion)
+  square #E(F_p) at good p: [(3, 6), (5, 5), (11, 16), (17, 20), (19, 21), (23, 31)]; gcd = 1 -> torsion trivial iff gcd = 1
+done
