@@ -333,6 +333,30 @@ The common gain is a concrete boundary budget. The remaining barrier has
 not been relabelled as a proof: (7), or an effective substitute, is exactly
 the new outstanding arithmetic obligation.
 
+## 7. Integration of the incoming fast-mode and covariance work
+
+The final fetch brought `bba55f5d6f` and `be97fc0dad`. The former's
+[fast-mode discussion](meta_fibonacci_one_sided_walks_20261013.md)
+samples 64 prefixes per octave and fits a roughly -0.452 exponent for its
+normalized mod-3 discrepancy over the stated finite range. That is
+consistent with a square-root heuristic; it does not prove a bound at
+every prefix or future scale. Our complete census through 2^34 retains
+the intervening extrema and exact squared sums. These are complementary
+observations, with different strength and no change to the infinite
+hypothesis in section 4.
+
+The incoming Q covariance model prompted a new exact calculation:
+the correlation update `(r-1)/(3-r)` has a two-generation Pell matrix
+and an explicit variance law; see
+[golden/nested section 6](golden_nested_trees_20261013c.md#6-incoming-q-covariance-work-a-genuine-two-step-pell-mechanism).
+This suggests a precise helper question for the positive energy target:
+can the signed-cut refinement preserve a finite covariance state while
+charging all omitted, source-conditioned correlations to a summable
+remainder? The Q calculation works because the model specifies exactly
+which correlations survive. Its stationarity and sampling assumptions
+have not been proved for Q, much less for Collatz. A numerical covariance
+closure would not certify the future energy bound used here.
+
 ## Reproduction
 
 All commands run from the repository worktree; scratch files stay outside it.

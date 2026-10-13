@@ -24,7 +24,8 @@
   "normal_optimized_controls": {
     "nested": 6293490,
     "character": 6655589,
-    "golden": 742235
+    "golden": 742235,
+    "incoming_Q_Pell": 329922
   },
   "interval_precision_bits": 160,
   "bit_moment_controls": 256,
@@ -45,6 +46,9 @@
     "05-knowledge/results/golden_parity_ray_20261013c.json": "8875f6ea03a8bb6126ba1155cba10979b1b92b99e3eac2fc8560f6a76fec48be",
     "05-knowledge/results/golden_spectra_20261013c.json": "d826fcc38a86abfa5f96aca189f79f39016d4fc5f5f2471d938d15c92cf65ed3",
     "05-knowledge/results/golden_tree_audit_20261013c.json": "dae6e6cdb15759d3f3a1aff3599e1f8f62a01aee9d7700343fbca611d227bcef",
-    "05-knowledge/results/nested_trees_20261013c.json": "0a90f0d288ae2eae3e1238c6ed6fbbaf556ae2b2303a9711c23e14b7558363e2"
-  }
+    "05-knowledge/results/nested_trees_20261013c.json": "0a90f0d288ae2eae3e1238c6ed6fbbaf556ae2b2303a9711c23e14b7558363e2",
+    "04-computation/experiments/nested_incoming_bridge_20261013c.py": "01ce36f07740d3edd647b00789a91f3d999290dd0227981720fc9193001e4d1f",
+    "05-knowledge/results/nested_incoming_bridge_20261013c.json": "bd62231404ce0ed7cc1546538adc75d15e494a0cf6c532af6f17aa3869f0c607"
+  },
+  "incoming_bridge_scope": "Exact Q identities through 2^16 and exact covariance/Pell model; sampling assumptions for actual Q remain OPEN."
 }

@@ -4,7 +4,9 @@
 **Status:** PROVED elementary identities and the golden depth-ball character
 law; inherited PROVED termination of the golden control map on Z[phi];
 FINITE-EXACT nested recurrences through `2^20`, Pascal-word summaries through
-level 1024, golden ray census through `2^22`; NUMERICAL ray spectra; OPEN
+level 1024, golden ray census through `2^22`; NUMERICAL ray spectra;
+CONDITIONAL Q covariance model with a proved Pell conjugacy and variance law;
+OPEN
 transport of these mechanisms to a universal Collatz certificate.
 Self-audited. Classical sequence facts are credited separately below.
 
@@ -345,10 +347,121 @@ of a nonregular inverse tree replaces the exactly soluble coefficient
 the last question at the level of an exact Mellin functional, leaving its
 arithmetic tail as an explicit open obligation.
 
+## 6. Incoming Q covariance work: a genuine two-step Pell mechanism
+
+**Inheritance after the final fetch.** Commits `bba55f5d6f` and `be97fc0dad`
+add the [one-sided walk analysis](meta_fibonacci_one_sided_walks_20261013.md)
+and [THM-4630, silver-ratio covariance model](../../01-canon/theorems/THM-4630-hofstadter-q-jitter-is-the-silver-ratio-arma-fixed-point-rho1-equals-1-minus-sqrt2.md).
+The actual Q sampling assumptions remain **OPEN**. The following is a
+**PROVED statement about the explicitly stationary covariance model**, not
+an unconditional theorem about Q or Collatz.
+
+Let a parent process have positive variance V and lag-one correlation r in
+[-1,1]. Assume its two half-weight source samples are uncorrelated except
+for the shared adjacent-index pair. The new source has variance V/2 and
+correlation c=r/2 at lag one, zero at higher lags. This covariance is
+admissible: its spectral factor `1+r cos(w)` is nonnegative. Pass this
+source through the stationary causal stable filter
+
+    x_n=-x_(n-1)/2-x_(n-2)/2+s_n.
+
+The filter roots have modulus 1/sqrt(2). Its covariance equations, with
+source variance sigma^2, give
+
+    gamma_2=-(gamma_1+gamma_0)/2,
+    3 gamma_0+gamma_1=(4-2c) sigma^2,
+    3 gamma_1=-gamma_0+2c sigma^2.
+
+Consequently the model's generation update is exactly
+
+    r_new=F(r)=(r-1)/(3-r),
+    V_new/V=(3-r)/4.                                  (14)
+
+This supplies more than a fixed-point equation. F maps [-1,1] into
+[-1/2,0] and has derivative `2/(3-r)^2 <= 1/2` on that initial interval.
+Every admissible starting correlation therefore converges to
+`r_-=1-sqrt(2)`. If `r_+=1+sqrt(2)`, its exact projective form is
+
+    (F(r)-r_-)/(F(r)-r_+)
+      =(3-2sqrt(2)) (r-r_-)/(r-r_+).                  (15)
+
+In particular `F'(r_-)=3-2sqrt(2)=r_-^2`, the inverse of the
+square-triangular Pell unit. This coincidence has an explicit integral map:
+in the coordinate s=1-r, one generation is `s -> 2(s+1)/(s+2)`, and
+**two generations** are
+
+    s -> (3s+4)/(2s+3),
+    [numerator,denominator]^T -> [[3,4],[2,3]]
+                                [numerator,denominator]^T.  (16)
+
+The same matrix multiplies `X+Y sqrt(2)` by `3+2sqrt(2)` and preserves
+`X^2-2Y^2`. With X=2n+1 and Y=2m, norm one is precisely
+`n(n+1)/2=m^2`. Thus the map from the covariance recursion to the Pell
+recursion preserves projective dynamics and a quadratic norm; it does not
+make a general covariance state a square-triangular integer solution.
+Its needed sidecar is the unnormalised pair (X,Y), including its norm.
+
+The variance also has a closed form, useful as a hostile control against
+merely fitting a constant exponent. Put
+
+    A=(1+sqrt(2)-r_0)/(2sqrt(2)), B=1-A,
+    v_+=(2+sqrt(2))/4, v_-=(2-sqrt(2))/4.
+
+Then for every k>=0 in this model,
+
+    V_k/V_0=A v_+^k+B v_-^k.                         (17)
+
+Indeed the projective matrix for (14) is `[[1,-1],[-1,3]]`;
+its denominator multiplies by `3-r_k` at each step, so V_k is that
+denominator divided by 4^k. Diagonalising the matrix gives (17).
+A>0 for r_0 in [-1,1]. If generation k is assigned size 2^k and V is the
+variance of Q(n)/n-1/2, this model gives the exponent
+`1+log_2(v_+)/2` for unnormalised rms fluctuations. Connecting that
+generation observer to the actual Q sequence still needs the source
+sampling and stationary-envelope assumptions; none follows from (14).
+
+**Exact audit and first failed implication.** The incoming exact index
+formulas omitted two finite-size terms. With d(n)=Q(n)/n-1/2 they are
+
+    p/n=1/2+1/(2n)-(1-1/n)d(n-1),
+    q/n=1/2+1/n-(1-2/n)d(n-2).                       (18)
+
+n=3 is the minimal hostile to the omitted terms. The main normalized Q
+identity already included its correct 3/(4n) source and is unaffected.
+The companion [exact checker](../../04-computation/experiments/nested_incoming_bridge_20261013c.py)
+verifies (18) and the Q identity at every source through 2^16, the
+covariance equations and Pell conjugacy for 33 rational correlations
+including both endpoints, and matrix/variance iterates through 1024.
+It rejects r=2. Its [saved output](nested_incoming_bridge_20261013c.json)
+also independently confirms Q(20)=12, Q(1024)=557 and Q(1536)=808,
+where the early `Q(3*2^k)=2^(k+1)` pattern fails.
+
+**What transfers back to the other lanes.** The golden unit has
+`phi'=-phi^(-1)`; the silver covariance parameter has
+`r_-=-(1+sqrt(2))^(-1)`. Their traces, integral lattices and residue
+branching differ. Equations (15)-(16), not a common decimal appearance,
+are the precise silver/Pell bridge. For Collatz the analogous productive
+question is whether a *source-conditioned* positive covariance or energy
+operator closes with an explicitly bounded remainder. Discarding the
+remainder or calling deterministic source samples white would reproduce
+the unproved step, not bypass it. The exact signed-cut energy in the
+companion note is the consequence that such an operator must bound.
+
+The incoming unpinned Conway continuum map eventually drifts to a flat
+profile; the discrete dyadic boundary remains pinned. Our ordered Pascal
+DAG retains that boundary by construction. Its maximum raw charge M_k
+and the incoming maximum relative deviation A_k are different queries:
+`d(n)=e(n)/(2n)`, so maximization and division by n cannot be interchanged.
+The constants about 0.399 and 0.14 therefore cannot be compared as if they
+measured the same quantity. The primary Pinn paper cited in section 1
+likewise treats the Q fluctuation exponent empirically; the new model
+explains a conditional mechanism, without upgrading those observations.
+
 ## Reproduction
 
 ```sh
 python3 04-computation/experiments/nested_trees_20261013c.py --output /tmp/nested.json
+python3 04-computation/experiments/nested_incoming_bridge_20261013c.py --output /tmp/incoming-bridge.json
 clang++ -O3 -std=c++17 04-computation/experiments/golden_parity_ray_20261013c.cpp -o /tmp/golden-ray
 /tmp/golden-ray 22 /tmp/golden22.json
 python3 04-computation/experiments/golden_tree_audit_20261013c.py --ray-census /tmp/golden22.json --output /tmp/golden-tree.json
