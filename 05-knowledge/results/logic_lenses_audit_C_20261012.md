@@ -123,7 +123,9 @@ for every member of the family without any side condition.
    records the script's wrong "genus 2" line but not this one; add a note. Also declare `γ_0, α, β ∈ K`
    constants in the Setting, and state the two side conditions explicitly (`γx | p(w) + 2γ` and
    `(γx)^2 | q(w) + γw` in `K[x,y,z]`; Gao §3.3: finitely many linear conditions on the coefficients of `p`
-   and on `(γ_0, α)`).
+   and on `(γ_0, α)`). Provenance nit inherited from THM-4621 (flagged by audit A): in (5) "This holds for
+   THM-1300 (`S_3`, THM-4621)" should also credit THM-1310 (July 2026), where `deg F = 3`, the `S_3` Galois
+   group and the Jelonek set of THM-1300 were first established in-repo.
 
 ## What checks (no change needed)
 

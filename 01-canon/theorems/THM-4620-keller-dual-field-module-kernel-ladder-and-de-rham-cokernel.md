@@ -243,6 +243,9 @@ Gauss–Manin connection, and the trace splits off `O_U`.  ∎
 * **What is not claimed.** Nothing here bounds `μ(f)` for a hypothetical planar counterexample, and
   for `d_j ≥ 2` it is not claimed that `μ_j = 0` implies `coker V_j = 0` (the cokernel could in
   principle be a nonzero torsion module over `K[G_j]`); for `d_j = 1` it does, by (4).
+* **Sequel (THM-4626).** A surjective dual field is locally nilpotent in every dimension (`coker V_j = 0`
+  iff `K[x] = R_j[F_j]`), by a leading-coefficient filtration on `K[x] ⊂ L_j[F_j]`; so HYP-9255 is
+  equivalent to `JC_2`.
 * **Literature.** Gurjar–Masuda–Miyanishi prove the planar criterion and, more generally, that a
   normal affine curve with a surjective derivation is `A^1` (their Theorem 1.2, via
   `dim H^1 = 2g - 1 + n`); the dictionary above is the `n`-dimensional, dual-field form of the same

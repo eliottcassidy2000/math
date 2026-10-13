@@ -124,9 +124,22 @@ by specialization). Over `F_3 ≠ 0` the fibre of `F` has `d + 1 − Σ(multipli
 points and never exactly `d`. The `(F_1, F_2)`-chart misses the `2(d−1)` node points with `bx = 2`
 (audit C); genus and irreducibility are unaffected.
 
-### 4.7 Hypotheses
+### 4.7 THM-4626 — surjective dual fields are locally nilpotent; HYP-9255 ⟺ JC₂ (PROVED; continuation)
 
-* HYP-9255 — surjective dual field ⟹ automorphism in dimension three (refuted for `n ≥ 4` by padding; holds in fibre form on the whole tangent-sweep family by THM-4625).
+If `coker V_j = 0` then (THM-4620(4)) `K[x] ⊂ L_j[F_j]` with `V_j = ∂/∂F_j`; the leading-coefficient
+modules `M_m` of the `F_j`-degree filtration satisfy `M_m ⊆ M_(m−1)` (differentiate) and `M_m ⊆ M_(m+1)`
+(integrate, using surjectivity), so all equal `M_0 = R_j` and `K[x] = R_j[F_j]`. Hence surjective ⟺
+locally nilpotent ⟺ `H^1_dR(K[x]/K[G_j]) = 0`. In dimension three this is THM-4562's slice case with
+`X_j ≅ A^2`, so HYP-9255 ⟺ JC₂ (padding gives the converse); for `n ≥ 4` the padding example refutes
+it. The hypothesis matters: `x∂_x − y∂_y + ∂_z` is surjective, divergence-free, not nilpotent (kernel of
+transcendence degree one). Precursors in the plane: Stein 1989, Berson–van den Essen–Maubach 2001
+(surjective divergence-zero derivations of `R[X,Y]` are locally nilpotent), Gurjar–Masuda–Miyanishi
+2013. HYP-9255 is RESOLVED as equivalent to JC₂; its sub-question (`μ_j = 0` ⟹ `coker = 0` for
+`d_j ≥ 2`) stays open.
+
+### 4.8 Hypotheses
+
+* HYP-9255 — RESOLVED by THM-4626: equivalent to JC₂ (refuted for `n ≥ 4` by padding); the surviving independent question is the generic-rank-zero sub-question.
 * HYP-9256 — affine rigidity of `G_q` for all `q ∉ {4, 8, 9}`.
 * HYP-9257 — `length_(A_3) V_F = 4` for THM-1300.
 
