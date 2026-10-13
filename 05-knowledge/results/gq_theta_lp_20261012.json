@@ -1,0 +1,101 @@
+{
+ "2": {
+  "n": 4,
+  "degree": 3,
+  "theta": 1.0,
+  "chi_lower": 4,
+  "alpha_upper": 1.0
+ },
+ "3": {
+  "n": 9,
+  "degree": 4,
+  "theta": 2.9999999999999996,
+  "chi_lower": 3,
+  "alpha_upper": 2.9999999999999996
+ },
+ "4": {
+  "n": 16,
+  "degree": 5,
+  "theta": 6.0,
+  "chi_lower": 3,
+  "alpha_upper": 6.0
+ },
+ "5": {
+  "n": 25,
+  "degree": 6,
+  "theta": 7.594638151136073,
+  "chi_lower": 4,
+  "alpha_upper": 7.594638151136073
+ },
+ "7": {
+  "n": 49,
+  "degree": 8,
+  "theta": 17.624837532146888,
+  "chi_lower": 3,
+  "alpha_upper": 17.624837532146888
+ },
+ "8": {
+  "n": 64,
+  "degree": 9,
+  "theta": 16.0,
+  "chi_lower": 4,
+  "alpha_upper": 16.0
+ },
+ "9": {
+  "n": 81,
+  "degree": 10,
+  "theta": 27.00000000000003,
+  "chi_lower": 3,
+  "alpha_upper": 27.00000000000003
+ },
+ "11": {
+  "n": 121,
+  "degree": 12,
+  "theta": 34.549583262439015,
+  "chi_lower": 4,
+  "alpha_upper": 34.549583262439015
+ },
+ "13": {
+  "n": 169,
+  "degree": 14,
+  "theta": 52.4266254332055,
+  "chi_lower": 4,
+  "alpha_upper": 52.4266254332055
+ },
+ "16": {
+  "n": 256,
+  "degree": 17,
+  "theta": 74.66666666666627,
+  "chi_lower": 4,
+  "alpha_upper": 74.66666666666627
+ },
+ "17": {
+  "n": 289,
+  "degree": 18,
+  "theta": 77.19853429582844,
+  "chi_lower": 4,
+  "alpha_upper": 77.19853429582844
+ },
+ "19": {
+  "n": 361,
+  "degree": 20,
+  "theta": 99.49797307973606,
+  "chi_lower": 4,
+  "alpha_upper": 99.49797307973606
+ },
+ "23": {
+  "n": 529,
+  "degree": 24,
+  "theta": 131.76198299840405,
+  "chi_lower": 5,
+  "alpha_upper": 131.76198299840405
+ },
+ "25": {
+  "n": 625,
+  "degree": 26,
+  "theta": 171.77431287230476,
+  "chi_lower": 4,
+  "alpha_upper": 171.77431287230476
+ },
+ "checks": 16
+}

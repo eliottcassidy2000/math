@@ -1,0 +1,1140 @@
+{
+ "automorphisms": 2,
+ "census": {
+  "converged": 277,
+  "faithful_samples": 50,
+  "local_dof": 1,
+  "starts": 300
+ },
+ "checks": 282,
+ "classes": 18,
+ "edges": 38,
+ "four_cycles": 10,
+ "free_angles": 9,
+ "lscan": {
+  "mers1": {
+   "faithful": 5,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "mers2": {
+   "faithful": 9,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "mers3": {
+   "faithful": 8,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "mers4": {
+   "faithful": 4,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "mers5": {
+   "faithful": 1,
+   "min_height_digits": [
+    4
+   ]
+  },
+  "thirds": {
+   "faithful": 1,
+   "min_height_digits": [
+    4
+   ]
+  },
+  "thirdsbar": {
+   "faithful": 3,
+   "min_height_digits": [
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^0": {
+   "faithful": 3,
+   "min_height_digits": [
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^1": {
+   "faithful": 1,
+   "min_height_digits": [
+    4
+   ]
+  },
+  "z110^10": {
+   "faithful": 3,
+   "min_height_digits": [
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^100": {
+   "faithful": 5,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^101": {
+   "faithful": 6,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^102": {
+   "faithful": 5,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^103": {
+   "faithful": 5,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^104": {
+   "faithful": 4,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^105": {
+   "faithful": 3,
+   "min_height_digits": [
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^106": {
+   "faithful": 4,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^107": {
+   "faithful": 1,
+   "min_height_digits": [
+    4
+   ]
+  },
+  "z110^108": {
+   "faithful": 2,
+   "min_height_digits": [
+    4,
+    4
+   ]
+  },
+  "z110^109": {
+   "faithful": 2,
+   "min_height_digits": [
+    4,
+    4
+   ]
+  },
+  "z110^11": {
+   "faithful": 7,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^12": {
+   "faithful": 8,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^13": {
+   "faithful": 8,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^14": {
+   "faithful": 7,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^15": {
+   "faithful": 8,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^16": {
+   "faithful": 5,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^17": {
+   "faithful": 5,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^18": {
+   "faithful": 3,
+   "min_height_digits": [
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^19": {
+   "faithful": 4,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^2": {
+   "faithful": 2,
+   "min_height_digits": [
+    4,
+    4
+   ]
+  },
+  "z110^20": {
+   "faithful": 2,
+   "min_height_digits": [
+    4,
+    4
+   ]
+  },
+  "z110^21": {
+   "faithful": 2,
+   "min_height_digits": [
+    4,
+    4
+   ]
+  },
+  "z110^22": {
+   "faithful": 4,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^23": {
+   "faithful": 6,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^24": {
+   "faithful": 6,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^25": {
+   "faithful": 7,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^26": {
+   "faithful": 6,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^27": {
+   "faithful": 8,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^28": {
+   "faithful": 12,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^29": {
+   "faithful": 7,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^3": {
+   "faithful": 2,
+   "min_height_digits": [
+    4,
+    4
+   ]
+  },
+  "z110^30": {
+   "faithful": 4,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^31": {
+   "faithful": 4,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^32": {
+   "faithful": 4,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^33": {
+   "faithful": 2,
+   "min_height_digits": [
+    4,
+    4
+   ]
+  },
+  "z110^34": {
+   "faithful": 5,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^35": {
+   "faithful": 6,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^36": {
+   "faithful": 4,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^37": {
+   "faithful": 4,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^38": {
+   "faithful": 3,
+   "min_height_digits": [
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^39": {
+   "faithful": 2,
+   "min_height_digits": [
+    4,
+    4
+   ]
+  },
+  "z110^4": {
+   "faithful": 3,
+   "min_height_digits": [
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^40": {
+   "faithful": 5,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^41": {
+   "faithful": 7,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^42": {
+   "faithful": 7,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^43": {
+   "faithful": 5,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^44": {
+   "faithful": 6,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^45": {
+   "faithful": 5,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^46": {
+   "faithful": 0,
+   "min_height_digits": []
+  },
+  "z110^47": {
+   "faithful": 7,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^48": {
+   "faithful": 3,
+   "min_height_digits": [
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^49": {
+   "faithful": 3,
+   "min_height_digits": [
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^5": {
+   "faithful": 5,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^50": {
+   "faithful": 4,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^51": {
+   "faithful": 4,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^52": {
+   "faithful": 4,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^53": {
+   "faithful": 3,
+   "min_height_digits": [
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^54": {
+   "faithful": 3,
+   "min_height_digits": [
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^55": {
+   "faithful": 7,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^56": {
+   "faithful": 4,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^57": {
+   "faithful": 4,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^58": {
+   "faithful": 5,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^59": {
+   "faithful": 6,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^6": {
+   "faithful": 4,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^60": {
+   "faithful": 4,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^61": {
+   "faithful": 3,
+   "min_height_digits": [
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^62": {
+   "faithful": 6,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^63": {
+   "faithful": 2,
+   "min_height_digits": [
+    4,
+    4
+   ]
+  },
+  "z110^64": {
+   "faithful": 5,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^65": {
+   "faithful": 2,
+   "min_height_digits": [
+    4,
+    4
+   ]
+  },
+  "z110^66": {
+   "faithful": 2,
+   "min_height_digits": [
+    4,
+    4
+   ]
+  },
+  "z110^67": {
+   "faithful": 4,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^68": {
+   "faithful": 9,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^69": {
+   "faithful": 8,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^7": {
+   "faithful": 3,
+   "min_height_digits": [
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^70": {
+   "faithful": 3,
+   "min_height_digits": [
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^71": {
+   "faithful": 4,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^72": {
+   "faithful": 5,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^73": {
+   "faithful": 3,
+   "min_height_digits": [
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^74": {
+   "faithful": 1,
+   "min_height_digits": [
+    4
+   ]
+  },
+  "z110^75": {
+   "faithful": 2,
+   "min_height_digits": [
+    4,
+    4
+   ]
+  },
+  "z110^76": {
+   "faithful": 6,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^77": {
+   "faithful": 2,
+   "min_height_digits": [
+    4,
+    4
+   ]
+  },
+  "z110^78": {
+   "faithful": 2,
+   "min_height_digits": [
+    4,
+    4
+   ]
+  },
+  "z110^79": {
+   "faithful": 5,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^8": {
+   "faithful": 5,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^80": {
+   "faithful": 5,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^81": {
+   "faithful": 8,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^82": {
+   "faithful": 7,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^83": {
+   "faithful": 4,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^84": {
+   "faithful": 6,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^85": {
+   "faithful": 6,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^86": {
+   "faithful": 6,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^87": {
+   "faithful": 2,
+   "min_height_digits": [
+    4,
+    4
+   ]
+  },
+  "z110^88": {
+   "faithful": 4,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^89": {
+   "faithful": 3,
+   "min_height_digits": [
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^9": {
+   "faithful": 4,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^90": {
+   "faithful": 3,
+   "min_height_digits": [
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^91": {
+   "faithful": 6,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^92": {
+   "faithful": 4,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^93": {
+   "faithful": 2,
+   "min_height_digits": [
+    4,
+    4
+   ]
+  },
+  "z110^94": {
+   "faithful": 6,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^95": {
+   "faithful": 5,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^96": {
+   "faithful": 6,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^97": {
+   "faithful": 5,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^98": {
+   "faithful": 4,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "z110^99": {
+   "faithful": 6,
+   "min_height_digits": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  }
+ },
+ "relations": 8,
+ "support4_relations": [
+  {
+   "13": "-2",
+   "14": "1",
+   "17": "-2",
+   "18": "1"
+  },
+  {
+   "14": "1",
+   "15": "2",
+   "16": "-2",
+   "18": "-1"
+  }
+ ],
+ "vertices": 21
+}

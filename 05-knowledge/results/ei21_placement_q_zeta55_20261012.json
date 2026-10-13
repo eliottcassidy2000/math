@@ -1,0 +1,30 @@
+{
+ "automorphisms": 2,
+ "census": {
+  "converged": 277,
+  "faithful_samples": 50,
+  "local_dof": 1,
+  "starts": 300
+ },
+ "checks": 281,
+ "classes": 18,
+ "edges": 38,
+ "four_cycles": 10,
+ "free_angles": 9,
+ "relations": 8,
+ "support4_relations": [
+  {
+   "13": "-2",
+   "14": "1",
+   "17": "-2",
+   "18": "1"
+  },
+  {
+   "14": "1",
+   "15": "2",
+   "16": "-2",
+   "18": "-1"
+  }
+ ],
+ "vertices": 21
+}
