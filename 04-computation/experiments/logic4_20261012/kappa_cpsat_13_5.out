@@ -147,3 +147,4 @@ Starting search at 0.06s with 3 workers.
 2 interleaved subsolvers: [feasibility_pump, rins/rens]
 2 helper subsolvers: [neighborhood_helper, synchronization_agent]
 
+RUN_STATUS: CP-SAT (3 workers, symmetry level 2) killed undecided at session close-out after 53:35

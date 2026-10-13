@@ -1,0 +1,1 @@
+RUN_STATUS: kissat 4.0.4 still running at session close-out (elapsed 39:11, pid 8056); check this file later or stop with: pkill -f 'kappa_full_solver.py 13 5 kissat404'

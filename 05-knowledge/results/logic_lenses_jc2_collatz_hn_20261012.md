@@ -253,7 +253,11 @@ decalion89, not re-checked in-repo).
   set of size 34 containing 0: `[0, 6, 10, 28, 30, 34, 36, 42, 45, 51, 53, 56, 63, 65, 71, 73, 80, 88, 90, 95, 99, 110, 114, 119, 129, 131, 134, 136, 138, 143, 146, 153, 164, 167]`. So `χ_f(G_13) ≤ 169/36 < 5`: no counting, ratio, Delsarte
   (`α ≤ 52.43`, equal to the Hoffman ratio bound) or theta-type obstruction to 5-colourability exists.
   CP-SAT's upper bound on `α` reached 43 after 133 s and 42 after about 5 minutes (gap halving roughly
-  every doubling of time; not pursued to the end). `α(G_17) ≥ 51` (three compatible parallel lines).
+  every doubling of time; not pursued to the end). `α(G_17) ≥ 57` (CP-SAT finds a 57-point independent
+  set containing 0 in 0.1 s, `gq_indep_17_57.out`, matching decalion89's best; three compatible parallel
+  lines give 51); a 5-colouring of `G_17` would need a class of size 58, so `α(G_17) = 57` would prove
+  `κ(17) = 6` (decalion89 excludes 58-sets containing a full circle; the general case is open; a bounded
+  search for a 58-set is recorded in `gq_indep_17_58.out`).
 * `G_13` is triangle-free (so every neighbourhood is independent) with common-neighbour counts in
   `{0, 1, 2}`; `G_17` has 1,734 triangles. Lines in non-square-norm directions are independent sets of size
   `q`; two of them are compatible for `q = 7, 11, 13`, three for `q = 17, 23`, four for `q = 19`.
@@ -270,6 +274,8 @@ decalion89, not re-checked in-repo).
   0, enlargeable to a maximal independent set, so `s ≤ α`): phase 1 enumerates the maximal independent sets
   of size `≥ 34` containing 0 modulo the stabiliser of 0 (`kappa13_mis_enum.py`, running at close-out),
   phase 2 would test 4-colourability of each complement.
+
+**Status at close-out.** kissat 4.0.4 and CaDiCaL 1.9.5 on the full instance were left running (elapsed 39:11 and 39:11; their `.out` files carry a `RUN_STATUS` line and the stop command); CP-SAT was stopped undecided after 53:35; the maximal-independent-set enumeration was stopped after 35:06 without completing (too slow in that form; a dedicated enumeration or decalion89's direct SAT encoding of the largest class is the way to run phase 2). The bounded search for a 58-point independent set in `G_17` returned UNKNOWN after 1,200 s (`gq_indep_17_58.out`).
 
 **External computer proof (CITED, not re-run).** decalion89, `notes/g13_chi.md` (repository
 `chromatic-number-of-the-plane`, 27–29 September 2026): `χ(G_13) = 6`, by exactly this case split
