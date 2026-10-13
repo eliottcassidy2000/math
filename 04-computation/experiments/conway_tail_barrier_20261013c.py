@@ -112,6 +112,24 @@ def main():
         check(recursive_c(n) == c[n], "independent memoized recursion")
     for power in range(1, 13):
         check(c[1 << power] == 1 << (power - 1), "dyadic endpoints")
+    for power in range(1, 12):
+        edge = 1 << power
+        for n in range(edge, 2 * edge + 1):
+            j, k = c[n - 1], n - c[n - 1]
+            check(edge // 2 <= min(j, k) <= max(j, k) <= edge, "closed previous arc")
+        old_peak = max(Fraction(c[n], n) for n in range(edge // 2, edge + 1))
+        new_peak = max(Fraction(c[n], n) for n in range(edge, 2 * edge + 1))
+        check(new_peak <= old_peak, "nonincreasing closed-arc maximum")
+    # Incoming rounding-to-one claim has actual exceptions at the boundary.
+    c20 = conway((1 << 21) - 1)
+    edge = 1 << 20
+    outside_half_open = [n for n in range(edge, 2 * edge)
+                         if not (edge // 2 <= c20[n - 1] < edge and
+                                 edge // 2 <= n - c20[n - 1] < edge)]
+    check(outside_half_open == list(range(2097133, 2097152)), "nineteen real boundary exceptions")
+    n = 3 * (1 << 18)
+    lagged_selector_bill = c20[n] - 2 * c20[n // 2]
+    check(lagged_selector_bill == -1430, "lagged generation selector is a separate approximation")
 
     slope = Fraction(11, 20)
     receipt = authenticate_tail(c, 1490, slope)
@@ -149,12 +167,14 @@ def main():
           "20 and 1024 distinguish and coincide")
     check(first_q_down == 16, "Q is not slow growing")
     report = {"status": "FINITE-EXACT boundary; PROVED global consequence in paired note",
-              "universe": "all Conway and Q indices 1..4096; Q claim is finite only",
+              "universe": "Conway/Q identities 1..4096; closed arcs through4096; Conway k20 boundary probe through2097151; Q finite only",
               "certificate": receipt, "last_one_twentieth_violation": 1489,
               "last_violation_value": c[1489], "arc_1024_violations": violations,
               "arcs": arcs, "other_slopes": other_receipts,
               "sequence_controls": {"C20": c[20], "Q20": qseq[20], "C1024": c[1024],
                                     "Q1024": qseq[1024], "first_Q_decrease": first_q_down},
+              "incoming_controls": {"k20_half_open_exceptions": outside_half_open,
+                                    "k19_at_x_three_halves_n_times_generation_difference": lagged_selector_bill},
               "prefix_sha256": hashlib.sha256(json.dumps(c[:3308], separators=(",", ":")).encode()).hexdigest(),
               "checks": CHECKS}
     print(json.dumps(report, indent=2, sort_keys=True))

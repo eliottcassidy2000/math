@@ -174,6 +174,56 @@ retains the entire supported boundary relation instead of merely its
 cardinality. These are precise shared proof obligations, not equivalences
 between the underlying problems.
 
+## 6. Incoming generation model: a closed-arc theorem and an exact selector
+
+The concurrent [one-sided-walk packet](meta_fibonacci_one_sided_walks_20261013.md)
+and HYP-9259 arrived at integration. Its exact deviation identity agrees
+with (1), and its lagged continuum iteration is useful **NUMERICAL**
+evidence. Two boundary/clock distinctions are required before transferring
+that model to an exact recursion claim.
+
+**PROVED closed-arc theorem.** For every dyadic N=2^k, k>=1,
+C(N-1)=C(N)=N/2, and every child of every n in [N,2N] belongs to the
+closed previous arc [N/2,N]. To prove the endpoints, induct on blocks.
+The base N=2 holds. Inside the next block, the preceding bound gives
+p=C(n-1)<=N, and the global lower bound gives q=n-p<=floor((n+1)/2)<=N.
+Monotonicity then gives C(p)+C(q)<=2C(N)=N. At 2N-1 the global lower
+bound forces equality; at 2N the two children are both N. This closes
+the endpoint induction. For the lower child bound, p>=C(N-1)=N/2;
+slow growth gives C(n-1)<=C(N-1)+(n-N), hence q>=N/2.
+
+Thus the maxima of C(n)/n-1/2 over consecutive **closed** dyadic arcs
+are nonincreasing, by the convex identity. This alone does not prove a
+decay rate or a zero limit. Both endpoints are pinned to zero for k>=1.
+
+The incoming half-open claim loses a real boundary, rather than merely a
+rounding convention: n=2^21-1 has children (2^20,2^20-1). There are exactly
+19 exceptions in its k=20 half-open generation, at2097133..2097151.
+The fraction of nonexceptional indices rounds to1.0000 at four decimal places. The elementary
+smaller witness is n=7, with children4,3. The boundary child's error is
+zero, which is exactly why retaining it is compatible with pinned models.
+
+At a lattice point x=n/2^k, write h_k(x)=C(n)/n-1/2 and
+epsilon_n=C(n)-C(n-1) in {0,1}. The exact selector is
+
+    s_n=C(n-1)/n-1/2=h_k(x)-epsilon_n/n.
+
+The exact identity is
+
+    h_k(x)=(1/2+s_n)h_(k-1)(x(1+2s_n))
+           +(1/2-s_n)h_(k-1)(x(1-2s_n)),
+
+where both arguments belong to the closed previous arc. Replacing s_n
+by the current h_k changes the selector by at most1/n; controlling the
+resulting profile evaluations also needs their regularity. Replacing it
+by the lagged h_(k-1)(x) is a separate model approximation. At x=3/2,k=19,
+the exact value n*(h_k(x)-h_(k-1)(x)) is -1430. A finite witness is not an
+asymptotic disproof, but it exposes the omitted generation increment; the
+one-step slow-growth bound does not control that increment. The incoming
+smooth-model Taylor expansion and fitted inverse-square-root amplitude
+must retain that distinction. This packet proves neither fitted constant
+nor convergence of the continuum model to the discrete sequence.
+
 ## Reproduction and scope audit
 
 Run `python 04-computation/experiments/conway_tail_barrier_20261013c.py`.
@@ -182,6 +232,8 @@ independent memoized Conway evaluator, checks the terminal-count model,
 and authenticates the complete ancestor prefix before accepting a tail
 receipt. Corrupt ancestry, a truncated window, floating slopes, boolean
 indices, and failed boundaries are rejected. Three additional rational
-slopes exercise the general consumer. All **32782** checks remain active
+slopes exercise the general consumer. The incoming extension checks closed
+arcs through4096 and the k20 boundary census using a Conway prefix through
+2097151; it does not extend the Q universe. All **36900** checks remain active
 under `python -O`; output is saved in the paired `.json` file. The
 optional `--plot` requires matplotlib and has no role in exact decisions.

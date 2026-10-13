@@ -39,7 +39,31 @@
     "slope": "11/20",
     "start": 1490
   },
-  "checks": 32782,
+  "checks": 36900,
+  "incoming_controls": {
+    "k19_at_x_three_halves_n_times_generation_difference": -1430,
+    "k20_half_open_exceptions": [
+      2097133,
+      2097134,
+      2097135,
+      2097136,
+      2097137,
+      2097138,
+      2097139,
+      2097140,
+      2097141,
+      2097142,
+      2097143,
+      2097144,
+      2097145,
+      2097146,
+      2097147,
+      2097148,
+      2097149,
+      2097150,
+      2097151
+    ]
+  },
   "last_one_twentieth_violation": 1489,
   "last_violation_value": 819,
   "other_slopes": [
@@ -74,5 +98,5 @@
     "first_Q_decrease": 16
   },
   "status": "FINITE-EXACT boundary; PROVED global consequence in paired note",
-  "universe": "all Conway and Q indices 1..4096; Q claim is finite only"
+  "universe": "Conway/Q identities 1..4096; closed arcs through4096; Conway k20 boundary probe through2097151; Q finite only"
 }

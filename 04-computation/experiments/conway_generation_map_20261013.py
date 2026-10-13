@@ -1,15 +1,20 @@
 """
-conway_generation_map_20261013.py -- the Conway deviation d(n) = a(n)/n - 1/2 obeys the exact identity
-d(n) = (p/n) d(p) + (q/n) d(q), p = a(n-1), q = n - a(n-1).  In generation coordinates x = n/2^k in [1, 2),
-p/2^(k-1) = x (1 + 2 d(n-1)) (1 - 1/n) and q/2^(k-1) = x (1 - 2 d(n-1)) + 1/2^(k-1) ... up to O(1/n), so the hump h_k(x)
-satisfies the continuum generation map (CGM)
-    h_k(x) = (1/2 + h) h_(k-1)(x (1 + 2h)) + (1/2 - h) h_(k-1)(x (1 - 2h)),   h = h_(k-1)(x),
-with h_(k-1) read from the same generation (argument / 2) when x (1 + 2h) >= 2.  Linearised at h = 0 it is the identity
-(an undamped comb at every integer frequency); the nonlinearity smooths the hump:
-    h_k - h_(k-1) = 2 h^2 (x^2 h')' + O(h^3),
-so the amplitude obeys dA/dk ~ -c A^3, A_k ~ C/sqrt(k).  Test: iterate the CGM on a 4096-point grid from the measured
-generation-14 profile and compare with the measured generations 15..29 (max, rms, 16-point profiles, correlation);
-then iterate to k = 400 to read off the limiting constant lim A_k sqrt(k) and the limiting shape.
+Lagged numerical model for Conway's generation profile; no discrete-model
+error or asymptotic rate theorem is implemented here.
+
+The exact deviation identity conserves child mass. Its selector is
+s_n=a(n-1)/n-1/2=h_k(x)-(a(n)-a(n-1))/n, with x=n/2^k.
+Both child arguments are in the CLOSED previous arc. This code instead
+uses the lagged h_(k-1)(x) to predict the next profile and includes an
+interpolation rule. Replacing the current selector by that lagged value
+requires a separate, unproved error estimate; it is not justified by the
+one-step O(1/n) slow-growth bound. The Taylor calculation applies formally
+to smooth profiles of this lagged model. Fitted inverse-square-root decay
+and comparison with generations15..29 remain numerical evidence.
+
+Focused correction and exact closed-arc proof:
+05-knowledge/results/conway_tail_barrier_20261013c.md, section6.
+The algorithm and historical output are unchanged by this clarification.
 """
 import numpy as np, time
 from numba import njit

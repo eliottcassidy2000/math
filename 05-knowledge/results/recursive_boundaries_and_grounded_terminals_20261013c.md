@@ -57,6 +57,13 @@ same mass. That source term is a precise obstruction to importing the
 Conway convexity argument. The note also recovers1024's distinct roles
 as ten tournament orientation bits and as a Collatz controller denominator.
 
+The concurrent [one-sided-walk model](meta_fibonacci_one_sided_walks_20261013.md)
+arrived during publication. The integration proves closed dyadic-arc
+closure and nonincreasing arc maxima, while repairing a rounded100%
+half-open claim and separating the exact current-generation selector
+from the lagged numerical model. Its fitted amplitude decay remains
+numerical; the finite1/20 tail proof needs no such rate assumption.
+
 ## 2. Collatz: a groundable recursive family, with its missing complement
 
 [Native tail recursion](collatz_native_tail_recursion_20261013c.md) proves
