@@ -33,7 +33,7 @@ related:
 
 ## Statement
 
-1. **(Exact; PROVED.)** `d(n) + (1/2)(1 - 1/n) d(n-1) + (1/2)(1 - 2/n) d(n-2) = s(n) + 3/(4n)` for every `n >= 3`, and `q(n+1) = p(n) + 1`. The backward indices satisfy `p/n = 1/2 - (1 - 1/n) d(n-1)`, `q/n = 1/2 - (1 - 2/n) d(n-2)`.
+1. **(Exact; PROVED on every legal prefix.)** `d(n) + (1/2)(1 - 1/n) d(n-1) + (1/2)(1 - 2/n) d(n-2) = s(n) + 3/(4n)` for every legal `n >= 3`, and `q(n+1) = p(n) + 1` whenever both indices are defined. The backward indices satisfy `p/n = 1/2 + 1/(2n) - (1 - 1/n) d(n-1)`, `q/n = 1/2 + 1/n - (1 - 2/n) d(n-2)`.
 2. **(The fixed point; PROVED under H1-H3.)** Assume, within a generation, (H1) the sampled values `d(p(n))` and `d(q(n))` are uncorrelated with each other and with every other source value except through the shared adjacent index of 1 (`q(n+1) = p(n) + 1`), (H2) the weights `p/n`, `q/n` may be replaced by `1/2`, and (H3) the autocorrelation function `rho` of `d` is the same in consecutive generations. Then `s` is a stationary input with `var(s) = var_prev/2`, where `var_prev` is the variance of the sampled values, and autocorrelation `rho_s(1) = c = rho(1)/2`, `rho_s(l) = 0` for `l >= 2`; `d` is the ARMA(2,1) output `d(n) = -d(n-1)/2 - d(n-2)/2 + s(n)` (dropping `O(1/n)`), whose Yule-Walker equations
    `gamma(0) = -gamma(1)/2 - gamma(2)/2 + sigma^2 (1 - c/2)`, `gamma(1) = -gamma(0)/2 - gamma(1)/2 + sigma^2 c`, `gamma(2) = -gamma(1)/2 - gamma(0)/2`
    together with `c = gamma(1)/(2 gamma(0))` give `rho(1)^2 - 2 rho(1) - 1 = 0`. Hence
@@ -51,6 +51,7 @@ related:
 
 ## Scope and boundary
 
+- **2026-10-13 exact-index repair.** Statement 1 originally omitted `1/(2n)` and `1/n` from the individual backward-index formulas. Substituting `Q(n-j)=(n-j)(1/2+d(n-j))` gives the corrected terms. At n=3 both actual ratios are2/3; the former formulas gave1/2 and1/3. The combined identity already retained the correct `3/(4n)`. This correction leaves the stated limiting model algebra unchanged and does not prove its approximation hypotheses or global legality of Q.
 - Statement 2 is a theorem about the model defined by H1-H3; its content for the sequence is that those three hypotheses, each tested directly in statement 3, determine the second-order statistics of the chaos of `Q` to the precision of the data. The hypotheses are not proved; H1 is the deep one (why the backward indices behave as independent samples), and the measured sample correlations `0.0001-0.0017` are its evidence.
 - The exponent `0.8858` assumes the sampled variance equals the previous generation's variance at the same relative position and the envelope shape is stationary (HYP-9259: it is, from `2^14`); the measured `0.876` over `k = 10..29` includes the pre-asymptotic generations, and the last four give `0.884`.
 - `O(1/n)` terms (the `3/(4n)` source and the weight corrections) are dropped in statement 2; at `2^20` they are below `1e-6`.
