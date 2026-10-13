@@ -69,7 +69,7 @@ Added to the S26 note and to THM-4629 (statement 7). The class-specific fast mod
 
 ## 6. Twenty and 1024
 
-`a(20) = Q(20) = 12`, both `0.6 n`; the sequences differ from `n = 4` (`a = 2`, `Q = 3`) and coincide again at `20`. `a(1024) = 512`, as at every power of two; `Q(1024) = 557`. The generation `[1024, 2048)` is where Q's exact spikes end (`Q(1536) = 808`, not `1024`; maximum ratio `0.614` instead of `2/3`) and where Conway's ratio exceeds `0.55` for the last time (`1489`). In the Collatz work of S26 the same numbers were the fit window `2^20..2^30` and the `1024` bins per octave of the Codex census.
+The reading that fits the owner's hint is Conway's prize question (the concurrent Codex note `conway_tail_barrier_20261013c.md` makes it and proves the tail): `20` is the tolerance denominator in `a(n)/n < 1/2 + 1/20`, and `1024 = 2^10` opens the closed dyadic arc `[1024, 2048]` on which the last exceedance lies, `a(1489)/1489 = 819/1489 = 0.55003` (the last `n` below `2^24` with `a(n)/n >= 0.55`; Mallows). The finite arc decides the infinite tail because the maxima of `a(n)/n - 1/2` over consecutive closed arcs are non-increasing (the convex identity of section 1 with both children in the closed previous arc, the closed-arc theorem of the Codex note). Incidental coincidences, recorded but not the point: `a(20) = Q(20) = 12`, both `0.6 n` (the sequences differ from `n = 4`, `a = 2`, `Q = 3`); `a(1024) = 512` as at every power of two, against `Q(1024) = 557`; and `[1024, 2048)` is also where Q's exact spikes end (`Q(1536) = 808`, not `1024`; maximum ratio `0.614` instead of `2/3`). In the Collatz work of S26 the same numbers were the fit window `2^20..2^30` and the `1024` bins per octave of the Codex census.
 
 ## 7. Next steps
 
