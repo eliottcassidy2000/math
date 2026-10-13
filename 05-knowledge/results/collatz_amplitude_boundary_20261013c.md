@@ -357,6 +357,59 @@ which correlations survive. Its stationarity and sampling assumptions
 have not been proved for Q, much less for Collatz. A numerical covariance
 closure would not certify the future energy bound used here.
 
+## 8. Grounded exponential families cannot supply a positive-real-part pole
+
+**PROVED, for the stated families.** The incoming
+[native-tail recursion](collatz_native_tail_recursion_20261013c.md)
+constructs grounded sources
+
+    N_k=u*2^(Rk)-v,  k>=0,  u>v>0, R a positive even integer,
+
+with a fixed strict odd-step word except that one valuation increases by
+Rk. Thus their strict Terras parity is constant, say epsilon in {+1,-1}.
+For Re(s)>0 their signed Dirichlet series is absolutely convergent and
+holomorphic, because N_k grows exponentially. More explicitly,
+
+    F_factory(s)=epsilon*u^(-s)
+        * sum_(j>=0) [(s)_j/j!] (v/u)^j
+                       / [1-2^(-R(s+j))].                 (19)
+
+Here (s)_j is the rising factorial, with (s)_0=1. Expand
+`(1-(v/u)2^(-Rk))^(-s)` and sum the geometric k-series. Since0<v/u<1,
+the interchange is absolutely convergent, locally uniformly in Re(s)>0.
+This proves (19) and its holomorphy without a fitted amplitude or a
+statistical independence premise.
+
+The owner's earlier family supplies a concrete unchanged-source instance:
+
+    N_k=(2^(18k+11)-23)/27,
+    N_k --(1,2,18k+8)--> 1.
+
+Its Terras length is18k+11, so epsilon=-1, u=2048/27, v=23/27 and R=18.
+In (19) its j=0 term has residue `-1/(18 log(2))` at s=0; every j>=1
+term is regular near zero. That boundary pole encodes logarithmic
+population growth. It cannot produce or cancel the Mercator pole in
+section4, whose real part is positive.
+
+The conclusion survives overlap: any finite union of such factories has
+O(log X) distinct members up to X, and its bounded-character series is
+holomorphic in Re(s)>0. **If the energy hypothesis of section4 holds,
+removing any such finite bank from the ROOT series leaves the same
+nonzero residue at s_0.** This follows by subtracting a holomorphic series;
+it makes no claim that the complement is ungroundable. It says that the
+remaining ROOT population must carry the same conditional obstruction to
+an `O(X^beta)` signed-sum bound for beta<Re(s_0).
+
+The exact map is from a supplied factory's source address k to its
+Mellin series. It preserves the source, the strict terminal and its phase;
+quotienting to a single rooted pattern would lose the exponentially
+separated source heights. An infinite or branching controller collection
+might change the abscissa, and must retain its source multiplicities and
+convergence bounds. A finite bank's success therefore neither proves the
+all-source rate nor makes the amplitude calculation redundant. This is a
+specific connection between the new grounded families and the current
+coverage target, not a general prohibition on recursive certificates.
+
 ## Reproduction
 
 All commands run from the repository worktree; scratch files stay outside it.

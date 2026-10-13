@@ -457,6 +457,42 @@ measured the same quantity. The primary Pinn paper cited in section 1
 likewise treats the Q fluctuation exponent empirically; the new model
 explains a conditional mechanism, without upgrading those observations.
 
+## 7. Stronger incoming Conway closure and the original 20/1024 target
+
+The subsequent fetch through `977154dae4` brings the stronger
+[Conway tail certificate](conway_tail_barrier_20261013c.md), already checked
+on its actual finite source window. It interprets 20 as the tolerance
+1/20, and 1024 as the beginning of the dyadic arc containing the final
+violations. For N=1490 and slope 11/20, checking every source
+1490..3307 gives the bound for all later sources. At1489 the exact defect
+`20*C(1489)-11*1489` is1. Thus1489 is the last violation of the strict
+1/20 tolerance. This recovers the classical answer; it is stronger than
+our finite point comparisons at20 and1024 and is now the route for that
+question. The latter comparisons remain valid but incidental.
+
+Its all-level closed-arc theorem also supplies the exact generation
+interface: both Conway children of every n in [2^k,2^(k+1)] lie in
+[2^(k-1),2^k], including the zero-error boundary. Consecutive normalized
+arc maxima are nonincreasing. The proof retains the current selector
+`a(n-1)/n-1/2`; substituting the previous generation's profile needs a
+separate approximation estimate. The incoming pinned continuum experiment
+now reaches generation400, with numerical scaled maxima drifting toward
+0.137; this does not prove the discrete rate or its limit. The Q envelope
+minimum likewise drifts past sqrt(2), so it must not be identified with
+our exact covariance fixed point merely because both occur near1.41.
+
+The [five-lane boundary packet](recursive_boundaries_and_grounded_terminals_20261013c.md)
+adds two precise comparisons. For Keller duals, vanishing of *every*
+minimal excluded derivative as a source polynomial closes the entire
+commuting derivative tree. For geometric triangle products, deleting
+redundant edges preserves the full three-colouring relation, while an
+explicit fresh-fourth-colour assignment breaks that preservation for a
+larger palette. Conway needs its closed arc, the derivative criterion
+needs its full polynomial frontier, and the graph needs its full labelled
+boundary relation. None can be replaced by an endpoint sample or a count.
+For the Collatz energy question, the corresponding unresolved object is
+all source-conditioned signed cuts crossing a refinement boundary.
+
 ## Reproduction
 
 ```sh
