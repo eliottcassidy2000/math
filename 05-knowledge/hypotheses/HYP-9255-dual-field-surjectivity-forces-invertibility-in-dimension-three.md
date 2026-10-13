@@ -1,6 +1,6 @@
 ---
 id: HYP-9255
-title: "Dual-field surjectivity forces invertibility in dimension three: for every Keller map F : A^3 -> A^3 over a field of characteristic zero and every j, if the dual field V_j = d/dF_j is surjective on K[x, y, z] then F is an automorphism; implied by (THM-4620(4)), and equivalent to if the sub-question below has a positive answer: no Keller map of A^3 has a coordinate-pair fibration whose generic fibre is a disjoint union of two or more lines"
+title: "Dual-field surjectivity forces invertibility in dimension three: for every Keller map F : A^3 -> A^3 over a field of characteristic zero and every j, if the dual field V_j = d/dF_j is surjective on K[x, y, z] then F is an automorphism; equivalent (THM-4626) to: no Keller map of A^3 has a coordinate-pair fibration whose generic fibre has two or more geometric line components; both are equivalent to JC_2"
 status: "RESOLVED 2026-10-12 (mac-mini-2026-10-12-logic4 continuation): EQUIVALENT TO JC_2 by THM-4626 (a surjective dual field is locally nilpotent, so dimension three reduces to a planar Keller map on the slice surface, and padding a planar counterexample gives the converse); hence OPEN exactly as JC_2 is, and not an independent hypothesis. The sub-question below (generic rank zero => cokernel zero when d_j >= 2) is also settled by THM-4626: yes (line fibres make V_j locally nilpotent). Nothing independent of JC_2 remains in this file. Original status: OPEN (2026-10-12). KNOWN in the plane (Gurjar-Masuda-Miyanishi 2013, Remark 2.5; THM-4620(5) re-proves it). REFUTED in every dimension n >= 4 by padding: F = F' x id_(A^1) with F' a non-invertible Keller map of A^(n-1) (THM-1300 for n = 4) has V_n = d/dx_n surjective and generic fibre of (F_1, ..., F_(n-1)) equal to deg F' disjoint lines. Evidence in dimension three: THM-1300's three dual fields are all non-surjective with connected punctured-line fibres (THM-4621); Gao's degree-four map G (arXiv:2608.00222, section 3.5): all three coordinate-pair fibres are geometrically irreducible (two punctured lines, one conic), so no dual field is surjective (gao_degree4_fibrations.py); THM-4625 extends this to every member of the tangent-sweep family (the (F_1,F_2)-fibre is an irreducible hyperelliptic curve of genus floor((d-2)/2))."
 session: mac-mini-2026-10-12-logic4
 related:
@@ -24,9 +24,10 @@ its dual fields. If some `V_j` is surjective on `K[x, y, z]`, then `F` is an aut
 ## Reduction (THM-4620(4))
 
 If `V_j` is surjective, every geometric component of the generic fibre of `G_j = (F_i)_(i ≠ j)` is a
-line and `deg F = d_j`, the number of components. So the hypothesis is *implied by*: *the generic fibre
-of a coordinate pair of a Keller map of `A^3` is never a disjoint union of `d ≥ 2` lines* (and is
-equivalent to it exactly when the sub-question below has a positive answer). When
+line and `deg F = d_j`, the number of geometric components. So the hypothesis is equivalent to: *the
+generic fibre of a coordinate pair of a Keller map of `A^3` never has `d ≥ 2` geometric line components*
+(THM-4626 closes the gap between the two: generic rank zero forces local nilpotence), and both are
+equivalent to `JC_2`. When
 `V_j` is moreover locally nilpotent, THM-4562 gives `A^3 ≅ X_j × A^1` with `X_j ≅ A^2` (cancellation),
 and the statement reduces to `JC_2` for the induced Keller map `X_j → A^2`. The general (surjective
 but not locally nilpotent) case has no such reduction: the ring of constants `R_j` is then a

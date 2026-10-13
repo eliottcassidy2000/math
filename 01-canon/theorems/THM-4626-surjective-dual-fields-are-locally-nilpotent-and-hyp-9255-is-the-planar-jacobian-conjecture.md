@@ -1,19 +1,27 @@
 ---
 id: THM-4626
-title: "Line fibres make dual fields locally nilpotent: for a Keller map F : A^n -> A^n over a field of characteristic zero and any j, the following are equivalent for the dual field V_j = d/dF_j -- the generic fibre of (F_i)_(i != j) is a disjoint union of lines (generic rank zero of the cokernel), V_j is locally nilpotent, K[x] = R_j[F_j] (R_j = Ker V_j), V_j is surjective, and the relative de Rham cohomology H^1(K[x]/K[F_(i != j)]) vanishes; the proof is immediate from THM-4620(4): line fibres put K[x] inside L_j[F_j] with V_j = d/dF_j, so every polynomial is killed by a power of V_j; consequently 'a surjective dual field forces invertibility' in dimension three (HYP-9255) is EQUIVALENT to the planar Jacobian conjecture, and in dimension n >= 4 it is false by padding. The dual-field hypothesis is essential: x d/dx - y d/dy + d/dz is a surjective divergence-free derivation of K[x,y,z] that is not locally nilpotent"
+title: "Line fibres make dual fields locally nilpotent: for a Keller map F : A^n -> A^n over a field of characteristic zero and any j, the following are equivalent for the dual field V_j = d/dF_j -- every geometric component of the generic fibre of (F_i)_(i != j) is a line (generic rank zero of the cokernel; the generic fibre is A^1 over the constants field L_j), V_j is locally nilpotent, K[x] = R_j[F_j] (R_j = Ker V_j), V_j is surjective, and the relative de Rham cohomology H^1(K[x]/K[F_(i != j)]) vanishes; the proof is immediate from THM-4620(4): line fibres put K[x] inside L_j[F_j] with V_j = d/dF_j, so every polynomial is killed by a power of V_j; consequently 'a surjective dual field forces invertibility' in dimension three (HYP-9255) is EQUIVALENT to the planar Jacobian conjecture, and in dimension n >= 4 it is false by padding (over a non-algebraically-closed field the dimension-three reduction uses Kambayashi's theorem that A^2 has no nontrivial separable forms). The dual-field hypothesis is essential: x d/dx - y d/dy + d/dz is a surjective divergence-free derivation of K[x,y,z] that is not locally nilpotent"
 status: >
   PROVED (elementary: THM-4620(3)-(4) give K[x] ⊂ L_j[F_j] with V_j = d/dF_j as soon as the generic
   fibre consists of lines, which makes V_j locally nilpotent at once; THM-4562's slice theorem and
   surface cancellation (Fujita; Miyanishi-Sugie, CITED) for the dimension-three reduction; the padding
   example. A first version proved only 'surjective => locally nilpotent' by a leading-coefficient
   filtration that used surjectivity needlessly; the direct argument below also settles HYP-9255's
-  sub-question: generic rank zero of the cokernel already forces the cokernel to vanish.) KNOWN precursors in the plane: Stein
-  (1989, Jacobian derivations) and Berson-van den Essen-Maubach (Nijmegen report 9918 / J. Pure Appl.
-  Algebra 2001): a surjective divergence-zero derivation of R[X,Y] is locally nilpotent;
-  Gurjar-Masuda-Miyanishi 2013, Cor. 2.4. The dual-field statement in dimension n >= 3 was not found
-  in the literature (search 2026-10-12); the divergence-free non-example shows it cannot follow from
-  divergence alone. Resolves HYP-9255 (equivalent to JC_2, not an independent hypothesis). Not yet
-  independently audited (audit D requested).
+  sub-question: generic rank zero of the cokernel already forces the cokernel to vanish.) The
+  substance is THM-4620(4) (line fibres give K[x]_S = L_j[F_j] with coordinate F_j) plus the local-slice
+  principle (a derivation that becomes d/ds on L[s] containing A is locally nilpotent on A; Freudenburg's
+  book). KNOWN precursors in the plane: Stein, J. Analyse Math. 52 (1989) 291-300 (the image of the
+  Jacobian derivation D_P is dense in the entire functions on C^2 iff P is a coordinate), and
+  Berson-van den Essen-Maubach, Israel J. Math. 124 (2001) 115-124 (Nijmegen report 9918, 1999), Theorem
+  3.8: a surjective divergence-zero R-derivation of R[X,Y] is locally nilpotent for every Noetherian
+  Q-algebra R; Gurjar-Masuda-Miyanishi 2013, Cor. 2.4 (a reduced derivation of C[x,y] is locally
+  nilpotent iff surjective with nontrivial kernel). The dual-field statement in dimension n >= 3 was
+  not found in the literature (searches 2026-10-12 by the session and by audit D); the divergence-free
+  non-example shows it cannot follow from divergence alone. Resolves HYP-9255 (equivalent to JC_2, not
+  an independent hypothesis). Independently audited 2026-10-12 (audit D: PASS WITH CORRECTIONS, applied:
+  'geometric components' wording; Kambayashi for cancellation over non-closed fields and the Jacobian
+  of the slice map; venues and statements of the precursors; stale caveats in THM-4620, HYP-9255 and
+  the note removed).
 session: mac-mini-2026-10-12-logic4 (continuation)
 source: 05-knowledge/results/logic_lenses_jc2_collatz_hn_20261012.md
 related:
@@ -21,12 +29,14 @@ related:
   - THM-4562 (slice lemma: locally nilpotent V_j => A^n = X_j x A^1; n = 3: X_j = A^2 by cancellation)
   - THM-4621, THM-4625 (THM-1300 and the sweep family: no V_j locally nilpotent, hence none surjective)
   - HYP-9255 (resolved here: equivalent to JC_2)
-  - J. Berson, A. van den Essen, S. Maubach, Derivations having divergence zero on R[X,Y], Israel J. Math. 124 (2001) 115-124 (Nijmegen report 9918, 1999)
+  - J. Berson, A. van den Essen, S. Maubach, Derivations having divergence zero on R[X,Y], Israel J. Math. 124 (2001) 115-124 (Nijmegen report 9918, 1999), Theorem 3.8
+  - T. Kambayashi, On the absence of nontrivial separable forms of the affine plane, J. Algebra 35 (1975) 449-456
+  - G. Freudenburg, Algebraic theory of locally nilpotent derivations (local slices)
   - Y. Stein, On the density of image of differential operators generated by polynomials, J. Analyse Math. 52 (1989)
   - R. V. Gurjar, K. Masuda, M. Miyanishi, Surjective derivations in small dimensions, J. Ramanujan Math. Soc. 28A (2013)
 ---
 
-# THM-4626 — surjective dual fields are locally nilpotent
+# THM-4626 — line fibres make dual fields locally nilpotent
 
 ## Setting
 
@@ -39,8 +49,9 @@ As in THM-4620: `K` of characteristic zero, `F = (F_1, ..., F_n)` Keller, `V_j` 
 1. For every `j` the following are equivalent:
    * (a) `V_j` is surjective on `K[x]`;
    * (b) `coker V_j = H^1_dR(K[x]/K[G_j]) = 0`;
-   * (b') `μ_j = 0`: the generic fibre of `G_j` is a disjoint union of (`d_j`) lines, i.e. the cokernel has
-     generic rank zero;
+   * (b') `μ_j = 0`: every geometric component of the generic fibre of `G_j` is a line, i.e. the generic
+     fibre is `A^1_(L_j)` with `[L_j : K(G_j)] = d_j` (geometrically `d_j` disjoint lines), i.e. the cokernel
+     has generic rank zero;
    * (c) `K[x] = R_j[F_j]` (so `A^n ≅ Spec R_j × A^1` with `F_j` the second coordinate);
    * (d) `V_j` is locally nilpotent.
    In particular a cokernel of generic rank zero is zero (no nonzero torsion cokernels occur, for any `d_j`).
@@ -73,10 +84,12 @@ constants, and `V_j F_j = 1`, so it is `∂/∂F_j` on `L_j[F_j]`). Hence every 
 (Explicitly, `c_m = V_j^m a / m! ∈ K[x] ∩ L_j = R_j`, so `a - c_m F_j^m` has lower degree and `K[x] = R_j[F_j]`
 follows by induction, which is (c) directly.)
 
-**(2).** If `JC_2` holds and `V_j` is surjective, then by (1) `K[x, y, z] = R_j[F_j]`, so `A^3 ≅ X_j × A^1`
-with `X_j = Spec R_j`; surface cancellation (Fujita; Miyanishi–Sugie) gives `X_j ≅ A^2`, `G_j ∈ R_j`
-(it is killed by `V_j`), and `F = (G_j|_(X_j)) × id` with `G_j|_(X_j) : A^2 → A^2` a Keller map (its
-Jacobian is `det JF`), hence an automorphism by `JC_2`; so `F` is an automorphism (THM-4562's slice
+**(2).** If `JC_2` holds over `K` and `V_j` is surjective, then by (1) `K[x, y, z] = R_j[F_j]`, so
+`A^3 ≅ X_j × A^1` with `X_j = Spec R_j`; surface cancellation (Fujita; Miyanishi–Sugie, over `K̄`) gives
+`X_j ⊗ K̄ ≅ A^2_(K̄)`, and Kambayashi's theorem (separable forms of `A^2` are trivial; characteristic zero)
+gives `X_j ≅ A^2_K`; `G_j ∈ R_j^2` (it is killed by `V_j`), so in coordinates `(u, v, F_j)` the map is
+`F = (G_j|_(X_j)) × id` with `G_j|_(X_j) : A^2 → A^2` a Keller map (its Jacobian is `det JF` divided by the
+Jacobian of the coordinate change, a nonzero constant), hence an automorphism by `JC_2`; so `F` is an automorphism (THM-4562's slice
 lemma, made unconditional in the hypothesis by (1)). Conversely, if `G'` is a planar Keller map that is
 not an automorphism, `F = G' × id_(A^1)` is a Keller map of `A^3` with `V_3 = ∂/∂z` surjective and `F`
 not an automorphism.

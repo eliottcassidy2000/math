@@ -214,6 +214,14 @@ statement 9 retyped as a sketch with its D-module inputs cited; HYP-9255's "equi
 one-directional and Gao's `G` fully transcribed; HYP-9257's Alexander remark labelled heuristic.
 MISTAKE-595.
 
+**Audit D** (THM-4626, both versions; report
+[logic_lenses_audit_D_20261012.md](logic_lenses_audit_D_20261012.md), script `audit_D_toy_and_padding.py`):
+PASS WITH CORRECTIONS; the strengthened statement confirmed (the auditor had independently noticed that
+the first version's surjectivity step was redundant); corrections applied: 'geometric components'
+wording, Kambayashi 1975 for cancellation over non-closed fields, Berson–van den Essen–Maubach venue
+(Israel J. Math. 124 (2001)), Stein's theorem stated as a density theorem, stale caveats removed in
+THM-4620, HYP-9255 and this note. No MISTAKE entry (nothing false was asserted).
+
 **Audit C** (THM-4625; report [logic_lenses_audit_C_20261012.md](logic_lenses_audit_C_20261012.md),
 scripts `audit_C_*.py`): PASS WITH CORRECTIONS, all identities re-derived for symbolic `p` up to
 `d = 6` and at specializations for `d = 7, 8`, Galois groups `S_3..S_6` by specialization. Corrections
@@ -232,7 +240,7 @@ member); the specialization step written out; MISTAKE-596. Statement (6) (fibre 
 4. For the plane: the surjectivity criterion says a counterexample `f` has `b_1(generic fibre) ≥ 1`;
    the Gauss–Manin system `coker D_f` is a holonomic `A_1`-module of that rank — its regular
    singularities at the atypical values are the next object to type (what does `D_g` do to it?).
-5. Is `μ_j = 0` enough for `coker V_j = 0` (HYP-9255's sub-question)?
+5. (Settled by THM-4626: `μ_j = 0` forces `coker V_j = 0`; HYP-9255 ⟺ `JC_2`.)
 
 ## 10. κ(13) continuation: what is established, what it would cost (2026-10-12, continuation)
 

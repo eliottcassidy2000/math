@@ -10,7 +10,7 @@ status: >
   cohomology of a smooth affine curve; Bernstein's theorem that direct images of holonomic modules
   are holonomic; the dual-field facts of THM-4562. The padding example shows that in dimension >= 4
   a surjective dual field does not force invertibility without the connectedness hypothesis (PROVED
-  trivially); dimension 3 is HYP-9255. KNOWN: the planar statement (5) is Gurjar-Masuda-Miyanishi,
+  trivially); in dimension 3 'surjective => automorphism' is equivalent to JC_2 (THM-4626, resolving HYP-9255). KNOWN: the planar statement (5) is Gurjar-Masuda-Miyanishi,
   Surjective derivations in small dimensions, J. Ramanujan Math. Soc. 28A (2013) 221-246
   (arXiv:1211.0744), Remark 2.5 (with Cor. 2.4 and Thm 1.2, proved by the same 2g - 1 + n
   mechanism; the de Rham reading is Cerveau, J. Algebra 195 (1997), Prop. 1.2) -- found by audit A;
@@ -100,13 +100,13 @@ In the plane, `F = (f, g)` with `det J(f, g) = 1` (replace `g` by `g/det J` othe
 
    If moreover the generic fibre of `G_j` is geometrically connected (`d_j = 1`, i.e. `L_j = K(G_j)`,
    equivalently `R_j ⊗_(K[G_j]) K(G_j) = K(G_j)`), then `F` is an automorphism, and consequently
-   `coker V_j = 0`: a cokernel of generic rank zero can be a nonzero torsion module only when `d_j ≥ 2`.
+   `coker V_j = 0` (THM-4626: in fact `μ_j = 0` already forces `coker V_j = 0` for every `d_j`).
    Conversely,
    if `V_j` is locally nilpotent then `V_j` is surjective (THM-4562's slice lemma gives
    `K[x] = R_j[F_j]`), so local nilpotence also forces `deg F = d_j`. The connectedness hypothesis
    cannot be dropped in dimension `n ≥ 4`: for a non-invertible Keller map `F'` of `A^(n-1)` (THM-1300
-   for `n - 1 = 3`), `F = F' × id_(A^1)` has `V_n = ∂_n` surjective and `d_n = deg F' > 1`. Dimension
-   three is HYP-9255.
+   for `n - 1 = 3`), `F = F' × id_(A^1)` has `V_n = ∂_n` surjective and `d_n = deg F' > 1`. In dimension
+   three the statement 'surjective ⇒ automorphism' is equivalent to `JC_2` (THM-4626).
 
 5. **The plane (KNOWN: Gurjar–Masuda–Miyanishi 2013, Remark 2.5 and Cor. 2.4; re-proved here).** Let
    `(f, g)` be a Keller pair. Then `R = K[f]`, `L = K(f)`, `d = 1`, and the following are equivalent:
@@ -238,8 +238,9 @@ Gauss–Manin connection, and the trace splits off `O_U`.  ∎
 * **Where the plane differs from dimension three.** In the plane `d = 1` automatically, so
   surjectivity, vanishing of `H^1` of the generic fibre, and invertibility coincide. In dimension
   three the generic fibre of a coordinate pair can be connected with positive `b_1` (THM-1300: all
-  three fibrations are punctured lines with `b_1 = 2, 4, 2`), and whether it can be a union of
-  several lines is HYP-9255.
+  three fibrations are punctured lines with `b_1 = 2, 4, 2`), and a coordinate-pair fibration of a Keller map of `A^3` has `d ≥ 2`
+  geometric line components iff `F ≅ G' × id` with `G'` a planar Keller map of degree `d`
+  (THM-4626 with cancellation), i.e. iff a `JC_2` counterexample exists.
 * **What is not claimed.** Nothing here bounds `μ(f)` for a hypothetical planar counterexample.
 * **Sequel (THM-4626).** `μ_j = 0` already forces `V_j` locally nilpotent and `K[x] = R_j[F_j]` (every
   polynomial is a polynomial in `F_j` over `L_j`), so generic rank zero, surjectivity, vanishing of the
