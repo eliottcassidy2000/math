@@ -3,7 +3,8 @@ collatz_parity_highlines_decay_20261013.py -- decay per octave of the high reson
 (tau, omega) against the exact roots of the twisted transfer law (THM-4629).  Bins of 1/768 octave over octaves 20..29
 (tau, omega exact to 2^30); least-squares amplitude at each predicted effective frequency per octave; fitted decay =
 exp(slope of log amplitude vs octave) over the octaves with amplitude > 0.003; predicted decay = exp(Re w).
-Lines: every near-return 2^P ~ 3^Q with |Q log2 3 - P| < 0.06 and Q <= 730, sorted by parity class.
+Lines: a SELECTION of near-returns (those visible in the top-octave scans), not the complete census; the census with
+|Q log2 3 - P| < 0.07, Q <= 768 is tested line by line in collatz_parity_census_m2_m3_20261013.py (audit finding 3).
 """
 import numpy as np, time
 from numba import njit
