@@ -1,0 +1,26 @@
+Adaptive original-source return; global acceptance remains OPEN
+Candidate universe: 34 inherited glide sources; coefficient3 first-exit failures:9
+source,first_length,paid_length,first_charge,paid_charge,bit_drop,rule_drop,guard_bits,lattice_jump,word_sha256: (56924955, 198, 200, 151, 151, 2, 2, 320, False, '20f3b4ba1032595aa77f3461f5159f9734469d6bacfa59aa34fd8ce7588cfcec')
+source,first_length,paid_length,first_charge,paid_charge,bit_drop,rule_drop,guard_bits,lattice_jump,word_sha256: (63728127, 239, 240, 156, 157, 2, 2, 384, False, 'e91cb2f16ae5f8b68f1aa495fc5f74aedf343699cbb862f5bb01377ca2e0a877')
+source,first_length,paid_length,first_charge,paid_charge,bit_drop,rule_drop,guard_bits,lattice_jump,word_sha256: (898696369947, 347, 349, 243, 243, 2, 1, 556, True, '3613ba0246879d440daef72738e6243b59f407f921cc8c145083f9317e62c6f4')
+source,first_length,paid_length,first_charge,paid_charge,bit_drop,rule_drop,guard_bits,lattice_jump,word_sha256: (2081751768559, 388, 412, 272, 289, 2, 1, 656, True, '5442b23937616690e649272928f770af551c3a66f43ab4870cdbf47cd2faef14')
+source,first_length,paid_length,first_charge,paid_charge,bit_drop,rule_drop,guard_bits,lattice_jump,word_sha256: (31835572457967, 449, 457, 321, 327, 2, 2, 728, False, '11910beeee0d7e894151da12daefd5bcad5b0b53c4e5b2a67c56ba1627349641')
+source,first_length,paid_length,first_charge,paid_charge,bit_drop,rule_drop,guard_bits,lattice_jump,word_sha256: (1008932249296231, 560, 561, 415, 416, 2, 2, 893, False, '2a79516f3df2345f079b2bdc71560e0757804486a9130e70d84fc119dec92276')
+source,first_length,paid_length,first_charge,paid_charge,bit_drop,rule_drop,guard_bits,lattice_jump,word_sha256: (118303688851791519, 569, 572, 423, 425, 2, 2, 910, False, '9b73875bd45492db12966f8736b745493e6423b6d24515b13a5dc6ecf8f054b1')
+source,first_length,paid_length,first_charge,paid_charge,bit_drop,rule_drop,guard_bits,lattice_jump,word_sha256: (180352746940718527, 610, 611, 438, 439, 3, 2, 972, False, '0862115a6e86f8364743092642f4c2f02120697df8de4683328902ad97a4bf72')
+source,first_length,paid_length,first_charge,paid_charge,bit_drop,rule_drop,guard_bits,lattice_jump,word_sha256: (2602714556700227743, 634, 635, 478, 478, 2, 1, 1009, True, 'c9636e7948003b316ef12aaf6493ad10d764c563137a0a650bfaf1adbc8d5503')
+All9 exact native APs are paid: one checked seed plus generic tail;3 require native-lattice jump
+Leading-only hostile:9 --(2,1,1,2,3)-->5;243/512<1/2 but half-band fails; cut49
+Three subsequent even letters (or earlier ROOT) absorb another bit at source>=29
+Finite ROOT discovery: exactly9 named endpoints, cap10000 each; frozen suffixes only in production
+source,child,suffix_rank,suffix_cost,suffix_charge,ROOT_rank,ROOT_cost,ROOT_charge,ROOT_word_sha256: (56924955, 14157451, 77, 146, 50, 277, 465, 201, '62cc2be757235276494109f711cda0cd0ab0a26f5e8d1b2c5c6871755b9cf9c1')
+source,child,suffix_rank,suffix_cost,suffix_charge,ROOT_rank,ROOT_cost,ROOT_charge,ROOT_word_sha256: (63728127, 10445855, 117, 209, 81, 357, 592, 238, '534e1890552f67f6b2a22289a3ccd0c5135dc5ab647dd759fe72df1c5ef74e44')
+source,child,suffix_rank,suffix_cost,suffix_charge,ROOT_rank,ROOT_cost,ROOT_charge,ROOT_word_sha256: (898696369947, 249622248673, 75, 157, 47, 424, 712, 290, '4d823ff5611edf6bc572482a615d22ba075e4c9002ef755491ccd38a80fb0c1c')
+source,child,suffix_rank,suffix_cost,suffix_charge,ROOT_rank,ROOT_cost,ROOT_charge,ROOT_word_sha256: (2081751768559, 522082008095, 128, 242, 84, 540, 897, 373, '2fb83ee462c8783e0aea9fef4727e1e6a7ae2199b385ce5ae43a955796d78ff7')
+source,child,suffix_rank,suffix_cost,suffix_charge,ROOT_rank,ROOT_cost,ROOT_charge,ROOT_word_sha256: (31835572457967, 4994812878239, 124, 239, 83, 581, 966, 410, '1ee56a0c18939c05f907e4263565e2917e309ca934e72081c72adc44fc83950c')
+source,child,suffix_rank,suffix_cost,suffix_charge,ROOT_rank,ROOT_cost,ROOT_charge,ROOT_word_sha256: (1008932249296231, 141295968112997, 128, 250, 90, 689, 1142, 506, 'b351c662bb3a4d624ba157c1a3c567d53b78dff3ec7fe9a4cd34c5b69ba347bc')
+source,child,suffix_rank,suffix_cost,suffix_charge,ROOT_rank,ROOT_cost,ROOT_charge,ROOT_word_sha256: (118303688851791519, 22391847502773035, 153, 297, 93, 725, 1206, 518, 'a95898e10b1cd09c4f97558e0e8412e79821225d3bb0c26f53f98cb56580df34')
+source,child,suffix_rank,suffix_cost,suffix_charge,ROOT_rank,ROOT_cost,ROOT_charge,ROOT_word_sha256: (180352746940718527, 29997399390080243, 103, 218, 64, 714, 1189, 503, '602d7ca028f7fb02833d718ef876531e62e318e164f96172996276bd55caccea')
+source,child,suffix_rank,suffix_cost,suffix_charge,ROOT_rank,ROOT_cost,ROOT_charge,ROOT_word_sha256: (2602714556700227743, 889585424873412547, 108, 231, 73, 743, 1239, 551, '89e5c44b0270a925c5f10f7693e56a01b4323145ef18ab64ff79e241ec650d2c')
+All9 original points are grounded; no infinite-family child ROOT or universal charge bound is inferred
+checks=27760

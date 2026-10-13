@@ -1,0 +1,181 @@
+{
+  "checks": 1147,
+  "complete_small_source_universe": 100,
+  "product_sources": 56,
+  "collapse_sources": 44,
+  "norm_circle_controls": [
+    {
+      "q": 2,
+      "vertices": 4,
+      "inverse_pairs": 3,
+      "retained_basis": 2,
+      "deleted_families": 1,
+      "faithful_unit_realization": false
+    },
+    {
+      "q": 3,
+      "vertices": 9,
+      "inverse_pairs": 2,
+      "retained_basis": 2,
+      "deleted_families": 0,
+      "faithful_unit_realization": true
+    },
+    {
+      "q": 4,
+      "vertices": 16,
+      "inverse_pairs": 5,
+      "retained_basis": 4,
+      "deleted_families": 1,
+      "faithful_unit_realization": false
+    },
+    {
+      "q": 5,
+      "vertices": 25,
+      "inverse_pairs": 3,
+      "retained_basis": 2,
+      "deleted_families": 1,
+      "faithful_unit_realization": false
+    },
+    {
+      "q": 7,
+      "vertices": 49,
+      "inverse_pairs": 4,
+      "retained_basis": 2,
+      "deleted_families": 2,
+      "faithful_unit_realization": false
+    },
+    {
+      "q": 9,
+      "vertices": 81,
+      "inverse_pairs": 5,
+      "retained_basis": 4,
+      "deleted_families": 1,
+      "faithful_unit_realization": false
+    },
+    {
+      "q": 13,
+      "vertices": 169,
+      "inverse_pairs": 7,
+      "retained_basis": 2,
+      "deleted_families": 5,
+      "faithful_unit_realization": false
+    },
+    {
+      "q": 17,
+      "vertices": 289,
+      "inverse_pairs": 9,
+      "retained_basis": 2,
+      "deleted_families": 7,
+      "faithful_unit_realization": false
+    }
+  ],
+  "positive_coordinate_controls": [
+    {
+      "factors": [
+        2
+      ],
+      "vertices": 2,
+      "edges": 1,
+      "rational_rotation_parameters": [
+        0
+      ],
+      "cyclotomic_order": 4
+    },
+    {
+      "factors": [
+        3
+      ],
+      "vertices": 3,
+      "edges": 3,
+      "rational_rotation_parameters": [
+        0
+      ],
+      "cyclotomic_order": 12
+    },
+    {
+      "factors": [
+        5
+      ],
+      "vertices": 5,
+      "edges": 5,
+      "rational_rotation_parameters": [
+        0
+      ],
+      "cyclotomic_order": 20
+    },
+    {
+      "factors": [
+        2,
+        2,
+        2
+      ],
+      "vertices": 8,
+      "edges": 12,
+      "rational_rotation_parameters": [
+        0,
+        1,
+        2
+      ],
+      "cyclotomic_order": 4
+    },
+    {
+      "factors": [
+        3,
+        3
+      ],
+      "vertices": 9,
+      "edges": 18,
+      "rational_rotation_parameters": [
+        0,
+        1
+      ],
+      "cyclotomic_order": 12
+    },
+    {
+      "factors": [
+        3,
+        4
+      ],
+      "vertices": 12,
+      "edges": 24,
+      "rational_rotation_parameters": [
+        0,
+        2
+      ],
+      "cyclotomic_order": 12
+    },
+    {
+      "factors": [
+        5,
+        5
+      ],
+      "vertices": 25,
+      "edges": 50,
+      "rational_rotation_parameters": [
+        0,
+        1
+      ],
+      "cyclotomic_order": 20
+    }
+  ],
+  "q5_collapse": {
+    "direction": [
+      1,
+      0
+    ],
+    "order": 5,
+    "period": 1,
+    "other_word": [
+      [
+        3,
+        2
+      ],
+      [
+        3,
+        3
+      ]
+    ]
+  },
+  "three_colour_nonrealizable_control": "81-vertex ternary five-frame",
+  "scope": "No new six-colour plane construction or Euclidean lower bound."
+}
