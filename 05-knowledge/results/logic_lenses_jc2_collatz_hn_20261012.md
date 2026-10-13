@@ -118,8 +118,11 @@ Gallagher's family by Gao's account): the `(F_2, F_3)`-fibres are `P^1` minus `d
 (`P = ∫p`; discriminant identity `disc = p^2(b^2w^2 − 8a(wp − 2q))`), irreducible hyperelliptic of
 genus `⌊(d−2)/2⌋`. So `deg F = d+1`, all rings of constants are `K[F_(≠j)]`, no dual field is
 surjective or locally nilpotent, no coordinate-pair fibre is a union of lines (HYP-9255 holds on the
-family), and the Galois group is `S_(d+1)` whenever the sweep curve is parametrized birationally
-(`S_3` for THM-1300, `S_4` for `G`).
+family), and the Galois group is `S_(d+1)` for every member (the tangent slope `q'/p' = w/2` makes the
+sweep parametrization generically injective — audit C; `S_3` for THM-1300, `S_4` for `G`, `S_5`, `S_6`
+by specialization). Over `F_3 ≠ 0` the fibre of `F` has `d + 1 − Σ(multiplicities of multiple roots)`
+points and never exactly `d`. The `(F_1, F_2)`-chart misses the `2(d−1)` node points with `bx = 2`
+(audit C); genus and irreducibility are unaffected.
 
 ### 4.7 Hypotheses
 
@@ -138,7 +141,7 @@ family), and the Galois group is `S_(d+1)` whenever the sweep curve is parametri
     python3 sweep_family_discriminant.py # discriminant identity, wp - 2q = int p, generic genus, S_4 for Gao's G
     python3 gao_degree4_fibrations.py  # Gao's degree-four map: three fibrations (its 'genus 2' line is a wrong sqf_part reading; see THM-4625)
     python3 gq_census_extension.py     # nauty census for 83 <= q <= 128 (HYP-9256 evidence; background)
-    python3 kappa_sat.py 13 5 ; python3 kappa_sat.py 17 5   # CaDiCaL attempts at kappa(13), kappa(17) (background)
+    python3 kappa_sat.py 13 5 ; python3 kappa_sat.py 17 5   # CaDiCaL attempts at kappa(13), kappa(17): UNDECIDED (killed at close-out; see the .out files for the elapsed time)
 
 Outputs are committed beside the scripts (`*.out`). Hostile controls: (i) `dim Ker V_3` on polynomials
 of degree `≤ 12` is `4 = #{1, F_2, F_2^2, F_1}` (a larger kernel would refute `R_3 = K[F_1, F_2]`);
@@ -197,7 +200,14 @@ statement 9 retyped as a sketch with its D-module inputs cited; HYP-9255's "equi
 one-directional and Gao's `G` fully transcribed; HYP-9257's Alexander remark labelled heuristic.
 MISTAKE-595.
 
-**Audit C** (THM-4625): pending at this checkpoint.
+**Audit C** (THM-4625; report [logic_lenses_audit_C_20261012.md](logic_lenses_audit_C_20261012.md),
+scripts `audit_C_*.py`): PASS WITH CORRECTIONS, all identities re-derived for symbolic `p` up to
+`d = 6` and at specializations for `d = 7, 8`, Galois groups `S_3..S_6` by specialization. Corrections
+applied: the `(F_1, F_2)`-chart misses the `2(d−1)` node points `bx = 2`; `d + 3` punctures need `c^2 a`
+non-critical for `q`; 'generic fibre' in the union-of-lines clause; the resultant's squared factor is the
+diagonal; the birational-parametrization hypothesis is automatic (upgrade: `S_(d+1)` for every
+member); the specialization step written out; MISTAKE-596. Statement (6) (fibre sizes over
+`F_3 ≠ 0`) was added after the audit.
 
 ## 8. Next obligations
 

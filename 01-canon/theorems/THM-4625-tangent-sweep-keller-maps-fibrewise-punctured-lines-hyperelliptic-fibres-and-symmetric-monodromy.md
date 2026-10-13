@@ -1,6 +1,6 @@
 ---
 id: THM-4625
-title: "Every tangent-sweep Keller map (the Gao-Gallagher family F = ((q(w)+gamma w)/(gamma x)^2, (p(w)+2 gamma)/(gamma x), gamma x), w = gamma(1+xy), gamma = gamma_0 + alpha xy + beta x^2 z, q' = (w/2)p', p(0) = 0, deg p = d >= 2) has the same fibrewise anatomy as THM-1300: the (F_2,F_3)-fibres are P^1 minus d+1 points carrying F_1 as a degree-(d+1) polynomial in w minus its d critical points (F_1' = (cb - p(w))/(2c^2)); the (F_1,F_3)-fibres are P^1 minus d+3 points carrying F_2 of degree d+1 with F_2' = -2(c^2 a - q(w))/(c w^2); the (F_1,F_2)-fibres are birational to the hyperelliptic curve t^2 = b^2 - 8a P(w)/w^2, P = int_0^w p, of genus floor((d-2)/2) (rational for d = 2, 3; positive genus from d = 4 on); hence deg F = d+1, every ring of constants is K[F_(i != j)], no dual field is surjective or locally nilpotent, no coordinate-pair fibre is a union of lines (HYP-9255 holds on the family), and the Galois group of K(x,y,z)/K(F) is S_(d+1) whenever w -> (p(w), q(w)) is a birational parametrization of the sweep curve (S_3 for THM-1300, S_4 for Gao's degree-four map)"
+title: "Every tangent-sweep Keller map (the Gao-Gallagher family F = ((q(w)+gamma w)/(gamma x)^2, (p(w)+2 gamma)/(gamma x), gamma x), w = gamma(1+xy), gamma = gamma_0 + alpha xy + beta x^2 z, q' = (w/2)p', p(0) = 0, deg p = d >= 2) has the same fibrewise anatomy as THM-1300: the (F_2,F_3)-fibres are P^1 minus d+1 points carrying F_1 as a degree-(d+1) polynomial in w minus its d critical points (F_1' = (cb - p(w))/(2c^2)); the (F_1,F_3)-fibres are P^1 minus d+3 points carrying F_2 of degree d+1 with F_2' = -2(c^2 a - q(w))/(c w^2); the (F_1,F_2)-fibres are birational to the hyperelliptic curve t^2 = b^2 - 8a P(w)/w^2, P = int_0^w p, of genus floor((d-2)/2) (rational for d = 2, 3; positive genus from d = 4 on); hence deg F = d+1, every ring of constants is K[F_(i != j)], no dual field is surjective or locally nilpotent, no coordinate-pair fibre is a union of lines (HYP-9255 holds on the family), the Galois group of K(x,y,z)/K(F) is S_(d+1) for every member (the tangent slope q'/p' = w/2 makes w -> (p(w), q(w)) generically injective; S_3 for THM-1300, S_4 for Gao's degree-four map, S_5, S_6 confirmed by specialization), and over F_3 != 0 the fibre of F has (d+1) minus the multiplicity sum of the multiple roots of the fibre polynomial points, never exactly d"
 status: >
   PROVED (elementary: explicit parametrizations, the one-line derivative identities from q' = (w/2)p',
   the discriminant identity disc = p^2 (b^2 w^2 - 8a(wp - 2q)) and wp - 2q = int_0^w p, generic
@@ -10,11 +10,20 @@ status: >
   generic p of degree d = 2..6 (sweep_family_identities.py, sweep_family_discriminant.py) and the
   degree-four instance fully (gao_degree4_fibrations.py; the script's printed 'genus 2' for that
   instance is a wrong reading of sqf_part and is superseded by the identity: the discriminant is a
-  square times a quadratic, genus 0). The hypothesis is only the displayed SHAPE of the map together
-  with polynomiality and det JF in K^x (Gao's side conditions, CITED: arXiv:2608.00222 sections 3.3,
-  3.5; Gallagher's family is of this shape by Gao's account). Fibre counts agree with Gao's
-  Proposition 3.2 (d+1 generic). Not independently audited yet (written after the first audit was
-  commissioned; to be covered by the close-out audit).
+  square times a quadratic, genus 0; its 'polynomial components: False' line for Gao's G is likewise
+  an artifact of the coefficient denominator 8 -- G is polynomial with det = -2 in THM-1300's order).
+  The hypothesis is only the displayed SHAPE of the map (gamma_0, alpha, beta constants, beta != 0)
+  together with the two divisibilities gamma x | p(w) + 2 gamma and (gamma x)^2 | q(w) + gamma w in
+  K[x,y,z] and det JF in K^x (Gao's side conditions, CITED: arXiv:2608.00222 sections 3.3, 3.5;
+  Gallagher's family is of this shape by Gao's account). Fibre counts agree with Gao's Proposition
+  3.2 (d+1 generic). Independently audited 2026-10-12 (audit C: PASS WITH CORRECTIONS, applied: the
+  (F_1,F_2)-chart misses the 2(d-1) fibre points with bx = 2 (nodes of the plane model), now stated;
+  the d+3 puncture count of (2) needs c^2 a not a critical value of q; 'd+1 finite punctures other
+  than w = 0'; (4) restricted to generic fibres; the resultant sentence in (5) corrected (the squared
+  factor is the diagonal p'(r_1)^2/9, the genuine coincidence is Gao's node, cb = -4); and the
+  birational-parametrization hypothesis of (5) shown to be automatic, so S_(d+1) holds for every
+  member; MISTAKE-596). Statement (6) (fibre sizes over F_3 != 0) was added after the audit; it is a
+  one-line consequence of (1).
 session: mac-mini-2026-10-12-logic4
 source: 05-knowledge/results/logic_lenses_jc2_collatz_hn_20261012.md
 scripts:
@@ -34,12 +43,13 @@ related:
 
 `K` has characteristic zero. `p ∈ K[w]` with `p(0) = 0`, `deg p = d ≥ 2`, leading coefficient `ℓ`;
 `q(w) := ∫_0^w (s/2) p'(s) ds` (so `q' = (w/2) p'` and `q = O(w^2)`); `P(w) := ∫_0^w p(s) ds`.
-`γ = γ_0 + α xy + β x^2 z` with `β ≠ 0`, `u = 1 + xy`, `w = γ u`, and
+`γ = γ_0 + α xy + β x^2 z` with constants `γ_0, α, β ∈ K`, `β ≠ 0`, `u = 1 + xy`, `w = γ u`, and
 
     F_1 = (q(w) + γ w)/(γ x)^2,    F_2 = (p(w) + 2γ)/(γ x),    F_3 = γ x,
 
-assumed to be a polynomial map with `det JF ∈ K^×` (Gao's side conditions make the two divisions
-exact; THM-1300 is `p = -3w^2 + 4w`, `γ = 2 - 3xy - x^2 z`, `det = -2`; Gao's `G` is
+assumed to be a polynomial map with `det JF ∈ K^×`, i.e. `γx | p(w) + 2γ` and `(γx)^2 | q(w) + γw` in
+`K[x, y, z]` (Gao's side conditions, finitely many linear conditions on the coefficients of `p` and on
+`(γ_0, α)`, make the two divisions exact; THM-1300 is `p = -3w^2 + 4w`, `γ = 2 - 3xy - x^2 z`, `det = -2`; Gao's `G` is
 `p = w^3 - 6w^2 + 6w`, `γ = 2 - 4xy - x^2 z`). `V_1, V_2, V_3` are the dual fields (THM-4620).
 
 ## Statement
@@ -55,21 +65,25 @@ exact; THM-1300 is `p = -3w^2 + 4w`, `γ = 2 - 3xy - x^2 z`, `det = -2`; Gao's `
 
    `F_1` restricted to the fibre is a degree-`(d+1)` polynomial with its `d` critical points deleted.
 2. **`(F_1, F_3)`-fibres.** For `ac ≠ 0`, the fibre over `(a, c)` is bijectively parametrized by
-   `{w ∈ A^1 : w ≠ 0, q(w) ≠ c^2 a}` via `x = cw/(c^2 a - q(w))` (and `y, z` as above), so it is `P^1`
-   minus `d + 3` points, and on it
+   `{w ∈ A^1 : w ≠ 0, q(w) ≠ c^2 a}` via `x = cw/(c^2 a - q(w))` (and `y, z` as above); for generic `a`
+   (`c^2 a` not a critical value of `q`) it is `P^1` minus `d + 3` points (fewer when `q(w) = c^2 a` has a
+   multiple root: THM-1300 at `c^2 a = 4/27`), and on it
 
        F_2 = ( p(w) + 2 (c^2 a - q(w))/w ) / c,   of degree d+1,   dF_2/dw = -2 (c^2 a - q(w))/(c w^2):
 
    `F_2` has a simple pole at `w = 0`, a pole of order `d` at `∞`, and its critical points are exactly
-   the `d + 1` finite punctures.
+   the `d + 1` finite punctures other than `w = 0`.
 3. **`(F_1, F_2)`-fibres.** For generic `(a, b)`, the fibre over `(a, b)` minus its finitely many points
-   with `F_3 = 0` is isomorphic to the plane curve
+   with `F_3 = 0` or `bx = 2` is isomorphic to the plane curve
 
        Ã x^2 + B̃ x + C̃ = 0,   x ≠ 0,  bx ≠ 2,  p(w) ≠ 0,
        Ã = (q b^2 - a p^2)/w^2,  B̃ = (wp - 4q) b/w^2,  C̃ = -2P/w^2     (polynomials in w),
 
-   with `F_3 = p(w) x/(bx - 2)` on it. Its discriminant is `(p/w)^2 · (b^2 - 8a P(w)/w^2)`, so the fibre
-   is birational to the hyperelliptic curve
+   with `F_3 = p(w) x/(bx - 2)` on it. (The points with `bx = 2` have `p(w) = 0`, `γ` free with
+   `q(w_0) + γw_0 = 4aγ^2/b^2`: generically `2(d - 1)` of them, two over each nonzero root `w_0` of `p`,
+   where the plane model has a node at `(2/b, w_0)`; the smooth fibre is its normalization — audit C.)
+   Its discriminant is `(p/w)^2 · (b^2 - 8a P(w)/w^2)`, so the fibre is birational to the hyperelliptic
+   curve
 
        t^2 = b^2 - 8a · P(w)/w^2        (a polynomial of degree d - 1 in w),
 
@@ -78,13 +92,24 @@ exact; THM-1300 is `p = -3w^2 + 4w`, `γ = 2 - 3xy - x^2 z`, `det = -2`; Gao's `
 4. **Consequences.** `deg F = d + 1`. None of the three generic coordinate-pair fibres is `A^1`, and
    all are geometrically irreducible; hence (THM-4620) `R_j = K[F_(i ≠ j)]` for `j = 1, 2, 3`, the
    locally nilpotent part of every dual field is `K[F]`, no `V_j` is surjective (cokernel generic ranks
-   `≥ 1`: `d` for `V_1`, `d + 2` for `V_2`), no `V_j` is locally nilpotent, and no coordinate-pair fibre
-   of any member of the family is a disjoint union of lines (the fibre form of HYP-9255).
-5. **Monodromy.** If `w ↦ (p(w), q(w))` is generically injective (a birational parametrization of the
-   sweep curve), then the Galois group of the Galois closure of `K(x, y, z)/K(F)` is `S_(d+1)`.
-   This holds for THM-1300 (`S_3`, THM-4621) and for Gao's degree-four map (`S_4`: the pairs
-   `r_1 ≠ r_2` with `p(r_1) = p(r_2)`, `q(r_1) = q(r_2)` are the roots of
-   `9(r_1^2 - 4r_1 - 2)(r_1^2 - 4r_1 + 2)^2/64`, finitely many).
+   `≥ 1`: `d` for `V_1`, `d + 2` for `V_2`), no `V_j` is locally nilpotent, and no generic coordinate-pair
+   fibre of any member of the family is a disjoint union of lines (the fibre form of HYP-9255).
+5. **Monodromy.** For every member, the Galois group of the Galois closure of `K(x, y, z)/K(F)` is
+   `S_(d+1)`: the parametrization `w ↦ (p(w), q(w))` of the sweep curve is automatically generically
+   injective, because the tangent slope `q'/p' = w/2` recovers the parameter (audit C). Instances:
+   `S_3` for THM-1300 (THM-1310, THM-4621), `S_4` for Gao's degree-four map, and `S_5`, `S_6` for
+   `p = w^4 - 2w^3 + 3w^2 + w`, `p = 2w^5 + w^4 - 3w^3 + w^2 - w` by rational specialization (audit C).
+   For Gao's map the only coincidence of critical values is at `cb = -4`, the node of its sweep curve
+   (`r_1 = 2 ± √6`, `r_2 = 4 - r_1`); the resultant `9(r_1^2 - 4r_1 - 2)(r_1^2 - 4r_1 + 2)^2/64` of the two
+   difference quotients carries that pair in its first factor and the diagonal `p'(r_1)^2/9` in the
+   squared one.
+6. **Fibre sizes over `F_3 ≠ 0`.** For `c ≠ 0` the fibre of `F` over `(a, b, c)` is the set of simple
+   roots of the degree-`(d+1)` polynomial `F_1|_fibre - a` of (1): it has `d + 1 - Σ m_i` points, the
+   sum over the multiple roots (each a critical point, hence a puncture) of their multiplicities `m_i ≥ 2`.
+   So the sizes over `F_3 ≠ 0` are `d + 1` (generic), `d - 1` (one double root, the discriminant surface),
+   `d - 2` (a triple root), `d - 3` (two double roots, or a quadruple root), ..., and never exactly `d`.
+   For `d = 2` this is `{3, 1, 0}` (THM-1310, THM-4621); for `d = 3`, `{4, 2, 1, 0}`, so Gao's size-three
+   stratum of `G` lies in `{F_3 = 0}` (his Theorem A.1: the hyperplane `v_1 = 0`).
 
 ## Proofs
 
@@ -107,8 +132,14 @@ so degree `d + 1`, and
 **(3).** On the fibre minus `{F_3 = 0}` write `c = F_3 ≠ 0`; (1) gives `2c/x = cb - p(w)`, so
 `c = p(w) x/(bx - 2)` (`p(w) ≠ 0`, `bx ≠ 2`), and (2) gives `cw/x = c^2 a - q(w)`; substituting `c` and
 clearing `(bx - 2)^2` yields `q(bx - 2)^2 + wp(bx - 2) - a p^2 x^2 = 0`. All three coefficients vanish to
-order two at `w = 0` (`p(0) = 0`, `q = O(w^2)`), and no genuine fibre point has `w = 0` (then `u = 0`,
-`F_1 = 0 ≠ a`), so the equation may be divided by `w^2`. The discriminant identity is a direct expansion:
+order at least two at `w = 0` (`p(0) = 0`, `q = O(w^2)`), and no genuine fibre point has `w = 0` (then
+`u = 0`, `F_1 = 0 ≠ a`), so the equation may be divided by `w^2`; the divided equation may still contain
+vertical lines `w = w_0` with `p(w_0) = q(w_0) = 0` (including `w = 0` when `p'(0) = 0`), which lie outside
+the chart (`p(w) ≠ 0`), and 'the plane curve' means its non-vertical part. The points of the fibre with
+`bx = 2` are not in the chart: there `c(bx - 2) = p(w)x` forces `p(w) = 0` with `γ` free, and `F_1 = a`
+is a quadratic in `γ`, giving generically two fibre points over each nonzero root `w_0` of `p`; at
+`(x, w) = (2/b, w_0)` the plane equation degenerates to `q(w_0)(bx - 2)^2`, a node whose two branches are
+these two points. The discriminant identity is a direct expansion:
 
     B^2 - 4AC = b^2(wp - 4q)^2 - 4(qb^2 - ap^2)(4q - 2wp) = p^2 ( b^2 w^2 - 8a(wp - 2q) ),
 
@@ -129,18 +160,30 @@ THM-4620(1) then gives `R_j = K[F_(i ≠ j)]` (connected fibres force `L_j = K(G
 `K(G_j) ∩ K[x] = K[G_j]` as in THM-4621(7)), THM-4620(1) gives `N_j = K[F]`, and THM-4620(4) gives
 non-surjectivity (a surjective `V_j` would force the fibre to be a line) and non-nilpotence (locally
 nilpotent implies surjective). The cokernel ranks are `2γ + r - 1` with `(γ, r) = (0, d + 1)` and
-`(0, d + 3)`.
+`(0, d + 3)`. (Special fibres may contain lines: the `(F_2, F_3)`-fibre over `(b, 0)` contains
+`{x = 0, y = b}` for THM-1300; the statement is about generic fibres.)
 
 **(5).** On the `(F_2, F_3)`-fibre, `F_1 : A^1_w ∖ {p = cb} → A^1` is a polynomial of degree `d + 1` whose
 critical points are the `d` roots `r_1, ..., r_d` of `p(w) = cb` (simple for generic `b`), with critical
 values `F_1(r_i) = q(r_i)/c^2`. Two critical values coincide only if `p(r_i) = p(r_j)` and
-`q(r_i) = q(r_j)`, i.e. the sweep curve passes twice through the same point; under the hypothesis this
-happens for finitely many parameter pairs, which generic `(b, c)` avoids. A polynomial map of degree
-`d + 1` with `d` simple critical points and pairwise distinct critical values has monodromy generated
-by `d` transpositions acting transitively on `d + 1` sheets, hence `S_(d+1)`; this is the Galois group
-of `K(x, y, z)/K(F)` because the fibre of `F` over `(a, b, c)` is the fibre of this polynomial with the
-critical points deleted and `K(x, y, z) = K(F)(w)`. For Gao's `G` the resultant computation (script)
-exhibits the finitely many coincidences.  ∎
+`q(r_i) = q(r_j)`, i.e. the sweep curve passes twice through the same point. This happens for only
+finitely many parameter pairs: if infinitely many pairs `r_1 ≠ r_2` had `(p, q)(r_1) = (p, q)(r_2)`, the
+curves `{(p(r_1) - p(r_2))/(r_1 - r_2) = 0}` and `{(q(r_1) - q(r_2))/(r_1 - r_2) = 0}` would share a
+component `Z` other than the diagonal; differentiating along `Z` gives `p'(r_1) ṙ_1 = p'(r_2) ṙ_2` and
+`(r_1/2) p'(r_1) ṙ_1 = (r_2/2) p'(r_2) ṙ_2`, hence `(r_1 - r_2) p'(r_1) ṙ_1 = 0`, impossible generically on
+`Z` (audit C). So generic `(b, c)` avoids all coincidences. A polynomial map of degree `d + 1` with `d`
+simple critical points and pairwise distinct critical values has monodromy generated by `d`
+transpositions acting transitively on `d + 1` sheets, hence `S_(d+1)`. This is the Galois group of
+`K(x, y, z)/K(F)`: `K(x, y, z) = K(F)(w)` (since `x = 2F_3/(F_2F_3 - p(w))` and `γ = (F_2F_3 - p(w))/2`
+are identities), `w` is a root of `Φ(W) = q(W) + W(F_2F_3 - p(W))/2 - F_1F_3^2 ∈ K(F)[W]` of degree
+`d + 1 = deg F`, so `Φ` is its minimal polynomial, and the Galois group of a separable specialization
+`Φ_(b_0, c_0)` over `K̄(a)` — which is `S_(d+1)` by the one-variable monodromy — is a subgroup of the
+Galois group of `Φ` over `K̄(a, b, c)`. For Gao's `G` the resultant (script) exhibits the single
+coincidence (the node, `cb = -4`) and the diagonal factor.
+
+**(6).** By (1) the fibre over `(a, b, c)`, `c ≠ 0`, is `{w : F_1|_fibre(w) = a} ∖ {p(w) = cb}`, and
+`F_1' = (cb - p)/(2c^2)` vanishes exactly at the punctures, so a root is deleted iff it is multiple. A
+multiplicity sum of `1` is impossible, so the size `d` does not occur over `F_3 ≠ 0`.  ∎
 
 ## Reading
 

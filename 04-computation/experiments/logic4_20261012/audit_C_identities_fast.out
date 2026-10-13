@@ -1,0 +1,3 @@
+d=7: (1) True (2) True (3) disc identity & wp-2q=P True | deg h = 6, disc(h) at a random integer specialization = -308800187175235539501503797248/262609375 (nonzero: True) => generic squarefreeness, genus 2 | resultant (5) at the specialization nonzero: True
+d=8: (1) True (2) True (3) disc identity & wp-2q=P True | deg h = 7, disc(h) at a random integer specialization = -56575013378987316847857281951625990373376/64339296875 (nonzero: True) => generic squarefreeness, genus 3 | resultant (5) at the specialization nonzero: True
+python3 -u audit_C_identities_fast.py  0.67s user 0.06s system 86% cpu 0.837 total

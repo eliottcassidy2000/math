@@ -1,0 +1,38 @@
+(a) Gao's G
+   p'(w)/3 = w**2 - 4*w + 2
+   Gao G : resultant_r2 = 9*(r1**2 - 4*r1 - 2)*(r1**2 - 4*r1 + 2)**2/64
+    factor r1**2 - 4*r1 - 2 (mult 1), r1 ~ -0.44948974: common roots r2 ~ [4.4494897] -> genuine (r2 != r1): [4.4494897]
+    factor r1**2 - 4*r1 - 2 (mult 1), r1 ~ 4.4494897: common roots r2 ~ [-0.44948974] -> genuine (r2 != r1): [-0.44948974]
+    factor r1**2 - 4*r1 + 2 (mult 2), r1 ~ 0.58578644: common roots r2 ~ [0.58578644] -> genuine (r2 != r1): []
+    factor r1**2 - 4*r1 + 2 (mult 2), r1 ~ 3.4142136: common roots r2 ~ [3.4142136] -> genuine (r2 != r1): []
+    genuine coincidence pairs (r1, r2) ~ [(-0.44948974, 4.4494897), (4.4494897, -0.44948974)]  count: 2
+      |p(r1) - p(r2)| = 2.20e-39  |q(r1) - q(r2)| = 2.94e-39  cb = p(r1) ~ -4.0000000
+      |p(r1) - p(r2)| = 1.56e-39  |q(r1) - q(r2)| = 2.80e-39  cb = p(r1) ~ -4.0000000
+   exact: p(2+sqrt6) - p(2-sqrt6) = 0 ; q(2+sqrt6) - q(2-sqrt6) = 0 ; p(2+sqrt6) = -4 ; critical value q/c^2 with q(2+sqrt6) = 1/2
+   so for cb = -4 (i.e. b = -4/c) two of the three critical points r = 2 +- sqrt6 of F1 on the (F2,F3)-fibre share the critical value; the third root of p = -4 is w = 2.
+
+(d) THM-1300
+   THM-1300 : resultant_r2 = -(3*r1 - 2)**2
+    factor 3*r1 - 2 (mult 2), r1 ~ 0.66666667: common roots r2 ~ [0.66666667] -> genuine (r2 != r1): []
+    genuine coincidence pairs (r1, r2) ~ []  count: 0
+
+(b) random integer p of degree 2..6: resultant nonzero (hypothesis of (5) automatic), genuine pairs finite
+   d=2 p=-2*w**2 + 3*w: resultant nonzero True, degree 2, divisible by p'(r1)^2: True
+   d=3 p=3*w**3 + w**2 + 3*w: resultant nonzero True, degree 6, divisible by p'(r1)^2: True
+   d=4 p=w**4 - w**3 + 2*w**2 + 5*w: resultant nonzero True, degree 12, divisible by p'(r1)^2: True
+   d=5 p=2*w**5 - 4*w**4 + 2*w**3 + 5*w**2 - w: resultant nonzero True, degree 20, divisible by p'(r1)^2: True
+   d=6 p=-w**6 - 4*w**5 - 5*w**4 - 3*w**3 + 2*w**2 - 2*w: resultant nonzero True, degree 30, divisible by p'(r1)^2: True
+
+(c) Galois groups of separable specializations of Phi(W) = q(W) + W(bc - p(W))/2 - a c^2 (subgroup of the generic group)
+   THM-1300 (d=2, deg Phi=3) at (a,b,c)=(1,1/2,-3/2): Galois group PermutationGroup([
+    (0 1 2),
+    (2)(0 1)]), order 6, is S_3: True
+   Gao G (d=3, deg Phi=4) at (a,b,c)=(7/4,7/4,-3/2): Galois group PermutationGroup([
+    (0 1 2 3),
+    (3)(0 1)]), order 24, is S_4: True
+   random d=4 (d=4, deg Phi=5) at (a,b,c)=(3/2,-1,1/2): Galois group PermutationGroup([
+    (0 1 2 3 4),
+    (4)(0 1)]), order 120, is S_5: True
+   random d=5 (d=5, deg Phi=6) at (a,b,c)=(1,5,7/4): Galois group PermutationGroup([
+    (0 1 2 3 4 5),
+    (5)(0 1)]), order 720, is S_6: True

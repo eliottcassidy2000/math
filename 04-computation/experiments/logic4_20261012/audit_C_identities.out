@@ -1,0 +1,12 @@
+d=2: (1) deg True LC True deriv True | (2) deriv True, pole data True True | (3) disc True, wp-2q=P True, ord_0(A,B,C)=[2, 3, 2] (p1=0: [3, 3, 3]), deg h=1 (True), h generically squarefree True, disc~=(p/w)^2 h True, RH genus 0 = floor((d-2)/2) True, generic gcd(A~,B~,C~)=1/12 [0s]
+d=3: (1) deg True LC True deriv True | (2) deriv True, pole data True True | (3) disc True, wp-2q=P True, ord_0(A,B,C)=[2, 3, 2] (p1=0: [3, 3, 3]), deg h=2 (True), h generically squarefree True, disc~=(p/w)^2 h True, RH genus 0 = floor((d-2)/2) True, generic gcd(A~,B~,C~)=1/24 [0s]
+d=4: (1) deg True LC True deriv True | (2) deriv True, pole data True True | (3) disc True, wp-2q=P True, ord_0(A,B,C)=[2, 3, 2] (p1=0: [3, 3, 3]), deg h=3 (True), h generically squarefree True, disc~=(p/w)^2 h True, RH genus 1 = floor((d-2)/2) True, generic gcd(A~,B~,C~)=1/120 [0s]
+d=5: (1) deg True LC True deriv True | (2) deriv True, pole data True True | (3) disc True, wp-2q=P True, ord_0(A,B,C)=[2, 3, 2] (p1=0: [3, 3, 3]), deg h=4 (True), h generically squarefree True, disc~=(p/w)^2 h True, RH genus 1 = floor((d-2)/2) True, generic gcd(A~,B~,C~)=1/120 [1s]
+d=6: (1) deg True LC True deriv True | (2) deriv True, pole data True True | (3) disc True, wp-2q=P True, ord_0(A,B,C)=[2, 3, 2] (p1=0: [3, 3, 3]), deg h=5 (True), h generically squarefree True, disc~=(p/w)^2 h True, RH genus 2 = floor((d-2)/2) True, generic gcd(A~,B~,C~)=1/840 [179s]
+
+spurious vertical line example (d = 3, p = w(w-w0)(w-w0/2)): p(w0) = 0  q(w0) = 0  P(w0) = 0
+   A~, B~, C~ all vanish at w = w0: [True, True, True] => {w = w0} x A^1_x lies on the plane curve; it is excluded by p(w) != 0 in the chart
+d=2: resultant_r2 of the two difference quotients, symbolic p: nonzero True (degree in r1: 2)
+d=3: resultant_r2 of the two difference quotients, symbolic p: nonzero True (degree in r1: 6)
+d=4: resultant_r2 of the two difference quotients, symbolic p: nonzero True (degree in r1: 12)
+python3 -u audit_C_identities.py  177.35s user 0.69s system 99% cpu 2:59.33 total

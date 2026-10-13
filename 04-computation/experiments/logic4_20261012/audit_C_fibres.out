@@ -1,0 +1,41 @@
+====================================================================================================
+THM-1300 (d=2) : p = -3*w**2 + 4*w  q = -w**3 + w**2  gamma = -x**2*z - 3*x*y + 2
+(a) polynomial components: [True, True, True]  det JF = -2  degrees [7, 6, 4]
+    identity x = 2F3/(F2F3 - p(w)) in K(x,y,z): True ; gamma = (F2F3 - p(w))/2: True
+(b) base point (a, b) = (8, 2)
+    fibre points with b x = 2 (numeric, 40 digits): 2
+      (x,y,z) ~ (1.0000000, 0.5 - 4.6636895*I, 0.41666667 + 13.731975*I)  F ~ (8.0 + 1.8707486e-29*I, 2.0 + 1.1757022e-29*I, 0.083333333 + 0.25909386*I)  w ~ 1.3333333 + 3.5534108e-31*I  |p(w)| = 0.e-65 + 1.92e-20*I  |F3| = 0.272166
+      (x,y,z) ~ (1.0000000, 0.5 + 4.6636895*I, 0.41666667 - 13.731975*I)  F ~ (8.0 - 1.8707486e-29*I, 2.0 - 1.1757022e-29*I, 0.083333333 - 0.25909386*I)  w ~ 1.3333333 - 3.5534108e-31*I  |p(w)| = 0.e-65 + 1.92e-20*I  |F3| = 0.272166
+      exact (a,b) = (2/3, 2): point (1, 0, 2/3): F = [2/3, 2, 4/3]  w = 4/3  p(w) = 0
+      exact (a,b) = (2/3, 2): point (1, 1, -5/3): F = [2/3, 2, 2/3]  w = 4/3  p(w) = 0
+    F3 = 0 points on the fibre: x = 0 branch: 1 [{y: 2, z: -8}]
+    gamma = 0 branch: resultant in y = -4*x**2*(31*x**2 + 1)
+    gamma = 0 branch: resultant nonzero => finitely many; x-values (x != 0): 2 ; solutions counted exactly over Q(x-root): 2  => F3 = 0 points on the fibre: finite
+(c) critical points of q other than 0: [2/3]  critical values q(rho): [4/27]
+    c = 3/2, a = 16/243: q(w) = c^2 a has 2 distinct roots (degree 3) -> punctures 0, infinity + roots = 4 (d + 3 = 5)
+    c = 3/2, a = 8: q(w) = c^2 a has 3 distinct roots (degree 3) -> punctures 0, infinity + roots = 5 (d + 3 = 5)
+(d) chart -> fibre map verified on 10 points: True
+(f) h = b^2 - 8aP/w^2 = 64*w - 124  degree 1  squarefree: True  => genus 0
+(e) (F2,F3)-fibre over (b, 0): F3 = x*(-x**2*z - 3*x*y + 2); on x = 0, F2 = y  => contains the line {x = 0, y = b} (z free)
+    on gamma = 0 (x != 0): F2 - b = -b*x + 4*x*y + 6  (not a line unless this factors linearly in a coordinate)
+====================================================================================================
+Gao G (d=3) : p = w**3 - 6*w**2 + 6*w  q = 3*w**4/8 - 2*w**3 + 3*w**2/2  gamma = -x**2*z - 4*x*y + 2
+(a) polynomial components: [True, True, True]  det JF = -2  degrees [12, 11, 4]
+    identity x = 2F3/(F2F3 - p(w)) in K(x,y,z): True ; gamma = (F2F3 - p(w))/2: True
+(b) base point (a, b) = (2/5, 3/2)
+    fibre points with b x = 2 (numeric, 40 digits): 4
+      (x,y,z) ~ (1.3333333, -2.9097643, 10.778623)  F ~ (0.40000000, 1.5000000, -2.1910033)  w ~ 4.7320508  |p(w)| = 1.04e-27  |F3| = 2.19100
+      (x,y,z) ~ (1.3333333, -0.32228647, -2.5755962)  F ~ (0.40000000, 1.5000000, 11.063599)  w ~ 4.7320508  |p(w)| = 8.87e-31  |F3| = 11.0636
+      (x,y,z) ~ (1.3333333, 0.1160254 - 0.41684581*I, 0.27543998 + 1.0091572*I)  F ~ (0.4 - 9.8347509e-32*I, 1.5 - 7.0201828e-31*I, 1.1887024 + 0.57216059*I)  w ~ 1.2679492 + 2.7849099e-31*I  |p(w)| = 0.e-64 + 1.48e-20*I  |F3| = 1.31924
+      (x,y,z) ~ (1.3333333, 0.1160254 + 0.41684581*I, 0.27543998 - 1.0091572*I)  F ~ (0.4 + 9.8347509e-32*I, 1.5 + 7.0201828e-31*I, 1.1887024 - 0.57216059*I)  w ~ 1.2679492 - 2.7849099e-31*I  |p(w)| = 0.e-64 + 1.48e-20*I  |F3| = 1.31924
+    F3 = 0 points on the fibre: x = 0 branch: 1 [{y: 3/4, z: -341/80}]
+    gamma = 0 branch: resultant in y = -3*x**2*(147*x**2 + 80)
+    gamma = 0 branch: resultant nonzero => finitely many; x-values (x != 0): 2 ; solutions counted exactly over Q(x-root): 2  => F3 = 0 points on the fibre: finite
+(c) critical points of q other than 0: [2 - sqrt(2), sqrt(2) + 2]  critical values q(rho): [-11/2 + 4*sqrt(2), -4*sqrt(2) - 11/2]
+    c = 3/2, a = -22/9 + 16*sqrt(2)/9: q(w) = c^2 a has 3 distinct roots (degree 4) -> punctures 0, infinity + roots = 5 (d + 3 = 6)
+    c = 3/2, a = 2/5: q(w) = c^2 a has 4 distinct roots (degree 4) -> punctures 0, infinity + roots = 6 (d + 3 = 6)
+(d) chart -> fibre map verified on 10 points: True
+(f) h = b^2 - 8aP/w^2 = -4*w**2/5 + 32*w/5 - 147/20  degree 2  squarefree: True  => genus 0
+(e) (F2,F3)-fibre over (b, 0): F3 = x*(-x**2*z - 4*x*y + 2); on x = 0, F2 = 2*y  => contains the line {x = 0, 2*y = b} (z free)
+    on gamma = 0 (x != 0): F2 - b = -b*x + 6*x*y + 8  (not a line unless this factors linearly in a coordinate)
+python3 -u audit_C_fibres.py  26.72s user 0.15s system 98% cpu 27.190 total
