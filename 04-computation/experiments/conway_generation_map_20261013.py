@@ -57,7 +57,7 @@ def cgm_step(h):
         d = h[i]
         yp = x * (1 + 2 * d); ym = x * (1 - 2 * d)
         vp = interp(hn, yp / 2) if yp >= 2.0 else interp(h, yp)     # same generation (already computed, since yp/2 < x)
-        vm = interp(h, ym) if ym >= 1.0 else interp(h, ym * 2)        # (ym < 1 would be the generation after; does not occur for h > 0)
+        vm = interp(h, ym) if ym >= 1.0 else interp(h, ym * 2)        # ym < 1 reads the generation before the previous one (exactly h_(k-2)(2 ym), here h_(k-1)); it fires once the first cell exceeds ~6e-5 and is the route by which the unpinned map drifts to a constant (audit, 2026-10-13)
         hn[i] = (0.5 + d) * vp + (0.5 - d) * vm
     return hn
 

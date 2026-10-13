@@ -3,11 +3,12 @@ hofstadter_q_silver_fixed_point_20261013.py -- the second-order statistics of th
 point.  Exact: d(n) + d(n-1)/2 + d(n-2)/2 = s(n) + O(1/n) with s(n) = (p/n) d(p) + (q/n) d(q), p(n) = n - Q(n-1),
 q(n) = n - Q(n-2), and q(n+1) = p(n) + 1.  Model: s is white except for the lag-1 correlation c = rho(1)/2 produced by
 the shared adjacent index (weights 1/2); the ARMA(2,1) fixed point then gives rho(1)^2 - 2 rho(1) - 1 = 0, i.e.
-rho(1) = 1 - sqrt 2, var(d)/var(s) = 1 + 1/sqrt 2, and the consistency of var(s) = (1/2) var(d) (1 + rho_pq) requires
-rho_pq = corr(d(p(n)), d(q(n))) = 3 - 2 sqrt 2 = rho(1)^2.
+rho(1) = 1 - sqrt 2, var(d)/var(s) = 1 + 1/sqrt 2, and (with var(s) = var_prev/2 under white sampling) the sampled
+variance of the previous generation exceeds var(d) by the factor 4 - 2 sqrt 2; white sampling predicts
+rho_pq = corr(d(p(n)), d(q(n))) = 0 (an earlier draft of this docstring wrongly asked for 3 - 2 sqrt 2).
 Measured here to five decimals on the octaves 2^20, 2^22, 2^24, 2^26: rho(1), rho_s(1), var(d)/var(s), rho_pq, the
-cross-correlations corr(d(p(n)), d(p(n+1))), corr(d(q(n)), d(p(n+1))), corr(d(q(n)), d(p(n)+1)) [= rho(1) by the
-index identity]; the increment statistics of Q (fraction |Q(n) - Q(n-1)| <= 2, rms of (Q(n) - Q(n-1))/n); and the
+cross-correlations corr(d(p(n)), d(p(n+1))), corr(d(q(n)), d(p(n+1))), and corr(d(q(n+1)), d(p(n)+1)) [= 1 exactly by
+the index identity q(n+1) = p(n) + 1]; the increment statistics of Q (fraction |Q(n) - Q(n-1)| <= 2, rms of (Q(n) - Q(n-1))/n); and the
 weights p/n, q/n (mean, std).
 """
 import numpy as np, time
@@ -47,8 +48,8 @@ def corr(a, b):
 
 t0 = time.time(); q = hofq(N); print(f"Q to 2^27 in {time.time()-t0:.1f}s")
 r2 = np.sqrt(2.0)
-print(f"silver-ratio predictions: rho(1) = 1 - sqrt2 = {1-r2:.5f}; var(d)/var(s) = 1 + 1/sqrt2 = {1+1/r2:.5f}; rho_pq = 3 - 2 sqrt2 = {3-2*r2:.5f}; rho_s(1) = (1 - sqrt2)/2 = {(1-r2)/2:.5f}")
-print(" octave | rho(1)    rho_s(1)   var(d)/var(s)  rho_pq    corr(dp,dp+)  corr(dq,dp+)  corr(dq,dp1)=rho(1)?  frac|dQ|<=2  rms(dQ/n)  mean p/n  std p/n")
+print(f"silver-ratio predictions: rho(1) = 1 - sqrt2 = {1-r2:.5f}; var(d)/var(s) = 1 + 1/sqrt2 = {1+1/r2:.5f}; rho_pq (white sampling) = 0; rho_s(1) = (1 - sqrt2)/2 = {(1-r2)/2:.5f}; sampled-variance ratio 4 - 2 sqrt2 = {4-2*r2:.5f}")
+print(" octave | rho(1)    rho_s(1)   var(d)/var(s)  rho_pq    corr(dp,dp+)  corr(dq,dp+)  corr(dq(n+1),dp(n)+1)=1  frac|dQ|<=2  rms(dQ/n)  mean p/n  std p/n")
 for J in (20, 22, 24, 26):
     lo, hi = 1 << J, 1 << (J + 1)
     d, s, dp, dq, dp1, wp, frac, rinc = pieces(q, lo, hi)

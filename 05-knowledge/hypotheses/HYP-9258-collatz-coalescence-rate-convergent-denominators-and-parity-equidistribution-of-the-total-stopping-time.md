@@ -27,9 +27,10 @@ status: >
   so no finite 3-adic closure of the tree changes the law and the modal expansion is exactly the 3-adic closure at infinite
   depth (the 2-adic identities are exact; audited, MISTAKE-598); the ordinary mean of (-1)^tau is the Cesaro shadow of the lines (amplitude 0.0015 at 26.5 cycles per octave; model +0.0016 at
   2^34 against the census +0.00145), so the model predicts N^(-0.0018) decay for that line; the actual all-frequency rate remains OPEN. The dyadic alternation of (iii) is the half-integer lattice.
-  S27 (collatz_parity_fast_modes_20261013.out): the sampled prefix discrepancy eps_M = [3S(2M) + 3S(M) + S(3M)]/(6M) of the Codex identity (7)
-  has an octave-rms fit near M^(-1/2) over 2^8..2^28 (rms per octave 6.4e-3 -> 9.1e-6), consistent with a signed mod-3 residue sum of square-root scale:
-  beta about 1/2 in P4, NUMERICAL evidence for the square-root helper hypothesis, not a uniform bound; the class discrepancies of the parity bin means are at the sampling-noise floor.
+  S27 (collatz_parity_fast_modes_20261013.out): the prefix discrepancy eps_M = [3S(2M) + 3S(M) + S(3M)]/(6M) of the Codex identity (7)
+  falls with a range-dependent slope (-0.45 per octave over 2^12..2^25, steepening to -0.7 over 2^22..2^27 and -1.2 between the Codex values
+  at 2^28 and 2^32): beta in P4 is bracketed only in [0.2, 0.6], NUMERICAL and unstable; the class discrepancies of the parity bin means are a
+  factor 2 below the i.i.d. sampling floor at every octave (audited, MISTAKE-599).
 session: opus-2026-10-13-S25
 source: 05-knowledge/results/five_manuscripts_chowla_collatz_residue_bsd_20261013.md (sections 3.3-3.4)
 scripts:
