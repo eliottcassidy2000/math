@@ -116,7 +116,14 @@ distance multisets, which are labelling-independent). With seeding threshold
 committed run): ten at each grid and **eleven in the union**, one of them
 seeded only at grid 96 and one only at grid 160; the paper reports "more than
 one". The count grows with the seeding and is only a lower bound; two of the
-realizations have a vertex pair just `0.0014` apart. A second realization
+realizations have a vertex pair just `0.0014` apart.
+
+> **Update (same day, [EI19/fish note](ei19_fish_placement_q_zeta55_20261012.md), section 3):**
+> solving in direction space (six free angles after the parallelogram
+> identifications) instead of by apex branches, random starts converge almost
+> always and give **twelve** non-congruent real faithful realizations (each hit
+> 64-312 times in 3,000 starts; 20,000 starts give the same twelve), so the
+> branch censuses above were missing one. A second realization
 shares the certified `x_v1 = -2.4988` (under the automorphic relabelling) and
 differs from the certified one in exactly the four vertices `4, 6, 13, 16`
 (the free angle at `6` and the rhombus `6-16` re-placed), the other 13
