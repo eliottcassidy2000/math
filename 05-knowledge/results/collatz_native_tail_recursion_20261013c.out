@@ -1,0 +1,20 @@
+Native-tail recursion: every strict coarse lift of an actual half exit pays coefficient1
+Declared finite control universe:511 odd sources3..1023;7 parameters each;cells=3577
+Original-source hostile56924955: deficit4; continuation(2,2) surplus141; total surplus137
+Small supplied-terminal factories:4; indices0..3, literal ROOT and recursive address controls
+seed,child,prefix_rank,cost,ternary_depth,ROOT_rank,odd_charge,next_mod59049,next_mod1048576: (56924955, 14157451, 200, 319, 200, 277, 201, 39479, 301851)
+seed,child,prefix_rank,cost,ternary_depth,ROOT_rank,odd_charge,next_mod59049,next_mod1048576: (63728127, 10445855, 240, 383, 240, 357, 238, 33088, 813567)
+seed,child,prefix_rank,cost,ternary_depth,ROOT_rank,odd_charge,next_mod59049,next_mod1048576: (96883183, 16504781, 223, 356, 223, 303, 231, 16098, 414191)
+seed,child,prefix_rank,cost,ternary_depth,ROOT_rank,odd_charge,next_mod59049,next_mod1048576: (129177577, 16504781, 224, 358, 224, 304, 231, 48612, 202729)
+seed,child,prefix_rank,cost,ternary_depth,ROOT_rank,odd_charge,next_mod59049,next_mod1048576: (898696369947, 249622248673, 349, 555, 349, 424, 290, 26204, 677659)
+seed,child,prefix_rank,cost,ternary_depth,ROOT_rank,odd_charge,next_mod59049,next_mod1048576: (2081751768559, 522082008095, 412, 655, 412, 540, 373, 8216, 204271)
+seed,child,prefix_rank,cost,ternary_depth,ROOT_rank,odd_charge,next_mod59049,next_mod1048576: (31835572457967, 4994812878239, 457, 727, 457, 581, 410, 56818, 840175)
+seed,child,prefix_rank,cost,ternary_depth,ROOT_rank,odd_charge,next_mod59049,next_mod1048576: (1008932249296231, 141295968112997, 561, 892, 561, 689, 506, 57273, 154983)
+seed,child,prefix_rank,cost,ternary_depth,ROOT_rank,odd_charge,next_mod59049,next_mod1048576: (118303688851791519, 22391847502773035, 572, 909, 572, 725, 518, 1165, 73375)
+seed,child,prefix_rank,cost,ternary_depth,ROOT_rank,odd_charge,next_mod59049,next_mod1048576: (180352746940718527, 29997399390080243, 611, 971, 611, 714, 503, 74, 712127)
+seed,child,prefix_rank,cost,ternary_depth,ROOT_rank,odd_charge,next_mod59049,next_mod1048576: (2602714556700227743, 889585424873412547, 635, 1008, 635, 743, 551, 48023, 719007)
+Shared child16504781 frozen ROOT rank80,cost151,charge53,SHA256=a0bb2b2500dda03e82eaaa6a174015c8dd3846bb8b2fc1e19bcc517e324a4b50
+Recursive bridge: B_k --(2)--> A_(3k), seeds129177577/96883183; actual source strictly decreases
+Eleven infinite grounded subfamilies; k>0 local coefficient1; all-index ROOT rank and odd charge unchanged
+No symbolic family is claimed to contain every native parameter, or to cover every positive odd source
+checks=12021

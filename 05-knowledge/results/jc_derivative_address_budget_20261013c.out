@@ -1,0 +1,7 @@
+Exact derivative addresses retain characteristic-zero source polynomials
+Three-shear controls (a,b,c,address_count,boundary_count,inverse_degree): [(2, 2, 2, 25, 6, 8), (2, 3, 1, 28, 8, 6), (3, 1, 2, 16, 5, 6), (1, 3, 3, 22, 5, 9)]
+Triangular weights (degree,capacity,max_joint_order): [(2, 3, 2), (3, 4, 3), (5, 6, 5), (12, 13, 12), (20, 21, 20)]
+Degree1024 source: weighted capacity1025; scalar jets may vanish long before polynomial derivatives
+THM1300 strand0..4: independent overQ; degrees: [1, 11, 21, 31, 41]
+No universal frontier/weight budget; failed caps and failed weight inequalities are inconclusive
+checks: 189

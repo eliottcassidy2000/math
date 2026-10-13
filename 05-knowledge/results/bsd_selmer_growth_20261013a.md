@@ -188,6 +188,13 @@ kernel does not by itself distinguish finite Sha classes from surviving
 rank or divisible Sha. A complete Sel_4 order would make the adjacent
 growth test available.
 
+**2026-10-13 continuation:** [Tunnell terminals](bsd_tunnell_terminals_20261013c.md)
+now ground E17 and E627 without computing Sel_4: exact central-value
+nonvanishing and the classical CM theorem give rank zero and finite Sha.
+The same second gate settles724 of this packet's1170 first-gate residuals;
+the unchanged4056-source union covers3610. The first-level counts above
+remain correct and retain their narrower scope.
+
 Every prescribed finite tournament occurs for primes all 3 modulo 8:
 choose a new prime in specified nonzero square/nonsquare classes modulo
 the previous primes and in class 3 modulo 8, then use CRT and Dirichlet's

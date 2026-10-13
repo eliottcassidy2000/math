@@ -73,8 +73,13 @@ product achievable on 5 vertices, so both are absent at `n=5` and both appear at
 gap is a **multiplicative** phenomenon, not an arithmetic accident.
 
 **Non-corollary (recorded to prevent a tempting error):** `|R(T)|=1 ⟺ T transitive` is
-**FALSE** — the strong 4-tournament has `H=3`, `R=±1`, so `|R|=1` for a non-transitive strong
+**FALSE** — the strong 4-tournament has `H=5`, `R=±1`, so `|R|=1` for a non-transitive strong
 tournament (24 labelings at `n=4`; 7920 strong `n=6`). Strong tournaments *can* be sign-balanced.
+
+**2026-10-13 arithmetic correction.** The former `H=3` in this sentence
+was wrong; the unsigned count is five. The signed value and join theorem
+are unchanged. The five literal paths and their signed sum are reproduced
+in `04-computation/experiments/bsd_component_recursion_20261013c.py`.
 
 ## Remarks
 

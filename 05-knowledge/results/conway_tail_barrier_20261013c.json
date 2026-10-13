@@ -1,0 +1,78 @@
+{
+  "arc_1024_violations": [
+    1487,
+    1489
+  ],
+  "arcs": [
+    {
+      "end": 1024,
+      "last_violation": 789,
+      "peak_error": "79/1438",
+      "peak_index": 719,
+      "peak_value": 399,
+      "start": 512,
+      "violation_count": 100
+    },
+    {
+      "end": 2048,
+      "last_violation": 1489,
+      "peak_error": "149/2974",
+      "peak_index": 1487,
+      "peak_value": 818,
+      "start": 1024,
+      "violation_count": 2
+    },
+    {
+      "end": 4096,
+      "last_violation": null,
+      "peak_error": "275/5794",
+      "peak_index": 2897,
+      "peak_value": 1586,
+      "start": 2048,
+      "violation_count": 0
+    }
+  ],
+  "certificate": {
+    "checked_boundary_values": 1818,
+    "exclusive_end": 3308,
+    "largest_integer_barrier": -3,
+    "slope": "11/20",
+    "start": 1490
+  },
+  "checks": 32782,
+  "last_one_twentieth_violation": 1489,
+  "last_violation_value": 819,
+  "other_slopes": [
+    {
+      "checked_boundary_values": 9,
+      "exclusive_end": 16,
+      "largest_integer_barrier": -1,
+      "slope": "2/3",
+      "start": 7
+    },
+    {
+      "checked_boundary_values": 35,
+      "exclusive_end": 61,
+      "largest_integer_barrier": -2,
+      "slope": "3/5",
+      "start": 26
+    },
+    {
+      "checked_boundary_values": 129,
+      "exclusive_end": 228,
+      "largest_integer_barrier": -1,
+      "slope": "4/7",
+      "start": 99
+    }
+  ],
+  "prefix_sha256": "5b91f37984dc301a45d9a217a72c56dd826ad96b36e2bd2e587aa5c32c319580",
+  "sequence_controls": {
+    "C1024": 512,
+    "C20": 12,
+    "Q1024": 557,
+    "Q20": 12,
+    "first_Q_decrease": 16
+  },
+  "status": "FINITE-EXACT boundary; PROVED global consequence in paired note",
+  "universe": "all Conway and Q indices 1..4096; Q claim is finite only"
+}

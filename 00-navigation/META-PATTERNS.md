@@ -5,7 +5,7 @@ repaired failure; retain triggers and counterindications.
 
 ## Separate local support from bounded-height coverage
 
-**Action:** keep height, terminal tests and no-reentry: local surjectivity gives no integer tail. **Evidence:** THM-4026/4027/2059/2043/2050; [Collatz basins](../05-knowledge/results/arithmetic_braids2_20260917_inverse_completion.md).
+**Trigger/action:** prove source-address closure before extending local success. **Evidence:** THM-4026/4027/2059/2043/2050; [five-lane controls](../05-knowledge/results/recursive_boundaries_and_grounded_terminals_20261013c.md). **Limits:** evaluated jets, sparse families and extra colours can break transfer.
 
 ## Keep observer, recurrence class, and finite head
 

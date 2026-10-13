@@ -1,0 +1,115 @@
+{
+  "checks": 6023,
+  "field": "Q(zeta15)",
+  "vertices": 81,
+  "base_edges": 324,
+  "complete_frame_edges": 405,
+  "actual_induced_edges": 327,
+  "deleted_frame_edges": 78,
+  "exhaustive_difference_words": 2401,
+  "unit_words": 30,
+  "base_three_colourings": 48,
+  "repaired_three_colourings": 30,
+  "full_frame_three_colourings": 30,
+  "diagonal_ports": [
+    0,
+    40,
+    80
+  ],
+  "surviving_phases": [
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      -1
+    ],
+    [
+      1,
+      1,
+      -1,
+      1
+    ],
+    [
+      1,
+      -1,
+      1,
+      1
+    ],
+    [
+      1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      1,
+      1,
+      1
+    ],
+    [
+      -1,
+      1,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      1,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      -1,
+      1
+    ],
+    [
+      -1,
+      -1,
+      -1,
+      -1
+    ]
+  ],
+  "boundary_before": {
+    "all_equal": 18,
+    "all_distinct": 30
+  },
+  "boundary_after": {
+    "all_distinct": 30
+  },
+  "four_colour_hostile_removed_edge": [
+    1,
+    41
+  ],
+  "prime_phase_controls": [
+    [
+      5,
+      4,
+      30
+    ],
+    [
+      7,
+      6,
+      126
+    ],
+    [
+      11,
+      10,
+      2046
+    ],
+    [
+      13,
+      12,
+      8190
+    ]
+  ],
+  "scope": "Exact colour-preserving non-Cayley geometric escape; still chromatic three."
+}
