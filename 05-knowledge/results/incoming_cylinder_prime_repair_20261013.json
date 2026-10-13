@@ -1,0 +1,56 @@
+{
+  "checks": 26674,
+  "depths": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "exceptional_heights": [
+    0,
+    2,
+    2,
+    3,
+    16,
+    16,
+    16,
+    130,
+    130
+  ],
+  "fixed_residue_classes": [
+    [
+      19,
+      10
+    ],
+    [
+      24,
+      10
+    ],
+    [
+      29,
+      10
+    ],
+    [
+      39,
+      10
+    ],
+    [
+      54,
+      2
+    ]
+  ],
+  "gp_output": [
+    "[-65536/91, 364, [1, 1, 0, [[0, 2]]], [1, [], []]]",
+    "[0, 1, 0, -5, 7]",
+    "[-4096/43, 43]",
+    "[1408317602329/2153060, 910, [1, 1, 0, [[-100, 260]]], [6, [6], [[56, 728]]]]",
+    "[1, 0, 1, -234, 1352]"
+  ],
+  "gp_source": "E=ellinit([0,4,0,0,4]); print([E.j,ellglobalred(E)[1],ellrank(E),elltors(E)]);\nprint(ellminimalmodel(E)[1..5]);\nF=ellinit([0,4,0,0,16]);print([F.j,ellglobalred(F)[1]]);\nG=ellinit([0,109,0,224,0]);print([G.j,ellglobalred(G)[1],ellrank(G),elltors(G)]); print(ellminimalmodel(G)[1..5]);\n",
+  "source_sha256": "702e1205e4bce69489a5674c9f5abc52ea005ed6d3383bd4ea20f3170e0e674f"
+}

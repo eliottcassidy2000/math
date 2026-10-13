@@ -115,6 +115,24 @@ are a source and accumulated cost, a simultaneous square-root tuple, and
 a global cokernel with its connection. This is a reusable design principle,
 not an equivalence among the three famous problems.
 
+## A final incoming packet and three narrow repairs
+
+Commit `6dde94b60c` arrived during close-out. Its full synthesis and both
+new theorem files were read. The [correction packet](incoming_cylinder_prime_repair_20261013.md)
+retains the source-height error in stopping-time/Haar comparisons, corrects
+the conjugation-fixed prime classification, and repairs the square curve's
+coordinate change: its conductor is364, not43. These repairs preserve the
+valid limits and residue-colouring obstruction while removing a false
+elliptic database transfer. They have26,674 further exact checks with
+normal/optimized agreement; no claim of a full audit of that packet or
+its Haar-coalescence dependency is made.
+
+The connection back to the main targets is useful. A mean correlation
+still needs a source-specific payment rule; a quotient residue graph
+still needs an injective geometric lift; an elliptic identification still
+needs the exact coordinate map. Those are the same retained obligations
+that the three new constructions above make explicit.
+
 ## An arithmetic connection recovered from the concurrent work
 
 The [new Selmer-growth packet](bsd_selmer_growth_20261013a.md) has the exact
