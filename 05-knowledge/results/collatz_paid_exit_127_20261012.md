@@ -3,8 +3,13 @@
 2026-10-12. **PROVED, scoped and self-audited:** the all-height exit
 compiler, the displayed guarded rules, and their charge bounds.
 **FINITE-EXACT:** the matched finite proof grammars and two complete hostile
-certificates. **OPEN:** universal entry, the quadratic band hypothesis,
-and independent ROOT positivity for arbitrary supplied sources. No external
+certificates. **OPEN:** universal entry and independent ROOT positivity for
+arbitrary supplied sources. The universal coefficient-three **first-exit**
+quadratic band hypothesis is now **REFUTED** by the
+[incoming hostile analysis](collatz_band_budget_hostile_20261012.md)
+(MISTAKE-593); the accepted scoped certificates below remain valid.
+[Delayed source-owned exits](collatz_delayed_annular_invoices_20261013.md)
+give a different, still open universal target. No external
 priority, independent peer audit, or formalization is claimed.
 
 ## Inheritance and concept board
