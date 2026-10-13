@@ -1,0 +1,61 @@
+---
+id: THM-4630
+title: "The jitter of Hofstadter's Q sequence (Q(1) = Q(2) = 1, Q(n) = Q(n - Q(n-1)) + Q(n - Q(n-2)); d(n) = Q(n)/n - 1/2) is the silver-ratio fixed point of an ARMA(2,1) recursion: exactly, d(n) + (1/2)(1 - 1/n) d(n-1) + (1/2)(1 - 2/n) d(n-2) = s(n) + 3/(4n) with the source s(n) = (p/n) d(p) + (q/n) d(q), p = n - Q(n-1), q = n - Q(n-2), and q(n+1) = p(n) + 1; under the white-sampling hypotheses (the two source samples uncorrelated except through the shared adjacent index, weights 1/2, the autocorrelation the same in consecutive generations) the source is an MA(1) input with rho_s(1) = rho(1)/2 and the Yule-Walker equations force rho(1)^2 - 2 rho(1) - 1 = 0: rho(1) = 1 - sqrt 2, var(d)/var(s) = 1 + 1/sqrt 2, the variance of the jitter falls by the factor 4 - 2 sqrt 2 per generation, so rms(Q(n) - n/2) ~ n^(1 - log2(4 - 2 sqrt 2)/2) = n^0.8858, and the full autocorrelation is the AR(2) resonator (poles (-1 +- i sqrt 7)/4, modulus 1/sqrt 2, period 3.253) driven by that input; measured to 2^30: rho(1) = -0.41422, rho_s(1) = -0.20716, var(d)/var(s) = 1.70699, the two source samples correlate at 0.0001, the generation variance ratio is 1.174, the exponent 0.876-0.884, and all twelve lags of the autocorrelation lie within 0.002 of the fixed point at every octave from 2^12 to 2^28"
+status: >
+  PROVED: the exact identity (statement 1), the index identity q(n+1) = p(n) + 1, and the fixed-point computation of
+  statement 2 under hypotheses H1-H3 (Yule-Walker algebra; the roots, modulus and period of the resonator; the closed
+  forms 1 - sqrt 2, 1 + 1/sqrt 2, 4 - 2 sqrt 2). NUMERICAL (Q exact to 2^30): statement 3, every measured value; the
+  hypotheses H1-H3 are themselves tested (rho(d(p), d(q)) = 0.0001, rho_s(1)/rho(1) = 0.50011, weights 0.50000 +- 0.006,
+  the autocorrelation identical to 0.005 over sixteen octaves). CITED (from memory, not re-fetched): Hofstadter, GEB
+  (1979); Pinn, Order and chaos in Hofstadter's Q(n) sequence, Complexity 4 (1999) (generations; an exponent near 0.88
+  for the fluctuations is recalled, not verified); OEIS A005185. OPEN: a proof of H1-H3 for the sequence (they are
+  statements about the backward indices n - Q(n-1), n - Q(n-2) as a sampling of the previous generation); the
+  existence of Q(n) for all n; the envelope node near x = 1.41 (HYP-9259). A stretched-copy hypothesis for the source
+  (s a time-stretched copy of the previous generation) was tested and REFUTED before this theorem was found
+  (hofstadter_q_renormalization_20261013.out: the source is white apart from the shared index). Not yet independently
+  audited at filing time: the auditor of HYP-9259 was asked to check the algebra; see the results note, section 9.
+session: opus-2026-10-13-S27
+source: 05-knowledge/results/meta_fibonacci_one_sided_walks_20261013.md
+scripts:
+  - 04-computation/experiments/hofstadter_q_silver_fixed_point_20261013.py (+ .out: rho(1), rho_s(1), var ratios, sample correlations, weights, increments, to five decimals on four octaves)
+  - 04-computation/experiments/hofstadter_q_renormalization_20261013.py (+ .out: the refuted stretched-copy hypothesis; acf of the source; periodograms)
+  - 04-computation/experiments/meta_fibonacci_resonator_20261013.py (+ .out: the identity to 1e-16; the autocorrelation at lags 1..12 over five octaves; the rms per generation)
+related:
+  - HYP-9259 (one-sided walks; the linearisation and the resonator), THM-4629 (the two-sided Collatz case)
+  - 05-knowledge/results/meta_fibonacci_one_sided_walks_20261013.md
+---
+
+# THM-4630 — the silver-ratio fixed point of Hofstadter's Q
+
+## Setting
+
+`Q(1) = Q(2) = 1`, `Q(n) = Q(p) + Q(q)` with `p = p(n) = n - Q(n-1)`, `q = q(n) = n - Q(n-2)`; `d(n) = Q(n)/n - 1/2`; `s(n) = (p/n) d(p) + (q/n) d(q)`. Generation `k` is `[2^k, 2^(k+1))`.
+
+## Statement
+
+1. **(Exact; PROVED.)** `d(n) + (1/2)(1 - 1/n) d(n-1) + (1/2)(1 - 2/n) d(n-2) = s(n) + 3/(4n)` for every `n >= 3`, and `q(n+1) = p(n) + 1`. The backward indices satisfy `p/n = 1/2 - (1 - 1/n) d(n-1)`, `q/n = 1/2 - (1 - 2/n) d(n-2)`.
+2. **(The fixed point; PROVED under H1-H3.)** Assume, within a generation, (H1) the sampled values `d(p(n))` and `d(q(n))` are uncorrelated with each other and with every other source value except through the shared adjacent index of 1 (`q(n+1) = p(n) + 1`), (H2) the weights `p/n`, `q/n` may be replaced by `1/2`, and (H3) the autocorrelation function `rho` of `d` is the same in consecutive generations. Then `s` is a stationary input with `var(s) = var_prev/2`, where `var_prev` is the variance of the sampled values, and autocorrelation `rho_s(1) = c = rho(1)/2`, `rho_s(l) = 0` for `l >= 2`; `d` is the ARMA(2,1) output `d(n) = -d(n-1)/2 - d(n-2)/2 + s(n)` (dropping `O(1/n)`), whose Yule-Walker equations
+   `gamma(0) = -gamma(1)/2 - gamma(2)/2 + sigma^2 (1 - c/2)`, `gamma(1) = -gamma(0)/2 - gamma(1)/2 + sigma^2 c`, `gamma(2) = -gamma(1)/2 - gamma(0)/2`
+   together with `c = gamma(1)/(2 gamma(0))` give `rho(1)^2 - 2 rho(1) - 1 = 0`. Hence
+   `rho(1) = 1 - sqrt 2 = -0.414214`, `c = (1 - sqrt 2)/2 = -0.207107`, `var(d)/var(s) = (3 + sqrt 2)/(4 - sqrt 2) = 1 + 1/sqrt 2 = 1.707107`,
+   `var_prev/var(d) = 2 var(s)/var(d) = 4 - 2 sqrt 2 = 1.171573`, so the jitter variance falls by that factor per generation and `rms(Q(n) - n/2) ~ n^(1 - log2(4 - 2 sqrt 2)/2) = n^0.88579`; the full autocorrelation is `rho(l) = int_0^pi |H(w)|^2 (1 + 2c cos w) cos(l w) dw / int_0^pi |H(w)|^2 (1 + 2c cos w) dw` with `H(w) = 1/(1 + e^(-iw)/2 + e^(-2iw)/2)`, whose poles `(-1 +- i sqrt 7)/4` have modulus `1/sqrt 2` and period `2 pi/arg = 3.2527`: `rho(1..12) = -0.414, -0.293, +0.354, -0.030, -0.162, +0.096, +0.033, -0.064, +0.016, +0.024, -0.020, -0.002`.
+3. **(Data; NUMERICAL, `Q` exact to `2^30`.)** On the octaves `2^20, 2^22, 2^24, 2^26`: `rho(1) = -0.41379, -0.41438, -0.41425, -0.41422`; `rho_s(1) = -0.20683, -0.20733, -0.20708, -0.20716`; `var(d)/var(s) = 1.70991, 1.70697, 1.70656, 1.70699`; `corr(d(p(n)), d(q(n))) = +0.0017, +0.0003, -0.0002, +0.0001`; `corr(d(p(n)), d(p(n+1)))` and `corr(d(q(n)), d(p(n+1)))` below `0.002`; `corr(d(q(n+1)), d(p(n)+1)) = 1.00000` (the index identity); mean `p/n = 0.50000`, standard deviation `0.010, 0.0085, 0.0072, 0.0062`. The autocorrelation at lags `1..12` is `-0.414, -0.293, +0.353, -0.030, -0.162, +0.096, +0.033, -0.064, +0.014, +0.025, -0.019, -0.004` at `2^22`, identical to `0.005` at `2^12, 2^16, 2^20, 2^24, 2^28`; the dominant short period in the periodogram is `3.03-3.31`. The rms of `d` per generation (`meta_fibonacci_resonator_20261013.out`) gives consecutive variance ratios `1.172, 1.176, 1.171, 1.177` for `k = 25..29` (model `1.1716`), an exponent `0.884` over those generations and `0.876` over `k = 10..29`. The increments `Q(n) - Q(n-1)` are large (`rms((Q(n) - Q(n-1))/n) = 0.010` at `2^26`; the fraction with `|Q(n) - Q(n-1)| <= 2` is below `1e-4`), which is why the two backward indices sample the previous generation at unrelated positions (H1).
+
+## Proof
+
+**1.** `Q(n)/n = (p/n)(1/2 + d(p)) + (q/n)(1/2 + d(q)) = (p + q)/(2n) + s(n)` and `p + q = 2n - Q(n-1) - Q(n-2) = 2n - (n-1)(1/2 + d(n-1)) - (n-2)(1/2 + d(n-2)) = n + 3/2 - (n-1) d(n-1) - (n-2) d(n-2)`; divide by `2n`. The index identity: `q(n+1) = n + 1 - Q(n-1) = p(n) + 1`. ∎
+
+**2.** *The input.* `cov(s(n), s(n+1))`: of the four products, only `d(p(n)) d(q(n+1)) = d(p(n)) d(p(n)+1)` is correlated under H1, with weight `1/4` by H2: `cov = gamma_prev(1)/4`; `var(s) = (1/4 + 1/4) var_prev` by H1-H2; so `c = rho_prev(1)/2 = rho(1)/2` by H3, and `cov(s(n), s(n+l)) = 0` for `l >= 2` (no shared or adjacent indices). *The output.* With `x_n = d(n)`, `phi_1 = phi_2 = -1/2`, and `E[x_(n-l) s_n] = sigma^2 (h_(-l) + c (h_(-l-1) + h_(-l+1)))` for the impulse response `h_0 = 1`, `h_1 = -1/2`, ... (`h_j = 0` for `j < 0`), the Yule-Walker equations are as displayed (`E[x_n s_n] = sigma^2 (1 - c/2)`, `E[x_(n-1) s_n] = sigma^2 c`, `E[x_(n-l) s_n] = 0` for `l >= 2`). Writing `rho = gamma(1)/gamma(0)` and `t = sigma^2/gamma(0)`: the second equation gives `rho = -1/3 + (2/3) t c`, the first with the third gives `t = (3/4)(1 + rho/3)/(1 - c/2)`; with `c = rho/2`, `rho = -1/3 + (rho/4)(1 + rho/3)/(1 - rho/4)`, i.e. `(rho + 1/3)(1 - rho/4) = (rho/4)(1 + rho/3)`, i.e. `rho^2 - 2 rho - 1 = 0`, whose root in `(-1, 1)` is `1 - sqrt 2`. Then `1/t = (4/3)(1 - rho/4)/(1 + rho/3) = (3 + sqrt 2)/(4 - sqrt 2) = 1 + sqrt 2/2`, and `var_prev = 2 sigma^2 = 2 gamma(0)/(1 + 1/sqrt 2) = (4 - 2 sqrt 2) gamma(0)`. The spectral form of `rho(l)` is the ARMA spectral density `|H|^2 (1 + 2c cos w)`; the poles of `H` are the roots of `z^2 + z/2 + 1/2`. ∎
+
+**3.** Computation (scripts above). ∎
+
+## Scope and boundary
+
+- Statement 2 is a theorem about the model defined by H1-H3; its content for the sequence is that those three hypotheses, each tested directly in statement 3, determine the second-order statistics of the chaos of `Q` to the precision of the data. The hypotheses are not proved; H1 is the deep one (why the backward indices behave as independent samples), and the measured sample correlations `0.0001-0.0017` are its evidence.
+- The exponent `0.8858` assumes the sampled variance equals the previous generation's variance at the same relative position and the envelope shape is stationary (HYP-9259: it is, from `2^14`); the measured `0.876` over `k = 10..29` includes the pre-asymptotic generations, and the last four give `0.884`.
+- `O(1/n)` terms (the `3/(4n)` source and the weight corrections) are dropped in statement 2; at `2^20` they are below `1e-6`.
+- Silver ratio: `rho(1) = -1/(1 + sqrt 2)`, the negative inverse of the silver ratio; `1 + 1/sqrt 2` and `4 - 2 sqrt 2` are its companions. No numerology is claimed beyond the algebra: the `sqrt 2` is the modulus `1/sqrt 2` of the resonator poles entering a quadratic fixed-point equation.
+
+## Reading
+
+Hofstadter's Q is chaotic because its two backward indices overshoot by the previous deviations; the overshoot feeds the last two deviations back with weight `-1/2`, a damped resonator of period `3.25`, and the indices scatter the previous generation's chaos into a white input. The only correlation the input keeps is the one the index identity `q(n+1) = p(n) + 1` forces, and that single lag closes the loop: the lag-1 correlation must satisfy `rho^2 - 2 rho - 1 = 0`. The sequence's second-order statistics, including the rate `n^0.886` at which `Q(n) - n/2` grows, are the silver-ratio solution of that equation.

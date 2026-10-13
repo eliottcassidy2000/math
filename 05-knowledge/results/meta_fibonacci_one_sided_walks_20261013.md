@@ -2,7 +2,7 @@
 
 2026-10-13, opus-2026-10-13-S27 (worktree `codex/session-papers-collatz-hn-jc-bsd`, continuing S26). Owner prompt: *continue on all angles and go even further; merge in Hofstadter's Q sequence and a(1) = a(2) = 1, a(n) = a(a(n−1)) + a(n − a(n−1)); think 20 and 1024.*
 
-**Status.** PROVED: the exact deviation identities of both recursions; their linearisations (Conway: the identity, an undamped integer comb; Q: smooth components halved per generation plus the resonator `z^2 + z/2 + 1/2 = 0`, `|z| = 1/sqrt 2`, period `3.253`); the second-order expansion of Conway's continuum generation map, `h_k - h_(k-1) = 2 h^2 (x^2 h')' + O(h^3)`. FINITE-EXACT: both sequences to `2^30`; identities to `1e-16` for `n <= 2^22`; `a(2^k) = 2^(k-1)` (`k <= 30`), `Q(3 2^k) = 2^(k+1)` for `k <= 8` only, Mallows's `1489`. NUMERICAL: the comb, hump, step, envelope and autocorrelation measurements; the continuum map against generations 15..29; on the Collatz side the fast-mode bound and `epsilon_M ~ M^(-1/2)`. CITED (from memory): Mallows 1991, Kubo-Vakil 1996, Pinn 1999, OEIS A004001/A005185. HYP-9259 holds the statements. Audit: section 9.
+**Status.** PROVED: the exact deviation identities of both recursions; the silver-ratio fixed point of the Q jitter under the white-sampling hypotheses (THM-4630); their linearisations (Conway: the identity, an undamped integer comb; Q: smooth components halved per generation plus the resonator `z^2 + z/2 + 1/2 = 0`, `|z| = 1/sqrt 2`, period `3.253`); the second-order expansion of Conway's continuum generation map, `h_k - h_(k-1) = 2 h^2 (x^2 h')' + O(h^3)`. FINITE-EXACT: both sequences to `2^30`; identities to `1e-16` for `n <= 2^22`; `a(2^k) = 2^(k-1)` (`k <= 30`), `Q(3 2^k) = 2^(k+1)` for `k <= 8` only, Mallows's `1489`. NUMERICAL: the comb, hump, step, envelope and autocorrelation measurements; the continuum map against generations 15..29; on the Collatz side the fast-mode bound and `epsilon_M ~ M^(-1/2)`. CITED (from memory): Mallows 1991, Kubo-Vakil 1996, Pinn 1999, OEIS A004001/A005185. HYP-9259 holds the statements. Audit: section 9.
 
 ## 1. The two recursions as backward trees, and the exact identities
 
@@ -57,7 +57,9 @@ including the even/odd alternation of the position of the maximum. The map's con
 | `2^28` | -0.414 | -0.293 | +0.354 | -0.030 | -0.162 | +0.096 | +0.033 | -0.064 | +0.016 | +0.024 | -0.020 | -0.002 | 3.04 |
 | AR(2) | -0.333 | -0.333 | +0.333 | 0 | -0.167 | +0.083 | +0.042 | -0.062 | +0.010 | +0.026 | -0.018 | -0.004 | 3.25 |
 
-The signature of the resonator is there at lags `3..12` to `0.02`, with the lag-1 and lag-2 values shifted by the source term's own short-range correlation; the function is scale-invariant to `0.005` over sixteen octaves. The dominant short period in the power spectrum is `3.03-3.31`.
+The signature of the resonator is there at lags `3..12` to `0.02`; the function is scale-invariant to `0.005` over sixteen octaves. The dominant short period in the power spectrum is `3.03-3.31`.
+
+**The silver-ratio fixed point (THM-4630).** The lag-1 and lag-2 values are explained exactly once the source is measured: a stretched-copy hypothesis (the source as the previous generation read in order, time-stretched by two) was tested and refuted (`hofstadter_q_renormalization_20261013.out`: `acf_s(2l)` is not `acf_d(l)`); instead the source `s(n) = (p/n) d(p) + (q/n) d(q)` is white, `acf_s = (-0.207, 0.001, 0.000, ...)`, because the backward indices `p = n - Q(n-1)`, `q = n - Q(n-2)` scatter over the previous generation (the increments of `Q` are large, rms `0.010 n`, so `p` and `q` are unrelated positions; `corr(d(p), d(q)) = 0.0001`), and the one correlation it keeps is forced by the exact index identity `q(n+1) = p(n) + 1`: `rho_s(1) = rho(1)/2`. The ARMA(2,1) Yule-Walker equations then close on themselves and give `rho(1)^2 - 2 rho(1) - 1 = 0`: `rho(1) = 1 - sqrt 2 = -0.41421` (measured `-0.41422` at `2^26`), `var(d)/var(s) = 1 + 1/sqrt 2 = 1.70711` (measured `1.70699`), the generation variance ratio `4 - 2 sqrt 2 = 1.1716` (measured `1.172-1.177` for `k = 25..29`), hence `rms(Q(n) - n/2) ~ n^(1 - log2(4 - 2 sqrt 2)/2) = n^0.8858` (measured `0.884` over the last four generations, `0.876` over `k = 10..29`), and all twelve lags of the autocorrelation to `0.002` (`hofstadter_q_silver_fixed_point_20261013.out`). The scale invariance is explained: nothing in the fixed point carries a scale.
 
 **Envelope.** The rms of `d` over 16 sub-intervals of each generation has a stable shape from `2^14` on; at `2^29`: `0.0057 0.0052 0.0047 0.0039 0.0030 0.0018 0.0013 0.0034 0.0048 0.0055 0.0058 0.0059 0.0059 0.0058 0.0057 0.0055`: loud at the start of the generation, calmest at `x` in `[1.375, 1.4375]` (near `sqrt 2`), loudest near `x = 1.72`; the node fills in slowly (min/max `0.15 -> 0.22` from `2^14` to `2^29`). The parity of `Q(n)` is biased early (`+0.20` at `2^8`, `+0.04` at `2^11`) and balanced from `2^16`.
 
@@ -72,13 +74,13 @@ Added to the S26 note and to THM-4629 (statement 7). The class-specific fast mod
 ## 7. Next steps
 
 1. The pinned continuum map (`h_k(1) = 0` enforced through the exact first terms of each generation) iterated to `k = 10^3`: the limit of `A_k sqrt(k)` and the limiting shape; compare with the measured `0.1377/sqrt(k - 2.35)`.
-2. The AR(2) source term of Q computed directly, to account for the lag-1 and lag-2 excess; the envelope node at `x` near `sqrt 2` at finer resolution.
+2. Done in THM-4630 (the source is white up to the shared index); next, prove the white-sampling hypothesis H1 from the increment statistics of `Q`, and resolve the envelope node at `x` near `sqrt 2` at finer resolution.
 3. Q's existence (Hofstadter's question): the fatal event `d(n-1) >= 1/2` against the measured envelope `n^(-0.12)`; the running maximum of `d` to `2^34`.
 4. Collatz: a direct census of the breaks' signs modulo `3` to explain the `X^(1/2)` growth, and the pinned amplitude problem of S26.
 
 ## 8. Files
 
-`04-computation/experiments/`: `meta_fibonacci_one_sided_walks_20261013.py`, `meta_fibonacci_resonator_20261013.py`, `conway_generation_map_20261013.py`, `collatz_parity_fast_modes_20261013.py` (each with `.out`). The sequences to `2^30` take `5 s` (Conway) and `85 s` (Q) with numba and `4.3 GB` each.
+`04-computation/experiments/`: `meta_fibonacci_one_sided_walks_20261013.py`, `meta_fibonacci_resonator_20261013.py`, `conway_generation_map_20261013.py`, `collatz_parity_fast_modes_20261013.py`, `hofstadter_q_renormalization_20261013.py` (the refuted stretched-copy test), `hofstadter_q_silver_fixed_point_20261013.py` (each with `.out`). The sequences to `2^30` take `5 s` (Conway) and `85 s` (Q) with numba and `4.3 GB` each.
 
 ## 9. Audit
 

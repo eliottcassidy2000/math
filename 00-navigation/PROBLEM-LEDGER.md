@@ -785,7 +785,8 @@ all heights (THM-1289, published), δ ineffective.
   exact integer comb (generations = octaves) instead of Collatz's irrational near-return lines. Exact identities (PROVED): Conway `d(n) = (p/n) d(p) + (q/n) d(q)`, `p + q = n` (conservative), Q the same with
   the feedback `-(1/2)[d(n-1) + d(n-2)] + 3/(4n)`. Conway: undamped comb smoothed by its own nonlinearity, `h_k - h_(k-1) = 2h^2 (x^2 h')'`; the continuum generation map reproduces generations 15..29 to
   0.5% and `A_k = 0.1377/sqrt(k - 2.35)` (Mallows's 1489 and `a(2^k) = 2^(k-1)` reproduced). Q: smooth comb halved per generation (measured 0.48-0.68 per octave to `2^13`), resonator `z = (-1 +- i sqrt 7)/4`
-  (period 3.253, `|z| = 1/sqrt 2`) whose AR(2) autocorrelation signature the data match at lags 3..12, scale-invariant over 16 octaves; `rms(Q - n/2) ~ n^0.876`; envelope node near `x = 1.41`.
+  (period 3.253, `|z| = 1/sqrt 2`) whose AR(2) autocorrelation signature the data match at lags 3..12, scale-invariant over 16 octaves; THM-4630: the source is white except for the lag forced by `q(n+1) = p(n) + 1`,
+  so the ARMA(2,1) fixed point is exact: `rho(1) = 1 - sqrt 2` (measured -0.41422), `var(d)/var(s) = 1 + 1/sqrt 2` (1.70699), generation variance ratio `4 - 2 sqrt 2` (1.174), `rms(Q - n/2) ~ n^0.886` (0.876-0.884); envelope node near `x = 1.41`.
   Twenty and 1024: `a(20) = Q(20) = 12`; `a(1024) = 512`, `Q(1024) = 557`; `Q(3 2^k) = 2^(k+1)` holds to 768 and breaks at 1536; `[1024, 2048)` holds Q's first broken spike and Conway's last ratio above 0.55.
   Collatz: the 3-adic fast modes of THM-4629 are below the sampling noise at every octave (class discrepancies `2.6e-4` mod 3 at `2^29`); the prefix discrepancy `eps_M` falls like `M^(-1/2)` over
   `2^8..2^28`, so the signed mod-3 residue sum grows like `X^(1/2)` (beta about 1/2 in the Codex Dirichlet gate, below the 0.694 that reaches the 2.455 pole; corrects the S26 estimate 0.16).
