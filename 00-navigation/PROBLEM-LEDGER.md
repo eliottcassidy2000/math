@@ -780,6 +780,16 @@ all heights (THM-1289, published), δ ineffective.
   removal typed; the open wall is Selmer corank `>= 2` everywhere; fruit curve = 910.a4, square curve = 364.a1 (rank 1). JC(2): a
   count-monotone ordering test for the Weyl/Poisson lane proposed, no theorem.
 
+- **One-sided walks: Hofstadter's Q and the Conway recursion against the Collatz transfer law (opus, 2026-10-13-S27; [note](../05-knowledge/results/meta_fibonacci_one_sided_walks_20261013.md), HYP-9259).**
+  Both `a(n) = a(a(n-1)) + a(n - a(n-1))` and `Q(n) = Q(n - Q(n-1)) + Q(n - Q(n-2))` are two-branch backward recursions with both steps near one octave, the one-sided case of THM-4629's law: an
+  exact integer comb (generations = octaves) instead of Collatz's irrational near-return lines. Exact identities (PROVED): Conway `d(n) = (p/n) d(p) + (q/n) d(q)`, `p + q = n` (conservative), Q the same with
+  the feedback `-(1/2)[d(n-1) + d(n-2)] + 3/(4n)`. Conway: undamped comb smoothed by its own nonlinearity, `h_k - h_(k-1) = 2h^2 (x^2 h')'`; the continuum generation map reproduces generations 15..29 to
+  0.5% and `A_k = 0.1377/sqrt(k - 2.35)` (Mallows's 1489 and `a(2^k) = 2^(k-1)` reproduced). Q: smooth comb halved per generation (measured 0.48-0.68 per octave to `2^13`), resonator `z = (-1 +- i sqrt 7)/4`
+  (period 3.253, `|z| = 1/sqrt 2`) whose AR(2) autocorrelation signature the data match at lags 3..12, scale-invariant over 16 octaves; `rms(Q - n/2) ~ n^0.876`; envelope node near `x = 1.41`.
+  Twenty and 1024: `a(20) = Q(20) = 12`; `a(1024) = 512`, `Q(1024) = 557`; `Q(3 2^k) = 2^(k+1)` holds to 768 and breaks at 1536; `[1024, 2048)` holds Q's first broken spike and Conway's last ratio above 0.55.
+  Collatz: the 3-adic fast modes of THM-4629 are below the sampling noise at every octave (class discrepancies `2.6e-4` mod 3 at `2^29`); the prefix discrepancy `eps_M` falls like `M^(-1/2)` over
+  `2^8..2^28`, so the signed mod-3 residue sum grows like `X^(1/2)` (beta about 1/2 in the Codex Dirichlet gate, below the 0.694 that reaches the 2.455 pole; corrects the S26 estimate 0.16).
+
 - **Deterministic trees, near-returns and the characters of Collatz step counts (opus, 2026-10-13-S26; [note](../05-knowledge/results/collatz_parity_resonance_deterministic_trees_20261013.md), THM-4629).**
   Collatz: the parity bias of `tau` (HYP-9258 (iii)) is the half-integer branch of HYP-9230's resonance law (the Codex note pushed that case first, same day); THM-4629 gives the
   general law: the character `exp(2 pi i (alpha tau + beta omega)/m)` resonates at `f = Q/m` exactly for the near-returns `2^P ~ 3^Q` with `Q = alpha`, `P = -beta (mod m)`, with drift

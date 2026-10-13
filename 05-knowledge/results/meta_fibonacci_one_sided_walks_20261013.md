@@ -1,0 +1,85 @@
+# One-sided walks: Hofstadter's Q and the Conway recursion read with the Collatz transfer law; the Collatz fast modes and the mod-3 residue sum
+
+2026-10-13, opus-2026-10-13-S27 (worktree `codex/session-papers-collatz-hn-jc-bsd`, continuing S26). Owner prompt: *continue on all angles and go even further; merge in Hofstadter's Q sequence and a(1) = a(2) = 1, a(n) = a(a(n−1)) + a(n − a(n−1)); think 20 and 1024.*
+
+**Status.** PROVED: the exact deviation identities of both recursions; their linearisations (Conway: the identity, an undamped integer comb; Q: smooth components halved per generation plus the resonator `z^2 + z/2 + 1/2 = 0`, `|z| = 1/sqrt 2`, period `3.253`); the second-order expansion of Conway's continuum generation map, `h_k - h_(k-1) = 2 h^2 (x^2 h')' + O(h^3)`. FINITE-EXACT: both sequences to `2^30`; identities to `1e-16` for `n <= 2^22`; `a(2^k) = 2^(k-1)` (`k <= 30`), `Q(3 2^k) = 2^(k+1)` for `k <= 8` only, Mallows's `1489`. NUMERICAL: the comb, hump, step, envelope and autocorrelation measurements; the continuum map against generations 15..29; on the Collatz side the fast-mode bound and `epsilon_M ~ M^(-1/2)`. CITED (from memory): Mallows 1991, Kubo-Vakil 1996, Pinn 1999, OEIS A004001/A005185. HYP-9259 holds the statements. Audit: section 9.
+
+## 1. The two recursions as backward trees, and the exact identities
+
+Both sequences are defined by "the value at `n` is the sum of the values at two earlier indices determined by the previous values": `a(n) = a(p) + a(q)` with `p = a(n-1)`, `q = n - a(n-1)`; `Q(n) = Q(p) + Q(q)` with `p = n - Q(n-1)`, `q = n - Q(n-2)`. Since `a(n), Q(n) ~ n/2`, both backward indices are near `n/2`: in `u = log2 n` both steps are near `-1`. This is the one-sided case of the transfer law of THM-4629 (Collatz has steps `-1` and `+0.585`). Writing `d(n) = x(n)/n - 1/2`:
+
+- Conway: `d(n) = (p/n) d(p) + (q/n) d(q)`, `p + q = n`. The deviation is a convex combination of two earlier deviations: no source term, exact conservation.
+- Q: `d(n) = (p/n) d(p) + (q/n) d(q) - (1/2)[(1 - 1/n) d(n-1) + (1 - 2/n) d(n-2)] + 3/(4n)`. The backward indices overshoot by the previous deviations (`p + q = n + 3/2 - (n-1) d(n-1) - (n-2) d(n-2)`), which feeds the previous two deviations back with weight `-1/2`.
+
+Both identities follow from the definitions in two lines and were checked to `1.1e-16` and `1.5e-16` for `n <= 2^22` (`meta_fibonacci_resonator_20261013.out`). Step statistics at `2^29`: Conway `log2(n/p)`, `log2(n/q)` have means `0.948`, `1.054` (approaching `1` from either side, `p = n/2 + n d` above and `q` below) and standard deviations `0.021`, `0.022`, shrinking with the amplitude; Q has means `1.0001` and standard deviations `0.014` for both. Both backward indices lie in the previous generation for every `n` from `k = 20` on (Conway) and for `97%` of `n` at `k = 28` (Q).
+
+## 2. Linearisation: the one-sided transfer law
+
+Treat `d` as a function of scale and position. With both steps exactly one octave, Conway's identity says `d(u) = d(u-1)`: every mode `e^(2 pi i f u)` with integer `f` is undamped, the hump is exactly self-similar from generation to generation, and the only thing that can change it is the nonlinearity (the positions `x(1 +- 2d)` and weights `1/2 +- d` depend on `d`). Q's identity for a slowly varying component says `d = d_prev - d`, i.e. `d_k = d_(k-1)/2`: the smooth comb is damped by `1/2` per generation. For a component `e^(i omega n)` inside a generation the feedback is the filter `H(omega) = 1/(1 + e^(-i omega)/2 + e^(-2 i omega)/2)`, whose poles `z = (-1 +- i sqrt 7)/4` have modulus `1/sqrt 2` and argument `110.7 deg`: period `3.253`, gain `|H| = 2.1` at the resonance and `1/2` at `omega = 0`. The Yule-Walker autocorrelation of the AR(2) part `x_n = -x_(n-1)/2 - x_(n-2)/2 + e_n` is `-1/3, -1/3, +1/3, 0, -1/6, +1/12, +1/24, -1/16, +1/96, +0.026, -0.018, -0.004`.
+
+So the three systems sort by step geometry: two-sided with irrational ratio (Collatz: lines at the near-returns, decay quadratic in the defect), one-sided conservative (Conway: undamped comb, smoothed only by itself), one-sided with feedback (Q: damped comb plus a resonator).
+
+## 3. Conway: the hump, its generation map, and `1/sqrt(k)`
+
+**Data** (`meta_fibonacci_one_sided_walks_20261013.out`, `meta_fibonacci_resonator_20261013.out`). `a(2^k) = 2^(k-1)` for every `k <= 30`, so `d` vanishes at the generation boundaries. The maximum `A_k` of `d` over `[2^k, 2^(k+1))`:
+
+| k | 4 | 8 | 10 | 12 | 16 | 20 | 24 | 29 |
+|---|---|---|---|---|---|---|---|---|
+| `A_k` | 0.1087 | 0.0595 | 0.0501 | 0.0441 | 0.0370 | 0.0327 | 0.0296 | 0.0267 |
+| `A_k sqrt(k)` | 0.217 | 0.168 | 0.158 | 0.153 | 0.148 | 0.146 | 0.145 | 0.144 |
+| `x` of max | 1.44 | 1.45 | 1.45 | 1.46 | 1.37 | 1.36 | 1.36 | 1.40 |
+
+The fit `1/A_k^2 = 52.72 k - 123.9` over `k = 10..29` gives `A_k = 0.1377/sqrt(k - 2.35)`. The rms of `d` per generation falls from `0.0421` (`k = 8`) to `0.0199` (`k = 29`); the ratio of consecutive rms is `0.981` at `k = 28`, against `sqrt(28/29) = 0.983`; consecutive humps correlate at `0.997-1.000`. The maximum of `a(n)/n` per generation: `0.636, 0.609, 0.591, 0.576, 0.567, 0.559, 0.555, 0.550` (`k = 3..10`; `n = 1487` at `k = 10`), `0.547, ..., 0.530` (`k = 23`); the last `n` below `2^24` with `a(n)/n >= 0.55` is `1489` (`a(1489) = 819`), Mallows's number. The position of the maximum alternates between `1.35-1.37` (even `k`) and `1.38-1.41` (odd `k`); the hump is a plateau over `x` in `[1.28, 1.56]`. Profile at 16 points scaled by `sqrt(k)`, `k = 29`: `+0.034 +0.078 +0.106 +0.124 +0.136 +0.141 +0.143 +0.140 +0.134 +0.126 +0.114 +0.102 +0.085 +0.067 +0.045 +0.018` (`k = 16`: `+0.034 +0.080 +0.110 +0.127 +0.141 +0.147 +0.145 +0.145 +0.140 +0.128 +0.119 +0.105 +0.087 +0.070 +0.046 +0.018`). The one-octave least-squares spectrum consists of the Fourier coefficients of the hump at integer `f` (`0.0098, 0.0030, 0.0015, 0.0009, 0.0006, 0.0004` for `f = 1..6` at `2^29`) with no non-integer line (the entries at `0.30` and `1.35` are the window trend and sidelobe). The parity of `a(n)` has mean `0.06` at `2^8` and `0.0000` from `2^17`.
+
+**The continuum generation map** (`conway_generation_map_20261013.out`). In generation coordinates the identity is `h_k(x) = (1/2 + h) h_(k-1)(x(1 + 2h)) + (1/2 - h) h_(k-1)(x(1 - 2h))`, `h = h_(k-1)(x)`, up to `O(1/n)`, with the argument read from the same generation when `x(1 + 2h) >= 2`. Expanding: `h_k = h_(k-1) + 4h^2 x h' + 2h^2 x^2 h'' + O(h^3) = h_(k-1) + 2h^2 (x^2 h')' + O(h^3)`, a nonlinear diffusion that flattens the hump where it is curved; with `h = A g(x)` and a converging shape, `dA/dk = -c A^3`, `A ~ C/sqrt(k)`. Iterated on a 4096-point grid from the measured generation 14, the map reproduces the measured generations 15..29:
+
+| k | measured max | map max | ratio | measured rms | map rms | profile corr |
+|---|---|---|---|---|---|---|
+| 15 | 0.03877 | 0.03866 | 0.997 | 0.02873 | 0.02865 | 0.99999 |
+| 20 | 0.03267 | 0.03245 | 0.993 | 0.02440 | 0.02417 | 0.99996 |
+| 25 | 0.02897 | 0.02891 | 0.998 | 0.02159 | 0.02134 | 0.99980 |
+| 29 | 0.02670 | 0.02671 | 1.000 | 0.01994 | 0.01969 | 0.99975 |
+
+including the even/odd alternation of the position of the maximum. The map's constant from `k = 20..60` is `C = 0.1425` (`k0 = 0.55`). Iterated further, the unpinned map drifts to a flat profile by `k ~ 150` (any constant is a fixed point of the averaging map); the discrete sequence cannot, because `a(2^k) = 2^(k-1)` pins `h(1) = 0` exactly. The continuum limit with that pinning, and the limit of `A_k sqrt(k)`, are the next computation (section 7). Mallows proved `a(n)/n -> 1/2`; the mechanism here, conservation plus self-smoothing against a pinned boundary, is the reading, and the `1/sqrt(k)` rate with `C` near `0.14` is NUMERICAL.
+
+## 4. Q: damped comb, resonator, scale-invariant jitter
+
+**Spikes and generations.** `Q(3 2^k) = 2^(k+1)` for `k = 1..8` (`Q(6) = 4`, ..., `Q(768) = 512`), and the maximum of `Q(n)/n` over each generation is exactly `2/3` at `x = 1.5` for `k = 4..9`; at `k = 9` the spike is the last exact one, `Q(1536) = 808` is not `1024`, and from `k = 10` the maximum ratio decays: `0.614` (`n = 1569`), `0.594, 0.581, 0.587, 0.582, 0.582, 0.572, 0.563, 0.566, 0.561, 0.555, 0.551, 0.551, 0.550` (`k = 11..23`); the minimum ratio bottoms at `0.351` (`k = 8`) and rises to `0.456` (`k = 23`). `Q(2^k)/2^k` wanders (`0.544` at `1024`, `0.4997` at `2^15`, `0.491` at `2^27`, `0.4996` at `2^30`).
+
+**Smooth component.** The rms of the bin means (`min(1024, 2^(J-6))` bins per octave) is `0.0092, 0.0055, 0.0033, 0.0016, 0.00084, 0.00051, 0.00033, 0.00022, 0.00012` at `2^8..2^16`, consecutive ratios `0.48-0.68`: the predicted halving per generation, blurred by sampling noise, after which the bin means are noise (`1e-5` at `2^29`); consecutive-generation profile correlations `0.91, 0.85, 0.67, 0.42` at `2^8..2^11`. Q has no coherent hump beyond `2^12`.
+
+**Jitter.** The pointwise deviation stays large: `max |d| = 1/6` for `k <= 9`, then `0.114 -> 0.0345` over `k = 10..29` (`n^(-0.09)`); the rms of `d` falls `0.0247 -> 0.00484` (`n^(-0.124)`), i.e. `rms(Q(n) - n/2) ~ n^(0.876)`. Its autocorrelation at lags `1..12` (octave mean removed):
+
+| octave | r(1) | r(2) | r(3) | r(4) | r(5) | r(6) | r(7) | r(8) | r(9) | r(10) | r(11) | r(12) | period |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `2^12` | -0.413 | -0.287 | +0.336 | -0.012 | -0.173 | +0.094 | +0.041 | -0.073 | +0.026 | +0.020 | -0.019 | -0.002 | 3.29 |
+| `2^20` | -0.414 | -0.294 | +0.355 | -0.031 | -0.161 | +0.095 | +0.033 | -0.064 | +0.016 | +0.023 | -0.019 | -0.001 | 3.31 |
+| `2^28` | -0.414 | -0.293 | +0.354 | -0.030 | -0.162 | +0.096 | +0.033 | -0.064 | +0.016 | +0.024 | -0.020 | -0.002 | 3.04 |
+| AR(2) | -0.333 | -0.333 | +0.333 | 0 | -0.167 | +0.083 | +0.042 | -0.062 | +0.010 | +0.026 | -0.018 | -0.004 | 3.25 |
+
+The signature of the resonator is there at lags `3..12` to `0.02`, with the lag-1 and lag-2 values shifted by the source term's own short-range correlation; the function is scale-invariant to `0.005` over sixteen octaves. The dominant short period in the power spectrum is `3.03-3.31`.
+
+**Envelope.** The rms of `d` over 16 sub-intervals of each generation has a stable shape from `2^14` on; at `2^29`: `0.0057 0.0052 0.0047 0.0039 0.0030 0.0018 0.0013 0.0034 0.0048 0.0055 0.0058 0.0059 0.0059 0.0058 0.0057 0.0055`: loud at the start of the generation, calmest at `x` in `[1.375, 1.4375]` (near `sqrt 2`), loudest near `x = 1.72`; the node fills in slowly (min/max `0.15 -> 0.22` from `2^14` to `2^29`). The parity of `Q(n)` is biased early (`+0.20` at `2^8`, `+0.04` at `2^11`) and balanced from `2^16`.
+
+## 5. The Collatz side of the session: fast modes and the mod-3 residue sum
+
+Added to the S26 note and to THM-4629 (statement 7). The class-specific fast modes of the 3-adic closure (decay `1/2` per octave) are not detectable: the discrepancy `m_r - m` of the parity mean per class modulo `3` and `9` is at the sampling-noise floor at every octave from `2^8` to `2^29` (`2.6e-4` and `6.9e-4` at `2^29` in 1/64-octave bins, falling by `1/sqrt 2` per octave as noise does). The prefix discrepancy `epsilon_M = [3S(2M) + 3S(M) + S(3M)]/(6M)` of the Codex identity (7), measured at 64 points per octave over `2^8..2^28` (`collatz_parity_fast_modes_20261013.out`), has rms per octave `6.4e-3` at `2^8` and `9.1e-6` at `2^27`, slope `-0.45` to `-0.50` per octave: `epsilon_M ~ M^(-1/2)`, so the signed mod-3 residue sum grows like `X^(1/2)`, the random-walk accumulation of the breaks `t(n) != t(n+1)`, not the `1/M` of the ensemble-mean model. In the Codex Dirichlet gate this is `beta` about `1/2`, below the `0.694` that makes the pole of the `2.455` mode accessible; it corrects the `0.16` quoted in the S26 note from four values.
+
+## 6. Twenty and 1024
+
+`a(20) = Q(20) = 12`, both `0.6 n`; the sequences differ from `n = 4` (`a = 2`, `Q = 3`) and coincide again at `20`. `a(1024) = 512`, as at every power of two; `Q(1024) = 557`. The generation `[1024, 2048)` is where Q's exact spikes end (`Q(1536) = 808`, not `1024`; maximum ratio `0.614` instead of `2/3`) and where Conway's ratio exceeds `0.55` for the last time (`1489`). In the Collatz work of S26 the same numbers were the fit window `2^20..2^30` and the `1024` bins per octave of the Codex census.
+
+## 7. Next steps
+
+1. The pinned continuum map (`h_k(1) = 0` enforced through the exact first terms of each generation) iterated to `k = 10^3`: the limit of `A_k sqrt(k)` and the limiting shape; compare with the measured `0.1377/sqrt(k - 2.35)`.
+2. The AR(2) source term of Q computed directly, to account for the lag-1 and lag-2 excess; the envelope node at `x` near `sqrt 2` at finer resolution.
+3. Q's existence (Hofstadter's question): the fatal event `d(n-1) >= 1/2` against the measured envelope `n^(-0.12)`; the running maximum of `d` to `2^34`.
+4. Collatz: a direct census of the breaks' signs modulo `3` to explain the `X^(1/2)` growth, and the pinned amplitude problem of S26.
+
+## 8. Files
+
+`04-computation/experiments/`: `meta_fibonacci_one_sided_walks_20261013.py`, `meta_fibonacci_resonator_20261013.py`, `conway_generation_map_20261013.py`, `collatz_parity_fast_modes_20261013.py` (each with `.out`). The sequences to `2^30` take `5 s` (Conway) and `85 s` (Q) with numba and `4.3 GB` each.
+
+## 9. Audit
+
+(filled after the independent adversarial audit)

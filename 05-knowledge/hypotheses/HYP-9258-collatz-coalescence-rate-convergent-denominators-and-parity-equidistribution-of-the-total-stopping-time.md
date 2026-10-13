@@ -27,6 +27,9 @@ status: >
   so no finite 3-adic closure of the tree changes the law and the modal expansion is exactly the 3-adic closure at infinite
   depth (the 2-adic identities are exact; audited, MISTAKE-598); the ordinary mean of (-1)^tau is the Cesaro shadow of the lines (amplitude 0.0015 at 26.5 cycles per octave; model +0.0016 at
   2^34 against the census +0.00145), so the proved o(1) is approached at N^(-0.0018). The dyadic alternation of (iii) is the half-integer lattice.
+  S27 (collatz_parity_fast_modes_20261013.out): the prefix discrepancy eps_M = [3S(2M) + 3S(M) + S(3M)]/(6M) of the Codex identity (7)
+  falls like M^(-1/2) over 2^8..2^28 (rms per octave 6.4e-3 -> 9.1e-6), i.e. the signed mod-3 residue sum grows like X^(1/2): beta about
+  1/2 in P4, the square-root helper hypothesis, NUMERICAL; the class discrepancies of the parity bin means are at the sampling-noise floor.
 session: opus-2026-10-13-S25
 source: 05-knowledge/results/five_manuscripts_chowla_collatz_residue_bsd_20261013.md (sections 3.3-3.4)
 scripts:
