@@ -1,0 +1,15 @@
+fixed primes of residue degree two in Q(zeta55): p = -1 mod 55, p <= 2000
+ p    d  lambda_min   -K identity(max err)   Hoffman    Weil floor 1+(p+1)/(2sqrt p)
+  109   2   -19.6447   2.84e-14              6.599      6.268   -> chi >= 7
+  439   3   -40.0880   8.88e-14             11.976     11.500   -> chi >= 12
+  659   2   -50.2584   1.85e-13             14.132     13.855   -> chi >= 15
+  769   7   -53.5492   1.88e-13             15.379     14.883   -> chi >= 16
+ 1319  13   -71.7060   3.06e-13             19.409     19.173   -> chi >= 20
+ 1429   2   -74.3776   4.55e-13             20.226     19.914   -> chi >= 21
+ 1759   3   -83.1833   4.12e-13             22.158     21.982   -> chi >= 23
+ 1979   2   -88.3613   4.69e-13             23.408     23.254   -> chi >= 24
+
+conjugation-fixed primes of residue degree ten (q = l^5): Weil floor only
+ l=19: q=l^5=2476099, floor 1+(q+1)/(2 sqrt q) = 787.8
+ l=29: q=l^5=20511149, floor 1+(q+1)/(2 sqrt q) = 2265.5
+ l=79: q=l^5=3077056399, floor 1+(q+1)/(2 sqrt q) = 27736.6

@@ -1,0 +1,36 @@
+# Part A: class-wide equal-time merge of (n, n+h) by depth K=26 (periodic census over 2^K residues)
+h= 1: merged by depth 26: 0.42092; first-merge depth masses 3:0.1250 4:0.0625 5:0.0625 6:0.0312 7:0.0234 8:0.0156 9:0.0117 10:0.0107 11:0.0093 12:0.0083 ... (2.8s)
+h= 2: merged by depth 26: 0.30579; first-merge depth masses 4:0.0625 5:0.0312 6:0.0312 7:0.0234 8:0.0195 9:0.0156 10:0.0127 11:0.0122 12:0.0112 ... (2.6s)
+h= 3: merged by depth 26: 0.19789; first-merge depth masses 6:0.0156 7:0.0156 8:0.0156 9:0.0137 10:0.0137 11:0.0132 12:0.0120 ... (2.9s)
+h= 4: merged by depth 26: 0.22949; first-merge depth masses 5:0.0312 6:0.0156 7:0.0156 8:0.0156 9:0.0156 10:0.0127 11:0.0117 12:0.0117 ... (2.9s)
+h= 5: merged by depth 26: 0.21113; first-merge depth masses 5:0.0312 6:0.0156 7:0.0156 8:0.0156 9:0.0117 10:0.0107 11:0.0103 12:0.0098 ... (2.8s)
+h= 6: merged by depth 26: 0.16177; first-merge depth masses 7:0.0078 8:0.0117 9:0.0098 10:0.0107 11:0.0112 12:0.0103 ... (2.9s)
+h= 8: merged by depth 26: 0.17432; first-merge depth masses 6:0.0156 7:0.0078 8:0.0078 9:0.0098 10:0.0117 11:0.0093 12:0.0098 ... (3.0s)
+h=16: merged by depth 26: 0.13146; first-merge depth masses 7:0.0078 8:0.0039 9:0.0039 10:0.0059 11:0.0083 12:0.0063 ... (3.3s)
+
+# Part B: integer orbits to N=2^26: equal-time coincidence before either orbit reaches 1 (parity of tau then agrees automatically)
+h= 1: P(merge)=0.50986  corr(all)=+0.50828  corr(merged)=+1.00000  corr(unmerged)=-0.00322  tau equal on merged: 1.0000  mean merge time 15.34  (6.0s)
+       N=2^20: P(merge)=0.47769 corr=+0.47074
+       N=2^23: P(merge)=0.49509 corr=+0.49066
+h= 2: P(merge)=0.41940  corr(all)=+0.41695  corr(merged)=+1.00000  corr(unmerged)=-0.00421  tau equal on merged: 1.0000  mean merge time 22.01  (6.9s)
+       N=2^20: P(merge)=0.37997 corr=+0.37169
+       N=2^23: P(merge)=0.40123 corr=+0.39565
+h= 3: P(merge)=0.32994  corr(all)=+0.32683  corr(merged)=+1.00000  corr(unmerged)=-0.00463  tau equal on merged: 1.0000  mean merge time 29.91  (7.5s)
+       N=2^20: P(merge)=0.28383 corr=+0.27519
+       N=2^23: P(merge)=0.30884 corr=+0.30235
+h= 4: P(merge)=0.35966  corr(all)=+0.35652  corr(merged)=+1.00000  corr(unmerged)=-0.00490  tau equal on merged: 1.0000  mean merge time 27.60  (7.4s)
+       N=2^20: P(merge)=0.31510 corr=+0.30748
+       N=2^23: P(merge)=0.33939 corr=+0.33313
+h= 5: P(merge)=0.34065  corr(all)=+0.33778  corr(merged)=+1.00000  corr(unmerged)=-0.00435  tau equal on merged: 1.0000  mean merge time 28.42  (7.6s)
+       N=2^20: P(merge)=0.29533 corr=+0.28728
+       N=2^23: P(merge)=0.32010 corr=+0.31413
+h= 6: P(merge)=0.30173  corr(all)=+0.29835  corr(merged)=+1.00000  corr(unmerged)=-0.00484  tau equal on merged: 1.0000  mean merge time 33.29  (7.8s)
+       N=2^20: P(merge)=0.25264 corr=+0.24402
+       N=2^23: P(merge)=0.27953 corr=+0.27271
+h= 8: P(merge)=0.31712  corr(all)=+0.31353  corr(merged)=+1.00000  corr(unmerged)=-0.00526  tau equal on merged: 1.0000  mean merge time 32.38  (7.6s)
+       N=2^20: P(merge)=0.26779 corr=+0.25962
+       N=2^23: P(merge)=0.29498 corr=+0.28796
+h=16: P(merge)=0.28427  corr(all)=+0.28050  corr(merged)=+1.00000  corr(unmerged)=-0.00527  tau equal on merged: 1.0000  mean merge time 36.59  (7.9s)
+       N=2^20: P(merge)=0.23108 corr=+0.22447
+       N=2^23: P(merge)=0.26068 corr=+0.25376
+done
