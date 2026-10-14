@@ -1,0 +1,41 @@
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math-wt-wilson-20261014/04-computation/experiments/hn_records_20261014/rotation_scan.py", line 18, in <module>
+    from hn_udg import union, rotate, unit_graph, triangles_through
+  File "/Users/e/Documents/GitHub/math-wt-wilson-20261014/04-computation/experiments/hn_records_20261014/hn_udg.py", line 307, in <module>
+    RHO = (el(r1=Fr(7, 8)), el(r15=Fr(1, 8)))                         # exp(i arccos(7/8))
+  File "/Users/e/Documents/GitHub/math-wt-wilson-20261014/04-computation/experiments/hn_records_20261014/hn_udg.py", line 63, in el
+    assert rem == 1, f"radicand {r} not a product of distinct {PRIMES}"
+AssertionError: radicand 15 not a product of distinct (3, 11)
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math-wt-wilson-20261014/04-computation/experiments/hn_records_20261014/rotation_scan.py", line 18, in <module>
+    from hn_udg import union, rotate, unit_graph, triangles_through
+  File "/Users/e/Documents/GitHub/math-wt-wilson-20261014/04-computation/experiments/hn_records_20261014/hn_udg.py", line 307, in <module>
+    RHO = (el(r1=Fr(7, 8)), el(r15=Fr(1, 8)))                         # exp(i arccos(7/8))
+  File "/Users/e/Documents/GitHub/math-wt-wilson-20261014/04-computation/experiments/hn_records_20261014/hn_udg.py", line 63, in el
+    assert rem == 1, f"radicand {r} not a product of distinct {PRIMES}"
+AssertionError: radicand 15 not a product of distinct (3, 7, 11)
+t=4     A=V49+V37  B=V31+V25  |V|= 1087 |E|=  5892  NOT 4-colourable (5-chromatic)  [4.7s]
+t=4     A=V49+V37  B=V25+V25  |V|=  919 |E|=  4992  4-colourable  [0.5s]
+t=4     A=V49+V37  B=V37+V25  |V|= 1159 |E|=  6408  NOT 4-colourable (5-chromatic)  [4.9s]
+t=4     A=V49+V37  B=V31+V31  |V|= 1051 |E|=  5544  4-colourable  [0.4s]
+t=4     A=V49+V37  B=V49+V37  |V|= 1453 |E|=  8286  NOT 4-colourable (5-chromatic)  [7.0s]
+t=4     A=V49+V49  B=V31+V25  |V|= 1141 |E|=  6210  NOT 4-colourable (5-chromatic)  [5.0s]
+t=4     A=V49+V49  B=V25+V25  |V|=  973 |E|=  5310  4-colourable  [0.4s]
+t=4     A=V49+V49  B=V37+V25  |V|= 1213 |E|=  6726  NOT 4-colourable (5-chromatic)  [4.1s]
+t=4     A=V49+V49  B=V31+V31  |V|= 1105 |E|=  5862  4-colourable  [0.6s]
+t=4     A=V49+V49  B=V49+V37  |V|= 1507 |E|=  8604  NOT 4-colourable (5-chromatic)  [5.7s]
+t=4     A=V37+V37  B=V31+V25  |V|=  829 |E|=  4230  4-colourable  [0.3s]
+t=4     A=V37+V37  B=V25+V25  |V|=  661 |E|=  3330  4-colourable  [0.3s]
+t=4     A=V37+V37  B=V37+V25  |V|=  901 |E|=  4746  4-colourable  [0.4s]
+t=4     A=V37+V37  B=V31+V31  |V|=  793 |E|=  3882  4-colourable  [0.3s]
+t=4     A=V37+V37  B=V49+V37  |V|= 1195 |E|=  6600  NOT 4-colourable (5-chromatic)  [13.1s]
+t=4     A=V31+V49  B=V31+V25  |V|= 1273 |E|=  6930  4-colourable  [0.5s]
+t=4     A=V31+V49  B=V25+V25  |V|= 1105 |E|=  6030  4-colourable  [0.4s]
+t=4     A=V31+V49  B=V37+V25  |V|= 1345 |E|=  7446  4-colourable  [0.7s]
+t=4     A=V31+V49  B=V31+V31  |V|= 1237 |E|=  6582  4-colourable  [0.5s]
+t=4     A=V31+V49  B=V49+V37  |V|= 1639 |E|=  9324  NOT 4-colourable (5-chromatic)  [7.5s]
+t=4     A=V25+V49  B=V31+V25  |V|=  973 |E|=  5178  4-colourable  [0.4s]
+t=4     A=V25+V49  B=V25+V25  |V|=  805 |E|=  4278  4-colourable  [0.3s]
+t=4     A=V25+V49  B=V37+V25  |V|= 1045 |E|=  5694  4-colourable  [0.6s]
+t=4     A=V25+V49  B=V31+V31  |V|=  937 |E|=  4830  4-colourable  [0.4s]
+t=4     A=V25+V49  B=V49+V37  |V|= 1339 |E|=  7572  NOT 4-colourable (5-chromatic)  [9.3s]

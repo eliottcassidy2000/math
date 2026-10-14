@@ -1,0 +1,26 @@
+L727: 727 vertices, 4116 edges
+   t = 1/9    |orbit| =   6  forced mono with centre: False
+   t = 1/3    |orbit| =  18  forced mono with centre: False
+   t = 4/9    |orbit| =   6  forced mono with centre: True
+   t = 1      |orbit| =  30  forced mono with centre: False
+   t = 11/9   |orbit| =   6  forced mono with centre: False
+   t = 4/3    |orbit| =  18  forced mono with centre: False
+   t = 5/3    |orbit| =  36  forced mono with centre: False
+   t = 20/9   |orbit| =  12  forced mono with centre: True
+   t = 7/3    |orbit| =  36  forced mono with centre: False
+   t = 3      |orbit| =  18  forced mono with centre: False
+   t = 11/3   |orbit| =  18  forced mono with centre: False
+   t = 4      |orbit| =  18  forced mono with centre: True
+   [2.6s]
+S361: 361 vertices, 1746 edges
+   t = 1/3    |orbit| =   6  forced mono with centre: False
+   t = 1      |orbit| =  18  forced mono with centre: False
+   t = 4/3    |orbit| =   6  forced mono with centre: False
+   t = 5/3    |orbit| =  12  forced mono with centre: False
+   t = 7/3    |orbit| =  12  forced mono with centre: False
+   t = 3      |orbit| =  18  forced mono with centre: False
+   t = 11/3   |orbit| =   6  forced mono with centre: False
+   t = 4      |orbit| =  18  forced mono with centre: True
+   t = 5      |orbit| =  12  forced mono with centre: False
+   t = 7      |orbit| =  24  forced mono with centre: False
+   [0.2s]
