@@ -1,5 +1,5 @@
 == Part A: races and Skewes to N_A = 1e+10
-   sweep done in 62.2 s
+   sweep done in 54.9 s
    pi(N_A) = 455052511 (table: 455052511: True);  pi(N;4,1) = 227523275, pi(N;4,3) = 227529235;  pi(N;3,1) = 227523123, pi(N;3,2) = 227529387
    maximal runs of primes with pi(x;4,1) > pi(x;4,3), x <= N_A: 3427
      run from prime 26861 to (first prime with the lead lost) 26863;  max lead 1;  at the entry pi(x;4,1) = 1473, pi(x;4,3) = 1472
@@ -12,8 +12,8 @@
      excursion 951784481 .. 952223491:  182 runs, max lead 48
      excursion 6309280709 .. 6403150199:  3117 runs, max lead 1374
    regions with pi(x;3,1) > pi(x;3,2), x <= N_A: 0  (Bays-Hudson: the first is at 608981813029 > N_A)
-   max over primes 3 <= p <= N_A of pi(p) - li(p): -0.1649 at p = 3  (negative: pi(x) < li(x) throughout; Skewes)
-   exact (mpmath) min over primes p <= 10^5 of li(p) - pi(p): 0.045164  (> 0) True
+   float sweep (Simpson li, coarse at the smallest primes): max over primes 3 <= p <= N_A of pi(p) - li(p): -0.1649 at p = 3  (negative throughout)
+   exact (mpmath li) over primes p <= 10^5: max of pi(p) - li(p) is -0.045164 at p = 2  (at p = 3: -0.163589);  so over all primes p <= N_A the maximum of pi(p) - li(p) is -0.0452 at p = 2 True
 
    log-grid statistics on [10^3, 10^10] (step 1e-3 in log x; mean = logarithmic average):
      E4 = race mod 4 (primes only)                 mean +1.1745  sd 0.3990  share > 0: 0.99857  grid sign changes: 15
@@ -29,7 +29,7 @@
    primes p < 26861 at which pi(p;4,1) = pi(p;4,3) (ties; class 3 leads at every other prime >= 3): [5, 17, 41, 461, 26833, 26849]
 
 == Part B: Liouville and Mertens to N_B = 1e+09
-   sweep done in 40.1 s
+   sweep done in 36.4 s
    L(N_B) = -25216, M(N_B) = -222
    first n >= 2 with L(n) > 0: 906150257 (Tanaka 1980: 906150257) True ;  the first run ends at n = 906150294 (first n with L(n) <= 0 again);  max L over n <= N_B: 829 at n = 906316571;  runs with L > 0: 136
      excursion of L > 0: 906150257 .. 906488080 (136 runs), max L = 829 at n = 906316571
@@ -39,4 +39,4 @@
 
 FAILED CHECKS: none
 ALL CHECKS PASSED
-total time 102.7 s
+total time 91.6 s

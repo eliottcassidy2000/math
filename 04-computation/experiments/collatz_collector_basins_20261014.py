@@ -116,25 +116,36 @@ def visit_counts(Nmax, s, cyc_mark):
 
 
 @nb.njit(cache=True)
-def basins(N, memo, race_n, race_order, checkpoints, cp_counts):
-    """memo[n] in {1,2,3}: the T_- cycle reached from n.  Cycles: {1}; {5,7,10}; {17,25,37,55,82,41,61,91,136,68,34}."""
-    c = np.zeros(4, dtype=np.int64)
-    nrace = 0
-    prev_key = -1
-    cpi = 0
-    maxval = 0
-    for n in range(1, N + 1):
+def basins_chunk(n_start, N, memo, c, state, race_n, race_order, checkpoints, cp_counts):
+    """memo[n] in {1,2,3}: the T_- cycle reached from n.  Cycles: {1}; {5,7,10}; {17,25,37,55,82,41,61,91,136,68,34}.
+    Stops and returns n when an orbit value would pass 3e18 (int64 safety); the caller resolves that n with Python
+    integers and resumes.  state = [prev_key, nrace, cpi, maxval]."""
+    prev_key = state[0]
+    nrace = state[1]
+    cpi = state[2]
+    maxval = state[3]
+    for n in range(n_start, N + 1):
         if memo[n] == 0:
             x = n
-            while x >= n and memo[x if x <= 136 else 0] == 0 or (x >= n and x > 136):
+            over = False
+            while True:
                 if x % 2 == 0:
                     x //= 2
                 else:
+                    if x > 3000000000000000000:
+                        over = True
+                        break
                     x = (3 * x - 1) // 2
                 if x > maxval:
                     maxval = x
                 if x < n or (x <= 136 and memo[x] != 0):
                     break
+            if over:
+                state[0] = prev_key
+                state[1] = nrace
+                state[2] = cpi
+                state[3] = maxval
+                return n
             memo[n] = memo[x]
         b = memo[n]
         c[b] += 1
@@ -166,7 +177,34 @@ def basins(N, memo, race_n, race_order, checkpoints, cp_counts):
             cp_counts[cpi, 1] = c[2]
             cp_counts[cpi, 2] = c[3]
             cpi += 1
-    return nrace, maxval
+    state[0] = prev_key
+    state[1] = nrace
+    state[2] = cpi
+    state[3] = maxval
+    return 0
+
+
+def basins(N, memo, race_n, race_order, checkpoints, cp_counts):
+    c = np.zeros(4, dtype=np.int64)
+    state = np.array([-1, 0, 0, 0], dtype=np.int64)
+    start = 1
+    big = []
+    while True:
+        stop = basins_chunk(start, N, memo, c, state, race_n, race_order, checkpoints, cp_counts)
+        if stop == 0:
+            break
+        n = int(stop)
+        x = n
+        mx = x
+        while True:
+            x = x // 2 if x % 2 == 0 else (3 * x - 1) // 2
+            mx = max(mx, x)
+            if x < n or (x <= 136 and memo[x] != 0):
+                break
+        memo[n] = memo[x]
+        big.append((n, mx))
+        start = n
+    return int(state[1]), int(state[3]), big
 
 
 @nb.njit(cache=True)
@@ -200,9 +238,7 @@ def main():
     for p in (3, 5, 7, 11, 13, 17, 23, 31):
         for s in (1, -1):
             ok = True
-            for k in (1, 2, 3, 5, 8, 12):
-                if p * 2 ** k > 6 * 10 ** 6:
-                    continue
+            for k in range(1, 13):
                 bf = law_bruteforce(p, s, k)
                 ok &= list(bf) == law_formula(p, s, k)
             lim, d = limit_law(p, s)
@@ -218,7 +254,8 @@ def main():
                 tag = '  [support = all units: 2 is a primitive root]'
             print(f'   p = {p:2d}, s = {s:+d}: brute force = formula for k <= 12: {ok};  ord_p 2 = {d};  limit law ' +
                   ', '.join(f'{r}: {lim[r]}' for r in sorted(lim, key=lambda r: -lim[r])) + tag)
-    print('   p = 3 reading: T_+ visits class 2 with frequency 2/3 and class 1 with 1/3; T_- the reverse; class 0 never after the first odd step.')
+    print('   p = 3 reading (ensemble): for n uniform mod 3 2^k, T_+^k(n) is in class 2 with probability -> 2/3 and class 1 -> 1/3; T_- the reverse;'
+          ' class 0 never after the first odd step.  This is not a time average along one orbit (orbits end in cycles).')
 
     print('\n== 2. The Syracuse map n -> (3n+1)/2^v on odd n: law mod 3')
     for k in (4, 8, 12, 16):
@@ -301,6 +338,13 @@ def main():
             print(f'   depth {depth:2d}: {sz:8d} nodes, classes (0,1,2) = {c}, shares {c[0] / sz:.4f} {c[1] / sz:.4f} {c[2] / sz:.4f};  (c1 - c2)/size = {(c[1] - c[2]) / sz:+.5f}')
     g = [rows[i][1] / rows[i - 1][1] for i in range(40, 50)]
     print(f'   layer growth ratio at depth 41..50: {min(g):.4f} .. {max(g):.4f} (4/3 = 1.3333)')
+    rel = np.array([abs(c[1] - c[2]) / sz for _, sz, c in rows[19:]])
+    absn = np.array([abs(c[1] - c[2]) / math.sqrt(sz) for _, sz, c in rows[19:]])
+    slope = np.polyfit(np.arange(len(rel)), np.log(np.maximum(rel, 1e-12)), 1)[0]
+    flips = sum(1 for i in range(20, 50) if (rows[i][2][1] - rows[i][2][2]) * (rows[i - 1][2][1] - rows[i - 1][2][2]) < 0)
+    print(f'   class-1/class-2 imbalance, depths 20..50: relative |c1 - c2|/size decays by a fitted factor {math.exp(slope):.3f} per layer;'
+          f'  |c1 - c2|/sqrt(size) stays in [{absn.min():.3f}, {absn.max():.3f}];  sign flips between consecutive layers: {flips} of 30'
+          '  (fluctuation level: the mean-field mode (-1)^k of the two-class model is below the noise beyond depth ~20)')
     sh = rows[-1][2]
     check('tree balance', all(abs(x / rows[-1][1] - 1 / 3) < 0.03 for x in sh))
 
@@ -313,8 +357,8 @@ def main():
         memo[v] = 2
     for v in (17, 25, 37, 55, 82, 41, 61, 91, 136, 68, 34):
         memo[v] = 3
-    cps = []
-    for e in range(1, 10):
+    cps = [1389, 30612, 30613, 30614]
+    for e in range(1, 11):
         for mlt in (1, 2, 5):
             if mlt * 10 ** e <= N_C:
                 cps.append(mlt * 10 ** e)
@@ -322,15 +366,19 @@ def main():
     cpc = np.zeros((len(cps), 3), dtype=np.int64)
     race_n = np.zeros(2000000, dtype=np.int64)
     race_o = np.zeros(2000000, dtype=np.int64)
-    nrace, maxval = basins(N_C, memo, race_n, race_o, cps, cpc)
-    print(f'   done in {time.time() - t1:.1f} s; every n <= N_C reached one of the three cycles (no overflow; largest value met {maxval})')
+    nrace, maxval, big = basins(N_C, memo, race_n, race_o, cps, cpc)
+    print(f'   done in {time.time() - t1:.1f} s; every n <= N_C reached one of the three cycles;  largest value in the int64 pass {maxval};  '
+          f'starts whose orbit passed 3e18 (finished with Python integers): {len(big)}' + (f', largest value {max(m for _, m in big)}' if big else ''))
+    for N, (a, b, c) in zip(cps, cpc):
+        if N in (30612, 30613, 30614):
+            print(f'   N = {N}: counts {{1}} {a}, {{5,7,10}} {b}, {{17,...}} {c}')
     check('basins all', int(np.count_nonzero(memo[1:] == 0)) == 0)
     for N, (a, b, c) in zip(cps, cpc):
         if N >= 100:
             print(f'   N = {N:>11d}:  basin {{1}} {a / N:.6f},  basin {{5,7,10}} {b / N:.6f},  basin {{17,...}} {c / N:.6f}')
     names = {1: '{1}', 2: '{5,7,10}', 3: '{17,...}'}
     nr = min(nrace, race_n.shape[0])
-    print(f'   changes in the order of the three counts (leader, second) as N grows: {nrace} in total')
+    print(f'   changes in the order of the three counts (leader, second) as N grows: {nrace - 1} (after the initial state at N = 1)')
     lead_changes = [i for i in range(1, nr) if race_o[i] // 10 != race_o[i - 1] // 10]
     second_changes = [i for i in range(1, nr) if race_o[i] % 10 != race_o[i - 1] % 10]
     print(f'   leader changes: {len(lead_changes)}, the last at N = {race_n[lead_changes[-1]] if lead_changes else None};  second-place changes: {len(second_changes)}, the last at N = {race_n[second_changes[-1]] if second_changes else None}')

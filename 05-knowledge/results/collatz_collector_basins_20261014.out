@@ -15,7 +15,7 @@
    p = 23, s = -1: brute force = formula for k <= 12: True;  ord_p 2 = 11;  limit law 11: 1024/2047, 17: 512/2047, 20: 256/2047, 10: 128/2047, 5: 64/2047, 14: 32/2047, 7: 16/2047, 15: 8/2047, 19: 4/2047, 21: 2/2047, 22: 1/2047  [support = the non-residues]
    p = 31, s = +1: brute force = formula for k <= 12: True;  ord_p 2 = 5;  limit law 16: 16/31, 8: 8/31, 4: 4/31, 2: 2/31, 1: 1/31
    p = 31, s = -1: brute force = formula for k <= 12: True;  ord_p 2 = 5;  limit law 15: 16/31, 23: 8/31, 27: 4/31, 29: 2/31, 30: 1/31
-   p = 3 reading: T_+ visits class 2 with frequency 2/3 and class 1 with 1/3; T_- the reverse; class 0 never after the first odd step.
+   p = 3 reading (ensemble): for n uniform mod 3 2^k, T_+^k(n) is in class 2 with probability -> 2/3 and class 1 -> 1/3; T_- the reverse; class 0 never after the first odd step.  This is not a time average along one orbit (orbits end in cycles).
 
 == 2. The Syracuse map n -> (3n+1)/2^v on odd n: law mod 3
    v <=  4: classes (0, 1, 2): [np.int64(0), np.int64(15), np.int64(30)] of 45 (+3 with v > 4);  share of class 2: 2/3 = 0.666667
@@ -50,17 +50,25 @@
    depth 45:   281334 nodes, classes (0,1,2) = [93755, 93784, 93795], shares 0.3333 0.3334 0.3334;  (c1 - c2)/size = -0.00004
    depth 50:  1185305 nodes, classes (0,1,2) = [394979, 395113, 395213], shares 0.3332 0.3333 0.3334;  (c1 - c2)/size = -0.00008
    layer growth ratio at depth 41..50: 1.3328 .. 1.3337 (4/3 = 1.3333)
+   class-1/class-2 imbalance, depths 20..50: relative |c1 - c2|/size decays by a fitted factor 0.845 per layer;  |c1 - c2|/sqrt(size) stays in [0.017, 0.536];  sign flips between consecutive layers: 19 of 30  (fluctuation level: the mean-field mode (-1)^k of the two-class model is below the noise beyond depth ~20)
 
 == 6. The three basins of T_- (3x-1) on 1..N_C = 1e+09
-   done in 13.6 s; every n <= N_C reached one of the three cycles (no overflow; largest value met 111976109464769974)
+   done in 12.6 s; every n <= N_C reached one of the three cycles;  largest value in the int64 pass 111976109464769974;  starts whose orbit passed 3e18 (finished with Python integers): 0
+   N = 30612: counts {1} 9984, {5,7,10} 9985, {17,...} 10643
+   N = 30613: counts {1} 9985, {5,7,10} 9985, {17,...} 10643
+   N = 30614: counts {1} 9986, {5,7,10} 9985, {17,...} 10643
    N =         100:  basin {1} 0.380000,  basin {5,7,10} 0.310000,  basin {17,...} 0.310000
    N =         200:  basin {1} 0.385000,  basin {5,7,10} 0.305000,  basin {17,...} 0.310000
    N =         500:  basin {1} 0.368000,  basin {5,7,10} 0.302000,  basin {17,...} 0.330000
    N =        1000:  basin {1} 0.349000,  basin {5,7,10} 0.306000,  basin {17,...} 0.345000
+   N =        1389:  basin {1} 0.345572,  basin {5,7,10} 0.308135,  basin {17,...} 0.346292
    N =        2000:  basin {1} 0.335500,  basin {5,7,10} 0.312000,  basin {17,...} 0.352500
    N =        5000:  basin {1} 0.327800,  basin {5,7,10} 0.318000,  basin {17,...} 0.354200
    N =       10000:  basin {1} 0.324400,  basin {5,7,10} 0.321300,  basin {17,...} 0.354300
    N =       20000:  basin {1} 0.325100,  basin {5,7,10} 0.322550,  basin {17,...} 0.352350
+   N =       30612:  basin {1} 0.326147,  basin {5,7,10} 0.326179,  basin {17,...} 0.347674
+   N =       30613:  basin {1} 0.326169,  basin {5,7,10} 0.326169,  basin {17,...} 0.347663
+   N =       30614:  basin {1} 0.326191,  basin {5,7,10} 0.326158,  basin {17,...} 0.347651
    N =       50000:  basin {1} 0.329540,  basin {5,7,10} 0.321560,  basin {17,...} 0.348900
    N =      100000:  basin {1} 0.330300,  basin {5,7,10} 0.321040,  basin {17,...} 0.348660
    N =      200000:  basin {1} 0.329555,  basin {5,7,10} 0.321380,  basin {17,...} 0.349065
@@ -75,7 +83,7 @@
    N =   200000000:  basin {1} 0.326878,  basin {5,7,10} 0.324776,  basin {17,...} 0.348345
    N =   500000000:  basin {1} 0.326927,  basin {5,7,10} 0.324928,  basin {17,...} 0.348145
    N =  1000000000:  basin {1} 0.326869,  basin {5,7,10} 0.324952,  basin {17,...} 0.348179
-   changes in the order of the three counts (leader, second) as N grows: 205 in total
+   changes in the order of the three counts (leader, second) as N grows: 204 (after the initial state at N = 1)
    leader changes: 25, the last at N = 1389;  second-place changes: 204, the last at N = 30613
      from N = 1: leader {1}, second {5,7,10}
      from N = 56: leader {5,7,10}, second {1}
@@ -271,4 +279,4 @@
 
 FAILED CHECKS: none
 ALL CHECKS PASSED
-total time 24.0 s
+total time 21.0 s

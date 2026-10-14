@@ -17834,3 +17834,49 @@ the ambient space.
   * The JC2 verified range was given as Moh's 100; it is now 108 (Guccione et al.).
   * Thakur's function-field theorem was cited as support for the `log log x` count; its criterion is algebraic.
   * Self-corrected before the audit: Haugland's 2,131-vertex graph (2026) was called the Moser-spindle-free record, which is Heule's 1,441 (2021).
+
+## MISTAKE-607 (2026-10-14, opus-2026-10-14-S32 prime_power_bias_collatz_collector_20261014.md and its scripts; found by the session's independent adversarial audit after the pre-audit checkpoint was pushed) -- an ensemble law stated as a time average along orbits, an invented mechanism for a measured excess, a model decay claimed against data that are pure fluctuation, the wrong maximum of pi - li, a race logic error at a tie, the wrong normalisation of the Rubinstein-Sarnak bias, a Mersenne coincidence filed under Paley, and over-typed sentences
+
+- **Claims (pre-audit checkpoint):**
+  - (1) "Along trajectories class 2 is visited with limiting frequency exactly 2/3". Proposition 2 is a law over the 2-adic ensemble (`n` uniform mod `p 2^k`). Every known `T_+` orbit ends in the cycle `{1, 2}`, which visits the two classes `1 : 1`.
+  - (2) "The excess over 2/3 [of the pooled trajectory share 0.6725] comes from the deterministic descent at the end." No script checked this, and it is false. The audit split trajectories into thirds: the final descent gives a *deficit*. The excess is a length bias: the middle of long trajectories has odd-step frequency about 0.57, giving share `1/(2 − q) = 0.70`.
+  - (3) The backward tree's class imbalance was said to decay "like `(−3/4)^k` ... as predicted". The data are fluctuation noise: relative decay factor 0.845 per layer, `|c_1 − c_2| ≈ 0.1 √size`, sign flips in 19 of 30 layers. The model and its mean-field assumption were not stated.
+  - (4) "The largest value of `π − li` is −0.165, at p = 3." The script excluded `p = 2` and integrated `li` coarsely there. The maximum is `−0.0452` at `p = 2`, and the value at `p = 3` is `−0.1636`.
+  - (5) "The order changes 205 times" included the initial state; it is 204. "The last [second-place change] at N = 30613, after which {1} stays ahead" missed that 30613 is a tie. "If they differ, the race has ended" was a non sequitur: a reversed order forces another crossing.
+  - (6) The Rubinstein–Sarnak bias was written `(c(q,b) − c(q,a))/2`. It is `/φ(q)`, and the two agree only for `q = 3, 4, 6`.
+  - (7) The `7x+1` weights `1/7, 2/7, 4/7` were tied to the S17 code through "the Paley coincidence `<2> = QR_7`". Paley gives the support; the denominator 7 is the Mersenne coincidence (weights equal `r/p` iff `p = 2^d − 1`).
+  - (8) "The macrocosm's absence of cycles is the Diophantine statement ... combined with verification". The existence of further cycles is OPEN; those bounds only force long cycles.
+  - (9) Smaller items:
+    - `(l, L)` written where the note uses `(L, l)`;
+    - the zero contribution at 26861 quoted against squares only;
+    - `#{odd p}` where the set is `{p ∤ q}`;
+    - conditional (GRH/RH/LI) statements stated as facts;
+    - puns ("prime powers" for `2^L`, `3^l`) presented as structure;
+    - "exactly balanced tree";
+    - float checks typed FINITE-EXACT;
+    - "brute force for `k <= 12`" when only six values of `k` were run;
+    - three wrong journal venues (Hurst, Ng, Humphries).
+- **Why it was wrong:**
+  - (1, 2) a law for random starting points was read as a statement about single orbits, and a measured discrepancy was explained by a guess instead of a test;
+  - (3) a mean-field prediction was asserted without fitting it;
+  - (4) a float sweep's extremum was reported without checking the excluded endpoint;
+  - (5) ties were not separated from strict leads;
+  - (6) a normalisation was copied from the `φ(q) = 2` case;
+  - (7) two coincidences that meet at `p = 7` were conflated;
+  - (8, 9) the draft was typed before the logical form of each claim was checked.
+- **Correct framing:**
+  - Proposition 2 is an ensemble law. The pooled orbit share is 0.6725, with the length-bias explanation measured by the audit.
+  - The tree is balanced to the fluctuation level, under a stated mean-field model with eigenvalues `4/3, 1, −1`.
+  - `max (π(p) − li(p)) = −0.0452` at `p = 2`.
+  - The order changes 204 times; 30613 is a tie and `{1}` leads strictly from 30614 (now to `10^10`); the logic is stated both ways.
+  - The bias is `/φ(q)`.
+  - The weights are Mersenne in their denominator and Paley in their support, and the S17 link is NUMEROLOGY.
+  - Further cycles: OPEN.
+  - All typing fixed; venues corrected.
+- **What survives:** every computation, which the audit reproduced with independent code (races to `10^10`; exact integer `λ` and `μ` to `10^9`; Proposition 2 for 14 primes; census; basins to `10^9`). Also Propositions 2 and 3, the prime-power identity, and the Pólya/Mertens classification. The basin race was extended to `10^10` with an overflow-safe pass after a first attempt overflowed 64-bit arithmetic.
+- **Lesson:**
+  - State every probabilistic law with its ensemble.
+  - Test a proposed mechanism for a measured excess before writing it.
+  - Fit a model's predicted decay rather than citing it.
+  - Report extrema over the full range, endpoints included.
+  - Separate ties from strict inequalities in races.

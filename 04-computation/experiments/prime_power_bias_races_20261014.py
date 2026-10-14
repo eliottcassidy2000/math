@@ -399,12 +399,14 @@ def main():
     check('26861', n4 >= 1 and regions4[0, 0] == 26861)
     print(f'   regions with pi(x;3,1) > pi(x;3,2), x <= N_A: {int(info[6])}  (Bays-Hudson: the first is at 608981813029 > N_A)')
     check('mod3 none', int(info[6]) == 0 or N_A > 608981813029)
-    print(f'   max over primes 3 <= p <= N_A of pi(p) - li(p): {info[7]:.4f} at p = {int(info[8])}  (negative: pi(x) < li(x) throughout; Skewes)')
+    print(f'   float sweep (Simpson li, coarse at the smallest primes): max over primes 3 <= p <= N_A of pi(p) - li(p): {info[7]:.4f} at p = {int(info[8])}  (negative throughout)')
     check('skewes', info[7] < 0)
     # exact check of the smallest primes with mpmath (the float sweep's margin there is small)
     mp.mp.dps = 30
-    worst = min(float(mp.li(p)) - (i + 1) for i, p in enumerate(small_primes(10 ** 5)))
-    print(f'   exact (mpmath) min over primes p <= 10^5 of li(p) - pi(p): {worst:.6f}  (> 0)', check('skewes small', worst > 0))
+    gaps = [(float(mp.li(p)) - (i + 1), int(p)) for i, p in enumerate(small_primes(10 ** 5))]
+    worst, wp = min(gaps)
+    print(f'   exact (mpmath li) over primes p <= 10^5: max of pi(p) - li(p) is {-worst:.6f} at p = {wp}  (at p = 3: {2 - float(mp.li(3)):.6f});'
+          f'  so over all primes p <= N_A the maximum of pi(p) - li(p) is {-worst:.4f} at p = {wp}', check('skewes small', worst > 0))
 
     # normalised races on the log grid
     xs = grid_x
