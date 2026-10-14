@@ -1,0 +1,114 @@
+{
+  "all_verdict_partition_controls": 1954,
+  "boundary_ray_values": [
+    [
+      "0",
+      "0"
+    ],
+    [
+      "1",
+      "1/2"
+    ],
+    [
+      "2",
+      "4/5"
+    ],
+    [
+      "-1",
+      "1/2"
+    ]
+  ],
+  "checks": 8181,
+  "collatz_model": {
+    "cost_fisher_loss": "0",
+    "geometric_fisher": "208/49",
+    "source_cells": [
+      [
+        19,
+        32
+      ],
+      [
+        29,
+        32
+      ]
+    ],
+    "source_verdict_compressed": "148/7203",
+    "source_verdict_full": "180/2401",
+    "source_verdict_loss": "8/147",
+    "strict_root_source": 19,
+    "strict_root_word": [
+      1,
+      3,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "doubling_cycle_controls": [
+    [
+      3,
+      1,
+      2,
+      "1"
+    ],
+    [
+      7,
+      2,
+      3,
+      "1/3"
+    ],
+    [
+      9,
+      1,
+      6,
+      "1/3"
+    ],
+    [
+      11,
+      1,
+      10,
+      "1/5"
+    ],
+    [
+      17,
+      2,
+      8,
+      "1/8"
+    ],
+    [
+      23,
+      2,
+      11,
+      "1/11"
+    ]
+  ],
+  "holonomy_controls": 1778,
+  "outer_s6": {
+    "actions": 720,
+    "matchings": 15,
+    "pentad_action": [
+      1,
+      0,
+      3,
+      2,
+      5,
+      4
+    ],
+    "pentad_cycle_type": [
+      2,
+      2,
+      2
+    ],
+    "pentads": 6,
+    "point_transposition": [
+      1,
+      0,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "status": "PROVED finite observer identities; FINITE-EXACT controls; no universal ROOT inference"
+}

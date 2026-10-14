@@ -1,0 +1,299 @@
+{
+  "checks": 112874,
+  "gate_samples": [
+    {
+      "digits": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "hit_time": 0,
+      "n": 1,
+      "switch_stage": 1
+    },
+    {
+      "digits": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "hit_time": 1,
+      "n": 2,
+      "switch_stage": 1
+    },
+    {
+      "digits": [
+        2,
+        2,
+        5,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "hit_time": 5,
+      "n": 3,
+      "switch_stage": 3
+    },
+    {
+      "digits": [
+        2,
+        2,
+        5,
+        27,
+        734,
+        538783,
+        290287121823,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "hit_time": 70,
+      "n": 27,
+      "switch_stage": 7
+    },
+    {
+      "digits": [
+        2,
+        2,
+        5,
+        27,
+        734,
+        538783,
+        290287121823,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "hit_time": 75,
+      "n": 97,
+      "switch_stage": 7
+    },
+    {
+      "digits": [
+        2,
+        2,
+        5,
+        27,
+        734,
+        538783,
+        290287121823,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "hit_time": 108,
+      "n": 703,
+      "switch_stage": 7
+    }
+  ],
+  "parity_partition": [
+    {
+      "cylinders": 2,
+      "length": 1
+    },
+    {
+      "cylinders": 4,
+      "length": 2
+    },
+    {
+      "cylinders": 8,
+      "length": 3
+    },
+    {
+      "cylinders": 16,
+      "length": 4
+    },
+    {
+      "cylinders": 32,
+      "length": 5
+    },
+    {
+      "cylinders": 64,
+      "length": 6
+    },
+    {
+      "cylinders": 128,
+      "length": 7
+    },
+    {
+      "cylinders": 256,
+      "length": 8
+    },
+    {
+      "cylinders": 512,
+      "length": 9
+    },
+    {
+      "cylinders": 1024,
+      "length": 10
+    },
+    {
+      "cylinders": 2048,
+      "length": 11
+    },
+    {
+      "cylinders": 4096,
+      "length": 12
+    }
+  ],
+  "quadratic_field_exploration_only": [
+    {
+      "length": 1,
+      "nonalternating": 0,
+      "sqrt3_words": 0
+    },
+    {
+      "length": 2,
+      "nonalternating": 0,
+      "sqrt3_words": 2
+    },
+    {
+      "length": 3,
+      "nonalternating": 0,
+      "sqrt3_words": 0
+    },
+    {
+      "length": 4,
+      "nonalternating": 0,
+      "sqrt3_words": 2
+    },
+    {
+      "length": 5,
+      "nonalternating": 0,
+      "sqrt3_words": 0
+    },
+    {
+      "length": 6,
+      "nonalternating": 0,
+      "sqrt3_words": 2
+    },
+    {
+      "length": 7,
+      "nonalternating": 0,
+      "sqrt3_words": 0
+    },
+    {
+      "length": 8,
+      "nonalternating": 0,
+      "sqrt3_words": 2
+    },
+    {
+      "length": 9,
+      "nonalternating": 0,
+      "sqrt3_words": 0
+    },
+    {
+      "length": 10,
+      "nonalternating": 0,
+      "sqrt3_words": 2
+    },
+    {
+      "length": 11,
+      "nonalternating": 0,
+      "sqrt3_words": 0
+    },
+    {
+      "length": 12,
+      "nonalternating": 0,
+      "sqrt3_words": 2
+    },
+    {
+      "length": 13,
+      "nonalternating": 0,
+      "sqrt3_words": 0
+    },
+    {
+      "length": 14,
+      "nonalternating": 0,
+      "sqrt3_words": 2
+    },
+    {
+      "length": 15,
+      "nonalternating": 0,
+      "sqrt3_words": 0
+    },
+    {
+      "length": 16,
+      "nonalternating": 0,
+      "sqrt3_words": 2
+    }
+  ],
+  "quadratic_field_hostile": {
+    "matrix": [
+      29872,
+      12553,
+      18471,
+      7762
+    ],
+    "rational_orbit": [
+      "402560/261901",
+      "201280/261901",
+      "100640/261901",
+      "50320/261901",
+      "25160/261901",
+      "12580/261901",
+      "6290/261901",
+      "3145/261901",
+      "135668/261901",
+      "67834/261901",
+      "33917/261901",
+      "181826/261901",
+      "90913/261901",
+      "267320/261901",
+      "133660/261901",
+      "66830/261901",
+      "33415/261901",
+      "181073/261901"
+    ],
+    "source": "402560/261901",
+    "word": "111111121121211122"
+  },
+  "status": "FINITE-EXACT; infinite statements proved in note",
+  "stopping_gate_universe": "all sources1..2048,14 CF digits, horizon4096",
+  "two_cycle_census_1_to_10000": [
+    1,
+    2
+  ]
+}

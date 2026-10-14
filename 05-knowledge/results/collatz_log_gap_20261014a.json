@@ -1,0 +1,240 @@
+{
+  "status": "FINITE-EXACT; necessary cycle gates, not convergence",
+  "checks": 36858,
+  "universes": {
+    "word_alphabet": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "max_word_length": 5,
+    "word_count": 1364,
+    "subset_controls": 1060,
+    "sources": [
+      31,
+      47,
+      71,
+      91
+    ],
+    "observed_edges": 11,
+    "candidate_lengths_inclusive": [
+      12,
+      256
+    ]
+  },
+  "certified_cf_prefix": [
+    1,
+    1,
+    1,
+    2,
+    2,
+    3,
+    1,
+    5,
+    2,
+    23,
+    2,
+    2,
+    1,
+    1,
+    55
+  ],
+  "capacity_modes": [
+    "repeated minimum",
+    "distinct odd 3-units",
+    "marked actual prefix"
+  ],
+  "capacity_table": [
+    {
+      "source": 31,
+      "word": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      "states": [
+        31,
+        47,
+        71,
+        107,
+        161,
+        121,
+        91,
+        137,
+        103,
+        155,
+        233,
+        175
+      ],
+      "candidate_length_counts": [
+        227,
+        99,
+        98
+      ],
+      "least_lengths": [
+        15,
+        17,
+        17
+      ]
+    },
+    {
+      "source": 47,
+      "word": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "states": [
+        47,
+        71,
+        107,
+        161,
+        121,
+        91,
+        137,
+        103,
+        155,
+        233,
+        175,
+        263
+      ],
+      "candidate_length_counts": [
+        206,
+        85,
+        84
+      ],
+      "least_lengths": [
+        17,
+        17,
+        17
+      ]
+    },
+    {
+      "source": 71,
+      "word": [
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "states": [
+        71,
+        107,
+        161,
+        121,
+        91,
+        137,
+        103,
+        155,
+        233,
+        175,
+        263,
+        395
+      ],
+      "candidate_length_counts": [
+        182,
+        70,
+        70
+      ],
+      "least_lengths": [
+        17,
+        17,
+        17
+      ]
+    },
+    {
+      "source": 91,
+      "word": [
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        3,
+        1
+      ],
+      "states": [
+        91,
+        137,
+        103,
+        155,
+        233,
+        175,
+        263,
+        395,
+        593,
+        445,
+        167,
+        251
+      ],
+      "candidate_length_counts": [
+        161,
+        64,
+        63
+      ],
+      "least_lengths": [
+        17,
+        17,
+        29
+      ]
+    }
+  ],
+  "source91_clock27_over17_capacity": [
+    "76631701190606848",
+    "73779331906564965"
+  ],
+  "source91_clock46_over29": "capacity passes; ordered carry decoder rejects",
+  "clock8_over5": {
+    "words": 35,
+    "gap": 13,
+    "integer_cycles": 0
+  },
+  "rational_cycle_hostile": {
+    "word": [
+      1,
+      3
+    ],
+    "states": [
+      "5/7",
+      "11/7"
+    ]
+  },
+  "mersenne_prefix_hostile": {
+    "exponents_checked": [
+      2,
+      64
+    ],
+    "word": "1^(K-1)",
+    "endpoint": "2*3^(K-1)-1",
+    "clock_ratio": 1
+  },
+  "scope": "No assertion mu(log_2(3))=2 is assumed; no unbounded trajectory is excluded."
+}

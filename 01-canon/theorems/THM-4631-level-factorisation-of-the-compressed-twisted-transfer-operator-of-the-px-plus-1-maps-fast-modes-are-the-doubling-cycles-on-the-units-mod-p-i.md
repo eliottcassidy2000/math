@@ -39,7 +39,7 @@ related:
 
 ## Statements
 
-1. **(Exact class-map identities; PROVED.)** THM-4629 statement 1's class maps hold with `p` in place of `3`: halving sends the class `(r, rho)` modulo `2^j p^k` onto the class `(r/2 mod 2^(j-1), rho 2^(-1) mod p^k)`, and the odd step sends it onto `((pr+1)/2 mod 2^(j-1), c~(rho) mod p^(k+1))` with `c~(rho) = (p rho' + 1)/2`, because `2` is invertible modulo `p^k` and `n = rho' (mod 2p^k)` determines `(pn+1)/2` modulo `p^(k+1)`. The class-mean identities follow for any function `chi` on the forward orbit graph of `T_p` satisfying the cocycle relations `chi(n) = zeta^alpha chi(T_p n)` (`n` even) and `chi(n) = zeta^(alpha+beta) chi(T_p n)` (`n` odd); such `chi` exist on every component (choose a base point and propagate backwards), and for `p = 3` the step-count character of THM-4629 is one of them on the component of `1`. For `p >= 5`, where orbits may diverge and other cycles exist (`13 -> 33 -> 83 -> ...` for `5x+1`), the theorem is a statement about the operator `M_(j,k)` and its spectrum, not about `tau`; `M_(j,k)` is the compression of the cocycle identities under the `p`-adic closure `H_k` of THM-4629.
+1. **(Exact class-map identities; PROVED.)** THM-4629 statement 1's class maps hold with `p` in place of `3`: halving sends the class `(r, rho)` modulo `2^j p^k` onto the class `(r/2 mod 2^(j-1), rho 2^(-1) mod p^k)`, and the odd step sends it onto `((pr+1)/2 mod 2^(j-1), c~(rho) mod p^(k+1))` with `c~(rho) = (p rho' + 1)/2`, because `2` is invertible modulo `p^k` and `n = rho' (mod 2p^k)` determines `(pn+1)/2` modulo `p^(k+1)`. The class-mean identities follow for any function `chi` on the forward orbit graph of `T_p` satisfying the cocycle relations `chi(n) = zeta^alpha chi(T_p n)` (`n` even) and `chi(n) = zeta^(alpha+beta) chi(T_p n)` (`n` odd). A nonzero such `chi` exists on a full forward-orbit component exactly when the product of the prescribed edge weights around its directed cycle is `1`, if the component has a cycle; on an acyclic component, choosing one value and propagating along its edges is consistent. On the component of `1`, the first-hit step-count character is instead a cocycle on the ROOT-killed graph: prescribe `chi(1) = 1` and impose the recursion only at `n != 1`. It is not generally a cocycle around the retained `1 -> 2 -> 1` cycle. For `p >= 5`, where orbits may diverge and other cycles exist (`13 -> 33 -> 83 -> ...` for `5x+1`), the theorem is a statement about the operator `M_(j,k)` and its spectrum, not about `tau`; `M_(j,k)` is the compression of the cocycle identities under the `p`-adic closure `H_k` of THM-4629.
 2. **(Level factorisation; PROVED.)** For every `j >= 0`, `k >= 0` and every character,
    `det(I - M_(j,k)(s)) = [1 - u/2 - v/2] prod_(i=1)^(k) [1 - (u/2)^(L_i)]^(c_i)`.
 3. **(Graph reading; PROVED.)** Let `V_i` be the functions of `p`-adic depth `<= i`. On the graded piece `V_i/V_(i-1)` (`i >= 1`), spanned by the additive characters `e(a rho/p^i)` with `a` a unit, the odd branch is zero (its image has depth `<= i-1`) and the halving branch acts as `(u/2)` times the permutation `a -> a 2^(-1)` of `(Z/p^i)^x` tensored with the de Bruijn averaging `2E_j` (spectrum `{1, 0, ..., 0}`). The permutation is the Cayley graph `Cay((Z/p^i)^x, {2^(-1)})`: `c_i` disjoint directed cycles of length `L_i`, the cosets of `<2>`. Its characteristic polynomial is the displayed level factor. On `V_0` (functions of `r` alone) the determinant is the scalar law.
@@ -60,8 +60,24 @@ related:
 
 **5.** Computation (script above). ∎
 
+## Local cocycle correction (2026-10-14)
+
+The earlier statement that one may assign a nonzero base value on **every**
+component omitted cycle holonomy. Multiplying `chi(n)=w(n)chi(T_p n)` around
+a cycle gives `chi(n)=(product w)chi(n)`. For `p=3`, the cycle `1 -> 2 -> 1`
+therefore requires `zeta^(2 alpha + beta)=1`. At `m=2, alpha=0, beta=1`
+the product is `-1`, so only the zero cocycle can satisfy both retained
+edges. Killing the outgoing ROOT edge permits the first-hit normalization
+`chi(1)=1` without imposing this cycle equation. Finite-horizon character
+recursions also carry a horizon index and are not automatically stationary
+cocycles. The zero cocycle is always available, but conveys no nonzero
+normalized information. This repairs only the cocycle existence and ROOT
+boundary wording: the compressed operator, its determinant factorization,
+and statements 2-4 are unchanged. Exact finite cycle controls are retained
+in [information_observers_collatz_20261014a](../../05-knowledge/results/information_observers_collatz_20261014a.md).
+
 ## Scope and boundary
 
-- The theorem concerns the compressed operators; the step from the finite compressions to the integers is THM-4629's open 3-adic closure (for `p = 3`) and is not touched. For `p >= 5` the maps are expanding on average (`theta_p > 2`) and `tau` is not defined on divergent orbits; the class-mean identities are then statements about finite-horizon step counts and the operator is the object.
+- The theorem concerns the compressed operators; the step from the finite compressions to the integers is THM-4629's open 3-adic closure (for `p = 3`) and is not touched. For `p >= 5` the maps are expanding on average (`theta_p > 2`) and `tau` is not defined on divergent orbits; finite-horizon characters carry a horizon index, while a normalized stationary cocycle requires the cycle compatibility stated above; the operator remains the object.
 - The multiplicities `c_i` are the only place where the arithmetic of `p` enters the spectrum; the scalar law knows `p` only through `theta_p`. In particular the Artin and Wieferich dichotomies are properties of the fast, undetectable modes, not of the slow lines; the theorem explains why the `3`-adic hierarchy of THM-4629 is "silent" (one cycle per level, every eigenvalue at modulus `1/2` per octave) and predicts the same silence with multiplicity for every `p`.
 - Related readings: `graph_theory_as_common_carrier_20261013.md`, sections 2 and 6 (the Cayley/de Bruijn carrier; the Mersenne clocks `p | 2^n - 1 iff L_1 | n` as the same cycles read as periods).

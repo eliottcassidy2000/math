@@ -1,0 +1,72 @@
+{
+  "checks": 17222,
+  "engineering_controls": [
+    {
+      "digit_power": 2,
+      "next_log_ratio_lower": "64/67",
+      "next_log_ratio_upper": "128/127",
+      "proved_mu": 3
+    },
+    {
+      "digit_power": 3,
+      "next_log_ratio_lower": "2187/1100",
+      "next_log_ratio_upper": "2187/1093",
+      "proved_mu": 4
+    },
+    {
+      "digit_power": 4,
+      "next_log_ratio_lower": "4096/1367",
+      "next_log_ratio_upper": "16384/5461",
+      "proved_mu": 5
+    }
+  ],
+  "factorial_proved_mu": "infinity",
+  "hostiles": 17,
+  "models": {
+    "odd": {
+      "digits_each": 65,
+      "raw_ratio_bound": 2,
+      "sources": 128
+    },
+    "shortcut": {
+      "digits_each": 65,
+      "raw_ratio_bound": 2,
+      "sources": 128
+    },
+    "standard": {
+      "digits_each": 65,
+      "raw_ratio_bound": 4,
+      "sources": 128
+    }
+  },
+  "native_lifts_each": 8,
+  "native_words": 85,
+  "scope": "No finite data are labelled an irrationality-exponent estimate; no target ROOT oracle.",
+  "source_7_receipt": {
+    "digits": [
+      8,
+      23,
+      52,
+      53,
+      26,
+      7
+    ],
+    "states": [
+      7,
+      11,
+      17,
+      13,
+      5,
+      1
+    ],
+    "valuations": [
+      1,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "sparse_envelope": "a_k<=2^k does not imply mu2; this example has mu>=5/2",
+  "status": "PROVED asymptotic statements in companion note; finite exact controls here"
+}
