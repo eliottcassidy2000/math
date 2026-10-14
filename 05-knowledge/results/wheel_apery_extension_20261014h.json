@@ -1,0 +1,453 @@
+{
+  "checks": 71191,
+  "extension_rows": [
+    {
+      "degree": 2,
+      "fourier_a_q": -11,
+      "frobenius_trace": -38,
+      "injective": 272,
+      "modulus": [
+        1,
+        0,
+        1
+      ],
+      "moment": 29,
+      "p": 3,
+      "q": 9
+    },
+    {
+      "degree": 3,
+      "fourier_a_q": 152,
+      "frobenius_trace": 260,
+      "injective": -6864,
+      "modulus": [
+        1,
+        2,
+        0,
+        1
+      ],
+      "moment": -287,
+      "p": 3,
+      "q": 27
+    },
+    {
+      "degree": 4,
+      "fourier_a_q": -311,
+      "frobenius_trace": -14,
+      "injective": 800,
+      "modulus": [
+        2,
+        1,
+        0,
+        0,
+        1
+      ],
+      "moment": -67,
+      "p": 3,
+      "q": 81
+    },
+    {
+      "degree": 2,
+      "fourier_a_q": -121,
+      "frobenius_trace": -246,
+      "injective": 5808,
+      "modulus": [
+        2,
+        0,
+        1
+      ],
+      "moment": 221,
+      "p": 5,
+      "q": 25
+    },
+    {
+      "degree": 3,
+      "fourier_a_q": 492,
+      "frobenius_trace": 742,
+      "injective": -92504,
+      "modulus": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "moment": -867,
+      "p": 5,
+      "q": 125
+    },
+    {
+      "degree": 2,
+      "fourier_a_q": 233,
+      "frobenius_trace": -110,
+      "injective": 5088,
+      "modulus": [
+        1,
+        0,
+        1
+      ],
+      "moment": 61,
+      "p": 7,
+      "q": 49
+    },
+    {
+      "degree": 2,
+      "fourier_a_q": 605,
+      "frobenius_trace": -726,
+      "injective": 86640,
+      "modulus": [
+        1,
+        0,
+        1
+      ],
+      "moment": 605,
+      "p": 11,
+      "q": 121
+    },
+    {
+      "degree": 2,
+      "fourier_a_q": -1713,
+      "frobenius_trace": -3910,
+      "injective": 656208,
+      "modulus": [
+        2,
+        0,
+        1
+      ],
+      "moment": 3741,
+      "p": 13,
+      "q": 169
+    }
+  ],
+  "hostile_F9": {
+    "actual_injective": 272,
+    "fourier_a9": -11,
+    "frobenius_trace": -38,
+    "naive_fourier_formula": 56
+  },
+  "prime_rows": [
+    {
+      "a_p": -4,
+      "all_map": 2,
+      "injective": 0,
+      "normalized_collision": 1,
+      "p": 3
+    },
+    {
+      "a_p": -2,
+      "all_map": -12,
+      "injective": -8,
+      "normalized_collision": -1,
+      "p": 5
+    },
+    {
+      "a_p": 24,
+      "all_map": -186,
+      "injective": -168,
+      "normalized_collision": -3,
+      "p": 7
+    },
+    {
+      "a_p": -44,
+      "all_map": 330,
+      "injective": 400,
+      "normalized_collision": -7,
+      "p": 11
+    },
+    {
+      "a_p": 22,
+      "all_map": -420,
+      "injective": -312,
+      "normalized_collision": -9,
+      "p": 13
+    },
+    {
+      "a_p": 50,
+      "all_map": -1072,
+      "injective": -864,
+      "normalized_collision": -13,
+      "p": 17
+    },
+    {
+      "a_p": 44,
+      "all_map": -1134,
+      "injective": -864,
+      "normalized_collision": -15,
+      "p": 19
+    },
+    {
+      "a_p": -56,
+      "all_map": 726,
+      "injective": 1144,
+      "normalized_collision": -19,
+      "p": 23
+    },
+    {
+      "a_p": 198,
+      "all_map": -6356,
+      "injective": -5656,
+      "normalized_collision": -25,
+      "p": 29
+    },
+    {
+      "a_p": -160,
+      "all_map": 3870,
+      "injective": 4680,
+      "normalized_collision": -27,
+      "p": 31
+    },
+    {
+      "a_p": -162,
+      "all_map": 4500,
+      "injective": 5688,
+      "normalized_collision": -33,
+      "p": 37
+    },
+    {
+      "a_p": -198,
+      "all_map": 6280,
+      "injective": 7760,
+      "normalized_collision": -37,
+      "p": 41
+    },
+    {
+      "a_p": 52,
+      "all_map": -3990,
+      "injective": -2352,
+      "normalized_collision": -39,
+      "p": 43
+    },
+    {
+      "a_p": 528,
+      "all_map": -26450,
+      "injective": -24472,
+      "normalized_collision": -43,
+      "p": 47
+    },
+    {
+      "a_p": -242,
+      "all_map": 9828,
+      "injective": 12376,
+      "normalized_collision": -49,
+      "p": 53
+    },
+    {
+      "a_p": -668,
+      "all_map": 35322,
+      "injective": 38512,
+      "normalized_collision": -55,
+      "p": 59
+    },
+    {
+      "a_p": 550,
+      "all_map": -36660,
+      "injective": -33240,
+      "normalized_collision": -57,
+      "p": 61
+    },
+    {
+      "a_p": 188,
+      "all_map": -16830,
+      "injective": -12672,
+      "normalized_collision": -63,
+      "p": 67
+    },
+    {
+      "a_p": 728,
+      "all_map": -55930,
+      "injective": -51240,
+      "normalized_collision": -67,
+      "p": 71
+    },
+    {
+      "a_p": 154,
+      "all_map": -16344,
+      "injective": -11376,
+      "normalized_collision": -69,
+      "p": 73
+    },
+    {
+      "a_p": -656,
+      "all_map": 45006,
+      "injective": 50856,
+      "normalized_collision": -75,
+      "p": 79
+    },
+    {
+      "a_p": 236,
+      "all_map": -26158,
+      "injective": -19680,
+      "normalized_collision": -79,
+      "p": 83
+    },
+    {
+      "a_p": 714,
+      "all_map": -70664,
+      "injective": -63184,
+      "normalized_collision": -85,
+      "p": 89
+    },
+    {
+      "a_p": -478,
+      "all_map": 36576,
+      "injective": 45504,
+      "normalized_collision": -93,
+      "p": 97
+    },
+    {
+      "a_p": 1566,
+      "all_map": -166700,
+      "injective": -157000,
+      "normalized_collision": -97,
+      "p": 101
+    },
+    {
+      "a_p": -968,
+      "all_map": 88230,
+      "injective": 98328,
+      "normalized_collision": -99,
+      "p": 103
+    },
+    {
+      "a_p": -780,
+      "all_map": 71338,
+      "injective": 82256,
+      "normalized_collision": -103,
+      "p": 107
+    },
+    {
+      "a_p": -1994,
+      "all_map": 203580,
+      "injective": 214920,
+      "normalized_collision": -105,
+      "p": 109
+    },
+    {
+      "a_p": -942,
+      "all_map": 92848,
+      "injective": 105056,
+      "normalized_collision": -109,
+      "p": 113
+    },
+    {
+      "a_p": 1408,
+      "all_map": -193410,
+      "injective": -177912,
+      "normalized_collision": -123,
+      "p": 127
+    },
+    {
+      "a_p": -2692,
+      "all_map": 332930,
+      "injective": 349440,
+      "normalized_collision": -127,
+      "p": 131
+    },
+    {
+      "a_p": 1626,
+      "all_map": -239768,
+      "injective": -221680,
+      "normalized_collision": -133,
+      "p": 137
+    },
+    {
+      "a_p": -684,
+      "all_map": 75210,
+      "injective": 93840,
+      "normalized_collision": -135,
+      "p": 139
+    },
+    {
+      "a_p": 302,
+      "all_map": -66748,
+      "injective": -45288,
+      "normalized_collision": -145,
+      "p": 149
+    },
+    {
+      "a_p": 1352,
+      "all_map": -225450,
+      "injective": -203400,
+      "normalized_collision": -147,
+      "p": 151
+    },
+    {
+      "a_p": 3142,
+      "all_map": -514644,
+      "injective": -490776,
+      "normalized_collision": -153,
+      "p": 157
+    },
+    {
+      "a_p": 3036,
+      "all_map": -518238,
+      "injective": -492480,
+      "normalized_collision": -159,
+      "p": 163
+    },
+    {
+      "a_p": -264,
+      "all_map": 16102,
+      "injective": 43160,
+      "normalized_collision": -163,
+      "p": 167
+    },
+    {
+      "a_p": -2826,
+      "all_map": 456316,
+      "injective": 485384,
+      "normalized_collision": -169,
+      "p": 173
+    },
+    {
+      "a_p": 3084,
+      "all_map": -580814,
+      "injective": -549664,
+      "normalized_collision": -175,
+      "p": 179
+    },
+    {
+      "a_p": -2418,
+      "all_map": 402660,
+      "injective": 434520,
+      "normalized_collision": -177,
+      "p": 181
+    },
+    {
+      "a_p": -960,
+      "all_map": 146110,
+      "injective": 181640,
+      "normalized_collision": -187,
+      "p": 191
+    },
+    {
+      "a_p": 2882,
+      "all_map": -590400,
+      "injective": -554112,
+      "normalized_collision": -189,
+      "p": 193
+    },
+    {
+      "a_p": 1086,
+      "all_map": -251468,
+      "injective": -213640,
+      "normalized_collision": -193,
+      "p": 197
+    },
+    {
+      "a_p": 88,
+      "all_map": -56826,
+      "injective": -18216,
+      "normalized_collision": -195,
+      "p": 199
+    }
+  ],
+  "scope": {
+    "direct_prime_limit": 31,
+    "elementary": "all odd finite fields; anchored oriented W4",
+    "extension_fields": 8,
+    "hostiles": 18,
+    "modular_theorem": "all odd primes, Ahlgren--Ono Theorem 6",
+    "prime_limit": 199,
+    "prime_power_trace_identity": "finite-exact tests only in this packet"
+  }
+}

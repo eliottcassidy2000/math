@@ -1,0 +1,397 @@
+{
+  "status": "PROVED exact reduction identities; FINITE-EXACT symbolic coefficient census",
+  "scope": "all odd prime powers q=3mod4, at most eight edges; prime modular substitution imported separately",
+  "wheel_edges": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      1
+    ]
+  ],
+  "rows": [
+    {
+      "runs": [
+        8
+      ],
+      "partitions": 0,
+      "coefficient_q1mod4": 0,
+      "coefficient_q3mod4": 0
+    },
+    {
+      "runs": [
+        7,
+        1
+      ],
+      "partitions": 32,
+      "coefficient_q1mod4": -32,
+      "coefficient_q3mod4": 0
+    },
+    {
+      "runs": [
+        6,
+        2
+      ],
+      "partitions": 30,
+      "coefficient_q1mod4": -30,
+      "coefficient_q3mod4": -14
+    },
+    {
+      "runs": [
+        5,
+        3
+      ],
+      "partitions": 20,
+      "coefficient_q1mod4": -20,
+      "coefficient_q3mod4": 0
+    },
+    {
+      "runs": [
+        4,
+        4
+      ],
+      "partitions": 22,
+      "coefficient_q1mod4": -22,
+      "coefficient_q3mod4": -6
+    },
+    {
+      "runs": [
+        4,
+        2,
+        2
+      ],
+      "partitions": 192,
+      "coefficient_q1mod4": 384,
+      "coefficient_q3mod4": 128
+    },
+    {
+      "runs": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "partitions": 960,
+      "coefficient_q1mod4": -4032,
+      "coefficient_q3mod4": -960
+    }
+  ],
+  "exact_injective_run_decompositions": [
+    {
+      "runs": [
+        8
+      ],
+      "polynomial_ascending": [
+        "0",
+        "2310",
+        "-3704",
+        "1644",
+        "-264",
+        "14"
+      ],
+      "injective_wheel_coefficient": "0"
+    },
+    {
+      "runs": [
+        6,
+        2
+      ],
+      "polynomial_ascending": [
+        "0",
+        "-18543",
+        "30103",
+        "-13854",
+        "2476",
+        "-187",
+        "5"
+      ],
+      "injective_wheel_coefficient": "-14"
+    },
+    {
+      "runs": [
+        4,
+        4
+      ],
+      "polynomial_ascending": [
+        "0",
+        "-18522",
+        "29886",
+        "-13544",
+        "2342",
+        "-166",
+        "4"
+      ],
+      "injective_wheel_coefficient": "-6"
+    },
+    {
+      "runs": [
+        4,
+        2,
+        2
+      ],
+      "polynomial_ascending": [
+        "0",
+        "163044",
+        "-269406",
+        "129706",
+        "-25652",
+        "2416",
+        "-110",
+        "2"
+      ],
+      "injective_wheel_coefficient": "128"
+    },
+    {
+      "runs": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "polynomial_ascending": [
+        "0",
+        "-1570590",
+        "2654571",
+        "-1348810",
+        "296299",
+        "-33490",
+        "2089",
+        "-70",
+        "1"
+      ],
+      "injective_wheel_coefficient": "-960"
+    }
+  ],
+  "S8_polynomial_ascending": [
+    "0",
+    "-37653/4",
+    "137969/8",
+    "-123953/12",
+    "69667/24",
+    "-5321/12",
+    "937/24",
+    "-23/12",
+    "1/24"
+  ],
+  "S8_injective_wheel_coefficient": "7",
+  "smaller_run_polynomials_ascending": {
+    "(2,)": [
+      "0",
+      "-1",
+      "1"
+    ],
+    "(4,)": [
+      "0",
+      "6",
+      "-8",
+      "2"
+    ],
+    "(6,)": [
+      "0",
+      "-87",
+      "131",
+      "-49",
+      "5"
+    ],
+    "(2, 2)": [
+      "0",
+      "-27",
+      "39",
+      "-13",
+      "1"
+    ],
+    "(4, 2)": [
+      "0",
+      "546",
+      "-848",
+      "348",
+      "-48",
+      "2"
+    ],
+    "(2, 2, 2)": [
+      "0",
+      "-3864",
+      "6229",
+      "-2820",
+      "490",
+      "-36",
+      "1"
+    ]
+  },
+  "reducer_cache": "CacheInfo(hits=29724, misses=9140, maxsize=None, currsize=9140)",
+  "independent_injective_checks": [
+    {
+      "q": 3,
+      "runs": [
+        8
+      ],
+      "sum": 0
+    },
+    {
+      "q": 3,
+      "runs": [
+        6,
+        2
+      ],
+      "sum": 0
+    },
+    {
+      "q": 3,
+      "runs": [
+        4,
+        4
+      ],
+      "sum": 0
+    },
+    {
+      "q": 3,
+      "runs": [
+        4,
+        2,
+        2
+      ],
+      "sum": 0
+    },
+    {
+      "q": 3,
+      "runs": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sum": 0
+    },
+    {
+      "q": 7,
+      "runs": [
+        8
+      ],
+      "sum": 0
+    },
+    {
+      "q": 7,
+      "runs": [
+        6,
+        2
+      ],
+      "sum": 0
+    },
+    {
+      "q": 7,
+      "runs": [
+        4,
+        4
+      ],
+      "sum": 0
+    },
+    {
+      "q": 7,
+      "runs": [
+        4,
+        2,
+        2
+      ],
+      "sum": 0
+    },
+    {
+      "q": 7,
+      "runs": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sum": 0
+    },
+    {
+      "q": 11,
+      "runs": [
+        8
+      ],
+      "sum": 154880
+    },
+    {
+      "q": 11,
+      "runs": [
+        6,
+        2
+      ],
+      "sum": -70400
+    },
+    {
+      "q": 11,
+      "runs": [
+        4,
+        4
+      ],
+      "sum": 0
+    },
+    {
+      "q": 11,
+      "runs": [
+        4,
+        2,
+        2
+      ],
+      "sum": 28160
+    },
+    {
+      "q": 11,
+      "runs": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "sum": 0
+    }
+  ],
+  "independent_Held_Karp_R11_coefficients": [
+    "1",
+    "0",
+    "1",
+    "0",
+    "1/3",
+    "0",
+    "5/63",
+    "0",
+    "2/135",
+    "0",
+    "34/2835"
+  ],
+  "R11_degree8": "2/135",
+  "H31_CRT_uniqueness": {
+    "modulus": 9903519940736477367306812281,
+    "N1_upper_bound_strict": 10000000000000000000000000,
+    "integer_check": "(16!)^30 < (10^25)^16 < M^16",
+    "N1_residue_reconstruction": 42745655163116955307561,
+    "scope": "uniqueness of incoming residues, not an independent rerun of the q31 DP"
+  }
+}

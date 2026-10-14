@@ -17,6 +17,15 @@ external: arXiv:2507.05905 (Han-Lee); Riordan succession theory; A000255
 
 # THM-589 — the metagraph H-variance closed form (= THM-219's W(n))
 
+> **2026-10-14 targeted recurrence correction.** The succession/odd-composition
+> identity is retained. The former inference that the unweighted `NUD`
+> two-term recurrence also governs `W` or `Var(H)` is withdrawn. At n=3 it
+> predicts `W(3)=2*W(2)+W(1)=5`, whereas `W(3)=8`; for the variance at n=4 it
+> predicts `3*(3/4)+2*0=9/4`, whereas the exact variance is 3. A separate
+> seven-step polynomial-coefficient recurrence is proved in
+> [the OEIS/run-kernel atlas](../../05-knowledge/results/oeis_transfer_atlas_20261014h.md).
+> This is a narrow repair, not a fresh audit of the asymptotic or LRC claims.
+
 ## Statement
 Over labeled tournaments on `n` vertices (each arc a fair coin = the Siegel/mass measure),
 with `H` = the number of (directed) Hamiltonian paths,
@@ -42,11 +51,13 @@ product `-> e*(1/e) = 1` and `CV^2 -> 0`. The three threads -- THM-219 (NUD-Pois
 (Poisson(1) concentration), and the owner's odd-composition closed form -- are one object, the metagraph
 second moment, and it is exactly THM-219's `W(n)`.
 
-## The recurrence is the vertex-addition (Hecke) operator
+## The unweighted recurrence does not transfer automatically
 `NUD` obeys `NUD(n) = (n-1)NUD(n-1) + (n-2)NUD(n-2)` (THM-219); this is the **vertex-addition recursion**
-on the metagraph (the Hecke-like `T: G_n -> G_{n+1}`, HYP-3553), now acting on the SECOND MOMENT. So the
-variance has a 2-term linear recurrence -- the Hecke operator on `Var(H)` -- a concrete instance of the
-"vertex-addition = Hecke" idea, computable with no enumeration.
+for the unweighted succession count. Adding the weight `2^{asc}` changes the
+insertion bookkeeping, so this recurrence is not a recurrence for the second
+moment or its variance. The rational odd-block kernel does independently give
+a fixed-width recurrence without tournament enumeration; the linked correction
+proves it rather than identifying it with a Hecke operator.
 
 ## The LRC transfer (and klein S4's confirmation)
 This is the EXACT, proved finite model of THM-579's gatekeeper `CV(N_R)^2`. klein-S4 verified that the LRC
@@ -61,6 +72,6 @@ concentration. The succession/`W(n)` structure says the obstruction is a CLASSIC
 
 ## What it buys
 A proved closed form for the metagraph second moment with the exact concentration rate `~2/n`, unifying
-THM-219 + HYP-3560 + the owner's form + the simplicial-Redei `W(n)`; a recurrence (= the Hecke operator on
-the variance); and a sharpened LRC program -- the set-dependence klein found is exactly what the `Gamma_0(N)`
+THM-219 + HYP-3560 + the owner's form + the simplicial-Redei `W(n)`; a separately
+derived run-kernel recurrence; and a proposed LRC program -- the set-dependence klein found is what the `Gamma_0(N)`
 congruence lift cures, with this `W(n)` second moment as the finite, classical template.
