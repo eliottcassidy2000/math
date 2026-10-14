@@ -1,6 +1,6 @@
 ---
 id: THM-1950
-title: "H ≥ disc REDUCED TO THE STRONGLY-CONNECTED BASE, via the skew-determinant SCC-composition law — the exact structural parallel of THM-1860 (c₃ ≤ H) for death-star's HYP-8636. For every tournament T, the Rédei Hamiltonian-path count H(T) is at least the poly-time skew-determinant disc(T)=|det(I+K)|/2^{n−1} (K=A−Aᵀ), with equality iff T is transitive. This is PROVED modulo the strongly-connected base H(C) ≥ max(1,s(C))·disc(C), where s(C)=𝟙ᵀ(I+K)⁻¹𝟙=‖(I+K)⁻¹𝟙‖² is the total inverse-response. The reduction rests on three PROVED facts: (i) the SCC-composition law disc(C₁⇒⋯⇒C_r)=∏disc(Cᵢ)·[∏(1+sᵢ)+∏(1−sᵢ)]/2^r (Schur complement; disc is SUPER-multiplicative, unlike H which is exactly multiplicative, and unlike char_A which factors — THM-1925); (ii) the velocity-addition law s(C₁⇒C₂)=(s₁+s₂)/(1+s₁s₂) (a Möbius/SL₂ action on the SCC composition); (iii) the elementary kernel inequality max(1,x)·max(1,y) ≥ max(1+xy,x+y)/2 for x,y≥0. Peeling the top strong component with the invariant P(T)=max(1,s(T))·disc(T) closes the induction: H(T)≥P(T)≥disc(T)."
+title: "H >= disc reduced to the strongly-connected base via exact skew-determinant and inverse-response composition"
 status: >
   (0) VERIFIED: H ≥ disc exhaustive n ≤ 6 (33864 tournaments, 0 violations; reconfirms
   death-star HYP-8636) and sampled n = 7,8; equality locus = transitive only.
@@ -12,7 +12,7 @@ status: >
   (2) THE RESIDUAL BASE (open, the whole remaining content): for strongly connected C,
     H(C) ≥ max(1,s(C))·disc(C). Verified exhaustively through n=7: n≤6 on labelled
     tournaments and n=7 on all 353 strong isomorphism classes (THM-4051), with 0 violations.
-    Tight only at C₃ (H=3, s=3, disc=1 ⟹ max(1,s)disc=3). The former sampled n=7
+    In the audited strong orders 3 through 7, tight only at C₃ (H=3, s=3, disc=1 ⟹ max(1,s)disc=3). The former sampled n=7
     minimum ratio 4.22 and monotone-growth inference are SUPERSEDED: the exact minimum is
     27/8 at the Paley tournament, so no monotonic margin claim is licensed. Note s(C)≥1 FAILS for strong C at
     n≥7 (min s = 0.667,0.556 at n=7,8), which is exactly why the base must carry the max(1,·) and
@@ -30,12 +30,21 @@ script: 04-computation/h_ge_disc_reduction_to_strong_klein_S400.py, disc_composi
 
 # THM-1950 — H ≥ disc, reduced to the strongly-connected base
 
+**2026-10-14 response-domain correction.** The exact Schur laws and the
+conditional reduction below are unchanged. The former universal
+super-multiplicativity, real `SL_2`/rapidity, and reducible `s<1` claims were
+false. Canonical order-seven representative `299` has `(H,disc,s)=(31,6,2/3)`;
+adjoining a sink lowers `disc` to `5`. See the exact witness and minimality
+certificate in
+[`tournament_response_correction_20261014.md`](../../05-knowledge/results/tournament_response_correction_20261014.md).
+
 death-star-S78 (HYP-8636) conjectured `H(T) ≥ disc(T)` with equality iff transitive, where
 `H(T)` = # directed Hamiltonian paths (Rédei, #P-hard, always odd) and
 `disc(T) = |det(I+K)|/2^{n−1} = ∏_j(1+μ_j²)/2^{n−1}` (`K = A−Aᵀ`, `±iμ_j` its eigenvalues) is the
 poly-time skew-determinant (THM-474). It is the WOWII "easy invariant bounds hard invariant" shape.
-Here it is reduced to a clean strongly-connected base, with the entire SCC-composition machinery
-proved — the exact structural parallel of THM-1860.
+Here the inequality is reduced to a clean strongly-connected base, with the entire SCC-composition machinery
+proved — the exact structural parallel of THM-1860. The conjectured all-order equality characterization
+is not established by the weak base inequality alone.
 
 ## The engine: the total inverse-response s
 
@@ -52,20 +61,27 @@ are `√(1+σ²)≥1`, so `‖(I+K)⁻¹‖≤1`. A singleton has `s=1`.
    > `disc(T₁ ⇒ T₂) = disc(T₁)·disc(T₂)·(1+s₁s₂)/2.`
    Iterating over the transitive SCC order `C₁ ⋗ ⋯ ⋗ C_r`:
    > `disc(T) = (∏ᵢ disc(Cᵢ))·[∏ᵢ(1+sᵢ) + ∏ᵢ(1−sᵢ)]/2^r.`
-   Since `sᵢ ≥ 0`, the correction `≥ 1`: **disc is super-multiplicative over strong components**
-   (contrast: `H` is exactly multiplicative — THM-1860; `char_A` factors — THM-1925; `disc` does
-   *not*). Verified to `1.8e-15` over all 10976 reducible tournaments `n ≤ 6`.
+   The two-block correction is at least one **iff `s₁s₂>=1`**; mere
+   nonnegativity is insufficient. In particular `disc` is not universally
+   super-multiplicative over strong components. If every component has
+   `sᵢ>=1`, the displayed many-component factor is at least one: expand its
+   numerator as twice the sum of the `2^(r-1)` even-cardinality products.
+   The formula itself was verified numerically to `1.8e-15` over the recorded
+   reducible tournaments through order six. The correction certificate is exact.
 
 2. **Velocity-addition law for s.** Solving the block system gives
    > `s(T₁ ⇒ T₂) = (s₁ + s₂)/(1 + s₁ s₂),`
-   the relativistic velocity-addition / Möbius law (`s = tanh` of an additive "rapidity"). So the
-   SCC composition acts on `s` by `SL₂` Möbius maps — the disc/`s` pair sits inside the a/b `SL₂`
-   frame (THM-1810/1885). (This is why reducible `s` can drop below 1 even when every component
-   has `s ≥ 1`.)
+   an exact rational composition law on nonnegative responses. For fixed
+   `s₁`, the representing matrix `[[1,s₁],[s₁,1]]` has determinant `1-s₁²`:
+   the map is constant at `s₁=1`, and for `s₁>1` cannot be rescaled into
+   real `SL_2`. Real additive rapidity `arctanh(s)` applies only in
+   `0<=s<1`. The globally defined coordinate
+   `q(T)=(1-s(T))/(1+s(T))` instead satisfies `q(T₁⇒T₂)=q(T₁)q(T₂)`.
+   It retains the sign distinguishing responses above and below one.
 
 3. **Kernel inequality (elementary, 3 cases; FORMALIZED in Lean).** For all `x, y ≥ 0`,
    > `max(1,x)·max(1,y) ≥ max(1+xy, x+y)/2.`
-   Cases `x,y≥1` (⟺ `xy≥1`), `x,y≤1` (⟺ `xy≤1`), `x≥1≥y` (⟺ `x≥y`) each reduce to a triviality.
+   The cases `x,y>=1`, `x,y<=1`, and `x>=1>=y` (or its symmetric case) each reduce to a trivial inequality.
    Machine-checked, `sorry`-free, kernel-pure `[propext, Classical.choice, Quot.sound]`:
    `HgeDiscKernel.kernel_ineq` and the peel form `HgeDiscKernel.peel_step`
    (`04-computation/lean/TournamentH7/TournamentH7/HgeDiscKernel.lean`, in the root manifest) —
@@ -77,9 +93,37 @@ Because a regular tournament has `K𝟙 = 0` (row sums `= out−in = 0`), `x=(I+
 `s=n` forces `x∥𝟙` (equality in Cauchy–Schwarz `s=𝟙ᵀx≤√n‖x‖=√n√s`) hence `K𝟙=0`, i.e. regular.
 Verified exhaustively n=3,5,7 (0 mismatches). So `s ∈ [0,n]` with the top value pinned to regularity;
 regular tournaments (Paley, rotational) uniquely maximize `s`, and there the base reads `H ≥ n·disc`
-(e.g. Paley-7: `H=189 ≥ 7·8=56`). Under `⇒` the velocity law drives `s` into `(−1,1)` (reducible
-`s<1`), so `s` measures how far the top strong component is from regular, in a Möbius-additive
-coordinate.
+(e.g. Paley-7: `H=189 ≥ 7·8=56`). Reducibility does not force `s<1`:
+a singleton factor gives `s=1`, while joining `C₃` to the response-`2/3`
+strong witness gives `s=11/9>1`. The exact sign rule is
+`s(T₁⇒T₂)-1=-(s₁-1)(s₂-1)/(1+s₁s₂)`.
+
+## A globally typed multiplicative pair
+
+The same Schur formulas, with no additional hypothesis, give
+
+```text
+D_+(T)=disc(T)(1+s(T))/2 > 0,
+D_-(T)=disc(T)(1-s(T))/2,
+D_±(T₁⇒T₂)=D_±(T₁)D_±(T₂).
+```
+
+This is a reformulation of the displayed composition law, not an additional
+conjecture or a novelty claim. It recovers `disc=D_++D_-` and
+`disc*s=D_+-D_-`; the ratio `q=D_-/D_+` gives the global signed coordinate.
+The second coordinate may be negative and must not be discarded.
+
+In particular `P(T)=max(1,s(T))*disc(T)=D_+(T)+|D_-(T)|`. Writing the
+coordinates of two factors as `(a,b)` and `(c,d)`, with `a,c>0`, gives
+
+```text
+P(T₁⇒T₂)=ac+|bd| <= (a+|b|)(c+|d|)=P(T₁)P(T₂).
+```
+
+Thus the invariant used by the reduction is submultiplicative even though
+`disc` itself is neither universally submultiplicative nor universally
+super-multiplicative. For example `C₃⇒C₃` has correction factor `5`, while
+the order-seven witness followed by a singleton has correction `5/6`.
 
 ## The reduction
 
@@ -103,7 +147,8 @@ exhaustively for all `2^{C(n,2)}` tournaments `n ≤ 6`.
 
 All that remains is **`H(C) ≥ max(1,s(C))·disc(C)` for strongly connected `C`.** When `s(C) ≥ 1`
 this is the genuinely stronger `H ≥ s·disc`; when `s(C) < 1` (which happens for strong `C` at
-`n ≥ 7`) it is just `H ≥ disc`. Tight only at `C₃`. The base is the sibling of THM-1860's open
+`n ≥ 7`) it is just `H ≥ disc`. Among the audited strong orders 3 through 7,
+equality occurs only at `C₃`. The base is the sibling of THM-1860's open
 strong base `c₃ ≤ H`: a strongly-connected tournament is vertex-pancyclic (Moon) with many
 Hamiltonian paths, so `H` is large where `disc` (bounded by `∏(1+μ_j²)/2^{n−1}` with the fixed
 energy `Σμ_j² = C(n,2)`) is small. A likely route: bound `s·disc` by a Hamiltonian-path injection,

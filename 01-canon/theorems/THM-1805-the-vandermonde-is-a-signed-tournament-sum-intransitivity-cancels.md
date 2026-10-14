@@ -1,6 +1,6 @@
 ---
 id: THM-1805
-title: "THE VANDERMONDE IS A SIGNED SUM OVER TOURNAMENTS, AND IN/TRANSITIVITY IS EXACTLY WHAT SURVIVES vs CANCELS — the binary-forms↔tournaments bridge, proved. Expanding the fundamental alternating SL_n covariant ∏_{i<j}(x_i−x_j) (the √-discriminant) by choosing x_i or −x_j from each factor = orienting each edge = a TOURNAMENT T, giving ∏(x_i−x_j) = Σ_T sgn(T)·x^{score(T)} with score(T)_k = #wins of k and sgn(T) = (−1)^{#upsets}. Verified exactly n=3,4,5: the coefficient of x^d is 0 unless d is a permutation of (0,…,n−1), where it is ±1. SURVIVAL = TRANSITIVITY: a tournament has a permutation score sequence iff it is transitive (classical: distinct scores ⟺ no 3-cycle), so the surviving terms are exactly the n! transitive tournaments and EVERY intransitive tournament cancels — paired by the 3-CYCLE-REVERSING involution, which preserves all scores (each cycle vertex keeps 1 win/1 loss) and flips the sign (3 arcs reverse). So 'tournaments = in/transitivity' meets classical invariant theory: transitivity is what the discriminant sees, a directed 3-cycle is the cancelling unit, and the score sequence is the torus weight = the charge grading of the Laplace moment engine."
+title: "THE VANDERMONDE IS A SIGNED SUM OVER TOURNAMENTS, AND IN/TRANSITIVITY IS EXACTLY WHAT SURVIVES vs CANCELS — the binary-forms↔tournaments bridge, proved. Expanding the alternating root polynomial ∏_{i<j}(x_i−x_j) (whose square is the monic discriminant) by choosing x_i or −x_j from each factor = orienting each edge = a TOURNAMENT T, giving ∏(x_i−x_j) = Σ_T sgn(T)·x^{score(T)} with score(T)_k = #wins of k and sgn(T) = (−1)^{#upsets}. Verified exactly n=3,4,5: the coefficient of x^d is 0 unless d is a permutation of (0,…,n−1), where it is ±1. SURVIVAL = TRANSITIVITY: a tournament has a permutation score sequence iff it is transitive (classical: distinct scores ⟺ no 3-cycle), so the surviving terms are exactly the n! transitive tournaments and EVERY intransitive tournament cancels — paired by the 3-CYCLE-REVERSING involution, which preserves all scores (each cycle vertex keeps 1 win/1 loss) and flips the sign (3 arcs reverse). So 'tournaments = in/transitivity' meets classical invariant theory: transitivity is what the discriminant sees, a directed 3-cycle is the cancelling unit, and the score sequence is the torus weight = the charge grading of the Laplace moment engine."
 status: >
   PROVED / VERIFIED-EXACT. The expansion ∏(x_i−x_j) = Σ_T sgn(T)x^{score(T)} is an exact
   polynomial identity, verified against the direct Vandermonde at n=3,4,5 (equal as coefficient
@@ -32,10 +32,19 @@ script: 04-computation/vandermonde_tournament_klein_S385.py (+ .out)
 
 # THM-1805 — the Vandermonde is a signed tournament sum, and intransitivity cancels
 
+**2026-10-14 representation-typing correction.** The exact tournament
+expansion and coefficient cancellation below are unchanged. Alternation is
+under permutation of roots, not a specified `SL_n` action; the discriminant
+is the squared Vandermonde with its leading-coefficient factor. The
+binary-form bracket and one-parameter charge specializations are stated
+explicitly below. They do not by themselves transfer a Gaussian nullcone theorem.
+
 ## The bridge
 
-The Vandermonde `∏_{1≤i<j≤n}(x_i − x_j)` is the fundamental **alternating** covariant of `SL_n`
-— the square root of the discriminant, the lowest-degree object of classical invariant theory.
+The Vandermonde `Δ(x)=∏_{1≤i<j≤n}(x_i−x_j)` is alternating under
+permutation of its root variables. For `f(t)=a∏_i(t-x_i)`,
+`Disc(f)=a^(2n-2)Δ(x)^2`; in the monic case this is exactly `Δ²`.
+No `SL_n` action on these variables is asserted.
 Expand it by choosing, from each factor `(x_i − x_j)`, either `x_i` (**`i` wins**) or `−x_j`
 (**`j` wins**). A choice over all `C(n,2)` factors is exactly an **orientation of every edge =
 a tournament** `T`:
@@ -58,7 +67,9 @@ that *distinct scores ⟺ no directed 3-cycle ⟺ transitive*, verified over all
 > **The surviving terms are exactly the `n!` transitive tournaments** (one per linear order,
 > `6, 24, 120` at `n=3,4,5`). Every intransitive tournament cancels.
 
-The discriminant "sees" only transitivity; intransitivity is invisible to it.
+The signed Vandermonde expansion retains only the transitive contributions
+after grouping by score. This statement concerns `Δ`, not a tournament
+expansion of the squared discriminant.
 
 ## The cancelling unit — a directed 3-cycle
 
@@ -78,27 +89,33 @@ exact Vandermonde coefficient `0`.)
 
 ## Why this is the representation theory the owner asked for
 
-- **Binary forms / invariant theory.** The Vandermonde is `∏(x_i−x_j)`, the alternating `SL_n`
-  covariant; in the `n=2` case it is literally the discriminant of a binary quadratic, and the
-  general one is the bracket `[1 2 … n]` of the first fundamental theorem. Tournaments are its
-  monomial expansion.
+- **Binary forms / invariant theory.** For ordered linear factors
+  `ell_i=a_i X+b_i Y`, the `SL_2`-invariant pair bracket is
+  `[ij]=a_i b_j-a_j b_i`. On the affine slice `ell_i=X-x_iY`, its product
+  `prod_(i<j)[ij]` is exactly `Δ(x)`. For the quadratic
+  `a(X-x_1Y)(X-x_2Y)`, the discriminant is `a²(x_1-x_2)²`, not `x_1-x_2`.
+  This factor-coordinate statement is distinct from an unspecified
+  `SL_n` covariant or the single determinant bracket on `n` vectors.
 - **Tournaments = in/transitivity itself.** The expansion assigns each monomial a *net sign over
   all tournaments with that score*, and this net sign is `±1` exactly on the transitive (acyclic)
   orientations and `0` on everything with a cycle. Transitivity is not an add-on — it is the
   content of the alternating projection.
-- **The Laplace moment engine.** The `score(T)` grading is the **torus weight** — the same
-  `U(1)` charge grading that `Λ_s(u) = Σ_q g_q(s)u^q` carries in the moment engine (THM-1790's
-  frame): `x_i ↔ ` weight `+`, the score `= ` net weight. "One-sided in charge" (the GMC(2)
-  nullcone) is the weight-extreme (transitive-like) locus, and the sign-twisted survival here is
-  the finite-dimensional shadow of the moment engine's charge projection `CT_u`. This is the
-  concrete `n`-vertex realization of boxeph's THM-1800 reading "one-sidedness = Hilbert–Mumford
-  instability for the hyperbolic torus."
+- **The Laplace moment engine.** A tournament term has multidegree
+  `score(T)` under independent scaling of the root variables. Choosing
+  integers `w_i` and restricting to the one-parameter substitution
+  `x_i -> t^(w_i)x_i` gives charge `sum_i w_i score(T)_i`.
+  This is a precise specialization from a multigrading to one charge.
+  Relating it to the Gaussian engine additionally requires a map preserving
+  its polynomial coefficients, Wick factorials, and target predicate;
+  the grading correspondence alone does not supply that map.
 
 ## Scope
 
-An exact identity plus a classical mechanism, proved/verified `n ≤ 5`, framed inside the repo's
-own objects. It settles boxeph's THM-1800 Vandermonde claim and pins the score↔weight↔charge
-dictionary linking tournaments, binary-form invariant theory, and the Laplace moment engine. No
-open problem is resolved; the bridge is now load-bearing rather than a stub.
+The tournament expansion and coefficient cancellation are exact in every
+order; the recorded coefficient-dictionary checks cover `n<=5`. The
+canonical cycle-reversing involution is cited rather than reconstructed.
+The binary-factor and charge specializations above identify their actual
+coordinate maps; no Gaussian nullcone or open-problem conclusion follows
+from these identities alone.
 
 *Files: `04-computation/vandermonde_tournament_klein_S385.py` (+ `.out`).*

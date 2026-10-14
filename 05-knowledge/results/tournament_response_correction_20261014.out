@@ -1,0 +1,29 @@
+THM-1950 RESPONSE DOMAIN CORRECTION: EXACT
+bit_order=lexicographic_i_lt_j;bit1=i_to_j;rep299_adjacency=
+0110101
+0000100
+0100000
+1110000
+0011000
+1111100
+0111110
+C=canonical_rep299:n=7;strong=True;H=31;det=384;disc=6;s=2/3;Dplus=5;Dminus=1
+inverse_ones=-1/6,1/2,1/3,1/6,1/3,-1/3,-1/6
+C_join_point:n=8;strong=False;H=31;det=640;disc=5;s=1;Dplus=5;Dminus=0
+C_join_C:n=14;strong=False;H=961;det=212992;disc=26;s=12/13;Dplus=25;Dminus=1
+triangle:n=3;strong=True;H=3;det=4;disc=1;s=3;Dplus=2;Dminus=-1
+triangle_join_triangle:n=6;strong=False;H=9;det=160;disc=5;s=3/5;Dplus=4;Dminus=1
+triangle_join_triangle_join_point:n=7;strong=False;H=9;det=256;disc=4;s=1;Dplus=4;Dminus=0
+triangle_join_C:n=10;strong=False;H=93;det=4608;disc=9;s=11/9;Dplus=10;Dminus=-1
+named_witnesses=PASS;Dplus_Dminus_q_and_P=PASS
+finite_minimality: n,labelled_count,strong_count,min_all_s,min_strong_s
+1,1,1,1,1
+2,2,0,1,None
+3,8,2,1,3
+4,64,24,1,3
+5,1024,544,1,2
+6,32768,22320,3/5,1
+minimum_two_arbitrary_blocks_failure_order=7
+minimum_SCC_product_failure_order=8
+scope=composition_domains_only;all_order_H_ge_disc_OPEN
+RESULT=PASS
