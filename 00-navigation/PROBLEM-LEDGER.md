@@ -784,13 +784,14 @@ all heights (THM-1289, published), δ ineffective.
   Owner theme: rational functions on the Riemann sphere and the constant function infinity. The resolvent of THM-4629 is `1/(1 - x - y)` on `P^1 x P^1` restricted to a winding curve on the torus
   `|x| = |y| = 1/2`, whose one polar point `(1/2, 1/2)` the curve approaches at the near-returns; the convergents `P/Q` of `log2 3` give rational approximants of degree `P` on the sphere, and the
   character-matched convergent has the exact unit-circle pole `w = zeta^(-1)` (`p(-1) = 0` in exactly the five predicted cases of fifteen), displaced by the defect and unfolded by the irrational law into
-  the lines at `(jQ, jP)` (Mercator: decays 0.9988, 0.9896, 0.9744, ...); the approximants' poles reproduce THM-4629's lines to four decimals and 0.5% at `Q = 53`; `|R| = 1/(pi |theta_f|)` at the
+  the lines at `(jQ, jP)` (Mercator: decays 0.9988, 0.9896, 0.9744, ...); the approximants' poles reproduce THM-4629's lines to about 1e-3 in frequency and 0.5% in decay at `Q = 53`; `|R| = 1/(pi |theta_f|)` at the
   convergents and `sup |R| = 2/((2-theta)|Re w_THM|) ~ (2-theta)^2/(2 pi^2 theta_f^2)` at the drifted line frequencies (3861 at the Mercator line, 8.8e6 at the 665-line), with the proved line bound
   `|R| <= theta^2/(4 theta_f^2)`: the constant infinity of the polar line, finite but unbounded on the line, tempered to polynomial growth by Rhin. Parity words are affine Moebius maps
   fixing infinity; near-returns are the nearly parabolic words and the decay is a function of the multiplier `3^Q/2^P`; their fixed points (the repo's rational cycle points) go to infinity. THM-4630's
-  covariance update is the Moebius map `r -> (r-1)/(3-r)` (attracting fixed point `1 - sqrt 2`, multiplier `(sqrt 2 - 1)^2`; two generations = the square-triangular Pell unit, Codex): the S26
-  square-triangular tangent closes there. Conway's constant is closed by Codex (`C_* = 0.1380149...`, PROVED from the Pascal encoding; the continuum eigen-equation solved by `u = phi_N/2`); the S27
-  inference 'at most 0.137' was invalid (MISTAKE-600) and the lagged map undershoots by 0.9%.
+  covariance update is the Moebius map `r -> (r-1)/(3-r)` (attracting fixed point `1 - sqrt 2`, multiplier `(sqrt 2 - 1)^2`; two generations = the projective action of the square-triangular Pell matrix, Codex first; covariance states are not integer Pell solutions): the S26
+  square-triangular tangent lands there. Conway's constant is closed by Codex (`C_* = 0.1380149...`, PROVED from the Pascal encoding; the continuum eigen-equation solved by `u = phi_N/2`); the S27
+  inference 'at most 0.137' was invalid (MISTAKE-600) and the lagged map's error changes sign (about +3% near k = 128, -0.9% at 400). Audited (MISTAKE-601: THM-4514
+  mis-cited for THM-4600, a 'systematic' error that was one point of a sign-changing comparison, an invented noise level, and a dozen precision notes).
 
 - **One-sided walks: Hofstadter's Q and the Conway recursion against the Collatz transfer law (opus, 2026-10-13-S27; [note](../05-knowledge/results/meta_fibonacci_one_sided_walks_20261013.md), HYP-9259).**
   Both `a(n) = a(a(n-1)) + a(n - a(n-1))` and `Q(n) = Q(n - Q(n-1)) + Q(n - Q(n-2))` are two-branch backward recursions with both steps near one octave, the one-sided case of THM-4629's law: an

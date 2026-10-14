@@ -59,7 +59,7 @@ related:
 
 ## Cheapest decisive tests
 
-- The actual integer maximum limit is CLOSED from the classical Pascal encoding: `C_*=0.138014902399...`. Use the exact relative-maximum DAG through k1024 to test the lagged continuum model and quantify its error; do not use model drift to reopen the integer-sequence limit. Done in part (HYP-9260): the pinned lagged map's `0.13715` at `k = 400` is `0.9%` below the certified `0.13840`, with its maximum at `x = 1.382` against `x_* = 1.391`; the corrected-selector map is still to be run.
+- The actual integer maximum limit is CLOSED from the classical Pascal encoding: `C_*=0.138014902399...`. Use the exact relative-maximum DAG through k1024 to test the lagged continuum model and quantify its error; do not use model drift to reopen the integer-sequence limit. Done in part (HYP-9260): the pinned lagged map's `0.13715` at `k = 400` is `0.9%` below the certified `0.13840` while it is about `3%` above near `k = 128` (a sign-changing comparison, no fixed offset; its maximum position scatters around `x_*`); the corrected-selector map is still to be run.
 - The THM-4630 model assumes the source is white except for `rho_s(1) = rho(1)/2`; its silver-ratio fixed point fits the measured lags. Next: prove the white-sampling hypothesis H1 from the actual increment statistics of Q.
 - Done: the node is not exactly `sqrt 2` (`1.4151 -> 1.4065` over `k = 22..29` at 128 bins); its mechanism and drift are open.
 - Q's existence: the fatal event is `d(n-1) >= 1/2`; record the running maximum of `d` to `2^34` and its generation-to-generation ratio (here `0.0345` at `k = 29`, decaying like `n^(-0.09)`).

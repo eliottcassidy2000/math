@@ -17,14 +17,14 @@ within 1.3 of the unit circle (in |w|^Q), their (f, decay), against the exact ro
 with the true theta).  Part 2: the unfolding: the approximant's single pole at w_0 stands for every multiple (jQ, jP);
 the exact law gives the lines f = jQ/m with defect j theta_f and the decays, against the measured census decays.
 Part 3: the Moebius dictionary: for each near-return (a, b) = (P - Q halvings? no: a = P halvings... the word has b = Q odd
-steps and a = P - Q halvings, total P steps), the multiplier lambda = 3^b/2^(a+b) = 3^Q/2^P, ln lambda = -m theta_f ln 2,
+steps and a = P - Q halvings, total P steps), the multiplier lambda = 3^b/2^(a+b) = 3^Q/2^P, ln lambda = m theta_f ln 2,
 and the decay formula exp(-4 pi^2 theta_f^2/(2-theta)^3) = exp(-4 pi^2 (ln lambda)^2/(m^2 (ln 2)^2 (2-theta)^3)) ... printed.
 Part 4: the constant function infinity: |R_theta(2 pi i Q/m)| ~ 1/(pi |theta_f|) along the convergents (unbounded on the
 line Re s = 0 though finite at every point), against the approximants' poles.
 Part 5: Codex's Conway constant: C_* = max phi_N(z)/(2(1 + Phi(z))) recomputed.
 """
 import numpy as np
-from mpmath import mp, mpf, mpc, exp, findroot, log, pi as mpi, sqrt, erf, quad
+from mpmath import mp, mpf, mpc, exp, findroot, log, pi as mpi, sqrt, erf, quad, nstr
 
 mp.dps = 30
 TH = float(log(3) / log(2)); L = log(3) / log(2) - 1
@@ -72,7 +72,7 @@ for Q, P in [(5, 8), (12, 19), (17, 27), (29, 46), (41, 65), (53, 84), (94, 149)
     lam = mpf(3) ** Q / mpf(2) ** P
     lnlam = float(log(lam))
     d = Q * TH - P
-    print(f"   (Q,P)=({Q:4d},{P:5d}): multiplier 3^Q/2^P = {float(lam):.6f}, ln multiplier = {lnlam:+.6f} = (Q theta - P) ln 2 = {d*np.log(2):+.6f}; parabolicity defect |ln lambda| = {abs(lnlam):.2e}; fixed point of the word x_w = c_w/(2^P - 3^Q) with 2^P - 3^Q = {float(mpf(2)**P - mpf(3)**Q):+.3e}")
+    print(f"   (Q,P)=({Q:4d},{P:5d}): multiplier 3^Q/2^P = {float(lam):.6f}, ln multiplier = {lnlam:+.6f} = (Q theta - P) ln 2 = {d*np.log(2):+.6f}; parabolicity defect |ln lambda| = {abs(lnlam):.2e}; fixed point of the word x_w = c_w/(2^P - 3^Q) with 2^P - 3^Q = {nstr(mpf(2)**P - mpf(3)**Q, 4)}")
 
 print("\n# Part 4: the exact transfer function on Re s = 0 at the convergents' frequencies: |R| = 1/|1 - x - y| ~ 1/(pi |theta_f|) (unbounded along the convergents, finite everywhere)")
 for Q, P in [(5, 8), (29, 46), (53, 84), (159, 252), (665, 1054)]:
@@ -118,11 +118,13 @@ print(f"   grid of {len(fs)} frequencies in (0, 400]: max |R| = {R_.max():.2f} a
 print(f"   min over the grid of (bound theta^2/(4 theta_f^2)) / |R| = {(b2 / R_).min():.3f} (at f = {fs[np.argmin(b2 / R_)]:.4f})")
 
 
-print("\n# Part 4d: |R| at the THM-4629 drifted frequency Q/2 + drift, and a local fine grid (spacing 1e-10) around it")
+print("\n# Part 4d: |R| at the THM-4629 drifted frequency Q/2 + drift, and a two-stage local search (window 0.01 at spacing 1e-7, then 2e-5 at 1e-10) around it")
 for Q, P in [(5, 8), (29, 46), (53, 84), (159, 252), (665, 1054)]:
     rw, drift = exact_root(-1, -1, Q / 2)
     f0 = Q / 2 + drift
-    loc = np.linspace(f0 - 2e-5, f0 + 2e-5, 400001)
+    loc1 = np.linspace(f0 - 0.01, f0 + 0.01, 200001)
+    lv1 = np.array([Rabs(f) for f in loc1]); f1 = loc1[int(np.argmax(lv1))]
+    loc = np.linspace(f1 - 2e-5, f1 + 2e-5, 400001)
     lv = np.array([Rabs(f) for f in loc]); i = int(np.argmax(lv))
     print(f"   (Q,P)=({Q},{P}): |R(Q/2 + drift)| = {Rabs(f0):12.2f}; local max {lv[i]:12.2f} at f - (Q/2 + drift) = {loc[i] - f0:+.2e}; 2/((2-theta)|Re w|) = {2/((2-TH)*abs(rw)):12.2f}; ratio local max / pole formula = {lv[i]/(2/((2-TH)*abs(rw))):.4f}")
 print("done")

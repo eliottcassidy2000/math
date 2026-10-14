@@ -170,17 +170,17 @@
    (measured decays from collatz_parity_census_m2_m3_20261013.out: 26.5: 0.9997, 79.5: 0.9892, 132.5: 0.9744 fit of the census, 185.5: weak)
 
 # Part 3: Moebius dictionary: the word with b = Q odd steps and a = P - Q halvings is the affine map z -> (3^b z + c)/2^P with multiplier 3^Q/2^P
-   (Q,P)=(   5,    8): multiplier 3^Q/2^P = 0.949219, ln multiplier = -0.052116 = (Q theta - P) ln 2 = -0.052116; parabolicity defect |ln lambda| = 5.21e-02; fixed point of the word x_w = c_w/(2^P - 3^Q) with 2^P - 3^Q = +1.300e+01
-   (Q,P)=(  12,   19): multiplier 3^Q/2^P = 1.013643, ln multiplier = +0.013551 = (Q theta - P) ln 2 = +0.013551; parabolicity defect |ln lambda| = 1.36e-02; fixed point of the word x_w = c_w/(2^P - 3^Q) with 2^P - 3^Q = -7.153e+03
-   (Q,P)=(  17,   27): multiplier 3^Q/2^P = 0.962169, ln multiplier = -0.038565 = (Q theta - P) ln 2 = -0.038565; parabolicity defect |ln lambda| = 3.86e-02; fixed point of the word x_w = c_w/(2^P - 3^Q) with 2^P - 3^Q = +5.078e+06
-   (Q,P)=(  29,   46): multiplier 3^Q/2^P = 0.975296, ln multiplier = -0.025014 = (Q theta - P) ln 2 = -0.025014; parabolicity defect |ln lambda| = 2.50e-02; fixed point of the word x_w = c_w/(2^P - 3^Q) with 2^P - 3^Q = +1.738e+12
-   (Q,P)=(  41,   65): multiplier 3^Q/2^P = 0.988603, ln multiplier = -0.011463 = (Q theta - P) ln 2 = -0.011463; parabolicity defect |ln lambda| = 1.15e-02; fixed point of the word x_w = c_w/(2^P - 3^Q) with 2^P - 3^Q = +4.205e+17
+   (Q,P)=(   5,    8): multiplier 3^Q/2^P = 0.949219, ln multiplier = -0.052116 = (Q theta - P) ln 2 = -0.052116; parabolicity defect |ln lambda| = 5.21e-02; fixed point of the word x_w = c_w/(2^P - 3^Q) with 2^P - 3^Q = 13.0
+   (Q,P)=(  12,   19): multiplier 3^Q/2^P = 1.013643, ln multiplier = +0.013551 = (Q theta - P) ln 2 = +0.013551; parabolicity defect |ln lambda| = 1.36e-02; fixed point of the word x_w = c_w/(2^P - 3^Q) with 2^P - 3^Q = -7153.0
+   (Q,P)=(  17,   27): multiplier 3^Q/2^P = 0.962169, ln multiplier = -0.038565 = (Q theta - P) ln 2 = -0.038565; parabolicity defect |ln lambda| = 3.86e-02; fixed point of the word x_w = c_w/(2^P - 3^Q) with 2^P - 3^Q = 5.078e+6
+   (Q,P)=(  29,   46): multiplier 3^Q/2^P = 0.975296, ln multiplier = -0.025014 = (Q theta - P) ln 2 = -0.025014; parabolicity defect |ln lambda| = 2.50e-02; fixed point of the word x_w = c_w/(2^P - 3^Q) with 2^P - 3^Q = 1.738e+12
+   (Q,P)=(  41,   65): multiplier 3^Q/2^P = 0.988603, ln multiplier = -0.011463 = (Q theta - P) ln 2 = -0.011463; parabolicity defect |ln lambda| = 1.15e-02; fixed point of the word x_w = c_w/(2^P - 3^Q) with 2^P - 3^Q = 4.205e+17
    (Q,P)=(  53,   84): multiplier 3^Q/2^P = 1.002090, ln multiplier = +0.002088 = (Q theta - P) ln 2 = +0.002088; parabolicity defect |ln lambda| = 2.09e-03; fixed point of the word x_w = c_w/(2^P - 3^Q) with 2^P - 3^Q = -4.043e+22
-   (Q,P)=(  94,  149): multiplier 3^Q/2^P = 0.990669, ln multiplier = -0.009375 = (Q theta - P) ln 2 = -0.009375; parabolicity defect |ln lambda| = 9.37e-03; fixed point of the word x_w = c_w/(2^P - 3^Q) with 2^P - 3^Q = +6.659e+42
-   (Q,P)=( 147,  233): multiplier 3^Q/2^P = 0.992740, ln multiplier = -0.007287 = (Q theta - P) ln 2 = -0.007287; parabolicity defect |ln lambda| = 7.29e-03; fixed point of the word x_w = c_w/(2^P - 3^Q) with 2^P - 3^Q = +1.002e+68
-   (Q,P)=( 306,  485): multiplier 3^Q/2^P = 0.998978, ln multiplier = -0.001022 = (Q theta - P) ln 2 = -0.001022; parabolicity defect |ln lambda| = 1.02e-03; fixed point of the word x_w = c_w/(2^P - 3^Q) with 2^P - 3^Q = +1.021e+143
+   (Q,P)=(  94,  149): multiplier 3^Q/2^P = 0.990669, ln multiplier = -0.009375 = (Q theta - P) ln 2 = -0.009375; parabolicity defect |ln lambda| = 9.37e-03; fixed point of the word x_w = c_w/(2^P - 3^Q) with 2^P - 3^Q = 6.659e+42
+   (Q,P)=( 147,  233): multiplier 3^Q/2^P = 0.992740, ln multiplier = -0.007287 = (Q theta - P) ln 2 = -0.007287; parabolicity defect |ln lambda| = 7.29e-03; fixed point of the word x_w = c_w/(2^P - 3^Q) with 2^P - 3^Q = 1.002e+68
+   (Q,P)=( 306,  485): multiplier 3^Q/2^P = 0.998978, ln multiplier = -0.001022 = (Q theta - P) ln 2 = -0.001022; parabolicity defect |ln lambda| = 1.02e-03; fixed point of the word x_w = c_w/(2^P - 3^Q) with 2^P - 3^Q = 1.021e+143
    (Q,P)=( 359,  569): multiplier 3^Q/2^P = 1.001066, ln multiplier = +0.001066 = (Q theta - P) ln 2 = +0.001066; parabolicity defect |ln lambda| = 1.07e-03; fixed point of the word x_w = c_w/(2^P - 3^Q) with 2^P - 3^Q = -2.061e+168
-   (Q,P)=( 665, 1054): multiplier 3^Q/2^P = 1.000044, ln multiplier = +0.000044 = (Q theta - P) ln 2 = +0.000044; parabolicity defect |ln lambda| = 4.37e-05; fixed point of the word x_w = c_w/(2^P - 3^Q) with 2^P - 3^Q = -inf
+   (Q,P)=( 665, 1054): multiplier 3^Q/2^P = 1.000044, ln multiplier = +0.000044 = (Q theta - P) ln 2 = +0.000044; parabolicity defect |ln lambda| = 4.37e-05; fixed point of the word x_w = c_w/(2^P - 3^Q) with 2^P - 3^Q = -8.427e+312
 
 # Part 4: the exact transfer function on Re s = 0 at the convergents' frequencies: |R| = 1/|1 - x - y| ~ 1/(pi |theta_f|) (unbounded along the convergents, finite everywhere)
    tau parity, f = Q/2 =    2.5: theta_f = -0.03759, |R(2 pi i f)| =       8.49, 1/(pi |theta_f|) =       8.47
@@ -207,9 +207,9 @@
    grid of 4000001 frequencies in (0, 400]: max |R| = 90191.56 at f = 332.5001; violations of |R| <= pi^2/(phi^2+psi^2): 0; of pi^2/(phi^2+psi^2) <= theta^2/(4 theta_f^2): 0
    min over the grid of (bound theta^2/(4 theta_f^2)) / |R| = 2.007 (at f = 306.0025)
 
-# Part 4d: |R| at the THM-4629 drifted frequency Q/2 + drift, and a local fine grid (spacing 1e-10) around it
-   (Q,P)=(5,8): |R(Q/2 + drift)| =        12.23; local max        12.23 at f - (Q/2 + drift) = +2.00e-05; 2/((2-theta)|Re w|) =        22.71; ratio local max / pole formula = 0.5383
-   (Q,P)=(29,46): |R(Q/2 + drift)| =        36.47; local max        36.48 at f - (Q/2 + drift) = +2.00e-05; 2/((2-theta)|Re w|) =        50.91; ratio local max / pole formula = 0.7165
+# Part 4d: |R| at the THM-4629 drifted frequency Q/2 + drift, and a two-stage local search (window 0.01 at spacing 1e-7, then 2e-5 at 1e-10) around it
+   (Q,P)=(5,8): |R(Q/2 + drift)| =        12.23; local max        12.30 at f - (Q/2 + drift) = +3.71e-03; 2/((2-theta)|Re w|) =        22.71; ratio local max / pole formula = 0.5415
+   (Q,P)=(29,46): |R(Q/2 + drift)| =        36.47; local max        36.53 at f - (Q/2 + drift) = +8.21e-04; 2/((2-theta)|Re w|) =        50.91; ratio local max / pole formula = 0.7175
    (Q,P)=(53,84): |R(Q/2 + drift)| =      3860.94; local max      3860.94 at f - (Q/2 + drift) = -2.96e-08; 2/((2-theta)|Re w|) =      3882.18; ratio local max / pole formula = 0.9945
    (Q,P)=(159,252): |R(Q/2 + drift)| =       441.45; local max       441.45 at f - (Q/2 + drift) = -5.65e-06; 2/((2-theta)|Re w|) =       461.70; ratio local max / pole formula = 0.9561
    (Q,P)=(665,1054): |R(Q/2 + drift)| =   8800478.53; local max   8800478.53 at f - (Q/2 + drift) = +0.00e+00; 2/((2-theta)|Re w|) =   8800499.89; ratio local max / pole formula = 1.0000
