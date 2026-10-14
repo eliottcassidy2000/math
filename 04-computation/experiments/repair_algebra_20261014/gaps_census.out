@@ -1,0 +1,3 @@
+E <= 22: 23036 primitive K (canonical reps); reps per primitive K: {np.int64(2): 20393, np.int64(3): 2611, np.int64(4): 32}
+  last-exponent gaps (2i) over pairs with distinct last: {2: 24732, 4: 874, 6: 138}
+  length differences over those pairs: {2: 18861, 4: 6184, 6: 689, 8: 10}

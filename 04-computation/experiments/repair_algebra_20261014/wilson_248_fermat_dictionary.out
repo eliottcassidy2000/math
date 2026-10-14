@@ -1,0 +1,21 @@
+R1 (STRUCTURAL, Gersonides 1343) powers of 2 adjacent to a power of 3:
+   |2^a - 3^b| = 1 for a < 200, b < 130 exactly at [(1, 0), (1, 1), (2, 1), (3, 2)]: the powers of 2 next to a power of 3 are 2, 4, 8
+R2 (STRUCTURAL, THM-4640) the three adjacencies are the three generators of the repair algebra at -1:
+   f_1(-1) = -1; 3*2^(b+1) + 2^b = 3*2^b + 2^(b+2); 9*2^(b+3) + 2^b = 9*2^b + 2^(b+6); K((a)) = 2^a - 3 = 1/c_a for a < 40; anchors for 2^a in {2,4,8}: -1, 1, 1/5
+R3 (STRUCTURAL) Wilson's -1 is the product of a finite abelian group = product of its involutions:
+   prod F_p^* = -1 and prod <2> = 2^(d(d-1)/2) = -1 iff d = ord_p(2) is even, all odd primes < 2000
+R4 (STRUCTURAL, Lerch 1905) the Wilson quotient is the sum of the Fermat quotients; q is a logarithm:
+   W_p = sum_a q_p(a) (mod p) and (q_p(2), q_p(4), q_p(8)) = (1, 2, 3) q_p(2) (mod p), all odd primes < 2000
+R5 (STRUCTURAL, THM-307) tournaments: T(p) = f_p - (2/p) w_p - A_p (mod p), with the Fermat multiplier (2/p):
+   T(n) reproduced from Burnside for n <= 12 (A000568); THM-307's decomposition and f_p = (2/p) q_p(2)/2 hold for p < 48
+R6 (COINCIDENCE) the anchor row 2^a - 3 and the Wilson primes:
+   primes 2^a - 3 (a <= 24): [(3, 5), (4, 13), (5, 29), (6, 61), (9, 509), (10, 1021), (12, 4093), (14, 16381), (20, 1048573), (22, 4194301), (24, 16777213)]; Wilson among them: 5 = 2^3 - 3, 13 = 2^4 - 3 only. CITED (Costa-Gerbicz-Harvey 2014): no Wilson prime other than 5, 13, 563 below 2*10^13, so none of the form 2^a - 3 with 25 <= a <= 44 either; 563 is not of this form
+R7 (COINCIDENCE) 2 is a primitive root modulo 5, 13 and 563:
+   ord_p(2) = p - 1 at 5, 13, 563; every 2^a - 3 (a >= 3) is 5 mod 8, so 2 is a non-residue there (4 | ord_p(2)); empirical frequency of '2 primitive' among primes < 10^6 = 0.3738 (Artin's constant 0.3740); P(all three) ~ 0.052
+R8 (COINCIDENCE) p - 2 is absolutely Fermat (a^n = a mod n for all a) at the Wilson primes:
+   3, 11 prime and 561 = 3*11*17 Carmichael (Korselt); among primes 5 <= p < 10^6, p - 2 is prime or Carmichael for 8172/78496 = 0.1041 (twin primes dominate); 563 - 2 = 561 is the least Carmichael number
+R9 (STRUCTURAL negative) increasing {2,3}-representations (numerators at the -1 anchor):
+   5 and 13 are numerators only as anchors ((a) and its root twin (1, a)); 563, 561, 1093, 3511 have no increasing representation with exponents < 64 (pruned search, P >= -3^(e-1) is necessary)
+R10 (COINCIDENCE) the Carmichael successor of 561 (results note carmichael_successor_blocks_20261014b):
+   684106401 = 3*11*17*401*3041 is Carmichael, lambda = 15200, lambda + 1 = 27*563
+TOTAL exact checks: 1827  [10s]

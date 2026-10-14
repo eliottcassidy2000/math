@@ -1,0 +1,74 @@
+A: 32767 reduced words of total <= 16; 15073 distinct values; 300 values carry a primitive collision (14 of them involve a one-letter word, i.e. the root collision); all identities exact  [0.4s]
+B: census of primitive collisions at -1 (max exponent <= 24; 16777216 representations): 87836 primitive K  [2.1s]
+   E   new   cumulative   new/prev
+    1       1          1   -
+    2       0          1   0.0000
+    3       0          1   0.0000
+    4       0          1   0.0000
+    5       0          1   0.0000
+    6       0          1   0.0000
+    7       1          2   1.0000
+    8       2          4   2.0000
+    9       3          7   1.5000
+   10       6         13   2.0000
+   11      10         23   1.6667
+   12      17         40   1.7000
+   13      33         73   1.9412
+   14      59        132   1.7879
+   15     112        244   1.8983
+   16     218        462   1.9464
+   17     414        876   1.8991
+   18     790       1666   1.9082
+   19    1522       3188   1.9266
+   20    2941       6129   1.9323
+   21    5717      11846   1.9439
+   22   11191      23037   1.9575
+   23   21885      44922   1.9556
+   24   42914      87836   1.9609
+   smallest |K| primitive collisions (canonical representations; head words; ladder exponent i):
+     K =     -1: ()   heads [()]   last exponents [0]
+     K =    125: (7,)  ~  (3, 4, 5)   heads [(8,), (4, 1, 1)]   last exponents [5, 7]
+     K =    259: (2, 8)  ~  (2, 3, 5, 6)   heads [(3, 6), (3, 1, 2, 1)]   last exponents [6, 8]
+     K =    439: (6, 8)  ~  (3, 4, 5, 6)   heads [(7, 2), (4, 1, 1, 1)]   last exponents [6, 8]
+     K =    599: (5, 9)  ~  (3, 4, 6, 7)   heads [(6, 4), (4, 1, 2, 1)]   last exponents [7, 9]
+     K =    905: (2, 7, 9)  ~  (2, 3, 5, 6, 7)   heads [(3, 5, 2), (3, 1, 2, 1, 1)]   last exponents [7, 9]
+     K =   1063: (4, 10)  ~  (3, 5, 7, 8)   heads [(5, 6), (4, 2, 2, 1)]   last exponents [8, 10]
+     K =   1081: (2, 4, 10)  ~  (2, 3, 4, 7, 8)   heads [(3, 2, 6), (3, 1, 1, 3, 1)]   last exponents [8, 10]
+     K =   1225: (2, 6, 10)  ~  (2, 3, 5, 7, 8)   heads [(3, 4, 4), (3, 1, 2, 2, 1)]   last exponents [8, 10]
+     K =   1445: (6, 7, 9)  ~  (3, 4, 5, 6, 7)   heads [(7, 1, 2), (4, 1, 1, 1, 1)]   last exponents [7, 9]
+     K =   2053: (5, 8, 10)  ~  (3, 4, 6, 7, 8)   heads [(6, 3, 2), (4, 1, 2, 1, 1)]   last exponents [8, 10]
+     K =   2081: (2, 3, 11)  ~  (2, 4, 5, 8, 9)   heads [(3, 1, 8), (3, 2, 1, 3, 1)]   last exponents [9, 11]
+     K =   2153: (2, 5, 11)  ~  (2, 3, 6, 8, 9)   heads [(3, 3, 6), (3, 1, 3, 2, 1)]   last exponents [9, 11]
+     K =   2315: (2, 4, 5, 11)  ~  (2, 3, 4, 5, 6, 9)   heads [(3, 2, 1, 6), (3, 1, 1, 1, 1, 3)]   last exponents [9, 11]
+     K =   2693: (5, 7, 11)  ~  (3, 4, 6, 8, 9)   heads [(6, 2, 4), (4, 1, 2, 2, 1)]   last exponents [9, 11]
+     K =   2971: (2, 7, 8, 10)  ~  (2, 3, 5, 6, 7, 8)   heads [(3, 5, 1, 2), (3, 1, 2, 1, 1, 1)]   last exponents [8, 10]
+     K =   3701: (4, 9, 11)  ~  (3, 5, 7, 8, 9)   heads [(5, 5, 2), (4, 2, 2, 1, 1)]   last exponents [9, 11]
+     K =   3755: (2, 4, 9, 11)  ~  (2, 3, 4, 7, 8, 9)   heads [(3, 2, 5, 2), (3, 1, 1, 3, 1, 1)]   last exponents [9, 11]
+     K =   4187: (2, 6, 9, 11)  ~  (2, 3, 5, 7, 8, 9)   heads [(3, 4, 3, 2), (3, 1, 2, 2, 1, 1)]   last exponents [9, 11]
+     K =   4387: (2, 3, 6, 12)  ~  (2, 4, 5, 6, 7, 10)   heads [(3, 1, 3, 6), (3, 2, 1, 1, 1, 3)]   last exponents [10, 12]
+     K =   4405: (4, 6, 12)  ~  (3, 5, 6, 9, 10)   heads [(5, 2, 6), (4, 2, 1, 3, 1)]   last exponents [10, 12]
+     K =   4459: (2, 4, 6, 12)  ~  (2, 3, 4, 6, 9, 10)   heads [(3, 2, 2, 6), (3, 1, 1, 2, 3, 1)]   last exponents [10, 12]
+     K =   4549: (5, 6, 12)  ~  (3, 4, 7, 9, 10)   heads [(6, 1, 6), (4, 1, 3, 2, 1)]   last exponents [10, 12]
+     K =   4591: (6, 7, 8, 10)  ~  (3, 4, 5, 6, 7, 8)   heads [(7, 1, 1, 2), (4, 1, 1, 1, 1, 1)]   last exponents [8, 10]
+     K =   4981: (4, 8, 12)  ~  (3, 5, 7, 9, 10)   heads [(5, 4, 4), (4, 2, 2, 2, 1)]   last exponents [10, 12]
+     K =   5035: (2, 4, 8, 12)  ~  (2, 3, 4, 7, 9, 10)   heads [(3, 2, 4, 4), (3, 1, 1, 3, 2, 1)]   last exponents [10, 12]
+     K =   5467: (2, 6, 8, 12)  ~  (2, 3, 5, 7, 9, 10)   heads [(3, 4, 2, 4), (3, 1, 2, 2, 2, 1)]   last exponents [10, 12]
+     K =   6671: (5, 8, 9, 11)  ~  (3, 4, 6, 7, 8, 9)   heads [(6, 3, 1, 2), (4, 1, 2, 1, 1, 1)]   last exponents [9, 11]
+     K =   7267: (2, 3, 10, 12)  ~  (2, 4, 5, 8, 9, 10)   heads [(3, 1, 7, 2), (3, 2, 1, 3, 1, 1)]   last exponents [10, 12]
+     K =   7483: (2, 5, 10, 12)  ~  (2, 3, 6, 8, 9, 10)   heads [(3, 3, 5, 2), (3, 1, 3, 2, 1, 1)]   last exponents [10, 12]
+C: 3^D (2^x - 1) = 2^y - 1 with 1 <= D <= 60, 1 <= x <= 400: solutions [(1, 1, 2), (2, 3, 6)] (unit carry 3*1 = 4 - 1 and Catalan carry 9*7 = 64 - 1)  [0.0s]
+D: 533 primitive pairs (distinct last exponents) up to exponent 14; padded differing positions histogram {0: 1, 3: 4, 4: 20, 5: 72, 6: 180, 7: 156, 8: 68, 9: 24, 10: 8}  [0.0s]
+   (8, 1) ~ (4, 1, 1, 3): D = 2; verified on 4 sources N (merge with (N+1)/2^2 - 1 at step 4)
+   (3, 6, 1) ~ (3, 1, 2, 1, 3): D = 2; verified on 4 sources N (merge with (N+1)/2^2 - 1 at step 5)
+   (7, 2, 1) ~ (4, 1, 1, 1, 3): D = 2; verified on 4 sources N (merge with (N+1)/2^2 - 1 at step 5)
+   (6, 4, 1) ~ (4, 1, 2, 1, 3): D = 2; verified on 4 sources N (merge with (N+1)/2^2 - 1 at step 5)
+   (3, 5, 2, 1) ~ (3, 1, 2, 1, 1, 3): D = 2; verified on 4 sources N (merge with (N+1)/2^2 - 1 at step 6)
+   (5, 6, 1) ~ (4, 2, 2, 1, 3): D = 2; verified on 4 sources N (merge with (N+1)/2^2 - 1 at step 5)
+   (3, 2, 6, 1) ~ (3, 1, 1, 3, 1, 3): D = 2; verified on 4 sources N (merge with (N+1)/2^2 - 1 at step 6)
+   (3, 4, 4, 1) ~ (3, 1, 2, 2, 1, 3): D = 2; verified on 4 sources N (merge with (N+1)/2^2 - 1 at step 6)
+   (7, 1, 2, 1) ~ (4, 1, 1, 1, 1, 3): D = 2; verified on 4 sources N (merge with (N+1)/2^2 - 1 at step 6)
+   (6, 3, 2, 1) ~ (4, 1, 2, 1, 1, 3): D = 2; verified on 4 sources N (merge with (N+1)/2^2 - 1 at step 6)
+   (3, 1, 8, 1) ~ (3, 2, 1, 3, 1, 3): D = 2; verified on 4 sources N (merge with (N+1)/2^2 - 1 at step 6)
+   (3, 3, 6, 1) ~ (3, 1, 3, 2, 1, 3): D = 2; verified on 4 sources N (merge with (N+1)/2^2 - 1 at step 6)
+E: 12 switch families verified on actual integers  [0.3s]
+TOTAL exact checks: 82115

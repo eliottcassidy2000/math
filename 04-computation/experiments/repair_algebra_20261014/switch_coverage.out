@@ -1,0 +1,8 @@
+max exponent <=  8:      6 primitive pairs (switch distances [1, 2]); Haar coverage of odd sources by downward switches = 0.011719  [0s]
+max exponent <= 10:     24 primitive pairs (switch distances [1, 2]); Haar coverage of odd sources by downward switches = 0.020508  [0s]
+max exponent <= 12:     78 primitive pairs (switch distances [1, 2]); Haar coverage of odd sources by downward switches = 0.027283  [0s]
+max exponent <= 14:    266 primitive pairs (switch distances [1, 2, 3, 4]); Haar coverage of odd sources by downward switches = 0.032764  [0s]
+max exponent <= 16:    948 primitive pairs (switch distances [1, 2, 3, 4]); Haar coverage of odd sources by downward switches = 0.037497  [0s]
+max exponent <= 18:   3498 primitive pairs (switch distances [1, 2, 3, 4, 5, 6]); Haar coverage of odd sources by downward switches = 0.041663  [2s]
+max exponent <= 20:  13258 primitive pairs (switch distances [1, 2, 3, 4, 5, 6, 7, 8]); Haar coverage of odd sources by downward switches = 0.045416  [7s]
+max exponent <= 22:  51488 primitive pairs (switch distances [1, 2, 3, 4, 5, 6, 7, 8]); Haar coverage of odd sources by downward switches = 0.048872  [34s]
