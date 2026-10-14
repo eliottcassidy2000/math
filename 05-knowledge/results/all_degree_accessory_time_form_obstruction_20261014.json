@@ -1,0 +1,156 @@
+{
+  "broughton_pullback_and_time_identities_verified": true,
+  "conclusion": "All polynomial clutches in the stated degree(16,8), simple-A boundary architecture have no polynomial nonzero-constant-Jacobian mate.",
+  "critical_point_hypothesis_HJ": "Still open; not used",
+  "escaping_infinity_sectors": [
+    {
+      "e": "1",
+      "gaps": [
+        "3",
+        "3"
+      ],
+      "n": "9",
+      "omega_order_on_cover": "16",
+      "sector": "nine_nonresonant"
+    },
+    {
+      "e": "0",
+      "gaps": [
+        "4",
+        "2"
+      ],
+      "n": "9",
+      "omega_order_on_cover": "15",
+      "sector": "nine_resonant"
+    },
+    {
+      "e": "k + 2",
+      "gaps": [
+        "3*k + 6",
+        "3*k + 6"
+      ],
+      "n": "k + 10",
+      "omega_order_on_cover": "3*k + 19",
+      "sector": "degree_at_least_ten"
+    }
+  ],
+  "generic_exclusions": [
+    "critical values",
+    "c=alpha at every V root",
+    "c=alpha-Aprime(alpha)*B(alpha)/Vprime(alpha) at simple V roots",
+    "c=limit(x-A*B/V) on the degree-nine resonance wall"
+  ],
+  "low_degree_sectors": [
+    {
+      "degree": 0,
+      "gaps": [
+        33,
+        66,
+        3,
+        4
+      ],
+      "omega_order_on_cover": 30
+    },
+    {
+      "degree": 1,
+      "gaps": [
+        29,
+        58,
+        3,
+        4
+      ],
+      "omega_order_on_cover": 30
+    },
+    {
+      "degree": 2,
+      "gaps": [
+        25,
+        50,
+        3,
+        4
+      ],
+      "omega_order_on_cover": 30
+    },
+    {
+      "degree": 3,
+      "gaps": [
+        21,
+        42,
+        3,
+        4
+      ],
+      "omega_order_on_cover": 30
+    },
+    {
+      "degree": 4,
+      "gaps": [
+        17,
+        34,
+        3,
+        4
+      ],
+      "omega_order_on_cover": 30
+    },
+    {
+      "degree": 5,
+      "gaps": [
+        13,
+        26,
+        3,
+        4
+      ],
+      "omega_order_on_cover": 30
+    },
+    {
+      "degree": 6,
+      "gaps": [
+        9,
+        18,
+        3,
+        4
+      ],
+      "omega_order_on_cover": 30
+    },
+    {
+      "degree": 7,
+      "gaps": [
+        5,
+        10,
+        3,
+        4
+      ],
+      "omega_order_on_cover": 30
+    },
+    {
+      "degree": 8,
+      "gaps": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "omega_order_on_cover": 30
+    }
+  ],
+  "multiple_finite_boundary": {
+    "gap": "k+4",
+    "m": "3+k",
+    "omega_order_on_cover": "k+3"
+  },
+  "scope": "Algebraic identities plus symbolic valuation inequalities; branch completeness proved in accompanying note.",
+  "simple_finite_boundary": "generic E0 nonzero gives two simple nonzero h roots and regular time form",
+  "simple_initial_models": {
+    "escaping_infinity": "Z**2*b**2 + eps",
+    "low_degree_infinity": "Z**4*v**2 + 1",
+    "multiple_finite_escape": "Z**2*b**2 - a*b/v",
+    "simple_finite_escape": "Z**2*b**2 + eps",
+    "small_high_degree_infinity": "Z**2*b**2 + 1"
+  },
+  "small_branch_all_n_ge_9": {
+    "k": "nonnegative integer",
+    "n": "9+k",
+    "omega_order": "2*k+16"
+  },
+  "status": "PASS",
+  "universal_shift_and_derivative_verified": true
+}
