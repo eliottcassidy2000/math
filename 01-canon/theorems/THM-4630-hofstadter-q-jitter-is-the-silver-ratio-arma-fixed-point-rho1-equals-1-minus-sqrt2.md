@@ -22,6 +22,7 @@ scripts:
   - 04-computation/experiments/meta_fibonacci_resonator_20261013.py (+ .out: the identity to 1e-16; the autocorrelation at lags 1..12 over five octaves; the rms per generation)
 related:
   - HYP-9259 (one-sided walks; the linearisation and the resonator), THM-4629 (the two-sided Collatz case)
+  - HYP-9260 (the Moebius form of the covariance update; the Riemann-sphere reading), 05-knowledge/results/golden_nested_trees_20261013c.md section 6 (Codex: the Pell mechanism)
   - 05-knowledge/results/meta_fibonacci_one_sided_walks_20261013.md
 ---
 
@@ -56,6 +57,7 @@ related:
 - Statement 2 is a theorem about the model defined by H1-H3; its content for the sequence is that those three hypotheses, each tested directly in statement 3, determine the second-order statistics of the chaos of `Q` to the precision of the data. The hypotheses are not proved; H1 is the deep one (why the backward indices behave as independent samples), and the measured sample correlations `0.0001-0.0017` are its evidence.
 - The exponent `0.8858` assumes the sampled variance equals the previous generation's variance at the same relative position and the envelope shape is stationary (HYP-9259: it is, from `2^14`); the sampled variance is measured `0.7%` below the generation variance, which accounts for the measured generation exponent `0.882-0.884`.
 - `O(1/n)` terms (the `3/(4n)` source and the weight corrections) are dropped in statement 2; at `2^20` they are below `1e-6`.
+- *Moebius form (PROVED; added in S29, HYP-9260).* Read as a map from the previous generation's lag-1 correlation `r` (through `c = r/2`) to the new one, the equations of statement 2 give `rho_new = (2c - 1)/(3 - 2c) = (r - 1)/(3 - r)`: the Moebius map with matrix `[[1, -1], [-1, 3]]`, fixed points `1 -+ sqrt 2`, and `F'(1 - sqrt 2) = 3 - 2 sqrt 2 = (sqrt 2 - 1)^2`; the fixed point of statement 2 is its attracting fixed point, reached geometrically at that rate from any admissible start. Codex (`golden_nested_trees_20261013c.md`, section 6) derived the same map with the variance update `V_new/V = (3 - r)/4`, the closed form `V_k/V_0 = A((2 + sqrt 2)/4)^k + B((2 - sqrt 2)/4)^k`, and the two-generation matrix `[[3, 4], [2, 3]]`, multiplication by the Pell unit `3 + 2 sqrt 2`: the covariance recursion is conjugate, two generations at a time, to the recursion of the square-triangular numbers. Measured `rho_k` per generation is within sampling noise of `1 - sqrt 2` from `k = 8` (`hofstadter_q_moebius_iteration_20261013.out`).
 - Silver ratio: `rho(1) = -1/(1 + sqrt 2)`, the negative inverse of the silver ratio; `1 + 1/sqrt 2` and `4 - 2 sqrt 2` are its companions. No numerology is claimed beyond the algebra: the `sqrt 2` is the modulus `1/sqrt 2` of the resonator poles entering a quadratic fixed-point equation.
 
 ## Reading

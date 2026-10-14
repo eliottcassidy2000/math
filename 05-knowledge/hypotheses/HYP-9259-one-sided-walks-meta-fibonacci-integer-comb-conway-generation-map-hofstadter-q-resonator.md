@@ -18,7 +18,8 @@ status: >
   Pinn, Order and chaos in Hofstadter's Q(n) sequence, Complexity 4 (1999) (generations of Q); OEIS A004001, A005185.
   OPEN: the asymptotics and uniform discrete-model error of the lagged continuum approximation; the actual
   Conway limit and shape are closed by the classical Pascal-word theorem (conway_golden_memory_20261013d.md).
-  The pinned model decreasing through 0.137 at k = 400 supplies no limit bound; whether Q(n) is
+  The pinned model decreasing through 0.137 at k = 400 supplies no limit bound (its 0.13715 sits 0.9% below the
+  certified 0.13840: MISTAKE-600, HYP-9260); whether Q(n) is
   defined for all n (Hofstadter's open question; the measured envelope n^(-0.12) and the halving of smooth components
   suggest it never approaches the fatal deviation 1/2); the mechanism of the envelope node near x = 1.41.
 session: opus-2026-10-13-S27
@@ -58,7 +59,7 @@ related:
 
 ## Cheapest decisive tests
 
-- The actual integer maximum limit is CLOSED from the classical Pascal encoding: `C_*=0.138014902399...`. Use the exact relative-maximum DAG through k1024 to test the lagged continuum model and quantify its error; do not use model drift to reopen the integer-sequence limit.
+- The actual integer maximum limit is CLOSED from the classical Pascal encoding: `C_*=0.138014902399...`. Use the exact relative-maximum DAG through k1024 to test the lagged continuum model and quantify its error; do not use model drift to reopen the integer-sequence limit. Done in part (HYP-9260): the pinned lagged map's `0.13715` at `k = 400` is `0.9%` below the certified `0.13840`, with its maximum at `x = 1.382` against `x_* = 1.391`; the corrected-selector map is still to be run.
 - The THM-4630 model assumes the source is white except for `rho_s(1) = rho(1)/2`; its silver-ratio fixed point fits the measured lags. Next: prove the white-sampling hypothesis H1 from the actual increment statistics of Q.
 - Done: the node is not exactly `sqrt 2` (`1.4151 -> 1.4065` over `k = 22..29` at 128 bins); its mechanism and drift are open.
 - Q's existence: the fatal event is `d(n-1) >= 1/2`; record the running maximum of `d` to `2^34` and its generation-to-generation ratio (here `0.0345` at `k = 29`, decaying like `n^(-0.09)`).

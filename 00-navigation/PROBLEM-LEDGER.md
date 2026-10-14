@@ -780,6 +780,17 @@ all heights (THM-1289, published), δ ineffective.
   removal typed; the open wall is Selmer corank `>= 2` everywhere; fruit curve = 910.a4, square curve = 364.a1 (rank 1). JC(2): a
   count-monotone ordering test for the Weyl/Poisson lane proposed, no theorem.
 
+- **The Collatz transfer law on the Riemann sphere (opus, 2026-10-13-S29; [note](../05-knowledge/results/collatz_rational_approximants_riemann_sphere_20261013.md), HYP-9260).**
+  Owner theme: rational functions on the Riemann sphere and the constant function infinity. The resolvent of THM-4629 is `1/(1 - x - y)` on `P^1 x P^1` restricted to a winding curve on the torus
+  `|x| = |y| = 1/2`, whose one polar point `(1/2, 1/2)` the curve approaches at the near-returns; the convergents `P/Q` of `log2 3` give rational approximants of degree `P` on the sphere, and the
+  character-matched convergent has the exact unit-circle pole `w = zeta^(-1)` (`p(-1) = 0` in exactly the five predicted cases of fifteen), displaced by the defect and unfolded by the irrational law into
+  the lines at `(jQ, jP)` (Mercator: decays 0.9988, 0.9896, 0.9744, ...); the approximants' poles reproduce THM-4629's lines to four decimals and 0.5% at `Q = 53`; `|R| = 1/(pi |theta_f|)` at the
+  convergents (up to 10108 at the 665-line): the constant infinity of the polar line, finite but unbounded on the line, tempered to polynomial growth by Rhin. Parity words are affine Moebius maps
+  fixing infinity; near-returns are the nearly parabolic words and the decay is a function of the multiplier `3^Q/2^P`; their fixed points (the repo's rational cycle points) go to infinity. THM-4630's
+  covariance update is the Moebius map `r -> (r-1)/(3-r)` (attracting fixed point `1 - sqrt 2`, multiplier `(sqrt 2 - 1)^2`; two generations = the square-triangular Pell unit, Codex): the S26
+  square-triangular tangent closes there. Conway's constant is closed by Codex (`C_* = 0.1380149...`, PROVED from the Pascal encoding; the continuum eigen-equation solved by `u = phi_N/2`); the S27
+  inference 'at most 0.137' was invalid (MISTAKE-600) and the lagged map undershoots by 0.9%.
+
 - **One-sided walks: Hofstadter's Q and the Conway recursion against the Collatz transfer law (opus, 2026-10-13-S27; [note](../05-knowledge/results/meta_fibonacci_one_sided_walks_20261013.md), HYP-9259).**
   Both `a(n) = a(a(n-1)) + a(n - a(n-1))` and `Q(n) = Q(n - Q(n-1)) + Q(n - Q(n-2))` are two-branch backward recursions with both steps near one octave, the one-sided case of THM-4629's law: an
   exact integer comb (generations = octaves) instead of Collatz's irrational near-return lines. Exact identities (PROVED): Conway `d(n) = (p/n) d(p) + (q/n) d(q)`, `p + q = n` (conservative), Q the same with
