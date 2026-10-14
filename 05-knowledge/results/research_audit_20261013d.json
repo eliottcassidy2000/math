@@ -1,0 +1,34 @@
+{
+  "status": "Self-audit; proofs scoped in notes, independent finite arithmetic path, normal/-O outputs identical. No universal Collatz energy claim.",
+  "base_commit": "cef0e4e3a96f84821663cbf04016f3ebcac14028",
+  "local_links_checked": 17,
+  "files": {
+    "04-computation/experiments/collatz_wavelet_energy_20261013d.cpp": "f3a662aaaac30f69c5c7a0142628e1ddd0416c1568392e314f4b5ea57b929097",
+    "04-computation/experiments/collatz_wavelet_audit_20261013d.py": "1c033862f059040325f8c2894b824e4d048665a9cd5089780a17cca0828e03c4",
+    "04-computation/experiments/conway_golden_memory_20261013d.py": "4d296ff4f69d380207800da5967e6fc9423a03020be6866720e9354b0ebd0998",
+    "05-knowledge/results/collatz_wavelet_energy_20261013d.md": "ef5eeaa940e8a69761b4bb43abba2507d7bf057ec8055073a1ceee91825633c0",
+    "05-knowledge/results/conway_golden_memory_20261013d.md": "73c5f4d6a2fc6eb9c8f824b11f22f1451f30740788ef14c086aae96148fa21a7",
+    "05-knowledge/results/collatz_wavelet_energy_20261013d.json": "924301898d856a035bbdaccb3df42d8d62e7ff3e3efbc4c7cff68ad307e038d0",
+    "05-knowledge/results/collatz_wavelet_audit_20261013d.json": "e992df80c632133e421d5fc47deb5e4de913d9d3ccb5680a9a211978c4bedda5",
+    "05-knowledge/results/conway_golden_memory_20261013d.json": "fa63a247c83f12b0ff5f25d51999a1139cfebf3ebf02a1f84494ac6809c9b037"
+  },
+  "finite_controls": {
+    "cpp_refinement_identities": 1308622770,
+    "python_all_N_identities": 159783,
+    "independent_Gram_rows": 429,
+    "all_word_residual_carry_checks": 87380,
+    "golden_binary_words": 32766,
+    "Conway_literal_sources_through": 262144,
+    "Pascal_relative_maximum_generation": 1024
+  },
+  "proof_review": [
+    "ROOT even cycle gives homogeneous parity law even at source 1; no all-source termination premise",
+    "empty prefixes and M=0 retained",
+    "odd endpoint carry kept before packet quotient",
+    "no sign restriction on covariance",
+    "contraction obstruction only for sibling-only l1 grammar",
+    "classical Pascal encoding cited, nonlinear model kept separate",
+    "binomial continuity correction and within-cell bridge both retained for maximum rate",
+    "golden normal form scoped to finite nonnegative-power binary words"
+  ]
+}

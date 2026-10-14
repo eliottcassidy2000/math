@@ -503,3 +503,8 @@ clang++ -O3 -std=c++17 04-computation/experiments/golden_parity_ray_20261013c.cp
 python3 04-computation/experiments/golden_tree_audit_20261013c.py --ray-census /tmp/golden22.json --output /tmp/golden-tree.json
 OPENBLAS_NUM_THREADS=1 python3 04-computation/experiments/golden_spectra_20261013c.py --input /tmp/golden22.json --output /tmp/golden-spectra.json
 ```
+
+
+## Continuation on the actual Conway maximum
+
+[Conway amplitude and golden carry memory](conway_golden_memory_20261013d.md) recovers the classical Pascal encoding explicitly from Janvresse–de la Rue–Velenik Appendix B. An elementary uniform within-word bridge estimate then gives the actual relative-maximum limit `sqrt(k) A_k -> 0.138014902399...`; a source-sensitive max-plus DAG brackets the maxima through generation1024. This closes the actual sequence's limit and supplies a hostile to the lagged continuum model's drift. Q's white-sampling premise and the model-to-sequence transfer remain OPEN. The Lucas identities are inherited from the September30 clock note; the new carry normalizer retains an exact pair in Z[phi].

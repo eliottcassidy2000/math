@@ -1,0 +1,94 @@
+{
+  "status": "FINITE-EXACT rational Pascal maxima; NUMERICAL evaluation of proved limiting constant",
+  "rows": [
+    {
+      "k": 10,
+      "A_lower": "13448851/268435456",
+      "A_upper": "107590809/2147483648",
+      "scaled_lower_numeric": 0.15843287509766657,
+      "scaled_upper_numeric": 0.15843287657021685
+    },
+    {
+      "k": 20,
+      "A_lower": "17543361/536870912",
+      "A_upper": "70173445/2147483648",
+      "scaled_lower_numeric": 0.14613623823903013,
+      "scaled_upper_numeric": 0.14613624032153072
+    },
+    {
+      "k": 29,
+      "A_lower": "14336819/536870912",
+      "A_upper": "57347277/2147483648",
+      "scaled_lower_numeric": 0.14380762935626748,
+      "scaled_upper_numeric": 0.14380763186393025
+    },
+    {
+      "k": 64,
+      "A_lower": "37716015/2147483648",
+      "A_upper": "2357251/134217728",
+      "scaled_lower_numeric": 0.14050310477614403,
+      "scaled_upper_numeric": 0.14050310850143433
+    },
+    {
+      "k": 128,
+      "A_lower": "26400495/2147483648",
+      "A_upper": "1650031/134217728",
+      "scaled_lower_numeric": 0.13908720792220192,
+      "scaled_upper_numeric": 0.139087213190558
+    },
+    {
+      "k": 256,
+      "A_lower": "9303161/1073741824",
+      "A_upper": "18606323/2147483648",
+      "scaled_lower_numeric": 0.13862790167331696,
+      "scaled_upper_numeric": 0.13862790912389755
+    },
+    {
+      "k": 400,
+      "A_lower": "1857633/268435456",
+      "A_upper": "14861065/2147483648",
+      "scaled_lower_numeric": 0.13840444386005402,
+      "scaled_upper_numeric": 0.13840445317327976
+    },
+    {
+      "k": 512,
+      "A_lower": "6563695/1073741824",
+      "A_upper": "13127391/2147483648",
+      "scaled_lower_numeric": 0.13831952941835632,
+      "scaled_upper_numeric": 0.13831953995506843
+    },
+    {
+      "k": 1024,
+      "A_lower": "4635591/1073741824",
+      "A_upper": "9271183/2147483648",
+      "scaled_lower_numeric": 0.1381513774394989,
+      "scaled_upper_numeric": 0.1381513923406601
+    }
+  ],
+  "normal_limit": {
+    "z_numeric": -0.2760298047981433,
+    "constant_numeric": 0.13801490239907166,
+    "peak_position_numeric": 1.3912625871346345
+  },
+  "golden_carries": {
+    "binary_words_through_length": 14,
+    "words": 32766,
+    "exact_values": 1596,
+    "examples": {
+      "11": "100",
+      "111": "1001",
+      "1111": "10100",
+      "1011": "10000",
+      "11011": "100100"
+    }
+  },
+  "independent_sequence": {
+    "sequence_through": 262144,
+    "literal_support_levels": [
+      4,
+      10,
+      17
+    ],
+    "literal_Pascal_bridge_checks": 170
+  }
+}

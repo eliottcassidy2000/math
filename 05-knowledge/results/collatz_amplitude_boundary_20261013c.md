@@ -431,3 +431,8 @@ abort on unsupported overflow/descent, and their source universe is finite.
 Audit manifest: [research_audit_20261013c.json](research_audit_20261013c.json)
 records exact replay comparisons, normal/optimized checks, moment controls,
 source/data hashes, and the finite energy extrema.
+
+
+## Continuation on source preserving energy refinement
+
+[The ternary-wavelet continuation](collatz_wavelet_energy_20261013d.md) gives exact all-prefix refinement, its complete Gram and odd-carry energy identity, and a compressed packet with a uniform four-unit rounding budget per raw word. A census with over1.3billion identity checks exposes both strongly negative and strongly positive covariance; a fixed Q–Pell correlation is not available here. The depth24 packet has l1 norm3,585,706, but no future rate is proved. A depth-dependent renewal or Gram bound remains necessary: sufficiently deep ternary addresses admit no sibling cancellation over any fixed block length. The infinite energy premise and the amplitude's nonconditional nonvanishing remain OPEN.
