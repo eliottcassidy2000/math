@@ -1,0 +1,293 @@
+{
+  "active_checks": 21435,
+  "golay": {
+    "composition_classes": 18,
+    "endpoint_allowed_fixed_field_charge": [
+      1
+    ],
+    "original_allowed_fixed_field_charge": [
+      2
+    ],
+    "parameters": [
+      11,
+      6,
+      5
+    ],
+    "weight_enumerator": {
+      "0": 1,
+      "11": 24,
+      "5": 132,
+      "6": 132,
+      "8": 330,
+      "9": 110
+    },
+    "words": 729
+  },
+  "labelled_connection_sets": 110,
+  "multiplier_representatives": 14,
+  "p17_component": {
+    "component_states": 321,
+    "isolated_charge": 76,
+    "isolated_valid_triangle_rotations": 0,
+    "norm": 103,
+    "p": 17,
+    "verified_cycle_start_moves": 321,
+    "witnessed_residues": 103,
+    "zeta": 13
+  },
+  "positive_representatives": 13,
+  "scope_primes": [
+    3,
+    5,
+    7,
+    11,
+    13
+  ],
+  "small_cases": [
+    {
+      "S": [
+        2
+      ],
+      "additive_moduli": [],
+      "norm": 1,
+      "p": 3,
+      "surjective": true,
+      "witnessed_residues": 1
+    },
+    {
+      "S": [
+        3,
+        4
+      ],
+      "additive_moduli": [],
+      "norm": 1,
+      "p": 5,
+      "surjective": true,
+      "witnessed_residues": 1
+    },
+    {
+      "S": [
+        4,
+        5,
+        6
+      ],
+      "additive_moduli": [],
+      "norm": 1,
+      "p": 7,
+      "surjective": true,
+      "witnessed_residues": 1
+    },
+    {
+      "S": [
+        1,
+        2,
+        4
+      ],
+      "additive_moduli": [
+        2,
+        2,
+        2
+      ],
+      "norm": 8,
+      "p": 7,
+      "surjective": true,
+      "witnessed_residues": 8
+    },
+    {
+      "S": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "additive_moduli": [],
+      "norm": 1,
+      "p": 11,
+      "surjective": true,
+      "witnessed_residues": 1
+    },
+    {
+      "S": [
+        1,
+        6,
+        7,
+        8,
+        9
+      ],
+      "additive_moduli": [
+        23
+      ],
+      "norm": 23,
+      "p": 11,
+      "surjective": true,
+      "witnessed_residues": 23
+    },
+    {
+      "S": [
+        2,
+        6,
+        7,
+        8,
+        10
+      ],
+      "additive_moduli": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "endpoint_fixed_field_fibres": [
+        0,
+        105,
+        0
+      ],
+      "endpoint_repair_missing": [
+        0,
+        2
+      ],
+      "fixed_field_fibres": [
+        0,
+        0,
+        200
+      ],
+      "missing": [
+        0,
+        1
+      ],
+      "norm": 243,
+      "normalized_paths": 8645,
+      "p": 11,
+      "prefix_nodes": 53491,
+      "surjective": false,
+      "witnessed_residues": 241
+    },
+    {
+      "S": [
+        3,
+        6,
+        7,
+        9,
+        10
+      ],
+      "additive_moduli": [
+        23
+      ],
+      "norm": 23,
+      "p": 11,
+      "surjective": true,
+      "witnessed_residues": 23
+    },
+    {
+      "S": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "additive_moduli": [],
+      "norm": 1,
+      "p": 13,
+      "surjective": true,
+      "witnessed_residues": 1
+    },
+    {
+      "S": [
+        1,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "additive_moduli": [
+        79
+      ],
+      "norm": 79,
+      "p": 13,
+      "surjective": true,
+      "witnessed_residues": 79
+    },
+    {
+      "S": [
+        2,
+        7,
+        8,
+        9,
+        10,
+        12
+      ],
+      "additive_moduli": [
+        131
+      ],
+      "norm": 131,
+      "p": 13,
+      "surjective": true,
+      "witnessed_residues": 131
+    },
+    {
+      "S": [
+        1,
+        2,
+        7,
+        8,
+        9,
+        10
+      ],
+      "additive_moduli": [
+        3,
+        3,
+        3
+      ],
+      "norm": 27,
+      "p": 13,
+      "surjective": true,
+      "witnessed_residues": 27
+    },
+    {
+      "S": [
+        1,
+        3,
+        7,
+        8,
+        9,
+        11
+      ],
+      "additive_moduli": [
+        9,
+        9,
+        9
+      ],
+      "norm": 729,
+      "p": 13,
+      "surjective": true,
+      "witnessed_residues": 729
+    },
+    {
+      "S": [
+        1,
+        2,
+        4,
+        7,
+        8,
+        10
+      ],
+      "additive_moduli": [
+        53
+      ],
+      "norm": 53,
+      "p": 13,
+      "surjective": true,
+      "witnessed_residues": 53
+    }
+  ],
+  "status": "PASS",
+  "wieferich_order_controls": {
+    "ord_1093_2": 364,
+    "ord_3511_2": 1755,
+    "v2_paley_3511_disc": 1755
+  }
+}
