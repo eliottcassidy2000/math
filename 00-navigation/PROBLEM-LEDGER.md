@@ -785,7 +785,8 @@ all heights (THM-1289, published), δ ineffective.
   `|x| = |y| = 1/2`, whose one polar point `(1/2, 1/2)` the curve approaches at the near-returns; the convergents `P/Q` of `log2 3` give rational approximants of degree `P` on the sphere, and the
   character-matched convergent has the exact unit-circle pole `w = zeta^(-1)` (`p(-1) = 0` in exactly the five predicted cases of fifteen), displaced by the defect and unfolded by the irrational law into
   the lines at `(jQ, jP)` (Mercator: decays 0.9988, 0.9896, 0.9744, ...); the approximants' poles reproduce THM-4629's lines to four decimals and 0.5% at `Q = 53`; `|R| = 1/(pi |theta_f|)` at the
-  convergents (up to 10108 at the 665-line): the constant infinity of the polar line, finite but unbounded on the line, tempered to polynomial growth by Rhin. Parity words are affine Moebius maps
+  convergents and `sup |R| = 2/((2-theta)|Re w_THM|) ~ (2-theta)^2/(2 pi^2 theta_f^2)` at the drifted line frequencies (3861 at the Mercator line, 8.8e6 at the 665-line), with the proved line bound
+  `|R| <= theta^2/(4 theta_f^2)`: the constant infinity of the polar line, finite but unbounded on the line, tempered to polynomial growth by Rhin. Parity words are affine Moebius maps
   fixing infinity; near-returns are the nearly parabolic words and the decay is a function of the multiplier `3^Q/2^P`; their fixed points (the repo's rational cycle points) go to infinity. THM-4630's
   covariance update is the Moebius map `r -> (r-1)/(3-r)` (attracting fixed point `1 - sqrt 2`, multiplier `(sqrt 2 - 1)^2`; two generations = the square-triangular Pell unit, Codex): the S26
   square-triangular tangent closes there. Conway's constant is closed by Codex (`C_* = 0.1380149...`, PROVED from the Pascal encoding; the continuum eigen-equation solved by `u = phi_N/2`); the S27
