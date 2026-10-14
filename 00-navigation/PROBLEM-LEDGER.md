@@ -786,12 +786,13 @@ all heights (THM-1289, published), δ ineffective.
   (Conway, prices, refuel bills, Landau; Terras), the Farey graph with a geodesic (the lines of THM-4629, Moebius words, Pell), Cayley graphs of doubling with a character, and colouring/certificate
   graphs (Hadwiger-Nelson, chess, the carry cocycle), plus polytopes and line graphs. Two bridges PROVED: THM-4631, the compressed twisted transfer operator of every `px+1` map factors as
   `[1 - u/2 - v/2] prod_i [1 - (u/2)^(ord_(p^i)(2))]^([(Z/p^i)^x : <2>])` (fast modes = doubling cycles on the units; multiplicity one at every level iff 2 is a primitive root mod `p^2`, 12 of the 24
-  primes below 100; the Wieferich primes 1093 and 3511 jump by the factor `p` at level 2; `p = 7` splits along `{1,2,4} | {3,5,6}`, the Paley residues; exact in 37 cases to size 343); and the Farey
-  colouring: reduction `P/Q -> (Q, P) mod m` properly colours the Farey graph, THM-4629's characters are those colours, the lines are the Farey vertices along the geodesic of `log2 3`
-  (convergents and semiconvergents), the resonant character of a line is the colour of its vertex, and consecutive lines never share a character (for `m = 2` the three parities are the
-  classical 3-colouring of the Farey graph). NUMERICAL: the Farey colours of `log2 3` are equidistributed to 2600 convergents (chi-square consistent for `m = 2..7`; Gauss-Kuzmin to 0.004;
+  primes below 100; the Wieferich primes 1093 and 3511 jump by the factor `p` at level 2; `p = 7` splits along `{1,2,4} | {3,5,6}`, the Paley residues; exact in 37 cases to size 529); and the Farey
+  colouring: the signed primitive pair `(Q, P) mod m` properly colours the Farey graph, the colour of a primitive line's vertex determines THM-4629's resonant character pair (the
+  character itself at `m = 2`), the record lines are the convergents of `log2 3`, and consecutive convergents never share a character (for `m = 2` the three parities are the classical
+  3-colouring of the Farey graph); most census lines are Farey vertices off the geodesic, fan vertices or unfoldings (5 convergents, 7 semiconvergents, 15 non-reduced, 53 other among 80). NUMERICAL: the Farey colours of `log2 3` are equidistributed over 2599 convergents (chi-square consistent for `m = 2..7`; Gauss-Kuzmin to 0.0044;
   OPEN as a theorem, Jager-Liardet for almost every number). Reading: the observer lens is the symmetry axis of the carrier (rigid Collatz graph against transitive Farey/Cayley carriers; the
-  3-adic closure is the step back). NUMEROLOGY: Paley-7 eigenvalues are the reciprocal poles of the Q resonator because `(n+1)/4 = 2` only at `n = 7`. MISTAKE-602 (S29 called 149/94 a convergent).
+  3-adic closure is the step back). NUMEROLOGY: Paley-7 eigenvalues are the reciprocal poles of the Q resonator because `(n+1)/4 = 2` only at `n = 7`. MISTAKE-602 (S29 called 149/94 a convergent). Audited (MISTAKE-603: the lines are not the geodesic's vertices, the p >= 5 identities need the cocycle form, and
+  eight notes).
 
 - **The Collatz transfer law on the Riemann sphere (opus, 2026-10-13-S29; [note](../05-knowledge/results/collatz_rational_approximants_riemann_sphere_20261013.md), HYP-9260).**
   Owner theme: rational functions on the Riemann sphere and the constant function infinity. The resolvent of THM-4629 is `1/(1 - x - y)` on `P^1 x P^1` restricted to a winding curve on the torus

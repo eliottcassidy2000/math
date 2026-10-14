@@ -1,0 +1,19 @@
+# convergents with Q <= 1e7: 14; semiconvergents: 33; geodesic vertices: 47
+  convergents (Q, P): [(1, 1), (1, 2), (2, 3), (5, 8), (12, 19), (41, 65), (53, 84), (306, 485), (665, 1054), (15601, 24727), (31867, 50508), (79335, 125743)]
+
+# m = 2 census: |Q theta - P| < 0.07, Q <= 768, (Q, P) not both even: 80 lines
+  convergents: 5 [(12, 19), (41, 65), (53, 84), (306, 485), (665, 1054)]
+  semiconvergents: 7 [(17, 27), (29, 46), (94, 149), (147, 233), (200, 317), (253, 401), (359, 569)]
+  non-reduced multiples: 15 [((36, 57), '3x(12, 19)'), ((123, 195), '3x(41, 65)'), ((159, 252), '3x(53, 84)'), ((195, 309), '3x(65, 103)'), ((265, 420), '5x(53, 84)'), ((282, 447), '3x(94, 149)'), ((371, 588), '7x(53, 84)'), ((441, 699), '3x(147, 233)'), ((470, 745), '5x(94, 149)'), ((477, 756), '9x(53, 84)'), ((583, 924), '11x(53, 84)'), ((600, 951), '3x(200, 317)'), ((689, 1092), '13x(53, 84)'), ((735, 1165), '5x(147, 233)'), ((759, 1203), '3x(253, 401)')]
+  other reduced fractions: 53; Farey neighbours of a geodesic vertex (Q' <= 1e7): 46; of none: 7
+    neighbours of none: [(142, 225), (183, 290), (289, 458), (395, 626), (501, 794), (576, 913), (629, 997)]
+    examples of neighbours: [((65, 103), (12, 19)), ((70, 111), (29, 46)), ((77, 122), (12, 19)), ((89, 141), (12, 19)), ((111, 176), (41, 65)), ((118, 187), (53, 84)), ((135, 214), (41, 65)), ((171, 271), (53, 84))]
+
+# fan (41 + 53t, 65 + 84t), t = 1..13: in census? [True, True, True, True, True, True, True, True, True, True, True, True, True]
+  characters: ['omega', 'C', 'omega', 'C', 'omega', 'C', 'omega', 'C', 'omega', 'C', 'omega', 'C', 'omega'] (alternate, as Farey neighbours must)
+
+# census lines consecutive in Q with the same character: 2 of 79: [((600, 951), (624, 989), 'omega'), ((706, 1119), (730, 1157), 'omega')]
+
+# record lines (minimal |Q theta - P| up to Q, Q <= 20000): [(1, 2), (2, 3), (5, 8), (12, 19), (41, 65), (53, 84), (306, 485), (665, 1054), (15601, 24727)]
+  all convergents? True; all convergents with Q <= 20000 are records? False
+done
