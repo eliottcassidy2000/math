@@ -205,6 +205,11 @@ the earlier A8 values at19,23,31, and a separate Held--Karp evaluation of
 the complete weighted permutation polynomial at11. It gives
 `[t^8]R_11=2/135` and recovers `H(P11)=95095`. A second agent independently
 obtained the same coefficient with a separately written DP.
+The incoming H31 checker now enforces the permanent bound before declaring
+CRT uniqueness; its modified executable was replayed at7 and11 and reproduced
+both known counts with no failed checks. The q31 computation is still inherited.
+All40 local links across the four new notes resolve, and the repository's
+agent-facing documentation check passed after integration.
 
 The next bounded targets are (i) classify exact cores at ten edges while
 allowing degree-two elimination to expose smaller cores; (ii) retain trace

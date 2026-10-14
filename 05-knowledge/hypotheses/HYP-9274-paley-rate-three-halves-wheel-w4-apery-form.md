@@ -9,7 +9,10 @@ status: >
   FINITE-EXACT ingredients: A_2 = q(q-1); A_3 = A_5 = 0; A_4 = 2q(q-1)(q-3) at 11 primes q <= 83;
   A_6 = q(q-1)(q-3)(5q-29) at 6 primes q <= 47, exact under leave-one-out interpolation; two-cherry ratio
   (q-2)(q-9)/((q-4)(q-5)) at 4 primes.
-  FINITE-EXACT (B) at all 27 primes 5 <= q <= 109.
+  PROVED + CITED (B) for every odd prime: Ahlgren--Ono's character moment plus the explicit collision correction
+  in wheel_apery_extension_20261014h.md. The 27-prime tests remain finite controls.
+  PROVED exact A4/A6/A8 and two-cherry formulas by the terminating reduction in wheel_run_interface_20261014h.md;
+  PROVED degree-eight weighted Hamiltonian coefficient with modular contribution -7a_q/((q-2)...(q-7)).
   NUMERICAL (A): with c_1 = 3/2 fixed, q^2(1 - R/e - 3/(2q)) = -3.117, -3.109, -3.090 (q = 27, prime power, never
   fitted), -3.097 for q = 19, 23, 27, 31; the holdout error at q = 31 is 1e-5.
 session: opus-2026-10-14-S34
@@ -55,26 +58,44 @@ Summing over `j`: `R = e(1 − 5/(2q) − 1/q + 2/q) + O(q^(−2)) = e(1 − 3/(
 
 Here `a_q` is the `q`-th coefficient of `f = η(2z)⁴η(4z)⁴`, the unique newform of weight 4 and level 8.
 
-**Status.** FINITE-EXACT at all 27 primes `5 <= q <= 109`. The `a_q` are computed from the eta product in the script, not taken from tables.
+**Status, extended 2026-10-14.** **PROVED + CITED for every odd prime** by
+[the exact wheel-to-moment interface](../results/wheel_apery_extension_20261014h.md).
+The 27-prime eta-product computations remain finite controls. Over extension
+fields the same collision correction is proved, but substituting the Fourier
+coefficient `a_(p^r)` is false already at q=9; the proposed Frobenius-trace
+extension is separately typed as finite-tested.
 
 **Context (CITED).**
 - `f` is the modular form of Beukers' Apéry-number supercongruence for `ζ(3)`, proved by Ahlgren–Ono (2000) through Gaussian hypergeometric `₄F₃(1)`.
 - Deligne's theorem (the Riemann hypothesis for varieties over finite fields) gives `|a_q| <= 2q^(3/2)`; the observed `|a_q|/(2q^(3/2))` is at most 0.88.
-- Expected proof route: drop distinctness (a polynomial correction) and use scaling to reduce to `Σ_b χ(b)·(Σ_c χ(c(c−1)(c−b)))²`. That is a `χ`-twisted second moment of the Legendre family, which is the Ahlgren–Ono `₄F₃` object.
+- Completed proof route: allow collisions, adding `(q-1)(4-q)` to the anchored sum, and use scaling to reduce to `Σ_b χ(b)·(Σ_c χ(c(c−1)(c−b)))²`. Ahlgren--Ono Lemma2.2 and Theorem6 evaluate this moment as `-a_p-p` for every odd prime. The linked packet retains the signs, hub factor and injectivity correction.
 
 ## (C) Exact run polynomials
 
 - `A_2 = q(q−1)`, `A_4 = 2q(q−1)(q−3)` and `A_6 = q(q−1)(q−3)(5q−29)` (leading coefficients `1, 2, 5` = Catalan, THM-438). The odd `A_L` vanish.
 - The two-cherry ratio is `(q−2)(q−9)/((q−4)(q−5))`.
-- FINITE-EXACT (11, 6 and 4 primes respectively). Proofs would go by Möbius inversion over set partitions.
-- **Conjecture (scoped):** `A_8` and `A_10` are also `q(q−1)(q−3)` times polynomials. From `k = 6` on, a single run can glue into Eulerian non-series-parallel patterns. The octahedron `K_(2,2,2)` (12 edges, all degrees 4) is the first candidate. Those patterns may carry their own Deligne-bounded terms, so polynomiality of every `A_(2k)` is not claimed.
+- **PROVED extension:** the terminating injective graph reduction in
+  [the run interface](../results/wheel_run_interface_20261014h.md) proves these
+  formulas for all odd prime powers q=3mod4 and gives
+  `A_8=2q(q-1)(q-3)(q-7)(7q-55)`.
+- **OPEN:** polynomiality of A10 and the classification of higher arithmetic
+  cores. Degree-two elimination can expose a smaller core that is absent as
+  a direct quotient; direct Euler-parity inspection alone does not settle it.
 
 ## (D) Where arithmetic enters `R(q)`
 
-**Heuristic.**
-- **The `W_4` channel.** No single run glues into the `W_4` pattern. A trail and its quotients have at most two vertices of odd pattern-degree (doubling an edge changes neither the character pattern nor the parity), and `W_4` has four. Two runs can. So the Apéry-form contribution to `R(q)` comes from two-run configurations whose ten points glue to five, with size about `a_q/q^6`, at most `2q^(−4.5)` in relative terms.
-- **Other channels.** Single runs of length `>= 12` can glue into other Eulerian non-series-parallel patterns (the octahedron first). Their order has not been estimated, and they could enter earlier or later than the `W_4` channel.
+**PROVED finite-degree interface.** Retain an edge weight t in
+`R_q(t)=E_sigma product_i(1+t chi(d_i))`. For q=3mod4 prime, q>=11,
+the exact coefficient `[t^8]R_q(t)` has modular part
+`-7a_q/((q-2)(q-3)...(q-7))`, plus the explicit rational polynomial part in
+[the run interface](../results/wheel_run_interface_20261014h.md).
+The signed wheel coefficients of runs (6,2), (4,4), (4,2,2), (2,2,2,2)
+are -14,-6,128,-960; their placement weights leave -14-3+64-40=7.
+For the eight-edge single run the raw wheel is impossible by its four odd
+vertices. This degree-eight calculation was independently checked by
+Held--Karp at11. Deligne bounds this coefficient's modular part by
+`14q^(3/2)/((q-2)...(q-7))=O(q^(-9/2))`.
 
-**Prediction (`W_4` channel only).** The `W_4` channel contributes no arithmetic term before relative order `q^(−4.5)`. Its first term is a multiple of `a_q(f)/q^6`. Whether other channels keep `R(q)` rational to that order is open.
-
-**Status.** OPEN. This is the precise place where the Riemann hypothesis (Deligne's theorem) "permeates" the Hamiltonian-path count of Paley tournaments.
+**OPEN:** the combined contribution of higher edge degrees at t=1, and the
+uniform tail needed for the asymptotic coefficient c1. The finite-degree
+formula is not an interchange-of-limits theorem for the full Hamiltonian count.

@@ -1,5 +1,7 @@
 # H(P_31) exactly, the Paley rate c₁ = 3/2, and where the Riemann hypothesis enters Paley tournaments
 
+> **2026-10-14 extension and scope update.** The [wheel packet](wheel_apery_extension_20261014h.md) completes the all-odd-prime identity using Ahlgren--Ono and the collision correction. The [run packet](wheel_run_interface_20261014h.md) proves A4/A6/A8, identifies the exact degree-eight modular term, and supplies an independent upper bound making the reported H31 CRT reconstruction unique. The full c1=3/2 asymptotic remains conditional on a uniform run-tail bound; its first-order derivation and finite numerical support below are retained. The q31 DP itself is inherited, not rerun by this extension.
+
 **Contents.**
 - `H(P_31)` exactly: the June pre-registered prediction HYP-2371 is confirmed.
 - The rate of THM-438's `R(q) → e`: `c₁ = 3/2`, derived and confirmed.

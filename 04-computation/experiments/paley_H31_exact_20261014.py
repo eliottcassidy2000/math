@@ -7,7 +7,8 @@ Method (opus-2026-10-14-S34):
     their second vertices; S33 note section 5c).
   * N_1 by a LAYERED pull DP over subsets of W = F_q \\ {0, 1} in colex order, two layers in memory (the layout of the
     S33 audit referee's mod-256 DP), here in uint32 residues modulo three primes p_j close to 2^31; the exact N_1 is
-    recovered by the Chinese remainder theorem (N_1 < p_1 p_2 p_3 ~ 2^93 is checked against the analytic size).
+    recovered by the Chinese remainder theorem. A successor-permutation injection and Bregman's bound
+    certify N_1 <= (d!)^((q-1)/d), d=(q+1)/2, and the exact integer comparison with the CRT modulus.
   * Validation chain (the design doc's acceptance list, paley_H31_compute_design_kpc1.md):
       - the same code must reproduce the exact orbit counts at q = 7, 11, 19, 23 (H(19) = 1172695746915,
         H(23) = 15760206976379349);
@@ -203,7 +204,13 @@ def main():
             line += f'\n         reproduces the known exact value: {check(f"exact q{q}", n1 == EXACT_N1[q])}'
         if q in MOD256:
             line += f'\n         N_1 mod 256 = {n1 % 256} (S33 value {MOD256[q]}): {check(f"mod256 q{q}", n1 % 256 == MOD256[q])}'
-        check(f'crt range q{q}', n1 < M // 1000)
+        # Paths with fixed 0->1 inject into successor permutations on q-1 rows,
+        # each with at most d allowed columns (out-neighbours plus a terminal).
+        # Bregman: actual N_1 <= (d!)^((q-1)/d). A small reconstructed residue
+        # alone is not a bound for the unreduced count. See wheel_run_interface_20261014h.md.
+        d = (q + 1) // 2
+        if not check(f'crt uniqueness q{q}', math.factorial(d) ** (q - 1) < M ** d):
+            raise ArithmeticError('CRT modulus does not exceed the certified count bound')
         print(line, flush=True)
         rows[q] = (n1, H, R)
     if 31 in rows:
