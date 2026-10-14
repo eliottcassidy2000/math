@@ -1,0 +1,28 @@
+{
+  "no_float_filters": true,
+  "no_sat_dependency": true,
+  "scope": "FINITE-EXACT; Y1 full overlap relation, Y2 one stronger fixed-base extension; no global affine colouring theorem claimed",
+  "tests": [
+    {
+      "all_extend": true,
+      "all_normalized_overlap_patterns": 8,
+      "edges": 367,
+      "exact_pairs": 9730,
+      "glued_formula_conflicts": 12,
+      "m": 1,
+      "overlap_vertices": 6,
+      "verified": true,
+      "vertices": 140
+    },
+    {
+      "canonical_base_vertices_fixed": 30,
+      "edges": 3653,
+      "exact_pairs": 697971,
+      "glued_formula_conflicts": 80,
+      "m": 2,
+      "overlap_vertices": 20,
+      "verified": true,
+      "vertices": 1182
+    }
+  ]
+}
