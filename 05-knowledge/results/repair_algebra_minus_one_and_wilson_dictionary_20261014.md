@@ -22,6 +22,11 @@ Scripts are in `04-computation/experiments/repair_algebra_20261014/`.
 * So two words collide iff they have the same total and the same `K`.
 * The first generation is the anchor row: `K((a)) = 2^a − 3 = 1/c_a`. That is `−1, 1, 5, 13, 29, 61, …`, which contains every anchor of THM-4600, including the two Wilson primes 5 and 13.
 
+**Positivity and rigidity.**
+* Canonical numerators are positive: `K(s) ≥ 3^(m+1) − 2^(m+2) ≥ 1`, and `2^(e_m) ≤ K(s) + 3` with equality only for one-letter heads.
+* So every value has finitely many representations, all with exponents `≤ log_2(K + 3)`.
+* The smallest value with two canonical representations is the anchor `125 = 2^7 − 3`. For `a ≤ 31`, the anchor `2^a − 3` has a second representation only for `a ∈ {7, 13, 17, 21, 28, 31}`. So 5 and 13 are rigid, but only because they lie below 125 (`anchor_rigidity.py`).
+
 **Primitive collisions are ladders.** A collision whose words end with different letters is primitive; every collision reduces to one by cancelling the common suffix. Its heads satisfy
 
     f_h'(−1) = 4^i f_h(−1) + (4^i − 1)/3,
@@ -57,7 +62,7 @@ THM-4601's ladder with the anchor moved from `+1` to `−1`. Each primitive coll
 **What it buys.**
 * The primitive collisions are exactly the uniform trailing-ones switches.
 * Their Haar coverage of odd sources is about 5% at exponent 22 and grows only logarithmically. So the −1 mechanism cannot by itself descend most sources.
-* The `+1` anchor and the anchor row `2^a − 3` are where the rest of the mass lives.
+* Sources with no trailing one are never switched, but they descend in one step. THM-4601 treats one residual branch of the trailing-ones sources, the one whose post-run point lies 2-adically near `+1`, with a second anchor.
 
 ## 2. The Wilson / {2,4,8} / Fermat-multiplier dictionary (THM-4641)
 
@@ -108,7 +113,7 @@ The four problems share one shape. The repository proves statements about **almo
 
 **What could be completed in weeks.** No proof of any of the four headline problems is realistic in that time, and the Wilson one is probably false. Notable but realistic targets, best first:
 
-1. **Hadwiger–Nelson, constructive.** A 5-chromatic unit-distance graph with fewer than 509 vertices (the Parts record), or a smaller Moser-spindle-free one than Haugland's 2,131 vertices (arXiv:2608.04542). These are checkable by SAT (`pysat` is installed), have a clear success criterion, and would be noticed. The 509 record came from heavy SAT-guided search by Heule and Parts, so success on this machine is uncertain; the spindle-free variant is younger and likely softer.
+1. **Hadwiger–Nelson, constructive.** A 5-chromatic unit-distance graph with fewer than 509 vertices (the Parts record), or a Moser-spindle-free one with fewer than 1,441 vertices. That record is Heule's ("Odd-distance virtual edges in unit-distance graphs", Geombinatorics 31(2), 2021), a SAT reduction of the 64,513-vertex graphs of Voronov, Neopryatnaya and Dergachev (arXiv:2106.11824). It is cited in v5 of Haugland's arXiv:2608.04542 (6 October 2026), whose structured spindle-free graph has 2,131 vertices; Haugland's v5 also cites a certified reduction of that graph to 1,501 vertices (K. T. Wong, Zenodo, 2026). The 509 record is Parts, arXiv:2010.12665. These are checkable by SAT (`pysat` is installed), have a clear success criterion, and would be noticed. The 509 record came from heavy SAT-guided search by Heule and Parts, so success on this machine is uncertain; the spindle-free variant has had less optimization (one SAT reduction in 2021, and 2026 work that has not beaten it), so it is likely softer. These references were read from the arXiv abstract and HTML pages only.
 2. **Collatz, structural.** A classification of the uncovered set of the anchor rule banks. Specifically: every 2-adic point not in the union of switch and ladder cylinders lies in the closure of the anchor orbits. That is a compactness statement; it is not a proof of Collatz.
 3. **Wilson analogues.** For example, Wilson primes in `Z[i]` or `Z[ω]` with an exact search, where nothing is known numerically in this corpus.
 4. **JC2.** Keep the dual-field lens, aiming at one new verified family (a Newton-polygon class) rather than the full conjecture.
@@ -123,4 +128,5 @@ All runs use `04-computation/experiments/repair_algebra_20261014/`, Python 3.10 
 | `python3 switch_coverage.py 22` | `switch_coverage.out`: exact Haar coverage | about 1 min |
 | `python3 gaps_census.py 22` | `gaps_census.out`: gaps, length differences, representations per value | about 2 min |
 | `python3 carry_derivation.py 14 30` | `carry_derivation.out`: the carries do not derive primitive collisions | about 1 min |
-| `python3 wilson_248_fermat_dictionary.py` | `wilson_248_fermat_dictionary.out`: 1,827 exact checks | about 10 s |
+| `python3 wilson_248_fermat_dictionary.py` | `wilson_248_fermat_dictionary.out`: 1,834 exact checks | about 10 s |
+| `python3 anchor_rigidity.py 20 31 16` | `anchor_rigidity.out`: positivity lemma on 524,287 representations, complete anchor search, recursion = brute force below `2^15`; 540,712 exact checks | about 1 s |

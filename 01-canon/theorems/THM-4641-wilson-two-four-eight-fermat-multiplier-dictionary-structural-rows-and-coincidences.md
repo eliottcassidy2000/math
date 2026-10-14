@@ -2,10 +2,10 @@
 id: THM-4641
 title: "The Wilson / {2,4,8} / Fermat-multiplier dictionary, with every row typed: {2,4,8} are the powers of 2 adjacent to a power of 3 (Gersonides) and index the generators of the repair algebra at -1 (anchor, unit carry, Catalan carry; anchors -1, 1, 1/5); Wilson's -1 is the product of a group's involutions, and for the Collatz multiplier's orbit <2> mod p the product is -1 iff ord_p(2) is even; the Wilson quotient is the sum of Fermat quotients (Lerch) and q_p(2^j) = j q_p(2), so the Fermat quotients of 2, 4, 8 are 1:2:3; the tournament count is T(p) = chi_8(p)(q_p(2)/2 - w_p) - A_p (mod p), so the Wilson and Fermat quotients of 2 enter through the same Fermat multiplier chi_8(p) = (2/p). The remaining numerical links are coincidences with stated baselines: 5 = 2^3 - 3 and 13 = 2^4 - 3 are the only Wilson primes among the primes 2^a - 3 with a <= 44; 2 is a primitive root mod 5, 13, 563 (baseline 0.052); p - 2 = 3, 11, 561 is absolutely Fermat (baseline 0.10 per prime); 563 is not a numerator at the -1 anchor"
 status: >
-  PROVED: rows 3, 5 and the reductions in rows 2 and 7 (elementary; row 5 upgrades THM-307's verified relation between
+  PROVED: rows 3, 5, the unit-denominator part of row 2b, and the reductions in rows 2 and 7 (elementary; row 5 upgrades THM-307's verified relation between
   the Euler and Fermat quotients to a proof and composes it with THM-307). KNOWN: rows 1, 3 (Wilson for finite abelian
   groups), 4 (Lerch 1905; logarithmic property of Fermat quotients) and the Wilson-prime search (Costa, Gerbicz and Harvey
-  2014). FINITE-EXACT: rows 6-10 (exact arithmetic; wilson_248_fermat_dictionary.py, 1,827 checks; THM-307's tournament
+  2014). FINITE-EXACT: the cycle census of row 2b and rows 6-10 (exact arithmetic; wilson_248_fermat_dictionary.py, 1,834 checks; THM-307's tournament
   decomposition re-derived from exact Burnside counts for every prime p < 48). HEURISTIC: row 11. Not yet independently audited.
 session: mac-mini-2026-10-14-wilson
 source: 05-knowledge/results/repair_algebra_minus_one_and_wilson_dictionary_20261014.md
