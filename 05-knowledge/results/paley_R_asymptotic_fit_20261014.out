@@ -1,0 +1,45 @@
+exact R(q) and q (1 - R/e):
+   q =  7: R = 2.400000000   q(1 - R/e) = 0.819625
+   q = 11: R = 2.439506173   q(1 - R/e) = 1.128114
+   q = 19: R = 2.527147849   q(1 - R/e) = 1.335971
+   q = 23: R = 2.556980364   q(1 - R/e) = 1.364808
+   q = 27: R = 2.578788368   q(1 - R/e) = 1.385553   (prime power; control only)
+   q = 31: R = 2.595511945   q(1 - R/e) = 1.400100
+
+holdouts (fit the m largest primes below the target, predict the target):
+   target q = 23, order m = 1, fit on [19]: predicted 2.560389, exact 2.556980, error +0.003408; c = [1.336]
+   target q = 23, order m = 2, fit on [11, 19]: predicted 2.554514, exact 2.556980, error -0.002466; c = [1.6218, -5.4303]
+   target q = 23, order m = 3, fit on [7, 11, 19]: predicted 2.554803, exact 2.556980, error -0.002177; c = [1.5948, -4.6218, -5.632]
+   target q = 31, order m = 1, fit on [23]: predicted 2.598607, exact 2.595512, error +0.003095; c = [1.3648]
+   target q = 31, order m = 2, fit on [19, 23]: predicted 2.595507, exact 2.595512, error -0.000005; c = [1.5018, -3.1505]
+   target q = 31, order m = 3, fit on [11, 19, 23]: predicted 2.596470, exact 2.595512, error +0.000958; c = [1.3918, 1.4691, -48.0653]
+   target q = 31, order m = 4, fit on [7, 11, 19, 23]: predicted 2.596972, exact 2.595512, error +0.001460; c = [1.303, 6.1768, -127.9196, 426.9851]
+
+control q = 27 (prime power, never fitted):
+   order 1 through [31]: predicted R(27) = 2.577324, exact 2.578788, error -0.001465
+   order 2 through [23, 31]: predicted R(27) = 2.578837, exact 2.578788, error +0.000049
+   order 3 through [19, 23, 31]: predicted R(27) = 2.578836, exact 2.578788, error +0.000048
+
+fits on all primes up to 31 (largest points), and the second-generation predictions:
+   order 1, fit on [31]: c = [1.4001];  R(43) = 2.629773;  R(47) = 2.637306
+   order 2, fit on [23, 31]: c = [1.50156, -3.14537];  R(43) = 2.627983;  R(47) = 2.635308
+   order 3, fit on [19, 23, 31]: c = [1.50121, -3.12636, -0.25094];  R(43) = 2.627986;  R(47) = 2.635312
+   order 4, fit on [11, 19, 23, 31]: c = [1.56139, -7.51938, 104.39903, -815.23472];  R(43) = 2.627711;  R(47) = 2.634951
+
+   worst order-2/3 holdout error at q = 31: 0.000958
+   PRE-REGISTERED: R(43) in [2.62729, 2.62868]  (central 2.62798);  H(P_43) in [3.609070e+40, 3.610972e+40]
+   PRE-REGISTERED: R(47) in [2.63468, 2.63594]  (central 2.63531);  H(P_47) in [9.683113e+45, 9.687772e+45]
+
+   limit check: e = 2.718281828;  c_1 (order 2 on 23, 31) = 1.50156
+
+with c_1 = 3/2 FIXED (derived): 1 - R/e - 3/(2q) = c_2/q^2 + c_3/q^3 + ...
+   q =  7: q^2 (1 - R/e - 3/(2q)) = -4.76262
+   q = 11: q^2 (1 - R/e - 3/(2q)) = -4.09074
+   q = 19: q^2 (1 - R/e - 3/(2q)) = -3.11655
+   q = 23: q^2 (1 - R/e - 3/(2q)) = -3.10941
+   q = 27: q^2 (1 - R/e - 3/(2q)) = -3.09007  (prime power)
+   q = 31: q^2 (1 - R/e - 3/(2q)) = -3.09690
+   c_2 (from q = 31 alone) = -3.0969;  (c_2, c_3) from q = 23, 31 = (-3.0609, -1.1148)
+   holdout at 31 with c_1 = 3/2: (c_2 from 23) 2.595547 (error +0.000035);  (c_2, c_3 from 19, 23) 2.595523 (error +0.000011)
+   c_1 = 3/2 model: R(43) = 2.628011 (c_2 only) / 2.627996 (c_2, c_3);  PRE-REGISTERED (c_1-fixed): R(43) in [2.62798, 2.62803]
+   c_1 = 3/2 model: R(47) = 2.635339 (c_2 only) / 2.635324 (c_2, c_3);  PRE-REGISTERED (c_1-fixed): R(47) in [2.63531, 2.63535]

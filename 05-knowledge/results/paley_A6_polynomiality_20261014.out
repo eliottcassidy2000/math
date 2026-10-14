@@ -1,0 +1,18 @@
+   q = 11: A_5 = 0, A_6 = 22880, A_6/q^4 = 1.56273, (A_6 - 5 q^4)/q^3 = -37.80992
+   q = 19: A_5 = 0, A_6 = 361152, A_6/q^4 = 2.77125, (A_6 - 5 q^4)/q^3 = -42.34626
+   q = 23: A_5 = 0, A_6 = 870320, A_6/q^4 = 3.11005, (A_6 - 5 q^4)/q^3 = -43.46881
+   q = 31: A_5 = 0, A_6 = 3281040, A_6/q^4 = 3.55275, (A_6 - 5 q^4)/q^3 = -44.86472
+   q = 43: A_5 = 0, A_6 = 13436640, A_6/q^4 = 3.93022, (A_6 - 5 q^4)/q^3 = -46.00054
+   q = 47: A_5 = 0, A_6 = 19596368, A_6/q^4 = 4.01591, (A_6 - 5 q^4)/q^3 = -46.25215
+   q = 11: A_6 / (q (q-1)) = 208
+   q = 19: A_6 / (q (q-1)) = 1056
+   q = 23: A_6 / (q (q-1)) = 1720
+   q = 31: A_6 / (q (q-1)) = 3528
+   q = 43: A_6 / (q (q-1)) = 7440
+   q = 47: A_6 / (q (q-1)) = 9064
+   degree-4 interpolation of A_6/q through [19, 23, 31, 43, 47] predicts q = 11: 22880.0 vs exact 22880;  difference +0.0
+   degree-4 interpolation of A_6/q through [11, 23, 31, 43, 47] predicts q = 19: 361152.0 vs exact 361152;  difference +0.0
+   degree-4 interpolation of A_6/q through [11, 19, 31, 43, 47] predicts q = 23: 870320.0 vs exact 870320;  difference +0.0
+   degree-4 interpolation of A_6/q through [11, 19, 23, 43, 47] predicts q = 31: 3281040.0 vs exact 3281040;  difference +0.0
+   degree-4 interpolation of A_6/q through [11, 19, 23, 31, 47] predicts q = 43: 13436640.0 vs exact 13436640;  difference +0.0
+   degree-4 interpolation of A_6/q through [11, 19, 23, 31, 43] predicts q = 47: 19596368.0 vs exact 19596368;  difference +0.0

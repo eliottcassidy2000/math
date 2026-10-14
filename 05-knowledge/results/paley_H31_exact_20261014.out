@@ -1,0 +1,49 @@
+moduli [2147483647, 2147483629, 2147483587] all prime: True
+q =  7: N_1 = H/|Aff| = 9  (residues [9, 9, 9]; 0.3 s)
+         H(P_7) = 189
+         R(q) = H 2^(q-1)/q! = 2.400000000
+         reproduces the known exact value: True
+         N_1 mod 256 = 9 (S33 value 9): True
+q = 11: N_1 = H/|Aff| = 1729  (residues [1729, 1729, 1729]; 0.0 s)
+         H(P_11) = 95095
+         R(q) = H 2^(q-1)/q! = 2.439506173
+         reproduces the known exact value: True
+         N_1 mod 256 = 193 (S33 value 193): True
+q = 19: N_1 = H/|Aff| = 6857869865  (residues [415418924, 415418978, 415419104]; 0.0 s)
+         H(P_19) = 1172695746915
+         R(q) = H 2^(q-1)/q! = 2.527147849
+         reproduces the known exact value: True
+         N_1 mod 256 = 41 (S33 value 41): True
+q = 23: N_1 = H/|Aff| = 62293308207033  (residues [1250058504, 1250580630, 1251798924]; 0.4 s)
+         H(P_23) = 15760206976379349
+         R(q) = H 2^(q-1)/q! = 2.556980364
+         reproduces the known exact value: True
+         N_1 mod 256 = 185 (S33 value 185): True
+q = 27: N_1 = H/|Aff| = 1192096711363143681  (residues [1003258698, 257879755, 2097802233]; 7.9 s)
+         H(P_27) = 418425945688463432031
+         R(q) = H 2^(q-1)/q! = 2.578788368
+         N_1 mod 256 = 1 (S33 value 1): True
+q = 31: N_1 = H/|Aff| = 42745655163116955307561  (residues [1586941875, 1066060341, 2021511562]; 166.1 s)
+         H(P_31) = 19876729650849384218015865
+         R(q) = H 2^(q-1)/q! = 2.595511945
+         N_1 mod 256 = 41 (S33 value 41): True
+
+== Acceptance tests for H(T_31) (paley_H31_compute_design_kpc1.md section 0)
+   1. H odd: True
+   2. 465 | H: True
+   3. H/465 odd (HYP-1713): True
+   H = 465 mod 930: True
+   4. HYP-2371: R(31) = 2.5955119 against the predicted interval [2.58949, 2.60249] (central 2.59599): INSIDE - CONFIRMED;  H in [19830629617139608462365775, 19930130881568868002912737]: True
+   distance from the central value 2.59599: -0.000478 (half-width 0.00650)
+   5. the same code reproduced H(19), H(23) exactly: True
+
+R(q) = H(P_q) 2^(q-1)/q! for all computed q (e = 2.718281828):
+   q =  7: R = 2.400000000,  e - R = 0.318282,  q (1 - R/e) = 0.819625
+   q = 11: R = 2.439506173,  e - R = 0.278776,  q (1 - R/e) = 1.128114
+   q = 19: R = 2.527147849,  e - R = 0.191134,  q (1 - R/e) = 1.335971
+   q = 23: R = 2.556980364,  e - R = 0.161301,  q (1 - R/e) = 1.364808
+   q = 27: R = 2.578788368,  e - R = 0.139493,  q (1 - R/e) = 1.385553
+   q = 31: R = 2.595511945,  e - R = 0.122770,  q (1 - R/e) = 1.400100
+
+FAILED CHECKS: none
+ALL CHECKS PASSED

@@ -6677,6 +6677,9 @@ OEIS A038375 gives max H(T) over all n-vertex tournaments: 1, 1, 3, 5, 15, 45, 1
 
 ---
 
+### UPDATE (2026-10-14, opus-2026-10-14-S34): HYP-2371 CONFIRMED - H(T_31) computed exactly
+- H(P_31) = 19876729650849384218015865 (opus-2026-10-14-S34, exact: layered colex DP from the arc 0 -> 1, three 31-bit prime moduli + CRT, validation chain H(19), H(23) reproduced exactly; H(P_27) = 418425945688463432031). R(31) = 2.5955119 lies INSIDE [2.58949, 2.60249] (-0.00048 from the centre): HYP-2371 CONFIRMED. H odd, 465 | H, H/465 = 42745655163116955307561 odd. The rate: c_1 = 3/2 exactly at first order (cherry placement 5/2 + two-cherry repulsion 1 - quartic runs 2), fits 1.5016; c_2 ~ -3.08; pre-registered R(43) in [2.62798, 2.62803], R(47) in [2.63531, 2.63535] (HYP-9274). See 05-knowledge/results/paley_h31_exact_rate_and_apery_wheel_20261014.md.
+
 ### UPDATE (2026-06-10, kind-pasteur-2026-06-10-S1): falsifiable H(T_31) prediction + freeness settled
 - **HYP-2371 PREDICTION:** `R(31) = H(T_31)Ã‚Â·2^30/31! = 2.59599 Ã‚Â± 0.00650` Ã¢Å¸Â¹ `H(T_31) Ã¢Ë†Ë† [19830629617139608462365775, 19930130881568868002912737]` with `H Ã¢â€°Â¡ 465 (mod 930)` (freeness LEM-003 + RÃƒÂ©dei parity; H/465 odd, Ã¢â€°Ë† 4.275e22 Ã¢â‚¬â€ the "next 1729"). Method: the PROVEN form R = e(1Ã¢Ë†â€™C/pÃ¢Ë†â€™Ã¢â‚¬Â¦) (THM-438 ADD-4) fit with p=23 holdout; the naive truncated cluster sums are PROVABLY non-predictive at finite p (THM-438 ADD-8 resurgence). Compute-run spec: `05-knowledge/results/paley_H31_compute_design_kpc1.md` (see backlog [COMPUTE-NODE] lead).
 - **The integrality r(p) Ã¢Ë†Ë† Ã¢â€žÂ¤ is now a one-paragraph universal fact:** LEM-003 Ã¢â‚¬â€ Aut acts freely on directed Ham paths of ANY digraph; nothing Paley/QR/Eisenstein about it (the QR content is only |Aut| = p(pÃ¢Ë†â€™1)/2).

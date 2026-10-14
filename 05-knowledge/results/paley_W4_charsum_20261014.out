@@ -1,0 +1,48 @@
+q = 3 mod 4:
+   q =   7: W =         -168,  W/(q-1) = -28,  W/q^3 = -0.4898
+   q =  11: W =          400,  W/(q-1) = 40,  W/q^3 = 0.3005
+   q =  19: W =         -864,  W/(q-1) = -48,  W/q^3 = -0.1260
+   q =  23: W =         1144,  W/(q-1) = 52,  W/q^3 = 0.0940
+   q =  31: W =         4680,  W/(q-1) = 156,  W/q^3 = 0.1571
+   q =  43: W =        -2352,  W/(q-1) = -56,  W/q^3 = -0.0296
+   q =  47: W =       -24472,  W/(q-1) = -532,  W/q^3 = -0.2357
+   q =  59: W =        38512,  W/(q-1) = 664,  W/q^3 = 0.1875
+   q =  67: W =       -12672,  W/(q-1) = -192,  W/q^3 = -0.0421
+   q =  71: W =       -51240,  W/(q-1) = -732,  W/q^3 = -0.1432
+   q =  79: W =        50856,  W/(q-1) = 652,  W/q^3 = 0.1031
+   q =  83: W =       -19680,  W/(q-1) = -240,  W/q^3 = -0.0344
+   q = 103: W =        98328,  W/(q-1) = 964,  W/q^3 = 0.0900
+   q = 107: W =        82256,  W/(q-1) = 776,  W/q^3 = 0.0671
+   cubic interpolation of W/(q-1) through [7, 11, 19, 23], residuals at the other primes:
+      q = 31: predicted 1180.00, exact 156.00, residual -1024.00
+      q = 43: predicted 7112.00, exact -56.00, residual -7168.00
+      q = 47: predicted 10732.00, exact -532.00, residual -11264.00
+      q = 59: predicted 28312.00, exact 664.00, residual -27648.00
+      q = 67: predicted 46912.00, exact -192.00, residual -47104.00
+      q = 71: predicted 58660.00, exact -732.00, residual -59392.00
+      q = 79: predicted 87692.00, exact 652.00, residual -87040.00
+      q = 83: predicted 105232.00, exact -240.00, residual -105472.00
+      q = 103: predicted 228292.00, exact 964.00, residual -227328.00
+      q = 107: predicted 260872.00, exact 776.00, residual -260096.00
+q = 1 mod 4:
+   q =  13: W =         -312,  W/(q-1) = -26,  W/q^3 = -0.1420
+   q =  17: W =         -864,  W/(q-1) = -54,  W/q^3 = -0.1759
+   q =  29: W =        -5656,  W/(q-1) = -202,  W/q^3 = -0.2319
+   q =  37: W =         5688,  W/(q-1) = 158,  W/q^3 = 0.1123
+   q =  41: W =         7760,  W/(q-1) = 194,  W/q^3 = 0.1126
+   q =  53: W =        12376,  W/(q-1) = 238,  W/q^3 = 0.0831
+   q =  61: W =       -33240,  W/(q-1) = -554,  W/q^3 = -0.1464
+   q =  73: W =       -11376,  W/(q-1) = -158,  W/q^3 = -0.0292
+   q =  89: W =       -63184,  W/(q-1) = -718,  W/q^3 = -0.0896
+   q =  97: W =        45504,  W/(q-1) = 474,  W/q^3 = 0.0499
+   q = 101: W =      -157000,  W/(q-1) = -1570,  W/q^3 = -0.1524
+   q = 109: W =       214920,  W/(q-1) = 1990,  W/q^3 = 0.1660
+   cubic interpolation of W/(q-1) through [13, 17, 29, 37], residuals at the other primes:
+      q = 41: predicted 629.20, exact 194.00, residual -435.20
+      q = 53: predicted 3822.00, exact 238.00, residual -3584.00
+      q = 61: predicted 7945.20, exact -554.00, residual -8499.20
+      q = 73: predicted 18146.00, exact -158.00, residual -18304.00
+      q = 89: predicted 41394.00, exact -718.00, residual -42112.00
+      q = 97: predicted 58074.00, exact 474.00, residual -57600.00
+      q = 101: predicted 67857.20, exact -1570.00, residual -69427.20
+      q = 109: predicted 90566.00, exact 1990.00, residual -88576.00

@@ -1406,3 +1406,12 @@ Files: `04-computation/paley_starstar_tail_moment_watson_monad.py` (+`.out`).
 
 Statements `A_{2k} = C_k·p^{k+1}` and `R(p) → e`: UNCHANGED.
 
+## ADDENDUM-9 (opus-2026-10-14-S34): exact H(T_31), the rate c_1 = 3/2, exact run polynomials, and the first arithmetic pattern
+
+- **Forward item 1 (the sub-leading term C) is answered.**
+  - With the exact `H(T_27) = 418425945688463432031` and `H(T_31) = 19876729650849384218015865`, `R(31) = 2.5955119`, inside HYP-2371's pre-registered interval.
+  - The asymptotic coefficient is `c_1 = 3/2`, not the effective `1.40` seen at `p = 31`. First-order derivation: cherry placement `5/2`, two-cherry repulsion `(q−2)(q−9)/((q−4)(q−5)) = 1 − 2/q` giving `+1`, and quartic runs `A_4/(q)_5 = 2/((q−2)(q−4))` giving `−2`.
+  - Fits give `1.5016`, and `c_2 ≈ −3.08`.
+- **ADDENDUM (4)'s remainder made exact.** `A_4 = 2q(q−1)(q−3)` exactly (11 primes), i.e. `2q³ − 8q² + 6q`. Also `A_6 = q(q−1)(q−3)(5q − 29)` (6 primes).
+- **Where Weil/Deligne first enters.** Pattern sums containing an isolated edge, an odd number of edges, or an odd-reversal symmetry vanish (THM-4652); complete patterns are `±χ(Vandermonde)` and vanish for `q ≡ 3 (mod 4)`. The first non-series-parallel survivor, the wheel `W_4`, is the Apéry form: `Σ*(W_4) = −q(q−1)(a_q + 4)`, `f = η(2z)⁴η(4z)⁴` (27 primes; HYP-9274 (B)).
+- Note: `05-knowledge/results/paley_h31_exact_rate_and_apery_wheel_20261014.md`.
