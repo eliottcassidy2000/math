@@ -64,7 +64,7 @@ below `m_max ≍ a_(j+1) q_j^2/(3 ln 2)`. With `m ≥ 2^71` the convergents `2/1
 `630138897/397573379`, `10439860591/6586818670` are excluded and `217976794617/137528045312` survives; Legendre's theorem
 then gives, self-contained, that every nontrivial cycle has more than `4.95·10^10` odd elements, and Hercher's Corollary 29
 gives `≥ 137,528,045,312 = q_23` — the same convergent. An effective exponent `|θ - p/q| > c q^(-μ_0)` gives
-`k > (3 c M_0 ln 2)^(1/μ_0)`: `7.0·10^10` for `μ_0 = 2`, `1.7·10^7` for `3`, `1.7·10^4` for `5.117`, `329` for `8.616`; the
+`k > (3 c M_0 ln 2)^(1/μ_0)`: `7.0·10^10` for `μ_0 = 2`, `1.7·10^7` for `3`, `1.7·10^4` for `5.117`, `33` for `14.3` (Rhin's linear-form exponent 13.3, the one relevant to `θ`, as cited by opus S31), `329` for `8.616`; the
 actual continued fraction (partial quotients `≤ 55` through index 40) already behaves like `μ = 2` in the verified window.
 
 ### 3.3 HYP-9263 — the owner's `μ = 2` hypothesis (OPEN)

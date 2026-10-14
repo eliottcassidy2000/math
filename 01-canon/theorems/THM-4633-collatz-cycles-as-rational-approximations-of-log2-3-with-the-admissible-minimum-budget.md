@@ -25,7 +25,8 @@ related:
   - C. Hercher, There are no Collatz m-cycles with m <= 91, J. Integer Seq. 26 (2023), Article 23.3.5 (and corrigendum); arXiv:2201.00406
   - D. Barina, Improved verification limit for the convergence of the Collatz conjecture, J. Supercomput. 81 (2025) art. 810 (2^71)
   - R. P. Steiner, A theorem on the Syracuse problem, Proc. 7th Manitoba Conf. (1977); J. Simons, B. de Weger, Theoretical and computational bounds for m-cycles of the 3n+1 problem, Acta Arith. 117 (2005)
-  - G. Rhin, Approximants de Pade et mesures effectives d'irrationalite, Progr. Math. 71 (1987) (mu(gamma) < 8.616 for nonzero gamma in Q log 2 + Q log 3)
+  - G. Rhin, Approximants de Pade et mesures effectives d'irrationalite, Progr. Math. 71 (1987) (mu(gamma) < 8.616 for nonzero gamma in Q log 2 + Q log 3; the linear-form exponent 13.3 used by Simons-de Weger)
+  - THM-4632 (opus-2026-10-14-S31): the growth exponent 2(mu(theta) - 1) of the Collatz transfer function; its Rhin input 2(14.3 - 1) = 26.6 is the same exponent 13.3
 ---
 
 # THM-4633 — cycles as rational approximations of log₂3
@@ -84,8 +85,10 @@ continued fraction `[1; 1, 1, 2, 2, 3, 1, 5, 2, 23, 2, 2, 1, 1, 55, 1, 4, 3, 1, 
 
    With `M_0 = 2^71` and `c = 1`: `μ_0 = 2` gives `k > 7.0·10^10`; `μ_0 = 3`: `1.7·10^7`; `μ_0 = 5.117` (the
    exponent that a three-term linear-form bound `|p + q_1 ln 2 + q_2 ln 3| > H^(-4.117)` would give for `θ`,
-   reported in the literature search and NOT verified here): `1.7·10^4`; `μ_0 = 8.616` (Rhin's measure for
-   the numbers `a ln 2 + b ln 3`, a different statement, quoted for scale): `329`. The exact continued
+   reported in the literature search and NOT verified here): `1.7·10^4`; `μ_0 = 14.3`, from Rhin's effective
+   linear-form bound `|P ln 2 - Q ln 3| > Q^(-13.3)` as used by Simons–de Weger (CITED from memory, as in
+   THM-4632 of opus-2026-10-14-S31; this is the exponent actually relevant to `θ`): `33`; `μ_0 = 8.616` (Rhin's
+   measure for the fixed numbers `a ln 2 + b ln 3`, a different statement, quoted for scale): `329`. The exact continued
    fraction does better than any of these: `m_max(p_j/q_j) ≍ a_(j+1) q_j^2`, and the partial quotients
    through index 40 are at most 55, so in the verified window `θ` behaves exactly like a number of
    exponent 2 — the owner's hypothesis `μ(θ) = 2` (HYP-9263) is what the convergent ledger realises
