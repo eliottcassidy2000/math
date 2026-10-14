@@ -1,0 +1,7 @@
+q = 11: DFS A_10 = 478720; symbolic P + 34q(q-1)(a_q+q) = 478720 (a_q = -44); agree True; pure polynomial P + 34q^2(q-1) would give 643280; 1.6 s
+q = 19: DFS A_10 = 226059264; symbolic P + 34q(q-1)(a_q+q) = 226059264 (a_q = 44); agree True; pure polynomial P + 34q^2(q-1) would give 225547632; 17.6 s
+q = 23: DFS A_10 = 1142766592; symbolic P + 34q(q-1)(a_q+q) = 1142766592 (a_q = -56); agree True; pure polynomial P + 34q^2(q-1) would give 1143730016; 215.1 s
+
+real	3m54.818s
+user	0m0.000s
+sys	0m0.031s

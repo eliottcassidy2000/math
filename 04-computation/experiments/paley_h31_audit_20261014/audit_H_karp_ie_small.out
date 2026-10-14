@@ -1,0 +1,35 @@
+moduli (288230376151711717, 288230376151711687, 288230376151711681) prime: [True, True, True]
+
+q = 7: Karp IE, Z_7 rotation representatives (18 canonical classes, expected (2^q-2)/q = 18); 2.7 s
+   residues [189, 189, 189]; CRT(P1,P2) = 189; third modulus consistent: True; H < M/2^20: True
+   claimed H(P_7) = 189; MATCH: True
+   independent exact Held-Karp (int64, all starts): 189; matches Karp IE: True
+   brute-force DFS: 189; matches: True
+   H/|Aff| = H/21 = 9 (remainder 0); N_1 odd: True; N_1 mod 8 = 1; N_1 mod 256 = 9
+   H odd: True;  H mod 42 = 21
+   R(q) = H 2^(q-1)/q! = 2.400000000000  (exact fraction denominator 5)
+
+q = 11: Karp IE, Z_11 rotation representatives (186 canonical classes, expected (2^q-2)/q = 186); 0.0 s
+   residues [95095, 95095, 95095]; CRT(P1,P2) = 95095; third modulus consistent: True; H < M/2^20: True
+   claimed H(P_11) = 95095; MATCH: True
+   independent exact Held-Karp (int64, all starts): 95095; matches Karp IE: True
+   brute-force DFS: 95095; matches: True
+   H/|Aff| = H/55 = 1729 (remainder 0); N_1 odd: True; N_1 mod 8 = 1; N_1 mod 256 = 193
+   H odd: True;  H mod 110 = 55
+   R(q) = H 2^(q-1)/q! = 2.439506172840  (exact fraction denominator 405)
+
+q = 19: Karp IE, Z_19 rotation representatives (27594 canonical classes, expected (2^q-2)/q = 27594); 0.0 s
+   residues [1172695746915, 1172695746915, 1172695746915]; CRT(P1,P2) = 1172695746915; third modulus consistent: True; H < M/2^20: True
+   claimed H(P_19) = 1172695746915; MATCH: True
+   independent exact Held-Karp (int64, all starts): 1172695746915; matches Karp IE: True
+   H/|Aff| = H/171 = 6857869865 (remainder 0); N_1 odd: True; N_1 mod 8 = 1; N_1 mod 256 = 41
+   H odd: True;  H mod 342 = 171
+   R(q) = H 2^(q-1)/q! = 2.527147849326  (exact fraction denominator 28194075)
+
+q = 23: Karp IE, Z_23 rotation representatives (364722 canonical classes, expected (2^q-2)/q = 364722); 0.7 s
+   residues [15760206976379349, 15760206976379349, 15760206976379349]; CRT(P1,P2) = 15760206976379349; third modulus consistent: True; H < M/2^20: True
+   claimed H(P_23) = 15760206976379349; MATCH: True
+   independent exact Held-Karp (int64, all starts): 15760206976379349; matches Karp IE: True
+   H/|Aff| = H/253 = 62293308207033 (remainder 0); N_1 odd: True; N_1 mod 8 = 1; N_1 mod 256 = 185
+   H odd: True;  H mod 506 = 253
+   R(q) = H 2^(q-1)/q! = 2.556980363641  (exact fraction denominator 64965492466875)

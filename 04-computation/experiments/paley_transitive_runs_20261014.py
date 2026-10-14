@@ -7,8 +7,8 @@ So the largest transitive subtournament trans(P_p) is at least n(p) (elementary;
 omega(G_p) >= n(p) is classical).  Consequences, all CITED:
   * Erdos-Moser: every tournament on p vertices has trans >= floor(log2 p) + 1; random tournaments have trans about
     2 log2 p.
-  * Graham-Ringrose (1990): n(p) >> log p log log log p for infinitely many p, so trans(P_p)/log p is unbounded:
-    Paley tournaments are not Erdos-Moser-extremal infinitely often.
+  * Graham-Ringrose (1990): n(p) >> log p log log log p for infinitely many p.  IF their construction can be run
+    inside p = 3 mod 4 (not checked), trans(P_p)/log p is unbounded along those primes.
   * GRH (Ankeny 1952; Bach 1990): n(p) < 2 log^2 p, so the consecutive run is short.  The discrepancy bound
     |e(A,B) - |A||B|/2| <= (1/2) sqrt(|A||B| p) only gives trans(P_p) <= 2 sqrt(p) + O(1).
 This script computes n(p) and trans(P_p) exactly (branch and bound; translation lets the source be 0) for p = 3 mod 4

@@ -1,0 +1,54 @@
+
+===== exact R(q), no arithmetic correction
+   q = 7: R = 2.4;  q^2 (1 - R/e - 3/(2q)) = -4.762622
+   q = 11: R = 2.43950617284;  q^2 (1 - R/e - 3/(2q)) = -4.090744
+   q = 19: R = 2.52714784933;  q^2 (1 - R/e - 3/(2q)) = -3.116552
+   q = 23: R = 2.55698036364;  q^2 (1 - R/e - 3/(2q)) = -3.109408
+   q = 27: R = 2.57878836836;  q^2 (1 - R/e - 3/(2q)) = -3.09007
+   q = 31: R = 2.59551194521;  q^2 (1 - R/e - 3/(2q)) = -3.0969
+   holdout target 23, order 1 on [19]: error 0.00341
+   holdout target 23, order 2 on [11, 19]: error -0.00247
+   holdout target 23, order 3 on [7, 11, 19]: error -0.00218
+   holdout target 31, order 1 on [23]: error 0.00309
+   holdout target 31, order 2 on [19, 23]: error -5.03e-6
+   holdout target 31, order 3 on [11, 19, 23]: error 0.000958
+   q = 27 control, order 2 on [23, 31]: predicted - exact = 4.879e-5
+   q = 27 control, order 3 on [19, 23, 31]: predicted - exact = 4.801e-5
+   c1 fixed, c2 from 23 -> 31 error 3.54e-5; -> 27 error 7.21e-5
+   c1 fixed, (c2,c3) from 19,23 -> 31 error 1.06e-5; -> 27 error 5.34e-5
+   c1 fixed, c2 from 19 -> 23 error 3.67e-5
+   c1 fixed, (c2,c3,c4) from 19,23,31: c = ['1.5', '-3.03792', '-2.35788', '16.4132']; -> 27 error 4.72e-5
+   free fit on [23, 31]: c1 = 1.501564, c2 = -3.14537
+   free fit on [19, 23, 31]: c1 = 1.501212, c2 = -3.12636
+   free fit on [11, 19, 23, 31]: c1 = 1.56139, c2 = -7.51938
+
+   author interval construction reproduced:
+   model-agnostic R(43) interval (unrounded): [2.62729237, 2.62867717]
+   model-agnostic R(47) interval (unrounded): [2.6346761, 2.63594395]
+   c1-fixed R(43) interval (unrounded): [2.62797777, 2.6280293]  centres 2.62801091, 2.62799615
+   c1-fixed R(47) interval (unrounded): [2.63530858, 2.63535443]  centres 2.63533904, 2.63532397
+
+   leading W_4 term -7 e t_q/q^6 in R at each q: {7: '-0.00388', 11: '0.000473', 19: '-1.78e-5', 23: '7.2e-6', 27: '-1.28e-5', 31: '3.43e-6', 43: '-1.57e-7', 47: '-9.32e-7'}
+
+===== R(q) with the leading W_4 term removed (R + 7 e t_q / q^6)
+   q = 7: R = 2.4038816424;  q^2 (1 - R/e - 3/(2q)) = -4.832593
+   q = 11: R = 2.43903357788;  q^2 (1 - R/e - 3/(2q)) = -4.069707
+   q = 19: R = 2.52716564538;  q^2 (1 - R/e - 3/(2q)) = -3.118915
+   q = 23: R = 2.55697316561;  q^2 (1 - R/e - 3/(2q)) = -3.108008
+   q = 27: R = 2.57880113813;  q^2 (1 - R/e - 3/(2q)) = -3.093495
+   q = 31: R = 2.59550851483;  q^2 (1 - R/e - 3/(2q)) = -3.095687
+   holdout target 23, order 1 on [19]: error 0.00343
+   holdout target 23, order 2 on [11, 19]: error -0.00239
+   holdout target 23, order 3 on [7, 11, 19]: error -0.00194
+   holdout target 31, order 1 on [23]: error 0.00309
+   holdout target 31, order 2 on [19, 23]: error -2.69e-5
+   holdout target 31, order 3 on [11, 19, 23]: error 0.000906
+   q = 27 control, order 2 on [23, 31]: predicted - exact = 3.115e-5
+   q = 27 control, order 3 on [19, 23, 31]: predicted - exact = 2.699e-5
+   c1 fixed, c2 from 23 -> 31 error 3.48e-5; -> 27 error 5.41e-5
+   c1 fixed, (c2,c3) from 19,23 -> 31 error -2.97e-6; -> 27 error 2.55e-5
+   c1 fixed, c2 from 19 -> 23 error 5.6e-5
+   c1 fixed, (c2,c3,c4) from 19,23,31: c = ['1.5', '-3.06671', '-0.750083', '-4.59431']; -> 27 error 2.72e-5
+   free fit on [23, 31]: c1 = 1.50154, c2 = -3.14343
+   free fit on [19, 23, 31]: c1 = 1.499661, c2 = -3.04195
+   free fit on [11, 19, 23, 31]: c1 = 1.556519, c2 = -7.19263

@@ -1,0 +1,2 @@
+q = 3 mod 4: 87 primes < 1000, S != 0 at none
+q = 1 mod 4: 80 primes < 1000, S != 4a^2 - 2q at none

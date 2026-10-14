@@ -16,7 +16,9 @@ status: >
   PROVED terminating reduction through ten edges, with FINITE-EXACT symbolic extraction: A10=P10_single-34U_q;
   the weighted degree-ten coefficient retains 64V_q for V_q=I_(K6-minus-P6). Independent q11/q19 walk controls.
   NUMERICAL (A): with c_1 = 3/2 fixed, q^2(1 - R/e - 3/(2q)) = -3.117, -3.109, -3.090 (q = 27, prime power, never
-  fitted), -3.097 for q = 19, 23, 27, 31; the holdout error at q = 31 is 1e-5.
+  fitted), -3.097 for q = 19, 23, 27, 31; the holdout error at q = 31 is 1.1e-5 with (c_2, c_3) fitted, 3.5e-5 with c_2 only.
+  The q = 27 offset (+4.8e-5) is a resolved deviation; the arithmetic term -7e t_q/q^6 is of fit-precision size
+  (S34 audit, MISTAKE-609). H(P_27) and H(P_31) were reproduced exactly by an independent Karp inclusion-exclusion run.
 session: opus-2026-10-14-S34
 source: 05-knowledge/results/paley_h31_exact_rate_and_apery_wheel_20261014.md
 scripts:
@@ -37,7 +39,12 @@ related: [THM-438, THM-4652, HYP-9273, HYP-2371 (CONFIRMED), OPEN-Q-013]
 
 `1 − R(q)/e = (3/2)/q + c_2/q^2 + c_3/q^3 + O(q^(−4))`,
 
-with `c_2 ≈ −3.08 ± 0.03`. The coefficients are the same for primes and prime powers (universality).
+with `c_2` in `−3.04 … −3.15` across the fits; no error procedure is claimed.
+
+**Universality (corrected after the S34 audit).**
+- `c_1, …, c_4` are universal for structural reasons: only polynomial pattern sums feed them.
+- `R(q)` is not universal. Its first arithmetic term is about `−7e·t_q/q^6`, with `t_q` the Frobenius trace.
+- The `q = 27` offset of `+4.8·10⁻⁵` is a resolved deviation, not a confirmation.
 
 **Derivation of `c_1 = 3/2` (first order).** Write `R(q) = E_σ Π_k (1 + χ(d_k))` and expand over step subsets, split into maximal runs. At first order the surviving configurations are separated runs of even length (THM-4652 parts 2–3 kill isolated steps and odd totals).
 - **Cherries.** A single cherry (run of length 2) has weight exactly `1/(q − 2)`. Placing `j` separated cherries among the `q − 1` steps gives `C(q − 2j, j)/(q − 2)^j = (1/j!)(1 − (5/2) j(j−1)/q + …)`.
@@ -47,8 +54,9 @@ with `c_2 ≈ −3.08 ± 0.03`. The coefficients are the same for primes and pri
 Summing over `j`: `R = e(1 − 5/(2q) − 1/q + 2/q) + O(q^(−2)) = e(1 − 3/(2q)) + O(q^(−2))`. A rigorous version needs uniform control of the remaining configurations, as in THM-438.
 
 **Pre-registered (falsifiable) predictions:**
-- `c_1` fixed at `3/2`: `R(43) ∈ [2.62798, 2.62803]`, `R(47) ∈ [2.63531, 2.63535]`;
-- model-agnostic (orders 2–3, padded by the worst holdout error): `R(43) ∈ [2.62729, 2.62868]`, `R(47) ∈ [2.63468, 2.63594]`.
+- `c_1` fixed at `3/2`: `R(43) ∈ [2.62797, 2.62803]`, `R(47) ∈ [2.63530, 2.63536]`;
+- model-agnostic (orders 2–3, padded by the worst holdout error): `R(43) ∈ [2.62729, 2.62868]`, `R(47) ∈ [2.63467, 2.63595]`.
+- Endpoints are rounded outward, from the unrounded `[2.6279778, 2.6280293]`, `[2.6353086, 2.6353544]` and `[2.6346761, 2.6359440]`.
 
 `H(P_43)` is out of reach of subset DPs (`2^41` subsets). The test awaits a different algorithm.
 

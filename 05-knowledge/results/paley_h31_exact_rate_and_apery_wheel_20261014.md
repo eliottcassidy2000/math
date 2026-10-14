@@ -26,7 +26,7 @@ Owner's prompt (verbatim): "think how guiga numbers and korselts criterion relat
 - **CONFIRMED:** HYP-2371 (pre-registered June 2026).
 - **OPEN:** HYP-9274 (A)–(D).
 - **CITED:** THM-438 and its addenda; Ahlgren–Ono (2000); Beukers (1987); Deligne (1974); Ankeny (1952); Bach (1990); Burgess (1957); Graham–Ringrose (1990); Erdős–Moser (1964).
-- **Not yet audited** (section 8).
+- **Audited** (section 8; MISTAKE-609). `H(P_27)` and `H(P_31)` were reproduced exactly by an independent Karp inclusion–exclusion run (design B of the compute-design doc).
 
 ## 0. Answers in brief
 
@@ -44,8 +44,8 @@ Owner's prompt (verbatim): "think how guiga numbers and korselts criterion relat
    - The Paley tournament's Hamiltonian-path count is controlled by quadratic character sums. THM-438 proved `R(q) = H(P_q)·2^(q−1)/q! → e` from them.
    - Here: the first exact `H(P_31)`, the exact first-order rate `c₁ = 3/2`, and the place where a genuine Hasse–Weil quantity (Deligne's Riemann hypothesis) first enters.
    - The low-order pattern sums are exact polynomials (Gauss and Jacobi sums only), and the complete patterns vanish because a tournament needs `χ(−1) = −1`.
-   - The first surviving non-series-parallel pattern, the wheel `W_4`, carries exactly the coefficients of `η(2z)⁴η(4z)⁴`. That is the weight-4 form of Apéry's irrationality proof of `ζ(3)` (Beukers; Ahlgren–Ono).
-   - This is literally "irrationality (`ζ(3)`) ↔ RH (Deligne) ↔ tournaments (Paley)".
+   - The first surviving non-series-parallel pattern, the wheel `W_4`, carries exactly the coefficients of `η(2z)⁴η(4z)⁴`. This is the level-8 weight-4 form of Beukers' supercongruence for the Apéry numbers (proved by Ahlgren–Ono). It is not the level-6 modular setting of Beukers' irrationality proof of `ζ(3)`.
+   - The identity is a corollary of Ahlgren–Ono's `₄F₃(1)` evaluation; codex's wheel packet and the S34 audit both derived it. The Paley-pattern reading is the new part.
 3. **The GRH channel and the "linked list".** In `P_p` the consecutive residues `0, 1, …, n(p)−1`, up to the least non-residue `n(p)`, form a transitive subtournament.
    - Under GRH this run has length `< 2 log² p` (Ankeny; Bach).
    - Graham–Ringrose: `n(p) ≫ log p · log log log p` infinitely often. Whether their construction allows the residue class `p ≡ 3 (mod 4)` has not been checked.
@@ -62,7 +62,9 @@ Owner's prompt (verbatim): "think how guiga numbers and korselts criterion relat
 
 **Validation chain** (the compute-design doc's acceptance list):
 - the same code reproduces `H(P_7), H(P_11), H(P_19), H(P_23)` exactly (`H(19) = 1172695746915`, `H(23) = 15760206976379349`);
-- at `q = 27, 31` it matches the independent S33 and audit residues mod 256 (1 and 41);
+- at `q = 27, 31` it matches the S33 and S33-audit residues mod 256 (1 and 41). These come from the same layered algorithm, so they are consistency checks, not independent ones;
+- the S34 audit reproduced both values exactly with a different algorithm: Karp inclusion–exclusion over `Z_31` rotation classes, 397 s, three 58-bit moduli;
+- codex replaced the heuristic CRT range check in the script with a rigorous one, the Bregman bound `N_1 <= (d!)^((q−1)/d)`;
 - for `P_27` it also matches `H ≡ 3159 (mod 8424)` and `H/1053 ≡ 3 (mod 8)` (S33).
 
 | `q` | `H(P_q)` | `R(q) = H 2^(q−1)/q!` | `q(1 − R/e)` |
@@ -84,7 +86,9 @@ Owner's prompt (verbatim): "think how guiga numbers and korselts criterion relat
 **Fits** (`paley_R_asymptotic_fit_20261014.out`):
 - With `1 − R/e = Σ c_j/q^j`, order-2 and order-3 fits on the largest primes give `c₁ = 1.50156` and `1.50121`.
 - The order-2 fit through `q = 19, 23` predicted `R(31)` with error `−5·10⁻⁶`.
-- The prime power `q = 27`, never fitted, lies on the prime curve to `5·10⁻⁵` (universality).
+- The prime power `q = 27`, never fitted, lies off the prime curve by `+4.8·10⁻⁵`. That is ten times the `q = 31` holdout error, so it is a resolved deviation, not a confirmation of universality.
+  - The coefficients `c₁, …, c₄` are universal for structural reasons: only polynomial pattern sums feed them.
+  - `R(q)` itself is not universal. Its first arithmetic term, about `−7e·t_q/q⁶` with `t_q` the Frobenius trace (`a_q` for primes), is of the same size as the fit precision (S34 audit).
 
 **Derivation.** HYP-9274 (A) gives the details.
 - `R(q) = E_σ Π_k (1 + χ(d_k))` over random orderings `σ`.
@@ -97,12 +101,15 @@ Owner's prompt (verbatim): "think how guiga numbers and korselts criterion relat
 
 **With `c₁ = 3/2` fixed.**
 - `q²(1 − R/e − 3/(2q))` is nearly constant: `−3.117, −3.109, −3.090, −3.097` at `q = 19, 23, 27, 31`. So `c₂ ≈ −3.08`.
-- The holdout error at 31 is `1·10⁻⁵`.
+- The holdout error at 31 is `1.1·10⁻⁵` with `(c₂, c₃)` fitted, and `3.5·10⁻⁵` with `c₂` only.
+- Across the fits, `c₂` ranges over `−3.04 … −3.15`.
 - THM-438's forward note expected "`C ≈ 1.4`". That is the effective one-term value at `q = 31` (`1.4001`); the asymptotic coefficient is `3/2`.
 
 **Pre-registered** (HYP-9274 (A)):
-- `R(43) ∈ [2.62798, 2.62803]` and `R(47) ∈ [2.63531, 2.63535]` with `c₁ = 3/2` fixed;
-- `[2.62729, 2.62868]` and `[2.63468, 2.63594]` model-agnostic.
+- `R(43) ∈ [2.62797, 2.62803]` and `R(47) ∈ [2.63530, 2.63536]` with `c₁ = 3/2` fixed;
+- `[2.62729, 2.62868]` and `[2.63467, 2.63595]` model-agnostic.
+- All endpoints are rounded outward; the audit found the first version rounded inward.
+- The arithmetic term (about `10⁻⁶` at `q = 43`) is inside these widths.
 
 ## 3. Exact pattern sums, and why tournaments stay polynomial so long (THM-4652, FINITE-EXACT)
 
@@ -134,13 +141,23 @@ Owner's prompt (verbatim): "think how guiga numbers and korselts criterion relat
 **Context.**
 - `f` is the weight-4 newform of level 8 in Beukers' supercongruence for Apéry's numbers. Apéry's numbers prove `ζ(3) ∉ Q`, and Ahlgren–Ono proved the supercongruence via Gaussian `₄F₃(1)`.
 - Deligne's theorem gives `|a_q| <= 2q^(3/2)`; the observed ratio is at most 0.88.
-- Expected proof: the scaled, non-distinct sum is the `χ`-twisted second moment `Σ_b χ(b)·a(E_b)²` of the Legendre family. That is the Ahlgren–Ono object; the distinctness corrections are polynomial.
+- **Proof (PROVED + CITED, all odd primes):**
+  - Scaling one rim vertex to 1 reduces the collision-allowed sum to the `χ`-twisted second moment `Σ_λ χ(λ)·g(λ)²` of the Legendre family: `U(W_4) = q(q−1)·M(q)`.
+  - Ahlgren–Ono Lemma 2.2 and Theorem 6 give `M(q) = q³·₄F₃(1) = −(q + a_q)`.
+  - The collision correction is the polynomial `−q(q−1)(q−4)`.
+  - References: codex's [wheel packet](wheel_apery_extension_20261014h.md); the S34 audit; Pal–Roy–Sadek (2023, Theorem 4.5).
+- **Prime powers.** The Frobenius trace replaces `a_q`. Over `GF(27)`, `W/26 = −264`, not `−a_27 − 4`.
 
-**What it means for `R(q)`** (HYP-9274 (D), heuristic).
-- A single run cannot glue into `W_4`: a trail has at most two odd-degree vertices, and `W_4` has four. Two runs can.
-- The `W_4` channel therefore contributes about `a_q(f)/q^6` to `1 − R/e`, at most `2q^(−4.5)`.
-- **This is the precise sense in which "an RH" permeates the Hamiltonian-path count:** a Deligne-bounded Fourier coefficient of the `ζ(3)` form, entering at relative order `q^(−4.5)` or lower.
-- Other Eulerian non-series-parallel channels (the octahedron, from single runs of 12 steps or more) are not estimated.
+**What it means for `R(q)`** (corrected after the audit; codex and tiling-modular-atoms computed the same independently).
+- **Single runs do carry `W_4`.** A 10-step run can glue into `W_4` plus a path of length 2 between two non-adjacent rim vertices. Summing out that middle vertex (`χ*χ = 1 − qδ`) leaves the wheel core.
+- **The formula.** `A_10 = 2q(q−1)(21q⁴ − 639q³ + 7028q² − 32098q + 48662) + 34·q(q−1)·a_q`. Single runs carry arithmetic from 10 steps on, and `A_10` is not a polynomial.
+  - The 'too few points' zeros `A_10(3) = A_10(7) = 0` hold only because `a_3 = −4` and `a_7 = 24`.
+  - Three independent engines agree on this formula: the S35 compiler of this session, the audit's symbolic engine, and tiling-modular-atoms' next-core packet.
+- **The leading `W_4` term in `1 − R/e` is `+7·a_q/q⁶`.**
+  - The run splits `(6,2), (4,4), (4,2,2), (2,2,2,2)` give wheel-core coefficients `−14, −6, 128, −960`. Their placement weights net to `7`.
+  - Deligne then bounds the term by `14·q^(−4.5)`.
+- **This is the precise sense in which an RH permeates the Hamiltonian-path count:** a Deligne-bounded Fourier coefficient of the level-8 form of Beukers' supercongruence, at relative order `q^(−4.5)`.
+- **Further cores.** A 6-vertex core, `K_6` minus a Hamiltonian path, enters at weighted degree 10 ([next-core packet](paley_next_cores_20261014i.md)). Its modular identification is open.
 
 ## 5. The least non-residue as a transitive run (CITED + FINITE-EXACT)
 
@@ -163,18 +180,18 @@ For a prime `p ≡ 3 (mod 4)`, the set `{0, 1, …, n(p)−1}` induces a transit
 
 **Dedekind cuts, rational/irrational, real/transcendental, irrationality exponents.**
 - S31 (THM-4632) and mac-mini's THM-4633/4634 carry the irrationality-measure dictionary for Collatz.
-- Here the new rhyme is that the Paley `W_4` count is governed by the modular form of Apéry's `ζ(3)` irrationality proof. That is an exact identity (FINITE-EXACT), not an analogy.
+- Here the new rhyme is that the Paley `W_4` count is governed by the level-8 form of Beukers' Apéry-number supercongruence. That is an exact identity (PROVED via Ahlgren–Ono), not an analogy. The irrationality proof itself is a different, level-6, construction.
 
 **Equidistribution and equidecomposability.**
 - Laczkovich's circle squaring needs discrepancy bounds that are Diophantine in nature (mac-mini §6).
-- The Paley analogue proved here is that the first-order discrepancy of path statistics is the rational `c₁ = 3/2`, with no arithmetic term until the `W_4` channel.
+- The Paley analogue derived here at first order: the first-order discrepancy of path statistics is the rational `c₁ = 3/2`, with no arithmetic term until the `W_4` channel at order `q^(−4.5)`.
 
 **Bott periodicity (ANALOGY).** The mod-8 phenomena in this thread are:
 - HYP-9273 (B), the orbit counts `≡ 1 (mod 8)`;
 - `χ_8`;
 - Milgram's Gauss-sum signature.
 
-The octahedron, the first single-run candidate in HYP-9274 (D), is the cross-polytope of dimension 3. A real link to Clifford periodicity is not claimed.
+A link to Clifford periodicity is not claimed. The earlier remark here about the octahedron as the first single-run candidate is withdrawn: `W_4` already enters single runs at 10 steps.
 
 **CH and the Jacobian conjecture.**
 - Every statement in this note is arithmetic: finite computations and identities between integers. By codex's finite-witness note, none of them can depend on CH.
@@ -182,15 +199,45 @@ The octahedron, the first single-run candidate in HYP-9274 (D), is the cross-pol
 
 ## 7. Open threads
 
-1. Prove HYP-9274 (B) through the Legendre-family twisted second moment (Ahlgren–Ono `₄F₃`). It should be a short derivation from known identities, with the distinctness corrections as polynomials.
+1. ~~Prove HYP-9274 (B).~~ Done: it is a corollary of Ahlgren–Ono (codex's wheel packet; the S34 audit).
 2. Derive `c₂ ≈ −3.08` exactly at second order. The ingredients are three-cherry correlations, cherry–quartic cross terms, the `A_6` leading term `5/q³`, and second-order placement.
 3. Settle HYP-9274 (D): find the first order at which `R(q)` stops being rational, through the `W_4` channel or the octahedral channel.
-4. `H(P_43)`: test the pre-registered intervals. Subset DP is out of reach (`2^41` subsets), and Karp inclusion–exclusion needs about `4·10^15` operations. A new algorithm is needed.
+4. `H(P_43)`: test the pre-registered intervals. Subset DP is out of reach (`2^41` subsets). Karp inclusion–exclusion with canonical forms under the full affine group (orbits of size 903) is estimated by the audit at about 2 days on this machine, so the test is feasible.
 5. `A_8` exactly. It is `O(q^8)` per prime, so feasible to `q ≈ 31`. Test the scoped polynomiality conjecture.
 
 ## 8. Audit
 
-Pending: an independent adversarial audit will be recorded here.
+Independent adversarial referee. The report is `04-computation/experiments/paley_h31_audit_20261014/REPORT.md`; MISTAKE-609.
+
+**Verified.**
+- `H(P_27)` and `H(P_31)` exactly, by a genuinely different algorithm: Karp inclusion–exclusion with `Z_31` rotation classes and three 58-bit moduli, plus a GF(27) model built on a different irreducible polynomial.
+- All acceptance tests.
+- THM-4652: every step, 700 random multigraphs, 269 series-parallel graphs, and `W_4` as the unique non-series-parallel 5-vertex survivor.
+- The `c₁` ingredients; it also proved `A_4`, `A_6` and the two-cherry formula symbolically.
+- The `W_4` identity at all primes below 1000.
+- The transitive-run table, by a different exact algorithm.
+- The `K_4` facts at 167 primes.
+- OEIS novelty checks.
+
+**Errors (applied).**
+- **E1.** `A_10` is not a polynomial (refuting the scoped conjecture).
+- **E2.** Single runs do glue into `W_4`.
+- **E3.** The leading `W_4` term comes from four run splits, with net coefficient 7.
+- **E4.** `η(2z)⁴η(4z)⁴` is the supercongruence form, not the form of Apéry's irrationality proof.
+
+**Imprecisions (applied).**
+- HYP-9274 (B) is a theorem (Ahlgren–Ono).
+- The universality claim overstated (the `q = 27` offset is resolved; `R(q)` carries arithmetic terms).
+- The pre-registered intervals were rounded inward.
+- The holdout error quoted was the better of two variants.
+- THM-438 addendum label collision, and the missing caveat there.
+- "Proved here" written for a first-order derivation.
+- The June `A_8` values were overlooked.
+- THE-ZOO still listed the run as un-run.
+- THM-4652 part 4 wording.
+- The independence of the mod-256 checks.
+- `H(P_43)` is feasible in about 2 days with full affine canonical forms.
+- Caveats and citations: Graham–Ringrose; Evans–Pulham–Sheehan for `K_4 = 4a² − 2q`.
 
 ## 9. Reproduction and references
 

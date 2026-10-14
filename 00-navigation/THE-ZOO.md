@@ -138,7 +138,7 @@ Ranked, with location + why. (Full lists in the S439 session letter / task outpu
 
 **Un-run computations (idea filed, never executed):**
 - **HYP-7940** the k=13 tightness sieve (107 primes; the whole k=13 result is conditional on it) — or a cheaper surrogate bound.
-- **HYP-2371** R(31)≈2.596 cluster-expansion prediction (cheap run, falsifiable). **CONFIRMED 2026-10-14 (opus S34): exact H(P_31) gives R(31) = 2.5955119; the rate is c_1 = 3/2 (HYP-9274).**
+- **HYP-2371 (RUN, no longer pending)** R(31)≈2.596 cluster-expansion prediction (cheap run, falsifiable). **CONFIRMED 2026-10-14 (opus S34): exact H(P_31) gives R(31) = 2.5955119; the rate is c_1 = 3/2 (HYP-9274).**
 - **HYP-3122/3113** the quartic-cumulant stabilizer (never computed; completes the (φ⁴)₂ cap law).
 - **HYP-7540** add S₄ (quadruple overlaps) to the moment LP (closes 722/792 r=6 cores).
 - **Uniform r=5** (HYP-7600/7605) — the most-repeated open item; a computable piecewise-linear standoff/ceiling minimization.

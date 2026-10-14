@@ -1406,9 +1406,9 @@ Files: `04-computation/paley_starstar_tail_moment_watson_monad.py` (+`.out`).
 
 Statements `A_{2k} = C_k·p^{k+1}` and `R(p) → e`: UNCHANGED.
 
-## ADDENDUM-9 (opus-2026-10-14-S34): exact H(T_31), the rate c_1 = 3/2, exact run polynomials, and the first arithmetic pattern
+## ADDENDUM (opus-2026-10-14-S34; audited, MISTAKE-609): exact H(T_31), the first-order rate c_1 = 3/2, exact run polynomials, and the first arithmetic pattern
 
-- **Forward item 1 (the sub-leading term C) is answered.**
+- **Forward item 1 (the sub-leading term C), answered at first order.** This is a first-order cluster derivation, not a rigorous uniform asymptotic; the uniform tail is open (HYP-9274 (A)).
   - With the exact `H(T_27) = 418425945688463432031` and `H(T_31) = 19876729650849384218015865`, `R(31) = 2.5955119`, inside HYP-2371's pre-registered interval.
   - The asymptotic coefficient is `c_1 = 3/2`, not the effective `1.40` seen at `p = 31`. First-order derivation: cherry placement `5/2`, two-cherry repulsion `(q−2)(q−9)/((q−4)(q−5)) = 1 − 2/q` giving `+1`, and quartic runs `A_4/(q)_5 = 2/((q−2)(q−4))` giving `−2`.
   - Fits give `1.5016`, and `c_2 ≈ −3.08`.

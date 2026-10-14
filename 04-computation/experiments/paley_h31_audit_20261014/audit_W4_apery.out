@@ -1,0 +1,29 @@
+a_p (pentagonal construction), p < 60: {2: 0, 3: -4, 5: -2, 7: 24, 11: -44, 13: 22, 17: 50, 19: 44, 23: -56, 29: 198, 31: -160, 37: -162, 41: -198, 43: 52, 47: 528, 53: -242, 59: -668}
+(2) Beukers A((p-1)/2) = a(p) mod p^2 with |a(p)| < p^2/2 pins a(p) for 17 <= p <= 1005: all agree
+(3) q =   3 (3 mod 4): brute W =         0;  -(q-1)(a_q+4) =         0;  OK
+(3) q =   5 (1 mod 4): brute W =        -8;  -(q-1)(a_q+4) =        -8;  OK
+(3) q =   7 (3 mod 4): brute W =      -168;  -(q-1)(a_q+4) =      -168;  OK
+(3) q =  11 (3 mod 4): brute W =       400;  -(q-1)(a_q+4) =       400;  OK
+(3) q =  13 (1 mod 4): brute W =      -312;  -(q-1)(a_q+4) =      -312;  OK
+(3) q =  17 (1 mod 4): brute W =      -864;  -(q-1)(a_q+4) =      -864;  OK
+(3) q =  19 (3 mod 4): brute W =      -864;  -(q-1)(a_q+4) =      -864;  OK
+(3) q =  23 (3 mod 4): brute W =      1144;  -(q-1)(a_q+4) =      1144;  OK
+(3) q =  29 (1 mod 4): brute W =     -5656;  -(q-1)(a_q+4) =     -5656;  OK
+(3) q =  31 (3 mod 4): brute W =      4680;  -(q-1)(a_q+4) =      4680;  OK
+(3) q =  37 (1 mod 4): brute W =      5688;  -(q-1)(a_q+4) =      5688;  OK
+(3) q =  41 (1 mod 4): brute W =      7760;  -(q-1)(a_q+4) =      7760;  OK
+(3) q =  43 (3 mod 4): brute W =     -2352;  -(q-1)(a_q+4) =     -2352;  OK
+(3) q =  47 (3 mod 4): brute W =    -24472;  -(q-1)(a_q+4) =    -24472;  OK
+(3) q =  53 (1 mod 4): brute W =     12376;  -(q-1)(a_q+4) =     12376;  OK
+(3) q =  59 (3 mod 4): brute W =     38512;  -(q-1)(a_q+4) =     38512;  OK
+(3) q =  61 (1 mod 4): brute W =    -33240;  -(q-1)(a_q+4) =    -33240;  OK
+(3) q =  67 (3 mod 4): brute W =    -12672;  -(q-1)(a_q+4) =    -12672;  OK
+(3) q = 113 (1 mod 4): brute W =    105056;  -(q-1)(a_q+4) =    105056;  OK
+(3) q = 127 (3 mod 4): brute W =   -177912;  -(q-1)(a_q+4) =   -177912;  OK
+(3) q = 131 (3 mod 4): brute W =    349440;  -(q-1)(a_q+4) =    349440;  OK
+(3) brute-force agreement: True
+(4) O(q^2) reduction, all primes 3 <= q < 1000: W/(q-1) = -a_q - 4 fails at none
+(5) sum_(u != 0) chi(u) g(u)^2 = -a(p) - p (Ahlgren-Ono, Greene normalisation) fails at none
+    max |a_p|/(2 p^1.5) over p < 1000: 0.9666 at p = 271
+(5) chi(-1) sum_{x,y,z} chi(xyz(1-x)(1-y)(1-z)(1-xyz)) = sum_(u!=0) chi(u) g(u)^2 = -a(p) - p for all primes 3 <= p < 100
+(6) GF(27): W = -6864, W/26 = -264.0; -(alpha^3+beta^3) - 4 = -264 (alpha^3+beta^3 = 260); -a_27 - 4 = -156 (a_27 = 152)

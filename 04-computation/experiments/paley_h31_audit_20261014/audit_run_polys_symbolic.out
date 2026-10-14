@@ -1,0 +1,22 @@
+Sigma*(paths [2]) = q*(q - 1)    [2 partitions, 0.4 s]
+Sigma*(paths [3]) = 0    [5 partitions, 0.0 s]
+Sigma*(paths [4]) = 2*q*(q - 3)*(q - 1)    [15 partitions, 0.0 s]
+Sigma*(paths [5]) = 0    [52 partitions, 0.0 s]
+Sigma*(paths [6]) = q*(q - 3)*(q - 1)*(5*q - 29)    [203 partitions, 0.0 s]
+Sigma*(paths [2, 2]) = q*(q - 9)*(q - 3)*(q - 1)    [67 partitions, 0.0 s]
+Sigma*(paths [2, 4]) = 2*q*(q - 13)*(q - 7)*(q - 3)*(q - 1)    [1080 partitions, 0.0 s]
+Sigma*(paths [8]) = 2*q*(q - 7)*(q - 3)*(q - 1)*(7*q - 55)    [4140 partitions, 0.2 s]
+cores met (vertices, edges): count -> {(4, 6): 26}
+   brute force [2] at q = 7: 42; symbolic 42; agree True
+   brute force [2] at q = 11: 110; symbolic 110; agree True
+   brute force [4] at q = 7: 336; symbolic 336; agree True
+   brute force [4] at q = 11: 1760; symbolic 1760; agree True
+   brute force [6] at q = 7: 1008; symbolic 1008; agree True
+   brute force [6] at q = 11: 22880; symbolic 22880; agree True
+   brute force [2, 2] at q = 7: -336; symbolic -336; agree True
+   brute force [2, 2] at q = 11: 1760; symbolic 1760; agree True
+claim for [2]: q*(q - 1) -> identical: True
+claim for [4]: 2*q*(q - 3)*(q - 1) -> identical: True
+claim for [6]: q*(q - 3)*(q - 1)*(5*q - 29) -> identical: True
+claim for [2, 2]: q*(q - 9)*(q - 3)*(q - 1) -> identical: True
+A_8 at q = 19, 23, 31: [10243584, 34327040, 202487040] (THM-438 ADDENDUM-8: 10243584, 34327040, 202487040)

@@ -1,0 +1,21 @@
+moduli (288230376151711717, 288230376151711687, 288230376151711681) prime: [True, True, True]
+
+q = 27: Karp IE over the 2^26 subsets containing 0, weight 27/|S|; 86.9 s
+   residues [203669892329730664, 203669892329774194, 203669892329782900]; CRT(P1,P2) = 418425945688463432031; third modulus consistent: True; H < M/2^20: True
+   claimed H(P_27) = 418425945688463432031; MATCH: True
+   H/|Aff| = H/351 = 1192096711363143681 (remainder 0); N_1 odd: True; N_1 mod 8 = 1; N_1 mod 256 = 1
+   H odd: True;  H mod 702 = 351
+   R(q) = H 2^(q-1)/q! = 2.578788368355  (exact fraction denominator 136968913284328125)
+   H/1053 = 397365570454381227 (remainder 0); mod 8 = 3;  H mod 8424 = 3159
+
+q = 31: Karp IE, Z_31 rotation representatives (69273666 canonical classes, expected (2^q-2)/q = 69273666); 397.1 s
+   residues [29383769208644162, 29383771277481932, 29383771691249486]; CRT(P1,P2) = 19876729650849384218015865; third modulus consistent: True; H < M/2^20: True
+   claimed H(P_31) = 19876729650849384218015865; MATCH: True
+   H/|Aff| = H/465 = 42745655163116955307561 (remainder 0); N_1 odd: True; N_1 mod 8 = 1; N_1 mod 256 = 41
+   H odd: True;  H mod 930 = 465
+   R(q) = H 2^(q-1)/q! = 2.595511945211  (exact fraction denominator 263505041412702261046875)
+   HYP-2371 interval [2.58949, 2.60249]: inside = True;  R - 2.59599 = -0.0004781
+
+real	8m5.138s
+user	0m0.000s
+sys	0m0.046s

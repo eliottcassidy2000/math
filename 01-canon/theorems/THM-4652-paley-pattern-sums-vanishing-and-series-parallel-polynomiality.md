@@ -39,7 +39,7 @@ These sums are the building blocks of every count of patterns in the Paley tourn
    The last sum vanishes because the pairs `(a, b)` and `(b, a)` cancel (`χ(−1) = −1`). For multiplicity `k`, `χ(x)^k = χ(x)` for odd `k` and `= 1` for even `k` when `x ≠ 0`.
 4. `Σ*` is a sum over all injective maps, so it is invariant under relabelling the vertices. Relabelling by `π` gives the same multigraph with `r` edges reversed, so `Σ*(G) = (−1)^r Σ*(G)` by part 1.
    - **`K_m`.** The transposition of two consecutive labels in the low-to-high orientation reverses exactly one edge, the edge between them. For any other orientation, use part 1 first.
-   - **`K_5 − e`, `e = {i, j}`.** Take the transposition of two labels outside `{i, j}`. It reverses one edge (between them), and every other edge is carried to an edge of the pattern; after part 1, the reversal count is odd.
+   - **`K_5 − e`, `e = {i, j}`.** Take the transposition of two labels outside `{i, j}`. The reversal count is odd: one edge between the swapped labels, plus two for each label strictly between them. The Vandermonde formulation below is the clean argument.
    - **`K_5` minus `{i, j}, {i, k}`.** Take the transposition `(j k)`. It fixes the missing pair `{i, j}, {i, k}` as a set and reverses the edge `jk`.
 
    In each case the sign bookkeeping reduces to: the summand is `±χ(Vandermonde)·Π_(missing edges) χ(·)`, and the transposition negates the Vandermonde while fixing the product over the missing edges.
@@ -65,5 +65,6 @@ These sums are the building blocks of every count of patterns in the Paley tourn
 ## Reading
 
 - The first 5-vertex pattern that survives parts 2–4 and is not series-parallel is `K_5` minus two disjoint edges, the wheel `W_4`. There a genuine Hasse–Weil quantity appears.
-- HYP-9274 (B), FINITE-EXACT for all 27 primes `5 <= q <= 109`: `Σ*(W_4) = −q(q−1)(a_q + 4)` for `f = η(2z)⁴η(4z)⁴ = Σ a_n q^n`, the weight-4 level-8 newform of Apéry's `ζ(3)` congruences. Deligne's theorem (the Riemann hypothesis for varieties) bounds it by `|a_q| <= 2q^(3/2)`.
+- HYP-9274 (B) holds for every odd prime (PROVED + CITED: Ahlgren–Ono Lemma 2.2 and Theorem 6, plus the collision correction; codex's wheel packet and the S34 audit). The statement is `Σ*(W_4) = −q(q−1)(a_q + 4)` for `f = η(2z)⁴η(4z)⁴ = Σ a_n q^n`, the weight-4 level-8 newform of Beukers' Apéry-number supercongruence. Deligne's theorem (the Riemann hypothesis for varieties) bounds it by `|a_q| <= 2q^(3/2)`.
+- The same core enters single runs from 10 steps on: `A_10 = poly + 34q(q−1)a_q`.
 - Parts 4–5 explain why every pattern sum computed below `W_4` is a polynomial for Paley tournaments.

@@ -1,0 +1,8 @@
+runs [2, 6] (10 points) at q = 7: symbolic P + C Sigma(W_4) = 0;  brute force = 0;  agree True (0.0 s)
+runs [2, 6] (10 points) at q = 11: symbolic P + C Sigma(W_4) = -70400;  brute force = -70400;  agree True (0.9 s)
+runs [4, 4] (10 points) at q = 7: symbolic P + C Sigma(W_4) = 0;  brute force = 0;  agree True (0.0 s)
+runs [4, 4] (10 points) at q = 11: symbolic P + C Sigma(W_4) = 0;  brute force = 0;  agree True (0.6 s)
+runs [2, 2, 4] (11 points) at q = 7: symbolic P + C Sigma(W_4) = 0;  brute force = 0;  agree True (0.0 s)
+runs [2, 2, 4] (11 points) at q = 11: symbolic P + C Sigma(W_4) = 28160;  brute force = 28160;  agree True (0.9 s)
+runs [2, 2, 2, 2] (12 points) at q = 7: symbolic P + C Sigma(W_4) = 0;  brute force = 0;  agree True (0.0 s)
+runs [2, 2, 2, 2] (12 points) at q = 11: symbolic P + C Sigma(W_4) = 0;  brute force = 0;  agree True (0.0 s)

@@ -17941,3 +17941,48 @@ the ambient space.
   - Label a census column by what the code computes.
   - Check hand tallies against totals.
   - Take search records from the maintained primary list.
+
+## MISTAKE-609 (2026-10-14, opus-2026-10-14-S34 paley_h31_exact_rate_and_apery_wheel_20261014.md, HYP-9274, THM-4652 reading, THM-438 addendum; found by the session's independent adversarial audit and by concurrent codex/tiling-modular-atoms extensions) -- a parity argument applied to quotients where reductions break it, a wrong coefficient for where arithmetic enters R(q), a modular form attributed to the wrong theorem, a known theorem typed as open, and a universality claim the data resolve against
+
+- **Claims (pre-audit checkpoint):**
+  - (E1) the scoped conjecture "A_8 and A_10 are polynomials". A_8 = 2q(q-1)(q-3)(q-7)(7q-55) holds, but A_10 = 2q(q-1)(21q^4 - 639q^3 + 7028q^2 - 32098q + 48662) + 34 q(q-1) a_q.
+  - (E2) "a single run cannot glue into W_4 (four odd vertices)". A 10-step run glues into W_4 plus a length-2 ear, and the ear's middle vertex sums out (chi*chi = 1 - q delta), leaving the W_4 core.
+  - (E3) "the W_4 channel enters R(q) through two runs, about a_q/q^6". Runs (6,2), (4,4), (4,2,2), (2,2,2,2) all enter at the same order with core coefficients -14, -6, 128, -960, netting 1 - R/e containing +7 a_q/q^6.
+  - (E4) "eta(2z)^4 eta(4z)^4 is the form of Apery's irrationality proof of zeta(3)". Beukers' modular irrationality proof is at level 6; the level-8 form is that of Beukers' Apery-number supercongruence (proved by Ahlgren-Ono).
+  - (I) smaller items:
+    - the W_4 identity typed FINITE-EXACT/OPEN, though it is a corollary of Ahlgren-Ono Lemma 2.2 + Theorem 6 with a polynomial collision correction;
+    - "universality" claimed from a q = 27 offset that is ten times the holdout error;
+    - pre-registered intervals rounded inward;
+    - the better of two holdout variants quoted;
+    - "proved here" for a first-order derivation;
+    - an addendum label colliding with an existing one;
+    - the June A_8 values overlooked;
+    - THE-ZOO left stale;
+    - a transposition-parity sentence true only for consecutive labels;
+    - same-algorithm residue checks called independent;
+    - H(P_43) called out of reach (about 2 days with full affine canonical forms).
+- **Why it was wrong:**
+  - (E1, E2) a parity invariant of raw quotients was carried through series reductions, which change vertex parities. The odd-degree count of the reduced core is not the odd-degree count of the trail.
+  - (E3) a single channel was estimated instead of enumerating every run split of the core's edges.
+  - (E4) two papers of Beukers (1987) were conflated.
+  - (I) the literature search covered the Paley side but not Gaussian hypergeometric moment identities, and the fits were described more precisely than their spread allows.
+- **Correct framing:**
+  - A_2, A_4, A_6, A_8 and the two-cherry ratio are PROVED (terminating reduction; the audit's and codex's symbolic engines).
+  - A_10 = poly + 34 q(q-1) a_q is computed by three independent engines (this session's partition-lattice compiler, the audit's engine, tiling-modular-atoms' next-core packet).
+  - The W_4 identity is PROVED for all odd primes, with the Frobenius trace for prime powers.
+  - The leading arithmetic term of 1 - R/e is +7 a_q/q^6.
+  - c_1 = 3/2 is a first-order derivation, and c_1 ... c_4 are universal while R(q) is not.
+  - The intervals are rounded outward.
+- **What survives:**
+  - H(P_27) and H(P_31), reproduced exactly by an independent Karp inclusion-exclusion run;
+  - the confirmation of the pre-registered HYP-2371;
+  - THM-4652;
+  - the c_1 = 3/2 derivation and its exact ingredients;
+  - the transitive-run table;
+  - the K_4 facts.
+- **Lesson:**
+  - Check parity and degree invariants after every reduction step, not on the raw quotient.
+  - Enumerate all decompositions of a core into the counted objects before quoting a leading coefficient.
+  - Check which of an author's papers a form belongs to.
+  - Search the Gaussian hypergeometric literature before typing a character-sum identity as open.
+  - Report fit spreads, not best variants.

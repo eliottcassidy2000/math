@@ -1,0 +1,20 @@
+parts 1-4: 700 random oriented multigraphs (m <= 5, <= 9 edges) at q = [7, 11, 19]: failures = 0
+   zero at all q but not predicted by parts 2-4: 27; examples: [(4, [(3, 2), (2, 3), (0, 3), (1, 3), (0, 1), (1, 2), (2, 3), (1, 0)]), (5, [(2, 1), (0, 3), (2, 0), (1, 2), (0, 3), (4, 3), (3, 1), (3, 4)]), (4, [(1, 2), (0, 1), (2, 1), (0, 3), (2, 0), (3, 2)]), (4, [(1, 3), (2, 1), (2, 3), (0, 1), (2, 3), (3, 0)])]
+   K_5: odd-reversal symmetry (0, 1, 2, 4, 3); Sigma* at [7, 11, 19] = [0, 0, 0]
+   K_5 - e: odd-reversal symmetry (0, 1, 2, 4, 3); Sigma* at [7, 11, 19] = [0, 0, 0]
+   K_5 - 2 adjacent: odd-reversal symmetry (0, 1, 2, 4, 3); Sigma* at [7, 11, 19] = [0, 0, 0]
+   K_5 - 2 disjoint (W_4): odd-reversal symmetry None; Sigma* at [7, 11, 19] = [-1176, 4400, -16416]
+part 5 class-F calculus: 269 random SP multigraphs (<= 6 vertices), predicted Sigma = q(gamma q + beta) vs brute force at q = 7, 11, 19: failures = 0
+   unrestricted Sigma(W_4) at q = 7, 11, 19, 23: [-1302, 3630, -21546, 16698]
+
+Reading: 34 isomorphism classes of simple graphs on 5 vertices
+   non-SP class with 6 edges [(0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 3)]: killed by ['odd-reversal symmetry']; Sigma* at [7, 11, 19] = [0, 0, 0]
+   non-SP class with 7 edges [(0, 1), (0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (2, 3)]: killed by ['odd size', 'odd-reversal symmetry']; Sigma* at [7, 11, 19] = [0, 0, 0]
+   non-SP class with 7 edges [(0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4), (2, 3)]: killed by ['odd size', 'odd-reversal symmetry']; Sigma* at [7, 11, 19] = [0, 0, 0]
+   non-SP class with 8 edges [(0, 1), (0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4), (2, 3)]: killed by ['odd-reversal symmetry']; Sigma* at [7, 11, 19] = [0, 0, 0]
+   non-SP class with 8 edges [(0, 1), (0, 2), (0, 3), (0, 4), (1, 3), (1, 4), (2, 3), (2, 4)]: killed by NOTHING; Sigma* at [7, 11, 19] = [-1176, 4400, -16416]
+   non-SP class with 9 edges [(0, 1), (0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4), (2, 3), (2, 4)]: killed by ['odd size', 'odd-reversal symmetry']; Sigma* at [7, 11, 19] = [0, 0, 0]
+   non-SP class with 10 edges [(0, 1), (0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)]: killed by ['odd-reversal symmetry']; Sigma* at [7, 11, 19] = [0, 0, 0]
+   survivors (non-SP, not killed): [[(0, 1), (0, 2), (0, 3), (0, 4), (1, 3), (1, 4), (2, 3), (2, 4)]]
+
+ALL THM-4652 CHECKS PASSED
