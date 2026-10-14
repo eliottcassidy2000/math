@@ -1,0 +1,418 @@
+{
+  "branches": [
+    {
+      "eligible_count": 332394,
+      "excluded_factor_count": 12147663,
+      "first_eligible_above_cutoff": 10000019,
+      "index_floor": 2,
+      "largest_eligible_below_cutoff": 9999991,
+      "necessary_factor_count_with_lattice": 12147667,
+      "next_allowed_index": 4,
+      "rank_class_at_minimum_index_mod8": 3,
+      "reciprocal_denominator": 18446744073709551616,
+      "reciprocal_lower_numerator": 15098204506717456238,
+      "reciprocal_upper_numerator": 15098204506717788632,
+      "selected_marked_primes": []
+    },
+    {
+      "eligible_count": 166214,
+      "excluded_factor_count": 12654434,
+      "first_eligible_above_cutoff": 10000019,
+      "index_floor": 2,
+      "largest_eligible_below_cutoff": 9999971,
+      "necessary_factor_count_with_lattice": 12654435,
+      "next_allowed_index": 4,
+      "rank_class_at_minimum_index_mod8": 3,
+      "reciprocal_denominator": 18446744073709551616,
+      "reciprocal_lower_numerator": 13856830568098469839,
+      "reciprocal_upper_numerator": 13856830568098636053,
+      "selected_marked_primes": [
+        3
+      ]
+    },
+    {
+      "eligible_count": 277037,
+      "excluded_factor_count": 12066523,
+      "first_eligible_above_cutoff": 10000079,
+      "index_floor": 2,
+      "largest_eligible_below_cutoff": 9999971,
+      "necessary_factor_count_with_lattice": 12066531,
+      "next_allowed_index": 4,
+      "rank_class_at_minimum_index_mod8": 3,
+      "reciprocal_denominator": 18446744073709551616,
+      "reciprocal_lower_numerator": 15145895531465252567,
+      "reciprocal_upper_numerator": 15145895531465529604,
+      "selected_marked_primes": [
+        7
+      ]
+    },
+    {
+      "eligible_count": 299199,
+      "excluded_factor_count": 12388368,
+      "first_eligible_above_cutoff": 10000019,
+      "index_floor": 2,
+      "largest_eligible_below_cutoff": 9999971,
+      "necessary_factor_count_with_lattice": 12388371,
+      "next_allowed_index": 4,
+      "rank_class_at_minimum_index_mod8": 3,
+      "reciprocal_denominator": 18446744073709551616,
+      "reciprocal_lower_numerator": 14592949398821475390,
+      "reciprocal_upper_numerator": 14592949398821774589,
+      "selected_marked_primes": [
+        11
+      ]
+    },
+    {
+      "eligible_count": 149580,
+      "excluded_factor_count": 12420665,
+      "first_eligible_above_cutoff": 10000019,
+      "index_floor": 2,
+      "largest_eligible_below_cutoff": 9999971,
+      "necessary_factor_count_with_lattice": 12420667,
+      "next_allowed_index": 4,
+      "rank_class_at_minimum_index_mod8": 3,
+      "reciprocal_denominator": 18446744073709551616,
+      "reciprocal_lower_numerator": 14257373065306499117,
+      "reciprocal_upper_numerator": 14257373065306648697,
+      "selected_marked_primes": [
+        3,
+        11
+      ]
+    },
+    {
+      "eligible_count": 249349,
+      "excluded_factor_count": 12222730,
+      "first_eligible_above_cutoff": 10000139,
+      "index_floor": 2,
+      "largest_eligible_below_cutoff": 9999971,
+      "necessary_factor_count_with_lattice": 12222731,
+      "next_allowed_index": 4,
+      "rank_class_at_minimum_index_mod8": 3,
+      "reciprocal_denominator": 18446744073709551616,
+      "reciprocal_lower_numerator": 14806803959786373368,
+      "reciprocal_upper_numerator": 14806803959786622717,
+      "selected_marked_primes": [
+        7,
+        11
+      ]
+    },
+    {
+      "eligible_count": 313996,
+      "excluded_factor_count": 11946286,
+      "first_eligible_above_cutoff": 10000019,
+      "index_floor": 2,
+      "largest_eligible_below_cutoff": 9999991,
+      "necessary_factor_count_with_lattice": 11946291,
+      "next_allowed_index": 4,
+      "rank_class_at_minimum_index_mod8": 3,
+      "reciprocal_denominator": 18446744073709551616,
+      "reciprocal_lower_numerator": 15435741044094248752,
+      "reciprocal_upper_numerator": 15435741044094562748,
+      "selected_marked_primes": [
+        19
+      ]
+    },
+    {
+      "eligible_count": 261735,
+      "excluded_factor_count": 11833260,
+      "first_eligible_above_cutoff": 10000079,
+      "index_floor": 2,
+      "largest_eligible_below_cutoff": 9999971,
+      "necessary_factor_count_with_lattice": 11833267,
+      "next_allowed_index": 4,
+      "rank_class_at_minimum_index_mod8": 3,
+      "reciprocal_denominator": 18446744073709551616,
+      "reciprocal_lower_numerator": 15547960639220164431,
+      "reciprocal_upper_numerator": 15547960639220426166,
+      "selected_marked_primes": [
+        7,
+        19
+      ]
+    },
+    {
+      "eligible_count": 282664,
+      "excluded_factor_count": 12142279,
+      "first_eligible_above_cutoff": 10000019,
+      "index_floor": 2,
+      "largest_eligible_below_cutoff": 9999971,
+      "necessary_factor_count_with_lattice": 12142283,
+      "next_allowed_index": 4,
+      "rank_class_at_minimum_index_mod8": 3,
+      "reciprocal_denominator": 18446744073709551616,
+      "reciprocal_lower_numerator": 15016400960137255860,
+      "reciprocal_upper_numerator": 15016400960137538524,
+      "selected_marked_primes": [
+        11,
+        19
+      ]
+    },
+    {
+      "eligible_count": 235602,
+      "excluded_factor_count": 11951565,
+      "first_eligible_above_cutoff": 10000139,
+      "index_floor": 2,
+      "largest_eligible_below_cutoff": 9999971,
+      "necessary_factor_count_with_lattice": 11951571,
+      "next_allowed_index": 4,
+      "rank_class_at_minimum_index_mod8": 3,
+      "reciprocal_denominator": 18446744073709551616,
+      "reciprocal_lower_numerator": 15281650336708078681,
+      "reciprocal_upper_numerator": 15281650336708314283,
+      "selected_marked_primes": [
+        7,
+        11,
+        19
+      ]
+    }
+  ],
+  "checks": 21043,
+  "controls": {
+    "hostile_nonintegral_index": "1874/8911",
+    "hostile_source": 8911,
+    "marked_graph_edges": [
+      [
+        3,
+        7
+      ],
+      [
+        3,
+        19
+      ]
+    ],
+    "marked_independent_sets": 10,
+    "trial_primality_interval": [
+      2,
+      20000
+    ]
+  },
+  "cutoff": 10000000,
+  "global_excluded_factor_count": 11833260,
+  "global_necessary_factor_count_with_lattice": 11833267,
+  "marked_primes": [
+    3,
+    7,
+    11,
+    19
+  ],
+  "necessary_Mersenne_exponent_if_joint": 18736007,
+  "odd_exponent_Mersenne_capacity": {
+    "branches": [
+      {
+        "eligible_count": 166233,
+        "excluded_factor_count": 36756197,
+        "first_eligible_above_cutoff": 10000079,
+        "index_floor": 4,
+        "largest_eligible_below_cutoff": 9999991,
+        "necessary_factor_count_with_lattice": 36756205,
+        "next_allowed_index": 8,
+        "rank_class_at_minimum_index_mod8": 5,
+        "reciprocal_denominator": 18446744073709551616,
+        "reciprocal_lower_numerator": 6290937990202105629,
+        "reciprocal_upper_numerator": 6290937990202271862,
+        "selected_marked_primes": []
+      },
+      {
+        "eligible_count": 138540,
+        "excluded_factor_count": 35971494,
+        "first_eligible_above_cutoff": 10000079,
+        "index_floor": 4,
+        "largest_eligible_below_cutoff": 9999943,
+        "necessary_factor_count_with_lattice": 35971501,
+        "next_allowed_index": 8,
+        "rank_class_at_minimum_index_mod8": 5,
+        "reciprocal_denominator": 18446744073709551616,
+        "reciprocal_lower_numerator": 7687364315607494333,
+        "reciprocal_upper_numerator": 7687364315607632873,
+        "selected_marked_primes": [
+          7
+        ]
+      },
+      {
+        "eligible_count": 158740,
+        "excluded_factor_count": 36428460,
+        "first_eligible_above_cutoff": 10000103,
+        "index_floor": 4,
+        "largest_eligible_below_cutoff": 9999991,
+        "necessary_factor_count_with_lattice": 36428461,
+        "next_allowed_index": 8,
+        "rank_class_at_minimum_index_mod8": 5,
+        "reciprocal_denominator": 18446744073709551616,
+        "reciprocal_lower_numerator": 6881840802942343212,
+        "reciprocal_upper_numerator": 6881840802942501952,
+        "selected_marked_primes": [
+          23
+        ]
+      },
+      {
+        "eligible_count": 132274,
+        "excluded_factor_count": 35623488,
+        "first_eligible_above_cutoff": 10000223,
+        "index_floor": 4,
+        "largest_eligible_below_cutoff": 9999943,
+        "necessary_factor_count_with_lattice": 35623493,
+        "next_allowed_index": 8,
+        "rank_class_at_minimum_index_mod8": 5,
+        "reciprocal_denominator": 18446744073709551616,
+        "reciprocal_lower_numerator": 8318701949380217547,
+        "reciprocal_upper_numerator": 8318701949380349821,
+        "selected_marked_primes": [
+          7,
+          23
+        ]
+      },
+      {
+        "eligible_count": 160706,
+        "excluded_factor_count": 36528847,
+        "first_eligible_above_cutoff": 10000079,
+        "index_floor": 4,
+        "largest_eligible_below_cutoff": 9999991,
+        "necessary_factor_count_with_lattice": 36528853,
+        "next_allowed_index": 8,
+        "rank_class_at_minimum_index_mod8": 5,
+        "reciprocal_denominator": 18446744073709551616,
+        "reciprocal_lower_numerator": 6700126658887748509,
+        "reciprocal_upper_numerator": 6700126658887909215,
+        "selected_marked_primes": [
+          31
+        ]
+      },
+      {
+        "eligible_count": 133924,
+        "excluded_factor_count": 35729331,
+        "first_eligible_above_cutoff": 10000079,
+        "index_floor": 4,
+        "largest_eligible_below_cutoff": 9999943,
+        "necessary_factor_count_with_lattice": 35729333,
+        "next_allowed_index": 8,
+        "rank_class_at_minimum_index_mod8": 5,
+        "reciprocal_denominator": 18446744073709551616,
+        "reciprocal_lower_numerator": 8125558393008567059,
+        "reciprocal_upper_numerator": 8125558393008700983,
+        "selected_marked_primes": [
+          7,
+          31
+        ]
+      },
+      {
+        "eligible_count": 153464,
+        "excluded_factor_count": 36199301,
+        "first_eligible_above_cutoff": 10000103,
+        "index_floor": 4,
+        "largest_eligible_below_cutoff": 9999991,
+        "necessary_factor_count_with_lattice": 36199309,
+        "next_allowed_index": 8,
+        "rank_class_at_minimum_index_mod8": 5,
+        "reciprocal_denominator": 18446744073709551616,
+        "reciprocal_lower_numerator": 7294827564890004872,
+        "reciprocal_upper_numerator": 7294827564890158336,
+        "selected_marked_primes": [
+          23,
+          31
+        ]
+      },
+      {
+        "eligible_count": 127864,
+        "excluded_factor_count": 35379762,
+        "first_eligible_above_cutoff": 10000223,
+        "index_floor": 4,
+        "largest_eligible_below_cutoff": 9999943,
+        "necessary_factor_count_with_lattice": 35379765,
+        "next_allowed_index": 8,
+        "rank_class_at_minimum_index_mod8": 5,
+        "reciprocal_denominator": 18446744073709551616,
+        "reciprocal_lower_numerator": 8760151626554928649,
+        "reciprocal_upper_numerator": 8760151626555056513,
+        "selected_marked_primes": [
+          7,
+          23,
+          31
+        ]
+      },
+      {
+        "eligible_count": 162604,
+        "excluded_factor_count": 36587117,
+        "first_eligible_above_cutoff": 10000079,
+        "index_floor": 4,
+        "largest_eligible_below_cutoff": 9999991,
+        "necessary_factor_count_with_lattice": 36587125,
+        "next_allowed_index": 8,
+        "rank_class_at_minimum_index_mod8": 5,
+        "reciprocal_denominator": 18446744073709551616,
+        "reciprocal_lower_numerator": 6596139902860326949,
+        "reciprocal_upper_numerator": 6596139902860489553,
+        "selected_marked_primes": [
+          47
+        ]
+      },
+      {
+        "eligible_count": 135522,
+        "excluded_factor_count": 35796728,
+        "first_eligible_above_cutoff": 10000079,
+        "index_floor": 4,
+        "largest_eligible_below_cutoff": 9999943,
+        "necessary_factor_count_with_lattice": 35796733,
+        "next_allowed_index": 8,
+        "rank_class_at_minimum_index_mod8": 5,
+        "reciprocal_denominator": 18446744073709551616,
+        "reciprocal_lower_numerator": 8004181129576064854,
+        "reciprocal_upper_numerator": 8004181129576200376,
+        "selected_marked_primes": [
+          7,
+          47
+        ]
+      },
+      {
+        "eligible_count": 157191,
+        "excluded_factor_count": 36358563,
+        "first_eligible_above_cutoff": 10000079,
+        "index_floor": 4,
+        "largest_eligible_below_cutoff": 9999991,
+        "necessary_factor_count_with_lattice": 36358565,
+        "next_allowed_index": 8,
+        "rank_class_at_minimum_index_mod8": 5,
+        "reciprocal_denominator": 18446744073709551616,
+        "reciprocal_lower_numerator": 7007758930052704570,
+        "reciprocal_upper_numerator": 7007758930052861761,
+        "selected_marked_primes": [
+          31,
+          47
+        ]
+      },
+      {
+        "eligible_count": 131000,
+        "excluded_factor_count": 35553887,
+        "first_eligible_above_cutoff": 10000079,
+        "index_floor": 4,
+        "largest_eligible_below_cutoff": 9999943,
+        "necessary_factor_count_with_lattice": 35553893,
+        "next_allowed_index": 8,
+        "rank_class_at_minimum_index_mod8": 5,
+        "reciprocal_denominator": 18446744073709551616,
+        "reciprocal_lower_numerator": 8443797631705037586,
+        "reciprocal_upper_numerator": 8443797631705168586,
+        "selected_marked_primes": [
+          7,
+          31,
+          47
+        ]
+      }
+    ],
+    "hypotheses": "Full joint target M_E, E odd>=3; primes7mod8, index0mod4",
+    "marked_graph_edges": [
+      [
+        23,
+        47
+      ]
+    ],
+    "marked_primes": [
+      7,
+      23,
+      31,
+      47
+    ],
+    "necessary_factor_count_with_lattice": 35379765,
+    "necessary_odd_exponent": 99063343
+  },
+  "scope": "Full Giuga plus Korselt, N=3 mod4; every larger prime handled by tail bound",
+  "status": "PROVED conditional capacity; FINITE-EXACT prime census; no ROOT claim"
+}
