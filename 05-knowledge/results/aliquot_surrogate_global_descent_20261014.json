@@ -1,0 +1,234 @@
+{
+  "F": "For positive even n=x*p with exact dyadic core x, F(n)=(x-1)*p+2*x-1",
+  "actual_aliquot_consequence": "Every finite cycle entirely in even prime-odd-part chambers is constant",
+  "bounded_branch_checks": {
+    "counts": {
+      "cubic_48_escape": 1,
+      "cubic_power_escape": 2,
+      "explicit_terminal_exception": 5,
+      "fixed": 5,
+      "immediate_descent": 1922,
+      "power_descent": 8,
+      "q_at_least_three": 84,
+      "quadratic_power_escape": 4,
+      "r_at_least_four_y": 7,
+      "r_less_than_y": 8,
+      "r_twice_y": 2
+    },
+    "even_inputs": 2048,
+    "first_examples": {
+      "cubic_48_escape": {
+        "case": "cubic_48_escape",
+        "endpoint": 46,
+        "n": 48,
+        "orbit_block": [
+          48,
+          76,
+          64,
+          190,
+          98,
+          52,
+          46
+        ],
+        "steps": 6
+      },
+      "cubic_power_escape": {
+        "case": "cubic_power_escape",
+        "endpoint": 388,
+        "n": 448,
+        "orbit_block": [
+          448,
+          568,
+          512,
+          1534,
+          770,
+          388
+        ],
+        "steps": 5
+      },
+      "explicit_terminal_exception": {
+        "case": "explicit_terminal_exception",
+        "endpoint": 2,
+        "n": 2,
+        "steps": 0
+      },
+      "fixed": {
+        "case": "fixed",
+        "endpoint": 6,
+        "n": 6,
+        "steps": 0
+      },
+      "immediate_descent": {
+        "case": "immediate_descent",
+        "endpoint": 8,
+        "n": 10,
+        "orbit_block": [
+          10,
+          8
+        ],
+        "steps": 1
+      },
+      "power_descent": {
+        "case": "power_descent",
+        "endpoint": 28,
+        "n": 32,
+        "orbit_block": [
+          32,
+          94,
+          50,
+          28
+        ],
+        "steps": 3
+      },
+      "q_at_least_three": {
+        "case": "q_at_least_three",
+        "endpoint": 14,
+        "n": 20,
+        "orbit_block": [
+          20,
+          22,
+          14
+        ],
+        "steps": 2
+      },
+      "quadratic_power_escape": {
+        "case": "quadratic_power_escape",
+        "endpoint": 52,
+        "n": 56,
+        "orbit_block": [
+          56,
+          64,
+          190,
+          98,
+          52
+        ],
+        "steps": 4
+      },
+      "r_at_least_four_y": {
+        "case": "r_at_least_four_y",
+        "endpoint": 190,
+        "n": 192,
+        "orbit_block": [
+          192,
+          316,
+          244,
+          190
+        ],
+        "steps": 3
+      },
+      "r_less_than_y": {
+        "case": "r_less_than_y",
+        "endpoint": 20,
+        "n": 24,
+        "orbit_block": [
+          24,
+          36,
+          34,
+          20
+        ],
+        "steps": 3
+      },
+      "r_twice_y": {
+        "case": "r_twice_y",
+        "endpoint": 82,
+        "n": 96,
+        "orbit_block": [
+          96,
+          156,
+          124,
+          100,
+          82
+        ],
+        "steps": 4
+      }
+    },
+    "input_bound": 4096,
+    "purpose": "Branch regression inside the predecessor window, not a cycle census"
+  },
+  "coarse_bounds": {
+    "every_orbit_value_at_most": "729*n",
+    "first_terminal_entry_steps_at_most": "3*n"
+  },
+  "descent_lemma": "Every positive even n is fixed, is in {2,4,8,12,16}, or has F^j(n)<n for 1<=j<=6",
+  "explicit_orbits": {
+    "cycles": [
+      [
+        8,
+        22,
+        14,
+        10
+      ],
+      [
+        16,
+        46,
+        26
+      ]
+    ],
+    "exceptional_chains": [
+      [
+        2,
+        4,
+        10
+      ],
+      [
+        4,
+        10
+      ],
+      [
+        12,
+        16
+      ],
+      [
+        48,
+        76,
+        64,
+        190,
+        98,
+        52,
+        46
+      ]
+    ],
+    "surrogate_only_fixed_example": {
+      "n": 120,
+      "odd_part": 15
+    }
+  },
+  "fixed_points": "x*(2*x-1) for dyadic x>=2",
+  "novelty": "Independent elementary derivation; global novelty unconfirmed",
+  "scope_exclusions": [
+    "general aliquot convergence",
+    "cycles with odd members",
+    "cycles with composite odd parts"
+  ],
+  "status": "Global eventual periodicity and complete F-cycle classification proved",
+  "symbolic_certificates": {
+    "identities": {
+      "R_at_least_four_bound": true,
+      "R_two_fourth_difference": true,
+      "R_two_third_iterate": true,
+      "cubic_escape_positive": true,
+      "equal_cores_power_hit": true,
+      "first_edge": true,
+      "power_first_edge": true,
+      "power_second_edge": true,
+      "power_third_edge": true,
+      "q_one_second_iterate": true,
+      "quadratic_escape_positive": true,
+      "r_greater_y_third_difference": true,
+      "r_less_y_strict_bound": true,
+      "r_less_y_third_difference": true,
+      "r_less_y_upper_bound_gap": true,
+      "two_step_difference": true
+    },
+    "identity_count": 16,
+    "inequality_domains": {
+      "R_at_least_four": "y>=4, R=r/y>=4",
+      "R_two": "y>=4",
+      "cubic_escape": "y>=8",
+      "quadratic_escape": "x>=8",
+      "r_less_y": "y>=4, 2<=r<=y/2",
+      "two_step": "q>=3, x>=2, y>=2, r=x/y>=2"
+    },
+    "ring": "Z[r,y,q]"
+  }
+}
