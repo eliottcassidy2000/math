@@ -1,0 +1,135 @@
+{
+  "checks": 8522665,
+  "derived_with_no_discovery": [
+    6126,
+    6130,
+    18267,
+    18270,
+    18274
+  ],
+  "imported_seed_records": {
+    "6125": {
+      "cost": 51712,
+      "peak_bits": 9709,
+      "rank": 28762
+    },
+    "18269": {
+      "cost": 161309,
+      "peak_bits": 28956,
+      "rank": 90248
+    },
+    "46941": {
+      "cost": 405932,
+      "peak_bits": 74402,
+      "rank": 226498
+    },
+    "98477": {
+      "cost": 852008,
+      "peak_bits": 156086,
+      "rank": 475425
+    }
+  },
+  "inverse_universes": {
+    "generator_length_le_8": 9840,
+    "mersenne_to_smaller_mersenne_pairs": 0,
+    "ordinary_length_le_8": 953
+  },
+  "open": "Universal guard coverage and ROOT for arbitrary phase members; no orbit search used",
+  "seeds_reauthenticated_this_run": [
+    6125,
+    18269
+  ],
+  "source_owned_root_words": [
+    {
+      "cost": 51712,
+      "cost_minus_exponent": 45587,
+      "endpoint": 1,
+      "exponent": 6125,
+      "peak_bits": 9709,
+      "rank": 28762,
+      "word_json_sha256": "55ce094b336334ee60e2fe6a29cbb15fc4e7b374cfe8cf5a709bc3478e462323"
+    },
+    {
+      "cost": 51713,
+      "cost_minus_exponent": 45587,
+      "endpoint": 1,
+      "exponent": 6126,
+      "peak_bits": 9709,
+      "rank": 28762,
+      "word_json_sha256": "dcee089376ff03d875449a48e30e1e64b05fc90ee4dd3ee834dfc74a2a13f132"
+    },
+    {
+      "cost": 51716,
+      "cost_minus_exponent": 45587,
+      "endpoint": 1,
+      "exponent": 6129,
+      "peak_bits": 9714,
+      "rank": 28762,
+      "word_json_sha256": "af76682ca29ea12a5cfb213638e1dcb9f9d0ec02e953660034355436ce493cdc"
+    },
+    {
+      "cost": 51717,
+      "cost_minus_exponent": 45587,
+      "endpoint": 1,
+      "exponent": 6130,
+      "peak_bits": 9716,
+      "rank": 28762,
+      "word_json_sha256": "6523b341b0ce5eb1b534336ad0c3f890e701289fddff722faa25787a3bd88322"
+    },
+    {
+      "cost": 161307,
+      "cost_minus_exponent": 143040,
+      "endpoint": 1,
+      "exponent": 18267,
+      "peak_bits": 28952,
+      "rank": 90248,
+      "word_json_sha256": "a78091321fb8097cee83fa8e9f8be865ef5da6e3ada532946766bf2c084bd3e9"
+    },
+    {
+      "cost": 161308,
+      "cost_minus_exponent": 143040,
+      "endpoint": 1,
+      "exponent": 18268,
+      "peak_bits": 28954,
+      "rank": 90248,
+      "word_json_sha256": "b587a1d807e53ba2438bff6fdbf7f4f8f91c4c968a7a0f388a9719570f63ee70"
+    },
+    {
+      "cost": 161309,
+      "cost_minus_exponent": 143040,
+      "endpoint": 1,
+      "exponent": 18269,
+      "peak_bits": 28956,
+      "rank": 90248,
+      "word_json_sha256": "9b00417620a24bf44402da48004ce88b6ed3f9c4b1acbf2c90b4cbcd2b44f2ec"
+    },
+    {
+      "cost": 161310,
+      "cost_minus_exponent": 143040,
+      "endpoint": 1,
+      "exponent": 18270,
+      "peak_bits": 28957,
+      "rank": 90248,
+      "word_json_sha256": "adc96e26eac5b8b600b74462a1306b2d20bca04ba98eab956209ab17bf1d1e1c"
+    },
+    {
+      "cost": 161313,
+      "cost_minus_exponent": 143040,
+      "endpoint": 1,
+      "exponent": 18273,
+      "peak_bits": 28962,
+      "rank": 90248,
+      "word_json_sha256": "60ef59cda79b183e42c648c4bee78bd089bc55ac215e14d4e38bb2d904a49f8f"
+    },
+    {
+      "cost": 161314,
+      "cost_minus_exponent": 143040,
+      "endpoint": 1,
+      "exponent": 18274,
+      "peak_bits": 28964,
+      "rank": 90248,
+      "word_json_sha256": "1dbc65fe7bf81df75a542d2f98ceab8ddd89694a687c9c34feb03cb740c372d5"
+    }
+  ],
+  "status": "PROVED scoped source-preserving transport and all-exponent fixed-word test"
+}

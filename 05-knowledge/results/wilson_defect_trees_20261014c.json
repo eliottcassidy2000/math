@@ -1,0 +1,186 @@
+{
+  "checks": 13754,
+  "f3_irreducible_cubic_census": [
+    [
+      [
+        1,
+        0,
+        2,
+        1
+      ],
+      false
+    ],
+    [
+      [
+        1,
+        1,
+        2,
+        1
+      ],
+      false
+    ],
+    [
+      [
+        1,
+        2,
+        0,
+        1
+      ],
+      true
+    ],
+    [
+      [
+        1,
+        2,
+        1,
+        1
+      ],
+      false
+    ],
+    [
+      [
+        2,
+        0,
+        1,
+        1
+      ],
+      false
+    ],
+    [
+      [
+        2,
+        1,
+        1,
+        1
+      ],
+      false
+    ],
+    [
+      [
+        2,
+        2,
+        0,
+        1
+      ],
+      true
+    ],
+    [
+      [
+        2,
+        2,
+        2,
+        1
+      ],
+      false
+    ]
+  ],
+  "f3_negative": [
+    1,
+    2,
+    1,
+    1
+  ],
+  "f3_positive": [
+    2,
+    2,
+    0,
+    1
+  ],
+  "independent_full_section_counts": [
+    [
+      3,
+      2,
+      3
+    ],
+    [
+      3,
+      3,
+      9
+    ],
+    [
+      3,
+      4,
+      27
+    ],
+    [
+      3,
+      5,
+      81
+    ],
+    [
+      5,
+      2,
+      125
+    ]
+  ],
+  "malformed_controls": 20,
+  "remainder_two_sources": [
+    3,
+    4
+  ],
+  "remainder_universe": [
+    2,
+    2000
+  ],
+  "scope": "Corrected sections vary representatives; they do not prove a fixed prime Wilson, a fixed Collatz source native, or ROOT coverage.",
+  "shifted_wilson_sources": [
+    3,
+    11,
+    561
+  ],
+  "status": "PROVED scoped classifications and reversible section tree; global integer Wilson distribution OPEN",
+  "successor_marker": {
+    "lambda": 15200,
+    "lambda_plus_one": "27*563",
+    "source": 684106401
+  },
+  "teichmueller5_mod25": [
+    1,
+    7,
+    18,
+    24
+  ],
+  "ternary_depth2_sections": [
+    [
+      1,
+      8
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      7,
+      5
+    ]
+  ],
+  "ternary_level_counts_depth1_through8": [
+    1,
+    3,
+    9,
+    27,
+    81,
+    243,
+    729,
+    2187
+  ],
+  "unit_product_universe": [
+    2,
+    500
+  ],
+  "wilson_prime_and_next_digit": [
+    [
+      5,
+      1
+    ],
+    [
+      13,
+      4
+    ],
+    [
+      563,
+      290
+    ]
+  ],
+  "wilson_prime_bound": 2000
+}
