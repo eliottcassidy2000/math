@@ -1,0 +1,186 @@
+{
+  "clutch_tests": [
+    {
+      "N": 0,
+      "boundary_order": 3,
+      "degree": 6,
+      "independent_resultant_checked": true,
+      "interior_resultant_multiplicity": 3,
+      "leading_coefficient": 64
+    },
+    {
+      "N": 1,
+      "boundary_order": 3,
+      "degree": 7,
+      "independent_resultant_checked": true,
+      "interior_resultant_multiplicity": 4,
+      "leading_coefficient": -8
+    },
+    {
+      "N": 2,
+      "boundary_order": 3,
+      "degree": 12,
+      "independent_resultant_checked": true,
+      "interior_resultant_multiplicity": 9,
+      "leading_coefficient": -96
+    },
+    {
+      "N": 3,
+      "boundary_order": 3,
+      "degree": 17,
+      "independent_resultant_checked": true,
+      "interior_resultant_multiplicity": 14,
+      "leading_coefficient": -240
+    },
+    {
+      "N": 4,
+      "boundary_order": 3,
+      "degree": 22,
+      "independent_resultant_checked": true,
+      "interior_resultant_multiplicity": 19,
+      "leading_coefficient": -448
+    },
+    {
+      "N": 5,
+      "boundary_order": 3,
+      "degree": 27,
+      "independent_resultant_checked": true,
+      "interior_resultant_multiplicity": 24,
+      "leading_coefficient": -720
+    },
+    {
+      "N": 6,
+      "boundary_order": 3,
+      "degree": 32,
+      "independent_resultant_checked": true,
+      "interior_resultant_multiplicity": 29,
+      "leading_coefficient": -1056
+    },
+    {
+      "N": 7,
+      "boundary_order": 3,
+      "degree": 37,
+      "independent_resultant_checked": true,
+      "interior_resultant_multiplicity": 34,
+      "leading_coefficient": -1456
+    },
+    {
+      "N": 8,
+      "boundary_order": 3,
+      "degree": 42,
+      "independent_resultant_checked": true,
+      "interior_resultant_multiplicity": 39,
+      "leading_coefficient": -1920
+    }
+  ],
+  "hostiles": {
+    "cover_defect": "unramified-at-escape Kummer base change multiplies escape mass by its degree, so normalized defect is unchanged",
+    "even_n_local_class": {
+      "delta": 47,
+      "mod8": 7,
+      "n": 2
+    },
+    "fresh_factor_does_not_force_quadratic_extension": "3+1=2^2; sqrt(4) is rational"
+  },
+  "odd_euclid_tower": [
+    {
+      "delta": 11,
+      "global_field_degree": 4,
+      "local_2adic_field": "Q_2(sqrt(3))",
+      "n": 1,
+      "pairwise_coprime": true,
+      "stage": 1
+    },
+    {
+      "delta": 1451,
+      "global_field_degree": 8,
+      "local_2adic_field": "Q_2(sqrt(3))",
+      "n": 11,
+      "pairwise_coprime": true,
+      "stage": 2
+    },
+    {
+      "delta": 3057042251,
+      "global_field_degree": 16,
+      "local_2adic_field": "Q_2(sqrt(3))",
+      "n": 15961,
+      "pairwise_coprime": true,
+      "stage": 3
+    }
+  ],
+  "rigid_hinges": [
+    {
+      "cross_edges": 1,
+      "delta": 11,
+      "edges": 11,
+      "four_colouring_checked": true,
+      "n": 1,
+      "three_colour_obstruction": "triangle propagation forces both tips to equal the common origin",
+      "vertices": 7
+    },
+    {
+      "cross_edges": 1,
+      "delta": 47,
+      "edges": 33,
+      "four_colouring_checked": true,
+      "n": 2,
+      "three_colour_obstruction": "triangle propagation forces both tips to equal the common origin",
+      "vertices": 17
+    },
+    {
+      "cross_edges": 1,
+      "delta": 107,
+      "edges": 67,
+      "four_colouring_checked": true,
+      "n": 3,
+      "three_colour_obstruction": "triangle propagation forces both tips to equal the common origin",
+      "vertices": 31
+    },
+    {
+      "cross_edges": 1,
+      "delta": 191,
+      "edges": 113,
+      "four_colouring_checked": true,
+      "n": 4,
+      "three_colour_obstruction": "triangle propagation forces both tips to equal the common origin",
+      "vertices": 49
+    },
+    {
+      "cross_edges": 1,
+      "delta": 299,
+      "edges": 171,
+      "four_colouring_checked": true,
+      "n": 5,
+      "three_colour_obstruction": "triangle propagation forces both tips to equal the common origin",
+      "vertices": 71
+    },
+    {
+      "cross_edges": 1,
+      "delta": 431,
+      "edges": 241,
+      "four_colouring_checked": true,
+      "n": 6,
+      "three_colour_obstruction": "triangle propagation forces both tips to equal the common origin",
+      "vertices": 97
+    },
+    {
+      "cross_edges": 1,
+      "delta": 587,
+      "edges": 323,
+      "four_colouring_checked": true,
+      "n": 7,
+      "three_colour_obstruction": "triangle propagation forces both tips to equal the common origin",
+      "vertices": 127
+    },
+    {
+      "cross_edges": 1,
+      "delta": 767,
+      "edges": 417,
+      "four_colouring_checked": true,
+      "n": 8,
+      "three_colour_obstruction": "triangle propagation forces both tips to equal the common origin",
+      "vertices": 161
+    }
+  ],
+  "scope": "finite exact checks; general statements are proved in the companion note; hypotheses remain open"
+}
