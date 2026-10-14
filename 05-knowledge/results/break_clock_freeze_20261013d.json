@@ -1,0 +1,116 @@
+{
+  "status": "Self-audit with independent arithmetic controls; deterministic universal Collatz energy remains OPEN",
+  "incoming_commits": [
+    "58b8699d89",
+    "bd3d32cc31"
+  ],
+  "base_commit": "f4a3abd638778a148f4aa14f0960a3e6607b3df1",
+  "prior_checkpoint_hashes_verified": 8,
+  "local_links_checked": 9,
+  "normal_and_optimized_audits_identical": true,
+  "native_source_jump_checks": 134217727,
+  "independent_packed_source_parities_checked": 67108864,
+  "complete_dyadic_source_moment_rows": 27,
+  "original_census_fields_reproduced_after_adding_moments": true,
+  "finite_controls": {
+    "status": "FINITE-EXACT controls on arbitrary typed labels; artificial hostiles are not Collatz trajectories",
+    "ternary_words_length_8": 6561,
+    "plateau_energy_checks": 13122,
+    "clock_hostile": {
+      "X": 32,
+      "breaks_A": [
+        34,
+        35,
+        59,
+        61
+      ],
+      "breaks_B": [
+        55,
+        56,
+        59,
+        61
+      ],
+      "current": [
+        1,
+        1,
+        -1,
+        -1
+      ],
+      "energy_A": 417,
+      "energy_B": 81,
+      "difference": 336
+    },
+    "iid_model": [
+      {
+        "m": 1,
+        "expectation_H_tilde_square": "8/3"
+      },
+      {
+        "m": 2,
+        "expectation_H_tilde_square": "16/3"
+      },
+      {
+        "m": 3,
+        "expectation_H_tilde_square": "8"
+      },
+      {
+        "m": 4,
+        "expectation_H_tilde_square": "32/3"
+      },
+      {
+        "m": 5,
+        "expectation_H_tilde_square": "40/3"
+      },
+      {
+        "m": 6,
+        "expectation_H_tilde_square": "16"
+      },
+      {
+        "m": 7,
+        "expectation_H_tilde_square": "56/3"
+      },
+      {
+        "m": 8,
+        "expectation_H_tilde_square": "64/3"
+      }
+    ],
+    "source_clock_grammar": {
+      "half_integral_words_length_6": 729,
+      "cut_and_variance_checks": 3645,
+      "three_block_associativity_checks": 7290
+    },
+    "incoming_producer_audit": {
+      "scope": "Python function bodies, optional Numba decorator bypassed; no full compiled rerun claimed",
+      "source_limit": 16384,
+      "breaks": 4424,
+      "gaps_at_least_64": 0,
+      "artificial_long_gap_control": 99,
+      "first_step_indices": 5458,
+      "octave_transfers": 11,
+      "native_octave_moment_rows_checked": 14,
+      "circulant_markov_checks": 36
+    }
+  },
+  "proof_review": [
+    "General jump identity allows zero ROOT labels; binary shortcut and alternating twist are scoped",
+    "Current inherited from source 1 and actual integer residence lengths are retained",
+    "Quadratic forms compose by affine shear; outgoing jump is retained as a port",
+    "Centered variance splits into nonnegative innovations but also requires a mean-current budget",
+    "Fixed deterministic event count is distinct from the dependent source clock",
+    "Variance coefficient includes factor four; O(1) remainder requires weighted covariance summability",
+    "Expectation and eventual almost-sure bounds do not supply the stated fixed-source amplitude certificate",
+    "Gap counts include all long gaps; finite length bias is not an asymptotic heavy-tail claim",
+    "Corrected incoming Python function bodies are tested with the Numba decorator bypassed; full compiled rerun not claimed",
+    "Same event word/different gap clocks is an artificial hostile, not a Collatz trajectory"
+  ],
+  "files": {
+    "04-computation/experiments/collatz_break_clock_20261013d.cpp": "ac45d015c0467b47df56d41ecb662a84ed7426a7d71c34d298c63e403e96b462",
+    "04-computation/experiments/collatz_break_clock_audit_20261013d.py": "928ff4535d624d858dfa7f222852720620c5c95147ef8d7b190d848c6e1941a1",
+    "04-computation/experiments/collatz_dyadic_energy_breaks_20261013.py": "4cf0f27433552868c65294a83e30d269235180fd973dc865ae46a42afbbfa10f",
+    "04-computation/experiments/collatz_dyadic_energy_breaks_20261013.out": "42706ffb0692b68a0fff6bae322542323b51fcfef31537edbd466cd74eccdcbf",
+    "05-knowledge/results/collatz_break_clock_20261013d.json": "d8a5db17c03e6f05130822b89de3279507b7acf41ded5cf71856273d924c4fb5",
+    "05-knowledge/results/collatz_break_clock_audit_20261013d.json": "a68abfe197c8a9966aec8212c1c4f8f8687af6f10d5e5120e527d04d62e7dcb0",
+    "05-knowledge/results/collatz_break_clock_repair_20261013d.md": "e81d5c3b9fbddb7813705e8b4eaba1d08a05dda9365105287965a8bf426bf9aa",
+    "05-knowledge/results/collatz_dyadic_energy_breaks_20261013.md": "bf0c574581e993d1e50a32637a22607f82235fc63c6073fe7af9eb4b13aa1eff"
+  }
+}

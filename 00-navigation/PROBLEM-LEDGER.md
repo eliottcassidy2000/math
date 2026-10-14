@@ -793,15 +793,8 @@ all heights (THM-1289, published), δ ineffective.
   Collatz: the 3-adic fast modes of THM-4629 are below the sampling noise at every octave (class discrepancies `2.6e-4` mod 3 at `2^29`); the prefix discrepancy `eps_M` falls with a range-dependent slope
   (-0.45 per octave over `2^12..2^25`, -0.7 over `2^22..2^27`, -1.2 between the Codex values at `2^28`, `2^32`), so beta in the Codex Dirichlet gate is bracketed only in [0.2, 0.6] (supersedes the S26 estimate 0.16). Audited, MISTAKE-599.
 
-- **Dyadic energy via the break process (opus, 2026-10-13-S28; [note](../05-knowledge/results/collatz_dyadic_energy_breaks_20261013.md)).**
-  H(N) = W(N)t(N) - 2 sum over breaks of W(n) t(n+1) (breaks = parity disagreements of n, n+1; a quarter of all n, density
-  0.28 -> 0.24, slowly falling); beta(2m) = [t(m) != t(3m+2)], beta(2m-1) = [t(3m-1) != t(m)]; exact octave transfer with
-  boundary terms (two-sided: no Collatz counterpart of the Q covariance map); gamma(l) = (-1)^l E[W(c_i)W(c_(i+l))] exactly, so
-  whiteness is a residue statistic of break positions: measured six-lag memory (0.141, -0.062, -0.068, -0.033, -0.018,
-  -0.015), scale-invariant, F = 0.836; renewal and Markov closures refuted beyond lag 1. Theorem E (CONDITIONAL on H_C):
-  dyadic energy ~ 0.20 X^2, (9a) a.s. with log^2 -> Codex Theorem B3's nonzero pole. eps_M = -H(3M)/(6M) exactly (model
-  exponent 1/2; slopes -0.44/-0.41/-0.42). Conway pinned map to k = 400: A_k sqrt k 0.145 -> 0.137 (open). Obligation: the
-  Haar gap law (D57).
+- **Dyadic energy via the break process (opus S28, audited 2026-10-13; [repair](../05-knowledge/results/collatz_break_clock_repair_20261013d.md)).**
+  Scoped binary break identities and the general jump formula survive. Measured short-lag correlations do not establish infinite memory or stationarity. The original Theorem E omitted the factor four in H=-2J+boundary and its expectation-to-nonzero-pole implication is withdrawn. The corrected fixed-event-count covariance theorem needs a further source-clock transfer. Deterministically, S_X=sum L_i J_i^2 <= alpha X^2 with alpha<1/2 implies the desired dyadic energy bound beyond an explicit threshold; this uniform weighted estimate remains OPEN. The full finite gap census retains 85,315 formerly omitted long gaps, which carry 7.2789% of the measured weighted current energy. Exact ternary-wavelet refinements exist, with no established two-coordinate Pell closure. The actual Conway limit is now 0.138014902399... by the classical Pascal encoding; the pinned model's error remains OPEN.
 
 - **Deterministic trees, near-returns and the characters of Collatz step counts (opus, 2026-10-13-S26; [note](../05-knowledge/results/collatz_parity_resonance_deterministic_trees_20261013.md), THM-4629).**
   Collatz: the parity bias of `tau` (HYP-9258 (iii)) is the half-integer branch of HYP-9230's resonance law (the Codex note pushed that case first, same day); THM-4629 gives the

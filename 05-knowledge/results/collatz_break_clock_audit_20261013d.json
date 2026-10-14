@@ -1,0 +1,79 @@
+{
+  "status": "FINITE-EXACT controls on arbitrary typed labels; artificial hostiles are not Collatz trajectories",
+  "ternary_words_length_8": 6561,
+  "plateau_energy_checks": 13122,
+  "clock_hostile": {
+    "X": 32,
+    "breaks_A": [
+      34,
+      35,
+      59,
+      61
+    ],
+    "breaks_B": [
+      55,
+      56,
+      59,
+      61
+    ],
+    "current": [
+      1,
+      1,
+      -1,
+      -1
+    ],
+    "energy_A": 417,
+    "energy_B": 81,
+    "difference": 336
+  },
+  "iid_model": [
+    {
+      "m": 1,
+      "expectation_H_tilde_square": "8/3"
+    },
+    {
+      "m": 2,
+      "expectation_H_tilde_square": "16/3"
+    },
+    {
+      "m": 3,
+      "expectation_H_tilde_square": "8"
+    },
+    {
+      "m": 4,
+      "expectation_H_tilde_square": "32/3"
+    },
+    {
+      "m": 5,
+      "expectation_H_tilde_square": "40/3"
+    },
+    {
+      "m": 6,
+      "expectation_H_tilde_square": "16"
+    },
+    {
+      "m": 7,
+      "expectation_H_tilde_square": "56/3"
+    },
+    {
+      "m": 8,
+      "expectation_H_tilde_square": "64/3"
+    }
+  ],
+  "source_clock_grammar": {
+    "half_integral_words_length_6": 729,
+    "cut_and_variance_checks": 3645,
+    "three_block_associativity_checks": 7290
+  },
+  "incoming_producer_audit": {
+    "scope": "Python function bodies, optional Numba decorator bypassed; no full compiled rerun claimed",
+    "source_limit": 16384,
+    "breaks": 4424,
+    "gaps_at_least_64": 0,
+    "artificial_long_gap_control": 99,
+    "first_step_indices": 5458,
+    "octave_transfers": 11,
+    "native_octave_moment_rows_checked": 14,
+    "circulant_markov_checks": 36
+  }
+}

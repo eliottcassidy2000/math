@@ -1,3 +1,5 @@
+HISTORICAL PRE-AUDIT OUTPUT — 2026-10-13 source-clock repair: the gap histogram below omitted gaps >=64; its 31,484,229 is not the full break count. Markov normalization and the printed energy/epsilon model constants below are superseded (factor four in energy, factor two in epsilon). Exact replacement counts and scoped conclusions are in 05-knowledge/results/collatz_break_clock_20261013d.json and collatz_break_clock_repair_20261013d.md. The patched producer has not been rerun in this original numba environment.
+
 == parity table to 2^27 ==
  done in 1s; t(1..12) = [1, -1, -1, 1, 1, 1, -1, -1, -1, -1, 1, -1]
 == (2) per-octave break census, current, energy ==

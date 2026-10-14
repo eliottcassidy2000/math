@@ -7,13 +7,13 @@ break process of the stopping-time parity (session collatz-posets-zeta5-20260927
  identity (6): H(N) = W(N) t(N) - sum_(n<N) W(n) (t(n+1) - t(n)).
  (1) Parity of tau for 1 <= n <= 2^27 (numba; descend below n and look up).
  (2) Breaks beta(n) = [t(n+1) != t(n)]: per octave the count B_k, the counts by residue of n mod 3, the signed current
-     J_k = sum_(breaks in octave) W(n) t(n+1) (so Delta H = -2 J_k), max |H|, the normalized energy int_X^(2X) H^2 dx / X^2
+     J_k = sum_(breaks in octave) W(n) t(n+1) (Delta H also retains the endpoint boundary term), max |H|, the normalized energy int_X^(2X) H^2 dx / X^2
      (Codex: 1.77 at 2^24 ... 0.095 at 2^33), the break density B_k/2^k and its octave ratio.
  (3) Whiteness of the signed break current: autocorrelation of the sequence W(n_i) t(n_i + 1) over consecutive breaks n_i
      (lags 1..8) per octave; the ratio J_k^2 / (number of breaks with W != 0) (a white current has ratio ~ 1 on average).
  (4) The exact first-step identities for breaks: beta(2m) = [t(m) != t(3m+2)], beta(2m-1) = [t(3m-1) != t(m)] (verified),
      the even/odd split of breaks per octave, and the octave increment of H as the exact transfer
-     Delta H_(k+1) = sum_m W(2m)(t(3m+2) - t(m)) + sum_m W(2m-1)(t(m) - t(3m-1)) over m in octave k (verified).
+     Delta H_(k+1) = sum_m W(2m)(t(3m+2) - t(m)) + sum_m W(2m-1)(t(m) - t(3m-1)) over m in octave k, with the boundary terms retained below (verified).
 Usage: python3 collatz_dyadic_energy_breaks_20261013.py [log2 N]
 """
 import sys, time, math
@@ -48,7 +48,7 @@ def parity_table(N):
 @njit(cache=True)
 def octave_stats(p, N, LOGN):
     """returns per-octave arrays: B (breaks), B1, B2 (breaks at n = 1, 2 mod 3), J (signed current), maxH, energy (sum H^2 over
-    the octave), Hend (H at 2^(k+1)), Beven (breaks at even n), and the whiteness lag products."""
+    the octave), Hend (H at 2^(k+1)-1 for complete octaves), Beven (breaks at even n), and the whiteness lag products."""
     nk = LOGN
     B = np.zeros(nk + 1, dtype=np.int64); B1 = np.zeros(nk + 1, dtype=np.int64); B2 = np.zeros(nk + 1, dtype=np.int64)
     J = np.zeros(nk + 1, dtype=np.int64); maxH = np.zeros(nk + 1, dtype=np.int64); energy = np.zeros(nk + 1, dtype=np.float64)
@@ -160,7 +160,7 @@ def main():
     print(" done in %.0fs; t(1..12) = %s" % (time.time() - T0, [1 - 2 * int(p[n]) for n in range(1, 13)]), flush=True)
     B, B1, B2, J, maxH, energy, Hend, Beven, lagsum, lagcnt = octave_stats(p, N, LOGN)
     print("== (2) per-octave break census, current, energy ==")
-    print(" k | B_k (breaks) | B_k/2^k | ratio B_k/B_(k-1) | even-n share | B1 | B2 | J_k | J_k^2/(B1+B2) | H(2^(k+1)) | max|H| | max|H|/sqrt(2^(k+1)) | energy/X^2")
+    print(" k | B_k (breaks) | B_k/2^k | ratio B_k/B_(k-1) | even-n share | B1 | B2 | J_k | J_k^2/(B1+B2) | H(2^(k+1)-1) | max|H| | max|H|/sqrt(2^(k+1)) | energy/X^2")
     for k in range(8, LOGN):
         X = 1 << k
         nb = B1[k] + B2[k]
@@ -183,19 +183,20 @@ def main():
         d, v = transfer_check(p, N, k)
         print(" octave transfer Delta H_(%d) direct = %d, via the previous octave = %d: %s" % (k + 1, d, v, d == v))
     print("== (5) the twisted-residue formula rho(l) = (-1)^l E[W(n_i) W(n_(i+l))], the gap law of breaks, and a renewal closure ==")
-    gaps, cls, cls_next, twist, direct = gap_census(p, N, 1 << 22, N)
-    tot = gaps.sum()
-    print(" breaks in [2^22, 2^27): %d; gap law g = 1..12: %s; P(g = 0 mod 3) = %.4f, 1 mod 3: %.4f, 2 mod 3: %.4f" % (
-        tot, [round(gaps[g] / tot, 4) for g in range(1, 13)], gaps[3::3].sum() / tot, gaps[1::3].sum() / tot, gaps[2::3].sum() / tot))
+    gaps, gap_mod, long_gaps, cls, cls_next, twist, direct = gap_census(p, N, 1 << 22, N)
+    tot = gap_mod.sum()
+    print(" all consecutive gaps in the declared window: %d; gap law g = 1..12: %s; P(g = 0 mod 3) = %.4f, 1 mod 3: %.4f, 2 mod 3: %.4f" % (
+        tot, [round(gaps[g] / tot, 4) for g in range(1, 13)], gap_mod[0] / tot, gap_mod[1] / tot, gap_mod[2] / tot))
     print(" class of break position n mod 3: %s; transition matrix of consecutive break classes (rows from, cols to 0,1,2):" % (cls / cls.sum()).round(4).tolist())
     M = cls_next / cls_next.sum(axis=1, keepdims=True)
     print("  ", M.round(4).tolist())
     print(" twisted-residue formula gamma(l) = (-1)^l E[W(c_i) W(c_(i+l))] (lag in breaks) at lags 1..12: %s" % [round(x, 4) for x in twist[1:13]])
-    print(" direct autocovariance of the signed current v_i = W t(n_i + 1) at the same lags:            %s (identical: the formula is exact)" % [round(x, 4) for x in direct[1:13]])
-    g0 = 2.0 / 3.0
+    print(" direct uncentered second moment of the signed current v_i = W t(n_i + 1) at the same lags:            %s (identical: the formula is exact)" % [round(x, 4) for x in direct[1:13]])
+    g0 = (cls[1] + cls[2]) / cls.sum()
     emp_factor = 1 + 2 * sum(direct[1:13]) / g0
-    print(" empirical long-run variance factor (gamma(0) + 2 sum_(l<=12) gamma(l))/gamma(0), gamma(0) = 2/3: %.4f" % emp_factor)
-    a = gaps[3::3].sum() / tot; b = gaps[1::3].sum() / tot; c = gaps[2::3].sum() / tot
+    print(" empirical twelve-lag factor (gamma(0) + 2 sum_(l<=12) gamma(l))/gamma(0), using the measured gamma(0): %.4f" % emp_factor)
+    print(" gaps >=64 retained in full modulo counts:", long_gaps)
+    a = gap_mod[0] / tot; b = gap_mod[1] / tot; c = gap_mod[2] / tot
     om = complex(-0.5, 3 ** 0.5 / 2); what = a + b * om + c * om * om
     gm = [((-1) ** l) * (2.0 / 3.0) * (what ** l).real for l in range(1, 13)]
     print(" renewal model with i.i.d. gaps, P(g mod 3 = 0,1,2) = (%.4f, %.4f, %.4f): gamma(l) = (-1)^l (2/3) Re(w^l), w = a + b omega + c omega^2 = %.4f%+.4fi:" % (a, b, c, what.real, what.imag))
@@ -203,8 +204,8 @@ def main():
     rho_model = renewal_rho(M, 12)
     print(" Markov-in-residue model (measured 3x3 transitions): gamma(l)/gamma(0) = %s" % [round(x, 4) for x in rho_model])
     fac = ((1 - what) / (1 + what)).real
-    print(" conditional energy (renewal model): E[H(N)^2] = gamma(0) x factor x B(N) = (2/3)(%.3f) B(N) = %.3f B(N) ~ %.3f N at break density 0.24; dyadic energy int_X^(2X) H^2 ~ %.3f X^2" % (
-        fac, g0 * fac, g0 * fac * 0.24, g0 * fac * 0.24 * 1.5))
+    print(" fixed-event-count renewal model: E[(-2 J_m)^2] leading coefficient 4 gamma(0) F = (8/3)(%.3f) m = %.3f m; with ADDITIONAL deterministic clock m=0.24 N, leading coefficient %.3f N and expected dyadic energy %.3f X^2 (no source-wise certificate)" % (
+        fac, (8.0/3.0) * fac, (8.0/3.0) * fac * 0.24, 4 * fac * 0.24))
     print("== (6) eps_M = A(2M) + A(M)/2 + A(3M)/2 (Codex identity (7)) is -H(3M)/(6M) exactly; its decay under the break model ==")
     S, Hp = prefix_sums(p, N)
     bad = 0; rows = []
@@ -222,7 +223,7 @@ def main():
                 acc += e * e; cnt += 1
         rows.append((j, eps, math.sqrt(acc / cnt) if cnt else float("nan")))
     print(" identity eps_M = -H(3M)/(6M) checked at the dyadic M: %d violations" % bad)
-    print(" j | eps_(2^j) | rms over 64 prefixes in the octave | rms x sqrt(M) | model 0.105/sqrt(M) x sqrt(M) = 0.105")
+    print(" j | eps_(2^j) | rms over 64 prefixes in the octave | rms x sqrt(M) | deterministic-clock model benchmark 0.212 (clock assumption unproved)")
     for j, e, r in rows:
         print(" %2d | %+.3e | %.3e | %.4f" % (j, e, r, r * math.sqrt(1 << j)))
     def slope(j0, j1):
@@ -247,8 +248,8 @@ def prefix_sums(p, N):
 
 @njit(cache=True)
 def gap_census(p, N, lo, hi):
-    gaps = np.zeros(64, dtype=np.int64); cls = np.zeros(3, dtype=np.int64); cls_next = np.zeros((3, 3), dtype=np.int64)
-    # twisted residue products over consecutive breaks with W != 0, lags 1..8
+    gaps = np.zeros(64, dtype=np.int64); gap_mod = np.zeros(3, dtype=np.int64); long_gaps = 0; cls = np.zeros(3, dtype=np.int64); cls_next = np.zeros((3, 3), dtype=np.int64)
+    # Twisted residue products over ALL consecutive breaks, lags 1..12.
     # gamma(l) = E[v_i v_(i+l)] over ALL breaks (v = 0 on class 0), lag counted in breaks; the parity flips at every break,
     # so v_i v_(i+l) = (-1)^l W(c_i) W(c_(i+l)); the direct product of the actual signed values is kept as a check
     tw_sum = np.zeros(13, dtype=np.float64); dir_sum = np.zeros(13, dtype=np.float64); tw_cnt = np.zeros(13, dtype=np.int64)
@@ -260,8 +261,11 @@ def gap_census(p, N, lo, hi):
             cls[c] += 1
             if last > 0:
                 g = n - last
+                gap_mod[g % 3] += 1
                 if g < 64:
                     gaps[g] += 1
+                else:
+                    long_gaps += 1
                 cls_next[lastc, c] += 1
             last = n; lastc = c
             W = 0 if c == 0 else (-1 if c == 1 else 1)
@@ -277,13 +281,12 @@ def gap_census(p, N, lo, hi):
     for l in range(1, 13):
         twist[l] = tw_sum[l] / tw_cnt[l] if tw_cnt[l] else 0.0
         direct[l] = dir_sum[l] / tw_cnt[l] if tw_cnt[l] else 0.0
-    return gaps, cls, cls_next, twist, direct
+    return gaps, gap_mod, long_gaps, cls, cls_next, twist, direct
 
 
 def renewal_rho(M, L):
     """Markov chain on break classes {0,1,2} with transition M; the current takes W = 0, -1, +1 on classes 0, 1, 2 and the
-    parity twist (-1)^l between the l-th next break; rho(l) = (-1)^l E[W(c_i) W(c_(i+l))] / E[W^2] over pairs with both W != 0,
-    which equals the stationary twisted correlation of the W-chain restricted to nonzero classes."""
+    parity twist (-1)^l between the l-th next break; rho(l) = (-1)^l E[W(c_i) W(c_(i+l))] / E[W^2] over ALL break indices. Conditioning both endpoints to be nonzero is a different observable."""
     import numpy.linalg as la
     w, v = la.eig(M.T)
     pi = np.real(v[:, np.argmin(abs(w - 1))]); pi = pi / pi.sum()
@@ -293,7 +296,7 @@ def renewal_rho(M, L):
     for l in range(1, L + 1):
         Ml = Ml @ M
         num = sum(pi[a] * Wv[a] * Ml[a, b] * Wv[b] for a in range(3) for b in range(3))
-        den = sum(pi[a] * Wv[a] ** 2 * sum(Ml[a, b] * (Wv[b] != 0) for b in range(3)) for a in range(3))
+        den = sum(pi[a] * Wv[a] ** 2 for a in range(3))
         out.append(((-1) ** l) * num / den)
     return out
 
