@@ -1,0 +1,2 @@
+E <= 14: 2394 (pair, c, main/twin, r) families, 7182 integer sources: every source merges with (n+1)/2^D' - 1 at U-step r + |shorter|, and the partner's word is 1^(r-D') (longer word); D' = D (main) or D - 1 (twin)  [0.2s]
+THM-4555 (vi): (2,6,c) ~ (4,1,1,c+2) is the root twin of (7) ~ (3,4,5): OK

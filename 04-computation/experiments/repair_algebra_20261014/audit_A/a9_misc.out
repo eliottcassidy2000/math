@@ -1,0 +1,4 @@
+E <= 20: repair-term identity on 6629 canonical primitive pairs OK; 2r terms pairwise distinct (also in absolute value) on 6629 pairs OK
+backward search = brute force for every value of a canonical rep with exponents <= 12: 1899 values, 0 mismatches
+backward search = brute force for every value of a canonical rep with exponents <= 14: 7471 values, 0 mismatches
+backward search = brute force for every value of a canonical rep with exponents <= 16: 29442 values, 0 mismatches

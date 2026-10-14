@@ -1,0 +1,6 @@
+E <= 16, 200000 random odd 400-bit n (switch merges verified on all 54747 covered integers):
+   canonical          0.01214 +- 0.00024
+   twin               0.02555 +- 0.00035
+   canonical or twin  0.03769 +- 0.00043
+   root               0.24819 +- 0.00097
+   any                0.27374 +- 0.00100

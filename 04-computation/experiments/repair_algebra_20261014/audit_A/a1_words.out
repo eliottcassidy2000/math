@@ -1,0 +1,8 @@
+(1) 524287 reduced words of total <= 20: numerator formula, K odd, exact denominator 2^(A-1): OK [23.0s]
+    233962 distinct values; 233961 hit more than once; 3548 carry words with two distinct last letters, 18 of them containing a one-letter word (root)
+(2) 376131 colliding word pairs: longest-common-suffix cancellation always leaves a primitive collision: OK
+(3) 14702 ordered pairs with distinct last letters: gap even and compiler identity OK; gap histogram {2: 14426, 4: 264, 6: 12}
+    converse: 25584 (head pair, c) instances with total head <= 15, c <= 25: all collide; empty heads pair only with (2) (the root, i = -1): OK
+(4) root twin (a+2, w) ~ (2, a, w): 262143 instances OK
+TOTAL checks 3862443  [57.9s]
+timeout 1200 python3 a1_words.py 20 15  56.81s user 0.42s system 98% cpu 58.101 total

@@ -17800,3 +17800,37 @@ the ambient space.
 - **Proof gap.** "Every word is the period word of the displayed `x_0` (direct substitution)": substitution shows `x_0` is the fixed point of the affine composition `F_w`, not that `x_0` follows the parities `w`; the Terras residue-class argument (`C_w` is one class mod `2^P`, `T^P = F_w` on it, hence `C_w = {3^k x + S ≡ 0 mod 2^P}` and `x_0 ∈ C_w`) was missing and is now in proof 3; the 247-word check is evidence, not the proof.
 - **False evidence.** HYP-9263 said `log a_(n+1)/log q_n < 10^(-3)` beyond `n = 1000`; the session's script never computed this (it printed the global maximum `1.0` at `n = 2`), and `311` indices in `(1000, 20000)` exceed `10^(-3)` (maximum `0.00453` at `n = 1179`, last at `n = 5113`). Lesson: every numerical sentence in an Evidence section must be printed by a script in the repository.
 - **"NEW here".** The budget `m_max` and the ledger are Eliahou's 1993 method with the roles inverted (fix the fraction, solve for the largest admissible minimum), as Hercher's Remark 28 already does; only the weaker Legendre route is self-contained. Small slips: `1 − H(log_3 2) = 0.050`, not `0.049`; Jarník's dimension paper is 1929, not 1931; `a_(n+1) ≍ q_n^(m-2)` should read `a_(n+1) = q_n^(m-2+o(1))` along a subsequence (Jarník's exact-order theorem); "first survivor" for "first surviving convergent". All repaired in place (note section 8).
+
+## MISTAKE-606 (2026-10-14, mac-mini-2026-10-14-wilson THM-4640, THM-4641, HYP-9270, repair_algebra_minus_one_and_wilson_dictionary_20261014.md, switch_coverage.py; found by the session's independent adversarial audit A after checkpoints 52d709c2ef, a3e1d3fc26 and 611ad440b3 were pushed) -- a coverage statistic that silently left out the root collision, and the false conclusion drawn from it; a growth law that contradicts an elementary bound; carries called generators by the theorem that proves they generate nothing; "non-degenerate" for relations of which 40% are degenerate; a misquoted relation; and twelve precision notes
+
+- **What was done.** THM-4640 (8), its title and Reading, note §1 and §3, and HYP-9270 reported `c(E)` as "the Haar probability that an odd source has a downward uniform switch at −1 from a primitive collision with exponents ≤ E, root twins included": 4.9% at E = 22, growing like `0.036 ln E`. From this they concluded that "the −1 mechanism alone cannot descend most trailing-ones sources".
+- **Why it was wrong.**
+  * `switch_coverage.py` skipped the root collision `(a) ~ (2, a−2)`, although THM-4640 (2) itself counts the root as primitive.
+  * That root collision is THM-4555's reset switch `n ↦ (n−1)/2`, of mass exactly 1/4.
+  * Every canonical family lies inside the reset domain: first post-run letter `≥ 3`, `r ≥ D ≥ 2`.
+  * Twins act on reset-2 sources and have exactly twice the canonical mass. So `c(E) ≤ 3/8` for every E, and a `κ/E` increment law (HYP-9270 (b)) is impossible.
+  * THM-4581 6(e) (audited PROVED) gives almost-sure merging of reset-2 sources with `(n−1)/2`. Each such merge is a `D = 1` collision at −1, so the twins cover almost every reset-2 source.
+- **The correct framing.** THM-4640 (8) now proves:
+  * the reset switch covers 1/4;
+  * `twin(E) = 2·can(E)`, `c(E) ≤ 3/8`, and `c(E) → 3/8`;
+  * with the root, the coverage tends to `1/2`, i.e. almost every trailing-ones source has a −1 switch. Exact values: `0.2826` at E = 22 and `0.2847` at E = 24.
+  * HYP-9270 (b) is retired.
+- **Lesson.** When a family has a distinguished member (here the root), state whether a statistic includes it, and print the statistic both with and without it. Before fitting a growth law to a probability, write down its trivial cap, and search the canon for an almost-sure theorem about the same event.
+- **Generators.** THM-4640 5(a), THM-4641 (title, row 2, Reading) and note §0/§1 said "the generators are indexed by {2,4,8}". The same theorem's 5(d) shows that the carries derive none of the 133 canonical primitive pairs. Now: "the two-position relations, plus the padding relation `(1)·s ~ s`".
+- **Degenerate relations.** The Reading called genuine collisions "higher, non-degenerate {2,3}-unit relations", and note §3 said "no generating pattern".
+  * 737 of the 1,749 canonical primitive pairs with exponents ≤ 18 are degenerate.
+  * With exponents ≤ 16, 193 of 203 degenerate pairs contain the 3-term Gersonides relation `4 − 3 − 1 = 0` as a vanishing sub-sum (first: 259).
+- **Misquoted relation.** 125 = `(7) ~ (3, 4, 5)` was said to "rest on the 6-term relation `27 = 3 + 8 + 16`". That relation has 4 terms and is not this collision. The collision is the non-degenerate `2^7 + 27 = 3 + 2^5 + 3·2^4 + 9·2^3`. Also, "(1, 1, 7) admits no carry at all" was false: the Catalan carry with b = 1 sends it to `(4, 1, 1)`, with `val = 152` on both sides.
+- **Precision notes.**
+  * "533 primitive pairs" counted the four twin variants of 133 canonical pairs, plus the root.
+  * The `2^E/√E` law and its constant 0.0255 are not established: the local exponent is 0.47 at E = 28, 29 (audit A's census to E = 29). "Factors 1.91–1.96" held only from E = 18.
+  * Two lemmas were used without proof: distinct representations of one K have distinct lengths, and an empty head pairs only with `(2)` at `i = −1`.
+  * Attribution was missing: the numerator formula and the collision criterion are in THM-4555's Remarks, and classically Böhm–Sontacchi (1978) and Lagarias (1985); `val` is a 3-smooth representation in the sense of Blecksmith–McCallum–Selfridge (1998).
+  * THM-4641 row 8's chance baseline of 0.1% applied a global average to small primes; size-dependent rates give about 0.09.
+  * "The next eight primes 2^a − 3 are not Wilson": there are nine with a ≤ 24, plus `2^29 − 3`.
+  * The anchors `−1, 1, 1/5` attached to `{2, 4, 8}` were numerology; the Gersonides object for 8 is the 2-cycle `{−5, −7}`.
+  * Note §3 cited THM-4606/4607, which are non-coalescence results, for almost-sure coalescence.
+  * The cycle bound was attributed to Baker's theory instead of Eliahou's budget with Barina's verification.
+  * The JC2 verified range was given as Moh's 100; it is now 108 (Guccione et al.).
+  * Thakur's function-field theorem was cited as support for the `log log x` count; its criterion is algebraic.
+  * Self-corrected before the audit: Haugland's 2,131-vertex graph (2026) was called the Moser-spindle-free record, which is Heule's 1,441 (2021).

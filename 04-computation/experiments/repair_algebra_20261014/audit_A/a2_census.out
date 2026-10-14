@@ -1,0 +1,43 @@
+E= 1 new=      1 N(E)=       1  N sqrt(E)/2^E=0.500000  |S_E|=1  [0.0s]
+E= 2 new=      0 N(E)=       1  N sqrt(E)/2^E=0.353553  |S_E|=2  [0.0s]
+E= 3 new=      0 N(E)=       1  N sqrt(E)/2^E=0.216506  |S_E|=4  [0.0s]
+E= 4 new=      0 N(E)=       1  N sqrt(E)/2^E=0.125000  |S_E|=8  [0.0s]
+E= 5 new=      0 N(E)=       1  N sqrt(E)/2^E=0.069877  |S_E|=16  [0.0s]
+E= 6 new=      0 N(E)=       1  N sqrt(E)/2^E=0.038273  |S_E|=32  [0.0s]
+E= 7 new=      1 N(E)=       2  N sqrt(E)/2^E=0.041340  |S_E|=63  [0.0s]
+E= 8 new=      2 N(E)=       4  N sqrt(E)/2^E=0.044194  |S_E|=124  [0.0s]
+E= 9 new=      3 N(E)=       7  N sqrt(E)/2^E=0.041016  |S_E|=245  [0.0s]
+E=10 new=      6 N(E)=      13  N sqrt(E)/2^E=0.040146  |S_E|=484  [0.0s]
+E=11 new=     10 N(E)=      23  N sqrt(E)/2^E=0.037247  |S_E|=958  [0.0s]
+E=12 new=     17 N(E)=      40  N sqrt(E)/2^E=0.033829  |S_E|=1899  [0.0s]
+E=13 new=     33 N(E)=      73  N sqrt(E)/2^E=0.032130  |S_E|=3765  [0.0s]
+E=14 new=     59 N(E)=     132  N sqrt(E)/2^E=0.030145  |S_E|=7471  [0.0s]
+E=15 new=    112 N(E)=     244  N sqrt(E)/2^E=0.028839  |S_E|=14830  [0.0s]
+E=16 new=    218 N(E)=     462  N sqrt(E)/2^E=0.028198  |S_E|=29442  [0.0s]
+E=17 new=    414 N(E)=     876  N sqrt(E)/2^E=0.027556  |S_E|=58469  [0.0s]
+E=18 new=    790 N(E)=    1666  N sqrt(E)/2^E=0.026963  |S_E|=116148  [0.0s]
+E=19 new=   1522 N(E)=    3188  N sqrt(E)/2^E=0.026505  |S_E|=230774  [0.0s]
+E=20 new=   2941 N(E)=    6129  N sqrt(E)/2^E=0.026140  |S_E|=458606  [0.1s]
+E=21 new=   5717 N(E)=   11846  N sqrt(E)/2^E=0.025885  |S_E|=911494  [0.1s]
+E=22 new=  11191 N(E)=   23037  N sqrt(E)/2^E=0.025762  |S_E|=1811795  [0.3s]
+E=23 new=  21885 N(E)=   44922  N sqrt(E)/2^E=0.025682  |S_E|=3601701  [0.6s]
+E=24 new=  42914 N(E)=   87836  N sqrt(E)/2^E=0.025648  |S_E|=7160480  [1.2s]
+E=25 new=  84237 N(E)=  172073  N sqrt(E)/2^E=0.025641  |S_E|=14236699  [2.4s]
+E=26 new= 165405 N(E)=  337478  N sqrt(E)/2^E=0.025642  |S_E|=28307968  [5.3s]
+E=27 new= 325345 N(E)=  662823  N sqrt(E)/2^E=0.025661  |S_E|=-  [8.2s]
+local exponent beta(E) with N(E) ~ C 2^E E^-beta, from consecutive cumulative N:
+   E=14: N(E)/N(E-1) = 1.80822, beta_local = 1.360
+   E=15: N(E)/N(E-1) = 1.84848, beta_local = 1.142
+   E=16: N(E)/N(E-1) = 1.89344, beta_local = 0.848
+   E=17: N(E)/N(E-1) = 1.89610, beta_local = 0.880
+   E=18: N(E)/N(E-1) = 1.90183, beta_local = 0.881
+   E=19: N(E)/N(E-1) = 1.91357, beta_local = 0.817
+   E=20: N(E)/N(E-1) = 1.92252, beta_local = 0.770
+   E=21: N(E)/N(E-1) = 1.93278, beta_local = 0.701
+   E=22: N(E)/N(E-1) = 1.94471, beta_local = 0.603
+   E=23: N(E)/N(E-1) = 1.94999, beta_local = 0.570
+   E=24: N(E)/N(E-1) = 1.95530, beta_local = 0.531
+   E=25: N(E)/N(E-1) = 1.95903, beta_local = 0.507
+   E=26: N(E)/N(E-1) = 1.96125, beta_local = 0.499
+   E=27: N(E)/N(E-1) = 1.96405, beta_local = 0.481
+smallest primitive values: [-1, 125, 259, 439, 599, 905, 1063, 1081, 1225, 1445, 2053, 2081]

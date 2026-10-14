@@ -1,0 +1,12 @@
+(i) equal-length sequences, lengths 2..5, exponents 0..12: one-position relations 0; two-position relation shapes (Delta, a-b, c-b, d-b) with counts: {(1, 1, 0, 2): 102542, (2, 3, 0, 6): 48594}  [1.9s]
+(ii) 3^D (2^x - 1) = 2^y - 1, D <= 200, x <= 1200: [(1, 1, 2), (2, 3, 6)]
+    neighbours of (1,1,7): [(4, 1, 1)]  val check: 152 152
+(iii) 133 canonical primitive pairs with exponents <= 14
+    floor  0, extra padding j = 0: derivable 0/133; component size max 85, mean 8.35, size-1 components 26  [2.0s]
+    floor  0, extra padding j = 1: derivable 0/133; component size max 85, mean 8.35, size-1 components 26  [2.0s]
+    floor  0, extra padding j = 2: derivable 0/133; component size max 85, mean 8.35, size-1 components 26  [2.0s]
+    floor  0, extra padding j = 3: derivable 0/133; component size max 85, mean 8.35, size-1 components 26  [2.0s]
+    floor -6, extra padding j = 0: derivable 0/133; component size max 85, mean 8.35, size-1 components 26  [2.0s]
+    floor -6, extra padding j = 1: derivable 0/133; component size max 85, mean 8.35, size-1 components 26  [2.0s]
+    floor -6, extra padding j = 2: derivable 0/133; component size max 85, mean 8.35, size-1 components 26  [2.0s]
+    floor -6, extra padding j = 3: derivable 0/133; component size max 85, mean 8.35, size-1 components 26  [2.0s]

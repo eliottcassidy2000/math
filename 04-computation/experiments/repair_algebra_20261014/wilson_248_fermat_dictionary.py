@@ -57,9 +57,10 @@ def U(n):
     while n % 2 == 0: n //= 2
     return n
 cycles = {}
+unclosed = 0
 for n0 in range(-100001, 100002, 2):
     seen = []; n = n0
-    for _ in range(400):
+    for _ in range(2000):
         if n in seen:
             cyc = seen[seen.index(n):]; key = min(cyc, key=abs)
             if key not in cycles:
@@ -71,10 +72,13 @@ for n0 in range(-100001, 100002, 2):
                 cycles[key] = (len(cyc), A, abs(2 ** A - 3 ** len(cyc)))
             break
         seen.append(n); n = U(n)
+    else:
+        unclosed += 1
+check(unclosed == 0, f"every orbit of an odd |n| <= 100001 closes within 2000 U-steps ({unclosed} did not)")
 check(sorted(cycles) == [-17, -5, -1, 1], f"integer cycles found {sorted(cycles)}")
 check([cycles[c][2] for c in (-17, -5, -1, 1)] == [139, 1, 1, 1], "cycle denominators")
 print(f"   (A,k) = (1,1), (2,1), (3,2) give the integer cycles -1, +1, {{-5,-7}} for every word (and (1,0) gives 0); iterating U on all odd "
-      f"|n| <= 100001 finds exactly the cycles {{1}}, {{-1}}, {{-5,-7}}, {{-17,...}} with |2^A - 3^k| = 1, 1, 1, {cycles[-17][2]} "
+      f"|n| <= 100001 (every orbit closes within 2000 U-steps) finds exactly the cycles {{1}}, {{-1}}, {{-5,-7}}, {{-17,...}} with |2^A - 3^k| = 1, 1, 1, {cycles[-17][2]} "
       f"(the -17 cycle: {cycles[-17][0]} odd steps, {cycles[-17][1]} halvings)")
 
 print("R3 (STRUCTURAL) Wilson's -1 is the product of a finite abelian group = product of its involutions:")
