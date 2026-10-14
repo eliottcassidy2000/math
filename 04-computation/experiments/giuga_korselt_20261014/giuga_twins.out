@@ -1,0 +1,14 @@
+G 1:   2 digits,  3 primes; sum 1/p - 1/g = 1; g' = g + 1: True; g-1 prime: True; g+1 prime: True
+G 2:   3 digits,  4 primes; sum 1/p - 1/g = 1; g' = g + 1: True; g-1 prime: True; g+1 prime: True
+G 3:   4 digits,  4 primes; sum 1/p - 1/g = 1; g' = g + 1: True; g-1 prime: True; g+1 prime: True
+G 4:   5 digits,  5 primes; sum 1/p - 1/g = 1; g' = g + 1: True; g-1 prime: False; g+1 prime: False
+G 5:  10 digits,  6 primes; sum 1/p - 1/g = 1; g' = g + 1: True; g-1 prime: False; g+1 prime: False
+G 6:  11 digits,  6 primes; sum 1/p - 1/g = 1; g' = g + 1: True; g-1 prime: False; g+1 prime: False
+G 7:  15 digits,  7 primes; sum 1/p - 1/g = 1; g' = g + 1: True; g-1 prime: False; g+1 prime: False
+G 8:  17 digits,  7 primes; sum 1/p - 1/g = 1; g' = g + 1: True; g-1 prime: False; g+1 prime: False
+G 9:  18 digits,  7 primes; sum 1/p - 1/g = 1; g' = g + 1: True; g-1 prime: False; g+1 prime: False
+G10:  27 digits,  8 primes; sum 1/p - 1/g = 1; g' = g + 1: True; g-1 prime: False; g+1 prime: False
+G11:  30 digits,  8 primes; sum 1/p - 1/g = 1; g' = g + 1: True; g-1 prime: False; g+1 prime: False
+G12:  34 digits,  8 primes; sum 1/p - 1/g = 1; g' = g + 1: True; g-1 prime: False; g+1 prime: False
+G13:  97 digits, 10 primes; sum 1/p - 1/g = 1; g' = g + 1: True; g-1 prime: False; g+1 prime: True
+exact checks: 38

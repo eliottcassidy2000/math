@@ -1,0 +1,13 @@
+  ***   Warning: new stack size = 200000000 (190.735 Mbytes).
+Qmid(t)  = t^4 - 8*t^3 + 18*t^2 + 8*t + 1
+Qside(t) = t^4 - 4*t^3 + 6*t^2 + 4*t + 1
+---- midline x = 1/2
+  minimal model [a1,a2,a3,a4,a6] = [0, 0, 0, -11, 14], conductor 32, j = 287496
+  torsion: [4, [4], [[1, 2]]]
+  ellrank: rank in [0, 0]
+  analytic rank: 0
+---- side y = 0
+  minimal model [a1,a2,a3,a4,a6] = [0, 0, 0, -2, 1], conductor 40, j = 55296/5
+  torsion: [4, [4], [[0, 1]]]
+  ellrank: rank in [0, 0]
+  analytic rank: 0

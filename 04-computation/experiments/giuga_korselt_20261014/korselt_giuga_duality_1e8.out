@@ -1,0 +1,22 @@
+A  S(p) == p + (p-1)! == p - 1 + p w_p (mod p^2) for all primes 3 <= p < 3000: OK; Wilson primes [5, 13, 563]; w_p == -1 (S(p) == -1 mod p^2): [1277]  [0.6s]
+   sieve to 100000000 done  [3.0s]
+C  Carmichael numbers <= 100000000: 255; first [561, 1105, 1729, 2465, 2821, 6601, 8911, 10585]  [19.6s]
+   Giuga-score distribution (G, omega): {(0, 3): 77, (0, 4): 121, (0, 5): 18, (1, 3): 7, (1, 4): 20, (1, 5): 8, (2, 4): 3, (2, 5): 1}
+   near-counterexamples (highest share of primes also satisfying Giuga):
+     188461 = 7*13*19*109: Giuga at [7, 19] (2/4)
+     2455921 = 13*19*61*163: Giuga at [13, 61] (2/4)
+     18900973 = 7*13*229*907: Giuga at [7, 13] (2/4)
+     825265 = 5*7*17*19*73: Giuga at [7, 19] (2/5)
+     561 = 3*11*17: Giuga at [3] (1/3)
+     1105 = 5*13*17: Giuga at [5] (1/3)
+     46657 = 13*37*97: Giuga at [13] (1/3)
+     52633 = 7*73*103: Giuga at [7] (1/3)
+     31405501 = 71*631*701: Giuga at [71] (1/3)
+     34657141 = 191*421*431: Giuga at [191] (1/3)
+     36765901 = 37*613*1621: Giuga at [37] (1/3)
+     670033 = 7*13*37*199: Giuga at [7] (1/4)
+   Carmichael twins (c - 2 or c + 2 prime): 60 of 255: [(561, '', 'c+2'), (1105, 'c-2', ''), (2465, '', 'c+2'), (2821, 'c-2', ''), (6601, 'c-2', ''), (29341, 'c-2', ''), (41041, 'c-2', ''), (52633, 'c-2', ''), (62745, 'c-2', ''), (172081, 'c-2', ''), (188461, 'c-2', ''), (278545, 'c-2', '')]
+B  every even squarefree composite n <= 2000000 has Korselt score exactly 1 (only p = 2): 405285 numbers OK
+   odd Giuga numbers <= 2000000: [] (none expected: sum 1/p over odd primes needs >= 9 primes)
+D  all 12 Giuga numbers of A007850: Korselt score 1, g' = g + 1, sum 1/p - 1/g = 1: OK
+total exact checks: 406434  [22.0s]

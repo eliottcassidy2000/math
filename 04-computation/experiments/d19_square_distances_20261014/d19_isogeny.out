@@ -1,0 +1,8 @@
+isogeny class of y^2 = x^3 - 11x + 14 (as [a4, a6] or curves): [[[-11, 14], [x, y, 1], [x, y, 1]], [[-16, 0], [x^3 - 4*x^2 + 5*x - 2, y*x^3 - 6*y*x^2 + 11*y*x - 6*y, x - 2], [1/4*x^3 + 2*x^2 + 12*x + 32, 1/8*y*x^3 + 3/2*y*x^2 + 2*y*x - 8*y, x + 4]], [[64, 0], [x^5 - 6*x^4 - 2*x^3 + 80*x^2 - 183*x + 126, y*x^6 - 9*y*x^5 + 48*y*x^4 - 202*y*x^3 + 537*y*x^2 - 733*y*x + 390*y, x^2 - 3*x + 2], [1/16*x^5 + x^4 + 40*x^3 + 64*x^2 + 256*x, 1/64*y*x^6 + 3/8*y*x^5 - 6*y*x^4 + 48*y*x^3 - 192*y*x^2 - 512*y*x, x^2 + 8*x]], [[-176, -896], [x^5 - 10*x^4 + 70*x^3 - 260*x^2 + 441*x - 274, y*x^6 - 15*y*x^5 + 60*y*x^4 - 70*y*x^3 - 63*y*x^2 + 181*y*x - 94*y, x^2 - 5*x + 6], [1/16*x^5 + 5/2*x^4 + 70*x^3 + 1040*x^2 + 7056*x + 17536, 1/64*y*x^6 + 15/16*y*x^5 + 15*y*x^4 + 70*y*x^3 - 252*y*x^2 - 2896*y*x - 6016*y, x^2 + 20*x + 96]]]
+isogeny degree matrix: [1, 2, 4, 4; 2, 1, 2, 2; 4, 2, 1, 4; 4, 2, 4, 1]
+  ***   at top-level: ...linit([0,0,0,c[1],c[2]]),ellinit(c));if(E.j==E
+  ***                                             ^---------------------
+  *** ellinit: incorrect type in ellinit (t_VEC).
+... skipping file 'd19_isogeny.gp'
+a_p(Emid) == a_p(y^2 = x^3 - x) for all primes 3 <= p < 1000: 1
+side curve y^2 = x^3 - 2x + 1: conductor 40, torsion [4, [4], [[0, 1]]], class size 4
