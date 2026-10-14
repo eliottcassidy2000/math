@@ -780,6 +780,20 @@ all heights (THM-1289, published), δ ineffective.
   removal typed; the open wall is Selmer corank `>= 2` everywhere; fruit curve = 910.a4, square curve = 364.a1 (rank 1). JC(2): a
   count-monotone ordering test for the Weyl/Poisson lane proposed, no theorem.
 
+- **The positive integers as irrationality measures (opus, 2026-10-14-S31; [note](../05-knowledge/results/collatz_integers_as_irrationality_measures_20261014.md), THM-4632, HYP-9262).**
+  Owner directive: integers as irrationality measures, 1 <-> 2 the only abnormality, mu = 2 for odd zetas and logarithms, Fisher information, Out(S_6), the Ramanujan-inequality repository, the
+  quasi-Riemann preprints. PROVED (THM-4632): for every irrational parameter `x` in `(1, 2)` the trivial-character law `1/(1 - e^(-s)/2 - e^(s(x-1))/2)` has boundary growth exponent
+  `2(mu(x) - 1)` (upper bound from S29's Jordan line bound and the definition of `mu`; lower bound from the peak law at the convergents, `|R| = (2-x)^2 (q_(n+1) + q_n t)^2/(2 pi^2)`); so the integer `n`
+  labels the laws of exponent `2n - 2`: `n = 1` the rational parameters (poles on the line, HYP-9260's approximants), `n = 2` the generic class where Collatz conjecturally sits, `n >= 3` the Jarnik
+  continua of dimension `2/n` with explicit members (`mu = 3, 4, 5` computed: local exponents `3.92, 5.98, 7.98`). The Collatz law's exponent is `2(mu(log2 3) - 1)`, at most `26.6` by Rhin, `2` iff
+  `mu(log2 3) = 2` (OPEN; local exponents below `1.026` beyond the hundredth convergent, `1.0024` beyond the two-thousandth). The trivial cycle is the only pole of the law on its line (the
+  parabolic form of the cycle statement; cycles themselves need `2^P - 3^Q | c_w` and their exclusions use the same effective `mu`). The Farey colours of HYP-9261 up to sign are the cusps of
+  `X(m)`, Platonic for `m = 2..5` (3, 4, 6, 12), and the twelve cusps of `X(5)` map two-to-one onto `P^1(F_5)`, the carrier of the exotic `S_5` of `Out(S_6)`; the convergents of `log2 3` visit them
+  uniformly. A line's Fisher information about its frequency is `(2-theta)^6/(8 pi^2 theta_f^4)`; the Dirac limit is the trivial cycle. Sources typed: Liu-Jiang-Zhang's `mu(log r) = 2`
+  (PREPRINT CLAIM) would settle `log 2`, `log 3` but not their ratio; Kaczynski's boundary-function theorems (Lean-formalised) do not apply to a function continuous up to its line; the owner's
+  Ramanujan-inequality manuscript (7/8 half-plane for RH, Buthe's missing `log(3c)`) is the same move as Rhin-for-`mu` here, and quasi-RH => Hooley => Artin would give THM-4631's
+  multiplicity-one primes density `0.3739558` (`0.37566` to `10^5`); the Hexagon `1 - 1/6000` and the pasted `7/8` Weil-group abstracts are PREPRINT CLAIMS; the OpenAI primitive-roots PDF is unread.
+
 - **Graph theory as the common carrier (opus, 2026-10-13-S30; [note](../05-knowledge/results/graph_theory_as_common_carrier_20261013.md), THM-4631, HYP-9261).**
   Owner directive: unify the deeper themes and connect graph theory to every other area. Five carriers hold every thread, each with one extra structure and a global open question:
   functional graphs with a measure (Collatz rigidity THM-4523, coalescence THM-4581/4627, Polya trichotomy HYP-9244), the Pascal graph and its de Bruijn quotients with a measure or a code

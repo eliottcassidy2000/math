@@ -1,0 +1,73 @@
+# Part 1: local exponents e_n = log Q_(n+1)/log Q_n along the convergents of log2 3
+   n >=   10: max e_n = 1.330484 at n = 13 (a_(n+1) = 55), so mu_n = 2.330484, local growth exponent 2 e_n = 2.660967; mean e_n = 1.002238
+   n >=  100: max e_n = 1.026237 at n = 100 (a_(n+1) = 18), so mu_n = 2.026237, local growth exponent 2 e_n = 2.052474; mean e_n = 1.001329
+   n >= 1000: max e_n = 1.004532 at n = 1179 (a_(n+1) = 565), so mu_n = 2.004532, local growth exponent 2 e_n = 2.009064; mean e_n = 1.000580
+   n >= 2000: max e_n = 1.002388 at n = 2095 (a_(n+1) = 366), so mu_n = 2.002388, local growth exponent 2 e_n = 2.004776; mean e_n = 1.000417
+   tau-coloured convergents (Q odd, P even): 858 of 2597; max e_n beyond n = 100 among them: 1.020229
+   first 12 e_n (n = 2..13): [2.3219, 1.544, 1.4945, 1.0691, 1.4416, 1.1356, 1.4854, 1.074, 1.088, 1.0299, 1.0463, 1.3305]
+
+# Part 2: exact peaks of the trivial-character law at the convergents, against the peak law and Q_(n+1)^2
+    n     Q_n          theta_f          |R| at drifted f     (2-theta)^2/(2 pi^2 theta_f^2)   ratio     log|R|/log Q_n   2 e_n
+    1             1       -0.415037            1.038438         0.050660592   20.4979        nan        nan
+    2             2        0.169925           2.0626626          0.30222499   6.82492     1.0445     4.6439
+    3             5      -0.0751875           5.0648522           1.5436672   3.28105     1.0080     3.0879
+    4            12         0.01955           32.100774           22.832372   1.40593     1.3960     2.9889
+    5            41      -0.0165375           42.009645           31.908528   1.31656     1.0066     2.1383
+    6            53      0.00301254           976.00669           961.56756   1.01502     1.7337     2.8832
+    7           306     -0.00147478           4026.9498           4012.2765   1.00366     1.4503     2.2712
+    8           665      6.29796e-5           2200130.7           2200115.9   1.00001     2.2468     2.9709
+    9         15601     -2.62492e-5          12665195.0          12665181.0       1.0     1.6939     2.1480
+   10         31867      1.04811e-5          79438788.0          79438773.0       1.0     1.7543     2.1759
+   11         79335     -5.28707e-6         3.121865e+8        3.1218649e+8       1.0     1.7337     2.0599
+   12        111202      5.19401e-6        3.2347405e+8        3.2347403e+8       1.0     1.6864     2.0927
+   13        190537     -9.30647e-8       1.0075704e+12       1.0075704e+12       1.0     2.2734     2.6610
+   14      10590737      7.54537e-8       1.5327942e+12       1.5327942e+12       1.0     1.7346     2.0022
+   15      10781274      -1.7611e-8       2.8137091e+13       2.8137091e+13       1.0     1.9124     2.1983
+   16      53715833      5.00989e-9       3.4768753e+14       3.4768753e+14       1.0     1.8811     2.1307
+   17     171928773     -2.58129e-9       1.3096952e+15       1.3096952e+15       1.0     1.8356     2.0287
+   18     225644606      2.42859e-9       1.4795693e+15       1.4795693e+15       1.0     1.8160     2.0589
+   19     397573379      -1.527e-10       3.7425496e+17       3.7425496e+17       1.0     2.0435     2.2773
+   20    6189245291     1.38095e-10       4.5760123e+17       4.5760123e+17       1.0     1.8036     2.0055
+   21    6586818670    -1.46046e-11         4.09135e+19         4.09135e+19       1.0     1.9974     2.2032
+   22   65470613321     6.65405e-12        1.970938e+20        1.970938e+20       1.0     1.8763     2.0596
+   23  137528045312    -1.29648e-12       5.1917048e+21       5.1917048e+21       1.0     1.9496     2.1326
+   24  753110839881     1.71624e-13       2.9626994e+23       2.9626994e+23       1.0     1.9763     2.1442
+   25  5409303924479    -9.51151e-14       9.6459681e+23       9.6459681e+23       1.0     1.8836     2.0089
+   26  6162414764360     7.65091e-14       1.4907963e+24       1.4907963e+24       1.0     1.8901     2.0428
+   27  11571718688839     -1.8606e-14       2.5208083e+25       2.5208083e+25       1.0     1.9445     2.1005
+   28  52449289519716     2.08522e-15       2.0069752e+27       2.0069752e+27       1.0     1.9900     2.1334
+   29  431166034846567    -1.92424e-15       2.3568291e+27       2.3568291e+27       1.0     1.8704     2.0068
+   30  483615324366283     1.60982e-16       3.3673833e+29       3.3673833e+29       1.0     2.0108     2.1464
+
+# Part 3: Jarnik laws -- formal transfer law with parameter x of prescribed irrationality exponent mu
+   mu = 2: x = 1.38196601125, partial quotients a_1.. = ['2', '1', '1', '1', '1', '1']
+      n, digits(Q_n), log|R_n|/log Q_n, 2 e_n (target 2(mu-1) = 2): (5, 2, 1.1728, 2.3739); (11, 3, 1.5717, 2.1766); (17, 4, 1.7199, 2.1154); (23, 5, 1.7919, 2.0857); (29, 7, 1.8345, 2.0682); (35, 8, 1.8630, 2.0566)
+   mu = 3: x = 1.40735695076, partial quotients a_1.. = ['2', '2', '5', '27', '734', '538783']
+      n, digits(Q_n), log|R_n|/log Q_n, 2 e_n (target 2(mu-1) = 4): (2, 1, 1.7699, 4.0956); (3, 2, 2.7819, 4.0041); (4, 3, 3.3894, 4.0000); (5, 6, 3.6947, 4.0000); (6, 12, 3.8474, 4.0000); (7, 23, 3.9237, 4.0000)
+   mu = 4: x = 1.44459644322, partial quotients a_1.. = ['2', '4', '81', '534361', '152582343800', '355232625166']
+      n, digits(Q_n), log|R_n|/log Q_n, 2 e_n (target 2(mu-1) = 6): (2, 1, 4.1102, 6.0025); (3, 3, 5.3694, 6.0000); (4, 9, 5.7898, 6.0000); (5, 26, 5.9299, 6.0000); (6, 78, 5.9766, 6.0000)
+   mu = 5: x = 1.47058893957, partial quotients a_1.. = ['2', '8', '4913', '582664092776', '115258515169', '176478612951']
+      n, digits(Q_n), log|R_n|/log Q_n, 2 e_n (target 2(mu-1) = 8): (2, 2, 6.4983, 8.0000); (3, 5, 7.6246, 8.0000); (4, 20, 7.9061, 8.0000); (5, 79, 7.9765, 8.0000)
+
+# Part 4: characters modulo m up to sign against the cusps of X(m); the convergents of log2 3 over the cusps of X(5)
+   m, J_2(m), J_2(m)/2 (signed pairs up to sign), cusps of X(m): [(2, 3, 3, 3), (3, 8, 4, 4), (4, 12, 6, 6), (5, 24, 12, 12), (6, 24, 12, 12), (7, 48, 24, 24), (8, 48, 24, 24), (9, 72, 36, 36), (10, 72, 36, 36), (11, 120, 60, 60), (12, 96, 48, 48)]
+   Platonic counts: X(2) 3 (dihedron), X(3) 4 (tetrahedron), X(4) 6 (octahedron), X(5) 12 (icosahedron); X(7) 24 (Klein quartic)
+   X(5): 12 cusp classes hit by 2599 convergents; counts [195, 199, 207, 208, 210, 214, 215, 223, 228, 229, 233, 238] (uniform would be 216.6)
+   P^1(F_5) (6 points, the exotic S_5 = PGL(2,5) of the outer automorphism of S_6): counts {0: 422, 1: 424, 2: 453, 3: 435, 4: 428, 'inf': 437}
+
+# Part 5: Artin primes for the base 2 below 10^5 (THM-4631 multiplicity one at every level) and Wieferich primes
+   primes 3 <= p < 10^5: 9591; 2 a primitive root: 3603 = 0.37566 of them (Artin's constant 0.3739558); Wieferich below 10^5: [1093, 3511]
+   simple fast spectrum at every level (primitive root mod p and not Wieferich): 3603
+
+# Part 6: Fisher information of a line (trivial character): Lorentzian half-width gamma = |Re w|/(2 pi), I = 1/(2 gamma^2)
+   n= 4 (Q,P)=(12,19): theta_f = 0.01955, gamma = 0.016643, Fisher information 1/(2 gamma^2) = 1805.17, ratio I / theta_f^(-4) = 0.000263697 (law: (2-theta)^6/(8 pi^2) = 6.47343e-5)
+   n= 5 (Q,P)=(41,65): theta_f = -0.016537, gamma = 0.013468, Fisher information 1/(2 gamma^2) = 2756.38, ratio I / theta_f^(-4) = 0.000206166 (law: (2-theta)^6/(8 pi^2) = 6.47343e-5)
+   n= 6 (Q,P)=(53,84): theta_f = 0.0030125, gamma = 0.00076937, Fisher information 1/(2 gamma^2) = 844698.0, ratio I / theta_f^(-4) = 6.95716e-5 (law: (2-theta)^6/(8 pi^2) = 6.47343e-5)
+   n= 7 (Q,P)=(306,485): theta_f = -0.0014748, gamma = 0.00018945, Fisher information 1/(2 gamma^2) = 1.39305e+7, ratio I / theta_f^(-4) = 6.58983e-5 (law: (2-theta)^6/(8 pi^2) = 6.47343e-5)
+   n= 8 (Q,P)=(665,1054): theta_f = 6.298e-5, gamma = 3.4859e-7, Fisher information 1/(2 gamma^2) = 4.11481e+12, ratio I / theta_f^(-4) = 6.47364e-5 (law: (2-theta)^6/(8 pi^2) = 6.47343e-5)
+   n= 9 (Q,P)=(15601,24727): theta_f = -2.6249e-5, gamma = 6.0555e-8, Fisher information 1/(2 gamma^2) = 1.36355e+14, ratio I / theta_f^(-4) = 6.47346e-5 (law: (2-theta)^6/(8 pi^2) = 6.47343e-5)
+   n=10 (Q,P)=(31867,50508): theta_f = 1.0481e-5, gamma = 9.6545e-9, Fisher information 1/(2 gamma^2) = 5.36426e+15, ratio I / theta_f^(-4) = 6.47343e-5 (law: (2-theta)^6/(8 pi^2) = 6.47343e-5)
+   n=11 (Q,P)=(79335,125743): theta_f = -5.2871e-6, gamma = 2.4567e-9, Fisher information 1/(2 gamma^2) = 8.28462e+16, ratio I / theta_f^(-4) = 6.47343e-5 (law: (2-theta)^6/(8 pi^2) = 6.47343e-5)
+   n=12 (Q,P)=(111202,176251): theta_f = 5.194e-6, gamma = 2.371e-9, Fisher information 1/(2 gamma^2) = 8.89454e+16, ratio I / theta_f^(-4) = 6.47343e-5 (law: (2-theta)^6/(8 pi^2) = 6.47343e-5)
+   n=13 (Q,P)=(190537,301994): theta_f = -9.3065e-8, gamma = 7.6118e-13, Fisher information 1/(2 gamma^2) = 8.62969e+23, ratio I / theta_f^(-4) = 6.47343e-5 (law: (2-theta)^6/(8 pi^2) = 6.47343e-5)
+done
