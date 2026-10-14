@@ -1,5 +1,5 @@
 ---
-id: THM-4632
+id: THM-4634
 title: "The Collatz parity-number dictionary: reading the parity vector Q(x) of a 2-adic integer x as the binary expansion of a real number rho(x) in [0,1] conjugates the Terras map T(x) = x/2, (3x+1)/2 to the doubling map; rho(x) is rational (irrationality exponent 1) iff the T-orbit of x is eventually periodic, in which case x is rational with the explicit value x_0 = sum_i 3^(k-1-i) 2^(d_i)/(2^P - 3^k) (Lagarias; the converse is the periodicity conjecture); the trivial cycle {1, 2} is the doubling 2-cycle {2/3, 1/3}, the unique doubling cycle of denominator 3, and the Collatz conjecture says exactly that every rho(n), n a positive integer, has lowest-terms denominator 3 times a power of 2, while a nontrivial cycle of period P would be a rho-value with odd denominator part dividing 2^P - 1 and not 3, and a divergent trajectory an irrational rho-value; the irrationality exponent mu(rho(x)) stratifies Z_2: the stratum mu = 1 is the countable set of eventually periodic points, Haar-almost every x has mu = 2, and for every tau >= 2 the set {mu(rho(x)) >= tau} has Hausdorff dimension 2/tau (Jarnik-Besicovitch transported by the 2-adic isometry Q), so the integers m >= 2 label the strata of 'constructed continued fractions' with partial quotients a_(n+1) of size q_n^(m-2), and the Collatz conjecture places all of N in the stratum mu = 1"
 status: >
   PROVED, mostly by assembling KNOWN results: Terras (1976) and Lagarias (1985) for the parity-vector
@@ -22,7 +22,8 @@ related:
   - THM-4633 (cycles as rational approximations of log2 3; the admissible-minimum budget)
   - THM-4591 (the five integer T-cycles to period 301,993), THM-4623 (order dictionary, Koopman torsion), THM-4523 (rigidity)
   - HYP-9260 / HYP-9261 (opus S29/S30: Moebius dictionary of parity words, Farey census of log2 3)
-  - HYP-9262 (the owner's mu = 2 hypothesis for logarithms and odd zeta values)
+  - HYP-9263 (the owner's mu = 2 hypothesis for logarithms and odd zeta values)
+  - THM-4632 / HYP-9262 (opus-2026-10-14-S31, concurrent treatment of the same prompt: the boundary growth exponent of the Collatz transfer function is 2(mu(log2 3) - 1), with Jarnik continua of laws; this file reads the same exponent on the 2-adic side through parity numbers)
   - J. C. Lagarias, The 3x+1 problem and its generalizations, Amer. Math. Monthly 92 (1985) 3-23 (parity vectors, Theorem B, the periodicity conjecture)
   - R. Terras, A stopping time problem on the positive integers, Acta Arith. 30 (1976) 241-252
   - D. J. Bernstein, A non-iterative 2-adic statement of the 3N+1 conjecture, Proc. AMS 121 (1994) 405-408; D. J. Bernstein, J. C. Lagarias, The 3x+1 conjugacy map, Canad. J. Math. 48 (1996) 1154-1169
@@ -30,7 +31,7 @@ related:
   - V. Jarnik, Diophantische Approximationen und Hausdorffsches Mass, Mat. Sb. 36 (1929); A. S. Besicovitch, Sets of fractional dimensions IV, J. London Math. Soc. 9 (1934)
 ---
 
-# THM-4632 — the parity-number dictionary
+# THM-4634 — the parity-number dictionary
 
 ## Setting
 

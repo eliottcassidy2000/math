@@ -18,9 +18,9 @@ source: 05-knowledge/results/collatz_irrationality_measures_20261014.md
 scripts:
   - 04-computation/experiments/irrmeasure_20261014/log23_convergents.py (+ .out)
 related:
-  - THM-4632 (parity-number dictionary), THM-4591 (integer T-cycles to period 301,993; the convergent 301994/190537 is its period bound), THM-4484 (free and sporadic cycles), THM-4516 (perfect-power clocks)
+  - THM-4634 (parity-number dictionary), THM-4591 (integer T-cycles to period 301,993; the convergent 301994/190537 is its period bound), THM-4484 (free and sporadic cycles), THM-4516 (perfect-power clocks)
   - HYP-9260 / HYP-9261 (convergents and semiconvergents of theta as resonance frequencies; MISTAKE-602 on semiconvergents)
-  - HYP-9262 (mu = 2 for logarithms)
+  - HYP-9263 (mu = 2 for logarithms)
   - S. Eliahou, The 3x+1 problem: new lower bounds on nontrivial cycle lengths, Discrete Math. 118 (1993) 45-56
   - C. Hercher, There are no Collatz m-cycles with m <= 91, J. Integer Seq. 26 (2023), Article 23.3.5 (and corrigendum); arXiv:2201.00406
   - D. Barina, Improved verification limit for the convergence of the Collatz conjecture, J. Supercomput. 81 (2025) art. 810 (2^71)
@@ -34,7 +34,7 @@ related:
 
 `U(n) = (3n + 1)/2^(v_2(3n+1))` is the Syracuse map on odd positive integers. A cycle `n_0 → n_1 → ... →
 n_(k-1) → n_0` has `k` odd elements, exponents `e_i = v_2(3n_i + 1)`, total exponent `K = Σ e_i` (the period of
-the corresponding `T`-cycle, THM-4632), and minimum `m = min n_i`. `θ = log_2 3 = 1.5849625...`, with
+the corresponding `T`-cycle, THM-4634), and minimum `m = min n_i`. `θ = log_2 3 = 1.5849625...`, with
 continued fraction `[1; 1, 1, 2, 2, 3, 1, 5, 2, 23, 2, 2, 1, 1, 55, 1, 4, 3, 1, 1, 15, 1, 9, 2, 5, 7, 1, 1, 4, 8, 1, 11, 1,
 20, 2, 1, 10, 1, 4, 1, ...]` and convergents `p_j/q_j` (`p_0/q_0 = 1/1`, `p_1/q_1 = 2/1`, `3/2`, `8/5`, `19/12`,
 `65/41`, `84/53`, `485/306`, `1054/665`, `24727/15601`, ...; the odd-indexed ones lie above `θ`).
@@ -88,7 +88,7 @@ continued fraction `[1; 1, 1, 2, 2, 3, 1, 5, 2, 23, 2, 2, 1, 1, 55, 1, 4, 3, 1, 
    the numbers `a ln 2 + b ln 3`, a different statement, quoted for scale): `329`. The exact continued
    fraction does better than any of these: `m_max(p_j/q_j) ≍ a_(j+1) q_j^2`, and the partial quotients
    through index 40 are at most 55, so in the verified window `θ` behaves exactly like a number of
-   exponent 2 — the owner's hypothesis `μ(θ) = 2` (HYP-9262) is what the convergent ledger realises
+   exponent 2 — the owner's hypothesis `μ(θ) = 2` (HYP-9263) is what the convergent ledger realises
    numerically, and it would add nothing effective beyond the ledger.
 
 ## Proofs
@@ -133,5 +133,5 @@ controlling the intermediate fractions between consecutive convergents (his `m`-
   Diophantine statement about `θ` alone excludes cycles with `k ≫ sqrt(M_0)`, because for such `k` the
   interval `(θ, θ + 1/(3 M_0 ln 2))` contains rationals with denominator `k` for trivial reasons; this is
   why the `m`-cycle theorems (Simons–de Weger, Hercher) need the cycle's internal structure and not only `θ`.
-* **Divergence is untouched.** The dictionary of THM-4632 places divergent trajectories at irrational
+* **Divergence is untouched.** The dictionary of THM-4634 places divergent trajectories at irrational
   parity numbers; `θ`'s Diophantine properties say nothing about them.

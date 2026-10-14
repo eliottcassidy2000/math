@@ -6,9 +6,18 @@ connected tree; hypothesis `μ = 2` for all odd zeta values and all logarithms (
 the Kaczynski works repository, "think Fisher information" (statistics aims for Dirac distributions), the automorphisms
 of symmetric and alternating groups, the owner's Ramanujan-prime repository, the 7/8 zero-free half-plane paper
 (hexagonmath 2610.00200), and the openai/math primitive-roots preprint; plus a pasted essay drawing the analogy.
-**Status:** PROVED (THM-4632 dictionary, THM-4633 budget theorem with a self-contained `4.95·10^10` odd-element bound)
+**Status:** PROVED (THM-4634 dictionary, THM-4633 budget theorem with a self-contained `4.95·10^10` odd-element bound)
 + FINITE-EXACT (checks, convergent ledger) + CITED (Lagarias, Terras, Jarník, Eliahou, Hercher, Barina) + OPEN
-(HYP-9262). Audit pending at the first checkpoint (section 8).
+(HYP-9263). Audit pending at the first checkpoint (section 8).
+
+## 0. Concurrency note
+
+opus-2026-10-14-S31 received the same prompt and pushed first: its THM-4632 shows the boundary growth exponent of
+the Collatz transfer function `R(s)` on its line is `2(μ(log_2 3) - 1)`, so the integer `n` labels Jarník continua of
+laws of exponent `2n - 2`, and its HYP-9262 types the same sources (modular cusps, Fisher information of a line, the
+Liu–Jiang–Zhang preprint). This session's THM-4632/HYP-9262 were renumbered THM-4634/HYP-9263. The two treatments are
+complementary: S31 reads `μ(θ)` analytically off `R(s)`; here `θ`'s convergents are read as cycle budgets and the
+integers' parity numbers carry the Jarník strata on the 2-adic side.
 
 ## 1. Inheritance pass
 
@@ -36,7 +45,7 @@ of symmetric and alternating groups, the owner's Ramanujan-prime repository, the
 
 ## 3. Results
 
-### 3.1 THM-4632 — the parity-number dictionary (PROVED; KNOWN ingredients assembled)
+### 3.1 THM-4634 — the parity-number dictionary (PROVED; KNOWN ingredients assembled)
 
 `ρ` conjugates `T` to doubling; `ρ(x) ∈ Q` iff the orbit is eventually periodic, which forces `x ∈ Q ∩ Z_2` with
 `x_0 = Σ 3^(k-1-i) 2^(d_i)/(2^P - 3^k)` (Lagarias); the converse is the periodicity conjecture. `ρ(1) = 2/3`, `ρ(2) = 1/3`,
@@ -58,7 +67,7 @@ gives `≥ 137,528,045,312 = q_23` — the same convergent. An effective exponen
 `k > (3 c M_0 ln 2)^(1/μ_0)`: `7.0·10^10` for `μ_0 = 2`, `1.7·10^7` for `3`, `1.7·10^4` for `5.117`, `329` for `8.616`; the
 actual continued fraction (partial quotients `≤ 55` through index 40) already behaves like `μ = 2` in the verified window.
 
-### 3.3 HYP-9262 — the owner's `μ = 2` hypothesis (OPEN)
+### 3.3 HYP-9263 — the owner's `μ = 2` hypothesis (OPEN)
 
 Recorded with the literature: Liu–Jiang–Zhang (arXiv:2610.10192, 7–8 Oct 2026, unrefereed) claim `μ(log r) = 2` for
 positive rationals `r` — not the ratio `θ`; known bounds `μ(log 2) ≤ 3.57455`, `μ(log 3) ≤ 5.125`, `μ(ζ(3)) ≤ 5.513891`,
@@ -69,9 +78,9 @@ exactly the scale the ledger attains; it says nothing about divergence.
 
 | source | what it is | connection found | type |
 |---|---|---|---|
-| arXiv:2610.10192 (Liu–Jiang–Zhang) | `μ(log r) = 2` for `r ∈ Q_(>0)`, determinant/interpolation method | supports HYP-9262(b) for `log 2`, `log 3`; not for `θ` | CITED, unverified claim |
+| arXiv:2610.10192 (Liu–Jiang–Zhang) | `μ(log r) = 2` for `r ∈ Q_(>0)`, determinant/interpolation method | supports HYP-9263(b) for `log 2`, `log 3`; not for `θ` | CITED, unverified claim |
 | Kaczynski works (micah541 repository, Lean 4) | boundary functions; sets of curvilinear convergence are `F_σδ`; Baire classes; Wedderburn; Sutcliffe's digit-reversal conjecture | the Collatz convergence set in `Z_2` is a countable `F_σ`, the strata `{μ ≥ τ}` are `G_δ`: "sets of convergence are low Borel" is the shared pattern; no mechanism transfers | ANALOGY (Borel class) |
-| Fisher information / Dirac | zero-variance limit = exact knowledge | rational parity number = deterministic itinerary; `μ = 2` = law of large numbers of the Gauss map; divergence costs `1 - H(log_3 2)` bits per step (THM-4632 reading) | DICTIONARY, no theorem |
+| Fisher information / Dirac | zero-variance limit = exact knowledge | rational parity number = deterministic itinerary; `μ = 2` = law of large numbers of the Gauss map; divergence costs `1 - H(log_3 2)` bits per step (THM-4634 reading) | DICTIONARY, no theorem |
 | Automorphisms of `S_n`, `A_n` (`S_6` exceptional) | a unique exception in a family | rhetorical parallel to "the trivial cycle is the only abnormality"; the dictionary's version is "`3` is the only odd denominator" | ANALOGY only |
 | owner's Ramanujan-prime repository | `N_R = 38,358,837,683` without RH, from the OpenAI `7/8` zero-free half-plane and Bhattacharjee's correction of Büthe's `E_2` | none to Collatz; records the dependency chain on the unrefereed zero-free region | CITED, no connection |
 | hexagonmath 2610.00200 | `L_F(s, r)` zero-free for `Re s > 7/8` for all Weil-group representations, extending the OpenAI cubic-theta method | effective Chebotarev would sharpen THM-4631's Artin/Wieferich multiplicities statistically; nothing used | CITED, unverified |
@@ -83,6 +92,7 @@ exactly the scale the ledger attains; it says nothing about divergence.
     cd 04-computation/experiments/irrmeasure_20261014
     python3 log23_convergents.py 71     # convergents of log2 3, budgets, 2^71 exclusion, Legendre threshold, mu_0 table
     python3 parity_number_checks.py     # Terras bijection, denominators 3*2^j, rational cycles from words, doubling orbits
+    python3 log23_khinchin.py 20000     # 20,000 partial quotients of log2 3: Khinchin/Levy statistics (HYP-9263 evidence)
 
 Hostile controls: the ledger's first surviving denominator equals Hercher's published odd-element bound; the integer
 cycles found among short words are exactly those of THM-4591 with period `≤ 7`; the trivial cycle saturates the product
@@ -96,8 +106,8 @@ papers (their status is unrefereed and they do not bear on `θ`).
 
 ## 7. Next obligations
 
-1. Extend the continued fraction of `θ` far beyond index 40 and record the Khinchin statistics of its partial quotients
-   (cheap; tests HYP-9262 numerically and extends the ledger).
+1. (Done at the second checkpoint: 20,000 partial quotients, Khinchin-typical; see HYP-9263.) Extend further and
+   extend the exclusion ledger beyond index 37 as needed.
 2. State Hercher's intermediate-fraction step in the budget language (which fractions between `p_21/q_21` and `p_23/q_23`
    lie within `1/(3·2^71 ln 2)` of `θ`), to make the `137,528,045,312` bound self-contained in-repo.
 3. Lagarias's periodicity conjecture in the dictionary: which rational 2-adic integers of small height have rational

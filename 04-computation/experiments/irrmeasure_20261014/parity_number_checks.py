@@ -1,4 +1,4 @@
-"""Checks for THM-4632 (parity-number dictionary).  T(x) = x/2 (even), (3x+1)/2 (odd) on Z_2; Q(x) = parity vector;
+"""Checks for THM-4634 (parity-number dictionary).  T(x) = x/2 (even), (3x+1)/2 (odd) on Z_2; Q(x) = parity vector;
 r(x) = sum v_i 2^{-i-1} in [0,1] (the parity vector read as a binary expansion)."""
 from fractions import Fraction as Fr
 import itertools
