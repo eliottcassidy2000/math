@@ -1,0 +1,69 @@
+== parity table to 2^27 ==
+ done in 1s; t(1..12) = [1, -1, -1, 1, 1, 1, -1, -1, -1, -1, 1, -1]
+== (2) per-octave break census, current, energy ==
+ k | B_k (breaks) | B_k/2^k | ratio B_k/B_(k-1) | even-n share | B1 | B2 | J_k | J_k^2/(B1+B2) | H(2^(k+1)) | max|H| | max|H|/sqrt(2^(k+1)) | energy/X^2
+  8 |        71 | 0.27734 | 2.448 | 0.366 |       25 |       23 |      -8 | 1.333 |       15 |      16 | 0.707 | 0.3202
+  9 |       155 | 0.30273 | 2.183 | 0.361 |       49 |       49 |      16 | 2.612 |      -18 |      21 | 0.656 | 0.3503
+ 10 |       309 | 0.30176 | 1.994 | 0.372 |      116 |       97 |      -5 | 0.117 |       -7 |      25 | 0.552 | 0.1366
+ 11 |       625 | 0.30518 | 2.023 | 0.368 |      205 |      221 |     -16 | 0.601 |       24 |      35 | 0.547 | 0.1082
+ 12 |      1167 | 0.28491 | 1.867 | 0.374 |      379 |      409 |      36 | 1.645 |      -47 |      73 | 0.807 | 0.1947
+ 13 |      2323 | 0.28357 | 1.991 | 0.382 |      776 |      784 |     -10 | 0.064 |      -28 |     113 | 0.883 | 0.4001
+ 14 |      4537 | 0.27692 | 1.953 | 0.376 |     1502 |     1491 |     -85 | 2.414 |      143 |     202 | 1.116 | 0.6414
+ 15 |      8937 | 0.27274 | 1.970 | 0.376 |     3013 |     2944 |      77 | 0.995 |      -12 |     191 | 0.746 | 0.3077
+ 16 |     17839 | 0.27220 | 1.996 | 0.377 |     5954 |     5853 |      45 | 0.172 |     -101 |     173 | 0.478 | 0.1077
+ 17 |     35127 | 0.26800 | 1.969 | 0.375 |    11684 |    11726 |    -244 | 2.543 |      386 |     429 | 0.838 | 0.3881
+ 18 |     69291 | 0.26432 | 1.973 | 0.375 |    23053 |    23170 |     103 | 0.230 |      181 |     509 | 0.703 | 0.2739
+ 19 |    137047 | 0.26140 | 1.978 | 0.375 |    45769 |    45625 |    -262 | 0.751 |      704 |     784 | 0.766 | 0.3743
+ 20 |    270545 | 0.25801 | 1.974 | 0.375 |    90430 |    89984 |      92 | 0.047 |      521 |    1308 | 0.903 | 0.7330
+ 21 |    534321 | 0.25478 | 1.975 | 0.374 |   178262 |   177962 |    -726 | 1.480 |     1972 |    1979 | 0.966 | 0.5601
+ 22 |   1053961 | 0.25128 | 1.973 | 0.375 |   350945 |   351153 |     822 | 0.962 |      329 |    1991 | 0.687 | 0.3653
+ 23 |   2082645 | 0.24827 | 1.976 | 0.375 |   694794 |   694743 |   -1037 | 0.774 |     2402 |    2797 | 0.683 | 0.2679
+ 24 |   4122503 | 0.24572 | 1.979 | 0.375 |  1373558 |  1374085 |   -1403 | 0.716 |     5209 |    7701 | 1.329 | 1.7688
+ 25 |   8157795 | 0.24312 | 1.979 | 0.375 |  2719133 |  2720227 |    -790 | 0.115 |     6788 |    7509 | 0.917 | 0.7350
+ 26 |  16152641 | 0.24069 | 1.980 | 0.374 |  5384673 |  5383958 |   -2519 | 0.589 |    11827 |   13767 | 1.188 | 1.0840
+ break density B_k/2^k over octaves 14..26: log2-slope -0.0173 per octave (B(X) ~ X^(0.983))
+== (3) whiteness of the signed break current (autocorrelation over consecutive breaks with W != 0) ==
+ octave 16: rho(1..8) = [np.float64(0.1346), np.float64(-0.0953), np.float64(-0.06), np.float64(-0.0324), np.float64(-0.0189), np.float64(-0.0047), np.float64(0.0064), np.float64(0.0064)]
+ octave 20: rho(1..8) = [np.float64(0.1278), np.float64(-0.1003), np.float64(-0.0593), np.float64(-0.0399), np.float64(-0.0143), np.float64(-0.0023), np.float64(-0.0012), np.float64(0.0011)]
+ octave 24: rho(1..8) = [np.float64(0.1264), np.float64(-0.1006), np.float64(-0.0579), np.float64(-0.0402), np.float64(-0.0141), np.float64(-0.0041), np.float64(0.0014), np.float64(0.0032)]
+ octave 26: rho(1..8) = [np.float64(0.1272), np.float64(-0.1004), np.float64(-0.059), np.float64(-0.0396), np.float64(-0.0138), np.float64(-0.0041), np.float64(0.0003), np.float64(0.0027)]
+== (4) exact identities ==
+ identity (6) H(N) = W(N)t(N) - sum_(n<N) W(n)(t(n+1) - t(n)): violations for N < 2^27: 0
+ beta(2m) = [t(m) != t(3m+2)], beta(2m-1) = [t(3m-1) != t(m)]: 0 violations in 44739239 checks
+ octave transfer Delta H_(13) direct = 19, via the previous octave = 19: True
+ octave transfer Delta H_(17) direct = 487, via the previous octave = 487: True
+ octave transfer Delta H_(21) direct = 1451, via the previous octave = 1451: True
+== (5) the twisted-residue formula rho(l) = (-1)^l E[W(n_i) W(n_(i+l))], the gap law of breaks, and a renewal closure ==
+ breaks in [2^22, 2^27): 31484229; gap law g = 1..12: [np.float64(0.4084), np.float64(0.1797), np.float64(0.1167), np.float64(0.0643), np.float64(0.0478), np.float64(0.0388), np.float64(0.0324), np.float64(0.018), np.float64(0.0112), np.float64(0.0117), np.float64(0.0081), np.float64(0.0078)]; P(g = 0 mod 3) = 0.1923, 1 mod 3: 0.5362, 2 mod 3: 0.2714
+ class of break position n mod 3: [0.3333, 0.3333, 0.3334]; transition matrix of consecutive break classes (rows from, cols to 0,1,2):
+   [[0.1926, 0.5357, 0.2717], [0.2715, 0.1928, 0.5357], [0.5358, 0.2716, 0.1927]]
+ twisted-residue formula gamma(l) = (-1)^l E[W(c_i) W(c_(i+l))] (lag in breaks) at lags 1..12: [np.float64(0.1406), np.float64(-0.0619), np.float64(-0.0676), np.float64(-0.0325), np.float64(-0.0183), np.float64(-0.0149), np.float64(-0.0017), np.float64(-0.003), np.float64(0.0027), np.float64(-0.0013), np.float64(0.0043), np.float64(-0.0013)]
+ direct autocovariance of the signed current v_i = W t(n_i + 1) at the same lags:            [np.float64(0.1406), np.float64(-0.0619), np.float64(-0.0676), np.float64(-0.0325), np.float64(-0.0183), np.float64(-0.0149), np.float64(-0.0017), np.float64(-0.003), np.float64(0.0027), np.float64(-0.0013), np.float64(0.0043), np.float64(-0.0013)] (identical: the formula is exact)
+ empirical long-run variance factor (gamma(0) + 2 sum_(l<=12) gamma(l))/gamma(0), gamma(0) = 2/3: 0.8357
+ renewal model with i.i.d. gaps, P(g mod 3 = 0,1,2) = (0.1923, 0.5362, 0.2714): gamma(l) = (-1)^l (2/3) Re(w^l), w = a + b omega + c omega^2 = -0.2115+0.2293i:
+   model gamma(1..12) = [np.float64(0.141), np.float64(-0.0052), np.float64(-0.0159), np.float64(-0.0062), np.float64(-0.0011), np.float64(0.0001), np.float64(0.0002), np.float64(0.0001), np.float64(0.0), np.float64(-0.0), np.float64(-0.0), np.float64(-0.0)]; closed-form variance factor Re[(1 - w)/(1 + w)] = 1.3386
+ Markov-in-residue model (measured 3x3 transitions): gamma(l)/gamma(0) = [np.float64(0.3536), np.float64(-0.0118), np.float64(-0.0352), np.float64(-0.0139), np.float64(-0.0024), np.float64(0.0003), np.float64(0.0004), np.float64(0.0001), np.float64(0.0), np.float64(-0.0), np.float64(-0.0), np.float64(-0.0)]
+ conditional energy (renewal model): E[H(N)^2] = gamma(0) x factor x B(N) = (2/3)(1.339) B(N) = 0.892 B(N) ~ 0.214 N at break density 0.24; dyadic energy int_X^(2X) H^2 ~ 0.321 X^2
+== (6) eps_M = A(2M) + A(M)/2 + A(3M)/2 (Codex identity (7)) is -H(3M)/(6M) exactly; its decay under the break model ==
+ identity eps_M = -H(3M)/(6M) checked at the dyadic M: 0 violations
+ j | eps_(2^j) | rms over 64 prefixes in the octave | rms x sqrt(M) | model 0.105/sqrt(M) x sqrt(M) = 0.105
+  8 | -7.812e-03 | 6.209e-03 | 0.0994
+  9 | +3.906e-03 | 2.057e-03 | 0.0465
+ 10 | -1.302e-03 | 2.253e-03 | 0.0721
+ 11 | +1.790e-03 | 2.937e-03 | 0.1329
+ 12 | +1.709e-03 | 1.541e-03 | 0.0986
+ 13 | -1.953e-03 | 1.860e-03 | 0.1684
+ 14 | -6.510e-04 | 4.504e-04 | 0.0577
+ 15 | -4.476e-04 | 3.644e-04 | 0.0660
+ 16 | -1.272e-04 | 5.692e-04 | 0.1457
+ 17 | -2.747e-04 | 2.321e-04 | 0.0840
+ 18 | -2.289e-04 | 3.539e-04 | 0.1812
+ 19 | -2.804e-04 | 1.948e-04 | 0.1411
+ 20 | -1.478e-04 | 1.487e-04 | 0.1522
+ 21 | -9.123e-05 | 5.450e-05 | 0.0789
+ 22 | -5.500e-05 | 9.306e-05 | 0.1906
+ 23 | -1.343e-04 | 7.411e-05 | 0.2146
+ 24 | -4.073e-05 | 4.429e-05 | 0.1814
+ 25 | -2.803e-05 | 4.214e-05 | 0.2441
+ log2-slopes of the octave rms over 2^12..2^22: -0.436; 2^18..2^25: -0.410; 2^22..2^25: -0.417 (S27 reported -0.45, -0.7, -1.2 on other ranges: the range dependence is the walk's own fluctuation; the break model predicts -1/2 with a slowly falling prefactor)
+total 6s
