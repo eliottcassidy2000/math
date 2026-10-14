@@ -44,7 +44,7 @@ where the sum runs over positive odd sources whose native length-L prefix has co
 
 Among slope-admissible words of a fixed length `L` and fixed total cost `A`, the carry `B 2^(-A) mod3^L` determines the word.
 
-This is the new packet's observed property through `L=16`, stated as a falsifiable continuation, not as a proved result. A counterexample is simply two different authenticated words with the same triple `(L,A,r)`. If true, every cost coefficient of the weighted carry polynomial is `0` or `1`; the exact native source address can be reconstructed from `(L,A,r)`. It improves source recovery, not the exponential rate, and does not itself establish positive-integer descent.
+This is now [proved through `L=20`](collatz_cost_carry_univalence_20261014.md) by the mod-4 range refinement below and independently confirmed by an exhaustive census; its all-length form remains a falsifiable hypothesis. A counterexample beyond that range would be two different authenticated words with the same triple `(L,A,r)`. Univalence makes every cost coefficient of the weighted carry polynomial `0` or `1` and allows the exact native source address to be reconstructed from `(L,A,r)`. It improves source recovery, not the exponential rate, and does not itself establish positive-integer descent.
 
 **New range lemma.** Put `b_i=floor(log_2(3^i))`. At fixed admissible `(L,A)`, the exact carry numerator satisfies the attained bounds
 
@@ -57,9 +57,11 @@ Two words with the same `(L,A,r)` have numerator difference divisible by `3^L`; 
 
     B_max-B_min < 2*3^L
 
-proves univalence for that cost. The exact range checker proves it for every cost through `L=12`. At `L=12` the maximum width is `1,041,348 < 1,062,882`; at `L=13` the maximum width is `3,644,236 > 3,188,646`, so the range argument alone first stops there. The observed univalence at levels `13..16` is consequently genuinely stronger than this interval bound.
+proves univalence for that cost. This parity-only range test proves it for every cost through `L=12`: the maximum width is `1,041,348 < 1,062,882`. At `L=13` the maximum width is `3,644,236 > 3,188,646`, so this weaker test first stops there.
 
-Next computation: extend the cost-resolved native compiler beyond level 16; on a collision, save both words, both exact `B` values, and their distinct dyadic source addresses. On continued injectivity, seek a congruence obstruction to the possible multiples `2k*3^L`, rather than another entropy fit.
+**Mod-4 refinement and theorem through 20.** Every slope-admissible word starts with `a_1=1`, so for `L>=2` its numerator satisfies `B=3^(L-1)+2 (mod4)`. A nonzero same-cost carry difference must therefore have magnitude at least `4*3^L`. If `D_L` is the largest width across costs, then `D_(L+1)=3D_L+2^b_L-2^L`, so `D_L/3^L` is nondecreasing. The single exact inequality `D_20=13,805,179,460 < 4*3^20=13,947,137,604` proves every length through 20. The independent frontier checks all `13,472,296` words at length 20. At length 21 this refined range test fails; no length-21 collision has been asserted.
+
+Next arithmetic target: for a candidate difference `B-B'=k*3^L`, a common prefix of cost `S` followed by first unequal letters `a,b` forces `v_2(k)=S+min(a,b)`. At length 21 the range leaves only `k=+4` or `-4`, forcing the two words to begin `(1,1,...)` and `(1,2,...)`. Retain equal total cost, native decoding and all prefix constraints; terminal slope alone already has a length-7 counterexample in the companion note.
 
 A separate temptation needs attribution: identifying all no-descent words with slope-admissible words leads to the classical coefficient-stopping-time question. [Garner (1981), §4](https://www.ams.org/journals/proc/1981-082-01/S0002-9939-1981-0603593-2/S0002-9939-1981-0603593-2.pdf) explicitly conjectures equality of coefficient and actual stopping times. This should not be renamed as a discovery of the current compiler.
 
