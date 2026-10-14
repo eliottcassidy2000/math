@@ -1,0 +1,326 @@
+{
+  "beta_approx": 2.8395137304977522,
+  "checks": 11013,
+  "conclusion": "The strict unweighted carry-entropy gap is refuted by a general polynomial fibre bound.",
+  "limitations": [
+    "Fixed-cost injectivity is observed only through length 16, not used as a theorem.",
+    "These are slope-admissible native words, not all finite-source-only no-descent prefixes.",
+    "No claim about convergence of one fixed positive integer orbit."
+  ],
+  "maximum_length": 16,
+  "payload_sha256": "759cd7bd8afee562dbb723e0b73db9721e846dd2d52e20973847353ebec6ebc7",
+  "rows": [
+    {
+      "budget": 1,
+      "budget_jump": 1,
+      "carry_count": 1,
+      "carry_word_ratio": "1",
+      "distinct_carry_cost_pairs": 1,
+      "fibre_histogram": {
+        "1": 1
+      },
+      "length": 1,
+      "maximum_fibre": 1,
+      "maximum_fixed_cost_multiplicity_observed": 1,
+      "minimum_representative_mass": "1/2",
+      "proved_fibre_bound": 1,
+      "source_mass": "1/2",
+      "source_weighted_word_uncertainty_given_carry_bits_approx": 0.0,
+      "word_count": 1
+    },
+    {
+      "budget": 3,
+      "budget_jump": 2,
+      "carry_count": 2,
+      "carry_word_ratio": "1",
+      "distinct_carry_cost_pairs": 2,
+      "fibre_histogram": {
+        "1": 2
+      },
+      "length": 2,
+      "maximum_fibre": 1,
+      "maximum_fixed_cost_multiplicity_observed": 1,
+      "minimum_representative_mass": "3/8",
+      "proved_fibre_bound": 2,
+      "source_mass": "3/8",
+      "source_weighted_word_uncertainty_given_carry_bits_approx": 0.0,
+      "word_count": 2
+    },
+    {
+      "budget": 4,
+      "budget_jump": 1,
+      "carry_count": 3,
+      "carry_word_ratio": "1",
+      "distinct_carry_cost_pairs": 3,
+      "fibre_histogram": {
+        "1": 3
+      },
+      "length": 3,
+      "maximum_fibre": 1,
+      "maximum_fixed_cost_multiplicity_observed": 1,
+      "minimum_representative_mass": "1/4",
+      "proved_fibre_bound": 2,
+      "source_mass": "1/4",
+      "source_weighted_word_uncertainty_given_carry_bits_approx": 0.0,
+      "word_count": 3
+    },
+    {
+      "budget": 6,
+      "budget_jump": 2,
+      "carry_count": 6,
+      "carry_word_ratio": "6/7",
+      "distinct_carry_cost_pairs": 7,
+      "fibre_histogram": {
+        "1": 5,
+        "2": 1
+      },
+      "length": 4,
+      "maximum_fibre": 2,
+      "maximum_fixed_cost_multiplicity_observed": 1,
+      "minimum_representative_mass": "3/16",
+      "proved_fibre_bound": 6,
+      "source_mass": "13/64",
+      "source_weighted_word_uncertainty_given_carry_bits_approx": 0.211914423243,
+      "word_count": 7
+    },
+    {
+      "budget": 7,
+      "budget_jump": 1,
+      "carry_count": 10,
+      "carry_word_ratio": "5/6",
+      "distinct_carry_cost_pairs": 12,
+      "fibre_histogram": {
+        "1": 8,
+        "2": 2
+      },
+      "length": 5,
+      "maximum_fibre": 2,
+      "maximum_fixed_cost_multiplicity_observed": 1,
+      "minimum_representative_mass": "17/128",
+      "proved_fibre_bound": 6,
+      "source_mass": "19/128",
+      "source_weighted_word_uncertainty_given_carry_bits_approx": 0.289988158122,
+      "word_count": 12
+    },
+    {
+      "budget": 9,
+      "budget_jump": 2,
+      "carry_count": 24,
+      "carry_word_ratio": "4/5",
+      "distinct_carry_cost_pairs": 30,
+      "fibre_histogram": {
+        "1": 18,
+        "2": 6
+      },
+      "length": 6,
+      "maximum_fibre": 2,
+      "maximum_fixed_cost_multiplicity_observed": 1,
+      "minimum_representative_mass": "55/512",
+      "proved_fibre_bound": 8,
+      "source_mass": "1/8",
+      "source_weighted_word_uncertainty_given_carry_bits_approx": 0.387406054992,
+      "word_count": 30
+    },
+    {
+      "budget": 11,
+      "budget_jump": 2,
+      "carry_count": 67,
+      "carry_word_ratio": "67/85",
+      "distinct_carry_cost_pairs": 85,
+      "fibre_histogram": {
+        "1": 49,
+        "2": 18
+      },
+      "length": 7,
+      "maximum_fibre": 2,
+      "maximum_fixed_cost_multiplicity_observed": 1,
+      "minimum_representative_mass": "189/2048",
+      "proved_fibre_bound": 15,
+      "source_mass": "113/1024",
+      "source_weighted_word_uncertainty_given_carry_bits_approx": 0.451021405221,
+      "word_count": 85
+    },
+    {
+      "budget": 12,
+      "budget_jump": 1,
+      "carry_count": 137,
+      "carry_word_ratio": "137/173",
+      "distinct_carry_cost_pairs": 173,
+      "fibre_histogram": {
+        "1": 101,
+        "2": 36
+      },
+      "length": 8,
+      "maximum_fibre": 2,
+      "maximum_fixed_cost_multiplicity_observed": 1,
+      "minimum_representative_mass": "19/256",
+      "proved_fibre_bound": 15,
+      "source_mass": "367/4096",
+      "source_weighted_word_uncertainty_given_carry_bits_approx": 0.472909843696,
+      "word_count": 173
+    },
+    {
+      "budget": 14,
+      "budget_jump": 2,
+      "carry_count": 378,
+      "carry_word_ratio": "27/34",
+      "distinct_carry_cost_pairs": 476,
+      "fibre_histogram": {
+        "1": 280,
+        "2": 98
+      },
+      "length": 9,
+      "maximum_fibre": 2,
+      "maximum_fixed_cost_multiplicity_observed": 1,
+      "minimum_representative_mass": "133/2048",
+      "proved_fibre_bound": 18,
+      "source_mass": "1295/16384",
+      "source_weighted_word_uncertainty_given_carry_bits_approx": 0.491412365251,
+      "word_count": 476
+    },
+    {
+      "budget": 15,
+      "budget_jump": 1,
+      "carry_count": 768,
+      "carry_word_ratio": "768/961",
+      "distinct_carry_cost_pairs": 961,
+      "fibre_histogram": {
+        "1": 575,
+        "2": 193
+      },
+      "length": 10,
+      "maximum_fibre": 2,
+      "maximum_fixed_cost_multiplicity_observed": 1,
+      "minimum_representative_mass": "1735/32768",
+      "proved_fibre_bound": 24,
+      "source_mass": "1057/16384",
+      "source_weighted_word_uncertainty_given_carry_bits_approx": 0.493898941968,
+      "word_count": 961
+    },
+    {
+      "budget": 17,
+      "budget_jump": 2,
+      "carry_count": 2128,
+      "carry_word_ratio": "532/663",
+      "distinct_carry_cost_pairs": 2652,
+      "fibre_histogram": {
+        "1": 1604,
+        "2": 524
+      },
+      "length": 11,
+      "maximum_fibre": 2,
+      "maximum_fixed_cost_multiplicity_observed": 1,
+      "minimum_representative_mass": "6141/131072",
+      "proved_fibre_bound": 28,
+      "source_mass": "7495/131072",
+      "source_weighted_word_uncertainty_given_carry_bits_approx": 0.497680810931,
+      "word_count": 2652
+    },
+    {
+      "budget": 19,
+      "budget_jump": 2,
+      "carry_count": 6464,
+      "carry_word_ratio": "6464/8045",
+      "distinct_carry_cost_pairs": 8045,
+      "fibre_histogram": {
+        "1": 4895,
+        "2": 1557,
+        "3": 12
+      },
+      "length": 12,
+      "maximum_fibre": 3,
+      "maximum_fixed_cost_multiplicity_observed": 1,
+      "minimum_representative_mass": "22355/524288",
+      "proved_fibre_bound": 32,
+      "source_mass": "427/8192",
+      "source_weighted_word_uncertainty_given_carry_bits_approx": 0.502232814085,
+      "word_count": 8045
+    },
+    {
+      "budget": 20,
+      "budget_jump": 1,
+      "carry_count": 14209,
+      "carry_word_ratio": "14209/17637",
+      "distinct_carry_cost_pairs": 17637,
+      "fibre_histogram": {
+        "1": 10827,
+        "2": 3340,
+        "3": 38,
+        "4": 4
+      },
+      "length": 13,
+      "maximum_fibre": 4,
+      "maximum_fixed_cost_multiplicity_observed": 1,
+      "minimum_representative_mass": "38151/1048576",
+      "proved_fibre_bound": 40,
+      "source_mass": "46611/1048576",
+      "source_weighted_word_uncertainty_given_carry_bits_approx": 0.501902819237,
+      "word_count": 17637
+    },
+    {
+      "budget": 22,
+      "budget_jump": 2,
+      "carry_count": 41192,
+      "carry_word_ratio": "41192/51033",
+      "distinct_carry_cost_pairs": 51033,
+      "fibre_histogram": {
+        "1": 31523,
+        "2": 9517,
+        "3": 132,
+        "4": 20
+      },
+      "length": 14,
+      "maximum_fibre": 4,
+      "maximum_fixed_cost_multiplicity_observed": 1,
+      "minimum_representative_mass": "69081/2097152",
+      "proved_fibre_bound": 45,
+      "source_mass": "168807/4194304",
+      "source_weighted_word_uncertainty_given_carry_bits_approx": 0.502937066002,
+      "word_count": 51033
+    },
+    {
+      "budget": 23,
+      "budget_jump": 1,
+      "carry_count": 88157,
+      "carry_word_ratio": "88157/108950",
+      "distinct_carry_cost_pairs": 108950,
+      "fibre_histogram": {
+        "1": 67793,
+        "2": 19993,
+        "3": 313,
+        "4": 58
+      },
+      "length": 15,
+      "maximum_fibre": 4,
+      "maximum_fixed_cost_multiplicity_observed": 1,
+      "minimum_representative_mass": "117417/4194304",
+      "proved_fibre_bound": 45,
+      "source_mass": "286581/8388608",
+      "source_weighted_word_uncertainty_given_carry_bits_approx": 0.500995463151,
+      "word_count": 108950
+    },
+    {
+      "budget": 25,
+      "budget_jump": 2,
+      "carry_count": 253264,
+      "carry_word_ratio": "23024/28405",
+      "distinct_carry_cost_pairs": 312455,
+      "fibre_histogram": {
+        "1": 195419,
+        "2": 56695,
+        "3": 954,
+        "4": 196
+      },
+      "length": 16,
+      "maximum_fibre": 4,
+      "maximum_fixed_cost_multiplicity_observed": 1,
+      "minimum_representative_mass": "53151/2097152",
+      "proved_fibre_bound": 60,
+      "source_mass": "518687/16777216",
+      "source_weighted_word_uncertainty_given_carry_bits_approx": 0.50075115303,
+      "word_count": 312455
+    }
+  ],
+  "status": "FINITE-EXACT frontier counts; polynomial-fibre and rate theorems proved in note",
+  "weighted_rate_beta_over_3_approx": 0.946504576832584
+}

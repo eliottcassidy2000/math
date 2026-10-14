@@ -1,6 +1,8 @@
 # Native survivor carries: a stable collision and a minimum-cost frontier
 
-Date: 2026-10-14. PROVED: the collision identity, its suffix propagation, the projected minimum-cost recursion, weighted-fibre recursion, binary injectivity and entropy bounds. FINITE-EXACT: a complete all-height classification through six odd steps. OPEN: a strict carry-entropy improvement and any consequence for sourcewise descent. These are new derivations in this session; external novelty is unclaimed.
+**Update, 2026-10-14:** the strict carry-entropy-gap hypothesis below is now REFUTED by the [polynomial carry-fibre theorem](collatz_polynomial_carry_fibres_20261014.md). Each fibre contains only O(L²) words, so the carry and word exponential rates are equal. The collision identities, exact compilers, finite counts and sourcewise boundaries remain valid.
+
+Date: 2026-10-14. PROVED: the collision identity, its suffix propagation, the projected minimum-cost recursion, weighted-fibre recursion, binary injectivity and entropy bounds. FINITE-EXACT: a complete all-height classification through six odd steps. REFUTED: the proposed strict carry-entropy improvement. OPEN: consequences for sourcewise descent. These are new derivations in this session; external novelty is unclaimed.
 
 ## 1. The new signal
 
@@ -143,11 +145,11 @@ For a lower bound on carries, binary words in which every prefix has at least as
 
     2≤liminf R_L^(1/L)≤limsup R_L^(1/L)≤β.
 
-**Candidate strict-compression hypothesis, OPEN:**
+**Historical strict-compression hypothesis, now REFUTED:**
 
     limsup R_L^(1/L) < β.
 
-The alternative, equality with β despite many finite collisions, remains possible. The observed 30→24 reduction and the suffix-stable family establish a mechanism and finite loss, not an exponential gap. A decisive next step is to find collisions that can act repeatedly on typical admissible prefixes, or to prove that collision fibre sizes are only subexponential. The minimum-cost and weighted-polynomial recursions are concrete instruments for that question.
+The successor now proves equality with β despite the finite collisions: every fibre is polynomially bounded. The observed 30→24 reduction and the suffix-stable family remain a mechanism and finite loss, not an exponential gap. The minimum-cost and weighted-polynomial recursions remain useful for the finer, unresolved distribution of fibre sizes and source weights.
 
 Even a strict gap would concern a ternary shadow. It would not establish that an individual integer descends.
 
