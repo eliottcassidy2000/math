@@ -1,0 +1,376 @@
+{
+  "active_checks": 160225,
+  "all_classes_surjective": true,
+  "explicit_residue_witnesses": 48160,
+  "labelled_connection_sets": 256,
+  "multiplier_classes": 16,
+  "p": 17,
+  "representatives": [
+    {
+      "S": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "additive_moduli": [],
+      "norm": 1,
+      "p": 17,
+      "prime_factors": [],
+      "surjective": true,
+      "witnessed_residues": 1,
+      "zeta_image": 0
+    },
+    {
+      "S": [
+        1,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "additive_moduli": [
+        103
+      ],
+      "norm": 103,
+      "p": 17,
+      "prime_factors": [
+        103
+      ],
+      "surjective": true,
+      "witnessed_residues": 103,
+      "zeta_image": 8
+    },
+    {
+      "S": [
+        2,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        16
+      ],
+      "additive_moduli": [
+        307
+      ],
+      "norm": 307,
+      "p": 17,
+      "prime_factors": [
+        307
+      ],
+      "surjective": true,
+      "witnessed_residues": 307,
+      "zeta_image": 273
+    },
+    {
+      "S": [
+        1,
+        2,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "additive_moduli": [
+        103
+      ],
+      "norm": 103,
+      "p": 17,
+      "prime_factors": [
+        103
+      ],
+      "surjective": true,
+      "witnessed_residues": 103,
+      "zeta_image": 61
+    },
+    {
+      "S": [
+        3,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16
+      ],
+      "additive_moduli": [
+        24617
+      ],
+      "norm": 24617,
+      "p": 17,
+      "prime_factors": [
+        103,
+        239
+      ],
+      "surjective": true,
+      "witnessed_residues": 24617,
+      "zeta_image": 1535
+    },
+    {
+      "S": [
+        1,
+        3,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15
+      ],
+      "additive_moduli": [
+        647
+      ],
+      "norm": 647,
+      "p": 17,
+      "prime_factors": [
+        647
+      ],
+      "surjective": true,
+      "witnessed_residues": 647,
+      "zeta_image": 221
+    },
+    {
+      "S": [
+        2,
+        3,
+        9,
+        10,
+        11,
+        12,
+        13,
+        16
+      ],
+      "additive_moduli": [
+        409
+      ],
+      "norm": 409,
+      "p": 17,
+      "prime_factors": [
+        409
+      ],
+      "surjective": true,
+      "witnessed_residues": 409,
+      "zeta_image": 5
+    },
+    {
+      "S": [
+        1,
+        2,
+        3,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "additive_moduli": [
+        137
+      ],
+      "norm": 137,
+      "p": 17,
+      "prime_factors": [
+        137
+      ],
+      "surjective": true,
+      "witnessed_residues": 137,
+      "zeta_image": 72
+    },
+    {
+      "S": [
+        1,
+        4,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15
+      ],
+      "additive_moduli": [
+        14621
+      ],
+      "norm": 14621,
+      "p": 17,
+      "prime_factors": [
+        14621
+      ],
+      "surjective": true,
+      "witnessed_residues": 14621,
+      "zeta_image": 12634
+    },
+    {
+      "S": [
+        1,
+        2,
+        4,
+        9,
+        10,
+        11,
+        12,
+        14
+      ],
+      "additive_moduli": [
+        2381
+      ],
+      "norm": 2381,
+      "p": 17,
+      "prime_factors": [
+        2381
+      ],
+      "surjective": true,
+      "witnessed_residues": 2381,
+      "zeta_image": 1689
+    },
+    {
+      "S": [
+        5,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15,
+        16
+      ],
+      "additive_moduli": [
+        1361
+      ],
+      "norm": 1361,
+      "p": 17,
+      "prime_factors": [
+        1361
+      ],
+      "surjective": true,
+      "witnessed_residues": 1361,
+      "zeta_image": 755
+    },
+    {
+      "S": [
+        1,
+        5,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15
+      ],
+      "additive_moduli": [
+        443
+      ],
+      "norm": 443,
+      "p": 17,
+      "prime_factors": [
+        443
+      ],
+      "surjective": true,
+      "witnessed_residues": 443,
+      "zeta_image": 370
+    },
+    {
+      "S": [
+        1,
+        2,
+        5,
+        9,
+        10,
+        11,
+        13,
+        14
+      ],
+      "additive_moduli": [
+        239
+      ],
+      "norm": 239,
+      "p": 17,
+      "prime_factors": [
+        239
+      ],
+      "surjective": true,
+      "witnessed_residues": 239,
+      "zeta_image": 36
+    },
+    {
+      "S": [
+        1,
+        4,
+        5,
+        9,
+        10,
+        11,
+        14,
+        15
+      ],
+      "additive_moduli": [
+        613
+      ],
+      "norm": 613,
+      "p": 17,
+      "prime_factors": [
+        613
+      ],
+      "surjective": true,
+      "witnessed_residues": 613,
+      "zeta_image": 37
+    },
+    {
+      "S": [
+        1,
+        2,
+        4,
+        5,
+        9,
+        10,
+        11,
+        14
+      ],
+      "additive_moduli": [
+        1871
+      ],
+      "norm": 1871,
+      "p": 17,
+      "prime_factors": [
+        1871
+      ],
+      "surjective": true,
+      "witnessed_residues": 1871,
+      "zeta_image": 973
+    },
+    {
+      "S": [
+        1,
+        4,
+        6,
+        9,
+        10,
+        12,
+        14,
+        15
+      ],
+      "additive_moduli": [
+        307
+      ],
+      "norm": 307,
+      "p": 17,
+      "prime_factors": [
+        307
+      ],
+      "surjective": true,
+      "witnessed_residues": 307,
+      "zeta_image": 9
+    }
+  ],
+  "status": "PASS"
+}
