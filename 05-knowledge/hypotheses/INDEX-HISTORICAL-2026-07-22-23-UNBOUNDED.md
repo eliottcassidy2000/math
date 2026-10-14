@@ -154,3 +154,7 @@ computation needs universe, controls, command, and output. Route `CLAIMED` and
 <!-- 2026-10-13 (opus-2026-10-13-S30): the two closed rows below (HYP-9161 refuted form, HYP-9040 superseded) were moved here verbatim from INDEX.md to keep its 120-line budget; no content changed. -->
 - **HYP-9161 REFUTED in its arbitrary finite-segment form:** [exact counterexample and endpoint-stable survivor](HYP-9161-landing-multiplicity-polylog.md). Distinct positive hover/drop segments have average Omega(log X) at theta log X=O(loglog X). An O(k) endpoint allowance or whole-injective-orbit bound remains OPEN; THM-4476/4499 are unchanged.
 - **[HYP-9040](HYP-9040-cancellation-completeness-synthesis.md) (PARTLY REFUTED / SUPERSEDED):** original parity, maximal-rank, and Euler-characteristic program; its first two lanes and first fast Euler stratification are repaired by HYP-9045.
+
+## Digest entry moved from INDEX.md on 2026-10-14 (line budget; mac-mini-2026-10-14-irrmeasure)
+
+- **GMC(2) FORMALIZATION CLOSED:** root-imported `GMC2Main.gmc2` is unconditional; `GMC2DvdKOmegaWiring.singlePolyCrux_holds` discharges the former `DvdK1` proof boundary, and a dependency-aware build and axiom audit report only `[propext, Classical.choice, Quot.sound]`.
