@@ -67,7 +67,24 @@ def minimize_once(col, n, start, rng):
                 removed += len(active) - len(core)
                 active = set(core)
         if removed == 0:
-            return sorted(active), passes
+            break
+    # the fixed (symmetry-breaking) triangle was never offered for deletion: finish without symmetry breaking
+    free = Colourer(n, col.edges, k=col.k, solver='cadical195')
+    while True:
+        changed = False
+        order = sorted(active)
+        rng.shuffle(order)
+        for v in order:
+            if v not in active:
+                continue
+            ok, core = free.colourable(sorted(active - {v}))
+            if not ok:
+                active = set(core)
+                changed = True
+        if not changed:
+            break
+    free.close()
+    return sorted(active), passes
 
 
 def main():
@@ -95,7 +112,9 @@ def main():
             return
         t1 = time.time()
         crit, passes = minimize_once(col, n, core, rng)
-        crit_ok = is_vertex_critical(col, crit)
+        free = Colourer(n, E, k=4, solver=solver)
+        crit_ok = is_vertex_critical(free, crit)
+        free.close()
         nA = sum(1 for v in crit if pts[v] in GA)
         log(f"   seed {seed}: vertex-critical {crit_ok}, {len(crit)} vertices ({nA} from A, {len(crit) - nA} from wB), "
             f"{passes} passes  [{time.time() - t1:.1f}s]")

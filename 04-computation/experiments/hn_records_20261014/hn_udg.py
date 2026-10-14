@@ -209,6 +209,7 @@ class Colourer:
 
     def __init__(self, n, edges, k=4, solver='cadical153', fixed_triangle=None):
         self.n, self.k = n, k
+        self.edges = list(edges)
         self.solver = Solver(name=solver)
         x = lambda v, c: v * k + c + 1
         self.x = x

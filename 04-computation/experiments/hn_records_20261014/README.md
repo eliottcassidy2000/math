@@ -18,6 +18,7 @@ Every graph here has exact coordinates in a real multiquadratic field, with `x, 
 | `forced_radii.py`, `forced_radii_scan.py` | Radii `t` at which every 4-colouring repeats the centre's colour |
 | `mono_sets.py` | Every realizable set of centre-coloured points on a reference orbit |
 | `minimize.py` | Randomized core-guided deletion until vertex-critical; writes `best_*.json` with exact coordinates |
+| `smus_probe.py` | Smallest non-k-colourable induced subgraph via pysat's OptUx (implicit hitting sets) |
 
 ## Findings so far (2026-10-14)
 
@@ -31,3 +32,8 @@ Every graph here has exact coordinates in a real multiquadratic field, with `x, 
    * `t = 7/3` is forced nowhere. Its rotation `(11 + 5i√3)/14` would stay in the Moser field, but `L727 ∪ w_7/3 S361` is 4-colourable.
 3. **Mono-set rigidity** (`mono_sets_*.out`). At `t = 4`, L727 admits only 19 realizable mono-sets: six of size 6 (three antipodal pairs each), twelve of size 12, and the full orbit. S361 admits 19,916, the smallest being 6 antipodal pairs at the non-hexagonal angles. No single rotation joins every pair of L727's minimal mono-sets by radius-2 unit chords, so the type-M contradiction also uses the other cross edges.
 4. **Rotation scan at `t = 4`** (`rotation_scan_1.out`). `A ∪ ρB` is 5-chromatic exactly when one piece is rigid (`V49 ⊕ V37` or `V49 ⊕ V49`) and the other forces radius 2. Two pieces that merely force radius 2 (`V37 ⊕ V37` with `V31 ⊕ V25`) give a 4-colourable graph.
+5. **Other rotations** (`rotation_scan_2.out`).
+   * 225 graphs (`t = 4/9, 11/9, 4/3, 5/3, 20/9, 7/3, 3, 5, 7`, 25 base pairs each) are all 4-colourable.
+   * Among these hinges only Parts' `ρ` works, even where both pieces force the radius (`t = 4/9`).
+6. **Exact smallest MUS.** OptUx gives V25's smallest non-3-colourable subgraph (9 vertices) instantly, but it did not finish `H1 ⊕ H1` within 10 minutes. It is not usable at the 1,087-vertex scale.
+7. **Synthesis.** See `05-knowledge/results/hn_type_m_hinge_rotations_and_forced_radii_20261014.md` for the synthesis and the record-attempt plan.
