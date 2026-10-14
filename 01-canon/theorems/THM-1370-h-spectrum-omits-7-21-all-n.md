@@ -82,7 +82,8 @@ elementary gluing.
   R_n is the transitive class's big SC neighbor on the principal line.
 - With S146's dictionary (h-monoid ↔ Keller-degree monoid): the permanence of
   {7, 21} sharpens the tournament side of the odd-degree analogy — the h-monoid
-  has EXACTLY two non-monoid odd holes, both explained by one floor law.
+  has at least the two odd holes 7 and 21, both explained by one floor law;
+  exhaustiveness of these two holes remains OPEN (the 2026-09-17 arithmetic-braids correction in MISTAKES.md).
 
 Scripts: `h_spectrum_n7_exhaustive_boxeph_S152.py`, `..._n8_...S152b.py`,
 `almost_transitive_leonardo_boxeph_S152c.out`; reps file
