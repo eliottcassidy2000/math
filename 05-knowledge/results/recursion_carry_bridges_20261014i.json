@@ -1,0 +1,159 @@
+{
+  "checks": 17180,
+  "divisor_examples_F_U_S": {
+    "2": [
+      0,
+      0,
+      0
+    ],
+    "4": [
+      1,
+      1,
+      1
+    ],
+    "8": [
+      2,
+      1,
+      1
+    ],
+    "60": [
+      10,
+      3,
+      7
+    ],
+    "240": [
+      18,
+      3,
+      7
+    ]
+  },
+  "finite_fibonacci_indices": [
+    0,
+    40
+  ],
+  "positive_common_values": [
+    1,
+    3,
+    21,
+    55
+  ],
+  "precision": "Phi mod 2^k needs a mod 2^(k+1), sharply; no wrapped fixed-level graph",
+  "primitive_derivative_words": 472,
+  "scope": "The marked quotient is exact; strict real safety and positive integer stabilization remain separate. No Mahler or Collatz closure.",
+  "sheet_loss_hostile": [
+    {
+      "carries": [
+        1,
+        0,
+        0
+      ],
+      "source": {
+        "denominator": 19,
+        "numerator": -9
+      },
+      "tails": [
+        {
+          "denominator": 19,
+          "numerator": 18
+        },
+        {
+          "denominator": 19,
+          "numerator": 8
+        },
+        {
+          "denominator": 19,
+          "numerator": 12
+        }
+      ],
+      "triangular_orbit": [
+        {
+          "denominator": 361,
+          "numerator": -45
+        },
+        {
+          "denominator": 361,
+          "numerator": -30
+        },
+        {
+          "denominator": 361,
+          "numerator": -39
+        }
+      ]
+    },
+    {
+      "carries": [
+        0,
+        1,
+        1
+      ],
+      "source": {
+        "denominator": 19,
+        "numerator": -10
+      },
+      "tails": [
+        {
+          "denominator": 19,
+          "numerator": 20
+        },
+        {
+          "denominator": 19,
+          "numerator": 30
+        },
+        {
+          "denominator": 19,
+          "numerator": 26
+        }
+      ],
+      "triangular_orbit": [
+        {
+          "denominator": 361,
+          "numerator": -45
+        },
+        {
+          "denominator": 361,
+          "numerator": -30
+        },
+        {
+          "denominator": 361,
+          "numerator": -39
+        }
+      ]
+    }
+  ],
+  "status": "PROVED scoped + FINITE-EXACT controls",
+  "triangular_fixed_points": [
+    {
+      "denominator": 1,
+      "numerator": 0
+    },
+    {
+      "denominator": 25,
+      "numerator": -3
+    }
+  ],
+  "universes": {
+    "finite_dyadic_bits": [
+      0,
+      11
+    ],
+    "integer_itinerary_sources": [
+      0,
+      256
+    ],
+    "odd_denominators": [
+      1,
+      3,
+      5,
+      7,
+      19
+    ],
+    "periodic_word_lengths": [
+      1,
+      8
+    ],
+    "rational_numerators": [
+      -128,
+      128
+    ]
+  }
+}

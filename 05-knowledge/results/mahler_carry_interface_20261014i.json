@@ -1,0 +1,87 @@
+{
+  "checks": 65814,
+  "delayed_safe_family": [
+    {
+      "A": 13,
+      "index": 0,
+      "matching_bits": 8,
+      "rational_collatz_source": "1/5"
+    },
+    {
+      "A": 3532045,
+      "index": 1,
+      "matching_bits": 26,
+      "rational_collatz_source": "1/5"
+    },
+    {
+      "A": 925904528653,
+      "index": 2,
+      "matching_bits": 44,
+      "rational_collatz_source": "1/5"
+    },
+    {
+      "A": 242720316759336205,
+      "index": 3,
+      "matching_bits": 62,
+      "rational_collatz_source": "1/5"
+    },
+    {
+      "A": 63627674716559430247693,
+      "index": 4,
+      "matching_bits": 80,
+      "rational_collatz_source": "1/5"
+    },
+    {
+      "A": 16679613160897755282851357965,
+      "index": 5,
+      "matching_bits": 98,
+      "rational_collatz_source": "1/5"
+    }
+  ],
+  "event_counts": {
+    "mismatch": 22376,
+    "shared11": 2328
+  },
+  "largest_observed_event": {
+    "A": 30,
+    "bound": 95,
+    "index": 12,
+    "kind": "mismatch",
+    "x": "14/3"
+  },
+  "limits": "No Z-number existence/nonexistence; no Collatz convergence; finite safe prefixes do not certify infinite safety",
+  "native_cells": 4094,
+  "native_lengths": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "periodic_mismatch_claims": 1946,
+  "periodic_words": 510,
+  "rational_universe": {
+    "no11_cycle_observers": 34,
+    "numerator": [
+      -15,
+      15
+    ],
+    "odd_denominator": [
+      1,
+      15
+    ],
+    "ordinary_Mahler_sources": [
+      1,
+      128
+    ],
+    "reduced_count": 193
+  },
+  "status": "PROVED finite source-bound obstruction; FINITE-EXACT controls",
+  "theorem": "Positive ordinary Mahler source plus all-depth no11 implies irrational transported Collatz 2-adic source"
+}

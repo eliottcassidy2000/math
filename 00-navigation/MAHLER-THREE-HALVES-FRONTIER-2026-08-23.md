@@ -1,9 +1,24 @@
 # Mahler `3/2` frontier
 
-**Current status (2026-08-25): OPEN.**  This is the routed detail behind the
+**Current status (2026-10-14): OPEN.**  This is the routed detail behind the
 compact entry in [CURRENT-FRONTIER](CURRENT-FRONTIER.md).  Primary-source
 records live in
 [CORE-PAPERS-MAHLER-THREE-HALVES](../05-knowledge/reference/CORE-PAPERS-MAHLER-THREE-HALVES.md).
+
+## Carry-preserving bridges, 2026-10-14
+
+- [Triangular quotient and sheet](../05-knowledge/results/recursion_carry_bridges_20261014i.md):
+  **PROVED** `T(n)=n(n+1)/2` quotients `M(n)=ceil(3n/2)` by `n~-1-n`.
+  Its parity itinerary is the binary derivative of the original carry word;
+  one initial bit restores the full orbit. Complementary lifts have identical
+  entire triangular orbits but opposite strict-tail safety. The finite map
+  goes from precision k+1 to k, not around one fixed residue ring.
+- [Mahler--Collatz carry interface](../05-knowledge/results/mahler_carry_interface_20261014i.md):
+  **PROVED** a positive-integer Mahler itinerary with no11 transports to an
+  irrational2-adic Collatz source. Every specified odd-denominator rational
+  source has an explicit finite horizon for a mismatch or shared11. This
+  obstructs an unmarked transfer to ordinary-integer Collatz; it does not
+  exclude Mahler Z-numbers. The denominator19 tower retains source dependence.
 
 ## Closest inherited mechanisms
 

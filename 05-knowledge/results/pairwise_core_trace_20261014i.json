@@ -1,0 +1,361 @@
+{
+  "checks": 288,
+  "status": "PROVED trace identity; FINITE-EXACT stated prime graph universe",
+  "arithmetic": "Python integers/object arrays; classical matrix backend",
+  "independent_full_injection_controls": 222,
+  "rows": [
+    {
+      "name": "wheel",
+      "q": 3,
+      "sum": 0,
+      "positive": 0,
+      "negative": 0,
+      "receipt": {
+        "empty": true
+      }
+    },
+    {
+      "name": "wheel",
+      "q": 5,
+      "sum": -40,
+      "positive": 40,
+      "negative": 80,
+      "receipt": {
+        "block_sizes": [
+          1,
+          1,
+          1
+        ],
+        "state_counts": [
+          3,
+          3,
+          3
+        ],
+        "matrix_entries": 27,
+        "normalized_sum": -2,
+        "cross_distinctness": true
+      }
+    },
+    {
+      "name": "wheel",
+      "q": 7,
+      "sum": -1176,
+      "positive": 672,
+      "negative": 1848,
+      "receipt": {
+        "block_sizes": [
+          1,
+          1,
+          1
+        ],
+        "state_counts": [
+          5,
+          5,
+          5
+        ],
+        "matrix_entries": 75,
+        "normalized_sum": -28,
+        "cross_distinctness": true
+      }
+    },
+    {
+      "name": "wheel",
+      "q": 11,
+      "sum": 4400,
+      "positive": 29920,
+      "negative": 25520,
+      "receipt": {
+        "block_sizes": [
+          1,
+          1,
+          1
+        ],
+        "state_counts": [
+          9,
+          9,
+          9
+        ],
+        "matrix_entries": 243,
+        "normalized_sum": 40,
+        "cross_distinctness": true
+      }
+    },
+    {
+      "name": "wheel",
+      "q": 19,
+      "sum": -16416,
+      "positive": 689472,
+      "negative": 705888,
+      "receipt": {
+        "block_sizes": [
+          1,
+          1,
+          1
+        ],
+        "state_counts": [
+          17,
+          17,
+          17
+        ],
+        "matrix_entries": 867,
+        "normalized_sum": -48,
+        "cross_distinctness": true
+      }
+    },
+    {
+      "name": "wheel",
+      "q": 31,
+      "sum": 145080,
+      "positive": 10267200,
+      "negative": 10122120,
+      "receipt": {
+        "block_sizes": [
+          1,
+          1,
+          1
+        ],
+        "state_counts": [
+          29,
+          29,
+          29
+        ],
+        "matrix_entries": 2523,
+        "normalized_sum": 156,
+        "cross_distinctness": true
+      }
+    },
+    {
+      "name": "K6-minus-P6",
+      "q": 3,
+      "sum": 0,
+      "positive": 0,
+      "negative": 0,
+      "receipt": {
+        "empty": true
+      }
+    },
+    {
+      "name": "K6-minus-P6",
+      "q": 5,
+      "sum": 0,
+      "positive": 0,
+      "negative": 0,
+      "receipt": {
+        "empty": true
+      }
+    },
+    {
+      "name": "K6-minus-P6",
+      "q": 7,
+      "sum": 336,
+      "positive": 2688,
+      "negative": 2352,
+      "receipt": {
+        "block_sizes": [
+          2,
+          1,
+          1
+        ],
+        "state_counts": [
+          20,
+          5,
+          5
+        ],
+        "matrix_entries": 225,
+        "normalized_sum": 8,
+        "cross_distinctness": true
+      }
+    },
+    {
+      "name": "K6-minus-P6",
+      "q": 11,
+      "sum": -12320,
+      "positive": 160160,
+      "negative": 172480,
+      "receipt": {
+        "block_sizes": [
+          2,
+          1,
+          1
+        ],
+        "state_counts": [
+          72,
+          9,
+          9
+        ],
+        "matrix_entries": 1377,
+        "normalized_sum": -112,
+        "cross_distinctness": true
+      }
+    },
+    {
+      "name": "K6-minus-P6",
+      "q": 19,
+      "sum": -76608,
+      "positive": 9729216,
+      "negative": 9805824,
+      "receipt": {
+        "block_sizes": [
+          2,
+          1,
+          1
+        ],
+        "state_counts": [
+          272,
+          17,
+          17
+        ],
+        "matrix_entries": 9537,
+        "normalized_sum": -224,
+        "cross_distinctness": true
+      }
+    },
+    {
+      "name": "K6-minus-P6",
+      "q": 31,
+      "sum": 52080,
+      "positive": 265087200,
+      "negative": 265035120,
+      "receipt": {
+        "block_sizes": [
+          2,
+          1,
+          1
+        ],
+        "state_counts": [
+          812,
+          29,
+          29
+        ],
+        "matrix_entries": 47937,
+        "normalized_sum": 56,
+        "cross_distinctness": true
+      }
+    },
+    {
+      "name": "K4",
+      "q": 3,
+      "sum": 0,
+      "positive": 0,
+      "negative": 0,
+      "receipt": {
+        "empty": true
+      }
+    },
+    {
+      "name": "K4",
+      "q": 5,
+      "sum": -120,
+      "positive": 0,
+      "negative": 120,
+      "receipt": {
+        "block_sizes": [
+          1,
+          1,
+          0
+        ],
+        "state_counts": [
+          3,
+          3,
+          1
+        ],
+        "matrix_entries": 15,
+        "normalized_sum": -6,
+        "cross_distinctness": true
+      }
+    },
+    {
+      "name": "K4",
+      "q": 7,
+      "sum": 0,
+      "positive": 420,
+      "negative": 420,
+      "receipt": {
+        "block_sizes": [
+          1,
+          1,
+          0
+        ],
+        "state_counts": [
+          5,
+          5,
+          1
+        ],
+        "matrix_entries": 35,
+        "normalized_sum": 0,
+        "cross_distinctness": true
+      }
+    },
+    {
+      "name": "K4",
+      "q": 11,
+      "sum": 0,
+      "positive": 3960,
+      "negative": 3960,
+      "receipt": {
+        "block_sizes": [
+          1,
+          1,
+          0
+        ],
+        "state_counts": [
+          9,
+          9,
+          1
+        ],
+        "matrix_entries": 99,
+        "normalized_sum": 0,
+        "cross_distinctness": true
+      }
+    },
+    {
+      "name": "K4",
+      "q": 19,
+      "sum": 0,
+      "positive": 46512,
+      "negative": 46512,
+      "receipt": {
+        "block_sizes": [
+          1,
+          1,
+          0
+        ],
+        "state_counts": [
+          17,
+          17,
+          1
+        ],
+        "matrix_entries": 323,
+        "normalized_sum": 0,
+        "cross_distinctness": true
+      }
+    },
+    {
+      "name": "K4",
+      "q": 31,
+      "sum": 0,
+      "positive": 377580,
+      "negative": 377580,
+      "receipt": {
+        "block_sizes": [
+          1,
+          1,
+          0
+        ],
+        "state_counts": [
+          29,
+          29,
+          1
+        ],
+        "matrix_entries": 899,
+        "normalized_sum": 0,
+        "cross_distinctness": true
+      }
+    }
+  ],
+  "hostile_missing_cross_guard": {
+    "q": 7,
+    "guarded": -1176,
+    "unguarded": -1344
+  }
+}

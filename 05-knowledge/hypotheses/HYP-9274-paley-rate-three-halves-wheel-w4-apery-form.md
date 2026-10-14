@@ -1,6 +1,6 @@
 ---
 id: HYP-9274
-title: "(A) The Paley Hamiltonian-path ratio R(q) = H(P_q) 2^(q-1)/q! = e(1 - 3/(2q) + c_2/q^2 + ...) with c_1 = 3/2 (derived to first order; fits 1.5016) and c_2 near -3.08, universal over prime powers q = 3 mod 4; pre-registered R(43), R(47). (B) The wheel W_4 pattern sum is the Apery form: Sigma*(W_4) = -q(q-1)(a_q + 4), f = eta(2z)^4 eta(4z)^4. (C) Exact run polynomials A_4 = 2q(q-1)(q-3), A_6 = q(q-1)(q-3)(5q-29). (D) The W_4 channel puts its first arithmetic (Deligne-bounded) term into R(q) only through gluings of two runs (order about a_q/q^6); other non-series-parallel channels are open."
+title: "(A) The Paley Hamiltonian-path ratio R(q) and its open uniform asymptotic tail, with formal c_1 = 3/2. (B) The wheel W_4 is the Apery form at odd primes. (C) Exact run reductions through A10, whose wheel coefficient is -34. (D) Exact weighted degrees eight and ten; degree ten retains the six-vertex K6-minus-P6 core."
 status: >
   OPEN, with these supports:
   FINITE-EXACT H(P_27) = 418425945688463432031 and H(P_31) = 19876729650849384218015865 (new; the latter confirms the
@@ -13,6 +13,8 @@ status: >
   in wheel_apery_extension_20261014h.md. The 27-prime tests remain finite controls.
   PROVED exact A4/A6/A8 and two-cherry formulas by the terminating reduction in wheel_run_interface_20261014h.md;
   PROVED degree-eight weighted Hamiltonian coefficient with modular contribution -7a_q/((q-2)...(q-7)).
+  PROVED terminating reduction through ten edges, with FINITE-EXACT symbolic extraction: A10=P10_single-34U_q;
+  the weighted degree-ten coefficient retains 64V_q for V_q=I_(K6-minus-P6). Independent q11/q19 walk controls.
   NUMERICAL (A): with c_1 = 3/2 fixed, q^2(1 - R/e - 3/(2q)) = -3.117, -3.109, -3.090 (q = 27, prime power, never
   fitted), -3.097 for q = 19, 23, 27, 31; the holdout error at q = 31 is 1e-5.
 session: opus-2026-10-14-S34
@@ -70,7 +72,7 @@ extension is separately typed as finite-tested.
 - Deligne's theorem (the Riemann hypothesis for varieties over finite fields) gives `|a_q| <= 2q^(3/2)`; the observed `|a_q|/(2q^(3/2))` is at most 0.88.
 - Completed proof route: allow collisions, adding `(q-1)(4-q)` to the anchored sum, and use scaling to reduce to `Σ_b χ(b)·(Σ_c χ(c(c−1)(c−b)))²`. Ahlgren--Ono Lemma2.2 and Theorem6 evaluate this moment as `-a_p-p` for every odd prime. The linked packet retains the signs, hub factor and injectivity correction.
 
-## (C) Exact run polynomials
+## (C) Exact run reductions
 
 - `A_2 = q(q−1)`, `A_4 = 2q(q−1)(q−3)` and `A_6 = q(q−1)(q−3)(5q−29)` (leading coefficients `1, 2, 5` = Catalan, THM-438). The odd `A_L` vanish.
 - The two-cherry ratio is `(q−2)(q−9)/((q−4)(q−5))`.
@@ -78,9 +80,14 @@ extension is separately typed as finite-tested.
   [the run interface](../results/wheel_run_interface_20261014h.md) proves these
   formulas for all odd prime powers q=3mod4 and gives
   `A_8=2q(q-1)(q-3)(q-7)(7q-55)`.
-- **OPEN:** polynomiality of A10 and the classification of higher arithmetic
-  cores. Degree-two elimination can expose a smaller core that is absent as
-  a direct quotient; direct Euler-parity inspection alone does not settle it.
+- **PROVED extension, with exact symbolic extraction:**
+  [the ten-edge core packet](../results/paley_next_cores_20261014i.md) gives
+  `A10=2q(q-1)(q-3)(21q^3-576q^2+5300q-16198)-34U_q`.
+  Degree-two elimination exposes the wheel although raw path-quotient parity
+  would exclude it. This replaces the former open A10 evaluation target.
+  The nonzero modular coefficient alone is not asserted to prove that no
+  polynomial could agree on a specified infinite domain. Additional identities
+  among higher arithmetic terminals remain **OPEN**.
 
 ## (D) Where arithmetic enters `R(q)`
 
@@ -95,6 +102,15 @@ For the eight-edge single run the raw wheel is impossible by its four odd
 vertices. This degree-eight calculation was independently checked by
 Held--Karp at11. Deligne bounds this coefficient's modular part by
 `14q^(3/2)/((q-2)...(q-7))=O(q^(-9/2))`.
+
+**PROVED degree-ten extension, with exact symbolic extraction:** for q>=11,
+`[t^10]R_q=(P10+(7q^2-173q+1166)U_q+64V_q)/(q)_10`, with the polynomial,
+natural orientation of `V_q=I_(K6-minus-P6)`, and independent q11 product-DP
+check in [the next-core packet](../results/paley_next_cores_20261014i.md).
+A [guarded three-matrix evaluator](../results/pairwise_core_trace_20261014i.md)
+independently computes V at7,11,19,31. The terminal classification through ten
+edges is complete for these reduction rules; no modular evaluation of V is
+claimed.
 
 **OPEN:** the combined contribution of higher edge degrees at t=1, and the
 uniform tail needed for the asymptotic coefficient c1. The finite-degree
