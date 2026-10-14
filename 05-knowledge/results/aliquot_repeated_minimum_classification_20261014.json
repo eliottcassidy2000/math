@@ -1,0 +1,42 @@
+{
+  "bounded_corroboration": {
+    "a_range": [
+      1,
+      64
+    ],
+    "c_range": "a <= c <= 3a+2",
+    "constant_closures": 64,
+    "nonconstant_integral_closures": [
+      {
+        "D": 49,
+        "Q": 49,
+        "a": 1,
+        "c": 4,
+        "quotient_K": 1,
+        "t": 8,
+        "x": 2
+      }
+    ],
+    "sector_checks": 4288,
+    "t4_residual": {
+      "D": 529,
+      "Q": 21463,
+      "remainder": 303,
+      "x": 8
+    },
+    "templates_checked": 4352,
+    "virtual_loop_true_successor_of_16": 15
+  },
+  "proof_scope": "No exponent bound in theorem; finite checks only corroborate the proof",
+  "status": "proved repeated-minimum classification; full dyadic classification remains open",
+  "symbolic": {
+    "identities_checked": 7,
+    "quotient_congruence": "K = -1 + (1-t)x (mod x^2)",
+    "ring": "Z[x,t]",
+    "sector_bounds": {
+      "0<t<=x": "0<H<3x/t",
+      "t>=x": "0<H<3"
+    }
+  },
+  "theorem": "For a>=1,c>=a, integral closure occurs iff c=a or (a,c)=(1,4)"
+}
