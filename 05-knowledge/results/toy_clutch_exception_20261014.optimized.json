@@ -1,0 +1,21 @@
+{
+  "accessory_degrees": {
+    "n<=8": 96,
+    "n=9": "99 unless beta=v/a; resonance degree unsettled",
+    "n>=10": "5*n+54"
+  },
+  "critical_free_exception": true,
+  "critical_point_if_b_not_minus_4": [
+    "2*b^2/(b+4)",
+    "-1/2"
+  ],
+  "exception_K": "256*x**4",
+  "exception_clutch": "B=x/2-4",
+  "half_slope_F": "x*(-2*b**2 + b*x + 4*x)",
+  "hessian_determinant": "-(b+4)^2/4",
+  "jacobian_mate_obstruction": "On xt=8, Jac(P,H)=2*t*d(H|C)/dt; constant Laurent coefficient is zero.",
+  "laurent_monomials_verified": 45,
+  "original_fixed_accessory_HJ": "OPEN; not refuted by the toy exception",
+  "status": "PASS",
+  "universal_resultant_verified": true
+}
