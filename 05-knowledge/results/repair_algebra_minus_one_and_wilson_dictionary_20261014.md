@@ -65,6 +65,7 @@ THM-4601's ladder with the anchor moved from `+1` to `−1`. Each primitive coll
 |---|---|---|
 | 1 | `{2, 4, 8}` are the powers of 2 adjacent to a power of 3 | KNOWN (Gersonides) |
 | 2 | they index the generators of the repair algebra at −1; anchors `−1, 1, 1/5`; `K((a)) = 1/c_a` | PROVED |
+| 2b | they also index the Collatz cycles with unit denominator `|2^A − 3^k| = 1`: `−1`, `+1`, `{−5, −7}` (and `0`); the only other known integer cycle (through `−17`) has denominator 139 | PROVED + FINITE-EXACT |
 | 3 | Wilson's `−1` is the product of a group's involutions; for `⟨2⟩ mod p` the product is `−1` iff `ord_p(2)` is even | KNOWN / PROVED |
 | 4 | Lerch: `w_p ≡ Σ q_p(a)`; `(q_p(2), q_p(4), q_p(8)) ≡ (1, 2, 3) q_p(2)` | KNOWN |
 | 5 | `f_p ≡ χ_8(p) q_p(2)/2`, so `T(p) ≡ χ_8(p)(q_p(2)/2 − w_p) − A_p (mod p)`. Tournaments see both quotients through the same Fermat multiplier `χ_8(p)`; re-derived from exact Burnside counts for all primes `p < 48` | PROVED |
@@ -75,7 +76,7 @@ THM-4601's ladder with the anchor moved from `+1` to `−1`. Each primitive coll
 | 10 | `λ(684106401) + 1 = 27·563` | COINCIDENCE |
 | 11 | Wilson primes are expected to be infinite (`log log x`); a theorem in `F_q[t]` (Thakur) | HEURISTIC + CITED |
 
-The structural core is rows 1–5: Gersonides, Lerch, the group-theoretic `−1`, and the tournament character. Rows 6–10 are small-number coincidences; their baselines are computed in the script.
+The structural core is rows 1–5: Gersonides (as repairs and as unit-denominator cycles), Lerch, the group-theoretic `−1`, and the tournament character. Rows 6–10 are small-number coincidences; their baselines are computed in the script.
 
 ## 3. What has escaped us, problem by problem
 
@@ -87,13 +88,18 @@ The four problems share one shape. The repository proves statements about **almo
   * Integers are Haar-null one at a time. A proof must show that positive integers avoid the uncovered set, and that is a Diophantine statement about `2^A` versus `3^k`.
   * Today's tool for that is Baker's theory. It bounds cycle lengths (THM-4633: about `7·10^10` odd steps from the budget alone), but it says nothing about divergence.
   * The repair algebra makes the obstruction explicit: collisions at −1 are `{2,3}`-unit relations, the two-term ones are exactly Gersonides', and the rest are higher S-unit relations with no generating pattern.
+  * **Anchor obstruction (PROVED, elementary).** Call a certificate *uniform* if it is a clopen 2-adic cylinder together with a descent rule valid for every positive integer in it. No uniform certificate contains the 2-adic point 1: the rule would have to make `n = 1` descend.
+    * A finite bank has a clopen union. So if the bank contained every odd `n > 1`, it would contain their 2-adic closure, which includes 1.
+    * Hence every finite bank misses all `n ≡ 1 (mod 2^K)` for some `K`, and certificates near the trivial cycle must have unbounded depth.
+    * Near `+1` the infinite family is explicit and trivial: every `n ≡ 1 (mod 4)` with `n > 1` has `U(n) ≤ (3n+1)/4 < n`. So the cylinders `n ≡ 1 + 2^j (mod 2^(j+1))`, `j ≥ 2`, cover every such source except 1 itself.
+    * So the anchor obstruction is real but harmless. The genuine gap is the generic part, the stopping-time problem: control of `3^k` against `2^A` along orbits with no anchor structure. That is the same Diophantine question that bounds cycles (THM-4633).
 * **Wilson primes.**
   * Nothing structural forces `W_p ≢ 0 (mod p)`. Lerch, Glaisher and the lift trees all express `W_p` as a sum of "random-looking" Fermat quotients.
   * Completeness of `{5, 13, 563}` is expected to be **false** (heuristic `log log x`; theorem in `F_q[t]`). It is not a viable proof target.
   * The viable projects are an exact search beyond `2·10^13` (the Costa–Gerbicz–Harvey algorithm) or structural analogues, such as Wilson primes in other rings.
 * **Hadwiger–Nelson.**
   * The repository works in field planes (`Q(ζ55)`, THM-4614/4628), where residue colourings are rigid, and in finite Beckman–Quarles (THM-4624).
-  * The lower bound 5 rests on explicit graphs; the best known 5-chromatic unit-distance graphs have about 500 vertices (Heule, Parts). The upper bound 7 rests on one tiling.
+  * The lower bound 5 rests on explicit graphs. The smallest known 5-chromatic unit-distance graph has 509 vertices (Parts; Heule's SAT pipeline reached 510), and a 2026 preprint (Haugland, arXiv:2608.04542) still cites 509. The upper bound 7 rests on one tiling.
   * Moving either bound needs a construction, not a density argument.
 * **Planar Jacobian.**
   * The logic-lens program (THM-4620–4626) reformulates JC2 through Keller dual fields. HYP-9255 is equivalent to JC2.
@@ -102,7 +108,7 @@ The four problems share one shape. The repository proves statements about **almo
 
 **What could be completed in weeks.** No proof of any of the four headline problems is realistic in that time, and the Wilson one is probably false. Notable but realistic targets, best first:
 
-1. **Hadwiger–Nelson, constructive.** A smaller 5-chromatic unit-distance graph, below the published records of about 500 vertices. It is checkable by SAT (`pysat` is installed), has a clear success criterion, and would be noticed. It needs a literature check of the current record first.
+1. **Hadwiger–Nelson, constructive.** A 5-chromatic unit-distance graph with fewer than 509 vertices (the Parts record), or a smaller Moser-spindle-free one than Haugland's 2,131 vertices (arXiv:2608.04542). These are checkable by SAT (`pysat` is installed), have a clear success criterion, and would be noticed. The 509 record came from heavy SAT-guided search by Heule and Parts, so success on this machine is uncertain; the spindle-free variant is younger and likely softer.
 2. **Collatz, structural.** A classification of the uncovered set of the anchor rule banks. Specifically: every 2-adic point not in the union of switch and ladder cylinders lies in the closure of the anchor orbits. That is a compactness statement; it is not a proof of Collatz.
 3. **Wilson analogues.** For example, Wilson primes in `Z[i]` or `Z[ω]` with an exact search, where nothing is known numerically in this corpus.
 4. **JC2.** Keep the dual-field lens, aiming at one new verified family (a Newton-polygon class) rather than the full conjecture.

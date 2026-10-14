@@ -32,6 +32,7 @@ Notation:
 |---|---|---|
 | 1 | `|2^a − 3^b| = 1` (`a ≥ 1`) exactly at `(1,0), (1,1), (2,1), (3,2)`. The powers of 2 adjacent to a power of 3 are `{2, 4, 8}`. | KNOWN (Gersonides) |
 | 2 | The three adjacencies `2 = 3 − 1`, `4 = 3 + 1`, `8 = 9 − 1` are the generators of the repair algebra at −1: the anchor `f_1(−1) = −1`, the unit carry, and the Catalan carry (THM-4640 (5)). The anchors of the letters `2^a ∈ {2, 4, 8}` are `c_a = −1, 1, 1/5`. The first-generation numerators at −1 are `K((a)) = 2^a − 3 = 1/c_a`. | PROVED |
+| 2b | A Collatz cycle with `k` odd steps and `A` halvings has cycle points `b/(2^A − 3^k)`, where `b` depends on the word. Gersonides' solutions are exactly the unit denominators `|2^A − 3^k| = 1`: `(A, k) = (1, 0)` gives `0`, `(1, 1)` gives `−1`, `(2, 1)` gives `+1`, `(3, 2)` gives the 2-cycle `{−5, −7}`. Every word with these `(A, k)` therefore closes on an integer cycle. So `{2, 4, 8}` indexes the integer cycles that exist for denominator reasons alone. The only other known integer cycle, through `−17` (7 odd steps, 11 halvings), needs `139 = |2^11 − 3^7|` to divide its numerator. Direct iteration over all odd `|n| ≤ 100001` finds exactly these cycles. | PROVED + FINITE-EXACT |
 | 3 | In a finite abelian group the product of all elements is the product of its involutions. In `F_p^*` this is Wilson's `−1`. For the orbit of the Collatz multiplier, `∏_(j<d) 2^j = 2^(d(d−1)/2) ≡ −1 (mod p)` iff `d = ord_p(2)` is even, and `≡ 1` otherwise. | KNOWN / PROVED |
 | 4 | Lerch: `w_p ≡ Σ_(a=1)^(p−1) q_p(a) (mod p)`. Since `q_p` is a logarithm, `q_p(ab) ≡ q_p(a) + q_p(b)`, so `(q_p(2), q_p(4), q_p(8)) ≡ (1, 2, 3)·q_p(2)`. | KNOWN |
 | 5 | `f_p ≡ χ_8(p)·q_p(2)/2 (mod p)`. Composed with THM-307, `T(p) ≡ χ_8(p)·(q_p(2)/2 − w_p) − A_p (mod p)`. The Wilson quotient and the Fermat quotient of 2 enter the tournament count through the same Fermat multiplier `χ_8(p)`. At Wilson primes `T(p) ≡ χ_8(p) q_p(2)/2 − A_p`; at Wieferich primes `T(p) ≡ −χ_8(p) w_p − A_p`. | PROVED (re-derived for `p < 48` from exact Burnside counts) |
@@ -45,6 +46,11 @@ Notation:
 ## Proofs
 
 **Row 2.** This is THM-4640 (1) and (5). `f_a(c_a) = c_a` for `c_a = 1/(2^a − 3)`.
+
+**Row 2b.**
+* A word `w` with `k` odd steps and total `A` has the unique fixed point `x = b_w/(2^A − 3^k)`, with `b_w = Σ_j 3^(k−1−j) 2^(S_j)`. It is an integer whenever `|2^A − 3^k| = 1`.
+* The four solutions are Gersonides'. Enumerating their words gives `−1`, `+1` and `{−5, −7}`; the empty word (`k = 0`, `A = 1`) gives `0`.
+* The census iterates `U` from every odd `|n| ≤ 100001` until a repeat and records each cycle's `(k, A)`.
 
 **Row 3.**
 * Inverse pairs cancel, so the product is that of the elementary abelian 2-subgroup of involutions. It is the unique involution if that subgroup has order 2, and 1 otherwise.
@@ -67,7 +73,10 @@ Notation:
 ## Reading
 
 * **What is structure.**
-  * `{2, 4, 8}` is not numerology: it is the complete list of powers of 2 next to a power of 3. Inside Collatz it is exactly the set of two-term repairs at −1.
+  * `{2, 4, 8}` is not numerology: it is the complete list of powers of 2 next to a power of 3. Inside Collatz it plays two exact roles:
+    * it is the set of two-term repairs at −1 (THM-4640);
+    * it indexes the integer cycles that exist for denominator reasons alone: `−1`, `+1`, `{−5, −7}` (and `0`).
+  * The three repair generators are these cycles' defining identities: `2 = 3 − 1` for the anchor `−1`, `4 = 3 + 1` for the unit carry and the `+1` cycle, and `9 − 8 = 1` for the Catalan carry and `{−5, −7}`.
   * The Wilson–Fermat link is classical and exact (Lerch). The tournament count sees both quotients through the single character `χ_8(p)`, which is the clean meaning of "Fermat multiplier" here.
 * **What is coincidence.**
   * That the first two Wilson primes are `2^3 − 3` and `2^4 − 3` comes from small numbers: the next eight primes of that form are not Wilson.

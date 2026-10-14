@@ -37,6 +37,46 @@ for a in range(1, 40):
 print("   f_1(-1) = -1; 3*2^(b+1) + 2^b = 3*2^b + 2^(b+2); 9*2^(b+3) + 2^b = 9*2^b + 2^(b+6); "
       "K((a)) = 2^a - 3 = 1/c_a for a < 40; anchors for 2^a in {2,4,8}: -1, 1, 1/5")
 
+print("R2b (STRUCTURAL) the Gersonides solutions index exactly the Collatz cycles with unit denominator |2^A - 3^k| = 1:")
+def cycle_points(word):
+    # fixed point of f_word: x = (3^k x + b)/2^A  ->  x = b / (2^A - 3^k)
+    k = len(word); A = sum(word); b = 0; S = 0
+    for j, a in enumerate(word):
+        b += 3 ** (k - 1 - j) * 2 ** S; S += a
+    return Fr(b, 2 ** A - 3 ** k)
+unit = {}
+for (A, k) in [(1, 1), (2, 1), (3, 2)]:
+    pts = set()
+    for word in itertools.product(range(1, A + 1), repeat=k):
+        if sum(word) == A:
+            x = cycle_points(word); check(x.denominator == 1, "unit denominator gives an integer cycle point"); pts.add(int(x))
+    unit[(A, k)] = sorted(pts)
+check(unit == {(1, 1): [-1], (2, 1): [1], (3, 2): [-7, -5]}, f"unit-denominator cycles {unit}")
+def U(n):
+    n = 3 * n + 1
+    while n % 2 == 0: n //= 2
+    return n
+cycles = {}
+for n0 in range(-100001, 100002, 2):
+    seen = []; n = n0
+    for _ in range(400):
+        if n in seen:
+            cyc = seen[seen.index(n):]; key = min(cyc, key=abs)
+            if key not in cycles:
+                A = 0; m = key
+                for _ in range(len(cyc)):
+                    t = 3 * m + 1; a = 0
+                    while t % 2 == 0: t //= 2; a += 1
+                    A += a; m = t
+                cycles[key] = (len(cyc), A, abs(2 ** A - 3 ** len(cyc)))
+            break
+        seen.append(n); n = U(n)
+check(sorted(cycles) == [-17, -5, -1, 1], f"integer cycles found {sorted(cycles)}")
+check([cycles[c][2] for c in (-17, -5, -1, 1)] == [139, 1, 1, 1], "cycle denominators")
+print(f"   (A,k) = (1,1), (2,1), (3,2) give the integer cycles -1, +1, {{-5,-7}} for every word (and (1,0) gives 0); iterating U on all odd "
+      f"|n| <= 100001 finds exactly the cycles {{1}}, {{-1}}, {{-5,-7}}, {{-17,...}} with |2^A - 3^k| = 1, 1, 1, {cycles[-17][2]} "
+      f"(the -17 cycle: {cycles[-17][0]} odd steps, {cycles[-17][1]} halvings)")
+
 print("R3 (STRUCTURAL) Wilson's -1 is the product of a finite abelian group = product of its involutions:")
 for p in primerange(3, 2000):
     prod = 1
