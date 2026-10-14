@@ -1,0 +1,40 @@
+aliquot cycles with all members <= 1e+08: 248 (18.8 s); by length [(1, 5), (2, 231), (4, 10), (5, 1), (28, 1)]
+   published longer cycles recomputed: {21548919483: 6, 90632826380: 6, 1771417411016: 6, 4773123705616: 6, 1095447416: 8, 1276254780: 8, 805984760: 9}
+
+== Dickson / signed-cycle balance on every cycle
+   theorem checks (odd k: odd(Q) | G and Q | 2G;  even k: n_i = (-1)^i n_0 mod Q): True
+   k = 1 (perfect): 5 cycles, Q = 2n, G = n trivially
+   k =  2: 231 cycles; regular (gcd unitary in every member) 189, irregular 42;  odd part of gcd(sigma) not dividing the members (impossible for odd k): 229 of 231 cycles
+   k =  4:  10 cycles; regular (gcd unitary in every member) 8, irregular 2;  odd part of gcd(sigma) not dividing the members (impossible for odd k): 9 of 10 cycles; values [(1, 1), (3, 1), (7, 1), (21, 1), (63, 2), (135, 1), (279, 1), (441, 1)]
+   k =  5:   1 cycles; regular (gcd unitary in every member) 0, irregular 1;  odd part of gcd(sigma) not dividing the members (impossible for odd k): 0 of 1 cycles; values [(1, 1)]
+      G = 8 = {2: 3}, Q = gcd sigma = 8 = {2: 3}, Q | 2G: True, regular: False
+   k =  6:   4 cycles; regular (gcd unitary in every member) 3, irregular 1;  odd part of gcd(sigma) not dividing the members (impossible for odd k): 4 of 4 cycles; values [(5, 1), (7, 1), (45, 1), (93, 1)]
+   k =  8:   2 cycles; regular (gcd unitary in every member) 2, irregular 0;  odd part of gcd(sigma) not dividing the members (impossible for odd k): 2 of 2 cycles; values [(7, 1), (15, 1)]
+   k =  9:   1 cycles; regular (gcd unitary in every member) 0, irregular 1;  odd part of gcd(sigma) not dividing the members (impossible for odd k): 0 of 1 cycles; values [(1, 1)]
+      G = 2 = {2: 1}, Q = gcd sigma = 2 = {2: 1}, Q | 2G: True, regular: False
+   k = 28:   1 cycles; regular (gcd unitary in every member) 0, irregular 1;  odd part of gcd(sigma) not dividing the members (impossible for odd k): 0 of 1 cycles; values [(1, 1)]
+   amicable pairs: median of odd(Q)/gcd(odd(Q), G) = 13041, share with an excess > 1: 0.991; share with 3 | excess: 0.939
+
+== how often q | sigma(n): cycle members vs all n <= N (sigma(n) = s(n) + n)
+   q =  3: all n 0.8511, members of 2- and 4-cycles 0.9850
+   q =  4: all n 0.9211, members of 2- and 4-cycles 0.9813
+   q =  5: all n 0.4528, members of 2- and 4-cycles 0.7477
+   q =  7: all n 0.4125, members of 2- and 4-cycles 0.5869
+   q =  8: all n 0.8044, members of 2- and 4-cycles 0.9626
+   q =  9: all n 0.5736, members of 2- and 4-cycles 0.9364
+   q = 12: all n 0.7968, members of 2- and 4-cycles 0.9701
+   q = 24: all n 0.7016, members of 2- and 4-cycles 0.9514
+
+== double flips by decade (odd a with s(a^2) in squares or twice squares), census JSON
+   a <= 10^1:     2 double flips,  0 composite;  x/(log x)^1.5 = 2.86
+   a <= 10^2:     7 double flips,  1 composite;  x/(log x)^1.5 = 10.1
+   a <= 10^3:    17 double flips,  2 composite;  x/(log x)^1.5 = 55.1
+   a <= 10^4:    39 double flips,  3 composite;  x/(log x)^1.5 = 358
+   a <= 10^5:    95 double flips,  6 composite;  x/(log x)^1.5 = 2.56e+03
+   a <= 10^6:   242 double flips, 13 composite;  x/(log x)^1.5 = 1.95e+04
+   a <= 10^7:   607 double flips, 15 composite;  x/(log x)^1.5 = 1.55e+05
+   a <= 10^8:  1634 double flips, 17 composite;  x/(log x)^1.5 = 1.26e+06
+   a <= 10^9:  4476 double flips, 18 composite;  x/(log x)^1.5 = 1.06e+07
+
+FAILED CHECKS: none
+ALL CHECKS PASSED

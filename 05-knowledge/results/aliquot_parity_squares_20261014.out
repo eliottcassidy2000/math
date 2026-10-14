@@ -1,0 +1,52 @@
+aliquot sieve to 1e+08 in 12.9 s
+cycles with all members <= N: 248;  by length: [(1, 5), (2, 231), (4, 10), (5, 1), (28, 1)]
+mixed-parity cycles: 0;  cycles with a member in squares or twice squares: 0;  all-odd cycles: 54
+   length 28: min member 14316, parity even, members [376736, 381028, 285778, 152990, 122410, 97946] ...
+   length 5: min member 12496, parity even, members [12496, 14288, 15472, 14536, 14264]
+   length 4: min member 2115324, parity even, members [2115324, 3317740, 3649556, 2797612]
+   length 4: min member 1264460, parity even, members [1264460, 1547860, 1727636, 1305184]
+   length 4: min member 2784580, parity even, members [3265940, 3707572, 3370604, 2784580]
+   length 4: min member 4938136, parity even, members [5504056, 5423384, 4938136, 5753864]
+   length 4: min member 18656380, parity even, members [18656380, 20522060, 28630036, 24289964]
+   length 4: min member 7169104, parity even, members [7169104, 7538660, 8292568, 7520432]
+   length 4: min member 18048976, parity even, members [18914992, 19252208, 18048976, 20100368]
+   length 4: min member 46722700, parity even, members [56833172, 53718220, 59090084, 46722700]
+   length 4: min member 28158165, parity odd, members [28158165, 29902635, 30853845, 29971755]
+   length 4: min member 81128632, parity even, members [81128632, 91314968, 96389032, 91401368]
+every cycle satisfies sum sigma(n_i) = 2 sum n_i: True
+   pattern of the 5-cycle from 12496: AADDD
+   pattern of the 4-cycle from 2115324: AADD
+   pattern of the 4-cycle from 1264460: AADD
+   pattern of the 4-cycle from 2784580: ADDA
+   pattern of the 4-cycle from 4938136: DDAD
+   pattern of the 4-cycle from 18656380: AADD
+   pattern of the 4-cycle from 7169104: AADD
+   pattern of the 4-cycle from 18048976: ADAD
+   pattern of the 4-cycle from 46722700: DADA
+   pattern of the 4-cycle from 28158165: AADD
+   pattern of the 4-cycle from 81128632: AADD
+
+double flips: odd a <= 1e+09 with s(a^2) a square or twice a square
+   spf sieve in 12.1 s
+   4476 odd a found in 32.6 s
+   by type of a: prime 4458 (then s(a^2) = a + 1, far below a^2), prime power 1, two or more primes 17
+   ratio s(a^2)/a^2 over all double flips: max 0.8299 (amicability needs sigma(m)/m = 1 + a^2/m, so m must be comparable to a^2)
+   a =         49 = {7: 2}: s(a^2) = 400 (square), s/a^2 = 0.1666;  sigma(m) = sigma(a^2)? False
+   a =        287 = {7: 1, 41: 1}: s(a^2) = 15842 (twice a square), s/a^2 = 0.1923;  sigma(m) = sigma(a^2)? False
+   a =       4081 = {7: 1, 11: 1, 53: 1}: s(a^2) = 5049842 (twice a square), s/a^2 = 0.3032;  sigma(m) = sigma(a^2)? False
+   a =      29039 = {71: 1, 409: 1}: s(a^2) = 14140562 (twice a square), s/a^2 = 0.0168;  sigma(m) = sigma(a^2)? False
+   a =      35713 = {71: 1, 503: 1}: s(a^2) = 20793600 (square), s/a^2 = 0.0163;  sigma(m) = sigma(a^2)? False
+   a =      82169 = {127: 1, 647: 1}: s(a^2) = 64116488 (twice a square), s/a^2 = 0.0095;  sigma(m) = sigma(a^2)? False
+   a =     102851 = {7: 2, 2099: 1}: s(a^2) = 1768202500 (square), s/a^2 = 0.1672;  sigma(m) = sigma(a^2)? False
+   a =     122783 = {199: 1, 617: 1}: s(a^2) = 100734818 (twice a square), s/a^2 = 0.0067;  sigma(m) = sigma(a^2)? False
+   a =     240761 = {71: 1, 3391: 1}: s(a^2) = 845262728 (twice a square), s/a^2 = 0.0146;  sigma(m) = sigma(a^2)? False
+   a =     323129 = {311: 1, 1039: 1}: s(a^2) = 437724872 (twice a square), s/a^2 = 0.0042;  sigma(m) = sigma(a^2)? False
+   a =     383233 = {409: 1, 937: 1}: s(a^2) = 517261448 (twice a square), s/a^2 = 0.0035;  sigma(m) = sigma(a^2)? False
+   a =     560953 = {167: 1, 3359: 1}: s(a^2) = 1989795528 (twice a square), s/a^2 = 0.0063;  sigma(m) = sigma(a^2)? False
+   a =     984799 = {167: 1, 5897: 1}: s(a^2) = 6007614498 (twice a square), s/a^2 = 0.0062;  sigma(m) = sigma(a^2)? False
+   a =    2319983 = {449: 1, 5167: 1}: s(a^2) = 13058249618 (twice a square), s/a^2 = 0.0024;  sigma(m) = sigma(a^2)? False
+   a =    3849247 = {311: 1, 12377: 1}: s(a^2) = 48996394722 (twice a square), s/a^2 = 0.0033;  sigma(m) = sigma(a^2)? False
+   a =   10171279 = {2633: 1, 3863: 1}: s(a^2) = 66104661618 (twice a square), s/a^2 = 0.0006;  sigma(m) = sigma(a^2)? False
+   a =   21852991 = {5657: 1, 3863: 1}: s(a^2) = 208109261250 (twice a square), s/a^2 = 0.0004;  sigma(m) = sigma(a^2)? False
+   a =  949818597 = {3: 1, 7: 2, 13: 1, 601: 1, 827: 1}: s(a^2) = 748727251356672900 (square), s/a^2 = 0.8299;  sigma(m) = sigma(a^2)? False
+   opposite-parity amicable pairs with odd member <= 1000000000^2: []

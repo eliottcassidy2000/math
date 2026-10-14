@@ -1,0 +1,89 @@
+== 1. Fermat primes and rigid circulant tournaments
+   Claim: p is a Fermat prime  <=>  every circulant tournament on Z_p has Aut = Z_p.
+   p =  3: Aut orders of all 2 circulant tournaments (brute force): [3]
+   p =  5: Aut orders of all 4 circulant tournaments (brute force): [5]
+   p =  7: Aut orders of all 8 circulant tournaments (brute force): [7, 21]
+   p = 11: Aut orders of all 32 circulant tournaments (brute force): [11, 55]
+   primes p < 400 with p - 1 a power of 2 (all circulant tournaments rigid): [3, 5, 17, 257]
+   multiplier stabilizers checked exhaustively for p <= 31: rigid exactly at p = 3, 5, 17: True
+   number of rotational tournaments up to isomorphism at a Fermat prime p (free Z_(p-1) action): 2^((p-1)/2)/(p-1): {3: 1, 5: 1, 17: 16, 257: '2^120', 65537: '2^32752'}
+
+== 2. Wieferich primes: circulant tournaments on Z_(p^2) invariant under g = the odd-order part of <2>
+   (g = 2^(ord_p(2)/d), d = odd part of ord_p(2); invariant tournaments exist because <g> has odd order, so -1 is not in <g>)
+   p =     3: ord_p(2) =     2, odd part d =     1, ord_(p^2)(g) =        3;  invariant tournaments on Z_(p^2): 2^2  (2^2 unless Wieferich);  Wieferich: False
+   p =     7: ord_p(2) =     3, odd part d =     3, ord_(p^2)(g) =       21;  invariant tournaments on Z_(p^2): 2^2  (2^2 unless Wieferich);  Wieferich: False
+   p =    31: ord_p(2) =     5, odd part d =     5, ord_(p^2)(g) =      155;  invariant tournaments on Z_(p^2): 2^6  (2^6 unless Wieferich);  Wieferich: False
+   p =   127: ord_p(2) =     7, odd part d =     7, ord_(p^2)(g) =      889;  invariant tournaments on Z_(p^2): 2^18  (2^18 unless Wieferich);  Wieferich: False
+   p =  1093: ord_p(2) =   364, odd part d =    91, ord_(p^2)(g) =       91;  invariant tournaments on Z_(p^2): 2^6564  (2^12 unless Wieferich);  Wieferich: True
+   p =  3511: ord_p(2) =  1755, odd part d =  1755, ord_(p^2)(g) =     1755;  invariant tournaments on Z_(p^2): 2^3512  (2^2 unless Wieferich);  Wieferich: True
+   below 4000 the exponent jumps exactly at the Wieferich primes 1093 and 3511: True
+   3511: ord_3511(2) = 1755 = (p-1)/2, p = 7 mod 8, p = 3 mod 4: <2> = the squares, so the doubling-invariant circulant tournaments on Z_3511 are the Paley tournament and its reverse (as <2> = {1,2,4} gives P_7 at p = 7)
+   1093 = (3^7 - 1)/2: True;  ord_1093(3) = 7;  ord_1093(2) = 364 = 4 * 91, 91 = 7 * 13;  1093 mod 21 = 1, 3511 mod 21 = 4 (both in <2> mod 21 = [1, 2, 4, 8, 11, 16], i.e. both split in Q(sqrt(-7)))
+
+== 3. Hamiltonian paths of the Paley tournaments P_p (p = 3 mod 4)
+   p =  3: H(P_p) = 3  (= 3 * 1; |Aut| = p(p-1)/2 divides H: True);  H/p mod p = 1, H/|Aut| mod p = 1;  0.6 s
+   p =  7: H(P_p) = 189  (= 21 * 9; |Aut| = p(p-1)/2 divides H: True);  H/p mod p = 6, H/|Aut| mod p = 2;  0.0 s
+   p = 11: H(P_p) = 95095  (= 55 * 1729; |Aut| = p(p-1)/2 divides H: True);  H/p mod p = 10, H/|Aut| mod p = 2;  0.0 s
+   p = 19: H(P_p) = 1172695746915  (= 171 * 6857869865; |Aut| = p(p-1)/2 divides H: True);  H/p mod p = 17, H/|Aut| mod p = 4;  0.1 s
+   p = 23: H(P_p) = 15760206976379349  (= 253 * 62293308207033; |Aut| = p(p-1)/2 divides H: True);  H/p mod p = 16, H/|Aut| mod p = 14;  2.7 s
+   orbit counts H/|Aut| mod 8 for the Paley primes: {3: 1, 7: 1, 11: 1, 19: 1, 23: 1}
+
+   control: every circulant tournament on Z_7 and Z_11 (|Aut| = p |M|, M the multiplier stabilizer; Alspach)
+     p = 7:  6 connection sets with |Aut| =   7, H =     175, H/|Aut| = 25 = 1 mod 8
+     p = 7:  2 connection sets with |Aut| =  21, H =     189, H/|Aut| = 9 = 1 mod 8
+     p = 11: 10 connection sets with |Aut| =  11, H =   92411, H/|Aut| = 8401 = 1 mod 8
+     p = 11: 10 connection sets with |Aut| =  11, H =   93027, H/|Aut| = 8457 = 1 mod 8
+     p = 11: 10 connection sets with |Aut| =  11, H =   93467, H/|Aut| = 8497 = 1 mod 8
+     p = 11:  2 connection sets with |Aut| =  55, H =   95095, H/|Aut| = 1729 = 1 mod 8
+
+   all circulant tournaments on Z_p: residues of the orbit count H/|Aut| (|Aut| = p |M|) mod 8, by p mod 4
+     p =  3 (p = 3 mod 4): 2 connection sets, residues of H/|Aut| mod 8: {1: 2}
+     p =  5 (p = 1 mod 4): 4 connection sets, residues of H/|Aut| mod 8: {3: 4}
+     p =  7 (p = 3 mod 4): 8 connection sets, residues of H/|Aut| mod 8: {1: 8}
+     p = 11 (p = 3 mod 4): 32 connection sets, residues of H/|Aut| mod 8: {1: 32}
+     p = 13 (p = 1 mod 4): 64 connection sets, residues of H/|Aut| mod 8: {1: 12, 3: 12, 5: 28, 7: 12}
+     p = 17 (p = 1 mod 4): 256 connection sets, residues of H/|Aut| mod 8: {1: 112, 3: 32, 5: 64, 7: 48}
+     p = 19 (p = 3 mod 4): 512 connection sets, residues of H/|Aut| mod 8: {1: 128, 3: 126, 5: 96, 7: 162}
+     -> the guess "every circulant on Z_p with p = 3 mod 4 has orbit count 1 mod 8" holds at p = 3, 7, 11 and is REFUTED at p = 19
+
+   control: the doubly regular tournaments of the skew-Hadamard doubling tower (gilbreath_fermat_tower_20260926_tournaments.py;
+   |Aut(T_4)| = 21 there, not vertex-transitive).  Aut acts freely on Hamiltonian paths of any tournament.
+     T_3 (n = 7): H = 189, |Aut| = 21, H/|Aut| = 9 = 1 mod 8
+     T_4 (n = 15): H = 198335025, |Aut| = 21, H/|Aut| = 9444525 = 5 mod 8
+
+   the Paley tournament on GF(27) = F_3[x]/(x^3 - x - 1): H mod 8424 = 8 * 1053 (|Aut| = 27 * 13 * 3 = 1053)
+     H(P_27) mod 8424 = 3159;  divisible by 1053: True;  orbit count under the full Aut (with Frobenius): H/1053 = 3 mod 8;  under the affine group x -> a x + b (a a square, order 351): H/351 = 1 mod 8;  60 s
+
+== 4. Paley graphs on Fermat primes: clique numbers
+   P_5: clique number 2 (= independence number, self-complementary), so R(3,3) > 5;  0.0 s
+   P_13: clique number 3 (= independence number, self-complementary), so R(4,4) > 13;  0.0 s
+   P_17: clique number 3 (= independence number, self-complementary), so R(4,4) > 17;  0.0 s
+   P_29: clique number 4 (= independence number, self-complementary), so R(5,5) > 29;  0.0 s
+   P_37: clique number 4 (= independence number, self-complementary), so R(5,5) > 37;  0.0 s
+   P_41: clique number 5 (= independence number, self-complementary), so R(6,6) > 41;  0.0 s
+   P_257: clique number 7 (= independence number, self-complementary), so R(8,8) > 257;  0.1 s
+   R(3,3) = 6 and R(4,4) = 18: the Paley graphs on the Fermat primes 5 and 17 are the extremal graphs (classical; uniqueness cited, not re-checked)
+
+== 5. Triangle groups (2,3,k), perfect 6 and primary pseudoperfect 42
+   (2,3,3): orbifold Euler characteristic 1/6 -> spherical, |group| = 2/chi = 12
+   (2,3,4): orbifold Euler characteristic 1/12 -> spherical, |group| = 2/chi = 24
+   (2,3,5): orbifold Euler characteristic 1/30 -> spherical, |group| = 2/chi = 60
+   (2,3,6): orbifold Euler characteristic 0 -> Euclidean
+   (2,3,7): orbifold Euler characteristic -1/42 -> hyperbolic, Hurwitz: |Aut| <= (2g-2)/|chi| = 84(g-1)
+   (2,3,8): orbifold Euler characteristic -1/24 -> hyperbolic, Hurwitz: |Aut| <= (2g-2)/|chi| = 48(g-1)
+   primary pseudoperfect numbers n < 60000 (sum_{p|n} 1/p + 1/n = 1): [2, 6, 42, 1806, 47058]
+   chi(2,3,7) = -1/42 with 42 = 2*3*7 primary pseudoperfect;  chi(2,3,6) = 0 with 6 perfect;  Sylvester 2, 3, 7, 43, 1807 = 13 * 139
+   sigma(n)/n = sum_{d | n} 1/d for every n, so sigma(n)/n - 2 = sum_{d | n, d > 1} 1/d - 1 is a tautology;  the triangle reading
+   needs exactly three divisors above 1, i.e. tau(n) = 4 (n = pq or p^3):
+   n =  6 (tau = 4): divisors > 1 [2, 3, 6], triangle excess/pi = 0, sigma(n)/n - 2 = 0, equal: True
+   n = 15 (tau = 4): divisors > 1 [3, 5, 15], triangle excess/pi = -2/5, sigma(n)/n - 2 = -2/5, equal: True
+   n = 21 (tau = 4): divisors > 1 [3, 7, 21], triangle excess/pi = -10/21, sigma(n)/n - 2 = -10/21, equal: True
+   n = 35 (tau = 4): divisors > 1 [5, 7, 35], triangle excess/pi = -22/35, sigma(n)/n - 2 = -22/35, equal: True
+   n = 77 (tau = 4): divisors > 1 [7, 11, 77], triangle excess/pi = -58/77, sigma(n)/n - 2 = -58/77, equal: True
+   n =  4 (tau = 3): divisors > 1 [2, 4], not a triangle (excluded)
+   n =  8 (tau = 4): divisors > 1 [2, 4, 8], triangle excess/pi = -1/8, sigma(n)/n - 2 = -1/8, equal: True
+   n = 27 (tau = 4): divisors > 1 [3, 9, 27], triangle excess/pi = -14/27, sigma(n)/n - 2 = -14/27, equal: True
+   tau(n) = 4, n < 10^5: abundant [], perfect [6] (only 6 = 2*3 <-> (2,3,6); no spherical case)
+
+FAILED CHECKS: none
+ALL CHECKS PASSED
