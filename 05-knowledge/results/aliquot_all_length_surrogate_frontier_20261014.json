@@ -1,0 +1,347 @@
+{
+  "C1": "Every nonconstant finite F-cycle contains cofactor one (OPEN)",
+  "C2": "The only nonconstant primitive F-cycles are [8,22,14,10] and [16,46,26] (OPEN)",
+  "finite_graph": {
+    "bound_all_cycle_members": 1000000,
+    "claim": "Only cycles wholly contained in the finite window are classified",
+    "cycles": [
+      {
+        "H": [
+          2
+        ],
+        "cofactors": [
+          3
+        ],
+        "cores": [
+          2
+        ],
+        "cycle": [
+          6
+        ],
+        "minimum_core": 2,
+        "primitive_length": 1,
+        "u": [
+          1
+        ]
+      },
+      {
+        "H": [
+          1,
+          6,
+          4,
+          3
+        ],
+        "cofactors": [
+          1,
+          11,
+          7,
+          5
+        ],
+        "cores": [
+          8,
+          2,
+          2,
+          2
+        ],
+        "cycle": [
+          8,
+          22,
+          14,
+          10
+        ],
+        "minimum_core": 2,
+        "primitive_length": 4,
+        "u": [
+          4,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "H": [
+          1,
+          12,
+          7
+        ],
+        "cofactors": [
+          1,
+          23,
+          13
+        ],
+        "cores": [
+          16,
+          2,
+          2
+        ],
+        "cycle": [
+          16,
+          46,
+          26
+        ],
+        "minimum_core": 2,
+        "primitive_length": 3,
+        "u": [
+          8,
+          1,
+          1
+        ]
+      },
+      {
+        "H": [
+          2
+        ],
+        "cofactors": [
+          7
+        ],
+        "cores": [
+          4
+        ],
+        "cycle": [
+          28
+        ],
+        "minimum_core": 4,
+        "primitive_length": 1,
+        "u": [
+          1
+        ]
+      },
+      {
+        "H": [
+          2
+        ],
+        "cofactors": [
+          15
+        ],
+        "cores": [
+          8
+        ],
+        "cycle": [
+          120
+        ],
+        "minimum_core": 8,
+        "primitive_length": 1,
+        "u": [
+          1
+        ]
+      },
+      {
+        "H": [
+          2
+        ],
+        "cofactors": [
+          31
+        ],
+        "cores": [
+          16
+        ],
+        "cycle": [
+          496
+        ],
+        "minimum_core": 16,
+        "primitive_length": 1,
+        "u": [
+          1
+        ]
+      },
+      {
+        "H": [
+          2
+        ],
+        "cofactors": [
+          63
+        ],
+        "cores": [
+          32
+        ],
+        "cycle": [
+          2016
+        ],
+        "minimum_core": 32,
+        "primitive_length": 1,
+        "u": [
+          1
+        ]
+      },
+      {
+        "H": [
+          2
+        ],
+        "cofactors": [
+          127
+        ],
+        "cores": [
+          64
+        ],
+        "cycle": [
+          8128
+        ],
+        "minimum_core": 64,
+        "primitive_length": 1,
+        "u": [
+          1
+        ]
+      },
+      {
+        "H": [
+          2
+        ],
+        "cofactors": [
+          255
+        ],
+        "cores": [
+          128
+        ],
+        "cycle": [
+          32640
+        ],
+        "minimum_core": 128,
+        "primitive_length": 1,
+        "u": [
+          1
+        ]
+      },
+      {
+        "H": [
+          2
+        ],
+        "cofactors": [
+          511
+        ],
+        "cores": [
+          256
+        ],
+        "cycle": [
+          130816
+        ],
+        "minimum_core": 256,
+        "primitive_length": 1,
+        "u": [
+          1
+        ]
+      },
+      {
+        "H": [
+          2
+        ],
+        "cofactors": [
+          1023
+        ],
+        "cores": [
+          512
+        ],
+        "cycle": [
+          523776
+        ],
+        "minimum_core": 512,
+        "primitive_length": 1,
+        "u": [
+          1
+        ]
+      }
+    ],
+    "histogram": {
+      "1": 9,
+      "3": 1,
+      "4": 1
+    },
+    "local_counts": {
+      "decreasing": 498002,
+      "exceptional_quadratic_increase": 9,
+      "fixed": 9,
+      "increase_with_core_drop": 1980,
+      "increasing": 1989
+    },
+    "local_restriction_inputs_checked": 500000,
+    "vertices": 500000
+  },
+  "not_claimed": [
+    "convergence of every start in the window",
+    "global boundedness of F orbits",
+    "all-length prime-chamber cycle classification",
+    "general aliquot cycle classification"
+  ],
+  "proved_prime_specific_restriction": "Odd cycle length and all dyadic exponents odd force the fixed point 6",
+  "status": "open all-length conjectures; proved local and modular restrictions",
+  "template_checks": {
+    "exponent_range": [
+      1,
+      6
+    ],
+    "results": [
+      {
+        "integral_closures": [
+          {
+            "cofactors": [
+              11,
+              7,
+              5,
+              1
+            ],
+            "exponents": [
+              1,
+              1,
+              1,
+              3
+            ],
+            "numbers": [
+              22,
+              14,
+              10,
+              8
+            ]
+          }
+        ],
+        "nonconstant_cyclic_representatives": 330,
+        "word_length": 4
+      },
+      {
+        "integral_closures": [],
+        "nonconstant_cyclic_representatives": 1554,
+        "word_length": 5
+      },
+      {
+        "integral_closures": [
+          {
+            "cofactors": [
+              23,
+              13,
+              1,
+              23,
+              13,
+              1
+            ],
+            "exponents": [
+              1,
+              1,
+              4,
+              1,
+              1,
+              4
+            ],
+            "numbers": [
+              46,
+              26,
+              16,
+              46,
+              26,
+              16
+            ]
+          }
+        ],
+        "nonconstant_cyclic_representatives": 7820,
+        "word_length": 6
+      },
+      {
+        "integral_closures": [],
+        "nonconstant_cyclic_representatives": 39990,
+        "word_length": 7
+      }
+    ],
+    "warning": "Word length can be a multiple of primitive cycle period",
+    "word_length_range": [
+      4,
+      7
+    ]
+  }
+}
