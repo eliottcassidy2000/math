@@ -1,0 +1,1128 @@
+{
+  "checks": 7970,
+  "controls": {
+    "compiler_prime_bound": "none; exact finite divisor universe",
+    "core_interval": [
+      2,
+      150
+    ],
+    "literal_new_prime_bound": 31,
+    "squarefree_cores": 91
+  },
+  "lattice_controls": [
+    {
+      "characteristic_norm": 2,
+      "characteristic_vector": [
+        0,
+        1
+      ],
+      "determinant": 1,
+      "index": 1,
+      "mu": 1,
+      "number": 2,
+      "signature": 2,
+      "support": [
+        2
+      ]
+    },
+    {
+      "characteristic_norm": 3,
+      "characteristic_vector": [
+        0,
+        0,
+        1
+      ],
+      "determinant": 1,
+      "index": 1,
+      "mu": 1,
+      "number": 6,
+      "signature": 3,
+      "support": [
+        2,
+        3
+      ]
+    },
+    {
+      "characteristic_norm": 12,
+      "characteristic_vector": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "determinant": 1,
+      "index": 1,
+      "mu": 1,
+      "number": 42,
+      "signature": 4,
+      "support": [
+        2,
+        3,
+        7
+      ]
+    },
+    {
+      "characteristic_norm": 53,
+      "characteristic_vector": [
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "determinant": 1,
+      "index": 1,
+      "mu": 1,
+      "number": 1806,
+      "signature": 5,
+      "support": [
+        2,
+        3,
+        7,
+        43
+      ]
+    },
+    {
+      "characteristic_norm": 70,
+      "characteristic_vector": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "determinant": 1,
+      "index": 1,
+      "mu": 1,
+      "number": 47058,
+      "signature": 6,
+      "support": [
+        2,
+        3,
+        11,
+        23,
+        31
+      ]
+    },
+    {
+      "characteristic_norm": 10,
+      "characteristic_vector": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "determinant": -1,
+      "index": 1,
+      "mu": -1,
+      "number": 30,
+      "signature": 2,
+      "support": [
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "characteristic_norm": 27,
+      "characteristic_vector": [
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "determinant": -1,
+      "index": 1,
+      "mu": -1,
+      "number": 858,
+      "signature": 3,
+      "support": [
+        2,
+        3,
+        11,
+        13
+      ]
+    },
+    {
+      "characteristic_norm": 51,
+      "characteristic_vector": [
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "determinant": -1,
+      "index": 1,
+      "mu": -1,
+      "number": 1722,
+      "signature": 3,
+      "support": [
+        2,
+        3,
+        7,
+        41
+      ]
+    },
+    {
+      "characteristic_norm": 92,
+      "characteristic_vector": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "determinant": -1,
+      "index": 1,
+      "mu": -1,
+      "number": 66198,
+      "signature": 4,
+      "support": [
+        2,
+        3,
+        11,
+        17,
+        59
+      ]
+    },
+    {
+      "characteristic_norm": 0,
+      "characteristic_vector": [
+        1,
+        0
+      ],
+      "determinant": -1,
+      "index": 0,
+      "mu": -1,
+      "number": 3,
+      "signature": 0,
+      "support": [
+        3
+      ]
+    },
+    {
+      "characteristic_norm": 0,
+      "characteristic_vector": [
+        1,
+        0
+      ],
+      "determinant": -1,
+      "index": 0,
+      "mu": -1,
+      "number": 5,
+      "signature": 0,
+      "support": [
+        5
+      ]
+    },
+    {
+      "characteristic_norm": 0,
+      "characteristic_vector": [
+        1,
+        0
+      ],
+      "determinant": -1,
+      "index": 0,
+      "mu": -1,
+      "number": 7,
+      "signature": 0,
+      "support": [
+        7
+      ]
+    },
+    {
+      "characteristic_norm": 0,
+      "characteristic_vector": [
+        1,
+        0
+      ],
+      "determinant": -1,
+      "index": 0,
+      "mu": -1,
+      "number": 11,
+      "signature": 0,
+      "support": [
+        11
+      ]
+    },
+    {
+      "characteristic_norm": 0,
+      "characteristic_vector": [
+        1,
+        0
+      ],
+      "determinant": -1,
+      "index": 0,
+      "mu": -1,
+      "number": 13,
+      "signature": 0,
+      "support": [
+        13
+      ]
+    },
+    {
+      "characteristic_norm": 0,
+      "characteristic_vector": [
+        1,
+        0
+      ],
+      "determinant": -1,
+      "index": 0,
+      "mu": -1,
+      "number": 17,
+      "signature": 0,
+      "support": [
+        17
+      ]
+    },
+    {
+      "characteristic_norm": 0,
+      "characteristic_vector": [
+        1,
+        0
+      ],
+      "determinant": -1,
+      "index": 0,
+      "mu": -1,
+      "number": 19,
+      "signature": 0,
+      "support": [
+        19
+      ]
+    },
+    {
+      "characteristic_norm": 0,
+      "characteristic_vector": [
+        1,
+        0
+      ],
+      "determinant": -1,
+      "index": 0,
+      "mu": -1,
+      "number": 23,
+      "signature": 0,
+      "support": [
+        23
+      ]
+    },
+    {
+      "characteristic_norm": 0,
+      "characteristic_vector": [
+        1,
+        0
+      ],
+      "determinant": -1,
+      "index": 0,
+      "mu": -1,
+      "number": 29,
+      "signature": 0,
+      "support": [
+        29
+      ]
+    },
+    {
+      "characteristic_norm": 0,
+      "characteristic_vector": [
+        1,
+        0
+      ],
+      "determinant": -1,
+      "index": 0,
+      "mu": -1,
+      "number": 31,
+      "signature": 0,
+      "support": [
+        31
+      ]
+    },
+    {
+      "characteristic_norm": 0,
+      "characteristic_vector": [
+        1,
+        0
+      ],
+      "determinant": -1,
+      "index": 0,
+      "mu": -1,
+      "number": 37,
+      "signature": 0,
+      "support": [
+        37
+      ]
+    },
+    {
+      "characteristic_norm": 0,
+      "characteristic_vector": [
+        1,
+        0
+      ],
+      "determinant": -1,
+      "index": 0,
+      "mu": -1,
+      "number": 41,
+      "signature": 0,
+      "support": [
+        41
+      ]
+    },
+    {
+      "characteristic_norm": 0,
+      "characteristic_vector": [
+        1,
+        0
+      ],
+      "determinant": -1,
+      "index": 0,
+      "mu": -1,
+      "number": 43,
+      "signature": 0,
+      "support": [
+        43
+      ]
+    },
+    {
+      "characteristic_norm": 0,
+      "characteristic_vector": [
+        1,
+        0
+      ],
+      "determinant": -1,
+      "index": 0,
+      "mu": -1,
+      "number": 47,
+      "signature": 0,
+      "support": [
+        47
+      ]
+    },
+    {
+      "characteristic_norm": 0,
+      "characteristic_vector": [
+        1,
+        0
+      ],
+      "determinant": -1,
+      "index": 0,
+      "mu": -1,
+      "number": 53,
+      "signature": 0,
+      "support": [
+        53
+      ]
+    },
+    {
+      "characteristic_norm": 0,
+      "characteristic_vector": [
+        1,
+        0
+      ],
+      "determinant": -1,
+      "index": 0,
+      "mu": -1,
+      "number": 59,
+      "signature": 0,
+      "support": [
+        59
+      ]
+    },
+    {
+      "characteristic_norm": 0,
+      "characteristic_vector": [
+        1,
+        0
+      ],
+      "determinant": -1,
+      "index": 0,
+      "mu": -1,
+      "number": 61,
+      "signature": 0,
+      "support": [
+        61
+      ]
+    },
+    {
+      "characteristic_norm": 0,
+      "characteristic_vector": [
+        1,
+        0
+      ],
+      "determinant": -1,
+      "index": 0,
+      "mu": -1,
+      "number": 67,
+      "signature": 0,
+      "support": [
+        67
+      ]
+    },
+    {
+      "characteristic_norm": 0,
+      "characteristic_vector": [
+        1,
+        0
+      ],
+      "determinant": -1,
+      "index": 0,
+      "mu": -1,
+      "number": 71,
+      "signature": 0,
+      "support": [
+        71
+      ]
+    },
+    {
+      "characteristic_norm": 0,
+      "characteristic_vector": [
+        1,
+        0
+      ],
+      "determinant": -1,
+      "index": 0,
+      "mu": -1,
+      "number": 73,
+      "signature": 0,
+      "support": [
+        73
+      ]
+    },
+    {
+      "characteristic_norm": 0,
+      "characteristic_vector": [
+        1,
+        0
+      ],
+      "determinant": -1,
+      "index": 0,
+      "mu": -1,
+      "number": 79,
+      "signature": 0,
+      "support": [
+        79
+      ]
+    },
+    {
+      "characteristic_norm": 0,
+      "characteristic_vector": [
+        1,
+        0
+      ],
+      "determinant": -1,
+      "index": 0,
+      "mu": -1,
+      "number": 83,
+      "signature": 0,
+      "support": [
+        83
+      ]
+    },
+    {
+      "characteristic_norm": 0,
+      "characteristic_vector": [
+        1,
+        0
+      ],
+      "determinant": -1,
+      "index": 0,
+      "mu": -1,
+      "number": 89,
+      "signature": 0,
+      "support": [
+        89
+      ]
+    },
+    {
+      "characteristic_norm": 0,
+      "characteristic_vector": [
+        1,
+        0
+      ],
+      "determinant": -1,
+      "index": 0,
+      "mu": -1,
+      "number": 97,
+      "signature": 0,
+      "support": [
+        97
+      ]
+    },
+    {
+      "characteristic_norm": 0,
+      "characteristic_vector": [
+        1,
+        0
+      ],
+      "determinant": -1,
+      "index": 0,
+      "mu": -1,
+      "number": 101,
+      "signature": 0,
+      "support": [
+        101
+      ]
+    }
+  ],
+  "proper_Giuga_multiple_bounds": [
+    {
+      "first_upper_bound_above_one": "87921113168303153608399151705239053957500878928708641982439738097607646193794384497538043346788639258184400409973/87714969705038411076272137418539099801877190558970371113762453702525982911939243939521562715111692818014473106390",
+      "last_prime": 277,
+      "minimum_new_primes": 56,
+      "previous_upper_bound": "316261561833399824557211652503390880194266395661266580536981389035889846248082279996852773323584842519765205339/316660540451402206051523961799780143689087330537799173695893334666158783075592938409825136155637880209438531070",
+      "root": 30
+    },
+    {
+      "first_upper_bound_above_one": "87921113168303153608399151705239053957500878928708641982439738097607646193794384497538043346788639258184400409973/87714969705038411076272137418539099801877190558970371113762453702525982911939243939521562715111692818014473106390",
+      "last_prime": 277,
+      "minimum_new_primes": 55,
+      "previous_upper_bound": "316261561833399824557211652503390880194266395661266580536981389035889846248082279996852773323584842519765205339/316660540451402206051523961799780143689087330537799173695893334666158783075592938409825136155637880209438531070",
+      "root": 858
+    },
+    {
+      "first_upper_bound_above_one": "87921113168303153608399151705239053957500878928708641982439738097607646193794384497538043346788639258184400409973/87714969705038411076272137418539099801877190558970371113762453702525982911939243939521562715111692818014473106390",
+      "last_prime": 277,
+      "minimum_new_primes": 55,
+      "previous_upper_bound": "316261561833399824557211652503390880194266395661266580536981389035889846248082279996852773323584842519765205339/316660540451402206051523961799780143689087330537799173695893334666158783075592938409825136155637880209438531070",
+      "root": 1722
+    },
+    {
+      "first_upper_bound_above_one": "87921113168303153608399151705239053957500878928708641982439738097607646193794384497538043346788639258184400409973/87714969705038411076272137418539099801877190558970371113762453702525982911939243939521562715111692818014473106390",
+      "last_prime": 277,
+      "minimum_new_primes": 54,
+      "previous_upper_bound": "316261561833399824557211652503390880194266395661266580536981389035889846248082279996852773323584842519765205339/316660540451402206051523961799780143689087330537799173695893334666158783075592938409825136155637880209438531070",
+      "root": 66198
+    },
+    {
+      "first_upper_bound_above_one": "4137391537330546537761515153930852701177920736938801536138780518112825532924294290544587227332548109265201344565205851/4127603329409992510016137970504194419376934956133468753500319783879765177887125002062066176685010928937307060967394230",
+      "last_prime": 277,
+      "minimum_new_primes": 54,
+      "previous_upper_bound": "14882636975734746946394760255813864429445282867962759279502429117196534653679083442750310779424087572332800706168393/14901095052021633610166563070412254221577382513117215716607652649385433855188176902751141432075851729015548956560990",
+      "root": 2214408306
+    }
+  ],
+  "status": "PROVED scoped algebra; CITED lattice theorem; FINITE-EXACT controls; Giuga/Collatz OPEN",
+  "two_prime_catalog": [
+    {
+      "carriers_k_a_D": [
+        [
+          1,
+          1,
+          3
+        ]
+      ],
+      "completions": [
+        {
+          "factors": [
+            1,
+            3
+          ],
+          "index": 1,
+          "number": 30,
+          "primes": [
+            3,
+            5
+          ]
+        }
+      ],
+      "core": 2,
+      "core_prime_support": [
+        2
+      ],
+      "index_interval": [
+        "1/2",
+        "1"
+      ],
+      "mu": -1
+    },
+    {
+      "carriers_k_a_D": [
+        [
+          1,
+          1,
+          5
+        ]
+      ],
+      "completions": [
+        {
+          "factors": [
+            1,
+            5
+          ],
+          "index": 1,
+          "number": 42,
+          "primes": [
+            3,
+            7
+          ]
+        }
+      ],
+      "core": 2,
+      "core_prime_support": [
+        2
+      ],
+      "index_interval": [
+        "1/2",
+        "16/15"
+      ],
+      "mu": 1
+    },
+    {
+      "carriers_k_a_D": [
+        [
+          1,
+          1,
+          35
+        ]
+      ],
+      "completions": [
+        {
+          "factors": [
+            1,
+            35
+          ],
+          "index": 1,
+          "number": 1722,
+          "primes": [
+            7,
+            41
+          ]
+        },
+        {
+          "factors": [
+            5,
+            7
+          ],
+          "index": 1,
+          "number": 858,
+          "primes": [
+            11,
+            13
+          ]
+        }
+      ],
+      "core": 6,
+      "core_prime_support": [
+        2,
+        3
+      ],
+      "index_interval": [
+        "5/6",
+        "41/35"
+      ],
+      "mu": -1
+    },
+    {
+      "carriers_k_a_D": [
+        [
+          1,
+          1,
+          37
+        ]
+      ],
+      "completions": [
+        {
+          "factors": [
+            1,
+            37
+          ],
+          "index": 1,
+          "number": 1806,
+          "primes": [
+            7,
+            43
+          ]
+        }
+      ],
+      "core": 6,
+      "core_prime_support": [
+        2,
+        3
+      ],
+      "index_interval": [
+        "5/6",
+        "124/105"
+      ],
+      "mu": 1
+    },
+    {
+      "carriers_k_a_D": [],
+      "completions": [],
+      "core": 30,
+      "core_prime_support": [
+        2,
+        3,
+        5
+      ],
+      "index_interval": [
+        "31/30",
+        "19/15"
+      ],
+      "mu": -1
+    },
+    {
+      "carriers_k_a_D": [],
+      "completions": [],
+      "core": 30,
+      "core_prime_support": [
+        2,
+        3,
+        5
+      ],
+      "index_interval": [
+        "31/30",
+        "488/385"
+      ],
+      "mu": 1
+    },
+    {
+      "carriers_k_a_D": [
+        [
+          1,
+          1,
+          1763
+        ]
+      ],
+      "completions": [],
+      "core": 42,
+      "core_prime_support": [
+        2,
+        3,
+        7
+      ],
+      "index_interval": [
+        "41/42",
+        "19/15"
+      ],
+      "mu": -1
+    },
+    {
+      "carriers_k_a_D": [
+        [
+          1,
+          1,
+          1765
+        ]
+      ],
+      "completions": [],
+      "core": 42,
+      "core_prime_support": [
+        2,
+        3,
+        7
+      ],
+      "index_interval": [
+        "41/42",
+        "488/385"
+      ],
+      "mu": 1
+    },
+    {
+      "carriers_k_a_D": [
+        [
+          1,
+          290,
+          314431
+        ]
+      ],
+      "completions": [
+        {
+          "factors": [
+            19,
+            16549
+          ],
+          "index": 1,
+          "number": 66198,
+          "primes": [
+            2,
+            59
+          ]
+        }
+      ],
+      "core": 561,
+      "core_prime_support": [
+        3,
+        11,
+        17
+      ],
+      "index_interval": [
+        "271/561",
+        "1106/935"
+      ],
+      "mu": -1
+    },
+    {
+      "carriers_k_a_D": [
+        [
+          1,
+          290,
+          315011
+        ]
+      ],
+      "completions": [],
+      "core": 561,
+      "core_prime_support": [
+        3,
+        11,
+        17
+      ],
+      "index_interval": [
+        "271/561",
+        "3319/2805"
+      ],
+      "mu": 1
+    },
+    {
+      "carriers_k_a_D": [],
+      "completions": [],
+      "core": 858,
+      "core_prime_support": [
+        2,
+        3,
+        11,
+        13
+      ],
+      "index_interval": [
+        "859/858",
+        "4036/3003"
+      ],
+      "mu": -1
+    },
+    {
+      "carriers_k_a_D": [],
+      "completions": [],
+      "core": 858,
+      "core_prime_support": [
+        2,
+        3,
+        11,
+        13
+      ],
+      "index_interval": [
+        "859/858",
+        "961/715"
+      ],
+      "mu": 1
+    },
+    {
+      "carriers_k_a_D": [
+        [
+          1,
+          734,
+          1220291
+        ]
+      ],
+      "completions": [],
+      "core": 1105,
+      "core_prime_support": [
+        5,
+        13,
+        17
+      ],
+      "index_interval": [
+        "371/1105",
+        "775/663"
+      ],
+      "mu": -1
+    },
+    {
+      "carriers_k_a_D": [
+        [
+          1,
+          734,
+          1221759
+        ]
+      ],
+      "completions": [],
+      "core": 1105,
+      "core_prime_support": [
+        5,
+        13,
+        17
+      ],
+      "index_interval": [
+        "371/1105",
+        "76/65"
+      ],
+      "mu": 1
+    },
+    {
+      "carriers_k_a_D": [],
+      "completions": [],
+      "core": 1722,
+      "core_prime_support": [
+        2,
+        3,
+        7,
+        41
+      ],
+      "index_interval": [
+        "1723/1722",
+        "20386/15785"
+      ],
+      "mu": -1
+    },
+    {
+      "carriers_k_a_D": [],
+      "completions": [],
+      "core": 1722,
+      "core_prime_support": [
+        2,
+        3,
+        7,
+        41
+      ],
+      "index_interval": [
+        "1723/1722",
+        "8737/6765"
+      ],
+      "mu": 1
+    },
+    {
+      "carriers_k_a_D": [
+        [
+          1,
+          1258,
+          2988183
+        ]
+      ],
+      "completions": [],
+      "core": 1729,
+      "core_prime_support": [
+        7,
+        13,
+        19
+      ],
+      "index_interval": [
+        "471/1729",
+        "5735/5187"
+      ],
+      "mu": -1
+    },
+    {
+      "carriers_k_a_D": [
+        [
+          1,
+          1258,
+          2990699
+        ]
+      ],
+      "completions": [],
+      "core": 1729,
+      "core_prime_support": [
+        7,
+        13,
+        19
+      ],
+      "index_interval": [
+        "471/1729",
+        "1912/1729"
+      ],
+      "mu": 1
+    },
+    {
+      "carriers_k_a_D": [
+        [
+          1,
+          1,
+          3261635
+        ]
+      ],
+      "completions": [
+        {
+          "factors": [
+            1235,
+            2641
+          ],
+          "index": 1,
+          "number": 24423128562,
+          "primes": [
+            3041,
+            4447
+          ]
+        }
+      ],
+      "core": 1806,
+      "core_prime_support": [
+        2,
+        3,
+        7,
+        43
+      ],
+      "index_interval": [
+        "1805/1806",
+        "1831/1419"
+      ],
+      "mu": -1
+    },
+    {
+      "carriers_k_a_D": [
+        [
+          1,
+          1,
+          3261637
+        ]
+      ],
+      "completions": [],
+      "core": 1806,
+      "core_prime_support": [
+        2,
+        3,
+        7,
+        43
+      ],
+      "index_interval": [
+        "1805/1806",
+        "1942/1505"
+      ],
+      "mu": 1
+    },
+    {
+      "carriers_k_a_D": [
+        [
+          1,
+          1,
+          2214455363
+        ]
+      ],
+      "completions": [],
+      "core": 47058,
+      "core_prime_support": [
+        2,
+        3,
+        11,
+        23,
+        31
+      ],
+      "index_interval": [
+        "47057/47058",
+        "73723/54901"
+      ],
+      "mu": -1
+    },
+    {
+      "carriers_k_a_D": [
+        [
+          1,
+          1,
+          2214455365
+        ]
+      ],
+      "completions": [],
+      "core": 47058,
+      "core_prime_support": [
+        2,
+        3,
+        11,
+        23,
+        31
+      ],
+      "index_interval": [
+        "47057/47058",
+        "157978/117645"
+      ],
+      "mu": 1
+    }
+  ]
+}

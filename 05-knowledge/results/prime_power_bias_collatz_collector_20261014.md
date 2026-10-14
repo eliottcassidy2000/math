@@ -79,7 +79,7 @@ Owner's prompt (pasted, verbatim core): "merge in related to skewe's number, che
    - **The odd step.** `(3n+1)/2 ≡ 2` and `(3n−1)/2 ≡ 1 (mod 3)` for every odd `n`, and the two images are consecutive. For `n = 2k + 1` they are `3k + 2` and `3k + 1`, the "pair": the two non-multiples of 3 in the block `[3k, 3k+2]`. The positive sheet takes the upper member and the negative sheet the lower.
    - **The even step** multiplies the residue by `2^(−1) = 2`, i.e. swaps 1 and 2 and fixes 0.
    - **The collector theorem (Proposition 2) is an ensemble statement.** For `n` uniform modulo `3 · 2^k`, `T_+^k(n)` lies in class 2 with probability tending to `2/3`, and in class 1 with probability tending to `1/3`. For `3x − 1` it is the reverse. Class 0 is never visited after the first odd step.
-   - **It is not a time average along one orbit.** Orbits end in cycles, and the cycle `{1, 2}` visits the two classes `1 : 1`.
+   - **It is not a time average along one orbit.** For trajectories known to reach `{1, 2}`, that cycle visits the two classes `1 : 1`; universal entry remains open (MISTAKE-607's scope distinction).
      - **Measured.** Pooling all `T_+` trajectories up to `10^7` gives `0.6725 : 0.3275`.
      - **The excess over 2/3 is a length bias** (audit measurement). The pool is dominated by long trajectories. In their middle part the odd-step frequency is about `0.57`, and the class-2 share is `0.698`, close to the fair-coin chain's `1/(2 − q) = 0.700`. The final descent contributes a deficit.
    - **The general form.** For every `px ± 1` map the odd step is the constant `±2^(−1) (mod p)`, so the ensemble's residues collect on the coset `±<2>`, with weights `2^(d−m)/(2^d − 1)`.
@@ -189,7 +189,7 @@ Write `T_s(n) = n/2` for even `n` and `(pn + s)/2` for odd `n` (`p` an odd prime
 
 * **`p = 3` (the owner's case).**
   * In the ensemble, `T_+` puts mass `(1/3, 2/3)` on classes `(1, 2)` and `T_−` puts `(2/3, 1/3)`.
-  * Along actual orbits the statement is different: each orbit ends in a cycle (`{1, 2}` for `T_+` visits `1 : 1`; the `T_−` cycles visit class 1 with frequencies `1`, `2/3`, `8/11`).
+  * Along trajectories known to reach the listed cycles, the statement is different: `{1, 2}` for `T_+` visits `1 : 1`; the listed `T_−` cycles visit class 1 with frequencies `1`, `2/3`, `8/11`. This does not assert that every orbit reaches those cycles.
   * Pooling all trajectories up to `10^7`, values after the first odd step:
 
     | map | visits | class 0 | class 1 | class 2 |

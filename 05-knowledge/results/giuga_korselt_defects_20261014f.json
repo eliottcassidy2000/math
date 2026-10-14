@@ -1,0 +1,357 @@
+{
+  "block_controls": 104,
+  "carmichael_sources": [
+    561,
+    1105,
+    1729,
+    2465,
+    2821,
+    6601,
+    8911
+  ],
+  "census_bound": 10000,
+  "checks": 101343,
+  "composite_plus_sources": [
+    30,
+    858,
+    1722
+  ],
+  "goldbach_witnesses": [
+    {
+      "binary": [
+        5,
+        7
+      ],
+      "binary_sum": 12,
+      "source": 6,
+      "ternary": [
+        5,
+        7,
+        3
+      ],
+      "ternary_sum": 15
+    },
+    {
+      "binary": [
+        41,
+        43
+      ],
+      "binary_sum": 84,
+      "source": 42,
+      "ternary": [
+        41,
+        43,
+        3
+      ],
+      "ternary_sum": 87
+    },
+    {
+      "binary": [
+        47057,
+        47059
+      ],
+      "binary_sum": 94116,
+      "source": 47058,
+      "ternary": [
+        47057,
+        47059,
+        3
+      ],
+      "ternary_sum": 94119
+    }
+  ],
+  "hostile_858": {
+    "factorization": [
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        11,
+        1
+      ],
+      [
+        13,
+        1
+      ]
+    ],
+    "signed_parents": []
+  },
+  "hostile_defect_vectors": {
+    "30": [
+      [
+        2,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        1
+      ],
+      [
+        5,
+        0,
+        1
+      ]
+    ],
+    "561": [
+      [
+        3,
+        0,
+        0
+      ],
+      [
+        11,
+        6,
+        0
+      ],
+      [
+        17,
+        15,
+        0
+      ]
+    ]
+  },
+  "literal_power_sum_sources": 399,
+  "malformed_controls": 25,
+  "minus_sources": [
+    2,
+    6,
+    42,
+    1806
+  ],
+  "old_joint_561": {
+    "modulus": 44880,
+    "residue": 24241,
+    "source": {
+      "cofactor_sum": 271,
+      "period": 80,
+      "primes": [
+        3,
+        11,
+        17
+      ],
+      "source": 561
+    }
+  },
+  "old_joint_guard_controls": 18200,
+  "recursions": [
+    {
+      "prime": 3,
+      "residue": 1,
+      "sign": -1,
+      "source": {
+        "cofactor_sum": 1,
+        "period": 1,
+        "primes": [
+          2
+        ],
+        "source": 2
+      },
+      "target": {
+        "core": {
+          "cofactor_sum": 5,
+          "period": 2,
+          "primes": [
+            2,
+            3
+          ],
+          "source": 6
+        },
+        "index": 1,
+        "sign": -1
+      }
+    },
+    {
+      "prime": 7,
+      "residue": 1,
+      "sign": -1,
+      "source": {
+        "cofactor_sum": 5,
+        "period": 2,
+        "primes": [
+          2,
+          3
+        ],
+        "source": 6
+      },
+      "target": {
+        "core": {
+          "cofactor_sum": 41,
+          "period": 6,
+          "primes": [
+            2,
+            3,
+            7
+          ],
+          "source": 42
+        },
+        "index": 1,
+        "sign": -1
+      }
+    },
+    {
+      "prime": 5,
+      "residue": 5,
+      "sign": 1,
+      "source": {
+        "cofactor_sum": 5,
+        "period": 2,
+        "primes": [
+          2,
+          3
+        ],
+        "source": 6
+      },
+      "target": {
+        "core": {
+          "cofactor_sum": 31,
+          "period": 4,
+          "primes": [
+            2,
+            3,
+            5
+          ],
+          "source": 30
+        },
+        "index": 1,
+        "sign": 1
+      }
+    },
+    {
+      "prime": 43,
+      "residue": 1,
+      "sign": -1,
+      "source": {
+        "cofactor_sum": 41,
+        "period": 6,
+        "primes": [
+          2,
+          3,
+          7
+        ],
+        "source": 42
+      },
+      "target": {
+        "core": {
+          "cofactor_sum": 1805,
+          "period": 42,
+          "primes": [
+            2,
+            3,
+            7,
+            43
+          ],
+          "source": 1806
+        },
+        "index": 1,
+        "sign": -1
+      }
+    },
+    {
+      "prime": 41,
+      "residue": 41,
+      "sign": 1,
+      "source": {
+        "cofactor_sum": 41,
+        "period": 6,
+        "primes": [
+          2,
+          3,
+          7
+        ],
+        "source": 42
+      },
+      "target": {
+        "core": {
+          "cofactor_sum": 1723,
+          "period": 120,
+          "primes": [
+            2,
+            3,
+            7,
+            41
+          ],
+          "source": 1722
+        },
+        "index": 1,
+        "sign": 1
+      }
+    },
+    {
+      "prime": 47059,
+      "residue": 1,
+      "sign": -1,
+      "source": {
+        "cofactor_sum": 47057,
+        "period": 330,
+        "primes": [
+          2,
+          3,
+          11,
+          23,
+          31
+        ],
+        "source": 47058
+      },
+      "target": {
+        "core": {
+          "cofactor_sum": 2214502421,
+          "period": 235290,
+          "primes": [
+            2,
+            3,
+            11,
+            23,
+            31,
+            47059
+          ],
+          "source": 2214502422
+        },
+        "index": 1,
+        "sign": -1
+      }
+    },
+    {
+      "prime": 47057,
+      "residue": 47057,
+      "sign": 1,
+      "source": {
+        "cofactor_sum": 47057,
+        "period": 330,
+        "primes": [
+          2,
+          3,
+          11,
+          23,
+          31
+        ],
+        "source": 47058
+      },
+      "target": {
+        "core": {
+          "cofactor_sum": 2214408307,
+          "period": 7764240,
+          "primes": [
+            2,
+            3,
+            11,
+            23,
+            31,
+            47057
+          ],
+          "source": 2214408306
+        },
+        "index": 1,
+        "sign": 1
+      }
+    }
+  ],
+  "sign_convention": "A(N)=index*N+sign; + is Giuga-or-prime; - is weak primary pseudoperfect",
+  "status": "PROVED scoped algebra; FINITE-EXACT declared census; classical Giuga conjecture OPEN"
+}

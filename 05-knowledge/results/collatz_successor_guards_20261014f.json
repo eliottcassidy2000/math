@@ -1,0 +1,489 @@
+{
+  "checks": 4851,
+  "full_korselt_sources": [
+    {
+      "conductor": 80,
+      "endpoint": 421,
+      "height": 4,
+      "paid_word": [
+        2
+      ],
+      "prime_factors": [
+        3,
+        11,
+        17
+      ],
+      "slack": 7,
+      "source": 561
+    },
+    {
+      "conductor": 48,
+      "endpoint": 829,
+      "height": 4,
+      "paid_word": [
+        2
+      ],
+      "prime_factors": [
+        5,
+        13,
+        17
+      ],
+      "slack": 23,
+      "source": 1105
+    },
+    {
+      "conductor": 36,
+      "endpoint": 973,
+      "height": 6,
+      "paid_word": [
+        2,
+        2
+      ],
+      "prime_factors": [
+        7,
+        13,
+        19
+      ],
+      "slack": 48,
+      "source": 1729
+    },
+    {
+      "conductor": 112,
+      "endpoint": 1387,
+      "height": 5,
+      "paid_word": [
+        2,
+        2
+      ],
+      "prime_factors": [
+        5,
+        17,
+        29
+      ],
+      "slack": 22,
+      "source": 2465
+    },
+    {
+      "conductor": 60,
+      "endpoint": 529,
+      "height": 2,
+      "paid_word": [
+        4
+      ],
+      "prime_factors": [
+        7,
+        13,
+        31
+      ],
+      "slack": 47,
+      "source": 2821
+    },
+    {
+      "conductor": 1320,
+      "endpoint": 4951,
+      "height": 3,
+      "paid_word": [
+        2
+      ],
+      "prime_factors": [
+        7,
+        23,
+        41
+      ],
+      "slack": 5,
+      "source": 6601
+    },
+    {
+      "conductor": 198,
+      "endpoint": null,
+      "height": 1,
+      "paid_word": null,
+      "prime_factors": [
+        7,
+        19,
+        67
+      ],
+      "slack": 45,
+      "source": 8911
+    },
+    {
+      "conductor": 504,
+      "endpoint": 7939,
+      "height": 3,
+      "paid_word": [
+        2
+      ],
+      "prime_factors": [
+        5,
+        29,
+        73
+      ],
+      "slack": 21,
+      "source": 10585
+    },
+    {
+      "conductor": 360,
+      "endpoint": 8911,
+      "height": 5,
+      "paid_word": [
+        2,
+        2
+      ],
+      "prime_factors": [
+        7,
+        31,
+        73
+      ],
+      "slack": 44,
+      "source": 15841
+    },
+    {
+      "conductor": 180,
+      "endpoint": 11003,
+      "height": 2,
+      "paid_word": [
+        3
+      ],
+      "prime_factors": [
+        13,
+        37,
+        61
+      ],
+      "slack": 163,
+      "source": 29341
+    },
+    {
+      "conductor": 120,
+      "endpoint": 30781,
+      "height": 4,
+      "paid_word": [
+        2
+      ],
+      "prime_factors": [
+        7,
+        11,
+        13,
+        41
+      ],
+      "slack": 342,
+      "source": 41041
+    },
+    {
+      "conductor": 288,
+      "endpoint": 26245,
+      "height": 6,
+      "paid_word": [
+        2,
+        2
+      ],
+      "prime_factors": [
+        13,
+        37,
+        97
+      ],
+      "slack": 162,
+      "source": 46657
+    },
+    {
+      "conductor": 1224,
+      "endpoint": 39475,
+      "height": 3,
+      "paid_word": [
+        2
+      ],
+      "prime_factors": [
+        7,
+        73,
+        103
+      ],
+      "slack": 43,
+      "source": 52633
+    },
+    {
+      "conductor": 2024,
+      "endpoint": 47059,
+      "height": 3,
+      "paid_word": [
+        2
+      ],
+      "prime_factors": [
+        3,
+        5,
+        47,
+        89
+      ],
+      "slack": 31,
+      "source": 62745
+    },
+    {
+      "conductor": 36,
+      "endpoint": 11995,
+      "height": 2,
+      "paid_word": [
+        4
+      ],
+      "prime_factors": [
+        7,
+        13,
+        19,
+        37
+      ],
+      "slack": 1777,
+      "source": 63973
+    },
+    {
+      "conductor": 240,
+      "endpoint": 42391,
+      "height": 5,
+      "paid_word": [
+        2,
+        2
+      ],
+      "prime_factors": [
+        11,
+        13,
+        17,
+        31
+      ],
+      "slack": 314,
+      "source": 75361
+    }
+  ],
+  "native_first_descent_ray": {
+    "child_base": 3569,
+    "child_step": 13122,
+    "literal_parameter_controls": [
+      0,
+      127
+    ],
+    "positive_mersenne_intersection": "empty for every exponent",
+    "root_grounded_parameters_in_this_packet": [
+      0
+    ],
+    "source_base": 8911,
+    "source_step": 32768
+  },
+  "partial_prime_proposals": 87,
+  "root_controls": [
+    {
+      "cost": 30,
+      "odd_rank": 13,
+      "source": 561,
+      "word": [
+        2,
+        4,
+        1,
+        1,
+        1,
+        3,
+        4,
+        1,
+        3,
+        1,
+        2,
+        3,
+        4
+      ],
+      "word_sha256": "6fa58adc5c92bfa620a3b21ac7de642b8f0f38d0b2cd6fb950f1cef83c56cb93"
+    },
+    {
+      "cost": 64,
+      "odd_rank": 32,
+      "source": 8911,
+      "word": [
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        5,
+        2,
+        5,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        4,
+        2,
+        2,
+        4,
+        3,
+        1,
+        1,
+        5,
+        4
+      ],
+      "word_sha256": "26987b28740ae6073e1b27283080ea056d7940615e17fc03eb9ab8b1fbbf6db4"
+    },
+    {
+      "cost": 68,
+      "odd_rank": 34,
+      "source": 15841,
+      "word": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        5,
+        2,
+        5,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        4,
+        2,
+        2,
+        4,
+        3,
+        1,
+        1,
+        5,
+        4
+      ],
+      "word_sha256": "108e16ffd3d5811b0bb20e2fc0ff7377fed9bb360ce6e19b58ce659a3ea4a4fa"
+    }
+  ],
+  "scope": "Marked-prime tests are not a full Giuga/Korselt certificate. Paid prefixes are not ROOT certificates without a supplied suffix.",
+  "selected_partial_controls": [
+    {
+      "endpoint": 29057,
+      "prime_modulus": 660,
+      "prime_residue": 587,
+      "source": 19371,
+      "supplied_prime": 587,
+      "word": [
+        1
+      ]
+    },
+    {
+      "endpoint": 6361,
+      "prime_modulus": 1320,
+      "prime_residue": 257,
+      "source": 8481,
+      "supplied_prime": 257,
+      "word": [
+        2
+      ]
+    },
+    {
+      "endpoint": 22009,
+      "prime_modulus": 5280,
+      "prime_residue": 3557,
+      "source": 117381,
+      "supplied_prime": 3557,
+      "word": [
+        4
+      ]
+    },
+    {
+      "endpoint": 228695,
+      "prime_modulus": 21120,
+      "prime_residue": 16427,
+      "source": 542091,
+      "supplied_prime": 16427,
+      "word": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "endpoint": 1972511,
+      "prime_modulus": 5280,
+      "prime_residue": 1247,
+      "source": 389631,
+      "supplied_prime": 11807,
+      "word": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "endpoint": 9985841,
+      "prime_modulus": 84480,
+      "prime_residue": 11807,
+      "source": 389631,
+      "supplied_prime": 11807,
+      "word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "endpoint": 9816778151,
+      "prime_modulus": 1351680,
+      "prime_residue": 941087,
+      "source": 75661311,
+      "supplied_prime": 2292767,
+      "word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "singleton_first_descent": {
+    "cost": 14,
+    "endpoint": 3569,
+    "odd_rank": 8,
+    "source": 8911,
+    "word": [
+      1,
+      1,
+      1,
+      3,
+      1,
+      1,
+      1,
+      5
+    ]
+  },
+  "status": "FINITE-EXACT",
+  "universe": "16 inherited Carmichael sources; odd n=3..8191; 84 words on1..4 of length1..3 plus ones lengths4,8,12",
+  "unresolved_first_rise": [
+    8911
+  ]
+}

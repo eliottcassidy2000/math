@@ -1,0 +1,56 @@
+{
+  "algebraic_graph_control": {
+    "chromatic": 4,
+    "edges": 11,
+    "refutation_nodes": 139,
+    "vertices": 7
+  },
+  "characteristic_hostiles": [
+    2,
+    3,
+    5,
+    7,
+    11
+  ],
+  "checks": 14096,
+  "mod24": {
+    "accepted": 128,
+    "local_not_global": {
+      "norms": [
+        25,
+        97,
+        73,
+        145
+      ],
+      "source": [
+        3,
+        4,
+        12
+      ]
+    },
+    "residue_triples": 13824,
+    "side_counts": {
+      "0": 64,
+      "12": 64
+    }
+  },
+  "positive_inverse_maps": 100,
+  "rectangle_control": {
+    "distances": [
+      5,
+      5,
+      5,
+      5
+    ],
+    "point": [
+      3,
+      4
+    ],
+    "sides": [
+      6,
+      8
+    ]
+  },
+  "set_theory_scope": "absoluteness is a mathematical theorem, not a finite computation",
+  "status": "FINITE-EXACT; no finite HN6, JC collision or D19 square witness supplied"
+}
