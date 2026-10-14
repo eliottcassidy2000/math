@@ -1,0 +1,114 @@
+# Part 1: level factorisation det(I - M_(j,k)) for the maps x/2, (px+1)/2
+   [symbolic] p= 3 k=1 j=0 (size   3): L_i = [2], cycles per level = [1]: det == predicted: True   det = (u - 2)*(u + 2)*(u + v - 2)/8
+   [symbolic] p= 3 k=1 j=1 (size   6): L_i = [2], cycles per level = [1]: det == predicted: True   det = (u - 2)*(u + 2)*(u + v - 2)/8
+   [symbolic] p= 3 k=1 j=2 (size  12): L_i = [2], cycles per level = [1]: det == predicted: True   det = (u - 2)*(u + 2)*(u + v - 2)/8
+   [symbolic] p= 3 k=2 j=0 (size   9): L_i = [2, 6], cycles per level = [1, 1]: det == predicted: True   det = -(u - 2)**2*(u + 2)**2*(u + v - 2)*(u**2 - 2*u + 4)*(u**2 + 2*u + 4)/512
+   [symbolic] p= 3 k=2 j=1 (size  18): L_i = [2, 6], cycles per level = [1, 1]: det == predicted: True   det = -(u - 2)**2*(u + 2)**2*(u + v - 2)*(u**2 - 2*u + 4)*(u**2 + 2*u + 4)/512
+   [symbolic] p= 5 k=1 j=0 (size   5): L_i = [4], cycles per level = [1]: det == predicted: True   det = (u - 2)*(u + 2)*(u**2 + 4)*(u + v - 2)/32
+   [symbolic] p= 5 k=1 j=1 (size  10): L_i = [4], cycles per level = [1]: det == predicted: True   det = (u - 2)*(u + 2)*(u**2 + 4)*(u + v - 2)/32
+   [symbolic] p= 7 k=1 j=0 (size   7): L_i = [3], cycles per level = [2]: det == predicted: True   det = -(u - 2)**2*(u + v - 2)*(u**2 + 2*u + 4)**2/128
+   [symbolic] p= 7 k=1 j=1 (size  14): L_i = [3], cycles per level = [2]: det == predicted: True   det = -(u - 2)**2*(u + v - 2)*(u**2 + 2*u + 4)**2/128
+   [symbolic] p=11 k=1 j=0 (size  11): L_i = [10], cycles per level = [1]: det == predicted: True   det = (u - 2)*(u + 2)*(u + v - 2)*(u**4 - 2*u**3 + 4*u**2 - 8*u + 16)*(u**4 + 2*u**3 + 4*u**2 + 8*u + 16)/2048
+   [symbolic] p=13 k=1 j=0 (size  13): L_i = [12], cycles per level = [1]: det == predicted: True   det = (u - 2)*(u + 2)*(u**2 + 4)*(u + v - 2)*(u**2 - 2*u + 4)*(u**2 + 2*u + 4)*(u**4 - 4*u**2 + 16)/8192
+   [symbolic] p=17 k=1 j=0 (size  17): L_i = [8], cycles per level = [2]: det == predicted: True   det = -(u - 2)**2*(u + 2)**2*(u**2 + 4)**2*(u**4 + 16)**2*(u + v - 2)/131072
+
+   [exact rational, 3 points] p= 3 k=1 j=3 (size  24): L_i = [2], cycles per level = [1]: det == predicted at all three points: True
+   [exact rational, 3 points] p= 3 k=2 j=2 (size  36): L_i = [2, 6], cycles per level = [1, 1]: det == predicted at all three points: True
+   [exact rational, 3 points] p= 3 k=3 j=0 (size  27): L_i = [2, 6, 18], cycles per level = [1, 1, 1]: det == predicted at all three points: True
+   [exact rational, 3 points] p= 3 k=3 j=1 (size  54): L_i = [2, 6, 18], cycles per level = [1, 1, 1]: det == predicted at all three points: True
+   [exact rational, 3 points] p= 3 k=4 j=0 (size  81): L_i = [2, 6, 18, 54], cycles per level = [1, 1, 1, 1]: det == predicted at all three points: True
+   [exact rational, 3 points] p= 5 k=1 j=2 (size  20): L_i = [4], cycles per level = [1]: det == predicted at all three points: True
+   [exact rational, 3 points] p= 5 k=1 j=3 (size  40): L_i = [4], cycles per level = [1]: det == predicted at all three points: True
+   [exact rational, 3 points] p= 5 k=2 j=0 (size  25): L_i = [4, 20], cycles per level = [1, 1]: det == predicted at all three points: True
+   [exact rational, 3 points] p= 5 k=2 j=1 (size  50): L_i = [4, 20], cycles per level = [1, 1]: det == predicted at all three points: True
+   [exact rational, 3 points] p= 5 k=3 j=0 (size 125): L_i = [4, 20, 100], cycles per level = [1, 1, 1]: det == predicted at all three points: True
+   [exact rational, 3 points] p= 7 k=1 j=2 (size  28): L_i = [3], cycles per level = [2]: det == predicted at all three points: True
+   [exact rational, 3 points] p= 7 k=2 j=0 (size  49): L_i = [3, 21], cycles per level = [2, 2]: det == predicted at all three points: True
+   [exact rational, 3 points] p= 7 k=2 j=1 (size  98): L_i = [3, 21], cycles per level = [2, 2]: det == predicted at all three points: True
+   [exact rational, 3 points] p= 7 k=2 j=2 (size 196): L_i = [3, 21], cycles per level = [2, 2]: det == predicted at all three points: True
+   [exact rational, 3 points] p= 7 k=3 j=0 (size 343): L_i = [3, 21, 147], cycles per level = [2, 2, 2]: det == predicted at all three points: True
+   [exact rational, 3 points] p=11 k=1 j=1 (size  22): L_i = [10], cycles per level = [1]: det == predicted at all three points: True
+   [exact rational, 3 points] p=11 k=1 j=2 (size  44): L_i = [10], cycles per level = [1]: det == predicted at all three points: True
+   [exact rational, 3 points] p=11 k=2 j=0 (size 121): L_i = [10, 110], cycles per level = [1, 1]: det == predicted at all three points: True
+   [exact rational, 3 points] p=11 k=2 j=1 (size 242): L_i = [10, 110], cycles per level = [1, 1]: det == predicted at all three points: True
+   [exact rational, 3 points] p=13 k=1 j=1 (size  26): L_i = [12], cycles per level = [1]: det == predicted at all three points: True
+   [exact rational, 3 points] p=13 k=2 j=0 (size 169): L_i = [12, 156], cycles per level = [1, 1]: det == predicted at all three points: True
+   [exact rational, 3 points] p=17 k=1 j=1 (size  34): L_i = [8], cycles per level = [2]: det == predicted at all three points: True
+   [exact rational, 3 points] p=17 k=2 j=0 (size 289): L_i = [8, 136], cycles per level = [2, 2]: det == predicted at all three points: True
+   [exact rational, 3 points] p=19 k=1 j=2 (size  76): L_i = [18], cycles per level = [1]: det == predicted at all three points: True
+   [exact rational, 3 points] p=23 k=2 j=0 (size 529): L_i = [11, 253], cycles per level = [2, 2]: det == predicted at all three points: True
+
+   [numeric] p=   3 k=5 j=0 (size   243): L_i = [2, 6, 18, 54, 162], cycles per level = [1, 1, 1, 1, 1]: |det - predicted|/|predicted| = 1.09e-15
+   [numeric] p=   5 k=4 j=0 (size   625): L_i = [4, 20, 100, 500], cycles per level = [1, 1, 1, 1]: |det - predicted|/|predicted| = 2.20e-15
+   [numeric] p=   7 k=3 j=1 (size   686): L_i = [3, 21, 147], cycles per level = [2, 2, 2]: |det - predicted|/|predicted| = 7.99e-16
+   [numeric] p=  13 k=2 j=1 (size   338): L_i = [12, 156], cycles per level = [1, 1]: |det - predicted|/|predicted| = 1.88e-15
+   [numeric] p=  31 k=1 j=3 (size   248): L_i = [5], cycles per level = [6]: |det - predicted|/|predicted| = 3.85e-16
+   [numeric] p=  37 k=2 j=0 (size  1369): L_i = [36, 1332], cycles per level = [1, 1]: |det - predicted|/|predicted| = 1.34e-15
+   [numeric] p=1093 k=1 j=0 (size  1093): L_i = [364], cycles per level = [3]: |det - predicted|/|predicted| = 2.86e-17
+   [numeric] p=3511 k=1 j=0 (size  3511): L_i = [1755], cycles per level = [2]: |det - predicted|/|predicted| = 2.48e-16
+
+# Part 2: ord_(p^i)(2) and cycle counts at levels 1, 2 (p < 100), Artin and Wieferich
+   p   ord_p(2)  cycles@1   ord_(p^2)(2)  cycles@2   ord_(p^2)(2) == ord_p(2)
+     3      2        1            6           1      False
+     5      4        1           20           1      False
+     7      3        2           21           2      False
+    11     10        1          110           1      False
+    13     12        1          156           1      False
+    17      8        2          136           2      False
+    19     18        1          342           1      False
+    23     11        2          253           2      False
+    29     28        1          812           1      False
+    31      5        6          155           6      False
+    37     36        1         1332           1      False
+    41     20        2          820           2      False
+    43     14        3          602           3      False
+    47     23        2         1081           2      False
+    53     52        1         2756           1      False
+    59     58        1         3422           1      False
+    61     60        1         3660           1      False
+    67     66        1         4422           1      False
+    71     35        2         2485           2      False
+    73      9        8          657           8      False
+    79     39        2         3081           2      False
+    83     82        1         6806           1      False
+    89     11        8          979           8      False
+    97     48        2         4656           2      False
+   primes < 100 with 2 a primitive root (one cycle per level): [3, 5, 11, 13, 19, 29, 37, 53, 59, 61, 67, 83]  (12 of 24; Artin's constant 0.3739558 predicts 9.0)
+   Wieferich p=1093: ord_p(2) = 364, ord_(p^2)(2) = 364 (equal), cycles at level 1 = 3, at level 2 = 3279 (jump by the factor p = 1093)
+   Wieferich p=3511: ord_p(2) = 1755, ord_(p^2)(2) = 1755 (equal), cycles at level 1 = 2, at level 2 = 7022 (jump by the factor p = 3511)
+   p = 7: the doubling orbits on (Z/7)^x are {1,2,4} and {3,5,6} (quadratic residues and non-residues), the Paley split; level factor (1 - (u/2)^3)^2.
+   orbits of x -> x/2 on (Z/7)^x: [1, 4, 2] [3, 5, 6] 
+
+# Part 3: the Farey geodesic of log2 3 -- convergents, residues mod m, resonant characters
+   partial quotients agreeing at dps 4500 and 5200: 2600 (used n <= 2600)
+   first 30: [1, 1, 1, 2, 2, 3, 1, 5, 2, 23, 2, 2, 1, 1, 55, 1, 4, 3, 1, 1, 15, 1, 9, 2, 5, 7, 1, 1, 4, 8]
+   convergents 1..14 as (Q, P): [(1, 2), (2, 3), (5, 8), (12, 19), (41, 65), (53, 84), (306, 485), (665, 1054), (15601, 24727), (31867, 50508), (79335, 125743), (111202, 176251), (190537, 301994), (10590737, 16785921)]
+   digits of Q_n at n = 2599: 1324
+   largest partial quotients (index, value): [(230, 964), (330, 2436), (528, 3308), (888, 488), (1180, 565), (1538, 497), (1604, 1192), (1676, 1924)]
+   m=2: 3 primitive pairs (Q,P) mod m, 2599 convergents, expected 866.3 each, chi^2 = 0.2 (df 2), extreme ((0, 1), 876)
+      m = 2 character of the first 40 convergents (n: character): 1:tau 2:omega 3:tau 4:omega 5:C 6:tau 7:omega 8:tau 9:C 10:tau 11:C 12:omega 13:tau 14:C 15:omega 16:C 17:tau 18:omega 19:C 20:tau 21:omega 22:C 23:omega 24:tau 25:C 26:omega 27:tau 28:omega 29:tau 30:C 31:omega 32:tau 33:omega 34:tau 35:C 36:tau 37:omega 38:tau 39:C 40:omega
+      shares: {'omega': '0.3371', 'tau': '0.3305', 'C': '0.3324'} (equidistribution predicts 1/3 each)
+      longest run of one character along the geodesic: 1; mean run 1.000 (i.i.d. thirds predict 1.5); consecutive convergents never share a character? True
+   m=3: 8 primitive pairs (Q,P) mod m, 2599 convergents, expected 324.9 each, chi^2 = 6.7 (df 7), extreme ((1, 1), 296)
+   m=4: 12 primitive pairs (Q,P) mod m, 2599 convergents, expected 216.6 each, chi^2 = 5.4 (df 11), extreme ((1, 1), 196)
+   m=5: 24 primitive pairs (Q,P) mod m, 2599 convergents, expected 108.3 each, chi^2 = 15.7 (df 23), extreme ((1, 3), 124)
+   m=6: 24 primitive pairs (Q,P) mod m, 2599 convergents, expected 108.3 each, chi^2 = 31.4 (df 23), extreme ((4, 5), 84)
+   m=7: 48 primitive pairs (Q,P) mod m, 2599 convergents, expected 54.1 each, chi^2 = 34.2 (df 47), extreme ((4, 4), 66)
+   Gauss-Kuzmin: frequencies of a_n = 1,2,3,4: [0.4194, 0.1674, 0.092, 0.0612] vs log2(1 + 1/(k(k+2))) = [0.415, 0.1699, 0.0931, 0.0589]
+
+# Part 4: Paley-7 against the Q resonator (NUMEROLOGY check)
+   Paley tournament P7 (x -> x + {1,2,4}): eigenvalues [(-0.5-1.322876j), (-0.5-1.322876j), (-0.5-1.322876j), (-0.5+1.322876j), (-0.5+1.322876j), (-0.5+1.322876j), (3+0j)]
+   minimal polynomial of (-1 + sqrt(-7))/2: lam**2 + lam + 2; the Q linearisation d(n) = -d(n-1)/2 - d(n-2)/2 has characteristic polynomial 2 z^2 + z + 1 with roots [-1/4 - sqrt(7)*I/4, -1/4 + sqrt(7)*I/4]
+   reciprocal: 2 z^2 + z + 1 at z = 1/lambda for the roots lambda of lambda^2 + lambda + 2: [0, 0]
+   doubly regular tournaments on n = 4t+3 vertices have eigenvalues (-1 +- i sqrt n)/2, roots of lambda^2 + lambda + (n+1)/4: the coincidence with the two-branch, weight-1/2, lags-1-and-2 polynomial needs (n+1)/4 = 2, i.e. n = 7 only.
+   N((-1+sqrt(-7))/2) = 2: a prime above 2 in Q(sqrt(-7)) (2 splits since -7 = 1 mod 8). Ramanujan-Nagell 2^n - 7 = x^2, n <= 300: [3, 4, 5, 7, 15]
+
+# Part 5: the 2-adic (de Bruijn) part alone: spectrum of E_j v(r) = [r even] (1/2)(v(r/2) + v(r/2 + 2^(j-1)))
+   j=1: nonzero eigenvalues [(0.5+0j)], zeros 1 of 2; rank(E^q) for q = 1..2: [np.int64(1), np.int64(1)]
+   j=2: nonzero eigenvalues [(0.5+0j)], zeros 3 of 4; rank(E^q) for q = 1..3: [np.int64(2), np.int64(1), np.int64(1)]
+   j=3: nonzero eigenvalues [(0.5+0j)], zeros 7 of 8; rank(E^q) for q = 1..4: [np.int64(4), np.int64(2), np.int64(1), np.int64(1)]
+   j=4: nonzero eigenvalues [(0.5+0j)], zeros 15 of 16; rank(E^q) for q = 1..5: [np.int64(8), np.int64(4), np.int64(2), np.int64(1), np.int64(1)]
+   j=5: nonzero eigenvalues [(0.5+0j)], zeros 31 of 32; rank(E^q) for q = 1..6: [np.int64(16), np.int64(8), np.int64(4), np.int64(2), np.int64(1), np.int64(1)]
+   j=6: nonzero eigenvalues [(0.5+0j)], zeros 63 of 64; rank(E^q) for q = 1..7: [np.int64(32), np.int64(16), np.int64(8), np.int64(4), np.int64(2), np.int64(1), np.int64(1)]
+   j=7: nonzero eigenvalues [(0.5+0j)], zeros 127 of 128; rank(E^q) for q = 1..8: [np.int64(64), np.int64(32), np.int64(16), np.int64(8), np.int64(4), np.int64(2), np.int64(1), np.int64(1)]
+done

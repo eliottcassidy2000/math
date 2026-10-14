@@ -1,0 +1,42 @@
+---
+id: HYP-9261
+title: "Graph theory as the common carrier of the repository's threads: five constructions (functional graphs; the Pascal graph and its de Bruijn quotients; the Farey graph; Cayley graphs of doubling on the units modulo p^i; colouring/certificate graphs) carry the Collatz, tournament, Hadwiger-Nelson, chess, meta-Fibonacci and Diophantine threads, each with one extra structure, and the open question is always a global property of the carrier; two new bridges are proved: THM-4631 (the compressed twisted transfer operator of every px+1 map factors through the Cayley graph of doubling on (Z/p^i)^x, fast-mode multiplicity [(Z/p^i)^x : <2>], hence Artin, Wieferich and the p = 7 Paley split) and the Farey colouring (the characters of THM-4629 modulo m are the colours of the Farey graph reduced modulo m; the resonant character of a line is the colour of its Farey vertex; Farey neighbours never share a character, so consecutive lines along the geodesic of log2 3 and within every fan alternate characters, and for m = 2 the three characters are the classical proper 3-colouring of the Farey graph); the Farey colours of log2 3 are equidistributed to n = 2600 (NUMERICAL; OPEN as a theorem); the observer lens is the symmetry axis of the carrier (rigid against vertex-transitive)"
+status: >
+  PROVED: THM-4631 (statements 1-4 there; the filtration proof of THM-4629 with p for 3 plus the coset decomposition of
+  the doubling action); the Farey colouring (statement 3 below: unimodularity of Farey neighbours; the resonance rule of
+  THM-4629 statement 3 read on the reduced pair); the de Bruijn nilpotency (statement 5: rank(E_j^q) = 2^(j-q), Part 5,
+  FINITE-EXACT for j <= 7, PROVED in general by the shift structure). FINITE-EXACT: THM-4631's identity in 37 cases to
+  size 343. NUMERICAL: the Farey census (statement 4). CITED (from memory): Terras 1976, Series 1985, Jager-Liardet 1988,
+  Kurtz-Simon 2007, Hooley 1967, Landau 1953, Kubo-Vakil 1996. ANALOGY: statements 1 and 6 are a classification and a
+  reading. NUMEROLOGY: statement 7. OPEN: equidistribution of the Farey colours for log2 3 itself; the tests of the
+  note's section 8. Corrections: MISTAKE-602 (S29's "convergent (94,149)").
+session: opus-2026-10-13-S30
+source: 05-knowledge/results/graph_theory_as_common_carrier_20261013.md
+scripts:
+  - 04-computation/experiments/graph_carriers_level_factorisation_20261013.py (+ .out: Part 1 the level factorisation; Part 2 orders of 2, Artin, Wieferich, the Paley split; Part 3 the Farey geodesic of log2 3 and the census; Part 4 the Paley-7 numerology; Part 5 the de Bruijn spectrum)
+related:
+  - THM-4631 (the Cayley carrier), THM-4629 (the law), HYP-9260 (the Riemann-sphere reading), THM-4523 (rigidity), THM-4581 (Haar coalescence), THM-4614/THM-4628 (colourings), THM-4612/4613 (chess certificates), THM-4604 (carry cocycle), THM-4526 (shaved tournaments)
+  - 05-knowledge/results/graph_theory_as_common_carrier_20261013.md (the dictionary and the proofs)
+  - 05-knowledge/results/collatz_coalescence_20261004_proof_strategies_and_bold_predictions.md (the earlier atlas; its Artin coordinate is THM-4631's multiplicity one)
+---
+
+# HYP-9261 — graph carriers of the repository's threads
+
+## Statements
+
+1. **(Dictionary; ANALOGY, a classification.)** Every thread is a graph with one extra structure, and the open question is global: functional graphs with a measure (Collatz, base-`p`, Matthews-Watts; coalescence, Polya trichotomy), the Pascal graph with a measure or a code (Conway, prices, refuel bills, Landau), the Farey graph with a geodesic (the lines of THM-4629, the Moebius words, Pell), Cayley/de Bruijn graphs with a character (THM-4631, Terras, Paley, Kloosterman), graphs with a colouring or a certificate (Hadwiger-Nelson, chess, the carry cocycle), and polytopes/surfaces/line graphs (noble polyhedra, Petersen, glued boards). Section 1 of the note gives the table with sources and statuses.
+2. **(The Cayley carrier; PROVED, THM-4631.)** For every odd prime `p`, `det(I - M_(j,k)(s)) = [1 - u/2 - v/2] prod_(i <= k) [1 - (u/2)^(L_i)]^(phi(p^i)/L_i)`, `L_i = ord_(p^i)(2)`: the fast modes are the doubling cycles on `(Z/p^i)^x`, with multiplicity the index of `<2>`; one at every level iff `2` is a primitive root modulo `p^2` (`3, 5, 11, 13, 19, 29, 37, 53, 59, 61, 67, 83` below `100`); the Wieferich primes `1093`, `3511` jump by the factor `p` at level 2; `p = 7` splits along `{1,2,4} | {3,5,6}`; the two-cycle primes are `7, 17, 23, 41, 47, 71, 79, 97` and the Paley ones among them `7, 23, 47, 71, 79`.
+3. **(The Farey colouring; PROVED.)** Reduction `P/Q -> +-(Q, P) mod m` is a proper colouring of the Farey graph (neighbours are unimodular pairs), with the three points of `P^1(F_2)` as colours for `m = 2`. The lines of THM-4629 are the Farey vertices along the geodesic of `log2 3` (convergents and semiconvergents, the vertices of the crossed Farey triangles), and the character a line resonates with, `(alpha, beta) = (Q, -P) mod m` and its conjugate, is the colour of its vertex. Hence consecutive convergents, and consecutive vertices of every fan, never share a character; for `m = 2` the three characters `tau, omega, C` are the three colour classes of the Farey graph and the resonant character walks on `K_3` along the geodesic.
+4. **(The census; NUMERICAL, OPEN as a theorem.)** Over `2599` convergents of `log2 3` (continued fraction validated at `dps 4500` and `5200`; `Q_2599` has `1324` digits) the residues `(Q_n, P_n) mod m` are consistent with equidistribution over the primitive pairs: `chi^2 = 0.2, 6.7, 5.4, 15.7, 31.4, 34.2` on `2, 7, 11, 23, 23, 47` degrees of freedom for `m = 2..7`; the three characters modulo `2` receive `0.3305, 0.3371, 0.3324`; the longest run of one character is `1`; the partial quotients follow Gauss-Kuzmin to `0.004` (`0.4194, 0.1674, 0.0920, 0.0612` against `0.4150, 0.1699, 0.0931, 0.0589`). Equidistribution holds for almost every real number (Jager-Liardet, CITED from memory); for `log2 3` it is open.
+5. **(The de Bruijn carrier; PROVED.)** The Collatz class graph modulo `2^j` is the de Bruijn graph `B(2, j)` (Terras); THM-4629's even-class averaging `E_j` has the single nonzero eigenvalue `1/2` and `rank(E_j^q) = 2^(j-q)` (`q <= j`): rank one plus nilpotent of index `j`. The 2-adic refinement is exact and spectrally empty at every depth; the `p`-adic refinement is a permutation at every depth and spectrally full (statement 2).
+6. **(The observer lens is the symmetry axis; ANALOGY.)** Rigid carriers (the Collatz graph, THM-4523; the chess graph; the `Q` trees) have local views that identify the observer and global questions; transitive carriers (Farey, Cayley, Paley, the 2-shift) have uninformative local views and global answers (geodesics, spectra). THM-4629 and THM-4631 transport the Collatz question to transitive carriers; the `3`-adic closure is the step back, and THM-4523 says no symmetry makes it.
+7. **(Numerology watch; NUMEROLOGY.)** The `Q` resonator polynomial `2 z^2 + z + 1` is the reciprocal of `lam^2 + lam + 2`, the Paley-7 eigenvalue polynomial and the minimal polynomial of a prime above `2` in `Q(sqrt(-7))`; a doubly regular tournament on `n` vertices has `lam^2 + lam + (n+1)/4`, so the coincidence is `(n+1)/4 = 2`, `n = 7` only; no bijection.
+
+## Cheapest decisive tests
+
+- Section 8 of the note: (1) THM-4628's forced colourings against the `<2>`-cosets; (2) the S17 code construction modulo `23`; (3) a class-discrepancy census for `5x + 1` at a horizon; (4) the Farey census to `10^4` convergents; (5) the fan alternation of the semiconvergent lines in the existing census output.
+- Decide whether a `Pi_1` certificate structure exists for the `3`-adic closure of THM-4629 (a finite set of classes whose means would have to be regular) or whether the closure is itself `Pi_2`; this types the open step by the carrier.
+
+## Why
+
+The owner asked for the deeper themes unified and for graph theory connected to every other area. The repository's threads are already graphs; what was missing was the statement that they are five carriers with one open question each, and two proofs that the Collatz transfer law lives on two of the transitive carriers: its fast modes are Cayley cycles (algebra, with Artin, Wieferich and Paley as the multiplicities) and its lines are Farey vertices whose colours are its characters (Diophantine approximation and hyperbolic geometry, with the classical 3-colouring of the Farey graph as the three parities).
