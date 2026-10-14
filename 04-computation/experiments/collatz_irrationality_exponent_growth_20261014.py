@@ -16,7 +16,7 @@ Part 2.  Exact peaks: for n = 1..30, the value |R| at the drifted frequency Q_n 
          against Q_(n+1)^2; the local exponent log|R_n|/log Q_n against 2 e_n.
 Part 3.  Jarnik laws: for mu = 3, 4, 5 a continued fraction with a_(n+1) = ceil(q_n^(mu-2)) (irrationality exponent
          exactly mu), shifted into (1, 2); the exact peaks of the formal law at its convergents and the local exponents
-         against 2 (mu - 1) = 4, 6, 8.  mu = 2 control: the golden-type number [1; 1, 1, 1, ...] shifted.
+         against 2 (mu - 1) = 4, 6, 8.  mu = 2 control: the golden-type number [1; 2, 1, 1, 1, ...] = 3 - phi.
 Part 4.  The characters modulo m up to sign against the cusps of the principal congruence curve X(m): J_2(m)/2 against
          the cusp count; the distribution of the 2599 convergents over the 12 cusp classes of X(5) and over the 6 points
          of P^1(F_5).
@@ -106,7 +106,7 @@ def jarnik(mu, levels, dps):
 for mu, levels, dps in ((2, 40, 60), (3, 7, 400), (4, 6, 1000), (5, 5, 1700)):
     a_j, conv_j, x = jarnik(mu, levels, dps)
     Lj = x - 1; dj = 2 - x
-    print(f"   mu = {mu}: x = {nstr(x, 12)}, partial quotients a_1.. = {[str(t)[:12] for t in a_j[1:7]]}")
+    print(f"   mu = {mu}: x = {nstr(x, 12)}, partial quotients a_1.. = {[str(t)[:24] for t in a_j[1:6]]}")
     rows = []
     rng = range(2, min(len(conv_j) - 1, 8)) if mu > 2 else range(5, 40, 6)
     for n in rng:
