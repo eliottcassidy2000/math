@@ -206,6 +206,8 @@ Both are **OPEN / novelty unconfirmed**. They are search targets, not conclusion
 
 ### H-G: mixed-parity hinge coupling can exceed four colours
 
+**REFUTED later in the same session.** The historical proposal below is superseded by the [global independent-hinge seam theorem and explicit four-colouring](independent_hinge_seam_four_colouring_20261014.md), which proves `chi(G_m)=4` for every `m>=1`. The obstruction survives overlapping seam norms; the next operation uses affine attachment.
+
 Let `R_1` have cosine `5/6`, sine `sqrt(11)/6`, and `R_2` have cosine `23/24`, sine `sqrt(47)/24`. For `m>=1`, let `G_m` be the complete unit-distance graph on the distinct points
 
 `{R_1^a R_2^b (i e_1+j e_2): |a|,|b|,|i|,|j|<=m}`.
