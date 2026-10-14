@@ -1,0 +1,52 @@
+linear sigma sieve to 1e+08: 2 s
+max s(n) for n <= 1e8: 388251360 (at n = 99459360)
+segmented divisor-pair sieve to 388251360: 17 s
+two sieves agree on 1..1e8: True (0 disagreements)
+amicable pairs with smaller member < 1e8: 236; of these, larger member > 1e8: 5 [(82633005, 104177619), (84521745, 107908335), (87998470, 102358010), (88144630, 102814490), (95791430, 115187002)]
+odd-odd amicable pairs with both members <= 1e8: 53
+cycles with all members <= 1e8: 248 (3 s); by length [(1, 5), (2, 231), (4, 10), (5, 1), (28, 1)]
+mixed parity: 0; with a member in squares or twice squares: 0; all-odd cycles: 54 (lengths [(2, 53), (4, 1)])
+amicable pairs with both members <= 1e8 from the cycle census: 231; consistent with pair list: True
+   length 28: min 14316, parity even, pattern from min: AAAAAAADDAADDADAADDDDDDDDDDD, members [14316, 19116, 31704, 47616, 83328]...
+   length 5: min 12496, parity even, pattern from min: AADDD, members [12496, 14288, 15472, 14536, 14264]
+   length 4: min 2115324, parity even, pattern from min: AADD, members [2115324, 3317740, 3649556, 2797612]
+   length 4: min 1264460, parity even, pattern from min: AADD, members [1264460, 1547860, 1727636, 1305184]
+   length 4: min 2784580, parity even, pattern from min: AADD, members [2784580, 3265940, 3707572, 3370604]
+   length 4: min 4938136, parity even, pattern from min: ADDD, members [4938136, 5753864, 5504056, 5423384]
+   length 4: min 18656380, parity even, pattern from min: AADD, members [18656380, 20522060, 28630036, 24289964]
+   length 4: min 7169104, parity even, pattern from min: AADD, members [7169104, 7538660, 8292568, 7520432]
+   length 4: min 18048976, parity even, pattern from min: ADAD, members [18048976, 20100368, 18914992, 19252208]
+   length 4: min 46722700, parity even, pattern from min: ADAD, members [46722700, 56833172, 53718220, 59090084]
+   length 4: min 28158165, parity odd, pattern from min: AADD, members [28158165, 29902635, 30853845, 29971755]
+   length 4: min 81128632, parity even, pattern from min: AADD, members [81128632, 91314968, 96389032, 91401368]
+sum sigma = 2 sum n on every cycle: True; prod sigma/n >= 2^k: True; equality only for k = 1: True; every nontrivial cycle has an abundant and a deficient member: True
+4-cycle abundancy patterns up to rotation: {'AADD': 7, 'ADDD': 1, 'ADAD': 2}
+published cycles from seeds: {21548919483: 6, 90632826380: 6, 1771417411016: 6, 4773123705616: 6, 1095447416: 8, 1276254780: 8, 805984760: 9}
+   seed 21548919483: min member 21548919483, max 26762383557, parity odd, all <= 1e8: False
+   seed 90632826380: min member 90632826380, max 159713440756, parity even, all <= 1e8: False
+   seed 1771417411016: min member 1771417411016, max 2426887897384, parity even, all <= 1e8: False
+   seed 4773123705616: min member 4773123705616, max 5826394399664, parity even, all <= 1e8: False
+   seed 1095447416: min member 1095447416, max 1330251784, parity even, all <= 1e8: False
+   seed 1276254780: min member 1276254780, max 3071310364, parity even, all <= 1e8: False
+   seed 805984760: min member 805984760, max 3367978564, parity even, all <= 1e8: False
+cycles in the frustration census: 255
+lemma holds on every cycle: True; Pollack-form (Q | G, or 2||Q and Q/2 | G) on odd cycles: [False, False, False, False, True, False, True]
+   k : cycles, regular, odd(Q) not dividing G (author's "excess > 1"), an odd PRIME dividing Q but not G
+    1:   5,   5,   0,   0
+    2: 231, 189, 229, 221
+    4:  10,   8,   9,   9
+    5:   1,   0,   0,   0
+        G = 8, Q = 8
+    6:   4,   3,   4,   4
+    8:   2,   2,   2,   2
+    9:   1,   0,   0,   0
+        G = 2, Q = 2
+   28:   1,   0,   0,   0
+amicable: median excess 13041.0, share excess > 1 0.9913, share 3 | excess 0.9394
+cycles where "odd(Q) does not divide G" and "an odd prime divides Q but not G" differ: 8; first few [(2, [69615, 87633], 819, 157248), (2, [947835, 1125765], 135, 2073600), (2, [8619765, 9627915], 165, 18247680), (2, [11498355, 12024045], 4455, 23522400), (2, [13671735, 15877065], 285, 29548800)]
+q = 3: all 2..1e8 0.8511; members of 2- and 4-cycles (502) 0.9960; members of all nontrivial cycles (535) 0.9850
+q = 9: all 2..1e8 0.5736; members of 2- and 4-cycles (502) 0.9721; members of all nontrivial cycles (535) 0.9364
+
+real	0m24.925s
+user	0m0.015s
+sys	0m0.015s

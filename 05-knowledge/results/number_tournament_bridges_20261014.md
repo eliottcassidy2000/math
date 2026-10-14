@@ -1,9 +1,9 @@
 # Numbers given tournament structure
 
 **Contents.**
-- Fermat primes are the primes whose circulant tournaments are all rigid. Wieferich primes are where doubling-invariant tournaments on `Z_(p^2)` explode (THM-4644); 3511 is a Paley prime.
+- Fermat primes are the primes whose circulant tournaments are all rigid (at the multiplier level Akin 2018; the full-Aut step answers Akin's open remark). Wieferich primes are where the circulant tournaments on `Z_(p^2)` invariant under the odd part of doubling explode (THM-4644); 3511 is a Paley prime.
 - Aliquot parity flips only at squares, so mixed-parity aliquot cycles need squares (HYP-9273 A, which contains the opposite-parity amicable problem).
-- Odd aliquot cycles are frustrated: Dickson's 1913 theorem read as signed-cycle balance, the structural reason odd lengths are rare.
+- Odd aliquot cycles are frustrated: Dickson's 1913 theorem read as signed-cycle balance, the mechanism behind the proved upper bounds for odd lengths (a heuristic for their rarity, not a proof).
 - `{deficient, perfect, abundant}` reads as `{hyperbolic, Euclidean, spherical}` at four divisors, along the `(2,3,k)` chain through 6 and 42.
 - Paley graphs on Fermat primes and Ramsey.
 - Paley Hamiltonian orbit counts `≡ 1 (mod 8)` (HYP-9273 B).
@@ -16,7 +16,7 @@ Owner's prompt (verbatim): "keep working the most precise and meaningful hypothe
 
 - **PROVED:**
   - THM-4644 ([canon file](../../01-canon/theorems/THM-4644-fermat-primes-rigid-circulant-tournaments-wieferich-orbit-explosion.md)):
-    - Fermat primes are exactly the primes all of whose circulant tournaments are rigid;
+    - Fermat primes are exactly the primes all of whose circulant tournaments are rigid (an assembly: the multiplier level is Akin 2018, Thms 3.13–3.14; the full automorphism group comes from Alspach/Burnside as in THM-871, which answers Akin's open remark);
     - Wieferich primes are exactly the primes at which the circulant tournaments on `Z_(p^2)` invariant under the odd part of doubling jump from `2^((p−1)/d')` to `2^((p+1)(p−1)/(2d'))`.
   - The aliquot parity lemma and its corollaries (section 3; the amicable case is classical).
   - The cycle identities `Σ σ(n_i) = 2 Σ n_i` and `Π σ(n_i)/n_i >= 2^k`.
@@ -27,29 +27,31 @@ Owner's prompt (verbatim): "keep working the most precise and meaningful hypothe
   - the frustration census on those cycles and on seven published cycles of lengths 6, 8 and 9;
   - THM-4644's checks (brute force for `p <= 11`, stabilizers for `p <= 31`, `E` for `p < 4000`);
   - `H(P_q)` for `q = 3, 7, 11, 19, 23` and `H(P_27) mod 8·1053`;
+  - the palindromic split `2F + P` for `q <= 47` (section 5b);
+  - `H(P_q)/|Aff| mod 256` for `q <= 31` (section 5c; the pre-registered `q = 31` test of HYP-9273 B passed);
   - all circulant tournaments for `p <= 19`;
   - the doubly regular tournament of order 15;
   - the Paley clique numbers;
   - primary pseudoperfect numbers below 60000.
 - **CITED:**
-  - Burnside (1901); Alspach (via THM-871);
+  - Burnside (1901); Alspach (via THM-871); Akin, arXiv:1806.11241 (2018), Theorems 3.13–3.14;
   - Wieferich (1909), Meissner (1913), Beeger (1922), PrimeGrid (OEIS A001220);
   - Greenwood–Gleason (1955), Evans–Pulham–Sheehan (1981), Angeltveit–McKay (2024);
   - Gioia–Vaidya (1967; rediscovered by D'Abramo 2005);
   - Hagis (1970);
   - Iannucci–Luca (2009); Pollack (2011);
   - Dickson (1913);
-  - Kobayashi–Pollack–Pomerance (2009); Pollack, "A remark on sociable numbers of odd order" (Lemma 5, the sharp gcd restriction);
-  - Bratley–Lunnon–McKay (1970); Moews and Pedersen;
+  - Kobayashi–Pollack–Pomerance (2009); Pollack, "A remark on sociable numbers of odd order" (*J. Number Theory* 130, 2010; Lemma 5, the sharp gcd restriction); Cohen (1970, "regular" cycles);
+  - Bratley–Lunnon–McKay (1970, via Wikipedia); Moews and Moews (1991, 1993) and Moews' list of sociable cycles (11 September 2026), with the searches of Pedersen, Needham and Bodyagin;
   - Chernykh (OEIS A066873);
   - Poulet (1918);
-  - Rédei (1934), Moon (1966);
+  - Rédei (1934), Moon (1968);
   - Hurwitz (1893), Klein (1879).
   - From this repository: THM-871, THM-307, THM-200/THM-029, THM-1370, THM-4523, THM-4631, THM-4641, the S10 Fermat/Platonic verdict, the camion/Busch gap note, the arithmetic-seams note (2026-09-21), and mac-mini's Hadwiger–Nelson type-M note.
   - **The same-day codex packets on the same owner themes** (section 1b): the [dyadic aliquot three-cycle frontier](aliquot_dyadic_frontier_20261014e.md), the [guarded core compiler](aliquot_guarded_cycles_20261014e.md), [tournament path defects](tournament_path_defects_20261014e.md), and [Fermat/Wieferich order lifts](fermat_wieferich_order_20261014e.md).
-- **OPEN, with evidence:** HYP-9273 ([file](../hypotheses/HYP-9273-aliquot-square-avoidance-paley-hamiltonian-orbits-number-tournament-trichotomies.md)): (A) aliquot square avoidance; (B) Paley orbit counts `≡ 1 (mod 8)`.
+- **OPEN, with evidence:** HYP-9273 ([file](../hypotheses/HYP-9273-aliquot-square-avoidance-paley-hamiltonian-orbits-number-tournament-trichotomies.md)): (A) aliquot square avoidance; (B) Paley orbit counts `≡ 1 (mod 8)`; (B′) palindromic counts `≡ 1 (mod 4)`.
 - **ANALOGY / NUMEROLOGY:** typed where they occur.
-- **Not yet audited** (section 9).
+- **Audited** by an independent adversarial referee: 6 errors and 16 imprecisions, all applied (section 9; MISTAKE-608).
 
 ## 0. Answers in brief
 
@@ -57,15 +59,15 @@ Owner's prompt (verbatim): "keep working the most precise and meaningful hypothe
    - **Structure (Gioia–Vaidya 1967; rediscovered by D'Abramo 2005).** If `σ(m) = σ(n) = m + n` with `m` even and `n` odd, then `σ(n)` and `σ(m)` are odd. Since `σ(k)` is odd iff the odd part of `k` is a square, `n` is an odd square and `m` is a square or twice a square. Conversely, any amicable pair with a member in `□ ∪ 2□` has opposite parity. The problem is therefore exactly: **is there an amicable pair of squares or twice-squares?**
    - **Literature.** Iannucci and Luca (2009) proved that `s(n^2)` is a square for at most `x/(log x)^(3/2+o(1))` values `n <= x`; Pollack (2011) notes that the same holds for twice a square. Pollack (2011) also proved that amicable `l`-full numbers are `o(x^(1/l))`. Hagis (1970) proved that coprime opposite-parity pairs have both members above `10^60`. Chernykh's distributed search has finished all pairs with smaller member below `10^20`, and every known pair has equal parity.
    - **Our reduction.** The odd member is `a^2`, so we search over `a`. Every odd `a <= 10^9` was checked, so there is no opposite-parity pair with odd member `<= 10^18`. This range is inside Chernykh's; it is an independent check, not a new bound.
-     - Only 4476 values have `s(a^2) ∈ □ ∪ 2□` ("double flips"), far below the Iannucci–Luca bound (about `10^7` at `10^9`).
+     - Only 4476 values have `s(a^2) ∈ □ ∪ 2□` ("double flips"), far below `x/(log x)^(3/2)` (about `10^7` at `10^9`). The comparison is only indicative, since the Iannucci–Luca exponent carries an `o(1)`. The count is dominated by the primes `2b^2 − 1`, about `√x/log x` of them.
      - 4458 of them are primes. For a prime, `s(a^2) = a + 1` is far too small to close a pair.
      - The 18 composite ones grow slowly: 1, 2, 3, 6, 13, 15, 17, 18 up to `10^2, …, 10^9`. None closes a pair.
    - **The generalisation (HYP-9273 A).** Every aliquot cycle avoids `□ ∪ 2□`. Our census of all cycles with members `<= 10^8` finds no exception.
 2. **Sociable cycles of length 1, 2, 5, 28 but not 3.**
-   - The known lengths are 1, 2, **4**, 5, **6**, **8**, **9**, 28 (Wikipedia's table, October 2024). They comprise 5398 four-cycles, five 6-cycles, four 8-cycles, and one each of lengths 5, 9 and 28. No cycle of length 3 or 7 is known.
+   - The known lengths are 1, 2, **4**, 5, **6**, **8**, **9**, 28. [Moews' list](http://djm.cc/sociable.txt) (11 September 2026) has 5446 cycles of length greater than 2: 5433 four-cycles, five 6-cycles, five 8-cycles, and one each of lengths 5, 9 and 28. Wikipedia's October 2024 table has the older 5398 and four. No cycle of length 3 or 7 is known.
    - **The sharpest repository statement on 3-cycles** is codex's same-day theorem. A primitive 3-cycle made entirely of numbers `2^a p` would need three distinct exponents, the second-smallest at least 129 ([note](aliquot_dyadic_frontier_20261014e.md)).
-   - **The structural answer for odd lengths (section 3b).** Dickson (1913) proved that a sociable cycle of odd length `k > 1` cannot be regular, i.e. the gcd of its members cannot be a unitary divisor of each member.
-     - Kobayashi–Pollack–Pomerance (2009) reprove this and bound odd-order cycles by `x/(log_2 x)^(1/2+o(1))`. Pollack later improved the bound to `x/(log x)^(1+o(1))` using the sharp gcd form (his Lemma 5).
+   - **The structural answer for odd lengths (section 3b).** Dickson (1913) proved that if the members of a sociable cycle of odd length `k > 1` have gcd `a > 1`, then `a` is not a unitary divisor of every member (KPP Theorem E). Coprime odd cycles are not excluded.
+     - Kobayashi–Pollack–Pomerance (2009) reprove this and bound the odd-order sociable numbers by `x/(log_2 x)^(1/2+o(1))`. Pollack (*J. Number Theory* 130, 2010) improved the bound to `x/(log x)^(1+o(1))` for fixed odd order; his Lemma 5 is the sharp gcd form.
      - The proof is a sign-frustration argument:
      - if `q | σ(n_i)` for every member, then `n_(i+1) = σ(n_i) − n_i ≡ −n_i (mod q)`, so the aliquot map is a sign flip mod `q` along the cycle;
      - an odd closed walk then forces `n ≡ −n`.
@@ -73,22 +75,25 @@ Owner's prompt (verbatim): "keep working the most precise and meaningful hypothe
      - In tournament and graph language this is Harary balance: an all-negative cycle is balanced iff it is even. Equivalently, an odd cycle is not 2-colourable.
      - Over `Q`, the cycle equations `n_i + n_(i+1) = σ(n_i)` are the unoriented incidence system of the cycle graph `C_k`. For odd `k` (non-bipartite) the solution is unique, with `n_i = ½ Σ_j (−1)^j σ(n_(i+j))`. For even `k` it has a free alternating direction.
    - **Data.**
-     - 229 of the 231 amicable pairs, 9 of the 10 four-cycles, and all 6 published 6- and 8-cycles have an odd prime dividing every `σ(n_i)` but not every member, which no odd cycle can have.
+     - 229 of the 231 amicable pairs (221 at the level of primes), 9 of the 10 four-cycles, and all 6 published 6- and 8-cycles have an odd prime power dividing every `σ(n_i)` but not every member (`odd(Q) ∤ G`). No odd cycle can have this.
      - Both known odd cycles (lengths 5 and 9) have `gcd σ(n_i)` equal to `8` and `2`.
-   - **What this does and does not explain.** It explains why odd lengths are much rarer than even ones. It does **not** single out 3 (5 and 9 exist).
+   - **What this does and does not show.** It is the mechanism behind the proved upper bounds for odd orders (KPP, Pollack), and a heuristic for why odd lengths are rarer than even ones. It does not prove rarity, and it does **not** single out 3 (5 and 9 exist).
    - **Parity and abundancy give no obstruction to 3-cycles.** The parity lemma allows all-even, all-odd, or exactly two members in `□ ∪ 2□`. Abundancy needs only `AAD` or `ADD`.
 3. **`{3, 5, 17, 257, 65537}` and groups of five.** (We read the prompt's 27 as 17 = `F_2`; 27 = `3^3` is not a Fermat number.)
    - **Already in the repository ([arithmetic-seams note](arithmetic_seams_20260921_tournaments.md) §5, 2026-09-21; codex's [path-defect packet](tournament_path_defects_20261014e.md)).** The five numbers themselves are Hamiltonian path counts. Reversing the extreme arc of a transitive tournament gives `H(E_n) = 1 + 2^(n−2)`, which is `3, 5, 17, 257, 65537` at `n = 3, 4, 6, 10, 18`.
-   - **New, exact (THM-4644 part 1).** The Fermat primes are exactly the primes at which every circulant tournament on `Z_p` is rigid (`Aut = Z_p`). So "infinitely many Fermat primes?" is a tournament question. At a non-Fermat prime, an odd-order multiplier group always gives a symmetric circulant tournament. The Paley primes `p ≡ 3 (mod 4)` are the maximally symmetric case. This is the repository's old "Paley maximally symmetric versus Collatz rigid" contrast, now as a dichotomy of primes.
+   - **Exact (THM-4644 part 1; prior art Akin 2018).** The Fermat primes are exactly the primes at which every circulant tournament on `Z_p` is rigid (`Aut = Z_p`).
+     - At the multiplier level this is Akin's Theorems 3.13–3.14 ([arXiv:1806.11241](https://arxiv.org/abs/1806.11241)), stated for every odd modulus: the multipliers act freely iff the modulus is a squarefree product of Fermat primes.
+     - Akin writes that he does not know whether `Aut = Z_p` for every rotational tournament at 17 and the other Fermat primes. Alspach's theorem (THM-871), or Burnside's, answers yes.
+     - So "infinitely many Fermat primes?" is a tournament question. At a non-Fermat prime, an odd-order multiplier group always gives a symmetric circulant tournament. The Paley primes `p ≡ 3 (mod 4)` are the maximally symmetric case. This is the repository's old "Paley maximally symmetric versus Collatz rigid" contrast, now as a dichotomy of primes.
    - **Exact, classical.** The Paley graphs on the Fermat primes 5 and 17 are the unique extremal graphs for the only two non-trivial diagonal Ramsey numbers known: `P_5 = C_5` for `R(3,3) = 6`, and `P_17` for `R(4,4) = 18`. `P_257` has clique number 7 (computed) and is not extremal.
    - **The Platonic five (S10 verdict, unchanged).** The two fives share only `{3, 5}`. What is exact is the triangle `{3, 4, 5}`: Schläfli numbers = constructible polygons up to 5 = field sizes `q` with `PSL(2, q)` (or `PGL(2, 3)`) the rotation groups.
    - **Collatz (S32).** At a Fermat prime `F_k`, the `F_k x + 1` collector weights have denominator `2^(2^(k+1)) − 1 = F_0 F_1 ⋯ F_k`. The period-32 clock `2^32 − 1` is the product of the five known Fermat primes.
 4. **1093, 3511 and `{7, 21}`.**
-   - **New, exact (THM-4644 part 2).** Wieferich primes are exactly the primes at which the circulant tournaments on `Z_(p^2)` invariant under the odd part `g` of doubling explode:
+   - **Exact (THM-4644 part 2: Akin's invariant-subset count for `<g>` on `Z_(p^2)`, combined with the Wieferich order dichotomy).** Wieferich primes are exactly the primes at which the circulant tournaments on `Z_(p^2)` invariant under the odd part `g` of doubling explode:
      - 1093: `2^6564` instead of `2^12`;
      - 3511: `2^3512` instead of `2^2`;
      - for every other prime below 4000 there is no jump.
-     - This is the tournament reading of the doubling-orbit jump already in THM-4631 (`c_2 = p c_1`) and codex's split/grow tower. Codex's same-day path-defect packet gives a different, path-level criterion: `p` is Wieferich iff `p` divides the number `(2^p − 2)/p` of free marked-path orbits of `E_(p+2)`. See section 1b.
+     - The unit-orbit count jumps by the same factor `p` as in THM-4631 and codex's split/grow tower; the exponent `E` jumps by `(p+1)/2`. THM-4631 counts `<2>`-orbits (`3 → 3279` at 1093), and this count uses `<g>`-orbits (`12 → 13116` unit orbits at 1093); the two coincide at 3511, where `g = 2`. Codex's same-day path-defect packet gives a different, path-level criterion: `p` is Wieferich iff `p` divides the number `(2^p − 2)/p` of free marked-path orbits of `E_(p+2)`. See section 1b.
    - **Exact.** 3511 is a Paley prime (`ord_3511(2) = 1755 = (p−1)/2`, `p ≡ 3 (mod 4)`), so its doubling-invariant circulant tournaments are the Paley tournament and its reverse, exactly as `<2> = {1, 2, 4}` gives `P_7` at 7.
    - **Exact.** `1093 = (3^7 − 1)/2` is a base-3 repunit of length 7, with `ord_1093(3) = 7`.
    - **Exact, repository (THM-307).** The Burnside count of tournaments mod `p` involves the Euler quotient of 2, which vanishes exactly at Wieferich primes.
@@ -99,23 +104,31 @@ Owner's prompt (verbatim): "keep working the most precise and meaningful hypothe
    - Only `6 = 2 · 3` is perfect, which is the Euclidean `(2, 3, 6)`. No `n` with `τ(n) = 4` is abundant, so the spherical side is empty.
    - **The `(2, 3, k)` chain.** `k = 3, 4, 5` are spherical (the Platonic rotation groups of orders 12, 24, 60). `k = 6` is Euclidean, `1/2 + 1/3 + 1/6 = 1`, the perfect 6. `k = 7` is the first hyperbolic case, `χ = −1/42`, with `42 = 2 · 3 · 7` the next primary pseudoperfect number; this gives Hurwitz's `84(g − 1)` and Klein's 168.
    - **The other triples are typed ANALOGY** (section 4).
-6. **The Parts-graph remark.** Owner's summary of mac-mini's Hadwiger–Nelson type-M note; SOLVER verdicts, no DRAT certificate. The rigid radius-2 hinge is a small certificate of non-4-colourability, and the shared theme is the minimal obstruction (ANALOGY):
+6. **The Parts-graph remark.** Owner's summary of mac-mini's Hadwiger–Nelson type-M note.
+   - In that note the rigid radius-2 hinge is what makes the type-M graph 5-chromatic. The verdicts come from a SAT solver, with no DRAT certificate, on graphs of about 1,000 vertices. The note says the other cross-edges are also essential, so this is not a small certificate.
+   - The shared theme is isolating a minimal obstruction (ANALOGY):
    - an odd cycle is the minimal certificate of non-2-colourability; in aliquot form it is Dickson's frustration (section 3b);
    - `H = 7` is impossible because its only conflict graph `K_3` (three pairwise-conflicting odd cycles) never occurs (THM-200/THM-029; all `n` for `{7, 21}` in THM-1370);
    - an opposite-parity amicable pair needs squares on both sides.
+   - mac-mini's later same-day commit (`6f57f95b2f`, SOLVER verdicts) reports a first vertex-critical type-M subgraph of 614 vertices. It also reports an exact rebuild of the spindle-free 5-chromatic graph of Voronov–Neopryatnaya–Dergachev. Isolating the minimal certificate is the shared technique.
 7. **The precise hypotheses** (HYP-9273):
    - **(A)** every aliquot cycle avoids `□ ∪ 2□`;
-   - **(B)** every Paley tournament `P_q` has `H(P_q)/(q(q−1)/2) ≡ 1 (mod 8)`. Six cases hold; broader versions are refuted (all circulants at `p = 19`; the doubly regular order-15 tournament). The first test is `q = 31`.
+   - **(B)** every Paley tournament `P_q` has `H(P_q)/(q(q−1)/2) ≡ 1 (mod 8)`. Seven cases hold, including the pre-registered test `q = 31` (`≡ 41 (mod 256)`, section 5c). Broader versions are refuted (all circulants at `p = 19`; the doubly regular order-15 tournament).
+   - **(B′)** the `(x ↦ −x)`-palindromic Hamiltonian paths of `P_q` number `≡ 1 (mod 4)`; 8 cases, `q <= 47`. With the exact split `H/|Aff| = 2F + P`, (B) at `q = 31` is the statement `F ≡ 3 (mod 4)`, which the `q = 31` count confirms (`F ≡ 31 (mod 128)`).
 
 ## 1. THM-4644: Fermat and Wieferich primes through circulant tournaments (PROVED + FINITE-EXACT)
 
 Statement and proof are in the [canon file](../../01-canon/theorems/THM-4644-fermat-primes-rigid-circulant-tournaments-wieferich-orbit-explosion.md).
 
 **The mechanism.**
-- By Burnside's theorem a circulant tournament of prime order has `Aut = Z_p ⋊ M`, where `M` is the multiplier stabilizer, of odd order (`−1` reverses every arc).
-- When `(Z/p)^*` is a 2-group, its only involution `−1` lies in every non-trivial subgroup, so `M = 1`. When `p − 1` has an odd factor, a union of cosets of the odd subgroup gives a symmetric tournament.
-- On `Z_(p^2)` the odd part `g` of doubling has `ord_(p^2)(g) = d'` exactly at Wieferich primes, instead of `p d'`. So the number of `g`-orbits on the units, and with it the number of `g`-invariant tournaments, grows by a factor `p` in the exponent.
-- The same orbit count gives THM-4631's Wieferich jump in fast-mode multiplicity: 1093 has 3 modes at level 1 and 3279 at level 2; 3511 has 2 and 7022.
+- A circulant tournament of prime order has `Aut = Z_p ⋊ M`, where `M` is the multiplier stabilizer, of odd order (`−1` reverses every arc). This follows from Alspach's theorem, or from Burnside's: the translations are then the normal Sylow `p`-subgroup.
+- When `(Z/p)^*` is a 2-group, its only involution `−1` lies in every non-trivial subgroup, so `M = 1`. When `p − 1` has an odd factor, a union of cosets of the odd subgroup gives a symmetric tournament. At the multiplier level both directions are Akin (2018), Theorems 3.13–3.14.
+- On `Z_(p^2)` the odd part `g` of doubling has `ord_(p^2)(g) = d'` exactly at Wieferich primes, instead of `p d'`.
+  - So the number of `g`-orbits on the units grows by a factor `p`, from `(p−1)/d'` to `p(p−1)/d'`.
+  - The exponent `E` of the count of `g`-invariant tournaments grows by `(p+1)/2`: `12 → 6564 = 547·12` at 1093 and `2 → 3512 = 1756·2` at 3511.
+- THM-4631's fast-mode multiplicities jump by the same factor `p`, but they count `<2>`-orbits rather than `<g>`-orbits.
+  - At 1093: `3 → 3279` there, against `12 → 13116` unit orbits here.
+  - At 3511: `2 → 7022` there, and the counts coincide because `g = 2`.
 
 **Data** (`.out` §1–2):
 - **Brute force.** `|Aut| = p` for every circulant tournament at `p = 3, 5`; `{7, 21}` at 7; `{11, 55}` at 11.
@@ -137,14 +150,14 @@ Codex worked on the same owner themes on the same day. To avoid double counting:
 
 | topic | codex packet | this note |
 |---|---|---|
-| Fermat numbers in tournaments | `H(E_n) = 1 + 2^(n−2)` (from the arithmetic-seams note): the five Fermat numbers as Hamiltonian path counts | THM-4644 part 1: Fermat **primes** as the primes where every circulant tournament is rigid (the converse direction is new; the forward direction is THM-871) |
-| Wieferich primes | marked-path orbit count `(2^p − 2)/p` divisible by `p`; split/grow tower `C_k = ((p−1)/d) p^(min(k−1, s−1))`; Fermat primes are never Wieferich (classical, Crandall–Dilcher–Pomerance) | THM-4644 part 2: the same orbit jump counted as `g`-invariant circulant tournaments on `Z_(p^2)`, including the non-unit orbits; part 3: 3511 is a Paley prime |
+| Fermat numbers in tournaments | `H(E_n) = 1 + 2^(n−2)` (from the arithmetic-seams note): the five Fermat numbers as Hamiltonian path counts | THM-4644 part 1: Fermat **primes** as the primes where every circulant tournament is rigid. The multiplier level is Akin 2018, Thms 3.13–3.14 (both directions); the full Aut is THM-871 via Alspach, which answers Akin's remark for 17 and the other Fermat primes. |
+| Wieferich primes | marked-path orbit count `(2^p − 2)/p` divisible by `p`; split/grow tower `C_k = ((p−1)/d) p^(min(k−1, s−1))`; Fermat primes are never Wieferich (classical, Crandall–Dilcher–Pomerance) | THM-4644 part 2: the factor-`p` jump in the `<g>`-orbit count, read as `g`-invariant circulant tournaments on `Z_(p^2)` including the non-unit orbits (the `2^m` count is Akin's Theorem 3.14 construction); part 3: 3511 is a Paley prime |
 | aliquot 3-cycles | PROVED: dyadic-times-prime 3-cycles need three distinct exponents, second-smallest `>= 129`; affine core compiler; the `I + P` distinction; Pollack's gcd restriction replayed on the 5-cycle | the parity lemma and HYP-9273 (A); the census statistics of section 3b over all 255 cycles; the signed-graph (balance) reading |
 | abundancy | `Σ σ = 2 Σ n`, `Π σ/n > 2^L`, the minimum node abundant and the maximum deficient | the same identities (found independently), plus the `τ(n) = 4` triangle reading |
 
 ## 2. Fermat primes and the groups of five (PROVED + CITED + NUMEROLOGY)
 
-* **The tournament meaning of "Fermat prime" (THM-4644 part 1).**
+* **The tournament meaning of "Fermat prime" (THM-4644 part 1; Akin 2018 at the multiplier level).**
   * Rotational tournaments at `F_k` up to isomorphism: the multiplier group `Z_(p−1)` acts freely, giving `2^((p−1)/2)/(p − 1)` classes, namely `1, 1, 16, 2^120, 2^32752`. THM-871 computed 16 at `p = 17`.
   * The Fermat and Paley primes are the two ends of a symmetry spectrum; the Collatz graph (`Aut(N, T) = 1`, THM-4523) is rigid like the Fermat rungs.
 * **Ramsey.** Clique numbers by exhaustive branch and bound; the graphs are self-complementary, so `α = ω`.
@@ -176,12 +189,15 @@ Codex worked on the same owner themes on the same day. To avoid double counting:
 2. **Even count.** Along any aliquot cycle the parity changes an even number of times, so the number of members in `□ ∪ 2□` is even.
 3. **Amicable pairs.** For an amicable pair `(m, n)`, `m + n = σ(m)` is odd iff `σ(m)` is odd. So the pair has opposite parity iff both members are in `□ ∪ 2□`, iff one is (Gioia–Vaidya 1967).
 4. **Arithmetic mean.** For a `k`-cycle, `Σ σ(n_i) = Σ (n_i + n_(i+1)) = 2 Σ n_i`.
-5. **Geometric mean.** With `r_i = n_(i+1)/n_i` (so `Π r_i = 1`), `Π σ(n_i)/n_i = Π (1 + r_i) >= Π 2√r_i = 2^k`, with equality iff all `r_i = 1` (a perfect number). So every non-trivial cycle has an abundant member and a deficient one.
+5. **Geometric mean.** With `r_i = n_(i+1)/n_i` (so `Π r_i = 1`), `Π σ(n_i)/n_i = Π (1 + r_i) >= Π 2√r_i = 2^k`, with equality iff all `r_i = 1` (a perfect number).
+   - So every non-trivial cycle has an abundant member.
+   - By corollary 4 it also has a non-abundant one, which is deficient, since a perfect member would be a fixed point.
+   - Concretely, the minimum member is abundant and the maximum is deficient.
 
 **Census** (`aliquot_parity_squares_20261014.out`; exact σ-sieve to `10^8`; cycles found exactly when all members are `<= 10^8`):
 - **248 cycles:** 5 perfect, 231 amicable pairs (54 of all cycles are all-odd), ten 4-cycles, Poulet's 5-cycle (12496) and 28-cycle (14316). There is no 3-cycle.
 - **Parity and squares.** Every cycle is parity-homogeneous; one 4-cycle is all odd: `28158165 → 29902635 → 30853845 → 29971755`. No cycle contains a square or a twice-square. Corollary 4 holds.
-- **Abundancy patterns:** `AADD` (8 up to rotation), `ADDD` (1), `ADAD` (2) for the 4-cycles; `AADDD` for the 5-cycle.
+- **Abundancy patterns:** `AADD` (7 up to rotation), `ADDD` (1), `ADAD` (2) for the 4-cycles; `AADDD` for the 5-cycle.
 
 **Double flips** (odd `a <= 10^9` with `s(a^2) ∈ □ ∪ 2□`). There is no int64 overflow: for odd `a <= 10^9`, `σ(a^2)/a^2 < Π_(3 <= p <= 23) p/(p−1) < 3.06`, so `σ(a^2) < 3.1·10^18 < 2^63`.
 
@@ -198,13 +214,13 @@ Codex worked on the same owner themes on the same day. To avoid double counting:
 
 **Status.**
 - The opposite-parity amicable problem is OPEN; every known amicable pair has equal parity.
-- Sociable 3-cycles are unknown. Bratley–Lunnon–McKay searched to `5·10^7` (1970). Moews and Moews searched exhaustively for cycles of length greater than 2 whose member preceding the largest one is below `1.54·10^11`; Pedersen extended this to `4.27·10^11` (1997).
+- Sociable 3-cycles are unknown. Bratley–Lunnon–McKay searched to `5·10^7` (1970; attested via Wikipedia). Moews and Moews searched exhaustively for cycles of length greater than 2 whose member preceding the largest one is below `1.54·10^11`. Pedersen, Needham and Bodyagin extended this to `10^14` (Bodyagin, October 2016), and cycles with odd smallest member were searched to `10^16` (May 2016). Source: Moews' list.
 - HYP-9273 (A) is the parity-homogeneity statement.
 
 ## 3b. Odd aliquot cycles are frustrated (PROVED + CITED + FINITE-EXACT)
 
 **Lemma (frustration; the mechanism of Dickson 1913, KPP 2009 Theorem E; Pollack's Lemma 5 is the sharp form).** Let `n_0 → ⋯ → n_(k−1) → n_0` be an aliquot cycle, `G = gcd(n_i)` and `Q = gcd(σ(n_i))`.
-- If `k` is odd, then `odd(Q) | G` and `Q | 2G`. Pollack shows `Q | G` unless `2 ∥ Q`.
+- If `k` is odd, then `odd(Q) | G` and `Q | 2G`. For `k > 1`, Pollack shows `Q | G` unless `2 ∥ Q`. (An even perfect number, `k = 1`, has `Q = 2G` with `4 | Q`.)
 - If `k` is even, then `n_i ≡ (−1)^i n_0 (mod Q)`.
 
 *Proof.* `n_(i+1) = σ(n_i) − n_i ≡ −n_i (mod Q)`. Around the cycle, `n_0 ≡ (−1)^k n_0`. For odd `k` this gives `Q | 2n_0`, and the same for every `i`. ∎
@@ -213,27 +229,29 @@ Codex worked on the same owner themes on the same day. To avoid double counting:
 - **Linear algebra.** The cycle equations `n_i + n_(i+1) = σ(n_i)` are `B^T n = σ` for the unoriented incidence matrix `B` of the cycle graph `C_k`. `det(I + P) = 1 − (−1)^k`, where `P` is the cyclic shift.
   - **Odd `k`** (`C_k` not bipartite): the system is uniquely solvable over `Q`, with `n_i = ½ Σ_(j=0)^(k−1) (−1)^j σ(n_(i+j))`, and invertible mod every odd `q`.
   - **Even `k`:** it is solvable iff the alternating sum of the `σ(n_i)` vanishes, which it always does on a cycle, with the free direction `(1, −1, 1, …)`.
-  - Codex's [guarded-core packet](aliquot_guarded_cycles_20261014e.md) records the same `I + P` distinction, and notes that it treats lengths 3 and 5 alike.
+  - Codex's [dyadic-frontier note](aliquot_dyadic_frontier_20261014e.md) §6 records the same `I + P` distinction and notes that it treats lengths 3 and 5 alike. Its [guarded-core packet](aliquot_guarded_cycles_20261014e.md) cites Pollack's gcd restriction.
 - **Signed graphs.** With every cycle edge negative (`n ↦ −n` mod `Q`), Harary's balance theorem says the cycle is balanced iff `k` is even. So the aliquot map, wherever `σ` is divisible by `q`, is a 2-colouring constraint, and odd cycles are its obstructions.
-- **Dickson's theorem.** An odd cycle (`k > 1`) whose gcd `a > 1` is unitary in every member would force `σ(a)/a ∈ {1, 2}`. KPP use this together with "`σ(n)` is divisible by every small prime power for almost all `n`" to show that irregular cycles, hence all odd-order cycles, are rare.
+- **Dickson's theorem.** An odd cycle (`k > 1`) whose gcd `a > 1` is unitary in every member would force `σ(a)/a ∈ {1, 2}`. KPP combine the frustration with the fact that `σ(n)` is divisible by every small prime power for almost all `n`. This bounds the odd-order sociable numbers by `x/(log_2 x)^(1/2+o(1))`; Pollack's bound for fixed odd order is `x/(log x)^(1+o(1))`. These are upper bounds, not a proof that odd cycles are rarer than even ones.
 
 **Census** (`aliquot_dickson_frustration_20261014.out`; all 248 cycles with members `<= 10^8`, plus seven published cycles recomputed and closed: 6-cycles from `21548919483`, `90632826380`, `1771417411016`, `4773123705616`; 8-cycles from `1095447416`, `1276254780`; the 9-cycle from `805984760`). Every cycle satisfies the lemma.
 
-| length | cycles | regular (Cohen) | an odd prime divides every `σ(n_i)` but not every member |
-|---|---|---|---|
-| 2 | 231 | 189 | 229 |
-| 4 | 10 | 8 | 9 |
-| 6 | 4 | 3 | 4 |
-| 8 | 2 | 2 | 2 |
-| 28 | 1 | 0 | 0 |
-| **5** | 1 | **0** (Dickson) | **0** (forced): `G = 8`, `Q = 8` |
-| **9** | 1 | **0** (Dickson) | **0** (forced): `G = 2`, `Q = 2` |
+| length | cycles | regular (Cohen) | an odd prime **power** divides every `σ(n_i)` but not every member (`odd(Q) ∤ G`) | an odd **prime** does (`p | Q`, `p ∤ G`) |
+|---|---|---|---|---|
+| 2 | 231 | 189 | 229 | 221 |
+| 4 | 10 | 8 | 9 | 9 |
+| 6 | 4 | 3 | 4 | 4 |
+| 8 | 2 | 2 | 2 | 2 |
+| 28 | 1 | 0 | 0 | 0 |
+| **5** | 1 | **0** (Dickson) | **0** (forced): `G = 8`, `Q = 8` | 0 |
+| **9** | 1 | **0** (Dickson) | **0** (forced): `G = 2`, `Q = 2` | 0 |
+
+In the 8 amicable pairs where the columns differ, the excess is a higher power of a prime that already divides `G`. Example: `(69615, 87633)`, `G = 819`, `Q = 157248`.
 
 **What the table shows.**
 - Even cycles almost always use the sign flip modulo some odd `q`. For amicable pairs the median odd excess `odd(Q)/gcd(odd(Q), G)` is 13041, and 94% have `3` in it.
-- An odd cycle cannot do this, so it must avoid every common odd divisor of the `σ(n_i)`.
-- Members of 2- and 4-cycles are "σ-typical": `3 | σ(n)` for 98.5% of them against 85.1% of all `n <= 10^8`, and `9 | σ(n)` for 93.6% against 57.4%.
-- This is why odd lengths are rare. It does not single out 3: lengths 5 and 9 exist, and the long even 28-cycle also has no odd excess.
+- In an odd cycle, every common odd divisor of the `σ(n_i)` must divide every member.
+- Members of 2- and 4-cycles (502 numbers) are "σ-typical": `3 | σ(n)` for 99.6% of them against 85.1% of all `n <= 10^8`, and `9 | σ(n)` for 97.2% against 57.4%. Over all 535 members of non-trivial cycles the figures are 98.5% and 93.6%.
+- This is a mechanism-level reading of why odd lengths are rarer; the proved statements are the upper bounds of KPP and Pollack. It does not single out 3: lengths 5 and 9 exist, and the long even 28-cycle also has no odd excess.
 
 ## 4. Triples (EXACT anchors, ANALOGY elsewhere)
 
@@ -247,18 +265,19 @@ Codex worked on the same owner themes on the same day. To avoid double counting:
 | tournaments | vertex score below, at, above `(n−1)/2` | regular = every vertex "perfect" |
 | signed cycles | balanced (even) / frustrated (odd) | section 3b (a dichotomy, not a triple) |
 
-**NUMEROLOGY (law of small numbers).** Sylvester's sequence `2, 3, 7, 43, 1807` (`e_(n+1) = e_n^2 − e_n + 1`) gives the Egyptian fractions of 1 behind the pseudoperfect numbers. It contains the Heegner numbers 7 and 43 (S17). Also `1807 = 13 · 139`, where 139 is the Collatz denominator `3^7 − 2^11` of the `−17` cycle.
+**NUMEROLOGY (law of small numbers).** Sylvester's sequence `2, 3, 7, 43, 1807` (`e_(n+1) = e_n^2 − e_n + 1`) gives the Egyptian fractions of 1 behind the pseudoperfect numbers. Its terms 2, 3, 7 and 43 are all Heegner numbers (S17). Also `1807 = 13 · 139`, where 139 is the Collatz denominator `3^7 − 2^11` of the `−17` cycle.
 
 ## 5. Paley Hamiltonian paths and HYP-9273 (B) (FINITE-EXACT + OPEN)
 
-| `q` | `H(P_q)` | `q(q−1)/2` | orbits `H/|Aff|` | mod 8 |
-|---|---|---|---|---|
-| 3 | 3 | 3 | 1 | 1 |
-| 7 | 189 | 21 | 9 | 1 |
-| 11 | 95095 | 55 | 1729 | 1 |
-| 19 | 1172695746915 | 171 | 6857869865 | 1 |
-| 23 | 15760206976379349 | 253 | 62293308207033 | 1 |
-| 27 | (mod `8 · 1053`) | 351 (affine) | — | 1 |
+| `q` | `H(P_q)` | `q(q−1)/2` | orbits `H/|Aff|` | mod 256 | mod 8 |
+|---|---|---|---|---|---|
+| 3 | 3 | 3 | 1 | 1 | 1 |
+| 7 | 189 | 21 | 9 | 9 | 1 |
+| 11 | 95095 | 55 | 1729 | 193 | 1 |
+| 19 | 1172695746915 | 171 | 6857869865 | 41 | 1 |
+| 23 | 15760206976379349 | 253 | 62293308207033 | 185 | 1 |
+| 27 | (mod `8 · 1053`) | 351 (affine) | — | 1 | 1 |
+| **31** | — | 465 | — | **41** | **1** |
 
 **`q = 27`.** Under the full `Aut` (order 1053, with Frobenius) the orbit count is `3 (mod 8)`; under the affine group it is 1.
 
@@ -275,7 +294,51 @@ Codex worked on the same owner themes on the same day. To avoid double counting:
 
 - **The doubly regular `T_4`** (order 15, `|Aut| = 21`): orbit count `9444525 ≡ 5 (mod 8)`.
 
-**Conclusion.** The congruence is not a circulant phenomenon (refuted at 19) and not a doubly regular one (refuted at 15). It is Paley-specific among the cases computed. The orbit count's oddness is Rédei's theorem plus the odd order of the affine group; the hypothesis concerns the next two binary digits. The orbit count `1729` at `q = 11` is the taxicab number (NUMEROLOGY).
+**`q = 31` (section 5c), the pre-registered test.** `q = 31` was named as the first test before it was run. The orbit count is `H(P_31)/465 ≡ 41 (mod 256)`, so **(B) holds at `q = 31`**. With the split of section 5b (`P ≡ 235 (mod 256)`), `F ≡ 31 (mod 128)`, so `F ≡ 3 (mod 4)` as (B) and (B′) require.
+
+**Conclusion.** The congruence is not a circulant phenomenon (refuted at 19) and not a doubly regular one (refuted at 15). It is Paley-specific among the cases computed, and it survived its pre-registered test at `q = 31`. The orbit count's oddness is Rédei's theorem plus the odd order of the affine group; the hypothesis concerns the next two binary digits. The orbit count `1729` at `q = 11` is the taxicab number (NUMEROLOGY).
+
+## 5b. The palindromic split `H/|Aff| = 2F + P` (PROVED + FINITE-EXACT; addendum)
+
+**The split.** For prime `q ≡ 3 (mod 4)`, every `φ_b(x) = −x + b` is an involutory anti-automorphism of `P_q`, and `ρ_b(P) = φ_b(reverse P)` is an involution on Hamiltonian paths whose fixed points are the `φ_b`-palindromic paths (THM-582).
+- No path is fixed by two of them: it would be fixed by the translation `φ_b φ_b'`, and automorphisms act freely on Hamiltonian paths.
+- So `G = Aff ⋊ <ρ_0>` (order `q(q−1)`) has `F` free orbits and `P` orbits of size `q(q−1)/2`. This gives `H = q(q−1)F + (q(q−1)/2)P` and `H/|Aff| = 2F + P`, with `P = 2·pal/(q−1)`, where `pal` is the number of `φ_0`-palindromic paths.
+- A `φ_0`-palindromic path has middle vertex 0 and is fixed by its first half. That half takes one element of each pair `{x, −x}` and ends at a non-residue, so `pal` is a dynamic programme over `2^((q−1)/2)` subsets ([script](../../04-computation/experiments/paley_palindromic_orbits_20261014.py), `paley_palindromic_orbits_20261014.out`).
+
+| `q` | `pal` | `P` | `P mod 8` | `F` | `2F + P mod 8` |
+|---|---|---|---|---|---|
+| 3 | 1 | 1 | 1 | 0 | 1 |
+| 7 | 9 | 3 | 3 | 3 | 1 |
+| 11 | 185 | 37 | 5 | 846 | 1 |
+| 19 | 573057 | 63673 | 1 | 3428903096 | 1 |
+| 23 | 63871533 | 5806503 | 7 | 31146651200265 | 1 |
+| 31 | 2108041228485 | 140536081899 | 3 | ? | (B) ⇔ `F ≡ 3 (mod 4)` |
+| 43 | ≡ 143157 (mod 172032) | — | 1 | ? | (B) ⇔ `F ≡ 0 (mod 4)` |
+| 47 | ≡ 36777 (mod 188416) | — | 7 | ? | (B) ⇔ `F ≡ 1 (mod 4)` |
+
+**What the table gives.**
+1. **An independent check of the large counts.** `F` is a non-negative integer at `q = 19` and `q = 23`, which is a nontrivial congruence check of `H(P_19)` and `H(P_23)` (`H ≡ q·pal (mod q(q−1))`). THM-582's values `1, 9, 185` are reproduced.
+2. **A cleaner sub-pattern (OPEN, 8 cases), HYP-9273 (B′).** `pal ≡ 1 (mod 4)` for all 8 primes `q = 3, …, 47`; mod 8 it takes the values 1 and 5. This is the next binary digit after THM-582's oddness. It is equivalent to `P ≡ (q−1)/2 (mod 4)`, i.e. `P ≡ 1 (mod 4)` iff `q ≡ 3 (mod 8)`. Since `P` is odd, (B) is equivalent to `F ≡ (1 − P)/2 (mod 4)`. Combined with (B′), it gives in particular `F` odd iff `q ≡ 7 (mod 8)`, which the five computed cases confirm.
+
+**The analogy with the parity lemma (ANALOGY, technique transfer).** Both parity facts count fixed points of an involution.
+- `σ(m) ≡ τ(m) ≡ [m is a square] (mod 2)` for odd `m`, via `d ↔ m/d` with fixed point `√m`.
+- `H(P_q) ≡ pal (mod 2)`, via path reversal composed with `x ↦ −x`, whose fixed points are the paths through the "square root" `0` of the reflection.
+
+(B′) asks for the next digit of the fixed-point count, which is where squares and twice-squares entered on the aliquot side.
+
+## 5c. The orbit count from a single arc (PROVED reduction + FINITE-EXACT)
+
+**The reduction.** The stabilizer of vertex 0 in `Aff` is `{x ↦ ax : a ∈ (F_q^*)^2}`. It acts freely on the Hamiltonian paths starting at 0 and transitively on their possible second vertices, the nonzero squares. Hence
+
+`H(P_q)/|Aff| = N_1`, the number of Hamiltonian paths starting with the arc `0 → 1`.
+
+**The computation.** `N_1` is a pull dynamic programme over subsets of the remaining `q − 2` vertices, in `uint8` arithmetic, so wrap-around gives `N_1 mod 256` exactly. Each subset size is processed as one parallel layer. Memory is `2^(q−2)(q−2)` bytes: 15.6 GB and 138 s at `q = 31` ([script](../../04-computation/experiments/paley_orbit_count_mod256_20261014.py), `paley_orbit_count_mod256_20261014.out`).
+
+**Validation.** The same code reproduces the exact orbit counts mod 256 at `q = 7, 11, 19, 23` (9, 193, 41, 185) and gives 1 at `q = 27` (consistent with the earlier mod-8 value).
+
+**Data, NUMEROLOGY so far.** The residues mod 256 are `1, 9, 193, 41, 185, 1, 41`. They show no pattern beyond mod 8: mod 16 they are `1, 9, 1, 9, 9, 1, 9`.
+
+**Equivalent form.** Since `|Aff|` is odd, (B) says `H(P_q) ≡ q(q−1)/2 (mod 8)`, so only `H mod 8` is ever needed. The audit reproduced `q = 31 → 41 (mod 256)` with an independent layered colex-rank DP (2.3 GB, 40 s).
 
 ## 6. Wieferich, {7, 21}, and second-digit locks (ANALOGY + NUMEROLOGY)
 
@@ -301,34 +364,76 @@ Codex worked on the same owner themes on the same day. To avoid double counting:
 ## 7. Hostile controls
 
 1. **Amicable parity.** Not proved: the problem is open. The reduction is classical (Gioia–Vaidya). Our search range is inside Chernykh's complete enumeration, so it is a check, not a new bound.
-2. **Dickson's frustration** explains the rarity of odd lengths, not the absence of 3. Since 5 and 9 occur, no argument of this kind can forbid 3 by parity of length alone. Codex makes the same point for the linear `I + P` level. The frustration lemma itself is classical (Dickson; Pollack's Lemma 5); what is new here is the census statistics and the balance reading.
-3. **HYP-9273 (A)** has no proof and no mechanism beyond the thin-set heuristic. **(B)** rests on six cases; its two broader versions were refuted in this session.
-4. **THM-4644 is elementary.** Its value is the reformulation. Neither part solves the underlying problem (infinitude of Fermat or of Wieferich primes).
+2. **Dickson's frustration** is the mechanism behind the upper bounds for odd lengths. It is a heuristic for their rarity, not an explanation of the absence of 3. Since 5 and 9 occur, no argument of this kind can forbid 3 by parity of length alone. Codex makes the same point for the linear `I + P` level. The frustration lemma itself is classical (Dickson; Pollack's Lemma 5); what is new here is the census statistics and the balance reading.
+3. **HYP-9273 (A)** has no proof and no mechanism beyond the thin-set heuristic. **(B)** rests on seven cases, one pre-registered; its two broader versions were refuted in this session. Given oddness (Rédei), a random odd residue mod 8 is 1 with probability `1/4`, so seven hits have prior about `4^(−7) ≈ 6·10^(−5)`. The six cases chosen after the fact count for less than the one pre-registered.
+4. **THM-4644 is elementary and largely an assembly.**
+   - Part 1 at the multiplier level is Akin (2018), and the full-Aut step is Alspach/Burnside (THM-871). Together they answer Akin's remark about 17 and the other Fermat primes.
+   - Part 2 is Akin's invariant-subset count combined with the Wieferich order dichotomy.
+   - Its value is the reformulation and the Wieferich count. Neither part touches the underlying problems (infinitude of Fermat or of Wieferich primes).
 5. **The Parts remark** is the owner's summary of mac-mini's SOLVER result, not re-run here.
 
 ## 8. Open threads
 
-1. **HYP-9273 (B) at `q = 31`.** The direct dynamic programme needs about 33 GB. Alternatives: count orbit representatives using the free affine action, or compute the OCF digits `α_1 mod 4` and `α_2 mod 2` for Paley tournaments by character sums.
+1. **HYP-9273 (B) beyond `q = 31`.** `q = 31` is settled (section 5c). `q = 43` needs `2^41` subsets: out of reach for subset DP. A proof route would compute the OCF digits `α_1 mod 4` and `α_2 mod 2` of Paley tournaments by character sums, or find an involution on the free `G`-orbits; (B′) is the cheaper first target.
 2. **Composite double flips.**
    - The data (18 up to `10^9`) and the conic structure suggest polylogarithmic growth, which would make an enumeration of all odd-member candidates far beyond `10^20` feasible via Pell recursions.
    - A completeness argument is needed: every composite `a` has some prime `p | a`, and the conic in the cofactor must be handled uniformly.
 3. **A finer frustration for `k = 3`.** Dickson's argument uses one modulus at a time. A 3-cycle needs, for each small odd prime `q`, a member whose `σ` is prime to `q` (or all members divisible by `q`). Joint constraints (mod 4 and mod 9 together with the abundancy pattern `AAD`/`ADD`) might give a quantitative heuristic for the 3-cycle count versus the 5-cycle count.
 4. **Tournament reformulations of other prime classes** (Mersenne, Wilson, Wall–Sun–Sun) in the style of THM-4644.
 
-## 9. Audit
+## 9. Audit (independent adversarial referee; [report](../../04-computation/experiments/number_tournament_bridges_20261014/audit/REPORT.md); MISTAKE-608)
 
-Pending: an independent adversarial audit will be recorded here.
+**Verdict.** THM-4644 is mathematically correct, and every computed table reproduced with independent code. That covers `E` for `p < 4000`, and brute force over `Z_9`, `Z_25`, `Z_49` (including a Wieferich-regime analogue). It also covers the following:
+- `H(P_q)` and the circulant and DR15 controls;
+- `P_27`;
+- `q = 31 → 41 (mod 256)` by a different algorithm;
+- the palindromic counts;
+- the aliquot census (two sieves; 236 pairs below `10^8`, matching OEIS);
+- the double flips to `10^9`;
+- the frustration census;
+- the clique numbers and the citations.
+
+**Errors (all applied above).**
+- **E1.** THM-4644 part 1 was called new. At the multiplier level it is Akin 2018, Thms 3.13–3.14. What is ours is the full-Aut assembly, which answers Akin's remark.
+- **E2.** "An odd prime" in the frustration census should be "an odd prime power". At prime level the amicable count is 221, not 229.
+- **E3.** The σ-divisibility percentages were mislabelled (99.6% and 97.2% for the 2- and 4-cycle members).
+- **E4.** The exponent `E` grows by `(p+1)/2`, not by `p`.
+- **E5.** Dickson's theorem needs gcd `> 1`.
+- **E6.** The `AADD` pattern count is 7, not 8.
+
+**Imprecisions (applied).**
+- Pollack's form needs `k > 1`.
+- The codex `I + P` link was wrong.
+- The `<2>` and `<g>` orbit counts were conflated.
+- "Doubling-invariant" is false at 1093, where `−1 ∈ <2>` mod `p^2`.
+- The Sylow step was missing in the Burnside argument.
+- The sociable data were stale (Moews' list: 5433 four-cycles, five 8-cycles, exhaustive search to `10^14`).
+- The `o(1)` in Iannucci–Luca was dropped.
+- (A)'s double-flip evidence covers `k = 2` only.
+- "Explains" overclaimed a heuristic.
+- The deficient-member argument was missing.
+- Reference details were incomplete.
+- The Parts hinge is not a small certificate.
+- 2 and 3 are Heegner numbers too.
+- The cycle walks were capped (now uncapped; the census is unchanged at 248).
+- (B′) is not needed for the (B) ⇔ `F` statement.
+- The INDEX lines inherited E1, I4 and I9.
+
+**Where the audit was decisive.** E1 and E4 change THM-4644's novelty claim and one formula. The rest are labels, numbers and typing. All conclusions survive.
 
 ## 10. Reproduction and references
 
 **Reproduction:**
 - `python3 04-computation/experiments/number_tournament_bridges_20261014.py` (about 3 minutes, 4 GB);
 - `python3 04-computation/experiments/aliquot_parity_squares_20261014.py 1e8 1e9` (about 2 minutes, 5 GB);
-- `python3 04-computation/experiments/aliquot_dickson_frustration_20261014.py` (about 1 minute, 2 GB; reads the JSON of the previous script).
+- `python3 04-computation/experiments/aliquot_dickson_frustration_20261014.py` (about 1 minute, 2 GB; reads the JSON of the previous script);
+- `python3 04-computation/experiments/paley_palindromic_orbits_20261014.py` (about 1 minute, 3.2 GB at `q = 47`);
+- `python3 04-computation/experiments/paley_orbit_count_mod256_20261014.py 31` (about 3 minutes, 16 GB).
 
 **References.**
 - **Groups and tournaments:**
   - W. Burnside, *Proc. LMS* (1901), transitive groups of prime degree;
+  - E. Akin, Rock, Paper, Scissors, Etc — Topics in the Theory of Regular Tournaments, [arXiv:1806.11241](https://arxiv.org/abs/1806.11241) (2018, v4 2020), Theorems 3.12–3.14 and the remark after 3.14;
   - B. Alspach (1970), via THM-871;
   - L. Rédei (1934); J. W. Moon, *Topics on Tournaments* (1968).
 - **Wieferich primes:**
@@ -341,18 +446,20 @@ Pending: an independent adversarial audit will be recorded here.
 - **Amicable pairs:**
   - A. A. Gioia and A. M. Vaidya, Amicable numbers with opposite parity, *Amer. Math. Monthly* 74 (1967) 969–973, correction 75 (1968) 386;
   - G. D'Abramo, arXiv:math/0501402 (2005);
-  - P. Hagis, Lower bounds for relatively prime amicable numbers of opposite parity, *Math. Comp.* 24 (1970);
+  - P. Hagis, Lower bounds for relatively prime amicable numbers of opposite parity, *Math. Comp.* 24 (1970) 963–968;
   - D. E. Iannucci and F. Luca, Squares whose aliquot sum is a square, *JP J. Algebra Number Theory Appl.* 13 (2009) 17–26;
   - P. Pollack, Powerful amicable numbers, *Colloq. Math.* 122 (2011) 103–123;
   - S. Chernykh's list (OEIS A066873: 4197267 pairs with smaller member below `10^20`).
 - **Sociable numbers:**
   - L. E. Dickson, Theorems and tables on the sum of the divisors of a number, *Q. J. Math.* 44 (1913) 264–296;
   - M. Kobayashi, P. Pollack and C. Pomerance, On the distribution of sociable numbers, *J. Number Theory* 129 (2009) 1990–2009;
-  - P. Pollack, A remark on sociable numbers of odd order (pollack-math.net/socodd.pdf): Lemma 5, and the bound `x/(log x)^(1+o(1))` for fixed odd order;
+  - P. Pollack, A remark on sociable numbers of odd order, *J. Number Theory* 130 (2010) 1732–1736: Lemma 5, and the bound `x/(log x)^(1+o(1))` for fixed odd order;
+  - H. Cohen, On amicable and sociable numbers, *Math. Comp.* 24 (1970) 423–429 (regular cycles);
   - P. Poulet (1918);
   - P. Bratley, F. Lunnon and J. McKay, *Math. Comp.* 24 (1970);
-  - D. and P. C. Moews; J. O. M. Pedersen (search to `4.27·10^11`, 1997);
-  - Wikipedia, "Sociable number" (table as of October 2024).
+  - D. Moews and P. C. Moews, *Math. Comp.* 57 (1991) and 61 (1993);
+  - [Moews' list of sociable cycles](http://djm.cc/sociable.txt) (11 September 2026: 5433 four-cycles, five 8-cycles; exhaustive searches by Pedersen, Needham and Bodyagin to `10^14`);
+  - Wikipedia, "Sociable number" (table as of October 2024; stale).
 - **Hurwitz and Klein:** A. Hurwitz (1893); F. Klein (1879).
 - **This repository:**
   - THM-871; THM-307; THM-200, THM-029, THM-1370; THM-4523; THM-4631;

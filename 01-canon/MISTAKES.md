@@ -17880,3 +17880,60 @@ the ambient space.
   - Fit a model's predicted decay rather than citing it.
   - Report extrema over the full range, endpoints included.
   - Separate ties from strict inequalities in races.
+
+## MISTAKE-608 (2026-10-14, opus-2026-10-14-S33 number_tournament_bridges_20261014.md, THM-4644, HYP-9273 and their scripts; found by the session's independent adversarial audit after the pre-audit checkpoint was pushed) -- a published theorem claimed as new, a wrong growth factor, Dickson's theorem stated without its hypothesis, census columns and percentages mislabelled, a pattern miscounted, stale search records, and heuristics written as explanations
+
+- **Claims (pre-audit checkpoint):**
+  - (E1) THM-4644 part 1 "the converse direction is new" (also "New, exact" in the note and "the converse is new" in the hypotheses INDEX). At the multiplier level both directions are E. Akin, *Rock, Paper, Scissors, Etc*, arXiv:1806.11241 (2018), Theorems 3.13-3.14, stated for every odd modulus. Theorem 3.14's construction is also the `2^m` count used in part 2. What is genuinely added is the full-Aut step (Alspach/Burnside, as in THM-871), which answers Akin's own remark that he did not know whether `Aut = Z_p` for every rotational tournament at 17 and the other Fermat primes.
+  - (E4) "the number of `g`-invariant tournaments grows by a factor `p` in the exponent". The unit-orbit count grows by `p`; the exponent `E` grows by `(p+1)/2` (`12 -> 6564`, `2 -> 3512`).
+  - (E5) "Dickson proved that a sociable cycle of odd length `k > 1` cannot be regular". KPP Theorem E assumes gcd `a > 1`; coprime odd cycles are not excluded (KPP's own introduction is equally loose).
+  - (E2) The frustration census column "an odd prime divides every `sigma(n_i)` but not every member" was computed as `odd(Q) not | G`, i.e. an odd prime POWER. At prime level the amicable count is 221, not 229.
+  - (E3) "Members of 2- and 4-cycles: `3 | sigma` 98.5%, `9 | sigma` 93.6%" were the figures for all 535 members of non-trivial cycles. For the 502 members of 2- and 4-cycles they are 99.6% and 97.2%.
+  - (E6) "AADD (8 up to rotation)": 7, since 7 + 1 + 2 = 10 four-cycles.
+  - (I) Smaller items:
+    - "doubling-invariant tournaments on `Z_(p^2)`" is false at 1093, where `-1 in <2>` mod `p^2`;
+    - THM-4631's `<2>`-orbit count was conflated with THM-4644's `<g>`-orbit count;
+    - the Burnside argument lacked the normal-Sylow step;
+    - the sociable data were stale (5398 / 4 / `4.27*10^11`, against Moews' list of 11 September 2026: 5433 four-cycles, five 8-cycles, exhaustive search to `10^14`);
+    - Iannucci-Luca was compared without its `o(1)`;
+    - (A)'s double-flip evidence covers only `k = 2`;
+    - "explains why odd lengths are rare" overstates upper bounds plus a heuristic;
+    - corollary 5 alone does not give a deficient member;
+    - Pollack's sharp form needs `k > 1`;
+    - a codex link pointed to the wrong packet;
+    - the Parts hinge was called a "small certificate" (SAT-solver verdicts on graphs of about 1,000 vertices);
+    - 2 and 3 are Heegner numbers too;
+    - capped cycle walks (latent; the census is unchanged);
+    - incomplete references.
+- **Why it was wrong:**
+  - (E1) the novelty search covered the repository and the amicable and sociable literature but not the regular-tournament literature;
+  - (E4) the factor of an orbit count was carried into the exponent without dividing;
+  - (E5) a paper's informal sentence was copied instead of its theorem;
+  - (E2, E3) a computed quantity was relabelled with a stronger or different description than the code computes;
+  - (E6) a hand tally was not checked against the total;
+  - (I) search records were taken from a secondary table (Wikipedia) rather than the maintained primary list.
+- **Correct framing:**
+  - THM-4644 is an elementary assembly: Akin (multiplier level), plus Alspach/Burnside (full Aut, answering Akin's remark), plus the Wieferich order dichotomy with Akin's count. Its value is the reformulation and the Wieferich count.
+  - `E` grows by `(p+1)/2`.
+  - Dickson needs gcd `> 1`.
+  - The census reports the prime-power column (229 / 9 / 4 / 2) and the prime column (221 / 9 / 4 / 2).
+  - The percentages are relabelled; the `AADD` count is 7.
+  - Moews' list is cited.
+  - The frustration is the mechanism behind proved upper bounds, not an explanation.
+- **What survives:** every computation, reproduced by the referee with independent code:
+  - `E` for `p < 4000`, and brute force on `Z_9`, `Z_25`, `Z_49`;
+  - `H(P_q)` to 23, the circulant and DR15 controls, and `P_27`;
+  - `q = 31 -> 41 (mod 256)` by a different algorithm;
+  - the palindromic counts;
+  - the aliquot census (two sieves; 236 pairs below `10^8`, matching OEIS);
+  - the double flips to `10^9` and the frustration census;
+  - the clique numbers.
+
+  HYP-9273 (A), (B) and (B'), and the pre-registered `q = 31` pass of (B), stand.
+- **Lesson:**
+  - Before calling a tournament or graph statement new, search the regular-tournament and circulant literature as well as the repository.
+  - Divide before reporting a growth factor of an exponent.
+  - Quote a theorem's hypotheses, not a paper's summary sentence.
+  - Label a census column by what the code computes.
+  - Check hand tallies against totals.
+  - Take search records from the maintained primary list.

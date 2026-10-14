@@ -1,0 +1,33 @@
+P_5: clique number 2
+P_13: clique number 3
+P_17: clique number 3
+P_29: clique number 4
+P_37: clique number 4
+P_41: clique number 5
+P_257: clique number 7
+   networkx cross-check P_13: 3
+   networkx cross-check P_17: 3
+   networkx cross-check P_29: 4
+   networkx cross-check P_37: 4
+   networkx cross-check P_41: 5
+primary pseudoperfect (sum 1/p + 1/n = 1) below 60000: [(2, True), (6, True), (42, True), (1806, True), (47058, True)]
+3*5*17*257*65537 = 4294967295, 2^32 - 1 = 4294967295
+F_0 = 3: ord(2) = 2 = 2^1: True; 2^d - 1 = F_0...F_k: True
+F_1 = 5: ord(2) = 4 = 2^2: True; 2^d - 1 = F_0...F_k: True
+F_2 = 17: ord(2) = 8 = 2^3: True; 2^d - 1 = F_0...F_k: True
+F_3 = 257: ord(2) = 16 = 2^4: True; 2^d - 1 = F_0...F_k: True
+F_4 = 65537: ord(2) = 32 = 2^5: True; 2^d - 1 = F_0...F_k: True
+Sylvester: [2, 3, 7, 43, 1807]; 1807 = [(13, 1), (139, 1)]; 3^7 - 2^11 = 139; Heegner numbers among them: [2, 3, 7, 43]; sum of reciprocals 1/2+1/3+1/7+1/43+1/1806 = 1
+(2,3,3): chi = 1/6, 2/chi = 12
+(2,3,4): chi = 1/12, 2/chi = 24
+(2,3,5): chi = 1/30, 2/chi = 60
+(2,3,6): chi = 0
+(2,3,7): chi = -1/42, (2g-2)/|chi| = 84(g-1)
+(2,3,8): chi = -1/24, (2g-2)/|chi| = 48(g-1)
+tau(n) = 4, n < 3000: max sigma(n)/n = 2 at n = 6
+1093 mod 3 = 1, mod 7 = 1, mod 21 = 1; 3511 mod 3 = 1, mod 7 = 4, mod 21 = 4; (p-1) mod 13: 0, 0; C(14,3) = 364; (13-1)! + 1 mod 169 = 0
+1093 mod 4 = 1
+
+real	0m0.886s
+user	0m0.015s
+sys	0m0.015s

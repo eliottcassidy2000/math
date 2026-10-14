@@ -1,0 +1,31 @@
+== B1. H(P_q) by full subset DP over all start vertices; |Aut| by backtracking
+   P_3: H = 3; |Aut| (backtracking) = 3 (affine order 3); H/aff = 1, divisible True, orbit count mod 8 = 1;  1.0 s
+   P_7: H = 189; |Aut| (backtracking) = 21 (affine order 21); H/aff = 9, divisible True, orbit count mod 8 = 1;  0.0 s
+   P_11: H = 95095; |Aut| (backtracking) = 55 (affine order 55); H/aff = 1729, divisible True, orbit count mod 8 = 1;  0.0 s
+   P_19: H = 1172695746915; |Aut| (backtracking) = 171 (affine order 171); H/aff = 6857869865, divisible True, orbit count mod 8 = 1;  0.1 s
+   P_23: H = 15760206976379349; |Aut| (backtracking) = 253 (affine order 253); H/aff = 62293308207033, divisible True, orbit count mod 8 = 1;  2.6 s
+   matches the note: True
+
+== B2. P_27 on F_3[y]/(y^3 + 2y + 1), H mod 256 via uint8 full DP
+   |Aut(P_27)| by backtracking = 1053  (0.0 s)
+   H(P_27) mod 256 = 95;  H/1053 mod 8 = 3;  H/351 mod 8 = 1;  (40 s)
+   author: H mod 8424 = 3159 -> H mod 8 = 7; consistent with ours: True
+
+== B3. all circulant tournaments on Z_p: residues of H/|Aut| mod 8, |Aut| by backtracking (no Alspach)
+   p =  3: residues {1: 2};  |Aut| distribution {3: 2};  backtracking |Aut| = p |M| for all: True;  0 s
+   p =  5: residues {3: 4};  |Aut| distribution {5: 4};  backtracking |Aut| = p |M| for all: True;  0 s
+   p =  7: residues {1: 8};  |Aut| distribution {7: 6, 21: 2};  backtracking |Aut| = p |M| for all: True;  0 s
+   p = 11: residues {1: 32};  |Aut| distribution {11: 30, 55: 2};  backtracking |Aut| = p |M| for all: True;  0 s
+   p = 13: residues {1: 12, 3: 12, 5: 28, 7: 12};  |Aut| distribution {13: 60, 39: 4};  backtracking |Aut| = p |M| for all: True;  0 s
+   p = 17: residues {1: 112, 3: 32, 5: 64, 7: 48};  |Aut| distribution {17: 256};  backtracking |Aut| = p |M| for all: True;  6 s
+   p = 19: residues {1: 128, 3: 126, 5: 96, 7: 162};  |Aut| distribution {19: 504, 57: 6, 171: 2};  backtracking |Aut| = p |M| for all: True;  59 s
+
+== B4. doubly regular tournament of order 15
+   scores [7], common out-neighbours of distinct pairs {3} (doubly regular iff {3})
+   H = 198335025; |Aut| (backtracking) = 21; H/|Aut| = 9444525, mod 8 = 5;  0.0 s
+
+(total 110 s)
+
+real	1m50.153s
+user	0m0.031s
+sys	0m0.031s

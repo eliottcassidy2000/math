@@ -1,4 +1,4 @@
-aliquot sieve to 1e+08 in 12.9 s
+aliquot sieve to 1e+08 in 12.7 s
 cycles with all members <= N: 248;  by length: [(1, 5), (2, 231), (4, 10), (5, 1), (28, 1)]
 mixed-parity cycles: 0;  cycles with a member in squares or twice squares: 0;  all-odd cycles: 54
    length 28: min member 14316, parity even, members [376736, 381028, 285778, 152990, 122410, 97946] ...
@@ -28,7 +28,7 @@ every cycle satisfies sum sigma(n_i) = 2 sum n_i: True
 
 double flips: odd a <= 1e+09 with s(a^2) a square or twice a square
    spf sieve in 12.1 s
-   4476 odd a found in 32.6 s
+   4476 odd a found in 32.2 s
    by type of a: prime 4458 (then s(a^2) = a + 1, far below a^2), prime power 1, two or more primes 17
    ratio s(a^2)/a^2 over all double flips: max 0.8299 (amicability needs sigma(m)/m = 1 + a^2/m, so m must be comparable to a^2)
    a =         49 = {7: 2}: s(a^2) = 400 (square), s/a^2 = 0.1666;  sigma(m) = sigma(a^2)? False

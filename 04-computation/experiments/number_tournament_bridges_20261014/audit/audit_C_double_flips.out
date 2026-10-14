@@ -1,0 +1,42 @@
+scan of odd a <= 1e+09: 13 s; max sigma(a^2)/a^2 over odd a <= A: 3.00579
+prod_(3<=p<=23) p/(p-1) = 3.05646;  3*5*7*11*13*17*19*23 = 111546435, *29 = 3234846615; bound * 1e18 = 3.056e+18 < 2^63 = 9.223e+18
+double flips: 4476
+any amicable closure sigma(m) = sigma(a^2): []
+   a <= 10^1: 2 double flips, 0 composite
+   a <= 10^2: 7 double flips, 1 composite
+   a <= 10^3: 17 double flips, 2 composite
+   a <= 10^4: 39 double flips, 3 composite
+   a <= 10^5: 95 double flips, 6 composite
+   a <= 10^6: 242 double flips, 13 composite
+   a <= 10^7: 607 double flips, 15 composite
+   a <= 10^8: 1634 double flips, 17 composite
+   a <= 10^9: 4476 double flips, 18 composite
+prime double flips: 4458; all of the form a = 2b^2 - 1 or a = 3: True; all with s(a^2) = a + 1: True
+independent count: primes 2b^2 - 1 <= A plus a = 3: 4458
+composite double flips (18):
+   a = 49 = {7: 2}: s(a^2) = 400 (square), ratio 0.1666, primes p | a with p + 1 = 2b^2: [7]
+   a = 287 = {7: 1, 41: 1}: s(a^2) = 15842 (twice a square), ratio 0.1923, primes p | a with p + 1 = 2b^2: [7]
+   a = 4081 = {7: 1, 11: 1, 53: 1}: s(a^2) = 5049842 (twice a square), ratio 0.3032, primes p | a with p + 1 = 2b^2: [7]
+   a = 29039 = {71: 1, 409: 1}: s(a^2) = 14140562 (twice a square), ratio 0.0168, primes p | a with p + 1 = 2b^2: [71]
+   a = 35713 = {71: 1, 503: 1}: s(a^2) = 20793600 (square), ratio 0.0163, primes p | a with p + 1 = 2b^2: [71]
+   a = 82169 = {127: 1, 647: 1}: s(a^2) = 64116488 (twice a square), ratio 0.0095, primes p | a with p + 1 = 2b^2: [127, 647]
+   a = 102851 = {7: 2, 2099: 1}: s(a^2) = 1768202500 (square), ratio 0.1672, primes p | a with p + 1 = 2b^2: [7]
+   a = 122783 = {199: 1, 617: 1}: s(a^2) = 100734818 (twice a square), ratio 0.0067, primes p | a with p + 1 = 2b^2: [199]
+   a = 240761 = {71: 1, 3391: 1}: s(a^2) = 845262728 (twice a square), ratio 0.0146, primes p | a with p + 1 = 2b^2: [71]
+   a = 323129 = {311: 1, 1039: 1}: s(a^2) = 437724872 (twice a square), ratio 0.0042, primes p | a with p + 1 = 2b^2: []
+   a = 383233 = {409: 1, 937: 1}: s(a^2) = 517261448 (twice a square), ratio 0.0035, primes p | a with p + 1 = 2b^2: []
+   a = 560953 = {167: 1, 3359: 1}: s(a^2) = 1989795528 (twice a square), ratio 0.0063, primes p | a with p + 1 = 2b^2: []
+   a = 984799 = {167: 1, 5897: 1}: s(a^2) = 6007614498 (twice a square), ratio 0.0062, primes p | a with p + 1 = 2b^2: []
+   a = 2319983 = {449: 1, 5167: 1}: s(a^2) = 13058249618 (twice a square), ratio 0.0024, primes p | a with p + 1 = 2b^2: [449]
+   a = 3849247 = {311: 1, 12377: 1}: s(a^2) = 48996394722 (twice a square), ratio 0.0033, primes p | a with p + 1 = 2b^2: []
+   a = 10171279 = {2633: 1, 3863: 1}: s(a^2) = 66104661618 (twice a square), ratio 0.0006, primes p | a with p + 1 = 2b^2: []
+   a = 21852991 = {3863: 1, 5657: 1}: s(a^2) = 208109261250 (twice a square), ratio 0.0004, primes p | a with p + 1 = 2b^2: []
+   a = 949818597 = {3: 1, 7: 2, 13: 1, 601: 1, 827: 1}: s(a^2) = 748727251356672900 (square), ratio 0.8299, primes p | a with p + 1 = 2b^2: [7]
+composite double flips having a prime factor p with p + 1 = 2 b^2: 11 of 18
+max ratio s(a^2)/a^2 over all double flips: 0.8299 at a = 949818597 = {3: 1, 7: 2, 13: 1, 601: 1, 827: 1}
+p = 71 twice-square conic: (t, q) with q = (2t^2 - 5113)/(5113 - 24t) a positive integer: [(205, 409), (212, 3391), (213, 85625)]; primes among q: [409, 3391]; 85625 = {5: 4, 137: 1}
+direct check over primes q < 40000: s(71^2 q^2) twice a square for q in [409, 3391]
+
+real	0m16.797s
+user	0m0.046s
+sys	0m0.015s

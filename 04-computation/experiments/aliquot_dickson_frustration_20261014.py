@@ -47,8 +47,10 @@ def sigma_sieve(N):
 
 @nb.njit(cache=True)
 def find_cycles(N, s, out, lens):
+    # walks are followed without a step cap (audit I14: a capped walk marked done could hide a long-entry cycle);
+    # the path buffer has N + 1 slots, which no walk inside [1, N] can exceed
     state = np.zeros(N + 1, dtype=np.int8)      # 0 unvisited, 1 on current path, 2 done
-    path = np.zeros(1000, dtype=np.int64)
+    path = np.zeros(N + 1, dtype=np.int64)
     nc = 0
     pos = 0
     for n0 in range(1, N + 1):
@@ -56,7 +58,7 @@ def find_cycles(N, s, out, lens):
             continue
         k = 0
         x = n0
-        while x >= 1 and x <= N and state[x] == 0 and k < 1000:
+        while x >= 1 and x <= N and state[x] == 0:
             state[x] = 1
             path[k] = x
             k += 1
@@ -115,8 +117,9 @@ def analyse(cyc):
         ok = (Qo != 0 and G % Qo == 0) and ((2 * G) % Q == 0)
     else:
         ok = all((cyc[i] - (-1) ** i * cyc[0]) % Q == 0 for i in range(k))
-    excess = Qo // math.gcd(Qo, G)               # part of odd(Q) not dividing the members
-    return dict(k=k, G=G, regular=regular, Q=Q, Qodd=Qo, excess=excess, ok=ok,
+    excess = Qo // math.gcd(Qo, G)               # odd prime POWER part of Q not dividing the members (audit E2)
+    prime_excess = [pp for pp in sympy.factorint(Qo) if G % pp != 0] if Qo > 1 else []   # odd PRIMES of Q not dividing G
+    return dict(k=k, G=G, regular=regular, Q=Q, Qodd=Qo, excess=excess, prime_excess=prime_excess, ok=ok,
                 parity='even' if cyc[0] % 2 == 0 else 'odd')
 
 
@@ -166,8 +169,10 @@ def main():
             continue
         exc = Counter(r['excess'] for r in rs)
         big = sum(1 for r in rs if r['excess'] > 1)
+        bigp = sum(1 for r in rs if r['prime_excess'])
         print(f'   k = {k:2d}: {len(rs):3d} cycles; regular (gcd unitary in every member) {nreg}, irregular {len(rs) - nreg};'
-              f'  odd part of gcd(sigma) not dividing the members (impossible for odd k): {big} of {len(rs)} cycles'
+              f'  odd prime POWER of gcd(sigma) not dividing the members [odd(Q) not | G] (impossible for odd k): {big} of {len(rs)};'
+              f'  odd PRIME of gcd(sigma) not dividing the members: {bigp} of {len(rs)}'
               + (f'; values {sorted(exc.items())[:8]}' if k > 2 else ''))
         if k % 2 == 1:
             check(f'odd k={k} irregular', nreg == 0)
@@ -184,11 +189,14 @@ def main():
     print('\n== how often q | sigma(n): cycle members vs all n <= N (sigma(n) = s(n) + n)')
     idx = np.arange(N + 1, dtype=np.int64)
     sig_all = s + idx
-    mem = sorted({v for c in cycles for v in c if c and len(c) > 1})
+    mem_all = sorted({v for c in cycles for v in c if len(c) > 1})          # all non-trivial cycles (lengths 2, 4, 5, 28)
+    mem_24 = sorted({v for c in cycles for v in c if len(c) in (2, 4)})     # 2- and 4-cycles only (audit E3)
+    print(f'   populations: all n <= N; {len(mem_24)} members of 2- and 4-cycles; {len(mem_all)} members of all non-trivial cycles')
     for q in (3, 4, 5, 7, 8, 9, 12, 24):
         frac_all = float(np.mean(sig_all[2:] % q == 0))
-        frac_mem = float(np.mean([(s[v] + v) % q == 0 for v in mem]))
-        print(f'   q = {q:2d}: all n {frac_all:.4f}, members of 2- and 4-cycles {frac_mem:.4f}')
+        frac_24 = float(np.mean([(s[v] + v) % q == 0 for v in mem_24]))
+        frac_nt = float(np.mean([(s[v] + v) % q == 0 for v in mem_all]))
+        print(f'   q = {q:2d}: all n {frac_all:.4f}, members of 2- and 4-cycles {frac_24:.4f}, members of all non-trivial cycles {frac_nt:.4f}')
 
     # double flips by decade (from the census JSON)
     print('\n== double flips by decade (odd a with s(a^2) in squares or twice squares), census JSON')

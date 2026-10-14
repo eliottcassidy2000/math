@@ -1,0 +1,11 @@
+Paley orbit counts N_1 = H(P_q)/|Aff| modulo 256 (paths starting with the arc 0 -> 1)
+   q =  3: N_1 =   1 (mod 256), 1 mod 8;    [0.3 s]
+   q =  7: N_1 =   9 (mod 256), 1 mod 8;  exact 9 = 9 mod 256: True  [0.0 s]
+   q = 11: N_1 = 193 (mod 256), 1 mod 8;  exact 1729 = 193 mod 256: True  [0.0 s]
+   q = 19: N_1 =  41 (mod 256), 1 mod 8;  exact 6857869865 = 41 mod 256: True  [0.0 s]
+   q = 23: N_1 = 185 (mod 256), 1 mod 8;  exact 62293308207033 = 185 mod 256: True  [0.3 s]
+   q = 27 (GF(27)): N_1 = H/351 =   1 (mod 256), 1 mod 8 (earlier: 1 mod 8): True  [5.8 s]
+   q = 31: N_1 = H(P_31)/465 =  41 (mod 256), 1 mod 8;  HYP-9273 (B) at q = 31: HOLDS  [138.1 s]
+
+FAILED CHECKS: none
+ALL CHECKS PASSED

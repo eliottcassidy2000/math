@@ -25,8 +25,10 @@ def sigma_sieve(N):
 
 @nb.njit(cache=True)
 def find_cycles(N, s, out, lens):
+    # walks are followed without a step cap (audit I14: a capped walk marked done could hide a long-entry cycle);
+    # the path buffer has N + 1 slots, which no walk inside [1, N] can exceed
     state = np.zeros(N + 1, dtype=np.int8)      # 0 unvisited, 1 on current path, 2 done
-    path = np.zeros(1000, dtype=np.int64)
+    path = np.zeros(N + 1, dtype=np.int64)
     nc = 0
     pos = 0
     for n0 in range(1, N + 1):
@@ -34,7 +36,7 @@ def find_cycles(N, s, out, lens):
             continue
         k = 0
         x = n0
-        while x >= 1 and x <= N and state[x] == 0 and k < 1000:
+        while x >= 1 and x <= N and state[x] == 0:
             state[x] = 1
             path[k] = x
             k += 1

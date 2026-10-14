@@ -1,0 +1,36 @@
+== A1. exponent E for every odd prime p < 4000 (explicit orbit decomposition on Z_(p^2) \ {0})
+   p =     3: ord_p(2) = 2, d' = 1, ord_(p^2)(g) = 3, E = 2 (non-Wieferich value 2), Wieferich False
+   p =     5: ord_p(2) = 4, d' = 1, ord_(p^2)(g) = 5, E = 4 (non-Wieferich value 4), Wieferich False
+   p =     7: ord_p(2) = 3, d' = 3, ord_(p^2)(g) = 21, E = 2 (non-Wieferich value 2), Wieferich False
+   p =    31: ord_p(2) = 5, d' = 5, ord_(p^2)(g) = 155, E = 6 (non-Wieferich value 6), Wieferich False
+   p =   127: ord_p(2) = 7, d' = 7, ord_(p^2)(g) = 889, E = 18 (non-Wieferich value 18), Wieferich False
+   p =  1093: ord_p(2) = 364, d' = 91, ord_(p^2)(g) = 91, E = 6564 (non-Wieferich value 12), Wieferich True
+   p =  3511: ord_p(2) = 1755, d' = 1755, ord_(p^2)(g) = 1755, E = 3512 (non-Wieferich value 2), Wieferich True
+   primes p < 4000 where E differs from (p-1)/d': [(1093, 6564, 12, True), (3511, 3512, 2, True)]
+   anomalies (orbit closed under negation / odd N / formula mismatch / even order): []
+
+== A2. brute force: g-invariant circulant tournaments on Z_n (all connection sets enumerated)
+   Z_ 9, base 2: g = 2^2 = 4: ord_(p^2)(g) = 3, ord_p(g) = 1; invariant tournaments (brute force) = 4, orbit formula 2^(N/2) = 4;  match True;  0.1 s
+   Z_25, base 2: g = 2^4 = 16: ord_(p^2)(g) = 5, ord_p(g) = 1; invariant tournaments (brute force) = 16, orbit formula 2^(N/2) = 16;  match True;  0.0 s
+   Z_49, base 2: g = 2: ord_(p^2)(g) = 21, ord_p(g) = 3; invariant tournaments (brute force) = 4, orbit formula 2^(N/2) = 4;  match True;  0.2 s
+   Z_49, Wieferich-regime analogue: g = 18, 18^3 = 1 mod 49: ord_(p^2)(g) = 3, ord_p(g) = 3; invariant tournaments (brute force) = 256, orbit formula 2^(N/2) = 256;  match True;  0.3 s
+   Z_25, base 7 (7^4 = 1 mod 25): g = 7^4 mod 25 = 1: ord_(p^2)(g) = 1, ord_p(g) = 1; invariant tournaments (brute force) = 4096, orbit formula 2^(N/2) = 4096;  match True;  0.0 s
+
+== A3. orders
+   ord_3511(2) = 1755; (3511-1)/2 = 1755; 3511 mod 4 = 3, mod 8 = 7
+   ord_1093(2) = 364; ord_1093(3) = 7; (3^7-1)/2 = 1093
+   2^1092 mod 1093^2 = 1; 2^3510 mod 3511^2 = 1
+   p = 1093: <2>-orbits on units: level 1 3, level 2 3279;  <g>-orbits on units: level 1 12, level 2 13116
+   p = 3511: <2>-orbits on units: level 1 2, level 2 7022;  <g>-orbits on units: level 1 2, level 2 7022
+
+== A4. rigidity of circulant tournaments of prime order
+   p =  3: brute-force |Aut| over all 2 circulant tournaments: {3: 2}
+   p =  5: brute-force |Aut| over all 4 circulant tournaments: {5: 4}
+   p =  7: brute-force |Aut| over all 8 circulant tournaments: {7: 6, 21: 2}
+   p = 11: brute-force |Aut| over all 32 circulant tournaments: {11: 30, 55: 2}
+   p = 13: brute-force |Aut| over all 64 circulant tournaments: {13: 60, 39: 4}
+   p = 17: brute-force |Aut| over all 256 circulant tournaments: {17: 256}
+   primes p <= 31 at which every circulant tournament has trivial multiplier stabilizer: [3, 5, 17]
+   rotational classes at Fermat primes 2^((p-1)/2)/(p-1): {3: 1, 5: 1, 17: 16, 257: '2^120', 65537: '2^32752'}
+
+(total 105 s)

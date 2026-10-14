@@ -1,0 +1,20 @@
+N_1(P_7) mod 256 = 9; exact orbit count mod 256 = 9; match True  (0.3 s)
+N_1(P_11) mod 256 = 193; exact orbit count mod 256 = 193; match True  (0.0 s)
+N_1(P_19) mod 256 = 41; exact orbit count mod 256 = 41; match True  (0.0 s)
+N_1(P_23) mod 256 = 185; exact orbit count mod 256 = 185; match True  (0.1 s)
+N_1(P_27) mod 256 = 1; referee full DP: H mod 256 = 95, H/351 mod 256 = 1; match True  (2.1 s)
+N_1(P_31) = H(P_31)/465 mod 256 = 41  (mod 8: 1)  (40 s)
+q = 3: pal = 1 (mod 4: 1), P = 2 pal/(q-1) = 1 (exact division True), P mod 8 = 1; F = (H/|Aff| - P)/2 = 0 (integer True)
+q = 7: pal = 9 (mod 4: 1), P = 2 pal/(q-1) = 3 (exact division True), P mod 8 = 3; F = (H/|Aff| - P)/2 = 3 (integer True)
+q = 11: pal = 185 (mod 4: 1), P = 2 pal/(q-1) = 37 (exact division True), P mod 8 = 5; F = (H/|Aff| - P)/2 = 846 (integer True)
+q = 19: pal = 573057 (mod 4: 1), P = 2 pal/(q-1) = 63673 (exact division True), P mod 8 = 1; F = (H/|Aff| - P)/2 = 3428903096 (integer True)
+q = 23: pal = 63871533 (mod 4: 1), P = 2 pal/(q-1) = 5806503 (exact division True), P mod 8 = 7; F = (H/|Aff| - P)/2 = 31146651200265 (integer True)
+q = 31: pal = 2108041228485 (mod 4: 1), P = 2 pal/(q-1) = 140536081899 (exact division True), P mod 8 = 3
+brute force q = 7: H = 189, palindromic = 9
+brute force q = 11: H = 95095, palindromic = 185
+q = 43: pal mod 172032 = 143157 (mod 4: 1); P = pal/((q-1)/2) mod 8 = 1  (8 s)
+q = 47: pal mod 188416 = 36777 (mod 4: 1); P = pal/((q-1)/2) mod 8 = 7  (37 s)
+
+real	1m28.826s
+user	0m0.030s
+sys	0m0.015s

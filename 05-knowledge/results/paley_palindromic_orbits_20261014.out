@@ -1,0 +1,13 @@
+Paley tournaments P_q, q prime = 3 mod 4:  H/|Aff| = 2F + P,  P = 2 pal/(q-1)
+   q =  3: pal = 1, P = 1 (P mod 8 = 1), H/|Aff| = 1 = 2F + P with F = 0: True;  F mod 4 = 0, orbit mod 8 = 1   [0.8 s]
+   q =  7: pal = 9, P = 3 (P mod 8 = 3), H/|Aff| = 9 = 2F + P with F = 3: True;  F mod 4 = 3, orbit mod 8 = 1   [0.0 s]
+   q = 11: pal = 185, P = 37 (P mod 8 = 5), H/|Aff| = 1729 = 2F + P with F = 846: True;  F mod 4 = 2, orbit mod 8 = 1   [0.0 s]
+   q = 19: pal = 573057, P = 63673 (P mod 8 = 1), H/|Aff| = 6857869865 = 2F + P with F = 3428903096: True;  F mod 4 = 0, orbit mod 8 = 1   [0.0 s]
+   q = 23: pal = 63871533, P = 5806503 (P mod 8 = 7), H/|Aff| = 62293308207033 = 2F + P with F = 31146651200265: True;  F mod 4 = 1, orbit mod 8 = 1   [0.0 s]
+   q = 31: pal = 2108041228485, P = 140536081899 (P mod 8 = 3);  HYP-9273 (B) at q = 31 <=> 2F + P = 1 (mod 8) <=> F = 3 (mod 4)   [0.1 s]
+   q = 43: pal = 143157 (mod 172032), P = ? (P mod 8 = 1);  HYP-9273 (B) at q = 43 <=> 2F + P = 1 (mod 8) <=> F = 0 (mod 4)   [8.1 s]
+   q = 47: pal = 36777 (mod 188416), P = ? (P mod 8 = 7);  HYP-9273 (B) at q = 47 <=> 2F + P = 1 (mod 8) <=> F = 1 (mod 4)   [36.7 s]
+   (THM-582 lists 1, 9, 185 palindromic paths for q = 3, 7, 11)
+
+FAILED CHECKS: none
+ALL CHECKS PASSED
