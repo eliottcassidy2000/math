@@ -1,0 +1,30 @@
+{
+  "compressed_trace_in_git": false,
+  "cross_edges": 30,
+  "edges": 5892,
+  "exact_all_pair_agreement": true,
+  "full_pair_count": 590241,
+  "galois_tag_swap_checked": true,
+  "internal_edges": 5862,
+  "native_proof_checked": false,
+  "rational_component_candidates": 6060,
+  "scope": "Exact geometry and SAT witnesses verified; UNSAT remains solver-reported, native trace unchecked.",
+  "six_ray_formulas_checked": true,
+  "standalone_cnf_clauses": 24634,
+  "standalone_cnf_variables": 4348,
+  "tag_counts": [
+    6,
+    6,
+    18
+  ],
+  "two_tag_verdicts": {
+    "minus_plus": "UNSAT_SOLVER_VERDICT",
+    "plus_minus": "UNSAT_SOLVER_VERDICT"
+  },
+  "verified_sat_cases": [
+    "internal_only",
+    "radius_four_control"
+  ],
+  "verified_single_edge_deletions_per_additional_tag": 6,
+  "vertices": 1087
+}
