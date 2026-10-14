@@ -1,0 +1,42 @@
+== Part A: races and Skewes to N_A = 1e+10
+   sweep done in 62.2 s
+   pi(N_A) = 455052511 (table: 455052511: True);  pi(N;4,1) = 227523275, pi(N;4,3) = 227529235;  pi(N;3,1) = 227523123, pi(N;3,2) = 227529387
+   maximal runs of primes with pi(x;4,1) > pi(x;4,3), x <= N_A: 3427
+     run from prime 26861 to (first prime with the lead lost) 26863;  max lead 1;  at the entry pi(x;4,1) = 1473, pi(x;4,3) = 1472
+     run from prime 616841 to (first prime with the lead lost) 616843;  max lead 1;  at the entry pi(x;4,1) = 25189, pi(x;4,3) = 25188
+     run from prime 616849 to (first prime with the lead lost) 616871;  max lead 1;  at the entry pi(x;4,1) = 25190, pi(x;4,3) = 25189
+   excursions (runs merged when closer than 1% of x): 5
+     excursion 26861 .. 26863:  1 runs, max lead 1
+     excursion 616841 .. 633799:  52 runs, max lead 8
+     excursion 12306137 .. 12382327:  75 runs, max lead 24
+     excursion 951784481 .. 952223491:  182 runs, max lead 48
+     excursion 6309280709 .. 6403150199:  3117 runs, max lead 1374
+   regions with pi(x;3,1) > pi(x;3,2), x <= N_A: 0  (Bays-Hudson: the first is at 608981813029 > N_A)
+   max over primes 3 <= p <= N_A of pi(p) - li(p): -0.1649 at p = 3  (negative: pi(x) < li(x) throughout; Skewes)
+   exact (mpmath) min over primes p <= 10^5 of li(p) - pi(p): 0.045164  (> 0) True
+
+   log-grid statistics on [10^3, 10^10] (step 1e-3 in log x; mean = logarithmic average):
+     E4 = race mod 4 (primes only)                 mean +1.1745  sd 0.3990  share > 0: 0.99857  grid sign changes: 15
+     E4 corrected (prime powers, weight 1/k)       mean +0.0203  sd 0.3967  share > 0: 0.53366  grid sign changes: 1070
+     E3 = race mod 3 (primes only)                 mean +1.1857  sd 0.3410  share > 0: 1.00000  grid sign changes: 0
+     E3 corrected                                  mean +0.0405  sd 0.3435  share > 0: 0.53694  grid sign changes: 1106
+     Skewes S = pi - li                            mean -1.4146  sd 0.3348  share > 0: 0.00000  grid sign changes: 0
+     Skewes corrected Pi - li                      mean -0.0231  sd 0.2188  share > 0: 0.45896  grid sign changes: 1671
+     (prime-square term alone: (log x/sqrt x) * corr_4(x) at x = 10^10 = 1.1079 ; at 10^6 = 1.1843 )
+     log-mean of the prime-power term alone: mod 4 +1.1542, mod 3 +1.1451, Skewes +1.3915  (= uncorrected mean - corrected mean, by construction; > 1 at finite x: (1/2)pi(sqrt x) log x/sqrt x = 1 + 2/log x + ...)
+
+   x = 26861: pi(x;4,1) = 1473, pi(x;4,3) = 1472;  odd prime squares <= x: 37 (largest 163^2 = 26569);  sqrt(x)/log x = 16.07
+   primes p < 26861 at which pi(p;4,1) = pi(p;4,3) (ties; class 3 leads at every other prime >= 3): [5, 17, 41, 461, 26833, 26849]
+
+== Part B: Liouville and Mertens to N_B = 1e+09
+   sweep done in 40.1 s
+   L(N_B) = -25216, M(N_B) = -222
+   first n >= 2 with L(n) > 0: 906150257 (Tanaka 1980: 906150257) True ;  the first run ends at n = 906150294 (first n with L(n) <= 0 again);  max L over n <= N_B: 829 at n = 906316571;  runs with L > 0: 136
+     excursion of L > 0: 906150257 .. 906488080 (136 runs), max L = 829 at n = 906316571
+   max |M(x)|/sqrt x on [10^4, 10^9]: 0.464162 at x = 179919749;  L(x)/sqrt x ranges over [-1.3583, 0.0275]
+   log-averages on [10^4, 10^9]: L(x)/sqrt x -0.6813 (1/zeta(1/2) = -0.6848);  M(x)/sqrt x -0.0021 (0 expected)
+   share of the log-grid with L(x) > 0: 0.000000;  with |M(x)| > sqrt x: 0.000000
+
+FAILED CHECKS: none
+ALL CHECKS PASSED
+total time 102.7 s

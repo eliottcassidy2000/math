@@ -1,0 +1,274 @@
+== 1. Exact law of T_s^k(n) mod p (n uniform mod p 2^k) against the closed form
+   p =  3, s = +1: brute force = formula for k <= 12: True;  ord_p 2 = 2;  limit law 2: 2/3, 1: 1/3  [support = all units: 2 is a primitive root]
+   p =  3, s = -1: brute force = formula for k <= 12: True;  ord_p 2 = 2;  limit law 1: 2/3, 2: 1/3  [support = all units: 2 is a primitive root]
+   p =  5, s = +1: brute force = formula for k <= 12: True;  ord_p 2 = 4;  limit law 3: 8/15, 4: 4/15, 2: 2/15, 1: 1/15  [support = all units: 2 is a primitive root]
+   p =  5, s = -1: brute force = formula for k <= 12: True;  ord_p 2 = 4;  limit law 2: 8/15, 1: 4/15, 3: 2/15, 4: 1/15  [support = all units: 2 is a primitive root]
+   p =  7, s = +1: brute force = formula for k <= 12: True;  ord_p 2 = 3;  limit law 4: 4/7, 2: 2/7, 1: 1/7  [support = the quadratic residues]
+   p =  7, s = -1: brute force = formula for k <= 12: True;  ord_p 2 = 3;  limit law 3: 4/7, 5: 2/7, 6: 1/7  [support = the non-residues]
+   p = 11, s = +1: brute force = formula for k <= 12: True;  ord_p 2 = 10;  limit law 6: 512/1023, 3: 256/1023, 7: 128/1023, 9: 64/1023, 10: 32/1023, 5: 16/1023, 8: 8/1023, 4: 4/1023, 2: 2/1023, 1: 1/1023  [support = all units: 2 is a primitive root]
+   p = 11, s = -1: brute force = formula for k <= 12: True;  ord_p 2 = 10;  limit law 5: 512/1023, 8: 256/1023, 4: 128/1023, 2: 64/1023, 1: 32/1023, 6: 16/1023, 3: 8/1023, 7: 4/1023, 9: 2/1023, 10: 1/1023  [support = all units: 2 is a primitive root]
+   p = 13, s = +1: brute force = formula for k <= 12: True;  ord_p 2 = 12;  limit law 7: 2048/4095, 10: 1024/4095, 5: 512/4095, 9: 256/4095, 11: 128/4095, 12: 64/4095, 6: 32/4095, 3: 16/4095, 8: 8/4095, 4: 4/4095, 2: 2/4095, 1: 1/4095  [support = all units: 2 is a primitive root]
+   p = 13, s = -1: brute force = formula for k <= 12: True;  ord_p 2 = 12;  limit law 6: 2048/4095, 3: 1024/4095, 8: 512/4095, 4: 256/4095, 2: 128/4095, 1: 64/4095, 7: 32/4095, 10: 16/4095, 5: 8/4095, 9: 4/4095, 11: 2/4095, 12: 1/4095  [support = all units: 2 is a primitive root]
+   p = 17, s = +1: brute force = formula for k <= 12: True;  ord_p 2 = 8;  limit law 9: 128/255, 13: 64/255, 15: 32/255, 16: 16/255, 8: 8/255, 4: 4/255, 2: 2/255, 1: 1/255  [support = the quadratic residues]
+   p = 17, s = -1: brute force = formula for k <= 12: True;  ord_p 2 = 8;  limit law 8: 128/255, 4: 64/255, 2: 32/255, 1: 16/255, 9: 8/255, 13: 4/255, 15: 2/255, 16: 1/255  [support = the quadratic residues]
+   p = 23, s = +1: brute force = formula for k <= 12: True;  ord_p 2 = 11;  limit law 12: 1024/2047, 6: 512/2047, 3: 256/2047, 13: 128/2047, 18: 64/2047, 9: 32/2047, 16: 16/2047, 8: 8/2047, 4: 4/2047, 2: 2/2047, 1: 1/2047  [support = the quadratic residues]
+   p = 23, s = -1: brute force = formula for k <= 12: True;  ord_p 2 = 11;  limit law 11: 1024/2047, 17: 512/2047, 20: 256/2047, 10: 128/2047, 5: 64/2047, 14: 32/2047, 7: 16/2047, 15: 8/2047, 19: 4/2047, 21: 2/2047, 22: 1/2047  [support = the non-residues]
+   p = 31, s = +1: brute force = formula for k <= 12: True;  ord_p 2 = 5;  limit law 16: 16/31, 8: 8/31, 4: 4/31, 2: 2/31, 1: 1/31
+   p = 31, s = -1: brute force = formula for k <= 12: True;  ord_p 2 = 5;  limit law 15: 16/31, 23: 8/31, 27: 4/31, 29: 2/31, 30: 1/31
+   p = 3 reading: T_+ visits class 2 with frequency 2/3 and class 1 with 1/3; T_- the reverse; class 0 never after the first odd step.
+
+== 2. The Syracuse map n -> (3n+1)/2^v on odd n: law mod 3
+   v <=  4: classes (0, 1, 2): [np.int64(0), np.int64(15), np.int64(30)] of 45 (+3 with v > 4);  share of class 2: 2/3 = 0.666667
+   v <=  8: classes (0, 1, 2): [np.int64(0), np.int64(255), np.int64(510)] of 765 (+3 with v > 8);  share of class 2: 2/3 = 0.666667
+   v <= 12: classes (0, 1, 2): [np.int64(0), np.int64(4095), np.int64(8190)] of 12285 (+3 with v > 12);  share of class 2: 2/3 = 0.666667
+   v <= 16: classes (0, 1, 2): [np.int64(0), np.int64(65535), np.int64(131070)] of 196605 (+3 with v > 16);  share of class 2: 2/3 = 0.666667
+
+== 3. The 3-adic visit law of T_+: stationary law of the fair-coin chain mod 3^m
+   mod 3 (exact): 1: 1/3, 2: 2/3
+   mod 9 (exact): 1: 8/63, 2: 16/63, 4: 11/63, 5: 4/63, 7: 2/63, 8: 22/63
+   mod 3^1: support 2 of 3;  entropy of the new digit 0.5794 (log 3 = 1);  top digit given the lower ones: mass-weighted L1 deviation 0.6667, worst 0.6667
+   mod 3^2: support 6 of 9;  entropy of the new digit 0.8468 (log 3 = 1);  top digit given the lower ones: mass-weighted L1 deviation 0.4762, worst 0.4762
+   mod 3^3: support 18 of 27;  entropy of the new digit 0.8981 (log 3 = 1);  top digit given the lower ones: mass-weighted L1 deviation 0.4057, worst 0.4377
+   mod 3^4: support 54 of 81;  entropy of the new digit 0.9258 (log 3 = 1);  top digit given the lower ones: mass-weighted L1 deviation 0.3425, worst 0.4276
+   mod 3^5: support 162 of 243;  entropy of the new digit 0.9437 (log 3 = 1);  top digit given the lower ones: mass-weighted L1 deviation 0.2972, worst 0.4216
+   mod 3^6: support 486 of 729;  entropy of the new digit 0.9552 (log 3 = 1);  top digit given the lower ones: mass-weighted L1 deviation 0.2627, worst 0.4186
+   mod 3^7: support 1458 of 2187;  entropy of the new digit 0.9635 (log 3 = 1);  top digit given the lower ones: mass-weighted L1 deviation 0.2349, worst 0.4164
+   mod 3^8: support 4374 of 6561;  entropy of the new digit 0.9695 (log 3 = 1);  top digit given the lower ones: mass-weighted L1 deviation 0.2127, worst 0.4154
+   mod 3^9: support 13122 of 19683;  entropy of the new digit 0.9742 (log 3 = 1);  top digit given the lower ones: mass-weighted L1 deviation 0.1942, worst 0.4147
+   reading: biased at the coarse 3-adic scale (1/3 : 2/3 mod 3); finer digits approach uniformity on average (conditional entropy rises toward 1, the mean deviation decays slowly), not at every residue (the worst stays near 0.41)
+
+== 4. Visit counts mod 3 along actual trajectories, n <= 10^7
+   T_+ (3x+1), until 1 or 2: all visits (0,1,2) shares 0.00324, 0.32759, 0.66917;  after the first odd step: 0.000000, 0.32753, 0.67247  (1017278548 visits)
+   T_- (3x-1), until a cycle element: all visits (0,1,2) shares 0.00407, 0.66278, 0.33315;  after the first odd step: 0.000000, 0.66685, 0.33315  (809232284 visits)
+
+== 5. Backward tree of T_+ from 1 (preimages 2n, and (2n-1)/3 when n = 2 mod 3): layer counts by class mod 3
+   depth  5:        3 nodes, classes (0,1,2) = [1, 1, 1], shares 0.3333 0.3333 0.3333;  (c1 - c2)/size = +0.00000
+   depth 10:       12 nodes, classes (0,1,2) = [2, 4, 6], shares 0.1667 0.3333 0.5000;  (c1 - c2)/size = -0.16667
+   depth 20:      211 nodes, classes (0,1,2) = [67, 73, 71], shares 0.3175 0.3460 0.3365;  (c1 - c2)/size = +0.00948
+   depth 30:     3765 nodes, classes (0,1,2) = [1273, 1243, 1249], shares 0.3381 0.3301 0.3317;  (c1 - c2)/size = -0.00159
+   depth 40:    66763 nodes, classes (0,1,2) = [22289, 22228, 22246], shares 0.3339 0.3329 0.3332;  (c1 - c2)/size = -0.00027
+   depth 45:   281334 nodes, classes (0,1,2) = [93755, 93784, 93795], shares 0.3333 0.3334 0.3334;  (c1 - c2)/size = -0.00004
+   depth 50:  1185305 nodes, classes (0,1,2) = [394979, 395113, 395213], shares 0.3332 0.3333 0.3334;  (c1 - c2)/size = -0.00008
+   layer growth ratio at depth 41..50: 1.3328 .. 1.3337 (4/3 = 1.3333)
+
+== 6. The three basins of T_- (3x-1) on 1..N_C = 1e+09
+   done in 13.6 s; every n <= N_C reached one of the three cycles (no overflow; largest value met 111976109464769974)
+   N =         100:  basin {1} 0.380000,  basin {5,7,10} 0.310000,  basin {17,...} 0.310000
+   N =         200:  basin {1} 0.385000,  basin {5,7,10} 0.305000,  basin {17,...} 0.310000
+   N =         500:  basin {1} 0.368000,  basin {5,7,10} 0.302000,  basin {17,...} 0.330000
+   N =        1000:  basin {1} 0.349000,  basin {5,7,10} 0.306000,  basin {17,...} 0.345000
+   N =        2000:  basin {1} 0.335500,  basin {5,7,10} 0.312000,  basin {17,...} 0.352500
+   N =        5000:  basin {1} 0.327800,  basin {5,7,10} 0.318000,  basin {17,...} 0.354200
+   N =       10000:  basin {1} 0.324400,  basin {5,7,10} 0.321300,  basin {17,...} 0.354300
+   N =       20000:  basin {1} 0.325100,  basin {5,7,10} 0.322550,  basin {17,...} 0.352350
+   N =       50000:  basin {1} 0.329540,  basin {5,7,10} 0.321560,  basin {17,...} 0.348900
+   N =      100000:  basin {1} 0.330300,  basin {5,7,10} 0.321040,  basin {17,...} 0.348660
+   N =      200000:  basin {1} 0.329555,  basin {5,7,10} 0.321380,  basin {17,...} 0.349065
+   N =      500000:  basin {1} 0.328386,  basin {5,7,10} 0.322458,  basin {17,...} 0.349156
+   N =     1000000:  basin {1} 0.327679,  basin {5,7,10} 0.323351,  basin {17,...} 0.348970
+   N =     2000000:  basin {1} 0.327290,  basin {5,7,10} 0.324043,  basin {17,...} 0.348667
+   N =     5000000:  basin {1} 0.327547,  basin {5,7,10} 0.324367,  basin {17,...} 0.348085
+   N =    10000000:  basin {1} 0.327379,  basin {5,7,10} 0.324499,  basin {17,...} 0.348122
+   N =    20000000:  basin {1} 0.327180,  basin {5,7,10} 0.324600,  basin {17,...} 0.348220
+   N =    50000000:  basin {1} 0.327115,  basin {5,7,10} 0.324689,  basin {17,...} 0.348196
+   N =   100000000:  basin {1} 0.326973,  basin {5,7,10} 0.324708,  basin {17,...} 0.348319
+   N =   200000000:  basin {1} 0.326878,  basin {5,7,10} 0.324776,  basin {17,...} 0.348345
+   N =   500000000:  basin {1} 0.326927,  basin {5,7,10} 0.324928,  basin {17,...} 0.348145
+   N =  1000000000:  basin {1} 0.326869,  basin {5,7,10} 0.324952,  basin {17,...} 0.348179
+   changes in the order of the three counts (leader, second) as N grows: 205 in total
+   leader changes: 25, the last at N = 1389;  second-place changes: 204, the last at N = 30613
+     from N = 1: leader {1}, second {5,7,10}
+     from N = 56: leader {5,7,10}, second {1}
+     from N = 57: leader {1}, second {5,7,10}
+     from N = 136: leader {1}, second {17,...}
+     from N = 139: leader {1}, second {5,7,10}
+     from N = 185: leader {1}, second {17,...}
+     from N = 1385: leader {17,...}, second {1}
+     from N = 1388: leader {1}, second {17,...}
+     from N = 1389: leader {17,...}, second {1}
+     from N = 10067: leader {17,...}, second {5,7,10}
+     from N = 10071: leader {17,...}, second {1}
+     from N = 10090: leader {17,...}, second {5,7,10}
+     from N = 10232: leader {17,...}, second {1}
+     from N = 10233: leader {17,...}, second {5,7,10}
+     from N = 10246: leader {17,...}, second {1}
+     from N = 10709: leader {17,...}, second {5,7,10}
+     from N = 10716: leader {17,...}, second {1}
+     from N = 10717: leader {17,...}, second {5,7,10}
+     from N = 10751: leader {17,...}, second {1}
+     from N = 11308: leader {17,...}, second {5,7,10}
+     from N = 11309: leader {17,...}, second {1}
+     from N = 11312: leader {17,...}, second {5,7,10}
+     from N = 11485: leader {17,...}, second {1}
+     from N = 11498: leader {17,...}, second {5,7,10}
+     from N = 11499: leader {17,...}, second {1}
+     from N = 11508: leader {17,...}, second {5,7,10}
+     from N = 11509: leader {17,...}, second {1}
+     from N = 11510: leader {17,...}, second {5,7,10}
+     from N = 11522: leader {17,...}, second {1}
+     from N = 12029: leader {17,...}, second {5,7,10}
+     from N = 12036: leader {17,...}, second {1}
+     from N = 12056: leader {17,...}, second {5,7,10}
+     from N = 12062: leader {17,...}, second {1}
+     from N = 12067: leader {17,...}, second {5,7,10}
+     from N = 12076: leader {17,...}, second {1}
+     from N = 12702: leader {17,...}, second {5,7,10}
+     from N = 12843: leader {17,...}, second {1}
+     from N = 12846: leader {17,...}, second {5,7,10}
+     from N = 12847: leader {17,...}, second {1}
+     from N = 12875: leader {17,...}, second {5,7,10}
+     from N = 12902: leader {17,...}, second {1}
+     from N = 12903: leader {17,...}, second {5,7,10}
+     from N = 12904: leader {17,...}, second {1}
+     from N = 12905: leader {17,...}, second {5,7,10}
+     from N = 12908: leader {17,...}, second {1}
+     from N = 12909: leader {17,...}, second {5,7,10}
+     from N = 12918: leader {17,...}, second {1}
+     from N = 12919: leader {17,...}, second {5,7,10}
+     from N = 12920: leader {17,...}, second {1}
+     from N = 12921: leader {17,...}, second {5,7,10}
+     from N = 12922: leader {17,...}, second {1}
+     from N = 12927: leader {17,...}, second {5,7,10}
+     from N = 12928: leader {17,...}, second {1}
+     from N = 12931: leader {17,...}, second {5,7,10}
+     from N = 12947: leader {17,...}, second {1}
+     from N = 12952: leader {17,...}, second {5,7,10}
+     from N = 12955: leader {17,...}, second {1}
+     from N = 13524: leader {17,...}, second {5,7,10}
+     from N = 13595: leader {17,...}, second {1}
+     from N = 14292: leader {17,...}, second {5,7,10}
+     from N = 14300: leader {17,...}, second {1}
+     from N = 14301: leader {17,...}, second {5,7,10}
+     from N = 14340: leader {17,...}, second {1}
+     from N = 15075: leader {17,...}, second {5,7,10}
+     from N = 15414: leader {17,...}, second {1}
+     from N = 15424: leader {17,...}, second {5,7,10}
+     from N = 15434: leader {17,...}, second {1}
+     from N = 15446: leader {17,...}, second {5,7,10}
+     from N = 15460: leader {17,...}, second {1}
+     from N = 15964: leader {17,...}, second {5,7,10}
+     from N = 16148: leader {17,...}, second {1}
+     from N = 16149: leader {17,...}, second {5,7,10}
+     from N = 16154: leader {17,...}, second {1}
+     from N = 16911: leader {17,...}, second {5,7,10}
+     from N = 16914: leader {17,...}, second {1}
+     from N = 16924: leader {17,...}, second {5,7,10}
+     from N = 17153: leader {17,...}, second {1}
+     from N = 17156: leader {17,...}, second {5,7,10}
+     from N = 17157: leader {17,...}, second {1}
+     from N = 17158: leader {17,...}, second {5,7,10}
+     from N = 17230: leader {17,...}, second {1}
+     from N = 17236: leader {17,...}, second {5,7,10}
+     from N = 17240: leader {17,...}, second {1}
+     from N = 17242: leader {17,...}, second {5,7,10}
+     from N = 17253: leader {17,...}, second {1}
+     from N = 17254: leader {17,...}, second {5,7,10}
+     from N = 17255: leader {17,...}, second {1}
+     from N = 17256: leader {17,...}, second {5,7,10}
+     from N = 17283: leader {17,...}, second {1}
+     from N = 17957: leader {17,...}, second {5,7,10}
+     from N = 17978: leader {17,...}, second {1}
+     from N = 18028: leader {17,...}, second {5,7,10}
+     from N = 18143: leader {17,...}, second {1}
+     from N = 19013: leader {17,...}, second {5,7,10}
+     from N = 19195: leader {17,...}, second {1}
+     from N = 19200: leader {17,...}, second {5,7,10}
+     from N = 19203: leader {17,...}, second {1}
+     from N = 19216: leader {17,...}, second {5,7,10}
+     from N = 19218: leader {17,...}, second {1}
+     from N = 19226: leader {17,...}, second {5,7,10}
+     from N = 19231: leader {17,...}, second {1}
+     from N = 19232: leader {17,...}, second {5,7,10}
+     from N = 19233: leader {17,...}, second {1}
+     from N = 19315: leader {17,...}, second {5,7,10}
+     from N = 19353: leader {17,...}, second {1}
+     from N = 19354: leader {17,...}, second {5,7,10}
+     from N = 19385: leader {17,...}, second {1}
+     from N = 19386: leader {17,...}, second {5,7,10}
+     from N = 19421: leader {17,...}, second {1}
+     from N = 19425: leader {17,...}, second {5,7,10}
+     from N = 19435: leader {17,...}, second {1}
+     from N = 20124: leader {17,...}, second {5,7,10}
+     from N = 20146: leader {17,...}, second {1}
+     from N = 20165: leader {17,...}, second {5,7,10}
+     from N = 20417: leader {17,...}, second {1}
+     from N = 21464: leader {17,...}, second {5,7,10}
+     from N = 21466: leader {17,...}, second {1}
+     from N = 22636: leader {17,...}, second {5,7,10}
+     from N = 22637: leader {17,...}, second {1}
+     from N = 22644: leader {17,...}, second {5,7,10}
+     from N = 22659: leader {17,...}, second {1}
+     from N = 22685: leader {17,...}, second {5,7,10}
+     from N = 22696: leader {17,...}, second {1}
+     from N = 22706: leader {17,...}, second {5,7,10}
+     from N = 22748: leader {17,...}, second {1}
+     from N = 22894: leader {17,...}, second {5,7,10}
+     from N = 22937: leader {17,...}, second {1}
+     from N = 25437: leader {17,...}, second {5,7,10}
+     from N = 25444: leader {17,...}, second {1}
+     from N = 25449: leader {17,...}, second {5,7,10}
+     from N = 25490: leader {17,...}, second {1}
+     from N = 27065: leader {17,...}, second {5,7,10}
+     from N = 27074: leader {17,...}, second {1}
+     from N = 27131: leader {17,...}, second {5,7,10}
+     from N = 27183: leader {17,...}, second {1}
+     from N = 30191: leader {17,...}, second {5,7,10}
+     from N = 30213: leader {17,...}, second {1}
+     from N = 30252: leader {17,...}, second {5,7,10}
+     from N = 30255: leader {17,...}, second {1}
+     from N = 30256: leader {17,...}, second {5,7,10}
+     from N = 30262: leader {17,...}, second {1}
+     from N = 30276: leader {17,...}, second {5,7,10}
+     from N = 30364: leader {17,...}, second {1}
+     from N = 30380: leader {17,...}, second {5,7,10}
+     from N = 30460: leader {17,...}, second {1}
+     from N = 30470: leader {17,...}, second {5,7,10}
+     from N = 30484: leader {17,...}, second {1}
+     from N = 30503: leader {17,...}, second {5,7,10}
+     from N = 30598: leader {17,...}, second {1}
+     from N = 30602: leader {17,...}, second {5,7,10}
+     from N = 30603: leader {17,...}, second {1}
+     from N = 30606: leader {17,...}, second {5,7,10}
+     from N = 30607: leader {17,...}, second {1}
+     from N = 30612: leader {17,...}, second {5,7,10}
+     from N = 30613: leader {17,...}, second {1}
+
+== 7. Integer cycles of T_+ on Z from every word of length L <= 24
+   118 (word, integer point) solutions; distinct integer cycle points [-136, -91, -82, -68, -61, -55, -41, -37, -34, -25, -17, -10, -7, -5, -1, 0, 1, 2]
+   cycle [-136, -68, -34, -17, -25, -37, -55, -82, -41, -61, -91]: period 11, odd steps 7
+   cycle [-10, -5, -7]: period 3, odd steps 2
+   cycle [-1]: period 1, odd steps 1
+   cycle [0]: period 1, odd steps 0
+   cycle [1, 2]: period 2, odd steps 1
+   T_- (3x-1) on the positive integers has exactly the negatives: {1}, {5,7,10}, {17,...,136}; T_+ on the positives only {1,2}.
+
+== 8. The carry budget: which (l, L) can carry a cycle, and how small its least odd element must be
+   l   L  side   2^L - 3^l        |delta|/l      budget for n_min   cycles found
+    1   1  below (s=-1)              -1   0.405465              1.00       [-1]
+    1   2  above (s=+1)               1   0.287682              1.00       [1, 2]
+    2   3  below (s=-1)              -1   0.058892              5.83       [-10, -5, -7]
+    2   4  above (s=+1)               7   0.287682              1.00       -
+    3   4  below (s=-1)             -11   0.174416              2.08       -
+    3   5  above (s=+1)               5   0.056633              5.72       -
+    4   6  below (s=-1)             -17   0.058892              5.83       -
+    4   7  above (s=+1)              47   0.114395              2.75       -
+    5   7  below (s=-1)            -115   0.128206              2.77       -
+    5   8  above (s=+1)              13   0.010423             31.81       -
+    6   9  below (s=-1)            -217   0.058892              5.83       -
+    6  10  above (s=+1)             295   0.056633              5.72       -
+    7  11  below (s=-1)            -139   0.009381             35.70       [-136, -68, -34, -17, -25, -37, -55, -82, -41, -61, -91]
+    7  12  above (s=+1)            1909   0.089640              3.55       -
+    8  12  below (s=-1)           -2465   0.058892              5.83       -
+    8  13  above (s=+1)            1631   0.027752             11.85       -
+    9  14  below (s=-1)           -3299   0.020383             16.52       -
+    9  15  above (s=+1)           13085   0.056633              5.72       -
+   10  15  below (s=-1)          -26281   0.058892              5.83       -
+   10  16  above (s=+1)            6487   0.010423             31.81       -
+   11  17  below (s=-1)          -46075   0.027385             12.34       -
+   11  18  above (s=+1)           84997   0.035629              9.19       -
+   12  19  below (s=-1)           -7153   0.001129            295.35       -
+   12  20  above (s=+1)          517135   0.056633              5.72       -
+
+FAILED CHECKS: none
+ALL CHECKS PASSED
+total time 24.0 s
