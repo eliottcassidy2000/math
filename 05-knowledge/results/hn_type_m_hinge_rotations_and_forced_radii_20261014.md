@@ -64,6 +64,20 @@ Parts builds his graphs as **type M**, `G = L ∪ ρS`. Here `L` and `S` are Min
    * **4-colourable reductions.** `(M_1 ⊕ M_1) ∪ ψ(M_1 ⊕ M_1)` (5,185), `M_3 ∪ ψ(M_1 ⊕ M_1)` (34,849), `P_1 ∪ ψP_1` (31,729) and `(M_2^c ⊕ M_1) ∪ ψ(M_2^c ⊕ M_1)` (11,569) are all 4-colourable.
    * As with L727, a non-forcing piece kills 5-chromaticity, and two forcing pieces are not enough. `M_3` is the rigid piece. The mixed pairs `M_3 ∪ ψP_1` and `P_1 ∪ ψM_3` are in `spindle_free_mixed.log`.
 
+8. **Later experiments (SOLVER).**
+   * **The hybrid fails.** Parts' rigid `L727` hinged by `ρ` to the clock-family forcing piece `P_1` (16,591 vertices, field `Q(√2, √3, √5, √11)`) is **4-colourable**. So rigid plus forcing is not sufficient across families.
+     * The ρ-edges only join radius-2 points with equal angles, or angles differing by `2θ_4 = 57.91°`.
+     * `L727` and `P_1` share only the six hexagonal directions, while `L727`'s minimal mono-sets use the η-directions `60k ± 16.78°`.
+     * Even within `L727 ∪ ρS361`, colour-0 sets alone do not force the contradiction: S361's minimal mono-sets (antipodal η-pairs) miss `L727`'s along both angle offsets. The obstruction lives in the full four-colour interface.
+   * **Small clock pieces do not force.** `clock ⊕ clock`, `clip_1(clock ⊕ clock) ⊕ clock` and `(clock ⊕ clock ⊕ clock) ∩ {r ≤ 2}` (289–1,273 vertices) do not force radius 2. `P_1` (15,865) does.
+   * **Exact smallest MUS is out of reach.** OptUx on the 784-vertex union of the four critical sets did not finish in 45 minutes.
+   * **Symmetric minimisation loses here.**
+     * `L727 ∪ ρS361` is C6-invariant: one centre plus 181 orbits of size 6.
+     * Orbit-level deletion gave an orbit-critical subgraph of 116 orbits (691 vertices). Vertex-level refinement brought it to a vertex-critical **683**, worse than asymmetric greedy deletion (611). This is Parts' "overcompression".
+   * **The spindle-free graph is C24-invariant.** `M_3 ∪ ψP_1` is one centre plus 2,005 orbits of size 24, so symmetric subgraphs have `1 + 24m` vertices; Heule's 1,441 is `m = 60`.
+     * Orbit-level minimisation (`orbit_core.py`) runs slowly: CaDiCaL with 2,006 assumption literals had not finished its first core after more than an hour, against 25 minutes for the plain solve.
+     * The next step is phase-1 cores without assumptions, e.g. by fixing a random half of the orbits off and testing.
+
 ## Reading (HEURISTIC)
 
 * **Hinge principle.** In this family a type-M graph is 5-chromatic when one piece is rigid at the hinge radius and the other forces it. Rigid here means a tiny mono-set family: 19 patterns, against about 20,000 for the flexible piece.

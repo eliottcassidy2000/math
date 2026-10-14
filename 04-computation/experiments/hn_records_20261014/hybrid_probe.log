@@ -1,0 +1,5 @@
+clock+clock                  |V|=   289 |E|=  1032 radius-2 orbit  24: 4-colourable=True, radius 2 forced=False  [0.1s]
+clip1(clock+clock)+clock     |V|=  1225 |E|=  5640 radius-2 orbit  24: 4-colourable=True, radius 2 forced=False  [0.6s]
+clock+clock+clock(r<=2)      |V|=  1273 |E|=  5832 radius-2 orbit  24: 4-colourable=True, radius 2 forced=False  [0.6s]
+clip1(M1+M1)+clock           |V|= 15865 |E|=114072 radius-2 orbit  24: 4-colourable=True, radius 2 forced=True  [347.5s]
+   L727 u rho [clip1(M1+M1)+clock]: |V|=16591 |E|=118194  4-colourable  [49.1s]

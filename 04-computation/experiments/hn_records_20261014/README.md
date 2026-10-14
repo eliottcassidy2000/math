@@ -51,3 +51,8 @@ Every graph here has exact coordinates in a real multiquadratic field, with `x, 
     * `ψ = φ_0^(−1) ρ` is Parts' hinge.
     * `M_3` and `M_2 ⊕ M_1^clock` force radius 2; `M_1 ⊕ M_1` does not.
     * All four symmetric reductions tested are 4-colourable.
+11. **Later experiments.**
+    * The hybrid `L727 ∪ ρP_1` is 4-colourable (`hybrid_probe.log`).
+    * OptUx on the 784-vertex union timed out (`smus_union4.log`).
+    * C6 orbit minimisation of `L727 ∪ ρS361` gave 683 vertex-critical, worse than greedy (`orbit_core_typeM.log`).
+    * C24 orbit minimisation of the spindle-free graph is slow with assumptions (`orbit_core_M3_psiP1.log`).

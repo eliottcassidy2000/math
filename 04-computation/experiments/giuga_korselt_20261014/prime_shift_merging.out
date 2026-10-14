@@ -1,0 +1,6 @@
+N = 2000000: odd n 999999, odd primes 148932, lesser twin primes 14871  [0.0s]
+   h = 2: all odd n              merging fraction 0.29678  (unfinished 0)  [2.4s]
+   h = 2: primes p               merging fraction 0.29643  (unfinished 0)  [2.6s]
+   h = 2: twin primes (p, p+2)   merging fraction 0.29305  (unfinished 0)  [2.7s]
+   h = 1: all odd n              merging fraction 0.35375  (unfinished 0)  [4.7s]
+   h = 1: primes p               merging fraction 0.35292  (unfinished 0)  [4.9s]

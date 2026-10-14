@@ -1,0 +1,2 @@
+G = L727 u rho S361: 1087 vertices, 5892 edges, C6-invariant, 182 orbits {6: 181, 1: 1}  [0.6s]
+seed 0: orbit-critical 116 orbits = 691 vertices; vertex-critical True: 683 vertices (479 from L, 204 from rho S)  [4272.4s]

@@ -52,7 +52,7 @@ related:
      * A counterexample to Giuga's conjecture is exactly an **odd** Giuga number that is Carmichael.
      * Checked on all 405,285 even squarefree composites up to `2·10^6`.
    * (b) An odd Giuga number with index `k` (meaning `Σ_(p|n) 1/p − 1/n = k`) has `ω(n) ≡ k + 1 (mod 2)`.
-   * (c) Since the reciprocals of the first eight odd primes sum to 0.9986, an odd Giuga number has `ω(n) ≥ 9`, and `ω(n) ≥ 10` if `k = 1`. Much stronger lower bounds for counterexamples are known in the literature (Borwein, Borwein, Borwein and Girgensohn 1996 and later). This one is only the elementary parity version.
+   * (c) Since the reciprocals of the first eight odd primes sum to 0.99896, an odd Giuga number has `ω(n) ≥ 9`, and `ω(n) ≥ 10` if `k = 1`. Much stronger lower bounds for counterexamples are known in the literature (Borwein, Borwein, Borwein and Girgensohn 1996 and later). This one is only the elementary parity version.
 3. **Giuga numbers: derivative and neighbours.**
    * All 13 known Giuga numbers (the 12 of A007850 and the 10-factor one recorded there) have index 1, i.e. arithmetic derivative `g' = Σ g/p = g + 1`. KNOWN in general: Giuga iff `n' = a·n + 1` with `a ≥ 1`.
    * `g − 1` and `g + 1` are both prime for `g = 30, 858, 1722` and for none of the other ten. The largest has `g + 1` prime and `g − 1` composite.

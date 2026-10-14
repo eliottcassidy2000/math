@@ -34,6 +34,17 @@ D19 asks for a point at rational distance from all four corners of the unit squa
   * With four corners, `S` is a complete intersection of four quadrics in `P^6`, with `K = O(1)` before resolving the two singular points over the circular points `I`, `J`. Over each of them, four branch lines meet. The local model `w_k² = ℓ_k(u, v)` is a cone over a quartic elliptic curve, i.e. simple elliptic singularities of degree 4. A rough count gives `K² = 16 − 4 − 4 = 8 > 0`, so general type is expected.
   * Bombieri–Lang would then confine all but finitely many D19 points to finitely many curves of genus 0 or 1, as in the conditional Erdős–Ulam theorems (Shaffaf; Tao).
   * THM-4650 eliminates the natural genus-1 curves. A complete list of genus-0/1 curves on `S` would turn D19 into a conditional finite search.
+* **Rational versus irrational (PROVED in THM-4650; reading).** The special loci are guarded by the two oldest proofs in number theory.
+  * The irrationality of `√2` guards the diagonals and, through Ptolemy, the circumcircle.
+  * Fermat's infinite descent, that 1 is not a congruent number, guards the midlines.
+  * D19 asks for a rational shadow of a square whose own diagonal is irrational.
+* **Irrationality exponents and rational points (KNOWN: Vojta's dictionary, 1987).**
+  * Vojta's conjectures put two kinds of statement on one footing:
+    * Diophantine approximation: Roth's theorem says every algebraic irrational has irrationality exponent 2;
+    * finiteness of rational points: Faltings for curves of genus at least 2, and Bombieri–Lang for varieties of general type.
+  * D19's open part is a Bombieri–Lang question for `S`.
+  * The Collatz cycle question is an approximation question for `log₂3` (THM-4633/4634; HYP-9263 asks whether `μ(log₂3) = 2`). That number is transcendental (Gelfond–Schneider), so Roth gives nothing and only Baker-type bounds are available.
+  * Both are Diophantine approximation in Vojta's sense, on opposite sides of the algebraic/transcendental divide.
 * **Link to Hadwiger–Nelson.** In the language of `Q(i)`, `N(z) = □` means `z = s·w²` (Hilbert 90). So D19 asks for `z ∈ Q(i)` such that `z`, `z − 1`, `z − i` and `z − 1 − i` are each a rational multiple of a Gaussian square.
   * The 5-chromatic unit-distance graphs of this session (§5) are built from rotations `e^(iθ)` with rational `cos θ` (`5/6, 7/8`), i.e. norm-1 elements of quadratic fields.
   * Both problems are statements about multiplicative groups of norm-1 or norm-square elements meeting additive translates.
@@ -74,6 +85,15 @@ D19 asks for a point at rational distance from all four corners of the unit squa
     * `n` and `n + h` merge for a density-one set (THM-4627);
     * −1 switches cover almost every trailing-ones source (THM-4640 (8)).
   * In each case the exceptional set is null or of density zero. Covering every integer would prove Collatz.
+  * **Primes and twin primes inherit the merging (PROVED corollary; FINITE-EXACT data).**
+    * By THM-4627 (2)(a), the set of `n` for which `n` and `n + h` merge by Terras time `K` (equal values, equal odd counts) is a union of residue classes mod `2^K`. Its density `μ_h(K)` tends to 1.
+    * Primes are equidistributed over the odd classes mod `2^K` (prime number theorem in progressions), and the odd classes have density at least `1 − 2(1 − μ_h(K))` in it. Hence, for every `h ≥ 1`, **almost all primes `p` (relative density 1) have Collatz orbits of `p` and `p + h` that merge**.
+    * The same holds for twin-prime pairs `(p, p + 2)` **conditionally** on the Hardy–Littlewood conjecture for twin primes in progressions mod `2^K`. All odd classes are admissible and have equal local factors at 2.
+    * Data (`prime_shift_merging_1e7.out`). The fractions merging before either orbit reaches 1, below `10^7`:
+      * `h = 2`: 0.31485 (all odd `n`), 0.31378 (primes), 0.31540 (58,980 twin pairs);
+      * `h = 1`: 0.37007 (all odd `n`), 0.36922 (primes).
+    * Primes and twin primes are statistically indistinguishable from generic odd numbers here. The approach to 1 is very slow, like THM-4581's `T^(−1/2)` law.
+    * In the brief's language: almost every prime "embodies" the Collatz future of its neighbour.
   * This is the corpus's version of the parity barrier: measure and density methods are blind to the null set where a single counterexample could live (HEURISTIC parallel, not a theorem).
 
 ## 4. Shift by one: the common thread
@@ -118,6 +138,15 @@ Details are in `hn_type_m_hinge_rotations_and_forced_radii_20261014.md`.
   * Bombieri–Lang (not RH) gives the conditional Erdős–Ulam and D19-type finiteness of §1.
   * abc gives many finiteness statements for `{2,3}`-type equations.
   * **No known form of RH implies Collatz, Hadwiger–Nelson or JC2.** The obstructions are respectively the Diophantine/measure-blindness of §3, the finite constructions of §5, and the Newton-polygon combinatorics.
+  * **Where Riemann-type statements already act in this corpus (PROVED there).**
+    * THM-4628: Weil's Riemann hypothesis for curves over finite fields bounds the Kloosterman sums. These are the eigenvalues of the residue graphs of the field plane `Q(ζ_55)`. So residue colourings at a fixed prime with residue field `F_(q²)` need at least `1 + (q+1)/(2√q)` colours (Hoffman), and none uses six or fewer.
+      * This is a genuine RH-to-Hadwiger–Nelson implication. It applies to the restricted class of residue colourings, not to all colourings of the plane.
+    * THM-4520: the Collatz level operator on `Z/(2·3^(n−1))` has characteristic polynomial `(2^L − 1)λ^L + λ^(L/2) − 1`, with every eigenvalue on two circles of modulus about `1/2`. This is a circle law of Ramanujan/RH type for a finite Collatz model.
+    * Such spectral statements give mixing and equidistribution, i.e. "almost all" results. Like §3, they do not reach every integer or every colouring.
+  * **JC2 and arithmetic (CITED from memory; checked by audit B).**
+    * Tsuchimoto (2005) and Belov-Kanel–Kontsevich (2007) prove `JC_(2n) ⟹ D_n`: the Jacobian conjecture in dimension `2n` implies the Dixmier conjecture for the `n`-th Weyl algebra. The proof reduces modulo primes and uses the Frobenius `p`-centre.
+    * With the classical `D_n ⟹ JC_n`, this makes the two conjectures stably equivalent. For the plane it gives `JC_2 ⟹ D_1` and `D_2 ⟹ JC_2`, **not** an equivalence of `JC_2` with `D_1`.
+    * Reduction mod `p` and the Frobenius `p`-centre are the clearest case of number theory permeating JC: they turn an analytic statement into a Frobenius-twisted algebraic one. They give implications, not a proof.
 * **Equidistribution and equidecomposability (KNOWN).**
   * Laczkovich's circle squaring, and Marks–Unger's Borel version, need discrepancy bounds for translation actions: Weyl equidistribution with an irrationality-measure input.
   * This is the same input as the corpus's irrationality-measure dictionary (THM-4633/4634: `μ(log₂3)` controls Collatz cycles).
