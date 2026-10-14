@@ -1,0 +1,295 @@
+{
+  "checks": 33036,
+  "fully_grounded_fibre": {
+    "endpoint": 26861,
+    "exponent": "a>=1",
+    "halving_cost": "a+91 for odd a; a+86 for even a",
+    "odd_rank": "49 for odd a; 46 for even a",
+    "positive_mersenne_source_intersection": [],
+    "sheet": "(-1)^(a+1)",
+    "source": "(26861*2^a-(-1)^(a+1))/3"
+  },
+  "identity_universe": "all odd -999..999, both sheets, lifts0..8",
+  "infinite_hostile_family": "plus (10*4^j-1)/3 reaches1; minus (20*4^j+1)/3 enters(5,7), j>=0",
+  "known_plus_nonzero_cycles": [
+    {
+      "carry": 1,
+      "denominator": 1,
+      "odd_cycle": [
+        1
+      ],
+      "odd_word": [
+        2
+      ],
+      "shortcut_cycle": [
+        1,
+        2
+      ]
+    },
+    {
+      "carry": 1,
+      "denominator": -1,
+      "odd_cycle": [
+        -1
+      ],
+      "odd_word": [
+        1
+      ],
+      "shortcut_cycle": [
+        -1
+      ]
+    },
+    {
+      "carry": 5,
+      "denominator": -1,
+      "odd_cycle": [
+        -5,
+        -7
+      ],
+      "odd_word": [
+        1,
+        2
+      ],
+      "shortcut_cycle": [
+        -5,
+        -7,
+        -10
+      ]
+    },
+    {
+      "carry": 2363,
+      "denominator": -139,
+      "odd_cycle": [
+        -17,
+        -25,
+        -37,
+        -55,
+        -41,
+        -61,
+        -91
+      ],
+      "odd_word": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        4
+      ],
+      "shortcut_cycle": [
+        -17,
+        -25,
+        -37,
+        -55,
+        -82,
+        -41,
+        -61,
+        -91,
+        -136,
+        -68,
+        -34
+      ]
+    }
+  ],
+  "production_orbit_discovery": false,
+  "status": "PROVED elementary identities; FINITE-EXACT controls; no universal basin classification",
+  "supplied_terminal_records": [
+    {
+      "cycle": [
+        1
+      ],
+      "endpoint": 1,
+      "halving_cost": 63,
+      "odd_rank": 33,
+      "sheet": 1,
+      "source": 1473,
+      "word": [
+        2,
+        2,
+        3,
+        1,
+        1,
+        3,
+        1,
+        1,
+        2,
+        3,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        4,
+        2,
+        2,
+        4,
+        3,
+        1,
+        1,
+        5,
+        4
+      ],
+      "word_sha256": "358803b7a675cba57deb241dbcd4e6cdd36b4f5fbd7652736eca9b27c568e157"
+    },
+    {
+      "cycle": [
+        17,
+        25,
+        37,
+        55,
+        41,
+        61,
+        91
+      ],
+      "endpoint": 61,
+      "halving_cost": 22,
+      "odd_rank": 11,
+      "sheet": -1,
+      "source": 1473,
+      "word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        8,
+        3,
+        1,
+        1,
+        1,
+        3
+      ],
+      "word_sha256": "340a1c191fde80593f7697901ed2f977124be5735bd8afd12dfaebea3a144b77"
+    },
+    {
+      "cycle": [
+        1
+      ],
+      "endpoint": 1,
+      "halving_cost": 91,
+      "odd_rank": 48,
+      "sheet": 1,
+      "source": 26861,
+      "word": [
+        3,
+        2,
+        1,
+        4,
+        3,
+        3,
+        1,
+        2,
+        2,
+        3,
+        1,
+        1,
+        1,
+        1,
+        4,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        3,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        4,
+        2,
+        2,
+        4,
+        3,
+        1,
+        1,
+        5,
+        4
+      ],
+      "word_sha256": "2c866be8b4835506fdeb25b134f70c0b6ea739d67081b8aac16a24e1d61611da"
+    },
+    {
+      "cycle": [
+        1
+      ],
+      "endpoint": 1,
+      "halving_cost": 86,
+      "odd_rank": 45,
+      "sheet": -1,
+      "source": 26861,
+      "word": [
+        1,
+        3,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        3,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        4,
+        1,
+        3,
+        2,
+        2,
+        1,
+        3,
+        1,
+        2,
+        4,
+        3,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        3,
+        2,
+        1,
+        3,
+        2,
+        3,
+        2,
+        1,
+        3,
+        7
+      ],
+      "word_sha256": "05fa2cf1f0658a891aa0b446ed1917a3dec9345c3b4bb456817ed9a582f6fad5"
+    }
+  ],
+  "word_universe": "length1..5, letters1..4"
+}

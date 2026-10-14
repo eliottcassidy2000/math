@@ -1,0 +1,478 @@
+{
+  "status": "PROVED elementary finite transforms; FINITE-EXACT first lead; analytic bias results separately CITED",
+  "checks": 48915,
+  "first_strict_mod4_lead": 26861,
+  "class_counts": [
+    1473,
+    1472
+  ],
+  "full_prime_index": 2946,
+  "transform_universe": {
+    "x": [
+      0,
+      512
+    ],
+    "moduli": [
+      2,
+      12
+    ],
+    "all_residue_classes": true
+  },
+  "trial_division_universe": [
+    0,
+    30000
+  ],
+  "snapshots": [
+    {
+      "x": 9,
+      "pi_one": 1,
+      "pi_three": 2,
+      "prime_difference": -1,
+      "J_difference": "-1/2",
+      "squares": "1/2",
+      "higher_powers": "0",
+      "higher_absolute_bill": "0",
+      "higher_terms": [
+        [
+          3,
+          2,
+          "0"
+        ]
+      ]
+    },
+    {
+      "x": 27,
+      "pi_one": 3,
+      "pi_three": 5,
+      "prime_difference": -2,
+      "J_difference": "-4/3",
+      "squares": "1",
+      "higher_powers": "-1/3",
+      "higher_absolute_bill": "1/3",
+      "higher_terms": [
+        [
+          3,
+          3,
+          "-1/3"
+        ],
+        [
+          4,
+          2,
+          "0"
+        ]
+      ]
+    },
+    {
+      "x": 100,
+      "pi_one": 11,
+      "pi_three": 13,
+      "prime_difference": -2,
+      "J_difference": "-7/12",
+      "squares": "3/2",
+      "higher_powers": "-1/12",
+      "higher_absolute_bill": "7/12",
+      "higher_terms": [
+        [
+          3,
+          4,
+          "-1/3"
+        ],
+        [
+          4,
+          3,
+          "1/4"
+        ],
+        [
+          5,
+          2,
+          "0"
+        ],
+        [
+          6,
+          2,
+          "0"
+        ]
+      ]
+    },
+    {
+      "x": 1000,
+      "pi_one": 80,
+      "pi_three": 87,
+      "prime_difference": -7,
+      "J_difference": "-28/15",
+      "squares": "5",
+      "higher_powers": "2/15",
+      "higher_absolute_bill": "28/15",
+      "higher_terms": [
+        [
+          3,
+          10,
+          "-1/3"
+        ],
+        [
+          4,
+          5,
+          "1/2"
+        ],
+        [
+          5,
+          3,
+          "-1/5"
+        ],
+        [
+          6,
+          3,
+          "1/6"
+        ],
+        [
+          7,
+          2,
+          "0"
+        ],
+        [
+          8,
+          2,
+          "0"
+        ],
+        [
+          9,
+          2,
+          "0"
+        ]
+      ]
+    },
+    {
+      "x": 26861,
+      "pi_one": 1473,
+      "pi_three": 1472,
+      "prime_difference": 1,
+      "J_difference": "50831/2520",
+      "squares": "37/2",
+      "higher_powers": "1691/2520",
+      "higher_absolute_bill": "13387/2520",
+      "higher_terms": [
+        [
+          3,
+          29,
+          "-1/3"
+        ],
+        [
+          4,
+          12,
+          "1"
+        ],
+        [
+          5,
+          7,
+          "-1/5"
+        ],
+        [
+          6,
+          5,
+          "1/3"
+        ],
+        [
+          7,
+          4,
+          "-1/7"
+        ],
+        [
+          8,
+          3,
+          "1/8"
+        ],
+        [
+          9,
+          3,
+          "-1/9"
+        ],
+        [
+          10,
+          2,
+          "0"
+        ],
+        [
+          11,
+          2,
+          "0"
+        ],
+        [
+          12,
+          2,
+          "0"
+        ],
+        [
+          13,
+          2,
+          "0"
+        ],
+        [
+          14,
+          2,
+          "0"
+        ]
+      ]
+    },
+    {
+      "x": 26863,
+      "pi_one": 1473,
+      "pi_three": 1473,
+      "prime_difference": 0,
+      "J_difference": "48311/2520",
+      "squares": "37/2",
+      "higher_powers": "1691/2520",
+      "higher_absolute_bill": "13387/2520",
+      "higher_terms": [
+        [
+          3,
+          29,
+          "-1/3"
+        ],
+        [
+          4,
+          12,
+          "1"
+        ],
+        [
+          5,
+          7,
+          "-1/5"
+        ],
+        [
+          6,
+          5,
+          "1/3"
+        ],
+        [
+          7,
+          4,
+          "-1/7"
+        ],
+        [
+          8,
+          3,
+          "1/8"
+        ],
+        [
+          9,
+          3,
+          "-1/9"
+        ],
+        [
+          10,
+          2,
+          "0"
+        ],
+        [
+          11,
+          2,
+          "0"
+        ],
+        [
+          12,
+          2,
+          "0"
+        ],
+        [
+          13,
+          2,
+          "0"
+        ],
+        [
+          14,
+          2,
+          "0"
+        ]
+      ]
+    },
+    {
+      "x": 100000,
+      "pi_one": 4783,
+      "pi_three": 4808,
+      "prime_difference": -25,
+      "J_difference": "3029/360",
+      "squares": "32",
+      "higher_powers": "509/360",
+      "higher_absolute_bill": "18619/2520",
+      "higher_terms": [
+        [
+          3,
+          46,
+          "-1/3"
+        ],
+        [
+          4,
+          17,
+          "3/2"
+        ],
+        [
+          5,
+          10,
+          "-1/5"
+        ],
+        [
+          6,
+          6,
+          "1/3"
+        ],
+        [
+          7,
+          5,
+          "0"
+        ],
+        [
+          8,
+          4,
+          "1/8"
+        ],
+        [
+          9,
+          3,
+          "-1/9"
+        ],
+        [
+          10,
+          3,
+          "1/10"
+        ],
+        [
+          11,
+          2,
+          "0"
+        ],
+        [
+          12,
+          2,
+          "0"
+        ],
+        [
+          13,
+          2,
+          "0"
+        ],
+        [
+          14,
+          2,
+          "0"
+        ],
+        [
+          15,
+          2,
+          "0"
+        ],
+        [
+          16,
+          2,
+          "0"
+        ]
+      ]
+    },
+    {
+      "x": 1000000,
+      "pi_one": 39175,
+      "pi_three": 39322,
+      "prime_difference": -147,
+      "J_difference": "-212329/3465",
+      "squares": "167/2",
+      "higher_powers": "15397/6930",
+      "higher_absolute_bill": "90533/6930",
+      "higher_terms": [
+        [
+          3,
+          100,
+          "-2/3"
+        ],
+        [
+          4,
+          31,
+          "5/2"
+        ],
+        [
+          5,
+          15,
+          "-1/5"
+        ],
+        [
+          6,
+          10,
+          "1/2"
+        ],
+        [
+          7,
+          7,
+          "-1/7"
+        ],
+        [
+          8,
+          5,
+          "1/4"
+        ],
+        [
+          9,
+          4,
+          "-1/9"
+        ],
+        [
+          10,
+          3,
+          "1/10"
+        ],
+        [
+          11,
+          3,
+          "-1/11"
+        ],
+        [
+          12,
+          3,
+          "1/12"
+        ],
+        [
+          13,
+          2,
+          "0"
+        ],
+        [
+          14,
+          2,
+          "0"
+        ],
+        [
+          15,
+          2,
+          "0"
+        ],
+        [
+          16,
+          2,
+          "0"
+        ],
+        [
+          17,
+          2,
+          "0"
+        ],
+        [
+          18,
+          2,
+          "0"
+        ],
+        [
+          19,
+          2,
+          "0"
+        ]
+      ]
+    }
+  ],
+  "hostiles": {
+    "wrong_scalar_inverse_at9": "3/2",
+    "higher_power_at27": "-1/3",
+    "square_class_collision": [
+      1,
+      3
+    ],
+    "first_lead_is_not_permanent": 26863
+  },
+  "scope": "No finite census proves a limiting density or an all-source Collatz rule."
+}

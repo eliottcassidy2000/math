@@ -1,0 +1,65 @@
+{
+  "actual_guard_hostile": {
+    "child": 33,
+    "endpoint": 19,
+    "fake_endpoint": "77/4",
+    "left": [
+      1,
+      4
+    ],
+    "right": [
+      3,
+      1
+    ],
+    "source": 67
+  },
+  "checks": 614213,
+  "odd_primes_through": 101,
+  "ordered_false_squared_anchor_pairs": 104,
+  "reduced_words_cost_le16": 32767,
+  "scope": "No new source coverage or ROOT discovery; prime-race counts in separate companion",
+  "signed_hostile": {
+    "U_negative": -1,
+    "U_plus": 5,
+    "negative_source": -3,
+    "source": 3
+  },
+  "square_pushforward_mod24": [
+    2,
+    8,
+    0,
+    0,
+    4,
+    0,
+    0,
+    0,
+    0,
+    4,
+    0,
+    0,
+    2,
+    0,
+    0,
+    0,
+    4,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "square_pushforward_mod3": [
+    1,
+    2,
+    0
+  ],
+  "square_pushforward_mod4": [
+    2,
+    2,
+    0,
+    0
+  ],
+  "status": "PROVED scoped power/guard interfaces; universal ROOT OPEN"
+}

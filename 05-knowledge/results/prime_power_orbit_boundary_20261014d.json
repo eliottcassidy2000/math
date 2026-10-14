@@ -1,0 +1,172 @@
+{
+  "checks": 357651,
+  "finite_maps": {
+    "periods_and_series_degree": 12,
+    "universe": [
+      {
+        "maps": 1,
+        "vertices": 1
+      },
+      {
+        "maps": 4,
+        "vertices": 2
+      },
+      {
+        "maps": 27,
+        "vertices": 3
+      },
+      {
+        "maps": 256,
+        "vertices": 4
+      },
+      {
+        "maps": 3125,
+        "vertices": 5
+      }
+    ]
+  },
+  "refinement_boundary": {
+    "all_N_theorem": "same sole fixed cycle; rooted for every finite N; pointwise limit has an escaping ray",
+    "exact_control_N": [
+      0,
+      64
+    ],
+    "exact_control_j": [
+      0,
+      96
+    ],
+    "prefix_depths": [
+      0,
+      128
+    ],
+    "samples": [
+      {
+        "H_at_z_half": "1/2^1",
+        "N": 0,
+        "first_hit": 1,
+        "source": "r_0"
+      },
+      {
+        "H_at_z_half": "1/2^2",
+        "N": 1,
+        "first_hit": 2,
+        "source": "r_0"
+      },
+      {
+        "H_at_z_half": "1/2^3",
+        "N": 2,
+        "first_hit": 3,
+        "source": "r_0"
+      },
+      {
+        "H_at_z_half": "1/2^5",
+        "N": 4,
+        "first_hit": 5,
+        "source": "r_0"
+      },
+      {
+        "H_at_z_half": "1/2^9",
+        "N": 8,
+        "first_hit": 9,
+        "source": "r_0"
+      },
+      {
+        "H_at_z_half": "1/2^17",
+        "N": 16,
+        "first_hit": 17,
+        "source": "r_0"
+      },
+      {
+        "H_at_z_half": "1/2^33",
+        "N": 32,
+        "first_hit": 33,
+        "source": "r_0"
+      },
+      {
+        "H_at_z_half": "1/2^65",
+        "N": 64,
+        "first_hit": 65,
+        "source": "r_0"
+      },
+      {
+        "H_at_z_half": "1/2^129",
+        "N": 128,
+        "first_hit": 129,
+        "source": "r_0"
+      },
+      {
+        "H_at_z_half": "1/2^1025",
+        "N": 1024,
+        "first_hit": 1025,
+        "source": "r_0"
+      }
+    ],
+    "warning": "countermodel to an inference, not a counterexample to Collatz"
+  },
+  "status": "PROVED elementary identities and refinement criterion; FINITE-EXACT controls; universal Collatz OPEN",
+  "supplied_collatz_cycles": {
+    "cycles": [
+      {
+        "odd_cycle": [
+          1
+        ],
+        "odd_length": 1,
+        "shortcut_cycle": [
+          1,
+          2
+        ],
+        "shortcut_length": 2
+      },
+      {
+        "odd_cycle": [
+          -1
+        ],
+        "odd_length": 1,
+        "shortcut_cycle": [
+          -1
+        ],
+        "shortcut_length": 1
+      },
+      {
+        "odd_cycle": [
+          -5,
+          -7
+        ],
+        "odd_length": 2,
+        "shortcut_cycle": [
+          -5,
+          -7,
+          -10
+        ],
+        "shortcut_length": 3
+      },
+      {
+        "odd_cycle": [
+          -17,
+          -25,
+          -37,
+          -55,
+          -41,
+          -61,
+          -91
+        ],
+        "odd_length": 7,
+        "shortcut_cycle": [
+          -17,
+          -25,
+          -37,
+          -55,
+          -82,
+          -41,
+          -61,
+          -91,
+          -136,
+          -68,
+          -34
+        ],
+        "shortcut_length": 11
+      }
+    ],
+    "scope": "the four supplied nonzero cycles only, completeness OPEN"
+  }
+}
