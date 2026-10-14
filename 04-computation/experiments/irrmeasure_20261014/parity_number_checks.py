@@ -23,11 +23,11 @@ ok=True
 for n in range(1,2001):
     r,L=parity_number(n)
     d=r.denominator; 
-    # lowest-terms denominator must be 3*2^j with j <= L (prefix may end in the periodic pattern early)
+    # lowest-terms denominator must be exactly 3*2^L with L the hitting time of {1,2} (the last prefix digit is odd: T^(L-1) n in {4, 1/3})
     j=0; dd=d
     while dd%2==0: dd//=2; j+=1
-    if dd!=3: ok=False; print("denominator anomaly", n, r)
-print("(b) parity numbers of n <= 2000: lowest-terms denominators are all 3*2^j:", ok, "; r(1) =", parity_number(1)[0], " r(2) =", parity_number(2)[0], " r(27) =", parity_number(27)[0])
+    if dd!=3 or j!=L: ok=False; print("denominator anomaly", n, r, j, L)
+print("(b) parity numbers of n <= 2000: lowest-terms denominators are exactly 3*2^L (L = hitting time of {1,2}):", ok, "; r(1) =", parity_number(1)[0], " r(2) =", parity_number(2)[0], " r(27) =", parity_number(27)[0])
 # (c) rational cycles from binary words: for a word w of length P with k ones at positions d_0 < ... < d_{k-1} (odd steps),
 # x_0 = sum_i 3^{k-1-i} 2^{d_i} / (2^P - 3^k) is a T-periodic point with parity word w (as a 2-adic rational, odd denominator);
 # check for all words of length P <= 7 using exact rationals (T extends to rationals with odd denominators)
@@ -53,4 +53,4 @@ for P in range(1,8):
             integer_cycles.add(tuple(sorted(set(int(c) for c in cyc))))
 print("(c) %d binary words of length <= 7 realised as rational T-cycles (word recovered exactly); integer cycles found:"%cnt, sorted(integer_cycles, key=lambda c:(len(c),c)))
 # (d) doubling map: r(T x) = frac(2 r(x)) and the trivial cycle <-> {1/3, 2/3}
-print("(d) doubling orbit of 2/3:", [Fr(2,3)*2**i % 1 for i in range(4)], "; of 1/7 (period 3, word 100 -> x0 = 1/5):", [Fr(1,7)*2**i % 1 for i in range(4)])
+print("(d) doubling orbit of 2/3:", [Fr(2,3)*2**i % 1 for i in range(4)], "; of 4/7 = rho(1/5) (period 3, word 100 -> x0 = 1/5; rho(4/5) = 1/7, rho(2/5) = 2/7):", [Fr(4,7)*2**i % 1 for i in range(4)])

@@ -5,15 +5,17 @@ status: >
   PROVED, mostly by assembling KNOWN results: Terras (1976) and Lagarias (1985) for the parity-vector
   bijection modulo 2^k, the homeomorphism/isometry Q and the rationality of eventually periodic points;
   the cycle formula and the rational cycles from binary words (Lagarias 1985; Halbeisen-Hungerbuehler
-  1997); Jarnik (1931)-Besicovitch (1934) for the dimension 2/tau and Khinchin for mu = 2 almost
+  1997); Jarnik (1929)-Besicovitch (1934) for the dimension 2/tau (Jarnik's exact-order theorem for the strata mu = m) and Khinchin for mu = 2 almost
   everywhere; the standard dimension preservation of the binary coding map. NEW here: the packaging
   as a dictionary 'integers as irrationality exponents' (statements 4-6), including the exact
   denominator form of the Collatz conjecture (3 times a power of two) and the transported strata.
   FINITE-EXACT checks (parity_number_checks.py): the Terras bijection for k <= 14; lowest-terms
-  denominators 3 2^j for all n <= 2000; all 247 period words of length <= 7 realised as rational cycles
+  denominators exactly 3 2^L with L the hitting time of {1, 2} for all n <= 2000 (audit E: n <= 100000); all 247 period words of length <= 7 realised as rational cycles
   with integer ones {-1}, {1, 2}, {-10, -7, -5} (and {0} for the empty word). Inspired by the owner's
   proposal (2026-10-14) to view the positive integers as irrationality measures with the accelerated
-  cycle 1 -> 2 -> 1 as the only abnormality. Not independently audited yet.
+  cycle 1 -> 2 -> 1 as the only abnormality. Audited: audit E (2026-10-14, PASS WITH CORRECTIONS, applied:
+  the periodicity-conjecture sentence of statement 3, the rho(1/5) label, the Terras residue-class step in
+  the converse of proof 3, the exact-order wording of statement 5, 0.050, Jarnik 1929; MISTAKE-605).
 session: mac-mini-2026-10-14-irrmeasure
 source: 05-knowledge/results/collatz_irrationality_measures_20261014.md
 scripts:
@@ -63,14 +65,20 @@ reals in `(0, 1)` whose binary expansion ends in `(10)^∞` or `(01)^∞`.
 
    and every binary word of length `P` with `2^P ≠ 3^k` is the period word of exactly one `T`-cycle in
    `Q ∩ Z_2`. The converse implication "`x ∈ Q ∩ Z_2 ⇒ ρ(x) ∈ Q`" is Lagarias's periodicity conjecture
-   (OPEN; it contains the Collatz conjecture).
+   (OPEN; it contains the no-divergent-trajectories part of the Collatz conjecture and not the cycle part:
+   Lagarias shows it implies the Divergent Trajectories Conjecture, and it allows nontrivial integer cycles).
 4. **The trivial cycle and the Collatz conjecture.** `ρ(1) = 2/3`, `ρ(2) = 1/3`: the cycle `{1, 2}` of `T`
    is the 2-cycle `{2/3, 1/3}` of doubling, the unique doubling cycle with denominator 3. For `n ∈ N`:
 
        the T-orbit of n reaches {1, 2}  ⟺  ρ(n) ∈ D_3  ⟺  the doubling orbit of ρ(n) hits {1/3, 2/3}.
 
    Hence **the Collatz conjecture is the statement that the lowest-terms denominator of ρ(n) is
-   `3·2^j` for every positive integer `n`.** A nontrivial cycle of `T` on `N` of period `P` would be an
+   `3·2^j` for every positive integer `n`.** More precisely, if the orbit of `x ∈ Z_2` first reaches `{1, 2}`
+   at time `L`, the lowest-terms denominator of `ρ(x)` is exactly `3·2^L`: `ρ(x) = (3a + c)/(3·2^L)` with `a` the
+   prefix word read as an integer and `c = 2` or `1` according as `T^L x = 1` or `2`; the last prefix digit is
+   the parity of `T^(L-1) x ∈ {1/3, 4}` (the preimages of `1`, `2` outside `{1, 2}`), odd exactly when `c = 2`,
+   so `3a + c` is odd and prime to `3` (checked for `n ≤ 2000` in parity_number_checks.py and `n ≤ 100000` in
+   audit_E_parity.py). A nontrivial cycle of `T` on `N` of period `P` would be an
    `n` with `ρ(n) = a/(2^P - 1)`, odd denominator part dividing `2^P - 1` and different from `3`; a
    divergent trajectory would be an `n` with `ρ(n)` irrational.
 5. **Strata.** Put `S_τ = {x ∈ Z_2 : μ(ρ(x)) ≥ τ}`. Then `S_1 ∖ S_2 = {x : ρ(x) ∈ Q}` is the countable set
@@ -78,12 +86,14 @@ reals in `(0, 1)` whose binary expansion ends in `(10)^∞` or `(01)^∞`.
    for every `τ ≥ 2`, `dim_H S_τ = 2/τ` (2-adic metric), with `S_∞` (Liouville parity numbers) of
    dimension `0` but dense. In particular each integer `m ≥ 2` labels the stratum `{μ(ρ(x)) = m}`, of
    dimension `2/m`, carried by the parity numbers whose continued fractions have partial quotients
-   `a_(n+1) ≍ q_n^(m-2)` along a subsequence — the "constructed continued fractions" of the proposal —
+   `a_(n+1) = q_n^(m-2+o(1))` along a subsequence and never larger (Jarník's exact-order theorem) — the
+   "constructed continued fractions" of the proposal —
    and the Collatz conjecture says `N ⊆ S_1 ∖ S_2` (with the denominator form of 4), while Lagarias's
    periodicity conjecture says `Q ∩ Z_2 ⊆ S_1 ∖ S_2`.
 6. **Small cycles (FINITE-EXACT).** Among the `247` period words of length `≤ 7` the integer cycles are
    `{-1}` (word `1`), `{1, 2}` (word `10`), `{-10, -7, -5}` (word `110`), and `{0}` (empty word); all others are
-   rational non-integral cycles such as `1/5 → 4/5 → 2/5 → 1/5` (word `100`, `ρ = 1/7`).
+   rational non-integral cycles such as `1/5 → 4/5 → 2/5 → 1/5` (word `100`, `ρ(1/5) = 4/7`; the doubling
+   3-cycle `{4/7, 1/7, 2/7}` with `ρ(4/5) = 1/7` and `ρ(2/5) = 2/7`).
 
 ## Proofs
 
@@ -105,8 +115,14 @@ vector with preperiod `L` and period `P` gives `Q(T^(L+P) x) = Q(T^L x)`, hence 
 injectivity of `Q`. For the formula, iterate `2^(e) y_(i+1) = 3 y_i + 1` along the period word (with
 `2^P` total halvings and `k` odd steps) to get `2^P x_0 = 3^k x_0 + Σ_i 3^(k-1-i) 2^(d_i)`; the
 denominator `2^P - 3^k` is odd, so `x_0 ∈ Q ∩ Z_2`, and `x = T^(-L)`-preimage data are rational as well
-(the branches of `T` are rational affine maps). Conversely, given a word, the displayed `x_0` has the
-word as its period word (direct substitution; all 247 words of length `≤ 7` checked exactly).
+(the branches of `T` are rational affine maps). Conversely, given a word `w` of length `P` with `k` ones,
+substitution shows only that the displayed `x_0` is the fixed point of the affine composition
+`F_w(x) = (3^k x + S)/2^P`, `S = Σ 3^(k-1-i) 2^(d_i)`; that `x_0` actually follows the parities `w` is the
+Terras residue-class argument: the set `C_w` of 2-adic integers whose first `P` parities are `w` is one
+residue class mod `2^P` (statement 1), on `C_w` the map `T^P` equals `F_w` and takes values in `Z_2`, so
+`C_w ⊆ {x : 3^k x + S ≡ 0 (mod 2^P)}`, itself one residue class, hence the two classes coincide; `x_0`
+satisfies `3^k x_0 + S = 2^P x_0`, so `x_0 ∈ C_w` and `T^P x_0 = F_w(x_0) = x_0` with period word `w`. (All
+247 words of length `≤ 7` checked exactly as FINITE-EXACT evidence, not as the proof.)
 
 **(4).** `Q(1) = (1, 0, 1, 0, ...)` and `Q(2) = (0, 1, 0, 1, ...)`, so `ρ(1) = 2/3`, `ρ(2) = 1/3`; a
 doubling cycle `{a/(2^P - 1)}` has denominator `3` only if the period word is `10` or `01` repeated.
@@ -143,7 +159,7 @@ partial quotients is the formula `μ = 2 + limsup log a_(n+1)/log q_n`; the Liou
   (`log a_(n+1)/log q_n → 0` almost surely); the strata `μ = m > 2` are large-deviation sets. For a
   divergent `n` the parity number is irrational with binary digit density `liminf (odd steps)/(steps)
   ≥ log 2/log 3` (from `n_N = n (3^k/2^N) Π(1 + 1/(3n_i)) ≥ 1`), a non-normal number whose digit law is at
-  Kullback–Leibler distance at least `1 - H(log_3 2) ≈ 0.049` bits per step from the fair coin: divergence
+  Kullback–Leibler distance at least `1 - H(log_3 2) ≈ 0.050` bits per step from the fair coin: divergence
   costs information at every step. No finite irrationality-exponent bound for such `ρ(n)` follows from
   this (good rational approximations need not come from the binary expansion).
 * **What the dictionary does not do.** It is a conjugacy, not a new invariant: every statement about

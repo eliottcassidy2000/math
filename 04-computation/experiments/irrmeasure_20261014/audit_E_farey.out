@@ -1,0 +1,25 @@
+M0 = 2^68: window width eps = 1.62935e-21; fractions with k < q_23 in the (slightly enlarged) window:
+   K/k = 114208327604/72057431991  K/k - theta = 1.10336e-22  budget m_max = 4.35849e+21  strictly inside window: True
+   K/k = 124648188195/78644250661  K/k - theta = 2.86799e-22  budget m_max = 1.67678e+21  strictly inside window: True
+   K/k = 135088048786/85231069331  K/k - theta = 4.35988e-22  budget m_max = 1.10301e+21  strictly inside window: True
+   K/k = 145527909377/91817888001  K/k - theta = 5.63771e-22  budget m_max = 8.53003e+20  strictly inside window: True
+   K/k = 155967769968/98404706671  K/k - theta = 6.74448e-22  budget m_max = 7.13025e+20  strictly inside window: True
+   K/k = 166407630559/104991525341  K/k - theta = 7.71238e-22  budget m_max = 6.23541e+20  strictly inside window: True
+   K/k = 176847491150/111578344011  K/k - theta = 8.566e-22  budget m_max = 5.61404e+20  strictly inside window: True
+   K/k = 187287351741/118165162681  K/k - theta = 9.32446e-22  budget m_max = 5.15739e+20  strictly inside window: True
+   K/k = 197727212332/124751981351  K/k - theta = 1.00028e-21  budget m_max = 4.80763e+20  strictly inside window: True
+   K/k = 208167072923/131338800021  K/k - theta = 1.06131e-21  budget m_max = 4.53116e+20  strictly inside window: True
+M0 = 3*2^69: window width eps = 2.71558e-22; fractions with k < q_23 in the (slightly enlarged) window:
+   K/k = 114208327604/72057431991  K/k - theta = 1.10336e-22  budget m_max = 4.35849e+21  strictly inside window: True
+M0 = 2^71: window width eps = 2.03668e-22; fractions with k < q_23 in the (slightly enlarged) window:
+   K/k = 114208327604/72057431991  K/k - theta = 1.10336e-22  budget m_max = 4.35849e+21  strictly inside window: True
+M0 = 3781*2^60: window width eps = 1.10318e-22; fractions with k < q_23 in the (slightly enlarged) window:
+   (none)
+M0 = 2^72: window width eps = 1.01834e-22; fractions with k < q_23 in the (slightly enlarged) window:
+   (none)
+
+semiconvergent s: (K+L)/K - delta in Hercher's notation = K/k - theta = 1.10336e-22  (Hercher Remark 28: 1.1032e-22)
+plain budget m_max(s) = 4.3584872e+21 = 3780.39 * 2^60  (Hercher Remark 28: 'previous methods' need X_0 >= 3781 * 2^60)
+with Hercher's Theorem 27 factor 3/4: (3/4) m_max(s) = 2835.29 * 2^60  (Remark 28: 2836 * 2^60)
+Hercher Corollary 29 hypothesis 3*2^69 = 1536*2^60 = 1.77089e+21 ; Barina 2025 limit 2^71 = 2048*2^60 = 2.36118e+21 ; 2^71 >= 3*2^69: True
+Hercher's unconditional input in the paper: X_0 = 704*2^60 = 8.11657e+20 (= 2^69.459)

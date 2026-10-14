@@ -1,0 +1,105 @@
+partial quotients agree (mpmath 300 dps vs sympy exact): True
+a_0..a_39 = [1, 1, 1, 2, 2, 3, 1, 5, 2, 23, 2, 2, 1, 1, 55, 1, 4, 3, 1, 1, 15, 1, 9, 2, 5, 7, 1, 1, 4, 8, 1, 11, 1, 20, 2, 1, 10, 1, 4, 1]
+max partial quotient among a_1..a_40 = 55  (a_14 = 55 )
+max partial quotient among a_0..a_39 = 55
+
+M0 = 2^68 = 2.95148e+20, 3*2^69 = 1.77089e+21, 2^71 = 2.36118e+21
+
+--- convergents p_j/q_j, sign, budget, status (budget < M0 => excluded) ---
+j   p_j              q_j              sign   delta          m_max        2^68   3*2^69 2^71   a_(j+1) q_j^2/(3ln2) and ratio
+0   1                1                below
+1   2                1                above  0.28768207     1.15869      excl   excl   excl   0.480898  ratio=2.40942  a_(j+1)=1
+2   3                2                below
+3   8                5                above  0.052116001    31.9799      excl   excl   excl   24.0449  ratio=1.33001  a_(j+1)=2
+4   19               12               below
+5   65               41               above  0.011462901    1192.25      excl   excl   excl   808.39  ratio=1.47485  a_(j+1)=1
+6   84               53               below
+7   485              306              above  0.0010222391   99781.0      excl   excl   excl   90058.8  ratio=1.10795  a_(j+1)=2
+8   1054             665              below
+9   24727            15601            above  1.8194588e-5   2.85818e+8   excl   excl   excl   2.34093e+8  ratio=1.22096  a_(j+1)=2
+10  50508            31867            below
+11  125743           79335            above  3.6647207e-6   7.2161e+9    excl   excl   excl   3.02679e+9  ratio=2.38407  a_(j+1)=1
+12  176251           111202           below
+13  301994           190537           above  6.4507503e-8   9.84573e+11  excl   excl   excl   9.60229e+11  ratio=1.02535  a_(j+1)=55
+14  16785921         10590737         below
+15  17087915         10781274         above  1.2206983e-8   2.94402e+14  excl   excl   excl   2.23591e+14  ratio=1.3167  a_(j+1)=4
+16  85137581         53715833         below
+17  272500658        171928773        above  1.7892162e-9   3.20306e+16  excl   excl   excl   1.42151e+16  ratio=2.25327  a_(j+1)=1
+18  357638239        225644606        below
+19  630138897        397573379        above  1.0584349e-10  1.25208e+18  excl   excl   excl   1.1402e+18  ratio=1.09813  a_(j+1)=15
+20  9809721694       6189245291       below
+21  10439860591      6586818670       above  1.0123125e-11  2.1689e+20   excl   excl   excl   1.87779e+20  ratio=1.15503  a_(j+1)=9
+22  103768467013     65470613321      below
+23  217976794617     137528045312     above  8.9865487e-13  5.10126e+22  ALIVE  ALIVE  ALIVE  4.54785e+22  ratio=1.12169  a_(j+1)=5
+24  1193652440098    753110839881     below
+25  8573543875303    5409303924479    above  6.5928777e-14  2.73492e+25  ALIVE  ALIVE  ALIVE  1.40714e+25  ratio=1.94361  a_(j+1)=1
+
+Check of the exact convergent formula m_max = q_j (q_(j+1) + q_j/theta_(j+2)) / (3 ln 2), theta_(j+2) = complete quotient:
+  j=1: m_max=1.15868649893, formula=1.15868649893, rel. diff=1.87e-301; relative correction (q_(j-1)/q_j + 1/theta_(j+2))/a_(j+1) = 1.409
+  j=3: m_max=31.9799414813, formula=31.9799414813, rel. diff=1.59e-299; relative correction (q_(j-1)/q_j + 1/theta_(j+2))/a_(j+1) = 0.33
+  j=21: m_max=2.16890155341e+20, formula=2.16890155341e+20, rel. diff=2.48e-281; relative correction (q_(j-1)/q_j + 1/theta_(j+2))/a_(j+1) = 0.155
+  j=23: m_max=5.10125558288e+22, formula=5.10125558288e+22, rel. diff=2.89e-278; relative correction (q_(j-1)/q_j + 1/theta_(j+2))/a_(j+1) = 0.1217
+
+--- intermediate fractions (p_(j-1) + i p_j)/(q_(j-1) + i q_j), 1 <= i < a_(j+1), lying ABOVE theta ---
+(these are exactly the other best approximations of the first kind; Eliahou's method must treat them)
+  K/k = 5/3  (between p_1/q_1 and p_3/q_3, i=1)  delta=0.16989904  m_max=5.88585  2^68:excl  3*2^69:excl  2^71:excl
+  K/k = 27/17  (between p_3/q_3 and p_5/q_5, i=1)  delta=0.038564968  m_max=146.938  2^68:excl  3*2^69:excl  2^71:excl
+  K/k = 46/29  (between p_3/q_3 and p_5/q_5, i=2)  delta=0.025013934  m_max=386.451  2^68:excl  3*2^69:excl  2^71:excl
+  K/k = 149/94  (between p_5/q_5 and p_7/q_7, i=1)  delta=0.0093747686  m_max=3342.3  2^68:excl  3*2^69:excl  2^71:excl
+  K/k = 233/147  (between p_5/q_5 and p_7/q_7, i=2)  delta=0.0072866363  m_max=6724.64  2^68:excl  3*2^69:excl  2^71:excl
+  K/k = 317/200  (between p_5/q_5 and p_7/q_7, i=3)  delta=0.0051985039  m_max=12824.2  2^68:excl  3*2^69:excl  2^71:excl
+  K/k = 401/253  (between p_5/q_5 and p_7/q_7, i=4)  delta=0.0031103715  m_max=27113.6  2^68:excl  3*2^69:excl  2^71:excl
+  K/k = 1539/971  (between p_7/q_7 and p_9/q_9, i=1)  delta=0.00097858502  m_max=330750.0  2^68:excl  3*2^69:excl  2^71:excl
+  K/k = 2593/1636  (between p_7/q_7 and p_9/q_9, i=2)  delta=0.00093493091  m_max=583287.0  2^68:excl  3*2^69:excl  2^71:excl
+  K/k = 3647/2301  (between p_7/q_7 and p_9/q_9, i=3)  delta=0.0008912768  m_max=860563.0  2^68:excl  3*2^69:excl  2^71:excl
+  K/k = 4701/2966  (between p_7/q_7 and p_9/q_9, i=4)  delta=0.00084762269  m_max=1.1664e+6  2^68:excl  3*2^69:excl  2^71:excl
+  K/k = 5755/3631  (between p_7/q_7 and p_9/q_9, i=5)  delta=0.00080396858  m_max=1.50545e+6  2^68:excl  3*2^69:excl  2^71:excl
+  K/k = 6809/4296  (between p_7/q_7 and p_9/q_9, i=6)  delta=0.00076031447  m_max=1.88343e+6  2^68:excl  3*2^69:excl  2^71:excl
+  K/k = 7863/4961  (between p_7/q_7 and p_9/q_9, i=7)  delta=0.00071666036  m_max=2.30746e+6  2^68:excl  3*2^69:excl  2^71:excl
+  K/k = 8917/5626  (between p_7/q_7 and p_9/q_9, i=8)  delta=0.00067300625  m_max=2.7865e+6  2^68:excl  3*2^69:excl  2^71:excl
+  K/k = 9971/6291  (between p_7/q_7 and p_9/q_9, i=9)  delta=0.00062935214  m_max=3.332e+6  2^68:excl  3*2^69:excl  2^71:excl
+  K/k = 11025/6956  (between p_7/q_7 and p_9/q_9, i=10)  delta=0.00058569803  m_max=3.95881e+6  2^68:excl  3*2^69:excl  2^71:excl
+  K/k = 12079/7621  (between p_7/q_7 and p_9/q_9, i=11)  delta=0.00054204392  m_max=4.68658e+6  2^68:excl  3*2^69:excl  2^71:excl
+  K/k = 13133/8286  (between p_7/q_7 and p_9/q_9, i=12)  delta=0.0004983898  m_max=5.54185e+6  2^68:excl  3*2^69:excl  2^71:excl
+  K/k = 14187/8951  (between p_7/q_7 and p_9/q_9, i=13)  delta=0.00045473569  m_max=6.56132e+6  2^68:excl  3*2^69:excl  2^71:excl
+  K/k = 15241/9616  (between p_7/q_7 and p_9/q_9, i=14)  delta=0.00041108158  m_max=7.79732e+6  2^68:excl  3*2^69:excl  2^71:excl
+  K/k = 16295/10281  (between p_7/q_7 and p_9/q_9, i=15)  delta=0.00036742747  m_max=9.32701e+6  2^68:excl  3*2^69:excl  2^71:excl
+  K/k = 17349/10946  (between p_7/q_7 and p_9/q_9, i=16)  delta=0.00032377336  m_max=1.12692e+7  2^68:excl  3*2^69:excl  2^71:excl
+  K/k = 18403/11611  (between p_7/q_7 and p_9/q_9, i=17)  delta=0.00028011925  m_max=1.38167e+7  2^68:excl  3*2^69:excl  2^71:excl
+  K/k = 19457/12276  (between p_7/q_7 and p_9/q_9, i=18)  delta=0.00023646514  m_max=1.73049e+7  2^68:excl  3*2^69:excl  2^71:excl
+  K/k = 20511/12941  (between p_7/q_7 and p_9/q_9, i=19)  delta=0.00019281103  m_max=2.23725e+7  2^68:excl  3*2^69:excl  2^71:excl
+  K/k = 21565/13606  (between p_7/q_7 and p_9/q_9, i=20)  delta=0.00014915692  m_max=3.04065e+7  2^68:excl  3*2^69:excl  2^71:excl
+  K/k = 22619/14271  (between p_7/q_7 and p_9/q_9, i=21)  delta=0.00010550281  m_max=4.50888e+7  2^68:excl  3*2^69:excl  2^71:excl
+  K/k = 23673/14936  (between p_7/q_7 and p_9/q_9, i=22)  delta=6.1848699e-5  m_max=8.04975e+7  2^68:excl  3*2^69:excl  2^71:excl
+  K/k = 75235/47468  (between p_9/q_9 and p_11/q_11, i=1)  delta=1.0929655e-5  m_max=1.44768e+9  2^68:excl  3*2^69:excl  2^71:excl
+  K/k = 102225496/64497107  (between p_15/q_15 and p_17/q_17, i=1)  delta=8.7343939e-9  m_max=2.46142e+15  2^68:excl  3*2^69:excl  2^71:excl
+  K/k = 187363077/118212940  (between p_15/q_15 and p_17/q_17, i=2)  delta=5.261805e-9  m_max=7.48874e+15  2^68:excl  3*2^69:excl  2^71:excl
+  K/k = 114208327604/72057431991  (between p_21/q_21 and p_23/q_23, i=1)  delta=5.5108901e-12  m_max=4.35849e+21  2^68:ALIVE  3*2^69:ALIVE  2^71:ALIVE
+  K/k = 1411629234715/890638885193  (between p_23/q_23 and p_25/q_25, i=1)  delta=7.79694e-13  m_max=3.80764e+23  2^68:ALIVE  3*2^69:ALIVE  2^71:ALIVE
+  K/k = 2605281674813/1643749725074  (between p_23/q_23 and p_25/q_25, i=2)  delta=6.6073313e-13  m_max=8.29255e+23  2^68:ALIVE  3*2^69:ALIVE  2^71:ALIVE
+  K/k = 3798934114911/2396860564955  (between p_23/q_23 and p_25/q_25, i=3)  delta=5.4177226e-13  m_max=1.4747e+24  2^68:ALIVE  3*2^69:ALIVE  2^71:ALIVE
+  K/k = 4992586555009/3149971404836  (between p_23/q_23 and p_25/q_25, i=4)  delta=4.2281139e-13  m_max=2.48335e+24  2^68:ALIVE  3*2^69:ALIVE  2^71:ALIVE
+  K/k = 6186238995107/3903082244717  (between p_23/q_23 and p_25/q_25, i=5)  delta=3.0385052e-13  m_max=4.2818e+24  2^68:ALIVE  3*2^69:ALIVE  2^71:ALIVE
+  K/k = 7379891435205/4656193084598  (between p_23/q_23 and p_25/q_25, i=6)  delta=1.8488965e-13  m_max=8.39454e+24  2^68:ALIVE  3*2^69:ALIVE  2^71:ALIVE
+first fraction K/k > theta with K/k - theta < 1/(3 M0 ln2), M0=2^68: K=114208327604, k=72057431991 (K+k=186265759595)
+first fraction K/k > theta with K/k - theta < 1/(3 M0 ln2), M0=3*2^69: K=114208327604, k=72057431991 (K+k=186265759595)
+first fraction K/k > theta with K/k - theta < 1/(3 M0 ln2), M0=2^71: K=114208327604, k=72057431991 (K+k=186265759595)
+first fraction K/k > theta with K/k - theta < 1/(3 M0 ln2), M0=2^72: K=217976794617, k=137528045312 (K+k=355504839929)
+first fraction K/k > theta with K/k - theta < 1/(3 M0 ln2), M0=2^73: K=217976794617, k=137528045312 (K+k=355504839929)
+
+Legendre threshold sqrt((3/2) 2^71 ln2) = 4.954766654e+10
+convergents above theta with q_j <= threshold: j = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21]
+max budget among them = 2.1689e+20 < 2^71 = 2.36118e+21 ?
+q_23 = 137528045312 > threshold: True ; semiconvergent k = q_21+q_22 = 72057431991 > threshold: True
+
+mu_0 table, k > (3 c M0 ln2)^(1/mu_0) with c = 1, M0 = 2^71:
+  mu_0 = 2: k > 7.0071e+10
+  mu_0 = 3: k > 1.6996e+7
+  mu_0 = 5.117: k > 17339.0
+  mu_0 = 8.616: k > 329.26
+  mu_0 = 5.117: k > 17339.0
+3*2^71*ln2 = 4.9099425e+21
+
+p_21+p_22 = 114208327604  q_21+q_22 = 72057431991  sum = 186265759595
+p_23 = 217976794617  q_23 = 137528045312  sum = 355504839929
+Eliahou 1993 generators: p_13 = 301994  p_15 = 17087915  p_16 = 85137581

@@ -30,7 +30,8 @@ integers' parity numbers carry the Jarník strata on the 2-adic side.
   `1/5 → 4/5 → 2/5`): every statement about "the only cycle" must be stated on `N`, not on `Z_2`.
 * **Corrected near miss.** MISTAKE-602 (a semiconvergent called a convergent): THM-4633 uses Legendre's theorem, which
   yields convergents only below the threshold `k^2 ≤ (3/2) m ln 2`, and cites Hercher for the intermediate-fraction
-  analysis above it.
+  analysis above it (audit E then showed that the budget inequality alone cannot exclude the semiconvergent
+  `114208327604/72057431991` at `2^71`; §3.2, §8, MISTAKE-605).
 * **Least-used sidecar.** The parity-vector map `Q` as a 2-adic *isometry* (Terras's bijection mod `2^k`), which
   transports real Diophantine strata to `Z_2` without loss.
 
@@ -61,10 +62,17 @@ conjecture places `N` in the stratum `μ = 1`. Checks: Terras bijection to `k = 
 `2^K/3^k = Π(1 + 1/(3n_i))` gives `0 < K/k - θ < 1/(3 m ln 2)`; a convergent `p_j/q_j > θ` admits only cycles with minimum
 below `m_max ≍ a_(j+1) q_j^2/(3 ln 2)`. With `m ≥ 2^71` the convergents `2/1` (budget 1.16: the trivial cycle, `m = 1`),
 `8/5`, `65/41`, `485/306`, `24727/15601`, `125743/79335`, `301994/190537`, `17087915/10781274`, `272500658/171928773`,
-`630138897/397573379`, `10439860591/6586818670` are excluded and `217976794617/137528045312` survives; Legendre's theorem
-then gives, self-contained, that every nontrivial cycle has more than `4.95·10^10` odd elements, and Hercher's Corollary 29
-gives `≥ 137,528,045,312 = q_23` — the same convergent. An effective exponent `|θ - p/q| > c q^(-μ_0)` gives
-`k > (3 c M_0 ln 2)^(1/μ_0)`: `7.0·10^10` for `μ_0 = 2`, `1.7·10^7` for `3`, `1.7·10^4` for `5.117`, `33` for `14.3` (Rhin's linear-form exponent 13.3, the one relevant to `θ`, as cited by opus S31), `329` for `8.616`; the
+`630138897/397573379`, `10439860591/6586818670` are excluded and `217976794617/137528045312` is the first surviving
+convergent; Legendre's theorem then gives, self-contained, that every nontrivial cycle has more than `4.95·10^10` odd
+elements. Above that threshold the ratio need not be a convergent: the Stern–Brocot enumeration (audit E) of every
+fraction with `k < q_23` in the window finds exactly one at `2^71`, the semiconvergent `114208327604/72057431991` with
+budget `3780.4·2^60 > 2^71`, so the budget inequality (Eliahou's method) gives `k ≥ 72,057,431,991`, and only a verified
+limit `≥ 3781·2^60` would push it to `q_23` (Hercher's Remark 28). Hercher's Corollary 29 gives `≥ 137,528,045,312 = q_23`
+by his Theorem 27 (factor `3/4`) and a residue-class computation, conditional on `X_0 ≥ 3·2^69`, now met by Barina 2025;
+an earlier version of this note and of THM-4633 credited the ledger with Hercher's number (MISTAKE-605). An effective
+exponent `|θ - p/q| > c q^(-μ_0)` gives `k > (3 c M_0 ln 2)^(1/μ_0)`: `7.0·10^10` for `μ_0 = 2`, `1.7·10^7` for `3`,
+`2.2·10^4` for `5`, `33` for `14.3` (Rhin's linear-form exponent 13.3 as cited by opus S31; CITED from memory), `329`
+for `8.616` (Rhin per `γ`, quoted for scale; a former `5.117` row misread `μ(ln 3) ≤ 5.1163`); the
 actual continued fraction (partial quotients `≤ 55` through index 40) already behaves like `μ = 2` in the verified window.
 
 ### 3.3 HYP-9263 — the owner's `μ = 2` hypothesis (OPEN)
@@ -93,14 +101,17 @@ exactly the scale the ledger attains; it says nothing about divergence.
     python3 log23_convergents.py 71     # convergents of log2 3, budgets, 2^71 exclusion, Legendre threshold, mu_0 table
     python3 parity_number_checks.py     # Terras bijection, denominators 3*2^j, rational cycles from words, doubling orbits
     python3 log23_khinchin.py 20000     # 20,000 partial quotients of log2 3: Khinchin/Levy statistics (HYP-9263 evidence)
+    python3 audit_E_convergents.py; python3 audit_E_farey.py; python3 audit_E_parity.py; python3 audit_E_khinchin.py   # audit E (independent re-derivations, Stern-Brocot window enumeration, hitting-time denominators, exceedance counts)
 
-Hostile controls: the ledger's first surviving denominator equals Hercher's published odd-element bound; the integer
-cycles found among short words are exactly those of THM-4591 with period `≤ 7`; the trivial cycle saturates the product
+Hostile controls: the ledger's first surviving convergent denominator equals Hercher's published odd-element bound,
+which audit E showed is an agreement of numbers and not of mechanism (the semiconvergent `114208327604/72057431991`
+survives the plain budget at `2^71`; §8); the integer cycles found among short words are exactly those of THM-4591 with period `≤ 7`; the trivial cycle saturates the product
 identity (`4/3 = 1 + 1/3`).
 
 ## 6. What was not done
 
-No new cycle bound beyond Hercher's; no finite irrationality-exponent bound for the parity number of a hypothetical
+No new cycle bound beyond Hercher's (the budget and ledger are Eliahou's 1993 method with the roles inverted, as in
+Hercher's Remark 28; the self-contained Legendre route is weaker); no finite irrationality-exponent bound for the parity number of a hypothetical
 divergent trajectory (good approximations need not come from the binary expansion); no use of the zero-free-region
 papers (their status is unrefereed and they do not bear on `θ`).
 
@@ -108,14 +119,35 @@ papers (their status is unrefereed and they do not bear on `θ`).
 
 1. (Done at the second checkpoint: 20,000 partial quotients, Khinchin-typical; see HYP-9263.) Extend further and
    extend the exclusion ledger beyond index 37 as needed.
-2. State Hercher's intermediate-fraction step in the budget language (which fractions between `p_21/q_21` and `p_23/q_23`
-   lie within `1/(3·2^71 ln 2)` of `θ`), to make the `137,528,045,312` bound self-contained in-repo.
+2. (Reframed after audit E: the budget language alone cannot do it, since the semiconvergent `114208327604/72057431991`
+   survives the budget until `X_0 ≥ 3781·2^60`; the window enumeration itself is now in `audit_E_farey.py`.) Reproduce
+   in-repo Hercher's Theorem 27 (the factor `3/4`, which lowers that fraction's threshold to `2836·2^60`, still above
+   `2^71`) and the Lemma 26 residue-class recursion that lowers it to `1536·2^60`, to make `k ≥ q_23` self-contained.
 3. Lagarias's periodicity conjecture in the dictionary: which rational 2-adic integers of small height have rational
    parity numbers (a census of `ρ` on `Q ∩ Z_2` by height).
 
 ## 8. Audit
 
-Pending at the first checkpoint; to be filled when the independent audit returns.
+Audit E (independent adversarial audit, 2026-10-14; report
+[`collatz_irrationality_measures_audit_E_20261014.md`](collatz_irrationality_measures_audit_E_20261014.md); scripts
+`audit_E_{convergents,farey,parity,khinchin}.py` with outputs): THM-4634, THM-4633, HYP-9263 and §3–4 of this note PASS
+WITH CORRECTIONS; the three session scripts PASS (one label corrected). Decisive finding: at `2^71` the budget inequality
+does not exclude the semiconvergent `114208327604/72057431991` (budget `3780.4·2^60 ≈ 2^71.9`), the only fraction with
+`k < q_23` in the admissible window (Stern–Brocot enumeration; ten such fractions at `2^68`, none at `3781·2^60`), so the
+ledger gives `k ≥ 72,057,431,991`, and `k ≥ q_23 = 137,528,045,312` is Hercher's conditional Corollary 29 (Theorem 27's
+factor `3/4` plus a residue-class computation, hypothesis `X_0 ≥ 3·2^69` met by Barina 2025) — precisely Hercher's own
+Remark 28, not the ledger. Also corrected: the error term `O(1/a_(j+1))` in THM-4633(2) (exact form
+`q_j(q_(j+1) + q_j/θ_(j+2))/(3 ln 2)`), the `5.117` row (a misread of `μ(ln 3) ≤ 5.1163051`; the `8.616`/`13.3` rows are
+CITED from memory), "NEW here" (Eliahou 1993 with the roles inverted), `ρ(1/5) = 4/7` (not `1/7`), the
+periodicity-conjecture sentence (it contains only the no-divergence part), the Terras residue-class step in the converse
+of THM-4634(3), `a_(n+1) = q_n^(m-2+o(1))` with Jarník's exact-order theorem, `1 − H(log_3 2) = 0.050`, Jarník 1929, and
+HYP-9263's false "`< 10^(-3)` beyond `n = 1000`" (`311` exceedances in `(1000, 20000)`, max `0.00453` at `n = 1179`, last at
+`n = 5113`); the sharpening "denominator exactly `3·2^L`, `L` the hitting time" (verified to `n = 100000`) was added to
+THM-4634(4). All applied in place; MISTAKE-605 logged. Verified by the audit without change: the Terras bijection to
+`k ≤ 16`, the isometry, the non-injectivity set of `ρ`, the cycle formula on five cycles, the Jarník transport, the
+convergent table at 300 digits, the Legendre threshold and the self-contained contradiction of THM-4633(5), statement 6's
+arithmetic, the literature values and the description of the arXiv:2610.10192 abstract, and the Khinchin statistics at
+independent precision.
 
 ## 9. META-PATTERNS candidate
 

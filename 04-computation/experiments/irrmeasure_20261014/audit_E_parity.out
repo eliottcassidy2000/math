@@ -1,0 +1,28 @@
+(1)-(2) cycle formula and parity numbers
+  x0=1: word 10, closes: True, formula gives 1 (match True), cycle [Fraction(1, 1), Fraction(2, 1)], rho(x0) = 2/3
+  x0=-1: word 1, closes: True, formula gives -1 (match True), cycle [Fraction(-1, 1)], rho(x0) = 1
+  x0=-5: word 110, closes: True, formula gives -5 (match True), cycle [Fraction(-5, 1), Fraction(-7, 1), Fraction(-10, 1)], rho(x0) = 6/7
+  x0=-17: word 11110111000, closes: True, formula gives -17 (match True), cycle [Fraction(-17, 1), Fraction(-25, 1), Fraction(-37, 1), Fraction(-55, 1), Fraction(-82, 1), Fraction(-41, 1), Fraction(-61, 1), Fraction(-91, 1), Fraction(-136, 1), Fraction(-68, 1), Fraction(-34, 1)], rho(x0) = 1976/2047
+  x0=1/5: word 100, closes: True, formula gives 1/5 (match True), cycle [Fraction(1, 5), Fraction(4, 5), Fraction(2, 5)], rho(x0) = 4/7
+  x0=4/5: word 001, closes: True, formula gives 4/5 (match True), cycle [Fraction(4, 5), Fraction(2, 5), Fraction(1, 5)], rho(x0) = 1/7
+  x0=2: word 01, closes: True, formula gives 2 (match True), cycle [Fraction(2, 1), Fraction(1, 1)], rho(x0) = 1/3
+  => rho(1/5) = 4/7 (word 100), rho(4/5) = 1/7 (word 001), rho(2/5) = 2/7 (word 010); THM-4634 (6) and parity_number_checks.py (d) mislabel 1/7 as the rho of word 100 / x0 = 1/5
+  11-cycle elements from -17: [-17, -25, -37, -55, -82, -41, -61, -91, -136, -68, -34]  period word from -17: 11110111000  k = 7
+
+(3) lowest-terms denominators of rho(n), n <= 100000, and j vs hitting time L of {1,2}
+  denominators not of the form 3*2^j: 0; cases with j != L: 0 (expected 0: the last prefix digit is the parity of 4 or 1/3, so the numerator 3a+c is odd)
+  rho(27) = 1545087912629871000205/1770887431076116955136  L = 69
+
+(4) non-injectivity of rho
+  Q(-2)[:8] = [0, 1, 1, 1, 1, 1, 1, 1]  Q(-1/3)[:8] = [1, 0, 0, 0, 0, 0, 0, 0]  rho(-2) = 1/2 = rho(-1/3): 0111... vs 1000...; T(-1/3) = 0  T(-2) = -1  T(-1) = -1
+
+(5) Terras bijection and isometry
+  bijection Z/2^k -> {0,1}^k verified for k <= 16
+  |Q(x)-Q(y)|_2 = |x-y|_2 on 2000 random pairs (40 digits): True
+
+(6) information numbers
+  log_3 2 = 0.630930, H = 0.949956 bits, 1 - H = 0.050044 bits (THM-4634 says 'approx 0.049'; correct rounding 0.050)
+  n=27: N=70 T-steps, k=41 odd, k/N=0.5857; identity check: ln T^N = ln n + k ln3 - N ln2 + sum ln(1+1/(3n_i)) = 7.550e-15 (should be ln 1 = 0)
+
+(7) Jarnik/Sondow exponent on a constructed continued fraction a_(n+1) = a_n^2 (essay claimed mu = 4)
+  log a_(n+1)/log q_n for a_(n+1) = a_n^2: ['2.0000', '1.3284', '1.1410', '1.0659', '1.0319', '1.0157', '1.0078']  -> limsup 1, mu = 3 (not 4); general a_(n+1) = a_n^c gives mu = c + 1

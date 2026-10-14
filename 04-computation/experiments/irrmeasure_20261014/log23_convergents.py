@@ -35,8 +35,8 @@ from mpmath import sqrt
 kL = sqrt(3*M0*log(2)/2)
 print("\nFirst surviving convergent: j=%d, K/k = %d/%d (m_max = %s)."%(j,p,q,mp.nstr(q/(3*(p*log(2)-q*log(3))),6)))
 print("Legendre threshold: k <= sqrt(3 M0 ln 2 / 2) = %s; every cycle with k below it has K/k a convergent, hence k >= q_%d = %d > threshold: contradiction."%(mp.nstr(kL,8),j,q))
-print("So (Legendre route) every nontrivial Syracuse cycle has more than %s odd steps; Hercher's Corollary 29 (finer analysis) gives k >= %d."%(mp.nstr(kL,8),q))
+print("So (Legendre route) every nontrivial Syracuse cycle has more than %s odd steps. NOTE (audit E): the plain ledger over convergents omits intermediate fractions; at 2^71 the semiconvergent (p_21+p_22)/(q_21+q_22) = 114208327604/72057431991 has budget 3780.4*2^60 > 2^71 and is the only admissible fraction with k < q_23 (Stern-Brocot enumeration, audit_E_farey.py), so Eliahou's full method gives k >= 72,057,431,991; Hercher Cor. 29 (Theorem 27 factor 3/4 + computation, conditional on X_0 >= 3*2^69, met by Barina 2025) gives k > 1.375e11, and then the next admissible denominator is q_23 = %d."%(mp.nstr(kL,8),q))
 # irrationality-measure parametrisation: |theta - K/k| > c k^-mu  and  < 1/(3 m ln 2)  =>  k > (3 c m ln 2)^(1/mu)
-for mu in (2, 3, 4.117, 5, 8.616):
+for mu in (2, 3, 5, 8.616, 14.3):
     print("  if |theta - p/q| > q^(-%s) for all q, a cycle with minimum >= M0 needs k > (3 M0 ln 2)^(1/%s) = %s"%(mu,mu,mp.nstr((3*M0*log(2))**(1/mpf(mu)),6)))
 print("  the actual continued fraction (first 40 partial quotients <= 55) behaves like mu = 2 in this range: m_max(j) ~ a_(j+1) q_j^2 / (3 ln 2)")
