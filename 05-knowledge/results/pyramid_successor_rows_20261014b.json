@@ -1,0 +1,259 @@
+{
+  "arbitrary_split_examples": [
+    [
+      5,
+      3,
+      1,
+      4
+    ],
+    [
+      6,
+      3,
+      1,
+      2
+    ],
+    [
+      7,
+      5,
+      1,
+      12
+    ],
+    [
+      9,
+      6,
+      1,
+      11
+    ],
+    [
+      9,
+      7,
+      1,
+      24
+    ],
+    [
+      10,
+      5,
+      1,
+      3
+    ],
+    [
+      17,
+      8,
+      2,
+      18
+    ],
+    [
+      35,
+      10,
+      2,
+      4
+    ]
+  ],
+  "arbitrary_split_universe": {
+    "left": [
+      1,
+      10
+    ],
+    "power": [
+      1,
+      2
+    ],
+    "right": [
+      1,
+      10
+    ],
+    "start": [
+      1,
+      100
+    ]
+  },
+  "checks": 34734,
+  "historical_hostiles": {
+    "p15_n3_c181": "-61355600116348100287252240367",
+    "p16_n1_c33": "-2148849686515840130559"
+  },
+  "malformed_controls": 15,
+  "raw_block_coincidences": [
+    [
+      3,
+      0,
+      4,
+      1,
+      [
+        21,
+        24
+      ]
+    ]
+  ],
+  "root_rectangle": {
+    "first_unit_bracket_failures": [
+      [
+        15,
+        3
+      ],
+      [
+        16,
+        1
+      ],
+      [
+        17,
+        1
+      ],
+      [
+        18,
+        1
+      ],
+      [
+        19,
+        1
+      ],
+      [
+        20,
+        1
+      ],
+      [
+        21,
+        1
+      ],
+      [
+        22,
+        1
+      ],
+      [
+        23,
+        1
+      ],
+      [
+        24,
+        1
+      ],
+      [
+        25,
+        1
+      ],
+      [
+        26,
+        1
+      ],
+      [
+        27,
+        1
+      ],
+      [
+        28,
+        1
+      ],
+      [
+        29,
+        1
+      ],
+      [
+        30,
+        1
+      ],
+      [
+        31,
+        1
+      ],
+      [
+        32,
+        1
+      ]
+    ],
+    "higher_power_integer_rows": 0,
+    "integer_rows": 256,
+    "n": [
+      1,
+      128
+    ],
+    "power": [
+      1,
+      32
+    ]
+  },
+  "sample_rows": [
+    {
+      "centre": 2,
+      "n": 1,
+      "power": 1,
+      "start": 1,
+      "total": 3
+    },
+    {
+      "centre": 6,
+      "n": 2,
+      "power": 1,
+      "start": 4,
+      "total": 15
+    },
+    {
+      "centre": 12,
+      "n": 3,
+      "power": 1,
+      "start": 9,
+      "total": 42
+    },
+    {
+      "centre": 20,
+      "n": 4,
+      "power": 1,
+      "start": 16,
+      "total": 90
+    },
+    {
+      "centre": 30,
+      "n": 5,
+      "power": 1,
+      "start": 25,
+      "total": 165
+    },
+    {
+      "centre": 4,
+      "n": 1,
+      "power": 2,
+      "start": 3,
+      "total": 25
+    },
+    {
+      "centre": 12,
+      "n": 2,
+      "power": 2,
+      "start": 10,
+      "total": 365
+    },
+    {
+      "centre": 24,
+      "n": 3,
+      "power": 2,
+      "start": 21,
+      "total": 2030
+    },
+    {
+      "centre": 40,
+      "n": 4,
+      "power": 2,
+      "start": 36,
+      "total": 7230
+    },
+    {
+      "centre": 60,
+      "n": 5,
+      "power": 2,
+      "start": 55,
+      "total": 19855
+    }
+  ],
+  "scope": "No all-p>=5 nonexistence, Collatz, JC, or plane-colouring conclusion.",
+  "status": "PROVED scoped exact classification/recursions; higher-power finite census only",
+  "taxicab_pairs": [
+    [
+      1,
+      12
+    ],
+    [
+      9,
+      10
+    ]
+  ],
+  "uniform_bracket": "p*n*(n+1) < c < p*(n*(n+1)+1), p>=3"
+}

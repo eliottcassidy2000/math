@@ -1,7 +1,16 @@
 # HYP-2457 - Faulhaber anchor expansion is an odd-moment triangular carrier
 
-**Status:** OPEN synthesis; exact odd-moment identity and formal expansion
-verified, uniform remainder/bracket proof still open.
+**Status:** OPEN uniform-remainder/higher-power integer-row questions; exact
+odd-moment identity and formal expansion retained. The universal unit-width
+bracket imported from HYP-2454 is **REFUTED**.
+
+**2026-10-14 correction:** the exact defects at `(p,n,c)=(15,3,181)` and
+`(16,1,33)` are negative, although these are the proposed unit upper
+endpoints. The preserved finite checks do not justify the universal bracket.
+The proved replacement `p*n(n+1)<c<p*(n(n+1)+1)` and exact rational-root
+decision are in [the successor-row packet](../results/pyramid_successor_rows_20261014b.md).
+The fixed-power formal coefficients below are distinct from a uniform bound
+over all powers; in particular the displayed `alpha_p` exceeds one at `p=15`.
 **Source:** codex-2026-06-13.
 **Companions:** HYP-2456, HYP-2455, HYP-2454, HYP-2453, HYP-2444,
 HYP-2443, HYP-2239, HYP-2128.
@@ -177,9 +186,10 @@ negative defect, and the root moves by
 alpha_p = (p-1)(p-2)/(12p),
 ```
 
-which lies in `(0,1)` for the checked higher powers.  The next proof target is
-to turn the asymptotic drift into a uniform sign bracket for all `n` and
-`p>=3`, or to isolate the first small exceptional case.
+which lies in `(0,1)` for the checked higher powers. The proposed extension
+of that unit-width bracket to all powers is now refuted. A uniform exponent-
+width bracket is proved in the linked correction; the formal fixed-power
+asymptotic does not supply a uniform-in-power unit-width remainder.
 
 ## LRC14 Transfer
 
@@ -255,8 +265,9 @@ when the anchor stays integral and when it drifts into Bernoulli fractions.
 1. Prove the fixed-`p` asymptotic with a uniform `O(u^-3)` remainder after
    `gamma_p`, using the exact odd-moment equation and the implicit-function
    expansion around `x=p`.
-2. Prove the HYP-2454 integer bracket for every `p>=3`, or split out the finite
-   small-`n` exceptional check.
+2. Investigate integer roots inside the proved exponent-width bracket for
+   powers at least five. The old unit-width target is refuted and must not
+   be recovered by treating the demonstrated failures as untested cases.
 3. Compare the simplex-in-cuboid packing constants across dimensions with the
    Faulhaber odd-moment corrections.
 4. Build the LRC14 odd-wall ledger: blocked unit twists plus owner/carry/fiber

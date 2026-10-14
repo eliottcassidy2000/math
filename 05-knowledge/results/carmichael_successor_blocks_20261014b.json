@@ -1,0 +1,689 @@
+{
+  "catalog": {
+    "561": {
+      "lambda_slack": [
+        80,
+        7
+      ],
+      "one_primes": [],
+      "preprimality_candidates": 58,
+      "two_products": [
+        [
+          684106401,
+          401,
+          3041
+        ]
+      ]
+    },
+    "1105": {
+      "lambda_slack": [
+        48,
+        23
+      ],
+      "one_primes": [],
+      "preprimality_candidates": 170,
+      "two_products": [
+        [
+          36121345,
+          97,
+          337
+        ],
+        [
+          161242705,
+          337,
+          433
+        ],
+        [
+          367939585,
+          433,
+          769
+        ],
+        [
+          396262945,
+          97,
+          3697
+        ],
+        [
+          1132988545,
+          577,
+          1777
+        ],
+        [
+          1641323905,
+          97,
+          15313
+        ],
+        [
+          13743566785,
+          1489,
+          8353
+        ],
+        [
+          15160795585,
+          193,
+          71089
+        ],
+        [
+          114464617345,
+          433,
+          239233
+        ],
+        [
+          793408600465,
+          23209,
+          30937
+        ],
+        [
+          1039601186065,
+          4969,
+          189337
+        ],
+        [
+          865020641285905,
+          53233,
+          14705617
+        ],
+        [
+          911861038823714785,
+          1222129,
+          675226273
+        ]
+      ]
+    },
+    "1729": {
+      "lambda_slack": [
+        36,
+        48
+      ],
+      "one_primes": [
+        37,
+        73,
+        109,
+        433,
+        577
+      ],
+      "preprimality_candidates": 223,
+      "two_products": [
+        [
+          101957401,
+          109,
+          541
+        ],
+        [
+          705101761,
+          193,
+          2113
+        ],
+        [
+          1150270849,
+          577,
+          1153
+        ],
+        [
+          7103660473,
+          109,
+          37693
+        ],
+        [
+          9164559313,
+          619,
+          8563
+        ],
+        [
+          14530739041,
+          2161,
+          3889
+        ],
+        [
+          23597511301,
+          919,
+          14851
+        ],
+        [
+          55677010753,
+          193,
+          166849
+        ],
+        [
+          74337077269,
+          523,
+          82207
+        ],
+        [
+          154915856641,
+          8641,
+          10369
+        ],
+        [
+          283999953601,
+          8641,
+          19009
+        ],
+        [
+          351355430881,
+          5233,
+          38833
+        ],
+        [
+          421399413253,
+          14419,
+          16903
+        ],
+        [
+          3407637911041,
+          19009,
+          103681
+        ],
+        [
+          10696515192181,
+          25867,
+          239167
+        ],
+        [
+          20292034982401,
+          8641,
+          1358209
+        ],
+        [
+          258894277402033,
+          20809,
+          7195753
+        ],
+        [
+          1310582216140561,
+          46819,
+          16190011
+        ],
+        [
+          2921431315265281,
+          103681,
+          16296769
+        ],
+        [
+          4643630745850369,
+          88129,
+          30475009
+        ],
+        [
+          31291599337009921,
+          1745281,
+          10369729
+        ]
+      ]
+    }
+  },
+  "checks": 14272,
+  "chernick_m_le_100": [
+    [
+      1,
+      1729
+    ],
+    [
+      6,
+      294409
+    ],
+    [
+      35,
+      56052361
+    ],
+    [
+      45,
+      118901521
+    ],
+    [
+      51,
+      172947529
+    ],
+    [
+      55,
+      216821881
+    ],
+    [
+      56,
+      228842209
+    ],
+    [
+      100,
+      1299963601
+    ]
+  ],
+  "group_compiler": {
+    "120,7": {
+      "primes": [
+        29,
+        43,
+        71,
+        211,
+        281,
+        421
+      ],
+      "products": [
+        [
+          1772267281,
+          [
+            71,
+            211,
+            281,
+            421
+          ]
+        ]
+      ]
+    },
+    "36,1": {
+      "primes": [
+        5,
+        7,
+        13,
+        19,
+        37
+      ],
+      "products": [
+        [
+          1729,
+          [
+            7,
+            13,
+            19
+          ]
+        ],
+        [
+          63973,
+          [
+            7,
+            13,
+            19,
+            37
+          ]
+        ]
+      ]
+    },
+    "80,1": {
+      "primes": [
+        3,
+        11,
+        17,
+        41
+      ],
+      "products": [
+        [
+          561,
+          [
+            3,
+            11,
+            17
+          ]
+        ]
+      ]
+    },
+    "80,3": {
+      "primes": [
+        7,
+        13,
+        31,
+        61,
+        241
+      ],
+      "products": [
+        [
+          172081,
+          [
+            7,
+            13,
+            31,
+            61
+          ]
+        ],
+        [
+          41471521,
+          [
+            7,
+            13,
+            31,
+            61,
+            241
+          ]
+        ]
+      ]
+    }
+  },
+  "marked_polygonal_profiles": {
+    "561": [
+      {
+        "digit_height": 3,
+        "digit_sum": 7,
+        "digits_low_first": [
+          0,
+          1,
+          2,
+          2,
+          0,
+          2
+        ],
+        "p": 3,
+        "polygon_rank": 188
+      },
+      {
+        "digit_height": 1,
+        "digit_sum": 11,
+        "digits_low_first": [
+          0,
+          7,
+          4
+        ],
+        "p": 11,
+        "polygon_rank": 12
+      },
+      {
+        "digit_height": 1,
+        "digit_sum": 17,
+        "digits_low_first": [
+          0,
+          16,
+          1
+        ],
+        "p": 17,
+        "polygon_rank": 6
+      }
+    ],
+    "1105": [
+      {
+        "digit_height": 2,
+        "digit_sum": 9,
+        "digits_low_first": [
+          0,
+          1,
+          4,
+          3,
+          1
+        ],
+        "p": 5,
+        "polygon_rank": 112
+      },
+      {
+        "digit_height": 1,
+        "digit_sum": 13,
+        "digits_low_first": [
+          0,
+          7,
+          6
+        ],
+        "p": 13,
+        "polygon_rank": 16
+      },
+      {
+        "digit_height": 1,
+        "digit_sum": 17,
+        "digits_low_first": [
+          0,
+          14,
+          3
+        ],
+        "p": 17,
+        "polygon_rank": 10
+      }
+    ],
+    "1729": [
+      {
+        "digit_height": 1,
+        "digit_sum": 7,
+        "digits_low_first": [
+          0,
+          2,
+          0,
+          5
+        ],
+        "p": 7,
+        "polygon_rank": 84
+      },
+      {
+        "digit_height": 1,
+        "digit_sum": 13,
+        "digits_low_first": [
+          0,
+          3,
+          10
+        ],
+        "p": 13,
+        "polygon_rank": 24
+      },
+      {
+        "digit_height": 1,
+        "digit_sum": 19,
+        "digits_low_first": [
+          0,
+          15,
+          4
+        ],
+        "p": 19,
+        "polygon_rank": 12
+      }
+    ],
+    "2465": [
+      {
+        "digit_height": 3,
+        "digit_sum": 13,
+        "digits_low_first": [
+          0,
+          3,
+          3,
+          4,
+          3
+        ],
+        "p": 5,
+        "polygon_rank": 248
+      },
+      {
+        "digit_height": 1,
+        "digit_sum": 17,
+        "digits_low_first": [
+          0,
+          9,
+          8
+        ],
+        "p": 17,
+        "polygon_rank": 20
+      },
+      {
+        "digit_height": 1,
+        "digit_sum": 29,
+        "digits_low_first": [
+          0,
+          27,
+          2
+        ],
+        "p": 29,
+        "polygon_rank": 8
+      }
+    ],
+    "2821": [
+      {
+        "digit_height": 1,
+        "digit_sum": 7,
+        "digits_low_first": [
+          0,
+          4,
+          1,
+          1,
+          1
+        ],
+        "p": 7,
+        "polygon_rank": 136
+      },
+      {
+        "digit_height": 1,
+        "digit_sum": 13,
+        "digits_low_first": [
+          0,
+          9,
+          3,
+          1
+        ],
+        "p": 13,
+        "polygon_rank": 38
+      },
+      {
+        "digit_height": 1,
+        "digit_sum": 31,
+        "digits_low_first": [
+          0,
+          29,
+          2
+        ],
+        "p": 31,
+        "polygon_rank": 8
+      }
+    ],
+    "6601": [
+      {
+        "digit_height": 2,
+        "digit_sum": 13,
+        "digits_low_first": [
+          0,
+          5,
+          1,
+          5,
+          2
+        ],
+        "p": 7,
+        "polygon_rank": 316
+      },
+      {
+        "digit_height": 1,
+        "digit_sum": 23,
+        "digits_low_first": [
+          0,
+          11,
+          12
+        ],
+        "p": 23,
+        "polygon_rank": 28
+      },
+      {
+        "digit_height": 1,
+        "digit_sum": 41,
+        "digits_low_first": [
+          0,
+          38,
+          3
+        ],
+        "p": 41,
+        "polygon_rank": 10
+      }
+    ],
+    "8911": [
+      {
+        "digit_height": 3,
+        "digit_sum": 19,
+        "digits_low_first": [
+          0,
+          6,
+          6,
+          4,
+          3
+        ],
+        "p": 7,
+        "polygon_rank": 426
+      },
+      {
+        "digit_height": 1,
+        "digit_sum": 19,
+        "digits_low_first": [
+          0,
+          13,
+          5,
+          1
+        ],
+        "p": 19,
+        "polygon_rank": 54
+      },
+      {
+        "digit_height": 1,
+        "digit_sum": 67,
+        "digits_low_first": [
+          0,
+          66,
+          1
+        ],
+        "p": 67,
+        "polygon_rank": 6
+      }
+    ],
+    "10585": [
+      {
+        "digit_height": 3,
+        "digit_sum": 13,
+        "digits_low_first": [
+          0,
+          2,
+          3,
+          4,
+          1,
+          3
+        ],
+        "p": 5,
+        "polygon_rank": 1060
+      },
+      {
+        "digit_height": 1,
+        "digit_sum": 29,
+        "digits_low_first": [
+          0,
+          17,
+          12
+        ],
+        "p": 29,
+        "polygon_rank": 28
+      },
+      {
+        "digit_height": 1,
+        "digit_sum": 73,
+        "digits_low_first": [
+          0,
+          72,
+          1
+        ],
+        "p": 73,
+        "polygon_rank": 6
+      }
+    ],
+    "15841": [
+      {
+        "digit_height": 2,
+        "digit_sum": 13,
+        "digits_low_first": [
+          0,
+          2,
+          1,
+          4,
+          6
+        ],
+        "p": 7,
+        "polygon_rank": 756
+      },
+      {
+        "digit_height": 1,
+        "digit_sum": 31,
+        "digits_low_first": [
+          0,
+          15,
+          16
+        ],
+        "p": 31,
+        "polygon_rank": 36
+      },
+      {
+        "digit_height": 1,
+        "digit_sum": 73,
+        "digits_low_first": [
+          0,
+          71,
+          2
+        ],
+        "p": 73,
+        "polygon_rank": 8
+      }
+    ]
+  },
+  "scope": "Exactly one/two new primes for each listed root; no universal extension theorem",
+  "status": "PROVED finite algorithms; FINITE-EXACT exhaustive catalogs"
+}

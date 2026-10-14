@@ -1,0 +1,483 @@
+{
+  "checks": 17426,
+  "direct_integer_range": [
+    2,
+    1500
+  ],
+  "even_leg_560": [
+    {
+      "ancestry_runs": [
+        [
+          "D",
+          139
+        ]
+      ],
+      "euclid": [
+        280,
+        1
+      ],
+      "triple": [
+        78399,
+        560,
+        78401
+      ]
+    },
+    {
+      "ancestry_runs": [
+        [
+          "U",
+          4
+        ],
+        [
+          "D",
+          5
+        ]
+      ],
+      "euclid": [
+        56,
+        5
+      ],
+      "triple": [
+        3111,
+        560,
+        3161
+      ]
+    },
+    {
+      "ancestry_runs": [
+        [
+          "U",
+          1
+        ],
+        [
+          "D",
+          1
+        ],
+        [
+          "U",
+          1
+        ],
+        [
+          "D",
+          2
+        ]
+      ],
+      "euclid": [
+        40,
+        7
+      ],
+      "triple": [
+        1551,
+        560,
+        1649
+      ]
+    },
+    {
+      "ancestry_runs": [
+        [
+          "U",
+          1
+        ],
+        [
+          "A",
+          2
+        ],
+        [
+          "D",
+          1
+        ]
+      ],
+      "euclid": [
+        35,
+        8
+      ],
+      "triple": [
+        1161,
+        560,
+        1289
+      ]
+    }
+  ],
+  "four_free_profile_controls": 1554,
+  "hypotenuse_1105": [
+    {
+      "ancestry_runs": [
+        [
+          "D",
+          1
+        ],
+        [
+          "A",
+          1
+        ],
+        [
+          "D",
+          3
+        ]
+      ],
+      "euclid": [
+        33,
+        4
+      ],
+      "triple": [
+        1073,
+        264,
+        1105
+      ]
+    },
+    {
+      "ancestry_runs": [
+        [
+          "D",
+          1
+        ],
+        [
+          "A",
+          1
+        ],
+        [
+          "U",
+          1
+        ],
+        [
+          "D",
+          1
+        ]
+      ],
+      "euclid": [
+        32,
+        9
+      ],
+      "triple": [
+        943,
+        576,
+        1105
+      ]
+    },
+    {
+      "ancestry_runs": [
+        [
+          "U",
+          1
+        ],
+        [
+          "D",
+          1
+        ],
+        [
+          "U",
+          1
+        ],
+        [
+          "A",
+          1
+        ]
+      ],
+      "euclid": [
+        31,
+        12
+      ],
+      "triple": [
+        817,
+        744,
+        1105
+      ]
+    },
+    {
+      "ancestry_runs": [
+        [
+          "U",
+          22
+        ]
+      ],
+      "euclid": [
+        24,
+        23
+      ],
+      "triple": [
+        47,
+        1104,
+        1105
+      ]
+    }
+  ],
+  "odd_leg_561": [
+    {
+      "ancestry_runs": [
+        [
+          "U",
+          279
+        ]
+      ],
+      "euclid": [
+        281,
+        280
+      ],
+      "triple": [
+        561,
+        157360,
+        157361
+      ]
+    },
+    {
+      "ancestry_runs": [
+        [
+          "A",
+          1
+        ],
+        [
+          "U",
+          30
+        ]
+      ],
+      "euclid": [
+        95,
+        92
+      ],
+      "triple": [
+        561,
+        17480,
+        17489
+      ]
+    },
+    {
+      "ancestry_runs": [
+        [
+          "A",
+          1
+        ],
+        [
+          "D",
+          1
+        ],
+        [
+          "A",
+          1
+        ],
+        [
+          "U",
+          1
+        ]
+      ],
+      "euclid": [
+        31,
+        20
+      ],
+      "triple": [
+        561,
+        1240,
+        1361
+      ]
+    },
+    {
+      "ancestry_runs": [
+        [
+          "U",
+          7
+        ],
+        [
+          "D",
+          1
+        ]
+      ],
+      "euclid": [
+        25,
+        8
+      ],
+      "triple": [
+        561,
+        400,
+        689
+      ]
+    }
+  ],
+  "p4qr_hostile": {
+    "F_S4_U": [
+      18,
+      15,
+      3
+    ],
+    "F_S_U": [
+      18,
+      7,
+      3
+    ],
+    "N": 240
+  },
+  "predecessors": {
+    "65": {
+      "factorization": [
+        [
+          5,
+          1
+        ],
+        [
+          13,
+          1
+        ]
+      ],
+      "korselt_composite": false,
+      "predecessor_factorization": [
+        [
+          2,
+          6
+        ]
+      ],
+      "prime_predecessor_lcm": 12,
+      "prime_predecessors": [
+        4,
+        12
+      ],
+      "slack": "16/3",
+      "source": 65
+    },
+    "85": {
+      "factorization": [
+        [
+          5,
+          1
+        ],
+        [
+          17,
+          1
+        ]
+      ],
+      "korselt_composite": false,
+      "predecessor_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      "prime_predecessor_lcm": 16,
+      "prime_predecessors": [
+        4,
+        16
+      ],
+      "slack": "21/4",
+      "source": 85
+    },
+    "561": {
+      "factorization": [
+        [
+          3,
+          1
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          17,
+          1
+        ]
+      ],
+      "korselt_composite": true,
+      "predecessor_factorization": [
+        [
+          2,
+          4
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      "prime_predecessor_lcm": 80,
+      "prime_predecessors": [
+        2,
+        10,
+        16
+      ],
+      "slack": "7",
+      "source": 561
+    },
+    "1105": {
+      "factorization": [
+        [
+          5,
+          1
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          17,
+          1
+        ]
+      ],
+      "korselt_composite": true,
+      "predecessor_factorization": [
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          23,
+          1
+        ]
+      ],
+      "prime_predecessor_lcm": 48,
+      "prime_predecessors": [
+        4,
+        12,
+        16
+      ],
+      "slack": "23",
+      "source": 1105
+    },
+    "1729": {
+      "factorization": [
+        [
+          7,
+          1
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          19,
+          1
+        ]
+      ],
+      "korselt_composite": true,
+      "predecessor_factorization": [
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "prime_predecessor_lcm": 36,
+      "prime_predecessors": [
+        6,
+        12,
+        18
+      ],
+      "slack": "48",
+      "source": 1729
+    }
+  },
+  "status": "Exact source-role interfaces; inherited divisor and Pythagorean classifications, no new prime-density or Collatz claim"
+}

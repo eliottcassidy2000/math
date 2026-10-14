@@ -1,0 +1,249 @@
+{
+  "status": "PROVED scoped families; FINITE-EXACT controls; universal coverage OPEN",
+  "checks": 6226,
+  "native_cell_controls": [
+    [
+      1,
+      64,
+      1,
+      43
+    ],
+    [
+      2,
+      2048,
+      1,
+      455
+    ]
+  ],
+  "paid_family_controls": {
+    "k_inclusive": [
+      1,
+      32
+    ],
+    "members_per_k": 8
+  },
+  "native_union": {
+    "relative_odd_density": "1/31",
+    "with_immediate_descent": "33/62",
+    "finite_odd_bound": 8191,
+    "finite_count": 132,
+    "mersenne_exponents_checked": [
+      2,
+      128
+    ]
+  },
+  "full_affine_identity_moduli_and_lengths": [
+    [
+      5,
+      2
+    ],
+    [
+      7,
+      6
+    ],
+    [
+      11,
+      10
+    ],
+    [
+      13,
+      12
+    ],
+    [
+      17,
+      16
+    ],
+    [
+      19,
+      9
+    ],
+    [
+      23,
+      11
+    ],
+    [
+      25,
+      10
+    ],
+    [
+      29,
+      14
+    ],
+    [
+      31,
+      30
+    ],
+    [
+      35,
+      6
+    ],
+    [
+      37,
+      36
+    ],
+    [
+      41,
+      40
+    ],
+    [
+      43,
+      21
+    ],
+    [
+      47,
+      23
+    ],
+    [
+      49,
+      42
+    ],
+    [
+      53,
+      26
+    ],
+    [
+      55,
+      10
+    ],
+    [
+      59,
+      58
+    ],
+    [
+      61,
+      60
+    ],
+    [
+      65,
+      12
+    ],
+    [
+      67,
+      33
+    ],
+    [
+      71,
+      35
+    ],
+    [
+      73,
+      36
+    ],
+    [
+      77,
+      30
+    ],
+    [
+      79,
+      78
+    ],
+    [
+      83,
+      82
+    ],
+    [
+      85,
+      16
+    ],
+    [
+      89,
+      88
+    ],
+    [
+      91,
+      12
+    ],
+    [
+      95,
+      18
+    ],
+    [
+      97,
+      24
+    ],
+    [
+      101,
+      50
+    ]
+  ],
+  "same_initial_state_control": {
+    "modulus": 5,
+    "residue": 2,
+    "k": 2,
+    "growing": [
+      7,
+      17
+    ],
+    "paid": [
+      8647,
+      6157
+    ]
+  },
+  "grounded_literal_controls": [
+    {
+      "k": 1,
+      "index": 0,
+      "j": 10,
+      "source_bits": 19,
+      "rank": 4,
+      "cost": 25
+    },
+    {
+      "k": 1,
+      "index": 1,
+      "j": 37,
+      "source_bits": 73,
+      "rank": 4,
+      "cost": 79
+    },
+    {
+      "k": 1,
+      "index": 2,
+      "j": 64,
+      "source_bits": 127,
+      "rank": 4,
+      "cost": 133
+    },
+    {
+      "k": 2,
+      "index": 0,
+      "j": 325,
+      "source_bits": 649,
+      "rank": 7,
+      "cost": 660
+    },
+    {
+      "k": 2,
+      "index": 1,
+      "j": 1054,
+      "source_bits": 2107,
+      "rank": 7,
+      "cost": 2118
+    },
+    {
+      "k": 2,
+      "index": 2,
+      "j": 1783,
+      "source_bits": 3565,
+      "rank": 7,
+      "cost": 3576
+    }
+  ],
+  "symbolic_controls": {
+    "k_inclusive": [
+      1,
+      16
+    ],
+    "indices": [
+      0,
+      1,
+      100000000000000000007
+    ]
+  },
+  "closed_grounded_family": {
+    "source": "(32*4^(10+27s)-101)/81",
+    "word": "(1,2,2,20+54s)",
+    "s_minimum": 0
+  },
+  "scope": "Construction varies the source. Group identity, payment and ROOT grounding remain separate predicates."
+}

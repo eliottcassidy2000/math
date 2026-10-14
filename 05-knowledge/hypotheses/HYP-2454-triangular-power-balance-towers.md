@@ -1,8 +1,18 @@
 # HYP-2454 - Triangular power-balance towers stop at squares and expose a 78/90 support shadow
 
-**Status:** OPEN synthesis; exact p=1/p=2 identities, exact odd-moment
-reformulation, two-term anchor asymptotic, and `n=1` irreducibility lane;
-global bracket/support transfer still open.
+**Status:** OPEN higher-power integer-row/support questions; exact p=1/p=2
+identities and odd-moment reformulation retained. The universal unit-width
+bracket proposed below is **REFUTED**; its finite checked window remains valid.
+The asymptotic and irreducibility lanes retain their separately stated scope.
+
+**2026-10-14 correction:** `D_15(181,3)=-61355600116348100287252240367<0`,
+although `181=15*3*4+1`. Also `D_16(33,1)=-2148849686515840130559<0`.
+Thus the proposed upper sign at `p*n(n+1)+1` is false. The proved replacement
+is `p*n(n+1)<c<p*(n(n+1)+1)` for all `p>=3,n>=1`, with unique positive root
+and a complete exact decision for each supplied integer pair `(n,p)`; see
+[successor-row proof and checker](../results/pyramid_successor_rows_20261014b.md).
+The passages below preserve the earlier proposal's provenance; none of its
+universal unit-width claims remains active.
 **Source:** codex-2026-06-12.
 **Companions:** HYP-2457, HYP-2456, HYP-2453, HYP-2452, HYP-2451, HYP-2450,
 HYP-2445, HYP-2444, HYP-2430, HYP-2425, HYP-2128.
@@ -46,10 +56,11 @@ and the second tower is the consecutive-square balance
   = (2n^2+2n+1)^2 + ... + (2n^2+3n)^2.
 ```
 
-The working hypothesis is that the integer-center phenomenon genuinely stops
-after powers `1` and `2`: for every `p>=3`, the positive root of `D_p(C,n)=0`
-is trapped between the consecutive integers `2pT_n` and `2pT_n+1`.  The scout
-verifies this bracket for `3<=p<=8` and `n<=40`; the new Faulhaber reduction
+The historical working hypothesis proposed that the integer-center phenomenon
+stops after powers `1` and `2` because every higher root lies between
+`2pT_n` and `2pT_n+1`. That bracket is now refuted; the separate all-power
+integer nonexistence question is not resolved by its failure. The scout
+verified this bracket for `3<=p<=8` and `n<=40`; the Faulhaber reduction
 partially resolves the route to a proof by showing that only odd moments
 survive and by deriving the first two terms of the anchor expansion:
 
@@ -100,9 +111,9 @@ D_4(8T_n,n)/(8T_n)       < 0,
 D_4(8T_n+1,n)/(8T_n+1)  > 0.
 ```
 
-The same bracket pattern appears computationally for `p=5..8`.  This suggests
-a Bernoulli/Faulhaber proof route: write `D_p(2pT_n+k,n)` and prove sign at
-`k=0,1`.
+The same bracket pattern appears computationally for `p=5..8`. The historical
+proposal to prove the signs at `k=0,1` for all powers fails at the explicit
+counterexamples above. The sign at `k=0` survives for every `p>=3`.
 
 ## Exact Odd-Moment Reformulation And Anchor Expansion
 
@@ -212,9 +223,9 @@ This is the exact `p=2` analogue of the `p=1` staircase identity
 2*T_n = u.
 ```
 
-So the first two towers are the last no-correction rectangle/cuboid packings.
-From `p>=3` onward the triangular carrier survives, but only after Bernoulli
-address terms are added.
+These first two towers have no midpoint correction. For every `p>=3` the
+positive root strictly exceeds the triangular anchor; this does not alone
+exclude an integer root elsewhere in the proved wider interval.
 
 ## Higher-P Live Factors And Irreducibility
 
@@ -417,8 +428,9 @@ reduction that explains all `p` at once.
 
 ## Open Tasks
 
-1. Upgrade the odd-moment expansion to a global proof of
-   `D_p(2pT_n,n)<0<D_p(2pT_n+1,n)` for all `p>=3`.
+1. Investigate integer roots for powers at least five inside the proved
+   exponent-width interval, retaining the exact power and source index.
+   The former universal unit-width target is refuted, not an open task.
 2. Prove the `n=1` primitive live-factor irreducibility for every `p>=3`, or
    identify the first exceptional `p` where it fails.
 3. Use HYP-2456's Beatty/Pell normal form as the side-word classifier, then
