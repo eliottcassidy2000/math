@@ -1,0 +1,521 @@
+{
+  "actual_aliquot_consequence": "No three-cycle of distinct even integers all with prime odd part",
+  "finite_corroboration": {
+    "cases": {
+      "constant": 12,
+      "distinct_ascending": 220,
+      "distinct_reverse": 220,
+      "repeated_maximum": 66,
+      "repeated_minimum": 66
+    },
+    "cyclic_representatives": 584,
+    "exponent_bound": 12,
+    "independent_fraction_formula_checks": 584,
+    "integral_closures": [
+      {
+        "cofactors": [
+          3,
+          3,
+          3
+        ],
+        "exponents": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "cofactors": [
+          23,
+          13,
+          1
+        ],
+        "exponents": [
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "cofactors": [
+          7,
+          7,
+          7
+        ],
+        "exponents": [
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "cofactors": [
+          15,
+          15,
+          15
+        ],
+        "exponents": [
+          3,
+          3,
+          3
+        ]
+      },
+      {
+        "cofactors": [
+          31,
+          31,
+          31
+        ],
+        "exponents": [
+          4,
+          4,
+          4
+        ]
+      },
+      {
+        "cofactors": [
+          63,
+          63,
+          63
+        ],
+        "exponents": [
+          5,
+          5,
+          5
+        ]
+      },
+      {
+        "cofactors": [
+          127,
+          127,
+          127
+        ],
+        "exponents": [
+          6,
+          6,
+          6
+        ]
+      },
+      {
+        "cofactors": [
+          255,
+          255,
+          255
+        ],
+        "exponents": [
+          7,
+          7,
+          7
+        ]
+      },
+      {
+        "cofactors": [
+          511,
+          511,
+          511
+        ],
+        "exponents": [
+          8,
+          8,
+          8
+        ]
+      },
+      {
+        "cofactors": [
+          1023,
+          1023,
+          1023
+        ],
+        "exponents": [
+          9,
+          9,
+          9
+        ]
+      },
+      {
+        "cofactors": [
+          2047,
+          2047,
+          2047
+        ],
+        "exponents": [
+          10,
+          10,
+          10
+        ]
+      },
+      {
+        "cofactors": [
+          4095,
+          4095,
+          4095
+        ],
+        "exponents": [
+          11,
+          11,
+          11
+        ]
+      },
+      {
+        "cofactors": [
+          8191,
+          8191,
+          8191
+        ],
+        "exponents": [
+          12,
+          12,
+          12
+        ]
+      }
+    ],
+    "note": "This is the previously checked small window, not an enlarged census.",
+    "ordered_templates_covered": 1728
+  },
+  "prior_theorem_used": "aliquot_repeated_minimum_classification_20261014.md",
+  "scope_exclusions": [
+    "odd members",
+    "composite odd parts",
+    "general sociable three-cycles"
+  ],
+  "status": "complete unbounded dyadic affine three-chamber classification proved",
+  "symbolic": {
+    "identities": {
+      "B_minus_v": true,
+      "ascending_H_formula": true,
+      "denominator": true,
+      "lower_bound": true,
+      "order_gap": true,
+      "positive_F_baseline": true,
+      "positive_denominator_product": true,
+      "repeated_maximum_difference": true,
+      "repeated_maximum_interval": true,
+      "reverse_H_formula": true,
+      "reverse_next_edge": true,
+      "reverse_u2_contradiction": true,
+      "upper_bound": true
+    },
+    "identity_count": 13,
+    "positive_coefficient_certificates": {
+      "3D-A": {
+        "coefficients_X_U_V": [
+          [
+            [
+              0,
+              0,
+              0
+            ],
+            48
+          ],
+          [
+            [
+              0,
+              0,
+              1
+            ],
+            19
+          ],
+          [
+            [
+              0,
+              1,
+              0
+            ],
+            32
+          ],
+          [
+            [
+              0,
+              1,
+              1
+            ],
+            6
+          ],
+          [
+            [
+              0,
+              2,
+              0
+            ],
+            4
+          ],
+          [
+            [
+              1,
+              0,
+              0
+            ],
+            53
+          ],
+          [
+            [
+              1,
+              0,
+              1
+            ],
+            20
+          ],
+          [
+            [
+              1,
+              1,
+              0
+            ],
+            31
+          ],
+          [
+            [
+              1,
+              1,
+              1
+            ],
+            5
+          ],
+          [
+            [
+              1,
+              2,
+              0
+            ],
+            2
+          ],
+          [
+            [
+              2,
+              0,
+              0
+            ],
+            14
+          ],
+          [
+            [
+              2,
+              0,
+              1
+            ],
+            5
+          ],
+          [
+            [
+              2,
+              1,
+              0
+            ],
+            7
+          ],
+          [
+            [
+              2,
+              1,
+              1
+            ],
+            1
+          ]
+        ],
+        "constant": 48,
+        "substitution": "x=X+2, u=U+2, v=2(U+2)+V; X,U,V>=0"
+      },
+      "A-R": {
+        "coefficients_X_U_V": [
+          [
+            [
+              0,
+              0,
+              0
+            ],
+            11
+          ],
+          [
+            [
+              0,
+              1,
+              0
+            ],
+            15
+          ],
+          [
+            [
+              0,
+              2,
+              0
+            ],
+            4
+          ],
+          [
+            [
+              1,
+              0,
+              0
+            ],
+            6
+          ],
+          [
+            [
+              1,
+              1,
+              0
+            ],
+            8
+          ],
+          [
+            [
+              1,
+              2,
+              0
+            ],
+            2
+          ]
+        ],
+        "constant": 11,
+        "substitution": "x=X+2, u=U+2, v=2(U+2)+V; X,U,V>=0"
+      },
+      "R-D": {
+        "coefficients_X_U_V": [
+          [
+            [
+              0,
+              0,
+              0
+            ],
+            27
+          ],
+          [
+            [
+              0,
+              0,
+              1
+            ],
+            1
+          ],
+          [
+            [
+              0,
+              1,
+              0
+            ],
+            29
+          ],
+          [
+            [
+              0,
+              1,
+              1
+            ],
+            2
+          ],
+          [
+            [
+              0,
+              2,
+              0
+            ],
+            8
+          ],
+          [
+            [
+              1,
+              0,
+              0
+            ],
+            39
+          ],
+          [
+            [
+              1,
+              0,
+              1
+            ],
+            2
+          ],
+          [
+            [
+              1,
+              1,
+              0
+            ],
+            43
+          ],
+          [
+            [
+              1,
+              1,
+              1
+            ],
+            3
+          ],
+          [
+            [
+              1,
+              2,
+              0
+            ],
+            12
+          ],
+          [
+            [
+              2,
+              0,
+              0
+            ],
+            14
+          ],
+          [
+            [
+              2,
+              0,
+              1
+            ],
+            1
+          ],
+          [
+            [
+              2,
+              1,
+              0
+            ],
+            15
+          ],
+          [
+            [
+              2,
+              1,
+              1
+            ],
+            1
+          ],
+          [
+            [
+              2,
+              2,
+              0
+            ],
+            4
+          ]
+        ],
+        "constant": 27,
+        "substitution": "x=X+2, u=U+2, v=2(U+2)+V; X,U,V>=0"
+      }
+    },
+    "ring": "Z[x,u,v]",
+    "unbounded_interval": "1<R/D<A/D<3 for x>=2,u>=2,v>=2u"
+  },
+  "virtual_exception": {
+    "actual_s_16": 15,
+    "cofactors": [
+      23,
+      13,
+      1
+    ],
+    "exponents": [
+      1,
+      1,
+      4
+    ],
+    "formal_cycle": [
+      46,
+      26,
+      16,
+      46
+    ]
+  }
+}
