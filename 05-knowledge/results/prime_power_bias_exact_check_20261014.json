@@ -1,0 +1,47 @@
+{
+  "scope": "Exact identity at every integer 1 <= x <= 100000",
+  "checks": 100000,
+  "first_strict_pi1_lead": {
+    "x": 26861,
+    "pi1": 1473,
+    "pi3": 1472
+  },
+  "snapshots": {
+    "26833": {
+      "pi1": 1471,
+      "pi3": 1471,
+      "delta_J": "-48311/2520",
+      "square_correction": "37/2",
+      "higher_correction": "1691/2520"
+    },
+    "26849": {
+      "pi1": 1472,
+      "pi3": 1472,
+      "delta_J": "-48311/2520",
+      "square_correction": "37/2",
+      "higher_correction": "1691/2520"
+    },
+    "26861": {
+      "pi1": 1473,
+      "pi3": 1472,
+      "delta_J": "-50831/2520",
+      "square_correction": "37/2",
+      "higher_correction": "1691/2520"
+    },
+    "26863": {
+      "pi1": 1473,
+      "pi3": 1473,
+      "delta_J": "-48311/2520",
+      "square_correction": "37/2",
+      "higher_correction": "1691/2520"
+    },
+    "26879": {
+      "pi1": 1473,
+      "pi3": 1474,
+      "delta_J": "-45791/2520",
+      "square_correction": "37/2",
+      "higher_correction": "1691/2520"
+    }
+  },
+  "note": "Finite corroboration; asymptotics and zero-distribution claims need separate proofs."
+}

@@ -1,0 +1,306 @@
+{
+  "checks": 1244038,
+  "greedy_sign_check": {
+    "first_source_attaining_maximum": 9175,
+    "maximum_steps": 20,
+    "odd_sources_below": 10000
+  },
+  "joint_pair_counts_finite": {
+    "1,1": 43691,
+    "2,1": 43691,
+    "2,2": 43690
+  },
+  "joint_pair_densities_proved": {
+    "1,1": "1/3",
+    "2,1": "1/3",
+    "2,2": "1/3"
+  },
+  "known_accelerated_cycles_verified_not_exhausted": [
+    {
+      "A": 2,
+      "B": 1,
+      "denominator": 1,
+      "m": 1,
+      "odd_cycle": [
+        1
+      ],
+      "sign": 1,
+      "valuations": [
+        2
+      ]
+    },
+    {
+      "A": 1,
+      "B": 1,
+      "denominator": -1,
+      "m": 1,
+      "odd_cycle": [
+        1
+      ],
+      "sign": -1,
+      "valuations": [
+        1
+      ]
+    },
+    {
+      "A": 3,
+      "B": 5,
+      "denominator": -1,
+      "m": 2,
+      "odd_cycle": [
+        5,
+        7
+      ],
+      "sign": -1,
+      "valuations": [
+        1,
+        2
+      ]
+    },
+    {
+      "A": 11,
+      "B": 2363,
+      "denominator": -139,
+      "m": 7,
+      "odd_cycle": [
+        17,
+        25,
+        37,
+        55,
+        41,
+        61,
+        91
+      ],
+      "sign": -1,
+      "valuations": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        4
+      ]
+    }
+  ],
+  "limitations": [
+    "No complete cycle classification.",
+    "No proof for fixed-sign convergence.",
+    "Starting-value density is not orbit frequency.",
+    "Repository prior-art reconciliation is incomplete."
+  ],
+  "mod12_table": [
+    {
+      "Sminus_mod18": 1,
+      "Splus_mod18": 2,
+      "source_mod12": 1,
+      "vminus": "1",
+      "vplus": ">=2"
+    },
+    {
+      "Sminus_mod18": 4,
+      "Splus_mod18": 5,
+      "source_mod12": 3,
+      "vminus": ">=2",
+      "vplus": "1"
+    },
+    {
+      "Sminus_mod18": 7,
+      "Splus_mod18": 8,
+      "source_mod12": 5,
+      "vminus": "1",
+      "vplus": ">=2"
+    },
+    {
+      "Sminus_mod18": 10,
+      "Splus_mod18": 11,
+      "source_mod12": 7,
+      "vminus": ">=2",
+      "vplus": "1"
+    },
+    {
+      "Sminus_mod18": 13,
+      "Splus_mod18": 14,
+      "source_mod12": 9,
+      "vminus": "1",
+      "vplus": ">=2"
+    },
+    {
+      "Sminus_mod18": 16,
+      "Splus_mod18": 17,
+      "source_mod12": 11,
+      "vminus": ">=2",
+      "vplus": "1"
+    }
+  ],
+  "modular_hostile_witnesses": [
+    {
+      "modulus": 3,
+      "output_mod3": [
+        1,
+        2
+      ],
+      "sign": -1,
+      "sources": [
+        1,
+        7
+      ]
+    },
+    {
+      "modulus": 3,
+      "output_mod3": [
+        1,
+        2
+      ],
+      "sign": 1,
+      "sources": [
+        1,
+        7
+      ]
+    },
+    {
+      "modulus": 4,
+      "output_mod3": [
+        1,
+        2
+      ],
+      "sign": -1,
+      "sources": [
+        3,
+        7
+      ]
+    },
+    {
+      "modulus": 4,
+      "output_mod3": [
+        1,
+        2
+      ],
+      "sign": 1,
+      "sources": [
+        1,
+        13
+      ]
+    },
+    {
+      "modulus": 12,
+      "output_mod3": [
+        1,
+        2
+      ],
+      "sign": -1,
+      "sources": [
+        3,
+        15
+      ]
+    },
+    {
+      "modulus": 12,
+      "output_mod3": [
+        1,
+        2
+      ],
+      "sign": 1,
+      "sources": [
+        1,
+        13
+      ]
+    },
+    {
+      "modulus": 64,
+      "output_mod3": [
+        1,
+        2
+      ],
+      "sign": -1,
+      "sources": [
+        43,
+        107
+      ]
+    },
+    {
+      "modulus": 64,
+      "output_mod3": [
+        1,
+        2
+      ],
+      "sign": 1,
+      "sources": [
+        21,
+        213
+      ]
+    }
+  ],
+  "odd_source_universe": {
+    "first": 1,
+    "last": 262143,
+    "size": 131072
+  },
+  "payload_sha256": "9593a267d19216526bc14368c171959c85a787ebcc26e59b348e9a5f1758734b",
+  "prime_power_lift_checks": [
+    {
+      "modulus": 3,
+      "plus_each_residue_1mod3": "1/3",
+      "plus_each_residue_2mod3": "2/3",
+      "valuation_sign_fibres_checked": 16
+    },
+    {
+      "modulus": 9,
+      "plus_each_residue_1mod3": "1/9",
+      "plus_each_residue_2mod3": "2/9",
+      "valuation_sign_fibres_checked": 16
+    },
+    {
+      "modulus": 27,
+      "plus_each_residue_1mod3": "1/27",
+      "plus_each_residue_2mod3": "2/27",
+      "valuation_sign_fibres_checked": 16
+    },
+    {
+      "modulus": 81,
+      "plus_each_residue_1mod3": "1/81",
+      "plus_each_residue_2mod3": "2/81",
+      "valuation_sign_fibres_checked": 16
+    },
+    {
+      "modulus": 243,
+      "plus_each_residue_1mod3": "1/243",
+      "plus_each_residue_2mod3": "2/243",
+      "valuation_sign_fibres_checked": 16
+    }
+  ],
+  "shortcut_mod3_relations": {
+    "-1": {
+      "0": [
+        0,
+        1
+      ],
+      "1": [
+        1,
+        2
+      ],
+      "2": [
+        1
+      ]
+    },
+    "1": {
+      "0": [
+        0,
+        2
+      ],
+      "1": [
+        2
+      ],
+      "2": [
+        1,
+        2
+      ]
+    }
+  },
+  "status": "FINITE-EXACT; infinite statements proved in accompanying note",
+  "valuation_cylinder_audit": {
+    "K": 14,
+    "odd_residues": 16384,
+    "unresolved_tail_residues": 2
+  }
+}
