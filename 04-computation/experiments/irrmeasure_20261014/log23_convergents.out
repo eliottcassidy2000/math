@@ -1,0 +1,72 @@
+partial quotients: [1, 1, 1, 2, 2, 3, 1, 5, 2, 23, 2, 2, 1, 1, 55, 1, 4, 3, 1, 1, 15, 1, 9, 2, 5, 7, 1, 1, 4, 8, 1, 11, 1, 20, 2, 1, 10, 1, 4, 1]
+j    p (=K)                       q (=k)                       sign    delta=p ln2 - q ln3      m_max = q/(3 delta)      status vs M0=2^71
+0    1                            1                            below   -                        -                        K/k < theta: no cycle (2^K < 3^k)
+1    2                            1                            above   0.287682072452           1.15868649893            EXCLUDED (m_max < M0)
+2    3                            2                            below   -                        -                        K/k < theta: no cycle (2^K < 3^k)
+3    8                            5                            above   0.052116001139           31.9799414813            EXCLUDED (m_max < M0)
+4    19                           12                           below   -                        -                        K/k < theta: no cycle (2^K < 3^k)
+5    65                           41                           above   0.0114629010039          1192.25200165            EXCLUDED (m_max < M0)
+6    84                           53                           below   -                        -                        K/k < theta: no cycle (2^K < 3^k)
+7    485                          306                          above   0.00102223913191         99780.9581105            EXCLUDED (m_max < M0)
+8    1054                         665                          below   -                        -                        K/k < theta: no cycle (2^K < 3^k)
+9    24727                        15601                        above   1.81945883705e-5         285817586.385            EXCLUDED (m_max < M0)
+10   50508                        31867                        below   -                        -                        K/k < theta: no cycle (2^K < 3^k)
+11   125743                       79335                        above   3.66472067521e-6         7216102492.86            EXCLUDED (m_max < M0)
+12   176251                       111202                       below   -                        -                        K/k < theta: no cycle (2^K < 3^k)
+13   301994                       190537                       above   6.45075027718e-8         984572810981.0           EXCLUDED (m_max < M0)
+14   16785921                     10590737                     below   -                        -                        K/k < theta: no cycle (2^K < 3^k)
+15   17087915                     10781274                     above   1.22069827808e-8         2.9440182431e+14         EXCLUDED (m_max < M0)
+16   85137581                     53715833                     below   -                        -                        K/k < theta: no cycle (2^K < 3^k)
+17   272500658                    171928773                    above   1.78921617802e-9         3.20305571256e+16        EXCLUDED (m_max < M0)
+18   357638239                    225644606                    below   -                        -                        K/k < theta: no cycle (2^K < 3^k)
+19   630138897                    397573379                    above   1.05843488432e-10        1.25207947726e+18        EXCLUDED (m_max < M0)
+20   9809721694                   6189245291                   below   -                        -                        K/k < theta: no cycle (2^K < 3^k)
+21   10439860591                  6586818670                   above   1.01231253207e-11        2.16890155341e+20        EXCLUDED (m_max < M0)
+22   103768467013                 65470613321                  below   -                        -                        K/k < theta: no cycle (2^K < 3^k)
+23   217976794617                 137528045312                 above   8.98654870862e-13        5.10125558288e+22        alive
+24   1193652440098                753110839881                 below   -                        -                        K/k < theta: no cycle (2^K < 3^k)
+25   8573543875303                5409303924479                above   6.59287766701e-14        2.73492304761e+25        alive
+26   9767196315401                6162414764360                below   -                        -                        K/k < theta: no cycle (2^K < 3^k)
+27   18340740190704               11571718688839               above   1.28966827413e-14        2.99087729792e+26        alive
+28   83130157078217               52449289519716               below   -                        -                        K/k < theta: no cycle (2^K < 3^k)
+29   683381996816440              431166034846567              above   1.33377903347e-15        1.07755488734e+29        alive
+30   766512153894657              483615324366283              below   -                        -                        K/k < theta: no cycle (2^K < 3^k)
+31   9115015689657667             5750934602875680             above   1.06355803392e-16        1.80241993368e+31        alive
+32   9881527843552324             6234549927241963             below   -                        -                        K/k < theta: no cycle (2^K < 3^k)
+33   206745572560704147           130441933147714940           above   1.79327108217e-18        2.42465541406e+34        alive
+34   423372672964960618           267118416222671843           below   -                        -                        K/k < theta: no cycle (2^K < 3^k)
+35   630118245525664765           397560349370386783           above   1.51686631025e-19        8.73644009109e+35        alive
+36   6724555128221608268          4242721909926539673          below   -                        -                        K/k < theta: no cycle (2^K < 3^k)
+37   7354673373747273033          4640282259296926456          above   2.69684901278e-20        5.73543697022e+37        alive
+38   36143248623210700400         22803850947114245497         below   -                        -                        K/k < theta: no cycle (2^K < 3^k)
+39   43497921996957973433         27444133206411171953         above   1.0124309742e-20         9.03572158033e+38        alive
+40   79641170620168673833         50247984153525417450         below   -                        -                        K/k < theta: no cycle (2^K < 3^k)
+41   123139092617126647266        77692117359936589403         above   3.40443909807e-21        7.60694249693e+39        alive
+42   202780263237295321099        127940101513462006853        below   -                        -                        K/k < theta: no cycle (2^K < 3^k)
+43   325919355854421968365        205632218873398596256        above   8.90075522457e-23        7.70092775595e+41        alive
+44   12261796429850908150604      7736332199829210068325       below   -                        -                        K/k < theta: no cycle (2^K < 3^k)
+45   49373105075258054570781      31150961018190238869556      above   3.99101316135e-25        2.60175881485e+46        alive
+46   2727782575569043909543559    1721039188200292347893905    below   -                        -                        K/k < theta: no cycle (2^K < 3^k)
+47   2777155680644301964114340    1752190149218482586763461    above   1.97560971162e-25        2.95637027717e+48        alive
+48   5504938256213345873657899    3473229337418774934657366    below   -                        -                        K/k < theta: no cycle (2^K < 3^k)
+49   272519130235098249773351391  171940427682738454384974395  above   2.57165443165e-27        2.22866164244e+52        alive
+50   278024068491311595647009290  175413657020157229319631761  below   -                        -                        K/k < theta: no cycle (2^K < 3^k)
+51   550543198726409845420360681  347354084702895683704606156  above   1.16393505247e-27        9.94769378712e+52        alive
+52   828567267217721441067369971  522767741723052913024237917  below   -                        -                        K/k < theta: no cycle (2^K < 3^k)
+53   3864812267597295609689840565 2438425051595107335801557824 above   1.88797745669e-28        4.30518038047e+54        alive
+54   4693379534815017050757210536 2961192793318160248825795741 below   -                        -                        K/k < theta: no cycle (2^K < 3^k)
+55   17944950872042346761961472173 11322003431549588082278945047 above   2.38380025725e-29        1.58318681793e+56        alive
+56   40583281278899710574680154882 25605199656417336413383685835 below   -                        -                        K/k < theta: no cycle (2^K < 3^k)
+57   139694794708741478486001936819 88137602400801597322430002552 above   1.90627491119e-30        1.54118383596e+58        alive
+58   459667665405124146032685965339 290018006858822128380673693491 below   -                        -                        K/k < theta: no cycle (2^K < 3^k)
+59   599362460113865624518687902158 378155609259623725703103696043 above   3.14523757646e-31        4.00770583108e+59        alive
+
+First surviving convergent: j=23, K/k = 217976794617/137528045312 (m_max = 5.10126e+22).
+Legendre threshold: k <= sqrt(3 M0 ln 2 / 2) = 4.9547667e+10; every cycle with k below it has K/k a convergent, hence k >= q_23 = 137528045312 > threshold: contradiction.
+So (Legendre route) every nontrivial Syracuse cycle has more than 4.9547667e+10 odd steps; Hercher's Corollary 29 (finer analysis) gives k >= 137528045312.
+  if |theta - p/q| > q^(-2) for all q, a cycle with minimum >= M0 needs k > (3 M0 ln 2)^(1/2) = 7.0071e+10
+  if |theta - p/q| > q^(-3) for all q, a cycle with minimum >= M0 needs k > (3 M0 ln 2)^(1/3) = 1.69965e+7
+  if |theta - p/q| > q^(-4.117) for all q, a cycle with minimum >= M0 needs k > (3 M0 ln 2)^(1/4.117) = 185635.0
+  if |theta - p/q| > q^(-5) for all q, a cycle with minimum >= M0 needs k > (3 M0 ln 2)^(1/5) = 21787.9
+  if |theta - p/q| > q^(-8.616) for all q, a cycle with minimum >= M0 needs k > (3 M0 ln 2)^(1/8.616) = 329.257
+  the actual continued fraction (first 40 partial quotients <= 55) behaves like mu = 2 in this range: m_max(j) ~ a_(j+1) q_j^2 / (3 ln 2)
