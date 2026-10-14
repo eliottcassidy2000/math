@@ -46,4 +46,8 @@ Every graph here has exact coordinates in a real multiquadratic field, with `x, 
    * The rebuild therefore matches arXiv:2106.11824 exactly. Common denominator 96.
    * The graph itself (an 8 MB npz) is kept out of git. `spindle_free_build.py` regenerates it in about a minute.
    * **Not 4-colourable** (CaDiCaL 1.9.5, 1,974 s). This independently confirms the paper's 5-chromatic, spindle-free `G_64513` (case 10) on an exact rebuild.
-9. **First vertex-critical baseline** (`minimize_L727_S361_rho.log`). Seed 0 gives a vertex-critical subgraph of `L727 ∪ ρS361` with 614 vertices (448 from L727, 166 from `ρS361`), against Parts' 509.
+9. **Vertex-critical baselines** (`minimize_L727_S361_rho.log`, `crit_*.json`). Four seeds give vertex-critical subgraphs of `L727 ∪ ρS361` with 614, 611, 617 and 618 vertices, against Parts' 509. Their union has 784 vertices; `smus_union4.log` holds a bounded OptUx run on it.
+10. **Spindle-free pieces** (`spindle_free_pieces.log`, `spindle_free_forced.log`, `spindle_free_mixed.log`).
+    * `ψ = φ_0^(−1) ρ` is Parts' hinge.
+    * `M_3` and `M_2 ⊕ M_1^clock` force radius 2; `M_1 ⊕ M_1` does not.
+    * All four symmetric reductions tested are 4-colourable.

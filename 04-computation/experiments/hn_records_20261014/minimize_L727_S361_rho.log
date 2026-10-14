@@ -1,0 +1,6 @@
+G = V49+V37 u w_4 V31+V25: |V|=1087 |E|=5892  [0.4s]
+   seed 0: vertex-critical True, 614 vertices (448 from A, 166 from wB), 2 passes  [944.7s]
+   seed 1: vertex-critical True, 611 vertices (448 from A, 163 from wB), 2 passes  [550.3s]
+   seed 2: vertex-critical True, 617 vertices (454 from A, 163 from wB), 2 passes  [1150.3s]
+   seed 3: vertex-critical True, 618 vertices (462 from A, 156 from wB), 2 passes  [1097.6s]
+   best: 611  [total 3771.8s]

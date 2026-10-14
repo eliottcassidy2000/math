@@ -1,0 +1,5 @@
+|M1| = 73, |M1+M1| = 2593, |M2| = 865, |M3| = 32257
+(M1+M1) u psi (M1+M1)                    |V|=  5185 |E|=  22968  4-colourable  [build 0.9s, solve 6.8s]
+M3 u psi (M1+M1)                         |V|= 34849 |E|= 282720  4-colourable  [build 16.8s, solve 13.5s]
+(M2+M1clock) u psi (M2+M1clock)          |V|= 31729 |E|= 228168  4-colourable  [build 18.2s, solve 561.4s]
+(M2c+M1) u psi (M2c+M1)                  |V|= 11569 |E|=  68808  4-colourable  [build 3.4s, solve 4.5s]

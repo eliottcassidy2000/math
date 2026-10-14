@@ -51,8 +51,18 @@ Parts builds his graphs as **type M**, `G = L ∪ ρS`. Here `L` and `S` are Min
    * At `t = 4`, the graph is 5-chromatic exactly when one piece is `V49 ⊕ V37` or `V49 ⊕ V49` (rigid) and the other forces radius 2. Two pieces that merely force radius 2, such as `(V37 ⊕ V37) ∪ ρ(V31 ⊕ V25)`, give 4-colourable graphs.
 5. **Minimisation baseline** (`minimize.py`; SOLVER).
    * Core-guided random deletion on `L727 ∪ ρS361` gives near-critical subgraphs of 599–617 vertices, about 450 from L727 and 150 from `ρS361`. That is far above Parts' 509, whose split is 374 + 136.
-   * After a fix (the symmetry-breaking triangle's vertices are retested under another fixed triangle), seed 0 gives a genuinely vertex-critical subgraph of 614 vertices: 448 from L727 and 166 from `ρS361` (`minimize_L727_S361_rho.log`).
+   * After a fix (the symmetry-breaking triangle's vertices are retested under another fixed triangle), four seeds give genuinely vertex-critical subgraphs of 614, 611, 617 and 618 vertices, each with 448–462 from L727 and 156–166 from `ρS361` (`minimize_L727_S361_rho.log`, `crit_*.json` with exact coordinates).
+   * Parts' 509 splits as 374 + 136, so greedy deletion leaves about 75 surplus vertices on the L side and 25 on the S side. The union of the four critical sets has 784 vertices.
 6. **Exact smallest-MUS search does not scale.** pysat's OptUx (implicit hitting sets) found the smallest non-3-colourable subgraph of V25 (9 vertices) instantly. On `H1 ⊕ H1` it ran more than 10 minutes without finishing. Parts' 509 came from a structured hitting-set search with symmetry and orbit compression, not from a generic smallest-MUS solver.
+
+7. **The spindle-free graphs are type M with Parts' hinge** (`spindle_free_*.log`; SOLVER).
+   * In the rebuild, `ψ = φ_0^(−1) ρ`. Its 120 new edges join radius-2 points `z` and `ψw` at the chord angle `θ_4 = 28.955°`, for example `2φ_0^(a−1) ~ 2ψφ_0^a`. So case 10 is a type-M graph with Parts' ρ-hinge, in the field `Q(i, √2, √3, √5)`.
+   * **Forcing.**
+     * `M_1 ⊕ M_1` (2,593 vertices) does not force radius 2.
+     * `P_1 = M_2 ⊕ M_1^clock` (15,865 vertices; `M_1^clock = {0} ∪ {φ_0^a}`) forces it on its 24-point orbit `2φ_0^a`.
+     * `M_3` (32,257 vertices) forces it on its 72-point orbit.
+   * **4-colourable reductions.** `(M_1 ⊕ M_1) ∪ ψ(M_1 ⊕ M_1)` (5,185), `M_3 ∪ ψ(M_1 ⊕ M_1)` (34,849), `P_1 ∪ ψP_1` (31,729) and `(M_2^c ⊕ M_1) ∪ ψ(M_2^c ⊕ M_1)` (11,569) are all 4-colourable.
+   * As with L727, a non-forcing piece kills 5-chromaticity, and two forcing pieces are not enough. `M_3` is the rigid piece. The mixed pairs `M_3 ∪ ψP_1` and `P_1 ∪ ψM_3` are in `spindle_free_mixed.log`.
 
 ## Reading (HEURISTIC)
 

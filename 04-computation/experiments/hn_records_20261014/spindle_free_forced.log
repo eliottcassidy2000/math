@@ -1,0 +1,3 @@
+M1+M1                    |V|=  2593 |E|=  11448 radius-2 orbit   72: not forced  [3.6s]
+M2+M1clock               |V|= 15865 |E|= 114072 radius-2 orbit   24: FORCED  [254.7s]
+M3 = M2+M1               |V|= 32257 |E|= 271176 radius-2 orbit   72: FORCED  [268.7s]
