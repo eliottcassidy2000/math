@@ -1,0 +1,827 @@
+{
+  "provenance": {
+    "type": "reconstructed_from_retained_history",
+    "original_source_commit": "bd2d0d6660b3889179e226172a9572351bd122bc",
+    "original_byte_identity_claimed": false,
+    "sympy": "1.14.0"
+  },
+  "graphs": {
+    "EI17": {
+      "vertices": 17,
+      "edges": 31,
+      "degeneracy": 3,
+      "peel_certificate": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          12,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          11,
+          2
+        ],
+        [
+          9,
+          2
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          15,
+          1
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          10,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          14,
+          1
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          16,
+          0
+        ]
+      ],
+      "3colour_search_nodes": 94,
+      "4colour_search_nodes": 18,
+      "4colour_witness": [
+        0,
+        0,
+        3,
+        0,
+        2,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        2,
+        2,
+        0,
+        2,
+        1,
+        2
+      ]
+    },
+    "EI19": {
+      "vertices": 19,
+      "edges": 35,
+      "degeneracy": 3,
+      "peel_certificate": [
+        [
+          0,
+          3
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          10,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          9,
+          3
+        ],
+        [
+          11,
+          2
+        ],
+        [
+          14,
+          2
+        ],
+        [
+          12,
+          2
+        ],
+        [
+          13,
+          2
+        ],
+        [
+          16,
+          1
+        ],
+        [
+          15,
+          1
+        ],
+        [
+          17,
+          1
+        ],
+        [
+          18,
+          0
+        ]
+      ],
+      "3colour_search_nodes": 65,
+      "4colour_search_nodes": 20,
+      "4colour_witness": [
+        1,
+        1,
+        0,
+        2,
+        0,
+        2,
+        1,
+        2,
+        2,
+        3,
+        0,
+        0,
+        2,
+        2,
+        1,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    "FISH": {
+      "vertices": 23,
+      "edges": 42,
+      "degeneracy": 3,
+      "peel_certificate": [
+        [
+          0,
+          3
+        ],
+        [
+          10,
+          2
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          11,
+          2
+        ],
+        [
+          9,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          13,
+          2
+        ],
+        [
+          15,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          17,
+          1
+        ],
+        [
+          18,
+          2
+        ],
+        [
+          19,
+          2
+        ],
+        [
+          21,
+          1
+        ],
+        [
+          14,
+          2
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          22,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          12,
+          1
+        ],
+        [
+          16,
+          1
+        ],
+        [
+          20,
+          0
+        ]
+      ],
+      "3colour_search_nodes": 116,
+      "4colour_search_nodes": 24,
+      "4colour_witness": [
+        1,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        0,
+        2,
+        3,
+        2,
+        0,
+        1,
+        2,
+        3,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    "EI21": {
+      "vertices": 21,
+      "edges": 38,
+      "degeneracy": 3,
+      "peel_certificate": [
+        [
+          0,
+          3
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          11,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          9,
+          1
+        ],
+        [
+          12,
+          2
+        ],
+        [
+          10,
+          3
+        ],
+        [
+          13,
+          2
+        ],
+        [
+          14,
+          2
+        ],
+        [
+          15,
+          2
+        ],
+        [
+          16,
+          2
+        ],
+        [
+          17,
+          1
+        ],
+        [
+          19,
+          1
+        ],
+        [
+          18,
+          1
+        ],
+        [
+          20,
+          0
+        ]
+      ],
+      "3colour_search_nodes": 307,
+      "4colour_search_nodes": 22,
+      "4colour_witness": [
+        0,
+        0,
+        2,
+        2,
+        2,
+        2,
+        0,
+        0,
+        3,
+        3,
+        2,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        2,
+        0,
+        1,
+        1
+      ]
+    }
+  },
+  "gaussian_controls": [
+    {
+      "f": "Keller_linear",
+      "degree_bound": 0,
+      "domain_dimension": 1,
+      "nullity": 0
+    },
+    {
+      "f": "Keller_linear",
+      "degree_bound": 2,
+      "domain_dimension": 6,
+      "nullity": 0
+    },
+    {
+      "f": "Keller_linear",
+      "degree_bound": 4,
+      "domain_dimension": 15,
+      "nullity": 0
+    },
+    {
+      "f": "Keller_linear",
+      "degree_bound": 6,
+      "domain_dimension": 28,
+      "nullity": 0
+    },
+    {
+      "f": "Keller_linear",
+      "degree_bound": 8,
+      "domain_dimension": 45,
+      "nullity": 0
+    },
+    {
+      "f": "Keller_triangular",
+      "degree_bound": 0,
+      "domain_dimension": 1,
+      "nullity": 0
+    },
+    {
+      "f": "Keller_triangular",
+      "degree_bound": 2,
+      "domain_dimension": 6,
+      "nullity": 0
+    },
+    {
+      "f": "Keller_triangular",
+      "degree_bound": 4,
+      "domain_dimension": 15,
+      "nullity": 0
+    },
+    {
+      "f": "Keller_triangular",
+      "degree_bound": 6,
+      "domain_dimension": 28,
+      "nullity": 0
+    },
+    {
+      "f": "Keller_triangular",
+      "degree_bound": 8,
+      "domain_dimension": 45,
+      "nullity": 0
+    },
+    {
+      "f": "Keller_composed",
+      "degree_bound": 0,
+      "domain_dimension": 1,
+      "nullity": 0
+    },
+    {
+      "f": "Keller_composed",
+      "degree_bound": 2,
+      "domain_dimension": 6,
+      "nullity": 0
+    },
+    {
+      "f": "Keller_composed",
+      "degree_bound": 4,
+      "domain_dimension": 15,
+      "nullity": 0
+    },
+    {
+      "f": "Keller_composed",
+      "degree_bound": 6,
+      "domain_dimension": 28,
+      "nullity": 0
+    },
+    {
+      "f": "Keller_composed",
+      "degree_bound": 8,
+      "domain_dimension": 45,
+      "nullity": 0
+    },
+    {
+      "f": "smooth_nonKeller",
+      "degree_bound": 0,
+      "domain_dimension": 1,
+      "nullity": 0
+    },
+    {
+      "f": "smooth_nonKeller",
+      "degree_bound": 2,
+      "domain_dimension": 6,
+      "nullity": 0
+    },
+    {
+      "f": "smooth_nonKeller",
+      "degree_bound": 4,
+      "domain_dimension": 15,
+      "nullity": 0
+    },
+    {
+      "f": "smooth_nonKeller",
+      "degree_bound": 6,
+      "domain_dimension": 28,
+      "nullity": 0
+    },
+    {
+      "f": "smooth_nonKeller",
+      "degree_bound": 8,
+      "domain_dimension": 45,
+      "nullity": 0
+    },
+    {
+      "f": "radial_quadratic",
+      "degree_bound": 0,
+      "domain_dimension": 1,
+      "nullity": 1
+    },
+    {
+      "f": "radial_quadratic",
+      "degree_bound": 2,
+      "domain_dimension": 6,
+      "nullity": 2
+    },
+    {
+      "f": "radial_quadratic",
+      "degree_bound": 4,
+      "domain_dimension": 15,
+      "nullity": 3
+    },
+    {
+      "f": "radial_quadratic",
+      "degree_bound": 6,
+      "domain_dimension": 28,
+      "nullity": 4
+    },
+    {
+      "f": "radial_quadratic",
+      "degree_bound": 8,
+      "domain_dimension": 45,
+      "nullity": 5
+    },
+    {
+      "f": "radial_quartic",
+      "degree_bound": 0,
+      "domain_dimension": 1,
+      "nullity": 1
+    },
+    {
+      "f": "radial_quartic",
+      "degree_bound": 2,
+      "domain_dimension": 6,
+      "nullity": 2
+    },
+    {
+      "f": "radial_quartic",
+      "degree_bound": 4,
+      "domain_dimension": 15,
+      "nullity": 3
+    },
+    {
+      "f": "radial_quartic",
+      "degree_bound": 6,
+      "domain_dimension": 28,
+      "nullity": 4
+    },
+    {
+      "f": "radial_quartic",
+      "degree_bound": 8,
+      "domain_dimension": 45,
+      "nullity": 5
+    }
+  ],
+  "direct_gaussian_pairing_controls": [
+    {
+      "f": "Keller_linear",
+      "density_degree": 6,
+      "test_degree": 7,
+      "number_of_tests": 36,
+      "nullity": 0
+    },
+    {
+      "f": "Keller_triangular",
+      "density_degree": 6,
+      "test_degree": 8,
+      "number_of_tests": 45,
+      "nullity": 0
+    },
+    {
+      "f": "Keller_composed",
+      "density_degree": 6,
+      "test_degree": 10,
+      "number_of_tests": 66,
+      "nullity": 0
+    },
+    {
+      "f": "smooth_nonKeller",
+      "density_degree": 6,
+      "test_degree": 9,
+      "number_of_tests": 55,
+      "nullity": 0
+    },
+    {
+      "f": "radial_quadratic",
+      "density_degree": 6,
+      "test_degree": 8,
+      "number_of_tests": 45,
+      "nullity": 4
+    },
+    {
+      "f": "radial_quartic",
+      "density_degree": 6,
+      "test_degree": 10,
+      "number_of_tests": 66,
+      "nullity": 4
+    }
+  ],
+  "regular_pentagon": {
+    "original_radius_squared": "sqrt(5)/10 + 1/2",
+    "shadow_radius_squared": "1 - 2*sqrt(5)/5",
+    "no_common_unit_apex": true
+  },
+  "core_inequality_candidates": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [],
+    "5": [],
+    "6": [],
+    "7": [],
+    "8": [],
+    "9": [],
+    "10": [],
+    "11": [],
+    "12": [],
+    "13": [],
+    "14": [
+      6,
+      7
+    ],
+    "15": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "16": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "17": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "18": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "19": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "20": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "21": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "22": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "23": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "24": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  "residue_control": {
+    "f": "x**2*y + x",
+    "c": "2",
+    "monomials_checked": 45,
+    "ell_1": "0",
+    "ell_x": "-1",
+    "rational_slice": "1/x"
+  },
+  "status": "ALL EXACT CHECKS PASSED"
+}

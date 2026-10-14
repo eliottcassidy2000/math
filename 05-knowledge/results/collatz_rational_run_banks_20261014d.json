@@ -1,0 +1,201 @@
+{
+  "checks": 7322,
+  "density_convention": "Relative to positive odd integers; divide by 2 for all positive integers",
+  "rational_run_banks": [
+    {
+      "a": 2,
+      "b": 1,
+      "complete_cell_census": [
+        [
+          1,
+          2,
+          64,
+          43
+        ],
+        [
+          2,
+          4,
+          2048,
+          455
+        ],
+        [
+          3,
+          6,
+          65536,
+          41263
+        ],
+        [
+          4,
+          8,
+          2097152,
+          595487
+        ]
+      ],
+      "density": "1/31",
+      "literal_family_k": [
+        1,
+        128
+      ],
+      "max_multiplier": "27/32",
+      "members_per_k": 8,
+      "short_certificate": [
+        [
+          1,
+          2,
+          43,
+          "23/5"
+        ],
+        [
+          2,
+          4,
+          455,
+          "221/59"
+        ]
+      ],
+      "tail_k_from": 3,
+      "uniform_threshold": "59/5"
+    },
+    {
+      "a": 3,
+      "b": 2,
+      "complete_cell_census": [
+        [
+          1,
+          2,
+          64,
+          43
+        ],
+        [
+          2,
+          3,
+          512,
+          455
+        ],
+        [
+          3,
+          5,
+          16384,
+          8495
+        ],
+        [
+          4,
+          6,
+          131072,
+          71199
+        ]
+      ],
+      "density": "3/85",
+      "literal_family_k": [
+        1,
+        128
+      ],
+      "max_multiplier": "243/256",
+      "members_per_k": 8,
+      "short_certificate": [
+        [
+          1,
+          2,
+          43,
+          "23/5"
+        ],
+        [
+          2,
+          3,
+          455,
+          "283/13"
+        ],
+        [
+          3,
+          5,
+          8495,
+          "10865/1631"
+        ],
+        [
+          4,
+          6,
+          71199,
+          "7789/499"
+        ]
+      ],
+      "tail_k_from": 5,
+      "uniform_threshold": "499/13"
+    },
+    {
+      "a": 10,
+      "b": 7,
+      "complete_cell_census": [
+        [
+          1,
+          2,
+          64,
+          43
+        ],
+        [
+          2,
+          3,
+          512,
+          455
+        ],
+        [
+          3,
+          5,
+          16384,
+          8495
+        ],
+        [
+          4,
+          6,
+          131072,
+          71199
+        ]
+      ],
+      "density": "4737097/134217727",
+      "literal_family_k": [
+        1,
+        128
+      ],
+      "max_multiplier": "129140163/134217728",
+      "members_per_k": 8,
+      "short_certificate": [
+        [
+          1,
+          2,
+          43,
+          "23/5"
+        ],
+        [
+          2,
+          3,
+          455,
+          "283/13"
+        ],
+        [
+          3,
+          5,
+          8495,
+          "10865/1631"
+        ],
+        [
+          4,
+          6,
+          71199,
+          "7789/499"
+        ]
+      ],
+      "tail_k_from": 5,
+      "uniform_threshold": "263357891/5077565"
+    }
+  ],
+  "status": "PROVED scoped rational-run banks; universal coverage and child grounding OPEN",
+  "strict_extension_witness": {
+    "endpoint": 919,
+    "source": 967,
+    "word": [
+      1,
+      1,
+      2,
+      2,
+      2
+    ]
+  }
+}
