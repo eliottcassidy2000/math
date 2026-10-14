@@ -1,0 +1,156 @@
+{
+  "checks": 104,
+  "lengths": [
+    1,
+    16
+  ],
+  "payload_sha256": "bc85220cd41528e41fdc0ed19c21b3223616f7872a18f5f81fd586d58128bfc7",
+  "rows": [
+    {
+      "B_max_at_max_cost": 1,
+      "B_min": 1,
+      "length": 1,
+      "maximum_interval_width": 0,
+      "minimum_nonzero_same_cost_carry_difference": 6,
+      "range_forces_univalence": true,
+      "total_cost_ceiling": 1
+    },
+    {
+      "B_max_at_max_cost": 5,
+      "B_min": 5,
+      "length": 2,
+      "maximum_interval_width": 0,
+      "minimum_nonzero_same_cost_carry_difference": 18,
+      "range_forces_univalence": true,
+      "total_cost_ceiling": 3
+    },
+    {
+      "B_max_at_max_cost": 23,
+      "B_min": 19,
+      "length": 3,
+      "maximum_interval_width": 4,
+      "minimum_nonzero_same_cost_carry_difference": 54,
+      "range_forces_univalence": true,
+      "total_cost_ceiling": 4
+    },
+    {
+      "B_max_at_max_cost": 85,
+      "B_min": 65,
+      "length": 4,
+      "maximum_interval_width": 20,
+      "minimum_nonzero_same_cost_carry_difference": 162,
+      "range_forces_univalence": true,
+      "total_cost_ceiling": 6
+    },
+    {
+      "B_max_at_max_cost": 319,
+      "B_min": 211,
+      "length": 5,
+      "maximum_interval_width": 108,
+      "minimum_nonzero_same_cost_carry_difference": 486,
+      "range_forces_univalence": true,
+      "total_cost_ceiling": 7
+    },
+    {
+      "B_max_at_max_cost": 1085,
+      "B_min": 665,
+      "length": 6,
+      "maximum_interval_width": 420,
+      "minimum_nonzero_same_cost_carry_difference": 1458,
+      "range_forces_univalence": true,
+      "total_cost_ceiling": 9
+    },
+    {
+      "B_max_at_max_cost": 3767,
+      "B_min": 2059,
+      "length": 7,
+      "maximum_interval_width": 1708,
+      "minimum_nonzero_same_cost_carry_difference": 4374,
+      "range_forces_univalence": true,
+      "total_cost_ceiling": 11
+    },
+    {
+      "B_max_at_max_cost": 13349,
+      "B_min": 6305,
+      "length": 8,
+      "maximum_interval_width": 7044,
+      "minimum_nonzero_same_cost_carry_difference": 13122,
+      "range_forces_univalence": true,
+      "total_cost_ceiling": 12
+    },
+    {
+      "B_max_at_max_cost": 44143,
+      "B_min": 19171,
+      "length": 9,
+      "maximum_interval_width": 24972,
+      "minimum_nonzero_same_cost_carry_difference": 39366,
+      "range_forces_univalence": true,
+      "total_cost_ceiling": 14
+    },
+    {
+      "B_max_at_max_cost": 148813,
+      "B_min": 58025,
+      "length": 10,
+      "maximum_interval_width": 90788,
+      "minimum_nonzero_same_cost_carry_difference": 118098,
+      "range_forces_univalence": true,
+      "total_cost_ceiling": 15
+    },
+    {
+      "B_max_at_max_cost": 479207,
+      "B_min": 175099,
+      "length": 11,
+      "maximum_interval_width": 304108,
+      "minimum_nonzero_same_cost_carry_difference": 354294,
+      "range_forces_univalence": true,
+      "total_cost_ceiling": 17
+    },
+    {
+      "B_max_at_max_cost": 1568693,
+      "B_min": 527345,
+      "length": 12,
+      "maximum_interval_width": 1041348,
+      "minimum_nonzero_same_cost_carry_difference": 1062882,
+      "range_forces_univalence": true,
+      "total_cost_ceiling": 19
+    },
+    {
+      "B_max_at_max_cost": 5230367,
+      "B_min": 1586131,
+      "length": 13,
+      "maximum_interval_width": 3644236,
+      "minimum_nonzero_same_cost_carry_difference": 3188646,
+      "range_forces_univalence": false,
+      "total_cost_ceiling": 20
+    },
+    {
+      "B_max_at_max_cost": 16739677,
+      "B_min": 4766585,
+      "length": 14,
+      "maximum_interval_width": 11973092,
+      "minimum_nonzero_same_cost_carry_difference": 9565938,
+      "range_forces_univalence": false,
+      "total_cost_ceiling": 22
+    },
+    {
+      "B_max_at_max_cost": 54413335,
+      "B_min": 14316139,
+      "length": 15,
+      "maximum_interval_width": 40097196,
+      "minimum_nonzero_same_cost_carry_difference": 28697814,
+      "range_forces_univalence": false,
+      "total_cost_ceiling": 23
+    },
+    {
+      "B_max_at_max_cost": 171628613,
+      "B_min": 42981185,
+      "length": 16,
+      "maximum_interval_width": 128647428,
+      "minimum_nonzero_same_cost_carry_difference": 86093442,
+      "range_forces_univalence": false,
+      "total_cost_ceiling": 25
+    }
+  ],
+  "scope": "The general extremal formula is proved in the companion roadmap.",
+  "status": "FINITE-EXACT range certificates; no claim about univalence beyond the range bound"
+}
