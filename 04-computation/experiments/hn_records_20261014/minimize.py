@@ -49,42 +49,50 @@ def log(*a):
     print(*a, flush=True)
 
 
-def minimize_once(col, n, start, rng):
+def minimize_once(col, n, start, rng, solver='cadical195'):
+    """Core-guided deletion passes with the colourer's symmetry-breaking triangle fixed (valid: a colouring exists iff
+    one exists with that triangle coloured 0, 1, 2, as long as the triangle is present).  The triangle's own vertices
+    are then retested with another fixed triangle inside the remaining set; if one goes, the passes restart."""
     ok, act = col.colourable(start)
     assert not ok
     active = set(act)
     passes = 0
+    cur = col
     while True:
-        passes += 1
-        removed = 0
-        order = sorted(active)
-        rng.shuffle(order)
-        for v in order:
-            if v not in active or v in col.fixed:
+        while True:
+            passes += 1
+            removed = 0
+            order = sorted(active)
+            rng.shuffle(order)
+            for v in order:
+                if v not in active or v in cur.fixed:
+                    continue
+                ok, core = cur.colourable(sorted(active - {v}))
+                if not ok:
+                    removed += len(active) - len(core)
+                    active = set(core)
+            if removed == 0:
+                break
+        dropped = False
+        for v in list(cur.fixed):
+            rest = active - {v}
+            tris = [t for t in triangles_through(n, [e for e in cur.edges if e[0] in rest and e[1] in rest])]
+            if not tris:
                 continue
-            ok, core = col.colourable(sorted(active - {v}))
-            if not ok:
-                removed += len(active) - len(core)
-                active = set(core)
-        if removed == 0:
-            break
-    # the fixed (symmetry-breaking) triangle was never offered for deletion: finish without symmetry breaking
-    free = Colourer(n, col.edges, k=col.k, solver='cadical195')
-    while True:
-        changed = False
-        order = sorted(active)
-        rng.shuffle(order)
-        for v in order:
-            if v not in active:
-                continue
-            ok, core = free.colourable(sorted(active - {v}))
+            alt = Colourer(n, cur.edges, k=cur.k, solver=solver, fixed_triangle=tris[rng.randrange(len(tris))])
+            ok, core = alt.colourable(sorted(rest))
             if not ok:
                 active = set(core)
-                changed = True
-        if not changed:
-            break
-    free.close()
-    return sorted(active), passes
+                if cur is not col:
+                    cur.close()
+                cur = alt
+                dropped = True
+                break
+            alt.close()
+        if not dropped:
+            if cur is not col:
+                cur.close()
+            return sorted(active), passes
 
 
 def main():
@@ -119,19 +127,22 @@ def main():
         log(f"   seed {seed}: vertex-critical {crit_ok}, {len(crit)} vertices ({nA} from A, {len(crit) - nA} from wB), "
             f"{passes} passes  [{time.time() - t1:.1f}s]")
         col.close()
-        if crit_ok and (best is None or len(crit) < len(best)):
-            best = crit
-            keep = set(best)
+        if crit_ok:
+            keep = set(crit)
             sub_edges = [(i, j) for (i, j) in E if i in keep and j in keep]
             out = {
-                'spec': {'A': A, 'B': B, 't': str(t), 'primes': list(PRIMES)},
-                'n': len(best),
+                'spec': {'A': A, 'B': B, 't': str(t), 'primes': list(PRIMES), 'seed': seed},
+                'n': len(crit),
                 'edges': len(sub_edges),
-                'vertices': [[[str(c) for c in pts[v][0]], [str(c) for c in pts[v][1]]] for v in best],
-                'edge_list': [[best.index(i), best.index(j)] for (i, j) in sub_edges],
+                'vertices': [[[str(c) for c in pts[v][0]], [str(c) for c in pts[v][1]]] for v in crit],
+                'edge_list': [[crit.index(i), crit.index(j)] for (i, j) in sub_edges],
             }
-            with open(f"best_{tag}.json", 'w') as f:
+            with open(f"crit_{tag}_seed{seed}.json", 'w') as f:
                 json.dump(out, f)
+            if best is None or len(crit) < len(best):
+                best = crit
+                with open(f"best_{tag}.json", 'w') as f:
+                    json.dump(out, f)
     log(f"   best: {len(best) if best else None}  [total {time.time() - t0:.1f}s]")
 
 

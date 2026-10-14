@@ -1,0 +1,5 @@
+|M1| = 73, |M2| = 865, |M3| = 32257, |W| = 64513  [8.7s]
+common denominator 96; max |numerator| 192  [10.4s]
+|E| = 542472 exact unit edges  [63.4s]
+saved /private/tmp/claude-501/-Users-e-Documents-GitHub-math/f1b41b3c-5f00-4184-8c88-059bb9352d19/scratchpad/vnd_case10.npz
+4-colourable? False  [1974.0s solve, 2039.8s total]

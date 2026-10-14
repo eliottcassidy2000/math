@@ -19,6 +19,9 @@ Every graph here has exact coordinates in a real multiquadratic field, with `x, 
 | `mono_sets.py` | Every realizable set of centre-coloured points on a reference orbit |
 | `minimize.py` | Randomized core-guided deletion until vertex-critical; writes `best_*.json` with exact coordinates |
 | `smus_probe.py` | Smallest non-k-colourable induced subgraph via pysat's OptUx (implicit hitting sets) |
+| `spindle_free_build.py` | Exact rebuild of the Voronov–Neopryatnaya–Dergachev spindle-free graph (series 2, case 10) in `Q(i, √2, √3, √5)`, plus its 4-colourability check |
+| `minimize_npz.py` | Core-guided minimisation of a large saved graph (phase 1: assumption cores; phase 2: deletion until vertex-critical) |
+| `verify_graph.py` | Independent re-check of a candidate: all-pairs exact unit distances, two solvers, vertex-criticality |
 
 ## Findings so far (2026-10-14)
 
@@ -37,3 +40,10 @@ Every graph here has exact coordinates in a real multiquadratic field, with `x, 
    * Among these hinges only Parts' `ρ` works, even where both pieces force the radius (`t = 4/9`).
 6. **Exact smallest MUS.** OptUx gives V25's smallest non-3-colourable subgraph (9 vertices) instantly, but it did not finish `H1 ⊕ H1` within 10 minutes. It is not usable at the 1,087-vertex scale.
 7. **Synthesis.** See `05-knowledge/results/hn_type_m_hinge_rotations_and_forced_radii_20261014.md` for the synthesis and the record-attempt plan.
+8. **Spindle-free rebuild** (`spindle_free_build.log`).
+   * `|M1| = 73`, `|M2| = 865`, `|M3| = 32,257`, `|W| = 64,513`.
+   * `|E| = 542,472` exact unit edges, i.e. the paper's 542,352 common edges plus the 120 new edges of case 10.
+   * The rebuild therefore matches arXiv:2106.11824 exactly. Common denominator 96.
+   * The graph itself (an 8 MB npz) is kept out of git. `spindle_free_build.py` regenerates it in about a minute.
+   * **Not 4-colourable** (CaDiCaL 1.9.5, 1,974 s). This independently confirms the paper's 5-chromatic, spindle-free `G_64513` (case 10) on an exact rebuild.
+9. **First vertex-critical baseline** (`minimize_L727_S361_rho.log`). Seed 0 gives a vertex-critical subgraph of `L727 ∪ ρS361` with 614 vertices (448 from L727, 166 from `ρS361`), against Parts' 509.

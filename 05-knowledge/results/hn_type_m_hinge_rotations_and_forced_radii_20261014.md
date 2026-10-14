@@ -1,6 +1,6 @@
 # Hadwiger–Nelson type-M graphs: hinge rotations, forced radii and mono-set rigidity
 
-Session `mac-mini-2026-10-14-wilson`, 2026-10-14. Exploratory; nothing here is canon.
+Session `mac-mini-2026-10-14-wilson`, 2026-10-14. Exploratory and not independently audited; nothing here is canon.
 
 Typing:
 * Graph constructions and unit distances are **FINITE-EXACT** (exact arithmetic in a real multiquadratic field).
@@ -33,7 +33,7 @@ Parts builds his graphs as **type M**, `G = L ∪ ρS`. Here `L` and `S` are Min
 
 ## Findings
 
-1. **Reproduction.** `L727 ∪ ρS361` has 1,087 vertices and 5,892 edges and is not 4-colourable (SOLVER, 13 s). The paper reports that Parts' 509-vertex graph splits as an L-subgraph of 374 and an S-subgraph of 136, which suggests (not checked) that it sits inside this graph.
+1. **Reproduction.** `L727 ∪ ρS361` has 1,087 vertices and 5,892 edges and is not 4-colourable (SOLVER, 13 s). Parts' 509-vertex graph splits as an L-subgraph of 374 and an S-subgraph of 136. His search also adds base orbits from a reserve of about 400 candidates, so that graph need not lie inside this one (not checked).
 2. **Forced radii** (`forced_radii_scan.out`, 17 pieces; SOLVER).
    * `t = 4` (radius 2, 18-point orbit, rotation `ρ`) is never forced in a single piece.
      * Among the two-fold sums it is forced in all except `V25 ⊕ V25` and `V31 ⊕ V31`.
@@ -51,7 +51,7 @@ Parts builds his graphs as **type M**, `G = L ∪ ρS`. Here `L` and `S` are Min
    * At `t = 4`, the graph is 5-chromatic exactly when one piece is `V49 ⊕ V37` or `V49 ⊕ V49` (rigid) and the other forces radius 2. Two pieces that merely force radius 2, such as `(V37 ⊕ V37) ∪ ρ(V31 ⊕ V25)`, give 4-colourable graphs.
 5. **Minimisation baseline** (`minimize.py`; SOLVER).
    * Core-guided random deletion on `L727 ∪ ρS361` gives near-critical subgraphs of 599–617 vertices, about 450 from L727 and 150 from `ρS361`. That is far above Parts' 509, whose split is 374 + 136.
-   * After a fix (the symmetry-breaking triangle is now also offered for deletion), the vertex-critical baseline is in `minimize_L727_S361_rho.log`.
+   * After a fix (the symmetry-breaking triangle's vertices are retested under another fixed triangle), seed 0 gives a genuinely vertex-critical subgraph of 614 vertices: 448 from L727 and 166 from `ρS361` (`minimize_L727_S361_rho.log`).
 6. **Exact smallest-MUS search does not scale.** pysat's OptUx (implicit hitting sets) found the smallest non-3-colourable subgraph of V25 (9 vertices) instantly. On `H1 ⊕ H1` it ran more than 10 minutes without finishing. Parts' 509 came from a structured hitting-set search with symmetry and orbit compression, not from a generic smallest-MUS solver.
 
 ## Reading (HEURISTIC)
@@ -64,7 +64,7 @@ Parts builds his graphs as **type M**, `G = L ∪ ρS`. Here `L` and `S` are Min
 ## Plan for a record attempt (weeks, not this session)
 
 1. **Reproduce Parts' search.**
-   * Hyperedges: minimal vertex sets whose removal makes `L727 ∪ ρS361` 4-colourable, searched by orbit under the graph's symmetry.
+   * Hyperedges: minimal vertex sets whose removal makes `L727 ∪ ρS361` 4-colourable, searched by orbit under the graph's symmetry, with reserve orbits added as in his expansion step.
    * Then minimal hitting sets in increasing size.
    * Validate by recovering a 509-vertex graph. Parts estimates 100 laptop hours from scratch.
 2. **Search beyond Parts.**
@@ -74,4 +74,15 @@ Parts builds his graphs as **type M**, `G = L ∪ ρS`. Here `L` and `S` are Min
 3. **Spindle-free variant.**
    * Rebuild the Voronov–Neopryatnaya–Dergachev graphs in `Q(i, √2, √3, √5)`, which have no `√11` and so no Moser spindle. Heule reduced these from 64,513 to 1,441 vertices.
    * Then apply the same minimiser. This record is older and less contested.
+   * **Recipe** (arXiv:2106.11824, series 2, case 10, read from its HTML; field primes `2, 3, 5`):
+     * `φ_0 = e^(iπ/12) = (√6+√2)/4 + i(√6−√2)/4` and `φ_1 = √6/3 + i√3/3`;
+     * `M_1 = {0} ∪ {φ_0^a φ_1^b : 0 ≤ a ≤ 23, b ∈ {−1, 0, 1}}`, which has 73 points;
+     * `M_2 = clip(M_1 ⊕ M_1, 1)`, keeping `|z| ≤ 1`, then `M_3 = M_2 ⊕ M_1`, which has 32,257 points;
+     * `W = M_3 ∪ ψM_3` with `ψ = φ_0^(−1)(7/8 + i√15/8)`, giving 64,513 vertices.
+   * The paper reports Glucose 4 needing about 1,400 s to show such a graph is not 4-colourable. Its Proposition 6 proves the graphs are spindle-free.
+   * **Done this session** (`spindle_free_build.py`).
+     * The rebuild is exact: `|M_2| = 865`, `|M_3| = 32,257`, `|W| = 64,513`.
+     * `|E| = 542,472`, which is the paper's 542,352 common edges plus the 120 new edges of case 10.
+     * CaDiCaL 1.9.5 confirms it is not 4-colourable (1,974 s; SOLVER).
+     * The next step is minimisation towards Heule's 1,441 (`minimize_npz.py`, `spindle_free_pieces.py`).
 4. **Certificates.** Any candidate record needs a DRAT proof of non-4-colourability (CaDiCaL can emit one, checked by `drat-trim`), exact coordinates and an independent re-check of all unit distances.

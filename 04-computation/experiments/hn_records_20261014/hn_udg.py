@@ -304,12 +304,13 @@ SQ3_2 = el(r3=Fr(1, 2))
 HALF = el(r1=Fr(1, 2))
 HEX = [(ONE, ZERO), (HALF, SQ3_2), (fneg(HALF), SQ3_2), (fneg(ONE), ZERO), (fneg(HALF), fneg(SQ3_2)), (HALF, fneg(SQ3_2))]
 H = pset([C0] + HEX)                                              # the hexagonal wheel W7
-ETA = (el(r33=Fr(1, 6)), el(r3=Fr(1, 6)))                         # exp((i/2) arccos(5/6))
+ETA = (el(r33=Fr(1, 6)), el(r3=Fr(1, 6))) if 11 in PRIMES and 3 in PRIMES else None  # exp((i/2) arccos(5/6))
 RHO = (el(r1=Fr(7, 8)), el(r15=Fr(1, 8))) if 5 in PRIMES else None  # exp(i arccos(7/8)); needs sqrt5
 I_OVER_SQ3 = (ZERO, el(r3=Fr(1, 3)))                              # i / sqrt3 (not unit)
 I_SQ3 = (ZERO, el(r3=Fr(1)))                                      # i sqrt3
-assert is_unit(ETA) and (RHO is None or is_unit(RHO))
-assert cmul(ETA, ETA) == (el(r1=Fr(5, 6)), el(r11=Fr(1, 6)))     # eta^2 = (5 + i sqrt11)/6
+assert (ETA is None or is_unit(ETA)) and (RHO is None or is_unit(RHO))
+if ETA is not None:
+    assert cmul(ETA, ETA) == (el(r1=Fr(5, 6)), el(r11=Fr(1, 6)))  # eta^2 = (5 + i sqrt11)/6
 
 
 def H_rot(alphas):
