@@ -19,6 +19,7 @@ scripts:
   - 04-computation/experiments/paley_k6p6_20261014/k6p6_prime_powers.py (+ .out): prime powers to 361, exact field arithmetic
   - 04-computation/experiments/paley_k6p6_20261014/k6p6_prime_powers_large.py (+ .out): 625, 729, 1331, 2187, 2401 (O(q^2), log tables)
   - 04-computation/experiments/audit_C_20261014/ (independent evaluators, the eta-theta construction of g, the parity lemma, MP section 6)
+  - 04-computation/experiments/paley_k6p6_20261014/k6p6_descent_check.py, mp_3f2_field.py (+ .out): MP Theorem 1.8 at 20 prime powers; the descent form at q = 5..43
 related: [THM-4653, HYP-9274, HYP-9275, THM-4650 (D19 midline curve of conductor 32), paley_next_cores_20261014i.md]
 ---
 
@@ -65,6 +66,18 @@ Let `M_q` be the Legendre bilinear form of THM-4653. Write `φ(−1)` for the si
    `M_q = −(α^(2r) + (αβ)^r + β^(2r)) − 2q − 1`,
 
    which is minus the trace of `Frob_p^r` on `Sym²ρ_g`, less `2q + 1`. Then `V_q = q(q−1)[φ(−1)(S_q + 14) + 7]` with `S_q = α^(2r) + (αβ)^r + β^(2r)`.
+
+3. **(Descent form; no modular forms.)** Put `H_Q = ₃F₂(χ₄, φ, φ; ε, ε | 1)^*_Q` (McCarthy's normalisation, `χ₄` of order 4) over a field with `Q ≡ 1 (mod 4)` elements. Then, for every prime `q >= 5`:
+
+   `M_q = −H_(q²) − χ₋₄(q) q² − 2q − 1`, i.e. `q³ Σ_x φ(x)φ(1−x) ₂F₁(x)₃F₂(x) = H_(q²) + χ₋₄(q)q² + 2q + 1`.
+
+   So a quadratic-character beta moment over `F_q` equals a quartic-character `₃F₂(1)` over `F_(q²)` plus explicit terms.
+   - For Paley `q ≡ 3 (mod 4)` the quartic character of `F_(q²)^×` is trivial on `F_q^×`, since `4 | q + 1`.
+   - **FINITE-EXACT:** checked directly, with no modular input, at every prime `5 <= q <= 43` (`k6p6_descent_check.py`).
+   - **Equivalent to statement 1** given the prime-power extension of McCarthy–Papanikolas Theorem 1.8: `H_Q = α^r + β^r` for every prime power `Q = p^r ≡ 1 (mod 4)`.
+     - That extension is FINITE-EXACT at 20 prime powers `Q` (5, 9, 13, 17, 25, 29, 37, 41, 49, 81, 121, 125, 169, 289, 361, 529, 625, 729, 841, 961), including the inert squares `p²`, `p ≡ 3 (mod 4)`.
+     - It is expected to be a theorem by the following argument (a sketch, not checked in detail). The hypergeometric datum `(χ₄, φ, φ; ε, ε)` is defined over `Q(i)`. Katz's hypergeometric sheaves over `Z[i][1/2]` give a 2-adic Galois representation of `G_(Q(i))` whose trace at a prime `𝔭` is `H_(N𝔭)`, at `t = 1` and up to the standard rank drop there. McCarthy–Papanikolas match it with `ρ_g|G_(Q(i))` at the degree-one primes. Chebotarev and Brauer–Nesbitt then force agreement at the inert primes, `N𝔭 = p²`, and at all powers.
+   - So the open content of HYP-9276 is a **descent identity between two finite-field hypergeometric functions across `F_q ⊂ F_(q²)`**, provable in principle by Gauss-sum algebra (Hasse–Davenport for the norm-lifted characters; Stickelberger's pure Gauss sums for the characters trivial on `F_q^×`).
 
 ### Values
 
@@ -164,10 +177,12 @@ The recorded values `V₇ = 336`, `V₁₁ = −12320`, `V₁₉ = −76608` and
    - `b(q²) = ½ Tr(T_(q²) | S₃^new(32, χ₋₄))`, because the new space is exactly `{g, ḡ}`.
    - Hijikata's formula expresses this trace through Hurwitz class numbers, as McCarthy and Papanikolas do for `T_p`.
    - `M_q` pairs two Legendre traces with the kernel `χ(a x (x−1)(x−a))`. Grouping pairs `(E_a, E_x)` by isomorphism class would give class-number sums.
-2. **Hypergeometric.**
-   - Expand `₂F₁` and `₃F₂` in multiplicative characters, so that `M_q` becomes a double Jacobi-sum series.
-   - Compare with McCarthy–Papanikolas's `₄F₃(−1)` over `F_(q²)` (their §6) and with `₃F₂(χ₄, φ, φ | 1)²` for `q ≡ 1 (mod 4)`.
-   - Tools: Hasse–Davenport and McCarthy's finite-field Whipple transformation.
+2. **Hypergeometric descent (statement 3).** This is the most concrete route.
+   - Prove `q³ Σ_x φ(x)φ(1−x) ₂F₁(x)₃F₂(x) = H_(q²) + χ₋₄(q)q² + 2q + 1` directly.
+     - Expand the left side over characters of `F_q^×` (a double Jacobi-sum series).
+     - Split the characters of `F_(q²)^×` on the right into norm-lifts (Hasse–Davenport) and characters trivial or nontrivial on `F_q^×`.
+   - Then combine with the prime-power extension of McCarthy–Papanikolas Theorem 1.8 (Katz + Chebotarev; sketch above) to obtain statement 1.
+   - Related: McCarthy–Papanikolas's `₄F₃(−1)` over `F_(q²)` (their §6); McCarthy's finite-field Whipple transformation.
 3. **Geometric (expected, not established).**
    - `M_q` is a quadratic-character sum over a 4-fold, a fibre product of double covers over the `(a, x)`-plane.
    - The inner sum `h(x) = φ(−1) Σ_v χ(v(v−x)) t(v)` counts points on an elliptic K3 surface, up to trivial terms: the pull-back of the Legendre family by `s² = w(w − x)`.
