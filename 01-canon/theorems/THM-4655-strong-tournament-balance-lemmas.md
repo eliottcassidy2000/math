@@ -310,7 +310,7 @@ That is 47,642 block types and every `v`, with no failure (`z1_cert_upto5.out`, 
 *Remark (what is left in general).*
 - Of the four bilinear conditions, three hold for every block by short comparisons with the complement-symmetric `σ`; for instance `β − β(v) <= σ/2` and `α − α(v) <= σ/2 − 1`.
 - Only the corner `a + b + c + d >= 0` (`L4` for the lower bound, `U4` for the upper) needs the computer.
-- Its minimum slack is 0 for singletons, the THM-4655 equality word, and 5/3, 2, 26/9, 10/3 for block sizes 3, 4, 5, 6 (`z1_local_slack.out`).
+- Its minimum slack is 0 for singletons, the THM-4655 equality word, and 5/3, 2, 26/9, 10/3, 298/69 for block sizes 3, 4, 5, 6, 7 (`z1_local_slack.out`).
 - A proof of `L4` and `U4` for all strong tournaments would prove HYP-9279 (Z1) in full, and hence HYP-9277 for every strong tournament with a cut vertex whose deletion leaves at least three strong components.
 
 ## Reading

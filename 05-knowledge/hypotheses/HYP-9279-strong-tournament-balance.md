@@ -61,7 +61,7 @@ In a strong tournament on `n >= 3` vertices, every vertex `v` has a partner `w` 
 - **Sharpness (PROVED for every `n >= 5`, THM-4655 (6)).** The vertex-wise constant `min_v max_w min(p, 1 − p)` equals `1/3` for every `n >= 5`, unlike the global `δ`.
   - The family is `W_n = TT_(n−3) ⇒ C_3` with one back arc `b → 0`. There the order on the triangle is uniform over its three rotations.
   - Exhaustively (`tbal5.c`), `1/3` is the minimum for `n = 5, …, 9`. It is attained by 1, 2, 5, 17 and 82 strong tournaments respectively.
-  - Annealing at `n = 11` (`tbal_anneal.c`) also stops exactly at `1/3`.
+  - Annealing (`tbal_anneal.c`, 6 seeds per `n`) never goes below `1/3`. It reaches `1/3` exactly at `n = 11, 12, 13` (6, 3 and 2 seeds respectively); the other runs stop just above.
   - **Structure of the tight vertices** (corrected by audit E, `tight_structure.out`): each of the 32 tight vertices with `n <= 8` lies on a cyclic triangle formed with two of its exact partners (`p = 2/3, 1/3`), as in an isolated `C_3`.
     - The triangle is attached by a single back arc only in the transitive-plus-one examples: the tournament with THM-4655's equality word `1 0 1^(m−3) 0` and its reverse `W_n`. These include every tight vertex at `n = 5, 6`.
     - At `n = 7`, 5 of the 7 tight vertices need two back arcs. At `n = 8`, 18 of 20 do, and the triangle can sit in the middle of the order.
@@ -95,7 +95,7 @@ Let `z` be a vertex of a strong tournament `T` with `T − z` not strong, and le
   - The normalised chain stays in an invariant region: left `(1, g, P, Lp)` with `P >= 1` and `1 <= Lp <= P`; right `(Rp, s', Q, 1)` with `Q >= 1` and `1 <= Rp <= Q`. The bounds `>= 1` come from injections that cut a Hamiltonian path of an end block at its first out-neighbour (or last in-neighbour) of `z`.
   - So (Z1) at `v` reduces to finitely many bilinear conditions on `v`'s own block. These are checked exactly for all strong tournaments with at most 7 vertices, all `z`-patterns and all `v`: 47,642 block types.
   - It includes singleton blocks (1(f)) and `C_3` blocks.
-- **Reduction in general.** All but two corner conditions (`L4`, `U4`) hold for every block. Their slack is 0 only for singletons and grows with the block (5/3, 2, 26/9, 10/3 for sizes 3–6). Proving `L4`, `U4` for all strong tournaments would prove (Z1) in full.
+- **Reduction in general.** All but two corner conditions (`L4`, `U4`) hold for every block. Their slack is 0 only for singletons and grows with the block (5/3, 2, 26/9, 10/3, 298/69 for sizes 3–7). Proving `L4`, `U4` for all strong tournaments would prove (Z1) in full.
 
 **Evidence.**
 - **Exhaustive** for `n <= 10` (`tbal7.c`), with no failures of (Z1) or (Z2), and a balanced partner always in `D_1 ∪ D_2` or in `D_(k−1) ∪ D_k`:
@@ -160,6 +160,7 @@ The blocks are:
 | 12 | `M6a + M5` | `1052/2721 = 0.38662` | 2721 |
 | 13 | `M6a + M6a`, `M6b + M6b`, `M5 + M7`, `M7 + M5` | `3156/8163 = 1052/2721` | 8163 |
 | 14 | `M7 + M6a` (`M8 + M5`: 0.41535; `M6a + M7`: 0.40075) | `9468/24489 = 1052/2721` | 24489 |
+| 15 | best of `M7 + M7` (0.40075), `M8 + M6a` (0.41535), `M6a + M8` (0.41249) | `18261/45567 = 0.40075` | 45567 |
 
 - Both the `n = 11` and the `n = 12` minimiser were confirmed by an independent Python DP (`glue_minimisers_check.out`).
 - The `n = 13` value `592/1521 = 0.38922` found first by the extension tower (`tbal_extend.c`, `tower.log`) is two `M6` blocks glued at a cut vertex, with `H = 13689 = 117²`.
@@ -171,5 +172,5 @@ The blocks are:
 
 - `4/11` is the observed infimum. It is attained only at `n = 5, 6, 7` among `n <= 10` (exhaustive), and in no construction for `n = 11..13`.
 - The minimum for `n = 8, 9, 10` is `62/157 = 0.3949`. For `n = 11, 12, 13, 14` it is at most 0.3892, 0.3866, 0.3866 and 0.3866.
-- Whether glued constructions with larger blocks push `δ` towards or below `4/11` is open. The 62/157 block `M8` is a worse gluing ingredient (0.41535 at `n = 14`). The `n = 15` pairs are in `glue_blocks2.out`.
+- Whether glued constructions with larger blocks push `δ` towards or below `4/11` is open. The 62/157 block `M8` is a worse gluing ingredient (0.41535 at `n = 14`). At `n = 15` the pairs tried give at least 0.40075 (`glue_blocks2.out`), so these two-block gluings did not continue the descent.
 - No strong tournament found with `4 <= n <= 14` comes close to `1/3`.
