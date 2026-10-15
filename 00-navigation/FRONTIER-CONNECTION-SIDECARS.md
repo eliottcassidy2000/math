@@ -9,6 +9,10 @@ Reusable bridges (not literal object identifications):
 
 | Mechanism | Proven source | Legitimate transfer question |
 |---|---|---|
+| Conditional two-step payment | [Gold defect and greedy hostile](../05-knowledge/results/gold_heavy_child_20261014j.md), PROVED scoped / FINITE-EXACT | 1/3--2/3 and Gold Partition remain OPEN: select actual comparison events using the heavy child's law, not first-step balance alone. |
+| Strict slack / fibre transport | [Gold context buffer](../05-knowledge/results/gold_partition_context_transport_20261014j.md), PROVED scoped | Finite upper contexts admit a computable buffer for a strict certificate. Can a source-owned selector pay the actual weights without changing the source? |
+| Cyclic seam / full extension support | [Golden order bridge](../05-knowledge/results/golden_order_bridge_20261014j.md), PROVED scoped | The Fibonacci swap family has an exact Gold certificate; cyclic conditioning removes it while retaining all comparabilities. Retain the seam and full extension weights in Collatz transfers. |
+| Geometric order / strict margin | [Borsuk four interfaces](../05-knowledge/results/borsuk_order_interfaces_20261014j.md), PROVED scoped | At most eight points are covered; general Borsuk(4) remains OPEN. Five-vector blockers authenticate direction failures; abstract poset counts omit realizable cones and a uniform near-diameter margin. |
 | Quantifier-order firewall | THM-4090/4094/4095 | Retain incidence/profile until after optimization, witness deletion and global projection. |
 | Whole-layer Frobenius / orbit norm | NC2/TNC | Packets transfer; LRC lacks seed/exit and a `-1` stabilizer needs orientation. |
 | Quotient + sidecar | THM-3731; THM-3729 | Test the fixed fibre, retain coefficient/root, then re-audit the consumer. |
