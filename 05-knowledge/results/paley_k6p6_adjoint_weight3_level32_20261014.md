@@ -115,7 +115,13 @@ All scripts are in `04-computation/experiments/paley_k6p6_20261014/`. They use e
 
 ## 7. Next obligations
 
-1. **Prove HYP-9276.** Four routes are listed in the HYP: trace formula, hypergeometric, geometric, and Faltings–Serre–Livné.
+1. **Prove HYP-9276.** Four routes are listed in the HYP: trace formula, hypergeometric, geometric, and Faltings–Serre–Livné. The most concrete is the **descent form** (HYP-9276 statement 3):
+
+   `q³ Σ_x φ(x)φ(1−x) ₂F₁(x)₃F₂(x) = H_(q²) + χ₋₄(q)q² + 2q + 1`, with `H_Q = ₃F₂(χ₄, φ, φ; ε, ε | 1)^*_Q` over `F_(q²)`.
+
+   - It is checked directly at `q = 5..43`.
+   - It contains no modular form. It is equivalent to HYP-9276 given the prime-power extension of McCarthy–Papanikolas Theorem 1.8, which is FINITE-EXACT at 20 prime powers, including the inert squares `p²` with `p ≡ 3 (mod 4)`.
+   - Geometrically it suggests that the K6 − P6 4-fold is, up to Tate classes, the Weil restriction from `Q(i)` to `Q` of the `₃F₂(1)` surface: tensor induction of `ρ_g|G_(Q(i))` contains `Sym²ρ_g`.
    - The trace-formula route is closest to a finished proof. The new space is exactly `{g, ḡ}`, so `b(q²)` is half a Hecke trace, as in McCarthy–Papanikolas.
    - What remains is to turn the Legendre pairing into Hurwitz class numbers.
 2. **Explain the 2-adic refinements (e).** The factor 16 is proved; the `2⁷` / `2¹⁰` refinements look like a congruence between `g` and a CM or Eisenstein form.
