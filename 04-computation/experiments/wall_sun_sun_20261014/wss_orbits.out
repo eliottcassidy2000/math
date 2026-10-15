@@ -1,0 +1,43 @@
+(1) brute-force orbit counts vs formulas
+  a=1 p=  3 inert pi=   8 odd part    1      orbits      32 predicted      32 negation-fixed 0  E = 16  ok
+  a=1 p=  7 inert pi=  16 odd part    1      orbits     384 predicted     384 negation-fixed 0  E = 192  ok
+  a=1 p= 11 split pi=  10 odd part    5      orbits       4 predicted       4 negation-fixed 0  E = 2  ok
+  a=1 p= 13 inert pi=  28 odd part    7      orbits     336 predicted     336 negation-fixed 0  E = 168  ok
+  a=1 p= 17 inert pi=  36 odd part    9      orbits     576 predicted     576 negation-fixed 0  E = 288  ok
+  a=1 p= 19 split pi=  18 odd part    9      orbits       4 predicted       4 negation-fixed 0  E = 2  ok
+  a=1 p= 23 inert pi=  48 odd part    3      orbits    4224 predicted    4224 negation-fixed 0  E = 2112  ok
+  a=1 p= 29 split pi=  14 odd part    7      orbits       8 predicted       8 negation-fixed 0  E = 4  ok
+  a=1 p= 31 split pi=  30 odd part   15      orbits       4 predicted       4 negation-fixed 0  E = 2  ok
+  a=1 p= 37 inert pi=  76 odd part   19      orbits    2736 predicted    2736 negation-fixed 0  E = 1368  ok
+  a=2 p=  3 inert pi=   8 odd part    1      orbits      32 predicted      32 negation-fixed 0  E = 16  ok
+  a=2 p=  5 inert pi=  12 odd part    3      orbits      48 predicted      48 negation-fixed 0  E = 24  ok
+  a=2 p=  7 split pi=   6 odd part    3      orbits       4 predicted       4 negation-fixed 0  E = 2  ok
+  a=2 p= 11 inert pi=  24 odd part    3      orbits     480 predicted     480 negation-fixed 0  E = 240  ok
+  a=2 p= 13 inert pi=  28 odd part    7 WSS  orbits    4080 predicted    4080 negation-fixed 0  E = 2040  ok
+  a=2 p= 17 split pi=  16 odd part    1      orbits      32 predicted      32 negation-fixed 0  E = 16  ok
+  a=2 p= 19 inert pi=  40 odd part    5      orbits    1440 predicted    1440 negation-fixed 0  E = 720  ok
+  a=2 p= 23 split pi=  22 odd part   11      orbits       4 predicted       4 negation-fixed 0  E = 2  ok
+  a=2 p= 29 inert pi=  20 odd part    5      orbits    5040 predicted    5040 negation-fixed 0  E = 2520  ok
+  a=2 p= 31 split pi=  30 odd part   15 WSS  orbits      64 predicted      64 negation-fixed 0  E = 32  ok
+  a=3 p=  5 inert pi=  12 odd part    3      orbits      48 predicted      48 negation-fixed 0  E = 24  ok
+  a=3 p=  7 inert pi=  16 odd part    1      orbits     384 predicted     384 negation-fixed 0  E = 192  ok
+  a=3 p= 11 inert pi=   8 odd part    1      orbits    1440 predicted    1440 negation-fixed 0  E = 720  ok
+  a=3 p= 17 split pi=  16 odd part    1      orbits      32 predicted      32 negation-fixed 0  E = 16  ok
+  a=3 p= 19 inert pi=  40 odd part    5      orbits    1440 predicted    1440 negation-fixed 0  E = 720  ok
+  a=3 p= 23 split pi=  22 odd part   11      orbits       4 predicted       4 negation-fixed 0  E = 2  ok
+  a=3 p= 29 split pi=  28 odd part    7      orbits       8 predicted       8 negation-fixed 0  E = 4  ok
+  27 cases agree (including the a-WSS primes, where the count jumps)
+(2) a-Wall-Sun-Sun primes below bounds
+  a=1 (D=5): [] below 300000
+  a=2 (D=8): [13, 31] below 300000
+  a=3 (D=13): [241] below 300000
+  a=4 (D=20): [3] below 100000
+  a=5 (D=29): [3, 11] below 100000
+  a=6 (D=40): [191, 643] below 100000
+  a=7 (D=53): [5] below 100000
+(3) golden 'Fermat' primes: pi(p) a power of 2, p < 10^6, and Lucas numbers L_(2^j)
+  primes with pi(p) = 2^k: [(3, 8), (7, 16), (47, 32), (127, 256), (1087, 128), (2207, 64), (4481, 128), (21503, 2048), (34303, 1024), (119809, 512), (524287, 1048576)]
+  prime factors of L_(2^j), j = 1..6: {1: [3], 2: [7], 3: [47], 4: [2207], 5: [1087, 4481], 6: [127, 186812208641]}
+  every golden-Fermat prime divides some L_(2^j): False
+(4) golden Paley primes: p = 3 mod 4, p = +-1 mod 5, <mu_1> = QR_p (index 2, odd order), p < 2000
+   [11, 19, 31, 59, 71, 79, 131, 179, 191, 239, 251, 271, 311, 359, 379, 419, 431, 439, 479, 491, 499, 571, 599, 631, 659, 719, 739, 751, 839, 971, 1019, 1039, 1051, 1091, 1171, 1259, 1319, 1399, 1439, 1451, 1459, 1499, 1531, 1559, 1571, 1619, 1759, 1811, 1831, 1879, 1931, 1979]

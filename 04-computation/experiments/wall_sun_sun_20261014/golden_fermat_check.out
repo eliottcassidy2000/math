@@ -1,0 +1,7 @@
+pi(p) = 2^k  <=>  p | some L_(2^j), for all primes p < 10^6: mismatches 0; golden-Fermat primes: [(3, 8), (7, 16), (47, 32), (127, 256), (1087, 128), (2207, 64), (4481, 128), (21503, 2048), (34303, 1024), (119809, 512), (524287, 1048576)]
+M_3 = 2^3-1 (q mod 4 = 3): first j with M | L_(2^j): 2 -> pi = 2^4
+M_7 = 2^7-1 (q mod 4 = 3): first j with M | L_(2^j): 6 -> pi = 2^8
+M_19 = 2^19-1 (q mod 4 = 3): first j with M | L_(2^j): 18 -> pi = 2^20
+M_31 = 2^31-1 (q mod 4 = 3): first j with M | L_(2^j): 30 -> pi = 2^32
+M_107 = 2^107-1 (q mod 4 = 3): first j with M | L_(2^j): 106 -> pi = 2^108
+M_127 = 2^127-1 (q mod 4 = 3): first j with M | L_(2^j): 126 -> pi = 2^128
