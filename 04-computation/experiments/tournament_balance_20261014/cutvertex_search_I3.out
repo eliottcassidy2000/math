@@ -1,0 +1,9 @@
+run 0: I3 objective 66/161 = 0.409938; block sizes [3, 5]; zout 10001011
+run 1: I3 objective 6/17 = 0.352941; block sizes [1, 4]; zout 11101
+run 2: I3 objective 148/361 = 0.409972; block sizes [3, 6]; zout 100010111
+run 3: I3 objective 25/63 = 0.396825; block sizes [5, 5]; zout 0000101111
+run 4: I3 objective 219/541 = 0.404806; block sizes [5, 5]; zout 0001001111
+run 5: I3 objective 5/13 = 0.384615; block sizes [3, 1]; zout 1010
+run 6: I3 objective 6/17 = 0.352941; block sizes [4, 1]; zout 00100
+run 7: I3 objective 5/13 = 0.384615; block sizes [1, 3]; zout 1100
+BEST 6/17 0.35294117647058826 [1, 4] 11101

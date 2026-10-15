@@ -1,0 +1,10 @@
+n=5: H=9, vertex-wise constant 1/3, tight vertices [1, 3, 4] (c = 4); p(c before a) = 2/3, p(c before b) = 1/3
+n=6: H=15, vertex-wise constant 1/3, tight vertices [5] (c = 5); p(c before a) = 2/3, p(c before b) = 1/3
+n=7: H=27, vertex-wise constant 1/3, tight vertices [6] (c = 6); p(c before a) = 2/3, p(c before b) = 1/3
+n=8: H=51, vertex-wise constant 1/3, tight vertices [7] (c = 7); p(c before a) = 2/3, p(c before b) = 1/3
+n=9: H=99, vertex-wise constant 1/3, tight vertices [8] (c = 8); p(c before a) = 2/3, p(c before b) = 1/3
+n=10: H=195, vertex-wise constant 1/3, tight vertices [9] (c = 9); p(c before a) = 2/3, p(c before b) = 1/3
+n=11: H=387, vertex-wise constant 1/3, tight vertices [10] (c = 10); p(c before a) = 2/3, p(c before b) = 1/3
+n=12: H=771, vertex-wise constant 1/3, tight vertices [11] (c = 11); p(c before a) = 2/3, p(c before b) = 1/3
+n=13: H=1539, vertex-wise constant 1/3, tight vertices [12] (c = 12); p(c before a) = 2/3, p(c before b) = 1/3
+n=14: H=3075, vertex-wise constant 1/3, tight vertices [13] (c = 13); p(c before a) = 2/3, p(c before b) = 1/3

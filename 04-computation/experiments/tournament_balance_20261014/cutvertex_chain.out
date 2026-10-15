@@ -1,0 +1,2 @@
+validation vs brute force (n <= 12, 300 random cut-vertex tournaments): mismatches 0
+random cut-vertex tournaments: 200; I3 failures 0 (worst best-partner balance 0.3333); I1 tested 183, failures 0 (worst interior balance 0.3336)

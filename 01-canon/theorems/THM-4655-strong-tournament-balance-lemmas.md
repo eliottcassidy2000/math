@@ -1,9 +1,9 @@
 ---
 id: THM-4655
-title: "Uniform Hamiltonian paths of strong tournaments: the 1/3-2/3 property holds for every strong 'transitive-plus-one' tournament, with the explicit balanced pair (z, u_2); there the extra vertex z is balanced against every interior vertex, every vertex has a balanced partner and the unique Hamiltonian cycle carries at least two balanced arcs; a rotation lemma for Hamiltonian cycles; Stanley-type log-concavity fails; exhaustive verification for all strong tournaments on n <= 10 vertices"
+title: "Uniform Hamiltonian paths of strong tournaments: the 1/3-2/3 property holds for every strong 'transitive-plus-one' tournament, with the explicit balanced pair (z, u_2); there the extra vertex z is balanced against every interior vertex, every vertex has a balanced partner and the unique Hamiltonian cycle carries at least two balanced arcs; the exact transfer chain at a cut vertex; vertex-wise balance is sharp at 1/3 for every n >= 5; a rotation lemma for Hamiltonian cycles; Stanley-type log-concavity fails; exhaustive verification for all strong tournaments on n <= 10 vertices"
 status: >
-  PROVED: statements 1-2 (elementary; statement 1(f) uses an exact computer check for m <= 14 together with an analytic
-  bound for m >= 8). FINITE-EXACT: statements 3-4 (exhaustive, gentourng + exact subset DP in C). The tournament 1/3-2/3
+  PROVED: statements 1, 2, 5, 6 (elementary; statement 1(f) uses an exact computer check for m <= 14 together with an
+  analytic bound for m >= 9). FINITE-EXACT: statements 3-4 (exhaustive, gentourng + exact subset DP in C). The tournament 1/3-2/3
   conjecture HYP-9277 (opus S35) remains OPEN; this theorem proves it, and its vertex-wise strengthening HYP-9279(B), for
   a natural subclass of strong tournaments, and extends the exhaustive verification from n <= 8 to n <= 10.
 source: mac-mini-2026-10-14-tourn
@@ -14,6 +14,7 @@ verification:
   - 04-computation/experiments/tournament_balance_20261014/trans_plus_one.py, tpo_proof_steps.py (+ .out), tpo_u2_check.c (+ .out)
   - 04-computation/experiments/tournament_balance_20261014/tpo_cycle_arcs.py (+ .out), tpo_vertexwise_proof_check.py (+ .out): statements 1(e)-(g)
   - 04-computation/experiments/tournament_balance_20261014/cutvertex_chain.py (+ .out): statement 5, validated against the subset DP
+  - 04-computation/experiments/tournament_balance_20261014/vw_tight_family.py (+ .out): statement 6
   - 04-computation/experiments/tournament_balance_20261014/rotation_lemma_check.py, logconcave_test.py, analyse_minimisers.py
 note: 05-knowledge/results/strong_tournament_balance_golden_rigidity_20261014.md
 related: [HYP-9277, HYP-9279, THM-438 (Paley Hamiltonian paths), THM-4652 (Paley pattern sums)]
@@ -98,6 +99,13 @@ related: [HYP-9277, HYP-9279, THM-438 (Paley Hamiltonian paths), THM-4652 (Paley
    - **(b)** For `v ∈ D_i`, the number of Hamiltonian paths with `v` before `z` is `u^T M_1 ⋯ M_i^(v) ⋯ M_k f`. Here `M_i^(v)` keeps `pre → pre` and `pre → gap`, restricts every sum over `X` to `X ∋ v`, and sets `gap → post` and `post → post` to 0.
    - **(c) (Fair coin.)** The `mid → mid` entry is invariant under `X ↔ D ∖ X`. So its `v`-part is exactly half of it. Conditionally on block `D_i` lying strictly inside the crossing window (`b < i < a` below), every vertex of `D_i` precedes `z` with probability exactly `1/2`.
    - **(d)** When `T − z` is transitive (all blocks singletons), `mid → mid = 2`, and (a) is the crossing decomposition of 1(b), with weights `2^(α−β−1)`.
+
+6. **(Vertex-wise balance is sharp at `1/3` for every `n >= 5`.)** Let `W_n` (`n >= 5`, `t = n − 3`) be the transitive tournament `0 → 1 → … → t−1 → {a, b, c}`, with the cyclic triangle `a → b → c → a`, and with one arc reversed to `b → 0`. Then:
+   - `W_n` is strong and `H(W_n) = 3(2^(n−4) + 1)`;
+   - in a uniform Hamiltonian path, the order induced on `{a, b, c}` is uniform over the three rotations `abc, bca, cab`;
+   - `p(c before a) = 2/3`, `p(c before b) = 1/3`, `p(c before 0) = 2^(t−1)/H`, and `p(c before i) = 2^(t−2)/H` for `1 <= i <= t−1`.
+
+   So `max_w min(p(c, w), 1 − p(c, w)) = 1/3` exactly. The vertex-wise constant of HYP-9279(B) equals `1/3` for every `n >= 5`. It is also `1/3` at `n = 3` (`C_3`), and `2/5` at `n = 4`.
 
 ## Proof
 
@@ -209,6 +217,22 @@ The initial state is `gap` when `A = ∅` and `pre` otherwise. The final state i
 Restricting block `i` to the splits with `v ∈ A_i` proves (b). The involution `X ↦ D ∖ X` fixes `h(X) h(D ∖ X)` and exchanges `v ∈ X` with `v ∉ X`, which proves (c). Part (d) is direct substitution.
 
 `cutvertex_chain.py` checks (a) and (b) against the full subset DP on 300 random cut-vertex tournaments with `n <= 12`: no mismatch. ∎
+
+**6.** The cycle `0 → 1 → … → t−1 → a → b → 0`, together with `b → c → a`, shows that `W_n` is strong.
+
+The only in-neighbour of `0` is `b`, so a Hamiltonian path either starts at `0` or contains `b 0`.
+- **Paths starting at `0`.** `W_n − 0` is `TT_(t−1) ⇒ C_3`. Its Hamiltonian paths are `1 2 … (t−1)` followed by a rotation of `abc`, and all three start at `1`, an out-neighbour of `0`. This gives 3 paths, one per rotation.
+- **Paths containing `b 0`.** Write the path as `X b 0 Y`. The tournament on `{1, …, t−1, a, c}` is transitive, in the order `1, …, t−1, c, a`. So `X` and `Y` are the unique increasing paths on their vertex sets `S` and `S'`.
+  - `Y` may start anywhere, since `0` beats all of `S'`.
+  - `X` must end at an in-neighbour of `b`, that is `a` or some `i >= 1`. This rules out exactly `c ∈ S` with `a ∉ S`.
+  - So these paths correspond to `S ∩ {1, …, t−1}` (`2^(t−1)` choices) times one of the three patterns:
+    - `a, c ∈ S`, giving the order `c a b`;
+    - `a ∈ S` only, giving `a b c`;
+    - neither in `S`, giving `b c a`.
+
+Hence `H = 3 + 3·2^(t−1)`, and each rotation of `abc` occurs in exactly `1 + 2^(t−1)` paths.
+
+The vertex `c` precedes `0` only in the pattern `c a b`. It precedes `i >= 1` only when moreover `i ∉ S`. This gives the stated values, and both are below `1/3`. `vw_tight_family.py` confirms the values exactly for `n = 5, …, 14`. ∎
 
 ## Reading
 

@@ -5,7 +5,7 @@ status: >
   OPEN. (A) and (B) are FINITE-EXACT for all strong tournaments with n <= 10 (exhaustive: 1 + 6 + 35 + 353 + 6008 + 178133
   + 9355949 tournaments for n = 4..10; minima of delta 2/5, 4/11, 4/11, 4/11, 62/157, 62/157, 62/157). (B+) is FINITE-EXACT
   for n <= 9. On the transitive-plus-one family, (B) and (B+) are PROVED (THM-4655 1(g)). (B) is sharp: the vertex-wise
-  constant is exactly 1/3 for every n = 5..9. (B_loc) is FINITE-EXACT for n <= 9 and exact on the transitive-plus-one family
+  constant equals 1/3 for every n >= 5 (PROVED, THM-4655 (6), family W_n). (B_loc) is FINITE-EXACT for n <= 9 and exact on the transitive-plus-one family
   to n = 14. (Z) is FINITE-EXACT for n <= 9, survives random and adversarial sampling of the exact cut-vertex transfer chain
   (THM-4655 (5)) to n = 46, is sharp at 1/3, and is PROVED for singleton blocks (THM-4655 1(f)). Each of (A), (B), (B+),
   (B_loc) implies HYP-9277's inequality, and (Z) implies it for every strong tournament with a cut vertex; (A) gives it with a
@@ -47,7 +47,10 @@ In a strong tournament on `n >= 3` vertices, every vertex `v` has a partner `w` 
   - Exhaustive for all strong tournaments with `n <= 10` (`tbal2.c`; 9,355,949 tournaments at `n = 10`).
   - PROVED on the transitive-plus-one family (THM-4655 1(g)). There `z` is balanced against every interior `u_i`.
   - Also observed for `n <= 10`: every vertex whose deletion destroys strong connectivity has a balanced partner (2,820,361 such tournaments at `n = 10`). This is implied by (B).
-- **Sharpness.** The vertex-wise constant `min_v max_w min(p, 1 − p)` is exactly `1/3` for every `n = 5, …, 9` (`tbal5.c`), unlike the global `δ`. It is attained by 1, 2, 5, 17 and 82 strong tournaments respectively.
+- **Sharpness (PROVED for every `n >= 5`, THM-4655 (6)).** The vertex-wise constant `min_v max_w min(p, 1 − p)` equals `1/3` for every `n >= 5`, unlike the global `δ`.
+  - The family is `W_n = TT_(n−3) ⇒ C_3` with one back arc `b → 0`. There the order on the triangle is uniform over its three rotations.
+  - Exhaustively (`tbal5.c`), `1/3` is the minimum for `n = 5, …, 9`. It is attained by 1, 2, 5, 17 and 82 strong tournaments respectively.
+  - Annealing at `n = 11` (`tbal_anneal.c`) also stops exactly at `1/3`.
   - The tight vertices sit in a cyclic triangle hung at the end of the order by one back arc. Example at `n = 6`: `TT_3` followed by `3 → 4 → 5 → 3`, with the back arc `4 → 0`.
   - The tight vertex `5` has `p = 2/3, 1/3` against `3, 4`, exactly as in an isolated `C_3`.
   - So the equality cases of (B) are local `C_3` blocks, mirroring the global equality cases of HYP-9277.
