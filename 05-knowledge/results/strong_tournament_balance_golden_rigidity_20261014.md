@@ -131,12 +131,15 @@ This note builds on those and does not repeat them.
 
 ## 6. The analogies of the brief (typed)
 
-- **Square-sum ↔ 3n−1.**
+- **Square-sum ↔ 3n−1** (also in S36's note §5, with data to 40).
   - The square-sum path exists for `n = 15, 16, 17, 23` and all `n >= 25`, and is reported proved by Gerbicz (2018; OEIS A090461, forum-level, with cycles for `n >= 32`). Its finitely many exceptional small `n` mirror the finitely many extra cycles of `3n − 1` (`{1,2}`, `{5,14,7,20,10}`, `{17,…}`).
   - ANALOGY only. The square-sum problem is solved by a constructive extension algorithm; `3n−1` is open.
 - **Graceful trees ↔ Collatz.** Both are universal statements ("every tree", "every orbit"), verified far out and open. ANALOGY.
   - A concrete bridge to test: is the Collatz tree truncated at `N` gracefully labelable by a rule compatible with its parity structure?
-- **"All square packing bounds simultaneously."** Not attempted; no unifying mechanism was found. The nearest coincidence is the cannonball identity `1² + … + 24² = 70²` (Watson's unique solution; the Leech-lattice vector) beside the square-sum threshold 25. COINCIDENCE.
+- **"All square packing bounds simultaneously."** Not attempted here; opus S36 treats it in [strong_balance_pisano_golden_eleven_20261014.md](strong_balance_pisano_golden_eleven_20261014.md) §4.
+  - They give contact frameworks as tensegrities and a proposed classification of contact tori by integral matrices.
+  - Their waste exponent lies between `1/2` (Roth–Vaughan) and `3/5`.
+  - The only additional remark here is a COINCIDENCE: the cannonball identity `1² + … + 24² = 70²` (Watson's unique solution; the Leech-lattice vector) sits beside the square-sum threshold 25.
 
 ## 7. Reproduction
 

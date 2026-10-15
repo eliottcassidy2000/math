@@ -80,7 +80,7 @@ Parts builds his graphs as **type M**, `G = L ∪ ρS`. Here `L` and `S` are Min
      * `r = 3.0`: `|P'| = 14,329`, graph 46,585 vertices / 364,272 edges (1,776 s);
      * `r = 2.5`: `|P'| = 13,153`, graph **45,409 vertices / 351,816 edges** (3,884 s).
      * Replacing `M_2` by `clip(M_1 ⊕ M_1, 0.8)` loses the radius-2 orbit altogether, so it cannot force radius 2; that branch is dead.
-     * A queued run (`spindle_free_m3side.py`) clips the rigid `M_3` side. These are steps of a few percent, far from Heule's 1,441; the reduction has to come from the `M_3` side.
+     * **Clipping the rigid side** (`spindle_free_m3side.py`, `spindle_free_m3side.log`; SOLVER, mac-mini-2026-10-14-tourn). `M_3' = {p ∈ M_3 : |p|² <= r} ∪ {radius-2 orbit}` against `ψP'` with `P'` the `r = 3.0` piece (14,329). At `r = 3.5` the graph has **45,241 vertices / 340,584 edges and is not 4-colourable** (CaDiCaL 1.9.5, 3,922 s), the smallest so far in this family. The `r = 3.0` and `r = 2.7` runs were killed by a machine reboot and restarted; see the log. These are steps of a few percent, far from Heule's 1,441.
    * **The spindle-free graph is C24-invariant.** `M_3 ∪ ψP_1` is one centre plus 2,005 orbits of size 24, so symmetric subgraphs have `1 + 24m` vertices. `1441 = 1 + 24·60` is NUMEROLOGY unless Heule's graph is itself C24-symmetric, which was not checked.
      * Orbit-level minimisation (`orbit_core.py`) runs slowly: CaDiCaL with 2,006 assumption literals had not finished its first core after more than an hour, against 25 minutes for the plain solve.
      * The next step is phase-1 cores without assumptions, e.g. by fixing a random half of the orbits off and testing.
