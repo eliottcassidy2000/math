@@ -61,6 +61,22 @@ The owner asked how the numbers **21/20** (Lemma 4.4: `≪ L^(−21/20)`) and **
 - The 5 of "`p ≡ 1 (mod 5)`" is therefore forced by the 4 of `u(q) = 4^ω`.
 - The second 5, in `w(n) = Σ_(q|n) 4^ω(q) = 5^(ω_Q(n))`, is the binomial theorem. They meet as `φ(5) = 4` and `5 = 1 + 4`: an internal COINCIDENCE of the parameter choice.
 
+**Part II: the other 20s and the other 700.**
+- **MRT15 Theorem 1.7, corrected (the paper's Theorem 12.2).** For a 1-bounded multiplicative `b`, with `Q = min((log X)^(1/125), (log D)^5)`:
+
+  `sup_α ∫_0^X |Σ_(y<m<=y+D) b(m)e(αm)| dy ≪ DX (e^(−𝓜(b;X,Q)/20) + log log D/log D + (log X)^(−1/700))`.
+
+  So the **20 and the 700 both originate in MRT15**: the pretentious distance enters as `e^(−𝓜/20)` and the frequency-uniform saving as `(log X)^(−1/700)`.
+- **Part II uses this only qualitatively.** In (12.7) the graph parameters `B` and `D` are fixed and then `Y → ∞`. So `(log X)^(−1/700) → 0`, and `e^(−𝓜/20) → 0` by uniform nonpretentiousness, for any positive constants in place of 1/20 and 1/700.
+- **Part II's own `ρ = 1/20`, in (10.1) and (13.1).** It sets the forbidden-path length `L = B^(1−ρ) = B^(19/20)`. It is used only through `L J log B = O(B^(1−ρ) log² B) = o(log P₀) = o(B^(1−ε))` and through `4ε < ρ`, with `ε = 10^(−4)`. So it needs only `ρ > 4·10^(−4)`, a margin of 125 times.
+- **Summary (ARITHMETIC).** No 20 or 700 anywhere in the paper is sharp.
+  - 1/700 needs `A >= 560` in Part I and is irrelevant in Part II.
+  - 21/20 needs only `> 1.000224`.
+  - `ρ = 1/20` needs only `> 0.0004`.
+  - MRT's `1/20` needs only some positive constant.
+
+  The final exponent `c = δ/(6WA)` is governed by `δ = 1/200`, the Braverman constant `C₁` (through `A`), and the graph constant `C₃` (through `W`). It is not governed by these numbers.
+
 ## 2. Exact refinement of (4.3) (PROVED)
 
 For the four forms `x₁, x₂, x₃, x₁ + x₂ − x₃` (the uniform matroid `U_(3,4)`: every three are independent), Whitney's formula gives the exact avoiding proportion
