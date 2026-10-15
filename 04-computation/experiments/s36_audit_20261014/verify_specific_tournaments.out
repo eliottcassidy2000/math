@@ -1,0 +1,32 @@
+(1) SS counterexamples at n = 9 (HYP-9280)
+--- SS-1 adj = [502, 508, 504, 241, 480, 448, 384, 256, 8]
+    n = 9, H = 85 (odd: True), T strong: True, F strong: True, M transitive: False, #3-cycles of M = 12, forward 3-cycle of T: True
+    inverted arcs (tail, head, p(tail first)): [(0, 8, '21/85')]
+    vertex w = 8: in-degree d = 7, distribution of N = [1, 6, 15, 21, 19, 12, 5, 6], E[N] = 307/85 (d/2 = 7/2), best in-neighbour p = 53/85, SS violated at k = [3]
+      Pr[N >= 4] = 42/85  vs  Pr[N <= 3] = 43/85
+--- SS-2 adj = [250, 508, 497, 500, 480, 448, 384, 256, 1]
+    n = 9, H = 117 (odd: True), T strong: True, F strong: True, M transitive: False, #3-cycles of M = 16, forward 3-cycle of T: True
+    inverted arcs (tail, head, p(tail first)): [(1, 8, '53/117'), (3, 8, '53/117')]
+    vertex w = 8: in-degree d = 7, distribution of N = [1, 7, 20, 31, 29, 17, 6, 6], E[N] = 419/117 (d/2 = 7/2), best in-neighbour p = 23/39, SS violated at k = [3]
+      Pr[N >= 4] = 58/117  vs  Pr[N <= 3] = 59/117
+
+(2) HYP-9277 Claim A counterexamples
+--- ClaimA n=8 adj = [190, 176, 250, 242, 64, 144, 163, 16]
+    n = 8, H = 45 (odd: True), T strong: True, F strong: True, M transitive: False, #3-cycles of M = 10, forward 3-cycle of T: True
+    inverted arcs (tail, head, p(tail first)): [(0, 4, '13/45')]
+--- ClaimA n=9 adj = [460, 493, 328, 256, 367, 461, 264, 92, 128]
+    n = 9, H = 81 (odd: True), T strong: True, F strong: True, M transitive: False, #3-cycles of M = 12, forward 3-cycle of T: True
+    inverted arcs (tail, head, p(tail first)): [(4, 8, '17/81')]
+
+(3) T_n closed forms
+    n = 3: H = 3 (2^(n-2)+1 = 3); cert = 2/3; vertex lemma = 2/3; min D_in = 1/3; max Pr[first] = 1/3; formula 2/3, 1/3, 1/3; p(last->first arc) = 2/3
+    n = 4: H = 5 (2^(n-2)+1 = 5); cert = 3/5; vertex lemma = 3/5; min D_in = 1/5; max Pr[first] = 2/5; formula 3/5, 1/5, 2/5; p(last->first arc) = 4/5
+    n = 5: H = 9 (2^(n-2)+1 = 9); cert = 5/9; vertex lemma = 5/9; min D_in = 1/9; max Pr[first] = 4/9; formula 5/9, 1/9, 4/9; p(last->first arc) = 8/9
+    n = 6: H = 17 (2^(n-2)+1 = 17); cert = 9/17; vertex lemma = 9/17; min D_in = 1/17; max Pr[first] = 8/17; formula 9/17, 1/17, 8/17; p(last->first arc) = 16/17
+    n = 7: H = 33 (2^(n-2)+1 = 33); cert = 17/33; vertex lemma = 17/33; min D_in = 1/33; max Pr[first] = 16/33; formula 17/33, 1/33, 16/33; p(last->first arc) = 32/33
+    n = 8: H = 65 (2^(n-2)+1 = 65); cert = 33/65; vertex lemma = 33/65; min D_in = 1/65; max Pr[first] = 32/65; formula 33/65, 1/65, 32/65; p(last->first arc) = 64/65
+    n = 9: H = 129 (2^(n-2)+1 = 129); cert = 65/129; vertex lemma = 65/129; min D_in = 1/129; max Pr[first] = 64/129; formula 65/129, 1/129, 64/129; p(last->first arc) = 128/129
+
+real	0m1.178s
+user	0m0.000s
+sys	0m0.061s

@@ -1,0 +1,84 @@
+=== n = 3 ===  [0.7 s]
+  labelled strong tournaments: 2; DFS vs brute-force-permutation mismatches: 0
+  internal consistency errors (Redei parity, C + C^T = H, N-distribution moments): 0
+  M(T) transitive: 0;  F(T) NOT strongly connected: 0;  no all-forward 3-cycle of T: 0
+  inverted-arc distribution: {0: 2}
+  inverted-arc degree types (outdeg y, indeg x) -> #arcs: {};  (1,1)-arcs whose y-out-neighbour is not the x-in-neighbour: 0;  inverted arcs with p < 1/3: 0
+  min #3-cycles of M(T): 1 (n - 2 = 1)
+  (SS) violated at 0 (T, w) pairs in 0 tournaments;  vertex lemma fails at 0 vertices;  D_in(w) <= 0 at 0 vertices
+  "max_(u->w) p(u,w) + Pr[w first] >= 1" violated at 0 (T, w) pairs (0 tournaments)
+  labelled copies of T_n among strong tournaments: 2
+  best 3-cycle certificate: extreme = 2/3 (session formula 2/3: MATCH); attained by 2 labelled tournaments, of which 2 are T_n
+  vertex lemma min_w max_(u->w) p: extreme = 2/3 (session formula 2/3: MATCH); attained by 2 labelled tournaments, of which 2 are T_n
+  min_w D_in: extreme = 1/3 (session formula 1/3: MATCH); attained by 2 labelled tournaments, of which 2 are T_n
+  min_w D_out: extreme = 1/3 (session formula 1/3: MATCH); attained by 2 labelled tournaments, of which 2 are T_n
+  max_w Pr[w first]: extreme = 1/3 (session formula 1/3: MATCH); attained by 2 labelled tournaments, of which 2 are T_n
+  delta (best balance): extreme = 1/3; attained by 2 labelled tournaments, of which 2 are T_n
+=== n = 4 ===  [0.0 s]
+  labelled strong tournaments: 24; DFS vs brute-force-permutation mismatches: 0
+  internal consistency errors (Redei parity, C + C^T = H, N-distribution moments): 0
+  M(T) transitive: 0;  F(T) NOT strongly connected: 0;  no all-forward 3-cycle of T: 0
+  inverted-arc distribution: {0: 24}
+  inverted-arc degree types (outdeg y, indeg x) -> #arcs: {};  (1,1)-arcs whose y-out-neighbour is not the x-in-neighbour: 0;  inverted arcs with p < 1/3: 0
+  min #3-cycles of M(T): 2 (n - 2 = 2)
+  (SS) violated at 0 (T, w) pairs in 0 tournaments;  vertex lemma fails at 0 vertices;  D_in(w) <= 0 at 0 vertices
+  "max_(u->w) p(u,w) + Pr[w first] >= 1" violated at 24 (T, w) pairs (24 tournaments)
+  labelled copies of T_n among strong tournaments: 24
+  best 3-cycle certificate: extreme = 3/5 (session formula 3/5: MATCH); attained by 24 labelled tournaments, of which 24 are T_n
+  vertex lemma min_w max_(u->w) p: extreme = 3/5 (session formula 3/5: MATCH); attained by 24 labelled tournaments, of which 24 are T_n
+  min_w D_in: extreme = 1/5 (session formula 1/5: MATCH); attained by 24 labelled tournaments, of which 24 are T_n
+  min_w D_out: extreme = 1/5 (session formula 1/5: MATCH); attained by 24 labelled tournaments, of which 24 are T_n
+  max_w Pr[w first]: extreme = 2/5 (session formula 2/5: MATCH); attained by 24 labelled tournaments, of which 24 are T_n
+  delta (best balance): extreme = 2/5; attained by 24 labelled tournaments, of which 24 are T_n
+=== n = 5 ===  [0.0 s]
+  labelled strong tournaments: 544; DFS vs brute-force-permutation mismatches: 0
+  internal consistency errors (Redei parity, C + C^T = H, N-distribution moments): 0
+  M(T) transitive: 0;  F(T) NOT strongly connected: 0;  no all-forward 3-cycle of T: 0
+  inverted-arc distribution: {0: 544}
+  inverted-arc degree types (outdeg y, indeg x) -> #arcs: {};  (1,1)-arcs whose y-out-neighbour is not the x-in-neighbour: 0;  inverted arcs with p < 1/3: 0
+  min #3-cycles of M(T): 3 (n - 2 = 3)
+  (SS) violated at 0 (T, w) pairs in 0 tournaments;  vertex lemma fails at 0 vertices;  D_in(w) <= 0 at 0 vertices
+  "max_(u->w) p(u,w) + Pr[w first] >= 1" violated at 1600 (T, w) pairs (544 tournaments)
+  labelled copies of T_n among strong tournaments: 120
+  best 3-cycle certificate: extreme = 5/9 (session formula 5/9: MATCH); attained by 120 labelled tournaments, of which 120 are T_n
+  vertex lemma min_w max_(u->w) p: extreme = 5/9 (session formula 5/9: MATCH); attained by 120 labelled tournaments, of which 120 are T_n
+  min_w D_in: extreme = 1/9 (session formula 1/9: MATCH); attained by 120 labelled tournaments, of which 120 are T_n
+  min_w D_out: extreme = 1/9 (session formula 1/9: MATCH); attained by 120 labelled tournaments, of which 120 are T_n
+  max_w Pr[w first]: extreme = 4/9 (session formula 4/9: MATCH); attained by 120 labelled tournaments, of which 120 are T_n
+  delta (best balance): extreme = 4/11; attained by 120 labelled tournaments, of which 0 are T_n
+=== n = 6 ===  [0.1 s]
+  labelled strong tournaments: 22320; DFS vs brute-force-permutation mismatches: 0
+  internal consistency errors (Redei parity, C + C^T = H, N-distribution moments): 0
+  M(T) transitive: 0;  F(T) NOT strongly connected: 0;  no all-forward 3-cycle of T: 0
+  inverted-arc distribution: {0: 20880, 1: 1440}
+  inverted-arc degree types (outdeg y, indeg x) -> #arcs: {(1, 1): 1440};  (1,1)-arcs whose y-out-neighbour is not the x-in-neighbour: 0;  inverted arcs with p < 1/3: 0
+  min #3-cycles of M(T): 4 (n - 2 = 4)
+  (SS) violated at 0 (T, w) pairs in 0 tournaments;  vertex lemma fails at 0 vertices;  D_in(w) <= 0 at 0 vertices
+  "max_(u->w) p(u,w) + Pr[w first] >= 1" violated at 105360 (T, w) pairs (22320 tournaments)
+  labelled copies of T_n among strong tournaments: 720
+  best 3-cycle certificate: extreme = 9/17 (session formula 9/17: MATCH); attained by 720 labelled tournaments, of which 720 are T_n
+  vertex lemma min_w max_(u->w) p: extreme = 9/17 (session formula 9/17: MATCH); attained by 720 labelled tournaments, of which 720 are T_n
+  min_w D_in: extreme = 1/17 (session formula 1/17: MATCH); attained by 720 labelled tournaments, of which 720 are T_n
+  min_w D_out: extreme = 1/17 (session formula 1/17: MATCH); attained by 720 labelled tournaments, of which 720 are T_n
+  max_w Pr[w first]: extreme = 8/17 (session formula 8/17: MATCH); attained by 720 labelled tournaments, of which 720 are T_n
+  delta (best balance): extreme = 4/11; attained by 480 labelled tournaments, of which 0 are T_n
+=== n = 7 ===  [20.1 s]
+  labelled strong tournaments: 1677488 (DFS only)
+  internal consistency errors (Redei parity, C + C^T = H, N-distribution moments): 0
+  M(T) transitive: 0;  F(T) NOT strongly connected: 0;  no all-forward 3-cycle of T: 0
+  inverted-arc distribution: {0: 1633808, 1: 43680}
+  inverted-arc degree types (outdeg y, indeg x) -> #arcs: {(1, 1): 23520, (2, 4): 10080, (4, 2): 10080};  (1,1)-arcs whose y-out-neighbour is not the x-in-neighbour: 0;  inverted arcs with p < 1/3: 0
+  min #3-cycles of M(T): 5 (n - 2 = 5)
+  (SS) violated at 0 (T, w) pairs in 0 tournaments;  vertex lemma fails at 0 vertices;  D_in(w) <= 0 at 0 vertices
+  "max_(u->w) p(u,w) + Pr[w first] >= 1" violated at 10420928 (T, w) pairs (1677488 tournaments)
+  labelled copies of T_n among strong tournaments: 5040
+  best 3-cycle certificate: extreme = 17/33 (session formula 17/33: MATCH); attained by 5040 labelled tournaments, of which 5040 are T_n
+  vertex lemma min_w max_(u->w) p: extreme = 17/33 (session formula 17/33: MATCH); attained by 5040 labelled tournaments, of which 5040 are T_n
+  min_w D_in: extreme = 1/33 (session formula 1/33: MATCH); attained by 5040 labelled tournaments, of which 5040 are T_n
+  min_w D_out: extreme = 1/33 (session formula 1/33: MATCH); attained by 5040 labelled tournaments, of which 5040 are T_n
+  max_w Pr[w first]: extreme = 16/33 (session formula 16/33: MATCH); attained by 5040 labelled tournaments, of which 5040 are T_n
+  delta (best balance): extreme = 4/11; attained by 560 labelled tournaments, of which 0 are T_n
+
+real	0m22.059s
+user	0m0.046s
+sys	0m0.031s

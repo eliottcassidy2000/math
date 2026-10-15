@@ -6677,6 +6677,9 @@ OEIS A038375 gives max H(T) over all n-vertex tournaments: 1, 1, 3, 5, 15, 45, 1
 
 ---
 
+### UPDATE (2026-10-14, opus-2026-10-14-S36; audited, MISTAKE-614): strong-tournament 1/3-2/3 via the majority cycle (HYP-9280)
+- HYP-9280 (OPEN): in every strong tournament the arcs with p(tail first) > 1/2 (uniform random Hamiltonian path) form a strongly connected spanning subdigraph; then the majority tournament M(T) is strong, has >= n-2 cyclic triples, and each contains a pair in (1/2, 2/3], proving HYP-9277 for strong tournaments. FINITE-EXACT for all strong n <= 9 (n = 8, 9 by the S36 audit's independent class sweep). Proved ladder: (SS) => D_in > 0 => vertex lemma => no majority source => M(T) not transitive => balanced pair; vertex lemma PROVED for in- or out-degree <= 2. OPEN: any of these for in-degree >= 3. (SS) is REFUTED at n = 9 (5 classes, all at an out-degree-1 vertex with k = 3); (SS) at k <= 2 would give in-degree <= 6. Sharp family: transitive + reversed extreme arc, margin 1/(2^(n-2)+1). Concurrent: mac-mini THM-4655 (transitive-plus-one family), HYP-9279 (vertex-wise balance, delta >= 4/11). Note: 05-knowledge/results/strong_balance_pisano_golden_eleven_20261014.md.
+
 ### UPDATE (2026-10-14, opus-2026-10-14-S35; audited, MISTAKE-613): run ladder through 12 steps, K6-P6 2-adic law, tournament 1/3-2/3 conjecture
 - A_12 = 4q(q-1)(33q^5 - 1540q^4 + 28243q^3 - 249550q^2 + 1027794q - 1488872) + 28q(q-1)(17q - 251) a_q (a = eta(2z)^4 eta(4z)^4; out of sample at q = 27). Leading coefficients = THM-438's Catalan law (new cases k = 5, 6). OPEN: A_14 (cheap via the audit's signed subset DP at a few q; more primes needed).
 - K6-P6 (mac-mini HYP-9276 identification, confirmed independently): gcd(q+1, 128) | b(q) for the level-32 weight-3 newform b at every prime q = 3 mod 4 to 524,288, exponent 7 sharp; zeros 127, 8191, 213247. OPEN: prove the congruences |b(q)| = +-(q+1) mod 2^m and gcd(q+1,128) | b(q).

@@ -1,0 +1,120 @@
+n = 2: 1 classes from 2 candidates; sum n!/|Aut| = 2 (2^C(n,2) = 2)  [3.4 s]
+n = 3: 2 classes from 4 candidates; sum n!/|Aut| = 8 (2^C(n,2) = 8)  [3.4 s]
+n = 4: 4 classes from 16 candidates; sum n!/|Aut| = 64 (2^C(n,2) = 64)  [3.4 s]
+n = 5: 12 classes from 64 candidates; sum n!/|Aut| = 1024 (2^C(n,2) = 1024)  [3.4 s]
+n = 6: 56 classes from 384 candidates; sum n!/|Aut| = 32768 (2^C(n,2) = 32768)  [3.4 s]
+n = 7: 456 classes from 3584 candidates; sum n!/|Aut| = 2097152 (2^C(n,2) = 2097152)  [3.4 s]
+n = 8: 6880 classes from 58368 candidates; sum n!/|Aut| = 268435456 (2^C(n,2) = 268435456)  [6.5 s]
+
+=== n = 3 ===  [7.1 s]
+  strong classes: 1; labelled strong: 2; T_n classes among them: 1
+  consistency errors: 0
+  classes with M(T) transitive: 0; with F(T) NOT strongly connected: 0; without an all-forward 3-cycle: 0
+  inverted-arc distribution (classes): {0: 1}; (labelled): {0: 2}
+  inverted-arc degree types (outdeg y, indeg x) -> #labelled arcs: {}
+  squeezed-triangle failures: 0; inverted arcs with p < 1/3 (classes having one): 0
+  min #3-cycles of M(T): 1 (n - 2 = 1)
+  (SS) violations: 0 (T, w) pairs in 0 classes (0 labelled tournaments)
+  vertex lemma failures: 0; vertices with D_in <= 0: 0
+  best 3-cycle certificate: 2/3 attained by 1 classes (1 of them T_n)
+  vertex lemma value: 2/3 attained by 1 classes (1 of them T_n)
+  min D_in: 1/3 attained by 1 classes (1 of them T_n)
+  min D_out: 1/3 attained by 1 classes (1 of them T_n)
+  max Pr[w first]: 1/3 attained by 1 classes (1 of them T_n)
+  delta: 1/3 attained by 1 classes (1 of them T_n)
+  max #inverted arcs: 0; max H: 3
+
+=== n = 4 ===  [0.0 s]
+  strong classes: 1; labelled strong: 24; T_n classes among them: 1
+  consistency errors: 0
+  classes with M(T) transitive: 0; with F(T) NOT strongly connected: 0; without an all-forward 3-cycle: 0
+  inverted-arc distribution (classes): {0: 1}; (labelled): {0: 24}
+  inverted-arc degree types (outdeg y, indeg x) -> #labelled arcs: {}
+  squeezed-triangle failures: 0; inverted arcs with p < 1/3 (classes having one): 0
+  min #3-cycles of M(T): 2 (n - 2 = 2)
+  (SS) violations: 0 (T, w) pairs in 0 classes (0 labelled tournaments)
+  vertex lemma failures: 0; vertices with D_in <= 0: 0
+  best 3-cycle certificate: 3/5 attained by 1 classes (1 of them T_n)
+  vertex lemma value: 3/5 attained by 1 classes (1 of them T_n)
+  min D_in: 1/5 attained by 1 classes (1 of them T_n)
+  min D_out: 1/5 attained by 1 classes (1 of them T_n)
+  max Pr[w first]: 2/5 attained by 1 classes (1 of them T_n)
+  delta: 2/5 attained by 1 classes (1 of them T_n)
+  max #inverted arcs: 0; max H: 5
+
+=== n = 5 ===  [0.0 s]
+  strong classes: 6; labelled strong: 544; T_n classes among them: 1
+  consistency errors: 0
+  classes with M(T) transitive: 0; with F(T) NOT strongly connected: 0; without an all-forward 3-cycle: 0
+  inverted-arc distribution (classes): {0: 6}; (labelled): {0: 544}
+  inverted-arc degree types (outdeg y, indeg x) -> #labelled arcs: {}
+  squeezed-triangle failures: 0; inverted arcs with p < 1/3 (classes having one): 0
+  min #3-cycles of M(T): 3 (n - 2 = 3)
+  (SS) violations: 0 (T, w) pairs in 0 classes (0 labelled tournaments)
+  vertex lemma failures: 0; vertices with D_in <= 0: 0
+  best 3-cycle certificate: 5/9 attained by 1 classes (1 of them T_n)
+  vertex lemma value: 5/9 attained by 1 classes (1 of them T_n)
+  min D_in: 1/9 attained by 1 classes (1 of them T_n)
+  min D_out: 1/9 attained by 1 classes (1 of them T_n)
+  max Pr[w first]: 4/9 attained by 1 classes (1 of them T_n)
+  delta: 4/11 attained by 1 classes (0 of them T_n)
+  max #inverted arcs: 0; max H: 15
+
+=== n = 6 ===  [0.0 s]
+  strong classes: 35; labelled strong: 22320; T_n classes among them: 1
+  consistency errors: 0
+  classes with M(T) transitive: 0; with F(T) NOT strongly connected: 0; without an all-forward 3-cycle: 0
+  inverted-arc distribution (classes): {0: 33, 1: 2}; (labelled): {0: 20880, 1: 1440}
+  inverted-arc degree types (outdeg y, indeg x) -> #labelled arcs: {(1, 1): 1440}
+  squeezed-triangle failures: 0; inverted arcs with p < 1/3 (classes having one): 0
+  min #3-cycles of M(T): 4 (n - 2 = 4)
+  (SS) violations: 0 (T, w) pairs in 0 classes (0 labelled tournaments)
+  vertex lemma failures: 0; vertices with D_in <= 0: 0
+  best 3-cycle certificate: 9/17 attained by 1 classes (1 of them T_n)
+  vertex lemma value: 9/17 attained by 1 classes (1 of them T_n)
+  min D_in: 1/17 attained by 1 classes (1 of them T_n)
+  min D_out: 1/17 attained by 1 classes (1 of them T_n)
+  max Pr[w first]: 8/17 attained by 1 classes (1 of them T_n)
+  delta: 4/11 attained by 2 classes (0 of them T_n)
+  max #inverted arcs: 1; max H: 45
+
+=== n = 7 ===  [0.0 s]
+  strong classes: 353; labelled strong: 1677488; T_n classes among them: 1
+  consistency errors: 0
+  classes with M(T) transitive: 0; with F(T) NOT strongly connected: 0; without an all-forward 3-cycle: 0
+  inverted-arc distribution (classes): {0: 343, 1: 10}; (labelled): {0: 1633808, 1: 43680}
+  inverted-arc degree types (outdeg y, indeg x) -> #labelled arcs: {(1, 1): 23520, (2, 4): 10080, (4, 2): 10080}
+  squeezed-triangle failures: 0; inverted arcs with p < 1/3 (classes having one): 0
+  min #3-cycles of M(T): 5 (n - 2 = 5)
+  (SS) violations: 0 (T, w) pairs in 0 classes (0 labelled tournaments)
+  vertex lemma failures: 0; vertices with D_in <= 0: 0
+  best 3-cycle certificate: 17/33 attained by 1 classes (1 of them T_n)
+  vertex lemma value: 17/33 attained by 1 classes (1 of them T_n)
+  min D_in: 1/33 attained by 1 classes (1 of them T_n)
+  min D_out: 1/33 attained by 1 classes (1 of them T_n)
+  max Pr[w first]: 16/33 attained by 1 classes (1 of them T_n)
+  delta: 4/11 attained by 1 classes (0 of them T_n)
+  max #inverted arcs: 1; max H: 189
+
+=== n = 8 ===  [0.2 s]
+  strong classes: 6008; labelled strong: 236522496; T_n classes among them: 1
+  consistency errors: 0
+  classes with M(T) transitive: 0; with F(T) NOT strongly connected: 0; without an all-forward 3-cycle: 0
+  inverted-arc distribution (classes): {0: 5870, 1: 129, 2: 9}; (labelled): {0: 231227136, 1: 4932480, 2: 362880}
+  inverted-arc degree types (outdeg y, indeg x) -> #labelled arcs: {(1, 1): 1612800, (1, 2): 806400, (2, 1): 806400, (2, 2): 1048320, (2, 5): 188160, (3, 4): 80640, (3, 5): 282240, (4, 3): 80640, (4, 4): 282240, (5, 2): 188160, (5, 3): 282240}
+  squeezed-triangle failures: 0; inverted arcs with p < 1/3 (classes having one): 2
+  min #3-cycles of M(T): 6 (n - 2 = 6)
+  (SS) violations: 0 (T, w) pairs in 0 classes (0 labelled tournaments)
+  vertex lemma failures: 0; vertices with D_in <= 0: 0
+  best 3-cycle certificate: 33/65 attained by 1 classes (1 of them T_n)
+  vertex lemma value: 33/65 attained by 1 classes (1 of them T_n)
+  min D_in: 1/65 attained by 1 classes (1 of them T_n)
+  min D_out: 1/65 attained by 1 classes (1 of them T_n)
+  max Pr[w first]: 32/65 attained by 1 classes (1 of them T_n)
+  delta: 62/157 attained by 1 classes (0 of them T_n)
+  max #inverted arcs: 2; max H: 661
+    2 inverted arcs: adj = [8, 129, 3, 6, 15, 31, 63, 125], H = 77, M 3-cycles = 9
+    2 inverted arcs: adj = [2, 136, 3, 5, 15, 31, 63, 125], H = 61, M 3-cycles = 13
+    2 inverted arcs: adj = [8, 9, 3, 148, 7, 31, 63, 119], H = 63, M 3-cycles = 14
+    2 inverted arcs: adj = [8, 1, 3, 198, 15, 31, 55, 119], H = 63, M 3-cycles = 14
+    2 inverted arcs: adj = [64, 1, 3, 7, 143, 31, 62, 111], H = 77, M 3-cycles = 9

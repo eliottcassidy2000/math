@@ -1,0 +1,8 @@
+c^2 + s^2 = 1: True ; b = a - h: True ; r(c + s) = h: True
+(D.4) inequalities: [True, True, True, True, True]
+squares: 17 ; all inside [0,1]^2: True
+pairs with positive-area intersection: [] ; pairs touching (boundary contact): 36
+total side = 4613317/1153304 = 4 + 101/1153304 ; > 4: True
+(D.5) supporting-contact identities: True True
+Corollary D.2 surplus coefficient: 4 * 101/1153304 = 101/288326
+R vs B column clearance along (c, s): 0 ; D vs R clearance along (-s, c): 0

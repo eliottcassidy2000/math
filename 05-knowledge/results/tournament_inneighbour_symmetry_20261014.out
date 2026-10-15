@@ -1,0 +1,5 @@
+n = 3: (strong T, vertex) pairs 6; violations of Pr[N >= d - k] >= Pr[N <= k] (some k): 0  [5.6 s]
+n = 4: (strong T, vertex) pairs 96; violations of Pr[N >= d - k] >= Pr[N <= k] (some k): 0  [0.1 s]
+n = 5: (strong T, vertex) pairs 2720; violations of Pr[N >= d - k] >= Pr[N <= k] (some k): 0  [0.1 s]
+n = 6: (strong T, vertex) pairs 133920; violations of Pr[N >= d - k] >= Pr[N <= k] (some k): 0  [0.2 s]
+n = 7: (strong T, vertex) pairs 11742416; violations of Pr[N >= d - k] >= Pr[N <= k] (some k): 0  [25.2 s]

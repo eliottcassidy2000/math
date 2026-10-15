@@ -18134,3 +18134,63 @@ the ambient space.
   - A perfect-square or consistency test is not an identification. Say what was actually computed and how exactly (VERIFIED versus FINITE-EXACT).
   - Never call a conjecture a theorem in a title.
   - When two exponential Diophantine equations share a value, check which one an object actually solves.
+
+## MISTAKE-614 (2026-10-14, opus-2026-10-14-S36 THM-4657, HYP-9280, HYP-9281, strong_balance_pisano_golden_eleven_20261014.md and their scripts; found by the session's independent adversarial audit before the close-out push) -- a theorem number reserved for a result a concurrent agent had already reserved and pushed, a literature fact typed as new, an analogy written in bold as an identification, a group order formula wrong in half the cases, and evidence claims with no shipped script
+
+- **Claims (pre-audit draft):**
+  - (E1, E2) THM-4657, "Wall-Sun-Sun primes are the Wieferich primes to the base phi, and golden-invariant circulant tournaments on Z_(p^2) explode exactly there", typed PROVED and new.
+  - (E5) "The eleven-square torus is the icosahedron with a marked vertex", in bold, in the note title and in HYP-9281.
+  - (E4) "|G_n| = n L_n", and "equivalently" between L_n = 2n + 1 and regularity of G_n on pairs.
+  - (E6) "Every sharp constant found is attained by T_n".
+  - (E7) "One inverted arc never suffices to break the conjecture".
+  - (E8) "E[N] >= d/2, and > d/2 by parity".
+  - (E9) F(T) strongly connected for n <= 7, the inverted-arc degree types, "millions of violations", the annealing results and the 2,427 / 16,426 pointwise test, all cited without a shipped script or output.
+  - (E3, E10-E12) Smaller items:
+    - PrimeGrid "past 4*10^16";
+    - Chung-Graham 2020 credited for x^(3/5);
+    - a garbled Roth-Vaughan bound and "W. Wang";
+    - the inert Pisano law and the 6n equality stated without their exceptions (p = 2; k >= 1);
+    - the Paley/Lucas match called "exact" beyond the known range of A038375.
+  - (I1-I15) Imprecisions:
+    - "the end is always a valid slot" in the first-vertex proof;
+    - "exact factorisation";
+    - "the three golden rectangles" (there are 15);
+    - Galois' statement ("acts on p points");
+    - an interpretation under a PROVED header;
+    - predictions confusing L_n with |R_n|;
+    - missing credits (Gerbicz; Freyd-Brown; erdosproblems.com; the paper's Lemma 5.1, Table 2, Theorem 6.4; the LEM literature; mac-mini's THM-4655 / HYP-9279);
+    - "golden-invariant" undefined;
+    - s(11) status;
+    - ranges and (SS) status not updated to the audit's n = 9.
+- **Why it was wrong:**
+  - (E1) The session reserved THM-4657 without reading the titles of the newest reservations. mac-mini-2026-10-14-tourn had reserved THM-4656 ("Wall-Sun-Sun golden orbit explosion") under the same owner brief at 2b6d2c3abf, which is an ancestor of the S36 reservation commit d00166b48d. Its full text (448c0d367e) and a coordination message (0336f594c7) followed while S36 was still drafting.
+  - (E2) No literature search on "Fibonacci-Wieferich" before typing Part 1 as new (Bragman-Rowland 2022 Thm 10; McIntosh-Roettger 2007). Same lesson as MISTAKE-609 and MISTAKE-613.
+  - (E5) A matching C_5-orbit pattern ({0}, H, -H) was promoted to an identification of structures. The torus cell adjacency is the 6-regular circulant C_11(1,3,4), the paper's "mark" is a boundary point of the torus, and A_5 does not act on the cells.
+  - (E4) The norm formula |R_n| = |L_n - 1 - (-1)^n| was written down correctly and then |R_n| was replaced by L_n, which is wrong for even n.
+  - (E6-E8) Wording outran what the proofs and data show (the MISTAKE-611 pattern). The delta minima 4/11 and 62/157 are not T_n. The one-arc argument gives a cycle in F, not F strong. Parity excludes p = 1/2, not E[N] = d/2.
+  - (E9) Checks run in scratch files were reported as FINITE-EXACT without being shipped.
+- **Correct framing:**
+  - THM-4657 is CEDED to THM-4656 and kept only as an independent confirmation. Part 1 is CITED.
+  - The icosahedral picture is an ANALOGY at the level of the orbit pattern.
+  - |G_n| = n|R_n| for n >= 3, and regularity needs |R_n| = 2n + 1 (the paper's Theorem 6.4).
+  - The T_n uniqueness claims are restricted to the 3-cycle certificate, the vertex-lemma value, D_in, D_out and the first-vertex maximum, FINITE-EXACT for n <= 9.
+  - The one-arc case is the weak form.
+  - D_in > 0 is FINITE-EXACT (n <= 9), not a parity consequence.
+  - The checks are shipped: tournament_inverted_arcs_structure_20261014.py, tournament_pointwise_pairing_test_20261014.py and the annealing output. They reproduce the audit.
+- **What survives:**
+  - the reductions of the tournament 1/3-2/3 for strong tournaments to HYP-9280, with the ladder down to "no majority source";
+  - Pr[w first] < 1/2;
+  - the vertex lemma for in- and out-degree <= 2;
+  - HYP-9280, the vertex lemma, D_in > 0 and the T_n extremes for every strong tournament with n <= 9 (n = 8, 9 by the audit's independent class sweep);
+  - (SS) true for n <= 8 and refuted at n = 9 (exactly 5 classes);
+  - the independent confirmation of THM-4656 at 40 split (p, phi) pairs;
+  - the golden-eleven identities (credited);
+  - the PSL(2,11) structure (classical);
+  - the exact Erdos 106 check;
+  - the square-sum data.
+- **Lesson:**
+  - Re-fetch origin and re-list the THM/HYP namespace immediately before reserving a number, especially when a concurrent agent has the same owner brief.
+  - Read incoming coordination messages before writing canon.
+  - Search the literature ("Fibonacci-Wieferich") before typing a classical-looking equivalence as new.
+  - A shared orbit pattern is an analogy, not an identification. Say exactly what matches.
+  - Every FINITE-EXACT sentence needs a shipped script and output in the commit.

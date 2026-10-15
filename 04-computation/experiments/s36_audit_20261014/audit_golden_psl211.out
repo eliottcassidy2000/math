@@ -1,0 +1,32 @@
+(1) N(phi^n - 1) = (-1)^n + 1 - L_n for 1 <= n < 300: True
+    |N(phi^n - 1)|, n = 1..12: [1, 1, 4, 5, 11, 16, 29, 45, 76, 121, 199, 320]
+    n < 300 with L_n = 2n + 1: [5]
+    n < 300 with C(L_n, 2) = F_2n: [2, 4, 5]
+    n < 300 with L_n = 2 F_n + 1: [2, 4, 5] ; with F_(n-3) = 1 (n >= 3): [4, 5]
+    n < 300 with F_n = n: [0, 1, 5]
+    triangular Fibonacci numbers F_n, n < 600 (float sieve then exact): [0, 1, 3, 21, 55]
+
+(2) return quotients and the pair action of G_n (paper Table 4: (|R_n|, |G_n|) = (4, 12), (5, 20), (11, 55) for n = 3, 4, 5)
+    n = 3: L_n = 4, |R_n| = 4 (additive type Z/2 x Z/2), ord(phi) = 3, |G_n| = 12 (n|R_n| = 12, n L_n = 12), unordered pairs = 6, pair orbits = 1, regular = False
+    n = 4: L_n = 7, |R_n| = 5 (additive type Z/1 x Z/5), ord(phi) = 4, |G_n| = 20 (n|R_n| = 20, n L_n = 28), unordered pairs = 10, pair orbits = 1, regular = False
+    n = 5: L_n = 11, |R_n| = 11 (additive type Z/1 x Z/11), ord(phi) = 5, |G_n| = 55 (n|R_n| = 55, n L_n = 55), unordered pairs = 55, pair orbits = 1, regular = True
+    n = 6: L_n = 18, |R_n| = 16 (additive type Z/4 x Z/4), ord(phi) = 6, |G_n| = 96 (n|R_n| = 96, n L_n = 108), unordered pairs = 120, pair orbits = 2, regular = False
+    n = 7: L_n = 29, |R_n| = 29 (additive type Z/1 x Z/29), ord(phi) = 7, |G_n| = 203 (n|R_n| = 203, n L_n = 203), unordered pairs = 406, pair orbits = 2, regular = False
+    n = 8: L_n = 47, |R_n| = 45 (additive type Z/3 x Z/15), ord(phi) = 8, |G_n| = 360 (n|R_n| = 360, n L_n = 376), unordered pairs = 990, pair orbits = 4, regular = False
+    n = 9: L_n = 76, |R_n| = 76 (additive type Z/2 x Z/38), ord(phi) = 9, |G_n| = 684 (n|R_n| = 684, n L_n = 684), unordered pairs = 2850, pair orbits = 5, regular = False
+    n = 10: L_n = 123, |R_n| = 121 (additive type Z/11 x Z/11), ord(phi) = 10, |G_n| = 1210 (n|R_n| = 1210, n L_n = 1230), unordered pairs = 7260, pair orbits = 7, regular = False
+
+(3) |PSL(2,11)| = 660
+    Borel = Stab(inf): order 55 ; equals {x -> s x + t : s in QR}: True
+    P_11: #arcs = 55 ; Borel orbit of arc (0,1) = 55 ; orbit == all arcs: True ; arc stabiliser trivial: True
+    subgroups of order 60 containing x -> 4x: 2
+    A5 #0: element orders {1: 1, 2: 15, 3: 20, 5: 24}; transitive on 12 points: True; |Stab(inf)| = 5, Stab(inf) = <x->4x>: True; |A cap B| = 5; |AB| = 660 (= G: True)
+      off-diagonal orbital sizes: [12, 60, 60]
+      valency-5 orbital: symmetric True, icosahedron True, antipode of inf [0], N(inf) = [2, 6, 7, 8, 10], N(0) = [1, 3, 4, 5, 9], N(inf) is QR: False, NQR: True
+      valency-5 orbital: symmetric True, icosahedron True, antipode of inf [0], N(inf) = [1, 3, 4, 5, 9], N(0) = [2, 6, 7, 8, 10], N(inf) is QR: True, NQR: False
+    A5 #1: element orders {1: 1, 2: 15, 3: 20, 5: 24}; transitive on 12 points: True; |Stab(inf)| = 5, Stab(inf) = <x->4x>: True; |A cap B| = 5; |AB| = 660 (= G: True)
+      off-diagonal orbital sizes: [12, 60, 60]
+      valency-5 orbital: symmetric True, icosahedron True, antipode of inf [0], N(inf) = [2, 6, 7, 8, 10], N(0) = [1, 3, 4, 5, 9], N(inf) is QR: False, NQR: True
+      valency-5 orbital: symmetric True, icosahedron True, antipode of inf [0], N(inf) = [1, 3, 4, 5, 9], N(0) = [2, 6, 7, 8, 10], N(inf) is QR: True, NQR: False
+    the two A5 subgroups are conjugate in PSL(2,11): False
+    torus cell-adjacency circulant C_11(1,3,4): degrees [6] ; icosahedron minus a vertex degrees [4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5]

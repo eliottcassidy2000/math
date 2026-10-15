@@ -1,0 +1,6 @@
+number of squares: 17
+all side lengths positive: True
+all squares inside [0,1]^2 (exact): True
+pairs with overlapping interiors (separating-axis test, exact): []
+total side length = 4613317/1153304 = 4 + 101/1153304  ; exceeds 4: True
+R vertices: [('1022047/2306608', '1289745/2306608'), ('703573/1153304', '1354377/2306608'), ('671257/1153304', '434869/576652'), ('957415/2306608', '418711/576652')]

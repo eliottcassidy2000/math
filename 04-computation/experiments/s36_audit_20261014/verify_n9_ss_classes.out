@@ -1,0 +1,7 @@
+class 0: H = 81, vertex 1 (in-degree 7): N-distribution [1, 6, 15, 20, 16, 9, 4, 10], SS fails at k = [3], E[N] = 299/81 > d/2: True, best in-neighbour p = 49/81
+class 1: H = 183, vertex 1 (in-degree 7): N-distribution [3, 15, 33, 42, 36, 24, 12, 18], SS fails at k = [3], E[N] = 223/61 > d/2: True, best in-neighbour p = 37/61
+class 2: H = 85, vertex 1 (in-degree 7): N-distribution [1, 6, 15, 21, 19, 12, 5, 6], SS fails at k = [3], E[N] = 307/85 > d/2: True, best in-neighbour p = 53/85
+class 3: H = 115, vertex 1 (in-degree 7): N-distribution [1, 7, 20, 30, 26, 14, 5, 12], SS fails at k = [3], E[N] = 85/23 > d/2: True, best in-neighbour p = 67/115
+class 4: H = 117, vertex 1 (in-degree 7): N-distribution [1, 7, 20, 31, 29, 17, 6, 6], SS fails at k = [3], E[N] = 419/117 > d/2: True, best in-neighbour p = 23/39
+session SS-1 is isomorphic to audit class [2]
+session SS-2 is isomorphic to audit class [4]

@@ -1,0 +1,34 @@
+n = 2: 1 classes from 2 candidates; sum n!/|Aut| = 2 (2^C(n,2) = 2)  [7.9 s]
+n = 3: 2 classes from 4 candidates; sum n!/|Aut| = 8 (2^C(n,2) = 8)  [7.9 s]
+n = 4: 4 classes from 16 candidates; sum n!/|Aut| = 64 (2^C(n,2) = 64)  [7.9 s]
+n = 5: 12 classes from 64 candidates; sum n!/|Aut| = 1024 (2^C(n,2) = 1024)  [7.9 s]
+n = 6: 56 classes from 384 candidates; sum n!/|Aut| = 32768 (2^C(n,2) = 32768)  [7.9 s]
+n = 7: 456 classes from 3584 candidates; sum n!/|Aut| = 2097152 (2^C(n,2) = 2097152)  [7.9 s]
+n = 8: 6880 classes from 58368 candidates; sum n!/|Aut| = 268435456 (2^C(n,2) = 268435456)  [8.2 s]
+n = 9: 191536 classes from 1761280 candidates; sum n!/|Aut| = 68719476736 (2^C(n,2) = 68719476736)  [21.7 s]
+
+=== n = 9 (all classes) ===  [19.4 s]
+  strong classes: 178133; labelled strong: 64026088576; T_n classes: 1; consistency errors: 0
+  classes with M(T) transitive: 0; F(T) NOT strongly connected: 0; no all-forward 3-cycle: 0
+  inverted-arc distribution (classes): {0: 176028, 1: 1997, 2: 104, 3: 4}; (labelled): {0: 63298691584, 1: 693286272, 2: 33626880, 3: 483840}
+  min #3-cycles of M(T): 7 (n - 2 = 7)
+  (SS) violations: 5 (T, w) pairs in 5 classes (1572480 labelled)
+  vertex lemma failures: 0; vertices with D_in <= 0: 0
+  classes with an inverted arc of p < 1/3: 14
+  best 3-cycle certificate: 65/129 attained by 1 classes (1 of them T_n)
+  vertex lemma value: 65/129 attained by 1 classes (1 of them T_n)
+  min D_in: 1/129 attained by 1 classes (1 of them T_n)
+  min D_out: 1/129 attained by 1 classes (1 of them T_n)
+  max Pr[w first]: 64/129 attained by 1 classes (1 of them T_n)
+  delta: 62/157 attained by 2 classes (0 of them T_n)
+  max #inverted arcs: 3; max H: 3357
+    SS violator: adj = [2, 16, 3, 7, 269, 31, 63, 127, 239], H = 81, #SS-violating vertices = 1
+    SS violator: adj = [2, 256, 3, 7, 271, 159, 63, 95, 237], H = 183, #SS-violating vertices = 1
+    SS violator: adj = [2, 32, 3, 7, 15, 285, 63, 127, 223], H = 85, #SS-violating vertices = 1
+    SS violator: adj = [2, 32, 3, 7, 47, 397, 63, 95, 223], H = 115, #SS-violating vertices = 1
+    SS violator: adj = [2, 128, 3, 7, 15, 159, 63, 349, 127], H = 117, #SS-violating vertices = 1
+    3 inverted arcs: adj = [12, 9, 10, 272, 7, 31, 63, 127, 247], H = 183, M 3-cycles = 19
+    3 inverted arcs: adj = [20, 17, 18, 7, 296, 15, 63, 127, 239], H = 189, M 3-cycles = 21
+    3 inverted arcs: adj = [2, 256, 3, 7, 271, 159, 63, 95, 237], H = 183, M 3-cycles = 19
+    3 inverted arcs: adj = [2, 32, 3, 39, 47, 453, 287, 95, 159], H = 189, M 3-cycles = 21
+total 45.2 s

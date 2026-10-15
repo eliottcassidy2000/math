@@ -1,0 +1,6 @@
+n = 3: strong labelled 2; M(T) transitive: 0 (witness codes []); no majority-forward 3-cycle of T: 0; #inverted arcs distribution {0: 2}  [3.4 s]
+n = 4: strong labelled 24; M(T) transitive: 0 (witness codes []); no majority-forward 3-cycle of T: 0; #inverted arcs distribution {0: 24}  [0.0 s]
+n = 5: strong labelled 544; M(T) transitive: 0 (witness codes []); no majority-forward 3-cycle of T: 0; #inverted arcs distribution {0: 544}  [0.0 s]
+n = 6: strong labelled 22320; M(T) transitive: 0 (witness codes []); no majority-forward 3-cycle of T: 0; #inverted arcs distribution {0: 20880, 1: 1440}  [0.1 s]
+n = 7: strong labelled 1677488; M(T) transitive: 0 (witness codes []); no majority-forward 3-cycle of T: 0; #inverted arcs distribution {0: 1633808, 1: 43680}  [11.0 s]
+n = 8: strong labelled 236522496; M(T) transitive: 0 (witness codes []); no majority-forward 3-cycle of T: 0; #inverted arcs distribution {0: 231227136, 1: 4932480, 2: 362880}  [3270.7 s]

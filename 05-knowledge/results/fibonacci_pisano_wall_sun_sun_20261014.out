@@ -1,0 +1,7 @@
+(1) n <= 2000: max pi(n)/n = 6.0 (first at n = 10); n with pi(n) = 6n: [10, 50, 250, 1250]
+    examples pi(n): {10: 60, 11: 10, 12: 24, 19: 18, 20: 60, 50: 300, 55: 20, 89: 44, 121: 110, 125: 500}
+    split p = +-1 mod 5: pi(p) | p - 1 at all p <= 2000: True;  inert p = +-2 mod 5: pi(p) | 2(p+1), not | p+1: True;  pi(5) = 20
+(2) Wall-Sun-Sun primes (p^2 | F_(p - (p/5))) among the 148930 primes 7 <= p <= 2000000: []
+(3) split primes 11 <= p <= 200: orbit-count formula E = (p-1)/d' (no Wall-Sun-Sun prime) holds for both roots at all 40 (p, phi) pairs; failures: []
+    sample (p, phi mod p^2, ord_p phi, odd part, E): [(11, 37, 5, 5, 2), (11, 85, 10, 5, 2), (19, 43, 9, 9, 2), (19, 319, 18, 9, 2), (29, 615, 14, 7, 4), (29, 227, 7, 7, 4)]
+(4) primes p <= 2000, p = 3 mod 4, p = +-1 mod 5, whose square golden root phi generates the squares (phi-invariant circulants on Z_p = Paley and reverse): [11, 19, 31, 59, 71, 79, 131, 179, 191, 239, 251, 271, 311, 359, 379, 419, 431, 439, 479, 491, 499, 571, 599, 631, 659, 719, 739, 751, 839, 971, 1019, 1039, 1051, 1091, 1171, 1259, 1319, 1399, 1439, 1451] ... (52 primes)
