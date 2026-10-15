@@ -1,0 +1,12 @@
+16 eta quotients of level 32, weight 3, character chi_-4; span dimension 4
+  basis element {1: -4, 2: 10, 4: -2, 8: 2}  q-expansion [0, 1, 4, 4, 0, 2, 0, -8, 0, -7, -24, -4]
+  basis element {1: -2, 2: 5, 4: -2, 8: 7, 16: -2}  q-expansion [0, 1, 2, 0, 0, 2, 0, 0, 0, -7, -12, 0]
+  basis element {2: -2, 4: 7, 8: -2, 16: 5, 32: -2}  q-expansion [0, 1, 0, 2, 0, -2, 0, -4, 0, 1, 0, -2]
+  basis element {2: -2, 4: 7, 16: -1, 32: 2}  q-expansion [0, 0, 0, 1, 0, 2, 0, -2, 0, -4, 0, -1]
+T_3 characteristic polynomial: lambda**2*(lambda**2 + 16)
+newform f = q + ... coefficients a_1..a_20: [1, 0, 4*I, 0, 2, 0, -8*I, 0, -7, 0, -4*I, 0, -14, 0, 8*I, 0, 18, 0, -12*I, 0]
+sanity a_9 = a_3^2 + 9: True ;  a_15 = a_3 a_5: True
+Y_q = |a_q(f)|^2 - q^2 + 2 chi_-4(q) q at 124 primes 3..691; failures: []
+a_q real for q = 1 mod 4 and purely imaginary for q = 3 mod 4: True
+primes q < 700 with a_q(f) = 0: [127]
+primes with |a_q| = q + 1 (Y_q = 1): [3, 7, 31, 199, 223]

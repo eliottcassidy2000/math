@@ -1,0 +1,125 @@
+q =    3  q mod 16 =  3  Y_q =            1  v2(Y_q - 1) = 99  Y/q^2 = +0.1111  (matches brute force)
+q =    5  q mod 16 =  5  Y_q =          -11  v2(Y_q - 1) =  2  Y/q^2 = -0.4400  (matches brute force)
+q =    7  q mod 16 =  7  Y_q =            1  v2(Y_q - 1) = 99  Y/q^2 = +0.0204  (matches brute force)
+q =   11  q mod 16 = 11  Y_q =         -127  v2(Y_q - 1) =  7  Y/q^2 = -1.0496  (matches brute force)
+q =   13  q mod 16 = 13  Y_q =           53  v2(Y_q - 1) =  2  Y/q^2 = +0.3136  (matches brute force)
+q =   17  q mod 16 =  1  Y_q =           69  v2(Y_q - 1) =  2  Y/q^2 = +0.2388  (matches brute force)
+q =   19  q mod 16 =  3  Y_q =         -255  v2(Y_q - 1) =  8  Y/q^2 = -0.7064  (matches brute force)
+q =   23  q mod 16 =  7  Y_q =         1025  v2(Y_q - 1) = 10  Y/q^2 = +1.9376  (matches brute force)
+q =   29  q mod 16 = 13  Y_q =         -587  v2(Y_q - 1) =  2  Y/q^2 = -0.6980  (matches brute force)
+q =   31  q mod 16 = 15  Y_q =            1  v2(Y_q - 1) = 99  Y/q^2 = +0.0010  (matches brute force)
+q =   37  q mod 16 =  5  Y_q =         -395  v2(Y_q - 1) =  2  Y/q^2 = -0.2885  (matches brute force)
+q =   41  q mod 16 =  9  Y_q =        -1403  v2(Y_q - 1) =  2  Y/q^2 = -0.8346  (matches brute force)
+q =   43  q mod 16 = 11  Y_q =        -1151  v2(Y_q - 1) =  7  Y/q^2 = -0.6225  (matches brute force)
+q =   47  q mod 16 = 15  Y_q =        -2047  v2(Y_q - 1) = 11  Y/q^2 = -0.9267  (matches brute force)
+q =   53  q mod 16 =  5  Y_q =         1653  v2(Y_q - 1) =  2  Y/q^2 = +0.5885  (matches brute force)
+q =   59  q mod 16 = 11  Y_q =         -895  v2(Y_q - 1) =  7  Y/q^2 = -0.2571  (matches brute force)
+q =   61  q mod 16 = 13  Y_q =         3125  v2(Y_q - 1) =  2  Y/q^2 = +0.8398  (matches brute force)
+q =   67  q mod 16 =  3  Y_q =        -4607  v2(Y_q - 1) =  9  Y/q^2 = -1.0263  (matches brute force)
+q =   71  q mod 16 =  7  Y_q =        -2047  v2(Y_q - 1) = 11  Y/q^2 = -0.4061  (matches brute force)
+q =   73  q mod 16 =  9  Y_q =         -827  v2(Y_q - 1) =  2  Y/q^2 = -0.1552  (matches brute force)
+q =   79  q mod 16 = 15  Y_q =        -6143  v2(Y_q - 1) = 11  Y/q^2 = -0.9843  (matches brute force)
+q =   83  q mod 16 =  3  Y_q =        12545  v2(Y_q - 1) =  8  Y/q^2 = +1.8210  (matches brute force)
+q =   89  q mod 16 =  9  Y_q =        -6843  v2(Y_q - 1) =  2  Y/q^2 = -0.8639  (matches brute force)
+q =   97  q mod 16 =  1  Y_q =        -9019  v2(Y_q - 1) =  2  Y/q^2 = -0.9586  (matches brute force)
+q =  101  q mod 16 =  5  Y_q =        -1163  v2(Y_q - 1) =  2  Y/q^2 = -0.1140  (matches brute force)
+q =  103  q mod 16 =  7  Y_q =        12289  v2(Y_q - 1) = 12  Y/q^2 = +1.1584  (matches brute force)
+q =  107  q mod 16 = 11  Y_q =        12673  v2(Y_q - 1) =  7  Y/q^2 = +1.1069  (matches brute force)
+q =  109  q mod 16 = 13  Y_q =       -11339  v2(Y_q - 1) =  2  Y/q^2 = -0.9544  (matches brute force)
+q =  113  q mod 16 =  1  Y_q =        -2939  v2(Y_q - 1) =  2  Y/q^2 = -0.2302
+q =  127  q mod 16 = 15  Y_q =       -16383  v2(Y_q - 1) = 14  Y/q^2 = -1.0157  (matches brute force)
+q =  131  q mod 16 =  3  Y_q =       -12799  v2(Y_q - 1) =  9  Y/q^2 = -0.7458  (matches brute force)
+q =  137  q mod 16 =  9  Y_q =        23941  v2(Y_q - 1) =  2  Y/q^2 = +1.2756
+q =  139  q mod 16 = 11  Y_q =        18817  v2(Y_q - 1) =  7  Y/q^2 = +0.9739  (matches brute force)
+q =  149  q mod 16 =  5  Y_q =        29173  v2(Y_q - 1) =  2  Y/q^2 = +1.3140
+q =  151  q mod 16 =  7  Y_q =       -15359  v2(Y_q - 1) = 10  Y/q^2 = -0.6736  (matches brute force)
+q =  157  q mod 16 = 13  Y_q =       -22219  v2(Y_q - 1) =  2  Y/q^2 = -0.9014
+q =  163  q mod 16 =  3  Y_q =        -2559  v2(Y_q - 1) =  9  Y/q^2 = -0.0963
+q =  167  q mod 16 =  7  Y_q =       -26623  v2(Y_q - 1) = 11  Y/q^2 = -0.9546
+q =  173  q mod 16 = 13  Y_q =        -9419  v2(Y_q - 1) =  2  Y/q^2 = -0.3147
+q =  179  q mod 16 =  3  Y_q =        43777  v2(Y_q - 1) =  8  Y/q^2 = +1.3663
+q =  181  q mod 16 =  5  Y_q =       -31499  v2(Y_q - 1) =  2  Y/q^2 = -0.9615
+q =  191  q mod 16 = 15  Y_q =        65537  v2(Y_q - 1) = 16  Y/q^2 = +1.7965  (matches brute force)
+q =  193  q mod 16 =  1  Y_q =         5573  v2(Y_q - 1) =  2  Y/q^2 = +0.1496
+q =  197  q mod 16 =  5  Y_q =        65269  v2(Y_q - 1) =  2  Y/q^2 = +1.6818
+q =  199  q mod 16 =  7  Y_q =            1  v2(Y_q - 1) = 99  Y/q^2 = +0.0000
+q =  211  q mod 16 =  3  Y_q =       -25343  v2(Y_q - 1) =  8  Y/q^2 = -0.5692
+q =  223  q mod 16 = 15  Y_q =            1  v2(Y_q - 1) = 99  Y/q^2 = +0.0000
+q =  227  q mod 16 =  3  Y_q =       -25087  v2(Y_q - 1) =  9  Y/q^2 = -0.4869
+q =  229  q mod 16 =  5  Y_q =       -51979  v2(Y_q - 1) =  2  Y/q^2 = -0.9912
+q =  233  q mod 16 =  9  Y_q =       -53819  v2(Y_q - 1) =  2  Y/q^2 = -0.9913
+q =  239  q mod 16 = 15  Y_q =       -14335  v2(Y_q - 1) = 11  Y/q^2 = -0.2510
+q =  241  q mod 16 =  1  Y_q =       -55483  v2(Y_q - 1) =  2  Y/q^2 = -0.9553
+q =  251  q mod 16 = 11  Y_q =       -63359  v2(Y_q - 1) =  7  Y/q^2 = -1.0057
+q =  257  q mod 16 =  1  Y_q =       -65531  v2(Y_q - 1) =  2  Y/q^2 = -0.9922
+q =  263  q mod 16 =  7  Y_q =       -51199  v2(Y_q - 1) = 11  Y/q^2 = -0.7402
+q =  269  q mod 16 = 13  Y_q =        89781  v2(Y_q - 1) =  2  Y/q^2 = +1.2407
+q =  271  q mod 16 = 15  Y_q =       112641  v2(Y_q - 1) = 11  Y/q^2 = +1.5338
+q =  277  q mod 16 =  5  Y_q =        69749  v2(Y_q - 1) =  2  Y/q^2 = +0.9090
+q =  281  q mod 16 =  9  Y_q =        44101  v2(Y_q - 1) =  2  Y/q^2 = +0.5585
+q =  283  q mod 16 = 11  Y_q =        34945  v2(Y_q - 1) =  7  Y/q^2 = +0.4363
+q =  293  q mod 16 =  5  Y_q =       -85259  v2(Y_q - 1) =  2  Y/q^2 = -0.9931
+q =  307  q mod 16 =  3  Y_q =       -87807  v2(Y_q - 1) =  8  Y/q^2 = -0.9316
+q =  311  q mod 16 =  7  Y_q =       -35839  v2(Y_q - 1) = 10  Y/q^2 = -0.3705
+q =  313  q mod 16 =  9  Y_q =       183557  v2(Y_q - 1) =  2  Y/q^2 = +1.8736
+q =  317  q mod 16 = 13  Y_q =       248245  v2(Y_q - 1) =  2  Y/q^2 = +2.4704
+q =  331  q mod 16 = 11  Y_q =       216961  v2(Y_q - 1) =  7  Y/q^2 = +1.9803
+q =  337  q mod 16 =  1  Y_q =      -103291  v2(Y_q - 1) =  2  Y/q^2 = -0.9095
+q =  347  q mod 16 = 11  Y_q =       -91519  v2(Y_q - 1) =  7  Y/q^2 = -0.7601
+q =  349  q mod 16 = 13  Y_q =        67253  v2(Y_q - 1) =  2  Y/q^2 = +0.5522
+q =  353  q mod 16 =  1  Y_q =      -107003  v2(Y_q - 1) =  2  Y/q^2 = -0.8587
+q =  359  q mod 16 =  7  Y_q =        36865  v2(Y_q - 1) = 12  Y/q^2 = +0.2860
+q =  367  q mod 16 = 15  Y_q =       -43007  v2(Y_q - 1) = 11  Y/q^2 = -0.3193
+q =  373  q mod 16 =  5  Y_q =       -73867  v2(Y_q - 1) =  2  Y/q^2 = -0.5309
+q =  379  q mod 16 = 11  Y_q =       -72575  v2(Y_q - 1) =  7  Y/q^2 = -0.5053
+q =  383  q mod 16 = 15  Y_q =      -131071  v2(Y_q - 1) = 17  Y/q^2 = -0.8935
+q =  389  q mod 16 =  5  Y_q =      -141707  v2(Y_q - 1) =  2  Y/q^2 = -0.9365
+q =  397  q mod 16 = 13  Y_q =       154549  v2(Y_q - 1) =  2  Y/q^2 = +0.9806
+q =  401  q mod 16 =  1  Y_q =      -147899  v2(Y_q - 1) =  2  Y/q^2 = -0.9198
+q =  409  q mod 16 =  9  Y_q =        18437  v2(Y_q - 1) =  2  Y/q^2 = +0.1102
+q =  419  q mod 16 =  3  Y_q =        50177  v2(Y_q - 1) = 10  Y/q^2 = +0.2858
+q =  421  q mod 16 =  5  Y_q =       -72715  v2(Y_q - 1) =  2  Y/q^2 = -0.4103
+q =  431  q mod 16 = 15  Y_q =        92161  v2(Y_q - 1) = 11  Y/q^2 = +0.4961
+q =  433  q mod 16 =  1  Y_q =      -142523  v2(Y_q - 1) =  2  Y/q^2 = -0.7602
+q =  439  q mod 16 =  7  Y_q =       -52223  v2(Y_q - 1) = 10  Y/q^2 = -0.2710
+q =  443  q mod 16 = 11  Y_q =      -125311  v2(Y_q - 1) =  7  Y/q^2 = -0.6385
+q =  449  q mod 16 =  1  Y_q =        12741  v2(Y_q - 1) =  2  Y/q^2 = +0.0632
+q =  457  q mod 16 =  9  Y_q =       140165  v2(Y_q - 1) =  2  Y/q^2 = +0.6711
+q =  461  q mod 16 = 13  Y_q =       221365  v2(Y_q - 1) =  2  Y/q^2 = +1.0416
+q =  463  q mod 16 = 15  Y_q =      -202751  v2(Y_q - 1) = 11  Y/q^2 = -0.9458
+q =  467  q mod 16 =  3  Y_q =      -186623  v2(Y_q - 1) =  8  Y/q^2 = -0.8557
+q =  479  q mod 16 = 15  Y_q =      -229375  v2(Y_q - 1) = 15  Y/q^2 = -0.9997
+q =  487  q mod 16 =  7  Y_q =      -108543  v2(Y_q - 1) = 11  Y/q^2 = -0.4577
+q =  491  q mod 16 = 11  Y_q =      -156799  v2(Y_q - 1) =  7  Y/q^2 = -0.6504
+q =  499  q mod 16 =  3  Y_q =       633601  v2(Y_q - 1) =  8  Y/q^2 = +2.5446
+q =  503  q mod 16 =  7  Y_q =      -250879  v2(Y_q - 1) = 10  Y/q^2 = -0.9916
+q =  509  q mod 16 = 13  Y_q =      -245963  v2(Y_q - 1) =  2  Y/q^2 = -0.9494
+q =  521  q mod 16 =  9  Y_q =      -238715  v2(Y_q - 1) =  2  Y/q^2 = -0.8794
+q =  523  q mod 16 = 11  Y_q =      -130175  v2(Y_q - 1) =  7  Y/q^2 = -0.4759
+q =  541  q mod 16 = 13  Y_q =      -279499  v2(Y_q - 1) =  2  Y/q^2 = -0.9550
+q =  547  q mod 16 =  3  Y_q =        64513  v2(Y_q - 1) = 10  Y/q^2 = +0.2156
+q =  557  q mod 16 = 13  Y_q =       166965  v2(Y_q - 1) =  2  Y/q^2 = +0.5382
+q =  563  q mod 16 =  3  Y_q =      -202495  v2(Y_q - 1) =  8  Y/q^2 = -0.6388
+q =  569  q mod 16 =  9  Y_q =       -41723  v2(Y_q - 1) =  2  Y/q^2 = -0.1289
+q =  571  q mod 16 = 11  Y_q =      -313727  v2(Y_q - 1) =  7  Y/q^2 = -0.9622
+q =  577  q mod 16 =  1  Y_q =      -327419  v2(Y_q - 1) =  2  Y/q^2 = -0.9834
+q =  587  q mod 16 = 11  Y_q =       144257  v2(Y_q - 1) =  7  Y/q^2 = +0.4187
+q =  593  q mod 16 =  1  Y_q =      -301179  v2(Y_q - 1) =  2  Y/q^2 = -0.8565
+q =  599  q mod 16 =  7  Y_q =       400385  v2(Y_q - 1) = 10  Y/q^2 = +1.1159
+q =  601  q mod 16 =  9  Y_q =       628037  v2(Y_q - 1) =  2  Y/q^2 = +1.7387
+q =  607  q mod 16 = 15  Y_q =       270337  v2(Y_q - 1) = 13  Y/q^2 = +0.7337
+q =  613  q mod 16 =  5  Y_q =      -273419  v2(Y_q - 1) =  2  Y/q^2 = -0.7276
+q =  617  q mod 16 =  9  Y_q =      -275771  v2(Y_q - 1) =  2  Y/q^2 = -0.7244
+q =  619  q mod 16 = 11  Y_q =      -303743  v2(Y_q - 1) =  7  Y/q^2 = -0.7927
+q =  631  q mod 16 =  7  Y_q =       306177  v2(Y_q - 1) = 10  Y/q^2 = +0.7690
+q =  641  q mod 16 =  1  Y_q =       105925  v2(Y_q - 1) =  2  Y/q^2 = +0.2578
+q =  643  q mod 16 =  3  Y_q =      -376319  v2(Y_q - 1) =  9  Y/q^2 = -0.9102
+q =  647  q mod 16 =  7  Y_q =       645121  v2(Y_q - 1) = 11  Y/q^2 = +1.5411
+q =  653  q mod 16 = 13  Y_q =      -144203  v2(Y_q - 1) =  2  Y/q^2 = -0.3382
+q =  659  q mod 16 =  3  Y_q =      -340735  v2(Y_q - 1) =  8  Y/q^2 = -0.7846
+q =  661  q mod 16 =  5  Y_q =      -351499  v2(Y_q - 1) =  2  Y/q^2 = -0.8045
+q =  673  q mod 16 =  1  Y_q =      -451387  v2(Y_q - 1) =  2  Y/q^2 = -0.9966
+q =  677  q mod 16 =  5  Y_q =        -8075  v2(Y_q - 1) =  2  Y/q^2 = -0.0176
+q =  683  q mod 16 = 11  Y_q =      -415871  v2(Y_q - 1) =  7  Y/q^2 = -0.8915
+q =  691  q mod 16 =  3  Y_q =      1211137  v2(Y_q - 1) =  8  Y/q^2 = +2.5365
+[69.5 s]

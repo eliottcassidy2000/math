@@ -1,0 +1,15 @@
+weight 4, level 8: rational eigenform a_3 = -4; a_p (p = 3,5,7,11,13) = [-4, -2, 24, -44, 22]
+weight 6, level 4: rational eigenform a_3 = -12; a_p (p = 3,5,7,11,13) = [-12, 54, -88, 540, -418]
+weight 6, level 8: rational eigenform a_3 = 20; a_p (p = 3,5,7,11,13) = [20, -74, -24, 124, 478]
+weight 8, level 2: rational eigenform a_3 = 12; a_p (p = 3,5,7,11,13) = [12, -210, 1016, 1092, 1382]
+weight 8, level 8: rational eigenform a_3 = 44; a_p (p = 3,5,7,11,13) = [44, 430, -1224, -3164, 6118]
+
+T_4/(q - 1): 13 primes, 4 basis functions
+  exact fit: -1*q^1 + -1*q^0*f[w4,N8,a3=-4]
+
+T_6/(q - 1): 13 primes, 8 basis functions
+  exact fit: 1*q^2 + -1*q^1*f[w4,N8,a3=-4] + -1*q^0*f[w6,N8,a3=20]
+
+T_8/(q - 1): 13 primes, 14 basis functions
+  (underdetermined: free parameters set to 0)
+  exact fit: 5601861123997/811755*q^0 + -216073759366/162351*q^1 + 414791393/6013*q^2 + -23318795/18039*q^3 + 242414/30065*q^4 + -420569780/18039*q^0*f[w4,N8,a3=-4] + 4387174/18039*q^1*f[w4,N8,a3=-4] + -1430/6013*q^2*f[w4,N8,a3=-4] + -2680877/54117*q^0*f[w6,N4,a3=-12] + 150905/54117*q^1*f[w6,N4,a3=-12] + 15994082/18039*q^0*f[w6,N8,a3=20] + -228610/18039*q^1*f[w6,N8,a3=20] + -619271/162351*q^0*f[w8,N2,a3=12]

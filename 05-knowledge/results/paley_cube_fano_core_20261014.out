@@ -1,0 +1,5 @@
+fast evaluator = brute force at q = 5, 7, 11
+q = 3 mod 4: U(Q3)/(q(q-1)) at 17 primes: [-189, 3267, -10621, 24771, 131843, -79421, -1035645, 2138691, -767485, -3396285, 3853699, -1507197, 9802819, 8547267, -21767165, 44485635, 12798147]  [12 s]
+   NOT a polynomial of degree <= 6 (prediction refuted in this class)
+q = 1 mod 4: U(Q3)/(q(q-1)) at 15 primes: [75, -1781, -9333, -135285, 195915, 297291, 624075, -1867637, -748469, -5314101, 4293899, -15153333, 22639627, 11534475, -29348277]  [8 s]
+   NOT a polynomial of degree <= 6 (prediction refuted in this class)

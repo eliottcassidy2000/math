@@ -1,0 +1,16 @@
+PART 1: balance spectrum of tournaments
+ n = 3: 2 classes; classes with delta = 1/3: 1 (A000930(n) - 1 = 1); least delta > 1/3: None; least delta over strong classes: 1/3; strong delta values: ['1/3']  (0.0 s)
+ n = 4: 4 classes; classes with delta = 1/3: 2 (A000930(n) - 1 = 2); least delta > 1/3: 2/5; least delta over strong classes: 2/5; strong delta values: ['2/5']  (0.0 s)
+ n = 5: 12 classes; classes with delta = 1/3: 3 (A000930(n) - 1 = 3); least delta > 1/3: 4/11; least delta over strong classes: 4/11; strong delta values: ['4/11', '5/13', '2/5', '4/9']  (0.2 s)
+ n = 6: 56 classes; classes with delta = 1/3: 5 (A000930(n) - 1 = 5); least delta > 1/3: 4/11; least delta over strong classes: 4/11; strong delta values: ['4/11', '17/45', '2/5', '15/37', '12/29', '18/43', '13/31', '8/19']  (81.6 s)
+PART 2: closed families (precedence constraints), 1/3-2/3 and gold partition
+ tournament n = 3: 2 digraph classes, 4 family members with |S| >= 2; min delta = 1/3; gold-partition failures = 0  (0.0 s)
+ tournament n = 4: 4 digraph classes, 24 family members with |S| >= 2; min delta = 1/3; gold-partition failures = 0  (0.0 s)
+ tournament n = 5: 12 digraph classes, 792 family members with |S| >= 2; min delta = 1/3; gold-partition failures = 0  (0.5 s)
+ tournament n = 6: 56 digraph classes, 49882 family members with |S| >= 2; min delta = 1/4; gold-partition failures = 176  (145.5 s)
+   counterexample to delta >= 1/3: ((0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1), [(0, 1, 5, 4, 2, 3), (4, 2, 5, 0, 1, 3), (5, 0, 1, 3, 4, 2), (5, 0, 1, 4, 2, 3)])
+ semicomplete n = 3: 7 digraph classes, 29 family members with |S| >= 2; min delta = 1/3; gold-partition failures = 0  (0.0 s)
+ semicomplete n = 4: 42 digraph classes, 1498 family members with |S| >= 2; min delta = 1/4; gold-partition failures = 11  (0.1 s)
+   counterexample to delta >= 1/3: ((0, 0, 2, 2, 0, 2), [(0, 3, 2, 1), (2, 3, 0, 1), (3, 0, 1, 2), (3, 0, 2, 1)])
+ semicomplete n = 5: 582 digraph classes, 275102 family members with |S| >= 2; min delta = 1/4; gold-partition failures = 3347  (70.2 s)
+   counterexample to delta >= 1/3: ((0, 0, 0, 0, 0, 0, 2, 2, 0, 2), [(0, 1, 4, 3, 2), (0, 3, 4, 1, 2), (0, 4, 1, 2, 3), (0, 4, 1, 3, 2)])

@@ -1,0 +1,8 @@
+K33 - e (6 v, 8 e; Laman-sparse, Fano), q = 3 mod 4: polynomial through 7 primes predicts the other 4: True;  U6 = -q*(q - 3)
+K33 - e (6 v, 8 e; Laman-sparse, Fano), q = 1 mod 4: polynomial through 7 primes predicts the other 2: True;  U6 = -q*(q - 3)
+prism - e (6 v, 8 e; Laman-sparse, Fano), q = 3 mod 4: polynomial through 7 primes predicts the other 4: True;  U6 = q
+prism - e (6 v, 8 e; Laman-sparse, Fano), q = 1 mod 4: polynomial through 7 primes predicts the other 2: True;  U6 = q
+K4 + degree-2 vertex (5 v, 8 e; contains K4), q = 3 mod 4: U6 = -b_q (CM eta(4z)^6; 0 for q = 3 mod 4) at all 17 primes: True
+K4 + degree-2 vertex (5 v, 8 e; contains K4), q = 1 mod 4: U6 = -b_q (CM eta(4z)^6; 0 for q = 3 mod 4) at all 15 primes: True
+octahedron - {35, 45} (6 v, 10 e; contains W4), q = 3 mod 4: U6 = q + a_q (the W4 form) at all 11 primes: True
+octahedron - {35, 45} (6 v, 10 e; contains W4), q = 1 mod 4: values [3, 35, 67, 227, -125, -157, -189, 611, 227]

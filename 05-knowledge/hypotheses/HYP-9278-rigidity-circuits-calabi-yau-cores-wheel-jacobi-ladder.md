@@ -1,5 +1,80 @@
 ---
 id: HYP-9278
-title: "RESERVED (opus-2026-10-14-S35): rigidity circuits are the Calabi-Yau cores of Paley pattern sums (|E| = 2|V| - 2 gives motivic weight |V| - 2); wheels are power sums of Jacobi sums, W_6 = the weight-6 level-8 newform"
-status: RESERVED
+title: "Paley pattern sums climb a modular ladder at 2D rigidity circuits (|E| = 2|V| - 2: Calabi-Yau double covers, motivic weight |V| - 2). Wheels are power sums of Jacobi sums (PROVED), W_6 is the weight-6 level-8 newform. Planar Fourier duality (PROVED) fixes the Calabi-Yau line and swaps Fano with general type: the Fano cube equals q times its dual octahedron."
+status: >
+  OPEN (the dictionary as a general statement).
+  PROVED: (1) wheels as power sums of Jacobi sums, Tr((DS)^n) = sum_psi (chi(-1) J(psi, chi))^n; (2) planar Fourier duality
+  U(G) = chi(-1)^{|E|/2} q^{(|V| - |V*|)/2} U(G*) for connected plane graphs with |E| even; (3) the canonical-class count
+  (double cover of P^{|V|-2} branched along |E| hyperplanes is Calabi-Yau iff |E| = 2|V| - 2) and, for plane graphs,
+  |E| = 2|V| - 2 iff |F| = |V|.
+  FINITE-EXACT: T_4 and T_6 at all 39 primes q = 3 (mod 4) in [7, 400]; U(Q_3) = q U(K_{2,2,2}) at 32 primes (both classes);
+  the circuit-reduction and Laman-sparse rows; duality at 7 graphs.
+  REFUTED (pre-registered in this session): "Laman-sparse pure cores are Tate (polynomial)" - the cube Q_3 is not
+  polynomial; it carries its dual's W_4 form.
+session: opus-2026-10-14-S35
+source: 05-knowledge/results/paley_least_resistance_runs_one_modular_form_20261014.md (sections 4b-4d)
+scripts:
+  - 04-computation/experiments/paley_wheel_ladder_20261014.py
+  - 04-computation/experiments/paley_wheel_ladder_fit_20261014.py
+  - 04-computation/experiments/paley_wheel_jacobi_20261014.py
+  - 04-computation/experiments/paley_rigidity_dictionary_tests_20261014.py
+  - 04-computation/experiments/paley_cube_fano_core_20261014.py
+  - 04-computation/experiments/paley_planar_fourier_duality_20261014.py
+related: [THM-4652, THM-4653, HYP-9274, HYP-9275, HYP-9276]
 ---
+
+# HYP-9278: rigidity circuits are the Calabi–Yau cores of Paley pattern sums
+
+Notation: `U(G) = Σ_{x: V → F_q} Π_{(u→v) ∈ E} χ(x_v − x_u)`, with `χ` the quadratic character. `q ≡ 3 (mod 4)` gives Paley tournaments and `q ≡ 1 (mod 4)` Paley graphs.
+
+## Proved ingredients
+
+1. **Calabi–Yau count.** `U(G)` is, up to trivial terms, a point count of the double cover of `P^{|V|−2}` branched along the hyperplanes `x_u = x_v`. A double cover of `P^n` branched in degree `2d` has `K = π^*O(d − n − 1)`.
+   - It is Calabi–Yau iff `|E| = 2|V| − 2`.
+   - It is Fano-type below that count and of general type above it.
+   - Odd `|E|` gives `U = 0`.
+   - `|E| = 2|V| − 2` with all proper subgraphs Laman-sparse is a 2D rigidity circuit.
+   - For plane graphs (Euler's formula) `|E| = 2|V| − 2` iff `|F| = |V|`, so every self-dual plane graph has the Calabi–Yau count.
+2. **Wheels are power sums of Jacobi sums.** `U(W_n) = q·Tr((DS)^n)`, and `Tr((DS)^n) = Σ_ψ (χ(−1)J(ψ, χ))^n`.
+   - The proof substitutes `t_i = x_{i+1}/x_i` and uses Fourier analysis on `F_q^×`.
+   - The nonzero spectrum of `DS` is the Jacobi-sum family `{χ(−1)J(ψ, χ)}`.
+3. **Planar Fourier (Kramers–Wannier) duality.** For a connected plane graph with `|E|` even and the induced dual orientation,
+
+   `U(G) = χ(−1)^{|E|/2}·q^{(|V| − |V*|)/2}·U(G*)`.
+
+   - The proof is a Fourier expansion: the vertex sum becomes a flow sum, and flows are face potentials modulo constants.
+   - The key input is `χ̂ = χ(−1)G·χ` with `G² = χ(−1)q`: the quadratic character is a Fourier eigenfunction.
+   - Duality preserves the Calabi–Yau count and exchanges Fano-type (`|E| < 2|V| − 2`) with general type.
+
+## The ladder (FINITE-EXACT)
+
+| graph | `|V|`, `|E|` | type | arithmetic |
+|---|---|---|---|
+| Y-junction | — | elliptic double cover | Legendre trace, weight 2 |
+| `K_4 = W_3` (self-dual) | 4, 6 | circuit | 0 for tournaments; `η(4z)⁶`, weight 3, for Paley graphs |
+| `W_4` (self-dual) | 5, 8 | circuit | `T_4 = −(q−1)(q + a_q)`, `a = η(2z)⁴η(4z)⁴`, weight 4, level 8 |
+| `K_6 − P_6` (self-dual, planar) | 6, 10 | circuit | `Sym²` of the weight-3 level-32 newform (mac-mini's HYP-9276) |
+| `K_(2,4) + 2K_2` | 6, 10 | circuit | `q(q−1)b_q²` for Paley graphs (HYP-9275 B) |
+| `W_6` (self-dual) | 7, 12 | circuit | `T_6 = (q−1)(q² − q a_q − b6_q)`, `b6` the weight-6 level-8 newform `q + 20q³ − 74q⁵ − 24q⁷ + …` |
+| `W_8` | 9, 16 | circuit | not in the level-8 span (S_8(Γ_0(8)) computed in full); OPEN |
+| `K_4` plus a degree-2 vertex | 5, 8 | contains `K_4` | `−b_q`, the `K_4` form |
+| octahedron minus two edges at a vertex | 6, 10 | contains `W_4` | `q + a_q`, the `W_4` form |
+| octahedron `K_(2,2,2)` | 6, 12 | general type | `(5 − q)a_q + 3q`, the `W_4` form twisted |
+| cube `Q_3` (dual of the octahedron) | 8, 12 | Fano, Laman-sparse pure core | `q·((5 − q)a_q + 3q)` = `q` × octahedron |
+| `K_(3,3) − e`, prism minus a rung | 6, 8 | Fano, reducible by THM-4652 after series steps | polynomial |
+
+## The hypothesis
+
+For every graph `G`:
+1. The non-Tate part of `U(G)` is generated by modular motives attached to rigidity circuits contained in `G`, or, when `G` is planar, in its dual `G*`. The duality case is forced by part 3 of the proved ingredients.
+2. A circuit on `|V|` vertices contributes a motive of weight `|V| − 2`. For wheels, the weight-`2m` forms come from level 8 at least for `m <= 3`.
+3. Self-dual plane circuits (wheels, `K_6 − P_6`) are the carriers of genuinely new motives at each size.
+
+**Refuted version.** The first formulation in this session, "Laman-sparse pure cores are Tate", predicted that the cube `Q_3` (the first pure core in the Fano regime, which needs `|V| >= 8`) would be a polynomial. That prediction was registered before computing, and it failed. The repair is part 1's duality clause.
+
+## Open
+
+- Prove the weight assignment for circuits beyond wheels.
+- Identify `T_8` (prediction: weight-8 forms of level 16 or 32).
+- Test non-planar circuits: `K_(3,3) + e` vanishes for tournaments by symmetry, so test its Paley-graph side.
+- Explain why the wheel ladder stays at level 8 through weight 6.

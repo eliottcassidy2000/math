@@ -1,0 +1,3 @@
+S_6(Gamma_0(8)) via a(z) x weight-2 forms: T_3 charpoly (lambda - 20)*(lambda + 12)**2
+b = q + ...: [1, 0, 20, 0, -74, 0, -24, 0, 157, 0, 124, 0, 478, 0, -1480]
+primes q = 3 mod 4 in [7, 400]: 39;  T_4 law holds at all: True;  T_6 law holds at all: True
