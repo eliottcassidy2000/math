@@ -12,3 +12,9 @@ M3 u psi [P1 with |p|^2 <= 2.5 plus the radius-2 orbit] |V|= 45409 |E|= 351816  
    [4252.1s]
 == clip(M1+M1, |p|^2 <= 0.8) + M1clock: |P'| = 14089
 clip(M1+M1, |p|^2 <= 0.8) + M1clock |V|= 14089 |E|=  91512 radius-2 orbit    0: not forced  [4.7s]
+M3 u psi [clip(M1+M1, |p|^2 <= 0.8) + M1clock] |V|= 46345 |E|= 362712  4-colourable  [build 30.0s, solve 10.3s]
+   [45.1s]
+== clip(M1+M1, |p|^2 <= 0.6) + M1clock: |P'| = 13057
+clip(M1+M1, |p|^2 <= 0.6) + M1clock |V|= 13057 |E|=  82632 radius-2 orbit    0: not forced  [4.0s]
+M3 u psi [clip(M1+M1, |p|^2 <= 0.6) + M1clock] |V|= 45313 |E|= 353832  4-colourable  [build 29.3s, solve 11.8s]
+   [45.1s]
