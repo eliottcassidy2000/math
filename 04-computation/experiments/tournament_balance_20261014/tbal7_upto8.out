@@ -1,0 +1,20 @@
+n=4 strong 1; cut-vertex instances 2; k-histogram: 3:2
+  I1 (z balanced vs all interior-block vertices, k>=3): tested 2, failures 0
+  I2 (partner in D1uD2 or D(k-1)uDk): failures 0
+  I3 (some partner): failures 0
+n=5 strong 6; cut-vertex instances 10; k-histogram: 2:6 4:4
+  I1 (z balanced vs all interior-block vertices, k>=3): tested 4, failures 0
+  I2 (partner in D1uD2 or D(k-1)uDk): failures 0
+  I3 (some partner): failures 0
+n=6 strong 35; cut-vertex instances 54; k-histogram: 2:30 3:16 5:8
+  I1 (z balanced vs all interior-block vertices, k>=3): tested 24, failures 0
+  I2 (partner in D1uD2 or D(k-1)uDk): failures 0
+  I3 (some partner): failures 0
+n=7 strong 353; cut-vertex instances 433; k-histogram: 2:301 3:76 4:40 6:16
+  I1 (z balanced vs all interior-block vertices, k>=3): tested 132, failures 0
+  I2 (partner in D1uD2 or D(k-1)uDk): failures 0
+  I3 (some partner): failures 0
+n=8 strong 6008; cut-vertex instances 5174; k-histogram: 2:4084 3:778 4:184 5:96 7:32
+  I1 (z balanced vs all interior-block vertices, k>=3): tested 1090, failures 0
+  I2 (partner in D1uD2 or D(k-1)uDk): failures 0
+  I3 (some partner): failures 0

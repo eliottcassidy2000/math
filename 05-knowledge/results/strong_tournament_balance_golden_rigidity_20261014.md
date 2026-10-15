@@ -49,11 +49,19 @@ This note builds on those and does not repeat them.
    - The unique Hamiltonian cycle `z u_1 … u_m z` carries at least two balanced arcs.
    - The vertex-wise constant is exactly `1/3` for every `n = 5..9`. The tight vertices sit in a `C_3` block hung at the end of the order, the local version of the global extremals.
    - The stronger statement (B⁺), that the balanced graph is connected, holds for `n <= 9`.
-6. **A refuted strengthening.** "Every Hamiltonian cycle of a strong tournament carries a balanced arc" holds for all 133,632 Hamiltonian cycles at `n = 8` and on the transitive-plus-one family. It fails at `n = 9`.
+6. **Cut vertices: the transitive-plus-one mechanism in general (THM-4655 (5), HYP-9279 (Z)).** Let `z` be a vertex whose deletion leaves `T − z` non-strong, with strong components `D_1 ⇒ … ⇒ D_k`.
+   - The Hamiltonian paths factor through an exact 4-state transfer chain over the blocks. Each block enters only through its own subset path counts.
+   - The interior blocks of the crossing window are fair coins against `z`, because `Σ_X h(X) h(D ∖ X)` is symmetric under complement.
+   - Conjecture (Z): `z` is balanced against every vertex of `D_2 ∪ … ∪ D_(k−1)` and always has a balanced partner.
+     - Exhaustive to `n = 9`, sampled to `n = 46`, sharp at `1/3`.
+     - Proved when all blocks are singletons.
+     - It would settle HYP-9277 for every strong tournament with a cut vertex: about 30% of strong tournaments at `n = 10`.
+   - A local refinement of (B), (B_loc), also holds to `n = 9`: every vertex lies on a forward arc with `1/2 < p <= 2/3` on a directed 3-cycle. This ties (B) to S36's forward-arc digraph.
+7. **A refuted strengthening.** "Every Hamiltonian cycle of a strong tournament carries a balanced arc" holds for all 133,632 Hamiltonian cycles at `n = 8` and on the transitive-plus-one family. It fails at `n = 9`.
    - The unique counterexample among the 178,133 strong 9-tournaments has a Hamiltonian cycle whose nine arcs all have `p(tail first) ∈ (0.671, 0.831)`: a `> 2/3` majority cycle.
    - The tournament itself has `δ = 100/213` and every vertex balanced.
    - So cycles can carry a majority orientation while vertices and pairs cannot avoid balance. This is the right warning for S36's majority-cycle route (HYP-9280): the majority structure lives on cycles, the balance on vertices.
-7. **HYP-9279(A).** Every strong tournament on `n >= 4` vertices has `δ >= 4/11`, a strict gap above 1/3. The exhaustive minima are 4/11 at `n = 5, 6, 7` and 62/157 at `n = 8, 9, 10`. Within the transitive-plus-one family, the minimum rises towards 1/2:
+8. **HYP-9279(A).** Every strong tournament on `n >= 4` vertices has `δ >= 4/11`, a strict gap above 1/3. The exhaustive minima are 4/11 at `n = 5, 6, 7` and 62/157 at `n = 8, 9, 10`. Within the transitive-plus-one family, the minimum rises towards 1/2:
 
    | `n` | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 |
    |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -138,6 +146,8 @@ This note builds on those and does not repeat them.
 | `gentourng -c n \| ./tbal2 n` | the same, plus per-vertex partners and cut vertices | about 45 min at `n = 10` |
 | `tbal3.c`, `tbal4.c`, `tbal5.c` | (B⁺), cycle-arc and sharpness checks; `c_counterexample.py` | a few minutes at `n = 9` |
 | `tpo_cycle_arcs.py`, `tpo_vertexwise_proof_check.py` | THM-4655 1(e)–(g) | |
+| `tbal6.c`, `tbal7.c` | (B_loc); (Z) exhaustive | about 1 min at `n = 9` |
+| `cutvertex_chain.py`, `cutvertex_search.py` | THM-4655 (5); (Z) sampling and adversarial search | minutes |
 | `trans_plus_one.py`, `tpo_proof_steps.py`, `tpo_u2_check` | the transitive-plus-one theorem | |
 | `rotation_lemma_check.py`, `logconcave_test.py` | rotation lemma; log-concavity failures | |
 | `wss_orbits.py`, `golden_fermat_check.py`, `pisano_facts.py` | THM-4656 and §3–4 | |

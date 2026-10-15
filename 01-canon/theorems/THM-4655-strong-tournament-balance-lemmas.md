@@ -13,6 +13,7 @@ verification:
   - 04-computation/experiments/tournament_balance_20261014/tbal2.c (+ tbal2_strong9.out, tbal2_strong10.out): exhaustive strong n <= 10, with per-vertex partners
   - 04-computation/experiments/tournament_balance_20261014/trans_plus_one.py, tpo_proof_steps.py (+ .out), tpo_u2_check.c (+ .out)
   - 04-computation/experiments/tournament_balance_20261014/tpo_cycle_arcs.py (+ .out), tpo_vertexwise_proof_check.py (+ .out): statements 1(e)-(g)
+  - 04-computation/experiments/tournament_balance_20261014/cutvertex_chain.py (+ .out): statement 5, validated against the subset DP
   - 04-computation/experiments/tournament_balance_20261014/rotation_lemma_check.py, logconcave_test.py, analyse_minimisers.py
 note: 05-knowledge/results/strong_tournament_balance_golden_rigidity_20261014.md
 related: [HYP-9277, HYP-9279, THM-438 (Paley Hamiltonian paths), THM-4652 (Paley pattern sums)]
@@ -79,6 +80,24 @@ related: [HYP-9277, HYP-9279, THM-438 (Paley Hamiltonian paths), THM-4652 (Paley
    - The minimisers are near-transitive (minimum feedback arc sets 1, 2, 3, 5, 4, 6 for `n = 4..9`).
    - With S35's reduction, **HYP-9277's inequality holds for every tournament on `n <= 10` vertices** (S35 had `n <= 8`).
    - In every strong tournament with `n <= 10`, every vertex has a balanced partner (HYP-9279(B)).
+
+5. **(The cut-vertex transfer chain and the fair-coin lemma.)** Let `T` be strong and `z` a vertex with `T − z` not strong, and let `D_1 ⇒ D_2 ⇒ … ⇒ D_k` (`k >= 2`) be the strong components of `T − z`. For `X ⊆ D_j` let `h(X)`, `h⁺(X)`, `h⁻(X)` count the Hamiltonian paths of `T[X]`, of those starting in `N⁺(z)`, and of those ending in `N⁻(z)`, all three equal to 1 at `X = ∅`. Write `D = D_j` and `X^c = D ∖ X`.
+   - **(a)** `H(T) = u^T M_1 M_2 ⋯ M_k f`. The states are `pre, gap, mid, post`, with `u = e_pre + e_gap` and `f = e_gap + e_post`. The only nonzero entries of `M_j` are:
+
+     | transition | entry |
+     |---|---|
+     | `pre → pre` | `h(D)` |
+     | `pre → gap` | `h⁻(D)` |
+     | `pre → mid` | `Σ_(X ≠ D) h(X) h⁺(X^c)` |
+     | `pre → post` | `Σ_(X ≠ ∅, D) h⁻(X) h⁺(X^c)` |
+     | `gap → post` | `h⁺(D)` |
+     | `mid → mid` | `Σ_X h(X) h(X^c)` |
+     | `mid → post` | `Σ_(X ≠ ∅) h⁻(X) h(X^c)` |
+     | `post → post` | `h(D)` |
+
+   - **(b)** For `v ∈ D_i`, the number of Hamiltonian paths with `v` before `z` is `u^T M_1 ⋯ M_i^(v) ⋯ M_k f`. Here `M_i^(v)` keeps `pre → pre` and `pre → gap`, restricts every sum over `X` to `X ∋ v`, and sets `gap → post` and `post → post` to 0.
+   - **(c) (Fair coin.)** The `mid → mid` entry is invariant under `X ↔ D ∖ X`. So its `v`-part is exactly half of it. Conditionally on block `D_i` lying strictly inside the crossing window (`b < i < a` below), every vertex of `D_i` precedes `z` with probability exactly `1/2`.
+   - **(d)** When `T − z` is transitive (all blocks singletons), `mid → mid = 2`, and (a) is the crossing decomposition of 1(b), with weights `2^(α−β−1)`.
 
 ## Proof
 
@@ -169,9 +188,35 @@ where `W(·)` is the total crossing weight of the given type. Then `H = X + Y + 
 
 **3, 4.** These are the exhaustive computations listed in `verification`.
 
+**5.** Write a Hamiltonian path as `Q_A z Q_B`, where `A` is the set of vertices before `z` and `B` its complement in `V ∖ z`.
+
+All arcs between blocks go forward, `D_j → D_l` for `j < l`. So a Hamiltonian path of `T[A]` visits `A ∩ D_1, A ∩ D_2, …` in this order, each contiguously, and any Hamiltonian paths of the pieces concatenate. The same holds for `B`. Hence the number of paths with a given `A` is
+`Π_(j<a) h(A_j) · h⁻(A_a) · h⁺(B_b) · Π_(j>b) h(B_j)`,
+with `A_j = A ∩ D_j`, `B_j = B ∩ D_j`, `a = max{j : A_j ≠ ∅}` and `b = min{j : B_j ≠ ∅}`.
+
+Blocks below `b` lie in `A` and blocks above `a` lie in `B`. Two cases:
+- `a < b`: then `b = a + 1`, and `A` is an initial union of blocks.
+- `b <= a`: blocks strictly between `b` and `a` are split arbitrarily, with weight `h(A_j) h(B_j)`.
+
+Scan the blocks and record the state after block `j` (`a = 0` if `A = ∅`, `b = k + 1` if `B = ∅`):
+- `pre` if `j < min(a, b)`;
+- `gap` if `a = j < b`, which forces `b = j + 1`;
+- `mid` if `b <= j < a`;
+- `post` if `j >= max(a, b)`.
+
+The initial state is `gap` when `A = ∅` and `pre` otherwise. The final state is `gap` when `B = ∅` and `post` otherwise. The entries of `M_j` are exactly the block factors of the transitions, which proves (a).
+
+Restricting block `i` to the splits with `v ∈ A_i` proves (b). The involution `X ↦ D ∖ X` fixes `h(X) h(D ∖ X)` and exchanges `v ∈ X` with `v ∉ X`, which proves (c). Part (d) is direct substitution.
+
+`cutvertex_chain.py` checks (a) and (b) against the full subset DP on 300 random cut-vertex tournaments with `n <= 12`: no mismatch. ∎
+
 ## Reading
 
 - **The balanced pair is special.** In the transitive-plus-one family, pairs among the `u`'s are typically unbalanced: for `w = 1^a 0^b` with `a, b` large, most pairs `i < j` have `p(u_i before u_j) ≈ 3/4`, since a wide crossing makes both free. The balance lives on the pairs `(z, ·)`. So averaging over all pairs cannot prove the conjecture. Statement 2 quantifies this for closable paths: rotations alone cannot sustain a `> 2/3` majority order, but non-closable paths can.
 - **Why `u_2`?** The crossed splits starting at `β = 1` make `u_2` a fair coin, unless `u_2` is the very first `0`. The geometric weights `2^(α−β−1)` concentrate the mass on wide crossings, where `u_2` is free. Statement 1(f) is the same mechanism for every interior `u_i`: the widest crossings `(1, α)` with `α > i` carry at least half of all weight, and inside them `u_i` is a fair coin against `z`.
 - **Towards the general strong case.** The minimisers for `n <= 9` all have small feedback arc sets. A natural induction is "transitive plus `k`", tracking how the balanced pair moves as vertices are added. The `n = 8` minimiser is transitive plus 2 (deleting two vertices leaves a transitive tournament); the `n = 9` minimisers are transitive plus at most 3.
+- **What does generalise.** Statement 5 carries the transitive-plus-one mechanism to every cut vertex. Interior blocks are fair coins inside the crossing window, and wide windows carry geometric weight, since `mid → mid >= 2 h(D)`.
+  - The natural general statement is HYP-9279 (Z): a cut vertex is balanced against every vertex of `D_2 ∪ … ∪ D_(k−1)`, and always has a balanced partner.
+  - 1(f) is its case of singleton blocks.
+  - (Z) would prove HYP-9277 for every strong tournament with a cut vertex. At `n = 10` these are 2,820,361 of the 9,355,949 strong tournaments.
 - **What does not generalise.** Statement 1(e) suggests that every Hamiltonian cycle of a strong tournament carries a balanced arc. That holds for all 133,632 Hamiltonian cycles of strong 8-tournaments, but it is false at `n = 9`: see HYP-9279, refuted variant (H). The vertex-wise form 1(g) survives exhaustively to `n = 10`.

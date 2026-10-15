@@ -1,0 +1,4 @@
+n=9 strong 178133; cut-vertex instances 99695; k-histogram: 2:86635 3:10416 4:1924 5:432 6:224 8:64
+  I1 (z balanced vs all interior-block vertices, k>=3): tested 13060, failures 0
+  I2 (partner in D1uD2 or D(k-1)uDk): failures 0
+  I3 (some partner): failures 0
