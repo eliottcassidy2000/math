@@ -75,6 +75,10 @@ Parts builds his graphs as **type M**, `G = L ∪ ρS`. Here `L` and `S` are Min
    * **Symmetric minimisation loses here.**
      * `L727 ∪ ρS361` is C6-invariant: one centre plus 181 orbits of size 6.
      * Orbit-level deletion gave an orbit-critical subgraph of 116 orbits (691 vertices). Vertex-level refinement brought it to a vertex-critical **683**, worse than asymmetric greedy deletion (611). This is Parts' "overcompression".
+   * **Clipped forcing pieces (SOLVER, CaDiCaL 1.9.5; `spindle_free_batch.log`).** Replace `P_1` by `P' = {p ∈ P_1 : |p|² <= r} ∪ {radius-2 orbit}`. `P'` still forces radius 2, and `M_3 ∪ ψP'` stays not 4-colourable:
+     * `r = 3.5`: `|P'| = 15,289`, graph 47,545 vertices / 374,880 edges (4,568 s);
+     * `r = 3.0`: `|P'| = 14,329`, graph 46,585 vertices / 364,272 edges (1,776 s).
+     * Further clips are running. These are steps of a few percent, far from Heule's 1,441; the reduction has to come from the `M_3` side.
    * **The spindle-free graph is C24-invariant.** `M_3 ∪ ψP_1` is one centre plus 2,005 orbits of size 24, so symmetric subgraphs have `1 + 24m` vertices. `1441 = 1 + 24·60` is NUMEROLOGY unless Heule's graph is itself C24-symmetric, which was not checked.
      * Orbit-level minimisation (`orbit_core.py`) runs slowly: CaDiCaL with 2,006 assumption literals had not finished its first core after more than an hour, against 25 minutes for the plain solve.
      * The next step is phase-1 cores without assumptions, e.g. by fixing a random half of the orbits off and testing.

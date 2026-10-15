@@ -1,0 +1,9 @@
+== P1 with |p|^2 <= 3.5 plus the radius-2 orbit: |P'| = 15289
+P1 with |p|^2 <= 3.5 plus the radius-2 orbit |V|= 15289 |E|= 103656 radius-2 orbit   24: FORCED  [262.9s]
+M3 u psi [P1 with |p|^2 <= 3.5 plus the radius-2 orbit] |V|= 47545 |E|= 374880  NOT 4-colourable  [build 39.2s, solve 4568.3s]
+   [4870.6s]
+== P1 with |p|^2 <= 3.0 plus the radius-2 orbit: |P'| = 14329
+P1 with |p|^2 <= 3.0 plus the radius-2 orbit |V|= 14329 |E|=  93048 radius-2 orbit   24: FORCED  [201.6s]
+M3 u psi [P1 with |p|^2 <= 3.0 plus the radius-2 orbit] |V|= 46585 |E|= 364272  NOT 4-colourable  [build 31.3s, solve 1776.1s]
+   [2009.0s]
+== P1 with |p|^2 <= 2.5 plus the radius-2 orbit: |P'| = 13153
