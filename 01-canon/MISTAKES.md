@@ -18224,3 +18224,13 @@ the ambient space.
   - Check a claimed counterexample by computing it.
   - A pattern seen in the first cases of an exhaustive list is a hypothesis about the list. Re-run the exhaustive data before describing "the" structure.
   - Never quote an adversarial-search value as a floor when exhaustive data exist. Compute the exhaustive minimum.
+
+## MISTAKE-616 (2026-10-14/15, mac-mini-2026-10-14-tourn THM-4655 (6), (7), HYP-9279; found by audit E part 2 before close-out) -- an extremal family taken to prove that a constant equals its value, and a bound left inconsistent across files during an update
+- **What was wrong:**
+  - THM-4655 (6) and HYP-9279 said "the vertex-wise constant equals 1/3 for every n >= 5 (PROVED)". The family W_n (now V_n) attains 1/3 at one vertex, so it proves only that the constant is AT MOST 1/3. Equality also needs the lower bound, i.e. (B) itself, which is verified only for n <= 10.
+  - While the statement-7 certificate was being extended from blocks of size 6 to size 7, the title and status already said 7 while the statement, the proof count and HYP-9279 still said 6. Separately, statement 7(iii) used without justification that z has an out-neighbour in D_1 (it holds because T is strong), and the script's docstring described the end-block constants as computed minima rather than the general bound 1 the proof uses.
+  - Smaller items: the tower bullet in HYP-9279 contradicted the n = 13 table entry; the title said "to n = 13" when the table reaches n = 15; the family name W_n collided with the wheel W_4 used in the same note.
+- **What survives:** everything mathematical. Audit E part 2 re-derived statements 6 and 7 and reproduced the certificate independently (permutations and cut points in exact integers, 47,642 block types, 0 failures). It brute-forced 3,000 random cut-vertex tournaments up to n = 16 (0 violations, minimum exactly 1/3), and reproduced every glued-block value.
+- **Lesson:**
+  - An attaining example bounds an extremal constant from one side only. Say "at most", and state where the matching bound is known.
+  - When raising a parameter in a theorem, change every occurrence in one edit, grep for the old value, and only then hand the file to an auditor.

@@ -1,4 +1,4 @@
-# Sharpness of HYP-9279(B): the family W_n = TT_(n-3) => C3 (a -> b -> c -> a) with one back arc b -> 0.
+# Sharpness of HYP-9279(B): the family V_n = TT_(n-3) => C3 (a -> b -> c -> a) with one back arc b -> 0.
 # For each n, compute the vertex-wise constant min_v max_w min(p, 1-p) exactly and the tight vertex.
 from fractions import Fraction as Fr
 import sys

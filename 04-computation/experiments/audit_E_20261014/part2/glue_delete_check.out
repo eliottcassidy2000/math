@@ -1,0 +1,14 @@
+n=13 tournament: H=13689 delta=592/1521
+  delete 0: not strong
+  delete 1: not strong
+  delete 2: H=4563 delta=592/1521 = 0.389218  <-- 592/1521
+  delete 3: H=4563 delta=592/1521 = 0.389218  <-- 592/1521
+  delete 4: H=4563 delta=592/1521 = 0.389218  <-- 592/1521
+  delete 5: H=4005 delta=182/445 = 0.408989
+  delete 6: H=5391 delta=271/599 = 0.452421
+  delete 7: not strong
+  delete 8: H=5391 delta=271/599 = 0.452421
+  delete 9: H=4005 delta=182/445 = 0.408989
+  delete 10: H=4563 delta=592/1521 = 0.389218  <-- 592/1521
+  delete 11: H=4563 delta=592/1521 = 0.389218  <-- 592/1521
+  delete 12: H=4563 delta=592/1521 = 0.389218  <-- 592/1521

@@ -1,6 +1,6 @@
 ---
 id: HYP-9279
-title: "Strong tournaments are strictly and vertex-wise balanced: (A) [= HYP-9277(3), opus S35] every strong tournament on n >= 4 vertices has delta(T) >= 4/11, here with evidence to n = 10 and glued-block constructions to n = 13; (B) in every strong tournament EVERY vertex v has a partner w with 1/3 <= P(v before w) <= 2/3 in a uniform Hamiltonian path; (B+) the graph of balanced pairs is connected; (B_loc) every vertex lies on a forward balanced arc of a directed 3-cycle; (Z) a cut vertex z is balanced against every vertex strictly between the first and last strong components of T - z. Refuted variant (H): 'every Hamiltonian cycle carries a balanced arc' fails at n = 9"
+title: "Strong tournaments are strictly and vertex-wise balanced: (A) [= HYP-9277(3), opus S35] every strong tournament on n >= 4 vertices has delta(T) >= 4/11, here with evidence to n = 10 and glued-block constructions to n = 15; (B) in every strong tournament EVERY vertex v has a partner w with 1/3 <= P(v before w) <= 2/3 in a uniform Hamiltonian path; (B+) the graph of balanced pairs is connected; (B_loc) every vertex lies on a forward balanced arc of a directed 3-cycle; (Z) a cut vertex z is balanced against every vertex strictly between the first and last strong components of T - z. Refuted variant (H): 'every Hamiltonian cycle carries a balanced arc' fails at n = 9"
 status: >
   OPEN. Part (A) is HYP-9277 statement 3 (opus S35, evidence n <= 8), restated here with new evidence; (B), (B+), (B_loc), (Z)
   and the refutation of (H) are this file's. (A) and (B) are FINITE-EXACT for all strong tournaments with n <= 10 (exhaustive:
@@ -8,13 +8,14 @@ status: >
   62/157, 62/157); beyond n = 10 two extremal blocks glued at a cut vertex give delta 592/1521 (n = 11) and 1052/2721
   (n = 12, 13), so the minimum of delta is not monotone in n but stays above 4/11 in every construction tried. (B+) is FINITE-EXACT
   for n <= 9. On the transitive-plus-one family, (B) and (B+) are PROVED (THM-4655 1(g)). (B) is sharp: the vertex-wise
-  constant equals 1/3 for every n >= 5 (PROVED, THM-4655 (6), family W_n). (B_loc) is FINITE-EXACT for n <= 10 and exact on the transitive-plus-one family
+  constant is at most 1/3 for every n >= 5 (PROVED, THM-4655 (6), family V_n) and equals 1/3 for 5 <= n <= 10. (B_loc) is FINITE-EXACT for n <= 10 and exact on the transitive-plus-one family
   to n = 14. (Z) is FINITE-EXACT for n <= 10, survives random and adversarial sampling of the exact cut-vertex transfer chain
   (THM-4655 (5)) to n = 46, is sharp at 1/3, and (Z1) is PROVED for every interior component with at most 7 vertices, the other
   components arbitrary (THM-4655 (7), computer-assisted; singleton blocks = THM-4655 1(f)). Each of (A), (B), (B+),
   (B_loc) implies HYP-9277's inequality, and (Z) implies it for every strong tournament with a cut vertex; (A) gives it with a
   strict gap for strong components on >= 4 vertices. Variant (H) is REFUTED (explicit 9-vertex counterexample). Audited
-  (audit E, MISTAKE-615: (A) re-attributed, poset example, tight-vertex structure and the k = 2 floor of (Z) corrected).
+  (audit E, MISTAKE-615: (A) re-attributed, poset example, tight-vertex structure and the k = 2 floor of (Z) corrected; audit E
+  part 2, MISTAKE-616: sharpness of (B) restated as an upper bound plus the exhaustive range; glued-block values reproduced).
 session: mac-mini-2026-10-14-tourn
 source: 05-knowledge/results/strong_tournament_balance_golden_rigidity_20261014.md
 scripts:
@@ -58,12 +59,12 @@ In a strong tournament on `n >= 3` vertices, every vertex `v` has a partner `w` 
   - Exhaustive for all strong tournaments with `n <= 10` (`tbal2.c`; 9,355,949 tournaments at `n = 10`).
   - PROVED on the transitive-plus-one family (THM-4655 1(g)). There `z` is balanced against every interior `u_i`.
   - Also observed for `n <= 10`: every vertex whose deletion destroys strong connectivity has a balanced partner (2,820,361 such tournaments at `n = 10`). This is implied by (B).
-- **Sharpness (PROVED for every `n >= 5`, THM-4655 (6)).** The vertex-wise constant `min_v max_w min(p, 1 − p)` equals `1/3` for every `n >= 5`, unlike the global `δ`.
-  - The family is `W_n = TT_(n−3) ⇒ C_3` with one back arc `b → 0`. There the order on the triangle is uniform over its three rotations.
+- **Sharpness (THM-4655 (6)).** The vertex-wise constant `min_T min_v max_w min(p, 1 − p)` is at most `1/3` for every `n >= 5` (PROVED, family `V_n`), unlike the global `δ`. It equals `1/3` wherever (B) holds, so for `5 <= n <= 10`; the wording was corrected by audit E part 2.
+  - The family is `V_n = TT_(n−3) ⇒ C_3` with one back arc `b → 0`. There the order on the triangle is uniform over its three rotations.
   - Exhaustively (`tbal5.c`), `1/3` is the minimum for `n = 5, …, 9`. It is attained by 1, 2, 5, 17 and 82 strong tournaments respectively.
   - Annealing (`tbal_anneal.c`, 6 seeds per `n`) never goes below `1/3`. It reaches `1/3` exactly at `n = 11, 12, 13` (6, 3 and 2 seeds respectively); the other runs stop just above.
   - **Structure of the tight vertices** (corrected by audit E, `tight_structure.out`): each of the 32 tight vertices with `n <= 8` lies on a cyclic triangle formed with two of its exact partners (`p = 2/3, 1/3`), as in an isolated `C_3`.
-    - The triangle is attached by a single back arc only in the transitive-plus-one examples: the tournament with THM-4655's equality word `1 0 1^(m−3) 0` and its reverse `W_n`. These include every tight vertex at `n = 5, 6`.
+    - The triangle is attached by a single back arc only in the transitive-plus-one examples: the tournament with THM-4655's equality word `1 0 1^(m−3) 0` and its reverse `V_n`. These include every tight vertex at `n = 5, 6`.
     - At `n = 7`, 5 of the 7 tight vertices need two back arcs. At `n = 8`, 18 of 20 do, and the triangle can sit in the middle of the order.
 
 ## Statement (B⁺): the balanced graph is connected
@@ -163,7 +164,7 @@ The blocks are:
 | 15 | best of `M7 + M7` (0.40075), `M8 + M6a` (0.41535), `M6a + M8` (0.41249) | `18261/45567 = 0.40075` | 45567 |
 
 - Both the `n = 11` and the `n = 12` minimiser were confirmed by an independent Python DP (`glue_minimisers_check.out`).
-- The `n = 13` value `592/1521 = 0.38922` found first by the extension tower (`tbal_extend.c`, `tower.log`) is two `M6` blocks glued at a cut vertex, with `H = 13689 = 117²`.
+- The extension tower (`tbal_extend.c`, `tower.log`) first found an `n = 13` tournament with `δ = 592/1521` (`H = 13689 = 117²`). It is `M6b + M6a` glued at a cut vertex. The glue search then found `1052/2721` at `n = 13`.
 - Deleting suitable vertices from it keeps `δ = 592/1521` at `n = 12`.
 - So the minimum of `δ` is **not** monotone: 4/11 for `n = 5, 6, 7`, then 62/157 for `n = 8, 9, 10`, then at most 0.38922 at `n = 11` and at most 0.38662 at `n = 12, 13, 14`. The value `1052/2721` repeats across `n = 12..14`, a plateau like 62/157 at `n = 8..10`.
 - Every construction stays above `4/11 = 0.36364`. A random-arc annealer (`tbal_anneal.c`) stalls far above, near 0.425 at `n = 11`.

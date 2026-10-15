@@ -1,0 +1,21 @@
+== M8 + M5 (n=14)
+  minimum delta = 974/2345 = 0.415352, attained by 1 tournaments; min over arcs of p(tail first) = 1371/2345 = 0.584648
+  minimiser &MATzF}^~b~sX~B~o^ob}G^?BG?[?B?CO@?: H=11725 scores (1,2,2,2,4,6,7,7,8,9,10,10,11,12) minFAS=8 transitive-plus-4
+== M5 + M8 (n=14)
+  minimum delta = 974/2345 = 0.415352, attained by 1 tournaments; min over arcs of p(tail first) = 1371/2345 = 0.584648
+  minimiser &M@VzN}^~b~{^|B~_WoB}?^?b?G[AB?CO@?: H=11725 scores (1,2,3,3,4,5,6,6,7,9,11,11,11,12) minFAS=8 transitive-plus-4
+== M7 + M6a (n=14)
+  minimum delta = 1052/2721 = 0.386623, attained by 1 tournaments; min over arcs of p(tail first) = 1669/2721 = 0.613377
+  minimiser &M@Dzb}V~b~y^|A~o^{R}?W?Bw?[?a?GOAO: H=24489 scores (2,2,2,3,4,4,5,8,9,9,10,11,11,11) minFAS=10 transitive-plus-6
+== M6a + M7 (n=14)
+  minimum delta = 2029/5063 = 0.400751, attained by 1 tournaments; min over arcs of p(tail first) = 3034/5063 = 0.599249
+  minimiser &MA\zF}^~b~sV~B~q^oB_?V?BwA[@A?OOCO: H=15189 scores (2,2,2,3,4,4,5,7,9,10,10,10,11,12) minFAS=9 transitive-plus-5
+== M8 + M6a (n=15)
+  minimum delta = 974/2345 = 0.415352, attained by 1 tournaments; min over arcs of p(tail first) = 1371/2345 = 0.584648
+  minimiser &NAT|b~f~{^~Pf}F~o^wP~aFw?W_@w?F?CO?`?C_: H=35175 scores (2,2,2,2,3,5,7,8,8,9,10,11,11,12,13) minFAS=9 transitive-plus-5
+== M6a + M8 (n=15)
+  minimum delta = 3184/7719 = 0.412489, attained by 1 tournaments; min over arcs of p(tail first) = 4535/7719 = 0.587511
+  minimiser &NAJ|b~f~{^~P^}F~q^{@b?F{?^?P_AF?OW?P?A?: H=38595 scores (1,2,3,3,4,5,6,6,7,10,11,11,11,12,13) minFAS=10 transitive-plus-5
+== M7 + M7 (n=15)
+  minimum delta = 2029/5063 = 0.400751, attained by 1 tournaments; min over arcs of p(tail first) = 3034/5063 = 0.599249
+  minimiser &N@M|p~d~{^~h~yD~o^}H~?F??V?@{?f?GO@@?G_: H=45567 scores (2,2,2,3,4,4,5,7,9,10,10,11,12,12,12) minFAS=11 transitive-plus-6

@@ -11,6 +11,9 @@ Invariant region (all preserved by every block, proved in the theorem text):
    0 <= g <= 1,  P >= Pmin,  cL <= Lp <= P;     0 <= s' <= 1,  Q >= Qmin,  cR <= Rp <= Q,
 with Pmin = min beta over first blocks (z has an out-neighbour in D_1), cL = min (gamma + s) over first blocks,
 Qmin = min alpha over last blocks (D_k has an in-neighbour of z), cR = min (e + gamma) over last blocks.
+The theorem uses Pmin = cL = Qmin = cR = 1 for end blocks of ANY size (THM-4655 (7)(ii): cut a Hamiltonian path of the block
+at its first out-neighbour / last in-neighbour of z); the values computed here over the enumerated small blocks are also 1,
+so the check is exactly the one the proof needs (audit E part 2).
 Both expressions are affine in each of g, Lp, Rp, s' (for fixed P, Q), so the minimum over the region is attained at
 extreme values of these; for fixed extremes they are bilinear a PQ + b P + c Q + d in (P, Q) (Lp = P and Rp = Q are allowed
 extremes, giving extra P, Q terms), and a PQ + bP + cQ + d >= 0 on [Pmin, inf) x [Qmin, inf) iff a >= 0, a Qmin + b >= 0,

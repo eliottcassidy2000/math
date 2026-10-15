@@ -1,0 +1,20 @@
+== S4 + S4
+n=9: strong tournaments 225 (non-strong skipped 0); delta < 1/3: 0; with a balanced arc: 225
+  minimum delta = 2/5 = 0.400000, attained by 1 tournaments; min over arcs of p(tail first) = 57/185 = 0.308108
+  HYP-9279(B): tournaments in which EVERY vertex has a balanced partner: 225 of 225; min over T of min over v of max_w min(P,1-P) = 32/95 = 0.336842 (at &HEDNfy^P{C_[H`?)
+  minimiser &HG|NF}^p{C?WH@?: H=135 scores (1,2,2,2,4,6,6,6,7) minFAS=4 transitive-plus-2
+== S4 + M5
+n=10: strong tournaments 465 (non-strong skipped 0); delta < 1/3: 0; with a balanced arc: 465
+  minimum delta = 182/445 = 0.408989, attained by 1 tournaments; min over arcs of p(tail first) = 31/111 = 0.279279
+  HYP-9279(B): tournaments in which EVERY vertex has a balanced partner: 465 of 465; min over T of min over v of max_w min(P,1-P) = 500/1489 = 0.335796 (at &IEAfx~R|FwK_]?wP`?)
+  minimiser &IGmfp~r~FwK?]?oP@?: H=445 scores (1,2,3,3,3,4,7,7,7,8) minFAS=5 transitive-plus-3
+== M5 + S4
+n=10: strong tournaments 465 (non-strong skipped 0); delta < 1/3: 0; with a balanced arc: 465
+  minimum delta = 182/445 = 0.408989, attained by 1 tournaments; min over arcs of p(tail first) = 31/111 = 0.279279
+  HYP-9279(B): tournaments in which EVERY vertex has a balanced partner: 465 of 465; min over T of min over v of max_w min(P,1-P) = 500/1489 = 0.335796 (at &I^orp~B|FsN?O?wH__)
+  minimiser &IQ[rx~b|F{N_O?oH?_: H=445 scores (1,2,2,2,5,6,6,6,7,8) minFAS=5 transitive-plus-3
+== M5 + M5
+n=11: strong tournaments 961 (non-strong skipped 0); delta < 1/3: 0; with a balanced arc: 961
+  minimum delta = 592/1521 = 0.389218, attained by 1 tournaments; min over arcs of p(tail first) = 721/1821 = 0.395936
+  HYP-9279(B): tournaments in which EVERY vertex has a balanced partner: 961 of 961; min over T of min over v of max_w min(P,1-P) = 444/1321 = 0.336109 (at &J@@X}^{^{^g^_X?]?[CWG?)
+  minimiser &JQUX}^{^s^w^_W?]?WCOG?: H=1521 scores (1,2,3,3,3,5,7,7,7,8,9) minFAS=7 transitive-plus-3

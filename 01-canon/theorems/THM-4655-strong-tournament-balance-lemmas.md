@@ -1,10 +1,11 @@
 ---
 id: THM-4655
-title: "Uniform Hamiltonian paths of strong tournaments: the 1/3-2/3 property holds for every strong 'transitive-plus-one' tournament, with the explicit balanced pair (z, u_2); there the extra vertex z is balanced against every interior vertex, every vertex has a balanced partner and the unique Hamiltonian cycle carries at least two balanced arcs; the exact transfer chain at a cut vertex, and with it: a cut vertex z is balanced against every vertex of each interior strong component of T - z with at most 7 vertices, whatever the rest of T (computer-assisted); vertex-wise balance is sharp at 1/3 for every n >= 5; a rotation lemma for Hamiltonian cycles; Stanley-type log-concavity fails; exhaustive verification for all strong tournaments on n <= 10 vertices"
+title: "Uniform Hamiltonian paths of strong tournaments: the 1/3-2/3 property holds for every strong 'transitive-plus-one' tournament, with the explicit balanced pair (z, u_2); there the extra vertex z is balanced against every interior vertex, every vertex has a balanced partner and the unique Hamiltonian cycle carries at least two balanced arcs; the exact transfer chain at a cut vertex, and with it: a cut vertex z is balanced against every vertex of each interior strong component of T - z with at most 7 vertices, whatever the rest of T (computer-assisted); the vertex-wise constant is at most 1/3 for every n >= 5 (= 1/3 for 5 <= n <= 10); a rotation lemma for Hamiltonian cycles; Stanley-type log-concavity fails; exhaustive verification for all strong tournaments on n <= 10 vertices"
 status: >
   PROVED: statements 1, 2, 5, 6 (elementary; statement 1(f) uses an exact computer check for m <= 14 together with an
   analytic bound for m >= 9, and is reproved by statement 7). PROVED (computer-assisted): statement 7 (a general reduction to a
-  local certificate on one block, checked exactly for all blocks with at most 7 vertices; added after audit E). FINITE-EXACT: statements 3-4 (exhaustive, gentourng + exact subset DP in C). The tournament 1/3-2/3
+  local certificate on one block, checked exactly for all blocks with at most 7 vertices; audited by audit E part 2, which
+  reproduced the certificate independently). FINITE-EXACT: statements 3-4 (exhaustive, gentourng + exact subset DP in C). The tournament 1/3-2/3
   conjecture HYP-9277 (opus S35) remains OPEN; this theorem proves it, and its vertex-wise strengthening HYP-9279(B), for
   a natural subclass of strong tournaments, and extends the exhaustive verification from n <= 8 to n <= 10.
 source: mac-mini-2026-10-14-tourn
@@ -123,13 +124,13 @@ related: [HYP-9277, HYP-9279, THM-438 (Paley Hamiltonian paths), THM-4652 (Paley
    - **(c) (Fair coin.)** The `mid → mid` entry is invariant under `X ↔ D ∖ X`. So its `v`-part is exactly half of it. Conditionally on block `D_i` lying strictly inside the crossing window (`b < i < a` below), every vertex of `D_i` precedes `z` with probability exactly `1/2`.
    - **(d)** When `T − z` is transitive (all blocks singletons), `mid → mid = 2`, and (a) is the crossing decomposition of 1(b), with weights `2^(α−β−1)`.
 
-6. **(Vertex-wise balance is sharp at `1/3` for every `n >= 5`.)** Let `W_n` (`n >= 5`, `t = n − 3`) be the transitive tournament `0 → 1 → … → t−1 → {a, b, c}`, with the cyclic triangle `a → b → c → a`, and with one arc reversed to `b → 0`. Then:
-   - `W_n` is strong and `H(W_n) = 3(2^(n−4) + 1)`;
+6. **(The vertex-wise constant is at most `1/3` for every `n >= 5`.)** Let `V_n` (`n >= 5`, `t = n − 3`) be the transitive tournament `0 → 1 → … → t−1 → {a, b, c}`, with the cyclic triangle `a → b → c → a`, and with one arc reversed to `b → 0`. Then:
+   - `V_n` is strong and `H(V_n) = 3(2^(n−4) + 1)`;
    - in a uniform Hamiltonian path, the order induced on `{a, b, c}` is uniform over the three rotations `abc, bca, cab`;
    - `p(c before a) = 2/3`, `p(c before b) = 1/3`, `p(c before 0) = 2^(t−1)/H`, and `p(c before i) = 2^(t−2)/H` for `1 <= i <= t−1`.
 
-   So `max_w min(p(c, w), 1 − p(c, w)) = 1/3` exactly. The vertex-wise constant of HYP-9279(B) equals `1/3` for every `n >= 5`. It is also `1/3` at `n = 3` (`C_3`), and `2/5` at `n = 4`.
-   - `W_n − b` is transitive, in the order `0, …, t−1, c, a`. So `W_n` is the transitive-plus-one tournament with `z = b`, and it is the reverse of the one with the equality word `1 0 1^(m−3) 0` of (c), where `m = n − 1`.
+   So `max_w min(p(c, w), 1 − p(c, w)) = 1/3` exactly. The vertex-wise constant `min_T min_v max_w min(p, 1 − p)` is therefore at most `1/3` for every `n >= 5`. It equals `1/3` wherever HYP-9279(B) holds, in particular for `5 <= n <= 10` (exhaustive; corrected by audit E part 2). It is `1/3` at `n = 3` (`C_3`) and `2/5` at `n = 4`.
+   - `V_n − b` is transitive, in the order `0, …, t−1, c, a`. So `V_n` is the transitive-plus-one tournament with `z = b`, and it is the reverse of the one with the equality word `1 0 1^(m−3) 0` of (c), where `m = n − 1`.
    - Audit E found the same sharpness from that side: at the equality word, `u_2` has `p = 2/3, 1/3` against `z, u_1` and is unbalanced against everything else (S2 in its report).
    - Within the transitive-plus-one family, only this word and its reverse attain `1/3`, for each `m >= 5`.
 
@@ -254,10 +255,10 @@ Restricting block `i` to the splits with `v ∈ A_i` proves (b). The involution 
 
 `cutvertex_chain.py` checks (a) and (b) against the full subset DP on 300 random cut-vertex tournaments with `n <= 12`: no mismatch. ∎
 
-**6.** The cycle `0 → 1 → … → t−1 → a → b → 0`, together with `b → c → a`, shows that `W_n` is strong.
+**6.** The cycle `0 → 1 → … → t−1 → a → b → 0`, together with `b → c → a`, shows that `V_n` is strong.
 
 The only in-neighbour of `0` is `b`, so a Hamiltonian path either starts at `0` or contains `b 0`.
-- **Paths starting at `0`.** `W_n − 0` is `TT_(t−1) ⇒ C_3`. Its Hamiltonian paths are `1 2 … (t−1)` followed by a rotation of `abc`, and all three start at `1`, an out-neighbour of `0`. This gives 3 paths, one per rotation.
+- **Paths starting at `0`.** `V_n − 0` is `TT_(t−1) ⇒ C_3`. Its Hamiltonian paths are `1 2 … (t−1)` followed by a rotation of `abc`, and all three start at `1`, an out-neighbour of `0`. This gives 3 paths, one per rotation.
 - **Paths containing `b 0`.** Write the path as `X b 0 Y`. The tournament on `{1, …, t−1, a, c}` is transitive, in the order `1, …, t−1, c, a`. So `X` and `Y` are the unique increasing paths on their vertex sets `S` and `S'`.
   - `Y` may start anywhere, since `0` beats all of `S'`.
   - `X` must end at an in-neighbour of `b`, that is `a` or some `i >= 1`. This rules out exactly `c ∈ S` with `a ∉ S`.
@@ -287,7 +288,7 @@ The normalised entries are `pre → pre = post → post = 1`, `pre → gap = e`,
 
 Dually, if `D` has an in-neighbour of `z`, then `α >= 1` and `e + γ >= 1`, by cutting just after the last vertex in `I`. All these maps are injective, since concatenation inverts them.
 
-*(iii) Invariant region.* After blocks `1, …, i−1` the left vector is `(1, g, P, Lp)`, with `0 <= g <= 1`, `P >= 1` and `1 <= Lp <= P`. The base case is the first block: by (ii), `P = β_1 >= 1` and `Lp = γ_1 + s_1 >= 1`, and `Lp <= P` by (i). Each block maps
+*(iii) Invariant region.* Since `T` is strong and `D_1` receives no arc from the other blocks, `z` has an out-neighbour in `D_1`; dually, some vertex of `D_k` beats `z`. After blocks `1, …, i−1` the left vector is `(1, g, P, Lp)`, with `0 <= g <= 1`, `P >= 1` and `1 <= Lp <= P`. The base case is the first block: by (ii), `P = β_1 >= 1` and `Lp = γ_1 + s_1 >= 1`, and `Lp <= P` by (i). Each block maps
 - `g ↦ e`,
 - `P ↦ β + σP >= P`,
 - `Lp ↦ γ + g s + αP + Lp`,
@@ -305,12 +306,12 @@ Both `3N − H` and `2H − 3N` are affine in each of `g, s', Lp, Rp`. So on the
 - every partition `D = O ⊔ I`;
 - every `v ∈ D`.
 
-That is 47,642 block types and every `v`, with no failure (`z1_cert_upto5.out`, `z1_cert_6.out`, `z1_cert_7.out`). ∎
+That is 47,642 block types and every `v`, with no failure (`z1_cert_upto5.out`, `z1_cert_6.out`, `z1_cert_7.out`). Audit E reproduced the certificate independently, enumerating permutations and cut points in exact integers (`audit_E_20261014/part2/z1_cert_audit.c`, 0 failures). It also brute-forced 3,000 random cut-vertex tournaments up to `n = 16` (11,630 interior vertices, no violation, minimum exactly `1/3`). ∎
 
 *Remark (what is left in general).*
 - Of the four bilinear conditions, three hold for every block by short comparisons with the complement-symmetric `σ`; for instance `β − β(v) <= σ/2` and `α − α(v) <= σ/2 − 1`.
 - Only the corner `a + b + c + d >= 0` (`L4` for the lower bound, `U4` for the upper) needs the computer.
-- Its minimum slack is 0 for singletons, the THM-4655 equality word, and 5/3, 2, 26/9, 10/3, 298/69 for block sizes 3, 4, 5, 6, 7 (`z1_local_slack.out`).
+- Its minimum slack is 0 exactly for singleton blocks (realised in the equality-word tournament), and 5/3, 2, 26/9, 10/3, 298/69 for block sizes 3, 4, 5, 6, 7 (`z1_local_slack.out`; confirmed by audit E).
 - A proof of `L4` and `U4` for all strong tournaments would prove HYP-9279 (Z1) in full, and hence HYP-9277 for every strong tournament with a cut vertex whose deletion leaves at least three strong components.
 
 ## Reading

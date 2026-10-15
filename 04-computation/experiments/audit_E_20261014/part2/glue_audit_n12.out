@@ -1,0 +1,23 @@
+== S4 + M6a
+n=11: strong tournaments 945 (non-strong skipped 0); delta < 1/3: 0; with a balanced arc: 945
+  minimum delta = 182/445 = 0.408989, attained by 1 tournaments; min over arcs of p(tail first) = 35/131 = 0.267176
+  HYP-9279(B): tournaments in which EVERY vertex has a balanced partner: 945 of 945; min over T of min over v of max_w min(P,1-P) = 600/1789 = 0.335383 (at &JE@R}^y^s^oW_^?]CSGWQ?)
+  minimiser &JGnR{^}^{^oW?^?[COGOQ?: H=1335 scores (2,2,2,3,4,4,5,8,8,8,9) minFAS=7 transitive-plus-4
+== M6a + S4
+n=11: strong tournaments 945 (non-strong skipped 0); delta < 1/3: 0; with a balanced arc: 945
+  minimum delta = 335/827 = 0.405079, attained by 3 tournaments; min over arcs of p(tail first) = 35/131 = 0.267176
+  HYP-9279(B): tournaments in which EVERY vertex has a balanced partner: 945 of 945; min over T of min over v of max_w min(P,1-P) = 600/1789 = 0.335383 (at &J^wW{^w^sVg^Q]?O?[AWC?)
+  minimiser &JANW}^{^sVw^q^?O?WAOC?: H=827 scores (1,2,2,2,4,6,7,7,7,8,9) minFAS=6 transitive-plus-3
+  minimiser &J@NW}^{^{Vg^q^?O?WAOC?: H=827 scores (1,2,2,2,4,6,7,7,7,8,9) minFAS=6 transitive-plus-3
+== M5 + M6a
+n=12: strong tournaments 1953 (non-strong skipped 0); delta < 1/3: 0; with a balanced arc: 1953
+  minimum delta = 592/1521 = 0.389218, attained by 1 tournaments; min over arcs of p(tail first) = 841/2161 = 0.389172
+  HYP-9279(B): tournaments in which EVERY vertex has a balanced partner: 1953 of 1953; min over T of min over v of max_w min(P,1-P) = 524/1561 = 0.335682 (at &K@?k~f~b~p~O~_W_N_F_a_`_c)
+  minimiser &KQVK~f~b~P~o~_W?N_F?a?`?c: H=4563 scores (2,2,2,3,4,4,6,8,8,8,9,10) minFAS=8 transitive-plus-4
+== M6a + M5
+n=12: strong tournaments 1953 (non-strong skipped 0); delta < 1/3: 0; with a balanced arc: 1953
+  minimum delta = 1052/2721 = 0.386623, attained by 3 tournaments; min over arcs of p(tail first) = 841/2161 = 0.389172
+  HYP-9279(B): tournaments in which EVERY vertex has a balanced partner: 1953 of 1953; min over T of min over v of max_w min(P,1-P) = 524/1561 = 0.335682 (at &K^vK^F~B~P^O~Q^?K_F?B?P?O)
+  minimiser &KAJk^f~b~P^o~q^_K?F_B?P?O: H=2721 scores (1,2,3,3,3,4,7,8,8,8,9,10) minFAS=7 transitive-plus-4
+  minimiser &K@Jk^f~b~p^O~q^_K?F_B?P?O: H=2721 scores (1,2,3,3,3,4,7,8,8,8,9,10) minFAS=7 transitive-plus-4
+( run S4 M6a; run M6a S4; run M5 M6a; run M6a M5; )  4.15s user 0.06s system 100% cpu 4.205 total

@@ -49,7 +49,7 @@ This note builds on those and does not repeat them.
 5. **Vertex-wise balance (THM-4655 1(e)–(g), HYP-9279(B)).** In every strong tournament checked, *every vertex* has a balanced partner. That holds for all strong tournaments with `n <= 10` (9,355,949 at `n = 10`).
    - On the transitive-plus-one family it is proved. The extra vertex `z` is balanced against every interior `u_i`, by the same wide-crossing mechanism. `u_1` and `u_m` are balanced against `z` or their transitive neighbour.
    - The unique Hamiltonian cycle `z u_1 … u_m z` carries at least two balanced arcs.
-   - The vertex-wise constant is exactly `1/3` for every `n >= 5` (PROVED, THM-4655 (6): `W_n = TT_(n−3) ⇒ C_3` with one back arc).
+   - The vertex-wise constant is at most `1/3` for every `n >= 5` (PROVED, THM-4655 (6): `V_n = TT_(n−3) ⇒ C_3` with one back arc), and equals `1/3` for `5 <= n <= 10`.
    - Every tight vertex for `n <= 8` lies on a cyclic triangle with two exact partners (`p = 2/3, 1/3`), the local version of the global extremals. Only the transitive-plus-one examples hang that triangle by a single back arc; most tight vertices at `n = 7, 8` need two (audit E).
    - The stronger statement (B⁺), that the balanced graph is connected, holds for `n <= 9`.
 6. **Cut vertices: the transitive-plus-one mechanism in general (THM-4655 (5), HYP-9279 (Z)).** Let `z` be a vertex whose deletion leaves `T − z` non-strong, with strong components `D_1 ⇒ … ⇒ D_k`.

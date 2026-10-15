@@ -1,0 +1,2 @@
+mode 0: tournaments tested 1500 (construction failures 0); interior vertices checked 7353 (in blocks of size <= 7: 7353); violations of 1/3 <= P(v before z) <= 2/3: 0 (in blocks <= 7: 0); minimum balance seen 1/3 = 0.333333 (n=7 k=4 sizes 1 3 1 1 v in block 3)
+mode 1: tournaments tested 1500 (construction failures 0); interior vertices checked 4277 (in blocks of size <= 7: 4277); violations of 1/3 <= P(v before z) <= 2/3: 0 (in blocks <= 7: 0); minimum balance seen 1005/2953 = 0.340332 (n=15 k=4 sizes 5 1 1 7 v in block 2)

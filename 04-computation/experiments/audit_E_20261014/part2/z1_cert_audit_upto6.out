@@ -1,0 +1,7 @@
+block types (block, z-pattern) checked: 2458; corner-condition failures: 0; lemma failures ((i),(ii), fair coin, the four comparisons): 0; L4/U4 negative: 0
+  size 1: 2 (block, pattern) types; min slack L4 = 0/1, min slack U4 = 0/1
+  size 3: 8 (block, pattern) types; min slack L4 = 5/3, min slack U4 = 5/3
+  size 4: 16 (block, pattern) types; min slack L4 = 2/1, min slack U4 = 2/1
+  size 5: 192 (block, pattern) types; min slack L4 = 26/9, min slack U4 = 26/9
+  size 6: 2240 (block, pattern) types; min slack L4 = 10/3, min slack U4 = 10/3
+( for s in 3 4 5 6; do; gentourng -q -z -c $s; done | nice -n 10 $S/z1a; )  0.01s user 0.00s system 6% cpu 0.308 total

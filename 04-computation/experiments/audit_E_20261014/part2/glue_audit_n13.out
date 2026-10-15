@@ -1,0 +1,31 @@
+== M6a + M6a
+n=13: strong tournaments 3969 (non-strong skipped 0); delta < 1/3: 0; with a balanced arc: 3969
+  minimum delta = 1052/2721 = 0.386623, attained by 3 tournaments; min over arcs of p(tail first) = 841/2161 = 0.389172
+  HYP-9279(B): tournaments in which EVERY vertex has a balanced partner: 3969 of 3969; min over T of min over v of max_w min(P,1-P) = 524/1561 = 0.335682 (at &L^veNp~w^|D}`~Q^_EG@w?[@C?`?Q?)
+  minimiser &LAJuNx~{^|D~`~q^oE?@{?[@C?`?Q?: H=8163 scores (2,2,2,3,4,4,5,8,9,9,9,10,11) minFAS=9 transitive-plus-5
+== M6a + M6b
+n=13: strong tournaments 3969 (non-strong skipped 0); delta < 1/3: 0; with a balanced arc: 3969
+  minimum delta = 2029/5063 = 0.400751, attained by 9 tournaments; min over arcs of p(tail first) = 721/1681 = 0.428911
+  HYP-9279(B): tournaments in which EVERY vertex has a balanced partner: 3969 of 3969; min over T of min over v of max_w min(P,1-P) = 7360/21093 = 0.348931 (at &LVkENx~w^|D}`~Q^oF?@W?]?f?`_O?)
+  minimiser &LA\uNx~{^|D~`~q^_F?@W?]?e?`?O?: H=5063 scores (1,2,3,3,3,4,6,8,9,9,9,10,11) minFAS=8 transitive-plus-4
+== M6b + M6a
+n=13: strong tournaments 3969 (non-strong skipped 0); delta < 1/3: 0; with a balanced arc: 3969
+  minimum delta = 592/1521 = 0.389218, attained by 1 tournaments; min over arcs of p(tail first) = 841/2161 = 0.389172
+  HYP-9279(B): tournaments in which EVERY vertex has a balanced partner: 3969 of 3969; min over T of min over v of max_w min(P,1-P) = 524/1561 = 0.335682 (at &L?_VNx^{^}f~`~O^oEG@{?]@D?`_Q?)
+  minimiser &LPJfNx^{^}f}`~o^oE?@{?[@C?`?Q?: H=13689 scores (2,2,2,3,4,4,6,8,8,9,10,10,10) minFAS=10 transitive-plus-5
+== M6b + M6b
+n=13: strong tournaments 3969 (non-strong skipped 0); delta < 1/3: 0; with a balanced arc: 3969
+  minimum delta = 1052/2721 = 0.386623, attained by 3 tournaments; min over arcs of p(tail first) = 841/2161 = 0.389172
+  HYP-9279(B): tournaments in which EVERY vertex has a balanced partner: 3969 of 3969; min over T of min over v of max_w min(P,1-P) = 524/1561 = 0.335682 (at &L?_VNx^{^}f~`~O^oFG@[?]?f?`_O?)
+  minimiser &LP\fNx^{^}f}`~o^_F?@W?]?e?`?O?: H=8163 scores (1,2,3,3,3,4,7,8,8,9,10,10,10) minFAS=9 transitive-plus-5
+== M5 + M7
+n=13: strong tournaments 3937 (non-strong skipped 0); delta < 1/3: 0; with a balanced arc: 3937
+  minimum delta = 1052/2721 = 0.386623, attained by 3 tournaments; min over arcs of p(tail first) = 1009/2637 = 0.382632
+  HYP-9279(B): tournaments in which EVERY vertex has a balanced partner: 3937 of 3937; min over T of min over v of max_w min(P,1-P) = 636/1897 = 0.335266 (at &L@?U^x~{^~F}`~_[ODw@{A]AD@@_a?)
+  minimiser &LQze^x~{^|F~`~?[?Do@{A[AC@@?a?: H=8163 scores (2,2,2,3,4,4,5,8,9,9,9,10,11) minFAS=9 transitive-plus-5
+== M7 + M5
+n=13: strong tournaments 3937 (non-strong skipped 0); delta < 1/3: 0; with a balanced arc: 3937
+  minimum delta = 1052/2721 = 0.386623, attained by 3 tournaments; min over arcs of p(tail first) = 1009/2637 = 0.382632
+  HYP-9279(B): tournaments in which EVERY vertex has a balanced partner: 3937 of 3937; min over T of min over v of max_w min(P,1-P) = 636/1897 = 0.335266 (at &L^zfFp^w^{f}`^O^gfo@c?[?E?P?G?)
+  minimiser &L@DvFx^{^}f}`^o^wfw@_?]?E?P?G?: H=8163 scores (1,2,3,3,3,4,7,8,8,9,10,10,10) minFAS=9 transitive-plus-5
+( run M6a M6a; run M6a M6b; run M6b M6a; run M6b M6b; run M5 M7; run M7 M5; )  84.00s user 0.23s system 100% cpu 1:23.85 total
