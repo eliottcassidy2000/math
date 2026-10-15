@@ -1,9 +1,10 @@
 ---
 id: THM-4655
-title: "Uniform Hamiltonian paths of strong tournaments: the 1/3-2/3 property holds for every strong 'transitive-plus-one' tournament, with the explicit balanced pair (z, u_2); there the extra vertex z is balanced against every interior vertex, every vertex has a balanced partner and the unique Hamiltonian cycle carries at least two balanced arcs; the exact transfer chain at a cut vertex; vertex-wise balance is sharp at 1/3 for every n >= 5; a rotation lemma for Hamiltonian cycles; Stanley-type log-concavity fails; exhaustive verification for all strong tournaments on n <= 10 vertices"
+title: "Uniform Hamiltonian paths of strong tournaments: the 1/3-2/3 property holds for every strong 'transitive-plus-one' tournament, with the explicit balanced pair (z, u_2); there the extra vertex z is balanced against every interior vertex, every vertex has a balanced partner and the unique Hamiltonian cycle carries at least two balanced arcs; the exact transfer chain at a cut vertex, and with it: a cut vertex z is balanced against every vertex of each interior strong component of T - z with at most 6 vertices, whatever the rest of T (computer-assisted); vertex-wise balance is sharp at 1/3 for every n >= 5; a rotation lemma for Hamiltonian cycles; Stanley-type log-concavity fails; exhaustive verification for all strong tournaments on n <= 10 vertices"
 status: >
   PROVED: statements 1, 2, 5, 6 (elementary; statement 1(f) uses an exact computer check for m <= 14 together with an
-  analytic bound for m >= 9). FINITE-EXACT: statements 3-4 (exhaustive, gentourng + exact subset DP in C). The tournament 1/3-2/3
+  analytic bound for m >= 9, and is reproved by statement 7). PROVED (computer-assisted): statement 7 (a general reduction to a
+  local certificate on one block, checked exactly for all blocks with at most 6 vertices; added after audit E). FINITE-EXACT: statements 3-4 (exhaustive, gentourng + exact subset DP in C). The tournament 1/3-2/3
   conjecture HYP-9277 (opus S35) remains OPEN; this theorem proves it, and its vertex-wise strengthening HYP-9279(B), for
   a natural subclass of strong tournaments, and extends the exhaustive verification from n <= 8 to n <= 10.
 source: mac-mini-2026-10-14-tourn
@@ -15,6 +16,7 @@ verification:
   - 04-computation/experiments/tournament_balance_20261014/tpo_cycle_arcs.py (+ .out), tpo_vertexwise_proof_check.py (+ .out): statements 1(e)-(g)
   - 04-computation/experiments/tournament_balance_20261014/cutvertex_chain.py (+ .out): statement 5, validated against the subset DP
   - 04-computation/experiments/tournament_balance_20261014/vw_tight_family.py (+ .out): statement 6
+  - 04-computation/experiments/tournament_balance_20261014/z1_cone_certificate.py (+ z1_cert_upto5.out, z1_cert_6.out), z1_local_slack.py (+ .out): statement 7
   - 04-computation/experiments/tournament_balance_20261014/rotation_lemma_check.py, logconcave_test.py, analyse_minimisers.py
 note: 05-knowledge/results/strong_tournament_balance_golden_rigidity_20261014.md
 related: [HYP-9277, HYP-9279, THM-438 (Paley Hamiltonian paths), THM-4652 (Paley pattern sums)]
@@ -130,6 +132,14 @@ related: [HYP-9277, HYP-9279, THM-438 (Paley Hamiltonian paths), THM-4652 (Paley
    - `W_n − b` is transitive, in the order `0, …, t−1, c, a`. So `W_n` is the transitive-plus-one tournament with `z = b`, and it is the reverse of the one with the equality word `1 0 1^(m−3) 0` of (c), where `m = n − 1`.
    - Audit E found the same sharpness from that side: at the equality word, `u_2` has `p = 2/3, 1/3` against `z, u_1` and is unbalanced against everything else (S2 in its report).
    - Within the transitive-plus-one family, only this word and its reverse attain `1/3`, for each `m >= 5`.
+
+7. **(Cut vertices with a small interior component; computer-assisted.)** Let `T` be strong and `z` a vertex such that `T − z` has strong components `D_1 ⇒ … ⇒ D_k` with `k >= 3`. Let `2 <= i <= k − 1` with `|D_i| <= 6`. Then
+
+   `1/3 <= p_T(v before z) <= 2/3` for every `v ∈ D_i`.
+
+   - The other components may be arbitrary, of any size, and so may `n`.
+   - Corollary: if some interior component of `T − z` has at most 6 vertices, then `z` has a balanced partner and `δ(T) >= 1/3`.
+   - This proves HYP-9279 (Z1) for interior components with at most 6 vertices, and reproves 1(f), which is the case of singleton blocks.
 
 ## Proof
 
@@ -259,6 +269,49 @@ The only in-neighbour of `0` is `b`, so a Hamiltonian path either starts at `0` 
 Hence `H = 3 + 3·2^(t−1)`, and each rotation of `abc` occurs in exactly `1 + 2^(t−1)` paths.
 
 The vertex `c` precedes `0` only in the pattern `c a b`. It precedes `i >= 1` only when moreover `i ∉ S`. This gives the stated values, and both are below `1/3`. `vw_tight_family.py` confirms the values exactly for `n = 5, …, 14`. ∎
+
+**7.** Normalise the chain of statement 5 by dividing `M_j` by `h(D_j)`. For a block `D` with `O = N⁺(z) ∩ D` and `I = N⁻(z) ∩ D`, write:
+- `e = h⁻(D)/h(D)`, `s = h⁺(D)/h(D)`;
+- `β = Σ_(X≠D) h(X) h⁺(X^c)/h(D)`, `γ = Σ_(X≠∅,D) h⁻(X) h⁺(X^c)/h(D)`;
+- `σ = Σ_X h(X) h(X^c)/h(D)`, `α = Σ_(X≠∅) h⁻(X) h(X^c)/h(D)`.
+
+The normalised entries are `pre → pre = post → post = 1`, `pre → gap = e`, `pre → mid = β`, `pre → post = γ`, `gap → post = s`, `mid → mid = σ` and `mid → post = α`. For `v ∈ D`, `β(v)`, `γ(v)`, `α(v)` are the parts with `v ∈ X`.
+
+*(i) Elementary block inequalities.* `γ + s <= β <= σ − 1` and `e + γ <= α <= σ − 1`.
+- `s` is the `X = ∅` term of `β`, and `h⁻ <= h`.
+- `σ` contains the terms `X = D` and `X = ∅`, both equal to 1.
+
+*(ii) End blocks.* If `z` has an out-neighbour in `D`, then `β >= 1` and `γ + s >= 1`.
+- Cut each Hamiltonian path of `D` just before its first vertex in `O`. This is a `β`-split.
+- If the cut is at the start, it is an `s`-term. Otherwise the vertex before the cut lies in `I`, and the cut is a `γ`-split.
+
+Dually, if `D` has an in-neighbour of `z`, then `α >= 1` and `e + γ >= 1`, by cutting just after the last vertex in `I`. All these maps are injective, since concatenation inverts them.
+
+*(iii) Invariant region.* After blocks `1, …, i−1` the left vector is `(1, g, P, Lp)`, with `0 <= g <= 1`, `P >= 1` and `1 <= Lp <= P`. The base case is the first block: by (ii), `P = β_1 >= 1` and `Lp = γ_1 + s_1 >= 1`, and `Lp <= P` by (i). Each block maps
+- `g ↦ e`,
+- `P ↦ β + σP >= P`,
+- `Lp ↦ γ + g s + αP + Lp`,
+
+and the new `Lp` lies between the old `Lp` and `γ + s + (α + 1)P <= β + σP`. Symmetrically, the right vector from block `i+1` on is `(Rp, s', Q, 1)`, with `0 <= s' <= 1`, `Q >= 1` and `1 <= Rp <= Q`.
+
+*(iv) The two inequalities.* For `v ∈ D_i`, statement 5 gives
+- `N = Rp + e s' + β(v) Q + γ(v) + P(σQ/2 + α(v))`,
+- `H = Rp + e s' + β Q + γ + g s + P(σQ + α) + Lp`.
+
+Both `3N − H` and `2H − 3N` are affine in each of `g, s', Lp, Rp`. So on the region (iii) their minima are attained at `g, s' ∈ {0, 1}`, `Lp ∈ {1, P}` and `Rp ∈ {1, Q}`. Each such corner is `aPQ + bP + cQ + d` with `a = σ/2`, and this is `>= 0` on `[1, ∞)²` iff `a >= 0`, `a + b >= 0`, `a + c >= 0` and `a + b + c + d >= 0`.
+
+*(v) Finite check.* `z1_cone_certificate.py` verifies all these conditions exactly for:
+- every strong tournament `D` with `|D| <= 6`: the singleton, and the 1, 1, 6 and 35 classes of sizes 3–6;
+- every partition `D = O ⊔ I`;
+- every `v ∈ D`.
+
+That is 2,458 block types and every `v`, with no failure (`z1_cert_upto5.out`, `z1_cert_6.out`). ∎
+
+*Remark (what is left in general).*
+- Of the four bilinear conditions, three hold for every block by short comparisons with the complement-symmetric `σ`; for instance `β − β(v) <= σ/2` and `α − α(v) <= σ/2 − 1`.
+- Only the corner `a + b + c + d >= 0` (`L4` for the lower bound, `U4` for the upper) needs the computer.
+- Its minimum slack is 0 for singletons, the THM-4655 equality word, and 5/3, 2, 26/9, 10/3 for block sizes 3, 4, 5, 6 (`z1_local_slack.out`).
+- A proof of `L4` and `U4` for all strong tournaments would prove HYP-9279 (Z1) in full, and hence HYP-9277 for every strong tournament with a cut vertex whose deletion leaves at least three strong components.
 
 ## Reading
 

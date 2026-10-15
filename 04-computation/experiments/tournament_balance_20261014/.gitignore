@@ -1,0 +1,13 @@
+# compiled binaries of the C programs in this folder (rebuild with cc -O2 -o NAME NAME.c)
+tbal
+tbal2
+tbal3
+tbal4
+tbal5
+tbal6
+tbal7
+tbal_anneal
+tbal_extend
+tbal_near
+tpo_u2_check
+*.err

@@ -10,7 +10,8 @@ status: >
   for n <= 9. On the transitive-plus-one family, (B) and (B+) are PROVED (THM-4655 1(g)). (B) is sharp: the vertex-wise
   constant equals 1/3 for every n >= 5 (PROVED, THM-4655 (6), family W_n). (B_loc) is FINITE-EXACT for n <= 9 and exact on the transitive-plus-one family
   to n = 14. (Z) is FINITE-EXACT for n <= 9, survives random and adversarial sampling of the exact cut-vertex transfer chain
-  (THM-4655 (5)) to n = 46, is sharp at 1/3, and is PROVED for singleton blocks (THM-4655 1(f)). Each of (A), (B), (B+),
+  (THM-4655 (5)) to n = 46, is sharp at 1/3, and (Z1) is PROVED for every interior component with at most 6 vertices, the other
+  components arbitrary (THM-4655 (7), computer-assisted; singleton blocks = THM-4655 1(f)). Each of (A), (B), (B+),
   (B_loc) implies HYP-9277's inequality, and (Z) implies it for every strong tournament with a cut vertex; (A) gives it with a
   strict gap for strong components on >= 4 vertices. Variant (H) is REFUTED (explicit 9-vertex counterexample). Audited
   (audit E, MISTAKE-615: (A) re-attributed, poset example, tight-vertex structure and the k = 2 floor of (Z) corrected).
@@ -62,7 +63,7 @@ In a strong tournament on `n >= 3` vertices, every vertex `v` has a partner `w` 
   - Exhaustively (`tbal5.c`), `1/3` is the minimum for `n = 5, …, 9`. It is attained by 1, 2, 5, 17 and 82 strong tournaments respectively.
   - Annealing at `n = 11` (`tbal_anneal.c`) also stops exactly at `1/3`.
   - **Structure of the tight vertices** (corrected by audit E, `tight_structure.out`): each of the 32 tight vertices with `n <= 8` lies on a cyclic triangle formed with two of its exact partners (`p = 2/3, 1/3`), as in an isolated `C_3`.
-    - The triangle is attached by a single back arc only in the transitive-plus-one examples: `W_n` and the reverse of THM-4655's equality word. These include every tight vertex at `n = 5, 6`.
+    - The triangle is attached by a single back arc only in the transitive-plus-one examples: the tournament with THM-4655's equality word `1 0 1^(m−3) 0` and its reverse `W_n`. These include every tight vertex at `n = 5, 6`.
     - At `n = 7`, 5 of the 7 tight vertices need two back arcs. At `n = 8`, 18 of 20 do, and the triangle can sit in the middle of the order.
 
 ## Statement (B⁺): the balanced graph is connected
@@ -89,8 +90,12 @@ Let `z` be a vertex of a strong tournament `T` with `T − z` not strong, and le
 - **(Z1)** If `k >= 3`, then `1/3 <= p(v before z) <= 2/3` for every `v ∈ D_2 ∪ … ∪ D_(k−1)`.
 - **(Z2)** `z` has a balanced partner. For `k >= 3` this follows from (Z1); for `k = 2` it is the content.
 
-**Why it should hold.** In the exact transfer chain of THM-4655 (5), every interior block is a fair coin against `z` inside the crossing window. Wide windows carry geometric weight, since each interior block contributes `Σ_X h(X) h(D ∖ X) >= 2h(D)`.
-- For singleton blocks, `T − z` is transitive, and (Z1) is PROVED (THM-4655 1(f)).
+**Why it holds, and where it is PROVED.** In the exact transfer chain of THM-4655 (5), every interior block is a fair coin against `z` inside the crossing window. Wide windows carry geometric weight, since each interior block contributes `Σ_X h(X) h(D ∖ X) >= 2h(D)`.
+- **PROVED for every interior component with at most 6 vertices** (THM-4655 (7); computer-assisted). The other components may be arbitrary, and so may `n`.
+  - The normalised chain stays in an invariant region: left `(1, g, P, Lp)` with `P >= 1` and `1 <= Lp <= P`; right `(Rp, s', Q, 1)` with `Q >= 1` and `1 <= Rp <= Q`. The bounds `>= 1` come from injections that cut a Hamiltonian path of an end block at its first out-neighbour (or last in-neighbour) of `z`.
+  - So (Z1) at `v` reduces to finitely many bilinear conditions on `v`'s own block. These are checked exactly for all strong tournaments with at most 6 vertices, all `z`-patterns and all `v`: 2,458 block types.
+  - It includes singleton blocks (1(f)) and `C_3` blocks.
+- **Reduction in general.** All but two corner conditions (`L4`, `U4`) hold for every block. Their slack is 0 only for singletons and grows with the block (5/3, 2, 26/9, 10/3 for sizes 3–6). Proving `L4`, `U4` for all strong tournaments would prove (Z1) in full.
 
 **Evidence.**
 - **Exhaustive** for `n <= 9` (`tbal7.c`): 99,695 cut-vertex instances at `n = 9`, of which 13,060 have `k >= 3`. There are no failures of (Z1) or (Z2). Moreover a balanced partner always lies in `D_1 ∪ D_2` or in `D_(k−1) ∪ D_k`.
@@ -104,10 +109,9 @@ Let `z` be a vertex of a strong tournament `T` with `T − z` not strong, and le
 
 **Consequence.** (Z) would prove HYP-9277 for every strong tournament with a cut vertex. At `n = 10` these are 2,820,361 of the 9,355,949 strong tournaments.
 
-**Route to a proof.** The chain reduces (Z1) to inequalities between the block parameters: the `M_j` entries normalised by `h(D_j)`.
-- THM-4655 1(f) is the case where every `mid → mid` entry equals 2.
-- A crude geometric bound handles blocks far from both ends.
-- The delicate case is `i = 2` (and dually `i = k − 1`). There a small left weight `Σ_(X ≠ D_1) h(X) h⁺(D_1 ∖ X)/h(D_1)` must be offset, as Lemmas A and B do for singleton blocks.
+**Route to a full proof.** THM-4655 (7) reduces (Z1) to two local inequalities `L4`, `U4` on one strong tournament with a 2-colouring (`N⁺(z)`, `N⁻(z)`) and a marked vertex.
+- Generic chain constraints are not enough: an abstract chain with a left weight `0.0002` violates (Z1). The end-block injections `β, γ + s >= 1` are exactly what rule this out.
+- The remaining gap is a combinatorial proof of `L4`, `U4` for blocks of every size. (Z2) at `k = 2`, where there are no interior blocks, needs a different argument.
 
 ## Refuted variant (H): balanced arcs on Hamiltonian cycles
 
@@ -153,16 +157,17 @@ The blocks are:
 | 11 | `M5 + M5` | `592/1521 = 0.38922` | 1521 |
 | 12 | `M6a + M5` | `1052/2721 = 0.38662` | 2721 |
 | 13 | `M6a + M6a`, `M6b + M6b`, `M5 + M7`, `M7 + M5` | `3156/8163 = 1052/2721` | 8163 |
+| 14 | `M7 + M6a` (`M8 + M5`: 0.41535; `M6a + M7`: 0.40075) | `9468/24489 = 1052/2721` | 24489 |
 
 - Both the `n = 11` and the `n = 12` minimiser were confirmed by an independent Python DP (`glue_minimisers_check.out`).
 - The `n = 13` value `592/1521 = 0.38922` found first by the extension tower (`tbal_extend.c`, `tower.log`) is two `M6` blocks glued at a cut vertex, with `H = 13689 = 117²`.
 - Deleting suitable vertices from it keeps `δ = 592/1521` at `n = 12`.
-- So the minimum of `δ` is **not** monotone: 4/11 for `n = 5, 6, 7`, then 62/157 for `n = 8, 9, 10`, then at most 0.38922 at `n = 11` and at most 0.38662 at `n = 12, 13`.
+- So the minimum of `δ` is **not** monotone: 4/11 for `n = 5, 6, 7`, then 62/157 for `n = 8, 9, 10`, then at most 0.38922 at `n = 11` and at most 0.38662 at `n = 12, 13, 14`. The value `1052/2721` repeats across `n = 12..14`, a plateau like 62/157 at `n = 8..10`.
 - Every construction stays above `4/11 = 0.36364`. A random-arc annealer (`tbal_anneal.c`) stalls far above, near 0.425 at `n = 11`.
 
 ## Status of the constant
 
 - `4/11` is the observed infimum. It is attained only at `n = 5, 6, 7` among `n <= 10` (exhaustive), and in no construction for `n = 11..13`.
-- The minimum for `n = 8, 9, 10` is `62/157 = 0.3949`. For `n = 11, 12, 13` it is at most 0.3892, 0.3866 and 0.3866.
-- Whether glued constructions with larger blocks push `δ` towards or below `4/11` is open. Larger pairs (`n = 14, 15`) are running (`glue_blocks_run2.py`).
-- No strong tournament found with `4 <= n <= 13` comes close to `1/3`.
+- The minimum for `n = 8, 9, 10` is `62/157 = 0.3949`. For `n = 11, 12, 13, 14` it is at most 0.3892, 0.3866, 0.3866 and 0.3866.
+- Whether glued constructions with larger blocks push `δ` towards or below `4/11` is open. The 62/157 block `M8` is a worse gluing ingredient (0.41535 at `n = 14`). The `n = 15` pairs are in `glue_blocks2.out`.
+- No strong tournament found with `4 <= n <= 14` comes close to `1/3`.
