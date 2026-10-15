@@ -52,7 +52,7 @@ The two arithmetic coordinates differ in kind:
 
 - The fits (`fit_*.py`, kept as exploration records) first ruled out the obvious candidates. No fit `W_q = P(q) + c·Tr a_q(F)` exists for any single newform orbit `F` scanned. The scan covered 2-power levels 4..256, weights 2..6 and quadratic 2-power characters (`mf_basis.gp`, `mf_basis2.gp`), with quadratic `P`.
 - Traces of squares of weight-3 coefficients (`mf_w3sq.gp`) then isolated `Re(b(q)²)` of the level-32 orbit.
-- The identity was then tested as one exact equation at every prime `5 <= q <= 30,000`, and in its Frobenius form at the prime powers 9, 25, 27, 49, 81, 121, 125, 169, 243, 289, 343 and 361. There were no failures.
+- The identity was then tested as one exact equation at every prime `5 <= q <= 30,000`, and in its Frobenius form at the prime powers 9, 25, 27, 49, 81, 121, 125, 169, 243, 289, 343, 361, 625, 729, 1331, 2187 and 2401. There were no failures.
 - On the prime-power side the field arithmetic is exact, and the six-vertex brute force agrees at every `q <= 49`.
 
 The prime-power success matters. It says the identity is motivic, not a numerical accident of the prime field.

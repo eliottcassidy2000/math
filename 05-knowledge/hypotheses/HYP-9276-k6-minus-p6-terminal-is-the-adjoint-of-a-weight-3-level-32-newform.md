@@ -3,7 +3,8 @@ id: HYP-9276
 title: "The Paley K6 - P6 terminal is the adjoint (symmetric square) of the McCarthy-Papanikolas weight-3 newform of level 32: M_q = -b(q^2) - 2q - 1, V_q = q(q-1)(|b(q)|^2 - q^2 + 7 + 14 chi_(-4)(q))"
 status: >
   OPEN (a modular identity). FINITE-EXACT at all 3,243 primes 5 <= q <= 30,000 (both residue classes mod 4), and at
-  12 prime powers (9, 25, 27, 49, 81, 121, 125, 169, 243, 289, 343, 361) in the Frobenius form of statement 2.
+  17 prime powers (9, 25, 27, 49, 81, 121, 125, 169, 243, 289, 343, 361, 625, 729, 1331, 2187, 2401) in the Frobenius form of
+  statement 2, including the Paley prime powers 27, 243, 343, 1331 and 2187.
   The reduction it feeds (THM-4653) is PROVED. Corollaries (b)-(c) are CONDITIONAL on this hypothesis and use CITED theorems.
   (d)-(e) are FINITE-EXACT observations.
 session: mac-mini-2026-10-14-wilson
@@ -12,7 +13,8 @@ scripts:
   - 04-computation/experiments/paley_k6p6_20261014/k6p6_fft.py (+ .out, .json): M_q at all primes to 30,000
   - 04-computation/experiments/paley_k6p6_20261014/identify_g.gp, g_coeffs.gp (+ .out), g_trace_a2_half.txt: the newform (gp mf package)
   - 04-computation/experiments/paley_k6p6_20261014/k6p6_identity_check.py (+ .out): the identity, Sato-Tate moments, zeros, 2-adic data
-  - 04-computation/experiments/paley_k6p6_20261014/k6p6_prime_powers.py (+ .out): prime powers, exact field arithmetic
+  - 04-computation/experiments/paley_k6p6_20261014/k6p6_prime_powers.py (+ .out): prime powers to 361, exact field arithmetic
+  - 04-computation/experiments/paley_k6p6_20261014/k6p6_prime_powers_large.py (+ .out): 625, 729, 1331, 2187, 2401 (O(q^2), log tables)
 related: [THM-4653, HYP-9274, HYP-9275, THM-4650 (D19 midline curve of conductor 32), paley_next_cores_20261014i.md]
 ---
 
@@ -53,7 +55,7 @@ Let `M_q` be the Legendre bilinear form of THM-4653, and `ε = χ(−1)` in `F_q
 
    `M_q = −(α^(2r) + (αβ)^r + β^(2r)) − 2q − 1`,
 
-   which is the trace of `Frob_p^r` on the adjoint representation. Then `V_q = q(q−1)[ε(S_q + 14) + 7]` with `S_q = α^(2r) + (αβ)^r + β^(2r)`. This covers the Paley prime powers `q = 27, 243, 343`.
+   which is the trace of `Frob_p^r` on the adjoint representation. Then `V_q = q(q−1)[ε(S_q + 14) + 7]` with `S_q = α^(2r) + (αβ)^r + β^(2r)`. This covers the Paley prime powers `q = 27, 243, 343, 1331, 2187`.
 
 ### Values
 
@@ -75,7 +77,7 @@ The recorded values `V₇ = 336`, `V₁₁ = −12320`, `V₁₉ = −76608` and
 - **Primes.** All 3,243 primes `5 <= q <= 30,000`, with no failure.
   - `M_q` comes from the O(q log q) FFT evaluator of THM-4653 (3). Its float64 rounding is checked against the exact O(q³) values at all 237 primes below 1500, and every entry is an integer of size at most `q²`.
   - `b(q)` comes from gp's `mfcoefs`.
-- **Prime powers.** All 12 prime powers up to 361, with exact `F_q` arithmetic: an irreducible polynomial, and `χ` computed from the squares.
+- **Prime powers.** All 12 prime powers up to 361, with exact `F_q` arithmetic (an irreducible polynomial, `χ` from the squares), and 625, 729, 1331, 2187, 2401 by an O(q²) evaluation with discrete-log tables.
 
 The identity was found by fitting `M_q` against `Q(q)`-combinations of trace data of newform orbits. Products and squares were tried at weights 2–4, then the weight-3 square was isolated. It was then tested at every prime and prime power above as a single exact equation. Nothing was fitted at the tested primes.
 
