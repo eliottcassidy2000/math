@@ -1,0 +1,4 @@
+|H1| = 19, |H2| = 31, |V25| = 25, |V31| = 31, |V37| = 37, |V49| = 49, |L727| = 727, |S361| = 361, |G| = 1087 [0.1s]
+L727 u rho S361: |V| = 1087, exact unit edges (all pairs, no float filter) = 5892 [0.4s]
+L727 u rho S361 4-colourable (glucose4, triangle (543, 217, 360) fixed): False  (2.4s) [2.9s]
+L727 u rho S361 4-colourable (kissat404, triangle (543, 217, 360) fixed): False  (2.9s) [5.8s]

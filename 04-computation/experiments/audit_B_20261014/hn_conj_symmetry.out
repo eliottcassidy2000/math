@@ -1,0 +1,3 @@
+M3: conj(A) == A as sets: True
+P1: conj(A) == A as sets: True
+M1+M1: conj(A) == A as sets: True

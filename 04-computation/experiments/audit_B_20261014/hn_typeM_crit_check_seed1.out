@@ -1,0 +1,7 @@
+|H1| = 19, |H2| = 31, |V25| = 25, |V31| = 31, |V37| = 37, |V49| = 49, |L727| = 727, |S361| = 361, |G| = 1087 [0.1s]
+L727 u rho S361: |V| = 1087, exact unit edges (all pairs, no float filter) = 5892 [0.4s]
+crit: n = 611, listed edges 3084; vertices in G: 611/611 (in L727: 448, others from rho S361: 163); distinct: 611 [0.4s]
+crit induced unit edges recomputed: 3084; equal to the listed edge list: True [0.6s]
+crit graph 4-colourable (glucose4): False  (133.4s) [134.0s]
+crit graph 4-colourable (minisat22): False  (296.1s) [430.1s]
+crit graph 4-colourable (lingeling): run stopped by the auditor after >280 s (glucose4 and minisat22 already UNSAT); vertex-criticality rerun separately in hn_typeM_crit_vc_seed1.out

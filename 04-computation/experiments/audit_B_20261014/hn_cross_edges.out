@@ -1,0 +1,13 @@
+W_M3_u_psiM3: |V| = 64513, |E| = 542472, cross edges (excluding the origin) = 120, edges at origin = 144
+   |z|^2 = 0.666667, |psi w|^2 = 2.666667, angle = 28.955 deg: 24 edges
+   |z|^2 = 2.666667, |psi w|^2 = 0.666667, angle = 28.955 deg: 24 edges
+   |z|^2 = 4.0, |psi w|^2 = 4.0, angle = 28.955 deg: 72 edges
+   arccos(7/8) = 28.955 deg
+   near-miss non-edges: 336; |d^2 - 1| in [1.2256e-7, 8.2454e-7] (50-digit evaluation)
+   distinct values of |d^2-1|: ['1.2256199e-7', '4.4774157e-7', '5.0432863e-7', '6.0990761e-7', '6.2147109e-7', '7.35498e-7']
+M3_u_psiP1: |V| = 48121, |E| = 385296, cross edges (excluding the origin) = 48, edges at origin = 144
+   |z|^2 = 2.666667, |psi w|^2 = 0.666667, angle = 28.955 deg: 24 edges
+   |z|^2 = 4.0, |psi w|^2 = 4.0, angle = 28.955 deg: 24 edges
+   arccos(7/8) = 28.955 deg
+   near-miss non-edges: 168; |d^2 - 1| in [1.2256e-7, 8.2454e-7] (50-digit evaluation)
+   distinct values of |d^2-1|: ['1.2256199e-7', '4.4774157e-7', '5.0432863e-7', '7.35498e-7', '8.2454469e-7']

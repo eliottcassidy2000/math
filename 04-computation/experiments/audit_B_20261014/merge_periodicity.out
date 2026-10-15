@@ -1,0 +1,9 @@
+h = 1, K =  8: mu_h(K) = 0.32031; odd-class fraction 0.14844 >= 1 - 2(1 - mu) = -0.35938: True; n <= 2^18 disagreeing with their class: 0
+h = 1, K = 12: mu_h(K) = 0.36035; odd-class fraction 0.19971 >= 1 - 2(1 - mu) = -0.27930: True; n <= 2^18 disagreeing with their class: 0
+h = 1, K = 14: mu_h(K) = 0.37415; odd-class fraction 0.21680 >= 1 - 2(1 - mu) = -0.25171: True; n <= 2^18 disagreeing with their class: 0
+h = 2, K =  8: mu_h(K) = 0.16797; odd-class fraction 0.03125 >= 1 - 2(1 - mu) = -0.66406: True; n <= 2^18 disagreeing with their class: 0
+h = 2, K = 12: mu_h(K) = 0.21973; odd-class fraction 0.08740 >= 1 - 2(1 - mu) = -0.56055: True; n <= 2^18 disagreeing with their class: 0
+h = 2, K = 14: mu_h(K) = 0.23914; odd-class fraction 0.11060 >= 1 - 2(1 - mu) = -0.52173: True; n <= 2^18 disagreeing with their class: 0
+h = 3, K =  8: mu_h(K) = 0.04688; odd-class fraction 0.03125 >= 1 - 2(1 - mu) = -0.90625: True; n <= 2^18 disagreeing with their class: 0
+h = 3, K = 12: mu_h(K) = 0.09937; odd-class fraction 0.08496 >= 1 - 2(1 - mu) = -0.80127: True; n <= 2^18 disagreeing with their class: 0
+h = 3, K = 14: mu_h(K) = 0.12091; odd-class fraction 0.10510 >= 1 - 2(1 - mu) = -0.75818: True; n <= 2^18 disagreeing with their class: 0

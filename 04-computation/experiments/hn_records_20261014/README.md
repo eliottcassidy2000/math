@@ -51,7 +51,8 @@ Every graph here has exact coordinates in a real multiquadratic field, with `x, 
     * `ψ = φ_0^(−1) ρ` is Parts' hinge.
     * `M_3` and `M_2 ⊕ M_1^clock` force radius 2; `M_1 ⊕ M_1` does not.
     * All four symmetric reductions tested are 4-colourable.
-11. **Later experiments.**
+    * Of the 120 hinge edges of `W`, 72 join radius-2 points and 48 join `|z|² = 2/3` to `|ψw|² = 8/3` (audit B). Only `M_3 ∪ ψP_1` was run in `spindle_free_mixed.log`; `P_1 ∪ ψM_3` is congruent to it by complex conjugation.
+11. **Later experiments** (added after the audit-B scope; not audited).
     * The hybrid `L727 ∪ ρP_1` is 4-colourable (`hybrid_probe.log`).
     * OptUx on the 784-vertex union timed out (`smus_union4.log`).
     * C6 orbit minimisation of `L727 ∪ ρS361` gave 683 vertex-critical, worse than greedy (`orbit_core_typeM.log`).

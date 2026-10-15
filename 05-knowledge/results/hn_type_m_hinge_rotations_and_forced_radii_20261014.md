@@ -13,7 +13,7 @@ Scripts and outputs: `04-computation/experiments/hn_records_20261014/` (see its 
 Note §3 of `repair_algebra_minus_one_and_wilson_dictionary_20261014.md` ranks a constructive Hadwiger–Nelson record as the most realistic notable result among the owner's four problems. The current records:
 
 * **Smallest 5-chromatic unit-distance graph:** 509 vertices, 2,442 edges (Parts, arXiv:2010.12665).
-* **Smallest Moser-spindle-free one:** 1,441 vertices (Heule, Geombinatorics 31(2), 2021).
+* **Smallest Moser-spindle-free one:** 1,441 vertices (Heule 2021; corroborated by Haugland, arXiv:2608.04542; the venue "Geombinatorics 31(2)" is not confirmed).
 
 Parts builds his graphs as **type M**, `G = L ∪ ρS`. Here `L` and `S` are Minkowski sums of rotated hexagonal wheels, and `ρ = exp(i arccos(7/8))` rotates `S` about a shared vertex. He writes that "working constructions of type M with other rotations are not known yet". This note tests that question.
 
@@ -56,15 +56,15 @@ Parts builds his graphs as **type M**, `G = L ∪ ρS`. Here `L` and `S` are Min
 6. **Exact smallest-MUS search does not scale.** pysat's OptUx (implicit hitting sets) found the smallest non-3-colourable subgraph of V25 (9 vertices) instantly. On `H1 ⊕ H1` it ran more than 10 minutes without finishing. Parts' 509 came from a structured hitting-set search with symmetry and orbit compression, not from a generic smallest-MUS solver.
 
 7. **The spindle-free graphs are type M with Parts' hinge** (`spindle_free_*.log`; SOLVER).
-   * In the rebuild, `ψ = φ_0^(−1) ρ`. Its 120 new edges join radius-2 points `z` and `ψw` at the chord angle `θ_4 = 28.955°`, for example `2φ_0^(a−1) ~ 2ψφ_0^a`. So case 10 is a type-M graph with Parts' ρ-hinge, in the field `Q(i, √2, √3, √5)`.
+   * In the rebuild, `ψ = φ_0^(−1) ρ`. Its 120 new edges all have angular gap `θ_4 = arccos(7/8) = 28.955°`. Only 72 of them join radius-2 points `z` and `ψw` (for example `2φ_0^(a−1) ~ 2ψφ_0^a`). The other 48 join `|z|² = 2/3` to `|ψw|² = 8/3`, 24 in each direction; the distance works because `2/3 + 8/3 − 2·(4/3)·(7/8) = 1`. In `M_3 ∪ ψP_1` the 48 cross edges split as 24 at radius 2 and 24 between `8/3` and `2/3` (audit B, `hn_cross_edges.out`). So case 10 is a type-M graph with Parts' ρ-hinge, in the field `Q(i, √2, √3, √5)`, but the hinge is not carried by radius 2 alone: the hinge principle must account for the `2/3`–`8/3` edges too. (The pre-audit text said all 120 join radius-2 points, MISTAKE-610.)
    * **Forcing.**
      * `M_1 ⊕ M_1` (2,593 vertices) does not force radius 2.
      * `P_1 = M_2 ⊕ M_1^clock` (15,865 vertices; `M_1^clock = {0} ∪ {φ_0^a}`) forces it on its 24-point orbit `2φ_0^a`.
      * `M_3` (32,257 vertices) forces it on its 72-point orbit.
    * **4-colourable reductions.** `(M_1 ⊕ M_1) ∪ ψ(M_1 ⊕ M_1)` (5,185), `M_3 ∪ ψ(M_1 ⊕ M_1)` (34,849), `P_1 ∪ ψP_1` (31,729) and `(M_2^c ⊕ M_1) ∪ ψ(M_2^c ⊕ M_1)` (11,569) are all 4-colourable.
-   * As with L727, a non-forcing piece kills 5-chromaticity, and two forcing pieces are not enough. `M_3` is the rigid piece. The mixed pairs `M_3 ∪ ψP_1` and `P_1 ∪ ψM_3` are in `spindle_free_mixed.log`.
+   * As with L727, a non-forcing piece kills 5-chromaticity, and two forcing pieces are not enough. The rigidity of `M_3` was not measured. Only the mixed pair `M_3 ∪ ψP_1` was run (`spindle_free_mixed.log`). `P_1 ∪ ψM_3` is congruent to it under complex conjugation, since `M_3` and `P_1` are both conjugation-invariant (checked exactly by audit B), so it needs no separate test.
 
-8. **Later experiments (SOLVER).**
+8. **Later experiments (SOLVER; added after the audit-B scope, not audited).**
    * **The hybrid fails.** Parts' rigid `L727` hinged by `ρ` to the clock-family forcing piece `P_1` (16,591 vertices, field `Q(√2, √3, √5, √11)`) is **4-colourable**. So rigid plus forcing is not sufficient across families.
      * The ρ-edges only join radius-2 points with equal angles, or angles differing by `2θ_4 = 57.91°`.
      * `L727` and `P_1` share only the six hexagonal directions, while `L727`'s minimal mono-sets use the η-directions `60k ± 16.78°`.
@@ -74,7 +74,7 @@ Parts builds his graphs as **type M**, `G = L ∪ ρS`. Here `L` and `S` are Min
    * **Symmetric minimisation loses here.**
      * `L727 ∪ ρS361` is C6-invariant: one centre plus 181 orbits of size 6.
      * Orbit-level deletion gave an orbit-critical subgraph of 116 orbits (691 vertices). Vertex-level refinement brought it to a vertex-critical **683**, worse than asymmetric greedy deletion (611). This is Parts' "overcompression".
-   * **The spindle-free graph is C24-invariant.** `M_3 ∪ ψP_1` is one centre plus 2,005 orbits of size 24, so symmetric subgraphs have `1 + 24m` vertices; Heule's 1,441 is `m = 60`.
+   * **The spindle-free graph is C24-invariant.** `M_3 ∪ ψP_1` is one centre plus 2,005 orbits of size 24, so symmetric subgraphs have `1 + 24m` vertices. `1441 = 1 + 24·60` is NUMEROLOGY unless Heule's graph is itself C24-symmetric, which was not checked.
      * Orbit-level minimisation (`orbit_core.py`) runs slowly: CaDiCaL with 2,006 assumption literals had not finished its first core after more than an hour, against 25 minutes for the plain solve.
      * The next step is phase-1 cores without assumptions, e.g. by fixing a random half of the orbits off and testing.
 

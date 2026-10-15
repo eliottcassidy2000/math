@@ -1,0 +1,11 @@
+N = 10000000 h = 1 all n                count   10000000  COINC 0.49647  EQODD 0.49647  (coincidences with unequal odd counts: 0)
+N = 10000000 h = 1 odd n                count    5000000  COINC 0.37007  EQODD 0.37007  (coincidences with unequal odd counts: 0)
+N = 10000000 h = 1 odd primes           count     664578  COINC 0.36922  EQODD 0.36922  (coincidences with unequal odd counts: 0)
+N = 10000000 h = 1 lesser twin primes   count      58980  COINC 0.36906  EQODD 0.36906  (coincidences with unequal odd counts: 0)
+unfinished: 0
+N = 10000000 h = 2 all n                count   10000000  COINC 0.40288  EQODD 0.40288  (coincidences with unequal odd counts: 0)
+N = 10000000 h = 2 odd n                count    5000000  COINC 0.31485  EQODD 0.31485  (coincidences with unequal odd counts: 0)
+N = 10000000 h = 2 odd primes           count     664578  COINC 0.31378  EQODD 0.31378  (coincidences with unequal odd counts: 0)
+N = 10000000 h = 2 lesser twin primes   count      58980  COINC 0.31540  EQODD 0.31540  (coincidences with unequal odd counts: 0)
+unfinished: 0
+$SP/merge_definitions 10000000  4.04s user 0.03s system 68% cpu 5.918 total

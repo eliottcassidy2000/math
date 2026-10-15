@@ -12,7 +12,7 @@ for(n = 1, 12, for(d = 1, 6, if(gcd(n, d) == 1,
   if(Ea == [], next);
   Em = ellminimalmodel(Ea);
   r = ellrank(Em);
-  print("ratio 2a = ", n, "/", d, ": conductor ", ellglobalred(Em)[1], ", torsion ", elltors(Em)[1], ", rank in [", r[1], ",", r[2], "]")
+  print("ratio 2a = ", n, "/", d, ": conductor ", ellglobalred(Em)[1], ", torsion ", elltors(Em)[1], " = Z^", elltors(Em)[2], ", rank in [", r[1], ",", r[2], "]")
 )));
 }
 quit

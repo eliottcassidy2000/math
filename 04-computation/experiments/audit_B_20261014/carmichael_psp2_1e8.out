@@ -1,0 +1,258 @@
+C 561 omega 3 G 1 giuga_at [3,] factors 3 11 17 n-2prime 0 n+2prime 1
+C 1105 omega 3 G 1 giuga_at [5,] factors 5 13 17 n-2prime 1 n+2prime 0
+C 1729 omega 3 G 0 giuga_at [] factors 7 13 19 n-2prime 0 n+2prime 0
+C 2465 omega 3 G 0 giuga_at [] factors 5 17 29 n-2prime 0 n+2prime 1
+C 2821 omega 3 G 0 giuga_at [] factors 7 13 31 n-2prime 1 n+2prime 0
+C 6601 omega 3 G 0 giuga_at [] factors 7 23 41 n-2prime 1 n+2prime 0
+C 8911 omega 3 G 0 giuga_at [] factors 7 19 67 n-2prime 0 n+2prime 0
+C 10585 omega 3 G 0 giuga_at [] factors 5 29 73 n-2prime 0 n+2prime 0
+C 15841 omega 3 G 0 giuga_at [] factors 7 31 73 n-2prime 0 n+2prime 0
+C 29341 omega 3 G 0 giuga_at [] factors 13 37 61 n-2prime 1 n+2prime 0
+C 41041 omega 4 G 0 giuga_at [] factors 7 11 13 41 n-2prime 1 n+2prime 0
+C 46657 omega 3 G 1 giuga_at [13,] factors 13 37 97 n-2prime 0 n+2prime 0
+C 52633 omega 3 G 1 giuga_at [7,] factors 7 73 103 n-2prime 1 n+2prime 0
+C 62745 omega 4 G 0 giuga_at [] factors 3 5 47 89 n-2prime 1 n+2prime 0
+C 63973 omega 4 G 0 giuga_at [] factors 7 13 19 37 n-2prime 0 n+2prime 0
+C 75361 omega 4 G 0 giuga_at [] factors 11 13 17 31 n-2prime 0 n+2prime 0
+C 101101 omega 4 G 0 giuga_at [] factors 7 11 13 101 n-2prime 0 n+2prime 0
+C 115921 omega 3 G 0 giuga_at [] factors 13 37 241 n-2prime 0 n+2prime 0
+C 126217 omega 4 G 0 giuga_at [] factors 7 13 19 73 n-2prime 0 n+2prime 0
+C 162401 omega 3 G 0 giuga_at [] factors 17 41 233 n-2prime 0 n+2prime 0
+C 172081 omega 4 G 0 giuga_at [] factors 7 13 31 61 n-2prime 1 n+2prime 0
+C 188461 omega 4 G 2 giuga_at [7,19,] factors 7 13 19 109 n-2prime 1 n+2prime 0
+C 252601 omega 3 G 0 giuga_at [] factors 41 61 101 n-2prime 0 n+2prime 0
+C 278545 omega 4 G 0 giuga_at [] factors 5 17 29 113 n-2prime 1 n+2prime 0
+C 294409 omega 3 G 0 giuga_at [] factors 37 73 109 n-2prime 0 n+2prime 0
+C 314821 omega 3 G 0 giuga_at [] factors 13 61 397 n-2prime 0 n+2prime 0
+C 334153 omega 3 G 0 giuga_at [] factors 19 43 409 n-2prime 0 n+2prime 0
+C 340561 omega 4 G 0 giuga_at [] factors 13 17 23 67 n-2prime 1 n+2prime 0
+C 399001 omega 3 G 0 giuga_at [] factors 31 61 211 n-2prime 0 n+2prime 0
+C 410041 omega 3 G 0 giuga_at [] factors 41 73 137 n-2prime 0 n+2prime 0
+C 449065 omega 4 G 0 giuga_at [] factors 5 19 29 163 n-2prime 0 n+2prime 0
+C 488881 omega 3 G 0 giuga_at [] factors 37 73 181 n-2prime 1 n+2prime 0
+C 512461 omega 3 G 0 giuga_at [] factors 31 61 271 n-2prime 0 n+2prime 0
+C 530881 omega 3 G 0 giuga_at [] factors 13 97 421 n-2prime 0 n+2prime 0
+C 552721 omega 4 G 0 giuga_at [] factors 13 17 41 61 n-2prime 0 n+2prime 0
+C 656601 omega 4 G 0 giuga_at [] factors 3 11 101 197 n-2prime 1 n+2prime 1
+C 658801 omega 4 G 0 giuga_at [] factors 11 13 17 271 n-2prime 0 n+2prime 0
+C 670033 omega 4 G 1 giuga_at [7,] factors 7 13 37 199 n-2prime 1 n+2prime 0
+C 748657 omega 4 G 0 giuga_at [] factors 7 13 19 433 n-2prime 0 n+2prime 0
+C 825265 omega 5 G 2 giuga_at [7,19,] factors 5 7 17 19 73 n-2prime 0 n+2prime 0
+C 838201 omega 4 G 1 giuga_at [7,] factors 7 13 61 151 n-2prime 0 n+2prime 0
+C 852841 omega 4 G 0 giuga_at [] factors 11 31 41 61 n-2prime 0 n+2prime 0
+C 997633 omega 4 G 0 giuga_at [] factors 7 13 19 577 n-2prime 0 n+2prime 0
+C 1024651 omega 3 G 0 giuga_at [] factors 19 199 271 n-2prime 0 n+2prime 0
+C 1033669 omega 4 G 0 giuga_at [] factors 7 13 37 307 n-2prime 1 n+2prime 0
+C 1050985 omega 5 G 0 giuga_at [] factors 5 13 19 23 37 n-2prime 0 n+2prime 0
+C 1082809 omega 4 G 1 giuga_at [7,] factors 7 13 73 163 n-2prime 0 n+2prime 0
+C 1152271 omega 3 G 0 giuga_at [] factors 43 127 211 n-2prime 0 n+2prime 0
+C 1193221 omega 3 G 0 giuga_at [] factors 31 61 631 n-2prime 0 n+2prime 0
+C 1461241 omega 3 G 0 giuga_at [] factors 37 73 541 n-2prime 0 n+2prime 0
+C 1569457 omega 4 G 0 giuga_at [] factors 17 19 43 113 n-2prime 0 n+2prime 0
+C 1615681 omega 3 G 0 giuga_at [] factors 23 199 353 n-2prime 0 n+2prime 0
+C 1773289 omega 4 G 0 giuga_at [] factors 7 19 67 199 n-2prime 0 n+2prime 0
+C 1857241 omega 3 G 0 giuga_at [] factors 31 181 331 n-2prime 0 n+2prime 0
+C 1909001 omega 3 G 0 giuga_at [] factors 41 101 461 n-2prime 0 n+2prime 1
+C 2100901 omega 4 G 0 giuga_at [] factors 11 31 61 101 n-2prime 1 n+2prime 0
+C 2113921 omega 4 G 0 giuga_at [] factors 19 31 37 97 n-2prime 0 n+2prime 0
+C 2433601 omega 4 G 0 giuga_at [] factors 17 37 53 73 n-2prime 0 n+2prime 0
+C 2455921 omega 4 G 2 giuga_at [13,61,] factors 13 19 61 163 n-2prime 0 n+2prime 0
+C 2508013 omega 3 G 0 giuga_at [] factors 53 79 599 n-2prime 0 n+2prime 0
+C 2531845 omega 4 G 0 giuga_at [] factors 5 19 29 919 n-2prime 0 n+2prime 0
+C 2628073 omega 4 G 1 giuga_at [7,] factors 7 37 73 139 n-2prime 0 n+2prime 0
+C 2704801 omega 4 G 0 giuga_at [] factors 11 29 61 139 n-2prime 0 n+2prime 0
+C 3057601 omega 3 G 0 giuga_at [] factors 43 211 337 n-2prime 0 n+2prime 0
+C 3146221 omega 4 G 0 giuga_at [] factors 13 31 37 211 n-2prime 1 n+2prime 0
+C 3224065 omega 4 G 0 giuga_at [] factors 5 13 193 257 n-2prime 0 n+2prime 0
+C 3581761 omega 3 G 0 giuga_at [] factors 29 113 1093 n-2prime 0 n+2prime 0
+C 3664585 omega 4 G 0 giuga_at [] factors 5 29 127 199 n-2prime 0 n+2prime 0
+C 3828001 omega 3 G 0 giuga_at [] factors 101 151 251 n-2prime 0 n+2prime 0
+C 4335241 omega 3 G 0 giuga_at [] factors 53 157 521 n-2prime 0 n+2prime 0
+C 4463641 omega 4 G 1 giuga_at [13,] factors 7 13 181 271 n-2prime 0 n+2prime 0
+C 4767841 omega 4 G 1 giuga_at [13,] factors 13 19 97 199 n-2prime 0 n+2prime 0
+C 4903921 omega 4 G 0 giuga_at [] factors 11 31 73 197 n-2prime 0 n+2prime 0
+C 4909177 omega 4 G 0 giuga_at [] factors 7 13 73 739 n-2prime 0 n+2prime 0
+C 5031181 omega 4 G 0 giuga_at [] factors 19 23 29 397 n-2prime 0 n+2prime 0
+C 5049001 omega 3 G 0 giuga_at [] factors 31 271 601 n-2prime 1 n+2prime 0
+C 5148001 omega 3 G 0 giuga_at [] factors 41 241 521 n-2prime 0 n+2prime 0
+C 5310721 omega 4 G 0 giuga_at [] factors 13 37 61 181 n-2prime 0 n+2prime 0
+C 5444489 omega 3 G 0 giuga_at [] factors 29 197 953 n-2prime 0 n+2prime 0
+C 5481451 omega 3 G 0 giuga_at [] factors 31 151 1171 n-2prime 0 n+2prime 0
+C 5632705 omega 4 G 1 giuga_at [5,] factors 5 13 193 449 n-2prime 0 n+2prime 0
+C 5968873 omega 3 G 0 giuga_at [] factors 43 127 1093 n-2prime 0 n+2prime 0
+C 6049681 omega 4 G 0 giuga_at [] factors 11 31 113 157 n-2prime 1 n+2prime 0
+C 6054985 omega 4 G 0 giuga_at [] factors 5 53 73 313 n-2prime 0 n+2prime 0
+C 6189121 omega 3 G 0 giuga_at [] factors 61 241 421 n-2prime 0 n+2prime 0
+C 6313681 omega 4 G 0 giuga_at [] factors 11 17 19 1777 n-2prime 0 n+2prime 0
+C 6733693 omega 3 G 0 giuga_at [] factors 109 163 379 n-2prime 0 n+2prime 0
+C 6840001 omega 4 G 0 giuga_at [] factors 7 17 229 251 n-2prime 0 n+2prime 0
+C 6868261 omega 3 G 0 giuga_at [] factors 43 211 757 n-2prime 0 n+2prime 0
+C 7207201 omega 3 G 0 giuga_at [] factors 17 353 1201 n-2prime 0 n+2prime 0
+C 7519441 omega 3 G 0 giuga_at [] factors 41 241 761 n-2prime 0 n+2prime 0
+C 7995169 omega 4 G 0 giuga_at [] factors 7 13 103 853 n-2prime 0 n+2prime 0
+C 8134561 omega 3 G 0 giuga_at [] factors 37 109 2017 n-2prime 0 n+2prime 0
+C 8341201 omega 4 G 0 giuga_at [] factors 11 31 61 401 n-2prime 0 n+2prime 0
+C 8355841 omega 4 G 0 giuga_at [] factors 13 41 61 257 n-2prime 0 n+2prime 0
+C 8719309 omega 4 G 0 giuga_at [] factors 19 37 79 157 n-2prime 1 n+2prime 0
+C 8719921 omega 4 G 0 giuga_at [] factors 7 23 41 1321 n-2prime 0 n+2prime 0
+C 8830801 omega 4 G 1 giuga_at [19,] factors 7 19 67 991 n-2prime 0 n+2prime 0
+C 8927101 omega 4 G 0 giuga_at [] factors 31 37 43 181 n-2prime 0 n+2prime 0
+C 9439201 omega 3 G 0 giuga_at [] factors 61 271 571 n-2prime 0 n+2prime 0
+C 9494101 omega 4 G 0 giuga_at [] factors 23 61 67 101 n-2prime 0 n+2prime 0
+C 9582145 omega 4 G 0 giuga_at [] factors 5 23 97 859 n-2prime 0 n+2prime 0
+C 9585541 omega 4 G 0 giuga_at [] factors 7 31 163 271 n-2prime 0 n+2prime 0
+C 9613297 omega 4 G 0 giuga_at [] factors 19 29 73 239 n-2prime 0 n+2prime 0
+C 9890881 omega 5 G 0 giuga_at [] factors 7 11 13 41 241 n-2prime 0 n+2prime 0
+C 10024561 omega 3 G 0 giuga_at [] factors 71 271 521 n-2prime 1 n+2prime 0
+C 10267951 omega 3 G 0 giuga_at [] factors 67 331 463 n-2prime 0 n+2prime 0
+C 10402561 omega 4 G 0 giuga_at [] factors 13 29 41 673 n-2prime 1 n+2prime 0
+C 10606681 omega 4 G 0 giuga_at [] factors 31 43 73 109 n-2prime 0 n+2prime 0
+C 10837321 omega 4 G 0 giuga_at [] factors 11 31 61 521 n-2prime 0 n+2prime 0
+C 10877581 omega 5 G 0 giuga_at [] factors 11 13 29 43 61 n-2prime 1 n+2prime 0
+C 11119105 omega 4 G 1 giuga_at [5,] factors 5 17 257 509 n-2prime 1 n+2prime 0
+C 11205601 omega 4 G 0 giuga_at [] factors 11 17 31 1933 n-2prime 0 n+2prime 0
+C 11921001 omega 4 G 0 giuga_at [] factors 3 29 263 521 n-2prime 0 n+2prime 0
+C 11972017 omega 3 G 0 giuga_at [] factors 43 433 643 n-2prime 0 n+2prime 0
+C 12261061 omega 4 G 0 giuga_at [] factors 19 61 71 149 n-2prime 1 n+2prime 0
+C 12262321 omega 4 G 0 giuga_at [] factors 17 41 73 241 n-2prime 0 n+2prime 0
+C 12490201 omega 4 G 0 giuga_at [] factors 19 37 109 163 n-2prime 0 n+2prime 0
+C 12945745 omega 5 G 0 giuga_at [] factors 5 19 29 37 127 n-2prime 0 n+2prime 0
+C 13187665 omega 4 G 1 giuga_at [17,] factors 5 17 113 1373 n-2prime 0 n+2prime 0
+C 13696033 omega 4 G 0 giuga_at [] factors 13 17 29 2137 n-2prime 0 n+2prime 0
+C 13992265 omega 5 G 0 giuga_at [] factors 5 7 19 53 397 n-2prime 0 n+2prime 0
+C 14469841 omega 3 G 0 giuga_at [] factors 73 379 523 n-2prime 0 n+2prime 0
+C 14676481 omega 3 G 0 giuga_at [] factors 71 421 491 n-2prime 0 n+2prime 0
+C 14913991 omega 3 G 0 giuga_at [] factors 43 127 2731 n-2prime 1 n+2prime 0
+C 15247621 omega 3 G 0 giuga_at [] factors 61 181 1381 n-2prime 1 n+2prime 0
+C 15403285 omega 4 G 0 giuga_at [] factors 5 37 139 599 n-2prime 0 n+2prime 0
+C 15829633 omega 3 G 0 giuga_at [] factors 43 547 673 n-2prime 1 n+2prime 0
+C 15888313 omega 4 G 0 giuga_at [] factors 7 19 67 1783 n-2prime 1 n+2prime 0
+C 16046641 omega 4 G 0 giuga_at [] factors 13 37 73 457 n-2prime 0 n+2prime 0
+C 16778881 omega 5 G 1 giuga_at [7,] factors 7 17 19 41 181 n-2prime 0 n+2prime 0
+C 17098369 omega 3 G 0 giuga_at [] factors 113 337 449 n-2prime 0 n+2prime 0
+C 17236801 omega 3 G 0 giuga_at [] factors 151 211 541 n-2prime 0 n+2prime 0
+C 17316001 omega 3 G 0 giuga_at [] factors 53 157 2081 n-2prime 1 n+2prime 0
+C 17586361 omega 4 G 0 giuga_at [] factors 13 61 67 331 n-2prime 0 n+2prime 0
+C 17812081 omega 4 G 0 giuga_at [] factors 7 41 53 1171 n-2prime 1 n+2prime 0
+C 18162001 omega 5 G 0 giuga_at [] factors 11 13 17 31 241 n-2prime 0 n+2prime 0
+C 18307381 omega 4 G 1 giuga_at [61,] factors 29 61 79 131 n-2prime 0 n+2prime 0
+C 18900973 omega 4 G 2 giuga_at [7,13,] factors 7 13 229 907 n-2prime 1 n+2prime 0
+C 19384289 omega 3 G 0 giuga_at [] factors 89 353 617 n-2prime 0 n+2prime 0
+C 19683001 omega 4 G 0 giuga_at [] factors 13 37 151 271 n-2prime 0 n+2prime 0
+C 20964961 omega 4 G 0 giuga_at [] factors 17 19 47 1381 n-2prime 0 n+2prime 0
+C 21584305 omega 4 G 1 giuga_at [5,] factors 5 17 197 1289 n-2prime 0 n+2prime 0
+C 22665505 omega 4 G 1 giuga_at [5,] factors 5 17 97 2749 n-2prime 0 n+2prime 0
+C 23382529 omega 3 G 0 giuga_at [] factors 97 193 1249 n-2prime 0 n+2prime 0
+C 25603201 omega 4 G 0 giuga_at [] factors 13 29 113 601 n-2prime 1 n+2prime 0
+C 26280073 omega 3 G 0 giuga_at [] factors 73 157 2293 n-2prime 0 n+2prime 0
+C 26474581 omega 4 G 0 giuga_at [] factors 7 19 67 2971 n-2prime 0 n+2prime 0
+C 26719701 omega 4 G 0 giuga_at [] factors 3 29 197 1559 n-2prime 0 n+2prime 0
+C 26921089 omega 4 G 0 giuga_at [] factors 13 37 97 577 n-2prime 1 n+2prime 0
+C 26932081 omega 4 G 0 giuga_at [] factors 11 47 113 461 n-2prime 1 n+2prime 0
+C 27062101 omega 4 G 0 giuga_at [] factors 11 31 61 1301 n-2prime 0 n+2prime 0
+C 27336673 omega 5 G 0 giuga_at [] factors 7 13 23 37 353 n-2prime 1 n+2prime 0
+C 27402481 omega 4 G 0 giuga_at [] factors 31 43 61 337 n-2prime 0 n+2prime 0
+C 28787185 omega 5 G 0 giuga_at [] factors 5 7 19 73 593 n-2prime 1 n+2prime 0
+C 29020321 omega 4 G 0 giuga_at [] factors 11 37 113 631 n-2prime 0 n+2prime 0
+C 29111881 omega 3 G 0 giuga_at [] factors 211 281 491 n-2prime 1 n+2prime 0
+C 31146661 omega 5 G 1 giuga_at [7,] factors 7 13 31 61 181 n-2prime 1 n+2prime 0
+C 31405501 omega 3 G 1 giuga_at [71,] factors 71 631 701 n-2prime 0 n+2prime 0
+C 31692805 omega 4 G 1 giuga_at [5,] factors 5 47 157 859 n-2prime 0 n+2prime 0
+C 32914441 omega 4 G 0 giuga_at [] factors 7 19 61 4057 n-2prime 1 n+2prime 0
+C 33302401 omega 4 G 0 giuga_at [] factors 11 31 61 1601 n-2prime 0 n+2prime 0
+C 33596641 omega 4 G 0 giuga_at [] factors 13 17 281 541 n-2prime 1 n+2prime 0
+C 34196401 omega 4 G 0 giuga_at [] factors 17 47 127 337 n-2prime 0 n+2prime 0
+C 34657141 omega 3 G 1 giuga_at [191,] factors 191 421 431 n-2prime 0 n+2prime 0
+C 34901461 omega 4 G 0 giuga_at [] factors 7 19 397 661 n-2prime 0 n+2prime 0
+C 35571601 omega 4 G 0 giuga_at [] factors 13 31 61 1447 n-2prime 0 n+2prime 0
+C 35703361 omega 3 G 0 giuga_at [] factors 61 277 2113 n-2prime 0 n+2prime 0
+C 36121345 omega 5 G 0 giuga_at [] factors 5 13 17 97 337 n-2prime 0 n+2prime 0
+C 36765901 omega 3 G 1 giuga_at [37,] factors 37 613 1621 n-2prime 0 n+2prime 0
+C 37167361 omega 5 G 0 giuga_at [] factors 7 11 41 61 193 n-2prime 1 n+2prime 0
+C 37280881 omega 4 G 0 giuga_at [] factors 11 17 73 2731 n-2prime 0 n+2prime 0
+C 37354465 omega 4 G 0 giuga_at [] factors 5 29 73 3529 n-2prime 1 n+2prime 0
+C 37964809 omega 3 G 0 giuga_at [] factors 109 379 919 n-2prime 1 n+2prime 0
+C 38151361 omega 4 G 0 giuga_at [] factors 41 53 97 181 n-2prime 0 n+2prime 0
+C 38624041 omega 4 G 1 giuga_at [61,] factors 37 61 109 157 n-2prime 0 n+2prime 0
+C 38637361 omega 4 G 0 giuga_at [] factors 7 37 241 619 n-2prime 0 n+2prime 0
+C 39353665 omega 4 G 0 giuga_at [] factors 5 13 193 3137 n-2prime 0 n+2prime 0
+C 40160737 omega 4 G 0 giuga_at [] factors 19 23 29 3169 n-2prime 0 n+2prime 0
+C 40280065 omega 5 G 1 giuga_at [7,] factors 5 7 67 89 193 n-2prime 1 n+2prime 0
+C 40430401 omega 4 G 0 giuga_at [] factors 11 101 151 241 n-2prime 0 n+2prime 0
+C 40622401 omega 4 G 0 giuga_at [] factors 17 43 61 911 n-2prime 0 n+2prime 0
+C 40917241 omega 4 G 0 giuga_at [] factors 19 31 127 547 n-2prime 0 n+2prime 0
+C 41298985 omega 5 G 0 giuga_at [] factors 5 7 13 139 653 n-2prime 0 n+2prime 0
+C 41341321 omega 5 G 0 giuga_at [] factors 7 19 31 37 271 n-2prime 0 n+2prime 0
+C 41471521 omega 5 G 0 giuga_at [] factors 7 13 31 61 241 n-2prime 0 n+2prime 0
+C 42490801 omega 4 G 0 giuga_at [] factors 31 41 101 331 n-2prime 0 n+2prime 0
+C 43286881 omega 4 G 0 giuga_at [] factors 11 31 61 2081 n-2prime 0 n+2prime 0
+C 43331401 omega 3 G 0 giuga_at [] factors 43 631 1597 n-2prime 1 n+2prime 0
+C 43584481 omega 4 G 0 giuga_at [] factors 17 31 191 433 n-2prime 0 n+2prime 0
+C 43620409 omega 4 G 0 giuga_at [] factors 7 19 157 2089 n-2prime 0 n+2prime 0
+C 44238481 omega 4 G 1 giuga_at [7,] factors 7 61 313 331 n-2prime 0 n+2prime 0
+C 45318561 omega 4 G 0 giuga_at [] factors 3 29 173 3011 n-2prime 0 n+2prime 0
+C 45877861 omega 4 G 0 giuga_at [] factors 31 43 127 271 n-2prime 0 n+2prime 0
+C 45890209 omega 4 G 0 giuga_at [] factors 29 53 73 409 n-2prime 0 n+2prime 0
+C 46483633 omega 4 G 0 giuga_at [] factors 7 19 373 937 n-2prime 0 n+2prime 0
+C 47006785 omega 5 G 1 giuga_at [7,] factors 5 7 17 199 397 n-2prime 0 n+2prime 0
+C 48321001 omega 4 G 0 giuga_at [] factors 37 41 53 601 n-2prime 0 n+2prime 0
+C 48628801 omega 4 G 0 giuga_at [] factors 13 31 67 1801 n-2prime 0 n+2prime 0
+C 49333201 omega 4 G 0 giuga_at [] factors 17 61 113 421 n-2prime 0 n+2prime 0
+C 50201089 omega 3 G 0 giuga_at [] factors 97 673 769 n-2prime 0 n+2prime 0
+C 53245921 omega 4 G 0 giuga_at [] factors 17 41 79 967 n-2prime 0 n+2prime 0
+C 53711113 omega 3 G 0 giuga_at [] factors 157 313 1093 n-2prime 0 n+2prime 0
+C 54767881 omega 4 G 0 giuga_at [] factors 7 37 103 2053 n-2prime 0 n+2prime 0
+C 55462177 omega 4 G 0 giuga_at [] factors 17 23 83 1709 n-2prime 0 n+2prime 0
+C 56052361 omega 3 G 0 giuga_at [] factors 211 421 631 n-2prime 0 n+2prime 0
+C 58489201 omega 4 G 0 giuga_at [] factors 19 29 101 1051 n-2prime 1 n+2prime 0
+C 60112885 omega 4 G 0 giuga_at [] factors 5 7 443 3877 n-2prime 1 n+2prime 0
+C 60957361 omega 3 G 0 giuga_at [] factors 61 181 5521 n-2prime 0 n+2prime 0
+C 62756641 omega 3 G 0 giuga_at [] factors 109 241 2389 n-2prime 0 n+2prime 0
+C 64377991 omega 3 G 0 giuga_at [] factors 163 487 811 n-2prime 0 n+2prime 0
+C 64774081 omega 4 G 0 giuga_at [] factors 29 71 163 193 n-2prime 1 n+2prime 0
+C 65037817 omega 4 G 0 giuga_at [] factors 13 19 73 3607 n-2prime 0 n+2prime 0
+C 65241793 omega 4 G 0 giuga_at [] factors 29 43 113 463 n-2prime 1 n+2prime 0
+C 67371265 omega 5 G 1 giuga_at [37,] factors 5 13 37 109 257 n-2prime 0 n+2prime 0
+C 67653433 omega 4 G 1 giuga_at [29,] factors 19 29 199 617 n-2prime 1 n+2prime 0
+C 67902031 omega 3 G 0 giuga_at [] factors 43 271 5827 n-2prime 0 n+2prime 0
+C 67994641 omega 5 G 0 giuga_at [] factors 11 13 37 71 181 n-2prime 1 n+2prime 0
+C 68154001 omega 3 G 0 giuga_at [] factors 151 601 751 n-2prime 0 n+2prime 0
+C 69331969 omega 5 G 1 giuga_at [7,] factors 7 19 37 73 193 n-2prime 0 n+2prime 0
+C 70561921 omega 4 G 0 giuga_at [] factors 31 53 67 641 n-2prime 0 n+2prime 0
+C 72108421 omega 4 G 0 giuga_at [] factors 7 11 191 4903 n-2prime 1 n+2prime 0
+C 72286501 omega 4 G 0 giuga_at [] factors 7 67 79 1951 n-2prime 0 n+2prime 0
+C 74165065 omega 5 G 0 giuga_at [] factors 5 13 59 83 233 n-2prime 0 n+2prime 0
+C 75151441 omega 5 G 0 giuga_at [] factors 17 19 29 71 113 n-2prime 0 n+2prime 0
+C 75681541 omega 4 G 0 giuga_at [] factors 13 19 61 5023 n-2prime 0 n+2prime 0
+C 75765313 omega 4 G 0 giuga_at [] factors 13 29 73 2753 n-2prime 0 n+2prime 0
+C 76595761 omega 5 G 0 giuga_at [] factors 11 17 31 73 181 n-2prime 0 n+2prime 0
+C 77826001 omega 4 G 1 giuga_at [11,] factors 11 43 137 1201 n-2prime 0 n+2prime 0
+C 78091201 omega 4 G 0 giuga_at [] factors 31 37 103 661 n-2prime 1 n+2prime 0
+C 78120001 omega 4 G 0 giuga_at [] factors 19 73 151 373 n-2prime 0 n+2prime 0
+C 79411201 omega 3 G 0 giuga_at [] factors 193 257 1601 n-2prime 0 n+2prime 0
+C 79624621 omega 3 G 0 giuga_at [] factors 139 691 829 n-2prime 0 n+2prime 0
+C 80282161 omega 4 G 0 giuga_at [] factors 43 61 127 241 n-2prime 1 n+2prime 0
+C 80927821 omega 4 G 0 giuga_at [] factors 13 19 103 3181 n-2prime 0 n+2prime 0
+C 81638401 omega 4 G 0 giuga_at [] factors 13 97 101 641 n-2prime 1 n+2prime 0
+C 81926461 omega 4 G 0 giuga_at [] factors 19 67 139 463 n-2prime 0 n+2prime 0
+C 82929001 omega 3 G 0 giuga_at [] factors 281 421 701 n-2prime 0 n+2prime 0
+C 83099521 omega 4 G 0 giuga_at [] factors 19 37 43 2749 n-2prime 0 n+2prime 0
+C 83966401 omega 4 G 0 giuga_at [] factors 41 43 97 491 n-2prime 0 n+2prime 0
+C 84311569 omega 4 G 1 giuga_at [19,] factors 19 73 89 683 n-2prime 0 n+2prime 0
+C 84350561 omega 3 G 0 giuga_at [] factors 107 743 1061 n-2prime 0 n+2prime 0
+C 84417985 omega 4 G 0 giuga_at [] factors 5 29 577 1009 n-2prime 0 n+2prime 0
+C 87318001 omega 4 G 0 giuga_at [] factors 17 71 73 991 n-2prime 0 n+2prime 0
+C 88689601 omega 5 G 1 giuga_at [41,] factors 7 11 13 41 2161 n-2prime 0 n+2prime 0
+C 90698401 omega 3 G 0 giuga_at [] factors 103 647 1361 n-2prime 0 n+2prime 0
+C 92625121 omega 3 G 0 giuga_at [] factors 181 631 811 n-2prime 0 n+2prime 0
+C 93030145 omega 4 G 0 giuga_at [] factors 5 13 257 5569 n-2prime 0 n+2prime 0
+C 93614521 omega 5 G 1 giuga_at [13,] factors 7 11 13 41 2281 n-2prime 0 n+2prime 0
+C 93869665 omega 5 G 0 giuga_at [] factors 5 17 29 113 337 n-2prime 1 n+2prime 0
+C 94536001 omega 4 G 1 giuga_at [7,] factors 7 19 607 1171 n-2prime 0 n+2prime 0
+C 96895441 omega 3 G 0 giuga_at [] factors 109 433 2053 n-2prime 0 n+2prime 0
+C 99036001 omega 3 G 0 giuga_at [] factors 61 541 3001 n-2prime 0 n+2prime 0
+C 99830641 omega 4 G 0 giuga_at [] factors 53 79 113 211 n-2prime 0 n+2prime 0
+C 99861985 omega 4 G 0 giuga_at [] factors 5 97 109 1889 n-2prime 0 n+2prime 0
+N = 100000000: base-2 pseudoprimes (odd composite) 2057; Carmichael 255; with n-2 or n+2 prime 60
+distribution (G, omega): (0,3): 77 (0,4): 121 (0,5): 18 (1,3): 7 (1,4): 20 (1,5): 8 (2,4): 3 (2,5): 1
+$SP/carmichael_psp2 100000000  5.57s user 0.03s system 93% cpu 5.971 total

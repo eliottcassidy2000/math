@@ -17988,3 +17988,38 @@ the ambient space.
   - Check which of an author's papers a form belongs to.
   - Search the Gaussian hypergeometric literature before typing a character-sum identity as open.
   - Report fit spreads, not best variants.
+
+## MISTAKE-610 (2026-10-14, mac-mini-2026-10-14-wilson THM-4650, THM-4651, d19_parity_shift_synthesis_20261014.md, hn_type_m_hinge_rotations_and_forced_radii_20261014.md, d19_isogeny.gp, spindle_free_pieces.py; found by the session's independent adversarial audit B after the pre-audit checkpoint was pushed) -- a false completion claim for Giuga numbers, published special cases typed as new, a torsion group read from its order, a verification script that silently aborted, a hinge described by the wrong radii, and a proved general-type theorem typed as heuristic
+- **What was wrong:**
+  - **N(N + 1) is not a Giuga number.** THM-4651 (3), its Reading and synthesis §2 said that a primary pseudoperfect `N` times either prime neighbour `N ± 1` is a Giuga number. Only `N(N − 1)` is: `(N(N−1))' = N(N−1) + 1`, while `(N(N+1))' = N(N+1) − 1`, so `N(N+1)` is the next primary pseudoperfect number (42, 1806, 2214502422; Giuga indices 20/21 and 902/903). codex's table had it right.
+  - **Prior art missing.**
+    - THM-4650 statements 1–3 (no D19 point on the diagonals, midlines or sides) are Yang Ji, arXiv:2105.05250 (2021), by Fermat descent, with further cases in Ieno, arXiv:2111.02888; statement 5 overlaps Bremner–Ulas, arXiv:1502.07312, and the base/height-ratio problem is MacLeod (2003).
+    - THM-4651 (1)'s reading "Giuga modulo p² iff w_p ≡ −1" and its data are known (primepuzzles Puzzle 998; Volpatti 2021 lists 1277, 780887, 56151923, 11774118061 below 2·10^13; OEIS A306431, A268000, Ordowski in A079853). The pre-audit text said "only 1277 below 2·10^5" as if it were the state of knowledge.
+    - Odd Giuga numbers are known to need at least 14 prime factors.
+    - The general-type claim for the D19 surface was typed HEURISTIC in §1 and KNOWN in §6; Corvaja–Turchet–Zannier (Geom. Dedicata 2025, arXiv:2403.02030) prove it. "Conditional finite search" ignored that Bombieri–Lang is ineffective.
+  - **Torsion `Z/8` was really `Z/2 × Z/4`** at the ratios 3/2, 5/6, 8/3: the script printed `elltors(E)[1]`, the order only.
+  - **d19_isogeny.gp aborted** ("incorrect type in ellinit", then `ellisomorphism`, which gp 2.17 does not have). The isomorphism check never ran, and the "... skipping file" line went unnoticed. The fact is true (Vélu's 2-isogeny from `y² = x³ − x` with kernel `⟨(−1, 0)⟩` lands exactly on the midline curve); the script is fixed and rerun.
+  - **The spindle-free hinge.** HN finding 7 and the `spindle_free_pieces.py` docstring said all 120 new edges of `W = M_3 ∪ ψM_3` join radius-2 points. Only 72 do; 48 join `|z|² = 2/3` to `|ψw|² = 8/3` at the same angular gap. A "hinge principle" built on radius 2 alone must account for them.
+  - **Smaller overstatements.**
+    - "Both mixed pairs are in the log" (only one was run; the other is congruent by conjugation) and "`M_3` is the rigid piece" (never measured).
+    - "1441 = 1 + 24·60" (numerology unless Heule's graph is C24-symmetric) and an unconfirmed venue.
+    - The bounded-gaps attributions (246 is Polymath8b's; 12 under EH is Maynard's; 6 under GEH is Polymath8b's).
+    - THM-4520 described as a "circle law of RH type" giving mixing, which its own boundary section denies.
+    - The THM-4628 eigenvalues are minus the Kloosterman sums, at a conjugation-fixed prime.
+    - A divergent Collatz orbit called a finite witness (the conclusion survives because Collatz is arithmetic).
+    - "The two oldest proofs in number theory", and "Diophantine approximation in Vojta's sense" for the transcendental log₂3.
+    - The brute-force bound in THM-4650's status omitted the numerator range.
+- **What survives:**
+  - All D19 mathematics: the curves, conductors 40 and 32, the Vélu 2-isogeny to the congruent-number curve, the j-invariant and rank table. The rank-0 facts are now unconditional by Kolyvagin and Coates–Wiles (L(E,1) ≠ 0).
+  - The circumcircle via Ptolemy, which is not in the prior-art abstracts.
+  - Every Giuga/Korselt computation, reproduced by audit B with different methods: the Wilson quotients by Legendre factorisation in C, and the Carmichael census via base-2 pseudoprimes. The parity divide.
+  - The prime-merging corollary, with periodicity mod 2^K confirmed exactly and its asymptotic-only nature stated.
+  - The exact HN rebuilds: W = 64,513 / 542,472 and M_3 ∪ ψP_1 = 48,121 / 385,296, rebuilt in Q(ζ_24)(√5).
+  - The four vertex-critical sets, all vertex-critical.
+  - The 1,441 record, corroborated by Haugland, arXiv:2608.04542.
+- **Lesson:**
+  - Print full group structures, not orders.
+  - Grep every gp/python output for "skipping file", "error" and "Traceback" before quoting a script as a check.
+  - Check both signs of every "N ± 1" claim.
+  - Search arXiv for special cases of a named problem (here "rational distances unit square diagonal midline") before typing a statement as new.
+  - When describing a construction's edges, tabulate them by (radius, radius, angle) rather than describing one example.

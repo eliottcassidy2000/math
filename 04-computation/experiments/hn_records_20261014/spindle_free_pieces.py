@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Smaller spindle-free type-M candidates inside the Voronov-Neopryatnaya-Dergachev construction.
 
-W = M3 u psi M3 (64,513 vertices) is a hinge at radius 2: its 120 new edges join z in M3 and psi w with |z| = |w| = 2.
+W = M3 u psi M3 (64,513 vertices) is a hinge at angular gap arccos(7/8): of its 120 new edges, 72 join z in M3 and psi w
+with |z| = |w| = 2 and 48 join |z|^2 = 2/3 with |psi w|^2 = 8/3, 24 each way (audit B; corrected docstring).
 Here we test smaller pieces A u psi B that keep radius-2 orbits, e.g. B = M1 + M1 (unclipped, radius <= 2), and report
 size, exact edges and the 4-colourability verdict (CaDiCaL 1.9.5, a triangle fixed, conflict budget).
 

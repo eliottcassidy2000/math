@@ -1,0 +1,75 @@
+  ***   Warning: new stack size = 100000000 (95.367 Mbytes).
+midline quartic (other conic): s^4 - 8*s^3 + 18*s^2 + 8*s + 1
+midline Jacobian (other conic): minimal [a1..a6] = [0, 0, 0, -11, 14], conductor 32, j = 287496, torsion [4], ellrank [0, 0], analytic rank 0 (leading L value 0.65551438857302995261620989747277985342)
+  isomorphic to the session's y^2 = x^3 - 11x + 14: 1
+  session quartic check: 4t^2(4(1-y)^2+1) at y=(t^2-1)/(4t) = 1; its Jacobian iso to E_mid: 1
+  y^2 = x^3 - x, kernel <[0, 0]>: image [0, 0, 0, 4, 0]; iso to E_mid: 0
+  y^2 = x^3 - x, kernel <[1, 0]>: image [0, 0, 0, -11, -14]; iso to E_mid: 0
+  y^2 = x^3 - x, kernel <[-1, 0]>: image [0, 0, 0, -11, 14]; iso to E_mid: 1
+  y^2 = x^3 - 16x iso to y^2 = x^3 - x: [2, 0, 0, 0]
+congruent-number curve y^2 = x^3 - x: minimal [a1..a6] = [0, 0, 0, -1, 0], conductor 32, j = 1728, torsion [2, 2], ellrank [0, 0], analytic rank 0 (leading L value 0.65551438857302995261620989747277985342)
+E_mid: minimal [a1..a6] = [0, 0, 0, -11, 14], conductor 32, j = 287496, torsion [4], ellrank [0, 0], analytic rank 0 (leading L value 0.65551438857302995261620989747277985342)
+  j(E_mid) = 287496 = 66^3: 1
+side quartic (other conic): s^4 - 4*s^3 + 6*s^2 + 4*s + 1
+side Jacobian (other conic): minimal [a1..a6] = [0, 0, 0, -2, 1], conductor 40, j = 55296/5, torsion [4], ellrank [0, 0], analytic rank 0 (leading L value 0.74220623671119322645367194396294897908)
+  isomorphic to the session's y^2 = x^3 - 2x + 1: 1
+E_side: minimal [a1..a6] = [0, 0, 0, -2, 1], conductor 40, j = 55296/5, torsion [4], ellrank [0, 0], analytic rank 0 (leading L value 0.74220623671119322645367194396294897908)
+  (elldata not installed)
+  isogeny class of E_side (curves): [[-2, 1], [-7, -6], [13, -34], [-107, -426]]
+j of the ratio-r family from (I,J): Mat([r^4 + 4*r^2 + 1, 3]) / [r, 2; r^2 + 4, 1]
+  equals 16(16a^4+16a^2+1)^3/(a^2(a^2+1)) at a = r/2: 1
+  rational a with j = 287496 (CM by Z[2i]): factor = [a - 1, 1; a + 1, 1; a^2 + 2, 1; 8192*a^8 + 16384*a^6 + 26112*a^4 + 17920*a^2 - 1, 1]
+  rational a with j = 1728: factor = [2*a^2 + 1, 2; 32*a^4 + 32*a^2 - 1, 2]
+rank table (ratio r = n/d, n <= 12, d <= 6, gcd 1): [r, conductor, torsion, ellrank, analytic rank]
+  1  N = 40  tors [4]  ellrank [0, 0]  an 0
+  1/2  N = 17  tors [4]  ellrank [0, 0]  an 0
+  1/3  N = 888  tors [4]  ellrank [1, 1]  an 1
+  1/4  N = 130  tors [4]  ellrank [0, 0]  an 0
+  1/5  N = 4040  tors [4]  ellrank [1, 1]  an 1
+  1/6  N = 435  tors [4]  ellrank [0, 0]  an 0
+  2  N = 32  tors [4]  ellrank [0, 0]  an 0
+  2/3  N = 480  tors [4]  ellrank [0, 0]  an 0
+  2/5  N = 2080  tors [4]  ellrank [0, 0]  an 0
+  3  N = 312  tors [4]  ellrank [0, 0]  an 0
+  3/2  N = 15  tors [4, 2]  ellrank [0, 0]  an 0
+  3/4  N = 438  tors [4]  ellrank [1, 1]  an 1
+  3/5  N = 13080  tors [4]  ellrank [1, 1]  an 1
+  4  N = 80  tors [4]  ellrank [0, 0]  an 0
+  4/3  N = 624  tors [4]  ellrank [1, 1]  an 1
+  4/5  N = 2320  tors [4]  ellrank [1, 1]  an 1
+  5  N = 1160  tors [4]  ellrank [1, 1]  an 1
+  5/2  N = 205  tors [4]  ellrank [1, 1]  an 1
+  5/3  N = 7320  tors [4]  ellrank [0, 0]  an 0
+  5/4  N = 890  tors [4]  ellrank [0, 0]  an 0
+  5/6  N = 195  tors [4, 2]  ellrank [0, 0]  an 0
+  6  N = 480  tors [4]  ellrank [1, 1]  an 1
+  6/5  N = 8160  tors [4]  ellrank [0, 0]  an 0
+  7  N = 2968  tors [4]  ellrank [0, 0]  an 0
+  7/2  N = 455  tors [4]  ellrank [1, 1]  an 1
+  7/3  N = 14280  tors [4]  ellrank [0, 0]  an 0
+  7/4  N = 1582  tors [4]  ellrank [1, 1]  an 1
+  7/5  N = 41720  tors [4]  ellrank [1, 1]  an 1
+  7/6  N = 4053  tors [4]  ellrank [1, 1]  an 1
+  8  N = 272  tors [4]  ellrank [1, 1]  an 1
+  8/3  N = 240  tors [4, 2]  ellrank [0, 0]  an 0
+  8/5  N = 3280  tors [4]  ellrank [0, 0]  an 0
+  9  N = 2040  tors [4]  ellrank [1, 1]  an 1
+  9/2  N = 291  tors [4]  ellrank [0, 0]  an 0
+  9/4  N = 870  tors [4]  ellrank [0, 0]  an 0
+  9/5  N = 21720  tors [4]  ellrank [1, 1]  an 1
+  10  N = 2080  tors [4]  ellrank [0, 0]  an 0
+  10/3  N = 8160  tors [4]  ellrank [1, 1]  an 1
+  11  N = 440  tors [4]  ellrank [0, 0]  an 0
+  11/2  N = 1507  tors [4]  ellrank [0, 0]  an 0
+  11/3  N = 41448  tors [4]  ellrank [1, 1]  an 1
+  11/4  N = 4070  tors [4]  ellrank [0, 0]  an 0
+  11/5  N = 97240  tors [4]  ellrank [0, 0]  an 0
+  11/6  N = 8745  tors [4]  ellrank [0, 0]  an 0
+  12  N = 1776  tors [4]  ellrank [0, 0]  an 0
+  12/5  N = 14640  tors [4]  ellrank [1, 1]  an 1
+rank 1: [1/3, 1/5, 3/4, 3/5, 4/3, 4/5, 5, 5/2, 6, 7/2, 7/4, 7/5, 7/6, 8, 9, 9/5, 10/3, 11/3, 12/5]
+rank 0: [1, 1/2, 1/4, 1/6, 2, 2/3, 2/5, 3, 3/2, 4, 5/3, 5/4, 5/6, 6/5, 7, 7/3, 8/3, 8/5, 9/2, 9/4, 10, 11, 11/2, 11/4, 11/5, 11/6, 12]
+full elltors at 3/2, 5/6, 8/3: [[8, [4, 2]], [8, [4, 2]], [8, [4, 2]]]
+torsion Z/8: []
+disagreements (ellrank bounds unequal or != analytic rank): []
+count: 46

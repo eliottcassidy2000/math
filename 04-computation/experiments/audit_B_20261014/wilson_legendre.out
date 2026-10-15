@@ -1,0 +1,17 @@
+primes p with 3 <= p < 200000
+  w_p == +1 : 3
+  w_p == -2 : 3
+  w_p == 0  : 5
+  w_p == -2 : 7
+  w_p == +1 : 11
+  w_p == 0  : 13
+  w_p == +2 : 19
+  w_p == -2 : 71
+  w_p == +1 : 107
+  w_p == 0  : 563
+  w_p == +2 : 1187
+  w_p == -1 : 1277
+  w_p == +1 : 4931
+primes scanned: 17983; w==0: 3, w==-1: 1, w==+1: 4
+direct check S(p) == p-1+p*w_p == p+(p-1)! (mod p^2) for all 2261 primes 3 <= p < 20000: OK
+ 200000 20000  9.42s user 0.02s system 95% cpu 9.913 total

@@ -2,12 +2,17 @@
 id: THM-4650
 title: "Guy D19 (a point at rational distance from all four corners of the unit square): no such point lies on the four side lines, the two midlines, the two diagonals, or the circumcircle. The midline case is Fermat's right-triangle theorem: the midline curve is 2-isogenous to the congruent-number curve y^2 = x^3 - x (conductor 32, rank 0, torsion Z/4), so a midline point would make 1 a congruent number; the side-line case is the conductor-40 curve y^2 = x^3 - 2x + 1 (rank 0, torsion Z/4). On the midline of a 1 x a rectangle the problem is exactly a rational triangle with base 2a and height 1 (Guy's base/height-ratio remark in D19), so the square's sides and midlines are the ratios 1 and 2"
 status: >
-  PROVED: statements 1-4. The two rank-0 facts rest on PARI/gp 2.17's ellrank, whose upper bound 0 is a 2-Selmer (2-descent)
-  bound, so they are proofs modulo the correctness of PARI. The isogeny in 3 is exhibited by ellisomat (degree 2). FINITE-EXACT:
-  the rank table of statement 5 (ellrank with equal lower and upper bounds) and the brute-force cross-check of statements
-  2-3 (no solutions among 5,472,915 reduced fractions with denominator <= 1500). CITED: Berry 1990 (three-distance points are dense;
-  the four-distance question is Guy's D19). The general D19 question remains OPEN. Likely classical in substance (special
-  lines of the square); the explicit isogeny to the congruent-number curve is exhibited here. Not yet independently audited.
+  PROVED: statements 1-4. KNOWN in substance: the non-existence on the diagonals, midlines and side lines is Yang Ji
+  (arXiv:2105.05250, 2021, Fermat descent), with further special cases in Ieno (arXiv:2111.02888); the rectangle family of
+  statement 5 overlaps Bremner-Ulas (arXiv:1502.07312), and the base/height-ratio problem is MacLeod (SWJPAM 2 (2003) 9-17).
+  New here (not found in those abstracts): the circumcircle via Ptolemy, the explicit elliptic-curve identifications
+  (conductor 40; conductor 32 with the Velu 2-isogeny from y^2 = x^3 - x), the j-invariant of the rectangle family and its rank
+  table. The two rank-0 facts are unconditional: L(E,1) = 0.6555... and 0.7422... are nonzero (audit B), so rank 0 follows from
+  Kolyvagin (Coates-Wiles for the CM midline curve); PARI's ellrank 2-descent bound [0,0] agrees. The isogeny in 3 is the Velu
+  2-isogeny with kernel <(-1,0)> (ellisogeny; the original isomorphism loop of d19_isogeny.gp aborted and was fixed after
+  audit B, MISTAKE-610). FINITE-EXACT: the rank table of statement 5 (ellrank with equal bounds) and the brute-force
+  cross-check of statements 2-3 (no solutions among the 5,472,915 reduced fractions p/q with |p| <= 3000, q <= 1500).
+  CITED: Berry 1990; Corvaja-Turchet-Zannier 2025. The general D19 question remains OPEN. Audited (audit B, MISTAKE-610).
 session: mac-mini-2026-10-14-wilson
 source: 05-knowledge/results/d19_parity_shift_synthesis_20261014.md
 scripts:
@@ -56,7 +61,7 @@ Let the square have corners `(0,0), (1,0), (0,1), (1,1)`. A **D19 point** is a p
    * **Rank table.** Among the 46 reduced ratios `n/d` with `n ≤ 12`, `d ≤ 6`:
      * rank 1 for `1/3, 1/5, 3/4, 3/5, 4/3, 4/5, 5, 5/2, 6, 7/2, 7/4, 7/5, 7/6, 8, 9, 9/5, 10/3, 11/3, 12/5`;
      * rank 0 for the rest, including 1, 2, 3, 4 and 1/2.
-   * Torsion `Z/8` appears at `3/2, 5/6, 8/3`. These are the isosceles cases, where `P` is the centre of a rectangle with rational diagonal.
+   * Torsion `Z/2 × Z/4` (order 8; `elltors` gives `[8, [4, 2]]`) appears at `3/2, 5/6, 8/3`. These are the isosceles cases, where `P` is the centre of a rectangle with rational diagonal. (The pre-audit text said `Z/8`; the script printed only the order.)
 
 ## Proofs
 
@@ -68,7 +73,7 @@ Let the square have corners `(0,0), (1,0), (0,1), (1,1)`. A **D19 point** is a p
 * Each condition `k² + z² = □` (with `k` fixed) is a conic with the rational point `(0, k)`. Its rational points are given by the stated parametrization (statement 4).
 * The second condition then becomes the displayed quartic.
 * `ellfromeqn` gives its Jacobian, and `ellminimalmodel`, `ellglobalred`, `elltors` and `ellrank` give conductor, torsion and the rank bounds `[0, 0]`. The analytic rank is also 0.
-* The isogeny class of `E_mid` (`ellisomat`) contains `[a4, a6] = [−16, 0]` at degree 2. Also `a_p(E_mid) = a_p(y² = x³ − x)` for every prime `3 ≤ p < 1000`. ∎
+* The isogeny class of `E_mid` (`ellisomat`) contains `[a4, a6] = [−16, 0]` at degree 2, and `ellisisom` identifies it with `y² = x³ − x` by `(u, r, s, t) = (2, 0, 0, 0)`. Directly: Vélu's 2-isogeny from `y² = x³ − x` with kernel `⟨(−1, 0)⟩` has image exactly `y² = x³ − 11x + 14` (`ellisogeny`). Also `a_p(E_mid) = a_p(y² = x³ − x)` for every prime `3 ≤ p < 1000`. ∎
 
 **4.**
 * The conic map is the inverse of `t = u + 2y`, and similarly for the side line.
@@ -84,7 +89,7 @@ Let the square have corners `(0,0), (1,0), (0,1), (1,1)`. A **D19 point** is a p
 * **Where the general problem sits.**
   * `S` is a `(Z/2)⁴`-cover of the plane branched along the eight isotropic lines through the corners. Four of these lines pass through each circular point.
   * Dropping one corner gives Berry's K3 surface, on which three-distance points are dense.
-  * The four-corner surface should be of general type. Then the Bombieri–Lang conjecture would put all but finitely many D19 points on finitely many curves of genus 0 or 1. This is the same mechanism as the conditional Erdős–Ulam results (Shaffaf; Tao). HEURISTIC here: the singularities over the circular points were not resolved rigorously.
+  * The four-corner surface is of general type: Corvaja–Turchet–Zannier (Geom. Dedicata 219 (2025), arXiv:2403.02030) prove that `r >= 4` points give a simply connected surface of general type (here `K² = 8`, `p_g = 5`). So the Bombieri–Lang conjecture would put all but finitely many D19 points on finitely many curves of genus 0 or 1, the same mechanism as the conditional Erdős–Ulam results (Shaffaf; Tao). Bombieri–Lang is ineffective, so this gives no finite search. Corvaja–Turchet–Zannier also note that Berry's density hypotheses fail when the three points are rational.
   * Statements 2–3 eliminate the natural genus-1 curves.
 * **Local versus global.**
   * codex's mod-24 guard (continuum note §4) is local: `12 | L`, and one coordinate divisible by 4 and one by 3.

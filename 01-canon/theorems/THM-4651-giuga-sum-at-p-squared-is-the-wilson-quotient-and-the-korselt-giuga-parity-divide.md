@@ -1,13 +1,18 @@
 ---
 id: THM-4651
-title: "Giuga's sum lifted to p^2 is the Wilson quotient, and the Korselt/Giuga duality splits by parity: (1) S(p) = sum_{k<p} k^(p-1) == p + (p-1)! == p - 1 + p w_p (mod p^2) (Glaisher, Lerch), so Wilson primes are exactly the primes with S(p) == p - 1 (mod p^2) and Giuga's congruence S(p) == -1 holds modulo p^2 exactly when w_p == -1, i.e. at the near-Wilson primes of defect 1 (only 1277 below 2*10^5); (2) an even squarefree number satisfies Korselt's divisibility (p - 1) | (n - 1) only at p = 2, so Carmichael numbers are odd, all known Giuga numbers are even, and a counterexample to Giuga's conjecture is exactly an odd Giuga number that is Carmichael; an odd Giuga number with index k has omega(n) == k + 1 (mod 2), hence at least 10 prime factors when k = 1; (3) every known Giuga number has n' = n + 1, but g - 1 and g + 1 are twin primes only for 30, 858, 1722; (4) among the 255 Carmichael numbers below 10^8 at most half of the prime factors also satisfy Giuga's condition (188461, 2455921, 18900973 reach 2 of 4)"
+title: "Giuga's sum lifted to p^2 is the Wilson quotient, and the Korselt/Giuga duality splits by parity: (1) S(p) = sum_{k<p} k^(p-1) == p + (p-1)! == p - 1 + p w_p (mod p^2) (Glaisher, Lerch), so Wilson primes are exactly the primes with S(p) == p - 1 (mod p^2) and Giuga's congruence S(p) == -1 holds modulo p^2 exactly when w_p == -1, i.e. at the near-Wilson primes of defect 1 (KNOWN: 1277, 780887, 56151923, 11774118061 below 2*10^13, Volpatti 2021 / primepuzzles 998); (2) an even squarefree number satisfies Korselt's divisibility (p - 1) | (n - 1) only at p = 2, so Carmichael numbers are odd, all known Giuga numbers are even, and a counterexample to Giuga's conjecture is exactly an odd Giuga number that is Carmichael; an odd Giuga number with index k has omega(n) == k + 1 (mod 2), hence at least 10 prime factors when k = 1 (elementary; the literature bound is 14); (3) every known Giuga number has n' = n + 1, but g - 1 and g + 1 are twin primes only for 30, 858, 1722, while twin primes N -+ 1 around a primary pseudoperfect N give the Giuga number N(N - 1) and the next primary pseudoperfect number N(N + 1); (4) among the 255 Carmichael numbers below 10^8 at most half of the prime factors also satisfy Giuga's condition (188461, 2455921, 18900973 reach 2 of 4)"
 status: >
-  KNOWN: statement 1's congruence (Glaisher 1900; Lerch 1905), Giuga's criterion (Giuga 1950), the characterization of Giuga
-  numbers by n' = a n + 1 (Grau and Oller-Marcen 2011), the joint criterion n == p (mod p^2 (p - 1)), and the OEIS sequences
-  A079853 and A250406/A250407. PROVED (elementary): the consequences in statement 1, statement 2. FINITE-EXACT: the Wilson-quotient
-  scan to 2*10^5 (PARI/gp), the direct check of statement 1 for all primes below 3,000, statement 3 (BPSW probable primality
-  above 2^64), and the census of statement 4 (255 Carmichael numbers below 10^8, the known count). COINCIDENCE: the twin-prime
-  flanks of 30, 858, 1722. Giuga's conjecture remains OPEN. Not yet independently audited.
+  KNOWN: statement 1's congruence (Glaisher 1900; Lerch 1905) and its reading "Giuga modulo p^2 iff w_p == -1" with the
+  solutions 1277, 780887, 56151923, 11774118061 below 2*10^13 (primepuzzles.net Puzzle 998: Lava, van Delden 2020, Volpatti
+  2020-21, using the Costa-Gerbicz-Harvey Wilson-quotient data; OEIS A306431, A268000, and Ordowski's comment in A079853),
+  Giuga's criterion (Giuga 1950), the characterization of Giuga numbers by n' = a n + 1 (Grau and Oller-Marcen, J. Integer Seq.
+  15 (2012) 12.4.1), the bound omega >= 14 for odd Giuga numbers (see Wikipedia and arXiv:1311.3522), the joint criterion
+  n == p (mod p^2 (p - 1)), the Sondow-Tsukerman completions of statement 3, and the OEIS sequences A079853 and A250406/A250407.
+  PROVED (elementary): the consequences in statement 1, statement 2. FINITE-EXACT: the Wilson-quotient scan to 2*10^5
+  (PARI/gp; reproduced by audit B with a different method), the direct check of statement 1 for all primes below 3,000,
+  statement 3 (primality of the large g + 1 proved by PARI's isprime), and the census of statement 4 (255 Carmichael numbers
+  below 10^8, the known count; reproduced by audit B). COINCIDENCE: the twin-prime flanks of 30, 858, 1722. Giuga's conjecture
+  remains OPEN. Audited (audit B, MISTAKE-610: the pre-audit statement 3 wrongly made N(N + 1) a Giuga number).
 session: mac-mini-2026-10-14-wilson
 source: 05-knowledge/results/d19_parity_shift_synthesis_20261014.md
 scripts:
@@ -45,6 +50,7 @@ related:
      * `w_p ≡ 0` exactly at 5, 13, 563;
      * `w_p ≡ −1` only at **1277**;
      * `w_p ≡ 1` at 3, 11, 107, 4931, matching A079853.
+   * KNOWN beyond this range: `w_p ≡ −1` also at 780887, 56151923 and 11774118061, and at no other prime below `2·10^13` (Volpatti 2021, primepuzzles Puzzle 998). Audit B confirmed `S(780887) ≡ −1 (mod 780887²)` directly.
    * The congruence itself was checked directly, with both sides computed, for every prime below 3,000.
 2. **The parity divide (PROVED).**
    * (a) If `n` is even and squarefree, then `K(n) = 1`: Korselt holds at `p = 2` and fails at every odd `p`, since `p − 1` is even and `n − 1` is odd.
@@ -52,12 +58,12 @@ related:
      * A counterexample to Giuga's conjecture is exactly an **odd** Giuga number that is Carmichael.
      * Checked on all 405,285 even squarefree composites up to `2·10^6`.
    * (b) An odd Giuga number with index `k` (meaning `Σ_(p|n) 1/p − 1/n = k`) has `ω(n) ≡ k + 1 (mod 2)`.
-   * (c) Since the reciprocals of the first eight odd primes sum to 0.99896, an odd Giuga number has `ω(n) ≥ 9`, and `ω(n) ≥ 10` if `k = 1`. Much stronger lower bounds for counterexamples are known in the literature (Borwein, Borwein, Borwein and Girgensohn 1996 and later). This one is only the elementary parity version.
+   * (c) Since the reciprocals of the first eight odd primes sum to 0.99896, an odd Giuga number has `ω(n) ≥ 9`, and `ω(n) ≥ 10` if `k = 1`. This is only the elementary parity version: odd Giuga numbers are KNOWN to need at least 14 prime factors (see Wikipedia's Giuga-number page and arXiv:1311.3522; `≥ 9` is old), and much stronger bounds for counterexamples to Giuga's conjecture are known (Borwein, Borwein, Borwein and Girgensohn 1996 and later).
 3. **Giuga numbers: derivative and neighbours.**
    * All 13 known Giuga numbers (the 12 of A007850 and the 10-factor one recorded there) have index 1, i.e. arithmetic derivative `g' = Σ g/p = g + 1`. KNOWN in general: Giuga iff `n' = a·n + 1` with `a ≥ 1`.
    * `g − 1` and `g + 1` are both prime for `g = 30, 858, 1722` and for none of the other ten. The largest has `g + 1` prime and `g − 1` composite.
    * So "Giuga numbers are twin-prime centres" is a small-number COINCIDENCE.
-   * The structural twin-prime mechanism is different. It is the completion `N(N ± 1)` of a primary pseudoperfect `N` (where `N' = N − 1`) by an adjacent prime `N ± 1`: `30 = 6·5`, `1722 = 42·41`, `2214408306 = 47058·47057`. This is Sondow–Tsukerman's construction, recorded in codex's note. In the derivative language, `N' = N − 1` times a prime neighbour gives `g' = g + 1`.
+   * The structural twin-prime mechanism is different (KNOWN: Sondow–Tsukerman; codex's table in `giuga_korselt_defects_20261014f.md` §4). Let `N` be primary pseudoperfect, i.e. `N' = N − 1`. If `N − 1` is prime, then `(N(N−1))' = (N−1)² + N = N(N−1) + 1`, so `N(N − 1)` is a Giuga number: `30 = 6·5`, `1722 = 42·41`, `2214408306 = 47058·47057`. If `N + 1` is prime, then `(N(N+1))' = (N−1)(N+1) + N = N(N+1) − 1`, so `N(N + 1)` is the next **primary pseudoperfect** number, not a Giuga number: `42 = 6·7`, `1806 = 42·43`, `2214502422 = 47058·47059`. (The pre-audit text said both completions were Giuga; the Giuga index of 42 is 20/21 and of 1806 is 902/903. MISTAKE-610.) So twin primes `N ± 1` send `N` to the Giuga number `N(N − 1)` and to the next primary pseudoperfect number `N(N + 1)`.
 4. **Giuga scores of Carmichael numbers (FINITE-EXACT, `n < 10^8`).**
    * Among the 255 Carmichael numbers below `10^8`, the distribution of `(G, ω)` is `(0,3): 77, (0,4): 121, (0,5): 18, (1,3): 7, (1,4): 20, (1,5): 8, (2,4): 3, (2,5): 1`.
    * No Carmichael number below `10^8` has more than half its primes satisfying Giuga's condition. The maximum share `2/4` is reached by:
@@ -94,5 +100,6 @@ related:
   * primary pseudoperfect numbers map to `n − 1`;
   * Giuga numbers map to `n + 1`;
   * `p^p` is fixed.
-  * Multiplying a primary pseudoperfect number by a prime neighbour moves it from the predecessor list to the successor list. That is the exact sense in which these numbers "embody one less or one more".
+  * Multiplying a primary pseudoperfect number `N` by the prime `N − 1` moves it from the predecessor list to the successor list (a Giuga number). Multiplying it by the prime `N + 1` keeps it in the predecessor list (the next primary pseudoperfect number). That is the exact sense in which these numbers "embody one less or one more".
+  * "Giuga numbers map to `n + 1`" is the index-1 case, which covers every known Giuga number. In general a Giuga number satisfies `n' = a·n + 1` with `a >= 1` (Grau–Oller-Marcén).
 * **Wilson at the next level.** Modulo `p` all primes satisfy Giuga's congruence. Modulo `p²` the defect is the Wilson quotient. So the Wilson primes (5, 13, 563) and the defect-1 near-Wilson primes (1277) are the primes where Giuga's sum is exceptional at `p²`. This ties THM-4641's dictionary to Giuga's conjecture.

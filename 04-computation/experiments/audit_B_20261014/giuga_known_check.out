@@ -1,0 +1,13 @@
+G 1:   2 digits, omega  3, Giuga 1, index 1, g' = g+1: 1, Korselt score 1, g-1 prime 1, g+1 prime 1
+G 2:   3 digits, omega  4, Giuga 1, index 1, g' = g+1: 1, Korselt score 1, g-1 prime 1, g+1 prime 1
+G 3:   4 digits, omega  4, Giuga 1, index 1, g' = g+1: 1, Korselt score 1, g-1 prime 1, g+1 prime 1
+G 4:   5 digits, omega  5, Giuga 1, index 1, g' = g+1: 1, Korselt score 1, g-1 prime 0, g+1 prime 0
+G 5:  10 digits, omega  6, Giuga 1, index 1, g' = g+1: 1, Korselt score 1, g-1 prime 0, g+1 prime 0
+G 6:  11 digits, omega  6, Giuga 1, index 1, g' = g+1: 1, Korselt score 1, g-1 prime 0, g+1 prime 0
+G 7:  15 digits, omega  7, Giuga 1, index 1, g' = g+1: 1, Korselt score 1, g-1 prime 0, g+1 prime 0
+G 8:  17 digits, omega  7, Giuga 1, index 1, g' = g+1: 1, Korselt score 1, g-1 prime 0, g+1 prime 0
+G 9:  18 digits, omega  7, Giuga 1, index 1, g' = g+1: 1, Korselt score 1, g-1 prime 0, g+1 prime 0
+G10:  27 digits, omega  8, Giuga 1, index 1, g' = g+1: 1, Korselt score 1, g-1 prime 0, g+1 prime 0
+G11:  30 digits, omega  8, Giuga 1, index 1, g' = g+1: 1, Korselt score 1, g-1 prime 0, g+1 prime 0
+G12:  34 digits, omega  8, Giuga 1, index 1, g' = g+1: 1, Korselt score 1, g-1 prime 0, g+1 prime 0
+G13:  97 digits, omega 10, Giuga 1, index 1, g' = g+1: 1, Korselt score 1, g-1 prime 0, g+1 prime 1

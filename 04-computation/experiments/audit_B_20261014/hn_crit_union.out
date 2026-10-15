@@ -1,0 +1,6 @@
+crit_V49+V37_V31+V25_t4_seed0.json: n = 614 (len 614, distinct 614), edges 3099 (len 3099), L727 part 448, rho S361 part 166
+crit_V49+V37_V31+V25_t4_seed1.json: n = 611 (len 611, distinct 611), edges 3084 (len 3084), L727 part 448, rho S361 part 163
+crit_V49+V37_V31+V25_t4_seed2.json: n = 617 (len 617, distinct 617), edges 3119 (len 3119), L727 part 454, rho S361 part 163
+crit_V49+V37_V31+V25_t4_seed3.json: n = 618 (len 618, distinct 618), edges 3121 (len 3121), L727 part 462, rho S361 part 156
+best_V49+V37_V31+V25_t4.json: n = 611 (len 611, distinct 611), edges 3084 (len 3084), L727 part 448, rho S361 part 163
+union of the vertex sets: 784
