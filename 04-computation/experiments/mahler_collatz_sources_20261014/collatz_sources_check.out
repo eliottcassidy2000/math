@@ -1,13 +1,14 @@
 (a) 34805 safe words of length 1..22: ones <= floor(l/3)+1, offset T_w(0) < 11/10 (max 1.099374), slope/(3 lambda^l) <= 1.0000
 (b) window x_n in [-3 lam^n |x|, 3 lam^n |x| + 11/10) along safe own-prefixes: 15615 checks, 0 violations
 (c) positive integers A <= 200000 with safe depth >= 20: 981; deepest: A=8101 (depth 38), A=105109 (depth 38), A=163493 (depth 38), A=192293 (depth 38), A=12152 (depth 37), A=157664 (depth 37), A=18228 (depth 36), A=27342 (depth 35)
-    bound checked on 4980199 (A, u/v) pairs with nonempty safe agreement: 0 violations; tightest h/bound: [(0.629, 20480, 0, 1, 12, 19.08), (0.586, 5120, 0, 1, 10, 17.08), (0.559, 30720, 0, 1, 11, 19.66), (0.555, 118784, 0, 1, 12, 21.61), (0.546, 151552, 0, 1, 12, 21.96)]
-    A=20480, x=0/1: agreement 12; new bound 19.08; interface bound 14Q+2+bitlength(A+1) = 31
-    A=5120, x=0/1: agreement 10; new bound 17.08; interface bound 14Q+2+bitlength(A+1) = 29
-    A=30720, x=0/1: agreement 11; new bound 19.66; interface bound 14Q+2+bitlength(A+1) = 31
+    bound checked on 4980199 (A, u/v) pairs with nonempty safe agreement: 0 violations; tightest h/bound: [(0.875, 53, -3, 41, 7, 8), (0.857, 53, -1, 35, 6, 7), (0.823, 120, 8, 45, 7, 8.5), (0.817, 53, 3, 23, 6, 7.34), (0.806, 153253, 1, 13, 19, 23.57)]
+    A=53, x=-3/41: agreement 7; new bound 8; interface bound 14Q+2+bitlength(A+1) = 582
+    A=53, x=-1/35: agreement 6; new bound 7; interface bound 14Q+2+bitlength(A+1) = 498
+    A=120, x=8/45: agreement 7; new bound 8.5; interface bound 14Q+2+bitlength(A+1) = 639
 (d) t=0: A_t=13: agreement with 1/5 = 8 (= 18t+8: True), safe depth 10, bound 8.56
 (d) t=1: A_t=3532045: agreement with 1/5 = 26 (= 18t+8: True), safe depth 28, bound 26.51
 (d) t=2: A_t=925904528653: agreement with 1/5 = 44 (= 18t+8: True), safe depth 46, bound 44.51
 (d) t=3: A_t=2^62...: agreement with 1/5 = 62 (= 18t+8: True), safe depth 64, bound 62.51
 (d) t=4: A_t=2^80...: agreement with 1/5 = 80 (= 18t+8: True), safe depth 82, bound 80.51
 (d) t=5: A_t=2^98...: agreement with 1/5 = 98 (= 18t+8: True), safe depth 100, bound 98.51
+exit 0

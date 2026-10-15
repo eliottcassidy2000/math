@@ -18052,3 +18052,27 @@ the ambient space.
   - Read the "numerical observations" section of a cited paper; it can hold the prior art.
   - When a relation has coefficients of half-integral degree, treat every limit case.
   - Separate in-sample from out-of-sample checks explicitly.
+
+## MISTAKE-612 (2026-10-14, mac-mini-2026-10-14-wilson THM-4654, mahler_collatz_sources_logarithmic_memory_20261014.md, chowla_ordinary_exponent_ledger_20261014.md; found by the session's independent adversarial audit D after the pre-audit checkpoint was pushed) -- a vacuous "logarithmic memory by real contraction" lemma credited with work done by the 2-adic parity bijection, a dichotomy whose transcendence logic ran backwards, a complexity class claim refuted by a known theorem, a parameter range misread, and an analogy typed as structural
+- **What was wrong:**
+  - **The memory lemma was vacuous and the mechanism misattributed.** THM-4654 statement 5 said that two shadows in the window that follow a common safe word for ℓ ≈ 2.12 log₂ v bits coincide "by real contraction". But two points of (1/v)Z with a common T-code prefix of length ℓ are already congruent mod 2^ℓ (Terras/Everett). So the hypothesis forced them to be equal from the start. The memory is 2-adic: `⌊log₂(2.1v)⌋ + 1` future bits fix the state in the window. Real contraction only gives entry into the bounded window. The Reading's "real–2-adic duality: real contraction turns the 2-adic problem into finite memory" was the wrong story.
+  - **Dichotomy (d) was mis-stated.** Low factor complexity yields a *finite* 2-adic irrationality exponent, which is the generic, expected case. It is not a restriction, and a transcendence input would exclude nothing. The text claimed low-complexity Z-numbers are "exactly" those with finite exponents and that a transcendence input would exclude them.
+  - **"(c) covers Sturmian, automatic and morphic codes" was false.** General morphic words can have super-linear complexity, and Sturmian codes are impossible: Dubickas (2009) proves complexity at least `1.71ℓ` for Mahler codes of positive integers. The note also said the periodic-run inequality gives "only aperiodicity", ignoring that known bound.
+  - **Ledger, Part II.** It claimed `ρ = 1/20` "needs only `ρ > 4·10^(−4)`, margin 125". In fact `ρ` is used throughout §§14–16 and needs `0.0008 < ρ < 0.125`.
+  - **Ledger, typing.** It typed "prohibited words ↔ safe Mahler language" as STRUCTURAL and called the deletion "the mechanism behind THM-4654". It is an analogy: a divisibility deletion against a β-shift inequality.
+  - **Smaller errors.**
+    - Constants were rounded the wrong way (3.36 for 3.36026).
+    - The proof of statement 6 claimed M is an isometry on parity classes; it expands 2-adic distance by 2.
+    - Statement 6's sharpness was understated: the additive constant is optimal.
+    - Ledger slips: the origin of A ≥ 1000; τ needs an upper cap; the "5 forced by the 4"; the (1,1,1) role; four omitted 20s, including Lemma 6.5's exp(−L^(21/20)).
+- **What survives:**
+  - Statements 1–7 of THM-4654 are true, with valid proofs, and improved in the Terras form.
+  - Audit D verified statements 1–4 to length 400.
+  - Statement 7 holds on 2.1 million worst-case (A, u/v, h) cases and on the 4,980,199-pair scan, with no violation.
+  - The improved unconditional separation (linear in v, logarithmic in |u|).
+  - All Part I ledger arithmetic, and the conclusion that no 20 or 700 in the paper is sharp.
+- **Lesson:**
+  - Before crediting an analytic mechanism (contraction) with a discrete conclusion, check whether the discrete structure (here the 2-adic parity bijection) already forces it.
+  - A dichotomy whose bad branch is the generic case restricts nothing.
+  - Grep the Z-number literature (Flatto; Dubickas; Andrieu–Eliahou–Vivion) before stating complexity facts.
+  - When summarising a parameter's role in a long paper, search every section for it.

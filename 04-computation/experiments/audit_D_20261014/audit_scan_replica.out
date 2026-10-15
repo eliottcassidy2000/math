@@ -1,0 +1,5 @@
+A <= 200000 with safe depth >= 20: 981; deepest: A=8101 (depth 38), A=105109 (depth 38), A=163493 (depth 38), A=192293 (depth 38), A=12152 (depth 37), A=157664 (depth 37)  [0.4s]
+rationals: 10153; float/exact constant mismatches: n1 0, ell 0
+pairs with nonempty agreement: 4980199; violations (original convention) 0; violations (theorem convention, exact constants) 0  [5.2s]
+tightest h/bound: [(0.629, 20480, 0, 1, 12, 19.08), (0.586, 5120, 0, 1, 10, 17.08), (0.559, 30720, 0, 1, 11, 19.66), (0.555, 118784, 0, 1, 12, 21.61), (0.546, 151552, 0, 1, 12, 21.96)]
+minimal additive slack bound - h (theorem convention): 7.0769 at (A, u, v, h, bound) = (20480, 0, 1, 12, 19.077)

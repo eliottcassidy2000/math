@@ -2,12 +2,12 @@
 """Rational shadows of safe codes: exact checks of the logarithmic-memory and complexity-approximation bounds.
 
 For a positive integer A with Mahler code e (M(x) = ceil(3x/2)) and a rational x = u/v (odd v) whose Collatz (T) code
-agrees with e on a SAFE common prefix of length h, the theorem (THM in mahler_collatz_sources_20261014.md) gives
+agrees with e on a SAFE common prefix of length h, the theorem (THM-4654, corrected after audit D) gives
 
-  h < log2(3) * (n1(x) + min(floor(2.1 v) + 1, l(v) + N_e(l(v)))) + log2(A + 1),
+  h < min( log2(3)(n_in + floor(2.1 v) + 1) + log2(A+1),  max(n_in + N + l, log2(3)(n_in + N) + log2(A+1)) ),
 
-n1(x) = 0 if |x| <= 1/6 else ceil(log2(6|x|)/c),  c = 1 - log2(3)/3,  l(v) = floor(log2(6.3 v)/c) + 1,
-N_e(l) = number of distinct length-l factors of e in the agreement window.
+n_in(x) = 0 if |x| <= 1/6 else ceil(log2(6|x|)/c) (entry time), c = 1 - log2(3)/3, l = floor(log2(2.1 v)) + 1,
+N = number of distinct length-l factors e[n, n+l) of the safe code with n_in <= n and n + l <= h.
 
 Checks: (a) the slope/offset lemmas on every safe word to length 22; (b) the entry window [-1/2, 1.6) for every
 rational of height <= 60 along every safe word to length 18; (c) the bound for every A <= AMAX with safe depth >= 20
@@ -61,7 +61,9 @@ def n1(u, v):
 
 
 def ell(v):
-    return math.floor(math.log2(6.3 * v) / C) + 1
+    """2-adic memory length (audit D, M2): two points of (1/v)Z in a window of length 2.1 with the same next ell bits of
+    T-code are congruent mod 2^ell, hence equal once 2^ell > 2.1 v."""
+    return math.floor(math.log2(2.1 * v)) + 1
 
 
 def factors(code, lo, hi, l):
@@ -144,9 +146,10 @@ for A, D, code in found:
             if h == 0:
                 continue
             l = ell(v)
-            N = factors(safe, n1(u, v), h, l)
-            bound_state = LOG3 * (n1(u, v) + math.floor(2.1 * v) + 1) + math.log2(A + 1)
-            bound_cplx = LOG3 * (n1(u, v) + l + N) + math.log2(A + 1)
+            n_in = n1(u, v)
+            N = factors(safe, n_in, h, l)                 # distinct FUTURE l-factors e[n, n+l) with n_in <= n, n+l <= h
+            bound_state = LOG3 * (n_in + math.floor(2.1 * v) + 1) + math.log2(A + 1)
+            bound_cplx = max(n_in + N + l, LOG3 * (n_in + N) + math.log2(A + 1))
             bound = min(bound_state, bound_cplx)
             nchk += 1
             if h >= bound:

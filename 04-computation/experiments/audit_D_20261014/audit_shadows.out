@@ -1,0 +1,27 @@
+[S5] entry window (exact, with the sharper slope 3^k/2^n) on 214575 rationals (v<=201 with |u|<=12v; random |u|<=1e12 v; u=2^k m; x=1/5+8^r t), 1459618 orbit points, 294579 points past n1(x): 0 violations; max safe depth met 400
+[S5] memory: for every odd v <= 1001 the window points of (1/v)Z are pairwise separated by their T-code prefixes of length ell2(v) = ceil(log2(2.1v)) <= ell(v); ell(v) - ell2(v) reaches 16. So two DISTINCT window points never share a code prefix of length ell(v): the lemma's hypothesis forces x = x'.
+     v=1: ell(v)=6  (THM: floor(log2(6.3v)/c)+1),  Terras ell2(v)=2
+     v=5: ell(v)=11  (THM: floor(log2(6.3v)/c)+1),  Terras ell2(v)=4
+     v=45: ell(v)=18  (THM: floor(log2(6.3v)/c)+1),  Terras ell2(v)=7
+     v=201: ell(v)=22  (THM: floor(log2(6.3v)/c)+1),  Terras ell2(v)=9
+     v=1001: ell(v)=27  (THM: floor(log2(6.3v)/c)+1),  Terras ell2(v)=12
+     v=1000001: ell(v)=48  (THM: floor(log2(6.3v)/c)+1),  Terras ell2(v)=22
+[S6] periodic-run inequality h < p log2 3 + i log2(3/2) + log2(A+1): all A <= 5000, i < 20, p <= 10 (1000000 runs): 0 violations; min slack 0.0720 at (A, i, p, h) = (27, 1, 8, 18)
+     A_t, t=0: agreement with (100)^inf = 8 (18t+8 = 8); bound - h = 0.562242424221
+     A_t, t=1: agreement with (100)^inf = 26 (18t+8 = 26); bound - h = 0.506960203698
+     A_t, t=2: agreement with (100)^inf = 44 (18t+8 = 44); bound - h = 0.506959988721
+     A_t, t=5: agreement with (100)^inf = 98 (18t+8 = 98); bound - h = 0.50695998872
+     A_t, t=11: agreement with (100)^inf = 206 (18t+8 = 206); bound - h = 0.50695998872
+     log2(27/19) = 0.50695998872
+     w = 0^(2)1: A = (2^74 - 2^2)/(3^3 - 2^3), agreement 74; bound - h = 0.50695999  (limit log2(3^p/(3^p-2^p)) = 0.50695999)
+     w = 0^(3)1: A = (2^63 - 2^3)/(3^4 - 2^4), agreement 63; bound - h = 0.31748219  (limit log2(3^p/(3^p-2^p)) = 0.31748219)
+     w = 0^(4)1: A = (2^214 - 2^4)/(3^5 - 2^5), agreement 214; bound - h = 0.20371331  (limit log2(3^p/(3^p-2^p)) = 0.20371331)
+     w = 0^(5)1: A = (2^77 - 2^5)/(3^6 - 2^6), agreement 77; bound - h = 0.13256447  (limit log2(3^p/(3^p-2^p)) = 0.13256447)
+     w = 0^(7)1: A = (2^103 - 2^7)/(3^8 - 2^8), agreement 103; bound - h = 0.057419351  (limit log2(3^p/(3^p-2^p)) = 0.057419351)
+     w = 0^(9)1: A = (2^429 - 2^9)/(3^10 - 2^10), agreement 429; bound - h = 0.02523801  (limit log2(3^p/(3^p-2^p)) = 0.02523801)
+     w = 0^(11)1: A = (2^191 - 2^11)/(3^12 - 2^12), agreement 191; bound - h = 0.011162423  (limit log2(3^p/(3^p-2^p)) = 0.011162423)
+     [time 15.7s]
+[S7] canonical-residue construction checked against direct Mahler codes
+[S7] x-centric, ALL positive A at once: 112825 rationals u/v (v odd <= 151, |u| <= 12v), every agreement length h <= min(safe depth, 300): 592561 (x, h) cases; violations 0; min additive slack B - h = 4.7548875 at (u, v, h, A_h) = (0, 1, 49, 562949953421312); max depth reached 300  [time 22.6s]
+     Terras-improved form (ell2(v) = ceil(log2 2.1v) in place of ell(v)): violations 0; min slack 3.7548875 at (0, 1, 1, 2)
+[S7] adversarial families (27040 rationals: random |u| <= 1e15 v, u = 2^k m, x = 1/5 + 8^r t, and 1953 purely periodic safe cycles of period <= 16): 1448121 (x, h) cases; violations 0; min slack 4.7548875 at (0, 1, 49, 562949953421312); Terras form violations 0, min slack 3.7548875  [time 37.8s]
