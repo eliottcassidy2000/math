@@ -1,7 +1,7 @@
 ---
 id: THM-4653
 title: "The Paley six-vertex terminal K6 - P6 reduces exactly to one Legendre-family bilinear form M_q, equivalently the 2F1 x 3F2 beta moment -q^3 sum phi(x)phi(1-x) 2F1(x) 3F2(x)"
-status: PROVED (elementary character-sum identities, valid over every finite field of odd characteristic); FINITE-EXACT checks listed below
+status: PROVED (elementary character-sum identities, valid over every finite field of odd characteristic); FINITE-EXACT checks listed below. Audited (audit C): CORRECT; every step re-derived by hand, V_q brute-forced with injectivity enforced on all 15 pairs at 24 fields (including fully unnormalised runs to q = 31), the proof internals checked at the prime powers 9..125, and eq. (4)'s sign confirmed at q = 11 by an independent subset DP
 source: mac-mini-2026-10-14-wilson
 depends_on: [orthogonality of the quadratic character; sum_x chi(x-u)chi(x-v) = -1 for u != v; Greene's finite-field 2F1 and 3F2 (statement 4 only)]
 verification:
@@ -44,15 +44,15 @@ related: [HYP-9276 (the modular evaluation of M_q), THM-4652, HYP-9274, HYP-9275
    `h(x) = Σ_a χ(a)χ(x−a) t(a) = Σ_y χ(y(1−y)) t(xy)` for `x ≠ 0`.
    Two FFTs therefore give `M_q`, and hence `V_q`, in `O(q log q)` operations when `q` is prime.
 
-4. **(Hypergeometric form.)** In Greene's normalisation, with `φ = χ` and every function taken with quadratic parameters, the following hold for all `x ≠ 0`:
-   - `t(x) = ε q · ₂F₁(φ, φ; ε | x)`;
+4. **(Hypergeometric form.)** In Greene's normalisation, with `φ = χ` and every function taken with quadratic parameters, the following hold for all `x ≠ 0`. (Here the sign `φ(−1)` is written out, and `ε` inside the hypergeometric symbols is Greene's trivial character.)
+   - `t(x) = φ(−1) q · ₂F₁(φ, φ; ε | x)`;
    - `h(x) = q² · ₃F₂(φ, φ, φ; ε, ε | x)`.
 
    Hence
 
    `M_q = −q³ Σ_(x ∈ F_q) φ(x) φ(1−x) ₂F₁(x) ₃F₂(x)`.
 
-   Greene's own recursion reads `₄F₃(1) = (ε/q) Σ_x φ(x)φ(1−x) ₃F₂(x)`. So `M_q` is that `₄F₃(1)` sum with one extra `₂F₁(x)` inserted. That `₄F₃(1)` is the Ahlgren–Ono value behind the wheel `W_4` in HYP-9274 (B).
+   Greene's own recursion reads `₄F₃(1) = (φ(−1)/q) Σ_x φ(x)φ(1−x) ₃F₂(x)`. So `M_q` is that `₄F₃(1)` sum with one extra `₂F₁(x)` inserted. That `₄F₃(1)` is the Ahlgren–Ono value behind the wheel `W_4` in HYP-9274 (B).
 
 5. **(Consequence for the run coefficient.)** Combine statement 2 with eq. (4) of the source note. For `q ≡ 3 (mod 4)` and `q >= 11`:
 
@@ -108,9 +108,9 @@ Adding: `W_q = −εM_q + (3 + 3ε) + 2(2 + 5ε − εq) = −εM_q + 7 + 13ε �
 **3.** Sum the definition of `M_q` over `a` first. The second form of `h` is the substitution `a = xy`, which gives `χ(xy)χ(x − xy) = χ(y)χ(1−y)` for `x ≠ 0`.
 
 **4.** Greene defines `₂F₁(φ, φ; ε | x) = ε(x)(φ(−1)/q) Σ_y φ(y)φ(1−y)φ(1−xy)`.
-- The substitution `y ↦ 1/y` in `t(x)` gives `t(x) = Σ_y φ(y)φ(1−y)φ(1−xy)`. So `t = εq ₂F₁` for `x ≠ 0`, including `x = 1`.
+- The substitution `y ↦ 1/y` in `t(x)` gives `t(x) = Σ_y φ(y)φ(1−y)φ(1−xy)`. So `t = φ(−1) q ₂F₁` for `x ≠ 0`, including `x = 1`.
 - Greene's recursion gives `₃F₂(x) = (φ(−1)/q) Σ_y ₂F₁(xy) φ(y)φ(1−y) = q⁻² h(x)`. The `y = 0` term is killed by `φ(0) = 0`.
-- Substituting both into statement 3 and using `φ(x−1) = εφ(1−x)` proves statement 4.
+- Substituting both into statement 3 and using `φ(x−1) = φ(−1)φ(1−x)` proves statement 4.
 
 **5.** Substitute statement 2 into eq. (4) of the source note. ∎
 

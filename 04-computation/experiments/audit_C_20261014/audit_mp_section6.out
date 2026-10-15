@@ -1,0 +1,21 @@
+T1 (q = p): MP Thm 1.6 value -phi(-1) S3(-1) vs a(p)b(p) [p = 1 mod 4] or 0 [p = 3 mod 4]
+  p =  3: value        0   a(p) =   0, b(p) = 0+4i   predicted        0   ok
+  p =  5: value       -4   a(p) =  -2, b(p) = 2+0i   predicted       -4   ok
+  p =  7: value        0   a(p) =   0, b(p) = 0-8i   predicted        0   ok
+  p = 11: value        0   a(p) =   0, b(p) = 0-4i   predicted        0   ok
+  p = 13: value      -84   a(p) =   6, b(p) = -14+0i   predicted      -84   ok
+  p = 17: value       36   a(p) =   2, b(p) = 18+0i   predicted       36   ok
+  p = 19: value        0   a(p) =   0, b(p) = 0-12i   predicted        0   ok
+  p = 23: value        0   a(p) =   0, b(p) = 0+40i   predicted        0   ok
+  p = 29: value      140   a(p) = -10, b(p) = -14+0i   predicted      140   ok
+  p = 37: value       60   a(p) =  -2, b(p) = -30+0i   predicted       60   ok
+  p = 41: value     -140   a(p) =  10, b(p) = -14+0i   predicted     -140   ok
+T2 (q = p^2): MP Sec. 6 value -S3(-1) over F_{p^2} vs (a(p)^2 - 2p)(b(p)^2 - 2 chi(p) p^2)
+  p =  3: value          -12   predicted          -12   ok  -> |b(p)|^2 = 2p^2 + value/(2p) = 16.0 (true 16)
+  p =  5: value          276   predicted          276   ok
+  p =  7: value         -476   predicted         -476   ok  -> |b(p)|^2 = 2p^2 + value/(2p) = 64.0 (true 64)
+  p = 11: value        -4972   predicted        -4972   ok  -> |b(p)|^2 = 2p^2 + value/(2p) = 16.0 (true 16)
+  p = 13: value        -1420   predicted        -1420   ok
+  p = 17: value         7620   predicted         7620   ok
+  p = 19: value       -21964   predicted       -21964   ok  -> |b(p)|^2 = 2p^2 + value/(2p) = 144.0 (true 144)
+  p = 23: value        24932   predicted        24932   ok  -> |b(p)|^2 = 2p^2 + value/(2p) = 1600.0 (true 1600)

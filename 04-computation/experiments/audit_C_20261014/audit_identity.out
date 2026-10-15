@@ -1,0 +1,17 @@
+FFT: 10590 primes (all 5..100000 and 1000 random in (1e5, 3e5]); worst rounding gap 2.44e-09 [335.1s]
+EXACT: 758 primes (all 5..3000, 300 random in (3e3, 3e4], 30 random in (3e4, 6e4]) [465.4s]
+EXACT vs FFT agree at 758 of 758 common primes; disagreements []
+HYP-9276 M_q = -b(q^2) - 2q - 1: FFT set 10590 primes, failures []; EXACT set 758 primes, failures []
+   largest prime tested: 299983 (FFT), 58907 (EXACT)
+session k6p6_fft.json: 3243 primes; M_q mismatches []; W_q mismatches []
+q <= 30000: 3243 primes (1632 = 3 mod 4, 1611 = 1 mod 4)
+   M_q = 0 at [7, 31, 199, 223, 1151, 2239, 2663, 3391, 3583, 23719, 23743]  (all = 7 mod 8: True); Paley primes with |b(q)| = q+1: same list
+   min v_2(M_q) by class mod 8: {1: 1, 3: 7, 5: 1, 7: 10}; q = 1 mod 4 with v_2(M_q) != 1: []
+   class 3 mod 4, N = 1632: moments k=0..8 1.000, 0.000, 1.005, 1.000, 3.002, 5.987, 14.974, 35.937, 90.946  | z-scores k=1..8 +0.01, +0.15, -0.00, +0.01, -0.02, -0.02, -0.01, -0.00
+   class 1 mod 4, N = 1611: moments k=0..8 1.000, -0.015, 0.966, 0.902, 2.751, 5.349, 13.304, 31.548, 79.220  | z-scores k=1..8 -0.60, -0.96, -1.05, -1.10, -1.10, -1.08, -1.05, -1.01
+q <= 100000: 9590 primes (4807 = 3 mod 4, 4783 = 1 mod 4)
+   M_q = 0 at [7, 31, 199, 223, 1151, 2239, 2663, 3391, 3583, 23719, 23743, 97919]  (all = 7 mod 8: True); Paley primes with |b(q)| = q+1: same list
+   min v_2(M_q) by class mod 8: {1: 1, 3: 7, 5: 1, 7: 10}; q = 1 mod 4 with v_2(M_q) != 1: []
+   class 3 mod 4, N = 4807: moments k=0..8 1.000, 0.002, 1.003, 1.002, 2.991, 5.938, 14.738, 35.044, 87.763  | z-scores k=1..8 +0.14, +0.14, +0.03, -0.07, -0.18, -0.29, -0.39, -0.48
+   class 1 mod 4, N = 4783: moments k=0..8 1.000, -0.010, 0.977, 0.943, 2.848, 5.618, 13.988, 33.343, 83.908  | z-scores k=1..8 -0.67, -1.13, -1.06, -1.16, -1.11, -1.11, -1.07, -1.05
+done [465.4s]

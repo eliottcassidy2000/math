@@ -1,0 +1,3 @@
+(i) PARI (own script) vs eta/theta construction: 3244 primes 3..30000, mismatches []
+(ii) session g_trace_a2_half.txt (Re a_p^2) vs eta/theta construction: 3243 primes, mismatches []
+(iii) session g_coeffs.out a_p (p < 100): 24 primes, mismatches []

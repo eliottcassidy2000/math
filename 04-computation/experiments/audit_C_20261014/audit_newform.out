@@ -1,0 +1,8 @@
+f1 = eta(4z)^2 eta(8z)^2: first coefficients [0, 1, 0, 0, 0, -2, 0, 0, 0, -3, 0, 0, 0, 6, 0, 0, 0, 2, 0, 0]; a_p(f1) = p+1-#E(F_p) for y^2 = x^3 - x at all odd p < 2000: failures []
+rank of span{F1, F2, F4, F8, eta(4z)^6, eta(8z)^6} on 200 coefficients: 4 (dim S_3(32, chi_-4) = 4); FFT rounding max gap 9.67e-10
+T_3 matrix on (F1, F2, F4, F8) (column j = coordinates of T_3 F_j): [[0, 0, 0, 0], [-4, -4, -4, -2], [8, 8, 4, 2], [0, 0, 0, 0]]
+characteristic polynomial of T_3: lambda**2*(lambda**2 + 16)
+g = sum c_i F_i with c = [0, I, 1 - I, 0]
+g = (1+0i)q^1 + (0+4i)q^3 + (2+0i)q^5 + (0-8i)q^7 + (-7+0i)q^9 + (0-4i)q^11 + (-14+0i)q^13 + (0+8i)q^15 + (18+0i)q^17 + (0-12i)q^19 + (32+0i)q^21 + (0+40i)q^23
+Hecke multiplicativity on 121227 random coprime pairs mn <= 300000: failures 0; p^2, p^3 relations: failures []; Deligne |b(p)| <= 2p violations: []; b(p) real for p = 1 mod 4 and imaginary for p = 3 mod 4: violations []; nonzero even-index coefficients: 0
+wrote b(p) for 25997 primes p <= 300000  [3.7s]

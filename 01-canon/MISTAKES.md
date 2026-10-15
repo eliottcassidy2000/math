@@ -18023,3 +18023,32 @@ the ambient space.
   - Check both signs of every "N ± 1" claim.
   - Search arXiv for special cases of a named problem (here "rational distances unit square diagonal midline") before typing a statement as new.
   - When describing a construction's edges, tabulate them by (radius, radius, angle) rather than describing one example.
+
+## MISTAKE-611 (2026-10-14, mac-mini-2026-10-14-wilson HYP-9276, paley_k6p6_adjoint_weight3_level32_20261014.md, THM-4653 notation; found by the session's independent adversarial audit C after the pre-audit checkpoint was pushed) -- a symmetric square misnamed as its twist, a numerical prior observation over F_(p^2) missed while claiming "nothing for p = 3 mod 4", a conjecture credited to the wrong authors, an independence argument with an untreated case, out-of-sample claims and typing errors, and a coincidence of level typed as structural
+- **What was wrong:**
+  - **The symmetric square was misnamed as its twist.** The results note said "the trace of Frob_p^r on Sym²(ρ_g) ⊗ χ₋₄ is α^(2r) + (αβ)^r + β^(2r)". That trace is on Sym²ρ_g itself (≅ Ad ρ_g ⊗ χ₋₄ ⊗ Q_ℓ(−2)). The twisted version has the opposite sign for p ≡ 3 (mod 4) with r odd, which is exactly the Paley prime powers 27, 243, 343. HYP-9276 also called the same quantity "the adjoint".
+  - **Prior art missed.** McCarthy–Papanikolas §6 records a numerical observation over F_(p²), a_p² − 2a_(p²) = ₄F₃(φ,φ,φ,φ;ε,ε,ε|−1)_(p²). With their (1.5) this already gives |b(p)|² at Paley primes through a quadratic-character hypergeometric value over F_(p²). The note claimed MP "have nothing for p ≡ 3 (mod 4)" and that HYP-9276 "supplies" |b(q)|² there. The correct claim is that HYP-9276 is the first prime-field expression known to us.
+  - **Attribution.** "Okazaki's conjecture" is the van Geemen–van Straten conjecture, reported resolved by Okazaki. MP Theorem 1.6 gives exactly a(p)b(p), with no "±".
+  - **Corollary (c).** The relation gives x_q = R(q) + β(q)y_q with β of half-integral degree. The pre-audit argument assumed bounded coefficients and did not treat |β| → ∞. Audit C supplied a complete argument (convergence or degeneration contradicted by Sato–Tate moments and Deligne). The corollary is Z[q]-linear independence, weaker than the algebraic independence the source note left open.
+  - **Typing and sampling.**
+    - "Nothing was fitted at the tested primes" was inaccurate: the identity was identified from primes below 1500.
+    - "M_q = 0 iff |b| = q+1" is conditional on the HYP.
+    - The q ≡ 1 (mod 4) non-vanishing and v₂ = 1 are in fact PROVED by audit C's parity lemma.
+    - "Integers of size ≤ q²" is not an FFT rounding check.
+    - ε denoted both φ(−1) and Greene's trivial character in one formula.
+    - The note's title stated the open identity as fact.
+    - The D19 / K6 − P6 level-32 link was typed STRUCTURAL ("the two problems meet"). It is a coincidence of level, mediated by an unrelated Siegel form.
+    - identify_g.gp needed a larger PARI stack.
+- **What survives:**
+  - THM-4653 is CORRECT: re-derived by hand; V_q brute-forced with full injectivity at 24 fields; internals checked at prime powers; eq. (4)'s sign confirmed at q = 11.
+  - HYP-9276 holds at 10,590 primes up to 299,983 (two new evaluators) and at 22 prime powers, with no failure.
+  - g is LMFDB 32.3.c.a, with an eta–theta closed form.
+  - All tables, zeros (next zero 97,919) and 2-adic minima are confirmed.
+- **New:**
+  - The parity lemma (M_q ≡ 2 mod 8 for q ≡ 1 mod 4; 16 | M_q for q ≡ 3 mod 4) is PROVED.
+  - The independence argument is corrected.
+- **Lesson:**
+  - Name Galois representations by their traces, and test the sign at a p ≡ 3 (mod 4) prime power before writing a twist.
+  - Read the "numerical observations" section of a cited paper; it can hold the prior art.
+  - When a relation has coefficients of half-integral degree, treat every limit case.
+  - Separate in-sample from out-of-sample checks explicitly.

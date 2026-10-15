@@ -1,0 +1,10 @@
+  ***   Warning: new maximum stack size = 800014336 (762.953 Mbytes).
+dim S_3^new(32,(-4/.)) = 2;  dim S_3(32,(-4/.)) = 4
+number of newform Galois orbits: 1;  fields: [y^2 + 1];  CM: 0
+  *** mfcoefs: Warning: increasing stack size to 16000000.
+wrote a_p for 3244 primes 3 <= p <= 30000 as (constant, coefficient of y) with y^2 + 1 = 0
+y^2 = x^3 - x: conductor 32, torsion [2, 2]
+E_mid: y^2 = x^3 - 11x + 14: conductor 32, j = 287496, torsion [4]
+E_mid and y^2 = x^3 - x have equal a_p for all 3 <= p < 5000: 1
+isogeny class of y^2 = x^3 - x, [a4, a6] of its members: [[-1, 0], [-11, 14], [4, 0], [-11, -14]]
+eta(4z)^2 eta(8z)^2 has a_p = ellap(y^2 = x^3 - x) for all odd p < 2000: 1

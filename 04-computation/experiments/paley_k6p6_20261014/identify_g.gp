@@ -1,4 +1,5 @@
 \\ The weight-3 level-32 newform orbit with character (-4/.) that evaluates the Paley K6-P6 terminal.
+default(parisizemax, 10^9);   \\ mfcoefs to 30000 needs more than gp's default 8 MB stack (audit C)
 mf = mfinit([32, 3, -4], 0);
 L = mfeigenbasis(mf);
 print("newform orbits in S_3^new(32, (-4/.)): ", #L, "; dimension ", mfdim(mf));

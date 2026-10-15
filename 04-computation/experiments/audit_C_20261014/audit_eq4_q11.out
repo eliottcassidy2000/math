@@ -1,0 +1,5 @@
+A_10(11) (own DP) = 478720;  [t^10]R_11 = A_10/11! = 34/2835 (source: 34/2835)
+U_11 (own brute force) = 4400;  HYP-9274(B) form -q(q-1)(a_q+4) with a_11(eta(2z)^4 eta(4z)^4) = -44: 4400
+P10(11) = 783200;  coefficient of U at q = 11: 110
+eq. (4) RHS with V_11 = -12320 (natural lower->higher orientation): 478720   -> equals A_10(11): True
+eq. (4) RHS with the opposite sign of V: 2055680   -> equals A_10(11): False
