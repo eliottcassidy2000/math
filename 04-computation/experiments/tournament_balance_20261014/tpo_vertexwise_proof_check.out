@@ -1,0 +1,14 @@
+(a) class decomposition vs DFS enumeration, m <= 9: mismatches 0
+(b) m=3: (word, i) with P(u_i before z) outside [1/3,2/3], 2 <= i <= m-1: 0
+(b) m=4: (word, i) with P(u_i before z) outside [1/3,2/3], 2 <= i <= m-1: 0
+(b) m=5: (word, i) with P(u_i before z) outside [1/3,2/3], 2 <= i <= m-1: 0
+(b) m=6: (word, i) with P(u_i before z) outside [1/3,2/3], 2 <= i <= m-1: 0
+(b) m=7: (word, i) with P(u_i before z) outside [1/3,2/3], 2 <= i <= m-1: 0
+(b) m=8: (word, i) with P(u_i before z) outside [1/3,2/3], 2 <= i <= m-1: 0
+(b) m=9: (word, i) with P(u_i before z) outside [1/3,2/3], 2 <= i <= m-1: 0
+(b) m=10: (word, i) with P(u_i before z) outside [1/3,2/3], 2 <= i <= m-1: 0
+(b) m=11: (word, i) with P(u_i before z) outside [1/3,2/3], 2 <= i <= m-1: 0
+(b) m=12: (word, i) with P(u_i before z) outside [1/3,2/3], 2 <= i <= m-1: 0
+(b) m=13: (word, i) with P(u_i before z) outside [1/3,2/3], 2 <= i <= m-1: 0
+(b) m=14: (word, i) with P(u_i before z) outside [1/3,2/3], 2 <= i <= m-1: 0
+(c) crude-bound premises 2X <= W_M and 2Y <= W_M for m = 8..14, 3 <= i <= (m+1)/2: 38144 cases, failures 0

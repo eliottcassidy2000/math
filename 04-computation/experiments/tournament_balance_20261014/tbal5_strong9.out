@@ -1,0 +1,6 @@
+C FAILS: 110111111101001111111111111111111101
+n=9 strong 178133; Ham cycles 15013970
+  (C) tournaments with a Ham cycle carrying no balanced arc: 1
+  min #balanced arcs on a Ham cycle, histogram: 0:1 1:20 2:242 3:2003 4:8133 5:19648 6:33072 7:42616 8:43167 9:29231
+  (D) tournaments with disconnected balanced graph: 0
+  (B) vertex-wise constant = 33/99 = 0.333333, attained by 82 tournaments, e.g. 111111011111111111111111111111111101

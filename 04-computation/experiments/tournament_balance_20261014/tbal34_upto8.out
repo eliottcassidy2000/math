@@ -1,0 +1,50 @@
+n=4 strong tournaments 1
+  S1 (some v w/o balanced out-nbr) 1; S2 (some v w/o balanced in-nbr) 1; both at one vertex 0; S3 (B disconnected) 0; S4 (gap > 1/3) 1; S5 (Ham cycle w/o balanced arc) 0 (cycles 0 of 1)
+  min degree of B histogram: 2:1
+  vertex-wise constant = 2/5 = 0.400000 at 100111
+n=4 strong 1
+  3-cycles: total 2, with no balanced arc 0
+  4-cycles: total 1, with no balanced arc 0
+  min #balanced arcs on a Ham cycle, histogram over T: 2:1
+n=5 strong tournaments 6
+  S1 (some v w/o balanced out-nbr) 3; S2 (some v w/o balanced in-nbr) 3; both at one vertex 0; S3 (B disconnected) 0; S4 (gap > 1/3) 4; S5 (Ham cycle w/o balanced arc) 0 (cycles 0 of 10)
+  min degree of B histogram: 1:1 2:2 3:2 4:1
+  vertex-wise constant = 3/9 = 0.333333 at 1101111101
+n=5 strong 6
+  3-cycles: total 23, with no balanced arc 0
+  4-cycles: total 20, with no balanced arc 0
+  5-cycles: total 10, with no balanced arc 0
+  min #balanced arcs on a Ham cycle, histogram over T: 1:1 2:1 3:1 4:2 5:1
+n=6 strong tournaments 35
+  S1 (some v w/o balanced out-nbr) 18; S2 (some v w/o balanced in-nbr) 18; both at one vertex 0; S3 (B disconnected) 0; S4 (gap > 1/3) 35; S5 (Ham cycle w/o balanced arc) 0 (cycles 0 of 100)
+  min degree of B histogram: 1:4 2:18 3:5 4:6 5:2
+  vertex-wise constant = 5/15 = 0.333333 at 111011111111101
+n=6 strong 35
+  3-cycles: total 214, with no balanced arc 0
+  4-cycles: total 259, with no balanced arc 0
+  5-cycles: total 224, with no balanced arc 0
+  6-cycles: total 100, with no balanced arc 0
+  min #balanced arcs on a Ham cycle, histogram over T: 1:2 2:6 3:16 4:5 5:4 6:2
+n=7 strong tournaments 353
+  S1 (some v w/o balanced out-nbr) 134; S2 (some v w/o balanced in-nbr) 134; both at one vertex 0; S3 (B disconnected) 0; S4 (gap > 1/3) 350; S5 (Ham cycle w/o balanced arc) 0 (cycles 0 of 2518)
+  min degree of B histogram: 1:17 2:130 3:70 4:56 5:55 6:25
+  vertex-wise constant = 9/27 = 0.333333 at 111101111111111111101
+n=7 strong 353
+  3-cycles: total 3402, with no balanced arc 0
+  4-cycles: total 5286, with no balanced arc 2
+  5-cycles: total 6574, with no balanced arc 4
+  6-cycles: total 5638, with no balanced arc 2
+  7-cycles: total 2518, with no balanced arc 0
+  min #balanced arcs on a Ham cycle, histogram over T: 1:5 2:21 3:79 4:96 5:84 6:43 7:25
+n=8 strong tournaments 6008
+  S1 (some v w/o balanced out-nbr) 1440; S2 (some v w/o balanced in-nbr) 1440; both at one vertex 0; S3 (B disconnected) 0; S4 (gap > 1/3) 6005; S5 (Ham cycle w/o balanced arc) 0 (cycles 0 of 133632)
+  min degree of B histogram: 1:142 2:1442 3:953 4:956 5:806 6:1110 7:599
+  vertex-wise constant = 17/51 = 0.333333 at 1111101111111111111111111101
+n=8 strong 6008
+  3-cycles: total 88034, with no balanced arc 2
+  4-cycles: total 167842, with no balanced arc 4
+  5-cycles: total 272656, with no balanced arc 4
+  6-cycles: total 345660, with no balanced arc 6
+  7-cycles: total 300968, with no balanced arc 2
+  8-cycles: total 133632, with no balanced arc 0
+  min #balanced arcs on a Ham cycle, histogram over T: 1:8 2:71 3:393 4:981 5:1431 6:1334 7:1191 8:599

@@ -1,0 +1,4 @@
+n=10: tournaments read 9355949, non-transitive 9355949, with delta < 1/3: 0, with a balanced arc: 9355949
+  minimum delta = 558/1413 = 0.394904 ; minimum over arcs of p(tail first) = 25/153 = 0.163399
+  minimiser: 111000111101111111111111111111110001111111101
+  strong T with a cut vertex z (T - z not strong): 2820361; every cut vertex has a balanced partner: 2820361; some cut vertex does: 2820361; every vertex of T has a balanced partner: 9355949

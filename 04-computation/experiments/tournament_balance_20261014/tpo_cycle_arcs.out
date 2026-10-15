@@ -1,0 +1,12 @@
+m=3 (n=4): 2 words; dichotomy (i) failures 0; u_i without balanced partner in {z, u_(i-1), u_(i+1)}: 0; min #balanced Ham-cycle arcs 2
+m=4 (n=5): 4 words; dichotomy (i) failures 0; u_i without balanced partner in {z, u_(i-1), u_(i+1)}: 0; min #balanced Ham-cycle arcs 2
+m=5 (n=6): 8 words; dichotomy (i) failures 0; u_i without balanced partner in {z, u_(i-1), u_(i+1)}: 0; min #balanced Ham-cycle arcs 2
+m=6 (n=7): 16 words; dichotomy (i) failures 0; u_i without balanced partner in {z, u_(i-1), u_(i+1)}: 0; min #balanced Ham-cycle arcs 2
+m=7 (n=8): 32 words; dichotomy (i) failures 0; u_i without balanced partner in {z, u_(i-1), u_(i+1)}: 0; min #balanced Ham-cycle arcs 2
+m=8 (n=9): 64 words; dichotomy (i) failures 0; u_i without balanced partner in {z, u_(i-1), u_(i+1)}: 0; min #balanced Ham-cycle arcs 2
+m=9 (n=10): 128 words; dichotomy (i) failures 0; u_i without balanced partner in {z, u_(i-1), u_(i+1)}: 0; min #balanced Ham-cycle arcs 2
+m=10 (n=11): 256 words; dichotomy (i) failures 0; u_i without balanced partner in {z, u_(i-1), u_(i+1)}: 0; min #balanced Ham-cycle arcs 2
+m=11 (n=12): 512 words; dichotomy (i) failures 0; u_i without balanced partner in {z, u_(i-1), u_(i+1)}: 0; min #balanced Ham-cycle arcs 2
+m=12 (n=13): 1024 words; dichotomy (i) failures 0; u_i without balanced partner in {z, u_(i-1), u_(i+1)}: 0; min #balanced Ham-cycle arcs 2
+m=13 (n=14): 2048 words; dichotomy (i) failures 0; u_i without balanced partner in {z, u_(i-1), u_(i+1)}: 0; min #balanced Ham-cycle arcs 2
+m=14 (n=15): 4096 words; dichotomy (i) failures 0; u_i without balanced partner in {z, u_(i-1), u_(i+1)}: 0; min #balanced Ham-cycle arcs 2

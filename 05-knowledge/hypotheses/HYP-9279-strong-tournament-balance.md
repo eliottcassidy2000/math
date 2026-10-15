@@ -1,17 +1,20 @@
 ---
 id: HYP-9279
-title: "Strong tournaments are strictly and vertex-wise balanced: (A) every strong tournament on n >= 4 vertices has delta(T) >= 4/11; (B) in every strong tournament EVERY vertex v has a partner w with 1/3 <= P(v before w) <= 2/3 in a uniform Hamiltonian path"
+title: "Strong tournaments are strictly and vertex-wise balanced: (A) every strong tournament on n >= 4 vertices has delta(T) >= 4/11; (B) in every strong tournament EVERY vertex v has a partner w with 1/3 <= P(v before w) <= 2/3 in a uniform Hamiltonian path; (B+) the graph of balanced pairs is connected. Refuted variant (H): 'every Hamiltonian cycle carries a balanced arc' fails at n = 9"
 status: >
-  OPEN. (A) and (B) are FINITE-EXACT for all strong tournaments with n <= 9 (exhaustive; minima 2/5, 4/11, 4/11, 4/11,
-  62/157, 62/157 for n = 4..9; every vertex of all 1 + 6 + 35 + 353 + 6008 + 178133 strong tournaments has a balanced
-  partner), and for the transitive-plus-one subfamily up to n = 14 (exact). Either implies HYP-9277's inequality; (A) with a
-  strict gap for strong components on >= 4 vertices.
+  OPEN. (A) and (B) are FINITE-EXACT for all strong tournaments with n <= 10 (exhaustive: 1 + 6 + 35 + 353 + 6008 + 178133
+  + 9355949 tournaments for n = 4..10; minima of delta 2/5, 4/11, 4/11, 4/11, 62/157, 62/157, 62/157). (B+) is FINITE-EXACT
+  for n <= 9. On the transitive-plus-one family, (B) and (B+) are PROVED (THM-4655 1(g)). (B) is sharp: the vertex-wise
+  constant is exactly 1/3 for every n = 5..9. Each of (A), (B), (B+) implies HYP-9277's inequality; (A) gives it with a
+  strict gap for strong components on >= 4 vertices. Variant (H) is REFUTED (explicit 9-vertex counterexample).
 session: mac-mini-2026-10-14-tourn
 source: 05-knowledge/results/strong_tournament_balance_golden_rigidity_20261014.md
 scripts:
   - 04-computation/experiments/tournament_balance_20261014/tbal.c (+ tbal_strong9.out)
-  - 04-computation/experiments/tournament_balance_20261014/trans_plus_one.py
-related: [HYP-9277, THM-4655]
+  - 04-computation/experiments/tournament_balance_20261014/tbal2.c (+ tbal2_strong9.out, tbal2_strong10.out)
+  - 04-computation/experiments/tournament_balance_20261014/tbal3.c, tbal4.c (+ tbal34_upto8.out), tbal5.c (+ tbal5_strong9.out), c_counterexample.py (+ .out)
+  - 04-computation/experiments/tournament_balance_20261014/trans_plus_one.py, tpo_vertexwise.py, tpo_cycle_arcs.py
+related: [HYP-9277, THM-4655, HYP-9280 (opus S36, majority-cycle conjecture)]
 ---
 
 # HYP-9279: strict and vertex-wise balance for strong tournaments
@@ -31,22 +34,52 @@ Equivalently, `δ(T) >= 4/11`.
 
 In a strong tournament on `n >= 3` vertices, every vertex `v` has a partner `w` with `1/3 <= p_T(v before w) <= 2/3`.
 
-- This is much stronger than HYP-9277, which asks for one balanced pair. It has no poset analogue: in the 3-element poset `{a} ∥ {b < c}`, the element `a` has balanced partners, but neither does `b` against `c`. Strong connectivity is what puts every vertex on cycles.
-- It fails for non-strong tournaments trivially: a singleton strong component is ordered deterministically against everything.
-- Checked exhaustively for all strong tournaments with `n <= 9` (`tbal2.c`), and for every strong transitive-plus-one tournament with `n <= 14` (`tpo_vertexwise.py`).
-- For the extra vertex `z` of a transitive-plus-one tournament, (B) is PROVED by THM-4655: `u_2` is always a balanced partner.
-- Also observed for `n <= 9`: every vertex whose deletion destroys strong connectivity has a balanced partner. This is implied by (B).
+- **Strength.** This is much stronger than HYP-9277, which asks for one balanced pair.
+  - It has no poset analogue. In the 3-element poset `{a} ∥ {b < c}`, the element `a` has balanced partners (`p = 1/3, 2/3`), but `b` and `c` are always ordered against each other.
+  - Strong connectivity is what puts every vertex on cycles.
+  - It fails trivially for non-strong tournaments: a singleton strong component is ordered deterministically against everything.
+- **Evidence.**
+  - Exhaustive for all strong tournaments with `n <= 10` (`tbal2.c`; 9,355,949 tournaments at `n = 10`).
+  - PROVED on the transitive-plus-one family (THM-4655 1(g)). There `z` is balanced against every interior `u_i`.
+  - Also observed for `n <= 10`: every vertex whose deletion destroys strong connectivity has a balanced partner (2,820,361 such tournaments at `n = 10`). This is implied by (B).
+- **Sharpness.** The vertex-wise constant `min_v max_w min(p, 1 − p)` is exactly `1/3` for every `n = 5, …, 9` (`tbal5.c`), unlike the global `δ`. It is attained by 1, 2, 5, 17 and 82 strong tournaments respectively.
+  - The tight vertices sit in a cyclic triangle hung at the end of the order by one back arc. Example at `n = 6`: `TT_3` followed by `3 → 4 → 5 → 3`, with the back arc `4 → 0`.
+  - The tight vertex `5` has `p = 2/3, 1/3` against `3, 4`, exactly as in an isolated `C_3`.
+  - So the equality cases of (B) are local `C_3` blocks, mirroring the global equality cases of HYP-9277.
+
+## Statement (B⁺): the balanced graph is connected
+
+In a strong tournament, the graph on `V` whose edges are the balanced pairs is connected.
+
+- (B⁺) implies (B), since a connected graph on `n >= 2` vertices has no isolated vertex.
+- Exhaustive for all strong tournaments with `n <= 9` (`tbal5.c`); PROVED on the transitive-plus-one family (THM-4655 1(g)).
+- The balanced graph can have a vertex of degree 1 (142 of the 6,008 strong tournaments at `n = 8`; `tbal3.c`).
+
+## Refuted variant (H): balanced arcs on Hamiltonian cycles
+
+**Conjecture (H):** every Hamiltonian cycle of a strong tournament carries a balanced arc, i.e. a pair `(c_i, c_(i+1))` with `1/3 <= p <= 2/3`. It would imply HYP-9277 at once, because strong tournaments are Hamiltonian (Camion).
+
+- **True for `n <= 8`.** All 133,632 Hamiltonian cycles of the 6,008 strong 8-tournaments carry one. The minimum number of balanced arcs per cycle is exactly 1, attained for 8 tournaments.
+- **True on the transitive-plus-one family**, with at least two balanced arcs (THM-4655 1(e)).
+- **Shorter cycles fail earlier:** some 4-, 5- and 6-cycles have no balanced arc from `n = 7`, and some 3-cycles from `n = 8` (`tbal4.c`).
+- **FALSE at `n = 9`.** Exactly one of the 178,133 strong 9-tournaments has a Hamiltonian cycle with no balanced arc. It is `110111111101001111111111111111111101` (gentourng ascii).
+  - Its arcs agree with the order `0 < 1 < … < 8`, except the backward arcs `3 → 0`, `4 → 1`, `6 → 1`, `7 → 1`, `8 → 6`. Its scores are 7, 4, 6, 6, 5, 3, 2, 2, 1, and `H = 213`.
+  - It has 4 Hamiltonian cycles. On the cycle `0 → 2 → 4 → 5 → 7 → 8 → 6 → 1 → 3 → 0`, the arc probabilities `p(c_i before c_(i+1))` are 143/213, 51/71, 59/71, 51/71, 143/213, 143/213, 48/71, 48/71, 143/213, all in `(0.671, 0.831)`.
+  - So this cycle is a **`> 2/3` majority cycle**: on its arcs, the uniform path looks like a random rotation of the cycle.
+  - The tournament itself is well balanced: `δ = 100/213`, and every vertex has a partner with balance at least `28/71`. It is no threat to HYP-9277 or to (B).
+  - Confirmed independently by plain DFS enumeration of all 213 Hamiltonian paths (`c_counterexample.py`).
+- **Lesson.** Hamiltonian cycles can carry a majority orientation, whereas vertices and pairs apparently cannot avoid balance. This is consistent with S36's HYP-9280, whose majority cycles live in the forward-arc digraph.
 
 ## Evidence
 
-**Exhaustive (gentourng `-c` with an exact subset DP).** Every strong tournament with `n <= 9`. The minimum `δ` by `n`:
+**Exhaustive (gentourng `-c` with an exact subset DP).** Every strong tournament with `n <= 10`. The minimum `δ` by `n`:
 
-| `n` | 4 | 5 | 6 | 7 | 8 | 9 |
-|---|---|---|---|---|---|---|
-| number of strong tournaments | 1 | 6 | 35 | 353 | 6,008 | 178,133 |
-| minimum `δ` | `2/5` | `4/11` | `4/11` | `4/11` | `62/157` | `62/157` |
+| `n` | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+|---|---|---|---|---|---|---|---|
+| number of strong tournaments | 1 | 6 | 35 | 353 | 6,008 | 178,133 | 9,355,949 |
+| minimum `δ` | `2/5` | `4/11` | `4/11` | `4/11` | `62/157` | `62/157` | `62/157` |
 
-(`n = 10`, 9,355,949 strong tournaments, is running.)
+The `n = 10` minimiser is `111000111101111111111111111111110001111111101` (gentourng ascii). The minimum over arcs `x → y` of `p(x before y)` falls from `17/81` at `n = 9` to `25/153` at `n = 10`: single arcs can be strongly reversed, while some pair stays balanced.
 
 **The transitive-plus-one family.** Every strong word up to `m = 13`, i.e. `n = 14`. The family minima are `2/5, 4/11, 8/19, 2/5, 4/9, 4/9, 113/241, 8/17, 116/241, 16/33, 400/817`.
 
@@ -54,6 +87,6 @@ In a strong tournament on `n >= 3` vertices, every vertex `v` has a partner `w` 
 
 ## Status of the constant
 
-- `4/11` is the observed infimum for `n <= 9`.
+- `4/11` is the observed infimum for `n <= 10`. It is attained only at `n = 5, 6, 7`; the minimum is `62/157 = 0.3949` at `n = 8, 9, 10`.
 - Whether the infimum over all strong tournaments is `4/11`, or whether larger `n` push it lower, is open.
-- No strong tournament with `4 <= n <= 9` comes close to `1/3`.
+- No strong tournament with `4 <= n <= 10` comes close to `1/3`.

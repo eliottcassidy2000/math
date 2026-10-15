@@ -1,1 +1,5 @@
 |M3| = 32257, radius-2 orbit of M3: 72; P' (|p|^2 <= 3.0) = 14329
+M3[|p|^2<=3.5] u psi P'[3.0]             |V|= 45241 |E|= 340584  NOT 4-colourable  [build 32.2s, solve 3922.0s]
+   [3954.7s]
+# restarted after the 2026-10-14 23:12 reboot (r = 3.5 finished before it); remaining radii:
+|M3| = 32257, radius-2 orbit of M3: 72; P' (|p|^2 <= 3.0) = 14329

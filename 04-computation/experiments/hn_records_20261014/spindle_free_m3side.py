@@ -4,7 +4,8 @@ piece P' = {p in P1 : |p|^2 <= 3.0} u (radius-2 orbit), which already gives a 46
 (spindle_free_batch.log).  The cross edges of M3 u psi P1 join radius-2 points and |z|^2 = 8/3 points of M3 to |psi w|^2 = 2/3
 points (audit B), so r >= 8/3 keeps every hinge edge.  CaDiCaL 1.9.5, triangle fixed, conflict budget as in spindle_free_pieces.
 
-Usage: HN_PRIMES=2,3,5 python3 -u spindle_free_m3side.py >> spindle_free_m3side.log
+Usage: HN_PRIMES=2,3,5 [HN_RADII=3.0,2.7] python3 -u spindle_free_m3side.py >> spindle_free_m3side.log
+(HN_RADII selects the clipping radii; default 3.5,3.0,2.7.)
 """
 import os
 import time
@@ -31,7 +32,7 @@ def main():
     r2 = lambda p: (lambda xy: xy[0] ** 2 + xy[1] ** 2)(cfloat(p))
     Pp = frozenset(p for p in P1 if r2(p) <= 3.0 + 1e-9) | ringP
     log(f"|M3| = {len(M3)}, radius-2 orbit of M3: {len(ring3)}; P' (|p|^2 <= 3.0) = {len(Pp)}")
-    for r in (3.5, 3.0, 2.7):
+    for r in tuple(float(x) for x in os.environ.get('HN_RADII', '3.5,3.0,2.7').split(',')):
         t0 = time.time()
         M3p = frozenset(p for p in M3 if r2(p) <= r + 1e-9) | ring3
         test(f"M3[|p|^2<={r}] u psi P'[3.0]", M3p, Pp, psi, budget=40_000_000)

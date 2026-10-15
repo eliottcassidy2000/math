@@ -4,7 +4,7 @@
 
 **Status.**
 - **PROVED:** [THM-4655](../../01-canon/theorems/THM-4655-strong-tournament-balance-lemmas.md) (balance of transitive-plus-one strong tournaments; rotation lemma) and [THM-4656](../../01-canon/theorems/THM-4656-wall-sun-sun-golden-orbit-explosion.md) (Wall–Sun–Sun primes as golden Wieferich primes).
-- **FINITE-EXACT:** all strong tournaments on `n <= 9` vertices; Pisano facts to `n = 20000`.
+- **FINITE-EXACT:** all strong tournaments on `n <= 10` vertices; Pisano facts to `n = 20000`.
 - **HYP:** [HYP-9279](../hypotheses/HYP-9279-strong-tournament-balance.md).
 - **OPEN:** the tournament 1/3–2/3 conjecture HYP-9277 in general.
 
@@ -36,17 +36,24 @@ This note builds on those and does not repeat them.
    - Corollary: a strong tournament with no balanced pair has fewer than `n/(n+1)` closable paths.
    - This is weak. Non-closable paths can carry a majority order, and in the transitive-plus-one family most pairs among the `u`'s really are unbalanced (`≈ 3/4`). The balance must be found on special pairs.
 3. **The Kahn–Saks route is closed (THM-4655 (3)).** Stanley's log-concavity, which gives `3/11` for posets, fails for tournament Hamiltonian paths already at `n = 4`. Every strong tournament at `n = 6, 7` fails it for gaps.
-4. **Exhaustive to `n = 9` (THM-4655 (4)).** All 178,133 strong 9-tournaments satisfy `δ >= 62/157 = 0.3949`, and HYP-9277's inequality holds for every tournament on `n <= 9` vertices. The strong minima are:
+4. **Exhaustive to `n = 10` (THM-4655 (4)).** All 9,355,949 strong 10-tournaments satisfy `δ >= 62/157 = 0.3949`, and HYP-9277's inequality holds for every tournament on `n <= 10` vertices. The strong minima are:
 
    | `n` | minimum `δ` |
    |---|---|
    | 3 | `1/3` |
    | 4 | `2/5` |
    | 5, 6, 7 | `4/11` |
-   | 8, 9 | `62/157` |
-
-   (`n = 10` is running: 9,355,949 strong tournaments.)
-5. **HYP-9279.** Every strong tournament on `n >= 4` vertices has `δ >= 4/11`, a strict gap above 1/3. Within the transitive-plus-one family, the minimum rises towards 1/2:
+   | 8, 9, 10 | `62/157` |
+5. **Vertex-wise balance (THM-4655 1(e)–(g), HYP-9279(B)).** In every strong tournament checked, *every vertex* has a balanced partner. That holds for all strong tournaments with `n <= 10` (9,355,949 at `n = 10`).
+   - On the transitive-plus-one family it is proved. The extra vertex `z` is balanced against every interior `u_i`, by the same wide-crossing mechanism. `u_1` and `u_m` are balanced against `z` or their transitive neighbour.
+   - The unique Hamiltonian cycle `z u_1 … u_m z` carries at least two balanced arcs.
+   - The vertex-wise constant is exactly `1/3` for every `n = 5..9`. The tight vertices sit in a `C_3` block hung at the end of the order, the local version of the global extremals.
+   - The stronger statement (B⁺), that the balanced graph is connected, holds for `n <= 9`.
+6. **A refuted strengthening.** "Every Hamiltonian cycle of a strong tournament carries a balanced arc" holds for all 133,632 Hamiltonian cycles at `n = 8` and on the transitive-plus-one family. It fails at `n = 9`.
+   - The unique counterexample among the 178,133 strong 9-tournaments has a Hamiltonian cycle whose nine arcs all have `p(tail first) ∈ (0.671, 0.831)`: a `> 2/3` majority cycle.
+   - The tournament itself has `δ = 100/213` and every vertex balanced.
+   - So cycles can carry a majority orientation while vertices and pairs cannot avoid balance. This is the right warning for S36's majority-cycle route (HYP-9280): the majority structure lives on cycles, the balance on vertices.
+7. **HYP-9279(A).** Every strong tournament on `n >= 4` vertices has `δ >= 4/11`, a strict gap above 1/3. The exhaustive minima are 4/11 at `n = 5, 6, 7` and 62/157 at `n = 8, 9, 10`. Within the transitive-plus-one family, the minimum rises towards 1/2:
 
    | `n` | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 |
    |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -55,7 +62,8 @@ This note builds on those and does not repeat them.
 **Where a proof of the general strong case would have to go.**
 - The minimisers are near-transitive, with feedback arc sets of sizes 1, 2, 3, 5, 4, 6 for `n = 4..9`. The `n = 8` minimiser is transitive plus 2.
 - The natural induction is "transitive plus `k`": delete a vertex whose removal keeps the tournament strong (Moon), and track the balanced pair.
-- The transitive-plus-one theorem is the base case and shows the mechanism: the extra vertex is fair against the second element of the order.
+- The transitive-plus-one theorem is the base case and shows the mechanism: the extra vertex is fair against the second element of the order, and in fact against every interior element.
+- The vertex-wise form (B) is the better induction hypothesis. It is sharp at `1/3`, it is local, and it survives exhaustively to `n = 10`. The Hamiltonian-cycle form is false.
 
 ## 2. Wall–Sun–Sun primes and the Wieferich work (THM-4656)
 
@@ -127,6 +135,9 @@ This note builds on those and does not repeat them.
 | Script | What it does | Time |
 |---|---|---|
 | `gentourng -c n \| ./tbal n` | exhaustive strong-tournament balance | 19 s at `n = 9` |
+| `gentourng -c n \| ./tbal2 n` | the same, plus per-vertex partners and cut vertices | about 45 min at `n = 10` |
+| `tbal3.c`, `tbal4.c`, `tbal5.c` | (B⁺), cycle-arc and sharpness checks; `c_counterexample.py` | a few minutes at `n = 9` |
+| `tpo_cycle_arcs.py`, `tpo_vertexwise_proof_check.py` | THM-4655 1(e)–(g) | |
 | `trans_plus_one.py`, `tpo_proof_steps.py`, `tpo_u2_check` | the transitive-plus-one theorem | |
 | `rotation_lemma_check.py`, `logconcave_test.py` | rotation lemma; log-concavity failures | |
 | `wss_orbits.py`, `golden_fermat_check.py`, `pisano_facts.py` | THM-4656 and §3–4 | |
