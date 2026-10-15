@@ -18076,3 +18076,61 @@ the ambient space.
   - A dichotomy whose bad branch is the generic case restricts nothing.
   - Grep the Z-number literature (Flatto; Dubickas; Andrieu–Eliahou–Vivion) before stating complexity facts.
   - When summarising a parameter's role in a long paper, search every section for it.
+
+
+## MISTAKE-613 (2026-10-14, opus-2026-10-14-S35 paley_least_resistance_runs_one_modular_form_20261014.md, one_twenty_eight_atlas_balance_gold_20261014.md, HYP-9275, HYP-9277, HYP-9278 and their scripts; found by the session's independent adversarial audit before the close-out push) -- classical results typed as new, a mechanism repeated that THM-438 had already refuted, ranges that rested on a perfect-square test, a conjecture called a theorem, and a coincidence filed as a cycle denominator
+
+- **Claims (pre-audit draft):**
+  - (I1, I2) Three results presented as new:
+    - "wheels are power sums of Jacobi sums (PROVED, new)";
+    - `T_6 = (q-1)(q^2 - q a_q - b6_q)` as a FINITE-EXACT identification;
+    - planar Fourier duality as a new PROVED proposition.
+  - (E1) The Catalan leading coefficients explained by "closed walks folded onto trees", without citing THM-438.
+  - (I3, I5) "Square law FINITE-EXACT to 200,000", and 2-adic statements about `b(q)` above 700.
+  - (E4) "a tournament 1/3-2/3 theorem" in two titles.
+  - (E3) "the limma 2^8/3^5 gives the 1/13 cycle".
+  - (E2) "the three perfect nontrivial codes are the QR codes of 7, 11, 23".
+  - (E7) "all known Borsuk counterexamples are SRG two-distance sets".
+  - (E5) "rigidity circuits are exactly the graphs whose double covers are Calabi-Yau".
+  - (E6) "the depth congruence forces |b(127)| in {0, 128}".
+  - (E8) The T_8 negative cited from an underdetermined fit.
+  - (E9-E11, I4, I6-I13) Smaller items:
+    - the sieve doubling list and its description;
+    - six instead of seven Mersenne primes;
+    - a 123-prime mean labelled 124;
+    - HYP-9276's audited range understated;
+    - the Z/2 x Z/8 route cited from a theorem that covers p = 1 (mod 4) only;
+    - 2-adic "continuity" and "convexity" readings typed as structure;
+    - "Calabi-Yau" for singular covers;
+    - "the first" Fano core;
+    - Claim B's wording;
+    - THM-868's shell index;
+    - a row tested in one class only.
+- **Why it was wrong:**
+  - (I1, I2) No search of the Gaussian hypergeometric literature (Greene; Ahlgren-Ono; Frechette-Ono-Papanikolas) or the spin-model literature (Kramers-Wannier, Wu-Wang) before calling these results new. This is the same lesson as MISTAKE-609.
+  - (E1) The repository's own canon (THM-438 and its addenda, MISTAKE-060/061) was not searched for "Catalan".
+  - (I3) A necessary condition (`M_q + (q+1)^2` a perfect square) was reported as if it were the identification `c_q = |b(q)|`, and floating-point FFT values were typed FINITE-EXACT.
+  - (E3) Two 2-3 equations with the same value 13 were conflated.
+  - (E4, E5, I7, I8) Wording outran the typing, the MISTAKE-611 pattern.
+- **Correct framing:**
+  - The Jacobi-sum wheel formula is Greene's `nF(n-1)(1)` (PROVED, standard).
+  - `T_4` and `T_6` are CITED (Ahlgren-Ono; Koike / Frechette-Ono-Papanikolas, IMRN 2004).
+  - `T_8` is not in the span of `S_8(Gamma_0(32))` plus twisted lower weights (FINITE-EXACT, 39 primes, rank 17 versus 18).
+  - Planar duality is a specialisation of the classical Kramers-Wannier / Wu-Wang duality.
+  - The Catalan law is THM-438's, with its signed-Moebius mechanism; this session adds the exact cases k = 5, 6.
+  - The square law is VERIFIED to 200,000 by FFT. `c_q = |b(q)|` and the 2-adic laws are FINITE-EXACT to 524,288 through the audit's exact theta-product tabulation of `b`. The zeros there are 127, 8191 and 213247; the last is not a Mersenne prime.
+  - HYP-9277 is a conjecture, verified for all 2^28 labelled tournaments at n = 8 and below.
+  - The 1/13 cycle is `1/(2^4 - 3)`.
+- **What survives:**
+  - `A_12` exactly, confirmed independently and out of sample at q = 27;
+  - the independent confirmation of mac-mini's HYP-9276 in the unrestricted normalisation;
+  - the depth table and the valuation law `gcd(q+1, 128) | b(q)`, with exponent 7 sharp;
+  - the cube identity `U(Q_3) = q U(K_{2,2,2})`;
+  - the refutation of the pre-registered "Laman-sparse => polynomial";
+  - the tournament results: equality classes = A000930(n) - 1, Claim A refuted at n = 8, gold partition failing under precedence answers;
+  - the Collatz sieve (A076227) and the 128 atlas.
+- **Lesson:**
+  - Search the repository canon (THM-438 for Catalan) and the classical literature (Greene; Frechette-Ono-Papanikolas; Kramers-Wannier) before typing an identity as new.
+  - A perfect-square or consistency test is not an identification. Say what was actually computed and how exactly (VERIFIED versus FINITE-EXACT).
+  - Never call a conjecture a theorem in a title.
+  - When two exponential Diophantine equations share a value, check which one an object actually solves.

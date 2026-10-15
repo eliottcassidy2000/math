@@ -10845,3 +10845,5 @@ Surfaced by the citation-graph tool (corpus_archaeology_kps_S128c136.py); see
 - [ ] For `0<|deg h-r deg b|<r`, prove the active-channel scale `m^((r-|lambda|)/r)` and separate the finitely many saddle phases on an arithmetic subsequence.
 - [ ] At exact slope resonance `deg h=r deg b`, derive the proportional-channel entropy functional and test whether coefficient scaling can always expose a unique maximal-real-part saddle.
 - [ ] Feed the resulting coefficient-descent tower into HYP-8765's localized radial-channel determinant program. Do not reuse atomwise first-return separation (MISTAKE-211).
+
+- **S35 (opus-2026-10-14; audited MISTAKE-613) cheap next runs:** (1) A_14(q) at q = 19, 23, 27, 31, ... via a compiled signed subset DP (the audit's), enough primes to split poly + a_q + new cores; (2) T_8 = 8F7(1): test nebentypus chi_8 forms of level 32/64 and products with odd-weight forms; (3) HYP-9277 at n = 9 by targeted search, plus the balanced-ARC question (audit: true for all strong n <= 7); (4) the 2-adic congruences of the level-32 newform b via the descent form over F_(q^2) (HYP-9276).

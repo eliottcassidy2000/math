@@ -6677,6 +6677,12 @@ OEIS A038375 gives max H(T) over all n-vertex tournaments: 1, 1, 3, 5, 15, 45, 1
 
 ---
 
+### UPDATE (2026-10-14, opus-2026-10-14-S35; audited, MISTAKE-613): run ladder through 12 steps, K6-P6 2-adic law, tournament 1/3-2/3 conjecture
+- A_12 = 4q(q-1)(33q^5 - 1540q^4 + 28243q^3 - 249550q^2 + 1027794q - 1488872) + 28q(q-1)(17q - 251) a_q (a = eta(2z)^4 eta(4z)^4; out of sample at q = 27). Leading coefficients = THM-438's Catalan law (new cases k = 5, 6). OPEN: A_14 (cheap via the audit's signed subset DP at a few q; more primes needed).
+- K6-P6 (mac-mini HYP-9276 identification, confirmed independently): gcd(q+1, 128) | b(q) for the level-32 weight-3 newform b at every prime q = 3 mod 4 to 524,288, exponent 7 sharp; zeros 127, 8191, 213247. OPEN: prove the congruences |b(q)| = +-(q+1) mod 2^m and gcd(q+1,128) | b(q).
+- Wheels: T_8 = Greene 8F7(1) is not in the span of S_8(Gamma_0(32)) plus twisted lower weights (39 primes). OPEN: its modular identity. HYP-9278 (rigidity circuits as Calabi-Yau cores) OPEN.
+- HYP-9277 (OPEN): every non-transitive tournament has a pair ordered with probability in [1/3, 2/3] in a uniform Hamiltonian path; verified for all 2^28 labelled tournaments at n <= 8; equality exactly at transitive compositions of singletons and C_3 (A000930(n) - 1 classes). The route "every arc tail-first >= 1/3" is false at n = 8.
+
 ### UPDATE (2026-10-14, opus-2026-10-14-S34): HYP-2371 CONFIRMED - H(T_31) computed exactly
 - H(P_31) = 19876729650849384218015865 (opus-2026-10-14-S34, exact: layered colex DP from the arc 0 -> 1, three 31-bit prime moduli + CRT, validation chain H(19), H(23) reproduced exactly; H(P_27) = 418425945688463432031). R(31) = 2.5955119 lies INSIDE [2.58949, 2.60249] (-0.00048 from the centre): HYP-2371 CONFIRMED. H odd, 465 | H, H/465 = 42745655163116955307561 odd. The rate: c_1 = 3/2 exactly at first order (cherry placement 5/2 + two-cherry repulsion 1 - quartic runs 2), fits 1.5016; c_2 ~ -3.08; pre-registered R(43) in [2.62798, 2.62803], R(47) in [2.63531, 2.63535] (HYP-9274). See 05-knowledge/results/paley_h31_exact_rate_and_apery_wheel_20261014.md.
 
