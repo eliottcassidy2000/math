@@ -56,7 +56,7 @@ This note builds on those and does not repeat them.
    - The Hamiltonian paths factor through an exact 4-state transfer chain over the blocks. Each block enters only through its own subset path counts.
    - The interior blocks of the crossing window are fair coins against `z`, because `Σ_X h(X) h(D ∖ X)` is symmetric under complement.
    - Conjecture (Z): `z` is balanced against every vertex of `D_2 ∪ … ∪ D_(k−1)` and always has a balanced partner.
-     - Exhaustive to `n = 9`, sampled to `n = 46`, sharp at `1/3`.
+     - Exhaustive to `n = 10` (3,274,940 cut-vertex instances at `n = 10`), sampled to `n = 46`, sharp at `1/3`.
      - For `k = 2` the exhaustive minima of `z`'s best balance, `(2^(n−4) + 2)/(3·2^(n−4) + 5)`, decrease towards `1/3` (audit E).
      - Proved when all blocks are singletons.
      - **PROVED (computer-assisted, THM-4655 (7)) for every interior component with at most 7 vertices, whatever the other components and `n`.**
@@ -65,7 +65,7 @@ This note builds on those and does not repeat them.
        - Only two corner conditions are not provable by hand. Their slack is 0 only for singletons and grows with the block: 5/3, 2, 26/9, 10/3 for sizes 3–6.
        - Proving them for every block would settle HYP-9277 for every strong tournament with a cut vertex leaving at least 3 components.
      - It would settle HYP-9277 for every strong tournament with a cut vertex: about 30% of strong tournaments at `n = 10`.
-   - A local refinement of (B), (B_loc), also holds to `n = 9`: every vertex lies on a forward arc with `1/2 < p <= 2/3` on a directed 3-cycle. This ties (B) to S36's forward-arc digraph.
+   - A local refinement of (B), (B_loc), also holds to `n = 10`: every vertex lies on a forward arc with `1/2 < p <= 2/3` on a directed 3-cycle. This ties (B) to S36's forward-arc digraph.
 7. **A refuted strengthening.** "Every Hamiltonian cycle of a strong tournament carries a balanced arc" holds for all 133,632 Hamiltonian cycles at `n = 8` and on the transitive-plus-one family. It fails at `n = 9`.
    - The unique counterexample among the 178,133 strong 9-tournaments has a Hamiltonian cycle whose nine arcs all have `p(tail first) ∈ (0.671, 0.831)`: a `> 2/3` majority cycle.
    - The tournament itself has `δ = 100/213` and every vertex balanced.

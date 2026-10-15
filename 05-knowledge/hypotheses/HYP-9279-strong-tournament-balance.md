@@ -8,8 +8,8 @@ status: >
   62/157, 62/157); beyond n = 10 two extremal blocks glued at a cut vertex give delta 592/1521 (n = 11) and 1052/2721
   (n = 12, 13), so the minimum of delta is not monotone in n but stays above 4/11 in every construction tried. (B+) is FINITE-EXACT
   for n <= 9. On the transitive-plus-one family, (B) and (B+) are PROVED (THM-4655 1(g)). (B) is sharp: the vertex-wise
-  constant equals 1/3 for every n >= 5 (PROVED, THM-4655 (6), family W_n). (B_loc) is FINITE-EXACT for n <= 9 and exact on the transitive-plus-one family
-  to n = 14. (Z) is FINITE-EXACT for n <= 9, survives random and adversarial sampling of the exact cut-vertex transfer chain
+  constant equals 1/3 for every n >= 5 (PROVED, THM-4655 (6), family W_n). (B_loc) is FINITE-EXACT for n <= 10 and exact on the transitive-plus-one family
+  to n = 14. (Z) is FINITE-EXACT for n <= 10, survives random and adversarial sampling of the exact cut-vertex transfer chain
   (THM-4655 (5)) to n = 46, is sharp at 1/3, and (Z1) is PROVED for every interior component with at most 7 vertices, the other
   components arbitrary (THM-4655 (7), computer-assisted; singleton blocks = THM-4655 1(f)). Each of (A), (B), (B+),
   (B_loc) implies HYP-9277's inequality, and (Z) implies it for every strong tournament with a cut vertex; (A) gives it with a
@@ -21,7 +21,7 @@ scripts:
   - 04-computation/experiments/tournament_balance_20261014/tbal.c (+ tbal_strong9.out)
   - 04-computation/experiments/tournament_balance_20261014/tbal2.c (+ tbal2_strong9.out, tbal2_strong10.out)
   - 04-computation/experiments/tournament_balance_20261014/tbal3.c, tbal4.c (+ tbal34_upto8.out), tbal5.c (+ tbal5_strong9.out), c_counterexample.py (+ .out)
-  - 04-computation/experiments/tournament_balance_20261014/tbal6.c (+ tbal6_upto9.out), tbal7.c (+ tbal7_upto8.out, tbal7_strong9.out)
+  - 04-computation/experiments/tournament_balance_20261014/tbal6.c (+ tbal6_upto9.out, tbal6_strong10.out), tbal7.c (+ tbal7_upto8.out, tbal7_strong9.out, tbal7_strong10.out)
   - 04-computation/experiments/tournament_balance_20261014/cutvertex_chain.py, cutvertex_search.py (+ .out files)
   - 04-computation/experiments/tournament_balance_20261014/glue_blocks.py, glue_blocks_run.py (+ glue_blocks.out), glue_minimisers_check.out, check_minimiser.py, tbal_extend.c, tbal_near.c (+ tower.log), tbal_anneal.c (+ tbal_anneal.out)
   - 04-computation/experiments/audit_E_20261014/ (independent audit code and report)
@@ -80,7 +80,7 @@ In a strong tournament, every vertex lies on an arc `x → y` with `1/2 < p(x be
 
 - (B_loc) implies (B). It refines (B) in two ways: the partner shares a 3-cycle with the vertex, and the arc between them is *forward*, i.e. an arc of S36's digraph `F(T)` (HYP-9280).
 - **Evidence.**
-  - Exhaustive for all strong tournaments with `n <= 9` (`tbal6.c`). Each half also holds separately: a balanced partner on a common 3-cycle (R_tri), and a forward balanced arc (R_maj).
+  - Exhaustive for all strong tournaments with `n <= 10` (`tbal6.c`; 9,355,949 at `n = 10`). Each half also holds separately: a balanced partner on a common 3-cycle (R_tri), and a forward balanced arc (R_maj).
   - Exact on the transitive-plus-one family to `n = 14` (`tpo_forward_balanced.py`).
 - In the refuted variant (H) below, all nine arcs of one Hamiltonian cycle are forward with `p > 2/3`. (B_loc) asks for a forward arc with `p <= 2/3` at every vertex, and that survives.
 
@@ -98,7 +98,9 @@ Let `z` be a vertex of a strong tournament `T` with `T − z` not strong, and le
 - **Reduction in general.** All but two corner conditions (`L4`, `U4`) hold for every block. Their slack is 0 only for singletons and grows with the block (5/3, 2, 26/9, 10/3 for sizes 3–6). Proving `L4`, `U4` for all strong tournaments would prove (Z1) in full.
 
 **Evidence.**
-- **Exhaustive** for `n <= 9` (`tbal7.c`): 99,695 cut-vertex instances at `n = 9`, of which 13,060 have `k >= 3`. There are no failures of (Z1) or (Z2). Moreover a balanced partner always lies in `D_1 ∪ D_2` or in `D_(k−1) ∪ D_k`.
+- **Exhaustive** for `n <= 10` (`tbal7.c`), with no failures of (Z1) or (Z2), and a balanced partner always in `D_1 ∪ D_2` or in `D_(k−1) ∪ D_k`:
+  - `n = 9`: 99,695 cut-vertex instances, 13,060 with `k >= 3`;
+  - `n = 10`: 3,274,940 instances, 250,690 with `k >= 3`.
 - **Random sampling** of the exact chain (`cutvertex_chain.py`): 200 random cut-vertex tournaments with up to 9 blocks of sizes 1–5 (`n <= 46`) give no failure.
 - **Adversarial hill-climbing** (`cutvertex_search.py`):
   - The minimum of (Z1) is exactly `1/3`, and never lower. It is attained by the transitive-plus-one word `1 0 1 1 0` and by block patterns such as sizes `[3, 1, 3, 1]`. Near-misses of the form `c/(3c − 1)` (for example `229376/688127`) approach `1/3` from above.
