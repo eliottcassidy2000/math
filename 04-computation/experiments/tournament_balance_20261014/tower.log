@@ -1,0 +1,12 @@
+n=9 -> 10: 3060 strong extensions; minimum delta 558/1413 = 0.394904
+  printed 8 extensions with delta <= 0.4050
+n=10 -> 11: 8176 strong extensions; minimum delta 486/1215 = 0.400000
+  printed 6 extensions with delta <= 0.4050
+n=11 -> 12: 12276 strong extensions; minimum delta 1638/4005 = 0.408989
+  printed 4 extensions with delta <= 0.4100
+n=12 -> 13: 16376 strong extensions; minimum delta 5328/13689 = 0.389218
+  printed 4 extensions with delta <= 0.4100
+n=13 -> 14: 32760 strong extensions; minimum delta 11709/27621 = 0.423917
+  printed 0 extensions with delta <= 0.4000
+n=14 -> 15: 0 strong extensions; minimum delta 1/1 = 1.000000
+  printed 0 extensions with delta <= 0.4000

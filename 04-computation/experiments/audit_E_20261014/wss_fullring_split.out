@@ -1,0 +1,5 @@
+  a=2 p=31 split pi=30 WSS full-ring orbits 61568 predicted 61568 negation-fixed 0 ok
+  a=6 p=191 split pi=38 WSS full-ring orbits 70045440 predicted 70045440 negation-fixed 0 ok
+split primes < 200 (a = 1, 2, 3, 6): 81 agree with the inert formula on the full ring, 0 mismatches
+  a=2 p=1546463 split pi=1546462 WSS=True: full-ring orbits 7396885186032063360 predicted 7396885186032063360 (non-WSS value 4783101806592) negation-fixed 0
+  a=6 p=643 split pi=642 WSS=True: full-ring orbits 532523600 predicted 532523600 (non-WSS value 829472) negation-fixed 0

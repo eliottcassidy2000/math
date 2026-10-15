@@ -1,0 +1,7 @@
+n=3: max average 5/9 = 0.5556; (2n-1)/(3n) = 5/9; argmax cycle (0, 1, 2)
+n=4: max average 7/12 = 0.5833; (2n-1)/(3n) = 7/12; argmax cycle (0, 1, 2, 3)
+n=5: max average 3/5 = 0.6000; (2n-1)/(3n) = 3/5; argmax cycle (0, 1, 2, 3, 4)
+n=6: max average 11/18 = 0.6111; (2n-1)/(3n) = 11/18; argmax cycle (0, 1, 2, 3, 4, 5)
+n=7: max average 13/21 = 0.6190; (2n-1)/(3n) = 13/21; argmax cycle (0, 1, 2, 3, 4, 5, 6)
+n=8: max average 5/8 = 0.6250; (2n-1)/(3n) = 5/8; argmax cycle (0, 1, 2, 3, 4, 5, 6, 7)
+n=9: max average 17/27 = 0.6296; (2n-1)/(3n) = 17/27; argmax cycle (0, 1, 2, 3, 4, 5, 6, 7, 8)

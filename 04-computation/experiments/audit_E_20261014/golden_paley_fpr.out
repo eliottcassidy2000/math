@@ -1,0 +1,3 @@
+golden Paley primes < 2000: 52
+Fibonacci-primitive-root primes = 3 mod 4 < 2000: 52 ; identical lists: True
+all FPR primes < 600 (compare OEIS A003147): [11, 19, 31, 41, 59, 61, 71, 79, 109, 131, 149, 179, 191, 239, 241, 251, 269, 271, 311, 359, 379, 389, 409, 419, 431, 439, 449, 479, 491, 499, 569, 571, 599]

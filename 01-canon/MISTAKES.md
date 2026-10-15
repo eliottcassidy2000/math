@@ -18194,3 +18194,33 @@ the ambient space.
   - Search the literature ("Fibonacci-Wieferich") before typing a classical-looking equivalence as new.
   - A shared orbit pattern is an analogy, not an identification. Say exactly what matches.
   - Every FINITE-EXACT sentence needs a shipped script and output in the commit.
+
+## MISTAKE-615 (2026-10-14, mac-mini-2026-10-14-tourn THM-4655, THM-4656, HYP-9279, strong_tournament_balance_golden_rigidity_20261014.md; found by the session's independent adversarial audit E after the pre-audit checkpoints were pushed) -- a concurrent agent's conjecture restated as this session's own, a classical unit criterion typed as new, a counterexample that was not one, a structural description generalised from the first two cases, a search floor contradicted by exhaustive data, and a Fermat mirror aimed at the wrong object
+- **What was wrong:**
+  - **(M1) Attribution.** HYP-9279(A), "every strong tournament on n >= 4 vertices has delta >= 4/11", is word for word HYP-9277 statement 3 of opus S35. It was presented as this session's conjecture.
+  - **(W1) Prior art.** THM-4656 part 1 was typed new: "p is Wall-Sun-Sun iff the golden unit is a Wieferich base at p". This is Bragman-Rowland 2022 (arXiv:2202.00704, Thm 10) and McIntosh-Roettger 2007. Also, "L_p = 1 mod p^2" was credited to Sun-Sun 1992 instead of Andrejic 2006 and McIntosh-Roettger 2007. This repeats MISTAKE-614's lesson, which S36 recorded the same evening.
+  - **(M2) A false example.** "No poset analogue: in {a} || {b < c}, b and c have no balanced partner." In fact b and c are balanced against a (2/3, 1/3). The smallest failure is 3 + 1, where the bottom of the chain is ordered before the isolated point with probability 3/4.
+  - **(M3) Over-generalised structure.** "The tight vertices of (B) sit in a cyclic triangle hung at the end of the order by one back arc." That holds for the n = 5, 6 examples, the transitive-plus-one ones. At n = 7, 8 most tight vertices need two back arcs, and the triangle can sit in the middle. What is true for all 32 tight vertices with n <= 8: each lies on a cyclic triangle with two exact partners.
+  - **(M4) A search floor stated as a bound.** "For k = 2 the best-partner balance of z stayed >= 6/17" came from an adversarial hill-climb. The exhaustive minima are 5/13, 6/17, 10/29, 18/53, 34/101 (n = 5..9), i.e. (2^(n-4)+2)/(3*2^(n-4)+5), which decreases to 1/3.
+  - **(W4) Mirror aimed wrong.** Golden rigidity (ord phi a power of 2) was called "the mirror of Fermat primes". It mirrors the prime divisors of Fermat numbers. The Fermat primes are mirrored by the inert primes with p + 1 = 2^q, the Mersenne primes, and the q = 2 case was missing.
+  - **Smaller items.**
+    - THM-4655 1(d) literally included transitive tournaments.
+    - The status threshold "m >= 8" was stated where the proof needs m >= 9.
+    - "Two balanced arcs are attained for every m" had no witness.
+    - "tpo_u2_check independently enumerates" overstated its independence of the bijection 1(b).
+    - THM-4656: a proof parenthetical ("-1 is the only involution in <phi>") was false at p = 11.
+    - A buggy check printed "False" in wss_orbits.out.
+    - The known lists A074714 and A003147 were untyped.
+    - "Aut(P_p) acts regularly on arcs" was not restricted to prime order.
+    - Note: a clique-number reason was attributed to the complement; "Pisano period = period of the least-resistance recursion" was imprecise (the resistance ratio has period 5, not 20, mod 5); the 11/55 rigidity reading and the E8/128 link were typed STRUCTURAL; "finitely many extra cycles of 3n-1" is conjectural.
+- **What survives:**
+  - Every mathematical claim of THM-4655 (1(a)-(g), the rotation lemma, the log-concavity failures, the exhaustive minima and statement 5) was independently re-derived by audit E. It used its own DFS, its own decoders and a completeness check by sum n!/|Aut|.
+  - THM-4656's formulas, lists and orbit-explosion reading are intact; the reading is new, the criterion cited.
+  - HYP-9279's data, (B), (B+), (B_loc), (Z1), (Z2) and the refutation of (H) are intact for n <= 9.
+  - Audit E added: delta > 1/3 strictly on the transitive-plus-one family; the sharpness of (B) for every n >= 5 (also proved here as THM-4655 (6)); the full-ring split-prime orbit count (FINITE-EXACT).
+- **Lesson:**
+  - With a concurrent agent on the same brief, diff your conjecture statements against theirs (HYP-9277's numbered parts) before claiming one.
+  - Search the literature for every classical-looking equivalence (here "Fibonacci-Wieferich"). MISTAKE-614 is now two for two on this point.
+  - Check a claimed counterexample by computing it.
+  - A pattern seen in the first cases of an exhaustive list is a hypothesis about the list. Re-run the exhaustive data before describing "the" structure.
+  - Never quote an adversarial-search value as a floor when exhaustive data exist. Compute the exhaustive minimum.

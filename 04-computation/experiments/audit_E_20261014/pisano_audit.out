@@ -1,0 +1,7 @@
+NMAX=20000: max pi(n)/n = 6.000000; #n with pi(n) > 6n: 0; n with pi(n) = 6n: 10 50 250 1250 6250
+split pi | p-1, inert pi | 2(p+1) and pi does not divide p+1 (primes 7..NMAX): violations 0
+pi(p^2) in {pi(p), p pi(p)} for p^2 <= NMAX: violations 0
+max pi(p^k)/p^k over prime powers <= NMAX with p != 5: 2.666667 at p=3 (k=1); pi(5^k)/5^k: 4.000 4.000 4.000 4.000 4.000 4.000
+examples: pi(10)=60 pi(11)=10 pi(12)=24 pi(19)=18 pi(20)=60 pi(50)=300 pi(5)=20 pi(2)=3 pi(3)=8 pi(7)=16
+split primes < 100 with pi = p-1: 11 19 31 41 59 61 71 79
+inert primes < 100 with pi = 2(p+1): 7 13 17 23 37 43 53 67 73 83 97

@@ -132,12 +132,14 @@ def main():
         if p == 5: continue
         pi, _ = pi_p(1, p)
         if pi & (pi - 1) == 0: gf.append((p, pi))
-    L = [2, 1]
-    for _ in range(70): L.append(L[-1] + L[-2])
-    lucas_div = {j: [q for q, _ in factorint(L[2 ** j]).items()] for j in range(1, 7)}
+    def lucas_pow2_mod(j, p):                            # L_(2^j) mod p for j >= 1: L_2 = 3, L_(2n) = L_n^2 - 2 (n even)
+        x = 3 % p
+        for _ in range(j - 1): x = (x * x - 2) % p
+        return x
+    # pi(p) = 2^k  <=>  p | L_(2^(k-2))   (audit E, W7: the earlier factor-list check stopped at j = 6 and was wrong)
+    bad = [p for p, pi in gf if pi < 8 or lucas_pow2_mod(pi.bit_length() - 3, p) != 0]
     print("  primes with pi(p) = 2^k:", gf)
-    print("  prime factors of L_(2^j), j = 1..6:", lucas_div)
-    print("  every golden-Fermat prime divides some L_(2^j):", all(any(p in v for v in lucas_div.values()) or p > max(max(v) for v in lucas_div.values()) for p, _ in gf))
+    print("  every such p divides L_(2^(k-2)) (direct check mod p); mismatches:", bad)
 
     print("(4) golden Paley primes: p = 3 mod 4, p = +-1 mod 5, <mu_1> = QR_p (index 2, odd order), p < 2000")
     gp = []

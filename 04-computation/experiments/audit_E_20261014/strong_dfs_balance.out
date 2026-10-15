@@ -1,0 +1,45 @@
+n=3: strong tournaments 1 (non-strong skipped 0); delta < 1/3: 0; with a balanced arc: 1
+  sum H = 3, max H = 3
+  minimum delta = 1/3 = 0.333333, attained by 1 tournaments; min over arcs of p(tail first) = 2/3 = 0.666667
+  HYP-9279(B): tournaments in which EVERY vertex has a balanced partner: 1 of 1; min over T of min over v of max_w min(P,1-P) = 1/3 = 0.333333 (at &BP_)
+  orbit-count check: sum n!/|Aut| = 2 ; labelled strong tournaments s(3) = 2 ; EQUAL (gentourng list complete and irredundant)
+  minimiser &BP_: H=3 scores (1,1,1) minFAS=1 transitive-plus-1
+n=4: strong tournaments 1 (non-strong skipped 0); delta < 1/3: 0; with a balanced arc: 1
+  sum H = 5, max H = 5
+  minimum delta = 2/5 = 0.400000, attained by 1 tournaments; min over arcs of p(tail first) = 3/5 = 0.600000
+  HYP-9279(B): tournaments in which EVERY vertex has a balanced partner: 1 of 1; min over T of min over v of max_w min(P,1-P) = 2/5 = 0.400000 (at &COx_)
+  orbit-count check: sum n!/|Aut| = 24 ; labelled strong tournaments s(4) = 24 ; EQUAL (gentourng list complete and irredundant)
+  minimiser &COx_: H=5 scores (1,1,2,2) minFAS=1 transitive-plus-1
+n=5: strong tournaments 6 (non-strong skipped 0); delta < 1/3: 0; with a balanced arc: 6
+  sum H = 72, max H = 15
+  minimum delta = 4/11 = 0.363636, attained by 1 tournaments; min over arcs of p(tail first) = 5/9 = 0.555556
+  HYP-9279(B): tournaments in which EVERY vertex has a balanced partner: 6 of 6; min over T of min over v of max_w min(P,1-P) = 1/3 = 0.333333 (at &DY[SQ?)
+  orbit-count check: sum n!/|Aut| = 544 ; labelled strong tournaments s(5) = 544 ; EQUAL (gentourng list complete and irredundant)
+  minimiser &DW[[W?: H=11 scores (1,2,2,2,3) minFAS=2 transitive-plus-1
+n=6: strong tournaments 35 (non-strong skipped 0); delta < 1/3: 0; with a balanced arc: 35
+  sum H = 1043, max H = 45
+  minimum delta = 4/11 = 0.363636, attained by 2 tournaments; min over arcs of p(tail first) = 7/15 = 0.466667
+  HYP-9279(B): tournaments in which EVERY vertex has a balanced partner: 35 of 35; min over T of min over v of max_w min(P,1-P) = 1/3 = 0.333333 (at &E\NFA`C)
+  orbit-count check: sum n!/|Aut| = 22320 ; labelled strong tournaments s(6) = 22320 ; EQUAL (gentourng list complete and irredundant)
+  minimiser &EWNFa`c: H=33 scores (2,2,2,2,3,4) minFAS=3 transitive-plus-2
+  minimiser &E[JFR`_: H=33 scores (1,2,3,3,3,3) minFAS=3 transitive-plus-2
+n=7: strong tournaments 353 (non-strong skipped 0); delta < 1/3: 0; with a balanced arc: 353
+  sum H = 32785, max H = 189
+  minimum delta = 4/11 = 0.363636, attained by 1 tournaments; min over arcs of p(tail first) = 9/25 = 0.360000
+  HYP-9279(B): tournaments in which EVERY vertex has a balanced partner: 353 of 353; min over T of min over v of max_w min(P,1-P) = 1/3 = 0.333333 (at &F]fpw[D@A?)
+  orbit-count check: sum n!/|Aut| = 1677488 ; labelled strong tournaments s(7) = 1677488 ; EQUAL (gentourng list complete and irredundant)
+  minimiser &F[Dpy]D@a?: H=99 scores (2,2,2,3,4,4,4) minFAS=5 transitive-plus-3
+n=8: strong tournaments 6008 (non-strong skipped 0); delta < 1/3: 0; with a balanced arc: 6008
+  sum H = 2073672, max H = 661
+  minimum delta = 62/157 = 0.394904, attained by 1 tournaments; min over arcs of p(tail first) = 13/45 = 0.288889
+  HYP-9279(B): tournaments in which EVERY vertex has a balanced partner: 6008 of 6008; min over T of min over v of max_w min(P,1-P) = 1/3 = 0.333333 (at &G^R{^Bo[A_OO)
+  orbit-count check: sum n!/|Aut| = 236522496 ; labelled strong tournaments s(8) = 236522496 ; EQUAL (gentourng list complete and irredundant)
+  minimiser &GWr{^bG]BCP?: H=157 scores (1,2,3,3,4,4,5,6) minFAS=4 transitive-plus-2
+n=9: strong tournaments 178133 (non-strong skipped 0); delta < 1/3: 0; with a balanced arc: 178133
+  sum H = 266188355, max H = 3357
+  minimum delta = 62/157 = 0.394904, attained by 2 tournaments; min over arcs of p(tail first) = 17/81 = 0.209877
+  HYP-9279(B): tournaments in which EVERY vertex has a balanced partner: 178133 of 178133; min over T of min over v of max_w min(P,1-P) = 1/3 = 0.333333 (at &H^h~Fw^@wF?S@?_)
+  orbit-count check: sum n!/|Aut| = 64026088576 ; labelled strong tournaments s(9) = 64026088576 ; EQUAL (gentourng list complete and irredundant)
+  minimiser &HWx~F{W`{FCO`C_: H=471 scores (2,2,2,3,4,5,5,6,7) minFAS=6 transitive-plus-3
+  minimiser &H[X^Fy^`cF_WPA?: H=471 scores (1,2,3,3,4,5,6,6,6) minFAS=6 transitive-plus-3
+( gentourng -q -z -c 9 | nice -n 10 $S/sdb d6; )  12.53s user 0.06s system 99% cpu 12.599 total

@@ -1,0 +1,6 @@
+K_11 in R^10: n=11, d=10, |E|=55, dn - C(d+1,2) = 55; generic rank 55; rank after deleting any one edge in [54,54]; rigid=True; independent=True; minimally rigid=True; circuit=False
+K_12 in R^10: n=12, d=10, |E|=66, dn - C(d+1,2) = 65; generic rank 65; rank after deleting any one edge in [65,65]; rigid=True; independent=False; minimally rigid=False; circuit=True
+K_6 - P_6 in R^2: n=6, d=2, |E|=10, dn - C(d+1,2) = 9; generic rank 9; rank after deleting any one edge in [9,9]; rigid=True; independent=False; minimally rigid=False; circuit=True
+W_4 in R^2: n=5, d=2, |E|=8, dn - C(d+1,2) = 7; generic rank 7; rank after deleting any one edge in [7,7]; rigid=True; independent=False; minimally rigid=False; circuit=True
+K_4 in R^2: n=4, d=2, |E|=6, dn - C(d+1,2) = 5; generic rank 5; rank after deleting any one edge in [5,5]; rigid=True; independent=False; minimally rigid=False; circuit=True
+independence number of P_6: 3 ; independence number of the complement K_6 - P_6: 2 ; clique number of K_6 - P_6 = alpha(P_6) = 3

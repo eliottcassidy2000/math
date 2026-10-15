@@ -3,6 +3,7 @@
 2026-10-14, mac-mini-2026-10-14-tourn.
 
 **Status.**
+- **Audited** (audit E, `04-computation/experiments/audit_E_20261014/REPORT.md`; MISTAKE-615).
 - **PROVED:** [THM-4655](../../01-canon/theorems/THM-4655-strong-tournament-balance-lemmas.md) (balance of transitive-plus-one strong tournaments; rotation lemma) and [THM-4656](../../01-canon/theorems/THM-4656-wall-sun-sun-golden-orbit-explosion.md) (Wall–Sun–Sun primes as golden Wieferich primes).
 - **FINITE-EXACT:** all strong tournaments on `n <= 10` vertices; Pisano facts to `n = 20000`.
 - **HYP:** [HYP-9279](../hypotheses/HYP-9279-strong-tournament-balance.md).
@@ -29,8 +30,9 @@ This note builds on those and does not repeat them.
 1. **A proved subclass (THM-4655 (1)).** Take a transitive tournament `u_1 → … → u_m` plus one vertex `z` with any pattern `w`. It is strong iff `w_1 = 1` and `w_m = 0`.
    - Every Hamiltonian path is two increasing runs around `z`.
    - The pair `(z, u_2)` is always balanced: `1/3 < P(u_2 before z) <= 2/3`, with equality only at `w = 1 0 1^(m−3) 0`. The lower bound `1/3` is approached by `w = 110^(m−2)`.
-   - So the conjecture holds, with an explicit witness pair, for every tournament whose strong components are transitive after deleting one vertex.
-   - The proof is a two-case count with two lemmas: an injection of 01-boundaries into later zeros, and a geometric bound on crossed weights. Every step is checked by computer for `m <= 14`, and the statement by brute force for `m <= 20` (524,286 words).
+   - So the conjecture holds, with an explicit witness pair, for every non-transitive tournament having a strong component on at least 3 vertices that becomes transitive after deleting one vertex. On the family itself, `δ > 1/3` strictly (audit E).
+   - The case `w = 1^(m−1) 0` is the nearly transitive tournament (`H = 2^(n−2) + 1`; El Sahili–Ghazo Hanna, arXiv:2207.11510).
+   - The proof is a two-case count with two lemmas: an injection of 01-boundaries into later zeros, and a geometric bound on crossed weights. Every step is checked by computer for `m <= 14`. The statement is checked by enumerating all valid sets `A` for `m <= 20` (524,286 words); this rests on the bijection 1(b), which audit E checked against DFS over the actual Hamiltonian paths for `m <= 13`.
 2. **A rotation lemma (THM-4655 (2)).** The `n` paths obtained by cutting one Hamiltonian cycle cannot sustain a `> 2/3` majority order: their average concordance with any linear order is at most `(2n−1)/(3n)`.
    - The proof is one line: from any vertex the forward distances are exactly `1, …, n−1`.
    - Corollary: a strong tournament with no balanced pair has fewer than `n/(n+1)` closable paths.
@@ -47,13 +49,15 @@ This note builds on those and does not repeat them.
 5. **Vertex-wise balance (THM-4655 1(e)–(g), HYP-9279(B)).** In every strong tournament checked, *every vertex* has a balanced partner. That holds for all strong tournaments with `n <= 10` (9,355,949 at `n = 10`).
    - On the transitive-plus-one family it is proved. The extra vertex `z` is balanced against every interior `u_i`, by the same wide-crossing mechanism. `u_1` and `u_m` are balanced against `z` or their transitive neighbour.
    - The unique Hamiltonian cycle `z u_1 … u_m z` carries at least two balanced arcs.
-   - The vertex-wise constant is exactly `1/3` for every `n = 5..9`. The tight vertices sit in a `C_3` block hung at the end of the order, the local version of the global extremals.
+   - The vertex-wise constant is exactly `1/3` for every `n >= 5` (PROVED, THM-4655 (6): `W_n = TT_(n−3) ⇒ C_3` with one back arc).
+   - Every tight vertex for `n <= 8` lies on a cyclic triangle with two exact partners (`p = 2/3, 1/3`), the local version of the global extremals. Only the transitive-plus-one examples hang that triangle by a single back arc; most tight vertices at `n = 7, 8` need two (audit E).
    - The stronger statement (B⁺), that the balanced graph is connected, holds for `n <= 9`.
 6. **Cut vertices: the transitive-plus-one mechanism in general (THM-4655 (5), HYP-9279 (Z)).** Let `z` be a vertex whose deletion leaves `T − z` non-strong, with strong components `D_1 ⇒ … ⇒ D_k`.
    - The Hamiltonian paths factor through an exact 4-state transfer chain over the blocks. Each block enters only through its own subset path counts.
    - The interior blocks of the crossing window are fair coins against `z`, because `Σ_X h(X) h(D ∖ X)` is symmetric under complement.
    - Conjecture (Z): `z` is balanced against every vertex of `D_2 ∪ … ∪ D_(k−1)` and always has a balanced partner.
      - Exhaustive to `n = 9`, sampled to `n = 46`, sharp at `1/3`.
+     - For `k = 2` the exhaustive minima of `z`'s best balance, `(2^(n−4) + 2)/(3·2^(n−4) + 5)`, decrease towards `1/3` (audit E).
      - Proved when all blocks are singletons.
      - It would settle HYP-9277 for every strong tournament with a cut vertex: about 30% of strong tournaments at `n = 10`.
    - A local refinement of (B), (B_loc), also holds to `n = 9`: every vertex lies on a forward arc with `1/2 < p <= 2/3` on a directed 3-cycle. This ties (B) to S36's forward-arc digraph.
@@ -61,7 +65,10 @@ This note builds on those and does not repeat them.
    - The unique counterexample among the 178,133 strong 9-tournaments has a Hamiltonian cycle whose nine arcs all have `p(tail first) ∈ (0.671, 0.831)`: a `> 2/3` majority cycle.
    - The tournament itself has `δ = 100/213` and every vertex balanced.
    - So cycles can carry a majority orientation while vertices and pairs cannot avoid balance. This is the right warning for S36's majority-cycle route (HYP-9280): the majority structure lives on cycles, the balance on vertices.
-8. **HYP-9279(A).** Every strong tournament on `n >= 4` vertices has `δ >= 4/11`, a strict gap above 1/3. The exhaustive minima are 4/11 at `n = 5, 6, 7` and 62/157 at `n = 8, 9, 10`. Within the transitive-plus-one family, the minimum rises towards 1/2:
+8. **HYP-9277(3) (S35) = HYP-9279(A).** Every strong tournament on `n >= 4` vertices has `δ >= 4/11`, a strict gap above 1/3.
+   - The exhaustive minima are 4/11 at `n = 5, 6, 7` and 62/157 at `n = 8, 9, 10`.
+   - Beyond the exhaustive range, two extremal blocks glued at a cut vertex give 592/1521 = 0.3892 at `n = 11` and 1052/2721 = 0.3866 at `n = 12, 13`. So the minimum is not monotone, but it stays above 4/11 in every construction tried.
+   - Within the transitive-plus-one family the minimum tends to 1/2, though not monotonically (8/19 at `n = 6`, then 2/5 at `n = 7`):
 
    | `n` | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 |
    |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -79,12 +86,14 @@ This note builds on those and does not repeat them.
 - **Split primes.** A root `φ₁ ∈ Z/p²` is a Wieferich base exactly at Wall–Sun–Sun primes, and THM-4644's count transfers verbatim.
 - **Inert primes.** On `Z[φ]/(p²) ≅ (Z/p²)²` the exponent jumps from `(p+1)(p²−1)/(2π')` to `(p²+1)(p²−1)/(2π')`.
 - **Evidence.** No Wall–Sun–Sun prime exists below `2^64` (PrimeGrid), so the jump was tested at metallic analogues. For the silver ratio (`a = 2`, Pell), `p = 13` and `p = 31` are Wall–Sun–Sun-type primes, and brute-force orbit counts show the predicted jump: 4080 against 336, and 64 against 4.
-- **Rigidity (the mirror of Fermat primes).**
-  - Golden rigidity holds iff the Pisano period `π(p)` is a power of 2, iff `p | L_(2^j)`. The primes below `10^6` are 3, 7, 47, 127, 1087, 2207, 4481, 21503, 34303, 119809, 524287.
-  - This list contains every Mersenne prime `2^q − 1` with `q ≡ 3 (mod 4)`, with the maximal period `2^(q+1)`. That is exactly the Lucas–Lehmer test with seed 3.
-  - Fermat primes (`p − 1 = 2^k`) make the split torus a 2-group. Mersenne primes (`p + 1 = 2^q`) make the golden nonsplit torus a 2-group.
+- **Prior art (audit E).** "Wall–Sun–Sun ⇔ the golden ratio is a Wieferich unit" is KNOWN (Bragman–Rowland 2022, arXiv:2202.00704, Thm 10; McIntosh–Roettger 2007). What is new is the circulant-tournament reading: the orbit explosion.
+- **Rigidity (corrected Fermat mirror).**
+  - Golden rigidity holds iff the Pisano period `π(p)` is a power of 2, iff `p | L_(2^j)`. The primes below `10^6` are 3, 7, 47, 127, 1087, 2207, 4481, 21503, 34303, 119809, 524287 (KNOWN list: OEIS A074714).
+  - Golden rigidity mirrors the prime divisors of Fermat numbers, where `ord_p 2` is a power of 2. It does not mirror the Fermat primes themselves.
+  - Fermat primes (`p − 1 = 2^k`) make the split torus a 2-group. Their mirror is the inert primes with `p + 1 = 2^q`, i.e. the Mersenne primes `2^q − 1` with `q = 2` or `q ≡ 3 (mod 4)`, where the golden nonsplit torus is a 2-group.
+  - For those, `φ^(p+1) = N(φ) = −1` gives the maximal period `2^(q+1)`. This is the necessity half of the Lucas–Lehmer test with seed 3.
 - **"Think rigidity circuits."** Here "rigidity" is THM-4644's multiplier rigidity. S35's HYP-9278 develops the other sense, 2D rigidity circuits (`|E| = 2|V| − 2` with every proper subgraph Laman-independent) as the Calabi–Yau cores of Paley pattern sums, with motivic weight `|V| − 2`.
-  - The K6 − P6 terminal of HYP-9276 is such a circuit: 10 = 2·6 − 2 edges, and no `K_4` inside, since the complement of `P_6` has independence number 3. Its conjectural motive `Sym²(ρ_g)` has weight 4 = 6 − 2, consistent with HYP-9278.
+  - The K6 − P6 terminal of HYP-9276 is such a circuit: 10 = 2·6 − 2 edges, generic rank 9, and every edge-deleted subgraph independent (audit E). There is no `K_4` inside, since `P_6` has independence number 3 and so `K_6 − P_6` has clique number 3. Its conjectural motive `Sym²(ρ_g)` has weight 4 = 6 − 2, consistent with HYP-9278.
   - The wheel `W_4` (5 vertices, 8 edges, Apéry weight-4 form, motivic weight 3) is the previous rung.
   - See also §5.
 
@@ -109,30 +118,30 @@ This note builds on those and does not repeat them.
 
 **Least resistance (the corpus's sense, S35).** Least resistance means series-parallel reduction. Continued fractions are its arithmetic.
 - The `n`-rung ladder of unit resistors has resistance `F_(2n+1)/F_(2n)` (standard termination), which tends to `φ` (KNOWN).
-- The Pisano period is the period of this least-resistance recursion modulo `n`.
+- The Fibonacci recursion behind the ladder has the Pisano period modulo `n`. The resistance itself is a ratio: the projective action of `Q² = [[2,1],[1,1]]`, whose period is shorter (5 rather than `π(5) = 20` at `n = 5`; audit E).
 - In S35's Paley analysis, series-parallel patterns give polynomials. The first resistances, the wheel and `K_6 − P_6`, give modular forms.
-- So the golden ratio is the fixed point of least resistance, and its arithmetic (Pisano periods, Wall–Sun–Sun primes) measures how least resistance fails modulo `p`.
+- ANALOGY: the golden ratio is the fixed point of least resistance, and its arithmetic (Pisano periods, Wall–Sun–Sun primes) measures how least resistance fails modulo `p`.
 
 ## 4. The golden rectangle, dodecahedron and icosahedron
 
 - **STRUCTURAL (KNOWN in substance).** The Fibonacci matrix `Q = [[1,1],[1,0]]` satisfies `Q^5 ≡ 3I (mod 5)`. Since `det Q = −1 = 2²` is a square mod 5, `Q` is projectively an element of order 5 in `PSL(2,5) ≅ A_5`, the rotation group of the icosahedron: a 5-fold vertex rotation.
-- **The two exceptional isomorphisms `A_5 ≅ PSL(2,4) ≅ PSL(2,5)`** are `Z[φ]` reduced at its two special primes:
+- **The two exceptional isomorphisms `A_5 ≅ PSL(2,4) ≅ PSL(2,5)`** are `PSL_2` over the residue fields `F_4 = Z[φ]/(2)` and `F_5 = Z[φ]/(√5)`:
   - the inert prime 2, where `F_4 = F_2[φ]` and `φ` has order `π(2) = 3`;
   - the ramified prime `√5`, where `φ ≡ 3`.
-- The icosians, the quaternion order over `Z[φ]` containing the 120 unit elements of the binary icosahedral group, carry this structure globally and give `E_8` (CITED: Conway–Sloane). This links to S35's `E_8` half-spin 128.
-- The three mutually perpendicular golden rectangles span the 12 icosahedron vertices `(0, ±1, ±φ)`, the projective image of the golden ratio.
+- The icosians, the quaternion order over `Z[φ]` containing the 120 unit elements of the binary icosahedral group, carry this structure globally and give `E_8` (CITED: Conway–Sloane). The link to S35's `E_8` half-spin 128 is NUMEROLOGY.
+- The three mutually perpendicular golden rectangles span the 12 icosahedron vertices `(0, ±1, ±φ)` (cyclic permutations).
 - **COINCIDENCE of orders.** `π(10) = 60 = |A_5|`, but `⟨Q mod 10⟩` is cyclic, not `A_5`. Also `π(5) = 20` is the number of dodecahedron vertices.
 
 ## 5. Eleven coordinates and 55 pairs
 
-- **STRUCTURAL.** 11 is a golden Paley prime: the residue root `φ₁ = 4` generates `QR_11`. So the golden-invariant circulant tournament on `Z_11` is the Paley tournament `P_11`. `Aut(P_11) = {x ↦ ax + b : a ∈ QR_11}` has order 55 and acts regularly on its 55 arcs, as `Aut(P_p)` does for every Paley prime.
-- **STRUCTURAL (rigidity).** 11 points in `R^10` with all 55 distances form the 10-simplex: `K_11` is minimally rigid in `R^10`, since `d·n − C(d+1,2) = 110 − 55 = 55`. `K_12` is a rigidity circuit there. This is the sense in which "11 coordinates and 55 pairs" are balanced.
+- **STRUCTURAL.** 11 is a golden Paley prime: the residue root `φ₁ = 4` generates `QR_11`. Golden Paley primes are exactly the Fibonacci-primitive-root primes `≡ 3 (mod 4)` (Shanks 1972; OEIS A003147). So the golden-invariant circulant tournament on `Z_11` is the Paley tournament `P_11`. `Aut(P_11) = {x ↦ ax + b : a ∈ QR_11}` has order 55 and acts regularly on its 55 arcs, as `Aut(P_p)` does for every Paley tournament of prime order.
+- **Rigidity (facts KNOWN, reading ANALOGY).** 11 points in `R^10` with all 55 distances form the 10-simplex: `K_11` is minimally rigid in `R^10`, since `d·n − C(d+1,2) = 110 − 55 = 55`, and `K_12` is a rigidity circuit there. Reading "11 coordinates and 55 pairs" this way is an ANALOGY.
 - **COINCIDENCE.** `55 = F_10 = F_(π(11))` is also `C(11,2) = T_10`. By Luo's theorem (1989), 55 is the largest triangular Fibonacci number, so this cannot recur.
 
 ## 6. The analogies of the brief (typed)
 
 - **Square-sum ↔ 3n−1** (also in S36's note §5, with data to 40).
-  - The square-sum path exists for `n = 15, 16, 17, 23` and all `n >= 25`, and is reported proved by Gerbicz (2018; OEIS A090461, forum-level, with cycles for `n >= 32`). Its finitely many exceptional small `n` mirror the finitely many extra cycles of `3n − 1` (`{1,2}`, `{5,14,7,20,10}`, `{17,…}`).
+  - The square-sum path exists for `n = 15, 16, 17, 23` and all `n >= 25`, and is reported proved by Gerbicz (2018; OEIS A090461, forum-level, with cycles for `n >= 32`). Its finitely many exceptional small `n` mirror the three known cycles of `3n − 1` (`{1,2}`, `{5,14,7,20,10}`, `{17,…}`; conjecturally all).
   - ANALOGY only. The square-sum problem is solved by a constructive extension algorithm; `3n−1` is open.
 - **Graceful trees ↔ Collatz.** Both are universal statements ("every tree", "every orbit"), verified far out and open. ANALOGY.
   - A concrete bridge to test: is the Collatz tree truncated at `N` gracefully labelable by a rule compatible with its parity structure?

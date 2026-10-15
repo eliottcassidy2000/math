@@ -41,17 +41,30 @@ related: [HYP-9277, HYP-9279, THM-438 (Paley Hamiltonian paths), THM-4652 (Paley
 
      `H(T) = |K| + Σ_(β<α, w_β = 1, w_α = 0) 2^(α−β−1)`,   `K = {0, m} ∪ {k : w_k = 0, w_(k+1) = 1}`.
 
+     For `w = 1^(m−1) 0` this is the nearly transitive tournament, with `H = 2^(n−2) + 1` (KNOWN: El Sahili–Ghazo Hanna, arXiv:2207.11510).
+
    - **(c) The balanced pair.** If `m >= 3` (`n >= 4`), then
 
      `1/3 < p_T(u_2 before z) <= 2/3`,
 
      with equality iff `w = 1 0 1^(m−3) 0` (`m >= 4`). Hence `δ(T) >= 1/3`: **the 1/3–2/3 property holds for every strong transitive-plus-one tournament, with the explicit balanced pair `(z, u_2)`.** For `m = 2`, `T = C_3` and `δ = 1/3`.
-   - **(d) Corollary (with S35's component reduction).** Suppose each strong component of a tournament becomes transitive after deleting one vertex. Then the tournament satisfies the 1/3–2/3 inequality.
+   - **(c′) Strictness (audit E).** For `m >= 3`, `δ(T) > 1/3`. So HYP-9277's equality characterisation also holds on this family.
+     - If `w ≠ 1 0 1^(m−3) 0`, the pair `(z, u_2)` is strictly balanced by (c).
+     - At the equality word with `m >= 5`, `p(u_3 before z) = 2^(m−4)/(1 + 2^(m−3)) ∈ (1/3, 1/2)`.
+     - At `w = 1010`, `p(u_1 before u_4) = 5/9`.
+   - **(d) Corollary (with S35's component reduction).** Let `T` be a non-transitive tournament in which some strong component on at least 3 vertices becomes transitive after deleting one vertex. Then `δ(T) >= 1/3`.
    - **(e) Balanced arcs on the Hamiltonian cycle.** The unique Hamiltonian cycle of a strong `T` is `z u_1 u_2 … u_m z`. Let `m >= 3`.
      - If `w_2 = 1`, then `1/2 <= p_T(z before u_1) < 2/3`.
      - If `w_2 = 0`, then `1/3 <= p_T(u_2 before u_1) <= 1/2`, with `1/3` iff `w = 1 0 1^(m−3) 0`.
 
-     Applied to the reverse tournament, the same holds at the other end: `(u_m, z)` or `(u_(m−1), u_m)` is balanced. So **the Hamiltonian cycle carries at least two balanced arcs**, and two is attained for every `m >= 3`.
+     Applied to the reverse tournament, the same holds at the other end: `(u_m, z)` or `(u_(m−1), u_m)` is balanced. So **the Hamiltonian cycle carries at least two balanced arcs**.
+
+     Two is attained for every `m >= 3` by `w = 1 0^(m−1)`, where `H = 2^(m−1) + 1`.
+     - Its balanced cycle arcs are exactly:
+       - `(u_1, u_2)`, with `p(u_2 before u_1) = 2^(m−2)/H`;
+       - `(u_m, z)`, with `p(u_m before z) = (2^(m−2) + 1)/H`.
+     - The other cycle arcs have `p(z before u_1) = 2^(m−1)/H` and `p(u_(i+1) before u_i) = 2^(m−3)/H`.
+     - Audit E checked this exactly for `m = 3..16`.
    - **(f) `z` is a universal partner.** If `m >= 3`, then `1/3 <= p_T(u_i before z) <= 2/3` for every `2 <= i <= m − 1`.
    - **(g) Corollary: vertex-wise balance and connectivity.** In every strong transitive-plus-one tournament:
      - every vertex has a balanced partner: `z` and `u_2` by (c), `u_2, …, u_(m−1)` and `z` by (f), `u_1` with `z` or `u_2` and `u_m` with `z` or `u_(m−1)` by (e);
@@ -67,7 +80,14 @@ related: [HYP-9277, HYP-9279, THM-438 (Paley Hamiltonian paths), THM-4652 (Paley
    - the position distribution of a vertex;
    - the gap distribution of `pos(y) − pos(x)`.
 
-   Failures appear at `n = 4`. All 35 strong tournaments at `n = 6` fail for positions, and every strong tournament at `n = 6, 7` fails for gaps. So the Kahn–Saks route to `δ >= 3/11` for posets, which runs through Stanley's inequality, does not transfer verbatim.
+   Failures appear at `n = 4`. The counts of strong tournaments failing are:
+
+   | `n` | 4 | 5 | 6 | 7 |
+   |---|---|---|---|---|
+   | fail for positions | 1 of 1 | 4 of 6 | 35 of 35 | 351 of 353 |
+   | fail for gaps | 1 of 1 | 6 of 6 | 35 of 35 | 353 of 353 |
+
+   This is audit E's independent recount. So the Kahn–Saks route to `δ >= 3/11` for posets, which runs through Stanley's inequality, does not transfer verbatim.
 
 4. **(Exhaustive; FINITE-EXACT.)** Every strong tournament on `n <= 10` vertices (1, 1, 6, 35, 353, 6008, 178133, 9355949 for `n = 3..10`) has `δ >= 1/3`. The minima are:
 
@@ -80,6 +100,7 @@ related: [HYP-9277, HYP-9279, THM-438 (Paley Hamiltonian paths), THM-4652 (Paley
 
    - The minimisers are near-transitive (minimum feedback arc sets 1, 2, 3, 5, 4, 6 for `n = 4..9`).
    - With S35's reduction, **HYP-9277's inequality holds for every tournament on `n <= 10` vertices** (S35 had `n <= 8`).
+   - Audit E replicated `n <= 9` with independent code: DFS on gentourng `-z` output, its own decoder, and a completeness check by `Σ n!/|Aut|`. The `n = 10` sweep rests on `tbal2.c` alone; audit E rechecked only its minimiser (`δ = 62/157`, `H = 1413`).
    - In every strong tournament with `n <= 10`, every vertex has a balanced partner (HYP-9279(B)).
 
 5. **(The cut-vertex transfer chain and the fair-coin lemma.)** Let `T` be strong and `z` a vertex with `T − z` not strong, and let `D_1 ⇒ D_2 ⇒ … ⇒ D_k` (`k >= 2`) be the strong components of `T − z`. For `X ⊆ D_j` let `h(X)`, `h⁺(X)`, `h⁻(X)` count the Hamiltonian paths of `T[X]`, of those starting in `N⁺(z)`, and of those ending in `N⁻(z)`, all three equal to 1 at `X = ∅`. Write `D = D_j` and `X^c = D ∖ X`.
@@ -106,6 +127,9 @@ related: [HYP-9277, HYP-9279, THM-438 (Paley Hamiltonian paths), THM-4652 (Paley
    - `p(c before a) = 2/3`, `p(c before b) = 1/3`, `p(c before 0) = 2^(t−1)/H`, and `p(c before i) = 2^(t−2)/H` for `1 <= i <= t−1`.
 
    So `max_w min(p(c, w), 1 − p(c, w)) = 1/3` exactly. The vertex-wise constant of HYP-9279(B) equals `1/3` for every `n >= 5`. It is also `1/3` at `n = 3` (`C_3`), and `2/5` at `n = 4`.
+   - `W_n − b` is transitive, in the order `0, …, t−1, c, a`. So `W_n` is the transitive-plus-one tournament with `z = b`, and it is the reverse of the one with the equality word `1 0 1^(m−3) 0` of (c), where `m = n − 1`.
+   - Audit E found the same sharpness from that side: at the equality word, `u_2` has `p = 2/3, 1/3` against `z, u_1` and is unbalanced against everything else (S2 in its report).
+   - Within the transitive-plus-one family, only this word and its reverse attain `1/3`, for each `m >= 5`.
 
 ## Proof
 
@@ -147,7 +171,9 @@ The upper bound:
 - `w_2 = 0`: `C₁ = 1 + 2[w_3 = 0] + Σ_(α>=4, w_α=0) 2^(α−2)`. Lemmas A and B then give `2H − 3·in2 = 3/2 − |K| + C₁/2 − C₃ >= 2 + N₀ − |K| + [w_3 = 0] >= 0`.
 - Equality requires `w_3 = 1`, equality in Lemma B (every position between 3 and each zero is a 1), and equality in Lemma A. That forces `w = 1 0 1^(m−3) 0`, which does attain `2/3`.
 
-`tpo_proof_steps.py` checks every identity and inequality above on all 8,190 strong words with `m <= 14`. `tpo_u2_check.c` independently enumerates all valid `A` for every word with `m <= 20`: 524,286 words, no violation, and the extremal words are as stated. ∎
+`tpo_proof_steps.py` checks every identity and inequality above on all 8,190 strong words with `m <= 14`.
+
+`tpo_u2_check.c` enumerates all valid `A` for every word with `m <= 20`: 524,286 words, no violation, and the extremal words are as stated. This check is independent of the closed-form decomposition but rests on the bijection 1(b). Audit E checked 1(b) against DFS enumeration of the actual Hamiltonian paths for all 16,382 words with `m <= 13`. ∎
 
 **1(d).** By S35's reduction, `δ` of a tournament is the maximum of `δ` over its strong components. Apply 1(c). ∎
 

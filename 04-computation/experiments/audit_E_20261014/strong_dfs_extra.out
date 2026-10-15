@@ -1,0 +1,38 @@
+n=3: strong 1 | vertex-wise tight (min_v b(v) = 1/3): 1, of which every tight vertex lies on a C_3 hung by one back arc over a transitive rest: 0 | balanced graph connected: 1 | some vertex of balanced degree 1: 0
+   tight example: &BP_(struct=0,H=3)
+   Hamiltonian cycles: 1 in total; without a balanced arc: 0 (in 0 tournaments); min #balanced arcs on a Hamiltonian cycle = 3, attained in 1 tournaments
+   cycles of length k with no balanced arc (k: total/none):
+n=4: strong 1 | vertex-wise tight (min_v b(v) = 1/3): 0, of which every tight vertex lies on a C_3 hung by one back arc over a transitive rest: 0 | balanced graph connected: 1 | some vertex of balanced degree 1: 0
+   Hamiltonian cycles: 1 in total; without a balanced arc: 0 (in 0 tournaments); min #balanced arcs on a Hamiltonian cycle = 2, attained in 1 tournaments
+   cycles of length k with no balanced arc (k: total/none): 3: 2/0
+n=5: strong 6 | vertex-wise tight (min_v b(v) = 1/3): 1, of which every tight vertex lies on a C_3 hung by one back arc over a transitive rest: 0 | balanced graph connected: 6 | some vertex of balanced degree 1: 1
+   tight example: &DY[SQ?(struct=0,H=9)
+   Hamiltonian cycles: 10 in total; without a balanced arc: 0 (in 0 tournaments); min #balanced arcs on a Hamiltonian cycle = 1, attained in 1 tournaments
+   cycles of length k with no balanced arc (k: total/none): 3: 23/0 4: 20/0
+n=6: strong 35 | vertex-wise tight (min_v b(v) = 1/3): 2, of which every tight vertex lies on a C_3 hung by one back arc over a transitive rest: 1 | balanced graph connected: 35 | some vertex of balanced degree 1: 4
+   tight example: &E\NFA`C(struct=1,H=15)
+   tight example: &ETNfB_A(struct=0,H=15)
+   Hamiltonian cycles: 100 in total; without a balanced arc: 0 (in 0 tournaments); min #balanced arcs on a Hamiltonian cycle = 1, attained in 2 tournaments
+   cycles of length k with no balanced arc (k: total/none): 3: 214/0 4: 259/0 5: 224/0
+n=7: strong 353 | vertex-wise tight (min_v b(v) = 1/3): 5, of which every tight vertex lies on a C_3 hung by one back arc over a transitive rest: 1 | balanced graph connected: 353 | some vertex of balanced degree 1: 17
+   tight example: &F]fpw[D@A?(struct=1,H=27)
+   tight example: &F]dpy[D@A?(struct=0,H=45)
+   tight example: &FUfxw[D@A?(struct=0,H=27)
+   tight example: &FUfxw[F?@?(struct=0,H=27)
+   Hamiltonian cycles: 2518 in total; without a balanced arc: 0 (in 0 tournaments); min #balanced arcs on a Hamiltonian cycle = 1, attained in 5 tournaments
+   cycles of length k with no balanced arc (k: total/none): 3: 3402/0 4: 5286/2 5: 6574/4 6: 5638/2
+n=8: strong 6008 | vertex-wise tight (min_v b(v) = 1/3): 17, of which every tight vertex lies on a C_3 hung by one back arc over a transitive rest: 1 | balanced graph connected: 6008 | some vertex of balanced degree 1: 142
+   tight example: &G^R{^Bo[A_OO(struct=1,H=51)
+   tight example: &G^R[^Bs[A_OO(struct=0,H=111)
+   tight example: &G^R{VBq[A_OO(struct=0,H=81)
+   tight example: &GZR{^bo[A_OO(struct=0,H=57)
+   Hamiltonian cycles: 133632 in total; without a balanced arc: 0 (in 0 tournaments); min #balanced arcs on a Hamiltonian cycle = 1, attained in 8 tournaments
+   cycles of length k with no balanced arc (k: total/none): 3: 88034/2 4: 167842/4 5: 272656/4 6: 345660/6 7: 300968/2
+n=9: strong 178133 | vertex-wise tight (min_v b(v) = 1/3): 82, of which every tight vertex lies on a C_3 hung by one back arc over a transitive rest: 1 | balanced graph connected: 178133 | some vertex of balanced degree 1: 1915
+   tight example: &H^h~Fw^@wF?S@?_(struct=1,H=99)
+   tight example: &H^hvFw^@yF?S@?_(struct=0,H=279)
+   tight example: &H^h~Ew^@xF?S@?_(struct=0,H=207)
+   tight example: &H^h~FwV@wf?S@?_(struct=0,H=153)
+   Hamiltonian cycles: 15013970 in total; without a balanced arc: 1 (in 1 tournaments); min #balanced arcs on a Hamiltonian cycle = 0, attained in 1 tournaments
+   tournament with a balanced-arc-free Hamiltonian cycle: &HZxhF{^PwFOQ@?_
+( gentourng -q -z -c 9 | nice -n 10 $S/sdx; )  13.96s user 0.04s system 99% cpu 14.027 total

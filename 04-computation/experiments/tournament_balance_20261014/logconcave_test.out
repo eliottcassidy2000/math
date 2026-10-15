@@ -1,0 +1,13 @@
+n=3: strong tournaments 1; position distribution not log-concave in 0; gap distribution (pos(y)-pos(x) > 0) not log-concave in 0
+n=4: strong tournaments 1; position distribution not log-concave in 1; gap distribution (pos(y)-pos(x) > 0) not log-concave in 1
+   e.g. ('100111', 0, [1, 2, 1, 1])
+   e.g. ('100111', 2, 3, [3, 0, 1])
+n=5: strong tournaments 6; position distribution not log-concave in 4; gap distribution (pos(y)-pos(x) > 0) not log-concave in 6
+   e.g. ('1100111111', 0, [1, 2, 5, 2, 1])
+   e.g. ('1100111111', 0, 4, [0, 2, 1, 1])
+n=6: strong tournaments 35; position distribution not log-concave in 35; gap distribution (pos(y)-pos(x) > 0) not log-concave in 35
+   e.g. ('111001111111111', 0, [1, 2, 7, 9, 3, 1])
+   e.g. ('111001111111111', 0, 5, [0, 3, 3, 1, 1])
+n=7: strong tournaments 353; position distribution not log-concave in 351; gap distribution (pos(y)-pos(x) > 0) not log-concave in 353
+   e.g. ('111100111111111111111', 0, [1, 2, 9, 16, 14, 4, 1])
+   e.g. ('111100111111111111111', 0, 6, [0, 4, 6, 4, 1, 1])

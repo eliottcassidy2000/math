@@ -1,0 +1,9 @@
+n=2: cut-count formula (c_i-c_j) mod n holds; max concordance 1 (bound n(n-1)(2n-1)/6 = 1); average 1/2 vs (2n-1)/(3n) = 1/2; maximisers [(0, 1)] = identity only
+n=3: cut-count formula (c_i-c_j) mod n holds; max concordance 5 (bound n(n-1)(2n-1)/6 = 5); average 5/9 vs (2n-1)/(3n) = 5/9; maximisers [(0, 1, 2)] = identity only
+n=4: cut-count formula (c_i-c_j) mod n holds; max concordance 14 (bound n(n-1)(2n-1)/6 = 14); average 7/12 vs (2n-1)/(3n) = 7/12; maximisers [(0, 1, 2, 3)] = identity only
+n=5: cut-count formula (c_i-c_j) mod n holds; max concordance 30 (bound n(n-1)(2n-1)/6 = 30); average 3/5 vs (2n-1)/(3n) = 3/5; maximisers [(0, 1, 2, 3, 4)] = identity only
+n=6: cut-count formula (c_i-c_j) mod n holds; max concordance 55 (bound n(n-1)(2n-1)/6 = 55); average 11/18 vs (2n-1)/(3n) = 11/18; maximisers [(0, 1, 2, 3, 4, 5)] = identity only
+n=7: cut-count formula (c_i-c_j) mod n holds; max concordance 91 (bound n(n-1)(2n-1)/6 = 91); average 13/21 vs (2n-1)/(3n) = 13/21; maximisers [(0, 1, 2, 3, 4, 5, 6)] = identity only
+n=8: cut-count formula (c_i-c_j) mod n holds; max concordance 140 (bound n(n-1)(2n-1)/6 = 140); average 5/8 vs (2n-1)/(3n) = 5/8; maximisers [(0, 1, 2, 3, 4, 5, 6, 7)] = identity only
+n=9: cut-count formula (c_i-c_j) mod n holds; max concordance 204 (bound n(n-1)(2n-1)/6 = 204); average 17/27 vs (2n-1)/(3n) = 17/27; maximisers [(0, 1, 2, 3, 4, 5, 6, 7, 8)] = identity only
+f(2n-1)/(3n) + (1-f) - 2/3 = -(f*n + f - n)/(3*n) ; positive iff f < [n/(n + 1)]

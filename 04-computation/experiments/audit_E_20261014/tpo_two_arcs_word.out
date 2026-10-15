@@ -1,0 +1,14 @@
+m=3: H=5; formulas ok; balanced cycle arcs = 2
+m=4: H=9; formulas ok; balanced cycle arcs = 2
+m=5: H=17; formulas ok; balanced cycle arcs = 2
+m=6: H=33; formulas ok; balanced cycle arcs = 2
+m=7: H=65; formulas ok; balanced cycle arcs = 2
+m=8: H=129; formulas ok; balanced cycle arcs = 2
+m=9: H=257; formulas ok; balanced cycle arcs = 2
+m=10: H=513; formulas ok; balanced cycle arcs = 2
+m=11: H=1025; formulas ok; balanced cycle arcs = 2
+m=12: H=2049; formulas ok; balanced cycle arcs = 2
+m=13: H=4097; formulas ok; balanced cycle arcs = 2
+m=14: H=8193; formulas ok; balanced cycle arcs = 2
+m=15: H=16385; formulas ok; balanced cycle arcs = 2
+m=16: H=32769; formulas ok; balanced cycle arcs = 2

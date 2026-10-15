@@ -1,0 +1,13 @@
+n=3: strong 1; position-distribution failures 0; gap-distribution failures 0; both 0
+n=4: strong 1; position-distribution failures 1; gap-distribution failures 1; both 1
+   position example: ('&COx_', 0, [1, 2, 1, 1], 5)
+   gap example: ('&COx_', (2, 3, [3, 0, 1]), 5)
+n=5: strong 6; position-distribution failures 4; gap-distribution failures 6; both 4
+   position example: ('&DW[[W?', 0, [1, 2, 5, 2, 1], 11)
+   gap example: ('&DW[[W?', (0, 4, [0, 2, 1, 1]), 11)
+n=6: strong 35; position-distribution failures 35; gap-distribution failures 35; both 35
+   position example: ('&E[NFB`_', 0, [1, 2, 7, 9, 3, 1], 23)
+   gap example: ('&E[NFB`_', (0, 5, [0, 3, 3, 1, 1]), 23)
+n=7: strong 353; position-distribution failures 351; gap-distribution failures 353; both 351
+   position example: ('&F]Fpw[F@_?', 0, [1, 2, 9, 16, 14, 4, 1], 47)
+   gap example: ('&F]Fpw[F@_?', (0, 6, [0, 4, 6, 4, 1, 1]), 47)

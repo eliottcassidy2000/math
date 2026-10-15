@@ -1,0 +1,5 @@
+n=4: strong tournaments with a cut vertex 1; (tournament, cut vertex) pairs 2; H mismatches 0; v-before-z mismatches 0; fair-coin failures 0
+n=5: strong tournaments with a cut vertex 5; (tournament, cut vertex) pairs 10; H mismatches 0; v-before-z mismatches 0; fair-coin failures 0
+n=6: strong tournaments with a cut vertex 30; (tournament, cut vertex) pairs 54; H mismatches 0; v-before-z mismatches 0; fair-coin failures 0
+n=7: strong tournaments with a cut vertex 267; (tournament, cut vertex) pairs 433; H mismatches 0; v-before-z mismatches 0; fair-coin failures 0
+n=8: strong tournaments with a cut vertex 3633; (tournament, cut vertex) pairs 5174; H mismatches 0; v-before-z mismatches 0; fair-coin failures 0

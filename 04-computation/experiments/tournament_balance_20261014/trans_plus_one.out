@@ -1,0 +1,13 @@
+m=2 (n=3): 1 words; min delta 1/3 = 0.33333 at w=10 (H=3); balanced pair with z always: True; P(u_i before z) nondecreasing always: True; max jump 1/3 = 0.3333
+m=3 (n=4): 2 words; min delta 2/5 = 0.40000 at w=100 (H=5); balanced pair with z always: True; P(u_i before z) nondecreasing always: True; max jump 2/5 = 0.4000
+m=4 (n=5): 4 words; min delta 4/11 = 0.36364 at w=1100 (H=11); balanced pair with z always: True; P(u_i before z) nondecreasing always: False; max jump 4/9 = 0.4444
+m=5 (n=6): 8 words; min delta 8/19 = 0.42105 at w=10100 (H=19); balanced pair with z always: True; P(u_i before z) nondecreasing always: False; max jump 8/17 = 0.4706
+m=6 (n=7): 16 words; min delta 2/5 = 0.40000 at w=100110 (H=25); balanced pair with z always: True; P(u_i before z) nondecreasing always: False; max jump 16/33 = 0.4848
+m=7 (n=8): 32 words; min delta 4/9 = 0.44444 at w=1000110 (H=45); balanced pair with z always: True; P(u_i before z) nondecreasing always: False; max jump 32/65 = 0.4923
+m=8 (n=9): 64 words; min delta 4/9 = 0.44444 at w=10001110 (H=81); balanced pair with z always: True; P(u_i before z) nondecreasing always: False; max jump 64/129 = 0.4961
+m=9 (n=10): 128 words; min delta 113/241 = 0.46888 at w=100101100 (H=241); balanced pair with z always: True; P(u_i before z) nondecreasing always: False; max jump 128/257 = 0.4981
+m=10 (n=11): 256 words; min delta 8/17 = 0.47059 at w=1000011110 (H=289); balanced pair with z always: True; P(u_i before z) nondecreasing always: False; max jump 256/513 = 0.4990
+m=11 (n=12): 512 words; min delta 116/241 = 0.48133 at w=10010100110 (H=723); balanced pair with z always: True; P(u_i before z) nondecreasing always: False; max jump 512/1025 = 0.4995
+m=12 (n=13): 1024 words; min delta 16/33 = 0.48485 at w=100000111110 (H=1089); balanced pair with z always: True; P(u_i before z) nondecreasing always: False; max jump 1024/2049 = 0.4998
+m=13 (n=14): 2048 words; min delta 400/817 = 0.48960 at w=1000101001110 (H=2451); balanced pair with z always: True; P(u_i before z) nondecreasing always: False; max jump 2048/4097 = 0.4999
+m=14 (n=15): 4096 words; min delta 32/65 = 0.49231 at w=10000001111110 (H=4225); balanced pair with z always: True; P(u_i before z) nondecreasing always: False; max jump 4096/8193 = 0.4999

@@ -1,0 +1,51 @@
+m= 1 n= 2: words 2 (strong 0), Hmax 1 | strong-criterion mismatches 0 | bijection failures 0 | H-formula failures 0 | K-form failures 0
+m= 2 n= 3: words 4 (strong 1), Hmax 3 | strong-criterion mismatches 0 | bijection failures 0 | H-formula failures 0 | K-form failures 0
+m= 3 n= 4: words 8 (strong 2), Hmax 5 | strong-criterion mismatches 0 | bijection failures 0 | H-formula failures 0 | K-form failures 0
+        P(u2<z): violations of (1/3,2/3] 0, equality-iff failures 0, min 2/5=0.400000 at w=110, max 3/5=0.600000
+        family min delta 2/5 = 0.400000 at w=100 (#words attaining 2)
+        HYP-9279(B): strong words with every vertex balanced 2/2; min vertex balance 2/5=0.400000 at w=100; words where some vertex balance is exactly 1/3: 0; at the equality word z's best partner is exactly 1/3: -1
+m= 4 n= 5: words 16 (strong 4), Hmax 11 | strong-criterion mismatches 0 | bijection failures 0 | H-formula failures 0 | K-form failures 0
+        P(u2<z): violations of (1/3,2/3] 0, equality-iff failures 0, min 4/11=0.363636 at w=1100, max 6/9=0.666667
+        family min delta 4/11 = 0.363636 at w=1100 (#words attaining 1) | equality word: delta 4/9=0.444444, best pair other than (z,u2) 4/9=0.444444 balanced=1
+        HYP-9279(B): strong words with every vertex balanced 4/4; min vertex balance 3/9=0.333333 at w=1010; words where some vertex balance is exactly 1/3: 1; at the equality word z's best partner is exactly 1/3: 1
+m= 5 n= 6: words 32 (strong 8), Hmax 23 | strong-criterion mismatches 0 | bijection failures 0 | H-formula failures 0 | K-form failures 0
+        P(u2<z): violations of (1/3,2/3] 0, equality-iff failures 0, min 8/23=0.347826 at w=11000, max 10/15=0.666667
+        family min delta 8/19 = 0.421053 at w=10100 (#words attaining 2) | equality word: delta 7/15=0.466667, best pair other than (z,u2) 7/15=0.466667 balanced=1
+        HYP-9279(B): strong words with every vertex balanced 8/8; min vertex balance 5/15=0.333333 at w=10010; words where some vertex balance is exactly 1/3: 2; at the equality word z's best partner is exactly 1/3: 0
+m= 6 n= 7: words 64 (strong 16), Hmax 51 | strong-criterion mismatches 0 | bijection failures 0 | H-formula failures 0 | K-form failures 0
+        P(u2<z): violations of (1/3,2/3] 0, equality-iff failures 0, min 16/47=0.340426 at w=110000, max 18/27=0.666667
+        family min delta 10/25 = 0.400000 at w=100110 (#words attaining 1) | equality word: delta 12/27=0.444444, best pair other than (z,u2) 12/27=0.444444 balanced=1
+        HYP-9279(B): strong words with every vertex balanced 16/16; min vertex balance 9/27=0.333333 at w=100010; words where some vertex balance is exactly 1/3: 2; at the equality word z's best partner is exactly 1/3: 0
+m= 7 n= 8: words 128 (strong 32), Hmax 107 | strong-criterion mismatches 0 | bijection failures 0 | H-formula failures 0 | K-form failures 0
+        P(u2<z): violations of (1/3,2/3] 0, equality-iff failures 0, min 32/95=0.336842 at w=1100000, max 34/51=0.666667
+        family min delta 36/81 = 0.444444 at w=1011000 (#words attaining 4) | equality word: delta 24/51=0.470588, best pair other than (z,u2) 24/51=0.470588 balanced=1
+        HYP-9279(B): strong words with every vertex balanced 32/32; min vertex balance 17/51=0.333333 at w=1000010; words where some vertex balance is exactly 1/3: 2; at the equality word z's best partner is exactly 1/3: 0
+m= 8 n= 9: words 256 (strong 64), Hmax 227 | strong-criterion mismatches 0 | bijection failures 0 | H-formula failures 0 | K-form failures 0
+        P(u2<z): violations of (1/3,2/3] 0, equality-iff failures 0, min 64/191=0.335079 at w=11000000, max 66/99=0.666667
+        family min delta 36/81 = 0.444444 at w=10001110 (#words attaining 1) | equality word: delta 48/99=0.484848, best pair other than (z,u2) 48/99=0.484848 balanced=1
+        HYP-9279(B): strong words with every vertex balanced 64/64; min vertex balance 33/99=0.333333 at w=10000010; words where some vertex balance is exactly 1/3: 2; at the equality word z's best partner is exactly 1/3: 0
+m= 9 n=10: words 512 (strong 128), Hmax 467 | strong-criterion mismatches 0 | bijection failures 0 | H-formula failures 0 | K-form failures 0
+        P(u2<z): violations of (1/3,2/3] 0, equality-iff failures 0, min 128/383=0.334204 at w=110000000, max 130/195=0.666667
+        family min delta 113/241 = 0.468880 at w=100101100 (#words attaining 2) | equality word: delta 96/195=0.492308, best pair other than (z,u2) 96/195=0.492308 balanced=1
+        HYP-9279(B): strong words with every vertex balanced 128/128; min vertex balance 65/195=0.333333 at w=100000010; words where some vertex balance is exactly 1/3: 2; at the equality word z's best partner is exactly 1/3: 0
+m=10 n=11: words 1024 (strong 256), Hmax 963 | strong-criterion mismatches 0 | bijection failures 0 | H-formula failures 0 | K-form failures 0
+        P(u2<z): violations of (1/3,2/3] 0, equality-iff failures 0, min 256/767=0.333768 at w=1100000000, max 258/387=0.666667
+        family min delta 136/289 = 0.470588 at w=1000011110 (#words attaining 1) | equality word: delta 192/387=0.496124, best pair other than (z,u2) 192/387=0.496124 balanced=1
+        HYP-9279(B): strong words with every vertex balanced 256/256; min vertex balance 129/387=0.333333 at w=1000000010; words where some vertex balance is exactly 1/3: 2; at the equality word z's best partner is exactly 1/3: 0
+m=11 n=12: words 2048 (strong 512), Hmax 1955 | strong-criterion mismatches 0 | bijection failures 0 | H-formula failures 0 | K-form failures 0
+        P(u2<z): violations of (1/3,2/3] 0, equality-iff failures 0, min 512/1535=0.333550 at w=11000000000, max 514/771=0.666667
+        family min delta 348/723 = 0.481328 at w=10010100110 (#words attaining 2) | equality word: delta 384/771=0.498054, best pair other than (z,u2) 384/771=0.498054 balanced=1
+        HYP-9279(B): strong words with every vertex balanced 512/512; min vertex balance 257/771=0.333333 at w=10000000010; words where some vertex balance is exactly 1/3: 2; at the equality word z's best partner is exactly 1/3: 0
+m=12 n=13: words 4096 (strong 1024), Hmax 3971 | strong-criterion mismatches 0 | bijection failures 0 | H-formula failures 0 | K-form failures 0
+        P(u2<z): violations of (1/3,2/3] 0, equality-iff failures 0, min 1024/3071=0.333442 at w=110000000000, max 1026/1539=0.666667
+        family min delta 528/1089 = 0.484848 at w=100000111110 (#words attaining 1) | equality word: delta 768/1539=0.499025, best pair other than (z,u2) 768/1539=0.499025 balanced=1
+        HYP-9279(B): strong words with every vertex balanced 1024/1024; min vertex balance 513/1539=0.333333 at w=100000000010; words where some vertex balance is exactly 1/3: 2; at the equality word z's best partner is exactly 1/3: 0
+m=13 n=14: words 8192 (strong 2048), Hmax 8003 | strong-criterion mismatches 0 | bijection failures 0 | H-formula failures 0 | K-form failures 0
+        P(u2<z): violations of (1/3,2/3] 0, equality-iff failures 0, min 2048/6143=0.333388 at w=1100000000000, max 2050/3075=0.666667
+        family min delta 1200/2451 = 0.489596 at w=1000101001110 (#words attaining 2) | equality word: delta 1536/3075=0.499512, best pair other than (z,u2) 1536/3075=0.499512 balanced=1
+        HYP-9279(B): strong words with every vertex balanced 2048/2048; min vertex balance 1025/3075=0.333333 at w=1000000000010; words where some vertex balance is exactly 1/3: 2; at the equality word z's best partner is exactly 1/3: 0
+TOTAL: 16382 words (4095 strong); mismatches: strong 0, bijection 0, H 0, K 0, P-range 0, equality 0
+
+real	1m47.259s
+user	1m45.466s
+sys	0m1.373s

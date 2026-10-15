@@ -1,0 +1,2 @@
+n=11 H=1521 delta=592/1521 = 0.389218  vertex-wise=43/117  scores=[1, 2, 3, 3, 3, 5, 7, 7, 7, 8, 9]  cut vertices=[0, 1, 6]  fas=7
+n=12 H=2721 delta=1052/2721 = 0.386623  vertex-wise=983/2721  scores=[1, 2, 3, 3, 3, 4, 7, 8, 8, 8, 9, 10]  cut vertices=[0, 1, 4, 7]  fas=7
