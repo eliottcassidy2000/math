@@ -1,0 +1,4 @@
+T_8 at 39 primes (Jacobi-sum formula); e.g. T_8(7) = 8070, T_8(103) = 106178022
+span dimension (dim S_8(Gamma_0(32)) = 24): 24
+system: 39 equations (primes), 35 unknowns; rank(A) = 17, rank([A|b]) = 18
+INCONSISTENT: T_8/(q-1) is not in the span of these 35 functions (all of S_8(Gamma_0(32)) at odd primes, plus Tate-twisted lower weights).

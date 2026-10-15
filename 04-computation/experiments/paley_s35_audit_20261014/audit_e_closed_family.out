@@ -1,0 +1,11 @@
+witness: H(T) = 23; the 4 listed sequences are Hamiltonian paths: True; common precedences [(0, 1), (0, 3), (1, 3), (4, 2), (5, 3)]; HP(T) cap Ext(Q_min) = listed set: True; pair splits min(c, 4-c) in [0, 1] -> delta = 1/4
+tournament n = 3: 2 classes, 4 family members with |S| >= 2, min delta 1/3, gold failures 0  [0 s]
+tournament n = 4: 4 classes, 24 family members with |S| >= 2, min delta 1/3, gold failures 0  [0 s]
+tournament n = 5: 12 classes, 792 family members with |S| >= 2, min delta 1/3, gold failures 0  [0 s]
+tournament n = 6: 56 classes, 49882 family members with |S| >= 2, min delta 1/4, gold failures 176  [3 s]
+semicomplete n = 3: 7 classes, 29 family members with |S| >= 2, min delta 1/3, gold failures 0  [0 s]
+semicomplete n = 4: 42 classes, 1498 family members with |S| >= 2, min delta 1/4, gold failures 11  [0 s]
+Paley P_7 (subset DP): H = 189, #(0 before 1) = 118, p = 118/189
+Paley P_11 (subset DP): H = 95095, #(0 before 1) = 55553, p = 55553/95095
+Paley P_19 (subset DP): H = 1172695746915, #(0 before 1) = 645198853226, p = 645198853226/1172695746915
+[5 s]

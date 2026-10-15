@@ -1,0 +1,3 @@
+cycle of 1/13: length 5, odd steps 1, halvings 4, 2^halvings - 3^odd = 13
+cycle of -5: length 5, odd steps 2, halvings 3, 2^halvings - 3^odd = -1
+cycle of -17: length 18, odd steps 7, halvings 11, 2^halvings - 3^odd = -139

@@ -4,7 +4,7 @@
 c_q = |b(q)| = sqrt(M_q + (q + 1)^2) at q = 3 (mod 4) (HYP-9276 identity; square law re-verified here at every prime).
 M_q by the THM-4653 FFT evaluator (as in paley_k6p6_two_adic_mersenne_20261014.py).  For every prime q = 3 (mod 4)
 in [5, QMAX] this records (q, c_q), and reports, for each s = v2(q + 1), the minimum of v2(c_q), and the largest K
-with v2(c_q) >= min(s, K) at all primes.  Writes paley_k6p6_cq_table_20261014.json (q -> c_q).
+with v2(c_q) >= min(s, K) at all primes.  Writes paley_k6p6_cq_table_20261014.json (q -> c_q); `--from-json` re-analyses a saved table.
 Session opus-2026-10-14-S35.
 """
 import sys, json, math, time
@@ -39,7 +39,9 @@ if __name__ == '__main__':
     OUT = sys.argv[2] if len(sys.argv) > 2 else '05-knowledge/results/paley_k6p6_cq_table_20261014.json'
     t0 = time.time()
     table = {}
-    for q in sympy.primerange(7, QMAX + 1):
+    if '--from-json' in sys.argv:  # re-analyse a saved table (the square law was asserted when it was written)
+        table = {int(k): v for k, v in json.load(open(OUT)).items()}
+    for q in ([] if table else sympy.primerange(7, QMAX + 1)):
         if q % 4 != 3:
             continue
         M = M_fft(q)
@@ -47,7 +49,8 @@ if __name__ == '__main__':
         c = math.isqrt(s)
         assert c * c == s and c <= 2 * q, q
         table[q] = c
-    json.dump({str(q): c for q, c in table.items()}, open(OUT, 'w'))
+    if '--from-json' not in sys.argv:
+        json.dump({str(q): c for q, c in table.items()}, open(OUT, 'w'))
     by_s = defaultdict(list)
     for q, c in table.items():
         by_s[v2(q + 1)].append((v2(c), q, c))

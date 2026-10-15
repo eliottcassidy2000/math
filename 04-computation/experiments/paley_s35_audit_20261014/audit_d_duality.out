@@ -1,0 +1,16 @@
+C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\networkx\algorithms\graph_hashing.py:211: UserWarning: The hashes produced for graphs without node or edge attributeschanged in v3.5 due to a bugfix (see documentation).
+  node_labels = _init_node_labels(G, edge_attr, node_attr)
+cube Q_3 (bit orientation; dual = octahedron): |V| = 8, |E| = 12, plane embeddings (rotation systems) found: 2; (embedding, q, U(G), U(G*), duality holds): [(1, 5, 1500, 300, True), (1, 7, -7938, -1134, True), (1, 11, 359370, 32670, True)]
+C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\networkx\algorithms\graph_hashing.py:211: UserWarning: The hashes produced for graphs without node or edge attributeschanged in v3.5 due to a bugfix (see documentation).
+  node_labels = _init_node_labels(G, edge_attr, node_attr)
+K6 - P6 (S35 orientation; |E|/2 = 5 odd): |V| = 6, |E| = 10, plane embeddings (rotation systems) found: 2; (embedding, q, U(G), U(G*), duality holds): [(1, 5, -220, -220, True), (1, 7, 42, -42, True), (1, 11, -13970, 13970, True), (1, 13, 8268, 8268, True)]
+K6 - P6 dual isomorphic to K6 - P6 (undirected): True
+W_4 (|E|/2 = 4): |V| = 5, |E| = 8, plane embeddings (rotation systems) found: 2; (embedding, q, U(G), U(G*), duality holds): [(1, 7, -1302, -1302, True), (1, 11, 3630, 3630, True)]
+W_5 (|E|/2 = 5 odd): |V| = 6, |E| = 10, plane embeddings (rotation systems) found: 2; (embedding, q, U(G), U(G*), duality holds): [(1, 7, 0, 0, True), (1, 11, 0, 0, True)]
+W_6 (|E|/2 = 6): |V| = 7, |E| = 12, plane embeddings (rotation systems) found: 2; (embedding, q, U(G), U(G*), duality holds): [(1, 5, 1180, 1180, True), (1, 7, -3990, -3990, True)]
+2-connected graph, several embeddings, random orientation: |V| = 6, |E| = 10, plane embeddings (rotation systems) found: 4; (embedding, q, U(G), U(G*), duality holds): [(1, 7, 0, 0, True), (1, 11, 0, 0, True), (2, 7, 0, 0, True), (2, 11, 0, 0, True), (3, 7, 0, 0, True), (3, 11, 0, 0, True), (4, 7, 0, 0, True), (4, 11, 0, 0, True)]
+random-orientation 5-vertex graph: |V| = 5, |E| = 8, plane embeddings (rotation systems) found: 2; (embedding, q, U(G), U(G*), duality holds): [(1, 7, 1302, 1302, True), (1, 11, -3630, -3630, True), (1, 13, -5460, -5460, True), (2, 7, 1302, 1302, True), (2, 11, -3630, -3630, True), (2, 13, -5460, -5460, True)]
+duality checks all hold: True
+U(Q_3) (O(q^3) evaluator) = q * q(q-1)((5-q) a_q + 3q) at 35 primes 5..157: failures []
+cube_U vs brute force at q = 5: True
+cube_U vs brute force at q = 7: True

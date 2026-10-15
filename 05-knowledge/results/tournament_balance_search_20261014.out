@@ -1,0 +1,6 @@
+n = 8: min arc ratio (Claim A): arc = 13/45 (0.2889), delta = 4/9 (0.4444), H = 45, adj = [190, 176, 250, 242, 64, 144, 163, 16]  [5 s]
+n = 8: min delta over strong tournaments: arc = 97/161 (0.6025), delta = 64/161 (0.3975), H = 161, adj = [72, 197, 1, 6, 111, 143, 44, 93]  [9 s]
+n = 9: min arc ratio (Claim A): arc = 17/81 (0.2099), delta = 4/9 (0.4444), H = 81, adj = [460, 493, 328, 256, 367, 461, 264, 92, 128]  [6 s]
+n = 9: min delta over strong tournaments: arc = 153/257 (0.5953), delta = 104/257 (0.4047), H = 257, adj = [508, 457, 498, 500, 98, 386, 416, 272, 16]  [12 s]
+n = 10: min arc ratio (Claim A): arc = 25/153 (0.1634), delta = 8/17 (0.4706), H = 153, adj = [734, 220, 208, 116, 128, 983, 144, 8, 735, 222]  [3 s]
+n = 10: min delta over strong tournaments: arc = 401/693 (0.5786), delta = 292/693 (0.4214), H = 11781, adj = [340, 781, 944, 741, 970, 595, 646, 291, 104, 385]  [7 s]

@@ -11,8 +11,10 @@ status: >
   out-of-sample check A_12(3) = 0;
   the octahedron identity at all 26 odd primes 5..107 (both classes mod 4);
   U(K_{2,4}+2K_2) = q(q-1) b_q^2 at 26 primes (b_q = 4a^2 - 2q for q = a^2 + b^2, a odd; 0 for q = 3 mod 4);
-  (C): the square law at all 124 primes 3..691 (exact O(q^3) table) and at all 7,373 primes q = 3 (mod 4) in
-  [30,000, 200,000] (FFT evaluator of THM-4653); the depth table and the Mersenne values.
+  (C): the square law at all 124 primes 3..691 (exact O(q^3) table); the perfect-square property at all 7,373 primes
+  q = 3 (mod 4) in [30,000, 200,000] (FFT evaluator of THM-4653, floating point: VERIFIED); the identification c_q = |b(q)|,
+  the depth table, the valuation law and the zeros 127, 8191, 213247 FINITE-EXACT to 524,288 through the audit's exact
+  tabulation of b (MISTAKE-613); A_10 and A_12 confirmed out of sample at q = 27 (audit).
   REFUTED in-session: "Y_q = 1 at Mersenne primes" (Y_127 = 1 - 128^2), and the 2-adic bound
   v_2(Y_q - 1) >= 2 v_2(q+1) + 3 (fails at 127).
 session: opus-2026-10-14-S35
@@ -38,7 +40,7 @@ related: [THM-4652, THM-4653, HYP-9274, HYP-9276, HYP-9278, THM-438, HYP-9273]
 - `A_10 = 2q(q−1)(21q⁴ − 639q³ + 7028q² − 32098q + 48662) + 34q(q−1)·a_q`;
 - `A_12 = 4q(q−1)(33q⁵ − 1540q⁴ + 28243q³ − 249550q² + 1027794q − 1488872) + 28q(q−1)(17q − 251)·a_q`.
 
-The leading coefficients of `A_2, …, A_12` are the Catalan numbers `1, 2, 5, 14, 42, 132` (FINITE-EXACT; the mechanism is heuristic).
+The leading coefficients of `A_2, …, A_12` are the Catalan numbers `1, 2, 5, 14, 42, 132`. This is THM-438's law; the exact closed forms add `k = 5, 6`. The mechanism is THM-438's signed Möbius sum (free cumulants of the two-point spectrum), not "trees" (audit E1).
 
 **Mechanism.** The partition-lattice compiler meets the following cores:
 - `K_4`, `K_5` and three six-vertex cores, all killed by THM-4652;
@@ -62,7 +64,7 @@ The other two six-vertex cores, `K_6 − (P_3 + K_2)` and `K_(3,3) + e`, are non
 ## (C) The `K_6 − P_6` terminal
 
 The identification is mac-mini-2026-10-14-wilson's:
-- HYP-9276, at all 3,243 primes to 30,000 and 12 prime powers, in the injective normalisation;
+- HYP-9276 (as audited: every prime to 100,000, 1,000 random primes to 299,983, 22 prime powers), in the injective normalisation;
 - THM-4653 for the PROVED reduction.
 
 This session reached the same law independently, from its exact table, in the unrestricted normalisation `Y_q = U/(q(q−1))`:
@@ -76,8 +78,8 @@ This session reached the same law independently, from its exact table, in the un
 - `Y_q − 1 = (|b(q)| − q − 1)(|b(q)| + q + 1)`.
 - `|b(q)| ≡ ±(q+1) (mod 2^m)`, with `m = 4, 5, 6, 6` for `q ≡ 11, 3, 7, 15 (mod 16)`.
 - Hence `v_2(Y_q − 1) >= 7, 8, 10, 11`, with every minimum attained.
-- At Mersenne primes `2^p − 1`, `|b(q)| = 8, 32, 0, 0, 2^14, 63·2^13` for `p = 3, 5, 7, 13, 17, 19`.
-- The valuation law `v_2(b(q)) >= min(v_2(q+1), K)` is reported in the companion atlas note.
+- At Mersenne primes `2^p − 1`, `|b(q)| = 4, 8, 32, 0, 0, 2^14, 63·2^13` for `p = 2, 3, 5, 7, 13, 17, 19`.
+- **Valuation law:** `gcd(q+1, 128)` divides `b(q)`. This is FINITE-EXACT at all 9,005 primes `q ≡ 3 (mod 4)` below 200,000, confirmed to 524,288 by the audit, and holds at all 580 primes `q ≡ −1 (mod 512)` up to `2·10⁶`. The exponent 7 is sharp, and the zeros below 524,288 are `b(127) = b(8191) = b(213247) = 0`; 213247 is not a Mersenne prime.
 - `Y_q = 1` iff `|b(q)| = q + 1` (`q = 3, 7, 31, 199, 223, …`).
 
-**Open.** Explain the congruence. The suggested route is McCarthy–Papanikolas' trace formula, which runs over Legendre curves with `Z/2 × Z/8` torsion.
+**Open.** Explain the congruences. McCarthy–Papanikolas' trace-formula route, over Legendre curves with `Z/2 × Z/8` torsion, covers `p ≡ 1 (mod 4)`. For Paley primes the descent form over `F_(q²)` (HYP-9276) is the natural place to look.

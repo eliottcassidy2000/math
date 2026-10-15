@@ -1,0 +1,25 @@
+eta(2z)^4 eta(4z)^4: a_3, a_5, a_7, a_11, a_19, a_23 = -4 -2 24 -44 44 -56
+  validation q =  7, L = 2: brute force 42, DP 42, equal: True
+  validation q =  7, L = 4: brute force 336, DP 336, equal: True
+  validation q =  7, L = 6: brute force 1008, DP 1008, equal: True
+  validation q = 11, L = 2: brute force 110, DP 110, equal: True
+  validation q = 11, L = 4: brute force 1760, DP 1760, equal: True
+  validation q = 11, L = 6: brute force 22880, DP 22880, equal: True
+  validation q = 11, L = 8: brute force 154880, DP 154880, equal: True
+  validation q = 13, L = 2: brute force -156, DP -156, equal: True
+  validation q = 13, L = 4: brute force 2808, DP 2808, equal: True
+  validation q = 13, L = 6: brute force -37440, DP -37440, equal: True
+  validation q = 13, L = 8: brute force 324480, DP 324480, equal: True
+  brute force A_10(11) = 478720 (S35 claims 478720; closed form 478720)  [11.0 s]
+q = 19: A_2 = 342  closed form = 342  agree: True  (a_q = 44)  [0.0 s]
+q = 19: A_4 = 10944  closed form = 10944  agree: True  (a_q = 44)  [0.0 s]
+q = 19: A_6 = 361152  closed form = 361152  agree: True  (a_q = 44)  [0.0 s]
+q = 19: A_8 = 10243584  closed form = 10243584  agree: True  (a_q = 44)  [0.0 s]
+q = 19: A_10 = 226059264  closed form = 226059264  agree: True  (a_q = 44)  [0.0 s]
+q = 19: A_12 = 3706601472  closed form = 3706601472  agree: True  (a_q = 44)  [0.1 s]
+q = 23: A_2 = 506  closed form = 506  agree: True  (a_q = -56)  [0.0 s]
+q = 23: A_4 = 20240  closed form = 20240  agree: True  (a_q = -56)  [0.0 s]
+q = 23: A_6 = 870320  closed form = 870320  agree: True  (a_q = -56)  [0.0 s]
+q = 23: A_8 = 34327040  closed form = 34327040  agree: True  (a_q = -56)  [0.0 s]
+q = 23: A_10 = 1142766592  closed form = 1142766592  agree: True  (a_q = -56)  [0.2 s]
+q = 23: A_12 = 30684487680  closed form = 30684487680  agree: True  (a_q = -56)  [0.7 s]

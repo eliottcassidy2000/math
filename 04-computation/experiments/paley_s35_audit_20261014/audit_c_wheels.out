@@ -1,0 +1,17 @@
+q =  7: exact traces T_2..T_8 = [6, 0, -186, 0, -570, 8070]; Jacobi power sums agree: True
+q = 11: exact traces T_2..T_8 = [10, 0, 330, 0, 4810, -69750]; Jacobi power sums agree: True
+q = 13: exact traces T_2..T_8 = [-12, 120, -420, -3600, -11196, -73044]; Jacobi power sums agree: True
+q = 17: exact traces T_2..T_8 = [-16, -480, -1072, -960, 944, -358512]; Jacobi power sums agree: True
+q = 19: exact traces T_2..T_8 = [18, 0, -1134, 0, -63342, -80622]; Jacobi power sums agree: True
+U(W_4) brute force at q = 5: -60;  q * T_4 = -60; equal: True
+U(W_4) brute force at q = 7: -1302;  q * T_4 = -1302; equal: True
+U(W_5) brute force at q = 5: 400;  q * T_5 = 400; equal: True
+U(W_6) brute force at q = 7: -3990;  q * T_6 = -3990; equal: True
+U(W_4) brute force at q = 11: 3630;  q * T_4 = 3630; equal: True
+weight 4: theta-product span rank 5 (dim M_4(Gamma_0(8)) = 5); T_3 charpoly (lam - 28)**4*(lam + 4); cusp systems a_3 -> a_5, a_7: [(-4, -2, 24)]
+weight 6: theta-product span rank 7 (dim M_6(Gamma_0(8)) = 7); T_3 charpoly (lam - 244)**4*(lam - 20)*(lam + 12)**2; cusp systems a_3 -> a_5, a_7: [(-12, 54, -88), (20, -74, -24)]
+weight 8: theta-product span rank 9 (dim M_8(Gamma_0(8)) = 9); T_3 charpoly (lam - 2188)**4*(lam - 44)*(lam - 12)**3*(lam + 84); cusp systems a_3 -> a_5, a_7: [(-84, -82, -456), (12, -210, 1016), (44, 430, -1224)]
+b6 = q + ...: [1, 0, 20, 0, -74, 0, -24, 0, 157, 0, 124, 0, 478, 0, -1480]
+39 primes q = 3 mod 4 in [7, 400]: T_4 law: True; T_6 law: True  [9 s]
+T_8/(q-1) at 39 primes vs 15 basis functions ['q^0', 'q^1', 'q^2', 'q^3', 'q^4', 'q^0 f[w4, a3=-4]', 'q^1 f[w4, a3=-4]', 'q^2 f[w4, a3=-4]', 'q^0 f[w6, a3=-12]', 'q^1 f[w6, a3=-12]', 'q^0 f[w6, a3=20]', 'q^1 f[w6, a3=20]', 'q^0 f[w8, a3=-84]', 'q^0 f[w8, a3=12]', 'q^0 f[w8, a3=44]']: rank 15, augmented rank 16 -> NOT in the span (no exact fit)
+session setting (primes <= 103: 13 equations; 14 functions without a3 = -84): rank 13, augmented rank 13 -> an exact fit exists (no information)

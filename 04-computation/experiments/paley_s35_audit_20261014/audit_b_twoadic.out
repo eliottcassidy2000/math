@@ -1,0 +1,30 @@
+1. session table: 9005 primes q = 3 mod 4 in [7, 199999]; |b(q)| (newform) = c_q (K6-P6 sum) at all: True; mismatches: []
+2. session range (q < 200,000): per class mod 16: q = 3 mod 16: 2244 primes, min depth 5 (first at q = 19), min v2(Y-1) 8; q = 7 mod 16: 2252 primes, min depth 6 (first at q = 23), min v2(Y-1) 10; q = 11 mod 16: 2250 primes, min depth 4 (first at q = 11), min v2(Y-1) 7; q = 15 mod 16: 2259 primes, min depth 6 (first at q = 47), min v2(Y-1) 11
+3. session range (q < 200,000): v2(Y_q - 1) = 7 exactly at every q = 11 mod 16: True (2250/2250)
+4. session range (q < 200,000): valuation law v2(b) >= min(v2(q+1), 7) violations: []; largest working K = 7
+   s=2:4494p,min v2(b)=2(q=11)  s=3:2252p,min v2(b)=3(q=7)  s=4:1144p,min v2(b)=4(q=47)  s=5:557p,min v2(b)=5(q=31)  s=6:274p,min v2(b)=6(q=191)  s=7:138p,min v2(b)=7(q=383)  s=8:70p,min v2(b)=7(q=6911)  s=9:40p,min v2(b)=7(q=23039)  s=10:21p,min v2(b)=7(q=21503)  s=11:8p,min v2(b)=7(q=6143)  s=12:2p,min v2(b)=7(q=20479)  s=13:3p,min v2(b)=7(q=73727)  s=14:1p,min v2(b)=7(q=81919)  s=17:1p,min v2(b)=14(q=131071)
+   zeros of b(q) at primes q <= 200000: [127, 8191]
+2. extended (q < 524,288): per class mod 16: q = 3 mod 16: 5449 primes, min depth 5 (first at q = 19), min v2(Y-1) 8; q = 7 mod 16: 5429 primes, min depth 6 (first at q = 23), min v2(Y-1) 10; q = 11 mod 16: 5421 primes, min depth 4 (first at q = 11), min v2(Y-1) 7; q = 15 mod 16: 5431 primes, min depth 6 (first at q = 47), min v2(Y-1) 11
+3. extended (q < 524,288): v2(Y_q - 1) = 7 exactly at every q = 11 mod 16: True (5421/5421)
+4. extended (q < 524,288): valuation law v2(b) >= min(v2(q+1), 7) violations: []; largest working K = 7
+   s=2:10870p,min v2(b)=2(q=11)  s=3:5429p,min v2(b)=3(q=7)  s=4:2731p,min v2(b)=4(q=47)  s=5:1350p,min v2(b)=5(q=31)  s=6:674p,min v2(b)=6(q=191)  s=7:332p,min v2(b)=7(q=383)  s=8:165p,min v2(b)=7(q=6911)  s=9:95p,min v2(b)=7(q=23039)  s=10:39p,min v2(b)=7(q=21503)  s=11:24p,min v2(b)=7(q=6143)  s=12:9p,min v2(b)=7(q=20479)  s=13:6p,min v2(b)=7(q=73727)  s=14:3p,min v2(b)=7(q=81919)  s=15:1p,min v2(b)=11(q=294911)  s=17:1p,min v2(b)=14(q=131071)  s=19:1p,min v2(b)=13(q=524287)
+   zeros of b(q) at primes q <= 524288: [127, 8191, 213247]
+   minimal q with v2(b) = v2(q+1), s = 2..7: [11, 7, 47, 31, 191, 383]  (S35: 11, 7, 47, 31, 191, 383)
+   minimal q with v2(b) = 7, s = 8..14: [6911, 23039, 21503, 6143, 20479, 73727, 81919]  (S35: 6911, 23039, 21503, 6143, 20479, 73727, 81919)
+5. q = 1 mod 4 (all primes < 524,288): b(q) = 2 mod 4 fails at []; v2(Y_q - 1) = 2 fails at []
+6. Mersenne p = 3: q = 7: b(q) = (0, -8), |b(q)| = 8, M_q = Y_q - 1 = 0, v2 = 99
+6. Mersenne p = 5: q = 31: b(q) = (0, -32), |b(q)| = 32, M_q = Y_q - 1 = 0, v2 = 99
+6. Mersenne p = 7: q = 127: b(q) = (0, 0), |b(q)| = 0, M_q = Y_q - 1 = -16384, v2 = 14
+6. Mersenne p = 13: q = 8191: b(q) = (0, 0), |b(q)| = 0, M_q = Y_q - 1 = -67108864, v2 = 26
+6. Mersenne p = 17: q = 131071: b(q) = (0, 16384), |b(q)| = 16384, M_q = Y_q - 1 = -16911433728, v2 = 28
+6. Mersenne p = 19: q = 524287: b(q) = (0, 516096), |b(q)| = 516096, M_q = Y_q - 1 = -8522825728, v2 = 26
+   q = 3: |b(q)| = 4, Y_q - 1 (Paley) = 0
+   q = 7: |b(q)| = 8, Y_q - 1 (Paley) = 0
+   q = 31: |b(q)| = 32, Y_q - 1 (Paley) = 0
+   q = 127: |b(q)| = 0, Y_q - 1 (Paley) = -16384
+   q = 191: |b(q)| = 320, Y_q - 1 (Paley) = 65536
+   q = 199: |b(q)| = 200, Y_q - 1 (Paley) = 0
+   q = 223: |b(q)| = 224, Y_q - 1 (Paley) = 0
+   q = 383: |b(q)| = 128, Y_q - 1 (Paley) = -131072
+   primes q = 3 mod 4 below 700 with |b(q)| = q + 1: [3, 7, 31, 199, 223]
+   mean of (|b(q)|/2q)^2 over 124 primes 3..691: 0.2326 (se 0.0213)

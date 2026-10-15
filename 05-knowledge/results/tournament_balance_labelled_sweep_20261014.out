@@ -3,3 +3,4 @@ n = 4: labelled with delta = 1/3: 16 (prediction 16); delta < 1/3: 0; least delt
 n = 5: labelled with delta = 1/3: 120 (prediction 120); delta < 1/3: 0; least delta over strong: 4/11 (code 12); least delta > 1/3: 4/11 (code 12)  [0.0 s]
 n = 6: labelled with delta = 1/3: 1040 (prediction 1040); delta < 1/3: 0; least delta over strong: 4/11 (code 88); least delta > 1/3: 4/11 (code 12)  [0.1 s]
 n = 7: labelled with delta = 1/3: 10080 (prediction 10080); delta < 1/3: 0; least delta over strong: 4/11 (code 5617); least delta > 1/3: 4/11 (code 12)  [9.4 s]
+n = 8: labelled with delta = 1/3: 107520 (prediction 107520); delta < 1/3: 0; least delta over strong: 62/157 (code 1638); least delta > 1/3: 4/11 (code 12)  [3001.3 s]

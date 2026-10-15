@@ -1,4 +1,4 @@
-# 128 across the corpus, three levels down: the 2-adic Mersenne law of a level-32 newform, perfect QR codes, a tournament 1/3–2/3 theorem, the gold partition, Mahler's middle third and Borsuk in dimension four
+# 128 across the corpus, three levels down: the 2-adic law of a level-32 newform, QR perfect codes, a tournament 1/3–2/3 conjecture, the gold partition, Mahler's middle third and Borsuk in dimension four
 
 2026-10-14, session opus-2026-10-14-S35 (worktree `/tmp/math-wt-fractal-recursion-23`). Companion to [paley_least_resistance_runs_one_modular_form_20261014.md](paley_least_resistance_runs_one_modular_form_20261014.md).
 
@@ -18,7 +18,7 @@
 - **FINITE-EXACT:**
   - the square law of the `K_6 − P_6` terminal at every prime `q ≡ 3 (mod 4)` below 200,000;
   - the 2-adic depth table, the Mersenne values and the valuation law;
-  - the tournament balance sweep to `n = 7` [N8];
+  - the tournament balance sweep over all `2^28` labelled tournaments up to `n = 8`;
   - the closed-family counterexamples;
   - the Collatz sieve count.
 - **CITED:**
@@ -32,12 +32,12 @@
   - Pless and MacWilliams–Sloane (QR codes);
   - Kahn–Kalai (1993), Bondarenko (2014), Jenrich–Brouwer (2014).
 - **UNREFEREED, treated as solid as instructed:**
-  - arXiv:2607.23926 (balance constants through 14 elements);
+  - Gupta, arXiv:2607.23926 (balance constants through 14 elements);
   - Grinsztajn (2026, 63-dimensional Borsuk counterexample);
   - Tolmachev–Voronov (2026, `b(4) <= 8`);
   - hexagonmath.org 2610.00249 (Collatz positive lower density) and 2610.00225 (BMV lattice method).
 - **NUMEROLOGY:** typed in place.
-- **Not yet audited** (section 9).
+- **Audited** (section 9; MISTAKE-613).
 
 ## 0. Answers in brief
 
@@ -49,27 +49,31 @@
    This session adds two more:
    - the `K_6 − P_6` terminal is `≡ 1 (mod 128)` at Paley primes;
    - exactly 128 classes of 14-element posets attain the balance constant `1/3`, i.e. `A000930(14) − 1`, Narayana's cows.
-2. **Level 2: the Mersenne law.**
+2. **Level 2: the 2-adic law of the newform.**
    - The `mod 128` signature comes from a congruence `|b(q)| ≡ ±(q+1) (mod 2^m)` of the weight-3 level-32 newform `b` (mac-mini's HYP-9276).
-   - Followed to Mersenne primes, where `q + 1 = 2^p` and `q ≡ −1` 2-adically, the newform's coefficient is 2-adically tiny: `b(127) = 0`, `b(8191) = 0`, `|b(131071)| = 2^14`, `|b(524287)| = 63·2^13`.
-   - Over all primes `q ≡ 3 (mod 4)` below 200,000, `v_2(b(q)) >= min(v_2(q+1), [K])`.
-   - This is the 2-adic continuity of Frobenius traces near `−1`, in the same topology where `⟨3⟩` is dense in `{1, 3 mod 8}` (the Collatz theme).
+   - Followed to Mersenne primes, where `q + 1 = 2^p` and `q ≡ −1` 2-adically, the newform's coefficient is 2-adically small: `b(127) = 0`, `b(8191) = 0`, `|b(131071)| = 2^14`, `|b(524287)| = 63·2^13`. The audit found a non-Mersenne zero as well, `b(213247) = 0` with `213248 = 2^8·833`.
+   - `gcd(q + 1, 128)` divides `b(q)`, i.e. `v_2(b(q)) >= min(v_2(q+1), 7)`:
+     - FINITE-EXACT at all 9,005 primes `q ≡ 3 (mod 4)` below 200,000;
+     - confirmed to 524,288 by the audit's exact tabulation of `b`;
+     - at all 580 primes `q ≡ −1 (mod 512)` up to `2·10⁶`, through the perfect-square test.
+   - The exponent 7 is sharp. Every class `v_2(q+1) = 8, …, 14` contains a prime with `v_2(b(q)) = 7` exactly, and beyond 7 the excess looks geometric with ratio `1/2`. **So 128 is where this 2-adic divisibility stops.**
+   - Reading it as "2-adic continuity of Frobenius traces near `−1`", in the topology where `⟨3⟩` is dense in `{1, 3 mod 8}`, is ANALOGY (audit I7).
 3. **Level 2: the codes.**
-   - The three perfect nontrivial codes are the quadratic-residue codes of the Paley primes `7, 11, 23`: Hamming `[7,4,3]`, ternary Golay `[11,6,5]` and binary Golay `[23,12,7]`.
+   - The binary Hamming code `[7,4,3]` and the two Golay codes (ternary `[11,6,5]` and binary `[23,12,7]`) are the quadratic-residue codes of the Paley primes `7, 11, 23`. All Hamming codes are perfect too; only the length-7 one is a QR code of this kind.
    - `128 = 2^7 = 16·8` is the Hamming code's perfect packing. E8, built from the extended Hamming code, has `240 = 112 + 128` roots, and `128` is the half-spin representation of `Spin(16)` in `e8 = so(16) ⊕ 128`. That is the honest Bott-periodicity content of 128.
    - The sphere-packing identities contain the Paley affine orders `C(q,2) = T_{q−1}`: `3^5 = 1 + 2·11 + 4·55` with `55 = |Aff(P_11)| = T_10 = F_10`.
-4. **Level 3: the 1/3–2/3 conjecture, attempted through tournaments** (HYP-9277).
-   - Every non-transitive tournament on `n <= 7` vertices [N8] has a pair ordered with probability in `[1/3, 2/3]` in a uniform Hamiltonian path.
+4. **Level 3: the 1/3–2/3 conjecture, attempted through tournaments** (HYP-9277, a conjecture verified for `n <= 8`).
+   - Every non-transitive tournament on `n <= 8` vertices (all `2^28` labelled ones at `n = 8`) has a pair ordered with probability in `[1/3, 2/3]` in a uniform Hamiltonian path.
    - Equality holds exactly at transitive compositions of singletons and cyclic triangles, the exact analogue of the 128 poset classes.
    - The proof reduces, by proved lemmas, to strong tournaments.
-   - Peczarski's gold partition property **fails** once precedence answers are recorded. So the gold partition conjecture, if true, is a convexity phenomenon of order polytopes, not a property of "sorting" in general.
+   - Peczarski's gold partition property **fails** once precedence answers are recorded on Hamiltonian-path sets. So it is not a general feature of permutation families under precedence constraints, and a proof for posets must use more structure. The convexity of the order polytope is the natural candidate; that is a suggestion, not a theorem (audit I8).
 5. **Mahler's middle third.**
    - Akiyama–Frougny–Sakarovitch: countably many `z > 0` have `{z(3/2)^n}` in `[0, 1/3) ∪ [2/3, 1)` for all `n`, avoiding the middle third forever.
    - The 1/3–2/3 conjecture says linear-extension measures always hit the middle third.
    - Flatto–Lagarias–Pollington's spread bound for `3/2` is `1/p = 1/3`.
    - The common source is the three-way branch: three digits for `×3/2`, three linear extensions of `2+1`, three Hamiltonian paths of `C_3` (ANALOGY).
 6. **Borsuk in dimension 4.**
-   - Open. Counterexamples exist from dimension 63 or 64 up, all built from strongly regular graphs.
+   - Open. Counterexamples exist from dimension 64 up (63, unrefereed). The lowest-dimensional ones (65, 64, 63) are two-distance sets from strongly regular graphs, whereas the Kahn–Kalai line (1325 down to 298) uses other constructions.
    - The hexagonmath BMV method turns SRG existence into a discriminant-form condition, a mod-8 Milgram constraint. So "how low can SRG counterexamples go" is a mod-8 lattice question.
    - Nothing here touches dimension 4 itself.
 
@@ -114,13 +118,18 @@ A read-only search of the corpus (1,258 raw hits for `\b128\b`, most of them run
 | 17 | 131071 | `2^14` | `−63·2^28` |
 | 19 | 524287 | `63·2^13` | `−127·2^26` |
 
-- Two of the six Mersenne coefficients vanish. Below 700 the newform has no other zero.
-- The table suggests a **valuation law**: `v_2(b(q)) >= min(v_2(q+1), K)`. Its test over all primes below 200,000 (`paley_k6p6_two_adic_valuation_law_20261014.out`): [VALLAW]
-- The reading is that `q ↦ b(q)` behaves like a 2-adically continuous function of `q ∈ Z_2^×`, carrying an Eisenstein factor `(1 + q)` up to a bounded depth. Mersenne primes are where that factor is 2-adically smallest. That is the same 2-adic topology in which theme A's `⟨3⟩` is dense in `{1, 3 mod 8}`. Themes C and F, the prime `127`, enter the arithmetic of a modular form exactly through `127 ≡ −1 (mod 2^7)`.
+- Two of the seven Mersenne coefficients up to `2^19 − 1` vanish (`q = 3` has `|b(3)| = 4 = q + 1`). Below 524,288 the zeros are `127, 8191, 213247` (audit).
+- The table suggests a **valuation law**: `v_2(b(q)) >= min(v_2(q+1), K)`. Its test over all primes below 200,000 (`paley_k6p6_two_adic_valuation_law_20261014.out`):
+  - at all 9,005 primes `q ≡ 3 (mod 4)` below 200,000, `v_2(|b(q)|) >= min(v_2(q+1), 7)`, i.e. **`gcd(q+1, 2^7)` divides `b(q)`**;
+  - `K = 7` is the largest exponent that works. The classes `v_2(q+1) = 2, …, 7` each attain `v_2(b) = v_2(q+1)` (minimal examples `q = 11, 7, 47, 31, 191, 383`). Every class with `v_2(q+1) = 8, …, 14` contains a prime with `v_2(b) = 7` exactly: `q = 6911`, `23039`, `21503`, `6143`, `20479`, `73727`, `81919`;
+  - the only zeros below 200,000 are `b(127) = b(8191) = 0`, two Mersenne primes.
+- **A reading (ANALOGY/NUMEROLOGY, audit I7).**
+  - `q ↦ b(q)` behaves as if it carried an Eisenstein factor `(1 + q)` 2-adically, up to `2^7`. Primes deep in the classes `v_2(q+1) >= 7` (Mersenne primes and others such as 213247) are where `128 | b(q)` and zeros become possible.
+  - The echo with theme A (`⟨3⟩` dense in `{1, 3 mod 8}`) and with themes C/F (`127 ≡ −1 (mod 2^7)`) is suggestive, not a mechanism. The non-Mersenne zero `b(213247) = 0` shows that zeros are a deep-class phenomenon, not a Mersenne one.
 - The mechanism is proposed, not proved. McCarthy–Papanikolas' trace-formula expression for `b(p)` runs over Legendre curves with `Z/2 × Z/8` torsion, i.e. `16 | #E(F_p)`.
 
 **(b) Perfect codes are the QR codes of Paley primes (CITED; the Paley tie-in is exact).**
-- The Hamming `[7,4,3]`, ternary Golay `[11,6,5]` and binary Golay `[23,12,7]` codes are the quadratic-residue codes of lengths 7, 11, 23.
+- The binary Hamming `[7,4,3]`, ternary Golay `[11,6,5]` and binary Golay `[23,12,7]` codes are the quadratic-residue codes of lengths 7, 11, 23. They are not "the" perfect codes: all Hamming codes are perfect, and the two Golay codes are the only other nontrivial ones.
 - Their defining sets are the out-neighbourhoods of the Paley tournaments `P_7`, `P_11` and `P_23`, the squares modulo `q`.
 - Their sphere-packing identities are:
   - `2^3 = 1 + 7`;
@@ -135,14 +144,20 @@ A read-only search of the corpus (1,258 raw hits for `\b128\b`, most of them run
 **(c) E8's 128 and tournament scores (THM-868, REFEREED there).**
 - THM-868 places the score half-vectors `s_i − 7/2` of 8-vertex tournaments in E8's half-integer coset. Its near-regular shell is exactly the `C(8,4) = 70` roots with coordinate sum 0.
 - Those 70 lie among the 128 half-integer roots `(±1/2)^8` (even number of minus signs): they are the ones with exactly four minus signs.
-- THM-868 has a further 128 that the search missed. Landau's condition leaves every shell `x = Σd² <= 128` untouched and first bites at `x = 136`.
+- THM-868 has a further 128 that the search missed. With `d_i = 2s_i − 7` and shell index `x = Σ d_i²`, Landau's condition leaves every shell `x <= 128` untouched and first bites at `x = 136`.
 - Bott: half-spin representations of `Spin(8m)` have dimension `2^(4m−1)`, which is 8 (triality) and then 128 (`e8 = so(16) ⊕ 128`). The real Clifford algebras repeat with period 8, `Cl_(n+8) ≅ Cl_n ⊗ M_16(R)`. This is where 128 and "mod 8" genuinely meet, and the owner's "Bott periodicity" points there (ANALOGY for the tournament side).
 
 **(d) The Collatz sieve passes through 128 (FINITE-EXACT; the apotome link is NUMEROLOGY).**
 - The number of residue classes mod `2^k` whose `T`-trajectory has not dropped below its start within `k` steps, i.e. parity vectors with `3^(o_j) > 2^j` for all `j <= k`, is `1, 1, 2, 3, 4, 8, 13, 19, 38, 64, 128, 226, 367, 734, …` for `k = 1, 2, …`.
-- It is 128 at `k = 11`. At that step `3^7 = 2187` first exceeds `2^11 = 2048`: the apotome, the ratio of the snippet's `−17` cycle (7 odd steps, 11 halvings, denominator `2^11 − 3^7 = −139`).
-- The limma `2^8/3^5 = 256/243` gives the `1/13` cycle (`2^8 − 3^5 = 13`), and `2^3/3^2` gives the `−5` cycle.
-- The temperaments 5, 12, 41, 53 are convergent and semiconvergent denominators of `log_2 3`. So is the sieve's doubling pattern (doublings at `k = 6, 9, 11, 14, 17, 19, …`): least-resistance lattice paths above the line of slope `log_3 2`.
+- It is 128 at `k = 11` (OEIS A076227, same indexing; audit). At that step `3^7 = 2187` first exceeds `2^11 = 2048`: the apotome, the ratio of the snippet's `−17` cycle (7 odd steps, 11 halvings, denominator `2^11 − 3^7 = −139`).
+- The snippet's `1/13` cycle is **not** the limma's. It has one odd step and four halvings, so its denominator is `2^4 − 3 = 13`. That the limma also gives `2^8 − 3^5 = 13` is a coincidence (NUMEROLOGY; audit E3). The `−5` cycle has denominator `2^3 − 3^2 = −1`.
+- The temperaments 5, 12, 41, 53 are convergent denominators of `log_2 3`.
+- The sieve doubles at `k = 3, 6, 9, 11, 14, 17, 19, 22, …`. These positions form a complementary Beatty sequence for the slope `log_2 3`, not convergent denominators (audit E9). They encode least-resistance lattice paths above the line of slope `log_3 2`.
+
+**(e′) Themes D and E are one cube (EXACT identification).**
+- LRC14's `Ω = F_2^7` (masks over the seven `χ_7` labels), the Fano sign gauges and the descent cores of HYP-3581 ("subsets of `Z_7`") are all `F_2^{Z_7}` with its cyclic `Z_7`-action.
+- The Hamming code inside it is the binary QR code generated by the Paley set `{1, 2, 4} = QR_7`, the out-neighbourhood of `0` in `P_7`. It has 16 words. The 16 alternative (octonion) sign tables of theme E (all Paley, `h = 189`, per that note) form a coset of it, and `128 = 16·8` is its perfect packing.
+- So themes C (Paley), D (LRC14) and E (codes and lattices) meet in one object, `P_7` acting on `F_2^7`. That is the same `P_7` whose `H = 189` and `T_6 = 21 = F_8` appear in the companion note.
 
 **(e) Narayana's 128 and the golden ratios.**
 - Compositions into parts 1 and 3 grow like `ψ^n`, with `ψ = 1.46557…` the supergolden ratio (`x³ = x² + 1`, a Pisot number).
@@ -162,16 +177,29 @@ A read-only search of the corpus (1,258 raw hits for `\b128\b`, most of them run
 - The extremal blocks are `2 + 1` and `C_3`, each with exactly 3 orders.
 
 **Tournaments (FINITE-EXACT).**
-- `δ >= 1/3` for every non-transitive labelled tournament with `n <= 7` [N8].
-- Equality holds exactly at the predicted compositions, with labelled counts 2, 16, 120, 1040, 10080.
-- The least strong balance is 2/5, then 4/11 (`n = 5, 6, 7`). The poset analogues through 14 elements are 37/106 and 254/725.
+- `δ >= 1/3` for every non-transitive labelled tournament with `n <= 8`.
+- Equality holds exactly at the predicted compositions, with labelled counts 2, 16, 120, 1040, 10080, 107520.
+- The least strong balance is 2/5 (`n = 4`), 4/11 (`n = 5, 6, 7`) and 62/157 (`n = 8`). The poset analogues through 14 elements are 37/106 and 254/725.
 
 **The gold partition does not survive generalisation (FINITE-EXACT counterexamples).**
 - Record precedence answers, so that the surviving set is `HP(T) ∩ Ext(Q)`. Then the balance can drop to `1/4` (tournaments at `n = 6`; semicomplete digraphs at `n = 4`), and `t_0 >= t_1 + t_2` fails for 176 family members at `n = 6`.
-- So the poset conjectures are not instances of a general "sorting" principle. They need the convexity of linear-extension sets, the order polytope with its Stanley/Kahn–Saks log-concavity.
-- **Bold reading.** The gold partition conjecture should be attacked as a statement about mixed volumes of order polytopes, a "golden Grünbaum theorem" for braid-hyperplane cuts. Kahn–Linial already got `1/(2e)` from Grünbaum's centroid theorem. Pure combinatorics of permutation sets cannot prove it.
+- So the poset conjectures are not instances of a general "sorting" principle for permutation families under precedence constraints. Some structure of linear-extension sets must be used. The convexity of the order polytope, with its Stanley/Kahn–Saks log-concavity, is the natural candidate.
+- **Bold reading (a suggestion, not a theorem; audit I8).** Attack the gold partition conjecture as a statement about mixed volumes of order polytopes, a "golden Grünbaum theorem" for braid-hyperplane cuts. Kahn–Linial already got `1/(2e)` from Grünbaum's centroid theorem.
+
+**The arc route (PROVED half, REFUTED half).**
+- Some arc `x → y` always has `p(x before y) <= 2/3` (Claim B). If every arc also had `p >= 1/3` (Claim A), that arc would be balanced and part 1 of the conjecture would follow in two lines.
+- Claim A holds exhaustively for `n <= 7`, with minima `2/3, 3/5, 5/9, 7/15, 9/25`. It **fails at `n = 8`**: a tournament with 45 Hamiltonian paths has an arc whose tail comes first in only 13 of them.
+- It fails again at `n = 9` (`17/81`) and `n = 10` (`25/153`), while those tournaments still have `δ = 4/9, 4/9, 8/17`.
+- Annealing over strong tournaments found nothing below `64/161`, `104/257`, `292/693` at `n = 8, 9, 10`.
 
 **Where the attempt stops.** Proving `δ > 1/3` for strong tournaments on `>= 4` vertices would make HYP-9277 a theorem. The strong-majority lemma turns it into the claim that no strong tournament has a linear order `σ*` with all earlier-before-later probabilities `> 2/3`. That claim is open here.
+
+**Same-day work on the poset side** (tiling-modular-atoms, from the same pasted prompt; cross-referenced, not duplicated):
+- [gold_heavy_child_20261014j.md](gold_heavy_child_20261014j.md) rewrites the gold condition as a two-comparison defect `m − n − B(Q) <= 0` on the heavy branch. On a published 806-extension poset it refutes the maximally balanced first-comparison rule.
+- [gold_partition_context_transport_20261014j.md](gold_partition_context_transport_20261014j.md) proves transport and buffer theorems for gold certificates under nonuniform contexts, and shows that adaptive and fixed second comparisons are equivalent for the weak target.
+- [golden_order_bridge_20261014j.md](golden_order_bridge_20261014j.md) carries the eleven golden states of THM-4592 into conditioned order ideals.
+
+This note's contributions are the tournament side: HYP-9277, the closed-family counterexamples and the Narayana reading of the 128 classes.
 
 ## 5. Mahler's middle third (CITED + ANALOGY)
 
@@ -190,10 +218,11 @@ The 1/3–2/3 conjecture is the opposite assertion for a different dynamics: lin
   - Jenrich–Brouwer 2014 (dimension 64);
   - Grinsztajn 2026 (dimension 63, UNREFEREED);
   - Tolmachev–Voronov 2026 (`b(4) <= 8`, UNREFEREED, improving Lassak's 9).
-- All known counterexamples are spherical two-distance sets from strongly regular graphs. Their dimension is an eigenvalue multiplicity.
+- The lowest-dimensional known counterexamples (65, 64, and the unrefereed 63) are spherical two-distance sets from strongly regular graphs, whose dimension is an eigenvalue multiplicity. The Kahn–Kalai line (1325 down to 298) uses other constructions.
 - hexagonmath's BMV paper (2610.00225, treated as solid) gives a uniform discriminant-form condition for SRGs with integral eigenvalues. It is a Milgram/Gauss-sum constraint, the lattice-theoretic "mod 8", and it rules out 70 open parameter sets.
 - **Bold idea:** the smallest SRG-based Borsuk counterexample dimension is a question about which eigenvalue multiplicities survive the mod-8 discriminant condition. That is the same mod-8 that ties 128 to E8 and `Spin(16)`.
 - No statement about dimension 4 is made. Two-distance sets in `R^4` are far too small to be counterexamples.
+- Tiling-modular-atoms' same-day [borsuk_order_interfaces_20261014j.md](borsuk_order_interfaces_20261014j.md) proves a finite direction/blocker alternative and the eight-point four-dimensional case. It records the order-realisability boundary.
 
 ## 7. The hexagonmath works as inputs (UNREFEREED; treated as solid per the owner)
 
@@ -204,16 +233,39 @@ The 1/3–2/3 conjecture is the opposite assertion for a different dynamics: lin
 
 ## 8. Hostile controls
 
-1. The square law and the 2-adic tables are FINITE-EXACT through 200,000. The identification is mac-mini's HYP-9276. The congruence mechanism is a proposal.
-2. The Mersenne table is exact, but six primes are a small sample, and the valuation law is tested only below 200,000.
+1. The square law is VERIFIED (floating-point FFT, perfect-square test) through 200,000 in this session. The identification `c_q = |b(q)|` and the 2-adic tables are FINITE-EXACT to 524,288 through the audit's exact tabulation of `b`. The identification itself is mac-mini's HYP-9276, and the congruence mechanism is a proposal.
+2. The Mersenne table is exact, but six primes are a small sample. The valuation law `gcd(q+1, 128) | b(q)` is FINITE-EXACT below 200,000 and unexplained.
 3. The QR-code facts are classical. The appearances of 11, 55 and 253 inside sphere-packing identities are exact identities whose link to Paley Hamiltonian-path counts is NUMEROLOGY.
-4. HYP-9277 is FINITE-EXACT to `n = 7` [N8]. The analogy table with arXiv:2607.23926 uses an unrefereed source.
+4. HYP-9277 is a conjecture, FINITE-EXACT to `n = 8`; the audit reproduced `n <= 7` and the `n = 8` Claim A counterexample, but not the `n = 8` sweep. The analogy table with arXiv:2607.23926 uses an unrefereed source.
 5. The gold-partition counterexamples refute only the generalised (closed-family) statement, not Peczarski's conjecture for posets.
 6. Nothing here proves 1/3–2/3, the gold partition conjecture, Borsuk-4 or Mahler's conjecture.
 
 ## 9. Audit
 
-Pending.
+The independent audit (`04-computation/experiments/paley_s35_audit_20261014/REPORT.md`; MISTAKE-613) confirmed the following:
+- the tournament results for `n <= 7`;
+- the Claim A counterexample and the closed-family witnesses;
+- `H(P_19)`;
+- the Collatz sieve (= OEIS A076227);
+- A000930;
+- the Akiyama–Frougny–Sakarovitch, Flatto–Lagarias–Pollington, Brightwell–Felsner–Trotter and Peczarski statements;
+- Bondarenko and Jenrich–Brouwer;
+- `e8 = so(16) ⊕ 128`;
+- the 2-adic laws of `b` to 524,288.
+
+It also found that every strong tournament with `n <= 7` has a balanced arc.
+
+Fixed here:
+- E2 ("the" perfect codes);
+- E3 (the `1/13` cycle is `1/(2^4 − 3)`, not the limma);
+- E4 ("theorem" for a conjecture);
+- E7 (not all Borsuk counterexamples come from SRGs);
+- E9 (the doubling positions);
+- I7 (the 2-adic "mechanism" retyped as analogy);
+- I8 (convexity claim softened);
+- I12 (THM-868 shell index).
+
+Not checked by the audit: the `n = 8` sweep, the unrefereed inputs, and the Mahler/Borsuk cross-references.
 
 ## 10. Reproduction and references
 
@@ -222,7 +274,9 @@ Pending.
 - `paley_k6p6_two_adic_valuation_law_20261014.py` (writes `paley_k6p6_cq_table_20261014.json`);
 - `tournament_one_third_balance_20261014.py`;
 - `tournament_balance_labelled_sweep_20261014.py`;
-- `tournament_balance_spectrum_gold_20261014.py`.
+- `tournament_balance_spectrum_gold_20261014.py`;
+- `tournament_arc_third_claim_20261014.py`;
+- `tournament_balance_search_20261014.py`.
 
 The Collatz sieve count is a ten-line enumeration of parity vectors, reproduced in section 3(d)'s description.
 

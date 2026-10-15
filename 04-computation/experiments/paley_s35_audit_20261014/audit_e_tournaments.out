@@ -1,0 +1,19 @@
+n = 3 (permutation brute force): delta = 1/3 at 2 labelled (composition count 2); non-transitive with delta < 1/3: 0; delta = 1/3 <=> components in {1, C3} mismatches: 0; least strong delta: 1/3; min arc ratio p(tail first): 2/3; strong tournaments: 2, without a balanced arc: 0  [7 s]
+n = 4 (permutation brute force): delta = 1/3 at 16 labelled (composition count 16); non-transitive with delta < 1/3: 0; delta = 1/3 <=> components in {1, C3} mismatches: 0; least strong delta: 2/5; min arc ratio p(tail first): 3/5; strong tournaments: 24, without a balanced arc: 0  [7 s]
+n = 5 (permutation brute force): delta = 1/3 at 120 labelled (composition count 120); non-transitive with delta < 1/3: 0; delta = 1/3 <=> components in {1, C3} mismatches: 0; least strong delta: 4/11; min arc ratio p(tail first): 5/9; strong tournaments: 544, without a balanced arc: 0  [7 s]
+n = 6 (permutation brute force): delta = 1/3 at 1040 labelled (composition count 1040); non-transitive with delta < 1/3: 0; delta = 1/3 <=> components in {1, C3} mismatches: 0; least strong delta: 4/11; min arc ratio p(tail first): 7/15; strong tournaments: 22320, without a balanced arc: 0  [7 s]
+n = 7 (DFS path enumeration): delta = 1/3 at 10080 labelled (composition count 10080); non-transitive with delta < 1/3: 0; delta = 1/3 <=> components in {1, C3} mismatches: 0; least strong delta: 4/11; min arc ratio p(tail first): 9/25; strong tournaments: 1677488, without a balanced arc: 0  [15 s]
+n = 7: DFS = permutation brute force on 3000 random tournaments: True
+n = 4: distinct strong delta values (sorted): ['2/5'] (1 values); least: 2/5 with (H, scores) = (5, (1, 1, 2, 2))
+n = 5: distinct strong delta values (sorted): ['4/11', '5/13', '2/5', '4/9'] (4 values); least: 4/11 with (H, scores) = (11, (1, 2, 2, 2, 3))
+n = 6: distinct strong delta values (sorted): ['4/11', '17/45', '2/5', '15/37', '12/29', '18/43', '13/31', '8/19', '14/33', '16/37'] ... (20 values); least: 4/11 with (H, scores) = (33, (2, 2, 2, 2, 3, 4))
+n = 8 Claim-A counterexample: valid tournament True; arc 0 -> 4 present: True; 8! brute force H = 45, #(0 before 4) = 13 -> 13/45; DFS agrees: True; delta = 4/9; min arc ratio 13/45 at arc 0 -> 4; strong: True
+n = 8 (strong min 64/161): valid True; H = 161; delta = 64/161; min arc ratio = 97/161; strong = True
+n = 9 (Claim A 17/81, delta 4/9): valid True; H = 81; delta = 4/9; min arc ratio = 17/81; strong = True
+n = 9 (strong min 104/257): valid True; H = 257; delta = 104/257; min arc ratio = 153/257; strong = True
+n = 10 (Claim A 25/153, delta 8/17): valid True; H = 153; delta = 8/17; min arc ratio = 25/153; strong = True
+n = 10 (strong min 292/693): valid True; H = 11781; delta = 292/693; min arc ratio = 401/693; strong = True
+Paley P_3: H = 3, #(0 before 1) = 2, p = 2/3
+Paley P_7: H = 189, #(0 before 1) = 118, p = 118/189
+Paley P_11: H = 95095, #(0 before 1) = 55553, p = 55553/95095
+[17 s]

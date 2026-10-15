@@ -4,10 +4,10 @@
 - Series-parallel ("least resistance") reduction makes the Paley run sums polynomials.
 - The first resistance is an elliptic curve (a Y-junction is a Legendre curve).
 - Through twelve steps, single runs see a single modular form: the wheel and the octahedron are both the Beukers-supercongruence form.
-- The `K_6 − P_6` terminal is the symmetric square of a weight-3 level-32 newform. That is mac-mini's HYP-9276, confirmed here independently in a second normalisation, with the 2-adic `2^7` law traced to a congruence of the newform.
-- Wheels are power sums of Jacobi sums (PROVED). `W_6` is the weight-6 level-8 newform.
-- A dictionary: 2D rigidity circuits (`|E| = 2|V| − 2`) are exactly the graphs whose double covers are Calabi–Yau. They carry new motives of weight `|V| − 2`.
-- Planar Fourier duality (PROVED) fixes this Calabi–Yau line and swaps the Fano and general-type sides. The Fano cube equals `q` times its dual, the octahedron, which refutes this session's own pre-registered "Laman-sparse ⟹ polynomial".
+- The `K_6 − P_6` terminal is, conjecturally (mac-mini's HYP-9276, FINITE-EXACT to large range), the symmetric square of a weight-3 level-32 newform `b`. This session confirmed it independently in a second normalisation. The 2-adic `2^7` law is traced to congruences of `b`, among them `gcd(q+1, 128) | b(q)`.
+- Wheels are power sums of Jacobi sums, i.e. Greene's `ₙF_{n−1}(1)` (standard). `W_4` and `W_6` are the level-8 forms of Ahlgren–Ono and Frechette–Ono–Papanikolas (CITED). `W_8` is not in the span of level-32 forms (FINITE-EXACT negative).
+- A dictionary (HYP-9278): the double cover attached to a graph is Calabi–Yau exactly at the count `|E| = 2|V| − 2`. 2D rigidity circuits meet that count, and every new motive found so far sits at a circuit, with weight `|V| − 2`.
+- Planar Fourier duality (a specialisation of the classical Kramers–Wannier / Wu–Wang duality) fixes this Calabi–Yau line and swaps the Fano and general-type sides. The cube equals `q` times its dual, the octahedron, which refutes this session's own pre-registered "Laman-sparse ⟹ polynomial".
 - The owner's triangular-Fibonacci, `F = U + S`, mod-8, Mahler and two-point-Chowla themes, typed.
 - Companion note on the owner's "128" request, the 1/3–2/3 and gold partition conjectures, Mahler's middle third and Borsuk: [one_twenty_eight_atlas_balance_gold_20261014.md](one_twenty_eight_atlas_balance_gold_20261014.md).
 
@@ -26,17 +26,19 @@ Owner's prompt (verbatim), quoting `2q(q−1)(q−3)(q−7)(7q−55)` from S34: 
   - `A_2 … A_8` reproduced;
   - `A_10` and `A_12` exactly, at 14 primes plus the forced zeros;
   - the octahedron identity at all odd primes `5 … 107`;
-  - the `K_6 − P_6` table at all 124 primes `3 … 691` (exact `O(q³)`), and its square law `Y_q = |b(q)|² − q² + 2χ₋₄(q)q`, with `b` the level-32 weight-3 newform. The identification is mac-mini's HYP-9276 (to 30,000), and this session confirms it independently;
-  - the wheel laws `T_4`, `T_6` at all 39 primes `q ≡ 3 (mod 4)` in `[7, 400]`;
-  - the circuit-reduction tests and the cube identity `U(Q_3) = q·U(K_(2,2,2))` of sections 4c–4d.
-- **PROVED (new here):**
-  - wheels are power sums of Jacobi sums, `Tr((DS)^n) = Σ_ψ (χ(−1)J(ψ, χ))^n`;
-  - planar Fourier duality, `U(G) = χ(−1)^{|E|/2} q^{(|V| − |V*|)/2} U(G*)`.
+  - the `K_6 − P_6` table at all 124 primes `3 … 691` (exact `O(q³)`), and its square law `Y_q = |b(q)|² − q² + 2χ₋₄(q)q`, with `b` the level-32 weight-3 newform. The identification is mac-mini's HYP-9276 (audited: every prime to 100,000, 1,000 random primes to 299,983, 22 prime powers), and this session confirms it independently;
+  - beyond 700, the perfect-square property of `M_q + (q+1)²` (FFT, VERIFIED) to 200,000. The identification `c_q = |b(q)|` there, and every 2-adic statement about `b(q)`, rest on the audit's independent exact tabulation of `b` to 524,288;
+  - the `W_6` law at 39 primes, a special case of a published theorem (Frechette–Ono–Papanikolas, CITED below);
+  - the circuit-reduction tests and the cube identity `U(Q_3) = q·U(K_(2,2,2))` of sections 4c–4d;
+  - `W_8` not in the span of `S_8(Γ_0(32))` plus twisted lower weights (overdetermined: 39 primes).
+- **PROVED here, but standard:**
+  - wheels are power sums of Jacobi sums, `Tr((DS)^n) = Σ_ψ (χ(−1)J(ψ, χ))^n`. This is Greene's `ₙF_{n−1}(1)` up to normalisation;
+  - planar Fourier duality, `U(G) = χ(−1)^{|E|/2} q^{(|V| − |V*|)/2} U(G*)`, a specialisation of Kramers–Wannier / Wu–Wang (1976).
 - **REFUTED (pre-registered here):** "Laman-sparse pure cores are polynomial". The cube is the counterexample.
 - **OPEN:** HYP-9275 (A); HYP-9278 (the rigidity/Calabi–Yau dictionary).
-- **CITED:** Duffin (1965); Ahlgren–Ono (2000); Beukers (1987); Deligne (1974); Luo (1989); Evans–Pulham–Sheehan (1981); Mahler (1968); Flatto–Lagarias–Pollington (1995).
+- **CITED:** Duffin (1965); Ahlgren–Ono (2000); Beukers (1987); Deligne (1974); Luo (1989); Evans–Pulham–Sheehan (1981); Mahler (1968); Flatto–Lagarias–Pollington (1995); Greene (1987); Frechette–Ono–Papanikolas (IMRN 2004); Wu–Wang (1976); THM-438 (Catalan law).
 - **ANALOGY / NUMEROLOGY:** typed in place.
-- **Not yet audited** (section 9).
+- **Audited** (section 9; MISTAKE-613).
 
 ## 0. Answers in brief
 
@@ -73,8 +75,9 @@ Owner's prompt (verbatim), quoting `2q(q−1)(q−3)(q−7)(7q−55)` from S34: 
    - `b(127) = 0` at the Mersenne prime 127.
    - `Y_191 = 1 + 2^16` and `Y_383 = 1 − 2^17`, because both factors are powers of 2.
 5b. **Wheels and the rigidity ladder** (sections 4b–4c).
-   - `U(W_n) = q·Σ_ψ (χ(−1)J(ψ, χ))^n` (PROVED).
-   - `U(W_6) = q(q−1)(q² − q·a_q − b6_q)`, with `b6` the weight-6 level-8 newform (FINITE-EXACT, 39 primes).
+   - `U(W_n) = q·Σ_ψ (χ(−1)J(ψ, χ))^n`, Greene's `ₙF_{n−1}(1)` (standard).
+   - `U(W_6) = q(q−1)(q² − q·a_q − b6_q)`, with `b6` the weight-6 level-8 newform. This is Koike's evaluation, proved by Frechette–Ono–Papanikolas (CITED; rechecked at 39 primes).
+   - `W_8` is not in the span of level-32 forms (FINITE-EXACT negative).
    - Every new motive met so far sits at a 2D rigidity circuit, a graph with `|E| = 2|V| − 2` whose double cover is Calabi–Yau, and has weight `|V| − 2`.
    - Planar Fourier duality maps the sum of a plane graph to that of its dual (PROVED). The Calabi–Yau count `|F| = |V|` is self-dual.
    - The cube, the first pure core in the Fano regime, is not a polynomial: `U(Q_3) = q·U(octahedron)`.
@@ -113,7 +116,7 @@ Owner's prompt (verbatim), quoting `2q(q−1)(q−3)(q−7)(7q−55)` from S34: 
 | wheel `W_4` | — | `q(q−1)·Σ_λ χ(λ)a(E_λ)²` | `−q(q−1)(q + a_q)`, weight-4 level-8 Beukers form, Deligne |
 | octahedron `K_{2,2,2}` | — | squares of quartic traces | `q(q−1)((5−q)a_q + 3q)`: the same form |
 | `K_6 − P_6` (tiling's `V_q`) | rigidity circuit | Legendre bilinear form (THM-4653) | `|b(q)|² − q² + 2χ₋₄(q)q`: symmetric square of a weight-3 level-32 newform (HYP-9276; section 4) |
-| wheel `W_6` | rigidity circuit | sixth power sum of Jacobi sums | `(q−1)(q² − q a_q − b6_q)`, weight-6 level-8 newform (section 4b) |
+| wheel `W_6` | rigidity circuit | sixth power sum of Jacobi sums (Greene's `₆F₅(1)`) | `(q−1)(q² − q a_q − b6_q)`, weight-6 level-8 newform (Frechette–Ono–Papanikolas; section 4b) |
 
 **The six-vertex cores at 12 steps.**
 - `K_6` minus (`P_3` plus an edge), `K_(2,4)` plus a matching, and `K_(3,3)` plus an edge each have an automorphism reversing an odd number of edges. So they vanish (THM-4652 part 4; `paley_core_symmetry_20261014.out`).
@@ -129,20 +132,22 @@ Owner's prompt (verbatim), quoting `2q(q−1)(q−3)(q−7)(7q−55)` from S34: 
   - `A_12(7) = P_12(7) + c_12(7)·a_7 = 3725568 − 3725568` (by cores: reducible `4912152`, wheel `−4989264`, octahedron `77112`);
   - `A_12(11) = −8673280 + 8673280` (reducible `−5764440`, wheel `7986000`, octahedron `−2221560`);
   - `A_12(3) = −134400 + 134400`, a check outside the interpolation set (`q = 3` is not among the 14 primes).
-- **Catalan leading terms (FINITE-EXACT for `k <= 6`; mechanism ANALOGY).** The leading coefficients of `A_2, A_4, …, A_12` are `1, 2, 5, 14, 42, 132`, the Catalan numbers `C_1 … C_6`. So `A_{2k} = C_k q^(k+1) + O(q^k)` through `L = 12`.
-  - Heuristic: `S² = J − qI` makes `S/√q` a conference (orthogonal-like) matrix. The top-degree quotients are closed walks folded onto trees with every edge used once each way. Those are the Catalan structures of Wigner's semicircle moments, and of the leading Weingarten asymptotics of Haar orthogonal matrices (Collins–Śniady).
-  - The individual Möbius weights `μ(π)` are not all 1 (a tree vertex visited `j` times carries `(j−1)!`), so this is not a proof that the leading coefficient is `C_k` for all `k`.
-  - The arithmetic enters only below this free-probability leading order: the wheel at relative order `q^(−5/2)` (Deligne) inside `A_10`.
+- **Catalan leading terms (THM-438; two new exact cases).** The leading coefficients of `A_2, A_4, …, A_12` are `1, 2, 5, 14, 42, 132`, the Catalan numbers `C_1 … C_6`, as THM-438 states.
+  - THM-438 verified `k <= 4` rigorously. The exact closed forms here add `k = 5, 6`.
+  - The mechanism is THM-438's (addenda, MISTAKE-060/061). The leading term is a **signed** Möbius sum over even-series patterns, equal to a free cumulant of the two-point spectrum `{0, ±i√q}`.
+  - It is **not** "closed walks folded onto trees". Trees alone give 1, 3, 13, 69, … (OEIS A088368). A first draft of this note repeated that refuted mechanism; audit error E1.
+  - The arithmetic enters only below this leading order: the wheel at relative order `q^(−5/2)` (Deligne) inside `A_10`.
+- **Out-of-sample check (audit).** Both closed forms hold at the prime power `q = 27`, which lies outside the 14 interpolation primes, reading `a_27` as the Frobenius trace 260.
 
-## 4. The `K_6 − P_6` terminal is a symmetric square (mac-mini's HYP-9276, confirmed independently; 2-adic mechanism)
+## 4. The `K_6 − P_6` terminal: a symmetric square (mac-mini's HYP-9276, confirmed independently; 2-adic structure)
 
 **Credit.** The identification is mac-mini-2026-10-14-wilson's, pushed earlier today:
 - THM-4653 (PROVED reduction to a Legendre bilinear form, with an `O(q log q)` FFT evaluator);
-- HYP-9276 (FINITE-EXACT at all 3,243 primes `5 <= q <= 30,000` and 12 prime powers; Sato–Tate; conditional independence from the wheel; literature).
+- HYP-9276 (as audited in MISTAKE-611: every prime to 100,000, 1,000 random primes to 299,983, and 22 prime powers; Sato–Tate; conditional independence from the wheel; literature).
 
 This session found the same law independently, before reading HYP-9276, by a different route.
 1. **Exact table.** `Y_q = U(K_6 − P_6)/(q(q−1))` was computed exactly at all 124 primes `3 <= q <= 691` with an `O(q³)` evaluation. Fixing `x_0 = 0` and `x_1 = 1` leaves a sum of Legendre-curve traces times a two-variable sum (`paley_k6p6_fast_table_20261014.py`). It agrees with the brute-force values of the earlier table at all 33 overlapping primes.
-2. **Square law.** `Y_q + q² − 2χ₋₄(q)q` is a perfect square `c_q²` at all 124 primes, with `0 <= c_q <= 2q`. The values `c_q/(2q)` have the non-CM Sato–Tate moments: the mean of `(c/2q)²` is 0.231 against 0.25, with standard error 0.022.
+2. **Square law.** `Y_q + q² − 2χ₋₄(q)q` is a perfect square `c_q²` at all 124 primes, with `0 <= c_q <= 2q`. The values `c_q/(2q)` have the non-CM Sato–Tate moments: the mean of `(c/2q)²` over the 124 primes is `0.2326 ± 0.021`, against 0.25.
 3. **The newform from eta quotients.** The weight-3, level-32 eta quotients with character `χ₋₄` (holomorphic, cuspidal, `|r_δ| <= 10`) span a 4-dimensional Hecke-stable space, on which `T_3` has characteristic polynomial `x²(x² + 16)`.
    - The kernel is old: `η(4z)⁶` and `η(8z)⁶`, CM by `Q(i)`.
    - The factor `x² + 16` is the newform pair `b, b̄`: `b = q + 4iq³ + 2q⁵ − 8iq⁷ − 7q⁹ − 4iq¹¹ − 14q¹³ + 8iq¹⁵ + 18q¹⁷ − 12iq¹⁹ + …`.
@@ -159,21 +164,25 @@ This session found the same law independently, before reading HYP-9276, by a dif
   `|b(q)| ≡ ±(q + 1) (mod 2^m)`, with `m = 4` for `q ≡ 11 (mod 16)`, `m = 5` for `q ≡ 3 (mod 16)`, and `m = 6` for `q ≡ 7 (mod 8)`.
 
   Hence `v_2(Y_q − 1) >= 7, 8, 10, 11` for `q ≡ 11, 3, 7, 15 (mod 16)`. The value 7 is attained at every `q ≡ 11 (mod 16)` tested.
-- This refines HYP-9276 (e), which records `2^7` for `q ≡ 3 (mod 8)` and `2^10` for `q ≡ 7 (mod 8)` and calls them unexplained. For `q ≡ 1 (mod 4)`, `c_q ≡ ±(q+1) (mod 8)` only, and `v_2(Y_q − 1) = 2` exactly.
-- **Proposed mechanism (ANALOGY; a proof route).** McCarthy–Papanikolas compute `b(p)` from Hijikata's trace formula and Schoof's count of Legendre curves with `Z/2 × Z/8` torsion. Such curves have `16 | #E(F_p)`, i.e. `a_p ≡ p + 1 (mod 16)`. An Eisenstein-type congruence `b ≡ (1 + q)·(unit) (mod 16)` is what that structure would produce.
-- **Extended range (FINITE-EXACT).** `paley_k6p6_two_adic_mersenne_20261014.py` re-implements THM-4653's FFT evaluator with an exact `int64` final sum, and checks it against the `O(q³)` table. It then tests the square law and the depth table at all primes `q ≡ 3 (mod 4)` in `[30,000, 200,000]`, beyond HYP-9276's range: [EXT200K]
+- This refines HYP-9276 (e), which records `2^7` for `q ≡ 3 (mod 8)` and `2^10` for `q ≡ 7 (mod 8)`, with a proved parity lemma after audit C ("partially explained").
+- For `q ≡ 1 (mod 4)` the relevant factorisation is `Y_q − 1 = (c_q − (q−1))(c_q + (q−1))`. Both factors are `≡ 2 (mod 4)`, so `v_2(Y_q − 1) = 2` exactly.
+- **A possible proof route (ANALOGY).** McCarthy–Papanikolas' Theorem 1.8 computes `b(p)` for `p ≡ 1 (mod 4)` from Hijikata's trace formula and Schoof's count of Legendre curves with `Z/2 × Z/8` torsion, which have `16 | #E(F_p)`.
+  - For the Paley primes `q ≡ 3 (mod 4)`, where the congruence lives, they give no such expression.
+  - mac-mini's descent form over `F_(q²)` (HYP-9276) is the natural place to look for the mod-16 structure.
+- **Extended range.** `paley_k6p6_two_adic_mersenne_20261014.py` re-implements THM-4653's FFT evaluator: floating-point FFTs with rounding, an `int64` final sum, and a check against the `O(q³)` table. It tests the perfect-square property and the depth table at all primes `q ≡ 3 (mod 4)` in `[30,000, 200,000]`, typed VERIFIED. That only `[100,000, 200,000]` lies beyond HYP-9276's complete range is a correction (audit I4).
+  - Exactness, and the identification `c_q = |b(q)|`, come from the audit, which tabulated `b` independently from theta products to 524,288. `|b(q)| = c_q` holds at all 9,005 primes below 200,000, and the depth table and valuation law hold to 524,288. at all 7,373 such primes the square law holds (no failure), and the minimum depths are exactly `m = 5, 6, 4, 6` for `q ≡ 3, 7, 11, 15 (mod 16)`. The minimum valuations are `v_2(Y_q − 1) = 8, 10, 7, 11`, the same minima as below 700 (`paley_k6p6_two_adic_mersenne_20261014.out`).
 
 **Exact values and Mersenne/Fermat coincidences (FINITE-EXACT; the coincidences are NUMEROLOGY with an explained mechanism).**
 - `Y_q = 1` iff `|b(q)| = q + 1`: `q = 3, 7, 31, 199, 223` below 700. HYP-9276 starts at `q = 5` and lists `7, 31, 199, 223, 1151, …`; `q = 3` belongs to the list too.
-- `b(127) = 0`, at the Mersenne prime `127 = 2^7 − 1`. The congruence forces `|b(127)| ≡ ±128 (mod 2^7)`, i.e. `|b(127)| ∈ {0, 128}`, and the value is 0. So `Y_127 = 1 − 128²`.
+- `b(127) = 0`, at the Mersenne prime `127 = 2^7 − 1`. The valuation law below gives `128 | b(127)`, and with `|b(127)| <= 254` this leaves `|b(127)| ∈ {0, 128}`. The value is 0, so `Y_127 = 1 − 128²`. (A first draft derived this from the depth congruence, which gives only mod 64 at `q ≡ 7 (mod 8)`; audit E6.)
 - `|b(191)| = 320 = 192 + 128` gives `Y_191 = 1 + 128·512 = 1 + 2^16 = F_4`. `|b(383)| = 128` gives `Y_383 = 1 − 256·512 = 1 − 2^17 = −M_17`.
-- Mersenne primes `2^p − 1` for `p = 13, 17, 19`: [MERSENNE]
+- Mersenne primes `2^p − 1` for `p = 13, 17, 19` (with `p = 2, 3, 5` giving `|b(q)| = q + 1`, i.e. `Y = 1`): `|b(8191)| = 0`, `|b(131071)| = 2^14` and `|b(524287)| = 63·2^13`. These give `M_q = −2^26`, `−63·2^28` and `−127·2^26`; the square law holds at each, with `v_2(M_q) = 26, 28, 26`. Two of the seven Mersenne primes up to `2^19 − 1` (127 and 8191) are zeros of the non-CM newform `b`. The audit found a further zero, `b(213247) = 0`, where `213247 + 1 = 2^8·833` is not a Mersenne number. All three zeros lie in classes `v_2(q+1) >= 7`, where the valuation law forces `128 | b(q)`. **Valuation law (FINITE-EXACT, all 9,005 primes `q ≡ 3 (mod 4)` below 200,000):** `gcd(q + 1, 2^7)` divides `b(q)`. The exponent 7 is sharp. So the coefficient carries the Eisenstein factor `1 + q` 2-adically, up to exactly `2^7 = 128`, which is where the owner's 128 sits inside this newform. Details are in the atlas note.
 
-## 4b. The wheel ladder: wheels are power sums of Jacobi sums (PROVED), `W_6` is a weight-6 newform (FINITE-EXACT)
+## 4b. The wheel ladder: Jacobi-sum power sums (Greene's hypergeometric functions), `W_6` is the weight-6 level-8 newform (CITED: Frechette–Ono–Papanikolas)
 
 Let `D = diag(χ(x))` and `S_{xy} = χ(y − x)`. Then `U(W_n) = q·T_n` with `T_n = Tr((DS)^n)`: the hub is at 0, the spokes give `D`, and the rim gives `S`.
 
-**Proposition (PROVED).** `T_n = Σ_ψ (χ(−1)J(ψ, χ))^n`. The sum runs over all `q − 1` multiplicative characters, and `J(ψ, χ) = Σ_t ψ(t)χ(1 − t)`.
+**Proposition (PROVED; standard).** `T_n = Σ_ψ (χ(−1)J(ψ, χ))^n`. The sum runs over all `q − 1` multiplicative characters, and `J(ψ, χ) = Σ_t ψ(t)χ(1 − t)`. Up to normalisation this is Greene's finite-field hypergeometric function `ₙF_{n−1}(1)`: `T_n = (q−1)q^{n−1}·ₙF_{n−1}(1)` (audit I1). The derivation below is included for completeness.
 
 *Proof.* Terms with some `x_i = 0` vanish. Put `t_i = x_{i+1}/x_i`, so that `Π t_i = 1`. Then
 
@@ -183,16 +192,26 @@ and `(x_1, t_1, …, t_{n−1})` parametrises the tuples bijectively. Hence `T_n
 
 So the nonzero eigenvalues of `DS` are exactly the Jacobi sums `χ(−1)J(ψ, χ)`. For `q ≡ 3 (mod 4)` the odd `T_n` vanish, because `S` is skew.
 
-**Identifications (FINITE-EXACT).** These were found by exact overdetermined fits: `T_6` needed 3 of 8 basis functions at 13 primes (`paley_wheel_ladder_fit_20261014.py`). They were then confirmed at all 39 primes `q ≡ 3 (mod 4)` in `[7, 400]` through the Jacobi-sum formula (`paley_wheel_jacobi_20261014.py`).
+**Identifications.** `T_4` is Ahlgren–Ono's `₄F₃(1)`. `T_6` is Koike's evaluation of `₆F₅(1)`, proved by Frechette–Ono–Papanikolas (IMRN 2004, Cor. 1.2), which also explains why the ladder stays at level 8 through weight 6 (audit I1). This session found both by exact overdetermined fits (`T_6` needed 3 of 8 basis functions at 13 primes; `paley_wheel_ladder_fit_20261014.py`) and rechecked them at all 39 primes `q ≡ 3 (mod 4)` in `[7, 400]` through the Jacobi-sum formula (`paley_wheel_jacobi_20261014.py`). They are CITED results, not new identifications.
 - `T_4 = −(q − 1)(q + a_q)`, with `a = η(2z)⁴η(4z)⁴` (weight 4, level 8). This is the S34 wheel.
 - `T_6 = (q − 1)(q² − q·a_q − b6_q)`, where `b6 = q + 20q³ − 74q⁵ − 24q⁷ + 157q⁹ + 124q¹¹ + 478q¹³ − 1480q¹⁵ + …` is the newform of `S_6(Γ_0(8))`, the `T_3 = 20` eigenvector. This space is built from `a(z)` times the weight-2 forms `E_2(z) − dE_2(dz)`, `d = 2, 4, 8`, and `T_3` has characteristic polynomial `(x − 20)(x + 12)²`.
-- `T_8` is **not** in the span of `q^j` and the Tate twists of all level-2, 4 and 8 eigenforms of weights `<= 8`. `S_8(Γ_0(8))` was computed in full, with dimension 5: newforms `a_3 = 44` and `a_3 = −84`, and the old level-2 form `a_3 = 12`. OPEN, with the prediction that weight-8 forms of level 16 or 32 enter.
+- `T_8` (Greene's `₈F₇(1)`; no modular evaluation is known) is **not** in the span of:
+  - `q^j`, the Tate twists `q²a, qa, a, qb6, b6, qe6, e6`, and
+  - the 24 coefficient functions of a basis of `S_8(Γ_0(32))`, which at odd primes cover every newform of level dividing 32 and weight 8 (all Galois embeddings).
 
-The pattern `W_{2m} ↔ weight 2m` is what Birch–Ihara-type moment formulas lead one to expect (ANALOGY). Here it comes from the power sums of one Jacobi-sum family.
+  The linear system has 39 primes and 35 functions, of rank 17 at these primes; the augmented rank is 18 (`paley_wheel_T8_level32_negative_20261014.py`). The audit ran the same test independently at levels 2/4/8 (39 primes, 15 functions).
+  - The prediction registered in this note's first draft, "weight-8 forms of level 16 or 32", is refuted for trivial character.
+  - The fit output first cited, from `paley_wheel_ladder_fit_20261014.py`, was underdetermined (13 primes, 14 functions); audit E8.
+  - OPEN. Next candidates: nebentypus `χ_8`, level 64, or products with odd-weight forms.
+
+The pattern `W_{2m} ↔ weight 2m` through `m = 3` is the Ahlgren–Ono / Frechette–Ono–Papanikolas theory of `ₙF_{n−1}(1)`. The wheels are its graph-theoretic face.
 
 ## 4c. The rigidity–Calabi–Yau dictionary (HYP-9278; ANALOGY with exact support)
 
-**Why `|E| = 2|V| − 2`.** `U(G) = Σ_x Π_{uv ∈ E} χ(x_v − x_u)` counts points, up to trivial terms, on the double cover of `P^{|V|−2}` (coordinates modulo translation and scaling) branched along the `|E|` hyperplanes `x_u = x_v`. A double cover of `P^n` branched in degree `2d` has `K = π^*O(d − n − 1)`. So it is Calabi–Yau exactly when `|E| = 2(|V| − 1)`, Fano-like below that, and of general type above.
+**Why `|E| = 2|V| − 2`.** `U(G) = Σ_x Π_{uv ∈ E} χ(x_v − x_u)` counts points, up to trivial terms, on the double cover of `P^{|V|−2}` (coordinates modulo translation and scaling) branched along the `|E|` hyperplanes `x_u = x_v`. A double cover of `P^n` branched in degree `2d` has `K = π^*O(d − n − 1)`.
+- So the canonical class is trivial exactly when `|E| = 2(|V| − 1)`, anti-effective below that, and effective above.
+- This canonical-class count is all that is proved. Calling these singular arrangement double covers "Calabi–Yau", "Fano" or "general type" presumes a suitable resolution (audit I9).
+- The count is necessary, not sufficient, for a new motive: `K_4` plus a degree-2 vertex meets the count and only reproduces `K_4`.
 - In rigidity theory, `|E| = 2|V| − 3` with Laman sparsity is minimal rigidity in the plane. `|E| = 2|V| − 2` with all proper subgraphs sparse is a **2D rigidity circuit**.
 - Two-trees, the maximal series-parallel graphs, are Laman, built by Henneberg type-I moves. These are precisely THM-4652's polynomial regime.
 - Odd `|E|` always gives `U = 0`, since scaling by a non-square flips the sign.
@@ -201,15 +220,15 @@ The pattern `W_{2m} ↔ weight 2m` is what Birch–Ihara-type moment formulas le
 |---|---|---|---|---|---|
 | series-parallel (2-trees and below) | `|E| <= 2|V| − 3` | Laman | Fano or below | polynomial | PROVED (THM-4652) |
 | `K_(3,3) − e`, prism `− e` (reducible by THM-4652 once the degree-2 vertices are series-reduced) | 6, 8 | Laman-sparse | Fano | `−q(q−3)`, `q` (both classes mod 4) | FINITE-EXACT (holdout primes) |
-| cube `Q_3`: the first pure core in the Fano regime | 8, 12 | Laman-sparse | Fano | `q·((5 − q)a_q + 3q)`, **not** polynomial: `q` times its dual, the octahedron | FINITE-EXACT (32 primes); section 4d |
+| cube `Q_3`: one of the five connected cubic graphs on 8 vertices, the smallest pure cores in the Fano regime | 8, 12 | Laman-sparse | Fano | `q·((5 − q)a_q + 3q)`, **not** polynomial: `q` times its dual, the octahedron | FINITE-EXACT (32 primes; audit: 35 primes); section 4d |
 | Y-junction (3 neighbours) | — | — | elliptic curve (4 branch points) | Legendre trace, weight 2 | classical |
 | `K_4 = W_3` | 4, 6 | circuit | K3 (double sextic) | 0 for tournaments; CM `η(4z)⁶`, weight 3 | CITED |
 | `W_4` | 5, 8 | circuit | CY3 (double octic) | `η(2z)⁴η(4z)⁴`, weight 4, level 8 | PROVED (S34) |
 | `K_6 − P_6` | 6, 10 | circuit | CY4 | `Sym²` of the weight-3 level-32 newform (GL(3), motivic weight 4) | FINITE-EXACT (HYP-9276; here) |
 | `K_(2,4) + 2K_2` (Paley graphs) | 6, 10 | circuit | CY4 | `q(q−1)b_q²`: square of the weight-3 CM form | FINITE-EXACT (HYP-9275 B) |
-| `W_6` | 7, 12 | circuit | CY5 | weight-6 level-8 newform `+ q·`(weight 4) | FINITE-EXACT (4b) |
+| `W_6` | 7, 12 | circuit | CY5 | weight-6 level-8 newform `+ q·`(weight 4) | CITED (Frechette–Ono–Papanikolas); rechecked (4b) |
 | `K_4` plus a degree-2 vertex | 5, 8 | contains the circuit `K_4` | — | `−b_q` (the `K_4` form), 0 for tournaments | FINITE-EXACT |
-| octahedron minus 2 edges at one vertex | 6, 10 | contains the circuit `W_4` | — | `q + a_q` (the `W_4` form) | FINITE-EXACT |
+| octahedron minus 2 edges at one vertex | 6, 10 | contains the circuit `W_4` | — | `q + a_q` (the `W_4` form) for `q ≡ 3 (mod 4)`; the audit checked both classes (20 primes) | FINITE-EXACT |
 | octahedron `K_(2,2,2)` | 6, 12 | over-braced | general type | `(5 − q)a_q + 3q`: the `W_4` form, twisted | FINITE-EXACT |
 
 **Reading (HYP-9278, after the cube).**
@@ -221,9 +240,9 @@ The pattern `W_{2m} ↔ weight 2m` is what Birch–Ihara-type moment formulas le
 
 The dictionary is not proved: the arrangement singularities need crepant resolutions, and the weight assignment is only checked on the rows above.
 
-## 4d. Planar Fourier duality: the Calabi–Yau line is self-dual (PROVED; FINITE-EXACT checks)
+## 4d. Planar Fourier duality: the Calabi–Yau line is self-dual (PROVED: a specialisation of classical duality; FINITE-EXACT checks)
 
-**Proposition (PROVED).** Let `G` be a connected plane graph with `|E|` even, and give the dual edge of `u → v` the orientation crossing it from the face on its left to the face on its right. Then
+**Proposition** (a specialisation of the Kramers–Wannier / Wu–Wang (1976) duality for abelian edge weights on plane graphs; the proof is included because the quadratic character makes it exact). Let `G` be a connected plane graph with `|E|` even, and give the dual edge of `u → v` the orientation crossing it from the face on its left to the face on its right. Then
 
 `U(G) = χ(−1)^{|E|/2}·q^{(|V| − |V*|)/2}·U(G*)`.
 
@@ -279,24 +298,43 @@ The dictionary is not proved: the arrangement singularities need crepant resolut
 
 1. **The electrical analogy** is exact for the combinatorics: the reduction steps and Duffin's characterisation. It is not a statement that some resistance equals a character sum.
 2. **"One modular form through twelve steps"** is FINITE-EXACT. The core list is complete for these reduction rules, and the octahedron identity is checked at 26 primes, not proved. At larger `L` new cores will appear; `K_6 − P_6` already enters the weighted `R(q)` expansion.
-3. **The `K_6 − P_6` identification** is mac-mini's (HYP-9276), and this session's agreement is a second pipeline, not a proof. The 2-adic congruence `|b(q)| ≡ ±(q+1) (mod 2^m)` is FINITE-EXACT; the `Z/2 × Z/8` mechanism is a proposal. The Mersenne and Fermat values are coincidences of a known shape: both factors being powers of 2.
+3. **The `K_6 − P_6` identification** is mac-mini's (HYP-9276), and this session's agreement is a second pipeline, not a proof. The 2-adic congruences of `b` are FINITE-EXACT to 524,288, but only through the audit's exact tabulation of `b`; this session's own range beyond 700 is the floating-point perfect-square test. The `Z/2 × Z/8` route is a proposal, and McCarthy–Papanikolas cover `p ≡ 1 (mod 4)`. The Mersenne and Fermat values are coincidences of a known shape, both factors being powers of 2, and the non-Mersenne zero at 213247 shows that zeros are not a Mersenne phenomenon.
 4. **The rigidity–Calabi–Yau dictionary** is an organising hypothesis, not a theorem, and it has already lost one clause. "Laman-sparse pure cores are polynomial" was refuted by the cube, then repaired by planar duality. "Calabi–Yau" ignores the singularities of the arrangement double covers.
-5. **The `T_6` identification** came from an exact overdetermined fit (3 nonzero coefficients among 8 candidates, at 13 primes) and was then confirmed at 39 primes by an independent evaluation route. `T_8` failed in the same basis, which is reported as such.
-6. **The Catalan leading terms** are FINITE-EXACT for `k <= 6`, and the free-probability mechanism is heuristic.
+5. **The wheel results are standard.** The Jacobi-sum formula is Greene's, and `T_6` is a theorem of Frechette–Ono–Papanikolas. The session rediscovered `T_6` by fitting and should not be read as claiming it. The `T_8` negative is the only new wheel statement.
+6. **The Catalan leading terms** are THM-438's law. The exact closed forms add `k = 5, 6`, and the mechanism is THM-438's signed Möbius sum.
 7. **The owner's numerology** (Fibonacci, 10 = 7 + 3, 55) is recorded with its exact sources. No mechanism links it to the run sums beyond the too-few-points roots.
 8. **Nothing here bears on Collatz, Hadwiger–Nelson or JC2 directly.** It locates precisely where the Riemann hypothesis for varieties acts on a family of discrete structures: at rigidity circuits.
 
 ## 8. Open threads
 
 1. Prove the octahedron identity, presumably through the quartic-family second moment and Ahlgren–Ono.
-2. Prove HYP-9276. Explain the congruence `|b(q)| ≡ ±(q+1) (mod 2^m)`, perhaps through McCarthy–Papanikolas' `Z/2 × Z/8` Legendre curves.
-3. Identify `T_8`, the wheel `W_8` (weight 8, level 16 or 32?), and test the dictionary on 7-vertex circuits other than wheels.
-4. `A_14`: Bell(14) = 190,899,322 partitions, out of reach for the Python compiler. A compiled version is needed to see whether `K_6 − P_6` enters single runs.
+2. Prove HYP-9276. Explain the congruences `|b(q)| ≡ ±(q+1) (mod 2^m)` and `gcd(q+1, 128) | b(q)` (descent form over `F_(q²)`?).
+3. Identify `T_8 = ₈F₇(1)` up to normalisation (not in level-32 trivial-character forms), and test the dictionary on 7-vertex circuits other than wheels.
+4. `A_14` via the audit's signed subset DP (cheap at `q = 19, 23, 27`; more primes are needed for the closed form).
 5. Derive the coefficients 34, `6688 − 408q` and `−68` combinatorially, as Möbius-weighted counts of core embeddings.
 
 ## 9. Audit
 
-Pending.
+An independent adversarial audit ran in-session; its report is `04-computation/experiments/paley_s35_audit_20261014/REPORT.md` and it wrote its own scripts in that folder. MISTAKE-613 records the outcome.
+
+**Confirmed.**
+- Every recomputed number checks out. Out of sample, `A_10` and `A_12` hold at `q = 27`.
+- `A_12(19)` and `A_10(19)` agree by an independent signed subset DP.
+- The square law agrees with the audit's exact `O(q²)` evaluator.
+- `b` was rebuilt from theta products and tabulated to 524,288. `|b(q)| = c_q` at all 9,005 primes below 200,000, and the 2-adic laws hold to 524,288.
+- `M_8191 = −2^26` (exact). The Jacobi proof, the duality proof and sign, and the cube identity (35 primes) check out.
+- All tournament results for `n <= 7` reproduce.
+
+**Fixed.**
+- E1: the refuted Catalan mechanism; THM-438 is now cited.
+- E5: the circuit/Calabi–Yau overstatement, and HYP-9276 stated as fact.
+- E6: the derivation of `|b(127)| ∈ {0, 128}`.
+- E8: the underdetermined `T_8` evidence, replaced by a 39-prime test at level 32.
+- E10, E11: the Mersenne count and the Sato–Tate mean.
+- I1, I2: the wheel formula, `T_6` and the duality are now credited as classical (Greene; Frechette–Ono–Papanikolas; Kramers–Wannier / Wu–Wang).
+- I3–I6, I9, I10, I13: ranges, typing, the mechanism scope, the canonical-class caveat, "first" Fano core, and the both-classes row.
+
+The atlas note's own errors E2–E4, E7 and E9 are fixed there.
 
 ## 10. Reproduction and references
 
@@ -312,12 +350,18 @@ Pending.
 - `paley_wheel_ladder_20261014.py`, `paley_wheel_ladder_fit_20261014.py`, `paley_wheel_jacobi_20261014.py` (wheel traces, fits, Jacobi-sum confirmation to 400);
 - `paley_cube_fano_core_20261014.py` (the cube, `O(q⁴)`, cross-checked by brute force; 32 primes);
 - `paley_planar_fourier_duality_20261014.py` (duality checks);
-- `paley_k6p6_two_adic_valuation_law_20261014.py` (`|b(q)|` at every prime `q ≡ 3 (mod 4)` below 200,000; the valuation law).
+- `paley_k6p6_two_adic_valuation_law_20261014.py` (`|b(q)|` at every prime `q ≡ 3 (mod 4)` below 200,000; the valuation law);
+- `paley_k6p6_valuation_deep_classes_20261014.py` (the 580 primes `q ≡ −1 (mod 512)` to `2·10⁶`);
+- `paley_wheel_T8_level32_negative_20261014.py` (the overdetermined `T_8` test at level 32);
+- the audit folder `paley_s35_audit_20261014/`, with `REPORT.md` and independent scripts (signed SAW DP, theta-product newform to 524,288, exact `O(q²)` evaluator, duality by rotation systems, tournaments by brute force).
 - `paley_rigidity_dictionary_tests_20261014.py` (the Fano-regime and circuit-reduction rows of section 4c).
 
 **References.**
 - **Literature:**
   - R. J. Duffin, Topology of series-parallel networks, *J. Math. Anal. Appl.* 10 (1965);
+  - J. Greene, Hypergeometric functions over finite fields, *Trans. AMS* 301 (1987);
+  - S. Frechette, K. Ono and M. Papanikolas, Gaussian hypergeometric functions and traces of Hecke operators, *IMRN* 2004 (Koike's `₆F₅(1)` evaluation, Cor. 1.2);
+  - F. Y. Wu and Y. K. Wang, Duality transformation in a many-component spin model, *J. Math. Phys.* 17 (1976) (Kramers–Wannier-type duality for abelian weights);
   - S. Ahlgren and K. Ono, *J. reine angew. Math.* 518 (2000);
   - F. Beukers, *J. Number Theory* 25 (1987) (supercongruence), and *Astérisque* 147–148 (1987) (the modular irrationality proof, level 6);
   - P. Deligne (1974);
@@ -330,7 +374,7 @@ Pending.
   - L. Flatto, J. C. Lagarias and A. D. Pollington, *Acta Arith.* 70 (1995);
   - OEIS A038375.
 - **This repository:**
-  - THM-4652;
+  - THM-4652; THM-438 (the Catalan law and its signed-Möbius mechanism);
   - mac-mini's THM-4653 and HYP-9276 (the `K_6 − P_6` identification);
   - HYP-9274, HYP-9275, HYP-9278;
   - S34 [note](paley_h31_exact_rate_and_apery_wheel_20261014.md);

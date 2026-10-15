@@ -1,0 +1,6 @@
+collected 400 labelled strong 7-tournaments with delta = 4/11  [20 s]
+strong one-vertex extensions examined: 50400; least delta = 27/67 = 0.4030 (64/161 = 0.3975); example adj = ([226, 220, 17, 133, 137, 158, 188, 4], 201)
+Claim-A counterexample n = 8: H = 45, delta = 4/9, has a balanced arc: True
+Claim-A counterexample n = 9: H = 81, delta = 4/9, has a balanced arc: True
+Claim-A counterexample n = 10: H = 153, delta = 8/17, has a balanced arc: True
+[27 s]

@@ -1,0 +1,3 @@
+580 primes q = -1 mod 512 up to 2000000: square law holds at all; min v2(|b(q)|) = 7; violations of v2 >= 7: []  [1045 s]
+distribution of v2(|b(q)|): [(7, 306), (8, 140), (9, 60), (10, 36), (11, 18), (12, 8), (13, 4), (14, 2), (15, 3), (16, 2), (20, 1)]
+zeros b(q) = 0: [8191]

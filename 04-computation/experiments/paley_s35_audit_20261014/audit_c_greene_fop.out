@@ -1,0 +1,2 @@
+44 primes 5..199 (both classes): T_4 = -(p-1)(p + a_p) failures []; T_6 = (p-1)(-b6_p - p a_p - phi(-1) p^2) [Koike/FOP] failures []
+b6(13), b6(17) = 478 -1198

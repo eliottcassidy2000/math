@@ -1,0 +1,15 @@
+FFT evaluator agrees with the exact O(q^3) table at q = [11, 19, 23, 43, 127, 191, 499, 691]
+primes q = 3 mod 4 in [30000, 200000]: 7373;  perfect-square law (S) failures: [] (0)  [1112 s]
+  q =  3 mod 16: min depth of c = +-(q+1) mod 2^m: 5;  min v2(M_q): 8
+  q =  7 mod 16: min depth of c = +-(q+1) mod 2^m: 6;  min v2(M_q): 10
+  q = 11 mod 16: min depth of c = +-(q+1) mod 2^m: 4;  min v2(M_q): 7
+  q = 15 mod 16: min depth of c = +-(q+1) mod 2^m: 6;  min v2(M_q): 11
+Mersenne primes q = 2^p - 1:
+  p =  3, q = 7: M_q = 0, perfect square: True, c_q = |b(q)| = 8 = 1 * 2^3, v2(M_q) = 99, depth = 99
+  p =  5, q = 31: M_q = 0, perfect square: True, c_q = |b(q)| = 32 = 1 * 2^5, v2(M_q) = 99, depth = 99
+  p =  7, q = 127: M_q = -16384, perfect square: True, c_q = |b(q)| = 0 = 0 * 2^99, v2(M_q) = 14, depth = 7
+  p = 13, q = 8191: M_q = -67108864, perfect square: True, c_q = |b(q)| = 0 = 0 * 2^99, v2(M_q) = 26, depth = 13
+  p = 17, q = 131071: M_q = -16911433728, perfect square: True, c_q = |b(q)| = 16384 = 1 * 2^14, v2(M_q) = 28, depth = 14
+  p = 19, q = 524287: M_q = -8522825728, perfect square: True, c_q = |b(q)| = 516096 = 63 * 2^13, v2(M_q) = 26, depth = 13
+
+[exited with code 0]
