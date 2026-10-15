@@ -1,0 +1,14 @@
+V_q for 122 primes q = 3 mod 4 up to 1500; brute force agrees for q <= 43; recorded values {7: 336, 11: -12320, 19: -76608, 31: 52080} reproduced  [6.1s]
+  q =     3: V_q = 0,  W_q = V_q/(q(q-1)) = 0
+  q =     7: V_q = 336,  W_q = V_q/(q(q-1)) = 8
+  q =    11: V_q = -12320,  W_q = V_q/(q(q-1)) = -112
+  q =    19: V_q = -76608,  W_q = V_q/(q(q-1)) = -224
+  q =    23: V_q = 538384,  W_q = V_q/(q(q-1)) = 1064
+  q =    31: V_q = 52080,  W_q = V_q/(q(q-1)) = 56
+  q =    43: V_q = -1936032,  W_q = V_q/(q(q-1)) = -1072
+  q =    47: V_q = -4237520,  W_q = V_q/(q(q-1)) = -1960
+  q =    59: V_q = -2682848,  W_q = V_q/(q(q-1)) = -784
+  q =    67: V_q = -19810560,  W_q = V_q/(q(q-1)) = -4480
+  q =    71: V_q = -9502640,  W_q = V_q/(q(q-1)) = -1912
+  q =    79: V_q = -36922704,  W_q = V_q/(q(q-1)) = -5992
+W_q for all 237 primes 5 <= q <= 1500 written to k6p6_W_allprimes.json

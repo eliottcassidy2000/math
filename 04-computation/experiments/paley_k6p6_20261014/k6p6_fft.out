@@ -1,0 +1,8 @@
+3243 primes 5 <= q <= 30000; FFT values equal the exact O(q^3) values at all 237 primes below 1500  [25.7s]
+2-adic divisibility: q = 3 mod 8 with 2^7 not dividing M_q: [] (0); q = 7 mod 8 with 2^10 not dividing M_q: [] (0)
+  q = 1 mod 8: min v2(M_q) = 1
+  q = 3 mod 8: min v2(M_q) = 7
+  q = 5 mod 8: min v2(M_q) = 1
+  q = 7 mod 8: min v2(M_q) = 10
+M_q = 0 at 11 primes: [7, 31, 199, 223, 1151, 2239, 2663, 3391, 3583, 23719, 23743]
+M_q/q^2: mean 0.0064, rms 0.9928, min -2.947, max 2.945
