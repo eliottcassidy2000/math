@@ -1,0 +1,4 @@
+n=9: tournaments read 178133, non-transitive 178133, with delta < 1/3: 0, with a balanced arc: 178133
+  minimum delta = 186/471 = 0.394904 ; minimum over arcs of p(tail first) = 17/81 = 0.209877
+  minimiser: 110001111111111111111110001111111101
+  strong T with a cut vertex z (T - z not strong): 78668; every cut vertex has a balanced partner: 78668; some cut vertex does: 78668; every vertex of T has a balanced partner: 178133

@@ -1,10 +1,11 @@
 ---
 id: HYP-9279
-title: "Strong tournaments are strictly better balanced: every strong tournament on n >= 4 vertices has a pair ordered with probability in [4/11, 7/11] in a uniform Hamiltonian path (delta(T) >= 4/11), the bound attained exactly at n = 5, 6, 7"
+title: "Strong tournaments are strictly and vertex-wise balanced: (A) every strong tournament on n >= 4 vertices has delta(T) >= 4/11; (B) in every strong tournament EVERY vertex v has a partner w with 1/3 <= P(v before w) <= 2/3 in a uniform Hamiltonian path"
 status: >
-  OPEN. FINITE-EXACT for all strong tournaments with n <= 9 (exhaustive; minima 2/5, 4/11, 4/11, 4/11, 62/157, 62/157 for
-  n = 4..9); the transitive-plus-one subfamily satisfies it for n <= 14 (exact; minima rising towards 1/2). Implies
-  HYP-9277's inequality with a strict gap for strong components on >= 4 vertices.
+  OPEN. (A) and (B) are FINITE-EXACT for all strong tournaments with n <= 9 (exhaustive; minima 2/5, 4/11, 4/11, 4/11,
+  62/157, 62/157 for n = 4..9; every vertex of all 1 + 6 + 35 + 353 + 6008 + 178133 strong tournaments has a balanced
+  partner), and for the transitive-plus-one subfamily up to n = 14 (exact). Either implies HYP-9277's inequality; (A) with a
+  strict gap for strong components on >= 4 vertices.
 session: mac-mini-2026-10-14-tourn
 source: 05-knowledge/results/strong_tournament_balance_golden_rigidity_20261014.md
 scripts:
@@ -13,7 +14,7 @@ scripts:
 related: [HYP-9277, THM-4655]
 ---
 
-# HYP-9279: a strict balance gap for strong tournaments
+# HYP-9279: strict and vertex-wise balance for strong tournaments
 
 ## Statement
 
@@ -25,6 +26,16 @@ Equivalently, `δ(T) >= 4/11`.
 
 - Equality would be attained exactly at the `n = 5, 6, 7` minimisers. At `n = 5` the minimiser is the transitive-plus-one tournament `w = 1100`.
 - With S35's component reduction, this would imply HYP-9277's inequality for every tournament. Equality `δ = 1/3` then occurs only at strong components of size 3.
+
+## Statement (B): vertex-wise balance
+
+In a strong tournament on `n >= 3` vertices, every vertex `v` has a partner `w` with `1/3 <= p_T(v before w) <= 2/3`.
+
+- This is much stronger than HYP-9277, which asks for one balanced pair. It has no poset analogue: in the 3-element poset `{a} ∥ {b < c}`, the element `a` has balanced partners, but neither does `b` against `c`. Strong connectivity is what puts every vertex on cycles.
+- It fails for non-strong tournaments trivially: a singleton strong component is ordered deterministically against everything.
+- Checked exhaustively for all strong tournaments with `n <= 9` (`tbal2.c`), and for every strong transitive-plus-one tournament with `n <= 14` (`tpo_vertexwise.py`).
+- For the extra vertex `z` of a transitive-plus-one tournament, (B) is PROVED by THM-4655: `u_2` is always a balanced partner.
+- Also observed for `n <= 9`: every vertex whose deletion destroys strong connectivity has a balanced partner. This is implied by (B).
 
 ## Evidence
 
