@@ -7,3 +7,4 @@ P1 with |p|^2 <= 3.0 plus the radius-2 orbit |V|= 14329 |E|=  93048 radius-2 orb
 M3 u psi [P1 with |p|^2 <= 3.0 plus the radius-2 orbit] |V|= 46585 |E|= 364272  NOT 4-colourable  [build 31.3s, solve 1776.1s]
    [2009.0s]
 == P1 with |p|^2 <= 2.5 plus the radius-2 orbit: |P'| = 13153
+P1 with |p|^2 <= 2.5 plus the radius-2 orbit |V|= 13153 |E|=  80592 radius-2 orbit   24: FORCED  [337.1s]
