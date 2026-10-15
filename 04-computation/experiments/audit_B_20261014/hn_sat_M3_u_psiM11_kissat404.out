@@ -1,0 +1,3 @@
+/private/tmp/claude-501/-Users-e-Documents-GitHub-math/f1b41b3c-5f00-4184-8c88-059bb9352d19/scratchpad/auditB/M3_u_psiM11.npz: n = 34849, |E| = 282720, solver kissat404, fixed triangle (17424, 2475, 2494)
+4-colourable: True  [2.2s]
+certificate check: colouring of all 34849 vertices, monochromatic edges = 0

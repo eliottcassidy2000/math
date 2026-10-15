@@ -119,7 +119,7 @@ Details are in `hn_type_m_hinge_rotations_and_forced_radii_20261014.md`.
 * **Spindle-free.**
   * Rebuilt exactly: the Voronov–Neopryatnaya–Dergachev graph (64,513 vertices, 542,472 edges, not 4-colourable).
   * Its hinge `ψ = φ_0^(−1)ρ` is Parts' `ρ`.
-  * Replacing one side by the clock piece `M_2 ⊕ M_1^clock` gives the **48,121-vertex** spindle-free graph `M_3 ∪ ψ(M_2 ⊕ M_1^clock)`, which is still not 4-colourable (CaDiCaL, 1,514 s).
+  * Replacing one side by the clock piece `M_2 ⊕ M_1^clock` gives the **48,121-vertex** spindle-free graph `M_3 ∪ ψ(M_2 ⊕ M_1^clock)`, which is still not 4-colourable (CaDiCaL, 1,514 s; independently confirmed by audit B with kissat 4.0.4 on an independent exact rebuild in `Q(ζ₂₄)(√5)`, 8,786 s).
   * This is the first reduction step towards the 1,441-vertex record (Heule 2021).
 * **Type M with Parts' pieces.** Vertex-critical subgraphs of 611–618 vertices, against the record 509.
 

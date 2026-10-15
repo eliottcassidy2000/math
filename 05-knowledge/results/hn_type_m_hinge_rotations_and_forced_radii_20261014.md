@@ -62,6 +62,7 @@ Parts builds his graphs as **type M**, `G = L ∪ ρS`. Here `L` and `S` are Min
      * `P_1 = M_2 ⊕ M_1^clock` (15,865 vertices; `M_1^clock = {0} ∪ {φ_0^a}`) forces it on its 24-point orbit `2φ_0^a`.
      * `M_3` (32,257 vertices) forces it on its 72-point orbit.
    * **4-colourable reductions.** `(M_1 ⊕ M_1) ∪ ψ(M_1 ⊕ M_1)` (5,185), `M_3 ∪ ψ(M_1 ⊕ M_1)` (34,849), `P_1 ∪ ψP_1` (31,729) and `(M_2^c ⊕ M_1) ∪ ψ(M_2^c ⊕ M_1)` (11,569) are all 4-colourable.
+   * **Independent confirmation (audit B, kissat 4.0.4 on its own exact rebuild in `Q(ζ₂₄)(√5)`):** `M_3 ∪ ψP_1` (48,121 vertices, 385,296 edges) is not 4-colourable (8,786 s); `P_1` forces radius 2 on its 24-point orbit (427 s); `M_3 ∪ ψ(M_1 ⊕ M_1)` and `P_1 ∪ ψP_1` are 4-colourable, with explicit colourings checked edge by edge (`audit_B_20261014/hn_*_kissat404.out`).
    * As with L727, a non-forcing piece kills 5-chromaticity, and two forcing pieces are not enough. The rigidity of `M_3` was not measured. Only the mixed pair `M_3 ∪ ψP_1` was run (`spindle_free_mixed.log`). `P_1 ∪ ψM_3` is congruent to it under complex conjugation, since `M_3` and `P_1` are both conjugation-invariant (checked exactly by audit B), so it needs no separate test.
 
 8. **Later experiments (SOLVER; added after the audit-B scope, not audited).**

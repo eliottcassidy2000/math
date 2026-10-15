@@ -1,0 +1,5 @@
+denominator of generators and psi: 24 [0.0s]
+|M1| = 73, |M1clock| = 25, D = 24 [0.0s]
+|M1+M1| = 2593, |M2| = 865, |M3| = 32257, |P1 = M2+M1clock| = 15865, |M2c| = 97 [0.2s]
+M1+M1, M3 and P1 are invariant under multiplication by phi0 = zeta (so psi B = rho B) [0.4s]
+P1.npz: n = 15865, |E| = 114072, radius-2 orbit 24; colouring avoiding colour(0) on the orbit exists: False -> FORCED (kissat404, 427.4s)
