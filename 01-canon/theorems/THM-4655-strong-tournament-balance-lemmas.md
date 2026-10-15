@@ -1,10 +1,10 @@
 ---
 id: THM-4655
-title: "Uniform Hamiltonian paths of strong tournaments: the 1/3-2/3 property holds for every strong 'transitive-plus-one' tournament, with the explicit balanced pair (z, u_2); there the extra vertex z is balanced against every interior vertex, every vertex has a balanced partner and the unique Hamiltonian cycle carries at least two balanced arcs; the exact transfer chain at a cut vertex, and with it: a cut vertex z is balanced against every vertex of each interior strong component of T - z with at most 6 vertices, whatever the rest of T (computer-assisted); vertex-wise balance is sharp at 1/3 for every n >= 5; a rotation lemma for Hamiltonian cycles; Stanley-type log-concavity fails; exhaustive verification for all strong tournaments on n <= 10 vertices"
+title: "Uniform Hamiltonian paths of strong tournaments: the 1/3-2/3 property holds for every strong 'transitive-plus-one' tournament, with the explicit balanced pair (z, u_2); there the extra vertex z is balanced against every interior vertex, every vertex has a balanced partner and the unique Hamiltonian cycle carries at least two balanced arcs; the exact transfer chain at a cut vertex, and with it: a cut vertex z is balanced against every vertex of each interior strong component of T - z with at most 7 vertices, whatever the rest of T (computer-assisted); vertex-wise balance is sharp at 1/3 for every n >= 5; a rotation lemma for Hamiltonian cycles; Stanley-type log-concavity fails; exhaustive verification for all strong tournaments on n <= 10 vertices"
 status: >
   PROVED: statements 1, 2, 5, 6 (elementary; statement 1(f) uses an exact computer check for m <= 14 together with an
   analytic bound for m >= 9, and is reproved by statement 7). PROVED (computer-assisted): statement 7 (a general reduction to a
-  local certificate on one block, checked exactly for all blocks with at most 6 vertices; added after audit E). FINITE-EXACT: statements 3-4 (exhaustive, gentourng + exact subset DP in C). The tournament 1/3-2/3
+  local certificate on one block, checked exactly for all blocks with at most 7 vertices; added after audit E). FINITE-EXACT: statements 3-4 (exhaustive, gentourng + exact subset DP in C). The tournament 1/3-2/3
   conjecture HYP-9277 (opus S35) remains OPEN; this theorem proves it, and its vertex-wise strengthening HYP-9279(B), for
   a natural subclass of strong tournaments, and extends the exhaustive verification from n <= 8 to n <= 10.
 source: mac-mini-2026-10-14-tourn
@@ -16,7 +16,7 @@ verification:
   - 04-computation/experiments/tournament_balance_20261014/tpo_cycle_arcs.py (+ .out), tpo_vertexwise_proof_check.py (+ .out): statements 1(e)-(g)
   - 04-computation/experiments/tournament_balance_20261014/cutvertex_chain.py (+ .out): statement 5, validated against the subset DP
   - 04-computation/experiments/tournament_balance_20261014/vw_tight_family.py (+ .out): statement 6
-  - 04-computation/experiments/tournament_balance_20261014/z1_cone_certificate.py (+ z1_cert_upto5.out, z1_cert_6.out), z1_local_slack.py (+ .out): statement 7
+  - 04-computation/experiments/tournament_balance_20261014/z1_cone_certificate.py (+ z1_cert_upto5.out, z1_cert_6.out, z1_cert_7.out), z1_local_slack.py (+ .out): statement 7
   - 04-computation/experiments/tournament_balance_20261014/rotation_lemma_check.py, logconcave_test.py, analyse_minimisers.py
 note: 05-knowledge/results/strong_tournament_balance_golden_rigidity_20261014.md
 related: [HYP-9277, HYP-9279, THM-438 (Paley Hamiltonian paths), THM-4652 (Paley pattern sums)]
@@ -133,13 +133,13 @@ related: [HYP-9277, HYP-9279, THM-438 (Paley Hamiltonian paths), THM-4652 (Paley
    - Audit E found the same sharpness from that side: at the equality word, `u_2` has `p = 2/3, 1/3` against `z, u_1` and is unbalanced against everything else (S2 in its report).
    - Within the transitive-plus-one family, only this word and its reverse attain `1/3`, for each `m >= 5`.
 
-7. **(Cut vertices with a small interior component; computer-assisted.)** Let `T` be strong and `z` a vertex such that `T − z` has strong components `D_1 ⇒ … ⇒ D_k` with `k >= 3`. Let `2 <= i <= k − 1` with `|D_i| <= 6`. Then
+7. **(Cut vertices with a small interior component; computer-assisted.)** Let `T` be strong and `z` a vertex such that `T − z` has strong components `D_1 ⇒ … ⇒ D_k` with `k >= 3`. Let `2 <= i <= k − 1` with `|D_i| <= 7`. Then
 
    `1/3 <= p_T(v before z) <= 2/3` for every `v ∈ D_i`.
 
    - The other components may be arbitrary, of any size, and so may `n`.
-   - Corollary: if some interior component of `T − z` has at most 6 vertices, then `z` has a balanced partner and `δ(T) >= 1/3`.
-   - This proves HYP-9279 (Z1) for interior components with at most 6 vertices, and reproves 1(f), which is the case of singleton blocks.
+   - Corollary: if some interior component of `T − z` has at most 7 vertices, then `z` has a balanced partner and `δ(T) >= 1/3`.
+   - This proves HYP-9279 (Z1) for interior components with at most 7 vertices, and reproves 1(f), which is the case of singleton blocks.
 
 ## Proof
 
@@ -301,11 +301,11 @@ and the new `Lp` lies between the old `Lp` and `γ + s + (α + 1)P <= β + σP`.
 Both `3N − H` and `2H − 3N` are affine in each of `g, s', Lp, Rp`. So on the region (iii) their minima are attained at `g, s' ∈ {0, 1}`, `Lp ∈ {1, P}` and `Rp ∈ {1, Q}`. Each such corner is `aPQ + bP + cQ + d` with `a = σ/2`, and this is `>= 0` on `[1, ∞)²` iff `a >= 0`, `a + b >= 0`, `a + c >= 0` and `a + b + c + d >= 0`.
 
 *(v) Finite check.* `z1_cone_certificate.py` verifies all these conditions exactly for:
-- every strong tournament `D` with `|D| <= 6`: the singleton, and the 1, 1, 6 and 35 classes of sizes 3–6;
+- every strong tournament `D` with `|D| <= 7`: the singleton, and the 1, 1, 6, 35 and 353 classes of sizes 3–7;
 - every partition `D = O ⊔ I`;
 - every `v ∈ D`.
 
-That is 2,458 block types and every `v`, with no failure (`z1_cert_upto5.out`, `z1_cert_6.out`). ∎
+That is 47,642 block types and every `v`, with no failure (`z1_cert_upto5.out`, `z1_cert_6.out`, `z1_cert_7.out`). ∎
 
 *Remark (what is left in general).*
 - Of the four bilinear conditions, three hold for every block by short comparisons with the complement-symmetric `σ`; for instance `β − β(v) <= σ/2` and `α − α(v) <= σ/2 − 1`.

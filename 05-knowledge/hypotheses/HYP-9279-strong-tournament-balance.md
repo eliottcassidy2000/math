@@ -10,7 +10,7 @@ status: >
   for n <= 9. On the transitive-plus-one family, (B) and (B+) are PROVED (THM-4655 1(g)). (B) is sharp: the vertex-wise
   constant equals 1/3 for every n >= 5 (PROVED, THM-4655 (6), family W_n). (B_loc) is FINITE-EXACT for n <= 9 and exact on the transitive-plus-one family
   to n = 14. (Z) is FINITE-EXACT for n <= 9, survives random and adversarial sampling of the exact cut-vertex transfer chain
-  (THM-4655 (5)) to n = 46, is sharp at 1/3, and (Z1) is PROVED for every interior component with at most 6 vertices, the other
+  (THM-4655 (5)) to n = 46, is sharp at 1/3, and (Z1) is PROVED for every interior component with at most 7 vertices, the other
   components arbitrary (THM-4655 (7), computer-assisted; singleton blocks = THM-4655 1(f)). Each of (A), (B), (B+),
   (B_loc) implies HYP-9277's inequality, and (Z) implies it for every strong tournament with a cut vertex; (A) gives it with a
   strict gap for strong components on >= 4 vertices. Variant (H) is REFUTED (explicit 9-vertex counterexample). Audited
@@ -91,9 +91,9 @@ Let `z` be a vertex of a strong tournament `T` with `T − z` not strong, and le
 - **(Z2)** `z` has a balanced partner. For `k >= 3` this follows from (Z1); for `k = 2` it is the content.
 
 **Why it holds, and where it is PROVED.** In the exact transfer chain of THM-4655 (5), every interior block is a fair coin against `z` inside the crossing window. Wide windows carry geometric weight, since each interior block contributes `Σ_X h(X) h(D ∖ X) >= 2h(D)`.
-- **PROVED for every interior component with at most 6 vertices** (THM-4655 (7); computer-assisted). The other components may be arbitrary, and so may `n`.
+- **PROVED for every interior component with at most 7 vertices** (THM-4655 (7); computer-assisted). The other components may be arbitrary, and so may `n`.
   - The normalised chain stays in an invariant region: left `(1, g, P, Lp)` with `P >= 1` and `1 <= Lp <= P`; right `(Rp, s', Q, 1)` with `Q >= 1` and `1 <= Rp <= Q`. The bounds `>= 1` come from injections that cut a Hamiltonian path of an end block at its first out-neighbour (or last in-neighbour) of `z`.
-  - So (Z1) at `v` reduces to finitely many bilinear conditions on `v`'s own block. These are checked exactly for all strong tournaments with at most 6 vertices, all `z`-patterns and all `v`: 2,458 block types.
+  - So (Z1) at `v` reduces to finitely many bilinear conditions on `v`'s own block. These are checked exactly for all strong tournaments with at most 7 vertices, all `z`-patterns and all `v`: 47,642 block types.
   - It includes singleton blocks (1(f)) and `C_3` blocks.
 - **Reduction in general.** All but two corner conditions (`L4`, `U4`) hold for every block. Their slack is 0 only for singletons and grows with the block (5/3, 2, 26/9, 10/3 for sizes 3–6). Proving `L4`, `U4` for all strong tournaments would prove (Z1) in full.
 
