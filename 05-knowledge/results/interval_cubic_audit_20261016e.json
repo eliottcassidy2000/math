@@ -1,4 +1,9 @@
 {
+  "incoming_integration": {
+    "commit": "4971cf2b05",
+    "new_proofs": "B6 local solubility and index two; B7 even-degree hub; B8 coefficient-field gate",
+    "repair": "purely irrational square roots and exact real signs; final descent outcome survives"
+  },
   "independent_large_agreement": "fixed large full-prefix replays and compositional audit agree on all anchors, cone hashes, every source endpoint/clock hash at each stage, and final point energy at k=18,20",
   "inherited_commit": "6b7eecb78afa",
   "programs": [
@@ -21,6 +26,14 @@
     {
       "file": "04-computation/experiments/cubic_contact_probe_20261016e.gp",
       "sha256": "77e9593754380aa046c4030a5966a5b5374250de8bef3181ad0865aa6defff58"
+    },
+    {
+      "file": "04-computation/experiments/cubic_descent_audit_20261016e.py",
+      "sha256": "4cab7e5fa200058495cc4b3868a49bf07eaf3c3bc46e038abee07fa2a3ebc73e"
+    },
+    {
+      "file": "04-computation/experiments/two_descent_q_sqrt5_fish_curve_20261016.py",
+      "sha256": "8fc99d0bbbefac71b6f5960fcf07f5196073b2b809cc12b4ccc266d227d3eaa9"
     }
   ],
   "receipts": [
@@ -93,6 +106,13 @@
       "file": "cubic_adelic_20261016e_connector.json",
       "optimized_match": true,
       "sha256": "bbea571581a39f4d7f1afec2a546a8d9c717a8a8e1726639fd2ac8216339d4dc"
+    },
+    {
+      "bytes": 4104,
+      "checks": 3148,
+      "file": "cubic_descent_audit_20261016e.json",
+      "optimized_match": true,
+      "sha256": "3ae68d9143f5c05f6fe11b01d84cb2dfffb9d96b7b04123e3a0530086ec835f5"
     }
   ],
   "serialization": "Canonical compact JSON for Python receipts; original normal and optimized computations agree before and after canonicalization.",

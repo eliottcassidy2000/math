@@ -3,7 +3,9 @@
 2026-10-16, clock_duality_oct15. **PROVED, scoped:** the new norm-one unit,
 full unit-path component formula in both cubic fields, the mixed-prime
 example at 19, a short explicit connector, the full cubic metric, and a valuation lower bound for
-a specified unit-word alphabet. **PROVED algebra + FINITE-EXACT:** the joint
+a specified unit-word alphabet. B6 completes an incoming local-solubility
+argument; B7--B8 give an even-degree hub and a coefficient-field obstruction.
+**PROVED algebra + FINITE-EXACT:** the joint
 circuit, induced graph controls and arithmetic computations. **CITED:**
 classical algebraic-number-theory inputs and Serre modularity.
 **OPEN:** four-chromatic cubic contexts, six-colour forcing, Collatz uniform
@@ -29,6 +31,16 @@ small six-colour searches less plausible. Its proofs of the high/low count
 and the nineteen-vertex contradiction were checked directly here; this is
 not an independent referee of its cited graph-theoretic and fish inputs.
 In particular its threshold concerns failed exteriors, not all five-cores.
+The subsequent pull through `4971cf2b05` adds its statement 5: the exhaustive
+SAT census excludes failed exteriors through 21 vertices, hence gives a
+**FINITE-EXACT lower bound 22** (solver UNSAT verdicts, not proof-checked
+certificates). Its 36 sampled models at 22 are five-choosable; this does not
+exclude every possible model at 22. Incoming
+[THM-4662, fish-curve descent](../../01-canon/theorems/THM-4662-the-fish-curve-has-no-point-over-the-real-quartic-field-so-the-fish-and-ei21-are-not-in-q-zeta55-or-any-odd-carrier.md)
+excludes a nine-vertex hub in every odd carrier. The focused audit found and
+repaired its square-test omission, then reproduced the unchanged descent
+conclusion. B6--B8 below use this stronger frontier instead of resuming the
+closed fish/EI21 search.
 
 Anchor / niche / wildcard and the shared six-concept board are recorded in
 [the interval-atlas companion](collatz_interval_atlas_20261016e.md).
@@ -389,7 +401,132 @@ assignment or a signed Collatz source invoice. This is precisely the
 missing-map hazard of MISTAKE-233, avoided by keeping the target predicates
 separate.
 
-## 8. Connection contract and the next useful questions
+## 8. The incoming hub: an actual adelic obstruction and an even-degree reroute
+
+**Focused incoming audit.** The original `is_square_K` in the incoming
+two-descent script rejected 5 in Q(sqrt5), because it divided by the rational
+part of a candidate root and skipped the purely irrational case. The
+repaired primitive handles rational squares and five times rational squares;
+real-place signs now use rational comparisons. The
+[audit](../../04-computation/experiments/cubic_descent_audit_20261016e.py)
+replays local images with known exact orders, obtains Selmer sizes 4 and 16,
+checks the displayed twist points and their classes, and excludes (33,33)
+using both corrected field tests and separate F2 masks. Normal and optimized
+runs agree at 3,148 checks, including 1,156 input squares and 400 Pell
+near-cancellation signs. This is a focused repair/replay, not an independent
+implementation of every descent input. THM-4662's conclusion survives.
+THM-4661's last two anti-invariant differences also need division by j,
+not 2j; that harmless square-factor slip is corrected in its proof.
+
+Put K0=Q(sqrt5), delta=(55+11sqrt5)/2, F4=K0(sqrt(delta)), and distinguish
+the fish's curve `E_f:y^2=x(x-9)(x+7)` from the marked cubic curve (9).
+The incoming curve is
+
+\[
+ C_3:\quad11z_0^2=D(1-D),\quad11z_1^2=D(4-D),\quad
+ 11z_2^2=(1-D)(D+3).
+\]
+
+**B6 (PROVED, using repaired THM-4662).** C3 has a point over every
+completion of F4 but none over F4. Its smooth projective model has index
+exactly two and represents a nonzero class in `Sha(E_f/F4)[2]`.
+The failure persists over every odd-degree extension of F4.
+
+**Proof.** At a real place choose D=1/2 and real square roots. At infinity
+on the projective curve put t=1/D and y_i=z_i/D. At t=0 the three equations
+are `11y_i^2=-1`; their derivatives in y_i are nonzero. Thus sqrt(-11)
+supplies nonsingular points there. It exists in every completion above 2,
+3 and 7: at 2, `-11/5` is a 2-adic unit congruent to 1 modulo 8; at 3,
+`-11` is congruent to 1 and Hensel lifts; at 7, K0 is unramified quadratic
+and `3sqrt5` is a simple square root of -11 modulo 7. These roots remain
+after extension to F4.
+
+At every other finite place, E_f has good odd reduction. Its full
+two-torsion is rational. The two-descent image there is exactly the pairs
+of even-valuation square classes: the formal reduction kernel is uniquely
+2-divisible, so the local quotient E_f/2E_f has order four, as does the
+even-valuation subgroup of the two square-class coordinates. The image
+lies in that subgroup: if x is nonintegral, all three x-e_i have the same
+valuation and the square equation forces it even; if x is integral, at
+most one x-e_i has positive valuation because the root differences are
+units, and its valuation is again even. The torsion values are units.
+Injectivity of the descent map now gives equality of the two groups.
+
+The class (33,33) has even valuations at every such good place. Only 11
+needs checking: it splits in K0, and delta has valuation one at both primes
+above 11, so F4/K0 is ramified quadratic there and `v(33)=2`. All other
+good-place valuations are zero. This proves everywhere local solubility.
+The local-group and Selmer conventions are the standard ones in
+[Milne, *Elliptic Curves*, II.4 and IV.2--3,7](https://www.jmilne.org/math/Books/ectext6.pdf);
+the specific valuation and infinity arguments are given above.
+
+THM-4662 gives global nonexistence and identifies C3 as the covering class
+(33,33), so its torsor class is a nonzero element of Sha killed by 2.
+The infinity point is defined over `F4(j)=K`, of degree two. Its conjugate
+pair gives a rational degree-two divisor. A degree-one divisor on a genus-one
+curve would give a rational point by Riemann--Roch, so the index is exactly
+two. An odd-degree closed point together with this divisor would give a
+degree-one divisor by Bezout, again impossible. Local points survive base
+change, proving the last assertion. QED.
+
+This is a precise limitation on the proposed adelic strategy: this marked
+constraint has an adelic point and no global point. B2's overring theorem
+still gives its stated universal **path** coverage; it does not solve
+simultaneous edge closure. Increasing finite residue precision cannot
+remove this obstruction. No analogous Sha class for Collatz is asserted.
+
+**B7 (PROVED algebra, FINITE-EXACT complete graph).** The forbidden hub
+does have a faithful realization in Q(i,sqrt7). With hub h=0 take
+
+\[
+ a=1,\qquad b=(\sqrt7-3i)/4,\qquad c=-i,\qquad
+ d=(3+i\sqrt7)/4,
+\]
+
+and the four other vertices `a+b,a+c,b+d,c+d`. All four of a,b,c,d
+have norm one. If P=a-d and Q=b-c, then Q=iP and |P|^2=1/2, so
+`|P+Q|=|P-Q|=1`: the two closing edges hold. Exact arithmetic in
+`{1,sqrt7,i,i sqrt7}` verifies all 36 pairs, distinctness, and **exactly**
+the fourteen Gamma9 edges. Its chromatic number is three: the checked
+colouring in order `(h,a,b,c,d,a+b,a+c,b+d,c+d)` is
+`(0,1,1,1,1,0,0,2,2)`, and it is not bipartite.
+
+To retain the old ports and the cubic coordinate, embed the entire old
+field L' into `M=L'(sqrt7,sqrt11)`. This is a degree-four extension of L':
+the independent quadratic classes 7 and 11 cannot enter the odd-degree
+extension L'/L, and none of 7,11,77 is among L's quadratic classes. Here
+`i=j/sqrt11`, so the displayed hub lies in M. The field remains triangle-free:
+M is unramified at 3 (the possible ramified rational primes are
+2,5,7,11,37), hence it cannot contain sqrt(-3). The corresponding explicit
+C3 point at D=1/2 has
+`z0=1/(2sqrt11)` and `z1=z2=sqrt7/(2sqrt11)`.
+
+This changes the carrier assumption that caused the exclusion. Every old
+point and its distances remain fixed, but the odd-degree one-old-neighbour
+lemma **does not** transfer from L' to M. The hub alone has no six-colour
+forcing relation, and no attachment to the eight-port source is claimed
+without checking its new cross-edges.
+
+**B8 (PROVED coefficient-field gate).** In B5 suppose the coordinate
+coefficients A,B,C belong to a conjugation-stable subfield H of the base
+field, but `a=(20+11j)/19` does not belong to H. Every unit displacement
+`A+Bu+Cu^2` has exactly one nonzero coordinate. Indeed B5 gives
+`D1+bar(D2)=a D2`, with D1,D2 in H. Thus D2=0, then D1=0,
+and the one-or-three support alternative reduces to one.
+
+For example H=Q(i,sqrt7) does not contain j=i sqrt11. The degree-three
+basis remains independent over `L(sqrt7,sqrt11)`, since that extension of L
+has degree four. Consequently the 729 points
+`v0+u v1+u^2 v2`, with each v_i from B7's nine-point hub, form exactly its
+threefold Cartesian graph: 3,402 edges and chromatic number three.
+This conclusion follows from the metric gate and B7's full graph, not from
+a numerical near-distance census. It rules out another tempting but
+ineffective construction after the even-degree reroute. A genuinely coupled
+alphabet must expose the coefficient j, or use a different cubic generator
+whose relation already lives in its coefficient field; that condition is
+necessary, not sufficient.
+
+## 9. Connection contract and the next useful questions
 
 | Source -> target, map | Preserved | Lost / required sidecar | Decisive test |
 |---|---|---|---|
@@ -397,9 +534,14 @@ separate.
 | cubic root -> marked 2-torsion of (9), w -> (w,0) | defining algebraic coordinate and Galois action | unmarked traces lose root, embedding and valuation branch | split versus nonsplit branches at 19; E[5] irreducibility at 13 |
 | independent native controllers -> physical intervals, A1--A3 of companion | original atoms, full clocks and scalar current | no automatic small anchor residual or common Gram matrix | exact residue hostile and all-scale sampled bound still owed |
 | geometric projection -> old carrier, normalized trace | old ports | unit length loses the variance identified in C3 of cubic packets | keep the full cubic displacement when counting cross-edges |
+| hub constraints -> completions, base extension of C3 | every local solution | global torsor class remains nonzero | B6: local points everywhere, index two and no odd-degree global point |
+| old carrier -> even extension in B7, literal field inclusion | old coordinates, distances and port labels | odd-degree attachment restrictions are lost | fourteen exact hub edges; then B8 rejects the Cartesian cubic lift |
 
 The promising next geometric target is a coupled edge whose displacement
-uses the cubic coordinate and whose address changes both factors. The
+uses the cubic coordinate and whose address changes both factors, with an
+alphabet passing B8's coefficient-field gate. In the unchanged odd carrier,
+exclude Gamma9 from candidates using THM-4662; in B7's even carrier,
+recheck the attachment assumptions instead of importing them. The
 current connector gives universal path coverage but still fails this
 specific test. A second is to use the prime-ideal valuation vectors to
 select compatible **joint** directions, rather than reject a rational prime
@@ -414,7 +556,7 @@ planar-JC analogue remains the existing requirement to retain the marked
 differential in [the Lyness bridge](jacobian_elliptic_bridge_20261016c.md);
 no new Keller map or Jacobian theorem is claimed.
 
-## 9. Reproduction and checks
+## 10. Reproduction and checks
 
 Programs:
 [cubic direction and graphs](../../04-computation/experiments/cubic_adelic_20261016e.py),
@@ -433,6 +575,7 @@ Receipts: [direction bank](cubic_adelic_20261016e_bank.json),
 [connector assembly](cubic_adelic_20261016e_connector.json),
 [arithmetic and metric](cubic_adelic_arithmetic_20261016e.json),
 [contact probe](cubic_contact_probe_20261016e.json),
+[incoming descent repair and exact hub](cubic_descent_audit_20261016e.json),
 [hash manifest](interval_cubic_audit_20261016e.json).
 
 ```text
@@ -442,6 +585,7 @@ python3 -B 04-computation/experiments/cubic_adelic_20261016e.py --mode two_circu
 python3 -B 04-computation/experiments/cubic_adelic_20261016e.py --mode connector
 python3 -B 04-computation/experiments/cubic_adelic_arithmetic_20261016e.py
 gp -fq 04-computation/experiments/cubic_contact_probe_20261016e.gp
+python3 -B 04-computation/experiments/cubic_descent_audit_20261016e.py
 ```
 
 Add `-O` after `-B` for the optimized Python checks. The direct point counts

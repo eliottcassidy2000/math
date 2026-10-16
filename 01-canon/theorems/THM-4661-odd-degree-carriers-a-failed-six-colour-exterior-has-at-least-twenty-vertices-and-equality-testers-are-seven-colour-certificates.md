@@ -182,7 +182,8 @@ four 4-cycles `(10,13,15,14)`, `(13,15,19,17)`, `(14,15,20,16)`, `(15,19,18,20)`
 `|P|^2 + |Q|^2 = 1`, `Re(P bar Q) = 0`. As in the fish note, `P bar Q` is anti-invariant, so `P bar Q - bar P Q =
 2 sqrt(-11) z_0` with `z_0 ∈ M^+` and `11 z_0^2 = |P|^2 |Q|^2 = X(1-X)`; the unit pair `a, d` at squared distance `X`
 gives `(a bar d - bar a d)^2 = -X(4-X)`, and the unit pair `b, c` at squared distance `1 - X` gives
-`(b bar c - bar b c)^2 = -(1-X)(X+3)`; dividing by `2 sqrt(-11)` yields `z_1, z_2 ∈ M^+`. `X = 0` or `1` would identify
+`(b bar c - bar b c)^2 = -(1-X)(X+3)`; dividing these last two anti-invariant differences by `sqrt(-11)` yields
+`z_1, z_2 ∈ M^+` with the displayed equations (the factor 2 belongs only to the earlier definition of `z_0`). `X = 0` or `1` would identify
 `v_13 = v_20` or `v_14 = v_19`. The argument of (b) then applies to this point of `C3`. ∎
 
 **Statement 5.** six_colour_exterior_twenty_sat_20261016.py roots the search at a high vertex `z` of maximum degree

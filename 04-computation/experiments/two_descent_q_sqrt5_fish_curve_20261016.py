@@ -121,10 +121,17 @@ class RealPlace(Place):
         self.dim = 1
 
     def cls(self, x):
-        val = float(x.a) + self.sign * float(x.b) * math.sqrt(5)
-        if abs(val) < 1e-12:
-            val = x.a + self.sign * x.b * Fr(22360679774997897, 10 ** 16)   # high-precision fallback
-        return (0,) if val > 0 else (1,)
+        a, b = x.a, self.sign * x.b
+        if a == 0 and b == 0:
+            raise ValueError('zero has no square class')
+        # Rational comparisons retain the sign even for near-cancellation.
+        if b == 0 or (a != 0 and (a > 0) == (b > 0)):
+            positive = a > 0
+        elif a == 0:
+            positive = b > 0
+        else:
+            positive = (a > 0) if a * a > 5 * b * b else (b > 0)
+        return (0,) if positive else (1,)
 
 
 class SplitPlace(Place):
@@ -432,6 +439,14 @@ def is_square_K(x):
     """Exact test: is x (a K) a square in Q(sqrt5)?  Returns a square root or None."""
     if x.iszero():
         return K(0)
+    # A rational input may have a purely irrational root: 5 = (sqrt5)^2.
+    # The general branch below divides by the root's rational part.
+    if x.b == 0:
+        sr = rat_sqrt(x.a)
+        if sr is not None:
+            return K(sr)
+        sr = rat_sqrt(x.a / 5)
+        return K(0, sr) if sr is not None else None
     n = x.norm()
     if n < 0:
         return None

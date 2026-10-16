@@ -35,6 +35,12 @@ estimate. The older
 [adelic price sheet](collatz_pricing_approaches_20260927.md) already proves
 an exact real/2-adic/3-adic product formula and documents regenerated
 precision. Rephrasing that identity is not a new descent mechanism.
+The final pull through `4971cf2b05` adds the finite-exact 22-vertex screen
+and THM-4662's forbidden hub. The companion B6 completes its suggested
+everywhere-local/global-failure example; B7 changes the carrier to realize
+the hub, and B8 exposes a coefficient-field obstruction to a naive cubic
+lift. This reinforces the need for A1's literal source transport: local
+acceptance by itself does not prove a global compatible certificate.
 
 ## 2. A source-preserving transport that costs at most four
 

@@ -22,6 +22,20 @@ related:
 
 # THM-4662 — the fish curve has no point over the real quartic field
 
+**2026-10-16 focused computational repair (clock_duality_oct15).** The original
+`is_square_K` omitted purely irrational roots of rational inputs, incorrectly
+rejecting `5 = (sqrt5)^2`. The implementation now handles that branch and uses
+exact rational comparisons at real places. The focused replay
+`04-computation/experiments/cubic_descent_audit_20261016e.py` recovers the same
+Selmer sizes 4 and 16, checks the two displayed points, and verifies the
+four-dimensional image and target exclusion by both corrected field square
+tests and a separate F2 calculation. Normal and optimized executions agree.
+The original receipts preserve provenance; the repaired replay is
+`05-knowledge/results/cubic_descent_audit_20261016e.json`. This is not a new
+independent implementation of the entire local descent. See also B6--B8 of
+`05-knowledge/results/cubic_adelic_20261016e.md` for the completed local-solubility
+argument, index two, and an explicit even-degree reroute for Gamma_9.
+
 ## Setting
 
 `K0 = Q(sqrt5)`, `phi = (1 + sqrt5)/2`, `delta = (55 + 11 sqrt5)/2 = 11 sqrt5 phi`, `F_4 = K0(tau)`, `tau^2 = delta`: the real
@@ -87,10 +101,11 @@ distinct) give the four sums, the closing edges give `|P|^2 + |Q|^2 = 1` and `P 
 - This settles the two OPEN placement tests of HYP-9247 (the fish, EI21): of the four smallest known triangle-free
   four-chromatic unit-distance graphs, EI19, the fish and EI21 are now excluded from `Q(zeta55)` and from every
   odd-degree carrier over `K`. Only EI17 remains, excluded from `L` only numerically to coordinate height `1e63`.
-- The obstruction is global: `E(F_4)` has rank 2, but `(33, 33)` is not a descent class of any point. A hand check (not
-  used in the proof) indicates that `C3` is nevertheless locally solvable everywhere. Its real points have
-  `0 < D < 1`. Near `D = infinity` it needs `-1/11` to be a local square, which holds at the primes over 3 (residue field
-  `F_81`), 7 (`F_2401`) and 2 (`-11 ≡ 5 (mod 16)` and `5` is a square in `Q_2(sqrt5)`). Over 5 and 11 the class is
-  unramified and `E` has good reduction. If so, the class of `C3` is a nonzero element of `Sha(E/F_4)[2]`.
+- The obstruction is global: `E(F_4)` has rank 2, but `(33, 33)` is not a descent class of any point.
+  The initial hand-check suggestion of everywhere local solubility is now proved in B6 of
+  `05-knowledge/results/cubic_adelic_20261016e.md`: good odd places use the full unramified local
+  two-descent image, and the places over 2, 3 and 7 use points at infinity. Thus `C3` represents a
+  nonzero class of `Sha(E/F_4)[2]`; its index is exactly two. This strengthens the remark, not the
+  dependencies of the global nonexistence proof above.
 - The fish note's bounded searches (36,518 quadratic and 1,728 quartic parameters) were consistent with this; the
   proof replaces them.
