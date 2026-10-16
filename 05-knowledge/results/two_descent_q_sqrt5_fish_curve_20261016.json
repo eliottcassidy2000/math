@@ -1,0 +1,197 @@
+{
+ "controls_Q": [
+  {
+   "curve": "n=1",
+   "field": "Q",
+   "S": [
+    2
+   ],
+   "selmer_size": 4,
+   "selmer_rank_bound": 0
+  },
+  {
+   "curve": "n=2",
+   "field": "Q",
+   "S": [
+    2
+   ],
+   "selmer_size": 4,
+   "selmer_rank_bound": 0
+  },
+  {
+   "curve": "n=3",
+   "field": "Q",
+   "S": [
+    2,
+    3
+   ],
+   "selmer_size": 4,
+   "selmer_rank_bound": 0
+  },
+  {
+   "curve": "n=5",
+   "field": "Q",
+   "S": [
+    2,
+    5
+   ],
+   "selmer_size": 8,
+   "selmer_rank_bound": 1
+  },
+  {
+   "curve": "n=6",
+   "field": "Q",
+   "S": [
+    2,
+    3
+   ],
+   "selmer_size": 8,
+   "selmer_rank_bound": 1
+  },
+  {
+   "curve": "n=7",
+   "field": "Q",
+   "S": [
+    2,
+    7
+   ],
+   "selmer_size": 8,
+   "selmer_rank_bound": 1
+  }
+ ],
+ "E_over_Q": {
+  "curve": "E: y^2 = x(x-9)(x+7)",
+  "field": "Q",
+  "S": [
+   2,
+   3,
+   7
+  ],
+  "selmer_size": 4,
+  "selmer_rank_bound": 0
+ },
+ "E5_over_Q": {
+  "curve": "E^(5): y^2 = x(x-45)(x+35)",
+  "field": "Q",
+  "S": [
+   2,
+   3,
+   5,
+   7
+  ],
+  "selmer_size": 4,
+  "selmer_rank_bound": 0
+ },
+ "control_K0": {
+  "curve": "control y^2 = x^3 - x over Q(sqrt5) (rank 1)",
+  "field": "Q(sqrt5)",
+  "places": [
+   "real+1",
+   "real-1",
+   "sqrt5",
+   "2(inert)"
+  ],
+  "selmer_size": 8,
+  "selmer_rank_bound": 1
+ },
+ "E_over_K0": {
+  "curve": "E over Q(sqrt5)",
+  "field": "Q(sqrt5)",
+  "places": [
+   "real+1",
+   "real-1",
+   "3(inert)",
+   "7(inert)",
+   "2(inert)"
+  ],
+  "selmer_size": 4,
+  "selmer_rank_bound": 0
+ },
+ "E_delta_over_K0": {
+  "curve": "E^delta: y^2 = x(x - 9 delta)(x + 7 delta) over Q(sqrt5)",
+  "field": "Q(sqrt5)",
+  "places": [
+   "real+1",
+   "real-1",
+   "11(sqrt5=7)",
+   "11(sqrt5=4)",
+   "3(inert)",
+   "7(inert)",
+   "sqrt5",
+   "2(inert)"
+  ],
+  "selmer_size": 16,
+  "selmer_rank_bound": 2
+ },
+ "E_delta_points": {
+  "0,0": [],
+  "0,192": [
+   "(484 + 0 sqrt5)",
+   "(726 + 242 sqrt5)",
+   "(726 + 242 sqrt5)"
+  ],
+  "17,35": [
+   "(-945/8 + -315/8 sqrt5)",
+   "(-315/4 + 0 sqrt5)",
+   "(-315/4 + 0 sqrt5)"
+  ],
+  "17,227": [],
+  "35,65": [],
+  "35,129": [
+   "(-65/2 + 19/2 sqrt5)",
+   "(-65/2 + 19/2 sqrt5)"
+  ],
+  "50,98": [
+   "(9135/2 + 3843/2 sqrt5)",
+   "(9135/2 + 3843/2 sqrt5)"
+  ],
+  "50,162": [
+   "(4095/2 + -1197/2 sqrt5)",
+   "(4095/2 + -1197/2 sqrt5)"
+  ],
+  "193,65": [
+   "(-99 + 0 sqrt5)",
+   "(-99 + 0 sqrt5)"
+  ],
+  "193,129": [
+   "(-297/2 + -99/2 sqrt5)",
+   "(-297/2 + -99/2 sqrt5)"
+  ],
+  "208,98": [
+   "(385 + 0 sqrt5)",
+   "(385 + 0 sqrt5)"
+  ],
+  "208,162": [
+   "(1155/2 + 385/2 sqrt5)",
+   "(1155/2 + 385/2 sqrt5)"
+  ],
+  "226,0": [
+   "(495/2 + 99/2 sqrt5)",
+   "(495/2 + 99/2 sqrt5)"
+  ],
+  "226,192": [],
+  "243,35": [],
+  "243,227": [
+   "(-385/2 + -77/2 sqrt5)",
+   "(-385/2 + -77/2 sqrt5)"
+  ]
+ },
+ "control_K0_split11": {
+  "curve": "control y^2 = x^3 - 121x over Q(sqrt5)",
+  "field": "Q(sqrt5)",
+  "places": [
+   "real+1",
+   "real-1",
+   "11(sqrt5=7)",
+   "11(sqrt5=4)",
+   "sqrt5",
+   "2(inert)"
+  ],
+  "selmer_size": 8,
+  "selmer_rank_bound": 1
+ },
+ "E_delta_span_of_point_classes": 16,
+ "F4_image_dimension": 4,
+ "C3_class_33_33_in_image": false,
+ "conclusion": "C3(F4) is EMPTY: rank E(F4) = rank E(K0) + rank E^delta(K0) = 0 + 2, the image of E(F4)/2E(F4) is the displayed 4-dimensional span, and the class (33, 33) of C3 is not in it"
+}

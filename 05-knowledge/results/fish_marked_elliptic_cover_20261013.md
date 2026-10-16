@@ -8,6 +8,11 @@ unconditional rank bounds, checked torsion and finite-field counts.
 peer audit or formalization. The fish's placement in the full field,
 six-colour forcing and Hadwiger–Nelson remain **OPEN**.
 
+**UPDATE 2026-10-16 (opus-2026-10-16-S38):** the open test `C3(F_4)` of section 5 is decided: **`C3(F_4)` is empty**
+([THM-4662](../../01-canon/theorems/THM-4662-the-fish-curve-has-no-point-over-the-real-quartic-field-so-the-fish-and-ei21-are-not-in-q-zeta55-or-any-odd-carrier.md); a two-descent over `Q(sqrt5)`:
+`rank E(F_4) = 2` and the class `(33, 33)` of `C3` is not a descent class). With (5), the fish has **no** placement in
+`Q(zeta55)`, nor in any conjugation-stable odd-degree extension of `Q(zeta5, sqrt(-11))` (THM-4661 4(b)).
+
 ## 1. Inheritance and the exact question
 
 The [incoming fish analysis](ei19_fish_placement_q_zeta55_20261012.md)

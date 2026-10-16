@@ -21,6 +21,7 @@ related:
   - 05-knowledge/results/constructive_interfaces_and_bridges_20261011.md (the six/seven table)
   - 05-knowledge/results/ei19_fish_placement_q_zeta55_20261012.md (forced EI19 angles)
   - 05-knowledge/results/ei21_kappa_q_20261012.md (EI21: one-parameter family, left OPEN in S24; statement 4(c) reduces it to C3(F_4))
+  - THM-4662 (C3(F_4) is empty: the fish and EI21 are excluded from Q(zeta55) and from every odd carrier over K)
   - 05-knowledge/results/fish_marked_elliptic_cover_20261013.md (the fish's square-class equations (1), the curve C3, its degree-eight divisor)
 ---
 
@@ -207,7 +208,7 @@ Nullstellensatz every list assignment with lists of size five extends.
   degree-six vertex, and **chromatic number at least four**, i.e. a four-chromatic triangle-free unit-distance graph
   inside `L' \ K'`. None is known in `L` (HYP-9247 conjectures there is none). Among the four smallest known
   triangle-free four-chromatic unit graphs, statement 4 shows that EI19 cannot supply one in any odd-degree extension
-  of `L`, and that the fish and EI21 can only if `C3(F_4)` is nonempty, the condition `L` itself already needs; only
-  EI17 (rigid, field open) is untouched.
-- Statements 4(b) and 4(c) are existence reductions; they do not decide `C3(F_4)` (probed negatively in the fish note)
-  and say nothing about the remaining edges of the fish or EI21, or the fish's genus-nine cover `C4`.
+  of `L`, and that the fish and EI21 can only if `C3(F_4)` is nonempty. THM-4662 proves `C3(F_4)` empty by a two-descent,
+  so neither can; only EI17 (rigid, field open) is untouched.
+- Statements 4(b) and 4(c) are existence reductions. `C3(F_4)` is decided (empty) in THM-4662, which therefore
+  excludes the fish and EI21 from `Q(zeta55)` and from every conjugation-stable odd-degree carrier over `K`.
