@@ -1,0 +1,22 @@
+{
+  "basis_order": "z exponent 0..4, j exponent 0..1, theta exponent 0..2",
+  "carrier": "Q(zeta55,theta), not Q(zeta55)",
+  "common_coefficient_denominator": 1541,
+  "cubic": "2*theta**3 + 2*theta**2 - 2*theta - 1",
+  "norm_one": true,
+  "quintic": "z**5 + z**4*(1 - j)/2 - z**3 + z**2 - z*(j + 1)/2 - 1",
+  "real_root_interval": [
+    "4/5",
+    "1"
+  ],
+  "status": "FINITE-EXACT independent algebraic certificate",
+  "unit_coefficients": [
+    "(20*j*theta**2 - 51*j*theta + 84*j - 42*theta**2 - 47*theta + 440)/1541",
+    "-(82*j*theta**2 - 55*j*theta - 272*j + 136*theta**2 - 655*theta + 263)/1541",
+    "(188*j*theta**2 + 137*j*theta - 135*j + 838*theta**2 + 791*theta - 487)/1541",
+    "-(168*j*theta**2 + 188*j*theta - 219*j + 880*theta**2 + 838*theta - 927)/1541",
+    "0"
+  ],
+  "width": 3,
+  "witness_algebra_dimension": 30
+}
