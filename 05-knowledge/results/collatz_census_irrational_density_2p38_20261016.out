@@ -1,0 +1,7 @@
+parity table to 2^34: 245.5 s; 0 words recomputed exactly
+spot check of 20000 random n in [2^34, 2^38): 0 mismatches
+block invariant check (attempt 0): 0 inconsistent blocks
+heavy pass over blocks [0, 262144): 9374.2 s; max within-block |hp| = 3391
+grid pass over 11947 blocks (39208 grid points): 26.3 s
+S(2^38) = 281675896, H(2^38) = 130565
+wrote C:\Users\Eliott\AppData\Local\Temp\claude\C--Users-Eliott-Documents-GitHub-ephrepos-math\a46eae61-4398-4ab0-8e04-bd90318942db\scratchpad\s38\irr38.npz, C:\Users\Eliott\AppData\Local\Temp\claude\C--Users-Eliott-Documents-GitHub-ephrepos-math\a46eae61-4398-4ab0-8e04-bd90318942db\scratchpad\s38\irr38_full.npz, C:\Users\Eliott\AppData\Local\Temp\claude\C--Users-Eliott-Documents-GitHub-ephrepos-math\a46eae61-4398-4ab0-8e04-bd90318942db\scratchpad\s38\irr38_moments.npz, C:\Users\Eliott\AppData\Local\Temp\claude\C--Users-Eliott-Documents-GitHub-ephrepos-math\a46eae61-4398-4ab0-8e04-bd90318942db\scratchpad\s38\irr38.json, C:\Users\Eliott\AppData\Local\Temp\claude\C--Users-Eliott-Documents-GitHub-ephrepos-math\a46eae61-4398-4ab0-8e04-bd90318942db\scratchpad\s38\irr38_state.json; total 9661.8 s

@@ -79,6 +79,27 @@ exactly onto the low ones (`6268.3 → 3014.0`, `5787.8 → 3494.5`, `5307.3 →
 coefficients of those zeros mix several modes. Fits that resolve the family need a grid with a non-integer number of
 points per octave.
 
+**The test (FINITE-EXACT census, NUMERICAL fit).** A second census on the grid `round(2^(10 + j/(1000 sqrt 2)))`
+(39,208 points to `2^38`; `S(2^38) = 281675896`, `H(2^38) = 130565`; it agrees with the 1024-per-octave census at
+all 2,429 shared points) has Nyquist height 6409.7. The fit with the 94 zeros below height 6400 on `[2^24, 2^38)`
+([collatz_irrational_grid_residue_fit_20261016.json](collatz_irrational_grid_residue_fit_20261016.json))
+recovers the boundary residues of the whole Mercator family:
+
+| zero (height) | fit, irrational grid | boundary (2^40 moments) | fit, 1024-per-octave grid |
+|---:|---:|---:|---:|
+| 240.248 | 0.18398 | 0.18398 | 0.18427 |
+| 720.740 | 0.07009 | 0.07011 | 0.0648 |
+| 2533.525 | 0.03701 | 0.03703 | |
+| 3014.020 (`rho*`) | 0.01019 | 0.00999 | 0.00712 |
+| 3494.515 | 0.01410 | 0.01284 | 0.0326 |
+| 5307.300 | 0.05783 | 0.05736 | |
+| 5787.793 | 0.02476 | 0.02514 | |
+| 6268.288 | 0.00433 | 0.00532 | |
+
+So the disagreement on the integer grid was aliasing, as THM-4659 statement 5 predicts. With the aliasing removed,
+the least-squares residues agree with the boundary formula to 0.1% at the dominant members and to 2% at `rho*`. The
+fit's holdout (fit to `2^36`, test `[2^36, 2^38)`) is 1.09% and its residual is `1.99 sqrt(N)`.
+
 ## 4. The vertical-line behaviour of the boundary numerator
 
 The median of `|numer(σ + it)|` over the height bands `[10, 10³)`, `[10³, 4·10³)`, `[4·10³, 10⁴)`, `[10⁴, 2·10⁴)` is
@@ -115,4 +136,4 @@ square-root size of the remainder seen numerically.
    a budget beyond the census; PENDING at `N = 2^43`.
 2. Non-vanishing of `G` at infinitely many Mercator members would give `limsup log B(X)/log X = 1` under (W).
 3. The unsmoothed explicit formula (HYP-9285): a bound for `G(σ + it)/(σ + it)` on average along horizontal lines.
-4. Residues of the high Mercator members from a grid with an irrational number of points per octave (in progress).
+4. Done: the irrational-density grid resolves the Mercator family (section 3).
