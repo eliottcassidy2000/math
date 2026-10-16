@@ -2,14 +2,14 @@
 id: HYP-9285
 title: "Explicit formula for the Collatz parity sum: S(N) = sum_(n<=N) (-1)^tau(n) equals Re sum_rho c_rho N^rho over the zeros rho of D(s) = 1 + 2^(-s) + (3/2)^s/3 with Re rho > 1/2, up to a remainder of order sqrt(N) in mean square, with c_rho = 2 r_rho / rho for the residues r_rho of F(s) = sum t(n) n^(-s); the 28 zeros with Re rho > 0.65 and Im rho < 3000 predict S out of sample to about 2%, and the least-squares coefficients reproduce the conditionally certified residues"
 status: >
-  CONJECTURAL (the expansion). NUMERICAL, from the FINITE-EXACT census to 2^40: holdout and pre-registered
+  CONJECTURAL (the expansion). NUMERICAL, from the FINITE-EXACT census through 2^37; the 2^40 extension is pending: holdout and pre-registered
   out-of-sample prediction errors (P1 of collatz_census_2p40_preregistration_20261015.md: PENDING-P1). CONDITIONAL
   (Arb, under the energy budget (2, 0) for dyadic X >= 2^37): nonzero residues certified at four zeros besides the
   Mercator zero (0.98494 + 720.74i, 0.94973 + 1572.56i, 0.86345 + 131.16i, 0.69392 + 22.25i), each with the
   least-squares value near the middle of its interval; all 28 least-squares values lie inside their (mostly wide)
   intervals. PROVED (elementary, exact for every
-  N): H(N) = -[S(N) + 3S(floor(2N/3)) + 3S(floor(N/3))] annihilates every mode N^rho with D(rho) = 0, so the
-  mod-3 discrepancy H is exactly the part of S that no D-zero mode can carry.
+  N): H(N) = -[S(N) + 3S(floor(2N/3)) + 3S(floor(N/3))]. Its floor-free counterpart annihilates every mode
+  N^rho with D(rho) = 0; the integer formula retains an O_rho(N^(Re(rho)-1)) remainder per mode (MISTAKE-620).
 session: opus-2026-10-15-S37
 source: 05-knowledge/results/collatz_octave_memory_bias_energy_budgets_20261015.md
 scripts:
@@ -33,13 +33,18 @@ expansion as OPEN.
 `Σ_(X<=N<2X) R(N)² = O(X²)` (or `O(X² log X)`). The sum converges in a suitable averaged sense; contour shifting would
 need growth bounds for `F` on vertical lines, which are not available.
 
-## Why H is the remainder (PROVED)
+## Leading-mode cancellation with the integer remainder retained (PROVED)
 
 For every `N`, `H(N) = −[S(N) + 3S(⌊2N/3⌋) + 3S(⌊N/3⌋)]` (exact; S37 referee, 0 failures for `N < 3·2^22`). Since
-`1 + 3(2/3)^ρ + 3(1/3)^ρ = 3(2/3)^ρ D(ρ)`, the combination annihilates every mode `N^ρ` with `D(ρ) = 0`. So `H` is
-exactly what remains of `S` after all D-zero modes are removed, and the energy budgets of HYP-9283 are mean-square
-statements about the remainder of this explicit formula. The halving null (random odd signs, `t(2m) = −t(m)`) has no
-such structure and its `H` is an order of magnitude larger (HYP-9284).
+`1 + 3(2/3)^ρ + 3(1/3)^ρ = 3(2/3)^ρ D(ρ)`, the floor-free combination annihilates every mode `N^ρ` with `D(ρ) = 0`.
+For the actual integer formula the residue is
+`3[floor(2N/3)^ρ-(2N/3)^ρ]+3[floor(N/3)^ρ-(N/3)^ρ]=O_ρ(N^(Re ρ-1))`.
+It vanishes when 3 divides N, but equals 1 at N=1 for Re ρ>0. Thus H retains the floor residues of each finite
+modal packet as well as the transformed remainder of S. An infinite modal sum needs summability/truncation bounds;
+the energy budget is not already proved equivalent to a budget for an untransformed explicit-formula remainder.
+See [the floor-error repair, MISTAKE-620](../results/collatz_conductor_wiener_20261015d.md#4-integer-floors-leave-a-modal-residue).
+The exact native identity and the conditional pole certificates are unchanged. The halving-null comparison is
+the scoped numerical evidence of HYP-9284, not a proof of a complete modal expansion.
 
 ## Evidence (NUMERICAL)
 
@@ -70,5 +75,6 @@ such structure and its `H` is an order of magnitude larger (HYP-9284).
 ## Tests
 
 - P1 (above), and extensions of the census.
-- The conjecture predicts that the periodogram of `H(N)/sqrt(N)` has no line at any D-zero frequency (verified for the
-  26.5-cycle line: amplitude at most 8e-5 of that in `S` for every channel at levels 1-3, S37 referee).
+- Leading D-zero contributions cancel; small floor-error contributions are retained. The measured 26.5-cycle
+  amplitude in H is at most 8e-5 of that in S for channels at levels 1-3 (S37 referee); this finite observation is
+  not exact annihilation of the integer-clock mode.

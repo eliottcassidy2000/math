@@ -40,7 +40,7 @@ related: [HYP-9282, HYP-9283, HYP-9285, THM-4658]
 | level 2: octaves 30-36 over 14-29 | 0.26 | min 0.22 (not outside the null) |
 
 - Collatz's exact dyadic energies never exceeded 1.77 (at 2^24) and were 0.04-0.10 on 2^33..2^36; the halving null's in-sample window means exceed 2 in 11 of 12 replicates.
-- The remainder reading of HYP-9285 explains part of the level-1 picture: `H(N) = −[S(N) + 3S(⌊2N/3⌋) + 3S(⌊N/3⌋)]` annihilates every D-zero mode, and the Collatz `S` is modal to about 2%; the null's `S` has no modes.
+- The leading-mode reading of HYP-9285 explains part of the level-1 picture: `H(N) = −[S(N) + 3S(⌊2N/3⌋) + 3S(⌊N/3⌋)]` cancels the leading D-zero power but retains an O_ρ(N^(Re ρ-1)) floor residue per mode (MISTAKE-620). The finite fit of Collatz S has about 2% holdout error; that does not prove a complete modal expansion or exact absence of modes in a null sequence.
 - The deep-level decline started at about the same octave for levels 3-5 (all peak or plateau near 2^27 and fall from 2^28 on) and is weaker at deeper levels (octave 31: 0.62, 0.44, 0.60; octave 36: 0.24, 0.43, 0.62); whether this is the onset of sub-square-root growth or a slow modulation is open.
 
 ## Pre-registered tests (2^37..2^40; `collatz_census_2p40_preregistration_20261015.md`)

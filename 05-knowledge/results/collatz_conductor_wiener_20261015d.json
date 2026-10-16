@@ -1,0 +1,135 @@
+{
+  "divisible_by_three_controls": 1000,
+  "floor_hostile": {
+    "N": 1,
+    "floored_mode_value": 1,
+    "scope": "any Re(rho)>0, including a D-zero"
+  },
+  "gamma_square_certificate": {
+    "constant": [
+      7,
+      12
+    ],
+    "radical": "1/sqrt(6)",
+    "strict_comparison": "24<25"
+  },
+  "levels": [
+    {
+      "Q": 1,
+      "atom_R_three_halves": [
+        3,
+        1
+      ],
+      "counts": [
+        2
+      ],
+      "nonzero_modes": 2
+    },
+    {
+      "Q": 2,
+      "atom_R_three_halves": [
+        33,
+        2
+      ],
+      "counts": [
+        2,
+        6
+      ],
+      "nonzero_modes": 8
+    },
+    {
+      "Q": 3,
+      "atom_R_three_halves": [
+        309,
+        4
+      ],
+      "counts": [
+        2,
+        6,
+        18
+      ],
+      "nonzero_modes": 26
+    },
+    {
+      "Q": 4,
+      "atom_R_three_halves": [
+        2805,
+        8
+      ],
+      "counts": [
+        2,
+        6,
+        18,
+        54
+      ],
+      "nonzero_modes": 80
+    },
+    {
+      "Q": 5,
+      "atom_R_three_halves": [
+        25293,
+        16
+      ],
+      "counts": [
+        2,
+        6,
+        18,
+        54,
+        162
+      ],
+      "nonzero_modes": 242
+    },
+    {
+      "Q": 6,
+      "atom_R_three_halves": [
+        227733,
+        32
+      ],
+      "counts": [
+        2,
+        6,
+        18,
+        54,
+        162,
+        486
+      ],
+      "nonzero_modes": 728
+    },
+    {
+      "Q": 7,
+      "atom_R_three_halves": [
+        2049789,
+        64
+      ],
+      "counts": [
+        2,
+        6,
+        18,
+        54,
+        162,
+        486,
+        1458
+      ],
+      "nonzero_modes": 2186
+    },
+    {
+      "Q": 8,
+      "atom_R_three_halves": [
+        18448485,
+        128
+      ],
+      "counts": [
+        2,
+        6,
+        18,
+        54,
+        162,
+        486,
+        1458,
+        4374
+      ],
+      "nonzero_modes": 6560
+    }
+  ],
+  "status": "FINITE-EXACT grading and atom controls for the proved weighted-norm theorem"
+}

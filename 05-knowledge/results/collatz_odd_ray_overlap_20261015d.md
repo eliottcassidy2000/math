@@ -43,6 +43,13 @@ margin after the 2^37 census. Its larger census was not rerun here. Its referee
 report explicitly excludes that new census from its audited population. No
 stationarity, white sampling, or empirical sign persistence enters our proof.
 
+A later pull, a405c50b8a, supplies HYP-9284 and THM-4658 statement 7.
+The [conductor-norm continuation](collatz_conductor_wiener_20261015d.md)
+extends its finite-depth exclusion to a weighted regular infinite-depth
+class, computes the cost of a marked source atom, and repairs the incoming
+floor-free-to-integer modal claim as MISTAKE-620. The norm contraction does
+not supply an unpriced native controller for the original source.
+
 Anchor: arithmetic odd-step overlap. Niche: the cost of a ternary cyclic
 potential. Wildcard: a Pell constant arising from an honest defect invoice.
 Board: source multiplicity; ray residue phase; actual native clock; terminal
