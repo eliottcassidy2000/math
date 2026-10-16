@@ -33,3 +33,11 @@ Predictions are stored in
 - **P6 (sign of the mod-3 discrepancy):** the octave mean of `g` is positive in at least two of the octaves 37, 38, 39.
 
 Any failure will be reported as such in the S37 note and the hypothesis files.
+
+## Results (added after the census finished; evaluation `collatz_census_2p40_evaluation_20261015.py`)
+
+- **P1 PASSED:** relative rms error 0.0195 (192 grid points); `S(2^38)`, `S(2^39)`, `S(2^40)` = 281,675,896, −525,856,530, 989,143,994 against the predicted 273,757,038, −510,780,478, 961,770,189.
+- **P2 PASSED, P3 PASSED:** `e_X` = 0.069, 0.931, 0.078.
+- **P4 FAILED:** the mean is 0.359; the quiet stretch ended with a coarse-mean excursion at 2^38.
+- **P5 PASSED:** 0.50, 0.71, 0.71 for levels 3, 4, 5 (recovering: octave 39 gives 0.69, 0.81, 0.76).
+- **P6 PASSED:** octave means of `g` = −0.01, +0.50, +0.14.

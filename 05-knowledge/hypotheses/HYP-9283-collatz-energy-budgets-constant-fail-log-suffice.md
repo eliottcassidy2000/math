@@ -6,9 +6,10 @@ status: >
   median maximum window energy 0.77 for window starts in (2^33, 2^36]; the exact census to 2^37 gives 0.117
   (predictive probability of a maximum this small 0.1%); the claim "constant budgets are expected to fail" is
   withdrawn and the question is OPEN in both directions. (B) CONDITIONAL, rigorously interval-checked (Arb) at
-  N = 2^34 and N = 2^37; the N = 2^37 intervals are nested inside the N = 2^34 ones (a passed consistency test).
-  (C) PROVED implication. FINITE-EXACT: E_X/X^2 <= 1.769 for every dyadic X <= 2^36 (maximum at 2^24) and
-  E_X/X^2 <= 0.096 for X = 2^33..2^36. The budgets themselves are OPEN. AUDITED (S37 referee; I8, I9, I10 applied).
+  N = 2^34, 2^37 and 2^40; the intervals are nested (a passed consistency test); certified constant budget up to
+  14348 X^2 for dyadic X >= 2^40.
+  (C) PROVED implication. FINITE-EXACT: E_X/X^2 <= 1.769 for every dyadic X <= 2^39 (maximum at 2^24);
+  E_X/X^2 <= 0.096 for X = 2^33..2^37, then 0.931 at 2^38 and 0.078 at 2^39. The budgets themselves are OPEN. AUDITED (S37 referee; I8, I9, I10 applied).
 session: opus-2026-10-15-S37
 source: 05-knowledge/results/collatz_octave_memory_bias_energy_budgets_20261015.md
 scripts:
@@ -54,10 +55,11 @@ by Cauchy–Schwarz on each dyadic block, with the `j`-sum exact in Arb for `j <
 |---|---|---|---|---|---|---|
 | `N = 2^34` | [0.3215, 0.3885] | [0.2964, 0.4137] | [0.2722, 0.4379] | [0.2379, 0.4721] | [0.1895, 0.5205] | [0.1210, 0.5890] |
 | `N = 2^37` | [0.3431, 0.3668] | [0.3342, 0.3757] | [0.3256, 0.3843] | [0.3134, 0.3965] | [0.2963, 0.4136] | [0.2720, 0.4379] |
+| `N = 2^40` | [0.3508, 0.3591] | [0.3476, 0.3623] | [0.3445, 0.3654] | [0.3402, 0.3697] | [0.3341, 0.3758] | [0.3255, 0.3844] |
 
 - `(2, 0)` at `N = 2^34` reproduces the published constant-budget interval. The `N = 2^37` row uses exact signed block moments through 2^37 (`collatz_boundary_moments_2p37_20261015.py`; the first 2^17 rows reproduce the stored 2^34 moments exactly; `S(2^37) = −152262364`, `H(2^37) = −67763`, `t(2^37) = −1`).
 - **Consistency test (passed).** The exact census satisfies `E_X <= 2X²` on every dyadic window of `[2^34, 2^37)`. So if (9a) held beyond 2^37 both certificates would be valid and their intervals would have to intersect; disjoint intervals would have refuted (9a). They are nested for every row.
-- **Margins** (bisection, every test in Arb). At `N = 2^34` (agreeing with the referee's independent values): largest constant budget `a = 227.385`, largest slope with `a = 2` `b = 144.393`, largest `(4c, c)` `c = 36.860`. At `N = 2^37`: `a = 1806.6`, `b = 1194.9`, `c = 292.86`. The certified region grows by about `2^(3(2σ_0−1)) ≈ 8` per three octaves of exact data.
+- **Margins** (bisection, every test in Arb). At `N = 2^34` (agreeing with the referee's independent values): largest constant budget `a = 227.385`, largest slope with `a = 2` `b = 144.393`, largest `(4c, c)` `c = 36.860`. At `N = 2^37`: `a = 1806.6`, `b = 1194.9`, `c = 292.86`. At `N = 2^40` (exact block moments through 2^40 from the streaming census; `S(2^40) = 989143994`, `H(2^40) = −55691`, `t(2^40) = +1`): `a = 14348`, `b = 9616`, `c = 2325.9`. The certified region grows by about `2^(3(2σ_0−1)) ≈ 8` per three octaves of exact data.
 - In the clock-mesh formulation a coarse-mean budget `C(P_b) <= X²(a' + b' j)` with the proved fine allowance gives `E_X/X² <= 4(a' + b' j) + 4/27 + O(X^(−1/2))`; for example `(15, 4)` lies inside the certified `(64, 16)` row (minimum margin 3.85, referee).
 - **Credit.** The amplitude note (sections 3 and 6.1) already proposed logarithmic budgets; the new contributions here are the interval certification, the margins, the `N = 2^37` certificate and the calibration (C). clock_duality_oct15 independently proves a sufficient coarse budget `k²/100` by comparison with B3's logarithmic pointwise allowance and propagates a linear-log budget from paid annular means (`collatz_gram_slack_20261015b.md`, `collatz_annular_overlap_20261015c.md`).
 
@@ -71,5 +73,5 @@ Since `|S(X)| <= B(X) = #{n <= X : n reaches 1}`, this gives `limsup log B(X)/lo
 
 ## Tests
 
-- The pre-registered 2^37..2^40 census (`collatz_census_2p40_preregistration_20261015.md`, P2): `E_X/X² <= 2` for `X = 2^37, 2^38, 2^39`.
+- The pre-registered 2^37..2^40 census (`collatz_census_2p40_preregistration_20261015.md`, P2): `E_X/X² <= 2` for `X = 2^37, 2^38, 2^39`. PASSED (0.069, 0.931, 0.078).
 - Any proof strategy for the coarse means must fail for the halving null, whose window energies violate (9a) at most scales, so it must use the odd-step relation.

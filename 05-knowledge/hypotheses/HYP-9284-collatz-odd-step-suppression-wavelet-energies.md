@@ -3,7 +3,8 @@ id: HYP-9284
 title: "Odd-step suppression of the Collatz wavelet discrepancies: relative to the halving null (random odd signs with t(2m) = -t(m)), the mod-3 discrepancy H of t(n) = (-1)^tau(n) carries 3-30 times less energy in sample and 25-300 times less on 2^33..2^36, and decorrelates within about one octave, and the deep wavelet energies, which match the null up to about 2^28, declined from there and lie below every null replicate on 2^30..2^37; conjecture: sup_X E_X/X^2 < infinity for H (a constant energy budget holds), with the suppression produced by the odd-step relation t(n) = -t((3n+1)/2)"
 status: >
   OPEN (the conjecture). NUMERICAL against 12 halving-null replicates on the FINITE-EXACT census through 2^37
-  (min-median-max quoted); pre-registered tests P2-P6 on 2^37..2^40: PENDING-P2-P6. PROVED
+  (min-median-max quoted); pre-registered tests on 2^37..2^40: P2, P3, P5, P6 PASSED, P4 FAILED (the quiet stretch
+  ended at 2^38). PROVED
   (THM-4658 statement 7): on densities of any finite 3-adic depth the excess operator has eigenvalue 1 only on
   Re s = 0, so no finite-depth power-law excess mode exists to resist the suppression.
 session: opus-2026-10-15-S37
@@ -46,4 +47,5 @@ related: [HYP-9282, HYP-9283, HYP-9285, THM-4658]
 ## Pre-registered tests (2^37..2^40; `collatz_census_2p40_preregistration_20261015.md`)
 
 - P2: `e_X <= 2` for `X = 2^37, 2^38, 2^39`. P3: `e_X <= 1` for the same windows. P4 (about even odds): their mean below 0.25. P5: level energies 3, 4, 5 averaged over octaves 37-39 below 0.8. P6: the octave mean of `H/sqrt(2N)` positive in at least two of the octaves 37-39.
-- Results: PENDING-P2-P6.
+- Results: P2 PASSED and P3 PASSED (`e_X` = 0.069, 0.931, 0.078). P4 FAILED (mean 0.359 > 0.25). P5 PASSED (0.50, 0.71, 0.71) with the levels recovering (octave 39: 0.69, 0.81, 0.76). P6 PASSED (−0.01, +0.50, +0.14).
+- Reading: the deep-level dip of 2^28..2^37 looks like a slow modulation, so the stronger question `E_X/X² → 0` gets no support; the level-1 suppression against the halving null (an order of magnitude) persists through 2^39.

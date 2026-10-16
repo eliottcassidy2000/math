@@ -2,8 +2,9 @@
 id: HYP-9285
 title: "Explicit formula for the Collatz parity sum: S(N) = sum_(n<=N) (-1)^tau(n) equals Re sum_rho c_rho N^rho over the zeros rho of D(s) = 1 + 2^(-s) + (3/2)^s/3 with Re rho > 1/2, up to a remainder of order sqrt(N) in mean square, with c_rho = 2 r_rho / rho for the residues r_rho of F(s) = sum t(n) n^(-s); the 28 zeros with Re rho > 0.65 and Im rho < 3000 predict S out of sample to about 2%, and the least-squares coefficients reproduce the conditionally certified residues"
 status: >
-  CONJECTURAL (the expansion). NUMERICAL, from the FINITE-EXACT census through 2^37; the 2^40 extension is pending: holdout and pre-registered
-  out-of-sample prediction errors (P1 of collatz_census_2p40_preregistration_20261015.md: PENDING-P1). CONDITIONAL
+  CONJECTURAL (the expansion). NUMERICAL, from the FINITE-EXACT censuses through 2^37 and 2^40: holdout errors and
+  the pre-registered out-of-sample prediction (P1 of collatz_census_2p40_preregistration_20261015.md: PASSED,
+  relative rms 0.0195 <= 0.03 on 2^37..2^40); dense data to 2^27 bring the remainder to 0.27 sqrt(N). CONDITIONAL
   (Arb, under the energy budget (2, 0) for dyadic X >= 2^37): nonzero residues certified at four zeros besides the
   Mercator zero (0.98494 + 720.74i, 0.94973 + 1572.56i, 0.86345 + 131.16i, 0.69392 + 22.25i), each with the
   least-squares value near the middle of its interval; all 28 least-squares values lie inside their (mostly wide)
@@ -57,7 +58,19 @@ the scoped numerical evidence of HYP-9284, not a proof of a complete modal expan
   zeros with `Re ρ > 1/2`: 0.0186 (in-sample 0.006, mild overfitting). The remaining error is consistent with zeros
   above `Im ρ = 3000`, whose oscillations alias on this grid.
 - **Pre-registered out-of-sample test (P1).** The 28-zero model fitted on `2^22..2^37` predicts `S` on `[2^37, 2^40)`;
-  pass if the relative rms error is at most 0.03. Result: PENDING-P1.
+  pass if the relative rms error is at most 0.03. Result: PASSED, 0.0195 (192 grid points; refitted on the same data the Mercator zero alone gives 0.165 and the 12 zeros with `Re > 0.85` give 0.042). `S(2^40)` = 989,143,994 against the prediction 961,770,189.
+- **Dense test** (`collatz_explicit_formula_dense_test_20261015.py`). The 64-point grid aliases every zero above 32 cycles per octave. On exact data through 2^27 sampled at 2048 points per octave (no aliasing below `Im ρ = 8000`), with the fit on `2^18..2^25` and the test on `2^25..2^27`:
+
+  | zeros used | holdout relative rms | holdout residual / `sqrt(N)` (rms) |
+  |---|---:|---:|
+  | 3 (`Im < 300`, `Re > 0.65`) | 0.124 | 1.40 |
+  | 10 (`Im < 1000`) | 0.082 | 0.93 |
+  | 28 (`Im < 3000`) | 0.034 | 0.37 |
+  | 47 (`Im < 5000`) | 0.029 | 0.31 |
+  | 75 (`Im < 8000`) | 0.026 | 0.28 |
+  | 119 (`Im < 8000`, `Re > 1/2`) | 0.025 | 0.27 |
+
+  The residual falls to the square-root scale and keeps falling as zeros are added. If the remainder `R = S − (modal sum)` were uncorrelated across the three scales of `H = −[R(N) + 3R(2N/3) + 3R(N/3)]` (exact up to the per-mode floor residues of MISTAKE-620), its rms would be `rms(H/sqrt N)/sqrt(10) = 0.24 sqrt(N)` on this range (`rms(H/sqrt N) = 0.75`); the measured 0.27 is close (HEURISTIC comparison).
 - **Residues, two ways.** A pole with residue `r` gives `S(N) ~ Re(2r N^ρ/ρ)`, so the least-squares coefficient gives
   `|r_fit| = |c_ρ| |ρ|/2`. At `s_0`: `|r_fit| = 0.18413`, inside the conditional Arb interval `[0.17784, 0.19011]` at
   `N = 2^37` and next to the boundary-numerator value `0.1840` of B3. Over the 28 zeros (`collatz_other_zeros_residue_table_20261015.json`):
