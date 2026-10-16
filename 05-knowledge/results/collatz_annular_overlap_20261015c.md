@@ -159,6 +159,32 @@ and not a claim that (AT) dominates the old J-row target. Different rows
 have different source supports and observed-edge costs. The old constant
 and incoming linear-log budgets remain available alternatives.
 
+**Corollary A6 (PROVED implication; premise OPEN).** A directly linear-log
+alternative is to require finite annular controllers with
+
+    ||G_D,k||_1 <= (16k-482) X^2,  every k>=32.               (ALT)
+
+This implies E_(2^k)<= (16k-480)2^(2k) for every k>=32. Thus for
+k=34+j its annular target is 62+16j, and its resulting energy budget is
+64+16j, exactly the premise of the incoming linear-log amplitude certificate
+in [HYP-9283](../hypotheses/HYP-9283-collatz-energy-budgets-constant-fail-log-suffice.md).
+The two preceding annular bounds at k=32,33 are part of (ALT), not silently
+inferred from the measured energy seeds. We inherit the cited conditional
+interval calculation; this session does not rerun its Arb certificate.
+
+**Proof.** Put B_k=16k-480. By (A4), delta_k<=B_k-2+4/3<=B_k.
+If a_k<=sqrt(B_k), then a_(k+2)<=sqrt(B_k)+sqrt(3)*2^(-k/2).
+Squaring the latter adds at most
+
+    2 sqrt(48k/2^k)+3/2^k < 3 < 32 = B_(k+2)-B_k
+
+for k>=32: k/2^k decreases there and 48*32<2^32. The exact two seeds
+above also satisfy E_(2^k)/2^(2k)<=B_k. Induct on the two parity chains. ∎
+
+Neither numerical budget dominates the other over the entire stated range;
+they cross. They give two explicit invoices for the same native
+annular rows, without invoking a stochastic covariance model.
+
 ## 4. Exact census, including unsuccessful controllers
 
 The six cases (k,depth) are (10,8),(10,16),(12,16),(14,16),(14,24),(16,32).

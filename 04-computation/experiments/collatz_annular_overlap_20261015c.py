@@ -204,6 +204,7 @@ def elementary_controls():
     for k in (32,33):
         E=int(rows[k+1]['residues'][2][3])+rows[k]['residues'][2][0]**2-rows[k+1]['residues'][2][0]**2
         need(E<=F(k*k,16)*2**(2*k),'inherited exact energy seed')
+        need(E<=(16*k-480)*2**(2*k),'linear-log propagation seed')
         seeds.append({'k':k,'E':E,'normalized':float(F(E,2**(2*k)))})
     return {'ramp_sequences':count,'inherited_energy_seeds':seeds}
 
