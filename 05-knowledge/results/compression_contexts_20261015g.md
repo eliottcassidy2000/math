@@ -8,6 +8,11 @@ only publisher metadata and its abstract were accessible. No implementation
 of that paper, refutation of its unpublished-to-us steps, or resolution of
 P versus NP is claimed. Hadwiger--Nelson and planar Jacobian remain OPEN.
 
+**Continuation:** [component palette matching](six_colour_component_pairs_20261016a.md)
+retains independent two-class component flips. At the same geometric ports,
+two distinct admissible pairs suffice; all 210 boundary patterns using at
+most four colours extend across any four-colourable exterior.
+
 ## 1. Paper intake and a useful precise question
 
 The supplied [IEEE record](https://ieeexplore.ieee.org/document/11717448)

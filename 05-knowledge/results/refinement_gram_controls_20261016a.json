@@ -1,0 +1,639 @@
+{
+  "algebra": {
+    "hostile": {
+      "columns": [
+        3,
+        5
+      ],
+      "literal_clocks": [
+        1,
+        0
+      ],
+      "new_envelope_gap": 2,
+      "new_gram_remainder_norm": 2,
+      "old_envelope_gap": 0,
+      "old_gram_remainder_norm": 2
+    },
+    "scalar_paths": 11718,
+    "sharp_paths": [
+      {
+        "b": 1,
+        "baseline": 0,
+        "energy": [
+          0,
+          1
+        ]
+      },
+      {
+        "b": 1,
+        "baseline": 1,
+        "energy": [
+          1,
+          1
+        ]
+      },
+      {
+        "b": 1,
+        "baseline": 13,
+        "energy": [
+          169,
+          1
+        ]
+      },
+      {
+        "b": 2,
+        "baseline": 0,
+        "energy": [
+          8,
+          1
+        ]
+      },
+      {
+        "b": 2,
+        "baseline": 1,
+        "energy": [
+          18,
+          1
+        ]
+      },
+      {
+        "b": 2,
+        "baseline": 13,
+        "energy": [
+          450,
+          1
+        ]
+      },
+      {
+        "b": 3,
+        "baseline": 0,
+        "energy": [
+          352,
+          9
+        ]
+      },
+      {
+        "b": 3,
+        "baseline": 1,
+        "energy": [
+          571,
+          9
+        ]
+      },
+      {
+        "b": 3,
+        "baseline": 13,
+        "energy": [
+          7411,
+          9
+        ]
+      },
+      {
+        "b": 4,
+        "baseline": 0,
+        "energy": [
+          104,
+          1
+        ]
+      },
+      {
+        "b": 4,
+        "baseline": 1,
+        "energy": [
+          148,
+          1
+        ]
+      },
+      {
+        "b": 4,
+        "baseline": 13,
+        "energy": [
+          1300,
+          1
+        ]
+      },
+      {
+        "b": 5,
+        "baseline": 0,
+        "energy": [
+          5344,
+          25
+        ]
+      },
+      {
+        "b": 5,
+        "baseline": 1,
+        "energy": [
+          7069,
+          25
+        ]
+      },
+      {
+        "b": 5,
+        "baseline": 13,
+        "energy": [
+          47269,
+          25
+        ]
+      },
+      {
+        "b": 6,
+        "baseline": 0,
+        "energy": [
+          3416,
+          9
+        ]
+      },
+      {
+        "b": 6,
+        "baseline": 1,
+        "energy": [
+          4310,
+          9
+        ]
+      },
+      {
+        "b": 6,
+        "baseline": 13,
+        "energy": [
+          23462,
+          9
+        ]
+      },
+      {
+        "b": 7,
+        "baseline": 0,
+        "energy": [
+          4288,
+          7
+        ]
+      },
+      {
+        "b": 7,
+        "baseline": 1,
+        "energy": [
+          5233,
+          7
+        ]
+      },
+      {
+        "b": 7,
+        "baseline": 13,
+        "energy": [
+          24217,
+          7
+        ]
+      },
+      {
+        "b": 8,
+        "baseline": 0,
+        "energy": [
+          924,
+          1
+        ]
+      },
+      {
+        "b": 8,
+        "baseline": 1,
+        "energy": [
+          1100,
+          1
+        ]
+      },
+      {
+        "b": 8,
+        "baseline": 13,
+        "energy": [
+          4460,
+          1
+        ]
+      },
+      {
+        "b": 9,
+        "baseline": 0,
+        "energy": [
+          35776,
+          27
+        ]
+      },
+      {
+        "b": 9,
+        "baseline": 1,
+        "energy": [
+          41779,
+          27
+        ]
+      },
+      {
+        "b": 9,
+        "baseline": 13,
+        "energy": [
+          151723,
+          27
+        ]
+      },
+      {
+        "b": 10,
+        "baseline": 0,
+        "energy": [
+          45672,
+          25
+        ]
+      },
+      {
+        "b": 10,
+        "baseline": 1,
+        "energy": [
+          52522,
+          25
+        ]
+      },
+      {
+        "b": 10,
+        "baseline": 13,
+        "energy": [
+          173722,
+          25
+        ]
+      },
+      {
+        "b": 11,
+        "baseline": 0,
+        "energy": [
+          26848,
+          11
+        ]
+      },
+      {
+        "b": 11,
+        "baseline": 1,
+        "energy": [
+          30489,
+          11
+        ]
+      },
+      {
+        "b": 11,
+        "baseline": 13,
+        "energy": [
+          93057,
+          11
+        ]
+      },
+      {
+        "b": 12,
+        "baseline": 0,
+        "energy": [
+          28600,
+          9
+        ]
+      },
+      {
+        "b": 12,
+        "baseline": 1,
+        "energy": [
+          32140,
+          9
+        ]
+      },
+      {
+        "b": 12,
+        "baseline": 13,
+        "energy": [
+          91468,
+          9
+        ]
+      },
+      {
+        "b": 13,
+        "baseline": 0,
+        "energy": [
+          52640,
+          13
+        ]
+      },
+      {
+        "b": 13,
+        "baseline": 1,
+        "energy": [
+          58633,
+          13
+        ]
+      },
+      {
+        "b": 13,
+        "baseline": 13,
+        "energy": [
+          156913,
+          13
+        ]
+      },
+      {
+        "b": 14,
+        "baseline": 0,
+        "energy": [
+          35464,
+          7
+        ]
+      },
+      {
+        "b": 14,
+        "baseline": 1,
+        "energy": [
+          39202,
+          7
+        ]
+      },
+      {
+        "b": 14,
+        "baseline": 13,
+        "energy": [
+          99346,
+          7
+        ]
+      },
+      {
+        "b": 15,
+        "baseline": 0,
+        "energy": [
+          1404032,
+          225
+        ]
+      },
+      {
+        "b": 15,
+        "baseline": 1,
+        "energy": [
+          1541807,
+          225
+        ]
+      },
+      {
+        "b": 15,
+        "baseline": 13,
+        "energy": [
+          3721607,
+          225
+        ]
+      },
+      {
+        "b": 16,
+        "baseline": 0,
+        "energy": [
+          7582,
+          1
+        ]
+      },
+      {
+        "b": 16,
+        "baseline": 1,
+        "energy": [
+          8278,
+          1
+        ]
+      },
+      {
+        "b": 16,
+        "baseline": 13,
+        "energy": [
+          19126,
+          1
+        ]
+      },
+      {
+        "b": 17,
+        "baseline": 0,
+        "energy": [
+          154752,
+          17
+        ]
+      },
+      {
+        "b": 17,
+        "baseline": 1,
+        "energy": [
+          168097,
+          17
+        ]
+      },
+      {
+        "b": 17,
+        "baseline": 13,
+        "energy": [
+          373321,
+          17
+        ]
+      },
+      {
+        "b": 18,
+        "baseline": 0,
+        "energy": [
+          291992,
+          27
+        ]
+      },
+      {
+        "b": 18,
+        "baseline": 1,
+        "energy": [
+          315734,
+          27
+        ]
+      },
+      {
+        "b": 18,
+        "baseline": 13,
+        "energy": [
+          676454,
+          27
+        ]
+      },
+      {
+        "b": 19,
+        "baseline": 0,
+        "energy": [
+          241824,
+          19
+        ]
+      },
+      {
+        "b": 19,
+        "baseline": 1,
+        "energy": [
+          260425,
+          19
+        ]
+      },
+      {
+        "b": 19,
+        "baseline": 13,
+        "energy": [
+          539953,
+          19
+        ]
+      },
+      {
+        "b": 20,
+        "baseline": 0,
+        "energy": [
+          371336,
+          25
+        ]
+      },
+      {
+        "b": 20,
+        "baseline": 1,
+        "energy": [
+          398436,
+          25
+        ]
+      },
+      {
+        "b": 20,
+        "baseline": 13,
+        "energy": [
+          801636,
+          25
+        ]
+      },
+      {
+        "b": 21,
+        "baseline": 0,
+        "energy": [
+          1083808,
+          63
+        ]
+      },
+      {
+        "b": 21,
+        "baseline": 1,
+        "energy": [
+          1159051,
+          63
+        ]
+      },
+      {
+        "b": 21,
+        "baseline": 13,
+        "energy": [
+          2268355,
+          63
+        ]
+      },
+      {
+        "b": 22,
+        "baseline": 0,
+        "energy": [
+          217672,
+          11
+        ]
+      },
+      {
+        "b": 22,
+        "baseline": 1,
+        "energy": [
+          232082,
+          11
+        ]
+      },
+      {
+        "b": 22,
+        "baseline": 13,
+        "energy": [
+          442754,
+          11
+        ]
+      },
+      {
+        "b": 23,
+        "baseline": 0,
+        "energy": [
+          520256,
+          23
+        ]
+      },
+      {
+        "b": 23,
+        "baseline": 1,
+        "energy": [
+          553169,
+          23
+        ]
+      },
+      {
+        "b": 23,
+        "baseline": 13,
+        "energy": [
+          1030649,
+          23
+        ]
+      },
+      {
+        "b": 24,
+        "baseline": 0,
+        "energy": [
+          231380,
+          9
+        ]
+      },
+      {
+        "b": 24,
+        "baseline": 1,
+        "energy": [
+          245396,
+          9
+        ]
+      },
+      {
+        "b": 24,
+        "baseline": 13,
+        "energy": [
+          447284,
+          9
+        ]
+      }
+    ]
+  },
+  "native": [
+    {
+      "bin_width": 16,
+      "k": 8,
+      "stages": [
+        {
+          "coarse_gram_numerator": 20302040,
+          "columns": 64,
+          "denominator": 16,
+          "fine_gram_norm": 1272788,
+          "gram_remainder_numerator": 113552,
+          "haar_budget_numerator": 142464,
+          "stage": 1
+        }
+      ]
+    },
+    {
+      "bin_width": 32,
+      "k": 10,
+      "stages": [
+        {
+          "coarse_gram_numerator": 2571502632,
+          "columns": 252,
+          "denominator": 32,
+          "fine_gram_norm": 80395268,
+          "gram_remainder_numerator": 2584344,
+          "haar_budget_numerator": 3544160,
+          "stage": 1
+        },
+        {
+          "coarse_gram_numerator": 374835008,
+          "columns": 105,
+          "denominator": 32,
+          "fine_gram_norm": 11735572,
+          "gram_remainder_numerator": 1187532,
+          "haar_budget_numerator": 1646188,
+          "stage": 2
+        }
+      ]
+    }
+  ],
+  "status": "FINITE-EXACT controls, not a uniform reset theorem"
+}

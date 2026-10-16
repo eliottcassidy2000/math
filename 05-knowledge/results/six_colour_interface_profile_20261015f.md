@@ -11,6 +11,12 @@ show that a four-colouring with at most three interface classes preserves
 all 457 boundary patterns using at most five colours. This is another
 necessary forcing screen, not a constructed four-chromatic field graph.
 
+[Component palette matching](six_colour_component_pairs_20261016a.md)
+further retains independent two-class flips and the exact nine-point
+incidences. Two admissible pairs suffice, even when they overlap; all
+patterns using at most four colours extend across any four-colourable
+exterior, without the port-free-class assumption.
+
 ## 1. Inheritance and the new coordinate
 
 [THM-4614, three-colourable contexts](../../01-canon/theorems/THM-4614-three-colourable-contexts-cannot-change-the-six-colour-port-relation-in-q-zeta55.md)

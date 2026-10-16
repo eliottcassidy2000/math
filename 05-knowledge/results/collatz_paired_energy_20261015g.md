@@ -7,6 +7,11 @@ debt, the joint-bin discounted bound, and the conditional energy implication.
 overlap, unconditional amplitude nonvanishing, and universal ROOT entry.
 Self-audited; no independent referee is claimed.
 
+**Continuation:** [refinement debt](collatz_refinement_debt_20261016a.md)
+proves a sharp general envelope price and a Gram refinement remainder that
+cannot increase under common native extensions. The tight k22 pair also
+passes on individual physical rows. Uniform paired payment remains open.
+
 ## Inheritance and the changed target
 
 The nearest proved mechanism is P1--P2 of
