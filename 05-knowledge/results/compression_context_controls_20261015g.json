@@ -1,0 +1,89 @@
+{
+  "clock": {
+    "exact_clock_compressions": 20
+  },
+  "palettes": {
+    "at_most_five_patterns": 457,
+    "boundary_patterns": {
+      "3": 30,
+      "4": 180,
+      "5": 247,
+      "6": 113
+    },
+    "exhaustive_nine_blocker_banks": 167960,
+    "minimum_surviving_options": 3,
+    "options": 30
+  },
+  "sat": {
+    "all_three_variable_clause_subsets": 256,
+    "changing_generators": [
+      {
+        "clauses": 1,
+        "hamiltonian_cyclic_dimension": 2,
+        "joint_dimension": 2
+      },
+      {
+        "clauses": 2,
+        "hamiltonian_cyclic_dimension": 3,
+        "joint_dimension": 4
+      },
+      {
+        "clauses": 3,
+        "hamiltonian_cyclic_dimension": 4,
+        "joint_dimension": 8
+      },
+      {
+        "clauses": 4,
+        "hamiltonian_cyclic_dimension": 5,
+        "joint_dimension": 16
+      },
+      {
+        "clauses": 5,
+        "hamiltonian_cyclic_dimension": 6,
+        "joint_dimension": 32
+      },
+      {
+        "clauses": 6,
+        "hamiltonian_cyclic_dimension": 7,
+        "joint_dimension": 64
+      }
+    ],
+    "dense_projector_family": [
+      {
+        "clauses": 7,
+        "cyclic_dimension": 2,
+        "variables": 3,
+        "walsh_support": 8
+      },
+      {
+        "clauses": 14,
+        "cyclic_dimension": 3,
+        "variables": 6,
+        "walsh_support": 64
+      },
+      {
+        "clauses": 21,
+        "cyclic_dimension": 4,
+        "variables": 9,
+        "walsh_support": 512
+      },
+      {
+        "clauses": 28,
+        "cyclic_dimension": 5,
+        "variables": 12,
+        "walsh_support": 4096
+      },
+      {
+        "clauses": 35,
+        "cyclic_dimension": 6,
+        "variables": 15,
+        "walsh_support": 32768
+      }
+    ],
+    "finite_field_hostiles": [
+      "count mod7",
+      "energy wrap mod7"
+    ]
+  },
+  "status": "PROVED elementary mechanisms with FINITE-EXACT controls; not a paper implementation"
+}

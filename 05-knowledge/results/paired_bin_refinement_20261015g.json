@@ -1,0 +1,2121 @@
+{
+  "scales": [
+    {
+      "comparisons": [
+        {
+          "bin_exponent": 0,
+          "denominator": 1,
+          "end": 1,
+          "new_numerator": 1389632,
+          "old_numerator": 433875036,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 1,
+          "denominator": 2,
+          "end": 1,
+          "new_numerator": 2774764,
+          "old_numerator": 867748540,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 2,
+          "denominator": 4,
+          "end": 1,
+          "new_numerator": 5536816,
+          "old_numerator": 1735485628,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 3,
+          "denominator": 8,
+          "end": 1,
+          "new_numerator": 11041392,
+          "old_numerator": 3470880276,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 4,
+          "denominator": 16,
+          "end": 1,
+          "new_numerator": 21938876,
+          "old_numerator": 6941032076,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 5,
+          "denominator": 32,
+          "end": 1,
+          "new_numerator": 42529136,
+          "old_numerator": 13876239860,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 6,
+          "denominator": 64,
+          "end": 1,
+          "new_numerator": 81701768,
+          "old_numerator": 27705871788,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 7,
+          "denominator": 128,
+          "end": 1,
+          "new_numerator": 151265524,
+          "old_numerator": 55038934756,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 8,
+          "denominator": 256,
+          "end": 1,
+          "new_numerator": 252619236,
+          "old_numerator": 107095180516,
+          "passes": true,
+          "start": 0
+        }
+      ],
+      "failures": [],
+      "k": 8,
+      "policy_stop_stages": 1,
+      "refinement_invoices": [
+        {
+          "bin_exponent": 0,
+          "denominator": 1,
+          "mixture_numerator": 0,
+          "stage": 1,
+          "variance_numerator": 0
+        },
+        {
+          "bin_exponent": 1,
+          "denominator": 2,
+          "mixture_numerator": 4036,
+          "stage": 1,
+          "variance_numerator": 464
+        },
+        {
+          "bin_exponent": 2,
+          "denominator": 4,
+          "mixture_numerator": 19976,
+          "stage": 1,
+          "variance_numerator": 1736
+        },
+        {
+          "bin_exponent": 3,
+          "denominator": 8,
+          "mixture_numerator": 67592,
+          "stage": 1,
+          "variance_numerator": 8072
+        },
+        {
+          "bin_exponent": 4,
+          "denominator": 16,
+          "mixture_numerator": 247252,
+          "stage": 1,
+          "variance_numerator": 47984
+        },
+        {
+          "bin_exponent": 5,
+          "denominator": 32,
+          "mixture_numerator": 1733640,
+          "stage": 1,
+          "variance_numerator": 205448
+        },
+        {
+          "bin_exponent": 6,
+          "denominator": 64,
+          "mixture_numerator": 5880112,
+          "stage": 1,
+          "variance_numerator": 1354568
+        },
+        {
+          "bin_exponent": 7,
+          "denominator": 128,
+          "mixture_numerator": 16143660,
+          "stage": 1,
+          "variance_numerator": 10463712
+        },
+        {
+          "bin_exponent": 8,
+          "denominator": 256,
+          "mixture_numerator": 37469788,
+          "stage": 1,
+          "variance_numerator": 65656768
+        }
+      ]
+    },
+    {
+      "comparisons": [
+        {
+          "bin_exponent": 0,
+          "denominator": 1,
+          "end": 2,
+          "new_numerator": 14168988,
+          "old_numerator": 27820284508,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 0,
+          "denominator": 1,
+          "end": 2,
+          "new_numerator": 14168988,
+          "old_numerator": 84552692,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 1,
+          "denominator": 2,
+          "end": 2,
+          "new_numerator": 28324940,
+          "old_numerator": 55640562876,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 1,
+          "denominator": 2,
+          "end": 2,
+          "new_numerator": 28324940,
+          "old_numerator": 169092572,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 2,
+          "denominator": 4,
+          "end": 2,
+          "new_numerator": 56625648,
+          "old_numerator": 111281079996,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 2,
+          "denominator": 4,
+          "end": 2,
+          "new_numerator": 56625648,
+          "old_numerator": 338171964,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 3,
+          "denominator": 8,
+          "end": 2,
+          "new_numerator": 113154692,
+          "old_numerator": 222561795860,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 3,
+          "denominator": 8,
+          "end": 2,
+          "new_numerator": 113154692,
+          "old_numerator": 676253964,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 4,
+          "denominator": 16,
+          "end": 2,
+          "new_numerator": 226056032,
+          "old_numerator": 445120678668,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 4,
+          "denominator": 16,
+          "end": 2,
+          "new_numerator": 226056032,
+          "old_numerator": 1351881772,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 5,
+          "denominator": 32,
+          "end": 2,
+          "new_numerator": 451394604,
+          "old_numerator": 890218056756,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 5,
+          "denominator": 32,
+          "end": 2,
+          "new_numerator": 451394604,
+          "old_numerator": 2702464092,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 6,
+          "denominator": 64,
+          "end": 2,
+          "new_numerator": 896860596,
+          "old_numerator": 1780249695436,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 6,
+          "denominator": 64,
+          "end": 2,
+          "new_numerator": 896860596,
+          "old_numerator": 5397603300,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 7,
+          "denominator": 128,
+          "end": 2,
+          "new_numerator": 1765304176,
+          "old_numerator": 3559008100980,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 7,
+          "denominator": 128,
+          "end": 2,
+          "new_numerator": 1765304176,
+          "old_numerator": 10748216588,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 8,
+          "denominator": 256,
+          "end": 2,
+          "new_numerator": 3447784920,
+          "old_numerator": 7106085664428,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 8,
+          "denominator": 256,
+          "end": 2,
+          "new_numerator": 3447784920,
+          "old_numerator": 21236484244,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 9,
+          "denominator": 512,
+          "end": 2,
+          "new_numerator": 6444863140,
+          "old_numerator": 14116727902436,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 9,
+          "denominator": 512,
+          "end": 2,
+          "new_numerator": 6444863140,
+          "old_numerator": 39672181300,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 10,
+          "denominator": 1024,
+          "end": 2,
+          "new_numerator": 9763416100,
+          "old_numerator": 27469904898276,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 10,
+          "denominator": 1024,
+          "end": 2,
+          "new_numerator": 9763416100,
+          "old_numerator": 71141692176,
+          "passes": true,
+          "start": 1
+        }
+      ],
+      "failures": [],
+      "k": 10,
+      "policy_stop_stages": 2,
+      "refinement_invoices": [
+        {
+          "bin_exponent": 0,
+          "denominator": 1,
+          "mixture_numerator": 0,
+          "stage": 1,
+          "variance_numerator": 0
+        },
+        {
+          "bin_exponent": 1,
+          "denominator": 2,
+          "mixture_numerator": 10728,
+          "stage": 1,
+          "variance_numerator": 2084
+        },
+        {
+          "bin_exponent": 2,
+          "denominator": 4,
+          "mixture_numerator": 28704,
+          "stage": 1,
+          "variance_numerator": 10100
+        },
+        {
+          "bin_exponent": 3,
+          "denominator": 8,
+          "mixture_numerator": 124024,
+          "stage": 1,
+          "variance_numerator": 43548
+        },
+        {
+          "bin_exponent": 4,
+          "denominator": 16,
+          "mixture_numerator": 743952,
+          "stage": 1,
+          "variance_numerator": 217348
+        },
+        {
+          "bin_exponent": 5,
+          "denominator": 32,
+          "mixture_numerator": 2177568,
+          "stage": 1,
+          "variance_numerator": 1044484
+        },
+        {
+          "bin_exponent": 6,
+          "denominator": 64,
+          "mixture_numerator": 9101288,
+          "stage": 1,
+          "variance_numerator": 4667700
+        },
+        {
+          "bin_exponent": 7,
+          "denominator": 128,
+          "mixture_numerator": 48879104,
+          "stage": 1,
+          "variance_numerator": 25648884
+        },
+        {
+          "bin_exponent": 8,
+          "denominator": 256,
+          "mixture_numerator": 209139304,
+          "stage": 1,
+          "variance_numerator": 199865604
+        },
+        {
+          "bin_exponent": 9,
+          "denominator": 512,
+          "mixture_numerator": 2145933520,
+          "stage": 1,
+          "variance_numerator": 1472863484
+        },
+        {
+          "bin_exponent": 10,
+          "denominator": 1024,
+          "mixture_numerator": 5340422740,
+          "stage": 1,
+          "variance_numerator": 10099841692
+        },
+        {
+          "bin_exponent": 0,
+          "denominator": 1,
+          "mixture_numerator": 0,
+          "stage": 2,
+          "variance_numerator": 0
+        },
+        {
+          "bin_exponent": 1,
+          "denominator": 2,
+          "mixture_numerator": 11184,
+          "stage": 2,
+          "variance_numerator": 1852
+        },
+        {
+          "bin_exponent": 2,
+          "denominator": 4,
+          "mixture_numerator": 41636,
+          "stage": 2,
+          "variance_numerator": 8668
+        },
+        {
+          "bin_exponent": 3,
+          "denominator": 8,
+          "mixture_numerator": 162576,
+          "stage": 2,
+          "variance_numerator": 34636
+        },
+        {
+          "bin_exponent": 4,
+          "denominator": 16,
+          "mixture_numerator": 500836,
+          "stage": 2,
+          "variance_numerator": 146940
+        },
+        {
+          "bin_exponent": 5,
+          "denominator": 32,
+          "mixture_numerator": 1406248,
+          "stage": 2,
+          "variance_numerator": 606764
+        },
+        {
+          "bin_exponent": 6,
+          "denominator": 64,
+          "mixture_numerator": 7396336,
+          "stage": 2,
+          "variance_numerator": 2558300
+        },
+        {
+          "bin_exponent": 7,
+          "denominator": 128,
+          "mixture_numerator": 40093316,
+          "stage": 2,
+          "variance_numerator": 8232972
+        },
+        {
+          "bin_exponent": 8,
+          "denominator": 256,
+          "mixture_numerator": 123969716,
+          "stage": 2,
+          "variance_numerator": 55506292
+        },
+        {
+          "bin_exponent": 9,
+          "denominator": 512,
+          "mixture_numerator": 530026192,
+          "stage": 2,
+          "variance_numerator": 279632524
+        },
+        {
+          "bin_exponent": 10,
+          "denominator": 1024,
+          "mixture_numerator": 3659660064,
+          "stage": 2,
+          "variance_numerator": 1085967548
+        }
+      ]
+    },
+    {
+      "comparisons": [
+        {
+          "bin_exponent": 0,
+          "denominator": 1,
+          "end": 2,
+          "new_numerator": 1148836860,
+          "old_numerator": 1781336482396,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 0,
+          "denominator": 1,
+          "end": 3,
+          "new_numerator": 538468756,
+          "old_numerator": 5591756484,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 0,
+          "denominator": 1,
+          "end": 3,
+          "new_numerator": 538468756,
+          "old_numerator": 1148836860,
+          "passes": true,
+          "start": 2
+        },
+        {
+          "bin_exponent": 1,
+          "denominator": 2,
+          "end": 2,
+          "new_numerator": 2297606984,
+          "old_numerator": 3562672940220,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 1,
+          "denominator": 2,
+          "end": 3,
+          "new_numerator": 1076907652,
+          "old_numerator": 11183366344,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 1,
+          "denominator": 2,
+          "end": 3,
+          "new_numerator": 1076907652,
+          "old_numerator": 2297606984,
+          "passes": true,
+          "start": 2
+        },
+        {
+          "bin_exponent": 2,
+          "denominator": 4,
+          "end": 2,
+          "new_numerator": 4595022764,
+          "old_numerator": 7125345697468,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 2,
+          "denominator": 4,
+          "end": 3,
+          "new_numerator": 2153757332,
+          "old_numerator": 22366374236,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 2,
+          "denominator": 4,
+          "end": 3,
+          "new_numerator": 2153757332,
+          "old_numerator": 4595022764,
+          "passes": true,
+          "start": 2
+        },
+        {
+          "bin_exponent": 3,
+          "denominator": 8,
+          "end": 2,
+          "new_numerator": 9189493024,
+          "old_numerator": 14250689938196,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 3,
+          "denominator": 8,
+          "end": 3,
+          "new_numerator": 4307299028,
+          "old_numerator": 44731122620,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 3,
+          "denominator": 8,
+          "end": 3,
+          "new_numerator": 4307299028,
+          "old_numerator": 9189493024,
+          "passes": true,
+          "start": 2
+        },
+        {
+          "bin_exponent": 4,
+          "denominator": 16,
+          "end": 2,
+          "new_numerator": 18376752644,
+          "old_numerator": 28501368225036,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 4,
+          "denominator": 16,
+          "end": 3,
+          "new_numerator": 8612908388,
+          "old_numerator": 89455982716,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 4,
+          "denominator": 16,
+          "end": 3,
+          "new_numerator": 8612908388,
+          "old_numerator": 18376752644,
+          "passes": true,
+          "start": 2
+        },
+        {
+          "bin_exponent": 5,
+          "denominator": 32,
+          "end": 2,
+          "new_numerator": 36743504480,
+          "old_numerator": 57002643244340,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 5,
+          "denominator": 32,
+          "end": 3,
+          "new_numerator": 17221585692,
+          "old_numerator": 178890329340,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 5,
+          "denominator": 32,
+          "end": 3,
+          "new_numerator": 17221585692,
+          "old_numerator": 36743504480,
+          "passes": true,
+          "start": 2
+        },
+        {
+          "bin_exponent": 6,
+          "denominator": 64,
+          "end": 2,
+          "new_numerator": 73425671764,
+          "old_numerator": 114004540830028,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 6,
+          "denominator": 64,
+          "end": 3,
+          "new_numerator": 34410205548,
+          "old_numerator": 357665355196,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 6,
+          "denominator": 64,
+          "end": 3,
+          "new_numerator": 34410205548,
+          "old_numerator": 73425671764,
+          "passes": true,
+          "start": 2
+        },
+        {
+          "bin_exponent": 7,
+          "denominator": 128,
+          "end": 2,
+          "new_numerator": 146670392780,
+          "old_numerator": 228003116445876,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 7,
+          "denominator": 128,
+          "end": 3,
+          "new_numerator": 68759145188,
+          "old_numerator": 714926368680,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 7,
+          "denominator": 128,
+          "end": 3,
+          "new_numerator": 68759145188,
+          "old_numerator": 146670392780,
+          "passes": true,
+          "start": 2
+        },
+        {
+          "bin_exponent": 8,
+          "denominator": 256,
+          "end": 2,
+          "new_numerator": 292354536580,
+          "old_numerator": 455958510960076,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 8,
+          "denominator": 256,
+          "end": 3,
+          "new_numerator": 137157138956,
+          "old_numerator": 1426947225852,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 8,
+          "denominator": 256,
+          "end": 3,
+          "new_numerator": 137157138956,
+          "old_numerator": 292354536580,
+          "passes": true,
+          "start": 2
+        },
+        {
+          "bin_exponent": 9,
+          "denominator": 512,
+          "end": 2,
+          "new_numerator": 581082861568,
+          "old_numerator": 911535247340660,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 9,
+          "denominator": 512,
+          "end": 3,
+          "new_numerator": 270526895884,
+          "old_numerator": 2844701607240,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 9,
+          "denominator": 512,
+          "end": 3,
+          "new_numerator": 270526895884,
+          "old_numerator": 581082861568,
+          "passes": true,
+          "start": 2
+        },
+        {
+          "bin_exponent": 10,
+          "denominator": 1024,
+          "end": 2,
+          "new_numerator": 1127739831756,
+          "old_numerator": 1820016294550188,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 10,
+          "denominator": 1024,
+          "end": 3,
+          "new_numerator": 527531665368,
+          "old_numerator": 5567802846224,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 10,
+          "denominator": 1024,
+          "end": 3,
+          "new_numerator": 527531665368,
+          "old_numerator": 1127739831756,
+          "passes": true,
+          "start": 2
+        },
+        {
+          "bin_exponent": 11,
+          "denominator": 2048,
+          "end": 2,
+          "new_numerator": 2058978456424,
+          "old_numerator": 3615599002032356,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 11,
+          "denominator": 2048,
+          "end": 3,
+          "new_numerator": 923122385000,
+          "old_numerator": 10507174097416,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 11,
+          "denominator": 2048,
+          "end": 3,
+          "new_numerator": 923122385000,
+          "old_numerator": 2058978456424,
+          "passes": true,
+          "start": 2
+        },
+        {
+          "bin_exponent": 12,
+          "denominator": 4096,
+          "end": 2,
+          "new_numerator": 3202925867584,
+          "old_numerator": 7035729251596516,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 12,
+          "denominator": 4096,
+          "end": 3,
+          "new_numerator": 1351699215876,
+          "old_numerator": 17349940686276,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 12,
+          "denominator": 4096,
+          "end": 3,
+          "new_numerator": 1351699215876,
+          "old_numerator": 3202925867584,
+          "passes": true,
+          "start": 2
+        }
+      ],
+      "failures": [],
+      "k": 12,
+      "policy_stop_stages": 3,
+      "refinement_invoices": [
+        {
+          "bin_exponent": 0,
+          "denominator": 1,
+          "mixture_numerator": 0,
+          "stage": 1,
+          "variance_numerator": 0
+        },
+        {
+          "bin_exponent": 1,
+          "denominator": 2,
+          "mixture_numerator": 138708,
+          "stage": 1,
+          "variance_numerator": 7916
+        },
+        {
+          "bin_exponent": 2,
+          "denominator": 4,
+          "mixture_numerator": 611424,
+          "stage": 1,
+          "variance_numerator": 40276
+        },
+        {
+          "bin_exponent": 3,
+          "denominator": 8,
+          "mixture_numerator": 2755568,
+          "stage": 1,
+          "variance_numerator": 173684
+        },
+        {
+          "bin_exponent": 4,
+          "denominator": 16,
+          "mixture_numerator": 11281568,
+          "stage": 1,
+          "variance_numerator": 839460
+        },
+        {
+          "bin_exponent": 5,
+          "denominator": 32,
+          "mixture_numerator": 42251352,
+          "stage": 1,
+          "variance_numerator": 3626796
+        },
+        {
+          "bin_exponent": 6,
+          "denominator": 64,
+          "mixture_numerator": 184788520,
+          "stage": 1,
+          "variance_numerator": 22271260
+        },
+        {
+          "bin_exponent": 7,
+          "denominator": 128,
+          "mixture_numerator": 680759276,
+          "stage": 1,
+          "variance_numerator": 137701996
+        },
+        {
+          "bin_exponent": 8,
+          "denominator": 256,
+          "mixture_numerator": 3580518688,
+          "stage": 1,
+          "variance_numerator": 961915364
+        },
+        {
+          "bin_exponent": 9,
+          "denominator": 512,
+          "mixture_numerator": 11557987084,
+          "stage": 1,
+          "variance_numerator": 6719725484
+        },
+        {
+          "bin_exponent": 10,
+          "denominator": 1024,
+          "mixture_numerator": 93336761948,
+          "stage": 1,
+          "variance_numerator": 64819031444
+        },
+        {
+          "bin_exponent": 11,
+          "denominator": 2048,
+          "mixture_numerator": 510289066908,
+          "stage": 1,
+          "variance_numerator": 434454114908
+        },
+        {
+          "bin_exponent": 12,
+          "denominator": 4096,
+          "mixture_numerator": 2443144233088,
+          "stage": 1,
+          "variance_numerator": 3110749639100
+        },
+        {
+          "bin_exponent": 0,
+          "denominator": 1,
+          "mixture_numerator": 0,
+          "stage": 2,
+          "variance_numerator": 0
+        },
+        {
+          "bin_exponent": 1,
+          "denominator": 2,
+          "mixture_numerator": 59788,
+          "stage": 2,
+          "variance_numerator": 6948
+        },
+        {
+          "bin_exponent": 2,
+          "denominator": 4,
+          "mixture_numerator": 290576,
+          "stage": 2,
+          "variance_numerator": 34100
+        },
+        {
+          "bin_exponent": 3,
+          "denominator": 8,
+          "mixture_numerator": 1060236,
+          "stage": 2,
+          "variance_numerator": 141620
+        },
+        {
+          "bin_exponent": 4,
+          "denominator": 16,
+          "mixture_numerator": 4000416,
+          "stage": 2,
+          "variance_numerator": 636700
+        },
+        {
+          "bin_exponent": 5,
+          "denominator": 32,
+          "mixture_numerator": 16936748,
+          "stage": 2,
+          "variance_numerator": 2338292
+        },
+        {
+          "bin_exponent": 6,
+          "denominator": 64,
+          "mixture_numerator": 88511200,
+          "stage": 2,
+          "variance_numerator": 11376076
+        },
+        {
+          "bin_exponent": 7,
+          "denominator": 128,
+          "mixture_numerator": 332716840,
+          "stage": 2,
+          "variance_numerator": 48008460
+        },
+        {
+          "bin_exponent": 8,
+          "denominator": 256,
+          "mixture_numerator": 1467609928,
+          "stage": 2,
+          "variance_numerator": 280089652
+        },
+        {
+          "bin_exponent": 9,
+          "denominator": 512,
+          "mixture_numerator": 5727697828,
+          "stage": 2,
+          "variance_numerator": 1393912924
+        },
+        {
+          "bin_exponent": 10,
+          "denominator": 1024,
+          "mixture_numerator": 33391791664,
+          "stage": 2,
+          "variance_numerator": 15277321220
+        },
+        {
+          "bin_exponent": 11,
+          "denominator": 2048,
+          "mixture_numerator": 214505906844,
+          "stage": 2,
+          "variance_numerator": 79333526012
+        },
+        {
+          "bin_exponent": 12,
+          "denominator": 4096,
+          "mixture_numerator": 966862636452,
+          "stage": 2,
+          "variance_numerator": 535847274524
+        },
+        {
+          "bin_exponent": 0,
+          "denominator": 1,
+          "mixture_numerator": 0,
+          "stage": 3,
+          "variance_numerator": 0
+        },
+        {
+          "bin_exponent": 1,
+          "denominator": 2,
+          "mixture_numerator": 22872,
+          "stage": 3,
+          "variance_numerator": 6988
+        },
+        {
+          "bin_exponent": 2,
+          "denominator": 4,
+          "mixture_numerator": 83448,
+          "stage": 3,
+          "variance_numerator": 34244
+        },
+        {
+          "bin_exponent": 3,
+          "denominator": 8,
+          "mixture_numerator": 307168,
+          "stage": 3,
+          "variance_numerator": 143852
+        },
+        {
+          "bin_exponent": 4,
+          "denominator": 16,
+          "mixture_numerator": 1959896,
+          "stage": 3,
+          "variance_numerator": 631812
+        },
+        {
+          "bin_exponent": 5,
+          "denominator": 32,
+          "mixture_numerator": 7154616,
+          "stage": 3,
+          "variance_numerator": 2259884
+        },
+        {
+          "bin_exponent": 6,
+          "denominator": 64,
+          "mixture_numerator": 41597432,
+          "stage": 3,
+          "variance_numerator": 10197404
+        },
+        {
+          "bin_exponent": 7,
+          "denominator": 128,
+          "mixture_numerator": 121028352,
+          "stage": 3,
+          "variance_numerator": 43827228
+        },
+        {
+          "bin_exponent": 8,
+          "denominator": 256,
+          "mixture_numerator": 463504440,
+          "stage": 3,
+          "variance_numerator": 227358140
+        },
+        {
+          "bin_exponent": 9,
+          "denominator": 512,
+          "mixture_numerator": 4067556096,
+          "stage": 3,
+          "variance_numerator": 1101551092
+        },
+        {
+          "bin_exponent": 10,
+          "denominator": 1024,
+          "mixture_numerator": 14007889836,
+          "stage": 3,
+          "variance_numerator": 9852450940
+        },
+        {
+          "bin_exponent": 11,
+          "denominator": 2048,
+          "mixture_numerator": 132021094988,
+          "stage": 3,
+          "variance_numerator": 47640532300
+        },
+        {
+          "bin_exponent": 12,
+          "denominator": 4096,
+          "mixture_numerator": 564172006624,
+          "stage": 3,
+          "variance_numerator": 289696802076
+        }
+      ]
+    },
+    {
+      "comparisons": [
+        {
+          "bin_exponent": 0,
+          "denominator": 1,
+          "end": 2,
+          "new_numerator": 59978800584,
+          "old_numerator": 114018954297948,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 0,
+          "denominator": 1,
+          "end": 3,
+          "new_numerator": 26074257144,
+          "old_numerator": 305699259092,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 0,
+          "denominator": 1,
+          "end": 4,
+          "new_numerator": 10703338540,
+          "old_numerator": 59978800584,
+          "passes": true,
+          "start": 2
+        },
+        {
+          "bin_exponent": 0,
+          "denominator": 1,
+          "end": 4,
+          "new_numerator": 10703338540,
+          "old_numerator": 26074257144,
+          "passes": true,
+          "start": 3
+        },
+        {
+          "bin_exponent": 1,
+          "denominator": 2,
+          "end": 2,
+          "new_numerator": 119956414660,
+          "old_numerator": 228037908497596,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 1,
+          "denominator": 2,
+          "end": 3,
+          "new_numerator": 52148063820,
+          "old_numerator": 611394175732,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 1,
+          "denominator": 2,
+          "end": 4,
+          "new_numerator": 21406389192,
+          "old_numerator": 119956414660,
+          "passes": true,
+          "start": 2
+        },
+        {
+          "bin_exponent": 1,
+          "denominator": 2,
+          "end": 4,
+          "new_numerator": 21406389192,
+          "old_numerator": 52148063820,
+          "passes": true,
+          "start": 3
+        },
+        {
+          "bin_exponent": 2,
+          "denominator": 4,
+          "end": 2,
+          "new_numerator": 239909472860,
+          "old_numerator": 456075816263356,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 2,
+          "denominator": 4,
+          "end": 3,
+          "new_numerator": 104295224596,
+          "old_numerator": 1222779041740,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 2,
+          "denominator": 4,
+          "end": 4,
+          "new_numerator": 42812038664,
+          "old_numerator": 239909472860,
+          "passes": true,
+          "start": 2
+        },
+        {
+          "bin_exponent": 2,
+          "denominator": 4,
+          "end": 4,
+          "new_numerator": 42812038664,
+          "old_numerator": 104295224596,
+          "passes": true,
+          "start": 3
+        },
+        {
+          "bin_exponent": 3,
+          "denominator": 8,
+          "end": 2,
+          "new_numerator": 479808814692,
+          "old_numerator": 912151626699540,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 3,
+          "denominator": 8,
+          "end": 3,
+          "new_numerator": 208587754132,
+          "old_numerator": 2445524440924,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 3,
+          "denominator": 8,
+          "end": 4,
+          "new_numerator": 85621296964,
+          "old_numerator": 479808814692,
+          "passes": true,
+          "start": 2
+        },
+        {
+          "bin_exponent": 3,
+          "denominator": 8,
+          "end": 4,
+          "new_numerator": 85621296964,
+          "old_numerator": 208587754132,
+          "passes": true,
+          "start": 3
+        },
+        {
+          "bin_exponent": 4,
+          "denominator": 16,
+          "end": 2,
+          "new_numerator": 959556766964,
+          "old_numerator": 1824303206794508,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 4,
+          "denominator": 16,
+          "end": 3,
+          "new_numerator": 417157084596,
+          "old_numerator": 4890907003540,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 4,
+          "denominator": 16,
+          "end": 4,
+          "new_numerator": 171226857508,
+          "old_numerator": 959556766964,
+          "passes": true,
+          "start": 2
+        },
+        {
+          "bin_exponent": 4,
+          "denominator": 16,
+          "end": 4,
+          "new_numerator": 171226857508,
+          "old_numerator": 417157084596,
+          "passes": true,
+          "start": 3
+        },
+        {
+          "bin_exponent": 5,
+          "denominator": 32,
+          "end": 2,
+          "new_numerator": 1918940752840,
+          "old_numerator": 3648606040762676,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 5,
+          "denominator": 32,
+          "end": 3,
+          "new_numerator": 834267552132,
+          "old_numerator": 9781243377508,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 5,
+          "denominator": 32,
+          "end": 4,
+          "new_numerator": 342402540220,
+          "old_numerator": 1918940752840,
+          "passes": true,
+          "start": 2
+        },
+        {
+          "bin_exponent": 5,
+          "denominator": 32,
+          "end": 4,
+          "new_numerator": 342402540220,
+          "old_numerator": 834267552132,
+          "passes": true,
+          "start": 3
+        },
+        {
+          "bin_exponent": 6,
+          "denominator": 64,
+          "end": 2,
+          "new_numerator": 3837068434716,
+          "old_numerator": 7297209098904396,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 6,
+          "denominator": 64,
+          "end": 3,
+          "new_numerator": 1668186812920,
+          "old_numerator": 19559997423468,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 6,
+          "denominator": 64,
+          "end": 4,
+          "new_numerator": 684593224644,
+          "old_numerator": 3837068434716,
+          "passes": true,
+          "start": 2
+        },
+        {
+          "bin_exponent": 6,
+          "denominator": 64,
+          "end": 4,
+          "new_numerator": 684593224644,
+          "old_numerator": 1668186812920,
+          "passes": true,
+          "start": 3
+        },
+        {
+          "bin_exponent": 7,
+          "denominator": 128,
+          "end": 2,
+          "new_numerator": 7670960494828,
+          "old_numerator": 14594394336897460,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 7,
+          "denominator": 128,
+          "end": 3,
+          "new_numerator": 3335440482592,
+          "old_numerator": 39113511907672,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 7,
+          "denominator": 128,
+          "end": 4,
+          "new_numerator": 1368166805080,
+          "old_numerator": 7670960494828,
+          "passes": true,
+          "start": 2
+        },
+        {
+          "bin_exponent": 7,
+          "denominator": 128,
+          "end": 4,
+          "new_numerator": 1368166805080,
+          "old_numerator": 3335440482592,
+          "passes": true,
+          "start": 3
+        },
+        {
+          "bin_exponent": 8,
+          "denominator": 256,
+          "end": 2,
+          "new_numerator": 15324487733432,
+          "old_numerator": 29188597786286668,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 8,
+          "denominator": 256,
+          "end": 3,
+          "new_numerator": 6666170179624,
+          "old_numerator": 78186020061628,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 8,
+          "denominator": 256,
+          "end": 4,
+          "new_numerator": 2733027782924,
+          "old_numerator": 15324487733432,
+          "passes": true,
+          "start": 2
+        },
+        {
+          "bin_exponent": 8,
+          "denominator": 256,
+          "end": 4,
+          "new_numerator": 2733027782924,
+          "old_numerator": 6666170179624,
+          "passes": true,
+          "start": 3
+        },
+        {
+          "bin_exponent": 9,
+          "denominator": 512,
+          "end": 2,
+          "new_numerator": 30598320869040,
+          "old_numerator": 58375668473381556,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 9,
+          "denominator": 512,
+          "end": 3,
+          "new_numerator": 13312319408440,
+          "old_numerator": 156213544328196,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 9,
+          "denominator": 512,
+          "end": 4,
+          "new_numerator": 5441075699080,
+          "old_numerator": 30598320869040,
+          "passes": true,
+          "start": 2
+        },
+        {
+          "bin_exponent": 9,
+          "denominator": 512,
+          "end": 4,
+          "new_numerator": 5441075699080,
+          "old_numerator": 13312319408440,
+          "passes": true,
+          "start": 3
+        },
+        {
+          "bin_exponent": 10,
+          "denominator": 1024,
+          "end": 2,
+          "new_numerator": 60898676904444,
+          "old_numerator": 116739120149733836,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 10,
+          "denominator": 1024,
+          "end": 3,
+          "new_numerator": 26558385819440,
+          "old_numerator": 311785682928840,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 10,
+          "denominator": 1024,
+          "end": 4,
+          "new_numerator": 10830441820192,
+          "old_numerator": 60898676904444,
+          "passes": true,
+          "start": 2
+        },
+        {
+          "bin_exponent": 10,
+          "denominator": 1024,
+          "end": 4,
+          "new_numerator": 10830441820192,
+          "old_numerator": 26558385819440,
+          "passes": true,
+          "start": 3
+        },
+        {
+          "bin_exponent": 11,
+          "denominator": 2048,
+          "end": 2,
+          "new_numerator": 120315841196880,
+          "old_numerator": 233380505937214580,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 11,
+          "denominator": 2048,
+          "end": 3,
+          "new_numerator": 52536821241236,
+          "old_numerator": 620837466514556,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 11,
+          "denominator": 2048,
+          "end": 4,
+          "new_numerator": 21413800773796,
+          "old_numerator": 120315841196880,
+          "passes": true,
+          "start": 2
+        },
+        {
+          "bin_exponent": 11,
+          "denominator": 2048,
+          "end": 4,
+          "new_numerator": 21413800773796,
+          "old_numerator": 52536821241236,
+          "passes": true,
+          "start": 3
+        },
+        {
+          "bin_exponent": 12,
+          "denominator": 4096,
+          "end": 2,
+          "new_numerator": 234825254572328,
+          "old_numerator": 465979136920480428,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 12,
+          "denominator": 4096,
+          "end": 3,
+          "new_numerator": 102408480808784,
+          "old_numerator": 1217690285686556,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 12,
+          "denominator": 4096,
+          "end": 4,
+          "new_numerator": 41249410313912,
+          "old_numerator": 234825254572328,
+          "passes": true,
+          "start": 2
+        },
+        {
+          "bin_exponent": 12,
+          "denominator": 4096,
+          "end": 4,
+          "new_numerator": 41249410313912,
+          "old_numerator": 102408480808784,
+          "passes": true,
+          "start": 3
+        },
+        {
+          "bin_exponent": 13,
+          "denominator": 8192,
+          "end": 2,
+          "new_numerator": 442943042674324,
+          "old_numerator": 925703274433067236,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 13,
+          "denominator": 8192,
+          "end": 3,
+          "new_numerator": 192957346346440,
+          "old_numerator": 2311841751571108,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 13,
+          "denominator": 8192,
+          "end": 4,
+          "new_numerator": 76610323597832,
+          "old_numerator": 442943042674324,
+          "passes": true,
+          "start": 2
+        },
+        {
+          "bin_exponent": 13,
+          "denominator": 8192,
+          "end": 4,
+          "new_numerator": 76610323597832,
+          "old_numerator": 192957346346440,
+          "passes": true,
+          "start": 3
+        },
+        {
+          "bin_exponent": 14,
+          "denominator": 16384,
+          "end": 2,
+          "new_numerator": 705242274734404,
+          "old_numerator": 1801366552708200676,
+          "passes": true,
+          "start": 0
+        },
+        {
+          "bin_exponent": 14,
+          "denominator": 16384,
+          "end": 3,
+          "new_numerator": 286517776970896,
+          "old_numerator": 3973224895724484,
+          "passes": true,
+          "start": 1
+        },
+        {
+          "bin_exponent": 14,
+          "denominator": 16384,
+          "end": 4,
+          "new_numerator": 103479471420196,
+          "old_numerator": 705242274734404,
+          "passes": true,
+          "start": 2
+        },
+        {
+          "bin_exponent": 14,
+          "denominator": 16384,
+          "end": 4,
+          "new_numerator": 103479471420196,
+          "old_numerator": 286517776970896,
+          "passes": true,
+          "start": 3
+        }
+      ],
+      "failures": [],
+      "k": 14,
+      "policy_stop_stages": 4,
+      "refinement_invoices": [
+        {
+          "bin_exponent": 0,
+          "denominator": 1,
+          "mixture_numerator": 0,
+          "stage": 1,
+          "variance_numerator": 0
+        },
+        {
+          "bin_exponent": 1,
+          "denominator": 2,
+          "mixture_numerator": 4311928,
+          "stage": 1,
+          "variance_numerator": 30524
+        },
+        {
+          "bin_exponent": 2,
+          "denominator": 4,
+          "mixture_numerator": 17845160,
+          "stage": 1,
+          "variance_numerator": 149468
+        },
+        {
+          "bin_exponent": 3,
+          "denominator": 8,
+          "mixture_numerator": 68993584,
+          "stage": 1,
+          "variance_numerator": 638228
+        },
+        {
+          "bin_exponent": 4,
+          "denominator": 16,
+          "mixture_numerator": 278042264,
+          "stage": 1,
+          "variance_numerator": 3099668
+        },
+        {
+          "bin_exponent": 5,
+          "denominator": 32,
+          "mixture_numerator": 1118609552,
+          "stage": 1,
+          "variance_numerator": 14303884
+        },
+        {
+          "bin_exponent": 6,
+          "denominator": 64,
+          "mixture_numerator": 4672926056,
+          "stage": 1,
+          "variance_numerator": 82232364
+        },
+        {
+          "bin_exponent": 7,
+          "denominator": 128,
+          "mixture_numerator": 15455004316,
+          "stage": 1,
+          "variance_numerator": 538251788
+        },
+        {
+          "bin_exponent": 8,
+          "denominator": 256,
+          "mixture_numerator": 69599749408,
+          "stage": 1,
+          "variance_numerator": 3390516516
+        },
+        {
+          "bin_exponent": 9,
+          "denominator": 512,
+          "mixture_numerator": 277850459296,
+          "stage": 1,
+          "variance_numerator": 26625867612
+        },
+        {
+          "bin_exponent": 10,
+          "denominator": 1024,
+          "mixture_numerator": 1049877150444,
+          "stage": 1,
+          "variance_numerator": 200481230924
+        },
+        {
+          "bin_exponent": 11,
+          "denominator": 2048,
+          "mixture_numerator": 3672069977624,
+          "stage": 1,
+          "variance_numerator": 1562546128236
+        },
+        {
+          "bin_exponent": 12,
+          "denominator": 4096,
+          "mixture_numerator": 21453418939784,
+          "stage": 1,
+          "variance_numerator": 13000460614492
+        },
+        {
+          "bin_exponent": 13,
+          "denominator": 8192,
+          "mixture_numerator": 93927142440192,
+          "stage": 1,
+          "variance_numerator": 98519436470364
+        },
+        {
+          "bin_exponent": 14,
+          "denominator": 16384,
+          "mixture_numerator": 330666480678016,
+          "stage": 1,
+          "variance_numerator": 704685284560828
+        },
+        {
+          "bin_exponent": 0,
+          "denominator": 1,
+          "mixture_numerator": 0,
+          "stage": 2,
+          "variance_numerator": 0
+        },
+        {
+          "bin_exponent": 1,
+          "denominator": 2,
+          "mixture_numerator": 1158108,
+          "stage": 2,
+          "variance_numerator": 28400
+        },
+        {
+          "bin_exponent": 2,
+          "denominator": 4,
+          "mixture_numerator": 5595348,
+          "stage": 2,
+          "variance_numerator": 134128
+        },
+        {
+          "bin_exponent": 3,
+          "denominator": 8,
+          "mixture_numerator": 21024220,
+          "stage": 2,
+          "variance_numerator": 565760
+        },
+        {
+          "bin_exponent": 4,
+          "denominator": 16,
+          "mixture_numerator": 101535420,
+          "stage": 2,
+          "variance_numerator": 2506960
+        },
+        {
+          "bin_exponent": 5,
+          "denominator": 32,
+          "mixture_numerator": 371122912,
+          "stage": 2,
+          "variance_numerator": 9742936
+        },
+        {
+          "bin_exponent": 6,
+          "denominator": 64,
+          "mixture_numerator": 1531695516,
+          "stage": 2,
+          "variance_numerator": 43107144
+        },
+        {
+          "bin_exponent": 7,
+          "denominator": 128,
+          "mixture_numerator": 6114199396,
+          "stage": 2,
+          "variance_numerator": 211780528
+        },
+        {
+          "bin_exponent": 8,
+          "denominator": 256,
+          "mixture_numerator": 29020629048,
+          "stage": 2,
+          "variance_numerator": 1064587024
+        },
+        {
+          "bin_exponent": 9,
+          "denominator": 512,
+          "mixture_numerator": 104335918152,
+          "stage": 2,
+          "variance_numerator": 6489111816
+        },
+        {
+          "bin_exponent": 10,
+          "denominator": 1024,
+          "mixture_numerator": 475311454068,
+          "stage": 2,
+          "variance_numerator": 44303439504
+        },
+        {
+          "bin_exponent": 11,
+          "denominator": 2048,
+          "mixture_numerator": 2214990100520,
+          "stage": 2,
+          "variance_numerator": 305752298632
+        },
+        {
+          "bin_exponent": 12,
+          "denominator": 4096,
+          "mixture_numerator": 7885439364848,
+          "stage": 2,
+          "variance_numerator": 2962473254888
+        },
+        {
+          "bin_exponent": 13,
+          "denominator": 8192,
+          "mixture_numerator": 28513168367612,
+          "stage": 2,
+          "variance_numerator": 19890123342192
+        },
+        {
+          "bin_exponent": 14,
+          "denominator": 16384,
+          "mixture_numerator": 147407302892492,
+          "stage": 2,
+          "variance_numerator": 130043091141360
+        },
+        {
+          "bin_exponent": 0,
+          "denominator": 1,
+          "mixture_numerator": 0,
+          "stage": 3,
+          "variance_numerator": 0
+        },
+        {
+          "bin_exponent": 1,
+          "denominator": 2,
+          "mixture_numerator": 421732,
+          "stage": 3,
+          "variance_numerator": 28736
+        },
+        {
+          "bin_exponent": 2,
+          "denominator": 4,
+          "mixture_numerator": 1669100,
+          "stage": 3,
+          "variance_numerator": 134880
+        },
+        {
+          "bin_exponent": 3,
+          "denominator": 8,
+          "mixture_numerator": 5735396,
+          "stage": 3,
+          "variance_numerator": 567624
+        },
+        {
+          "bin_exponent": 4,
+          "denominator": 16,
+          "mixture_numerator": 28506580,
+          "stage": 3,
+          "variance_numerator": 2523128
+        },
+        {
+          "bin_exponent": 5,
+          "denominator": 32,
+          "mixture_numerator": 99148636,
+          "stage": 3,
+          "variance_numerator": 9527840
+        },
+        {
+          "bin_exponent": 6,
+          "denominator": 64,
+          "mixture_numerator": 526664336,
+          "stage": 3,
+          "variance_numerator": 38979960
+        },
+        {
+          "bin_exponent": 7,
+          "denominator": 128,
+          "mixture_numerator": 1885856448,
+          "stage": 3,
+          "variance_numerator": 178575392
+        },
+        {
+          "bin_exponent": 8,
+          "denominator": 256,
+          "mixture_numerator": 8026697632,
+          "stage": 3,
+          "variance_numerator": 812951608
+        },
+        {
+          "bin_exponent": 9,
+          "denominator": 512,
+          "mixture_numerator": 33855773648,
+          "stage": 3,
+          "variance_numerator": 3844475640
+        },
+        {
+          "bin_exponent": 10,
+          "denominator": 1024,
+          "mixture_numerator": 116867218056,
+          "stage": 3,
+          "variance_numerator": 24786277960
+        },
+        {
+          "bin_exponent": 11,
+          "denominator": 2048,
+          "mixture_numerator": 708313790268,
+          "stage": 3,
+          "variance_numerator": 154943599408
+        },
+        {
+          "bin_exponent": 12,
+          "denominator": 4096,
+          "mixture_numerator": 2963199733096,
+          "stage": 3,
+          "variance_numerator": 1428476719944
+        },
+        {
+          "bin_exponent": 13,
+          "denominator": 8192,
+          "mixture_numerator": 12313586667864,
+          "stage": 3,
+          "variance_numerator": 8329381509344
+        },
+        {
+          "bin_exponent": 14,
+          "denominator": 16384,
+          "mixture_numerator": 82047270039408,
+          "stage": 3,
+          "variance_numerator": 58635582036992
+        },
+        {
+          "bin_exponent": 0,
+          "denominator": 1,
+          "mixture_numerator": 0,
+          "stage": 4,
+          "variance_numerator": 0
+        },
+        {
+          "bin_exponent": 1,
+          "denominator": 2,
+          "mixture_numerator": 259388,
+          "stage": 4,
+          "variance_numerator": 28500
+        },
+        {
+          "bin_exponent": 2,
+          "denominator": 4,
+          "mixture_numerator": 1182604,
+          "stage": 4,
+          "variance_numerator": 132892
+        },
+        {
+          "bin_exponent": 3,
+          "denominator": 8,
+          "mixture_numerator": 4859184,
+          "stage": 4,
+          "variance_numerator": 552172
+        },
+        {
+          "bin_exponent": 4,
+          "denominator": 16,
+          "mixture_numerator": 24130616,
+          "stage": 4,
+          "variance_numerator": 2428516
+        },
+        {
+          "bin_exponent": 5,
+          "denominator": 32,
+          "mixture_numerator": 95454576,
+          "stage": 4,
+          "variance_numerator": 8838484
+        },
+        {
+          "bin_exponent": 6,
+          "denominator": 64,
+          "mixture_numerator": 384905488,
+          "stage": 4,
+          "variance_numerator": 35536428
+        },
+        {
+          "bin_exponent": 7,
+          "denominator": 128,
+          "mixture_numerator": 1710306220,
+          "stage": 4,
+          "variance_numerator": 150221820
+        },
+        {
+          "bin_exponent": 8,
+          "denominator": 256,
+          "mixture_numerator": 6385214744,
+          "stage": 4,
+          "variance_numerator": 641668572
+        },
+        {
+          "bin_exponent": 9,
+          "denominator": 512,
+          "mixture_numerator": 36349579412,
+          "stage": 4,
+          "variance_numerator": 2684053988
+        },
+        {
+          "bin_exponent": 10,
+          "denominator": 1024,
+          "mixture_numerator": 114726684948,
+          "stage": 4,
+          "variance_numerator": 15050159820
+        },
+        {
+          "bin_exponent": 11,
+          "denominator": 2048,
+          "mixture_numerator": 425797893408,
+          "stage": 4,
+          "variance_numerator": 80838662716
+        },
+        {
+          "bin_exponent": 12,
+          "denominator": 4096,
+          "mixture_numerator": 1801847906276,
+          "stage": 4,
+          "variance_numerator": 789616439652
+        },
+        {
+          "bin_exponent": 13,
+          "denominator": 8192,
+          "mixture_numerator": 6776099588540,
+          "stage": 4,
+          "variance_numerator": 4295326133308
+        },
+        {
+          "bin_exponent": 14,
+          "denominator": 16384,
+          "mixture_numerator": 50807682032448,
+          "stage": 4,
+          "variance_numerator": 21076345186716
+        }
+      ]
+    }
+  ],
+  "status": "FINITE-EXACT same maps, all dyadic bin widths, k8,10,12,14"
+}

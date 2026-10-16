@@ -6,6 +6,11 @@ conditional application to the existing eight ports in `Q(zeta55)`.
 **OPEN:** an authenticated six-colour forcing context and Hadwiger–Nelson.
 Self-audited; no novelty claim for the product-of-palettes method.
 
+**Continuation:** [safe singleton palettes](compression_contexts_20261015g.md#3-a-safe-singleton-extends-457-of-the-marked-boundary-patterns)
+show that a four-colouring with at most three interface classes preserves
+all 457 boundary patterns using at most five colours. This is another
+necessary forcing screen, not a constructed four-chromatic field graph.
+
 ## 1. Inheritance and the new coordinate
 
 [THM-4614, three-colourable contexts](../../01-canon/theorems/THM-4614-three-colourable-contexts-cannot-change-the-six-colour-port-relation-in-q-zeta55.md)

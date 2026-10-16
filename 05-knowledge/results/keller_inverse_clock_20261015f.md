@@ -5,6 +5,11 @@ and compact-set bound below. **FINITE-EXACT:** the declared symbolic controls.
 **OPEN:** vanishing of the actual Keller cokernel and JC(2). Self-audited;
 no historical novelty claim is made for polynomial de Rham exactness.
 
+**Continuation:** [finite-clock compression](compression_contexts_20261015g.md#4-inverse-clocks-expose-the-boundary-of-a-finite-compression)
+retains the omitted-subspace term in the Weyl relation and recovers the
+stronger existing Laguerre boundary mechanism from THM-2856. Small rank
+does not make its trace or inverse-clock recovery cost small.
+
 ## 1. Inheritance: change the operation, not the excluded carrier
 
 The closest proved mechanism is the transverse Weyl action in

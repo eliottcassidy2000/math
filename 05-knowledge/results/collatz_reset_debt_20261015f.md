@@ -8,6 +8,11 @@ discounted debt, and paired-stage repairs. **OPEN:** either repair at every
 scale, the required unconditional dyadic energy bound, and universal ROOT
 entry. Self-audited; no independent referee or Collatz proof is claimed.
 
+**Continuation:** [paired energy and coupled rows](collatz_paired_energy_20261015g.md)
+gives an exact global-core optimum with its necessary angular debt, retains
+bin directions in the discounted sum, and checks the half-energy-or-`49X^2`
+paired stopping rule on all 105 inherited windows. Uniform versions remain OPEN.
+
 ## 1. Inheritance and the proof target that actually failed
 
 The closest proved mechanism is
