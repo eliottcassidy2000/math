@@ -1,0 +1,77 @@
+{
+  "status": "CONDITIONAL: rigorously interval-checked implications; the energy budgets are UNPROVED",
+  "N": 1099511627776,
+  "B": 131072,
+  "root_disk_center": "[0.99820922076525681364456393316750413764602813718 +/- 4.09e-49] + [240.24783014069124432530079038752871376736998479 +/- 4.78e-45]j",
+  "residue_before_future_tail": "[0.02121 +/- 2.10e-6] + [0.18276 +/- 5.91e-6]j",
+  "hypotheses": [
+    {
+      "a": 2,
+      "b": 0,
+      "hypothesis": "for every j >= 0: integral_X^(2X) H^2 dx <= X^2 (2 + 0 j), X = 2^(40+j)",
+      "normalized_residue_lower": "[0.35076039984814539312519053052443361676604838702 +/- 1.92e-48]",
+      "normalized_residue_upper": "[0.35914861467318126188616595412184209367304146067 +/- 3.37e-48]",
+      "nonzero_certified": true
+    },
+    {
+      "a": 2,
+      "b": 0.25,
+      "hypothesis": "for every j >= 0: integral_X^(2X) H^2 dx <= X^2 (2 + 0.25 j), X = 2^(40+j)",
+      "normalized_residue_lower": "[0.35020569889319148726965667382611577368005405271 +/- 1.74e-48]",
+      "normalized_residue_upper": "[0.35970331562813516774169981082018223713289490565 +/- 4.64e-48]",
+      "nonzero_certified": true
+    },
+    {
+      "a": 3,
+      "b": 0.5,
+      "hypothesis": "for every j >= 0: integral_X^(2X) H^2 dx <= X^2 (3 + 0.5 j), X = 2^(40+j)",
+      "normalized_residue_lower": "[0.34894234991265458620747552067583432942004484661 +/- 3.89e-48]",
+      "normalized_residue_upper": "[0.36096666460867206880388096397051447123592884751 +/- 1.76e-48]",
+      "nonzero_certified": true
+    },
+    {
+      "a": 4,
+      "b": 1,
+      "hypothesis": "for every j >= 0: integral_X^(2X) H^2 dx <= X^2 (4 + 1 j), X = 2^(40+j)",
+      "normalized_residue_lower": "[0.34759118919111706225691371874426252843809566421 +/- 4.89e-48]",
+      "normalized_residue_upper": "[0.36231782533020959275444276590214059230553715516 +/- 3.44e-49]",
+      "nonzero_certified": true
+    },
+    {
+      "a": 8,
+      "b": 2,
+      "hypothesis": "for every j >= 0: integral_X^(2X) H^2 dx <= X^2 (8 + 2 j), X = 2^(40+j)",
+      "normalized_residue_lower": "[0.34454262188389056208378815869486454635211608287 +/- 2.78e-48]",
+      "normalized_residue_upper": "[0.36536639263743609292756832595166113452408361085 +/- 5.44e-49]",
+      "nonzero_certified": true
+    },
+    {
+      "a": 16,
+      "b": 4,
+      "hypothesis": "for every j >= 0: integral_X^(2X) H^2 dx <= X^2 (16 + 4 j), X = 2^(40+j)",
+      "normalized_residue_lower": "[0.34023129665220361956489373987999843338027464100 +/- 1.12e-48]",
+      "normalized_residue_upper": "[0.36967771786912303544646274476670057370302088921 +/- 3.58e-48]",
+      "nonzero_certified": true
+    },
+    {
+      "a": 32,
+      "b": 8,
+      "hypothesis": "for every j >= 0: integral_X^(2X) H^2 dx <= X^2 (32 + 8 j), X = 2^(40+j)",
+      "normalized_residue_lower": "[0.33413416203775061921864261978120246922007042184 +/- 2.76e-48]",
+      "normalized_residue_upper": "[0.37577485248357603579271386486574165815186874410 +/- 2.55e-48]",
+      "nonzero_certified": true
+    },
+    {
+      "a": 64,
+      "b": 16,
+      "hypothesis": "for every j >= 0: integral_X^(2X) H^2 dx <= X^2 (64 + 16 j), X = 2^(40+j)",
+      "normalized_residue_lower": "[0.32551151157437673418085378215147024329989742511 +/- 7.48e-49]",
+      "normalized_residue_upper": "[0.38439750294694992083050270249582053649798835732 +/- 3.85e-49]",
+      "nonzero_certified": true
+    }
+  ],
+  "moments_sha256": "f875f74799b5bd3aafafd06cb90d7f9f8d962a07ff3409ffdcdebc43905cdcd8",
+  "session": "opus-2026-10-15-S37",
+  "t_N": 1,
+  "H_N": -55691
+}

@@ -1,0 +1,8 @@
+parity table to 2^37: 595.4 s; 245 words recomputed exactly
+spot check of 20000 random n in [2^37, 2^40) against Python trajectories: 0 mismatches
+heavy pass: 2637.2 s; max within-block |hp| = 3391
+grid pass over 954 blocks: 2.2 s
+S(2^37) = -152262364 (moments script -152262364), H(2^37) = -67763 (-67763)
+S(2^40) = 989143994, H(2^40) = -55691; max |H| at grid points 787063
+all 1728 grid points of the 2^37 extension reproduced exactly (class sums, H, prefix sums): True
+wrote 05-knowledge/results/collatz_census_extension_2p40_20261015.npz, 05-knowledge/results/collatz_boundary_moments_2p40_20261015.npz, 05-knowledge/results/collatz_census_extension_2p40_20261015.json; total 3252.1 s
