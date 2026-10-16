@@ -17,6 +17,12 @@ principle of retaining signed boundary forcing was already present in
 The new specialization is the actual coarse-mean weight row, whose norm
 can certify energy even with nonzero unresolved terminal mass.
 
+Other current routes remain distinct: [Mersenne guards](mersenne_clocked_completion_20261014c.md)
+prove the giant minimum has no smaller odd predecessor through64 steps;
+[signed fibres and first-hit floors](prime_power_orbit_boundary_20261014d.md)
+retain the source and sign. Those ROOT-entry obligations are not discharged
+by an aggregate energy certificate.
+
 ## 1. Keep the mean as a weighted source observable
 
 Let T(n)=n/2 for even n and (3n+1)/2 for odd n, and let t be the
@@ -172,3 +178,95 @@ There is no evidence here of a uniform strict per-step contraction, and
 no proved upper bound on the necessary controller depth at all scales.
 The six successful windows are finite evidence for this route, not a
 proof of (5) or of universal ROOT entry.
+
+## 5. Joint terminal Gram control improves the mean bound
+
+The previous rowwise relaxation forgets that the same unresolved terminal
+has the same label in different blocks. Retain this information. Include
+ROOT as terminal column0, with z_0=1, and let v_I be the complete signed
+terminal row B_I, including its known ROOT coefficient. Define
+
+    G=sum_I v_I v_I^T/(4L_I),
+    C(P)=z^T G z,   z_0=1, |z_e|<=1.                       (6)
+
+This is the exact source coarse energy, for the actual terminal labels.
+The finite PSD matrix is an authenticated object, not a postulated
+two-coordinate covariance closure.
+
+**Theorem T2 (PROVED).**
+
+    C(P) <= ||G||_(entrywise 1)
+         <= sum_I (|K_I|+R_I)^2/(4L_I).                    (7)
+
+Under every common native terminal extension, including ROOT absorption,
+the entrywise norm in (7) cannot increase. Keep the physical partition
+fixed for this statement.
+
+**Proof.** The first inequality follows by taking absolute values in the
+quadratic form, and the second by the triangle inequality before summing
+the outer products. A common terminal extension is a signed identification
+matrix A with exactly one entry +1 or -1 in each old-terminal row; the
+ROOT row maps to ROOT with sign+1. The new Gram matrix is A^T G A.
+Every old matrix entry contributes, with a sign, to precisely one new
+entry. Therefore `sum|A^T G A|<=sum|G|`. ∎
+
+This explains why retaining the joint matrix is useful: opposite
+contributions can cancel across blocks before absolute values are taken.
+It is the concrete source-preserving counterpart of asking the Q--Pell
+analogy to retain correlations instead of only one marginal statistic.
+No Q sampling hypothesis is used in T2.
+
+### A small signed graph sometimes solves the entire terminal cube
+
+Put an undirected signed edge e--f whenever G_ef!=0, with sign sgn(G_ef).
+Do not orient this symmetric observable into a cosmetic tournament.
+If there are signs sigma_e with sigma_0=1 and
+`sigma_e sigma_f=sgn(G_ef)` on every edge, the graph is balanced and
+the upper bound (7) is attained exactly at z=sigma. Thus a sign witness
+solves the full relaxed cube maximum, however many terminals there are.
+Conversely attaining the entrywise bound requires this condition on all
+nonzero off-diagonal entries. Zero entries impose no condition.
+
+For an unbalanced triangle with edges of weights |G_ef|, every corner
+assignment leaves at least one edge unsatisfied. Relative to the
+entrywise bound it loses at least four times the smallest edge weight.
+Summing this deduction over edge-disjoint negative triangles is valid.
+Since G is PSD, its maximum on the terminal cube is attained at a corner
+(successively maximize each convex coordinate function). This yields
+a rigorous optional improvement, not an assumed random-sign model.
+
+The fixed-source gains are already strict:
+
+| k | depth | unresolved sources | rowwise S upper/X^2 | joint S upper/X^2 |
+|---|---:|---:|---:|---:|
+| 10 | 89 | 122 | 0.485919505 | 0.419628024 |
+| 12 | 110 | 266 | 0.509313870 | 0.458170826 |
+| 14 | 134 | 359 | 0.540767211 | 0.480941281 |
+
+In all three cases the rowwise sufficient test fails while the joint
+test certifies E_X<=2X^2. At k12, depth112, the signed graph on44
+columns is balanced, so its recorded sign witness solves the relaxed
+cube maximum over43 free labels without enumerating2^43 assignments.
+At depth128 the graph is unbalanced; all2^17 assignments were enumerated
+both by Gray-code updates and by independent direct quadratic evaluation,
+as a control on the triangle bound. The exact maximum numerator is
+348638364, below the entrywise bound349335076 and the triangle
+bound349137956, all with denominator256 for the coarse energy.
+
+The script checks each actual common extension against separately
+recomputed source prefixes at depth D+1 and verifies matrix-norm
+monotonicity. It saves the full integer Gram matrix, denominator,
+terminal addresses, sign witnesses, and negative-triangle certificates.
+The triangle improvement need not itself be monotone under a greedy
+choice of triangles; retain the best previous valid bound when using it.
+
+```sh
+python3 04-computation/experiments/collatz_terminal_gram_20261015a.py
+```
+
+[Joint certificate data](collatz_terminal_gram_20261015a.json).
+The strengthened open target is now
+`||G_X||_(entrywise 1)<=(4/9)X^2` after suitable native common
+terminal extensions on every large dyadic window. This is a sufficient
+condition, weaker than the rowwise condition (5); a direct bound on
+the joint cube maximum could be weaker still. None is proved uniformly.
