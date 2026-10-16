@@ -1,0 +1,134 @@
+{
+  "status": "PROVED algebraic identities; fixed-parameter rational completeness uses the valuation/escape proof in the note",
+  "order_six_lift": [
+    [
+      0,
+      -1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "Pell_conjugate": [
+    [
+      3,
+      4
+    ],
+    [
+      2,
+      3
+    ]
+  ],
+  "changing_product": [
+    [
+      "1",
+      "u"
+    ],
+    [
+      "u",
+      "u**2 + 1"
+    ]
+  ],
+  "quadratic_cases": [
+    {
+      "parameter": "-7/4",
+      "common_denominator": 2,
+      "all_rational_preperiodic_points": [
+        "-3/2",
+        "-1/2",
+        "1/2",
+        "3/2"
+      ],
+      "edges": [
+        [
+          "-3/2",
+          "1/2"
+        ],
+        [
+          "-1/2",
+          "-3/2"
+        ],
+        [
+          "1/2",
+          "-3/2"
+        ],
+        [
+          "3/2",
+          "1/2"
+        ]
+      ],
+      "cycles": [
+        {
+          "points": [
+            "-3/2",
+            "1/2"
+          ],
+          "multiplier": "-3"
+        }
+      ],
+      "dynatomic_six_degree": 54
+    },
+    {
+      "parameter": "-29/16",
+      "common_denominator": 4,
+      "all_rational_preperiodic_points": [
+        "-7/4",
+        "-5/4",
+        "-3/4",
+        "-1/4",
+        "1/4",
+        "3/4",
+        "5/4",
+        "7/4"
+      ],
+      "edges": [
+        [
+          "-7/4",
+          "5/4"
+        ],
+        [
+          "-5/4",
+          "-1/4"
+        ],
+        [
+          "-3/4",
+          "-5/4"
+        ],
+        [
+          "-1/4",
+          "-7/4"
+        ],
+        [
+          "1/4",
+          "-7/4"
+        ],
+        [
+          "3/4",
+          "-5/4"
+        ],
+        [
+          "5/4",
+          "-1/4"
+        ],
+        [
+          "7/4",
+          "5/4"
+        ]
+      ],
+      "cycles": [
+        {
+          "points": [
+            "-7/4",
+            "5/4",
+            "-1/4"
+          ],
+          "multiplier": "35/8"
+        }
+      ],
+      "dynatomic_six_degree": 54
+    }
+  ],
+  "rational_neutral_cycle_lemma": "Only fixed points x=1/2,c=1/4 and x=-1/2,c=-3/4 have multiplier a rational root of unity.",
+  "general_rational_six_cycle_nonexistence": "NOT PROVED; cited Stoll theorem is conditional."
+}

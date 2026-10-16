@@ -128,14 +128,25 @@ def transport_slack(G, cols, controller):
                 N[u][v] -= value
     new = [[p-n for p, n in zip(rp, rn)] for rp, rn in zip(P, N)]
     loss = 2*sum(min(p, n) for rp, rn in zip(P, N) for p, n in zip(rp, rn))
-    variance = sum((F(4*p*n, p+n) for rp, rn in zip(P, N) for p, n in zip(rp, rn) if p+n), F(0))
+    # Certify the inequalities fibre by fibre. Dyadic enclosures avoid an
+    # enormous, irrelevant common denominator across unrelated pair fibres.
+    variance_lo, variance_hi = 0, 0
+    scale = 2**20
+    for rp, rn in zip(P, N):
+        for p, n in zip(rp, rn):
+            if not p+n:
+                continue
+            num, den = 4*p*n, p+n
+            ell = 2*min(p, n)
+            need(num <= 2*ell*den and ell*den <= num, 'local collision variance bounds')
+            variance_lo += num*scale//den
+            variance_hi += (num*scale+den-1)//den
     old_norm = sum(abs(v) for row in G for v in row)
     new_norm = sum(abs(v) for row in new for v in row)
     need(old_norm-new_norm == deleted+loss, 'exact signed pair-fibre loss')
-    need(variance/2 <= loss <= variance, 'collision variance comparison')
     return target_cols, new, {'old_norm': old_norm, 'new_norm': new_norm,
         'deleted_mass': deleted, 'cancelled_mass': loss,
-        'pair_variance_exact': [variance.numerator, variance.denominator]}
+        'pair_variance_dyadic_enclosure': [variance_lo, variance_hi, scale]}
 
 def independent_labels(N):
     # Separate first-descent grounding, used ONLY after all certificates are frozen.
@@ -164,17 +175,62 @@ def case(k, depth):
     Z = coarse+fine
     A = 2*X*X-4*Z-X
     passed = A >= 0 and A*A >= 16*X*Z
-    # One fresh common extension, independently recompile its rows and compare.
-    controller = {e: (1, 1) if e == 1 else (T(e), -1) for e in cols}
-    new_cols, new_G, slack = transport_slack(G, cols, controller)
-    new_rows = []
-    for row in rows:
-        out = defaultdict(int)
-        for e, v in row.items():
-            ee, s = controller[e]
-            out[ee] += s*v
-        new_rows.append(dict(out))
-    need(gram(new_rows, new_cols) == new_G, 'independent row transport vs pair transport')
+    # Fresh common blocks are separately charged observations. Each starts at
+    # the frozen boundary, rather than silently changing the base corpus.
+    extension_blocks = []
+    for q in (1, 2, 4, 8, 16, 32):
+        controller = {}
+        enlarged_edges = edges.copy()
+        for e in cols:
+            x, s = e, 1
+            for _ in range(q):
+                if x == 1:
+                    break
+                y = T(x)
+                enlarged_edges[x] = y
+                x, s = y, -s
+            controller[e] = x, s
+        new_cols, new_G, slack = transport_slack(G, cols, controller)
+        new_rows = []
+        for row in rows:
+            out = defaultdict(int)
+            for e, v in row.items():
+                ee, s = controller[e]
+                out[ee] += s*v
+            new_rows.append(dict(out))
+        need(gram(new_rows, new_cols) == new_G, 'independent row transport vs pair transport')
+        new_Z = F(slack['new_norm'], 4*b)+fine
+        test = 2*X*X-4*new_Z-X
+        slack.update({'additional_steps_per_terminal': q, 'terminal_columns': len(new_cols),
+            'coarse_upper_over_X2': float(F(slack['new_norm'], 4*b*X*X)),
+            'joint_E_test_passes': test >= 0 and test*test >= 16*X*new_Z})
+        # Use precisely those same extra observations, now retaining all the
+        # previously checked interior edges. This permits unequal-time joins.
+        boundary_sources = sorted({cache[n][0] for n in range(1, N)})
+        boundary_cache, boundary_cycles = close_graph(enlarged_edges, boundary_sources)
+        glued_controller = {e: boundary_cache[e][:2] for e in cols}
+        glued_cols, glued_G, glued_slack = transport_slack(G, cols, glued_controller)
+        glued_rows = []
+        for row in rows:
+            out = defaultdict(int)
+            for e, v in row.items():
+                ee, s = glued_controller[e]
+                if s:
+                    out[ee] += s*v
+            glued_rows.append(dict(out))
+        need(gram(glued_rows, glued_cols) == glued_G, 'glued rows vs pair transport')
+        need(glued_slack['new_norm'] <= slack['new_norm'], 'same observations graph closure improves synchronous push')
+        glued_Z = F(glued_slack['new_norm'], 4*b)+fine
+        glued_test = 2*X*X-4*glued_Z-X
+        glued_slack.update({'additional_distinct_edges': len(enlarged_edges)-len(edges),
+            'terminal_columns': len(glued_cols), 'nonroot_cycles': boundary_cycles,
+            'max_compiled_boundary_steps': max(boundary_cache[e][2] for e in cols),
+            'unresolved_source_count': sum(boundary_cache[cache[n][0]][0] != 1 for n in range(1, N)),
+            'max_compiled_source_steps': max(cache[n][2]+boundary_cache[cache[n][0]][2] for n in range(1, N)),
+            'coarse_upper_over_X2': float(F(glued_slack['new_norm'], 4*b*X*X)),
+            'joint_E_test_passes': glued_test >= 0 and glued_test*glued_test >= 16*X*glued_Z})
+        slack['same_observations_with_graph_glue'] = glued_slack
+        extension_blocks.append(slack)
     # Freeze source receipts and coefficients before computing the audit labels.
     frozen = digest([sorted(edges.items()), [cache[n] for n in range(1, N)], rows])
     labels = independent_labels(N)
@@ -203,18 +259,23 @@ def case(k, depth):
         actual_coarse += F(M*M, b)
         need(abs(2*M-row.get(1, 0)) <= sum(abs(v) for e, v in row.items() if e != 1), 'actual source mean enclosed')
     need(actual_coarse <= coarse and actual_energy <= Z, 'joint and fine-scale audit')
+    for block in extension_blocks:
+        for invoice in (block, block['same_observations_with_graph_glue']):
+            need(actual_coarse <= F(invoice['new_norm'], 4*b), 'independent actual means vs every block certificate')
+            need(actual_energy <= F(invoice['new_norm'], 4*b)+fine, 'independent actual energy vs every block certificate')
     need(frozen == digest([sorted(edges.items()), [cache[n] for n in range(1, N)], rows]), 'no oracle mutation of certificate')
     result = {'k': k, 'prefix_depth_per_source': depth, 'source_count': N-1,
         'distinct_authenticated_edges': len(edges), 'max_compiled_steps': max(cache[n][2] for n in range(1, N)),
         'unresolved_source_count': unknown, 'terminal_columns': cols, 'nonroot_cycles': cycles,
-        'gram_integer_numerator': G, 'gram_denominator': 4*b,
+        'gram_integer_numerator': G if len(cols) <= 50 else None,
+        'gram_sha256': digest(G), 'gram_entrywise_norm_numerator': norm, 'gram_denominator': 4*b,
         'coarse_upper_exact': [coarse.numerator, coarse.denominator],
         'coarse_upper_over_X2': float(coarse/X**2),
         'rowwise_S_upper_over_X2': float((F(row_norm, 4*b)+fine)/X**2),
         'joint_S_upper_over_X2': float(Z/X**2), 'joint_E_test_passes': passed,
         'coarse_4_over_9_passes': 9*norm <= 16*b*X*X,
         'actual_S_over_X2': actual_energy/X**2, 'actual_coarse_over_X2': float(actual_coarse/X**2),
-        'one_step_exact_slack': slack, 'frozen_graph_source_rows_sha256': frozen}
+        'additional_common_extension_blocks': extension_blocks, 'frozen_graph_source_rows_sha256': frozen}
     print({key: result[key] for key in ('k', 'prefix_depth_per_source', 'distinct_authenticated_edges',
            'max_compiled_steps', 'unresolved_source_count', 'coarse_upper_over_X2', 'joint_E_test_passes')}, flush=True)
     return result
@@ -222,7 +283,7 @@ def case(k, depth):
 def hostile_controls():
     # Exact native tiny universe, including asynchronous 3->5->8 and 8 already a source.
     cache, cycles = close_graph(observe(9, 1), range(1, 9))
-    need(cache[3] == (1, 1, 5) if False else cache[3] == (1, -1, 5), 'native cross-clock joining')
+    need(cache[3] == (1, -1, 5), 'native cross-clock joining')
     # A free terminal preserves norm forever under a collision-free renaming.
     _, _, s = transport_slack([[7]], [9], {9: (14, -1)})
     need(s['cancelled_mass'] == 0, 'no automatic strict contraction')
@@ -235,12 +296,54 @@ def hostile_controls():
     I = np.eye(3, dtype=np.int64)
     need(np.array_equal(np.linalg.matrix_power(A, 3), -I), 'linear period six')
     need(np.array_equal(A.T @ I @ A, I), 'quadratic stationary hostile')
-    need(round(np.linalg.det(I-A)) == 2, 'no nonzero fixed vector')
+    B = (I-A).tolist()
+    determinant = (B[0][0]*(B[1][1]*B[2][2]-B[1][2]*B[2][1])
+                   - B[0][1]*(B[1][0]*B[2][2]-B[1][2]*B[2][0])
+                   + B[0][2]*(B[1][0]*B[2][1]-B[1][1]*B[2][0]))
+    need(determinant == 2, 'no nonzero fixed vector')
     return {'native_cross_clock_source_3_steps': 5, 'zero_loss_free_column': True,
         'both_nonroot_cycle_parities_grounded_to_zero': True, 'quadratic_forgets_sign_hostile': True}
 
+def synthetic_graph_audit():
+    """All 125 partial functional graphs on three toy sources, plus all 300 one-edge extensions."""
+    sources = [2, 3, 4]
+    weights = [[1, -2, 3], [-3, 1, 2]]
+    count = 0
+    def source_rows(cache):
+        rows = []
+        for weight in weights:
+            row = defaultdict(int)
+            for n, w in zip(sources, weight):
+                e, sign, _ = cache[n]
+                if sign:
+                    row[e] += w*sign
+            rows.append(dict(row))
+        return rows
+    for choices in itertools.product((None, 1, 2, 3, 4), repeat=3):
+        edges = {n: e for n, e in zip(sources, choices) if e is not None}
+        cache, _ = close_graph(edges, sources)
+        rows = source_rows(cache)
+        cols = sorted({1} | {e for row in rows for e in row})
+        G = gram(rows, cols)
+        for n in sources:
+            if n in edges:
+                continue
+            for e in (1, 2, 3, 4):
+                extended = dict(edges)
+                extended[n] = e
+                new_cache, _ = close_graph(extended, sources)
+                controller = {v: new_cache[v][:2] for v in cols}
+                new_cols, transported, _ = transport_slack(G, cols, controller)
+                need(gram(source_rows(new_cache), new_cols) == transported, 'exhaustive toy graph compiler vs source rows')
+                count += 1
+    need(count == 300, 'declared exhaustive extension universe')
+    need(F(175, 596) < F(121, 400) and F(2) < F(29, 20)**2, 'exact Mellin comparison constants')
+    return {'partial_graphs':125, 'one_edge_extensions':count, 'native_Collatz_claim':False,
+            'Mellin_comparison_constants_exact':True}
+
 def main():
     controls = hostile_controls()
+    controls['exhaustive_toy_graph_audit'] = synthetic_graph_audit()
     # Declared finite universe; no adaptive removal of failures.
     cases = [case(k, depth) for k, depth in ((10,8),(10,16),(12,16),(14,16),(14,24),(14,32),(16,32),(18,36))]
     out = {'status': 'FINITE-EXACT; uniform joint-terminal Gram bound OPEN',

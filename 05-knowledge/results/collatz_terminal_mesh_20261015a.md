@@ -270,3 +270,15 @@ The strengthened open target is now
 terminal extensions on every large dyadic window. This is a sufficient
 condition, weaker than the rowwise condition (5); a direct bound on
 the joint cube maximum could be weaker still. None is proved uniformly.
+
+### Continuation: retained graph glue and logarithmic budgets
+
+[The audited Gram-slack continuation](collatz_gram_slack_20261015b.md)
+quantifies the exact loss in each signed pair fibre. Closing the entire
+retained observation graph gives stronger controllers than transporting
+only its terminal boundary; finite examples pass with unresolved sources.
+It also proves that the all-scale bound `||G_k||_1 <= (k^2/100) 2^(2k)`
+for k>=34 would suffice for the already certified nonzero residue, allowing
+a growing budget. Both this premise and the constant4/9 premise remain
+OPEN. The companion cycle/Pell calculation supplies changing-generator
+hostiles; it does not identify those generators with native Collatz edges.
