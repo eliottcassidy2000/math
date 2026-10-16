@@ -21,6 +21,7 @@ Pass 2 (sequential, exact integers except the float64 squared sums):
   * samples of S, C3, C9, C27 and of prefix sums of H_c, H_c^2 at the grid N_j = round(2^(10 + j/64)).
 Output: JSON (octave table) + NPZ (grid samples).  Cross-checks: H(2^34) = 26869, S(2^34) = 24953018 (amplitude note).
 Usage: python collatz_octave_memory_census_20261015.py LOGMAX LEMMA out.json out.npz
+(numba caching is disabled because other scripts import this module dynamically.)
 """
 import sys, time, json, math
 import numpy as np
@@ -34,12 +35,12 @@ NMAX = 1 << LOGMAX
 GUARD = np.uint64((2**64 - 2) * 2 // 3 - 1)   # odd x <= GUARD keeps x + (x+1)//2 below 2^64
 
 
-@nb.njit(cache=True)
+@nb.njit
 def getbit(P, n):
     return (P[n >> 6] >> np.uint64(n & 63)) & np.uint64(1)
 
 
-@nb.njit(parallel=True, cache=True)
+@nb.njit(parallel=True)
 def parity_block(P, lo, hi, guard, bad):
     # fill bits for n in [lo, hi), lo, hi multiples of 64, using bits below lo
     w0 = lo >> 6
@@ -88,7 +89,7 @@ def parity_bits(logmax):
     return P
 
 
-@nb.njit(cache=True)
+@nb.njit
 def stats_pass(P, logmax, lemma, grid, Hstore):
     NMAX = 1 << logmax
     K = logmax + 1

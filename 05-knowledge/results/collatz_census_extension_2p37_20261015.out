@@ -1,0 +1,6 @@
+parity bits to 2^37: 277.2 s; 245 words recomputed with Python integers
+spot check (20000 random n + patched words): 0 mismatches
+block counts: 41.0 s
+block pass: 121.7 s; max |H| = 119866
+cross-check: S(2^34) = 24953018 (census 24953018), H(2^34) = 26869 (census 26869), H from block walk 26869
+wrote 05-knowledge/results/collatz_census_extension_2p37_20261015.npz; total 440.8 s
