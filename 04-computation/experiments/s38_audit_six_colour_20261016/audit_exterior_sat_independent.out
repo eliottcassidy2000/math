@@ -1,0 +1,8 @@
+n = 19, root degree 6: 1 patterns (S38: 1)
+n = 19: verdicts ['UNSAT'] (1 UNSAT of 1), 111.2s
+n = 20, root degree 6: 7 patterns (S38: 7)
+n = 20: verdicts ['UNSAT'] (7 UNSAT of 7), 2.8s
+n = 21, root degree 6: 38 patterns (S38: 38)
+n = 21: verdicts ['UNSAT'] (38 UNSAT of 38), 56.1s
+n = 22, root degree 6: 135 patterns (S38: 135)
+wrote C:\Users\Eliott\AppData\Local\Temp\math-wt-explicit-modal-38\04-computation\experiments\s38_audit_six_colour_20261016\audit_exterior_sat_independent.json

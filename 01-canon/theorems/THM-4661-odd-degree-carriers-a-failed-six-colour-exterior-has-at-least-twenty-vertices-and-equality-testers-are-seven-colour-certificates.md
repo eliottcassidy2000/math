@@ -1,6 +1,6 @@
 ---
 id: THM-4661
-title: "Odd-degree carriers and the six-colour boundary: a vertex-minimal exterior that deletes an old six-colouring is L-critical with lists of size five or six, its low vertices span a forest of edges and odd cycles of length at least five, it is not three-colourable and not five-choosable, and it has at least twenty vertices (nineteen exterior vertices always preserve every old six-colouring; the earlier bound was seventeen; an exhaustive SAT search over the necessary conditions raises this to twenty-two, and every twenty-two-vertex model it finds is five-choosable); a six-colour equality tester is exactly six-chromatic, cannot live in a five-colourable field plane, and in any field decides the plane at seven colours; EI19, the fish and EI21 gain nothing from odd-degree extensions of Q(zeta5, sqrt(-11)) or Q(zeta55), in particular from the cubic carrier Q(zeta55, theta), and EI21 carries the fish's genus-one curve, so one question C3(F_4) decides the necessary condition for both"
+title: "Odd-degree carriers and the six-colour boundary: a vertex-minimal exterior that deletes an old six-colouring is L-critical with lists of size five or six, its low vertices span a forest of edges and odd cycles of length at least five, it is not three-colourable and not five-choosable, and it has at least twenty vertices (nineteen exterior vertices always preserve every old six-colouring; the earlier bound was seventeen; an exhaustive SAT search over the necessary conditions raises this to twenty-two, and every twenty-two-vertex model it finds is five-choosable); a six-colour equality tester is exactly six-chromatic, cannot live in a five-colourable field plane, and in any field decides the plane at seven colours; EI19 gains nothing from odd-degree extensions of Q(zeta5, sqrt(-11)) or Q(zeta55), the fish and EI21 gain nothing from conjugation-stable ones (in particular from the cubic carrier Q(zeta55, theta)), and EI21 carries the fish's genus-one curve, so one question C3(F_4) decides the necessary condition for both"
 status: >
   PROVED: statements 1-4 (elementary, given the CITED classical inputs: the Borodin / Erdos-Rubin-Taylor
   degree-choosability theorem, Riemann-Roch on a genus-one curve, the de Bruijn-Erdos compactness theorem and the
@@ -8,7 +8,9 @@ status: >
   the forced EI19 angles, equations (1) and the genus-one curve C3 of the fish note).
   FINITE-EXACT: statement 5 (CaDiCaL verdicts over all attachment patterns, not proof-checked; Alon-Tarsi
   coefficients computed exactly). The counting of statement 2(d) is also re-derived by the n = 19 run of the same search.
-  Self-audited; independent audit pending (S38).
+  Independently audited 2026-10-16 (04-computation/experiments/s38_audit_six_colour_20261016/REPORT.md): statements 1-5
+  CONFIRMED, statement 5 reproduced with an independent encoding (and corroborated by Glucose), 3(d) and the remarks
+  corrected (MISTAKE-622). CITED for 2(b): the list version of Gallai's theorem (Kostochka-Stiebitz-Wirth 1996; Borodin).
 session: opus-2026-10-16-S38
 source: 05-knowledge/results/six_colour_odd_carrier_twenty_vertices_20261016.md
 related:
@@ -69,10 +71,11 @@ Then `phi` extends to `H` exactly when the unit graph on `H` is `L`-colourable. 
        none lies in `K = Q(zeta5, sqrt(-11))` (rhombus_overlap_elliptic_20261011.md G2, residue colouring at 19) or in
        the cubic base `K' = K(theta)` (clock_duality_oct15's C1 in cubic_crossedge_packets_20261016d: the same
        residue colouring extends because the cubic has a simple root modulo 19).
-   (d) In the setting above with `q = 6`: if `x, y ∈ F` and the unit graph on `A = V(G) ∩ F` has a proper six-colouring
-       that separates `x` and `y` (for instance if it is five-colourable), then `V(G) \ F` contains a vertex-minimal
-       failed exterior, so `|V(G) \ F| >= 20` and statement 2 applies to it. For the cubic carrier, `F = K'` is
-       five-colourable (C1), so every equality tester whose old vertices lie in `K'` has such an exterior in `L' \ K'`.
+   (d) In the setting above with `q = 6`: if `V(G) ⊂ M`, `x, y ∈ F`, and the unit graph on `A = V(G) ∩ F` has a proper
+       six-colouring that separates `x` and `y` (for instance if it is five-colourable), then `V(G) \ F` contains a
+       vertex-minimal failed exterior, so `|V(G) \ F| >= 20` (`>= 22` by statement 5) and statement 2 applies to it. For
+       the cubic carrier, `F = K'` is five-colourable (C1), so every equality tester `G ⊂ L'` with ports `x, y ∈ K'` has a
+       failed exterior inside `V(G) \ K'`.
 4. **(Odd-degree descent of three known exteriors.)**
    (a) The 19-vertex Exoo-Ismailescu graph EI19 has no faithful placement in any finite odd-degree extension of
        `L = Q(zeta55)`, in particular not in the cubic carrier `L' = L(theta)`, `2 theta^3 + 2 theta^2 - 2 theta - 1 = 0`.
@@ -199,13 +202,17 @@ Nullstellensatz every list assignment with lists of size five extends.
 
 ## Remarks
 
-- Statement 1 improves clock_duality_oct15's Theorem 2 (seventeen) by two; its special exclusions of five-cores of
-  sizes 16 and 17 are not needed and five-cores of sizes 18 and 19 are not excluded (only as failed exteriors).
-  The palette version `q + ceil(q(q-2)/2)` improves their `q(q-1)/2` for `q >= 4`; the parity step (v) also works for
-  other even `q` but is stated only for six.
+- Statement 1 improves clock_duality_oct15's Theorem 2 (seventeen) by two. The audit found a second route (report E2):
+  no graph on 18 or 19 vertices is triangle-free with at most two common neighbours per pair and minimum degree five
+  (exhaustive enumeration, Clebsch control at 16), so every exterior of at most 19 points is 4-degenerate. Five-cores
+  on 20 vertices exist (they fail the Gallai filter). The palette version `q + ceil(q(q-2)/2)` improves their
+  `q(q-1)/2` for `q >= 4`; the parity step (v) also works for other even `q` (the companion table checks the arithmetic
+  of steps (iv)-(v); steps (i)-(iii) generalize verbatim) but is stated only for six. Step (v) counts the low
+  degree-six vertices of `W` in `W_6`; they are tight as well. (I1) and (I2) hold for non-conjugation-stable `M`: the
+  equation `t^2 - t + 1/|b-a|^2 = 0` has coefficients in `F`, and a unit triangle would put `sqrt(-3)` in `M`.
 - Statement 3 makes the target precise: an equality tester in the cubic carrier (of any size) would prove
   `chi(R^2) = 7`, and it would in particular be a six-chromatic unit-distance graph; no six-chromatic unit-distance
-  graph is known. Its exterior must already pass statements 2 and 5: at least twenty-two vertices, minimum degree five, a
+  graph is known. If its ports lie in `K'`, its exterior must already pass statements 2 and 5: at least twenty-two vertices, minimum degree five, a
   degree-six vertex, and **chromatic number at least four**, i.e. a four-chromatic triangle-free unit-distance graph
   inside `L' \ K'`. None is known in `L` (HYP-9247 conjectures there is none). Among the four smallest known
   triangle-free four-chromatic unit graphs, statement 4 shows that EI19 cannot supply one in any odd-degree extension

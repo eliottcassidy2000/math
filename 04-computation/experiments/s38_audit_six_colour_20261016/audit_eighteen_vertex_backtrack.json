@@ -1,0 +1,22 @@
+{
+ "clebsch16": {
+  "labelled_solutions": 1,
+  "seconds": 0.0
+ },
+ "A": {
+  "labelled_solutions": 0,
+  "seconds": 0.31
+ },
+ "B": {
+  "labelled_solutions": 0,
+  "seconds": 0.09
+ },
+ "C1": {
+  "labelled_solutions": 0,
+  "seconds": 0.07
+ },
+ "C2": {
+  "labelled_solutions": 0,
+  "seconds": 0.06
+ }
+}

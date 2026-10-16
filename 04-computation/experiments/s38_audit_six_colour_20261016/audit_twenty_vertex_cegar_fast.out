@@ -1,0 +1,7 @@
+control K6: killing assignment found True in 1 rounds
+4 non-isomorphic 20-vertex five-cores with a degree-6 vertex from 6 SAT models (0.2s)
+#0: degrees 5^18 6^2, 3-colourable False, killing list assignment UNDECIDED within cap (CEGAR 18 rounds, 164.8s)
+#1: degrees 5^16 6^4, 3-colourable False, killing list assignment UNDECIDED within cap (CEGAR 30 rounds, 150.7s)
+#2: degrees 5^16 6^4, 3-colourable False, killing list assignment UNDECIDED within cap (CEGAR 15 rounds, 156.7s)
+#3: degrees 5^18 6^2, 3-colourable False, killing list assignment UNDECIDED within cap (CEGAR 23 rounds, 150.9s)
+wrote C:\Users\Eliott\AppData\Local\Temp\math-wt-explicit-modal-38\04-computation\experiments\s38_audit_six_colour_20261016\audit_twenty_vertex_cegar_fast.json

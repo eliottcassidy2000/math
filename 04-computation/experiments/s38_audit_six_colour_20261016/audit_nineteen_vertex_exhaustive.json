@@ -1,0 +1,194 @@
+{
+ "A1": {
+  "degree7_lower_bound": 22,
+  "degree6_lower_bound": 19,
+  "five_regular_parity_impossible": true,
+  "tight_incidences_rows": 24,
+  "tight_incidences_capacity": 24
+ },
+ "A1c": {
+  "A1c_repeated_pair_sat": false
+ },
+ "A2": {
+  "labelled_completions": 0,
+  "orbits": 0,
+  "isomorphism_classes": 0
+ },
+ "A3_19": [],
+ "n16": [
+  {
+   "index": 0,
+   "edges": 40,
+   "degree_sequence_counts": {
+    "5": 16
+   },
+   "three_colourable": false,
+   "blocking_list_assignment_exists": false,
+   "cegar_iterations": 9,
+   "seconds": 15.3,
+   "edge_list": [
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     3
+    ],
+    [
+     0,
+     4
+    ],
+    [
+     0,
+     5
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     1,
+     7
+    ],
+    [
+     1,
+     8
+    ],
+    [
+     1,
+     9
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     2,
+     10
+    ],
+    [
+     2,
+     11
+    ],
+    [
+     2,
+     12
+    ],
+    [
+     3,
+     7
+    ],
+    [
+     3,
+     10
+    ],
+    [
+     3,
+     13
+    ],
+    [
+     3,
+     14
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     4,
+     11
+    ],
+    [
+     4,
+     13
+    ],
+    [
+     4,
+     15
+    ],
+    [
+     5,
+     9
+    ],
+    [
+     5,
+     12
+    ],
+    [
+     5,
+     14
+    ],
+    [
+     5,
+     15
+    ],
+    [
+     6,
+     13
+    ],
+    [
+     6,
+     14
+    ],
+    [
+     6,
+     15
+    ],
+    [
+     7,
+     11
+    ],
+    [
+     7,
+     12
+    ],
+    [
+     7,
+     15
+    ],
+    [
+     8,
+     10
+    ],
+    [
+     8,
+     12
+    ],
+    [
+     8,
+     14
+    ],
+    [
+     9,
+     10
+    ],
+    [
+     9,
+     11
+    ],
+    [
+     9,
+     13
+    ],
+    [
+     10,
+     15
+    ],
+    [
+     11,
+     14
+    ],
+    [
+     12,
+     13
+    ]
+   ]
+  }
+ ],
+ "seconds": 15.6
+}

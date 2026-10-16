@@ -1,0 +1,17 @@
+simple bound: q=6 minimal failed exterior has >= 19 vertices; q + ceil(q(q-2)/2) vs q(q-1)/2: [(4, 8, 6), (5, 13, 10), (6, 18, 15), (7, 25, 21), (8, 32, 28), (9, 41, 36), (10, 50, 45), (11, 61, 55)]
+even q in 4..40: extremal order excluded for all (h_min, |W| ): [(4, 2), (6, 6), (8, 13), (10, 21), (12, 31), (14, 43)] ...
+first moment: 6^n (5/6)^(m+n) < 1 iff average degree > 17.6549; average degrees {'EI17': 3.6470588235294117, 'EI19': 3.6842105263157894, 'fish': 3.652173913043478, 'probes': [5.72118286059143, 5.58229848724317, 4.015848968651673, 4.035059243629281]}
+d square in Q(zeta55) (conductor of Q(sqrt d) divides 55): {5: True, -11: True, -55: True, -2: False, -35: False, -1: False, -3: False, 2: False, 7: False, -7: False, 35: False}
+p = 331 roots of f: [253] simple: True  (-2|p) -> 1  (-35|p) -> 1  5,-11,-55 -> [1, 1, 1]
+p = 661 roots of f: [428] simple: True  (-2|p) -> 660  (-35|p) -> 660  5,-11,-55 -> [1, 1, 1]
+p = 881 roots of f: [417, 478, 865] simple: True  (-2|p) -> 1  (-35|p) -> 880  5,-11,-55 -> [1, 1, 1]
+p = 991 roots of f: [719] simple: True  (-2|p) -> 990  (-35|p) -> 1  5,-11,-55 -> [1, 1, 1]
+p = 2311 roots of f: [1670] simple: True  (-2|p) -> 2310  (-35|p) -> 1  5,-11,-55 -> [1, 1, 1]
+p = 2531 roots of f: [1019] simple: True  (-2|p) -> 1  (-35|p) -> 1  5,-11,-55 -> [1, 1, 1]
+F_4: tau = sqrt(-11)(z5 - z5^-1) = -6.3085952379471015 is real and a root of x^4 - 55x^2 + 605: x**4 - 55*x**2 + 605
+fish (1): 11 z0^2 = -D*(D - 1) ; 11 z1^2 = -D*(D - 4) ; 11 z2^2 = -(D - 1)*(D + 3) ; z_i conjugation-invariant (skew product / beta)
+C3: genus 1 by Riemann-Hurwitz; D = 2 unramified (fibre z^2 = ['-2/11', '4/11', '-5/11'] ); possible singular D values of the affine model: ['1']
+residue colouring at 19: {'norm_one_count': 20, 'sums': [1, 2, 4, 6, 9, 10, 13, 15, 17, 18], 'colouring_proper': True, 'colours': 5, 'f4_mod19': 0, 'fprime4_mod19': 3, 'minus11_nonresidue_mod19': True, 'p_mod5': 4}
+EI19 ratios: {'abs_r1': '1', 'abs_r2': '1', 'r1_plus_conj': '-2/3', 'r2_plus_conj': '1/3'}
+3(b) chains: [{'d': 0.49, 'm': 4, 'end_distance': 1.0, 'step_errors': 0.0}, {'d': 0.3, 'm': 4, 'end_distance': 1.0, 'step_errors': 0.0}, {'d': 0.1, 'm': 10, 'end_distance': 0.9999999999999999, 'step_errors': 2.7755575615628914e-17}, {'d': 0.0123, 'm': 82, 'end_distance': 1.0000000000000007, 'step_errors': 4.5102810375396984e-17}]
+wrote C:\Users\Eliott\AppData\Local\Temp\math-wt-explicit-modal-38\04-computation\experiments\s38_audit_six_colour_20261016\audit_field_and_counting_checks.json

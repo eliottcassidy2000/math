@@ -1,0 +1,21 @@
+{"curve": "control y^2 = x^3 - x over Q(sqrt5) (rank 1)", "places": ["real+", "real-", "2inert", "sqrt5"], "selmer_dim": 3, "selmer_size": 8, "rank_bound": 1, "seconds": 0.4}
+{"curve": "control y^2 = x^3 - 121x over Q(sqrt5) (rank 1)", "places": ["real+", "real-", "2inert", "sqrt5", "pi11", "pi11c"], "selmer_dim": 3, "selmer_size": 8, "rank_bound": 1, "seconds": 0.6}
+{"curve": "E: y^2 = x(x-9)(x+7) over Q(sqrt5)", "places": ["real+", "real-", "2inert", "3inert", "7inert"], "selmer_dim": 2, "selmer_size": 4, "rank_bound": 0, "seconds": 0.6}
+{"curve": "E^delta over Q(sqrt5)", "places": ["real+", "real-", "2inert", "3inert", "7inert", "sqrt5", "pi11", "pi11c"], "selmer_dim": 4, "selmer_size": 16, "rank_bound": 2, "seconds": 0.8}
+{"curve": "E^delta over Q(sqrt5), second seed", "places": ["real+", "real-", "2inert", "3inert", "7inert", "sqrt5", "pi11", "pi11c"], "selmer_dim": 4, "selmer_size": 16, "rank_bound": 2, "seconds": 0.8}
+Selmer subspaces equal to the S38 ones: E True, E^delta True, second seed True
+   isotropy at real+: {'classes_with_reps': 2, 'image_size': 2, 'isotropic': True, 'local_H1_dim': 2}
+   isotropy at real-: {'classes_with_reps': 2, 'image_size': 2, 'isotropic': True, 'local_H1_dim': 2}
+   isotropy at 2inert: {'classes_with_reps': 15, 'image_size': 16, 'isotropic': True, 'local_H1_dim': 8}
+   isotropy at 3inert: {'classes_with_reps': 4, 'image_size': 4, 'isotropic': True, 'local_H1_dim': 4}
+   isotropy at 7inert: {'classes_with_reps': 4, 'image_size': 4, 'isotropic': True, 'local_H1_dim': 4}
+   isotropy at sqrt5: {'classes_with_reps': 4, 'image_size': 4, 'isotropic': True, 'local_H1_dim': 4}
+   isotropy at pi11: {'classes_with_reps': 4, 'image_size': 4, 'isotropic': True, 'local_H1_dim': 4}
+   isotropy at pi11c: {'classes_with_reps': 4, 'image_size': 4, 'isotropic': True, 'local_H1_dim': 4}
+P1, P2 lie on E^delta exactly
+F_4 residue-symbol test with 59 split primes: rank of the four classes = 4; with (33,33) appended: 5  ->  (33,33) in span: False
+class of P1: ((484+0phi), (286+-99phi)) equals the claimed class modulo K0 squares: True
+class of P2: ((-42+19phi), (-240+-80phi)) equals the claimed class modulo K0 squares: True
+C3 -> covering of class (33,33): residuals [0, 0, 0]
+C3 local points at infinity over F_4 (-11 a local square): {'3': True, '5': True, '7_in_F49': True, '2': True, 'pi11': True, 'pi11c': True}
+wrote C:\Users\Eliott\AppData\Local\Temp\math-wt-explicit-modal-38\04-computation\experiments\s38_audit_six_colour_20261016\audit_two_descent_independent.json

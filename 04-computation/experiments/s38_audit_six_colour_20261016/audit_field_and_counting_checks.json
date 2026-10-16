@@ -1,0 +1,537 @@
+{
+ "simple_bound": [
+  {
+   "q": 4,
+   "simple_min_order": 9,
+   "palette_bound": 8,
+   "bridge_bound": 6
+  },
+  {
+   "q": 5,
+   "simple_min_order": 14,
+   "palette_bound": 13,
+   "bridge_bound": 10
+  },
+  {
+   "q": 6,
+   "simple_min_order": 19,
+   "palette_bound": 18,
+   "bridge_bound": 15
+  },
+  {
+   "q": 7,
+   "simple_min_order": 26,
+   "palette_bound": 25,
+   "bridge_bound": 21
+  },
+  {
+   "q": 8,
+   "simple_min_order": 33,
+   "palette_bound": 32,
+   "bridge_bound": 28
+  },
+  {
+   "q": 9,
+   "simple_min_order": 42,
+   "palette_bound": 41,
+   "bridge_bound": 36
+  },
+  {
+   "q": 10,
+   "simple_min_order": 51,
+   "palette_bound": 50,
+   "bridge_bound": 45
+  },
+  {
+   "q": 11,
+   "simple_min_order": 62,
+   "palette_bound": 61,
+   "bridge_bound": 55
+  },
+  {
+   "q": 12,
+   "simple_min_order": 73,
+   "palette_bound": 72,
+   "bridge_bound": 66
+  },
+  {
+   "q": 13,
+   "simple_min_order": 86,
+   "palette_bound": 85,
+   "bridge_bound": 78
+  },
+  {
+   "q": 14,
+   "simple_min_order": 99,
+   "palette_bound": 98,
+   "bridge_bound": 91
+  },
+  {
+   "q": 15,
+   "simple_min_order": 114,
+   "palette_bound": 113,
+   "bridge_bound": 105
+  },
+  {
+   "q": 16,
+   "simple_min_order": 129,
+   "palette_bound": 128,
+   "bridge_bound": 120
+  },
+  {
+   "q": 17,
+   "simple_min_order": 146,
+   "palette_bound": 145,
+   "bridge_bound": 136
+  },
+  {
+   "q": 18,
+   "simple_min_order": 163,
+   "palette_bound": 162,
+   "bridge_bound": 153
+  },
+  {
+   "q": 19,
+   "simple_min_order": 182,
+   "palette_bound": 181,
+   "bridge_bound": 171
+  },
+  {
+   "q": 20,
+   "simple_min_order": 201,
+   "palette_bound": 200,
+   "bridge_bound": 190
+  },
+  {
+   "q": 21,
+   "simple_min_order": 222,
+   "palette_bound": 221,
+   "bridge_bound": 210
+  },
+  {
+   "q": 22,
+   "simple_min_order": 243,
+   "palette_bound": 242,
+   "bridge_bound": 231
+  },
+  {
+   "q": 23,
+   "simple_min_order": 266,
+   "palette_bound": 265,
+   "bridge_bound": 253
+  },
+  {
+   "q": 24,
+   "simple_min_order": 289,
+   "palette_bound": 288,
+   "bridge_bound": 276
+  },
+  {
+   "q": 25,
+   "simple_min_order": 314,
+   "palette_bound": 313,
+   "bridge_bound": 300
+  },
+  {
+   "q": 26,
+   "simple_min_order": 339,
+   "palette_bound": 338,
+   "bridge_bound": 325
+  },
+  {
+   "q": 27,
+   "simple_min_order": 366,
+   "palette_bound": 365,
+   "bridge_bound": 351
+  },
+  {
+   "q": 28,
+   "simple_min_order": 393,
+   "palette_bound": 392,
+   "bridge_bound": 378
+  },
+  {
+   "q": 29,
+   "simple_min_order": 422,
+   "palette_bound": 421,
+   "bridge_bound": 406
+  },
+  {
+   "q": 30,
+   "simple_min_order": 451,
+   "palette_bound": 450,
+   "bridge_bound": 435
+  },
+  {
+   "q": 31,
+   "simple_min_order": 482,
+   "palette_bound": 481,
+   "bridge_bound": 465
+  },
+  {
+   "q": 32,
+   "simple_min_order": 513,
+   "palette_bound": 512,
+   "bridge_bound": 496
+  },
+  {
+   "q": 33,
+   "simple_min_order": 546,
+   "palette_bound": 545,
+   "bridge_bound": 528
+  },
+  {
+   "q": 34,
+   "simple_min_order": 579,
+   "palette_bound": 578,
+   "bridge_bound": 561
+  },
+  {
+   "q": 35,
+   "simple_min_order": 614,
+   "palette_bound": 613,
+   "bridge_bound": 595
+  },
+  {
+   "q": 36,
+   "simple_min_order": 649,
+   "palette_bound": 648,
+   "bridge_bound": 630
+  },
+  {
+   "q": 37,
+   "simple_min_order": 686,
+   "palette_bound": 685,
+   "bridge_bound": 666
+  },
+  {
+   "q": 38,
+   "simple_min_order": 723,
+   "palette_bound": 722,
+   "bridge_bound": 703
+  },
+  {
+   "q": 39,
+   "simple_min_order": 762,
+   "palette_bound": 761,
+   "bridge_bound": 741
+  },
+  {
+   "q": 40,
+   "simple_min_order": 801,
+   "palette_bound": 800,
+   "bridge_bound": 780
+  }
+ ],
+ "even_q_extremal_exclusion": [
+  {
+   "q": 4,
+   "n": 9,
+   "h_min": 2,
+   "feasible_W_q": []
+  },
+  {
+   "q": 6,
+   "n": 19,
+   "h_min": 6,
+   "feasible_W_q": []
+  },
+  {
+   "q": 8,
+   "n": 33,
+   "h_min": 13,
+   "feasible_W_q": []
+  },
+  {
+   "q": 10,
+   "n": 51,
+   "h_min": 21,
+   "feasible_W_q": []
+  },
+  {
+   "q": 12,
+   "n": 73,
+   "h_min": 31,
+   "feasible_W_q": []
+  },
+  {
+   "q": 14,
+   "n": 99,
+   "h_min": 43,
+   "feasible_W_q": []
+  },
+  {
+   "q": 16,
+   "n": 129,
+   "h_min": 57,
+   "feasible_W_q": []
+  },
+  {
+   "q": 18,
+   "n": 163,
+   "h_min": 73,
+   "feasible_W_q": []
+  },
+  {
+   "q": 20,
+   "n": 201,
+   "h_min": 91,
+   "feasible_W_q": []
+  },
+  {
+   "q": 22,
+   "n": 243,
+   "h_min": 112,
+   "feasible_W_q": []
+  },
+  {
+   "q": 24,
+   "n": 289,
+   "h_min": 134,
+   "feasible_W_q": []
+  },
+  {
+   "q": 26,
+   "n": 339,
+   "h_min": 158,
+   "feasible_W_q": []
+  },
+  {
+   "q": 28,
+   "n": 393,
+   "h_min": 184,
+   "feasible_W_q": []
+  },
+  {
+   "q": 30,
+   "n": 451,
+   "h_min": 212,
+   "feasible_W_q": []
+  },
+  {
+   "q": 32,
+   "n": 513,
+   "h_min": 242,
+   "feasible_W_q": []
+  },
+  {
+   "q": 34,
+   "n": 579,
+   "h_min": 274,
+   "feasible_W_q": []
+  },
+  {
+   "q": 36,
+   "n": 649,
+   "h_min": 308,
+   "feasible_W_q": []
+  },
+  {
+   "q": 38,
+   "n": 723,
+   "h_min": 345,
+   "feasible_W_q": []
+  },
+  {
+   "q": 40,
+   "n": 801,
+   "h_min": 383,
+   "feasible_W_q": []
+  }
+ ],
+ "first_moment_threshold_average_degree": 17.654938239178815,
+ "average_degrees": {
+  "EI17": 3.6470588235294117,
+  "EI19": 3.6842105263157894,
+  "fish": 3.652173913043478,
+  "probes": [
+   5.72118286059143,
+   5.58229848724317,
+   4.015848968651673,
+   4.035059243629281
+  ]
+ },
+ "quadratic_subfields_of_Q_zeta55": 3,
+ "square_in_L_by_conductor": {
+  "5": true,
+  "-11": true,
+  "-55": true,
+  "-2": false,
+  "-35": false,
+  "-1": false,
+  "-3": false,
+  "2": false,
+  "7": false,
+  "-7": false,
+  "35": false
+ },
+ "certificates": [
+  {
+   "p": 331,
+   "roots": [
+    253
+   ],
+   "simple": true,
+   "euler_minus2": 1,
+   "euler_minus35": 1,
+   "quad_sub_squares": [
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "p": 661,
+   "roots": [
+    428
+   ],
+   "simple": true,
+   "euler_minus2": 660,
+   "euler_minus35": 660,
+   "quad_sub_squares": [
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "p": 881,
+   "roots": [
+    417,
+    478,
+    865
+   ],
+   "simple": true,
+   "euler_minus2": 1,
+   "euler_minus35": 880,
+   "quad_sub_squares": [
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "p": 991,
+   "roots": [
+    719
+   ],
+   "simple": true,
+   "euler_minus2": 990,
+   "euler_minus35": 1,
+   "quad_sub_squares": [
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "p": 2311,
+   "roots": [
+    1670
+   ],
+   "simple": true,
+   "euler_minus2": 2310,
+   "euler_minus35": 1,
+   "quad_sub_squares": [
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "p": 2531,
+   "roots": [
+    1019
+   ],
+   "simple": true,
+   "euler_minus2": 1,
+   "euler_minus35": 1,
+   "quad_sub_squares": [
+    1,
+    1,
+    1
+   ]
+  }
+ ],
+ "F4": {
+  "tau_numeric": "(-6.3085952379471015+5.159851685328665e-61j)",
+  "residual": 2.2737367544323206e-13,
+  "minpoly_of_sqrt_55p11s5_over_2": "x**4 - 55*x**2 + 605"
+ },
+ "fish": {
+  "e0": "-D*(D - 1)",
+  "e1": "-D*(D - 4)",
+  "e2": "-(D - 1)*(D + 3)"
+ },
+ "C3": {
+  "branch_values_with_odd_classes": {
+   "0": 2,
+   "1": 2,
+   "4": 1,
+   "-3": 1,
+   "inf": 0
+  },
+  "genus": 1,
+  "fibre_at_2": [
+   "-2/11",
+   "4/11",
+   "-5/11"
+  ],
+  "D_values_with_two_vanishing_z": [
+   "1"
+  ]
+ },
+ "residue19": {
+  "norm_one_count": 20,
+  "sums": [
+   1,
+   2,
+   4,
+   6,
+   9,
+   10,
+   13,
+   15,
+   17,
+   18
+  ],
+  "colouring_proper": true,
+  "colours": 5,
+  "f4_mod19": 0,
+  "fprime4_mod19": 3,
+  "minus11_nonresidue_mod19": true,
+  "p_mod5": 4
+ },
+ "EI19": {
+  "abs_r1": "1",
+  "abs_r2": "1",
+  "r1_plus_conj": "-2/3",
+  "r2_plus_conj": "1/3"
+ },
+ "chains": [
+  {
+   "d": 0.49,
+   "m": 4,
+   "end_distance": 1.0,
+   "step_errors": 0.0
+  },
+  {
+   "d": 0.3,
+   "m": 4,
+   "end_distance": 1.0,
+   "step_errors": 0.0
+  },
+  {
+   "d": 0.1,
+   "m": 10,
+   "end_distance": 0.9999999999999999,
+   "step_errors": 2.7755575615628914e-17
+  },
+  {
+   "d": 0.0123,
+   "m": 82,
+   "end_distance": 1.0000000000000007,
+   "step_errors": 4.5102810375396984e-17
+  }
+ ]
+}

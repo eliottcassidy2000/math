@@ -8,7 +8,11 @@ status: >
   and y^2 = x^3 - 121x over Q(sqrt5)); rank E(Q(sqrt5)) = 0 also agrees with PARI's ellrank over Q for E and its
   quintic twist (fish_marked_elliptic_cover_20261013). The two generators of the twist are exact points.
   The consequences use THM-4661 statements 4(b), 4(c) and the fish note's equations (1) and reduction (5).
-  Self-audited; independent audit pending (S38).
+  Independently audited 2026-10-16 (04-computation/experiments/s38_audit_six_colour_20261016/REPORT.md): an independent
+  two-descent reproduces both Selmer groups, every local image is maximal isotropic for the local Tate pairing, and a
+  residue-symbol test at 59 split primes confirms independence and non-membership of (33, 33); statements 1-5
+  CONFIRMED. clock_duality_oct15 found and repaired a false-negative square oracle in the original script (5 = (sqrt5)^2
+  was rejected) and replayed the descent with the same conclusion (cubic_descent_audit_20261016e); MISTAKE-622.
 session: opus-2026-10-16-S38
 source: 05-knowledge/results/six_colour_odd_carrier_twenty_vertices_20261016.md (section 4)
 scripts:
@@ -100,7 +104,8 @@ distinct) give the four sums, the closing edges give `|P|^2 + |Q|^2 = 1` and `P 
 
 - This settles the two OPEN placement tests of HYP-9247 (the fish, EI21): of the four smallest known triangle-free
   four-chromatic unit-distance graphs, EI19, the fish and EI21 are now excluded from `Q(zeta55)` and from every
-  odd-degree carrier over `K`. Only EI17 remains, excluded from `L` only numerically to coordinate height `1e63`.
+  conjugation-stable odd-degree carrier over `K` (EI19 from every odd-degree extension of `K` or `L`). Only EI17
+  remains, excluded from `L` only numerically to coordinate height `1e63`.
 - The obstruction is global: `E(F_4)` has rank 2, but `(33, 33)` is not a descent class of any point.
   The initial hand-check suggestion of everywhere local solubility is now proved in B6 of
   `05-knowledge/results/cubic_adelic_20261016e.md`: good odd places use the full unramified local

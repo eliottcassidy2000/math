@@ -4,7 +4,9 @@
 [elliptic bridge](hn_elliptic_bridge_20261016c.md) and [cubic carrier G7](elliptic_crossedges_20261016c.md).
 Canonical statements: [THM-4661](../../01-canon/theorems/THM-4661-odd-degree-carriers-a-failed-six-colour-exterior-has-at-least-twenty-vertices-and-equality-testers-are-seven-colour-certificates.md),
 [THM-4662](../../01-canon/theorems/THM-4662-the-fish-curve-has-no-point-over-the-real-quartic-field-so-the-fish-and-ei21-are-not-in-q-zeta55-or-any-odd-carrier.md).
-Audit: PENDING.
+Audit: independent adversarial referee, [report](../../04-computation/experiments/s38_audit_six_colour_20261016/REPORT.md):
+no mathematical error in THM-4661 or THM-4662 (both reproduced independently, including the two-descent); errors in
+remarks and in this note fixed below (MISTAKE-622).
 
 **Owner's prompt (verbatim).** "continue as you left off and keep pushing the cubic-extension direction toward a
 coupled unit-distance configuration with at least 18 exterior vertices, preserving an equal-endpoint six-colouring
@@ -18,9 +20,9 @@ while eliminating all separating colourings"
   and odd cycles of length at least five, not three-colourable, not five-choosable, minimum degree five, a vertex of
   degree six); an equality tester is exactly six-chromatic and, in any field, decides the plane at seven colours;
   EI19 is excluded from every odd-degree extension of `Q(zeta55)` and a fish placement in any conjugation-stable
-  odd-degree extension of `K = Q(zeta5, sqrt(-11))` needs the same point of the genus-one curve `C3` over the real
-  quartic field that `L` already needs; **EI21 carries the same genus-one curve**; and that point does not exist
-  (**THM-4662**, a two-descent over `Q(sqrt5)`), so the fish and EI21 are excluded from `Q(zeta55)` and from every odd-degree
+  odd-degree extension of `K = Q(zeta5, sqrt(-11))` needs a point of the genus-one curve `C3` over the real quartic field,
+  as `L` already does; **EI21 carries the same genus-one curve**; and `C3` has no such point (**THM-4662**, a two-descent
+  over `Q(sqrt5)`), so the fish and EI21 are excluded from `Q(zeta55)` and from every conjugation-stable odd-degree
   carrier over `K`.
 - **FINITE-EXACT:** the arithmetic table of the parity step for every even palette from 4 to 40; non-residue
   certificates for `sqrt(-2)`, `sqrt(-35)` at `p = 661` in the cubic carrier; three-colourability of four probe
@@ -72,8 +74,11 @@ of `b`'s old neighbour. The new ingredients compared with the seventeen-vertex t
   (THM-4661, step (v)).
 
 The same parity step excludes the extremal order for every even palette from 4 to 40
-([table](six_colour_odd_carrier_checks_20261016.out)). Five-cores of 18 or 19 vertices are not excluded; they just
-cannot be failed exteriors.
+([table](six_colour_odd_carrier_checks_20261016.out)). The audit adds a stronger fact (E2 of the report): **no graph on
+18 or 19 vertices is triangle-free, has at most two common neighbours per pair, and has minimum degree five**
+(exhaustive SAT and backtracking, with the Clebsch graph recovered as a positive control at 16). Every set of at most
+19 exterior points therefore spans a 4-degenerate unit graph, which gives the nineteen-vertex bound even without the
+Gallai argument. Five-cores on 20 vertices do exist; none of 3,000 sampled ones passes the Gallai filter.
 
 **Twenty-two, by exhaustive search (THM-4661 statement 5, FINITE-EXACT).**
 [six_colour_exterior_twenty_sat_20261016.py](../../04-computation/experiments/six_colour_exterior_twenty_sat_20261016.py)
@@ -94,9 +99,8 @@ At 22 the screen stops excluding, but the screen is weaker than the target. Each
 **five-choosable**, certified by an exact Alon–Tarsi coefficient
 ([alon_tarsi_five_choosability_20261016.py](../../04-computation/experiments/alon_tarsi_five_choosability_20261016.py)):
 an orientation with outdegrees at most four whose monomial in `prod (x_u - x_v)` has nonzero coefficient. A failed
-exterior is not five-choosable, so none of them is one. The obstruction that remains is choosability, not size:
-the search finds sparse triangle-free graphs with every other required property, and they all have choice number at
-most five.
+exterior is not five-choosable, so none of them is one. The obstruction that remains is choosability, not size: every
+22-vertex model the search finds satisfies the necessary conditions N1-N5 and has choice number at most five.
 
 ## 3. The three-colour gate, now for arbitrary old sets
 
@@ -146,14 +150,15 @@ A full two-descent over `Q(sqrt5)` gives two-Selmer groups of orders 4 and 16. E
 placement in `Q(zeta55)` and none in any conjugation-stable odd-degree carrier over `K`**, the cubic carriers included.
 Among the four smallest known triangle-free four-chromatic unit-distance graphs only EI17, which is rigid, survives,
 and it is excluded from `L` only numerically. More generally, THM-4662 statement 5 forbids the nine-vertex hub
-configuration `Gamma_9` itself (four rhombi at one vertex plus two closing edges) in `Q(zeta55)` and in every odd carrier
-over `K`. Any four-chromatic exterior these fields could carry must avoid it.
+configuration `Gamma_9` itself (four rhombi at one vertex plus two closing edges) in `Q(zeta55)` and in every
+conjugation-stable odd-degree carrier over `K`. Any four-chromatic exterior these fields could carry must avoid it.
 
-A general remark explains the pattern: any graph that can be built from one edge by repeatedly adding a vertex with
-two placed neighbours lies, by (I1) applied step by step, in the smallest field containing that edge. So an
-odd-degree carrier can only add graphs whose every placement uses a genuinely new direction, and every square-root
-condition met by such a graph must already be met over the base. Rigid graphs whose realization fields are not
-built from square roots (EI17 is the candidate) are the only ones this does not touch.
+A general remark explains part of the pattern. Suppose a graph can be built from one edge by repeatedly adding a vertex
+with two placed neighbours, and it is placed inside an odd-degree extension `M` of a conjugation-stable field `F`
+containing that edge. Then by (I1), step by step, it lies in `F`. So odd-degree carriers help only graphs whose
+placements use genuinely new directions. The square-root conditions that come with an even-degree divisor argument
+(as for `C3`) descend. Conditions without such an argument (EI17's rigid field, or the fish's genus-nine cover `C4`)
+are not touched by this remark.
 
 ## 5. Probes of the cubic carrier, and why they are uninformative
 
@@ -175,19 +180,21 @@ found by a three-embedding filter and confirmed by the exact norm in `L'`.
 - the 55th roots of unity span a 40-dimensional `Q`-space, and adding the ten conjugates of `v` raises the rank to
   exactly 50; the fifth roots of unity and the ten rotated copies `v_m mu5` span exactly `4 + 10 * 4 = 44` dimensions.
 
-So the conjugates of `v` satisfy no rational linear relation with the roots of unity. The first three probes are induced
-subgraphs of the Cartesian product of a cyclotomic Cayley graph with a bipartite lattice graph, and the fourth of
-a product of rotated pentagonal lattices. Their three-colourability is inherited from the cyclotomic part.
-Coupling needs more than first powers of the conjugates. Among `1` and three first-power conjugates the `L`-linear
-relation that must exist (`[L':L] = 3`) has LLL-reduced integer forms of length 19,416 to 4.9 million unit steps
-(triples `(1,3,4)`, `(2,9,3)`, `(1,10,2)`, `(1,2,3)`; LLL bounds, not minima). Powers of one conjugate do much
-better. clock_duality_oct15's C2 ([cubic cross-edge packets](cubic_crossedge_packets_20261016d.md), received
-during this session) substitutes `theta = Q/P` into the cubic and gets an exact unit-word relation in the
-monomials `v^i xi^j`, `i <= 3`, of mass 64, i.e. two 32-step walks with a common endpoint. Their five complete
-assemblies built around that circuit are again exactly three-chromatic, and the only cross-copy edges in their
-Galois assembly join points of `L`. So the probes here are uninformative by construction, while the informative
-circuit-based assemblies are three-colourable too. In both, the three-colour gate of section 3 is where the
-direction stops.
+So the conjugates of `v` satisfy no rational linear relation with the roots of unity: the probes are Cartesian because
+their direction sets are linearly independent. The first three probes are induced subgraphs of the Cartesian product
+of a cyclotomic Cayley graph with a bipartite lattice graph, the fourth of a product of eleven rotated pentagonal
+lattices. Their three-colourings come from the factors: probes 1 and 2 map to `C5` and `C11` (residue maps plus the sum
+of the `v`-coordinates), probe 4 to its pentagonal factors; probe 3's cyclotomic projection is three-coloured by SAT.
+Coupling itself is short. **Rotated** first-power conjugates `zeta^k v_r` satisfy integer relations of length 20, 70,
+80 and 88 for the triples `(1,3,4)`, `(2,9,3)`, `(1,10,2)`, `(1,2,3)` (kernel-LLL on the saturated relation lattice;
+each relation is verified exactly). The length-20 one is two 10-step unit walks with a common endpoint (audit E1; an
+earlier version of this section reduced an unsaturated lattice and reported lengths about 1000 times too long,
+MISTAKE-622). clock_duality_oct15's C2 ([cubic cross-edge packets](cubic_crossedge_packets_20261016d.md), received
+during this session) gives another circuit, of mass 64, in the powers `v^i xi^j`. Their five assemblies are
+three-chromatic (rows 4 and 5 are built from that circuit, rows 1 to 3 are power, mixed and conjugate banks), and so
+are the audit's walk banks built from the 20-step circuit (up to 1,279 vertices). The probes here are uninformative by
+construction, while the circuit-based assemblies are three-colourable too: the three-colour gate of section 3 is
+where the direction stops.
 
 **First-moment calibration (HEURISTIC).** If an exterior behaved like a random graph with `n` vertices and `m` edges,
 each with one forbidden colour, the expected number of extensions would be about `6^n (5/6)^(m+n)`. This falls below
@@ -207,11 +214,12 @@ very special.
 | low vertices span a forest of edges and odd cycles (length >= 5) | PROVED necessary |
 | not three-colourable (four-chromatic triangle-free unit graph in `L'`) | PROVED necessary; none known; EI19, fish, EI21 excluded (THM-4661, THM-4662); EI17 open |
 | not five-choosable | PROVED necessary; it kills every 22-vertex model of the other conditions found (Alon–Tarsi) |
-| all separating assignments killed (equality tester) | equivalent to `chi(R^2) = 7` (THM-4661 statement 3) |
+| all separating assignments killed (equality tester) | would prove `chi(R^2) = 7` (THM-4661 statement 3; the converse only gives a tester in some field) |
 
-The canonical hostile for this board is a five-core of 18 or 19 vertices: it exists combinatorially for all the
-counting cares, but cannot be a failed exterior. The least-used sidecar is choosability: no current screen in the
-repo uses it, and it is the condition that separates "has a five-core" from "can kill a colouring".
+The canonical hostile for this board is a 22-vertex model of the search: it meets every necessary condition N1-N5,
+yet is five-choosable and so cannot kill a colouring. (Five-cores of 18 or 19 vertices do not exist at all.) The
+least-used sidecar is choosability: no earlier screen in the repo used it, and it is the condition that separates "has
+a five-core" from "can kill a colouring".
 
 ## 7. Reproduction
 

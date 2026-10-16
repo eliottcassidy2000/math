@@ -1,0 +1,215 @@
+{
+ "v_checks": {
+  "defining_formula_ok": true,
+  "norm_one": true,
+  "equals_receipt": true,
+  "w_basis_denominators": [
+   1,
+   67,
+   134,
+   1541,
+   3082
+  ]
+ },
+ "DEN_w_basis": 3082,
+ "filter_primes": [
+  [
+   331,
+   67,
+   253
+  ],
+  [
+   661,
+   130,
+   428
+  ],
+  [
+   881,
+   180,
+   417
+  ]
+ ],
+ "probes": [
+  {
+   "probe": "mu10+v",
+   "directions": 30,
+   "radius": 3,
+   "vertices": 4971,
+   "modular_candidates": 14220,
+   "exact_unit_edges": 14220,
+   "generator_difference_pairs": 14220,
+   "non_generator_edges": 0,
+   "decomposition_consistent_on_edges": true,
+   "bfs_rediscovery_conflicts": 0,
+   "triangles": 0,
+   "average_degree": 5.721,
+   "product_colouring_valid": true,
+   "colouring_method": "residue map zeta5 -> 1 (mod 5) plus sum of v-coordinates, then C5 -> 3 colours",
+   "s38_reported": [
+    30,
+    4971,
+    14220
+   ],
+   "matches_s38": true,
+   "seconds": 4.3
+  },
+  {
+   "probe": "mu22+v",
+   "directions": 42,
+   "radius": 3,
+   "vertices": 13287,
+   "modular_candidates": 37086,
+   "exact_unit_edges": 37086,
+   "generator_difference_pairs": 37086,
+   "non_generator_edges": 0,
+   "decomposition_consistent_on_edges": true,
+   "bfs_rediscovery_conflicts": 0,
+   "triangles": 0,
+   "average_degree": 5.582,
+   "product_colouring_valid": true,
+   "colouring_method": "residue map zeta11 -> 1 (mod 11) plus sum of v-coordinates, then C11 -> 3 colours",
+   "s38_reported": [
+    42,
+    13287,
+    37086
+   ],
+   "matches_s38": true,
+   "seconds": 15.0
+  },
+  {
+   "probe": "mu110+v",
+   "directions": 130,
+   "radius": 2,
+   "vertices": 8581,
+   "modular_candidates": 17230,
+   "exact_unit_edges": 17230,
+   "generator_difference_pairs": 17230,
+   "non_generator_edges": 0,
+   "decomposition_consistent_on_edges": true,
+   "bfs_rediscovery_conflicts": 0,
+   "triangles": 0,
+   "average_degree": 4.016,
+   "product_colouring_valid": true,
+   "colouring_method": "SAT 3-colouring of the cyclotomic projection (6161 points, 12430 root-of-unity edges) plus sum of v-coordinates mod 3",
+   "s38_reported": [
+    130,
+    8581,
+    17230
+   ],
+   "matches_s38": true,
+   "seconds": 12.3
+  },
+  {
+   "probe": "mu10+v+v5",
+   "directions": 110,
+   "radius": 2,
+   "vertices": 6161,
+   "modular_candidates": 12430,
+   "exact_unit_edges": 12430,
+   "generator_difference_pairs": 12430,
+   "non_generator_edges": 0,
+   "decomposition_consistent_on_edges": true,
+   "bfs_rediscovery_conflicts": 0,
+   "triangles": 0,
+   "average_degree": 4.035,
+   "product_colouring_valid": true,
+   "colouring_method": "sum of residues zeta5 -> 1 (mod 5) over the eleven pentagonal factors, then C5 -> 3 colours",
+   "s38_reported": [
+    110,
+    6161,
+    12430
+   ],
+   "matches_s38": true,
+   "seconds": 9.2
+  }
+ ],
+ "ranks_mod_p": {
+  "1000003": {
+   "roots": 40,
+   "roots_plus_v": 50,
+   "roots_plus_all_zv": 120,
+   "mu5_plus_vmu5": 44
+  },
+  "998244353": {
+   "roots": 40,
+   "roots_plus_v": 50,
+   "roots_plus_all_zv": 120,
+   "mu5_plus_vmu5": 44
+  }
+ },
+ "lll": [
+  {
+   "triple": [
+    1,
+    3,
+    4
+   ],
+   "kernel_rank": 40,
+   "min_L1": 20,
+   "L1_first5": [
+    20,
+    23,
+    23,
+    23,
+    23
+   ],
+   "min_Linf": 2,
+   "seconds": 0.5
+  },
+  {
+   "triple": [
+    2,
+    9,
+    3
+   ],
+   "kernel_rank": 40,
+   "min_L1": 70,
+   "L1_first5": [
+    70,
+    71,
+    71,
+    76,
+    77
+   ],
+   "min_Linf": 4,
+   "seconds": 0.7
+  },
+  {
+   "triple": [
+    1,
+    10,
+    2
+   ],
+   "kernel_rank": 40,
+   "min_L1": 80,
+   "L1_first5": [
+    80,
+    87,
+    89,
+    93,
+    93
+   ],
+   "min_Linf": 4,
+   "seconds": 0.8
+  },
+  {
+   "triple": [
+    1,
+    2,
+    3
+   ],
+   "kernel_rank": 40,
+   "min_L1": 88,
+   "L1_first5": [
+    88,
+    94,
+    94,
+    98,
+    99
+   ],
+   "min_Linf": 4,
+   "seconds": 0.8
+  }
+ ],
+ "seconds": 45.0
+}

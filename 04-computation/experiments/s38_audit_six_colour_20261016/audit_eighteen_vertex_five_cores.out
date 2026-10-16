@@ -1,0 +1,6 @@
+case A: status UNSAT, 0 labelled completions found, 0 isomorphism classes (0.0s)
+case B: status UNSAT, 0 labelled completions found, 0 isomorphism classes (0.0s)
+case C1: status UNSAT, 0 labelled completions found, 0 isomorphism classes (0.0s)
+case C2: status UNSAT, 0 labelled completions found, 0 isomorphism classes (0.0s)
+total isomorphism classes found: 0
+wrote C:\Users\Eliott\AppData\Local\Temp\math-wt-explicit-modal-38\04-computation\experiments\s38_audit_six_colour_20261016\audit_eighteen_vertex_five_cores.json

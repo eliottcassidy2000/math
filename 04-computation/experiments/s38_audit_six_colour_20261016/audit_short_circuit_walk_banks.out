@@ -1,0 +1,5 @@
+{"assembly": "bank of 1 cyclic orderings", "vertices": 20, "unit_edges": 20, "non_generator_edges": 0, "triangles": 0, "three_colourable": true, "max_degree": 2}
+{"assembly": "bank of 4 cyclic orderings", "vertices": 77, "unit_edges": 82, "non_generator_edges": 0, "triangles": 0, "three_colourable": true, "max_degree": 8}
+{"assembly": "bank of 4 orderings translated along the first ordering", "vertices": 1279, "unit_edges": 2674, "non_generator_edges": 9, "triangles": 0, "three_colourable": true, "max_degree": 12}
+{"assembly": "bank of 16 cyclic orderings", "vertices": 296, "unit_edges": 338, "non_generator_edges": 0, "triangles": 0, "three_colourable": true, "max_degree": 23}
+wrote C:\Users\Eliott\AppData\Local\Temp\math-wt-explicit-modal-38\04-computation\experiments\s38_audit_six_colour_20261016\audit_short_circuit_walk_banks.json

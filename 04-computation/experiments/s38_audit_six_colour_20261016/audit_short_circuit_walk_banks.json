@@ -1,0 +1,137 @@
+{
+ "relation": [
+  [
+   "1",
+   4,
+   -1
+  ],
+  [
+   "v1",
+   4,
+   1
+  ],
+  [
+   "v1",
+   19,
+   -1
+  ],
+  [
+   "v1",
+   29,
+   1
+  ],
+  [
+   "v1",
+   39,
+   1
+  ],
+  [
+   "v3",
+   0,
+   -1
+  ],
+  [
+   "v3",
+   11,
+   -1
+  ],
+  [
+   "v3",
+   19,
+   -2
+  ],
+  [
+   "v3",
+   22,
+   -1
+  ],
+  [
+   "v3",
+   33,
+   -1
+  ],
+  [
+   "v3",
+   39,
+   -1
+  ],
+  [
+   "v4",
+   0,
+   1
+  ],
+  [
+   "v4",
+   4,
+   1
+  ],
+  [
+   "v4",
+   11,
+   1
+  ],
+  [
+   "v4",
+   14,
+   1
+  ],
+  [
+   "v4",
+   22,
+   1
+  ],
+  [
+   "v4",
+   24,
+   -1
+  ],
+  [
+   "v4",
+   33,
+   1
+  ],
+  [
+   "v4",
+   34,
+   1
+  ]
+ ],
+ "banks": [
+  {
+   "assembly": "bank of 1 cyclic orderings",
+   "vertices": 20,
+   "unit_edges": 20,
+   "non_generator_edges": 0,
+   "triangles": 0,
+   "three_colourable": true,
+   "max_degree": 2
+  },
+  {
+   "assembly": "bank of 4 cyclic orderings",
+   "vertices": 77,
+   "unit_edges": 82,
+   "non_generator_edges": 0,
+   "triangles": 0,
+   "three_colourable": true,
+   "max_degree": 8
+  },
+  {
+   "assembly": "bank of 4 orderings translated along the first ordering",
+   "vertices": 1279,
+   "unit_edges": 2674,
+   "non_generator_edges": 9,
+   "triangles": 0,
+   "three_colourable": true,
+   "max_degree": 12
+  },
+  {
+   "assembly": "bank of 16 cyclic orderings",
+   "vertices": 296,
+   "unit_edges": 338,
+   "non_generator_edges": 0,
+   "triangles": 0,
+   "three_colourable": true,
+   "max_degree": 23
+  }
+ ]
+}

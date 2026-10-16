@@ -1,0 +1,11 @@
+EI21: 21 vertices, 38 edges, triangles 0
+EI21 hub-15 structure: four 4-cycles True, closing edges 10-18, 16-17 True, hub edges True
+EI17: 0 injective copies of Gamma_9 (labelled), hubs {}
+EI19: 8 injective copies of Gamma_9 (labelled), hubs {12: 8}
+EI21: 8 injective copies of Gamma_9 (labelled), hubs {15: 8}
+fish: 0 injective copies of Gamma_9 (labelled), hubs {}
+closing edges are |P+Q| and |P-Q|: residuals 0, 0
+solution: {R: 0, Y: 1 - X}
+-(PQbar - conj)^2/4 = -X*(X - 1) (11 z0^2 = X(1-X)); -(a dbar - conj)^2 = -X*(X - 4) (11 z1^2 = X(4-X)); -(b cbar - conj)^2 = -(X - 1)*(X + 3) (11 z2^2 = (1-X)(X+3))
+real realizations of Gamma_9: max edge error 2.22e-16, min vertex distance 0.231
+wrote C:\Users\Eliott\AppData\Local\Temp\math-wt-explicit-modal-38\04-computation\experiments\s38_audit_six_colour_20261016\audit_ei21_gamma9.json

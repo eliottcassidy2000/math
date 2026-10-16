@@ -1,0 +1,38 @@
+{
+ "EI21_hub15": {
+  "cycles": true,
+  "closing": true,
+  "hub": true
+ },
+ "gamma9_census": {
+  "EI17": {
+   "monomorphisms": 0,
+   "hubs": {}
+  },
+  "EI19": {
+   "monomorphisms": 8,
+   "hubs": {
+    "12": 8
+   }
+  },
+  "EI21": {
+   "monomorphisms": 8,
+   "hubs": {
+    "15": 8
+   }
+  },
+  "fish": {
+   "monomorphisms": 0,
+   "hubs": {}
+  }
+ },
+ "C3_relations": {
+  "z0": "-X*(X - 1)",
+  "z1": "-X*(X - 4)",
+  "z2": "-(X - 1)*(X + 3)"
+ },
+ "real_realizations": {
+  "max_edge_error": 2.220446049250313e-16,
+  "min_vertex_distance": 0.23080312685299087
+ }
+}

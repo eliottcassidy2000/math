@@ -1,0 +1,41 @@
+{
+ "EI19": {
+  "four_cycles": 11,
+  "classes": 13,
+  "relation_rank": 6,
+  "relation_2_3_3_in_span": true,
+  "support_three": [
+   [
+    [
+     3,
+     4,
+     7
+    ],
+    [
+     2,
+     -3,
+     3
+    ]
+   ],
+   [
+    [
+     3,
+     11,
+     12
+    ],
+    [
+     1,
+     3,
+     3
+    ]
+   ]
+  ]
+ },
+ "fish": {
+  "cycles_present": true,
+  "hub": true,
+  "other_edges": true,
+  "vertices": 23,
+  "edges": 42
+ }
+}

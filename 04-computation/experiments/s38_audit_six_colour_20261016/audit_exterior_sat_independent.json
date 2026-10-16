@@ -1,0 +1,38 @@
+{
+ "19": [
+  {
+   "d": 6,
+   "patterns": 1,
+   "verdicts": [
+    "UNSAT"
+   ],
+   "unsat": 1
+  }
+ ],
+ "20": [
+  {
+   "d": 6,
+   "patterns": 7,
+   "verdicts": [
+    "UNSAT"
+   ],
+   "unsat": 7
+  }
+ ],
+ "21": [
+  {
+   "d": 6,
+   "patterns": 38,
+   "verdicts": [
+    "UNSAT"
+   ],
+   "unsat": 38
+  }
+ ],
+ "22": [
+  {
+   "d": 6,
+   "patterns": 135
+  }
+ ]
+}

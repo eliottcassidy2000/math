@@ -10,8 +10,11 @@ identity is exact.  All unit pairs of a probe (not only generator steps) are fou
 (every embedding of the CM field L' preserves norm one) and then each is confirmed by the exact norm
 (x - y)(bar x - bar y) = 1 in L'.  Three-colourability by CaDiCaL; a colouring is re-verified on every exact edge;
 a non-three-colourable probe would be reported (none occurred).  Also: the number of unit edges that are not
-generator steps, the Q-ranks of the direction sets, and LLL-reduced integer relations coupling three conjugates of v
-to the roots of unity (these explain why the probes are Cartesian).
+generator steps and the Q-ranks of the direction sets (the ranks explain why the probes are Cartesian: their direction
+sets are linearly independent), and short integer relations coupling rotated conjugates zeta^k v_r to the roots of
+unity, found by kernel-LLL on the saturated relation lattice ([10^12 A | I]); an earlier version reduced a rational
+null-space basis, whose integer span has index about 10^107 to 10^192 in the relation lattice, and reported lengths
+about 1000 times too long (MISTAKE-622).
 FINITE-EXACT for the probes as run.  Triangle-free: checked on every probe.
 
 Session opus-2026-10-16-S38.  Usage: python cubic_carrier_three_colour_probes_20261016.py [--big]
@@ -248,7 +251,7 @@ for name, spec, rad, cap in PROBES:
     print(json.dumps(res), flush=True)
     assert tri == 0
 
-# ---------- why the probes are Cartesian: ranks and coupling heights ----------
+# ---------- why the probes are Cartesian (ranks), and how short the coupling relations really are ----------
 from flint import fmpz_mat
 rk = lambda rows: fmpz_mat([[int(x) for x in r] for r in rows]).rank()
 Zrows = [to_vec(root_of_unity(k)) for k in range(55)]
@@ -265,13 +268,24 @@ for trip in [(1, 3, 4), (2, 9, 3), (1, 10, 2), (1, 2, 3)]:
     R = []
     for w in [one] + [vconj[r] for r in trip]:
         R += [to_vec(mul(w, root_of_unity(k))) for k in range(40)]
-    X, nullity = fmpz_mat([[int(x) for x in r] for r in R]).transpose().nullspace()
-    B = fmpz_mat([[int(X[i, c]) for i in range(X.nrows())] for c in range(nullity)]).lll()
-    best = min((sum(abs(int(B[r, c])) for c in range(B.ncols())), max(abs(int(B[r, c])) for c in range(B.ncols())))
-               for r in range(B.nrows()) if any(int(B[r, c]) for c in range(40, B.ncols())))
-    coupling.append(dict(v_conjugates=list(trip), relation_lattice_rank=nullity, lll_shortest_L1=best[0],
-                         lll_max_coefficient=best[1]))
-    print('coupling relation', coupling[-1], flush=True)
-json.dump(dict(probes=results, ranks=ranks, coupling_relations_lll=coupling),
+    nr, nc = len(R), len(R[0])
+    SC = 10 ** 12
+    Mk = fmpz_mat([[SC * int(x) for x in R[i]] + [1 if j == i else 0 for j in range(nr)] for i in range(nr)])
+    B = Mk.lll()
+    rels = []
+    for r in range(B.nrows()):
+        if all(int(B[r, c]) == 0 for c in range(nc)):
+            vec = [int(B[r, nc + j]) for j in range(nr)]
+            if any(vec[40:]):
+                rels.append(vec)
+    # verify exactly: sum_i vec_i * R_i = 0
+    best = min(rels, key=lambda v: sum(abs(x) for x in v))
+    assert all(sum(best[i] * int(R[i][c]) for i in range(nr)) == 0 for c in range(nc))
+    coupling.append(dict(v_conjugates=list(trip), kernel_vectors=len(rels), shortest_L1=sum(abs(x) for x in best),
+                         max_coefficient=max(abs(x) for x in best),
+                         relation={'one': best[:40], 'v_%d' % trip[0]: best[40:80], 'v_%d' % trip[1]: best[80:120],
+                                   'v_%d' % trip[2]: best[120:160]}))
+    print('coupling relation', {k: v for k, v in coupling[-1].items() if k != 'relation'}, flush=True)
+json.dump(dict(probes=results, ranks=ranks, coupling_relations_kernel_lll=coupling),
           open('05-knowledge/results/cubic_carrier_three_colour_probes_20261016.json', 'w'), indent=1)
 print('wrote 05-knowledge/results/cubic_carrier_three_colour_probes_20261016.json')

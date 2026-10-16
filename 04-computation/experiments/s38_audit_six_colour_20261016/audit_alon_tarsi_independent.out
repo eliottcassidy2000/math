@@ -1,0 +1,39 @@
+sanity against sympy expansion on small graphs: 12 cases agree, e.g. [(1, 1), (1, 1), (1, 1), (-1, -1), (1, 1), (1, 1)]
+{"graph": 0, "N1": true, "N2": true, "N3": true, "N4": true, "N5_non3col": true, "edges": 59, "coefficient": 52, "stored": 52, "agree": true, "seconds": 1.0}
+{"graph": 1, "N1": true, "N2": true, "N3": true, "N4": true, "N5_non3col": true, "edges": 59, "coefficient": -20, "stored": -20, "agree": true, "seconds": 5.5}
+{"graph": 2, "N1": true, "N2": true, "N3": true, "N4": true, "N5_non3col": true, "edges": 59, "coefficient": -242, "stored": -242, "agree": true, "seconds": 0.7}
+{"graph": 3, "N1": true, "N2": true, "N3": true, "N4": true, "N5_non3col": true, "edges": 60, "coefficient": 280, "stored": 280, "agree": true, "seconds": 2.8}
+{"graph": 4, "N1": true, "N2": true, "N3": true, "N4": true, "N5_non3col": true, "edges": 60, "coefficient": -260, "stored": -260, "agree": true, "seconds": 2.3}
+{"graph": 5, "N1": true, "N2": true, "N3": true, "N4": true, "N5_non3col": true, "edges": 60, "coefficient": 53, "stored": 53, "agree": true, "seconds": 2.5}
+{"graph": 6, "N1": true, "N2": true, "N3": true, "N4": true, "N5_non3col": true, "edges": 59, "coefficient": 78, "stored": 78, "agree": true, "seconds": 0.7}
+{"graph": 7, "N1": true, "N2": true, "N3": true, "N4": true, "N5_non3col": true, "edges": 59, "coefficient": -151, "stored": -151, "agree": true, "seconds": 0.7}
+{"graph": 8, "N1": true, "N2": true, "N3": true, "N4": true, "N5_non3col": true, "edges": 59, "coefficient": 47, "stored": 47, "agree": true, "seconds": 0.3}
+{"graph": 9, "N1": true, "N2": true, "N3": true, "N4": true, "N5_non3col": true, "edges": 59, "coefficient": -28, "stored": -28, "agree": true, "seconds": 0.8}
+{"graph": 10, "N1": true, "N2": true, "N3": true, "N4": true, "N5_non3col": true, "edges": 59, "coefficient": 105, "stored": 105, "agree": true, "seconds": 2.5}
+{"graph": 11, "N1": true, "N2": true, "N3": true, "N4": true, "N5_non3col": true, "edges": 59, "coefficient": 137, "stored": 137, "agree": true, "seconds": 8.2}
+{"graph": 12, "N1": true, "N2": true, "N3": true, "N4": true, "N5_non3col": true, "edges": 59, "coefficient": 113, "stored": 113, "agree": true, "seconds": 0.4}
+{"graph": 13, "N1": true, "N2": true, "N3": true, "N4": true, "N5_non3col": true, "edges": 59, "coefficient": 9, "stored": 9, "agree": true, "seconds": 0.2}
+{"graph": 14, "N1": true, "N2": true, "N3": true, "N4": true, "N5_non3col": true, "edges": 59, "coefficient": -180, "stored": -180, "agree": true, "seconds": 10.3}
+{"graph": 15, "N1": true, "N2": true, "N3": true, "N4": true, "N5_non3col": true, "edges": 59, "coefficient": 101, "stored": 101, "agree": true, "seconds": 0.5}
+{"graph": 16, "N1": true, "N2": true, "N3": true, "N4": true, "N5_non3col": true, "edges": 59, "coefficient": 111, "stored": 111, "agree": true, "seconds": 1.4}
+{"graph": 17, "N1": true, "N2": true, "N3": true, "N4": true, "N5_non3col": true, "edges": 59, "coefficient": 24, "stored": 24, "agree": true, "seconds": 0.7}
+{"graph": 18, "N1": true, "N2": true, "N3": true, "N4": true, "N5_non3col": true, "edges": 60, "coefficient": 81, "stored": 81, "agree": true, "seconds": 7.6}
+{"graph": 19, "N1": true, "N2": true, "N3": true, "N4": true, "N5_non3col": true, "edges": 59, "coefficient": 142, "stored": 142, "agree": true, "seconds": 0.4}
+{"graph": 20, "N1": true, "N2": true, "N3": true, "N4": true, "N5_non3col": true, "edges": 60, "coefficient": 196, "stored": 196, "agree": true, "seconds": 0.2}
+{"graph": 21, "N1": true, "N2": true, "N3": true, "N4": true, "N5_non3col": true, "edges": 59, "coefficient": 117, "stored": 117, "agree": true, "seconds": 8.6}
+{"graph": 22, "N1": true, "N2": true, "N3": true, "N4": true, "N5_non3col": true, "edges": 60, "coefficient": 197, "stored": 197, "agree": true, "seconds": 11.4}
+{"graph": 23, "N1": true, "N2": true, "N3": true, "N4": true, "N5_non3col": true, "edges": 59, "coefficient": 17, "stored": 17, "agree": true, "seconds": 0.4}
+{"graph": 24, "N1": true, "N2": true, "N3": true, "N4": true, "N5_non3col": true, "edges": 59, "coefficient": -154, "stored": -154, "agree": true, "seconds": 1.7}
+{"graph": 25, "N1": true, "N2": true, "N3": true, "N4": true, "N5_non3col": true, "edges": 59, "coefficient": -16, "stored": -16, "agree": true, "seconds": 0.4}
+{"graph": 26, "N1": true, "N2": true, "N3": true, "N4": true, "N5_non3col": true, "edges": 59, "coefficient": -55, "stored": -55, "agree": true, "seconds": 1.5}
+{"graph": 27, "N1": true, "N2": true, "N3": true, "N4": true, "N5_non3col": true, "edges": 59, "coefficient": -16, "stored": -16, "agree": true, "seconds": 1.0}
+{"graph": 28, "N1": true, "N2": true, "N3": true, "N4": true, "N5_non3col": true, "edges": 59, "coefficient": -298, "stored": -298, "agree": true, "seconds": 0.5}
+{"graph": 29, "N1": true, "N2": true, "N3": true, "N4": true, "N5_non3col": true, "edges": 59, "coefficient": -58, "stored": -58, "agree": true, "seconds": 1.9}
+{"graph": 30, "N1": true, "N2": true, "N3": true, "N4": true, "N5_non3col": true, "edges": 59, "coefficient": -41, "stored": -41, "agree": true, "seconds": 0.2}
+{"graph": 31, "N1": true, "N2": true, "N3": true, "N4": true, "N5_non3col": true, "edges": 59, "coefficient": 310, "stored": 310, "agree": true, "seconds": 1.2}
+{"graph": 32, "N1": true, "N2": true, "N3": true, "N4": true, "N5_non3col": true, "edges": 59, "coefficient": 112, "stored": 112, "agree": true, "seconds": 1.5}
+{"graph": 33, "N1": true, "N2": true, "N3": true, "N4": true, "N5_non3col": true, "edges": 59, "coefficient": 21, "stored": 21, "agree": true, "seconds": 2.4}
+{"graph": 34, "N1": true, "N2": true, "N3": true, "N4": true, "N5_non3col": true, "edges": 60, "coefficient": 10, "stored": 10, "agree": true, "seconds": 5.0}
+{"graph": 35, "N1": true, "N2": true, "N3": true, "N4": true, "N5_non3col": true, "edges": 61, "coefficient": -114, "stored": -114, "agree": true, "seconds": 4.8}
+all models satisfy N1-N5: True; all coefficients reproduced and nonzero: True
+wrote C:\Users\Eliott\AppData\Local\Temp\math-wt-explicit-modal-38\04-computation\experiments\s38_audit_six_colour_20261016\audit_alon_tarsi_independent.json

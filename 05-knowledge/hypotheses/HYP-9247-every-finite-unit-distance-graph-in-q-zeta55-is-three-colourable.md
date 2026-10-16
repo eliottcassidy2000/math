@@ -5,7 +5,7 @@ status: >
   UPDATE 2026-10-16 (opus-2026-10-16-S38, THM-4661): the gate is now general. In every odd-degree carrier over a
   conjugation-stable field without sqrt(-3), a three-colourable exterior preserves every old six-colouring (any old set,
   not only the eight ports), and a killing exterior has at least twenty vertices. EI19 is excluded from every odd-degree
-  extension of L; the fish needs the same point of C3 over F_4 in every odd-degree conjugation-stable carrier over K.
+  extension of L; the fish needs a point of C3 over F_4 in every odd-degree conjugation-stable carrier over K.
   NEW: EI21 carries the fish's genus-one curve C3 at its hub vertex 15 (THM-4661 4(c)), and C3 has NO point over the
   real quartic field F_4 (THM-4662, a two-descent over Q(sqrt5): rank E(F_4) = 2 but the class (33, 33) of C3 is not a
   descent class). So the fish and EI21 have NO placement in L (nor in any conjugation-stable odd-degree carrier over

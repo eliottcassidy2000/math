@@ -1,0 +1,12 @@
+{
+ "models": 3000,
+ "degree6_histogram": {
+  "2": 1851,
+  "4": 1149
+ },
+ "filter_histogram": {
+  "False": 3000
+ },
+ "passed": 0,
+ "passed_classes": 0
+}
