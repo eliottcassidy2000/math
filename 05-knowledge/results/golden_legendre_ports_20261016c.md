@@ -217,6 +217,16 @@ same abstract graph has an exact rational unit-distance realization in
 five dimensions. Thus the geometric dimension is a necessary part of
 this extension test; the incidence pattern alone does not carry the proof.
 
+Incoming [elliptic cross-edge work, G7](elliptic_crossedges_20261016c.md)
+then supplies a new mixed unit direction after a real cubic extension.
+The geometric companion proves that the seventeen-vertex bound survives
+every finite odd-degree extension of a conjugation-stable old field
+without sqrt(-3). In particular it survives this new degree-fifteen tower.
+The resulting concrete search target is a coupled configuration of at
+least eighteen exterior points using the new direction, with full unit
+incidence and boundary support authenticated. The direction itself does
+not assert such a connector exists.
+
 For the Collatz lane, Chang's golden Möbius recurrence does admit a genuine
 cyclic complex-torus quotient. Replacing that cyclic scaling by both 2 and
 3 makes the positive scaling group dense and the quotient non-Hausdorff.

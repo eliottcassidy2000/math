@@ -421,8 +421,9 @@ verification of the whole incoming Jacobian theory.
 Normal and optimized runs agree on **6,879 checks**. There are 19 distinct
 canonical parameter controls. The LF-normalized JSON SHA256 is
 `5bcbfae4da591b7b33c555ee7607ea0aca53fc2813d2de7b7b04b2767297da14`.
-An independent peer read the complete proof/API and reproduced the optimized
-initial output exactly. Its only requested clarification was to make the
-constant coefficient in (17) explicit. The final 56-check addition is the
-separately stated Frobenius action, including all 24 nonzero vectors; it
-does not change the original irreducibility proof or any production API.
+An independent peer read the complete proof/API and reproduced the final
+optimized output exactly, including the Frobenius degree consequence.
+Its only requested clarification was to make the constant coefficient in
+(17) explicit. The final 56-check addition is the separately stated
+Frobenius action, including all 24 nonzero vectors; it does not change the
+original irreducibility proof or any production API.

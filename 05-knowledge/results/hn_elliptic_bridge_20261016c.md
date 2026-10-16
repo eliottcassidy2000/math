@@ -138,6 +138,17 @@ six-colourable: **every** proper old assignment survives. No count or
 uniformity of extension fibres is asserted in this theorem. The old set
 may be infinite; only the exterior set is bounded.
 
+**Corollary 2a (odd-degree transfer).** Theorem 2 holds with the same bound
+seventeen for any conjugation-stable field $K\subset\mathbb C$ with
+$\sqrt{-3}\notin K$ and any finite odd-degree extension $M/K$, replacing
+$L\setminus K$ by $M\setminus K$. The extension field itself need not be
+conjugation-stable. The quadratic equation in Lemma 1 has coefficients in
+$K$, so its degree divides both two and $[M:K]$; likewise a unit triangle
+would give a quadratic subextension by $\sqrt{-3}$. The entire remaining
+argument is planar geometry and list extension. The common ambient field
+and its odd degree are hypotheses; this is not a statement about unrelated
+pointwise degree labels.
+
 The same counting proof gives a general palette version. For $q\ge2$, at
 most $q(q-1)/2$ exterior vertices preserve every proper $q$-colouring.
 A failed extension has a vertex-minimal list obstruction of minimum degree
@@ -308,6 +319,21 @@ The implementation's explicit materialization cap is 128 total vertices;
 the theorem itself has no old-source cardinality restriction.
 
 ## 5. What remains productive
+
+Incoming commit `f2988e75c2`, received during close-out, supplies a precise
+alternative carrier in [elliptic cross-edges, G7](elliptic_crossedges_20261016c.md).
+For the real root $\theta\in(4/5,1)$ of
+$2\theta^3+2\theta^2-2\theta-1=0$, it constructs a mixed norm-one direction
+over $K'=K(\theta)$ inside $L'=L(\theta)$, with
+$[L':K]=15$ and $[L':K']=5$. Corollary 2a applies both relative to the
+original $K$ and relative to $K'$: the latter is conjugation-stable and
+cannot acquire $\sqrt{-3}$ in its odd-degree extension of $K$.
+Thus this positive arithmetic escape still needs at least eighteen exterior
+vertices to delete an old six-colour assignment. No five-colour ceiling
+for $K'$ is inferred. The current executable compiler retains its original
+degree-forty $L$ basis; the general corollary is a mathematical transfer,
+not an unimplemented generic-field API claim. This corollary received a
+separate independent proof audit after reading the incoming construction.
 
 The old-field elliptic family is an infinite source of geometry, not an
 escape from its five-colour ceiling. Simple cyclotomic rotations leave
