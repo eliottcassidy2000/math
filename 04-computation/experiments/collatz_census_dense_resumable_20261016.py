@@ -7,7 +7,8 @@ parity bits below 2^LOW from a table (collatz_census_extension_2p37_20261015.py)
 beyond the uint64 guard.  t(n) = (-1)^tau(n), S(N) = sum_(n<=N) t(n), H(N) = sum_(n<=N) (3[n = 2 mod 3] - 1) t(n).
 
 New here:
-  * PER grid points per octave, N_j = round(2^(10 + j/PER)) (deduplicated), restricted to [2^K0, 2^LOGMAX);
+  * PER grid points per octave, N_j = round(2^(10 + j/PER)) (deduplicated), restricted to [2^K0, 2^LOGMAX); PER may be
+    non-integer (an irrational density avoids the exact aliasing of the Mercator family, THM-4659 statement 5);
   * resume: with --resume STATE.json the heavy pass covers only the blocks of [2^K0, 2^LOGMAX), starting from the
     exact state at 2^K0 written by a previous run (class counts modulo 243 of all n < 2^K0, H(2^K0 - 1), and the exact
     sums of H and H^2 over n < 2^K0);
@@ -39,7 +40,7 @@ sys.argv = _argv
 ap = argparse.ArgumentParser()
 ap.add_argument('logmax', type=int)
 ap.add_argument('low', type=int)
-ap.add_argument('per', type=int)
+ap.add_argument('per', type=float)
 ap.add_argument('out')
 ap.add_argument('--resume', default=None)
 ap.add_argument('--check64', default=None)
@@ -210,7 +211,7 @@ if __name__ == '__main__':
         cum1[i + 1] = cum1[i] + sH
         cum2[i + 1] = cum2[i] + sH2
         h += int(hend[i])
-    raw = sorted(set(int(round(2 ** (10 + j / PER))) for j in range(0, (LOGMAX - 10) * PER + 1)))
+    raw = sorted(set(int(round(2 ** (10 + j / PER))) for j in range(0, int((LOGMAX - 10) * PER) + 1)))
     grid = np.array([g for g in raw if (1 << K0) <= g < (1 << LOGMAX)], dtype=np.int64)
     bidx = grid // BLOCK
     gblocks = np.unique(bidx)

@@ -1,0 +1,29 @@
+C:\Users\Eliott\AppData\Local\Temp\math-wt-explicit-modal-38\04-computation\experiments\collatz_D_zeros_and_boundary_residues_20261016.py:24: RuntimeWarning: overflow encountered in exp
+  return 1 + np.exp(-s * L2) + np.exp(s * L15) / 3
+C:\Users\Eliott\AppData\Local\Temp\math-wt-explicit-modal-38\04-computation\experiments\collatz_D_zeros_and_boundary_residues_20261016.py:28: RuntimeWarning: overflow encountered in exp
+  return -L2 * np.exp(-s * L2) + L15 * np.exp(s * L15) / 3
+C:\Users\Eliott\AppData\Local\Temp\math-wt-explicit-modal-38\04-computation\experiments\collatz_D_zeros_and_boundary_residues_20261016.py:28: RuntimeWarning: invalid value encountered in multiply
+  return -L2 * np.exp(-s * L2) + L15 * np.exp(s * L15) / 3
+C:\Users\Eliott\AppData\Local\Temp\math-wt-explicit-modal-38\04-computation\experiments\collatz_D_zeros_and_boundary_residues_20261016.py:33: RuntimeWarning: invalid value encountered in divide
+  s = s - D(s) / Dp(s)
+C:\Users\Eliott\AppData\Local\Temp\math-wt-explicit-modal-38\04-computation\experiments\collatz_D_zeros_and_boundary_residues_20261016.py:24: RuntimeWarning: invalid value encountered in divide
+  return 1 + np.exp(-s * L2) + np.exp(s * L15) / 3
+295 zeros with 1/2 < Re < 1, 0 < Im < 20000 (337.2 s); argument-principle rectangles with a count mismatch: 0 of 40
+residue estimates at 295 zeros from block moments through 2^40 (528.3 s)
+|numer(0.55 + it)| median over t in [10,1e3), [1e3,4e3), [4e3,1e4), [1e4,T): [267.4813, 64.0345, 49.3213, 37.4339]
+|numer(0.7 + it)| median over t in [10,1e3), [1e3,4e3), [4e3,1e4), [1e4,T): [3.9, 0.9315, 0.7088, 0.5509]
+|numer(0.85 + it)| median over t in [10,1e3), [1e3,4e3), [4e3,1e4), [1e4,T): [0.0548, 0.0143, 0.0099, 0.0079]
+|numer(1.0 + it)| median over t in [10,1e3), [1e3,4e3), [4e3,1e4), [1e4,T): [0.0008, 0.0002, 0.0001, 0.0001]
+largest contributions to S(2^40)/2^40 (|2r/rho| 2^(40(Re rho - 1))):
+   0.99821 +   240.248i  |r| = 0.184  |2r/rho| = 0.001532  weight at 2^40: 0.001457
+   0.86345 +   131.156i  |r| = 0.5065  |2r/rho| = 0.007723  weight at 2^40: 0.0001752
+   0.98494 +   720.740i  |r| = 0.07011  |2r/rho| = 0.0001946  weight at 2^40: 0.0001282
+   0.94973 +  1572.556i  |r| = 0.2036  |2r/rho| = 0.000259  weight at 2^40: 6.426e-05
+   0.69392 +    22.253i  |r| = 2.57  |2r/rho| = 0.2309  weight at 2^40: 4.762e-05
+   0.92158 +  1092.083i  |r| = 0.1659  |2r/rho| = 0.0003039  weight at 2^40: 3.455e-05
+   0.97482 +  2053.037i  |r| = 0.0596  |2r/rho| = 5.806e-05  weight at 2^40: 2.889e-05
+   0.99317 +  2533.525i  |r| = 0.03703  |2r/rho| = 2.923e-05  weight at 2^40: 2.419e-05
+   0.96258 +  1201.225i  |r| = 0.04027  |2r/rho| = 6.704e-05  weight at 2^40: 2.376e-05
+   0.89247 +   611.617i  |r| = 0.1361  |2r/rho| = 0.0004449  weight at 2^40: 2.257e-05
+   0.96311 +  4826.815i  |r| = 0.1097  |2r/rho| = 4.546e-05  weight at 2^40: 1.635e-05
+   0.98533 +  5307.300i  |r| = 0.05736  |2r/rho| = 2.162e-05  weight at 2^40: 1.439e-05
