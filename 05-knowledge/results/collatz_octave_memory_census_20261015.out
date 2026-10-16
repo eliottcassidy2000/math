@@ -1,0 +1,5 @@
+parity bits to 2^34: 38.8 s
+spot check of 20000 random n against direct trajectories: 0 mismatches
+statistics pass: 540.7 s; S(2^34) = 24953018, H(2^34) = 26869
+wrote census34.json, census34.npz; total 580.1 s
+done
