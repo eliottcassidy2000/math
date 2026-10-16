@@ -10,6 +10,11 @@ nonvanishing, and universal ROOT entry. These are different targets.
 [output](collatz_annular_overlap_20261015c.json),
 [address/lattice companion](collatz_finite_address_lattice_20261015c.md).
 
+The [odd-ray continuation](collatz_odd_ray_overlap_20261015d.md) proves a
+uniform first-block half-payment after initial halving, and supplies exact
+hostiles to automatic iteration and phase-blind channel transfer. The
+all-scale iterated Gram premises below remain open.
+
 ## Inheritance and concept board
 
 Anchor: weighted opposite-sign payment for a fixed integer source window.
