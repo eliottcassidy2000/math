@@ -2,6 +2,12 @@
 id: HYP-9247
 title: "Every finite unit-distance graph in Q(zeta55) is three-colourable (the field graph has chromatic number exactly three): triangle-free field, every explicit eleventh-root context to 38,514 vertices three-colourable, no additive colouring with fewer than 19 colours and no residue colouring at the smallest residue field (109) with fewer than 7; if true, no context in the field changes the six-colour relation at the eight fixed ports (THM-4614) and the six-colour program must leave the field or the ports"
 status: >
+  UPDATE 2026-10-16 (opus-2026-10-16-S38, THM-4661): the gate is now general. In every odd-degree carrier over a
+  conjugation-stable field without sqrt(-3), a three-colourable exterior preserves every old six-colouring (any old set,
+  not only the eight ports), and a killing exterior has at least twenty vertices. EI19 is excluded from every odd-degree
+  extension of L; the fish needs the same point of C3 over F_4 in every odd-degree conjugation-stable carrier over K.
+  Probes of the cubic carrier L(theta) with the width-three unit are three-colourable but Cartesian (no rational relation
+  between its ten conjugates and the roots of unity), so they add no evidence beyond L.
   UPDATE 2026-10-13 (opus-2026-10-13-S25, THM-4628): the residue no-go is now PROVED at every conjugation-fixed prime, not only at 109:
   the residue graph is Cay(F_(q^2), N^1) with Kloosterman eigenvalues, so residue colourings need at least 1 + (q+1)/(2 sqrt q) colours
   (7 at 109; 12, 15, 16, 20, 21, 23, 24 at 439, 659, 769, 1319, 1429, 1759, 1979; at least 788, 2266, 27737 at the degree-ten

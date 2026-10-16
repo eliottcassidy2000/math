@@ -1,0 +1,23 @@
+q= 4: extremal n=   9, |W|=  4, h>=  2, |W_q|>=  1, feasible |W_q|: []
+q= 6: extremal n=  19, |W|= 12, h>=  6, |W_q|>=  5, feasible |W_q|: []
+q= 8: extremal n=  33, |W|= 24, h>= 13, |W_q|>= 12, feasible |W_q|: []
+q=10: extremal n=  51, |W|= 40, h>= 21, |W_q|>= 20, feasible |W_q|: []
+q=12: extremal n=  73, |W|= 60, h>= 31, |W_q|>= 30, feasible |W_q|: []
+q=14: extremal n=  99, |W|= 84, h>= 43, |W_q|>= 42, feasible |W_q|: []
+q=16: extremal n= 129, |W|=112, h>= 57, |W_q|>= 56, feasible |W_q|: []
+q=18: extremal n= 163, |W|=144, h>= 73, |W_q|>= 72, feasible |W_q|: []
+q=20: extremal n= 201, |W|=180, h>= 91, |W_q|>= 90, feasible |W_q|: []
+q=22: extremal n= 243, |W|=220, h>=112, |W_q|>=111, feasible |W_q|: []
+q=24: extremal n= 289, |W|=264, h>=134, |W_q|>=133, feasible |W_q|: []
+q=26: extremal n= 339, |W|=312, h>=158, |W_q|>=157, feasible |W_q|: []
+q=28: extremal n= 393, |W|=364, h>=184, |W_q|>=183, feasible |W_q|: []
+q=30: extremal n= 451, |W|=420, h>=212, |W_q|>=211, feasible |W_q|: []
+q=32: extremal n= 513, |W|=480, h>=242, |W_q|>=241, feasible |W_q|: []
+q=34: extremal n= 579, |W|=544, h>=274, |W_q|>=273, feasible |W_q|: []
+q=36: extremal n= 649, |W|=612, h>=308, |W_q|>=307, feasible |W_q|: []
+q=38: extremal n= 723, |W|=684, h>=345, |W_q|>=344, feasible |W_q|: []
+q=40: extremal n= 801, |W|=760, h>=383, |W_q|>=382, feasible |W_q|: []
+-2 is a non-residue mod p=661 (p = 1 mod 55, cubic root 214 mod p): sqrt(-2) not in L'
+-35 is a non-residue mod p=661 (p = 1 mod 55, cubic root 214 mod p): sqrt(-35) not in L'
+cubic irreducible: True; discriminant 148 = {2: 2, 37: 1}; real roots [-1.4516059629557767, -0.4030317167626848, 0.8546376797184614]
+wrote 05-knowledge/results/six_colour_odd_carrier_checks_20261016.json

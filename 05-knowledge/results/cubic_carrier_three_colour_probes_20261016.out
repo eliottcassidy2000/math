@@ -1,0 +1,10 @@
+{"probe": "mu10+v", "directions": 30, "radius": 3, "vertices": 4971, "exact_unit_edges": 14220, "numeric_candidates": 14220, "non_generator_unit_edges": 0, "triangles": 0, "three_colourable": true, "colouring_verified": true, "seconds": 4.1}
+{"probe": "mu22+v", "directions": 42, "radius": 3, "vertices": 13287, "exact_unit_edges": 37086, "numeric_candidates": 37086, "non_generator_unit_edges": 0, "triangles": 0, "three_colourable": true, "colouring_verified": true, "seconds": 10.3}
+{"probe": "mu110+v", "directions": 130, "radius": 2, "vertices": 8581, "exact_unit_edges": 17230, "numeric_candidates": 17230, "non_generator_unit_edges": 0, "triangles": 0, "three_colourable": true, "colouring_verified": true, "seconds": 4.5}
+{"probe": "mu10+v+v5", "directions": 110, "radius": 2, "vertices": 6161, "exact_unit_edges": 12430, "numeric_candidates": 12430, "non_generator_unit_edges": 0, "triangles": 0, "three_colourable": true, "colouring_verified": true, "seconds": 4.2}
+Q-ranks: {'roots_of_unity': 40, 'roots_plus_v_conjugates': 50, 'roots_plus_all_zeta_k_v_m': 120}
+coupling relation {'v_conjugates': [1, 3, 4], 'relation_lattice_rank': 40, 'lll_shortest_L1': 19416, 'lll_max_coefficient': 1541}
+coupling relation {'v_conjugates': [2, 9, 3], 'relation_lattice_rank': 40, 'lll_shortest_L1': 34652, 'lll_max_coefficient': 2569}
+coupling relation {'v_conjugates': [1, 10, 2], 'relation_lattice_rank': 40, 'lll_shortest_L1': 37330, 'lll_max_coefficient': 2358}
+coupling relation {'v_conjugates': [1, 2, 3], 'relation_lattice_rank': 40, 'lll_shortest_L1': 4922578, 'lll_max_coefficient': 310355}
+wrote 05-knowledge/results/cubic_carrier_three_colour_probes_20261016.json
