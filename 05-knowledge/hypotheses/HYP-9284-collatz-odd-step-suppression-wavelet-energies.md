@@ -2,6 +2,8 @@
 id: HYP-9284
 title: "Odd-step suppression of the Collatz wavelet discrepancies: relative to the halving null (random odd signs with t(2m) = -t(m)), the mod-3 discrepancy H of t(n) = (-1)^tau(n) carries 3-30 times less energy in sample and 25-318 times less on 2^33..2^36, and decorrelates within about one octave, and the deep wavelet energies, which match the null up to about 2^28, declined from there and lie below every null replicate on 2^30..2^37; conjecture: sup_X E_X/X^2 < infinity for H (a constant energy budget holds), with the suppression produced by the odd-step relation t(n) = -t((3n+1)/2)"
 status: >
+  UPDATE 2026-10-16 (opus-2026-10-16-S38): out of sample on [2^40, 2^41) the mean window energy of H is 0.817 (max 1.25),
+  below every halving-null replicate's mean (at least 1.5): the S38 pre-registered Q5 PASSED.
   OPEN (the conjecture). NUMERICAL against 12 halving-null replicates on the FINITE-EXACT census through 2^37
   (min-median-max quoted); pre-registered tests on 2^37..2^40: P2, P3, P5, P6 PASSED, P4 FAILED (the quiet stretch
   ended at 2^38). PROVED

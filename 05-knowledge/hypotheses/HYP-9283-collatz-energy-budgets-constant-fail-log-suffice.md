@@ -2,6 +2,13 @@
 id: HYP-9283
 title: "Energy budgets for the Collatz mod-3 discrepancy H: for dyadic X >= 2^37, any constant budget E_X <= a X^2 with a <= 1806.6, or logarithmic budget E_X <= X^2 (a + b log_2(X/2^37)) inside the certified region (e.g. a = 2, b <= 1194.9), certifies the nonzero Mercator residue of F(s) = sum t(n) n^(-s) and forces limsup log B(X)/log X >= 0.99821 > 0.84 (Krasikov-Lagarias); the stationary-noise forecast that constant budgets fail eventually was refuted out of sample"
 status: >
+  UPDATE 2026-10-16 (opus-2026-10-16-S38): new exact values e_X = 0.139 at 2^40 and 1.142 at 2^41 (single run, integrity
+  checked; replication pre-registered as R5): the S38 pre-registered Q3 (e_X <= 2) PASSED and Q4 (e_X <= 1) FAILED.
+  THM-4660 shows that the much weaker hypothesis (W), E_X = O(X^(2+eps)), already gives the continuation and the
+  Riesz-mean explicit formula. (D) The certificate at the 1054/665 zero rho* = 0.99999921 + 3014.02i (Codex's 332.5
+  line) is not certified at N = 2^42 (interval [-0.00304, 0.0230] under (2, 0)); its radius scales like N^(-1/2), and
+  N = 2^43 is pre-registered (R4, expected margin about 8%). A certified nonzero residue there would give
+  limsup log B(X)/log X >= 0.99999921 under the budget beyond 2^43.
   (A) REFUTED as a forecast (2026-10-15, same session): the Gaussian AR surrogate fitted on 2^14..2^34 predicted a
   median maximum window energy 0.77 for window starts in (2^33, 2^36]; the exact census to 2^37 gives 0.117
   (predictive probability of a maximum this small 0.1%); the claim "constant budgets are expected to fail" is

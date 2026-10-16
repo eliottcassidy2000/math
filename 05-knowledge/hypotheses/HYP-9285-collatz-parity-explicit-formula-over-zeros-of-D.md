@@ -2,6 +2,16 @@
 id: HYP-9285
 title: "Explicit formula for the Collatz parity sum: S(N) = sum_(n<=N) (-1)^tau(n) equals Re sum_rho c_rho N^rho over the zeros rho of D(s) = 1 + 2^(-s) + (3/2)^s/3 with 1/2 < Re rho < 1, up to a remainder of order sqrt(N) in mean square, with c_rho = 2 r_rho / rho for the residues r_rho of F(s) = sum t(n) n^(-s); the 28 zeros with 0.65 < Re rho < 1 and Im rho < 3000 predict S out of sample to about 2%, and the least-squares coefficients reproduce the conditionally certified residues"
 status: >
+  UPDATE 2026-10-16 (opus-2026-10-16-S38): THM-4660 proves the expansion CONDITIONALLY for the second Riesz mean under
+  the square-root hypothesis (W) (weaker than every HYP-9283 budget); the unsmoothed statement here remains CONJECTURAL
+  and needs vertical-line and horizontal bounds for G (S38 audit E4). THM-4659: the zeros near Re s = 1 are exactly the
+  parity-matched near-returns, uniformly in q (prior art: Codex's resonance-pair note, THM-4629 st.3). Second
+  pre-registered out-of-sample test (collatz_census_2p42_preregistration_20261016.md, dense grid, [2^40, 2^42)): the
+  69-zero model M2 PASSED at relative rms 0.00115 (bound 0.005; holdout 0.00167), residual 1.73 sqrt(N); the S37 model
+  PASSED at 0.0205 (bound 0.03). A third (R1, [2^42, 2^43), bound 0.0035) is pre-registered and PENDING. On the
+  1024-per-octave grid the high Mercator members alias approximately (1024 is a resonant density); an
+  irrational-density census to 2^38 resolves them, and its fit matches the boundary residues across the family
+  (rho* 0.01019 vs 0.00999). 295 zeros with 1/2 < Re < 1 below height 20000 (NUMERICAL).
   CONJECTURAL (the expansion). NUMERICAL, from the FINITE-EXACT censuses through 2^37 and 2^40: holdout errors and
   the pre-registered out-of-sample prediction (P1 of collatz_census_2p40_preregistration_20261015.md: PASSED,
   relative rms 0.0195 <= 0.03 on 2^37..2^40); dense data to 2^27 bring the remainder to 0.27 sqrt(N). CONDITIONAL

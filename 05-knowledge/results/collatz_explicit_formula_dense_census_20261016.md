@@ -39,7 +39,9 @@ Mercator zero.
   independently re-counted by the referee).
 - **NUMERICAL:** residues at all 295 zeros from the exact 2^40 block moments; agreement with the dense least-squares
   fit for the dominant low modes; the holdout calibration of the explicit formula on the dense grid (0.17% with the
-  69 zeros below the Nyquist height); the pre-registered test on `[2^40, 2^42)` (PENDING).
+  69 zeros below the Nyquist height); the pre-registered test on `[2^40, 2^42)`: five of six tests PASSED (M2 predicts
+  two new octaves to 0.115%), the energy bound `e_X <= 1` FAILED at `2^41` (section 5); the second-stage test on
+  `[2^42, 2^43)` with replication is PENDING.
 - **CONDITIONAL (Arb):** the residue at `ρ* = 0.99999921 + 3014.0202i` (the `1054/665` member, prior art: Codex's
   332.5 line) is `0.00993 + 0.00113i` before the future tail, with radius 0.0261 under the budget `E_X <= 2X²` for
   `X >= 2^40`. The radius scales like `N^(−1/2)` (0.0130 at 2^42, 0.0092 at 2^43), so the certificate cannot succeed
@@ -134,12 +136,47 @@ exceeds these values near `t ≈ 528` on the grid, and does so at 96% of the gri
 
 ## 5. The pre-registered test on [2^40, 2^42)
 
-PENDING (see [the pre-registration](collatz_census_2p42_preregistration_20261016.md), committed in `dc233fcf45`
-before the resumed run started).
+[The pre-registration](collatz_census_2p42_preregistration_20261016.md) was committed in `dc233fcf45` (11:43:32) before
+the resumed run started (11:43:48; relaunched 14:20:09 after the session restart, with the same grid; errata section
+added after the audit, criteria unchanged). The run gave `S(2^42) = 3573799150`, `H(2^42) = 1268051`, 0 inconsistent
+blocks ([census](collatz_census_dense_1024_2p42_20261016.json)). It is a single run, so its published outputs were
+checked against bounds that any significant corruption would violate: Lipschitz bounds on all 2048 grid values,
+monotone prefix sums of `H²`, bounded increments of the prefix sums of `H`, moment bounds and the moment total against
+`S` ([integrity](collatz_census_dense_2p42_integrity_20261016.out); all pass). Results
+([evaluation](collatz_census_2p42_evaluation_20261016.json)):
+
+| test | criterion | value | verdict |
+|---|---|---:|---|
+| Q1 | M1 (S37's 28-zero model) relative rms <= 0.03 | 0.0205 | PASSED |
+| Q2 | M2 (69 zeros below Nyquist) relative rms <= 0.005 | 0.00115 | PASSED |
+| Q3 | `e_X <= 2` at `X = 2^40, 2^41` | 0.139, 1.142 | PASSED |
+| Q4 | `e_X <= 1` at both | 1.142 at `2^41` | FAILED |
+| Q5 | mean window energy of `H` over starts in `[2^40, 2^41)` below 1 | 0.817 (max 1.25) | PASSED |
+| Q6 | M2 residual / `sqrt(N)` rms <= 3.0 | 1.73 | PASSED |
+
+M2 predicted two new octaves of `S(N)` to 0.115% relative rms, better than its own holdout (0.167%), with a residual
+of `1.73 sqrt(N)`. The S37 model M1, fitted on a coarse grid with 28 zeros, held at 2.05%. The energy budget
+`e_X <= 1` failed at `2^41` (as P4 failed at `2^38` in S37), while `e_X <= 2` held: the dyadic energy of `H` wanders
+between 0.04 and 1.8 times `X²` with no visible drift (HYP-9283). The aliasing caveat applies to individual
+coefficients, not to the prediction: 1024 is a resonant density, and the near-Nyquist zeros absorb aliased power in
+and out of sample alike (report I5).
+
+**Second stage.** [The second pre-registration](collatz_census_2p43_preregistration_20261016.md) (pushed 17:53:38)
+precedes Run C (launched 17:54:00): the checked census of `[2^40, 2^43)` with checksummed accumulators. Its tests are
+R1 (M2 refitted to `2^42` predicts `[2^42, 2^43)` within 0.0035), R2 (`e_X <= 2` at `2^42`), R3 (the residue estimate
+at `ρ*` within 1% of 0.00999), R4 (the Arb certificate at `ρ*` with `N = 2^43`) and R5 (exact replication of Run B).
+PENDING.
 
 ## 6. Toward a certified pole at ρ*
 
-PENDING.
+The boundary estimate of the residue at `ρ*` (renewal_shapes_oct11's formula (4), block moments) is stable:
+`0.009924 + 0.001131i` (modulus 0.009988) at `N = 2^42` ([certificate](collatz_pole_certificate_rhostar_2p42_20261016.json)),
+within `[0.009969, 0.009995]` over `N = 2^32, ..., 2^42`. The conditional Arb radius under the budget `(2, 0)` scales like
+`N^(−1/2)`: 0.0261 at `2^40`, 0.0130 at `2^42` (interval `[−0.00304, 0.0230]`, not certified, as expected), 0.0092
+expected at `2^43`. So `N = 2^43` is the first size at which the certificate can succeed, with a margin of about 8%.
+That is test R4 of the second stage, and it needs exact moments through `2^43`, which is why Run C recomputes
+`[2^40, 2^42)`. For comparison, the Mercator pole `s_0` stays certified at `2^42` (interval `[0.3529, 0.3571]` for
+`2|r| 2^(29(σ−1))`, nested inside the `2^40` interval: a code check, not a test, by MISTAKE-621).
 
 ## 7. The conditional explicit formula (THM-4660)
 
