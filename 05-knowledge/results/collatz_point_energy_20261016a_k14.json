@@ -1,0 +1,97 @@
+{
+  "bin_width": 128,
+  "failures": [],
+  "frozen_input": {
+    "path": "05-knowledge/results/collatz_survivor_packets_20261015e.json",
+    "sha256": "041166f15a7a39a3498aebe054630be4b3e69a3beae38fce38f69c1ae2d787d3"
+  },
+  "k": 14,
+  "paired_tests": [
+    {
+      "end": 2,
+      "new": 59978800584,
+      "old": 114018954297948,
+      "passes": true,
+      "start": 0
+    },
+    {
+      "end": 3,
+      "new": 26074257144,
+      "old": 305699259092,
+      "passes": true,
+      "start": 1
+    },
+    {
+      "end": 4,
+      "new": 10703338540,
+      "old": 59978800584,
+      "passes": true,
+      "start": 2
+    },
+    {
+      "end": 4,
+      "new": 10703338540,
+      "old": 26074257144,
+      "passes": true,
+      "start": 3
+    }
+  ],
+  "stages": [
+    {
+      "coarse_numerator": 14594394336897460,
+      "denominator": 128,
+      "fine_energy": 114018954297948,
+      "mixture_numerator": 0,
+      "stage": 0,
+      "variance_numerator": 31813239884
+    },
+    {
+      "coarse_numerator": 39113511907672,
+      "denominator": 128,
+      "fine_energy": 305699259092,
+      "internal_clock_edges_checked": 109226,
+      "max_native_clock": 186,
+      "mixture_numerator": 15455004316,
+      "point_norm_sha256": "4a564d7b765504ec921a8db3fe4161dc16a3aad876f6168a937dd9897ef301e2",
+      "stage": 1,
+      "terminals": 4010,
+      "variance_numerator": 538251788
+    },
+    {
+      "coarse_numerator": 7670960494828,
+      "denominator": 128,
+      "fine_energy": 59978800584,
+      "internal_clock_edges_checked": 109226,
+      "max_native_clock": 196,
+      "mixture_numerator": 6114199396,
+      "point_norm_sha256": "e1d18f7be2417364d1902ff892da0006fee17a18a51943aa93f1bd39e6cb9eb8",
+      "stage": 2,
+      "terminals": 1639,
+      "variance_numerator": 211780528
+    },
+    {
+      "coarse_numerator": 3335440482592,
+      "denominator": 128,
+      "fine_energy": 26074257144,
+      "internal_clock_edges_checked": 109226,
+      "max_native_clock": 210,
+      "mixture_numerator": 1885856448,
+      "point_norm_sha256": "ef91e6b2228e86e307aa7426c03eec2787a2f1463dc64c582ff2efdc7de3626a",
+      "stage": 3,
+      "terminals": 937,
+      "variance_numerator": 178575392
+    },
+    {
+      "coarse_numerator": 1368166805080,
+      "denominator": 128,
+      "fine_energy": 10703338540,
+      "internal_clock_edges_checked": 109226,
+      "max_native_clock": 210,
+      "mixture_numerator": 1710306220,
+      "point_norm_sha256": "aa8ae2e09b1161c0d65f6bb54dd71d7c2e53e66b54663eeb921a6c63d03a9cad",
+      "stage": 4,
+      "terminals": 590,
+      "variance_numerator": 150221820
+    }
+  ]
+}

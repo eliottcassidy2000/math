@@ -1,0 +1,40 @@
+{
+  "bin_width": 16,
+  "failures": [],
+  "frozen_input": {
+    "path": "05-knowledge/results/collatz_survivor_packets_20261015e.json",
+    "sha256": "041166f15a7a39a3498aebe054630be4b3e69a3beae38fce38f69c1ae2d787d3"
+  },
+  "k": 8,
+  "paired_tests": [
+    {
+      "end": 1,
+      "new": 1389632,
+      "old": 433875036,
+      "passes": true,
+      "start": 0
+    }
+  ],
+  "stages": [
+    {
+      "coarse_numerator": 6941032076,
+      "denominator": 16,
+      "fine_energy": 433875036,
+      "mixture_numerator": 0,
+      "stage": 0,
+      "variance_numerator": 968500
+    },
+    {
+      "coarse_numerator": 21938876,
+      "denominator": 16,
+      "fine_energy": 1389632,
+      "internal_clock_edges_checked": 1706,
+      "max_native_clock": 101,
+      "mixture_numerator": 247252,
+      "point_norm_sha256": "da892589999e91b0f611c6c57476d1704cb6d371229ceb8459884c539453fadb",
+      "stage": 1,
+      "terminals": 64,
+      "variance_numerator": 47984
+    }
+  ]
+}
