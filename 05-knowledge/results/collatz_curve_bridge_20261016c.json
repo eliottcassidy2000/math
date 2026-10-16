@@ -1,0 +1,97 @@
+{
+  "checks": 72680,
+  "coalescence_3_5": {
+    "clocks": [
+      1,
+      0
+    ],
+    "signs": [
+      -1,
+      1
+    ],
+    "terminal": 5
+  },
+  "golden_exact_conjugacy_controls": 420,
+  "open_obligation": "A source-preserving strict rank or uniform signed-energy budget beyond this isomorphic decoration.",
+  "root_ray_controls_k": [
+    2,
+    64
+  ],
+  "root_ray_samples": [
+    {
+      "k": 2,
+      "point": [
+        "1",
+        "45/256"
+      ],
+      "source": 5
+    },
+    {
+      "k": 3,
+      "point": [
+        "1",
+        "189/4096"
+      ],
+      "source": 21
+    },
+    {
+      "k": 4,
+      "point": [
+        "1",
+        "765/65536"
+      ],
+      "source": 85
+    },
+    {
+      "k": 5,
+      "point": [
+        "1",
+        "3069/1048576"
+      ],
+      "source": 341
+    }
+  ],
+  "same_slope_different_carry": [
+    [
+      9,
+      8,
+      5
+    ],
+    [
+      9,
+      8,
+      7
+    ]
+  ],
+  "scope": "Exact finite controls plus proved source-marked lift; no new universal or source coverage.",
+  "supplied_root_3": {
+    "frame": [
+      9,
+      32,
+      5
+    ],
+    "point": [
+      "1",
+      "243/1024"
+    ],
+    "shortcut_clock": 5,
+    "word": [
+      1,
+      4
+    ]
+  },
+  "typed_and_semantic_hostiles": 22,
+  "word_universe": {
+    "all_splits": 23108,
+    "frames": 1365,
+    "lengths": [
+      0,
+      5
+    ],
+    "native_first_hit_lifts": 4073,
+    "valuations": [
+      1,
+      4
+    ]
+  }
+}

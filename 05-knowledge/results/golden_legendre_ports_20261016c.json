@@ -1,0 +1,832 @@
+{
+  "status": "PROVED scoped identities with FINITE-EXACT controls; global targets OPEN",
+  "universe": {
+    "odd_primes_through": 101,
+    "all_normalized_triples": 1109,
+    "above25": 1027,
+    "inert_prime_squares": [
+      9,
+      49,
+      169,
+      289,
+      529
+    ]
+  },
+  "checks": 7892,
+  "rational_curve": {
+    "coefficients": [
+      0,
+      1,
+      0,
+      -3,
+      -2
+    ],
+    "discriminant": 2000,
+    "j": 2048
+  },
+  "legendre_j2048_factors_ascending": [
+    [
+      -1,
+      -1,
+      1
+    ],
+    [
+      1,
+      -3,
+      1
+    ],
+    [
+      -1,
+      1,
+      1
+    ]
+  ],
+  "golden_specializations": [
+    {
+      "p": 11,
+      "lambda": 4,
+      "trace": -4,
+      "rational_model_trace": -4,
+      "twist": 1,
+      "counts": [
+        0,
+        2,
+        2,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "relation": "tournament"
+    },
+    {
+      "p": 11,
+      "lambda": 8,
+      "trace": 4,
+      "rational_model_trace": -4,
+      "twist": -1,
+      "counts": [
+        1,
+        0,
+        1,
+        2,
+        1,
+        1,
+        2,
+        0
+      ],
+      "relation": "tournament"
+    },
+    {
+      "p": 19,
+      "lambda": 5,
+      "trace": 4,
+      "rational_model_trace": -4,
+      "twist": -1,
+      "counts": [
+        2,
+        2,
+        2,
+        3,
+        1,
+        3,
+        2,
+        1
+      ],
+      "relation": "tournament"
+    },
+    {
+      "p": 19,
+      "lambda": 15,
+      "trace": -4,
+      "rational_model_trace": -4,
+      "twist": 1,
+      "counts": [
+        1,
+        2,
+        3,
+        2,
+        3,
+        1,
+        2,
+        2
+      ],
+      "relation": "tournament"
+    },
+    {
+      "p": 29,
+      "lambda": 6,
+      "trace": -2,
+      "rational_model_trace": 2,
+      "twist": -1,
+      "counts": [
+        3,
+        4,
+        4,
+        3,
+        4,
+        3,
+        3,
+        2
+      ],
+      "relation": "graph"
+    },
+    {
+      "p": 29,
+      "lambda": 24,
+      "trace": -2,
+      "rational_model_trace": 2,
+      "twist": -1,
+      "counts": [
+        3,
+        4,
+        4,
+        3,
+        4,
+        3,
+        3,
+        2
+      ],
+      "relation": "graph"
+    },
+    {
+      "p": 31,
+      "lambda": 13,
+      "trace": 0,
+      "rational_model_trace": 0,
+      "twist": -1,
+      "counts": [
+        3,
+        3,
+        4,
+        4,
+        4,
+        3,
+        4,
+        3
+      ],
+      "relation": "tournament"
+    },
+    {
+      "p": 31,
+      "lambda": 19,
+      "trace": 0,
+      "rational_model_trace": 0,
+      "twist": 1,
+      "counts": [
+        3,
+        4,
+        4,
+        4,
+        3,
+        4,
+        3,
+        3
+      ],
+      "relation": "tournament"
+    },
+    {
+      "p": 41,
+      "lambda": 7,
+      "trace": -2,
+      "rational_model_trace": 2,
+      "twist": -1,
+      "counts": [
+        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        4,
+        5
+      ],
+      "relation": "graph"
+    },
+    {
+      "p": 41,
+      "lambda": 35,
+      "trace": -2,
+      "rational_model_trace": 2,
+      "twist": -1,
+      "counts": [
+        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        4,
+        5
+      ],
+      "relation": "graph"
+    },
+    {
+      "p": 59,
+      "lambda": 26,
+      "trace": 12,
+      "rational_model_trace": -12,
+      "twist": -1,
+      "counts": [
+        8,
+        6,
+        6,
+        9,
+        5,
+        9,
+        8,
+        5
+      ],
+      "relation": "tournament"
+    },
+    {
+      "p": 59,
+      "lambda": 34,
+      "trace": -12,
+      "rational_model_trace": -12,
+      "twist": 1,
+      "counts": [
+        5,
+        8,
+        9,
+        6,
+        9,
+        5,
+        6,
+        8
+      ],
+      "relation": "tournament"
+    },
+    {
+      "p": 61,
+      "lambda": 18,
+      "trace": 10,
+      "rational_model_trace": -10,
+      "twist": -1,
+      "counts": [
+        8,
+        6,
+        6,
+        9,
+        6,
+        9,
+        8,
+        6
+      ],
+      "relation": "graph"
+    },
+    {
+      "p": 61,
+      "lambda": 44,
+      "trace": 10,
+      "rational_model_trace": -10,
+      "twist": -1,
+      "counts": [
+        8,
+        6,
+        6,
+        9,
+        6,
+        9,
+        8,
+        6
+      ],
+      "relation": "graph"
+    },
+    {
+      "p": 71,
+      "lambda": 9,
+      "trace": 8,
+      "rational_model_trace": 8,
+      "twist": 1,
+      "counts": [
+        9,
+        8,
+        8,
+        10,
+        7,
+        10,
+        9,
+        7
+      ],
+      "relation": "tournament"
+    },
+    {
+      "p": 71,
+      "lambda": 63,
+      "trace": -8,
+      "rational_model_trace": 8,
+      "twist": -1,
+      "counts": [
+        7,
+        9,
+        10,
+        8,
+        10,
+        7,
+        8,
+        9
+      ],
+      "relation": "tournament"
+    },
+    {
+      "p": 79,
+      "lambda": 30,
+      "trace": 16,
+      "rational_model_trace": 16,
+      "twist": 1,
+      "counts": [
+        11,
+        7,
+        8,
+        12,
+        8,
+        11,
+        12,
+        7
+      ],
+      "relation": "tournament"
+    },
+    {
+      "p": 79,
+      "lambda": 50,
+      "trace": -16,
+      "rational_model_trace": 16,
+      "twist": -1,
+      "counts": [
+        7,
+        12,
+        12,
+        8,
+        11,
+        8,
+        7,
+        11
+      ],
+      "relation": "tournament"
+    },
+    {
+      "p": 89,
+      "lambda": 10,
+      "trace": -6,
+      "rational_model_trace": 6,
+      "twist": -1,
+      "counts": [
+        10,
+        12,
+        12,
+        10,
+        12,
+        10,
+        10,
+        10
+      ],
+      "relation": "graph"
+    },
+    {
+      "p": 89,
+      "lambda": 80,
+      "trace": -6,
+      "rational_model_trace": 6,
+      "twist": -1,
+      "counts": [
+        10,
+        12,
+        12,
+        10,
+        12,
+        10,
+        10,
+        10
+      ],
+      "relation": "graph"
+    },
+    {
+      "p": 101,
+      "lambda": 23,
+      "trace": 6,
+      "rational_model_trace": 6,
+      "twist": 1,
+      "counts": [
+        13,
+        12,
+        12,
+        13,
+        12,
+        13,
+        13,
+        10
+      ],
+      "relation": "graph"
+    },
+    {
+      "p": 101,
+      "lambda": 79,
+      "trace": 6,
+      "rational_model_trace": 6,
+      "twist": 1,
+      "counts": [
+        13,
+        12,
+        12,
+        13,
+        12,
+        13,
+        13,
+        10
+      ],
+      "relation": "graph"
+    }
+  ],
+  "selected_tables": [
+    {
+      "p": 11,
+      "golden": [
+        {
+          "p": 11,
+          "lambda": 4,
+          "trace": -4,
+          "rational_model_trace": -4,
+          "twist": 1,
+          "counts": [
+            0,
+            2,
+            2,
+            1,
+            1,
+            1,
+            0,
+            1
+          ],
+          "relation": "tournament"
+        },
+        {
+          "p": 11,
+          "lambda": 8,
+          "trace": 4,
+          "rational_model_trace": -4,
+          "twist": -1,
+          "counts": [
+            1,
+            0,
+            1,
+            2,
+            1,
+            1,
+            2,
+            0
+          ],
+          "relation": "tournament"
+        }
+      ]
+    },
+    {
+      "p": 19,
+      "golden": [
+        {
+          "p": 19,
+          "lambda": 5,
+          "trace": 4,
+          "rational_model_trace": -4,
+          "twist": -1,
+          "counts": [
+            2,
+            2,
+            2,
+            3,
+            1,
+            3,
+            2,
+            1
+          ],
+          "relation": "tournament"
+        },
+        {
+          "p": 19,
+          "lambda": 15,
+          "trace": -4,
+          "rational_model_trace": -4,
+          "twist": 1,
+          "counts": [
+            1,
+            2,
+            3,
+            2,
+            3,
+            1,
+            2,
+            2
+          ],
+          "relation": "tournament"
+        }
+      ]
+    },
+    {
+      "p": 31,
+      "golden": [
+        {
+          "p": 31,
+          "lambda": 13,
+          "trace": 0,
+          "rational_model_trace": 0,
+          "twist": -1,
+          "counts": [
+            3,
+            3,
+            4,
+            4,
+            4,
+            3,
+            4,
+            3
+          ],
+          "relation": "tournament"
+        },
+        {
+          "p": 31,
+          "lambda": 19,
+          "trace": 0,
+          "rational_model_trace": 0,
+          "twist": 1,
+          "counts": [
+            3,
+            4,
+            4,
+            4,
+            3,
+            4,
+            3,
+            3
+          ],
+          "relation": "tournament"
+        }
+      ]
+    },
+    {
+      "p": 59,
+      "golden": [
+        {
+          "p": 59,
+          "lambda": 26,
+          "trace": 12,
+          "rational_model_trace": -12,
+          "twist": -1,
+          "counts": [
+            8,
+            6,
+            6,
+            9,
+            5,
+            9,
+            8,
+            5
+          ],
+          "relation": "tournament"
+        },
+        {
+          "p": 59,
+          "lambda": 34,
+          "trace": -12,
+          "rational_model_trace": -12,
+          "twist": 1,
+          "counts": [
+            5,
+            8,
+            9,
+            6,
+            9,
+            5,
+            6,
+            8
+          ],
+          "relation": "tournament"
+        }
+      ]
+    }
+  ],
+  "inert_specializations": [
+    {
+      "p": 3,
+      "q": 9,
+      "trace": -2,
+      "rational_model_trace": -2,
+      "relation": "graph",
+      "twist": 1
+    },
+    {
+      "p": 7,
+      "q": 49,
+      "trace": -10,
+      "rational_model_trace": -2,
+      "relation": "graph",
+      "twist": 1
+    },
+    {
+      "p": 13,
+      "q": 169,
+      "trace": 10,
+      "rational_model_trace": -4,
+      "relation": "graph",
+      "twist": -1
+    },
+    {
+      "p": 17,
+      "q": 289,
+      "trace": 34,
+      "rational_model_trace": 0,
+      "relation": "graph",
+      "twist": -1
+    },
+    {
+      "p": 23,
+      "q": 529,
+      "trace": -42,
+      "rational_model_trace": 2,
+      "relation": "graph",
+      "twist": 1
+    }
+  ],
+  "same_j_same_tournament_hostile": [
+    {
+      "record": {
+        "p": 11,
+        "anchors": [
+          0,
+          1,
+          4
+        ],
+        "trace": -4,
+        "cells": [
+          {
+            "signs": [
+              -1,
+              -1,
+              -1
+            ],
+            "count": 0,
+            "boundary": 4
+          },
+          {
+            "signs": [
+              -1,
+              -1,
+              1
+            ],
+            "count": 2,
+            "boundary": 0
+          },
+          {
+            "signs": [
+              -1,
+              1,
+              -1
+            ],
+            "count": 2,
+            "boundary": 0
+          },
+          {
+            "signs": [
+              -1,
+              1,
+              1
+            ],
+            "count": 1,
+            "boundary": 0
+          },
+          {
+            "signs": [
+              1,
+              -1,
+              -1
+            ],
+            "count": 1,
+            "boundary": 8
+          },
+          {
+            "signs": [
+              1,
+              -1,
+              1
+            ],
+            "count": 1,
+            "boundary": 0
+          },
+          {
+            "signs": [
+              1,
+              1,
+              -1
+            ],
+            "count": 0,
+            "boundary": 8
+          },
+          {
+            "signs": [
+              1,
+              1,
+              1
+            ],
+            "count": 1,
+            "boundary": 4
+          }
+        ],
+        "relation": "tournament"
+      },
+      "common_outneighbours": [
+        5
+      ],
+      "normalized_lambda": 4,
+      "j": 2
+    },
+    {
+      "record": {
+        "p": 11,
+        "anchors": [
+          8,
+          0,
+          1
+        ],
+        "trace": 4,
+        "cells": [
+          {
+            "signs": [
+              -1,
+              -1,
+              -1
+            ],
+            "count": 1,
+            "boundary": 4
+          },
+          {
+            "signs": [
+              -1,
+              -1,
+              1
+            ],
+            "count": 1,
+            "boundary": 0
+          },
+          {
+            "signs": [
+              -1,
+              1,
+              -1
+            ],
+            "count": 1,
+            "boundary": 0
+          },
+          {
+            "signs": [
+              -1,
+              1,
+              1
+            ],
+            "count": 2,
+            "boundary": 0
+          },
+          {
+            "signs": [
+              1,
+              -1,
+              -1
+            ],
+            "count": 0,
+            "boundary": 8
+          },
+          {
+            "signs": [
+              1,
+              -1,
+              1
+            ],
+            "count": 2,
+            "boundary": 0
+          },
+          {
+            "signs": [
+              1,
+              1,
+              -1
+            ],
+            "count": 1,
+            "boundary": 8
+          },
+          {
+            "signs": [
+              1,
+              1,
+              1
+            ],
+            "count": 0,
+            "boundary": 4
+          }
+        ],
+        "relation": "tournament"
+      },
+      "common_outneighbours": [],
+      "normalized_lambda": 5,
+      "j": 2
+    }
+  ]
+}
