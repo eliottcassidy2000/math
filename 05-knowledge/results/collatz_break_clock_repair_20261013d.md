@@ -8,6 +8,13 @@ census through 2^27, cross-checked against every saved parity bit through 2^26.
 also the claim that the finite event word alone determines source energy.
 **OPEN:** the required weighted bound for actual Collatz sources.
 
+**Continuation, 2026-10-15:** [the clock-mesh theorem](collatz_clock_mesh_20261015a.md)
+now proves a sharp arithmetic refinement allowance and upper certificates
+monotone under every physical interval split. [Signed terminal-weight
+controllers](collatz_terminal_mesh_20261015a.md) bound the remaining means
+on six finite windows without grounding every source. Uniform coarse-mean
+and terminal-residual control remains OPEN.
+
 The [incoming break note](collatz_dyadic_energy_breaks_20261013.md) supplies a
 useful second coordinate system for the
 [source-preserving wavelet energy](collatz_wavelet_energy_20261013d.md).

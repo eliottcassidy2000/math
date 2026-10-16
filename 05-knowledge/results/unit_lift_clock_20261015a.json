@@ -1,0 +1,953 @@
+{
+  "status": "FINITE-EXACT checks of an all-depth theorem proved separately",
+  "cases": [
+    {
+      "a": 1,
+      "p": 3,
+      "k": 1,
+      "split": false,
+      "pi": 8,
+      "odd_order": 1,
+      "lift_delay": 1,
+      "nonzero_orbits": 8,
+      "tournament_exponent": 4,
+      "length_histogram": {
+        "1": 8
+      }
+    },
+    {
+      "a": 1,
+      "p": 3,
+      "k": 2,
+      "split": false,
+      "pi": 8,
+      "odd_order": 1,
+      "lift_delay": 1,
+      "nonzero_orbits": 32,
+      "tournament_exponent": 16,
+      "length_histogram": {
+        "3": 24,
+        "1": 8
+      }
+    },
+    {
+      "a": 1,
+      "p": 3,
+      "k": 3,
+      "split": false,
+      "pi": 8,
+      "odd_order": 1,
+      "lift_delay": 1,
+      "nonzero_orbits": 104,
+      "tournament_exponent": 52,
+      "length_histogram": {
+        "9": 72,
+        "3": 24,
+        "1": 8
+      }
+    },
+    {
+      "a": 1,
+      "p": 7,
+      "k": 1,
+      "split": false,
+      "pi": 16,
+      "odd_order": 1,
+      "lift_delay": 1,
+      "nonzero_orbits": 48,
+      "tournament_exponent": 24,
+      "length_histogram": {
+        "1": 48
+      }
+    },
+    {
+      "a": 1,
+      "p": 7,
+      "k": 2,
+      "split": false,
+      "pi": 16,
+      "odd_order": 1,
+      "lift_delay": 1,
+      "nonzero_orbits": 384,
+      "tournament_exponent": 192,
+      "length_histogram": {
+        "7": 336,
+        "1": 48
+      }
+    },
+    {
+      "a": 1,
+      "p": 7,
+      "k": 3,
+      "split": false,
+      "pi": 16,
+      "odd_order": 1,
+      "lift_delay": 1,
+      "nonzero_orbits": 2736,
+      "tournament_exponent": 1368,
+      "length_histogram": {
+        "49": 2352,
+        "7": 336,
+        "1": 48
+      }
+    },
+    {
+      "a": 1,
+      "p": 11,
+      "k": 1,
+      "split": true,
+      "pi": 10,
+      "odd_order": 5,
+      "lift_delay": 1,
+      "nonzero_orbits": 24,
+      "tournament_exponent": 12,
+      "length_histogram": {
+        "5": 24
+      }
+    },
+    {
+      "a": 1,
+      "p": 11,
+      "k": 2,
+      "split": true,
+      "pi": 10,
+      "odd_order": 5,
+      "lift_delay": 1,
+      "nonzero_orbits": 288,
+      "tournament_exponent": 144,
+      "length_histogram": {
+        "55": 264,
+        "5": 24
+      }
+    },
+    {
+      "a": 1,
+      "p": 13,
+      "k": 1,
+      "split": false,
+      "pi": 28,
+      "odd_order": 7,
+      "lift_delay": 1,
+      "nonzero_orbits": 24,
+      "tournament_exponent": 12,
+      "length_histogram": {
+        "7": 24
+      }
+    },
+    {
+      "a": 1,
+      "p": 13,
+      "k": 2,
+      "split": false,
+      "pi": 28,
+      "odd_order": 7,
+      "lift_delay": 1,
+      "nonzero_orbits": 336,
+      "tournament_exponent": 168,
+      "length_histogram": {
+        "91": 312,
+        "7": 24
+      }
+    },
+    {
+      "a": 1,
+      "p": 17,
+      "k": 1,
+      "split": false,
+      "pi": 36,
+      "odd_order": 9,
+      "lift_delay": 1,
+      "nonzero_orbits": 32,
+      "tournament_exponent": 16,
+      "length_histogram": {
+        "9": 32
+      }
+    },
+    {
+      "a": 1,
+      "p": 17,
+      "k": 2,
+      "split": false,
+      "pi": 36,
+      "odd_order": 9,
+      "lift_delay": 1,
+      "nonzero_orbits": 576,
+      "tournament_exponent": 288,
+      "length_histogram": {
+        "153": 544,
+        "9": 32
+      }
+    },
+    {
+      "a": 1,
+      "p": 19,
+      "k": 1,
+      "split": true,
+      "pi": 18,
+      "odd_order": 9,
+      "lift_delay": 1,
+      "nonzero_orbits": 40,
+      "tournament_exponent": 20,
+      "length_histogram": {
+        "9": 40
+      }
+    },
+    {
+      "a": 1,
+      "p": 19,
+      "k": 2,
+      "split": true,
+      "pi": 18,
+      "odd_order": 9,
+      "lift_delay": 1,
+      "nonzero_orbits": 800,
+      "tournament_exponent": 400,
+      "length_histogram": {
+        "171": 760,
+        "9": 40
+      }
+    },
+    {
+      "a": 2,
+      "p": 3,
+      "k": 1,
+      "split": false,
+      "pi": 8,
+      "odd_order": 1,
+      "lift_delay": 1,
+      "nonzero_orbits": 8,
+      "tournament_exponent": 4,
+      "length_histogram": {
+        "1": 8
+      }
+    },
+    {
+      "a": 2,
+      "p": 3,
+      "k": 2,
+      "split": false,
+      "pi": 8,
+      "odd_order": 1,
+      "lift_delay": 1,
+      "nonzero_orbits": 32,
+      "tournament_exponent": 16,
+      "length_histogram": {
+        "3": 24,
+        "1": 8
+      }
+    },
+    {
+      "a": 2,
+      "p": 3,
+      "k": 3,
+      "split": false,
+      "pi": 8,
+      "odd_order": 1,
+      "lift_delay": 1,
+      "nonzero_orbits": 104,
+      "tournament_exponent": 52,
+      "length_histogram": {
+        "9": 72,
+        "3": 24,
+        "1": 8
+      }
+    },
+    {
+      "a": 2,
+      "p": 5,
+      "k": 1,
+      "split": false,
+      "pi": 12,
+      "odd_order": 3,
+      "lift_delay": 1,
+      "nonzero_orbits": 8,
+      "tournament_exponent": 4,
+      "length_histogram": {
+        "3": 8
+      }
+    },
+    {
+      "a": 2,
+      "p": 5,
+      "k": 2,
+      "split": false,
+      "pi": 12,
+      "odd_order": 3,
+      "lift_delay": 1,
+      "nonzero_orbits": 48,
+      "tournament_exponent": 24,
+      "length_histogram": {
+        "15": 40,
+        "3": 8
+      }
+    },
+    {
+      "a": 2,
+      "p": 5,
+      "k": 3,
+      "split": false,
+      "pi": 12,
+      "odd_order": 3,
+      "lift_delay": 1,
+      "nonzero_orbits": 248,
+      "tournament_exponent": 124,
+      "length_histogram": {
+        "75": 200,
+        "15": 40,
+        "3": 8
+      }
+    },
+    {
+      "a": 2,
+      "p": 7,
+      "k": 1,
+      "split": true,
+      "pi": 6,
+      "odd_order": 3,
+      "lift_delay": 1,
+      "nonzero_orbits": 16,
+      "tournament_exponent": 8,
+      "length_histogram": {
+        "3": 16
+      }
+    },
+    {
+      "a": 2,
+      "p": 7,
+      "k": 2,
+      "split": true,
+      "pi": 6,
+      "odd_order": 3,
+      "lift_delay": 1,
+      "nonzero_orbits": 128,
+      "tournament_exponent": 64,
+      "length_histogram": {
+        "21": 112,
+        "3": 16
+      }
+    },
+    {
+      "a": 2,
+      "p": 7,
+      "k": 3,
+      "split": true,
+      "pi": 6,
+      "odd_order": 3,
+      "lift_delay": 1,
+      "nonzero_orbits": 912,
+      "tournament_exponent": 456,
+      "length_histogram": {
+        "147": 784,
+        "21": 112,
+        "3": 16
+      }
+    },
+    {
+      "a": 2,
+      "p": 11,
+      "k": 1,
+      "split": false,
+      "pi": 24,
+      "odd_order": 3,
+      "lift_delay": 1,
+      "nonzero_orbits": 40,
+      "tournament_exponent": 20,
+      "length_histogram": {
+        "3": 40
+      }
+    },
+    {
+      "a": 2,
+      "p": 11,
+      "k": 2,
+      "split": false,
+      "pi": 24,
+      "odd_order": 3,
+      "lift_delay": 1,
+      "nonzero_orbits": 480,
+      "tournament_exponent": 240,
+      "length_histogram": {
+        "33": 440,
+        "3": 40
+      }
+    },
+    {
+      "a": 2,
+      "p": 13,
+      "k": 1,
+      "split": false,
+      "pi": 28,
+      "odd_order": 7,
+      "lift_delay": 2,
+      "nonzero_orbits": 24,
+      "tournament_exponent": 12,
+      "length_histogram": {
+        "7": 24
+      }
+    },
+    {
+      "a": 2,
+      "p": 13,
+      "k": 2,
+      "split": false,
+      "pi": 28,
+      "odd_order": 7,
+      "lift_delay": 2,
+      "nonzero_orbits": 4080,
+      "tournament_exponent": 2040,
+      "length_histogram": {
+        "7": 4080
+      }
+    },
+    {
+      "a": 2,
+      "p": 17,
+      "k": 1,
+      "split": true,
+      "pi": 16,
+      "odd_order": 1,
+      "lift_delay": 1,
+      "nonzero_orbits": 288,
+      "tournament_exponent": 144,
+      "length_histogram": {
+        "1": 288
+      }
+    },
+    {
+      "a": 2,
+      "p": 17,
+      "k": 2,
+      "split": true,
+      "pi": 16,
+      "odd_order": 1,
+      "lift_delay": 1,
+      "nonzero_orbits": 5184,
+      "tournament_exponent": 2592,
+      "length_histogram": {
+        "17": 4896,
+        "1": 288
+      }
+    },
+    {
+      "a": 2,
+      "p": 19,
+      "k": 1,
+      "split": false,
+      "pi": 40,
+      "odd_order": 5,
+      "lift_delay": 1,
+      "nonzero_orbits": 72,
+      "tournament_exponent": 36,
+      "length_histogram": {
+        "5": 72
+      }
+    },
+    {
+      "a": 2,
+      "p": 19,
+      "k": 2,
+      "split": false,
+      "pi": 40,
+      "odd_order": 5,
+      "lift_delay": 1,
+      "nonzero_orbits": 1440,
+      "tournament_exponent": 720,
+      "length_histogram": {
+        "95": 1368,
+        "5": 72
+      }
+    },
+    {
+      "a": 3,
+      "p": 3,
+      "k": 1,
+      "split": true,
+      "pi": 2,
+      "odd_order": 1,
+      "lift_delay": 1,
+      "nonzero_orbits": 8,
+      "tournament_exponent": 4,
+      "length_histogram": {
+        "1": 8
+      }
+    },
+    {
+      "a": 3,
+      "p": 3,
+      "k": 2,
+      "split": true,
+      "pi": 2,
+      "odd_order": 1,
+      "lift_delay": 1,
+      "nonzero_orbits": 32,
+      "tournament_exponent": 16,
+      "length_histogram": {
+        "3": 24,
+        "1": 8
+      }
+    },
+    {
+      "a": 3,
+      "p": 3,
+      "k": 3,
+      "split": true,
+      "pi": 2,
+      "odd_order": 1,
+      "lift_delay": 1,
+      "nonzero_orbits": 104,
+      "tournament_exponent": 52,
+      "length_histogram": {
+        "9": 72,
+        "3": 24,
+        "1": 8
+      }
+    },
+    {
+      "a": 3,
+      "p": 5,
+      "k": 1,
+      "split": false,
+      "pi": 12,
+      "odd_order": 3,
+      "lift_delay": 1,
+      "nonzero_orbits": 8,
+      "tournament_exponent": 4,
+      "length_histogram": {
+        "3": 8
+      }
+    },
+    {
+      "a": 3,
+      "p": 5,
+      "k": 2,
+      "split": false,
+      "pi": 12,
+      "odd_order": 3,
+      "lift_delay": 1,
+      "nonzero_orbits": 48,
+      "tournament_exponent": 24,
+      "length_histogram": {
+        "15": 40,
+        "3": 8
+      }
+    },
+    {
+      "a": 3,
+      "p": 5,
+      "k": 3,
+      "split": false,
+      "pi": 12,
+      "odd_order": 3,
+      "lift_delay": 1,
+      "nonzero_orbits": 248,
+      "tournament_exponent": 124,
+      "length_histogram": {
+        "75": 200,
+        "15": 40,
+        "3": 8
+      }
+    },
+    {
+      "a": 3,
+      "p": 7,
+      "k": 1,
+      "split": false,
+      "pi": 16,
+      "odd_order": 1,
+      "lift_delay": 1,
+      "nonzero_orbits": 48,
+      "tournament_exponent": 24,
+      "length_histogram": {
+        "1": 48
+      }
+    },
+    {
+      "a": 3,
+      "p": 7,
+      "k": 2,
+      "split": false,
+      "pi": 16,
+      "odd_order": 1,
+      "lift_delay": 1,
+      "nonzero_orbits": 384,
+      "tournament_exponent": 192,
+      "length_histogram": {
+        "7": 336,
+        "1": 48
+      }
+    },
+    {
+      "a": 3,
+      "p": 7,
+      "k": 3,
+      "split": false,
+      "pi": 16,
+      "odd_order": 1,
+      "lift_delay": 1,
+      "nonzero_orbits": 2736,
+      "tournament_exponent": 1368,
+      "length_histogram": {
+        "49": 2352,
+        "7": 336,
+        "1": 48
+      }
+    },
+    {
+      "a": 3,
+      "p": 11,
+      "k": 1,
+      "split": false,
+      "pi": 8,
+      "odd_order": 1,
+      "lift_delay": 1,
+      "nonzero_orbits": 120,
+      "tournament_exponent": 60,
+      "length_histogram": {
+        "1": 120
+      }
+    },
+    {
+      "a": 3,
+      "p": 11,
+      "k": 2,
+      "split": false,
+      "pi": 8,
+      "odd_order": 1,
+      "lift_delay": 1,
+      "nonzero_orbits": 1440,
+      "tournament_exponent": 720,
+      "length_histogram": {
+        "11": 1320,
+        "1": 120
+      }
+    },
+    {
+      "a": 3,
+      "p": 17,
+      "k": 1,
+      "split": true,
+      "pi": 16,
+      "odd_order": 1,
+      "lift_delay": 1,
+      "nonzero_orbits": 288,
+      "tournament_exponent": 144,
+      "length_histogram": {
+        "1": 288
+      }
+    },
+    {
+      "a": 3,
+      "p": 17,
+      "k": 2,
+      "split": true,
+      "pi": 16,
+      "odd_order": 1,
+      "lift_delay": 1,
+      "nonzero_orbits": 5184,
+      "tournament_exponent": 2592,
+      "length_histogram": {
+        "17": 4896,
+        "1": 288
+      }
+    },
+    {
+      "a": 3,
+      "p": 19,
+      "k": 1,
+      "split": false,
+      "pi": 40,
+      "odd_order": 5,
+      "lift_delay": 1,
+      "nonzero_orbits": 72,
+      "tournament_exponent": 36,
+      "length_histogram": {
+        "5": 72
+      }
+    },
+    {
+      "a": 3,
+      "p": 19,
+      "k": 2,
+      "split": false,
+      "pi": 40,
+      "odd_order": 5,
+      "lift_delay": 1,
+      "nonzero_orbits": 1440,
+      "tournament_exponent": 720,
+      "length_histogram": {
+        "95": 1368,
+        "5": 72
+      }
+    },
+    {
+      "a": 4,
+      "p": 3,
+      "k": 1,
+      "split": false,
+      "pi": 8,
+      "odd_order": 1,
+      "lift_delay": 2,
+      "nonzero_orbits": 8,
+      "tournament_exponent": 4,
+      "length_histogram": {
+        "1": 8
+      }
+    },
+    {
+      "a": 4,
+      "p": 3,
+      "k": 2,
+      "split": false,
+      "pi": 8,
+      "odd_order": 1,
+      "lift_delay": 2,
+      "nonzero_orbits": 80,
+      "tournament_exponent": 40,
+      "length_histogram": {
+        "1": 80
+      }
+    },
+    {
+      "a": 4,
+      "p": 3,
+      "k": 3,
+      "split": false,
+      "pi": 8,
+      "odd_order": 1,
+      "lift_delay": 2,
+      "nonzero_orbits": 296,
+      "tournament_exponent": 148,
+      "length_histogram": {
+        "3": 216,
+        "1": 80
+      }
+    },
+    {
+      "a": 4,
+      "p": 7,
+      "k": 1,
+      "split": false,
+      "pi": 16,
+      "odd_order": 1,
+      "lift_delay": 1,
+      "nonzero_orbits": 48,
+      "tournament_exponent": 24,
+      "length_histogram": {
+        "1": 48
+      }
+    },
+    {
+      "a": 4,
+      "p": 7,
+      "k": 2,
+      "split": false,
+      "pi": 16,
+      "odd_order": 1,
+      "lift_delay": 1,
+      "nonzero_orbits": 384,
+      "tournament_exponent": 192,
+      "length_histogram": {
+        "7": 336,
+        "1": 48
+      }
+    },
+    {
+      "a": 4,
+      "p": 7,
+      "k": 3,
+      "split": false,
+      "pi": 16,
+      "odd_order": 1,
+      "lift_delay": 1,
+      "nonzero_orbits": 2736,
+      "tournament_exponent": 1368,
+      "length_histogram": {
+        "49": 2352,
+        "7": 336,
+        "1": 48
+      }
+    },
+    {
+      "a": 4,
+      "p": 11,
+      "k": 1,
+      "split": true,
+      "pi": 10,
+      "odd_order": 5,
+      "lift_delay": 1,
+      "nonzero_orbits": 24,
+      "tournament_exponent": 12,
+      "length_histogram": {
+        "5": 24
+      }
+    },
+    {
+      "a": 4,
+      "p": 11,
+      "k": 2,
+      "split": true,
+      "pi": 10,
+      "odd_order": 5,
+      "lift_delay": 1,
+      "nonzero_orbits": 288,
+      "tournament_exponent": 144,
+      "length_histogram": {
+        "55": 264,
+        "5": 24
+      }
+    },
+    {
+      "a": 4,
+      "p": 13,
+      "k": 1,
+      "split": false,
+      "pi": 28,
+      "odd_order": 7,
+      "lift_delay": 1,
+      "nonzero_orbits": 24,
+      "tournament_exponent": 12,
+      "length_histogram": {
+        "7": 24
+      }
+    },
+    {
+      "a": 4,
+      "p": 13,
+      "k": 2,
+      "split": false,
+      "pi": 28,
+      "odd_order": 7,
+      "lift_delay": 1,
+      "nonzero_orbits": 336,
+      "tournament_exponent": 168,
+      "length_histogram": {
+        "91": 312,
+        "7": 24
+      }
+    },
+    {
+      "a": 4,
+      "p": 17,
+      "k": 1,
+      "split": false,
+      "pi": 12,
+      "odd_order": 3,
+      "lift_delay": 1,
+      "nonzero_orbits": 96,
+      "tournament_exponent": 48,
+      "length_histogram": {
+        "3": 96
+      }
+    },
+    {
+      "a": 4,
+      "p": 17,
+      "k": 2,
+      "split": false,
+      "pi": 12,
+      "odd_order": 3,
+      "lift_delay": 1,
+      "nonzero_orbits": 1728,
+      "tournament_exponent": 864,
+      "length_histogram": {
+        "51": 1632,
+        "3": 96
+      }
+    },
+    {
+      "a": 4,
+      "p": 19,
+      "k": 1,
+      "split": true,
+      "pi": 6,
+      "odd_order": 3,
+      "lift_delay": 1,
+      "nonzero_orbits": 120,
+      "tournament_exponent": 60,
+      "length_histogram": {
+        "3": 120
+      }
+    },
+    {
+      "a": 4,
+      "p": 19,
+      "k": 2,
+      "split": true,
+      "pi": 6,
+      "odd_order": 3,
+      "lift_delay": 1,
+      "nonzero_orbits": 2400,
+      "tournament_exponent": 1200,
+      "length_histogram": {
+        "57": 2280,
+        "3": 120
+      }
+    },
+    {
+      "a": 2,
+      "p": 31,
+      "k": 2,
+      "split": true,
+      "pi": 30,
+      "odd_order": 15,
+      "lift_delay": 2,
+      "nonzero_orbits": 61568,
+      "tournament_exponent": 30784,
+      "length_histogram": {
+        "15": 61568
+      }
+    }
+  ],
+  "prime_controls": {
+    "non_generous": {
+      "p": 40487,
+      "least_primitive_root": 5,
+      "delay": 2
+    },
+    "wagstaff": [
+      {
+        "q": 3,
+        "prime": 3,
+        "order_2": 2,
+        "invariant_tournament_exponent": null
+      },
+      {
+        "q": 5,
+        "prime": 11,
+        "order_2": 10,
+        "invariant_tournament_exponent": 1
+      },
+      {
+        "q": 7,
+        "prime": 43,
+        "order_2": 14,
+        "invariant_tournament_exponent": 3
+      },
+      {
+        "q": 11,
+        "prime": 683,
+        "order_2": 22,
+        "invariant_tournament_exponent": 31
+      },
+      {
+        "q": 13,
+        "prime": 2731,
+        "order_2": 26,
+        "invariant_tournament_exponent": 105
+      },
+      {
+        "q": 17,
+        "prime": 43691,
+        "order_2": 34,
+        "invariant_tournament_exponent": 1285
+      },
+      {
+        "q": 19,
+        "prime": 174763,
+        "order_2": 38,
+        "invariant_tournament_exponent": 4599
+      }
+    ]
+  },
+  "total_ring_elements": 2442949
+}

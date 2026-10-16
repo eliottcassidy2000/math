@@ -1,0 +1,87 @@
+{
+  "status": "FINITE-EXACT controls, with general proofs in companion notes",
+  "repeat_controls": 4368,
+  "homogeneous_duality_controls": 5460,
+  "precision_controls": 5,
+  "doubling_only_hostiles": [
+    {
+      "k": 4,
+      "twice_abs_mean_sum": 410,
+      "mean_energy_over_X2": 10.260009765625,
+      "source_energy_over_X2": 10.58984375
+    },
+    {
+      "k": 5,
+      "twice_abs_mean_sum": 1686,
+      "mean_energy_over_X2": 21.687286376953125,
+      "source_energy_over_X2": 22.6083984375
+    },
+    {
+      "k": 6,
+      "twice_abs_mean_sum": 6762,
+      "mean_energy_over_X2": 43.60641860961914,
+      "source_energy_over_X2": 45.163330078125
+    },
+    {
+      "k": 7,
+      "twice_abs_mean_sum": 27222,
+      "mean_energy_over_X2": 88.33852815628052,
+      "source_energy_over_X2": 91.72515869140625
+    },
+    {
+      "k": 8,
+      "twice_abs_mean_sum": 108970,
+      "mean_energy_over_X2": 176.94325596094131,
+      "source_energy_over_X2": 183.4360809326172
+    },
+    {
+      "k": 9,
+      "twice_abs_mean_sum": 436566,
+      "mean_energy_over_X2": 355.0013012364507,
+      "source_energy_over_X2": 368.2631950378418
+    },
+    {
+      "k": 10,
+      "twice_abs_mean_sum": 1746602,
+      "mean_energy_over_X2": 710.2774797016755,
+      "source_energy_over_X2": 736.5226526260376
+    },
+    {
+      "k": 11,
+      "twice_abs_mean_sum": 6989142,
+      "mean_energy_over_X2": 1421.666992134531,
+      "source_energy_over_X2": 1474.434653520584
+    },
+    {
+      "k": 12,
+      "twice_abs_mean_sum": 27957930,
+      "mean_energy_over_X2": 2843.6110365324566,
+      "source_energy_over_X2": 2948.8683308959007
+    },
+    {
+      "k": 13,
+      "twice_abs_mean_sum": 111842646,
+      "mean_energy_over_X2": 5688.3334147102305,
+      "source_energy_over_X2": 5899.125645503402
+    },
+    {
+      "k": 14,
+      "twice_abs_mean_sum": 447376042,
+      "mean_energy_over_X2": 11376.944425796055,
+      "source_energy_over_X2": 11798.251036722213
+    },
+    {
+      "k": 15,
+      "twice_abs_mean_sum": 1789547862,
+      "mean_energy_over_X2": 22755.000020344844,
+      "source_energy_over_X2": 23597.89098097477
+    },
+    {
+      "k": 16,
+      "twice_abs_mean_sum": 7158213290,
+      "mean_energy_over_X2": 45510.27777311545,
+      "source_energy_over_X2": 47195.78189583006
+    }
+  ],
+  "gijswijt_first_four": 220
+}

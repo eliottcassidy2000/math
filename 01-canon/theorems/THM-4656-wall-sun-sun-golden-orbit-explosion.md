@@ -13,12 +13,15 @@ status: >
   cases (a = 1, 2, 3), including the metallic Wall-Sun-Sun primes p = 13, 31 (a = 2), where the jump is observed; audit E's
   independent Burnside counts (76 cases plus p = 191, 241, 643, 1546463); the golden-rigid list for p < 10^6. Audited
   (audit E, MISTAKE-615).
+  Extension 2026-10-15: the formerly FINITE-EXACT full split-ring remark is PROVED at every p^k, together with the inert
+  all-depth count, by Theorem U1 in unit_lift_clock_20261015a.md; 61 full-ring/Burnside checks cover 2,442,949 elements.
 source: mac-mini-2026-10-14-tourn
 depends_on: [THM-4644 (Fermat and Wieferich primes as circulant-tournament phenomena, opus S33), Wall 1960, Bragman-Rowland 2022, McIntosh-Roettger 2007]
 verification:
   - 04-computation/experiments/wall_sun_sun_20261014/wss_orbits.py (+ .out)
   - 04-computation/experiments/wall_sun_sun_20261014/golden_fermat_check.py (+ .out)
   - 04-computation/experiments/audit_E_20261014/wss_audit.py, golden_rigidity_audit.gp, golden_paley_fpr.py, wss_fullring_split.py (+ .out)
+  - 04-computation/experiments/unit_lift_clock_20261015a.py (+ 05-knowledge/results/unit_lift_clock_20261015a.json)
 note: 05-knowledge/results/strong_tournament_balance_golden_rigidity_20261014.md
 related: [THM-4644, THM-4631, THM-4641 (Wilson / {2,4,8} / Fermat dictionary), HYP-9278 (S35: rigidity circuits), THM-4657 (opus S36, ceded to this theorem; independent confirmation at 40 split pairs)]
 ---
@@ -47,7 +50,7 @@ related: [THM-4644, THM-4631, THM-4641 (Wilson / {2,4,8} / Fermat dictionary), H
 
    So the exponent jumps by the factor `(p² + 1)/(p + 1) ≈ p` exactly at Wall–Sun–Sun-type primes. This mirrors THM-4644's factor `(p + 1)/2` at Wieferich primes.
 
-   *Remark (audit E, FINITE-EXACT; not proved here).* For split primes the same orbit count `(p² − 1)(p^(2−ε) + 1)/π'` also holds on the full ring `Z[μ]/(p²) ≅ (Z/p²)²`, with no orbit fixed by negation. It was checked for 81 split cases with `p < 200` and at the split Wall–Sun–Sun-type primes 31, 191, 643 and 1546463 (`wss_fullring_split.out`).
+   *Full-ring extension (PROVED, 2026-10-15).* For split primes the same orbit count `(p² − 1)(p^(2−ε) + 1)/π'` holds on the full ring `Z[μ]/(p²) ≅ (Z/p²)²`, with no orbit fixed by negation. This was previously only FINITE-EXACT here (audit E: 81 split cases with `p < 200`, and split exceptions 31, 191, 643, 1546463). [The all-depth proof, Theorem U1](../../05-knowledge/results/unit_lift_clock_20261015a.md), supplies the missing zero-divisor argument: the odd-order generator has norm one, so its two split components are reciprocal and every `g^d-1` has equal component valuations. The same proof gives all `p^k` orbit counts in both split and inert rings, with lift-delay coordinate `h=v_p(mu^pi-1)`. Its independent full-ring/Burnside census covers 61 cases and 2,442,949 elements.
 3. **(Golden rigidity.)** Let `p ∤ 10`. The following are equivalent:
    - every subgroup `1 ≠ H <= ⟨φ⟩ ⊂ R_1^*` contains `−1`, so no Cayley tournament on `(R_1, +)` is invariant under a nontrivial power of `φ`;
    - `π(p)` is a power of 2;
