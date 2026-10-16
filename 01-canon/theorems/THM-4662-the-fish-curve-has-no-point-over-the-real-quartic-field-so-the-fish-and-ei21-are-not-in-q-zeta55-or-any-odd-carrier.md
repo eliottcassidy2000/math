@@ -44,6 +44,11 @@ The descent map is `P -> (x - 0, x - 9)` modulo squares (with the usual values a
 4. Consequently the Hochberg-O'Donnell fish (23 vertices) and the Exoo-Ismailescu graph EI21 (21 vertices) have no
    injective unit-edge placement in `L = Q(zeta55)`, and none in any conjugation-stable field `M ⊇ K` with `[M:K]` odd,
    in particular in `K' = K(theta)` and `L' = L(theta)`, `2 theta^3 + 2 theta^2 - 2 theta - 1 = 0`.
+5. **(A forbidden nine-vertex configuration.)** Let `Gamma_9` be the graph on `h, a, b, c, d, w_ab, w_ac, w_bd, w_cd` with
+   the 14 edges `h-a, h-b, h-c, h-d`, `a-w_ab, b-w_ab, a-w_ac, c-w_ac, b-w_bd, d-w_bd, c-w_cd, d-w_cd`, `w_ab-w_cd`,
+   `w_ac-w_bd` (four rhombi at the hub `h` and two closing edges). No unit-distance graph containing `Gamma_9` (as an
+   injective, not necessarily induced subgraph) has a placement in `Q(zeta55)` or in any field `M` as in 4. `Gamma_9`
+   occurs in EI21 (hub 15) and EI19 (hub 12); it is realizable in the plane (a one-parameter family).
 
 ## Proof
 
@@ -72,7 +77,10 @@ coefficients `(0, 1, *, 1)` and one factor `delta`. The second component then ne
 
 **4.** A fish placement in `M` gives a point of `C3` over `M^+` (fish note, equations (1)), and so does an EI21 placement
 (THM-4661 4(c)). Since `[M^+ : F_4] = [M : K]` is odd (respectively `[L^+ : F_4] = 5`), the degree-eight-divisor argument of
-THM-4661 4(b) gives a point of `C3` over `F_4`, which does not exist. ∎
+THM-4661 4(b) gives a point of `C3` over `F_4`, which does not exist. **5.** The proof of THM-4661 4(c) uses only the
+nine vertices and fourteen edges of `Gamma_9`: the four rhombi at the hub (non-degenerate because the vertices are
+distinct) give the four sums, the closing edges give `|P|^2 + |Q|^2 = 1` and `P ⊥ Q`, and `0 < X = |a - d|^2 < 1` because
+`a != d` and `b != c`. So a placement of `Gamma_9` gives a point of `C3` over `M^+`, and 4 applies. ∎
 
 ## Remarks
 

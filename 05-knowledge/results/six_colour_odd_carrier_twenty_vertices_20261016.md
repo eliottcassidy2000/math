@@ -145,7 +145,9 @@ A full two-descent over `Q(sqrt5)` gives two-Selmer groups of orders 4 and 16. E
 `Q(sqrt5)`, and the Selmer group is reproduced with a second sampling seed. Consequence: **the fish and EI21 have no
 placement in `Q(zeta55)` and none in any conjugation-stable odd-degree carrier over `K`**, the cubic carriers included.
 Among the four smallest known triangle-free four-chromatic unit-distance graphs only EI17, which is rigid, survives,
-and it is excluded from `L` only numerically.
+and it is excluded from `L` only numerically. More generally, THM-4662 statement 5 forbids the nine-vertex hub
+configuration `Gamma_9` itself (four rhombi at one vertex plus two closing edges) in `Q(zeta55)` and in every odd carrier
+over `K`. Any four-chromatic exterior these fields could carry must avoid it.
 
 A general remark explains the pattern: any graph that can be built from one edge by repeatedly adding a vertex with
 two placed neighbours lies, by (I1) applied step by step, in the smallest field containing that edge. So an
