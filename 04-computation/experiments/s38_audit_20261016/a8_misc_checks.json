@@ -1,0 +1,63 @@
+{
+ "grid_old_equals_new": true,
+ "eval_grid_equals_prediction_grid": true,
+ "residue_stability_by_band": {
+  "0.5-0.6": {
+   "n": 72,
+   "median_rel_change_38_40": 0.11747756765713543,
+   "frac_change_below_10pct": 0.4166666666666667,
+   "median_rel_change_36_38": 0.148752012102973
+  },
+  "0.6-0.7": {
+   "n": 61,
+   "median_rel_change_38_40": 0.03110974824346443,
+   "frac_change_below_10pct": 0.8852459016393442,
+   "median_rel_change_36_38": 0.03226151330452066
+  },
+  "0.7-0.8": {
+   "n": 53,
+   "median_rel_change_38_40": 0.0059743168572829386,
+   "frac_change_below_10pct": 1.0,
+   "median_rel_change_36_38": 0.008635958666565932
+  },
+  "0.8-0.9": {
+   "n": 46,
+   "median_rel_change_38_40": 0.0011691572316290658,
+   "frac_change_below_10pct": 1.0,
+   "median_rel_change_36_38": 0.0025614816697204033
+  },
+  "0.9-0.98": {
+   "n": 40,
+   "median_rel_change_38_40": 0.0005380638632578352,
+   "frac_change_below_10pct": 1.0,
+   "median_rel_change_36_38": 0.0008540062880171349
+  },
+  "0.98-1.0": {
+   "n": 23,
+   "median_rel_change_38_40": 0.0002548586201014071,
+   "frac_change_below_10pct": 1.0,
+   "median_rel_change_36_38": 0.0004541084548422818
+  }
+ },
+ "largest_abs_rhat_history": [
+  [
+   10.72470747400134,
+   10.921529736133168,
+   11.052297865696104
+  ],
+  [
+   0.5019235440270358,
+   16556.2218838435
+  ]
+ ],
+ "shift_far_cases": [
+  [
+   0.5000625701207386,
+   13583.973607714872,
+   44.66561349522851
+  ]
+ ],
+ "alias_detuning_cycles_per_octave_leading": 0.0038568526141137577,
+ "alias_phase_drift_2p22_2p40_degrees": 24.99240493945715,
+ "alias_phase_drift_2p40_2p42_degrees": 2.7769338821619054
+}

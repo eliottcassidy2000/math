@@ -1,0 +1,26 @@
+e_S_from_classsums True
+e_C3_from_classsums True
+e_H_from_classsums_equals_chained_H True
+n_dense_points 30632
+a_all_S37_points_in_dense_grid True
+a_classsums_equal True
+a_H_equal True
+a_preH1_equal True
+a_preH2_equal True
+a_n_shared 1920
+b_octave_sums_equal True
+b_S_H_2p40 [989143994, -55691, 989143994, -55691]
+c_shapes [[8388608, 2], [8388608, 2]]
+c_block0_dense 0
+c_rows_differing 0
+c_moments_identical True
+c_sha256_dense40_moments_array 1344f4975f716d0522934c72eb97184d65cbd457974671c375575c9557ac5c18
+c_sha256_s37_moments_array 1344f4975f716d0522934c72eb97184d65cbd457974671c375575c9557ac5c18
+c_sum_t_plus_tN 989143994
+d_state_S_at_2k_from_counts [989143994, 989143994]
+d_state_H_at_2k_from_counts [-55691, -55691]
+d_state_H_last_from_counts [-55690, -55690]
+d_state_S_equals_moment_total True
+d_sumH_below [226274425648612000, 226274425648612000, True]
+d_sumH2_below [95362207923097871535066, 95362207923097871535066, True]
+d_last_grid_point 1098767618497

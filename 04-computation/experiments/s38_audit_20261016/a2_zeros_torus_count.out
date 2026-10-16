@@ -1,0 +1,7 @@
+torus enumeration: 295 zeros with 1/2 < Re < 1, 0 < Im < 20000; psi monotone True; min margin 4.617e-05; max Newton correction 7.28e-12
+JSON list: 295 zeros; max distance JSON -> torus 5.59e-12; torus -> JSON 5.59e-12
+Lemma A: min |D'| over sigma in [1/2, 1] = [0.14384103622589045, 1.0] (kappa/2 = 0.14384103622589045 ); over zeros listed: 0.1438415129514957 ; inf over 0 <= Re <= 3: [0.13081203594113697, 2.0] ; feasible Re range [-0.3645999999999999, 3.0]
+Lemma C: zeros with Im < 20000: 516 in [1/4, 1), 1291 in (2, 3); max per unit height 2; min gap of Im in (1/2,1): 44.506, in [1/4,3]: 0.0018
+zeros with Re < 0.502: [(np.float64(0.500806), np.float64(1527.9)), (np.float64(0.501179), np.float64(4500.14)), (np.float64(0.500434), np.float64(7555.93)), (np.float64(0.501551), np.float64(10528.18)), (np.float64(0.500063), np.float64(13583.97)), (np.float64(0.501924), np.float64(16556.22))]
+min |D(1/2 + it)| and multiplier sqrt(3/2)/(3|D|) near them: [(1527.895, '3.361e-04', 1215.0), (4500.144, '4.910e-04', 831.0), (7555.935, '1.811e-04', 2254.0), (10528.183, '6.459e-04', 632.0), (13583.974, '2.609e-05', 15645.0), (16556.222, '8.008e-04', 510.0)]
+shift by 2 pi 665/ln 2 = 6028.0390: median distance to the nearest zero 0.00061, max 44.6656, 207 zeros

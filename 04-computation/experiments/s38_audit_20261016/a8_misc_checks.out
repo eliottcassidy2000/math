@@ -1,0 +1,11 @@
+(1) grid unchanged by the post-registration edit: True ; equals the prediction grid: True
+(2) relative change of r_hat between N = 2^38 and 2^40 (and 2^36 -> 2^38), by band of Re rho:
+    0.5-0.6 {'n': 72, 'median_rel_change_38_40': 0.11747756765713543, 'frac_change_below_10pct': 0.4166666666666667, 'median_rel_change_36_38': 0.148752012102973}
+    0.6-0.7 {'n': 61, 'median_rel_change_38_40': 0.03110974824346443, 'frac_change_below_10pct': 0.8852459016393442, 'median_rel_change_36_38': 0.03226151330452066}
+    0.7-0.8 {'n': 53, 'median_rel_change_38_40': 0.0059743168572829386, 'frac_change_below_10pct': 1.0, 'median_rel_change_36_38': 0.008635958666565932}
+    0.8-0.9 {'n': 46, 'median_rel_change_38_40': 0.0011691572316290658, 'frac_change_below_10pct': 1.0, 'median_rel_change_36_38': 0.0025614816697204033}
+    0.9-0.98 {'n': 40, 'median_rel_change_38_40': 0.0005380638632578352, 'frac_change_below_10pct': 1.0, 'median_rel_change_36_38': 0.0008540062880171349}
+    0.98-1.0 {'n': 23, 'median_rel_change_38_40': 0.0002548586201014071, 'frac_change_below_10pct': 1.0, 'median_rel_change_36_38': 0.0004541084548422818}
+    largest |r_hat| (at (0.5019235440270358+16556.2218838435j) ): |r_hat| at 2^36, 2^38, 2^40 = [10.72470747400134, 10.921529736133168, 11.052297865696104]
+(3) zeros whose shift by 2 pi 665/ln 2 is not within 0.01 of a zero in 1/2 < Re < 1: [[0.5000625701207386, 13583.973607714872, 44.66561349522851]]
+(4) k = 1 alias pairs on the 1024 grid: detuning 0.00386 cycles/octave (leading order): 25.0 deg over [2^22, 2^40), 2.8 deg over [2^40, 2^42)

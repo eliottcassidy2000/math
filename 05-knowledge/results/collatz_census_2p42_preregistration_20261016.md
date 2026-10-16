@@ -46,3 +46,15 @@ reported as such.
   block increments, two bit-level discrepancies) and was discarded; the rerun, with per-block invariants, has 0
   inconsistent blocks, gives `S(2^40) = 989143994`, `H(2^40) = −55691` (as the S37 census) and agrees exactly with the
   S37 64-point census at all 1,920 shared grid points.
+
+## Errata (added after the S38 audit, before the evaluation; criteria and predictions unchanged)
+
+- The aliasing note above overstates the scope. A partner exists only when the density makes `2P log2 3` close to an
+  even integer; 1024 is such a density (`1024 log2 3 = 1623.0016`), 1000 is not. The aliasing is approximate (common
+  detuning 0.00386 cycles per octave). THM-4659 statement 5 is corrected accordingly.
+- "the ten largest low modes" lists five.
+- `Q2_bound` and `Q6_bound` were written into the prediction JSON by hand from the bounds stated in this file; the
+  committed prediction script does not write them. The evaluation script reads them from the JSON.
+- Run B was first launched at 11:43:48 and relaunched at 14:20:09 after the session restart, with the census script's
+  only post-registration edit (the density argument parsed as a float). The evaluation grid is provably unchanged
+  (integer density 1024, same rounding).

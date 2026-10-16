@@ -1,0 +1,19 @@
+{
+ "kernel_tests": 1796,
+ "kernel_tests_with_values_beyond_2p64": 943,
+ "kernel_mismatches": 0,
+ "baseline_inconsistent_blocks": 0,
+ "fault_injection": {
+  "cnt": "20/20 detected",
+  "tott": "20/20 detected",
+  "mom0": "20/20 detected",
+  "mom1": "0/20 detected",
+  "hend": "20/20 detected",
+  "hs1": "0/20 detected",
+  "hs2": "0/20 detected"
+ },
+ "resume_grid_values_equal_fresh": true,
+ "resume_final_state_equal_fresh": true,
+ "resumed_equal_independent_census": true,
+ "resumed_moments_equal_fresh_rows": true
+}
