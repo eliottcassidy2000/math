@@ -1,0 +1,9 @@
+[    1.1 s] loaded parity bits from C:/Users/Eliott/AppData/Local/Temp/claude/C--Users-Eliott-Documents-GitHub-ephrepos-math/a46eae61-4398-4ab0-8e04-bd90318942db/scratchpad/bits34.npy
+[    1.1 s] validation of 4699 n against big-int trajectories: 0 mismatches
+[    5.0 s] prefix tables
+[    5.2 s] S(2^34) = 24953018, H(2^34) = 26869
+[   17.6 s] octave energies
+[   27.9 s] Delta statistics to k = 30
+[   44.3 s] grid samples (1537 points, 5373 pieces)
+[   44.3 s] grid/table consistency failures: 0
+[   44.6 s] wrote a2_census34.json, a2_census34.npz

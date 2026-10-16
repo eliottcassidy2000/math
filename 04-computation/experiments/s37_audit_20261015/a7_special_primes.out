@@ -1,0 +1,15 @@
+[   7.6 s] least primitive roots for 664578 primes 3 <= p < 10^7
+[  16.5 s] 1. non-generous primes 2 < p < 10^7: [(40487, 5)]
+[  16.5 s]    p = 6692367337: p - 1 = {2: 3, 3: 1, 278848639: 1}, least primitive root 5, g^(p-1) mod p^2 == 1: True, prime: True
+[  16.5 s]    p = 40487: p - 1 = {2: 1, 31: 1, 653: 1}; 5^(p-1) mod p^2 = 1
+[  17.6 s] 2. orbit law, all primitive-root lifts mod p^2 for 5 <= p <= 61: 7746 bases (186 with g^(p-1) = 1 mod p^2), 0 failures
+[  17.6 s]    6692367337: (p-1)/d' = 8, non-generous E = (p+1)(p-1)/(2d') = 26769469352
+[  17.6 s] 3. Woodall: first n steps odd and T^n(W_n) = n 3^n - 1 (n <= 80): True; initial odd run length = n + v2(n) for all 2 <= n <= 80: True; examples (n, run): [(1, 0), (2, 3), (3, 3), (4, 6), (5, 5), (6, 7), (7, 7), (8, 11)]
+[  17.6 s]    Cullen: (OE)^j reaches 3^j n 2^(n-2j) + 1 for all 2j <= n (n <= 80): True
+[  17.6 s] 4. Leyland primes x^y + y^x <= 10^12 (2 <= x <= y): [(17, 2, 3), (593, 2, 9), (32993, 2, 15), (2097593, 2, 21), (8589935681, 2, 33)]
+[  17.6 s]    2^y + y^2 prime, y < 400: [1, 3, 9, 15, 21, 33]; all y = 1 or 3 mod 6: True
+[  27.0 s] 5. primes 5 <= p < 2000 with all supersingular j F_p-rational (point counting): [5, 7, 11, 13, 17, 19, 23, 29, 31, 41, 47, 59, 71]
+[  27.0 s]    #F_p-rational ss j = I(p) (p = 7 mod 8) or (2/3) I(p) (p = 3 mod 8), all p = 3 mod 4 < 2000: True; saturating p = 3 mod 4: [7, 11, 19, 23, 31, 47, 59, 71]
+[  27.2 s] 6. Stern primes < 10^6: [2, 3, 17, 137, 227, 977, 1187, 1493]; odd composites < 10^6 not q + 2a^2: [5777, 5993]
+[  29.7 s] 7. Wagstaff primes (2^p+1)/3, prime p < 1300 (BPSW): [3, 5, 7, 11, 13, 17, 19, 23, 31, 43, 61, 79, 101, 127, 167, 191, 199, 313, 347, 701]
+[  29.7 s]    first odd ancestors (2^m+1)/3 of 1 under 3x-1 with odd m that are NOT Wagstaff numbers (m composite), m < 30: [(1, 1), (9, 171), (15, 10923), (21, 699051), (25, 11184811), (27, 44739243)]

@@ -1,0 +1,4 @@
+parity bits to 2^37: 591.5 s; 245 words recomputed exactly
+S(2^37) = -152262364, H(2^37) = -67763; S(2^34) = 24953018 (24953018), H(2^34) = 26869 (26869)
+first 131072 rows equal to the stored 2^34 moments: True
+wrote 05-knowledge/results/collatz_boundary_moments_2p37_20261015.npz, 05-knowledge/results/collatz_boundary_moments_2p37_20261015.json; total 758.3 s

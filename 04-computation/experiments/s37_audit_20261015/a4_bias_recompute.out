@@ -1,0 +1,68 @@
+== octaves 14..32 (session range, grid <= 2^33): 363 channels; |t| > 5: 75, |t| > 8: 20
+   vs session JSON (mean, t, drift): max abs difference 0.00e+00; positive-octave counts max diff 0
+   lag-1 autocorrelation of octave means across channels: median +0.632, mean +0.592, quartiles +0.488 / +0.722
+   pooled rho = 0.632 -> n_eff = 4.3; corrected |t| > 5: 7, > 3.5: 23
+   iid null: P(|T_18| > 5) = 9.28e-05 -> expected 0.034 of 363; with n_eff: P(|T_3.3| > 5/sqrt(n/n_eff) = 2.38) = 9.04e-02 -> expected 32.82
+   dependence: sibling triples sum to 0 identically; free channels 242 of 363
+   channel, mean, sd, t, pos, drift, rel drift %/octave, drift t, lag-1 acf of octave means
+   H_(1,  1) -0.483 0.448   -4.7  2 +0.0369   +7.6  +2.2 +0.71
+   H_(1,  2) +0.305 0.212   +6.3 17 -0.0000   -0.0  -0.0 +0.36
+   H_(2,  3) -1.188 0.788   -6.6  0 +0.1084   +9.1  +5.0 +0.84
+   H_(2,  6) +1.094 0.845   +5.6 17 -0.0892   -8.2  -3.0 +0.86
+   H_(3,  9) +2.028 0.610  +14.5 19 +0.0503   +2.5  +2.2 +0.74
+   H_(3, 16) -1.218 0.529  -10.0  0 +0.0557   +4.6  +3.0 +0.35
+   H_(3, 18) -2.440 0.568  -18.7  0 -0.0385   -1.6  -1.7 +0.72
+   H_(4, 22) +1.052 0.444  +10.3 19 +0.0065   +0.6  +0.3 +0.38
+   H_(4, 51) -1.508 0.625  -10.5  0 +0.0727   +4.8  +3.6 +0.65
+   H_(4, 55) -1.409 0.568  -10.8  1 -0.0271   -1.9  -1.1 +0.63
+   H_(5, 59) +0.919 0.285  +14.1 19 +0.0024   +0.3  +0.2 +0.14
+   H_(5, 78) +1.547 0.461  +14.6 19 -0.0382   -2.5  -2.2 +0.34
+   H_(5, 79) +1.010 0.346  +12.7 19 -0.0231   -2.3  -1.7 +0.48
+   H_(5,155) -1.421 0.425  -14.6  0 -0.0047   -0.3  -0.3 +0.22
+   among the 20 channels with |t| > 8: relative drift > 2.5%/octave in 8: [('H_(3,16)', np.float64(4.6)), ('H_(4,21)', np.float64(-5.5)), ('H_(4,49)', np.float64(3.1)), ('H_(4,51)', np.float64(4.8)), ('H_(5,77)', np.float64(-3.2)), ('H_(5,134)', np.float64(-6.3)), ('H_(5,160)', np.float64(-4.3)), ('H_(5,221)', np.float64(4.0))]
+   among them drifting toward zero: 12; drift |t| > 3: ['H_(3,16)', 'H_(4,21)', 'H_(4,51)', 'H_(5,134)']
+   HYP-9282 table rows with relative drift > 2.5%/octave: [('H_(1,1)', np.float64(7.6)), ('H_(2,3)', np.float64(9.1)), ('H_(2,6)', np.float64(-8.2)), ('H_(3,16)', np.float64(4.6)), ('H_(4,51)', np.float64(4.8))]
+   H_(3,9) > 0 and H_(3,18) < 0 in every octave: True
+   D_0: mean -0.3715, t -5.9, positive 2/19, drift +0.0174, lag-1 acf +0.67
+   D_1: mean -0.6210, t -6.3, positive 0/19, drift +0.0538, lag-1 acf +0.87
+   D_2: mean +0.7021, t +17.4, positive 19/19, drift +0.0140, lag-1 acf +0.75
+   D_3: mean -0.0184, t -0.8, positive 9/19, drift -0.0063, lag-1 acf +0.81
+== octaves 14..33 (audit extension to 2^34): 363 channels; |t| > 5: 75, |t| > 8: 18
+   lag-1 autocorrelation of octave means across channels: median +0.644, mean +0.601, quartiles +0.489 / +0.725
+   pooled rho = 0.644 -> n_eff = 4.3; corrected |t| > 5: 7, > 3.5: 23
+   iid null: P(|T_19| > 5) = 7.95e-05 -> expected 0.029 of 363; with n_eff: P(|T_3.3| > 5/sqrt(n/n_eff) = 2.33) = 9.37e-02 -> expected 34.01
+   dependence: sibling triples sum to 0 identically; free channels 242 of 363
+   channel, mean, sd, t, pos, drift, rel drift %/octave, drift t, lag-1 acf of octave means
+   H_(1,  1) -0.461 0.447   -4.6  2 +0.0378   +8.2  +2.5 +0.72
+   H_(1,  2) +0.296 0.211   +6.3 18 -0.0028   -1.0  -0.3 +0.34
+   H_(2,  3) -1.169 0.772   -6.8  0 +0.0985   +8.4  +4.9 +0.85
+   H_(2,  6) +1.087 0.823   +5.9 18 -0.0782   -7.2  -2.9 +0.86
+   H_(3,  9) +1.974 0.641  +13.8 20 +0.0277   +1.4  +1.1 +0.71
+   H_(3, 16) -1.138 0.626   -8.1  1 +0.0705   +6.2  +3.8 +0.45
+   H_(3, 18) -2.370 0.635  -16.7  0 -0.0131   -0.6  -0.5 +0.64
+   H_(4, 22) +0.983 0.531   +8.3 19 -0.0141   -1.4  -0.7 +0.40
+   H_(4, 51) -1.425 0.711   -9.0  1 +0.0859   +6.0  +4.3 +0.68
+   H_(4, 55) -1.400 0.554  -11.3  1 -0.0209   -1.5  -1.0 +0.64
+   H_(5, 59) +0.881 0.325  +12.1 20 -0.0087   -1.0  -0.7 +0.15
+   H_(5, 78) +1.533 0.453  +15.1 20 -0.0367   -2.4  -2.3 +0.40
+   H_(5, 79) +0.972 0.377  +11.5 20 -0.0305   -3.1  -2.3 +0.41
+   H_(5,155) -1.341 0.548  -10.9  1 +0.0190   +1.4  +0.9 +0.34
+   among the 18 channels with |t| > 8: relative drift > 2.5%/octave in 10: [('H_(3,16)', np.float64(6.2)), ('H_(4,21)', np.float64(-6.0)), ('H_(4,49)', np.float64(3.5)), ('H_(4,51)', np.float64(6.0)), ('H_(5,77)', np.float64(-3.9)), ('H_(5,79)', np.float64(-3.1)), ('H_(5,134)', np.float64(-5.9)), ('H_(5,160)', np.float64(-3.2)), ('H_(5,221)', np.float64(5.3)), ('H_(5,224)', np.float64(2.8))]
+   among them drifting toward zero: 13; drift |t| > 3: ['H_(3,16)', 'H_(4,21)', 'H_(4,51)', 'H_(5,134)', 'H_(5,221)']
+   HYP-9282 table rows with relative drift > 2.5%/octave: [('H_(1,1)', np.float64(8.2)), ('H_(2,3)', np.float64(8.4)), ('H_(2,6)', np.float64(-7.2)), ('H_(3,16)', np.float64(6.2)), ('H_(4,51)', np.float64(6.0)), ('H_(5,79)', np.float64(-3.1))]
+   H_(3,9) > 0 and H_(3,18) < 0 in every octave: True
+   D_0: mean -0.3567, t -5.8, positive 2/20, drift +0.0191, lag-1 acf +0.67
+   D_1: mean -0.6140, t -6.5, positive 0/20, drift +0.0481, lag-1 acf +0.87
+   D_2: mean +0.6826, t +15.9, positive 20/20, drift +0.0064, lag-1 acf +0.69
+   D_3: mean -0.0090, t -0.4, positive 10/20, drift -0.0027, lag-1 acf +0.79
+averaged refinement m_(1,r) vs -(m_(1,e(r)) + m_(2,o(r)))/sqrt(2), octaves 14..33:
+   r = 2: +0.296 vs +0.279
+   r = 1: -0.461 vs -0.490
+   r = 0: +0.165 vs +0.210
+point ACF of g_top (session): {'0.0156': 0.9818130518182699, '0.1250': 0.8502790983102667, '0.2500': 0.6864037325766239, '0.5000': 0.38840579831906336, '0.7500': 0.17583233029485976, '1.0000': 0.059495556354546064, '1.5000': 0.054113945574401, '2.0000': 0.00743688280470312, '2.5000': 0.08156241134267274, '3.0000': 0.08894585088385279, '4.0000': -0.21146792370586004}
+window-mean ACF at lag 1 octave (session analysis JSON, adjacent one-octave windows): +0.316
+implied correlation of adjacent octave means of g_top from its own point ACF: +0.279
+Mercator amplitude in S(N)/N^sigma0 (fit on u in [20,34]): 1.5478e-03 (this is 2|r/s0| ~ 2*0.177/240.25 = 1.4735e-03)
+   level 1: max channel Mercator amplitude 9.334e-08 = 6.03e-05 x (amplitude in S); a class share would be 0.333 x
+   level 2: max channel Mercator amplitude 1.209e-07 = 7.81e-05 x (amplitude in S); a class share would be 0.111 x
+   level 3: max channel Mercator amplitude 9.156e-08 = 5.92e-05 x (amplitude in S); a class share would be 0.037 x

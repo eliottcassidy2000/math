@@ -1,0 +1,10 @@
+certified blocks 65536 seconds 0.5
+certified blocks 98304 seconds 1.2
+(a, b) = (2, 0): 2|r| 2^(29(sigma-1)) in [0.3215, 0.3885]  nonzero: True
+(a, b) = (2, 0.25): 2|r| 2^(29(sigma-1)) in [0.3171, 0.3929]  nonzero: True
+(a, b) = (3, 0.5): 2|r| 2^(29(sigma-1)) in [0.3071, 0.4030]  nonzero: True
+(a, b) = (4, 1): 2|r| 2^(29(sigma-1)) in [0.2964, 0.4137]  nonzero: True
+(a, b) = (8, 2): 2|r| 2^(29(sigma-1)) in [0.2722, 0.4379]  nonzero: True
+(a, b) = (16, 4): 2|r| 2^(29(sigma-1)) in [0.2379, 0.4721]  nonzero: True
+(a, b) = (32, 8): 2|r| 2^(29(sigma-1)) in [0.1895, 0.5205]  nonzero: True
+(a, b) = (64, 16): 2|r| 2^(29(sigma-1)) in [0.1210, 0.5890]  nonzero: True

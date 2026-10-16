@@ -1,16 +1,20 @@
 ---
 id: THM-4658
-title: "Two-octave memory and 4-adic energy descent for the Collatz mod-3 discrepancy: H(4N) = H(N) + H_(2,2)(3N) - H_(2,8)(6N) exactly, so E_(4X) = 4E_X + 8C_X + 4D_X + O(X^(3/2)) and sqrt(E_(4X)) <= 2 sqrt(E_X) + 2 sqrt(D_X) + 4 sqrt(3X); the class-sum recursion C(A;N) = -C(A/2; floor(N/2)) - C((3A+1)/2; 3 ceil(N/2)) makes every power-law main term (density or excess) an eigen-distribution of a 3-adic transfer operator (up to a rank-one correction), whose two branches have squared L^2(Z_3)-norms summing to 4^(-sigma)(1 + 3^(2 sigma - 1)) - equal to 1 exactly on Re s = 1/2 and Re s = 1"
+title: "Two-octave memory and 4-adic energy descent for the Collatz mod-3 discrepancy: H(4N) = H(N) + H_(2,2)(3N) - H_(2,8)(6N) exactly, so E_(4X) = 4E_X + 8C_X + 4D_X + R_X with |R_X| <= 24 sqrt(X E_(4X)) + 48X and sqrt(E_(4X)) <= 2 sqrt(E_X) + 2 sqrt(D_X) + 4 sqrt(3X); the class-sum recursion C(A;N) = -C(A/2; floor(N/2)) - C((3A+1)/2; 3 ceil(N/2)) makes Haar measure an eigen-distribution of a 3-adic transfer operator exactly at the zeros of D, puts power-law excess main terms under a rank-one-modified fixed-point equation, and gives every halving eigenfunction (Dirichlet characters mod 3^q) an exact one-octave inheritance C_psi(N) = -psi(2) C_psi(floor(N/2)) + O_psi(N); the two operator branches have squared L^2(Z_3)-norms summing to 4^(-sigma)(1 + 3^(2 sigma - 1)), equal to 1 exactly at Re s = 1/2 and Re s = 1"
 status: >
   PROVED (elementary consequences of the exact refinement identity (2) of collatz_wavelet_energy_20261013d.md, here in
-  measure form). FINITE-EXACT control: the energy transport (2) checked on every octave 2^10..2^30 of an exact census
-  through 2^34 (agreement to 4 decimals; census reproduces S(2^34) = 24953018 and H(2^34) = 26869 of the repository's
-  independent 2^34 census). No bound on the actual Collatz discrepancy is claimed.
+  measure form). AUDITED 2026-10-15 (independent S37 referee, 04-computation/experiments/s37_audit_20261015/REPORT.md;
+  statement 4(a) repaired by clock_duality_oct15). FINITE-EXACT control: the energy transport of statement 3 checked
+  on every octave 2^10..2^30 of an exact census through 2^34 (identity exact; the remainder R_X is visible at the 4th
+  decimal for k = 10..13, 16 and below 1e-6 from k = 17); census reproduces S(2^34) = 24953018 and H(2^34) = 26869 of
+  the repository's independent 2^34 census. No bound on the actual Collatz discrepancy is claimed.
 source: opus-2026-10-15-S37
 depends_on: [collatz_wavelet_energy_20261013d.md (identity (2), renewal_shapes_oct11), collatz_amplitude_boundary_20261013c.md (Lemma B1, D(s))]
 verification:
   - 04-computation/experiments/collatz_octave_memory_census_20261015.py (output 05-knowledge/results/collatz_octave_memory_census_20261015.json/.npz/.out)
   - 04-computation/experiments/collatz_octave_memory_analysis_20261015.py (output collatz_octave_memory_analysis_20261015.json/.out)
+  - 04-computation/experiments/collatz_twisted_split_memory_20261015.py (statement 6 for the twisted splits D_j; output collatz_twisted_split_memory_20261015.json)
+  - 04-computation/experiments/s37_audit_20261015/a1_thm4658_identities.py (independent referee checks of statements 1-5)
 note: 05-knowledge/results/collatz_octave_memory_bias_energy_budgets_20261015.md
 related: [HYP-9282, HYP-9283, THM-4629, THM-4630, THM-4581]
 ---
@@ -61,6 +65,11 @@ related: [HYP-9282, HYP-9283, THM-4629, THM-4630, THM-4581]
    - Their norms are `2^(−σ)` and `3^(σ−1/2) 2^(−σ)` (`σ = Re ρ`), and their squared norms sum to `φ(σ) = 4^(−σ)(1 + 3^(2σ−1))`.
    - `φ` is strictly convex, `φ(σ) = 1` exactly at `σ = 1/2` and `σ = 1`, `φ < 1` on `(1/2, 1)` and `φ > 1` outside `[1/2, 1]`.
    - Re `σ = 1/2` is also the unique line on which the two branch norms are equal.
+6. **Character inheritance (halving sectors).** Let `φ` be a function on `Z` that depends only on `n` modulo `3^q` and satisfies `φ(2n) = λ φ(n)`; for example a Dirichlet character `ψ` modulo `3^q` with `λ = ψ(2)`, or the twisted split weight `φ_j(n) = [3^j ∥ n] χ(n/3^j)` with `χ` the nontrivial character modulo 3 and `λ = −1`. Put `C_φ(N) = Σ_(n<=N) φ(n) t(n)`. Then for every integer `N >= 0`,
+
+   `C_φ(N) = −λ C_φ(⌊N/2⌋) + O_φ(N)`,  `O_φ(N) = Σ_(n<=N, n odd) φ(n) t(n) = −Σ_(m <= 3⌈N/2⌉, m ≡ 2 (3)) φ((2m−1)/3) t(m)`.
+
+   In particular the twisted splits `D_j = C_(φ_j)` have positive one-octave memory, `D_j(N) = D_j(⌊N/2⌋) + O_j(N)`, while Haar-type sums (`λ = 1`, e.g. `S` and the untwisted multiples of `3^j`) alternate. Since `2` generates `(Z/3^q)^×`, the eigenfunctions of `n ↦ 2n` on the units modulo `3^q` are exactly the multiples of Dirichlet characters, and `λ = −1` occurs only for the character of order 2.
 
 ## Proof
 
@@ -86,17 +95,21 @@ related: [HYP-9282, HYP-9283, THM-4629, THM-4630, THM-4581]
 
 **5.** `f ↦ f(2·)` is measure-preserving and invertible on `Z_3`, hence unitary. For `V f(y) = 1_(y≡2) f((2y−1)/3)`, the substitution `z = (2y−1)/3` maps `2 + 3Z_3` bijectively onto `Z_3` with `dy = dz/3`, so `⟨Vf, Vg⟩ = ⟨f, g⟩/3`. Then `φ(σ) = 4^(−σ) + (9/4)^σ/3` is a sum of two exponentials, hence strictly convex, with `φ(1/2) = φ(1) = 1`. Equal norms means `3^(σ−1/2) = 1`. ∎
 
+**6.** The even sources `n = 2m <= N` give `φ(2m) t(2m) = −λ φ(m) t(m)` with `m <= ⌊N/2⌋`. The odd sources form `O_φ(N)`; the substitution `n = 2m − 1 ↦ j = 3m − 1` of statement 1 and `t(n) = −t(T(n))` give the second expression. For a character, `φ(2n) = ψ(2)φ(n)`. For `φ_j`, `3^j ∥ 2n` iff `3^j ∥ n`, and `χ(2n/3^j) = χ(2)χ(n/3^j) = −χ(n/3^j)`. A function on the cyclic group `(Z/3^q)^× = ⟨2⟩` with `φ(2n) = λφ(n)` is a character times a constant. ∎
+
 ## Remarks
 
 - **Readings.**
-  - Statement 2 is the "mean-current" transport: the octave mean of `H` at `4X` inherits the octave mean at `X` with weight 1/2 in `sqrt(N)`-normalized units, plus the level-2 increment.
-  - Statement 3 is a source-preserving energy rule in the sense of the break-clock note: it keeps the integer clock `N ↦ 4N, 3N, 6N` exactly.
-  - Statement 5 explains why a white-sign model of `t` is self-consistent exactly at the `sqrt(N)` scale. The variance budget of the two refinement branches balances on `Re s = 1/2`, while the density and Mercator modes sit on the other balanced line, `Re s = 1`.
+  - Statement 2 is the "mean-current" transport: the octave mean of `H` at `4X` inherits the octave mean at `X` with weight 1/2 in `sqrt(N)`-normalized units, plus the level-2 increment. Since `Δ(N) = H(4N) − H(N)` by definition, the empirical "cancelled memory" (two-octave regression slope 0.006) says only that the two-octave autocorrelation of the normalized profile is near zero. The new content is that `Δ` is an exact level-2 expression; clock_duality_oct15 writes the same increment as the annular source row `Δ(N) = Σ_(N<n<=4N) w_n t(n)`.
+  - Statement 3 is a source-preserving energy rule in the sense of the break-clock note: it keeps the integer clock `N ↦ 4N, 3N, 6N` exactly. It is the two-octave analogue of the one-octave energy rule (3) of the wavelet note (renewal_shapes_oct11).
+  - Statement 5 is the variance recursion for independent white-sign branches: if the branch contributions were uncorrelated, `sqrt(N)` would be the self-consistent scale. It is not an operator-norm statement. The exact level-6 norms of `P*_ρ` are 1.398, 1.362, 1.352 at `ρ = 1/2, 3/4, 1` (about 1.34 on mean-zero functions; S37 referee, `a9_transfer_operator_norms.py`), so "critical line" is a heuristic label. The Mercator zeros sit just below `Re s = 1` (`s_0 ≈ 0.99821 + 240.248i`).
+  - Statement 6 is the halving half of the recursion in character coordinates. Averaged over octaves, any exact relation `F(N) = a F(⌊N/2⌋) + G(N)` gives `(1 − a 2^(−1/2)) ⟨F/sqrt(N)⟩ = ⟨G/sqrt(N)⟩` up to end effects of relative size about one over the number of octaves, for every sequence whatsoever. So the ratio `⟨D_j⟩/⟨O_j⟩ ≈ 2 + sqrt(2)` (measured 3.12, 3.48, 3.36 for `j = 0, 1, 2`) and the octave-averaged fixed-point "consistency" of statement 4(b) (residuals 6-12% of the bias size, below their standard errors, levels 1-4) are code checks, not evidence of main terms. The same inheritance holds verbatim for random signs with `t(2m) = −t(m)` (the halving null of the S37 note). This is why channel octave means carry strong octave-to-octave memory (pooled lag-one correlation about 0.65 at every level).
 - **What it does not give.**
   - Correction (clock_duality_oct15, 2026-10-15): statement 4(a)'s pre-audit scalar-to-Haar inference omitted `H(N)=o(N^σ)`. The amended implication retains that assumption; the Haar eigenvalue computation and statement 4(b) remain unchanged. The correction mechanism is recorded in `01-canon/MISTAKES.md`.
   - The branch squared-norm sum in statement 5 is not the norm of their sum. A mean-zero depth-two cylinder function gives norm expansion at real `ρ=3/4`, despite `φ(3/4)<1`; see [the exact incoming-work audit](../../05-knowledge/results/collatz_incoming_audit_20261015b.md). No full-operator contraction is asserted.
-  - Statement 3 transfers the energy problem one level down; it does not close it. The census shows `Δ(N)` strongly correlated with `H(N)`: the cross term has `|κ|` up to 0.97, and the two-octave memory is almost exactly cancelled.
-  - Statement 4 is conditional on main terms existing. HYP-9282 records evidence for nonzero real `sqrt(N)` main terms on many residue classes; by statement 4(b) their coefficients would be a fixed point of `P̃_(1/2)`.
+  - Statement 3 transfers the energy problem one level down; it does not close it. The census shows `Δ(N)` strongly aligned with `H(N)`: the uncentred cosine `κ = C_X/sqrt(E_X D_X)` ranges over −0.97..+0.91 on 2^14..2^30 (the wavelet note reported −0.949..+0.936 for its one-octave cross terms).
+  - Statement 4 is conditional on main terms of order exactly `N^σ` with `o(N^σ)` errors. HYP-9282 proposed real `sqrt(N)` main terms on many residue classes; it failed its pre-registered out-of-sample test (S37 census to 2^37) and is REFUTED. A model "main term plus mean-zero fluctuation of the same order" would in any case need a logarithmic-mean version of 4(b), which is not stated here.
 - **Credit.**
   - The channel identity (2) and the wavelet hierarchy are the renewal_shapes_oct11 notes'.
-  - The clock-mesh theorems M1/M2 and the terminal-controller theorems T1/T2 of clock_duality_oct15 (`collatz_clock_mesh_20261015a.md`, `collatz_terminal_mesh_20261015a.md`) pay the refinement energy; this theorem addresses the coarse/mean side.
+  - The clock-mesh theorems M1/M2 of clock_duality_oct15 (`collatz_clock_mesh_20261015a.md`) pay the refinement energy. Its terminal-controller theorems T1/T2 (`collatz_terminal_mesh_20261015a.md`) are coarse-mean certificates. This theorem addresses the coarse/mean side through the exact transport.
+  - The repair of statement 4(a) and the branch-cross-term hostile are clock_duality_oct15's (`collatz_incoming_audit_20261015b.md`); the independent S37 referee found the same gap.

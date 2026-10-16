@@ -1,0 +1,12 @@
+channels (of 363) whose 19 octave means 14..32 all have one sign: 27
+  AR(1) zero-mean null, rho = 0.00: P(19 same-sign octaves) = 2.50e-06 -> expected 0.00 of 363 (242 free channels: 0.00)
+  AR(1) zero-mean null, rho = 0.30: P(19 same-sign octaves) = 1.02e-04 -> expected 0.04 of 363 (242 free channels: 0.02)
+  AR(1) zero-mean null, rho = 0.50: P(19 same-sign octaves) = 1.25e-03 -> expected 0.45 of 363 (242 free channels: 0.30)
+  AR(1) zero-mean null, rho = 0.63: P(19 same-sign octaves) = 6.09e-03 -> expected 2.21 of 363 (242 free channels: 1.47)
+  AR(1) zero-mean null, rho = 0.75: P(19 same-sign octaves) = 2.57e-02 -> expected 9.34 of 363 (242 free channels: 6.23)
+pre-registered channels: octave means at octaves 31, 32 (session data) and 33 (first octave beyond the session mod-243 census; inside its level-1/2 census range):
+  H_(3,18): -2.263 -1.890 | -1.042  predicted sign -: kept
+  H_(3,9): +2.025 +1.504 | +0.953  predicted sign +: kept
+  H_(5,155): -1.358 -0.681 | +0.186  predicted sign -: FLIPPED
+  H_(5,78): +0.840 +0.601 | +1.265  predicted sign +: kept
+  H_(5,59): +1.024 +0.804 | +0.163  predicted sign +: kept

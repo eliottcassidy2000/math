@@ -1,0 +1,16 @@
+{
+  "status": "CONDITIONAL: rigorously interval-checked implications; the energy budgets are UNPROVED",
+  "N": 137438953472,
+  "B": 131072,
+  "root_disk_center": "[0.99820922076525681364456393316750413764602813718 +/- 4.09e-49] + [240.24783014069124432530079038752871376736998479 +/- 4.78e-45]j",
+  "residue_before_future_tail": "[0.0212 +/- 2.49e-5] + [0.1828 +/- 6.08e-5]j",
+  "margins": {
+    "largest_constant_budget": 1806.5945528733591,
+    "largest_slope_with_a2": 1194.9160578568744,
+    "largest_c_for_4c_c": 292.8580343337661
+  },
+  "moments_sha256": "d46209066ef467608d5ae5b720c16877abcf9906422cf59fc355463540954efd",
+  "session": "opus-2026-10-15-S37",
+  "t_N": -1,
+  "H_N": -67763
+}

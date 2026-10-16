@@ -1,0 +1,2 @@
+p = 40487, g = 5, g' = 25: 80976 orbits on the nonzero residues mod p^2 (self-negative 0) -> E = 40488; formula (p+1)(p-1)/(2d') = 40488  [58.3 s]
+control: least primitive root of p^2 is 10; h' = 100: 4 orbits (self-negative 0) -> E = 2; formula (p-1)/d' = 2  [114.5 s]

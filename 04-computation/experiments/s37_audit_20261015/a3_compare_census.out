@@ -1,0 +1,41 @@
+audit census: S(2^34) = 24953018, H(2^34) = 26869; session: 24953018, 26869
+earlier repository census (2026-10-13 C++): S(2^k), H(2^k) for k = 0..34: mismatches at k = []
+  earlier census row 34: S = 24953018, H_2 = 26869 (the amplitude note states 24953018 and 26869)
+  exact dyadic energies E_X, k = 0..33 (old census block sums over (X,2X] converted to [X,2X)): max relative difference 0.0
+session census octave table vs audit census, k = 0..33 (delta, cross: k = 0..30): worst relative differences
+  refinement       1.495e-15 (at k = 20)
+  e                1.063e-08 (at k = 33)
+  delta            6.213e-09 (at k = 29)
+  cross            2.782e-10 (at k = 29)
+  delta/cross rows present in session JSON: k <= 30
+grid identical: True (1537 points)
+  S: True; C3: True; C9: True; C27: True
+  prefix sums of H at grid: True; prefix sums of H^2 (float64) max rel diff: 1.27e-08
+audit-census transport table: k, e_X, mean part, refinement, delta, kappa, e_4X, (e+2c+delta)/4, diff, descent bound, 4-decimal match
+  10 0.1366 0.0801 0.0565 1.0615 -0.553 0.1947 0.1942 +0.000451 0.5686 False
+  11 0.1082 0.0230 0.0852 1.9539 -0.502 0.4001 0.4000 +0.000023 0.8130 False
+  12 0.1947 0.0164 0.1783 3.9777 -0.914 0.6414 0.6411 +0.000254 1.5497 False
+  13 0.4001 0.3399 0.0602 2.9457 -0.974 0.3077 0.3078 -0.000065 1.4245 False
+  14 0.6414 0.2213 0.4201 0.6608 -0.669 0.1077 0.1077 -0.000013 0.6731 True
+  15 0.3077 0.2069 0.1008 2.0387 -0.501 0.3881 0.3881 +0.000004 1.0017 True
+  16 0.1077 0.0505 0.0572 0.7818 +0.356 0.2739 0.2740 -0.000014 0.3757 False
+  17 0.3881 0.0697 0.3184 0.9850 +0.100 0.3743 0.3743 -0.000000 0.6602 True
+  18 0.2739 0.2215 0.0525 1.6042 +0.795 0.7330 0.7330 +0.000001 0.8070 True
+  19 0.3743 0.3409 0.0333 0.8408 +0.914 0.5601 0.5601 +0.000001 0.5879 True
+  20 0.7330 0.7005 0.0325 0.2126 +0.653 0.3653 0.3653 -0.000001 0.4360 True
+  21 0.5601 0.5251 0.0350 0.2319 +0.388 0.2679 0.2679 -0.000000 0.3797 True
+  22 0.3653 0.3348 0.0305 4.5367 +0.844 1.7688 1.7688 +0.000000 1.8715 True
+  23 0.2679 0.2209 0.0470 1.5106 +0.913 0.7350 0.7350 +0.000000 0.7637 True
+  24 1.7688 1.6587 0.1100 0.9822 +0.601 1.0840 1.0840 +0.000000 1.3478 True
+  25 0.7350 0.6933 0.0417 1.3605 +0.623 0.8351 0.8351 -0.000000 1.0245 True
+  26 1.0840 0.9823 0.1017 2.8347 -0.921 0.1726 0.1726 +0.000000 1.8567 True
+  27 0.8351 0.7619 0.0732 2.8196 -0.742 0.3443 0.3443 -0.000000 1.6813 True
+  28 0.1726 0.0278 0.1448 1.1810 -0.363 0.2564 0.2564 +0.000000 0.5643 True
+  29 0.3443 0.0002 0.3441 0.7948 -0.041 0.2740 0.2740 -0.000000 0.5464 True
+  30 0.2564 0.1626 0.0938 0.9540 +0.204 0.3531 0.3531 +0.000000 0.5500 True
+  octaves 2^10..2^30 where e_4X and the transport prediction differ at 4 decimals: [10, 11, 12, 13, 16]
+  kappa range: min -0.974 (k = 13), max +0.914 (k = 19)
+  session analysis table vs audit (kappa, prediction): max abs diff 2.88e-09
+  note section-2 table entries off by more than rounding: 0
+  dyadic e_X, k = 10..33: max 1.768761 at k = 24; octaves with e_X < 0.26: [10, 11, 12, 16, 28, 30, 33]
+  octaves 2^14..2^33 with mean part < 0.05 (no deterministic 0.26 floor): [(28, 0.0278), (29, 0.0002), (33, 0.0206)]

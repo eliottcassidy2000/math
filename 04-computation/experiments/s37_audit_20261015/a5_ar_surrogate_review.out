@@ -1,0 +1,23 @@
+g(u), u in [14,34]: n = 1281, mean 0.2956, sd 0.2789, kurtosis 3.204, max |g| 1.0054
+ACF at lags (octaves) 1/64, 1/8, 1/4, 1/2, 3/4, 1, 2: [0.982, 0.85, 0.686, 0.388, 0.176, 0.059, 0.007]
+two-octave regression slope 0.0063, corr 0.0066
+kurtosis standard error for ~27 effective samples: ~sqrt(24/neff) = 0.95
+periodogram power fraction below 1 cycle/octave: 0.9184; frequency resolution 0.050 cycles/octave
+window energies: n = 1217, mean 0.5076, 99% quantile 1.7696, max 1.8505 at log2 X = 23.891; mean-part fraction 0.8364
+session analysis JSON: 0.5076, 1.7696, 1.8505, 0.8364
+dyadic windows only (k = 14..33): max e = 1.7688; count 20
+AR(8) fit: coefficients [1.887, -1.252, 0.315, -0.463, 1.024, -0.874, 0.259, 0.032], intercept 0.0389, innovation sd 0.0869 (session 0.0869)
+  largest AR root modulus 0.8806 (stationary iff < 1); implied mean 0.5333 vs sample mean 0.5314
+  implied stationary variance of m 0.1489 vs sample variance 0.1383 (n = 77 quarter-octave samples, 19.2 octaves)
+sensitivity of P(dyadic E_X > 2X^2 for some X in [2^34, 2^K)), K = 40, 64, 200 (and all-phase windows starting at or after 2^34, K = 64):
+  AR(2) bias incl.           root 0.856: K=40   5.1%  K=64  24.1%  K=200  77.0%  | all-phase K=64  39.9% | median max (K=64) 1.86
+  AR(4) bias incl.           root 0.790: K=40   5.4%  K=64  28.0%  K=200  83.4%  | all-phase K=64  43.5% | median max (K=64) 1.91
+  AR(8) bias incl.           root 0.881: K=40   5.8%  K=64  32.3%  K=200  87.8%  | all-phase K=64  47.6% | median max (K=64) 1.97
+  AR(12) bias incl.          root 0.924: K=40   7.8%  K=64  34.1%  K=200  89.1%  | all-phase K=64  52.1% | median max (K=64) 2.02
+  AR(8) bias removed         root 0.881: K=40   0.2%  K=64   1.0%  K=200   5.9%  | all-phase K=64   2.1% | median max (K=64) 1.03
+  AR(8) refinement fixed     root 0.881: K=40   5.4%  K=64  29.0%  K=200  87.5%  | all-phase K=64  45.1% | median max (K=64) 1.94
+  AR(8) sd x 0.8             root 0.881: K=40   1.2%  K=64   8.0%  K=200  38.5%  | all-phase K=64  15.2% | median max (K=64) 1.55
+  AR(8) sd x 1.2             root 0.881: K=40  13.4%  K=64  58.1%  K=200  99.0%  | all-phase K=64  74.3% | median max (K=64) 2.45
+  AR(8) fit u >= 20          root 0.908: K=40   7.8%  K=64  39.9%  K=200  94.3%  | all-phase K=64  55.3% | median max (K=64) 2.09
+  iid Gaussian (no memory)   root 0.000: K=40   6.8%  K=64  29.0%  K=200  85.2%  | all-phase K=64  72.5% | median max (K=64) 2.25
+session JSON (AR(8)): K=40 5.7%, K=64 30.7%, K=200 87.7%; all-phase K=64 46.6% (includes three windows starting at 2^33.25..2^33.75, inside the census)

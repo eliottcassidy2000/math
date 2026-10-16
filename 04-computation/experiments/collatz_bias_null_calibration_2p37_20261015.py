@@ -14,7 +14,9 @@ Statistics (in-sample octaves 14..32, out-of-sample octaves 34..36, as pre-regis
   (slope through the origin, correlation, sign of the out-of-sample mean); profile g = H/sqrt(2N) (mean, sd, lag-1-octave
   autocorrelation, two-octave regression slope); window energies e = E/Y^2 of H (mean, max for window starts up to 2^36);
   per-octave mean square of the normalized channels by level, and its out/in (34..36 vs 14..32) and late/early
-  (30..36 vs 14..29) ratios.
+  (30..36 vs 14..29) ratios; the number of channels whose 19 in-sample octave means share one sign.
+The octave-mean matrices (octaves 14..36 x 363 channels), level energies and H profiles are saved to an NPZ next to the
+JSON (row 0 = Collatz when a census NPZ is given).
 Session opus-2026-10-15-S37.  Usage: python collatz_bias_null_calibration_2p37_20261015.py LOGMAX NSEEDS collatz.npz out.json
 """
 import sys, json, math, time
@@ -154,7 +156,8 @@ def statistics(D):
     si = OM[ii].std(axis=0, ddof=1)
     ti = mi / (si / math.sqrt(len(ii)))
     st = dict(n_t3=int((np.abs(ti) > 3).sum()), n_t5=int((np.abs(ti) > 5).sum()), n_t8=int((np.abs(ti) > 8).sum()),
-              max_abs_t=float(np.abs(ti).max()))
+              max_abs_t=float(np.abs(ti).max()),
+              n_same_sign_19=int(((OM[ii] > 0).all(axis=0) | (OM[ii] < 0).all(axis=0)).sum()))
     st['rms_mean_by_level'] = [float(np.sqrt((mi[levs == q] ** 2).mean())) for q in range(1, 6)]
     # per-octave mean square of the normalized channels (all samples) by level; out/in and late/early ratios
     msq = np.stack([(Gm[(u >= k) & (u < k + 1)] ** 2).mean(axis=0) for k in ks])     # octaves x channels
@@ -210,20 +213,27 @@ def statistics(D):
     w_out = uY > 33 + 1e-9
     st['window'] = dict(mean_in=float(e[w_in].mean()), max_in=float(e[w_in].max()), mean_out=float(e[w_out].mean()),
                         max_out=float(e[w_out].max()))
-    return st
+    return st, OM, lev_ms, g
 
 
 if __name__ == '__main__':
     res = dict(logmax=LOGMAX, insample=INS, out=OUTK, null=[])
+    OMs, LMs, GPs = [], [], []
     if CNPZ:
-        Z = np.load(CNPZ)
-        res['collatz'] = statistics({k: Z[k] for k in ('grid', 'classsums', 'H', 'preH1', 'preH2')})
-        print('collatz', json.dumps(res['collatz']), flush=True)
+        with np.load(CNPZ) as Z:
+            D = {k: np.array(Z[k]) for k in ('grid', 'classsums', 'H', 'preH1', 'preH2')}
+        st, OM, LM, gp = statistics(D)
+        res['collatz'] = st
+        OMs.append(OM); LMs.append(LM); GPs.append(gp)
+        print('collatz', json.dumps(st), flush=True)
     for s in range(NSEEDS):
         t0 = time.time()
         D = null_census(7919 * (s + 1), LOGMAX)
-        st = statistics(D)
+        st, OM, LM, gp = statistics(D)
         res['null'].append(st)
+        OMs.append(OM); LMs.append(LM); GPs.append(gp)
         print(f'null {s} ({time.time() - t0:.0f} s)', json.dumps(st), flush=True)
         json.dump(res, open(OUT, 'w'), indent=1)
+        np.savez_compressed(OUT.replace('.json', '.npz'), octave_means=np.array(OMs), level_energy=np.array(LMs),
+                            profile=np.array(GPs), first_is_collatz=bool(CNPZ))
     json.dump(res, open(OUT, 'w'), indent=1)
