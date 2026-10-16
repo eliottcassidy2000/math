@@ -1,0 +1,58 @@
+{
+  "atomic": {
+    "exact_conductor_checks": 81,
+    "hostile_vanishing_moments": [
+      1,
+      -2,
+      1
+    ],
+    "packets": 9
+  },
+  "hazard": {
+    "exact_hazard_checks": 5150,
+    "marginal_collision_hostile": [
+      0,
+      10
+    ]
+  },
+  "jacobian": {
+    "actual_source_maps": 3,
+    "exact_return_invoices": 45,
+    "kummer_inverse_clock_checks": 20,
+    "kummer_last_coefficient": [
+      1048576,
+      13113070457687988603440625
+    ],
+    "laurent_weyl_checks": 17,
+    "torsion_to_free_clock_checks": 12,
+    "volterra_checks": 60
+  },
+  "palettes": {
+    "cross_intersecting_maximum": 10,
+    "maximizers": 36,
+    "nonempty_pair_family_subsets_checked": 32767,
+    "palette_census": [
+      {
+        "blocked_per_vertex": 6,
+        "exterior_colours": 3,
+        "guaranteed_survivors_with_nine": 36,
+        "interface_classes": 3,
+        "options": 90
+      },
+      {
+        "blocked_per_vertex": 12,
+        "exterior_colours": 4,
+        "guaranteed_survivors_with_nine": 72,
+        "interface_classes": 2,
+        "options": 180
+      },
+      {
+        "blocked_per_vertex": 24,
+        "exterior_colours": 5,
+        "guaranteed_survivors_with_nine": 144,
+        "interface_classes": 1,
+        "options": 360
+      }
+    ]
+  }
+}

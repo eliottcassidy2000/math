@@ -3,8 +3,11 @@
 2026-10-15. **PROVED:** the conformal packet construction, its minimum
 rowwise residual, and the conditional iteration/energy implications below.
 **FINITE-EXACT:** the declared first-reset controllers and hostile schedule.
-**OPEN:** the residual bound at every scale, unconditional amplitude
-nonvanishing, and universal ROOT entry. Self-audited; no independent referee
+**UPDATE:** the [extended census](collatz_reset_debt_20261015f.md) refutes the
+unrestricted all-scale one-reset `7X` bound at `k=23`; discounted and paired
+repairs pass the declared `k=8..23` census. **OPEN:** the required `k>=38`
+tail, unconditional amplitude nonvanishing, and universal ROOT entry.
+Self-audited; no independent referee
 or historical novelty is claimed for signed matching or norm inequalities.
 
 [Program](../../04-computation/experiments/collatz_survivor_packets_20261015e.py)
@@ -285,8 +288,12 @@ tested against (6) rather than against a count of ray coincidences.
 
 ## 6. Remaining proof targets
 
-The strongest concrete target is now (6) for the explicit first-reset
-controller at all k>=38 and all required stages. It has no unspecified
+The original concrete target is (6) for the explicit first-reset
+controller at all k>=38 and all required stages. It remains OPEN; the
+[later counterexample at k=23](collatz_reset_debt_20261015f.md) is below
+that tail and refutes only its unrestricted all-scale strengthening.
+Discounted debt and paired-stage estimates are the preferred repaired
+targets. The original controller has no unspecified
 packet dictionary or unknown terminal-label choice. A counterexample would
 identify an actual row-weight debt, allowing a longer reset batch or a
 context-selected native join to be tested on the same source rows.

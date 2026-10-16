@@ -1,0 +1,92 @@
+{
+  "all_stage_residuals_below_7X": true,
+  "bin_width": 16,
+  "discounted_bound_below_7p5X": false,
+  "identity_padding": 15,
+  "independent_full_source_check": true,
+  "initial_envelope": [
+    6941032076,
+    16
+  ],
+  "k": 8,
+  "resets_per_stage": 1,
+  "source_interval": [
+    1,
+    2048
+  ],
+  "stages": [
+    {
+      "Q_over_X": 4.574116589246659,
+      "discounted_upper_bound": [
+        145803,
+        10
+      ],
+      "edges": 2797,
+      "internal_clock_edges_checked": 1706,
+      "max_native_clock": 101,
+      "outside_edges": 750,
+      "pass_seven": true,
+      "reset_ones_histogram": {
+        "0": 511,
+        "1": 256,
+        "2": 128,
+        "3": 64,
+        "4": 32,
+        "5": 16,
+        "6": 8,
+        "7": 4,
+        "8": 2,
+        "9": 1,
+        "10": 1
+      },
+      "residual_numerators": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "residual_over_X": 0.0,
+      "residual_square": [
+        0,
+        144
+      ],
+      "row_envelope": [
+        21938876,
+        16
+      ],
+      "row_norms": [
+        534,
+        460,
+        506,
+        654,
+        634,
+        692,
+        786,
+        840,
+        896,
+        1086,
+        1206,
+        1362,
+        1566,
+        1702,
+        2012,
+        1966
+      ],
+      "stage": 1,
+      "terminals": 64,
+      "unresolved_sources": 191
+    }
+  ]
+}

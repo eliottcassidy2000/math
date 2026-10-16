@@ -1,5 +1,11 @@
 # Paying ternary depth: a uniform regular-density contraction and the atom cost
 
+**Continuation:** [finite signed atomic packets](collatz_reset_debt_20261015f.md#5-conductor-moments-cannot-absorb-a-finite-signed-source-packet-for-free)
+have the same obstruction even with vanishing moments: their weighted
+Wiener norm diverges exactly for `R>=1/3`. W1/W2 below remain valid on their
+stated regular-density domains; this does not yield an unpriced native
+source bound.
+
 2026-10-15. **PROVED:** a weighted Fourier norm bound at infinite depth, an
 explicit marked-atom cost, and the floor-error repair. **FINITE-EXACT:** grading
 controls through depth 8. **OPEN:** an applicable source-preserving regularity

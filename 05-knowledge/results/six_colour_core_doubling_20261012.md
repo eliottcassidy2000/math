@@ -147,6 +147,12 @@ is the content of HYP-9247.
 
 ## 5. The reroute: what a forcing context must contain, and what the identities do not do
 
+**Later refinement:** [the anchored interface profile](six_colour_interface_profile_20261015f.md)
+also excludes a four-colourable exterior whenever its port neighbours fit
+inside two classes of some four-colouring, or a five-colourable exterior
+with those neighbours in one class. The original ports and nine-apex census
+are unchanged; these are additional sufficient extension screens.
+
 A context that changes the relation must have a four-chromatic exterior.
 Since `L` is triangle-free, that means a triangle-free four-chromatic
 unit-distance graph with coordinates in `Q(zeta55)`; none is known, and the

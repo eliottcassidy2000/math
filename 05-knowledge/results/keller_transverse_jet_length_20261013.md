@@ -120,6 +120,13 @@ the Selmer obstruction seeks.
 
 ## 5. Rerouted target and checks
 
+**Later continuation:** [the inverse transverse clock](keller_inverse_clock_20261015f.md)
+gives an explicit source-polynomial inverse to the transverse operator on
+the cokernel, a factorial representative formula and its exact return
+cost. It also identifies special-fibre torsion heads and their Pruefer
+arms; the inverse clock can leave that torsion. Neither analytic decay nor
+the absence of an entirely torsion cokernel implies cokernel vanishing.
+
 A useful next target must change the admissible global carrier while
 retaining the exact comparison maps. One can ask for a source-preserving
 map between two component cokernels with a certified kernel/cokernel
