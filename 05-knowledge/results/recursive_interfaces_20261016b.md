@@ -235,8 +235,8 @@ A radius alone was already known to be insufficient in the type-M
 experiments. Merely producing infinitely many contacts does not settle that
 compatibility question.
 
-**Hostile probe of the new construction (FINITE-EXACT).** Use both rational
-points in (5b) and the seed, rotate their contacts by gamma^i for -3<=i<=3,
+**Hostile probe of the new construction (FINITE-EXACT).** Use the seed
+(1/5,8/5) and the new quartic point in (5b), rotate their contacts by gamma^i for -3<=i<=3,
 and take three consecutive points on each secondary circle (radial powers
 -1,0,1). The complete induced graph has **49 vertices and 48 edges and is
 a tree**. The receipt retains every coordinate, edge and a two-colouring.
