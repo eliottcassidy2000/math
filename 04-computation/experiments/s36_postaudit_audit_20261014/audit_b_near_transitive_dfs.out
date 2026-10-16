@@ -1,0 +1,163 @@
+T_n layer (k = 1; transitive + extreme arc reversed):
+  n = 4: H = 5 (= 2^(n-2)+1: True); M transitive 0; F strong 1; VL margin 1/5; MS margin 1/5; D_in min 1/5; D_out min 1/5; (SS) failures k=0..4: [0, 0, 0, 0, 0]; min (SS) k=1 slack 4611686018427387904/5; cert 3/5 (= T_n value: True); max first 2/5  [5.6 s]
+  n = 5: H = 9 (= 2^(n-2)+1: True); M transitive 0; F strong 1; VL margin 1/9; MS margin 1/9; D_in min 1/9; D_out min 1/9; (SS) failures k=0..4: [0, 0, 0, 0, 0]; min (SS) k=1 slack 1/9; cert 5/9 (= T_n value: True); max first 4/9  [0.0 s]
+  n = 6: H = 17 (= 2^(n-2)+1: True); M transitive 0; F strong 1; VL margin 1/17; MS margin 1/17; D_in min 1/17; D_out min 1/17; (SS) failures k=0..4: [0, 0, 0, 0, 0]; min (SS) k=1 slack 1/17; cert 9/17 (= T_n value: True); max first 8/17  [0.0 s]
+  n = 7: H = 33 (= 2^(n-2)+1: True); M transitive 0; F strong 1; VL margin 1/33; MS margin 1/33; D_in min 1/33; D_out min 1/33; (SS) failures k=0..4: [0, 0, 0, 0, 0]; min (SS) k=1 slack 1/33; cert 17/33 (= T_n value: True); max first 16/33  [0.0 s]
+  n = 8: H = 65 (= 2^(n-2)+1: True); M transitive 0; F strong 1; VL margin 1/65; MS margin 1/65; D_in min 1/65; D_out min 1/65; (SS) failures k=0..4: [0, 0, 0, 0, 0]; min (SS) k=1 slack 1/65; cert 33/65 (= T_n value: True); max first 32/65  [0.0 s]
+  n = 9: H = 129 (= 2^(n-2)+1: True); M transitive 0; F strong 1; VL margin 1/129; MS margin 1/129; D_in min 1/129; D_out min 1/129; (SS) failures k=0..4: [0, 0, 0, 0, 0]; min (SS) k=1 slack 1/129; cert 65/129 (= T_n value: True); max first 64/129  [0.0 s]
+  n = 10: H = 257 (= 2^(n-2)+1: True); M transitive 0; F strong 1; VL margin 1/257; MS margin 1/257; D_in min 1/257; D_out min 1/257; (SS) failures k=0..4: [0, 0, 0, 0, 0]; min (SS) k=1 slack 1/257; cert 129/257 (= T_n value: True); max first 128/257  [0.0 s]
+  n = 11: H = 513 (= 2^(n-2)+1: True); M transitive 0; F strong 1; VL margin 1/513; MS margin 1/513; D_in min 1/513; D_out min 1/513; (SS) failures k=0..4: [0, 0, 0, 0, 0]; min (SS) k=1 slack 1/513; cert 257/513 (= T_n value: True); max first 256/513  [0.0 s]
+  n = 12: H = 1025 (= 2^(n-2)+1: True); M transitive 0; F strong 1; VL margin 1/1025; MS margin 1/1025; D_in min 1/1025; D_out min 1/1025; (SS) failures k=0..4: [0, 0, 0, 0, 0]; min (SS) k=1 slack 1/1025; cert 513/1025 (= T_n value: True); max first 512/1025  [0.0 s]
+  n = 13: H = 2049 (= 2^(n-2)+1: True); M transitive 0; F strong 1; VL margin 1/2049; MS margin 1/2049; D_in min 1/2049; D_out min 1/2049; (SS) failures k=0..4: [0, 0, 0, 0, 0]; min (SS) k=1 slack 1/2049; cert 1025/2049 (= T_n value: True); max first 1024/2049  [0.0 s]
+  n = 14: H = 4097 (= 2^(n-2)+1: True); M transitive 0; F strong 1; VL margin 1/4097; MS margin 1/4097; D_in min 1/4097; D_out min 1/4097; (SS) failures k=0..4: [0, 0, 0, 0, 0]; min (SS) k=1 slack 1/4097; cert 2049/4097 (= T_n value: True); max first 2048/4097  [0.0 s]
+  n = 15: H = 8193 (= 2^(n-2)+1: True); M transitive 0; F strong 1; VL margin 1/8193; MS margin 1/8193; D_in min 1/8193; D_out min 1/8193; (SS) failures k=0..4: [0, 0, 0, 0, 0]; min (SS) k=1 slack 1/8193; cert 4097/8193 (= T_n value: True); max first 4096/8193  [0.0 s]
+  n = 16: H = 16385 (= 2^(n-2)+1: True); M transitive 0; F strong 1; VL margin 1/16385; MS margin 1/16385; D_in min 1/16385; D_out min 1/16385; (SS) failures k=0..4: [0, 0, 0, 0, 0]; min (SS) k=1 slack 1/16385; cert 8193/16385 (= T_n value: True); max first 8192/16385  [0.0 s]
+  n = 17: H = 32769 (= 2^(n-2)+1: True); M transitive 0; F strong 1; VL margin 1/32769; MS margin 1/32769; D_in min 1/32769; D_out min 1/32769; (SS) failures k=0..4: [0, 0, 0, 0, 0]; min (SS) k=1 slack 1/32769; cert 16385/32769 (= T_n value: True); max first 16384/32769  [0.1 s]
+  n = 18: H = 65537 (= 2^(n-2)+1: True); M transitive 0; F strong 1; VL margin 1/65537; MS margin 1/65537; D_in min 1/65537; D_out min 1/65537; (SS) failures k=0..4: [0, 0, 0, 0, 0]; min (SS) k=1 slack 1/65537; cert 32769/65537 (= T_n value: True); max first 32768/65537  [0.2 s]
+  n = 19: H = 131073 (= 2^(n-2)+1: True); M transitive 0; F strong 1; VL margin 1/131073; MS margin 1/131073; D_in min 1/131073; D_out min 1/131073; (SS) failures k=0..4: [0, 0, 0, 0, 0]; min (SS) k=1 slack 1/131073; cert 65537/131073 (= T_n value: True); max first 65536/131073  [0.4 s]
+  n = 20: H = 262145 (= 2^(n-2)+1: True); M transitive 0; F strong 1; VL margin 1/262145; MS margin 1/262145; D_in min 1/262145; D_out min 1/262145; (SS) failures k=0..4: [0, 0, 0, 0, 0]; min (SS) k=1 slack 1/262145; cert 131073/262145 (= T_n value: True); max first 131072/262145  [1.2 s]
+n = 11, k = 2: 990 arc sets, 87 strong (Landau; Landau/Warshall mismatches 0)  [0.0 s]
+  H odd for all: True;  M(T) transitive: 0;  F(T) not strong: 0
+  min vertex-lemma margin 2p-1 = 3/771 = 0.003891 at [(0, 10), (1, 3)]
+  min majority-source margin = 3/771 = 0.003891 at [(0, 10), (1, 3)]
+  min D_in = -47/297 = -0.158249 at [(0, 6), (6, 10)]
+  min D_out = -47/297 = -0.158249 at [(0, 4), (4, 10)]
+  (T, w) vertex-lemma failures: 0; majority-source failures: 0; tournaments with some D_in <= 0: 4 ((T, w) pairs: 4; least in-degree at such a vertex: 9)
+  min vertex-lemma margin by min(indeg, outdeg): 1: 3/771 = 0.003891; 2: 3/767 = 0.003911; >= 3: 5/389 = 0.012853
+  (SS) failures (T, w) by k: k=0: 0, k=1: 0, k=2: 3, k=3: 7, k=4: 7;  min E[N] - d/2 by d: d=1: 0.0019, d=2: 0.0385, d=3: 0.1871, d=4: 0.1639, d=5: 0.1131, d=6: 0.0699
+  min (SS) k=1 slack [Pr(N >= d-1) - Pr(N <= 1)] over d >= 3: 3/771 = 0.003891
+  3-cycle certificate: min 385/767 = 0.501956 at [(0, 9), (0, 10)]; T_n value 257/513 = 0.500975; tournaments below it: 0, equal: 0
+  max Pr[w first] = 384/771 = 0.498054 (T_n value 256/513 = 0.499025; tournaments >= it: 0)
+n = 12, k = 2: 1485 arc sets, 107 strong (Landau; Landau/Warshall mismatches 0)  [0.1 s]
+  H odd for all: True;  M(T) transitive: 0;  F(T) not strong: 0
+  min vertex-lemma margin 2p-1 = 3/1539 = 0.001949 at [(0, 11), (1, 3)]
+  min majority-source margin = 3/1539 = 0.001949 at [(0, 11), (1, 3)]
+  min D_in = -182/561 = -0.324421 at [(0, 6), (6, 11)]
+  min D_out = -182/561 = -0.324421 at [(0, 5), (5, 11)]
+  (T, w) vertex-lemma failures: 0; majority-source failures: 0; tournaments with some D_in <= 0: 6 ((T, w) pairs: 6; least in-degree at such a vertex: 10)
+  min vertex-lemma margin by min(indeg, outdeg): 1: 3/1539 = 0.001949; 2: 3/1535 = 0.001954; >= 3: 5/773 = 0.006468
+  (SS) failures (T, w) by k: k=0: 0, k=1: 0, k=2: 4, k=3: 8, k=4: 10;  min E[N] - d/2 by d: d=1: 0.0010, d=2: 0.0267, d=3: 0.1873, d=4: 0.1653, d=5: 0.1153, d=6: 0.0725
+  min (SS) k=1 slack [Pr(N >= d-1) - Pr(N <= 1)] over d >= 3: 3/1539 = 0.001949
+  3-cycle certificate: min 769/1535 = 0.500977 at [(0, 10), (0, 11)]; T_n value 513/1025 = 0.500488; tournaments below it: 0, equal: 0
+  max Pr[w first] = 768/1539 = 0.499025 (T_n value 512/1025 = 0.499512; tournaments >= it: 0)
+n = 10, k = 3: 7140 arc sets, 1713 strong (Landau; Landau/Warshall mismatches 0)  [0.1 s]
+  H odd for all: True;  M(T) transitive: 0;  F(T) not strong: 0
+  min vertex-lemma margin 2p-1 = 5/517 = 0.009671 at [(0, 9), (1, 3), (1, 4)]
+  min majority-source margin = 5/517 = 0.009671 at [(0, 9), (1, 3), (1, 4)]
+  min D_in = 5/517 = 0.009671 at [(0, 9), (1, 3), (1, 4)]
+  min D_out = 5/517 = 0.009671 at [(0, 9), (2, 4), (2, 5)]
+  (T, w) vertex-lemma failures: 0; majority-source failures: 0; tournaments with some D_in <= 0: 0 ((T, w) pairs: 0; least in-degree at such a vertex: -)
+  min vertex-lemma margin by min(indeg, outdeg): 1: 5/517 = 0.009671; 2: 5/385 = 0.012987; >= 3: 7/443 = 0.015801
+  (SS) failures (T, w) by k: k=0: 0, k=1: 0, k=2: 0, k=3: 18, k=4: 0;  min E[N] - d/2 by d: d=1: 0.0048, d=2: 0.0546, d=3: 0.1688, d=4: 0.1423, d=5: 0.0889, d=6: 0.0474
+  min (SS) k=1 slack [Pr(N >= d-1) - Pr(N <= 1)] over d >= 3: 5/517 = 0.009671
+  3-cycle certificate: min 225/443 = 0.507901 at [(0, 7), (0, 8), (0, 9)]; T_n value 129/257 = 0.501946; tournaments below it: 0, equal: 0
+  max Pr[w first] = 256/517 = 0.495164 (T_n value 128/257 = 0.498054; tournaments >= it: 0)
+n = 11, k = 3: 14190 arc sets, 2781 strong (Landau; Landau/Warshall mismatches 0)  [0.3 s]
+  H odd for all: True;  M(T) transitive: 0;  F(T) not strong: 0
+  min vertex-lemma margin 2p-1 = 5/1029 = 0.004859 at [(0, 10), (1, 3), (1, 4)]
+  min majority-source margin = 5/1029 = 0.004859 at [(0, 10), (1, 3), (1, 4)]
+  min D_in = -57/687 = -0.082969 at [(0, 10), (6, 10), (7, 9)]
+  min D_out = -57/687 = -0.082969 at [(0, 4), (0, 10), (1, 3)]
+  (T, w) vertex-lemma failures: 0; majority-source failures: 0; tournaments with some D_in <= 0: 9 ((T, w) pairs: 9; least in-degree at such a vertex: 9)
+  min vertex-lemma margin by min(indeg, outdeg): 1: 5/1029 = 0.004859; 2: 5/769 = 0.006502; >= 3: 7/891 = 0.007856
+  (SS) failures (T, w) by k: k=0: 0, k=1: 0, k=2: 9, k=3: 57, k=4: 72;  min E[N] - d/2 by d: d=1: 0.0024, d=2: 0.0374, d=3: 0.1378, d=4: 0.1439, d=5: 0.0908, d=6: 0.0539
+  min (SS) k=1 slack [Pr(N >= d-1) - Pr(N <= 1)] over d >= 3: 5/1029 = 0.004859
+  3-cycle certificate: min 449/891 = 0.503928 at [(0, 8), (0, 9), (0, 10)]; T_n value 257/513 = 0.500975; tournaments below it: 0, equal: 0
+  max Pr[w first] = 512/1029 = 0.497570 (T_n value 256/513 = 0.499025; tournaments >= it: 0)
+n = 10, k = 2: 630 arc sets, 69 strong (Landau; Landau/Warshall mismatches 0)  [0.0 s]
+  H odd for all: True;  M(T) transitive: 0;  F(T) not strong: 0
+  min vertex-lemma margin 2p-1 = 3/387 = 0.007752 at [(0, 9), (1, 3)]
+  min majority-source margin = 3/387 = 0.007752 at [(0, 9), (1, 3)]
+  min D_in = 3/387 = 0.007752 at [(0, 9), (1, 3)]
+  min D_out = 3/387 = 0.007752 at [(0, 9), (2, 4)]
+  (T, w) vertex-lemma failures: 0; majority-source failures: 0; tournaments with some D_in <= 0: 0 ((T, w) pairs: 0; least in-degree at such a vertex: -)
+  min vertex-lemma margin by min(indeg, outdeg): 1: 3/387 = 0.007752; 2: 3/383 = 0.007833; >= 3: 5/197 = 0.025381
+  (SS) failures (T, w) by k: k=0: 0, k=1: 0, k=2: 1, k=3: 5, k=4: 0;  min E[N] - d/2 by d: d=1: 0.0039, d=2: 0.0546, d=3: 0.1868, d=4: 0.1615, d=5: 0.1095, d=6: 0.0660
+  min (SS) k=1 slack [Pr(N >= d-1) - Pr(N <= 1)] over d >= 3: 3/387 = 0.007752
+  3-cycle certificate: min 193/383 = 0.503916 at [(0, 8), (0, 9)]; T_n value 129/257 = 0.501946; tournaments below it: 0, equal: 0
+  max Pr[w first] = 192/387 = 0.496124 (T_n value 128/257 = 0.498054; tournaments >= it: 0)
+n = 13, k = 2: 2145 arc sets, 129 strong (Landau; Landau/Warshall mismatches 0)  [0.2 s]
+  H odd for all: True;  M(T) transitive: 0;  F(T) not strong: 0
+  min vertex-lemma margin 2p-1 = 3/3075 = 0.000976 at [(0, 12), (1, 3)]
+  min majority-source margin = 3/3075 = 0.000976 at [(0, 12), (1, 3)]
+  min D_in = -517/1105 = -0.467873 at [(0, 7), (7, 12)]
+  min D_out = -517/1105 = -0.467873 at [(0, 5), (5, 12)]
+  (T, w) vertex-lemma failures: 0; majority-source failures: 0; tournaments with some D_in <= 0: 9 ((T, w) pairs: 9; least in-degree at such a vertex: 10)
+  min vertex-lemma margin by min(indeg, outdeg): 1: 3/3075 = 0.000976; 2: 3/3071 = 0.000977; >= 3: 5/1541 = 0.003245
+  (SS) failures (T, w) by k: k=0: 0, k=1: 0, k=2: 4, k=3: 10, k=4: 11;  min E[N] - d/2 by d: d=1: 0.0005, d=2: 0.0183, d=3: 0.1874, d=4: 0.1660, d=5: 0.1164, d=6: 0.0740
+  min (SS) k=1 slack [Pr(N >= d-1) - Pr(N <= 1)] over d >= 3: 3/3075 = 0.000976
+  3-cycle certificate: min 1537/3071 = 0.500488 at [(0, 11), (0, 12)]; T_n value 1025/2049 = 0.500244; tournaments below it: 0, equal: 0
+  max Pr[w first] = 1536/3075 = 0.499512 (T_n value 1024/2049 = 0.499756; tournaments >= it: 0)
+n = 14, k = 2: 3003 arc sets, 153 strong (Landau; Landau/Warshall mismatches 0)  [0.4 s]
+  H odd for all: True;  M(T) transitive: 0;  F(T) not strong: 0
+  min vertex-lemma margin 2p-1 = 3/6147 = 0.000488 at [(0, 13), (1, 3)]
+  min majority-source margin = 3/6147 = 0.000488 at [(0, 13), (1, 3)]
+  min D_in = -1268/2145 = -0.591142 at [(0, 7), (7, 13)]
+  min D_out = -1268/2145 = -0.591142 at [(0, 6), (6, 13)]
+  (T, w) vertex-lemma failures: 0; majority-source failures: 0; tournaments with some D_in <= 0: 11 ((T, w) pairs: 11; least in-degree at such a vertex: 11)
+  min vertex-lemma margin by min(indeg, outdeg): 1: 3/6147 = 0.000488; 2: 3/6143 = 0.000488; >= 3: 5/3077 = 0.001625
+  (SS) failures (T, w) by k: k=0: 0, k=1: 0, k=2: 4, k=3: 11, k=4: 14;  min E[N] - d/2 by d: d=1: 0.0002, d=2: 0.0125, d=3: 0.1820, d=4: 0.1663, d=5: 0.1170, d=6: 0.0749
+  min (SS) k=1 slack [Pr(N >= d-1) - Pr(N <= 1)] over d >= 3: 3/6147 = 0.000488
+  3-cycle certificate: min 3073/6143 = 0.500244 at [(0, 12), (0, 13)]; T_n value 2049/4097 = 0.500122; tournaments below it: 0, equal: 0
+  max Pr[w first] = 3072/6147 = 0.499756 (T_n value 2048/4097 = 0.499878; tournaments >= it: 0)
+n = 16, k = 2: 5460 arc sets, 207 strong (Landau; Landau/Warshall mismatches 0)  [7.5 s]
+  H odd for all: True;  M(T) transitive: 0;  F(T) not strong: 0
+  min vertex-lemma margin 2p-1 = 3/24579 = 0.000122 at [(0, 15), (1, 3)]
+  min majority-source margin = 3/24579 = 0.000122 at [(0, 15), (1, 3)]
+  min D_in = -6386/8385 = -0.761598 at [(0, 8), (8, 15)]
+  min D_out = -6386/8385 = -0.761598 at [(0, 7), (7, 15)]
+  (T, w) vertex-lemma failures: 0; majority-source failures: 0; tournaments with some D_in <= 0: 15 ((T, w) pairs: 15; least in-degree at such a vertex: 13)
+  min vertex-lemma margin by min(indeg, outdeg): 1: 3/24579 = 0.000122; 2: 3/24575 = 0.000122; >= 3: 5/12293 = 0.000407
+  (SS) failures (T, w) by k: k=0: 0, k=1: 0, k=2: 7, k=3: 14, k=4: 16;  min E[N] - d/2 by d: d=1: 0.0001, d=2: 0.0057, d=3: 0.1736, d=4: 0.1666, d=5: 0.1175, d=6: 0.0755
+  min (SS) k=1 slack [Pr(N >= d-1) - Pr(N <= 1)] over d >= 3: 3/24579 = 0.000122
+  3-cycle certificate: min 12289/24575 = 0.500061 at [(0, 14), (0, 15)]; T_n value 8193/16385 = 0.500031; tournaments below it: 0, equal: 0
+  max Pr[w first] = 12288/24579 = 0.499939 (T_n value 8192/16385 = 0.499969; tournaments >= it: 0)
+n = 12, k = 3: 26235 arc sets, 4274 strong (Landau; Landau/Warshall mismatches 0)  [1.2 s]
+  H odd for all: True;  M(T) transitive: 0;  F(T) not strong: 0
+  min vertex-lemma margin 2p-1 = 5/2053 = 0.002435 at [(0, 11), (1, 3), (1, 4)]
+  min majority-source margin = 5/2053 = 0.002435 at [(0, 11), (1, 3), (1, 4)]
+  min D_in = -146/843 = -0.173191 at [(0, 7), (7, 10), (7, 11)]
+  min D_out = -146/843 = -0.173191 at [(0, 3), (0, 4), (0, 11)]
+  (T, w) vertex-lemma failures: 0; majority-source failures: 0; tournaments with some D_in <= 0: 57 ((T, w) pairs: 57; least in-degree at such a vertex: 9)
+  min vertex-lemma margin by min(indeg, outdeg): 1: 5/2053 = 0.002435; 2: 5/1537 = 0.003253; >= 3: 7/1787 = 0.003917
+  (SS) failures (T, w) by k: k=0: 0, k=1: 0, k=2: 16, k=3: 134, k=4: 184;  min E[N] - d/2 by d: d=1: 0.0012, d=2: 0.0254, d=3: 0.1122, d=4: 0.1448, d=5: 0.0921, d=6: 0.0553
+  min (SS) k=1 slack [Pr(N >= d-1) - Pr(N <= 1)] over d >= 3: 5/2053 = 0.002435
+  3-cycle certificate: min 897/1787 = 0.501959 at [(0, 9), (0, 10), (0, 11)]; T_n value 513/1025 = 0.500488; tournaments below it: 0, equal: 0
+  max Pr[w first] = 1024/2053 = 0.498782 (T_n value 512/1025 = 0.499512; tournaments >= it: 0)
+n = 10, k = 4: 58905 arc sets, 22787 strong (Landau; Landau/Warshall mismatches 0)  [0.7 s]
+  H odd for all: True;  M(T) transitive: 0;  F(T) not strong: 0
+  min vertex-lemma margin 2p-1 = 5/517 = 0.009671 at [(0, 9), (1, 3), (1, 4), (2, 4)]
+  min majority-source margin = 5/517 = 0.009671 at [(0, 9), (1, 3), (1, 4), (2, 4)]
+  min D_in = 5/517 = 0.009671 at [(0, 9), (1, 3), (1, 4), (2, 4)]
+  min D_out = 5/517 = 0.009671 at [(0, 9), (2, 4), (2, 5), (3, 5)]
+  (T, w) vertex-lemma failures: 0; majority-source failures: 0; tournaments with some D_in <= 0: 0 ((T, w) pairs: 0; least in-degree at such a vertex: -)
+  min vertex-lemma margin by min(indeg, outdeg): 1: 5/517 = 0.009671; 2: 9/513 = 0.017544; >= 3: 9/573 = 0.015707
+  (SS) failures (T, w) by k: k=0: 0, k=1: 0, k=2: 4, k=3: 28, k=4: 0;  min E[N] - d/2 by d: d=1: 0.0048, d=2: 0.0586, d=3: 0.1607, d=4: 0.1328, d=5: 0.0803, d=6: 0.0471
+  min (SS) k=1 slack [Pr(N >= d-1) - Pr(N <= 1)] over d >= 3: 5/517 = 0.009671
+  3-cycle certificate: min 241/467 = 0.516060 at [(0, 6), (0, 7), (0, 8), (0, 9)]; T_n value 129/257 = 0.501946; tournaments below it: 0, equal: 0
+  max Pr[w first] = 256/517 = 0.495164 (T_n value 128/257 = 0.498054; tournaments >= it: 0)
+n = 11, k = 4: 148995 arc sets, 48307 strong (Landau; Landau/Warshall mismatches 0)  [5.2 s]
+  H odd for all: True;  M(T) transitive: 0;  F(T) not strong: 0
+  min vertex-lemma margin 2p-1 = 5/1029 = 0.004859 at [(0, 10), (1, 3), (1, 4), (2, 4)]
+  min majority-source margin = 5/1029 = 0.004859 at [(0, 10), (1, 3), (1, 4), (2, 4)]
+  min D_in = -47/297 = -0.158249 at [(0, 7), (6, 8), (6, 9), (6, 10)]
+  min D_out = -47/297 = -0.158249 at [(0, 2), (0, 3), (0, 4), (0, 10)]
+  (T, w) vertex-lemma failures: 0; majority-source failures: 0; tournaments with some D_in <= 0: 10 ((T, w) pairs: 10; least in-degree at such a vertex: 9)
+  min vertex-lemma margin by min(indeg, outdeg): 1: 5/1029 = 0.004859; 2: 9/1025 = 0.008780; >= 3: 9/1149 = 0.007833
+  (SS) failures (T, w) by k: k=0: 0, k=1: 0, k=2: 9, k=3: 155, k=4: 218;  min E[N] - d/2 by d: d=1: 0.0024, d=2: 0.0406, d=3: 0.1340, d=4: 0.1331, d=5: 0.0842, d=6: 0.0475
+  min (SS) k=1 slack [Pr(N >= d-1) - Pr(N <= 1)] over d >= 3: 5/1029 = 0.004859
+  3-cycle certificate: min 481/947 = 0.507920 at [(0, 7), (0, 8), (0, 9), (0, 10)]; T_n value 257/513 = 0.500975; tournaments below it: 0, equal: 0
+  max Pr[w first] = 512/1029 = 0.497570 (T_n value 256/513 = 0.499025; tournaments >= it: 0)
+n = 10, k = 5: 376992 arc sets, 197076 strong (Landau; Landau/Warshall mismatches 0)  [6.5 s]
+  H odd for all: True;  M(T) transitive: 0;  F(T) not strong: 0
+  min vertex-lemma margin 2p-1 = 9/681 = 0.013216 at [(0, 9), (1, 3), (1, 4), (1, 5), (2, 4)]
+  min majority-source margin = 9/681 = 0.013216 at [(0, 9), (1, 3), (1, 4), (1, 5), (2, 4)]
+  min D_in = 9/681 = 0.013216 at [(0, 9), (1, 3), (1, 4), (1, 5), (2, 4)]
+  min D_out = 9/681 = 0.013216 at [(0, 9), (2, 4), (2, 5), (2, 6), (3, 5)]
+  (T, w) vertex-lemma failures: 0; majority-source failures: 0; tournaments with some D_in <= 0: 0 ((T, w) pairs: 0; least in-degree at such a vertex: -)
+  min vertex-lemma margin by min(indeg, outdeg): 1: 9/681 = 0.013216; 2: 9/513 = 0.017544; >= 3: 17/697 = 0.024390
+  (SS) failures (T, w) by k: k=0: 0, k=1: 0, k=2: 7, k=3: 61, k=4: 0;  min E[N] - d/2 by d: d=1: 0.0066, d=2: 0.0672, d=3: 0.1607, d=4: 0.1312, d=5: 0.0797, d=6: 0.0616
+  min (SS) k=1 slack [Pr(N >= d-1) - Pr(N <= 1)] over d >= 3: 7/623 = 0.011236
+  3-cycle certificate: min 241/467 = 0.516060 at [(0, 5), (0, 6), (0, 7), (0, 8), (0, 9)]; T_n value 129/257 = 0.501946; tournaments below it: 0, equal: 0
+  max Pr[w first] = 336/681 = 0.493392 (T_n value 128/257 = 0.498054; tournaments >= it: 0)
+exit=0

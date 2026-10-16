@@ -1,0 +1,2 @@
+brute force vs DFS: 250 random tournaments n = 3..9, mismatches (or even H): 0  [5.3 s]
+strongness Landau vs Warshall (and transitive+1 strong iff extreme arc): 20285 tests, mismatches 0; transitivity triangle test vs distinct scores mismatches 0

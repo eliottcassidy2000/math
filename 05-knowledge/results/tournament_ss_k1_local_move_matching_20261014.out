@@ -1,0 +1,3 @@
+n=6: (T,w) pairs with d>=3: 1203; single-vertex relocation matching fails in 654; vertex-or-2-block relocation fails in 99
+n=7: (T,w) pairs with d>=3: 1376; single-vertex relocation matching fails in 1203; vertex-or-2-block relocation fails in 509
+n=8: (T,w) pairs with d>=3: 740; single-vertex relocation matching fails in 717; vertex-or-2-block relocation fails in 504

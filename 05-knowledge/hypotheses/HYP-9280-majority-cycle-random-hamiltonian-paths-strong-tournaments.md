@@ -7,10 +7,18 @@ status: >
   transitive => the same; the stochastic symmetry (SS) => the vertex lemma); Pr[w first] < 1/2 for every non-source;
   (SS) at k = 0; the vertex lemma for in-degree <= 2 and, dually, out-degree <= 2; the weak form (F has a directed
   cycle) when T has at most one inverted arc.
-  FINITE-EXACT: the conjecture (F strong), the vertex lemma, D_in > 0 and the sharp T_n minima for every strong
-  tournament with n <= 9 (this session's labelled sweep n <= 7 and majority sweep n = 8; the S36 audit's independent
-  isomorphism-class sweep n = 8, 9). (SS) holds for all strong n <= 8 and is REFUTED at n = 9 (exactly 5 classes).
-  NUMERICAL (annealing, n = 8..12): no counterexample; at most 3 inverted arcs; the sharp minima hold.
+  PROVED (post-audit): at a vertex w of out-degree 1 whose out-neighbour o beats every vertex of U = V - {w, o}
+  (equivalently indeg(o) = 1), C(u, w) - C(w, u) = H(T[U]) for EVERY in-neighbour u (so all are witnesses).
+  FINITE-EXACT: the conjecture (F strong), the vertex lemma and the sharp T_n minima for every strong tournament with
+  n <= 9 (this session's labelled sweep n <= 7 and majority sweep n = 8; the S36 audit's independent isomorphism-class
+  sweep n = 8, 9). For every strong tournament of feedback arc number <= 2 (n <= 16), <= 3 (n <= 14), <= 4 (n <= 12),
+  <= 5 (n = 10) (post-audit sweep; T_n, the only strong feedback-1 tournament, checked separately): F strong, the vertex
+  lemma, no majority source, and the T_n minima of the vertex-lemma value, the 3-cycle certificate and Pr[w first] (the
+  last two by the second audit); the D_in and D_out minima FAIL there from n = 11 (D_in < 0). REFUTED: (SS) (n = 9, exactly 5 classes) and the averaged form D_in(w) > 0
+  (n = 11: the double chain D(11, 5) has E[N] - d/2 = -23/578 at its out-degree-1 vertex; both verified by explicit
+  path enumeration). OPEN with no failure found: (SS) at k = 1, which would give the vertex lemma for in-degree <= 4.
+  NUMERICAL (annealing, n = 8..12): weak - the D_in annealing missed the n = 11, 12 failures (its n = 8, 9 values are
+  the exact minima). Second audit of the continuation: MISTAKE-617.
 session: opus-2026-10-14-S36
 source: 05-knowledge/results/strong_balance_pisano_golden_eleven_20261014.md
 scripts:
@@ -23,6 +31,12 @@ scripts:
   - 04-computation/experiments/tournament_inneighbour_symmetry_20261014.py
   - 04-computation/experiments/tournament_ss_counterexamples_n9_20261014.py
   - 04-computation/experiments/tournament_pointwise_pairing_test_20261014.py
+  - 04-computation/experiments/tournament_near_transitive_sweep_20261014.py
+  - 04-computation/experiments/tournament_double_chain_dfs_check_20261014.py
+  - 04-computation/experiments/tournament_outdegree_one_vertex_lemma_20261014.py
+  - 04-computation/experiments/tournament_witness_rules_20261014.py
+  - 04-computation/experiments/tournament_ss_k1_refinement_test_20261014.py
+  - 04-computation/experiments/tournament_ss_k1_local_move_matching_20261014.py
   - 04-computation/experiments/s36_audit_20261014/ (independent audit code, n <= 9)
 related: [HYP-9277, HYP-9279, THM-4655, THM-4526, THM-4527]
 ---
@@ -55,13 +69,14 @@ So the conjecture would prove HYP-9277 part 1, the tournament 1/3–2/3 conjectu
 
 Each statement below implies the next, and the last already gives a balanced pair in `(1/2, 2/3]`.
 1. **(SS), stochastic symmetry at every vertex.** Let `d = indeg(w)` and let `N` be the number of in-neighbours of `w` preceding `w`. (SS) asks `Pr[N >= d − k] >= Pr[N <= k]` for all `k`. **False at `n = 9`** (below).
-2. **The averaged form at every vertex.** `D_in(w) = Σ_(u→w) (2p(u, w) − 1) > 0`, i.e. `E[N] > d/2`.
+2. **The averaged form at every vertex.** `D_in(w) = Σ_(u→w) (2p(u, w) − 1) > 0`, i.e. `E[N] > d/2`. **False at `n = 11`** (post-audit section).
 3. **The vertex lemma at every vertex.** Every vertex `w` with an in-neighbour has an in-neighbour `u` with `p(u, w) > 1/2`. Then `F(T)` has minimum in-degree `>= 1`, so it contains a directed cycle.
 4. **No majority source.** No vertex of a strong tournament precedes every other vertex with probability `> 1/2`. Equivalently, every `w` has some vertex `x`, an in-neighbour or not, with `p(x, w) > 1/2`.
 5. **`M(T)` is not transitive.** A transitive tournament has a source, so (4) gives (5). A tournament that is not transitive has a directed 3-cycle, and item 4 of the conjecture gives the balanced pair.
 
 **Remarks on the ladder.**
-- (2) ⇒ (3) because `E[N] >= d/2` forces `max_u p(u, w) >= 1/2`, and `≠ 1/2` because `H` is odd. Parity does not upgrade `E[N] >= d/2` to `E[N] > d/2` when `d` is even. Strictness of `D_in > 0` is a FINITE-EXACT fact for `n <= 9`: its minimum is `1/H(T_n)`.
+- (2) ⇒ (3) because `E[N] >= d/2` forces `max_u p(u, w) >= 1/2`, and `≠ 1/2` because `H` is odd. Parity does not upgrade `E[N] >= d/2` to `E[N] > d/2` when `d` is even.
+- Rungs (1) and (2) are false in general, but the implications stand. The live statements are (3), (4) and (5).
 - (3) ⇒ (4): if `w` precedes everybody with probability `> 1/2`, then in particular every in-neighbour `u` has `p(u, w) < 1/2`. `w` has an in-neighbour because a strong `T` has no source.
 - (4) only has to be checked at one vertex: the source of `M(T)`, if `M(T)` has one. At `T_n` it is exactly as tight as the vertex lemma. At `w = 2` the only vertex that precedes `w` with probability `> 1/2` is the in-neighbour `1`, with margin `1/H`.
 - Other weaker forms, each sufficient: `F(T)` contains a directed cycle; some directed 3-cycle of `T` has no arc with `p(tail first) < 1/3`.
@@ -129,10 +144,9 @@ For `n >= 5` none of these extremes is `T_n` (this session's rules script for `n
 
 **Conjectured sharp forms** (each equality only at `T_n`):
 - every strong tournament has a 3-cycle with all arc probabilities `>= (2^(n−3) + 1)/(2^(n−2) + 1)`;
-- every vertex has an in-neighbour that precedes it with at least that probability;
-- `D_in(w) >= 1/(2^(n−2) + 1)` for every vertex.
+- every vertex has an in-neighbour that precedes it with at least that probability.
 
-The vertex-lemma annealing (`tournament_vertex_lemma_search_20261014.py`, `n = 8..12`) finds the minimum of both the vertex-lemma margin and `D_in` to be exactly `1/(2^(n−2) + 1)`, attained at `T_n` for `n = 10, 11, 12`.
+Both hold in every sweep below. The third form proposed before the post-audit sweep, `D_in(w) >= 1/(2^(n−2) + 1)`, is REFUTED at `n = 11`. The vertex-lemma annealing (`tournament_vertex_lemma_search_20261014.py`, `n = 8..12`) had reported the `D_in` minimum as `1/(2^(n−2) + 1)`. At `n = 8, 9` that is the exact minimum (FINITE-EXACT, above), and at `n = 10` nothing refutes it. At `n = 11, 12` it was only the best value the search found, not the minimum: the search missed the double chains.
 
 **The stochastic symmetry (SS).**
 - It holds at every vertex of every strong tournament with `n <= 8`: this session for `n <= 7` (11,742,416 (tournament, vertex) pairs at `n = 7`), the audit for `n = 8`.
@@ -157,3 +171,58 @@ For linear extensions of a poset, the analogous relation is the linear-extension
 - For posets the LEM relation can be transitive, so the cycle route cannot prove 1/3–2/3 there.
 
 No prior tournament version of the majority relation was found, so the majority tournament `M(T)` of random Hamiltonian paths appears to be new. The conjecture says strong tournaments never have a transitive majority. That is the precise sense in which the tournament problem should be easier than the poset problem.
+
+## Post-audit continuation (same session)
+
+**The averaged form fails (REFUTED, FINITE-EXACT).**
+- **The family.** The double chain `D(n, j)` is the transitive order on positions `0..n−1` (higher beats lower) with the arcs `0 → j` and `j → n−1` reversed. It is strong for `1 <= j <= n−2`.
+- **The failing vertex.** At `w = 0`, which has out-degree 1 (out-neighbour `j`), the top vertex `n − 1` precedes `w` only rarely.
+  - In `D(11, 5)`, `p(10 before 0) = 33/289`. The other in-neighbours have `p = 9/17` (`u = 1..4`) or `161/289` (`u = 6..9`).
+  - So `E[N] − d/2 = −23/578 < 0`, while the vertex lemma holds with `p = 161/289`.
+  - `D(12, 6)` gives `E[N] − d/2 = −91/561`.
+- **Verification.** These values come from explicit enumeration of all Hamiltonian paths (`tournament_double_chain_dfs_check_20261014.py`) and agree with the subset DP.
+- **Growth.** Over the double chains, `min D_in` decreases to `−0.864` at `n = 18`. The vertex lemma, "no majority source" and HYP-9280 hold throughout, with the minimum vertex-lemma value at `j = 1` (`T_n`).
+- **Where it fails.** In the sweeps below, `D_in <= 0` first appears at `n = 11`, and always at a vertex of in-degree `>= 9` (second audit).
+  - `E[N] − d/2 > 0` at every vertex of in-degree `d <= 6` in every sweep.
+  - For `3 <= d <= 6` the minimum is `0.0471`. The `d = 3` minimum falls with `n`, from `0.1796` at `n = 8` to `0.0731` at `n = 14` (feedback 3), so there is no uniform slack even there.
+  - For `d = 1, 2` it tends to 0, as low as `0.0001` and `0.0057` at `n = 16`. Those degrees are proved.
+- **Status at `n = 10`.** `D_in > 0` holds for every strong tournament with `n <= 9`. At `n = 10` it is unknown outside feedback arc number `<= 5`.
+
+**Exhaustive near-transitive evidence (FINITE-EXACT; `tournament_near_transitive_sweep_20261014.py`).**
+- **Coverage.** A tournament with feedback arc number `k` is a transitive order with `k` arcs reversed. In an optimal order no reversed arc joins positions at distance 1, since swapping two adjacent positions would lower `k`. So running over all `k`-sets of arcs `lo → hi` with `hi − lo >= 2` (and the smaller `k`) covers every tournament of feedback arc number `<= k`. `T_n`, the only strong tournament of feedback arc number 1, lies outside these runs and is covered by separate checks (`n <= 20`).
+- **Ranges.** Every strong tournament of feedback arc number:
+  - `<= 2` for `n <= 16`;
+  - `<= 3` for `n <= 14`;
+  - `<= 4` for `n <= 12`;
+  - `<= 5` for `n = 10`.
+- **Results.**
+  - `M(T)` is never transitive and `F(T)` is always strongly connected.
+  - The vertex lemma and "no majority source" hold at every vertex.
+  - (SS) never fails at `k = 0, 1`. It fails at `k = 2` from `n = 10` on.
+  - `D_in <= 0` occurs from `n = 11` on, in up to 337 tournaments (`n = 14`, feedback 3).
+- **No uniform slack.** The minimum vertex-lemma margin decays like `2^(−n)` even at vertices with `min(indeg, outdeg) >= 3` (`0.00041` at `n = 16`). So no argument with uniform slack can work; the proof must be exact, as the injections for degree `<= 2` are.
+
+**Out-degree-1 vertices.** Let `w` have the unique out-neighbour `o`. Let `U` be the other vertices (all in-neighbours of `w`), `U+ = {u ∈ U : o → u}` and `U− = {u ∈ U : u → o}`.
+- **PROVED: if `U−` is empty (`o` beats every vertex of `U`, i.e. `indeg(o) = 1`), then `C(u, w) − C(w, u) = H(T[U])` for every `u ∈ U`.**
+  - *Proof.* A Hamiltonian path either ends at `w` or contains `w o`.
+  - If `w` is last, the path is `Q w` with `Q` a Hamiltonian path of `T[U ∪ {o}]`. There `o` has in-degree 0, so `Q = o Q'` with `Q'` any Hamiltonian path of `T[U]`. That gives `H(T[U])` paths, in all of which `u` precedes `w`.
+  - Otherwise the path is `A w o B'` for an arbitrary ordered pair of paths `(A, B')` partitioning `U`, possibly empty. Every such pair is valid, because `U ⇒ w` and `o ⇒ U`. The swap `(A, B') ↦ (B', A)` is an involution that exchanges "`u` before `w`" and "`w` before `u`". ∎
+  - So `p(u before w) = 1/2 + H(T[U])/(2H(T))` for every in-neighbour. For `T_n` at its out-degree-1 vertex this is the extremal value `(2^(n−3) + 1)/(2^(n−2) + 1)`.
+- **FINITE-EXACT, no failure.** The session script (`tournament_outdegree_one_vertex_lemma_20261014.py`) ran labelled `n <= 7`, feedback 2 at even `n = 10..16`, feedback 3 at `n = 10..12`, and feedback 4 at `n = 10`. The second audit extended this to exhaustive `n = 8` (all 1,866,256 strong configurations), odd-`n` near-transitive families and random `n = 6..12`. In all of these:
+  - a witness always exists in `U+`;
+  - when `U−` is nonempty, the average of `2p − 1` over `U−` is positive, and `U−` contains a witness.
+- **The `U+` average is not the mechanism.** It can be strictly negative: never for labelled `n <= 7`, but in 2,160 of the 1,866,256 configurations at `n = 8`, up to 395 pairs in the session's sweeps, and up to 1,125 in the audit's (`(11, 4)`, with one case exactly 0).
+- **Exact form of the `U−` sum** (second audit, verified per path on all 1,833,488 exhaustive `n = 8` cases): `Σ_(u∈U−)(C(u,w) − C(w,u)) = |U−|·N_1 + S_N`. Here `N_1` is the number of paths ending at `w`, `S_N` is the signed `U−` count over paths that start in `U−`, and the swappable class contributes 0. `S_N` alone can be negative, and the minimum `U−` average tends to 0 (`0.0117` at `n = 16`).
+- **Conjecture.** For out-degree-1 vertices, the average of `2p(u before w) − 1` over `U−` is positive. This is OPEN; the swap involution reduces it to a comparison of paths ending in `U−` with paths starting in `U−` inside sub-tournaments.
+
+**Which in-neighbour is the witness? Natural rules fail** (`tournament_witness_rules_20261014.py`; refinement: `tournament_ss_k1_refinement_test_20261014.py`):
+- the predecessor-weighted average `Σ_u Pr[pred(w) = u]·(2p(u, w) − 1) > 0` first fails, among the tournaments tested (no failure at `n <= 9` in the families checked), at `n = 10`, for the arcs `(0, 4), (1, 9)`: at `w = 1` its value is `−656/167281`, while the vertex lemma holds there (`u = 4`, `p = 213/409`);
+- "minimum out-degree", "minimum score in `T[U]`", "maximum score in `T[U]`" and "the most frequent predecessor" each fail by `n <= 7`;
+- "beats the fewest out-neighbours of `w`" survives labelled `n <= 7` and feedback 2 to `n = 14` under the most favourable tie-break (a tied choice can fail already at `n = 6`). It fails outright at `n = 8` with feedback 3: reversed arcs `(0,5), (1,6), (5,7)`, `w = 1`, unique choice `u = 5` with `p = 88/179` (second audit).
+
+The per-in-neighbour refinement of (SS) at `k = 1` also fails, in 41.3% of the triples `(T, w, u)` with in-degree `d >= 3` at `n = 7` (11,734,800 of 28,413,840). It would ask that, for each `u`, the paths with `u` the only in-neighbour before `w` be no more numerous than those with `u` the only in-neighbour after `w`. These failures rule out the simplest local witnesses and refinements; they do not exclude every local argument.
+
+**Next target.** (SS) at `k = 1`: `Pr[N >= d − 1] >= Pr[N <= 1]`.
+- It held at every vertex of every tournament tested.
+- With the proved `k = 0` case it gives `E[N] >= 1 + Pr[N >= 2] >= 3/2` for `d = 3`, and `E[N] >= 2` for `d = 4` (exact LP check by the second audit). So it would give the vertex lemma for in-degree `<= 4`. The reversed statement gives, at a vertex of out-degree `<= 4`, an out-neighbour that follows it with `p > 1/2`. That is not the vertex lemma at such vertices, which is where every known (SS) and `D_in` failure sits.
+- NUMERICAL (seeded random sample): unlike `k = 0`, it is usually not realised by the two local move sets tested. A matching from `{N <= 1}` into `{N >= d − 1}` along single-vertex relocations fails for 717 of 740 (tournament, vertex) pairs at `n = 8`, and with two-vertex blocks for 504. Matchings do exist for 23 and 236 of them, and most failures are trivial: some path with `N <= 1` has no relocation into the target at all (`tournament_ss_k1_local_move_matching_20261014.py`).

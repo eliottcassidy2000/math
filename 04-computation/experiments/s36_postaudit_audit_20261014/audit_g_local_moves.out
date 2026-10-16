@@ -1,0 +1,19 @@
+PART 1: explicit (T, w) cases (numpy default_rng(20261015) random strong tournaments, first deficient ones)
+  case 1: n = 6, w = 1, out-sets [[1, 3, 4, 5], [3], [0, 1], [2, 5], [1, 2, 3], [1, 2, 4]]; d = 4, H = 31, |X| = |N<=1| = 7, |Y| = |N>=d-1| = 21
+     single-vertex relocations: maximum matching 6 < |X| = 7: True; X-paths with no move into Y: 1 (e.g. (5, 1, 3, 2, 0, 4)); Hall violator |S| = 1 (N = 0: 0, N = 1: 1) with |N(S)| = 0 (certificate re-checked: True)
+     vertex or 2-block relocations: maximum matching 7 < |X| = 7: False; X-paths with no move into Y: 0; Hall violator |S| = 0 (N = 0: 0, N = 1: 0) with |N(S)| = 0 (certificate re-checked: True)
+  case 2: n = 6, w = 2, out-sets [[1, 3, 4, 5], [3], [0, 1], [2, 5], [1, 2, 3], [1, 2, 4]]; d = 3, H = 31, |X| = |N<=1| = 12, |Y| = |N>=d-1| = 19
+     single-vertex relocations: maximum matching 10 < |X| = 12: True; X-paths with no move into Y: 0; Hall violator |S| = 5 (N = 0: 0, N = 1: 5) with |N(S)| = 3 (certificate re-checked: True)
+     vertex or 2-block relocations: maximum matching 12 < |X| = 12: False; X-paths with no move into Y: 0; Hall violator |S| = 0 (N = 0: 0, N = 1: 0) with |N(S)| = 0 (certificate re-checked: True)
+  case 3: n = 7, w = 0, out-sets [[1, 5], [2, 3], [0, 4, 6], [0, 2, 5], [0, 1, 3, 6], [1, 2, 4, 6], [0, 1, 3]]; d = 4, H = 135, |X| = |N<=1| = 39, |Y| = |N>=d-1| = 71
+     single-vertex relocations: maximum matching 23 < |X| = 39: True; X-paths with no move into Y: 11 (e.g. (1, 2, 0, 5, 4, 6, 3)); Hall violator |S| = 21 (N = 0: 5, N = 1: 16) with |N(S)| = 5 (certificate re-checked: True)
+     vertex or 2-block relocations: maximum matching 38 < |X| = 39: True; X-paths with no move into Y: 1 (e.g. (4, 0, 5, 2, 6, 1, 3)); Hall violator |S| = 1 (N = 0: 0, N = 1: 1) with |N(S)| = 0 (certificate re-checked: True)
+  case 4: n = 7, w = 1, out-sets [[1, 5], [2, 3], [0, 4, 6], [0, 2, 5], [0, 1, 3, 6], [1, 2, 4, 6], [0, 1, 3]]; d = 4, H = 135, |X| = |N<=1| = 38, |Y| = |N>=d-1| = 76
+     single-vertex relocations: maximum matching 23 < |X| = 38: True; X-paths with no move into Y: 10 (e.g. (0, 1, 2, 4, 3, 5, 6)); Hall violator |S| = 20 (N = 0: 5, N = 1: 15) with |N(S)| = 5 (certificate re-checked: True)
+     vertex or 2-block relocations: maximum matching 38 < |X| = 38: False; X-paths with no move into Y: 0; Hall violator |S| = 0 (N = 0: 0, N = 1: 0) with |N(S)| = 0 (certificate re-checked: True)
+  case 5: n = 7, w = 2, out-sets [[1, 5], [2, 3], [0, 4, 6], [0, 2, 5], [0, 1, 3, 6], [1, 2, 4, 6], [0, 1, 3]]; d = 3, H = 135, |X| = |N<=1| = 50, |Y| = |N>=d-1| = 85
+     single-vertex relocations: maximum matching 42 < |X| = 50: True; X-paths with no move into Y: 4 (e.g. (0, 1, 2, 4, 3, 5, 6)); Hall violator |S| = 10 (N = 0: 0, N = 1: 10) with |N(S)| = 2 (certificate re-checked: True)
+     vertex or 2-block relocations: maximum matching 50 < |X| = 50: False; X-paths with no move into Y: 0; Hall violator |S| = 0 (N = 0: 0, N = 1: 0) with |N(S)| = 0 (certificate re-checked: True)
+  [0.0 s]
+PART 2: the session sample at n = 6 only (random.seed(1), same generation order), recounted with this code
+  n = 6: (T, w) pairs with d >= 3: 1203 (session 1203); single-vertex matching deficient: 654 (session 654); vertex-or-2-block deficient: 99 (session 99); deficient single-vertex cases with an isolated X-path: 447; certificate failures: 0  [0.5 s]

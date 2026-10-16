@@ -1,0 +1,8 @@
+(SS) n = 9 counterexample 1 (session; audit class 2): tournament True; feedback arc number (subset DP) = 2; brute force over 9! orders = 2
+(SS) n = 9 counterexample 2 (session; audit class 4): tournament True; feedback arc number (subset DP) = 2; brute force over 9! orders = 2
+D(11,5) double chain: tournament True; feedback arc number (subset DP) = 2
+W <= 0 example, n = 10, arcs (0,4),(1,9): tournament True; feedback arc number (subset DP) = 2
+G some-fail example, n = 8, arcs (0,5),(1,6),(5,7): tournament True; feedback arc number (subset DP) = 3; brute force over 8! orders = 3
+A some-fail example n = 7 (labelled code 551): tournament True; feedback arc number (subset DP) = 2; brute force over 7! orders = 2
+P some-fail example n = 7 (labelled code 161): tournament True; feedback arc number (subset DP) = 2; brute force over 7! orders = 2
+[2.4 s]

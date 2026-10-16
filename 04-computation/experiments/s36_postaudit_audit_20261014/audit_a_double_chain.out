@@ -1,0 +1,31 @@
+Part 1: brute force over all permutations
+D(11,5) [brute force over 11! permutations, 4.5 s]: H = 289; out-neighbours of 0: [5]; d = 9; strong (Landau) = True
+   p(u before 0): 1: 9/17, 2: 9/17, 3: 9/17, 4: 9/17, 6: 161/289, 7: 161/289, 8: 161/289, 9: 161/289, 10: 33/289
+   E[N] = 1289/289 (from N-distribution: 1289/289); E[N] - d/2 = -23/578; D_in(0) = -23/289; best in-neighbour p = 161/289
+   whole tournament: vertex-lemma value 9/17 (at w = 9); majority-source value 9/17; min D_in -23/289 (at w = 0); M transitive: False; F strong: True
+D(12,6) [brute force over 12! permutations, 0.3 s]: H = 561; out-neighbours of 0: [6]; d = 10; strong (Landau) = True
+   p(u before 0): 1: 17/33, 2: 17/33, 3: 17/33, 4: 17/33, 5: 17/33, 7: 305/561, 8: 305/561, 9: 305/561, 10: 305/561, 11: 49/561
+   E[N] = 2714/561 (from N-distribution: 2714/561); E[N] - d/2 = -91/561; D_in(0) = -182/561; best in-neighbour p = 305/561
+   whole tournament: vertex-lemma value 9/17 (at w = 10); majority-source value 9/17; min D_in -182/561 (at w = 0); M transitive: False; F strong: True
+D(11,6) [brute force over 11! permutations, 0.0 s]: H = 297; out-neighbours of 0: [6]; d = 9; strong (Landau) = True
+   p(u before 0): 1: 17/33, 2: 17/33, 3: 17/33, 4: 17/33, 5: 17/33, 7: 169/297, 8: 169/297, 9: 169/297, 10: 41/297
+   E[N] = 1313/297 (from N-distribution: 1313/297); E[N] - d/2 = -47/594; D_in(0) = -47/297; best in-neighbour p = 169/297
+   whole tournament: vertex-lemma value 5/9 (at w = 9); majority-source value 5/9; min D_in -47/297 (at w = 0); M transitive: False; F strong: True
+D(12,7) [brute force over 12! permutations, 0.3 s]: H = 585; out-neighbours of 0: [7]; d = 10; strong (Landau) = True
+   p(u before 0): 1: 33/65, 2: 33/65, 3: 33/65, 4: 33/65, 5: 33/65, 6: 33/65, 8: 329/585, 9: 329/585, 10: 329/585, 11: 73/585
+   E[N] = 2842/585 (from N-distribution: 2842/585); E[N] - d/2 = -83/585; D_in(0) = -166/585; best in-neighbour p = 329/585
+   whole tournament: vertex-lemma value 5/9 (at w = 10); majority-source value 5/9; min D_in -166/585 (at w = 0); M transitive: False; F strong: True
+Part 2: explicit DFS, every j
+n = 6: H(D(n,1)) = 17 (2^(n-2)+1 = 17); all strong: True; min vertex-lemma value 9/17 = T_n value 9/17: True, attained at j = [1, 4]; min majority-source value 9/17 (0.529412); min D_in 1/17 = 0.0588 at j = [1, 4] (w = [4, 5]); #j with D_in <= 0 somewhere: 0; M transitive: 0; F not strong: 0  [0.4 s]
+n = 7: H(D(n,1)) = 33 (2^(n-2)+1 = 33); all strong: True; min vertex-lemma value 17/33 = T_n value 17/33: True, attained at j = [1, 5]; min majority-source value 17/33 (0.515152); min D_in 1/33 = 0.0303 at j = [1, 5] (w = [5, 6]); #j with D_in <= 0 somewhere: 0; M transitive: 0; F not strong: 0  [0.0 s]
+n = 8: H(D(n,1)) = 65 (2^(n-2)+1 = 65); all strong: True; min vertex-lemma value 33/65 = T_n value 33/65: True, attained at j = [1, 6]; min majority-source value 33/65 (0.507692); min D_in 1/65 = 0.0154 at j = [1, 6] (w = [6, 7]); #j with D_in <= 0 somewhere: 0; M transitive: 0; F not strong: 0  [0.0 s]
+n = 9: H(D(n,1)) = 129 (2^(n-2)+1 = 129); all strong: True; min vertex-lemma value 65/129 = T_n value 65/129: True, attained at j = [1, 7]; min majority-source value 65/129 (0.503876); min D_in 1/129 = 0.0078 at j = [1, 7] (w = [7, 8]); #j with D_in <= 0 somewhere: 0; M transitive: 0; F not strong: 0  [0.0 s]
+n = 10: H(D(n,1)) = 257 (2^(n-2)+1 = 257); all strong: True; min vertex-lemma value 129/257 = T_n value 129/257: True, attained at j = [1, 8]; min majority-source value 129/257 (0.501946); min D_in 1/257 = 0.0039 at j = [1, 8] (w = [8, 9]); #j with D_in <= 0 somewhere: 0; M transitive: 0; F not strong: 0  [0.0 s]
+n = 11: H(D(n,1)) = 513 (2^(n-2)+1 = 513); all strong: True; min vertex-lemma value 257/513 = T_n value 257/513: True, attained at j = [1, 9]; min majority-source value 257/513 (0.500975); min D_in -47/297 = -0.1582 at j = [6] (w = [0]); #j with D_in <= 0 somewhere: 3; M transitive: 0; F not strong: 0  [0.0 s]
+n = 12: H(D(n,1)) = 1025 (2^(n-2)+1 = 1025); all strong: True; min vertex-lemma value 513/1025 = T_n value 513/1025: True, attained at j = [1, 10]; min majority-source value 513/1025 (0.500488); min D_in -182/561 = -0.3244 at j = [6] (w = [0]); #j with D_in <= 0 somewhere: 4; M transitive: 0; F not strong: 0  [0.0 s]
+n = 13: H(D(n,1)) = 2049 (2^(n-2)+1 = 2049); all strong: True; min vertex-lemma value 1025/2049 = T_n value 1025/2049: True, attained at j = [1, 11]; min majority-source value 1025/2049 (0.500244); min D_in -517/1105 = -0.4679 at j = [7] (w = [0]); #j with D_in <= 0 somewhere: 5; M transitive: 0; F not strong: 0  [0.0 s]
+n = 14: H(D(n,1)) = 4097 (2^(n-2)+1 = 4097); all strong: True; min vertex-lemma value 2049/4097 = T_n value 2049/4097: True, attained at j = [1, 12]; min majority-source value 2049/4097 (0.500122); min D_in -1268/2145 = -0.5911 at j = [7] (w = [0]); #j with D_in <= 0 somewhere: 6; M transitive: 0; F not strong: 0  [0.0 s]
+n = 15: H(D(n,1)) = 8193 (2^(n-2)+1 = 8193); all strong: True; min vertex-lemma value 4097/8193 = T_n value 4097/8193: True, attained at j = [1, 13]; min majority-source value 4097/8193 (0.500061); min D_in -2899/4257 = -0.6810 at j = [8] (w = [0]); #j with D_in <= 0 somewhere: 7; M transitive: 0; F not strong: 0  [0.1 s]
+n = 16: H(D(n,1)) = 16385 (2^(n-2)+1 = 16385); all strong: True; min vertex-lemma value 8193/16385 = T_n value 8193/16385: True, attained at j = [1, 14]; min majority-source value 8193/16385 (0.500031); min D_in -6386/8385 = -0.7616 at j = [8] (w = [0]); #j with D_in <= 0 somewhere: 8; M transitive: 0; F not strong: 0  [0.2 s]
+n = 17: H(D(n,1)) = 32769 (2^(n-2)+1 = 32769); all strong: True; min vertex-lemma value 16385/32769 = T_n value 16385/32769: True, attained at j = [1, 15]; min majority-source value 16385/32769 (0.500015); min D_in -13617/16705 = -0.8151 at j = [9] (w = [0]); #j with D_in <= 0 somewhere: 9; M transitive: 0; F not strong: 0  [0.5 s]
+n = 18: H(D(n,1)) = 65537 (2^(n-2)+1 = 65537); all strong: True; min vertex-lemma value 32769/65537 = T_n value 32769/65537: True, attained at j = [1, 16]; min majority-source value 32769/65537 (0.500008); min D_in -9552/11051 = -0.8644 at j = [9] (w = [0]); #j with D_in <= 0 somewhere: 9; M transitive: 0; F not strong: 0  [1.5 s]

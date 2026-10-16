@@ -20,11 +20,14 @@ This note credits those results and keeps only what is this session's own.
   - `Pr[w first] < 1/2` for every non-source;
   - the vertex lemma for in-degree or out-degree `<= 2`;
   - the weak form when `T` has at most one inverted arc;
+  - the exact identity `C(u, w) − C(w, u) = H(T − w − o)` at an out-degree-1 vertex `w → o` when `o` beats all other in-neighbours of `w` (section 11);
   - the Lucas–Fibonacci identities of section 3, several of them the eleven-squares paper's own (credited);
   - the exact verification of the Erdős Problem 106 counterexample.
 - **FINITE-EXACT:**
-  - HYP-9280 (`F(T)` strongly connected), the vertex lemma, `D_in > 0` and the sharp `T_n` minima for every strong tournament with `n <= 9`. This session covered labelled `n <= 7` and the `n = 8` majority sweep; the independent audit covered `n = 8, 9` by isomorphism classes.
+  - HYP-9280 (`F(T)` strongly connected), the vertex lemma and the sharp `T_n` minima for every strong tournament with `n <= 9`. This session covered labelled `n <= 7` and the `n = 8` majority sweep; the independent audit covered `n = 8, 9` by isomorphism classes.
+  - The same, together with "no majority source", for every strong tournament of feedback arc number `<= 2` (`n <= 16`), `<= 3` (`n <= 14`), `<= 4` (`n <= 12`) and `<= 5` (`n = 10`) (section 11).
   - (SS) for `n <= 8`, and its failure at `n = 9`;
+  - the failure of the averaged form `D_in > 0` at `n = 11` (section 11);
   - the PSL(2, 11) structure;
   - Pisano data;
   - no Wall–Sun–Sun prime below `2·10⁶`;
@@ -52,7 +55,8 @@ This note credits those results and keeps only what is this session's own.
      - With at most one inverted arc the forward digraph has a cycle.
    - **Evidence.** The conjecture holds for every strong tournament with `n <= 9`: this session to `n = 7` (and the majority statements at `n = 8`), the independent audit at `n = 8, 9`. Annealing to `n = 12` found no counterexample, and inverted arcs are rare: at most 3 at `n = 9`.
    - **Sharp constants.** The transitive tournament with its extreme arc reversed is the unique extremiser for `n <= 9` of the 3-cycle certificate, the vertex-lemma value and `D_in`, with value `(2^(n−3) + 1)/(2^(n−2) + 1)` or margin `1/(2^(n−2) + 1)`. It is not the extremiser of the balance constant itself (`4/11`, `62/157`).
-   - **What died.** A tempting stochastic-dominance route (SS) is false at `n = 9`.
+   - **What died.** Two tempting routes. The stochastic dominance (SS) is false at `n = 9`. The averaged form "`E[N] > d/2` at every vertex" is false at `n = 11`, at an out-degree-1 vertex of a "double chain"; there the vertex lemma survives.
+   - **What is left.** The weakest open rung is (SS) at `k = 1`. No failure is known, and it would give the vertex lemma for in-degree and out-degree `<= 4` (section 11).
 2. **Pisano periods.**
    - `π(n) <= 6n`, with equality exactly at `n = 2·5^k`, `k >= 1` (10, 50, 250, 1250, …). Your "10 maps to 10" should read `π(10) = 60`.
    - Primes split by their behaviour in `Q(√5)`:
@@ -97,6 +101,7 @@ This note credits those results and keeps only what is this session's own.
 
   (SS) `Pr[N >= d − k] >= Pr[N <= k]` for all `k` ⇒ `D_in(w) = Σ_(u→w)(2p(u,w) − 1) > 0` ⇒ the vertex lemma (some in-neighbour precedes `w` with probability `> 1/2`) ⇒ no vertex is a majority source ⇒ `M(T)` is not transitive ⇒ a balanced pair.
   - The step from `D_in` to the vertex lemma uses that `E[N] >= d/2` forces some `p(u, w) >= 1/2`, hence `> 1/2` by parity.
+  - The first two rungs are false in general: (SS) at `n = 9`, `D_in > 0` at `n = 11` (section 11). The implications still hold, and the live rungs start at the vertex lemma.
   - Parity does not make `E[N] > d/2` automatic for even `d`.
   - The fourth implication holds because a strong `T` has no source.
   - "No majority source" has to hold only at one vertex, the source of `M(T)` if there is one. It allows any precedent, not just an in-neighbour. At `T_n` it is exactly as tight as the vertex lemma.
@@ -125,7 +130,7 @@ This note credits those results and keeps only what is this session's own.
 - `min_w D_in(w)` and `min_w D_out(w)`: `1/H(T_n)`;
 - `max_w Pr[w first]`: `2^(n−3)/(2^(n−2) + 1) < 1/2`.
 
-Annealing to `n = 12` finds the same minima, at `T_n`.
+Annealing to `n = 12`, and the exhaustive near-transitive sweeps of section 11, find the same minima, at `T_n`.
 
 The balance constant `δ(T) = max over pairs of min(p, 1 − p)` is different. Its minimum over strong tournaments is `4/11` (`n = 5, 6, 7`) and `62/157` (`n = 8, 9`), attained by tournaments other than `T_n`; mac-mini's HYP-9279(A) conjectures `δ >= 4/11`.
 
@@ -142,6 +147,7 @@ The balance constant `δ(T) = max over pairs of min(p, 1 − p)` is different. I
   - In each, `E[N] > d/2` and the vertex lemma still holds. This session's sampled examples are two of the five.
 - "Best in-neighbour precedence `+ Pr[w first] >= 1` per vertex" is false: 10,420,928 violating (tournament, vertex) pairs at `n = 7`.
 - The pointwise complement pairing behind (SS) is false: 2,427 violations in 16,426 random tests.
+- The averaged form `D_in(w) > 0` is false at `n = 11` (section 11).
 - The full conjecture remains OPEN.
 
 **1.6 Literature.**
@@ -272,9 +278,10 @@ This is ANALOGY, recorded as a possible unification.
 
 ## 8. Open threads
 
-1. Prove "no majority source", or the vertex lemma, or `D_in(w) > 0`, for in-degree `>= 3`. That would prove the tournament 1/3–2/3 conjecture for strong tournaments. (SS) is false at `n = 9`, but (SS) at `k <= 2` would already give the vertex lemma for in-degree `<= 6`.
-2. Push the HYP-9280 check to `n = 10`. mac-mini has an exact `n <= 10` DP (tbal2.c) and offered to run the majority statements on it.
-3. Classify the contact-matrix tori behind the other known optimal square packings (`n = 5, 10, 19, …`).
+1. Prove "no majority source", or the vertex lemma, for in-degree `>= 3`. That would prove the tournament 1/3–2/3 conjecture for strong tournaments. (SS) and `D_in > 0` are false. The next provable-looking rung is (SS) at `k = 1`, which would give in-degree `<= 4`; (SS) at `k = 2` already fails at `n = 10`.
+2. Prove the out-degree-1 average: the in-neighbours that beat `w`'s out-neighbour average `p > 1/2`. Its `U− = ∅` case is proved in section 11.
+3. Push the HYP-9280 check to all of `n = 10`; this also decides whether `D_in > 0` first fails at `n = 10` or at `n = 11`. mac-mini has an exact `n <= 10` DP (tbal2.c) and offered to run the majority statements on it.
+4. Classify the contact-matrix tori behind the other known optimal square packings (`n = 5, 10, 19, …`).
 
 ## 9. Audit
 
@@ -328,6 +335,7 @@ An independent adversarial audit ran with its own code (`04-computation/experime
 - `tournament_ss_counterexamples_n9_20261014.py`;
 - `tournament_vertex_lemma_search_20261014.py`;
 - `tournament_pointwise_pairing_test_20261014.py`;
+- post-audit: `tournament_near_transitive_sweep_20261014.py`, `tournament_double_chain_dfs_check_20261014.py`, `tournament_outdegree_one_vertex_lemma_20261014.py`, `tournament_witness_rules_20261014.py`, `tournament_ss_k1_refinement_test_20261014.py`;
 - `fibonacci_pisano_wall_sun_sun_20261014.py`;
 - `eleven_icosahedron_paley_psl211_20261014.py`;
 - `erdos106_seventeen_squares_exact_check_20261014.py`;
@@ -373,3 +381,49 @@ An independent adversarial audit ran with its own code (`04-computation/experime
 - mac-mini's THM-4655, THM-4656 and HYP-9279;
 - HYP-9277, HYP-9278, THM-4644, THM-4631, THM-135, THM-4592;
 - the S16 eleven-square octic note and the S35 notes.
+
+## 11. After the audit: the averaged form fails, wider evidence, out-degree-1 vertices
+
+This continues the proof attempt after the audit fixes. Details are in HYP-9280, "Post-audit continuation". A second independent audit checked this continuation (11.5; MISTAKE-617).
+
+**11.1 `D_in > 0` is false (FINITE-EXACT, two independent methods).**
+- **The family.** The double chain `D(n, j)` is the transitive order on `0..n−1` with the arcs `0 → j` and `j → n−1` reversed.
+- **The failing vertex.** At its out-degree-1 vertex `w = 0`, the top vertex is an in-neighbour that precedes `w` only rarely: `p = 33/289` in `D(11, 5)`. That drags `E[N] − d/2` down to `−23/578`.
+- **The vertex lemma survives.** The in-neighbours `6..9` have `p = 161/289`.
+- **Verification.** Explicit enumeration of all 289 Hamiltonian paths confirms the values, in agreement with the subset DP.
+- **Growth.** Along the family, `min D_in` reaches `−0.864` at `n = 18`.
+- **Where.** Every failure found is at a vertex of in-degree `>= 9`. For `d <= 6`, `E[N] − d/2 > 0` in every sweep: at least `0.0471` for `3 <= d <= 6`, tending to 0 for the proved degrees `d = 1, 2`.
+- **The annealing caveat.** The earlier annealing had reported `min D_in = 1/(2^(n−2) + 1)` at `n = 8..12`. At `n = 8, 9` that is the exact minimum and at `n = 10` nothing refutes it. At `n = 11, 12` it was a search artefact.
+
+**11.2 Exhaustive near-transitive sweep (FINITE-EXACT).** Every extremal and failing example so far is nearly transitive. The sweep therefore covered every strong tournament of feedback arc number:
+- `<= 2` for `n <= 16`;
+- `<= 3` for `n <= 14`;
+- `<= 4` for `n <= 12`;
+- `<= 5` for `n = 10`.
+
+That is 22 runs and 401,442 strong arc sets, with every vertex checked.
+- `M(T)` is never transitive and `F(T)` is always strong.
+- The vertex lemma and "no majority source" hold. The minimum vertex-lemma value, 3-cycle certificate and `Pr[w first]` never reach `T_n`'s values (`T_n`, the only strong feedback-1 tournament, is checked separately). The `D_in` minimum fails from `n = 11`.
+- (SS) never fails at `k <= 1`, and first fails at `k = 2` at `n = 10`.
+- The vertex-lemma margin decays like `2^(−n)` even at vertices of in- and out-degree `>= 3`. So any proof must be exact, like the degree-`<= 2` injections, rather than a bound with slack.
+
+**11.3 Out-degree-1 vertices.** Let `w → o` be the only out-arc of `w`.
+- **PROVED.** If `o` beats every vertex of `U = V − {w, o}` (equivalently `indeg(o) = 1`), then `C(u, w) − C(w, u) = H(T[U])` for every in-neighbour `u`.
+  - The paths ending at `w` are `o Q' w`.
+  - The others are `A w o B'` with `(A, B')` free, and swapping `A` and `B'` is an involution.
+  - This gives `T_n`'s extremal value as a special case.
+- **FINITE-EXACT, no failure** (session runs plus the second audit's exhaustive `n = 8`). A witness always lies among the in-neighbours that `o` beats. The in-neighbours that beat `o` have positive average `2p − 1`, the conjectured next case.
+
+**11.4 Negative results that constrain a proof.** No natural local choice of witness works:
+- the predecessor-weighted average (first failure found at `n = 10`);
+- minimum out-degree, minimum or maximum score in `T[U]`, and the most frequent predecessor (all by `n = 7`);
+- "beats fewest out-neighbours of `w`" (`n = 8`, feedback 3; second audit).
+
+The per-in-neighbour refinement of (SS) at `k = 1` fails in 41.3% of the triples `(T, w, u)` with `d >= 3` at `n = 7`. The vertex lemma looks true, with margin exactly `1/H` at `T_n`. These negative results rule out the simplest local witnesses and refinements, not every local argument.
+
+**11.5 Second audit (MISTAKE-617).** An independent referee reproduced everything above with its own code and found three errors, now fixed:
+- a claimed slack bound `0.047` that holds only for `3 <= d <= 6`;
+- `T_n` minima claimed over the feedback families, including the `D_in` minimum, which fails there;
+- an annealing value called an artefact at `n = 8..10`, where it is exact or unrefuted.
+
+It also corrected eleven imprecisions (wording of the identity's hypothesis, script coverage, the `G` rule failing already at `n = 8`, the local-move typing, denominators). Report: `04-computation/experiments/s36_postaudit_audit_20261014/REPORT.md`.

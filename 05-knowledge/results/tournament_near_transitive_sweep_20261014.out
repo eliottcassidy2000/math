@@ -1,0 +1,177 @@
+n = 8, k = 2 reversed arcs: 210 arc sets, 39 strong  [5.5 s]
+  M(T) transitive: 0;  F(T) not strongly connected: 0
+  min vertex-lemma margin = 3/99 = 0.030303 at [(0, 7), (1, 3)]
+  min majority-source margin = 3/99 = 0.030303 at [(0, 7), (1, 3)]
+  min D_in = 3/99 = 0.030303 at [(0, 7), (1, 3)]
+  tournaments with some vertex-lemma margin <= 0: 0; with some majority-source margin <= 0: 0; with some D_in <= 0: 0
+  min vertex-lemma margin by min(indeg, outdeg): 1: 0.030303; 2: 0.031579; >= 3: 0.094340
+  (SS) failures (T, w) by k: k=0: 0, k=1: 0, k=2: 0, k=3: 0, k=4: 0;  min E[N] - d/2 by d: d=1: 0.0152, d=2: 0.1037, d=3: 0.1849, d=4: 0.1509, d=5: 0.0789, d=6: 0.0909
+n = 9, k = 2 reversed arcs: 378 arc sets, 53 strong  [0.0 s]
+  M(T) transitive: 0;  F(T) not strongly connected: 0
+  min vertex-lemma margin = 3/195 = 0.015385 at [(0, 8), (1, 3)]
+  min majority-source margin = 3/195 = 0.015385 at [(0, 8), (1, 3)]
+  min D_in = 3/195 = 0.015385 at [(0, 8), (1, 3)]
+  tournaments with some vertex-lemma margin <= 0: 0; with some majority-source margin <= 0: 0; with some D_in <= 0: 0
+  min vertex-lemma margin by min(indeg, outdeg): 1: 0.015385; 2: 0.015707; >= 3: 0.049505
+  (SS) failures (T, w) by k: k=0: 0, k=1: 0, k=2: 0, k=3: 3, k=4: 0;  min E[N] - d/2 by d: d=1: 0.0077, d=2: 0.0760, d=3: 0.1861, d=4: 0.1573, d=5: 0.1040, d=6: 0.0471
+n = 10, k = 2 reversed arcs: 630 arc sets, 69 strong  [0.0 s]
+  M(T) transitive: 0;  F(T) not strongly connected: 0
+  min vertex-lemma margin = 3/387 = 0.007752 at [(0, 9), (1, 3)]
+  min majority-source margin = 3/387 = 0.007752 at [(0, 9), (1, 3)]
+  min D_in = 3/387 = 0.007752 at [(0, 9), (1, 3)]
+  tournaments with some vertex-lemma margin <= 0: 0; with some majority-source margin <= 0: 0; with some D_in <= 0: 0
+  min vertex-lemma margin by min(indeg, outdeg): 1: 0.007752; 2: 0.007833; >= 3: 0.025381
+  (SS) failures (T, w) by k: k=0: 0, k=1: 0, k=2: 1, k=3: 5, k=4: 0;  min E[N] - d/2 by d: d=1: 0.0039, d=2: 0.0546, d=3: 0.1868, d=4: 0.1615, d=5: 0.1095, d=6: 0.0660
+n = 11, k = 2 reversed arcs: 990 arc sets, 87 strong  [0.0 s]
+  M(T) transitive: 0;  F(T) not strongly connected: 0
+  min vertex-lemma margin = 3/771 = 0.003891 at [(0, 10), (1, 3)]
+  min majority-source margin = 3/771 = 0.003891 at [(0, 10), (1, 3)]
+  min D_in = -47/297 = -0.158249 at [(0, 6), (6, 10)]
+  tournaments with some vertex-lemma margin <= 0: 0; with some majority-source margin <= 0: 0; with some D_in <= 0: 4
+  min vertex-lemma margin by min(indeg, outdeg): 1: 0.003891; 2: 0.003911; >= 3: 0.012853
+  (SS) failures (T, w) by k: k=0: 0, k=1: 0, k=2: 3, k=3: 7, k=4: 7;  min E[N] - d/2 by d: d=1: 0.0019, d=2: 0.0385, d=3: 0.1871, d=4: 0.1639, d=5: 0.1131, d=6: 0.0699
+n = 12, k = 2 reversed arcs: 1485 arc sets, 107 strong  [0.1 s]
+  M(T) transitive: 0;  F(T) not strongly connected: 0
+  min vertex-lemma margin = 3/1539 = 0.001949 at [(0, 11), (1, 3)]
+  min majority-source margin = 3/1539 = 0.001949 at [(0, 11), (1, 3)]
+  min D_in = -182/561 = -0.324421 at [(0, 6), (6, 11)]
+  tournaments with some vertex-lemma margin <= 0: 0; with some majority-source margin <= 0: 0; with some D_in <= 0: 6
+  min vertex-lemma margin by min(indeg, outdeg): 1: 0.001949; 2: 0.001954; >= 3: 0.006468
+  (SS) failures (T, w) by k: k=0: 0, k=1: 0, k=2: 4, k=3: 8, k=4: 10;  min E[N] - d/2 by d: d=1: 0.0010, d=2: 0.0267, d=3: 0.1873, d=4: 0.1653, d=5: 0.1153, d=6: 0.0725
+n = 13, k = 2 reversed arcs: 2145 arc sets, 129 strong  [0.2 s]
+  M(T) transitive: 0;  F(T) not strongly connected: 0
+  min vertex-lemma margin = 3/3075 = 0.000976 at [(0, 12), (1, 3)]
+  min majority-source margin = 3/3075 = 0.000976 at [(0, 12), (1, 3)]
+  min D_in = -517/1105 = -0.467873 at [(0, 7), (7, 12)]
+  tournaments with some vertex-lemma margin <= 0: 0; with some majority-source margin <= 0: 0; with some D_in <= 0: 9
+  min vertex-lemma margin by min(indeg, outdeg): 1: 0.000976; 2: 0.000977; >= 3: 0.003245
+  (SS) failures (T, w) by k: k=0: 0, k=1: 0, k=2: 4, k=3: 10, k=4: 11;  min E[N] - d/2 by d: d=1: 0.0005, d=2: 0.0183, d=3: 0.1874, d=4: 0.1660, d=5: 0.1164, d=6: 0.0740
+n = 14, k = 2 reversed arcs: 3003 arc sets, 153 strong  [0.5 s]
+  M(T) transitive: 0;  F(T) not strongly connected: 0
+  min vertex-lemma margin = 3/6147 = 0.000488 at [(0, 13), (1, 3)]
+  min majority-source margin = 3/6147 = 0.000488 at [(0, 13), (1, 3)]
+  min D_in = -1268/2145 = -0.591142 at [(0, 7), (7, 13)]
+  tournaments with some vertex-lemma margin <= 0: 0; with some majority-source margin <= 0: 0; with some D_in <= 0: 11
+  min vertex-lemma margin by min(indeg, outdeg): 1: 0.000488; 2: 0.000488; >= 3: 0.001625
+  (SS) failures (T, w) by k: k=0: 0, k=1: 0, k=2: 4, k=3: 11, k=4: 14;  min E[N] - d/2 by d: d=1: 0.0002, d=2: 0.0125, d=3: 0.1820, d=4: 0.1663, d=5: 0.1170, d=6: 0.0749
+n = 15, k = 2 reversed arcs: 4095 arc sets, 179 strong  [1.0 s]
+  M(T) transitive: 0;  F(T) not strongly connected: 0
+  min vertex-lemma margin = 3/12291 = 0.000244 at [(0, 14), (1, 3)]
+  min majority-source margin = 3/12291 = 0.000244 at [(0, 14), (1, 3)]
+  min D_in = -2899/4257 = -0.680996 at [(0, 8), (8, 14)]
+  tournaments with some vertex-lemma margin <= 0: 0; with some majority-source margin <= 0: 0; with some D_in <= 0: 14
+  min vertex-lemma margin by min(indeg, outdeg): 1: 0.000244; 2: 0.000244; >= 3: 0.000813
+  (SS) failures (T, w) by k: k=0: 0, k=1: 0, k=2: 7, k=3: 12, k=4: 14;  min E[N] - d/2 by d: d=1: 0.0001, d=2: 0.0084, d=3: 0.1770, d=4: 0.1665, d=5: 0.1173, d=6: 0.0753
+n = 16, k = 2 reversed arcs: 5460 arc sets, 207 strong  [4.2 s]
+  M(T) transitive: 0;  F(T) not strongly connected: 0
+  min vertex-lemma margin = 3/24579 = 0.000122 at [(0, 15), (1, 3)]
+  min majority-source margin = 3/24579 = 0.000122 at [(0, 15), (1, 3)]
+  min D_in = -6386/8385 = -0.761598 at [(0, 8), (8, 15)]
+  tournaments with some vertex-lemma margin <= 0: 0; with some majority-source margin <= 0: 0; with some D_in <= 0: 15
+  min vertex-lemma margin by min(indeg, outdeg): 1: 0.000122; 2: 0.000122; >= 3: 0.000407
+  (SS) failures (T, w) by k: k=0: 0, k=1: 0, k=2: 7, k=3: 14, k=4: 16;  min E[N] - d/2 by d: d=1: 0.0001, d=2: 0.0057, d=3: 0.1736, d=4: 0.1666, d=5: 0.1175, d=6: 0.0755
+n = 8, k = 3 reversed arcs: 1330 arc sets, 510 strong  [0.0 s]
+  M(T) transitive: 0;  F(T) not strongly connected: 0
+  min vertex-lemma margin = 5/133 = 0.037594 at [(0, 7), (1, 3), (1, 4)]
+  min majority-source margin = 5/133 = 0.037594 at [(0, 7), (1, 3), (1, 4)]
+  min D_in = 5/133 = 0.037594 at [(0, 7), (1, 3), (1, 4)]
+  tournaments with some vertex-lemma margin <= 0: 0; with some majority-source margin <= 0: 0; with some D_in <= 0: 0
+  min vertex-lemma margin by min(indeg, outdeg): 1: 0.037594; 2: 0.051546; >= 3: 0.065421
+  (SS) failures (T, w) by k: k=0: 0, k=1: 0, k=2: 0, k=3: 0, k=4: 0;  min E[N] - d/2 by d: d=1: 0.0188, d=2: 0.1118, d=3: 0.1796, d=4: 0.1308, d=5: 0.1129, d=6: 0.1128
+n = 9, k = 3 reversed arcs: 3276 arc sets, 982 strong  [0.0 s]
+  M(T) transitive: 0;  F(T) not strongly connected: 0
+  min vertex-lemma margin = 5/261 = 0.019157 at [(0, 8), (1, 3), (1, 4)]
+  min majority-source margin = 5/261 = 0.019157 at [(0, 8), (1, 3), (1, 4)]
+  min D_in = 5/261 = 0.019157 at [(0, 8), (1, 3), (1, 4)]
+  tournaments with some vertex-lemma margin <= 0: 0; with some majority-source margin <= 0: 0; with some D_in <= 0: 0
+  min vertex-lemma margin by min(indeg, outdeg): 1: 0.019157; 2: 0.025907; >= 3: 0.031963
+  (SS) failures (T, w) by k: k=0: 0, k=1: 0, k=2: 0, k=3: 9, k=4: 0;  min E[N] - d/2 by d: d=1: 0.0096, d=2: 0.0788, d=3: 0.1791, d=4: 0.1399, d=5: 0.0799, d=6: 0.0675
+n = 10, k = 3 reversed arcs: 7140 arc sets, 1713 strong  [0.1 s]
+  M(T) transitive: 0;  F(T) not strongly connected: 0
+  min vertex-lemma margin = 5/517 = 0.009671 at [(0, 9), (1, 3), (1, 4)]
+  min majority-source margin = 5/517 = 0.009671 at [(0, 9), (1, 3), (1, 4)]
+  min D_in = 5/517 = 0.009671 at [(0, 9), (1, 3), (1, 4)]
+  tournaments with some vertex-lemma margin <= 0: 0; with some majority-source margin <= 0: 0; with some D_in <= 0: 0
+  min vertex-lemma margin by min(indeg, outdeg): 1: 0.009671; 2: 0.012987; >= 3: 0.015801
+  (SS) failures (T, w) by k: k=0: 0, k=1: 0, k=2: 0, k=3: 18, k=4: 0;  min E[N] - d/2 by d: d=1: 0.0048, d=2: 0.0546, d=3: 0.1688, d=4: 0.1423, d=5: 0.0889, d=6: 0.0474
+n = 11, k = 3 reversed arcs: 14190 arc sets, 2781 strong  [0.7 s]
+  M(T) transitive: 0;  F(T) not strongly connected: 0
+  min vertex-lemma margin = 5/1029 = 0.004859 at [(0, 10), (1, 3), (1, 4)]
+  min majority-source margin = 5/1029 = 0.004859 at [(0, 10), (1, 3), (1, 4)]
+  min D_in = -57/687 = -0.082969 at [(0, 10), (6, 10), (7, 9)]
+  tournaments with some vertex-lemma margin <= 0: 0; with some majority-source margin <= 0: 0; with some D_in <= 0: 9
+  min vertex-lemma margin by min(indeg, outdeg): 1: 0.004859; 2: 0.006502; >= 3: 0.007856
+  (SS) failures (T, w) by k: k=0: 0, k=1: 0, k=2: 9, k=3: 57, k=4: 72;  min E[N] - d/2 by d: d=1: 0.0024, d=2: 0.0374, d=3: 0.1378, d=4: 0.1439, d=5: 0.0908, d=6: 0.0539
+n = 12, k = 3 reversed arcs: 26235 arc sets, 4274 strong  [1.8 s]
+  M(T) transitive: 0;  F(T) not strongly connected: 0
+  min vertex-lemma margin = 5/2053 = 0.002435 at [(0, 11), (1, 3), (1, 4)]
+  min majority-source margin = 5/2053 = 0.002435 at [(0, 11), (1, 3), (1, 4)]
+  min D_in = -146/843 = -0.173191 at [(0, 7), (7, 10), (7, 11)]
+  tournaments with some vertex-lemma margin <= 0: 0; with some majority-source margin <= 0: 0; with some D_in <= 0: 57
+  min vertex-lemma margin by min(indeg, outdeg): 1: 0.002435; 2: 0.003253; >= 3: 0.003917
+  (SS) failures (T, w) by k: k=0: 0, k=1: 0, k=2: 16, k=3: 134, k=4: 184;  min E[N] - d/2 by d: d=1: 0.0012, d=2: 0.0254, d=3: 0.1122, d=4: 0.1448, d=5: 0.0921, d=6: 0.0553
+n = 13, k = 3 reversed arcs: 45760 arc sets, 6290 strong  [6.8 s]
+  M(T) transitive: 0;  F(T) not strongly connected: 0
+  min vertex-lemma margin = 5/4101 = 0.001219 at [(0, 12), (1, 3), (1, 4)]
+  min majority-source margin = 5/4101 = 0.001219 at [(0, 12), (1, 3), (1, 4)]
+  min D_in = -343/1147 = -0.299041 at [(0, 6), (6, 8), (6, 12)]
+  tournaments with some vertex-lemma margin <= 0: 0; with some majority-source margin <= 0: 0; with some D_in <= 0: 164
+  min vertex-lemma margin by min(indeg, outdeg): 1: 0.001219; 2: 0.001627; >= 3: 0.001956
+  (SS) failures (T, w) by k: k=0: 0, k=1: 0, k=2: 43, k=3: 245, k=4: 360;  min E[N] - d/2 by d: d=1: 0.0006, d=2: 0.0171, d=3: 0.0909, d=4: 0.1453, d=5: 0.0929, d=6: 0.0562
+n = 14, k = 3 reversed arcs: 76076 arc sets, 8937 strong  [24.0 s]
+  M(T) transitive: 0;  F(T) not strongly connected: 0
+  min vertex-lemma margin = 5/8197 = 0.000610 at [(0, 13), (1, 3), (1, 4)]
+  min majority-source margin = 5/8197 = 0.000610 at [(0, 13), (1, 3), (1, 4)]
+  min D_in = -1500/3315 = -0.452489 at [(0, 8), (1, 3), (8, 13)]
+  tournaments with some vertex-lemma margin <= 0: 0; with some majority-source margin <= 0: 0; with some D_in <= 0: 337
+  min vertex-lemma margin by min(indeg, outdeg): 1: 0.000610; 2: 0.000814; >= 3: 0.000977
+  (SS) failures (T, w) by k: k=0: 0, k=1: 0, k=2: 89, k=3: 404, k=4: 587;  min E[N] - d/2 by d: d=1: 0.0003, d=2: 0.0115, d=3: 0.0731, d=4: 0.1451, d=5: 0.0933, d=6: 0.0567
+n = 8, k = 4 reversed arcs: 5985 arc sets, 3416 strong  [0.0 s]
+  M(T) transitive: 0;  F(T) not strongly connected: 0
+  min vertex-lemma margin = 5/133 = 0.037594 at [(0, 7), (1, 3), (1, 4), (2, 4)]
+  min majority-source margin = 5/133 = 0.037594 at [(0, 7), (1, 3), (1, 4), (2, 4)]
+  min D_in = 5/133 = 0.037594 at [(0, 7), (1, 3), (1, 4), (2, 4)]
+  tournaments with some vertex-lemma margin <= 0: 0; with some majority-source margin <= 0: 0; with some D_in <= 0: 0
+  min vertex-lemma margin by min(indeg, outdeg): 1: 0.037594; 2: 0.065421; >= 3: 0.063830
+  (SS) failures (T, w) by k: k=0: 0, k=1: 0, k=2: 0, k=3: 0, k=4: 0;  min E[N] - d/2 by d: d=1: 0.0188, d=2: 0.1118, d=3: 0.1640, d=4: 0.1277, d=5: 0.1129, d=6: 0.1128
+n = 9, k = 4 reversed arcs: 20475 arc sets, 9567 strong  [0.3 s]
+  M(T) transitive: 0;  F(T) not strongly connected: 0
+  min vertex-lemma margin = 5/261 = 0.019157 at [(0, 8), (1, 3), (1, 4), (2, 4)]
+  min majority-source margin = 5/261 = 0.019157 at [(0, 8), (1, 3), (1, 4), (2, 4)]
+  min D_in = 5/261 = 0.019157 at [(0, 8), (1, 3), (1, 4), (2, 4)]
+  tournaments with some vertex-lemma margin <= 0: 0; with some majority-source margin <= 0: 0; with some D_in <= 0: 0
+  min vertex-lemma margin by min(indeg, outdeg): 1: 0.019157; 2: 0.035019; >= 3: 0.031579
+  (SS) failures (T, w) by k: k=0: 0, k=1: 0, k=2: 0, k=3: 13, k=4: 0;  min E[N] - d/2 by d: d=1: 0.0096, d=2: 0.0830, d=3: 0.1620, d=4: 0.1322, d=5: 0.0789, d=6: 0.0675
+n = 10, k = 4 reversed arcs: 58905 arc sets, 22787 strong  [1.7 s]
+  M(T) transitive: 0;  F(T) not strongly connected: 0
+  min vertex-lemma margin = 5/517 = 0.009671 at [(0, 9), (1, 3), (1, 4), (2, 4)]
+  min majority-source margin = 5/517 = 0.009671 at [(0, 9), (1, 3), (1, 4), (2, 4)]
+  min D_in = 5/517 = 0.009671 at [(0, 9), (1, 3), (1, 4), (2, 4)]
+  tournaments with some vertex-lemma margin <= 0: 0; with some majority-source margin <= 0: 0; with some D_in <= 0: 0
+  min vertex-lemma margin by min(indeg, outdeg): 1: 0.009671; 2: 0.017544; >= 3: 0.015707
+  (SS) failures (T, w) by k: k=0: 0, k=1: 0, k=2: 4, k=3: 28, k=4: 0;  min E[N] - d/2 by d: d=1: 0.0048, d=2: 0.0586, d=3: 0.1607, d=4: 0.1328, d=5: 0.0803, d=6: 0.0471
+n = 11, k = 4 reversed arcs: 148995 arc sets, 48307 strong  [8.0 s]
+  M(T) transitive: 0;  F(T) not strongly connected: 0
+  min vertex-lemma margin = 5/1029 = 0.004859 at [(0, 10), (1, 3), (1, 4), (2, 4)]
+  min majority-source margin = 5/1029 = 0.004859 at [(0, 10), (1, 3), (1, 4), (2, 4)]
+  min D_in = -47/297 = -0.158249 at [(0, 7), (6, 8), (6, 9), (6, 10)]
+  tournaments with some vertex-lemma margin <= 0: 0; with some majority-source margin <= 0: 0; with some D_in <= 0: 10
+  min vertex-lemma margin by min(indeg, outdeg): 1: 0.004859; 2: 0.008780; >= 3: 0.007833
+  (SS) failures (T, w) by k: k=0: 0, k=1: 0, k=2: 9, k=3: 155, k=4: 218;  min E[N] - d/2 by d: d=1: 0.0024, d=2: 0.0406, d=3: 0.1340, d=4: 0.1331, d=5: 0.0842, d=6: 0.0475
+n = 12, k = 4 reversed arcs: 341055 arc sets, 93779 strong  [34.5 s]
+  M(T) transitive: 0;  F(T) not strongly connected: 0
+  min vertex-lemma margin = 5/2053 = 0.002435 at [(0, 11), (1, 3), (1, 4), (2, 4)]
+  min majority-source margin = 5/2053 = 0.002435 at [(0, 11), (1, 3), (1, 4), (2, 4)]
+  min D_in = -166/585 = -0.283761 at [(0, 8), (7, 9), (7, 10), (7, 11)]
+  tournaments with some vertex-lemma margin <= 0: 0; with some majority-source margin <= 0: 0; with some D_in <= 0: 140
+  min vertex-lemma margin by min(indeg, outdeg): 1: 0.002435; 2: 0.004392; >= 3: 0.003911
+  (SS) failures (T, w) by k: k=0: 0, k=1: 0, k=2: 19, k=3: 587, k=4: 994;  min E[N] - d/2 by d: d=1: 0.0012, d=2: 0.0278, d=3: 0.1067, d=4: 0.1332, d=5: 0.0851, d=6: 0.0503
+n = 10, k = 5 reversed arcs: 376992 arc sets, 197076 strong  [12.4 s]
+  M(T) transitive: 0;  F(T) not strongly connected: 0
+  min vertex-lemma margin = 9/681 = 0.013216 at [(0, 9), (1, 3), (1, 4), (1, 5), (2, 4)]
+  min majority-source margin = 9/681 = 0.013216 at [(0, 9), (1, 3), (1, 4), (1, 5), (2, 4)]
+  min D_in = 9/681 = 0.013216 at [(0, 9), (1, 3), (1, 4), (1, 5), (2, 4)]
+  tournaments with some vertex-lemma margin <= 0: 0; with some majority-source margin <= 0: 0; with some D_in <= 0: 0
+  min vertex-lemma margin by min(indeg, outdeg): 1: 0.013216; 2: 0.017544; >= 3: 0.024390
+  (SS) failures (T, w) by k: k=0: 0, k=1: 0, k=2: 7, k=3: 61, k=4: 0;  min E[N] - d/2 by d: d=1: 0.0066, d=2: 0.0672, d=3: 0.1607, d=4: 0.1312, d=5: 0.0797, d=6: 0.0616
+exit=0

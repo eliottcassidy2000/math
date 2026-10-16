@@ -1,0 +1,19 @@
+D(11, 5): H = 289; w = 0 has out-neighbour 5 only, in-degree d = 9
+   p(u before 0): 1: 9/17, 2: 9/17, 3: 9/17, 4: 9/17, 6: 161/289, 7: 161/289, 8: 161/289, 9: 161/289, 10: 33/289
+   E[N] = 1289/289, d/2 = 9/2, E[N] - d/2 = -23/578 (< 0: True); best in-neighbour p = 161/289 (> 1/2: True)
+D(12, 6): H = 561; w = 0 has out-neighbour 6 only, in-degree d = 10
+   p(u before 0): 1: 17/33, 2: 17/33, 3: 17/33, 4: 17/33, 5: 17/33, 7: 305/561, 8: 305/561, 9: 305/561, 10: 305/561, 11: 49/561
+   E[N] = 2714/561, d/2 = 5, E[N] - d/2 = -91/561 (< 0: True); best in-neighbour p = 305/561 (> 1/2: True)
+n = 6: double chains j = 1..4: min vertex-lemma value 9/17 (0.529412); min majority-source value 0.529412; min D_in 0.0588 (at j = 1); M(T) transitive: 0; F(T) not strong: 0  [0.8 s]
+n = 7: double chains j = 1..5: min vertex-lemma value 17/33 (0.515152); min majority-source value 0.515152; min D_in 0.0303 (at j = 1); M(T) transitive: 0; F(T) not strong: 0  [0.0 s]
+n = 8: double chains j = 1..6: min vertex-lemma value 33/65 (0.507692); min majority-source value 0.507692; min D_in 0.0154 (at j = 1); M(T) transitive: 0; F(T) not strong: 0  [0.0 s]
+n = 9: double chains j = 1..7: min vertex-lemma value 65/129 (0.503876); min majority-source value 0.503876; min D_in 0.0078 (at j = 1); M(T) transitive: 0; F(T) not strong: 0  [0.0 s]
+n = 10: double chains j = 1..8: min vertex-lemma value 129/257 (0.501946); min majority-source value 0.501946; min D_in 0.0039 (at j = 1); M(T) transitive: 0; F(T) not strong: 0  [0.0 s]
+n = 11: double chains j = 1..9: min vertex-lemma value 257/513 (0.500975); min majority-source value 0.500975; min D_in -0.1582 (at j = 6); M(T) transitive: 0; F(T) not strong: 0  [0.0 s]
+n = 12: double chains j = 1..10: min vertex-lemma value 513/1025 (0.500488); min majority-source value 0.500488; min D_in -0.3244 (at j = 6); M(T) transitive: 0; F(T) not strong: 0  [0.0 s]
+n = 13: double chains j = 1..11: min vertex-lemma value 1025/2049 (0.500244); min majority-source value 0.500244; min D_in -0.4679 (at j = 7); M(T) transitive: 0; F(T) not strong: 0  [0.0 s]
+n = 14: double chains j = 1..12: min vertex-lemma value 2049/4097 (0.500122); min majority-source value 0.500122; min D_in -0.5911 (at j = 7); M(T) transitive: 0; F(T) not strong: 0  [0.1 s]
+n = 15: double chains j = 1..13: min vertex-lemma value 4097/8193 (0.500061); min majority-source value 0.500061; min D_in -0.6810 (at j = 8); M(T) transitive: 0; F(T) not strong: 0  [0.5 s]
+n = 16: double chains j = 1..14: min vertex-lemma value 8193/16385 (0.500031); min majority-source value 0.500031; min D_in -0.7616 (at j = 8); M(T) transitive: 0; F(T) not strong: 0  [1.6 s]
+n = 17: double chains j = 1..15: min vertex-lemma value 16385/32769 (0.500015); min majority-source value 0.500015; min D_in -0.8151 (at j = 9); M(T) transitive: 0; F(T) not strong: 0  [6.7 s]
+n = 18: double chains j = 1..16: min vertex-lemma value 32769/65537 (0.500008); min majority-source value 0.500008; min D_in -0.8644 (at j = 9); M(T) transitive: 0; F(T) not strong: 0  [16.2 s]
