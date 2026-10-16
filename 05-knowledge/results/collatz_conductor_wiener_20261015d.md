@@ -136,6 +136,84 @@ individual O_rho terms without it. The exact identity (6), conditional pole
 certificates, finite-depth spectral theorem and numerical fits are unchanged.
 This correction is recorded as MISTAKE-620.
 
+## 5. The critical boundary pays one conductor moment
+
+2026-10-15 continuation, clock_duality_oct15. **PROVED.** Incoming commit
+e62673a9f7 constructs unbounded-depth eigen-distributions at every
+Re(rho)!=0 by successively choosing Fourier-block preimages. This does not
+contradict W1: those distributions need not have its summable weighted
+Fourier tail. There is also a useful strengthening exactly at the boundary
+where W1's strict contraction disappears.
+
+Let 0<sigma=Re(rho)<=1, and set
+
+    R_c=3^(sigma-1)/(2^sigma-1),
+    a=2^(-sigma),             c=1-a.
+
+Here R_c>=1: the convex function 2^(-sigma)+(3/2)^sigma/3 lies above its
+value 1 at sigma=1 on (0,1), since its derivative at 1 is negative.
+Write F_q=R_c^q sum_(conductor(xi)=q) |fhat(xi)|. Thus ||f||_(R_c)=sum F_q.
+
+**Proposition W2 (critical strong stability and moment resolvent).** On the
+mean-zero weighted Wiener space at R_c,
+
+    ||Ptilde_rho^m f||_(R_c)
+      <= sum_(q>=1) F_q Pr{Binomial(m,c)<q}.              (8)
+
+In particular Ptilde_rho^m f tends to zero in this norm for every f in the
+space, even when it has infinitely many conductor levels. There is no
+nonzero fixed point there. If
+
+    M_1(g)=sum_(q>=1) q R_c^q sum_(conductor(xi)=q)|ghat(xi)| < infinity,
+
+then the equation (I-Ptilde_rho)f=g has a unique solution in this space and
+
+    ||f||_(R_c) <= M_1(g)/c.                             (9)
+
+Also ||Ptilde_rho^m g||_(R_c)<=M_1(g)/(c*m) for m>=1.
+
+Proof. Dominate each Fourier branch by its absolute coefficient. A halving
+letter keeps the conductor and has weighted mass a; an odd letter lowers
+the conductor by one and has weighted mass
+(3/2)^sigma/(3R_c)=c. At conductor one that odd letter is killed by the
+rank-one correction. Thus survival from conductor q for m letters is exactly
+the displayed binomial tail in this positive *majorant*. Fourier phases can
+only decrease the actual norm; no independence of Collatz trajectories has
+been asserted. The binomial variable counts branch letters in the expansion
+of a linear operator, not sampled integer orbits.
+
+For each fixed q the tail tends to zero. Dominated convergence applies
+because sum F_q is finite, proving strong stability and excluding fixed
+points. The expected waiting time for q lowering letters is q/c, so
+
+    sum_(m>=0) Pr{Binomial(m,c)<q}=q/c.
+
+Tonelli's theorem applied to nonnegative majorants yields
+sum_m ||Ptilde_rho^m g||<=M_1(g)/c. The absolutely convergent Neumann sum
+therefore solves the equation; strong stability proves uniqueness. Markov's
+inequality for the same waiting time gives the last rate. QED.
+
+This is an endpoint regularity statement, not a uniform geometric norm
+bound or an exclusion of the incoming arbitrary distributions. Its source
+price remains explicit. For the marked atom of section 3, the additional
+moment is
+
+    M_1(f_(Q,a))=sum_(q=1..Q) 2q*3^(q-1)*R_c^q,
+
+which is unbounded in Q. The native counterpart is the survivor residual
+in [P1--P2, native packets](collatz_survivor_packets_20261015e.md): both retain
+the mass left over after an allowed reduction, but no source/clock-preserving
+intertwiner between these two reductions has been proved.
+
+The [critical-boundary control](../../04-computation/experiments/collatz_critical_conductor_20261015e.py)
+checks exact finite branch survival at rho=1,R=1 and exact waiting-time
+identities at three rational lowering probabilities. These are checks of
+the proof's majorant; they do not certify the unknown regularity of an actual
+Collatz main term.
+
+Normal/optimized W2 control output SHA256:
+`42364748e11673c6ef9b3e6ab69dd90097ccb675f4b7a372c4bb9a6ee6c337bc`.
+
 ## Reproduction
 
 ```sh

@@ -1,0 +1,26 @@
+{
+  "Fourier_branch_checks": 1044,
+  "branch_depths": [
+    0,
+    8
+  ],
+  "conductor_levels": [
+    1,
+    4
+  ],
+  "probabilities": [
+    "1/3",
+    "1/2",
+    "2/3"
+  ],
+  "status": "FINITE-EXACT controls of the proved positive majorant; source regularity OPEN",
+  "truncations": [
+    0,
+    24
+  ],
+  "waiting_depths": [
+    1,
+    12
+  ],
+  "waiting_time_checks": 900
+}
