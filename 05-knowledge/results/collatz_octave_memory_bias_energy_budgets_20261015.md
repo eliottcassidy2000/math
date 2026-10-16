@@ -38,7 +38,7 @@ The special primes, curling numbers and Langlands threads are in the companion n
    - By THM-4658 statement 4, such main terms would be a fixed point of the transfer operator at its balanced line `Re s = 1/2`.
 7. **Q–Pell and golden controls.**
    - The energy transport `e_(4X) = (e_X + 2c_X + δ_X)/4` has exactly the algebraic shape of the Q covariance model's variance update `V_new = V(3 − r)/4`.
-   - But the Collatz cross term is not a function of the previous state (`κ` swings between −0.97 and +0.91). So no Möbius/Pell closure exists; the memory is cancelled rather than contracted.
+   - The measured cross term varies widely (`κ` swings between −0.97 and +0.91), so these data do not establish the same scalar Möbius/Pell closure. They do not exclude a richer deterministic state or a different closure; the observed cancellation must be retained.
    - The golden/Conway control is the opposite regime: a deterministic profile, so bounded and decaying.
 
 ## 1. Inheritance and the live board
@@ -152,9 +152,9 @@ All are nonzero. In clock-mesh language, a coarse budget `C(P_b) <= X²(15 + 4j)
 - **Q–Pell (THM-4630).**
   - Q's model variance update is `V_new/V = (3 − r)/4` with a Möbius correlation map `r ↦ (r − 1)/(3 − r)` and a two-step Pell matrix `[[3,4],[2,3]]`.
   - The Collatz energy transport `e_(4X) = (e_X + 2c_X + δ_X)/4` has the same "divide by four per two steps" shape.
-  - Q's closure comes from the model's prescribed source correlations. The Collatz cross term `κ_X` is not a function of the previous state: it ranges from −0.97 to +0.91 with runs of either sign.
-  - So the Pell-type projective fixed point has no Collatz counterpart. The memory is cancelled, not contracted at a rate.
-  - This is a negative control result, and it is what the terminal-mesh note's warning ("a projective fixed point alone cannot supply it") anticipates.
+  - Q's closure comes from prescribed source correlations. The measured Collatz cross term `κ_X` ranges from −0.97 to +0.91 with runs of either sign. Variation alone does not prove that it is not a function of a richer previous state.
+  - No scalar Pell-type closure or contraction rate is established here. A proposed closure must retain the observed cross term and be tested against it.
+  - This is an obstruction to the analogy without extra data, not a theorem excluding all Pell-based constructions. The [changing-generator companion](quadratic_cycle_phase_20261015b.md) supplies a separate exact Pell identity without identifying it with native Collatz transport.
 - **Möbius maps and the rational function field.** The Q map is an element of `PGL_2 = Aut(C(z))`: a hyperbolic automorphism of the Riemann sphere, with fixed points `1 ± sqrt(2)` and multiplier `(3 − 2 sqrt(2))` at the attractor. The Collatz normalized transport `g ↦ g/2 + Δ̂` is an affine Möbius map fixing `∞`, but with a random translation part. Its stationary law is that of a random affine iteration, which is unbounded when the increments are Gaussian; this is the content of (A). See the companion note for the rational-function-field thread.
 - **Golden/Conway control** (golden nested-tree note; `gold_heavy_child_20261014j.md`). Conway's leaf charge has no cancellation, and its profile is deterministic: the integer limit is closed. A constant budget is natural there because nothing random enters. The Collatz census sits in the opposite regime.
 
@@ -175,7 +175,14 @@ All are nonzero. In clock-mesh language, a coarse budget `C(P_b) <= X²(15 + 4j)
 
 ## 9. Audit
 
-Pending.
+The original independent session audit is pending. A concurrent Codex proof audit
+repaired statement 4(a) of THM-4658: a scalar main term does not alone justify
+Haar-leading residue-class main terms; `H(N)=o(N^σ)` is now explicit. It also
+narrowed the Q--Pell nonexistence wording above and supplied a mean-zero
+finite-cylinder hostile to confusing branch squared norms with a norm of the
+sum. These scoped checks are recorded in
+[the incoming-work audit](collatz_incoming_audit_20261015b.md); they are not
+an audit of the entire numerical census or surrogate model.
 
 ## 10. Reproduction
 

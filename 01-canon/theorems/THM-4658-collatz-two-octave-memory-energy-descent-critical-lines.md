@@ -49,7 +49,7 @@ related: [HYP-9282, HYP-9283, THM-4629, THM-4630, THM-4581]
 
    so a uniform bound on the level-2 increment energy `δ` bounds the top-channel energy with the same constant in the limit.
 4. **Main terms are transfer-operator eigen-distributions.** Let `ρ` be complex with `σ = Re ρ > 0`, and let `P_ρ` act on finitely additive signed distributions on `Z_3` by `(P_ρ β)(A) = −2^(−ρ) β(A/2) − (3/2)^ρ β((3A+1)/2)`.
-   - **(a) Density level.** `P_ρ Haar = (−2^(−ρ) − (3/2)^ρ/3) Haar`, so Haar measure is an eigen-distribution with eigenvalue 1 exactly at the zeros of `D(ρ) = 1 + 2^(−ρ) + (3/2)^ρ/3`, the Mercator characteristic function of the amplitude note. If `S(N) = c N^ρ + o(N^σ)` with `c ≠ 0`, then `D(ρ) = 0`.
+   - **(a) Density level.** `P_ρ Haar = (−2^(−ρ) − (3/2)^ρ/3) Haar`, so Haar measure is an eigen-distribution with eigenvalue 1 exactly at the zeros of `D(ρ) = 1 + 2^(−ρ) + (3/2)^ρ/3`, the Mercator characteristic function of the amplitude note. If `S(N) = c N^ρ + o(N^σ)` with `c ≠ 0` **and** `H(N) = o(N^σ)`, then `D(ρ) = 0`. The latter hypothesis is implied by Haar-leading class asymptotics; it is not inferred from the total-sum asymptotic alone.
    - **(b) Excess level.** Suppose every cylinder `A` has `C(A; N) = Haar(A) S(N) + β(A) N^ρ + o(N^σ)`. Then `β(Z_3) = 0`, and `β` is fixed by the rank-one modification
 
      `(P̃_ρ β)(A) = −2^(−ρ) β(A/2) − (3/2)^ρ [β((3A+1)/2) − Haar(A) β(2 + 3Z_3)]`.
@@ -77,7 +77,7 @@ related: [HYP-9282, HYP-9283, THM-4629, THM-4630, THM-4581]
 - *Chain bound.* Iterate the normalized inequality. ∎
 
 **4.** Use `⌊N/2⌋^ρ = 2^(−ρ)N^ρ + O(N^(σ − 1))` and `(3⌈N/2⌉)^ρ = (3/2)^ρ N^ρ + O(N^(σ − 1))`.
-- *(a)* For Haar measure, `A/2` has the same measure as `A` and `(3A+1)/2` has a third of it. Statement 1 with `A = Z` reads `S(N) = −S(⌊N/2⌋) − C(2 + 3Z; 3⌈N/2⌉)`. If `S` has the stated main term, every class sum shares it with weight Haar at leading order, and comparing coefficients gives `c = −c 2^(−ρ) − c (3/2)^ρ/3`.
+- *(a)* For Haar measure, `A/2` has the same measure as `A` and `(3A+1)/2` has a third of it. Statement 1 with `A = Z` reads `S(N) = −S(⌊N/2⌋) − C(2 + 3Z; 3⌈N/2⌉)`. Now use the exact identity `C(2 + 3Z; M) = (S(M) + H(M))/3`. Under both displayed hypotheses, comparing coefficients gives `c = −c 2^(−ρ) − c (3/2)^ρ/3`. Without the small-H assumption, an order-N^σ excess term remains and this comparison does not give `D(ρ)=0`.
 - *(b)* Put `Ẽ(A; N) = C(A; N) − Haar(A) S(N)`. Statement 1 for `A` and for `Z`, together with `Haar((3A+1)/2) = Haar(A)/3`, gives exactly
 
   `Ẽ(A; N) = −Ẽ(A/2; ⌊N/2⌋) − Ẽ((3A+1)/2; 3⌈N/2⌉) + Haar(A) Ẽ(2 + 3Z; 3⌈N/2⌉)`.
@@ -93,6 +93,8 @@ related: [HYP-9282, HYP-9283, THM-4629, THM-4630, THM-4581]
   - Statement 3 is a source-preserving energy rule in the sense of the break-clock note: it keeps the integer clock `N ↦ 4N, 3N, 6N` exactly.
   - Statement 5 explains why a white-sign model of `t` is self-consistent exactly at the `sqrt(N)` scale. The variance budget of the two refinement branches balances on `Re s = 1/2`, while the density and Mercator modes sit on the other balanced line, `Re s = 1`.
 - **What it does not give.**
+  - Correction (clock_duality_oct15, 2026-10-15): statement 4(a)'s pre-audit scalar-to-Haar inference omitted `H(N)=o(N^σ)`. The amended implication retains that assumption; the Haar eigenvalue computation and statement 4(b) remain unchanged. The correction mechanism is recorded in `01-canon/MISTAKES.md`.
+  - The branch squared-norm sum in statement 5 is not the norm of their sum. A mean-zero depth-two cylinder function gives norm expansion at real `ρ=3/4`, despite `φ(3/4)<1`; see [the exact incoming-work audit](../../05-knowledge/results/collatz_incoming_audit_20261015b.md). No full-operator contraction is asserted.
   - Statement 3 transfers the energy problem one level down; it does not close it. The census shows `Δ(N)` strongly correlated with `H(N)`: the cross term has `|κ|` up to 0.97, and the two-octave memory is almost exactly cancelled.
   - Statement 4 is conditional on main terms existing. HYP-9282 records evidence for nonzero real `sqrt(N)` main terms on many residue classes; by statement 4(b) their coefficients would be a fixed point of `P̃_(1/2)`.
 - **Credit.**

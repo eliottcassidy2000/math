@@ -36,11 +36,15 @@ while keeping the original observable recoverable, as in the attached
 unit-fraction manuscript. Physical source positions and integer interval
 lengths never change when native controller depths change.
 
-Incoming at origin/main `6e3b04d2f8`: THM-4658 and HYP-9282/9283 reserve
-two-octave memory, square-root residue biases, and possibly logarithmic
-energy budgets. They are **RESERVED**, not proved dependencies. The
-incoming tournament correction MISTAKE-617 reinforces the audit rule here:
-retain every failing row and state exactly which population was checked.
+Incoming at `6e3b04d2f8` initially reserved THM-4658 and HYP-9282/9283.
+The later pre-audit checkpoint `378a9b6390` supplies the exact two-octave
+identity, a separate conditional logarithmic tail certificate, and a
+heuristic against constant budgets. The [incoming-work audit](collatz_incoming_audit_20261015b.md)
+repairs one missing density assumption, constructs a mean-zero branch
+correlation hostile, and gives an annular Gram interface to that identity.
+Our G2 implication does not depend on the new interval run. The incoming
+tournament correction MISTAKE-617 reinforces the audit rule: retain every
+failing row and state exactly which population was checked.
 
 ## 2. The exact Bellman slack is signed overlap, not collision count
 
