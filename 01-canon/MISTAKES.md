@@ -18234,3 +18234,38 @@ the ambient space.
 - **Lesson:**
   - An attaining example bounds an extremal constant from one side only. Say "at most", and state where the matching bound is known.
   - When raising a parameter in a theorem, change every occurrence in one edit, grep for the old value, and only then hand the file to an auditor.
+
+## MISTAKE-617 (2026-10-15, opus-2026-10-14-S36 post-audit continuation: HYP-9280 "Post-audit continuation" and section 11 of strong_balance_pisano_golden_eleven_20261014.md; found by the session's second independent adversarial audit before the close-out push) -- a slack bound stated for all small degrees that held only for some, extremal claims carried over to families where they fail, an artefact label applied where the value was exact, and several scope and wording overreaches
+
+- **Claims (pre-audit draft):**
+  - (E1) "min(E[N] - d/2) >= 0.047 for every d <= 6 in every sweep."
+  - (E2) The status block listed "the sharp T_n minima" as FINITE-EXACT over the feedback-arc families (<= 2 for n <= 16, ..., <= 5 for n = 10), although that list includes the D_in and D_out minima.
+  - (E3) The D_in annealing value 1/(2^(n-2)+1) was called "not the minimum" for n = 8..12 and "a search artefact" at n = 10, 11, 12.
+  - (I1-I11) Smaller items:
+    - the identity's hypothesis "o beats every other in-neighbour of w" (o is not an in-neighbour);
+    - script coverage of the out-degree-1 checks overstated (n = 8, 9 were not run);
+    - "up to 395" negative U+ averages;
+    - the G rule "first fails at n = 9" (it fails at n = 8, and under unfavourable tie-breaks at n = 6);
+    - the W failure without its vertex and exact value;
+    - "(SS) at k = 1 cannot be realised by local moves" from a seeded sample of two move sets;
+    - "a proof must be global";
+    - "41% of cases" (the denominator is triples (T, w, u));
+    - a reference to a nonexistent section 12;
+    - "dually out-degree <= 4";
+    - the T_n layer missing from the feedback-arc coverage statement.
+- **Why it was wrong:**
+  - (E1) The printed sweep output contains values 0.0001 (d = 1) and 0.0057 (d = 2). The summary was written from the d >= 3 columns without rereading the d = 1, 2 entries.
+  - (E2) A list of extremes established for n <= 9 was copied into the status line for a new family without rechecking each item. The same section showed D_in < 0 there. The sweep script never computed the certificate, Pr[w first] or D_out.
+  - (E3) Refuting the annealing at n = 11, 12 was generalised to its whole range, contradicting the file's own FINITE-EXACT n = 8, 9 minima.
+  - (I-items) Wording again outran what was computed (the MISTAKE-611 / MISTAKE-614 pattern).
+- **Correct framing:**
+  - E[N] - d/2 > 0 for every d <= 6, with minimum 0.0471 for 3 <= d <= 6, tending to 0 for the proved degrees d = 1, 2. Every D_in <= 0 vertex has in-degree >= 9.
+  - Over the feedback families: F strong, vertex lemma, no majority source, and the T_n minima of the vertex-lemma value, 3-cycle certificate and Pr[w first] (the last two by the audit). The D_in and D_out minima fail there from n = 11.
+  - Only the n = 11, 12 annealing reports were artefacts.
+  - The identity reads: if indeg(o) = 1 then C(u,w) - C(w,u) = H(T - w - o) for every in-neighbour u.
+  - The local-move result is NUMERICAL and narrow.
+- **What survives:** everything computed. The D_in refutation at n = 11 (confirmed by brute force over 11! and 12!), the 22 near-transitive runs and 401,442 strong arc sets, the out-degree-1 identity (no gap found), (SS) at k <= 1 without failure, the witness-rule failures, and the refinement counts.
+- **Lesson:**
+  - When a summary quotes a minimum over a table, reread every row the summary claims, including the proved degenerate rows.
+  - When a list of extremes moves to a new family, recheck each item against that family's own output, and state which items the script did not compute.
+  - Scope refutations to the exact range where they were observed.
