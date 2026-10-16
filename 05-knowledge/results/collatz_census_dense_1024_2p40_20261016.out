@@ -1,0 +1,8 @@
+parity table to 2^37: 322.8 s; 245 words recomputed exactly
+spot check of 20000 random n in [2^37, 2^40): 0 mismatches
+block invariant check (attempt 0): 0 inconsistent blocks
+heavy pass over blocks [0, 1048576): 2176.5 s; max within-block |hp| = 3391
+grid pass over 11175 blocks (30632 grid points): 8.4 s
+S(2^40) = 989143994, H(2^40) = -55691
+1920 shared grid points with the 64-per-octave census agree exactly: True
+wrote C:/Users/Eliott/AppData/Local/Temp/claude/C--Users-Eliott-Documents-GitHub-ephrepos-math/a46eae61-4398-4ab0-8e04-bd90318942db/scratchpad/s38/dense40.npz, C:/Users/Eliott/AppData/Local/Temp/claude/C--Users-Eliott-Documents-GitHub-ephrepos-math/a46eae61-4398-4ab0-8e04-bd90318942db/scratchpad/s38/dense40_full.npz, C:/Users/Eliott/AppData/Local/Temp/claude/C--Users-Eliott-Documents-GitHub-ephrepos-math/a46eae61-4398-4ab0-8e04-bd90318942db/scratchpad/s38/dense40_moments.npz, C:/Users/Eliott/AppData/Local/Temp/claude/C--Users-Eliott-Documents-GitHub-ephrepos-math/a46eae61-4398-4ab0-8e04-bd90318942db/scratchpad/s38/dense40.json, C:/Users/Eliott/AppData/Local/Temp/claude/C--Users-Eliott-Documents-GitHub-ephrepos-math/a46eae61-4398-4ab0-8e04-bd90318942db/scratchpad/s38/dense40_state.json; total 2526.7 s

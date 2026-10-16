@@ -1,0 +1,48 @@
+{
+ "n_points": 2048,
+ "S_2p42": 3573799150,
+ "H_2p42": 1268051,
+ "checks": {
+  "resume_state_matches": true
+ },
+ "Q1": {
+  "model": "M1",
+  "relative_rms_error": 0.020492837294670708,
+  "passed": true
+ },
+ "Q2": {
+  "model": "M2",
+  "relative_rms_error": 0.0011474596387954896,
+  "bound": 0.005,
+  "passed": true
+ },
+ "Q3": {
+  "values": [
+   0.13943323264432456,
+   1.142003201226713
+  ],
+  "passed": true
+ },
+ "Q4": {
+  "values": [
+   0.13943323264432456,
+   1.142003201226713
+  ],
+  "passed": false
+ },
+ "Q5": {
+  "n_windows": 1024,
+  "mean": 0.8167442078217738,
+  "max": 1.2527391225593387,
+  "passed": true
+ },
+ "Q6": {
+  "rms_residual_over_sqrtN": 1.7257621910949683,
+  "bound": 3.0,
+  "passed": true
+ },
+ "profile": {
+  "g_mean": 0.36642491563032625,
+  "g_rms": 0.4603076193120836
+ }
+}

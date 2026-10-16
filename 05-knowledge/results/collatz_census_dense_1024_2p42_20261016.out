@@ -1,0 +1,8 @@
+parity table to 2^37: 374.4 s; 245 words recomputed exactly
+spot check of 20000 random n in [2^40, 2^42): 0 mismatches
+block invariant check (attempt 0): 0 inconsistent blocks
+heavy pass over blocks [1048576, 4194304): 12079.3 s; max within-block |hp| = 3796
+grid pass over 2048 blocks (2048 grid points): 3.9 s
+S(2^42) = 3573799150, H(2^42) = 1268051; resumed from 2^40 with S = 989143994, H = -55691
+resume state reproduces the given S, H: True
+wrote C:\Users\Eliott\AppData\Local\Temp\claude\C--Users-Eliott-Documents-GitHub-ephrepos-math\a46eae61-4398-4ab0-8e04-bd90318942db\scratchpad\s38\dense42b.npz, C:\Users\Eliott\AppData\Local\Temp\claude\C--Users-Eliott-Documents-GitHub-ephrepos-math\a46eae61-4398-4ab0-8e04-bd90318942db\scratchpad\s38\dense42b_full.npz, C:\Users\Eliott\AppData\Local\Temp\claude\C--Users-Eliott-Documents-GitHub-ephrepos-math\a46eae61-4398-4ab0-8e04-bd90318942db\scratchpad\s38\dense42b_moments.npz, C:\Users\Eliott\AppData\Local\Temp\claude\C--Users-Eliott-Documents-GitHub-ephrepos-math\a46eae61-4398-4ab0-8e04-bd90318942db\scratchpad\s38\dense42b.json, C:\Users\Eliott\AppData\Local\Temp\claude\C--Users-Eliott-Documents-GitHub-ephrepos-math\a46eae61-4398-4ab0-8e04-bd90318942db\scratchpad\s38\dense42b_state.json; total 12508.5 s
