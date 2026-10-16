@@ -6,6 +6,9 @@ status: >
   conjugation-stable field without sqrt(-3), a three-colourable exterior preserves every old six-colouring (any old set,
   not only the eight ports), and a killing exterior has at least twenty vertices. EI19 is excluded from every odd-degree
   extension of L; the fish needs the same point of C3 over F_4 in every odd-degree conjugation-stable carrier over K.
+  NEW: EI21 carries the fish's genus-one curve C3 at its hub vertex 15 (THM-4661 4(c)), so an EI21 placement in L also
+  needs C3(F_4) != empty; EI21 is excluded from Q(zeta11, sqrt5). Of the four smallest known triangle-free
+  four-chromatic unit graphs only EI17 is not reduced.
   Probes of the cubic carrier L(theta) with roots of unity and the ten first-power conjugates of the width-three unit are
   three-colourable but Cartesian (no rational relation between those conjugates and the roots of unity), so they add no
   evidence beyond L; clock_duality_oct15's circuit-based assemblies in the powers v^i xi^j (cubic_crossedge_packets_20261016d)

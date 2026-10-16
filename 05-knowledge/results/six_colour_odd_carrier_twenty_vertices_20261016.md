@@ -11,13 +11,14 @@ while eliminating all separating colourings"
 
 **Status.**
 - **PROVED (THM-4661):** an exterior of at most **nineteen** points of an odd-degree extension preserves every old
-  six-colouring (the inherited bound was seventeen; "at least eighteen" in the prompt becomes "at least twenty");
+  six-colouring (the inherited bound was seventeen; "at least eighteen" in the prompt becomes "at least twenty",
+  and an exhaustive SAT search over the necessary conditions makes it **twenty-two**);
   the structure of a vertex-minimal failed exterior (lists of size five or six, low vertices span a forest of edges
   and odd cycles of length at least five, not three-colourable, not five-choosable, minimum degree five, a vertex of
   degree six); an equality tester is exactly six-chromatic and, in any field, decides the plane at seven colours;
   EI19 is excluded from every odd-degree extension of `Q(zeta55)` and a fish placement in any conjugation-stable
   odd-degree extension of `K = Q(zeta5, sqrt(-11))` needs the same point of the genus-one curve `C3` over the real
-  quartic field that `L` already needs.
+  quartic field that `L` already needs; **EI21 carries the same genus-one curve**, so the same condition governs it.
 - **FINITE-EXACT:** the arithmetic table of the parity step for every even palette from 4 to 40; non-residue
   certificates for `sqrt(-2)`, `sqrt(-35)` at `p = 661` in the cubic carrier; three-colourability of four probe
   contexts of `L' = Q(zeta55, theta)` built from the width-three unit and its conjugates (up to 13,287 vertices),
@@ -71,6 +72,29 @@ The same parity step excludes the extremal order for every even palette from 4 t
 ([table](six_colour_odd_carrier_checks_20261016.out)). Five-cores of 18 or 19 vertices are not excluded; they just
 cannot be failed exteriors.
 
+**Twenty-two, by exhaustive search (THM-4661 statement 5, FINITE-EXACT).**
+[six_colour_exterior_twenty_sat_20261016.py](../../04-computation/experiments/six_colour_exterior_twenty_sat_20261016.py)
+roots a SAT search at a high vertex of maximum degree. It enumerates the attachment patterns of its second
+neighbourhood up to isomorphism and imposes every necessary condition above (triangle-free, two common neighbours at
+most, degrees and lists, no low 4-cycle, the Gallai edge count, a high vertex), with non-three-colourability added
+lazily. Results ([log](six_colour_exterior_twenty_sat_20261016.out)):
+
+| `n` | patterns | verdict |
+|---:|---:|---|
+| 19 | 1 | UNSAT (re-derives the hand proof, without needing three-colourability) |
+| 20 | 7 | UNSAT |
+| 21 | 38 | UNSAT |
+| 22 | 137 | 36 patterns (all with root degree six) have models; every model found is non-three-colourable |
+
+So **every failed exterior has at least 22 vertices**: 21 field-escaping points never delete an old six-colouring.
+At 22 the screen stops excluding, but the screen is weaker than the target. Each of the 36 models is
+**five-choosable**, certified by an exact Alon–Tarsi coefficient
+([alon_tarsi_five_choosability_20261016.py](../../04-computation/experiments/alon_tarsi_five_choosability_20261016.py)):
+an orientation with outdegrees at most four whose monomial in `prod (x_u - x_v)` has nonzero coefficient. A failed
+exterior is not five-choosable, so none of them is one. The obstruction that remains is choosability, not size:
+the search finds sparse triangle-free graphs with every other required property, and they all have choice number at
+most five.
+
 ## 3. The three-colour gate, now for arbitrary old sets
 
 THM-4614's doubling lemma with (I1) in place of the nine-point census: if the exterior is three-colourable, give the
@@ -89,11 +113,24 @@ every genus-one obstruction with an even-degree divisor:
 | EI19 (19 vertices, rigid) | excluded: forced `sqrt(-2)`, `sqrt(-35)` | excluded from every odd-degree extension of `L`, including `L'` (also certified at `p = 661`) |
 | fish (23 vertices, one-parameter) | needs `C3(F_4) != empty` (fish note (5)) | in any conjugation-stable odd-degree `M ⊇ K`, again needs exactly `C3(F_4) != empty` |
 | EI17 (17 vertices, rigid) | excluded to coordinate height `1e63`; field OPEN | OPEN |
-| EI21 (21 vertices, one-parameter) | OPEN (117-unit scan) | OPEN |
+| EI21 (21 vertices, one-parameter) | OPEN in S24 (117-unit scan); **now: needs `C3(F_4) != empty`** | carries the fish's curve `C3` (new, THM-4661 4(c)); same condition in every odd-degree carrier over `K` |
 
 The fish argument is the fish note's own: a point of `C3` over a field of odd degree over `F_4`, together with the
 rational degree-eight fibre of `C3 -> P^1`, gives an `F_4`-rational divisor of degree one, hence a point over `F_4`.
 The cubic `theta` is irrelevant to it.
+
+**EI21 carries the same genus-one curve (new).** At the vertex `v_15` of EI21 (HoG 51378) four unit 4-cycles meet,
+`(10,13,15,14)`, `(13,15,19,17)`, `(14,15,20,16)`, `(15,19,18,20)`. With `v_15 = 0` and `a, b, c, d = v_13, v_14, v_19,
+v_20`, the parallelograms put `v_10 = a + b`, `v_17 = a + c`, `v_16 = b + d`, `v_18 = c + d`. The edges `10-18` and
+`16-17` then say `|P + Q| = |P - Q| = 1` for `P = a - d`, `Q = b - c`. So `|P|^2 + |Q|^2 = 1` and `P ⊥ Q`, and with
+`X = |P|^2` the three skew products give exactly the fish's square classes `X(1-X)`, `X(4-X)`, `(1-X)(X+3)` times
+`11`. Every faithful numerical realization satisfies the two relations to `1e-15`, with `X` sweeping `(0.006, 0.998)`
+along the family ([checks](six_colour_odd_carrier_checks_20261016.out)). S24 left EI21 open after a 117-unit scan; it
+is now tied to the same single question `C3(F_4)` as the fish. It is excluded from `Q(zeta11, sqrt5)` and from every
+carrier whose real field has odd degree over `Q(sqrt5)`. A census of the hub pattern (a hub, four neighbours, four
+rhombus completions, two closing edges) finds it at vertex 15 of EI21 and vertex 12 of EI19, and nowhere in EI17 or
+the fish (whose `C3` comes from its antipodal central rhombus instead). Of the four smallest known triangle-free
+four-chromatic unit graphs, only EI17 is untouched.
 
 A general remark explains the pattern: any graph that can be built from one edge by repeatedly adding a vertex with
 two placed neighbours lies, by (I1) applied step by step, in the smallest field containing that edge. So an
@@ -148,11 +185,11 @@ very special.
 
 | Requirement on a coupled exterior in `L' \ K'` | Status |
 |---|---|
-| at least 20 vertices | PROVED necessary (THM-4661) |
+| at least 20 vertices; at least 22 by exhaustive search over the necessary conditions | PROVED (20); FINITE-EXACT, solver verdicts (22) |
 | minimum degree 5, degree 6 where there is no old contact, some degree-6 vertex | PROVED necessary |
 | low vertices span a forest of edges and odd cycles (length >= 5) | PROVED necessary |
 | not three-colourable (four-chromatic triangle-free unit graph in `L'`) | PROVED necessary; none known; EI19, fish reduced as above |
-| not five-choosable | PROVED necessary |
+| not five-choosable | PROVED necessary; it kills every 22-vertex model of the other conditions found (Alon–Tarsi) |
 | all separating assignments killed (equality tester) | equivalent to `chi(R^2) = 7` (THM-4661 statement 3) |
 
 The canonical hostile for this board is a five-core of 18 or 19 vertices: it exists combinatorially for all the
@@ -164,6 +201,8 @@ repo uses it, and it is the condition that separates "has a five-core" from "can
 ```text
 python -B 04-computation/experiments/six_colour_odd_carrier_checks_20261016.py
 python -B 04-computation/experiments/cubic_carrier_three_colour_probes_20261016.py
+python -B 04-computation/experiments/six_colour_exterior_twenty_sat_20261016.py 19 20 21 22
+python -B 04-computation/experiments/alon_tarsi_five_choosability_20261016.py 05-knowledge/results/six_colour_exterior_models_n22_20261016.json
 ```
 
 Outputs: [checks](six_colour_odd_carrier_checks_20261016.json) ([log](six_colour_odd_carrier_checks_20261016.out)),

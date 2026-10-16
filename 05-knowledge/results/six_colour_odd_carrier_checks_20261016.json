@@ -193,5 +193,35 @@
    -0.4030317167626848,
    0.8546376797184614
   ]
+ },
+ "ei21_hub": {
+  "faithful_samples": 17,
+  "X_range": [
+   0.006199189198359166,
+   0.99802822128519
+  ],
+  "max_residual": 1.1102230246251565e-15
+ },
+ "c3_hub_patterns": {
+  "EI17": {
+   "count": 0,
+   "hub_vertices": []
+  },
+  "EI19": {
+   "count": 4,
+   "hub_vertices": [
+    12
+   ]
+  },
+  "FISH": {
+   "count": 0,
+   "hub_vertices": []
+  },
+  "EI21": {
+   "count": 4,
+   "hub_vertices": [
+    15
+   ]
+  }
  }
 }

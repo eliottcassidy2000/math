@@ -20,4 +20,9 @@ q=40: extremal n= 801, |W|=760, h>=383, |W_q|>=382, feasible |W_q|: []
 -2 is a non-residue mod p=661 (p = 1 mod 55, cubic root 214 mod p): sqrt(-2) not in L'
 -35 is a non-residue mod p=661 (p = 1 mod 55, cubic root 214 mod p): sqrt(-35) not in L'
 cubic irreducible: True; discriminant 148 = {2: 2, 37: 1}; real roots [-1.4516059629557767, -0.4030317167626848, 0.8546376797184614]
+EI21 hub 15: 17 faithful realizations, X = |v13 - v20|^2 in [0.0062, 0.9980], |P|^2 + |Q|^2 = 1 and P perpendicular to Q to 1.1e-15
+EI17: 0 oriented C3 hub patterns at vertices []
+EI19: 4 oriented C3 hub patterns at vertices [12]
+FISH: 0 oriented C3 hub patterns at vertices []
+EI21: 4 oriented C3 hub patterns at vertices [15]
 wrote 05-knowledge/results/six_colour_odd_carrier_checks_20261016.json
