@@ -6,8 +6,10 @@ status: >
   conjugation-stable field without sqrt(-3), a three-colourable exterior preserves every old six-colouring (any old set,
   not only the eight ports), and a killing exterior has at least twenty vertices. EI19 is excluded from every odd-degree
   extension of L; the fish needs the same point of C3 over F_4 in every odd-degree conjugation-stable carrier over K.
-  Probes of the cubic carrier L(theta) with the width-three unit are three-colourable but Cartesian (no rational relation
-  between its ten conjugates and the roots of unity), so they add no evidence beyond L.
+  Probes of the cubic carrier L(theta) with roots of unity and the ten first-power conjugates of the width-three unit are
+  three-colourable but Cartesian (no rational relation between those conjugates and the roots of unity), so they add no
+  evidence beyond L; clock_duality_oct15's circuit-based assemblies in the powers v^i xi^j (cubic_crossedge_packets_20261016d)
+  are three-chromatic as well.
   UPDATE 2026-10-13 (opus-2026-10-13-S25, THM-4628): the residue no-go is now PROVED at every conjugation-fixed prime, not only at 109:
   the residue graph is Cay(F_(q^2), N^1) with Kloosterman eigenvalues, so residue colourings need at least 1 + (q+1)/(2 sqrt q) colours
   (7 at 109; 12, 15, 16, 20, 21, 23, 24 at 439, 659, 769, 1319, 1429, 1759, 1979; at least 788, 2266, 27737 at the degree-ten

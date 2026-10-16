@@ -254,8 +254,10 @@ rk = lambda rows: fmpz_mat([[int(x) for x in r] for r in rows]).rank()
 Zrows = [to_vec(root_of_unity(k)) for k in range(55)]
 Vrows = [to_vec(vconj[r]) for r in sorted(vconj)]
 VZrows = [to_vec(mul(vconj[r], root_of_unity(k))) for r in sorted(vconj) for k in range(55)]
+M5rows = [to_vec(root_of_unity(11 * k)) for k in range(5)]
+VM5rows = [to_vec(mul(vconj[r], root_of_unity(11 * k))) for r in sorted(vconj) for k in range(5)]
 ranks = dict(roots_of_unity=rk(Zrows), roots_plus_v_conjugates=rk(Zrows + Vrows),
-             roots_plus_all_zeta_k_v_m=rk(Zrows + VZrows))
+             roots_plus_all_zeta_k_v_m=rk(Zrows + VZrows), mu5_plus_v_m_mu5=rk(M5rows + VM5rows))
 print('Q-ranks:', ranks, flush=True)
 coupling = []
 one = root_of_unity(0)

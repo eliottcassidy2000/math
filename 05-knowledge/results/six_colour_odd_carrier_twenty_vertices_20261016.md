@@ -21,7 +21,8 @@ while eliminating all separating colourings"
 - **FINITE-EXACT:** the arithmetic table of the parity step for every even palette from 4 to 40; non-residue
   certificates for `sqrt(-2)`, `sqrt(-35)` at `p = 661` in the cubic carrier; three-colourability of four probe
   contexts of `L' = Q(zeta55, theta)` built from the width-three unit and its conjugates (up to 13,287 vertices),
-  which are, however, Cartesian products in disguise (section 5).
+  which are, however, Cartesian products in disguise (section 5); clock_duality_oct15's circuit-based cubic
+  assemblies (received this session) are three-chromatic as well.
 - **OPEN:** a four-chromatic triangle-free unit-distance graph in `L'` (or in any odd-degree carrier over `K`); the
   realization fields of EI17 and EI21; `C3(F_4)`; the plane's chromatic number.
 
@@ -118,16 +119,21 @@ found by a three-embedding filter and confirmed by the exact norm in `L'`.
 
 - every unit edge in all four probes is a generator step (zero non-generator unit pairs);
 - the 55th roots of unity span a 40-dimensional `Q`-space, and adding the ten conjugates of `v` raises the rank to
-  exactly 50.
+  exactly 50; the fifth roots of unity and the ten rotated copies `v_m mu5` span exactly `4 + 10 * 4 = 44` dimensions.
 
 So the conjugates of `v` satisfy no rational linear relation with the roots of unity. The first three probes are induced
 subgraphs of the Cartesian product of a cyclotomic Cayley graph with a bipartite lattice graph, and the fourth of
 a product of rotated pentagonal lattices. Their three-colourability is inherited from the cyclotomic part.
-Coupling between the cubic unit and the cyclotomic directions exists only through the `L`-linear relation among
-any four of `1, v_a, v_b, v_c` (`[L':L] = 3`). The LLL-reduced integer forms of those relations have length
-19,416 to 4.9 million unit steps (triples `(1,3,4)`, `(2,9,3)`, `(1,10,2)`, `(1,2,3)`; LLL bounds, not
-minima). The cubic carrier is "non-Cartesian" in the quintic basis over `K'` (G7), but at every height a finite
-probe can reach it is Cartesian over `Z`.
+Coupling needs more than first powers of the conjugates. Among `1` and three first-power conjugates the `L`-linear
+relation that must exist (`[L':L] = 3`) has LLL-reduced integer forms of length 19,416 to 4.9 million unit steps
+(triples `(1,3,4)`, `(2,9,3)`, `(1,10,2)`, `(1,2,3)`; LLL bounds, not minima). Powers of one conjugate do much
+better. clock_duality_oct15's C2 ([cubic cross-edge packets](cubic_crossedge_packets_20261016d.md), received
+during this session) substitutes `theta = Q/P` into the cubic and gets an exact unit-word relation in the
+monomials `v^i xi^j`, `i <= 3`, of mass 64, i.e. two 32-step walks with a common endpoint. Their five complete
+assemblies built around that circuit are again exactly three-chromatic, and the only cross-copy edges in their
+Galois assembly join points of `L`. So the probes here are uninformative by construction, while the informative
+circuit-based assemblies are three-colourable too. In both, the three-colour gate of section 3 is where the
+direction stops.
 
 **First-moment calibration (HEURISTIC).** If an exterior behaved like a random graph with `n` vertices and `m` edges,
 each with one forbidden colour, the expected number of extensions would be about `6^n (5/6)^(m+n)`. This falls below

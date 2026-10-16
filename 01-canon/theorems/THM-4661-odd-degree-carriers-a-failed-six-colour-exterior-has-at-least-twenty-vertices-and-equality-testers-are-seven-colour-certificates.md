@@ -13,6 +13,7 @@ source: 05-knowledge/results/six_colour_odd_carrier_twenty_vertices_20261016.md
 related:
   - 05-knowledge/results/hn_elliptic_bridge_20261016c.md (clock_duality_oct15: Lemma 1, Theorem 2 = the seventeen-vertex bound, Corollary 2a, inequality (2); statement 1 improves Theorem 2)
   - 05-knowledge/results/elliptic_crossedges_20261016c.md (clock_duality_oct15: G7, the cubic carrier K' = K(theta), L' = L(theta))
+  - 05-knowledge/results/cubic_crossedge_packets_20261016d.md (clock_duality_oct15: C1 chi(K') <= 5, C2 the 64-term cubic circuit; received during S38)
   - THM-4614 (the doubling lemma behind the three-colour gate)
   - HYP-9247 (every finite unit graph in Q(zeta55) is three-colourable)
   - 05-knowledge/results/existence_count_amplifiers_20261011e.md (the equality-tester target e > 0, d = 0)
@@ -62,10 +63,13 @@ Then `phi` extends to `H` exactly when the unit graph on `H` is `L`-colourable. 
    (b) A finite unit-distance graph that is not six-colourable exists; hence `chi(R^2) = 7`. Conversely, if
        `chi(R^2) = 7` then an equality tester exists (at distance one).
    (c) No equality tester has all its vertices in a field plane whose unit graph is five-colourable; in particular
-       none lies in `K = Q(zeta5, sqrt(-11))` (rhombus_overlap_elliptic_20261011.md G2, residue colouring at 19).
+       none lies in `K = Q(zeta5, sqrt(-11))` (rhombus_overlap_elliptic_20261011.md G2, residue colouring at 19) or in
+       the cubic base `K' = K(theta)` (clock_duality_oct15's C1 in cubic_crossedge_packets_20261016d: the same
+       residue colouring extends because the cubic has a simple root modulo 19).
    (d) In the setting above with `q = 6`: if `x, y ∈ F` and the unit graph on `A = V(G) ∩ F` has a proper six-colouring
        that separates `x` and `y` (for instance if it is five-colourable), then `V(G) \ F` contains a vertex-minimal
-       failed exterior, so `|V(G) \ F| >= 20` and statement 2 applies to it.
+       failed exterior, so `|V(G) \ F| >= 20` and statement 2 applies to it. For the cubic carrier, `F = K'` is
+       five-colourable (C1), so every equality tester whose old vertices lie in `K'` has such an exterior in `L' \ K'`.
 4. **(Odd-degree descent of two known exteriors.)**
    (a) The 19-vertex Exoo-Ismailescu graph EI19 has no faithful placement in any finite odd-degree extension of
        `L = Q(zeta55)`, in particular not in the cubic carrier `L' = L(theta)`, `2 theta^3 + 2 theta^2 - 2 theta - 1 = 0`.

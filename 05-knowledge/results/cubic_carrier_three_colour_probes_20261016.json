@@ -11,7 +11,7 @@
    "triangles": 0,
    "three_colourable": true,
    "colouring_verified": true,
-   "seconds": 4.1
+   "seconds": 4.0
   },
   {
    "probe": "mu22+v",
@@ -24,7 +24,7 @@
    "triangles": 0,
    "three_colourable": true,
    "colouring_verified": true,
-   "seconds": 10.3
+   "seconds": 10.6
   },
   {
    "probe": "mu110+v",
@@ -37,7 +37,7 @@
    "triangles": 0,
    "three_colourable": true,
    "colouring_verified": true,
-   "seconds": 4.5
+   "seconds": 4.6
   },
   {
    "probe": "mu10+v+v5",
@@ -56,7 +56,8 @@
  "ranks": {
   "roots_of_unity": 40,
   "roots_plus_v_conjugates": 50,
-  "roots_plus_all_zeta_k_v_m": 120
+  "roots_plus_all_zeta_k_v_m": 120,
+  "mu5_plus_v_m_mu5": 44
  },
  "coupling_relations_lll": [
   {
