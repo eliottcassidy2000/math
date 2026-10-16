@@ -1,0 +1,59 @@
+{
+  "status": "FINITE-EXACT algebra and hostile controls; no Collatz asymptotic claim",
+  "address_fold": {
+    "unfolded": 16,
+    "selected_pair_layers": [
+      4,
+      8,
+      4
+    ],
+    "proper_rank_layers": [
+      4,
+      6,
+      4
+    ],
+    "quotient": 12,
+    "proper_quotient_rank_layers": [
+      3,
+      4,
+      3
+    ],
+    "middle_coordinate_fibre_weight": 2
+  },
+  "fold_weight_controls": [
+    {
+      "old_norm": 4,
+      "new_norm": 0,
+      "deleted_mass": 0,
+      "cancelled_mass": 4,
+      "pair_variance_dyadic_enclosure": [
+        4194304,
+        4194304,
+        1048576
+      ]
+    },
+    {
+      "old_norm": 4,
+      "new_norm": 4,
+      "deleted_mass": 0,
+      "cancelled_mass": 0,
+      "pair_variance_dyadic_enclosure": [
+        0,
+        0,
+        1048576
+      ]
+    }
+  ],
+  "toy_graph_orders": 750,
+  "Pell_product": "Matrix([[1, u], [u, u**2 + 1]])",
+  "basis_cube_hostile": {
+    "original": 9,
+    "false_fresh_cube": 1,
+    "transported_cube": 9
+  },
+  "halving_only_hostile": {
+    "checked_annuli": 4096,
+    "Delta": "-3N",
+    "first_failed_odd_source": 3
+  }
+}

@@ -1,0 +1,3131 @@
+{
+  "status": "FINITE-EXACT; universal annular Gram budget OPEN",
+  "controls": {
+    "ramp_sequences": 3280,
+    "inherited_energy_seeds": [
+      {
+        "k": 32,
+        "E": 6513622860706576771,
+        "normalized": 0.3531042028164658
+      },
+      {
+        "k": 33,
+        "E": 7038100400636408653,
+        "normalized": 0.09538404680676367
+      }
+    ]
+  },
+  "cases": [
+    {
+      "k": 10,
+      "depth": 8,
+      "source_count": 8192,
+      "initial_observed_edges": 11791,
+      "frozen_certificate_hash": "42376ce81cb254dd56e73d6ccb931b9d87ab036e235561a5a54cd5129b540a51",
+      "controllers": [
+        {
+          "columns": 140,
+          "gram_hashes": {
+            "H": "006ce867daccf7bb6e2c38124c6974b255a1bed822bc4a904c96e4c14a27d25b",
+            "annular": "559cea8d613fc39a953574f2bb7ce24e9911712d8147376cdf8e34973bba4c6b",
+            "sum": "6c0aa0a90915ddeb7db41dc37308180748b7d1a32887abc4af7ece670969b210"
+          },
+          "coarse_H": [
+            13279181,
+            32
+          ],
+          "coarse_annular": [
+            781465944,
+            32
+          ],
+          "coarse_sum": [
+            643774933,
+            32
+          ],
+          "annular_fine": [
+            1396736,
+            1
+          ],
+          "annular_upper_over_X2": 24.62153124809265,
+          "annular_coarse_over_X2": 23.28949999809265,
+          "log_Gram_target_passes": false,
+          "marginal_Minkowski_budget_over_X2": 29.757096843523186,
+          "joint_sum_coarse_over_X2": 19.18598809838295,
+          "joint_Gram_hash": "b7a207da55f015a93536798e36d25ed98cd0f92052a83c58fe8821783750ab4a",
+          "additional_steps": 0,
+          "new_edges": 0,
+          "unresolved_sources": 666,
+          "compiled_max_native_clock": 124
+        },
+        {
+          "columns": 114,
+          "gram_hashes": {
+            "H": "ab66ba03b45d2c9c5c5afededa56cc005687e1587c4e42fc8f65d59ebb601587",
+            "annular": "d1ea95771f4a6d5d783734e49a8747947d0bd6d9b289bd5d20d82d1a56abaf59",
+            "sum": "0e58d8b72611a1e4a02380a18cd6faa55197bb6634b852c3b41b7bac4a29a169"
+          },
+          "coarse_H": [
+            13279181,
+            32
+          ],
+          "coarse_annular": [
+            548126116,
+            32
+          ],
+          "coarse_sum": [
+            426968533,
+            32
+          ],
+          "annular_fine": [
+            1396736,
+            1
+          ],
+          "annular_upper_over_X2": 17.667462468147278,
+          "annular_coarse_over_X2": 16.335431218147278,
+          "log_Gram_target_passes": false,
+          "marginal_Minkowski_budget_over_X2": 21.8163577471042,
+          "joint_sum_coarse_over_X2": 12.724653869867325,
+          "joint_Gram_hash": "63fc62440e383191169f8ae4945e1012dc5eccd9d04fb8f1d41a69ef00e8c757",
+          "H_paid_loss": {
+            "old_norm": 13279181,
+            "new_norm": 13279181,
+            "deleted_mass": 0,
+            "cancelled_mass": 0,
+            "pair_variance_dyadic_enclosure": [
+              0,
+              0,
+              1048576
+            ]
+          },
+          "annular_paid_loss": {
+            "old_norm": 781465944,
+            "new_norm": 548126116,
+            "deleted_mass": 0,
+            "cancelled_mass": 233339828,
+            "pair_variance_dyadic_enclosure": [
+              334112327157352,
+              334112327158462,
+              1048576
+            ]
+          },
+          "sum_paid_loss": {
+            "old_norm": 643774933,
+            "new_norm": 426968533,
+            "deleted_mass": 0,
+            "cancelled_mass": 216806400,
+            "pair_variance_dyadic_enclosure": [
+              281678390734934,
+              281678390736056,
+              1048576
+            ]
+          },
+          "additional_steps": 1,
+          "new_edges": 139,
+          "unresolved_sources": 608,
+          "compiled_max_native_clock": 127
+        },
+        {
+          "columns": 98,
+          "gram_hashes": {
+            "H": "7b327e380975548dbf3a645290b5194c2a8806f6bbcbdf3a37dd99f8ec7c7168",
+            "annular": "636a64f0cd8d41d0a7178f3c63d4067a03aae7057e095ba71e2ba314160e14f3",
+            "sum": "e72953204d8df11c3830d89195c1e6b1f9fda6630fbacc64e4c6615ca36df640"
+          },
+          "coarse_H": [
+            13279181,
+            32
+          ],
+          "coarse_annular": [
+            420584856,
+            32
+          ],
+          "coarse_sum": [
+            325106397,
+            32
+          ],
+          "annular_fine": [
+            1396736,
+            1
+          ],
+          "annular_upper_over_X2": 13.86643671989441,
+          "annular_coarse_over_X2": 12.53440546989441,
+          "log_Gram_target_passes": false,
+          "marginal_Minkowski_budget_over_X2": 17.38459027558749,
+          "joint_sum_coarse_over_X2": 9.68892565369606,
+          "joint_Gram_hash": "406292f4d235aa16f1f363e910005a9227a981dabe13288fa7276f3ea645babc",
+          "H_paid_loss": {
+            "old_norm": 13279181,
+            "new_norm": 13279181,
+            "deleted_mass": 0,
+            "cancelled_mass": 0,
+            "pair_variance_dyadic_enclosure": [
+              0,
+              0,
+              1048576
+            ]
+          },
+          "annular_paid_loss": {
+            "old_norm": 781465944,
+            "new_norm": 420584856,
+            "deleted_mass": 0,
+            "cancelled_mass": 360881088,
+            "pair_variance_dyadic_enclosure": [
+              467232915257908,
+              467232915259339,
+              1048576
+            ]
+          },
+          "sum_paid_loss": {
+            "old_norm": 643774933,
+            "new_norm": 325106397,
+            "deleted_mass": 0,
+            "cancelled_mass": 318668536,
+            "pair_variance_dyadic_enclosure": [
+              389367086094529,
+              389367086095988,
+              1048576
+            ]
+          },
+          "additional_steps": 2,
+          "new_edges": 252,
+          "unresolved_sources": 576,
+          "compiled_max_native_clock": 127
+        },
+        {
+          "columns": 72,
+          "gram_hashes": {
+            "H": "a2389033410e6a893422d80a41f3f90c86ed597a6ba2d7ca638e38dfe622490e",
+            "annular": "dfbea00708fe2415d432020991edc06a49a9eee6f17b224120861306853503e9",
+            "sum": "6d1ba96197f36c0ff4f97dfc33b28592cdd52fb14abf5f28d5912e7c4ff6f96f"
+          },
+          "coarse_H": [
+            11799413,
+            32
+          ],
+          "coarse_annular": [
+            291521960,
+            32
+          ],
+          "coarse_sum": [
+            241844769,
+            32
+          ],
+          "annular_fine": [
+            1396736,
+            1
+          ],
+          "annular_upper_over_X2": 10.020062685012817,
+          "annular_coarse_over_X2": 8.688031435012817,
+          "log_Gram_target_passes": false,
+          "marginal_Minkowski_budget_over_X2": 12.535476232821475,
+          "joint_sum_coarse_over_X2": 7.207535773515701,
+          "joint_Gram_hash": "2fcb4779f81b6d9d56239f03c96f4f7dcd67cff9ef3872bbc72af3d60cb9e11c",
+          "H_paid_loss": {
+            "old_norm": 13279181,
+            "new_norm": 11799413,
+            "deleted_mass": 0,
+            "cancelled_mass": 1479768,
+            "pair_variance_dyadic_enclosure": [
+              2831497453545,
+              2831497453554,
+              1048576
+            ]
+          },
+          "annular_paid_loss": {
+            "old_norm": 781465944,
+            "new_norm": 291521960,
+            "deleted_mass": 0,
+            "cancelled_mass": 489943984,
+            "pair_variance_dyadic_enclosure": [
+              598654635403801,
+              598654635404975,
+              1048576
+            ]
+          },
+          "sum_paid_loss": {
+            "old_norm": 643774933,
+            "new_norm": 241844769,
+            "deleted_mass": 0,
+            "cancelled_mass": 401930164,
+            "pair_variance_dyadic_enclosure": [
+              497767540913514,
+              497767540914761,
+              1048576
+            ]
+          },
+          "additional_steps": 4,
+          "new_edges": 427,
+          "unresolved_sources": 455,
+          "compiled_max_native_clock": 127
+        },
+        {
+          "columns": 42,
+          "gram_hashes": {
+            "H": "5bfb7550b5ca3bb8aed001673940e2546063ad773be0d08d96c979e2ad29090b",
+            "annular": "8d515cce32adb4002b835c03585543ef16b5b7f3cc1f0fe4e5d17df2a296c91b",
+            "sum": "cc442a7d93431877493059bdcaab10c0c28baa739b754ca7406db9caa558b332"
+          },
+          "coarse_H": [
+            4705493,
+            32
+          ],
+          "coarse_annular": [
+            108528492,
+            32
+          ],
+          "coarse_sum": [
+            102552505,
+            32
+          ],
+          "annular_fine": [
+            1396736,
+            1
+          ],
+          "annular_upper_over_X2": 4.566432356834412,
+          "annular_coarse_over_X2": 3.2344011068344116,
+          "log_Gram_target_passes": true,
+          "marginal_Minkowski_budget_over_X2": 4.7215952774043295,
+          "joint_sum_coarse_over_X2": 3.0563028156757355,
+          "joint_Gram_hash": "1345c31abd4373063ba7f279b5c823f3274d5bf3b4b3dcdd52ab2773c5b8575b",
+          "H_paid_loss": {
+            "old_norm": 13279181,
+            "new_norm": 4705493,
+            "deleted_mass": 0,
+            "cancelled_mass": 8573688,
+            "pair_variance_dyadic_enclosure": [
+              11686875359173,
+              11686875359178,
+              1048576
+            ]
+          },
+          "annular_paid_loss": {
+            "old_norm": 781465944,
+            "new_norm": 108528492,
+            "deleted_mass": 0,
+            "cancelled_mass": 672937452,
+            "pair_variance_dyadic_enclosure": [
+              765559748079298,
+              765559748079901,
+              1048576
+            ]
+          },
+          "sum_paid_loss": {
+            "old_norm": 643774933,
+            "new_norm": 102552505,
+            "deleted_mass": 0,
+            "cancelled_mass": 541222428,
+            "pair_variance_dyadic_enclosure": [
+              617666124304925,
+              617666124305500,
+              1048576
+            ]
+          },
+          "additional_steps": 8,
+          "new_edges": 661,
+          "unresolved_sources": 302,
+          "compiled_max_native_clock": 130
+        }
+      ],
+      "audit_only": {
+        "D": 1113076,
+        "E": 143211,
+        "cross": -220792,
+        "annular_coarse": [
+          8717015,
+          8
+        ],
+        "D_over_X2": 1.0615119934082031
+      }
+    },
+    {
+      "k": 10,
+      "depth": 16,
+      "source_count": 8192,
+      "initial_observed_edges": 12452,
+      "frozen_certificate_hash": "cda221478c064fbff748c953d7e4a21cce6c984d5d0bf75b65315671eac01bd5",
+      "controllers": [
+        {
+          "columns": 42,
+          "gram_hashes": {
+            "H": "5bfb7550b5ca3bb8aed001673940e2546063ad773be0d08d96c979e2ad29090b",
+            "annular": "8d515cce32adb4002b835c03585543ef16b5b7f3cc1f0fe4e5d17df2a296c91b",
+            "sum": "cc442a7d93431877493059bdcaab10c0c28baa739b754ca7406db9caa558b332"
+          },
+          "coarse_H": [
+            4705493,
+            32
+          ],
+          "coarse_annular": [
+            108528492,
+            32
+          ],
+          "coarse_sum": [
+            102552505,
+            32
+          ],
+          "annular_fine": [
+            1396736,
+            1
+          ],
+          "annular_upper_over_X2": 4.566432356834412,
+          "annular_coarse_over_X2": 3.2344011068344116,
+          "log_Gram_target_passes": true,
+          "marginal_Minkowski_budget_over_X2": 4.7215952774043295,
+          "joint_sum_coarse_over_X2": 3.0563028156757355,
+          "joint_Gram_hash": "1345c31abd4373063ba7f279b5c823f3274d5bf3b4b3dcdd52ab2773c5b8575b",
+          "additional_steps": 0,
+          "new_edges": 0,
+          "unresolved_sources": 302,
+          "compiled_max_native_clock": 130
+        },
+        {
+          "columns": 41,
+          "gram_hashes": {
+            "H": "53c7462685d98efbe782cc55001ebf6b99c60b6990a86bc20d7407532708e58e",
+            "annular": "63069759b1be5d2a6268ba24913088dfb4a15be71556ef7d7b2fa6ff9726eb75",
+            "sum": "0cb302117728684ca87c3746d3c40175017c808af3ed04b20f84b882b961cec6"
+          },
+          "coarse_H": [
+            4705493,
+            32
+          ],
+          "coarse_annular": [
+            108261620,
+            32
+          ],
+          "coarse_sum": [
+            102401977,
+            32
+          ],
+          "annular_fine": [
+            1396736,
+            1
+          ],
+          "annular_upper_over_X2": 4.558478951454163,
+          "annular_coarse_over_X2": 3.2264477014541626,
+          "log_Gram_target_passes": true,
+          "marginal_Minkowski_budget_over_X2": 4.711984763200445,
+          "joint_sum_coarse_over_X2": 3.0518167316913605,
+          "joint_Gram_hash": "e5edb9eae6f89b09fd04bceb2924401f55ba436a141630ab5c7a0a3f714f5417",
+          "H_paid_loss": {
+            "old_norm": 4705493,
+            "new_norm": 4705493,
+            "deleted_mass": 0,
+            "cancelled_mass": 0,
+            "pair_variance_dyadic_enclosure": [
+              0,
+              0,
+              1048576
+            ]
+          },
+          "annular_paid_loss": {
+            "old_norm": 108528492,
+            "new_norm": 108261620,
+            "deleted_mass": 0,
+            "cancelled_mass": 266872,
+            "pair_variance_dyadic_enclosure": [
+              526352645040,
+              526352645050,
+              1048576
+            ]
+          },
+          "sum_paid_loss": {
+            "old_norm": 102552505,
+            "new_norm": 102401977,
+            "deleted_mass": 0,
+            "cancelled_mass": 150528,
+            "pair_variance_dyadic_enclosure": [
+              213842491778,
+              213842491782,
+              1048576
+            ]
+          },
+          "additional_steps": 1,
+          "new_edges": 41,
+          "unresolved_sources": 300,
+          "compiled_max_native_clock": 130
+        },
+        {
+          "columns": 38,
+          "gram_hashes": {
+            "H": "d99a1e3ed4b52cc9ccff17ffcc2151621efe1cbdd531cdc59541448df0107af9",
+            "annular": "f7756b637c32131f99379b1206f4342979ac1817e541fab2326ceb4a564ffd80",
+            "sum": "1f684f7b9ad6e86ec19a5e42cc22ec5fe3d2e74579b11ce8b1417c7a6a3ebff7"
+          },
+          "coarse_H": [
+            4705493,
+            32
+          ],
+          "coarse_annular": [
+            100127740,
+            32
+          ],
+          "coarse_sum": [
+            93280729,
+            32
+          ],
+          "annular_fine": [
+            1396736,
+            1
+          ],
+          "annular_upper_over_X2": 4.3160704374313354,
+          "annular_coarse_over_X2": 2.9840391874313354,
+          "log_Gram_target_passes": true,
+          "marginal_Minkowski_budget_over_X2": 4.418052148971947,
+          "joint_sum_coarse_over_X2": 2.7799823582172394,
+          "joint_Gram_hash": "d3293bbf62466e1757202942d6bbf1ec79e1a74297bd1a3b6cd30f938045ec1c",
+          "H_paid_loss": {
+            "old_norm": 4705493,
+            "new_norm": 4705493,
+            "deleted_mass": 0,
+            "cancelled_mass": 0,
+            "pair_variance_dyadic_enclosure": [
+              0,
+              0,
+              1048576
+            ]
+          },
+          "annular_paid_loss": {
+            "old_norm": 108528492,
+            "new_norm": 100127740,
+            "deleted_mass": 0,
+            "cancelled_mass": 8400752,
+            "pair_variance_dyadic_enclosure": [
+              15336592340064,
+              15336592340139,
+              1048576
+            ]
+          },
+          "sum_paid_loss": {
+            "old_norm": 102552505,
+            "new_norm": 93280729,
+            "deleted_mass": 0,
+            "cancelled_mass": 9271776,
+            "pair_variance_dyadic_enclosure": [
+              16948919393870,
+              16948919393945,
+              1048576
+            ]
+          },
+          "additional_steps": 2,
+          "new_edges": 81,
+          "unresolved_sources": 295,
+          "compiled_max_native_clock": 130
+        },
+        {
+          "columns": 31,
+          "gram_hashes": {
+            "H": "84e40164e425d9da9feac7f07c0ab1f3668aadc4f843f23deecd368b9759f71d",
+            "annular": "545ed668782fc6354dd82161eb8202fc6ecb865bde42eeff16724c8927400bd3",
+            "sum": "d43571b437020bed1f43524bf5b8ff23beab61d5fc2f64cfb5ed213fd674a1e3"
+          },
+          "coarse_H": [
+            4448733,
+            32
+          ],
+          "coarse_annular": [
+            86201880,
+            32
+          ],
+          "coarse_sum": [
+            83479013,
+            32
+          ],
+          "annular_fine": [
+            1396736,
+            1
+          ],
+          "annular_upper_over_X2": 3.901047468185425,
+          "annular_coarse_over_X2": 2.569016218185425,
+          "log_Gram_target_passes": true,
+          "marginal_Minkowski_budget_over_X2": 3.8688293371393714,
+          "joint_sum_coarse_over_X2": 2.487868458032608,
+          "joint_Gram_hash": "901af1cc2a49c5ea7474d2ef7307594871ca2d2dc912ab7223f214e08bb5d5c1",
+          "H_paid_loss": {
+            "old_norm": 4705493,
+            "new_norm": 4448733,
+            "deleted_mass": 0,
+            "cancelled_mass": 256760,
+            "pair_variance_dyadic_enclosure": [
+              276166781734,
+              276166781736,
+              1048576
+            ]
+          },
+          "annular_paid_loss": {
+            "old_norm": 108528492,
+            "new_norm": 86201880,
+            "deleted_mass": 0,
+            "cancelled_mass": 22326612,
+            "pair_variance_dyadic_enclosure": [
+              37876371354575,
+              37876371354636,
+              1048576
+            ]
+          },
+          "sum_paid_loss": {
+            "old_norm": 102552505,
+            "new_norm": 83479013,
+            "deleted_mass": 0,
+            "cancelled_mass": 19073492,
+            "pair_variance_dyadic_enclosure": [
+              33219485032336,
+              33219485032397,
+              1048576
+            ]
+          },
+          "additional_steps": 4,
+          "new_edges": 152,
+          "unresolved_sources": 149,
+          "compiled_max_native_clock": 143
+        },
+        {
+          "columns": 22,
+          "gram_hashes": {
+            "H": "1ce4679a1fc651c99225dcbaf195d4876b3707a66648c83353f517e445fbfcb8",
+            "annular": "28f64f838a1f1607f59150baa851daf079427223dd40eae32b7b7ff736b09d68",
+            "sum": "460dcbcba303bfa3e76a8f69fe9237d7d0eb5247b82406649b1ac0f6794c2356"
+          },
+          "coarse_H": [
+            4448733,
+            32
+          ],
+          "coarse_annular": [
+            74419796,
+            32
+          ],
+          "coarse_sum": [
+            72254025,
+            32
+          ],
+          "annular_fine": [
+            1396736,
+            1
+          ],
+          "annular_upper_over_X2": 3.549914002418518,
+          "annular_coarse_over_X2": 2.217882752418518,
+          "log_Gram_target_passes": true,
+          "marginal_Minkowski_budget_over_X2": 3.434997681186199,
+          "joint_sum_coarse_over_X2": 2.153337746858597,
+          "joint_Gram_hash": "88dda665d50b1b9f6646f067a277679db344952c1099a9c2f104f8f4e53ded00",
+          "H_paid_loss": {
+            "old_norm": 4705493,
+            "new_norm": 4448733,
+            "deleted_mass": 0,
+            "cancelled_mass": 256760,
+            "pair_variance_dyadic_enclosure": [
+              276166781734,
+              276166781736,
+              1048576
+            ]
+          },
+          "annular_paid_loss": {
+            "old_norm": 108528492,
+            "new_norm": 74419796,
+            "deleted_mass": 0,
+            "cancelled_mass": 34108696,
+            "pair_variance_dyadic_enclosure": [
+              54057322853053,
+              54057322853096,
+              1048576
+            ]
+          },
+          "sum_paid_loss": {
+            "old_norm": 102552505,
+            "new_norm": 72254025,
+            "deleted_mass": 0,
+            "cancelled_mass": 30298480,
+            "pair_variance_dyadic_enclosure": [
+              49464675743949,
+              49464675743992,
+              1048576
+            ]
+          },
+          "additional_steps": 8,
+          "new_edges": 256,
+          "unresolved_sources": 114,
+          "compiled_max_native_clock": 143
+        }
+      ],
+      "audit_only": {
+        "D": 1113076,
+        "E": 143211,
+        "cross": -220792,
+        "annular_coarse": [
+          8717015,
+          8
+        ],
+        "D_over_X2": 1.0615119934082031
+      }
+    },
+    {
+      "k": 12,
+      "depth": 16,
+      "source_count": 32768,
+      "initial_observed_edges": 49822,
+      "frozen_certificate_hash": "c762fae409510ff2bb3864bdf4d34bfa77e71ca0cc6e90cc3242388f130ee649",
+      "controllers": [
+        {
+          "columns": 175,
+          "gram_hashes": {
+            "H": "47f24bd380281012adc2f8891611046d7daac77a377ccf08f11e2cc8568f409f",
+            "annular": "a3505f5e5077f6532c8df2dbb000ec33023d8045c4f2f72eea053eb56d04b118",
+            "sum": "a7be1ac84f668535cad739d377ae2fe02f042459e7392294e6cb639f68e120cc"
+          },
+          "coarse_H": [
+            475128019,
+            64
+          ],
+          "coarse_annular": [
+            24525818972,
+            64
+          ],
+          "coarse_sum": [
+            25002475615,
+            64
+          ],
+          "annular_fine": [
+            22364160,
+            1
+          ],
+          "annular_upper_over_X2": 24.17445668205619,
+          "annular_coarse_over_X2": 22.84144886955619,
+          "log_Gram_target_passes": false,
+          "marginal_Minkowski_budget_over_X2": 29.642336957818465,
+          "joint_sum_coarse_over_X2": 23.28536996152252,
+          "joint_Gram_hash": "1fff5c9d4280dd06f5abb89784e4e0a38f051a79409b9a53317b9785b88d6841",
+          "additional_steps": 0,
+          "new_edges": 0,
+          "unresolved_sources": 1270,
+          "compiled_max_native_clock": 161
+        },
+        {
+          "columns": 155,
+          "gram_hashes": {
+            "H": "0886e2464054178c14c6f752234c0fa9be1d280207990ac87d731c1a767ccaaf",
+            "annular": "da83480c72910e76c285180c5505aedbb40aac3a099b8ffa0af590dc7678bd24",
+            "sum": "4d4c0a906c3fd6343ad4307afd353fd34b96af0e8a1740394f378b594fe84c2f"
+          },
+          "coarse_H": [
+            470174859,
+            64
+          ],
+          "coarse_annular": [
+            18769504324,
+            64
+          ],
+          "coarse_sum": [
+            19154316259,
+            64
+          ],
+          "annular_fine": [
+            22364160,
+            1
+          ],
+          "annular_upper_over_X2": 18.813470903784037,
+          "annular_coarse_over_X2": 17.480463091284037,
+          "log_Gram_target_passes": false,
+          "marginal_Minkowski_budget_over_X2": 23.451673186160072,
+          "joint_sum_coarse_over_X2": 17.838847133331,
+          "joint_Gram_hash": "1a2130af3b5cc87977932ec6312bcd8712effb3349a461f3116a24fd6c58695d",
+          "H_paid_loss": {
+            "old_norm": 475128019,
+            "new_norm": 470174859,
+            "deleted_mass": 0,
+            "cancelled_mass": 4953160,
+            "pair_variance_dyadic_enclosure": [
+              10303966491995,
+              10303966492020,
+              1048576
+            ]
+          },
+          "annular_paid_loss": {
+            "old_norm": 24525818972,
+            "new_norm": 18769504324,
+            "deleted_mass": 0,
+            "cancelled_mass": 5756314648,
+            "pair_variance_dyadic_enclosure": [
+              9855260289324383,
+              9855260289324961,
+              1048576
+            ]
+          },
+          "sum_paid_loss": {
+            "old_norm": 25002475615,
+            "new_norm": 19154316259,
+            "deleted_mass": 0,
+            "cancelled_mass": 5848159356,
+            "pair_variance_dyadic_enclosure": [
+              9839819239528118,
+              9839819239528698,
+              1048576
+            ]
+          },
+          "additional_steps": 1,
+          "new_edges": 175,
+          "unresolved_sources": 1150,
+          "compiled_max_native_clock": 180
+        },
+        {
+          "columns": 137,
+          "gram_hashes": {
+            "H": "4156c80d89cda00ee920451526c7f54798bc9c2c4a6801c43c18aebf04477085",
+            "annular": "d2f385c405b2d90668aad868dc19c1ba14fd05cb7915db0bcca408b31f2ccf56",
+            "sum": "5b1f512db68264a4a055893b88e4bad987a8f8334200771330f4db8e5abb03f5"
+          },
+          "coarse_H": [
+            470174859,
+            64
+          ],
+          "coarse_annular": [
+            17455337072,
+            64
+          ],
+          "coarse_sum": [
+            16653277495,
+            64
+          ],
+          "annular_fine": [
+            22364160,
+            1
+          ],
+          "annular_upper_over_X2": 17.58955727517605,
+          "annular_coarse_over_X2": 16.25654946267605,
+          "log_Gram_target_passes": false,
+          "marginal_Minkowski_budget_over_X2": 22.03053376686019,
+          "joint_sum_coarse_over_X2": 15.509573272429407,
+          "joint_Gram_hash": "4c49f0fd89805d69a53308671d490d29c7ab96fcb07ac7fe8924eef8e58b4477",
+          "H_paid_loss": {
+            "old_norm": 475128019,
+            "new_norm": 470174859,
+            "deleted_mass": 0,
+            "cancelled_mass": 4953160,
+            "pair_variance_dyadic_enclosure": [
+              10312674554470,
+              10312674554493,
+              1048576
+            ]
+          },
+          "annular_paid_loss": {
+            "old_norm": 24525818972,
+            "new_norm": 17455337072,
+            "deleted_mass": 0,
+            "cancelled_mass": 7070481900,
+            "pair_variance_dyadic_enclosure": [
+              11701559322897497,
+              11701559322898005,
+              1048576
+            ]
+          },
+          "sum_paid_loss": {
+            "old_norm": 25002475615,
+            "new_norm": 16653277495,
+            "deleted_mass": 0,
+            "cancelled_mass": 8349198120,
+            "pair_variance_dyadic_enclosure": [
+              13052456041877323,
+              13052456041877833,
+              1048576
+            ]
+          },
+          "additional_steps": 2,
+          "new_edges": 330,
+          "unresolved_sources": 1067,
+          "compiled_max_native_clock": 180
+        },
+        {
+          "columns": 113,
+          "gram_hashes": {
+            "H": "0a9a93405ec99acb9c3b1442e264979d2c1c3467cf6c2c73e0f152f4c2fb79a4",
+            "annular": "10df5866f8ec361080c2e7cccf2b2c5dc3f0cdcd37a035255a6d286469034d14",
+            "sum": "15d306c4d485f67b77d14f6e3f567f881cbce45837b592e268ab2f7f954c251c"
+          },
+          "coarse_H": [
+            470174859,
+            64
+          ],
+          "coarse_annular": [
+            16304216244,
+            64
+          ],
+          "coarse_sum": [
+            15547370859,
+            64
+          ],
+          "annular_fine": [
+            22364160,
+            1
+          ],
+          "annular_upper_over_X2": 16.517492461949587,
+          "annular_coarse_over_X2": 15.184484649449587,
+          "log_Gram_target_passes": false,
+          "marginal_Minkowski_budget_over_X2": 20.779519432918793,
+          "joint_sum_coarse_over_X2": 14.479617456905544,
+          "joint_Gram_hash": "f62bc164581cf4feb5d5d4dc6c78ad6a97f809e84114b16b882a88f09dd6d052",
+          "H_paid_loss": {
+            "old_norm": 475128019,
+            "new_norm": 470174859,
+            "deleted_mass": 0,
+            "cancelled_mass": 4953160,
+            "pair_variance_dyadic_enclosure": [
+              10316254164558,
+              10316254164579,
+              1048576
+            ]
+          },
+          "annular_paid_loss": {
+            "old_norm": 24525818972,
+            "new_norm": 16304216244,
+            "deleted_mass": 0,
+            "cancelled_mass": 8221602728,
+            "pair_variance_dyadic_enclosure": [
+              13507721622251923,
+              13507721622252375,
+              1048576
+            ]
+          },
+          "sum_paid_loss": {
+            "old_norm": 25002475615,
+            "new_norm": 15547370859,
+            "deleted_mass": 0,
+            "cancelled_mass": 9455104756,
+            "pair_variance_dyadic_enclosure": [
+              14780354205406505,
+              14780354205406973,
+              1048576
+            ]
+          },
+          "additional_steps": 4,
+          "new_edges": 589,
+          "unresolved_sources": 934,
+          "compiled_max_native_clock": 180
+        },
+        {
+          "columns": 89,
+          "gram_hashes": {
+            "H": "d10c5033f62d8e1d6f65314f73d847b1cff5b9a09432562128a1bd89bbd834aa",
+            "annular": "58e4023439edfd1f01108a77b664c02753c982f8f7da86283168e829e56d3670",
+            "sum": "9919197f74835a23d657ccb0b574f1c98b60905c90afda030abd906b0bf1a560"
+          },
+          "coarse_H": [
+            464680743,
+            64
+          ],
+          "coarse_annular": [
+            12485917260,
+            64
+          ],
+          "coarse_sum": [
+            10611152587,
+            64
+          ],
+          "annular_fine": [
+            22364160,
+            1
+          ],
+          "annular_upper_over_X2": 12.961424421519041,
+          "annular_coarse_over_X2": 11.628416609019041,
+          "log_Gram_target_passes": false,
+          "marginal_Minkowski_budget_over_X2": 16.54778776291398,
+          "joint_sum_coarse_over_X2": 9.882405946962535,
+          "joint_Gram_hash": "bc08dd72bbcdc73d743e5afbf416039808509741df2fcbd924f3860759c06d18",
+          "H_paid_loss": {
+            "old_norm": 475128019,
+            "new_norm": 464680743,
+            "deleted_mass": 0,
+            "cancelled_mass": 10447276,
+            "pair_variance_dyadic_enclosure": [
+              21621011349280,
+              21621011349295,
+              1048576
+            ]
+          },
+          "annular_paid_loss": {
+            "old_norm": 24525818972,
+            "new_norm": 12485917260,
+            "deleted_mass": 0,
+            "cancelled_mass": 12039901712,
+            "pair_variance_dyadic_enclosure": [
+              18140238419495321,
+              18140238419495691,
+              1048576
+            ]
+          },
+          "sum_paid_loss": {
+            "old_norm": 25002475615,
+            "new_norm": 10611152587,
+            "deleted_mass": 0,
+            "cancelled_mass": 14391323028,
+            "pair_variance_dyadic_enclosure": [
+              20039416257049164,
+              20039416257049552,
+              1048576
+            ]
+          },
+          "additional_steps": 8,
+          "new_edges": 1002,
+          "unresolved_sources": 724,
+          "compiled_max_native_clock": 180
+        },
+        {
+          "columns": 51,
+          "gram_hashes": {
+            "H": "23aa864a3288c84c368f4cd4aa7f599aad567a95bbec60f659a569f854de9be2",
+            "annular": "31a08974bc2aef5904bb17f130de80a0f4a51b52b7832e51d83852212a35d9f7",
+            "sum": "0d1d5f418d7758c8bd06b461d1e65a0f08be3440eef2b9bced6875de61783584"
+          },
+          "coarse_H": [
+            275688539,
+            64
+          ],
+          "coarse_annular": [
+            9767515472,
+            64
+          ],
+          "coarse_sum": [
+            8109653007,
+            64
+          ],
+          "annular_fine": [
+            22364160,
+            1
+          ],
+          "annular_upper_over_X2": 10.42971546947956,
+          "annular_coarse_over_X2": 9.09670765697956,
+          "log_Gram_target_passes": false,
+          "marginal_Minkowski_budget_over_X2": 12.410012835701636,
+          "joint_sum_coarse_over_X2": 7.552702917717397,
+          "joint_Gram_hash": "a90787ef8feba63e45ef6f8437dc36b1eb7576adb2d9eeb098bc098a36789bbf",
+          "H_paid_loss": {
+            "old_norm": 475128019,
+            "new_norm": 275688539,
+            "deleted_mass": 0,
+            "cancelled_mass": 199439480,
+            "pair_variance_dyadic_enclosure": [
+              328417272883920,
+              328417272883927,
+              1048576
+            ]
+          },
+          "annular_paid_loss": {
+            "old_norm": 24525818972,
+            "new_norm": 9767515472,
+            "deleted_mass": 0,
+            "cancelled_mass": 14758303500,
+            "pair_variance_dyadic_enclosure": [
+              21039721250123951,
+              21039721250124145,
+              1048576
+            ]
+          },
+          "sum_paid_loss": {
+            "old_norm": 25002475615,
+            "new_norm": 8109653007,
+            "deleted_mass": 0,
+            "cancelled_mass": 16892822608,
+            "pair_variance_dyadic_enclosure": [
+              22608480691104877,
+              22608480691105069,
+              1048576
+            ]
+          },
+          "additional_steps": 16,
+          "new_edges": 1548,
+          "unresolved_sources": 298,
+          "compiled_max_native_clock": 180
+        }
+      ],
+      "audit_only": {
+        "D": 66734216,
+        "E": 3266375,
+        "cross": -13488382,
+        "annular_coarse": [
+          532587535,
+          8
+        ],
+        "D_over_X2": 3.9776692390441895
+      }
+    },
+    {
+      "k": 14,
+      "depth": 16,
+      "source_count": 131072,
+      "initial_observed_edges": 199313,
+      "frozen_certificate_hash": "fd3d8d496624d2b9e66a40b4d47558f3e56bdb1d9ea9c1b40b8f989424e7ad8e",
+      "controllers": [
+        {
+          "columns": 706,
+          "gram_hashes": {
+            "H": "404e22317722a28fdd35c70767c7e04337c3d39bc7dfd408e7808858f4939f30",
+            "annular": "6c997d8e6c52e3df246a7cb946aebeec365b727157ff2ffb93c5f0710d2cec3c",
+            "sum": "d52e43f31ea0251117ba751ea9ed14f73e74873e3b91fb2e718819e9eabc643f"
+          },
+          "coarse_H": [
+            53850740193,
+            128
+          ],
+          "coarse_annular": [
+            1606874213740,
+            128
+          ],
+          "coarse_sum": [
+            1688111048357,
+            128
+          ],
+          "annular_fine": [
+            357892096,
+            1
+          ],
+          "annular_upper_over_X2": 48.099446635111235,
+          "annular_coarse_over_X2": 46.766194681986235,
+          "log_Gram_target_passes": false,
+          "marginal_Minkowski_budget_over_X2": 65.45594771171753,
+          "joint_sum_coarse_over_X2": 49.13049774352112,
+          "joint_Gram_hash": "5fe70c93a5b4acdbcc2959d4c45e430e4352e08dbbd7568b353250c5653ddd63",
+          "additional_steps": 0,
+          "new_edges": 0,
+          "unresolved_sources": 4377,
+          "compiled_max_native_clock": 210
+        },
+        {
+          "columns": 652,
+          "gram_hashes": {
+            "H": "d05084789c468f400fb16dacde49168a3c723152c1a509c95fd349ca75df178c",
+            "annular": "a2644b596176081010d6b8381593c794f17ea15438f78ce68a3bbba2d0496658",
+            "sum": "4f670c5d058ae4bde73f5a4407c44dad8721fc5fe97c1c7bcdb2e7770cfa78fa"
+          },
+          "coarse_H": [
+            49268825457,
+            128
+          ],
+          "coarse_annular": [
+            1399723218160,
+            128
+          ],
+          "coarse_sum": [
+            1411497899169,
+            128
+          ],
+          "annular_fine": [
+            357892096,
+            1
+          ],
+          "annular_upper_over_X2": 42.07055918080732,
+          "annular_coarse_over_X2": 40.73730722768232,
+          "log_Gram_target_passes": false,
+          "marginal_Minkowski_budget_over_X2": 57.45698928574828,
+          "joint_sum_coarse_over_X2": 41.07999554745038,
+          "joint_Gram_hash": "ec73ec5479447152903a4bce81a1684b928189d17c81046c30dc48e30bac3856",
+          "H_paid_loss": {
+            "old_norm": 53850740193,
+            "new_norm": 49268825457,
+            "deleted_mass": 0,
+            "cancelled_mass": 4581914736,
+            "pair_variance_dyadic_enclosure": [
+              9122443082241602,
+              9122443082241675,
+              1048576
+            ]
+          },
+          "annular_paid_loss": {
+            "old_norm": 1606874213740,
+            "new_norm": 1399723218160,
+            "deleted_mass": 0,
+            "cancelled_mass": 207150995580,
+            "pair_variance_dyadic_enclosure": [
+              313402258849181507,
+              313402258849188099,
+              1048576
+            ]
+          },
+          "sum_paid_loss": {
+            "old_norm": 1688111048357,
+            "new_norm": 1411497899169,
+            "deleted_mass": 0,
+            "cancelled_mass": 276613149188,
+            "pair_variance_dyadic_enclosure": [
+              412277248597563106,
+              412277248597569974,
+              1048576
+            ]
+          },
+          "additional_steps": 1,
+          "new_edges": 705,
+          "unresolved_sources": 4070,
+          "compiled_max_native_clock": 210
+        },
+        {
+          "columns": 603,
+          "gram_hashes": {
+            "H": "513303b4623b8920c3361a3256f366b443e0242d98ba3bc27f105749a16a4aeb",
+            "annular": "253d4e2bd10f99239a0a53c6e1217f4d6c66d100fe2a02e18b4fae95810501b1",
+            "sum": "11b796e3c1d83f3422e0350943b8a27bc4ff895d24302dbe3256740e87690594"
+          },
+          "coarse_H": [
+            49204778109,
+            128
+          ],
+          "coarse_annular": [
+            1263685427244,
+            128
+          ],
+          "coarse_sum": [
+            1173548525897,
+            128
+          ],
+          "annular_fine": [
+            357892096,
+            1
+          ],
+          "annular_upper_over_X2": 38.11133837827947,
+          "annular_coarse_over_X2": 36.77808642515447,
+          "log_Gram_target_passes": false,
+          "marginal_Minkowski_budget_over_X2": 52.724673888849935,
+          "joint_sum_coarse_over_X2": 34.15475733045605,
+          "joint_Gram_hash": "c673119cf1b602dc4558ee088922bbfb5f35b25cca05eb73d6082fe20242457b",
+          "H_paid_loss": {
+            "old_norm": 53850740193,
+            "new_norm": 49204778109,
+            "deleted_mass": 0,
+            "cancelled_mass": 4645962084,
+            "pair_variance_dyadic_enclosure": [
+              9215664711621238,
+              9215664711621305,
+              1048576
+            ]
+          },
+          "annular_paid_loss": {
+            "old_norm": 1606874213740,
+            "new_norm": 1263685427244,
+            "deleted_mass": 0,
+            "cancelled_mass": 343188786496,
+            "pair_variance_dyadic_enclosure": [
+              497256922040211393,
+              497256922040218536,
+              1048576
+            ]
+          },
+          "sum_paid_loss": {
+            "old_norm": 1688111048357,
+            "new_norm": 1173548525897,
+            "deleted_mass": 0,
+            "cancelled_mass": 514562522460,
+            "pair_variance_dyadic_enclosure": [
+              660094798691275993,
+              660094798691283368,
+              1048576
+            ]
+          },
+          "additional_steps": 2,
+          "new_edges": 1356,
+          "unresolved_sources": 3739,
+          "compiled_max_native_clock": 210
+        },
+        {
+          "columns": 477,
+          "gram_hashes": {
+            "H": "652e8e71eb35c6f7fcfab24a37519e51f72ef0a345dc4e6132a9ac014ef26721",
+            "annular": "7641887e909757a0ce4da60577a762fa8e1ca80cdf003d4d9711dbbdacc49f27",
+            "sum": "8cc848b51c35f267c533457f21620044a8321d9efa528e941581c0208eead0bc"
+          },
+          "coarse_H": [
+            45464468205,
+            128
+          ],
+          "coarse_annular": [
+            794787333312,
+            128
+          ],
+          "coarse_sum": [
+            715150089977,
+            128
+          ],
+          "annular_fine": [
+            357892096,
+            1
+          ],
+          "annular_upper_over_X2": 24.464607750996947,
+          "annular_coarse_over_X2": 23.131355797871947,
+          "log_Gram_target_passes": false,
+          "marginal_Minkowski_budget_over_X2": 35.51929770261861,
+          "joint_sum_coarse_over_X2": 20.81360696980846,
+          "joint_Gram_hash": "d28d70e6e725f6c69754904c0d66dbd12177194ab9d761aec1c406dfbfd7234d",
+          "H_paid_loss": {
+            "old_norm": 53850740193,
+            "new_norm": 45464468205,
+            "deleted_mass": 0,
+            "cancelled_mass": 8386271988,
+            "pair_variance_dyadic_enclosure": [
+              16057021436304967,
+              16057021436305028,
+              1048576
+            ]
+          },
+          "annular_paid_loss": {
+            "old_norm": 1606874213740,
+            "new_norm": 794787333312,
+            "deleted_mass": 0,
+            "cancelled_mass": 812086880428,
+            "pair_variance_dyadic_enclosure": [
+              1020191280157914543,
+              1020191280157924479,
+              1048576
+            ]
+          },
+          "sum_paid_loss": {
+            "old_norm": 1688111048357,
+            "new_norm": 715150089977,
+            "deleted_mass": 0,
+            "cancelled_mass": 972960958380,
+            "pair_variance_dyadic_enclosure": [
+              1141839355947211914,
+              1141839355947222536,
+              1048576
+            ]
+          },
+          "additional_steps": 4,
+          "new_edges": 2492,
+          "unresolved_sources": 3174,
+          "compiled_max_native_clock": 210
+        },
+        {
+          "columns": 321,
+          "gram_hashes": {
+            "H": "c6e7ee22811b23c4a1cbd9b3c9b9ad326eb9ad59634e04f1902ff8fb396e18df",
+            "annular": "452add774ce5fa9510b1262266b78d992a68b2abf56566db358c315d5b395cf7",
+            "sum": "aa0e7d8aea8e6173bc619bad384feddc76ad2eef2a7af084638ace1b216f2176"
+          },
+          "coarse_H": [
+            41129669825,
+            128
+          ],
+          "coarse_annular": [
+            464272600984,
+            128
+          ],
+          "coarse_sum": [
+            334756159685,
+            128
+          ],
+          "annular_fine": [
+            357892096,
+            1
+          ],
+          "annular_upper_over_X2": 14.845363017870113,
+          "annular_coarse_over_X2": 13.512111064745113,
+          "log_Gram_target_passes": false,
+          "marginal_Minkowski_budget_over_X2": 22.75262755825236,
+          "joint_sum_coarse_over_X2": 9.742686515819514,
+          "joint_Gram_hash": "25f59df05812a7184b59bae316dec83b328c69daa16b488b1cb304abf5de9234",
+          "H_paid_loss": {
+            "old_norm": 53850740193,
+            "new_norm": 41129669825,
+            "deleted_mass": 0,
+            "cancelled_mass": 12721070368,
+            "pair_variance_dyadic_enclosure": [
+              23250604827451505,
+              23250604827451593,
+              1048576
+            ]
+          },
+          "annular_paid_loss": {
+            "old_norm": 1606874213740,
+            "new_norm": 464272600984,
+            "deleted_mass": 0,
+            "cancelled_mass": 1142601612756,
+            "pair_variance_dyadic_enclosure": [
+              1366673366099082126,
+              1366673366099090401,
+              1048576
+            ]
+          },
+          "sum_paid_loss": {
+            "old_norm": 1688111048357,
+            "new_norm": 334756159685,
+            "deleted_mass": 0,
+            "cancelled_mass": 1353354888672,
+            "pair_variance_dyadic_enclosure": [
+              1486558172764316786,
+              1486558172764325759,
+              1048576
+            ]
+          },
+          "additional_steps": 8,
+          "new_edges": 4137,
+          "unresolved_sources": 2422,
+          "compiled_max_native_clock": 210
+        },
+        {
+          "columns": 175,
+          "gram_hashes": {
+            "H": "55516ff5a0ac2d5a2d2572de78b4878e03cf0cdd9f579bade9d191eb8a34bdbc",
+            "annular": "fb6e51f44448c7ddae946b6f92c8acd63262dbf90b1aa6fed203974a5f40931d",
+            "sum": "6023d42d2a1ba547e2f4bceba958aabcbfa4ec06ce02bb566079d9c0e9797279"
+          },
+          "coarse_H": [
+            25893729613,
+            128
+          ],
+          "coarse_annular": [
+            173006636756,
+            128
+          ],
+          "coarse_sum": [
+            104688619021,
+            128
+          ],
+          "annular_fine": [
+            357892096,
+            1
+          ],
+          "annular_upper_over_X2": 6.368407777161337,
+          "annular_coarse_over_X2": 5.035155824036337,
+          "log_Gram_target_passes": true,
+          "marginal_Minkowski_budget_over_X2": 9.68467180434721,
+          "joint_sum_coarse_over_X2": 3.046839818736771,
+          "joint_Gram_hash": "51d6cc29218858210802f7f96ef059d09d2eae797ad01dc2c88ca64f53dbec26",
+          "H_paid_loss": {
+            "old_norm": 53850740193,
+            "new_norm": 25893729613,
+            "deleted_mass": 0,
+            "cancelled_mass": 27957010580,
+            "pair_variance_dyadic_enclosure": [
+              43298164778109917,
+              43298164778109936,
+              1048576
+            ]
+          },
+          "annular_paid_loss": {
+            "old_norm": 1606874213740,
+            "new_norm": 173006636756,
+            "deleted_mass": 0,
+            "cancelled_mass": 1433867576984,
+            "pair_variance_dyadic_enclosure": [
+              1598695336454275134,
+              1598695336454277324,
+              1048576
+            ]
+          },
+          "sum_paid_loss": {
+            "old_norm": 1688111048357,
+            "new_norm": 104688619021,
+            "deleted_mass": 0,
+            "cancelled_mass": 1583422429336,
+            "pair_variance_dyadic_enclosure": [
+              1694899472675480398,
+              1694899472675482439,
+              1048576
+            ]
+          },
+          "additional_steps": 16,
+          "new_edges": 6110,
+          "unresolved_sources": 850,
+          "compiled_max_native_clock": 210
+        }
+      ],
+      "audit_only": {
+        "D": 177382932,
+        "E": 172163619,
+        "cross": -116967904,
+        "annular_coarse": [
+          5638858427,
+          32
+        ],
+        "D_over_X2": 0.6608029156923294
+      }
+    },
+    {
+      "k": 14,
+      "depth": 24,
+      "source_count": 131072,
+      "initial_observed_edges": 203450,
+      "frozen_certificate_hash": "9f531c222bd48c65544e5c0c83d5761b0008c709c17a1d578661ef1501ef73e4",
+      "controllers": [
+        {
+          "columns": 321,
+          "gram_hashes": {
+            "H": "c6e7ee22811b23c4a1cbd9b3c9b9ad326eb9ad59634e04f1902ff8fb396e18df",
+            "annular": "452add774ce5fa9510b1262266b78d992a68b2abf56566db358c315d5b395cf7",
+            "sum": "aa0e7d8aea8e6173bc619bad384feddc76ad2eef2a7af084638ace1b216f2176"
+          },
+          "coarse_H": [
+            41129669825,
+            128
+          ],
+          "coarse_annular": [
+            464272600984,
+            128
+          ],
+          "coarse_sum": [
+            334756159685,
+            128
+          ],
+          "annular_fine": [
+            357892096,
+            1
+          ],
+          "annular_upper_over_X2": 14.845363017870113,
+          "annular_coarse_over_X2": 13.512111064745113,
+          "log_Gram_target_passes": false,
+          "marginal_Minkowski_budget_over_X2": 22.75262755825236,
+          "joint_sum_coarse_over_X2": 9.742686515819514,
+          "joint_Gram_hash": "25f59df05812a7184b59bae316dec83b328c69daa16b488b1cb304abf5de9234",
+          "additional_steps": 0,
+          "new_edges": 0,
+          "unresolved_sources": 2422,
+          "compiled_max_native_clock": 210
+        },
+        {
+          "columns": 290,
+          "gram_hashes": {
+            "H": "de21c06d8d6bde8e56a1ab3d4b62a24742ce684691a37ad65579eee5cf4df7a3",
+            "annular": "5ec5ab166104badee844ba2b027fe0bca267f67254238bec1d6619ec29310c38",
+            "sum": "8e44d3e01125f9553d0cae3e51753e4c07d2d84c2dbb41566cb2f34a6c7775ce"
+          },
+          "coarse_H": [
+            40736539873,
+            128
+          ],
+          "coarse_annular": [
+            387542077556,
+            128
+          ],
+          "coarse_sum": [
+            284948904977,
+            128
+          ],
+          "annular_fine": [
+            357892096,
+            1
+          ],
+          "annular_upper_over_X2": 12.612210873165168,
+          "annular_coarse_over_X2": 11.278958920040168,
+          "log_Gram_target_passes": true,
+          "marginal_Minkowski_budget_over_X2": 19.7781557444847,
+          "joint_sum_coarse_over_X2": 8.29310461928253,
+          "joint_Gram_hash": "753dbdf06de7b592c051b0985712095c3eed0e8fa04d8e0529af5aeed899763d",
+          "H_paid_loss": {
+            "old_norm": 41129669825,
+            "new_norm": 40736539873,
+            "deleted_mass": 0,
+            "cancelled_mass": 393129952,
+            "pair_variance_dyadic_enclosure": [
+              817113950419907,
+              817113950419948,
+              1048576
+            ]
+          },
+          "annular_paid_loss": {
+            "old_norm": 464272600984,
+            "new_norm": 387542077556,
+            "deleted_mass": 0,
+            "cancelled_mass": 76730523428,
+            "pair_variance_dyadic_enclosure": [
+              131713569875095487,
+              131713569875096066,
+              1048576
+            ]
+          },
+          "sum_paid_loss": {
+            "old_norm": 334756159685,
+            "new_norm": 284948904977,
+            "deleted_mass": 0,
+            "cancelled_mass": 49807254708,
+            "pair_variance_dyadic_enclosure": [
+              73790034133927893,
+              73790034133928472,
+              1048576
+            ]
+          },
+          "additional_steps": 1,
+          "new_edges": 320,
+          "unresolved_sources": 2244,
+          "compiled_max_native_clock": 210
+        },
+        {
+          "columns": 270,
+          "gram_hashes": {
+            "H": "fdd186bbfe7d260a4edb24a2e19255826b7e82ce749389944cf260da45d5c142",
+            "annular": "efd5f38051ab5685ce46bb0ea5f9c6de68e8a4e2bc8e545fca1867b4e9eec55f",
+            "sum": "13fce3530c2d982c77af0a39446ea88d9b09a946495ac592896243aece5c73b1"
+          },
+          "coarse_H": [
+            40167314777,
+            128
+          ],
+          "coarse_annular": [
+            345067589208,
+            128
+          ],
+          "coarse_sum": [
+            258868251109,
+            128
+          ],
+          "annular_fine": [
+            357892096,
+            1
+          ],
+          "annular_upper_over_X2": 11.376040565548465,
+          "annular_coarse_over_X2": 10.042788612423465,
+          "log_Gram_target_passes": true,
+          "marginal_Minkowski_budget_over_X2": 18.064620405768103,
+          "joint_sum_coarse_over_X2": 7.5340576909075025,
+          "joint_Gram_hash": "6ac5f45a42ecf99d31edf79d3e93f04cd4df942e4ba8de26cb7156fe1729167e",
+          "H_paid_loss": {
+            "old_norm": 41129669825,
+            "new_norm": 40167314777,
+            "deleted_mass": 0,
+            "cancelled_mass": 962355048,
+            "pair_variance_dyadic_enclosure": [
+              1991227416761496,
+              1991227416761535,
+              1048576
+            ]
+          },
+          "annular_paid_loss": {
+            "old_norm": 464272600984,
+            "new_norm": 345067589208,
+            "deleted_mass": 0,
+            "cancelled_mass": 119205011776,
+            "pair_variance_dyadic_enclosure": [
+              189127410161969705,
+              189127410161970244,
+              1048576
+            ]
+          },
+          "sum_paid_loss": {
+            "old_norm": 334756159685,
+            "new_norm": 258868251109,
+            "deleted_mass": 0,
+            "cancelled_mass": 75887908576,
+            "pair_variance_dyadic_enclosure": [
+              108326365046869616,
+              108326365046870155,
+              1048576
+            ]
+          },
+          "additional_steps": 2,
+          "new_edges": 609,
+          "unresolved_sources": 2111,
+          "compiled_max_native_clock": 210
+        },
+        {
+          "columns": 239,
+          "gram_hashes": {
+            "H": "6928c289fa89ce52a5d68379fbb0e164e35046a0be07f541c3dbd9ac349f4c1a",
+            "annular": "4f242a53dd5357753bd9f76311659cf356ea7a4c862538bb1dc35c27da485960",
+            "sum": "cc8aaf939b4d435ba09384e0dff79b6e1c9f7f6e1fd92542f5ce125fa07c3fd7"
+          },
+          "coarse_H": [
+            40167023961,
+            128
+          ],
+          "coarse_annular": [
+            291127387580,
+            128
+          ],
+          "coarse_sum": [
+            228526483369,
+            128
+          ],
+          "annular_fine": [
+            357892096,
+            1
+          ],
+          "annular_upper_over_X2": 9.806174082565121,
+          "annular_coarse_over_X2": 8.472922129440121,
+          "log_Gram_target_passes": true,
+          "marginal_Minkowski_budget_over_X2": 15.936367813712126,
+          "joint_sum_coarse_over_X2": 6.65099602684495,
+          "joint_Gram_hash": "35e3555ee8dd0f83a1bc9df85a8bc50257e678e7e074394ccbdd0a46d2d67e35",
+          "H_paid_loss": {
+            "old_norm": 41129669825,
+            "new_norm": 40167023961,
+            "deleted_mass": 0,
+            "cancelled_mass": 962645864,
+            "pair_variance_dyadic_enclosure": [
+              1992878497057749,
+              1992878497057784,
+              1048576
+            ]
+          },
+          "annular_paid_loss": {
+            "old_norm": 464272600984,
+            "new_norm": 291127387580,
+            "deleted_mass": 0,
+            "cancelled_mass": 173145213404,
+            "pair_variance_dyadic_enclosure": [
+              254834639787313716,
+              254834639787314624,
+              1048576
+            ]
+          },
+          "sum_paid_loss": {
+            "old_norm": 334756159685,
+            "new_norm": 228526483369,
+            "deleted_mass": 0,
+            "cancelled_mass": 106229676316,
+            "pair_variance_dyadic_enclosure": [
+              150263825078432255,
+              150263825078433159,
+              1048576
+            ]
+          },
+          "additional_steps": 4,
+          "new_edges": 1125,
+          "unresolved_sources": 1826,
+          "compiled_max_native_clock": 210
+        },
+        {
+          "columns": 175,
+          "gram_hashes": {
+            "H": "55516ff5a0ac2d5a2d2572de78b4878e03cf0cdd9f579bade9d191eb8a34bdbc",
+            "annular": "fb6e51f44448c7ddae946b6f92c8acd63262dbf90b1aa6fed203974a5f40931d",
+            "sum": "6023d42d2a1ba547e2f4bceba958aabcbfa4ec06ce02bb566079d9c0e9797279"
+          },
+          "coarse_H": [
+            25893729613,
+            128
+          ],
+          "coarse_annular": [
+            173006636756,
+            128
+          ],
+          "coarse_sum": [
+            104688619021,
+            128
+          ],
+          "annular_fine": [
+            357892096,
+            1
+          ],
+          "annular_upper_over_X2": 6.368407777161337,
+          "annular_coarse_over_X2": 5.035155824036337,
+          "log_Gram_target_passes": true,
+          "marginal_Minkowski_budget_over_X2": 9.68467180434721,
+          "joint_sum_coarse_over_X2": 3.046839818736771,
+          "joint_Gram_hash": "51d6cc29218858210802f7f96ef059d09d2eae797ad01dc2c88ca64f53dbec26",
+          "H_paid_loss": {
+            "old_norm": 41129669825,
+            "new_norm": 25893729613,
+            "deleted_mass": 0,
+            "cancelled_mass": 15235940212,
+            "pair_variance_dyadic_enclosure": [
+              25977895574548339,
+              25977895574548358,
+              1048576
+            ]
+          },
+          "annular_paid_loss": {
+            "old_norm": 464272600984,
+            "new_norm": 173006636756,
+            "deleted_mass": 0,
+            "cancelled_mass": 291265964228,
+            "pair_variance_dyadic_enclosure": [
+              380324968111815971,
+              380324968111817336,
+              1048576
+            ]
+          },
+          "sum_paid_loss": {
+            "old_norm": 334756159685,
+            "new_norm": 104688619021,
+            "deleted_mass": 0,
+            "cancelled_mass": 230067540664,
+            "pair_variance_dyadic_enclosure": [
+              270414155116417134,
+              270414155116418350,
+              1048576
+            ]
+          },
+          "additional_steps": 8,
+          "new_edges": 1973,
+          "unresolved_sources": 850,
+          "compiled_max_native_clock": 210
+        }
+      ],
+      "audit_only": {
+        "D": 177382932,
+        "E": 172163619,
+        "cross": -116967904,
+        "annular_coarse": [
+          5638858427,
+          32
+        ],
+        "D_over_X2": 0.6608029156923294
+      }
+    },
+    {
+      "k": 16,
+      "depth": 32,
+      "source_count": 524288,
+      "initial_observed_edges": 821833,
+      "frozen_certificate_hash": "d035a6888123aad3a0c49dfb195a125a7f72042bcdf4246d3efbb146a31ed0b7",
+      "controllers": [
+        {
+          "columns": 710,
+          "gram_hashes": {
+            "H": "62bf698637214523d1cf7a0f8606b72720d37600389d8eeb7d5792e51422faa1",
+            "annular": "235673121de1d5da41429cadd9a63954372029f2306aac673da1d3503c9d2687",
+            "sum": "6933821b855ebccd4f40e930070da5d39baaaf019872efdb282c067a6b5ce446"
+          },
+          "coarse_H": [
+            250807787135,
+            256
+          ],
+          "coarse_annular": [
+            16794238246124,
+            256
+          ],
+          "coarse_sum": [
+            19197440862959,
+            256
+          ],
+          "annular_fine": [
+            5726535680,
+            1
+          ],
+          "annular_upper_over_X2": 16.607583693443303,
+          "annular_coarse_over_X2": 15.274270705162053,
+          "log_Gram_target_passes": true,
+          "marginal_Minkowski_budget_over_X2": 19.235575406320233,
+          "joint_sum_coarse_over_X2": 17.459970752460322,
+          "joint_Gram_hash": "48c3b592ba0c8986266ab47004753d13fdf73b1e714d081fa9d2177e656f366e",
+          "additional_steps": 0,
+          "new_edges": 0,
+          "unresolved_sources": 4681,
+          "compiled_max_native_clock": 245
+        },
+        {
+          "columns": 655,
+          "gram_hashes": {
+            "H": "f6ee34d27fc681237a2ba1a455d998a3e9c2a1b59d5243c02e766f1b560a3fa6",
+            "annular": "55152d2cfee0ccda9cb400399aed9008e93ae4db4d292375b05fa3ed4f772933",
+            "sum": "ec0ca6b015cfbc468e510f4cbfebb800ad34884f5ec57aac0bbd1d24c7f056f5"
+          },
+          "coarse_H": [
+            249120003711,
+            256
+          ],
+          "coarse_annular": [
+            15128494656304,
+            256
+          ],
+          "coarse_sum": [
+            17440250787839,
+            256
+          ],
+          "annular_fine": [
+            5726535680,
+            1
+          ],
+          "annular_upper_over_X2": 15.092598723989795,
+          "annular_coarse_over_X2": 13.759285735708545,
+          "log_Gram_target_passes": true,
+          "marginal_Minkowski_budget_over_X2": 17.51714046845797,
+          "joint_sum_coarse_over_X2": 15.861815689130708,
+          "joint_Gram_hash": "4e7cac0efc70a7cb175816c668a7e2efb0d5e5230e2d88ef7408a398f1d712e3",
+          "H_paid_loss": {
+            "old_norm": 250807787135,
+            "new_norm": 249120003711,
+            "deleted_mass": 0,
+            "cancelled_mass": 1687783424,
+            "pair_variance_dyadic_enclosure": [
+              3429987936211526,
+              3429987936211605,
+              1048576
+            ]
+          },
+          "annular_paid_loss": {
+            "old_norm": 16794238246124,
+            "new_norm": 15128494656304,
+            "deleted_mass": 0,
+            "cancelled_mass": 1665743589820,
+            "pair_variance_dyadic_enclosure": [
+              3047539654682615702,
+              3047539654682617011,
+              1048576
+            ]
+          },
+          "sum_paid_loss": {
+            "old_norm": 19197440862959,
+            "new_norm": 17440250787839,
+            "deleted_mass": 0,
+            "cancelled_mass": 1757190075120,
+            "pair_variance_dyadic_enclosure": [
+              3294830074923196560,
+              3294830074923197869,
+              1048576
+            ]
+          },
+          "additional_steps": 1,
+          "new_edges": 710,
+          "unresolved_sources": 4291,
+          "compiled_max_native_clock": 245
+        },
+        {
+          "columns": 629,
+          "gram_hashes": {
+            "H": "152c9d87c3de556edd4d38ced9ebff4ab1b63be58b678c1678c4fe24f50a083f",
+            "annular": "f216c5e917c2198f2ef276079f4d3831df74da506528eb09283c384c313ae231",
+            "sum": "06c32c81b12aea26f2871ea94b435da5c37fe99800299b0aac26ac618dfb8c6e"
+          },
+          "coarse_H": [
+            247287392779,
+            256
+          ],
+          "coarse_annular": [
+            14418648251920,
+            256
+          ],
+          "coarse_sum": [
+            16646297362579,
+            256
+          ],
+          "annular_fine": [
+            5726535680,
+            1
+          ],
+          "annular_upper_over_X2": 14.446997180129983,
+          "annular_coarse_over_X2": 13.113684191848733,
+          "log_Gram_target_passes": true,
+          "marginal_Minkowski_budget_over_X2": 16.773327307360574,
+          "joint_sum_coarse_over_X2": 15.13971925540227,
+          "joint_Gram_hash": "5f5ea4fc4d334a16c42d0839a8d97c112af8222fd408ab1fef9902cd09b635fd",
+          "H_paid_loss": {
+            "old_norm": 250807787135,
+            "new_norm": 247287392779,
+            "deleted_mass": 0,
+            "cancelled_mass": 3520394356,
+            "pair_variance_dyadic_enclosure": [
+              7136603192066732,
+              7136603192066809,
+              1048576
+            ]
+          },
+          "annular_paid_loss": {
+            "old_norm": 16794238246124,
+            "new_norm": 14418648251920,
+            "deleted_mass": 0,
+            "cancelled_mass": 2375589994204,
+            "pair_variance_dyadic_enclosure": [
+              4144172421796717360,
+              4144172421796720661,
+              1048576
+            ]
+          },
+          "sum_paid_loss": {
+            "old_norm": 19197440862959,
+            "new_norm": 16646297362579,
+            "deleted_mass": 0,
+            "cancelled_mass": 2551143500380,
+            "pair_variance_dyadic_enclosure": [
+              4609188826739359096,
+              4609188826739362409,
+              1048576
+            ]
+          },
+          "additional_steps": 2,
+          "new_edges": 1365,
+          "unresolved_sources": 4149,
+          "compiled_max_native_clock": 245
+        },
+        {
+          "columns": 526,
+          "gram_hashes": {
+            "H": "98392184c5052f84549b0fce80ca12d155ffc8ac693a7ab94ad788f70eb66cca",
+            "annular": "9e9b53fc4fe0e12ea145fa47a9d5881ef77cd36a2bbe3344b0e976de07c655ae",
+            "sum": "1d83c188c83db340fcfebe2c3943508be6e8c1a6425eb4a0e39da7e126f47a84"
+          },
+          "coarse_H": [
+            227766907507,
+            256
+          ],
+          "coarse_annular": [
+            10382278355264,
+            256
+          ],
+          "coarse_sum": [
+            12223283666419,
+            256
+          ],
+          "annular_fine": [
+            5726535680,
+            1
+          ],
+          "annular_upper_over_X2": 10.77594014472561,
+          "annular_coarse_over_X2": 9.44262715644436,
+          "log_Gram_target_passes": true,
+          "marginal_Minkowski_budget_over_X2": 12.446968979227393,
+          "joint_sum_coarse_over_X2": 11.117011732875653,
+          "joint_Gram_hash": "7c57e419579ffb3a2be53dc73347bd836036b8dafbb06c5a527dce2ffac4deeb",
+          "H_paid_loss": {
+            "old_norm": 250807787135,
+            "new_norm": 227766907507,
+            "deleted_mass": 0,
+            "cancelled_mass": 23040879628,
+            "pair_variance_dyadic_enclosure": [
+              45536526118992855,
+              45536526118992926,
+              1048576
+            ]
+          },
+          "annular_paid_loss": {
+            "old_norm": 16794238246124,
+            "new_norm": 10382278355264,
+            "deleted_mass": 0,
+            "cancelled_mass": 6411959890860,
+            "pair_variance_dyadic_enclosure": [
+              9345931159066470345,
+              9345931159066474129,
+              1048576
+            ]
+          },
+          "sum_paid_loss": {
+            "old_norm": 19197440862959,
+            "new_norm": 12223283666419,
+            "deleted_mass": 0,
+            "cancelled_mass": 6974157196540,
+            "pair_variance_dyadic_enclosure": [
+              10578177943447937372,
+              10578177943447941150,
+              1048576
+            ]
+          },
+          "additional_steps": 4,
+          "new_edges": 2561,
+          "unresolved_sources": 3554,
+          "compiled_max_native_clock": 245
+        },
+        {
+          "columns": 409,
+          "gram_hashes": {
+            "H": "e0e903246302f6ce9033aad21ce5812133272de7e43032689a00f73ba3ae1db5",
+            "annular": "ef4057d450d9639a0f795531fae11386022faf1307ca9d187f8acb25e7037094",
+            "sum": "462fe7d7eef55f234e8fb96265e7250469619b5815056afcfc4d4bed57d983dc"
+          },
+          "coarse_H": [
+            212528751483,
+            256
+          ],
+          "coarse_annular": [
+            6874143069432,
+            256
+          ],
+          "coarse_sum": [
+            8425166954711,
+            256
+          ],
+          "annular_fine": [
+            5726535680,
+            1
+          ],
+          "annular_upper_over_X2": 7.585309689158748,
+          "annular_coarse_over_X2": 6.251996700877498,
+          "log_Gram_target_passes": true,
+          "marginal_Minkowski_budget_over_X2": 8.643900975436196,
+          "joint_sum_coarse_over_X2": 7.662644706862011,
+          "joint_Gram_hash": "3eefec726f766a467548fbf84a7aa5f52e76f10b3d80e271f5df277000c57237",
+          "H_paid_loss": {
+            "old_norm": 250807787135,
+            "new_norm": 212528751483,
+            "deleted_mass": 0,
+            "cancelled_mass": 38279035652,
+            "pair_variance_dyadic_enclosure": [
+              73205820648058613,
+              73205820648058664,
+              1048576
+            ]
+          },
+          "annular_paid_loss": {
+            "old_norm": 16794238246124,
+            "new_norm": 6874143069432,
+            "deleted_mass": 0,
+            "cancelled_mass": 9920095176692,
+            "pair_variance_dyadic_enclosure": [
+              13026093982367934071,
+              13026093982367937019,
+              1048576
+            ]
+          },
+          "sum_paid_loss": {
+            "old_norm": 19197440862959,
+            "new_norm": 8425166954711,
+            "deleted_mass": 0,
+            "cancelled_mass": 10772273908248,
+            "pair_variance_dyadic_enclosure": [
+              14704084177105615364,
+              14704084177105618306,
+              1048576
+            ]
+          },
+          "additional_steps": 8,
+          "new_edges": 4475,
+          "unresolved_sources": 2612,
+          "compiled_max_native_clock": 245
+        }
+      ],
+      "audit_only": {
+        "D": 3357719864,
+        "E": 462386707,
+        "cross": 443178632,
+        "annular_coarse": [
+          107140372729,
+          32
+        ],
+        "D_over_X2": 0.7817800771445036
+      }
+    }
+  ],
+  "adaptive": [
+    {
+      "mode": "weighted",
+      "k": 12,
+      "depth": 16,
+      "block_depth": 8,
+      "batch_width": 10,
+      "round_cap": 30,
+      "frozen_hash": "0332c7198f9c5a5915d5e1f48ef2c3729bd035344aab2bc894179b141594e21e",
+      "rounds": [
+        {
+          "round": 1,
+          "selected": [
+            177302,
+            81742,
+            2017817,
+            69545,
+            179570,
+            224464,
+            621229,
+            236141,
+            79309,
+            83687
+          ],
+          "new_edges": 62,
+          "cumulative_new_edges": 62,
+          "columns": 171,
+          "coarse_over_X2": 18.77164899930358,
+          "paid_loss": {
+            "old_norm": 24525818972,
+            "new_norm": 20155904636,
+            "deleted_mass": 0,
+            "cancelled_mass": 4369914336,
+            "pair_variance_dyadic_enclosure": [
+              7715932305483057,
+              7715932305483398,
+              1048576
+            ]
+          },
+          "target_passes": false
+        },
+        {
+          "round": 2,
+          "selected": [
+            1915352,
+            594134,
+            56818,
+            84845,
+            196562,
+            238315,
+            224153,
+            199685,
+            219532,
+            715817
+          ],
+          "new_edges": 64,
+          "cumulative_new_edges": 126,
+          "columns": 167,
+          "coarse_over_X2": 17.442233465611935,
+          "paid_loss": {
+            "old_norm": 20155904636,
+            "new_norm": 18728455576,
+            "deleted_mass": 0,
+            "cancelled_mass": 1427449060,
+            "pair_variance_dyadic_enclosure": [
+              2699555283002065,
+              2699555283002418,
+              1048576
+            ]
+          },
+          "target_passes": false
+        },
+        {
+          "round": 3,
+          "selected": [
+            606032,
+            563966,
+            196177,
+            678644,
+            186583,
+            70924,
+            1932011,
+            64118,
+            2038405,
+            583861
+          ],
+          "new_edges": 59,
+          "cumulative_new_edges": 185,
+          "columns": 163,
+          "coarse_over_X2": 14.726457733660936,
+          "paid_loss": {
+            "old_norm": 18728455576,
+            "new_norm": 15812413588,
+            "deleted_mass": 0,
+            "cancelled_mass": 2916041988,
+            "pair_variance_dyadic_enclosure": [
+              5317135964379010,
+              5317135964379333,
+              1048576
+            ]
+          },
+          "target_passes": false
+        },
+        {
+          "round": 4,
+          "selected": [
+            4817960,
+            186218,
+            214730,
+            177110,
+            5501708,
+            65134,
+            254825,
+            644966,
+            2073869,
+            182168
+          ],
+          "new_edges": 59,
+          "cumulative_new_edges": 244,
+          "columns": 159,
+          "coarse_over_X2": 14.320479843765497,
+          "paid_loss": {
+            "old_norm": 15812413588,
+            "new_norm": 15376498148,
+            "deleted_mass": 0,
+            "cancelled_mass": 435915440,
+            "pair_variance_dyadic_enclosure": [
+              848689985658456,
+              848689985658737,
+              1048576
+            ]
+          },
+          "target_passes": false
+        },
+        {
+          "round": 5,
+          "selected": [
+            169382,
+            168119,
+            580259,
+            241886,
+            218729,
+            86152,
+            541822,
+            68024,
+            1909250,
+            79343
+          ],
+          "new_edges": 64,
+          "cumulative_new_edges": 308,
+          "columns": 156,
+          "coarse_over_X2": 14.266649186611176,
+          "paid_loss": {
+            "old_norm": 15376498148,
+            "new_norm": 15318697920,
+            "deleted_mass": 0,
+            "cancelled_mass": 57800228,
+            "pair_variance_dyadic_enclosure": [
+              102525596775616,
+              102525596775638,
+              1048576
+            ]
+          },
+          "target_passes": false
+        },
+        {
+          "round": 6,
+          "selected": [
+            159583,
+            183599,
+            688814,
+            207623,
+            1542928,
+            604100,
+            677834,
+            63490,
+            250154,
+            81094
+          ],
+          "new_edges": 61,
+          "cumulative_new_edges": 369,
+          "columns": 152,
+          "coarse_over_X2": 13.36046227812767,
+          "paid_loss": {
+            "old_norm": 15318697920,
+            "new_norm": 14345687136,
+            "deleted_mass": 0,
+            "cancelled_mass": 973010784,
+            "pair_variance_dyadic_enclosure": [
+              1948193983991643,
+              1948193983991946,
+              1048576
+            ]
+          },
+          "target_passes": false
+        },
+        {
+          "round": 7,
+          "selected": [
+            151480,
+            522830,
+            217946,
+            197081,
+            54244,
+            71491,
+            205519,
+            2199986,
+            64486,
+            651590
+          ],
+          "new_edges": 52,
+          "cumulative_new_edges": 421,
+          "columns": 145,
+          "coarse_over_X2": 11.461415641009808,
+          "paid_loss": {
+            "old_norm": 14345687136,
+            "new_norm": 12306601336,
+            "deleted_mass": 0,
+            "cancelled_mass": 2039085800,
+            "pair_variance_dyadic_enclosure": [
+              3870144646603935,
+              3870144646604224,
+              1048576
+            ]
+          },
+          "target_passes": false
+        },
+        {
+          "round": 8,
+          "selected": [
+            496282,
+            232030,
+            585251,
+            210518,
+            66172,
+            650429,
+            242696,
+            179830,
+            566351,
+            75190
+          ],
+          "new_edges": 60,
+          "cumulative_new_edges": 481,
+          "columns": 141,
+          "coarse_over_X2": 10.49464362487197,
+          "paid_loss": {
+            "old_norm": 12306601336,
+            "new_norm": 11268537788,
+            "deleted_mass": 0,
+            "cancelled_mass": 1038063548,
+            "pair_variance_dyadic_enclosure": [
+              1995872624374894,
+              1995872624375418,
+              1048576
+            ]
+          },
+          "target_passes": false
+        },
+        {
+          "round": 9,
+          "selected": [
+            61726,
+            220249,
+            66610,
+            617402,
+            56900,
+            537592,
+            243476,
+            678449,
+            238216,
+            2296349
+          ],
+          "new_edges": 51,
+          "cumulative_new_edges": 532,
+          "columns": 136,
+          "coarse_over_X2": 10.130188770592213,
+          "paid_loss": {
+            "old_norm": 11268537788,
+            "new_norm": 10877207368,
+            "deleted_mass": 0,
+            "cancelled_mass": 391330420,
+            "pair_variance_dyadic_enclosure": [
+              800222466477065,
+              800222466477336,
+              1048576
+            ]
+          },
+          "target_passes": false
+        },
+        {
+          "round": 10,
+          "selected": [
+            69689,
+            65117,
+            510299,
+            214667,
+            726580,
+            61177,
+            60139,
+            77330,
+            188203,
+            78886
+          ],
+          "new_edges": 59,
+          "cumulative_new_edges": 591,
+          "columns": 131,
+          "coarse_over_X2": 9.83239782601595,
+          "paid_loss": {
+            "old_norm": 10877207368,
+            "new_norm": 10557456776,
+            "deleted_mass": 0,
+            "cancelled_mass": 319750592,
+            "pair_variance_dyadic_enclosure": [
+              652850890311246,
+              652850890311507,
+              1048576
+            ]
+          },
+          "target_passes": false
+        },
+        {
+          "round": 11,
+          "selected": [
+            66152,
+            203768,
+            58072,
+            171260,
+            59549,
+            222128,
+            718739,
+            80347,
+            782378,
+            533263
+          ],
+          "new_edges": 43,
+          "cumulative_new_edges": 634,
+          "columns": 124,
+          "coarse_over_X2": 8.370896738022566,
+          "paid_loss": {
+            "old_norm": 10557456776,
+            "new_norm": 8988181932,
+            "deleted_mass": 0,
+            "cancelled_mass": 1569274844,
+            "pair_variance_dyadic_enclosure": [
+              2989856793273466,
+              2989856793273713,
+              1048576
+            ]
+          },
+          "target_passes": true
+        }
+      ],
+      "unresolved_sources": 305,
+      "max_native_clock": 180
+    },
+    {
+      "mode": "lexicographic",
+      "k": 12,
+      "depth": 16,
+      "block_depth": 8,
+      "batch_width": 10,
+      "round_cap": 30,
+      "frozen_hash": "e3e742c07eb000a80af3ce04749b0cab8a4d699cf1db04ad6d063ed8b720f312",
+      "rounds": [
+        {
+          "round": 1,
+          "selected": [
+            60139,
+            61177,
+            61544,
+            62236,
+            63490,
+            64118,
+            64486,
+            65134,
+            65566,
+            66172
+          ],
+          "new_edges": 24,
+          "cumulative_new_edges": 24,
+          "columns": 167,
+          "coarse_over_X2": 20.944938987493515,
+          "paid_loss": {
+            "old_norm": 24525818972,
+            "new_norm": 22489456992,
+            "deleted_mass": 0,
+            "cancelled_mass": 2036361980,
+            "pair_variance_dyadic_enclosure": [
+              3947022379220101,
+              3947022379220434,
+              1048576
+            ]
+          },
+          "target_passes": false
+        },
+        {
+          "round": 2,
+          "selected": [
+            58072,
+            66863,
+            67556,
+            67772,
+            68788,
+            69545,
+            70087,
+            71015,
+            72164,
+            73784
+          ],
+          "new_edges": 42,
+          "cumulative_new_edges": 66,
+          "columns": 161,
+          "coarse_over_X2": 20.466839749366045,
+          "paid_loss": {
+            "old_norm": 22489456992,
+            "new_norm": 21976101844,
+            "deleted_mass": 0,
+            "cancelled_mass": 513355148,
+            "pair_variance_dyadic_enclosure": [
+              1046906806224294,
+              1046906806224615,
+              1048576
+            ]
+          },
+          "target_passes": false
+        },
+        {
+          "round": 3,
+          "selected": [
+            66529,
+            74000,
+            74240,
+            74692,
+            75016,
+            75190,
+            75860,
+            76076,
+            76249,
+            77267
+          ],
+          "new_edges": 29,
+          "cumulative_new_edges": 95,
+          "columns": 152,
+          "coarse_over_X2": 19.67277018725872,
+          "paid_loss": {
+            "old_norm": 21976101844,
+            "new_norm": 21123476144,
+            "deleted_mass": 0,
+            "cancelled_mass": 852625700,
+            "pair_variance_dyadic_enclosure": [
+              1646028335806130,
+              1646028335806724,
+              1048576
+            ]
+          },
+          "target_passes": false
+        },
+        {
+          "round": 4,
+          "selected": [
+            77330,
+            78886,
+            79232,
+            79309,
+            79343,
+            80347,
+            80357,
+            80552,
+            81094,
+            81244
+          ],
+          "new_edges": 32,
+          "cumulative_new_edges": 127,
+          "columns": 144,
+          "coarse_over_X2": 18.52315030992031,
+          "paid_loss": {
+            "old_norm": 21123476144,
+            "new_norm": 19889081200,
+            "deleted_mass": 0,
+            "cancelled_mass": 1234394944,
+            "pair_variance_dyadic_enclosure": [
+              2459188495964591,
+              2459188495964878,
+              1048576
+            ]
+          },
+          "target_passes": false
+        },
+        {
+          "round": 5,
+          "selected": [
+            76268,
+            81742,
+            82000,
+            83126,
+            83342,
+            83687,
+            84845,
+            84878,
+            85106,
+            85114
+          ],
+          "new_edges": 43,
+          "cumulative_new_edges": 170,
+          "columns": 138,
+          "coarse_over_X2": 16.650060396641493,
+          "paid_loss": {
+            "old_norm": 19889081200,
+            "new_norm": 17877866220,
+            "deleted_mass": 0,
+            "cancelled_mass": 2011214980,
+            "pair_variance_dyadic_enclosure": [
+              3854140604078650,
+              3854140604078939,
+              1048576
+            ]
+          },
+          "target_passes": false
+        },
+        {
+          "round": 6,
+          "selected": [
+            78907,
+            79112,
+            80570,
+            85634,
+            85799,
+            86152,
+            86455,
+            86575,
+            86780,
+            87623
+          ],
+          "new_edges": 51,
+          "cumulative_new_edges": 221,
+          "columns": 132,
+          "coarse_over_X2": 16.64096662029624,
+          "paid_loss": {
+            "old_norm": 17877866220,
+            "new_norm": 17868101852,
+            "deleted_mass": 0,
+            "cancelled_mass": 9764368,
+            "pair_variance_dyadic_enclosure": [
+              18490188907348,
+              18490188907397,
+              1048576
+            ]
+          },
+          "target_passes": false
+        },
+        {
+          "round": 7,
+          "selected": [
+            81443,
+            82066,
+            171260,
+            177302,
+            178013,
+            178924,
+            179570,
+            179830,
+            182168,
+            186317
+          ],
+          "new_edges": 53,
+          "cumulative_new_edges": 274,
+          "columns": 125,
+          "coarse_over_X2": 13.848373517394066,
+          "paid_loss": {
+            "old_norm": 17868101852,
+            "new_norm": 14869577840,
+            "deleted_mass": 0,
+            "cancelled_mass": 2998524012,
+            "pair_variance_dyadic_enclosure": [
+              5419735833804681,
+              5419735833804930,
+              1048576
+            ]
+          },
+          "target_passes": false
+        },
+        {
+          "round": 8,
+          "selected": [
+            56614,
+            56818,
+            56900,
+            186835,
+            187748,
+            188203,
+            188720,
+            188912,
+            189458,
+            190406
+          ],
+          "new_edges": 39,
+          "cumulative_new_edges": 313,
+          "columns": 118,
+          "coarse_over_X2": 13.678587898612022,
+          "paid_loss": {
+            "old_norm": 14869577840,
+            "new_norm": 14687271920,
+            "deleted_mass": 0,
+            "cancelled_mass": 182305920,
+            "pair_variance_dyadic_enclosure": [
+              367625164274521,
+              367625164274756,
+              1048576
+            ]
+          },
+          "target_passes": false
+        },
+        {
+          "round": 9,
+          "selected": [
+            59549,
+            177349,
+            179840,
+            191834,
+            192026,
+            193909,
+            194363,
+            196177,
+            196438,
+            199685
+          ],
+          "new_edges": 54,
+          "cumulative_new_edges": 367,
+          "columns": 111,
+          "coarse_over_X2": 12.327537585049868,
+          "paid_loss": {
+            "old_norm": 14687271920,
+            "new_norm": 13236592692,
+            "deleted_mass": 0,
+            "cancelled_mass": 1450679228,
+            "pair_variance_dyadic_enclosure": [
+              2805227462771422,
+              2805227462771643,
+              1048576
+            ]
+          },
+          "target_passes": false
+        },
+        {
+          "round": 10,
+          "selected": [
+            61498,
+            62155,
+            186218,
+            202925,
+            203836,
+            204481,
+            205001,
+            205328,
+            205391,
+            205519
+          ],
+          "new_edges": 61,
+          "cumulative_new_edges": 428,
+          "columns": 105,
+          "coarse_over_X2": 12.275948151946068,
+          "paid_loss": {
+            "old_norm": 13236592692,
+            "new_norm": 13181198960,
+            "deleted_mass": 0,
+            "cancelled_mass": 55393732,
+            "pair_variance_dyadic_enclosure": [
+              115583790306929,
+              115583790307130,
+              1048576
+            ]
+          },
+          "target_passes": false
+        },
+        {
+          "round": 11,
+          "selected": [
+            64208,
+            64864,
+            194962,
+            207856,
+            210518,
+            216746,
+            216938,
+            217846,
+            219532,
+            221089
+          ],
+          "new_edges": 51,
+          "cumulative_new_edges": 479,
+          "columns": 99,
+          "coarse_over_X2": 11.520130291581154,
+          "paid_loss": {
+            "old_norm": 13181198960,
+            "new_norm": 12369645712,
+            "deleted_mass": 0,
+            "cancelled_mass": 811553248,
+            "pair_variance_dyadic_enclosure": [
+              1627979218948105,
+              1627979218948302,
+              1048576
+            ]
+          },
+          "target_passes": false
+        },
+        {
+          "round": 12,
+          "selected": [
+            61688,
+            66610,
+            206786,
+            209864,
+            221609,
+            221935,
+            222128,
+            223685,
+            224464,
+            230303
+          ],
+          "new_edges": 49,
+          "cumulative_new_edges": 528,
+          "columns": 93,
+          "coarse_over_X2": 10.71356451138854,
+          "paid_loss": {
+            "old_norm": 12369645712,
+            "new_norm": 11503602300,
+            "deleted_mass": 0,
+            "cancelled_mass": 866043412,
+            "pair_variance_dyadic_enclosure": [
+              1732750267095291,
+              1732750267095476,
+              1048576
+            ]
+          },
+          "target_passes": false
+        },
+        {
+          "round": 13,
+          "selected": [
+            196289,
+            231731,
+            232901,
+            233417,
+            233804,
+            234454,
+            236141,
+            236530,
+            237572,
+            238216
+          ],
+          "new_edges": 63,
+          "cumulative_new_edges": 591,
+          "columns": 87,
+          "coarse_over_X2": 10.386917378753424,
+          "paid_loss": {
+            "old_norm": 11503602300,
+            "new_norm": 11152867612,
+            "deleted_mass": 0,
+            "cancelled_mass": 350734688,
+            "pair_variance_dyadic_enclosure": [
+              720027209234536,
+              720027209234711,
+              1048576
+            ]
+          },
+          "target_passes": false
+        },
+        {
+          "round": 14,
+          "selected": [
+            73855,
+            222551,
+            224153,
+            224522,
+            238315,
+            238544,
+            241562,
+            242696,
+            243476,
+            246260
+          ],
+          "new_edges": 55,
+          "cumulative_new_edges": 646,
+          "columns": 81,
+          "coarse_over_X2": 10.133023202419281,
+          "paid_loss": {
+            "old_norm": 11152867612,
+            "new_norm": 10880250816,
+            "deleted_mass": 0,
+            "cancelled_mass": 272616796,
+            "pair_variance_dyadic_enclosure": [
+              562538399194541,
+              562538399194702,
+              1048576
+            ]
+          },
+          "target_passes": false
+        },
+        {
+          "round": 15,
+          "selected": [
+            70417,
+            70924,
+            246539,
+            246847,
+            249524,
+            250154,
+            253138,
+            253265,
+            254825,
+            255572
+          ],
+          "new_edges": 60,
+          "cumulative_new_edges": 706,
+          "columns": 76,
+          "coarse_over_X2": 9.501201171427965,
+          "paid_loss": {
+            "old_norm": 10880250816,
+            "new_norm": 10201837076,
+            "deleted_mass": 0,
+            "cancelled_mass": 678413740,
+            "pair_variance_dyadic_enclosure": [
+              1364297394803616,
+              1364297394803767,
+              1048576
+            ]
+          },
+          "target_passes": false
+        },
+        {
+          "round": 16,
+          "selected": [
+            78007,
+            240286,
+            240407,
+            241886,
+            258329,
+            258716,
+            258785,
+            258977,
+            259469,
+            259888
+          ],
+          "new_edges": 68,
+          "cumulative_new_edges": 774,
+          "columns": 73,
+          "coarse_over_X2": 9.469314441084862,
+          "paid_loss": {
+            "old_norm": 10201837076,
+            "new_norm": 10167598960,
+            "deleted_mass": 0,
+            "cancelled_mass": 34238116,
+            "pair_variance_dyadic_enclosure": [
+              71633941995395,
+              71633941995532,
+              1048576
+            ]
+          },
+          "target_passes": false
+        },
+        {
+          "round": 17,
+          "selected": [
+            74047,
+            228086,
+            245213,
+            245582,
+            245828,
+            261832,
+            262607,
+            263128,
+            263519,
+            265598
+          ],
+          "new_edges": 68,
+          "cumulative_new_edges": 842,
+          "columns": 69,
+          "coarse_over_X2": 9.340384658426046,
+          "paid_loss": {
+            "old_norm": 10167598960,
+            "new_norm": 10029161660,
+            "deleted_mass": 0,
+            "cancelled_mass": 138437300,
+            "pair_variance_dyadic_enclosure": [
+              286400134527670,
+              286400134527807,
+              1048576
+            ]
+          },
+          "target_passes": false
+        },
+        {
+          "round": 18,
+          "selected": [
+            210863,
+            216506,
+            233113,
+            250138,
+            533263,
+            541822,
+            551944,
+            566351,
+            572960,
+            583861
+          ],
+          "new_edges": 60,
+          "cumulative_new_edges": 902,
+          "columns": 64,
+          "coarse_over_X2": 9.305048819631338,
+          "paid_loss": {
+            "old_norm": 10029161660,
+            "new_norm": 9991220092,
+            "deleted_mass": 0,
+            "cancelled_mass": 37941568,
+            "pair_variance_dyadic_enclosure": [
+              79227452744606,
+              79227452744727,
+              1048576
+            ]
+          },
+          "target_passes": false
+        },
+        {
+          "round": 19,
+          "selected": [
+            73759,
+            168728,
+            200156,
+            537592,
+            585251,
+            591644,
+            594134,
+            596321,
+            600605,
+            606689
+          ],
+          "new_edges": 68,
+          "cumulative_new_edges": 970,
+          "columns": 62,
+          "coarse_over_X2": 9.130471970885992,
+          "paid_loss": {
+            "old_norm": 9991220092,
+            "new_norm": 9803769628,
+            "deleted_mass": 0,
+            "cancelled_mass": 187450464,
+            "pair_variance_dyadic_enclosure": [
+              388626378997174,
+              388626378997297,
+              1048576
+            ]
+          },
+          "target_passes": false
+        },
+        {
+          "round": 20,
+          "selected": [
+            61726,
+            187201,
+            190036,
+            210043,
+            510299,
+            563966,
+            566041,
+            610328,
+            621229,
+            630949
+          ],
+          "new_edges": 68,
+          "cumulative_new_edges": 1038,
+          "columns": 58,
+          "coarse_over_X2": 9.105326101183891,
+          "paid_loss": {
+            "old_norm": 9803769628,
+            "new_norm": 9776769456,
+            "deleted_mass": 0,
+            "cancelled_mass": 27000172,
+            "pair_variance_dyadic_enclosure": [
+              56369309001230,
+              56369309001285,
+              1048576
+            ]
+          },
+          "target_passes": false
+        },
+        {
+          "round": 21,
+          "selected": [
+            196562,
+            199378,
+            537299,
+            598913,
+            633683,
+            638354,
+            650429,
+            651590,
+            675722,
+            676502
+          ],
+          "new_edges": 79,
+          "cumulative_new_edges": 1117,
+          "columns": 56,
+          "coarse_over_X2": 9.011450216174126,
+          "paid_loss": {
+            "old_norm": 9776769456,
+            "new_norm": 9675970992,
+            "deleted_mass": 0,
+            "cancelled_mass": 100798464,
+            "pair_variance_dyadic_enclosure": [
+              209297947830305,
+              209297947830416,
+              1048576
+            ]
+          },
+          "target_passes": false
+        },
+        {
+          "round": 22,
+          "selected": [
+            71350,
+            186583,
+            189256,
+            201980,
+            510016,
+            568502,
+            617402,
+            677834,
+            678449,
+            678644
+          ],
+          "new_edges": 64,
+          "cumulative_new_edges": 1181,
+          "columns": 53,
+          "coarse_over_X2": 8.832588121294975,
+          "paid_loss": {
+            "old_norm": 9675970992,
+            "new_norm": 9483919280,
+            "deleted_mass": 0,
+            "cancelled_mass": 192051712,
+            "pair_variance_dyadic_enclosure": [
+              398022157335868,
+              398022157335973,
+              1048576
+            ]
+          },
+          "target_passes": true
+        }
+      ],
+      "unresolved_sources": 288,
+      "max_native_clock": 180
+    }
+  ]
+}
