@@ -1,0 +1,100 @@
+{
+  "independent_large_agreement": "fixed large full-prefix replays and compositional audit agree on all anchors, cone hashes, every source endpoint/clock hash at each stage, and final point energy at k=18,20",
+  "inherited_commit": "6b7eecb78afa",
+  "programs": [
+    {
+      "file": "04-computation/experiments/collatz_interval_atlas_20261016e.py",
+      "sha256": "3921dd71c47f386051f03d00190fb15d534b6a3b7e34da06ea7aeb5469f92901"
+    },
+    {
+      "file": "04-computation/experiments/collatz_interval_atlas_repair_20261016e.py",
+      "sha256": "5fb82b769d57ffac22e7355aef74f3b24ea1dbab0773362262d5d022056e86bb"
+    },
+    {
+      "file": "04-computation/experiments/cubic_adelic_20261016e.py",
+      "sha256": "af9996b596a2f89b8f7c659756967e08cee33d4f0d51ef09eb8afbab16c9c257"
+    },
+    {
+      "file": "04-computation/experiments/cubic_adelic_arithmetic_20261016e.py",
+      "sha256": "64a2cb7d5d6d56b4726da1ffba56de8e90ff641364480ab7774f9ac79cd6413a"
+    },
+    {
+      "file": "04-computation/experiments/cubic_contact_probe_20261016e.gp",
+      "sha256": "77e9593754380aa046c4030a5966a5b5374250de8bef3181ad0865aa6defff58"
+    }
+  ],
+  "receipts": [
+    {
+      "bytes": 13520,
+      "checks": 2646119,
+      "file": "collatz_interval_atlas_20261016e.json",
+      "optimized_match": true,
+      "sha256": "c63ab5e5393a82a260fb01e5708811f8cc8610e97aee4305d8ea941c999846cb"
+    },
+    {
+      "bytes": 29478,
+      "checks": 4995749,
+      "file": "collatz_interval_atlas_20261016e_fixed_large.json",
+      "optimized_match": false,
+      "sha256": "d191280b18e5db7e2efee5e295a979d26e6e0cfa665a32814b7cd00c3a2a1f01"
+    },
+    {
+      "bytes": 31044,
+      "checks": 462269637,
+      "file": "collatz_interval_atlas_20261016e_repair.json",
+      "optimized_match": true,
+      "sha256": "821dc65154de8da55d718a0647d280bb6a5aa50f9b5f96f5d4b1b3f9d0b8193a"
+    },
+    {
+      "bytes": 29563,
+      "checks": 461072798,
+      "file": "collatz_interval_atlas_20261016e_incremental.json",
+      "optimized_match": false,
+      "sha256": "57af5e3f8fd3401d90c4f15ee4dd351b960d0ea0d79ad84931480c16ce711f3e"
+    },
+    {
+      "bytes": 2011,
+      "checks": 154,
+      "file": "cubic_adelic_arithmetic_20261016e.json",
+      "optimized_match": true,
+      "sha256": "ea24a2a62d143d8c6eba03f9e9e4e91d05ec7c8809df99d525ef302814146148"
+    },
+    {
+      "bytes": 185,
+      "checks": null,
+      "file": "cubic_contact_probe_20261016e.json",
+      "optimized_match": false,
+      "sha256": "b8b3994bdaf4d6c7a99c9852ccc7d5e8853abdc36c7f080d796bdf72c15a56d8"
+    },
+    {
+      "bytes": 126747,
+      "checks": 40,
+      "file": "cubic_adelic_20261016e_bank.json",
+      "optimized_match": true,
+      "sha256": "065abfa35bbad11acc1285568c678b52ea1535ef8960e858d07db01be2003d5c"
+    },
+    {
+      "bytes": 60111,
+      "checks": 40,
+      "file": "cubic_adelic_20261016e_circuit.json",
+      "optimized_match": true,
+      "sha256": "d053c5a58d61ae552081b24c3b05b6a891aabe8cd6fb911d40dab0bfaafba4cd"
+    },
+    {
+      "bytes": 23989,
+      "checks": 40,
+      "file": "cubic_adelic_20261016e_two_circuits.json",
+      "optimized_match": true,
+      "sha256": "26cbf0ddb83736f629c6b7b67bb8b09d3e8079f5c1864b93e77587fb2695dd38"
+    },
+    {
+      "bytes": 520356,
+      "checks": 49,
+      "file": "cubic_adelic_20261016e_connector.json",
+      "optimized_match": true,
+      "sha256": "bbea571581a39f4d7f1afec2a546a8d9c717a8a8e1726639fd2ac8216339d4dc"
+    }
+  ],
+  "serialization": "Canonical compact JSON for Python receipts; original normal and optimized computations agree before and after canonicalization.",
+  "status": "FINITE-EXACT audit metadata; proofs and open obligations are in the two companion notes"
+}
