@@ -1,74 +1,75 @@
 ---
 id: HYP-9283
-title: "Constant dyadic energy budgets fail eventually, logarithmic budgets suffice: for the Collatz mod-3 discrepancy H, the normalized octave profile H(N)/sqrt(N) behaves like a short-memory stationary process in log N (the exact two-octave memory of THM-4658 is almost cancelled), so every constant budget (E_X <= 2X^2, the clock-mesh coarse target C <= (4/9)X^2, |H| <= 1.5 sqrt(x)) is expected to fail at some large X; meanwhile the nonzero Mercator residue is interval-certified under budgets E_X <= X^2 (a + b log_2(X/2^34)) up to (64, 16), and any such budget forces limsup log B(X)/log X >= 0.99821 > 0.84"
+title: "Energy budgets for the Collatz mod-3 discrepancy H: for dyadic X >= 2^37, any constant budget E_X <= a X^2 with a <= 1806.6, or logarithmic budget E_X <= X^2 (a + b log_2(X/2^37)) inside the certified region (e.g. a = 2, b <= 1194.9), certifies the nonzero Mercator residue of F(s) = sum t(n) n^(-s) and forces limsup log B(X)/log X >= 0.99821 > 0.84 (Krasikov-Lagarias); the stationary-noise forecast that constant budgets fail eventually was refuted out of sample"
 status: >
-  Part (A) HEURISTIC with NUMERICAL support: a Gaussian AR surrogate fitted to the exact census 2^14..2^34 gives
-  P(some dyadic E_X > 2X^2 with X in [2^34, 2^K]) = 5.7%, 16%, 31%, 57%, 88% for K = 40, 50, 64, 100, 200.
-  Part (B) CONDITIONAL, rigorously interval-checked: the log-budget implication extends Theorem B3 of the amplitude note.
-  Part (C) PROVED implication (from B3's continuation argument): any such budget implies the population bound.
-  The energy budgets themselves are OPEN.
+  (A) REFUTED as a forecast (2026-10-15, same session): the Gaussian AR surrogate fitted on 2^14..2^34 predicted a
+  median maximum window energy 0.77 for window starts in (2^33, 2^36]; the exact census to 2^37 gives 0.117
+  (predictive probability of a maximum this small 0.1%); the claim "constant budgets are expected to fail" is
+  withdrawn and the question is OPEN in both directions. (B) CONDITIONAL, rigorously interval-checked (Arb) at
+  N = 2^34 and N = 2^37; the N = 2^37 intervals are nested inside the N = 2^34 ones (a passed consistency test).
+  (C) PROVED implication. FINITE-EXACT: E_X/X^2 <= 1.769 for every dyadic X <= 2^36 (maximum at 2^24) and
+  E_X/X^2 <= 0.096 for X = 2^33..2^36. The budgets themselves are OPEN. AUDITED (S37 referee; I8, I9, I10 applied).
 session: opus-2026-10-15-S37
 source: 05-knowledge/results/collatz_octave_memory_bias_energy_budgets_20261015.md
 scripts:
-  - 04-computation/experiments/collatz_octave_memory_census_20261015.py
-  - 04-computation/experiments/collatz_octave_memory_analysis_20261015.py (output collatz_octave_memory_analysis_20261015.json/.out)
-  - 04-computation/experiments/collatz_pole_certificate_logenergy_20261015.py (output collatz_pole_certificate_logenergy_20261015.json)
-related: [THM-4658, HYP-9282, collatz_amplitude_boundary_20261013c.md, collatz_clock_mesh_20261015a.md, collatz_terminal_mesh_20261015a.md]
+  - 04-computation/experiments/collatz_octave_memory_analysis_20261015.py (in-sample surrogate)
+  - 04-computation/experiments/collatz_census_extension_analysis_20261015.py (out-of-sample check of the surrogate)
+  - 04-computation/experiments/collatz_pole_certificate_logenergy_20261015.py (N = 2^34 intervals)
+  - 04-computation/experiments/collatz_pole_certificate_general_N_20261015.py, collatz_boundary_moments_2p37_20261015.py (N = 2^37 intervals)
+  - 04-computation/experiments/collatz_pole_certificate_margins_20261015.py (largest certified budgets)
+related: [THM-4658, HYP-9282, HYP-9284, collatz_amplitude_boundary_20261013c.md, collatz_clock_mesh_20261015a.md, collatz_terminal_mesh_20261015a.md, collatz_annular_overlap_20261015c.md]
 ---
 
-# HYP-9283: constant energy budgets fail, logarithmic budgets suffice
+# HYP-9283: energy budgets - what certifies the pole, and what the data say
 
-**Setting.** `H(N) = Σ_(n<=N) w_n t(n)` and `E_X = Σ_(X<=n<2X) H(n)²`. Theorem B3 of the amplitude note certifies a nonzero simple pole of `F(s) = Σ t(n) n^(−s)` at the Mercator zero `s_0 ≈ 0.99821 + 240.248i` of `D(s)`, under either of two hypotheses:
-- (7) `|H(x)| <= sqrt(x) log_2(x)/4`;
+**Setting.** `H(N) = Σ_(n<=N) w_n t(n)` and `E_X = Σ_(X<=n<2X) H(n)²`. Theorem B3 of the amplitude note (renewal_shapes_oct11) certifies a nonzero simple pole of `F(s) = Σ t(n) n^(−s)` at the Mercator zero `s_0 ≈ 0.99821 + 240.248i` of `D(s) = 1 + 2^(−s) + (3/2)^s/3`, under either of two hypotheses:
+- (7) `|H(x)| <= sqrt(x) log_2(x)/4` for `x >= 2^34`;
 - (9a) `E_X <= 2X²` for every dyadic `X >= 2^34`.
 
-The clock-mesh note proves the fine-scale part of (9a) and reduces it to a coarse-mean budget `C(P_b) <= (4/9)X²`.
+The clock-mesh note (clock_duality_oct15) proves the fine-scale part of (9a) and reduces it to a coarse-mean budget `C(P_b) <= (4/9)X²`.
 
-## (A) Constant budgets are expected to fail eventually (HEURISTIC)
+## (A) The forecast that constant budgets fail (REFUTED out of sample)
 
-From the exact census (`2^34`; THM-4658, HYP-9282):
-- **Gaussian-like marginal.** The normalized profile `g(u) = H(2^u)/sqrt(2^(u+1))` has a Gaussian-like marginal (kurtosis 3.20), with mean `+0.30` (the bias of HYP-9282) and standard deviation 0.28.
-- **Short memory.** Its autocorrelation is 0.69 at 1/4 octave, 0.39 at 1/2, 0.06 at 1, and 0.01 at 2 octaves.
-- **The memory is cancelled.** THM-4658 gives `H(4N) = H(N) + Δ(N)`, yet the regression of `g(u+2)` on `g(u)` has slope 0.006. The level-2 increment `Δ` almost exactly cancels the inherited value, with octave correlations `κ = Corr(H(N), Δ(N))` between −0.97 and +0.91.
-- **Spectrum.** 92% of the spectral power of `g` lies below one cycle per octave. There is no line; the density observable `S(N)/N` shows the Mercator line at 26.5 cycles per octave as a positive control.
-- **Energy split.** Window energies `E/X²` over 1,217 windows have mean 0.51, 99% quantile 1.77 and maximum 1.85. The coarse mean carries 84% of the energy and refinement 16%.
+**What was claimed (in-sample, 2^14..2^34).** The normalized profile `g(u) = H(2^u)/sqrt(2^(u+1))` looked like a short-memory stationary process: mean +0.30, sd 0.28, point autocorrelation 0.06 at one octave. A Gaussian AR(8) surrogate at quarter-octave resolution, with the bias included and refinement energies resampled, then gave P(some dyadic `E_X > 2X²` before `2^K`) = 5.7%, 16%, 31%, 57%, 88% for `K` = 40, 50, 64, 100, 200. Since a stationary non-degenerate Gaussian process has infinite supremum, every constant budget would eventually fail in that model.
 
-A stationary non-degenerate Gaussian process with decaying correlations has an infinite supremum. So in this model every constant budget is eventually exceeded. A Gaussian AR(8) surrogate at quarter-octave resolution, fitted on `2^14..2^34` with the bias included and refinement energies resampled, gives, from `2^34` to `2^K`:
+**Fragility (referee, I8).** The probabilities depended on the persistent bias (1.0% instead of 32% before 2^64 with the bias removed), on the innovation scale (8%/58% at ×0.8/×1.2), and on the fit range (40% fitted on `u >= 20`); 77 quarter-octave samples fixed 9 parameters, and the kurtosis 3.20 has standard error about 0.95.
 
-| `K` | 40 | 50 | 64 | 100 | 200 |
-|---|---:|---:|---:|---:|---:|
-| P(some dyadic window has `E_X > 2X²`) | 5.7% | 16.4% | 30.7% | 56.6% | 87.7% |
-| P(some window at any phase has `E > 2X²`) | 9.4% | 27.6% | 46.6% | 75.9% | 97.4% |
-| median of the maximum window energy | 1.11 | 1.63 | 1.95 | 2.34 | 2.77 |
+**What happened out of sample (FINITE-EXACT census to 2^37).**
+- Exact dyadic energies `E_X/X²`: 0.095, 0.060, 0.080, 0.037 for `X` = 2^33, 2^34, 2^35, 2^36, the four smallest of the whole record from 2^20 (maximum 1.769 at 2^24).
+- Window energies for starts in `(2^33, 2^36]`: mean 0.072 (in-sample mean 0.51), maximum 0.117. The refitted surrogate predicts a median maximum of 0.77 (10%-90%: 0.34-1.64); a maximum as small as observed has predictive probability 0.1%.
+- The profile mean fell from +0.30 to +0.08 and its sd from 0.28 to 0.12.
+- The bias on which the forecast rested is gone (HYP-9282 REFUTED), and the normalized wavelet energies at levels 2-5 declined over 2^28..2^37 (HYP-9284).
 
-**Consequence.** Hypothesis (9a), the stronger pointwise `|H| <= 1.5 sqrt(x)`, and the clock-mesh/terminal-mesh target `C <= (4/9)X²` on all dyadic `X >= 2^34` are each expected to fail at some large `X`, although probably not soon. A proof aiming at a constant budget is aiming at a statement that is likely false. The pointwise hypothesis (7) has a logarithmic factor and is consistent with the model.
+**Status.** The stationary model is wrong, in the direction of *smaller* energies. Whether a constant budget holds for all `X` is OPEN in both directions. Note that the matched halving null (random odd signs, `t(2m) = −t(m)`) has mean window energies 1.5-14 on 2^14..2^34 (above 2 in 11 of 12 replicates, maxima up to 43), so any proof of a budget must use the odd-step relation `t(n) = −t((3n+1)/2)`, not only the halving structure.
 
-## (B) Logarithmic budgets suffice (CONDITIONAL, interval-certified)
+## (B) Which budgets certify the pole (CONDITIONAL, interval-certified)
 
-The finite numerator of B3 is unchanged. The future tail is recomputed under
+The finite numerator of B3 is unchanged; only the future tail is recomputed under
 
-`(9b)  E_X <= X² (a + b j)` for every `X = 2^(34+j)`, `j >= 0`,
+`(9b)  E_X <= X² (a + b j)` for every dyadic `X = N 2^j`, `j >= 0`,
 
-by Cauchy–Schwarz on each dyadic block. The `j`-sum is exact in Arb for `j < 400` and bounded rigorously beyond. The normalized residue `2|r| 2^(29(σ_0 − 1))` lies in:
+by Cauchy–Schwarz on each dyadic block, with the `j`-sum exact in Arb for `j < 400` and bounded rigorously beyond. The normalized residue `2|r| 2^(29(σ_0 − 1))` lies in:
 
 | `(a, b)` | `(2, 0)` | `(4, 1)` | `(8, 2)` | `(16, 4)` | `(32, 8)` | `(64, 16)` |
 |---|---|---|---|---|---|---|
-| interval | [0.3215, 0.3885] | [0.2964, 0.4137] | [0.2722, 0.4379] | [0.2379, 0.4721] | [0.1895, 0.5205] | [0.1210, 0.5890] |
+| `N = 2^34` | [0.3215, 0.3885] | [0.2964, 0.4137] | [0.2722, 0.4379] | [0.2379, 0.4721] | [0.1895, 0.5205] | [0.1210, 0.5890] |
+| `N = 2^37` | [0.3431, 0.3668] | [0.3342, 0.3757] | [0.3256, 0.3843] | [0.3134, 0.3965] | [0.2963, 0.4136] | [0.2720, 0.4379] |
 
-All are nonzero. `(2, 0)` reproduces the published constant-budget interval. In the clock-mesh formulation, a coarse-mean budget `C(P_b) <= X²(a' + b' j)` with the proved fine allowance gives `E_X/X² <= 4(a' + b' j) + 4/27 + O(X^(−1/2))`. For example `(a', b') = (15, 4)` lies inside the certified `(64, 16)` row.
-
-**Reading.** The amplitude conclusion does not need a constant budget. A budget about 30 times larger than 2, growing linearly in `log X`, still certifies the pole. In the model of (A), such a budget fails with negligible probability.
+- `(2, 0)` at `N = 2^34` reproduces the published constant-budget interval. The `N = 2^37` row uses exact signed block moments through 2^37 (`collatz_boundary_moments_2p37_20261015.py`; the first 2^17 rows reproduce the stored 2^34 moments exactly; `S(2^37) = −152262364`, `H(2^37) = −67763`, `t(2^37) = −1`).
+- **Consistency test (passed).** The exact census satisfies `E_X <= 2X²` on every dyadic window of `[2^34, 2^37)`. So if (9a) held beyond 2^37 both certificates would be valid and their intervals would have to intersect; disjoint intervals would have refuted (9a). They are nested for every row.
+- **Margins** (bisection, every test in Arb). At `N = 2^34` (agreeing with the referee's independent values): largest constant budget `a = 227.385`, largest slope with `a = 2` `b = 144.393`, largest `(4c, c)` `c = 36.860`. At `N = 2^37`: `a = 1806.6`, `b = 1194.9`, `c = 292.86`. The certified region grows by about `2^(3(2σ_0−1)) ≈ 8` per three octaves of exact data.
+- In the clock-mesh formulation a coarse-mean budget `C(P_b) <= X²(a' + b' j)` with the proved fine allowance gives `E_X/X² <= 4(a' + b' j) + 4/27 + O(X^(−1/2))`; for example `(15, 4)` lies inside the certified `(64, 16)` row (minimum margin 3.85, referee).
+- **Credit.** The amplitude note (sections 3 and 6.1) already proposed logarithmic budgets; the new contributions here are the interval certification, the margins, the `N = 2^37` certificate and the calibration (C). clock_duality_oct15 independently proves a sufficient coarse budget `k²/100` by comparison with B3's logarithmic pointwise allowance and propagates a linear-log budget from paid annular means (`collatz_gram_slack_20261015b.md`, `collatz_annular_overlap_20261015c.md`).
 
 ## (C) Calibration (PROVED implication)
 
-Assume any budget in (B), or (7). Then:
-- `E(s)` continues holomorphically to `Re s > 1/2`;
-- `F` has a nonzero pole at `s_0`;
+Assume any budget in (B) at `N = 2^34` or `N = 2^37`, or (7). Then:
+- `F(s)` continues meromorphically to `Re s > 1/2` and has a nonzero pole at `s_0`;
 - `S(X) = Σ_(n<=X) t(n)` is not `O(X^β)` for any `β < Re s_0 = 0.99821`.
 
-Since `|S(X)| <= B(X) = #{n <= X : n reaches 1}`, this gives `limsup log B(X)/log X >= 0.99821`. The best unconditional lower bound for every large `X` is `B(X) >= X^0.84` (Krasikov–Lagarias 2003). So proving any of these budgets, even with the logarithmic slack, would beat the known population exponent along a sequence of scales. That calibrates the remaining coarse-mean obligation as a major open problem, not a technical gap.
+Since `|S(X)| <= B(X) = #{n <= X : n reaches 1}`, this gives `limsup log B(X)/log X >= 0.99821`. The best unconditional lower bound valid for every large `X` is `B(X) >= X^0.84` (Krasikov–Lagarias, Acta Arith. 109 (2003)). So proving any of these budgets, even the weakest certified one (about 1800 times the largest energy ever observed, beyond 2^37), would beat the known population exponent along a sequence of scales. The remaining coarse-mean obligation is a major open problem, not a technical gap.
 
 ## Tests
 
-- Census octaves `2^35..2^40`. The model predicts a constant-budget exceedance there with probability about 6% (dyadic windows) and a median maximum window energy of about 1.1.
-- Any proof strategy for the coarse means should be checked against the near-cancellation of the two-octave memory (`κ` up to `±0.97`) and against the persistent biases of HYP-9282.
+- The pre-registered 2^37..2^40 census (`collatz_census_2p40_preregistration_20261015.md`, P2): `E_X/X² <= 2` for `X = 2^37, 2^38, 2^39`.
+- Any proof strategy for the coarse means must fail for the halving null, whose window energies violate (9a) at most scales, so it must use the odd-step relation.

@@ -1,0 +1,170 @@
+{
+ "1": [
+  {
+   "sigma_min": 0.05,
+   "t_range": [
+    0.01,
+    50.0
+   ],
+   "zeros": 0,
+   "winding_coarse": 0.0,
+   "winding_fine": 0.0
+  },
+  {
+   "sigma_min": 0.05,
+   "t_range": [
+    50.0,
+    150.0
+   ],
+   "zeros": 0,
+   "winding_coarse": 0.0,
+   "winding_fine": 0.0
+  },
+  {
+   "sigma_min": 0.05,
+   "t_range": [
+    150.0,
+    300.0
+   ],
+   "zeros": 0,
+   "winding_coarse": 0.0,
+   "winding_fine": 0.0
+  },
+  {
+   "sigma_min": 0.5,
+   "t_range": [
+    0.01,
+    300.0
+   ],
+   "zeros": 0,
+   "winding_coarse": 0.0,
+   "winding_fine": 0.0
+  }
+ ],
+ "2": [
+  {
+   "sigma_min": 0.05,
+   "t_range": [
+    0.01,
+    50.0
+   ],
+   "zeros": 0,
+   "winding_coarse": 0.0,
+   "winding_fine": 0.0
+  },
+  {
+   "sigma_min": 0.05,
+   "t_range": [
+    50.0,
+    150.0
+   ],
+   "zeros": 0,
+   "winding_coarse": 0.0,
+   "winding_fine": 0.0
+  },
+  {
+   "sigma_min": 0.05,
+   "t_range": [
+    150.0,
+    300.0
+   ],
+   "zeros": 0,
+   "winding_coarse": 0.0,
+   "winding_fine": 0.0
+  },
+  {
+   "sigma_min": 0.5,
+   "t_range": [
+    0.01,
+    300.0
+   ],
+   "zeros": 0,
+   "winding_coarse": 0.0,
+   "winding_fine": 0.0
+  }
+ ],
+ "3": [
+  {
+   "sigma_min": 0.05,
+   "t_range": [
+    0.01,
+    50.0
+   ],
+   "zeros": 0,
+   "winding_coarse": 0.0,
+   "winding_fine": 0.0
+  },
+  {
+   "sigma_min": 0.05,
+   "t_range": [
+    50.0,
+    150.0
+   ],
+   "zeros": 0,
+   "winding_coarse": 0.0,
+   "winding_fine": 0.0
+  },
+  {
+   "sigma_min": 0.05,
+   "t_range": [
+    150.0,
+    300.0
+   ],
+   "zeros": 0,
+   "winding_coarse": 0.0,
+   "winding_fine": 0.0
+  },
+  {
+   "sigma_min": 0.5,
+   "t_range": [
+    0.01,
+    300.0
+   ],
+   "zeros": 0,
+   "winding_coarse": 0.0,
+   "winding_fine": 0.0
+  }
+ ],
+ "4": [
+  {
+   "sigma_min": 0.05,
+   "t_range": [
+    0.01,
+    50.0
+   ],
+   "zeros": 0,
+   "winding_coarse": 0.0,
+   "winding_fine": 0.0
+  },
+  {
+   "sigma_min": 0.05,
+   "t_range": [
+    50.0,
+    150.0
+   ],
+   "zeros": 0,
+   "winding_coarse": 0.0,
+   "winding_fine": 0.0
+  },
+  {
+   "sigma_min": 0.05,
+   "t_range": [
+    150.0,
+    300.0
+   ],
+   "zeros": 0,
+   "winding_coarse": 0.0,
+   "winding_fine": 0.0
+  },
+  {
+   "sigma_min": 0.5,
+   "t_range": [
+    0.01,
+    300.0
+   ],
+   "zeros": 0,
+   "winding_coarse": 0.0,
+   "winding_fine": 0.0
+  }
+ ]
+}

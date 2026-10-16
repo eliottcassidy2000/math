@@ -1,11 +1,11 @@
 # Special primes, curling numbers and genus zero: the owner's list read through the repository's objects
 
-2026-10-15, session opus-2026-10-15-S37. Companion to [the energy-budget note](collatz_octave_memory_bias_energy_budgets_20261015.md). Pre-audit draft.
+2026-10-15, session opus-2026-10-15-S37. Companion to [the energy-budget note](collatz_octave_memory_bias_energy_budgets_20261015.md). Audited by the independent S37 referee (`04-computation/experiments/s37_audit_20261015/REPORT.md`, scripts `a7_special_primes.py`, `a7b_orbit40487.py`, `a8_curling_check.py`); its corrections (I12) are applied below.
 
 **Status.**
 - **PROVED, elementary:**
   - non-generous primes are exactly the primes whose least primitive root is a Wieferich base, with the corresponding orbit explosion of circulant tournaments;
-  - Wagstaff numbers are the first odd ancestors of 1 under `3x − 1`;
+  - the first odd ancestors of 1 under `3x − 1` are the numbers `(2^m + 1)/3` with `m` odd, and the Wagstaff numbers are the subfamily with `m` prime;
   - Woodall and Cullen numbers shadow the 2-adic points −1 and 1;
   - `2^y + y²` prime forces `y = 1` or `y ≡ 3 (mod 6)`;
   - the Paley half-imbalance reading of supersingularity for `p ≡ 3 (mod 4)` (a reformulation of classical formulas).
@@ -40,12 +40,13 @@
 ## 2. Wagstaff, Woodall, Cullen: first ancestors and 2-adic shadows
 
 - **Wagstaff (PROVED).** An odd `n` has `3n − 1 = 2^m` iff `m` is odd and `n = (2^m + 1)/3`.
-  - So Wagstaff numbers are exactly the first odd ancestors of 1 under the `3x − 1` map (`(3n − 1)/2 = 2^(m−1) → … → 1`), just as `(4^k − 1)/3` are under `3x + 1`.
+  - So the first odd ancestors of 1 under the `3x − 1` map (`(3n − 1)/2 = 2^(m−1) → … → 1`) are exactly the numbers `(2^m + 1)/3` with `m` odd, just as `(4^k − 1)/3` are under `3x + 1`.
+  - The Wagstaff numbers `(2^p + 1)/3`, `p` prime, form a strict subfamily: `m = 1, 9, 15, 21, 25, 27` give the non-Wagstaff ancestors `1, 171, 10923, 699051, 11184811, 44739243` (correction by the S37 referee; the draft said "exactly").
   - Wagstaff primes `(2^p + 1)/3` for prime `p < 1300`: `p = 3, 5, 7, 11, 13, 17, 19, 23, 31, 43, 61, 79, 101, 127, 167, 191, 199, 313, 347, 701` (probable-prime tests).
   - The "new Mersenne conjecture" of Bateman–Selfridge–Wagstaff links them to Mersenne primes (CITED).
   - Repository context: the `3x − 1` versus `3x + 1` lanes of S32 and S36.
-- **Woodall and Cullen (PROVED; checked `2 <= n <= 60`).** Under `T(x) = x/2, (3x+1)/2`:
-  - `W_n = n·2^n − 1` makes `n` consecutive odd steps and lands at `n·3^n − 1`. It follows the itinerary of the 2-adic fixed point −1 of `x ↦ (3x+1)/2`, like the Mersenne numbers `2^n − 1`.
+- **Woodall and Cullen (PROVED; checked `2 <= n <= 80` by the referee).** Under `T(x) = x/2, (3x+1)/2`:
+  - `W_n = n·2^n − 1` begins with exactly `v_2(W_n + 1) = n + v_2(n)` consecutive odd steps (the draft said `n`), and after `n` of them it sits at `n·3^n − 1`. It follows the itinerary of the 2-adic fixed point −1 of `x ↦ (3x+1)/2`, like the Mersenne numbers `2^n − 1`.
   - `C_n = n·2^n + 1` follows the trivial-cycle word `(OE)^j` through `3^j n 2^(n−2j) + 1` for `2j <= n − 1`. That is the 2-adic shadow of the fixed point 1 of `x ↦ (3x+1)/4`.
   - So Woodall and Cullen numbers are the simplest "shadow" families of S6's shadow theorem, sitting over the two simplest 2-adic cycle points.
 
@@ -119,15 +120,16 @@ So the field of rational functions on the Riemann sphere is where the dual side 
 **Bridges to the repository (ANALOGY; each states what matches and what does not).**
 1. **Hecke-type relations.** The exact class-sum recursion `C(A; N) = −C(A/2; ⌊N/2⌋) − C((3A+1)/2; 3⌈N/2⌉)` (THM-4658) is a correspondence between the 2-adic and 3-adic "places" acting on residue-class functions. Haar measure is an eigen-distribution precisely at the zeros of `D(s)`, so `D` plays the role of a Hecke polynomial.
    - *What does not match:* there is no group, no automorphic side and no dual group.
-2. **Critical lines.** The 3-adic transfer operator is balanced in `L²(Z_3)` exactly on `Re s = 1/2` and `Re s = 1` (THM-4658, statement 5). That is formally like the unitarity line of tempered spectra (Ramanujan bounds), where the observed square-root biases sit (HYP-9282).
-   - *What does not match:* no spectral theorem or Hilbert-space unitarity is proved.
+2. **Critical lines.** The 3-adic transfer operator is balanced in `L²(Z_3)` exactly on `Re s = 1/2` and `Re s = 1` (THM-4658, statement 5). That is formally like the unitarity line of tempered spectra (Ramanujan bounds). The square-root residue biases proposed in HYP-9282 did not survive their out-of-sample test, so nothing is known to sit on that line.
+   - *What does not match:* no spectral theorem or Hilbert-space unitarity is proved; the operator norms on `L²(Z_3)` are about 1.35-1.40, not 1 (S37 referee).
 3. **Rational functions.**
    - S29's rational approximants of the Collatz transfer law are elements of `C(w)`.
    - The Q covariance update is a Möbius map, an element of `PGL_2 = Aut(C(w))`.
    - The supersingular genus-0 curves of section 4 have rational function fields.
 
    These are three distinct appearances of `C(z)`, not one structure.
-4. **Electric–magnetic exchange.** The repository's mirror pairs, such as `3x + 1 ↔ 3x − 1` and tournament reversal `T ↔ T^R` (HYP-9280's in- and out-degree duality), are involutive dualities. S-duality is an `SL(2, Z)` duality with a fixed coupling. Only the involutive shape matches (ANALOGY, weak).
+   - *Added after the out-of-sample census (same session).* The parity sum `S(N)` is fitted to 2% three octaves ahead by an explicit formula over the zeros of `D(s) = 1 + 2^(−s) + (3/2)^s/3` (HYP-9285), the analogue of the Riemann–Weil explicit formula with `D` in the role of the zeta function and `H` as the remainder. Along a convergent `p/q` of `log_2 3`, `D` becomes the Laurent polynomial `1 + z^q + z^(q−p)/3` in `z = 2^(−s/q)`, valid for `|Im s| ≪ 1/|log_2 3 − p/q|`. The modal expansion is then a limit of finite, rational-function-field-like explicit formulas, which is the S29 rational-approximant picture (HYP-9260) read on the zeros instead of the poles (ANALOGY).
+4. **Electric–magnetic exchange.** The repository's mirror pairs, such as `3x + 1 ↔ 3x − 1` and tournament reversal `T ↔ T^R` (HYP-9280's in- and out-degree duality), are involutive dualities. S-duality acts on the complexified coupling `τ` through `SL(2, Z)`: `S: τ ↦ −1/τ` exchanges electric and magnetic charges (and `G` with `G^∨`), and `S²` is charge conjugation. Only the involutive exchange shape matches (ANALOGY, weak).
 
 ## 8. Reproduction
 

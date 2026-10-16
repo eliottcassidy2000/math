@@ -1,6 +1,6 @@
 ---
 id: THM-4658
-title: "Two-octave memory and 4-adic energy descent for the Collatz mod-3 discrepancy: H(4N) = H(N) + H_(2,2)(3N) - H_(2,8)(6N) exactly, so E_(4X) = 4E_X + 8C_X + 4D_X + R_X with |R_X| <= 24 sqrt(X E_(4X)) + 48X and sqrt(E_(4X)) <= 2 sqrt(E_X) + 2 sqrt(D_X) + 4 sqrt(3X); the class-sum recursion C(A;N) = -C(A/2; floor(N/2)) - C((3A+1)/2; 3 ceil(N/2)) makes Haar measure an eigen-distribution of a 3-adic transfer operator exactly at the zeros of D, puts power-law excess main terms under a rank-one-modified fixed-point equation, and gives every halving eigenfunction (Dirichlet characters mod 3^q) an exact one-octave inheritance C_psi(N) = -psi(2) C_psi(floor(N/2)) + O_psi(N); the two operator branches have squared L^2(Z_3)-norms summing to 4^(-sigma)(1 + 3^(2 sigma - 1)), equal to 1 exactly at Re s = 1/2 and Re s = 1"
+title: "Two-octave memory and 4-adic energy descent for the Collatz mod-3 discrepancy: H(4N) = H(N) + H_(2,2)(3N) - H_(2,8)(6N) exactly, so E_(4X) = 4E_X + 8C_X + 4D_X + R_X with |R_X| <= 24 sqrt(X E_(4X)) + 48X and sqrt(E_(4X)) <= 2 sqrt(E_X) + 2 sqrt(D_X) + 4 sqrt(3X); the class-sum recursion C(A;N) = -C(A/2; floor(N/2)) - C((3A+1)/2; 3 ceil(N/2)) makes Haar measure an eigen-distribution of a 3-adic transfer operator exactly at the zeros of D, puts power-law excess main terms under a rank-one-modified fixed-point equation, gives every halving eigenfunction (Dirichlet characters mod 3^q) an exact one-octave inheritance C_psi(N) = -psi(2) C_psi(floor(N/2)) + O_psi(N), and on densities of any finite 3-adic depth has spectrum {1 - D(s)} together with -2^(-s) times roots of unity (no finite-depth excess mode off Re s = 0); the two operator branches have squared L^2(Z_3)-norms summing to 4^(-sigma)(1 + 3^(2 sigma - 1)), equal to 1 exactly at Re s = 1/2 and Re s = 1"
 status: >
   PROVED (elementary consequences of the exact refinement identity (2) of collatz_wavelet_energy_20261013d.md, here in
   measure form). AUDITED 2026-10-15 (independent S37 referee, 04-computation/experiments/s37_audit_20261015/REPORT.md;
@@ -15,6 +15,7 @@ verification:
   - 04-computation/experiments/collatz_octave_memory_analysis_20261015.py (output collatz_octave_memory_analysis_20261015.json/.out)
   - 04-computation/experiments/collatz_twisted_split_memory_20261015.py (statement 6 for the twisted splits D_j; output collatz_twisted_split_memory_20261015.json)
   - 04-computation/experiments/s37_audit_20261015/a1_thm4658_identities.py (independent referee checks of statements 1-5)
+  - 04-computation/experiments/collatz_excess_operator_resonance_scan_20261015.py (numerical control of statement 7, Q <= 4)
 note: 05-knowledge/results/collatz_octave_memory_bias_energy_budgets_20261015.md
 related: [HYP-9282, HYP-9283, THM-4629, THM-4630, THM-4581]
 ---
@@ -70,6 +71,15 @@ related: [HYP-9282, HYP-9283, THM-4629, THM-4630, THM-4581]
    `C_φ(N) = −λ C_φ(⌊N/2⌋) + O_φ(N)`,  `O_φ(N) = Σ_(n<=N, n odd) φ(n) t(n) = −Σ_(m <= 3⌈N/2⌉, m ≡ 2 (3)) φ((2m−1)/3) t(m)`.
 
    In particular the twisted splits `D_j = C_(φ_j)` have positive one-octave memory, `D_j(N) = D_j(⌊N/2⌋) + O_j(N)`, while Haar-type sums (`λ = 1`, e.g. `S` and the untwisted multiples of `3^j`) alternate. Since `2` generates `(Z/3^q)^×`, the eigenfunctions of `n ↦ 2n` on the units modulo `3^q` are exactly the multiples of Dirichlet characters, and `λ = −1` occurs only for the character of order 2.
+7. **Finite-depth spectrum: no finite-depth excess modes off the imaginary axis.** Fix `Q >= 1` and identify densities constant on the residue classes modulo `3^Q` with functions `f` on `Z/3^Q`. On them `P_ρ` (density form, `β = f dHaar`) acts by
+
+   `(P_ρ f)(a) = −2^(−ρ) f(2^(−1)a) − (1/3)(3/2)^ρ f(2^(−1)(3a+1))`,
+
+   and `P̃_ρ = P_ρ + (3/2)^ρ ⟨f, 1_(2+3Z)⟩` (with `⟨f, g⟩ = 3^(−Q) Σ_a f(a) g(a)`) preserves `Σ_a f(a) = 0`. Then:
+   - the spectrum of `P_ρ` on these functions is `{1 − D(ρ)} ∪ {−2^(−ρ) ζ : ζ^(2·3^k) = 1, 0 <= k <= Q − 1}`;
+   - the spectrum of `P̃_ρ` on the mean-zero ones is `{−2^(−ρ) ζ : ζ^(2·3^k) = 1, 0 <= k <= Q − 1}`.
+
+   So the finite-depth transfer operator has eigenvalue 1 off the imaginary axis exactly at the zeros of `D`, and the excess operator never does: `P̃_ρ f = f` with `Σ f = 0`, `f ≠ 0`, forces `Re ρ = 0`. Consequently a power-law excess main term `β(A) N^ρ` as in 4(b) with `Re ρ ≠ 0` cannot have a density constant on the classes of any fixed modulus `3^Q`: its 3-adic Fourier transform must reach arbitrarily fine frequencies.
 
 ## Proof
 
@@ -97,12 +107,15 @@ related: [HYP-9282, HYP-9283, THM-4629, THM-4630, THM-4581]
 
 **6.** The even sources `n = 2m <= N` give `φ(2m) t(2m) = −λ φ(m) t(m)` with `m <= ⌊N/2⌋`. The odd sources form `O_φ(N)`; the substitution `n = 2m − 1 ↦ j = 3m − 1` of statement 1 and `t(n) = −t(T(n))` give the second expression. For a character, `φ(2n) = ψ(2)φ(n)`. For `φ_j`, `3^j ∥ 2n` iff `3^j ∥ n`, and `χ(2n/3^j) = χ(2)χ(n/3^j) = −χ(n/3^j)`. A function on the cyclic group `(Z/3^q)^× = ⟨2⟩` with `φ(2n) = λφ(n)` is a character times a constant. ∎
 
+**7.** The density form follows from 4(b) as in statement 4: `β(A/2) = 3^(−q) f(a/2)` and `β((3A+1)/2) = 3^(−q−1) f((3a+1)/2)` for a level-`q >= Q` cylinder `A = a + 3^q Z_3`. Expand `f = Σ_m f̂(m) e_m`, `e_m(a) = exp(2πi ma/3^Q)`. Then `f(2^(−1)·)` has coefficient `f̂(2m)` at `e_m`, and `f(2^(−1)(3·+1)) = Σ_k f̂(k) e_k(2^(−1)) e_(3·2^(−1) k)`, whose coefficient at `e_m` collects the `k` with `3·2^(−1)k ≡ m`, all of which have `v_3(k) = v_3(m) − 1` (none if `v_3(m) = 0`); the rank-one term only touches `e_0`. Order the frequencies by `v_3(m) = 0, 1, …, Q − 1` and put `m = 0` last. In this order both operators are block lower triangular. The diagonal block on `{v_3(m) = j}` is `f̂(m) ↦ −2^(−ρ) f̂(2m)`: `−2^(−ρ)` times the permutation `u ↦ 2u` of `(Z/3^(Q−j))^×`, a single cycle of length `2·3^(Q−j−1)` because `2` is a primitive root modulo every power of 3. Its eigenvalues are `−2^(−ρ)ζ` with `ζ^(2·3^(Q−j−1)) = 1`. The diagonal entry at `m = 0` is `−2^(−ρ) − (3/2)^ρ/3 = 1 − D(ρ)` for `P_ρ`; for `P̃_ρ` the frequency `0` is absent on mean-zero functions. Eigenvalue 1 of `−2^(−ρ)ζ` needs `|2^(−ρ)| = 1`. ∎
+
 ## Remarks
 
 - **Readings.**
   - Statement 2 is the "mean-current" transport: the octave mean of `H` at `4X` inherits the octave mean at `X` with weight 1/2 in `sqrt(N)`-normalized units, plus the level-2 increment. Since `Δ(N) = H(4N) − H(N)` by definition, the empirical "cancelled memory" (two-octave regression slope 0.006) says only that the two-octave autocorrelation of the normalized profile is near zero. The new content is that `Δ` is an exact level-2 expression; clock_duality_oct15 writes the same increment as the annular source row `Δ(N) = Σ_(N<n<=4N) w_n t(n)`.
   - Statement 3 is a source-preserving energy rule in the sense of the break-clock note: it keeps the integer clock `N ↦ 4N, 3N, 6N` exactly. It is the two-octave analogue of the one-octave energy rule (3) of the wavelet note (renewal_shapes_oct11).
   - Statement 5 is the variance recursion for independent white-sign branches: if the branch contributions were uncorrelated, `sqrt(N)` would be the self-consistent scale. It is not an operator-norm statement. The exact level-6 norms of `P*_ρ` are 1.398, 1.362, 1.352 at `ρ = 1/2, 3/4, 1` (about 1.34 on mean-zero functions; S37 referee, `a9_transfer_operator_norms.py`), so "critical line" is a heuristic label. The Mercator zeros sit just below `Re s = 1` (`s_0 ≈ 0.99821 + 240.248i`).
+  - Statement 7 explains the structure: in 3-adic Fourier coordinates the odd branch only moves information to coarser frequencies, so on any finite depth it is nilpotent relative to the halving permutation, and only the density mode (frequency 0) can resonate, at the zeros of `D`. The eigenvalue-1 points on `Re ρ = 0` (`Im ρ = (π + 2πr/(2·3^k))/ln 2`, e.g. 4.532, 9.065, 13.597 for `Q = 1`) are exactly those found by a numerical search, and an argument-principle scan finds no others in `[0.05, 1.5] × (0, 300]` for `Q <= 4` (`collatz_excess_operator_resonance_scan_20261015.py`). The infinite-depth operator is not covered: there the triangular induction has no finest level, and eigen-distributions with unbounded frequency depth are not excluded.
   - Statement 6 is the halving half of the recursion in character coordinates. Averaged over octaves, any exact relation `F(N) = a F(⌊N/2⌋) + G(N)` gives `(1 − a 2^(−1/2)) ⟨F/sqrt(N)⟩ = ⟨G/sqrt(N)⟩` up to end effects of relative size about one over the number of octaves, for every sequence whatsoever. So the ratio `⟨D_j⟩/⟨O_j⟩ ≈ 2 + sqrt(2)` (measured 3.12, 3.48, 3.36 for `j = 0, 1, 2`) and the octave-averaged fixed-point "consistency" of statement 4(b) (residuals 6-12% of the bias size, below their standard errors, levels 1-4) are code checks, not evidence of main terms. The same inheritance holds verbatim for random signs with `t(2m) = −t(m)` (the halving null of the S37 note). This is why channel octave means carry strong octave-to-octave memory (pooled lag-one correlation about 0.65 at every level).
 - **What it does not give.**
   - Correction (clock_duality_oct15, 2026-10-15): statement 4(a)'s pre-audit scalar-to-Haar inference omitted `H(N)=o(N^σ)`. The amended implication retains that assumption; the Haar eigenvalue computation and statement 4(b) remain unchanged. The correction mechanism is recorded in `01-canon/MISTAKES.md`.
