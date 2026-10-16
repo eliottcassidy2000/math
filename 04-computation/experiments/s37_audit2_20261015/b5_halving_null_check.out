@@ -1,0 +1,32 @@
+(A) session JSON: 12 null replicates; insample 14..32, out [34, 35, 36]
+  naive |t|>5 / >8         Collatz 75 / 20 | null 23-33.5-49 / 3-6-11
+  max naive |t|            Collatz 18.71 | null 8.97-11.5-32.1
+  one sign in 19 octaves   Collatz 27 | null 5-8-15
+  top5 signs kept of 15    Collatz 7 | null 7-10-15
+  top5 passes all          Collatz False | null 0
+  all-channel slope        Collatz 0.203 | null 0.0261-0.231-0.464
+  lag-1 acf by level       Collatz [0.634, 0.655, 0.656, 0.649, 0.65] | null 0.447..0.837
+  profile sd               Collatz 0.273 | null 0.631-1.27-1.95
+  profile acf 1 oct        Collatz 0.126 | null 0.651-0.838-0.915
+  window mean in           Collatz 0.508 | null 1.54-7.13-14.4
+  window mean out          Collatz 0.072 | null 1.82-7.12-22.9
+  window max in            Collatz 1.850 | null 5.49-30.1-42.7
+  window max out           Collatz 0.117 | null 3.02-12.8-29.2
+  level energies 1..5 in sample (14..32): Collatz 0.276, 0.861, 1.090, 0.954, 0.978 | null medians 1.616, 1.147, 1.022, 1.000, 0.976 | null ranges 0.40-3.52, 0.44-2.24, 0.67-1.33, 0.88-1.11, 0.84-1.11
+  out/in (34..36 over 14..32) by level: Collatz 0.178, 0.180, 0.199, 0.459, 0.646 | null min 0.416, 0.234, 0.524, 0.775, 0.784 | Collatz below every replicate: [True, True, True, True, True]
+  late/early (30..36 over 14..29): Collatz 0.164, 0.259, 0.342, 0.479, 0.582 | null min 0.263, 0.221, 0.681, 0.767, 0.786 | Collatz below every replicate: [True, False, True, True, True]
+  ratio null/Collatz window mean, in sample: 3.0-14.1-28.4; out of sample: 25.3-98.9-317.5
+  replicates with in-sample window mean > 2: 11 of 12; out-of-sample window means sorted: 1.82, 2.57, 2.85, 3.37, 4.58, 6.78, 7.46, 7.89, 8.24, 8.99, 17.38, 22.86
+  Collatz level energies octaves 14-19: 0.34, 1.80, 1.23, 0.99, 1.03
+  Collatz level energies octaves 20-25: 0.35, 0.38, 0.97, 1.11, 1.17
+  Collatz level energies octaves 26-29: 0.21, 0.56, 1.43, 0.98, 0.90
+  Collatz level energies octaves 30-33: 0.05, 0.32, 0.54, 0.54, 0.59
+  Collatz level energies octaves 34-36: 0.05, 0.16, 0.22, 0.44, 0.63
+(B) session splitmix64, seed 7919, odd m < 2^25: mean s +0.00000 (sd 1/sqrt(M) = 0.00024); corr(s(m), s(m+2)) +0.00005; corr(s(m), t((3m+1)/2)) -0.00028; violations of t(2m) = -t(m), t(4m) = t(m): 0
+(B) audit mixer, seed 7919, odd m < 2^25: mean s -0.00021 (sd 1/sqrt(M) = 0.00024); corr(s(m), s(m+2)) +0.00010; corr(s(m), t((3m+1)/2)) -0.00005; violations of t(2m) = -t(m), t(4m) = t(m): 0
+(C) octaves 14..29 (windows with start in [2^14, 2^29]): Collatz: naive |t|>5 (16 octaves) 74, profile sd 0.296, acf(1 oct) 0.086, window mean 0.574, max 1.850, level energies 0.32, 0.96, 1.18, 1.03, 1.05
+  session null seed 7919 re-implemented (9 s): per-octave level energies 14..29 max |audit - session| = 0.00e+00; window mean 6.404, sd 1.207, acf 0.863
+  audit null seed 11: naive |t|>5 33, profile sd 0.530, acf 0.449, window mean 4.147 (x7.2 Collatz), max 8.269, level energies 1.06, 0.77, 0.59, 1.05, 1.05
+  audit null seed 22: naive |t|>5 24, profile sd 0.784, acf 0.466, window mean 3.748 (x6.5 Collatz), max 14.098, level energies 0.79, 1.03, 1.32, 0.77, 1.02
+  audit null seed 33: naive |t|>5 32, profile sd 0.562, acf 0.352, window mean 15.258 (x26.6 Collatz), max 35.196, level energies 3.42, 1.09, 0.92, 1.09, 0.92
+  audit null seed 44: naive |t|>5 52, profile sd 1.239, acf 0.796, window mean 4.676 (x8.1 Collatz), max 26.345, level energies 1.02, 1.69, 1.10, 0.91, 1.12

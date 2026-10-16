@@ -1,0 +1,12 @@
+grid: 1728 points; identical to an independent construction: True
+H at block starts consistent with class prefix sums: True
+grid comparison with the session census (all 1728 points): class sums mod 243 identical True (rows differing: 0); H identical True; prefix sums of H identical True; of H^2 identical True
+S(2^34) = 24953018, H(2^34) = 26869
+exact octave sums of H and H^2, k = 20..36: mismatches with the session JSON: []
+block moments: 1048576 rows; identical to the session moments file: True (rows differing: 0)
+S(2^37) = -152262364 (session -152262364), H(2^37) = -67763 (session -67763); 2^37 mod 3 = 2
+exact dyadic energies e_X = E_X/X^2 and octave means m_X (k = 0..36):
+  0:1.0000/-1.000  1:3.2500/-1.768  2:0.9375/-0.875  3:1.0781/+0.398  4:0.1836/-0.172  5:0.1572/-0.116  6:0.1570/+0.217  7:0.2020/+0.398  8:0.3202/+0.136  9:0.3503/+0.322  10:0.1366/-0.283  11:0.1082/+0.152  12:0.1947/-0.128  13:0.4001/-0.583  14:0.6414/+0.470  15:0.3077/+0.455  16:0.1077/+0.225  17:0.3881/+0.264  18:0.2739/+0.471  19:0.3743/+0.584  20:0.7330/+0.837  21:0.5601/+0.725  22:0.3653/+0.579  23:0.2679/+0.470  24:1.7688/+1.288  25:0.7350/+0.833  26:1.0840/+0.991  27:0.8351/+0.873  28:0.1726/-0.167  29:0.3443/-0.013  30:0.2564/+0.403  31:0.2740/+0.413  32:0.3531/+0.548  33:0.0954/+0.143  34:0.0604/+0.145  35:0.0795/+0.191  36:0.0366/+0.025
+  windows with e_X > 2: [(1, 3.25)]; max over 10 <= k <= 36: 1.768761 at k = 24; max over k = 33..36: 0.0954
+  octave sums from the grid prefix agree with block sums for k = 20..35: True
+window energies for starts in (2^33, 2^36]: n = 191, mean 0.0720, max 0.1175; in sample (2^14 <= start, end <= 2^34): mean 0.5076, max 1.8505

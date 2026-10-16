@@ -6,9 +6,9 @@ collatz_pole_certificate_20261013c.py, Theorem B3 of collatz_amplitude_boundary_
 through N, the same root disk, quadrature and R-tail; the boundary term t(N) N^(-s) carries the sign t(N) = (-1)^LOGN
 (the N = 2^34 script hard-codes t(N) = +1); the energy hypothesis is needed only for dyadic X >= N.  With exact data
 through 2^37 (collatz_boundary_moments_2p37_20261015.py) the hypothesis is weakened from X >= 2^34 to X >= 2^37.
-Two certificates that are both valid must give intersecting intervals for the same residue: since the exact census
-satisfies E_X <= 2X^2 on every dyadic window in [2^34, 2^37), disjoint intervals at N = 2^34 and N = 2^37 under (2, 0)
-would refute that budget beyond 2^37.
+Certificates at two census sizes give nested intervals, but this is implied by the exact data in between (Lemma B2:
+the finite numerators differ by that data, which the census energies bound far below the difference of the radii),
+so nesting checks the code, not the budget (second S37 referee, E1).
 
 Hypothesis family (UNPROVED), for every dyadic X = N 2^j, j >= 0:
     (9b)   integral_X^(2X) H(floor(x))^2 dx <= X^2 (a + b j).

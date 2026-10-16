@@ -1,0 +1,27 @@
+(a) density form from the measure form (brute-force image cylinders)
+  Q = 1: max |(P beta)(A) - 3^-q (P_Q f)(a)| over cylinders of levels Q..Q+2: 5.72e-17
+  Q = 2: max |(P beta)(A) - 3^-q (P_Q f)(a)| over cylinders of levels Q..Q+2: 2.86e-17
+  Q = 3: max |(P beta)(A) - 3^-q (P_Q f)(a)| over cylinders of levels Q..Q+2: 7.76e-18
+(b) spectra versus statement 7
+  Q = 1 (dim 3): max matched eigenvalue error full P 3.4e-16; P~ on mean-zero 4.7e-16; ||(I - Pi) P~ Pi|| 3.2e-16; char. poly (rel. log|det| / phase) 4.5e-16
+  Q = 2 (dim 9): max matched eigenvalue error full P 2.2e-15; P~ on mean-zero 1.4e-15; ||(I - Pi) P~ Pi|| 1.0e-15; char. poly (rel. log|det| / phase) 2.4e-15
+  Q = 3 (dim 27): max matched eigenvalue error full P 2.9e-15; P~ on mean-zero 9.5e-15; ||(I - Pi) P~ Pi|| 4.0e-15; char. poly (rel. log|det| / phase) 6.8e-15
+  Q = 4 (dim 81): max matched eigenvalue error full P 1.1e-14; P~ on mean-zero 1.4e-13; ||(I - Pi) P~ Pi|| 8.9e-15; char. poly (rel. log|det| / phase) 1.8e-14
+  Q = 5 (dim 243): max matched eigenvalue error full P 1.9e-13; P~ on mean-zero 5.7e-12; ||(I - Pi) P~ Pi|| 2.0e-14; char. poly (rel. log|det| / phase) 4.4e-14
+    exact characteristic polynomial check with mpmath (60 digits), Q <= 3:
+    Q = 1: max relative |det(zI - P) - (z - 1 + D) prod_k (z^(2 3^k) - (-2^-s)^(2 3^k))| = 2.61e-61
+    Q = 2: max relative |det(zI - P) - (z - 1 + D) prod_k (z^(2 3^k) - (-2^-s)^(2 3^k))| = 3.25e-61
+    Q = 3: max relative |det(zI - P) - (z - 1 + D) prod_k (z^(2 3^k) - (-2^-s)^(2 3^k))| = 5.15e-61
+(c) geometric multiplicities at the repeated eigenvalues (algebraic multiplicity Q each)
+  Q = 1: s=(0.7+3.1j): zeta=+1 geometric 1 (smallest sv 8.8e-17, next 1.2e+00) | s=(0.7+3.1j): zeta=-1 geometric 1 (smallest sv 3.4e-16, next 1.2e+00) | s=(1.2+0.4j): zeta=+1 geometric 1 (smallest sv 8.4e-17, next 8.7e-01) | s=(1.2+0.4j): zeta=-1 geometric 1 (smallest sv 1.4e-16, next 8.7e-01)
+  Q = 2: s=(0.7+3.1j): zeta=+1 geometric 2 (smallest sv 1.6e-16, next 4.4e-16) | s=(0.7+3.1j): zeta=-1 geometric 2 (smallest sv 2.9e-16, next 4.2e-16) | s=(1.2+0.4j): zeta=+1 geometric 2 (smallest sv 8.6e-17, next 2.6e-16) | s=(1.2+0.4j): zeta=-1 geometric 2 (smallest sv 1.5e-16, next 3.8e-16)
+  Q = 3: s=(0.7+3.1j): zeta=+1 geometric 3 (smallest sv 8.2e-17, next 7.7e-16) | s=(0.7+3.1j): zeta=-1 geometric 3 (smallest sv 4.4e-16, next 8.5e-16) | s=(1.2+0.4j): zeta=+1 geometric 3 (smallest sv 1.6e-16, next 6.6e-16) | s=(1.2+0.4j): zeta=-1 geometric 3 (smallest sv 2.8e-16, next 6.7e-16)
+  Q = 4: s=(0.7+3.1j): zeta=+1 geometric 4 (smallest sv 3.8e-16, next 1.1e-15) | s=(0.7+3.1j): zeta=-1 geometric 4 (smallest sv 4.3e-16, next 9.1e-16) | s=(1.2+0.4j): zeta=+1 geometric 4 (smallest sv 4.4e-16, next 7.2e-16) | s=(1.2+0.4j): zeta=-1 geometric 4 (smallest sv 1.2e-16, next 1.0e-15)
+  Q = 5: s=(0.7+3.1j): zeta=+1 geometric 5 (smallest sv 1.5e-16, next 2.1e-15) | s=(0.7+3.1j): zeta=-1 geometric 5 (smallest sv 4.0e-16, next 1.4e-15) | s=(1.2+0.4j): zeta=+1 geometric 5 (smallest sv 6.2e-16, next 1.5e-15) | s=(1.2+0.4j): zeta=-1 geometric 5 (smallest sv 3.4e-16, next 1.1e-15)
+(d) eigenvalue 1 at the Mercator zero; mean-zero invariance
+  D(s0) = 5.55e-17-1.67e-15j
+  Q = 1: |P 1 - 1| = 1.7e-15; |1^T P~ + 2^-s 1^T| = 0.0e+00; min |lambda - 1| over spec(P~|mean-zero) = 0.4996 (1 - 2^-Re s0 = 0.4994)
+  Q = 2: |P 1 - 1| = 1.7e-15; |1^T P~ + 2^-s 1^T| = 2.2e-16; min |lambda - 1| over spec(P~|mean-zero) = 0.4996 (1 - 2^-Re s0 = 0.4994)
+  Q = 3: |P 1 - 1| = 1.7e-15; |1^T P~ + 2^-s 1^T| = 2.2e-16; min |lambda - 1| over spec(P~|mean-zero) = 0.4996 (1 - 2^-Re s0 = 0.4994)
+  Q = 4: |P 1 - 1| = 1.7e-15; |1^T P~ + 2^-s 1^T| = 4.0e-15; min |lambda - 1| over spec(P~|mean-zero) = 0.4996 (1 - 2^-Re s0 = 0.4994)
+  Q = 5: |P 1 - 1| = 1.7e-15; |1^T P~ + 2^-s 1^T| = 4.3e-15; min |lambda - 1| over spec(P~|mean-zero) = 0.4995 (1 - 2^-Re s0 = 0.4994)

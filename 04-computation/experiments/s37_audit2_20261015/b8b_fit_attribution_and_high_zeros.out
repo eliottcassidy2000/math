@@ -1,0 +1,9 @@
+zeros with 0.65 < Re < 1: 28 below Im 3000, 16 in [3000, 4600)
+(1) holdout on the session grid (in-sample, test):
+  12 zeros                    : 0.1358, 0.0753
+  12 zeros + 0.6939+22.25i    : 0.0262, 0.0237
+  28 zeros                    : 0.0194, 0.0205
+  28 zeros - 0.6939+22.25i    : 0.1314, 0.0832
+(2) fine grid (1024/octave) on [2^22, 2^31): fit [2^22, 2^29), test [2^29, 2^31) (in-sample, test)
+  28 zeros (Im < 3000)  : in-sample 0.0235, holdout 0.0222; full-range in-sample 0.0222
+  44 zeros (Im < 4600)  : in-sample 0.0104, holdout 0.0065; full-range in-sample 0.0066

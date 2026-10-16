@@ -1,0 +1,13 @@
+=== benchmark run: python b3_census_independent.py 32 33 (2^32 numbers): block pass 26.5 s
+=== run A: python b3_census_independent.py 0 36 b3_A.npz census_ext.npz
+table of 2^28 parities: 2.8 s
+self-check: 36767 values against exact Python trajectories, 0 mismatches
+block pass over blocks [0, 65536): 367.0 s; flagged n (orbit above 2^63 before 2^28): 74 in 70 blocks
+patched 70 blocks with 74 exact Python values; largest flagged n = 68583716079
+wrote C:/Users/Eliott/AppData/Local/Temp/claude/C--Users-Eliott-Documents-GitHub-ephrepos-math/a46eae61-4398-4ab0-8e04-bd90318942db/scratchpad/b3_A.npz; total 381.0 s
+=== run B: python b3_census_independent.py 36 37 b3_B.npz census_ext.npz
+table of 2^28 parities: 2.2 s
+self-check: 36767 values against exact Python trajectories, 0 mismatches
+block pass over blocks [65536, 131072): 327.8 s; flagged n (orbit above 2^63 before 2^28): 367 in 296 blocks
+patched 296 blocks with 367 exact Python values; largest flagged n = 137167432159
+wrote C:/Users/Eliott/AppData/Local/Temp/claude/C--Users-Eliott-Documents-GitHub-ephrepos-math/a46eae61-4398-4ab0-8e04-bd90318942db/scratchpad/b3_B.npz; total 341.0 s

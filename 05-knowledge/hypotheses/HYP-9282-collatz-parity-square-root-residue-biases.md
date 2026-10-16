@@ -5,10 +5,10 @@ status: >
   REFUTED (2026-10-15, same session). The pre-registered out-of-sample test failed: in the octaves 2^34..2^36 of the
   exact census extended to 2^37, three of the five pre-registered channels changed sign in all or most octaves and
   missed their +-0.6 bands (H_(3,18): +0.04, +0.12, +0.15 against -2.44; H_(3,9): +0.01, -0.35, -0.46 against
-  +2.03; H_(5,155): +0.45, +0.45, +0.23 against -1.42). The in-sample significance was an artefact of octave memory:
+  +2.03; H_(5,155): +0.45, +0.45, +0.23 against -1.42). The in-sample significance was inflated by octave memory:
   adjacent octave means are correlated (pooled lag-one correlation 0.63-0.66 at every level), and a matched null
   with random odd signs and the exact halving relation t(2m) = -t(m) reproduces the out-of-sample behaviour of the
-  Collatz channels. FINITE-EXACT data (class sums modulo 243 at 1,727 grid points through 2^37) are retained. The
+  Collatz channels (in sample Collatz still exceeds every null replicate on persistence, second referee I3). FINITE-EXACT data (class sums modulo 243 at 1,728 grid points through 2^37) are retained. The
   independent S37 referee found the same independence error (E2) and a false drift claim (E3).
 session: opus-2026-10-15-S37
 source: 05-knowledge/results/collatz_octave_memory_bias_energy_budgets_20261015.md
@@ -34,7 +34,7 @@ The octave means of `g_(q,r)` over 19 octaves (64 log-uniform samples each) gave
 
 ## What went wrong
 
-1. **Octave memory (E2).** The note justified independence of the 19 octave means by the one-octave point autocorrelation 0.06 of `H`'s profile. That is not the correlation of adjacent octave means (0.28-0.36 for `H`), and it says nothing about the other channels. Measured over 2^14..2^37, the pooled lag-one correlation of octave means is 0.63, 0.65, 0.66, 0.65, 0.65 at levels 1-5 (lag two about 0.30). THM-4658 statement 6 explains a large part: every halving eigen-combination inherits its value from the previous octave exactly. With this memory the naive t-values are inflated about 1.7-2.5 times; an AR(1) correction leaves 7-17 channels at `|t| > 5`. Only 242 of the 363 channels are free (sibling triples sum to zero).
+1. **Octave memory (E2).** The note justified independence of the 19 octave means by the one-octave point autocorrelation 0.06 of `H`'s profile. That is not the correlation of adjacent octave means (0.28-0.36 for `H`), and it says nothing about the other channels. Measured over 2^14..2^37, the pooled lag-one correlation of octave means is 0.63, 0.65, 0.66, 0.65, 0.65 at levels 1-5 (lag two about 0.30). THM-4658 statement 6 explains a large part: every halving eigen-combination inherits its value from the previous octave exactly. With this memory the naive t-values are inflated about 1.7-2.5 times; an AR(1) correction (ρ = 0.63-0.65) leaves 6-8 channels at `|t| > 5`, and a lag-1-to-3 inflation factor leaves 17. Only 242 of the 363 channels are free (sibling triples sum to zero).
 2. **The null was wrong.** "A zero-mean null would produce essentially no such channels" holds for independent octave means only. The matched *halving null* keeps the exact relation `t(2m) = −t(m)` and draws the odd signs at random (splitmix64 hash). At 2^37, with the same statistics on the same octaves, its 12 replicates give 23-49 (median 33) channels at naive `|t| > 5`, 3-11 (median 6) at `|t| > 8`, and 5-15 (median 8) channels of constant sign over 19 octaves; the largest naive `|t|` in a null replicate is 32.1. Collatz has 75, 20 and 27: more in-sample persistence than this null, i.e. longer memory, not a demonstrated main term.
 3. **Drift (E3).** "Drift at most about ±2.5% per octave" was false for 5 of the 14 table rows, all drifting toward zero (`H_(2,3)` +9.1%/octave, `H_(2,6)` −8.2%, `H_(1,1)` +7.6%, `H_(4,51)` +4.8%, `H_(3,16)` +4.6%).
 4. **Automatic consistency.** The averaged refinement `m_(1,r) ≈ −(m_(1,e(r)) + m_(2,o(r)))/sqrt(2)` and the level-by-level fixed-point check of statement 4(b) (residuals 6-12% of the bias size) hold for every sequence obeying the exact recursion, up to end effects (THM-4658 remark on statement 6). They checked code, not the hypothesis.

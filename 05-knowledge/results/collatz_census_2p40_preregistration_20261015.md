@@ -41,3 +41,10 @@ Any failure will be reported as such in the S37 note and the hypothesis files.
 - **P4 FAILED:** the mean is 0.359; the quiet stretch ended with a coarse-mean excursion at 2^38.
 - **P5 PASSED:** 0.50, 0.71, 0.71 for levels 3, 4, 5 (recovering: octave 39 gives 0.69, 0.81, 0.76).
 - **P6 PASSED:** octave means of `g` = −0.01, +0.50, +0.14.
+
+## Errata (second S37 referee; the criteria above are unchanged)
+
+- The single-zero holdout quoted in P1 is 0.217, not 0.19 (0.19 belongs to the five zeros with `Re > 0.96`); the same slip is in the docstring and the `test` string of the committed prediction script and JSON, which are left as committed. The 44-zero in-sample error was 0.0078, not 0.006.
+- "`Re ρ > 0.65`" means `0.65 < Re ρ < 1`: D also has zeros with `2 < Re ρ < 3`, which are not used.
+- P3's null range "4.6-22.9" came from early replicates; the final 12 give 1.82-22.86.
+- The census run that was going when this file was committed (first version) was stopped unread at about 20:23 for speed; the evaluated output comes from the revised script started at 20:25:46. The predictions depend only on data below 2^37.

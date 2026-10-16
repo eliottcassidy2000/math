@@ -1,0 +1,27 @@
+(i) Mercator zero
+  N = 2^34: residue before tail [0.0212 +/- 3.24e-5] + [0.1828 +/- 2.23e-5]j; |r| in [0.1840040999, 0.1840300594]
+    normalized intervals: (2, 0): [0.32171, 0.38833]; (4, 1): [0.29654, 0.4135]; (8, 2): [0.27234, 0.43771]; (16, 4): [0.2381, 0.47194]; (32, 8): [0.18969, 0.52036]; (64, 16): [0.12122, 0.58883]
+    margins: largest constant a = 227.5994, largest slope b (a = 2) = 144.5332, largest (4c, c): c = 36.895
+  N = 2^37: residue before tail [0.021212 +/- 6.58e-7] + [0.182752 +/- 6.58e-7]j; |r| in [0.1839782991, 0.1839787062]
+    normalized intervals: (2, 0): [0.34313, 0.36676]; (4, 1): [0.3342, 0.37569]; (8, 2): [0.32561, 0.38428]; (16, 4): [0.31346, 0.39643]; (32, 8): [0.29628, 0.41361]; (64, 16): [0.27199, 0.43791]
+    margins: largest constant a = 1806.855, largest slope b (a = 2) = 1195.09, largest (4c, c): c = 292.9002
+  (17 s)
+(ii) nested-interval test: is nesting automatic given the exact energies on [2^34, 2^37)?
+  |C(2^37) - C(2^34)| (numerators at s0) = 3.74712e-6; Cauchy-Schwarz bound with the exact energies e_34..36 = 0.00018712; same bound if every e_k were 2: 0.00107655
+  tail widths (numerator units, budget (2,0)): T(2^34) = 0.00166817, T(2^37) = 0.000591964, difference 0.0010762
+  nesting margin (T34 - T37) - bound: exact energies 0.000889084; with e_k = 2: -3.45059e-7 (the 2^34 tail counts the H(2^37) boundary term once, the bound twice)
+(iii) other zeros at N = 2^37, budget (2, 0): |r| intervals (fit values from the residue table for comparison)
+  rho = 0.9849425 + 720.740138 i: |r_N| = 0.0701076, tail radius 0.0249769; |r| in [0.045127, 0.095088], nonzero certified: True (4 s)
+  rho = 0.9497285 + 1572.55605 i: |r_N| = 0.203598, tail radius 0.125734; |r| in [0.077829, 0.32937], nonzero certified: True (4 s)
+  rho = 0.8634513 + 131.156217 i: |r_N| = 0.506365, tail radius 0.0892104; |r| in [0.41715, 0.59558], nonzero certified: True (4 s)
+  rho = 0.6939183 + 22.2531946 i: |r_N| = 2.5844, tail radius 1.43287; |r| in [1.1515, 4.0173], nonzero certified: True (4 s)
+  rho = 0.9215817 + 1092.08339 i: |r_N| = 0.165974, tail radius 0.173286; |r| in [-0.0073449, 0.33929], nonzero certified: False (4 s)
+  rho = 0.993166 + 2533.52537 i: |r_N| = 0.0370287, tail radius 0.0725148; |r| in [-0.035514, 0.10957], nonzero certified: False (3 s)
+(iv) sanity check at zeros with Re > 1 (F holomorphic there, residue 0):
+  rho = (2.3028846 + 23.603668j): |C_N(rho)| = 2.418e-21 <= unconditional tail 1.575e-15: True; conditional |r| interval [-5.027e-19, 5.49e-19] certifies nonzero: False
+  start ('1.2', '30.0') converged to (-0.35691392 + 31.641904j) (Re <= 1), skipped
+  start ('1.05', '250.0') converged to (-0.33884084 + 249.12618j) (Re <= 1), skipped
+
+real	0m44.808s
+user	0m0.000s
+sys	0m0.000s

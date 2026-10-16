@@ -1,0 +1,2 @@
+Lemma B2: max relative |lhs - rhs| over 12 random s and 480 random N <= 3000: 6.3e-30
+at rho = (0.6939182938 + 22.25319457j): max |C_N - (2/3)^rho[(F_N - F_L) + 2^-rho (F_N - F_J)]| = 6.71e-30

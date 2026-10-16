@@ -1,0 +1,25 @@
+census t(n), n <= 4194312: S(2^20) = -2428
+(1) statement 6: max over N <= 2^20 of |C(N) + lambda C(N/2) - O(N)| and |O(N) - second expression|
+  psi_0 mod 9: psi(2) = 1.0000+0.0000j; errors 0.0e+00, 0.0e+00
+  psi_1 mod 9: psi(2) = 0.5000+0.8660j; errors 6.9e-12, 0.0e+00
+  psi_3 mod 9: psi(2) = -1.0000+0.0000j; errors 2.1e-12, 0.0e+00
+  all 6 characters mod 9 checked
+  psi_0 mod 27: psi(2) = 1.0000+0.0000j; errors 0.0e+00, 0.0e+00
+  psi_1 mod 27: psi(2) = 0.9397+0.3420j; errors 9.3e-12, 0.0e+00
+  psi_9 mod 27: psi(2) = -1.0000+0.0000j; errors 2.5e-12, 0.0e+00
+  all 18 characters mod 27 checked
+  twisted split phi_0 (lambda = -1): errors 0.0e+00, 0.0e+00
+  untwisted [3^0 || n] (lambda = +1): errors 0.0e+00, 0.0e+00
+  twisted split phi_1 (lambda = -1): errors 0.0e+00, 0.0e+00
+  untwisted [3^1 || n] (lambda = +1): errors 0.0e+00, 0.0e+00
+  twisted split phi_2 (lambda = -1): errors 0.0e+00, 0.0e+00
+  untwisted [3^2 || n] (lambda = +1): errors 0.0e+00, 0.0e+00
+  negative control 1_(n = 1 mod 9): |C + C(N/2) - O| max 607, |C - C(N/2) - O| max 760 (second expression 0.0e+00)
+(2) octave-averaged ratio <D_j>/<O_j> (64 log-uniform points per octave, 2^10..2^20)
+  j = 0: <D_j> = -0.2645, <O_j> = -0.1017, ratio 2.600 (2 + sqrt 2 = 3.414)
+  j = 1: <D_j> = -0.8960, <O_j> = -0.2888, ratio 3.103 (2 + sqrt 2 = 3.414)
+  j = 2: <D_j> = +0.4215, <O_j> = +0.2072, ratio 2.035 (2 + sqrt 2 = 3.414)
+(3) remainder identity H(N) = -[S(N) + 3S(floor(2N/3)) + 3S(floor(N/3))]
+  Collatz: max |H(N) + S(N) + 3S(2N/3) + 3S(N/3)| over N < 2^22 = 0
+  halving null: identity fails at 4192460 of 4194303 N (max deviation 13056); it needs the odd-step relation t(2k-1) = -t(3k-1)
+  algebra 1 + 3(2/3)^r + 3(1/3)^r - 3(2/3)^r D(r): max 1.38e-39 at three test points

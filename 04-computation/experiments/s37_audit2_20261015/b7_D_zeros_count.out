@@ -1,0 +1,58 @@
+strip 0.5 < Re s < 1.0, 0 < Im s < 3000: 44 zeros (max distance of a winding number from an integer 1.4e-15; min |D| on the rectangle boundaries 2.590e-04)
+strip 0.65 < Re s < 1.0, 0 < Im s < 3000: 28 zeros (max distance of a winding number from an integer 1.2e-15; min |D| on the rectangle boundaries 2.590e-04)
+strip 0.85 < Re s < 1.0, 0 < Im s < 3000: 12 zeros (max distance of a winding number from an integer 7.2e-16; min |D| on the rectangle boundaries 1.290e-04)
+strip 1.0 < Re s < 3.01, 0 < Im s < 3000: 194 zeros (max distance of a winding number from an integer 1.8e-15; min |D| on the rectangle boundaries 2.590e-04)
+  zeros located by Newton in 0.5 < Re < 1.0: 44 (argument principle 44)
+  zeros located by Newton in 0.65 < Re < 1.0: 28 (argument principle 28)
+  zeros located by Newton in 0.85 < Re < 1.0: 12 (argument principle 12)
+  zeros located by Newton in 1.0 < Re < 3.01: 194 (argument principle 194)
+  per-rectangle mismatches between located zeros and winding numbers: 0
+zeros with 1/2 < Re < 1, 0 < Im < 3000 (Re, Im, cycles per octave):
+  0.998209 +   240.2478 i     26.504
+  0.993166 +  2533.5254 i    279.493
+  0.984942 +   720.7401 i     79.510
+  0.974825 +  2053.0365 i    226.486
+  0.962583 +  1201.2248 i    132.516
+  0.949729 +  1572.5561 i    173.481
+  0.935579 +  1681.7011 i    185.522
+  0.921582 +  1092.0834 i    120.476
+  0.906761 +  2162.1703 i    238.526
+  0.892475 +   611.6172 i     67.472
+  0.877609 +  2642.6337 i    291.530
+  0.863451 +   131.1562 i     14.469
+  0.849435 +  2904.9471 i    320.467
+  0.835004 +   349.3006 i     38.534
+  0.821360 +  2424.4920 i    267.465
+  0.807351 +   829.7541 i     91.537
+  0.794130 +  1944.0399 i    214.462
+  0.780572 +  1310.2049 i    144.539
+  0.767788 +  1463.5903 i    161.460
+  0.754682 +  1790.6533 i    197.541
+  0.742326 +   983.1429 i    108.458
+  0.729660 +  2271.0998 i    250.543
+  0.717716 +   502.6973 i     55.456
+  0.705470 +  2751.5446 i    303.544
+  0.693918 +    22.2532 i      2.455
+  0.682551 +  2796.0513 i    308.454
+  0.670890 +   458.1895 i     50.546
+  0.659883 +  2315.6092 i    255.453
+  0.648586 +   938.6310 i    103.548
+  0.637920 +  1835.1682 i    202.452
+  0.626967 +  1419.0715 i    156.549
+  0.616620 +  1354.7282 i    149.451
+  0.605991 +  1899.5110 i    209.550
+  0.595946 +   874.2892 i     96.450
+  0.585622 +  2379.9496 i    262.551
+  0.575862 +   393.8509 i     43.449
+  0.565827 +  2860.3875 i    315.552
+  0.556335 +    86.5866 i      9.552
+  0.546969 +  2687.2144 i    296.448
+  0.537335 +   567.0235 i     62.553
+  0.528217 +  2206.7779 i    243.447
+  0.518834 +  1047.4597 i    115.553
+  0.509951 +  1726.3419 i    190.446
+  0.500806 +  1527.8954 i    168.554
+zeros with Re > 1 and 0 < Im < 3000: 194; first few: 2.9386+7.953i, 2.3029+23.604i, 2.7690+38.388i, 2.9992+54.261i, 2.7022+70.113i, 2.4363+84.832i; max Re 3.0000
+prediction JSON: 28 zeros; not among the located zeros: 0; located zeros with Re > 0.65 missing from the JSON: 0
+numbers of zeros with Re > 0.85 / 0.65 / 0.5 (and < 1): 12 / 28 / 44
+min |D'| over the located zeros: 0.1317; a common zero of D and D' would need 2^-s = -1/(1 + ln2/ln1.5) and (3/2)^s/3 = (ln2/ln1.5) 2^-s, i.e. Re s = 1.4380 and Re s = 1.5736: incompatible

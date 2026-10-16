@@ -1,0 +1,50 @@
+(1) zeros with 1/2 < Re < 1, 0 < Im < 3000: 44
+(2) holdout: fit [2^22, 2^34), test [2^34, 2^37) on the session grid
+  s0 only    ( 1 zeros, 2 real parameters): in-sample rel rms 0.2916; holdout rel rms 0.2174
+  Re > 0.85  (12 zeros, 24 real parameters): in-sample rel rms 0.1358; holdout rel rms 0.0753
+  Re > 0.65  (28 zeros, 56 real parameters): in-sample rel rms 0.0194; holdout rel rms 0.0205
+  Re > 0.5   (44 zeros, 88 real parameters): in-sample rel rms 0.0078; holdout rel rms 0.0186
+  Re > 0.65, fit from 2^20: holdout rel rms 0.0205
+  Re > 0.65, fit from 2^24: holdout rel rms 0.0205
+  Re > 0.65, fit from 2^26: holdout rel rms 0.0205
+(3) 28-zero fit on [2^22, 2^37) versus the session prediction JSON and residue table
+  in-sample rel rms 0.0191 (session 0.0191); max relative difference of coefficients from the session JSON 7.3e-11
+(4) aliasing on the 64-per-octave grid (Nyquist 32 cycles/octave = Im 290.1)
+  25 of the 28 model zeros lie above the grid Nyquist frequency; folded frequencies (cycles/octave):
+  2.45->2.45, 14.47->14.47, 26.50->26.50, 38.53->25.47, 50.55->13.45, 55.46->8.54, 67.47->3.47, 79.51->15.51, 91.54->27.54, 108.46->19.54, 120.48->7.52, 132.52->4.52, 144.54->16.54, 161.46->30.54, 173.48->18.52, 185.52->6.48, 197.54->5.54, 214.46->22.46, 226.49->29.51, 238.53->17.47, 250.54->5.46, 255.45->0.55, 267.46->11.46, 279.49->23.49, 291.53->28.47, 303.54->16.46, 308.45->11.55, 320.47->0.47
+(5) fine-grid control on [2^22, 2^31)
+  census to 2^31 (3 s); S on the session grid below 2^31 identical to the 2^37 census: True
+  28-zero fit in-sample rel rms: coarse grid 0.0202, fine grid 0.0222; coarse-grid model evaluated on the fine grid: 0.0272
+  |r_fit| per zero: [2^22,2^37) coarse (session) | [2^22,2^31) coarse | [2^22,2^31) fine | conditional interval (2,0)
+    0.69392+   22.253i: 2.5568 | 2.5886 | 2.5837 | [1.1273, 4.0438] certified
+    0.86345+  131.156i: 0.5094 | 0.5085 | 0.5068 | [0.4168, 0.5959] certified
+    0.99821+  240.248i: 0.1841 | 0.1841 | 0.1841 | [0.1778, 0.1901] certified
+    0.83500+  349.301i (aliased): 0.1853 | 0.1793 | 0.1805 | [-0.3151, 0.6724]
+    0.67089+  458.190i (aliased): 2.9180 | 0.9127 | 0.7220 | [-56.6648, 58.1755]
+    0.71772+  502.697i (aliased): 1.8630 | 0.6149 | 0.7215 | [-15.8178, 17.1922]
+    0.89247+  611.617i (aliased): 0.1375 | 0.1376 | 0.1371 | [-0.0640, 0.3361]
+    0.98494+  720.740i (aliased): 0.0649 | 0.0661 | 0.0657 | [0.0451, 0.0951] certified
+    0.80735+  829.754i (aliased): 0.1056 | 0.1588 | 0.1646 | [-2.2213, 2.5978]
+    0.74233+  983.143i (aliased): 1.2117 | 0.6900 | 0.4255 | [-15.9046, 16.7492]
+    0.92158+ 1092.083i (aliased): 0.1853 | 0.1740 | 0.1763 | [-0.0074, 0.3394]
+    0.96258+ 1201.225i (aliased): 0.0404 | 0.0394 | 0.0415 | [-0.0303, 0.1109]
+    0.78057+ 1310.205i (aliased): 0.6368 | 0.1214 | 0.2641 | [-7.4223, 8.0409]
+    0.76779+ 1463.590i (aliased): 0.4580 | 0.4886 | 0.4365 | [-11.7739, 12.5634]
+    0.94973+ 1572.556i (aliased): 0.2056 | 0.2004 | 0.2052 | [0.0778, 0.3294] certified
+    0.93558+ 1681.701i (aliased): 0.0375 | 0.0347 | 0.0369 | [-0.1622, 0.2169]
+    0.75468+ 1790.653i (aliased): 1.0331 | 0.3793 | 0.1645 | [-21.1950, 21.2451]
+    0.79413+ 1944.040i (aliased): 0.6275 | 0.4515 | 0.2870 | [-7.7580, 8.2387]
+    0.97482+ 2053.037i (aliased): 0.0659 | 0.0620 | 0.0628 | [-0.0307, 0.1499]
+    0.90676+ 2162.170i (aliased): 0.0315 | 0.0424 | 0.0544 | [-0.4524, 0.5376]
+    0.72966+ 2271.100i (aliased): 2.1856 | 0.4842 | 0.3375 | [-53.3248, 53.5803]
+    0.65988+ 2315.609i (aliased): 57.3256 | 16.8878 | 0.7193 | [-400.5206, 402.6073]
+    0.82136+ 2424.492i (aliased): 0.3301 | 0.2186 | 0.2572 | [-4.6425, 5.1117]
+    0.99317+ 2533.525i (aliased): 0.0305 | 0.0313 | 0.0329 | [-0.0355, 0.1096]
+    0.87761+ 2642.634i (aliased): 0.2394 | 0.2129 | 0.1994 | [-1.1073, 1.4034]
+    0.70547+ 2751.545i (aliased): 6.1622 | 2.0044 | 0.1058 | [-127.3206, 127.4559]
+    0.68255+ 2796.051i (aliased): 9.9843 | 4.9766 | 1.0649 | [-248.1062, 250.4970]
+    0.84944+ 2904.947i (aliased): 0.8551 | 0.5236 | 0.1816 | [-2.6124, 3.0414]
+  holdout fit [2^22,2^29) test [2^29,2^31): coarse grid 0.0225; fine grid 0.0222; coarse-fitted model tested on the fine grid 0.0263
+  s0 only: holdout [2^29,2^31) fine grid 0.3756; coarse grid 0.3887
+  Re > 0.85: holdout [2^29,2^31) fine grid 0.2294; coarse grid 0.2326
+  below-Nyquist zeros only (3): holdout [2^29,2^31) fine grid 0.1206; coarse grid 0.1242

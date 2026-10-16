@@ -1,14 +1,14 @@
 ---
 id: HYP-9285
-title: "Explicit formula for the Collatz parity sum: S(N) = sum_(n<=N) (-1)^tau(n) equals Re sum_rho c_rho N^rho over the zeros rho of D(s) = 1 + 2^(-s) + (3/2)^s/3 with Re rho > 1/2, up to a remainder of order sqrt(N) in mean square, with c_rho = 2 r_rho / rho for the residues r_rho of F(s) = sum t(n) n^(-s); the 28 zeros with Re rho > 0.65 and Im rho < 3000 predict S out of sample to about 2%, and the least-squares coefficients reproduce the conditionally certified residues"
+title: "Explicit formula for the Collatz parity sum: S(N) = sum_(n<=N) (-1)^tau(n) equals Re sum_rho c_rho N^rho over the zeros rho of D(s) = 1 + 2^(-s) + (3/2)^s/3 with 1/2 < Re rho < 1, up to a remainder of order sqrt(N) in mean square, with c_rho = 2 r_rho / rho for the residues r_rho of F(s) = sum t(n) n^(-s); the 28 zeros with 0.65 < Re rho < 1 and Im rho < 3000 predict S out of sample to about 2%, and the least-squares coefficients reproduce the conditionally certified residues"
 status: >
   CONJECTURAL (the expansion). NUMERICAL, from the FINITE-EXACT censuses through 2^37 and 2^40: holdout errors and
   the pre-registered out-of-sample prediction (P1 of collatz_census_2p40_preregistration_20261015.md: PASSED,
   relative rms 0.0195 <= 0.03 on 2^37..2^40); dense data to 2^27 bring the remainder to 0.27 sqrt(N). CONDITIONAL
   (Arb, under the energy budget (2, 0) for dyadic X >= 2^37): nonzero residues certified at four zeros besides the
   Mercator zero (0.98494 + 720.74i, 0.94973 + 1572.56i, 0.86345 + 131.16i, 0.69392 + 22.25i), each with the
-  least-squares value near the middle of its interval; all 28 least-squares values lie inside their (mostly wide)
-  intervals. PROVED (elementary, exact for every
+  least-squares value near the middle of its interval (two estimators from the same data); the other 23 intervals
+  contain 0. The zeros of D with 2 < Re < 3 (F holomorphic there) are not modes. PROVED (elementary, exact for every
   N): H(N) = -[S(N) + 3S(floor(2N/3)) + 3S(floor(N/3))]. Its floor-free counterpart annihilates every mode
   N^rho with D(rho) = 0; the integer formula retains an O_rho(N^(Re(rho)-1)) remainder per mode (MISTAKE-620).
 session: opus-2026-10-15-S37
@@ -30,7 +30,7 @@ expansion as OPEN.
 
 ## Conjecture
 
-`S(N) = Re Σ_(D(ρ)=0, Re ρ > 1/2) (2 r_ρ/ρ) N^ρ + R(N)`, with the sum over conjugate pairs taken once and
+`S(N) = Re Σ_(D(ρ)=0, 1/2 < Re ρ < 1) (2 r_ρ/ρ) N^ρ + R(N)`, with the sum over conjugate pairs taken once and
 `Σ_(X<=N<2X) R(N)² = O(X²)` (or `O(X² log X)`). The sum converges in a suitable averaged sense; contour shifting would
 need growth bounds for `F` on vertical lines, which are not available.
 
@@ -54,8 +54,8 @@ the scoped numerical evidence of HYP-9284, not a proof of a complete modal expan
   `0.6939 + 22.25i` (2.45 cycles per octave). These are the three lines already visible in the periodogram of `S(N)/N`
   in the S37 census (26.5, 14.49 and 2.45 cycles per octave).
 - **Holdouts (fit on `2^22..2^34`, test on `2^34..2^37`, relative rms of `S` on the grid of 64 points per octave):**
-  single zero `s_0`: 0.19; the 12 zeros with `Re ρ > 0.85`: 0.075; the 28 zeros with `Re ρ > 0.65`: 0.0205; all 44
-  zeros with `Re ρ > 1/2`: 0.0186 (in-sample 0.006, mild overfitting). The remaining error is consistent with zeros
+  single zero `s_0`: 0.217; the 12 zeros with `0.85 < Re ρ < 1`: 0.075; the 28 zeros with `0.65 < Re ρ < 1`: 0.0205; all 44
+  zeros with `1/2 < Re ρ < 1`: 0.0186 (in-sample 0.0078, mild overfitting). The remaining error is consistent with zeros
   above `Im ρ = 3000`, whose oscillations alias on this grid.
 - **Pre-registered out-of-sample test (P1).** The 28-zero model fitted on `2^22..2^37` predicts `S` on `[2^37, 2^40)`;
   pass if the relative rms error is at most 0.03. Result: PASSED, 0.0195 (192 grid points; refitted on the same data the Mercator zero alone gives 0.165 and the 12 zeros with `Re > 0.85` give 0.042). `S(2^40)` = 989,143,994 against the prediction 961,770,189.
