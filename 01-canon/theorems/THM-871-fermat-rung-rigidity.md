@@ -23,9 +23,18 @@ The 256 connection sets (one choice per ±pair) carry the Z₁₆ multiplier act
 Z₁₆ has a UNIQUE involution (−1), contained in every nontrivial subgroup; a set
 fixed by any m ≠ 1 would satisfy S = −S — impossible. So the action is **FREE**:
 
-> exactly **16 rotational classes at n = 17**, a free Z₁₆-torsor — no fixed points,
-> no distinguished class. (By Ádám-at-primes these are honestly 16 iso classes;
-> the c4 invariant already separates values 1105…1428 across them.)
+> exactly **16 rotational classes at n = 17**. Each of their 16-element
+> presentation orbits is a free Z₁₆-torsor. The quotient set of classes is
+> fixed pointwise by the multiplier action; it is not itself that torsor.
+> There is no multiplier-equivariant choice of a presentation in each orbit.
+> (By Ádám-at-primes these are honestly 16 iso classes; the c4 invariant
+> already separates values 1105…1428 across them.)
+
+**Scope repair, 2026-10-17:** the earlier sentence called the 16-element
+orbit space a free torsor, conflating it with each presentation orbit.
+Moreover all rotational tournaments are self-converse: vertex negation
+identifies the connection sets S and -S. Thus these 16 classes are all
+fixed by converse. The census and rotation-rigidity conclusion are unchanged.
 
 Contrast along the CD tower:
 | rung | 3 (C) | 5 (H) | 9 (O) | 17 (S) |
