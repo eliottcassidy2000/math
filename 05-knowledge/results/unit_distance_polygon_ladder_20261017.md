@@ -90,7 +90,13 @@ points of the planar three-step walk density `p_3(x)` (Borwein–Straub–Wan–
 * the two are tied together: since `Σ_d R_3(d)^2 = W_6`, the Frobenius traces `a_c` of the four-bar fibres satisfy
   `Σ_c a_c = -2 - 2(p/3)` and `Σ_c a_c^2 = (p + 1)(p - 4) - b_p` (THM-4663 (10); checked at every prime below 1000):
   the second moment of the four-bar surface is the hexagon form `(η1η2η3η6)^2`, the form of the Barth–Nieto
-  quintic and of the Kloosterman sixth moment.
+  quintic and of the Kloosterman sixth moment;
+* and the pentagon form comes from the same surface: twisting by the codegree character `η(c(c - 4))` (the conic of
+  pairs of unit steps, statement 2) gives `Σ_c η(c(c-4)) a_c = -1 - (p/3) - (-15/p) - (p/3)p - a_p(f_(3,15))`
+  (THM-4663 (10), from `W_5 = Σ_d R_2(d) R_3(d)`). Reading: closed pentagons are a 2-chain and a 3-chain with a common
+  endpoint, the 2-chains live on the conic `s^2 = c(c - 4)`, and the base change of the four-bar surface along that
+  conic is a K3 surface (Euler number 24) whose transcendental part has CM by `Q(sqrt(-15))`: the geometric origin
+  of the CM form in the Kloosterman fifth moment, consistent with Peters–Top–van der Vlugt's K3.
 
 This is the HN analogue of the Paley run ladder's cores: there too, the first patterns beyond the wheels needed a new
 modular input.
@@ -124,8 +130,9 @@ four-bar data improve either bound.
 
 * The seventh rung independently (coefficients of the level-525 form), heptagon and octagon cycle counts.
 * `R_4(c)`: open four-chains (five-bar linkages) are surfaces; which motive?
-* The theta moments `θ(2,3,3) = Σ R_2 R_3^2`, `θ(3,3,3) = Σ R_3^3`: second and third moments of the `Γ_1(6)` family.
-  The prediction (HYP-9286(b)) is that they are modular in the way the Paley wheels are moments of the Legendre family.
+* The theta moments `θ(2,3,3) = Σ R_2 R_3^2` (the `η(c(c-4))`-twisted second moment of the `Γ_1(6)` family) and
+  `θ(3,3,3) = Σ R_3^3` (its third moment): neither is a polynomial plus at most two of seven candidate forms of
+  levels 5-16 at 121 primes (S39); identification OPEN (HYP-9286(b)).
 * Does any four-bar fibre with rational `c` carry an HN-relevant forced angle (as EI19's do)?
 
 ## Reproduction

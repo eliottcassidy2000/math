@@ -342,18 +342,22 @@ assert not fam_bad and not mod6_bad
 # ---------------------------------------------------------------- 3d. moments of the four-bar family
 mom_bad = []
 for p in primerange(11, 400):
-    S1 = S2 = 0
+    S1 = S2 = T0 = T1 = 0
     for cv in range(1, p):
         if cv in (1, 9 % p):
             continue
         ac = p + 1 - (2 + sum(1 + kr(((tv * tv - 4 * cv) * (tv - cv - 1) * (tv - cv + 3)) % p, p) for tv in range(p)))
-        S1 += ac; S2 += ac * ac
-    if S1 != -2 - 2 * kr(p, 3) or S2 != (p + 1) * (p - 4) - B6[p]:
+        ec = kr(cv * (cv - 4), p)
+        S1 += ac; S2 += ac * ac; T0 += ec; T1 += ec * ac
+    e3, e5 = kr(p, 3), kr(5, p)
+    if (S1 != -2 - 2 * e3 or S2 != (p + 1) * (p - 4) - B6[p] or T0 != -1 - e3 - e5
+            or T1 != -1 - e3 - kr(-15, p) - e3 * p - A15[p]):
         mom_bad.append(p)
     if p < 102:
         Kf = kl_float(p); R3 = radial_float(p, 3, Kf)
         assert R3[1] == 3 * p and R3[9 % p] == p + 1 - kr(p, 3)
 print('   sum_c a_p(E\'_c) = -2 - 2(p/3) and sum_c a_p(E\'_c)^2 = (p+1)(p-4) - b_p (b = eta1^2 eta2^2 eta3^2 eta6^2) '
+      'and the eta(c(c-4))-twisted sums -1-(p/3)-(5/p) and -1-(p/3)-(-15/p)-(p/3)p-a_p(f15) '
       'at every prime 11 <= p < 400; failures:', mom_bad, '; R_3(1) = 3p, R_3(9) = p + 1 - (p/3) for p <= 101')
 assert not mom_bad
 

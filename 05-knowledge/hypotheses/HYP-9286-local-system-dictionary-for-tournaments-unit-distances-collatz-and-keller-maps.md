@@ -16,7 +16,8 @@ scripts:
   - 04-computation/experiments/legendre_fourbar_second_moments_20261017.py (+ .out)
   - 04-computation/experiments/collatz_digraph_mod_p_trace_formula_20261017.py (+ .out)
   - 04-computation/experiments/keller_sweep_value_set_law_20261017.py (+ .out)
-related: [THM-4663, THM-4652, HYP-9278, HYP-9276, THM-4628, THM-4558, THM-4625, THM-1310, THM-4659, HYP-9261]
+  - 04-computation/experiments/keller_thm1300_fourier_modp_20261017.py (+ .out)
+related: [THM-4663, THM-4664, THM-4652, HYP-9278, HYP-9276, THM-4628, THM-4558, THM-4625, THM-4621, THM-1310, THM-4659, HYP-9261]
 ---
 
 # HYP-9286 — the local-system dictionary
@@ -40,11 +41,27 @@ For every series-parallel graph `H` with a root, the rooted homomorphism count `
 
 **Falsifier.** A series-parallel `H` whose count needs a motive outside the span, e.g. if the third moment
 `Σ_c a_c^3` of the four-bar surface (needed by `θ(3,3,3)`) is not a combination of the listed modular data and
-polynomials. **Test plan.** `θ(2,3,3)` and `θ(3,3,3)` at all primes below 1000 by the radial Kloosterman evaluation;
+polynomials.
+
+**Status of the test (S39).** `θ(2,3,3) = Σ_d R_2(d) R_3(d)^2` reduces to the `η(c(c-4))`-twisted second moment of
+the four-bar surface, `θ(3,3,3)` to its third moment. Neither is a polynomial plus at most two of the forms
+`6.4.a.a`, `8.4.a.a`, `η(3z)^8`, `(η(z)η(5z))^4`, `η(2z)^3η(6z)^3`, `η(4z)^6`, `f_(3,15)`, `p f_(3,15)` at 121 primes below
+700, so the span in (b) is at least larger than this candidate list; the identification is OPEN. The twisted FIRST
+moment is the pentagon form (THM-4663 (10)): the conic base change of the four-bar surface is a K3 with CM by
+`Q(sqrt(-15))`, which is how the Kloosterman fifth moment acquires its CM form. **Test plan.** `θ(2,3,3)` and `θ(3,3,3)` at all primes below 1000 by the radial Kloosterman evaluation;
 fit against polynomials and the listed forms; if a residual remains, identify it (a weight-5 or weight-6 form of level
 dividing a power of 6?).
 
-## (c) What is not claimed
+## (c) Row J prediction (CONJECTURE)
+
+If a planar Keller pair `F = (P, Q) ∈ Z[x, y]^2` (`det JF = 1`) is not an automorphism, then for all large `p` its
+exponential sums `S(a, b) = Σ_(x ∈ F_p^2) e_p(aP + bQ)` are of size `≍ p^(3/2)` or larger only on the finitely many lines
+of frequencies dual to the points at infinity of its Jelonek curve, and `O(p)` elsewhere (the planar form of THM-4664;
+the dimension-3 counterexample realizes the analogue with `|S| ≈ p^2` on the dual cone). Combined with the planar
+criterion (the sums vanish identically iff `F` is an automorphism), the planar conjecture asks that these spectral
+lines be empty. Status: CONJECTURE (no planar candidate exists to test).
+
+## (d) What is not claimed
 
 No colouring bound for `G_q` or `R^2`; no statement about Collatz convergence (the finite places carry no
 obstruction); no planar Keller counterexample or proof (the finite-field criterion is standard).

@@ -117,7 +117,16 @@ trace to `F_p`), `M_k(q) = Σ_(a ∈ F_q^×) K_q(a)^k`. `W_k(q)` is the number o
    cohomology of the self fibre product of the four-bar surface is the weight-4 level-6 form that counts the
    closed equilateral hexagons (consistent with the modularity of rigid Calabi-Yau fibre products of semistable
    rational elliptic surfaces, Schoen; CITED from memory). FINITE-EXACT check at every prime `11 ≤ p < 400` (script;
-   below 1000 in the session's run).
+   below 1000 in the session's run). Twisted by the codegree character `η(c(c - 4))` (the conic `s^2 = c(c - 4)`):
+
+       Σ_c η(c(c-4)) = -1 - (p/3) - (5/p),    Σ_c η(c(c-4)) a_c = -1 - (p/3) - (-15/p) - (p/3) p - a_p(f_(3,15)),
+
+   so the pentagon form is the twisted first moment of the four-bar surface: reading, the degree-2 base change of the
+   `Γ_1(6)` surface along `s^2 = c(c - 4)` (branched at the `I_1` fibre `c = 0` and the smooth fibre `c = 4`, Euler number
+   24) is a K3 surface whose transcendental Frobenius trace is `-a_p(f_(3,15))`, CM by `Q(sqrt(-15))`, matching the
+   Peters-Top-van der Vlugt K3 behind the fifth Kloosterman moment. The twisted second moment (needed by `θ(2,3,3)`)
+   and the third moment (`θ(3,3,3)`) are not polynomials plus any two of the forms `6.4.a.a`, `8.4.a.a`,
+   `η(3z)^8`, `(η(z)η(5z))^4`, `η(2z)^3η(6z)^3`, `η(4z)^6`, `f_(3,15)` at 121 primes below 700: OPEN (HYP-9286(b)).
 
 ## Proof
 
@@ -191,7 +200,11 @@ count with the isogenous model `E'_4`.
 2(1 - η(t^2 - 4)) - [t^2 = 4]` sums to `2p - 1`, and the term `u = d` (`t = 2`) must be counted with `R_2(0) = p + 1`
 instead of 1: `R_3(1) = 3p`. First moment: `(p + 1) Σ_(c ≠ 0) R_3(c) = (p + 1)^3 - W_3`. Second moment:
 `W_6 = Σ_d R_3(d)^2 = W_3^2 + (p + 1)[R_3(1)^2 + R_3(9)^2 + Σ_c (p + 1 - a_c)^2]`; solving with statement 3's `W_6`
-gives the displayed formula in both residue classes mod 3 (sympy).
+gives the displayed formula in both residue classes mod 3 (sympy). Twisted: `Σ_c η(c^2 - 4c)` over all `c` is `-1`, less the
+terms `c = 1, 9` (`η(-3) = (p/3)`, `η(45) = (5/p)`); and `W_5 = Σ_d R_2(d) R_3(d) = (p+1) W_3 + (p+1)[codeg(1) R_3(1) +
+codeg(9) R_3(9) + Σ_c (1 - η_c)(p + 1 - a_c)]` with `codeg(1) = 1 - (p/3)`, `codeg(9) = 1 - (5/p)` solves, with statement 3's
+`W_5`, to the displayed twisted first moment in all four classes of `((p/3), (5/p))` (sympy); exact at every prime
+`11 ≤ p < 700`.
 
 **6, 7.** Direct computation (scripts). In 7 the approximate functional equation uses 400 (level 15) and 300 (level
 6) coefficients built multiplicatively from the prime coefficients (Hecke recursion), root numbers `+1`.

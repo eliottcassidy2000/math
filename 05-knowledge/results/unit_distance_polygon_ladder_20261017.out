@@ -35,7 +35,7 @@ level-15 CM coefficients = coefficients of (eta3 eta5)^3 + (eta1 eta15)^3 at eve
 
 3c. four-bar family w^2 = Delta_c(t): 4I^3 - J^2 = 6912*c**2*(c - 9)*(c - 1)**3 ; j(c) = (c - 3)**3*(c**3 - 9*c**2 + 3*c - 3)**3/(c**2*(c - 9)*(c - 1)**3)
    R_3(c) = #E_c(F_p) for every prime 7 <= p <= 101 and every c not in {0, 1, 9}: failures [] ; R_3(c) = 0 mod 6: failures []
-   sum_c a_p(E'_c) = -2 - 2(p/3) and sum_c a_p(E'_c)^2 = (p+1)(p-4) - b_p (b = eta1^2 eta2^2 eta3^2 eta6^2) at every prime 11 <= p < 400; failures: [] ; R_3(1) = 3p, R_3(9) = p + 1 - (p/3) for p <= 101
+   sum_c a_p(E'_c) = -2 - 2(p/3) and sum_c a_p(E'_c)^2 = (p+1)(p-4) - b_p (b = eta1^2 eta2^2 eta3^2 eta6^2) and the eta(c(c-4))-twisted sums -1-(p/3)-(5/p) and -1-(p/3)-(-15/p)-(p/3)p-a_p(f15) at every prime 11 <= p < 400; failures: [] ; R_3(1) = 3p, R_3(9) = p + 1 - (p/3) for p <= 101
 
 4. q = 49: M_k(q) = [1, 2351, 2500, 227947, 718096, 28658090, 151801119, 4110000243]; closed forms with Frobenius-squared traces hold: {5: True, 6: True, 8: True, 3: True, 4: True, 2: True, 1: True}
 

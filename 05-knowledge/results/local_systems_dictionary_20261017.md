@@ -23,7 +23,7 @@ enters.** Below are five rows, one per setting, with what is proved in each.
 | H | unit-distance graph `G_q` | Kloosterman sheaf `Kl_2` (closed chains), four-bar surface (open 3-chains) | 2 / 1 / `SL_2`; elliptic surface of `Γ_1(6)` | polygon and theta counts (THM-4663) | levels 15, 6, 525, 6; first core `θ(2,2,3)`: 30a1 |
 | R | the real plane | Bessel functions (`J_0` = Fourier transform of the circle) | de Rham realization of row H | walk densities, Bessel moments | `L`-values of the same forms (THM-4663 (7)) |
 | C | Collatz modulo a prime `p` | the affine pair `x/2, (3x+1)/2` on `F_p` (Schreier digraph of `F_p ⋊ <2,3>`) | permutation (weight 0) | traces = periodic points; degenerations at `2^k ≡ 3^j (mod p)` | none: finite-place shadows only (§4) |
-| J | a Keller map `F` | the defect `F_* Q_l / Q_l` off the Jelonek set | `d - 1` / 0 / finite (`S_(d+1)` for the sweep family) | fibre statistics; Fourier energy = collisions | the value-set constants `c_(d+1) → 1 - 1/e` (§5) |
+| J | a Keller map `F` | the defect `F_* Q_l / Q_l` off the Jelonek set | `d - 1` / 0 / finite (`S_(d+1)` for the sweep family) | fibre statistics; Fourier energy = collisions | value-set constants `c_(d+1) → 1 - 1/e`; spectrum on the dual of the Jelonek curve at infinity (THM-4664) (§5) |
 
 ## 3. Rows T, H, R: two elliptic modular surfaces, two second moments (PROVED / CITED / FINITE-EXACT)
 
@@ -42,7 +42,9 @@ The cleanest relation found this session is a precise parallel between rows T an
 So in both rows a rank-2 object of weight one (the quadratic character; the unit circle) has, behind its pattern
 sums, a rational elliptic modular surface (Legendre; four-bar `Γ_1(6)`), and the first weight-4 form of the ladder is
 that surface's (twisted) second moment, the motive of a rigid Calabi–Yau fibre product (Schoen, CITED from memory).
-The Kloosterman moments themselves (closed polygons) add the levels 15 and 525. Row R is the same arithmetic at the
+The level-15 pentagon form is produced by the same four-bar surface: its `η(c(c-4))`-twisted first moment
+is `-a_p(f_(3,15))` up to Legendre terms (THM-4663 (10)), i.e. the base change along the codegree conic is a K3 with
+CM by `Q(sqrt(-15))`. The seventh moment adds level 525. Row R is the same arithmetic at the
 real place: the five-step planar walk density `p_5'(0) = 6 L(f_15, 1)/π^2` (NUMERICAL, 25 digits) and the singular
 lengths `0, 1, 3` of the three-step density are the cusps of the four-bar surface.
 
@@ -93,6 +95,15 @@ the primes `p`. This is the honest contrast with rows T and H, where the finite 
   Birch–Swinnerton-Dyer / S. D. Cohen value-set constant. THM-4625 (6)'s "fibre sizes never exactly `d`" is the shadow
   of "no permutation of `d + 1` letters fixes exactly `d`". FINITE-EXACT illustration: `d = 2, 3, 4, 5` at `p = 61, 101`,
   frequencies within `O(p^(-1/2))` of the law, and no fibre of size `d`.
+* **The spectrum of the dimension-3 counterexample ([THM-4664](../../01-canon/theorems/THM-4664-fourier-transform-of-the-thm1300-keller-map-mod-p-concentrates-on-the-dual-of-its-asymptotic-jelonek-cubic.md); PROVED decomposition, FINITE-EXACT sizes).**
+  The exponential sums `S(α, β, γ) = Σ_(F_p^3) e_p(αF_1 + βF_2 + γF_3)` of THM-1300's map are
+  `p e_p(-4β^2/α)(p[α^2γ = 4β^3] - 1)` plus two explicit two-variable sums of size at most `2.5p` (`p ≤ 13`); the large
+  coefficients (`|S| > p^2/2`) are exactly the `p^2 - 1` nonzero points of the cone `α^2γ = 4β^3` for every prime
+  `11 ≤ p ≤ 41`, carrying 92–98% of the Fourier energy. That cone is the projective dual of the cuspidal cubic
+  `27a^2c + b^3 = 0`, which with the line `c = 0` is the curve at infinity of the Jelonek surface (THM-4621): the Keller
+  defect's spectrum sits on the dual of the asymptotic non-properness locus. (A tempting guess, that the fibre count
+  equals the number of roots of the plane-section cubic `2at^3 + bt^2 + c`, is false: it agrees at only about a third of the
+  points; the phases on the cone matter.)
 * **Where this leaves planar JC.** The finite places carry the planar obstruction completely (criterion above), but no
   planar candidate exists to test. The dimension-3 counterexamples are families of one-variable polynomials minus
   their critical points over a two-dimensional base; the planar analogue would need such a family over a
@@ -113,6 +124,7 @@ Both are NUMEROLOGY until a mechanism appears.
    `R_4(c)`, and an independent check of the seventh rung.
 2. Row T/H: is there a single construction producing both elliptic modular surfaces from the respective connection
    sets (the quadratic residues; the unit circle)?
-3. Row J: test the planar criterion on the repo's normal-strip "hostile" near-misses (pairs satisfying all but the
-   constant bucket) — the Fourier energy then measures the failure.
+3. Row J: square-root bounds for THM-4664's remainders; the dual-cone law for Gao's map and the whole sweep family;
+   and the planar prediction of HYP-9286: a planar counterexample's exponential sums would be large only on the finitely
+   many frequency lines dual to its Jelonek curve's points at infinity.
 4. Row C: none from this lens beyond the trace formula; the census programme (HYP-9283/9285) continues at the real place.
