@@ -692,7 +692,9 @@ if __name__ == '__main__':
     log(f'C3 -> covering of class (33,33): residuals {chk}')
     RES['C3_covering_residuals'] = [str(c) for c in chk]
 
-    # ---- local solvability of C3 over F_4: -11 is a local square at every finite place of F_4 (points at infinity)
+    # ---- Infinity points at the specified places below only. Correction 2026-10-17:
+    # -11 is NOT a square at every finite place (19 is a counterexample).
+    # Everywhere local solubility uses B6 of cubic_adelic_20261016e.md at good places.
     #      2, 3, 7 inert in F_4 (check), 5 and 11 ramified in F_4/K0; tests:
     loc = {}
     loc['3'] = pow(-11 % 3, 1, 3) == 1                        # -11 = 1 mod 3: square in Q_3

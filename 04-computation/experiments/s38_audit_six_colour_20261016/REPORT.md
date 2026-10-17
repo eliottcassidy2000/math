@@ -20,9 +20,7 @@ by a factor of about 1,000, and the claim that 18- and 19-vertex five-cores "exi
   (33,33) is not in their span.
 - So rank E(F_4) = 2, C3(F_4) is empty, and the fish and EI21 have no placement in Q(ζ55).
 
-**C3 is locally solvable everywhere over F_4.** At every finite place of F_4, −11 is a local square, so C3 has local
-points at infinity; it also has real points with 0 < D < 1. The remark's "if so" can therefore be dropped: C3 is a
-nonzero element of Sha(E/F_4)[2]. If Sha is finite, that part has dimension at least 2.
+**C3 is locally solvable everywhere over F_4; justification corrected 2026-10-17.** The original sentence that −11 is a square at *every* finite place was false. At 19 the quartic defining F_4 has four simple roots 1,4,15,18, so its completions are Q_19, where −11 is nonsquare. C3 instead has finite local points there: D=10 and (z0,z1,z2)=(4,6,6) modulo 19 lift by Hensel. The complete proof is B6 of [cubic adelic coverage](../../../05-knowledge/results/cubic_adelic_20261016e.md): infinity points at the bad places 2,3,7, and the even-valuation Kummer image at every other finite place. The unchanged conclusion is a nonzero class in Sha(E/F_4)[2]. If Sha is finite, that part has dimension at least 2. See the [exact hostile control and correction lineage](../../../05-knowledge/results/anchor_deficits_cubic_hub_20261017a.md).
 
 **THM-4661 statement 5 reproduces.** With my own pattern enumeration, encoding and solver:
 - I get the same pattern counts (1, 7, 38 and 135 at n = 19, 20, 21, 22).

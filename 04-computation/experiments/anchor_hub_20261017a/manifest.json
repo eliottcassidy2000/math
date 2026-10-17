@@ -1,0 +1,106 @@
+{
+  "adaptive_selection": "The exact fine energy proves the 8192-anchor bound; the individual adaptive row indices were not retained.",
+  "environment": {
+    "numpy": "2.2.6",
+    "python": "3.10.0",
+    "python_sat": "1.9.dev4",
+    "sympy": "1.14.0"
+  },
+  "incoming_head": "fe0cea0d3cc441dee8caeb34464030d091f3f20b",
+  "native_audit": "One exhaustive compositional replay per new scale. Every original source checked; every distinct observed extension replayed literally. No ROOT oracle. Raw wrappers precede extra postprocessing fields; native arrays, stage energies and source/clock digests are the reproduction invariants.",
+  "normal_optimized_comparisons": {
+    "hub_rotated": {
+      "equal": true,
+      "normal_sha256": "7aca0375151566b85bbb7d3765cfa1f29ac312f58585e446eb542643b66bd968",
+      "optimized_sha256": "7aca0375151566b85bbb7d3765cfa1f29ac312f58585e446eb542643b66bd968"
+    },
+    "hub_translated": {
+      "equal": true,
+      "normal_sha256": "1ada3a33ea7e4cd08616ab74526374cb1d882baa8aaa442afbb2ce3d6c916ec0",
+      "optimized_sha256": "1ada3a33ea7e4cd08616ab74526374cb1d882baa8aaa442afbb2ce3d6c916ec0"
+    },
+    "hub_valuation_grid": {
+      "equal": true,
+      "normal_sha256": "d50b03051a2821ef41ca92b8edd7d161d85a9885ffea4267d5676f2c65cf8195",
+      "optimized_sha256": "d50b03051a2821ef41ca92b8edd7d161d85a9885ffea4267d5676f2c65cf8195"
+    },
+    "hub_valuation_grid_four": {
+      "equal": true,
+      "normal_sha256": "f0ed42062dbad709419d4cea82a147d202d089fed0df7e3998f5df69666b7301",
+      "optimized_sha256": "f0ed42062dbad709419d4cea82a147d202d089fed0df7e3998f5df69666b7301"
+    },
+    "jhub": {
+      "equal": true,
+      "normal_sha256": "d91aeb0feab545d7e0118b7d2b33ed9ff399fab6dd3c7795468304fd5cab44ae",
+      "optimized_sha256": "d91aeb0feab545d7e0118b7d2b33ed9ff399fab6dd3c7795468304fd5cab44ae"
+    },
+    "jhub19": {
+      "equal": true,
+      "normal_sha256": "696abdc867a715c0f7aa3b7df0bba510536a941ac8ac61e70c534fe0dfd9a761",
+      "optimized_sha256": "696abdc867a715c0f7aa3b7df0bba510536a941ac8ac61e70c534fe0dfd9a761"
+    },
+    "jhub8": {
+      "equal": true,
+      "normal_sha256": "9f83731a8f972ea0a54c714c7ac99e1c375585f3f0b6247aa172428e51d0507f",
+      "optimized_sha256": "9f83731a8f972ea0a54c714c7ac99e1c375585f3f0b6247aa172428e51d0507f"
+    },
+    "profile_21": {
+      "equal": true,
+      "normal_sha256": "d2c2db67a898ffbc7b235fae77a04d3fa6661cdd718823f9ebf911acaaa86ac7",
+      "optimized_sha256": "d2c2db67a898ffbc7b235fae77a04d3fa6661cdd718823f9ebf911acaaa86ac7"
+    },
+    "profile_22": {
+      "equal": true,
+      "normal_sha256": "8173de4f7d8e55babc4ede0ea9cb782f61c704141212992f121e83a4aceed757",
+      "optimized_sha256": "8173de4f7d8e55babc4ede0ea9cb782f61c704141212992f121e83a4aceed757"
+    }
+  },
+  "programs_and_local_dependencies": {
+    "04-computation/experiments/charge_ports_eleven_20261011.py": "676cac9e363d681c5fef3e4f82d2030124fc161b407ef375106dd83475ea228e",
+    "04-computation/experiments/collatz_anchor_holes_20261017a.py": "d2c08aefe64de363ff903f1df84eced6b925491f372b8aa8b9421b65493d0e29",
+    "04-computation/experiments/collatz_compact_resets_20261015f.py": "eddab48a8a44e64c3c3724c7b2366a2b0e7df8ea6f0377ce5eb2ecee5088416e",
+    "04-computation/experiments/collatz_interval_atlas_20261016e.py": "3921dd71c47f386051f03d00190fb15d534b6a3b7e34da06ea7aeb5469f92901",
+    "04-computation/experiments/collatz_interval_atlas_repair_20261016e.py": "5fb82b769d57ffac22e7355aef74f3b24ea1dbab0773362262d5d022056e86bb",
+    "04-computation/experiments/cubic_crossedge_packets_20261016d.py": "041e457ca30d631592308be8cac9b64e430789a5b5f978ef9dfbf48c4a87e045",
+    "04-computation/experiments/cubic_hub_coupling_20261017a.py": "4e7be8e419f88f0bb9770d9bbb303e744c6295c0201b5ae1a5a2dadd5798b28a",
+    "04-computation/experiments/hub_short_circuit_20261017a.py": "85cb1db4bf19095817130800e645786d74071cb2c9b44e1a81abc281bdfd2bbd",
+    "04-computation/experiments/hub_valuation_grid_20261017a.py": "5cc5fc59055a13679a643c97d486474978b4d25b25ad52a45e5b50b357f1e229"
+  },
+  "receipts": {
+    "04-computation/experiments/anchor_hub_20261017a/hub_rotated.json": "7aca0375151566b85bbb7d3765cfa1f29ac312f58585e446eb542643b66bd968",
+    "04-computation/experiments/anchor_hub_20261017a/hub_translated.json": "1ada3a33ea7e4cd08616ab74526374cb1d882baa8aaa442afbb2ce3d6c916ec0",
+    "04-computation/experiments/anchor_hub_20261017a/hub_valuation_grid.json": "d50b03051a2821ef41ca92b8edd7d161d85a9885ffea4267d5676f2c65cf8195",
+    "04-computation/experiments/anchor_hub_20261017a/hub_valuation_grid_four.json": "f0ed42062dbad709419d4cea82a147d202d089fed0df7e3998f5df69666b7301",
+    "04-computation/experiments/anchor_hub_20261017a/jhub.json": "d91aeb0feab545d7e0118b7d2b33ed9ff399fab6dd3c7795468304fd5cab44ae",
+    "04-computation/experiments/anchor_hub_20261017a/jhub19.json": "696abdc867a715c0f7aa3b7df0bba510536a941ac8ac61e70c534fe0dfd9a761",
+    "04-computation/experiments/anchor_hub_20261017a/jhub8.json": "9f83731a8f972ea0a54c714c7ac99e1c375585f3f0b6247aa172428e51d0507f",
+    "04-computation/experiments/anchor_hub_20261017a/native_k21.json": "6b8226cf7fbbd628791e9378c8a3f298d892605171392d228236d4e4689a9f31",
+    "04-computation/experiments/anchor_hub_20261017a/native_k22.json": "b611216c0af0d21388a8d999a954e37b4618f794a6a5f3d3c978f07dacfd446d",
+    "04-computation/experiments/anchor_hub_20261017a/profile_k18_k20.json": "3c7fbf11ed9e3b168e662abde6057f66a8d35c99c0b13f50827d647bf3393381",
+    "04-computation/experiments/anchor_hub_20261017a/profile_k21.json": "d2c2db67a898ffbc7b235fae77a04d3fa6661cdd718823f9ebf911acaaa86ac7",
+    "04-computation/experiments/anchor_hub_20261017a/profile_k22.json": "8173de4f7d8e55babc4ede0ea9cb782f61c704141212992f121e83a4aceed757"
+  },
+  "reproduction_note": "See section 9 of 05-knowledge/results/anchor_deficits_cubic_hub_20261017a.md; all new programs are runnable from repository root.",
+  "status": "PROVED scoped reductions and FINITE-EXACT experiments; uniform coverage and six-colour forcing OPEN",
+  "validation": [
+    "normal/-O jhub",
+    "normal/-O jhub8",
+    "normal/-O jhub19",
+    "normal/-O hub_translated",
+    "normal/-O hub_rotated",
+    "normal/-O hub_valuation_grid",
+    "normal/-O hub_valuation_grid_four",
+    "normal/-O postprocess 21",
+    "native receipt linked 21",
+    "normal/-O postprocess 22",
+    "native receipt linked 22",
+    "declared universe hub_valuation_grid",
+    "saved colouring replay hub_valuation_grid",
+    "fixed boundary receipt hub_valuation_grid",
+    "declared universe hub_valuation_grid_four",
+    "saved colouring replay hub_valuation_grid_four",
+    "fixed boundary receipt hub_valuation_grid_four",
+    "failed mixed-depth cone retained",
+    "adaptive 512 theorem certificate"
+  ]
+}
