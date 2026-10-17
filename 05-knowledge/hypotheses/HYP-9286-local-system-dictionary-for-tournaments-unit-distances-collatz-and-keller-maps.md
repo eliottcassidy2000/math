@@ -61,6 +61,10 @@ the dimension-3 counterexample realizes the analogue with `|S| ≈ p^2` on the d
 criterion (the sums vanish identically iff `F` is an automorphism), the planar conjecture asks that these spectral
 lines be empty. Status: CONJECTURE (no planar candidate exists to test).
 
+The supporting dimension-3 calculation is now uniform: [K1-K3 of the marked cubic proof](../results/keller_marked_cubic_fourier_20261017d.md)
+evaluate THM-4664's remainders exactly over odd finite fields and prove the dual-cone energy formula for
+characteristic at least 5. This closes that auxiliary target, without promoting the planar prediction above.
+
 ## (d) What is not claimed
 
 No colouring bound for `G_q` or `R^2`; no statement about Collatz convergence (the finite places carry no

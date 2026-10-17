@@ -273,7 +273,7 @@ The16 at1848 is one extra dyadic class bit over a maximal order with
 eight classes. It is not the class number of that maximal order.
 
 **D2 (classical conductor/genus specialization, PROVED).** More generally
-let m be odd squarefree and D_k=-8m*4^k. The class-number formula gives
+let m be positive odd squarefree, k>=0, and D_k=-8m*4^k. The class-number formula gives
 h(D_k)=2^k h(-8m). If g_k is the number of inversion-fixed classes,
 
 \[

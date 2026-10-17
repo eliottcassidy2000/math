@@ -104,6 +104,10 @@ the primes `p`. This is the honest contrast with rows T and H, where the finite 
   defect's spectrum sits on the dual of the asymptotic non-properness locus. (A tempting guess, that the fibre count
   equals the number of roots of the plane-section cubic `2at^3 + bt^2 + c`, is false: it agrees at only about a third of the
   points; the phases on the cone matter.)
+  **Successor, PROVED and self-audited:** [the marked cubic calculation](keller_marked_cubic_fourier_20261017d.md), K1-K3,
+  evaluates both remainders exactly, proves the same large-spectrum description for every finite field `q >= 7`
+  of characteristic at least 5, and gives the exact energy fraction `1 - (q^2 - 2q + 3)/(q(q^2 + 2))`.
+  The retained coefficient `αt + 2β` distinguishes this cone from the other cubic-discriminant branch `γ = 0`.
 * **Where this leaves planar JC.** The finite places carry the planar obstruction completely (criterion above), but no
   planar candidate exists to test. The dimension-3 counterexamples are families of one-variable polynomials minus
   their critical points over a two-dimensional base; the planar analogue would need such a family over a
@@ -124,7 +128,8 @@ Both are NUMEROLOGY until a mechanism appears.
    `R_4(c)`, and an independent check of the seventh rung.
 2. Row T/H: is there a single construction producing both elliptic modular surfaces from the respective connection
    sets (the quadratic residues; the unit circle)?
-3. Row J: square-root bounds for THM-4664's remainders; the dual-cone law for Gao's map and the whole sweep family;
-   and the planar prediction of HYP-9286: a planar counterexample's exponential sums would be large only on the finitely
-   many frequency lines dual to its Jelonek curve's points at infinity.
+3. Row J: THM-4664's uniform remainders are now closed by the successor linked in section 5. Remaining OPEN are
+   the dual-cone law for Gao's map and the whole sweep family, and the planar prediction of HYP-9286: a planar
+   counterexample's exponential sums would be large only on the finitely many frequency lines dual to its Jelonek
+   curve's points at infinity.
 4. Row C: none from this lens beyond the trace formula; the census programme (HYP-9283/9285) continues at the real place.

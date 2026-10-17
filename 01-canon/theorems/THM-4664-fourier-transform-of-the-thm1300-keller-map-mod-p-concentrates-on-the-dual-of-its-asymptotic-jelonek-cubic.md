@@ -6,9 +6,11 @@ status: >
   one-line orthogonality in b; the projective duality (statement 3, elementary). FINITE-EXACT: statement 2 (the
   decomposition checked to floating-point error at every frequency for p = 5, 7, 11, 13, with both remainders at most
   2.5p there; the large-coefficient set equal to the cone for every prime 11 <= p <= 41; Parseval and the fibre
-  frequencies). CONDITIONAL: the asymptotic form |S| = p^2 + O(p) on the cone and O(p) off it for all p, on Deligne-type
-  square-root bounds for the two-variable sums E and S_Gamma (not proved here). No planar Jacobian statement is
-  claimed; HYP-9286 records the planar prediction.
+  frequencies). PROVED successor (scoped, self-audited): K1-K3 in keller_marked_cubic_fourier_20261017d.md evaluate
+  both remainders exactly, give |S| = q^2 + O(q) on the cone and |S| <= 3q off it, and prove the exact cone-energy
+  fraction for every finite field of characteristic at least 5. This closes the former conditional remainder target;
+  the original numerical evidence below is retained. No planar Jacobian statement is claimed; HYP-9286 records the
+  planar prediction.
 session: opus-2026-10-17-S39
 source: 05-knowledge/results/local_systems_dictionary_20261017.md (section 5)
 scripts:
@@ -20,6 +22,13 @@ related:
 ---
 
 # THM-4664 — where the exponential sums of THM-1300's Keller map live
+
+**2026-10-17 successor.** [K1-K3, the marked cubic Fourier proof](../../05-knowledge/results/keller_marked_cubic_fourier_20261017d.md)
+close this theorem's former uniform remainder obligation by summing the source variable `z` first and retaining
+the coefficient `(alpha t + 2 beta)/x`. For every odd finite field the transform reduces to a sum over the distinct
+roots of `alpha t^3 + 3 beta t^2 = gamma`; for characteristic at least 5 the cone carries exactly the fraction
+`1 - (q^2 - 2q + 3)/(q(q^2 + 2))` of the nonzero Fourier energy. Its large-coefficient set is exactly the nonzero
+cone for `q >= 7`. The original proof and finite receipts below preserve the route by which this target arose.
 
 ## Setting
 
@@ -82,8 +91,9 @@ For a planar Keller pair the Jelonek set is a curve with finitely many points at
 on finitely many lines of frequencies; by the finite-field criterion of local_systems_dictionary_20261017.md (section 5),
 the planar conjecture is equivalent to these sums vanishing identically.
 
-## Open
+## Closed remainder target and remaining open work
 
-Square-root bounds for `E` (a two-variable Laurent sum with Newton polygon determined by `q, p`) and `S_Γ`; the same
-analysis for Gao's degree-four map and the general sweep family (the cone should be the dual of the sweep family's
-asymptotic Jelonek curve); the phases `e_p(-4β^2/α)` on the cone as a function on the dual cubic.
+The uniform bounds for `E` and `S_Γ` are closed by the successor above: for `α != 0`,
+`|E| <= 3q + sqrt(q)` and `|S_Γ| <= q + sqrt(q)`, with their Gauss terms cancelling in `-E + S_Γ`.
+The same analysis for Gao's degree-four map and the general sweep family remains OPEN (the proposed cone is the
+dual of the sweep family's asymptotic Jelonek curve). The planar prediction in HYP-9286 also remains OPEN.
