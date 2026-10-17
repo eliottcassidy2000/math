@@ -1,0 +1,11 @@
+python paley_mobius_orders_20261017.py 71 300  (exhaustive PGL_2(F_p) for p <= 23; 300 random phi beyond)
+p = 7, h = 1: marked-coefficient lemma N(t) = h(1 + chi(t-1) - chi(t)) at every t: True; affine excesses [-7, 7]; non-affine excesses [-3, -1, 1, 3]
+p = 11, h = 1: marked-coefficient lemma N(t) = h(1 + chi(t-1) - chi(t)) at every t: True; affine excesses [-11, 11]; non-affine excesses [-3, -1, 1, 3]
+p = 19, h = 1: marked-coefficient lemma N(t) = h(1 + chi(t-1) - chi(t)) at every t: True; affine excesses [-19, 19]; non-affine excesses [-5, -3, -1, 1, 3, 5]
+p = 23, h = 3: marked-coefficient lemma N(t) = h(1 + chi(t-1) - chi(t)) at every t: True; affine excesses [-69, 69]; non-affine excesses [-9, -7, -5, -3, -1, 1, 3, 5, 7, 9]
+p = 31, h = 3: marked-coefficient lemma N(t) = h(1 + chi(t-1) - chi(t)) at every t: True; affine excesses [-93, 93]; non-affine excesses [-9, -7, -5, -3, -1, 1, 3, 5, 7, 9]
+p = 43, h = 1: marked-coefficient lemma N(t) = h(1 + chi(t-1) - chi(t)) at every t: True; affine excesses [-43, 43]; non-affine excesses [-7, -5, -3, -1, 1, 3, 5, 7]
+p = 47, h = 5: marked-coefficient lemma N(t) = h(1 + chi(t-1) - chi(t)) at every t: True; affine excesses [-235, 235]; non-affine excesses [-15, -13, -11, -9, -7, -5, -3, -1, 1, 3, 5, 7, 9, 11, 13, 15]
+p = 59, h = 3: marked-coefficient lemma N(t) = h(1 + chi(t-1) - chi(t)) at every t: True; affine excesses [-177, 177]; non-affine excesses [-9, -7, -5, -3, -1, 1, 3, 5, 7, 9]
+p = 67, h = 1: marked-coefficient lemma N(t) = h(1 + chi(t-1) - chi(t)) at every t: True; affine excesses [-67]; non-affine excesses [-9, -7, -5, -3, -1, 1, 3, 5, 7, 9]
+p = 71, h = 7: marked-coefficient lemma N(t) = h(1 + chi(t-1) - chi(t)) at every t: True; affine excesses [-497, 497]; non-affine excesses [-21, -19, -13, -11, -9, -7, -5, -3, -1, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21]

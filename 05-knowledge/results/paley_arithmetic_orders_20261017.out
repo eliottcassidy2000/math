@@ -1,0 +1,10 @@
+dlog             p = 3 (mod 8): excess in [1]
+dlog             p = 7 (mod 8): excess in [1]
+dlog_other_root  p = 3 (mod 8): excess in [1]
+dlog_other_root  p = 7 (mod 8): excess in [1]
+inverse          p = 3 (mod 8): excess / h in [3.0]
+inverse          p = 7 (mod 8): excess / h in [3.0]
+natural          p = 3 (mod 8): excess / h in ([11.0, 19.0, 43.0], '...', [2939.0, 2963.0, 2971.0], '108 distinct')
+natural          p = 7 (mod 8): excess / h in ([7.0, 23.0, 31.0], '...', [2903.0, 2927.0, 2999.0], '109 distinct')
+square           p = 3 (mod 8): excess / h in [3.0]
+square           p = 7 (mod 8): excess / h in [-1.0]
