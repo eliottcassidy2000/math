@@ -1,0 +1,163 @@
+{
+  "commands": [
+    "python3 04-computation/experiments/root_braid_fold_20261017f.py --output 04-computation/experiments/joint_logistic_current_20261017f/root.json",
+    "python3 04-computation/experiments/third_fold_20261017f.py --output 04-computation/experiments/joint_logistic_current_20261017f/third_fold.json",
+    "python3 04-computation/experiments/braid_transport_20261017f.py --output 04-computation/experiments/joint_logistic_current_20261017f/transport.json",
+    "python3 04-computation/experiments/first_transport_tariff_20261017f.py --output 04-computation/experiments/joint_logistic_current_20261017f/first_tariff.json",
+    "python3 04-computation/experiments/iterated_band_tariff_20261017f.py --output 04-computation/experiments/joint_logistic_current_20261017f/iterated_tariffs.json",
+    "python3 04-computation/experiments/logistic_marked_clock_20261017f.py --output 04-computation/experiments/joint_logistic_current_20261017f/logistic.json",
+    "python3 04-computation/experiments/joint_contact_quotient_20261017f.py --output 04-computation/experiments/joint_logistic_current_20261017f/quotient.json",
+    "python3 04-computation/experiments/golden_contact_20261017f.py --output 04-computation/experiments/joint_logistic_current_20261017f/golden.json",
+    "python3 04-computation/experiments/joint_contact_verify_20261017f.py 04-computation/experiments/joint_logistic_current_20261017f/quotient.json > 04-computation/experiments/joint_logistic_current_20261017f/source_replay.json",
+    "python3 04-computation/experiments/braid_transport_verify_20261017f.py 04-computation/experiments/joint_logistic_current_20261017f/transport.json > 04-computation/experiments/joint_logistic_current_20261017f/transport_replay.json",
+    "python3 04-computation/experiments/escape_receipt_verify_20261017d.py 04-computation/experiments/joint_logistic_current_20261017f/quotient.json > 04-computation/experiments/joint_logistic_current_20261017f/quotient_replay.json",
+    "python3 04-computation/experiments/escape_receipt_verify_20261017d.py 04-computation/experiments/joint_logistic_current_20261017f/golden.json > 04-computation/experiments/joint_logistic_current_20261017f/golden_replay.json"
+  ],
+  "date": "2026-10-17",
+  "files": [
+    {
+      "bytes": 4428,
+      "path": "04-computation/experiments/root_braid_fold_20261017f.py",
+      "sha256": "8a27b4181a4085cf8662e82bc033e68bf9430ad1910621b223a731492cdc5a66"
+    },
+    {
+      "bytes": 2257,
+      "path": "04-computation/experiments/third_fold_20261017f.py",
+      "sha256": "ed611f8b1a3fcc6e479b9b932e97d82abe9eb1ecc6dc9534ae67afde53174eb7"
+    },
+    {
+      "bytes": 2527,
+      "path": "04-computation/experiments/first_transport_tariff_20261017f.py",
+      "sha256": "74d5b63e12da3b446d0a5ae95c3c564844f1fda9a848af2dab8a20c0dd2d2210"
+    },
+    {
+      "bytes": 3717,
+      "path": "04-computation/experiments/iterated_band_tariff_20261017f.py",
+      "sha256": "3c76ee4f9d5b35fb2af3e2a47837f7e2c5c566c94ac133d33d9db78e930b3109"
+    },
+    {
+      "bytes": 3325,
+      "path": "04-computation/experiments/braid_transport_20261017f.py",
+      "sha256": "a40854c4dca22848c36431969160c2dcee1972190d7770e7746e41a97ad8d44a"
+    },
+    {
+      "bytes": 1896,
+      "path": "04-computation/experiments/braid_transport_verify_20261017f.py",
+      "sha256": "6ca261cebc4f08bce82eed6dc5cd6091d82ce04f9938c5458abe2b415540562a"
+    },
+    {
+      "bytes": 3345,
+      "path": "04-computation/experiments/logistic_marked_clock_20261017f.py",
+      "sha256": "1507446c4a3d1f7629b57c32c2daeed6ecfc45f1ab922138ec5ec6f8b7040946"
+    },
+    {
+      "bytes": 9022,
+      "path": "04-computation/experiments/joint_contact_quotient_20261017f.py",
+      "sha256": "b71523198e30f2da357eae0d67739982da3525eea778e4fcc4ea9aaabdb82bf6"
+    },
+    {
+      "bytes": 6926,
+      "path": "04-computation/experiments/joint_contact_verify_20261017f.py",
+      "sha256": "36fae43a5dcb782003f99252125a42222cf76417235b5481322f973e29f9a5e2"
+    },
+    {
+      "bytes": 8841,
+      "path": "04-computation/experiments/golden_contact_20261017f.py",
+      "sha256": "9323db971d8bba30c75ad303e1ca3a1129c3e467359db8ce44cae309405dcae3"
+    },
+    {
+      "bytes": 940,
+      "path": "04-computation/experiments/joint_logistic_current_20261017f/first_tariff.json",
+      "sha256": "1d47a64c574d8a74b98e787446ce36759583c85269cbb5f1f85587d8d6aeec35"
+    },
+    {
+      "bytes": 1734860,
+      "path": "04-computation/experiments/joint_logistic_current_20261017f/golden.json",
+      "sha256": "e16a8fdcdd093ce17c4e442d958cf9e330e9f4c2bc80ba6abc269d833a9940cc"
+    },
+    {
+      "bytes": 5839,
+      "path": "04-computation/experiments/joint_logistic_current_20261017f/golden_replay.json",
+      "sha256": "843eade46dc94d1b4c53b6df01e36bf600ebe3e77da49c99ab38dde5fa0c0e8f"
+    },
+    {
+      "bytes": 39917,
+      "path": "04-computation/experiments/joint_logistic_current_20261017f/iterated_tariffs.json",
+      "sha256": "2049af883110f43d6fa18387b947f34d79247970c920ea4d98b7596608a4646a"
+    },
+    {
+      "bytes": 2711,
+      "path": "04-computation/experiments/joint_logistic_current_20261017f/logistic.json",
+      "sha256": "dd92f8c14f2da7052e253ad4dc9cef5e7d3efc26028518d619b98d226d28fa9a"
+    },
+    {
+      "bytes": 147443,
+      "path": "04-computation/experiments/joint_logistic_current_20261017f/quotient.json",
+      "sha256": "859479d9dc6860359e8a3eacc46aef99c794d527ed102393cea0d278213aff5d"
+    },
+    {
+      "bytes": 977,
+      "path": "04-computation/experiments/joint_logistic_current_20261017f/quotient_replay.json",
+      "sha256": "9f8a6f6d07a6e43d0d96fd297910501a9a41a515fb95f87629de02bc87e9536c"
+    },
+    {
+      "bytes": 8875,
+      "path": "04-computation/experiments/joint_logistic_current_20261017f/root.json",
+      "sha256": "f2bd68d6df7df2067ec6ff1884a46d94955a03d00a432725d391211076b40825"
+    },
+    {
+      "bytes": 520,
+      "path": "04-computation/experiments/joint_logistic_current_20261017f/source_replay.json",
+      "sha256": "3f173b514a26cc5e1d2e2d002907432dc607d8aac7d226134539bee487ff19e7"
+    },
+    {
+      "bytes": 902,
+      "path": "04-computation/experiments/joint_logistic_current_20261017f/third_fold.json",
+      "sha256": "1462906163b8aa449dff6ab85dcf0a4f32303790c650c340757a326560564287"
+    },
+    {
+      "bytes": 10154,
+      "path": "04-computation/experiments/joint_logistic_current_20261017f/transport.json",
+      "sha256": "5086dd23e4705d8992232c455ed0318a7b1851da68bbc3fffe23c8a8bbb90105"
+    },
+    {
+      "bytes": 981,
+      "path": "04-computation/experiments/joint_logistic_current_20261017f/transport_replay.json",
+      "sha256": "5ce91bc755086e134cb7aa7c1123523a033e1d9617ff1c05bf6d28db8e5ae547"
+    }
+  ],
+  "incoming_read": [
+    "2054a8a273",
+    "ee91f70219",
+    "309af1b454"
+  ],
+  "inherited_head": "82f6ecd0bd",
+  "optimized_equivalence": [
+    "root.json",
+    "golden.json",
+    "quotient.json",
+    "source_replay.json",
+    "transport.json",
+    "logistic.json",
+    "third_fold.json",
+    "first_tariff.json",
+    "iterated_tariffs.json"
+  ],
+  "optimized_instructions": "Repeat each producer/verifier with python3 -O and a temporary output, compare bytes. The stored golden receipt was generated with -O and independently reproduced normally.",
+  "python": "3.10.0",
+  "scopes": [
+    "Native controller: X=2^10,2^14,2^18; stages1,4,12,28; all original endpoint/clock audits.",
+    "Marked transport: N=1024,16384,262144; depths0,1,2,4,8,12,20,28,40,64; independent scalar replay of every source at depth64.",
+    "Tariffs: exact rational signed tables at depths0..3; proved induction for all fixed depths; no uniform-depth bound.",
+    "Logistic: complete parity permutations through17bits; 2048 rooted control sources and92422 exact shortcut clocks.",
+    "Joint geometry: all129654 source addresses and1170267 classified source edges, literal ports, all570 boundary patterns.",
+    "Golden geometry: exact all-pair induced graph on2646 vertices;15498 edges including28 mixed; all570 boundary extensions."
+  ],
+  "session": "clock_duality_oct15",
+  "source_notes": [
+    "05-knowledge/results/root_braid_logistic_20261017f.md",
+    "05-knowledge/results/joint_contact_field_20261017f.md"
+  ],
+  "status": "PROVED scoped mechanisms + FINITE-EXACT receipts; uniform ROOT energy and six-colour forcing OPEN",
+  "working_directory": "repository root"
+}
