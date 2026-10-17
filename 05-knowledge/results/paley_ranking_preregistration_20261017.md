@@ -30,3 +30,15 @@ A pass supports the hypothesis that optimality of the natural order is governed 
 near 1.8-2.0 at these sizes (it may drift with p). A P1 failure (two or more high-L primes beaten) refutes the
 threshold form. A P2 failure (a low-L prime not beaten) would show either a weaker search or a non-monotone law; the
 order found or not found is recorded either way. Nothing here bears on MAS values beyond the orders exhibited.
+
+## Outcome (appended after the run, 2026-10-17)
+
+Run: `python paley_ranking_local_search_20261017.py 132:500 12 80`
+(`paley_ranking_local_search_p132_500_20261017.out` / `.json`).
+
+* **P1 PASSED.** Unbeaten at 167, 191, 239, 263, 311, 359, 383, 431, 479; beaten at 439 (L = 2.249, the smallest L of
+  the ten): one of ten, within the stated criterion.
+* **P2 PASSED.** All twenty low-L primes beaten, each by a certified witness order (in the JSON).
+* **Exploratory.** 151 (L = 1.79), 199 (L = 2.004) and 271 (L = 2.099) are beaten. On 131 < p <= 500 the largest
+  beaten L is 2.249 and the smallest unbeaten L is 2.518: the threshold drifts upward from the small-p values (23 with
+  L = 1.965 and 47 with L = 2.29 are optimal or unbeaten). HYP-9287 records the drifting-threshold form.

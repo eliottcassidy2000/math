@@ -1,0 +1,10 @@
+Paley tournaments P_p, p = 3 (mod 4) prime <= 200000: 9006 primes; forward - backward = p h(-p) (2/w) fails at 0; half-window imbalance = (2 - (2/p)) h(-p) fails at 0
+primes with h(-p) = 1 (natural order has the least possible excess p, w-corrected at 3): [3, 7, 11, 19, 43, 67, 163]
+Kronecker oriented graphs, fundamental D in [-20000, -3]: 6079 discriminants; identity fails at 0
+P_3: arcs 3, h(-p) = 1, natural order forward 2 (excess 1), MAS 2 (excess 1)
+P_7: arcs 21, h(-p) = 1, natural order forward 14 (excess 7), MAS 14 (excess 7)
+P_11: arcs 55, h(-p) = 1, natural order forward 33 (excess 11), MAS 35 (excess 15)
+P_19: arcs 171, h(-p) = 1, natural order forward 95 (excess 19), MAS 107 (excess 43)
+P_23: arcs 253, h(-p) = 3, natural order forward 161 (excess 69), MAS 161 (excess 69)
+P_43 (cited, Chindelevitch-Harutyunyan arXiv:2607.26690 Thm 7.1): MAS 543 of 903; natural order forward 473
+DONE

@@ -1,0 +1,25 @@
+p = 3 (mod 4) primes 7..200000: 9005; area = p h(-p) fails at 0
+L+ (natural order insertion-locally optimal): 2937 primes (0.3262); first ones: [7, 11, 23, 31, 47, 59, 71, 79, 83, 103, 131, 151, 167, 191, 199, 239, 251, 263, 271, 311, 359, 383, 419, 431, 439, 479, 503, 563, 599, 607]
+  L(1,chi) in [0.0, 1.0):   3389 primes, in L+      1 (0.000)
+  L(1,chi) in [1.0, 1.5):   1824 primes, in L+    110 (0.060)
+  L(1,chi) in [1.5, 2.0):   1181 primes, in L+    533 (0.451)
+  L(1,chi) in [2.0, 2.5):    748 primes, in L+    504 (0.674)
+  L(1,chi) in [2.5, 3.0):    572 primes, in L+    503 (0.879)
+  L(1,chi) in [3.0, 10.0):   1291 primes, in L+   1286 (0.996)
+largest L(1,chi) outside L+: [(149351, 397, 3.227277513973732, -5, 571), (192239, 441, 3.1598590652928458, -14, 265), (131591, 361, 3.1263959609360175, -8, 275), (100511, 309, 3.0619743984115337, -12, 185), (117239, 327, 3.0002785192491492, -19, 137)]
+smallest L(1,chi) inside L+: [(11, 1, 0.9472258250994829, 0, -1), (83, 3, 1.0345037784309938, 0, -1), (7, 1, 1.1874104117237259, 0, -1), (563, 9, 1.1916211001563795, 0, -1), (79187, 107, 1.194556526355225, 0, -1)]
+  p in (2^2, 2^3]:     1 primes, L+ fraction 1.0000
+  p in (2^3, 2^4]:     1 primes, L+ fraction 1.0000
+  p in (2^4, 2^5]:     3 primes, L+ fraction 0.6667
+  p in (2^5, 2^6]:     3 primes, L+ fraction 0.6667
+  p in (2^6, 2^7]:     7 primes, L+ fraction 0.5714
+  p in (2^7, 2^8]:    13 primes, L+ fraction 0.5385
+  p in (2^8, 2^9]:    22 primes, L+ fraction 0.4545
+  p in (2^9, 2^10]:    37 primes, L+ fraction 0.4324
+  p in (2^10, 2^11]:    71 primes, L+ fraction 0.4225
+  p in (2^11, 2^12]:   128 primes, L+ fraction 0.3984
+  p in (2^12, 2^13]:   231 primes, L+ fraction 0.3810
+  p in (2^13, 2^14]:   440 primes, L+ fraction 0.3477
+  p in (2^14, 2^15]:   807 primes, L+ fraction 0.3432
+  p in (2^15, 2^16]:  1519 primes, L+ fraction 0.3351
+  p in (2^16, 2^17]:  2872 primes, L+ fraction 0.3151

@@ -1,0 +1,69 @@
+{
+ "paley": {
+  "PMAX": 200000,
+  "primes": 9006,
+  "identity_failures": 0,
+  "half_window_failures": 0,
+  "class_number_one": [
+   3,
+   7,
+   11,
+   19,
+   43,
+   67,
+   163
+  ]
+ },
+ "kronecker": {
+  "DMAX": 20000,
+  "discriminants": 6079,
+  "identity_failures": 0
+ },
+ "mas": [
+  {
+   "p": 3,
+   "arcs": 3,
+   "h": 1,
+   "natural_forward": 2,
+   "MAS": 2,
+   "natural_excess": 1,
+   "optimal_excess": 1
+  },
+  {
+   "p": 7,
+   "arcs": 21,
+   "h": 1,
+   "natural_forward": 14,
+   "MAS": 14,
+   "natural_excess": 7,
+   "optimal_excess": 7
+  },
+  {
+   "p": 11,
+   "arcs": 55,
+   "h": 1,
+   "natural_forward": 33,
+   "MAS": 35,
+   "natural_excess": 11,
+   "optimal_excess": 15
+  },
+  {
+   "p": 19,
+   "arcs": 171,
+   "h": 1,
+   "natural_forward": 95,
+   "MAS": 107,
+   "natural_excess": 19,
+   "optimal_excess": 43
+  },
+  {
+   "p": 23,
+   "arcs": 253,
+   "h": 3,
+   "natural_forward": 161,
+   "MAS": 161,
+   "natural_excess": 69,
+   "optimal_excess": 69
+  }
+ ]
+}

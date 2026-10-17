@@ -1,0 +1,11 @@
+{
+ "p": 11,
+ "arcs": 55,
+ "h": 1,
+ "natural_forward": 33,
+ "brute": 35,
+ "dp_vertex0": 35,
+ "MAS": 35,
+ "MAS_second_residue": 35,
+ "MAS_second_nonresidue": 34
+}
