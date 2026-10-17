@@ -1,0 +1,24 @@
+p = 503: natural p h = 10563 (h = 21); class numbers h(-3p) = None, h(-4p) = 21, h(-8p) = 20, h(-11p) = None
+   best excess by m: [(1, 10563), (2, 10563), (3, 10915), (4, 10995), (5, 10931), (6, 10915)]
+   best overall: m = 4, k = 703, excess 10995 (= 1.041 p h, 0.9746 p^1.5)
+p = 599: natural p h = 14975 (h = 25); class numbers h(-3p) = None, h(-4p) = 25, h(-8p) = 12, h(-11p) = None
+   best excess by m: [(1, 14975), (2, 14975), (3, 14975), (4, 14975), (5, 14975), (6, 14975)]
+   best overall: m = 1, k = 1, excess 14975 (= 1.000 p h, 1.0215 p^1.5)
+p = 647: natural p h = 14881 (h = 23); class numbers h(-3p) = None, h(-4p) = 23, h(-8p) = 28, h(-11p) = None
+   best excess by m: [(1, 14881), (2, 14881), (3, 16213), (4, 16551), (5, 16435), (6, 16461)]
+   best overall: m = 4, k = 899, excess 16551 (= 1.112 p h, 1.0057 p^1.5)
+p = 719: natural p h = 22289 (h = 31); class numbers h(-3p) = None, h(-4p) = 31, h(-8p) = 16, h(-11p) = None
+   best excess by m: [(1, 22289), (2, 22289), (3, 22289), (4, 22289), (5, 22289), (6, 22289)]
+   best overall: m = 1, k = 1, excess 22289 (= 1.000 p h, 1.1561 p^1.5)
+p = 839: natural p h = 27687 (h = 33); class numbers h(-3p) = None, h(-4p) = 33, h(-8p) = 20, h(-11p) = None
+   best excess by m: [(1, 27687), (2, 27687), (3, 27687), (4, 27687), (5, 27687), (6, 27687)]
+   best overall: m = 1, k = 1, excess 27687 (= 1.000 p h, 1.1393 p^1.5)
+p = 887: natural p h = 25723 (h = 29); class numbers h(-3p) = None, h(-4p) = 29, h(-8p) = 20, h(-11p) = None
+   best excess by m: [(1, 25723), (2, 25723), (3, 26003), (4, 26125), (5, 26853), (6, 26003)]
+   best overall: m = 5, k = 63, excess 26853 (= 1.044 p h, 1.0165 p^1.5)
+p = 911: natural p h = 28241 (h = 31); class numbers h(-3p) = None, h(-4p) = 31, h(-8p) = 16, h(-11p) = None
+   best excess by m: [(1, 28241), (2, 28241), (3, 28241), (4, 28537), (5, 28547), (6, 28241)]
+   best overall: m = 5, k = 964, excess 28547 (= 1.011 p h, 1.0382 p^1.5)
+p = 983: natural p h = 26541 (h = 27); class numbers h(-3p) = None, h(-4p) = 27, h(-8p) = 36, h(-11p) = None
+   best excess by m: [(1, 26541), (2, 27009), (3, 29371), (4, 30413), (5, 31269), (6, 32103)]
+   best overall: m = 6, k = 1727, excess 32103 (= 1.210 p h, 1.0416 p^1.5)
