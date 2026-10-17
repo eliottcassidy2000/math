@@ -10,6 +10,12 @@ coverage-tail bound, (W), independently positive ROOT scores, universal
 Collatz entry, and six-colour forcing. No independent referee or priority
 claim. The finite colouring survives; this is not a claimed forcing gadget.
 
+**Stronger continuation:** [tail debt and the norm-19 carrier](golden_tail_idoneal_20261017c.md)
+preserves all570 old boundary patterns even in B(w,zeta5,sqrt(4phi-3)),
+degree192, using literal point repairs and explicit six-colour residue
+tables. G7's mixed generator and the recovered square-root chart therefore
+do not escape that stronger exclusion. The uniform Collatz tail remains open.
+
 ## 1. Inheritance and the live board
 
 The anchor is uniform graded Collatz cost, the niche is cubic attachments,

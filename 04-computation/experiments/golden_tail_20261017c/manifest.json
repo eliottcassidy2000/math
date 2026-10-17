@@ -1,0 +1,124 @@
+{
+  "commands": [
+    "python3 04-computation/experiments/golden_boundary_20261017c.py > 04-computation/experiments/golden_tail_20261017c/boundary.json",
+    "python3 04-computation/experiments/golden_boundary_search_20261017c.py --input 04-computation/experiments/golden_tail_20261017c/boundary.json --budget 10000 > 04-computation/experiments/golden_tail_20261017c/search.json",
+    "python3 04-computation/experiments/golden_boundary_circle_20261017c.py --input 04-computation/experiments/golden_tail_20261017c/boundary.json > 04-computation/experiments/golden_tail_20261017c/circle.json",
+    "python3 04-computation/experiments/golden_witness_verify_20261017c.py > 04-computation/experiments/golden_tail_20261017c/verify.json",
+    "python3 04-computation/experiments/quadratic_context_20261017c.py > 04-computation/experiments/golden_tail_20261017c/quadratic.json",
+    "python3 04-computation/experiments/collatz_good_lambda_20261017c.py --input 04-computation/experiments/graded_tail_carrier_20261017b/native18_20.json 04-computation/experiments/graded_tail_carrier_20261017b/native22.json > 04-computation/experiments/golden_tail_20261017c/tails.json"
+  ],
+  "exploratory_search": "search.json preserves UNKNOWN from 40 bounded full-quotient SAT attempts; circle.json supplies positive witnesses for every outstanding pattern.",
+  "files": {
+    "04-computation/experiments/collatz_clock_tail_20261017b.py": "bb24cc72b9858ba9d2225c2cd75fcfd4e91eaad142cea9ad0cc186298dec5357",
+    "04-computation/experiments/collatz_compact_resets_20261015f.py": "eddab48a8a44e64c3c3724c7b2366a2b0e7df8ea6f0377ce5eb2ecee5088416e",
+    "04-computation/experiments/collatz_good_lambda_20261017c.py": "663ce5f48c195cf8ff17d307bd8546d27be27b5fcf9055ea20ac6443c8237ae5",
+    "04-computation/experiments/collatz_interval_atlas_20261016e.py": "3921dd71c47f386051f03d00190fb15d534b6a3b7e34da06ea7aeb5469f92901",
+    "04-computation/experiments/golden_boundary_20261017c.py": "f48f34b4ecb7037a509b4a64993eacef7b2985952b2424bd731ec62f74b728a5",
+    "04-computation/experiments/golden_boundary_circle_20261017c.py": "ad8eec9c39ed9973e0665891df23246239e3b3706b9e7e2857904b2da7736da4",
+    "04-computation/experiments/golden_boundary_search_20261017c.py": "dbdaa64c8b30a59ae905bb4936893dbf8bb70aa7878dbe1005dd064a133f7ab9",
+    "04-computation/experiments/golden_tail_20261017c/boundary.json": "51645454d303c6a8ea13d6bb7e200168377e2131a0facd7c892cfab35dd69c23",
+    "04-computation/experiments/golden_tail_20261017c/circle.json": "122a13612b289c31e3751d9cf08a21fe5b405f680842dd165c71abc0d1940ef8",
+    "04-computation/experiments/golden_tail_20261017c/quadratic.json": "ef9ec6d52c89116e040dd8a41f85313fe01d7461328bd16477de179d943a40d2",
+    "04-computation/experiments/golden_tail_20261017c/search.json": "8de2ca378550d35675158833a811313ef91bfe648a2129c3834eae0fe327ae1e",
+    "04-computation/experiments/golden_tail_20261017c/tails.json": "76cb5a340033ea6e0e658a5425854420af256831de60011a7fc03f7426155327",
+    "04-computation/experiments/golden_tail_20261017c/verify.json": "739342c60ce6660fa707259ccebbdfa1f80d81878ecaae05e33cf8cfb5f6bd3e",
+    "04-computation/experiments/golden_witness_verify_20261017c.py": "965ab42ab18c88fa14befdc7a4d96c7bf0a985968a85608531e84eae72498e6d",
+    "04-computation/experiments/graded_tail_carrier_20261017b/native18_20.json": "ec3b76187dfaaea77434febc068ccef41a0cdda81fc84de307b6484a02f78a5c",
+    "04-computation/experiments/graded_tail_carrier_20261017b/native22.json": "35034aad3ee939c522e9157d592a4470b4e9d16b9c7a666b479848cee1f77f44",
+    "04-computation/experiments/quadratic_context_20261017c.py": "f05517e27b973e4f3bccfcdd77b0a1dc4841718d3a02dd1c2b0368a2df2dcb26"
+  },
+  "independent_PARI_check": {
+    "command": "gp -fq; qfbclassno(-4*n) for n=7,8,11,15,19,21,37; nfdisc(x^3+2*x^2-4*x-4)",
+    "cubic_field_discriminant": 148,
+    "order_class_numbers": [
+      1,
+      2,
+      3,
+      2,
+      3,
+      4,
+      2
+    ],
+    "scope": "Independent PARI class-number/discriminant check, not a second class-group composition implementation."
+  },
+  "independent_residue_witness_replay": {
+    "case_counts": [
+      [
+        [
+          0,
+          1,
+          0,
+          2,
+          1,
+          2,
+          0,
+          2
+        ],
+        8
+      ],
+      [
+        [
+          0,
+          1,
+          2,
+          0,
+          2,
+          1,
+          2,
+          1
+        ],
+        16
+      ],
+      [
+        [
+          0,
+          1,
+          2,
+          1,
+          2,
+          1,
+          2,
+          1
+        ],
+        24
+      ],
+      [
+        [
+          0,
+          1,
+          2,
+          3,
+          2,
+          1,
+          2,
+          1
+        ],
+        32
+      ],
+      [
+        [
+          0,
+          1,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3
+        ],
+        32
+      ]
+    ],
+    "checks": 6300,
+    "status": "all570 complete positive field-boundary witnesses independently replayed"
+  },
+  "native_scope": "No new orbit census. Saved controllers retain the preceding packet full observed-edge clock-potential authentication.",
+  "normal_optimized_identical": {
+    "boundary.json": true,
+    "circle.json": true,
+    "quadratic.json": true,
+    "tails.json": true
+  },
+  "python": "3.10.0",
+  "status": "PROVED scoped and FINITE-EXACT; universal Collatz tail and six-colour forcing OPEN"
+}

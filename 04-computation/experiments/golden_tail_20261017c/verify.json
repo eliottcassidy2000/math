@@ -1,0 +1,1 @@
+{"case_counts": [[[0, 1, 0, 2, 1, 2, 0, 2], 8], [[0, 1, 2, 0, 2, 1, 2, 1], 16], [[0, 1, 2, 1, 2, 1, 2, 1], 24], [[0, 1, 2, 3, 2, 1, 2, 1], 32], [[0, 1, 2, 3, 2, 3, 2, 3], 32]], "checks": 6300, "status": "all570 complete positive field-boundary witnesses independently replayed"}
