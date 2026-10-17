@@ -2,6 +2,11 @@
 id: HYP-9285
 title: "Explicit formula for the Collatz parity sum: S(N) = sum_(n<=N) (-1)^tau(n) equals Re sum_rho c_rho N^rho over the zeros rho of D(s) = 1 + 2^(-s) + (3/2)^s/3 with 1/2 < Re rho < 1, up to a remainder of order sqrt(N) in mean square, with c_rho = 2 r_rho / rho for the residues r_rho of F(s) = sum t(n) n^(-s); the 28 zeros with 0.65 < Re rho < 1 and Im rho < 3000 predict S out of sample to about 2%, and the least-squares coefficients reproduce the conditionally certified residues"
 status: >
+  UPDATE 2026-10-17 (opus-2026-10-17-S39): batch certificates at N = 2^42 (exact block moments through 2^42,
+  collatz_pole_certificates_many_zeros_2p42_20261016.py/.json): of the 16 zeros with the largest boundary-residue
+  estimate relative to the radius model, 14 have certified nonzero residues under the budget (2, 0) and 4 under
+  (64, 16) (CONDITIONAL on the budgets; intervals rigorous given them); the two not certified are 0.998355 + 5787.79i
+  and the 1054/665 zero rho* (as expected; pre-registered at 2^43, R4).
   UPDATE 2026-10-16 (opus-2026-10-16-S38): THM-4660 proves the expansion CONDITIONALLY for the second Riesz mean under
   the square-root hypothesis (W) (weaker than every HYP-9283 budget); the unsmoothed statement here remains CONJECTURAL
   and needs vertical-line and horizontal bounds for G (S38 audit E4). THM-4659: the zeros near Re s = 1 are exactly the

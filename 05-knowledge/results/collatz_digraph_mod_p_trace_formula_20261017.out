@@ -1,0 +1,19 @@
+p =  5: trace formula holds for k <= 14; |<2,3>| =  4; tau_p = 2 = {2: 1}; nonconstant char. poly factor degrees [1, 1, 2]
+p =  7: trace formula holds for k <= 14; |<2,3>| =  6; tau_p = 6 = {2: 1, 3: 1}; nonconstant char. poly factor degrees [1, 1, 4]
+p = 11: trace formula holds for k <= 14; |<2,3>| = 10; tau_p = 96 = {2: 5, 3: 1}; nonconstant char. poly factor degrees [1, 1, 8]
+p = 13: trace formula holds for k <= 14; |<2,3>| = 12; tau_p = 288 = {2: 5, 3: 2}; nonconstant char. poly factor degrees [12]
+p = 17: trace formula holds for k <= 14; |<2,3>| = 16; tau_p = 3582 = {2: 1, 3: 2, 199: 1}; nonconstant char. poly factor degrees [1, 1, 14]
+p = 19: trace formula holds for k <= 14; |<2,3>| = 18; tau_p = 5994 = {2: 1, 3: 4, 37: 1}; nonconstant char. poly factor degrees [1, 1, 16]
+p = 23: trace formula holds for k <= 14; |<2,3>| = 11; tau_p = 203152 = {2: 4, 12697: 1}; nonconstant char. poly factor degrees [22]
+p = 29: trace formula holds for k <= 14; |<2,3>| = 28; tau_p = 9245138 = {2: 1, 7: 1, 660367: 1}; nonconstant char. poly factor degrees [1, 1, 26]
+p = 31: trace formula holds for k <= 14; |<2,3>| = 30; tau_p = 28426194 = {2: 1, 3: 3, 31: 1, 16981: 1}; nonconstant char. poly factor degrees [1, 1, 1, 27]
+p = 37: trace formula holds for k <= 14; |<2,3>| = 36; tau_p = 1607036580 = {2: 2, 3: 2, 5: 1, 8927981: 1}; nonconstant char. poly factor degrees [1, 1, 1, 1, 1, 1, 2, 28]
+p = 41: trace formula holds for k <= 14; |<2,3>| = 40; tau_p = 26259525600 = {2: 5, 3: 1, 5: 2, 7: 1, 11: 1, 142097: 1}; nonconstant char. poly factor degrees [1, 1, 1, 1, 1, 1, 4, 5, 25]
+p = 43: trace formula holds for k <= 14; |<2,3>| = 42; tau_p = 96090185166 = {2: 1, 3: 1, 16015030861: 1}; nonconstant char. poly factor degrees [1, 1, 40]
+
+cycle numerators c_w over words with 3^j = 2^k (mod p): fraction divisible by p vs 1/p, and the bound
+p =  5, rho_p = 1.6180: k=8: 24/72 = 0.3333 (bound on |N - B/p| 37.6); k=12: 263/992 = 0.2651 (bound on |N - B/p| 257.6); k=16: 3744/16512 = 0.2267 (bound on |N - B/p| 1765.6); k=20: 55352/261632 = 0.2116 (bound on |N - B/p| 12101.6)
+p =  7, rho_p = 1.4277: k=8: 10/70 = 0.1429 (bound on |N - B/p| 14.8); k=12: 130/926 = 0.1404 (bound on |N - B/p| 61.5); k=16: 1914/13110 = 0.1460 (bound on |N - B/p| 255.5); k=20: 28117/194446 = 0.1446 (bound on |N - B/p| 1061.5)
+p = 11, rho_p = 1.3384: k=8: 0/36 = 0.0000 (bound on |N - B/p| 9.4); k=12: 75/715 = 0.1049 (bound on |N - B/p| 30.0); k=16: 1232/13380 = 0.0921 (bound on |N - B/p| 96.4); k=20: 19492/215766 = 0.0903 (bound on |N - B/p| 309.3)
+p = 13, rho_p = 1.3385: k=8: 1/85 = 0.0118 (bound on |N - B/p| 9.5); k=12: 102/1366 = 0.0747 (bound on |N - B/p| 30.5); k=16: 1745/21845 = 0.0799 (bound on |N - B/p| 98.0); k=20: 26961/349525 = 0.0771 (bound on |N - B/p| 314.7)
+ALL CHECKS PASSED

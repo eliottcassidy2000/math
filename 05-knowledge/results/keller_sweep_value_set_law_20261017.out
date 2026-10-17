@@ -1,0 +1,25 @@
+d = 2, p =  61: fibre-size frequencies 0:0.3335 1:0.5079 2:0.0000 3:0.1586
+              S_3 fixed-point law     0:0.3333 1:0.5000 2:0.0000 3:0.1667
+              image density 0.6665 vs c_3 = 2/3 = 0.6667; fibres of size 2: 0
+d = 2, p = 101: fibre-size frequencies 0:0.3334 1:0.5049 2:0.0000 3:0.1617
+              S_3 fixed-point law     0:0.3333 1:0.5000 2:0.0000 3:0.1667
+              image density 0.6666 vs c_3 = 2/3 = 0.6667; fibres of size 2: 0
+d = 3, p =  61: fibre-size frequencies 0:0.3811 1:0.3279 2:0.2542 3:0.0000 4:0.0368
+              S_4 fixed-point law     0:0.3750 1:0.3333 2:0.2500 3:0.0000 4:0.0417
+              image density 0.6189 vs c_4 = 5/8 = 0.6250; fibres of size 3: 0
+d = 3, p = 101: fibre-size frequencies 0:0.3762 1:0.3366 2:0.2475 3:0.0000 4:0.0396
+              S_4 fixed-point law     0:0.3750 1:0.3333 2:0.2500 3:0.0000 4:0.0417
+              image density 0.6238 vs c_4 = 5/8 = 0.6250; fibres of size 3: 0
+d = 4, p =  61: fibre-size frequencies 0:0.3650 1:0.3894 2:0.1599 3:0.0771 4:0.0000 5:0.0086
+              S_5 fixed-point law     0:0.3667 1:0.3750 2:0.1667 3:0.0833 4:0.0000 5:0.0083
+              image density 0.6350 vs c_5 = 19/30 = 0.6333; fibres of size 4: 0
+d = 4, p = 101: fibre-size frequencies 0:0.3652 1:0.3847 2:0.1617 3:0.0801 4:0.0000 5:0.0083
+              S_5 fixed-point law     0:0.3667 1:0.3750 2:0.1667 3:0.0833 4:0.0000 5:0.0083
+              image density 0.6348 vs c_5 = 19/30 = 0.6333; fibres of size 4: 0
+d = 5, p =  61: fibre-size frequencies 0:0.3701 1:0.3709 2:0.1887 3:0.0484 4:0.0210 5:0.0000 6:0.0011
+              S_6 fixed-point law     0:0.3681 1:0.3667 2:0.1875 3:0.0556 4:0.0208 5:0.0000 6:0.0014
+              image density 0.6299 vs c_6 = 91/144 = 0.6319; fibres of size 5: 0
+d = 5, p = 101: fibre-size frequencies 0:0.3732 1:0.3611 2:0.1897 3:0.0561 4:0.0190 5:0.0000 6:0.0009
+              S_6 fixed-point law     0:0.3681 1:0.3667 2:0.1875 3:0.0556 4:0.0208 5:0.0000 6:0.0014
+              image density 0.6268 vs c_6 = 91/144 = 0.6319; fibres of size 5: 0
+ALL CHECKS PASSED

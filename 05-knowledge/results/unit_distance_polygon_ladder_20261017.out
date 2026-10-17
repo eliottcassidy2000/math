@@ -1,0 +1,56 @@
+weight-6 level-6 newform: a_2..a_7 = [4, -9, 16, -66, -36, 176] (T_5 eigenvalue -66, old eigenvalue 6)
+eta(z)^2 eta(2z)^2 eta(3z)^2 eta(6z)^2: a_2..a_7 = [-2, -3, 4, 6, 6, -16]
+level-15 CM coefficients = coefficients of (eta3 eta5)^3 + (eta1 eta15)^3 at every prime < 3001; differences at []
+
+1. closed forms of M_k(p) on all 428 primes 5 <= p <= 2999 (p >= 7 for k = 5): failures {1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 8: []}
+   seventh moment: S_7 + 1 divisible by p^2 for every p; implied |lambda_p|^2 in [0, 4p^2] fails at [] ; lambda_p = 0 at [11] (RANGE TEST ONLY: lambda_p is not computed independently)
+
+2. closed forms of W_k(p), k in {2,3,4,5,6,8}, agree with the moment formula on all primes; W_5: {7: 400, 11: 2520, 13: 2380, 17: 7920, 19: 7680}
+   p =  5: adjacency traces / p^2 = [0, 6, 12, 90, 366, 2220, 11886, 70602]  (= moment formula)
+   p =  7: adjacency traces / p^2 = [0, 8, 0, 168, 400, 6800, 36968, 370216]  (= moment formula)
+   p = 11: adjacency traces / p^2 = [0, 12, 24, 396, 2520, 30360, 312984, 3712044]  (= moment formula)
+   p = 13: adjacency traces / p^2 = [0, 14, 0, 546, 2380, 53900, 589848, 9035698]  (= moment formula)
+   p = 17: adjacency traces / p^2 = [0, 18, 36, 918, 7920, 142740, 2218860, 39455766]  (= moment formula)
+
+3. p =  5: 5-cycles in G_p by direct count 165, by the trace formula 165, closed form None
+
+3. p =  7: 5-cycles in G_p by direct count 1960, by the trace formula 1960, closed form 1960
+
+3. p = 11: 5-cycles in G_p by direct count 14520, by the trace formula 14520, closed form 14520
+
+3. p = 13: 5-cycles in G_p by direct count 40222, by the trace formula 40222, closed form 40222
+
+3b. p =  7: rooted hom(theta(2,2,3), G_p) = 704; 2W_5 + (p^2-1)W_3 - (p+1)(p+1-a_p(30a1)) = 704
+
+3b. p = 11: rooted hom(theta(2,2,3), G_p) = 7776; 2W_5 + (p^2-1)W_3 - (p+1)(p+1-a_p(30a1)) = 7776
+
+3b. p = 13: rooted hom(theta(2,2,3), G_p) = 4592; 2W_5 + (p^2-1)W_3 - (p+1)(p+1-a_p(30a1)) = 4592
+
+3b. p = 17: rooted hom(theta(2,2,3), G_p) = 25992; 2W_5 + (p^2-1)W_3 - (p+1)(p+1-a_p(30a1)) = 25992
+
+3b. p = 19: rooted hom(theta(2,2,3), G_p) = 14880; 2W_5 + (p^2-1)W_3 - (p+1)(p+1-a_p(30a1)) = 14880
+   four-bar count R_3(4) = p + 1 - a_p(30a1) for every prime 7 <= p < 400; failures: []
+   j(four-bar quartic) = 357911/2160 = j(30a1) = c4^3/Delta = 357911/2160
+   theta(2,2,2), theta(1,2,3), theta(1,3,3) polynomial and the theta(2,2,3) four-bar identity at every prime 7 <= p < 300 (radial Kloosterman evaluation, rounded); failures: []
+
+3c. four-bar family w^2 = Delta_c(t): 4I^3 - J^2 = 6912*c**2*(c - 9)*(c - 1)**3 ; j(c) = (c - 3)**3*(c**3 - 9*c**2 + 3*c - 3)**3/(c**2*(c - 9)*(c - 1)**3)
+   R_3(c) = #E_c(F_p) for every prime 7 <= p <= 101 and every c not in {0, 1, 9}: failures [] ; R_3(c) = 0 mod 6: failures []
+   sum_c a_p(E'_c) = -2 - 2(p/3) and sum_c a_p(E'_c)^2 = (p+1)(p-4) - b_p (b = eta1^2 eta2^2 eta3^2 eta6^2) at every prime 11 <= p < 400; failures: [] ; R_3(1) = 3p, R_3(9) = p + 1 - (p/3) for p <= 101
+
+4. q = 49: M_k(q) = [1, 2351, 2500, 227947, 718096, 28658090, 151801119, 4110000243]; closed forms with Frobenius-squared traces hold: {5: True, 6: True, 8: True, 3: True, 4: True, 2: True, 1: True}
+
+4. q = 121: M_k(q) = [1, 14519, 14884, 3498835, 10703056, 1090812458, 6241415104, 391460208171]; closed forms with Frobenius-squared traces hold: {5: True, 6: True, 8: True, 3: True, 4: True, 2: True, 1: True}
+
+4. q = 169: M_k(q) = [1, 28391, 28900, 9567427, 29104336, 4114382570, 23205956320, 2009849307387]; closed forms with Frobenius-squared traces hold: {5: True, 6: True, 8: True, 3: True, 4: True, 2: True, 1: True}
+
+5. level 15: Euler product L(3.5) = 1.01391324178, functional equation (eps = +1) gives 1.0139132416
+   int_0^oo x J0(x)^5 dx  (5-step planar walk density p5'(0)) = 0.32993380106006405904 ; 6 L(f15,1)/pi^2    = 0.32993380106006405904 ; |diff| = 1.29e-26
+   int_0^oo x J0(x)^5 dx  (Wick rotation)                     = 0.32993380106006405904 ; 30/pi^4 int t I0 K0^4 = 0.32993380106006405904 ; |diff| = 0.0
+   int_0^oo t I0 K0^4 dt                                      = 1.0712850554218076585 ; pi^2 L(f15,1)/5    = 1.0712850554218076585 ; |diff| = 2.58e-26
+   int_0^oo t I0^2 K0^3 dt                                    = 0.66034486901867235784 ; 3 L(f15,2)/4       = 0.66034486901867235784 ; |diff| = 2.58e-26
+   L(f15,1)/L(f15,2)                                          = 0.61640444406149980556 ; sqrt(15)/(2 pi)    = 0.61640444406149980556 ; |diff| = 0.0
+   int_0^oo t I0 K0^5 dt                                      = 2.5153201188706613829 ; pi^2 L(f6,2)/2     = 2.5153201188706613829 ; |diff| = 1.03e-25
+   int_0^oo t I0^2 K0^4 dt                                    = 1.0936701863501838893 ; pi^2 L(f6,1)/2     = 1.0936701863501838893 ; |diff| = 5.17e-26
+   int_0^oo t I0^2 K0^4 dt                                    = 1.0936701863501838893 ; 3 L(f6,3)/2        = 1.0936701863501838893 ; |diff| = 0.0
+
+ALL CHECKS PASSED
