@@ -59,7 +59,7 @@ For `q = 49, 121, 169` the same formulas hold with Frobenius-squared traces.
 
 ## 3. Pentagons and hexagons (THM-4663 statements 4, 5; PROVED given §2)
 
-* `C_5(G_p) = p^2 (p + 1)(p^2 + 1 - (1 - (p/3))p - a_p)/10` (`p ≥ 7`): 1960 pentagons in the 7 x 7 knight torus,
+* `C_5(G_p) = p^2 (p + 1)(p^2 + 1 - (1 - (p/3))p - a_p)/10` (`p ≥ 5`): 1960 pentagons in the 7 x 7 knight torus,
   14520 in `G_11`, 40222 in `G_13`, all confirmed by search.
 * `C_6(G_p) = p^2 (p^4 + p^2 + 2p - (p + 1) b_p - 2(1 - (p/3))(p + 1)(3p - 4))/12` (`p ≥ 5`). The derivation classifies
   closed 6-walks by free reduction (tree-like walks; 4-cycles with an inserted backtrack; lollipops; for
@@ -81,8 +81,12 @@ More generally (PROVED by a two-line character sum): for `c ∉ {0, 1, 9}`, `R_3
 `E'_c : y^2 = (t^2 - 4c)(t - c - 1)(t - c + 3)`. The family is semistable with fibres `I_1, I_6, I_2, I_3` at
 `c = 0, 1, 9, ∞`, i.e. Beauville's elliptic modular surface of `Γ_1(6)`; the linkage's own configuration curve is
 the same surface with the cusps permuted (fibres `I_2, I_3, I_1, I_6`; equal point counts at every prime
-`7 ≤ p ≤ 101` and every `c`), and `R_3(c) ≡ 0 (mod 6)`. The singular lengths `0, 1, 3` are exactly the singular
-points of the planar three-step walk density `p_3(x)` (Borwein–Straub–Wan–Zudilin; CITED from memory). So:
+`7 ≤ p ≤ 101` and every `c`; precisely, the linkage curve is 2-isogenous to `E'_c`), and `6 | R_3(c)` (PROVED: explicit
+points of order 2 and 3). At the real place the same curve carries the planar three-step walk:
+**`p_3(r) = (2/π^2) r Ω(r^2)`**, with `Ω(c)` the real period of `E'_c` (PROVED by convolving the two-step arcsine
+density with one step; 22 digits at seven radii against the Borwein–Straub–Wan–Zudilin closed form). The point count of
+`E'_c` over `F_p` is the number of 3-step walks between points at squared distance `c` in `G_p`; its real period is
+the density of 3-step walks ending at distance `sqrt c` in `R^2`. So:
 
 * **closed chains** (polygons) are governed by the Kloosterman motives `Sym^k Kl_2`;
 * **open three-chains** with prescribed endpoints are governed by the four-bar surface, the `Γ_1(6)` family;
@@ -95,8 +99,11 @@ points of the planar three-step walk density `p_3(x)` (Borwein–Straub–Wan–
   pairs of unit steps, statement 2) gives `Σ_c η(c(c-4)) a_c = -1 - (p/3) - (-15/p) - (p/3)p - a_p(f_(3,15))`
   (THM-4663 (10), from `W_5 = Σ_d R_2(d) R_3(d)`). Reading: closed pentagons are a 2-chain and a 3-chain with a common
   endpoint, the 2-chains live on the conic `s^2 = c(c - 4)`, and the base change of the four-bar surface along that
-  conic is a K3 surface (Euler number 24) whose transcendental part has CM by `Q(sqrt(-15))`: the geometric origin
-  of the CM form in the Kloosterman fifth moment, consistent with Peters–Top–van der Vlugt's K3.
+  conic is a K3 surface (Euler number 24) whose transcendental Frobenius trace is `+a_p(f_(3,15))` (computed directly
+  by the audit), CM by `Q(sqrt(-15))`: the geometric origin of the CM form in the Kloosterman fifth moment, consistent
+  with Peters–Top–van der Vlugt's K3;
+* the third moment is modular of weight 5: `Σ_c a_c^3 = -(1 + (p/3))(4p + 2) - tr(T_p | S_5(Γ_0(6), (-3/·)))` (found by
+  the audit; Eichler–Shimura–Deligne for `X_1(6)`).
 
 This is the HN analogue of the Paley run ladder's cores: there too, the first patterns beyond the wheels needed a new
 modular input.
@@ -130,9 +137,8 @@ four-bar data improve either bound.
 
 * The seventh rung independently (coefficients of the level-525 form), heptagon and octagon cycle counts.
 * `R_4(c)`: open four-chains (five-bar linkages) are surfaces; which motive?
-* The theta moments `θ(2,3,3) = Σ R_2 R_3^2` (the `η(c(c-4))`-twisted second moment of the `Γ_1(6)` family) and
-  `θ(3,3,3) = Σ R_3^3` (its third moment): neither is a polynomial plus at most two of seven candidate forms of
-  levels 5-16 at 121 primes (S39); identification OPEN (HYP-9286(b)).
+* `θ(2,3,3) = Σ R_2 R_3^2`, the `η(c(c-4))`-twisted second moment of the `Γ_1(6)` family: on a 6-dimensional weight-3
+  space, OPEN (HYP-9286(b)); `θ(3,3,3)` is settled by the third moment above.
 * Does any four-bar fibre with rational `c` carry an HN-relevant forced angle (as EI19's do)?
 
 ## Reproduction

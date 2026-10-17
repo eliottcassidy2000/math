@@ -119,7 +119,7 @@ every genus-one obstruction with an even-degree divisor:
 |---|---|---|
 | EI19 (19 vertices, rigid) | excluded: forced `sqrt(-2)`, `sqrt(-35)` | excluded from every odd-degree extension of `L`, including `L'` (also certified at `p = 661`) |
 | fish (23 vertices, one-parameter) | needed `C3(F_4) != empty` (fish note (5)); **now EXCLUDED (THM-4662)** | needs the same condition in any conjugation-stable odd-degree `M ⊇ K`, hence **EXCLUDED** |
-| EI17 (17 vertices, rigid) | excluded to coordinate height `1e63`; field OPEN | OPEN |
+| EI17 (17 vertices, rigid) | excluded to coordinate height `1e63`; field OPEN; S39 (THM-4665): no good reduction at the primes above 46 split or conjugation-fixed primes of `L` | OPEN |
 | EI21 (21 vertices, one-parameter) | OPEN in S24 (117-unit scan); carries the fish's `C3` (THM-4661 4(c)); **now EXCLUDED (THM-4662)** | **EXCLUDED** from every conjugation-stable odd-degree carrier over `K` |
 
 The fish argument is the fish note's own: a point of `C3` over a field of odd degree over `F_4`, together with the

@@ -1,0 +1,11 @@
+cuspidal eta quotients of weight 5, level 6, character (-3/.): [(-1, 8, 3, 0), (0, 3, 8, -1), (3, 0, -1, 8), (8, -1, 0, 3)]
+dimension of their span: 2
+T_7 characteristic polynomial on the span: (lambda - 26)**2
+eigenform (T_7 = 26): a_2..a_13 = [1, -6, -8, 6, 21, 26, -8, -45, -48, -42, 48, 50]
+eigenform (T_7 = 26): a_2..a_13 = [0, -3, -8, 0, 24, 26, 0, -63, -48, 0, 24, 50]
+NOTE: T_7 acts as the scalar 26 on this 2-dim space, so the vectors above are NOT Hecke eigenforms; the
+comparison below uses the trace of T_p on the space, which needs no eigenbasis.
+
+t_p = trace(T_p | S_5(Gamma_0(6), (-3/.))) at every prime 11 <= p < 700: failures []
+  trace(T_p) for p = 5, 7, 11, 13, 17, 19: [0, 52, 0, 100, 0, -716]
+  so sum_c a_c^3 = -(1 + (p/3))(4p + 2) - tr(T_p | S_5(Gamma_1(6))) (FINITE-EXACT, 11 <= p < 700)

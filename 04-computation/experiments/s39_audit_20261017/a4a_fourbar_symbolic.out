@@ -1,0 +1,37 @@
+E'_c: I = (c + 3)*(c**3 - 15*c**2 + 75*c + 3), deg I = 4, deg J = 6;  4I^3 - J^2 = 6912*c*(c - 9)**2*(c - 1)**6 (degree 9, so ord_oo Delta = 3)
+    j = (c + 3)**3*(c**3 - 15*c**2 + 75*c + 3)**3/(c*(c - 9)**2*(c - 1)**6)
+    c = 0: ord Delta = 1, I(c) = 9 -> I_1
+    c = 1: ord Delta = 6, I(c) = 256 -> I_6
+    c = 9: ord Delta = 2, I(c) = 2304 -> I_2
+    c = oo: ord Delta = 3, deg I = 4 -> I_3
+L_c (linkage): I = (c - 3)*(c**3 - 9*c**2 + 3*c - 3), deg I = 4, deg J = 6;  4I^3 - J^2 = 6912*c**2*(c - 9)*(c - 1)**3 (degree 6, so ord_oo Delta = 6)
+    j = (c - 3)**3*(c**3 - 9*c**2 + 3*c - 3)**3/(c**2*(c - 9)*(c - 1)**3)
+    c = 0: ord Delta = 2, I(c) = 9 -> I_2
+    c = 1: ord Delta = 3, I(c) = 16 -> I_3
+    c = 9: ord Delta = 1, I(c) = 144 -> I_1
+    c = oo: ord Delta = 6, deg I = 4 -> I_6
+
+Phi_2(j(E'_c), j(L_c)) = 0  (0: the two families are 2-isogenous over Qbar(c))
+j(L_c) - j(E'_(sigma(c))), sigma(c) = (c-9)/(c-1): 0
+j(L_c) - j(E'_c): nonzero (not isomorphic over Qbar(c) at the same c)
+
+E'_c: Weierstrass Y^2 = X^3 + ((c + 3)**2) X^2 + (8*(c - 1)**2*(c + 3)) X + (16*(c - 1)**4)
+    the image of a point at infinity of the quartic, P = (0, A), has order 3 over Q(c); 3P = None, T2 = (-c**2 + 2*c - 1, 0)
+
+L_c: no rational root over Q(c) used; torsion read from point counts in a4b
+
+30a1: c4 = -71, c6 = -1837, Delta = -2160 = {2: 4, 3: 3, 5: 1, -1: 1}, j = 357911/2160 = {71: 3, -1: 1}
+four-bar quartic t^4 - 6t^3 - 5t^2 - 6t + 1: I = -71, J = -3674, (4I^3 - J^2)/27 = -552960 = {2: 12, 3: 3, 5: 1, -1: 1}, j = 357911/2160
+L_4 is that quartic: True
+twist witnesses (D: least prime with (D/p) = -1, a_p != 0): {-1: 7, 2: 13, -2: 7, 3: 7, -3: 17, 5: 7, -5: 13, 6: 7, -6: 13, 10: 7, -10: 17, 15: 13, -15: 7, 30: 31, -30: 7}
+
+plane cubic: Groebner basis of (F, F_u, F_v) over Q = [1]
+  integer resultant (affine singular points possible only mod its primes): {0: 1}
+  point at infinity (1:0:0): gradient [0, 2, -1]
+  point at infinity (0:1:0): gradient [2, 0, -1]
+  point at infinity (1:-1:0): gradient [-2, -2, 3]
+  p = 3: iota-fixed points (u_i = +-1, sum 2): [(1, -1, -1), (-1, 1, -1), (-1, -1, 1)]
+  p = 5: iota-fixed points (u_i = +-1, sum 2): [(-1, -1, -1)]
+  p = 7: iota-fixed points (u_i = +-1, sum 2): []
+  p = 11: iota-fixed points (u_i = +-1, sum 2): []
+DONE

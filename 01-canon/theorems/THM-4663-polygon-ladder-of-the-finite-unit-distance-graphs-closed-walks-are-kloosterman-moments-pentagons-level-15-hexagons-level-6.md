@@ -3,20 +3,29 @@ id: THM-4663
 title: "The polygon ladder of the finite unit-distance graphs G_q = Cay(F_(q^2), mu_(q+1)): the closed k-walks are Kloosterman moments; W_2 = q+1, W_3 = (q+1)(1-(q/3)), W_4 = 3q(q+1); for primes p, W_5 = (p+1)(p^2 + 4(1-(p/3))p + 1 - a_p) with a_p the weight-3 CM newform of Q(sqrt-15) = (eta3 eta5)^3 + (eta1 eta15)^3, W_6 = p^4 + 11p^3 + 10p^2 + p + 1 - (p+1)b_p with b = (eta1 eta2 eta3 eta6)^2, W_8 with b and the weight-6 level-6 newform; the pentagons and hexagons of G_p in closed form; the same two forms carry the five- and six-Bessel moments of planar unit random walks; the first non-moment pattern, theta(2,2,3), is governed by the four-bar linkage curve 30a1, and the three-step walk counts R_3(c) are the point counts of the elliptic modular surface of Gamma_1(6) (four-bar linkages with sides 1, 1, 1, sqrt c)"
 status: >
   PROVED: statement 1 (spectral decomposition; the eigenvalue identity of THM-4628), statement 2 (direct counts: the
-  cube-root-of-unity criterion for triangles and the codegree lemma), statement 4 and statement 5 given statement 3
-  (closed-walk decompositions by free reduction; elementary, verified by direct cycle counts), statements 8 and 9 (the
-  theta identity; R_3(c) = #E'_c(F_p) by a two-line character sum; the Gamma_1(6) naming by the fibre types, given
-  Beauville's classification of semistable rational elliptic surfaces with four singular fibres, CITED). FINITE-EXACT: statement 3
-  (the closed forms of M_5, M_6, M_8 at every prime 5 <= p <= 2999 from exact moments computed by the Chinese remainder
-  theorem; the seventh-moment statement is a range test only), statement 6 (q = 49, 121, 169), the direct checks
-  (adjacency traces for p <= 17, pentagons by search for p <= 13, hexagons by search for every prime p <= 83).
-  CITED (Broadhurst, arXiv:1604.03057, section 5, read 2026-10-17): the modularity of the Kloosterman moments for
-  k = 5 (Peters, Top, van der Vlugt), k = 6 (Hulek, Spandaw, van Geemen, van Straten), k = 7 (conjectured by Evans,
-  proved by Yun with Vincent; quartic nebentypus of conductor 105, c_7(p) = (p/105)(|lambda_p|^2 - p^2)) and k = 8
-  (Yun); the Bessel-moment L-value identities (Bailey-Borwein-Glasser with Rogers-Wan-Zucker; Bloch-Kerr-Vanhove with
-  Samart). Our exact polynomial parts were found by fitting on inert primes and then verified on all primes; that
-  they coincide with the cited normalisations is checked only through Broadhurst's statements A_5(p) = c_5(p),
-  A_6(p) = c_6(p). NUMERICAL (25 digits): statement 7.
+  cube-root-of-unity criterion for triangles and the codegree lemma), statements 4 and 5 given statement 3 (closed-walk
+  decompositions by free reduction), statement 8 (the theta identity; the four-bar curve is 30a1 by j, discriminant and
+  twist exclusion), statement 9 (R_3(c) = #E'_c(F_p) by a two-line character sum; the Gamma_1(6) naming by the fibre
+  types, given Beauville's classification, CITED; 6 | R_3(c) by explicit torsion points; the real-place identity
+  p_3(r) = (2/pi^2) r Omega(r^2) by convolving the two-step arcsine density with one step), statement 10 (the first
+  and twisted first moments given statement 3's W_5; the second and third moments by Eichler-Shimura-Deligne for the
+  universal curve over X_1(6), CITED: S_4(Gamma_1(6)) is spanned by the hexagon form and S_5(Gamma_1(6)) =
+  S_5(Gamma_0(6), (-3/.)); the third-moment identity was found by the independent audit). Run backwards through
+  W_6 = sum_d R_3(d)^2, the second moment makes the M_6 closed form, W_6 and the hexagon count of statements 3 and 5
+  hold for every prime p >= 5 without citing Hulek-Spandaw-van Geemen-van Straten.
+  FINITE-EXACT: statement 3 for M_5 and M_8 (every prime 5 <= p <= 2999, exact moments by the Chinese remainder theorem;
+  the seventh-moment statement is a range test only); statement 6 (q = 49, 121, 169; exact walk counts in F_(p^4) by
+  the audit, a5); the theta identities and R_3 checks (exact for p < 200 by the audit, a4b; the session's scripts use
+  rounded floating-point character sums); adjacency traces p <= 17, pentagons by search p <= 59, hexagons p <= 83.
+  CITED (Broadhurst, arXiv:1604.03057, sections 5 and 7, read 2026-10-17): the modularity of the Kloosterman moments for
+  k = 5 (Peters, Top, van der Vlugt), k = 6 (Hulek, Spandaw, van Geemen, van Straten), k = 7 (conjectured by Evans and
+  Stein, proved by Yun with Vincent; quartic nebentypus, level 525, Hecke field Q(sqrt-1, sqrt6, sqrt14),
+  c_7(p) = (p/105)(|lambda_p|^2 - p^2)) and k = 8 (Yun); the five-Bessel identities (Bailey-Borwein-Glasser with
+  Rogers-Wan-Zucker; Bloch-Kerr-Vanhove with Samart); the two level-6 Bessel identities are Broadhurst's conjectures
+  (eqs. 121-122, checked there to 1000 digits). NUMERICAL (25 digits): the remaining identities of statement 7
+  (int x J_0^5 = p_5'(0) = p_4(1) does not appear in Broadhurst). Independently audited 2026-10-17
+  (04-computation/experiments/s39_audit_20261017/REPORT.md; MISTAKE-624: the K3 sign, the R_3(1) arithmetic, citation
+  details).
 session: opus-2026-10-17-S39
 source: 05-knowledge/results/unit_distance_polygon_ladder_20261017.md
 scripts:
@@ -58,8 +67,8 @@ trace to `F_p`), `M_k(q) = Σ_(a ∈ F_q^×) K_q(a)^k`. `W_k(q)` is the number o
 2. **(Elementary rungs, PROVED.)** `W_2 = q + 1`, `W_3 = (q + 1)(1 - (q/3))`, `W_4 = 3q(q + 1)`. The common
    neighbours of two vertices at difference `d ≠ 0` number `1 - η(N(d)(N(d) - 4))` (`η` the quadratic character of
    `F_q`, `η(0) = 0`); in particular adjacent vertices have `1 - (q/3)` common neighbours (char `≠ 3`).
-3. **(Modular rungs, FINITE-EXACT for every prime 5 ≤ p ≤ 2999; CITED modularity.)**
-   `M_5 = 4(p/3)p^3 + 5p^2 + 4p + 1 + p^2 a_p` (p ≥ 7),
+3. **(Modular rungs, FINITE-EXACT for every prime 5 ≤ p ≤ 2999; CITED modularity; `M_6` PROVED for all `p ≥ 5` via 10.)**
+   `M_5 = 4(p/3)p^3 + 5p^2 + 4p + 1 + p^2 a_p`,
    `M_6 = 5p^4 - 10p^3 - 9p^2 - 5p - 1 - p^2 b_p`,
    `M_8 = 14p^5 - 35p^4 - 28p^3 - 20p^2 - 7p - 1 - 7p^3 b_p - p^2 d_p`. Hence
    `W_5 = (p+1)(p^2 + 4(1 - (p/3))p + 1 - a_p)`, `W_6 = p^4 + 11p^3 + 10p^2 + p + 1 - (p+1) b_p`,
@@ -68,7 +77,7 @@ trace to `F_p`), `M_k(q) = Σ_(a ∈ F_q^×) K_q(a)^k`. `W_k(q)` is the number o
    `S_4 = -1 - p^2`, `S_5 = -1 - p^2 a_p`, `S_6 = -1 - p^2 b_p`, `S_8 = -1 - p^4 - p^2 d_p`; and
    `S_7 = -1 - p^2 c_7(p)` with `p^2 | S_7 + 1` at every prime and `|λ_p|^2 := p^2 + (p/105) c_7(p) ∈ [0, 4p^2]`
    at every prime `11 ≤ p ≤ 2999` (a necessary condition for the cited Evans-Yun form; `λ_p` is not computed here).
-4. **(Pentagons, PROVED given 3.)** For primes `p ≥ 7`,
+4. **(Pentagons, PROVED given 3.)** For primes `p ≥ 5`,
    `C_5(G_p) = p^2 (p+1) (p^2 + 1 - (1 - (p/3)) p - a_p) / 10`. (The non-simple closed 5-walks per vertex number
    `10p(p+1)` when `p ≡ 2 (mod 3)` and none otherwise.) For `p = 7`, the 7 x 7 knight torus (THM-4552) has 1960
    pentagons.
@@ -83,7 +92,9 @@ trace to `F_p`), `M_k(q) = Σ_(a ∈ F_q^×) K_q(a)^k`. `W_k(q)` is the number o
    `p_5'(0)` of the five-step planar unit random walk at the origin);
    `∫ t I_0 K_0^4 dt = π^2 L_15(1)/5` (Broadhurst eq. 105; proved by Bloch-Kerr-Vanhove with Samart),
    `∫ t I_0^2 K_0^3 dt = 3 L_15(2)/4` (Broadhurst eq. 104; Bailey-Borwein-Glasser with Rogers-Wan-Zucker),
-   `∫ t I_0 K_0^5 dt = π^2 L_6(2)/2`, `∫ t I_0^2 K_0^4 dt = π^2 L_6(1)/2 = 3 L_6(3)/2`.
+   `∫ t I_0 K_0^5 dt = π^2 L_6(2)/2`, `∫ t I_0^2 K_0^4 dt = π^2 L_6(1)/2 = 3 L_6(3)/2` (Broadhurst's conjectures, eqs. 121-122,
+   checked there to 1000 digits). `∫ x J_0^5` and `p_5'(0)` do not appear in Broadhurst; `p_5'(0) = p_4(1)` (the audit computed
+   it without Bessel functions, agreeing to `7.6·10^(-24)`).
 
 8. **(The first core: the four-bar linkage curve, PROVED + FINITE-EXACT.)** The rooted homomorphism count of the
    theta graph `θ(2,2,3)` (two vertices joined by paths of lengths 2, 2, 3; cycles of lengths 4, 5, 5) is
@@ -91,7 +102,7 @@ trace to `F_p`), `M_k(q) = Σ_(a ∈ F_q^×) K_q(a)^k`. `W_k(q)` is the number o
    counts the configurations of the planar four-bar linkage with sides `1, 1, 1, 2`, and for every prime `p ≥ 7`
    `R_3(4) = p + 1 - a_p(E)` with `E` the elliptic curve 30a1, `y^2 + xy + y = x^3 + x + 2`
    (`j = 71^3/(2^4·3^3·5)`). So `θ(2,2,3)` is not expressible through the Kloosterman symmetric powers alone (no fit
-   by polynomials in `p, (p/3)` plus `a_p, b_p` terms at 106 primes below 600), while `θ(2,2,2)`
+   by polynomials in `p, (p/3)` plus `a_p, b_p` terms at 106 primes below 600: a session run, not in the committed script), while `θ(2,2,2)`
    (`p^3 + 7p^2 + 4p - 2`), `θ(1,2,3)` (`3(1 - (p/3))p(p+1)`) and `θ(1,3,3)` (`9p^2(p+1)`) are polynomial
    (FINITE-EXACT, every prime 7 <= p < 300 in the script; below 600 in the session's run).
 9. **(Open three-chains: the Gamma_1(6) surface, PROVED + FINITE-EXACT.)** For `c ∈ F_p^×`, `c ∉ {1, 9}`, let
@@ -102,12 +113,20 @@ trace to `F_p`), `M_k(q) = Σ_(a ∈ F_q^×) K_q(a)^k`. `W_k(q)` is the number o
 
    The family `E'_c` over the `c`-line is semistable with fibres `I_1, I_6, I_2, I_3` at `c = 0, 1, 9, ∞`
    (`j = (c+3)^3 (c^3 - 15c^2 + 75c + 3)^3 / (c (c-9)^2 (c-1)^6)`), hence the elliptic modular surface of `Γ_1(6)`
-   (Beauville, CITED). The linkage's own configuration curve `w^2 = (t^2 + (1+c)t + 1)^2 - 4ct(t+1)^2` (the
-   model of statement 8, `j = (c-3)^3 (c^3 - 9c^2 + 3c - 3)^3 / (c^2 (c-9)(c-1)^3)`, fibres `I_2, I_3, I_1, I_6`) is
-   the same surface with the cusps permuted; the two have equal point counts at every prime `7 ≤ p ≤ 101` and
-   every `c` (FINITE-EXACT), and `R_3(c) ≡ 0 (mod 6)` there (the rational 6-torsion of `Γ_1(6)`). The singular
-   lengths `sqrt c ∈ {0, 1, 3}` are the singularities of the planar three-step walk density `p_3` (Borwein,
-   Straub, Wan, Zudilin 2012, CITED from memory): the same surface at the real place.
+   (Beauville, CITED). The linkage's own configuration curve `L_c : w^2 = (t^2 + (1+c)t + 1)^2 - 4ct(t+1)^2` (the model
+   of statement 8, `j = (c-3)^3 (c^3 - 9c^2 + 3c - 3)^3 / (c^2 (c-9)(c-1)^3)`, fibres `I_2, I_3, I_1, I_6`) is 2-isogenous
+   to `E'_c` (the modular polynomial `Φ_2(j(L_c), j(E'_c))` vanishes identically), which explains the equal point counts
+   at the same `c`; separately `L_c ≅ E'_(σ(c))` over `Qbar(c)`, `σ(c) = (c - 9)/(c - 1)`, which exchanges the cusps
+   `0 ↔ 9`, `1 ↔ ∞`, with `a_p(L_c) = a_p(E'_(σ(c)))` (no twist; 984 checks by the audit). **`6 | R_3(c)` (PROVED):** on
+   `Y^2 = X^3 + (c+3)^2 X^2 + 8(c-1)^2 (c+3) X + 16 (c-1)^4` (a model of `E'_c`) the point `(0, 4(c-1)^2)` has order 3 and
+   `(-(c-1)^2, 0)` order 2. **At the real place (PROVED)** the same curve carries the planar three-step walk:
+   `p_3(r) = (2/π^2) r Ω(r^2)` for `0 < r < 3`, `r ≠ 1`, where `Ω(c) = ∫ dt/sqrt(Q(t))` over the bounded real interval
+   with `Q > 0`: convolve the two-step arcsine density with one unit step and substitute `t = r^2 + 1 - s^2`, which turns
+   the radicand into `Q_c(t)` on exactly that interval (audit, a6). Numerically it matches the Borwein-Straub-Wan-Zudilin
+   closed form `p_3(r) = (2 sqrt3/π) r/(3 + r^2) 2F1(1/3, 2/3; 1; r^2 (9-r^2)^2/(3+r^2)^3)` to 22 digits at seven radii
+   (audit) and to about `6·10^(-16)` in the committed script; the singular lengths `0, 1, 3` are the cusps
+   `c = 0, 1, 9`. (The three-Bessel sunset family is the universal curve over `X_1(6)` (Bloch-Vanhove): this statement
+   is its finite-field shadow.)
 10. **(Moments of the four-bar family, PROVED given 3 and 9.)** With `a_c = a_p(E'_c)` and the sums over
    `c ∈ F_p \ {0, 1, 9}`: `R_3(1) = 3p`, `R_3(9) = p + 1 - (p/3)`, `Σ_c a_c = -2 - 2(p/3)` and
 
@@ -115,18 +134,23 @@ trace to `F_p`), `M_k(q) = Σ_(a ∈ F_q^×) K_q(a)^k`. `W_k(q)` is the number o
 
    the hexagon form of statement 3 (`b` = `η(z)^2 η(2z)^2 η(3z)^2 η(6z)^2`). So the Frobenius trace on the middle
    cohomology of the self fibre product of the four-bar surface is the weight-4 level-6 form that counts the
-   closed equilateral hexagons (consistent with the modularity of rigid Calabi-Yau fibre products of semistable
-   rational elliptic surfaces, Schoen; CITED from memory). FINITE-EXACT check at every prime `11 ≤ p < 400` (script;
+   closed equilateral hexagons (Schoen's fibre-product construction; the identity is Eichler-Shimura for `X_1(6)`,
+   whose weight-4 cusp space is spanned by `b`, or Gouvea-Yui for rigid Calabi-Yau threefolds over `Q`). FINITE-EXACT check at every prime `11 ≤ p < 400` (script;
    below 1000 in the session's run). Twisted by the codegree character `η(c(c - 4))` (the conic `s^2 = c(c - 4)`):
 
        Σ_c η(c(c-4)) = -1 - (p/3) - (5/p),    Σ_c η(c(c-4)) a_c = -1 - (p/3) - (-15/p) - (p/3) p - a_p(f_(3,15)),
 
    so the pentagon form is the twisted first moment of the four-bar surface: reading, the degree-2 base change of the
    `Γ_1(6)` surface along `s^2 = c(c - 4)` (branched at the `I_1` fibre `c = 0` and the smooth fibre `c = 4`, Euler number
-   24) is a K3 surface whose transcendental Frobenius trace is `-a_p(f_(3,15))`, CM by `Q(sqrt(-15))`, matching the
-   Peters-Top-van der Vlugt K3 behind the fifth Kloosterman moment. The twisted second moment (needed by `θ(2,3,3)`)
-   and the third moment (`θ(3,3,3)`) are not polynomials plus any two of the forms `6.4.a.a`, `8.4.a.a`,
-   `η(3z)^8`, `(η(z)η(5z))^4`, `η(2z)^3η(6z)^3`, `η(4z)^6`, `f_(3,15)` at 121 primes below 700: OPEN (HYP-9286(b)).
+   24, rank-19 trivial lattice) is a K3 surface whose transcendental Frobenius trace is `+a_p(f_(3,15))` (the
+   3-dimensional piece of `H^2` has trace `(p/3)p + a_p`, computed directly by the audit at 121 primes; Picard number
+   20), CM by `Q(sqrt(-15))`, matching the Peters-Top-van der Vlugt K3 behind the fifth Kloosterman moment.
+   **Third moment (PROVED by Eichler-Shimura-Deligne; found by the audit):**
+
+       Σ_c a_c^3 = -(1 + (p/3))(4p + 2) - tr(T_p | S_5(Γ_0(6), (-3/·)))      (S_5(Γ_1(6)), dimension 2),
+
+   exact at every prime `11 ≤ p < 700` (needed by `θ(3,3,3)`). The twisted second moment (needed by `θ(2,3,3)`) lives on a
+   6-dimensional weight-3 space (observed size up to `2.92 p^(3/2)`); OPEN (HYP-9286(b)).
 
 ## Proof
 
@@ -163,8 +187,9 @@ two `x`-neighbours avoid the start), here `(q+1)(2q - 2)`; with `2(q+1)` directe
 (c) reduced of length 6 other than a 6-cycle: lollipops (stem `vx`, a 4-cycle at `x` with neither `x`-neighbour equal
 to `v`; every edge lies in `q - 1` four-cycles by arc-transitivity), `(q+1)(q-1)^2`; and, when `q ≡ 2 (mod 3)`, a
 triangle traversed twice and figure-eights of two triangles at `v` (together `4q(q+1)`: reduced concatenations of two
-directed triangle walks at `v`), figure-eights at another vertex `u` of the first triangle (`8(q+1)(q-1)`: two split
-points, `2q - 2` admissible second triangles), less the `8(q+1)` walks counted twice (per directed triangle at `v`: one
+directed triangle walks at `v`), figure-eights at another vertex `u` of the first triangle (`8(q+1)(q-1)`: at each of the two split
+points `2q - 1` second triangles keep the walk reduced, and the continuation of the first triangle gives the doubled
+triangle already counted in the `4q(q+1)` family, leaving `2q - 2`), less the `8(q+1)` walks counted twice (per directed triangle at `v`: one
 walk with the second triangle on the shared edge `xy` read from both split points, two walks that are also
 figure-eights at `v`; and per stem, the two traversals of the 4-cycle `x z v z'` through the common neighbours, which
 are also figure-eights at `v`). Summing gives `D(p)`; `C_6 = q^2 (W_6 - D)/12`. Direct counts agree for all 21 primes
@@ -177,8 +202,9 @@ curve: `u_1 + u_2 + u_3 = 2` together with its conjugate `Σ 1/u_i = 2` (since `
 `X : e_1 = 2, e_2 = 2 e_3` in `G_m^3`; eliminating `u_3` gives the plane cubic
 `2u^2 v + 2u v^2 - u^2 - 5uv - v^2 + 2u + 2v = 0`, and the lines `v = tu` through `(0,0)` give the quartic model
 `w^2 = t^4 - 6t^3 - 5t^2 - 6t + 1` with invariants `I = -71`, `J = -3674`, `j = 6912 I^3/(4I^3 - J^2) = 71^3/2160` and
-discriminant `-2^12·3^3·5`. So the curve is a twist of 30a1 (same `j`) by some `D | 30`, and the equality of `a_p` at
-every prime `7 ≤ p ≤ 139` excludes each nontrivial `D`. `R_3(4)` counts the points of the twisted form
+discriminant `-2^12·3^3·5`. So the curve is a quadratic twist of 30a1 (same `j`) by a squarefree `D` with `|D|` dividing 30, of either sign, and
+the equality of `a_p` at every prime `7 ≤ p ≤ 139` excludes each of the 15 nontrivial `D` (witnesses below 31). The
+involution `ι` has a fixed point at `p = 5`, so `p ≥ 7` is needed here. `R_3(4)` counts the points of the twisted form
 `{x : Frob(x) = ι(x)}`, `ι(u) = 1/u`. The involution `ι` has no fixed points (`u_i = ±1` cannot sum to 2, and `ι`
 exchanges the boundary values 0 and `∞`), so on the genus-one curve it is a translation by a 2-torsion point `T`, and
 `#{x : Frob(x) = x + T} = #ker(Frob - 1) = #E(F_p)`. The twisted form has no rational boundary points (`Frob` fixes 0
@@ -197,8 +223,8 @@ count with the isogenous model `E'_4`.
 
 **10.** `R_3(9)`: the character sum of 9 at `c = 9`, where `Q = (t - 6)^2 (t + 6)(t - 10)`, gives
 `Σ_t η(Q) = -1 - η(-48) = -1 - (p/3)`. `R_3(1)`: with `N(d) = 1` the two factors coincide, `(1 - η(t^2 - 4))^2 =
-2(1 - η(t^2 - 4)) - [t^2 = 4]` sums to `2p - 1`, and the term `u = d` (`t = 2`) must be counted with `R_2(0) = p + 1`
-instead of 1: `R_3(1) = 3p`. First moment: `(p + 1) Σ_(c ≠ 0) R_3(c) = (p + 1)^3 - W_3`. Second moment:
+2(1 - η(t^2 - 4)) - [t^2 = 4]` sums to `2p`; replacing the term `u = d` (`t = 2`, value 1) by `R_2(0) = p + 1` gives
+`2p - 1 + (p + 1) = 3p`. First moment: `(p + 1) Σ_(c ≠ 0) R_3(c) = (p + 1)^3 - W_3`. Second moment:
 `W_6 = Σ_d R_3(d)^2 = W_3^2 + (p + 1)[R_3(1)^2 + R_3(9)^2 + Σ_c (p + 1 - a_c)^2]`; solving with statement 3's `W_6`
 gives the displayed formula in both residue classes mod 3 (sympy). Twisted: `Σ_c η(c^2 - 4c)` over all `c` is `-1`, less the
 terms `c = 1, 9` (`η(-3) = (p/3)`, `η(45) = (5/p)`); and `W_5 = Σ_d R_2(d) R_3(d) = (p+1) W_3 + (p+1)[codeg(1) R_3(1) +

@@ -52,5 +52,8 @@ level-15 CM coefficients = coefficients of (eta3 eta5)^3 + (eta1 eta15)^3 at eve
    int_0^oo t I0 K0^5 dt                                      = 2.5153201188706613829 ; pi^2 L(f6,2)/2     = 2.5153201188706613829 ; |diff| = 1.03e-25
    int_0^oo t I0^2 K0^4 dt                                    = 1.0936701863501838893 ; pi^2 L(f6,1)/2     = 1.0936701863501838893 ; |diff| = 5.17e-26
    int_0^oo t I0^2 K0^4 dt                                    = 1.0936701863501838893 ; 3 L(f6,3)/2        = 1.0936701863501838893 ; |diff| = 0.0
+   p_3(0.5): Bessel integral 0.201672203582, closed form 0.201672202802; closed form / (r Omega(r^2)) - 2/pi^2 = 6.18e-16
+   p_3(1.5): Bessel integral 0.406580429786, closed form 0.406580428221; closed form / (r Omega(r^2)) - 2/pi^2 = 6.88e-16
+   p_3(2.5): Bessel integral 0.302107517942, closed form 0.302107517017; closed form / (r Omega(r^2)) - 2/pi^2 = 5.16e-16
 
 ALL CHECKS PASSED

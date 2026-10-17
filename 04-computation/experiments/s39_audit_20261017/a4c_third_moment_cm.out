@@ -1,0 +1,6 @@
+t_p at primes p = 2 mod 3 (inert in Q(sqrt-3)): all zero? True (63 primes)
+integer solutions (alpha, beta, gamma) of t_p = alpha A4 + beta p A2 + gamma p^2 on all 58 split primes < 700: []
+least-squares coefficients: [ 0.061582  0.239024 -0.23715 ]  max residual: 1336378.858051673
+samples (p, t_p, A4, p A2): [(13, 100, 146, -286), (19, -716, -46, 494), (31, -1484, 194, -1426), (37, 3748, -2062, 962), (43, -524, -3214, -946), (61, -2972, -1966, 4514)]
+
+primary pi + conductor-2 cubic twists: least-squares coefficients {'Tr pi^4': np.float64(-0.31271), 'Tr pi^4 lam': np.float64(-0.391641), 'Tr pi^4 lam^2': np.float64(0.089424), 'p Tr pi^2': np.float64(0.366011), 'p Tr pi^2 lam': np.float64(0.05928), 'p Tr pi^2 lam^2': np.float64(-0.290873), 'p^2': np.float64(-0.390678)}  max residual 1.16e+06

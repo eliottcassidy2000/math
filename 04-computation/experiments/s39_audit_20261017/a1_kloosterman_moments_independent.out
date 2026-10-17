@@ -1,0 +1,4 @@
+Method A (exact radial walk DP mod 3 primes + CRT): 428 primes 5 <= p <= 2999; disagreements with session JSON: [] (51 s)
+  e.g. p = 5: [1, 19, -14, 159, -229, 1474, -2869, 14239]; p = 7: [1, 41, 64, 517, 1646, 8882, 35715, 170421]
+Method B (mpmath 40-digit direct Kloosterman sums): 76 primes 5 <= p < 400; disagreements: [] (3 s)
+ALL CHECKS PASSED

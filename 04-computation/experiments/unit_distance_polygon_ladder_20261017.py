@@ -466,4 +466,30 @@ rows = [('int_0^oo x J0(x)^5 dx  (5-step planar walk density p5\'(0))', J5, 6 * 
 for name, lhs, rhs, form in rows:
     print('   %-58s = %s ; %-18s = %s ; |diff| = %s' % (name, mp.nstr(lhs, 20), form, mp.nstr(rhs, 20), mp.nstr(abs(lhs - rhs), 3)))
     assert abs(lhs - rhs) < mp.mpf(10) ** -18
+
+
+# open three-chains at the real place: p_3(r) = (2/pi^2) r Omega(r^2), Omega(c) = real period of E'_c
+def p3_closed(r):          # Borwein-Straub-Wan-Zudilin closed form (CITED from memory; checked against the Bessel integral)
+    return 2 * mp.sqrt(3) / mp.pi * r / (3 + r ** 2) * mp.hyp2f1(mp.mpf(1) / 3, mp.mpf(2) / 3, 1, r ** 2 * (9 - r ** 2) ** 2 / (3 + r ** 2) ** 3)
+
+
+def omega(cv):
+    rts = sorted([-2 * mp.sqrt(cv), 2 * mp.sqrt(cv), cv + 1, cv - 3])
+    Qf = lambda t: (t ** 2 - 4 * cv) * (t - cv - 1) * (t - cv + 3)
+    tot = mp.mpf(0)
+    for lo, hi in zip(rts[:-1], rts[1:]):
+        mid = (lo + hi) / 2
+        if Qf(mid) > 0:
+            tot += mp.quad(lambda t: 1 / mp.sqrt(Qf(t)), [lo, mid, hi])
+    return tot
+
+
+for r in ['0.5', '1.5', '2.5']:
+    r = mp.mpf(r)
+    pb = r * mp.quadosc(lambda x: x * mp.besselj(0, r * x) * mp.besselj(0, x) ** 3, [0, mp.inf], omega=(3 + r) / 2)
+    pc = p3_closed(r)
+    ratio = pc / (r * omega(r ** 2))
+    print('   p_3(%s): Bessel integral %s, closed form %s; closed form / (r Omega(r^2)) - 2/pi^2 = %s' %
+          (r, mp.nstr(pb, 12), mp.nstr(pc, 12), mp.nstr(mp.re(ratio) - 2 / pi ** 2, 3)))
+    assert abs(pb - pc) < 1e-6 and abs(ratio - 2 / pi ** 2) < mp.mpf(10) ** -12
 print('\nALL CHECKS PASSED')

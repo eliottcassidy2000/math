@@ -2,6 +2,12 @@
 id: HYP-9247
 title: "Every finite unit-distance graph in Q(zeta55) is three-colourable (the field graph has chromatic number exactly three): triangle-free field, every explicit eleventh-root context to 38,514 vertices three-colourable, no additive colouring with fewer than 19 colours and no residue colouring at the smallest residue field (109) with fewer than 7; if true, no context in the field changes the six-colour relation at the eight fixed ports (THM-4614) and the six-colour program must leave the field or the ports"
 status: >
+  UPDATE 2026-10-17 (opus-2026-10-17-S39, THM-4665): EI17 over finite fields. In the split model (primes p = 1 mod 55)
+  EI17 has no faithful realization at 26 of the 32 such primes below 12100, and in the twisted model it is not a subgraph
+  of the finite unit-distance graph G_p for any of the 20 conjugation-fixed primes p = 54 (mod 55) below 6000 (exact
+  counts, edge-verified; faithful points do occur at other primes, e.g. EI17 embeds in G_127). So a realization of EI17
+  with all directions in L would have bad reduction at every prime of L above each of these 46 primes, on top of S24's
+  numerical exclusion to height 1e63. Still not an exclusion proof; EI17 remains the last small candidate.
   UPDATE 2026-10-16 (opus-2026-10-16-S38, THM-4661): the gate is now general. In every odd-degree carrier over a
   conjugation-stable field without sqrt(-3), a three-colourable exterior preserves every old six-colouring (any old set,
   not only the eight ports), and a killing exterior has at least twenty vertices. EI19 is excluded from every odd-degree

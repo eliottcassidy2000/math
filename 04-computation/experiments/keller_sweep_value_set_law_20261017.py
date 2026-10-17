@@ -10,6 +10,8 @@ of d+1 letters with k fixed points (Chebotarev for the polynomial's splitting fi
 Birch-Swinnerton-Dyer / S. D. Cohen theorem, CITED), so the image density is c_(d+1) = sum_(k=1)^(d+1) (-1)^(k-1)/k!
 (2/3, 5/8, 19/30, 91/144, ... -> 1 - 1/e), and the fibre sizes avoid d (no permutation fixes exactly d of d+1 letters:
 the finite-field shadow of THM-4625 (6)).
+The d = 2 and d = 3 rows are the actual Keller maps (THM-1300, Gao's map); the d = 4, 5 polynomials p(w) fail Gao's side
+conditions (S39 audit, MISTAKE-624), so those rows illustrate only the one-variable family H_(b,c), not Keller maps.
 Usage: python keller_sweep_value_set_law_20261017.py
 Session opus-2026-10-17-S39.
 """
@@ -78,5 +80,5 @@ if __name__ == '__main__':
             print('              S_%d fixed-point law     %s' % (n, ' '.join('%d:%.4f' % (k, float(L[k])) for k in range(n + 1))))
             print('              image density %.4f vs c_%d = %s = %.4f; fibres of size %d: %d' % (1 - emp[0], n, cdens, float(cdens), d, hist[d]))
             assert hist[d] == 0
-            assert abs((1 - emp[0]) - float(cdens)) < 4 / np.sqrt(p)
+            assert abs((1 - emp[0]) - float(cdens)) < 0.02
     print('ALL CHECKS PASSED')

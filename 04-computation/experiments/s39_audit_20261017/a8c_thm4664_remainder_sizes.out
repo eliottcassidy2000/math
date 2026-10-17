@@ -1,0 +1,4 @@
+p =  5: max|E|/p = 1.447, max|S_Gamma|/p = 1.447 (alpha != 0); alpha = 0 cases of statement 1: max deviation 7.4e-15
+p =  7: max|E|/p = 1.673, max|S_Gamma|/p = 1.069 (alpha != 0); alpha = 0 cases of statement 1: max deviation 2.6e-14
+p = 11: max|E|/p = 2.463, max|S_Gamma|/p = 1.044 (alpha != 0); alpha = 0 cases of statement 1: max deviation 1.1e-13
+p = 13: max|E|/p = 2.204, max|S_Gamma|/p = 1.277 (alpha != 0); alpha = 0 cases of statement 1: max deviation 1.8e-13

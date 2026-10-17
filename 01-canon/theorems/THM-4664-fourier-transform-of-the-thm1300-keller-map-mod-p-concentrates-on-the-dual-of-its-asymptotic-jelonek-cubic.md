@@ -2,11 +2,13 @@
 id: THM-4664
 title: "The exponential sums of THM-1300's Keller map modulo p: S(alpha, beta, gamma) = sum over F_p^3 of e_p(alpha F_1 + beta F_2 + gamma F_3) equals p e_p(-4 beta^2/alpha)(p [alpha^2 gamma = 4 beta^3] - 1) minus two explicit two-variable sums; the cone alpha^2 gamma = 4 beta^3 is the projective dual of the cuspidal cubic 27 a^2 c + b^3 = 0 at infinity of the Jelonek surface, and it carries 92-98% of the Fourier energy for 11 <= p <= 41"
 status: >
-  PROVED: the exact decomposition (statement 1), by THM-4621/THM-4625's parametrization of the (F_2, F_3)-fibres and a
-  one-line orthogonality in b; the projective duality (statement 3, elementary). FINITE-EXACT: statement 2 (the
-  decomposition checked to floating-point error at every frequency for p = 5, 7, 11, 13, with both remainders at most
-  2.5p there; the large-coefficient set equal to the cone for every prime 11 <= p <= 41; Parseval and the fibre
-  frequencies). CONDITIONAL: the asymptotic form |S| = p^2 + O(p) on the cone and O(p) off it for all p, on Deligne-type
+  PROVED: the exact decomposition (statement 1), by THM-4621/THM-4625's parametrization of the (F_2, F_3)-fibres (a
+  bijection for every b, checked exhaustively for p <= 13 by the audit) and a one-line orthogonality in b; the
+  projective duality (statement 3, elementary). FINITE (float64 FFT, margins at least 0.25 p^2): statement 2 (the
+  decomposition at every frequency for p = 5, 7, 11, 13, both remainders at most 2.5p; verified exactly in Z[zeta_p]
+  at every alpha != 0 frequency for p = 5, 7, 11 by the audit; the large-coefficient set equal to the cone for every
+  prime 11 <= p <= 41; Parseval and the fibre frequencies). Independently audited 2026-10-17 (s39_audit_20261017,
+  MISTAKE-624: the Gao counts below were corrected). CONDITIONAL: the asymptotic form |S| = p^2 + O(p) on the cone and O(p) off it for all p, on Deligne-type
   square-root bounds for the two-variable sums E and S_Gamma (not proved here). No planar Jacobian statement is
   claimed; HYP-9286 records the planar prediction.
 session: opus-2026-10-17-S39
@@ -84,6 +86,11 @@ the planar conjecture is equivalent to these sums vanishing identically.
 
 ## Open
 
-Square-root bounds for `E` (a two-variable Laurent sum with Newton polygon determined by `q, p`) and `S_Γ`; the same
-analysis for Gao's degree-four map and the general sweep family (the cone should be the dual of the sweep family's
-asymptotic Jelonek curve); the phases `e_p(-4β^2/α)` on the cone as a function on the dual cubic.
+Square-root bounds for `E` (a two-variable Laurent sum with Newton polygon determined by `q, p`) and `S_Γ`; the phases
+`e_p(-4β^2/α)` on the cone as a function on the dual cubic. For the general sweep family the same orthogonality gives
+the main term `p Σ_(c ≠ 0) e_p(γc - (α/2) P(-2βc/α)/c^2)`, `P = ∫_0^w p`, which is linear in `c` only for `d = 2`: for
+`d ≥ 3` it is `p` times a Weil sum of a degree-`(d - 1)` polynomial in `c`, so no cone of `p^2`-coefficients is forced.
+For Gao's degree-four map (`det = -2`) the audit (a8b, exact substitution) finds exactly `2(p - 1)` coefficients with
+`|S| > p^2/2` (20, 24, 32 at `p = 11, 13, 17`): the lines `(0, 0, γ)` (dual of `c = 0`) and `(α, 0, 0)`, as the main term
+predicts (`β = 0` forces `w_c = 0`). (A session scratch run had reported 340, 600, 384; that evaluation was wrong,
+MISTAKE-624.) The generic coefficients for `d ≥ 3` are of Weil size; their distribution is OPEN.

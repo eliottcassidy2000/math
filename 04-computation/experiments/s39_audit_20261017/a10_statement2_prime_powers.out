@@ -1,0 +1,7 @@
+q =   9 (p = 3): W_2, W_3, W_4 as stated: (True, True, True); codegree lemma failures over all d != 0: 0
+q =  25 (p = 5): W_2, W_3, W_4 as stated: (True, True, True); codegree lemma failures over all d != 0: 0
+q =  27 (p = 3): W_2, W_3, W_4 as stated: (True, True, True); codegree lemma failures over all d != 0: 0
+q =  49 (p = 7): W_2, W_3, W_4 as stated: (True, True, True); codegree lemma failures over all d != 0: 0
+q = 121 (p = 11): W_2, W_3, W_4 as stated: (True, True, True); codegree lemma failures over all d != 0: 0
+q = 125 (p = 5): W_2, W_3, W_4 as stated: (True, True, True); codegree lemma failures over all d != 0: 0
+primes 7 <= p <= 2999: inert 218, split principal 98, split nonprincipal 111 (session: 218, 98, 111)

@@ -1,0 +1,7 @@
+q = 49: exact M_k(q) = [1, 2351, 2500, 227947, 718096, 28658090, 151801119, 4110000243]
+        = session values: True; closed forms with Frobenius-squared traces: {1: True, 2: True, 3: True, 4: True, 5: True, 6: True, 8: True}
+q = 121: exact M_k(q) = [1, 14519, 14884, 3498835, 10703056, 1090812458, 6241415104, 391460208171]
+        = session values: True; closed forms with Frobenius-squared traces: {1: True, 2: True, 3: True, 4: True, 5: True, 6: True, 8: True}
+q = 169: exact M_k(q) = [1, 28391, 28900, 9567427, 29104336, 4114382570, 23205956320, 2009849307387]
+        = session values: True; closed forms with Frobenius-squared traces: {1: True, 2: True, 3: True, 4: True, 5: True, 6: True, 8: True}
+ALL CHECKS PASSED

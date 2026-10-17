@@ -1,0 +1,39 @@
+A. side conditions p(g0) = -2 g0, q(g0) = -g0^2 (common nonzero root needed):
+   THM-1300 d=2  resultant of the two conditions = 0; common factor g0 - 2
+   Gao G d=3     resultant of the two conditions = 0; common factor g0 - 2
+   script d=4    resultant of the two conditions = 141/8000; common factor 1
+   script d=5    resultant of the two conditions = 13491239/25920000; common factor 1
+   script d=4: P(w)/w^2 = w**3/5 - w**2/2 + w + 1/2, factorization over Q: (2*w**3 - 5*w**2 + 10*w + 5)/10
+   script d=5: P(w)/w^2 = w**4/3 + w**3/5 - 3*w**2/4 + w/3 - 1/2, factorization over Q: (20*w**4 + 12*w**3 - 45*w**2 + 20*w - 30)/60
+
+B. actual Keller maps on F_p^3 (fibre sizes over F_3 != 0):
+   THM-1300: F = ['x**3*y**3*z + 3*x**2*y**4 + 3*x**2*y**2*z + 7*x*y**3 + 3*x*y...', '3*x**3*y**2*z + 9*x**2*y**3 + 6*x**2*y*z + 12*x*y**2 + 3*x*z...', '-x**3*z - 3*x**2*y + 2*x...']; det JF = -2
+     p = 31: frequencies 0:0.3340 1:0.5151 2:0.0000 3:0.1509 | S_3 law 0.3333 0.5000 0.0000 0.1667 | size-2 fibres over c != 0: 0 | image density 0.6660 vs 0.6667
+     p = 61: frequencies 0:0.3335 1:0.5079 2:0.0000 3:0.1586 | S_3 law 0.3333 0.5000 0.0000 0.1667 | size-2 fibres over c != 0: 0 | image density 0.6665 vs 0.6667
+   Gao G: F = ['3*x**6*y**4*z**2/8 + 3*x**5*y**5*z + 3*x**5*y**3*z**2/2 + 6*...', 'x**6*y**3*z**2 + 8*x**5*y**4*z + 3*x**5*y**2*z**2 + 16*x**4*...', '-x**3*z - 4*x**2*y + 2*x...']; det JF = -2
+     p = 31: frequencies 0:0.3788 1:0.3455 2:0.2404 3:0.0000 4:0.0354 | S_4 law 0.3750 0.3333 0.2500 0.0000 0.0417 | size-3 fibres over c != 0: 0 | image density 0.6212 vs 0.6250
+     p = 61: frequencies 0:0.3811 1:0.3279 2:0.2542 3:0.0000 4:0.0368 | S_4 law 0.3750 0.3333 0.2500 0.0000 0.0417 | size-3 fibres over c != 0: 0 | image density 0.6189 vs 0.6250
+
+C. THM-4664
+   (i) THM-4664 / THM-4621 map equals the THM-4625 construction: True ; F_3 = x Gamma: True
+   (ii) p =  5: parametrisation injective, F = (H/c^2, b, c) for every b: True; image = {x != 0, Gamma != 0}: True
+   (ii) p =  7: parametrisation injective, F = (H/c^2, b, c) for every b: True; image = {x != 0, Gamma != 0}: True
+   (ii) p = 11: parametrisation injective, F = (H/c^2, b, c) for every b: True; image = {x != 0, Gamma != 0}: True
+   (ii) p = 13: parametrisation injective, F = (H/c^2, b, c) for every b: True; image = {x != 0, Gamma != 0}: True
+   (iii) p =  5: exact Z[zeta_p] check of S = M - E + S_Gamma at every frequency with alpha != 0: failures 0
+   (iii) p =  7: exact Z[zeta_p] check of S = M - E + S_Gamma at every frequency with alpha != 0: failures 0
+   (iii) p = 11: exact Z[zeta_p] check of S = M - E + S_Gamma at every frequency with alpha != 0: failures 0
+   (iv) large coefficients vs the cone alpha^2 gamma = 4 beta^3 (independent evaluation, numpy FFT):
+        p = 11: sets equal True; min on cone 0.8341 p^2, max off cone 0.2439 p^2 (margin to p^2/2: 0.334, 0.256)
+        p = 13: sets equal True; min on cone 0.8557 p^2, max off cone 0.1907 p^2 (margin to p^2/2: 0.356, 0.309)
+        p = 17: sets equal True; min on cone 0.8866 p^2, max off cone 0.1582 p^2 (margin to p^2/2: 0.387, 0.342)
+        p = 19: sets equal True; min on cone 0.8978 p^2, max off cone 0.1447 p^2 (margin to p^2/2: 0.398, 0.355)
+        p = 23: sets equal True; min on cone 0.9147 p^2, max off cone 0.1272 p^2 (margin to p^2/2: 0.415, 0.373)
+        p = 29: sets equal True; min on cone 0.9319 p^2, max off cone 0.0966 p^2 (margin to p^2/2: 0.432, 0.403)
+        p = 31: sets equal True; min on cone 0.9362 p^2, max off cone 0.0937 p^2 (margin to p^2/2: 0.436, 0.406)
+        p = 37: sets equal True; min on cone 0.9463 p^2, max off cone 0.0803 p^2 (margin to p^2/2: 0.446, 0.420)
+        p = 41: sets equal True; min on cone 0.9515 p^2, max off cone 0.0707 p^2 (margin to p^2/2: 0.452, 0.429)
+   (v) disc_w(H_(b,c)(w) - c^2 a) = -c**2*(27*a**2*c**2 - 18*a*b*c + 16*a + b**3*c - b**2)/4 ; ratio to c_3 = -c**2/4
+       top-degree part of c_3: c*(27*a**2*c + b**3)
+       gradient along (1 : -3t : t^3): [54*t**3, 27*t**2, 27] ; satisfies A^2 C = 4 B^3: True
+DONE

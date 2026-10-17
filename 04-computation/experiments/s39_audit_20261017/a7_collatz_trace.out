@@ -1,0 +1,19 @@
+trace formula tr(A_p^k) = 2^k + sum_(3^j = 2^k) (p[p | c_w] - 1): every prime 5 <= p < 62, k <= 20; failures []
+
+Perron-Frobenius and the equidistribution numbers:
+  p =  5: rho = 1.6180; k = 20: N/B = 55352/261632 = 0.2116 vs 1/p = 0.2000; |N - B/p| = 3025.6 <= (p-1) rho^k / p = 12101.6
+  p =  7: rho = 1.4277; k = 20: N/B = 28117/194446 = 0.1446 vs 1/p = 0.1429; |N - B/p| = 339.0 <= (p-1) rho^k / p = 1061.5
+  p = 11: rho = 1.3384; k = 20: N/B = 19492/215766 = 0.0903 vs 1/p = 0.0909; |N - B/p| = 123.1 <= (p-1) rho^k / p = 309.3
+  p = 13: rho = 1.3385; k = 20: N/B = 26961/349525 = 0.0771 vs 1/p = 0.0769; |N - B/p| = 74.5 <= (p-1) rho^k / p = 314.7
+  p = 11: B_k = 0 (no word with 3^j = 2^k mod p) for k in [1, 2, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21]
+  p = 13: B_k = 0 (no word with 3^j = 2^k mod p) for k in [1, 2, 3, 5, 6, 7, 9, 10, 11, 13, 14, 15]
+
+arborescences and the characteristic polynomial on the nonconstant functions:
+  p =  5: tau = 2; factors of charpoly/(z - 2): [(z - 1, 1), (z, 1), (z**2 + z - 1, 1)]
+  p =  7: tau = 6; factors of charpoly/(z - 2): [(z, 1), (z + 1, 1), (z**4 - z**3 + z**2 - 3*z + 1, 1)]
+  p = 11: tau = 96; factors of charpoly/(z - 2): [(z - 1, 1), (z + 1, 1), ('deg 8', 1)]
+  p = 13: tau = 288; factors of charpoly/(z - 2): [('deg 12', 1)]
+  p = 17: tau = 3582; factors of charpoly/(z - 2): [(z, 1), (z + 1, 1), ('deg 14', 1)]
+  p = 19: tau = 5994; factors of charpoly/(z - 2): [(z - 1, 1), (z, 1), ('deg 16', 1)]
+  p = 23: tau = 203152; factors of charpoly/(z - 2): [('deg 22', 1)]
+ALL CHECKS PASSED

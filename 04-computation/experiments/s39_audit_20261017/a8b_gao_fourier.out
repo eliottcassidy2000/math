@@ -1,0 +1,8 @@
+det JF = -2
+p = 11: #{|S| > p^2/2} = 20; line (0,0,gamma) included: True; fibre sizes: [470, 506, 270, 55, 30]
+p = 13: #{|S| > p^2/2} = 24; line (0,0,gamma) included: True; fibre sizes: [816, 715, 552, 78, 36]
+p = 17: #{|S| > p^2/2} = 32; line (0,0,gamma) included: True; fibre sizes: [1840, 1625, 1184, 136, 128]
+p = 11: evaluation matches exact substitution at 200 random points; counts above thresholds: {'p^2/2': 20, 'p^2/4': 740, 'p^1.5': 540, '2p': 1000, 'p': 1180} ; top |S|/p^2: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+p = 13: evaluation matches exact substitution at 200 random points; counts above thresholds: {'p^2/2': 24, 'p^2/4': 1056, 'p^1.5': 672, '2p': 1874, 'p': 1932} ; top |S|/p^2: [1.021, 1.021, 1.021, 1.021, 1.021, 1.021]
+p = 11: large frequencies (alpha, beta, gamma): [(0, 0, 1), (0, 0, 2), (0, 0, 3), (0, 0, 4), (0, 0, 5), (0, 0, 6), (0, 0, 7), (0, 0, 8), (0, 0, 9), (0, 0, 10), (1, 0, 0), (2, 0, 0), (3, 0, 0), (4, 0, 0), (5, 0, 0), (6, 0, 0), (7, 0, 0), (8, 0, 0), (9, 0, 0), (10, 0, 0)]
+p = 13: large frequencies (alpha, beta, gamma): [(0, 0, 1), (0, 0, 2), (0, 0, 3), (0, 0, 4), (0, 0, 5), (0, 0, 6), (0, 0, 7), (0, 0, 8), (0, 0, 9), (0, 0, 10), (0, 0, 11), (0, 0, 12), (1, 0, 0), (2, 0, 0), (3, 0, 0), (4, 0, 0), (5, 0, 0), (6, 0, 0), (7, 0, 0), (8, 0, 0), (9, 0, 0), (10, 0, 0), (11, 0, 0), (12, 0, 0)]

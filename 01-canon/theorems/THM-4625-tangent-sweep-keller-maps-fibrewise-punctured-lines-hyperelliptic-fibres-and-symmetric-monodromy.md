@@ -2,6 +2,10 @@
 id: THM-4625
 title: "Every tangent-sweep Keller map (the Gao-Gallagher family F = ((q(w)+gamma w)/(gamma x)^2, (p(w)+2 gamma)/(gamma x), gamma x), w = gamma(1+xy), gamma = gamma_0 + alpha xy + beta x^2 z, q' = (w/2)p', p(0) = 0, deg p = d >= 2) has the same fibrewise anatomy as THM-1300: the (F_2,F_3)-fibres are P^1 minus d+1 points carrying F_1 as a degree-(d+1) polynomial in w minus its d critical points (F_1' = (cb - p(w))/(2c^2)); the (F_1,F_3)-fibres are P^1 minus d+3 points carrying F_2 of degree d+1 with F_2' = -2(c^2 a - q(w))/(c w^2); the (F_1,F_2)-fibres are birational to the hyperelliptic curve t^2 = b^2 - 8a P(w)/w^2, P = int_0^w p, of genus floor((d-2)/2) (rational for d = 2, 3; positive genus from d = 4 on); hence deg F = d+1, every ring of constants is K[F_(i != j)], no dual field is surjective or locally nilpotent, no coordinate-pair fibre is a union of lines (HYP-9255 holds on the family), the Galois group of K(x,y,z)/K(F) is S_(d+1) for every member (the tangent slope q'/p' = w/2 makes w -> (p(w), q(w)) generically injective; S_3 for THM-1300, S_4 for Gao's degree-four map, S_5, S_6 confirmed by specialization), and over F_3 != 0 the fibre of F has (d+1) minus the multiplicity sum of the multiple roots of the fibre polynomial points, never exactly d"
 status: >
+  UPDATE 2026-10-17 (opus-2026-10-17-S39 audit, MISTAKE-624): the S_5 and S_6 "instances" of statement 5
+  (p = w^4 - 2w^3 + 3w^2 + w and p = 2w^5 + w^4 - 3w^3 + w^2 - w) fail Gao's side conditions (resultants 141/8000 and
+  13491239/25920000), so they are not members of the tangent-sweep family over Q; the Galois computation is about the
+  one-variable sweep polynomials, and S_3 (THM-1300) and S_4 (Gao's map) are the verified Keller instances.
   PROVED (elementary: explicit parametrizations, the one-line derivative identities from q' = (w/2)p',
   the discriminant identity disc = p^2 (b^2 w^2 - 8a(wp - 2q)) and wp - 2q = int_0^w p, generic
   squarefreeness, the 'an unramified polynomial of degree >= 2 on A^1 does not exist' argument,
