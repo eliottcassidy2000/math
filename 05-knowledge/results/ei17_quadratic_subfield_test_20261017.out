@@ -1,0 +1,7 @@
+split model: 17 primes with points, 136 without
+twisted model: 14 primes with points, 111 without
+squarefree d (1 < |d| <= 200) that are squares at every split prime with points: []
+squarefree d (1 < |d| <= 200) with the forced twisted sign at every twisted prime with points: []
+d = -1 (sqrt(-1) in the field): split False, twisted False
+split primes with points: [103, 139, 281, 313, 401, 499, 521, 541, 631, 641, 677, 2861, 3191, 4621, 4951, 7481, 10781]
+twisted primes with points: [127, 149, 227, 277, 283, 311, 317, 349, 383, 397, 443, 463, 547, 587]

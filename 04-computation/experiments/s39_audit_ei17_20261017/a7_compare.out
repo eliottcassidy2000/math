@@ -1,0 +1,11 @@
+split: 151 primes in both, disagreements []; primes only in the audit runs: [(3, 0), (5, 0), (11, 0), (769, 0), (857, 0), (967, 0), (1033, 0), (1187, 0), (1231, 0), (1297, 0), (1319, 0), (1429, 0), (1451, 0), (1583, 0), (1627, 0), (1693, 0), (1759, 0), (1847, 0), (1913, 0), (1979, 0), (2089, 0), (2111, 0), (2221, 0), (2243, 0), (2287, 0), (2309, 0), (2441, 0), (2551, 0)]
+twisted: 123 primes in both, disagreements []; primes only in the audit runs: [(3, 0), (5, 0), (11, 0), (857, 0), (967, 0), (1033, 0), (1187, 0), (1231, 0), (1297, 0), (1451, 0), (1583, 0), (1627, 0), (1693, 0), (1847, 0), (1913, 0), (2111, 0), (2221, 0), (2243, 0), (2287, 0), (2441, 16), (2551, 8)]
+statement 1: zero at the 26 listed primes: True; 8 or 16 at the six: [(2861, 8), (3191, 16), (4621, 8), (4951, 8), (7481, 8), (10781, 8)]
+statement 2: zero at the 20 conjugation-fixed primes: True
+statement 4: split primes < 700 tested 124 (from 3), positive [103, 139, 281, 313, 401, 499, 521, 541, 631, 641, 677] = list: True
+             twisted primes < 600 tested 108 (from 3), positive [127, 149, 227, 277, 283, 311, 317, 349, 383, 397, 443, 463, 547, 587] = list: True; 2441 -> 16, 2551 -> 8
+             all positive counts: [4, 8, 16] (multiples of 4: True; of 8: 32 of 33)
+rates: split controls (classes != +-1 mod 55) 11/119 = 0.092; class 1 mod 55: 6/32 = 0.188; P(X >= 6) = 0.070
+       twisted controls 14/105 = 0.133; class 54 mod 55: 0/20; P(X = 0) = 0.057
+note observation: split, primes = 10 mod 11 below 2600: 38 tested, positive []; P(0) at the split rate = 0.025
+                  twisted, primes = 10 mod 11 below 2600: 38 tested, positive [(2441, 16), (2551, 8)]

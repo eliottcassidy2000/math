@@ -1,0 +1,50 @@
+# 16 Henneberg orders with two free placements after the gauge edge (11,17); using:
+#   free  9 from 11
+#   free 10 from  9
+#   apex 12 from (11,10) checks []
+#   apex 16 from (17,10) checks []
+#   apex  6 from (11,16) checks []
+#   apex  2 from (10, 6) checks []
+#   apex  3 from (12, 2) checks []
+#   apex  5 from ( 9, 3) checks []
+#   apex  7 from ( 9, 3) checks []
+#   apex 14 from (17, 5) checks []
+#   apex  4 from ( 6,14) checks []
+#   apex  1 from ( 7, 4) checks []
+#   apex  8 from ( 5, 1) checks []
+#   apex 13 from (17, 4) checks [8]
+#   apex 15 from ( 7,14) checks [8]
+# model split, method table
+    p  p%55  faithful    seconds
+   331    1       0    1.0
+   661    1       0    0.2
+   881    1       0    0.4
+   991    1       0    0.5
+  1321    1       0    1.1
+  1871    1       0    1.7
+  2311    1       0    3.0
+  2531    1       0    9.5
+  2861    1       8    16.7
+  2971    1       0    6.1
+  3191    1      16    6.1
+  3301    1       0    7.2
+  3631    1       0    7.7
+  3851    1       0    8.7
+  4621    1       8    13.4
+  4951    1       8    17.0
+  5171    1       0    19.2
+  5281    1       0    18.0
+  5501    1       0    18.8
+  6271    1       0    25.9
+  6491    1       0    23.1
+  7151    1       0    23.6
+  7481    1       8    26.1
+  7591    1       0    26.9
+  8581    1       0    35.7
+  9241    1       0    41.3
+  9461    1       0    42.5
+  9791    1       0    45.0
+  9901    1       0    47.8
+ 10781    1       8    62.0
+ 10891    1       0    56.0
+ 11551    1       0    69.8

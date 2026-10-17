@@ -1,0 +1,63 @@
+complex conjugation: |conj(zeta) - zeta^54| = 6.59e-16 (so conj = sigma_(-1) on Q(zeta_55))
+phi(55) = 40 = [L:Q]
+p =   331  p mod 55 =  1  order 1  Phi_55 mod p: 40 factors of degree 1 (squarefree True)  decomposition group [1]  conjugation fixes P: False
+p =   661  p mod 55 =  1  order 1  Phi_55 mod p: 40 factors of degree 1 (squarefree True)  decomposition group [1]  conjugation fixes P: False
+p =   881  p mod 55 =  1  order 1  Phi_55 mod p: 40 factors of degree 1 (squarefree True)  decomposition group [1]  conjugation fixes P: False
+p =   991  p mod 55 =  1  order 1  Phi_55 mod p: 40 factors of degree 1 (squarefree True)  decomposition group [1]  conjugation fixes P: False
+p =  1321  p mod 55 =  1  order 1  Phi_55 mod p: 40 factors of degree 1 (squarefree True)  decomposition group [1]  conjugation fixes P: False
+p =  1871  p mod 55 =  1  order 1  Phi_55 mod p: 40 factors of degree 1 (squarefree True)  decomposition group [1]  conjugation fixes P: False
+p =  2311  p mod 55 =  1  order 1  Phi_55 mod p: 40 factors of degree 1 (squarefree True)  decomposition group [1]  conjugation fixes P: False
+p =  2531  p mod 55 =  1  order 1  Phi_55 mod p: 40 factors of degree 1 (squarefree True)  decomposition group [1]  conjugation fixes P: False
+p =  2971  p mod 55 =  1  order 1  Phi_55 mod p: 40 factors of degree 1 (squarefree True)  decomposition group [1]  conjugation fixes P: False
+p =  3301  p mod 55 =  1  order 1  Phi_55 mod p: 40 factors of degree 1 (squarefree True)  decomposition group [1]  conjugation fixes P: False
+p =  3631  p mod 55 =  1  order 1  Phi_55 mod p: 40 factors of degree 1 (squarefree True)  decomposition group [1]  conjugation fixes P: False
+p =  3851  p mod 55 =  1  order 1  Phi_55 mod p: 40 factors of degree 1 (squarefree True)  decomposition group [1]  conjugation fixes P: False
+p =  5171  p mod 55 =  1  order 1  Phi_55 mod p: 40 factors of degree 1 (squarefree True)  decomposition group [1]  conjugation fixes P: False
+p =  5281  p mod 55 =  1  order 1  Phi_55 mod p: 40 factors of degree 1 (squarefree True)  decomposition group [1]  conjugation fixes P: False
+p =  5501  p mod 55 =  1  order 1  Phi_55 mod p: 40 factors of degree 1 (squarefree True)  decomposition group [1]  conjugation fixes P: False
+p =  6271  p mod 55 =  1  order 1  Phi_55 mod p: 40 factors of degree 1 (squarefree True)  decomposition group [1]  conjugation fixes P: False
+p =  6491  p mod 55 =  1  order 1  Phi_55 mod p: 40 factors of degree 1 (squarefree True)  decomposition group [1]  conjugation fixes P: False
+p =  7151  p mod 55 =  1  order 1  Phi_55 mod p: 40 factors of degree 1 (squarefree True)  decomposition group [1]  conjugation fixes P: False
+p =  7591  p mod 55 =  1  order 1  Phi_55 mod p: 40 factors of degree 1 (squarefree True)  decomposition group [1]  conjugation fixes P: False
+p =  8581  p mod 55 =  1  order 1  Phi_55 mod p: 40 factors of degree 1 (squarefree True)  decomposition group [1]  conjugation fixes P: False
+p =  9241  p mod 55 =  1  order 1  Phi_55 mod p: 40 factors of degree 1 (squarefree True)  decomposition group [1]  conjugation fixes P: False
+p =  9461  p mod 55 =  1  order 1  Phi_55 mod p: 40 factors of degree 1 (squarefree True)  decomposition group [1]  conjugation fixes P: False
+p =  9791  p mod 55 =  1  order 1  Phi_55 mod p: 40 factors of degree 1 (squarefree True)  decomposition group [1]  conjugation fixes P: False
+p =  9901  p mod 55 =  1  order 1  Phi_55 mod p: 40 factors of degree 1 (squarefree True)  decomposition group [1]  conjugation fixes P: False
+p = 10891  p mod 55 =  1  order 1  Phi_55 mod p: 40 factors of degree 1 (squarefree True)  decomposition group [1]  conjugation fixes P: False
+p = 11551  p mod 55 =  1  order 1  Phi_55 mod p: 40 factors of degree 1 (squarefree True)  decomposition group [1]  conjugation fixes P: False
+p =  2861  p mod 55 =  1  order 1  Phi_55 mod p: 40 factors of degree 1 (squarefree True)  decomposition group [1]  conjugation fixes P: False
+p =  3191  p mod 55 =  1  order 1  Phi_55 mod p: 40 factors of degree 1 (squarefree True)  decomposition group [1]  conjugation fixes P: False
+p =  4621  p mod 55 =  1  order 1  Phi_55 mod p: 40 factors of degree 1 (squarefree True)  decomposition group [1]  conjugation fixes P: False
+p =  4951  p mod 55 =  1  order 1  Phi_55 mod p: 40 factors of degree 1 (squarefree True)  decomposition group [1]  conjugation fixes P: False
+p =  7481  p mod 55 =  1  order 1  Phi_55 mod p: 40 factors of degree 1 (squarefree True)  decomposition group [1]  conjugation fixes P: False
+p = 10781  p mod 55 =  1  order 1  Phi_55 mod p: 40 factors of degree 1 (squarefree True)  decomposition group [1]  conjugation fixes P: False
+p =   109  p mod 55 = 54  order 2  Phi_55 mod p: 20 factors of degree 2 (squarefree True)  decomposition group [1, 54]  conjugation fixes P: True
+p =   439  p mod 55 = 54  order 2  Phi_55 mod p: 20 factors of degree 2 (squarefree True)  decomposition group [1, 54]  conjugation fixes P: True
+p =   659  p mod 55 = 54  order 2  Phi_55 mod p: 20 factors of degree 2 (squarefree True)  decomposition group [1, 54]  conjugation fixes P: True
+p =   769  p mod 55 = 54  order 2  Phi_55 mod p: 20 factors of degree 2 (squarefree True)  decomposition group [1, 54]  conjugation fixes P: True
+p =  1319  p mod 55 = 54  order 2  Phi_55 mod p: 20 factors of degree 2 (squarefree True)  decomposition group [1, 54]  conjugation fixes P: True
+p =  1429  p mod 55 = 54  order 2  Phi_55 mod p: 20 factors of degree 2 (squarefree True)  decomposition group [1, 54]  conjugation fixes P: True
+p =  1759  p mod 55 = 54  order 2  Phi_55 mod p: 20 factors of degree 2 (squarefree True)  decomposition group [1, 54]  conjugation fixes P: True
+p =  1979  p mod 55 = 54  order 2  Phi_55 mod p: 20 factors of degree 2 (squarefree True)  decomposition group [1, 54]  conjugation fixes P: True
+p =  2089  p mod 55 = 54  order 2  Phi_55 mod p: 20 factors of degree 2 (squarefree True)  decomposition group [1, 54]  conjugation fixes P: True
+p =  2309  p mod 55 = 54  order 2  Phi_55 mod p: 20 factors of degree 2 (squarefree True)  decomposition group [1, 54]  conjugation fixes P: True
+p =  2749  p mod 55 = 54  order 2  Phi_55 mod p: 20 factors of degree 2 (squarefree True)  decomposition group [1, 54]  conjugation fixes P: True
+p =  2969  p mod 55 = 54  order 2  Phi_55 mod p: 20 factors of degree 2 (squarefree True)  decomposition group [1, 54]  conjugation fixes P: True
+p =  3079  p mod 55 = 54  order 2  Phi_55 mod p: 20 factors of degree 2 (squarefree True)  decomposition group [1, 54]  conjugation fixes P: True
+p =  3299  p mod 55 = 54  order 2  Phi_55 mod p: 20 factors of degree 2 (squarefree True)  decomposition group [1, 54]  conjugation fixes P: True
+p =  3739  p mod 55 = 54  order 2  Phi_55 mod p: 20 factors of degree 2 (squarefree True)  decomposition group [1, 54]  conjugation fixes P: True
+p =  4289  p mod 55 = 54  order 2  Phi_55 mod p: 20 factors of degree 2 (squarefree True)  decomposition group [1, 54]  conjugation fixes P: True
+p =  4729  p mod 55 = 54  order 2  Phi_55 mod p: 20 factors of degree 2 (squarefree True)  decomposition group [1, 54]  conjugation fixes P: True
+p =  5059  p mod 55 = 54  order 2  Phi_55 mod p: 20 factors of degree 2 (squarefree True)  decomposition group [1, 54]  conjugation fixes P: True
+p =  5279  p mod 55 = 54  order 2  Phi_55 mod p: 20 factors of degree 2 (squarefree True)  decomposition group [1, 54]  conjugation fixes P: True
+p =  5939  p mod 55 = 54  order 2  Phi_55 mod p: 20 factors of degree 2 (squarefree True)  decomposition group [1, 54]  conjugation fixes P: True
+all 52 primes behave as stated (split: 40 primes of degree 1, conjugation moves P; 54 mod 55: 20 primes of degree 2, conjugation = Frobenius): True
+p = 331: 40 roots r of Phi_55; for the 40 primes P = (p, z - r) where w is a P-unit, (u, conj u) mod P = (x, 1/x) and conj(P) = (p, z - 1/r) != P
+p = 2861: 40 roots r of Phi_55; for the 40 primes P = (p, z - r) where w is a P-unit, (u, conj u) mod P = (x, 1/x) and conj(P) = (p, z - 1/r) != P
+p = 109: g = z**2 + 6*z + 1; y^p = -z - 6, y^(-1) = -z - 6, equal: True
+        w(y^p) = w(y^-1) in F_p[y]/(g): True
+        u mod P has norm u * u^p = 1
+p = 5939: g = z**2 + 219*z + 1; y^p = -z - 219, y^(-1) = -z - 219, equal: True
+        w(y^p) = w(y^-1) in F_p[y]/(g): True
+        u mod P has norm u * u^p = 1

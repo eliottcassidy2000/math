@@ -43,12 +43,25 @@ of `L` above each of these 46 rational primes.
   Frobenius data") without the elimination. It does not by itself give an exclusion: a realization of very large
   height could be degenerate at all these primes. Combined with the LLL bound, a realization in `L` would have to have
   height above `1e63` and degenerate reduction at the primes above 46 specific primes.
-* EI17 does embed in many finite unit-distance graphs (`G_127, G_149, ...`): the obstruction is specific to the classes
-  `±1 (mod 55)`. (A further pattern, that the split model never had points at the 38 primes `p ≡ 10 (mod 11)` below 2600,
-  has Poisson probability of a few percent against the base rate and no Galois explanation consistent with the twisted
-  data; it is recorded as an observation only.)
-* The counts come in multiples of 4 or 8, suggesting a free symmetry group of order 8 on faithful realizations (mirror,
-  the graph automorphism, a third involution not identified).
+* A zero count is the typical outcome at any prime (108 of 119 split and 91 of 105 twisted control primes); the class
+  `1 (mod 55)` is not depleted (6 of 32, binomial tail 0.07) and the class `54 (mod 55)` only mildly (0 of 20,
+  probability 0.06). What is specific to the classes `±1 (mod 55)` is the inference: only there does a zero count force
+  bad reduction of a hypothetical realization in `L`. EI17 does embed in many `G_p` (`G_127, G_149, ...`). (Corrected
+  after the independent audit; the first version called the obstruction itself specific to these classes, MISTAKE-625.)
+  A further pattern, that the split model has no point at any of the 38 primes `p ≡ 10 (mod 11)` below 2600 (binomial
+  probability 0.025 at the control rate; the twisted model has points among them only at 2441 and 2551), is recorded as
+  an observation only; these runs are the audit's `a2_split_10mod11_table.out` and `a2_twisted_10mod11_table.out`.
+* All counts are multiples of 4, and all but one (`p = 383`, twisted, 4) are multiples of 8. The audit identified the
+  third involution: the block re-placement `ι: (U0, U4) -> (U9, U11)`, `v4 -> 2m - v4`, `v6 -> 2m - v6`, where `m` is the
+  common midpoint of `v1 v14` and `v2 v11` (`v1 + v14 = v2 + v11` identically). `ι` and the mirror (for `p > 17`) are
+  fixed-point free, so faithful counts are even for `p > 17` (PROVED); `<mirror, automorphism, ι> = (Z/2)^3` acts freely
+  at every tested prime with points except `p = 383` (twisted), where mirror∘automorphism fixes all four. It explains
+  S24's two real realizations that differ only in the vertices `{4, 6, 13, 16}`. That `ι` always preserves faithfulness
+  is open.
+* No small quadratic subfield is forced (S40 check): no squarefree `d` with `1 < |d| <= 200` is a square modulo all 17
+  split primes with points, and none has the sign pattern a realization field containing `sqrt(d)` would force on the
+  14 twisted primes with points (`(d/p) = +1` for `d > 0`, `-1` for `d < 0`, conjugation acting as Frobenius)
+  ([check](../../04-computation/experiments/ei17_quadratic_subfield_test_20261017.py)).
 
 ## Next
 

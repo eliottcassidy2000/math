@@ -1,0 +1,32 @@
+v1 + v14 - v2 - v11 = 0
+d1 = v14 - v1 = U1 - U2 + U3 + U6 + 1   equals U0 + U9: True
+d2 = v11 - v2 = U1 + U2 + U3 + U6 - 1   equals U4 + U11: True
+  iota(U7 ) = U1 + U2 - U3 - 1
+  iota(U8 ) = U0 + U2 - U4 - 1
+  iota(U9 ) = U0
+  iota(U10) = 2*U2 - U3 - U6 - 1
+  iota(U11) = U4
+  iota(U12) = -U1 - U2 - U6 + 2
+  iota(v4) = -U0 - U2 ; 2m - v4 = -U0 - U2
+  iota(v6) = -U4 - 1 ; 2m - v6 = -U4 - 1
+  iota(v13) = -U0 ; 2m - v13 = -U0 - 2*U2
+  iota(v16) = -U4 ; 2m - v16 = -U4 - 2
+  other vertices fixed: True
+split   p =   103:  8 faithful solutions, iota(s) faithful, distinct and in the set for  8 of them
+split   p =   139:  8 faithful solutions, iota(s) faithful, distinct and in the set for  8 of them
+split   p =   281:  8 faithful solutions, iota(s) faithful, distinct and in the set for  8 of them
+split   p =   313:  8 faithful solutions, iota(s) faithful, distinct and in the set for  8 of them
+split   p =   401:  8 faithful solutions, iota(s) faithful, distinct and in the set for  8 of them
+split   p =   677: 16 faithful solutions, iota(s) faithful, distinct and in the set for 16 of them
+split   p =  2861:  8 faithful solutions, iota(s) faithful, distinct and in the set for  8 of them
+split   p =  3191: 16 faithful solutions, iota(s) faithful, distinct and in the set for 16 of them
+twisted p =   127:  8 faithful solutions, iota(s) faithful, distinct and in the set for  8 of them
+twisted p =   149:  8 faithful solutions, iota(s) faithful, distinct and in the set for  8 of them
+twisted p =   227:  8 faithful solutions, iota(s) faithful, distinct and in the set for  8 of them
+twisted p =   383:  4 faithful solutions, iota(s) faithful, distinct and in the set for  4 of them
+twisted p =  2441: 16 faithful solutions, iota(s) faithful, distinct and in the set for 16 of them
+twisted p =  2551:  8 faithful solutions, iota(s) faithful, distinct and in the set for  8 of them
+p = 383 solution: fixed by M False, by A False, by MA True
+p = 383 solution: fixed by M False, by A False, by MA True
+p = 383 solution: fixed by M False, by A False, by MA True
+p = 383 solution: fixed by M False, by A False, by MA True

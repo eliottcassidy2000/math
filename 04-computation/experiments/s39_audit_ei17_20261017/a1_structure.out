@@ -1,0 +1,44 @@
+edge list identical in the three scripts; VERT identical in the two S39 scripts
+(a) triangles 0, isomorphisms PE -> HoG 2, |Aut| 2, nontrivial automorphism moves {1: 2, 2: 1, 3: 7, 4: 6, 5: 9, 6: 4, 7: 3, 8: 10, 9: 5, 10: 8, 11: 14, 12: 15, 13: 16, 14: 11, 15: 12, 16: 13}
+    3-colourable False, 4-colourable True, Laman (every r-subset spans <= 2r-3 edges, 31 = 2*17-3) True
+(b) unit 4-cycles: 9  [(1, 4, 13, 8), (1, 7, 15, 8), (2, 3, 12, 10), (2, 6, 16, 10), (3, 5, 9, 7), (4, 13, 17, 14), (5, 8, 15, 14), (6, 11, 17, 16), (9, 10, 12, 11)]
+    parallelogram closure: 13 classes, sign conflict: False
+(c) Newton from the 24-digit table: max edge residual 2.86e-101, max shift from the table 9.35e-25, min vertex distance 0.141485
+    numerical classes up to sign: 13; least separation between distinct classes (min |u - w|, |u + w|) 0.005745
+    numerical partition and signs = parallelogram closure: True
+(d) spanning tree: 15 non-tree edges, 11 nontrivial cycle relations, rank 6 (cycle space dim 15, minus 9 parallelograms)
+(e) every VERT edge difference is +- exactly one of the 13 forms (U0..U6 free/gauge, U7..U12 displayed): True
+    class -> label map consistent and bijective: True (13 labels)
+      U0   edges [(1, 4), (8, 13)]
+      U1   edges [(1, 7), (5, 14), (8, 15)]
+      U2   edges [(1, 8), (4, 13), (7, 15), (14, 17)]
+      U3   edges [(2, 3), (9, 11), (10, 12)]
+      U4   edges [(2, 6), (10, 16)]
+      U5   edges [(2, 10), (3, 12), (6, 16), (11, 17)]
+      U6   edges [(3, 5), (7, 9)]
+      U7   edges [(3, 7), (5, 9)]
+      U8   edges [(4, 6)]
+      U9   edges [(4, 14), (13, 17)]
+      U10  edges [(5, 8), (14, 15)]
+      U11  edges [(6, 11), (16, 17)]
+      U12  edges [(9, 10), (11, 12)]
+    U5 (gauge) = (1.0 + 0.0j)
+    at the certified realization: max |formula - U| 1.43e-101, max |VERT - vertex| 2.95e-101, max ||U| - 1| 1.43e-101
+    exact solve: U7  = U1 + U2 - U3 - 1                     integral True  matches displayed formula True
+    exact solve: U8  = -U0 - U2 + U4 + 1                    integral True  matches displayed formula True
+    exact solve: U9  = -U0 + U1 - U2 + U3 + U6 + 1          integral True  matches displayed formula True
+    exact solve: U10 = 2*U2 - U3 - U6 - 1                   integral True  matches displayed formula True
+    exact solve: U11 = U1 + U2 + U3 - U4 + U6 - 1           integral True  matches displayed formula True
+    exact solve: U12 = -U1 - U2 - U6 + 2                    integral True  matches displayed formula True
+    coefficient matrix of the six dependent classes in the six relations: rank 6, det n/a (non-square: (11, 6))
+    the 17 vertex formulas derived from the tree equal the VERT table: True
+    all six displayed dependent formulas reproduced exactly: True
+    constant vector U1 + U2 - 1 (U3 from |U7| = 1)               v5 - v11 = -U1 - U2 + 1             = (-1) * c
+    constant vector 2 - U1 - U2 (U6 from |U12| = 1)              v7 - v10 = U1 + U2 - 2              = (-1) * c
+    constant vector U1 + U2 + U3 + U6 - 1 (U4 from |U11| = 1)    v2 - v11 = -U1 - U2 - U3 - U6 + 1   = (-1) * c
+    constant vector 1 - U2 + U4 (U0 from |U8| = 1)               v1 - v6 = U2 - U4 - 1              = (-1) * c
+      pairs proportional to that c: [(2, 7), (5, 11)]
+      pairs proportional to that c: [(7, 10)]
+      pairs proportional to that c: [(2, 11), (10, 17)]
+      pairs proportional to that c: [(1, 6)]
+    identically coincident vertex pairs: []
