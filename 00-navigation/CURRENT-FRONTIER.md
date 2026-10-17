@@ -376,7 +376,7 @@ lift/phase clocks.
 - **AMM:** [THM-4086](../01-canon/theorems/THM-4086-rule-a-transition-clock-and-phase-cocycle.md) proves a fixed-policy `R=32768` clock/cocycle; no global monotonicity, all-`R`, or `C*` result.
 - **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383: localization, owner/ANOVA/rectangle/reference inversion; realization/stable diagonal open. THM-2646: modular/exponent `B3` conjugacy, not Markov invariance.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.
-- **Collatz, OPEN:** [Refinement debt](../05-knowledge/results/collatz_refinement_debt_20261016a.md): the Gram refinement price contracts under native maps; all fifteen individual-row paired tests at k22 pass. Uniform paired payment, tail energy and ROOT remain open.
+- **Collatz, OPEN:** [Tail brackets](../05-knowledge/results/escape_renewal_idoneal_20261017d.md): k22 stage27 has cone energy7.7315 X squared and every row has certified absolute current>=98. Uniform tail and universal ROOT bounds remain open.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
 - **Rule 30:** [THM-4210](../01-canon/theorems/THM-4210-rule30-lossless-dyadic-block-current-cartier-tree.md) gives the forward current tree; THM-4204/4206 are inverse/Haar carriers. THM-4263 adds a fibre-cap density pullback, not a prize solution. All prizes remain **OPEN**.
 - **Two Hopf problems:** the `S2 x S2` curvature and `S6` complex-structure

@@ -1,0 +1,136 @@
+{
+  "checks": {
+    "bracket_abstract_mergers": 4500,
+    "geometric_positive_edge_checks": 11812110,
+    "geometry_metadata": "assembly=copies explicitly normalized in the initial two receipts; all coordinates, edges and witnesses unchanged",
+    "keller_exact_frequencies": 31412,
+    "native19_reproduces_previous_full_audit": true,
+    "native27_independent_rerun_reproduces_endpoint_clock_hashes_and_fine_histogram": true,
+    "optimized_equal": [
+      "idoneal",
+      "verify",
+      "keller including F25",
+      "renewal",
+      "native k8 stages4,8",
+      "sqrt3 copies"
+    ],
+    "resource_scope": "A duplicate outside-edge audit was terminated for memory pressure; the completed ROOT rerun instead authenticates identical arrays against the completed full audit. No second full audit is claimed."
+  },
+  "commands": [
+    "python3 -B 04-computation/experiments/collatz_tail_renewal_20261017d.py --k 22 --stages 19 21 23 27 --output 04-computation/experiments/escape_renewal_20261017d/native22.json",
+    "python3 -B 04-computation/experiments/collatz_tail_renewal_20261017d.py --k 22 --stages 27 --root-stats --audit-receipt 04-computation/experiments/escape_renewal_20261017d/native22.json --output 04-computation/experiments/escape_renewal_20261017d/rooted22.json",
+    "python3 -B 04-computation/experiments/collatz_good_lambda_20261017c.py --input 04-computation/experiments/escape_renewal_20261017d/native22.json > 04-computation/experiments/escape_renewal_20261017d/tails.json",
+    "python3 -B 04-computation/experiments/renewal_floor_20261017d.py --old 04-computation/experiments/graded_tail_carrier_20261017b/native22.json --new 04-computation/experiments/escape_renewal_20261017d/native22.json --root 04-computation/experiments/escape_renewal_20261017d/rooted22.json > 04-computation/experiments/escape_renewal_20261017d/renewal.json",
+    "python3 -B 04-computation/experiments/escaped_ports_20261017d.py --mode sqrt3 --assembly copies --output 04-computation/experiments/escape_renewal_20261017d/sqrt3.json",
+    "python3 -B 04-computation/experiments/escaped_ports_20261017d.py --mode eleven --assembly copies --output 04-computation/experiments/escape_renewal_20261017d/eleven.json",
+    "python3 -B 04-computation/experiments/escaped_ports_20261017d.py --mode sqrt3 --assembly triple --output 04-computation/experiments/escape_renewal_20261017d/triple.json",
+    "python3 -B 04-computation/experiments/escape_receipt_verify_20261017d.py 04-computation/experiments/escape_renewal_20261017d/sqrt3.json 04-computation/experiments/escape_renewal_20261017d/eleven.json 04-computation/experiments/escape_renewal_20261017d/triple.json > 04-computation/experiments/escape_renewal_20261017d/verify.json",
+    "python3 -B 04-computation/experiments/idoneal_tower_20261017d.py > 04-computation/experiments/escape_renewal_20261017d/idoneal.json",
+    "python3 -B 04-computation/experiments/keller_cubic_fourier_exact_20261017d.py > 04-computation/experiments/escape_renewal_20261017d/keller.json",
+    "python3 -B 04-computation/experiments/escaped_product_probe_20261017d.py > 04-computation/experiments/escape_renewal_20261017d/product_probe.json"
+  ],
+  "files": [
+    {
+      "path": "04-computation/experiments/collatz_tail_renewal_20261017d.py",
+      "sha256": "d492f8562e612990428612a65b0ec3d0a5a3d183344c1e23562156f750fa19af"
+    },
+    {
+      "path": "04-computation/experiments/escape_receipt_verify_20261017d.py",
+      "sha256": "26fbe61f08d0f537eb7f133b11de1402d8c4326d95297f6efc9badc784df4f2f"
+    },
+    {
+      "path": "04-computation/experiments/escaped_ports_20261017d.py",
+      "sha256": "311e7fe4f13de40a93b54624e01f963046f5d6f7943f877b73c99f2c609ec8f9"
+    },
+    {
+      "path": "04-computation/experiments/idoneal_tower_20261017d.py",
+      "sha256": "55e1804857e3b444b043442507149bd9bde972429b0b03ac303d98030dbf47fa"
+    },
+    {
+      "path": "04-computation/experiments/keller_cubic_fourier_exact_20261017d.py",
+      "sha256": "79c7c7c50a168936d29ca45f0e1601899a65c83404cc8d500d553ffacb8742ba"
+    },
+    {
+      "path": "04-computation/experiments/renewal_floor_20261017d.py",
+      "sha256": "56b6b9b0a5c72cf4d4f4afebeaf107bb6dbbf853516eba712312e61f9d7500c9"
+    },
+    {
+      "path": "04-computation/experiments/escaped_product_probe_20261017d.py",
+      "sha256": "9e566f94ca94a7997c64360d178c561bf5ffb77e2ae249cac4c99c0914a59a58"
+    },
+    {
+      "path": "04-computation/experiments/collatz_compact_resets_20261015f.py",
+      "sha256": "eddab48a8a44e64c3c3724c7b2366a2b0e7df8ea6f0377ce5eb2ecee5088416e"
+    },
+    {
+      "path": "04-computation/experiments/collatz_clock_tail_20261017b.py",
+      "sha256": "bb24cc72b9858ba9d2225c2cd75fcfd4e91eaad142cea9ad0cc186298dec5357"
+    },
+    {
+      "path": "04-computation/experiments/collatz_interval_atlas_20261016e.py",
+      "sha256": "3921dd71c47f386051f03d00190fb15d534b6a3b7e34da06ea7aeb5469f92901"
+    },
+    {
+      "path": "04-computation/experiments/golden_boundary_20261017c.py",
+      "sha256": "f48f34b4ecb7037a509b4a64993eacef7b2985952b2424bd731ec62f74b728a5"
+    },
+    {
+      "path": "04-computation/experiments/collatz_good_lambda_20261017c.py",
+      "sha256": "663ce5f48c195cf8ff17d307bd8546d27be27b5fcf9055ea20ac6443c8237ae5"
+    },
+    {
+      "path": "04-computation/experiments/quadratic_context_20261017c.py",
+      "sha256": "f05517e27b973e4f3bccfcdd77b0a1dc4841718d3a02dd1c2b0368a2df2dcb26"
+    },
+    {
+      "path": "04-computation/experiments/graded_tail_carrier_20261017b/native22.json",
+      "sha256": "35034aad3ee939c522e9157d592a4470b4e9d16b9c7a666b479848cee1f77f44"
+    },
+    {
+      "path": "04-computation/experiments/escape_renewal_20261017d/eleven.json",
+      "sha256": "4d53d3bce50ef4887f463d0446874a3b5a324b3707f25f606554e66f2dbc9ea9"
+    },
+    {
+      "path": "04-computation/experiments/escape_renewal_20261017d/idoneal.json",
+      "sha256": "10ef5c0023ad5d6d614224dcd268b5150d08e61a1bebd67a76de50fd885d8544"
+    },
+    {
+      "path": "04-computation/experiments/escape_renewal_20261017d/keller.json",
+      "sha256": "e6f0e845a1d75738368657c22a8528f887ad36c1e79da0aa9052ed3ada7a89d9"
+    },
+    {
+      "path": "04-computation/experiments/escape_renewal_20261017d/native22.json",
+      "sha256": "3e2d6af9dae1a2c9284e0df8255d49956f537b5a1bb730ad438c6f7d6e803e53"
+    },
+    {
+      "path": "04-computation/experiments/escape_renewal_20261017d/product_probe.json",
+      "sha256": "ea6946a03cd5e42c85d05884100e2978c6af21fa0a0db0186f2d666a068d2b89"
+    },
+    {
+      "path": "04-computation/experiments/escape_renewal_20261017d/renewal.json",
+      "sha256": "c02d4551ae2718e28601eabbb6901d549689b00a585a4afae820c53def4e7541"
+    },
+    {
+      "path": "04-computation/experiments/escape_renewal_20261017d/rooted22.json",
+      "sha256": "4140a5066cd7a2caaa899a11d6ba4b17eff760f2ea31abf6ed9915dc3ace080c"
+    },
+    {
+      "path": "04-computation/experiments/escape_renewal_20261017d/sqrt3.json",
+      "sha256": "837fc72d6dc05fead28a6324608467fa68bd4d615d44a4c51fa9abcb53ff5341"
+    },
+    {
+      "path": "04-computation/experiments/escape_renewal_20261017d/tails.json",
+      "sha256": "0bcb4f6039d41dd24d8f3934ba9b8864ffcf59647f33e51e41f8e542a391470a"
+    },
+    {
+      "path": "04-computation/experiments/escape_renewal_20261017d/triple.json",
+      "sha256": "00a2dc60134569c8afc717be8f60820bfd15d40ff577993395bff9479d1b90b9"
+    },
+    {
+      "path": "04-computation/experiments/escape_renewal_20261017d/verify.json",
+      "sha256": "0b42cc9c3a9490976ff0fb9c980b3552069bb99c3bb1c15f3594a737f544bbb9"
+    }
+  ],
+  "session": "clock_duality_oct15",
+  "status": "PROVED scoped + FINITE-EXACT; universal Collatz, six-colour forcing and planar JC OPEN"
+}
