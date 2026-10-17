@@ -378,6 +378,10 @@ The current [primary formalization scope](https://raw.githubusercontent.com/open
 states the7/8 half-plane for every Dirichlet L-function. This session did
 not rebuild that external Lean development or audit its entire analytic
 proof. Its status here is CITED/adopted input, not newly verified work.
+The [alternate11/12 manuscript, Theorem1.1 and its consequences on page2](https://raw.githubusercontent.com/openai/math/main/preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/paper2.pdf)
+was also read directly: it explicitly derives idoneal completeness using
+the class-group classification and conductor reduction. Thus invoking a
+stronger full GRH is unnecessary under that adopted result.
 Likewise the current [Erdos508 statement](https://raw.githubusercontent.com/google-deepmind/formal-conjectures/main/FormalConjectures/ErdosProblems/508.lean)
 records the externally proved lower bound6 and upper bound7; the search in
 this packet concerns the remaining six-colour boundary obstruction.
@@ -443,6 +447,9 @@ Scripts and receipts are under
 The normal/optimized replay, independent residue-witness verification,
 input hashes and exact integer tail scores are recorded there. Native
 array authentication is inherited from the preceding packet's C1 audit.
+An independent PARI run agrees with all seven quadratic order class numbers
+and the cubic field discriminant148; the commands and values are retained
+in the manifest.
 All finite colour conclusions use positive, explicitly replayed colourings;
 no SAT-unsatisfiability claim is needed. Literature claims above are CITED;
 their hypotheses are not adopted as unconditional new canon.
