@@ -42,3 +42,15 @@ Run: `python paley_ranking_local_search_20261017.py 132:500 12 80`
 * **Exploratory.** 151 (L = 1.79), 199 (L = 2.004) and 271 (L = 2.099) are beaten. On 131 < p <= 500 the largest
   beaten L is 2.249 and the smallest unbeaten L is 2.518: the threshold drifts upward from the small-p values (23 with
   L = 1.965 and 47 with L = 2.29 are optimal or unbeaten). HYP-9287 records the drifting-threshold form.
+
+## Second pre-registration: 500 < p <= 1000 (written and pushed before this run)
+
+Run: `python paley_ranking_local_search_20261017.py 501:1000 6 40` (fewer restarts and kicks than the first test, so
+"unbeaten" is weaker evidence here; every "beaten" remains a certified witness order).
+
+* **Q1 (high L).** At each of the seven primes with L >= 2.8, namely 503, 599, 647, 719, 839, 887, 911, the natural
+  order is **not** beaten. Passes if at most one of the seven is beaten.
+* **Q2 (low L).** At each of the 27 primes with L <= 2.0 (523, 547, 563, 571, 587, 607, 619, 631, 643, 659, 683, 691,
+  727, 739, 751, 787, 811, 823, 827, 859, 883, 907, 919, 947, 967, 971, 991), the natural order **is** beaten. Passes
+  if all 27 are beaten.
+* **Exploratory, no prediction:** 743 (L = 2.42), 863 (L = 2.246), 983 (L = 2.705).
