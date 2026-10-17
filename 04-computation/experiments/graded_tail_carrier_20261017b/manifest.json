@@ -17,12 +17,14 @@
   "limits": "No universal Collatz estimate, ROOT positivity or six-colour forcing. Geometric connectors for the 184 missing zero-charge points are proved to exist but not individually constructed.",
   "outputs": {
     "04-computation/experiments/graded_tail_carrier_20261017b/cells18_20.json": "2b42e835c5e052a8a7d0a79f02920e44026f3448084888f006068c109d219444",
+    "04-computation/experiments/graded_tail_carrier_20261017b/cells22.json": "157a661edb8a76a265c09e52435545c3e4f4841752f65329e1613ff31ef9d524",
     "04-computation/experiments/graded_tail_carrier_20261017b/charge.json": "7476f907040d1ff6ee7fec5a6236d77d0e813ae2f2eeebc8e7ddfe008527785e",
     "04-computation/experiments/graded_tail_carrier_20261017b/native18_20.json": "ec3b76187dfaaea77434febc068ccef41a0cdda81fc84de307b6484a02f78a5c",
+    "04-computation/experiments/graded_tail_carrier_20261017b/native22.json": "35034aad3ee939c522e9157d592a4470b4e9d16b9c7a666b479848cee1f77f44",
     "04-computation/experiments/graded_tail_carrier_20261017b/rhombus.json": "f81ae0afd88098330e28028cbaa5d5d9e71d307b7c7095143051a058bb940b07",
     "04-computation/experiments/graded_tail_carrier_20261017b/rhombus_graph.json": "aab46debb38e5987f02d32be940e3ee3610d622513cd6d5daa0bfccd92bc165d",
     "04-computation/experiments/graded_tail_carrier_20261017b/tails_inherited.json": "c1caeea9fa4d674579508afc9cedf836d7aaa45b9c8fa5f826312fd3aba3d0ee",
-    "04-computation/experiments/graded_tail_carrier_20261017b/validation.json": "13a4fc2485d7aba38ac2843b443a1a3410c96a70f69b7e2bea26c25fded2e0b3"
+    "04-computation/experiments/graded_tail_carrier_20261017b/validation.json": "1468e31290fdff8ff8873cc326030cb20db7dca3b87a657dfb2efd9e828cd1ca"
   },
   "programs_and_local_dependencies": {
     "04-computation/experiments/charge_ports_eleven_20261011.py": "676cac9e363d681c5fef3e4f82d2030124fc161b407ef375106dd83475ea228e",
@@ -66,17 +68,30 @@
         "energy": 9091911898048,
         "k": 20,
         "stage": 14
+      },
+      {
+        "clock_sha256": "c7cb107d6352fe453bbf286ea7db7f0d80c8aa64bf104df4f3dbbc3d33c64947",
+        "endpoint_sha256": "8d2ea911a30584478c168f48fc088908cc0f95a1dfc33f3dd23f45cbba8961ea",
+        "energy": 1215739699262788,
+        "k": 22,
+        "stage": 13
+      },
+      {
+        "clock_sha256": "e1232baea2f7174d6c7761beddc116272f61cc14e747e6e8e79145b0e59d4921",
+        "endpoint_sha256": "4691c36b43a5e8fda8cffc0780d49598e3dd283cbc77c3117efca516a9f8ca51",
+        "energy": 646432378890360,
+        "k": 22,
+        "stage": 15
       }
     ],
     "normal_optimized_equal": [
       "cells18_20",
       "rhombus",
       "rhombus_graph",
-      "charge"
+      "charge",
+      "cells22"
     ],
-    "pending_native_scales": [
-      22
-    ],
+    "pending_native_scales": [],
     "status": "FINITE-EXACT independent native hash comparisons and optimized-output controls"
   }
 }

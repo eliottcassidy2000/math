@@ -27,16 +27,29 @@
       "energy": 9091911898048,
       "k": 20,
       "stage": 14
+    },
+    {
+      "clock_sha256": "c7cb107d6352fe453bbf286ea7db7f0d80c8aa64bf104df4f3dbbc3d33c64947",
+      "endpoint_sha256": "8d2ea911a30584478c168f48fc088908cc0f95a1dfc33f3dd23f45cbba8961ea",
+      "energy": 1215739699262788,
+      "k": 22,
+      "stage": 13
+    },
+    {
+      "clock_sha256": "e1232baea2f7174d6c7761beddc116272f61cc14e747e6e8e79145b0e59d4921",
+      "endpoint_sha256": "4691c36b43a5e8fda8cffc0780d49598e3dd283cbc77c3117efca516a9f8ca51",
+      "energy": 646432378890360,
+      "k": 22,
+      "stage": 15
     }
   ],
   "normal_optimized_equal": [
     "cells18_20",
     "rhombus",
     "rhombus_graph",
-    "charge"
+    "charge",
+    "cells22"
   ],
-  "pending_native_scales": [
-    22
-  ],
+  "pending_native_scales": [],
   "status": "FINITE-EXACT independent native hash comparisons and optimized-output controls"
 }

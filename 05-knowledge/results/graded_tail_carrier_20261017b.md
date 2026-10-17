@@ -556,8 +556,11 @@ transport bill instead of hiding it by selecting every row.
 | 20 | 12 | 18.86654018 | 256 | 4096 | 21.44350028 | 9.15713063 |
 | 20 | 14 | 8.26904570 | 256 | 4096 | 10.03806283 | 4.54343047 |
 | 20 | 18 | 2.00408584 | 256 | 4096 | 2.95454480 | 1.43073210 |
+| 22 | 13 | 69.10680095 | 512 | 8192 | 73.90342295 | 36.01545265 |
+| 22 | 15 | 36.74542648 | 512 | 8192 | 40.29455440 | 20.90525151 |
+| 22 | 19 | 14.13497564 | 512 | 8192 | 16.39845802 | 9.33138892 |
 
-The new k22 job is still running at this checkpoint; no new selected k22 anchors or stage19 result is claimed here.
+At k22, the saved stage15 selector has 8,192 actual anchors and exact cone energy `708869297661544`, below49 X^2. This makes the preceding packet's existence-only compression concrete. The endpoint and clock hashes, and fine energy, agree exactly with its independent large replay at stages13 and15. Stage19 is a further finite extension, not an all-scale estimate. The coarser 2,048-anchor option pays52.88723917 X^2 at stage15 and25.00655344 X^2 at stage19: either more physical anchors or more native extension can repair this finite 7X failure.
 <!-- NATIVE_TABLE_END -->
 
 For comparison, the inherited fixed mixed-depth schedule has normalized
