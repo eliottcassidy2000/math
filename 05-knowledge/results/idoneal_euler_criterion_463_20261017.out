@@ -1,0 +1,6 @@
+idoneal n with n + 1 not a prime power / twice one, or with a non-unique proper representation: []
+n + 1 for the idoneal numbers that are 2 x odd squarefree (clock_duality P1 family):
+    [(2, 3, 'prime'), (6, 7, 'prime'), (10, 11, 'prime'), (22, 23, 'prime'), (30, 31, 'prime'), (42, 43, 'prime'), (58, 59, 'prime'), (70, 71, 'prime'), (78, 79, 'prime'), (102, 103, 'prime'), (130, 131, 'prime'), (190, 191, 'prime'), (210, 211, 'prime'), (330, 331, 'prime'), (462, 463, 'prime')]
+n + 1 square: [(3, 4, 2), (8, 9, 3), (15, 16, 4), (24, 25, 5), (48, 49, 7), (120, 121, 11), (168, 169, 13), (840, 841, 29), (1848, 1849, 43)]
+non-idoneal n <= 2000: 1935; n + 1 composite (not a prime power or twice one): 1483 (the criterion detects these at m = n + 1)
+Euler's certificate: 197^2 + 1848*100^2 = 18518809; proper representations by x^2 + 1848 y^2: [(197, 100)]; prime: True
