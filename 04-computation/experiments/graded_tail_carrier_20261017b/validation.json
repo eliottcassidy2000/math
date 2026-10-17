@@ -1,0 +1,42 @@
+{
+  "native_stage_comparisons": [
+    {
+      "clock_sha256": "08537c4bfff36280dfe6bc5ffb3e86737dd670e21eb76f2238b1222e21232288",
+      "endpoint_sha256": "df244255429885db993e66a07be706669eb1bfade43c911d1e4bcf758067c0e1",
+      "energy": 868647237284,
+      "k": 18,
+      "stage": 11
+    },
+    {
+      "clock_sha256": "e4de684de89642cced9a46366d49966979c2c4ef8bc3643717719494d6e96af2",
+      "endpoint_sha256": "380d6a1fc06e31900aa2f3cc81349369a12d18a47fa1f92d5707d861cacf07ce",
+      "energy": 493959006876,
+      "k": 18,
+      "stage": 13
+    },
+    {
+      "clock_sha256": "4182ab690b1058fa8d89f8f42c688f998e2ad43bd5747370d60d3f30f4c30df7",
+      "endpoint_sha256": "8d6427502cfb5c0b7dbc9b6c619673a84d38a3af94fadfa58a300f6015f5f92c",
+      "energy": 20743980299224,
+      "k": 20,
+      "stage": 12
+    },
+    {
+      "clock_sha256": "ad7fc303f9194cdb7855330c40505d29c27a37b83ec12b8dca6c49ceb9acfa4e",
+      "endpoint_sha256": "15981f035d23627d1cb65fd691b5db2115dfc7df00148bb0abdb0948a3d5b061",
+      "energy": 9091911898048,
+      "k": 20,
+      "stage": 14
+    }
+  ],
+  "normal_optimized_equal": [
+    "cells18_20",
+    "rhombus",
+    "rhombus_graph",
+    "charge"
+  ],
+  "pending_native_scales": [
+    22
+  ],
+  "status": "FINITE-EXACT independent native hash comparisons and optimized-output controls"
+}

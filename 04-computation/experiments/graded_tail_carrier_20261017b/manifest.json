@@ -1,0 +1,82 @@
+{
+  "base_commit": "237f853f3bae",
+  "environment": {
+    "numpy": "2.2.6",
+    "platform": "macOS-15.3.2-arm64-arm-64bit",
+    "pysat": "1.9.dev4",
+    "python": "3.10.0 (v3.10.0:b494f5935c, Oct  4 2021, 14:59:19) [Clang 12.0.5 (clang-1205.0.22.11)]",
+    "sympy": "1.14.0"
+  },
+  "independence": "Global observed-edge clock potential versus earlier literal source replay; exact quotient graph arithmetic and Hensel colour lift versus SAT; interval-union tails versus histograms; direct exhaustive small cones versus owner pass.",
+  "inherited_inputs": {
+    "04-computation/experiments/anchor_hub_20261017a/hub_valuation_grid_four.json": "f0ed42062dbad709419d4cea82a147d202d089fed0df7e3998f5df69666b7301",
+    "04-computation/experiments/anchor_hub_20261017a/native_k21.json": "6b8226cf7fbbd628791e9378c8a3f298d892605171392d228236d4e4689a9f31",
+    "04-computation/experiments/anchor_hub_20261017a/native_k22.json": "b611216c0af0d21388a8d999a954e37b4618f794a6a5f3d3c978f07dacfd446d",
+    "04-computation/experiments/anchor_hub_20261017a/profile_k18_k20.json": "3c7fbf11ed9e3b168e662abde6057f66a8d35c99c0b13f50827d647bf3393381"
+  },
+  "limits": "No universal Collatz estimate, ROOT positivity or six-colour forcing. Geometric connectors for the 184 missing zero-charge points are proved to exist but not individually constructed.",
+  "outputs": {
+    "04-computation/experiments/graded_tail_carrier_20261017b/cells18_20.json": "2b42e835c5e052a8a7d0a79f02920e44026f3448084888f006068c109d219444",
+    "04-computation/experiments/graded_tail_carrier_20261017b/charge.json": "7476f907040d1ff6ee7fec5a6236d77d0e813ae2f2eeebc8e7ddfe008527785e",
+    "04-computation/experiments/graded_tail_carrier_20261017b/native18_20.json": "ec3b76187dfaaea77434febc068ccef41a0cdda81fc84de307b6484a02f78a5c",
+    "04-computation/experiments/graded_tail_carrier_20261017b/rhombus.json": "f81ae0afd88098330e28028cbaa5d5d9e71d307b7c7095143051a058bb940b07",
+    "04-computation/experiments/graded_tail_carrier_20261017b/rhombus_graph.json": "aab46debb38e5987f02d32be940e3ee3610d622513cd6d5daa0bfccd92bc165d",
+    "04-computation/experiments/graded_tail_carrier_20261017b/tails_inherited.json": "c1caeea9fa4d674579508afc9cedf836d7aaa45b9c8fa5f826312fd3aba3d0ee",
+    "04-computation/experiments/graded_tail_carrier_20261017b/validation.json": "13a4fc2485d7aba38ac2843b443a1a3410c96a70f69b7e2bea26c25fded2e0b3"
+  },
+  "programs_and_local_dependencies": {
+    "04-computation/experiments/charge_ports_eleven_20261011.py": "676cac9e363d681c5fef3e4f82d2030124fc161b407ef375106dd83475ea228e",
+    "04-computation/experiments/collatz_clock_tail_20261017b.py": "bb24cc72b9858ba9d2225c2cd75fcfd4e91eaad142cea9ad0cc186298dec5357",
+    "04-computation/experiments/collatz_compact_resets_20261015f.py": "eddab48a8a44e64c3c3724c7b2366a2b0e7df8ea6f0377ce5eb2ecee5088416e",
+    "04-computation/experiments/collatz_interval_atlas_20261016e.py": "3921dd71c47f386051f03d00190fb15d534b6a3b7e34da06ea7aeb5469f92901",
+    "04-computation/experiments/cubic_carrier_charge_20261017b.py": "bc37c60a927e00ce0c8eb41096d476b43921bc641f5844c53b8882f219ced797",
+    "04-computation/experiments/cubic_hub_coupling_20261017a.py": "4e7be8e419f88f0bb9770d9bbb303e744c6295c0201b5ae1a5a2dadd5798b28a",
+    "04-computation/experiments/cubic_rhombus_contacts_20261017b.py": "312b75341498b3a06d8b00eaad664f8c2e6999c4f2d65d81514b99043e92d746",
+    "04-computation/experiments/cubic_rhombus_graph_20261017b.py": "d5447232722739e2d16310fcdd6678828029bd4f92fdf437fc5bb653d572757b",
+    "04-computation/experiments/graded_tail_cells_20261017b.py": "79d253866b200a6284844fa0ea584b2ada1dab68d9e2a6a39fd2c7f3b54637e9"
+  },
+  "reproduction": "See section 11 of 05-knowledge/results/graded_tail_carrier_20261017b.md; run from repository root.",
+  "status": "PROVED scoped mechanisms; FINITE-EXACT declared universes; uniform Collatz bound and forcing OPEN",
+  "validation": {
+    "native_stage_comparisons": [
+      {
+        "clock_sha256": "08537c4bfff36280dfe6bc5ffb3e86737dd670e21eb76f2238b1222e21232288",
+        "endpoint_sha256": "df244255429885db993e66a07be706669eb1bfade43c911d1e4bcf758067c0e1",
+        "energy": 868647237284,
+        "k": 18,
+        "stage": 11
+      },
+      {
+        "clock_sha256": "e4de684de89642cced9a46366d49966979c2c4ef8bc3643717719494d6e96af2",
+        "endpoint_sha256": "380d6a1fc06e31900aa2f3cc81349369a12d18a47fa1f92d5707d861cacf07ce",
+        "energy": 493959006876,
+        "k": 18,
+        "stage": 13
+      },
+      {
+        "clock_sha256": "4182ab690b1058fa8d89f8f42c688f998e2ad43bd5747370d60d3f30f4c30df7",
+        "endpoint_sha256": "8d6427502cfb5c0b7dbc9b6c619673a84d38a3af94fadfa58a300f6015f5f92c",
+        "energy": 20743980299224,
+        "k": 20,
+        "stage": 12
+      },
+      {
+        "clock_sha256": "ad7fc303f9194cdb7855330c40505d29c27a37b83ec12b8dca6c49ceb9acfa4e",
+        "endpoint_sha256": "15981f035d23627d1cb65fd691b5db2115dfc7df00148bb0abdb0948a3d5b061",
+        "energy": 9091911898048,
+        "k": 20,
+        "stage": 14
+      }
+    ],
+    "normal_optimized_equal": [
+      "cells18_20",
+      "rhombus",
+      "rhombus_graph",
+      "charge"
+    ],
+    "pending_native_scales": [
+      22
+    ],
+    "status": "FINITE-EXACT independent native hash comparisons and optimized-output controls"
+  }
+}
