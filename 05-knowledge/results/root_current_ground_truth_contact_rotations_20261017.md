@@ -18,7 +18,10 @@ clock_duality_oct15 brackets the current `a_N = H(4N) - H(N)` by certified ROOT 
 without assuming convergence (D1). Every `n <= 2^29` reaches 1, so the full current is known: `U = 0` and `a_N = R`.
 [collatz_root_current_exact_20261017.py](../../04-computation/experiments/collatz_root_current_exact_20261017.py)
 computes it at every row of every octave `X = 2^k`, `k = 8..27`. The census `H` agrees with the S37/S38 dense census at
-all 20,393 grid points below `2^30`.
+all 20,393 grid points below `2^30`. Energies and tail constants are exact integer numerators over `X^2` (int64
+accumulation, with an overflow bound asserted before summing; the numerators are in the JSON). The decimals below are
+roundings. The first version used float64 reductions, which clock_duality rightly declined to treat as integer
+receipts.
 
 | k | energy `Σ a_N^2 / X^2` | tail constant `K_X` | fraction `a_N > 0` | sign changes | max `|a_N|` / `sqrt(X)` |
 |---:|---:|---:|---:|---:|---:|
@@ -66,7 +69,9 @@ checks `I + B = a_N` at every row of every octave `2^8..2^26` (zero failures) an
 - The bulk and the rim are anti-correlated at 16 of 19 octaves. The current's energy is what survives a large
   cancellation: at `2^23` the bulk energy 8.54 cancels to 1.51.
 - The two highest-energy octaves are where the cancellation fails: `2^22` (correlation +0.61) and `2^12`.
-- clock_duality's staged value at `k = 18`, stage 28 (`<I,B>/X^2 = 0.173301`) is essentially the final state (0.1735).
+- clock_duality's staged cross term at `k = 18`, stage 28 (`<I,B>/X^2 = 0.173301`) is close to the final 0.1735. The
+  staged energy 1.634206 differs from the final 1.6042, because the stages have different terminal coverage (as
+  clock_duality notes in root_braid_logistic_20261017f.md).
 - Their exact rejection of a universal nonpositive I/B covariance rule holds for the full current too (`k = 18, 22`).
 - **Consequence for the uniform-bound target.** A uniform bound on `R` cannot come from bounding `I` and `B` separately
   with a fixed-sign cross term. It must control their covariance, which is exactly the odd-transition guard

@@ -6,7 +6,8 @@ Definitions (escape_renewal_idoneal_20261017d.md, golden_tail_idoneal_20261017c.
 (-1)^d(n), and on the octave X <= N < 2X the current a_N = H(4N) - H(N). Every n in range reaches 1, so the full
 current is known: U = 0 and a_N = R(N) in the notation of D1 there.
 
-Outputs, for every octave X = 2^k, k = KMIN..KMAX (exact, all rows): the energy sum a_N^2 / X^2, the tail constant
+Outputs, for every octave X = 2^k, k = KMIN..KMAX (exact, all rows): the energy sum a_N^2 / X^2 (exact integer
+numerator in the JSON, int64 accumulation), the tail constant
 K_X = max_t t^2 #{N : |a_N| >= t} / X^2 (target (T) of graded_tail_carrier_20261017b.md), the fraction of positive rows,
 the number of sign changes, min |a_N| and max |a_N|; and a comparison with the census H at the grid points.
 Usage: python collatz_root_current_exact_20261017.py KMIN KMAX
@@ -70,13 +71,17 @@ def main():
     print(' k        X     energy/X^2  K_X(exact)  frac>0  signchg   min|a|   max|a|   max|a|/X^(2/3)')
     for k in range(KMIN, KMAX + 1):
         X = 2 ** k
-        a = octave_stats(H, X).astype(np.float64)
-        e = float(np.sum(a * a) / X ** 2)
-        s = np.sort(np.abs(a))[::-1]
-        K = float(np.max(s ** 2 * np.arange(1, X + 1)) / X ** 2)
+        ai = octave_stats(H, X)                                  # exact int64 current
+        mx = int(np.max(np.abs(ai)))
+        assert X * mx * mx < 2 ** 62                             # no int64 wraparound in the sums below
+        e_num = int(np.sum(ai * ai))                             # exact integer energy numerator (< 2^63 here)
+        s = np.sort(np.abs(ai))[::-1]
+        K_num = int(np.max(s * s * np.arange(1, X + 1, dtype=np.int64)))   # exact integer tail numerator
+        e = e_num / X ** 2; K = K_num / X ** 2
+        a = ai.astype(np.float64)
         pos = float(np.mean(a > 0)); chg = int(np.sum(np.diff(np.sign(a)) != 0))
-        rows.append(dict(k=k, energy=e, K=K, frac_pos=pos, sign_changes=chg, min_abs=float(np.min(np.abs(a))),
-                         max_abs=float(np.max(np.abs(a)))))
+        rows.append(dict(k=k, energy=e, energy_numerator=e_num, K=K, K_numerator=K_num, denominator=X ** 2, frac_pos=pos,
+                         sign_changes=chg, min_abs=int(np.min(np.abs(ai))), max_abs=int(np.max(np.abs(ai)))))
         print('%2d %9d   %9.4f   %9.4f   %6.3f  %6d  %8d  %8d   %7.3f' % (k, X, e, K, pos, chg, np.min(np.abs(a)), np.max(np.abs(a)),
                                                                      np.max(np.abs(a)) / X ** (2 / 3)), flush=True)
     # census cross-check at grid points

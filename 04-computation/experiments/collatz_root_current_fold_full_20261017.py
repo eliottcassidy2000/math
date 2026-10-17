@@ -10,7 +10,8 @@ reaches ROOT 1, so the full profile is known), R1 says
 
 This script checks the identity at every row of every octave 2^KMIN..2^KMAX and reports the normalized energies
 ||I||^2/X^2, ||B||^2/X^2, <I,B>/X^2, ||R||^2/X^2 and the correlation <I,B>/(||I|| ||B||), extending the four staged
-rows of the source note (k = 10, 14, 18) to the final state at every k.
+rows of the source note (k = 10, 14, 18) to the final state at every k. All energies are exact integer numerators over
+X^2 (int64 accumulation, asserted below 2^62); the printed decimals are their roundings.
 Usage: python collatz_root_current_fold_full_20261017.py KMIN KMAX
 Session opus-2026-10-17-S40.
 """
@@ -67,11 +68,14 @@ def main():
     for k in range(KMIN, KMAX + 1):
         X = 2 ** k
         I, B, bad = octave(Pchi, Pw, H, X)
-        I = I.astype(np.float64); B = B.astype(np.float64)
-        ii = float(I @ I) / X ** 2; bb = float(B @ B) / X ** 2; ib = float(I @ B) / X ** 2
-        rr = ii + bb + 2 * ib
+        mx = max(int(np.max(np.abs(I))), int(np.max(np.abs(B))))
+        assert X * mx * mx < 2 ** 62                       # no int64 wraparound in the sums below
+        ii_n = int(np.sum(I * I)); bb_n = int(np.sum(B * B)); ib_n = int(np.sum(I * B))     # exact int64 numerators
+        rr_n = ii_n + bb_n + 2 * ib_n
+        ii, bb, ib, rr = ii_n / X ** 2, bb_n / X ** 2, ib_n / X ** 2, rr_n / X ** 2
         corr = ib / np.sqrt(ii * bb) if ii > 0 and bb > 0 else float('nan')
-        rows.append(dict(k=k, II=ii, BB=bb, IB=ib, RR=rr, corr=corr, failures=int(bad)))
+        rows.append(dict(k=k, II=ii, BB=bb, IB=ib, RR=rr, corr=corr, failures=int(bad), II_num=ii_n, BB_num=bb_n,
+                         IB_num=ib_n, RR_num=rr_n, denominator=X ** 2))
         print('%2d  %11.6f  %11.6f  %10.6f  %11.6f  %9.4f  %d' % (k, ii, bb, ib, rr, corr, bad), flush=True)
     here = os.path.dirname(os.path.abspath(__file__))
     json.dump(rows, open(os.path.join(here, '..', '..', '05-knowledge', 'results', 'collatz_root_current_fold_full_20261017.json'), 'w'),
