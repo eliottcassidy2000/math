@@ -183,7 +183,7 @@ This is an abstract scalar hostile, not a measured Collatz profile. It
 explains why retaining a rigid constant energy target can discard a route
 that is still sufficient for (W). The checker uses integer square roots,
 not floating acceptance, at m=1,2,3; the energy ratios are approximately
-1.4883, 2.8108 and 4.1712 while K_X<=1.
+1.4883, 2.8108 and 4.1711 while K_X<=1.
 
 ## 5. The carrier, rather than the point count, restricts port forcing
 
