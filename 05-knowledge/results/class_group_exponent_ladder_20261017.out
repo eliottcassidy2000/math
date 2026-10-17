@@ -1,0 +1,17 @@
+X = 4000000; exponent computed by composition for 340199 candidate discriminants
+idoneal numbers recovered (D = -4n with one class per genus): 65, largest 1848
+equals Euler's list of 65: True
+class numbers of the idoneal discriminants -4n: {1: 5, 2: 15, 4: 24, 8: 17, 16: 4}
+  e   #D   #fund   largest |D|   largest fundamental |D|   class group order at the largest
+  1    13      9          163          163   (1, 1)
+  2   101     65         7392         5460   (16, 16)
+  3    42     26         4027         4027   (9, 9)
+  4   586    268       887040       435435   (256, 128)
+  5    44     36        37363        37363   (25, 25)
+  6  1338    512      3892980      3892980   (576, 576)
+  7    53     42       118843       118843   (49, 49)
+  8  2727   1028      3953280      3608760   (512, 512)
+  9   112     67       430411       430411   (81, 81)
+ 10  1513    907      3986500      3882040   (400, 400)
+ 12  8784   2330      3998808      3892980   (432, 576)
+ 16  8062   2975      3995040      3944472   (512, 512)
