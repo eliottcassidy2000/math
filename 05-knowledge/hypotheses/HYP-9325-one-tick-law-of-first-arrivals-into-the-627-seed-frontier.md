@@ -210,3 +210,16 @@ clocks, which led to T1-T4 and L1-L7.
   total. Same-clock pairs need paths of different depth with equal clock sums. Their `c_0` values are governed by the
   residues mod 3 along B-chains (THM-4690(4)), so a residue-class computation in the style of the `34/7` derivation is
   the natural first attempt.
+
+## Oriented-source refinement (2026-10-18, clock_duality_oct15)
+
+The [source-orientation note, S1--B2](../results/source_orientation_boundary_contexts_20261018k.md)
+extends the scalar sibling constant to its complete three-phase tensor.
+Its leading trace is zero: the actual row's cancellation is directional.
+It also proves, by an exact event-order reduction with independent checks,
+the all-N bound `-72 <= D0(N) <= 1428` for the fixed 627-source boundary.
+The proposed cumulative orientation inequality `3E(N,d)-T(N,d)<=D0(N)`
+and the sibling-packet energy bound are OPEN. Both pass every integer
+`4096<=N<2^20` at all first-arrival prefixes; local monotonicity fails.
+These are source-specific alternatives, not proofs of this hypothesis's
+individual lag-sign claims or of universal entry.

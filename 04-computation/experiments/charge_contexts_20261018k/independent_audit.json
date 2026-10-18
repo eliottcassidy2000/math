@@ -1,0 +1,235 @@
+{
+  "status": "FINITE-EXACT independent audit",
+  "source_engine_comparisons": 2219,
+  "old_witness_new_support_checks": 17670,
+  "source_local_monotonicity_hostiles": [
+    {
+      "N": 4096,
+      "max_local_increase": 786,
+      "at_depth": 31
+    },
+    {
+      "N": 5997,
+      "max_local_increase": 1047,
+      "at_depth": 46
+    },
+    {
+      "N": 1048576,
+      "max_local_increase": 152910,
+      "at_depth": 29
+    }
+  ],
+  "support_compiler": {
+    "sat_controls": [
+      {
+        "sets": [
+          [
+            1
+          ],
+          [
+            1
+          ],
+          [
+            1
+          ],
+          [
+            1
+          ],
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ],
+        "extends": false
+      },
+      {
+        "sets": [
+          [
+            1
+          ],
+          [
+            1
+          ],
+          [
+            1
+          ],
+          [
+            1
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ]
+        ],
+        "extends": true
+      },
+      {
+        "sets": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ]
+        ],
+        "extends": false
+      },
+      {
+        "sets": [
+          [
+            0,
+            2,
+            4
+          ],
+          [
+            0,
+            2,
+            4
+          ],
+          [
+            1,
+            3,
+            5
+          ]
+        ],
+        "extends": true
+      },
+      {
+        "sets": [
+          [
+            0,
+            2,
+            4
+          ],
+          [
+            0,
+            2,
+            4
+          ],
+          [
+            0,
+            2,
+            4
+          ]
+        ],
+        "extends": false
+      },
+      {
+        "sets": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "extends": false
+      },
+      {
+        "sets": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1
+          ]
+        ],
+        "extends": true
+      },
+      {
+        "sets": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "extends": true
+      },
+      {
+        "sets": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "extends": false
+      }
+    ],
+    "exhaustive_ternary_sequences": 137249,
+    "exact_six_colour_mask_states": 63,
+    "max_rich_factors_avoiding_zero": [
+      1,
+      2,
+      3,
+      4,
+      4,
+      4
+    ]
+  },
+  "marked_minor": {
+    "ports": 10,
+    "original_edges": 15,
+    "subdivision_vertices": 25,
+    "subdivision_edges": 30,
+    "six_colour_canonical_assignments": 109299,
+    "original_extending": 5649,
+    "subdivision_extending": 109299,
+    "hostile": "All ten ports equal: excluded by Petersen; extends to its once-subdivided graph.",
+    "scope": "Abstract marked graphs. Not a geometric unit-distance substitution."
+  }
+}

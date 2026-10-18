@@ -318,3 +318,10 @@ cannot replace that task: the displayed Gram hostile already forbids it.
 Keep the entry port and full clock polynomial while grouping charges;
 test any proposed potential against the N=5997 prefix and the anisotropic
 N=524288 hostile before extrapolating.
+
+**Follow-up (2026-10-18):** [source orientation and boundary contexts](source_orientation_boundary_contexts_20261018k.md)
+calculates the full sibling tensor. Its leading Hermitian trace vanishes;
+the un-conjugated correlation retains the actual source cancellation.
+The fixed 627-source initial orientation is now bounded for every N by
+an exact three-block event reduction. Transported concentration remains
+OPEN; the new cumulative and packet bounds have finite prefix tests.

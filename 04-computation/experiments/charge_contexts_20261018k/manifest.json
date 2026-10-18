@@ -1,0 +1,37 @@
+{
+  "status": "Reproduction manifest; not a preregistration",
+  "inherited_commit": "8276303d5f4a",
+  "python": "3.10.0",
+  "packages": {
+    "numpy": "2.2.6",
+    "sympy": "1.14.0",
+    "python-sat": "1.9.dev4"
+  },
+  "geometry_dependency_path": "/tmp/math-numba-20261017i",
+  "commands_document": "05-knowledge/results/source_orientation_boundary_contexts_20261018k.md#9-reproduction-and-next-proof-targets",
+  "sha256_canonical_LF": {
+    "04-computation/experiments/source_pair_tensor_20261018k.py": "a9f3557d1e1c21da2da7c0fa701449d6494dad2f30e418818538a203a01f76b4",
+    "04-computation/experiments/source_concentration_20261018k.c": "327326b93cf0a9db8cbc9aaf893b98ac3b161275248d7fe0c0caea4f3936f757",
+    "04-computation/experiments/frontier_boundary_automaton_20261018k.py": "510cb38f7915af6d4248b38421fce1ce4f76f464001bc5633523f0055358b728",
+    "04-computation/experiments/frontier_boundary_audit_20261018k.c": "d871cd0387ae12339f013478673c4193f731d4cb10faf8d80705ecd57b7eaa56",
+    "04-computation/experiments/mixed_quad_labels_20261018k.py": "9a5b0145987a992a40aebf6af45d8eb8946d9fb6f060c111ef85ffc4b735aad4",
+    "04-computation/experiments/six_coordinate_context_20261018k.py": "625213873c6dfb588e602df00a179b665f330ed692a047d1e613d3973bcfc656",
+    "04-computation/experiments/interface_audit_20261018k.py": "2d3600d303c3114919142c3104ec99dd8951c9641ce0048f8e3c569d0223b3b8",
+    "04-computation/experiments/golden_reflection_context_20261018j.py": "1b36fe1c849b12110c72990056dc9446b8b7545fa60bb9cb8c70345028ea367a",
+    "04-computation/experiments/frontier_phase_20261018j.py": "ac52e5a78f584c8b5e1a0587e4d93cca93c5a782a0a1e63b44f71b7614b88c1b",
+    "04-computation/experiments/golden_forcing_search_20261017.py": "0a1a5a9c2241ea7bf040b115d5aa814834be5861b2db4a70ff4e3a731a623846",
+    "04-computation/experiments/golden_boundary_20261017c.py": "f48f34b4ecb7037a509b4a64993eacef7b2985952b2424bd731ec62f74b728a5",
+    "04-computation/experiments/escaped_ports_20261017d.py": "311e7fe4f13de40a93b54624e01f963046f5d6f7943f877b73c99f2c609ec8f9",
+    "04-computation/experiments/golden_vsquare_unit_census_20261017.py": "c5fa5a580e7e5fa84e5e232fdaab1a5b3c418ec720b51a8dc117662f31ecb7fd",
+    "04-computation/experiments/first_arrival_20261018/V_closed_Y1000.txt": "df88f03b576b13c98c0c5378fc1cf61685eeb6817073681266d2a781dc329b26",
+    "04-computation/experiments/charge_contexts_20261018k/boundary_automaton.json": "15bd248eb4a0a48fa970a12422e455a9cc087120822d53e3596e8507715da3ea",
+    "04-computation/experiments/charge_contexts_20261018k/boundary_everyN.json": "7570e75dfa751a44a5d18523c8cbb18fb7fd69333b58a528ce60bde021b2e9de",
+    "04-computation/experiments/charge_contexts_20261018k/independent_audit.json": "ae361e740e298bfb1365915531c750e9b7cbd861cfff452c7a18183061e29fc5",
+    "04-computation/experiments/charge_contexts_20261018k/mixed_quads.json": "09338fb4ba5a9cf9ad656e18fa5f976c159e16e6b9886588e16e5e44a039a492",
+    "04-computation/experiments/charge_contexts_20261018k/six_dense.json": "98e9be6662226f4b4b65e3e89c1a35a5d775692db234ab5d34bb89af63b05efc",
+    "04-computation/experiments/charge_contexts_20261018k/source_concentration_everyN.json": "20ae8c89f63f5f0f7f55be0ccf26d6216c5ad6e1db5b821ac74604b5a1dec5ce",
+    "04-computation/experiments/charge_contexts_20261018k/source_tensor.json": "77339eb43d8561dfb8c91f4da8b583bcd5c02c6be7458618e76c2376fc444e63",
+    "04-computation/experiments/charge_contexts_20261018k/support_compiler_control.json": "3e19de5e21232d85479d6159d761ec34c7b317c8d1e385ab2a10379ba68f0fb5",
+    "05-knowledge/results/source_orientation_boundary_contexts_20261018k.md": "b647a3030a495c640dcd74a6d29b89735ab3eb36723024950f97975f63dae96c"
+  }
+}

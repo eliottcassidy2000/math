@@ -113,3 +113,20 @@ nonzero differences in every contact direction, not only in some.
   census for the joint linear space.
 * **A proof.** Choose the coefficient colourings so that the shifted two-distance colouring of `A'` reduces to the unit
   graph of `A'`.
+
+## Cross-interior extension tests (2026-10-18, clock_duality_oct15)
+
+The [source-orientation and boundary-context note, sections 6--8](../results/source_orientation_boundary_contexts_20261018k.md)
+realizes THM-4700's mixed quadrilaterals and then the full six-coordinate
+basis `(1,u,v,uv,Y,Yv)`. An authenticated `uv^2` direction involves all six
+coordinates. All 570 marked patterns still extend to both tested
+selected-edge graphs. This does not classify every unit direction in the
+enlarged space and does not prove the present general hypothesis.
+
+An exact colour-difference support compiler makes these tests feasible.
+Five active factors whose directional difference sets each contain two
+consecutive residues would obstruct an additive six-colouring; the saved
+six-way witnesses have at most three. This refines the forcing-context
+target. A Petersen minor alone does not preserve the boundary extension
+relation: subdividing every edge preserves that minor while making all
+six-colour assignments on its ten original vertices extend.

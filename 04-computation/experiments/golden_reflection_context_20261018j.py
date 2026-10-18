@@ -32,6 +32,7 @@ def main():
     ap.add_argument('--copy-blind',action='store_true',help='force b/c colour factors to ignore the copy label')
     ap.add_argument('--overlap',type=int,default=0,choices=[0,1,2],help='add coefficient labels 1/b,1/b+1 and optionally 1/c,1/c+1')
     ap.add_argument('--inverse',action='store_true',help='add u^-1 circuit sharing its Y coefficient with u^2')
+    ap.add_argument('--mixed-quads',type=int,default=0,choices=[0,1,2],help='add closed mixed-distance copy-label quadrilaterals for b and optionally c')
     args = ap.parse_args()
     geo = Geo(); f = geo.f
     A,C = recipe(geo,args.recipe)
@@ -44,6 +45,7 @@ def main():
     Y = f.scale(f.mul(Z,f.inv(geo.bar(Z))),-1)
     cubic_coefficients=None
     reflection_receipts=[]
+    mixed_quad_receipts=[]
     if args.cubic:
         m2=f.scale(f.add(f.scalar(20),f.scale(geo.j,11)),Q(-1,19))
         m1=f.scale(f.sub(f.scalar(20),f.scale(geo.j,11)),Q(1,19))
@@ -55,6 +57,13 @@ def main():
         cubic_coefficients=(db,cb,cc)
         require(f.power(u,2)==f.add(f.add(db,f.mul(cb,u)),f.mul(cc,Y)),'u^2 cross-coordinate circuit')
         oldM=list(geo.M)
+        if args.mixed_quads:
+            from mixed_quad_labels_20261018k import mixed_quad
+            for name, co in list(zip(('b','c'), (cb,cc)))[:args.mixed_quads]:
+                pts=mixed_quad(geo,co)
+                geo.M=list(dict.fromkeys(geo.M+pts))
+                mixed_quad_receipts.append(dict(coefficient=name,indices=[geo.M.index(x) for x in pts],
+                                               points=[[str(t) for t in x] for x in pts]))
         for co in (cb,cc)[:args.overlap]:
             inv=f.inv(co)
             geo.M.extend([inv,f.add(inv,f.one)])
@@ -204,6 +213,7 @@ def main():
                cubic=args.cubic,cubic_coefficients=None if cubic_coefficients is None else
                     [[str(x) for x in co] for co in cubic_coefficients],
                reflection_receipts=reflection_receipts,
+               mixed_quads=args.mixed_quads,mixed_quad_receipts=mixed_quad_receipts,
                copy_blind=args.copy_blind,
                overlap=args.overlap,
                inverse=args.inverse,
