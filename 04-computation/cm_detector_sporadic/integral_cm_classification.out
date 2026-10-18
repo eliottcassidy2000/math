@@ -1,0 +1,24 @@
+level 7 (s7): class-number<=2 discriminants used: 42 (max |D| = 427); worst rounding margin of H_D: 6.91e-88
+   m = -10648   (integer)   D in [-427]
+   m = -64   (integer)   D in [-91]
+   m = -8   (integer)   D in [-35]
+   m = -1   (integer)   D in [-7]
+   m = 0   (integer)   D in [-3]
+   m = 2   (integer)   D in [-12]
+   m = 8   (integer)   D in [-19]
+   m = 24   (integer)   D in [-27]
+   m = 27   (integer)   D in [-28]
+   m = 125   (integer)   D in [-112]
+level 5 (A274786): class-number<=2 discriminants used: 42 (max |D| = 427); worst rounding margin of H_D: 6.91e-88
+   m = -15228   (integer)   D in [-235]
+   m = -828   (integer)   D in [-115]
+   m = -28   (integer)   D in [-35]
+   m = -3   (integer)   D in [-15]
+   m = 0   (integer)   D in [-4]
+   m = 4   (integer)   D in [-11]
+   m = 18   (integer)   D in [-16]
+   m = 36   (integer)   D in [-19]
+   m = 72   (integer)   D in [-40]
+   m = 147   (integer)   D in [-60]
+level7_s7 integral nonzero CM m: [-10648, -64, -8, -1, 2, 8, 24, 27, 125] == detector survivors: True
+level5_A274786 integral nonzero CM m: [-15228, -828, -28, -3, 4, 18, 36, 72, 147] == detector survivors: True

@@ -1,0 +1,5 @@
+Zagier D mirror map == (chi_0/chi_{-1/5})^5: TRUE (through q^59)
+(chi_0 chi_{-1/5})^6 == (eta5/eta1)^6: TRUE (through q^59)
+(chi_1 chi_2 chi_3)^2 == (eta7/eta1)^4: TRUE (through q^59)
+chi_1 chi_2 chi_3 chi_4 (2,9) == (eta9/eta1)^3: TRUE (through q^59)
+Zagier B mirror map == -P(-q): TRUE (through q^59)
