@@ -18909,3 +18909,34 @@ the ambient space.
 - **Lesson:** a "one prime per branch" count over a non-Galois cubic depends on the splitting type mod p. State it as
   `8 × #roots(f mod p)` (or 8 when f is irreducible mod p), and test it beyond the first exceptional prime.
 
+
+## MISTAKE-636 (2026-10-18, kind-pasteur-2026-10-18-S2; self-detected while running P3' and P4) -- a pre-registered CM prediction was made for a family whose rational points cannot be CM, and a pre-registered j-map was mislabelled
+
+- **Date / session:** 2026-10-18, kind-pasteur-2026-10-18-S2.
+- **Claims:** all in `04-computation/cm_detector_sporadic/PREREGISTRATION.md`:
+  - P3: the survivors of Zagier's family D are CM;
+  - P3': D has rational m with supersingular density >= 0.3 in |m| <= 3000, and all are CM;
+  - P4's label "j(tau) = (t^2+13t+49)(t^2+5t+1)^3/t".
+- **Error:**
+  - D's parameter `t = r(tau)^5 = (chi_0/chi_{-1/5})^5` is a `Gamma_1(5)` Hauptmodul. A rational non-cuspidal t gives
+    an elliptic curve over Q with a rational point of order 5 (Tate normal form; the formula for j(5tau) was checked
+    to 1e-80).
+  - No CM elliptic curve over Q has such a point (Olson 1974). So P3 and P3' could only come out vacuous or failed,
+    and their outcome says nothing about the detector.
+  - The P4 formula computes j(7tau), not j(tau). The true j(tau) is (t^2+13t+49)(t^2+245t+2401)^3/t^7. The test was
+    unaffected, because tau is CM iff 7tau is.
+  - Caught before commit: the first version of `ad_character_hauptmoduln.py` assigned the Lee-Yang characters to the
+    wrong Andrews-Gordon index. The vacuum excludes the residues +-1 (mod 5), not +-2. This printed a false "FALSE"
+    for the Zagier D mirror map; it was corrected and rerun before the commit.
+- **Impact:** none on canon.
+  - P3 and P3' are recorded as VACUOUS and FAILED, with the explanation.
+  - The weight-1 CM content was tested on families A, B, C and F instead (P6, PASSED).
+- **Fix:**
+  - Outcomes and the label correction were appended to PREREGISTRATION.md (272c950714).
+  - The explanation is in the results note `lucas_block_cm_detector_sporadic_ad_hauptmoduln_20261018.md` and in
+    THM-4708 ("Reading").
+- **Lesson:**
+  - Before pre-registering a prediction about rational CM points of a modular family, read off its moduli problem.
+    Gamma_1(N) rational points carry a rational N-torsion point, and CM curves over Q have one only for N in
+    {2, 3, 4, 6} (Olson).
+  - Verify every modular j-map numerically before naming which j it computes.
