@@ -61,8 +61,8 @@
       "sha256": "31b7797f9856696e9ee18366eb41611ee412ba063d24ca226d31d7d3484eef91"
     },
     "05-knowledge/results/outer_packet_golden_clocks_20261017h.md": {
-      "bytes": 22566,
-      "sha256": "90cb141032eff162ea324d9b7b1509086795af97989ca53d8128339a01e43abf"
+      "bytes": 22579,
+      "sha256": "fe6afab5c3c8bc90b5b7824fcc5dcb9057659e78d2b80073370999decdd3a8d0"
     }
   },
   "incoming_read_through": "a430c818f99960e41a8ef27104fd60c4722a0210",

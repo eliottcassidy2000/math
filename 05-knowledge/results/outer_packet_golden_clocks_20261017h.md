@@ -343,7 +343,7 @@ equals the full ROOT current R(N), regardless of the unrooted components:
 The same argument for a finite octave gives
 D_X<=liminf_d sum_(X<=N<2X) E_d(N). Hence the proposed uniform/logarithmic
 energy budget remains unconditionally sufficient for its stated current
-budget. Full energy need not converge to R(N)^2 without an additional
+budget. Convergence of full energy to R(N)^2 is not supplied without an additional
 vanishing statement. A shell-only bound does not automatically bound the
 non-ROOT or nonterminal coefficient energy; the converse direction is open.
 

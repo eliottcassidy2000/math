@@ -1,15 +1,15 @@
 ---
 id: THM-4667
-title: "Energy ledger of the signed ROOT transport: the square of the Collatz ROOT current R(N) = H(4N) - H(N) equals the initial source energy plus the cumulative cross terms of the fibre merges; at every odd-transport depth d the energy is the sum of squared partial currents over the depth-d classes of the Collatz tree; every fibre is a union of sibling pairs (s, 2s+1) at scales spaced by 64 plus at most one singleton, so the energy change is the sibling covariance plus inter-block terms; the ROOT coefficient at depth d is the current of the sources with at most d odd transports; summed over an octave the energy is the trace of the transported energy kernel, which ends at the current energy D_X; the ideal (scale-free) transport is an isometry on the diagonal and, in additive characters mod 3^(d+1), a twisted convolution whose unfolded form is the band-sliced characteristic function of the Syracuse offset"
+title: "Signed ROOT transport energy ledger: sibling-pair fibres, ROOT projection with its unrooted complement, unconditional current-budget sufficiency, and the primitive affine Fourier recurrence"
 status: >
-  PROVED (elementary bookkeeping): statements 1-5 and 8-10 (statement 8 checked by brute force on all seeds below
+  PROVED (elementary bookkeeping; scope repaired 2026-10-17 by clock_duality_oct15): statements 1-5 and 8-10 (statement 8 checked by brute force on all seeds below
   2 x 10^6; statement 10 checked to machine precision against clock_duality's exact recursion for d <= 4).
   FINITE-EXACT: statement 6 (the ideal energy ladder to d = 6) and the complete energy profiles of every N < 2^23 in
   statement 7 (exact incremental algorithm, invariant checked against the direct current at every N). NUMERICAL: the
   cross-term anatomies and the operator norms in statement 7. The uniform bound that would close the tail-debt gap is
   HYP-9288 (OPEN; calibrated as beyond Krasikov-Lagarias). The sibling pair and its opposite clock parities are
   clock_duality_oct15's R5; the complete fibre decomposition, the energy (l2) reading, the ROOT/shell identity and the
-  Fourier form are new in the repository. No novelty claim for the bookkeeping itself.
+  Fourier form are new in the repository. Repair: ROOT projection retains an unrooted energy complement; the current-budget implication survives without universal convergence. Primitive affine phases require the source/terminal boundary kernels before comparison with ordinary Syracuse offsets. No novelty claim for the bookkeeping itself.
 session: opus-2026-10-17-S41
 source: 05-knowledge/results/root_transport_energy_20261017.md
 scripts:
@@ -28,7 +28,7 @@ related:
 
 ## Setting
 
-`T` is the shortcut map, `f(n) = (-1)^clock(n)` the Collatz depth-parity sign (clock = number of `T`-steps to 1),
+`T` is the shortcut map. Let `f(n) = (-1)^clock(n)` if n reaches1 (clock = first-hit number of `T`-steps), and `f(n)=0` otherwise. Thus `f(Tn)=-f(n)` globally, including the even ROOT cycle. No universal convergence is assumed. Put
 `w(n) = 3[n ≡ 2 (mod 3)] - 1`, `H(M) = Σ_(n<=M) w(n) f(n)`, `R(N) = H(4N) - H(N)`. Following clock_duality_oct15:
 - **Sources.** A source is a primitive odd *seed* `s` (`s ≢ 5 (mod 8)`). The map `B(x) = 4x + 1` sends the other odd
   numbers to seeds by `seed(x)`, which preserves `f`.
@@ -41,16 +41,23 @@ related:
 ## Statements
 
 1. **(Invariant.)** `Σ_u c_d(u) f(u) = R(N)` for every `d`.
-2. **(Partial currents.)** `E_d(N) = Σ_u R_u^(d)(N)^2`. Here `R_u^(d)(N) = Σ_(s: P^d(s) = u) c_0(s) f(s)` is the partial
-   current through the depth-`d` class of `u`, i.e. the sources whose `d`-th odd-transport image is `u`.
+2. **(ROOT-projected partial currents.)** For `R_u^(d)(N) = Σ_(s: P^d(s) = u) c_0(s) f(s)`,
+   `R_u^(d)(N)=f(u)c_d(u)`. Consequently
+   `E_d(N)=Σ_u R_u^(d)(N)^2+Σ_(u not reaching ROOT) c_d(u)^2`.
+   The partial current runs through the depth-`d` class of `u`. Equality with the first sum alone requires that the
+   unrooted complement vanish; it holds in the certified finite census, but is not assumed for arbitrary sources.
 3. **(Merges.)** `E_(d+1) - E_d = 2 Σ_u Σ_(s < s' in P^(-1)(u)) σ(s)σ(s') c_d(s) c_d(s')`.
    - The fibre is `P^(-1)(u) = {(2^(a_j) B^j(u) - 1)/3 : j >= 0, B^j(u) ≢ 0 (mod 3)}` (clock_duality's formula (10)).
    - Its elements are seeds at scales about `(2^(a_j)/3) 4^j u`.
-4. **(End.)** When every source has reached ROOT, `E = R(N)^2`. Hence `R(N)^2 = E_0(N) + 2 Σ_d Cross_d(N)`, and a bound
-   `sup_d E_d(N) <= C N` gives `|R(N)| <= sqrt(C N)`.
+4. **(End and unconditional sufficiency.)** When every source in the finite support reaches ROOT, eventually
+   `E = R(N)^2`, and `R(N)^2 = E_0(N) + 2 Σ_d Cross_d(N)` with the finite merge sum through stabilization.
+   Without that assumption, the ROOT coefficient still eventually equals `R(N)`; hence
+   `R(N)^2 <= liminf_d E_d(N) <= sup_d E_d(N)`. Therefore `sup_d E_d(N) <= C N` unconditionally gives
+   `|R(N)| <= sqrt(C N)`. Convergence of full energy to `R(N)^2` is not supplied without control of the other components.
 5. **(Octave trace.)** `T_d(X) := Σ_(X <= N < 2X) E_d(N) = Tr(T^d G_X T^(*d))`.
    - `G_X = Σ_N c_0(N) c_0(N)^T` is clock_duality's energy kernel aggregated on seeds.
-   - At full depth `T_∞(X) = D_X = Σ_N R(N)^2`, the current energy.
+   - Always `D_X = Σ_N R(N)^2 <= liminf_d T_d(X)`. If all initially supported sources in the finite octave
+     reach ROOT, then eventually `T_d(X)=D_X`. This equality holds for the certified finite census.
    - A bound `sup_d T_d(X) <= C X^2` gives `D_X <= C X^2`. Through THM-4658 this gives a budget of the same type for the
      census energy `E_X`. By HYP-9283(B) that certifies the Mercator pole (constant budgets up to 1806.6, logarithmic
      budgets with `b` of order `10^3`), which forces `limsup log B(X)/log X >= 0.99821`.
@@ -85,35 +92,45 @@ related:
    Every fibre `P^(-1)(u)` is a disjoint union of sibling pairs `{s_k, 2s_k + 1}` at scales spaced by the factor 64,
    together with the singleton `(2u - 1)/3` when `u ≡ 2 (mod 3)`. Hence
    - `(Tc)(u) = -[u ≡ 2 (3)] c((2u - 1)/3) + Σ_k (c(s_k) - c(2s_k + 1))`;
-   - `E_(d+1) - E_d = INTRA_d + INTER_d`, with `INTRA_d = -2 Σ_(s ≡ 1 (8)) c_d(s) c_d(2s + 1) = 2 Σ_(s ≡ 1 (8)) R_s^(d) R_(2s+1)^(d)`;
+   - `E_(d+1) - E_d = INTRA_d + INTER_d`, with `INTRA_d = -2 Σ_(s ≡ 1 (8)) c_d(s) c_d(2s + 1)`;
+   - in partial-current coordinates this is `2 Σ_(s ≡ 1 (8)) R_s^(d) R_(2s+1)^(d)
+     - 2 Σ_(s ≡ 1 (8), s not reaching ROOT) c_d(s)c_d(2s+1)`; siblings belong to the same basin;
    - INTER_d collects the cross terms between different blocks of one fibre, at scale ratios at least 32.
-9. **(ROOT and shells.)** Let `depth(x)` be the number of odd transports from `x` to ROOT. Then
+9. **(ROOT and shells.)** Let `depth(x)` be the number of canonical primitive transports from `x` to ROOT, or infinity if none. This is not by itself a first-hit shortcut clock. Then
    - `c_d(1) = Σ_(x: depth(x) <= d) c_0(x) f(x)`;
    - `E_d(N) = c_d(1)^2 + Σ_(u ≠ 1) c_d(u)^2`.
 
    The ROOT coefficient is the partial sum of the current over the stopping-time shells `{depth = d'}`, `d' <= d`.
-10. **(Fourier form of the ideal transport.)** Put `o = a - 1 + 2j` (so `o + 1` is the full 2-adic exponent of the
-    Syracuse step including the stripped `B`-steps), and let `K̂(ξ, b) = Σ_r K(r, b) e(-rξ/3^(d+1))`. Then
+10. **(Fourier form of the ideal transport.)** Put `o = a - 1 + 2j` (so `A=o+1=a+2j` is the homogeneous exponent of the primitive branch, with terminal braid retained), and let `K̂(ξ, b) = Σ_r K(r, b) e(-rξ/3^(d+1))`. Then
     `K̂_d(ξ, b) = Σ_(o=0)^(b) (-1)^(o+1) e(-μ_o ξ/3^(d+1)) K̂_(d-1)(2^(-(o+1)) ξ mod 3^d, b - o)`, with
     `μ_o = 2^(-(o+1)) - (1 - 4^(-j))/3`.
-    - Unfolded over `d` steps, `K̂_d(ξ, ·)` is the band-convolution of `K̂_0` with the band-sliced characteristic function
-      of the Syracuse offset.
-    - Under the band weights, the exponents `o_i + 1` of that function are i.i.d. geometric(1/2), and the sign is
-      constant on each slice `Σ o_i = n`.
+    - Unfolding composes the **primitive** affine maps `P_A(r)=(3r+c_A)/2^A`,
+      `c_A=(3+2^a-2^A)/3`. Their translations are not the ordinary Syracuse offsets for the same letter word.
+    - After the sign gauge, the branch law is geometric(1/2), and the sign is constant on each slice `Σ o_i=n`.
+      With the band retained, the exact positive-kernel relation is `P=C A`, `S=A C`, `P^d=C S^(d-1) A`.
+      Here `A` chooses `(3r+1)/2^a`, `a=1,2`, with probabilities2/3,1/3 and band increment`a-1`;
+      `C` chooses `B^(-j)` with probability`(3/4)4^(-j)` and increment`2j`; `S` is ordinary geometric Syracuse.
+      The boundary kernels cannot be omitted when transferring a Fourier estimate.
 
 ## Proof
 
 1. **Invariant.** `f(s) = σ(s) f(P(s))`. One odd shortcut step plus `a(s) - 1` halvings is `a(s)` clock steps, and `seed`
-   removes `B`-steps of two clock steps each. So `Σ_u (Tc)(u) f(u) = Σ_s σ(s) c(s) f(P(s)) = Σ_s c(s) f(s)`; the initial
+   strips a braid whose shortcut-clock difference is even. More precisely, for actual states `x_i=B^(j_i)s_i`,
+   the physical clock through d odd transitions is `Σ_i(a_i+2j_i)+2j_0-2j_d`; retain both boundary braid indices.
+   A first-hit controller must separately stop its literal trajectory. The sign relation is exact even off ROOT. So `Σ_u (Tc)(u) f(u) = Σ_s σ(s) c(s) f(P(s)) = Σ_s c(s) f(s)`; the initial
    value is R1. ROOT: `P(1) = 1` and `σ(1) = +1` (the cycle `1 -> 2 -> 1`).
-2. **Partial currents.** By induction `c_d(u) = Σ_(P^d(s) = u) σ_d(s) c_0(s)`, and `σ_d(s) = f(s) f(u)` by statement 1
-   applied along the path. Square and sum.
+2. **Partial currents.** By induction `c_d(u) = Σ_(P^d(s) = u) σ_d(s) c_0(s)`.
+   The invariant says `f(s)=σ_d(s)f(u)`, so `R_u=f(u)c_d(u)`. Now `f(u)^2` is the indicator of the ROOT basin.
+   Splitting the coefficient energy into that basin and its complement proves statement2. The inverse formula
+   `σ_d(s)=f(s)f(u)` is valid only when `u` reaches ROOT.
 3. **Merges.** Expand `(Σ_(s ∈ P^(-1)(u)) σ c)^2`. For the fibre: `(3s + 1)/2^a = B^j(u)` for some `j`, with `a` forced by
    `B^j(u) mod 3`.
-4. **End.** Every source reaches ROOT after finitely many transports when all orbits involved reach 1, which holds in
-   every computed range. Then the vector is `R(N) δ_1`.
+4. **End.** On finite initial support, the rooted sources have a finite maximum entry depth. Unrooted sources
+   never enter1, so after that maximum `c_d(1)=R(N)` regardless of the other components. This proves the unconditional
+   liminf inequality. If all sources are rooted, the entire vector eventually equals `R(N) δ_1`, as in every computed range.
 5. **Octave trace.** By linearity `E_d(N) = c_0(N)^T (T^d)^T T^d c_0(N)`. Sum over `N` and use the cyclicity of the
-   trace. The calibration is THM-4658's descent `sqrt(e_(4X)) <= (sqrt(e_X) + sqrt(δ_X))/2 + sqrt(3/X)` iterated along
+   trace. Applying statement4 to the finitely many rows in an octave gives the unconditional liminf comparison.
+   The calibration is THM-4658's descent `sqrt(e_(4X)) <= (sqrt(e_X) + sqrt(δ_X))/2 + sqrt(3/X)` iterated along
    `X_j = 4^j X_0`, followed by HYP-9283(B).
 6. **Ideal ladder.** For fixed `j` and branch class, `r -> s_j(r)` is a bijection from the `3^d` residues `r` with
    `B^j(r)` in that class onto `Z/3^d`. Shifting the band by `o_j` multiplies the band weight by `2^(-o_j)`. Summing
@@ -139,7 +156,7 @@ related:
    - **Pairs.** For each `u` the admissible `o` form two residue classes mod 6 (adjacent, or `{0, 5}`). Indices `o`
      (odd, `a = 2`) and `o + 1` give the pair `(s, 2s + 1)`. The step `o -> o + 6` multiplies the scale by `4^3 = 64`.
    - **Singleton.** The only unpaired index is `o = 0`, present iff `u ≡ 2 (mod 3)`, with element `(2u - 1)/3`.
-   - **Energy.** Expanding `(Tc)(u)^2` gives INTRA and INTER. The second form of INTRA uses `f(2s + 1) = -f(s)`.
+   - **Energy.** Expanding `(Tc)(u)^2` gives INTRA and INTER. On rooted siblings `f(2s+1)=-f(s)` gives the partial-current expression; off ROOT both f-values vanish, so the coefficient complement must be retained.
    - **Check.** Brute force on all seeds below `2·10^6` (pairs for heads below `10^6`; all 375,000 singletons).
 9. **ROOT and shells.** `c_d(1) = Σ_(P^d(x) = 1) σ_d(x) c_0(x)`. Here `P^d(x) = 1` iff `depth(x) <= d` (ROOT is fixed with
    sign `+1`), and `σ_d(x) = f(x) f(1) = f(x)` by statement 2.
@@ -148,20 +165,34 @@ related:
     - `F_o(s) = B^(-j)((3s + 1) 2^(-a)) = 3·2^(-(o+1)) s + μ_o (mod 3^(d+1))`.
 
     Then `v̂_o(ξ) = e(-μ_o ξ/3^(d+1)) K̂_(d-1)(2^(-(o+1)) ξ mod 3^d)`. The sign is `(-1)^a = (-1)^(o+1)`. Iterating, the
-    phases compose into the Syracuse offset of the exponent word `(o_1 + 1, ..., o_d + 1)`, and the band shift is
-    `Σ o_i`. Under the weights `2^(-b)` the word has i.i.d. geometric(1/2) letters. Check: statement 10 reproduces R8 to
+    phases compose into the primitive affine offset of that word, with band shift `Σ o_i`.
+    At `A=3`, `P_3(r)=(3r-1)/8` differs from ordinary `S_3(r)=(3r+1)/8` (values1 and8 at r=0 mod9).
+    The probability and band-preserving factorization follows from `U_a B^(-j)=U_(a+2j)` and is proved in
+    [positive ROOT transport, section2](../../05-knowledge/results/root_positive_transport_20261017g.md).
+    Its terminal clock correction is essential:11 ->17 ->13=B(3) uses three shortcut steps but homogeneous
+    letters1,4 of totalfive. Under the sign gauge the branch law has geometric(1/2) letters. Check: statement 10 reproduces R8 to
     `5·10^(-10)` relative `3·10^3` at `d = 4` (`root_transport_fourier_check_20261017.out`).
 
 ## Reading
 
 - **The square-root law as energy conservation.** If the relative signs at every merge were fair independent coins, the
-  energy would be a martingale: `E[R^2] = E_0 ≈ 4.86N`, and Doob's inequality bounds `sup_d E_d` at every depth. That is
-  the "inherently controlled" model. A Rudin-Shapiro butterfly conserves energy exactly. By statement 8 the Collatz merge
+  energy would be a nonnegative martingale. Doob gives `Pr(sup_d E_d >= lambda E_0) <= 1/lambda`; this
+  is a probability estimate in the model, not a deterministic Collatz bound. A normalized Rudin-Shapiro butterfly
+  conserves energy exactly (the unnormalized two-output transform doubles it). By statement 8 the Collatz merge
   keeps only its difference channel, so the energy change of a pair is `((c - c')^2 - (c + c')^2)/2`.
-- **Collatz is better than random in the ideal regime.** The partial currents through sibling seeds are anti-correlated.
-  About two thirds of the initial energy is dissipated by depth 6, consistent with HYP-9284 and S37's cancelled octave
-  memory. The operator itself expands some balanced vectors (statement 7), so the dissipation belongs to the actual
+- **Finite ideal dissipation.** Negative aggregate sibling cross terms are observed in the computed ideal regime.
+  About two thirds of the initial energy is dissipated by depth6, consistent with HYP-9284 and S37's cancelled octave
+  memory. Neither an all-depth sign nor control of INTER follows from those finite values. The operator itself expands some balanced vectors (statement 7), so the dissipation belongs to the actual
   vectors.
-- **The remaining gap is the termination regime.** Whenever the final current is large, the energy is the square of the
-  ROOT coefficient up to a few per cent from depth about 40 on. By statement 9 this is a partial sum of the current over
-  stopping-time shells: the census object of HYP-9283/9285. HYP-9288 asks for a maximal inequality there.
+- **Open uniform targets.** The sampled large-current rows are ROOT-dominated at late depth. This suggests a
+  shell maximal inequality, but it does not identify the complete all-scale gap: uniform ideal cross terms,
+  discrete-to-density matching and the nonterminal energy must also be controlled. HYP-9288 implies the shell
+  budget; the converse is not proved.
+
+## Correction lineage
+
+The 2026-10-17 clock_duality audit repairs the ROOT-projection equality and the ordinary-Syracuse phase identification
+from a430c818f9. All displayed finite census values and the primitive Fourier recurrence are retained.
+[Outer packets, section7](../../05-knowledge/results/outer_packet_golden_clocks_20261017h.md) proves the unconditional
+survivor and adds the all-depth source-rounding energy bound. The MISTAKES entry records the omitted component and
+boundary register; the abstract hostile is not a claimed positive-integer Collatz counterexample.

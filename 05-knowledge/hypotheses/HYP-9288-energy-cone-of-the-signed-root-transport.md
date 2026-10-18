@@ -1,6 +1,6 @@
 ---
 id: HYP-9288
-title: "Energy cone of the signed ROOT transport: the energy of clock_duality_oct15's odd transport of the Collatz ROOT current never exceeds its depth-0 value by more than a logarithmic factor (pointwise: sup_d E_d(N) <= C N log N; averaged over octaves: sup_d T_d(X) <= X^2 (a + b log X), strong form T_d(X) <= T_0(X) = (51/7 + o(1)) X^2); in the termination regime this is a mean-square maximal inequality for the stopping-time shell partial sums of the current; in the ideal regime it is dissipation at every depth (the ideal energy is non-increasing in d)"
+title: "Energy cone of the signed ROOT transport: the energy of clock_duality_oct15's odd transport of the Collatz ROOT current never exceeds its depth-0 value by more than a logarithmic factor (pointwise: sup_d E_d(N) <= C N log N; averaged over octaves: sup_d T_d(X) <= X^2 (a + b log X), strong form T_d(X) <= T_0(X) = (51/7 + o(1)) X^2); this implies a mean-square maximal inequality for the stopping-time shell partial sums of the current; in the ideal regime it is dissipation at every depth (the ideal energy is non-increasing in d)"
 status: >
   OPEN (CONJECTURE). Calibrated: the averaged form, even with a logarithmic budget, gives a budget of the same type for
   the census energy (THM-4658), hence the Mercator pole of HYP-9283(B) and limsup log B(X)/log X >= 0.99821 (beyond
@@ -9,6 +9,9 @@ status: >
   (C) holds for d <= 6. REVISED 2026-10-17 before any test of the revised forms: the first draft asked for an absolute
   pointwise constant (8.33 from 320 sampled N). The complete scan gives 10.06, and the random-merge model predicts
   log log growth of sup_N R(N)^2/N, so the pointwise form now carries a logarithmic factor.
+  Scope repaired by clock_duality_oct15: ROOT projection retains the unrooted complement; the liminf current-budget
+  implication is unconditional, but a shell-only bound is weaker than total energy. Ideal dissipation includes both
+  INTRA and INTER; ordinary Syracuse comparisons retain boundary kernels.
 session: opus-2026-10-17-S41
 source: 05-knowledge/results/root_transport_energy_20261017.md
 scripts:
@@ -29,29 +32,35 @@ The notation is that of THM-4667:
 
 The conjecture has three forms.
 
-- **(A, pointwise)** `sup_d E_d(N) <= C N log(N + 2)` for all `N`. This gives `|R(N)| <= sqrt(C N log N)`.
+- **(A, pointwise)** `sup_d E_d(N) <= C N log(N + 2)` for all `N`. This gives `|R(N)| <= sqrt(C N log(N+2))` without assuming universal convergence.
 - **(B, averaged)** `sup_d T_d(X) <= X^2 (a + b log_2 X)` for all dyadic `X`, with `b` of order at most `10^3`.
   - **Strong form (B').** `T_d(X) <= T_0(X)` for all `X >= 4` and all `d`; here `T_0(X) = (51/7 + o(1)) X^2`.
   - **Shell form.** By THM-4667 statement 9, (B) contains the mean-square maximal inequality
     `sup_d Σ_N Vroot_d(N)^2 <= X^2 (a + b log_2 X)` for the stopping-time shell partial sums of the current.
-- **(C, ideal dissipation)** `E_d^ideal` is non-increasing in `d`. Weaker: the ideal cross terms are summable. Equivalently,
-  the ideal sibling covariance (THM-4667 statement 8, in the ideal limit) has non-negative, or summable, aggregate.
+- **(C, ideal dissipation)** `E_d^ideal` is non-increasing in d, equivalently `INTRA_d+INTER_d<=0` at every ideal depth.
+  A weaker sufficient target for bounded ideal energy is summability of the positive parts of these total increments.
+  Sibling covariance alone is not equivalent: the between-block term INTER must also be paid.
+
+By repaired THM-4667 statements4--5, the ROOT coefficient eventually equals R(N) for every finite initial support,
+even if unrooted sources exist. Hence `D_X<=liminf_d T_d(X)`. This is the unconditional direction needed for (B).
+The shell form is necessary for (B), but is not proved sufficient for it.
 
 ## Why these forms
 
 **The model.** In the random-merge model (independent fair relative signs at every merge) the energy is a martingale.
-Doob's inequality then gives (A) and (B) in probability.
+Doob gives `Pr(sup_d E_d>=lambda E_0)<=1/lambda`. This is a tail inequality for that model, not a deterministic
+proof of (A) or (B).
 
-**Why the logarithmic factors.** Absolute constants are not expected. `R(N)^2/N` has chi-square-like fluctuations with
-about one effective value per octave, so `sup_N R(N)^2/N` grows like `log log N`. The logarithmic factors cost nothing
+**Why the logarithmic factors (HEURISTIC model).** Absolute constants are not expected in this model. Its analogue of `R(N)^2/N` has chi-square-like fluctuations with
+about one effective value per octave, suggesting log log growth of its running maximum. No such law is proved for the actual ROOT current. The logarithmic factors cost nothing
 for the calibration: HYP-9283(B) certifies the pole under logarithmic budgets.
 
 **The actual transport.**
 - It is dissipative in the ideal regime: negative cross terms at every computed depth, carried by sibling
   anti-correlation.
-- For large currents its late energy is the squared ROOT coefficient.
-- So (B) is a maximal inequality for the shell partial sums, a census-type statement whose endpoint is the current-energy
-  budget.
+- The tested large-current rows are ROOT-dominated late; this is finite evidence.
+- (B) implies a maximal inequality for the shell partial sums and the current-energy budget. Its converse additionally
+  needs uniform control of nonterminal coefficient energy. The full ideal and matching bounds remain open.
 
 ## Evidence
 
@@ -70,7 +79,7 @@ for the calibration: HYP-9283(B) certifies the pole under logarithmic budgets.
 * **Larger N.** Complete incremental scans beyond `2^23`, whose memory is about 10 nodes per source. Octave `2^22` came
   closest to (B'), so `2^23..2^26` are the natural next octaves.
 * **Ideal dissipation for all `d`.** Prove (C). `d = 7` is being computed. The cross-term ratio is about 0.6, which
-  suggests a spectral gap of the two-path correlation operator: compare S20's THM-4565 and the band-sliced Syracuse
-  characteristic function of THM-4667 statement 10.
+  suggests a spectral gap of the two-path correlation operator: compare S20's THM-4565 and the primitive affine
+  characteristic function of repaired THM-4667 statement10, preserving the A,C boundary operators and band.
 * **A Lyapunov weight on the cone of actual vectors.** The ideal transport is not a contraction even on balanced vectors
   (norm 1.28-1.35), and pure power weights fail. A weight must use the cone generated from `c_0`.

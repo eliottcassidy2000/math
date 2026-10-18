@@ -3,7 +3,14 @@
 2026-10-17, opus-2026-10-17-S41. Owner prompt: uniform depth and scale bounds for ROOT transport; close the remaining
 Collatz gap (uniform control of cancellation and error as depth grows) by first imagining a system where that control is
 inherent, then merging. Sources, ports and integer clocks are preserved throughout: every quantity below is computed on
-the literal seeds with their actual odd-step clocks and the ROOT port.
+the literal seeds and ROOT port. Canonical primitive depth is distinct from elapsed shortcut time;
+the terminal braid correction described below retains the latter.
+
+**Scope repair, 2026-10-17, clock_duality_oct15.** THM-4667 now defines f as zero off the ROOT basin and retains
+that basin's energy complement. Its coefficient ledger and finite censuses survive; the uniform current-budget
+implication needs no assumption that every source converges. Primitive Fourier phases require the boundary kernels
+from [positive ROOT transport, section2](root_positive_transport_20261017g.md). See
+[outer packets, section7](outer_packet_golden_clocks_20261017h.md) and the dated MISTAKES entry.
 
 **Typing.**
 - PROVED (elementary): THM-4667, which contains:
@@ -18,16 +25,17 @@ the literal seeds with their actual odd-step clocks and the ROOT port.
 - NUMERICAL: the cross-term anatomies and the operator norms.
 - OPEN: HYP-9288, revised. No claim of closing the gap.
 
-**Bottom line.** The energy reading splits the gap cleanly.
-- **Ideal regime.** The ideal regime dissipates. The mechanism is identified: anti-correlated partial currents through
+**Working decomposition.** The finite energy observations suggest two regimes.
+- **Computed ideal regime.** The tested depths dissipate. The observed mechanism is anti-correlated partial currents through
   sibling seeds `s` and `2s + 1`. It is a property of the actual vectors, not of the operator, which is not a
   contraction.
-- **Termination regime.** Whenever the final current is large, the energy sits almost entirely at ROOT from depth about
+- **Sampled termination regime.** In the sampled large-current rows, the energy sits almost entirely at ROOT from depth about
   40 on. The ROOT coefficient is a partial sum of the current over stopping-time shells, which is the census object of
   HYP-9283/9285.
 
-So the remaining gap, in energy form, is a maximal inequality for shell partial sums. The exact data to `2^23` support
-it with room to spare in the octave average.
+A shell maximal inequality is therefore a promising part of the target. It is not equivalent to the full energy bound:
+uniform ideal cross terms, discrete-to-density matching and the nonterminal energy also need control. The exact data
+to `2^23` support the full bound in the tested octave averages.
 
 ## 1. Where clock_duality left the gap
 
@@ -45,12 +53,13 @@ Their next critical target is a coupled depth/source-scale estimate: `γ_d` deca
 
 ## 2. The other end: systems whose cancellation is controlled at every depth
 
-**Rudin-Shapiro.** The archetype is the Rudin-Shapiro pair. A butterfly `(P, Q) -> (P + zQ, P - zQ)` conserves
-`|P|^2 + |Q|^2` exactly (parallelogram law), so the partial sums are `O(sqrt N)` at every scale.
+**Rudin-Shapiro.** The archetype is the Rudin-Shapiro pair. On |z|=1, a butterfly `(P, Q) -> (P + zQ, P - zQ)` conserves
+`|P|^2 + |Q|^2` after dividing both outputs by sqrt2 (the unnormalized transform doubles the energy). The classical normalized construction motivates square-root partial-sum control.
 
 **Martingale.** The same control holds for a random-merge process. If every merge combined currents with independent
-fair relative signs, the energy `Σ c^2` would be a martingale. Doob's inequality would then control it at every depth;
-the square-root law is energy conservation.
+fair relative signs, the energy `Σ c^2` would be a nonnegative martingale. Doob gives
+`Pr(sup_d E_d >= lambda E_0) <= 1/lambda`. This controls its maximal tail in that model; it is not a deterministic
+Collatz inequality.
 
 **The Collatz transport is half a butterfly.** clock_duality's R5 pairs the seeds `s ≡ 1 (mod 8)` with `2s + 1`:
 - `U(2s + 1) = B(U(s))`, so the siblings merge after one odd transport;
@@ -63,13 +72,16 @@ one singleton `(2u - 1)/3` when `u ≡ 2 (mod 3)`. So
 
 A merge keeps only the difference channel `c - c'` of each butterfly and drops the sum channel `c + c'`. The energy change
 of one pair is `((c - c')^2 - (c + c')^2)/2 = -2 c c'`. So the energy falls exactly when the siblings carry correlated
-coefficients, which means anti-correlated partial currents, since `f(2s + 1) = -f(s)`. The energy ledger (THM-4667
+coefficients. On rooted siblings these are anti-correlated partial currents, since `f(2s+1)=-f(s)`; off ROOT both f-values are zero and cannot recover the coefficient energy. The energy ledger (THM-4667
 statements 1-5) makes this global:
 
     E_(d+1) - E_d = INTRA_d + INTER_d,     INTRA_d = -2 Σ_(s ≡ 1 (8)) c_d(s) c_d(2s + 1),
 
-where INTER_d collects the cross terms between different blocks of one fibre (scale ratio at least 32). At full depth
-`E = R(N)^2`.
+where INTER_d collects the cross terms between different blocks of one fibre (scale ratio at least32).
+When every initial source is rooted, eventually `E=R(N)^2`. Without that assumption, `c_d(1)` still eventually equals
+R(N), because its finite initial rooted support has a finite maximum entry depth. Thus always
+`R(N)^2<=liminf_d E_d(N)`. The octave consequence is equally unconditional. Equality of energy with squared partial
+currents is restricted to the rooted coefficient support; THM-4667 statement2 gives the missing complement.
 
 ## 3. The sibling covariance carries almost all of the energy change
 
@@ -116,18 +128,21 @@ transport becomes an analytic Toeplitz operator with matrix symbol
 - This rules out the "contraction plus additive matching errors" route. That route would have given
   `sqrt(E_∞) <= sqrt(E_0) + Σ_d ||err_d||`, so it has to be done on the cone of actual vectors.
 
-**Fourier form (PROVED; THM-4667 statement 10).** Write `o = a - 1 + 2j` (so `a = o + 1 - 2j` and `o + 1` is the full
-2-adic exponent of the Syracuse step including the stripped `B`-steps). In additive characters mod `3^(d+1)`:
+**Fourier form (PROVED; THM-4667 statement10, repaired scope).** Write `o=a-1+2j`, so `o+1` is the homogeneous exponent of the primitive affine branch. In additive characters mod `3^(d+1)`:
 
     K̂_d(ξ, b) = Σ_(o=0)^(b) (-1)^(o+1) e(-μ_o ξ / 3^(d+1)) K̂_(d-1)(2^(-(o+1)) ξ mod 3^d, b - o),
     μ_o = 2^(-(o+1)) - (1 - 4^(-j))/3.
 
-- **Syracuse characteristic function.** Unfolding `d` steps, `K̂_d(ξ, ·)` is the band-convolution of `K̂_0` with the
-  band-sliced characteristic function of the Syracuse offset. Its exponents `o_i + 1` are i.i.d. geometric(1/2) under
-  the band weights, and the sign is constant on each band slice.
-- **Tao.** The dissipation is the statement that the Syracuse masses on `Z/3^(d+1)` × band have sub-Poissonian number
-  variance. Tao's estimate (pointwise decay of the characteristic function) is the existing "uniform at every depth"
-  input of this type. An `l^2`-over-frequencies version is what the energy needs.
+- **Primitive affine characteristic function.** The phases compose maps
+  `P_A(r)=(3r+(3+2^a-2^A)/3)/2^A`, not the ordinary `(3r+1)/2^A` for the same word.
+  After the sign gauge, the letters have geometric(1/2) law and the sign is constant on each band slice.
+- **Exact comparison.** The positive operators satisfy `P=C A`, `S=A C`, `P^d=C S^(d-1) A`, where S is ordinary
+  geometric Syracuse and A,C retain the boundary and band data; see the cited positive-transport note, section2.
+  At A=3 the primitive and ordinary translations are -1/8 and +1/8, respectively. An estimate for the ordinary
+  offset alone does not automatically control this joint band/frequency energy. That source explains the precise
+  scope of the cited Tao estimate; no new literature implication is asserted here.
+- **Integer clock.** If the initial and terminal braid indices are j_0,j_d, the physical clock is
+  `Σ A_i+2j_0-2j_d`. For11 ->17 ->13=B(3) it is3, while the canonical exponent sum is5.
 
 ## 5. The actual transport for every N < 2^23
 
@@ -166,25 +181,25 @@ point masses. So all depths can be maintained at once, by walking one path of th
     coefficient.
   - When the final current is small the picture differs. At `N = 116599` (`R^2/N = 0.018`) ROOT holds 27-36% at
     `d = 40..60`, and the remaining energy (0.4N at `d = 60`) is spread over about 10 effective seeds before it cancels.
-  - For upper bounds only large currents matter, and for those the late energy is ROOT-dominated.
+  - These sampled large-current rows are ROOT-dominated; no uniform implication from large current to ROOT dominance is proved.
   - By THM-4667 statement 9, the ROOT coefficient is the partial sum of the current over the sources with at most `d`
     odd transports: `Vroot[d] = Σ_(depth(x) <= d) c_0(x) f(x)`.
 
 ## 6. Merging what we have with where we need to go
 
-1. **Ideal regime.** Target: ideal dissipation, or a summable bound on the ideal sibling covariance, for all `d`.
-   - Statement 10 of THM-4667 makes this an `l^2` estimate over primitive frequencies for the band-sliced Syracuse
-     characteristic function, which is Tao's object.
+1. **Ideal regime.** Target: ideal dissipation, or summable positive parts of the total ideal merge increments (INTRA and INTER), for all d.
+   - Statement10 of THM-4667 gives an `l^2` target for the primitive joint band/frequency law. The classical
+     Syracuse comparison must preserve A,C boundary kernels and the band; marginal offset mixing is insufficient.
    - The observed geometric rate (cross-term ratio about 0.6) suggests a spectral gap for the pair (two-path)
      correlation operator, in the spirit of S20's coupled-orbit covariances.
 2. **Matching (integer clocks).** At fixed depth the actual coefficients differ from the ideal ones only near affine
    thresholds. In `l^2`, the target is matching errors that add in quadrature. Statement 7 shows the actual `E_6/N`
    equals the ideal value to 3 decimals in every octave `2^18..2^22`.
-3. **Termination regime.** For the `N` with large current the energy is `Vroot[d]^2` up to a few per cent, and
-   `Vroot[d]` is a shell partial sum of the current.
-   - HYP-9288 (B) is therefore a maximal inequality, in octave mean square, for the stopping-time shell partial sums of
-     the Collatz current. In the random-merge model that is Doob's inequality.
-   - Its endpoint `d = ∞` is the current-energy budget. Its content is the census and explicit-formula machinery:
+3. **Termination regime.** In the sampled large-current rows the late energy is ROOT-dominated;
+   `Vroot[d]` is exactly a shell partial sum.
+   - HYP-9288(B) implies the shell mean-square maximal inequality. The converse requires a separate bound for the
+     remaining coefficient energy; the finite dominance observations do not supply it.
+   - Its liminf bounds the current-energy budget, without assuming universal convergence. Its content is the census and explicit-formula machinery:
      THM-4659/4660, the zeros of `D`, and the near-return structure that produces the octave-specific profiles.
 
 **Calibration.** With THM-4658, `sqrt(e_(4X)) <= (sqrt(e_X) + sqrt(δ_X))/2 + sqrt(3/X)`. So a budget `δ_X <= a + b log X`
@@ -206,6 +221,11 @@ Krasikov-Lagarias.
   The statement now carries a logarithmic factor, and the averaged form a logarithmic budget, which is all the
   calibration needs. A first draft stated `sup_d E_d(N) <= 8.33 N` from 320 sampled `N`. The complete scan to `2^23`
   gives 10.06 at `N = 7910`.
+
+The incoming integration also supplies [outer packets O6--O7](outer_packet_golden_clocks_20261017h.md): the isolated
+singleton packet has squared mass `(3/2)N*2^(-d)+O(18)`, compatible with O(N) energy, and source rounding costs at
+most `4 floor(log_4(4N))` in square-root energy at **all depths**. On a dyadic source it is an exactly known ROOT atom.
+This pays source rounding, while discrete-to-density matching remains open.
 
 ## Reproduction
 
