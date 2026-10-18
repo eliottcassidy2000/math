@@ -129,6 +129,12 @@ forcing. Their genuinely new geometric step, the quadratic coupler `v` of G1 and
 couplers, is where mixed-coordinate forcing could still appear. The full three-coupler graph and its port relation
 remain the next consumer (their section 8).
 
+**The eleventh-root escape.** clock_duality's other escape, `Q(zeta55, w)`, keeps its fixed 19-places, so its
+residue colouring survives. It also cannot host this construction. The Moser spindle needs `sqrt(-3)`, which
+`Q(zeta55)` lacks: it contains `sqrt(-11)` and `sqrt5`, but not `sqrt(-3)`. And the same degree lemma forces any contact
+rotation in `Q(zeta55)(w)` back into `Q(zeta55)`. So the sqrt3 escape is the only escape where spindle-based mixed
+contacts can be tried, and there they stay in the base field.
+
 ## Reproduction
 
 ```
