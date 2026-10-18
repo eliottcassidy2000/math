@@ -1,0 +1,65 @@
+clock parities [4 s]
+Y = 30 (F_Y = 11 seeds; invariant R(N) check: True) [7 s]
+   octave 2^ 8: E_Y/N mean 0.7153  max 1.3855  min 0.3276 | max R^2/N 1.124 | max R^2/(F_Y E_Y) 0.2245
+   octave 2^ 9: E_Y/N mean 1.7189  max 3.9903  min 0.4525 | max R^2/N 2.645 | max R^2/(F_Y E_Y) 0.3682
+   octave 2^10: E_Y/N mean 1.2007  max 2.2070  min 0.4117 | max R^2/N 2.910 | max R^2/(F_Y E_Y) 0.4494
+   octave 2^11: E_Y/N mean 0.7196  max 1.3156  min 0.2189 | max R^2/N 4.783 | max R^2/(F_Y E_Y) 0.3697
+   octave 2^12: E_Y/N mean 1.5323  max 2.4005  min 0.5692 | max R^2/N 9.080 | max R^2/(F_Y E_Y) 0.3705
+   octave 2^13: E_Y/N mean 1.3010  max 2.6457  min 0.6403 | max R^2/N 7.525 | max R^2/(F_Y E_Y) 0.2899
+   octave 2^14: E_Y/N mean 0.6611  max 1.2712  min 0.3804 | max R^2/N 2.548 | max R^2/(F_Y E_Y) 0.2829
+   octave 2^15: E_Y/N mean 1.1143  max 2.5487  min 0.4672 | max R^2/N 3.356 | max R^2/(F_Y E_Y) 0.3877
+   octave 2^16: E_Y/N mean 0.8180  max 1.6586  min 0.2872 | max R^2/N 4.230 | max R^2/(F_Y E_Y) 0.3276
+   octave 2^17: E_Y/N mean 0.9018  max 2.2893  min 0.2551 | max R^2/N 2.767 | max R^2/(F_Y E_Y) 0.4424
+   octave 2^18: E_Y/N mean 0.9874  max 2.5167  min 0.2622 | max R^2/N 3.922 | max R^2/(F_Y E_Y) 0.2345
+   octave 2^19: E_Y/N mean 0.9116  max 2.2532  min 0.3718 | max R^2/N 1.663 | max R^2/(F_Y E_Y) 0.1294
+   octave 2^20: E_Y/N mean 0.6845  max 1.1592  min 0.3952 | max R^2/N 1.558 | max R^2/(F_Y E_Y) 0.1324
+   octave 2^21: E_Y/N mean 0.7356  max 1.5743  min 0.2468 | max R^2/N 0.984 | max R^2/(F_Y E_Y) 0.0838
+   octave 2^22: E_Y/N mean 3.1866  max 4.6369  min 0.8934 | max R^2/N 6.055 | max R^2/(F_Y E_Y) 0.1478
+Y = 100 (F_Y = 38 seeds; invariant R(N) check: True) [10 s]
+   octave 2^ 8: E_Y/N mean 2.0225  max 2.7945  min 1.3837 | max R^2/N 1.124 | max R^2/(F_Y E_Y) 0.0183
+   octave 2^ 9: E_Y/N mean 1.7270  max 2.9283  min 1.0747 | max R^2/N 2.645 | max R^2/(F_Y E_Y) 0.0312
+   octave 2^10: E_Y/N mean 1.6417  max 2.0750  min 1.2904 | max R^2/N 2.910 | max R^2/(F_Y E_Y) 0.0446
+   octave 2^11: E_Y/N mean 1.4186  max 2.2602  min 1.0398 | max R^2/N 4.783 | max R^2/(F_Y E_Y) 0.0873
+   octave 2^12: E_Y/N mean 1.7126  max 2.3549  min 1.1813 | max R^2/N 9.080 | max R^2/(F_Y E_Y) 0.1340
+   octave 2^13: E_Y/N mean 1.2393  max 1.6790  min 0.7594 | max R^2/N 7.525 | max R^2/(F_Y E_Y) 0.1328
+   octave 2^14: E_Y/N mean 1.0869  max 1.7961  min 0.5924 | max R^2/N 2.548 | max R^2/(F_Y E_Y) 0.0959
+   octave 2^15: E_Y/N mean 1.0828  max 1.6526  min 0.6099 | max R^2/N 3.356 | max R^2/(F_Y E_Y) 0.0873
+   octave 2^16: E_Y/N mean 1.3549  max 1.8494  min 0.8149 | max R^2/N 4.230 | max R^2/(F_Y E_Y) 0.0860
+   octave 2^17: E_Y/N mean 0.8339  max 1.2233  min 0.5042 | max R^2/N 2.767 | max R^2/(F_Y E_Y) 0.1033
+   octave 2^18: E_Y/N mean 1.1187  max 1.6037  min 0.5857 | max R^2/N 3.922 | max R^2/(F_Y E_Y) 0.0866
+   octave 2^19: E_Y/N mean 1.1088  max 1.4777  min 0.8010 | max R^2/N 1.663 | max R^2/(F_Y E_Y) 0.0342
+   octave 2^20: E_Y/N mean 0.9730  max 1.2388  min 0.7203 | max R^2/N 1.558 | max R^2/(F_Y E_Y) 0.0335
+   octave 2^21: E_Y/N mean 1.0201  max 1.4617  min 0.6691 | max R^2/N 0.984 | max R^2/(F_Y E_Y) 0.0251
+   octave 2^22: E_Y/N mean 1.3371  max 2.0317  min 0.7794 | max R^2/N 6.055 | max R^2/(F_Y E_Y) 0.1220
+Y = 1000 (F_Y = 375 seeds; invariant R(N) check: True) [12 s]
+   octave 2^ 8: E_Y/N mean 4.7702  max 4.9435  min 4.5299 | max R^2/N 1.124 | max R^2/(F_Y E_Y) 0.0006
+   octave 2^ 9: E_Y/N mean 3.7552  max 4.5709  min 3.2099 | max R^2/N 2.645 | max R^2/(F_Y E_Y) 0.0018
+   octave 2^10: E_Y/N mean 2.9136  max 3.2887  min 2.5660 | max R^2/N 2.910 | max R^2/(F_Y E_Y) 0.0030
+   octave 2^11: E_Y/N mean 2.2828  max 2.6802  min 2.0350 | max R^2/N 4.783 | max R^2/(F_Y E_Y) 0.0053
+   octave 2^12: E_Y/N mean 1.9106  max 2.0775  min 1.7819 | max R^2/N 9.080 | max R^2/(F_Y E_Y) 0.0127
+   octave 2^13: E_Y/N mean 1.7360  max 1.9175  min 1.5991 | max R^2/N 7.525 | max R^2/(F_Y E_Y) 0.0115
+   octave 2^14: E_Y/N mean 1.4938  max 1.7461  min 1.2723 | max R^2/N 2.548 | max R^2/(F_Y E_Y) 0.0052
+   octave 2^15: E_Y/N mean 1.2981  max 1.4128  min 1.1865 | max R^2/N 3.356 | max R^2/(F_Y E_Y) 0.0068
+   octave 2^16: E_Y/N mean 1.2694  max 1.4165  min 1.1317 | max R^2/N 4.230 | max R^2/(F_Y E_Y) 0.0090
+   octave 2^17: E_Y/N mean 1.3084  max 1.4352  min 1.2083 | max R^2/N 2.767 | max R^2/(F_Y E_Y) 0.0059
+   octave 2^18: E_Y/N mean 1.1988  max 1.3829  min 0.9751 | max R^2/N 3.922 | max R^2/(F_Y E_Y) 0.0086
+   octave 2^19: E_Y/N mean 1.2763  max 1.4457  min 1.0205 | max R^2/N 1.663 | max R^2/(F_Y E_Y) 0.0036
+   octave 2^20: E_Y/N mean 1.3446  max 1.5022  min 1.2054 | max R^2/N 1.558 | max R^2/(F_Y E_Y) 0.0030
+   octave 2^21: E_Y/N mean 1.3032  max 1.5182  min 1.1703 | max R^2/N 0.984 | max R^2/(F_Y E_Y) 0.0021
+   octave 2^22: E_Y/N mean 1.1853  max 1.3086  min 1.0828 | max R^2/N 6.055 | max R^2/(F_Y E_Y) 0.0138
+Y = 10000 (F_Y = 3750 seeds; invariant R(N) check: True) [14 s]
+   octave 2^ 8: E_Y/N mean 4.8556  max 4.9046  min 4.8077 | max R^2/N 1.124 | max R^2/(F_Y E_Y) 0.0001
+   octave 2^ 9: E_Y/N mean 4.8565  max 4.8886  min 4.8212 | max R^2/N 2.645 | max R^2/(F_Y E_Y) 0.0001
+   octave 2^10: E_Y/N mean 4.8567  max 4.8734  min 4.8381 | max R^2/N 2.910 | max R^2/(F_Y E_Y) 0.0002
+   octave 2^11: E_Y/N mean 4.8597  max 4.9066  min 4.8134 | max R^2/N 4.783 | max R^2/(F_Y E_Y) 0.0003
+   octave 2^12: E_Y/N mean 4.3609  max 4.8794  min 3.7962 | max R^2/N 9.080 | max R^2/(F_Y E_Y) 0.0006
+   octave 2^13: E_Y/N mean 3.1535  max 3.8042  min 2.6933 | max R^2/N 7.525 | max R^2/(F_Y E_Y) 0.0006
+   octave 2^14: E_Y/N mean 2.3795  max 2.7020  min 2.1602 | max R^2/N 2.548 | max R^2/(F_Y E_Y) 0.0003
+   octave 2^15: E_Y/N mean 1.9619  max 2.1746  min 1.8092 | max R^2/N 3.356 | max R^2/(F_Y E_Y) 0.0005
+   octave 2^16: E_Y/N mean 1.6799  max 1.8197  min 1.6005 | max R^2/N 4.230 | max R^2/(F_Y E_Y) 0.0006
+   octave 2^17: E_Y/N mean 1.6110  max 1.7012  min 1.5456 | max R^2/N 2.767 | max R^2/(F_Y E_Y) 0.0004
+   octave 2^18: E_Y/N mean 1.5698  max 1.6274  min 1.4852 | max R^2/N 3.922 | max R^2/(F_Y E_Y) 0.0007
+   octave 2^19: E_Y/N mean 1.5129  max 1.5881  min 1.4476 | max R^2/N 1.663 | max R^2/(F_Y E_Y) 0.0003
+   octave 2^20: E_Y/N mean 1.4478  max 1.5156  min 1.3556 | max R^2/N 1.558 | max R^2/(F_Y E_Y) 0.0003
+   octave 2^21: E_Y/N mean 1.4379  max 1.4968  min 1.3534 | max R^2/N 0.984 | max R^2/(F_Y E_Y) 0.0002
+   octave 2^22: E_Y/N mean 1.3715  max 1.4910  min 1.2881 | max R^2/N 6.055 | max R^2/(F_Y E_Y) 0.0012

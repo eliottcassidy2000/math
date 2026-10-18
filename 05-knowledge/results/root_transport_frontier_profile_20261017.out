@@ -1,0 +1,57 @@
+N = 7910
+   Y =        1: E_Y/N = 9.0802   F_Y =      1   frontier seeds hit      1   R^2/(F_Y E_Y) = 1.0000
+   Y =        3: E_Y/N = 9.2857   F_Y =      2   frontier seeds hit      2   R^2/(F_Y E_Y) = 0.4889
+   Y =       10: E_Y/N = 4.1899   F_Y =      4   frontier seeds hit      4   R^2/(F_Y E_Y) = 0.5418
+   Y =       30: E_Y/N = 2.4005   F_Y =     11   frontier seeds hit     11   R^2/(F_Y E_Y) = 0.3439
+   Y =      100: E_Y/N = 1.7833   F_Y =     38   frontier seeds hit     38   R^2/(F_Y E_Y) = 0.1340
+   Y =      300: E_Y/N = 1.8812   F_Y =    113   frontier seeds hit    113   R^2/(F_Y E_Y) = 0.0427
+   Y =     1000: E_Y/N = 1.9155   F_Y =    375   frontier seeds hit    375   R^2/(F_Y E_Y) = 0.0126
+   Y =     3000: E_Y/N = 2.3664   F_Y =   1125   frontier seeds hit   1060   R^2/(F_Y E_Y) = 0.0034
+   Y =    10000: E_Y/N = 3.8683   F_Y =   3750   frontier seeds hit   3221   R^2/(F_Y E_Y) = 0.0006
+   Y =    30000: E_Y/N = 4.8546   F_Y =  11250   frontier seeds hit   9874   R^2/(F_Y E_Y) = 0.0002
+   Y =    31640: E_Y/N = 4.8564   F_Y =  11865   frontier seeds hit  10421   R^2/(F_Y E_Y) = 0.0002
+N = 66463
+   Y =        1: E_Y/N = 4.2264   F_Y =      1   frontier seeds hit      1   R^2/(F_Y E_Y) = 1.0000
+   Y =        3: E_Y/N = 3.1431   F_Y =      2   frontier seeds hit      2   R^2/(F_Y E_Y) = 0.6723
+   Y =       10: E_Y/N = 1.4647   F_Y =      4   frontier seeds hit      4   R^2/(F_Y E_Y) = 0.7214
+   Y =       30: E_Y/N = 1.2454   F_Y =     11   frontier seeds hit     11   R^2/(F_Y E_Y) = 0.3085
+   Y =      100: E_Y/N = 1.2934   F_Y =     38   frontier seeds hit     38   R^2/(F_Y E_Y) = 0.0860
+   Y =      300: E_Y/N = 1.1980   F_Y =    113   frontier seeds hit    113   R^2/(F_Y E_Y) = 0.0312
+   Y =     1000: E_Y/N = 1.2477   F_Y =    375   frontier seeds hit    375   R^2/(F_Y E_Y) = 0.0090
+   Y =     3000: E_Y/N = 1.5499   F_Y =   1125   frontier seeds hit   1125   R^2/(F_Y E_Y) = 0.0024
+   Y =    10000: E_Y/N = 1.8053   F_Y =   3750   frontier seeds hit   3750   R^2/(F_Y E_Y) = 0.0006
+   Y =    30000: E_Y/N = 2.4692   F_Y =  11250   frontier seeds hit  10727   R^2/(F_Y E_Y) = 0.0002
+   Y =   100000: E_Y/N = 4.1171   F_Y =  37500   frontier seeds hit  31279   R^2/(F_Y E_Y) = 0.0000
+   Y =   265852: E_Y/N = 4.8573   F_Y =  99695   frontier seeds hit  87563   R^2/(F_Y E_Y) = 0.0000
+N = 1048576
+   Y =        1: E_Y/N = 1.5333   F_Y =      1   frontier seeds hit      1   R^2/(F_Y E_Y) = 1.0000
+   Y =        3: E_Y/N = 1.0553   F_Y =      2   frontier seeds hit      2   R^2/(F_Y E_Y) = 0.7265
+   Y =       10: E_Y/N = 0.9582   F_Y =      4   frontier seeds hit      4   R^2/(F_Y E_Y) = 0.4001
+   Y =       30: E_Y/N = 1.1351   F_Y =     11   frontier seeds hit     11   R^2/(F_Y E_Y) = 0.1228
+   Y =      100: E_Y/N = 1.2235   F_Y =     38   frontier seeds hit     38   R^2/(F_Y E_Y) = 0.0330
+   Y =      300: E_Y/N = 1.3325   F_Y =    113   frontier seeds hit    113   R^2/(F_Y E_Y) = 0.0102
+   Y =     1000: E_Y/N = 1.3739   F_Y =    375   frontier seeds hit    375   R^2/(F_Y E_Y) = 0.0030
+   Y =     3000: E_Y/N = 1.3165   F_Y =   1125   frontier seeds hit   1125   R^2/(F_Y E_Y) = 0.0010
+   Y =    10000: E_Y/N = 1.4700   F_Y =   3750   frontier seeds hit   3750   R^2/(F_Y E_Y) = 0.0003
+   Y =    30000: E_Y/N = 1.5900   F_Y =  11250   frontier seeds hit  11250   R^2/(F_Y E_Y) = 0.0001
+   Y =   100000: E_Y/N = 1.7066   F_Y =  37500   frontier seeds hit  37500   R^2/(F_Y E_Y) = 0.0000
+   Y =   300000: E_Y/N = 2.1580   F_Y = 112500   frontier seeds hit 106818   R^2/(F_Y E_Y) = 0.0000
+   Y =  1000000: E_Y/N = 3.2826   F_Y = 375000   frontier seeds hit 344352   R^2/(F_Y E_Y) = 0.0000
+   Y =  3000000: E_Y/N = 4.8565   F_Y = 1125000   frontier seeds hit 965495   R^2/(F_Y E_Y) = 0.0000
+   Y =  4194304: E_Y/N = 4.8571   F_Y = 1572864   frontier seeds hit 1381457   R^2/(F_Y E_Y) = 0.0000
+N = 6904411
+   Y =        1: E_Y/N = 6.0554   F_Y =      1   frontier seeds hit      1   R^2/(F_Y E_Y) = 1.0000
+   Y =        3: E_Y/N = 7.2304   F_Y =      2   frontier seeds hit      2   R^2/(F_Y E_Y) = 0.4187
+   Y =       10: E_Y/N = 6.3999   F_Y =      4   frontier seeds hit      4   R^2/(F_Y E_Y) = 0.2365
+   Y =       30: E_Y/N = 4.0879   F_Y =     11   frontier seeds hit     11   R^2/(F_Y E_Y) = 0.1347
+   Y =      100: E_Y/N = 1.3721   F_Y =     38   frontier seeds hit     38   R^2/(F_Y E_Y) = 0.1161
+   Y =      300: E_Y/N = 1.1161   F_Y =    113   frontier seeds hit    113   R^2/(F_Y E_Y) = 0.0480
+   Y =     1000: E_Y/N = 1.1701   F_Y =    375   frontier seeds hit    375   R^2/(F_Y E_Y) = 0.0138
+   Y =     3000: E_Y/N = 1.2625   F_Y =   1125   frontier seeds hit   1125   R^2/(F_Y E_Y) = 0.0043
+   Y =    10000: E_Y/N = 1.3622   F_Y =   3750   frontier seeds hit   3750   R^2/(F_Y E_Y) = 0.0012
+   Y =    30000: E_Y/N = 1.4124   F_Y =  11250   frontier seeds hit  11250   R^2/(F_Y E_Y) = 0.0004
+   Y =   100000: E_Y/N = 1.4819   F_Y =  37500   frontier seeds hit  37500   R^2/(F_Y E_Y) = 0.0001
+   Y =   300000: E_Y/N = 1.6329   F_Y = 112500   frontier seeds hit 112500   R^2/(F_Y E_Y) = 0.0000
+   Y =  1000000: E_Y/N = 1.8073   F_Y = 375000   frontier seeds hit 375000   R^2/(F_Y E_Y) = 0.0000
+   Y =  3000000: E_Y/N = 2.4261   F_Y = 1125000   frontier seeds hit 1070199   R^2/(F_Y E_Y) = 0.0000
+   Y = 27617644: E_Y/N = 4.8571   F_Y = 10356617   frontier seeds hit 9096286   R^2/(F_Y E_Y) = 0.0000

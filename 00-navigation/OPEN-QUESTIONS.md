@@ -6700,6 +6700,14 @@ OEIS A038375 gives max H(T) over all n-vertex tournaments: 1, 1, 3, 5, 15, 45, 1
   - (C) for all d: verified to d = 12, but the cross-term ratios rise to 0.83-0.90, so there is no geometric rate;
   - an l2 estimate for the joint offset/exponent Syracuse law (clock_duality's question 2);
   - a Lyapunov weight on the cone of actual vectors.
+- S42 frontier (root_frontier_penrose_20261017.md). Stop every source at its first seed <= Y.
+  - PROVED: R(N)^2 <= F_Y E_Y(N), where F_Y = #seeds <= Y.
+  - FINITE-EXACT (every N < 2^23): E_1000/N <= 2.08 and E_100/N <= 2.35, while R^2/N reaches 9.08.
+  - The decomposition shows merges above Y dissipative (-54..-75% of E_0). The termination climb is an arrival term at
+    frozen seeds below about 30-100.
+  - HYP-9290 (OPEN, pre-registered P1-P6 for 2^23 <= N < 2^26): frontier energy cone E_(Y_0)(N) <= C N, which gives
+    |R(N)| <= sqrt(F_(Y_0) C N).
+  - Conditional power saving: Y = N^theta gives N^((1+theta)/2) if E_(N^theta)(N) = O(N).
 - Concurrent clock_duality_oct15 work (root_positive_transport_20261017g.md, P1-P4) gives the l1 side. P4's slow
   packet costs only O(N 2^-d) energy.
 - Six colours. The new note is golden_additive_boundary_20261017.md, and HYP-9289 (OPEN) states the conjecture.
