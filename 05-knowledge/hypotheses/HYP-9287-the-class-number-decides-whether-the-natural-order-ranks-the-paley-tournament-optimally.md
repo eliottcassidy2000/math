@@ -67,10 +67,11 @@ when `L(1, χ_(-p))` dominates the twisted values `L(1, χ_(-p) ψ)` (`ψ` of sm
 orders `x -> {kx/(mp)}`. Mechanism (PROVED as an identity, heuristic as a criterion): in multiplier coordinates a rotation
 order sorts first by a block label and then by `<cx>`, so its excess is `χ(c)[p h(-p) - 2 Σ χ(t - s)]` over the pairs whose
 block labels are inverted (for `m = 2` the blocks are the Eisenstein parity sets `floor(d u/p) mod 2`); these crossing
-sums are character analogues of Dedekind sums (Berndt), i.e. combinations of twisted `L`-values. NUMERICAL hint: for
-`p >= 167` the primes beaten with `m = 4, 9, 10, 11` have `L(1, χ_(-8p))/L(1, χ_(-p)) = 0.33-0.50` (167: 0.386, 263:
-0.326, 383: 0.499, 503: 0.337, 647: 0.430) against 0.135-0.226 at the unbeaten primes; the `m = 5` winners 887, 911 are
-not separated by this twist.
+sums are character analogues of Dedekind sums (Berndt), i.e. combinations of twisted `L`-values. NUMERICAL: the twist hint seen for `p <= 1000` does not generalise. On the 245 primes with `L >= 2.4` in
+`(479, 20000]`, a logistic boundary in `(L(1, χ_(-p)), log p)` classifies `R+` with leave-one-out accuracy 0.963. A threshold on
+`L` alone reaches 0.935. Adding `L(1, χ_(-8p))/L` or `L(1, χ_(-5p))/L` does not help (0.955, 0.951;
+paley_rplus_twist_separation_20261017.py). The exact criterion is the Farey prefix positivity of THM-4666 1c;
+its analytic content beyond a slowly rising `L`-threshold is open.
 
 ## Structure of the earlier witnesses (paley_best_orders_vs_affine_20261017.py)
 

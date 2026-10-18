@@ -1,0 +1,6 @@
+primes 245 (R+ members 46)
+threshold on L1 alone: best accuracy 0.935 at L1 >= 4.082
+logistic regression on L1, log p                  leave-one-out accuracy 0.963
+logistic regression on L1, L8/L1                  leave-one-out accuracy 0.927
+logistic regression on L1, L8/L1, log p           leave-one-out accuracy 0.955
+logistic regression on L1, L8/L1, L5/L1, log p    leave-one-out accuracy 0.951
