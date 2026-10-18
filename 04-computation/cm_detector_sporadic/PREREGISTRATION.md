@@ -91,3 +91,28 @@ Step 0 (identities, relative error < 1e-78 at three random tau):
   - No CM elliptic curve over Q has one (Olson 1974: torsion is 0, Z/2, Z/3, Z/4, Z/6 or Z/2 x Z/2).
   - Hence family D has no rational CM fibres at all, and P3 and P3' were ill-posed. This is not evidence about the
     detector.
+
+## Third pre-registration (written BEFORE running the scans below)
+
+Context, already observed in slope_probe.py, exploratory, 8 weight-1 and 4 weight-2 points:
+- (B1') <=> V(x) == q_p(m) u_1 F_p(x) (mod p), where V(x) = sum_{j<p} v_j x^j and v_j = (u_{p+j} - u_1 u_j)/p.
+- At the weight-1 CM points (A: -4, 2; B: 3, 9; C: -3, 3; F: 6, 12):
+  - the slope V/(u_1 q_p F_p) is 1 at every ordinary prime 7 <= p <= 257 (25 primes each);
+  - V(x) != 0 at every supersingular prime (27 each).
+- In weight 2, V(x) == 0 at every supersingular prime seen, at CM points and at non-CM points alike.
+
+Predictions:
+- (P6) Ordinary-restricted detector (B1'_ord). Same scan as P1, but a prime counts only if p does not divide m and
+  F_p(1/m) != 0 (mod p). For the six Zagier families, the survivors in 0 < |m| <= 10^5 (p <= 200) are exactly the
+  rational singular fibres together with the density >= 0.3 set:
+  - A {-4, -1, 2, 8};
+  - B {3, 9};
+  - C {-3, 1, 3, 9};
+  - D {};
+  - E {4, 8};
+  - F {6, 8, 9, 12}.
+  For the four weight-2 families, (B1'_ord) and (B1') have the same survivors.
+- (P7) Polynomial form of the mechanism, for every prime 7 <= p <= 199:
+  - In each weight-2 family (Apery, Domb, s7, s10), V vanishes at every root of F_p in the algebraic closure
+    of F_p (the radical of F_p divides V mod p), and F_p has no simple root other than possibly x = 0.
+  - In each weight-1 family (A..F), F_p is squarefree mod p and gcd(F_p, V) = 1.
