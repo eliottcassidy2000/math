@@ -1,0 +1,5 @@
+depth 1: twin pairs 0 (3|Delta: 0 = 0.000, else 0); sum c0c0/N: 3|Delta +0.0000, Delta=1 mod 3 +0.0000, Delta=2 mod 3 +0.0000, total +0.0000
+depth 2: twin pairs 35002 (3|Delta: 4213 = 0.120, else 30789); sum c0c0/N: 3|Delta +0.0148, Delta=1 mod 3 -0.0605, Delta=2 mod 3 -0.0010, total -0.0467
+depth 3: twin pairs 96656 (3|Delta: 22996 = 0.238, else 73660); sum c0c0/N: 3|Delta +0.0808, Delta=1 mod 3 -0.0990, Delta=2 mod 3 -0.0483, total -0.0664
+depth 4: twin pairs 201843 (3|Delta: 64362 = 0.319, else 137481); sum c0c0/N: 3|Delta +0.2260, Delta=1 mod 3 -0.1550, Delta=2 mod 3 -0.1200, total -0.0490
+depth 5: twin pairs 386023 (3|Delta: 127182 = 0.329, else 258841); sum c0c0/N: 3|Delta +0.4486, Delta=1 mod 3 -0.2743, Delta=2 mod 3 -0.2445, total -0.0702

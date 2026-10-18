@@ -1,0 +1,15 @@
+q=17 k=5 |mu|=18 best_conflicts=34 final_conflicts(verified)=42
+q=13 k=5 |mu|=14 best_conflicts=6 final_conflicts(verified)=16
+q=23 k=6 |mu|=24 best_conflicts=69 final_conflicts(verified)=83
+q=31 k=6 |mu|=32 best_conflicts=270 final_conflicts(verified)=293
+q=31 k=7 |mu|=32 best_conflicts=78 final_conflicts(verified)=86
+q=31 k=8 |mu|=32 best_conflicts=0 final_conflicts(verified)=0
+
+[exited with code 144]
+q=23 k=7 |mu|=24 best_conflicts=7 final_conflicts(verified)=12
+q=37 k=8 |mu|=38 best_conflicts=84 final_conflicts(verified)=100
+q=37 k=9 |mu|=38 best_conflicts=79 final_conflicts(verified)=87
+q=41 k=8 |mu|=42 best_conflicts=156 final_conflicts(verified)=174
+q=41 k=9 |mu|=42 best_conflicts=104 final_conflicts(verified)=116
+q=43 k=8 |mu|=44 best_conflicts=146 final_conflicts(verified)=164
+q=47 k=9 |mu|=48 best_conflicts=238 final_conflicts(verified)=265

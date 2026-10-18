@@ -1,0 +1,14 @@
+q = 3: |mu| = 4, eigenvalues in [-2.0000, 4.0000], Hoffman bound chi >= 3.0000
+q = 7: |mu| = 8, eigenvalues in [-4.4940, 8.0000], Hoffman bound chi >= 2.7802
+q = 11: |mu| = 12, eigenvalues in [-4.7958, 12.0000], Hoffman bound chi >= 3.5022
+q = 13: |mu| = 14, eigenvalues in [-6.2962, 14.0000], Hoffman bound chi >= 3.2236
+q = 17: |mu| = 18, eigenvalues in [-6.5607, 18.0000], Hoffman bound chi >= 3.7436
+q = 19: |mu| = 20, eigenvalues in [-7.6097, 20.0000], Hoffman bound chi >= 3.6282
+q = 23: |mu| = 24, eigenvalues in [-7.9607, 24.0000], Hoffman bound chi >= 4.0148
+q = 29: |mu| = 30, eigenvalues in [-9.0682, 30.0000], Hoffman bound chi >= 4.3082
+q = 31: |mu| = 32, eigenvalues in [-10.6665, 32.0000], Hoffman bound chi >= 4.0000
+q = 37: |mu| = 38, eigenvalues in [-11.4726, 38.0000], Hoffman bound chi >= 4.3122
+q = 41: |mu| = 42, eigenvalues in [-11.3364, 42.0000], Hoffman bound chi >= 4.7049
+q = 43: |mu| = 44, eigenvalues in [-11.9622, 44.0000], Hoffman bound chi >= 4.6782
+q = 47: |mu| = 48, eigenvalues in [-12.8465, 48.0000], Hoffman bound chi >= 4.7364
+q = 53: |mu| = 54, eigenvalues in [-12.1701, 54.0000], Hoffman bound chi >= 5.4371

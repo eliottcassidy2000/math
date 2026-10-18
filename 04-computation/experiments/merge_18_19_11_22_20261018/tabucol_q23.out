@@ -1,0 +1,4 @@
+q=23 k=7 |mu|=24 best_conflicts=5 final_conflicts(verified)=11
+q=23 k=7 |mu|=24 best_conflicts=3 final_conflicts(verified)=8
+q=23 k=7 |mu|=24 best_conflicts=7 final_conflicts(verified)=12
+q=23 k=8 |mu|=24 best_conflicts=0 final_conflicts(verified)=0
