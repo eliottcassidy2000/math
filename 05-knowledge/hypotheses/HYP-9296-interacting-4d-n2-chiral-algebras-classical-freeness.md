@@ -13,6 +13,8 @@ status: >
       zero-weight Schur coefficient. Every so(8)-module occurring has root-lattice weights, so the whole of
       ker(pi) is 0 through weight 5;
     - N=4 SU(2) SYM: small N=4 at c = -9, free to weight 7, two primes to 6, Schur index matched.
+  - W_3 boundary minimal models (the (A_2,A_{k-1}) chiral algebras W_3(3,3+k)): free for k = 4, 5 to weight 20 and
+    k = 7, 8 to weight 22. Non-boundary W_3(4,5) and W_3(4,7) are not free (HYP-9297).
   - Negative case PROVED: THM-4672.
   - Stress-tensor nilpotency indices: 2 for N=4 SU(2) SYM (reproduces Deb-Meneghelli-Rastelli) and 3 for
     free hyper/Z_2.
@@ -46,6 +48,8 @@ HYP-9296 asks for the true domain.
 | `(A_1, D_4)` | `L_(-3/2)(sl3)` | 7 | `D(q^2)/D(q)` |
 | SU(2), `N_f = 4` | `L_(-2)(so8)` | 5 (zero-weight block, all of `ker pi` by root-lattice argument) | flavoured Schur index |
 | `N = 4` SU(2) SYM | small `N = 4`, `c = -9` | 7 | gauge-theory Schur index |
+| `(A_2, A_3)`, `(A_2, A_4)` | `W_3(3,7)`, `W_3(3,8)` (non-Lie, nonlinear bracket) | 20, 20 | maximal-submodule dims (no assumption) |
+| `(A_2, A_6)`, `(A_2, A_7)` | `W_3(3,10)`, `W_3(3,11)` | 22, 22 | maximal-submodule dims |
 | free hyper / `Z_2` | `L_(-1/2)(sl2)` | **fails at 7** | free-field character |
 
 ## Falsifiers

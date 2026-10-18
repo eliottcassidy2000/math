@@ -22,7 +22,7 @@
 - FINITE-EXACT: mod-p ranks, two primes where stated, every dimension checked against an independent character
   formula or the assumption-free maximal-submodule computation.
 - CITED: literature.
-- OPEN: HYP-9293, HYP-9294, HYP-9295, HYP-9296.
+- OPEN: HYP-9293, HYP-9294, HYP-9295, HYP-9296, HYP-9297.
 - OBSERVATION: section 1.3.
 
 ## 1. Definitions (CITED unless marked)
@@ -181,6 +181,8 @@ For a 4d `N = 2` SCFT `T` with chiral algebra `V_T` (Beem et al. 2015):
 | `(A_1, D_4)` AD | `L_(-3/2)(sl3)` | `bar O_min(sl3)` | yes to weight 7 (dims = `D(q^2)/D(q)`) | — |
 | SU(2), `N_f = 4` | `L_(-2)(so8)` | `bar O_min(so8)` | **yes through weight 5**; zero-weight block at two primes, `dim L = 756` = Schur | — |
 | `N = 4` SU(2) SYM | small `N = 4`, `c = -9` | `C^2/Z_2` | **yes to weight 7** (two primes to 6) | **2** (matches DMR 2025) |
+| `(A_2, A_3)`, `(A_2, A_4)` AD | `W_3(3,7)`, `W_3(3,8)` | point | yes to weight 20 | — |
+| `(A_2, A_6)`, `(A_2, A_7)` AD | `W_3(3,10)`, `W_3(3,11)` | point | yes to weight 22 | — |
 | free hypermultiplet / `Z_2` | `L_(-1/2)(sl2) = (beta gamma)^(Z_2)` | `C^2/Z_2` | **no: first failure at weight 7** | **3** |
 
 **Finding.** The same Higgs branch `C^2/Z_2` carries two chiral algebras that the classical limit separates:
@@ -224,6 +226,30 @@ relations outside the arc ideal. THM-4671 computes the first such relation in cl
 
 Typing: REFUTED for the general theorem as an external claim (CITED witness plus FINITE-EXACT). The repository's own
 statements are THM-4671 and THM-4672; the latter is the exact certificate over `Q`.
+
+## 5a. The boundary principle (HYP-9297)
+
+`W_3` is not a Lie algebra of modes: `[W_m, W_n]` contains the composite `Lambda_(m+n)`. The engine handles it through
+a nonlinear-bracket hook (`w3.py`):
+- 400/400 bracket-consistency checks at each central charge;
+- the 3-state Potts vacuum character `chi^(5,6)_0 + q^3 chi^(5,6)_3` is reproduced through weight 19;
+- every run's dimensions equal the assumption-free maximal-submodule computation.
+
+| model | 4d theory | first non-arc generator | to weight |
+|---|---|---|---|
+| `W_3(3,7)` | `(A_2, A_3)` | none | 20 (two primes to 18) |
+| `W_3(3,8)` | `(A_2, A_4)` | none | 20 |
+| `W_3(3,10)`, `W_3(3,11)` | `(A_2, A_6)`, `(A_2, A_7)` | none | 22 |
+| `W_3(4,5)` (3-state Potts) | — | weight 8 = `D_0 + 2`, Li 1 | 20 (two primes) |
+| `W_3(4,7)` | — | weight 12 = `D_0 + 2`, Li 1 | 20 |
+
+Three families now show the same pattern: `Vir` (`p = 2`, a theorem), admissible `sl2` (boundary or integrable,
+HYP-9293) and `W_3` (`p = 3`). The **boundary** models, which are exactly the chiral algebras of the Argyres-Douglas
+theories `(A_(N-1), A_(k-1))`, are classically free. The others fail at the first syzygy with a nonzero quantum
+transfer. HYP-9297 states this as a conjecture.
+
+Consequence: the Schur index of `(A_(N-1), A_(k-1))` should be the Hilbert series of the arc space of a fat point,
+generalizing Andrews-Gordon.
 
 ## 5b. Two-dimensional supersymmetry: `N = 2` minimal models (Landau-Ginzburg chiral algebras)
 

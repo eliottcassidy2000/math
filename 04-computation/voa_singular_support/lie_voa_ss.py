@@ -101,7 +101,13 @@ class ModeAlgebra:
                 out[mo] = (out.get(mo, 0) + cb * co) % P
         if cen:
             out[rest] = (out.get(rest, 0) + cen) % P
+        for mo, co in self.bracket_extra(m, Y, rest).items():
+            out[mo] = (out.get(mo, 0) + co) % P
         return {k: v for k, v in out.items() if v}
+
+    def bracket_extra(self, m1, m2, rest):
+        """Nonlinear part of [m1, m2} applied to the monomial `rest` (default: none)."""
+        return {}
 
     def apply_vec(self, m, vec):
         P = self.P

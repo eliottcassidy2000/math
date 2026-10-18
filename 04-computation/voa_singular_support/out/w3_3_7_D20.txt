@@ -1,0 +1,24 @@
+W3(3,7) c=-114/7: singular vectors at weight 5: 1
+D=    0 dimV=      1 dimI=      0 dimL=      1 arcHS=      1 ker=    0 gens(Li,charge,#)=[] (0.0s)
+D=    2 dimV=      1 dimI=      0 dimL=      1 arcHS=      1 ker=    0 gens(Li,charge,#)=[] (0.0s)
+D=    3 dimV=      2 dimI=      0 dimL=      2 arcHS=      2 ker=    0 gens(Li,charge,#)=[] (0.0s)
+D=    4 dimV=      3 dimI=      0 dimL=      3 arcHS=      3 ker=    0 gens(Li,charge,#)=[] (0.0s)
+D=    5 dimV=      4 dimI=      1 dimL=      3 arcHS=      3 ker=    0 gens(Li,charge,#)=[(0, (), 1)] (0.0s)
+D=    6 dimV=      8 dimI=      2 dimL=      6 arcHS=      6 ker=    0 gens(Li,charge,#)=[(0, (), 1)] (0.0s)
+D=    7 dimV=     10 dimI=      3 dimL=      7 arcHS=      7 ker=    0 gens(Li,charge,#)=[] (0.0s)
+D=    8 dimV=     17 dimI=      6 dimL=     11 arcHS=     11 ker=    0 gens(Li,charge,#)=[] (0.0s)
+D=    9 dimV=     24 dimI=     10 dimL=     14 arcHS=     14 ker=    0 gens(Li,charge,#)=[] (0.0s)
+D=   10 dimV=     36 dimI=     16 dimL=     20 arcHS=     20 ker=    0 gens(Li,charge,#)=[] (0.0s)
+D=   11 dimV=     50 dimI=     25 dimL=     25 arcHS=     25 ker=    0 gens(Li,charge,#)=[] (0.0s)
+D=   12 dimV=     76 dimI=     40 dimL=     36 arcHS=     36 ker=    0 gens(Li,charge,#)=[] (0.0s)
+D=   13 dimV=    102 dimI=     58 dimL=     44 arcHS=     44 ker=    0 gens(Li,charge,#)=[] (0.1s)
+D=   14 dimV=    148 dimI=     88 dimL=     60 arcHS=     60 ker=    0 gens(Li,charge,#)=[] (0.1s)
+D=   15 dimV=    204 dimI=    128 dimL=     76 arcHS=     76 ker=    0 gens(Li,charge,#)=[] (0.2s)
+D=   16 dimV=    285 dimI=    186 dimL=     99 arcHS=     99 ker=    0 gens(Li,charge,#)=[] (0.3s)
+D=   17 dimV=    386 dimI=    263 dimL=    123 arcHS=    123 ker=    0 gens(Li,charge,#)=[] (0.6s)
+D=   18 dimV=    537 dimI=    376 dimL=    161 arcHS=    161 ker=    0 gens(Li,charge,#)=[] (1.2s)
+D=   19 dimV=    718 dimI=    520 dimL=    198 arcHS=    198 ker=    0 gens(Li,charge,#)=[] (2.5s)
+D=   20 dimV=    980 dimI=    726 dimL=    254 arcHS=    254 ker=    0 gens(Li,charge,#)=[] (4.4s)
+dims vs max-submodule: MATCH
+Li-0 generators (D,#): [(5, 1), (6, 1)]
+NON-ARC generators (D, Li, #): none
