@@ -1,0 +1,44 @@
+L2: odd n < 10^6 violating (-1)^sigma_T(n) = prod (u/3): 0
+Fibonacci digital roots F_1..F_24: [1, 1, 2, 3, 5, 8, 4, 3, 7, 1, 8, 9, 8, 8, 7, 6, 4, 1, 5, 6, 2, 8, 1, 9]
+F_n + F_(n+12) = 0 mod 9 for n < 40: True; positions of 3,6,9 in the cycle: [4, 8, 12, 16, 20, 24]
+L1: observed max |R(N+1) - R(N)| for N < 2^26: 4 (proved bound 8)
+   octave 2^ 6: max|R| =       14   4 D(X)^(1/3) =       63.9   D(X)/X^2 = 0.995   bound/max = 4.6   X^(1/6) = 2.0
+   octave 2^ 7: max|R| =       18   4 D(X)^(1/3) =       95.2   D(X)/X^2 = 0.823   bound/max = 5.3   X^(1/6) = 2.2
+   octave 2^ 8: max|R| =       20   4 D(X)^(1/3) =      138.2   D(X)/X^2 = 0.630   bound/max = 6.9   X^(1/6) = 2.5
+   octave 2^ 9: max|R| =       48   4 D(X)^(1/3) =      257.7   D(X)/X^2 = 1.020   bound/max = 5.4   X^(1/6) = 2.8
+   octave 2^10: max|R| =       76   4 D(X)^(1/3) =      414.5   D(X)/X^2 = 1.062   bound/max = 5.5   X^(1/6) = 3.2
+   octave 2^11: max|R| =      114   4 D(X)^(1/3) =      806.5   D(X)/X^2 = 1.954   bound/max = 7.1   X^(1/6) = 3.6
+   octave 2^12: max|R| =      268   4 D(X)^(1/3) =     1622.5   D(X)/X^2 = 3.978   bound/max = 6.1   X^(1/6) = 4.0
+   octave 2^13: max|R| =      286   4 D(X)^(1/3) =     2330.2   D(X)/X^2 = 2.946   bound/max = 8.1   X^(1/6) = 4.5
+   octave 2^14: max|R| =      284   4 D(X)^(1/3) =     2247.5   D(X)/X^2 = 0.661   bound/max = 7.9   X^(1/6) = 5.0
+   octave 2^15: max|R| =      448   4 D(X)^(1/3) =     5193.7   D(X)/X^2 = 2.039   bound/max = 11.6   X^(1/6) = 5.7
+   octave 2^16: max|R| =      532   4 D(X)^(1/3) =     5989.7   D(X)/X^2 = 0.782   bound/max = 11.3   X^(1/6) = 6.3
+   octave 2^17: max|R| =      654   4 D(X)^(1/3) =    10269.6   D(X)/X^2 = 0.985   bound/max = 15.7   X^(1/6) = 7.1
+   octave 2^18: max|R| =     1058   4 D(X)^(1/3) =    19179.4   D(X)/X^2 = 1.604   bound/max = 18.1   X^(1/6) = 8.0
+   octave 2^19: max|R| =     1274   4 D(X)^(1/3) =    24547.4   D(X)/X^2 = 0.841   bound/max = 19.3   X^(1/6) = 9.0
+   octave 2^20: max|R| =     1278   4 D(X)^(1/3) =    24639.4   D(X)/X^2 = 0.213   bound/max = 19.3   X^(1/6) = 10.1
+   octave 2^21: max|R| =     1932   4 D(X)^(1/3) =    40263.0   D(X)/X^2 = 0.232   bound/max = 20.8   X^(1/6) = 11.3
+   octave 2^22: max|R| =     6466   4 D(X)^(1/3) =   172218.6   D(X)/X^2 = 4.537   bound/max = 26.6   X^(1/6) = 12.7
+   octave 2^23: max|R| =     5814   4 D(X)^(1/3) =   189484.3   D(X)/X^2 = 1.511   bound/max = 32.6   X^(1/6) = 14.3
+   octave 2^24: max|R| =     9208   4 D(X)^(1/3) =   260579.8   D(X)/X^2 = 0.982   bound/max = 28.3   X^(1/6) = 16.0
+   octave 2^25: max|R| =    12820   4 D(X)^(1/3) =   461099.9   D(X)/X^2 = 1.361   bound/max = 36.0   X^(1/6) = 18.0
+N = 7910 Y = 100: E_Y/N = 1.7833  R = 268 (direct 268)  corr with f 0.3661  corr with (u/3) 0.1434
+      energy share / seed share: nonunit {0,3,6} 0.320/0.342  fibre {1,4,7} 0.337/0.342  fibre {2,5,8} 0.343/0.316  golden +-1 0.100/0.237  golden +-2 0.378/0.237  golden +-4 0.201/0.184
+N = 66463 Y = 100: E_Y/N = 1.2934  R = 530 (direct 530)  corr with f 0.2932  corr with (u/3) 0.0647
+      energy share / seed share: nonunit {0,3,6} 0.648/0.342  fibre {1,4,7} 0.106/0.342  fibre {2,5,8} 0.246/0.316  golden +-1 0.054/0.237  golden +-2 0.141/0.237  golden +-4 0.157/0.184
+N = 1048576 Y = 100: E_Y/N = 1.2235  R = 1268 (direct 1268)  corr with f 0.1816  corr with (u/3) -0.1530
+      energy share / seed share: nonunit {0,3,6} 0.606/0.342  fibre {1,4,7} 0.232/0.342  fibre {2,5,8} 0.162/0.316  golden +-1 0.094/0.237  golden +-2 0.166/0.237  golden +-4 0.134/0.184
+N = 6904411 Y = 100: E_Y/N = 1.3721  R = 6466 (direct 6466)  corr with f 0.3408  corr with (u/3) -0.0208
+      energy share / seed share: nonunit {0,3,6} 0.566/0.342  fibre {1,4,7} 0.370/0.342  fibre {2,5,8} 0.064/0.316  golden +-1 0.058/0.237  golden +-2 0.321/0.237  golden +-4 0.055/0.184
+N = 133970036 Y = 100: E_Y/N = 1.2359  R = -31662 (direct -31662)  corr with f -0.3992  corr with (u/3) 0.1127
+      energy share / seed share: nonunit {0,3,6} 0.627/0.342  fibre {1,4,7} 0.290/0.342  fibre {2,5,8} 0.083/0.316  golden +-1 0.261/0.237  golden +-2 0.101/0.237  golden +-4 0.010/0.184
+N = 7910 Y = 1000: E_Y/N = 1.9155  R = 268 (direct 268)  corr with f 0.1124  corr with (u/3) -0.0428
+      energy share / seed share: nonunit {0,3,6} 0.395/0.336  fibre {1,4,7} 0.373/0.333  fibre {2,5,8} 0.232/0.331  golden +-1 0.175/0.221  golden +-2 0.240/0.221  golden +-4 0.190/0.221
+N = 66463 Y = 1000: E_Y/N = 1.2477  R = 530 (direct 530)  corr with f 0.0950  corr with (u/3) -0.0724
+      energy share / seed share: nonunit {0,3,6} 0.446/0.336  fibre {1,4,7} 0.373/0.333  fibre {2,5,8} 0.181/0.331  golden +-1 0.159/0.221  golden +-2 0.234/0.221  golden +-4 0.161/0.221
+N = 1048576 Y = 1000: E_Y/N = 1.3739  R = 1268 (direct 1268)  corr with f 0.0546  corr with (u/3) -0.0467
+      energy share / seed share: nonunit {0,3,6} 0.376/0.336  fibre {1,4,7} 0.420/0.333  fibre {2,5,8} 0.204/0.331  golden +-1 0.151/0.221  golden +-2 0.274/0.221  golden +-4 0.199/0.221
+N = 6904411 Y = 1000: E_Y/N = 1.1701  R = 6466 (direct 6466)  corr with f 0.1175  corr with (u/3) -0.0283
+      energy share / seed share: nonunit {0,3,6} 0.430/0.336  fibre {1,4,7} 0.390/0.333  fibre {2,5,8} 0.180/0.331  golden +-1 0.197/0.221  golden +-2 0.240/0.221  golden +-4 0.133/0.221
+N = 133970036 Y = 1000: E_Y/N = 1.2270  R = -31662 (direct -31662)  corr with f -0.1275  corr with (u/3) -0.0223
+      energy share / seed share: nonunit {0,3,6} 0.399/0.336  fibre {1,4,7} 0.431/0.333  fibre {2,5,8} 0.170/0.331  golden +-1 0.206/0.221  golden +-2 0.258/0.221  golden +-4 0.138/0.221
