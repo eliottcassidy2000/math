@@ -143,6 +143,22 @@
       "rook": 36
     }
   ],
+  "incoming_conic_audit": [
+    {
+      "p": 5,
+      "interior_order": 10,
+      "isomorphic_to": "Petersen",
+      "berggren_projective_matrix_order": 60,
+      "automorphism_order": 120
+    },
+    {
+      "p": 7,
+      "interior_order": 21,
+      "isomorphic_to": "L(Heawood)",
+      "berggren_projective_matrix_order": 336,
+      "automorphism_order": null
+    }
+  ],
   "ternary_ring_controls": {
     "golden_phi_order": 8,
     "eisenstein_nonzero_nilpotent": [

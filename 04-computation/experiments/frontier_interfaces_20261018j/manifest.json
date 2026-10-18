@@ -36,8 +36,8 @@
     },
     {
       "path": "04-computation/experiments/ternary_interfaces_20261018j.py",
-      "sha256": "b52baaedae92bf6e4911f4ba0ccfc3a63fcafb058b541c486bbfc413bb7851a4",
-      "bytes_LF": 8278
+      "sha256": "55589bb1c35b96a871f3906b51f6ae1b828c03fd288b3c03eea7ba62a1b5d790",
+      "bytes_LF": 10171
     }
   ],
   "inherited_inputs": [
@@ -65,6 +65,11 @@
       "path": "04-computation/experiments/golden_vsquare_unit_census_20261017.py",
       "sha256": "c5fa5a580e7e5fa84e5e232fdaab1a5b3c418ec720b51a8dc117662f31ecb7fd",
       "bytes_LF": 7623
+    },
+    {
+      "path": "04-computation/pythagorean_conic_s44/pythagorean_conic_dictionary_20261018.py",
+      "sha256": "10d2d004e78d7d7804043a73f1563d378914cb08d493a3c8e5ce0728aa85ef89",
+      "bytes_LF": 20461
     }
   ],
   "notes": [
@@ -75,8 +80,8 @@
     },
     {
       "path": "05-knowledge/results/ternary_ports_golden_defect_20261018j.md",
-      "sha256": "da5edc2ea5b71bc54bedc6b9c660611f2362393f454cad47f0307a4d61aa1bb9",
-      "bytes_LF": 19032
+      "sha256": "43b7fdbacbff151f8ec2f511e8ebfde8229cfc2428d757ef31e040b6863c3ea8",
+      "bytes_LF": 20051
     }
   ],
   "receipts": [
@@ -132,8 +137,8 @@
     },
     {
       "path": "04-computation/experiments/frontier_interfaces_20261018j/ternary_controls.json",
-      "sha256": "442727c3d156262abf9c2a5cf5bc18c8d9bcf097b6a8d075e5775144cfd1a6f1",
-      "bytes_LF": 3717
+      "sha256": "9562d5403a3180a310e2ba215c934c4199935a400d4e38d15124520c700e39b1",
+      "bytes_LF": 4089
     }
   ],
   "commands_from_repo_root": [

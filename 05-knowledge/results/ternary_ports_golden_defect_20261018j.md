@@ -105,6 +105,21 @@ share the additive group F3^2, while multiplication and norm
 cannot be transported by a ring isomorphism. This is a concrete example
 of the extra information a ternary analogy must retain.
 
+The next incoming [Pythagorean conic computation](../../04-computation/pythagorean_conic_s44/pythagorean_conic_dictionary_20261018.py)
+(`f09f8097d1`) gives a separate projective chart: take points interior to the conic
+`x^2+y^2-z^2=0` in PG(2,p), with adjacency given by polar orthogonality.
+**FINITE-EXACT, independently replayed:** at p=5 this is Petersen; at p=7
+it is L(Heawood). Our matrix-closure audit gives Berggren image orders
+60 and 336 respectively. At p=5 the image is a proper subgroup of
+Petersen's 120 automorphisms, contrary to the incoming script's old
+introductory sentence; its saved computation had already reported the
+correct failure of equality. The sentence is repaired and the mechanism
+logged in MISTAKES. No all-prime group-image theorem is inferred here.
+This chart preserves polar orthogonality, not the affine unit-distance
+predicate or marked colour-extension relation of the earlier chart.
+The simultaneous THM-4701 namespace claim is PRE-AUDIT and is not used
+as a proved dependency.
+
 ## 3. The exact three-port term lost by a star-triangle replacement
 
 Let a,b,c be boundary colours from q labelled colours. Write
