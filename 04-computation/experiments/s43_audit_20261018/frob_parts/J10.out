@@ -1,0 +1,1 @@
+[2] p = 13, r = 4, n = 14280: mod p^2 True, mod p^3 False, v_p(diff) = 2  (376.8s)

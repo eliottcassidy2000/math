@@ -7,7 +7,8 @@ status: >
   History: filed as OPEN for r >= 2 after the r = 1 proof; the obstacle named below dissolved.
 
   FINITE-EXACT evidence for r >= 2 (13 cases, all hold). None holds modulo p^3 except at the non-ordinary prime
-  p = 11, where v_11(A) = v_11(s_7) = r. The congruence then holds mod 11^3 at r = 2 and mod 11^4 at r = 3. The
+  p = 11, where v_11(A) = v_11(s_7) = r. The congruence then holds mod 11^3 at r = 2, mod 11^4 at r = 3 and mod 11^5
+  at r = 4. The
   earlier wording 'none holds modulo p^3' was false there (S43 audit m9).
   - r = 2: p = 5, 7, 11, 13, 17, 19, 23, 29, 31 (n up to 480);
   - r = 3: p = 5, 7, 11, 13 (n up to 1098).

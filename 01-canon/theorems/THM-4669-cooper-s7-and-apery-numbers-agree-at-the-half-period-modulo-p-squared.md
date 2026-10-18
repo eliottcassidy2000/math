@@ -20,14 +20,15 @@ status: >
   for n <= 40.
   - At r = 1 it never holds modulo p^3: all primes 5 <= p < 250 here, and all odd p < 4000 in the S43 audit.
   - At r >= 2 it fails modulo p^3 except at the non-ordinary prime p = 11 (a(11) = -44). There
-    v_11(A) = v_11(s_7) = r and the difference has v_11 = r + 1 (r = 2, 3; audit m9).
+    v_11(A) = v_11(s_7) = r and the difference has v_11 = r + 1 (r = 2, 3 here; r = 4 in the audit, n = 7320; audit m9).
   - It fails at n = p - 1 (even mod p) and at n = (3p-1)/2 (mod p^2; it holds mod p only at p = 11), for
     5 <= p <= 300.
   - Every one of these lines is produced by s7_apery_halfperiod_extended_20261018.py, rewritten after audit m10
     because the committed version could not produce the earlier .out.
   Independent audit confirmation:
   - r = 1: all 549 odd primes p < 4000;
-  - Frobenius points up to n = 9841 (p = 3, r = 9) and n = 8403 (p = 7, r = 5);
+  - 55 Frobenius points with n up to 14280 (p = 3 to r = 9, p = 5 to r = 6, p = 7 to r = 5, p = 11 and 13 to r = 4,
+    p = 17, 19, 23 at r = 3, every prime p <= 149 at r = 2);
   - the Ahlgren-Ono corollary for all 429 odd primes p < 3000.
   The audit re-derived every step (s43_audit_20261018/REPORT.md).
 

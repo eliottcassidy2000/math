@@ -2,9 +2,9 @@ S43 REFEREE REPORT -- opus-2026-10-18-S43
 ========================================
 Referee: independent adversarial audit subagent, 2026-10-18.
 Worktree audited: C:\Users\Eliott\AppData\Local\Temp\math-wt-explicit-modal-38 at HEAD b5e34b5eac
-(+ untracked apery_like_fractional_periods_m24_20261018.{py,json,out}). Nothing committed, pushed or modified;
-all referee code and outputs are in 04-computation/experiments/s43_audit_20261018/ (written from scratch; no
-session module imported).
+(+ untracked apery_like_fractional_periods_m24_20261018.{py,json,out}). The referee committed and pushed nothing and
+modified no session file. All referee code and outputs are in 04-computation/experiments/s43_audit_20261018/; they
+were written from scratch and import no session module.
 
 Scope and state
   - Audited state: b5e34b5eac.
@@ -33,13 +33,14 @@ SUMMARY VERDICT
   term was checked p-adically at 13 Frobenius points, including cases where p | C(n,m). The theorem was confirmed
   independently:
   - r = 1: all 549 odd primes p < 4000;
-  - r >= 2: Frobenius points up to n = 9841 (p = 3, r = 9) and n = 8403 (p = 7, r = 5);
+  - r >= 2: 55 Frobenius points with n up to 14280: p = 3 up to r = 9, p = 5 up to r = 6, p = 7 up to r = 5,
+    p = 11 and p = 13 up to r = 4, p = 17, 19, 23 at r = 3, and every prime p <= 149 at r = 2;
   - the Ahlgren-Ono corollary for all 429 odd primes p < 3000.
   No prior statement was found (Gorodetsky 2021/23, Straub 2023, Osburn-Sahu-Straub 2016, Beukers 2024 including its
   Appendix C entry 9.11 on s_7, two Z.-H. Sun conjecture papers, Z.-W. Sun's open-conjecture list, OEIS A183204 and
   A036917). "Novelty is unverified" is therefore the right label. Minor defects: a wrong Fock-space sentence, a false
-  "none holds mod p^3" statement in HYP-9291 (at p = 11 the congruence does hold mod p^3 for r >= 2), and gaps in
-  provenance.
+  "none holds mod p^3" statement in HYP-9291 (at p = 11 the congruence does hold mod p^3 for r = 2, 3, 4, the cases
+  tested), and gaps in provenance.
 
   The coordinator's specific questions on THM-4669:
   - (E2) is an identity of formal power series. Clausen's formula 2F1(a,b;a+b+1/2;z)^2 =
@@ -307,10 +308,19 @@ THM-4669 (audit_thm4669.py; outputs audit_thm4669_part*.out)
       - min v_p(termwise L remainder) = 2, antisymmetric sum exactly 0;
       - v_p(L) >= 2 and v_p(statement 2) >= 2 everywhere.
   [1] r = 1, all 549 odd primes 3 <= p < 4000: no mod p^2 failure; no prime satisfies mod p^3.
-  [2] Frobenius points, exact big integers, all hold mod p^2:
-      p = 3, r = 2..9 (n up to 9841); p = 5, r = 2..6 (n up to 7812); p = 7, r = 2..5 (n up to 8403);
-      p = 11, r = 2..4 (n up to 7320; holds even mod p^3, see m9); p = 13, r = 2, 3.
-      [RESULTS FOR THE REMAINING CASES ARE APPENDED BELOW WHEN THE RUN FINISHED]
+  [2] Frobenius points, exact big integers. Sources: audit_thm4669_part1_2.out, frob_parts/J*.out (frob_cases.py).
+      All hold mod p^2:
+      - p = 3, r = 2..9 (n up to 9841);
+      - p = 5, r = 2..6 (n up to 7812);
+      - p = 7, r = 2..5 (n up to 8403);
+      - p = 11, r = 2..4 (n up to 7320; holds even mod p^3, v_11 = r + 1, see m9);
+      - p = 13, r = 2, 3, 4 (n = 14280 for r = 4; frob_parts/J10.out);
+      - r = 3: p = 17, 19, 23 (n up to 6083);
+      - r = 2: every prime 17 <= p <= 149 (n up to 11100).
+      There are 55 Frobenius points in all. Apart from p = 11, every one fails mod p^3, with v_p(difference) = 2 exactly.
+      The runs for (29,3), n = 12194, and (31,3), n = 14895, produced no record. Their output files
+      (frob_parts/J1.out, J2.out) were overwritten when the session's commit 1d7fd58ab0 took them, still empty, at
+      10:34:24. They are not claimed.
   [3] eta(2tau)^4 eta(4tau)^4 = q - 4q^3 - 2q^5 + 24q^7 - 11q^9 - 44q^11 + 22q^13 + ... The corollary
       s_7((p-1)/2) == (-1/p) a(p) mod p^2 holds for all 429 odd primes p < 3000.
   [4] n = p - 1: fails mod p for all primes 5..300 (s_7(p-1) == 0 mod p, as in Malik-Straub). n = (3p-1)/2: fails
@@ -361,6 +371,22 @@ Bridge note
       to q^60.
     - F: t = q prod(1-q^n)^(5(n/5)) = q (H/G)^5 to q^60, and sum b_n t^n = 1 + sum Re[(3-i) sum_{d|n} chi(d)] q^n holds
       only with chi(2) = +i.
+
+POST-REPAIR SPOT CHECK
+----------------------
+While this report was being written, the session read an in-progress copy of it and applied it in commit 1d7fd58ab0
+("apply the independent S43 audit ...; MISTAKE-629"). A quick read of that commit finds:
+- The repairs to THM-4669, THM-4670, HYP-9291, HYP-9292 and the bridge note match findings M1-M4, m2-m13, n1, n2, n7
+  and n8.
+- The corrected battery adds a new claim: "AZ and s_18 agree with each other mod p at the half-period, twist (-1/p)".
+  The referee re-checked it: true mod p for all primes 5..800, false mod p^2 (az_s18_check.out).
+- New broken reference: THM-4669, the bridge note and MISTAKES.md cite
+  "04-computation/experiments/s43_audit_20261018/REPORT.md". The file is REPORT.txt; subagents cannot write .md
+  files. Fix the three references.
+- The repaired HYP-9291 and THM-4669 say the p = 11 exception holds for "r = 2, 3". It also holds at r = 4
+  (v_11 = 5, n = 7320).
+- The session also committed referee scratch outputs (frob_parts/*.out, audit_thm4669_part1_2.out) mid-run. Treat the
+  committed copies as snapshots.
 
 Literature consulted (read-only)
   - Gorodetsky, arXiv:2102.11839 (HTML): s_7 = Zudilin's formula (13,4,-27,3); no (p-1)/2 statement.

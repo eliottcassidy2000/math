@@ -1,0 +1,4 @@
+AZ((p-1)/2) vs +1 * s18((p-1)/2), primes 5..800 (p=5,7 incl.): ('mod p failures: 70 (first [7, 11, 19, 23, 31])', 'mod p^2 failures: 136')
+AZ((p-1)/2) vs (-1/p) * s18((p-1)/2), primes 5..800 (p=5,7 incl.): ('mod p failures: 0 (first [])', 'mod p^2 failures: 135')
+AZ((p-1)/2) vs (-3/p) * s18((p-1)/2), primes 5..800 (p=5,7 incl.): ('mod p failures: 72 (first [5, 7, 17, 19, 29])', 'mod p^2 failures: 135')
+AZ((p-1)/2) vs (3/p) * s18((p-1)/2), primes 5..800 (p=5,7 incl.): ('mod p failures: 70 (first [5, 11, 17, 23, 29])', 'mod p^2 failures: 136')
