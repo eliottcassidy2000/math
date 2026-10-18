@@ -249,6 +249,13 @@ for statements and proofs. The points for this note are the following.
     thin.
 * **Spectral ceiling.** Every order has excess `<= (p^(3/2)/π)(log p + γ + log(4/π) + o(1))` (trace duality). Exact
   optima at `p <= 43` sit at 0.40-0.50 of this ceiling.
+* **Rotation orders as a certified lower bound** (FINITE-EXACT, Farey sweep census). The best rotation order has excess
+  `>= 0.55 p^(3/2)` at every one of the 1110 primes `p ≡ 3 (mod 4)` in `(100, 20000]`. The mean `E_rot/p^(3/2)` rises
+  slowly, 0.81 (`p` in `[100, 500)`), 0.92 (`[1000, 2000)`), 0.96 (`[5000, 10000)`), 1.00 (`[10000, 20000]`), with
+  maxima 1.14-1.58 at extreme `L`. This is 0.40 falling to 0.30 of the trace-norm ceiling. So the rotation family alone
+  gives Spencer-order rankings (`Θ(p^(3/2))`) for Paley tournaments, explicitly; whether its maximum grows like
+  `p^(3/2) log p` (the order of the ceiling) is open. The data fit `0.58 + 0.044 log p` and
+  `0.22 + 0.25 sqrt(log p)` equally well.
 
 ## 5. The exponent ladder (FINITE-EXACT to `X = 4·10^6`)
 
