@@ -20,11 +20,22 @@ if os.environ.get('ROOTS_OF_UNITY'):
     for _ in range(14): roots.append(f.mul(roots[-1], z15))
     roots = roots + [f.scale(r, -1) for r in roots]
     U0 = sorted({f.mul(r, q) for r in roots for q in U0 + [f.one]}); SUFFIX = '_roots'
-cands = json.load(open(os.path.join(HERE, 'copy_connectors%s.json' % SUFFIX)))['b']['three_step_survivors']
+if os.environ.get('U_DIRECTIONS'):
+    w_ = f.gen(2); h_ = f.add(w_, f.scalar(3)); u_ = f.mul(f.sub(h_, geo.j), f.inv(f.add(h_, geo.j)))
+    z15 = f.gen(0); roots = [f.one]
+    for _ in range(14): roots.append(f.mul(roots[-1], z15))
+    roots = roots + [f.scale(r, -1) for r in roots]
+    ui = f.inv(u_); pw = [u_, f.mul(u_, u_), ui, f.mul(ui, ui)]
+    U0 = sorted({f.mul(r, q) for r in roots for q in pw}); SUFFIX = '_udirs'
+J = json.load(open(os.path.join(HERE, 'copy_connectors%s.json' % SUFFIX)))
 pl = places(f, int(sys.argv[1]) if len(sys.argv) > 1 else 80, start=1000)
 print('places', len(pl), 'up to', pl[-1][0])
-for (i1, i2, a1, a2, qi, nt) in cands:
-    x = f.add(C[a1], f.mul(cb, geo.M[i1])); y = f.add(C[a2], f.mul(cb, geo.M[i2]))
+for name, co in (('b', cb), ('c', cc)):
+  if name not in J: continue
+  cands = J[name]['three_step_survivors']
+  print('coefficient %s: %d candidates' % (name, len(cands)))
+  for (i1, i2, a1, a2, qi, nt) in cands:
+    x = f.add(C[a1], f.mul(co, geo.M[i1])); y = f.add(C[a2], f.mul(co, geo.M[i2]))
     t = f.sub(f.sub(y, x), U0[qi]); Nt = f.mul(t, geo.bar(t)); X = f.mul(Nt, f.sub(Nt, f.scalar(4)))
     res = [pow(red(X, p, emb), (p - 1) // 2, p) for p, emb, embc in pl]
     print('candidate copies', (i1, i2), 'points', (a1, a2), 'q index', qi, '|t|^2 = %.6f' % nt,

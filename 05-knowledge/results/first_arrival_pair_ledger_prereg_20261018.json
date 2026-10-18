@@ -1,0 +1,18 @@
+{
+  "session": "mac-mini-2026-10-18-sixcolour",
+  "written": "2026-10-18, before any computation in the octave 2^27 <= N < 2^28 (committed and pushed before the run)",
+  "object": "pair ledger of first arrivals into clock_duality's certified forward-closed frontier V_1000 (627 seeds): E_V = E0 - 2 SIB + (G0 - E0) + 2 Gam1 + HL, with E0 = sum_x c_0(x)^2 (-> 34N/7, THM-4670(5)), SIB = sum over sibling source pairs (x, 2x+1) with a common entry seed of c_0(x) c_0(2x+1) (-> 5N/7), G0 / G1 = integer-clock lag-0 / lag-1 Gram, Gam1 = G1 + SIB (lag-1 pairs other than sibling sources), HL = E_V - G0 - 2 G1 (lags >= 2), E+ = unsigned arrival energy",
+  "evidence_before": "fap.c and fap_lean.c, every N < 2^27 (octaves 2^8 .. 2^26), V_1000: octave means of (G0-E0)/N = -1.517, -1.568, -1.656, -1.705, -1.771 and of Gam1/N = -0.198, -0.208, -0.194, -0.159, -0.151 (2^22 .. 2^26); octave maxima of (G0-E0)/N < 0 from 2^10 and of Gam1/N < 0 from 2^11; octave maxima of HL/N = -0.171, -0.150, -0.165, +0.027, -0.100; G0/N means 3.340, 3.289, 3.201, 3.152, 3.086; G1/G0 means -0.2732 .. -0.2836, per-N within [-0.2876, -0.2662]; E_V/E+ means 0.228 .. 0.281",
+  "predictions": {
+    "L1": "octave 2^27: the octave mean of G1/G0 lies in [-0.295, -0.265] and every N has G1/G0 in [-0.300, -0.250]",
+    "L2": "octave 2^27: (G0 - E0)/N < 0 at every N (same-clock sign law), and its octave mean lies in [-1.95, -1.70]",
+    "L3": "octave 2^27: Gam1/N < 0 at every N (sign law for lag-1 pairs other than sibling sources), and its octave mean lies in [-0.25, -0.05]",
+    "L4": "octave 2^27: HL/N <= 0.07 at every N",
+    "L5": "octave 2^27: E_V/N <= 2.0 at every N, octave mean in [0.9, 1.5]",
+    "L6": "octave 2^27: octave mean of G0/N in [2.92, 3.10]",
+    "L7": "octave 2^27: octave mean of the Nyquist dip E_V/E+ in [0.18, 0.35]",
+    "check (theorem, not a prediction)": "E0/N within 1e-4 of 34/7 and SIB/N within 1e-3 of 5/7 at every N of the octave"
+  },
+  "scoring": "each of L1-L7 passes or fails separately; all are reported, including failures",
+  "command": "04-computation/experiments/first_arrival_20261018/fap_lean V_closed_Y1000.txt 27 > fap_lean_V1000_k27.out"
+}

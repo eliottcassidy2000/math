@@ -1,0 +1,13 @@
+places 80 up to 18451
+coefficient b: 7 candidates
+candidate copies (0, 2) points (3, 7) q index 42 |t|^2 = 3.542448 NON-square at place 3631
+candidate copies (1, 3) points (3, 7) q index 42 |t|^2 = 3.542448 NON-square at place 3631
+candidate copies (1, 4) points (2, 1) q index 66 |t|^2 = 0.963220 NON-square at place 4261
+candidate copies (1, 4) points (8, 9) q index 115 |t|^2 = 1.205874 NON-square at place 3631
+candidate copies (2, 5) points (0, 1) q index 27 |t|^2 = 0.963220 NON-square at place 4261
+candidate copies (2, 5) points (2, 3) q index 27 |t|^2 = 0.963220 NON-square at place 4261
+candidate copies (2, 6) points (5, 3) q index 71 |t|^2 = 2.833081 NON-square at place 4051
+coefficient c: 3 candidates
+candidate copies (2, 5) points (1, 6) q index 118 |t|^2 = 0.007673 NON-square at place 3631
+candidate copies (2, 5) points (1, 8) q index 100 |t|^2 = 1.487731 NON-square at place 3631
+candidate copies (2, 5) points (9, 8) q index 88 |t|^2 = 3.459571 NON-square at place 3631

@@ -113,10 +113,19 @@ int main(int argc, char **argv) {
     int64_t *cV = calloc(nV, sizeof(int64_t)), *D = calloc(nV, sizeof(int64_t));
     int64_t *A = calloc(nports, sizeof(int64_t)), *S = calloc(npairs, sizeof(int64_t));
     int64_t *g = calloc((size_t)MAXDEP * nV, sizeof(int64_t)), *h = calloc((size_t)MAXCLK * nV, sizeof(int64_t));
-    double EV = 0, Eport = 0, Epair = 0, Edep = 0, Eclk = 0, G1 = 0; /* exact as long as < 2^53; G1 = lag-1 clock Gram */
+    double EV = 0, Eport = 0, Epair = 0, Edep = 0, Eclk = 0, G1 = 0, Eplus = 0; /* exact as long as < 2^53; G1 = lag-1 clock Gram; Eplus = UNSIGNED first-arrival energy sum_u (sum_(x->u) c_0(x))^2 = S(theta=0) */
+    int64_t *cplus = calloc(nV, sizeof(int64_t));
+    /* exact pair ledger: E0 = sum_x c_0(x)^2 (source energy); SIB = sum over sibling SOURCE pairs (x, 2x+1), x = 1 mod 8,
+       with the same entry seed, of c_0(x) c_0(2x+1). Siblings always enter with clock lag exactly 1 and opposite signs, so
+       G(1) = -SIB + Gam1 with Gam1 the other lag-1 pairs; E_V = E0 - 2 SIB + (G0 - E0) + 2 Gam1 + HL. */
+    int8_t *c0s = calloc(nsrc, 1); double E0 = 0, SIB = 0;
     int64_t R = 0, H4 = 0, H1 = 0; int ok = 1;
-    double mx[5][64], sm[5][64]; int64_t cnt[64], am[5][64]; double xp_max[64], xd_max[64], xp_sum[64], xd_sum[64], xp_hi[64], xp_lo[64], r1_sum[64], r1_lo[64], r1_hi[64];
-    for (int k = 0; k < 64; k++) { xp_max[k] = xd_max[k] = xp_sum[k] = xd_sum[k] = 0; xp_hi[k] = -1e9; xp_lo[k] = 1e9; r1_sum[k] = 0; r1_lo[k] = 1e9; r1_hi[k] = -1e9; }
+    double mx[5][64], sm[5][64]; int64_t cnt[64], am[5][64]; double xp_max[64], xd_max[64], xp_sum[64], xd_sum[64], xp_hi[64], xp_lo[64], r1_sum[64], r1_lo[64], r1_hi[64], hl_sum[64], hl_hi[64], hl_lo[64];
+    double ep_sum[64], ep_lo[64], ep_hi[64], dip_sum[64];
+    double e0_lo[64], e0_hi[64], sib_lo[64], sib_hi[64], z0_hi[64], z0_sum[64], g1r_hi[64], g1r_sum[64];
+    for (int k = 0; k < 64; k++) { e0_lo[k] = sib_lo[k] = 1e9; e0_hi[k] = sib_hi[k] = z0_hi[k] = g1r_hi[k] = -1e9; z0_sum[k] = g1r_sum[k] = 0; }
+    for (int k = 0; k < 64; k++) { ep_sum[k] = dip_sum[k] = 0; ep_lo[k] = 1e9; ep_hi[k] = -1e9; }
+    for (int k = 0; k < 64; k++) { xp_max[k] = xd_max[k] = xp_sum[k] = xd_sum[k] = 0; xp_hi[k] = -1e9; xp_lo[k] = 1e9; r1_sum[k] = 0; r1_lo[k] = 1e9; r1_hi[k] = -1e9; hl_sum[k] = 0; hl_hi[k] = -1e9; hl_lo[k] = 1e9; }
     for (int q = 0; q < 5; q++) for (int k = 0; k < 64; k++) { mx[q][k] = -1; sm[q][k] = 0; am[q][k] = 0; }
     memset(cnt, 0, sizeof cnt);
     int di = 0;
@@ -127,6 +136,11 @@ int main(int argc, char **argv) {
             int64_t x = seedf(m); int64_t i = (x - 1) / 2;
             int u = su[i]; int64_t d = (int64_t)ss[i] * amt;
             EV += (double)(2 * cV[u] * d + d * d); cV[u] += d;
+            E0 += (double)(2 * c0s[i] * amt + amt * amt);
+            { int64_t pi = -1; if ((x & 7) == 1) pi = x; /* index of 2x+1 */ else if ((x & 15) == 3) pi = (x - 1) / 2 / 2; /* index of (x-1)/2 */
+              if (pi >= 0 && pi < nsrc && su[pi] == u) SIB += (double)amt * c0s[pi]; }
+            c0s[i] += amt;
+            Eplus += (double)(2 * cplus[u] * amt + (int64_t)amt * amt); cplus[u] += amt;
             R += (par[Vs[u]] ? -1 : 1) * d;
             if (sp[i] < 0) { Eport += (double)(2 * D[u] * d + d * d); Epair += (double)(2 * D[u] * d + d * d); D[u] += d; }
             else { int p = sp[i], q = pairid[p];
@@ -144,7 +158,11 @@ int main(int argc, char **argv) {
         double vals[5] = {EV / N, Eport / N, Epair / N, Edep / N, Eclk / N};
         for (int q = 0; q < 5; q++) { if (vals[q] > mx[q][k]) { mx[q][k] = vals[q]; am[q][k] = N; } sm[q][k] += vals[q]; }
         cnt[k]++;
-        { double xp = (EV - Eport) / N, xd = (EV - Edep) / N; { double r1 = Eclk > 0 ? G1 / Eclk : 0; r1_sum[k] += r1; if (r1 < r1_lo[k]) r1_lo[k] = r1; if (r1 > r1_hi[k]) r1_hi[k] = r1; } if (xp > xp_hi[k]) xp_hi[k] = xp; if (xp < xp_lo[k]) xp_lo[k] = xp; if (fabs(xp) > xp_max[k]) xp_max[k] = fabs(xp); if (fabs(xd) > xd_max[k]) xd_max[k] = fabs(xd); xp_sum[k] += xp; xd_sum[k] += xd; }
+        { double e0 = E0 / N, sb = SIB / N, z0 = (Eclk - E0) / N, g1r = (G1 + SIB) / N;
+          if (e0 < e0_lo[k]) e0_lo[k] = e0; if (e0 > e0_hi[k]) e0_hi[k] = e0; if (sb < sib_lo[k]) sib_lo[k] = sb; if (sb > sib_hi[k]) sib_hi[k] = sb;
+          if (z0 > z0_hi[k]) z0_hi[k] = z0; z0_sum[k] += z0; if (g1r > g1r_hi[k]) g1r_hi[k] = g1r; g1r_sum[k] += g1r; }
+        { double ep = Eplus / N; ep_sum[k] += ep; if (ep < ep_lo[k]) ep_lo[k] = ep; if (ep > ep_hi[k]) ep_hi[k] = ep; dip_sum[k] += Eplus > 0 ? EV / Eplus : 0; }
+        { double xp = (EV - Eport) / N, xd = (EV - Edep) / N; { double hl = (EV - Eclk - 2 * G1) / N; hl_sum[k] += hl; if (hl > hl_hi[k]) hl_hi[k] = hl; if (hl < hl_lo[k]) hl_lo[k] = hl; } { double r1 = Eclk > 0 ? G1 / Eclk : 0; r1_sum[k] += r1; if (r1 < r1_lo[k]) r1_lo[k] = r1; if (r1 > r1_hi[k]) r1_hi[k] = r1; } if (xp > xp_hi[k]) xp_hi[k] = xp; if (xp < xp_lo[k]) xp_lo[k] = xp; if (fabs(xp) > xp_max[k]) xp_max[k] = fabs(xp); if (fabs(xd) > xd_max[k]) xd_max[k] = fabs(xd); xp_sum[k] += xp; xd_sum[k] += xd; }
         if (di < ndump && N == dumpN[di]) {
             di++;
             printf("== dump N=%lld: E_V/N %.4f  E_port/N %.4f  E_pair/N %.4f  E_dep/N %.4f  E_clk/N %.4f  R^2/N %.4f\n", (long long)N,
@@ -168,6 +186,15 @@ int main(int argc, char **argv) {
                 for (int t = 0; t + D <= maxclk; t++) for (int uu = 0; uu < nV; uu++) G += (double)h[(size_t)t * nV + uu] * h[(size_t)(t + D) * nV + uu];
                 printf(" %+.3f", G / N); tot += (D ? 2 : 1) * G; }
               double rest = EV - tot; printf("  | lags > 12 contribute %+.3f\n", rest / N); }
+            /* clock spectrum: S(theta) = sum_u |sum_t q_t(u) e^(i t theta)|^2 with q_t = (-1)^t h_t the UNSIGNED clock profile;
+               S(0) = E+ (unsigned), S(pi) = E_V (signed), mean over theta = G(0) (Parseval) */
+            printf("   clock spectrum S(k pi/12)/N, k = 0..12:");
+            for (int kk = 0; kk <= 12; kk++) { double th = kk * M_PI / 12, Sv = 0;
+                for (int uu = 0; uu < nV; uu++) { double re = 0, im = 0;
+                    for (int t = 0; t <= maxclk; t++) { double q = (double)h[(size_t)t * nV + uu] * ((t & 1) ? -1 : 1); if (q != 0) { re += q * cos(t * th); im += q * sin(t * th); } }
+                    Sv += re * re + im * im; }
+                printf(" %.3f", Sv / N); }
+            printf("  (E+/N %.3f)\n", Eplus / N);
             /* sibling pair anti-correlation: over pairs with both ports, corr(A(s), A(2s+1)) and energy of halves vs merged */
             double sxy = 0, sxx = 0, syy = 0, merged = 0; int np2 = 0;
             for (int p = 0; p < nports; p++) { int kq = pidx(2 * ports[p] + 1); if (kq >= 0 && pairid[kq] == pairid[p]) {
@@ -182,8 +209,11 @@ int main(int argc, char **argv) {
     for (int k = 8; k <= KMAX; k++) {
         printf("octave 2^%2d:", k);
         for (int q = 0; q < 5; q++) printf("  %s max %.3f mean %.3f", nm[q], mx[q][k], sm[q][k] / cnt[k]);
-        printf("  | cross-port (E_V-E_port)/N mean %+.3f range [%+.3f, %+.3f] ; cross-depth (E_V-E_dep)/N mean %+.3f max|.| %.3f ; lag-1 clock ratio G1/G0 mean %+.4f range [%+.4f, %+.4f]\n",
-               xp_sum[k] / cnt[k], xp_lo[k], xp_hi[k], xd_sum[k] / cnt[k], xd_max[k], r1_sum[k] / cnt[k], r1_lo[k], r1_hi[k]);
+        printf("  | cross-port (E_V-E_port)/N mean %+.3f range [%+.3f, %+.3f] ; cross-depth (E_V-E_dep)/N mean %+.3f max|.| %.3f ; lag-1 clock ratio G1/G0 mean %+.4f range [%+.4f, %+.4f] ; higher lags (E_V-G0-2G1)/N mean %+.3f range [%+.3f, %+.3f]\n",
+               xp_sum[k] / cnt[k], xp_lo[k], xp_hi[k], xd_sum[k] / cnt[k], xd_max[k], r1_sum[k] / cnt[k], r1_lo[k], r1_hi[k], hl_sum[k] / cnt[k], hl_lo[k], hl_hi[k]);
+        printf("             unsigned E+/N mean %.3f range [%.3f, %.3f] ; Nyquist dip E_V/E+ mean %.4f\n", ep_sum[k] / cnt[k], ep_lo[k], ep_hi[k], dip_sum[k] / cnt[k]);
+        printf("             ledger: E0/N in [%.4f, %.4f] (34/7 = %.4f) ; SIB/N in [%.4f, %.4f] (5/7 = %.4f) ; same-clock (G0-E0)/N mean %+.3f max %+.3f ; other lag-1 Gam1/N = (G1+SIB)/N mean %+.3f max %+.3f\n",
+               e0_lo[k], e0_hi[k], 34.0 / 7, sib_lo[k], sib_hi[k], 5.0 / 7, z0_sum[k] / cnt[k], z0_hi[k], g1r_sum[k] / cnt[k], g1r_hi[k]);
     }
     return 0;
 }
