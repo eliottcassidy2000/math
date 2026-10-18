@@ -1,0 +1,17 @@
+default(parisize, 400000000);
+f = x^3+2*x^2-4*x-4;
+print("disc f = ", poldisc(f), " = ", factor(poldisc(f)));
+print("nfdisc Q(w) = ", nfdisc(f), " ; nfbasis = ", nfbasis(f));
+print("charpoly of w^2/2: ", charpoly(Mod(x^2/2, f)));
+print("nfdisc Q(zeta15) = ", nfdisc(polcyclo(15)), " = ", factor(nfdisc(polcyclo(15))));
+r1 = polcompositum(polcyclo(15), x^2+11, 1)[1];
+K1 = r1[1]; print("K poly degree ", poldegree(K1), " k1 = ", r1[4]);
+print("nfdisc K = ", factor(nfdisc(K1)));
+t0 = getabstime();
+r2 = polcompositum(K1, f, 1)[1];
+T = r2[1]; print("T degree ", poldegree(T), " k2 = ", r2[4], " ; max coeff digits ", vecmax(apply(c->#Str(abs(c)), Vec(T))));
+[T2, a] = polredbest(T, 1);
+print("polredbest degree ", poldegree(T2), " ; max coeff digits ", vecmax(apply(c->#Str(abs(c)), Vec(T2))), " time ", getabstime()-t0);
+D = poldisc(T2); print("disc T2 digits ", #Str(abs(D)));
+fa = factor(D, 10^6); print("partial factor of disc T2: ", fa);
+quit;

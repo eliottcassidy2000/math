@@ -1,0 +1,6 @@
+generators: Phi15(z) = 0, j^2 = -11, f(w) = 0 : ok
+complex conjugation c: involution, z -> 1/z, j -> -j, w -> w : ok
+disc(B) = [2, 32; 3, 24; 5, 36; 11, 24; 37, 16] ; expected disc(O_K)^3 disc(O_w)^16 = [2, 32; 3, 24; 5, 36; 11, 24; 37, 16] ; equal: 1
+p-maximal discriminant at 2,3,5,11,37 (PARI round 4): valuations [32, 24, 36, 24, 16] vs disc(B): [32, 24, 36, 24, 16]  [21 ms]
+nfinit done: degree 48 disc = [2, 32; 3, 24; 5, 36; 11, 24; 37, 16] [375 ms]
+saved g1_F.bin

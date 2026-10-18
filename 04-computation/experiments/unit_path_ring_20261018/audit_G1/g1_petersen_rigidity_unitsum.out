@@ -1,0 +1,9 @@
+edge lengths - 1 (max abs): 2.6728e-51
+R^2 = 0.723606797749979 (5 + sqrt5)/10 = 0.723606797749979 ; R^2 + r^2 = 1.0
+singular values of the 15 x 20 rigidity matrix (ascending): ['0.59481', '0.59481', '0.720282', '1.0', '1.0', '1.09483', '1.09483', '1.52023', '1.58114', '1.58114', '1.71684', '1.71684', '1.87083', '1.87083', '2.04208']
+rank 15 (smallest singular value > 1e-30): True ; smallest = 0.59481023
+kernel dimension: 5 = 3 rigid motions + 2 internal degrees of freedom
+position vectors o_k and i_k perpendicular (max |Re(o_k conj(i_k))|): 1.6056e-52
+rigidity matrix with rows d|p_u - p_v|^2 (factor 2): smallest singular value 1.1896205 (THM-4701 quotes 1.19)
+45 pairs of two-sums: unit sum exactly for the disjoint pairs: True ; number of unit sums: 15 (15 = Petersen edges)
+overlapping pairs never have N(s_ab + s_ac) = 1 as an element of Q(zeta5): True (covered by the exact test above)

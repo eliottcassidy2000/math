@@ -2,11 +2,13 @@
 id: THM-4700
 title: "The unit-path ring of the six-colour field F = Q(zeta15, sqrt-11, w): clock_duality's B2 holds in F, so the component of 0 in the unit-distance graph is the intersection of the localizations at the conjugation-fixed primes, which lie exactly over the primes p = 14 mod 15 with (p/11) = -1 (8 or 24 of them per p); 1/n is unit-reachable iff n has no such prime factor (least excluded prime 29); short reciprocal walks, with the two-step reciprocals given by the Pell equations x^2 - D y^2 = 1 of the four imaginary quadratic subfields Q(sqrt-D) of F; the Heron criterion for triangles in a CM field; and the census of coefficient triangles of the cubic recipe (only equilateral and golden), so its b- and c-fibres admit no translation matching, while single reflection links and mixed quadrilaterals (split by the coefficient itself through the quaternion algebra (N, -3)) always exist"
 status: >
-  PROVED: statements 1-3 and 5. Statement 4 is PROVED for the six realizable triangles (explicit constructions) and
-  FINITE-EXACT for the fourteen excluded ones: each has an explicit quadratic non-residue certificate at a degree-one
-  place.
+  PROVED: statements 1-5. The fourteen excluded triangles of statement 4, and the two-step part of 5(d), are
+  certificate proofs: an explicit quadratic non-residue at a degree-one place. Audit G1 also decided the fourteen by
+  `nfroots` in PARI.
+  FINITE-EXACT: the three-step screen added to 5(d).
   CITED (classical, with proofs retained in the cited repo notes):
-  - the Dedekind overring lemma (proved in section 2 of cyclotomic_unit_component_20261011.md, clock_duality_oct15);
+  - the Dedekind overring lemma (classical; proved in section 2 of cyclotomic_unit_component_20261011.md,
+    clock_duality_oct15);
   - integral bases of composita with coprime discriminants (classical; the cubic order O_(Q(w)) = Z[1, w, w^2/2] was
     computed in cubic_adelic_20261016e.md section 3).
   KNOWN: statement 1 is clock_duality_oct15's B2 (cubic_adelic_20261016e.md section 3) transported from
@@ -15,19 +17,25 @@ status: >
   - the rational and reciprocal statements of 2;
   - the Heron criterion in this form, and its triangle census;
   - the consequences for the cubic recipe in 5.
-  The exact identities were checked in the degree-48 field. Self-audited only (PRE-AUDIT).
+  The exact identities were checked in the degree-48 field.
+  AUDITED by audit G1 (04-computation/experiments/unit_path_ring_20261018/audit_G1/REPORT.md).
+  - PARI reproduced everything independently, including O_F, the fixed-prime census to 3200 (24 at 2549, 2879, 3119),
+    the walks, the Pell list, the Heron census and the house table.
+  - It found no wrong mathematics. Its minor items G1-3, G1-8, G1-9 and notes N1-N6, N9 were applied (MISTAKE-637).
 source: mac-mini-2026-10-18-unitpath
 depends_on: [clock_duality_oct15 B1-B3 (cubic_adelic_20261016e.md), cyclotomic_unit_component_20261011.md section 2 (overring lemma), golden_contact_circuit_20261017i.md section 4 (cubic recipe u^2 = a + b u + c Y), THM-4690 statement 5 (19-adic separation), THM-4558 (Lemma R, residue colourings), merge_18_19_11_22_collatz_hn_20261018.md section 2.1 (fixed places of F)]
 verification:
   - 04-computation/experiments/unit_path_ring_20261018/unit_path_ring_six_colour.py (+ .out): generators of O_F in Gamma, every walk of statement 2, the reflection link, recipe denominators (17 exact checks)
   - 04-computation/experiments/unit_path_ring_20261018/heron_census.py (+ .out, .json): the twenty side multisets of statement 4
   - 04-computation/experiments/unit_path_ring_20261018/matching_criterion.py (+ .out, .json): 1 - 4N for a, b, c; spindle pair denominators
-  - 04-computation/experiments/unit_path_ring_20261018/two_step_reciprocals.out: the n <= 12000 with L(1/n) = 2
+  - 04-computation/experiments/unit_path_ring_20261018/two_step_reciprocals.py (+ .out): the n <= 12000 with L(1/n) = 2, as Pell solutions
+  - 04-computation/experiments/three_step_connectors_20261018/three_step_search.py (+ .out): the three-step screen of 5(d)
+  - 04-computation/experiments/unit_path_ring_20261018/audit_G1/: independent PARI and Python reproduction (audit G1)
   - 04-computation/experiments/unit_path_ring_20261018/mixed_quadrilaterals.py (+ .out): statement 5(e) for a, b, c
   - 04-computation/experiments/unit_path_ring_20261018/house_bound.py (+ .out, .json): conjugate-modulus bounds for the 21 copy pairs
   - 04-computation/experiments/kuratowski_petersen_20261018/pythagorean_tree_walks.py (+ .out): the rational-plane remark
   - 04-computation/experiments/unit_path_ring_20261018/explicit_inverses.py (+ .out): the first explicit walks (session start)
-  - 04-computation/experiments/merge_18_19_11_22_20261018/fixed_places_golden_field.py (+ .out): the fixed places for p <= 2099 (PARI-confirmed to 1300 by audit F3)
+  - 04-computation/experiments/merge_18_19_11_22_20261018/fixed_places_golden_field.py (+ .out): the fixed places for p <= 2999 (PARI-confirmed to 1300 by audit F3 and to 3200 by audit G1, g1_fixed_primes.out)
 ---
 
 # THM-4700 — the unit-path ring of the six-colour field
@@ -70,7 +78,8 @@ The components of `G(F)` are the cosets `x + Gamma`.
 **2. Reciprocals.** `Gamma ∩ Q = Z[1/p : p not in S]`.
 - So `1/n` is unit-reachable iff no prime factor of `n` lies in `S`. Every prime `p < 29` has `1/p` in `Gamma`, and
   `1/29` is not in `Gamma`.
-- Explicit walks, all verified exactly, with `delta_g = conj(g)/g`:
+- Explicit walks, all verified exactly, with `delta_g = conj(g)/g`. The length is that of the given walk, so it is an
+  upper bound for `L`. It is minimal in the two-step rows; for instance `L(1/3) >= 3`.
 
 | Point | Walk | Length |
 |---|---|---|
@@ -98,7 +107,9 @@ The components of `G(F)` are the cosets `x + Gamma`.
 
     H = 2(R_1R_2 + R_2R_3 + R_3R_1) - R_1^2 - R_2^2 - R_3^2   (= 16 · area^2)   lies in 3·(F+)^{*2}.
 
-In particular, for `x` not in `{0} ∪ 2U`: `L(x) = 2` iff `N(x)(4 - N(x))/3` lies in `(F+)^{*2}`.
+In particular, take `x` not in `{0} ∪ 2U`. Then `x` is a sum of two unit vectors iff `N(x)(4 - N(x))/3` lies in
+`(F+)^{*2}`, and in that case `L(x) <= 2`, with equality when `x` is not in `U`. Units satisfy the condition too,
+since `N = 1` gives `1`.
 
 **4. Coefficient triangles of the cubic recipe.** Take the twenty multisets of three sides from `{1, d_a, d_b, d_c}`.
 Exactly six are triangles with vertices in `F`:
@@ -213,8 +224,8 @@ If `z^2` lies in `F+` with `z` in `F`, then `z` lies in `F+` or in `sqrt-3·F+`.
 
 Conversely, such a `y` has norm `R_2/R_1`, and `z_2 = y z_1` works.
 
-For the corollary, `L(x) = 2` iff `x = q_1 + q_2` with `q_1`, `q_2` in `U`. That is the triangle `(0, q_1, x)` with
-squared sides `(1, 1, N(x))`, and then `H = N(4 - N)`.
+For the corollary, `x = q_1 + q_2` with `q_1`, `q_2` in `U` is the triangle `(0, q_1, x)` with squared sides
+`(1, 1, N(x))`, and then `H = N(4 - N)`.
 
 **4.** *The six triangles.*
 - Equilateral: `(z, zeta6 z)` for any side.
@@ -223,8 +234,8 @@ squared sides `(1, 1, N(x))`, and then `H = N(4 - N)`.
 - `(1, d_a, d_a)`: `(1/a, -zeta5/a)`.
 - `(d_a, d_a, d_a)`: equilateral.
 
-*The fourteen exclusions.* In each, `H/3` is a quadratic non-residue at a degree-one place of `F` where it is a unit,
-so it is not a square even in `F`. The primes used are 1021, 1171, 1741 and 2011 (`heron_census.out`). Ten of the
+*The fourteen exclusions* (certificate proofs). In each, `H/3` is a quadratic non-residue at a degree-one place of `F`
+where it is a unit, so it is not a square even in `F`. The primes used are 1021, 1171, 1741 and 2011 (`heron_census.out`). Ten of the
 fourteen also fail total positivity of `H` in some embedding, which is a second, independent obstruction.
 
 **5.**
@@ -235,26 +246,39 @@ fourteen also fail total positivity of `H` in some embedding, which is a second,
   meeting point is the reflection of `kq` in the line through 0 and `kq - s`. That point is
   `((kq - s)/conj(kq - s)) · conj(kq)`, which lies in `F`. Divide by `k`. The script checks it for `b`, `c` and every
   unit of `M`.
+  - The construction is degenerate (`q' = q`) only when `kq` lies on that line.
+  - That cannot happen for `k = b, c`: audit G1 (N1) notes that it would force `N(k)` to be a square in `F+`, and
+    `N(b)`, `N(c)` are not even squares in `F`. So `q' ≠ q` in all 240 cases.
 - (d) is cited, and the house bound holds because every embedding maps a unit walk to a unit walk.
+  - Audit G1 (N3) gives a short complete argument for the two-step part. Only 2 (for `b`) plus 6 (for `c`)
+    cross-copy displacements have house at most 2, and none of them is a sum of two unit vectors (`g1_connectors.out`).
+  - The three-step screen: the 220 displacements with house at most 3 were tested against 78,810 explicit unit
+    directions, with none found; its positive control caught 6 of 6 three-unit sums (FINITE-EXACT,
+    `three_step_search.out`). Directions outside the screened set are not excluded.
+  - Per pair, the house bound proves at least 4 steps for 15 of 21 `b`-pairs and 18 of 21 `c`-pairs.
 - (e) The closed walk exists iff `L(z) <= 2` and `L(kz) <= 2` for some `z ≠ 0`. With `nu = N(z)` and `mu = N(kz) = N nu`,
   statement 3 asks for two things:
   - `nu(4 - nu)/3` and `mu(4 - mu)/3` both lie in `(F+)^2`.
   - The first conic `3 s^2 = nu(4 - nu)` is parametrized by `nu = 4/(3t^2 + 1)`. With `mu = 4/(3t^2 + 1)` instead,
     the second condition becomes the conic `sigma^2 - N t^2 = (N - 1)/3`.
 
-  Its quaternion algebra is `(N, (N - 1)/3) = (N, -3)`. This uses `(N, N) = (N, -1)`, `(N, 1 - N) = 1` and the square
-  class of `1/3`. It is split because `N = N_(F/F+)(k)`, and it is split explicitly:
+  Its quaternion algebra is `(N, (N - 1)/3) = (N, -3)`. This follows from `(N, N - 1) = (N, -1)(N, 1 - N) = (N, -1)` and
+  the square class of `1/3`. It is split because `N = N_(F/F+)(k)`, and it is split explicitly:
   - `-3 = N_(F+(sqrt N)/F+)((A + sqrt N)/B)`;
   - `1 - N = N(1 + sqrt N)`;
   - so `sigma + t sqrt N = (1 + sqrt N)(A + sqrt N)/(3B)`.
 
   The two-sum splittings `x = (x/2)(1 ± sqrt-3 s/N(x))` then give the four steps.
 
+  The four vertices `0, u_1, z, z + e_1/k` are distinct. When `N(k) ≠ 1`, the side `|u_1| = 1` differs from
+  `|e_2/k| = d_k`, and the script checks distinctness directly for `a`, `b`, `c`.
+
 ## Remarks
 
 **Pythagorean and Eisenstein triples behind the walks.**
-- *Eisenstein triangles.* The `delta` walks are rational points of the unit circle, i.e. triangles with integer sides
-  and a 60- or 120-degree angle:
+- *Eisenstein triangles.* The `sqrt-3` walks are rational points of the Eisenstein unit circle, i.e. integer
+  triangles with a 60- or 120-degree angle. The walks for `1/3`, `1/4`, `1/17`, `1/23` come instead from `Q(sqrt-11)`
+  and `Q(sqrt-15)`.
   - `1/7` and `1/19` come from the 120-degree triangles `(3, 5, 7)` and `(5, 16, 19)`
     (`g = (1 + 3 sqrt-3)/2`, `(1 + 5 sqrt-3)/2`);
   - the two-step `1/13` comes from the 60-degree triangle `(7, 13, 15)`.
@@ -282,6 +306,8 @@ fourteen also fail total positivity of `H` in some embedding, which is a second,
       A_x(lambda) = N(x - 1) lambda^2 + 2 sqrt-3 (x - conj x) lambda + 3 N(x + 1),
 
   a curve of genus one when the quartic is squarefree.
+- The restriction `y ≠ 0` drops two degenerate cases, `x` in `U` and `x` in `U + 2U`, which also give `L(x) <= 3`.
+  Audit G1 verified `A_x` and the parametrization exactly.
 
 So three-step connectivity between coefficient copies is a question about rational points on explicit genus-one curves
 over the degree-24 field `F+`. This is why a finite direction screen (THM-4690's 450 named directions) cannot decide it.

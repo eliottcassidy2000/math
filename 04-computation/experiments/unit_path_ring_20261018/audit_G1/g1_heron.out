@@ -1,0 +1,35 @@
+degree-one primes of F used: 128 (rational primes [1021, 1171, 1741, 1831, 2011, 2161, 2281, 2311])
+side squared lengths (min, max over the 48 embeddings):
+  1: 1 .. 1
+  d_a: 0.381966011250105151795413165634361882279690820194237137864551 .. 2.61803398874989484820458683436563811772030917980576286213545
+  d_b: 0.0728847879025548079022632596676805267658065860409295603919057 .. 0.701344251845282874507610552007941123919543320058441180653511
+  d_c: 0.0589711175342230550766616024399300093976621335587322191664934 .. 6.73596933488063330939381193222039397063383271686679799007747
+  1, 1, 1: H/3 IS a square in F; s real: 1 ; H totally positive: 1 ; min H = 3
+  1, 1, d_a: H/3 IS a square in F; s real: 1 ; H totally positive: 1 ; min H = 1.38196601125010515179541316563436188227969082019423713786455
+  1, 1, d_b: H/3 NOT a square in F (nfroots); quadratic non-residue certificate at a degree-one prime above p = 1021 ; H totally positive: 1 ; min H = 0.286226959302618831934883108405621600909291566658447500511382
+  1, 1, d_c: H/3 NOT a square in F (nfroots); quadratic non-residue certificate at a degree-one prime above p = 1021 ; H totally positive: 0 ; min H = -18.4294055409297082523515699063320420397856029371791217279747
+  1, d_a, d_a: H/3 IS a square in F; s real: 1 ; H totally positive: 1 ; min H = 0.527864045000420607181652662537447529118763280776948551458205
+  1, d_a, d_b: H/3 NOT a square in F (nfroots); quadratic non-residue certificate at a degree-one prime above p = 1021 ; H totally positive: 0 ; min H = -2.09594690126895433991113816440020005937774778403713136232150
+  1, d_a, d_c: H/3 NOT a square in F (nfroots); quadratic non-residue certificate at a degree-one prime above p = 1021 ; H totally positive: 0 ; min H = -2.19479256626636219071535027731016522384340314824461509322725
+  1, d_b, d_b: H/3 NOT a square in F (nfroots); quadratic non-residue certificate at a degree-one prime above p = 1021 ; H totally positive: 0 ; min H = -0.708460848389780768390946961329277892936773655836281758432377
+  1, d_b, d_c: H/3 NOT a square in F (nfroots); quadratic non-residue certificate at a degree-one prime above p = 1021 ; H totally positive: 0 ; min H = -22.5420727193475777633168628840285490099560291101130495711543
+  1, d_c, d_c: H/3 NOT a square in F (nfroots); quadratic non-residue certificate at a degree-one prime above p = 1021 ; H totally positive: 0 ; min H = -0.764115529863107779693353590240279962409351465765071123334027
+  d_a, d_a, d_a: H/3 IS a square in F; s real: 1 ; H totally positive: 1 ; min H = 0.437694101250946366158718490709256940517217381748134240780962
+  d_a, d_a, d_b: H/3 NOT a square in F (nfroots); quadratic non-residue certificate at a degree-one prime above p = 1021 ; H totally positive: 1 ; min H = 0.194642734434831679908404804592437504142172280628095790141146
+  d_a, d_a, d_c: H/3 NOT a square in F (nfroots); quadratic non-residue certificate at a degree-one prime above p = 1021 ; H totally positive: 1 ; min H = 0.123844526533608053035640530643211184276369814002872119703392
+  d_a, d_b, d_b: H/3 NOT a square in F (nfroots); quadratic non-residue certificate at a degree-one prime above p = 1021 ; H totally positive: 0 ; min H = -6.09084255828282196028757634130655933123116153703320234623358
+  d_a, d_b, d_c: H/3 NOT a square in F (nfroots); quadratic non-residue certificate at a degree-one prime above p = 1021 ; H totally positive: 0 ; min H = -6.16388907237105014831365654495671714056847375829835961294365
+  d_a, d_c, d_c: H/3 NOT a square in F (nfroots); quadratic non-residue certificate at a degree-one prime above p = 1021 ; H totally positive: 0 ; min H = -6.23654840601304115023105223228723457893538802070796856405286
+  d_b, d_b, d_b: H/3 IS a square in F; s real: 1 ; H totally positive: 1 ; min H = 0.0159365769228011990225097907953015184618043325158122231687180
+  d_b, d_b, d_c: H/3 NOT a square in F (nfroots); quadratic non-residue certificate at a degree-one prime above p = 1021 ; H totally positive: 0 ; min H = -26.4763493859537396308649233282942986437634946657893590220847
+  d_b, d_c, d_c: H/3 NOT a square in F (nfroots); quadratic non-residue certificate at a degree-one prime above p = 1021 ; H totally positive: 1 ; min H = 0.0118801972678335132763669804039141592459128084716757866584416
+  d_c, d_c, d_c: H/3 IS a square in F; s real: 1 ; H totally positive: 1 ; min H = 0.0104327781097054495663223496876810360935639847329300418046187
+realizable (H in 3 (F+)^*2): 6 ; excluded: 14 ; excluded that also fail total positivity: 10
+explicit constructions of statement 4:
+  zeta10 = -zeta5^3: zeta10^2 = zeta5: 1 ; zeta10 primitive 10th root: 1
+  N(1 - zeta10) = 1/N(a): 1 ; (2 + z5 + z5^4)(2 + z5^2 + z5^3) = 1: 1
+  (1, d_a, d_a): |1/a| = |-zeta5/a| = d_a and |1/a + zeta5/a| = 1: 1
+  a-matching: units r with N(r - 1) = 1/N(a) are exactly zeta10^(+-1): roots of T^2 - (2 - 1/N(a)) T + 1 = [1]
+house numbers:
+  max |sigma(b)| = 3.70409019150025558224111824239515422659850751467647145445511 ; max |sigma(c)| = 4.11794290647544275990143318983463292638032258358211111930669 ; max |sigma(a)| = 1.61803398874989484820458683436563811772030917980576286213545
+  min |sigma(b)| = 1.19408262512298011656282070373059197910814798002660381343991 ; min |sigma(c)| = 0.385300834212602987653153474900757326865934584152870320724644

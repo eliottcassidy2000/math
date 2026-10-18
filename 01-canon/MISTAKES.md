@@ -18908,6 +18908,8 @@ the ambient space.
 - **Impact:** none on the κ conclusions. Every such p is far above 239, where Hoffman already gives κ(p) > 8.7.
   The census of THM-4700(1) states 8 or 24.
 - **Fix:** the note text and the script were corrected, and the script was rerun; it now prints 24 at 2549 and 2879.
+- **Independent confirmation** (audit G1, `g1_fixed_primes.out`, PARI `idealprimedec` in the degree-48 field for all 29
+  primes of S below 3200): the count is 8·#roots, and 8 when the cubic is irreducible mod p.
 - **Lesson:** a "one prime per branch" count over a non-Galois cubic depends on the splitting type mod p. State it as
   `8 × #roots(f mod p)` (or 8 when f is irreducible mod p), and test it beyond the first exceptional prime.
 
@@ -18942,3 +18944,40 @@ the ambient space.
     Gamma_1(N) rational points carry a rational N-torsion point, and CM curves over Q have one only for N in
     {2, 3, 4, 6} (Olson).
   - Verify every modular j-map numerically before naming which j it computes.
+
+## MISTAKE-637 (2026-10-18, mac-mini-2026-10-18-unitpath; independent audit G1) -- a refuted heuristic left in a results note, a false mod-2 picture of the port pentagon, priority overstated for a known unit-distance drawing, and several minor imprecisions in THM-4700/4701
+
+- **Audit:** `04-computation/experiments/unit_path_ring_20261018/audit_G1/REPORT.md`. No wrong mathematics was found in
+  THM-4700 or THM-4701.
+  - The auditor's own PARI/Python reproduction covered O_F, the fixed-prime census to 3200, every walk, the Pell list,
+    the Heron census, the house table, mixed quadrilaterals, the G_q laws and the Petersen census to 113.
+- **MAJOR (prose):**
+  - (G1-1) The results note still described a persistent same-clock (twin) dissipation in the clock-graded ladder,
+    after the session's own pre-registered tests had refuted it at d = 8, 9, 10. The twin part is -0.0877, -0.0786,
+    -0.0715.
+  - (G1-2) THM-4701 and the note said the port pentagon becomes mu_5 modulo 2, independent in the Clebsch graph. In
+    fact the unit-side pentagon becomes an induced 5-cycle; only its side vectors become mu_5.
+- **MINOR:**
+  - (G1-3) "L(x) = 2 iff ..." is false for units; it should say "x is a sum of two unit vectors iff ...".
+  - (G1-4) Injectivity at every q = 19 (mod 20) was claimed but checked at four primes. The audit proved it: all
+    pairwise differences have 5-power norms.
+  - (G1-5) Priority. The golden Petersen realization is the known rotationally symmetric unit-distance drawing of GP(5,2)
+    (Žitnik–Horvat–Pisanski 2012); the two-sum/Kneser layer is the classical folded-5-cube model; Le Anh Vinh not cited.
+  - (G1-6) Ladder claims. Exactness of d = 7..12 was overstated; "no gap" was typed too strongly; the positivity
+    argument assumed a sign of the cross terms at all depths.
+  - (G1-7) "Gaps must come from Frobenius" was overstated.
+  - (G1-8) Some walks were mislabelled as Eisenstein.
+  - (G1-9) A brute-force check had no committed script.
+  - (G1-10) The note's Heron "iff" was missing its norm hypothesis.
+  - (G1-11) A search-order wording was wrong.
+- **Missing coordinates:**
+  - re-read a results note against every later outcome file before audit (pre-registration outcomes especially);
+  - for any finite-field reduction of a planar configuration, check whether the configuration itself or its direction
+    set is the object being reduced;
+  - search the I-graph / generalized-Petersen unit-distance literature before claiming a drawing.
+- **Repairs:**
+  - All items were applied in the same session to THM-4700, THM-4701, the note and ladder_decay_exponents.py, together
+    with notes N1-N9 (non-degeneracy of reflection links, distinct quadrilateral vertices, certificate typing, degenerate
+    quartic cases, verification ranges, Chilakamarri 1988, walk lengths as upper bounds).
+  - The brief-2 note's twin heuristic was marked REFUTED in section 3.1b.
+

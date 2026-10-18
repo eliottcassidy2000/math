@@ -1,0 +1,15 @@
+F: primes above 19: 24 ; residue degrees [2] ; c-fixed: 0
+delta_19 unit vector: 1 ; (1 + 5 sqrt-3)/2 = 3 + 5 zeta3 integral of norm 19: 1 , 1
+F: h = 7 (w = 4) primes above 19: 8
+  P1: c(P) = P7 (fixed: 0) ; v_P(delta_19) = 1 ; v_c(P)(delta_19) = -1 ; v_P(b) = -1 v_P(c) = -1 v_P(u) = 0
+  P2: c(P) = P5 (fixed: 0) ; v_P(delta_19) = 1 ; v_c(P)(delta_19) = -1 ; v_P(b) = -1 v_P(c) = -1 v_P(u) = 0
+  P3: c(P) = P8 (fixed: 0) ; v_P(delta_19) = 1 ; v_c(P)(delta_19) = -1 ; v_P(b) = -1 v_P(c) = -1 v_P(u) = 0
+  P4: c(P) = P6 (fixed: 0) ; v_P(delta_19) = 1 ; v_c(P)(delta_19) = -1 ; v_P(b) = -1 v_P(c) = -1 v_P(u) = 0
+  P5: c(P) = P2 (fixed: 0) ; v_P(delta_19) = -1 ; v_c(P)(delta_19) = 1 ; v_P(b) = -1 v_P(c) = -1 v_P(u) = 0
+  P6: c(P) = P4 (fixed: 0) ; v_P(delta_19) = -1 ; v_c(P)(delta_19) = 1 ; v_P(b) = -1 v_P(c) = -1 v_P(u) = 0
+  P7: c(P) = P1 (fixed: 0) ; v_P(delta_19) = -1 ; v_c(P)(delta_19) = 1 ; v_P(b) = -1 v_P(c) = -1 v_P(u) = 0
+  P8: c(P) = P3 (fixed: 0) ; v_P(delta_19) = -1 ; v_c(P)(delta_19) = 1 ; v_P(b) = -1 v_P(c) = -1 v_P(u) = 0
+F: valuations of delta_19 at all 24 primes above 19: [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+F: valuations of b at all 24 primes above 19: [-1] ; of c: [-1]
+F': disc of the basis [2, 16; 5, 18; 11, 12; 37, 8] ; p-maximal valuations at 2, 5, 11, 37: [16, 18, 12, 8]
+F': primes above 19: 12 ; c-fixed: 4 ; residue degrees of fixed [2] ; w = 4 at each fixed prime: 1

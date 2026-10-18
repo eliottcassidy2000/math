@@ -1,0 +1,20 @@
+S up to 1100: [29, 149, 239, 359, 479, 569, 659, 809, 1019]
+primes < 29 in S: [] ; 29 in S: True
+n <= 12000 with L(1/n) = 2 (n, D): [(2, 15), (5, 11), (13, 3), (122, 15), (181, 3), (1985, 11), (2521, 3), (7562, 15)]
+D =  3: fundamental solution (2, 1) ; n = x/2 <= 12000 with x even: [13, 181, 2521]
+D = 11: fundamental solution (10, 3) ; n = x/2 <= 12000 with x even: [5, 1985]
+D = 15: fundamental solution (4, 1) ; n = x/2 <= 12000 with x even: [2, 122, 7562]
+D = 55: fundamental solution (89, 12) ; n = x/2 <= 12000 with x even: []
+D = 55: x mod 2 along the first 30 solutions: {1}
+every hit has an integral y with 1 + D y^2 = 4 n^2: True
+tree nodes to depth 9: 29524
+near-60-degree triples (a leg (c +- 1)/2) to depth 9: [((3, 4, 5), ''), ((15, 8, 17), 'C'), ((33, 56, 65), 'CA'), ((209, 120, 241), 'CAC'), ((451, 780, 901), 'CACA'), ((2911, 1680, 3361), 'CACAC'), ((6273, 10864, 12545), 'CACACA'), ((40545, 23408, 46817), 'CACACAC'), ((87363, 151316, 174725), 'CACACACA'), ((564719, 326040, 652081), 'CACACACAC')]
+their words are prefixes of CACACA...: True
+X^2 - 3 Y^2 = 1 with X = (3c -+ 1)/2 (sign as leg = (c +- 1)/2) and Y = other leg: True for all
+Pell solutions (2 + sqrt3)^k -> triples (k, c, leg (c +- 1)/2, other leg): [(2, 5, 3, 4), (3, 17, 8, 15), (4, 65, 33, 56), (5, 241, 120, 209), (6, 901, 451, 780), (7, 3361, 1680, 2911), (8, 12545, 6273, 10864), (9, 46817, 23408, 40545), (10, 174725, 87363, 151316), (11, 652081, 326040, 564719)]
+three-step walks verified: 1/c = (2 leg)/c - 1 or 1 - (2 leg)/c
+triangle with sides 3, 5 and 7 opposite a 120-degree angle: True
+triangle with sides 5, 16 and 19 opposite a 120-degree angle: True
+triangle with sides 7, 15 and 13 opposite a 60-degree angle: True
+triangle with sides 8, 15 and 13 opposite a 60-degree angle: True
+N(8 + 15 zeta3) = 169 = 13^2 ; N(2 + 3 zeta3) = 7 ; N(3 + 5 zeta3) = 19

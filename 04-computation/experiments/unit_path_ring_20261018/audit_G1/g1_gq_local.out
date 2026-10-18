@@ -1,0 +1,30 @@
+(1) local data: q, max common neighbours of two distinct vertices, triangles per edge (set over edges at 0), K4 present, predicted
+  q =  2: max CN 2 ; triangles per edge [2] (pred 2) ; K4 True (pred True) OK
+  q =  3: max CN 2 ; triangles per edge [1] (pred 1) ; K4 False (pred False) OK
+     G_3 srg parameters: (9, {4}, {1}, {2}) (K3 x K3 = srg(9,4,1,2))
+  q =  4: max CN 2 ; triangles per edge [0] (pred 0) ; K4 False (pred False) OK
+     G_4 srg parameters (v, k, lambda, mu): (16, {5}, {0}, {2}) (Clebsch is the unique srg(16,5,0,2))
+     non-neighbours of 0: 10 ; equal to the ten two-sums of mu_5: True ; induced srg parameters (10, {3}, {0}, {1}) (Petersen is the unique srg(10,3,0,1))
+     adjacency of two-sums = disjointness of index pairs (Kneser K(5,2)): True
+     sum of the two-sums of disjoint pairs is the fifth root: True
+  q =  5: max CN 2 ; triangles per edge [2] (pred 2) ; K4 False (pred False) OK
+  q =  7: max CN 2 ; triangles per edge [0] (pred 0) ; K4 False (pred False) OK
+  q =  8: max CN 2 ; triangles per edge [2] (pred 2) ; K4 True (pred True) OK
+  q =  9: max CN 2 ; triangles per edge [1] (pred 1) ; K4 False (pred False) OK
+  q = 11: max CN 2 ; triangles per edge [2] (pred 2) ; K4 False (pred False) OK
+  q = 13: max CN 2 ; triangles per edge [0] (pred 0) ; K4 False (pred False) OK
+  q = 16: max CN 2 ; triangles per edge [0] (pred 0) ; K4 False (pred False) OK
+  q = 17: max CN 2 ; triangles per edge [2] (pred 2) ; K4 False (pred False) OK
+  q = 19: max CN 2 ; triangles per edge [0] (pred 0) ; K4 False (pred False) OK
+  q = 23: max CN 2 ; triangles per edge [2] (pred 2) ; K4 False (pred False) OK
+  q = 25: max CN 2 ; triangles per edge [0] (pred 0) ; K4 False (pred False) OK
+  q = 27: max CN 2 ; triangles per edge [1] (pred 1) ; K4 False (pred False) OK
+  q = 29: max CN 2 ; triangles per edge [2] (pred 2) ; K4 False (pred False) OK
+  q = 31: max CN 2 ; triangles per edge [0] (pred 0) ; K4 False (pred False) OK
+  q = 32: max CN 2 ; triangles per edge [2] (pred 2) ; K4 True (pred True) OK
+  q = 37: max CN 2 ; triangles per edge [0] (pred 0) ; K4 False (pred False) OK
+  q = 41: max CN 2 ; triangles per edge [2] (pred 2) ; K4 False (pred False) OK
+  q = 43: max CN 2 ; triangles per edge [0] (pred 0) ; K4 False (pred False) OK
+  q = 47: max CN 2 ; triangles per edge [2] (pred 2) ; K4 False (pred False) OK
+  q = 49: max CN 2 ; triangles per edge [0] (pred 0) ; K4 False (pred False) OK
+  q = 64: max CN 2 ; triangles per edge [0] (pred 0) ; K4 False (pred False) OK

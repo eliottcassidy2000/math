@@ -1,0 +1,7 @@
+port pentagon: consecutive differences are unit vectors: 1
+diagonal squared lengths equal phi^2: 1
+residues of the port pentagon in F_16: [0, 1, x + 1, x^2 + x + 1, x^3 + x^2 + x + 1]
+adjacent pairs among them in G_4 (Clebsch): 5 of 10  (an independent set would give 0)
+is the residue set equal to mu_5? 0
+mu_5 = residues of the side vectors z^k: adjacent pairs inside mu_5: 0 (independent)
+diagonal vectors of the port pentagon are the consecutive two-sums z^k + z^(k+1): 1

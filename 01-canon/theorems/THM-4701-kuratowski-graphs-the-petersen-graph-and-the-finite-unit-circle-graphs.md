@@ -7,18 +7,26 @@ status: >
   FINITE-EXACT: statement 5, by exhaustive backtracking that is complete up to the edge-transitive symmetry of G_q.
   KNOWN:
   - G_2 = K_4, G_3 = K_3 □ K_3, G_4 = Clebsch, G_8 = H(3,4), and κ(4) = κ(8) = 4 are THM-4624.
-  - The second subconstituent of the Clebsch graph is the Petersen graph (classical).
-  - The Petersen graph is a unit-distance graph (classical).
-  - The statement that two unit circles meet in at most two points is the elementary planar fact; over F_q it is used
-    here in its norm-form version.
-  New here:
-  - the two-sum / Kneser description inside G_4;
-  - the characteristic test for K_4;
-  - the explicit golden realization with R^2 + r^2 = 1 and its 2-adic reduction onto the distance-two layer;
+  - The two-sum / Kneser picture of the distance-two layer of G_4 is the classical folded-5-cube model of the Clebsch
+    graph, whose second subconstituent is the Petersen graph.
+  - The golden realization is the 5-fold rotationally symmetric unit-distance drawing of the generalized Petersen graph
+    GP(5,2). Žitnik–Horvat–Pisanski (J. Korean Math. Soc. 49, 2012) give rotationally symmetric unit-distance drawings
+    of I-graphs, and Kaenthong et al. (2025) study the turn of the inner star. The spoke condition forces a right angle,
+    which is R^2 + r^2 = 1.
+  - That two unit circles meet in at most two points is the elementary planar fact, used here in its norm-form
+    version.
+  - Le Anh Vinh (arXiv math/0510092) studies the unit-quadrance graphs on F_q^2, which are G_q for q = 3 (mod 4).
+  Not found in the literature checked:
+  - the triangle and K_4 laws of statement 2;
+  - the 2-adic reduction of the golden realization onto the Clebsch distance-two layer, and the injective reduction at
+    q = 19 (mod 20);
   - the unit-sum description in characteristic 0;
   - the census.
   OPEN: the law behind the census (statement 5).
-  Self-audited only (PRE-AUDIT).
+  AUDITED by audit G1 (04-computation/experiments/unit_path_ring_20261018/audit_G1/REPORT.md).
+  - Statements 1-5 were reproduced independently, including the census for primes q <= 113 and for q = 9, 25, 27, 49.
+  - Its MAJOR item G1-2 (the "pentagon becomes mu_5" remark was false) and minor items G1-4, G1-5, G1-11, N8 were
+    applied (MISTAKE-637).
 source: mac-mini-2026-10-18-unitpath (owner prompt 2026-10-18: merge the Petersen graph, K_5, K_(3,3) and the ternary tree of primitive Pythagorean triples)
 depends_on: [THM-4558 (Lemma R residue colourings; κ(q) = chi(G_q)), THM-4624 (G_q for small q; Clebsch), THM-4700 (unit-path rings, Heron criterion)]
 verification:
@@ -26,6 +34,8 @@ verification:
   - 04-computation/experiments/kuratowski_petersen_20261018/petersen_census.py (+ petersen_census_count47.out, petersen_census_exist113.out)
   - 04-computation/experiments/kuratowski_petersen_20261018/petersen_zeta20.py (+ .out): golden realization, 60 digits, and reductions at q = 19, 59, 79, 139
   - 04-computation/experiments/kuratowski_petersen_20261018/petersen_mod2_and_unit_sum.py (+ .out)
+  - 04-computation/experiments/petersen_law_20261018/petersen_count.c (+ petersen_count_400.out): census to 397
+  - 04-computation/experiments/unit_path_ring_20261018/audit_G1/ (g1_gq*.py, g1_petersen_zeta20.gp, g1_port_pentagon_mod2.gp): independent reproduction
 ---
 
 # THM-4701 — Kuratowski graphs, the Petersen graph and the finite unit-circle graphs
@@ -79,15 +89,19 @@ Then:
 - **(a) Reduction at 2.** At the unique prime of `Q(zeta20)` above 2 (residue field `F_16`), the ten points reduce to
   `w·mu_5 ∪ w^2·mu_5`, where `w` is a primitive cube root of unity. These are exactly the ten non-neighbours of 0 in
   the Clebsch graph `G_4`, i.e. the Petersen layer of statement 3.
-- **(b) Reduction at `q = 19 (mod 20)`.** At the conjugation-fixed primes of `Q(zeta20)`, the reduction is an injective
-  homomorphism into `G_q`; this is checked at `q = 19, 59, 79, 139`.
+- **(b) Reduction at `q = 19 (mod 20)`.** At the conjugation-fixed primes of `Q(zeta20)` over every `q = 19 (mod 20)`,
+  the reduction is an injective homomorphism into `G_q`. So the Petersen graph is a subgraph of `G_q` for all such `q`.
 - **(c) Characteristic 0.** On the ten two-sums `s_ab` of the regular pentagon, `s_ab + s_cd` is a unit vector iff the
   pairs are disjoint, in which case it equals `-zeta5^e`. So the Petersen graph is the unit-sum graph of the two-sums,
   and modulo 2, where sum and difference agree, it becomes the unit-distance layer of statement 3.
 
-**5. Census (FINITE-EXACT).** For primes `q <= 113`, the Petersen graph is a subgraph of `G_q` exactly for
-`q ∈ {17, 19} ∪ {41 <= q <= 113, q ≠ 73}`. The numbers of copies through a fixed directed edge, counted as injective
-homomorphisms with vertex 0 sent to 0 and vertex 1 sent to 1, are:
+**5. Census (FINITE-EXACT).** For primes `q <= 397`, the Petersen graph is a subgraph of `G_q` exactly for
+`q ∈ {17, 19} ∪ {41 <= q <= 397, q ≠ 73}`.
+- The census to 113 is the Python search, recounted independently by audit G1. From 113 to 397 it is the O(q^3) C
+  counter `petersen_law_20261018/petersen_count.c`, which reproduces the Python counts.
+
+The numbers of copies through a fixed directed edge, counted as injective homomorphisms with vertex 0 sent to 0 and
+vertex 1 sent to 1, are:
 
 | `q` | Copies |
 |---:|---:|
@@ -138,8 +152,10 @@ the folded 5-cube.
 - Sides: `R^2 |1 - zeta5|^2 = ((5 + sqrt5)/10)((5 - sqrt5)/2) = 1`, and
   `r^2 |1 - zeta5^2|^2 = ((5 - sqrt5)/10)((5 + sqrt5)/2) = 1`.
 - Spokes: `|R - i r|^2 = R^2 + r^2 = 1`, since the two vectors are orthogonal.
-- Rank 15: the 15 × 20 rigidity matrix at this point has smallest nonzero singular value 1.19
-  (`petersen_zeta20.py`).
+- Rank 15: the 15 × 20 rigidity matrix at this point has rank 15.
+  - Its smallest singular value is 1.19 with rows `d|p_u - p_v|^2` (`petersen_zeta20.py`), or 0.595 with rows
+    `p_u - p_v` (audit G1).
+  - The realization is induced: exactly 15 of the 45 pairs are at unit distance.
 
 *(a)* At the prime above 2, `i -> 1` because `(1 - i)^2 = -2i`, and `zeta5 -> zeta`, a root of `Phi_5` in `F_16`.
 - `zeta20 = i zeta5^4` reduces to `zeta^4`, so `zeta20 + zeta20^-1 -> zeta + zeta^4 = w`. This is a primitive cube root
@@ -150,14 +166,18 @@ the folded 5-cube.
 - Reduction is a ring homomorphism, so edges go to edges. The script checks all of this.
 
 *(b)* For `q = 19 (mod 20)`, `Frob_q = -1` in `(Z/20)^×`, so the prime is `c`-fixed with residue field `F_(q^2)`, and
-`zeta20` lands in `mu_20 ⊂ mu_(q+1)`. The script checks distinctness and all fifteen norms.
+`zeta20` lands in `mu_20 ⊂ mu_(q+1)`.
+- **Injectivity.** The absolute norms `N_(Q(zeta20)/Q)(p_a - p_b)` of all 45 pairwise differences are powers of 5
+  (audit G1, `g1_petersen_zeta20.out`). So no difference vanishes modulo a prime not above 5, and the reduction is
+  injective at every `q = 19 (mod 20)`.
+- Spot checks: `q = 19, 59, 79, 139` (session) and `179, 199, 239, 359` (audit).
 
 *(c)* If `{a, b, c, d, e} = {0, ..., 4}`, then `s_ab + s_cd = -zeta5^e`. Every one of the 45 pairs was checked
 numerically: for the overlapping ones `|s_ab + s_cd| ≠ 1`.
 
 **5.** The edge-transitivity used in 2 makes the search over copies with `0 -> 0, 1 -> 1` complete. The script
-backtracks along outer cycle, spokes and pentagram. Each new vertex has at least two placed neighbours, so by 1 it has at
-most 2 candidates.
+backtracks along outer cycle, spokes and pentagram. Search vertices 2, 3 and 5 have one placed neighbour each, so they
+range over a unit circle. Every later vertex has at least two placed neighbours, so by 1 it has at most 2 candidates.
 
 ## Remarks
 
@@ -173,14 +193,23 @@ most 2 candidates.
 - The real realizations form a 2-parameter family, so `F_q`-points would be expected to number about `q^2` once a
   geometrically irreducible component of the realization variety is defined over `F_q`, with its twisted (anisotropic)
   real structure.
-- The data shows long gaps (`q <= 37`, and `73`) and irregular counts. That fits components that are permuted by
-  Frobenius in a Chebotarev pattern; the golden component is visible at `q = 19 (mod 20)` by (4b).
+- The data shows gaps (`q <= 37` except 17 and 19, and 73) and irregular counts; for `q > 200`, `count/q^2` lies between
+  0.31 and 1.26. Possible causes (HEURISTIC):
+  - components permuted by Frobenius in a Chebotarev pattern;
+  - Lang–Weil error terms of a high-degree variety;
+  - the removal of non-injective points.
+- The golden component guarantees copies at every `q = 19 (mod 20)` by (4b). The data suggest copies for every prime
+  `q >= 79`.
 - Identifying all components and their fields of definition is open.
 
 **Six-colour programme (HYP-9289).**
 - The golden pentagon of ports has two-distance graph `K_5` (sides 1, diagonals phi). That is the naive block of 465
   patterns.
-- Modulo the prime above 2, the pentagon becomes `mu_5`, which is independent in the Clebsch graph; its two-sums carry
-  the Petersen graph; and phi becomes a cube root of unity.
-- So the `K_5` of the two-distance graph and the Petersen graph of the unit graph are two shadows of the same pentagon.
-  This is STRUCTURAL; no colouring consequence is claimed.
+- The side vectors of the port pentagon are `mu_5`, and its diagonal vectors are the consecutive two-sums. Modulo 2:
+  - the side vectors become the independent neighbourhood `mu_5` of 0;
+  - the ten two-sums become the Petersen layer;
+  - phi becomes a cube root of unity;
+  - the unit-side pentagon itself becomes an induced 5-cycle of `G_4` (audit G1, `g1_port_pentagon_mod2.out`).
+- So the `K_5` of the two-distance graph and the Petersen graph of the unit graph are two shadows of the same five
+  directions. This is STRUCTURAL; no colouring consequence is claimed. It corrects a pre-audit sentence saying that
+  the pentagon itself becomes `mu_5` (G1-2, MISTAKE-637).

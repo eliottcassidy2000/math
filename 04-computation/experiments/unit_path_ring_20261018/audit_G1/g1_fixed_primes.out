@@ -1,0 +1,66 @@
+== primes of S up to 3200 (plus the next split-completely ones): #primes of F above p, #c-fixed, residue degrees of fixed ones
+S cap [2, 3200] = [29, 149, 239, 359, 479, 569, 659, 809, 1019, 1229, 1289, 1319, 1559, 1619, 1889, 1949, 1979, 2129, 2309, 2339, 2459, 2549, 2609, 2789, 2879, 2939, 2969, 2999, 3119]
+p = 29: 24 primes, 8 fixed (predicted 8), fixed residue degrees [2] (predicted 2), roots of f mod p: 1
+p = 149: 8 primes, 8 fixed (predicted 8), fixed residue degrees [6] (predicted 6), roots of f mod p: 0
+p = 239: 24 primes, 8 fixed (predicted 8), fixed residue degrees [2] (predicted 2), roots of f mod p: 1
+p = 359: 8 primes, 8 fixed (predicted 8), fixed residue degrees [6] (predicted 6), roots of f mod p: 0
+p = 479: 24 primes, 8 fixed (predicted 8), fixed residue degrees [2] (predicted 2), roots of f mod p: 1
+p = 569: 24 primes, 8 fixed (predicted 8), fixed residue degrees [2] (predicted 2), roots of f mod p: 1
+p = 659: 8 primes, 8 fixed (predicted 8), fixed residue degrees [6] (predicted 6), roots of f mod p: 0
+p = 809: 24 primes, 8 fixed (predicted 8), fixed residue degrees [2] (predicted 2), roots of f mod p: 1
+p = 1019: 24 primes, 8 fixed (predicted 8), fixed residue degrees [2] (predicted 2), roots of f mod p: 1
+p = 1229: 24 primes, 8 fixed (predicted 8), fixed residue degrees [2] (predicted 2), roots of f mod p: 1
+p = 1289: 24 primes, 8 fixed (predicted 8), fixed residue degrees [2] (predicted 2), roots of f mod p: 1
+p = 1319: 24 primes, 8 fixed (predicted 8), fixed residue degrees [2] (predicted 2), roots of f mod p: 1
+p = 1559: 24 primes, 8 fixed (predicted 8), fixed residue degrees [2] (predicted 2), roots of f mod p: 1
+p = 1619: 8 primes, 8 fixed (predicted 8), fixed residue degrees [6] (predicted 6), roots of f mod p: 0
+p = 1889: 24 primes, 8 fixed (predicted 8), fixed residue degrees [2] (predicted 2), roots of f mod p: 1
+p = 1949: 8 primes, 8 fixed (predicted 8), fixed residue degrees [6] (predicted 6), roots of f mod p: 0
+p = 1979: 24 primes, 8 fixed (predicted 8), fixed residue degrees [2] (predicted 2), roots of f mod p: 1
+p = 2129: 24 primes, 8 fixed (predicted 8), fixed residue degrees [2] (predicted 2), roots of f mod p: 1
+p = 2309: 24 primes, 8 fixed (predicted 8), fixed residue degrees [2] (predicted 2), roots of f mod p: 1
+p = 2339: 24 primes, 8 fixed (predicted 8), fixed residue degrees [2] (predicted 2), roots of f mod p: 1
+p = 2459: 24 primes, 8 fixed (predicted 8), fixed residue degrees [2] (predicted 2), roots of f mod p: 1
+p = 2549: 24 primes, 24 fixed (predicted 24), fixed residue degrees [2] (predicted 2), roots of f mod p: 3
+p = 2609: 24 primes, 8 fixed (predicted 8), fixed residue degrees [2] (predicted 2), roots of f mod p: 1
+p = 2789: 24 primes, 8 fixed (predicted 8), fixed residue degrees [2] (predicted 2), roots of f mod p: 1
+p = 2879: 24 primes, 24 fixed (predicted 24), fixed residue degrees [2] (predicted 2), roots of f mod p: 3
+p = 2939: 8 primes, 8 fixed (predicted 8), fixed residue degrees [6] (predicted 6), roots of f mod p: 0
+p = 2969: 8 primes, 8 fixed (predicted 8), fixed residue degrees [6] (predicted 6), roots of f mod p: 0
+p = 2999: 24 primes, 8 fixed (predicted 8), fixed residue degrees [2] (predicted 2), roots of f mod p: 1
+p = 3119: 24 primes, 24 fixed (predicted 24), fixed residue degrees [2] (predicted 2), roots of f mod p: 3
+mismatches in S up to 3200: 0
+== control primes not in S (expect 0 fixed): ramified 2, 3, 5, 11, 37 and unramified others
+p = 2 (p mod 15 = 2, (p/11) = -1): 4 primes, 0 fixed, ramification indices [3]
+p = 3 (p mod 15 = 3, (p/11) = 1): 2 primes, 0 fixed, ramification indices [2]
+p = 5 (p mod 15 = 5, (p/11) = 1): 6 primes, 0 fixed, ramification indices [4]
+p = 11 (p mod 15 = 11, (p/11) = 0): 4 primes, 0 fixed, ramification indices [2]
+p = 37 (p mod 15 = 7, (p/11) = 1): 8 primes, 0 fixed, ramification indices [1, 2]
+p = 7 (p mod 15 = 7, (p/11) = -1): 4 primes, 0 fixed, ramification indices [1]
+p = 13 (p mod 15 = 13, (p/11) = -1): 12 primes, 0 fixed, ramification indices [1]
+p = 17 (p mod 15 = 2, (p/11) = -1): 12 primes, 0 fixed, ramification indices [1]
+p = 19 (p mod 15 = 4, (p/11) = -1): 24 primes, 0 fixed, ramification indices [1]
+p = 23 (p mod 15 = 8, (p/11) = 1): 12 primes, 0 fixed, ramification indices [1]
+p = 31 (p mod 15 = 1, (p/11) = 1): 32 primes, 0 fixed, ramification indices [1]
+p = 41 (p mod 15 = 11, (p/11) = -1): 8 primes, 0 fixed, ramification indices [1]
+p = 43 (p mod 15 = 13, (p/11) = -1): 12 primes, 0 fixed, ramification indices [1]
+p = 47 (p mod 15 = 2, (p/11) = 1): 4 primes, 0 fixed, ramification indices [1]
+p = 53 (p mod 15 = 8, (p/11) = 1): 4 primes, 0 fixed, ramification indices [1]
+p = 59 (p mod 15 = 14, (p/11) = 1): 24 primes, 0 fixed, ramification indices [1]
+p = 61 (p mod 15 = 1, (p/11) = -1): 24 primes, 0 fixed, ramification indices [1]
+p = 89 (p mod 15 = 14, (p/11) = 1): 24 primes, 0 fixed, ramification indices [1]
+p = 179 (p mod 15 = 14, (p/11) = 1): 24 primes, 0 fixed, ramification indices [1]
+p = 269 (p mod 15 = 14, (p/11) = 1): 24 primes, 0 fixed, ramification indices [1]
+p = 389 (p mod 15 = 14, (p/11) = 1): 24 primes, 0 fixed, ramification indices [1]
+p = 419 (p mod 15 = 14, (p/11) = 1): 8 primes, 0 fixed, ramification indices [1]
+p = 449 (p mod 15 = 14, (p/11) = 1): 24 primes, 0 fixed, ramification indices [1]
+p = 509 (p mod 15 = 14, (p/11) = 1): 8 primes, 0 fixed, ramification indices [1]
+p = 599 (p mod 15 = 14, (p/11) = 1): 8 primes, 0 fixed, ramification indices [1]
+p = 719 (p mod 15 = 14, (p/11) = 1): 8 primes, 0 fixed, ramification indices [1]
+p = 839 (p mod 15 = 14, (p/11) = 1): 24 primes, 0 fixed, ramification indices [1]
+p = 929 (p mod 15 = 14, (p/11) = 1): 24 primes, 0 fixed, ramification indices [1]
+p = 1049 (p mod 15 = 14, (p/11) = 1): 24 primes, 0 fixed, ramification indices [1]
+control mismatches: 0
+== first primes of S with three roots of f mod p, p <= 20000
+[2549, 2879, 3119, 4259, 5099, 5189, 5279, 7499, 8069, 8609, 9209, 9479] ... (25 in total up to 20000)
+roots mod 2549: [Mod(548, 2549), Mod(2146, 2549), Mod(2402, 2549)]~

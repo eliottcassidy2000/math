@@ -1,0 +1,20 @@
+I^2 = -1: 1 ; s5^2 = 5: 1 ; phi^2 = phi + 1: 1 ; phi = (1 + s5)/2: 1
+R^2 = (5 + s5)/10: 1 ; r^2 = (5 - s5)/10: 1 ; R^2 + r^2 = 1: 1 ; R r = 1/s5: 1 ; R, r real: 1
+edges: [[1, 2], [2, 3], [3, 4], [4, 5], [5, 1], [1, 6], [2, 7], [3, 8], [4, 9], [5, 10], [6, 8], [7, 9], [8, 10], [9, 6], [10, 7]]
+all 15 edges are unit vectors: 1
+degrees: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+pairs at unit distance in total: 15 (15 = exactly the edges)
+primes dividing numerators or denominators of N_(Q(zeta20)/Q)(p_a - p_b), all 45 pairs: [5]
+primes dividing norms of the 10 points: [] / denominators [5]
+primes above 2: 1 with e = 2, f = 4
+R -> w with w^3 = 1, w != 1: 1 ; r -> w^2: 1 ; i -> 1: 1 ; phi -> w^2: 1
+images distinct: 1 ; none in mu_5 or 0: 1 ; edges map to mu_5 (x^5 = 1): 1
+complex conjugation reduces to x -> x^4 at the prime above 2: 1
+q = 19: 4 primes, all c-fixed with residue F_(q^2), conj -> Frob_q, reduction injective and edges -> mu_(q+1): 1
+q = 59: 4 primes, all c-fixed with residue F_(q^2), conj -> Frob_q, reduction injective and edges -> mu_(q+1): 1
+q = 79: 4 primes, all c-fixed with residue F_(q^2), conj -> Frob_q, reduction injective and edges -> mu_(q+1): 1
+q = 139: 4 primes, all c-fixed with residue F_(q^2), conj -> Frob_q, reduction injective and edges -> mu_(q+1): 1
+q = 179: 4 primes, all c-fixed with residue F_(q^2), conj -> Frob_q, reduction injective and edges -> mu_(q+1): 1
+q = 199: 4 primes, all c-fixed with residue F_(q^2), conj -> Frob_q, reduction injective and edges -> mu_(q+1): 1
+q = 239: 4 primes, all c-fixed with residue F_(q^2), conj -> Frob_q, reduction injective and edges -> mu_(q+1): 1
+q = 359: 4 primes, all c-fixed with residue F_(q^2), conj -> Frob_q, reduction injective and edges -> mu_(q+1): 1

@@ -1,0 +1,37 @@
+(A) generators of O_F in Gamma
+  ok   zeta15 unit
+  ok   1/2 = v + conj v, v = (1 + sqrt-15)/4 unit
+  ok   beta_r units and 11 sum beta_r - 38 = 1/11
+  ok   rho = (5 + j)/6 unit and j = 6 rho - 5
+  ok   u unit and w = (19 (u + conj u) + 6)/11
+(B) walks of statement 2
+  ok   1/2 two steps (D = 15, y = 1)
+  ok   1/5 two steps (D = 11, y = 3)
+  ok   1/13 two steps (D = 3, y = 15)
+  ok   1/3 = delta + 1/delta + 2, g = (1 + j)/2 [4 steps]
+  ok   1/4 = delta + 1/delta + 2, g = (1 + sqrt-15)/2 [4 steps]
+  ok   1/7 = delta + 1/delta + 2, g = (1 + 3 sqrt-3)/2 [4 steps]
+  ok   1/19 = delta + 1/delta + 2, g = (1 + 5 sqrt-3)/2 [4 steps]
+  ok   1/23 = 2 delta + 2/delta - 3, g = (9 + j)/2 [7 steps]
+  ok   1/17 = 18 delta + 18/delta - 28, g = (11 + sqrt-15)/2 [64 steps]
+(C) the cubic recipe
+  ok   u^3 = m2 u^2 + m1 u + 1
+  ok   Y unit and u^2 = a + b u + c Y
+  |M| = 7 |C| = 10 |A| = 54
+  factor A + aM: 364 points; integral-basis denominator lcm [2, 2; 3, 1] ; primes of S among them: []
+  factor C + bM: 70 points; integral-basis denominator lcm [3, 1; 19, 1] ; primes of S among them: []
+  factor C + cM: 70 points; integral-basis denominator lcm [3, 1; 19, 1] ; primes of S among them: []
+  b, c: integral-basis denominators Mat([19, 1]) , Mat([19, 1])
+(D) reflection links for k = b, c, every unit difference s of C, every unit q in M
+  unit differences in C (ordered pairs): 30
+  unit points q of M: 4
+  ok   k = b: q' unit and |s + k(q' - q)| = 1 for all 120 pairs (s, q); q' = q in 0 cases
+  ok   k = c: q' unit and |s + k(q' - q)| = 1 for all 120 pairs (s, q); q' = q in 0 cases
+  N(b) is a square in F: 0 ; N(c) is a square in F: 0  (if not, q' = q can never happen)
+(E) mixed quadrilaterals (THM-4700(5e)) for k = a, b, c
+  ok   k = a: conic point, closed walk u1 + u2 + (e1 + e2)/k = 0, units, 4 distinct vertices
+  ok   k = b: same
+  ok   k = c: same
+  explicit Hilbert-symbol splittings: N((A + sqrtN)/B) = -3 and N(1 + sqrtN) = 1 - N hold identically since N = A^2 + 3B^2:
+  ok     N = A^2 + 3 B^2 for a, b, c
+ALL IDENTITY CHECKS PASSED

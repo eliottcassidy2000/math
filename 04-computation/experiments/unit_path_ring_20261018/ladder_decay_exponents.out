@@ -2,4 +2,5 @@ cross terms d = 1..12: ['-1.468740', '-0.813021', '-0.437952', '-0.222351', '-0.
 ratios c_(d+1)/c_d: ['0.5535', '0.5387', '0.5077', '0.6146', '0.6226', '0.6958', '0.7300', '0.8009', '0.8279', '0.9034', '0.8651']
 local power exponents alpha_d (d -> d+1): ['0.85', '1.53', '2.36', '2.18', '2.60', '2.35', '2.36', '1.89', '1.79', '1.07', '1.66']
 d = 6..12 fits: geometric ratio 0.8051 (rms 0.0935) ; power exponent 1.914 (rms 0.0507)
-positivity budget: E_12 = 1.479358 bounds the whole tail sum_(d>12) |c_d|; a c/d tail with c = 0.269 would exceed it
+positivity budget: since E_d >= 0, sum_(d>12) c_d >= -E_12 = -1.479358; so no eventual bound c_d <= -C/d^alpha with alpha <= 1 (e.g. C = 0.269, alpha = 1)
+d = 8..12 only: geometric ratio 0.8517 (rms 0.0324) ; power exponent 1.594 (rms 0.0207)  [close: the power-law reading is HEURISTIC]
