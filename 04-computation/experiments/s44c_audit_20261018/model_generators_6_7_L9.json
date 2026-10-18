@@ -1,0 +1,150 @@
+{
+ "p": 6,
+ "q": 7,
+ "N": 15,
+ "c": "6/7",
+ "Lmax": 9,
+ "primes": [
+  2147483647,
+  1000000007
+ ],
+ "generator_positions": {
+  "0": 1,
+  "3": 1,
+  "5": 1,
+  "7": 1,
+  "9": 1
+ },
+ "per_prime": {
+  "2147483647": {
+   "1": {
+    "dim_grI_N": "1",
+    "n_lowest_weight": "0"
+   },
+   "2": {
+    "dim_grI_N": "1",
+    "n_lowest_weight": "0"
+   },
+   "3": {
+    "dim_grI_N": "2",
+    "n_lowest_weight": "1",
+    "cayley": {
+     "(3,)": "1"
+    },
+    "matches_closed_form": "True"
+   },
+   "4": {
+    "dim_grI_N": "2",
+    "n_lowest_weight": "0"
+   },
+   "5": {
+    "dim_grI_N": "3",
+    "n_lowest_weight": "1",
+    "cayley": {
+     "(5,)": "1",
+     "(3, 2)": "563274398"
+    },
+    "matches_closed_form": "True"
+   },
+   "6": {
+    "dim_grI_N": "3",
+    "n_lowest_weight": "0"
+   },
+   "7": {
+    "dim_grI_N": "4",
+    "n_lowest_weight": "1",
+    "cayley": {
+     "(7,)": "1",
+     "(5, 2)": "1390583672",
+     "(4, 3)": "1867169929",
+     "(3, 2, 2)": "1596627932"
+    },
+    "matches_closed_form": "True"
+   },
+   "8": {
+    "dim_grI_N": "4",
+    "n_lowest_weight": "0"
+   },
+   "9": {
+    "dim_grI_N": "5",
+    "n_lowest_weight": "1",
+    "cayley": {
+     "(9,)": "1",
+     "(7, 2)": "1496197622",
+     "(6, 3)": "1631658815",
+     "(5, 4)": "2102414941",
+     "(5, 2, 2)": "1795989841",
+     "(4, 3, 2)": "2016605272",
+     "(3, 3, 3)": "466714508",
+     "(3, 2, 2, 2)": "735348644"
+    },
+    "matches_closed_form": "True"
+   }
+  },
+  "1000000007": {
+   "1": {
+    "dim_grI_N": "1",
+    "n_lowest_weight": "0"
+   },
+   "2": {
+    "dim_grI_N": "1",
+    "n_lowest_weight": "0"
+   },
+   "3": {
+    "dim_grI_N": "2",
+    "n_lowest_weight": "1",
+    "cayley": {
+     "(3,)": "1"
+    },
+    "matches_closed_form": "True"
+   },
+   "4": {
+    "dim_grI_N": "2",
+    "n_lowest_weight": "0"
+   },
+   "5": {
+    "dim_grI_N": "3",
+    "n_lowest_weight": "1",
+    "cayley": {
+     "(5,)": "1",
+     "(3, 2)": "49180327"
+    },
+    "matches_closed_form": "True"
+   },
+   "6": {
+    "dim_grI_N": "3",
+    "n_lowest_weight": "0"
+   },
+   "7": {
+    "dim_grI_N": "4",
+    "n_lowest_weight": "1",
+    "cayley": {
+     "(7,)": "1",
+     "(5, 2)": "90163934",
+     "(4, 3)": "598175770",
+     "(3, 2, 2)": "86106662"
+    },
+    "matches_closed_form": "True"
+   },
+   "8": {
+    "dim_grI_N": "4",
+    "n_lowest_weight": "0"
+   },
+   "9": {
+    "dim_grI_N": "5",
+    "n_lowest_weight": "1",
+    "cayley": {
+     "(9,)": "1",
+     "(7, 2)": "286885247",
+     "(6, 3)": "587005679",
+     "(5, 4)": "195461882",
+     "(5, 2, 2)": "524623994",
+     "(4, 3, 2)": "625606688",
+     "(3, 3, 3)": "108115178",
+     "(3, 2, 2, 2)": "223665978"
+    },
+    "matches_closed_form": "True"
+   }
+  }
+ }
+}

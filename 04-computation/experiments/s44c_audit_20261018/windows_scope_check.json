@@ -1,0 +1,2546 @@
+[
+ {
+  "a": [
+   3,
+   4
+  ],
+  "b": [
+   3,
+   5
+  ],
+  "same_p": true,
+  "mU": 5,
+  "mQ": 7,
+  "max_common_m": 22,
+  "complete_through_m": 22,
+  "first_disagreement": [
+   7,
+   [
+    5,
+    1
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   4
+  ],
+  "b": [
+   3,
+   7
+  ],
+  "same_p": true,
+  "mU": 5,
+  "mQ": 7,
+  "max_common_m": 16,
+  "complete_through_m": 16,
+  "first_disagreement": [
+   7,
+   [
+    5,
+    1
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   4
+  ],
+  "b": [
+   3,
+   8
+  ],
+  "same_p": true,
+  "mU": 5,
+  "mQ": 7,
+  "max_common_m": 16,
+  "complete_through_m": 16,
+  "first_disagreement": [
+   7,
+   [
+    5,
+    1
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   4
+  ],
+  "b": [
+   3,
+   10
+  ],
+  "same_p": true,
+  "mU": 5,
+  "mQ": 7,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   7,
+   [
+    5,
+    1
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   4
+  ],
+  "b": [
+   3,
+   11
+  ],
+  "same_p": true,
+  "mU": 5,
+  "mQ": 7,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   7,
+   [
+    5,
+    1
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   4
+  ],
+  "b": [
+   3,
+   13
+  ],
+  "same_p": true,
+  "mU": 5,
+  "mQ": 7,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   7,
+   [
+    5,
+    1
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   4
+  ],
+  "b": [
+   4,
+   5
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 7,
+  "max_common_m": 16,
+  "complete_through_m": 16,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   4
+  ],
+  "b": [
+   4,
+   7
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 7,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   4
+  ],
+  "b": [
+   4,
+   9
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 7,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   4
+  ],
+  "b": [
+   4,
+   11
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 7,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   4
+  ],
+  "b": [
+   5,
+   6
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 7,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   4
+  ],
+  "b": [
+   5,
+   7
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 7,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   4
+  ],
+  "b": [
+   5,
+   8
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 7,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   4
+  ],
+  "b": [
+   5,
+   9
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 7,
+  "max_common_m": 10,
+  "complete_through_m": 10,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   4
+  ],
+  "b": [
+   6,
+   7
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 7,
+  "max_common_m": 11,
+  "complete_through_m": 11,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   5
+  ],
+  "b": [
+   3,
+   7
+  ],
+  "same_p": true,
+  "mU": 5,
+  "mQ": 9,
+  "max_common_m": 16,
+  "complete_through_m": 16,
+  "first_disagreement": [
+   9,
+   [
+    7,
+    1
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   5
+  ],
+  "b": [
+   3,
+   8
+  ],
+  "same_p": true,
+  "mU": 5,
+  "mQ": 9,
+  "max_common_m": 16,
+  "complete_through_m": 16,
+  "first_disagreement": [
+   9,
+   [
+    7,
+    1
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   5
+  ],
+  "b": [
+   3,
+   10
+  ],
+  "same_p": true,
+  "mU": 5,
+  "mQ": 9,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   9,
+   [
+    7,
+    1
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   5
+  ],
+  "b": [
+   3,
+   11
+  ],
+  "same_p": true,
+  "mU": 5,
+  "mQ": 9,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   9,
+   [
+    7,
+    1
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   5
+  ],
+  "b": [
+   3,
+   13
+  ],
+  "same_p": true,
+  "mU": 5,
+  "mQ": 9,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   9,
+   [
+    7,
+    1
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   5
+  ],
+  "b": [
+   4,
+   5
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 9,
+  "max_common_m": 16,
+  "complete_through_m": 16,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   5
+  ],
+  "b": [
+   4,
+   7
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 9,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   5
+  ],
+  "b": [
+   4,
+   9
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 9,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   5
+  ],
+  "b": [
+   4,
+   11
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 9,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   5
+  ],
+  "b": [
+   5,
+   6
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 9,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   5
+  ],
+  "b": [
+   5,
+   7
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 9,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   5
+  ],
+  "b": [
+   5,
+   8
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 9,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   5
+  ],
+  "b": [
+   5,
+   9
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 9,
+  "max_common_m": 10,
+  "complete_through_m": 10,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   5
+  ],
+  "b": [
+   6,
+   7
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 9,
+  "max_common_m": 11,
+  "complete_through_m": 11,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   7
+  ],
+  "b": [
+   3,
+   8
+  ],
+  "same_p": true,
+  "mU": 5,
+  "mQ": 13,
+  "max_common_m": 16,
+  "complete_through_m": 16,
+  "first_disagreement": [
+   13,
+   [
+    9,
+    2
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   7
+  ],
+  "b": [
+   3,
+   10
+  ],
+  "same_p": true,
+  "mU": 5,
+  "mQ": 13,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": null
+ },
+ {
+  "a": [
+   3,
+   7
+  ],
+  "b": [
+   3,
+   11
+  ],
+  "same_p": true,
+  "mU": 5,
+  "mQ": 13,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": null
+ },
+ {
+  "a": [
+   3,
+   7
+  ],
+  "b": [
+   3,
+   13
+  ],
+  "same_p": true,
+  "mU": 5,
+  "mQ": 13,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": null
+ },
+ {
+  "a": [
+   3,
+   7
+  ],
+  "b": [
+   4,
+   5
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 9,
+  "max_common_m": 16,
+  "complete_through_m": 16,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   7
+  ],
+  "b": [
+   4,
+   7
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 13,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   7
+  ],
+  "b": [
+   4,
+   9
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 13,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   7
+  ],
+  "b": [
+   4,
+   11
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 13,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   7
+  ],
+  "b": [
+   5,
+   6
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 11,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   7
+  ],
+  "b": [
+   5,
+   7
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 13,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   7
+  ],
+  "b": [
+   5,
+   8
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 13,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   7
+  ],
+  "b": [
+   5,
+   9
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 13,
+  "max_common_m": 10,
+  "complete_through_m": 10,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   7
+  ],
+  "b": [
+   6,
+   7
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 13,
+  "max_common_m": 11,
+  "complete_through_m": 11,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   8
+  ],
+  "b": [
+   3,
+   10
+  ],
+  "same_p": true,
+  "mU": 5,
+  "mQ": 15,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": null
+ },
+ {
+  "a": [
+   3,
+   8
+  ],
+  "b": [
+   3,
+   11
+  ],
+  "same_p": true,
+  "mU": 5,
+  "mQ": 15,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": null
+ },
+ {
+  "a": [
+   3,
+   8
+  ],
+  "b": [
+   3,
+   13
+  ],
+  "same_p": true,
+  "mU": 5,
+  "mQ": 15,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": null
+ },
+ {
+  "a": [
+   3,
+   8
+  ],
+  "b": [
+   4,
+   5
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 9,
+  "max_common_m": 16,
+  "complete_through_m": 16,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   8
+  ],
+  "b": [
+   4,
+   7
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 13,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   8
+  ],
+  "b": [
+   4,
+   9
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 15,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   8
+  ],
+  "b": [
+   4,
+   11
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 15,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   8
+  ],
+  "b": [
+   5,
+   6
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 11,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   8
+  ],
+  "b": [
+   5,
+   7
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 13,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   8
+  ],
+  "b": [
+   5,
+   8
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 15,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   8
+  ],
+  "b": [
+   5,
+   9
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 15,
+  "max_common_m": 10,
+  "complete_through_m": 10,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   8
+  ],
+  "b": [
+   6,
+   7
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 13,
+  "max_common_m": 11,
+  "complete_through_m": 11,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   10
+  ],
+  "b": [
+   3,
+   11
+  ],
+  "same_p": true,
+  "mU": 5,
+  "mQ": 19,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": null
+ },
+ {
+  "a": [
+   3,
+   10
+  ],
+  "b": [
+   3,
+   13
+  ],
+  "same_p": true,
+  "mU": 5,
+  "mQ": 19,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": null
+ },
+ {
+  "a": [
+   3,
+   10
+  ],
+  "b": [
+   4,
+   5
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 9,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   10
+  ],
+  "b": [
+   4,
+   7
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 13,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   10
+  ],
+  "b": [
+   4,
+   9
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 17,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   10
+  ],
+  "b": [
+   4,
+   11
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 19,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   10
+  ],
+  "b": [
+   5,
+   6
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 11,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   10
+  ],
+  "b": [
+   5,
+   7
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 13,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   10
+  ],
+  "b": [
+   5,
+   8
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 15,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   10
+  ],
+  "b": [
+   5,
+   9
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 17,
+  "max_common_m": 10,
+  "complete_through_m": 10,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   10
+  ],
+  "b": [
+   6,
+   7
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 13,
+  "max_common_m": 11,
+  "complete_through_m": 11,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   11
+  ],
+  "b": [
+   3,
+   13
+  ],
+  "same_p": true,
+  "mU": 5,
+  "mQ": 21,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": null
+ },
+ {
+  "a": [
+   3,
+   11
+  ],
+  "b": [
+   4,
+   5
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 9,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   11
+  ],
+  "b": [
+   4,
+   7
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 13,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   11
+  ],
+  "b": [
+   4,
+   9
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 17,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   11
+  ],
+  "b": [
+   4,
+   11
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 21,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   11
+  ],
+  "b": [
+   5,
+   6
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 11,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   11
+  ],
+  "b": [
+   5,
+   7
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 13,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   11
+  ],
+  "b": [
+   5,
+   8
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 15,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   11
+  ],
+  "b": [
+   5,
+   9
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 17,
+  "max_common_m": 10,
+  "complete_through_m": 10,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   11
+  ],
+  "b": [
+   6,
+   7
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 13,
+  "max_common_m": 11,
+  "complete_through_m": 11,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   13
+  ],
+  "b": [
+   4,
+   5
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 9,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   13
+  ],
+  "b": [
+   4,
+   7
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 13,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   13
+  ],
+  "b": [
+   4,
+   9
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 17,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   13
+  ],
+  "b": [
+   4,
+   11
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 21,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   13
+  ],
+  "b": [
+   5,
+   6
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 11,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   13
+  ],
+  "b": [
+   5,
+   7
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 13,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   13
+  ],
+  "b": [
+   5,
+   8
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 15,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   13
+  ],
+  "b": [
+   5,
+   9
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 17,
+  "max_common_m": 10,
+  "complete_through_m": 10,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   3,
+   13
+  ],
+  "b": [
+   6,
+   7
+  ],
+  "same_p": false,
+  "mU": 5,
+  "mQ": 13,
+  "max_common_m": 11,
+  "complete_through_m": 11,
+  "first_disagreement": [
+   5,
+   [
+    5,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   4,
+   5
+  ],
+  "b": [
+   4,
+   7
+  ],
+  "same_p": true,
+  "mU": 7,
+  "mQ": 9,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   9,
+   [
+    7,
+    1
+   ]
+  ]
+ },
+ {
+  "a": [
+   4,
+   5
+  ],
+  "b": [
+   4,
+   9
+  ],
+  "same_p": true,
+  "mU": 7,
+  "mQ": 9,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   9,
+   [
+    7,
+    1
+   ]
+  ]
+ },
+ {
+  "a": [
+   4,
+   5
+  ],
+  "b": [
+   4,
+   11
+  ],
+  "same_p": true,
+  "mU": 7,
+  "mQ": 9,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   9,
+   [
+    7,
+    1
+   ]
+  ]
+ },
+ {
+  "a": [
+   4,
+   5
+  ],
+  "b": [
+   5,
+   6
+  ],
+  "same_p": false,
+  "mU": 7,
+  "mQ": 9,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   7,
+   [
+    7,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   4,
+   5
+  ],
+  "b": [
+   5,
+   7
+  ],
+  "same_p": false,
+  "mU": 7,
+  "mQ": 9,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   7,
+   [
+    7,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   4,
+   5
+  ],
+  "b": [
+   5,
+   8
+  ],
+  "same_p": false,
+  "mU": 7,
+  "mQ": 9,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   7,
+   [
+    7,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   4,
+   5
+  ],
+  "b": [
+   5,
+   9
+  ],
+  "same_p": false,
+  "mU": 7,
+  "mQ": 9,
+  "max_common_m": 10,
+  "complete_through_m": 10,
+  "first_disagreement": [
+   7,
+   [
+    7,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   4,
+   5
+  ],
+  "b": [
+   6,
+   7
+  ],
+  "same_p": false,
+  "mU": 7,
+  "mQ": 9,
+  "max_common_m": 11,
+  "complete_through_m": 11,
+  "first_disagreement": [
+   7,
+   [
+    7,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   4,
+   7
+  ],
+  "b": [
+   4,
+   9
+  ],
+  "same_p": true,
+  "mU": 7,
+  "mQ": 13,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": null
+ },
+ {
+  "a": [
+   4,
+   7
+  ],
+  "b": [
+   4,
+   11
+  ],
+  "same_p": true,
+  "mU": 7,
+  "mQ": 13,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": null
+ },
+ {
+  "a": [
+   4,
+   7
+  ],
+  "b": [
+   5,
+   6
+  ],
+  "same_p": false,
+  "mU": 7,
+  "mQ": 11,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   7,
+   [
+    7,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   4,
+   7
+  ],
+  "b": [
+   5,
+   7
+  ],
+  "same_p": false,
+  "mU": 7,
+  "mQ": 13,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   7,
+   [
+    7,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   4,
+   7
+  ],
+  "b": [
+   5,
+   8
+  ],
+  "same_p": false,
+  "mU": 7,
+  "mQ": 13,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   7,
+   [
+    7,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   4,
+   7
+  ],
+  "b": [
+   5,
+   9
+  ],
+  "same_p": false,
+  "mU": 7,
+  "mQ": 13,
+  "max_common_m": 10,
+  "complete_through_m": 10,
+  "first_disagreement": [
+   7,
+   [
+    7,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   4,
+   7
+  ],
+  "b": [
+   6,
+   7
+  ],
+  "same_p": false,
+  "mU": 7,
+  "mQ": 13,
+  "max_common_m": 11,
+  "complete_through_m": 11,
+  "first_disagreement": [
+   7,
+   [
+    7,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   4,
+   9
+  ],
+  "b": [
+   4,
+   11
+  ],
+  "same_p": true,
+  "mU": 7,
+  "mQ": 17,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": null
+ },
+ {
+  "a": [
+   4,
+   9
+  ],
+  "b": [
+   5,
+   6
+  ],
+  "same_p": false,
+  "mU": 7,
+  "mQ": 11,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   7,
+   [
+    7,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   4,
+   9
+  ],
+  "b": [
+   5,
+   7
+  ],
+  "same_p": false,
+  "mU": 7,
+  "mQ": 13,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   7,
+   [
+    7,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   4,
+   9
+  ],
+  "b": [
+   5,
+   8
+  ],
+  "same_p": false,
+  "mU": 7,
+  "mQ": 15,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   7,
+   [
+    7,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   4,
+   9
+  ],
+  "b": [
+   5,
+   9
+  ],
+  "same_p": false,
+  "mU": 7,
+  "mQ": 17,
+  "max_common_m": 10,
+  "complete_through_m": 10,
+  "first_disagreement": [
+   7,
+   [
+    7,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   4,
+   9
+  ],
+  "b": [
+   6,
+   7
+  ],
+  "same_p": false,
+  "mU": 7,
+  "mQ": 13,
+  "max_common_m": 11,
+  "complete_through_m": 11,
+  "first_disagreement": [
+   7,
+   [
+    7,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   4,
+   11
+  ],
+  "b": [
+   5,
+   6
+  ],
+  "same_p": false,
+  "mU": 7,
+  "mQ": 11,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   7,
+   [
+    7,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   4,
+   11
+  ],
+  "b": [
+   5,
+   7
+  ],
+  "same_p": false,
+  "mU": 7,
+  "mQ": 13,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   7,
+   [
+    7,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   4,
+   11
+  ],
+  "b": [
+   5,
+   8
+  ],
+  "same_p": false,
+  "mU": 7,
+  "mQ": 15,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   7,
+   [
+    7,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   4,
+   11
+  ],
+  "b": [
+   5,
+   9
+  ],
+  "same_p": false,
+  "mU": 7,
+  "mQ": 17,
+  "max_common_m": 10,
+  "complete_through_m": 10,
+  "first_disagreement": [
+   7,
+   [
+    7,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   4,
+   11
+  ],
+  "b": [
+   6,
+   7
+  ],
+  "same_p": false,
+  "mU": 7,
+  "mQ": 13,
+  "max_common_m": 11,
+  "complete_through_m": 11,
+  "first_disagreement": [
+   7,
+   [
+    7,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   5,
+   6
+  ],
+  "b": [
+   5,
+   7
+  ],
+  "same_p": true,
+  "mU": 9,
+  "mQ": 11,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   11,
+   [
+    9,
+    1
+   ]
+  ]
+ },
+ {
+  "a": [
+   5,
+   6
+  ],
+  "b": [
+   5,
+   8
+  ],
+  "same_p": true,
+  "mU": 9,
+  "mQ": 11,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": [
+   11,
+   [
+    9,
+    1
+   ]
+  ]
+ },
+ {
+  "a": [
+   5,
+   6
+  ],
+  "b": [
+   5,
+   9
+  ],
+  "same_p": true,
+  "mU": 9,
+  "mQ": 11,
+  "max_common_m": 10,
+  "complete_through_m": 10,
+  "first_disagreement": null
+ },
+ {
+  "a": [
+   5,
+   6
+  ],
+  "b": [
+   6,
+   7
+  ],
+  "same_p": false,
+  "mU": 9,
+  "mQ": 11,
+  "max_common_m": 11,
+  "complete_through_m": 11,
+  "first_disagreement": [
+   9,
+   [
+    9,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   5,
+   7
+  ],
+  "b": [
+   5,
+   8
+  ],
+  "same_p": true,
+  "mU": 9,
+  "mQ": 13,
+  "max_common_m": 12,
+  "complete_through_m": 12,
+  "first_disagreement": null
+ },
+ {
+  "a": [
+   5,
+   7
+  ],
+  "b": [
+   5,
+   9
+  ],
+  "same_p": true,
+  "mU": 9,
+  "mQ": 13,
+  "max_common_m": 10,
+  "complete_through_m": 10,
+  "first_disagreement": null
+ },
+ {
+  "a": [
+   5,
+   7
+  ],
+  "b": [
+   6,
+   7
+  ],
+  "same_p": false,
+  "mU": 9,
+  "mQ": 13,
+  "max_common_m": 11,
+  "complete_through_m": 11,
+  "first_disagreement": [
+   9,
+   [
+    9,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   5,
+   8
+  ],
+  "b": [
+   5,
+   9
+  ],
+  "same_p": true,
+  "mU": 9,
+  "mQ": 15,
+  "max_common_m": 10,
+  "complete_through_m": 10,
+  "first_disagreement": null
+ },
+ {
+  "a": [
+   5,
+   8
+  ],
+  "b": [
+   6,
+   7
+  ],
+  "same_p": false,
+  "mU": 9,
+  "mQ": 13,
+  "max_common_m": 11,
+  "complete_through_m": 11,
+  "first_disagreement": [
+   9,
+   [
+    9,
+    0
+   ]
+  ]
+ },
+ {
+  "a": [
+   5,
+   9
+  ],
+  "b": [
+   6,
+   7
+  ],
+  "same_p": false,
+  "mU": 9,
+  "mQ": 13,
+  "max_common_m": 10,
+  "complete_through_m": 10,
+  "first_disagreement": [
+   9,
+   [
+    9,
+    0
+   ]
+  ]
+ }
+]

@@ -1,0 +1,125 @@
+[A] p=5: {
+ "sizes": [
+  6,
+  15,
+  10
+ ],
+ "Gint_petersen": true,
+ "Gint_intersection_array": [
+  [
+   3,
+   2
+  ],
+  [
+   1,
+   1
+  ]
+ ],
+ "Gext_5K3": true,
+ "ext_to_duads_bijective": true,
+ "syntheme_of_P_equals_duads_of_exterior_points_on_polar": true,
+ "selfpolar_triangles": 20,
+ "selfpolar_types_by_interior_count": {
+  "0": 5,
+  "2": 15
+ },
+ "EEE_triangles_are_synthemes": true,
+ "EEE_synthemes_form_a_total": true,
+ "interior_and_EEE_synthemes_all_15": true,
+ "edge_label_exterior": true,
+ "M_x_perfect_matching_contracts_to_K5_labelled_by_other_conic_points": true,
+ "petersen_perfect_matchings": 6,
+ "berggren_image_order": 60,
+ "SO3_order": 120,
+ "equivariant_bijections_interior_to_splits_A5_berggren": 1,
+ "split_equals_orbits_of_StabA5": true,
+ "StabA5_interior_order": 6,
+ "split_vs_syntheme_pattern": {
+  "((1, 1), (1, 1), (1, 1))": 10
+ },
+ "split_intersection_patterns_A5_berggren": {
+  "adjacent": {
+   "(1, 2)": 15
+  },
+  "nonadjacent": {
+   "(1, 2)": 30
+  }
+ },
+ "equivariant_bijections_interior_to_splits_SO3_full": 1,
+ "split_intersection_patterns_SO3_full": {
+  "adjacent": {
+   "(1, 2)": 15
+  },
+  "nonadjacent": {
+   "(1, 2)": 30
+  }
+ },
+ "StabA5(P)_regular_on_far_vertices": true,
+ "StabA5(P)_orbits_on_conic": [
+  3,
+  3
+ ],
+ "deletion_K33": true,
+ "some_Stab_element_swaps_K33_sides_but_fixes_conic_orbits": true
+}
+[B] p=7: {
+ "sizes": [
+  8,
+  28,
+  21
+ ],
+ "Gext_intersection_array": [
+  [
+   3,
+   2,
+   2,
+   1
+  ],
+  [
+   1,
+   1,
+   1,
+   2
+  ]
+ ],
+ "Gext_is_Coxeter_array_3221_1112": true,
+ "Gext_iso_independent_Coxeter": true,
+ "Gint_iso_LHeawood": true,
+ "Gint_intersection_array": [
+  [
+   4,
+   2,
+   2
+  ],
+  [
+   1,
+   1,
+   2
+  ]
+ ],
+ "Coxeter_hamiltonian_exhaustive": false,
+ "Petersen_hamiltonian_exhaustive": false,
+ "berggren_image_order_on_PG2": 336,
+ "Aut_Gext_order": 336
+}
+[C] p=3: int deg [2] tri 1 conn True ham True; ext deg [1] tri 0 conn False ham None; degree rule True, triangle rule True
+[C] p=5: int deg [3] tri 0 conn True ham None; ext deg [2] tri 5 conn False ham None; degree rule True, triangle rule True
+[C] p=7: int deg [4] tri 14 conn True ham True; ext deg [3] tri 0 conn True ham None; degree rule True, triangle rule True
+[C] p=11: int deg [6] tri 55 conn True ham True; ext deg [5] tri 0 conn True ham True; degree rule True, triangle rule True
+[C] p=13: int deg [7] tri 0 conn True ham True; ext deg [6] tri 91 conn True ham True; degree rule True, triangle rule True
+[C] p=17: int deg [9] tri 0 conn True ham None; ext deg [8] tri 204 conn True ham None; degree rule True, triangle rule True
+[C] p=19: int deg [10] tri 285 conn True ham None; ext deg [9] tri 0 conn True ham None; degree rule True, triangle rule True
+[C] p=23: int deg [12] tri 506 conn True ham None; ext deg [11] tri 0 conn True ham None; degree rule True, triangle rule True
+[C] p=29: int deg [15] tri 0 conn True ham None; ext deg [14] tri 1015 conn True ham None; degree rule True, triangle rule True
+[C] p=31: int deg [16] tri 1240 conn True ham None; ext deg [15] tri 0 conn True ham None; degree rule True, triangle rule True
+[D] p=3: <A',B',C'> in PGL(2,p) has order 24; |PSL|=12, |PGL|=24; proposition predicts 24: True; 3x3 projective image on PG(2,p): 24
+[D] p=5: <A',B',C'> in PGL(2,p) has order 60; |PSL|=60, |PGL|=120; proposition predicts 60: True; 3x3 projective image on PG(2,p): 60
+[D] p=7: <A',B',C'> in PGL(2,p) has order 336; |PSL|=168, |PGL|=336; proposition predicts 336: True; 3x3 projective image on PG(2,p): 336
+[D] p=11: <A',B',C'> in PGL(2,p) has order 1320; |PSL|=660, |PGL|=1320; proposition predicts 1320: True; 3x3 projective image on PG(2,p): 1320
+[D] p=13: <A',B',C'> in PGL(2,p) has order 1092; |PSL|=1092, |PGL|=2184; proposition predicts 1092: True; 3x3 projective image on PG(2,p): 1092
+[D] p=17: <A',B',C'> in PGL(2,p) has order 2448; |PSL|=2448, |PGL|=4896; proposition predicts 2448: True; 3x3 projective image on PG(2,p): -
+[D] p=19: <A',B',C'> in PGL(2,p) has order 6840; |PSL|=3420, |PGL|=6840; proposition predicts 6840: True; 3x3 projective image on PG(2,p): -
+[D] p=23: <A',B',C'> in PGL(2,p) has order 12144; |PSL|=6072, |PGL|=12144; proposition predicts 12144: True; 3x3 projective image on PG(2,p): -
+[D] p=29: <A',B',C'> in PGL(2,p) has order 12180; |PSL|=12180, |PGL|=24360; proposition predicts 12180: True; 3x3 projective image on PG(2,p): -
+[D] p=31: <A',B',C'> in PGL(2,p) has order 29760; |PSL|=14880, |PGL|=29760; proposition predicts 29760: True; 3x3 projective image on PG(2,p): -
+[D] {'sym2_A': True, 'sym2_B': True, 'sym2_C': True, 'Cinv_A_equals_S': True, 'S_C_Sinv': [[1, 0], [-2, 1]], 'dets': [1, -1, 1]}

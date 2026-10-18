@@ -1,0 +1,4 @@
+L=3: minor 4x4, degree bound 0; det = 384; integer roots []; row-denominator integer roots []  (5.1s)
+L=5: minor 11x11, degree bound 1; det = 368640*(4*N + 1); integer roots []; row-denominator integer roots []  (5.2s)
+L=7: minor 24x24, degree bound 4; det = 24352464568320*(N + 4)*(4*N + 1)*(4*N + 3); integer roots [-4]; row-denominator integer roots []  (5.5s)
+L=9: minor 46x46, degree bound 17; det = -9770805911418133929158246400000000*(N + 5)*(N + 7)**5*(2*N + 5)*(4*N + 1)*(4*N + 3)*(4*N + 5)*(4*N**2 + 4*N - 43); integer roots [-7, -5]; row-denominator integer roots [-7]  (7.8s)

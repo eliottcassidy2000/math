@@ -19091,7 +19091,8 @@ the ambient space.
   - HYP-9316: all weights reproduced; 7 new curves pass; the Cramer mechanism is not in the literature.
   - Section 6(i)-(ii) (= THM-4628(b)).
   - The conic dictionary (Petersen, L(Heawood) replayed independently by clock_duality).
-  - THM-4710 (Witt rigidity), found after the audit.
+  - (THM-4710, the Witt rigidity, was found after this audit. It is not a survivor of it; the second audit,
+    s44c_audit_20261018, covers it.)
 - **Evidence:** 04-computation/experiments/s44_audit_20261018/REPORT.md and scripts;
   04-computation/quantum_transfer_s44/evaluate_corrected_windows.out.
 - **Lesson:**
@@ -19102,3 +19103,40 @@ the ambient space.
     boundary.
   - Before claiming universality, compute what the characters force.
   - Keep docstrings in step with outputs.
+
+## MISTAKE-641 (2026-10-18, opus-2026-10-18-S44; second independent S44 referee, s44c_audit_20261018) -- a cited paper was again not read: the conic-graph identifications (Petersen, 5K3, Coxeter, L(Heawood) from the interior/exterior points of a conic in PG(2,q)) were presented as "not located in the literature" and listed as an open question, although they are on the first page of Coxeter's "My graph" (1983), which the note itself cited; plus several smaller slips in the merge note and THM-4710
+
+- **Affected claims:**
+  - pythagorean_form_conic_graphs_rp_margin_20261018.md: section 2 "Literature", the ledger typing "FINITE-EXACT
+    (partly classical)", next obligation 2, and the OPEN-QUESTIONS S44 item (6).
+  - Smaller items:
+    - the C,A branch: two limits (√3 after A-moves, 2+√3 with c → -11 after C-moves), not one;
+    - "PSL(2,7)" was given as the group through which the tree acts at p = 7; it is PGL(2,7) = Aut(Coxeter);
+    - the hemi-dodecahedron "orientation reversal" wording: the odd elements have non-square spinor norm and swap the
+      two hemi-dodecahedral embeddings;
+    - the RP margin "covers stress tensors" and "m = 6 covers w <= 4" overreached; it is retyped as a READING;
+    - the credit to clock_duality overstated what it replayed;
+    - THM-4710: the mod-P-to-Q step was incomplete (T1), the generator positions were missing from the title (T2),
+      the novelty line was stale (T3: the Lemma is Li 2004 / Butson-Nair 2026; G_3 is in AvEH), 18 comparisons
+      should be 15 (T4), and "S_L = 0 for N < L" covered unrun cases (T5);
+    - "every same-p pair is sharp" (W1).
+- **First failed implication:** the note cited Coxeter 1983 through Brouwer's page, for the Fano construction only.
+  Its first page, which the note never opened, states all four identifications and the valencies (q±1)/2. This
+  repeats the failure of MISTAKE-580/629/632/640(i).
+- **Missing coordinates:**
+  - the opening pages of every cited source, read before calling something "not located";
+  - an exact over-Q argument whenever mod-P ranks are used inductively;
+  - the exact scope of an analogy between one proof step and other settings.
+- **Survivors:**
+  - All the finite geometry, replayed; the note's own additions (K6/syntheme dictionary, K5 view, negative K3,3
+    result, triangle rule, now PROVED); the Proposition (PSL/PGL by p mod 4).
+  - The RP lemma and its sharpness.
+  - THM-4710, now PROVED for all N at Li 3, 5, 7, 9 via the audit's Q(N) recursion and certificate minors, which the
+    session reran with identical output.
+- **Evidence:** 04-computation/experiments/s44c_audit_20261018/REPORT.md and its scripts.
+- **Lesson:**
+  - When a paper is cited for one fact, read at least its first pages before declaring any neighbouring fact
+    unlocated.
+  - Classical finite-geometry constructions of named graphs (Petersen, Coxeter, Heawood) are usually in Coxeter's
+    and Biggs's papers. Check them first.
+

@@ -1,0 +1,41 @@
+{
+ "3": {
+  "nvar": 5,
+  "minor_size": 4,
+  "degree_bound": 0,
+  "det": "384",
+  "integer_roots_det": [],
+  "integer_roots_row_denominators": []
+ },
+ "5": {
+  "nvar": 12,
+  "minor_size": 11,
+  "degree_bound": 1,
+  "det": "368640*(4*N + 1)",
+  "integer_roots_det": [],
+  "integer_roots_row_denominators": []
+ },
+ "7": {
+  "nvar": 25,
+  "minor_size": 24,
+  "degree_bound": 4,
+  "det": "24352464568320*(N + 4)*(4*N + 1)*(4*N + 3)",
+  "integer_roots_det": [
+   -4
+  ],
+  "integer_roots_row_denominators": []
+ },
+ "9": {
+  "nvar": 47,
+  "minor_size": 46,
+  "degree_bound": 17,
+  "det": "-9770805911418133929158246400000000*(N + 5)*(N + 7)**5*(2*N + 5)*(4*N + 1)*(4*N + 3)*(4*N + 5)*(4*N**2 + 4*N - 43)",
+  "integer_roots_det": [
+   -7,
+   -5
+  ],
+  "integer_roots_row_denominators": [
+   -7
+  ]
+ }
+}

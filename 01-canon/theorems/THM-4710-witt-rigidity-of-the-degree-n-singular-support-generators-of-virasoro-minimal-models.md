@@ -1,132 +1,128 @@
 ---
 id: THM-4710
-title: "Witt rigidity of the degree-N singular support: the minimal generators of grI in degree N of a Virasoro minimal model Vir_(p,q) (N = (p-1)(q-1)/2), taken as sl_2 lowest-weight vectors at Li degrees 3, 5, 7, 9, are the unique vectors admissible under the c-independent action of the positive Witt modes; hence they depend only on N, not on c. In Cayley semi-invariant coordinates G_3 = A_3 and G_5 = A_5 - ((5N-1)/(4N+1)) A_3 A_2, with G_7, G_9 given by explicit rational functions of N"
+title: "Witt rigidity of the degree-N singular support (given the HYP-9315(b) generator positions): the minimal generators of grI in degree N of a Virasoro minimal model Vir_(p,q), N = (p-1)(q-1)/2, taken as sl_2 lowest-weight vectors at Li degrees 3, 5, 7, 9, are the unique vectors admissible under the c-independent action of the positive Witt modes; hence they depend only on N, not on c. In Cayley semi-invariant coordinates G_3 = A_3 and G_5 = A_5 - ((5N-1)/(4N+1)) A_3 A_2, with G_7, G_9 explicit rational functions of N"
 status: >
-  PROVED for 3 <= N <= 64: dim_Q S_L <= 1 at L = 3, 5, 7, 9, and = 0 when N < L. This is exact linear algebra mod three
-  or six primes; a mod-P nullity bounds the nullity over Q from above.
-  - Runs: N = 3..16 (witt_closure_forces_generators), N = 9..48 (witt_rigidity_interpolation), and N = 9..64 in the
-    stable-range implementation (check_witt_closed_forms_stable, validated against the PBW-basis runs on 9..49). The theorem is conditional on the generator pattern of
-  HYP-9315(b) (degree-N generators of grI at Li degrees 0, 3, 5, ..., 2p-3), which holds in every computed model.
-  - Checked directly against the singular support of 9 models: (4,5), (4,7), (4,9), (4,11), (5,6), (5,7), (5,8),
-    (5,9), (6,7). All 18 generator comparisons at Li 5, 7, 9 are equalities.
-  - The closed forms in N are CONJECTURAL for all N. Each coefficient is the smallest rational function fitting the
-    first points and reproduces the remaining 27-37 of 40 exact values (N = 9..48).
-  - PRE-REGISTERED out-of-sample test PASSED (PREREGISTRATION_witt_closed_forms_20261018.md, commit 22048565d9,
-    before the runs): every coefficient is exact at N = 49..64; the unused model Vir_(4,13) (N = 18, c = -217/26) has
-    generators at Li 0, 3, 5 with G_5(18) = A_5 - (89/73) A_3 A_2.
-  - The c-independent Witt action on symbols is elementary (proof below).
-  - Novelty: not in the literature reviewed by the S44 audit (Feigin-Frenkel 1993 Remark 2 asks for the extra
-    generators; AvEH treat Ising only). Self-checked; independent audit pending.
+  PROVED for every N, at Li degrees L = 3, 5, 7, 9. The forcing of actual minimal-model generators (part 2) is
+  conditional on the generator positions of HYP-9315(b) (Li 0, 3, 5, ..., 2p-3 in degree N). Those positions are a
+  reading of the BGG structure, verified in every computed model, not a theorem.
+  - The Lemma (positive modes act on top symbols by c-independent derivations) is KNOWN: Li 2004, Prop. 4.7;
+    Butson-Nair 2026, section 4.3.3. A proof is included for completeness.
+  - Part 1 (dim S_L = 1 for N >= L, 0 for N < L) and part 3 (the closed forms) were proved by the second S44 audit
+    (04-computation/experiments/s44c_audit_20261018/REPORT.md, T1).
+    - The recursion was run exactly over Q(N): witt_symbolic.py.
+    - Its maximal minors are 384, (4N+1), (N+4)(4N+1)(4N+3), and (N+5)(N+7)^5(2N+5)(4N+1)(4N+3)(4N+5)(4N^2+4N-43),
+      up to constants (certificate_minors.py, rerun by the session with identical output). None has a root at a
+      positive integer.
+    - Every denominator has integer roots only at -7, -5, -4 (denominators_check.py).
+    - N = 2..8 were computed exactly over Q (witt_closure_exact.py, rerun by the session).
+    - So the generic solution, which equals the closed forms identically, spans S_L at every N >= L.
+    - The session's own mod-P runs (N <= 64, three or six primes) and the pre-registered out-of-sample test
+      (N = 49..64; the unused model Vir_(4,13)) are now controls. Their original mod-P-to-Q argument was incomplete
+      (audit T1).
+  - Checked directly against actual minimal models: 15 generator comparisons at Li 5, 7, 9 in 9 models (28 including
+    Li 3), all equal. The audit independently re-extracted (4,7) and (5,6) exactly over Q, (6,7) and (4,13) at two
+    primes, and the unused model (5,11) (N = 20) at two primes; all agree.
+  - Novelty (audit T3):
+    - G_3 for every (3,p') is in Andrews-van Ekeren-Heluani section 2.4 (second Lemma, Cor. 2.5). Their b(p') equals
+      alpha G_3 + beta d^3 x_0^N with alpha = -4(N-2)/(3(2N+1)) and beta = -5 alpha/(8N(N-1)(N-2)).
+    - The rigidity at Li 5, 7, 9 and the closed forms were not found in the literature checked.
+    - Feigin-Nakanishi-Ooguri 1992 was not read; its abstract emphasizes (2,q).
 session: opus-2026-10-18-S44
 source: 05-knowledge/results/li_spectral_sequence_quantum_transfer_20261018.md (section 8)
 scripts:
-  - 04-computation/quantum_transfer_s44/semiinvariant_generators_20261018.py (+ semiinvariant_generators.json/.out): generators of 13 models in Cayley coordinates
-  - 04-computation/quantum_transfer_s44/witt_closure_forces_generators_20261018.py (+ .json/.out): dim S_L and comparison with the models, N = 3..16
-  - 04-computation/quantum_transfer_s44/witt_rigidity_interpolation_20261018.py (+ witt_rigidity_interpolation_9_48.json, witt_rigidity_interpolation.out): N = 9..48 and the closed forms
-related: [HYP-9315, THM-4695, THM-4671, HYP-9294, Feigin-Frenkel 1993]
+  - 04-computation/quantum_transfer_s44/semiinvariant_generators_20261018.py (+ .json/.out): generators of 13 models in Cayley coordinates
+  - 04-computation/quantum_transfer_s44/witt_closure_forces_generators_20261018.py (+ .json/.out): dim S_L mod P and comparison with models, N = 3..16
+  - 04-computation/quantum_transfer_s44/witt_rigidity_interpolation_20261018.py (+ witt_rigidity_interpolation_9_48.json): closed forms fitted on N = 9..48
+  - 04-computation/quantum_transfer_s44/check_witt_closed_forms_stable_20261018.py (+ .out/.json): pre-registered out-of-sample test, N = 49..64 and Vir_(4,13)
+  - 04-computation/experiments/s44c_audit_20261018/: witt_symbolic.py, certificate_minors.py, denominators_check.py, witt_closure_exact.py, compare_closed_forms.py, model_generators_audit.py, lemma_check.py (independent engine vir_pbw.py)
+related: [HYP-9315, THM-4695, THM-4671, HYP-9294, Feigin-Frenkel 1993, Andrews-van Ekeren-Heluani 2023, Li 2004]
 ---
 
 # THM-4710 — Witt rigidity of the degree-N singular support
 
 ## Setting
 
-- `V^c` is the universal Virasoro vertex algebra at `c = c_(p,q)`. `I` is its maximal ideal, generated by the
-  singular vector `v` of weight `2N`.
-- `gr_F V^c = C[x_0, x_1, ...]`, with `x_j <-> L_(-j-2)`. `grI_N` is the degree-`N` (PBW-length `N`) part of `grI`.
-- `V_2` is the span of the `x_j`. The polynomial algebra in degree `N` is `Sym^N(V_2)`.
+- `V^c` is the universal Virasoro vertex algebra at `c = c_(p,q)`. Its maximal ideal `I` is generated by the singular
+  vector `v` of weight `2N`.
+- `gr_F V^c = C[x_0, x_1, ...]` with `x_j <-> L_(-j-2)`. `grI_N` is the degree-`N` (PBW-length `N`) part of `grI`.
+- `V_2` is the span of the `x_j`. The degree-`N` part of the polynomial algebra is `Sym^N(V_2)`.
 
-## Lemma (the positive Witt modes act on symbols without `c`)
+## Lemma (known: Li 2004 Prop. 4.7; Butson-Nair 2026 section 4.3.3)
 
-For `n >= 1` let `D_n` be the derivation of `C[x]` with
-```
-D_n x_j = (j + n + 2) x_(j-n)  (j >= n),        D_n x_j = 0  (j < n),
-```
-and let `d = D_(-1)`, `d x_j = (j+1) x_(j+1)`. If `a ∈ I` has top length `N`, then `L_n a ∈ I` has length `<= N`, and
-its length-`N` component is `D_n σ_N(a)`. Hence `grI_N` is stable under `d` and under every `D_n`, `n >= 1`. None of
-these operators involves `c`.
+For `n >= 1` let `D_n` be the derivation of `C[x]` with `D_n x_j = (j + n + 2) x_(j-n)` for `j >= n` and `0` for
+`j < n`, and put `d = D_(-1)`, `d x_j = (j+1) x_(j+1)`. If `a ∈ I` has top length `N`, then `L_n a ∈ I` has length
+`<= N` and its length-`N` component is `D_n σ_N(a)`. Hence `grI_N` is stable under `d` and every `D_n`, none of which
+involves `c`.
 
-*Proof.* Commute `L_n` through `L_(-k_1) ... L_(-k_r)|0>` using `[L_n, L_(-k)] = (n+k) L_(n-k) + (c/12)(n^3-n) δ_(n,k)`.
-- If `n - k <= -2`, `L_(-k)` is replaced in place by `L_(-(k-n))`, so the length is preserved. This is `D_n`
-  (`j = k - 2 >= n`).
-- If `n - k = -1`, the new `L_(-1)` must be moved to the right, where `L_(-1)|0> = 0`; its commutators have smaller
-  length.
-- If `n - k >= 0`, `L_(n-k)` moves right and lowers the length.
-- The central term appears only for `k = n`, and it removes a mode.
+*Proof.* Commute `L_n` through `L_(-k_1) ... L_(-k_r)|0>` using
+`[L_n, L_(-k)] = (n+k) L_(n-k) + (c/12)(n^3-n) δ_(n,k)`.
+- If `n - k <= -2`, the mode is replaced in place and the length is kept: this is `D_n`.
+- If `n - k = -1`, the resulting `L_(-1)` moves right, where `L_(-1)|0> = 0`, and its commutators are shorter.
+- If `n - k >= 0`, the mode moves right and lowers the length.
+- The central term deletes a mode.
 
-So only the first case reaches length `N`. Finally, `I` is a `Vir`-submodule. ∎
+The audit also checked this on 3,900 random vectors at five values of `c`. ∎
 
-`D_1, D_0, d` span an `sl_2`. `grI_N` is a sum of lowest-weight Verma modules, so its minimal generators may be chosen
-as lowest-weight vectors (`D_1 g = 0`).
+- `D_1, D_0, d` span an `sl_2`. `grI_N` is a direct sum of lowest-weight Verma modules (the weights are positive), so its
+  minimal generators may be chosen with `D_1 g = 0`.
+- Since `L_1` and `L_2` generate the positive Witt algebra, closure under `D_1, D_2` gives closure under every `D_n`. The
+  audit confirmed that the `D_2` condition alone yields the same spaces.
 
 ## Theorem
 
-Let `M_0 = C x_0^N`. Recursively, for `L >= 1`:
-- `S_L = { g ∈ Sym^N(V_2)_L : D_1 g = 0, and D_m g ∈ M_(L-m) for 2 <= m <= L }`;
-- `M_L = d M_(L-1) + S_L` if `L ∈ {3, 5, 7, 9}`, and `M_L = d M_(L-1)` otherwise.
+Let `M_0 = C x_0^N`. Recursively, for `L >= 1` put
+`S_L = { g ∈ Sym^N(V_2)_L : D_1 g = 0, D_m g ∈ M_(L-m) for 2 <= m <= L }`,
+and `M_L = d M_(L-1) + S_L` if `L ∈ {3, 5, 7, 9}`, `M_L = d M_(L-1)` otherwise.
 
-Then:
-
-1. **Uniqueness.** For `3 <= N <= 64` and `L ∈ {3, 5, 7, 9}`: `dim_Q S_L <= 1` when `L <= N`, and `S_L = 0` when
-   `N < L`.
-   - The mod-`P` nullity is exactly 1 for every `N >= L` and every prime used.
-   - `dim_Q S_L = 1` whenever a model with `p >= (L+3)/2` has this `N`. Its generator lies in `S_L`.
-   - Write `G_L(N)` for the spanning vector. It is reconstructed rationally, consistently over all primes, for
-     `9 <= N <= 64`.
-2. **Forcing.** Let `Vir_(p,q)` be a minimal model with `(p-1)(q-1) = 2N`, `N` in these ranges. Suppose its degree-`N`
-   generators at Li degrees `<= L` sit at `0, 3, ..., L`, as in HYP-9315(b), which needs `p >= (L+3)/2`. Then its
-   generator at Li degree `L` is `G_L(N)` up to scalar. In particular it is independent of `c`, so it is the same for
-   all models with the same `N`.
-3. **The first values**, in Cayley coordinates.
-   - `A_j = Σ_(i=0..j) C(j+3, i)(-1/4)^i x_0^(j-1-i) x_1^i x_(j-i)` spans the lowest-weight vectors at `(deg j, Li j)`
-     with `x_1` eliminated.
-   - `G_L` means `x_0^(N-L)` times the displayed polynomial in the `A_j`, normalized so that the coefficient of
-     `A_L` is 1.
+1. **Uniqueness.** For every `N >= 2` and `L ∈ {3, 5, 7, 9}`: `dim S_L = 1` if `N >= L`, and `S_L = 0` if `N < L`.
+   Write `G_L(N)` for the spanning vector.
+2. **Forcing.** Let `Vir_(p,q)` be a minimal model with `(p-1)(q-1) = 2N`. Suppose its degree-`N` generators at Li
+   degrees `<= L` sit exactly at `0, 3, ..., L`, as in HYP-9315(b) (this needs `p >= (L+3)/2`). Then its generator at Li
+   degree `L` is `G_L(N)`, up to scalar. In particular it does not depend on `c`, and all models with the same `N` share
+   it.
+3. **Closed forms** (Cayley coordinates).
+   - The products `A_ν = Π A_(ν_i)` (`ν` a partition of `L` into parts `>= 2`, with
+     `A_j = Σ_(i=0..j) C(j+3,i)(-1/4)^i x_0^(j-1-i) x_1^i x_(j-i)`) span the lowest-weight vectors of Li degree `L`.
+   - `G_L` means `x_0^(N-L)` times the displayed combination, normalized so the coefficient of `A_L` is 1.
    ```
    G_3 = A_3
-   G_5 = A_5 - (5N-1)/(4N+1) · A_3 A_2                                                  (proved for 6 <= N <= 48)
+   G_5 = A_5 - (5N-1)/(4N+1) · A_3 A_2
    G_7 = A_7 - (28N-33)/(6(4N+1)) · A_5 A_2 - (48N^3+224N^2+185N+123)/(2(N+4)(4N+1)(4N+3)) · A_4 A_3
              + (560N^3+1856N^2-1419N-477)/(24(N+4)(4N+1)(4N+3)) · A_3 A_2^2
    ```
-   - For `G_9`, the coefficient of `A_7 A_2` is `-3(3N-8)/(2(4N+1))`.
-   - The other six coefficients of `G_9` are degree-6 rational functions. Their common denominator is
-     `(N+5)(4N+1)(4N+3)(4N+5)(4N^2+4N-43)`; see `witt_rigidity_interpolation_9_48.json`.
-   - None of these denominators vanishes at a positive integer.
-   - The closed forms are exact at every computed `N` (9..64; the values 49..64 were pre-registered).
-   - Their validity for all `N` is conjectural.
+   - `G_9`: the coefficient of `A_7 A_2` is `-3(3N-8)/(2(4N+1))`. The other six coefficients are degree-6 rational
+     functions over `(N+5)(4N+1)(4N+3)(4N+5)(4N^2+4N-43)`; see `witt_rigidity_interpolation_9_48.json` and
+     `s44c_audit_20261018/witt_symbolic.out`.
+   - These hold for every `N >= L`. No denominator vanishes at a positive integer.
 
-## Proof of 1 and 2
+## Proof
 
-**1.** `S_L` is the kernel of an explicit integer matrix. The rows are the `D_1`-equations and the coordinates of
-`D_m g` modulo a basis of `M_(L-m)`; the columns are coordinates on `Sym^N(V_2)_L` in the PBW basis
-`block(2N+L, N)`.
-- It was computed modulo three (N <= 16) or six (N = 9..48) primes near `2^31`. The nullity was 1 for every `N >= L`
-  and 0 for `N < L`, for every prime.
-- Over `Q` the nullity is at most the nullity mod `P`, so `dim_Q S_L <= 1`. For an inductive step the mod-`P` image
-  of `M_(L-1)` must be the reduction of the rational `M_(L-1)`. This holds because each previous `S_(L')` is
-  one-dimensional both mod `P` and over `Q`.
-- At `L = 3`, `S_3` is spanned by `A_3`. For `N >= 3` every lowest-weight vector of Li degree 3 is admissible, since
-  the Li 1 and Li 0 parts of `Sym^N(V_2)` are spanned by `d x_0^N` and `x_0^N`.
-- Only uniqueness (`<= 1`) is needed for 2.
-- Existence over `Q` holds wherever a model supplies the generator, for example (6,7), `N = 15`, at `L = 9`.
-- For other `N`, the mod-`P` solutions reconstruct consistently to one rational vector. Its exact admissibility over
-  `Q` was not checked separately.
+**1 and 3.** In the faithful stable-range coordinates (partitions `μ` of `L`, monomial `x_0^(N-l(μ)) x_μ`, valid for
+`N >= L`), `d` and `D_n` are explicit polynomials in `N`, so the recursion is linear algebra over `Q(N)`.
+- The audit's `witt_symbolic.py` solves it. The generic dimensions are `{1,0,1,1,1,1,1,1,0,1}` for `L = 0..9`, and the
+  generic solution equals the closed forms identically.
+- A maximal minor certifying rank `(dim - 1)` is a constant times the polynomials listed in the status line, which have
+  no positive integer roots. The row denominators vanish only at `N = -7`.
+- So for every integer `N >= L` the rank is the generic one, and `S_L(N)` is spanned by the specialized closed form.
+- For `N < L`, and as a cross-check for `N <= 8`, the recursion was computed exactly over `Q` in the PBW basis.
 
 **2.** Induct on `L`. By hypothesis, `grI_N` in Li degrees `< L` is generated by `x_0^N, G_3, ..., G_(L-2)`, so it
-equals `M_(<L)`. The generator `g` at Li `L` is a lowest-weight vector. By the Lemma, `D_m g ∈ grI_N(L-m) = M_(L-m)`.
-So `g ∈ S_L`, and `dim S_L = 1` gives `g ∝ G_L(N)`. The direct comparison with 9 models (18 generators) confirms the
-conclusion independently. ∎
+equals `M_(<L)`. The generator `g` at Li degree `L` is a lowest-weight vector, and by the Lemma
+`D_m g ∈ grI_N(L-m) = M_(L-m)`. Hence `g ∈ S_L`, and part 1 gives `g ∝ G_L(N)`. The comparisons with actual models
+(15 at Li 5, 7, 9) confirm this independently. ∎
 
 ## Remarks
 
 - **What is forced and what is not.**
-  - Existence of the generators, i.e. their positions, comes from the BGG structure (HYP-9315(b); audit N5). At
-    relative level `m = 2p-1` the cycle `x_0^(p-2) s_1` is the symbol of a relation and stops transferring.
-  - Their form is forced by the Witt action. So the degree-`N` singular support of `Vir_(p,q)` is the truncation at
-    `k = p-2` of one universal chain `C[d] x_0^N ⊂ ... ⊕ C[d] G_(2k+1)(N) ...` that depends only on `N`.
-  - Models with the same `N` have nested degree-`N` singular supports, ordered by `p`: for `N = 12`,
-    (2,25) ⊂ (3,13) ⊂ (4,9) ⊂ (5,7).
-- **Even Li degrees.** The admissible spaces at even `L` are not zero: `dim S_2 = dim S_4 = dim S_6 = 1` and
-  `dim S_8 = 0`. Minimal models never use them, because no Koszul cycle reaches those positions (HYP-9315(b)).
-- **Large `N`.** The coefficient of `A_(L-2) A_2` in `G_L` tends to `-L/(L-1)` (`-5/4, -7/6, -9/8` for `L = 5, 7, 9`).
-- **Relation to THM-4695.** THM-4695 shows that `d_1` depends on `c` only through a scalar. THM-4710 shows that the
-  generators produced by `d_1, ..., d_(p-2)` in degree `N` do not depend on `c` at all.
+  - The positions of the generators come from the BGG structure. This is a reading, not a theorem (HYP-9315(b); audit
+    N5 of the first S44 audit).
+  - Their form is forced by the Witt action.
+  - So the degree-`N` parts of the ideals `grI` of all models with a given `N` are truncations of one universal chain
+    generated by `x_0^N, G_3(N), G_5(N), ...`, nested by `p`. For example, for `N = 12`:
+    `(2,25) ⊂ (3,13) ⊂ (4,9) ⊂ (5,7)`.
+- **Even Li degrees.** If one adds every admissible vector, there are unused admissible vectors at Li 2, 4, 6. Minimal
+  models never use them.
+- **Large `N`.** The coefficient of `A_(L-2) A_2` tends to `-5/4, -7/6, -9/8` for `L = 5, 7, 9`. The pattern
+  `-L/(L-1)` is extrapolated from these three values.
+- **Relation to THM-4695.** There `d_1` depends on `c` only through a scalar. Here the generators produced by
+  `d_1, ..., d_(p-2)` in degree `N` do not depend on `c` at all.

@@ -4,11 +4,14 @@
 
 **Status by section.**
 - §2 Berggren image: PROVED (elementary).
-- §1, §2 checks: FINITE-EXACT / VERIFIED. The identifications are partly classical, and no novelty is claimed for the
-  finite geometry.
+- §2 conic graphs: CITED and replayed. The four identifications (Petersen, 5K3, Coxeter, L(Heawood)) and the valencies
+  `(p±1)/2` are on the first page of Coxeter, *My graph*, Proc. LMS 46 (1983). That paper was cited here but not read
+  until the audit (MISTAKE-641). This note's own additions are the K6/syntheme dictionary, the K5-contraction view, the
+  negative K3,3 result, the survey, the triangle rule and the Proposition.
+- §1: FINITE-EXACT, elementary.
 - §3 margin lemma: PROVED (elementary) and sharp.
-- Cross-domain readings: OBSERVATION / ANALOGY, as marked.
-- Self-checked. The independent S44 audit predates this note.
+- Cross-domain readings: OBSERVATION / ANALOGY / READING, as marked.
+- Independently audited (04-computation/experiments/s44c_audit_20261018/REPORT.md). Repairs applied.
 
 **Owner prompt.**
 > keep going as you were and also merge in related to https://github.com/ethanwsussman/Yang--Mills-LLM-experiment and
@@ -28,8 +31,9 @@
 - **Concurrent agents on the same prompt.**
   - [Codex graph-Pythagorean synthesis](graph_pythagorean_20261018_synthesis.md): Seidel radii (3,4,5) of
     (Petersen, K5, K3,3), the H_t family on the unit-gap spine, the snark isosceles geometry.
-  - [clock_duality ternary ports](ternary_ports_golden_defect_20261018j.md): it independently replayed this session's
-    conic dictionary and corrected its group-scope docstring.
+  - [clock_duality ternary ports](ternary_ports_golden_defect_20261018j.md): it independently replayed the p = 5
+    Petersen and p = 7 L(Heawood) identifications and the group orders 60 and 336, and corrected this session's
+    group-scope docstring.
   - [mac-mini unit-path / Kuratowski / Yang–Mills note](unit_path_ring_kuratowski_pythagorean_yang_mills_20261018.md):
     THM-4701 (no K5 or K3,3 in `G_q`; Clebsch/Petersen), Pell branches of the tree, and a README-only Yang–Mills
     reading. Its next obligation was to read the RP rotation PDF, which §3 does.
@@ -65,13 +69,13 @@ series for `p = 1`. `berggren_minimal_models_20261018.py` checks the following e
 |---|---|---|---|---|
 | A, A, A, ... from the root | unitary `M(n, n+1)` | 1 | 1 | Codex's unit-gap spine (`h - b = 1`) |
 | B, B, B, ... | `(1,2), (2,5), (5,12), (12,29), ...` (Pell) | `1 + sqrt 2` | `13 - 12 sqrt 2` | Codex's isosceles branch; mac-mini's `sqrt 2` Pell branch |
-| C, A, C, A, ... | `(1,2), (1,4), (4,7), (4,15), (15,26), ...` | `sqrt 3` | `13 - 8 sqrt 3` | mac-mini's near-60-degree branch |
+| C, A, C, A, ... | `(1,2), (1,4), (4,7), (4,15), (15,26), ...` | `sqrt 3` after A-moves, `2 + sqrt 3` after C-moves | `13 - 8 sqrt 3`; `-11` | mac-mini's near-60-degree branch |
 | C, C, ... from `(3,2)` and `(5,2)` | `(2, 2N+1)` | `∞` | `-∞` | the classically free series |
 
 - **C fixes `p`.** So C-chains are lines of fixed `p`, the direction of the q-stability of transfer orders
   (HYP-9315(f)). Stability in fact holds across all `q` coprime to `p`, not only along one C-chain.
-- **Index coincidence (NUMEROLOGY).** Codex's graphs `H_t` (Seidel radius `t`, order `t^2 + 1`) sit on the unit-gap
-  spine, so `t = 2n + 1` matches `M(n, n+1)`. Petersen `= H_3` matches the root `(1,2)` (`c = -2`, symplectic
+- **Index coincidence (NUMEROLOGY).** Codex's graphs `H_t` (Seidel radius `t`, order `t^2 + 1`) exist only for odd
+  prime powers `t`. They sit on the unit-gap spine, so `t = 2n + 1` matches `M(n, n+1)`. Petersen `= H_3` matches the root `(1,2)` (`c = -2`, symplectic
   fermions), and `H_7` matches Ising. No structural map is claimed.
 - **Frames (OBSERVATION).** In the triple's angle `arctan(b/a)`, the A-chain tends to `π/2`, the C-chain to `0`, and the
   B-chain to `π/4`. These are the coordinate and diagonal reflection lines of `Z^2`, i.e. the two frames of the RP
@@ -109,20 +113,33 @@ In `PG(2,p)` take the conic `C: x^2 + y^2 = z^2`, the reduction of the Pythagore
 **Survey through p = 13.**
 - `G_int(p)` has degree `(p+1)/2` and `G_ext(p)` has degree `(p-1)/2`. So the only cubic cases are `G_int(5)` =
   Petersen and `G_ext(7)` = Coxeter.
-- These are exactly the two famous connected vertex-transitive graphs without a Hamiltonian cycle, apart from
-  `K_1`, `K_2` and the truncations of these two.
+- These are exactly the two famous connected vertex-transitive graphs without a Hamiltonian cycle: apart from `K_1`,
+  `K_2` and the truncations of these two, they are the only known ones.
 - Every other connected conic graph for `p <= 13` was found Hamiltonian, by explicit cycle: `p = 7` interior, and
   `p = 11, 13` both.
 - Petersen's non-Hamiltonicity was re-checked exhaustively. Coxeter's is classical.
-- Triangles: for `p ≡ 1 (mod 4)`, `G_int` is triangle-free and `G_ext` has triangles; for `p ≡ 3 (mod 4)` it is the
-  reverse.
+- **Triangle rule (PROVED).**
+  - A non-conic point `P` is exterior iff `Q(P)` is a nonzero square. Its polar line carries a binary form of
+    discriminant `-1/Q(P)` up to squares.
+  - In the orthogonal basis given by a self-polar triangle, `Q = diag(Q(P_1), Q(P_2), Q(P_3))`. So the three norms
+    multiply to `det Q = -1` modulo squares.
+  - For `p ≡ 1 (mod 4)` the number of interior vertices is even: `G_int` is triangle-free, and the triangles of
+    `G_ext` are the all-exterior self-polar triangles.
+  - For `p ≡ 3 (mod 4)` that number is odd, and `G_ext` is triangle-free.
+  - Checked for `p <= 31` (audit).
 
-**Literature.**
-- The PG(2,5) internal-point structure is classical. Brouwer's table describes the Desargues graph, the bipartite
-  double of Petersen, as the configuration of 10 internal points and 10 elliptic lines of a conic in PG(2,5).
-- Brouwer's Coxeter page uses Fano antiflags (Coxeter 1983; BCN section 12.3). The conic-exterior form was not located
-  in the sources checked, but it is surely known in some form.
-- No novelty is claimed for the finite geometry. The point here is that the Pythagorean form is their common home.
+**Literature (CITED).**
+- Coxeter, *My graph*, Proc. LMS (3) 46 (1983) 117–136, page 1, defines the conjugacy graphs on the internal and
+  external points of a conic in PG(2,q), with valencies `(q±1)/2`.
+  - At q = 5 he names the Petersen graph and five separate triangles.
+  - At q = 7 he names the edge graph of the Heawood graph and the Coxeter graph.
+- This note had cited Coxeter 1983, via Brouwer, only for the Fano construction, and called the conic form "not
+  located". The audit found it in Coxeter's introduction (MISTAKE-641).
+- Brouwer's table also gives the PG(2,5) internal-point configuration: the Desargues graph, the bipartite double of
+  Petersen.
+- The identifications here are replays.
+- The point of this note is that the Pythagorean form is their common home. The tree mod p acts on them (Proposition
+  below).
 
 **Proposition (the tree mod p; PROVED, elementary).** Let `p` be an odd prime. The Berggren matrices generate in
 `PGL(2,p) ≅ SO(3, F_p)` the subgroup `PSL(2,p)` if `p ≡ 1 (mod 4)`, and all of `PGL(2,p)` if `p ≡ 3 (mod 4)`.
@@ -135,20 +152,26 @@ In `PG(2,p)` take the conic `C: x^2 + y^2 = z^2`, the reduction of the Pythagore
 - `det B' = -1` is a square mod `p` exactly when `p ≡ 1 (mod 4)`. ∎
 
 Data: image orders 24 (p=3), 60 (p=5), 336 (p=7), 1320 (p=11), 1092 (p=13).
-- At `p = 5` the image is `A_5`. This is the rotation group of the dodecahedron modulo the antipodal map, i.e. the
-  automorphism group of the hemi-dodecahedral map whose skeleton is Petersen. It has index 2 in `Aut(Petersen) = S_5`.
-  The full `S_5` would need orientation reversal.
+- At `p = 5` the image is `A_5 ≅ (A_5 × {±1})/{±1}`, the automorphism group of the hemi-dodecahedron (order 60), whose
+  skeleton is Petersen. It has index 2 in `Aut(Petersen) = S_5 = PGL(2,5) ≅ SO(3, F_5)`.
+- The odd elements of `S_5` have non-square spinor norm. They swap the two hemi-dodecahedral embeddings of the Petersen
+  graph; they are not orientation reversals.
 - clock_duality's matrix-closure audit confirms 60.
 
 **Cross-links (CITED / ANALOGY).**
 - **Modular images.** The modular representation of the Yang–Lee model `M(2,5)` has projective image
   `PSL(2,5) = A_5`, the icosahedral group: `T` has eigenvalue ratio of order 5, so the image is the (2,3,5) triangle
-  group. For `M(2,7)` it is `PSL(2,7)` (Klein). These are the groups through which the Pythagorean tree acts on the
-  Petersen and Coxeter conic graphs. The (2,5) and (2,7) models are also the first nodes of the classically free C-chains
-  of §1. This is a coincidence of groups; no map is claimed.
+  group. For `M(2,7)` it is `PSL(2,7)` (Klein). - At `p = 5` this is the group through which the Pythagorean tree acts on the Petersen conic graph.
+- At `p = 7` the tree acts through all of `PGL(2,7) = Aut(Coxeter)`, of order 336, by the Proposition. So the
+  coincidence with the modular image holds only at `p = 5`.
+- The (2,5) and (2,7) models are also the first nodes of the classically free C-chains of §1.
+- This is a coincidence of groups; no map is claimed.
 - **Conway–Gordon–Sachs** (classical).
   - Label the vertices of K6 by the 6 conic points. The canonical equivariant bijection, interior point to 3+3 split,
     makes the 10 pairs of disjoint triangles of K6 the vertices of the Petersen graph.
+  - The bijection is unique under both `A_5` and `PGL(2,5)`: the split attached to `P` is the pair of
+    `Stab_(A_5)(P)`-orbits on the conic (audit). The Petersen adjacency is not intrinsic to K6, because all pairs of
+    splits meet in the pattern (1,2). It comes from the projective structure over F_5.
   - CGS: in every spatial embedding of K6, the sum over these 10 pairs of the linking numbers is odd.
   - In abelian Chern–Simons language, with charges such that `<W_T W_T'> = (-1)^lk`, the product over the Petersen
     vertices of `<W(T_v) W(T'_v)>` is `-1` for every embedding (ANALOGY).
@@ -193,15 +216,16 @@ If `μ > 2σ`, then `M_n = 0` for all `n`.
 **Sharpness.** At `μ = 2σ` the lemma fails: `μ = 8, σ = 4` with `M_n = max(0, 4n - 8)` satisfies (i)-(iv) and is
 nonzero. Only the abstracted step is sharp; the full argument may have more structure.
 
-**Margin.**
-- In the theorem, `μ = 2m`, where `m = 4` is the order of the lattice rotation group and the second frame is at angle
-  `π/m`.
-- `σ = 1 + w`: one unit is the planar position cost, and `w` is the largest SO(2)-weight of the field's index
-  representation. For two-forms `w = 1`, matching the note's `e^(2N|η|)`.
-- So the step closes iff **`m > 1 + w`**. On square or hypercubic lattices (`m = 4`) it covers `w <= 2`: two-forms with
-  margin, and symmetric 2-tensors such as a stress tensor.
-- It does not by itself cover `w >= 3`, for instance spin-3 currents. A lattice with `m = 6` would cover `w <= 4`.
-- This is a robustness remark about the argument, not a critique: the note's case `w = 1` has a factor-2 margin.
+**Margin (READING; the lemma itself is PROVED).**
+- For the note's own case, `μ = 2m` with `m = 4` and `σ = 1 + w` with `w = 1`. Here `w` is the largest SO(2)-weight of
+  the two-form index representation, and one unit is the planar position cost. This matches its `e^(2N|η|)` and the
+  frame argument (its eqs. 30-32, 40-43).
+- Within this abstract step, the closing condition reads **`m > 1 + w`**. So the note's case has a factor-2 margin.
+- Extensions are **not** established:
+  - Other tensor types would also need the two-form-specific closedness step (the note's Lemma 4.2 / App. B).
+  - Another lattice changes the frame geometry, and the cone `H >= |P|` and the factor `e^(|η|)` both come from the
+    45-degree reflection.
+- This is a robustness remark about one step of the argument, not a critique.
 
 **The Pythagorean tree here.**
 - The rational rotations of `Z^2` that map the lattice onto a coincidence sublattice are exactly the Pythagorean
@@ -224,19 +248,21 @@ In Theorem A, analytic continuation to imaginary angles turns rotations `R(iη)`
 
 | claim | type |
 |---|---|
-| Berggren tree = minimal models with `pq` even; `c = 13 - 12h/b`; branch limits | FINITE-EXACT (elementary) |
-| `G_int(5)` = Petersen, `G_ext(5)` = 5K3, K6/synthemes/K5-contraction views; `G_ext(7)` = Coxeter, `G_int(7)` = L(Heawood) | FINITE-EXACT (partly classical) |
+| Berggren tree = minimal models with `q - p` odd (so `pq` even; `p = 1` gives the `(1,q)` log series; models with `p, q` both odd are absent); `c = 13 - 12h/b`; branch limits, with the C,A branch tending to `sqrt 3` after A-moves and `2 + sqrt 3` after C-moves | FINITE-EXACT (elementary) |
+| `G_int(5)` = Petersen, `G_ext(5)` = 5K3, `G_ext(7)` = Coxeter, `G_int(7)` = L(Heawood), valencies `(p±1)/2` | CITED (Coxeter 1983), replayed |
+| K6/syntheme dictionary, K5 by contracting a tangent matching | FINITE-EXACT (this note) |
 | deletion K3,3 is not the conic split | FINITE-EXACT (negative) |
+| triangle rule by `p mod 4` | PROVED |
 | Berggren image `PSL(2,p)` / `PGL(2,p)` by `p mod 4` | PROVED |
-| cubic conic graphs = the two non-Hamiltonian vertex-transitive graphs; others Hamiltonian for `p <= 13` | OBSERVATION / FINITE |
-| RP-trick final step: lemma and sharp margin `m > 1 + w` | PROVED (elementary) |
-| frames, modular images, CGS/Wilson loops, so(2,1) thread | ANALOGY / OBSERVATION |
+| the cubic conic graphs are the two known non-Hamiltonian vertex-transitive graphs; the others are Hamiltonian for `p <= 13` (audit: `p <= 31`) | OBSERVATION / FINITE |
+| RP-trick final step: abstract lemma and sharpness | PROVED (elementary) |
+| margin `m > 1 + w` as a reading of the note's argument | READING |
+| frames, modular images (coincidence only at `p = 5`), CGS/Wilson loops, so(2,1) thread | ANALOGY / OBSERVATION |
 
 **Next obligations.**
-1. With the owner's permission, read the Theorem 0 sources and the QED3 manuscripts. Check whether the field
-   representations used ever have `w >= 3`. If so, the margin matters.
-2. Is the conic-exterior construction of the Coxeter graph in the literature?
-3. The minimal models along the √2-Pell and √3-Pell branches: do their transfer-order tables (HYP-9315) show any
+1. With the owner's permission, read the Theorem 0 sources and the QED3 manuscripts. Check which field
+   representations and lattice frames they use, against the reading `m > 1 + w`.
+2. The minimal models along the √2-Pell and √3-Pell branches: do their transfer-order tables (HYP-9315) show any
    regularity in `p` beyond universality?
-4. `G_int(p)` and `G_ext(p)` for larger `p`: Hamiltonicity (Lovász's conjecture), and the spectra as Kloosterman-type
+3. `G_int(p)` and `G_ext(p)` for larger `p`: Hamiltonicity (Lovász's conjecture), and the spectra as Kloosterman-type
    sums. Compare THM-4628 and THM-4701.

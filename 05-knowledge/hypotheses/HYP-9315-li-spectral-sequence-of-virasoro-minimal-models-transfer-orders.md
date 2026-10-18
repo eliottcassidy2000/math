@@ -113,7 +113,9 @@ dim ker π(2N+m) = χ_(2,2N+1)(2N+m) - χ_(p,q)(2N+m) = p(m-3) - p(m-2p+1) - p(m
 length `N+i` and Li degree `L`.
 - **(U)** `T_(p,q)(L,i) = T_(p',q')(L,i)` whenever `m = L + 2i < min(2p-1, 2p'-1)`.
 - **(Q)** For fixed `p`, `T_(p,q)(L,i) = T_(p,q')(L,i)` whenever `m < 2 min(q,q') - 1`.
-- Both windows are sharp. Every same-`p` pair first disagrees exactly at `m = 2 q_min - 1`:
+- Both windows are sharp wherever tested (second audit, W1). The 17 same-`p` pairs whose data reach the threshold all
+  first disagree exactly at `m = 2 q_min - 1`; the other 16 have no data there. (U) is sharp in all 87 pairs with
+  different `p`. Examples:
   - (3,4) vs the rest at 7; (3,5) at 9; (3,7)/(3,8) at 13;
   - (4,5) at 9; (5,6)/(5,7) at 11, at `(L,i) = (9,1)`: `{3:2}` vs `{3:3}`.
 

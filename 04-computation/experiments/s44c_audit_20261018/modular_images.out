@@ -1,0 +1,4 @@
+M(2,5): c = -4.400000, S unitary True, S^2 = 1 True, (ST)^3 scalar True, T projective order 5, |<S,T>/scalars| = 60
+M(2,7): c = -9.714286, S unitary True, S^2 = 1 True, (ST)^3 scalar True, T projective order 7, |<S,T>/scalars| = 168
+M(2,9): c = -15.333333, S unitary True, S^2 = 1 True, (ST)^3 scalar True, T projective order 9, |<S,T>/scalars| = 324
+M(3,4): c = 0.500000, S unitary True, S^2 = 1 True, (ST)^3 scalar True, T projective order 16, |<S,T>/scalars| = 384

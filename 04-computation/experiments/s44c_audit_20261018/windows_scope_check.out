@@ -1,0 +1,19 @@
+same-p pairs: 33; pairs whose common data reach m = 2q_min-1: 17
+  all of those first disagree exactly at 2q_min-1: True
+  untested: (3, 7) (3, 10): common data reach m <= 12 (complete through 12) < 2q_min-1 = 13
+  untested: (3, 7) (3, 11): common data reach m <= 12 (complete through 12) < 2q_min-1 = 13
+  untested: (3, 7) (3, 13): common data reach m <= 12 (complete through 12) < 2q_min-1 = 13
+  untested: (3, 8) (3, 10): common data reach m <= 12 (complete through 12) < 2q_min-1 = 15
+  untested: (3, 8) (3, 11): common data reach m <= 12 (complete through 12) < 2q_min-1 = 15
+  untested: (3, 8) (3, 13): common data reach m <= 12 (complete through 12) < 2q_min-1 = 15
+  untested: (3, 10) (3, 11): common data reach m <= 12 (complete through 12) < 2q_min-1 = 19
+  untested: (3, 10) (3, 13): common data reach m <= 12 (complete through 12) < 2q_min-1 = 19
+  untested: (3, 11) (3, 13): common data reach m <= 12 (complete through 12) < 2q_min-1 = 21
+  untested: (4, 7) (4, 9): common data reach m <= 12 (complete through 12) < 2q_min-1 = 13
+  untested: (4, 7) (4, 11): common data reach m <= 12 (complete through 12) < 2q_min-1 = 13
+  untested: (4, 9) (4, 11): common data reach m <= 12 (complete through 12) < 2q_min-1 = 17
+  untested: (5, 6) (5, 9): common data reach m <= 10 (complete through 10) < 2q_min-1 = 11
+  untested: (5, 7) (5, 8): common data reach m <= 12 (complete through 12) < 2q_min-1 = 13
+  untested: (5, 7) (5, 9): common data reach m <= 10 (complete through 10) < 2q_min-1 = 13
+  untested: (5, 8) (5, 9): common data reach m <= 10 (complete through 10) < 2q_min-1 = 15
+different-p pairs: 87; reaching m = min(2p-1,2p'-1): 87; first disagreement exactly at that m: 87

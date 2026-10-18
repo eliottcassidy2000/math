@@ -1,0 +1,437 @@
+{
+ "p5": {
+  "sizes": [
+   6,
+   15,
+   10
+  ],
+  "Gint_petersen": true,
+  "Gint_intersection_array": [
+   [
+    3,
+    2
+   ],
+   [
+    1,
+    1
+   ]
+  ],
+  "Gext_5K3": true,
+  "ext_to_duads_bijective": true,
+  "syntheme_of_P_equals_duads_of_exterior_points_on_polar": true,
+  "selfpolar_triangles": 20,
+  "selfpolar_types_by_interior_count": {
+   "0": 5,
+   "2": 15
+  },
+  "EEE_triangles_are_synthemes": true,
+  "EEE_synthemes_form_a_total": true,
+  "interior_and_EEE_synthemes_all_15": true,
+  "edge_label_exterior": true,
+  "M_x_perfect_matching_contracts_to_K5_labelled_by_other_conic_points": true,
+  "petersen_perfect_matchings": 6,
+  "berggren_image_order": 60,
+  "SO3_order": 120,
+  "equivariant_bijections_interior_to_splits_A5_berggren": 1,
+  "split_equals_orbits_of_StabA5": true,
+  "StabA5_interior_order": 6,
+  "split_vs_syntheme_pattern": {
+   "((1, 1), (1, 1), (1, 1))": 10
+  },
+  "split_intersection_patterns_A5_berggren": {
+   "adjacent": {
+    "(1, 2)": 15
+   },
+   "nonadjacent": {
+    "(1, 2)": 30
+   }
+  },
+  "equivariant_bijections_interior_to_splits_SO3_full": 1,
+  "split_intersection_patterns_SO3_full": {
+   "adjacent": {
+    "(1, 2)": 15
+   },
+   "nonadjacent": {
+    "(1, 2)": 30
+   }
+  },
+  "StabA5(P)_regular_on_far_vertices": true,
+  "StabA5(P)_orbits_on_conic": [
+   3,
+   3
+  ],
+  "deletion_K33": true,
+  "some_Stab_element_swaps_K33_sides_but_fixes_conic_orbits": true
+ },
+ "p7": {
+  "sizes": [
+   8,
+   28,
+   21
+  ],
+  "Gext_intersection_array": [
+   [
+    3,
+    2,
+    2,
+    1
+   ],
+   [
+    1,
+    1,
+    1,
+    2
+   ]
+  ],
+  "Gext_is_Coxeter_array_3221_1112": true,
+  "Gext_iso_independent_Coxeter": true,
+  "Gint_iso_LHeawood": true,
+  "Gint_intersection_array": [
+   [
+    4,
+    2,
+    2
+   ],
+   [
+    1,
+    1,
+    2
+   ]
+  ],
+  "Coxeter_hamiltonian_exhaustive": false,
+  "Petersen_hamiltonian_exhaustive": false,
+  "berggren_image_order_on_PG2": 336,
+  "Aut_Gext_order": 336
+ },
+ "survey": [
+  {
+   "p": 3,
+   "p_mod_4": 3,
+   "n_int": 3,
+   "n_ext": 6,
+   "int": {
+    "degree": [
+     2
+    ],
+    "triangles": 1,
+    "connected": true,
+    "hamiltonian_cycle_found_and_verified": true
+   },
+   "ext": {
+    "degree": [
+     1
+    ],
+    "triangles": 0,
+    "connected": false
+   },
+   "deg_ok": true,
+   "triangle_rule_ok": true
+  },
+  {
+   "p": 5,
+   "p_mod_4": 1,
+   "n_int": 10,
+   "n_ext": 15,
+   "int": {
+    "degree": [
+     3
+    ],
+    "triangles": 0,
+    "connected": true
+   },
+   "ext": {
+    "degree": [
+     2
+    ],
+    "triangles": 5,
+    "connected": false
+   },
+   "deg_ok": true,
+   "triangle_rule_ok": true
+  },
+  {
+   "p": 7,
+   "p_mod_4": 3,
+   "n_int": 21,
+   "n_ext": 28,
+   "int": {
+    "degree": [
+     4
+    ],
+    "triangles": 14,
+    "connected": true,
+    "hamiltonian_cycle_found_and_verified": true
+   },
+   "ext": {
+    "degree": [
+     3
+    ],
+    "triangles": 0,
+    "connected": true
+   },
+   "deg_ok": true,
+   "triangle_rule_ok": true
+  },
+  {
+   "p": 11,
+   "p_mod_4": 3,
+   "n_int": 55,
+   "n_ext": 66,
+   "int": {
+    "degree": [
+     6
+    ],
+    "triangles": 55,
+    "connected": true,
+    "hamiltonian_cycle_found_and_verified": true
+   },
+   "ext": {
+    "degree": [
+     5
+    ],
+    "triangles": 0,
+    "connected": true,
+    "hamiltonian_cycle_found_and_verified": true
+   },
+   "deg_ok": true,
+   "triangle_rule_ok": true
+  },
+  {
+   "p": 13,
+   "p_mod_4": 1,
+   "n_int": 78,
+   "n_ext": 91,
+   "int": {
+    "degree": [
+     7
+    ],
+    "triangles": 0,
+    "connected": true,
+    "hamiltonian_cycle_found_and_verified": true
+   },
+   "ext": {
+    "degree": [
+     6
+    ],
+    "triangles": 91,
+    "connected": true,
+    "hamiltonian_cycle_found_and_verified": true
+   },
+   "deg_ok": true,
+   "triangle_rule_ok": true
+  },
+  {
+   "p": 17,
+   "p_mod_4": 1,
+   "n_int": 136,
+   "n_ext": 153,
+   "int": {
+    "degree": [
+     9
+    ],
+    "triangles": 0,
+    "connected": true
+   },
+   "ext": {
+    "degree": [
+     8
+    ],
+    "triangles": 204,
+    "connected": true
+   },
+   "deg_ok": true,
+   "triangle_rule_ok": true
+  },
+  {
+   "p": 19,
+   "p_mod_4": 3,
+   "n_int": 171,
+   "n_ext": 190,
+   "int": {
+    "degree": [
+     10
+    ],
+    "triangles": 285,
+    "connected": true
+   },
+   "ext": {
+    "degree": [
+     9
+    ],
+    "triangles": 0,
+    "connected": true
+   },
+   "deg_ok": true,
+   "triangle_rule_ok": true
+  },
+  {
+   "p": 23,
+   "p_mod_4": 3,
+   "n_int": 253,
+   "n_ext": 276,
+   "int": {
+    "degree": [
+     12
+    ],
+    "triangles": 506,
+    "connected": true
+   },
+   "ext": {
+    "degree": [
+     11
+    ],
+    "triangles": 0,
+    "connected": true
+   },
+   "deg_ok": true,
+   "triangle_rule_ok": true
+  },
+  {
+   "p": 29,
+   "p_mod_4": 1,
+   "n_int": 406,
+   "n_ext": 435,
+   "int": {
+    "degree": [
+     15
+    ],
+    "triangles": 0,
+    "connected": true
+   },
+   "ext": {
+    "degree": [
+     14
+    ],
+    "triangles": 1015,
+    "connected": true
+   },
+   "deg_ok": true,
+   "triangle_rule_ok": true
+  },
+  {
+   "p": 31,
+   "p_mod_4": 3,
+   "n_int": 465,
+   "n_ext": 496,
+   "int": {
+    "degree": [
+     16
+    ],
+    "triangles": 1240,
+    "connected": true
+   },
+   "ext": {
+    "degree": [
+     15
+    ],
+    "triangles": 0,
+    "connected": true
+   },
+   "deg_ok": true,
+   "triangle_rule_ok": true
+  }
+ ],
+ "berggren_image": {
+  "sym2_A": true,
+  "sym2_B": true,
+  "sym2_C": true,
+  "Cinv_A_equals_S": true,
+  "S_C_Sinv": [
+   [
+    "1",
+    "0"
+   ],
+   [
+    "-2",
+    "1"
+   ]
+  ],
+  "dets": [
+   "1",
+   "-1",
+   "1"
+  ],
+  "rows": [
+   {
+    "p": 3,
+    "order_PGL2_image": 24,
+    "PSL": 12,
+    "PGL": 24,
+    "matches_prop": true,
+    "order_on_PG2": 24
+   },
+   {
+    "p": 5,
+    "order_PGL2_image": 60,
+    "PSL": 60,
+    "PGL": 120,
+    "matches_prop": true,
+    "order_on_PG2": 60
+   },
+   {
+    "p": 7,
+    "order_PGL2_image": 336,
+    "PSL": 168,
+    "PGL": 336,
+    "matches_prop": true,
+    "order_on_PG2": 336
+   },
+   {
+    "p": 11,
+    "order_PGL2_image": 1320,
+    "PSL": 660,
+    "PGL": 1320,
+    "matches_prop": true,
+    "order_on_PG2": 1320
+   },
+   {
+    "p": 13,
+    "order_PGL2_image": 1092,
+    "PSL": 1092,
+    "PGL": 2184,
+    "matches_prop": true,
+    "order_on_PG2": 1092
+   },
+   {
+    "p": 17,
+    "order_PGL2_image": 2448,
+    "PSL": 2448,
+    "PGL": 4896,
+    "matches_prop": true,
+    "order_on_PG2": null
+   },
+   {
+    "p": 19,
+    "order_PGL2_image": 6840,
+    "PSL": 3420,
+    "PGL": 6840,
+    "matches_prop": true,
+    "order_on_PG2": null
+   },
+   {
+    "p": 23,
+    "order_PGL2_image": 12144,
+    "PSL": 6072,
+    "PGL": 12144,
+    "matches_prop": true,
+    "order_on_PG2": null
+   },
+   {
+    "p": 29,
+    "order_PGL2_image": 12180,
+    "PSL": 12180,
+    "PGL": 24360,
+    "matches_prop": true,
+    "order_on_PG2": null
+   },
+   {
+    "p": 31,
+    "order_PGL2_image": 29760,
+    "PSL": 14880,
+    "PGL": 29760,
+    "matches_prop": true,
+    "order_on_PG2": null
+   }
+  ]
+ }
+}
