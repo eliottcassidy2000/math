@@ -208,6 +208,12 @@ meeting node). A pair of sources first meets at a node `y`, `k_1` and `k_2` step
     matching the observed trend. HYP-9325(B2) is expected to fail eventually; the route below does not use it.
   - Same clock: about `-0.04..-0.06` per level at depths 2-8, decaying to about `-0.01` by depth 15.
 
+  In the full transport (`V = {1}`), the depth-2 cell sums per `N` agree to four digits from `N = 2^18` and to about five from
+  `N = 2^20` up to `4·10^6`: -0.04673 (lag 0), -0.30903 (lag 1), -0.06858 (lag 2), +0.02832 (lag 3)
+  (`pair_series_meets_full_K2.out`). So the per-depth constants
+  exist, as the siblings' `-5/7` does at depth 1. Small-denominator fits such as `-89/288` at lag 1 are suggestive
+  only; no derivation has been made.
+
   An equal-depth, equal-clock pair has the same number of 3-divisions and the same total power of 2 on both paths. Such
   "clock twins" sit at the same scale, so their chain parameters are locked, as for the siblings in the 34/7 and 5/7
   derivation. This is why a residue-table computation per depth is the natural attack on (B1).

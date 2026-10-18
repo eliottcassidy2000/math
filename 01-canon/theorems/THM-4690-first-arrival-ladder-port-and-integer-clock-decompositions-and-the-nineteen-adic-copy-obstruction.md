@@ -1,13 +1,15 @@
 ---
 id: THM-4690
-title: "First arrivals of the signed ROOT transport into a stopping set: the backward ladder, port-diagonal energy, integer-clock Gram and clock spectrum (E_V is the clock spectrum at the Nyquist frequency), and the exact source pair ledger E0 = 34N/7, sibling pairs 5N/7, so E_V = 24N/7 + (non-sibling pair sums) + O(|V| + log N); plus the 19-adic obstruction: no path of 19-integral unit steps joins two translated coefficient copies of clock_duality's cubic golden recipe"
+title: "First arrivals of the signed ROOT transport into a stopping set: the backward ladder, port-diagonal energy, integer-clock Gram and clock spectrum (E_V is the clock spectrum at the Nyquist frequency), and the exact source pair ledger E0 = 34N/7, sibling pairs 5N/7, so E_V = 24N/7 + (non-sibling pair sums) + O(|V| + log N); plus the 19-adic obstruction: no path of unit steps integral at the eight h = 7 primes above 19 joins two translated coefficient copies (or two sheets) of clock_duality's cubic golden recipe"
 status: >
   PROVED. Statements 1-3 are elementary bookkeeping. Statement 4 is an elementary residue computation along B-chains. Statement 5 is a
   valuation argument with exact field checks.
   FINITE-EXACT companions:
-  - the identities of 1-4 hold at every N < 2^27 against the invariant R(N) = H(4N) - H(N) (fap.c, fap_levels.c, fap_lean.c);
+  - the identities of 1-4 hold at every N < 2^27 (fap.c, fap_levels.c), and the pair ledger of 4 at every N < 2^28 (fap_lean.c),
+    with the invariant R(N) = H(4N) - H(N) checked at every N;
   - the constants of 4 are derived symbolically and checked by brute force (source_ledger_constants.py);
-  - the ingredients of 5 are exact arithmetic in the degree-48 field (nineteen_obstruction_check.py).
+  - the ingredients of 5 are exact arithmetic in the degree-48 field and its residue fields F_361
+    (nineteen_obstruction_check.py, nineteen_places.py, diagonal_19adic_check.py).
   The inequalities suggested by the data are HYP-9325 (OPEN).
   No priority is claimed for the bookkeeping. Statement 1 is clock_duality_oct15's R6 setting enlarged by backward closure.
   The constant 34/7 of statement 4 is KNOWN in the repo: it is the d = 0 value E_0 = 4.857143 of THM-4667's ideal energy

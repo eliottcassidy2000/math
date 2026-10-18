@@ -68,5 +68,5 @@ for (k1, k2, D), v in sorted(acc.items()):
 for k1 in range(KMAX + 1):
     for k2 in range(k1, KMAX + 1):
         row = [(D, acc[(k1, k2, D)] / N) for D in range(0, 40) if abs(acc.get((k1, k2, D), 0)) / N >= 0.002]
-        if row: print('  (k1,k2)=(%d,%d): ' % (k1, k2) + '  '.join('D%d %+.4f' % (D, v) for D, v in row))
+        if row: print('  (k1,k2)=(%d,%d): ' % (k1, k2) + '  '.join('D%d %+.6f' % (D, v) for D, v in row))
 print('  totals by lag D (all k1, k2 <= K): ' + '  '.join('D%d %+.4f' % (D, v) for D, v in sorted(tot.items()) if abs(v) >= 0.002))
