@@ -41,7 +41,8 @@ port and `e`-coefficient fibres.
   - every pattern of clock_duality's receipt extends additively (verified on all 30,856 edges);
   - the `v^2` census (every unit difference with a nonzero `v^2` part is a pure `v^2`-axis unit);
   - the additive pre-screen on four larger linear golden sources, up to 2,297,178 mixed edges (a fifth, contact2, was
-    built but its pre-screen did not finish in the session).
+    built but its pre-screen did not finish in the session; S42 finished it with all three contact families
+    coupled, 0/570, see HYP-9289 and preprint_connections_solfeggio_digits_20261017.md section 7).
 - OPEN: six-colour forcing; whether every finite golden source in `K + uK + vK` is additively free.
 
 ## 1. The other end: systems whose boundary is free for a structural reason
@@ -178,7 +179,7 @@ It reproduces clock_duality's source exactly: 146, 15 and 56 edges.
 | contact1: `A' = A + d·U(C)` | 1099 | 10 | 3794 | 15 | 5302 | 465 | 0 |
 | `dM_C2`: also `C' = C + U(C)` | 364 | 174 | 1139 | 532 | 2,297,178 | 465 | 0 |
 | `MM`: `C' = M + M + pentagon` | 364 | 29 | 1139 | 73 | 72,358 | 465 | 0 |
-| contact2: two contact steps | 10,597 | 10 | 44,745 | 15 | 87,846 | (skipped) | not finished (CSP of about 2 x 10^7 clauses) |
+| contact2: two contact steps | 10,597 | 10 | 44,745 | 15 | 87,846 | (skipped) | not finished in S41; S42: 0 (all three families, CaDiCaL) |
 
 Here `U(C)` is the set of unit differences of `C`. With 4 x 10^4 times as many mixed edges, every pattern still extends
 additively, even with `c_1 = c_2`.

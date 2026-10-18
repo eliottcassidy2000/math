@@ -6700,14 +6700,23 @@ OEIS A038375 gives max H(T) over all n-vertex tournaments: 1, 1, 3, 5, 15, 45, 1
   - (C) for all d: verified to d = 12, but the cross-term ratios rise to 0.83-0.90, so there is no geometric rate;
   - an l2 estimate for the joint offset/exponent Syracuse law (clock_duality's question 2);
   - a Lyapunov weight on the cone of actual vectors.
-- S42 frontier (root_frontier_penrose_20261017.md). Stop every source at its first seed <= Y.
-  - PROVED: R(N)^2 <= F_Y E_Y(N), where F_Y = #seeds <= Y.
-  - FINITE-EXACT (every N < 2^23): E_1000/N <= 2.08 and E_100/N <= 2.35, while R^2/N reaches 9.08.
-  - The decomposition shows merges above Y dissipative (-54..-75% of E_0). The termination climb is an arrival term at
-    frozen seeds below about 30-100.
-  - HYP-9290 (OPEN, pre-registered P1-P6 for 2^23 <= N < 2^26): frontier energy cone E_(Y_0)(N) <= C N, which gives
-    |R(N)| <= sqrt(F_(Y_0) C N).
-  - Conditional power saving: Y = N^theta gives N^((1+theta)/2) if E_(N^theta)(N) = O(N).
+- S42 frontier (root_frontier_penrose_20261017.md; audited, MISTAKE-628). Stop every source at its first seed <= Y.
+  - PROVED: R(N)^2 <= F_Y E_Y(N), F_Y = #seeds <= Y (f = 0 off ROOT, clock_duality scope repair). Basin form:
+    c_Y(u) = f(u) R_u(N), so E_Y = sum_u R_u^2 over first-entry basin currents.
+  - FINITE-EXACT (every N < 2^30): E_1000/N <= 2.08 and E_100/N <= 2.63 for N >= 2^12, while R^2/N reaches 9.08.
+    Each basin current satisfies R_u^2/N <= 0.78 (Y = 100), <= 0.22 (Y = 1000).
+  - Merges above Y remove 54-76% of E_0; the large climbs are arrival terms at small seeds (one transient bump at
+    Y = 300-100 out of sample).
+  - HYP-9290 (OPEN; all 16 pre-registered tests passed, incl. certified closed frontiers): frontier energy cone
+    E_(Y_0)(N) <= C N (C >= 10 for an all-N form; C = 2.08 on N >= 4096 at Y_0 = 1000).
+  - OPEN: (i) uniform stopped dissipation + (ii) arrivals O(N) (together they imply the cone); the two-time Gram of
+    first arrivals (clock_duality R5); conditional power saving Y = N^theta.
+- S42 atlas (preprint_connections_solfeggio_digits_20261017.md): L1 (averaged octave bounds give pointwise N^(2/3)),
+  L2 ((-1)^sigma_T(n) = prod (u/3)), L4 (Solfeggio = three-lift fibres), L5 (divergent orbit => Theta(n) not in
+  Q(phi); transcendental if low complexity, citation to verify).
+- S42 six colours: all three golden contact families coupled are additively free (0/570, contact2 finished); OPEN:
+  a difference-forcing layer (all five nonzero phi-differences in every contact direction; 4 of 22 directions reached)
+  or a no-go theorem for these golden sources.
 - Concurrent clock_duality_oct15 work (root_positive_transport_20261017g.md, P1-P4) gives the l1 side. P4's slow
   packet costs only O(N 2^-d) energy.
 - Six colours. The new note is golden_additive_boundary_20261017.md, and HYP-9289 (OPEN) states the conjecture.

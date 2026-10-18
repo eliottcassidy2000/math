@@ -105,6 +105,7 @@ def main():
             continue
         V = [v[0] for v in cf['vertices']]
         maxV = max(V)
+        assert M > maxV, 'KMAX too small: run() reads clock parities up to max(V) (S42 audit F19)'
         inV = np.zeros(maxV + 1, dtype=np.bool_)
         inV[V] = True
         fu, fs = closed_frontier_map(M, inV, maxV)

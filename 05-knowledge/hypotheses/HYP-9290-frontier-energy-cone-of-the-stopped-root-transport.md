@@ -2,30 +2,40 @@
 id: HYP-9290
 title: "Frontier energy cone: stop every source of the signed ROOT transport at its first seed <= Y; for a fixed frontier height Y_0 (about 100-1000) the stopped energy E_(Y_0)(N) = sum_u c_(Y_0)(u)^2 stays below C N for every N. By the one-line frontier lemma R(N)^2 <= F_Y E_Y(N), this gives |R(N)| <= sqrt(F_(Y_0) C N) without any input from the termination regime"
 status: >
-  OPEN (CONJECTURE). Lemma F is PROVED (Cauchy-Schwarz on the stopped invariant).
+  OPEN (CONJECTURE). Lemma F is PROVED (Cauchy-Schwarz over the frontier, with f = 0 off the ROOT basin; scope as repaired
+  by clock_duality_oct15, 93d0c8803c). Equivalent basin form: c_Y(u) = f(u) R_u(N), with R_u the ROOT current restricted to
+  the first-entry basin of u. So E_Y = sum_u R_u^2 and R = sum_u R_u.
 
-  Evidence (FINITE-EXACT, every N < 2^23):
-  - sup E_1000(N)/N = 2.08 and sup E_100(N)/N = 2.35 over 2^12 <= N < 2^23;
-  - the unstopped ratio R(N)^2/N reaches 9.08 (N = 7910).
+  Evidence (FINITE-EXACT, every N < 2^30, invariant checked at every N; independently reproduced to 2^28 by the S42 audit):
+  - sup E_1000(N)/N = 2.0775 (N = 4155) and sup E_100(N)/N = 2.6210 (N = 48,251,574) over 2^12 <= N < 2^30;
+  - R(N)^2/N reaches 9.08 (N = 7910) and 7.48 (N = 133,970,036);
+  - every single basin current has R_u^2/N <= 0.78 (Y = 100) and <= 0.22 (Y = 1000) over 2^10 <= N < 2^28.
 
-  The decomposition E_Y = E_0 + 2(MM_hi + MM_lo + MF), synchronous in depth, was computed at four N with N >= 6Y:
-  - merges above the frontier remove 54-75% of E_0;
-  - same-step merges at frozen seeds add at most 0.011 N;
-  - arrivals at frozen seeds add at most 0.24 N for Y >= 100.
+  Decomposition E_Y = E_0 + 2(MM_hi + MM_lo + MF), synchronous in depth, at the listed N with N >= 6Y:
+  - merges above the frontier remove 54-76% of E_0;
+  - same-step merges at frozen seeds add at most 0.012 N;
+  - arrivals at frozen seeds add at most 0.25 N for Y >= 100.
 
-  The coherent climbs that make R(N)^2/N large (the termination regime of THM-4667) are arrivals at frozen seeds
-  below about 30-100.
+  The large climbs to R(N)^2/N (the termination regime of THM-4667) are arrival terms at frozen seeds below about
+  30-100. One out-of-sample profile shows a transient bump between Y = 300 and 100 that cancels again below 30.
 
-  Pre-registered 2026-10-17, before the scan beyond 2^23: tests P1-P6 below. ALL SIX PASSED (scan of every
-  N < 2^26, invariant checked at every N). New record E_100/N = 2.62 at N = 48,251,574 (inside P2's 3.0).
-  P7-P10, pre-registered for 2^26 <= N < 2^28 before that scan, ALL PASSED: over every N < 2^28,
-  E_1000/N <= 1.30 and E_100/N <= 1.80 in octaves 2^26-2^27, while R^2/N reaches 7.48 (N = 133,970,036).
+  Pre-registered tests: P1-P16, each committed before its scan (order verified by the S42 audit). ALL SIXTEEN PASSED.
+  - P1-P10: height frontiers to 2^28.
+  - P11-P12: clock_duality's certified closed frontiers.
+  - P13-P14: plateau statistics.
+  - P15-P16: height frontiers for 2^28 <= N < 2^30.
 session: opus-2026-10-17-S42
 source: 05-knowledge/results/root_frontier_penrose_20261017.md
 scripts:
   - 04-computation/experiments/root_transport_frontier_energy_20261017.py (every N, several Y; checks R(N) at every N)
   - 04-computation/experiments/root_transport_frontier_profile_20261017.py (profiles in Y at fixed N)
   - 04-computation/experiments/root_transport_frontier_decomposition_20261017.py (cross-term decomposition)
+  - 04-computation/experiments/root_transport_frontier_energy_big_20261017.py (memory-lean scan, P1-P10)
+  - 04-computation/experiments/root_transport_frontier_energy_huge_20261018.py (int64-guarded copy, P15-P16)
+  - 04-computation/experiments/root_transport_closed_frontier_energy_20261017.py (closed frontiers, P11-P12)
+  - 04-computation/experiments/root_transport_frontier_statistics_20261017.py (P13-P14)
+  - 04-computation/experiments/root_transport_basin_currents_check_20261018.py, root_transport_basin_maxima_20261018.py (basin form)
+  - audit: 04-computation/experiments/s42_audit_20261017/REPORT.md (a1-a8 independent checks)
 related: [THM-4667, HYP-9288, HYP-9283, THM-4658, THM-4581]
 ---
 
@@ -45,10 +55,27 @@ there. Seeds `<= Y` never move. Define `c_Y(u)` by summing only sources that act
 
 *Proof.* At finite depth, the invariant is the sum of the frozen and moving parts. Every initially ROOT-supported source eventually hits the frontier; every source that never hits has f=0. Thus the f-weighted moving remainder vanishes after the finitely many ROOT-supported arrivals, even if nonhitting sources persist. The frozen vector stabilizes after all hitting arrivals. Cauchy-Schwarz over the F_Y frozen seeds proves the inequality. This does not assert universal entry. ∎
 
+**Basin form (PROVED).** For a source `m`, let `u(m)` be the first seed `<= Y` on the transport path of `seed(m)`.
+- Along every path, the transport sign is `σ(m -> u) = f(m) f(u)`, because `f(P(s)) = (-1)^a f(s)` and stripping
+  B-chains preserves `f`.
+- Hence `c_Y(u) = f(u) R_u(N)`, with the **basin current**
+  `R_u(N) = Σ_(m odd <= 4N, u(m) = u) f(m) k_N(m)`.
+- Consequently `E_Y(N) = Σ_u R_u(N)^2` and `R(N) = Σ_u R_u(N)`.
+
+So Lemma F is Cauchy-Schwarz over the first-entry basins at height `Y`. For fixed `Y`, (A) is equivalent, up to the
+factor `F_Y`, to "every basin current is `O(sqrt N)`".
+
+Checks:
+- `root_transport_basin_currents_check_20261018.py`: 1522 seed identities, 0 violations.
+- `root_transport_basin_maxima_20261018.py`: `max_u R_u^2/N <= 0.78` (`Y = 100`) and `<= 0.22` (`Y = 1000`) in every
+  octave `2^10-2^27`.
+
 ## Statement
 
 - **(A, frontier cone)** There are `Y_0` and `C` with `E_(Y_0)(N) <= C N` for all `N >= 1`. The data suggest
-  `Y_0 = 1000`, `C = 2.1` on the tested large-source range N>=4096. The original C=2.4 suggestion at Y_0=100 is REFUTED by the incoming N=48,251,574 record E_100/N>2.62; C=3 is the revised large-source test. These are not all-N constants: at N=1, E_Y(1)=10 for every Y>=3, so the all-N formulation needs C>=10 and a separately paid finite prefix. Consequence of the stated all-N hypothesis: `|R(N)| <= sqrt(F_(Y_0) C N)`. The numerical bound `28 sqrt(N)` uses Y_0=1000,C=2.1 only on its stated large-source range.
+  `Y_0 = 1000`, `C = 2.08` on the tested large-source range `N >= 4096` (measured supremum 2.0775 at `N = 4155` over
+  `2^12 <= N < 2^30`). The original C=2.4 suggestion at Y_0=100 is REFUTED by the incoming N=48,251,574 record E_100/N>2.62; C=3 is the revised large-source test. These are not all-N constants: at N=1, E_Y(1)=10 for every Y>=3, so the all-N formulation needs C>=10 and a separately paid finite prefix. Consequence of the stated all-N hypothesis: `|R(N)| <= sqrt(F_(Y_0) C N)`. The numerical bound `28 sqrt(N)` uses `Y_0 = 1000` and `C = 2.08` (`sqrt(375 · 2.08) = 27.93`), only on its stated
+large-source range; `C = 2.1` would give `28.1 sqrt(N)`.
 - **(A', logarithmic)** The same with `C` replaced by `C log log (N + 16)`.
   - Heuristic: if the `F_Y` frontier coefficients fluctuate like independent Gaussian sums, `E_Y/N` deviates from its
     mean by a factor `1 + O(F_Y^(-1/2))`.
@@ -67,13 +94,16 @@ there. Seeds `<= Y` never move. Define `c_Y(u)` by summing only sources that act
 ## Why
 
 1. **The termination regime.** Transport after freezing never enters `E_Y`; arrival terms at frozen seeds still do. The coherent merging that makes `R(N)^2/N` large happens when a
-   few dozen frontier currents finally coalesce into ROOT. In the decomposition it is an *arrival* term against frozen
-   seeds below about 30-100. For example, at `N = 6904411`, `Y = 30`: `MF = +2.92 N`, which accounts for the climb
+   few dozen frontier currents finally coalesce into ROOT.
+   - In the decomposition it is an *arrival* term against frozen seeds below about 30-100.
+   - The out-of-sample profile at the `R^2/N = 7.48` record (`N = 133,970,036`) agrees.
+   - At the `E_100` record (`N = 48,251,574`) there is instead a transient bump of `+1.02 N` between `Y = 300` and 100,
+     which cancels again below 30 while `R^2/N` stays 1.33 (S42 audit a8). For example, at `N = 6904411`, `Y = 30`: `MF = +2.92 N`, which accounts for the climb
    from `E_100 = 1.37 N` to `E_30 = 4.09 N`.
-2. **Above the frontier the transport is dissipative.** `MM_hi` lies between `-3.65 N` and `-2.64 N` at every computed
+2. **Above the frontier the transport is dissipative.** `MM_hi` lies between `-3.66 N` and `-2.64 N` at every computed
    `(N, Y)` with `Y <= 10^4 <= N/6`. It is concentrated in the first third of the stopped depth (the ideal regime of
    THM-4667, sibling anti-correlation).
-3. **Relation to HYP-9288.** (A) is not implied by HYP-9288 and does not imply it. Its advantage: it only needs the
+3. **Relation to HYP-9288.** No implication is known in either direction between (A) and HYP-9288. The advantage of (A): it only needs the
    transport *down to a fixed scale*. The old S41 matching test omitted ideal-only support. The [complete repair](../results/root_sparse_boundary_module_20261017i.md), R1--R5, gives O(d^2) dyadic error sites, a growing-depth window and a first-return renewal identity; it does not yet bound this stopped energy uniformly.
 4. **Conditional power saving.** With `Y = N^θ`, `|R(N)| <= sqrt(F_Y E_Y)`, which is `O(N^((1+θ)/2))` whenever
    `E_(N^θ)(N) = O(N)`.
@@ -122,18 +152,20 @@ A failure of P1 or P2 would not refute (A'), but would weaken the case for an ab
 | `max E_100/N` | 2.082 | 1.586 | **2.621** | P2 `<= 3.0` | PASSED (new record, above 2.35) |
 | `max E_10000/N` | 1.400 | 1.415 | 1.380 | P3 `<= 1.55` | PASSED |
 | `mean E_1000/N` | 1.164 | 1.038 | 1.281 | P4 `in [1.0, 1.5]` | PASSED |
-| `mean E_30/N` | 2.054 | 1.088 | 0.998 | P5 two of three `<= 2.0` | PASSED (two of three) |
+| `mean E_30/N` | 2.053 | 1.088 | 0.998 | P5 two of three `<= 2.0` | PASSED (two of three) |
 | `max R^2/N` | 3.078 | 2.634 | 4.362 | | |
 
 **P6** (decomposition at `Y = 1000`, `root_transport_frontier_decomposition_p6_20261017.out`). At the six arg-max
 points `N = 9666088, 32532811, 47930131` (`E_1000`) and `N = 8429844, 32184394, 37675352` (`R^2`):
-- `MM_hi/N` lies in `[-3.633, -3.575]`, all `<= -3.0`;
-- `|MF|/N <= 0.245`, all `<= 0.5`.
+- `MM_hi/N` lies in `[-3.633, -3.574]`, all `<= -3.0`;
+- `|MF|/N <= 0.246`, all `<= 0.5`.
 
-PASSED. The `E_Y` values agree with the incremental scan to four decimals; the two codes are independent.
+PASSED. The `E_Y` values agree with the incremental scan to four decimals. The two codes share only the
+initial-coefficient formula, and the audit confirmed both from the definition.
 
-`E_100/N` behaves like `E_30/N` did at `2^22`: its octave-`2^25` mean is 1.69, against 1.0-1.4 elsewhere. The
-coherent arrival climb reaches up to height about 100 in that octave. Both the maxima at `Y = 1000` and the record at
+`E_100/N` in octave `2^25` has mean 1.69. The other octave means of `E_100/N` range over 0.83-1.71, and octave `2^12`
+also has 1.71, so `2^25` is not exceptional. At its record point the profile shows a transient bump between `Y = 300`
+and 100 that cancels below 30 (see Why, item 1). Both the maxima at `Y = 1000` and the record at
 `Y = 100` stay inside the pre-registered bounds.
 
 ## Pre-registered P7-P10 (written before the scan of `2^26 <= N < 2^28`)
@@ -148,7 +180,7 @@ coherent arrival climb reaches up to height about 100 in that octave. Both the m
 | octave | `2^26` | `2^27` | test | verdict |
 |---|---|---|---|---|
 | `max E_1000/N` | 1.299 | 1.245 | P7 `<= 2.08` | PASSED |
-| `max E_100/N` | 1.385 | 1.794 | P8 `<= 3.0` | PASSED |
+| `max E_100/N` | 1.384 | 1.794 | P8 `<= 3.0` | PASSED |
 | `max E_10000/N` | 1.263 | 1.268 | P9 `<= 1.55` | PASSED |
 | `mean E_1000/N` | 1.214 | 1.099 | P10 `in [1.0, 1.5]` | PASSED |
 | `max R^2/N` | 7.483 | 7.370 | | |
@@ -173,13 +205,13 @@ Stopping on first entry into `V` leaves no return kernel, and `R(N)^2 <= |V| E_V
 
 | octave | `2^12` | `2^13` | `2^14` | `2^16` | `2^18` | `2^20` | `2^22` | `2^23` | `2^24` | `2^25` | test | verdict |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `max E_(V_1000)/N` | **2.468** | 2.109 | 1.790 | 1.513 | 1.393 | 1.534 | 1.376 | 1.328 | 1.228 | 1.421 | P11 `<= 2.5` | PASSED |
+| `max E_(V_1000)/N` | **2.468** | 2.109 | 1.790 | 1.513 | 1.393 | 1.534 | 1.375 | 1.328 | 1.228 | 1.421 | P11 `<= 2.5` | PASSED |
 | `max E_(V_100)/N` | 2.470 | 1.944 | 1.955 | 1.810 | 1.483 | 1.376 | 1.787 | 1.921 | 1.262 | **2.554** | P12 `<= 3.5` | PASSED |
 
 The invariant `R(N) = Σ_(u ∈ V) f(u) c_V(u)` was checked at every `N`.
 
 The renewal-free closed frontiers behave like the height frontiers:
-- `E_(V_1000)` is within about 15% of `E_1000` octave by octave;
+- the octave maxima of `E_(V_1000)` are within 19% of those of `E_1000` (largest gap 18.8%, in octave `2^12`);
 - the `2^25` octave that carried the `E_100` record carries the `E_(V_100)` maximum too.
 
 So the frontier cone is equally supported in clock_duality's R6 setting, where stopped and unstopped transport agree
@@ -206,13 +238,46 @@ Predictions, with `N` sampled on a regular grid:
 | 100 | 61,440 | 38 | 12.2 | 1.241 | 0.502 | 0.315 | 2.617 | 2.07 | 0.42 |
 | 1000 | 15,360 | 375 | 113.9 | 1.150 | 0.152 | 0.088 | 1.445 | 2.25 | 0.38 |
 
-- **P13 PASSED.** The kurtosis is in `[2, 5]`, but at the low end: the coefficients are sub-Gaussian.
-- **P14 PASSED.** The model standard deviation is 1.6-1.7 times the observed one, within the factor 2.
-- **Reading.**
-  - The independent-Gaussian model captures the order of magnitude. `F_eff` is about a third of `F_Y`, because the
-    energy concentrates on a third of the seeds: for `Y = 100`, ROOT itself carries 20%, and seed 81 carries 12%.
-  - The real plateau is about 40% *more stable* than independence predicts. The normalised coefficients are
-    substantially correlated (mean `|corr|` 0.4, up to 0.95), and some have persistent means of order their RMS. The
-    correlations reduce rather than inflate the fluctuations of the sum.
+- **P13 PASSED.** The pooled ratio is in `[2, 5]`. As the audit showed (F6), the statistic is the raw, uncentred
+  moment ratio, and the normalised coefficients have persistent means of up to 0.84 and 0.95 of their RMS.
+  - Gaussians with those means would give 2.74 and 2.67.
+  - The centred kurtosis is 2.40 and 2.75.
+  - So "sub-Gaussian" is not supported.
+- **P14 PASSED.** The model standard deviation is 1.6-1.7 times the observed one, within the factor 2. (P14 did not
+  pre-specify the sampling grid.)
+- **Reading** (corrected after the S42 audit).
+  - Successive samples are almost identical (lag-1 autocorrelation 0.9998 and 0.9992; effective sample size about
+    5-6), so all of these statistics are descriptive only.
+  - `F_eff` is about a third of `F_Y`, and 90% of the energy sits on about half the seeds (19 of 38, 205 of 375). For
+    `Y = 100`, ROOT itself carries 20% and seed 81 carries 12%.
+  - The plateau fluctuates less than the independent centred-Gaussian model predicts. The audit splits `Var(E)` into a
+    per-seed diagonal part and a cross-seed part:
+    - `0.0992 = 0.1123 - 0.0130` for `Y = 100`;
+    - `0.00765 = 0.00912 - 0.00147` for `Y = 1000`.
+  - In standard-deviation terms, the ratio to the model goes 1 → 0.67 → 0.63 (`Y = 100`) and 1 → 0.63 → 0.57
+    (`Y = 1000`). The model fails mainly through its centring assumption; the negative cross-seed covariance is a
+    smaller second effect.
   - For the (A') heuristic, the maxima sit 4.4 (`Y = 100`) and 3.4 (`Y = 1000`) observed standard deviations above
-    the mean over these samples.
+    the sample mean.
+
+## Pre-registered P15-P16 and outcome (every `N` in `[2^28, 2^30)`)
+
+The registration (`05-knowledge/results/root_transport_frontier_prereg_p15_p16_20261018.json`, committed before the
+scan) predicted:
+- **P15.** `max E_1000/N <= 2.08`, `max E_100/N <= 3.0` and `max E_10000/N <= 1.55`.
+- **P16.** Each octave mean of `E_1000/N` lies in `[0.9, 1.5]`.
+
+The registration names `root_transport_frontier_energy_big_20261017.py 29 ... (with overflow guard)`. The run used its
+int64-guarded copy `root_transport_frontier_energy_huge_20261018.py`, which reproduces the big script's octave values
+exactly at `KMAX = 22` (0 overflow flags at `KMAX = 29`).
+
+| octave | `2^28` | `2^29` | test | verdict |
+|---|---|---|---|---|
+| `max E_1000/N` | 1.333 | 1.221 | P15 `<= 2.08` | PASSED |
+| `max E_100/N` | 1.370 | 1.196 | P15 `<= 3.0` | PASSED |
+| `max E_10000/N` | 1.306 | 1.235 | P15 `<= 1.55` | PASSED |
+| `mean E_1000/N` | 1.183 | 1.022 | P16 `in [0.9, 1.5]` | PASSED |
+| `max R^2/N` | 3.877 | 1.646 | | |
+
+All sixteen pre-registered tests have passed. The `Y = 1000` octave means for `2^15-2^29` lie in 1.02-1.35, with no
+monotone trend. They are the plateau, not yet evidence of decay or growth.

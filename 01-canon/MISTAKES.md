@@ -18487,3 +18487,69 @@ the ambient space.
   - Minor fixes: the wording of the lambda derivation; credit for the "N not in K" argument to clock_duality's G1
     proof; the e^2 identity uses only e^2 = -Z/conj(Z); the scope of the ue/ve census.
   - Report: 04-computation/experiments/s41_audit2_20261017/REPORT.md.
+
+## MISTAKE-628 (2026-10-18, opus-2026-10-17-S42; clock_duality_oct15's concurrent scope audit, independent S42 referee) -- a lemma's side condition was justified by a bound that does not imply it, displayed bounds were rounded inward, an observation was called a consequence and non-implications were asserted without proof, a Cauchy-Schwarz equality case was reversed, zeros were confused with poles, and several readings of the data were stronger than the data
+
+- **Affected claims:**
+  - root_frontier_penrose_20261017.md (sections 2-5);
+  - HYP-9290 (status, (A), Why items 1-3, P6 and P13-P14 readings);
+  - preprint_connections_solfeggio_digits_20261017.md (L1, section 1b item 6, section 2, L5, tests-run items 3-4);
+  - the S42 section of HYP-9289.
+- **First failed implications:**
+  - (i) **Side condition.**
+    - L1 said "A/16 < X holds because |R(N_0)| <= 9 N_0", but that bound gives only A/16 < 1.125 X.
+    - The "at least A/16 integers on one side" count was also wrong.
+    - Repair: the trivial bound |R| <= 4N + 2. R is 4-Lipschitz (provable: the k = 4N + 4 term cancels the
+      w(N+1)f(N+1) term). So L1 becomes |R(N_0)| <= max((32D)^(1/3), 2(D/X)^(1/2)).
+  - (ii) **Inward rounding.**
+    - 0.011 should be 0.01125; -3.65 should be -3.6527; the end -3.575 of [-3.633, -3.575] should be -3.5747; 0.245
+      should be 0.24541; |rho| <= 0.15/0.07 should be 0.1530/0.0724.
+    - "C = 2.1" was paired with 28 sqrt(N), but sqrt(375 x 2.1) = 28.06.
+    - Three double roundings.
+    - clock_duality had already caught 27.9 against 27.93, and 2.62 against 2.6209.
+  - (iii) **Typing.**
+    - "Consequence: does not depend on the return kernel" is a finite observation.
+    - "Neither implies the other" was asserted without proof.
+    - "Why the deficit (PROVED structurally)": the mechanism is heuristic.
+    - L5 was typed PROVED while containing a citation flagged as unchecked.
+    - Conversely, a valid one-line implication ((i) + (ii) => (A)) was labelled heuristic.
+  - (iv) **Equality case.** Lemma F's equality is the maximally spread state c_Y = (R/F_Y) f on all F_Y seeds, not
+    "E = R^2 on one seed".
+  - (v) **Wrong object.**
+    - "F = G/D has no zero-free half-plane": the zeros of D are poles of F, and the correct statement is that D has no
+      zero-free strip left of Re s = 1.
+    - THM-4660 concerns the second Riesz mean.
+  - (vi) **Descriptions stronger than the data.**
+    - "Every large climb happens below Y = 30-100" rested on four profiles. At N = 48,251,574 there is a transient
+      +1.02 N bump between Y = 300 and 100, cancelled below 30.
+    - The plateau ranges were too narrow: "flat at 1.20-1.34" and "1.2-1.5 N", against 1.02-1.35.
+    - "Against 1.0-1.4 elsewhere" was wrong; the range is 0.83-1.71.
+    - "Sub-Gaussian" was read from an uncentred moment ratio, with persistent means and an effective sample size of
+      5-6.
+    - "Correlations reduce the fluctuations": the reduction comes mainly from centring.
+    - The Solfeggio branching table was read in the classical odd tree instead of the seed transport.
+    - "No consistent pattern" for the golden classes: the ±2 class is consistently above its seed share.
+  - (vii) **Scope.** Found first by clock_duality_oct15 (Codex first-hit frontier scope audit, 93d0c8803c; entry
+    above):
+    - f was undefined off the ROOT basin;
+    - cross terms were described as above-frontier only;
+    - C = 2.4 / 2.1 were suggested for an all-N cone, but N = 1 gives E_Y = 10, and the 2.62 record refuted 2.4.
+- **Missing coordinates:**
+  - the trivial bound that actually proves a side condition;
+  - outward rounding of every displayed bound;
+  - which tree (classical odd tree or seed transport);
+  - centred versus raw moments, and the effective sample size;
+  - zeros versus poles.
+- **Survivors:**
+  - Lemma F and its basin form (c_Y(u) = f(u) R_u, E_Y = sum R_u^2).
+  - Every FINITE-EXACT number, independently reproduced to 2^28 by the referee's own code.
+  - All sixteen pre-registered verdicts (commit order verified for P1-P14).
+  - L1's conclusion (sharpened), L2-L4, L6.
+  - Every six-colour count: an independent direct encoding gives 0/570, and the positive control gives 465/570.
+- **Evidence:** 04-computation/experiments/s42_audit_20261017/REPORT.md and its scripts a1-a8.
+  - F22: the referee's hyp_versions/ files were swept into session commit 5bfb565ed0; this is harmless.
+- **Lesson:**
+  - Before stating a side condition, write down the trivial bound that actually proves it.
+  - Round every displayed bound outward when writing it, never later.
+  - Before saying a structural fact "shows up", re-derive it in the object actually measured.
+  - A statistic from 60,000 strongly autocorrelated samples is descriptive, not a test of a distribution.

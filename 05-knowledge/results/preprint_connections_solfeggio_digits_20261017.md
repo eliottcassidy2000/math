@@ -23,12 +23,13 @@ passed to `N < 2^28`. This note is the wider atlas.
 - ANALOGY, a structural pattern-match that claims no implication;
 - NUMEROLOGY, a coincidence of numbers with no mechanism found.
 
-**Proved here (elementary).**
+**Proved here (elementary; repaired after the independent S42 audit, `04-computation/experiments/s42_audit_20261017/REPORT.md`, MISTAKE-628).**
 - L1, Lipschitz amplification.
 - L2, the transport sign is a Legendre symbol mod 3, and the stopping-time parity is a product of such symbols.
 - L3, the Kathara/Fibonacci factorisation as the seed map.
 - L4, the mod-9 dictionary (Solfeggio = three-lift fibres, golden classes, CRT, `K_6 = K_(3,3) ⊔ 2K_3`).
-- L5, digit corollaries for divergent orbits (chains of cited theorems through THM-4528).
+- L5, digit corollaries for divergent orbits (chains of cited theorems through THM-4528; item 3 rests on a citation
+  not yet checked against the paper).
 - L6, the CRT form of six-colourings and the odd-reflection remark.
 
 ## 1. The quasi-Riemann preprint, read in full
@@ -80,24 +81,37 @@ cited by S31 and THM-4566).
 
 ### 1b. Structural pattern-matches (ANALOGY unless marked)
 
-1. **Amplification ↔ Lipschitz amplification (L1, PROVED).** The current `R(N) = H(4N) - H(N)` is 8-Lipschitz in `N`:
-   ```
-   R(N+1) - R(N) = Σ_(k=4N+1)^(4N+4) w(k) f(k) - w(N+1) f(N+1),   with |w| <= 2.
-   ```
-   Among four consecutive `k`, at most two have `w(k) = 2` (residue 2 mod 3), so the first sum is at most 6 in
-   absolute value, and `|ΔR| <= 8`. A value `|R(N_0)| = A` is therefore *replicated*: `|R(N)| >= A/2` for
-   `|N - N_0| <= A/16`, exactly as the preprint replicates `A_1(D)` in the rows `u = p^6`.
+1. **Amplification ↔ Lipschitz amplification (L1, PROVED; constant sharpened after the S42 audit, F8-F9).** The
+   current `R(N) = H(4N) - H(N)` is 4-Lipschitz in `N`.
+   - The defining difference is
+     ```
+     R(N+1) - R(N) = Σ_(k=4N+1)^(4N+4) w(k) f(k) - w(N+1) f(N+1).
+     ```
+   - The last terms cancel: `4N + 4 ≡ N + 1 (mod 3)` gives equal weights, and `f(4m) = f(m)` (two halvings). So
+     `ΔR = Σ_(k=4N+1)^(4N+3) w(k) f(k)`.
+   - Among three consecutive `k` exactly one has `w = 2`, so `|ΔR| <= 2 + 1 + 1 = 4`. The bound is attained (max 4 over
+     `N < 2^26`).
+   - So a value `|R(N_0)| = A` is *replicated*: `|R(N)| >= A/2` for `|N - N_0| <= A/8`, exactly as the preprint
+     replicates `A_1(D)` in the rows `u = p^6`.
 
-   **Lemma L1.** Let `D(X) = Σ_(X <= N < 2X) R(N)^2` and suppose `A/16 < X`, which holds for `N_0 >= 1` because
-   `|R(N_0)| <= 9 N_0`. Then for `N_0` in `[X, 2X)`,
+   **Lemma L1.** Let `D(X) = Σ_(X <= N < 2X) R(N)^2`. For `N_0` in `[X, 2X)`,
    ```
-   |R(N_0)| <= 4 D(X)^(1/3).
+   |R(N_0)| <= max( (32 D(X))^(1/3), 2 (D(X)/X)^(1/2) ),     with (32)^(1/3) < 3.18.
    ```
-   *Proof.* At least `A/16` consecutive integers on one side of `N_0` stay inside `[X, 2X)`. On them `R^2 >= A^2/4`, so
-   `D(X) >= A^3/64`. ∎
+   *Proof.*
+   - Let `A = |R(N_0)|` and `h = ⌊A/8⌋`.
+   - The integers of `[X, 2X)` within distance `h` of `N_0` number at least `min(h + 1, X)`: either one side has room
+     for `h` more, or the whole octave is within distance `h`.
+   - On them `|R| >= A - 4h >= A/2`, so `D(X) >= min(h + 1, X) A^2/4`.
+   - If `h + 1 <= X`, then `D >= (A/8)(A^2/4)`, so `A <= (32 D)^(1/3)`.
+   - Otherwise `D >= X A^2/4`, so `A <= 2 (D/X)^(1/2)`. ∎
 
-   **Consequence.** HYP-9288 (B), an averaged octave bound `D(X) <= X^2 (a + b log X)`, already gives the pointwise
-   power saving `|R(N)| ≪ N^(2/3) (log N)^(1/3)`. The averaged statement is far weaker than the pointwise `sqrt(N)`
+   The audit checked the lemma in every octave `2^6-2^25`. The trivial bound is `|R(N)| <= 4N + 2`; the observed
+   maximum of `|R|/N` is 2.
+
+   **Consequence.** HYP-9288 (B) bounds the octave traces `sup_d T_d(X) >= D(X)`. So an averaged octave bound
+   `D(X) <= X^2 (a + b log X)` already gives the pointwise power saving `|R(N)| ≪ N^(2/3) (log N)^(1/3)`. The second
+   term of L1 is then only `O((X log X)^(1/2))`. The averaged statement is far weaker than the pointwise `sqrt(N)`
    target, yet it yields a fixed exponent below 1. The preprint's `11/12` has exactly this shape: replication count
    times `|A|^2` is at most the family mean square. The frontier lemma of the companion note is the `l2` alternative
    that reaches exponent `1/2` pointwise, given the frontier cone.
@@ -124,16 +138,19 @@ cited by S31 and THM-4566).
      leaving cubic Gauss sums; quadratic twists return in the transfer.
    - The ROOT transport sign is itself a quadratic character: see L2 in section 4. Six colours are `Z/6 = Z/2 × Z/3`
      (L6, section 7).
-6. **Collatz has no quasi-RH for its parity sum, and that is the point.**
+6. **Collatz has no quasi-RH for its parity sum, and that is the point** (object corrected after the S42 audit, F10).
    - THM-4659: the zeros of `D(s) = 1 + 2^(-s) + (3/2)^s/3` approach `Re s = 1` at every parity-matched near-return of
-     `log2 3`, with `1 - Re ρ ≈ 199 ε^2`. So the Collatz parity sum `F = G/D` has no zero-free half-plane of any width.
-   - THM-4660: if the mod-3 discrepancy `H` has square-root energy, then all non-square-root behaviour of the parity sum
-     is carried by these zeros.
-   - So the analogue of the preprint's theorem is not a half-plane for `F`. It is a square-root ("RH-strength", not
-     merely quasi) bound for the numerator side `H`, whose dyadic differences are the ROOT current. HYP-9288 and
-     HYP-9290 are exactly such statements.
-   - The preprint shows that a fixed-width half-plane is reachable for `ζ` and all Dirichlet `L`. For Collatz the
-     corresponding object (`D`) provably has none, and the Diophantine near-returns are the reason.
+     `log2 3`, with `1 - Re ρ ≈ 199.165 ε^2`. Such near-returns with `ε -> 0` exist because `(2r+1) log2 3 mod 2` is
+     dense.
+   - So `D` has no zero-free strip of any width to the left of `Re s = 1`. Under THM-4660's hypothesis, its zeros are the
+     *poles* of the parity Dirichlet series `F = G/D`.
+   - THM-4660: if the mod-3 discrepancy `H` has square-root energy, then the second Riesz mean of the parity sum is an
+     explicit sum over these zeros plus `O(x^(1/2 + δ))`.
+   - So the analogue of the preprint's theorem is not a half-plane for `D` or `F`. It is a square-root ("RH-strength", not
+     merely quasi) bound for the numerator side `H`, whose two-octave differences `H(4N) - H(N)` are the ROOT current.
+     HYP-9288 and HYP-9290 are exactly such statements.
+   - The preprint shows that a fixed-width zero-free half-plane is reachable for `ζ` and all Dirichlet `L`. For Collatz
+     the corresponding object `D` provably has no zero-free strip, and the Diophantine near-returns are the reason.
 7. **The Eisenstein base field and THM-4285.** The preprint lives in `O = Z[ω]`: primary `n ≡ 1 (mod 3)`, and six units
    representing `(O/3)^×`.
    - THM-4285 (codex, the JC(2) programme) computes the theta series of `A_2 ⊕ A_2`, two Eisenstein norms, with
@@ -157,15 +174,17 @@ proof": area `A`, mass `m`, deficit `μ = m - c`, outer radius `R_t`) sharpens o
 | mass `m(t)`, decreasing | energy `E_d`, decreasing in the ideal regime |
 | capacity `c_t` = the minimal Dirichlet energy carried by the frontier | `R(N)^2 / F` = the minimal energy carrying the invariant on `F` seeds (the Cauchy-Schwarz minimiser) |
 | mass-capacity inequality `μ = m - c >= 0` | **Lemma F**: `E_Y - R^2/F_Y >= 0` |
-| `m' = -2μ`, the deficit drives the mass down | `E_(d+1) - E_d = 2 Cross_d`; measured: merges above `Y` remove 54-75% of `E_0` |
+| `m' = -2μ`, the deficit drives the mass down | `E_(d+1) - E_d = 2 Cross_d`; measured: merges above `Y` remove 54-76% of `E_0` |
 | outer radius `R_t`; enclosing spheres | the frontier height `Y`, i.e. `F_Y`; the final Cauchy-Schwarz |
 | odd reflection `ψ = ±φ` across the doubled seam | sibling pairs `{s, 2s+1}` with opposite clock parities (THM-4667 statement 8; clock_duality's R5), and, in six colours, `c_2 = -c_1` (section 7) |
-| singular frontier; "regularity at a smooth obstacle" | ROOT and the few small seeds where arrivals are coherent (frontier decomposition: the climb is an arrival term below `Y ≈ 30-100`) |
+| singular frontier; "regularity at a smooth obstacle" | ROOT and the few small seeds where arrivals are coherent (frontier decomposition: the large climbs are arrival terms below `Y ≈ 30-100`, apart from transient bumps) |
 
 **Lemma F as mass-capacity.** In the preprint, mass-capacity is the hard positive-mass input, proved by doubling. Here
-it is one line of Cauchy-Schwarz, and the hard part moves to the energy bound (HYP-9290). The equality case
-`m = c` (Schwarzschild) corresponds to all frontier coefficients being proportional to `f(u)`. That is the fully
-coherent final state, `E = R^2` on one seed.
+it is one line of Cauchy-Schwarz, and the hard part moves to the energy bound (HYP-9290).
+- The equality case `m = c` corresponds to `c_Y(u) = (R/F_Y) f(u)` on every frontier seed, with `E_Y = R^2/F_Y`: the
+  **maximally spread** state (corrected after the S42 audit, F11).
+- The one-seed state `E = R^2` is only the trivial case `F = 1`, the end of the unstopped flow.
+- In basin form (frontier note, section 2), equality means that all basin currents `R_u` are equal.
 
 ## 3. Kathara, Fibonacci and golden clocks are one object: the golden-mean shift
 
@@ -180,8 +199,8 @@ coherent final state, `E = R^2` on one seed.
 - **The seed map realises this split.** Seeds have `a ∈ {1, 2}` only, since `3s + 1 ≡ 4, 2, 6 (mod 8)` for
   `s ≡ 1, 3, 7`. Each strip `u -> (u - 1)/4` of the B-chain spends two halvings, so `j` counts strips. So the seed
   transport runs on Fibonacci words, and the B-chain is the even register.
-- **Parity words are golden-mean words.** THM-4528 (S15) proves that `T(n) = n/2, 3n+1` parity words never contain
-  `11`. Read as blocks `0` and `10`, they are compositions with parts `{1, 2}`: the same Fibonacci restriction again.
+- **Parity words are golden-mean words.** THM-4528 (S15) proves that parity words never contain `11`. Here `T` is the
+  non-shortcut map `n/2, 3n+1`; L2 in section 4 uses the shortcut map `n/2, (3n+1)/2`. Read as blocks `0` and `10`, they are compositions with parts `{1, 2}`: the same Fibonacci restriction again.
 - **The golden clock is this shift's transition matrix.** The golden-mean shift has transition matrix
   `Q = [[1,1],[1,0]]`, clock_duality's golden clock. The number of `T`-parity words of length `l` is a Fibonacci
   number. Modulo 9 these counts repeat with Pisano period 24, and `Q^12 = -I (mod 9)` makes them change sign after 12
@@ -296,9 +315,12 @@ circle as a natural boundary.
 So "no divergent orbit" is a statement about the *algebraic nature of a digit generating function*. This is exactly
 the kind of theorem the pasted block asks for.
 
-**L5 (PROVED, as a chain of cited theorems).** For `n >= 1`:
+**L5 (items 1-2: PROVED from THM-4528 and K. Schmidt's theorem; item 3: CITED, with the β-expansion citation
+unverified).** For `n >= 1`:
 1. **Boundedness is a field condition.** The orbit is bounded ⟺ `Θ(n) ∈ Q(φ)`.
-   - Golden-mean words are greedy base-`φ` expansions (THM-4528 G1).
+   - The parity word of `n >= 1` is the greedy base-`φ` expansion of `Θ(n)`. It contains no `11` (THM-4528 G1). It
+     also does not end in `(10)^∞`: such a tail would force `T^k(n) = -1`, the 2-adic point following `(10)^∞`.
+     (Golden-mean words in general need not be greedy: `0.(10)^∞ = 1`.)
    - For the Pisot number `φ`, every element of `Q(φ) ∩ [0, 1)` has an eventually periodic expansion (K. Schmidt
      1980; classical for `φ`). The converse is a geometric sum.
    - An eventually periodic parity word means an eventually periodic orbit, by 2-adic uniqueness of the point
@@ -308,9 +330,11 @@ the kind of theorem the pasted block asks for.
 3. **Low complexity forces transcendence.** If, moreover, the parity word of a divergent orbit has subword complexity
    with `liminf p(k)/k < ∞` (for example Sturmian, or automatic), then:
    - `x(n)` is transcendental (Adamczewski-Bugeaud, Annals 2007);
-   - `Θ(n)` is transcendental (Adamczewski-Bugeaud, *Dynamics for β-shifts and Diophantine approximation*, ETDS 27
-     (2007) 1695-1711, for a Pisot base; quoted via the subspace-theorem survey, statement to be checked against the
-     paper before any further use).
+   - `Θ(n)` is transcendental, by Adamczewski-Bugeaud, *Dynamics for β-shifts and Diophantine approximation*, ETDS 27
+     (2007) 1695-1711, for a Pisot base.
+     - The statement used is: for `β` Pisot or Salem and `ξ` algebraic with `ξ ∉ Q(β)`, `liminf p(n)/n = ∞`.
+     - It is quoted via the subspace-theorem survey and is UNVERIFIED against the paper; it must be checked before any
+       further use.
 
    A divergent Collatz orbit with a *simple* parity pattern would manufacture transcendental numbers. One with a
    *complex* pattern is unconstrained by these theorems.
@@ -341,9 +365,9 @@ the kind of theorem the pasted block asks for.
      "Hypothesis A".
 3. *"If the generating function of the digit sequence has an elementary inverse, does that constrain normality?"*
    Yes, strongly, in the direction **away** from normality:
-   - **Characteristic 0.** If the digit generating function `Σ a_n z^n` (bounded integer digits) is D-finite, which
-     covers algebraic functions and elementary functions with finitely many singularities, then by Pólya-Carlson the
-     number is rational.
+   - **Characteristic 0.** Suppose the digit generating function `Σ a_n z^n` (bounded integer digits) is D-finite (for
+     example algebraic). It then has finitely many singularities and continues across an arc of the unit circle, so by
+     Pólya-Carlson the number is rational. Any generating function that continues across an arc suffices.
    - **Characteristic p.** If it is algebraic over `F_p(z)`, then by Christol the digits are automatic. The subword
      complexity is then `O(n)`, so the number is **never disjunctive and never normal**, and by Adamczewski-Bugeaud it
      is rational or transcendental.
@@ -362,8 +386,8 @@ the kind of theorem the pasted block asks for.
      - *Too well approximated by rational functions ⟹ the function is rational*: Kronecker (Hankel determinants),
        Borel-Dwork, Pólya-Carlson, Szegő. THM-4528 uses this family, and S15b's "Borel-Dwork 1" criticality is the
        same family.
-   - **Hermite's proof of the transcendence of `e`.** It is the prototype of "degree grows with precision": Padé
-     approximants of degree `n` with error `z^(2n+1)/(2n)!`.
+   - **Hermite's proof of the transcendence of `e`.** It is the prototype of "degree grows with precision". The `[n/n]`
+     Padé approximant of `e^z` has error `(n!)^2/((2n)!(2n+1)!) z^(2n+1)`.
    - **In our setting.** THM-4632 is a theorem of exactly the asked shape. Near the frequencies of the convergents of
      `log2 3`, the elementary function `R(s)` grows with exponent `2(μ - 1)`. S29's rational approximants along the
      convergents need degree about `q_n` to resolve frequency `≈ q_n`. The irrationality measure of `log2 3` is the
@@ -391,24 +415,50 @@ the kind of theorem the pasted block asks for.
   - Lesson for forcing: a coefficient graph whose *every* proper colouring is "odd-reflection-like" on the contact
     directions, i.e. rigid with forced zero shifts, would reduce forcing to the two-distance graph. That graph already
     blocks 465 patterns.
+  - The zero-shift statement is exact for the `v`-contact in `A + uC + vC`. With the reflected and `e^2` contacts the
+    shifts involve further layers.
 - **Where the cross-fibre edges are.**
   - THM-4668: the degree-192 direction `e` is Cartesian over `K + uK + vK`.
   - S41's product census found exactly two cross-unit families, the reflected `uv` contact and the `e^2` contact. They
     are the only known cross-fibre edges.
-  - The design loop's next runs are (section 8 of the session letter):
-    - both families together;
-    - both together with rigid (Eisenstein `M + M`) coefficient sets;
-    - the contact2 source, which did not finish in S41.
+
+**S42 runs (FINITE-EXACT; CaDiCaL 1.9.5; HYP-9289 has the table).**
+- **All three families coupled.** The five-coordinate source `A' + uC' + vC' + (uv)C' + e^2 C'` blocks **0 of 570**
+  patterns, with shared and with independent coefficient colourings, for:
+  - base × base;
+  - base × MM;
+  - dM × MM (144,716 directed `v`-contact patterns);
+  - contact1 × MM;
+  - contact2 × base. This is S41's unfinished recipe: `|A'| = 10,597`, a CSP of `1.12 × 10^7` clauses, solved in
+    2,203 s (shared) and 1,961 s (independent).
+- **Caveat** (broadened after the audit, F16). These graphs are subgraphs of the unit-distance graphs on the same
+  addresses. No census of differences with both `uv`- and `e^2`-parts has been made. Beyond the base difference sets,
+  even the single-family edge sets are not known to be complete. A block would still need certification on the full
+  graph.
+- **Reflection-forcing experiment.** Enlarging the `uv`-layer to `W = C' + conj(d)({0} ∪ U)` (211 points), and once more
+  (2,113 points, 460-896 `conj(d)q`-pairs per direction), still blocks 0 of 570.
+  - In the solver's colouring of the 2,113-point layer, **4 of the 22 directions show all five nonzero differences**.
+    So that solution has zero shift forced on those directions.
+  - The other 18 directions leave a nonzero difference value missing.
+  - The difference-forcing target is therefore partly met on individual directions. It is not met uniformly.
+- **Fixed coefficient colourings are not enough** (sampled). Over 400 coefficient colourings produced by the solver,
+  none extends more than 120 of the 570 base patterns; the union is also 120. The joint additive solver extends all 570.
+  The additive freedom is pattern-adaptive in the coefficient layers.
+- **Design requirement recorded.** Forcing needs a layer whose every proper colouring shows all five nonzero
+  differences in *every* contact direction (a difference-forcing gadget). Alternatively, it needs a no-go theorem for
+  these golden sources.
 
 ## 8. What is new here, and what is credited
 
 **New (elementary).**
-- L1, Lipschitz amplification: averaged octave bounds give pointwise `N^(2/3)`.
+- L1, Lipschitz amplification. `R` is 4-Lipschitz (proved), and `|R(N_0)| <= max((32 D)^(1/3), 2 (D/X)^(1/2))`, so averaged
+  octave bounds give pointwise `N^(2/3)`.
 - L2, the transport sign equals `(u/3)`, and the clock parity is a product of Legendre symbols mod 3 along the orbit.
 - L3, the identification of the Kathara, Fibonacci, THM-4528 golden-word and golden-clock structures as one
   golden-mean shift.
 - L4, the mod-9 CRT dictionary, and the exact `C = 9` / `C = 27` link to the signed LRC (THM-413/417).
-- L5, the digit corollaries for divergent orbits.
+- L5, the digit corollaries for divergent orbits. Items 1-2 are proved; item 3 relies on a citation not yet checked
+  against the paper.
 - L6, the CRT form and the odd-reflection remark.
 
 **Credited.**
@@ -426,13 +476,15 @@ the kind of theorem the pasted block asks for.
 1. **L2.** Zero violations among all odd `n < 10^6` (exact).
 2. **Fibonacci mod 9.** The digital-root cycle, the complementary halves and the positions of 3, 6, 9 are as stated.
 3. **L1 against the data, every `N < 2^26`.**
-   - The observed maximum of `|R(N+1) - R(N)|` is 4; the proved bound is 8.
-   - The amplified bound `4 D(X)^(1/3)` exceeds the octave maximum of `|R|` by factors 4.6 (`2^6`) to 36 (`2^25`).
-   - That is about `2 X^(1/6)`, the predicted looseness of exponent `2/3` against the true `1/2`.
+   - The maximum of `|R(N+1) - R(N)|` is 4. This is now the proved bound (audit F9; the first draft proved 8).
+   - The amplified bound `(32 D(X))^(1/3)` exceeds the octave maximum of `|R|` by factors of about 3.7 (`2^6`) to 29
+     (`2^25`).
+   - That growth is roughly `X^(1/6)`, the predicted looseness of exponent `2/3` against the true `1/2`.
 4. **Character structure of the frontier coefficients** (FINITE-EXACT at `N = 7910, 66463, 2^20, 6904411,
-   133970036`; `Y = 100, 1000`).
-   - **Correlation with the Legendre symbol.** The correlation of `c_Y(u)` with `(u/3)` is small: `|ρ| <= 0.15` at
-     `Y = 100` and `<= 0.07` at `Y = 1000`.
+   133970036`; `Y = 100, 1000`; numbers corrected after the audit, F13-F14).
+   - **Correlation with the Legendre symbol.** The statistic `ρ = Σ (u/3) c_Y(u) / sqrt(F_Y E_Y)` is small:
+     `|ρ| <= 0.16` at `Y = 100` and `<= 0.08` at `Y = 1000`. The true cosine with the character vector is `1.23 ρ`,
+     i.e. at most 0.19 and 0.09.
    - **The Solfeggio fibres are not equal.** At `Y = 1000` the energy shares against the seed shares are:
 
      | fibre of `u` mod 3 | energy share | seed share |
@@ -441,22 +493,28 @@ the kind of theorem the pasted block asks for.
      | `{1, 4, 7}` | 0.37-0.43 | 0.333 |
      | `{2, 5, 8}` | **0.17-0.23** | 0.331 |
 
-     All five values of `N` agree; `Y = 100` is noisier but has the same deficit.
-   - **Why the deficit (PROVED structurally).** Seeds `u ≡ 2 (mod 3)` are exactly those with the singleton preimage
-     `(2u - 1)/3 < u` (THM-4667 statement 8; the classical odd-preimage rule of the Collatz tree). That preimage lies
-     below every frontier containing `u`, so its whole branch stops before reaching `u`.
-   - **What stays unexplained.** The near-equality of the `{0}` and `{1}` shares is not explained; a naive branch-mass
-     count would favour `{1}`.
-   - **The three fibres are the three branching types of the Collatz tree.** An odd `u ≡ 2 (mod 3)` has the
-     odd preimage `x = (2u - 1)/3`, with `3x + 1 = 2u`. An odd `u ≡ 1 (mod 3)` has one only through `3x + 1 = 4u`.
-     Multiples of 3 have none.
-
-     | Solfeggio fibre | branching type |
-     |---|---|
-     | 3-6-9 | leaves |
-     | 4-1-7 | the `4u` branch |
-     | 5-2-8 | the `2u` branch |
-
-     This is an exact reading of the Solfeggio digits, and it shows up in the frontier energy.
-   - **Golden classes mod 9.** They show no consistent pattern (shares 0.13-0.27 against 0.22).
-5. **Still open.** The six-colour design loop on the coupled cross-fibre families of section 7 (see the session letter).
+     All five values of `N` agree. At `Y = 100` the deficit holds at 4 of the 5 values; at `N = 7910` the 2-5-8 share
+     is 0.343 against a seed share of 0.316.
+   - **Mass, not coherence** (`root_transport_frontier_fibre_mass_20261018.py`, FINITE-EXACT at `N = 2^20, 6904411,
+     2^24`).
+     - The energy share of each fibre tracks the share of sources that *first land* there: energy share divided by
+       landing share lies in 0.74-1.17.
+     - The landing shares are 0.414, 0.361, 0.225 at `Y = 1000` and 0.540, 0.289, 0.171 at `Y = 100`, for the fibres
+       0, 1, 2.
+     - The diagonal (no-interference) energy is exactly `8N`.
+   - **Why the 2-5-8 fibre receives less** (the structural fact is PROVED; that it yields the observed shares is a
+     HEURISTIC mechanism).
+     - Seeds `u ≡ 2 (mod 3)` have the singleton preimage `(2u - 1)/3 < u` (THM-4667 statement 8). For the other
+       classes the least preimage exceeds `u`.
+     - In the seed transport the heads of `u` sit at `4^(j+1) u/3` with `j ≡ 1 - u (mod 3)`. So the first head of a
+       2-fibre seed is at `64u/3`, of a 0-fibre seed at `16u/3`, of a 1-fibre seed at `4u/3`.
+     - The singleton lies below every frontier containing `u`, so that branch never arrives.
+     - A harmonic first-entry model (mass `∝ 1/s`) predicts 16-20% landing on the 2-fibre. It does not robustly order
+       the 0 and 1 fibres.
+   - **Correction of the first draft's branching table.** The first draft read the fibres as the branching types of the
+     *classical* odd Collatz tree (3-6-9 = leaves). In the *seed transport* measured here, every seed `u ≡ 0 (mod 3)`
+     has preimages through `B(u) = 4u + 1`, the least near `16u/3` (e.g. `P(17) = P(35) = 3`). The 0-3-6 fibre carries
+     the largest share. Only the 2-5-8 row of that reading shows up in the frontier energy.
+   - **Golden classes mod 9: a weak but consistent pattern.** At `Y = 1000` the `±2` class is above its seed share
+     (0.221) at all five `N` (0.234-0.274), and `±1`, `±4` are below at all five.
+5. **Six colours.** See section 7 (S42 runs).

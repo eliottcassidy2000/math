@@ -69,7 +69,7 @@ All three known families were put into one five-coordinate source `A' + uC' + vC
 
 Every case below blocks **0 of 570** patterns, with shared and with independent coefficient colourings:
 
-| `A'` | `C'` | mixed patterns (`v` / reflected / `e^2`) |
+| `A'` | `C'` | directed mixed patterns (`v` / reflected / `e^2`) |
 |---|---|---|
 | base | base | 112 / 16 / 84 |
 | base | MM (Eisenstein-rigid, 29 points) | 2,072 / 296 / 224 |
@@ -77,17 +77,33 @@ Every case below blocks **0 of 570** patterns, with shared and with independent 
 | contact1 | MM | 329,340 / 296 / 9,664 |
 | contact2 (10,597 points, S41's unfinished recipe) | base | 175,692 / 16 / 44,864 (CSP of 1.12e7 clauses; 2,203 s shared, 1,961 s independent) |
 
-**Subgraph caveat.** There is no census of differences with both `uv`- and `e^2`-parts, so these graphs are subgraphs
-of the unit-distance graphs on the same addresses. A block would still need certification on the full graph.
+The pattern counts are *directed*. For example `dM × MM` has 144,716 = 2 × 72,358, the undirected S41 figure.
+
+**Subgraph caveat** (broadened after the S42 audit, F16).
+- There is no census of differences with both `uv`- and `e^2`-parts.
+- S41's single-coordinate `uv` and `e^2` censuses covered only the base difference sets (`|A| = 54`, `|C| = 10`). For
+  the MM, dM, contact1 and contact2 sources, even the single-family edge sets are not known to be complete.
+
+So all these graphs are subgraphs of the unit-distance graphs on the same addresses. A block would still need
+certification on the full graph, and freedom here does not prove freedom there. The independent audit re-encoded the
+problem directly (1.65 M clauses) and confirmed 0/570, with 20 decoded colourings validated. Its positive control (the
+plain two-distance graph) blocks 465/570.
 
 **Reflection-forcing experiment.** If every proper colouring of the `uv`-layer `W` showed all five nonzero
 `conj(d)q`-differences, the reflected contact would force odd reflection (zero shifts), and the `v`-contact would
 reduce to plain 6-colouring of the two-distance graph, which blocks 465 patterns.
 - Enlarging `W` to `C' + conj(d)({0} ∪ U)` (211 points) and then once more (2,113 points, 460-896 pairs per
   direction) still blocks 0 of 570.
-- In the solver's colourings of `W`, every direction keeps at least one difference value missing (set sizes 4-5).
+- In the solver's colouring of the 2,113-point layer, **4 of the 22 directions show all five nonzero differences**,
+  so that solution has zero shift forced on those directions (audit F17). The Cd independent run has 2 such
+  directions.
+- The remaining directions leave a nonzero difference value missing, which the coefficient colourings exploit.
+- **Pattern-adaptivity (sampled).** Over 400 solver-produced coefficient colourings, no single fixed one extends more
+  than 120 of the 570 base patterns, and their union is also 120. The joint solver extends all 570
+  (golden_forcing_fixed_coeff_20261018.py).
 
-This adds a precise design target to the **Tests** below: a *difference-forcing* layer.
+This adds a precise design target to the **Tests** below: a *difference-forcing* layer, i.e. one forcing all five
+nonzero differences in every contact direction, not only in some.
 
 ## Tests
 
