@@ -1,0 +1,84 @@
+{
+  "status": "FINITE-EXACT solver verdicts; SAT witnesses directly checked",
+  "cnf_sha256": "4cf7ad07bd2ebaa83f1f0728648b4b287d8275e136e7d50ec59902f0d4d1896c",
+  "coordinate_sizes": [
+    1220,
+    250,
+    246,
+    250,
+    250,
+    250
+  ],
+  "original_axis_edges": 6076,
+  "witness_checks": 3755,
+  "scope": "Each local branch tested against all selected-family and axis constraints; original ports unquotiented. No complete ambient unit-distance census.",
+  "distinct_witnesses": 3755,
+  "groups": [
+    {
+      "group": 0,
+      "counts": {
+        "SAT": 375
+      }
+    },
+    {
+      "group": 1,
+      "counts": {
+        "SAT": 375
+      }
+    },
+    {
+      "group": 2,
+      "counts": {
+        "SAT": 375
+      }
+    },
+    {
+      "group": 3,
+      "counts": {
+        "SAT": 375
+      }
+    },
+    {
+      "group": 4,
+      "counts": {
+        "SAT": 375
+      }
+    },
+    {
+      "group": 5,
+      "counts": {
+        "SAT": 375
+      }
+    },
+    {
+      "group": 6,
+      "counts": {
+        "SAT": 375
+      }
+    },
+    {
+      "group": 7,
+      "counts": {
+        "SAT": 375
+      }
+    },
+    {
+      "group": 8,
+      "counts": {
+        "SAT": 375
+      }
+    },
+    {
+      "group": 9,
+      "counts": {
+        "SAT": 375
+      }
+    },
+    {
+      "group": 10,
+      "counts": {
+        "SAT": 375
+      }
+    }
+  ]
+}

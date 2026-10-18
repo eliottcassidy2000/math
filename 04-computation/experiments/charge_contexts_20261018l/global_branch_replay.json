@@ -1,0 +1,9 @@
+{
+  "status": "FINITE-EXACT solver-free certificate replay",
+  "witnesses": 3755,
+  "branches": 4125,
+  "clauses_per_witness": 364517,
+  "total_original_clause_checks": 1368761335,
+  "original_vertices_per_witness": 2466,
+  "cnf_sha256": "4cf7ad07bd2ebaa83f1f0728648b4b287d8275e136e7d50ec59902f0d4d1896c"
+}

@@ -1,0 +1,11 @@
+sizes [1220, 250, 246, 250, 250, 250] axis edges [4063, 395, 412, 396, 395, 415]
+golden {'cartesian_constraints': 879100, 'support_groups': 5, 'arity': 3}
+reflected {'cartesian_constraints': 127500, 'support_groups': 5, 'arity': 3}
+Y_contact {'cartesian_constraints': 653750, 'support_groups': 5, 'arity': 3}
+v_square {'cartesian_constraints': 145000, 'support_groups': 5, 'arity': 3}
+u_square {'cartesian_constraints': 261000, 'support_groups': 11, 'arity': 3}
+u_square_times_v {'cartesian_constraints': 172560, 'support_groups': 11, 'arity': 3}
+u_times_v_square {'cartesian_constraints': 25633184000, 'support_groups': 11, 'arity': 6}
+Y_contact_times_v {'cartesian_constraints': 113750, 'support_groups': 5, 'arity': 3}
+SAT variables 16422 clauses 364517 support groups 58
+blocked 0 checks 0 implied contacts 0
