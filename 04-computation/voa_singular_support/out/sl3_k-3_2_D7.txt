@@ -1,0 +1,11 @@
+sl3 k=-3/2: singular vectors at weight 2, charge (1, 1): 1
+D=    0 dimV=      1 dimI=      0 dimL=      1 arcHS=      1 ker=    0 gens(Li,charge,#)=[] (0.0s)
+D=    1 dimV=      8 dimI=      0 dimL=      8 arcHS=      8 ker=    0 gens(Li,charge,#)=[] (0.0s)
+D=    2 dimV=     44 dimI=      8 dimL=     36 arcHS=     36 ker=    0 gens(Li,charge,#)=[(0, (1, -2), 1), (0, (-1, -1), 1), (0, (-1, 2), 1), (0, (-2, 1), 1), (0, (1, 1), 1), (0, (2, -1), 1), (0, (0, 0), 2)] (0.0s)
+D=    3 dimV=    192 dimI=     64 dimL=    128 arcHS=    128 ker=    0 gens(Li,charge,#)=[] (0.0s)
+D=    4 dimV=    726 dimI=    332 dimL=    394 arcHS=    394 ker=    0 gens(Li,charge,#)=[] (0.1s)
+D=    5 dimV=   2464 dimI=   1376 dimL=   1088 arcHS=   1088 ker=    0 gens(Li,charge,#)=[] (1.3s)
+D=    6 dimV=   7704 dimI=   4928 dimL=   2776 arcHS=   2776 ker=    0 gens(Li,charge,#)=[] (11.0s)
+D=    7 dimV=  22528 dimI=  15872 dimL=   6656 arcHS=   6656 ker=    0 gens(Li,charge,#)=[] (95.3s)
+generators (D, Li, charge, #): none at positive Li
+Li-0 generators (D, #): [(2, 8)]

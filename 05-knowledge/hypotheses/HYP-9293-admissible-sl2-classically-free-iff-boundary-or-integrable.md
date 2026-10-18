@@ -18,6 +18,9 @@ status: >
     - k = -1/3 (5/3): weight 15.
   - Second layer (weight (a-1)b + 4, Li 3): spin a-2 when b = 2; spins a and a-2 when b >= 3.
   The case k = -1/2 is upgraded to an exact statement in THM-4672.
+  PRE-REGISTERED TEST PASSED: k = 3/2 (a/b = 7/2, D_0 = 12) was predicted before the run to fail first at weight
+  15 with one spin-6 multiplet. Observed: non-arc generators at weight 15, Li 2, charges -12..12, total 13.
+  The boundary level k = -4/3 is still free at weight 14 (the run to 16 is in progress).
   Literature (2026-10-18): boundary-level classical freeness is EXPECTED but unproved (Andrews-van Ekeren-Heluani 2020;
   Adamovic-Moller, Math. Z. 2026, Remark 6.3). Integrable levels are PROVED (van Ekeren-Heluani 2021). No statement
   about non-boundary admissible levels was found.

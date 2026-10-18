@@ -277,10 +277,20 @@ class SingularSupport:
         ws = sorted({k[0] for k in self.basis})
         return ws
 
-    def run(self, gen_modes, extra_ops=()):
+    def run(self, gen_modes, extra_ops=(), cone_top=None):
         """gen_modes: creation modes whose action generates I from lower weights
-        (together with extra_ops = weight-0 operators applied to closure)."""
+        (together with extra_ops = weight-0 operators applied to closure).
+        cone_top = (Dtop, charge): only compute the blocks in the dependency cone of that block
+        (blocks (D, c) with c = charge - (sum of Dtop - D generator charges)); requires all
+        generators to have weight 1 and gen_modes = all x_{-1}."""
         alg, P = self.alg, self.P
+        needed = None
+        if cone_top is not None:
+            Dtop, ctop = cone_top
+            chs = sorted(set(alg.chg))
+            needed = {Dtop: {tuple(ctop)}}
+            for D in range(Dtop - 1, -1, -1):
+                needed[D] = {tuple(a - b for a, b in zip(c, g)) for c in needed[D + 1] for g in chs}
         I = {}       # (Delta, charge) -> list of rows (RREF)
         grI = {}     # (Delta, Li, charge) -> list of dict symbols (RREF in block)
         self.J = {}  # (Delta, Li, charge) -> basis of arc ideal block
@@ -297,6 +307,10 @@ class SingularSupport:
         for D in self.weights():
             t0 = time.time()
             keys = [k for k in self.basis if k[0] == D]
+            if needed is not None:
+                if D not in needed:
+                    continue
+                keys = [k for k in keys if k[1] in needed[D]]
             # build candidate vectors for each charge
             cand = {k: [] for k in keys}
             for k in keys:

@@ -1,0 +1,23 @@
+N=2 k=2 c=3/2: singular vectors at weight 3 charge 0: 1
+D=    0 dimV=      1 dimI=      0 dimL=      1 arcHS=      1 ker=    0 gens(Li,charge,#)=[] (0.0s)
+D=    1 dimV=      1 dimI=      0 dimL=      1 arcHS=      1 ker=    0 gens(Li,charge,#)=[] (0.0s)
+D=  3/2 dimV=      2 dimI=      0 dimL=      2 arcHS=      2 ker=    0 gens(Li,charge,#)=[] (0.0s)
+D=    2 dimV=      3 dimI=      0 dimL=      3 arcHS=      3 ker=    0 gens(Li,charge,#)=[] (0.0s)
+D=  5/2 dimV=      4 dimI=      0 dimL=      4 arcHS=      4 ker=    0 gens(Li,charge,#)=[] (0.0s)
+D=    3 dimV=      6 dimI=      1 dimL=      5 arcHS=      5 ker=    0 gens(Li,charge,#)=[(0, (0,), 1)] (0.0s)
+D=  7/2 dimV=     10 dimI=      2 dimL=      8 arcHS=      8 ker=    0 gens(Li,charge,#)=[(Fraction(0, 1), (-1,), 1), (Fraction(0, 1), (1,), 1)] (0.0s)
+D=    4 dimV=     15 dimI=      3 dimL=     12 arcHS=     12 ker=    0 gens(Li,charge,#)=[(0, (0,), 1)] (0.0s)
+D=  9/2 dimV=     20 dimI=      6 dimL=     14 arcHS=     14 ker=    0 gens(Li,charge,#)=[] (0.0s)
+D=    5 dimV=     28 dimI=     10 dimL=     18 arcHS=     20 ker=    2 gens(Li,charge,#)=[(Fraction(1, 1), (-2,), 1), (Fraction(1, 1), (2,), 1)]  <-- NON-ARC (0.0s)
+D= 11/2 dimV=     42 dimI=     16 dimL=     26 arcHS=     26 ker=    0 gens(Li,charge,#)=[] (0.0s)
+D=    6 dimV=     59 dimI=     25 dimL=     34 arcHS=     38 ker=    4 gens(Li,charge,#)=[] (0.1s)
+D= 13/2 dimV=     78 dimI=     36 dimL=     42 arcHS=     42 ker=    0 gens(Li,charge,#)=[] (0.0s)
+D=    7 dimV=    107 dimI=     54 dimL=     53 arcHS=     59 ker=    6 gens(Li,charge,#)=[] (0.1s)
+D= 15/2 dimV=    150 dimI=     80 dimL=     70 arcHS=     74 ker=    4 gens(Li,charge,#)=[(Fraction(3, 1), (-3,), 1), (Fraction(3, 1), (3,), 1)]  <-- NON-ARC (0.1s)
+D=    8 dimV=    202 dimI=    112 dimL=     90 arcHS=    100 ker=   10 gens(Li,charge,#)=[(Fraction(3, 1), (-2,), 1), (Fraction(3, 1), (2,), 1)]  <-- NON-ARC (0.4s)
+D= 17/2 dimV=    266 dimI=    156 dimL=    110 arcHS=    118 ker=    8 gens(Li,charge,#)=[] (0.7s)
+D=    9 dimV=    355 dimI=    218 dimL=    137 arcHS=    156 ker=   19 gens(Li,charge,#)=[(3, (0,), 1)]  <-- NON-ARC (1.1s)
+D= 19/2 dimV=    476 dimI=    302 dimL=    174 arcHS=    192 ker=   18 gens(Li,charge,#)=[] (1.5s)
+D=   10 dimV=    628 dimI=    411 dimL=    217 arcHS=    246 ker=   29 gens(Li,charge,#)=[] (1.5s)
+dims vs max-submodule: MATCH
+non-arc generators (D, Li, charge, #): [(5, Fraction(1, 1), (-2,), 1), (5, Fraction(1, 1), (2,), 1), (Fraction(15, 2), Fraction(3, 1), (-3,), 1), (Fraction(15, 2), Fraction(3, 1), (3,), 1), (8, Fraction(3, 1), (-2,), 1), (8, Fraction(3, 1), (2,), 1), (9, 3, (0,), 1)]

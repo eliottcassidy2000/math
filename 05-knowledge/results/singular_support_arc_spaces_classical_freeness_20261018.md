@@ -17,13 +17,13 @@
   proposal "Macdonald index = arc-space Hilbert series" needs exactly this; section 5 audits it.
 
 **Typing.**
-- PROVED: THM-4671.
+- PROVED: THM-4671 (Virasoro first correction), THM-4672 (Z_2-gauged hypermultiplet, exact over Q) and THM-4673
+  (c = 1 N=2 minimal model).
 - FINITE-EXACT: mod-p ranks, two primes where stated, every dimension checked against an independent character
-  formula.
+  formula or the assumption-free maximal-submodule computation.
 - CITED: literature.
-- OPEN: HYP-9293, HYP-9294.
+- OPEN: HYP-9293, HYP-9294, HYP-9295, HYP-9296.
 - OBSERVATION: section 1.3.
-- RESERVED: THM-4672 (exact certificate in progress).
 
 ## 1. Definitions (CITED unless marked)
 
@@ -125,10 +125,17 @@ file. Twelve models were checked in exact rational arithmetic.
 | (4,5) | 6 | (12,6) (15,6) (17,6) (23,7) (25,7) | 32 |
 | (4,7) | 9 | (18,9) (21,9) (23,9) (27,10) (29,10)x2 (30,10) (31,10) | 32 |
 | (5,6) | 10 | (20,10) (23,10) (25,10) (27,10) (31,11) (32,11) | 32 |
+| (5,7) | 12 | (24,12) (27,12) (29,12) (31,12) (35,13)x2 (36,13) | 36 |
+| (5,8) | 14 | (28,14) (31,14) (33,14) (35,14) | 36 |
+| (4,9) | 12 | (24,12) (27,12) (29,12) (33,13) | 34 |
+| (6,7) | 15 | (30,15) (33,15) (35,15) (37,15) (39,15) | 40 |
+| (5,9) | 16 | (32,16) (35,16) (37,16) (39,16) | 40 |
 
 What the table shows:
 - In degree `N`, the generators sit at Li degrees `{0} ∪ {3, 5, ..., 2p-3}`. That is `p - 1` generators, stopping
   just below the Rocha-Caridi weight `2N + 2p - 1`. This is HYP-9294(a).
+- The last five rows were **pre-registered**: the predicted layers were written in section 6 before the runs, and
+  all five passed exactly.
 - `Vir_(3,5)`, the first case beyond Ising, keeps exactly three generators through weight 38. This supports finite
   generation, HYP-9294(b).
 
@@ -147,6 +154,7 @@ The level is `k = -2 + a/b`. The singular vector has weight `D_0 = (a-1)b` and s
 | -2/3 | 4/3 | non-boundary | **not free**: spin 3 at 12; spins 4+2 at 13 | 14 (two primes) |
 | 1/2 | 5/2 | non-boundary | **not free**: spin 4 at 11; spin 3 at 12 | 13 (two primes) |
 | -1/3 | 5/3 | non-boundary | **not free**: spin 4 at 15 | 15 |
+| 3/2 | 7/2 | non-boundary | **not free**: spin 6 at 15 (13 states). Pre-registered prediction, passed | 15 |
 
 **HYP-9293.** The admissible `L_k(sl2)` is classically free iff the level is boundary (`a = 2`) or integrable
 (`b = 1`). Otherwise the kernel starts with one spin-`(a-1)` multiplet at weight `D_0 + 3`, Li degree 2. This mirrors
@@ -170,6 +178,8 @@ For a 4d `N = 2` SCFT `T` with chiral algebra `V_T` (Beem et al. 2015):
 | `(A_1, A_(2n))` AD | `Vir_(2,2n+3)` | point | yes (van Ekeren-Heluani; engine to 30) | `n+1` |
 | `(A_1, D_3) = (A_1, A_3)` AD | `L_(-4/3)(sl2)` | `C^2/Z_2` | yes to weight 14 (16 running) | — |
 | `(A_1, D_5)`, `(A_1, D_7)` AD | `L_(-8/5)`, `L_(-12/7)(sl2)` | `C^2/Z_2` | yes to weight 14 | — |
+| `(A_1, D_4)` AD | `L_(-3/2)(sl3)` | `bar O_min(sl3)` | yes to weight 7 (dims = `D(q^2)/D(q)`) | — |
+| SU(2), `N_f = 4` | `L_(-2)(so8)` | `bar O_min(so8)` | **yes through weight 5**; zero-weight block at two primes, `dim L = 756` = Schur | — |
 | `N = 4` SU(2) SYM | small `N = 4`, `c = -9` | `C^2/Z_2` | **yes to weight 7** (two primes to 6) | **2** (matches DMR 2025) |
 | free hypermultiplet / `Z_2` | `L_(-1/2)(sl2) = (beta gamma)^(Z_2)` | `C^2/Z_2` | **no: first failure at weight 7** | **3** |
 
@@ -181,7 +191,16 @@ For a 4d `N = 2` SCFT `T` with chiral algebra `V_T` (Beem et al. 2015):
   while the Schur index reads `1, 3, 9, 22, 46, 93, 176, 319, 562, 960`.
 
 The excess of 5 at weight 7 is one spin-2 multiplet of Li-degree-2 relations: the quantum images of arc syzygies, as in
-THM-4671.
+THM-4671. THM-4672 proves it exactly over `Q`.
+
+**SU(2) with four flavours** is the decisive interacting test.
+- Weight 5 = singular weight + 3 is where all the Virasoro and non-boundary `sl2` failures first appear.
+- The zero-weight block (3940 states) is classically free at two primes.
+- Every `so(8)`-module occurring has root-lattice weights, so a nonzero `ker pi_5` would have a zero-weight vector.
+  Hence `L_(-2)(so8)` is classically free through weight 5.
+
+HYP-9296 organizes the evidence. The interacting theories tested are free; discrete gauging is the known source of
+failure.
 
 ### 5.1 Audit of arXiv:2507.06294v1, Section 3
 
@@ -204,24 +223,48 @@ relations outside the arc ideal. THM-4671 computes the first such relation in cl
 (HYP-9293), which is needed for it.
 
 Typing: REFUTED for the general theorem as an external claim (CITED witness plus FINITE-EXACT). The repository's own
-statements are THM-4671 and the `L_(-1/2)` data; THM-4672 is reserved for the exact certificate.
+statements are THM-4671 and THM-4672; the latter is the exact certificate over `Q`.
+
+## 5b. Two-dimensional supersymmetry: `N = 2` minimal models (Landau-Ginzburg chiral algebras)
+
+The `N = 2` superconformal algebra is a Lie superalgebra (`n2_sca.py`, 600/600 bracket checks). At
+`c = 3k/(k+2)`, the chiral algebra of the `A_(k+1)` LG model `W = x^(k+2)`:
+- The universal algebra has a single singular vector up to weight `k+1`, at weight `k+1` and charge 0.
+- The quotient by it has the same dimensions as the assumption-free maximal submodule (`max_submodule.py`) through
+  weight 10.
+
+| `k` | `c` | non-arc minimal generators (weight, Li, charge) | to weight |
+|---|---|---|---|
+| 1 | 1 | (4,1,±2) only | 10 (two primes to 8) |
+| 2 | 3/2 | (5,1,±2) (15/2,3,±3) (8,3,±2) (9,3,0) | 10 (two primes to 8) |
+| 3 | 9/5 | (6,1,±2) (17/2,3,±3) (9,3,±2) (10,3,0) | 10 (two primes to 8) |
+| 4 | 2 | (7,1,±2) (19/2,3,±3) (10,3,±2) | 10 (two primes to 8) |
+
+- **THM-4673 (PROVED, hand proof).** `V_(sqrt3 Z)` (`k = 1`) is not classically free. `G^+(z)G^+(w) = O((z-w)^3)`
+  kills `G^+_(-5/2)G^+_(-3/2)|0>`. The arc ideal cannot contain its symbol `psi^+_1 psi^+_0`, because an odd square
+  has no differential consequences.
+- **HYP-9295.** No `N = 2` minimal model is classically free. The first failure is at weight `k+3`, Li 1, charge `±2`.
+- **Contrast.** `N = 1` minimal models are classically free exactly for `(2,4k)` (Hao Li).
+- **Reading.** The LG chiral algebra, the factorization algebra of the derived critical locus of `W` (S43, section
+  2.1), is never the free quantization of the arc space of its `C_2`-superscheme.
 
 ## 6. Open problems and next tests
 
-1. **Exact certificate for `L_(-1/2)(sl2)`.** Weight 7, charge 4, over `Q` (THM-4672, in progress).
+1. **Done.** The exact certificate for `L_(-1/2)(sl2)` is THM-4672.
 2. **HYP-9293 falsifiers.**
-   - `k = 3/2` (`a/b = 7/2`, `D_0 = 12`): predicted spin-6 failure at weight 15 (running).
-   - `k = -4/3` to weight 16 (running).
+   - `k = 3/2`: PASSED (spin 6 at weight 15).
+   - `k = -4/3` to weight 16: free at 14; weight 15 and higher in progress at close-out.
    - `k = -6/5`: predicted failure at weight 18 (expensive).
-3. **HYP-9294(a) falsifiers.** `(5,7)`, `(5,8)`, `(4,9)`, `(6,7)`, `(5,9)` (running). The prediction is degree-`N`
-   layers `{0,3,5,7}`, `{0,3,5,7}`, `{0,3,5}`, `{0,3,5,7,9}` and `{0,3,5,7}`.
+3. **HYP-9294(a) falsifiers.** Predicted degree-`N` layers `{0,3,5,7}`, `{0,3,5,7}`, `{0,3,5}`, `{0,3,5,7,9}` and
+   `{0,3,5,7}` for `(5,7)`, `(5,8)`, `(4,9)`, `(6,7)`, `(5,9)`. All PASSED.
 4. **A proof of HYP-9293 at boundary levels.** The `L_(-4/3)` C_2 ideal is `(e, h, f)·Cas`, and its arc syzygies are
    the rotational ones. A THM-4671-style lift computation with symbolic `k` would show that their transfer
    coefficients vanish at `a = 2`.
 5. **Physics.**
    - Does every interacting 4d `N = 2` SCFT have a classically free chiral algebra, with discrete gauging the source of
-     failure? The next affordable tests are `L_(-3/2)(sl3)` `(A_1, D_4)` and `L_(-2)(so8)` (SU(2) `N_f = 4`; 28
-     generators, low weights only).
+     failure (HYP-9296)? `(A_1, D_4)` and SU(2) `N_f = 4` are now done: free through weights 7 and 5.
+   - Next: SU(2) `N_f = 4` at weight 6, `g2`/`f4` Deligne levels, and a `W`-algebra engine for `(A_2, A_3)` and `N = 4`
+     SU(3).
    - Compare the Li-bigraded character of `L_(-1/2)(sl2)` with the Macdonald index of the gauged free hypermultiplet,
      the `Z_2`-even part of `prod (1 - T^(1/2) q^n y^(±1))^(-1)`.
 6. **Derived side.** Compute `H_1` of the Koszul complex of section 1.3 by weight, and test whether `ker pi` is always

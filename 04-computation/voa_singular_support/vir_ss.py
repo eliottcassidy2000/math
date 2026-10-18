@@ -223,12 +223,37 @@ def deriv(vec_block):
     return {k: v for k, v in out.items() if v}
 
 # ---------------------------------------------------------------- main engine
+def singular_vector_modp(p, q, P):
+    """Singular vector mod P (for large weights, where the exact sympy solve is too slow)."""
+    c = central_charge(p, q)
+    h = (p - 1) * (q - 1)
+    basis = full_order(h)
+    eqs = {}
+    for n in (1, 2):
+        for j, lam in enumerate(basis):
+            img = apply_mode(n, {lam: Fraction(1)}, c)
+            for mo, co in img.items():
+                eqs.setdefault((n, mo), {})[j] = co
+    rows = list(eqs.values())
+    def red(x):
+        x = Fraction(x)
+        return x.numerator % P * pow(x.denominator % P, -1, P) % P
+    M = flint.nmod_mat(len(rows), len(basis), [red(r.get(j, 0)) for r in rows for j in range(len(basis))], P)
+    ns, nullity = M.nullspace()
+    assert nullity == 1, f"singular space dim {nullity} mod P"
+    col = [int(ns[i, 0]) for i in range(len(basis))]
+    N = h // 2
+    lead = col[basis.index((2,) * N)]
+    assert lead, "L_{-2}^N coefficient vanishes mod P"
+    inv = pow(lead, -1, P)
+    return {basis[i]: col[i] * inv % P for i in range(len(basis)) if col[i]}
+
 class SingularSupport:
     def __init__(self, p, q, Dmax, P):
         self.p, self.q, self.Dmax, self.P = p, q, Dmax, P
         self.h = (p - 1) * (q - 1)
         self.N = self.h // 2
-        self.v = singular_vector(p, q)
+        self.v = singular_vector(p, q) if self.h <= 20 else singular_vector_modp(p, q, P)
         self.I = {}        # D -> list of rows (in full_order(D) coordinates), RREF basis of I_D mod P
         self.grI = {}      # (D, r) -> list of dict vectors (symbols, block coordinates), echelon
         self.J = {}        # (D, r) -> list of dict vectors spanning J_{D,r} (basis)

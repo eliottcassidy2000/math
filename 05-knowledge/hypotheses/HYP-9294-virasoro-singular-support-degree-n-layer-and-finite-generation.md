@@ -10,12 +10,20 @@ status: >
     - (5,6): Li {0, 3, 5, 7};
     - (2,5) (2,7) (2,9): Li {0}.
   (b) Generators (weight, degree) found:
-    - Vir_{3,4}: (6,3), (9,3), then none to weight 24 (AEH 2020 prove this case);
-    - Vir_{3,5}: (8,4), (11,4), (19,5), then none to weight 30;
+    - Vir_{3,4}: (6,3), (9,3), then none to weight 38 (AEH 2020 prove this case);
+    - Vir_{3,5}: (8,4), (11,4), (19,5), then none to weight 38;
     - Vir_{3,7}: (12,6), (15,6), (21,7), (23,7), (31,8) to weight 32;
     - Vir_{3,8}: (14,7), (17,7), (23,8), (25,8), (31,9) to weight 32;
     - Vir_{4,5}: (12,6), (15,6), (17,6), (23,7), (25,7) to weight 32;
     - Vir_{5,6}: (20,10), (23,10), (25,10), (27,10), (31,11), (32,11) to weight 32.
+  PRE-REGISTERED TESTS of (a), all PASSED; predictions written in the source note before the runs:
+    - (5,7): weights 24 27 29 31;
+    - (5,8): 28 31 33 35;
+    - (4,9): 24 27 29;
+    - (6,7): 30 33 35 37 39;
+    - (5,9): 32 35 37 39.
+  The degree-N generators appear exactly there, with no other degree-N generator up to weight 34-40.
+  Next layers observed: (5,7) degree 13 at 35 (x2) and 36; (4,9) degree 13 at 33.
   The weight-(2N+3) generator is THM-4671 (PROVED). Part (b) for Vir_{3,4} is AEH's theorem; Vir_{3,5} is open in the
   literature (AEH remark the weight-11 relation alone fails from weight 19, which the engine reproduces).
 session: kind-pasteur-2026-10-18-S1
