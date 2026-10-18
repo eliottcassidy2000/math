@@ -218,7 +218,7 @@ For a 4d `N = 2` SCFT `T` with chiral algebra `V_T` (Beem et al. 2015):
 | 4d theory | chiral algebra | Higgs branch | classically free? | `T` nilpotency index in `R_V` |
 |---|---|---|---|---|
 | `(A_1, A_(2n))` AD | `Vir_(2,2n+3)` | point | yes (van Ekeren-Heluani; engine to 30) | `n+1` |
-| `(A_1, D_3) = (A_1, A_3)` AD | `L_(-4/3)(sl2)` | `C^2/Z_2` | yes to weight 15 (dims = Kac-Wakimoto) | — |
+| `(A_1, D_3) = (A_1, A_3)` AD | `L_(-4/3)(sl2)` | `C^2/Z_2` | yes to weight 16 (dims = Kac-Wakimoto) | — |
 | `(A_1, D_5)`, `(A_1, D_7)` AD | `L_(-8/5)`, `L_(-12/7)(sl2)` | `C^2/Z_2` | yes to weight 14 | — |
 | `(A_1, D_4)` AD | `L_(-3/2)(sl3)` | `bar O_min(sl3)` | yes to weight 8 (dims = `D(q^2)/D(q)`; weight 8 via the zero-weight cone) | — |
 | SU(2), `N_f = 4` | `L_(-2)(so8)` | `bar O_min(so8)` | **yes through weight 5**; zero-weight block at two primes, `dim L = 756` = Schur | — |
@@ -281,7 +281,7 @@ a nonlinear-bracket hook (`w3.py`):
 
 | model | 4d theory | first non-arc generator | to weight |
 |---|---|---|---|
-| `W_3(3,7)` | `(A_2, A_3)` | none | 20 (two primes to 18) |
+| `W_3(3,7)` | `(A_2, A_3)` | none | 26 (two primes to 18) |
 | `W_3(3,8)` | `(A_2, A_4)` | none | 20 |
 | `W_3(3,10)`, `W_3(3,11)` | `(A_2, A_6)`, `(A_2, A_7)` | none | 22 |
 | `W_3(4,5)` (3-state Potts) | — | weight 8 = `D_0 + 2`, Li 1 | 20 (two primes) |

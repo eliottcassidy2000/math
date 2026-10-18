@@ -15,3 +15,5 @@ D=   12 dimV=   7868 dimI=   4327 dimL=   3541 arcHS=   3541 ker=    0 gens(Li,c
 D=   13 dimV=  13209 dimI=   7665 dimL=   5544 arcHS=   5544 ker=    0 gens(Li,charge,#)=[] (92.8s)
 D=   14 dimV=  21843 dimI=  13257 dimL=   8586 arcHS=   8586 ker=    0 gens(Li,charge,#)=[] (310.4s)
 D=   15 dimV=  35581 dimI=  22499 dimL=  13082 arcHS=  13082 ker=    0 gens(Li,charge,#)=[] (796.6s)
+D=   16 dimV=  57222 dimI=  37482 dimL=  19740 arcHS=  19740 ker=    0 gens(Li,charge,#)=[] (3856.3s)
+generators (D, Li, charge, #): [(3, 0, (-2,), 1), (3, 0, (0,), 1), (3, 0, (2,), 1)]

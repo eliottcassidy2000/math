@@ -8,7 +8,7 @@ status: >
     max_submodule.py; the W_3 engine reproduces the 3-state Potts character chi^{(5,6)}_0 + q^3 chi^{(5,6)}_3 through
     weight 19):
     - boundary W_3(3,q), all FREE (no positive-Li minimal generator):
-      - q = 7 (A_2,A_3): to weight 20; second prime to 18;
+      - q = 7 (A_2,A_3): to weight 26 (dims match the maximal submodule); second prime to 18;
       - q = 8 (A_2,A_4): to 20;
       - q = 10 (A_2,A_6) and q = 11 (A_2,A_7): to 22;
       - q = 13 (A_2,A_9): to 24;
