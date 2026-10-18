@@ -3,9 +3,9 @@
 
 (1) Exact identity check: P_N(x)^2 = sum_k C(N+k,2k) C(2k,k)^2 ((x^2-1)/4)^k for N <= 25 (polynomial identity in x).
     At N = n = (p-1)/2, C(n+k,2k) == (-1)^k a_k / 4^k (mod p^2), so sum_{k<=n} C(2k,k)^3 m^-k == P_n(x)^2 (mod p^2) with
-    x^2 = 1 - 64/m  (checked for the CM m below, p < 300, x^2 taken mod p^2).
+    x^2 = 1 - 64/m  (checked for the CM m below, p <= PMAX (the committed run used PMAX = 200; corrected after S43b m6), x^2 taken mod p^2).
 (2) For each of Sun's CM values m, find the eta-quotient f, character eps and scale s with
-    sum_{k<=n} C(2k,k)^3 m^-k == eps(p) s(p) a_f(p) (mod p^2), 5 <= p <= 300, p not dividing m
+    sum_{k<=n} C(2k,k)^3 m^-k == eps(p) s(p) a_f(p) (mod p^2), 5 <= p <= PMAX (committed run: 200), p not dividing m
     (library: 4C = eta(4t)^6 [Q(i)], 8A = eta(t)^2 eta(2t) eta(4t) eta(8t)^2 [Q(sqrt-2)], 7AB = eta(t)^3 eta(7t)^3
     [Q(sqrt-7)], 12 = eta(2t)^3 eta(6t)^3 [Q(sqrt-3), not an M24 cycle shape]).
 (3) The general twin: T_m = sum_j C(2j,j) C(p-1-j,j)^2 m^-j  ==  (1 - p q_p(m)/3) F_m  (mod p^2)  <=>  (L_p) at m.

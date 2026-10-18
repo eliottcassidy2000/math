@@ -18733,3 +18733,63 @@ the ambient space.
     distribution; every connector test (no uncertified survivor); every Fibonacci fact.
 - **Repairs:** all items above were applied in the same session. See
   04-computation/experiments/first_arrival_20261018/audit_F1/REPORT.md and audit_F2/REPORT.md.
+
+## MISTAKE-632 (2026-10-18, opus-2026-10-18-S43; independent S43b referee) -- a paper cited as the source of an input theorem was not read beyond its abstract, so its own corollaries were filed as new conjectures, "pre-registered" tests and a theorem "upgrading" them; a prior audit's pointer to that paper was not followed; a sign misprint was copied; an attribution to Beukers-Vlasenko overreached; and evidential claims outran what git can verify
+
+- **Affected claims:**
+  - HYP-9310 (status "OPEN, strongly supported"; "pre-registered prediction PASSED"; "no statement of (H) found"; the
+    unattributed Lucas-block section);
+  - THM-4686 ("upgrades HYP-9310 from OPEN to PROVED"; the novelty paragraph of the Conjecture-9 corollary; the
+    character ((lambda-1)/p));
+  - THM-4685 (remarks table: classes 3 and 7 "HYP-9310"; ranges);
+  - HYP-9311 (A1 row, "pre-registered PASSED", "about 21 expected", the Beukers-Vlasenko fixed-point attribution,
+    the Gukov-Vafa sentence);
+  - halfperiod_twin_classes_cm_log_law_20261018.md, sections 3-5;
+  - factorization_vertex_supersymmetric_bridge_20261018.md, sections 3.2, 4.4 and 6.
+- **First failed implications:**
+  - (i) **Unread source.** Kibelbek-Long-Moss-Sheller-Yuan, J. Number Theory 164 (2016), arXiv:1210.4489, contains:
+    - Corollary 3: the CM harmonic law `sum C(2i,i)^3 (lambda/64)^i (6(H_2i - H_i) + q_p(lambda/64)) == 0 (mod p)` for
+      CM lambda != 1;
+    - Corollary 4: (H), "for all primes p > 3";
+    - Lemma 10 and Section 4: the block form and its equivalence with the supercongruence.
+    The session used the paper's Theorem 2 from a summary, and the first S43 audit (note n9) flagged KLMSY "next to"
+    the m = 1 case. Neither prompted a full reading, so a published corollary was presented as an open,
+    pre-registered conjecture and then as a newly proved theorem.
+  - (ii) **Copied misprint.** KLMSY v3 prints the character ((lambda-1)/p). The correct one is ((1-lambda)/p): the
+    printed form fails at 217 of 1148 tested pairs. THM-4686 quoted the misprint. Its proof used only the ratio, which
+    the correction leaves unchanged.
+  - (iii) **Over-attribution.** "The CM points are the fixed points of the excellent lift" was attributed to
+    Beukers-Vlasenko, who establish this only for the n = 2 hypercubic family and conjecture it at one point for
+    n = 3.
+  - (iv) **Evidence order.** Three "pre-registered" predictions (the law, the detector P1/P2, the four-family law) were
+    committed together with their outputs, so git cannot order them. P1 restated already observed behaviour. The
+    four-family law is equivalent to the detector congruence (S43b m3), so its "test" at the detector survivors was
+    implied by the detector data for p <= 200.
+  - (v) **Small slips.**
+    - "about 21 expected" sporadic coincidences; the correct figure is 17.6.
+    - Gukov-Vafa rationality needs both tau and rho CM in one field, so "rational exactly at CM moduli" overstated it.
+    - The census range was quoted as p <= 300 instead of 200.
+    - A docstring promised a check that the code does not perform.
+    - The partial converse "F_(p^2) == F_p^2 => law" holds only at ordinary primes.
+- **Missing coordinates:**
+  - the full text of every paper whose theorem is used as an input, including its corollaries and lemmas;
+  - every literature flag raised by an audit, followed up before the next filing;
+  - for pre-registration, a commit containing the prediction and no output;
+  - the corrected form of any formula copied from a preprint.
+- **Survivors:**
+  - All mathematics: THM-4685 is re-derived and correct; THM-4686's proof is correct and is a new route to KLMSY
+    Corollary 3, with the clean equivalent L(m) <=> F_m == (-m/p) F_(4096/m) (mod p^2).
+  - The law at m = 64, which is outside KLMSY.
+  - The census (7 classes, reproduced by union-find).
+  - The detector lists, independently reproduced, complete in range, and all CM.
+  - The four-family numbers.
+  - HYP-9311(O): 908/908, with verifiable pre-registration.
+  - The Conjecture-9 (s = 1) corollary, now attributed as immediate from KLMSY Lemma 10 + Corollary 3 + Theorem 2 and
+    not stated by KLMSY.
+  - Everything FINITE-EXACT, extended by the referee to p <= 10^5.
+- **Evidence:** 04-computation/experiments/s43b_audit_20261018/REPORT.md and its scripts.
+- **Lesson:**
+  - Read the full text of any paper whose theorem you use, before filing anything nearby. A paper proving the
+    supercongruence at a CM point is the first place its "harmonic corollary" will be.
+  - When an audit names a paper "next to" a claim, read it before the next commit.
+  - A prediction counts as pre-registered only if a commit contains it without its output.

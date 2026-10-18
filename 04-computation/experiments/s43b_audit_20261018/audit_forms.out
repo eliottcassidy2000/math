@@ -1,0 +1,21 @@
+[C1] CM weight-3 eta-products: |a(p)| = |4x^2 - 2p| at split p, 0 at inert p, 5<=p<=1000: all hold
+     a(p) == +(4x^2 - 2p) (x odd for 4C): {'4C': (80, 80), '8A': (80, 80), '7AB': (80, 80), 'E12': (80, 80)}
+[C2] m =     1 (j = -3375): F_m == chi(p) a_7AB(p) mod p^2 for all 5<=p<=1000: yes
+[C2] m =  4096 (j = 16581375): F_m == chi(p) a_7AB(p) mod p^2 for all 5<=p<=1000: yes
+[C2] m =    -8 (j = 1728): F_m == chi(p) a_4C(p) mod p^2 for all 5<=p<=1000: yes
+[C2] m =    64 (j = 1728): F_m == chi(p) a_4C(p) mod p^2 for all 5<=p<=1000: yes
+[C2] m =  -512 (j = 287496): F_m == chi(p) a_4C(p) mod p^2 for all 5<=p<=1000: yes
+[C2] m =   -64 (j = 8000): F_m == chi(p) a_8A(p) mod p^2 for all 5<=p<=1000: yes
+[C2] m =    16 (j = 0): F_m == chi(p) a_E12(p) mod p^2 for all 5<=p<=1000: yes
+[C2] m =   256 (j = 54000): F_m == chi(p) a_E12(p) mod p^2 for all 5<=p<=1000: yes
+[C3] census class values (b, sum C(n+k,k)^3 == a_4C; (i-a) == 4^n a_4C; (i-b),(i-c) == 16^n a_4C; sum C(2k,k)^3, T_1 == a_7AB; Apery A == a_4A, all mod p^2; classes 6, 7 mod p), 5 <= p <= 1000:
+     exceptions: {'class 7a == a7 mod p^2 (sporadic)': [7, 53, 89], 'class 6 holds mod p^2 (unexpected)': [97]}
+[C4] m =     1: j = -3375, D = -7
+[C4] m =  4096: j = 16581375, D = -28
+[C4] m =    -8: j = 1728, D = -4
+[C4] m =    64: j = 1728, D = -4
+[C4] m =  -512: j = 287496, D = -16
+[C4] m =   -64: j = 8000, D = -8
+[C4] m =    16: j = 0, D = -3
+[C4] m =   256: j = 54000, D = -12
+[C4] 21 M24 cycle shapes; 2^3 6^3 in list: False

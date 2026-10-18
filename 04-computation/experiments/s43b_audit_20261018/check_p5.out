@@ -1,0 +1,4 @@
+A1 p=5: {-512: True, -64: True, -8: True, 1: True, 16: True, 64: True, 256: True, 4096: True}  p=3: {-512: True, -64: True, -8: True, 1: True, 16: True, 64: True, 256: True, 4096: True}
+A2 p=5: {-8640: None, -1728: True, -192: True, -27: True, 8: True, 64: True, 108: True, 216: True, 1458: True, 3375: None}  p=3: {-8640: None, -1728: None, -192: None, -27: None, 8: True, 64: True, 108: None, 216: None, 1458: None, 3375: None}
+A3 p=5: {-82944: True, -12288: True, -3969: True, -1024: True, -144: True, 81: True, 256: True, 648: True, 2304: True, 20736: True}  p=3: {-82944: None, -12288: None, -3969: None, -1024: True, -144: None, 81: None, 256: True, 648: None, 2304: None, 20736: None}
+A4 p=5: {-32768: True, -3375: None, 1728: True, 8000: None, 54000: None}  p=3: {-32768: True, -3375: None, 1728: None, 8000: True, 54000: None}

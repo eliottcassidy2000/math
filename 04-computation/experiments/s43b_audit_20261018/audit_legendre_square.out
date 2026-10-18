@@ -1,0 +1,2 @@
+identity for 0 <= N <= 40: True
+F_m == P_n(x)^2 mod p^2 at 8 CM points, 5 <= p <= 300: failures none

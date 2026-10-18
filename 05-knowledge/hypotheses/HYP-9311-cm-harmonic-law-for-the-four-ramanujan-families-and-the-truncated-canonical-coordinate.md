@@ -1,19 +1,33 @@
 ---
 id: HYP-9311
-title: "CM harmonic law for the four Ramanujan families: for A(k) in {C(2k,k)^3, C(2k,k)^2 C(3k,k), C(2k,k)^2 C(4k,2k), C(2k,k) C(3k,k) C(6k,3k)} with Sun's weights w_k = d/dk log A(k), at every CM parameter m and every prime p not dividing 6m, sum_{k<p} A(k) m^-k w_k == q_p(m) sum_{k<p} A(k) m^-k (mod p). It is the constant-term analogue of Z.-W. Sun's Conjecture 29. Heuristically it is the first-order truncation of the fixed-point equation q_0^(p-1) = 1 of the excellent Frobenius lift in the canonical (mirror / Serre-Tate) coordinate, whose logarithm has power-series part sum A(k) w_k x^k / sum A(k) x^k"
+title: "CM harmonic law for the four Ramanujan families: for A(k) in {C(2k,k)^3, C(2k,k)^2 C(3k,k), C(2k,k)^2 C(4k,2k), C(2k,k) C(3k,k) C(6k,3k)} with Sun's weights w_k = d/dk log A(k), at every CM parameter m and every prime p not dividing 6m, sum_{k<p} A(k) m^-k w_k == q_p(m) sum_{k<p} A(k) m^-k (mod p). For A1 this is Kibelbek-Long-Moss-Sheller-Yuan 2016 Corollary 3; for A2-A4 it is OPEN, and it is EQUIVALENT to the Lucas-block detector congruence (S43b m3). It is the constant-term analogue of Z.-W. Sun's Conjecture 29. Heuristically it is the first-order truncation of the fixed-point equation q_0^(p-1) = 1 of the excellent Frobenius lift in the canonical (mirror / Serre-Tate) coordinate, whose logarithm has power-series part sum A(k) w_k x^k / sum A(k) x^k"
 status: >
-  OPEN, strongly supported.
-  - Pre-registered prediction PASSED (written in the script docstring before the run).
-  - All 33 CM parameters found by the p-adic CM detector (HYP-9310(c), |m| <= 10^5, four families) pass at every
-    prime 7 <= p <= 300 with p not dividing 6m (about 59 primes each): 0 failures.
+  OPEN for A2-A4, strongly supported. For A1 it is PUBLISHED: Kibelbek-Long-Moss-Sheller-Yuan 2016 Corollary 3
+  (S43b M1; THM-4686 gives an alternative proof).
+  - Equivalence (S43b m3). The p-shift relation also holds at carry indices:
+    A(p+j) == A(1) (A(j) + p [A(j) w_j]) (mod p^2) for all 0 <= j < p, with [A(j) w_j] the p-integral product (491
+    checks per family, p <= 61). So (L_p^A) is EQUIVALENT to the detector congruence (B1') whenever p does not
+    divide A(1) m (truth table: 2790 rows, 0 disagreements). The law and the detector of HYP-9310(c) are one statement.
+  - Evidence, recalibrated. Script, output and HYP were committed together (7f331c46e5), so the docstring
+    "pre-registration" is not verifiable from git. By the equivalence, the test at the 33 detector survivors was implied
+    for 7 <= p <= 200 by the detector's own confirmation data; only the primes 211..300 were new.
+  - All 33 CM parameters pass at every prime 7 <= p <= 300 with p not dividing 6m (about 59 primes each): 0 failures.
+    The S43b referee extended this to p <= 400 (A1 600, A2 750, A3 749, A4 375 prime-instances, 0 failures).
   - Generic m (2, 3, 5, 7, 10, 100) fail at 50-57 of about 59 primes in every family.
   - Every term A(k) m^-k w_k with k < p was p-integral: the poles of w_k at carry indices cancel against the zeros
     of A(k).
-  - For A = C(2k,k)^3 the law is HYP-9310, since its terms with (p-1)/2 < k < p vanish mod p.
+  - For A = C(2k,k)^3 the law is HYP-9310 = KLMSY Corollary 3, since its terms with (p-1)/2 < k < p vanish mod p.
   - PROVED ingredient: the p-shift lemma below.
-  - Part (O), PASSED (pre-registered in commit eb53cfd571 before the run): the Lucas-block congruence holds mod p^3
-    at every ordinary prime of every CM parameter (908 instances, 0 failures) and only mod p^2 at supersingular primes
-    (16 sporadic exceptions out of 1038).
+  - Part (O), PASSED. This is the only prediction with a verifiable order: the script was committed in eb53cfd571
+    (10:45:22) before the output in 91c22f341d (10:47:18). It was informed by the 8-parameter probe committed in the
+    same commit.
+    - The Lucas-block congruence holds mod p^3 at every ordinary prime of every CM parameter (908 instances,
+      0 failures; reproduced by the referee).
+    - At supersingular primes it holds only mod p^2: 16 sporadic exceptions out of 1038, where the chance expectation
+      (the sum of 1/p) is 17.6 (corrected from "about 21", S43b m4).
+    - Prior context: KLMSY remark that their Theorem 2 congruences "appear to hold modulo p^3" at ordinary primes for
+      rational CM lambda. Long-Ramakrishna (Adv. Math. 2016, arXiv:1403.5232, Theorem 3) prove the lambda = 1 case
+      mod p^3. (O) is a different, parallel block statement.
 session: opus-2026-10-18-S43
 source: 05-knowledge/results/halfperiod_twin_classes_cm_log_law_20261018.md
 scripts:
@@ -22,7 +36,7 @@ scripts:
   - 04-computation/experiments/cm_detector_lucas_block_scan_20261018.py (+ .out, .json): the CM parameters
   - 04-computation/experiments/cm_lucas_block_mod_p3_probe_20261018.py (+ .out, .json): mod p^3 probe (split vs inert)
   - 04-computation/experiments/cm_lucas_block_ordinary_mod_p3_20261018.py (+ .out, .json): part (O), pre-registered in eb53cfd571
-related: [HYP-9310, THM-4685, Sun Conjecture 29 (arXiv:2210.07238), Beukers-Vlasenko Dwork crystals III (arXiv:2105.14841), Kibelbek-Long-Moss-Sheller-Yuan (arXiv:1210.4489), Gukov-Vafa 2002]
+related: [HYP-9310, THM-4685, THM-4686, Kibelbek-Long-Moss-Sheller-Yuan 2016 Cor 3, Long-Ramakrishna 2016 Thm 3, Sun Conjecture 29 (arXiv:2210.07238), Beukers-Vlasenko Dwork crystals III (arXiv:2105.14841), Kibelbek-Long-Moss-Sheller-Yuan (arXiv:1210.4489), Gukov-Vafa 2002]
 ---
 
 # HYP-9311 — the CM harmonic law for the four Ramanujan families
@@ -74,8 +88,14 @@ Consequently, for carry-free blocks the law is the second-order Lucas factorizat
 ```
 Σ_j t_(p+j) ≡ t_1 Σ_j t_j   (mod p^2),     t_k = A(k) m^(-k),
 ```
-as for A1 (HYP-9310). The carry indices contribute through the poles of `w_k`; for A2-A4 they are part of the
-full-period statement.
+as for A1 (HYP-9310; KLMSY Lemma 10).
+
+At `a = 1` the carry-free hypothesis is unnecessary (S43b m3). At carry indices `A(p+j) ≡ A(1)(A(j) + p[A(j) w_j])`
+still holds, since:
+- the extra factorial factor is `≡ 1 + Σ ±c_i H_(e_i) (mod p)` when `v_p(A(j)) = 1`;
+- both sides vanish mod `p^2` when `v_p(A(j)) >= 2`.
+
+So `(L_p^A) ⟺ (B1')` in every family.
 
 ## Heuristic: the truncated canonical coordinate is Teichmüller at CM points
 
@@ -91,9 +111,18 @@ Serre-Tate) coordinate.
 truncation at `k < p`. This is the first-order, truncated form of `q_0^(p-1) = 1`.
 
 **Fixed points.** Beukers-Vlasenko (*Dwork crystals III*, Definition 7.14) define the excellent Frobenius lift by
-`q^σ = γ^(p-1) q^p` (`γ = 1` here). A fixed point `q_0^σ = q_0` therefore satisfies exactly `q_0^(p-1) = 1`. The CM
-points are these fixed points: by Deuring, a CM curve is the canonical lift of its ordinary reduction, and its
-Serre-Tate coordinate is a root of unity. Their Corollary 8.2 gives the mod-`p^2` Cartier congruence at such points.
+`q^σ = γ^(p-1) q^p` (`γ = 1` here). A fixed point `q_0^σ = q_0` therefore satisfies exactly `q_0^(p-1) = 1`, and their
+Corollary 8.2 gives the mod-`p^2` Cartier congruence at fixed points.
+
+The identification "the CM points are these fixed points" is this repository's HEURISTIC, motivated by Deuring
+(canonical lifts) and Serre-Tate. Beukers-Vlasenko establish CM fixed points only for the `n = 2` hypercubic family,
+where `t(q)` is modular. For `n = 3`, which is A1, they conjecture only `t^σ(1/8) = 1/8`, that is `m = 64` (attribution
+corrected, S43b m5).
+
+Two further caveats:
+- In the hypercubic coordinate `m = 1/t^2`, so `t ∈ Q_p` only when `m` is a square in `Q_p`.
+- The reformulation needs `F_p` to be a unit (ordinary `p`). At supersingular primes `Φ_p` is not `p`-integral,
+  although the law still holds.
 
 **Status.** This is a HEURISTIC derivation. Making it rigorous needs Dwork-type congruences for the logarithmic period
 (the truncations of `Φ`) at `|x_0|_p = 1`. It explains:
@@ -119,7 +148,8 @@ holds **modulo `p^3` at every ordinary prime** (`F_p = Σ_(k<p) t_k` a `p`-adic 
 - Result for all 33 parameters, `7 <= p <= 300`:
   - 908 ordinary prime-instances with 0 failures mod `p^3`;
   - 1038 supersingular instances, of which 16 hold mod `p^3` sporadically, at `p ∈ {7, 11, 13, 17, 23, 41, 109}`.
-    That is consistent with a chance rate of about `1/p`, since about 21 would be expected.
+    That is consistent with a chance rate of about `1/p`: the expected count is `Σ 1/p = 17.6` (corrected, S43b
+    m4).
 
 **Reading.** Expanding `A(p+j)` to second order and `m^(-(p-1)) = (1 + p q_p(m))^(-1)` mod `p^3` turns (O) into a
 mod-`p^2` refinement of `(L_p^A)`. The refinement involves second-order weights
@@ -132,9 +162,10 @@ supersingular primes there is no unit root, and the expansion stops at first ord
 - **Relation to Sun.** Sun's Conjecture 29 concerns Ramanujan-type points and the weights `(ak + b) w_k + const`.
   `(L_p^A)` has no polynomial weight and holds at every CM point, including the divergent `m = 1` for A1 and
   non-Ramanujan points such as `m = 108` for A2.
-- **ANALOGY (Gukov-Vafa 2002).** A sigma model on an elliptic curve or a K3 surface is rational exactly at CM moduli.
-  The four families are periods of elliptic curves and their symmetric squares. So the Lucas-block congruence (and
-  this law) is a `p`-adic test for the moduli of rational sigma models.
+- **ANALOGY (Gukov-Vafa 2002; precision per S43b n9).** A `T^2` sigma model is rational exactly when both the complex
+  structure `τ` and the Kähler modulus `ρ` are CM points of the same imaginary quadratic field. The four families are
+  periods of elliptic curves and their symmetric squares. So the Lucas-block congruence (and this law) tests whether
+  the complex-structure modulus `τ` is CM, which is the necessary half of rationality.
 
 ## Falsifiers
 

@@ -1,0 +1,34 @@
+[D1] primes in [5, 100000]: 9590 primes
+     m =     1: tested  9590, (L_p) failures none; F == 0 mod p at 4813 (0.502)
+     m =    -8: tested  9590, (L_p) failures none; F == 0 mod p at 4807 (0.501)
+     m =    16: tested  9590, (L_p) failures none; F == 0 mod p at 4806 (0.501)
+     m =   -64: tested  9590, (L_p) failures none; F == 0 mod p at 4798 (0.500)
+     m =    64: tested  9590, (L_p) failures none; F == 0 mod p at 4807 (0.501)
+     m =   256: tested  9590, (L_p) failures none; F == 0 mod p at 4806 (0.501)
+     m =  -512: tested  9590, (L_p) failures none; F == 0 mod p at 4807 (0.501)
+     m =  4096: tested  9590, (L_p) failures none; F == 0 mod p at 4813 (0.502)
+     (K) failures: none   [98 s]
+[D1] primes in [199500, 200000]: 40 primes
+     m =     1: tested    40, (L_p) failures none; F == 0 mod p at 21 (0.525)
+     m =    -8: tested    40, (L_p) failures none; F == 0 mod p at 18 (0.450)
+     m =    16: tested    40, (L_p) failures none; F == 0 mod p at 19 (0.475)
+     m =   -64: tested    40, (L_p) failures none; F == 0 mod p at 22 (0.550)
+     m =    64: tested    40, (L_p) failures none; F == 0 mod p at 18 (0.450)
+     m =   256: tested    40, (L_p) failures none; F == 0 mod p at 19 (0.475)
+     m =  -512: tested    40, (L_p) failures none; F == 0 mod p at 18 (0.450)
+     m =  4096: tested    40, (L_p) failures none; F == 0 mod p at 21 (0.525)
+     (K) failures: none   [100 s]
+[D2] generic m (all 0 < |m| <= 100 except the five CM values in range), primes 5..3000:
+     max pass fraction 0.049 (m = 95: 21 of 426); median pass fraction 0.028; min 0.014
+     m =    3: passes 9 of 428 (failures 419)
+     m =    5: passes 14 of 427 (failures 413)
+     m =    7: passes 18 of 427 (failures 409)
+     m =   10: passes 10 of 427 (failures 417)
+     m =  100: passes 9 of 427 (failures 418)
+     m =   -3: passes 12 of 428 (failures 416)
+     m =    2: passes 13 of 428 (failures 415)
+     m =   -1: passes 16 of 428 (failures 412)
+     m =   32: passes 6 of 428 (failures 422)
+     m = -100: passes 12 of 427 (failures 415)
+[D3] direct mod p^2 twins, 194 primes 5..1200: class 3 194, class 7 194, class 6 194 hold; class-6 reduction identity u6a - (-1)^n u6b == p*K (mod p^2) holds at 194; exceptions []
+total 109 s

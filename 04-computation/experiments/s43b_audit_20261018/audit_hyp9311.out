@@ -1,0 +1,24 @@
+A1: (1) law at 8 CM parameters, primes 7..400 with p !| 6m: 600 prime-instances, 0 failures {}
+    non-p-integral terms A(k) w_k (k < p): none
+    (2) A(p+j) == A(1)(A(j) + p[A(j)w_j]) mod p^2 for all 0 <= j < p (carries included), p <= 61: 491 checks, 0 failures
+    (3) (B1') <=> (L_p^A) truth table, CM + 8 generic m, p <= 200: 687 rows, 0 disagreements
+    (4) (B1') mod p^3, primes 7..300: ordinary 221 of 221 hold; supersingular 4 of 251 hold [(1, 7), (4096, 7), (-512, 11), (1, 17)]
+A2: (1) law at 10 CM parameters, primes 7..400 with p !| 6m: 750 prime-instances, 0 failures {}
+    non-p-integral terms A(k) w_k (k < p): none
+    (2) A(p+j) == A(1)(A(j) + p[A(j)w_j]) mod p^2 for all 0 <= j < p (carries included), p <= 61: 491 checks, 0 failures
+    (3) (B1') <=> (L_p^A) truth table, CM + 8 generic m, p <= 200: 773 rows, 0 disagreements
+    (4) (B1') mod p^3, primes 7..300: ordinary 275 of 275 hold; supersingular 6 of 315 hold [(-1728, 7), (64, 11), (-1728, 17), (-192, 23), (8, 23), (1458, 41)]
+A3: (1) law at 10 CM parameters, primes 7..400 with p !| 6m: 749 prime-instances, 0 failures {}
+    non-p-integral terms A(k) w_k (k < p): none
+    (2) A(p+j) == A(1)(A(j) + p[A(j)w_j]) mod p^2 for all 0 <= j < p (carries included), p <= 61: 491 checks, 0 failures
+    (3) (B1') <=> (L_p^A) truth table, CM + 8 generic m, p <= 200: 772 rows, 0 disagreements
+    (4) (B1') mod p^3, primes 7..300: ordinary 278 of 278 hold; supersingular 4 of 311 hold [(81, 7), (-82944, 13), (2304, 17), (-82944, 109)]
+A4: (1) law at 5 CM parameters, primes 7..400 with p !| 6m: 375 prime-instances, 0 failures {}
+    non-p-integral terms A(k) w_k (k < p): none
+    (2) A(p+j) == A(1)(A(j) + p[A(j)w_j]) mod p^2 for all 0 <= j < p (carries included), p <= 61: 491 checks, 0 failures
+    (3) (B1') <=> (L_p^A) truth table, CM + 8 generic m, p <= 200: 558 rows, 0 disagreements
+    (4) (B1') mod p^3, primes 7..300: ordinary 134 of 134 hold; supersingular 2 of 161 hold [(-3375, 7), (-32768, 11)]
+
+real	0m1.705s
+user	0m0.015s
+sys	0m0.000s

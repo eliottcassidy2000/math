@@ -9,13 +9,17 @@ status: >
   - the classical H_((p-1)/2) == -2 q_p(2) (mod p).
   Modular values are CITED, not reproved: F == a(p) (mod p^2) for eta(4t)^6 (Ishikawa 1990 / van Hamme / Ahlgren 2001);
   C(n, n/2)^2 == 4^n a(p) (Chowla-Dwork-Evans 1986, combined with the former); sum_{k<=n} C(2k,k)^3 (-64)^-k ==
-  (-1/p) a(p) for eta(t)^2 eta(2t) eta(4t) eta(8t)^2 (Sun's conjecture, proved by Z.-H. Sun and by
-  Kibelbek-Long-Moss-Sheller-Yuan; attribution taken from a secondary source and not re-checked).
+  (-1/p) a(p) for eta(t)^2 eta(2t) eta(4t) eta(8t)^2. This is Sun's Conjecture 5.2, proved mod p^2 in all cases by
+  Kibelbek-Long-Moss-Sheller-Yuan 2016, Theorem 2 (character ((1-lambda)/p); v3 misprints ((lambda-1)/p)).
+  Z.-H. Sun's paper covers only some cases (S43b n8).
   FINITE-EXACT controls:
-  - every statement for 5 <= p <= 300 (census and forms scripts);
+  - the census for 5 <= p <= 200 (halfperiod_twin_classes) and the class forms for 5 <= p <= 300 (corrected, S43b
+    m6);
+  - every step of Lemmas 1-3 and parts (i)-(ii), re-derived by the S43b referee: mod p^2 for all 428 primes
+    5 <= p <= 3000, and the mod-p statements for p <= 6000;
   - the shadow formulas for p < 200;
   - the law at m = +-64 for p < 2000.
-  The six remaining CM points are HYP-9310.
+  The six remaining CM points are KLMSY 2016 Corollary 3 (published; S43b M1), re-derived in THM-4686; see HYP-9310.
   Calibration (S43 audit M1 on THM-4670): Lemma 2(a), sum a_k^3 O_k == 0 (mod p), is exactly the agreement mod p^2 of
   the two classical guises of Beukers' zeta(2) supercongruence (van Hamme 1986, Ishikawa 1990, Ahlgren 2001).
   - Part (i) is therefore a corollary of those classical results, plus the elementary shadows and reflection. The Dixon
@@ -96,6 +100,8 @@ THM-4670 gives `D_n = 0` and `S_n ≡ 0` for odd `n`, and `S_n ≡ H_n D_n` for 
 ```
 
 **(i-c)** By (a), `Σ C(n,k) C(n+k,k)^2 C(2n,n+k) ≡ (-1)^n Σ a_k^3 (1 + p O_k - p H_(n+k))` is congruent to the sum in (i-b).
+It also needs no Dixon input. Termwise, `C(n+k,k) C(2n,n+k) ≡ (-1)^n 16^n C(n,k) (mod p^2)` for `0 <= k <= n`, so
+`(i-c) ≡ (-1)^n 16^n b(n)` exactly as a congruence of sums (S43b n1).
 
 **(i-d)** This is THM-4670 restated: `b(n) ≡ Σ a_k^3 (1 - pO_k)` and `Σ C(n+k,k)^3 ≡ Σ a_k^3 (1 + 3pO_k)`, and both are
 `≡ F` by (a).
@@ -137,6 +143,19 @@ with `F_m` the mod-`p^2` sum. So `L(m)` is equivalent to `T_m ≡ (1 - p q_p(m)/
 
 ## Remarks
 
+**Convention for the census** (S43b m7).
+- Twins are taken up to the signs `ε ∈ {1, (-1)^n}`.
+  - Allowing `±(2/p)`, `±(-2/p)` also adds `[n even] C(n,n/2) C(3n/2,n/2) ≡ (2/p) a_4C(p)` (a CDE corollary) to class 1.
+  - Allowing the scalings `4^(±n)`, `16^(±n)` merges classes 1, 2 and 4 (part (i)), and the census then has 56
+    classes.
+- The S43b referee reproduced exactly 7 classes by a full pairwise union-find on 76 primes `p <= 400`.
+
+**Relation to KLMSY (S43b M1, n2).**
+- The CM harmonic law at the non-self-dual points, and `(H)`, are Kibelbek-Long-Moss-Sheller-Yuan 2016 Corollaries 3
+  and 4.
+- Part (ii) at `m = -64` (`λ = -1`) is also their Corollary 3, but is proved here by pure reflection without CM input.
+- `m = 64` (`λ = 1`) lies outside KLMSY.
+
 **The census.** `halfperiod_twin_classes_20261018.py` screens all 648 distinct three- and four-factor products from a
 library of 10 binomials. It finds exactly seven twin classes at `p <= 200`:
 
@@ -144,11 +163,11 @@ library of 10 binomials. It finds exactly seven twin classes at `p <= 200`:
 |---|---|---|---|
 | 1 | `b`, `Σ C(n+k,k)^3` | 4C | THM-4670 |
 | 2 | (i-a), `C(n,n/2)^2` | 4C | (i-a) here; partner CITED |
-| 3 | `Σ C(2k,k)^3`, `T_1` | 7AB, `η(τ)^3 η(7τ)^3` | `⟺ L(1)`, HYP-9310 |
+| 3 | `Σ C(2k,k)^3`, `T_1` | 7AB, `η(τ)^3 η(7τ)^3` | `⟺ (H)`, PROVED: KLMSY Cor. 4 (and THM-4686) |
 | 4 | (i-b), (i-c) | 4C | here |
 | 5 | `A`, `(-1)^n s_7` | 4A | THM-4669 |
-| 6 | two `4F3`-type sums | 4A, mod `p` only | `⟺ (K)`, HYP-9310 |
-| 7 | two sums with `C(2n,n+k)` | 7AB, mod `p` only | `⟺ L(1)`, HYP-9310 |
+| 6 | two `4F3`-type sums | 4A, mod `p` only | `⟺ (K)`, OPEN (HYP-9310) |
+| 7 | two sums with `C(2n,n+k)` | 7AB, mod `p` only | `⟺ (H)`, PROVED: KLMSY Cor. 4 (and THM-4686) |
 
 **CM points of `Σ C(2k,k)^3 m^(-k)`.** At Sun's eight values, `j = (m-16)^3/m`. The governing forms are:
 - `m = 1, 4096`: 7AB (discriminants `-7`, `-28`);

@@ -1,0 +1,1 @@
+L(m) <=> F_m == (-m/p) F_(4096/m) mod p^2: 1074 (m,p) rows, 0 disagreements; holds at 480 of 480 CM rows

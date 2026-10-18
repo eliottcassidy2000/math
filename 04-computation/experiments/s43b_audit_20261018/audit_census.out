@@ -1,0 +1,87 @@
+products generated: 935 (3-factor 220, 4-factor 715)
+distinct nonzero sequences: 648 by n <= 40, 648 by n <= 12 (session); identically-zero products: 0
+
+[B1] twin classes, eps in {1, (-1)^n}, all 76 primes 5 <= p <= 400: 7 classes
+   class:
+      C(n,k) C(n,k) C(n+k,k)   (+1 identical rewritings)
+      C(n+k,k) C(n+k,k) C(n+k,k)
+   class:
+      C(n+k,k) C(2k,k) C(2n-2k,n-k)
+      C(n,k) C(n,k) C(2k,n) C(n,2k)   (+19 identical rewritings)
+   class:
+      C(2k,k) C(2k,k) C(2k,k)   (+1 identical rewritings)
+      C(2n-2k,n-k) C(n+k,2k) C(n+k,2k)
+   class:
+      C(n,k) C(n,k) C(n,k) C(2n,n+k)
+      C(n,k) C(n+k,k) C(n+k,k) C(2n,n+k)   (+1 identical rewritings)
+   class:
+      C(n,k) C(n,k) C(n+k,k) C(n+k,k)   (+2 identical rewritings)
+      C(n,k) C(n,k) C(n+k,k) C(2k,n)   (+3 identical rewritings)
+   class:
+      C(n+k,k) C(n+k,k) C(n+k,k) C(n,2k)
+      C(n+k,k) C(2k,k) C(2k,n) C(2n-2k,n-k)
+   class:
+      C(2n-2k,n-k) C(2n-2k,n-k) C(n+k,2k) C(2n,n+k)
+      C(n+k,2k) C(n+k,2k) C(n+k,2k) C(2n,n+k)
+[B2] trivial class (u == 0 mod p^2 at every tested half-period): 0 distinct sequences
+[B3] with eps in {+-1, +-(-1)^n, +-(2/p), +-(-2/p)}: 7 classes (sizes [2, 2, 2, 2, 2, 2, 3])
+      new/merged class: ['C(n,k) C(n,k) C(n+k,k)', 'C(n+k,k) C(n+k,k) C(n+k,k)', 'C(n,k) C(n+k,k) C(2k,n) C(n,2k)']
+[B4] allowing the scale factors 4^(+-n), 16^(+-n) (and (-1)^n): 56 classes (sizes [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 5, 8])
+      merged class: ['C(n,k) C(n,k) C(n,k)', 'C(n,k) C(n,k) C(n+k,k) C(2n,n+k)']
+      merged class: ['C(n,k) C(n,k) C(n+k,k)', 'C(n+k,k) C(n+k,k) C(n+k,k)', 'C(n+k,k) C(2k,k) C(2n-2k,n-k)', 'C(n,k) C(n,k) C(n,k) C(2n,n+k)', 'C(n,k) C(n,k) C(2k,n) C(n,2k)', 'C(n,k) C(n+k,k) C(n+k,k) C(2n,n+k)', 'C(n,k) C(2k,k) C(2n-2k,n-k) C(2n,n+k)', 'C(n+k,k) C(n+k,k) C(2k,n) C(n,2k)']
+      merged class: ['C(n,k) C(n,k) C(2k,k)', 'C(n,k) C(n+k,k) C(2k,k) C(2n,n+k)']
+      merged class: ['C(n,k) C(n,k) C(k,n-k)', 'C(n,k) C(n+k,k) C(k,n-k) C(2n,n+k)']
+      merged class: ['C(n,k) C(n,k) C(n,2k)', 'C(n,k) C(n+k,k) C(n,2k) C(2n,n+k)']
+      merged class: ['C(n,k) C(n,k) C(2k,n-k)', 'C(n,k) C(n+k,k) C(2k,n-k) C(2n,n+k)']
+      merged class: ['C(n,k) C(n,k) C(n+k,2k)', 'C(n,k) C(n+k,k) C(n+k,2k) C(2n,n+k)', 'C(2k,k) C(2k,k) C(2n-2k,n-k) C(2n,n+k)']
+      merged class: ['C(n,k) C(n,k) C(2n,n+k)', 'C(n+k,k) C(n+k,k) C(2n,n+k)', 'C(n,k) C(n+k,k) C(2n,n+k) C(2n,n+k)']
+      merged class: ['C(n,k) C(n+k,k) C(n+k,k)', 'C(n+k,k) C(n+k,k) C(n+k,k) C(2n,n+k)']
+      merged class: ['C(n,k) C(n+k,k) C(2k,k)', 'C(n+k,k) C(n+k,k) C(2k,k) C(2n,n+k)']
+      merged class: ['C(n,k) C(n+k,k) C(2k,n)', 'C(n+k,k) C(n+k,k) C(2k,n) C(2n,n+k)']
+      merged class: ['C(n,k) C(n+k,k) C(2n-2k,n-k)', 'C(n+k,k) C(n+k,k) C(2n-2k,n-k) C(2n,n+k)']
+      merged class: ['C(n,k) C(n+k,k) C(k,n-k)', 'C(n+k,k) C(n+k,k) C(k,n-k) C(2n,n+k)']
+      merged class: ['C(n,k) C(n+k,k) C(n,2k)', 'C(n+k,k) C(n+k,k) C(n,2k) C(2n,n+k)', 'C(2k,k) C(2k,n) C(2n-2k,n-k) C(2n,n+k)']
+      merged class: ['C(n,k) C(n+k,k) C(2k,n-k)', 'C(n+k,k) C(n+k,k) C(2k,n-k) C(2n,n+k)']
+      merged class: ['C(n,k) C(n+k,k) C(n+k,2k)', 'C(n+k,k) C(n+k,k) C(n+k,2k) C(2n,n+k)']
+      merged class: ['C(n,k) C(n+k,k) C(2n,n+k)', 'C(n+k,k) C(n+k,k) C(2n,n+k) C(2n,n+k)']
+      merged class: ['C(n,k) C(2k,k) C(2k,k)', 'C(n+k,k) C(2k,k) C(2k,k) C(2n,n+k)']
+      merged class: ['C(n,k) C(2k,k) C(2k,n)', 'C(n+k,k) C(2k,k) C(2k,n) C(2n,n+k)']
+      merged class: ['C(n,k) C(2k,k) C(2n-2k,n-k)', 'C(n+k,k) C(2k,k) C(2n-2k,n-k) C(2n,n+k)']
+      merged class: ['C(n,k) C(2k,k) C(2k,n-k)', 'C(n+k,k) C(2k,k) C(2k,n-k) C(2n,n+k)']
+      merged class: ['C(n,k) C(2k,k) C(2n,n+k)', 'C(n+k,k) C(2k,k) C(2n,n+k) C(2n,n+k)']
+      merged class: ['C(n,k) C(2k,n) C(2k,n)', 'C(n+k,k) C(2k,n) C(2k,n) C(2n,n+k)']
+      merged class: ['C(n,k) C(2k,n) C(2n-2k,n-k)', 'C(n+k,k) C(2k,n) C(2n-2k,n-k) C(2n,n+k)']
+      merged class: ['C(n,k) C(2k,n) C(k,n-k)', 'C(n+k,k) C(2k,n) C(k,n-k) C(2n,n+k)']
+      merged class: ['C(n,k) C(2k,n) C(n,2k)', 'C(n+k,k) C(2k,n) C(n,2k) C(2n,n+k)']
+      merged class: ['C(n,k) C(2k,n) C(2k,n-k)', 'C(n+k,k) C(2k,n) C(2k,n-k) C(2n,n+k)']
+      merged class: ['C(n,k) C(2k,n) C(2n,n+k)', 'C(n+k,k) C(2k,n) C(2n,n+k) C(2n,n+k)']
+      merged class: ['C(n,k) C(2n-2k,n-k) C(k,n-k)', 'C(n+k,k) C(2n-2k,n-k) C(k,n-k) C(2n,n+k)']
+      merged class: ['C(n,k) C(2n-2k,n-k) C(n,2k)', 'C(n+k,k) C(2n-2k,n-k) C(n,2k) C(2n,n+k)']
+      merged class: ['C(n,k) C(2n-2k,n-k) C(2k,n-k)', 'C(n+k,k) C(2n-2k,n-k) C(2k,n-k) C(2n,n+k)']
+      merged class: ['C(n,k) C(2n-2k,n-k) C(n+k,2k)', 'C(n+k,k) C(2n-2k,n-k) C(n+k,2k) C(2n,n+k)']
+      merged class: ['C(n,k) C(2n-2k,n-k) C(2n,n+k)', 'C(n+k,k) C(2n-2k,n-k) C(2n,n+k) C(2n,n+k)']
+      merged class: ['C(n,k) C(k,n-k) C(k,n-k)', 'C(n+k,k) C(k,n-k) C(k,n-k) C(2n,n+k)']
+      merged class: ['C(n,k) C(k,n-k) C(2k,n-k)', 'C(n+k,k) C(k,n-k) C(2k,n-k) C(2n,n+k)']
+      merged class: ['C(n,k) C(k,n-k) C(n+k,2k)', 'C(n+k,k) C(k,n-k) C(n+k,2k) C(2n,n+k)']
+      merged class: ['C(n,k) C(k,n-k) C(2n,n+k)', 'C(n+k,k) C(k,n-k) C(2n,n+k) C(2n,n+k)']
+      merged class: ['C(n,k) C(n,2k) C(n,2k)', 'C(n+k,k) C(n,2k) C(n,2k) C(2n,n+k)']
+      merged class: ['C(n,k) C(n,2k) C(2k,n-k)', 'C(n+k,k) C(n,2k) C(2k,n-k) C(2n,n+k)']
+      merged class: ['C(n,k) C(n,2k) C(n+k,2k)', 'C(n,k) C(2k,k) C(2k,n) C(2n,n+k)', 'C(n+k,k) C(n,2k) C(n+k,2k) C(2n,n+k)']
+      merged class: ['C(n,k) C(n,2k) C(2n,n+k)', 'C(n+k,k) C(n,2k) C(2n,n+k) C(2n,n+k)']
+      merged class: ['C(n,k) C(2k,n-k) C(2k,n-k)', 'C(n+k,k) C(2k,n-k) C(2k,n-k) C(2n,n+k)']
+      merged class: ['C(n,k) C(2k,n-k) C(n+k,2k)', 'C(n+k,k) C(2k,n-k) C(n+k,2k) C(2n,n+k)']
+      merged class: ['C(n,k) C(2k,n-k) C(2n,n+k)', 'C(n+k,k) C(2k,n-k) C(2n,n+k) C(2n,n+k)']
+      merged class: ['C(n,k) C(n+k,2k) C(n+k,2k)', 'C(n+k,k) C(n+k,2k) C(n+k,2k) C(2n,n+k)']
+      merged class: ['C(n,k) C(n+k,2k) C(2n,n+k)', 'C(n+k,k) C(n+k,2k) C(2n,n+k) C(2n,n+k)']
+      merged class: ['C(n,k) C(2n,n+k) C(2n,n+k)', 'C(n+k,k) C(2n,n+k) C(2n,n+k) C(2n,n+k)']
+      merged class: ['C(2k,k) C(2k,k) C(2n,n+k)', 'C(n+k,2k) C(n+k,2k) C(2n,n+k)']
+      merged class: ['C(n,k) C(n,k) C(n,k) C(n,k)', 'C(n,k) C(n,k) C(n+k,k) C(n+k,k)', 'C(n,k) C(n,k) C(n+k,k) C(2k,n)', 'C(n+k,k) C(n+k,k) C(n+k,k) C(n+k,k)', 'C(2k,k) C(2k,k) C(2n-2k,n-k) C(2n-2k,n-k)']
+      merged class: ['C(n,k) C(n,k) C(2k,k) C(2n-2k,n-k)', 'C(n+k,k) C(n+k,k) C(2k,k) C(2n-2k,n-k)']
+      merged class: ['C(n,k) C(n,k) C(2n,n+k) C(2n,n+k)', 'C(2k,k) C(2n-2k,n-k) C(2n,n+k) C(2n,n+k)']
+      merged class: ['C(n,k) C(2k,k) C(2k,k) C(2n,n+k)', 'C(n,k) C(n+k,2k) C(n+k,2k) C(2n,n+k)']
+      merged class: ['C(2k,k) C(2k,k) C(2k,k) C(2n,n+k)', 'C(2n-2k,n-k) C(n+k,2k) C(n+k,2k) C(2n,n+k)']
+[B5] sequences identical for n <= 12 but different for n <= 40: 0 groups
+
+real	0m1.714s
+user	0m0.046s
+sys	0m0.031s

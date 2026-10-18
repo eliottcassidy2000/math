@@ -1,0 +1,19 @@
+[1] p-shift lemma C(2(ap+j),ap+j) == C(2a,a)C(2j,j)(1+2ap(H_2j-H_j)) mod p^2, 5<=p<=31, 0<=a<=2p, j<=n: 3582 checks, 0 failures
+[2] block_a == t_a (F + a p (6h - qF)) mod p^2 for 0<=a<=2p+1, p<=61, 8 CM + 8 generic m: 0 failures; (B1) <=> (L_p) truth table: 252 (m,p) rows, 0 disagreements
+[3] KLMSY Lemma 10 a_{k+pn} == a_k a_n + p b_k sum_{i<=n} i t_i (mod p^2), (p-1)/2<=k<p, n<=2p, 5<=p<=23: 8352 checks, 0 failures
+[4] identity F_{p^2} - F_p^2 == p(6h - qF) sum_{a<=n} a t_a (mod p^2), p<=151, 16 values of m: 0 failures
+     m =     1: F_{p^2} == F_p^2 mod p^2 at 34 of 34 primes 5..151; primes with sum a t_a == 0 mod p (converse unavailable): [5, 13, 17, 19, 31, 41, 47, 59, 61, 73, 83, 89, 97, 101, 103, 131, 139]
+     m =    -8: F_{p^2} == F_p^2 mod p^2 at 34 of 34 primes 5..151; primes with sum a t_a == 0 mod p (converse unavailable): [7, 11, 19, 23, 31, 43, 47, 59, 67, 71, 79, 83, 103, 107, 127, 131, 139, 151]
+     m =    16: F_{p^2} == F_p^2 mod p^2 at 34 of 34 primes 5..151; primes with sum a t_a == 0 mod p (converse unavailable): [5, 11, 17, 23, 29, 41, 47, 53, 59, 71, 83, 89, 101, 107, 113, 131, 137, 149]
+     m =   -64: F_{p^2} == F_p^2 mod p^2 at 34 of 34 primes 5..151; primes with sum a t_a == 0 mod p (converse unavailable): [5, 7, 13, 23, 29, 31, 37, 47, 53, 61, 71, 79, 101, 103, 109, 127, 149, 151]
+     m =    64: F_{p^2} == F_p^2 mod p^2 at 34 of 34 primes 5..151; primes with sum a t_a == 0 mod p (converse unavailable): []
+     m =   256: F_{p^2} == F_p^2 mod p^2 at 34 of 34 primes 5..151; primes with sum a t_a == 0 mod p (converse unavailable): [5, 11, 17, 23, 29, 41, 47, 53, 59, 71, 83, 89, 101, 107, 113, 131, 137, 149]
+     m =  -512: F_{p^2} == F_p^2 mod p^2 at 34 of 34 primes 5..151; primes with sum a t_a == 0 mod p (converse unavailable): [7, 11, 19, 23, 31, 43, 47, 59, 67, 71, 79, 83, 103, 107, 127, 131, 139, 151]
+     m =  4096: F_{p^2} == F_p^2 mod p^2 at 34 of 34 primes 5..151; primes with sum a t_a == 0 mod p (converse unavailable): [5, 13, 17, 19, 31, 41, 47, 59, 61, 73, 83, 89, 97, 101, 103, 131, 139]
+     generic m: [F_{p^2} == F_p^2] agrees with [(L_p)] in 263 of 268 (m,p) rows
+[5] (D) F_{(Mp-1)/2} == F_{(p-1)/2} F_{(M-1)/2} mod p^2, all odd M <= 2p+3, 5<=p<=61: CM 4224 checks, 0 failures; generic m = 3,5,7,10: 1581 of 2028 fail
+[6] THM-4686: (R) mod p^2 at z in {64,1/64,-8,-1/8,4,1/4,-1}, 5<=p<1000: 0 failures
+    KLMSY Theorem 2 on E_lambda: y^2=(x-1)(x^2-1/(1-lambda)), 1148 (lambda,p) pairs, 7<p<1000, alpha^2 == a_p^2 - 2p:
+      as printed, F(lambda) == ((lambda-1)/p) alpha^2 (0 if supersingular): 217 failures, first [('64', 11), ('1/64', 11), ('-1', 11), ('4', 19), ('1/4', 19), ('-1', 19)]
+      with ((1-lambda)/p) instead: 0 failures []
+    a_p(E_lambda) == (-2/p) a_p(E_{1/lambda}) (E_lambda 2-isogenous to the -2 twist of E_{1/lambda}), 7<p<1000: failures none

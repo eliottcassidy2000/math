@@ -345,11 +345,12 @@ exactly seven half-period twin classes. They are governed by the M24 classes 4A,
 - The three 4C classes are PROVED from the Dixon lemma and the reflection `k -> n-k`. Their values are `F`, `4^n F`
   and `16^n F`, with `F = Σ C(2k,k)^3/64^k`. Per audit M1, the Dixon lemma is equivalent to the classical guise
   agreement, so these are corollaries of the classical supercongruences plus elementary shadows.
-- The 7AB classes reduce to `Σ_(k<=n) C(2k,k)^3 (H_(2k) - H_k) ≡ 0 (mod p)`. This is the case `m = 1` of a new
-  pre-registered CM harmonic law: `6 Σ C(2k,k)^3 m^(-k) (H_(2k) - H_k) ≡ q_p(m) Σ C(2k,k)^3 m^(-k) (mod p)` at all
-  eight of Sun's CM values.
-  - The law is proved at the self-dual points `m = ±64` and is invariant under `m -> 4096/m`, the 2-isogeny.
-  - It has no failures to `p < 20000` and fails at generic `m`.
+- The 7AB classes reduce to `Σ_(k<=n) C(2k,k)^3 (H_(2k) - H_k) ≡ 0 (mod p)`, which is Kibelbek-Long-Moss-Sheller-Yuan
+  2016 Corollary 4. It is the case `m = 1` of their Corollary 3, the CM harmonic law
+  `6 Σ C(2k,k)^3 m^(-k) (H_(2k) - H_k) ≡ q_p(m) Σ C(2k,k)^3 m^(-k) (mod p)`. The session first filed this as a new
+  conjecture; the S43b audit (M1) found it in KLMSY, and it is logged as MISTAKE-632.
+  - THM-4686 gives an alternative proof across the 2-isogeny `m -> 4096/m`.
+  - The law at the self-dual point `m = 64`, which is outside KLMSY, is THM-4685.
 - At `m = 16, 256` the governing form `η(2τ)^3 η(6τ)^3` is not an M24 cycle shape.
 
 ### 3.3 Supersymmetric meaning of the eta-products (CITED + OBSERVATION)
@@ -412,7 +413,8 @@ algebra.
     holes are CM points.
   - Gukov-Vafa (*Rational conformal field theories and complex multiplication*, CMP 246, 2004, hep-th/0203213): a
     sigma model on `T^2` with complex structure `τ` and Kähler modulus `ρ` is rational exactly when `τ` and `ρ` are
-    CM points of the same imaginary quadratic field. They give analogues for K3.
+    CM points of the same imaginary quadratic field. They give analogues for K3. A CM complex structure is therefore
+    necessary, not sufficient, for rationality.
 - **OBSERVATION** ([twin-class note](halfperiod_twin_classes_cm_log_law_20261018.md); THM-4686, HYP-9310, HYP-9311).
   The four classical hypergeometric families are periods of elliptic curves and of their symmetric-square K3
   surfaces. The second-order Lucas factorization
@@ -420,7 +422,7 @@ algebra.
   parameters.
   - For the `j`-line family `C(2k,k) C(3k,k) C(6k,3k)` the survivors are exactly the rational CM `j`-invariants in range.
   - At ordinary primes the factorization holds even modulo `p^3`.
-  - For `C(2k,k)^3` the companion harmonic law is PROVED (THM-4686).
+  - For `C(2k,k)^3` the companion harmonic law is KLMSY's Corollary 3, re-proved in THM-4686.
 - **ANALOGY.** Combining the two: a mod-`p^2` congruence between two blocks of a truncated period series is a `p`-adic
   test for the complex-structure moduli at which the corresponding torus or K3 sigma model can be rational, and which
   serve as attractor points.
@@ -450,9 +452,13 @@ group.
 **New.**
 - **THM-4669** (PROVED at every Frobenius point `(p^r - 1)/2`), with the Clausen-identity mechanism. Novelty is
   unverified: no prior statement was found in the S43 or audit searches.
-- **THM-4685** (PROVED): the census of seven twin classes, the three 4C classes, the reflection lemma, and the CM
-  harmonic law at `m = ±64`.
-- **HYP-9310** (OPEN, pre-registered and passed): the CM harmonic log law at the other six CM points.
+- **THM-4685** (PROVED): the census of seven twin classes, the three 4C classes (corollaries of the classical
+  supercongruences), the reflection lemma, and the CM harmonic law at `m = 64` (outside KLMSY) and `m = -64`.
+- **THM-4686** (PROVED): an alternative proof of KLMSY 2016 Corollary 3 from their Theorem 2 across the 2-isogeny.
+  Equivalent form: the law at `m` holds iff `F_m ≡ (-m/p) F_(4096/m) (mod p^2)`.
+- **HYP-9310(c) / HYP-9311** (OPEN): the `p`-adic CM detector for four families, the laws for the three families
+  beyond `C(2k,k)^3`, and the mod-`p^3` block statement at ordinary primes. Only the mod-`p^3` statement had a
+  verifiable pre-registration.
 - The classification of Apéry-like half-period congruences against the M24 eta-products (FINITE-EXACT, battery
   corrected after audit m2).
 - The Paley `P_23` → Golay → M24 construction from scratch: the code, the generators, Schreier-Sims order and the
@@ -469,6 +475,11 @@ group.
 - **Prior repository result on the same newform:** [THM-4652](../../01-canon/theorems/THM-4652-paley-pattern-sums-vanishing-and-series-parallel-polynomiality.md)
   / [HYP-9274](../hypotheses/HYP-9274-paley-rate-three-halves-wheel-w4-apery-form.md) (S34, the Paley "Apéry wheel"
   `Σ*(W_4) = -q(q-1)(a_q + 4)`). It is built on `η(2z)^4 η(4z)^4` with the same Ahlgren-Ono input (audit m13).
+- **KLMSY 2016** (Kibelbek-Long-Moss-Sheller-Yuan, J. Number Theory 164, arXiv:1210.4489):
+  - Theorem 2 (the CM supercongruences);
+  - Corollaries 3 and 4 (the CM harmonic law and `(H)`, i.e. census classes 3 and 7);
+  - Lemma 10 (the block form).
+  (S43b audit M1, MISTAKE-632.)
 - **Concurrent work on the same owner prompt:** kind-pasteur-2026-10-18-S1 on the classical freeness of vertex
   algebras.
   - THM-4671: the first quantum correction of Vir_{p,q}.

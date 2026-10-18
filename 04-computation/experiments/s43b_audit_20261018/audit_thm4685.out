@@ -1,0 +1,10 @@
+[A1] Lemma 1 (S1-S6 mod p^2, M1-M4 + consequences mod p), Lemma 2 (a)-(d), part (i) (i-a..i-d, with the intermediate congruences and exact signs (-1)^n, 4^n, 16^n), class-2 partner, twin identity:
+     428 primes 5 <= p <= 3000: ALL HOLD
+     F == 0 mod p^2 at all 217 primes p == 3 mod 4; F != 0 mod p^2 at 211 of 211 primes p == 1 mod 4
+[A2] part (ii): L(64), L(-64) (both parities of n), Lemma 3 (F and h) at 3 random z per prime, the defect identity delta(m) == -(-1)^n z^n delta(4096/m), q_p(4096/m) == 12 q_p(2) - q_p(m):
+     781 primes 5 <= p <= 6000: 781 pass; failures: none
+[A3] p = 3 (excluded): F mod 9 = 0, (i-a) sum mod 9 = 6, (-1)^n 4^n F mod 9 = 0
+
+real	3m1.431s
+user	0m0.062s
+sys	0m0.125s

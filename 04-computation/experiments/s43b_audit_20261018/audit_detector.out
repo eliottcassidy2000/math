@@ -1,0 +1,28 @@
+A1=C(2k,k)^3:
+   (B1') survivors over 0<|m|<=100000, primes 7..200: [-512, -64, -8, 1, 16, 64, 256, 4096]
+   re-confirmed on all primes 7..600: True
+   supersingular density >= 0.30 over primes 101..1200 (independent, all m): [-512, -64, -8, 1, 16, 64, 256, 4096]
+   same set as survivors: True; max density among non-survivors: 0.112; survivor densities: [0.509, 0.515, 0.509, 0.503, 0.515, 0.509, 0.515, 0.503]
+   CM test (discriminant of tau with j(tau) = j attached to m): [(-512, [-16]), (-64, [-8]), (-8, [-4]), (1, [-7]), (16, [-3]), (64, [-4]), (256, [-12]), (4096, [-28])]
+A2=C(2k,k)^2C(3k,k):
+   (B1') survivors over 0<|m|<=100000, primes 7..200: [-8640, -1728, -192, -27, 8, 64, 108, 216, 1458, 3375]
+   re-confirmed on all primes 7..600: True
+   supersingular density >= 0.30 over primes 101..1200 (independent, all m): [-8640, -1728, -192, -27, 8, 64, 108, 216, 1458, 3375]
+   same set as survivors: True; max density among non-survivors: 0.105; survivor densities: [0.515, 0.491, 0.515, 0.515, 0.515, 0.503, 0.515, 0.532, 0.515, 0.515]
+   CM test (discriminant of tau with j(tau) = j attached to m): [(-8640, [-75, -75]), (-1728, [-51, -51]), (-192, [-27, -3]), (-27, [-15, -15]), (8, [-8, -8]), (64, [-11, -11]), (108, [-12, -12]), (216, [-24, -24]), (1458, [-48, -48]), (3375, [None, -60])]
+A3=C(2k,k)^2C(4k,2k):
+   (B1') survivors over 0<|m|<=100000, primes 7..200: [-82944, -12288, -3969, -1024, -144, 81, 256, 648, 2304, 20736]
+   re-confirmed on all primes 7..600: True
+   supersingular density >= 0.30 over primes 101..1200 (independent, all m): [-82944, -12288, -3969, -1024, -144, 81, 256, 648, 2304, 20736]
+   same set as survivors: True; max density among non-survivors: 0.105; survivor densities: [0.538, 0.509, 0.503, 0.509, 0.515, 0.503, 0.515, 0.509, 0.532, 0.515]
+   CM test (discriminant of tau with j(tau) = j attached to m): [(-82944, [-52, -52]), (-12288, [-36, -36]), (-3969, [-28, -7]), (-1024, [-20, -20]), (-144, [-12, -3]), (81, [-7, -7]), (256, [-8, -8]), (648, [-16, -4]), (2304, [-24, -24]), (20736, [-40, -40])]
+A4=C(2k,k)C(3k,k)C(6k,3k):
+   (B1') survivors over 0<|m|<=100000, primes 7..200: [-32768, -3375, 1728, 8000, 54000]
+   re-confirmed on all primes 7..600: True
+   supersingular density >= 0.30 over primes 101..1200 (independent, all m): [-32768, -3375, 1728, 8000, 54000]
+   same set as survivors: True; max density among non-survivors: 0.082; survivor densities: [0.503, 0.503, 0.509, 0.515, 0.515]
+   CM test (discriminant of tau with j(tau) = j attached to m): [(-32768, [-11]), (-3375, [-7]), (1728, [-4]), (8000, [-8]), (54000, [-12])]
+
+real	6m4.496s
+user	0m0.015s
+sys	0m0.046s

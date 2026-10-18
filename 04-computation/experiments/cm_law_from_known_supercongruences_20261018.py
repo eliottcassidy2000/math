@@ -8,7 +8,7 @@ Delta_k = O_(n-k) - O_k, the shadow a_(n-k) == (-1)^n a_k (1 + p Delta_k) (mod p
 If F(z) == eps1 a(p) and F(1/z) == eps2 a(p) (mod p^2) are known (the CM supercongruences), (R) determines G(1/z) mod p,
 and h = -G + q_p(2) F (mod p) then gives the harmonic law 6h == q_p(m) F at m = 64/z.  This script checks:
 (1) (R) at z = 64, -8, 4 (m = 1, -8, 16) for 5 <= p <= PMAX;
-(2) the derived value of G(1/z) mod p, and hence the law at m' = 4096/m, from the two supercongruence values alone.
+(2) the law at m' = 4096/m directly (corrected after S43b m6: the code checks (R) and the law, not a separate derivation of G).
 Usage: python cm_law_from_known_supercongruences_20261018.py [PMAX]
 Session opus-2026-10-17-S43.
 """
