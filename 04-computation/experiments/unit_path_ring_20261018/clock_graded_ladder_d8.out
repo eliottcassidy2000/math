@@ -1,0 +1,29 @@
+d = 1: E_d = 3.388402513132 ; cross term E_d - E_(d-1) = -1.468740344011 ; lag 0: +0.00000000 lag 1: -1.42857143 lag 2: +0.00000000 lag 3: +0.00000000 (x2 = THM-4667 units) ; F-cache 192
+   exact E_1 = 32898/9709 = 3.388402513132
+d = 2: E_d = 2.575381952001 ; cross term E_d - E_(d-1) = -0.813020561132 ; lag 0: -0.09346252 lag 1: -0.61802835 lag 2: -0.13717539 lag 3: +0.05665855 (x2 = THM-4667 units) ; F-cache 768
+   exact E_2 = 2.575381952001
+d = 3: E_d = 2.137429991172 ; cross term E_d - E_(d-1) = -0.437951960829 ; lag 0: -0.13267597 lag 1: -0.23696276 lag 2: -0.08167638 lag 3: +0.03831709 (x2 = THM-4667 units) ; F-cache 2496
+d = 4: E_d = 1.915078985284 ; cross term E_d - E_(d-1) = -0.222351005887 ; lag 0: -0.09594376 lag 1: -0.09646418 lag 2: -0.04299885 lag 3: +0.01940953 (x2 = THM-4667 units) ; F-cache 7680
+d = 5: E_d = 1.778418992239 ; cross term E_d - E_(d-1) = -0.136659993045 ; lag 0: -0.13855689 lag 1: +0.01276095 lag 2: -0.01925639 lag 3: +0.01148738 (x2 = THM-4667 units) ; F-cache 23232
+d = 6: E_d = 1.693329900578 ; cross term E_d - E_(d-1) = -0.085089091661 ; lag 0: -0.10228226 lag 1: +0.01905758 lag 2: -0.00440049 lag 3: +0.00401090 (x2 = THM-4667 units) ; F-cache 69888
+d = 7: E_d = 1.634125798487 ; cross term E_d - E_(d-1) = -0.059204102090 ; lag 0: -0.10183303 lag 1: +0.04011668 lag 2: +0.00386623 lag 3: -0.00059595 (x2 = THM-4667 units) ; F-cache 209856
+d = 8: E_d = 1.590908284057 ; cross term E_d - E_(d-1) = -0.043217514427 ; lag 0: -0.08773153 lag 1: +0.03827448 lag 2: +0.00611842 lag 3: +0.00001058 (x2 = THM-4667 units) ; F-cache 629760
+     5666.36 real      5296.97 user       151.81 sys
+          1044938752  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+            31816500  page reclaims
+                 324  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               30214  voluntary context switches
+            10551909  involuntary context switches
+     104641559728724  instructions retired
+      17737067503887  cycles elapsed
+          1197477120  peak memory footprint
+(stopped by the session after the validated C port printed d = 8 and d = 9; see clock_graded_ladder_c_d9.out)
