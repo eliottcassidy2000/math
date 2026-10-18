@@ -6723,6 +6723,10 @@ OEIS A038375 gives max H(T) over all n-vertex tournaments: 1, 1, 3, 5, 15, 45, 1
   at every Frobenius point (p^r-1)/2; s_7((p-1)/2) == (-1/p) a_(4A)(p); HYP-9291 resolved) and THM-4670 PROVED (the
   zeta(2)-class twin sum C(n+k,k)^3 == b(n) mod p^2 at the half-period, via Dixon's derivative; HYP-9292 resolved; audit M1: a corollary of the classical van Hamme/Ishikawa/Ahlgren supercongruences, MISTAKE-629). OPEN: a mod-p^3 form; a
   conceptual (K3-family / motive 8.4) reason; the Witten-index reading of the ROOT current (supercharge on sources?).
+- S44 Li spectral sequence (li_spectral_sequence_quantum_transfer_20261018.md): THM-4695 PROVED (first-order quantum transfer
+  universal: (c - c_(2,2N+1)) T*_N). OPEN HYP-9315: H_1 of the derived arc space of x^N cyclic (Euler syzygy); degree-N
+  generators at Li 2k+1 = order-k transfers; extend to admissible sl2 / W_3 / N=2. OPEN HYP-9316: first homotopy of curve
+  derived arc spaces = minimal Cramer syzygy (closed form for w_1?).
 - S43 twins (halfperiod_twin_classes_cm_log_law_20261018.md): THM-4685 PROVED (7 twin classes; three 4C classes;
   CM harmonic law at m = +-64). The law at the other CM points and (H) are KLMSY 2016 Cor. 3/4 (S43b M1, MISTAKE-632);
   THM-4686 = alternative proof (+ KLMSY Conjecture 9 at s = 1). OPEN: the class-6 congruence (K); the only-if of the

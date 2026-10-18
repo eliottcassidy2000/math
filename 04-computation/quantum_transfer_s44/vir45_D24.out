@@ -1,0 +1,15 @@
+=== Vir_(4,5), c = 7/10, N = 6, prime 2147483647
+D=12 -  [boundaries->J: True, T1 in grI: True] (0.0s)
+D=13 -  [boundaries->J: True, T1 in grI: True] (0.0s)
+D=14 -  [boundaries->J: True, T1 in grI: True] (0.0s)
+D=15 s=6(Li 3): ker 1, H1 1, T1 1, T1+T2 1  [boundaries->J: True, T1 in grI: True] (0.0s)
+D=16 s=6(Li 4): ker 1, H1 1, T1 1, T1+T2 1  [boundaries->J: True, T1 in grI: True] (0.0s)
+D=17 s=6(Li 5): ker 2, H1 1, T1 1, T1+T2 2  [boundaries->J: True, T1 in grI: True] (0.0s)
+D=18 s=6(Li 6): ker 2, H1 1, T1 1, T1+T2 2; s=7(Li 4): ker 1, H1 2, T1 1, T1+T2 1  [boundaries->J: True, T1 in grI: True] (0.0s)
+D=19 s=6(Li 7): ker 2, H1 1, T1 1, T1+T2 2; s=7(Li 5): ker 2, H1 3, T1 2, T1+T2 2  [boundaries->J: True, T1 in grI: True] (0.0s)
+D=20 s=6(Li 8): ker 2, H1 1, T1 1, T1+T2 2; s=7(Li 6): ker 4, H1 4, T1 3, T1+T2 4  [boundaries->J: True, T1 in grI: True] (0.0s)
+D=21 s=6(Li 9): ker 2, H1 1, T1 1, T1+T2 2; s=7(Li 7): ker 6, H1 5, T1 4, T1+T2 6  [boundaries->J: True, T1 in grI: True] (0.0s)
+D=22 s=6(Li 10): ker 2, H1 1, T1 1, T1+T2 2; s=7(Li 8): ker 8, H1 6, T1 5, T1+T2 8; s=8(Li 6): ker 1, H1 6, T1 1, T1+T2 1  [boundaries->J: True, T1 in grI: True] (0.0s)
+D=23 s=6(Li 11): ker 2, H1 1, T1 1, T1+T2 2; s=7(Li 9): ker 11, H1 7, T1 6, T1+T2 11; s=8(Li 7): ker 2, H1 9, T1 2, T1+T2 2  [boundaries->J: True, T1 in grI: True] (0.0s)
+D=24 s=6(Li 12): ker 2, H1 1, T1 1, T1+T2 2; s=7(Li 10): ker 13, H1 8, T1 7, T1+T2 13; s=8(Li 8): ker 5, H1 12, T1 4, T1+T2 5  [boundaries->J: True, T1 in grI: True] (0.0s)
+TOTAL through D=24: dim ker pi = 71, rank T1 = 45, rank T1+T2 = 71
