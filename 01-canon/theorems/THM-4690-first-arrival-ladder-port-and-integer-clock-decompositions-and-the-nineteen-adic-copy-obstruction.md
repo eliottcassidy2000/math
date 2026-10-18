@@ -111,7 +111,8 @@ This uses the notation of THM-4667 and HYP-9290.
 
    In words: the source energy is `34N/7`; the sibling pairs remove exactly `10N/7` of it in every stopping set; the rest
    of the cancellation is carried by same-clock pairs, by other lag-1 pairs and by longer lags. For `V = {1}`, the ROOT
-   itself, `E_V = R(N)^2`, so `R(N)^2 - 24N/7` is the sum of the non-sibling pair correlations of the full transport.
+   itself, `E_V = R(N)^2` whenever every source `<= 4N` reaches 1 (true throughout the verified Collatz range). Then
+   `R(N)^2 - 24N/7` is the sum of the non-sibling pair correlations of the full transport.
 
 5. **The 19-adic obstruction to connecting coefficient copies.**
    - **Setting.** `F = Q(ζ15)(√-11)(w)`, with `w^3 + 2w^2 - 4w - 4 = 0`, is the degree-48 field of the golden contact
@@ -259,7 +260,11 @@ Prime by prime (`nineteen_places.py`):
   - no three-step connector whose first step lies in the 90 integral directions (5 survivors of the 12-place screen,
     each certified non-square at a degree-1 place, `p = 4051` or `4261`);
   - none whose first step lies in the 120 19-adic directions `ζ^l u^k`, `k = ±1, ±2` (10 survivors, each certified
-    non-square at `p = 3631`, `4051` or `4261`).
+    non-square at `p = 3631`, `4051` or `4261`);
+  - none whose first step lies in the 240 K-directions `ζ^l δ_𝔮^(±1)`. Here `δ_𝔮 = conj(γ_𝔮)/γ_𝔮`,
+    `γ_𝔮 = j - c_0 - c_1 ζ` vanishes at one prime `𝔮` of `K` above 19 from each of the four conjugate pairs, and
+    `δ_𝔮` has a pole at the three primes of `F` above `𝔮` (37 survivors, each certified non-square at an 80-place
+    screen; places where an element is not integral are skipped).
 
   A single quadratic non-residue at a degree-1 place where the element is a unit proves that it is not a square in `F`.
   Connectors with intermediate points outside `F` are not covered.
@@ -269,7 +274,9 @@ Prime by prime (`nineteen_places.py`):
   - so `δ = conj(γ)/γ` with `γ ∈ 𝔮 ∖ conj(𝔮)` is a unit vector with a pole at the three primes of `F` above `𝔮`, one
     of which has type `h ≡ 7`.
 
-  These are the directions a connector search should use next. The census above used none of them.
+  The census above includes a first probe with one such `δ` per conjugate pair. It finds no three-step connector. A
+  connector must clear the poles at all 24 primes, so `δ`-steps covering several pairs (two or more `δ`'s, or `δ`'s
+  attached to products of primes) are the next family to try.
 - **Witnesses.** Inside a coefficient factor's own unit graph, a new connector point with at most five neighbours never
   blocks a 6-colouring. A connector can invalidate saved additive witnesses only through the contact families it creates.
 - **Ports versus HYP-9290.** `X(N)` (statement 2) plays the role of HYP-9290's frontier terms (`MF` and the same-step

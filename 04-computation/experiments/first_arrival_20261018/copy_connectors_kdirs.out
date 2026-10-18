@@ -1,0 +1,12 @@
+[    0 s] field degree 48 ; cubic coefficients a = conj(d), b, c built
+[    0 s] geometric embedding zeta -> e(2/15), j -> - i sqrt(11), w -> 1.709275; unit-edge error 2.22e-16
+[    0 s] places: [1021, 1171, 1741, 1831, 2011, 2161, 2281, 2311, 2971, 3271, 3301, 3391]
+[    0 s] coefficient b: |b|^2 = 13.720284; N(t)(N(t)-4) for t = b*q is NON-square (screened)
+[    1 s]   two-step: 172 point pairs across copies with |t| <= 2 tested; 0 survive the place screen
+[    1 s]   K-directions: ['q(z=(1, 2),j=(0, 1)) c0=9 c1=-9', 'q(z=(1, 2),j=(0, 18)) c0=-9 c1=9', 'q(z=(3, 9),j=(0, 1)) c0=6 c1=-2', 'q(z=(3, 9),j=(0, 18)) c0=-6 c1=2']
+[  204 s]   three-step via 240 unit directions: 47515 tests; 22 survive the place screen
+[  204 s] coefficient c: |c|^2 = 16.957454; N(t)(N(t)-4) for t = c*q is NON-square (screened)
+[  204 s]   two-step: 118 point pairs across copies with |t| <= 2 tested; 0 survive the place screen
+[  204 s]   K-directions: ['q(z=(1, 2),j=(0, 1)) c0=9 c1=-9', 'q(z=(1, 2),j=(0, 18)) c0=-9 c1=9', 'q(z=(3, 9),j=(0, 1)) c0=6 c1=-2', 'q(z=(3, 9),j=(0, 18)) c0=-6 c1=2']
+[  352 s]   three-step via 240 unit directions: 33031 tests; 15 survive the place screen
+K_DIRECTIONS=1 PYTHONPATH=first_arrival_20261018/shim python3   349.11s user 1.04s system 99% cpu 5:52.44 total

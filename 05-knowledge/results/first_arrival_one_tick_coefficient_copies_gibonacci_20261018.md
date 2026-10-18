@@ -34,7 +34,7 @@ renumbering still use the old numbers.
 | 6 | Pair-sign laws and higher-lag bound: L1-L7 PASSED at 2^27 | FINITE-EXACT, HYP-9325(B, C) |
 | 7 | (A) + (B1) + (C) ⇒ `E_V <= 2.60N`, so `|R(N)| <= 40.4 sqrt(N)` | PROVED implication; the hypotheses are OPEN |
 | 8 | 19-adic obstruction: the coefficient copies, and all 49 sheets of the recipe sum, are separated for every path whose steps are integral at the eight `h ≡ 7` primes above 19, which covers every power of the contact unit `u` | PROVED (THM-4690(5)) |
-| 9 | Connector census inside `F`: no 2-step connector; no 3-step connector through 210 named directions | FINITE-EXACT |
+| 9 | Connector census inside `F`: no 2-step connector; no 3-step connector through 450 named directions (integral, `u`-powers, K-directions with poles above 19) | FINITE-EXACT |
 | 10 | Fibonacci from (5,1) and (7,1): values, closed forms, `Z[φ]` factorisations `φ^-4(φ^7 - 1)` and `φ^-3 √5 (φ^5 - 1)`, Cassini constants `-L_7` and `-5L_5` | KNOWN / PROVED (elementary) |
 | 11 | Solfeggio merge: the ROOT denominators 7 come from the Solfeggio three-lift period (`4^3 - 1 = 63`); mod 9, (5,1) is 4·Fibonacci (the linear part of `B`) and (7,1) is Fibonacci shifted by 9 | PROVED |
 | 12 | Solfeggio prime factors against the (5,1)/(7,1) arithmetic | NUMEROLOGY (p ≈ 0.07, look-elsewhere not corrected) |
@@ -254,15 +254,20 @@ propagate between copies. The recorded target was a coefficient context that con
   - 120 19-adic directions `ζ^l u^k`, `k = ±1, ±2`: 23729 + 16508 tests, 10 survivors, all certified non-squares at
     `p = 3631`, `4051` or `4261`.
 
-2.2 explains the second family completely: `u` cannot touch the poles at the `h ≡ 7` primes.
+  - 240 K-directions `ζ^l δ_𝔮^(±1)` with poles above 19, as in 2.4, one `δ` per conjugate pair of primes of `K`:
+    47515 + 33031 tests, 37 survivors of the 12-place screen, all certified non-squares at the 80-place screen.
+
+2.2 explains the second family completely: `u` cannot touch the poles at the `h ≡ 7` primes. The third family has the
+right kind of pole, but one `δ` covers only 3 of the 24 primes.
 
 ### 2.4 Next target (concrete)
 
 Every prime of `K = Q(ζ15, √-11)` above 19 is split from its complex conjugate. So `δ = conj(γ)/γ` with
 `γ ∈ 𝔮 ∖ conj(𝔮)` is a unit vector in `K` with a pole at the three primes of `F` above `𝔮`, including an `h ≡ 7` one.
 
-A connector search should combine such `δ`, chosen to cover all 24 poles of `b(m' - m)`, with the two-step squareness
-test for the remainder. Its outcome decides whether the recipe can carry cross-copy forcing at all.
+A first probe, with one `δ` from each conjugate pair and the exact two-step test for the remainder, found nothing
+(2.3). The next search should combine several `δ`'s so that the step poles can cover all 24 poles of `b(m' - m)`. That
+means four or more steps, or `δ`'s attached to products of primes. Its outcome decides whether the recipe can carry cross-copy forcing at all.
 
 Any connector must also be checked against the saved additive witnesses: the 570 port patterns and their contact
 families, HYP-9289. A new point with at most five neighbours inside one factor never blocks a 6-colouring by itself.

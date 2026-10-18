@@ -19,7 +19,7 @@ Usage: PYTHONPATH=first_arrival_20261018/shim python3 first_arrival_20261018/cop
 import os, sys, json, time, cmath, itertools
 from fractions import Fraction as Q
 HERE = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, os.path.join(HERE, '..'))
+sys.path.insert(0, os.path.join(HERE, '..')); sys.path.insert(0, HERE)
 from golden_forcing_search_20261017 import Geo, recipe
 from golden_vsquare_unit_census_20261017 import places, red
 
@@ -60,6 +60,7 @@ def main():
     log('places:', [p for p, _, _ in pl])
     def nonsquare_somewhere(x):
         for p, emb, embc in pl:
+            if any(c and c.denominator % p == 0 for c in x): continue      # not integral at this place: skip it
             r = red(x, p, emb)
             if r == 0: continue
             if pow(r, (p - 1) // 2, p) == p - 1: return True
@@ -98,6 +99,15 @@ def main():
             roots = roots + [f.scale(r, -1) for r in roots]
             ui = f.inv(u); pw = [u, f.mul(u, u), ui, f.mul(ui, ui)]
             U0 = sorted({f.mul(r, q) for r in roots for q in pw})
+        if os.environ.get('K_DIRECTIONS'):
+            # K-directions conj(gamma)/gamma with poles at the primes above 19 (incl. the h = 7 type), times roots of unity
+            from kdirs import kdirections
+            z15 = f.gen(0); roots = [f.one]
+            for _ in range(14): roots.append(f.mul(roots[-1], z15))
+            roots = roots + [f.scale(r, -1) for r in roots]
+            kd = kdirections(geo); log('  K-directions:', [lab for lab, _ in kd])
+            pw = [dl for _, dl in kd] + [f.inv(dl) for _, dl in kd]
+            U0 = sorted({f.mul(r, q) for r in roots for q in pw})
         cands3 = []; tested3 = 0
         for (i1, m), (i2, mm) in itertools.combinations(enumerate(geo.M), 2):
             for a1, x in enumerate(C):
@@ -114,7 +124,8 @@ def main():
         log('  three-step via %d unit directions: %d tests; %d survive the place screen' % (len(U0), tested3, len(cands3)))
         out[name] = dict(norm=nb, two_step_tested=tested, two_step_survivors=cands, three_step_tested=tested3,
                          three_step_survivors=cands3[:200], three_step_survivor_count=len(cands3))
-    json.dump(out, open(os.path.join(HERE, 'copy_connectors%s.json' % ('_udirs' if os.environ.get('U_DIRECTIONS') else ('_roots' if os.environ.get('ROOTS_OF_UNITY') else ''))), 'w'), indent=1, default=str)
+    suf = '_kdirs' if os.environ.get('K_DIRECTIONS') else ('_udirs' if os.environ.get('U_DIRECTIONS') else ('_roots' if os.environ.get('ROOTS_OF_UNITY') else ''))
+    json.dump(out, open(os.path.join(HERE, 'copy_connectors%s.json' % suf), 'w'), indent=1, default=str)
 
 if __name__ == '__main__':
     main()
