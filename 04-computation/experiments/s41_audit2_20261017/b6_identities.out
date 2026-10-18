@@ -1,0 +1,6 @@
+|v|^2 - 1 = 0
+|d + u + v|^2 - 1 = 0
+(a) u + v + dbar uv - uv conj(d+u+v), using v conj(v) = 1: 0
+(b) |u + v + dbar uv|^2 - 1 = 0
+(c) d + u + dbar e^2 - Z conj(u)/conj(Z) = 0
+(d) Z^2 D/R + Z/conj(Z) = 0

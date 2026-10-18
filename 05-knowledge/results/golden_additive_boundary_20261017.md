@@ -123,7 +123,8 @@ unit-distance pairs. They named the next target: a unit edge joining different p
     `u^3 = m2 u^2 + m1 u + 1` to an explicit nonzero element of `Q(zeta5, j)`
     (golden_e_direction_proof_check_20261017.py).
 
-So every source `A + uC + vC + eL` over `K` is the old source multiplied Cartesianly along `e`; every boundary colouring
+So every source `A + uC + vC + eL` over `K` is the old source multiplied Cartesianly along `e`. Every boundary colouring
+with `k >= χ(L)` colours, ports in one `e`-layer,
 extends, and the named target edge does not exist in this space. Together with section 3 (`v^2`), the two natural
 nonlinear moves of the golden program add no cross edges.
 
@@ -141,7 +142,8 @@ uses all four norm components in `F(s, h)`, with `d3 ∈ D(C) ∪ D(L)` (`1.44 x
 | `e^2 = -Z/conj(Z)` (an element of `F`) | 36 | 26 | 10 |
 
 `golden_product_relations_20261017.py` shows that each set of 10 cross units is one contact family, and both follow
-from clock_duality's contact `|d + u + v| = 1`:
+from the definitions. The `uv` family follows from clock_duality's contact `|d + u + v| = 1`; the `e^2` family uses only
+`e^2 = -Z/conj(Z)` and `conj(u) = 1/u`. Both families are confirmed exactly in `K` by the second audit:
 - **`uv`.** The family is `q (0, 1, 1, conj d)` in `(1, u, v, uv)`. Since `|u| = |v| = 1`,
   `|u + v + conj(d) uv| = |conj(d + u + v)| = 1`: the reflected contact.
 - **`e^2`.** The family is `q (d, 1, 0, conj d)` in `(1, u, v, e^2)`. Indeed `d + u + conj(d) e^2 = Z conj(u)/conj(Z)`,

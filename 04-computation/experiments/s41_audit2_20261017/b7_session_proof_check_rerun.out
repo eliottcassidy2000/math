@@ -1,0 +1,17 @@
+cubic in u over Q(j): degree 3
+m2 = -11*j/19 - 20/19 
+m1 = 20/19 - 11*j/19 
+m0 = 1
+|u^3 - (m2 u^2 + m1 u + m0)| at the embedding: 1.5700924586837752e-16
+zeta5^1, j = +: lam^2 + dbar m0 = 0.423415 -0.84061i
+zeta5^1, j = -: lam^2 + dbar m0 = 2.3457 -2.40075i
+zeta5^2, j = +: lam^2 + dbar m0 = 0.0518934 -0.259583i
+zeta5^2, j = -: lam^2 + dbar m0 = 1.23993 -3.85353i
+zeta5^3, j = +: lam^2 + dbar m0 = 1.23993 +3.85353i
+zeta5^3, j = -: lam^2 + dbar m0 = 0.0518934 +0.259583i
+zeta5^4, j = +: lam^2 + dbar m0 = 2.3457 +2.40075i
+zeta5^4, j = -: lam^2 + dbar m0 = 0.423415 +0.84061i
+minimum |lam^2 + dbar m0| over embeddings: 0.264719  (nonzero => no unit with b != 0; the case is closed)
+exact numerator of den^2 (lam^2 + dbar m0) in the basis zeta5^i j^k: -44*j*z**3 + 396*j*z**2 + 880*j*z + 902*j - 3770*z**3 - 5788*z**2 - 5195*z - 893
+denominator den^2 reduced: -1444*z**3 - 1444*z**2 + 1444
+EXACT: lam^2 + dbar m0 is nonzero: True

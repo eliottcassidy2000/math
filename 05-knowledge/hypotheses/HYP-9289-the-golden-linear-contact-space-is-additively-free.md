@@ -33,7 +33,7 @@ six-colour port pattern that extends to the unit graph of `A'` extends to `A' + 
 
 **Consequence.** Every six-colour forcing construction in the golden contact field needs edges outside `K + uK + vK`.
 For example, clock_duality's degree-192 direction `e` of golden_square_contexts_20261017h.md lies outside it. THM-4668
-(PROVED) shows `e` is Cartesian on `K + uK + vK + eK`, so adjoining `e` over `K` preserves additive freedom (it adds a
+(PROVED) shows `e` is Cartesian on `K + uK + vK + eK`, so adjoining `e` over `K` preserves additive freedom whenever `k >= χ(L)` and the ports lie in one `e`-layer (it adds a
 Cartesian factor), and no `e`-edge changes the old coordinates.
 Before building a graph, any new coordinate should be census-tested for cross edges, as was done for `v^2`.
 
@@ -54,7 +54,7 @@ All pre-screens below run in seconds to minutes.
 `K_5` on the ports and blocks 465 of the 570 patterns. The coefficient colourings evade this by shifting the
 constraints.
 
-**Beyond the linear space.** The product coordinates `ue` and `ve` add no cross edges (census), and `e` is Cartesian
+**Beyond the linear space.** For the coefficient sets D(A), D(C), D(C) ∪ D(L), the product coordinates `ue` and `ve` add no cross edges (FINITE-EXACT census), and `e` is Cartesian
 (THM-4668). The coordinates `uv` and `e^2` add one contact family each:
 - `uv`: `q (0, 1, 1, conj d)`, the reflected contact;
 - `e^2`: `q (d, 1, 0, conj d)`, which shares the `(A, u)`-step with the `v`-contact.

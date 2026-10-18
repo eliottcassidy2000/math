@@ -18471,3 +18471,15 @@ the ambient space.
   - Quote certified constants in the exact normalisation of the certificate.
   - Report rates only once the ratios have visibly stabilised.
   - When a complete scan is cheap, never let a sampled maximum stand in for the supremum.
+- **Addendum (second S41 referee, THM-4668 and the product censuses).**
+  - The proof of THM-4668 is correct and complete, and PROVED stands. The referee independently reproduced the
+    degree-192 field, u's minimal polynomial over Q(j), the exact nonvanishing in Q(zeta5, j), every census, and the
+    coupled-source pre-screen.
+  - Errors fixed:
+    - the e-census size (1.44e9, not 9.1e8);
+    - the classification citation (G1 of marked_contacts_root_current_20261017e.md section 5, not G5) in THM-4668
+      and two script docstrings.
+  - Overstatement fixed: the extension claim requires k >= chi(L) and ports in one e-layer.
+  - Minor fixes: the wording of the lambda derivation; credit for the "N not in K" argument to clock_duality's G1
+    proof; the e^2 identity uses only e^2 = -Z/conj(Z); the scope of the ue/ve census.
+  - Report: 04-computation/experiments/s41_audit2_20261017/REPORT.md.

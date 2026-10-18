@@ -5,7 +5,8 @@ golden_product_direction_census_20261017.py found that Y = e^2 (an element of th
 the golden source. golden_product_relations_20261017.py identifies them as one contact family q (d, 1, 0, conj d) in the
 coordinates (1, u, v, Y): indeed d + u + conj(d) Y = Z conj(u)/conj(Z) is a unit. Together with clock_duality's v-contact
 q (d, 1, 1, 0), both families share the same (A, u)-step dq, q. For the coefficient sets of the golden source the census
-is complete (every unit difference with nonzero Y-part is a pure Y-axis unit or in this family), and G5 classifies the
+is complete (every unit difference with nonzero Y-part is a pure Y-axis unit or in this family), and G1
+(marked_contacts_root_current_20261017e.md section 5) classifies the
 rest. This script builds the 4-coordinate source combinatorially, runs the additive pre-screen
 c_A(a) + c_1(b) + c_2(c) + c_3(l) mod 6, and runs the full SAT problem (relative six-core first) on the patterns the
 pre-screen blocks, or on all patterns with --full.

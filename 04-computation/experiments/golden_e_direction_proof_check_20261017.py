@@ -7,8 +7,9 @@ Case v-coefficient zero: a unit a + u b + e g (a, b, g in K, g != 0) forces c0 =
   [1]   a^2 + b^2 dbar m0 = 0
   [u]   2ab + a^2 dbar + b^2 dbar m1 - kappa' d = 0
   [u^2] b^2 + 2ab dbar + b^2 dbar m2 - kappa' = 0.
-b = 0 forces a = 0, kappa' = 0, |g| = 1 (pure axis). For b != 0 put a = lam b; [u^2] gives kappa', [u] gives lam
-linearly (2 - 2|d|^2 != 0), and [1] requires lam^2 = -dbar m0. This script computes m0, m1, m2 exactly over Q(j) and
+b = 0 forces a = 0, kappa' = 0, |g| = 1 (pure axis). For b != 0 put a = lam b; [u^2] gives kappa'. [u] is then
+quadratic in lam, and becomes linear after substituting lam^2 = -dbar m0 from [1] (2 - 2|d|^2 != 0). Consistency
+requires lam^2 = -dbar m0. This script computes m0, m1, m2 exactly over Q(j) and
 tests that consistency condition exactly in Q(zeta15, j) (sympy, minimal polynomials).
 Usage: python golden_e_direction_proof_check_20261017.py
 Session opus-2026-10-17-S41.

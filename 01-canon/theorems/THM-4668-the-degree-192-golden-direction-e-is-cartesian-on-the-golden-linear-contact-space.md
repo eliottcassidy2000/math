@@ -1,12 +1,17 @@
 ---
 id: THM-4668
-title: "The degree-192 golden direction e = Zs/h is Cartesian on the golden linear contact space: in K + uK + vK + eK (K = Q(zeta15, sqrt(-11)), clock_duality_oct15's golden contact u, v and escape direction e), every unit vector with a nonzero e-coefficient is a pure e-axis unit q e, |q| = 1; hence every unit-distance graph on A + uC + vC + eL (A, C, L in K) is the old source graph Cartesian-multiplied along e, every boundary colouring of the old source extends, and no unit edge joins different port and e-coefficient fibres"
+title: "The degree-192 golden direction e = Zs/h is Cartesian on the golden linear contact space: in K + uK + vK + eK (K = Q(zeta15, sqrt(-11)), clock_duality_oct15's golden contact u, v and escape direction e), every unit vector with a nonzero e-coefficient is a pure e-axis unit q e, |q| = 1; hence every unit-distance graph on A + uC + vC + eL (A, C, L in K) is the old source graph Cartesian-multiplied along e, every k-colouring of the old source with k >= chi(L) extends (ports in one e-layer), and no unit edge joins different port and e-coefficient fibres"
 status: >
   PROVED. The proof is a case analysis on the norm equation in E' = F(s, h), together with a degree argument (N is not
   in K) and one exact computation: the minimal polynomial u^3 = m2 u^2 + m1 u + 1 of u over Q(j), and the nonvanishing
   of an explicit element of Q(zeta5, j), done in sympy with exact reduction to the basis zeta5^i j^k.
-  FINITE-EXACT control: an independent multi-prime sieve plus exact norm census of all 9.1 x 10^8 differences with
-  coefficients in D(A), D(C), D(C) u D(L) of clock_duality's golden source finds exactly the 26 pure e-axis units.
+  FINITE-EXACT control (independent of the proof): a three-prime modular sieve over all
+  1603 x 83 x 83 x 130 ≈ 1.44 x 10^9 differences dA + u d1 + v d2 + e d3, with dA in D(A) u {0}, d1, d2 in D(C) u {0}
+  and d3 in (D(C) u D(L)) \ {0}, followed by exact norm checks of the 26 survivors. Exactly the 26 pure e-axis units
+  remain. AUDITED (second S41 referee, 04-computation/experiments/s41_audit2_20261017/REPORT.md): the proof is
+  correct and complete; the degree-192 field, the minimal polynomial and the nonvanishing were reproduced
+  independently. The argument "N is not in K" and the shape of the case c ≠ 0 follow clock_duality's proof of G1
+  (marked_contacts_root_current_20261017e.md section 5).
   The direction e and the field E' are clock_duality_oct15's (golden_square_contexts_20261017h.md, G2); this theorem
   closes their stated next target inside the linear space.
 session: opus-2026-10-17-S41
@@ -14,7 +19,7 @@ source: 05-knowledge/results/golden_additive_boundary_20261017.md
 scripts:
   - 04-computation/experiments/golden_e_direction_proof_check_20261017.py (+ .out): minimal polynomial and exact nonvanishing
   - 04-computation/experiments/golden_e_direction_census_20261017.py (+ .out, .json): finite census control
-related: [clock_duality_oct15 golden_square_contexts_20261017h.md (G1, G2, attachment P + eL), joint_contact_field_20261017f.md (G5, section 5), shared_golden_contact_20261017g.md, HYP-9289]
+related: [clock_duality_oct15 golden_square_contexts_20261017h.md (G1, G2, attachment P + eL), marked_contacts_root_current_20261017e.md (G1, section 5: the classification of K + uK + vK), joint_contact_field_20261017f.md (section 5: G1's hypotheses for the golden contact), shared_golden_contact_20261017g.md, HYP-9289]
 ---
 
 # THM-4668 — the golden direction e is Cartesian on the golden linear contact space
@@ -34,8 +39,10 @@ related: [clock_duality_oct15 golden_square_contexts_20261017h.md (G1, G2, attac
 Let `x = a + ub + vc + eg` with `a, b, c, g ∈ K` and `g ≠ 0`. If `x conj(x) = 1`, then `a = b = c = 0` and
 `g conj(g) = 1`.
 
-**Corollary.** Let `A, C, L ⊂ K` be finite, with distinct addresses. The unit graph on `A + uC + vC + eL` has exactly:
-- the edges of `A + uC + vC` in each `e`-layer (classified by G5: axes and the contact family `q(d, 1, 1)`);
+**Corollary.** Let `A, C, L ⊂ K` be finite (addresses are automatically distinct, since 1, u, v, e are K-independent).
+The unit graph on `A + uC + vC + eL` has exactly:
+- the edges of `A + uC + vC` in each `e`-layer (classified by G1 of marked_contacts_root_current_20261017e.md section 5:
+  axes and the contact family `q(d, 1, 1)`);
 - the unit edges of `L` along `e`, with the other coordinates fixed.
 
 Consequently:
@@ -73,7 +80,8 @@ quadratic over `K` with leading coefficient `d̄ ≠ 0`, contradicting `[K(u):K]
       a^2 + d̄ b^2 = 0,     2ab + d̄ a^2 + d̄ m1 b^2 = κ' d,     b^2 + 2 d̄ ab + d̄ m2 b^2 = κ'.
 
 - If `b = 0`, then `a = 0`, `κ' = 0`, `t = 0` and `|g| = 1`.
-- If `b ≠ 0`, put `a = λ b`. The last two equations give `λ = (d̄^2 - d̄ m1 + d + |d|^2 m2)/(2 - 2|d|^2)`, where
+- If `b ≠ 0`, put `a = λ b`. Eliminating `κ'` with the `u^2`-equation leaves an equation quadratic in `λ`. Substituting
+  `λ^2 = -d̄` from the first equation makes it linear, giving `λ = (d̄^2 - d̄ m1 + d + |d|^2 m2)/(2 - 2|d|^2)`, where
   `|d|^2 = φ^2 ≠ 1`. The first requires `λ^2 + d̄ = 0`. But `λ^2 + d̄` is an explicit nonzero element of
   `Q(zeta5, j)`: its numerator in the basis `zeta5^i j^k` is
   `-44 j z^3 + 396 j z^2 + 880 j z + 902 j - 3770 z^3 - 5788 z^2 - 5195 z - 893` with `z = zeta5`
@@ -81,7 +89,8 @@ quadratic over `K` with leading coefficient `d̄ ≠ 0`, contradicting `[K(u):K]
 
 **Corollary.** A difference of two addresses lies in `K + uK + vK + eK` with `e`-coefficient `l - l'`. By the
 statement it is a unit only if `l ≠ l'` forces the other coordinates to agree and `|l - l'| = 1`, or if `l = l'` and
-the difference is a unit of `K + uK + vK` (G5). The additive extension is the usual Cartesian one. ∎
+the difference is a unit of `K + uK + vK` (G1). The additive extension is the usual Cartesian one: clock_duality's
+formula (3), valid when `k >= χ(L)` and the ports lie in one `e`-layer. ∎
 
 ## Reading
 

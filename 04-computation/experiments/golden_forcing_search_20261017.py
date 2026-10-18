@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Design loop for golden-coordinate six-colour forcing: build A' + uC' + vC' in K, pre-screen additively, then SAT (S41).
 
-clock_duality_oct15's golden contact (joint_contact_field_20261017f.md section 5 with G5; shared_golden_contact_
+clock_duality_oct15's golden contact (G1 of marked_contacts_root_current_20261017e.md section 5, hypotheses certified in
+joint_contact_field_20261017f.md section 5; shared_golden_contact_
 20261017g.md) classifies every unit difference in K + uK + vK, K = Q(zeta15, sqrt(-11)), d = 1 + zeta5: the three axes
 and the contact family q(d, 1, 1), |q| = 1. So for coefficient sets A', C' in K the graph on A' + uC' + vC' is determined
 inside K: axis edges are unit differences inside one factor, and mixed edges join (a, b, c) to (a + dq, b + q, c + q)

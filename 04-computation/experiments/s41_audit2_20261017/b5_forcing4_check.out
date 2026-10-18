@@ -1,0 +1,11 @@
+[    1 s] box census for Y = e^2 with d3 in D(C) u {0}: 1603 x 83 x 83 x 83 = 916574561 differences; 112 candidates (incl. 0), next deviation 1.254e-08
+[    1 s] unit difference vectors by type: {'axis0': 26, 'axis2': 22, 'axis1': 22, 'v-contact': 10, 'axis3': 22, 'e2-contact': 10}
+[    2 s] referee graph: 54000 vertices, 389980 edges; by type {'axis0': 146000, 'axis2': 81000, 'axis1': 81000, 'v-contact': 560, 'axis3': 81000, 'e2-contact': 420}; undirected contact patterns: v 56, e^2 42
+[    3 s] session A, C equal the referee A, C element by element (same order): True
+[    3 s] session: |EA| 146 |EC| 15 |EL| 15; directed mixV 112 mixY 84; undirected 56, 42
+[    3 s] session mixV == referee v-contact patterns: True ; session mixY == referee e^2-contact patterns: True
+[    3 s] axis edges: referee A 146 C 15; equal to session EA, EC: True True
+[    3 s] session edge count implied by its construction: 389980; referee graph: 389980
+[    3 s] port graph edges (referee): [(0, 1), (0, 4), (0, 5), (0, 7), (1, 2), (2, 3), (3, 4), (5, 6), (6, 7)] ; equal to PORT_EDGES: True ; canonical patterns: 570 ; equal to session list: True
+[    5 s] additive (c1 = c2): clauses 764381; blocked 0 of 570; colourings verified on all 389980 referee edges and literal ports: 570
+[    7 s] additive (independent): clauses 764541; blocked 0 of 570; colourings verified on all 389980 referee edges and literal ports: 570
