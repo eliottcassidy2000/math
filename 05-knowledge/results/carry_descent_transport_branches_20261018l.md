@@ -229,6 +229,68 @@ For Apéry, the analogous finite extraction was available because the pole
 orders independently bounded the polynomial degree; no convergence premise
 was needed. That exact missing bound is the transferable research question.
 
+## 5a. Incoming work changes the next geometric filter
+
+Integrated commits `4140f876da`, `af5a15474e`, `777a38d857`, and
+`186fe3f60f` after reading the new proofs, controls, and audit corrections.
+The concept board now retains **palette repair** beside its existing
+source/phase and companion-descent coordinates.
+
+The [shared-phase packet](shared_phase_geometry_20261018b.md) bounds the
+new projected pairs in its fixed 128-layer rotation bank by ten at every
+phase. Its map takes simultaneous geometric unit equations to a common
+residue root; unit leading and constant coefficients keep that root and its
+inverse integral. It preserves necessary simultaneous equations, loses
+liftability, and retains the source-pair labels. This is a concrete companion
+to our Apéry descent: in both arguments, controlling poles makes a change of
+representation legitimate. The residue bound is an upper bound on events;
+Apéry descent identifies an actual polynomial. The conclusions differ.
+
+The [112-point hostile](shared_phase_threshold_hostile_20261018b.md) reaches
+thirteen projected pairs and defeats every source-fixing retraction, yet
+all 570 boundary patterns extend. The
+[shade theorem](shade_difference_support_20261018b.md) explains why: a tree
+of copies with one cross edge per join always permits a source-fixed shade
+repair. Even inconsistent copy-level phases can be repaired by individual
+vertex shades. A candidate must survive the relative degree-five deletion
+test, and then the pinned-parity repairs for all fifteen pairings. Failure of
+those repairs still does not exclude arbitrary six-colourings. These are
+successive rejection tests, not sufficient forcing criteria.
+
+This refines the use of our 3,755 saved witnesses. For an authenticated new
+unit edge e between existing Cartesian points, evaluate its endpoints by
+the saved additive colouring and define
+
+```
+H_e = {saved witnesses assigning the same colour to e's endpoints}.
+```
+
+For a proposed set of such edges to eliminate every old branch, its sets
+H_e must cover the entire saved witness bank. An uncovered witness is an
+explicit surviving colouring of the enlarged selected graph. Covering the
+bank is only necessary: other colourings may survive. With new vertices,
+the corresponding test is extension of each old witness, not an arbitrary
+colour assignment to the new coordinates. Exact distance authentication and
+the marked ports precede either test. This turns the existing receipt into
+a reusable rejection filter without assuming its witnesses exhaust support.
+
+The [ordered-difference packet](digit_idoneal_difference_20261018b.md)
+proves that shared edge increments need cycle equations. It also identifies
+the missing shade flip with the central opposite-edge involution on K4's
+six edges: vertex-induced permutations give only 24 of the 48 pair-preserving
+palette actions. This supplies an exact small-object connection to the
+user's four-vertex theme. It does not identify those palette operations with
+our Z/6 increments; arbitrary palette permutations need not preserve them.
+
+Finally, [THM-4710, Witt rigidity](../../01-canon/theorems/THM-4710-witt-rigidity-of-the-degree-n-singular-support-generators-of-virasoro-minimal-models.md)
+now has an all-N rational-function proof at Li degrees 3,5,7,9: explicit
+nonvanishing minors and denominators replace its former modular-rank
+extrapolation. The transfer to actual model generators still assumes their
+HYP-9315(b) positions. Its shared proof move with THM-4711 is an independently
+bounded algebraic certificate, not the observed agreement of a finite bank.
+MISTAKE-641's corrected literature credits and quantifiers are retained;
+none of its finite conic graphs is imported as a boundary-forcing theorem.
+
 ## 6. Reproduction and freeze
 
 The manifest records exact sources, receipts and inherited dependencies.

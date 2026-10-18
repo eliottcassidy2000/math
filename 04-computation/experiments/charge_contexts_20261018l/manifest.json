@@ -48,8 +48,20 @@
     "04-computation/experiments/source_concentration_20261018k.c": "327326b93cf0a9db8cbc9aaf893b98ac3b161275248d7fe0c0caea4f3936f757",
     "04-computation/experiments/source_pair_tensor_20261018k.py": "a9f3557d1e1c21da2da7c0fa701449d6494dad2f30e418818538a203a01f76b4",
     "05-knowledge/hypotheses/HYP-9330-weight-dichotomy-of-the-lucas-block-cm-detector.md": "4ec1c78705247b3dc5ff356718863af8679918cb70d74da365fdf241625dac7a",
-    "05-knowledge/results/carry_descent_transport_branches_20261018l.md": "934ef500348f8b49947071c3b94fb601d79ff1b8e12491c4acb1b3ec15d2d07f"
+    "05-knowledge/results/carry_descent_transport_branches_20261018l.md": "0af3d5a041e3ad32ba7963ee811ede22433501962a0760840e40c7ef0dfb8622",
+    "05-knowledge/results/shared_phase_geometry_20261018b.md": "06c8a56a49db69eefa8d62c8d25bccf48257f1b936b6596bc686b1670a10364e",
+    "05-knowledge/results/shade_difference_support_20261018b.md": "d0685c489f4b6f11faa61920dbd84e5ee1256184916d850b137ef87ec3ede43f",
+    "05-knowledge/results/shared_phase_threshold_hostile_20261018b.md": "122deb3030541677fa3ba34af30f2dcf0752468babe2f2d9ba651480d356ec47",
+    "05-knowledge/results/digit_idoneal_difference_20261018b.md": "b1cdeb1749f2383b77a10f4fd1d0e3286cfb8c15398c5540397d43c775facd16",
+    "01-canon/theorems/THM-4710-witt-rigidity-of-the-degree-n-singular-support-generators-of-virasoro-minimal-models.md": "95d9c68c828a2ea9404d32ce445f7b5b934c15091a3a6968b60050fa2bde55be",
+    "04-computation/cm_detector_sporadic/audit_bc_20261018l/REPORT.md": "2e4459d88eb595d8e3237ce61f20bf9ec4a784a97c4b6e4ce57f04aa0c28a0a1"
   },
   "inherited_manifest_verified": "04-computation/experiments/charge_contexts_20261018k/manifest.json",
-  "uncompressed_cnf_sha256": "4cf7ad07bd2ebaa83f1f0728648b4b287d8275e136e7d50ec59902f0d4d1896c"
+  "uncompressed_cnf_sha256": "4cf7ad07bd2ebaa83f1f0728648b4b287d8275e136e7d50ec59902f0d4d1896c",
+  "incoming_commits_reviewed": [
+    "4140f876da",
+    "af5a15474e",
+    "777a38d857",
+    "186fe3f60f"
+  ]
 }
