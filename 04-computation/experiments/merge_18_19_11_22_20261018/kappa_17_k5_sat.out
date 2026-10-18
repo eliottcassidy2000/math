@@ -1,0 +1,1 @@
+q = 17, k = 5: UNDECIDED - CaDiCaL (pysat cadical153) with one triangle's colours fixed was stopped by a 1800 s wall-clock timeout without an answer (2026-10-18). Consistent with THM-4558: kappa(17) in [5, 6] undecided after 25-30 minute runs; tabu with 5 colours stalls at 34 conflicts (tabucol_table.out).
