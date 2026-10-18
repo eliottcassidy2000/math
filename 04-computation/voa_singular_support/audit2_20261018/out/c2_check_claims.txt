@@ -1,0 +1,22 @@
+P=2147483647 q=7 weight 5: claimed coefficients MATCH
+P=2147483647 q=7 weight 6: claimed coefficients MATCH
+P=2147483647 q=8 weight 6: claimed coefficients MATCH
+P=2147483647 q=8 weight 7: claimed coefficients MATCH
+P=2147483647 q=10 weight 8: claimed coefficients MATCH
+P=2147483647 q=10 weight 9: claimed coefficients MATCH
+P=2147483647 q=11 weight 9: claimed coefficients MATCH
+P=2147483647 q=11 weight 10: claimed coefficients MATCH
+P=2147483647 q=13 weight 11: claimed coefficients MATCH
+P=2147483647 q=13 weight 12: claimed coefficients MATCH
+P=2147483629 q=7 weight 5: claimed coefficients MATCH
+P=2147483629 q=7 weight 6: claimed coefficients MATCH
+P=2147483629 q=8 weight 6: claimed coefficients MATCH
+P=2147483629 q=8 weight 7: claimed coefficients MATCH
+P=2147483629 q=10 weight 8: claimed coefficients MATCH
+P=2147483629 q=10 weight 9: claimed coefficients MATCH
+P=2147483629 q=11 weight 9: claimed coefficients MATCH
+P=2147483629 q=11 weight 10: claimed coefficients MATCH
+P=2147483629 q=13 weight 11: claimed coefficients MATCH
+P=2147483629 q=13 weight 12: claimed coefficients MISMATCH  computed={(6, 0): 2000754322, (3, 2): 1265481424, (0, 4): 1}
+q=13 weight 12, coefficient of x^6 y^0 (y^4-normalised) by CRT of two primes: 169/150528
+q=13 weight 12, coefficient of x^3 y^2 (y^4-normalised) by CRT of two primes: -13/56

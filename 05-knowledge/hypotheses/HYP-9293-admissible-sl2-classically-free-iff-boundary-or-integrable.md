@@ -21,9 +21,15 @@ status: >
   PRE-REGISTERED TEST PASSED: k = 3/2 (a/b = 7/2, D_0 = 12) was predicted before the run to fail first at weight
   15 with one spin-6 multiplet. Observed: non-arc generators at weight 15, Li 2, charges -12..12, total 13.
   The boundary level k = -4/3 is free through weight 15 (dim L_15 = 13082 = Kac-Wakimoto).
-  Literature (2026-10-18): boundary-level classical freeness is EXPECTED but unproved (Andrews-van Ekeren-Heluani 2020;
-  Adamovic-Moller, Math. Z. 2026, Remark 6.3). Integrable levels are PROVED (van Ekeren-Heluani 2021). No statement
-  about non-boundary admissible levels was found.
+  Literature (corrected after audit 2, MISTAKE-633):
+  - Boundary-level classical freeness is EXPECTED but unproved (Andrews-van Ekeren-Heluani 2020; Adamovic-Moller,
+    Math. Z. 2026, Remark 6.3).
+  - Integrable levels are PROVED (van Ekeren-Heluani 2021).
+  - Non-boundary levels: AEH 2020 §1.2 state that L_k(sl2) at k = -2 + p/p' is "known not to be classically free
+    whenever p' > p > 2". In our notation that is b > a >= 3, which covers k = -5/4 and -7/5.
+  - NEW here: the levels with a > b >= 2 (k = -1/2, 1/2, 3/2, -2/3, -1/3), including the exact THM-4672 for
+    k = -1/2, and the first-failure location and spin at every tested level. An earlier version said no source on
+    non-boundary levels was found.
 session: kind-pasteur-2026-10-18-S1
 source: 05-knowledge/results/singular_support_arc_spaces_classical_freeness_20261018.md
 scripts:

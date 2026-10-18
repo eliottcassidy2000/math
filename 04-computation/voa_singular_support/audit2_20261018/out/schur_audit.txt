@@ -1,0 +1,6 @@
+SU(2) N_f=4 Schur index (unflavoured): [1, 28, 329, 2632, 16380, 85764, 393589]
+SU(2) N_f=4 Schur index, so(8) zero-weight part: [1, 4, 17, 64, 228, 756, 2389]
+universal V^k(so8) zero-weight dims, weights 0..6: [1, 4, 26, 144, 779, 3940, 18974]
+sl3 u=2: CT_z Dhat(q^2,z)/Dhat(q,z), weights 0..8: [1, 2, 6, 14, 34, 74, 160, 326, 653]
+sl3 u=4: CT_z Dhat(q^4,z)/Dhat(q,z), weights 0..8: [1, 2, 8, 24, 70, 186, 482, 1174, 2777]
+universal V^k(sl3) zero-weight dims 0..8: [1, 2, 8, 24, 72, 196, 522, 1312, 3207]

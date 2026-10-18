@@ -1,0 +1,1 @@
+q=10 engine (xy^2-(2/123)x^4, y^3-(8/41)x^3y): EQUAL through 24

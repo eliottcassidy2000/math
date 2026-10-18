@@ -1,0 +1,8 @@
+k=1 c=1: <u_k,u_k> mod P1, P2 = [0, 0]  -> u_k in maximal submodule
+k=2 c=3/2: <u_k,u_k> mod P1, P2 = [0, 0]  -> u_k in maximal submodule
+k=3 c=9/5: <u_k,u_k> mod P1, P2 = [0, 0]  -> u_k in maximal submodule
+k=4 c=2: <u_k,u_k> mod P1, P2 = [0, 0]  -> u_k in maximal submodule
+k=5 c=15/7: <u_k,u_k> mod P1, P2 = [0, 0]  -> u_k in maximal submodule
+k=6 c=9/4: <u_k,u_k> mod P1, P2 = [0, 0]  -> u_k in maximal submodule
+k=7 c=7/3: <u_k,u_k> mod P1, P2 = [0, 0]  -> u_k in maximal submodule
+k=8 c=12/5: <u_k,u_k> mod P1, P2 = [0, 0]  -> u_k in maximal submodule

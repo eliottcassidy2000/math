@@ -1,0 +1,32 @@
+W3(4,5) c=4/5 P=2147483647: gram+radical to weight 20 in 6.4s
+dim V: [1, 0, 1, 2, 3, 4, 8, 10, 17, 24, 36, 50, 76, 102, 148, 204, 285, 386, 537, 718, 980]
+dim L: [1, 0, 1, 2, 3, 4, 7, 8, 12, 16, 22, 28, 39, 48, 65, 82, 106, 132, 171, 210, 266]
+chi^(5,6)_0 + q^3 chi^(5,6)_3 (h=3 at (r,s)=(1, 4)): [1, 0, 1, 2, 3, 4, 7, 8, 12, 16, 22, 28, 39, 48, 65, 82, 106, 132, 171, 210, 266]
+   MATCH
+graded analysis in 5.7s
+Li-0 part of gr I (C_2 ideal) generators, as polynomials in x=L_{-2}, y=W_{-3}:
+   weight 6: (dim grI=1, dim decomposable=0)  [(Fraction(1, 1), 'x^3 y^0'), (Fraction(-117, 95), 'x^0 y^2')]
+   weight 7: (dim grI=1, dim decomposable=0)  [(Fraction(1, 1), 'x^2 y^1')]
+   weight 8: (dim grI=2, dim decomposable=1)  [(Fraction(1, 1), 'x^4 y^0')]
+   weight 8: (dim grI=2, dim decomposable=1)  [(Fraction(1, 1), 'x^1 y^2')]
+ weight  dimV  dimI  dimL  arcHS  ker   minimal generators of grI (Li, -, #)
+      0     1     0     1      1    0   []
+      2     1     0     1      1    0   []
+      3     2     0     2      2    0   []
+      4     3     0     3      3    0   []
+      5     4     0     4      4    0   []
+      6     8     1     7      7    0   [(0, 0, 1)]
+      7    10     2     8      8    0   [(0, 0, 1)]
+      8    17     5    12     13    1   [(0, 0, 1), (1, 0, 1)]  <-- NON-ARC
+      9    24     8    16     17    1   []
+     10    36    14    22     25    3   [(2, 0, 1), (3, 0, 1)]  <-- NON-ARC
+     11    50    22    28     33    5   [(3, 0, 1)]  <-- NON-ARC
+     12    76    37    39     47    8   [(4, 0, 1)]  <-- NON-ARC
+     13   102    54    48     59   11   [(5, 0, 1)]  <-- NON-ARC
+     14   148    83    65     81   16   []
+     15   204   122    82    105   23   [(6, 0, 1)]  <-- NON-ARC
+     16   285   179   106    139   33   [(7, 0, 1)]  <-- NON-ARC
+     17   386   254   132    177   45   []
+     18   537   366   171    234   63   []
+     19   718   508   210    294   84   [(9, 0, 1)]  <-- NON-ARC
+     20   980   714   266    381  115   [(10, 0, 1)]  <-- NON-ARC

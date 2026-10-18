@@ -1,0 +1,3 @@
+W=34 L=11: #mon=1410 rank(P1)=1354 rank(P2)=1354 HS=56 CI=55
+   exact integer rank: 1354  -> HS over Q = 56
+total HS(P1) at W 13436  CI total 13435

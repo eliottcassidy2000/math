@@ -1,17 +1,22 @@
 ---
 id: HYP-9298
-title: "Arc-space A_2 Rogers-Ramanujan identities: with wt x = 2, wt y = 3, the arc algebra of the C_2-algebra R_q of the boundary W_3 minimal model W_3(3,q) (q >= 7, 3 not dividing q) has Hilbert series prod_{n != 0,+-1 mod q} (1-t^n)^{-1} * prod_{n != 0,+-1,+-2 mod q} (1-t^n)^{-1}; explicitly HS J_infty(C[x,y]/(xy, y^2 - x^3)) = (mod 7 product) and HS J_infty(C[x,y]/(y^2 - x^3, x^2 y)) = (mod 8 product)"
+title: "Arc-space A_2 Rogers-Ramanujan identities: with wt x = 2, wt y = 3, the arc algebra of the C_2-algebra R_q of the boundary W_3 minimal model W_3(3,q) (q >= 7, 3 not dividing q; conjecturally the (A_2,A_{q-4}) Argyres-Douglas chiral algebra, Cordova-Shao) has Hilbert series prod_{n != 0,+-1 mod q} (1-t^n)^{-1} * prod_{n != 0,+-1,+-2 mod q} (1-t^n)^{-1}; explicitly HS J_infty(C[x,y]/(xy, y^2 - x^3)) = (mod 7 product) and HS J_infty(C[x,y]/(y^2 - x^3, x^2 y)) = (mod 8 product)"
 status: >
   OPEN (conjecture). Evidence is FINITE-EXACT and pure commutative algebra (arc_hs.py, independent of the vertex-algebra
-  code; ranks mod 2^31-1). The arc Hilbert series equals the product:
-  - through weight 26 for q = 7 (ideal (xy, y^2 - a x^3), any a != 0 up to rescaling);
-  - through weight 26 for q = 8 ((y^2 - a x^3, x^2 y));
+  code; ranks mod 2^31-1, second prime 2^31-19 where stated). The arc Hilbert series equals the product:
+  - through weight 26 for q = 7 (ideal (xy, y^2 - a x^3), any a != 0 up to rescaling); the independent referee
+    pushes it to weight 34 (mod 2^31-1) and 30 (mod 2^31-19);
+  - through weight 26 for q = 8 ((y^2 - a x^3, x^2 y)); the referee gives 34 and 30;
   - through weight 24 for q = 10 ((x y^2 - b x^4, y^3 - c x^3 y));
   - through weight 24 for q = 11 ((y^3 - d x^3 y, x^2 y^2 - e x^5));
-  - through weight 22 for q = 13 ((x y^3 - (13/448) x^4 y, y^4 - (13/56) x^3 y^2 - (28529/3278) x^6), two moduli).
-    Perturbing the x^6 coefficient alone breaks the identity at weight 16 (268 vs 269).
-  The ideals are the Li-degree-0 parts of grI computed by the singular-support engine (w3_c2_relations.py); the
-  coefficients for q = 10, 11 are the engine's exact rationals.
+  - through weight 22 for q = 13, at both primes, for
+    (x y^3 - (13/448) x^4 y, y^4 - (13/56) x^3 y^2 + (169/150528) x^6). There are two moduli: a/b = 1/8 and
+    c/b^2 = 1/48 in the notation (x y^3 - a x^4 y, y^4 - b x^3 y^2 + c x^6).
+    CORRECTION (audit 2, MISTAKE-633): an earlier version stated the x^6 coefficient as -28529/3278. That value was a
+    single-prime rational-reconstruction artefact, and the ideal as written fails at weight 16 mod 2^31-19.
+    Perturbing the x^6 coefficient (e.g. to -1) breaks the identity at weight 16.
+  The ideals are the Li-degree-0 parts of grI computed by the singular-support engine (w3_c2_relations.py). All
+  coefficients have been reconstructed by CRT from two primes.
   Vertex-algebra side: the W_3(3,q) vacuum characters equal the same products through weights 20-24
   (plethystic-exponent check of the engine's dimensions, which agree with the assumption-free maximal-submodule
   computation). So the conjecture is equivalent to classical freeness of W_3(3,q) (HYP-9297, N = 3) together with
@@ -35,16 +40,19 @@ Grade `C[x, y]` by `wt x = 2` and `wt y = 3`. Give the jets `x_j, y_j` weights `
 ```
 P_q(t) = prod_(n ≢ 0, ±1 (mod q)) (1 - t^n)^(-1)  ·  prod_(n ≢ 0, ±1, ±2 (mod q)) (1 - t^n)^(-1).
 ```
-Let `R_q` be Zhu's `C_2`-algebra of the boundary `W_3` minimal model `W_3(3, q)`, the chiral algebra of the 4d
-Argyres-Douglas theory `(A_2, A_(q-4))`. Then `HS(J_infty Spec R_q)(t) = P_q(t)`.
+Let `R_q` be Zhu's `C_2`-algebra of the boundary `W_3` minimal model `W_3(3, q)`. This is conjecturally the chiral
+algebra of the 4d Argyres-Douglas theory `(A_2, A_(q-4))` (Cordova-Shao conjecture). Then
+`HS(J_infty Spec R_q)(t) = P_q(t)`.
 
 Explicit cases, up to weighted rescaling of `x` and `y`:
 - `q = 7`: `R_7 = C[x,y]/(xy, y^2 - x^3)`.
 - `q = 8`: `R_8 = C[x,y]/(y^2 - x^3, x^2 y)`.
 - `q = 10`: `R_10 = C[x,y]/(x y^2 - (2/123) x^4, y^3 - (8/41) x^3 y)`.
 - `q = 11`: `R_11 = C[x,y]/(y^3 - (11/138) x^3 y, x^2 y^2 - (11/1035) x^5)`.
+- `q = 13`: `R_13 = C[x,y]/(x y^3 - (13/448) x^4 y, y^4 - (13/56) x^3 y^2 + (169/150528) x^6)`.
 
-The `q = 10` and `q = 11` coefficients are as found. A weighted rescaling can normalize two of them.
+The coefficients are as found and confirmed at two primes. A weighted rescaling acts on them through a single
+character, so it can normalize **one** coefficient. One modulus remains for `q = 10, 11` and two for `q = 13`.
 
 ## Context
 
@@ -54,8 +62,12 @@ The `q = 10` and `q = 11` coefficients are as found. A weighted rescaling can no
   Rogers-Ramanujan identities.
 - **Vertex-algebra reading.** A proof would give classical freeness of every boundary `W_3` model, via the known
   character, and hence the Schur indices of `(A_2, A_(q-4))` as arc-space Hilbert series.
-- **Curiosity (OBSERVATION).** The cusp alone has
-  `HS J_infty(C[x,y]/(y^2 - x^3)) = prod_(n>=2)(1-t^n)^(-1) · 1/((1-t^3)(1-t^4)(1-t^5))` through weight 24.
+- **Curiosity (OBSERVATION, corrected).** For the cusp alone,
+  `HS J_infty(C[x,y]/(y^2 - x^3))` equals `prod_(n>=2)(1-t^n)^(-1) · 1/((1-t^3)(1-t^4)(1-t^5))` through weight 33 and
+  **fails at weight 34** (13436 vs 13435; block weight 34, Li 11: 56 vs 55). Audit 2 established this exactly over Z.
+  - The candidate formula is the complete-intersection Euler characteristic of the arc ideal.
+  - Failure is expected: the cusp is not log canonical (lct = 5/6), so its jet schemes have excess dimension.
+  - An earlier version claimed the formula through weight 24 only, as an unqualified identity.
 
 ## Modulus rigidity (FINITE-EXACT, 2026-10-18)
 
@@ -64,21 +76,21 @@ For `q >= 10` the `C_2`-ideal carries a modulus that weighted rescaling cannot r
   `beta/gamma = 1/12`.
 - `q = 11`: `R = (y^3 - d x^3 y, x^2 y^2 - e x^5)`, where only `d/e` matters. The vertex algebra gives `d/e = 15/2`.
 
-The arc Hilbert series equals the product **only at the vertex-algebra value**, through weight 22.
+The arc Hilbert series equals the product **only at the vertex-algebra value**, through weight 22. The independent
+referee computed the full rank-drop locus at the first separating weight (`modulus_locus.py`, FINITE-EXACT mod p):
+- `q = 10`, weight 12: the locus is exactly `{1/12, 1}`;
+- `q = 11`, weight 14: the locus is exactly `{15/2, 1}`.
 
-`q = 10`:
-- ratio `1/12`: equal;
-- ratio `1`: first differs at weight 11 (45 vs 44);
-- ratios `1/6` and `-1/12`: first differ at 12 (65 vs 66).
+Every other ratio is generic, including `∞`. Generic ratios give the same Hilbert series and fall below the product:
+65 vs 66 at weight 12 for `q = 10`, and 131 vs 132 at weight 14 for `q = 11`.
 
-`q = 11`:
-- ratio `15/2`: equal;
-- ratio `1`: first differs at 13 (93 vs 92);
-- ratios `7` and `8`: first differ at 14 (131 vs 132).
+Ratio 1 is a different special point. It is not a fat point:
+`(x y^2 - beta x^4, y^3 - beta x^3 y) = (x, y)·(y^2 - beta x^3)` contains a cusp curve. That is why its arc Hilbert
+series lies above the product (45 vs 44 at weight 11 for `q = 10`; 93 vs 92 at weight 13 for `q = 11`).
 
-**Reading.** The rank of the arc ideal is lower semicontinuous, so the generic modulus has the smallest arc Hilbert
-series. That generic value falls below the product. The vertex-algebra modulus is a special jump point where the arc
-space is just large enough to carry the character.
+**Reading.** The rank of the arc ideal is lower semicontinuous, so generic moduli give the smallest arc Hilbert
+series. Among the fat points of the family, the vertex-algebra modulus is the unique jump point where the arc space
+is just large enough to carry the character.
 
 So classical freeness of `W_3(3,q)` is not a property of the shape of the `C_2`-ideal. It pins the modulus. This is a
 rigidity phenomenon with no analogue in the one-variable case, where `C[x]/(x^k)` has no modulus.
@@ -110,7 +122,8 @@ would be an `A_2` analogue of BMS.
 
 ## Tests
 
-- **Push and extend.** `q = 7, 8` to weight 34; `q = 13, 14` (needs the engine's `C_2` ideals).
+- **Push and extend.** `q = 7, 8` reached weight 34 (audit 2). `q = 14` needs the engine's `C_2` ideals, which should
+  be reconstructed from two primes.
 - **Hostile control, DONE.** The monomial degenerations fail:
   - `(xy, y^2)` for `q = 7` first differs at weight 8 (12 vs 11);
   - `(y^2, x^2 y)` for `q = 8` first differs at weight 10 (27 vs 26).

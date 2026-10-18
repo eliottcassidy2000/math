@@ -19,7 +19,7 @@
 
 **Typing.**
 - PROVED: THM-4671 (Virasoro first correction), THM-4672 (Z_2-gauged hypermultiplet, exact over Q) and THM-4673
-  (c = 1 N=2 minimal model).
+  (no `N = 2` minimal model is classically free; `k = 1` after Hao Li 2020).
 - FINITE-EXACT: mod-p ranks, two primes where stated, every dimension checked against an independent character
   formula or the assumption-free maximal-submodule computation.
 - CITED: literature.
@@ -29,7 +29,10 @@
   - Independent referee 1 (`04-computation/voa_singular_support/audit_20261018/REPORT.md`): MAJOR 0,
     MINOR 10, NOTE 14. All were repaired; see MISTAKE-630, including the credit to Andrews-van Ekeren-Heluani in
     THM-4671.
-  - Referee 2 covers THM-4673, HYP-9295 to HYP-9298 and sections 5a/5b.
+  - Independent referee 2 (`audit2_20261018/REPORT.md`): MAJOR 2, MINOR 10, NOTE 11. All were repaired; see
+    MISTAKE-633. The repairs cover a q=13 coefficient that was a single-prime artefact, and priority for the `c = 1`
+    `N = 2` result (Hao Li) and for `N = 2` maximal ideals (Adamović). The referee's uniform all-`k` argument is now
+    THM-4673 part B.
 
 ## 1. Definitions (CITED unless marked)
 
@@ -195,8 +198,12 @@ The level is `k = -2 + a/b`. The singular vector has weight `D_0 = (a-1)b` and s
 only a partial parallel to THM-4671 (MISTAKE-630). Drinfeld-Sokolov reduction gives `Vir_(min(a,b), max(a,b))`, which
 is non-free iff `min(a,b) >= 3`. For `b = 2` the Virasoro image is free while `L_k(sl2)` is not.
 
-Literature: boundary freeness is expected but unproved (AEH 2020; Adamović-Möller, Math. Z. 2026, Remark 6.3).
-Integrable freeness is proved (van Ekeren-Heluani). No source on non-boundary levels was found.
+Literature, corrected after audit 2 (MISTAKE-633):
+- Boundary freeness is expected but unproved (AEH 2020; Adamović-Möller, Math. Z. 2026, Remark 6.3).
+- Integrable freeness is proved (van Ekeren-Heluani).
+- AEH 2020 §1.2 state that non-boundary levels with `b > a > 2` (their `p' > p > 2`) are known not to be classically
+  free.
+- New here: the levels with `a > b >= 2` (`k = -1/2, 1/2, 3/2, -2/3, -1/3`), and the first-failure data.
 
 ## 5. Supersymmetric QFT: what classical freeness means for 4d `N = 2` theories
 
@@ -285,8 +292,8 @@ a nonlinear-bracket hook (`w3.py`):
 | `L_(-1/2)(sl3)` (non-boundary) | — | weight 8 = `D_0 + 2`, Li 1. The pre-registered `D_0 + 3` offset failed; non-freeness passed | 9 |
 
 Three families now show the same pattern: `Vir` (`p = 2`, a theorem), admissible `sl2` (boundary or integrable,
-HYP-9293) and `W_3` (`p = 3`). The **boundary** models, which are exactly the chiral algebras of the Argyres-Douglas
-theories `(A_(N-1), A_(k-1))`, are classically free in the computed ranges, and conjecturally in general. Only
+HYP-9293) and `W_3` (`p = 3`). The **boundary** models, which are conjecturally (Cordova-Shao) the chiral algebras of
+the Argyres-Douglas theories `(A_(N-1), A_(k-1))`, are classically free in the computed ranges, and conjecturally in general. Only
 `Vir_(2,q)` and integrable `sl2` are theorems. The others fail at the first syzygy with a nonzero quantum transfer.
 HYP-9293 and HYP-9297 state this as a conjecture.
 
@@ -300,21 +307,28 @@ generalizing Andrews-Gordon.
 - The `C_2`-algebras are tiny two-variable fat points: `C[x,y]/(xy, y^2 - x^3)` for `q = 7` and
   `C[x,y]/(y^2 - x^3, x^2 y)` for `q = 8`.
 - A pure commutative-algebra computation (`arc_hs.py`, no vertex-algebra code) shows that their arc spaces have
-  exactly these Hilbert series: through weight 26 for `q = 7, 8` and 24 for `q = 10, 11`.
+  exactly these Hilbert series.
+  - `q = 7, 8`: through weight 26; referee 2 pushes this to 34.
+  - `q = 10, 11`: through weight 24.
+  - `q = 13`: through weight 22, with the corrected coefficient `+169/150528` (MISTAKE-633).
 - The monomial degenerations `(xy, y^2)` and `(y^2, x^2 y)` fail, at weights 8 and 10.
 - This is the `A_2` analogue of Bruschek-Mourtada-Schepers' arc-space proof of Rogers-Ramanujan/Andrews-Gordon. It
   is the commutative-algebra face of HYP-9297 for `N = 3`.
 - **Modulus rigidity.** For `q = 10, 11` the ideal has a scale-invariant modulus, with vertex-algebra values
-  `beta/gamma = 1/12` and `d/e = 15/2`. The product identity holds only at that value; ratios 1, 1/6, -1/12 and
-  1, 7, 8 fail by weight 11-14. The chiral algebra sits at a jump point of its family.
-- Curiosity: the cusp alone has
-  `HS J_infty(y^2 = x^3) = prod_(n>=2)(1-t^n)^(-1) / ((1-t^3)(1-t^4)(1-t^5))` through weight 24.
+  `beta/gamma = 1/12` and `d/e = 15/2`. Referee 2 computed the rank-drop locus at the first separating weight: it is
+  exactly `{1/12, 1}` and `{15/2, 1}`. Ratio 1 is a non-fat point containing a cusp curve; every other ratio is
+  generic and falls below the product. So the product identity holds only at the vertex-algebra value. The chiral
+  algebra sits at a jump point of its family.
+- Curiosity, corrected: for the cusp alone,
+  `HS J_infty(y^2 = x^3) = prod_(n>=2)(1-t^n)^(-1) / ((1-t^3)(1-t^4)(1-t^5))` holds through weight 33 and fails at 34
+  (13436 vs 13435, exact). This is expected, since the cusp is not log canonical.
 
 ## 5b. Two-dimensional supersymmetry: `N = 2` minimal models (Landau-Ginzburg chiral algebras)
 
-The `N = 2` superconformal algebra is a Lie superalgebra (`n2_sca.py`, 600/600 bracket checks). At
-`c = 3k/(k+2)`, the chiral algebra of the `A_(k+1)` LG model `W = x^(k+2)`:
-- The universal algebra has a single singular vector up to weight `k+1`, at weight `k+1` and charge 0.
+The `N = 2` superconformal algebra is a Lie superalgebra (`n2_sca.py`, 600/600 bracket checks). We work at
+`c = 3k/(k+2)`, with `V_k` the holomorphic vertex algebra of the IR fixed point of the LG model `W = x^(k+2)`:
+- The universal algebra has a single singular vector up to weight `k+1`, at weight `k+1` and charge 0. That this
+  vector generates the maximal ideal is CITED from Adamović 1999.
 - The quotient by it has the same dimensions as the assumption-free maximal submodule (`max_submodule.py`) through
   weight 10.
 
@@ -325,13 +339,19 @@ The `N = 2` superconformal algebra is a Lie superalgebra (`n2_sca.py`, 600/600 b
 | 3 | 9/5 | (6,1,±2) (17/2,3,±3) (9,3,±2) (10,3,0) | 10 (two primes to 8) |
 | 4 | 2 | (7,1,±2) (19/2,3,±3) (10,3,±2) | 10 (two primes to 8) |
 
-- **THM-4673 (PROVED, hand proof).** `V_(sqrt3 Z)` (`k = 1`) is not classically free. `G^+(z)G^+(w) = O((z-w)^3)`
-  kills `G^+_(-5/2)G^+_(-3/2)|0>`. The arc ideal cannot contain its symbol `psi^+_1 psi^+_0`, because an odd square
-  has no differential consequences.
-- **HYP-9295.** No `N = 2` minimal model is classically free. The first failure is at weight `k+3`, Li 1, charge `±2`.
+- **THM-4673 (PROVED).** No `V_k` is classically free.
+  - Part B, all `k`: `u_k = G^-_(-k-3/2)...G^-_(-3/2)|0> = 0` in `V_k` (Adamović). Its symbol
+    `psi^-_k...psi^-_0` cannot lie in the arc ideal, which contains no monomial in `psi^-` letters only. This argument
+    is due to referee 2.
+  - Part A, `k = 1`: the explicit weight-4 kernel. This is Hao Li's 2020 result, reproved here.
+  - Our data also contradict Hao Li's Example 4.11/Conjecture 4.12: there is no kernel at weight 9/2.
+- **HYP-9295 part 2 (OPEN).** The first failure is at weight `k+3`, Li 1, charge `±2`. Checked for `k <= 6`, with `k = 5`
+  pre-registered and passed.
 - **Contrast.** `N = 1` minimal models are classically free exactly for `(2,4k)` (Hao Li).
-- **Reading.** The LG chiral algebra, the factorization algebra of the derived critical locus of `W` (S43, section
-  2.1), is never the free quantization of the arc space of its `C_2`-superscheme.
+- **Reading, corrected after audit 2.** `V_k`, the holomorphic `N = 2` vertex algebra of the IR fixed point, is never
+  the free quantization of the arc space of its own `C_2`-superscheme. This is not a statement about the
+  `Qbar_+`-cohomology of the half-twisted LG model, whose `q^0` part is `Jac(W)`. Nor is it about the arc space of
+  `Crit(W)`. An earlier version conflated these.
 
 ## 6. Open problems and next tests
 

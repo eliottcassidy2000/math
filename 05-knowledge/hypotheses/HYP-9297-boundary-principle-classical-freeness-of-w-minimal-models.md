@@ -1,6 +1,6 @@
 ---
 id: HYP-9297
-title: "Boundary principle: a W_N minimal model W_N(p,q) (Virasoro: N = 2) is classically free iff p = N, i.e. iff it is a boundary minimal model, which is exactly the chiral algebra of the 4d Argyres-Douglas theory (A_{N-1}, A_{q-N-1}); its Schur index is then the Hilbert series of the arc space of its (fat-point) C_2-algebra, generalizing Rogers-Ramanujan/Andrews-Gordon. Non-boundary models fail at the first available syzygy (Virasoro: weight (p-1)(q-1)+3; W_3: weight (p-2)(q-2)+2)"
+title: "Boundary principle: a W_N minimal model W_N(p,q) (Virasoro: N = 2) is classically free iff min(p,q) = N, i.e. iff it is a boundary minimal model, which is conjecturally (Cordova-Shao) the chiral algebra of the 4d Argyres-Douglas theory (A_{N-1}, A_{max(p,q)-N-1}); its Schur index is then the Hilbert series of the arc space of its (fat-point) C_2-algebra, generalizing Rogers-Ramanujan/Andrews-Gordon. Non-boundary models fail at the first available syzygy (Virasoro: weight (p-1)(q-1)+3; W_3: weight (p-2)(q-2)+2)"
 status: >
   OPEN (conjecture).
   - N = 2 is a THEOREM: van Ekeren-Heluani (classically free iff p = 2); THM-4671 locates and explains the first failure.
@@ -46,7 +46,9 @@ related: [THM-4671, HYP-9293, HYP-9294, HYP-9296, van Ekeren-Heluani 2021, Araka
 
 Let `N >= 2` and let `p, q >= N` be coprime with `(p, q)` admissible. Let `V = W_N(p, q)` be the simple `W_N` minimal
 model, with the `W_3(3,5)`-type degenerate central charges excluded.
-1. `V` is classically free iff `p = N`.
+1. `V` is classically free iff `min(p, q) = N`, since `W_N(p,q) = W_N(q,p)`. Corrected after audit 2: an earlier
+   version said `p = N`. Level-rank duality `W_N(N, N+k) = W_k(k, N+k)` (e.g. `W_3(3,7) = W_4(4,7)`) preserves the
+   boundary class. The "iff" rests on the `N = 2` theorem and on `N = 3` data with `min(p,q) in {3, 4, 5}`.
 2. The boundary models `W_N(N, N+k)` (`gcd(N,k) = 1`) are the chiral algebras of the Argyres-Douglas theories
    `(A_(N-1), A_(k-1))`. This identification is the Cordova-Shao conjecture (arXiv:1506.00265), checked against
    Schur indices to high order in later work; CITED as a conjecture. Their `C_2`-algebras are fat points: the Higgs branch is trivial and `X_V` is a point. So

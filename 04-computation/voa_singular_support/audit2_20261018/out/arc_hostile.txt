@@ -1,0 +1,4 @@
+q=7 hostile (xy, y^2): first differs at 8 (HS 12 vs ref 11)
+q=7 orbit (xy, y^2+x^3): EQUAL through 16
+q=8 hostile (y^2, x^2y): first differs at 10 (HS 27 vs ref 26)
+q=7 other hostile (xy, x^3): first differs at 9 (HS 15 vs ref 14)

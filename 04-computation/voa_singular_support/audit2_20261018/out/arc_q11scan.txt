@@ -1,0 +1,10 @@
+q=11 product: [1, 0, 1, 2, 3, 4, 8, 10, 17, 23, 34, 47, 70, 92, 132, 177, 243, 322, 439, 574, 768, 1001, 1316]
+ ratio d/e=15/2:  EQUAL
+ ratio d/e=1:  first differs at 13 (HS 93 vs product 92); HS-product = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 2, 3, 4, 6, 8, 12, 16]
+ ratio d/e=7:  first differs at 14 (HS 131 vs product 132); HS-product = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, -2, -4, -6, -9, -12, -17]
+ ratio d/e=8:  first differs at 14 (HS 131 vs product 132); HS-product = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, -2, -4, -6, -9, -12, -17]
+ ratio d/e=15/4:  first differs at 14 (HS 131 vs product 132); HS-product = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, -2, -4, -6, -9, -12, -17]
+ ratio d/e=15:  first differs at 14 (HS 131 vs product 132); HS-product = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, -2, -4, -6, -9, -12, -17]
+ ratio d/e=-15/2:  first differs at 14 (HS 131 vs product 132); HS-product = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, -2, -4, -6, -9, -12, -17]
+ ratio d/e=generic1:  first differs at 14 (HS 131 vs product 132); HS-product = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, -2, -4, -6, -9, -12, -17]
+ ratio d/e=generic2:  first differs at 14 (HS 131 vs product 132); HS-product = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, -2, -4, -6, -9, -12, -17]

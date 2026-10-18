@@ -1,0 +1,28 @@
+W3(4,7) c=-40/7 P=2147483647: gram+radical to weight 18 in 3.3s
+dim V: [1, 0, 1, 2, 3, 4, 8, 10, 17, 24, 36, 50, 76, 102, 148, 204, 285, 386, 537]
+dim L: [1, 0, 1, 2, 3, 4, 8, 10, 17, 24, 35, 48, 71, 94, 132, 178, 242, 320, 432]
+graded analysis in 0.9s
+Li-0 part of gr I (C_2 ideal) generators, as polynomials in x=L_{-2}, y=W_{-3}:
+   weight 10: (dim grI=1, dim decomposable=0)  [(Fraction(1, 1), 'x^5 y^0'), (Fraction(2070, 1421), 'x^2 y^2')]
+   weight 11: (dim grI=1, dim decomposable=0)  [(Fraction(1, 1), 'x^4 y^1'), (Fraction(828, 77), 'x^1 y^3')]
+   weight 12: (dim grI=2, dim decomposable=1)  [(Fraction(1, 1), 'x^6 y^0'), (Fraction(19598, 37503), 'x^0 y^4')]
+   weight 12: (dim grI=2, dim decomposable=1)  [(Fraction(1, 1), 'x^3 y^2'), (Fraction(-6003, 25679), 'x^0 y^4')]
+ weight  dimV  dimI  dimL  arcHS  ker   minimal generators of grI (Li, -, #)
+      0     1     0     1      1    0   []
+      2     1     0     1      1    0   []
+      3     2     0     2      2    0   []
+      4     3     0     3      3    0   []
+      5     4     0     4      4    0   []
+      6     8     0     8      8    0   []
+      7    10     0    10     10    0   []
+      8    17     0    17     17    0   []
+      9    24     0    24     24    0   []
+     10    36     1    35     35    0   [(0, 0, 1)]
+     11    50     2    48     48    0   [(0, 0, 1)]
+     12    76     5    71     72    1   [(0, 0, 1), (1, 0, 1)]  <-- NON-ARC
+     13   102     8    94     95    1   []
+     14   148    16   132    135    3   [(2, 0, 1), (3, 0, 1)]  <-- NON-ARC
+     15   204    26   178    183    5   [(3, 0, 1)]  <-- NON-ARC
+     16   285    43   242    252   10   [(3, 0, 1), (4, 0, 1)]  <-- NON-ARC
+     17   386    66   320    335   15   []
+     18   537   105   432    457   25   [(5, 0, 1)]  <-- NON-ARC

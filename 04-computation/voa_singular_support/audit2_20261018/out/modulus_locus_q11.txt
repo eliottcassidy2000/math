@@ -1,0 +1,3 @@
+q=11 W=14 block L=1: rank-drop polynomial degree 2: [('root', 1073741831, 1), ('root', 1, 1)]
+  root r = 1 (mod P 1): differs first at 13 (HS 93 vs product 92)
+  root r = 15/2 (mod P 1073741831): HS = product through 22

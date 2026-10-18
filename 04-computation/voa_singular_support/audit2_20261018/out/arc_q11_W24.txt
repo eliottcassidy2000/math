@@ -1,0 +1,1 @@
+q=11 engine (y^3-(11/138)x^3y, x^2y^2-(11/1035)x^5): EQUAL through 24

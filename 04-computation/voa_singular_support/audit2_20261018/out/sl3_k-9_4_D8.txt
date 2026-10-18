@@ -1,0 +1,14 @@
+sl3 k=-9/4: gram+radical to weight 8 in 198.7s
+dim L by weight: [1, 8, 44, 192, 718, 2400, 7352, 20992, 56549]
+dim L zero-weight: [1, 2, 8, 24, 70, 186, 482, 1174, 2777]
+simple quotient vs Dhat(q^4,z)/Dhat(q,z) (all weight blocks): MATCH
+graded analysis in 238.2s
+ weight 0: dimV 1 dimI 0 dimL 1 arcHS 1 ker 0 Li0-gens 0 non-arc []
+ weight 1: dimV 8 dimI 0 dimL 8 arcHS 8 ker 0 Li0-gens 0 non-arc []
+ weight 2: dimV 44 dimI 0 dimL 44 arcHS 44 ker 0 Li0-gens 0 non-arc []
+ weight 3: dimV 192 dimI 0 dimL 192 arcHS 192 ker 0 Li0-gens 0 non-arc []
+ weight 4: dimV 726 dimI 8 dimL 718 arcHS 718 ker 0 Li0-gens 8 non-arc []
+ weight 5: dimV 2464 dimI 64 dimL 2400 arcHS 2400 ker 0 Li0-gens 0 non-arc []
+ weight 6: dimV 7704 dimI 352 dimL 7352 arcHS 7352 ker 0 Li0-gens 0 non-arc []
+ weight 7: dimV 22528 dimI 1536 dimL 20992 arcHS 20992 ker 0 Li0-gens 0 non-arc []
+ weight 8: dimV 62337 dimI 5788 dimL 56549 arcHS 56549 ker 0 Li0-gens 0 non-arc []
