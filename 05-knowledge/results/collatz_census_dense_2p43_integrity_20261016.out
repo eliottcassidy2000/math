@@ -1,0 +1,12 @@
+{
+ "lipschitz_S_ok": true,
+ "lipschitz_H_ok": true,
+ "preH2_nondecreasing": true,
+ "preH1_increments_bounded": true,
+ "moment0_bounded": true,
+ "moment1_bounded": true,
+ "moment_total_matches_S": true,
+ "n_grid": 3072,
+ "n_subblocks": 58720256,
+ "all_ok": true
+}

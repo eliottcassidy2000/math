@@ -2,6 +2,9 @@
 id: HYP-9285
 title: "Explicit formula for the Collatz parity sum: S(N) = sum_(n<=N) (-1)^tau(n) equals Re sum_rho c_rho N^rho over the zeros rho of D(s) = 1 + 2^(-s) + (3/2)^s/3 with 1/2 < Re rho < 1, up to a remainder of order sqrt(N) in mean square, with c_rho = 2 r_rho / rho for the residues r_rho of F(s) = sum t(n) n^(-s); the 28 zeros with 0.65 < Re rho < 1 and Im rho < 3000 predict S out of sample to about 2%, and the least-squares coefficients reproduce the conditionally certified residues"
 status: >
+  UPDATE 2026-10-17 (opus-2026-10-17-S41, Run C evaluated): the second pre-registered prediction PASSED. Model M2
+  (69 zeros of D, refitted on [2^22, 2^42)) predicts the unseen octave [2^42, 2^43) with relative rms error 0.000736
+  (bound 0.0035; residual 1.87 sqrt(N)). Run C exactly replicates [2^40, 2^42).
   UPDATE 2026-10-17 (opus-2026-10-17-S39): batch certificates at N = 2^42 (exact block moments through 2^42,
   collatz_pole_certificates_many_zeros_2p42_20261016.py/.json): of the 16 zeros with the largest boundary-residue
   estimate relative to the radius model, 14 have certified nonzero residues under the budget (2, 0) and 4 under

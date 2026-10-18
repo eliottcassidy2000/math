@@ -1,0 +1,3 @@
+pair property for s = 1 mod 8, s <= M/2: True
+singletons: 375000  all equal (2u-1)/3 with u = 2 mod 3: True
+a = 1 for all singletons: True

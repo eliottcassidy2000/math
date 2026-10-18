@@ -9,7 +9,7 @@ u = 2 (mod 3), the singleton (2u-1)/3 (THM-4667 statement 8). In a pair, s has a
 
 and INTER_d collects the cross terms between different blocks of one fibre (the singleton and pair differences at
 scales 64^k apart). This script measures both, depth by depth, for every N in chosen octaves (octave sums) and for
-sampled N, and checks the pair property on the fly.
+sampled N. The pair property itself is checked by root_transport_fibre_classes_check_20261017.py.
 Usage: python root_transport_sibling_anatomy_20261017.py k [k ...] [--sample K S]
 Session opus-2026-10-17-S41.
 """

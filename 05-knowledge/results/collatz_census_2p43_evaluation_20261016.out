@@ -1,0 +1,6 @@
+R1 {"n_points": 1024, "relative_rms_error": 0.0007361156193013022, "bound": 0.0035, "passed": true, "residual_over_sqrtN": 1.8659920243250605}
+R2 {"e_X": 0.4057483146557295, "passed": true}
+R3 {"residue": [0.009925, 0.001132], "modulus": 0.009989346775440324, "window": [0.0098901, 0.0100899], "passed": true}
+R4 {"abs_residue_lower": "[0.00077645087400309139145394622885257176414089415434 +/- 4.17e-51]", "abs_residue_upper": "[0.019201682007736839049936412985121923472531804160 +/- 4.29e-49]", "nonzero_certified": true, "passed": true}
+R5 {"grid_points": 2048, "grid_values_identical": true, "moment_rows": 25165824, "moments_identical": true, "passed": true}
+checks {"resume_state_matches": true}

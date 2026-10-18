@@ -6,6 +6,10 @@ E_d = E_d^diag + E_d^cross with E_d^diag = E_(d-1) exactly (diagonal isometry) a
 E_d^cross = sum_b 2^-b sum_r sum_(j != j') v_j v_j' (normalised by 4 2^d (1 - 2^-P_d)). This script splits the cross
 terms by the relation between the two fibre sources: 3-adic siblings (s_j = s_j' mod 3^(d-1), different last digit:
 the zero-sum lifts), equal sources (s_j = s_j' mod 3^d) and unrelated; and by the lag j' - j.
+Caveat (S41 audit item 20): the printed 'diagonal' applies the one-period normalisation to a quantity that is not
+periodic, so at d = 1 it prints 4.856988 instead of E_0 = 4.857143. The true diagonal equals E_(d-1) to 10^-12
+(audit script a4). THM-4667's cross terms come from the ladder differences E_d - E_(d-1), not from this script; the
+anatomy split itself may be off at the 1e-4 level.
 Usage: python root_transport_crossterm_anatomy_20261017.py DMAX
 Session opus-2026-10-17-S41.
 """

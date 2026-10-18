@@ -3,18 +3,18 @@ id: HYP-9289
 title: "The golden linear contact space is additively free: for every finite source A' + uC' + vC' with A', C' in K = Q(zeta15, sqrt(-11)), the golden contact d = 1 + zeta5 and clock_duality_oct15's eight literal ports, every six-colour port pattern that extends to the unit graph of A' extends to the whole source by an additive colouring c_A(a) + c_1(b) + c_2(c) mod 6; hence six-colour forcing needs edges outside the linear space K + uK + vK, and the natural product coordinate v^2 supplies none"
 status: >
   OPEN (CONJECTURE), with a proved reduction and FINITE-EXACT evidence.
-  PROVED (elementary): the additive extension lemma, and its reformulation as a cyclic-shift correspondence colouring of
+  PROVED (elementary): the additive extension lemma, and its reformulation as a Z/6 colouring with forbidden difference sets (correspondence colouring when singletons) colouring of
   the golden two-distance graph on A'.
   FINITE-EXACT evidence:
   - all 570 patterns of clock_duality's 5400-vertex receipt extend additively with c_1 = c_2, checked on all 30,856 edges;
-  - six larger sources (up to 10,597 first-coordinate points or 2,297,178 mixed edges) have no additively blocked
+  - four larger linear sources (up to 1,099 first-coordinate points or 2,297,178 mixed edges; contact2 with 10,597 points was built but its pre-screen did not finish) have no additively blocked
     pattern;
   - the v^2 census: every unit difference with a nonzero v^2 part is a pure v^2-axis unit.
 session: opus-2026-10-17-S41
 source: 05-knowledge/results/golden_additive_boundary_20261017.md
 scripts:
   - 04-computation/experiments/golden_additive_colourings_20261017.py, golden_vsquare_unit_census_20261017.py, golden_forcing_search_20261017.py (+ .out, .json)
-related: [clock_duality_oct15 joint_contact_field_20261017f.md (G5, section 5), shared_golden_contact_20261017g.md, golden_square_contexts_20261017h.md (concurrent: G union (G + v^2) Cartesian, additive formula (3), degree-192 escape outside the linear space), THM-4661, THM-4662, HYP-9247, THM-4614]
+related: [clock_duality_oct15 marked_contacts_root_current_20261017e.md (G1, section 5), joint_contact_field_20261017f.md (section 5), graded_tail_carrier_20261017b.md (coordinate-sum additive CSPs, prior method), shared_golden_contact_20261017g.md, golden_square_contexts_20261017h.md (concurrent: G union (G + v^2) Cartesian, additive formula (3), degree-192 escape outside the linear space), THM-4661, THM-4662, HYP-9247, THM-4614]
 ---
 
 # HYP-9289 — the golden linear contact space is additively free
@@ -22,7 +22,7 @@ related: [clock_duality_oct15 joint_contact_field_20261017f.md (G5, section 5), 
 ## Statement
 
 Let `K = Q(zeta15, sqrt(-11))`, `d = 1 + zeta5`, and let `u`, `v` be clock_duality's golden contact units, so that
-`|d + u + v| = 1`. By clock_duality's classification (G5 and section 5 of joint_contact_field_20261017f.md), the unit
+`|d + u + v| = 1`. By clock_duality's classification (lemma G1 of marked_contacts_root_current_20261017e.md section 5, hypotheses certified in joint_contact_field_20261017f.md section 5), the unit
 differences of `K + uK + vK` are the three axes and the contact family `q(d, 1, 1)`, `|q| = 1`.
 
 **Conjecture.** For all finite `A', C' ⊂ K`, with `A'` containing the eight literal ports and `0 ∈ C'`, every
@@ -47,7 +47,7 @@ All pre-screens below run in seconds to minutes.
 | `A' = A + d·U(C)` | 1,099 | 10 | 5,302 | 0 |
 | `A' = P + M + dM`, `C' = C + U(C)` | 364 | 174 | 2,297,178 | 0 |
 | `A' = P + M + dM`, `C' = M + M + pentagon` | 364 | 29 | 72,358 | 0 |
-| two contact steps | 10,597 | 10 | 87,846 | see the .out file |
+| two contact steps | 10,597 | 10 | 87,846 | not finished |
 
 **The naive reduction fails.** The golden pentagon's diagonals are `d`-steps, so the two-distance graph contains a
 `K_5` on the ports and blocks 465 of the 570 patterns. The coefficient colourings evade this by shifting the

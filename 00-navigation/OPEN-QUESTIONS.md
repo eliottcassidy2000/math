@@ -6677,7 +6677,7 @@ OEIS A038375 gives max H(T) over all n-vertex tournaments: 1, 1, 3, 5, 15, 45, 1
 
 ---
 
-### UPDATE (2026-10-17, opus-2026-10-17-S41): uniform depth control of the ROOT transport as an energy process
+### UPDATE (2026-10-17, opus-2026-10-17-S41; audited, MISTAKE-627; Run C of S38 evaluated: R1-R5 all PASSED): uniform depth control of the ROOT transport as an energy process
 - THM-4667 (PROVED, elementary): the energy ledger of clock_duality_oct15's signed odd transport. It contains:
   - the energy is the sum of squared partial currents, it changes only at merges, and it ends at R(N)^2;
   - every fibre is sibling pairs (s, 2s+1) at scales spaced by 64 plus at most one singleton, so the energy change is
@@ -6705,8 +6705,10 @@ OEIS A038375 gives max H(T) over all n-vertex tournaments: 1, 1, 3, 5, 15, 45, 1
 - Six colours. The new note is golden_additive_boundary_20261017.md, and HYP-9289 (OPEN) states the conjecture.
   - clock_duality's shared golden source is additively free: all 570 port patterns extend by c_A(a) + c_C(b) + c_C(c)
     mod 6, verified on all 30,856 edges.
-  - The proposed v^2 coordinate creates no cross edges (exact census of 9.1e8 differences), so it cannot force.
-  - A design loop (G5 classification -> additive pre-screen -> SAT) finds no additively blocked pattern in six larger
+  - The proposed v^2 coordinate creates no cross edges (exact census of 9.1e8 differences), so with these coefficient
+    sets it cannot force.
+  - A design loop (G1 classification -> additive pre-screen, clock_duality's coordinate-sum method -> SAT) finds no
+    additively blocked pattern in four larger
     golden sources, up to 2,297,178 mixed edges.
   - THM-4668 (PROVED): clock_duality's degree-192 direction e = Zs/h is Cartesian on K + uK + vK + eK. Every unit with
     a nonzero e-part is a pure e-axis unit, so their next target edge (joining different port and e-fibres) does not

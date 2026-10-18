@@ -41,11 +41,15 @@ Mercator zero.
   fit for the dominant low modes; the holdout calibration of the explicit formula on the dense grid (0.17% with the
   69 zeros below the Nyquist height); the pre-registered test on `[2^40, 2^42)`: five of six tests PASSED (M2 predicts
   two new octaves to 0.115%), the energy bound `e_X <= 1` FAILED at `2^41` (section 5); the second-stage test on
-  `[2^42, 2^43)` with replication is PENDING.
+  `[2^42, 2^43)` with replication (Run C, evaluated 2026-10-17 by S41): all five tests R1-R5 PASSED. M2 predicts the
+  octave `[2^42, 2^43)` to 0.074%, `e_X = 0.406` at `2^42`, and Run C reproduces Run B exactly.
 - **CONDITIONAL (Arb):** the residue at `ρ* = 0.99999921 + 3014.0202i` (the `1054/665` member, prior art: Codex's
   332.5 line) is `0.00993 + 0.00113i` before the future tail, with radius 0.0261 under the budget `E_X <= 2X²` for
   `X >= 2^40`. The radius scales like `N^(−1/2)` (0.0130 at 2^42, 0.0092 at 2^43), so the certificate cannot succeed
-  before 2^43, and at 2^43 the expected margin is about 8%.
+  before 2^43.
+  - At `2^43` (Run C, test R4) it succeeds: `|r| ∈ [0.000776, 0.0192]` under the budget `E_X <= 2X²` for dyadic
+    `X >= 2^43`.
+  - This is CONDITIONAL on that budget; under `(64, 16)` it is not certified.
 
 ## 1. The zeros of D in the critical strip up to height 20000
 
@@ -165,7 +169,15 @@ and out of sample alike (report I5).
 precedes Run C (launched 17:54:00): the checked census of `[2^40, 2^43)` with checksummed accumulators. Its tests are
 R1 (M2 refitted to `2^42` predicts `[2^42, 2^43)` within 0.0035), R2 (`e_X <= 2` at `2^42`), R3 (the residue estimate
 at `ρ*` within 1% of 0.00999), R4 (the Arb certificate at `ρ*` with `N = 2^43`) and R5 (exact replication of Run B).
-PENDING.
+
+**Outcome (2026-10-17).** All five PASSED; see the pre-registration file's outcome table.
+- R1: relative rms 0.000736.
+- R2: `e_X = 0.4057`.
+- R3: residue modulus 0.0099893.
+- R4: `|r| ∈ [0.000776, 0.0192]`, conditional on the budget.
+- R5: byte-identical replication.
+
+All integrity checks of Run C pass.
 
 ## 6. Toward a certified pole at ρ*
 
@@ -194,8 +206,9 @@ together with the square-root size of the remainder seen numerically.
 
 ## 8. Open threads
 
-1. A certified nonzero residue at `ρ*` (the `1054/665` member) would give `limsup log B(X)/log X >= 0.99999921` under
-   a budget beyond the census; PENDING at `N = 2^43`.
+1. The nonzero residue at `ρ*` (the `1054/665` member) is certified at `N = 2^43` under the budget `(2, 0)` beyond
+   the census (Run C, R4). So `limsup log B(X)/log X >= 0.99999921` along a sequence of scales, CONDITIONAL on that
+   budget. The budget itself remains open (HYP-9283).
 2. Non-vanishing of `G` at infinitely many Mercator members would give `limsup log B(X)/log X = 1` under (W).
 3. The unsmoothed explicit formula (HYP-9285): vertical-line and horizontal bounds for `G` as in section 7.
 4. Done: the irrational-density grid resolves the Mercator family (section 3).

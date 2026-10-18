@@ -3,8 +3,10 @@
 2026-10-17, opus-2026-10-17-S41. Owner prompt: golden-coordinate six-colour forcing, preserving sources, ports and
 integer clocks; approach from the other end (design a system where the desired control is inherent, then merge).
 Builds on clock_duality_oct15's golden contact:
-- [joint_contact_field_20261017f.md](joint_contact_field_20261017f.md) section 5 and G5 (complete unit-direction
-  classification in `K + uK + vK`, `K = Q(zeta15, sqrt(-11))`, contact family `q(d, 1, 1)`, `d = 1 + zeta5`);
+- the complete unit-direction classification in `K + uK + vK` (`K = Q(zeta15, sqrt(-11))`, contact family
+  `q(d, 1, 1)`, `d = 1 + zeta5`). This is lemma G1 of
+  [marked_contacts_root_current_20261017e.md](marked_contacts_root_current_20261017e.md) section 5, with its hypotheses
+  certified for the golden contact in [joint_contact_field_20261017f.md](joint_contact_field_20261017f.md) section 5;
 - [shared_golden_contact_20261017g.md](shared_golden_contact_20261017g.md) (the 5400-vertex source `A + uC + vC`, all 570
   port patterns extend; proposed next step: `v^2` coordinates).
 
@@ -14,6 +16,12 @@ the same certificate type for its constructions.
 - Its section 2 shows that the single translate `G ∪ (G + v^2)` is a Cartesian matching context: add 1 mod `k` on the
   copy. Section 3 below extends this to every `v^2 C` layer over the same coefficient sets.
 - Its formula (3), `c(p + e l) = c(p) + c_L(l) mod k`, is an additive colouring.
+
+Prior art for the method. Separate-coordinate additive (coordinate-sum) colouring CSPs, and "Cartesian products
+retaining additive colourings" as a canonical hostile, already appear in clock_duality's
+[graded_tail_carrier_20261017b.md](graded_tail_carrier_20261017b.md) (committed 14:10). The same note also gives the
+divisibility argument that excludes additive homomorphisms. The lemma below is that method, stated for the golden
+contact.
 
 What is new here:
 - the additive extension lemma for the non-Cartesian contact edges;
@@ -26,20 +34,22 @@ not cover it. The pre-screen is the cheap necessary test for their stated next t
 port and `e`-coefficient fibres.
 
 **Typing.**
-- PROVED (elementary): the additive extension lemma, and the reduction of the additive problem to a cyclic-shift
-  correspondence colouring of the first coordinate.
+- PROVED (elementary): the additive extension lemma (clock_duality's coordinate-sum method), and the reduction of the
+  additive problem to a `Z/6` colouring of the first coordinate with forbidden difference sets.
 - PROVED: THM-4668 (clock_duality's degree-192 direction `e` is Cartesian on `K + uK + vK + eK`).
 - FINITE-EXACT:
   - every pattern of clock_duality's receipt extends additively (verified on all 30,856 edges);
   - the `v^2` census (every unit difference with a nonzero `v^2` part is a pure `v^2`-axis unit);
-  - the additive pre-screen on five larger golden sources, up to 2,297,178 mixed edges.
+  - the additive pre-screen on four larger linear golden sources, up to 2,297,178 mixed edges (a fifth, contact2, was
+    built but its pre-screen did not finish in the session).
 - OPEN: six-colour forcing; whether every finite golden source in `K + uK + vK` is additively free.
 
 ## 1. The other end: systems whose boundary is free for a structural reason
 
 For a Cartesian sum `A □ C □ C` every colouring of the first factor extends: colour `(a, b, c)` by
 `c_A(a) + c_1(b) + c_2(c) (mod 6)`. So the "inherently uncontrolled" (always-extending) system is the additive one. By
-G5 a golden source differs from a Cartesian sum only in its mixed edges
+G1 (marked_contacts_root_current_20261017e.md section 5) a golden source differs from a Cartesian sum only in its
+mixed edges
 `(a, b, c) ~ (a + dq, b + q, c + q)`, `|q| = 1`.
 
 **Lemma (additive extension; PROVED).** Let the source be `A' + uC' + vC'` with `A', C' ⊂ K` and ports `(p, 0, 0)`.
@@ -60,7 +70,8 @@ that pattern. This is a necessary test that runs in seconds before any full SAT 
 - `c_A(a) ≠ c_A(a')` on unit edges;
 - `c_A(a + dq) - c_A(a) ∉ -S_q`, where `S_q = {Δ_q c_1(b) + Δ_q c_2(c)}` over the mixed edges at `(a, q)`.
 
-So the additive extension problem is a cyclic-shift correspondence (DP) colouring of the golden two-distance graph on
+So the additive extension problem is a `Z/6` colouring with forbidden difference sets (a correspondence/DP colouring
+when every `S_q` is a single value) of the golden two-distance graph on
 `A'`: distances 1 and `|d| = φ`, the golden ratio. The coefficient colourings choose the shifts. Two special cases:
 - With `c_2 = -c_1` homomorphism-like, every shift is 0 and the problem is plain 6-colouring of the two-distance graph.
 - That choice is too rigid. The golden pentagon's diagonals are `d`-steps (`P_(i+2) - P_i = d α^i`), so the ports
@@ -86,20 +97,23 @@ cross edges.
 
 `golden_vsquare_unit_census_20261017.py` enumerates every difference
 `dA + u d1 + v d2 + v^2 d3`, with `dA ∈ D(A) ∪ {0}`, `d1, d2, d3 ∈ D(C) ∪ {0}` and `d3 ≠ 0`. That is
-`1603 x 83 x 83 x 82 ≈ 9.1 x 10^8` candidates, with `|D(A)| = 1602` and `|D(C)| = 82`.
+`1603 x 83 x 83 x 82 ≈ 9.1 x 10^8` candidates, with `|D(A)| = 1602` and `|D(C)| = 82`. The audit's independent float
+census of 905,531,494 candidates confirms the result.
 - **Sieve.** A modular sieve at the good primes 1021, 1171, 1741 tests the norm equation in `K(w)(s)`, using both
   embeddings. It leaves 1018, then 22, then 22 survivors.
 - **Exact check.** All 22 survivors are exact units, and all 22 are the pure `v^2`-axis units
   (`dA = d1 = d2 = 0`, `d3` one of the 22 unit differences of `C`).
 
 So `A + uC + vC + v^2 C` has the old edges plus Cartesian `v^2`-axis edges only. Adding `c_3 = c_C` extends the
-additive colourings of section 2. **The `v^2` candidate cannot force at any size** with these coefficient sets.
+additive colourings of section 2. **With these coefficient sets (`|A| = 54`, `|C| = 10`), the `v^2` candidate cannot
+force.** Larger coefficient sets need a new census.
 
 ## 3b. clock_duality's degree-192 direction e is Cartesian on the whole linear space (THM-4668, PROVED)
 
 clock_duality's escape `e = Zs/h` (`h^2 = 4 - N`, degree 192; golden_square_contexts_20261017h.md G2) makes `σ`-mates
 unit-distance pairs. They named the next target: a unit edge joining different port and `e`-coefficient fibres.
-- **Census.** `golden_e_direction_census_20261017.py` tests all `9.1 x 10^8` differences `dA + u d1 + v d2 + e d3` with
+- **Census.** `golden_e_direction_census_20261017.py` tests all `1603 x 83 x 83 x 130 ≈ 1.44 x 10^9` differences
+  `dA + u d1 + v d2 + e d3` with
   `d3 ∈ D(C) ∪ D(L) \ {0}`, where `L` is their 13-point attachment set. Exactly the 26 pure `e`-axis units survive.
 - **THM-4668** proves the general statement. In `K + uK + vK + eK` every unit with a nonzero `e`-coefficient is a pure
   `e`-axis unit `q e`, `|q| = 1`.
@@ -116,7 +130,7 @@ nonlinear moves of the golden program add no cross edges.
 ## 3c. Product coordinates: two new contact families, still additively free
 
 `golden_product_direction_census_20261017.py` repeats the census for the product coordinates `Y = ue, ve, uv, e^2`. It
-uses all four norm components in `F(s, h)`, with `d3 ∈ D(C) ∪ D(L)` (`9.1 x 10^8` differences each). Results
+uses all four norm components in `F(s, h)`, with `d3 ∈ D(C) ∪ D(L)` (`1.44 x 10^9` differences each). Results
 (FINITE-EXACT):
 
 | `Y` | units with nonzero `Y`-part | pure `Y`-axis | cross units |
@@ -137,13 +151,13 @@ The `e^2` family shares its `(A, u)`-step `(dq, q)` with the `v`-contact. That i
 mixed families in the golden program.
 
 `golden_forcing_search4_20261017.py` builds `A + uC + vC + e^2 C`: 54,000 addresses, 56 `v`-contact and 42
-`e^2`-contact edge patterns per layer. For these coefficient sets the census plus G5 give the complete edge set. The
+`e^2`-contact edge patterns per layer. For these coefficient sets the census plus G1 give the complete edge set. The
 additive pre-screen still blocks **no** pattern, with or without shared coefficient colourings. Two coupled contact
 families sharing an `(A, u)`-step are absorbed by independent coefficient shifts.
 
-## 4. A design loop, and what six larger sources show
+## 4. A design loop, and what four larger sources show
 
-`golden_forcing_search_20261017.py` builds `A' + uC' + vC'` for `A', C' ⊂ K` directly from G5: unit edges by a
+`golden_forcing_search_20261017.py` builds `A' + uC' + vC'` for `A', C' ⊂ K` directly from G1: unit edges by a
 three-prime sieve plus exact norm in `K`; mixed edges combinatorially from the contact family. It then runs:
 - the two-distance test;
 - the additive pre-screen (shared and independent coefficient colourings);
@@ -158,7 +172,7 @@ It reproduces clock_duality's source exactly: 146, 15 and 56 edges.
 | contact1: `A' = A + d·U(C)` | 1099 | 10 | 3794 | 15 | 5302 | 465 | 0 |
 | `dM_C2`: also `C' = C + U(C)` | 364 | 174 | 1139 | 532 | 2,297,178 | 465 | 0 |
 | `MM`: `C' = M + M + pentagon` | 364 | 29 | 1139 | 73 | 72,358 | 465 | 0 |
-| contact2: two contact steps | 10,597 | 10 | 44,745 | 15 | 87,846 | (skipped) | PENDING |
+| contact2: two contact steps | 10,597 | 10 | 44,745 | 15 | 87,846 | (skipped) | not finished (CSP of about 2 x 10^7 clauses) |
 
 Here `U(C)` is the set of unit differences of `C`. With 4 x 10^4 times as many mixed edges, every pattern still extends
 additively, even with `c_1 = c_2`.
@@ -170,8 +184,8 @@ constraint. This is evidence, not a theorem, that the linear golden space is bou
 ## 5. What a forcing construction must do next
 
 1. **Defeat the additive problem first.** Forcing a pattern requires that no choice of coefficient colourings makes the
-   cyclic-shift correspondence colouring of the golden two-distance graph on `A'` solvable. A candidate that fails the
-   seconds-long pre-screen is closed, as `v^2` now is.
+   forbidden-difference `Z/6` colouring of the golden two-distance graph on `A'` solvable. A candidate that passes the
+   seconds-long pre-screen for every pattern is closed, as `v^2` now is for these coefficient sets.
 2. **Make the shifts rigid.** Homomorphism-like coefficient colourings give one shift per direction. Coefficient sets
    whose unit graph forces many different shifts per direction (rigid, non-Cartesian coefficient graphs) are the
    natural targets.
@@ -196,5 +210,5 @@ python 04-computation/experiments/golden_additive_colourings_20261017.py
 python 04-computation/experiments/golden_vsquare_unit_census_20261017.py
 python 04-computation/experiments/golden_e_direction_census_20261017.py
 python 04-computation/experiments/golden_e_direction_proof_check_20261017.py
-python 04-computation/experiments/golden_forcing_search_20261017.py base     # also dM, contact1, dM_C2, MM, contact2
+python 04-computation/experiments/golden_forcing_search_20261017.py base     # also dM, contact1, dM_C2, MM (contact2 with --no-two)
 ```

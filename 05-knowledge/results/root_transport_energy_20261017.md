@@ -19,10 +19,13 @@ from [positive ROOT transport, section2](root_positive_transport_20261017g.md). 
   - the ROOT/shell identity for the termination regime;
   - the Fourier form of the ideal transport.
 - FINITE-EXACT:
-  - the ideal energy ladder to `d = 6` in exact integers, and to `d = 12` in float64 with a rigorous band-tail bound;
+  - the ideal energy ladder to `d = 6` in exact integers;
   - the actual energy profiles of **every** `N < 2^23` (an exact incremental algorithm; invariant checked against the
     direct current at every `N`).
-- NUMERICAL: the cross-term anatomies and the operator norms.
+- VERIFIED (float64):
+  - the ideal ladder for `d = 7..12`, with a rigorous band-tail bound (rounding not enclosed);
+  - the cross-term anatomies, the operator norms and the matching tests.
+- Independent audit: 04-computation/experiments/s41_audit_20261017/REPORT.md. Its fixes are applied below.
 - OPEN: HYP-9288, revised. No claim of closing the gap.
 
 **Working decomposition.** The finite energy observations suggest two regimes.
@@ -33,7 +36,7 @@ from [positive ROOT transport, section2](root_positive_transport_20261017g.md). 
   40 on. The ROOT coefficient is a partial sum of the current over stopping-time shells, which is the census object of
   HYP-9283/9285.
 
-A shell maximal inequality is therefore a promising part of the target. It is not equivalent to the full energy bound:
+A uniform shell bound is therefore a promising part of the target. It is not equivalent to the full energy bound:
 uniform ideal cross terms, discrete-to-density matching and the nonterminal energy also need control. The exact data
 to `2^23` support the full bound in the tested octave averages.
 
@@ -46,8 +49,9 @@ compatible profile:
     A^(d)(N) = γ_d N + O_d(log^(d+1) N),   γ_0, ..., γ_3 = 2.2857, 1.7841, 1.4489, 1.2281.
 
 Their next critical target is a coupled depth/source-scale estimate: `γ_d` decaying at a rate that survives
-`d ≍ log N`, with a remainder uniform in `d`. Extending their exact recursion gives `γ_4, γ_5, γ_6` = 1.0798, 0.9671,
-0.8773; the recursion is validated on `γ_0..γ_3`.
+`d ≍ log N`, with a remainder uniform in `d`. clock_duality's certified table (root_positive_transport_20261017g.md
+section 6) continues with `γ_4, γ_5, γ_6 = 1.0798, 0.9671, 0.8773` and up to `γ_10`. This session reproduces those values and
+adds `γ_11`, `γ_12` (section 4).
 - The successive ratios are 0.78, 0.81, 0.85, 0.88, 0.90, 0.91. They creep towards 1.
 - l1 is the worst case over all sign profiles. It throws away exactly the cancellation the signs provide.
 
@@ -133,7 +137,7 @@ Depths 7-12 come from the banded computation in clock_duality's positive gauge
   Already `E_10 = 1.528` lies below that. Whether `E_d^ideal` tends to a positive limit is OPEN.
 - **Sanity check.** The actual transport averages `E_6/N` = 1.693 (octaves `2^18..2^22`), and `E_0(N)/N -> 34/7`.
 
-**Not a contraction (NUMERICAL; `root_transport_symbol_norm_20261017.py`).** Weight band `b` by `2^(-b/2)`. The ideal
+**Not a contraction (VERIFIED; `root_transport_symbol_norm_20261017.py`).** Weight band `b` by `2^(-b/2)`. The ideal
 transport becomes an analytic Toeplitz operator with matrix symbol
 `T(z) = 2^(-1/2) Σ_(j,a) (-1)^a (z/sqrt 2)^(a - 1 + 2j) Π_(j,a)`; its norm is `sup_(|z|=1) ||T(z)||`.
 - On the last-digit-balanced subspace (invariant by R8.2) the norm is 1.283, 1.324, 1.335, 1.346 for `d = 1..4`. On the
@@ -191,7 +195,7 @@ point masses. So all depths can be maintained at once, by walking one path of th
   |---|---|---|---|---|---|
   | `E_d/N` | 4.857 | 2.137 | 1.693 | about 1.53 | about 1.43 |
 
-  From about `d = 25` it becomes octave-specific.
+  From about `d = 15` it becomes octave-specific (1.39-1.54 across octaves at `d = 15`).
 - **Pointwise.**
   - `max_(N < 2^23) sup_d E_d(N)/N = 10.06`, at `N = 7910`. There `R^2/N = 9.08`, which is also the largest
     `R(N)^2/N` for `2^10 <= N < 2^23`.
@@ -204,14 +208,15 @@ point masses. So all depths can be maintained at once, by walking one path of th
   |---|---|---|---|
   | ROOT share | 40% (8% at 66463) | 75-89% | 92-98% |
 
-  - The participation ratio is 1.0-1.3 from `d = 40` on.
+  - The participation ratio is 1.0-1.8 from `d = 40` on.
   - Since `E_d = Vroot[d]^2 + Σ_(u ≠ 1) c_d(u)^2`, the late energy of these `N` is essentially the square of the ROOT
     coefficient.
   - When the final current is small the picture differs. At `N = 116599` (`R^2/N = 0.018`) ROOT holds 27-36% at
     `d = 40..60`, and the remaining energy (0.4N at `d = 60`) is spread over about 10 effective seeds before it cancels.
   - These sampled large-current rows are ROOT-dominated; no uniform implication from large current to ROOT dominance is proved.
-- **The shell maximal inequality holds in every computed octave.** This is a necessary condition for HYP-9288 (B), not a
-  sufficient one. The script also records `max_d Vroot_d(N)^2` for every `N < 2^23`.
+- **The shell maximal inequality holds in every computed octave.** This is `Σ_N max_d Vroot_d^2`, with the maximum
+  inside the sum. It is stronger than the uniform shell bound `sup_d Σ_N Vroot_d^2` that HYP-9288 (B) implies, and is
+  observed, not implied. The script also records `max_d Vroot_d(N)^2` for every `N < 2^23`.
 
   | octave | `2^9` | `2^10` | `2^11` | `2^12` | `2^13` | `2^14` | `2^15` | `2^16` | `2^17` | `2^18` | `2^19` | `2^20` | `2^21` | `2^22` |
   |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -251,16 +256,21 @@ point masses. So all depths can be maintained at once, by walking one path of th
      version to `d <= m/16`.
 3. **Termination regime.** In the sampled large-current rows the late energy is ROOT-dominated;
    `Vroot[d]` is exactly a shell partial sum.
-   - HYP-9288(B) implies the shell mean-square maximal inequality. The converse requires a separate bound for the
+   - HYP-9288(B) implies the uniform shell bound `sup_d Σ_N Vroot_d^2` (not the stronger maximal inequality of
+     section 5). The converse requires a separate bound for the
      remaining coefficient energy; the finite dominance observations do not supply it.
    - Its liminf bounds the current-energy budget, without assuming universal convergence. Its content is the census and explicit-formula machinery:
      THM-4659/4660, the zeros of `D`, and the near-return structure that produces the octave-specific profiles.
 
 **Calibration.** With THM-4658, `sqrt(e_(4X)) <= (sqrt(e_X) + sqrt(δ_X))/2 + sqrt(3/X)`. So a budget `δ_X <= a + b log X`
-for the current energy gives a budget of the same type for the census energy. Constant budgets up to 1806.6, and
-logarithmic budgets with `b` of order `10^3`, certify the Mercator pole (HYP-9283(B)). Either way this forces
-`limsup log B(X)/log X >= 0.99821`. The averaged cone (B), even with a logarithmic budget, is therefore beyond
-Krasikov-Lagarias.
+for the current energy gives a budget of the same type for the census energy. The following certify the Mercator pole
+(HYP-9283(B)):
+- constant budgets up to 1806.6;
+- logarithmic budgets written as `a + b log_2(X/2^37)` inside the certified region, e.g. `(2, <= 1194.9)`;
+- in the form `a + b log_2 X`, only `b <= 45.7` (2^37 certificate) or `b <= 338` (2^40), as the S41 audit corrected.
+
+Either way this forces `limsup log B(X)/log X >= 0.99821` along a sequence of scales. So the averaged cone (B), with such
+a budget, is beyond Krasikov-Lagarias.
 
 ## 6b. Concurrent work: clock_duality's positive transport (read after this note's first commit)
 

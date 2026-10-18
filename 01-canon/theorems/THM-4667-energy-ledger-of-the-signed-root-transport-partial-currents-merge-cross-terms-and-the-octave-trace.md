@@ -3,12 +3,13 @@ id: THM-4667
 title: "Signed ROOT transport energy ledger: sibling-pair fibres, ROOT projection with its unrooted complement, unconditional current-budget sufficiency, and the primitive affine Fourier recurrence"
 status: >
   PROVED (elementary bookkeeping; scope repaired 2026-10-17 by clock_duality_oct15): statements 1-5 and 8-10 (statement 8 checked by brute force on all seeds below
-  2 x 10^6; statement 10 checked to machine precision against clock_duality's exact recursion for d <= 4).
-  FINITE-EXACT: statement 6 (the ideal energy ladder to d = 6 in exact integers; d = 7..12 in float64 with a rigorous
-  truncation bound) and the complete energy profiles of every N < 2^23 in
+  2 x 10^6, and by the independent S41 audit below 4 x 10^6; statement 10 checked to machine precision against clock_duality's exact recursion for d <= 4).
+  FINITE-EXACT: statement 6 for d <= 6 (exact integers). VERIFIED (float64, rigorous truncation bound, rounding not
+  enclosed): statement 6 for d = 7..12 and the complete energy profiles of every N < 2^23 in
   statement 7 (exact incremental algorithm, invariant checked against the direct current at every N). NUMERICAL: the
-  cross-term anatomies and the operator norms in statement 7. The uniform bound that would close the tail-debt gap is
-  HYP-9288 (OPEN; calibrated as beyond Krasikov-Lagarias). The sibling pair and its opposite clock parities are
+  cross-term anatomies and the operator norms in statement 7 are VERIFIED (float64). The uniform bound that would close
+  the tail-debt gap is HYP-9288 (OPEN; calibrated as beyond Krasikov-Lagarias along a sequence of scales, with the
+  budget constants of statement 5). The sibling pair and its opposite clock parities are
   clock_duality_oct15's R5. The Syracuse bridge of statement 10 was found concurrently by clock_duality_oct15 in measure
   form (root_positive_transport_20261017g.md, equation (5)). The complete fibre decomposition, the energy (l2) reading,
   the ROOT/shell identity and the additive-Fourier form are new in the repository.
@@ -23,7 +24,9 @@ scripts:
   - 04-computation/experiments/root_transport_octave_trace_20261017.py (+ .out, .json)
   - 04-computation/experiments/root_transport_depth_ladder_20261017.py, root_transport_crossterm_anatomy_20261017.py (+ .out, .json)
   - 04-computation/experiments/root_transport_energy_ladder_banded_20261017.py (+ .out, .json; d <= 12 in clock_duality's positive gauge)
-  - 04-computation/experiments/root_transport_sibling_anatomy_20261017.py, root_transport_symbol_norm_20261017.py, root_transport_fourier_check_20261017.py (+ .out, .json)
+  - 04-computation/experiments/root_transport_sibling_anatomy_20261017.py (+ .out, .json), root_transport_symbol_norm_20261017.py (+ .json), root_transport_fourier_check_20261017.py (+ .out)
+  - 04-computation/experiments/root_transport_fibre_classes_check_20261017.py (+ .out; statement 8 brute force), root_transport_l2_matching_20261017.py, root_transport_l2_matching_deep_20261017.py (+ .out, .json)
+  - independent audit: 04-computation/experiments/s41_audit_20261017/REPORT.md (scripts a1-a14)
 related:
   - clock_duality_oct15 root_braid_logistic_20261017f.md (R1 odd-source fold, R5 sibling fold, sections 3-3c: transport, R7, R8 depth ladder gamma_d), marked_contacts_root_current_20261017e.md (energy kernel G_X, formula (4)), root_positive_transport_20261017g.md (concurrent: P1 positive gauge, equation (5) Syracuse factorisation = measure form of statement 10, P3 uniform l1 remainder for d <= m/16, P4 slow packet)
   - THM-4658 (two-octave energy transport), HYP-9283 (budgets; calibration (B), (C)), HYP-9284 (odd-step suppression), THM-4659/4660, THM-4565 (S20 coupled-orbit covariance)
@@ -65,16 +68,21 @@ related:
    - Always `D_X = Σ_N R(N)^2 <= liminf_d T_d(X)`. If all initially supported sources in the finite octave
      reach ROOT, then eventually `T_d(X)=D_X`. This equality holds for the certified finite census.
    - A bound `sup_d T_d(X) <= C X^2` gives `D_X <= C X^2`. Through THM-4658 this gives a budget of the same type for the
-     census energy `E_X`. By HYP-9283(B) that certifies the Mercator pole (constant budgets up to 1806.6, logarithmic
-     budgets with `b` of order `10^3`), which forces `limsup log B(X)/log X >= 0.99821`.
+     census energy `E_X`. By HYP-9283(B) that certifies the Mercator pole, which forces
+     `limsup log B(X)/log X >= 0.99821` along a sequence of scales. The certified budgets are:
+     - constant budgets up to 1806.6;
+     - logarithmic budgets in HYP-9283's form `a + b log_2(X/2^37)`, e.g. `(2, <= 1194.9)`;
+     - in the form `a + b log_2 X`, only `b <= 45.7` (2^37 certificate) or `b <= 338` (2^40 certificate), by the S41
+       audit a7.
 6. **(Ideal energy ladder, FINITE-EXACT.)** In clock_duality's ideal recursion R8,
    `K_d(r, b) = Σ_j σ_j K_(d-1)(s_j(r), b - o_j)` with `o_j = a_j - 1 + 2j`.
-   - The band-weighted energy `E_d = Σ_b 2^(-b) Σ_r K_d(r, b)^2 / (4·2^d (1 - 2^(-P_d)))` equals the actual `E_d(N)/N`
-     to leading order. Its diagonal part is exactly `E_(d-1)`: each old residue is hit once per `(j, branch)`, and
+   - The band-weighted energy `E_d = Σ_b 2^(-b) Σ_r K_d(r, b)^2 / (4·2^d (1 - 2^(-P_d)))` matches the actual
+     `E_d(N)/N`. This is VERIFIED (statement 7, matching), not proved here; it would be the `l2` analogue of R8.3. Its diagonal part is exactly `E_(d-1)`: each old residue is hit once per `(j, branch)`, and
      `(1/2)·(1 + 1/2)·Σ_j 4^(-j) = 1`. So the energy changes only by cross terms.
    - **Values.** For `d = 0, ..., 6`: `E_d = 4.857143, 3.388403, 2.575382, 2.137430, 1.915079, 1.778419, 1.693330` and
-     `γ_d = 2.285714, 1.784095, 1.448878, 1.228070, 1.079843, 0.967086, 0.877335`. The first four `γ_d` are as in R8; the
-     rest are new.
+     `γ_d = 2.285714, 1.784095, 1.448878, 1.228070, 1.079843, 0.967086, 0.877335`. The first four `γ_d` are as in R8, and
+     `γ_4..γ_10` are clock_duality's certified enclosures (root_positive_transport_20261017g.md section 6). Only
+     `γ_11`, `γ_12` and the energies `E_d` are new here.
    - **Cross terms.** `-1.4687, -0.8130, -0.4380, -0.2224, -0.1367, -0.0851`, all negative: the ideal transport
      dissipates energy.
    - **Depths 7-12.** These come from the banded positive-gauge computation (float64, rigorous band tail
@@ -85,22 +93,24 @@ related:
    - **Rate.** The consecutive cross-term ratios are 0.55, 0.54, 0.51, 0.62, 0.62, 0.70, 0.73, 0.80, 0.83, 0.90,
      0.87. The decay is slower than geometric, and whether `E_d` has a positive limit is OPEN.
    - **Anatomy (`d <= 5`).** The cross terms concentrate at lag 1, which by statement 8 is the sibling pair.
-7. **(Checks, FINITE-EXACT / NUMERICAL.)**
+7. **(Checks, FINITE-EXACT / VERIFIED.)**
    - *Every `N < 2^23`* (incremental algorithm, 120,409,136 tree nodes; `R(N) = H(4N) - H(N)` verified at every `N`):
      - **Octave traces.** For every octave `X = 2^2, ..., 2^22` the trace `T_d(X)/X^2` attains its maximum at `d = 0`
        (`T_0/X^2 -> 51/7`) and ends at `D_X/X^2`. At `X = 2`, `T_5 = 4 > T_0 = 2`.
      - **Pointwise.** `max_N sup_d E_d(N)/N = 10.06`, at `N = 7910`, where `R^2/N = 9.08`. In the octaves
        `2^18..2^21` every profile peaks at `d = 0`.
-     - **Ideal regime.** The actual `E_6/N` averages 1.693 in every octave `2^18..2^22`, matching the ideal value.
+     - **Ideal regime.** The actual `E_6/N` octave means (1.6914-1.6990 in `2^18..2^22`) agree with the ideal 1.693330 to
+       within 0.35%.
      - **Matching.** For `d <= 6` and `N = 2^16, 2^18`, the actual `c_d` equals clock_duality's ideal
        `K_d(t mod 3^(d+1), b(t))` at every seed except ROOT, the band-boundary seed `3^d`, and at most one other small
        seed. The total `l2` error is at most `0.002 N` (root_transport_l2_matching_20261017.out).
        - To `d = 10`, the differences are at ROOT and at most three small seeds near ROOT, with off-ROOT `l2` error at
          most `0.0014 N` (root_transport_l2_matching_deep_20261017.out).
-     - **Shells.** `Σ_(X <= N < 2X) max_d c_d(1)^2 <= 5.20 X^2` for every octave `2^9..2^22`. This is statement 9's shell
-       partial sums with the maximum inside the sum.
+     - **Shells.** `Σ_(X <= N < 2X) max_d c_d(1)^2 <= 5.20 X^2` for every octave `2^9..2^22`. This is the shell maximal
+       inequality, with the maximum inside the sum. It is stronger than the uniform shell bound
+       `sup_d Σ_N c_d(1)^2` implied by HYP-9288 (B), and is observed, not implied.
    - *Sibling anatomy* (octaves `2^10..2^12` in full, samples at `2^16`):
-     - INTRA (statement 8) carries 94-100% of the energy change at `d <= 2`, and the bulk afterwards.
+     - INTRA (statement 8) carries 91-100% of the energy change at `d <= 2`, and the bulk afterwards.
      - The termination climb at `2^12` (trace 1.98 -> 3.98) is INTRA with positive sign.
    - *Operator norm* of the ideal transport on last-digit-balanced vectors, computed as the sup over `|z| = 1` of its
      band symbol: 1.283, 1.324, 1.335, 1.346 for `d = 1..4`. So the ideal transport is not a contraction.
@@ -162,7 +172,8 @@ related:
    `2^(-1)` between depths, gives the diagonal factor 1. The values come from the exact integer recursion, validated
    against clock_duality's rational `γ_0, ..., γ_3`, and from the anatomy script.
 7. **Checks.** Computation (scripts above). The incremental algorithm rests on two facts:
-   - `c_0(N + 1) - c_0(N)` is supported on `seed(4N + 1)`, `seed(4N + 3)` and `seed(2N + 1)`;
+   - `c_0(N + 1) - c_0(N)` is supported on `seed(4N + 1)`, `seed(4N + 3)` and `seed(2N + 1)`. This is the three-entry
+     source update of clock_duality's equation (3) in marked_contacts_root_current_20261017e.md;
    - `T` maps a point mass at a seed to a signed point mass at its image.
 
    So `c_d(N)` for all `d` is updated along three tree paths. Sources at ROOT stay there, and ROOT is kept as a separate

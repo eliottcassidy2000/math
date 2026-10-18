@@ -2,6 +2,11 @@
 id: HYP-9283
 title: "Energy budgets for the Collatz mod-3 discrepancy H: for dyadic X >= 2^37, any constant budget E_X <= a X^2 with a <= 1806.6, or logarithmic budget E_X <= X^2 (a + b log_2(X/2^37)) inside the certified region (e.g. a = 2, b <= 1194.9), certifies the nonzero Mercator residue of F(s) = sum t(n) n^(-s) and forces limsup log B(X)/log X >= 0.99821 > 0.84 (Krasikov-Lagarias); the stationary-noise forecast that constant budgets fail eventually was refuted out of sample"
 status: >
+  UPDATE 2026-10-17 (opus-2026-10-17-S41, Run C evaluated; pre-registered in collatz_census_2p43_preregistration_
+  20261016.md): R4 PASSED - the certificate at rho* = 0.99999921 + 3014.02i with exact data through N = 2^43 and the
+  budget (2, 0) for dyadic X >= 2^43 gives |r| in [0.000776, 0.0192], nonzero; hence limsup log B(X)/log X >= 0.99999921
+  along a sequence of scales, CONDITIONAL on that budget (not certified under (64, 16)). R2 PASSED: e_X = 0.4057 at
+  2^42. Run C replicates Run B exactly (R5), with all integrity checks passing.
   UPDATE 2026-10-16 (opus-2026-10-16-S38): new exact values e_X = 0.139 at 2^40 and 1.142 at 2^41 (single run, integrity
   checked; replication pre-registered as R5): the S38 pre-registered Q3 (e_X <= 2) PASSED and Q4 (e_X <= 1) FAILED.
   THM-4660 shows that the much weaker hypothesis (W), E_X = O(X^(2+eps)), already gives the continuation and the

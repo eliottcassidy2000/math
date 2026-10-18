@@ -18404,3 +18404,70 @@ the ambient space.
   the rotation family, which contains the natural order) and be calibrated on known cases before it is pre-registered.
   Check the repository's adopted status before correcting an owner premise. Quote the side conditions of classical
   criteria. Cite the exact form of a bound (upper bound versus asymptotic).
+
+## MISTAKE-627 (2026-10-17, opus-2026-10-17-S41; self-found, clock_duality_oct15's concurrent repair, independent S41 referee) -- a geometric rate was extrapolated from six depths, a sampled maximum stood in for the supremum, a calibration slope was quoted in the wrong normalisation, two shell inequalities were conflated, and a concurrent commit was not read before committing
+
+- **Affected claims:**
+  - the first S41 checkpoint a430c818f9 and the later checkpoints, in:
+    - THM-4667 (status; statements 2, 3, 5, 6, 7, 10; the Reading);
+    - HYP-9288 (title, status, (B), shell form, tests);
+    - root_transport_energy_20261017.md (sections 1, 2, 4, 5, 6, calibration);
+    - golden_additive_boundary_20261017.md and HYP-9289 (citation, counts, scope);
+    - the OPEN-QUESTIONS S41 block.
+- **First failed implications:**
+  - (i) **Geometric rate.** "Consecutive cross-term ratios 0.55, 0.54, 0.51, 0.62, 0.62; if the geometric decay
+    continues, `E_∞ ≈ 1.55`", and "a spectral gap of the two-path correlation operator".
+    - The banded ladder in clock_duality's positive gauge gives ratios 0.70, 0.73, 0.80, 0.83, 0.90, 0.87 at
+      `d = 7..12`, and `E_10 = 1.528 < 1.55`.
+  - (ii) **Sampled maximum.** "`sup_d E_d(N)/N <= 8.33` at 320 sampled N" was offered for an absolute pointwise constant.
+    - The complete scan of every `N < 2^23` gives 10.06 at `N = 7910`.
+  - (iii) **Calibration slope.** "Logarithmic budgets with `b` of order `10^3`" certify the pole only in HYP-9283's
+    normalisation `a + b log_2(X/2^37)`.
+    - In the form `a + b log_2 X` used by HYP-9288 (B), the certified slopes are only `b <= 45.7` (2^37 certificate)
+      and `b <= 338` (2^40); see audit a7.
+    - "Beyond Krasikov-Lagarias" also dropped "along a sequence of scales".
+  - (iv) **Shell inequalities.** `Σ_N max_d Vroot_d^2` (maximum inside) was called a necessary condition for (B).
+    - (B) implies only the weaker uniform bound `sup_d Σ_N Vroot_d^2`, and the files called that weaker form a "maximal
+      inequality".
+  - (v) **Credit for γ_4-γ_6.** These were called new, but clock_duality certified `γ_4..γ_10` at 19:31.
+    - Also uncredited: the three-entry source update (clock_duality's equation (3)); the golden-contact
+      classification, which is G1 of marked_contacts_root_current_20261017e.md section 5 and not G5; and the
+      coordinate-sum additive CSP method (graded_tail_carrier_20261017b.md).
+    - The first checkpoint (20:07) was committed without reading clock_duality's 19:31 commit.
+  - (vi) **Scope errors repaired by clock_duality_oct15** in 6ffba57cd6/458c4b89d0 (their dated entry
+    "Codex ROOT-energy integration"; the referee confirmed every repair):
+    - the unrooted energy complement;
+    - primitive affine phases versus ordinary Syracuse offsets;
+    - INTRA + INTER;
+    - the Rudin-Shapiro normalisation;
+    - the scope of Doob's inequality.
+  - (vii) **Smaller overstatements.**
+    - Typing: the float64 ladder was called FINITE-EXACT, and "NUMERICAL" was used as a label; VERIFIED is the
+      repository label.
+    - "Cannot force at any size" for `v^2`; it holds only for these coefficient sets.
+    - "Five/six larger sources", which counted the unfinished contact2 run.
+    - The census counts for `e` and the products were given as 9.1e8 instead of 1.44e9.
+    - "E_6/N to three decimals" is agreement within 0.35%.
+    - INTRA "94-100%" is 91-100%.
+    - The participation ratio "1.0-1.3" is 1.0-1.8.
+    - "Octave-specific from d = 25" is from d = 15.
+    - "Late energy ROOT-dominated whenever the final current is large" was generalised from three rows.
+- **Repair / strongest survivor:**
+  - Every item is corrected in place, with credits added.
+  - The independent referee reproduced:
+    - the ledger and fibre structure (every seed below 4·10^6);
+    - the incremental scan (own code; 770 direct N; global maximum 10.0627 at N = 7910);
+    - the ideal ladder to `d = 12` (every printed digit);
+    - the Fourier form;
+    - the operator norms (truncations converge from below; explicit balanced inputs grow by 1.65-1.81);
+    - every six-colour count, including an independent float `v^2` census of 905,531,494 candidates.
+  - New evidence added after the audit: `l2` matching is exact except at ROOT, the dyadic boundary seed `3^d` and
+    `<= 3` small seeds for `d <= 10`.
+- **Evidence:** 04-computation/experiments/s41_audit_20261017/REPORT.md and its scripts a1-a14;
+  root_transport_energy_ladder_banded_20261017.out; root_transport_incremental_trace_22_20261017.out;
+  root_transport_l2_matching_deep_20261017.out.
+- **Lesson:**
+  - In a shared lane, fetch and read every concurrent commit before committing.
+  - Quote certified constants in the exact normalisation of the certificate.
+  - Report rates only once the ratios have visibly stabilised.
+  - When a complete scan is cheap, never let a sampled maximum stand in for the supremum.

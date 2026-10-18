@@ -46,3 +46,22 @@ reported as such.
 - R4 is conditional on the unproved budget; a positive lower bound would give `limsup log B(X)/log X >= 0.99999921`
   under that budget (THM-4659, THM-4660, HYP-9283), extending the S37 value 0.99821. It needs exact moments through
   `2^43`, which is why Run C recomputes `[2^40, 2^42)` with checksummed accumulators instead of resuming from Run B.
+
+## Outcome (recorded 2026-10-17 by opus-2026-10-17-S41, after Run C finished; evaluation unchanged)
+
+Run C finished with every integrity check passing (`collatz_census_dense_2p43_integrity_20261016.out`: monotone prefix
+sums, bounded increments and moments, moment total equal to `S`; 3072 grid points, 58,720,256 sub-blocks). The committed
+evaluation script returned ([json](collatz_census_2p43_evaluation_20261016.json), [out](collatz_census_2p43_evaluation_20261016.out)):
+
+| test | pre-registered | result | outcome |
+|---|---|---|---|
+| R1 | relative rms of M2 on `[2^42, 2^43)` at most 0.0035 | 0.000736 (residual `1.87 sqrt(N)`) | PASSED |
+| R2 | `e_X <= 2` at `X = 2^42` | `e_X = 0.4057` | PASSED |
+| R3 | residue modulus at `ρ*` in `[0.0098901, 0.0100899]` | 0.0099893 (`0.009925 + 0.001132i`) | PASSED |
+| R4 | positive Arb lower bound for `\|r\|` at `ρ*`, budget `(2, 0)`, `N = 2^43` | `\|r\| ∈ [0.000776, 0.0192]`, nonzero certified | PASSED |
+| R5 | exact replication of Run B on `[2^40, 2^42)` | 2048 grid values and 25,165,824 moment rows identical | PASSED |
+
+The R4 radius 0.0092 matches the pre-registered expectation (margin about 8%). Under the budget `(64, 16)` the interval
+is `[-0.0547, 0.0747]`, not certified. As pre-registered, R4 is CONDITIONAL on the unproved budget `E_X <= 2X^2` for
+dyadic `X >= 2^43`. Under it, the nonzero residue at `ρ*` gives `limsup log B(X)/log X >= 0.99999921`
+(THM-4659, THM-4660, HYP-9283), along a sequence of scales.
