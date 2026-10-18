@@ -296,6 +296,17 @@ Prime by prime (`nineteen_places.py`):
   - lags 11-13 give about `10^-3` in total.
 
   These matches are observed, not derived (FINITE-EXACT numerics).
+- **Synchronous dictionary (PROVED identity; FINITE-EXACT values).** Move every source one transport step at a time,
+  as in THM-4667. Two sources then share a node at step `d` for the first time exactly when their paths first meet `d`
+  steps above both, away from the ROOT self-loop. So `E_d - E_(d-1) = 2 Σ` over these equal-depth meet pairs.
+  Resolving by literal clock lag gives THM-4667's cross terms by lag (`sync_vs_meets.py`, `N = 2^20`; the left side
+  is computed directly and the two sides agree to every printed digit):
+  - `d = 1`: total -1.468735; lag 1: -1.4286 (= -10/7, siblings); lags 5, 6, 7: +0.0179, -0.0759, +0.0179;
+  - `d = 2`: total -0.812984; lag 0: -0.0935, lag 1: -0.6180, lag 2: -0.1371, lag 3: +0.0566;
+  - `d = 3`: total -0.438015; lag 0: -0.1329, lag 1: -0.2366, lag 2: -0.0819.
+
+  The first-arrival ledger of statement 4 is therefore THM-4667's synchronous ledger, resolved by clock, restricted to
+  meets before entry, plus the unequal-depth meets. The synchronous transport never sees the latter except at ROOT.
 - **Why the denominator is 7.** The chain residues have period 3 because `B^3(x) = 64x + 21 ≡ x + 3 (mod 9)`. These are
   the Solfeggio three-lift fibres (S42 L4). So the geometric sums run over `4^(-3k)`, and
   `Σ_k 4^(-3k) = 64/63 = 64/(9·7)`.

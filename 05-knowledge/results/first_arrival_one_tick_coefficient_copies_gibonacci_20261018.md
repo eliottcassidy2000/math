@@ -214,6 +214,15 @@ meeting node). A pair of sources first meets at a node `y`, `k_1` and `k_2` step
   exist, as the siblings' `-5/7` does at depth 1. Small-denominator fits such as `-89/288` at lag 1 are suggestive
   only; no derivation has been made.
 
+  **Equal-depth meets are THM-4667's synchronous cross terms, resolved by clock.** Moving all sources together, two
+  sources first share a node at step `d` exactly when they first meet `d` levels above both. So
+  `E_d - E_(d-1) = 2 Σ(d, d)` cells (`sync_vs_meets.py`, `N = 2^20`, agreement to every printed digit).
+  - `d = 1`: -1.4687 = -10/7 (lag 1) + 0.0179 - 0.0759 + 0.0179 (lags 5, 6, 7).
+  - `d = 2`: -0.8130, of which lag 1 is -0.618 and lag 0 is -0.094.
+  - `d = 3`: -0.4380, of which lag 1 is -0.237 and lag 0 is -0.133.
+
+  The one-tick law is the shallow part of THM-4667's dissipation; the same-clock part takes over with depth.
+
   An equal-depth, equal-clock pair has the same number of 3-divisions and the same total power of 2 on both paths. Such
   "clock twins" sit at the same scale, so their chain parameters are locked, as for the siblings in the 34/7 and 5/7
   derivation. This is why a residue-table computation per depth is the natural attack on (B1).
