@@ -1,0 +1,8 @@
+L_k(sl2), k = -2 + 3/4, mod 2147483647; singular vector expected at weight 8, charge 4
+  singular vectors at weight 8, charge 4: 1
+D=8: dimL=805 dimI=5 dimM=5 I==M:True  ker(pi)=0 {}  new generators {(0, -4): 1, (0, -2): 1, (0, 0): 1, (0, 2): 1, (0, 4): 1}  [2s]
+D=9: dimL=1464 dimI=15 dimM=15 I==M:True  ker(pi)=0 {}  new generators {}  [4s]
+D=10: dimL=2595 dimI=45 dimM=45 I==M:True  ker(pi)=0 {}  new generators {}  [11s]
+D=11: dimL=4489 dimI=110 dimM=110 I==M:True  ker(pi)=5 {(2, -4): 1, (2, -2): 1, (2, 0): 1, (2, 2): 1, (2, 4): 1}  new generators {(2, -4): 1, (2, -2): 1, (2, 0): 1, (2, 2): 1, (2, 4): 1}  [23s]
+D=12: dimL=7613 dimI=255 dimM=255 I==M:True  ker(pi)=15 {(3, -6): 1, (3, -4): 2, (3, -2): 3, (3, 0): 3, (3, 2): 3, (3, 4): 2, (3, 6): 1}  new generators {(3, -6): 1, (3, -4): 1, (3, -2): 2, (3, 0): 2, (3, 2): 2, (3, 4): 1, (3, 6): 1}  [90s]
+dim L: [1, 3, 9, 22, 51, 108, 221, 429, 805, 1464, 2595, 4489, 7613]

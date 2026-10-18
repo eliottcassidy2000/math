@@ -1,6 +1,6 @@
 ---
 id: THM-4672
-title: "L_{-1/2}(sl2) = (beta gamma)^{Z_2}, the chiral algebra of a free hypermultiplet with its central Z_2 gauged, is not classically free: ker(J_infty R_V -> gr_F V) vanishes below conformal weight 7 and is exactly 5-dimensional in weight 7 (one sl2 spin-2 multiplet in Li degree 2, polynomial degree 5); hence the Hilbert series of the arc space of Zhu's C_2-algebra exceeds the Schur index of this 4d N=2 theory from q^7 on (324 vs 319), and the stress tensor has nilpotency index 3 in R_V"
+title: "L_{-1/2}(sl2) = (beta gamma)^{Z_2}, the chiral algebra of a free hypermultiplet with its central Z_2 gauged, is not classically free: ker(J_infty R_V -> gr_F V) vanishes below conformal weight 7 and is exactly 5-dimensional in weight 7 (one sl2 spin-2 multiplet in Li degree 2, polynomial degree 5); hence the Hilbert series of the arc space of Zhu's C_2-algebra first exceeds the Schur index of this 4d N=2 theory at q^7 (324 vs 319; strict excess verified through q^8 exactly and q^14 mod p), and the stress tensor has nilpotency index 3 in R_V (exact)"
 status: >
   PROVED (exact computer-assisted computation over Q, from standard inputs).
   The computation is exact_sl2_certificate.py: rational mode arithmetic and flint fmpq_mat ranks, no modular
@@ -19,8 +19,12 @@ status: >
   The characters agree independently: the free-field Z_2-even character equals the KW character through weight 11.
   Mod-p confirmation: lie_voa_ss.py, two primes, through weight 14 (further non-arc generators at weight 8, spin 1,
   and weight 12, spin 2).
-  The nilpotency index 3 (Cas^2 not in grI, Cas^3 in grI) is FINITE-EXACT mod p (nilpotency_index.py). By the same
-  script, small N=4 at c = -9 has index 2, which reproduces Deb-Meneghelli-Rastelli 2025.
+  The nilpotency index 3 (Cas^2 not in I_0, Cas^3 in I_0) is EXACT. The independent audit checks it over Q:
+  dim (R_V)_6 = 13 = dim C[N]_6. nilpotency_index.py confirms it mod p, and the same script gives index 2 for small N=4 at
+  c = -9, which reproduces Deb-Meneghelli-Rastelli 2025.
+  Precedents for non-free orbifolds: Arakawa-Linshaw (arXiv:1804.01287) show H^{Z_2} is not classically free;
+  Linshaw-Song (arXiv:2109.09050, §1) list further non-free cosets.
+  Independent audit (MAJOR 0, MINOR items repaired): 04-computation/voa_singular_support/audit_20261018/REPORT.md.
 session: kind-pasteur-2026-10-18-S1
 source: 05-knowledge/results/singular_support_arc_spaces_classical_freeness_20261018.md
 scripts:
@@ -49,7 +53,8 @@ Then, exactly:
            + (2/3) e_2 f_0 h_0 - (4/3) h_2 f_0 e_0 + (2/3) f_2 h_0 e_0 ).
    ```
 3. In weight 8, `dim ker pi = 8`: spin 2 + spin 1 in Li degree 3, the spin-1 part being new minimal generators.
-4. Consequently, `HS(J_infty R_V)` and `char V` agree through `q^6` and differ at `q^7`:
+4. Consequently, `HS(J_infty R_V)` and `char V` agree through `q^6` and differ at `q^7`. Strict excess is verified
+   through `q^8` exactly and through `q^14` mod p; excess at every `n >= 7` is not proved here:
    `HS = 1, 3, 9, 22, 46, 93, 176, 324, 570, ...` versus `char V = 1, 3, 9, 22, 46, 93, 176, 319, 562, ...`.
 5. In `R_V` the Sugawara stress tensor `T ∝ Cas` satisfies `T^2 != 0 = T^3`.
 
@@ -57,19 +62,22 @@ Then, exactly:
 
 The 4d `N = 2` theory "free hypermultiplet with its central `Z_2 ⊂ Sp(1)` gauged" has:
 - Higgs branch `C^2/Z_2`;
-- Schur index `char V` (items 4 and 5 of the statement);
+- Schur index `char V` (item 4 of the statement);
 - nilpotency index 3.
 
 Three consequences:
 - **Not every 4d `N = 2` chiral algebra is classically free.** "Schur index = Hilbert series of the arc space of
   `R_V`" fails here.
-- **The 2025 theorem is false.** The general theorem of Andrews-Banerjee-Bhargava-Singh-Tao (arXiv:2507.06294v1,
-  §3.2.3: refined character = arc-space Hilbert series for every strongly finitely generated vertex algebra) fails
-  at its Schur limit. Ising (`Vir_(3,4)`, weight 9) is a second, non-4d counterexample (van Ekeren-Heluani;
+- **The 2025 theorem is false.** Theorem 3.1 of Andrews-Banerjee-Bhargava-Singh-Tao (arXiv:2507.06294v1, stated at
+  the start of §3 and proved in §3.2.3: refined character = arc-space Hilbert series for every strongly finitely
+  generated vertex algebra) fails at its Schur limit. The proof's enumeration of the sources of null vectors after
+  eq. (3.44) omits lifts of arc syzygies. Ising (`Vir_(3,4)`, weight 9) is a second, non-4d counterexample (van Ekeren-Heluani;
   THM-4671).
-- **Same Higgs branch, different chiral algebras.** 4d `N = 4` SU(2) SYM has the same Higgs branch `C^2/Z_2`, but its
-  chiral algebra (small `N = 4`, `c = -9`) has nilpotency index 2 and is classically free through weight 7 (FINITE-EXACT,
-  HYP-9293 source note). The singular support distinguishes the two theories; the Higgs branch does not.
+- **Same Higgs branch, different chiral algebras.** 4d `N = 4` SU(2) SYM has the same Higgs branch `C^2/Z_2`. Its
+  chiral algebra (small `N = 4`, `c = -9`) has nilpotency index 2 and is classically free through weight 9
+  (FINITE-EXACT; HYP-9296). The reduced Higgs branch does not distinguish the two theories. The non-reduced
+  associated scheme `X_V` already does (`T^2 = 0` versus `T^2 != 0`), and so does the singular support. The
+  `(A_1, D_(2n+1))` algebras `L_(-4n/(2n+1))(sl2)` give further chiral algebras on `C^2/Z_2` (HYP-9293).
 
 ## Mechanism
 

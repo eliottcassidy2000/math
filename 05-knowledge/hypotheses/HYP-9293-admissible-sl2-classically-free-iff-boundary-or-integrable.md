@@ -47,18 +47,23 @@ the exponent is always an integer because `a` and `b` are not both even.
 
 ## Why it is plausible (mechanism)
 
-- **Drinfeld-Sokolov parallel.** Reduction sends `L_(-2+a/b)(sl2)` to `Vir_(a,b)`, and THM-4671 shows that `Vir_(a,b)`
-  acquires its first non-arc relation exactly when `a >= 3`. Its coefficient carries the factors `(a-2)` and
-  `(b-1)`.
-- **Same shape.** In both families, the first correction sits three weight units above the singular vector, as a
+- **Drinfeld-Sokolov parallel, corrected after the independent audit (MISTAKE-630).**
+  - Reduction sends `L_(-2+a/b)(sl2)` to the minimal model `Vir_(min(a,b), max(a,b))`, which is symmetric in `a` and
+    `b`.
+  - THM-4671's transfer coefficient `A` is symmetric, with factors `(a-1)(a-2)(b-1)(b-2)`. So the Virasoro image is
+    non-free exactly when `min(a,b) >= 3`.
+  - The parallel with HYP-9293 holds only in that range.
+  - For `b = 2` (`k = -1/2, 1/2, 3/2`) the Virasoro images `Vir_(2,3)`, `Vir_(2,5)`, `Vir_(2,7)` are trivial or
+    classically free, yet `L_k(sl2)` is not.
+  - So HYP-9293 is not a consequence of THM-4671 under DS reduction, and the `sl2` criterion (`a >= 3`, `b >= 2`) is
+    genuinely different from the Virasoro one.
+- **Same shape.** In both families the first correction sits three weight units above the singular vector, as a
   quantum shadow of a first syzygy of the arc ideal.
-- **Caveat.** The `sl2` statement is not a corollary of THM-4671: DS reduction does not obviously commute with taking
-  singular supports, and for `(a, b) = (3, 2)` the reduction `Vir_(3,2)` is trivial while `L_(-1/2)` is not free.
 
 ## Physics reading
 
 - **Boundary levels: classically free.** `L_(-4n/(2n+1))(sl2)` is the chiral algebra of the `(A_1, D_(2n+1))`
-  Argyres-Douglas theory (`(A_1, D_3) = (A_1, A_3)`), and these levels are free. This supports the Schur limit of the
+  Argyres-Douglas theory (`(A_1, D_3) = (A_1, A_3)`). These levels are conjecturally free (free in the computed range). This supports the Schur limit of the
   Andrews-Banerjee-Bhargava-Singh-Tao (2025) arc-space formula for their Macdonald indices.
 - **`k = -1/2`: not free.** `L_(-1/2)(sl2) = (beta gamma)^(Z_2)` is the chiral algebra of a free hypermultiplet with
   its central `Z_2` gauged. It is not free, so the Schur index is not the arc-space Hilbert series of `R_V`; see

@@ -12,7 +12,8 @@
   algebras, Costello-Gwilliam, twists). It computes the **character** arrow: elliptic genera, Schur indices, MLDEs.
 - This note computes the **classical-limit** arrow. A chiral algebra has a canonical filtration (Li). Its associated
   graded is a coisson (Poisson vertex) algebra, whose spectrum, the singular support, embeds in the arc space
-  `Map(D, X_V)` of the associated scheme. In a 4d `N = 2` SCFT, `X_V` is the Higgs branch (as a scheme).
+  `Map(D, X_V)` of the associated scheme. In a 4d `N = 2` SCFT, the reduced associated variety `(X_V)_red` is
+  conjecturally the Higgs branch (Beem-Rastelli); `X_V` itself can be non-reduced (THM-4672).
 - The question everywhere is **classical freeness**: is the classical limit the whole arc space? Physically, the 2025
   proposal "Macdonald index = arc-space Hilbert series" needs exactly this; section 5 audits it.
 
@@ -77,9 +78,11 @@ This is the precise sense in which the first non-arc relation of `Vir_(p,q)` (TH
 | 3 | Andrews-Gordon `AG_3` | weight 9 = `2N+3`, dims 1,1,2,3,4,6,8,11,14,19,25,32 (w = 9..20) | weight 19 | equals `1/prod_(m=2)^5 (1-q^m)` through weight 18 |
 | 4 | `AG_4` | weight 11 = `2N+3`, dims 1,1,2,3,5,7,10,14,19,26,34,45,59,76 (w = 11..24) | weight 23 | equals the finite product through 22 |
 
-`H_2` first appears at `4N+7`, the first syzygy of syzygies.
+`H_2` first appears at weight `4N+7` for `N = 3, 4, 5`. For `N = 2` it first appears at 17 (independent audit). This is
+the first syzygy of syzygies.
 
-The minimal-model kernels sit inside `H_1` weight by weight:
+The minimal-model kernels satisfy the dimension inequality `dim ker pi_w <= dim H_1(w)` weight by weight. No map is
+constructed:
 - Ising (`N = 3`): `dim ker pi_w = 1,1,1,2,2,3,4,5,6,8,10,13` for `w = 9..20`, always `<= dim H_1(w)`.
 - `Vir_(3,5)` (`N = 4`): `1,1,1,2,3,4,5,7,9,12,15,19,24,31` for `w = 11..24`, always `<= dim H_1(w)`.
 - For the classically free models with the same `N` (`Vir_(2,7)`, `Vir_(2,9)`), the kernel is zero.
@@ -128,13 +131,17 @@ It is the image of the arc syzygy under the lift `u = L_(-2)L_(-1)v - N L_(-3)v`
 A = N(2N+1)(c - c_(2,2N+1))/8 = 3(p-1)(p-2)(q-1)(q-2)(p^2 q^2 - (p-q)^2)/(16pq),
 ```
 which vanishes exactly on the classically free series `p = 2`. The proof is a two-line degree count; see the theorem
-file. Twelve models were checked in exact rational arithmetic.
+file. Twelve models were checked in exact rational arithmetic, extended to 13 by the independent audit.
+
+**Credit (MISTAKE-630).** Andrews-van Ekeren-Heluani already give the lowest relation for every `Vir_(3,p')`, which is
+`(2(N-2)/3) b_N` mod `J`, and use the lift `u` for Ising. New here: `p >= 4`, the closed form of `A`, and the uniform
+proof.
 
 ### 3.2 Generators of `grI` as a differential ideal (FINITE-EXACT, HYP-9294)
 
 | model | `N` | generators (weight, degree) | computed to weight |
 |---|---|---|---|
-| (2,5) (2,7) (2,9) | 2,3,4 | `(2N, N)` only (classically free) | 16/30/30 |
+| (2,5) (2,7) (2,9) | 2,3,4 | `(2N, N)` only (classically free) | 30/30/30 (`(2,5)` to 30 by the independent audit) |
 | (3,4) Ising | 3 | (6,3) (9,3) | 38 |
 | (3,5) | 4 | (8,4) (11,4) (19,5) | 38 |
 | (3,7) | 6 | (12,6) (15,6) (21,7) (23,7) (31,8) | 32 |
@@ -158,6 +165,9 @@ What the table shows:
 - `Vir_(3,5)`, the first case beyond Ising, keeps exactly three generators through weight 38. This supports finite
   generation, HYP-9294(b).
 
+Caveat (independent audit): some generator printouts in `out/` (e.g. `vir_4_5_D32.txt`) show `(None)` coefficients
+where rational reconstruction failed. The generator counts are unaffected, but do not quote those representatives.
+
 ## 4. Affine `sl2` at admissible level (FINITE-EXACT, HYP-9293)
 
 The level is `k = -2 + a/b`. The singular vector has weight `D_0 = (a-1)b` and spin `a-1`, and its symbol is the
@@ -176,8 +186,9 @@ The level is `k = -2 + a/b`. The singular vector has weight `D_0 = (a-1)b` and s
 | 3/2 | 7/2 | non-boundary | **not free**: spin 6 at 15 (13 states). Pre-registered prediction, passed | 15 |
 
 **HYP-9293.** The admissible `L_k(sl2)` is classically free iff the level is boundary (`a = 2`) or integrable
-(`b = 1`). Otherwise the kernel starts with one spin-`(a-1)` multiplet at weight `D_0 + 3`, Li degree 2. This mirrors
-THM-4671 under Drinfeld-Sokolov reduction (`a <-> p`).
+(`b = 1`). Otherwise the kernel starts with one spin-`(a-1)` multiplet at weight `D_0 + 3`, Li degree 2. This is
+only a partial parallel to THM-4671 (MISTAKE-630). Drinfeld-Sokolov reduction gives `Vir_(min(a,b), max(a,b))`, which
+is non-free iff `min(a,b) >= 3`. For `b = 2` the Virasoro image is free while `L_k(sl2)` is not.
 
 Literature: boundary freeness is expected but unproved (AEH 2020; Adamović-Möller, Math. Z. 2026, Remark 6.3).
 Integrable freeness is proved (van Ekeren-Heluani). No source on non-boundary levels was found.
@@ -204,11 +215,13 @@ For a 4d `N = 2` SCFT `T` with chiral algebra `V_T` (Beem et al. 2015):
 | `(A_2, A_6)`, `(A_2, A_7)` AD | `W_3(3,10)`, `W_3(3,11)` | point | yes to weight 22 | — |
 | free hypermultiplet / `Z_2` | `L_(-1/2)(sl2) = (beta gamma)^(Z_2)` | `C^2/Z_2` | **no: first failure at weight 7** | **3** |
 
-**Finding.** The same Higgs branch `C^2/Z_2` carries two chiral algebras that the classical limit separates:
+**Finding.** The same Higgs branch `C^2/Z_2` carries two of the tabulated chiral algebras, which the classical limit
+separates. The `(A_1, D_(2n+1))` algebras give further ones. The non-reduced `X_V` already separates the two
+(`T^2 = 0` versus `T^2 != 0`):
 - **`N = 4` SU(2) SYM.** Its `C_2`-algebra has `T = Cas` with `T^2 = 0`, and it is classically free in the computed
   range.
-- **The `Z_2`-gauged free hypermultiplet.** Its `C_2`-algebra has `T = Cas` with `T^2 != 0 = T^3`. Its arc space
-  overcounts the Schur index from weight 7: the arc-space Hilbert series reads `1, 3, 9, 22, 46, 93, 176, 324, 570, 978`
+- **The `Z_2`-gauged free hypermultiplet.** Its `C_2`-algebra has `T = Cas` with `T^2 != 0 = T^3`. Its arc space first
+  overcounts the Schur index at weight 7. Strict excess is verified through weight 8 exactly and 14 mod p: the arc-space Hilbert series reads `1, 3, 9, 22, 46, 93, 176, 324, 570, 978`
   while the Schur index reads `1, 3, 9, 22, 46, 93, 176, 319, 562, 960`.
 
 The excess of 5 at weight 7 is one spin-2 multiplet of Li-degree-2 relations: the quantum images of arc syzygies, as in
@@ -225,8 +238,8 @@ failure.
 
 ### 5.1 Audit of arXiv:2507.06294v1, Section 3
 
-The paper states a Theorem (§3.2.3): for every strongly finitely generated vertex algebra, the unflavoured refined
-character equals the Hilbert series of the arc space of `V/C_2(V)`.
+The paper states Theorem 3.1 (stated at the start of §3, proved in §3.2.3): for every strongly finitely generated
+vertex algebra, the unflavoured refined character equals the Hilbert series of the arc space of `V/C_2(V)`.
 
 **As stated, it is false.** At `t = q` it would make every such `V` classically free at the level of characters.
 Two counterexamples:
@@ -235,8 +248,8 @@ Two counterexamples:
   van Ekeren-Heluani's theorem plus THM-4671.
 - **The 4d example, `L_(-1/2)(sl2)`.** Weight 7: 324 vs 319.
 
-**The gap.** Step 5 of their proof lists two sources of null states: top-degree images of singular vectors, and normal
-ordered products of them. It omits a third: lifts of arc-ideal syzygies, whose top parts cancel and leave lower-degree
+**The gap.** The proof enumerates, after eq. (3.44), two sources of null states: top-degree images of singular
+vectors, and normal ordered products of them. It omits a third: lifts of arc-ideal syzygies, whose top parts cancel and leave lower-degree
 relations outside the arc ideal. THM-4671 computes the first such relation in closed form.
 
 **What survives.** Their `(A_1, A_(2n))` statements, because these chiral algebras are classically free. Their
@@ -266,8 +279,9 @@ a nonlinear-bracket hook (`w3.py`):
 
 Three families now show the same pattern: `Vir` (`p = 2`, a theorem), admissible `sl2` (boundary or integrable,
 HYP-9293) and `W_3` (`p = 3`). The **boundary** models, which are exactly the chiral algebras of the Argyres-Douglas
-theories `(A_(N-1), A_(k-1))`, are classically free. The others fail at the first syzygy with a nonzero quantum
-transfer. HYP-9297 states this as a conjecture.
+theories `(A_(N-1), A_(k-1))`, are classically free in the computed ranges, and conjecturally in general. Only
+`Vir_(2,q)` and integrable `sl2` are theorems. The others fail at the first syzygy with a nonzero quantum transfer.
+HYP-9293 and HYP-9297 state this as a conjecture.
 
 Consequence: the Schur index of `(A_(N-1), A_(k-1))` should be the Hilbert series of the arc space of a fat point,
 generalizing Andrews-Gordon.
@@ -330,7 +344,8 @@ The `N = 2` superconformal algebra is a Lie superalgebra (`n2_sca.py`, 600/600 b
    - Next: SU(2) `N_f = 4` at weight 6, `g2`/`f4` Deligne levels, and a `W`-algebra engine for `(A_2, A_3)` and `N = 4`
      SU(3).
    - Compare the Li-bigraded character of `L_(-1/2)(sl2)` with the Macdonald index of the gauged free hypermultiplet,
-     the `Z_2`-even part of `prod (1 - T^(1/2) q^n y^(±1))^(-1)`.
+     the `Z_2`-even part of `prod (1 - T^(1/2) q^n y^(±1))^(-1)`. This uses the Gadde-Rastelli-Razamat-Yan `(q,t)`
+     convention, not Song's or ABBST's `T = t/q`.
 6. **Derived side.** Compute `H_1` of the Koszul complex of section 1.3 by weight, and test whether `ker pi` is always
    the image of `H_1` under a "quantum transfer" map. This would be a spectral-sequence formulation of classical
    freeness.

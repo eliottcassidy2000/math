@@ -1,0 +1,9 @@
+Vir(3,4) N=3: AEH b(p') in grI: True;  b(p') in J: False;  b(p') and b_N same class mod J: True
+Vir(3,5) N=4: AEH b(p') in grI: True;  b(p') in J: False;  b(p') and b_N same class mod J: True
+Vir(3,7) N=6: AEH b(p') in grI: True;  b(p') in J: False;  b(p') and b_N same class mod J: True
+Vir(3,8) N=7: AEH b(p') in grI: True;  b(p') in J: False;  b(p') and b_N same class mod J: True
+Vir(3,10) N=9: AEH b(p') in grI: True;  b(p') in J: False;  b(p') and b_N same class mod J: True
+Vir(3,11) N=10: AEH b(p') in grI: True;  b(p') in J: False;  b(p') and b_N same class mod J: True
+Ising: max PBW length of AEH combination (claimed in F^5, i.e. length <= 2): 2
+Ising: AEH combination == w - (64/429) u - (31/286) L_{-1}^3 v : True
+Ising: AEH right-hand side: {(6, 3): '27/8', (9,): '147/32', (7, 2): '87/4', (5, 4): '-45/16'}

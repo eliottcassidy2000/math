@@ -1,0 +1,25 @@
+super-Jacobi violations in 4000 random triples: 0
+Schur index coefficients (x = q^1/2): ['1', '0', '3', '-4', '9', '-12', '22', '-36', '60', '-88', '135', '-204', '302', '-432', '627', '-900']
+dim V_{w/2}: [(0.0, 1), (0.5, 0), (1.0, 3), (1.5, 4), (2.0, 10), (2.5, 16), (3.0, 32), (3.5, 56), (4.0, 99), (4.5, 164), (5.0, 277), (5.5, 456), (6.0, 737), (6.5, 1168), (7.0, 1845), (7.5, 2876)]
+dim L_{w/2}: [(0.0, 1), (0.5, 0), (1.0, 3), (1.5, 4), (2.0, 9), (2.5, 12), (3.0, 22), (3.5, 36), (4.0, 60), (4.5, 88), (5.0, 135), (5.5, 204), (6.0, 302), (6.5, 432), (7.0, 627), (7.5, 900)]
+matches Schur index (with (-1)^F): [True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]
+weight 0.5: dim I = 0, dim J = 0  [27s]
+weight 1.0: dim I = 0, dim J = 0  [27s]
+weight 1.5: dim I = 0, dim J = 0  [27s]
+weight 2.0: dim I = 1, dim J = 1  [27s]
+weight 2.5: dim I = 4, dim J = 4  [27s]
+weight 3.0: dim I = 10, dim J = 10  [27s]
+weight 3.5: dim I = 20, dim J = 20  [27s]
+weight 4.0: dim I = 39, dim J = 39  [27s]
+weight 4.5: dim I = 76, dim J = 76  [27s]
+weight 5.0: dim I = 142, dim J = 142  [27s]
+weight 5.5: dim I = 252, dim J = 252  [27s]
+weight 6.0: dim I = 435, dim J = 435  [28s]
+weight 6.5: dim I = 736, dim J = 736  [29s]
+weight 7.0: dim I = 1218, dim J = 1218  [33s]
+weight 7.5: dim I = 1976, dim J = 1976  [42s]
+classically free through weight 7.5 : True
+T in I_0 (i.e. zero in R_V): False
+T^2 in I_0 (i.e. zero in R_V): True
+T^3 in I_0 (i.e. zero in R_V): True
+time 42s

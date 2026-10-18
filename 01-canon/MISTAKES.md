@@ -18630,3 +18630,50 @@ the ambient space.
     realisability.
   - Say "determined mod p" when that is all a congruence determines.
   - Re-read the battery output before writing its summary sentence.
+
+## MISTAKE-630 (2026-10-18, kind-pasteur-2026-10-18-S1; independent S1 referee, audit_20261018) -- a published relation was claimed as new, a nonzero vector was called a singular vector, a "depends only on the C_2-algebra" remark was false, a Drinfeld-Sokolov parallel used the wrong criterion, and several statements outran their verification range
+
+- **Affected claims:**
+  - THM-4671 (status novelty paragraph, part-3 proof for p = 2, the Universality remark);
+  - THM-4672 (title "exceeds ... from q^7 on", typing of item 5, the arXiv:2507.06294 citation);
+  - HYP-9293 (Drinfeld-Sokolov paragraph);
+  - singular_support_arc_spaces_classical_freeness_20261018.md (intro, §1.3, §3.1, §4, §5, §5.1, §5a, §3.2 table).
+- **First failed implications:**
+  - (i) **Novelty.** Andrews-van Ekeren-Heluani (arXiv:2005.10769, §1.6 and §2.4) already give the lowest piece of
+    ker(pi) for every Vir_{3,p'}, namely b(p') == (2(N-2)/3) b_N mod J. They also use the lift u for Ising
+    (16A = 429, B = -17/48).
+    - The session's search read AEH's abstract and theorem list, not the section containing the general-p' lemma.
+  - (ii) **"u is the level-3 singular vector" for p = 2.** In fact u = B L_{-1}^3 v != 0. The singular vector is
+    u - B L_{-1}^3 v. The conclusion ker(pi) = 0 survives.
+  - (iii) **Universality.** "The 2-plane depends only on the C_2-algebra" is false.
+    - Vir_{4,5} and Vir_{2,13} share R_V = C[x]/(x^6) but have different grI in weight 15, degree 6.
+    - Correct: it depends only on N among models with p >= 3.
+  - (iv) **DS parallel.** HYP-9293 said DS sends L_{-2+a/b}(sl2) to Vir_{a,b} and that A carries factors
+    "(a-2) and (b-1)".
+    - DS gives Vir_{min(a,b), max(a,b)}; A is symmetric with (a-1)(a-2)(b-1)(b-2).
+    - The three b = 2 non-free levels have free Virasoro images, so the parallel holds only for min(a,b) >= 3.
+  - (v) **Range.**
+    - "Exceeds the Schur index from q^7 on" was verified only at q^7, q^8 exactly (q^14 mod p).
+    - "H_2 first appears at 4N+7" fails for N = 2 (weight 17).
+    - "Kernels sit inside H_1" was only a dimension inequality.
+    - "Boundary models are classically free" (§5a) was stated as fact; only Vir_{2,q} and integrable sl2 are
+      theorems.
+  - (vi) **Typing and citations.**
+    - THM-4672 item 5 is exact but was typed mod p.
+    - arXiv:2507.06294's result is Theorem 3.1. "Step 5" does not exist; the enumeration follows eq. (3.44).
+    - The note said X_V *is* the Higgs branch as a scheme, contradicting THM-4672's non-reduced R_V.
+- **Missing coordinates:**
+  - the body of a cited paper's lemmas, not only its abstract, when claiming that a family generalization is new;
+  - the actual vector computed in the degenerate case before naming it;
+  - the R_V-versus-(p,q) distinction for any "depends only on" claim;
+  - the symmetric form of a parameter law before importing it through a reduction functor;
+  - the verified range attached to every "from ... on" or "first appears at" statement.
+- **Survivors:**
+  - All mathematics: MAJOR 0.
+  - The independent code (exact over Q where claimed) reproduces:
+    - THM-4671 for 13 models;
+    - THM-4672 items 1-5 (item 5 exactly);
+    - §1.3's Euler characteristic, H_0 and H_1 onset;
+    - the HYP-9293 and HYP-9294 data and the N=4 row.
+- **Repairs:** all items above were applied in the same session. See
+  04-computation/voa_singular_support/audit_20261018/REPORT.md (10 MINOR, 14 NOTE).

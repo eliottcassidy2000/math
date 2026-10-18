@@ -13,10 +13,18 @@ status: >
   (first_correction_check.py); the mod-p singular-support engine finds a minimal non-arc generator at weight 2N+3 in
   every p >= 3 model scanned and none for p = 2 (vir_ss.py, tables in the source note).
   Scope: this is the FIRST layer of ker(pi) only. It does not describe higher generators, finite generation, or the
-  full singular support (see HYP-9294). Novelty: for N = 3 (Ising) the relation is Andrews-van Ekeren-Heluani's b
-  (2020) up to the arc ideal; the closed form of A(p,q), the universality of b_N in N, and the lift mechanism were
-  not found in van Ekeren-Heluani (2021), AEH (2020), Salazar (2024/26) or Arakawa-Linshaw (2019) (abstract/intro
-  level search, 2026-10-18). Novelty is unverified beyond that search.
+  full singular support (see HYP-9294).
+  Credit (corrected after the independent audit, MISTAKE-630). Andrews-van Ekeren-Heluani (arXiv:2005.10769, §1.6
+  and the second Lemma of §2.4) give the lowest piece of ker(pi) for every Vir_{3,p'}:
+  b(p') = (9-2p')/(3(p'-2)) L_{-5}L_{-2}^{p'-2} + L_{-4}L_{-3}L_{-2}^{p'-3}, which is (2(N-2)/3) b_N modulo J with
+  N = p'-1. They also use the lift u for Ising. New here:
+  - the same relation b_N for every model with p >= 4 and given N;
+  - the closed form of the transfer coefficient A and its factorization;
+  - a uniform proof.
+  Parts 2-3 (the dimension counts) also follow at once from van Ekeren-Heluani's classical freeness of
+  Vir_{2,2N+1} together with Rocha-Caridi.
+  Independent audit: 04-computation/voa_singular_support/audit_20261018/REPORT.md (MAJOR 0). The exact check is
+  extended to 13 models by independent code.
 session: kind-pasteur-2026-10-18-S1
 source: 05-knowledge/results/singular_support_arc_spaces_classical_freeness_20261018.md
 scripts:
@@ -59,7 +67,8 @@ B   = -(6N + c - 10)/24.
    of `b_N`.
 
 So `b_N` is a relation of `gr_F Vir_{p,q}` that is not in the arc ideal, and its normal form depends only on `N`. The
-model enters only through the scalar `A`, and `A` vanishes exactly on the boundary series `p = 2` (or `q = 2`).
+model enters only through the scalar `A`. `A` is symmetric in `p`, `q`, and for `2 <= p < q` it vanishes exactly
+on the boundary series `p = 2`.
 
 ## Proof
 
@@ -125,15 +134,24 @@ The arc ideal `J` in these weights is spanned by `f`, `d f`, `{d^2 f, x_0 f}` an
 So `grI = J` below weight `2N+3`, and in weight `2N+3`, `grI/J` is spanned by `sigma_N(u) == A b_N` modulo `J`.
 - For `p >= 3`, `A != 0`, and `b_N` is not a multiple of `d^3 f` (its `m_1` coefficient is 0). So `b_N` spans the
   one-dimensional `ker pi_(2N+3)`.
-- For `p = 2`, `A = 0`. Then `u` is the level-3 singular vector of the submodule (`2p-1 = 3`), and `ker pi_(2N+3) = 0`,
-  consistent with classical freeness (van Ekeren-Heluani). `□`
+- For `p = 2`, `A = 0`. Here `I_(2N+3) = span(L_(-1)^3 v, L_(-3) v)`, so the submodule has its singular vector at level
+  `2p-1 = 3`, and `I_(2N+3)` contains no nonzero element of length `< N`. Hence `u = B L_(-1)^3 v` in `V^c`. It is
+  `u - B L_(-1)^3 v` that vanishes, being the image of the level-3 singular vector
+  `(L_(-2)L_(-1) - N L_(-3) - B L_(-1)^3)|2N>` of `M(c, 2N)`. So `grI_(2N+3) = J_(2N+3)` and `ker pi_(2N+3) = 0`,
+  consistent with classical freeness (van Ekeren-Heluani).
+
+  (Corrected after the audit: an earlier version said that `u` itself is the singular vector; in fact
+  `u = B L_(-1)^3 v != 0`.) `□`
 
 ## Checks, boundary, consequences
 
 - **Ising (`N = 3`).** Andrews-van Ekeren-Heluani's generator `b = x_3 x_0^2/6 + x_2 x_1 x_0` equals
   `(1/108) d^3 f + (2/3) b_3`. So it is the same class.
-- **Universality.** The 2-plane `grI_(2N+3, N) = span(d^3 f, b_N)` is the same for every `c` with `A(N, c) != 0`. It
-  depends only on the `C_2`-algebra `C[x]/(x^N)`. The minimal model is recorded only by the scalar `A`.
+- **Universality.** The 2-plane `grI_(2N+3, N) = span(d^3 f, b_N)` is the same for every `c` with `A(N, c) != 0`.
+  It depends only on `N`, for every model with `p >= 3`. It is **not** determined by `R_V` alone: `Vir_(4,5)` and
+  `Vir_(2,13)` share `R_V = C[x]/(x^6)`, but the plane is `span(d^3 f, b_6)` for the first and only `span(d^3 f)` for
+  the second. (Corrected after the audit.)
+- **Symmetry.** `A` is symmetric in `p` and `q`. For `2 <= p < q` it vanishes iff `p = 2`.
 - **Mechanism.** The relation is the quantum shadow of the first syzygy of the arc ideal: an `H_1` class of the Koszul
   complex of `(d^n f)_n`. In derived terms, a class in `pi_1` of the derived arc space of the fat point. Classical
   freeness at weight `2N+3` is exactly the vanishing of its transfer coefficient `A`.

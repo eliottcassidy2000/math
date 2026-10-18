@@ -1,0 +1,7 @@
+L_k(sl2), k = -2 + 7/2, mod 2147483647; singular vector expected at weight 12, charge 12
+  singular vectors at weight 12, charge 12: 1
+D=12: dimL=0 dimI=13 dimM=-1 I==M:False  ker(pi)=0 {}  new generators {(0, -12): 1, (0, -10): 1, (0, -8): 1, (0, -6): 1, (0, -4): 1, (0, -2): 1, (0, 0): 1, (0, 2): 1, (0, 4): 1, (0, 6): 1, (0, 8): 1, (0, 10): 1, (0, 12): 1}  [42s]
+D=13: dimL=0 dimI=39 dimM=-1 I==M:False  ker(pi)=0 {}  new generators {}  [43s]
+D=14: dimL=0 dimI=117 dimM=-1 I==M:False  ker(pi)=0 {}  new generators {}  [50s]
+D=15: dimL=0 dimI=286 dimM=-1 I==M:False  ker(pi)=13 {(2, -12): 1, (2, -10): 1, (2, -8): 1, (2, -6): 1, (2, -4): 1, (2, -2): 1, (2, 0): 1, (2, 2): 1, (2, 4): 1, (2, 6): 1, (2, 8): 1, (2, 10): 1, (2, 12): 1}  new generators {(2, -12): 1, (2, -10): 1, (2, -8): 1, (2, -6): 1, (2, -4): 1, (2, -2): 1, (2, 0): 1, (2, 2): 1, (2, 4): 1, (2, 6): 1, (2, 8): 1, (2, 10): 1, (2, 12): 1}  [68s]
+dim L: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]

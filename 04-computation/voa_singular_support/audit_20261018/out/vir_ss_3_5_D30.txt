@@ -1,0 +1,5 @@
+Vir(3,5) N=4 mod 2147483647: dim V_D - dim I_D == Rocha-Caridi for D<=30: True
+minimal generators (weight, degree, multiplicity): [(8, 4, 1), (11, 4, 1), (19, 5, 1)]
+dim ker(pi)_D: [(11, 1), (12, 1), (13, 1), (14, 2), (15, 3), (16, 4), (17, 5), (18, 7), (19, 9), (20, 12), (21, 15), (22, 19), (23, 24), (24, 31), (25, 38), (26, 48), (27, 59), (28, 73), (29, 89), (30, 109)]
+first nonzero ker(pi) weight: 11  (2N+3 = 11 )
+time 23.2s

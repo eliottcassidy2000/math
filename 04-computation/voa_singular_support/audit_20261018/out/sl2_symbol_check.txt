@@ -1,0 +1,8 @@
+k=-2+3/2: singular space dim 1, #terms of v 6, symbol proportional to e^2 Cas^1: True
+k=-2+2/3: singular space dim 1, #terms of v 5, symbol proportional to e^1 Cas^1: True
+k=-2+3/4: singular space dim 1, #terms of v 94, symbol proportional to e^2 Cas^3: True
+k=-2+5/2: singular space dim 1, #terms of v 29, symbol proportional to e^4 Cas^2: True
+k=-2+4/3: singular space dim 1, #terms of v 105, symbol proportional to e^3 Cas^3: True
+k=-2+2/5: singular space dim 1, #terms of v 21, symbol proportional to e^1 Cas^2: True
+k=-2+3/5: singular space dim 1, #terms of v 298, symbol proportional to e^2 Cas^4: True
+k=-2+5/3: singular space dim 1, #terms of v 362, symbol proportional to e^4 Cas^4: True

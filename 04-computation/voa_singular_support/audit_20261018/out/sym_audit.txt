@@ -1,0 +1,13 @@
+alpha = -N*(8*N + c - 8)/12   claimed -N(8(N-1)+c)/12 : True
+5alpha+8beta = -3*N*(N - 1)/2
+B = -(6*N + c - 10)/24  claimed -(6N+c-10)/24 : True
+A = N*(12*N**2 + 2*N*c - 14*N + c + 2)/8  claimed N(2N+1)(c-c_{2,2N+1})/8 : True
+m3 residual (must be 0 identically): 0
+c_{2,2N+1} = -2*(N - 1)*(6*N - 1)/(2*N + 1)  claimed -(12N^2-14N+2)/(2N+1): True
+A(p,q) factored = 3*(p - 2)*(p - 1)*(q - 2)*(q - 1)*(p*q - p + q)*(p*q + p - q)/(16*p*q)
+claimed factorization equal: True
+p^2q^2-(p-q)^2 = (p*q - p + q)*(p*q + p - q)
+zeros of A for coprime 2<=p<q<=60 have p=2 only: True  count 29  p=2 count 29
+A symmetric in p<->q: True
+Ising: AEH b == d^3f/108 + (2/3) b_3 : True
+d^3 f formula (N=7): True

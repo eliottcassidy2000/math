@@ -1,0 +1,11 @@
+L_k(sl2), k = -2 + 2/5, mod 2147483647; singular vector expected at weight 5, charge 2
+  singular vectors at weight 5, charge 2: 1
+D=5: dimL=105 dimI=3 dimM=3 I==M:True  ker(pi)=0 {}  new generators {(0, -2): 1, (0, 0): 1, (0, 2): 1}  [0s]
+D=6: dimL=212 dimI=9 dimM=9 I==M:True  ker(pi)=0 {}  new generators {}  [0s]
+D=7: dimL=402 dimI=27 dimM=27 I==M:True  ker(pi)=0 {}  new generators {}  [0s]
+D=8: dimL=744 dimI=66 dimM=66 I==M:True  ker(pi)=0 {}  new generators {}  [1s]
+D=9: dimL=1326 dimI=153 dimM=153 I==M:True  ker(pi)=0 {}  new generators {}  [3s]
+D=10: dimL=2316 dimI=324 dimM=324 I==M:True  ker(pi)=0 {}  new generators {}  [9s]
+D=11: dimL=3936 dimI=663 dimM=663 I==M:True  ker(pi)=0 {}  new generators {}  [29s]
+D=12: dimL=6581 dimI=1287 dimM=1287 I==M:True  ker(pi)=0 {}  new generators {}  [76s]
+dim L: [1, 3, 9, 22, 51, 105, 212, 402, 744, 1326, 2316, 3936, 6581]
