@@ -201,3 +201,23 @@ Predictions, using the (B1') scan of P1 over 0 < |m| <= 10^4 (filter 7..43, conf
 - (P9b) Every survivor is an attractor point or a singular point. The singular points are {1, 9, 25} for
   Hulek-Verrill, {729} for ((3k)!/k!^3)^2, {256} for C(2k,k)^4 and {3125} for the quintic. Whether the singular
   points survive is not predicted.
+
+## Outcome of P9 (recorded after running weight3_attractor_scan.py; predictions above unchanged)
+
+- P9a PASSED. m = -7 survives for Hulek-Verrill, and m = -5832 survives for ((3k)!/k!^3)^2.
+- P9b PASSED. The (B1') survivors in 0 < |m| <= 10^4 are attractor points and singular points only:
+  - Hulek-Verrill: {-7, 1, 9, 25};
+  - ((3k)!/k!^3)^2: {-5832, 729};
+  - C(2k,k)^4: {256};
+  - quintic: {3125}.
+
+  Every singular point survives.
+- Defect valuations at ordinary primes (not pre-registered):
+  - m = -7: v = 2 at 37 of 41 primes (v = 3 at 4).
+  - m = -5832: v = 3 at all 42 primes except one with v = 4.
+  - These match the moduli Beukers conjectures at these points: p^2 (Conj. 1.27) and p^3 (Conj. 1.28).
+  - Conifolds: v = 2 for Hulek-Verrill at 1, 9 and 25; v = 3 at 729, 256 and 3125.
+  - Generic m = 5: v = 1.
+- Post hoc, not predicted. (B1'_ord) additionally passes m = -256 for C(2k,k)^4 (z = -1, the second fixed point of
+  the symmetry z <-> 1/z). Its non-ordinary primes (p <= 199) are exactly p == 3 (mod 4), where v = 1; elsewhere
+  v = 2. So it behaves like a point with CM by Q(i), and (B1') rejects it as it rejects weight-1 CM points.
