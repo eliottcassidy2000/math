@@ -158,3 +158,30 @@ Predictions, for the recurrence-defined U (integrality checked to n = 520):
   match j(tau_Q) for a reduced form with -4000 <= D < 0. Controls m = 3, 5, 11, 100 must fail.
 - (P8c) For 7 <= p <= 199, rad(F_p) | V, and the simple-root part of F_p divides 1 - 44x - 16x^2, the singular
   polynomial with m = 22 +- 10 sqrt5 (D = -20 expected there).
+
+## Outcome of P8 (recorded after running level5_leeyang_family.py; predictions above unchanged)
+
+Step 0 (relative errors < 3e-80):
+- (chi_0 chi_{-1/5})^6 = H;
+- j(tau) = (s^2+250s+3125)^3/s^5 and j(5tau) = (s^2+10s+5)^3/s;
+- sum_{n<400} U_n x^n = (5E_2(5tau)-E_2(tau))/4 at tau = 0.1+1.2i.
+
+- P8a PASSED. The (B1') survivors, the (B1'_ord) survivors and the density >= 0.3 set all coincide (0 < |m| <= 10^5):
+  {-15228, -828, -28, -3, 4, 18, 36, 72, 147}, with densities 0.47-0.54.
+- P8b PASSED. Every survivor is CM, with both roots matching a reduced form; controls m = 3, 5, 11, 100 match none.
+
+  | m | D | forms |
+  |---|---|---|
+  | -15228 | -235 | (5,5,13) / (1,-1,59) |
+  | -828 | -115 | (5,5,7) / (1,-1,29) |
+  | -28 | -35 | |
+  | -3 | -15 | |
+  | 4 | -11 | |
+  | 18 | -16 | |
+  | 36 | -19 | |
+  | 72 | -40 | |
+  | 147 | -60 | |
+
+- P8c PASSED. For every 7 <= p <= 199, rad(F_p) | V, and the simple-root part of F_p divides 1 - 44x - 16x^2.
+  Simple roots occur exactly at p = 11, 13, 17, 19, 31, 37, 53, 59, ...; these are the primes inert in Q(sqrt-5)
+  (spot-checked), consistent with D = -20 at m = 22 +- 10 sqrt5.

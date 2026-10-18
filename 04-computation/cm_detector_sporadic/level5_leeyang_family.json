@@ -1,0 +1,1093 @@
+{
+ "U_head": [
+  1,
+  6,
+  114,
+  2940,
+  87570,
+  2835756,
+  96982116,
+  3446781624,
+  126047377170,
+  4712189770860,
+  179275447715364,
+  6918537571788024
+ ],
+ "step0": {
+  "(chi0 chi-1/5)^6 = H": [
+   0.0,
+   7.666522933075702e-81,
+   1.1596700543866113e-80
+  ],
+  "j(tau) = (s^2+250s+3125)^3/s^5": [
+   1.9347502717926455e-81,
+   2.0438650249288904e-80,
+   2.1676397544205673e-81
+  ],
+  "j(5tau) = (s^2+10s+5)^3/s": [
+   5.151454744841665e-81,
+   1.8981292658687577e-80,
+   2.967070233268776e-81
+  ],
+  "sum U_n x^n = (5E2(5tau)-E2(tau))/4 at tau=0.1+1.2i": 1.6429713327217385e-83
+ },
+ "B1prime": [
+  -15228,
+  -828,
+  -28,
+  -3,
+  4,
+  18,
+  36,
+  72,
+  147
+ ],
+ "B1prime_ord": [
+  -15228,
+  -828,
+  -28,
+  -3,
+  4,
+  18,
+  36,
+  72,
+  147
+ ],
+ "density>=0.3": {
+  "-15228": 0.495,
+  "-828": 0.473,
+  "-28": 0.505,
+  "-3": 0.543,
+  "4": 0.522,
+  "18": 0.533,
+  "36": 0.511,
+  "72": 0.533,
+  "147": 0.538
+ },
+ "P8b": [
+  {
+   "m": -15228,
+   "CM": true,
+   "D": [
+    -235
+   ],
+   "forms": [
+    [
+     5,
+     5,
+     13
+    ],
+    [
+     1,
+     -1,
+     59
+    ]
+   ],
+   "roots": [
+    {
+     "s": "(-0.008196725717135244717789626 + 0.0j)",
+     "j(5tau)": "(-14512.814477410110565963454711 + 0.0j)",
+     "tau_reduced": "(-0.5 + 1.532970971675589165655368j)",
+     "matches": [
+      {
+       "form": [
+        5,
+        5,
+        13
+       ],
+       "D": -235,
+       "rel_err": 2.2023731231131638e-76,
+       "pass": true
+      }
+     ]
+    },
+    {
+     "s": "(-15249.99180327428286475528 + 0.0j)",
+     "j(5tau)": "(-823177419449425905487.18552259 + 0.0j)",
+     "tau_reduced": "(0.5 + 7.664854858377945828276841j)",
+     "matches": [
+      {
+       "form": [
+        1,
+        -1,
+        59
+       ],
+       "D": -235,
+       "rel_err": 4.535849913157425e-81,
+       "pass": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "m": -828,
+   "CM": true,
+   "D": [
+    -115
+   ],
+   "forms": [
+    [
+     5,
+     5,
+     7
+    ],
+    [
+     1,
+     -1,
+     29
+    ]
+   ],
+   "roots": [
+    {
+     "s": "(-0.1470842750399576822570029 + 0.0j)",
+     "j(5tau)": "(-304.37508465054527516180349051 + 0.0j)",
+     "tau_reduced": "(-0.5 + 1.072380529476360830481416j)",
+     "matches": [
+      {
+       "form": [
+        5,
+        5,
+        7
+       ],
+       "D": -115,
+       "rel_err": 8.813500160526454e-79,
+       "pass": true
+      }
+     ]
+    },
+    {
+     "s": "(-849.852915724960042317743 + 0.0j)",
+     "j(5tau)": "(-427864611225295.624915349454725 + 0.0j)",
+     "tau_reduced": "(0.5 + 5.36190264738180415240708j)",
+     "matches": [
+      {
+       "form": [
+        1,
+        -1,
+        29
+       ],
+       "D": -115,
+       "rel_err": 1.3870584821565398e-81,
+       "pass": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "m": -28,
+   "CM": true,
+   "D": [
+    -35
+   ],
+   "forms": [
+    [
+     3,
+     1,
+     3
+    ],
+    [
+     1,
+     -1,
+     9
+    ]
+   ],
+   "roots": [
+    {
+     "s": "(-2.639320225002103035908263 + 0.0j)",
+     "j(5tau)": "(1137.7668040525614083212354741 + 0.0j)",
+     "tau_reduced": "(-0.1666666666666666666666667 + 0.986013297183269340427888j)",
+     "matches": [
+      {
+       "form": [
+        3,
+        1,
+        3
+       ],
+       "D": -35,
+       "rel_err": 6.524168564264005e-81,
+       "pass": true
+      }
+     ]
+    },
+    {
+     "s": "(-47.36067977499789696409174 + 0.0j)",
+     "j(5tau)": "(-117965937.766804052561408321235 + 0.0j)",
+     "tau_reduced": "(0.5 + 2.958039891549808021283664j)",
+     "matches": [
+      {
+       "form": [
+        1,
+        -1,
+        9
+       ],
+       "D": -35,
+       "rel_err": 9.595650405537585e-81,
+       "pass": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "m": -3,
+   "CM": true,
+   "D": [
+    -15
+   ],
+   "forms": [
+    [
+     2,
+     1,
+     2
+    ],
+    [
+     1,
+     -1,
+     4
+    ]
+   ],
+   "roots": [
+    {
+     "s": "(-6.909830056250525758977066 + 0.0j)",
+     "j(5tau)": "(632.832862547207471353444821273 + 0.0j)",
+     "tau_reduced": "(-0.25 + 0.9682458365518542212948163j)",
+     "matches": [
+      {
+       "form": [
+        2,
+        1,
+        2
+       ],
+       "D": -15,
+       "rel_err": 1.569115010532841e-80,
+       "pass": true
+      }
+     ]
+    },
+    {
+     "s": "(-18.09016994374947424102293 + 0.0j)",
+     "j(5tau)": "(-191657.832862547207471353444821 + 0.0j)",
+     "tau_reduced": "(0.5 + 1.936491673103708442589633j)",
+     "matches": [
+      {
+       "form": [
+        1,
+        -1,
+        4
+       ],
+       "D": -15,
+       "rel_err": 1.4419313968154106e-81,
+       "pass": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "m": 4,
+   "CM": true,
+   "D": [
+    -11
+   ],
+   "forms": [
+    [
+     1,
+     -1,
+     3
+    ],
+    [
+     1,
+     1,
+     3
+    ]
+   ],
+   "roots": [
+    {
+     "s": "(-9.0 + 6.633249580710799698229865j)",
+     "j(5tau)": "(-32768.0 - 7.85584544726942905155788309473e-77j)",
+     "tau_reduced": "(0.5 + 1.658312395177699924557466j)",
+     "matches": [
+      {
+       "form": [
+        1,
+        -1,
+        3
+       ],
+       "D": -11,
+       "rel_err": 2.3979242109247664e-81,
+       "pass": true
+      }
+     ]
+    },
+    {
+     "s": "(-9.0 - 6.633249580710799698229865j)",
+     "j(5tau)": "(-32768.0 + 7.85584544726942905155788309473e-77j)",
+     "tau_reduced": "(-0.5 + 1.658312395177699924557466j)",
+     "matches": [
+      {
+       "form": [
+        1,
+        1,
+        3
+       ],
+       "D": -11,
+       "rel_err": 2.3979242109247664e-81,
+       "pass": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "m": 18,
+   "CM": true,
+   "D": [
+    -16
+   ],
+   "forms": [
+    [
+     1,
+     0,
+     4
+    ],
+    [
+     1,
+     0,
+     4
+    ]
+   ],
+   "roots": [
+    {
+     "s": "(-2.0 + 11.0j)",
+     "j(5tau)": "(287496.0 + 0.0j)",
+     "tau_reduced": "(-6.088504075805596097560881e-97 + 2.0j)",
+     "matches": [
+      {
+       "form": [
+        1,
+        0,
+        4
+       ],
+       "D": -16,
+       "rel_err": 0.0,
+       "pass": true
+      }
+     ]
+    },
+    {
+     "s": "(-2.0 - 11.0j)",
+     "j(5tau)": "(287496.0 + 0.0j)",
+     "tau_reduced": "(-6.088504075805596097560881e-97 + 2.0j)",
+     "matches": [
+      {
+       "form": [
+        1,
+        0,
+        4
+       ],
+       "D": -16,
+       "rel_err": 0.0,
+       "pass": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "m": 36,
+   "CM": true,
+   "D": [
+    -19
+   ],
+   "forms": [
+    [
+     1,
+     -1,
+     5
+    ],
+    [
+     1,
+     1,
+     5
+    ]
+   ],
+   "roots": [
+    {
+     "s": "(7.0 + 8.717797887081347104473964j)",
+     "j(5tau)": "(-884736.0 - 3.32302468534230241230801525169e-77j)",
+     "tau_reduced": "(0.5 + 2.179449471770336776118491j)",
+     "matches": [
+      {
+       "form": [
+        1,
+        -1,
+        5
+       ],
+       "D": -19,
+       "rel_err": 3.7485270120228795e-81,
+       "pass": true
+      }
+     ]
+    },
+    {
+     "s": "(7.0 - 8.717797887081347104473964j)",
+     "j(5tau)": "(-884736.0 + 3.32302468534230241230801525169e-77j)",
+     "tau_reduced": "(-0.5 + 2.179449471770336776118491j)",
+     "matches": [
+      {
+       "form": [
+        1,
+        1,
+        5
+       ],
+       "D": -19,
+       "rel_err": 3.7485270120228795e-81,
+       "pass": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "m": 72,
+   "CM": true,
+   "D": [
+    -40
+   ],
+   "forms": [
+    [
+     1,
+     0,
+     10
+    ],
+    [
+     2,
+     0,
+     5
+    ]
+   ],
+   "roots": [
+    {
+     "s": "(47.36067977499789696409174 + 0.0j)",
+     "j(5tau)": "(425671414.618789583674359469644 + 0.0j)",
+     "tau_reduced": "(-1.328896070647506977123167e-98 + 3.162277660168379331998894j)",
+     "matches": [
+      {
+       "form": [
+        1,
+        0,
+        10
+       ],
+       "D": -40,
+       "rel_err": 9.307318887115625e-81,
+       "pass": true
+      }
+     ]
+    },
+    {
+     "s": "(2.639320225002103035908263 + 0.0j)",
+     "j(5tau)": "(21385.3812104163256405303558141 + 0.0j)",
+     "tau_reduced": "(-2.622387326188302561272124e-96 + 1.581138830084189665999447j)",
+     "matches": [
+      {
+       "form": [
+        2,
+        0,
+        5
+       ],
+       "D": -40,
+       "rel_err": 6.46136234476884e-81,
+       "pass": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "m": 147,
+   "CM": true,
+   "D": [
+    -60
+   ],
+   "forms": [
+    [
+     1,
+     0,
+     15
+    ],
+    [
+     3,
+     0,
+     5
+    ]
+   ],
+   "roots": [
+    {
+     "s": "(123.9918693812442166512523 + 0.0j)",
+     "j(5tau)": "(37018072487.201825457517723016 + 0.0j)",
+     "tau_reduced": "(-2.176512986295776714321728e-95 + 3.872983346207416885179265j)",
+     "matches": [
+      {
+       "form": [
+        1,
+        0,
+        15
+       ],
+       "D": -60,
+       "rel_err": 9.78514381801755e-81,
+       "pass": true
+      }
+     ]
+    },
+    {
+     "s": "(1.008130618755783348747724 + 0.0j)",
+     "j(5tau)": "(4137.79817454248227698401190388 + 0.0j)",
+     "tau_reduced": "(-9.661741095253177613486032e-96 + 1.290994448735805628393088j)",
+     "matches": [
+      {
+       "form": [
+        3,
+        0,
+        5
+       ],
+       "D": -60,
+       "rel_err": 2.9219975134406086e-80,
+       "pass": true
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "P8b_controls": [
+  {
+   "m": 3,
+   "CM": false,
+   "D": [],
+   "forms": [
+    null,
+    null
+   ],
+   "roots": [
+    {
+     "s": "(-9.5 + 5.894913061275797984234592j)",
+     "j(5tau)": "(-20911.5 - 8753.94589599456000658836893538j)",
+     "tau_reduced": "(0.4388204089164571911572247 + 1.600849238493188671670991j)",
+     "matches": []
+    },
+    {
+     "s": "(-9.5 - 5.894913061275797984234592j)",
+     "j(5tau)": "(-20911.5 + 8753.94589599456000658836893538j)",
+     "tau_reduced": "(-0.4388204089164571911572247 + 1.600849238493188671670991j)",
+     "matches": []
+    }
+   ]
+  },
+  {
+   "m": 5,
+   "CM": false,
+   "D": [],
+   "forms": [
+    null,
+    null
+   ],
+   "roots": [
+    {
+     "s": "(-8.5 + 7.262919523166975034164379j)",
+     "j(5tau)": "(-41644.5 + 14634.7828391814546938412235293j)",
+     "tau_reduced": "(-0.4470809193643463508968525 + 1.704686719843748338188089j)",
+     "matches": []
+    },
+    {
+     "s": "(-8.5 - 7.262919523166975034164379j)",
+     "j(5tau)": "(-41644.5 - 14634.7828391814546938412235293j)",
+     "tau_reduced": "(0.4470809193643463508968525 + 1.704686719843748338188089j)",
+     "matches": []
+    }
+   ]
+  },
+  {
+   "m": 11,
+   "CM": false,
+   "D": [],
+   "forms": [
+    null,
+    null
+   ],
+   "roots": [
+    {
+     "s": "(-5.5 + 9.733961166965892513971996j)",
+     "j(5tau)": "(34876.5 + 131165.126724865401625772652122j)",
+     "tau_reduced": "(-0.2094832936520287272826546 + 1.880731283936288556510753j)",
+     "matches": []
+    },
+    {
+     "s": "(-5.5 - 9.733961166965892513971996j)",
+     "j(5tau)": "(34876.5 - 131165.126724865401625772652122j)",
+     "tau_reduced": "(0.2094832936520287272826546 + 1.880731283936288556510753j)",
+     "matches": []
+    }
+   ]
+  },
+  {
+   "m": 100,
+   "CM": false,
+   "D": [],
+   "forms": [
+    null,
+    null
+   ],
+   "roots": [
+    {
+     "s": "(76.36308338453880869694164 + 0.0j)",
+     "j(5tau)": "(3764772559.37977281319887732459 + 0.0j)",
+     "tau_reduced": "(-1.196647891297533306470932e-96 + 3.509199874204273806603737j)",
+     "matches": []
+    },
+    {
+     "s": "(1.636916615461191303058361 + 0.0j)",
+     "j(5tau)": "(8496.62022718680112267541215957 + 0.0j)",
+     "tau_reduced": "(-1.164640074700372987926838e-91 + 1.42482622228344047975004j)",
+     "matches": []
+    }
+   ]
+  }
+ ],
+ "P8c": {
+  "holds_all_p": true,
+  "per_p": {
+   "7": {
+    "deg F": 2,
+    "deg rad": 1,
+    "rad|V": true,
+    "all roots multiple": true,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 0
+   },
+   "11": {
+    "deg F": 4,
+    "deg rad": 3,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 2
+   },
+   "13": {
+    "deg F": 6,
+    "deg rad": 4,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 2
+   },
+   "17": {
+    "deg F": 8,
+    "deg rad": 5,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 2
+   },
+   "19": {
+    "deg F": 8,
+    "deg rad": 5,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 2
+   },
+   "23": {
+    "deg F": 10,
+    "deg rad": 5,
+    "rad|V": true,
+    "all roots multiple": true,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 0
+   },
+   "29": {
+    "deg F": 14,
+    "deg rad": 7,
+    "rad|V": true,
+    "all roots multiple": true,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 0
+   },
+   "31": {
+    "deg F": 14,
+    "deg rad": 8,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 2
+   },
+   "37": {
+    "deg F": 18,
+    "deg rad": 10,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 2
+   },
+   "41": {
+    "deg F": 20,
+    "deg rad": 10,
+    "rad|V": true,
+    "all roots multiple": true,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 0
+   },
+   "43": {
+    "deg F": 20,
+    "deg rad": 10,
+    "rad|V": true,
+    "all roots multiple": true,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 0
+   },
+   "47": {
+    "deg F": 22,
+    "deg rad": 11,
+    "rad|V": true,
+    "all roots multiple": true,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 0
+   },
+   "53": {
+    "deg F": 26,
+    "deg rad": 14,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 2
+   },
+   "59": {
+    "deg F": 28,
+    "deg rad": 15,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 2
+   },
+   "61": {
+    "deg F": 30,
+    "deg rad": 15,
+    "rad|V": true,
+    "all roots multiple": true,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 0
+   },
+   "67": {
+    "deg F": 32,
+    "deg rad": 16,
+    "rad|V": true,
+    "all roots multiple": true,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 0
+   },
+   "71": {
+    "deg F": 34,
+    "deg rad": 18,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 2
+   },
+   "73": {
+    "deg F": 36,
+    "deg rad": 19,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 2
+   },
+   "79": {
+    "deg F": 38,
+    "deg rad": 20,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 2
+   },
+   "83": {
+    "deg F": 40,
+    "deg rad": 20,
+    "rad|V": true,
+    "all roots multiple": true,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 0
+   },
+   "89": {
+    "deg F": 44,
+    "deg rad": 22,
+    "rad|V": true,
+    "all roots multiple": true,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 0
+   },
+   "97": {
+    "deg F": 48,
+    "deg rad": 25,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 2
+   },
+   "101": {
+    "deg F": 50,
+    "deg rad": 25,
+    "rad|V": true,
+    "all roots multiple": true,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 0
+   },
+   "103": {
+    "deg F": 50,
+    "deg rad": 25,
+    "rad|V": true,
+    "all roots multiple": true,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 0
+   },
+   "107": {
+    "deg F": 52,
+    "deg rad": 26,
+    "rad|V": true,
+    "all roots multiple": true,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 0
+   },
+   "109": {
+    "deg F": 54,
+    "deg rad": 27,
+    "rad|V": true,
+    "all roots multiple": true,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 0
+   },
+   "113": {
+    "deg F": 56,
+    "deg rad": 29,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 2
+   },
+   "127": {
+    "deg F": 62,
+    "deg rad": 31,
+    "rad|V": true,
+    "all roots multiple": true,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 0
+   },
+   "131": {
+    "deg F": 64,
+    "deg rad": 33,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 2
+   },
+   "137": {
+    "deg F": 68,
+    "deg rad": 35,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 2
+   },
+   "139": {
+    "deg F": 68,
+    "deg rad": 35,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 2
+   },
+   "149": {
+    "deg F": 74,
+    "deg rad": 37,
+    "rad|V": true,
+    "all roots multiple": true,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 0
+   },
+   "151": {
+    "deg F": 74,
+    "deg rad": 38,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 2
+   },
+   "157": {
+    "deg F": 78,
+    "deg rad": 40,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 2
+   },
+   "163": {
+    "deg F": 80,
+    "deg rad": 40,
+    "rad|V": true,
+    "all roots multiple": true,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 0
+   },
+   "167": {
+    "deg F": 82,
+    "deg rad": 41,
+    "rad|V": true,
+    "all roots multiple": true,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 0
+   },
+   "173": {
+    "deg F": 86,
+    "deg rad": 44,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 2
+   },
+   "179": {
+    "deg F": 88,
+    "deg rad": 45,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 2
+   },
+   "181": {
+    "deg F": 90,
+    "deg rad": 45,
+    "rad|V": true,
+    "all roots multiple": true,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 0
+   },
+   "191": {
+    "deg F": 94,
+    "deg rad": 48,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 2
+   },
+   "193": {
+    "deg F": 96,
+    "deg rad": 49,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 2
+   },
+   "197": {
+    "deg F": 98,
+    "deg rad": 50,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 2
+   },
+   "199": {
+    "deg F": 98,
+    "deg rad": 50,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false,
+    "simple part | 1-44x-16x^2": true,
+    "deg simple part": 2
+   }
+  }
+ }
+}
