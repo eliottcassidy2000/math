@@ -95,7 +95,8 @@ related:
    - **Anatomy (`d <= 5`).** The cross terms concentrate at lag 1, which by statement 8 is the sibling pair.
 7. **(Checks, FINITE-EXACT / VERIFIED.)**
    - *Every `N < 2^23`* (incremental algorithm, 120,409,136 tree nodes; `R(N) = H(4N) - H(N)` verified at every `N`):
-     - **Octave traces.** For every octave `X = 2^2, ..., 2^22` the trace `T_d(X)/X^2` attains its maximum at `d = 0`
+     - **Octave traces.** For every octave `X = 2^2, ..., 2^22`, and `2^23` from the extended run to `N < 2^24`
+       (240,950,362 nodes, invariant checked at every `N`), the trace `T_d(X)/X^2` attains its maximum at `d = 0`
        (`T_0/X^2 -> 51/7`) and ends at `D_X/X^2`. At `X = 2`, `T_5 = 4 > T_0 = 2`.
      - **Pointwise.** `max_N sup_d E_d(N)/N = 10.06`, at `N = 7910`, where `R^2/N = 9.08`. In the octaves
        `2^18..2^21` every profile peaks at `d = 0`.

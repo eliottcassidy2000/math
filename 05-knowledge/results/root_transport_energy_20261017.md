@@ -183,12 +183,14 @@ point masses. So all depths can be maintained at once, by walking one path of th
 (`root_transport_incremental_trace_20261017.py`). The cost for every `N < 2^23` is 161 s, with 120,409,136 tree nodes.
 `R(N) = H(4N) - H(N)` was checked at every `N`.
 
-- **Octave traces** `T_d(X) = Σ_(X <= N < 2X) E_d(N)`, for every octave `X = 2^2, ..., 2^22`:
+- **Octave traces** `T_d(X) = Σ_(X <= N < 2X) E_d(N)`, for every octave `X = 2^2, ..., 2^22` (and `2^23`, from the
+  run to `N < 2^24`: 240,950,362 nodes, 219 s, invariant checked at every `N`):
   - the maximum over `d` is at `d = 0`, with `T_0/X^2 -> 51/7 = 7.2857`;
   - the final value equals `D_X/X^2`;
   - the only exception is `X = 2`, where `T_5 = 4 > T_0 = 2`.
-- **Final values `D_X/X^2`.** For `2^9..2^22`: 1.02, 1.06, 1.95, 3.98, 2.95, 0.66, 2.04, 0.78, 0.99, 1.60, 0.84, 0.21,
-  0.23, 4.54. The closest approach to `T_0` is `2^22`, at 0.62 of it.
+- **Final values `D_X/X^2`.** For `2^9..2^23`: 1.02, 1.06, 1.95, 3.98, 2.95, 0.66, 2.04, 0.78, 0.99, 1.60, 0.84, 0.21,
+  0.23, 4.54, 1.51. The closest approach to `T_0` is `2^22`, at 0.62 of it.
+  - In octave `2^23` every profile again peaks at `d = 0`, and the shell maximal sum is `2.11 X^2`.
 - **Profile.** The octave profile per `N` is universal in the ideal regime:
 
   | d | 0 | 3 | 6 | 10 | 15 |
@@ -197,7 +199,7 @@ point masses. So all depths can be maintained at once, by walking one path of th
 
   From about `d = 15` it becomes octave-specific (1.39-1.54 across octaves at `d = 15`).
 - **Pointwise.**
-  - `max_(N < 2^23) sup_d E_d(N)/N = 10.06`, at `N = 7910`. There `R^2/N = 9.08`, which is also the largest
+  - `max_(N < 2^24) sup_d E_d(N)/N = 10.06`, at `N = 7910`. There `R^2/N = 9.08`, which is also the largest
     `R(N)^2/N` for `2^10 <= N < 2^23`.
   - In the octaves `2^18..2^21` (3.9 million values of `N`) every energy profile has its maximum at `d = 0`.
   - The octaves with large current energy have a share of `N` whose energy climbs above `E_0` at some depth: `2^12`

@@ -6,7 +6,7 @@ status: >
   of the same type for the census energy (THM-4658). Hence the Mercator pole of HYP-9283(B) and
   limsup log B(X)/log X >= 0.99821 along a sequence of scales (beyond Krasikov-Lagarias). In the form
   a + b log_2 X only b <= 45.7 (2^37) or b <= 338 (2^40) is certified (S41 audit a7). Evidence (FINITE-EXACT, THM-4667 statement 7): strong form (B') holds for every octave
-  X = 2^2..2^22 (exception X = 2); the pointwise ratio sup_d E_d(N)/N is at most 10.06 for every N < 2^23 (at N = 7910);
+  X = 2^2..2^23 (exception X = 2); the pointwise ratio sup_d E_d(N)/N is at most 10.06 for every N < 2^24 (at N = 7910);
   (C) holds for d <= 12, with cross-term ratios rising to 0.83-0.90 (slower than geometric). REVISED 2026-10-17 before any test of the revised forms: the first draft asked for an absolute
   pointwise constant (8.33 from 320 sampled N). The complete scan gives 10.06, and the random-merge model predicts
   log log growth of sup_N R(N)^2/N, so the pointwise form now carries a logarithmic factor.
@@ -69,10 +69,10 @@ for the calibration, provided the budget is written as in HYP-9283(B), `a + b lo
 
 ## Evidence
 
-| octave `X` | `2^9` | `2^10` | `2^11` | `2^12` | `2^13` | `2^14` | `2^15` | `2^16` | `2^17` | `2^18` | `2^19` | `2^20` | `2^21` | `2^22` |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `D_X/X^2` (= final `T`) | 1.02 | 1.06 | 1.95 | 3.98 | 2.95 | 0.66 | 2.04 | 0.78 | 0.99 | 1.60 | 0.84 | 0.21 | 0.23 | 4.54 |
-| `max_N sup_d E_d/N` | 6.41 | 4.87 | 5.82 | 10.06 | 9.76 | 5.48 | 6.25 | 4.89 | 5.74 | 4.86 | 4.86 | 4.86 | 4.86 | 6.27 |
+| octave `X` | `2^9` | `2^10` | `2^11` | `2^12` | `2^13` | `2^14` | `2^15` | `2^16` | `2^17` | `2^18` | `2^19` | `2^20` | `2^21` | `2^22` | `2^23` |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `D_X/X^2` (= final `T`) | 1.02 | 1.06 | 1.95 | 3.98 | 2.95 | 0.66 | 2.04 | 0.78 | 0.99 | 1.60 | 0.84 | 0.21 | 0.23 | 4.54 | 1.51 |
+| `max_N sup_d E_d/N` | 6.41 | 4.87 | 5.82 | 10.06 | 9.76 | 5.48 | 6.25 | 4.89 | 5.74 | 4.86 | 4.86 | 4.86 | 4.86 | 6.27 | 4.86 |
 
 - In every octave the trace maximum is `T_0/X^2 ≈ 7.2857`, at `d = 0`.
 - The largest final value relative to `T_0` is 0.62, at `X = 2^22`.
