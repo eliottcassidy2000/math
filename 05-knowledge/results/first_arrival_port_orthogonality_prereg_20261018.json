@@ -1,0 +1,14 @@
+{
+  "session": "mac-mini-2026-10-18-sixcolour",
+  "written": "2026-10-18, before the scan of 2^23 <= N < 2^26",
+  "object": "stopped signed ROOT transport on clock_duality_oct15's certified forward-closed frontiers V_1000 (627 seeds) and V_100 (74 seeds); E_V = frozen energy; E_port = frozen energy on the forward-closed one-step enlargement V u P^-1(V) (port-diagonal energy); cross-port term X(N) = E_V(N) - E_port(N) = 2 * sum over frontier merges of distinct first-arrival ports",
+  "evidence_before": "fap.c on every N < 2^23: octave maxima of |X|/N on V_1000 = 0.510, 0.363, 0.317, 0.304, 0.176, 0.202, 0.139, 0.169, 0.076, 0.104, 0.067 (octaves 2^12..2^22); on V_100 0.20-0.43",
+  "predictions": {
+    "Q1": "V_1000: in each of the octaves 2^23, 2^24, 2^25 the maximum of |X(N)|/N is <= 0.10",
+    "Q2": "V_1000: the mean of the three octave maxima of |X|/N over 2^23..2^25 is < 0.08 (continued decay)",
+    "Q3": "V_1000: the octave maxima of E_V/N stay <= 2.5 (consistent with HYP-9290 P11)",
+    "Q4": "V_100: in each of the octaves 2^23, 2^24, 2^25 the maximum of |X(N)|/N is <= 0.35",
+    "Q5": "V_1000: the octave means of X/N lie in [-0.06, +0.06]"
+  },
+  "command": "04-computation/experiments/first_arrival_20261018/fap V_closed_Y1000.txt 25 ; fap V_closed_Y100.txt 25"
+}

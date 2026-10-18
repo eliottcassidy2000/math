@@ -1,0 +1,3 @@
+# clock_duality R6 certified forward-closed frontier from height Y=3: 2 seeds, max 3, max rank 1
+1 0
+3 1
