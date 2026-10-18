@@ -1,0 +1,51 @@
+Y = 100 [19 s]
+   Y: 100
+   samples: 61440
+   F_Y: 38
+   F_eff: 12.248149785731119
+   model_mean: 1.2410651684778728
+   model_sd: 0.5015039296374529
+   observed_mean: 1.2410651684778733
+   observed_sd: 0.3150092445372906
+   observed_max: 2.6166849245598223
+   top90: 19
+   kurtosis_raw_pooled: 2.0740225746300283
+   kurtosis_centred_pooled: 2.4018161836178678
+   raw_4th_moment_of_gaussians_with_observed_means: 2.7428313944505978
+   var_E: 0.09923082414395455
+   diag_sum_var_zsq: 0.11227096049770421
+   offdiag_sum_cov_zsq: -0.013040136353749662
+   model_sd_gaussian_with_observed_means: 0.46952625469265585
+   mean_abs_corr: 0.42252427552932326
+   max_abs_corr: 0.9064691439908007
+   frac_positive_corr: 0.5614035087719298
+   max_abs_normalised_mean: 0.8364182513749708
+   octave_means: {24: 1.164825097776409, 25: 1.6894667181426315, 26: 1.0339590104220415, 27: 1.242047868927282}
+   lag1_autocorr_E: 0.9998379131839807
+   max_minus_mean_over_sd: 4.366918685521637
+Y = 1000 [17 s]
+   Y: 1000
+   samples: 15360
+   F_Y: 375
+   F_eff: 113.87687759325802
+   model_mean: 1.1498935174380391
+   model_sd: 0.152389431235329
+   observed_mean: 1.149893517438039
+   observed_sd: 0.08747872509319131
+   observed_max: 1.4448167041616793
+   top90: 205
+   kurtosis_raw_pooled: 2.252226585346803
+   kurtosis_centred_pooled: 2.75114838102791
+   raw_4th_moment_of_gaussians_with_observed_means: 2.6725797999737275
+   var_E: 0.00765252734393014
+   diag_sum_var_zsq: 0.009122895209889098
+   offdiag_sum_cov_zsq: -0.0014703678659589584
+   model_sd_gaussian_with_observed_means: 0.1346554954958698
+   mean_abs_corr: 0.37485564547192884
+   max_abs_corr: 0.9457399730968379
+   frac_positive_corr: 0.49564801530368247
+   max_abs_normalised_mean: 0.9503569711748963
+   octave_means: {24: 1.0380564927487854, 25: 1.280915697049028, 26: 1.2135544362090898, 27: 1.0992871412359233}
+   lag1_autocorr_E: 0.9991613706267256
+   max_minus_mean_over_sd: 3.371370426460353
+exit 0

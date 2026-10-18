@@ -1,0 +1,86 @@
+{
+ "sandbox_reruns": {
+  "coupled_base_base": {
+   "rerun": {
+    "A": 54,
+    "C": 10,
+    "edges_A": 146,
+    "edges_C": 15,
+    "directions": 22,
+    "v_contact": 112,
+    "reflected": 16,
+    "e2_contact": 84
+   },
+   "blocked": {
+    "shared": 0,
+    "independent": 0
+   },
+   "identical_to_committed": true
+  },
+  "coupled_base_MM": {
+   "rerun": {
+    "A": 54,
+    "C": 29,
+    "edges_A": 146,
+    "edges_C": 73,
+    "directions": 22,
+    "v_contact": 2072,
+    "reflected": 296,
+    "e2_contact": 224
+   },
+   "blocked": {
+    "shared": 0,
+    "independent": 0
+   },
+   "identical_to_committed": true
+  },
+  "reflection_C": {
+   "W": 10,
+   "edges_W": 15,
+   "reflected": 16,
+   "blocked": {
+    "shared": 0,
+    "independent": 0
+   },
+   "identical_to_committed": true,
+   "difference_sets_identical": true
+  },
+  "reflection_Cd": {
+   "W": 211,
+   "edges_W": 468,
+   "reflected": 1900,
+   "blocked": {
+    "shared": 0,
+    "independent": 0
+   },
+   "identical_to_committed": true,
+   "difference_sets_identical": true
+  }
+ },
+ "independent_base_base": {
+  "families": {
+   "v": 112,
+   "reflected": 16,
+   "e2": 84
+  },
+  "results": {
+   "shared": {
+    "clauses": 1651005,
+    "blocked": 0,
+    "models_checked": 20,
+    "all_checked_models_valid": true
+   },
+   "independent": {
+    "clauses": 1651256,
+    "blocked": 0,
+    "models_checked": 20,
+    "all_checked_models_valid": true
+   }
+  }
+ },
+ "two_distance_control": {
+  "unit_edges": 146,
+  "d_step_edges": 35,
+  "blocked": 465
+ }
+}

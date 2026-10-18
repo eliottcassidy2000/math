@@ -1,0 +1,19 @@
+Y = 30: 4160 N checked (all N < 4096 + 65 random/special N < 2^20 + 1): E mismatches 0, R(session) vs brute 0, brute R vs direct H(4N)-H(N) 0, a not in {1,2}: 0 [34 s]
+   octave 2^8: brute max 1.3855 (N=511) mean 0.7153 min 0.3276 | big-script max 1.3855 (N=511) mean 0.7153 min 0.3276 | agree True
+   octave 2^9: brute max 3.9903 (N=619) mean 1.7189 min 0.4525 | big-script max 3.9903 (N=619) mean 1.7189 min 0.4525 | agree True
+   octave 2^10: brute max 2.2070 (N=1633) mean 1.2007 min 0.4117 | big-script max 2.2070 (N=1633) mean 1.2007 min 0.4117 | agree True
+   octave 2^11: brute max 1.3156 (N=2852) mean 0.7196 min 0.2189 | big-script max 1.3156 (N=2852) mean 0.7196 min 0.2189 | agree True
+   E_Y/N at N = 4155, 4351, 7910, 66463, 2^20: 1.1143, 1.3491, 2.4005, 1.2454, 1.1351
+Y = 100: 4160 N checked (all N < 4096 + 65 random/special N < 2^20 + 1): E mismatches 0, R(session) vs brute 0, brute R vs direct H(4N)-H(N) 0, a not in {1,2}: 0 [62 s]
+   octave 2^8: brute max 2.7945 (N=506) mean 2.0225 min 1.3837 | big-script max 2.7945 (N=506) mean 2.0225 min 1.3837 | agree True
+   octave 2^9: brute max 2.9283 (N=530) mean 1.7270 min 1.0747 | big-script max 2.9283 (N=530) mean 1.7270 min 1.0747 | agree True
+   octave 2^10: brute max 2.0750 (N=1226) mean 1.6417 min 1.2904 | big-script max 2.0750 (N=1226) mean 1.6417 min 1.2904 | agree True
+   octave 2^11: brute max 2.2602 (N=3959) mean 1.4186 min 1.0398 | big-script max 2.2602 (N=3959) mean 1.4186 min 1.0398 | agree True
+   E_Y/N at N = 4155, 4351, 7910, 66463, 2^20: 2.0924, 2.3549, 1.7833, 1.2934, 1.2235
+Y = 1000: 4160 N checked (all N < 4096 + 65 random/special N < 2^20 + 1): E mismatches 0, R(session) vs brute 0, brute R vs direct H(4N)-H(N) 0, a not in {1,2}: 0 [88 s]
+   octave 2^8: brute max 4.9435 (N=301) mean 4.7702 min 4.5299 | big-script max 4.9435 (N=301) mean 4.7702 min 4.5299 | agree True
+   octave 2^9: brute max 4.5709 (N=515) mean 3.7552 min 3.2099 | big-script max 4.5709 (N=515) mean 3.7552 min 3.2099 | agree True
+   octave 2^10: brute max 3.2887 (N=1060) mean 2.9136 min 2.5660 | big-script max 3.2887 (N=1060) mean 2.9136 min 2.5660 | agree True
+   octave 2^11: brute max 2.6802 (N=2073) mean 2.2828 min 2.0350 | big-script max 2.6802 (N=2073) mean 2.2828 min 2.0350 | agree True
+   E_Y/N at N = 4155, 4351, 7910, 66463, 2^20: 2.0775, 2.0142, 1.9155, 1.2477, 1.3739
+N = 1: Y=1: E=4 R=-2, Y=2: E=4 R=-2, Y=3: E=10 R=-2, Y=10: E=10 R=-2, Y=100: E=10 R=-2

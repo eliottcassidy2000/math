@@ -1,0 +1,17 @@
+[    0 s] A base |A| = 54 (146 edges); C base |C| = 10 (15 edges); unit directions 22; patterns: v-contact 112, reflected 16, e^2 84
+[    0 s] additive pre-screen (shared coefficient colourings): 13797 clauses; blocked 0 of 570 patterns [0 s]
+[    0 s] additive pre-screen (independent coefficient colourings): 14480 clauses; blocked 0 of 570 patterns [0 s]
+[    0 s] A base |A| = 54 (146 edges); C MM |C| = 29 (73 edges); unit directions 22; patterns: v-contact 2072, reflected 296, e^2 224
+[    1 s] additive pre-screen (shared coefficient colourings): 102153 clauses; blocked 0 of 570 patterns [0 s]
+[    1 s] additive pre-screen (independent coefficient colourings): 104208 clauses; blocked 0 of 570 patterns [0 s]
+[    1 s] W C: |W| = 10 with 15 unit edges; |A| 54 (146 edges), |C| 10 (15 edges); v-contact 112, reflected 16; conj(d)q-pairs in W per direction: min 0 max 1
+[    1 s] additive pre-screen (shared): blocked 0 of 570; sizes of conj(d)q-difference sets in one W-colouring: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+[    1 s] additive pre-screen (independent): blocked 0 of 570; sizes of conj(d)q-difference sets in one W-colouring: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+[    1 s] W Cd: |W| = 211 with 468 unit edges; |A| 54 (146 edges), |C| 10 (15 edges); v-contact 112, reflected 1900; conj(d)q-pairs in W per direction: min 20 max 56
+[    2 s] additive pre-screen (shared): blocked 0 of 570; sizes of conj(d)q-difference sets in one W-colouring: [1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5]
+[    2 s] additive pre-screen (independent): blocked 0 of 570; sizes of conj(d)q-difference sets in one W-colouring: [1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5]
+sandbox re-runs: {"coupled_base_base": {"rerun": {"A": 54, "C": 10, "edges_A": 146, "edges_C": 15, "directions": 22, "v_contact": 112, "reflected": 16, "e2_contact": 84}, "blocked": {"shared": 0, "independent": 0}, "identical_to_committed": true}, "coupled_base_MM": {"rerun": {"A": 54, "C": 29, "edges_A": 146, "edges_C": 73, "directions": 22, "v_contact": 2072, "reflected": 296, "e2_contact": 224}, "blocked": {"shared": 0, "independent": 0}, "identical_to_committed": true}, "reflection_C": {"W": 10, "edges_W": 15, "reflected": 16, "blocked": {"shared": 0, "independent": 0}, "identical_to_committed": true, "difference_sets_identical": true}, "reflection_Cd": {"W": 211, "edges_W": 468, "reflected": 1900, "blocked": {"shared": 0, "independent": 0}, "identical_to_committed": true, "difference_sets_identical": true}} [2 s]
+independent families (directed): v-contact 112, reflected 16, e^2 84; unit directions 22
+independent direct encoding (shared): 1651005 clauses; blocked 0 of 570; 20 decoded models re-checked by evaluation: valid True [6 s]
+independent direct encoding (independent): 1651256 clauses; blocked 0 of 570; 20 decoded models re-checked by evaluation: valid True [10 s]
+positive control: two-distance graph on A (146 unit + 35 d-step edges): blocked 465 of 570 (S41: 465)

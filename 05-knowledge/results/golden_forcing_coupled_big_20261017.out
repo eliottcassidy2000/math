@@ -1,0 +1,9 @@
+[    1 s] A dM |A| = 364 (1139 edges); C MM |C| = 29 (73 edges); unit directions 22; patterns: v-contact 144716, reflected 296, e^2 3488
+[   11 s] additive pre-screen (shared coefficient colourings): 5425231 clauses; blocked 0 of 570 patterns [8 s]
+[   27 s] additive pre-screen (independent coefficient colourings): 5431390 clauses; blocked 0 of 570 patterns [13 s]
+[    1 s] A contact1 |A| = 1099 (3794 edges); C MM |C| = 29 (73 edges); unit directions 22; patterns: v-contact 329340, reflected 296, e^2 9664
+[   43 s] additive pre-screen (shared coefficient colourings): 12438649 clauses; blocked 0 of 570 patterns [36 s]
+[  125 s] additive pre-screen (independent coefficient colourings): 12444808 clauses; blocked 0 of 570 patterns [75 s]
+[   14 s] A contact2 |A| = 10597 (44745 edges); C base |C| = 10 (15 edges); unit directions 22; patterns: v-contact 175692, reflected 16, e^2 44864
+[ 2222 s] additive pre-screen (shared coefficient colourings): 11171887 clauses; blocked 0 of 570 patterns [2203 s]
+[ 4189 s] additive pre-screen (independent coefficient colourings): 11173218 clauses; blocked 0 of 570 patterns [1961 s]

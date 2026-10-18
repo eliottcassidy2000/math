@@ -8,8 +8,8 @@ status: >
   correspondence colouring when the sets are singletons).
   FINITE-EXACT evidence:
   - all 570 patterns of clock_duality's 5400-vertex receipt extend additively with c_1 = c_2, checked on all 30,856 edges;
-  - four larger linear sources (up to 1,099 first-coordinate points or 2,297,178 mixed edges; contact2 with 10,597 points was built but its pre-screen did not finish) have no additively blocked
-    pattern;
+  - four larger linear sources (up to 1,099 first-coordinate points or 2,297,178 mixed edges) have no additively blocked
+    pattern; contact2 (10,597 points) was finished in S42 with all three contact families coupled (0/570);
   - the v^2 census: every unit difference with a nonzero v^2 part is a pure v^2-axis unit.
 session: opus-2026-10-17-S41
 source: 05-knowledge/results/golden_additive_boundary_20261017.md
@@ -75,6 +75,7 @@ Every case below blocks **0 of 570** patterns, with shared and with independent 
 | base | MM (Eisenstein-rigid, 29 points) | 2,072 / 296 / 224 |
 | dM | MM | 144,716 / 296 / 3,488 |
 | contact1 | MM | 329,340 / 296 / 9,664 |
+| contact2 (10,597 points, S41's unfinished recipe) | base | 175,692 / 16 / 44,864 (CSP of 1.12e7 clauses; 2,203 s shared, 1,961 s independent) |
 
 **Subgraph caveat.** There is no census of differences with both `uv`- and `e^2`-parts, so these graphs are subgraphs
 of the unit-distance graphs on the same addresses. A block would still need certification on the full graph.

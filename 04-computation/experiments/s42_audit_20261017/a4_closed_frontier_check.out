@@ -1,0 +1,52 @@
+Y = 3: |V| = 2 (recorded 2), max 3 (recorded 3); 1 in V True; all seeds True; P(V) in V True; rank descends True; V = forward closure of seeds <= Y: True
+Y = 10: |V| = 6 (recorded 6), max 17 (recorded 17); 1 in V True; all seeds True; P(V) in V True; rank descends True; V = forward closure of seeds <= Y: True
+Y = 100: |V| = 74 (recorded 74), max 2051 (recorded 2051); 1 in V True; all seeds True; P(V) in V True; rank descends True; V = forward closure of seeds <= Y: True
+Y = 1000: |V| = 627 (recorded 627), max 63665 (recorded 63665); 1 in V True; all seeds True; P(V) in V True; rank descends True; V = forward closure of seeds <= Y: True
+V_100: brute force (first entry into V) for every N < 4096: R = direct sum at every N: True; octave stats 2^8..2^11 agree with the session run(): True [6 s]
+   brute force N = 4120: E_V/N = 2.155825, R = -70 (direct -70)
+   brute force N = 4810: E_V/N = 2.470270, R = -116 (direct -116)
+   brute force N = 48192687: E_V/N = 2.554390, R = 8158 (direct 8158)
+   brute force N = 47930133: E_V/N = 2.453461, R = 7566 (direct 7566)
+V_1000: brute force (first entry into V) for every N < 4096: R = direct sum at every N: True; octave stats 2^8..2^11 agree with the session run(): True [99 s]
+   brute force N = 4120: E_V/N = 2.468447, R = -70 (direct -70)
+   brute force N = 4810: E_V/N = 2.292308, R = -116 (direct -116)
+   brute force N = 48192687: E_V/N = 1.405508, R = 8158 (direct 8158)
+   brute force N = 47930133: E_V/N = 1.421190, R = 7566 (direct 7566)
+V_100 independent scan N < 2^26: invariant failures 0 [195 s]
+   2^ 8: max 3.065831 (N=319) mean 2.705213 min 2.284884
+   2^ 9: max 2.839080 (N=522) mean 2.111570 min 1.634021
+   2^10: max 2.378467 (N=1226) mean 1.952679 min 1.496565
+   2^11: max 2.383935 (N=3959) mean 1.629781 min 1.139497
+   2^12: max 2.470270 (N=4810) mean 1.820544 min 1.336007
+   2^13: max 1.943688 (N=15414) mean 1.405572 min 0.929019
+   2^14: max 1.954696 (N=17217) mean 1.301387 min 0.769936
+   2^15: max 1.590943 (N=42576) mean 1.028461 min 0.726978
+   2^16: max 1.809869 (N=75306) mean 1.385751 min 0.943219
+   2^17: max 1.340731 (N=230962) mean 0.984400 min 0.675523
+   2^18: max 1.483402 (N=289970) mean 1.037101 min 0.720860
+   2^19: max 1.485605 (N=1041364) mean 1.174352 min 0.791856
+   2^20: max 1.376328 (N=1052938) mean 1.108302 min 0.886528
+   2^21: max 1.474482 (N=3269067) mean 1.157960 min 0.817573
+   2^22: max 1.786776 (N=8377947) mean 1.362698 min 0.939864
+   2^23: max 1.920674 (N=8431082) mean 1.409234 min 0.945597
+   2^24: max 1.261518 (N=33553199) mean 0.891183 min 0.684068
+   2^25: max 2.554390 (N=48192687) mean 1.657403 min 0.954160
+V_1000 independent scan N < 2^26: invariant failures 0 [200 s]
+   2^ 8: max 5.456693 (N=508) mean 4.990341 min 4.721893
+   2^ 9: max 5.600000 (N=565) mean 5.000729 min 4.336266
+   2^10: max 4.316406 (N=1024) mean 3.768951 min 3.242766
+   2^11: max 3.298601 (N=2073) mean 2.768738 min 2.432873
+   2^12: max 2.468447 (N=4120) mean 2.182278 min 2.057913
+   2^13: max 2.109328 (N=8287) mean 1.863152 min 1.655524
+   2^14: max 1.790434 (N=18963) mean 1.535103 min 1.286258
+   2^15: max 1.457316 (N=35236) mean 1.309371 min 1.201374
+   2^16: max 1.513076 (N=122972) mean 1.341587 min 1.210875
+   2^17: max 1.517232 (N=191036) mean 1.360402 min 1.244314
+   2^18: max 1.392581 (N=323332) mean 1.257710 min 1.061156
+   2^19: max 1.464640 (N=1042203) mean 1.281608 min 1.112411
+   2^20: max 1.534111 (N=1067833) mean 1.399634 min 1.271374
+   2^21: max 1.557100 (N=2319788) mean 1.368048 min 1.237069
+   2^22: max 1.375475 (N=4380896) mean 1.228919 min 1.127133
+   2^23: max 1.328211 (N=9667901) mean 1.158199 min 1.041710
+   2^24: max 1.228143 (N=32246119) mean 1.048559 min 0.919322
+   2^25: max 1.421190 (N=47930133) mean 1.278172 min 1.152587
