@@ -1,0 +1,8 @@
+Y = 100: 61440 samples (octaves 2^24..2^27); F_Y = 38, F_eff = 12.2
+   model mean 1.2411 sd 0.5015 | observed mean 1.2411 sd 0.3150 max 2.6167
+   seeds carrying 90% of the energy: 19; pooled kurtosis 2.074; mean |corr| 0.423 (max 0.906); max |mean| 0.836
+   top seeds (share): 1 (0.203), 81 (0.120), 39 (0.067), 51 (0.061), 91 (0.051), 79 (0.048), 63 (0.047), 57 (0.045), 27 (0.044), 43 (0.044)
+Y = 1000: 15360 samples (octaves 2^24..2^27); F_Y = 375, F_eff = 113.9
+   model mean 1.1499 sd 0.1524 | observed mean 1.1499 sd 0.0875 max 1.4448
+   seeds carrying 90% of the energy: 205; pooled kurtosis 2.252; mean |corr| 0.375 (max 0.946); max |mean| 0.950
+   top seeds (share): 955 (0.041), 243 (0.032), 363 (0.025), 209 (0.019), 457 (0.017), 711 (0.016), 991 (0.016), 817 (0.016), 19 (0.015), 459 (0.013)

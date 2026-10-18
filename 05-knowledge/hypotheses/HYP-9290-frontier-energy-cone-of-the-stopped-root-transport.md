@@ -198,3 +198,21 @@ Predictions, with `N` sampled on a regular grid:
   Gaussian has 3), for `Y = 100` and `Y = 1000`.
 - **P14.** The model standard deviation `sqrt(2 Σ s_u^2)` is within a factor 2 of the observed standard deviation of
   `E_Y/N` over the samples, for both `Y`.
+
+### Outcome of P13-P14 (`root_transport_frontier_statistics_20261017.py 27`; `N` sampled every `2^12` (`Y = 100`) or `2^14` (`Y = 1000`) in `[2^24, 2^28)`)
+
+| `Y` | samples | `F_Y` | `F_eff` | mean `E_Y/N` | model sd | observed sd | max | pooled kurtosis | mean `\|corr\|` |
+|---|---|---|---|---|---|---|---|---|---|
+| 100 | 61,440 | 38 | 12.2 | 1.241 | 0.502 | 0.315 | 2.617 | 2.07 | 0.42 |
+| 1000 | 15,360 | 375 | 113.9 | 1.150 | 0.152 | 0.088 | 1.445 | 2.25 | 0.38 |
+
+- **P13 PASSED.** The kurtosis is in `[2, 5]`, but at the low end: the coefficients are sub-Gaussian.
+- **P14 PASSED.** The model standard deviation is 1.6-1.7 times the observed one, within the factor 2.
+- **Reading.**
+  - The independent-Gaussian model captures the order of magnitude. `F_eff` is about a third of `F_Y`, because the
+    energy concentrates on a third of the seeds: for `Y = 100`, ROOT itself carries 20%, and seed 81 carries 12%.
+  - The real plateau is about 40% *more stable* than independence predicts. The normalised coefficients are
+    substantially correlated (mean `|corr|` 0.4, up to 0.95), and some have persistent means of order their RMS. The
+    correlations reduce rather than inflate the fluctuations of the sum.
+  - For the (A') heuristic, the maxima sit 4.4 (`Y = 100`) and 3.4 (`Y = 1000`) observed standard deviations above
+    the mean over these samples.

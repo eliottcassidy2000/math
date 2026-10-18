@@ -1,0 +1,8 @@
+{
+ "id": "HYP-9290 P15-P16 pre-registration (S42)",
+ "written": "2026-10-18, before running root_transport_frontier_energy_big_20261017.py 29 100 1000 10000 (with overflow guard)",
+ "range": "every N in [2^28, 2^30)",
+ "P15": "max E_1000(N)/N <= 2.08, max E_100(N)/N <= 3.0, max E_10000(N)/N <= 1.55",
+ "P16": "each octave mean of E_1000/N (octaves 2^28, 2^29) lies in [0.9, 1.5] (plateau persists; no decay below 0.9)",
+ "note": "kept outside the HYP-9290 file while an independent audit of that file is running; to be merged afterwards"
+}
