@@ -1,0 +1,13 @@
+{
+ "recipe": "dM_C2",
+ "A": 364,
+ "C": 174,
+ "edges_A": 1139,
+ "edges_C": 532,
+ "mixed": 2297178,
+ "two_distance_edges": 1943,
+ "two_distance_blocked": 465,
+ "additive_blocked_shared": 0,
+ "additive_blocked": 0,
+ "blocked_free": []
+}

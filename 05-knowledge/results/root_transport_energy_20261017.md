@@ -19,7 +19,7 @@ from [positive ROOT transport, section2](root_positive_transport_20261017g.md). 
   - the ROOT/shell identity for the termination regime;
   - the Fourier form of the ideal transport.
 - FINITE-EXACT:
-  - the ideal energy ladder to `d = 6` (7 pending);
+  - the ideal energy ladder to `d = 6` in exact integers, and to `d = 12` in float64 with a rigorous band-tail bound;
   - the actual energy profiles of **every** `N < 2^23` (an exact incremental algorithm; invariant checked against the
     direct current at every `N`).
 - NUMERICAL: the cross-term anatomies and the operator norms.
@@ -111,11 +111,26 @@ change the energy.
 | d | 0 | 1 | 2 | 3 | 4 | 5 | 6 |
 |---|---|---|---|---|---|---|---|
 | `E_d` | 4.857143 | 3.388403 | 2.575382 | 2.137430 | 1.915079 | 1.778419 | 1.693330 |
-| cross term | | -1.4686 | -0.8130 | -0.4380 | -0.2224 | -0.1373 | -0.0851 |
+| cross term | | -1.4687 | -0.8130 | -0.4380 | -0.2224 | -0.1367 | -0.0851 |
 | `γ_d` | 2.285714 | 1.784095 | 1.448878 | 1.228070 | 1.079843 | 0.967086 | 0.877335 |
 
-- **Rate.** Consecutive cross-term ratios are 0.55, 0.54, 0.51, 0.62, 0.62. If the geometric decay continues, the ideal
-  limit is `E_∞ ≈ 1.55` (NUMERICAL extrapolation).
+| d | 7 | 8 | 9 | 10 | 11 | 12 |
+|---|---|---|---|---|---|---|
+| `E_d` | 1.634126 | 1.590908 | 1.556295 | 1.527640 | 1.501754 | 1.479358 |
+| cross term | -0.0592 | -0.0432 | -0.0346 | -0.0287 | -0.0259 | -0.0224 |
+| `γ_d` | 0.802930 | 0.738891 | 0.682908 | 0.633171 | 0.588440 | 0.548051 |
+
+Depths 7-12 come from the banded computation in clock_duality's positive gauge
+(`root_transport_energy_ladder_banded_20261017.py`, `b < 200`), with a rigorous band-tail bound below `3·10^(-25)`.
+- Its `γ_d` reproduce clock_duality's certified `γ_7..γ_10` to all 12 printed digits.
+- Its `E_d` reproduce the integer ladder for `d <= 6`.
+- `γ_11` and `γ_12` are new.
+
+- **Rate.** Consecutive cross-term ratios are 0.55, 0.54, 0.51, 0.62, 0.62, 0.70, 0.73, 0.80, 0.83, 0.90, 0.87. The
+  decay is slower than geometric: the local power-law exponent of `|cross_d|` falls from about 2.4 at `d = 6..8` to
+  values between 1.1 and 1.8 (noisy) at `d = 10..12`.
+- **Correction.** A first version of this note extrapolated a geometric rate from `d <= 6` and claimed `E_∞ ≈ 1.55`.
+  Already `E_10 = 1.528` lies below that. Whether `E_d^ideal` tends to a positive limit is OPEN.
 - **Sanity check.** The actual transport averages `E_6/N` = 1.693 (octaves `2^18..2^22`), and `E_0(N)/N -> 34/7`.
 
 **Not a contraction (NUMERICAL; `root_transport_symbol_norm_20261017.py`).** Weight band `b` by `2^(-b/2)`. The ideal
@@ -182,16 +197,28 @@ point masses. So all depths can be maintained at once, by walking one path of th
   - When the final current is small the picture differs. At `N = 116599` (`R^2/N = 0.018`) ROOT holds 27-36% at
     `d = 40..60`, and the remaining energy (0.4N at `d = 60`) is spread over about 10 effective seeds before it cancels.
   - These sampled large-current rows are ROOT-dominated; no uniform implication from large current to ROOT dominance is proved.
+- **The shell maximal inequality holds in every computed octave.** This is a necessary condition for HYP-9288 (B), not a
+  sufficient one. The script also records `max_d Vroot_d(N)^2` for every `N < 2^23`.
+
+  | octave | `2^9` | `2^10` | `2^11` | `2^12` | `2^13` | `2^14` | `2^15` | `2^16` | `2^17` | `2^18` | `2^19` | `2^20` | `2^21` | `2^22` |
+  |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+  | `Σ_N max_d Vroot_d^2 / X^2` | 3.85 | 1.90 | 3.21 | 5.20 | 4.73 | 1.88 | 3.50 | 1.69 | 2.44 | 2.74 | 1.87 | 1.10 | 1.03 | 4.85 |
+  | ratio to `D_X` | 3.77 | 1.79 | 1.64 | 1.31 | 1.60 | 2.85 | 1.72 | 2.16 | 2.48 | 1.71 | 2.22 | 5.18 | 4.45 | 1.07 |
+
+  - Every octave stays below `T_0 = 7.29 X^2`, even with the maximum over `d` inside the sum.
+  - The Doob ratio exceeds the martingale-model constant 4 only at `2^20` and `2^21`, where `D_X` is tiny (0.21 and
+    0.23). There the shell partial sums overshoot and then cancel at the end.
   - By THM-4667 statement 9, the ROOT coefficient is the partial sum of the current over the sources with at most `d`
     odd transports: `Vroot[d] = Σ_(depth(x) <= d) c_0(x) f(x)`.
 
 ## 6. Merging what we have with where we need to go
 
-1. **Ideal regime.** Target: ideal dissipation, or summable positive parts of the total ideal merge increments (INTRA and INTER), for all d.
-   - Statement10 of THM-4667 gives an `l^2` target for the primitive joint band/frequency law. The classical
-     Syracuse comparison must preserve A,C boundary kernels and the band; marginal offset mixing is insufficient.
-   - The observed geometric rate (cross-term ratio about 0.6) suggests a spectral gap for the pair (two-path)
-     correlation operator, in the spirit of S20's coupled-orbit covariances.
+1. **Ideal regime.** Target: ideal dissipation, or summable positive parts of the total ideal merge increments (INTRA
+   and INTER), for all `d`.
+   - Statement 10 of THM-4667 gives an `l^2` target for the primitive joint band/frequency law. The classical Syracuse
+     comparison must preserve the A, C boundary kernels and the band; marginal offset mixing is insufficient.
+   - The dissipation persists to `d = 12` but decays more slowly than geometrically (ratios 0.83-0.90 at `d = 10..12`).
+     So there is no evidence of a spectral gap, and summability of the cross terms is itself OPEN.
 2. **Matching (integer clocks).** At fixed depth the actual coefficients differ from the ideal ones only near affine
    thresholds. In `l^2`, the target is matching errors that add in quadrature. Statement 7 shows the actual `E_6/N`
    equals the ideal value to 3 decimals in every octave `2^18..2^22`.
@@ -208,6 +235,29 @@ logarithmic budgets with `b` of order `10^3`, certify the Mercator pole (HYP-928
 `limsup log B(X)/log X >= 0.99821`. The averaged cone (B), even with a logarithmic budget, is therefore beyond
 Krasikov-Lagarias.
 
+## 6b. Concurrent work: clock_duality's positive transport (read after this note's first commit)
+
+[root_positive_transport_20261017g.md](root_positive_transport_20261017g.md) (clock_duality_oct15, committed at 19:31,
+before this note's first commit at 20:07, but read only afterwards) attacks the same gap in `l1`.
+- **P1 (positivity).** In the sign gauge `ν_d = (-1)^(b+d) K_d/(4·2^(d+b))`, the ideal transport is a positive
+  probability kernel. So `γ_d` is non-increasing and the `l1` norm is never amplified.
+  - Their sharp one-step hostile (`δ_0 - δ_1` in one band) rules out a uniform one-step contraction on balanced band
+    measures in `l1`.
+  - It is the `l1` counterpart of the operator norms 1.28-1.35 of section 4. In both norms, dissipation must come from
+    the actual vectors.
+- **Syracuse bridge.** Their equation (5), `P = CA` with `S = AC` the random Syracuse affine kernel, is the measure form
+  of THM-4667 statement 10. The two were found independently in the same hour; statement 10 is the additive-Fourier form.
+  - Their caveat applies here too. Tao's Proposition 1.14 concerns the offset alone, while the band readout keeps the
+    exponent. What the energy needs is therefore an `l^2` estimate for the joint offset/exponent law, which is their
+    question 2.
+- **P3 (uniform remainder).** P3 proves `|A^(d)(N) - γ_d N| <= 87(m + 1) 3^(m/4)` for every `d <= m/16`
+  (`m = ceil(log_2 4N)`). That is the matching item 2 of section 6, in `l1`, on a logarithmic depth range.
+- **P4 (slow packet).** P4 shows `A^(d)(N) >= N 2^(-d) - 12`. The outer word (all exponents 1) blocks `l1` envelopes
+  below `d ≈ (log_2 N)/2`.
+  - In `l2` the same packet costs only `O(N 2^(-d))` energy: it has `O(1)` coefficients on about `N 2^(-d)` columns.
+  - So it is invisible to the energy at scale `N` beyond the first few depths. This is one concrete advantage of the
+    energy reading.
+
 ## 7. What fails, and what was corrected during the session
 
 - **l1 contraction.** Fails: a singleton unmerged terminal keeps its mass (clock_duality).
@@ -221,6 +271,8 @@ Krasikov-Lagarias.
   The statement now carries a logarithmic factor, and the averaged form a logarithmic budget, which is all the
   calibration needs. A first draft stated `sup_d E_d(N) <= 8.33 N` from 320 sampled `N`. The complete scan to `2^23`
   gives 10.06 at `N = 7910`.
+- **A geometric rate of ideal dissipation.** Extrapolated from `d <= 6` (ratio about 0.6, `E_∞ ≈ 1.55`). Refuted by
+  `d = 7..12` (section 4).
 
 The incoming integration also supplies [outer packets O6--O7](outer_packet_golden_clocks_20261017h.md): the isolated
 singleton packet has squared mass `(3/2)N*2^(-d)+O(18)`, compatible with O(N) energy, and source rounding costs at
@@ -231,6 +283,7 @@ This pays source rounding, while discrete-to-density matching remains open.
 
 ```
 python 04-computation/experiments/root_transport_depth_ladder_20261017.py 6
+python 04-computation/experiments/root_transport_energy_ladder_banded_20261017.py 12 200
 python 04-computation/experiments/root_transport_crossterm_anatomy_20261017.py 5
 python 04-computation/experiments/root_transport_symbol_norm_20261017.py 4 360
 python 04-computation/experiments/root_transport_incremental_trace_20261017.py 22

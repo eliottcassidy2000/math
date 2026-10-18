@@ -1,0 +1,5 @@
+vertices 5400, edges 30856, mixed 56, |A| = 54, |C| = 10, patterns 570
+axis graphs: A 146 edges, u-axis C 15 edges, v-axis C 15 edges; mixed 56
+mixed-edge coordinate-change types: {(True, True, True): 56}
+patterns with an additive Z/6 colouring (verified on all 30856 edges): 570 of 570
+patterns with an additive colouring with c_1 = c_2 (shared coefficient colouring): 570 of 570

@@ -6,7 +6,7 @@ status: >
   the census energy (THM-4658), hence the Mercator pole of HYP-9283(B) and limsup log B(X)/log X >= 0.99821 (beyond
   Krasikov-Lagarias). Evidence (FINITE-EXACT, THM-4667 statement 7): strong form (B') holds for every octave
   X = 2^2..2^22 (exception X = 2); the pointwise ratio sup_d E_d(N)/N is at most 10.06 for every N < 2^23 (at N = 7910);
-  (C) holds for d <= 6. REVISED 2026-10-17 before any test of the revised forms: the first draft asked for an absolute
+  (C) holds for d <= 12, with cross-term ratios rising to 0.83-0.90 (slower than geometric). REVISED 2026-10-17 before any test of the revised forms: the first draft asked for an absolute
   pointwise constant (8.33 from 320 sampled N). The complete scan gives 10.06, and the random-merge model predicts
   log log growth of sup_N R(N)^2/N, so the pointwise form now carries a logarithmic factor.
   Scope repaired by clock_duality_oct15: ROOT projection retains the unrooted complement; the liminf current-budget
@@ -71,6 +71,9 @@ for the calibration: HYP-9283(B) certifies the pole under logarithmic budgets.
 
 - In every octave the trace maximum is `T_0/X^2 ≈ 7.2857`, at `d = 0`.
 - The largest final value relative to `T_0` is 0.62, at `X = 2^22`.
+- **The shell form holds with the maximum inside the sum.** `Σ_N max_d Vroot_d(N)^2 <= 5.20 X^2 < T_0` for every
+  octave `2^9..2^22`. The ratio to `D_X` ranges over 1.07-5.18; it exceeds the martingale constant 4 only where
+  `D_X` is tiny, i.e. where the final cancellation is strong.
 - **The endpoint `d = ∞` of (B') holds further out.** S40's exact current gives `D_X <= 4.54 X^2` for every octave
   `2^8..2^27`; the maximum is at `2^22`, the same octave as here.
 
@@ -78,8 +81,12 @@ for the calibration: HYP-9283(B) certifies the pole under logarithmic budgets.
 
 * **Larger N.** Complete incremental scans beyond `2^23`, whose memory is about 10 nodes per source. Octave `2^22` came
   closest to (B'), so `2^23..2^26` are the natural next octaves.
-* **Ideal dissipation for all `d`.** Prove (C). `d = 7` is being computed. The cross-term ratio is about 0.6, which
-  suggests a spectral gap of the two-path correlation operator: compare S20's THM-4565 and the primitive affine
-  characteristic function of repaired THM-4667 statement10, preserving the A,C boundary operators and band.
+* **Ideal dissipation for all `d`.** Prove (C). It is verified for `d <= 12`: every total increment INTRA + INTER is
+  negative.
+  - The cross-term ratios rise, from 0.51 at `d = 4` to 0.83-0.90 at `d = 10..12`, so the decay is slower than
+    geometric. A first reading of a spectral gap from `d <= 6` was withdrawn.
+  - The natural objects are the joint band/frequency law of the primitive affine characteristic function (repaired
+    THM-4667 statement 10). This preserves the A, C boundary operators and the band of clock_duality's equation (5).
+    S20's two-path correlations (THM-4565) are the other natural object.
 * **A Lyapunov weight on the cone of actual vectors.** The ideal transport is not a contraction even on balanced vectors
   (norm 1.28-1.35), and pure power weights fail. A weight must use the cone generated from `c_0`.

@@ -1,0 +1,6 @@
+[    0 s] recipe MM: |A| = 364, |C| = 29
+[    1 s] edges: A 1139, C 73, mixed 72358
+[    1 s] golden two-distance graph on A (unit edges + d-steps): 1943 edges; patterns not extending: 465
+[   12 s] additive pre-screen: blocked with c_1 = c_2: 0; blocked with independent c_1, c_2: 0 (of 570)
+[    3 s] recipe contact2: |A| = 10597, |C| = 10
+[   24 s] edges: A 44745, C 15, mixed 87846

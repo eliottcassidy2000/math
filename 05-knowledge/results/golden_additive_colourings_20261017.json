@@ -1,0 +1,17 @@
+{
+ "vertices": 5400,
+ "edges": 30856,
+ "mixed": 56,
+ "axis": [
+  146,
+  15,
+  15
+ ],
+ "mixed_types": {
+  "(True, True, True)": 56
+ },
+ "additive": 570,
+ "additive_shared": 570,
+ "patterns": 570,
+ "failures": []
+}

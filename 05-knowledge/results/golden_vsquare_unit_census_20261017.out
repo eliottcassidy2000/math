@@ -1,0 +1,6 @@
+field ready; |D(A)| = 1602, |D(C)| = 82 [0 s]
+elements ready [1 s]
+prime 1021: 1018 survivors [12 s]
+prime 1171: 22 survivors [12 s]
+prime 1741: 22 survivors [12 s]
+exact units with a nonzero v^2 part: 22 (pure v^2-axis: 22; |unit differences of C| = 22; mixed: 0) [14 s]

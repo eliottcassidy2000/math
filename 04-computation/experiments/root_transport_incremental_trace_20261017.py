@@ -102,6 +102,7 @@ def run(Nmax, KMAX, level0, succ, sgn, DMAX):
     climb = np.zeros(Nmax, dtype=np.float64)
     E6 = np.zeros(Nmax, dtype=np.float64)
     Rf = np.zeros(Nmax, dtype=np.int64)
+    shellmax = np.zeros(Nmax, dtype=np.float64)
     k = 0
     for N in range(1, Nmax):
         m1 = 4 * N - 3; m2 = 4 * N - 1; m3 = 2 * N - 1
@@ -127,9 +128,15 @@ def run(Nmax, KMAX, level0, succ, sgn, DMAX):
                 if r > cl:
                     cl = r
         supE[N] = best / N; dsup[N] = bd; climb[N] = cl
+        sm = 0
+        for d in range(DMAX):
+            vv = Vroot[d] * Vroot[d]
+            if vv > sm:
+                sm = vv
+        shellmax[N] = sm / N
         E6[N] = E[6] / N if DMAX > 6 else 0.0
         Rf[N] = Vroot[DMAX - 1]
-    return T, supE, dsup, climb, E6, Rf
+    return T, supE, dsup, climb, E6, Rf, shellmax
 
 
 def main():
@@ -147,7 +154,7 @@ def main():
     wv = np.where(n % 3 == 2, 2, -1); wv[0] = 0
     H = np.cumsum(wv * f)
     print('clock parities done [%.0f s]' % (time.time() - t0), flush=True)
-    T, supE, dsup, climb, E6, Rf = run(Nmax, KMAX, level0, succ, sgn, DMAX)
+    T, supE, dsup, climb, E6, Rf, shellmax = run(Nmax, KMAX, level0, succ, sgn, DMAX)
     print('transport run done [%.0f s]' % (time.time() - t0), flush=True)
     Ns = np.arange(1, Nmax)
     Rdir = H[4 * Ns] - H[Ns]
@@ -167,7 +174,12 @@ def main():
                    climb_mean=float(climb[sl].mean()), E6_mean=float(E6[sl].mean()),
                    R2N_max=float((Rdir[X - 1:2 * X - 1].astype(np.float64) ** 2 / Ns[X - 1:2 * X - 1]).max()),
                    profile=prof[:min(len(prof), 260)].tolist())
+        SM = float(np.sum(shellmax[sl] * Ns[X - 1:2 * X - 1])) / X ** 2
+        row.update(shell_max_sum=SM, shell_ratio_to_DX=SM / row['DX'] if row['DX'] > 0 else None,
+                   shell_max_pointwise=float(shellmax[sl].max()))
         rows.append(row)
+        print('          shell form: sum_N max_d Vroot_d^2 / X^2 = %.4f (= %.2f D_X; T_0 = %.4f); pointwise max_d Vroot_d^2/N max %.3f'
+              % (SM, SM / row['DX'] if row['DX'] > 0 else float('nan'), row['T0'], row['shell_max_pointwise']), flush=True)
         print('X = 2^%2d: T_0 %.4f  T_6 %.4f  min %.4f (d %3d)  max %.4f (d %3d)  final %.4f = D_X %.4f | pointwise sup_d E_d/N max '
               '%.3f (N = %d), at d = 0: %.3f; climb max %.2f mean %.3f; E_6/N mean %.4f; max R^2/N %.3f'
               % (kk, row['T0'], row['T6'] or 0, row['Tmin'], imin, row['Tmax'], row['d_Tmax'], row['Tfinal'], row['DX'],
@@ -179,7 +191,7 @@ def main():
         res, 'root_transport_incremental_trace_%d_20261017.json' % KMAX), 'w'), indent=1)
     np.savez_compressed(os.path.join(res, 'root_transport_incremental_trace_%d_20261017.npz' % KMAX),
                         supE=supE.astype(np.float32), dsup=dsup.astype(np.int16), climb=climb.astype(np.float32),
-                        R=Rf.astype(np.int32))
+                        R=Rf.astype(np.int32), shellmax=shellmax.astype(np.float32))
 
 
 if __name__ == '__main__':

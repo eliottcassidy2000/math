@@ -1,0 +1,13 @@
+{
+ "recipe": "contact1",
+ "A": 1099,
+ "C": 10,
+ "edges_A": 3794,
+ "edges_C": 15,
+ "mixed": 5302,
+ "two_distance_edges": 6222,
+ "two_distance_blocked": 465,
+ "additive_blocked_shared": 0,
+ "additive_blocked": 0,
+ "blocked_free": []
+}

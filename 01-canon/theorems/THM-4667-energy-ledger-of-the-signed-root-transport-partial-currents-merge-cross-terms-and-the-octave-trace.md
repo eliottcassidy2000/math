@@ -4,12 +4,17 @@ title: "Signed ROOT transport energy ledger: sibling-pair fibres, ROOT projectio
 status: >
   PROVED (elementary bookkeeping; scope repaired 2026-10-17 by clock_duality_oct15): statements 1-5 and 8-10 (statement 8 checked by brute force on all seeds below
   2 x 10^6; statement 10 checked to machine precision against clock_duality's exact recursion for d <= 4).
-  FINITE-EXACT: statement 6 (the ideal energy ladder to d = 6) and the complete energy profiles of every N < 2^23 in
+  FINITE-EXACT: statement 6 (the ideal energy ladder to d = 6 in exact integers; d = 7..12 in float64 with a rigorous
+  truncation bound) and the complete energy profiles of every N < 2^23 in
   statement 7 (exact incremental algorithm, invariant checked against the direct current at every N). NUMERICAL: the
   cross-term anatomies and the operator norms in statement 7. The uniform bound that would close the tail-debt gap is
   HYP-9288 (OPEN; calibrated as beyond Krasikov-Lagarias). The sibling pair and its opposite clock parities are
-  clock_duality_oct15's R5; the complete fibre decomposition, the energy (l2) reading, the ROOT/shell identity and the
-  Fourier form are new in the repository. Repair: ROOT projection retains an unrooted energy complement; the current-budget implication survives without universal convergence. Primitive affine phases require the source/terminal boundary kernels before comparison with ordinary Syracuse offsets. No novelty claim for the bookkeeping itself.
+  clock_duality_oct15's R5. The Syracuse bridge of statement 10 was found concurrently by clock_duality_oct15 in measure
+  form (root_positive_transport_20261017g.md, equation (5)). The complete fibre decomposition, the energy (l2) reading,
+  the ROOT/shell identity and the additive-Fourier form are new in the repository.
+  Repair (clock_duality_oct15): the ROOT projection retains an unrooted energy complement, and the current-budget
+  implication survives without universal convergence. Primitive affine phases require the source/terminal boundary
+  kernels before comparison with ordinary Syracuse offsets. No novelty claim for the bookkeeping itself.
 session: opus-2026-10-17-S41
 source: 05-knowledge/results/root_transport_energy_20261017.md
 scripts:
@@ -17,9 +22,10 @@ scripts:
   - 04-computation/experiments/root_transport_incremental_trace_20261017.py (+ _17/_20/_22 .out and .json; per-N arrays .npz committed for _12/_17 only, the 2^21/2^23 arrays are regenerated in 38 s / 161 s)
   - 04-computation/experiments/root_transport_octave_trace_20261017.py (+ .out, .json)
   - 04-computation/experiments/root_transport_depth_ladder_20261017.py, root_transport_crossterm_anatomy_20261017.py (+ .out, .json)
+  - 04-computation/experiments/root_transport_energy_ladder_banded_20261017.py (+ .out, .json; d <= 12 in clock_duality's positive gauge)
   - 04-computation/experiments/root_transport_sibling_anatomy_20261017.py, root_transport_symbol_norm_20261017.py, root_transport_fourier_check_20261017.py (+ .out, .json)
 related:
-  - clock_duality_oct15 root_braid_logistic_20261017f.md (R1 odd-source fold, R5 sibling fold, sections 3-3c: transport, R7, R8 depth ladder gamma_d), marked_contacts_root_current_20261017e.md (energy kernel G_X, formula (4))
+  - clock_duality_oct15 root_braid_logistic_20261017f.md (R1 odd-source fold, R5 sibling fold, sections 3-3c: transport, R7, R8 depth ladder gamma_d), marked_contacts_root_current_20261017e.md (energy kernel G_X, formula (4)), root_positive_transport_20261017g.md (concurrent: P1 positive gauge, equation (5) Syracuse factorisation = measure form of statement 10, P3 uniform l1 remainder for d <= m/16, P4 slow packet)
   - THM-4658 (two-octave energy transport), HYP-9283 (budgets; calibration (B), (C)), HYP-9284 (odd-step suppression), THM-4659/4660, THM-4565 (S20 coupled-orbit covariance)
   - HYP-9288 (energy cone)
 ---
@@ -69,8 +75,15 @@ related:
    - **Values.** For `d = 0, ..., 6`: `E_d = 4.857143, 3.388403, 2.575382, 2.137430, 1.915079, 1.778419, 1.693330` and
      `γ_d = 2.285714, 1.784095, 1.448878, 1.228070, 1.079843, 0.967086, 0.877335`. The first four `γ_d` are as in R8; the
      rest are new.
-   - **Cross terms.** `-1.4686, -0.8130, -0.4380, -0.2224, -0.1373, -0.0851`, all negative: the ideal transport
-     dissipates energy. Consecutive ratios are 0.55, 0.54, 0.51, 0.62, 0.62.
+   - **Cross terms.** `-1.4687, -0.8130, -0.4380, -0.2224, -0.1367, -0.0851`, all negative: the ideal transport
+     dissipates energy.
+   - **Depths 7-12.** These come from the banded positive-gauge computation (float64, rigorous band tail
+     `< 3·10^(-25)`), whose `γ_7..γ_10` agree with clock_duality's certified values to 12 digits.
+     - `E_7..E_12 = 1.634126, 1.590908, 1.556295, 1.527640, 1.501754, 1.479358`.
+     - Cross terms `-0.0592, -0.0432, -0.0346, -0.0287, -0.0259, -0.0224`.
+     - `γ_11 = 0.588440`, `γ_12 = 0.548051`.
+   - **Rate.** The consecutive cross-term ratios are 0.55, 0.54, 0.51, 0.62, 0.62, 0.70, 0.73, 0.80, 0.83, 0.90,
+     0.87. The decay is slower than geometric, and whether `E_d` has a positive limit is OPEN.
    - **Anatomy (`d <= 5`).** The cross terms concentrate at lag 1, which by statement 8 is the sibling pair.
 7. **(Checks, FINITE-EXACT / NUMERICAL.)**
    - *Every `N < 2^23`* (incremental algorithm, 120,409,136 tree nodes; `R(N) = H(4N) - H(N)` verified at every `N`):
@@ -79,6 +92,8 @@ related:
      - **Pointwise.** `max_N sup_d E_d(N)/N = 10.06`, at `N = 7910`, where `R^2/N = 9.08`. In the octaves
        `2^18..2^21` every profile peaks at `d = 0`.
      - **Ideal regime.** The actual `E_6/N` averages 1.693 in every octave `2^18..2^22`, matching the ideal value.
+     - **Shells.** `Σ_(X <= N < 2X) max_d c_d(1)^2 <= 5.20 X^2` for every octave `2^9..2^22`. This is statement 9's shell
+       partial sums with the maximum inside the sum.
    - *Sibling anatomy* (octaves `2^10..2^12` in full, samples at `2^16`):
      - INTRA (statement 8) carries 94-100% of the energy change at `d <= 2`, and the bulk afterwards.
      - The termination climb at `2^12` (trace 1.98 -> 3.98) is INTRA with positive sign.
@@ -104,13 +119,17 @@ related:
 10. **(Fourier form of the ideal transport.)** Put `o = a - 1 + 2j` (so `A=o+1=a+2j` is the homogeneous exponent of the primitive branch, with terminal braid retained), and let `K̂(ξ, b) = Σ_r K(r, b) e(-rξ/3^(d+1))`. Then
     `K̂_d(ξ, b) = Σ_(o=0)^(b) (-1)^(o+1) e(-μ_o ξ/3^(d+1)) K̂_(d-1)(2^(-(o+1)) ξ mod 3^d, b - o)`, with
     `μ_o = 2^(-(o+1)) - (1 - 4^(-j))/3`.
-    - Unfolding composes the **primitive** affine maps `P_A(r)=(3r+c_A)/2^A`,
-      `c_A=(3+2^a-2^A)/3`. Their translations are not the ordinary Syracuse offsets for the same letter word.
-    - After the sign gauge, the branch law is geometric(1/2), and the sign is constant on each slice `Σ o_i=n`.
-      With the band retained, the exact positive-kernel relation is `P=C A`, `S=A C`, `P^d=C S^(d-1) A`.
-      Here `A` chooses `(3r+1)/2^a`, `a=1,2`, with probabilities2/3,1/3 and band increment`a-1`;
-      `C` chooses `B^(-j)` with probability`(3/4)4^(-j)` and increment`2j`; `S` is ordinary geometric Syracuse.
+    - Unfolding composes the **primitive** affine maps `P_A(r) = (3r + c_A)/2^A` with `c_A = (3 + 2^a - 2^A)/3`. Their
+      translations are not the ordinary Syracuse offsets for the same letter word.
+    - After the sign gauge, the branch law is geometric(1/2), and the sign is constant on each slice `Σ o_i = n`.
+    - With the band retained, the exact positive-kernel relation is `P = C A`, `S = A C`, `P^d = C S^(d-1) A`:
+      - `A` chooses `(3r + 1)/2^a`, `a = 1, 2`, with probabilities 2/3 and 1/3 and band increment `a - 1`;
+      - `C` chooses `B^(-j)` with probability `(3/4)4^(-j)` and band increment `2j`;
+      - `S` is ordinary geometric Syracuse.
+
       The boundary kernels cannot be omitted when transferring a Fourier estimate.
+    - This bridge was found concurrently by clock_duality_oct15 in measure form (root_positive_transport_20261017g.md,
+      equation (5)). Tao's Proposition 1.14 concerns the offset alone, while the band readout keeps the exponent.
 
 ## Proof
 

@@ -1,0 +1,12 @@
+[    0 s] recipe base: |A| = 54, |C| = 10
+[    0 s] edges: A 146, C 15, mixed 56
+[    0 s] golden two-distance graph on A (unit edges + d-steps): 181 edges; patterns not extending: 465
+[    0 s] additive pre-screen: blocked with c_1 = c_2: 0; blocked with independent c_1, c_2: 0 (of 570)
+[    0 s] recipe dM: |A| = 364, |C| = 10
+[    1 s] edges: A 1139, C 15, mixed 2142
+[    1 s] golden two-distance graph on A (unit edges + d-steps): 1943 edges; patterns not extending: 465
+[    2 s] additive pre-screen: blocked with c_1 = c_2: 0; blocked with independent c_1, c_2: 0 (of 570)
+[    0 s] recipe contact1: |A| = 1099, |C| = 10
+[    2 s] edges: A 3794, C 15, mixed 5302
+[    2 s] golden two-distance graph on A (unit edges + d-steps): 6222 edges; patterns not extending: 465
+[    9 s] additive pre-screen: blocked with c_1 = c_2: 0; blocked with independent c_1, c_2: 0 (of 570)

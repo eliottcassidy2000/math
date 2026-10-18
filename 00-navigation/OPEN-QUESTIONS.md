@@ -6684,8 +6684,11 @@ OEIS A038375 gives max H(T) over all n-vertex tournaments: 1, 1, 3, 5, 15, 45, 1
     the sibling covariance plus inter-block terms;
   - the ROOT coefficient at depth d is the current of the sources with at most d odd transports (shell partial sums);
   - the octave trace ends at D_X;
-  - the ideal transport is a diagonal isometry, and in Fourier it is the band-sliced Syracuse characteristic function.
-- Data. FINITE-EXACT: the ideal ladder to d = 6, with every cross term negative. NUMERICAL: sibling covariance carries
+  - the ideal transport is a diagonal isometry, and its Fourier recurrence composes the primitive affine maps (ordinary
+    Syracuse only through clock_duality's boundary kernels P = CA, S = AC);
+  - scope repaired by clock_duality_oct15 (MISTAKES 2026-10-17): f = 0 off the ROOT basin, an unrooted energy
+    complement, and an unconditional current-budget implication.
+- Data. FINITE-EXACT: the ideal ladder to d = 12 (exact integers to d = 6), with every cross term negative. NUMERICAL: sibling covariance carries
   94-100% of the early energy change, and the ideal operator is NOT a contraction on balanced vectors (norm 1.28-1.35).
 - Every N < 2^23 by an exact incremental algorithm: octave traces never exceed T_0 = 51/7 X^2 (X = 4..2^22), and the
   pointwise maximum of sup_d E_d(N)/N is 10.06 (N = 7910).
@@ -6693,8 +6696,19 @@ OEIS A038375 gives max H(T) over all n-vertex tournaments: 1, 1, 3, 5, 15, 45, 1
   (B) octave traces with a logarithmic budget, which in the termination regime is a mean-square maximal inequality for
   the stopping-time shell sums of the current; (C) ideal dissipation for all d. Calibrated: (B) certifies the Mercator
   pole (via THM-4658 and HYP-9283(B)), so it is beyond Krasikov-Lagarias.
-- OPEN: (C) for all d (the cross-term ratio is about 0.6: a spectral gap of the two-path correlation operator?); an
-  l2-over-frequencies analogue of Tao's characteristic-function decay; a Lyapunov weight on the cone of actual vectors.
+- OPEN:
+  - (C) for all d: verified to d = 12, but the cross-term ratios rise to 0.83-0.90, so there is no geometric rate;
+  - an l2 estimate for the joint offset/exponent Syracuse law (clock_duality's question 2);
+  - a Lyapunov weight on the cone of actual vectors.
+- Concurrent clock_duality_oct15 work (root_positive_transport_20261017g.md, P1-P4) gives the l1 side. P4's slow
+  packet costs only O(N 2^-d) energy.
+- Six colours. The new note is golden_additive_boundary_20261017.md, and HYP-9289 (OPEN) states the conjecture.
+  - clock_duality's shared golden source is additively free: all 570 port patterns extend by c_A(a) + c_C(b) + c_C(c)
+    mod 6, verified on all 30,856 edges.
+  - The proposed v^2 coordinate creates no cross edges (exact census of 9.1e8 differences), so it cannot force.
+  - A design loop (G5 classification -> additive pre-screen -> SAT) finds no additively blocked pattern in six larger
+    golden sources, up to 2,297,178 mixed edges.
+  - OPEN: additive freedom of all of K + uK + vK; which edges outside the linear space could break it.
 
 ### UPDATE (2026-10-17, opus-2026-10-17-S40; audited, MISTAKE-626): class numbers as tournament rankings, the exponent ladder, the full ROOT current
 - THM-4666 (PROVED, elementary; audited): the natural order of the Kronecker oriented graph of D < 0 has excess (2/w)|D|h(D) (Paley: p h(-p), the area under the Legendre walk); inverse order 3h(-p), pair-block orders (1 - 2(2/p))h(-p), randomised moves = Fekete positivity; arcs at a vertex = split primes; h = 1 (least excess) exactly at P_7, P_11, P_19, P_43, P_67, P_163 = Euler's lucky numbers; a single-vertex insertion changes the excess by -2S(t), so local optimality <=> Kalmynin's L+ (density 0), which excludes a real zero of L(s, chi_-p). OPEN: a combinatorial certificate against Siegel zeros beyond L+ (block moves = weighted positivity of the Legendre walk).

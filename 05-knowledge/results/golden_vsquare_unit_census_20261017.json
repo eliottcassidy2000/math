@@ -1,0 +1,16 @@
+{
+ "sizes": {
+  "DA": 1602,
+  "DC": 82
+ },
+ "primes": [
+  1021,
+  1171,
+  1741
+ ],
+ "survivors": 22,
+ "units": 22,
+ "pure_axis": 22,
+ "unit_differences_of_C": 22,
+ "mixed": []
+}
