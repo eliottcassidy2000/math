@@ -22,7 +22,7 @@
 - FINITE-EXACT: mod-p ranks, two primes where stated, every dimension checked against an independent character
   formula or the assumption-free maximal-submodule computation.
 - CITED: literature.
-- OPEN: HYP-9293, HYP-9294, HYP-9295, HYP-9296, HYP-9297.
+- OPEN: HYP-9293, HYP-9294, HYP-9295, HYP-9296, HYP-9297, HYP-9298.
 - OBSERVATION: section 1.3.
 
 ## 1. Definitions (CITED unless marked)
@@ -69,6 +69,25 @@ a finite product.
 
 This is the precise sense in which the first non-arc relation of `Vir_(p,q)` (THM-4671) is the quantum image of a
 `pi_1`-class of the derived arc space.
+
+**Data (FINITE-EXACT, `derived_arc_koszul.py`, mod p).** Koszul homology of `(d^n x_0^N)_n`, weight by weight.
+
+| `N` | `H_0` | `H_1` starts | `H_2` first visible | `H_0 - H_1` |
+|---|---|---|---|---|
+| 3 | Andrews-Gordon `AG_3` | weight 9 = `2N+3`, dims 1,1,2,3,4,6,8,11,14,19,25,32 (w = 9..20) | weight 19 | equals `1/prod_(m=2)^5 (1-q^m)` through weight 18 |
+| 4 | `AG_4` | weight 11 = `2N+3`, dims 1,1,2,3,5,7,10,14,19,26,34,45,59,76 (w = 11..24) | weight 23 | equals the finite product through 22 |
+
+`H_2` first appears at `4N+7`, the first syzygy of syzygies.
+
+The minimal-model kernels sit inside `H_1` weight by weight:
+- Ising (`N = 3`): `dim ker pi_w = 1,1,1,2,2,3,4,5,6,8,10,13` for `w = 9..20`, always `<= dim H_1(w)`.
+- `Vir_(3,5)` (`N = 4`): `1,1,1,2,3,4,5,7,9,12,15,19,24,31` for `w = 11..24`, always `<= dim H_1(w)`.
+- For the classically free models with the same `N` (`Vir_(2,7)`, `Vir_(2,9)`), the kernel is zero.
+
+**OBSERVATION and question.** In this range the kernel behaves like the image of a quantum transfer map out of the
+higher homotopy of the derived arc space. The transfer vanishes identically on the boundary series. A spectral-sequence
+statement, "`gr_F V` = `H_0` modulo the transfer of `H_(>=1)`", is the natural derived formulation of classical freeness.
+It is not proved here.
 
 ## 2. The instrument
 
@@ -241,7 +260,9 @@ a nonlinear-bracket hook (`w3.py`):
 | `W_3(3,8)` | `(A_2, A_4)` | none | 20 |
 | `W_3(3,10)`, `W_3(3,11)` | `(A_2, A_6)`, `(A_2, A_7)` | none | 22 |
 | `W_3(4,5)` (3-state Potts) | — | weight 8 = `D_0 + 2`, Li 1 | 20 (two primes) |
-| `W_3(4,7)` | — | weight 12 = `D_0 + 2`, Li 1 | 20 |
+| `W_3(4,7)` | — | weight 12 = `D_0 + 2`, Li 1 | 20 (two primes to 18) |
+| `W_3(5,7)` | — | weight 17 = `D_0 + 2`, Li 1 | 24 |
+| `W_3(3,13)` | `(A_2, A_9)` | none | 24 |
 
 Three families now show the same pattern: `Vir` (`p = 2`, a theorem), admissible `sl2` (boundary or integrable,
 HYP-9293) and `W_3` (`p = 3`). The **boundary** models, which are exactly the chiral algebras of the Argyres-Douglas
@@ -250,6 +271,20 @@ transfer. HYP-9297 states this as a conjecture.
 
 Consequence: the Schur index of `(A_(N-1), A_(k-1))` should be the Hilbert series of the arc space of a fat point,
 generalizing Andrews-Gordon.
+
+**HYP-9298: arc-space `A_2` Rogers-Ramanujan identities.**
+- The boundary `W_3` characters are products,
+  `prod_(n ≢ 0,±1 (q)) (1-t^n)^(-1) · prod_(n ≢ 0,±1,±2 (q)) (1-t^n)^(-1)`. Their plethystic exponents are periodic mod
+  `q`: `(0,1,2,2,1,0,0)` for `q = 7`.
+- The `C_2`-algebras are tiny two-variable fat points: `C[x,y]/(xy, y^2 - x^3)` for `q = 7` and
+  `C[x,y]/(y^2 - x^3, x^2 y)` for `q = 8`.
+- A pure commutative-algebra computation (`arc_hs.py`, no vertex-algebra code) shows that their arc spaces have
+  exactly these Hilbert series: through weight 26 for `q = 7, 8` and 24 for `q = 10, 11`.
+- The monomial degenerations `(xy, y^2)` and `(y^2, x^2 y)` fail, at weights 8 and 10.
+- This is the `A_2` analogue of Bruschek-Mourtada-Schepers' arc-space proof of Rogers-Ramanujan/Andrews-Gordon. It
+  is the commutative-algebra face of HYP-9297 for `N = 3`.
+- Curiosity: the cusp alone has
+  `HS J_infty(y^2 = x^3) = prod_(n>=2)(1-t^n)^(-1) / ((1-t^3)(1-t^4)(1-t^5))` through weight 24.
 
 ## 5b. Two-dimensional supersymmetry: `N = 2` minimal models (Landau-Ginzburg chiral algebras)
 

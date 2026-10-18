@@ -11,12 +11,13 @@ status: >
       - q = 7 (A_2,A_3): to weight 20; second prime to 18;
       - q = 8 (A_2,A_4): to 20;
       - q = 10 (A_2,A_6) and q = 11 (A_2,A_7): to 22;
-      - q = 13: run in progress at filing;
+      - q = 13 (A_2,A_9): to 24;
     - non-boundary, NOT free:
       - W_3(4,5) (3-state Potts): first non-arc at weight 8 = D_0+2, Li 1; second prime agrees; further generators
         at 10, 10, 11, 12, 13, 15, 16, 19, 20;
-      - W_3(4,7): first at 12 = D_0+2, Li 1;
-      - W_3(5,7): run in progress at filing.
+      - W_3(4,7): first at 12 = D_0+2, Li 1; second prime agrees to 18;
+      - W_3(5,7): first at 17 = D_0+2, Li 1 (D_0 = 15).
+    The non-boundary first-failure rule (p-2)(q-2) + 2, Li 1 holds in all three cases.
   - Affine analogue: HYP-9293 (admissible sl2 free iff boundary or integrable).
   - 4d relevance: HYP-9296.
   W_3(3,5) is excluded: there 22 + 5c = 0 and the W_3 algebra degenerates; its simple quotient is Vir_{2,5}.

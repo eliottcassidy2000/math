@@ -1,0 +1,22 @@
+N=3: weight, dim R, dim H0 (arc space), dim H1, [1/prod_(m=2)^(2N-1)(1-q^m)] coefficient
+  w= 0  R=   1  H0=   1  H1=   0  H0-H1=   1  target=1
+  w= 1  R=   0  H0=   0  H1=   0  H0-H1=   0  target=0
+  w= 2  R=   1  H0=   1  H1=   0  H0-H1=   1  target=1
+  w= 3  R=   1  H0=   1  H1=   0  H0-H1=   1  target=1
+  w= 4  R=   2  H0=   2  H1=   0  H0-H1=   2  target=2
+  w= 5  R=   2  H0=   2  H1=   0  H0-H1=   2  target=2
+  w= 6  R=   4  H0=   3  H1=   0  H0-H1=   3  target=3
+  w= 7  R=   4  H0=   3  H1=   0  H0-H1=   3  target=3
+  w= 8  R=   7  H0=   5  H1=   0  H0-H1=   5  target=5
+  w= 9  R=   8  H0=   6  H1=   1  H0-H1=   5  target=5
+  w=10  R=  12  H0=   8  H1=   1  H0-H1=   7  target=7
+  w=11  R=  14  H0=   9  H1=   2  H0-H1=   7  target=7
+  w=12  R=  21  H0=  13  H1=   3  H0-H1=  10  target=10
+  w=13  R=  24  H0=  14  H1=   4  H0-H1=  10  target=10
+  w=14  R=  34  H0=  19  H1=   6  H0-H1=  13  target=13
+  w=15  R=  41  H0=  22  H1=   8  H0-H1=  14  target=14
+  w=16  R=  55  H0=  28  H1=  11  H0-H1=  17  target=17
+  w=17  R=  66  H0=  32  H1=  14  H0-H1=  18  target=18
+  w=18  R=  88  H0=  41  H1=  19  H0-H1=  22  target=22
+  w=19  R= 105  H0=  47  H1=  25  H0-H1=  22  target=23
+  w=20  R= 137  H0=  59  H1=  32  H0-H1=  27  target=28
