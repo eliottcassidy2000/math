@@ -1,0 +1,9 @@
+{
+  "sha256": {
+    "04-computation/cm_detector_sporadic/audit_bc_20261018l/REPORT.md": "cd8cb0e45cc498579cdbe17b7b4baddf992ab4df1ce79c62e207a21cfdb7a4cb",
+    "04-computation/cm_detector_sporadic/audit_bc_20261018l/audit_identities.py": "198ff2a643ee423422cd49000ed4e26acb0f8c7661c8da7d9b37d2876ee33bc6",
+    "04-computation/cm_detector_sporadic/audit_bc_20261018l/audit_zagier.py": "e6331e1963b0cf6d3c3ba88ea331cca42304eea83ecb56b442f4b3023c124a8a",
+    "04-computation/cm_detector_sporadic/audit_bc_20261018l/identities_397.json": "760163d4e11b57a4e956b0cce79e674276bf32dfd3ee9f7b6739af8ef32d78d3",
+    "04-computation/cm_detector_sporadic/audit_bc_20261018l/zagier_397.json": "9937d4c82c2e66a6131941c9323697e01fd588431829e446e66faecb3e057c21"
+  }
+}

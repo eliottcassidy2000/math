@@ -1,0 +1,7287 @@
+{
+  "scope": "All six listed recurrences; every prime7<=p<=bound; exact all-coefficient block equations including terminal coefficients. Finite evidence only.",
+  "bound": 397,
+  "families": {
+    "A": {
+      "parameters": [
+        7,
+        2,
+        -8
+      ],
+      "discriminant": 81,
+      "rows": [
+        {
+          "p": 7,
+          "degF": 6,
+          "degV": 6,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 6,
+            "deg rad": 6,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 11,
+          "degF": 10,
+          "degV": 10,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 10,
+            "deg rad": 10,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 13,
+          "degF": 12,
+          "degV": 12,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 12,
+            "deg rad": 12,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 17,
+          "degF": 16,
+          "degV": 16,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 16,
+            "deg rad": 16,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 19,
+          "degF": 18,
+          "degV": 18,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 18,
+            "deg rad": 18,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 23,
+          "degF": 22,
+          "degV": 22,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 22,
+            "deg rad": 22,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 29,
+          "degF": 28,
+          "degV": 28,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 28,
+            "deg rad": 28,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 31,
+          "degF": 30,
+          "degV": 30,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 30,
+            "deg rad": 30,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 37,
+          "degF": 36,
+          "degV": 36,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 36,
+            "deg rad": 36,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 41,
+          "degF": 40,
+          "degV": 40,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 40,
+            "deg rad": 40,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 43,
+          "degF": 42,
+          "degV": 42,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 42,
+            "deg rad": 42,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 47,
+          "degF": 46,
+          "degV": 46,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 46,
+            "deg rad": 46,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 53,
+          "degF": 52,
+          "degV": 52,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 52,
+            "deg rad": 52,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 59,
+          "degF": 58,
+          "degV": 58,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 58,
+            "deg rad": 58,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 61,
+          "degF": 60,
+          "degV": 60,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 60,
+            "deg rad": 60,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 67,
+          "degF": 66,
+          "degV": 66,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 66,
+            "deg rad": 66,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 71,
+          "degF": 70,
+          "degV": 70,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 70,
+            "deg rad": 70,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 73,
+          "degF": 72,
+          "degV": 72,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 72,
+            "deg rad": 72,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 79,
+          "degF": 78,
+          "degV": 78,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 78,
+            "deg rad": 78,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 83,
+          "degF": 82,
+          "degV": 82,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 82,
+            "deg rad": 82,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 89,
+          "degF": 88,
+          "degV": 88,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 88,
+            "deg rad": 88,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 97,
+          "degF": 96,
+          "degV": 96,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 96,
+            "deg rad": 96,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 101,
+          "degF": 100,
+          "degV": 100,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 100,
+            "deg rad": 100,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 103,
+          "degF": 102,
+          "degV": 102,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 102,
+            "deg rad": 102,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 107,
+          "degF": 106,
+          "degV": 106,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 106,
+            "deg rad": 106,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 109,
+          "degF": 108,
+          "degV": 108,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 108,
+            "deg rad": 108,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 113,
+          "degF": 112,
+          "degV": 112,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 112,
+            "deg rad": 112,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 127,
+          "degF": 126,
+          "degV": 126,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 126,
+            "deg rad": 126,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 131,
+          "degF": 130,
+          "degV": 130,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 130,
+            "deg rad": 130,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 137,
+          "degF": 136,
+          "degV": 136,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 136,
+            "deg rad": 136,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 139,
+          "degF": 138,
+          "degV": 138,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 138,
+            "deg rad": 138,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 149,
+          "degF": 148,
+          "degV": 148,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 148,
+            "deg rad": 148,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 151,
+          "degF": 150,
+          "degV": 150,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 150,
+            "deg rad": 150,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 157,
+          "degF": 156,
+          "degV": 156,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 156,
+            "deg rad": 156,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 163,
+          "degF": 162,
+          "degV": 162,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 162,
+            "deg rad": 162,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 167,
+          "degF": 166,
+          "degV": 166,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 166,
+            "deg rad": 166,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 173,
+          "degF": 172,
+          "degV": 172,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 172,
+            "deg rad": 172,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 179,
+          "degF": 178,
+          "degV": 178,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 178,
+            "deg rad": 178,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 181,
+          "degF": 180,
+          "degV": 180,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 180,
+            "deg rad": 180,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 191,
+          "degF": 190,
+          "degV": 190,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 190,
+            "deg rad": 190,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 193,
+          "degF": 192,
+          "degV": 192,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 192,
+            "deg rad": 192,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 197,
+          "degF": 196,
+          "degV": 196,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 196,
+            "deg rad": 196,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 199,
+          "degF": 198,
+          "degV": 198,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 198,
+            "deg rad": 198,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 211,
+          "degF": 210,
+          "degV": 210,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 210,
+            "deg rad": 210,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 223,
+          "degF": 222,
+          "degV": 222,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 222,
+            "deg rad": 222,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 227,
+          "degF": 226,
+          "degV": 226,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 226,
+            "deg rad": 226,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 229,
+          "degF": 228,
+          "degV": 228,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 228,
+            "deg rad": 228,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 233,
+          "degF": 232,
+          "degV": 232,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 232,
+            "deg rad": 232,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 239,
+          "degF": 238,
+          "degV": 238,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 238,
+            "deg rad": 238,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 241,
+          "degF": 240,
+          "degV": 240,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 240,
+            "deg rad": 240,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 251,
+          "degF": 250,
+          "degV": 250,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 250,
+            "deg rad": 250,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 257,
+          "degF": 256,
+          "degV": 256,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 256,
+            "deg rad": 256,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 263,
+          "degF": 262,
+          "degV": 262,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 262,
+            "deg rad": 262,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 269,
+          "degF": 268,
+          "degV": 268,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 268,
+            "deg rad": 268,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 271,
+          "degF": 270,
+          "degV": 270,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 270,
+            "deg rad": 270,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 277,
+          "degF": 276,
+          "degV": 276,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 276,
+            "deg rad": 276,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 281,
+          "degF": 280,
+          "degV": 280,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 280,
+            "deg rad": 280,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 283,
+          "degF": 282,
+          "degV": 282,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 282,
+            "deg rad": 282,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 293,
+          "degF": 292,
+          "degV": 292,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 292,
+            "deg rad": 292,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 307,
+          "degF": 306,
+          "degV": 306,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 306,
+            "deg rad": 306,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 311,
+          "degF": 310,
+          "degV": 310,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 310,
+            "deg rad": 310,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 313,
+          "degF": 312,
+          "degV": 312,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 312,
+            "deg rad": 312,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 317,
+          "degF": 316,
+          "degV": 316,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 316,
+            "deg rad": 316,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 331,
+          "degF": 330,
+          "degV": 330,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 330,
+            "deg rad": 330,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 337,
+          "degF": 336,
+          "degV": 336,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 336,
+            "deg rad": 336,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 347,
+          "degF": 346,
+          "degV": 346,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 346,
+            "deg rad": 346,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 349,
+          "degF": 348,
+          "degV": 348,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 348,
+            "deg rad": 348,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 353,
+          "degF": 352,
+          "degV": 352,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 352,
+            "deg rad": 352,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 359,
+          "degF": 358,
+          "degV": 358,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 358,
+            "deg rad": 358,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 367,
+          "degF": 366,
+          "degV": 366,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 366,
+            "deg rad": 366,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 373,
+          "degF": 372,
+          "degV": 372,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 372,
+            "deg rad": 372,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 379,
+          "degF": 378,
+          "degV": 378,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 378,
+            "deg rad": 378,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 383,
+          "degF": 382,
+          "degV": 382,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 382,
+            "deg rad": 382,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 389,
+          "degF": 388,
+          "degV": 388,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 388,
+            "deg rad": 388,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 397,
+          "degF": 396,
+          "degV": 396,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 396,
+            "deg rad": 396,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        }
+      ]
+    },
+    "B": {
+      "parameters": [
+        9,
+        3,
+        27
+      ],
+      "discriminant": -27,
+      "rows": [
+        {
+          "p": 7,
+          "degF": 6,
+          "degV": 6,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 6,
+            "deg rad": 6,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 11,
+          "degF": 10,
+          "degV": 9,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 10,
+            "deg rad": 10,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 13,
+          "degF": 12,
+          "degV": 12,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 12,
+            "deg rad": 12,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 17,
+          "degF": 16,
+          "degV": 16,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 16,
+            "deg rad": 16,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 19,
+          "degF": 18,
+          "degV": 18,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 18,
+            "deg rad": 18,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 23,
+          "degF": 22,
+          "degV": 22,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 22,
+            "deg rad": 22,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 29,
+          "degF": 28,
+          "degV": 28,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 28,
+            "deg rad": 28,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 31,
+          "degF": 30,
+          "degV": 30,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 30,
+            "deg rad": 30,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 37,
+          "degF": 36,
+          "degV": 36,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 36,
+            "deg rad": 36,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 41,
+          "degF": 40,
+          "degV": 40,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 40,
+            "deg rad": 40,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 43,
+          "degF": 42,
+          "degV": 42,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 42,
+            "deg rad": 42,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 47,
+          "degF": 46,
+          "degV": 46,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 46,
+            "deg rad": 46,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 53,
+          "degF": 52,
+          "degV": 52,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 52,
+            "deg rad": 52,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 59,
+          "degF": 58,
+          "degV": 58,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 58,
+            "deg rad": 58,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 61,
+          "degF": 60,
+          "degV": 60,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 60,
+            "deg rad": 60,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 67,
+          "degF": 66,
+          "degV": 66,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 66,
+            "deg rad": 66,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 71,
+          "degF": 70,
+          "degV": 70,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 70,
+            "deg rad": 70,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 73,
+          "degF": 72,
+          "degV": 72,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 72,
+            "deg rad": 72,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 79,
+          "degF": 78,
+          "degV": 78,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 78,
+            "deg rad": 78,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 83,
+          "degF": 82,
+          "degV": 82,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 82,
+            "deg rad": 82,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 89,
+          "degF": 88,
+          "degV": 88,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 88,
+            "deg rad": 88,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 97,
+          "degF": 96,
+          "degV": 96,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 96,
+            "deg rad": 96,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 101,
+          "degF": 100,
+          "degV": 100,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 100,
+            "deg rad": 100,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 103,
+          "degF": 102,
+          "degV": 102,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 102,
+            "deg rad": 102,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 107,
+          "degF": 106,
+          "degV": 106,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 106,
+            "deg rad": 106,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 109,
+          "degF": 108,
+          "degV": 108,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 108,
+            "deg rad": 108,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 113,
+          "degF": 112,
+          "degV": 112,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 112,
+            "deg rad": 112,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 127,
+          "degF": 126,
+          "degV": 126,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 126,
+            "deg rad": 126,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 131,
+          "degF": 130,
+          "degV": 130,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 130,
+            "deg rad": 130,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 137,
+          "degF": 136,
+          "degV": 136,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 136,
+            "deg rad": 136,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 139,
+          "degF": 138,
+          "degV": 138,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 138,
+            "deg rad": 138,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 149,
+          "degF": 148,
+          "degV": 148,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 148,
+            "deg rad": 148,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 151,
+          "degF": 150,
+          "degV": 150,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 150,
+            "deg rad": 150,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 157,
+          "degF": 156,
+          "degV": 156,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 156,
+            "deg rad": 156,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 163,
+          "degF": 162,
+          "degV": 162,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 162,
+            "deg rad": 162,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 167,
+          "degF": 166,
+          "degV": 166,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 166,
+            "deg rad": 166,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 173,
+          "degF": 172,
+          "degV": 172,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 172,
+            "deg rad": 172,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 179,
+          "degF": 178,
+          "degV": 178,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 178,
+            "deg rad": 178,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 181,
+          "degF": 180,
+          "degV": 180,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 180,
+            "deg rad": 180,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 191,
+          "degF": 190,
+          "degV": 190,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 190,
+            "deg rad": 190,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 193,
+          "degF": 192,
+          "degV": 192,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 192,
+            "deg rad": 192,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 197,
+          "degF": 196,
+          "degV": 196,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 196,
+            "deg rad": 196,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 199,
+          "degF": 198,
+          "degV": 198,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 198,
+            "deg rad": 198,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 211,
+          "degF": 210,
+          "degV": 210,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 210,
+            "deg rad": 210,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 223,
+          "degF": 222,
+          "degV": 222,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 222,
+            "deg rad": 222,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 227,
+          "degF": 226,
+          "degV": 226,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 226,
+            "deg rad": 226,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 229,
+          "degF": 228,
+          "degV": 228,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 228,
+            "deg rad": 228,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 233,
+          "degF": 232,
+          "degV": 232,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 232,
+            "deg rad": 232,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 239,
+          "degF": 238,
+          "degV": 238,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 238,
+            "deg rad": 238,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 241,
+          "degF": 240,
+          "degV": 240,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 240,
+            "deg rad": 240,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 251,
+          "degF": 250,
+          "degV": 250,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 250,
+            "deg rad": 250,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 257,
+          "degF": 256,
+          "degV": 256,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 256,
+            "deg rad": 256,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 263,
+          "degF": 262,
+          "degV": 262,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 262,
+            "deg rad": 262,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 269,
+          "degF": 268,
+          "degV": 268,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 268,
+            "deg rad": 268,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 271,
+          "degF": 270,
+          "degV": 270,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 270,
+            "deg rad": 270,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 277,
+          "degF": 276,
+          "degV": 276,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 276,
+            "deg rad": 276,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 281,
+          "degF": 280,
+          "degV": 280,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 280,
+            "deg rad": 280,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 283,
+          "degF": 282,
+          "degV": 282,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 282,
+            "deg rad": 282,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 293,
+          "degF": 292,
+          "degV": 292,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 292,
+            "deg rad": 292,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 307,
+          "degF": 306,
+          "degV": 306,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 306,
+            "deg rad": 306,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 311,
+          "degF": 310,
+          "degV": 310,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 310,
+            "deg rad": 310,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 313,
+          "degF": 312,
+          "degV": 312,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 312,
+            "deg rad": 312,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 317,
+          "degF": 316,
+          "degV": 316,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 316,
+            "deg rad": 316,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 331,
+          "degF": 330,
+          "degV": 330,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 330,
+            "deg rad": 330,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 337,
+          "degF": 336,
+          "degV": 336,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 336,
+            "deg rad": 336,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 347,
+          "degF": 346,
+          "degV": 346,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 346,
+            "deg rad": 346,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 349,
+          "degF": 348,
+          "degV": 348,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 348,
+            "deg rad": 348,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 353,
+          "degF": 352,
+          "degV": 352,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 352,
+            "deg rad": 352,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 359,
+          "degF": 358,
+          "degV": 358,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 358,
+            "deg rad": 358,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 367,
+          "degF": 366,
+          "degV": 366,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 366,
+            "deg rad": 366,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 373,
+          "degF": 372,
+          "degV": 372,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 372,
+            "deg rad": 372,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 379,
+          "degF": 378,
+          "degV": 378,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 378,
+            "deg rad": 378,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 383,
+          "degF": 382,
+          "degV": 382,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 382,
+            "deg rad": 382,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 389,
+          "degF": 388,
+          "degV": 388,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 388,
+            "deg rad": 388,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 397,
+          "degF": 396,
+          "degV": 396,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 396,
+            "deg rad": 396,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        }
+      ]
+    },
+    "C": {
+      "parameters": [
+        10,
+        3,
+        9
+      ],
+      "discriminant": 64,
+      "rows": [
+        {
+          "p": 7,
+          "degF": 6,
+          "degV": 6,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 6,
+            "deg rad": 6,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 11,
+          "degF": 10,
+          "degV": 9,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 10,
+            "deg rad": 10,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 13,
+          "degF": 12,
+          "degV": 12,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 12,
+            "deg rad": 12,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 17,
+          "degF": 16,
+          "degV": 16,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 16,
+            "deg rad": 16,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 19,
+          "degF": 18,
+          "degV": 18,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 18,
+            "deg rad": 18,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 23,
+          "degF": 22,
+          "degV": 22,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 22,
+            "deg rad": 22,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 29,
+          "degF": 28,
+          "degV": 28,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 28,
+            "deg rad": 28,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 31,
+          "degF": 30,
+          "degV": 30,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 30,
+            "deg rad": 30,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 37,
+          "degF": 36,
+          "degV": 36,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 36,
+            "deg rad": 36,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 41,
+          "degF": 40,
+          "degV": 40,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 40,
+            "deg rad": 40,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 43,
+          "degF": 42,
+          "degV": 42,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 42,
+            "deg rad": 42,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 47,
+          "degF": 46,
+          "degV": 46,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 46,
+            "deg rad": 46,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 53,
+          "degF": 52,
+          "degV": 52,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 52,
+            "deg rad": 52,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 59,
+          "degF": 58,
+          "degV": 58,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 58,
+            "deg rad": 58,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 61,
+          "degF": 60,
+          "degV": 60,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 60,
+            "deg rad": 60,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 67,
+          "degF": 66,
+          "degV": 66,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 66,
+            "deg rad": 66,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 71,
+          "degF": 70,
+          "degV": 70,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 70,
+            "deg rad": 70,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 73,
+          "degF": 72,
+          "degV": 72,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 72,
+            "deg rad": 72,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 79,
+          "degF": 78,
+          "degV": 78,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 78,
+            "deg rad": 78,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 83,
+          "degF": 82,
+          "degV": 82,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 82,
+            "deg rad": 82,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 89,
+          "degF": 88,
+          "degV": 88,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 88,
+            "deg rad": 88,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 97,
+          "degF": 96,
+          "degV": 96,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 96,
+            "deg rad": 96,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 101,
+          "degF": 100,
+          "degV": 100,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 100,
+            "deg rad": 100,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 103,
+          "degF": 102,
+          "degV": 102,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 102,
+            "deg rad": 102,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 107,
+          "degF": 106,
+          "degV": 106,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 106,
+            "deg rad": 106,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 109,
+          "degF": 108,
+          "degV": 108,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 108,
+            "deg rad": 108,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 113,
+          "degF": 112,
+          "degV": 112,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 112,
+            "deg rad": 112,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 127,
+          "degF": 126,
+          "degV": 126,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 126,
+            "deg rad": 126,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 131,
+          "degF": 130,
+          "degV": 130,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 130,
+            "deg rad": 130,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 137,
+          "degF": 136,
+          "degV": 136,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 136,
+            "deg rad": 136,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 139,
+          "degF": 138,
+          "degV": 138,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 138,
+            "deg rad": 138,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 149,
+          "degF": 148,
+          "degV": 148,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 148,
+            "deg rad": 148,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 151,
+          "degF": 150,
+          "degV": 150,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 150,
+            "deg rad": 150,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 157,
+          "degF": 156,
+          "degV": 156,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 156,
+            "deg rad": 156,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 163,
+          "degF": 162,
+          "degV": 162,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 162,
+            "deg rad": 162,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 167,
+          "degF": 166,
+          "degV": 166,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 166,
+            "deg rad": 166,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 173,
+          "degF": 172,
+          "degV": 172,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 172,
+            "deg rad": 172,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 179,
+          "degF": 178,
+          "degV": 178,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 178,
+            "deg rad": 178,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 181,
+          "degF": 180,
+          "degV": 180,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 180,
+            "deg rad": 180,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 191,
+          "degF": 190,
+          "degV": 190,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 190,
+            "deg rad": 190,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 193,
+          "degF": 192,
+          "degV": 192,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 192,
+            "deg rad": 192,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 197,
+          "degF": 196,
+          "degV": 196,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 196,
+            "deg rad": 196,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 199,
+          "degF": 198,
+          "degV": 198,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 198,
+            "deg rad": 198,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 211,
+          "degF": 210,
+          "degV": 210,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 210,
+            "deg rad": 210,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 223,
+          "degF": 222,
+          "degV": 222,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 222,
+            "deg rad": 222,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 227,
+          "degF": 226,
+          "degV": 226,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 226,
+            "deg rad": 226,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 229,
+          "degF": 228,
+          "degV": 228,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 228,
+            "deg rad": 228,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 233,
+          "degF": 232,
+          "degV": 232,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 232,
+            "deg rad": 232,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 239,
+          "degF": 238,
+          "degV": 238,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 238,
+            "deg rad": 238,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 241,
+          "degF": 240,
+          "degV": 240,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 240,
+            "deg rad": 240,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 251,
+          "degF": 250,
+          "degV": 250,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 250,
+            "deg rad": 250,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 257,
+          "degF": 256,
+          "degV": 256,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 256,
+            "deg rad": 256,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 263,
+          "degF": 262,
+          "degV": 262,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 262,
+            "deg rad": 262,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 269,
+          "degF": 268,
+          "degV": 268,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 268,
+            "deg rad": 268,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 271,
+          "degF": 270,
+          "degV": 270,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 270,
+            "deg rad": 270,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 277,
+          "degF": 276,
+          "degV": 276,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 276,
+            "deg rad": 276,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 281,
+          "degF": 280,
+          "degV": 280,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 280,
+            "deg rad": 280,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 283,
+          "degF": 282,
+          "degV": 282,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 282,
+            "deg rad": 282,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 293,
+          "degF": 292,
+          "degV": 292,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 292,
+            "deg rad": 292,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 307,
+          "degF": 306,
+          "degV": 306,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 306,
+            "deg rad": 306,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 311,
+          "degF": 310,
+          "degV": 310,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 310,
+            "deg rad": 310,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 313,
+          "degF": 312,
+          "degV": 312,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 312,
+            "deg rad": 312,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 317,
+          "degF": 316,
+          "degV": 316,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 316,
+            "deg rad": 316,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 331,
+          "degF": 330,
+          "degV": 330,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 330,
+            "deg rad": 330,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 337,
+          "degF": 336,
+          "degV": 336,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 336,
+            "deg rad": 336,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 347,
+          "degF": 346,
+          "degV": 346,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 346,
+            "deg rad": 346,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 349,
+          "degF": 348,
+          "degV": 348,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 348,
+            "deg rad": 348,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 353,
+          "degF": 352,
+          "degV": 352,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 352,
+            "deg rad": 352,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 359,
+          "degF": 358,
+          "degV": 358,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 358,
+            "deg rad": 358,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 367,
+          "degF": 366,
+          "degV": 366,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 366,
+            "deg rad": 366,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 373,
+          "degF": 372,
+          "degV": 372,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 372,
+            "deg rad": 372,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 379,
+          "degF": 378,
+          "degV": 378,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 378,
+            "deg rad": 378,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 383,
+          "degF": 382,
+          "degV": 382,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 382,
+            "deg rad": 382,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 389,
+          "degF": 388,
+          "degV": 388,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 388,
+            "deg rad": 388,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 397,
+          "degF": 396,
+          "degV": 396,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 396,
+            "deg rad": 396,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        }
+      ]
+    },
+    "D": {
+      "parameters": [
+        11,
+        3,
+        -1
+      ],
+      "discriminant": 125,
+      "rows": [
+        {
+          "p": 7,
+          "degF": 6,
+          "degV": 5,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 6,
+            "deg rad": 6,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 11,
+          "degF": 10,
+          "degV": 9,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 10,
+            "deg rad": 10,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 13,
+          "degF": 12,
+          "degV": 11,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 12,
+            "deg rad": 12,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 17,
+          "degF": 16,
+          "degV": 15,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 16,
+            "deg rad": 16,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 19,
+          "degF": 18,
+          "degV": 17,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 18,
+            "deg rad": 18,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 23,
+          "degF": 22,
+          "degV": 21,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 22,
+            "deg rad": 22,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 29,
+          "degF": 28,
+          "degV": 27,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 28,
+            "deg rad": 28,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 31,
+          "degF": 30,
+          "degV": 29,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 30,
+            "deg rad": 30,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 37,
+          "degF": 36,
+          "degV": 35,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 36,
+            "deg rad": 36,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 41,
+          "degF": 40,
+          "degV": 39,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 40,
+            "deg rad": 40,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 43,
+          "degF": 42,
+          "degV": 41,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 42,
+            "deg rad": 42,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 47,
+          "degF": 46,
+          "degV": 45,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 46,
+            "deg rad": 46,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 53,
+          "degF": 52,
+          "degV": 51,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 52,
+            "deg rad": 52,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 59,
+          "degF": 58,
+          "degV": 57,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 58,
+            "deg rad": 58,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 61,
+          "degF": 60,
+          "degV": 59,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 60,
+            "deg rad": 60,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 67,
+          "degF": 66,
+          "degV": 65,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 66,
+            "deg rad": 66,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 71,
+          "degF": 70,
+          "degV": 69,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 70,
+            "deg rad": 70,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 73,
+          "degF": 72,
+          "degV": 71,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 72,
+            "deg rad": 72,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 79,
+          "degF": 78,
+          "degV": 77,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 78,
+            "deg rad": 78,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 83,
+          "degF": 82,
+          "degV": 81,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 82,
+            "deg rad": 82,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 89,
+          "degF": 88,
+          "degV": 87,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 88,
+            "deg rad": 88,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 97,
+          "degF": 96,
+          "degV": 95,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 96,
+            "deg rad": 96,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 101,
+          "degF": 100,
+          "degV": 99,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 100,
+            "deg rad": 100,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 103,
+          "degF": 102,
+          "degV": 101,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 102,
+            "deg rad": 102,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 107,
+          "degF": 106,
+          "degV": 105,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 106,
+            "deg rad": 106,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 109,
+          "degF": 108,
+          "degV": 107,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 108,
+            "deg rad": 108,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 113,
+          "degF": 112,
+          "degV": 111,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 112,
+            "deg rad": 112,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 127,
+          "degF": 126,
+          "degV": 125,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 126,
+            "deg rad": 126,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 131,
+          "degF": 130,
+          "degV": 129,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 130,
+            "deg rad": 130,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 137,
+          "degF": 136,
+          "degV": 135,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 136,
+            "deg rad": 136,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 139,
+          "degF": 138,
+          "degV": 137,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 138,
+            "deg rad": 138,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 149,
+          "degF": 148,
+          "degV": 147,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 148,
+            "deg rad": 148,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 151,
+          "degF": 150,
+          "degV": 149,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 150,
+            "deg rad": 150,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 157,
+          "degF": 156,
+          "degV": 155,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 156,
+            "deg rad": 156,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 163,
+          "degF": 162,
+          "degV": 161,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 162,
+            "deg rad": 162,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 167,
+          "degF": 166,
+          "degV": 165,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 166,
+            "deg rad": 166,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 173,
+          "degF": 172,
+          "degV": 171,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 172,
+            "deg rad": 172,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 179,
+          "degF": 178,
+          "degV": 177,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 178,
+            "deg rad": 178,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 181,
+          "degF": 180,
+          "degV": 179,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 180,
+            "deg rad": 180,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 191,
+          "degF": 190,
+          "degV": 189,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 190,
+            "deg rad": 190,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 193,
+          "degF": 192,
+          "degV": 191,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 192,
+            "deg rad": 192,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 197,
+          "degF": 196,
+          "degV": 195,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 196,
+            "deg rad": 196,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 199,
+          "degF": 198,
+          "degV": 197,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 198,
+            "deg rad": 198,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 211,
+          "degF": 210,
+          "degV": 209,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 210,
+            "deg rad": 210,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 223,
+          "degF": 222,
+          "degV": 221,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 222,
+            "deg rad": 222,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 227,
+          "degF": 226,
+          "degV": 225,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 226,
+            "deg rad": 226,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 229,
+          "degF": 228,
+          "degV": 227,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 228,
+            "deg rad": 228,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 233,
+          "degF": 232,
+          "degV": 231,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 232,
+            "deg rad": 232,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 239,
+          "degF": 238,
+          "degV": 237,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 238,
+            "deg rad": 238,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 241,
+          "degF": 240,
+          "degV": 239,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 240,
+            "deg rad": 240,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 251,
+          "degF": 250,
+          "degV": 249,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 250,
+            "deg rad": 250,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 257,
+          "degF": 256,
+          "degV": 255,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 256,
+            "deg rad": 256,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 263,
+          "degF": 262,
+          "degV": 261,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 262,
+            "deg rad": 262,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 269,
+          "degF": 268,
+          "degV": 267,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 268,
+            "deg rad": 268,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 271,
+          "degF": 270,
+          "degV": 269,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 270,
+            "deg rad": 270,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 277,
+          "degF": 276,
+          "degV": 275,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 276,
+            "deg rad": 276,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 281,
+          "degF": 280,
+          "degV": 279,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 280,
+            "deg rad": 280,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 283,
+          "degF": 282,
+          "degV": 281,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 282,
+            "deg rad": 282,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 293,
+          "degF": 292,
+          "degV": 291,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 292,
+            "deg rad": 292,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 307,
+          "degF": 306,
+          "degV": 305,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 306,
+            "deg rad": 306,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 311,
+          "degF": 310,
+          "degV": 309,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 310,
+            "deg rad": 310,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 313,
+          "degF": 312,
+          "degV": 311,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 312,
+            "deg rad": 312,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 317,
+          "degF": 316,
+          "degV": 315,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 316,
+            "deg rad": 316,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 331,
+          "degF": 330,
+          "degV": 329,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 330,
+            "deg rad": 330,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 337,
+          "degF": 336,
+          "degV": 335,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 336,
+            "deg rad": 336,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 347,
+          "degF": 346,
+          "degV": 345,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 346,
+            "deg rad": 346,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 349,
+          "degF": 348,
+          "degV": 347,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 348,
+            "deg rad": 348,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 353,
+          "degF": 352,
+          "degV": 351,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 352,
+            "deg rad": 352,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 359,
+          "degF": 358,
+          "degV": 357,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 358,
+            "deg rad": 358,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 367,
+          "degF": 366,
+          "degV": 365,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 366,
+            "deg rad": 366,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 373,
+          "degF": 372,
+          "degV": 371,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 372,
+            "deg rad": 372,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 379,
+          "degF": 378,
+          "degV": 377,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 378,
+            "deg rad": 378,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 383,
+          "degF": 382,
+          "degV": 381,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 382,
+            "deg rad": 382,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 389,
+          "degF": 388,
+          "degV": 387,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 388,
+            "deg rad": 388,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 397,
+          "degF": 396,
+          "degV": 395,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 396,
+            "deg rad": 396,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        }
+      ]
+    },
+    "E": {
+      "parameters": [
+        12,
+        4,
+        32
+      ],
+      "discriminant": 16,
+      "rows": [
+        {
+          "p": 7,
+          "degF": 6,
+          "degV": 6,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 6,
+            "deg rad": 6,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 11,
+          "degF": 10,
+          "degV": 10,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 10,
+            "deg rad": 10,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 13,
+          "degF": 12,
+          "degV": 12,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 12,
+            "deg rad": 12,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 17,
+          "degF": 16,
+          "degV": 16,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 16,
+            "deg rad": 16,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 19,
+          "degF": 18,
+          "degV": 18,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 18,
+            "deg rad": 18,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 23,
+          "degF": 22,
+          "degV": 22,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 22,
+            "deg rad": 22,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 29,
+          "degF": 28,
+          "degV": 28,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 28,
+            "deg rad": 28,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 31,
+          "degF": 30,
+          "degV": 30,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 30,
+            "deg rad": 30,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 37,
+          "degF": 36,
+          "degV": 36,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 36,
+            "deg rad": 36,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 41,
+          "degF": 40,
+          "degV": 40,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 40,
+            "deg rad": 40,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 43,
+          "degF": 42,
+          "degV": 42,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 42,
+            "deg rad": 42,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 47,
+          "degF": 46,
+          "degV": 46,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 46,
+            "deg rad": 46,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 53,
+          "degF": 52,
+          "degV": 52,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 52,
+            "deg rad": 52,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 59,
+          "degF": 58,
+          "degV": 58,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 58,
+            "deg rad": 58,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 61,
+          "degF": 60,
+          "degV": 60,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 60,
+            "deg rad": 60,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 67,
+          "degF": 66,
+          "degV": 66,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 66,
+            "deg rad": 66,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 71,
+          "degF": 70,
+          "degV": 70,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 70,
+            "deg rad": 70,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 73,
+          "degF": 72,
+          "degV": 72,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 72,
+            "deg rad": 72,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 79,
+          "degF": 78,
+          "degV": 78,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 78,
+            "deg rad": 78,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 83,
+          "degF": 82,
+          "degV": 82,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 82,
+            "deg rad": 82,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 89,
+          "degF": 88,
+          "degV": 88,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 88,
+            "deg rad": 88,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 97,
+          "degF": 96,
+          "degV": 96,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 96,
+            "deg rad": 96,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 101,
+          "degF": 100,
+          "degV": 100,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 100,
+            "deg rad": 100,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 103,
+          "degF": 102,
+          "degV": 102,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 102,
+            "deg rad": 102,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 107,
+          "degF": 106,
+          "degV": 106,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 106,
+            "deg rad": 106,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 109,
+          "degF": 108,
+          "degV": 108,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 108,
+            "deg rad": 108,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 113,
+          "degF": 112,
+          "degV": 112,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 112,
+            "deg rad": 112,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 127,
+          "degF": 126,
+          "degV": 126,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 126,
+            "deg rad": 126,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 131,
+          "degF": 130,
+          "degV": 130,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 130,
+            "deg rad": 130,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 137,
+          "degF": 136,
+          "degV": 136,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 136,
+            "deg rad": 136,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 139,
+          "degF": 138,
+          "degV": 138,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 138,
+            "deg rad": 138,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 149,
+          "degF": 148,
+          "degV": 148,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 148,
+            "deg rad": 148,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 151,
+          "degF": 150,
+          "degV": 150,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 150,
+            "deg rad": 150,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 157,
+          "degF": 156,
+          "degV": 156,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 156,
+            "deg rad": 156,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 163,
+          "degF": 162,
+          "degV": 162,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 162,
+            "deg rad": 162,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 167,
+          "degF": 166,
+          "degV": 166,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 166,
+            "deg rad": 166,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 173,
+          "degF": 172,
+          "degV": 172,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 172,
+            "deg rad": 172,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 179,
+          "degF": 178,
+          "degV": 178,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 178,
+            "deg rad": 178,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 181,
+          "degF": 180,
+          "degV": 180,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 180,
+            "deg rad": 180,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 191,
+          "degF": 190,
+          "degV": 190,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 190,
+            "deg rad": 190,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 193,
+          "degF": 192,
+          "degV": 192,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 192,
+            "deg rad": 192,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 197,
+          "degF": 196,
+          "degV": 196,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 196,
+            "deg rad": 196,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 199,
+          "degF": 198,
+          "degV": 198,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 198,
+            "deg rad": 198,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 211,
+          "degF": 210,
+          "degV": 210,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 210,
+            "deg rad": 210,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 223,
+          "degF": 222,
+          "degV": 222,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 222,
+            "deg rad": 222,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 227,
+          "degF": 226,
+          "degV": 226,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 226,
+            "deg rad": 226,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 229,
+          "degF": 228,
+          "degV": 228,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 228,
+            "deg rad": 228,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 233,
+          "degF": 232,
+          "degV": 232,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 232,
+            "deg rad": 232,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 239,
+          "degF": 238,
+          "degV": 238,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 238,
+            "deg rad": 238,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 241,
+          "degF": 240,
+          "degV": 240,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 240,
+            "deg rad": 240,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 251,
+          "degF": 250,
+          "degV": 250,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 250,
+            "deg rad": 250,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 257,
+          "degF": 256,
+          "degV": 256,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 256,
+            "deg rad": 256,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 263,
+          "degF": 262,
+          "degV": 262,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 262,
+            "deg rad": 262,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 269,
+          "degF": 268,
+          "degV": 268,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 268,
+            "deg rad": 268,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 271,
+          "degF": 270,
+          "degV": 270,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 270,
+            "deg rad": 270,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 277,
+          "degF": 276,
+          "degV": 276,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 276,
+            "deg rad": 276,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 281,
+          "degF": 280,
+          "degV": 280,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 280,
+            "deg rad": 280,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 283,
+          "degF": 282,
+          "degV": 282,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 282,
+            "deg rad": 282,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 293,
+          "degF": 292,
+          "degV": 292,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 292,
+            "deg rad": 292,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 307,
+          "degF": 306,
+          "degV": 306,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 306,
+            "deg rad": 306,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 311,
+          "degF": 310,
+          "degV": 310,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 310,
+            "deg rad": 310,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 313,
+          "degF": 312,
+          "degV": 312,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 312,
+            "deg rad": 312,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 317,
+          "degF": 316,
+          "degV": 316,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 316,
+            "deg rad": 316,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 331,
+          "degF": 330,
+          "degV": 330,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 330,
+            "deg rad": 330,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 337,
+          "degF": 336,
+          "degV": 336,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 336,
+            "deg rad": 336,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 347,
+          "degF": 346,
+          "degV": 346,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 346,
+            "deg rad": 346,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 349,
+          "degF": 348,
+          "degV": 348,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 348,
+            "deg rad": 348,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 353,
+          "degF": 352,
+          "degV": 352,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 352,
+            "deg rad": 352,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 359,
+          "degF": 358,
+          "degV": 358,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 358,
+            "deg rad": 358,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 367,
+          "degF": 366,
+          "degV": 366,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 366,
+            "deg rad": 366,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 373,
+          "degF": 372,
+          "degV": 372,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 372,
+            "deg rad": 372,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 379,
+          "degF": 378,
+          "degV": 378,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 378,
+            "deg rad": 378,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 383,
+          "degF": 382,
+          "degV": 382,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 382,
+            "deg rad": 382,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 389,
+          "degF": 388,
+          "degV": 388,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 388,
+            "deg rad": 388,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 397,
+          "degF": 396,
+          "degV": 396,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 396,
+            "deg rad": 396,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        }
+      ]
+    },
+    "F": {
+      "parameters": [
+        17,
+        6,
+        72
+      ],
+      "discriminant": 1,
+      "rows": [
+        {
+          "p": 7,
+          "degF": 6,
+          "degV": 6,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 6,
+            "deg rad": 6,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 11,
+          "degF": 10,
+          "degV": 10,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 10,
+            "deg rad": 10,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 13,
+          "degF": 12,
+          "degV": 12,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 12,
+            "deg rad": 12,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 17,
+          "degF": 16,
+          "degV": 16,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 16,
+            "deg rad": 16,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 19,
+          "degF": 18,
+          "degV": 18,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 18,
+            "deg rad": 18,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 23,
+          "degF": 22,
+          "degV": 22,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 22,
+            "deg rad": 22,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 29,
+          "degF": 28,
+          "degV": 28,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 28,
+            "deg rad": 28,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 31,
+          "degF": 30,
+          "degV": 30,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 30,
+            "deg rad": 30,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 37,
+          "degF": 36,
+          "degV": 36,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 36,
+            "deg rad": 36,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 41,
+          "degF": 40,
+          "degV": 40,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 40,
+            "deg rad": 40,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 43,
+          "degF": 42,
+          "degV": 42,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 42,
+            "deg rad": 42,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 47,
+          "degF": 46,
+          "degV": 46,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 46,
+            "deg rad": 46,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 53,
+          "degF": 52,
+          "degV": 52,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 52,
+            "deg rad": 52,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 59,
+          "degF": 58,
+          "degV": 58,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 58,
+            "deg rad": 58,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 61,
+          "degF": 60,
+          "degV": 60,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 60,
+            "deg rad": 60,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 67,
+          "degF": 66,
+          "degV": 66,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 66,
+            "deg rad": 66,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 71,
+          "degF": 70,
+          "degV": 70,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 70,
+            "deg rad": 70,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 73,
+          "degF": 72,
+          "degV": 72,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 72,
+            "deg rad": 72,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 79,
+          "degF": 78,
+          "degV": 78,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 78,
+            "deg rad": 78,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 83,
+          "degF": 82,
+          "degV": 82,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 82,
+            "deg rad": 82,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 89,
+          "degF": 88,
+          "degV": 88,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 88,
+            "deg rad": 88,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 97,
+          "degF": 96,
+          "degV": 96,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 96,
+            "deg rad": 96,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 101,
+          "degF": 100,
+          "degV": 100,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 100,
+            "deg rad": 100,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 103,
+          "degF": 102,
+          "degV": 102,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 102,
+            "deg rad": 102,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 107,
+          "degF": 106,
+          "degV": 106,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 106,
+            "deg rad": 106,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 109,
+          "degF": 108,
+          "degV": 108,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 108,
+            "deg rad": 108,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 113,
+          "degF": 112,
+          "degV": 112,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 112,
+            "deg rad": 112,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 127,
+          "degF": 126,
+          "degV": 126,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 126,
+            "deg rad": 126,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 131,
+          "degF": 130,
+          "degV": 130,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 130,
+            "deg rad": 130,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 137,
+          "degF": 136,
+          "degV": 136,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 136,
+            "deg rad": 136,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 139,
+          "degF": 138,
+          "degV": 138,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 138,
+            "deg rad": 138,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 149,
+          "degF": 148,
+          "degV": 148,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 148,
+            "deg rad": 148,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 151,
+          "degF": 150,
+          "degV": 150,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 150,
+            "deg rad": 150,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 157,
+          "degF": 156,
+          "degV": 156,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 156,
+            "deg rad": 156,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 163,
+          "degF": 162,
+          "degV": 162,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 162,
+            "deg rad": 162,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 167,
+          "degF": 166,
+          "degV": 166,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 166,
+            "deg rad": 166,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 173,
+          "degF": 172,
+          "degV": 172,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 172,
+            "deg rad": 172,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 179,
+          "degF": 178,
+          "degV": 178,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 178,
+            "deg rad": 178,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 181,
+          "degF": 180,
+          "degV": 180,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 180,
+            "deg rad": 180,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 191,
+          "degF": 190,
+          "degV": 190,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 190,
+            "deg rad": 190,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 193,
+          "degF": 192,
+          "degV": 192,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 192,
+            "deg rad": 192,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 197,
+          "degF": 196,
+          "degV": 196,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 196,
+            "deg rad": 196,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 199,
+          "degF": 198,
+          "degV": 198,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 198,
+            "deg rad": 198,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 211,
+          "degF": 210,
+          "degV": 210,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 210,
+            "deg rad": 210,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 223,
+          "degF": 222,
+          "degV": 222,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 222,
+            "deg rad": 222,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 227,
+          "degF": 226,
+          "degV": 226,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 226,
+            "deg rad": 226,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 229,
+          "degF": 228,
+          "degV": 228,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 228,
+            "deg rad": 228,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 233,
+          "degF": 232,
+          "degV": 232,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 232,
+            "deg rad": 232,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 239,
+          "degF": 238,
+          "degV": 238,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 238,
+            "deg rad": 238,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 241,
+          "degF": 240,
+          "degV": 240,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 240,
+            "deg rad": 240,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 251,
+          "degF": 250,
+          "degV": 250,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 250,
+            "deg rad": 250,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 257,
+          "degF": 256,
+          "degV": 256,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 256,
+            "deg rad": 256,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 263,
+          "degF": 262,
+          "degV": 262,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 262,
+            "deg rad": 262,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 269,
+          "degF": 268,
+          "degV": 268,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 268,
+            "deg rad": 268,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 271,
+          "degF": 270,
+          "degV": 270,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 270,
+            "deg rad": 270,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 277,
+          "degF": 276,
+          "degV": 276,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 276,
+            "deg rad": 276,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 281,
+          "degF": 280,
+          "degV": 280,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 280,
+            "deg rad": 280,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 283,
+          "degF": 282,
+          "degV": 282,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 282,
+            "deg rad": 282,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 293,
+          "degF": 292,
+          "degV": 292,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 292,
+            "deg rad": 292,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 307,
+          "degF": 306,
+          "degV": 306,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 306,
+            "deg rad": 306,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 311,
+          "degF": 310,
+          "degV": 310,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 310,
+            "deg rad": 310,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 313,
+          "degF": 312,
+          "degV": 312,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 312,
+            "deg rad": 312,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 317,
+          "degF": 316,
+          "degV": 316,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 316,
+            "deg rad": 316,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 331,
+          "degF": 330,
+          "degV": 330,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 330,
+            "deg rad": 330,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 337,
+          "degF": 336,
+          "degV": 336,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 336,
+            "deg rad": 336,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 347,
+          "degF": 346,
+          "degV": 346,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 346,
+            "deg rad": 346,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 349,
+          "degF": 348,
+          "degV": 348,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 348,
+            "deg rad": 348,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 353,
+          "degF": 352,
+          "degV": 352,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 352,
+            "deg rad": 352,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 359,
+          "degF": 358,
+          "degV": 358,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 358,
+            "deg rad": 358,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 367,
+          "degF": 366,
+          "degV": 366,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 366,
+            "deg rad": 366,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 373,
+          "degF": 372,
+          "degV": 372,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 372,
+            "deg rad": 372,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 379,
+          "degF": 378,
+          "degV": 378,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 378,
+            "deg rad": 378,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 383,
+          "degF": 382,
+          "degV": 382,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 382,
+            "deg rad": 382,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 389,
+          "degF": 388,
+          "degV": 388,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 388,
+            "deg rad": 388,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        },
+        {
+          "p": 397,
+          "degF": 396,
+          "degV": 396,
+          "Lf_zero": true,
+          "Lg_exact": true,
+          "hR_equals_h_frobenius": true,
+          "mechanism": {
+            "deg F": 396,
+            "deg rad": 396,
+            "rad|V": false,
+            "all roots multiple": false,
+            "squarefree": true,
+            "gcd(F,V)=1": true
+          }
+        }
+      ]
+    }
+  },
+  "hostile_controls": {
+    "Zagier_D_p5": {
+      "F_coefficients": [
+        1,
+        3,
+        4,
+        2,
+        1
+      ],
+      "h_factor": "(1+2x)^2",
+      "F_factor": "(1+2x)^4",
+      "mechanism": {
+        "deg F": 4,
+        "deg rad": 1,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    }
+  }
+}

@@ -1,0 +1,1790 @@
+{
+  "scope": "All odd primes 3<=p<=bound; direct integer binomial blocks and existing mechanism; not a proof.",
+  "bound": 397,
+  "hostile_controls": {
+    "zero_derivative_not_constant_p7": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      6
+    ],
+    "dropped_singular_prefactor_g_at_1_p7": 6
+  },
+  "rows": [
+    {
+      "p": 3,
+      "degree_f2": 1,
+      "degree_f3": 1,
+      "quarter": 3,
+      "degree_factor": 0,
+      "legendre": {
+        "deg F": 1,
+        "deg rad": 1,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 1,
+        "deg rad": 1,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 5,
+      "degree_f2": 2,
+      "degree_f3": 2,
+      "quarter": 1,
+      "degree_factor": 1,
+      "legendre": {
+        "deg F": 2,
+        "deg rad": 2,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 2,
+        "deg rad": 1,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 7,
+      "degree_f2": 3,
+      "degree_f3": 3,
+      "quarter": 3,
+      "degree_factor": 1,
+      "legendre": {
+        "deg F": 3,
+        "deg rad": 3,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 3,
+        "deg rad": 2,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 11,
+      "degree_f2": 5,
+      "degree_f3": 5,
+      "quarter": 3,
+      "degree_factor": 2,
+      "legendre": {
+        "deg F": 5,
+        "deg rad": 5,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 5,
+        "deg rad": 3,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 13,
+      "degree_f2": 6,
+      "degree_f3": 6,
+      "quarter": 1,
+      "degree_factor": 3,
+      "legendre": {
+        "deg F": 6,
+        "deg rad": 6,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 6,
+        "deg rad": 3,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 17,
+      "degree_f2": 8,
+      "degree_f3": 8,
+      "quarter": 1,
+      "degree_factor": 4,
+      "legendre": {
+        "deg F": 8,
+        "deg rad": 8,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 8,
+        "deg rad": 4,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 19,
+      "degree_f2": 9,
+      "degree_f3": 9,
+      "quarter": 3,
+      "degree_factor": 4,
+      "legendre": {
+        "deg F": 9,
+        "deg rad": 9,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 9,
+        "deg rad": 5,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 23,
+      "degree_f2": 11,
+      "degree_f3": 11,
+      "quarter": 3,
+      "degree_factor": 5,
+      "legendre": {
+        "deg F": 11,
+        "deg rad": 11,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 11,
+        "deg rad": 6,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 29,
+      "degree_f2": 14,
+      "degree_f3": 14,
+      "quarter": 1,
+      "degree_factor": 7,
+      "legendre": {
+        "deg F": 14,
+        "deg rad": 14,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 14,
+        "deg rad": 7,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 31,
+      "degree_f2": 15,
+      "degree_f3": 15,
+      "quarter": 3,
+      "degree_factor": 7,
+      "legendre": {
+        "deg F": 15,
+        "deg rad": 15,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 15,
+        "deg rad": 8,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 37,
+      "degree_f2": 18,
+      "degree_f3": 18,
+      "quarter": 1,
+      "degree_factor": 9,
+      "legendre": {
+        "deg F": 18,
+        "deg rad": 18,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 18,
+        "deg rad": 9,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 41,
+      "degree_f2": 20,
+      "degree_f3": 20,
+      "quarter": 1,
+      "degree_factor": 10,
+      "legendre": {
+        "deg F": 20,
+        "deg rad": 20,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 20,
+        "deg rad": 10,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 43,
+      "degree_f2": 21,
+      "degree_f3": 21,
+      "quarter": 3,
+      "degree_factor": 10,
+      "legendre": {
+        "deg F": 21,
+        "deg rad": 21,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 21,
+        "deg rad": 11,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 47,
+      "degree_f2": 23,
+      "degree_f3": 23,
+      "quarter": 3,
+      "degree_factor": 11,
+      "legendre": {
+        "deg F": 23,
+        "deg rad": 23,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 23,
+        "deg rad": 12,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 53,
+      "degree_f2": 26,
+      "degree_f3": 26,
+      "quarter": 1,
+      "degree_factor": 13,
+      "legendre": {
+        "deg F": 26,
+        "deg rad": 26,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 26,
+        "deg rad": 13,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 59,
+      "degree_f2": 29,
+      "degree_f3": 29,
+      "quarter": 3,
+      "degree_factor": 14,
+      "legendre": {
+        "deg F": 29,
+        "deg rad": 29,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 29,
+        "deg rad": 15,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 61,
+      "degree_f2": 30,
+      "degree_f3": 30,
+      "quarter": 1,
+      "degree_factor": 15,
+      "legendre": {
+        "deg F": 30,
+        "deg rad": 30,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 30,
+        "deg rad": 15,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 67,
+      "degree_f2": 33,
+      "degree_f3": 33,
+      "quarter": 3,
+      "degree_factor": 16,
+      "legendre": {
+        "deg F": 33,
+        "deg rad": 33,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 33,
+        "deg rad": 17,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 71,
+      "degree_f2": 35,
+      "degree_f3": 35,
+      "quarter": 3,
+      "degree_factor": 17,
+      "legendre": {
+        "deg F": 35,
+        "deg rad": 35,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 35,
+        "deg rad": 18,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 73,
+      "degree_f2": 36,
+      "degree_f3": 36,
+      "quarter": 1,
+      "degree_factor": 18,
+      "legendre": {
+        "deg F": 36,
+        "deg rad": 36,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 36,
+        "deg rad": 18,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 79,
+      "degree_f2": 39,
+      "degree_f3": 39,
+      "quarter": 3,
+      "degree_factor": 19,
+      "legendre": {
+        "deg F": 39,
+        "deg rad": 39,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 39,
+        "deg rad": 20,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 83,
+      "degree_f2": 41,
+      "degree_f3": 41,
+      "quarter": 3,
+      "degree_factor": 20,
+      "legendre": {
+        "deg F": 41,
+        "deg rad": 41,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 41,
+        "deg rad": 21,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 89,
+      "degree_f2": 44,
+      "degree_f3": 44,
+      "quarter": 1,
+      "degree_factor": 22,
+      "legendre": {
+        "deg F": 44,
+        "deg rad": 44,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 44,
+        "deg rad": 22,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 97,
+      "degree_f2": 48,
+      "degree_f3": 48,
+      "quarter": 1,
+      "degree_factor": 24,
+      "legendre": {
+        "deg F": 48,
+        "deg rad": 48,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 48,
+        "deg rad": 24,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 101,
+      "degree_f2": 50,
+      "degree_f3": 50,
+      "quarter": 1,
+      "degree_factor": 25,
+      "legendre": {
+        "deg F": 50,
+        "deg rad": 50,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 50,
+        "deg rad": 25,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 103,
+      "degree_f2": 51,
+      "degree_f3": 51,
+      "quarter": 3,
+      "degree_factor": 25,
+      "legendre": {
+        "deg F": 51,
+        "deg rad": 51,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 51,
+        "deg rad": 26,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 107,
+      "degree_f2": 53,
+      "degree_f3": 53,
+      "quarter": 3,
+      "degree_factor": 26,
+      "legendre": {
+        "deg F": 53,
+        "deg rad": 53,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 53,
+        "deg rad": 27,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 109,
+      "degree_f2": 54,
+      "degree_f3": 54,
+      "quarter": 1,
+      "degree_factor": 27,
+      "legendre": {
+        "deg F": 54,
+        "deg rad": 54,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 54,
+        "deg rad": 27,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 113,
+      "degree_f2": 56,
+      "degree_f3": 56,
+      "quarter": 1,
+      "degree_factor": 28,
+      "legendre": {
+        "deg F": 56,
+        "deg rad": 56,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 56,
+        "deg rad": 28,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 127,
+      "degree_f2": 63,
+      "degree_f3": 63,
+      "quarter": 3,
+      "degree_factor": 31,
+      "legendre": {
+        "deg F": 63,
+        "deg rad": 63,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 63,
+        "deg rad": 32,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 131,
+      "degree_f2": 65,
+      "degree_f3": 65,
+      "quarter": 3,
+      "degree_factor": 32,
+      "legendre": {
+        "deg F": 65,
+        "deg rad": 65,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 65,
+        "deg rad": 33,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 137,
+      "degree_f2": 68,
+      "degree_f3": 68,
+      "quarter": 1,
+      "degree_factor": 34,
+      "legendre": {
+        "deg F": 68,
+        "deg rad": 68,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 68,
+        "deg rad": 34,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 139,
+      "degree_f2": 69,
+      "degree_f3": 69,
+      "quarter": 3,
+      "degree_factor": 34,
+      "legendre": {
+        "deg F": 69,
+        "deg rad": 69,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 69,
+        "deg rad": 35,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 149,
+      "degree_f2": 74,
+      "degree_f3": 74,
+      "quarter": 1,
+      "degree_factor": 37,
+      "legendre": {
+        "deg F": 74,
+        "deg rad": 74,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 74,
+        "deg rad": 37,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 151,
+      "degree_f2": 75,
+      "degree_f3": 75,
+      "quarter": 3,
+      "degree_factor": 37,
+      "legendre": {
+        "deg F": 75,
+        "deg rad": 75,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 75,
+        "deg rad": 38,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 157,
+      "degree_f2": 78,
+      "degree_f3": 78,
+      "quarter": 1,
+      "degree_factor": 39,
+      "legendre": {
+        "deg F": 78,
+        "deg rad": 78,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 78,
+        "deg rad": 39,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 163,
+      "degree_f2": 81,
+      "degree_f3": 81,
+      "quarter": 3,
+      "degree_factor": 40,
+      "legendre": {
+        "deg F": 81,
+        "deg rad": 81,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 81,
+        "deg rad": 41,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 167,
+      "degree_f2": 83,
+      "degree_f3": 83,
+      "quarter": 3,
+      "degree_factor": 41,
+      "legendre": {
+        "deg F": 83,
+        "deg rad": 83,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 83,
+        "deg rad": 42,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 173,
+      "degree_f2": 86,
+      "degree_f3": 86,
+      "quarter": 1,
+      "degree_factor": 43,
+      "legendre": {
+        "deg F": 86,
+        "deg rad": 86,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 86,
+        "deg rad": 43,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 179,
+      "degree_f2": 89,
+      "degree_f3": 89,
+      "quarter": 3,
+      "degree_factor": 44,
+      "legendre": {
+        "deg F": 89,
+        "deg rad": 89,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 89,
+        "deg rad": 45,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 181,
+      "degree_f2": 90,
+      "degree_f3": 90,
+      "quarter": 1,
+      "degree_factor": 45,
+      "legendre": {
+        "deg F": 90,
+        "deg rad": 90,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 90,
+        "deg rad": 45,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 191,
+      "degree_f2": 95,
+      "degree_f3": 95,
+      "quarter": 3,
+      "degree_factor": 47,
+      "legendre": {
+        "deg F": 95,
+        "deg rad": 95,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 95,
+        "deg rad": 48,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 193,
+      "degree_f2": 96,
+      "degree_f3": 96,
+      "quarter": 1,
+      "degree_factor": 48,
+      "legendre": {
+        "deg F": 96,
+        "deg rad": 96,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 96,
+        "deg rad": 48,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 197,
+      "degree_f2": 98,
+      "degree_f3": 98,
+      "quarter": 1,
+      "degree_factor": 49,
+      "legendre": {
+        "deg F": 98,
+        "deg rad": 98,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 98,
+        "deg rad": 49,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 199,
+      "degree_f2": 99,
+      "degree_f3": 99,
+      "quarter": 3,
+      "degree_factor": 49,
+      "legendre": {
+        "deg F": 99,
+        "deg rad": 99,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 99,
+        "deg rad": 50,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 211,
+      "degree_f2": 105,
+      "degree_f3": 105,
+      "quarter": 3,
+      "degree_factor": 52,
+      "legendre": {
+        "deg F": 105,
+        "deg rad": 105,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 105,
+        "deg rad": 53,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 223,
+      "degree_f2": 111,
+      "degree_f3": 111,
+      "quarter": 3,
+      "degree_factor": 55,
+      "legendre": {
+        "deg F": 111,
+        "deg rad": 111,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 111,
+        "deg rad": 56,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 227,
+      "degree_f2": 113,
+      "degree_f3": 113,
+      "quarter": 3,
+      "degree_factor": 56,
+      "legendre": {
+        "deg F": 113,
+        "deg rad": 113,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 113,
+        "deg rad": 57,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 229,
+      "degree_f2": 114,
+      "degree_f3": 114,
+      "quarter": 1,
+      "degree_factor": 57,
+      "legendre": {
+        "deg F": 114,
+        "deg rad": 114,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 114,
+        "deg rad": 57,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 233,
+      "degree_f2": 116,
+      "degree_f3": 116,
+      "quarter": 1,
+      "degree_factor": 58,
+      "legendre": {
+        "deg F": 116,
+        "deg rad": 116,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 116,
+        "deg rad": 58,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 239,
+      "degree_f2": 119,
+      "degree_f3": 119,
+      "quarter": 3,
+      "degree_factor": 59,
+      "legendre": {
+        "deg F": 119,
+        "deg rad": 119,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 119,
+        "deg rad": 60,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 241,
+      "degree_f2": 120,
+      "degree_f3": 120,
+      "quarter": 1,
+      "degree_factor": 60,
+      "legendre": {
+        "deg F": 120,
+        "deg rad": 120,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 120,
+        "deg rad": 60,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 251,
+      "degree_f2": 125,
+      "degree_f3": 125,
+      "quarter": 3,
+      "degree_factor": 62,
+      "legendre": {
+        "deg F": 125,
+        "deg rad": 125,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 125,
+        "deg rad": 63,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 257,
+      "degree_f2": 128,
+      "degree_f3": 128,
+      "quarter": 1,
+      "degree_factor": 64,
+      "legendre": {
+        "deg F": 128,
+        "deg rad": 128,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 128,
+        "deg rad": 64,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 263,
+      "degree_f2": 131,
+      "degree_f3": 131,
+      "quarter": 3,
+      "degree_factor": 65,
+      "legendre": {
+        "deg F": 131,
+        "deg rad": 131,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 131,
+        "deg rad": 66,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 269,
+      "degree_f2": 134,
+      "degree_f3": 134,
+      "quarter": 1,
+      "degree_factor": 67,
+      "legendre": {
+        "deg F": 134,
+        "deg rad": 134,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 134,
+        "deg rad": 67,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 271,
+      "degree_f2": 135,
+      "degree_f3": 135,
+      "quarter": 3,
+      "degree_factor": 67,
+      "legendre": {
+        "deg F": 135,
+        "deg rad": 135,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 135,
+        "deg rad": 68,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 277,
+      "degree_f2": 138,
+      "degree_f3": 138,
+      "quarter": 1,
+      "degree_factor": 69,
+      "legendre": {
+        "deg F": 138,
+        "deg rad": 138,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 138,
+        "deg rad": 69,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 281,
+      "degree_f2": 140,
+      "degree_f3": 140,
+      "quarter": 1,
+      "degree_factor": 70,
+      "legendre": {
+        "deg F": 140,
+        "deg rad": 140,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 140,
+        "deg rad": 70,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 283,
+      "degree_f2": 141,
+      "degree_f3": 141,
+      "quarter": 3,
+      "degree_factor": 70,
+      "legendre": {
+        "deg F": 141,
+        "deg rad": 141,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 141,
+        "deg rad": 71,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 293,
+      "degree_f2": 146,
+      "degree_f3": 146,
+      "quarter": 1,
+      "degree_factor": 73,
+      "legendre": {
+        "deg F": 146,
+        "deg rad": 146,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 146,
+        "deg rad": 73,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 307,
+      "degree_f2": 153,
+      "degree_f3": 153,
+      "quarter": 3,
+      "degree_factor": 76,
+      "legendre": {
+        "deg F": 153,
+        "deg rad": 153,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 153,
+        "deg rad": 77,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 311,
+      "degree_f2": 155,
+      "degree_f3": 155,
+      "quarter": 3,
+      "degree_factor": 77,
+      "legendre": {
+        "deg F": 155,
+        "deg rad": 155,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 155,
+        "deg rad": 78,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 313,
+      "degree_f2": 156,
+      "degree_f3": 156,
+      "quarter": 1,
+      "degree_factor": 78,
+      "legendre": {
+        "deg F": 156,
+        "deg rad": 156,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 156,
+        "deg rad": 78,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 317,
+      "degree_f2": 158,
+      "degree_f3": 158,
+      "quarter": 1,
+      "degree_factor": 79,
+      "legendre": {
+        "deg F": 158,
+        "deg rad": 158,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 158,
+        "deg rad": 79,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 331,
+      "degree_f2": 165,
+      "degree_f3": 165,
+      "quarter": 3,
+      "degree_factor": 82,
+      "legendre": {
+        "deg F": 165,
+        "deg rad": 165,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 165,
+        "deg rad": 83,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 337,
+      "degree_f2": 168,
+      "degree_f3": 168,
+      "quarter": 1,
+      "degree_factor": 84,
+      "legendre": {
+        "deg F": 168,
+        "deg rad": 168,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 168,
+        "deg rad": 84,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 347,
+      "degree_f2": 173,
+      "degree_f3": 173,
+      "quarter": 3,
+      "degree_factor": 86,
+      "legendre": {
+        "deg F": 173,
+        "deg rad": 173,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 173,
+        "deg rad": 87,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 349,
+      "degree_f2": 174,
+      "degree_f3": 174,
+      "quarter": 1,
+      "degree_factor": 87,
+      "legendre": {
+        "deg F": 174,
+        "deg rad": 174,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 174,
+        "deg rad": 87,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 353,
+      "degree_f2": 176,
+      "degree_f3": 176,
+      "quarter": 1,
+      "degree_factor": 88,
+      "legendre": {
+        "deg F": 176,
+        "deg rad": 176,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 176,
+        "deg rad": 88,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 359,
+      "degree_f2": 179,
+      "degree_f3": 179,
+      "quarter": 3,
+      "degree_factor": 89,
+      "legendre": {
+        "deg F": 179,
+        "deg rad": 179,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 179,
+        "deg rad": 90,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 367,
+      "degree_f2": 183,
+      "degree_f3": 183,
+      "quarter": 3,
+      "degree_factor": 91,
+      "legendre": {
+        "deg F": 183,
+        "deg rad": 183,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 183,
+        "deg rad": 92,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 373,
+      "degree_f2": 186,
+      "degree_f3": 186,
+      "quarter": 1,
+      "degree_factor": 93,
+      "legendre": {
+        "deg F": 186,
+        "deg rad": 186,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 186,
+        "deg rad": 93,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 379,
+      "degree_f2": 189,
+      "degree_f3": 189,
+      "quarter": 3,
+      "degree_factor": 94,
+      "legendre": {
+        "deg F": 189,
+        "deg rad": 189,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 189,
+        "deg rad": 95,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 383,
+      "degree_f2": 191,
+      "degree_f3": 191,
+      "quarter": 3,
+      "degree_factor": 95,
+      "legendre": {
+        "deg F": 191,
+        "deg rad": 191,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 191,
+        "deg rad": 96,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 389,
+      "degree_f2": 194,
+      "degree_f3": 194,
+      "quarter": 1,
+      "degree_factor": 97,
+      "legendre": {
+        "deg F": 194,
+        "deg rad": 194,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 194,
+        "deg rad": 97,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 397,
+      "degree_f2": 198,
+      "degree_f3": 198,
+      "quarter": 1,
+      "degree_factor": 99,
+      "legendre": {
+        "deg F": 198,
+        "deg rad": 198,
+        "rad|V": false,
+        "all roots multiple": false,
+        "squarefree": true,
+        "gcd(F,V)=1": true
+      },
+      "cube": {
+        "deg F": 198,
+        "deg rad": 99,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    }
+  ]
+}

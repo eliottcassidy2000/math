@@ -14,12 +14,16 @@ status: >
     - Meaning of V_p: Straub's Thm 1.3 (all 15 sporadic sequences, which includes Zagier A-F, s_7 and s_10) gives
       A(pn+k) == A(k)A(n) + p n A'(k)A(n) (mod p^2). Hence V_p == u_1 sum_{k<p} A'(k) x^k (mod p): a truncated
       formal-derivative series. A274786 is not on Straub's list.
-  - Part (B), weight 1 (F_p squarefree and gcd(F_p, V_p) = 1), is FINITE-EXACT.
+  - Part (B) is PROVED for Zagier A-F and C(2k,k)^2 at every p >= 7 by independently audited
+    THM-4711-legendre-wronskian-and-binomial-cube-lucas-carry-divisibility.md.
+    Remaining hypergeometric cases below retain FINITE-EXACT status.
     - Author: Zagier A-F at every 7 <= p <= 199 (pre-registered P7).
     - Referee: all 75 primes 7 <= p <= 397, plus four untested weight-1 families at 59 primes 7 <= p <= 293:
       C(2k,k)^2, (3k)!/k!^3, (4k)!/((2k)!k!^2), (6k)!/((3k)!(2k)!k!).
     - Squarefreeness of F_p is Igusa-type. The coprimality to V_p is the new content.
-  - Part (C), weight 2, first bullet (rad F_p | V_p), is FINITE-EXACT.
+  - Part (C) is PROVED for C(2k,k)^3, with the stronger monic gcd(F_p,V_p) = rad(F_p), at every p >= 7
+    by THM-4711-legendre-wronskian-and-binomial-cube-lucas-carry-divisibility.md.
+    The other weight-2 families, including Apery zeta(3), remain FINITE-EXACT / OPEN.
     - Author: Apery, Domb, s_7, s_10 (P7) and A274786 (P8c) at every 7 <= p <= 199.
     - Referee: all 75 primes up to 397, plus seven untested weight-2 families at 59 primes up to 293: C(2k,k)^3,
       C(2k,k)^2 C(3k,k), C(2k,k)^2 C(4k,2k), C(2k,k)C(3k,k)C(6k,3k), Almkvist-Zudilin, Cooper s_18, Franel ⊙ central.
@@ -62,6 +66,21 @@ related: [HYP-9310, HYP-9311, THM-4708, HYP-9331, THM-4686, Beukers arXiv:2403.0
 ---
 
 # HYP-9330 — Weight dichotomy of the Lucas-block CM detector
+
+## Audited partial closure, 2026-10-18
+
+[THM-4711 — Lucas-carry Wronskians and binomial-cube radical](../../01-canon/theorems/THM-4711-legendre-wronskian-and-binomial-cube-lucas-carry-divisibility.md)
+proves (B) for all six Zagier families and central-binomial squares, and
+(C) for central-binomial cubes, at every prime p>=7. The latter has the
+stronger equality monic gcd(F_p,V_p)=rad(F_p). The proof keeps the actual
+integer carry, all terminal coefficients, and the singular Euler factor.
+It uses a precise Clausen parameter tangent, not differentiation in x.
+
+**HYP-9330 remains OPEN:** the remaining weight-2 families (including Apéry
+zeta(3)), the other weight-one hypergeometric cases, slope law and survivor
+claims retain their stated evidence status. For Apéry zeta(3), the missing
+step is a deformation with the correct carry tangent and a justified full
+truncation, including the simple singular-prefactor roots.
 
 ## Setting
 
@@ -159,12 +178,12 @@ for the 3rd-order symmetric-square (K3) families: Apery zeta(3), Domb, Cooper `s
 | (E) | all 11 families, \|m\| <= 10^5; referee: 15 families to 10^7 | survivors as stated; in weight 2 the density >= 0.3 set coincides with the survivors |
 | (F) | 75 points, p <= 199; referee p <= 400 at the inert primes of all 42 weight-2 CM points | as corrected above |
 
-## Heuristic mechanism (not a proof)
+## Mechanism: proved cases and remaining heuristic
 
 - **Weight 2 (the F_p part is CFVZ's).** For a symmetric square, the truncated holomorphic period behaves like `f^2`
   (CFVZ: `f(t(x)) = phi(x) h(x)^2`). By Straub's Thm 1.3 the first-carry defect is the truncated derivative series,
   which behaves like `f g`, with `g` the log-partner. Both vanish where `f` does.
-- **Weight 1.** `(F_p, V_p)` behaves like `(f, g)`. Their Wronskian is a unit, so they have no common zero.
+- **Weight 1.** THM-4711 proves the precise Wronskian identity for Legendre and all six Zagier families. Its right side is nonzero at every period root; the remaining hypergeometric cases are still heuristic here.
 - **Split primes.** At a rational CM point, Beukers' introductory heuristic has the excellent Frobenius lift fixing
   the point (Serre-Tate canonical lift). Truncating his `F(t) == F_p(t) F(t^sigma)` then gives (B1'), provided
   `R(t_0) == 0` (see the status).
@@ -176,6 +195,5 @@ for the 3rd-order symmetric-square (K3) families: Apery zeta(3), Domb, Cooper `s
   rational CM point that fails (B1').
 - **The `s_10`, `m = -2` exception.** Explain why this `Z[i]` point has depth 3 at every prime. A natural guess is
   extra symmetry at `tau = (2+i)/5`.
-- **Proof route for (B).** Use Straub's description of `V_p` together with a Wronskian argument mod `p`.
-- **Proof route for (C).** Use CFVZ's factorization `F_p = phi B_p^2` and differentiate the same Clausen-type
-  identity.
+- **Remaining (B) route.** Extend THM-4711 to the three other tested hypergeometric families; the six Zagier cases and Legendre are closed.
+- **Remaining (C) route.** Generalize the audited cube deformation to Apéry zeta(3) and the other CFVZ families, proving tangent identification and truncation before inferring divisibility.
