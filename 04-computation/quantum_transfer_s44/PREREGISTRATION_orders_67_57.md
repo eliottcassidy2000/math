@@ -14,3 +14,13 @@ k (k = 1, ..., p-2). The generator weights are from kind-pasteur's table (singul
 - P3. At both models the recorded orders sum to dim ker pi at every bidegree (no mismatch).
 
 **Runs.** `vir_transfer_orders_20261018.py 6 7 40` and `... 5 7 34` (single prime 2^31 - 1).
+
+## Outcome (recorded after the runs): ALL PASSED
+
+- The pre-registration was committed in 94fbe3b30b at 13:37:51. The outputs `orders_57_D34.out` and `orders_67_D40.out`
+  were written at 13:37:58 and 13:38:05.
+- **P1 PASSED.** In Vir_(6,7), N = 15, the first appearances at length 15 are: order 1 at weight 33 (Li 3), order 2 at
+  35 (Li 5), order 3 at 37 (Li 7), order 4 at 39 (Li 9). There is no order >= 5 at length 15 through weight 40.
+- **P2 PASSED.** In Vir_(5,7), N = 12, the first appearances at length 12 are: order 1 at 27, order 2 at 29, order 3 at 31.
+- **P3 PASSED.** There are 0 MISMATCH lines. The totals are {1: 24, 2: 14, 3: 5} = 43 = dim ker π for (5,7) through 34,
+  and {1: 24, 2: 14, 3: 5, 4: 2} = 45 = dim ker π for (6,7) through 40.
