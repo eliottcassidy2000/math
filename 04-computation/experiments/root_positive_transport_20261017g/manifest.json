@@ -1,0 +1,77 @@
+{
+  "base_commit": "a79870665e",
+  "commands": [
+    "python3 04-computation/experiments/root_positive_transport_20261017g.py --depth 10 --bands 120 --output 04-computation/experiments/root_positive_transport_20261017g/positive.json",
+    "python3 04-computation/experiments/root_rounding_clock_20261017g.py --output 04-computation/experiments/root_positive_transport_20261017g/rounding.json",
+    "python3 04-computation/experiments/shared_golden_contact_20261017g.py --output 04-computation/experiments/root_positive_transport_20261017g/golden_shared.json",
+    "python3 04-computation/experiments/root_transport_audit_20261017g.py --output 04-computation/experiments/root_positive_transport_20261017g/audit.json"
+  ],
+  "dependencies": [
+    "04-computation/experiments/escaped_ports_20261017d.py",
+    "04-computation/experiments/golden_boundary_20261017c.py",
+    "04-computation/experiments/joint_logistic_current_20261017f/iterated_tariffs.json"
+  ],
+  "files": {
+    "04-computation/experiments/root_positive_transport_20261017g.py": {
+      "bytes": 4469,
+      "sha256": "2253bd34e7cf6fa8681eedb7fec78efca159be0da69460bba972ff057956ffca"
+    },
+    "04-computation/experiments/root_positive_transport_20261017g/audit.json": {
+      "bytes": 4535,
+      "sha256": "ff1cf6b35124a7415beedc0e3d1e0c06727693aae244b5dc514e30eeceb885e3"
+    },
+    "04-computation/experiments/root_positive_transport_20261017g/golden_shared.json": {
+      "bytes": 3519371,
+      "sha256": "d11da1afad2734f5b898c19e681cfa08e0b9537f66ab293e32137cee7ba16ba3"
+    },
+    "04-computation/experiments/root_positive_transport_20261017g/positive.json": {
+      "bytes": 16514,
+      "sha256": "f971f7655d09cec4bd35d7be67998e72f97c7ff3ba045c5a4730e47864044f90"
+    },
+    "04-computation/experiments/root_positive_transport_20261017g/rounding.json": {
+      "bytes": 4325,
+      "sha256": "7fe1d82df588ac502e0287863ad14467b02baf15e6732a81ae3f5614f2ff9dbb"
+    },
+    "04-computation/experiments/root_rounding_clock_20261017g.py": {
+      "bytes": 5532,
+      "sha256": "9e512873c47148476002d9426227e4b9b4fab9dbbae68a5d10dd44eedd02cdec"
+    },
+    "04-computation/experiments/root_transport_audit_20261017g.py": {
+      "bytes": 6990,
+      "sha256": "a6df6ed3f19e7f8b1a3c3f085d298bbf3b6e21b87d25ccaad0305650f1c00e06"
+    },
+    "04-computation/experiments/shared_golden_contact_20261017g.py": {
+      "bytes": 9129,
+      "sha256": "04ffe93bbd2b57fe67d260b158bd80197c2ff1e4da12abf930a9be78a66baf04"
+    },
+    "05-knowledge/results/root_positive_transport_20261017g.md": {
+      "bytes": 18937,
+      "sha256": "3f226fb795f81adc5a0b474e20d0a3fb2e1e5ae6daf3ce33a4140829309cb33f"
+    },
+    "05-knowledge/results/shared_golden_contact_20261017g.md": {
+      "bytes": 5495,
+      "sha256": "19ffe42456dcacdfcd7a7f9569524465fb1140990b3664cb20938e694f2fd8e8"
+    }
+  },
+  "incoming_read_through": "e4316b29f4",
+  "limits": [
+    "No inferred decay rate from eleven finite tariff values.",
+    "Positive kernel is an averaged residue/band law; individual integer branches remain deterministic.",
+    "Uniform remainder is sub-square-root only on the stated logarithmic-depth horizons.",
+    "Full six-colour boundary relation is proved for the finite shared graph only."
+  ],
+  "status": "PROVED scoped, self-audited; FINITE-EXACT receipts; universal ROOT energy and six-colour forcing OPEN",
+  "validation": {
+    "actual_shortcut_steps": 94838,
+    "geometry_boundary_edge_replays": 17587920,
+    "geometry_complete_pair_sieve_candidates": 97945,
+    "geometry_exact_distinct_norm_tests": 9580,
+    "independent_inverse_coefficients": 43560,
+    "independent_inverse_words": 19296,
+    "normal_optimized_byte_identical": [
+      "positive.json",
+      "rounding.json",
+      "audit.json"
+    ]
+  }
+}
