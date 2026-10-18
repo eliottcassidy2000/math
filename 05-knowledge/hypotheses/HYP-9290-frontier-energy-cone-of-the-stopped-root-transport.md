@@ -16,7 +16,9 @@ status: >
   The coherent climbs that make R(N)^2/N large (the termination regime of THM-4667) are arrivals at frozen seeds
   below about 30-100.
 
-  Pre-registered 2026-10-17, before the scan beyond 2^23: tests P1-P6 below.
+  Pre-registered 2026-10-17, before the scan beyond 2^23: tests P1-P6 below. ALL SIX PASSED (scan of every
+  N < 2^26, invariant checked at every N). New record E_100/N = 2.62 at N = 48,251,574 (inside P2's 3.0).
+  P7-P10 pre-registered for 2^26 <= N < 2^28 before that scan.
 session: opus-2026-10-17-S42
 source: 05-knowledge/results/root_frontier_penrose_20261017.md
 scripts:
@@ -115,3 +117,32 @@ Decomposition (`/N`):
   `Y = 1000` has `MM_hi <= -3.0 N` and `|MF| <= 0.5 N`.
 
 A failure of P1 or P2 would not refute (A'), but would weaken the case for an absolute constant.
+
+## Outcome of P1-P6 (scan of every `N < 2^26`, `root_transport_frontier_energy_big_20261017.py 25 ...`)
+
+| octave | `2^23` | `2^24` | `2^25` | test | verdict |
+|---|---|---|---|---|---|
+| `max E_1000/N` | 1.337 | 1.238 | 1.449 | P1 `<= 2.08` | PASSED |
+| `max E_100/N` | 2.082 | 1.586 | **2.621** | P2 `<= 3.0` | PASSED (new record, above 2.35) |
+| `max E_10000/N` | 1.400 | 1.415 | 1.380 | P3 `<= 1.55` | PASSED |
+| `mean E_1000/N` | 1.164 | 1.038 | 1.281 | P4 `in [1.0, 1.5]` | PASSED |
+| `mean E_30/N` | 2.054 | 1.088 | 0.998 | P5 two of three `<= 2.0` | PASSED (two of three) |
+| `max R^2/N` | 3.078 | 2.634 | 4.362 | | |
+
+**P6** (decomposition at `Y = 1000`, `root_transport_frontier_decomposition_p6_20261017.out`). At the six arg-max
+points `N = 9666088, 32532811, 47930131` (`E_1000`) and `N = 8429844, 32184394, 37675352` (`R^2`):
+- `MM_hi/N` lies in `[-3.633, -3.575]`, all `<= -3.0`;
+- `|MF|/N <= 0.245`, all `<= 0.5`.
+
+PASSED. The `E_Y` values agree with the incremental scan to four decimals; the two codes are independent.
+
+`E_100/N` behaves like `E_30/N` did at `2^22`: its octave-`2^25` mean is 1.69, against 1.0-1.4 elsewhere. The
+coherent arrival climb reaches up to height about 100 in that octave. Both the maxima at `Y = 1000` and the record at
+`Y = 100` stay inside the pre-registered bounds.
+
+## Pre-registered P7-P10 (written before the scan of `2^26 <= N < 2^28`)
+
+- **P7.** `max E_1000(N)/N <= 2.08`.
+- **P8.** `max E_100(N)/N <= 3.0`.
+- **P9.** `max E_10000(N)/N <= 1.55`.
+- **P10.** Each octave mean of `E_1000/N` lies in `[1.0, 1.5]`.
