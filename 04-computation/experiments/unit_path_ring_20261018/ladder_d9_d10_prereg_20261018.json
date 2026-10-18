@@ -1,0 +1,12 @@
+{
+  "session": "mac-mini-2026-10-18-unitpath",
+  "registered_before": "any d >= 8 output of the C port clock_graded_ladder.c (validated on d = 1..6 against the Python run) and before the Python d = 8 line",
+  "object": "clock-graded ideal ladder, THM-4667 cross term split by literal clock lag (x2 units), BMAX = 64",
+  "known_not_tests": {"cross_9": -0.034613, "cross_10": -0.028655, "source": "S41 audit a4 ideal ladder"},
+  "predictions": {
+    "Q1_twin": "lag-0 (same-clock) parts T_9 and T_10 both in [-0.106, -0.098]",
+    "Q2_lag1": "lag-1 parts positive and increasing: lag1_10 > lag1_9 > lag1_8 > +0.040",
+    "Q3_reproduction": "E_9, E_10 from the C port agree with S41's 1.556295497, 1.527640161 to 9 digits"
+  },
+  "falsification": "any of Q1-Q3 outside the stated range"
+}
