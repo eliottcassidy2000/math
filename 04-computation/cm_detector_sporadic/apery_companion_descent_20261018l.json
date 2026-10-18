@@ -1,0 +1,1357 @@
+{
+  "status": "FINITE-EXACT whole-polynomial identities; all-prime proof independently audited separately",
+  "prime_count": 75,
+  "bound": 397,
+  "rows": [
+    {
+      "p": 7,
+      "epsilon": 1,
+      "period_degree": 6,
+      "companion_degree": 5,
+      "pullback_degree": 11,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 6,
+      "mechanism": {
+        "deg F": 6,
+        "deg rad": 3,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 11,
+      "epsilon": -1,
+      "period_degree": 10,
+      "companion_degree": 9,
+      "pullback_degree": 19,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 4,
+      "mechanism": {
+        "deg F": 10,
+        "deg rad": 5,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 13,
+      "epsilon": 1,
+      "period_degree": 12,
+      "companion_degree": 11,
+      "pullback_degree": 23,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 9,
+      "mechanism": {
+        "deg F": 12,
+        "deg rad": 7,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 17,
+      "epsilon": -1,
+      "period_degree": 16,
+      "companion_degree": 15,
+      "pullback_degree": 31,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 5,
+      "mechanism": {
+        "deg F": 16,
+        "deg rad": 9,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 19,
+      "epsilon": 1,
+      "period_degree": 18,
+      "companion_degree": 17,
+      "pullback_degree": 35,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 9,
+      "mechanism": {
+        "deg F": 18,
+        "deg rad": 10,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 23,
+      "epsilon": -1,
+      "period_degree": 22,
+      "companion_degree": 21,
+      "pullback_degree": 43,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 5,
+      "mechanism": {
+        "deg F": 22,
+        "deg rad": 12,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 29,
+      "epsilon": -1,
+      "period_degree": 28,
+      "companion_degree": 27,
+      "pullback_degree": 55,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 3,
+      "mechanism": {
+        "deg F": 28,
+        "deg rad": 14,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 31,
+      "epsilon": 1,
+      "period_degree": 30,
+      "companion_degree": 29,
+      "pullback_degree": 59,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 18,
+      "mechanism": {
+        "deg F": 30,
+        "deg rad": 15,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 37,
+      "epsilon": 1,
+      "period_degree": 36,
+      "companion_degree": 35,
+      "pullback_degree": 71,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 3,
+      "mechanism": {
+        "deg F": 36,
+        "deg rad": 19,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 41,
+      "epsilon": -1,
+      "period_degree": 40,
+      "companion_degree": 39,
+      "pullback_degree": 79,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 28,
+      "mechanism": {
+        "deg F": 40,
+        "deg rad": 21,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 43,
+      "epsilon": 1,
+      "period_degree": 42,
+      "companion_degree": 41,
+      "pullback_degree": 83,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 32,
+      "mechanism": {
+        "deg F": 42,
+        "deg rad": 22,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 47,
+      "epsilon": -1,
+      "period_degree": 46,
+      "companion_degree": 45,
+      "pullback_degree": 91,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 38,
+      "mechanism": {
+        "deg F": 46,
+        "deg rad": 24,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 53,
+      "epsilon": -1,
+      "period_degree": 52,
+      "companion_degree": 51,
+      "pullback_degree": 103,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 2,
+      "mechanism": {
+        "deg F": 52,
+        "deg rad": 26,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 59,
+      "epsilon": -1,
+      "period_degree": 58,
+      "companion_degree": 57,
+      "pullback_degree": 115,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 24,
+      "mechanism": {
+        "deg F": 58,
+        "deg rad": 29,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 61,
+      "epsilon": 1,
+      "period_degree": 60,
+      "companion_degree": 59,
+      "pullback_degree": 119,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 47,
+      "mechanism": {
+        "deg F": 60,
+        "deg rad": 31,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 67,
+      "epsilon": 1,
+      "period_degree": 66,
+      "companion_degree": 65,
+      "pullback_degree": 131,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 30,
+      "mechanism": {
+        "deg F": 66,
+        "deg rad": 34,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 71,
+      "epsilon": -1,
+      "period_degree": 70,
+      "companion_degree": 69,
+      "pullback_degree": 139,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 6,
+      "mechanism": {
+        "deg F": 70,
+        "deg rad": 36,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 73,
+      "epsilon": 1,
+      "period_degree": 72,
+      "companion_degree": 71,
+      "pullback_degree": 143,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 22,
+      "mechanism": {
+        "deg F": 72,
+        "deg rad": 36,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 79,
+      "epsilon": 1,
+      "period_degree": 78,
+      "companion_degree": 77,
+      "pullback_degree": 155,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 57,
+      "mechanism": {
+        "deg F": 78,
+        "deg rad": 39,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 83,
+      "epsilon": -1,
+      "period_degree": 82,
+      "companion_degree": 81,
+      "pullback_degree": 163,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 61,
+      "mechanism": {
+        "deg F": 82,
+        "deg rad": 41,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 89,
+      "epsilon": -1,
+      "period_degree": 88,
+      "companion_degree": 87,
+      "pullback_degree": 175,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 18,
+      "mechanism": {
+        "deg F": 88,
+        "deg rad": 45,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 97,
+      "epsilon": 1,
+      "period_degree": 96,
+      "companion_degree": 95,
+      "pullback_degree": 191,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 74,
+      "mechanism": {
+        "deg F": 96,
+        "deg rad": 48,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 101,
+      "epsilon": -1,
+      "period_degree": 100,
+      "companion_degree": 99,
+      "pullback_degree": 199,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 74,
+      "mechanism": {
+        "deg F": 100,
+        "deg rad": 50,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 103,
+      "epsilon": 1,
+      "period_degree": 102,
+      "companion_degree": 101,
+      "pullback_degree": 203,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 74,
+      "mechanism": {
+        "deg F": 102,
+        "deg rad": 51,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 107,
+      "epsilon": -1,
+      "period_degree": 106,
+      "companion_degree": 105,
+      "pullback_degree": 211,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 39,
+      "mechanism": {
+        "deg F": 106,
+        "deg rad": 53,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 109,
+      "epsilon": 1,
+      "period_degree": 108,
+      "companion_degree": 107,
+      "pullback_degree": 215,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 92,
+      "mechanism": {
+        "deg F": 108,
+        "deg rad": 55,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 113,
+      "epsilon": -1,
+      "period_degree": 112,
+      "companion_degree": 111,
+      "pullback_degree": 223,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 23,
+      "mechanism": {
+        "deg F": 112,
+        "deg rad": 57,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 127,
+      "epsilon": 1,
+      "period_degree": 126,
+      "companion_degree": 125,
+      "pullback_degree": 251,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 54,
+      "mechanism": {
+        "deg F": 126,
+        "deg rad": 63,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 131,
+      "epsilon": -1,
+      "period_degree": 130,
+      "companion_degree": 129,
+      "pullback_degree": 259,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 51,
+      "mechanism": {
+        "deg F": 130,
+        "deg rad": 65,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 137,
+      "epsilon": -1,
+      "period_degree": 136,
+      "companion_degree": 135,
+      "pullback_degree": 271,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 22,
+      "mechanism": {
+        "deg F": 136,
+        "deg rad": 69,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 139,
+      "epsilon": 1,
+      "period_degree": 138,
+      "companion_degree": 137,
+      "pullback_degree": 275,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 90,
+      "mechanism": {
+        "deg F": 138,
+        "deg rad": 70,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 149,
+      "epsilon": -1,
+      "period_degree": 148,
+      "companion_degree": 147,
+      "pullback_degree": 295,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 139,
+      "mechanism": {
+        "deg F": 148,
+        "deg rad": 74,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 151,
+      "epsilon": 1,
+      "period_degree": 150,
+      "companion_degree": 149,
+      "pullback_degree": 299,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 17,
+      "mechanism": {
+        "deg F": 150,
+        "deg rad": 75,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 157,
+      "epsilon": 1,
+      "period_degree": 156,
+      "companion_degree": 155,
+      "pullback_degree": 311,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 89,
+      "mechanism": {
+        "deg F": 156,
+        "deg rad": 79,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 163,
+      "epsilon": 1,
+      "period_degree": 162,
+      "companion_degree": 161,
+      "pullback_degree": 323,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 38,
+      "mechanism": {
+        "deg F": 162,
+        "deg rad": 82,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 167,
+      "epsilon": -1,
+      "period_degree": 166,
+      "companion_degree": 165,
+      "pullback_degree": 331,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 141,
+      "mechanism": {
+        "deg F": 166,
+        "deg rad": 84,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 173,
+      "epsilon": -1,
+      "period_degree": 172,
+      "companion_degree": 171,
+      "pullback_degree": 343,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 9,
+      "mechanism": {
+        "deg F": 172,
+        "deg rad": 86,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 179,
+      "epsilon": -1,
+      "period_degree": 178,
+      "companion_degree": 177,
+      "pullback_degree": 355,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 150,
+      "mechanism": {
+        "deg F": 178,
+        "deg rad": 89,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 181,
+      "epsilon": 1,
+      "period_degree": 180,
+      "companion_degree": 179,
+      "pullback_degree": 359,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 82,
+      "mechanism": {
+        "deg F": 180,
+        "deg rad": 91,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 191,
+      "epsilon": -1,
+      "period_degree": 190,
+      "companion_degree": 189,
+      "pullback_degree": 379,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 150,
+      "mechanism": {
+        "deg F": 190,
+        "deg rad": 96,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 193,
+      "epsilon": 1,
+      "period_degree": 192,
+      "companion_degree": 191,
+      "pullback_degree": 383,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 119,
+      "mechanism": {
+        "deg F": 192,
+        "deg rad": 96,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 197,
+      "epsilon": -1,
+      "period_degree": 196,
+      "companion_degree": 195,
+      "pullback_degree": 391,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 131,
+      "mechanism": {
+        "deg F": 196,
+        "deg rad": 98,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 199,
+      "epsilon": 1,
+      "period_degree": 198,
+      "companion_degree": 197,
+      "pullback_degree": 395,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 7,
+      "mechanism": {
+        "deg F": 198,
+        "deg rad": 99,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 211,
+      "epsilon": 1,
+      "period_degree": 210,
+      "companion_degree": 209,
+      "pullback_degree": 419,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 116,
+      "mechanism": {
+        "deg F": 210,
+        "deg rad": 106,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 223,
+      "epsilon": 1,
+      "period_degree": 222,
+      "companion_degree": 221,
+      "pullback_degree": 443,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 121,
+      "mechanism": {
+        "deg F": 222,
+        "deg rad": 111,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 227,
+      "epsilon": -1,
+      "period_degree": 226,
+      "companion_degree": 225,
+      "pullback_degree": 451,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 149,
+      "mechanism": {
+        "deg F": 226,
+        "deg rad": 113,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 229,
+      "epsilon": 1,
+      "period_degree": 228,
+      "companion_degree": 227,
+      "pullback_degree": 455,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 204,
+      "mechanism": {
+        "deg F": 228,
+        "deg rad": 115,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 233,
+      "epsilon": -1,
+      "period_degree": 232,
+      "companion_degree": 231,
+      "pullback_degree": 463,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 21,
+      "mechanism": {
+        "deg F": 232,
+        "deg rad": 117,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 239,
+      "epsilon": -1,
+      "period_degree": 238,
+      "companion_degree": 237,
+      "pullback_degree": 475,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 78,
+      "mechanism": {
+        "deg F": 238,
+        "deg rad": 120,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 241,
+      "epsilon": 1,
+      "period_degree": 240,
+      "companion_degree": 239,
+      "pullback_degree": 479,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 185,
+      "mechanism": {
+        "deg F": 240,
+        "deg rad": 120,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 251,
+      "epsilon": -1,
+      "period_degree": 250,
+      "companion_degree": 249,
+      "pullback_degree": 499,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 239,
+      "mechanism": {
+        "deg F": 250,
+        "deg rad": 125,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 257,
+      "epsilon": -1,
+      "period_degree": 256,
+      "companion_degree": 255,
+      "pullback_degree": 511,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 161,
+      "mechanism": {
+        "deg F": 256,
+        "deg rad": 129,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 263,
+      "epsilon": -1,
+      "period_degree": 262,
+      "companion_degree": 261,
+      "pullback_degree": 523,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 121,
+      "mechanism": {
+        "deg F": 262,
+        "deg rad": 132,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 269,
+      "epsilon": -1,
+      "period_degree": 268,
+      "companion_degree": 267,
+      "pullback_degree": 535,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 242,
+      "mechanism": {
+        "deg F": 268,
+        "deg rad": 134,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 271,
+      "epsilon": 1,
+      "period_degree": 270,
+      "companion_degree": 269,
+      "pullback_degree": 539,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 56,
+      "mechanism": {
+        "deg F": 270,
+        "deg rad": 135,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 277,
+      "epsilon": 1,
+      "period_degree": 276,
+      "companion_degree": 275,
+      "pullback_degree": 551,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 210,
+      "mechanism": {
+        "deg F": 276,
+        "deg rad": 139,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 281,
+      "epsilon": -1,
+      "period_degree": 280,
+      "companion_degree": 279,
+      "pullback_degree": 559,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 222,
+      "mechanism": {
+        "deg F": 280,
+        "deg rad": 141,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 283,
+      "epsilon": 1,
+      "period_degree": 282,
+      "companion_degree": 281,
+      "pullback_degree": 563,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 174,
+      "mechanism": {
+        "deg F": 282,
+        "deg rad": 142,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 293,
+      "epsilon": -1,
+      "period_degree": 292,
+      "companion_degree": 291,
+      "pullback_degree": 583,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 234,
+      "mechanism": {
+        "deg F": 292,
+        "deg rad": 146,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 307,
+      "epsilon": 1,
+      "period_degree": 306,
+      "companion_degree": 305,
+      "pullback_degree": 611,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 268,
+      "mechanism": {
+        "deg F": 306,
+        "deg rad": 154,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 311,
+      "epsilon": -1,
+      "period_degree": 310,
+      "companion_degree": 309,
+      "pullback_degree": 619,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 214,
+      "mechanism": {
+        "deg F": 310,
+        "deg rad": 156,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 313,
+      "epsilon": 1,
+      "period_degree": 312,
+      "companion_degree": 311,
+      "pullback_degree": 623,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 47,
+      "mechanism": {
+        "deg F": 312,
+        "deg rad": 156,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 317,
+      "epsilon": -1,
+      "period_degree": 316,
+      "companion_degree": 315,
+      "pullback_degree": 631,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 208,
+      "mechanism": {
+        "deg F": 316,
+        "deg rad": 158,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 331,
+      "epsilon": 1,
+      "period_degree": 330,
+      "companion_degree": 329,
+      "pullback_degree": 659,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 86,
+      "mechanism": {
+        "deg F": 330,
+        "deg rad": 166,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 337,
+      "epsilon": 1,
+      "period_degree": 336,
+      "companion_degree": 335,
+      "pullback_degree": 671,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 122,
+      "mechanism": {
+        "deg F": 336,
+        "deg rad": 168,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 347,
+      "epsilon": -1,
+      "period_degree": 346,
+      "companion_degree": 345,
+      "pullback_degree": 691,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 100,
+      "mechanism": {
+        "deg F": 346,
+        "deg rad": 173,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 349,
+      "epsilon": 1,
+      "period_degree": 348,
+      "companion_degree": 347,
+      "pullback_degree": 695,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 277,
+      "mechanism": {
+        "deg F": 348,
+        "deg rad": 175,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 353,
+      "epsilon": -1,
+      "period_degree": 352,
+      "companion_degree": 351,
+      "pullback_degree": 703,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 118,
+      "mechanism": {
+        "deg F": 352,
+        "deg rad": 177,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 359,
+      "epsilon": -1,
+      "period_degree": 358,
+      "companion_degree": 357,
+      "pullback_degree": 715,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 174,
+      "mechanism": {
+        "deg F": 358,
+        "deg rad": 180,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 367,
+      "epsilon": 1,
+      "period_degree": 366,
+      "companion_degree": 365,
+      "pullback_degree": 731,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 283,
+      "mechanism": {
+        "deg F": 366,
+        "deg rad": 183,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 373,
+      "epsilon": 1,
+      "period_degree": 372,
+      "companion_degree": 371,
+      "pullback_degree": 743,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 239,
+      "mechanism": {
+        "deg F": 372,
+        "deg rad": 187,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 379,
+      "epsilon": 1,
+      "period_degree": 378,
+      "companion_degree": 377,
+      "pullback_degree": 755,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 6,
+      "mechanism": {
+        "deg F": 378,
+        "deg rad": 190,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 383,
+      "epsilon": -1,
+      "period_degree": 382,
+      "companion_degree": 381,
+      "pullback_degree": 763,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 205,
+      "mechanism": {
+        "deg F": 382,
+        "deg rad": 192,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 389,
+      "epsilon": -1,
+      "period_degree": 388,
+      "companion_degree": 387,
+      "pullback_degree": 775,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 13,
+      "mechanism": {
+        "deg F": 388,
+        "deg rad": 194,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 397,
+      "epsilon": 1,
+      "period_degree": 396,
+      "companion_degree": 395,
+      "pullback_degree": 791,
+      "Franel_companion_constant_removed": 0,
+      "Apery_companion_constant_removed": 0,
+      "normalizing_c": 376,
+      "mechanism": {
+        "deg F": 396,
+        "deg rad": 199,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    }
+  ]
+}

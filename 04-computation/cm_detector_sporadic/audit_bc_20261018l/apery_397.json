@@ -1,0 +1,1360 @@
+{
+  "scope": "Every prime7<=p<=bound; independent integer recurrence and exact homogeneous substitution; existing mechanism(). No evaluation-only check.",
+  "bound": 397,
+  "direct_binomial_control": "All n=0..100 for Apery; Franel separately in audit_zagier.",
+  "rows": [
+    {
+      "p": 7,
+      "degree_H": 6,
+      "degree_B": 5,
+      "degree_F_A": 6,
+      "degree_G_A": 5,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 6,
+        "deg rad": 3,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 11,
+      "degree_H": 10,
+      "degree_B": 9,
+      "degree_F_A": 10,
+      "degree_G_A": 9,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 10,
+        "deg rad": 5,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 13,
+      "degree_H": 12,
+      "degree_B": 11,
+      "degree_F_A": 12,
+      "degree_G_A": 11,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 12,
+        "deg rad": 7,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 17,
+      "degree_H": 16,
+      "degree_B": 15,
+      "degree_F_A": 16,
+      "degree_G_A": 15,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 16,
+        "deg rad": 9,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 19,
+      "degree_H": 18,
+      "degree_B": 17,
+      "degree_F_A": 18,
+      "degree_G_A": 17,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 18,
+        "deg rad": 10,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 23,
+      "degree_H": 22,
+      "degree_B": 21,
+      "degree_F_A": 22,
+      "degree_G_A": 21,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 22,
+        "deg rad": 12,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 29,
+      "degree_H": 28,
+      "degree_B": 27,
+      "degree_F_A": 28,
+      "degree_G_A": 27,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 28,
+        "deg rad": 14,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 31,
+      "degree_H": 30,
+      "degree_B": 29,
+      "degree_F_A": 30,
+      "degree_G_A": 29,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 30,
+        "deg rad": 15,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 37,
+      "degree_H": 36,
+      "degree_B": 35,
+      "degree_F_A": 36,
+      "degree_G_A": 35,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 36,
+        "deg rad": 19,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 41,
+      "degree_H": 40,
+      "degree_B": 39,
+      "degree_F_A": 40,
+      "degree_G_A": 39,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 40,
+        "deg rad": 21,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 43,
+      "degree_H": 42,
+      "degree_B": 41,
+      "degree_F_A": 42,
+      "degree_G_A": 41,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 42,
+        "deg rad": 22,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 47,
+      "degree_H": 46,
+      "degree_B": 45,
+      "degree_F_A": 46,
+      "degree_G_A": 45,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 46,
+        "deg rad": 24,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 53,
+      "degree_H": 52,
+      "degree_B": 51,
+      "degree_F_A": 52,
+      "degree_G_A": 51,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 52,
+        "deg rad": 26,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 59,
+      "degree_H": 58,
+      "degree_B": 57,
+      "degree_F_A": 58,
+      "degree_G_A": 57,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 58,
+        "deg rad": 29,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 61,
+      "degree_H": 60,
+      "degree_B": 59,
+      "degree_F_A": 60,
+      "degree_G_A": 59,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 60,
+        "deg rad": 31,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 67,
+      "degree_H": 66,
+      "degree_B": 65,
+      "degree_F_A": 66,
+      "degree_G_A": 65,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 66,
+        "deg rad": 34,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 71,
+      "degree_H": 70,
+      "degree_B": 69,
+      "degree_F_A": 70,
+      "degree_G_A": 69,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 70,
+        "deg rad": 36,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 73,
+      "degree_H": 72,
+      "degree_B": 71,
+      "degree_F_A": 72,
+      "degree_G_A": 71,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 72,
+        "deg rad": 36,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 79,
+      "degree_H": 78,
+      "degree_B": 77,
+      "degree_F_A": 78,
+      "degree_G_A": 77,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 78,
+        "deg rad": 39,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 83,
+      "degree_H": 82,
+      "degree_B": 81,
+      "degree_F_A": 82,
+      "degree_G_A": 81,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 82,
+        "deg rad": 41,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 89,
+      "degree_H": 88,
+      "degree_B": 87,
+      "degree_F_A": 88,
+      "degree_G_A": 87,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 88,
+        "deg rad": 45,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 97,
+      "degree_H": 96,
+      "degree_B": 95,
+      "degree_F_A": 96,
+      "degree_G_A": 95,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 96,
+        "deg rad": 48,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 101,
+      "degree_H": 100,
+      "degree_B": 99,
+      "degree_F_A": 100,
+      "degree_G_A": 99,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 100,
+        "deg rad": 50,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 103,
+      "degree_H": 102,
+      "degree_B": 101,
+      "degree_F_A": 102,
+      "degree_G_A": 101,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 102,
+        "deg rad": 51,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 107,
+      "degree_H": 106,
+      "degree_B": 105,
+      "degree_F_A": 106,
+      "degree_G_A": 105,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 106,
+        "deg rad": 53,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 109,
+      "degree_H": 108,
+      "degree_B": 107,
+      "degree_F_A": 108,
+      "degree_G_A": 107,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 108,
+        "deg rad": 55,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 113,
+      "degree_H": 112,
+      "degree_B": 111,
+      "degree_F_A": 112,
+      "degree_G_A": 111,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 112,
+        "deg rad": 57,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 127,
+      "degree_H": 126,
+      "degree_B": 125,
+      "degree_F_A": 126,
+      "degree_G_A": 125,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 126,
+        "deg rad": 63,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 131,
+      "degree_H": 130,
+      "degree_B": 129,
+      "degree_F_A": 130,
+      "degree_G_A": 129,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 130,
+        "deg rad": 65,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 137,
+      "degree_H": 136,
+      "degree_B": 135,
+      "degree_F_A": 136,
+      "degree_G_A": 135,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 136,
+        "deg rad": 69,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 139,
+      "degree_H": 138,
+      "degree_B": 137,
+      "degree_F_A": 138,
+      "degree_G_A": 137,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 138,
+        "deg rad": 70,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 149,
+      "degree_H": 148,
+      "degree_B": 147,
+      "degree_F_A": 148,
+      "degree_G_A": 147,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 148,
+        "deg rad": 74,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 151,
+      "degree_H": 150,
+      "degree_B": 149,
+      "degree_F_A": 150,
+      "degree_G_A": 149,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 150,
+        "deg rad": 75,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 157,
+      "degree_H": 156,
+      "degree_B": 155,
+      "degree_F_A": 156,
+      "degree_G_A": 155,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 156,
+        "deg rad": 79,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 163,
+      "degree_H": 162,
+      "degree_B": 161,
+      "degree_F_A": 162,
+      "degree_G_A": 161,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 162,
+        "deg rad": 82,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 167,
+      "degree_H": 166,
+      "degree_B": 165,
+      "degree_F_A": 166,
+      "degree_G_A": 165,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 166,
+        "deg rad": 84,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 173,
+      "degree_H": 172,
+      "degree_B": 171,
+      "degree_F_A": 172,
+      "degree_G_A": 171,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 172,
+        "deg rad": 86,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 179,
+      "degree_H": 178,
+      "degree_B": 177,
+      "degree_F_A": 178,
+      "degree_G_A": 177,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 178,
+        "deg rad": 89,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 181,
+      "degree_H": 180,
+      "degree_B": 179,
+      "degree_F_A": 180,
+      "degree_G_A": 179,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 180,
+        "deg rad": 91,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 191,
+      "degree_H": 190,
+      "degree_B": 189,
+      "degree_F_A": 190,
+      "degree_G_A": 189,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 190,
+        "deg rad": 96,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 193,
+      "degree_H": 192,
+      "degree_B": 191,
+      "degree_F_A": 192,
+      "degree_G_A": 191,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 192,
+        "deg rad": 96,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 197,
+      "degree_H": 196,
+      "degree_B": 195,
+      "degree_F_A": 196,
+      "degree_G_A": 195,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 196,
+        "deg rad": 98,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 199,
+      "degree_H": 198,
+      "degree_B": 197,
+      "degree_F_A": 198,
+      "degree_G_A": 197,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 198,
+        "deg rad": 99,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 211,
+      "degree_H": 210,
+      "degree_B": 209,
+      "degree_F_A": 210,
+      "degree_G_A": 209,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 210,
+        "deg rad": 106,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 223,
+      "degree_H": 222,
+      "degree_B": 221,
+      "degree_F_A": 222,
+      "degree_G_A": 221,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 222,
+        "deg rad": 111,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 227,
+      "degree_H": 226,
+      "degree_B": 225,
+      "degree_F_A": 226,
+      "degree_G_A": 225,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 226,
+        "deg rad": 113,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 229,
+      "degree_H": 228,
+      "degree_B": 227,
+      "degree_F_A": 228,
+      "degree_G_A": 227,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 228,
+        "deg rad": 115,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 233,
+      "degree_H": 232,
+      "degree_B": 231,
+      "degree_F_A": 232,
+      "degree_G_A": 231,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 232,
+        "deg rad": 117,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 239,
+      "degree_H": 238,
+      "degree_B": 237,
+      "degree_F_A": 238,
+      "degree_G_A": 237,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 238,
+        "deg rad": 120,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 241,
+      "degree_H": 240,
+      "degree_B": 239,
+      "degree_F_A": 240,
+      "degree_G_A": 239,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 240,
+        "deg rad": 120,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 251,
+      "degree_H": 250,
+      "degree_B": 249,
+      "degree_F_A": 250,
+      "degree_G_A": 249,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 250,
+        "deg rad": 125,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 257,
+      "degree_H": 256,
+      "degree_B": 255,
+      "degree_F_A": 256,
+      "degree_G_A": 255,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 256,
+        "deg rad": 129,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 263,
+      "degree_H": 262,
+      "degree_B": 261,
+      "degree_F_A": 262,
+      "degree_G_A": 261,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 262,
+        "deg rad": 132,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 269,
+      "degree_H": 268,
+      "degree_B": 267,
+      "degree_F_A": 268,
+      "degree_G_A": 267,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 268,
+        "deg rad": 134,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 271,
+      "degree_H": 270,
+      "degree_B": 269,
+      "degree_F_A": 270,
+      "degree_G_A": 269,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 270,
+        "deg rad": 135,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 277,
+      "degree_H": 276,
+      "degree_B": 275,
+      "degree_F_A": 276,
+      "degree_G_A": 275,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 276,
+        "deg rad": 139,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 281,
+      "degree_H": 280,
+      "degree_B": 279,
+      "degree_F_A": 280,
+      "degree_G_A": 279,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 280,
+        "deg rad": 141,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 283,
+      "degree_H": 282,
+      "degree_B": 281,
+      "degree_F_A": 282,
+      "degree_G_A": 281,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 282,
+        "deg rad": 142,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 293,
+      "degree_H": 292,
+      "degree_B": 291,
+      "degree_F_A": 292,
+      "degree_G_A": 291,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 292,
+        "deg rad": 146,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 307,
+      "degree_H": 306,
+      "degree_B": 305,
+      "degree_F_A": 306,
+      "degree_G_A": 305,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 306,
+        "deg rad": 154,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 311,
+      "degree_H": 310,
+      "degree_B": 309,
+      "degree_F_A": 310,
+      "degree_G_A": 309,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 310,
+        "deg rad": 156,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 313,
+      "degree_H": 312,
+      "degree_B": 311,
+      "degree_F_A": 312,
+      "degree_G_A": 311,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 312,
+        "deg rad": 156,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 317,
+      "degree_H": 316,
+      "degree_B": 315,
+      "degree_F_A": 316,
+      "degree_G_A": 315,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 316,
+        "deg rad": 158,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 331,
+      "degree_H": 330,
+      "degree_B": 329,
+      "degree_F_A": 330,
+      "degree_G_A": 329,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 330,
+        "deg rad": 166,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 337,
+      "degree_H": 336,
+      "degree_B": 335,
+      "degree_F_A": 336,
+      "degree_G_A": 335,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 336,
+        "deg rad": 168,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 347,
+      "degree_H": 346,
+      "degree_B": 345,
+      "degree_F_A": 346,
+      "degree_G_A": 345,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 346,
+        "deg rad": 173,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 349,
+      "degree_H": 348,
+      "degree_B": 347,
+      "degree_F_A": 348,
+      "degree_G_A": 347,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 348,
+        "deg rad": 175,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 353,
+      "degree_H": 352,
+      "degree_B": 351,
+      "degree_F_A": 352,
+      "degree_G_A": 351,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 352,
+        "deg rad": 177,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 359,
+      "degree_H": 358,
+      "degree_B": 357,
+      "degree_F_A": 358,
+      "degree_G_A": 357,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 358,
+        "deg rad": 180,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 367,
+      "degree_H": 366,
+      "degree_B": 365,
+      "degree_F_A": 366,
+      "degree_G_A": 365,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 366,
+        "deg rad": 183,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 373,
+      "degree_H": 372,
+      "degree_B": 371,
+      "degree_F_A": 372,
+      "degree_G_A": 371,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 372,
+        "deg rad": 187,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 379,
+      "degree_H": 378,
+      "degree_B": 377,
+      "degree_F_A": 378,
+      "degree_G_A": 377,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 378,
+        "deg rad": 190,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 383,
+      "degree_H": 382,
+      "degree_B": 381,
+      "degree_F_A": 382,
+      "degree_G_A": 381,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 382,
+        "deg rad": 192,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 389,
+      "degree_H": 388,
+      "degree_B": 387,
+      "degree_F_A": 388,
+      "degree_G_A": 387,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 388,
+        "deg rad": 194,
+        "rad|V": true,
+        "all roots multiple": true,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    },
+    {
+      "p": 397,
+      "degree_H": 396,
+      "degree_B": 395,
+      "degree_F_A": 396,
+      "degree_G_A": 395,
+      "cleared_period_identity": true,
+      "cleared_carry_identity": true,
+      "reflection_equivariance": true,
+      "mechanism": {
+        "deg F": 396,
+        "deg rad": 199,
+        "rad|V": true,
+        "all roots multiple": false,
+        "squarefree": false,
+        "gcd(F,V)=1": false
+      }
+    }
+  ],
+  "hostile_controls": {
+    "reciprocal_gauge_error_detected_p7": true
+  }
+}

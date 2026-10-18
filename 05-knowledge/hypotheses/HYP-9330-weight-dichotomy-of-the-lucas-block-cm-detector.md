@@ -21,9 +21,10 @@ status: >
     - Referee: all 75 primes 7 <= p <= 397, plus four untested weight-1 families at 59 primes 7 <= p <= 293:
       C(2k,k)^2, (3k)!/k!^3, (4k)!/((2k)!k!^2), (6k)!/((3k)!(2k)!k!).
     - Squarefreeness of F_p is Igusa-type. The coprimality to V_p is the new content.
-  - Part (C) is PROVED for C(2k,k)^3, with the stronger monic gcd(F_p,V_p) = rad(F_p), at every p >= 7
-    by THM-4711-legendre-wronskian-and-binomial-cube-lucas-carry-divisibility.md.
-    The other weight-2 families, including Apery zeta(3), remain FINITE-EXACT / OPEN.
+  - Part (C) is PROVED for Apery zeta(3) and C(2k,k)^3 at every p >= 7 by independently audited
+    THM-4711-legendre-wronskian-and-binomial-cube-lucas-carry-divisibility.md.
+    For the cube the stronger monic gcd(F_p,V_p) = rad(F_p) holds. Apery uses reflected-companion descent.
+    The other weight-2 families remain FINITE-EXACT / OPEN.
     - Author: Apery, Domb, s_7, s_10 (P7) and A274786 (P8c) at every 7 <= p <= 199.
     - Referee: all 75 primes up to 397, plus seven untested weight-2 families at 59 primes up to 293: C(2k,k)^3,
       C(2k,k)^2 C(3k,k), C(2k,k)^2 C(4k,2k), C(2k,k)C(3k,k)C(6k,3k), Almkvist-Zudilin, Cooper s_18, Franel ⊙ central.
@@ -71,16 +72,20 @@ related: [HYP-9310, HYP-9311, THM-4708, HYP-9331, THM-4686, Beukers arXiv:2403.0
 
 [THM-4711 — Lucas-carry Wronskians and binomial-cube radical](../../01-canon/theorems/THM-4711-legendre-wronskian-and-binomial-cube-lucas-carry-divisibility.md)
 proves (B) for all six Zagier families and central-binomial squares, and
-(C) for central-binomial cubes, at every prime p>=7. The latter has the
+(C) for Apéry zeta(3) and central-binomial cubes, at every prime p>=7. The cube has the
 stronger equality monic gcd(F_p,V_p)=rad(F_p). The proof keeps the actual
 integer carry, all terminal coefficients, and the singular Euler factor.
 It uses a precise Clausen parameter tangent, not differentiation in x.
 
-**HYP-9330 remains OPEN:** the remaining weight-2 families (including Apéry
-zeta(3)), the other weight-one hypergeometric cases, slope law and survivor
-claims retain their stated evidence status. For Apéry zeta(3), the missing
-step is a deformation with the correct carry tangent and a justified full
-truncation, including the simple singular-prefactor roots.
+Apéry is closed by a different route: the reflected Franel companion
+is invariant under the quadratic deck map, and a pole bound forces its
+descent to a polynomial of degree below p. The actual carry recurrence
+then identifies it, including the singular-prefactor roots.
+
+**HYP-9330 remains OPEN:** the remaining weight-2 families, other weight-one
+hypergeometric cases, slope law and survivor claims retain their stated
+evidence status. Each remaining (C) case needs the correct tangent and full
+truncation or an audited companion descent with a sufficient degree bound.
 
 ## Setting
 
@@ -196,4 +201,4 @@ for the 3rd-order symmetric-square (K3) families: Apery zeta(3), Domb, Cooper `s
 - **The `s_10`, `m = -2` exception.** Explain why this `Z[i]` point has depth 3 at every prime. A natural guess is
   extra symmetry at `tau = (2+i)/5`.
 - **Remaining (B) route.** Extend THM-4711 to the three other tested hypergeometric families; the six Zagier cases and Legendre are closed.
-- **Remaining (C) route.** Generalize the audited cube deformation to Apéry zeta(3) and the other CFVZ families, proving tangent identification and truncation before inferring divisibility.
+- **Remaining (C) route.** Generalize the audited cube deformation or Apéry reflected-companion descent to Domb, Almkvist–Zudilin and the other families, retaining tangent, pole/degree bounds and simple singular roots.

@@ -1,15 +1,15 @@
 ---
 id: THM-4711
-title: "Lucas-carry Wronskians for Legendre and Zagier sequences and the binomial-cube radical"
+title: "Lucas-carry Wronskians and radical divisibility for Legendre, Zagier, binomial-cube and Apery sequences"
 status: "PROVED — all primes p >= 7 in the stated families; independently audited"
 session: clock_duality_oct18l
 related: [HYP-9330, HYP-9311]
 ---
 
-# THM-4711 — Legendre Wronskian and binomial-cube Lucas carry divisibility
+# THM-4711 — Lucas-carry Wronskians and radical divisibility
 
 **PROVED, independently audited.** This proves the stated Legendre, six
-Zagier, and binomial-cube cases. HYP-9330 remains OPEN in its remaining scope.
+Zagier, binomial-cube and Apéry zeta(3) cases. HYP-9330 remains OPEN in its remaining scope.
 
 ## 1. Exact scope and inheritance
 
@@ -31,11 +31,13 @@ The divisions are integer divisions. Then:
    root 64x=1 when p=3 modulo 4.
 3. **Six sporadic cases / HYP-9330(B):** for each of Zagier A–F,
    F_p is squarefree and gcd(F_p,V_p)=1 at every prime p>=7; see §7.
+4. **Apéry zeta(3) / HYP-9330(C):** rad(F_p) divides V_p at every
+   prime p>=7, including the simple singular-prefactor roots; see §8.
 
 The proof gives stronger polynomial identities, not only tests at rational
 CM parameters. Part (B) also holds for all six Zagier sporadic sequences by §7 below.
-No assertion is made here about the split-prime slope law, Apéry zeta(3)'s carry
-defect, or all weight-one/two families.
+No assertion is made here about the split-prime slope law or all
+weight-one/two families.
 
 Inheritance: HYP-9311's elementary factorial-block shift identifies the
 carry defect. The [earlier Deuring companion proof](../../05-knowledge/results/overnight9_20260906_jets_deuring.md)
@@ -326,23 +328,132 @@ slope. At p=3 or5 some discriminants, b, or c vanish; this extension
 makes no claim there. The omitted discriminant condition is necessary:
 Zagier D at p=5 has h=(1+2x)^2 and F=(1+2x)^4, and (B) fails.
 
-## 8. Obstructions to automatic extension
+## 8. Apéry zeta(3): the reflected companion descends
 
-For Apéry zeta(3), CFVZ Theorem2 gives F_p=B_p^2 or
-(t^2-34t+1)B_p^2, and Straub Theorem1.3 identifies V_p with a
-truncated formal derivative series. These statements alone do not give
-a parameter identity whose derivative is that precise series, nor its
-complete truncation law. In particular, a differentiated expression
-2B_p C_p+D_p F_p only forces vanishing at B_p's roots; it need not
-vanish at simple roots of a separate singular prefactor. One must retain
-the prefactor's tangent or prove its roots separately. Apéry zeta(3) remains OPEN
-here, as do the remaining families in HYP-9330.
+For every p>=7 let A_n be the Apéry zeta(3) numbers and let F_A,V_A
+be their first-block period and actual carry defect. Then
+rad(F_A) divides V_A in F_p[t].
 
-The cube proof works because the Euler prefactor in (6) is independent
-of rho. That is an exact condition to seek in other families, not an
-inference from their weight or a numerical match of singular polynomials.
+Write H for the Franel period and set
+G=V_Fr/2-(V_Fr(0)/2)H. Likewise set
+G_A=V_A/5-(V_A(0)/5)F_A. Both companions have constant0. This
+normalization does not change any value at a period root or any gcd.
 
-## 9. Sources, verification, and audit
+Define over F_p(x)
+
+```
+t=x(1-8x)/(1+x),     sigma(x)=(1-8x)/(8(1+x)),
+K=(1+x)^(p-1),      eps=1 if p=1 mod6, else -1,
+c=eps*G(1/8),
+B=G+eps*K*G(sigma(x))-c*H.
+```
+
+The exact strengthened companion identity is
+
+```
+F_A(t(x))=H(x)^2/K(x),
+G_A(t(x))=H(x)*B(x)/K(x).                            (A1)
+```
+
+The first equality is classical CFVZ input: the characteristic-zero
+period identity f_A(t)=(1+x)h_Fr(x)^2, followed by the known Lucas
+identities F_A=f_A^(1-p), H=h_Fr^(1-p). CFVZ Lemma7 also gives
+H=eps*K*H(sigma(x)); Lemma5 identifies the fixed field as F_p(t).
+All quoted denominators and constants are units for p>=7.
+
+Here is a proof of the second identity that retains the full tail.
+The Franel equation, in ordinary derivatives, is
+
+```
+L_Fr(y)=(x(1-7x-8x^2)y')'+(-8x-2)y=0.
+```
+
+The recurrence calculation in §7 shows that H log x+G is a formal
+logarithmic solution. Its reflected/gauged version
+
+```
+eps*K*(H(sigma(x))*log(sigma(x))+G(sigma(x)))
+```
+
+is also a solution. The exact rational differential substitution
+u(x) -> (1+x)^(-1)u(sigma(x)) preserves this equation, by chain rule.
+In characteristic p, K differs from (1+x)^(-1) by the differential
+constant 1+x^p, so the same statement holds with K. Reflection of
+H and addition give the solution H log t+B, after subtracting cH;
+choose the formal logarithm log t=log x+log sigma(x), whose derivative
+is correct because x*sigma(x)=t/8. Constants in the logarithm are
+absorbed in the chosen analytic normalization.
+
+The symmetric-square equation for products of two Franel solutions,
+after multiplying by 1+x and using t(x), is exactly
+
+```
+L_A = theta_t^3-t(2theta_t+1)(17theta_t^2+17theta_t+5)
+                  +t^2(theta_t+1)^3.
+```
+
+This is a complete rational differential-operator identity, checked
+coefficientwise, not just the observation that one holomorphic solution
+matches. Multiplication by 1/K has the same derivatives as multiplication
+by 1+x, up to the differential constant 1/(1+x^p). Therefore
+
+```
+(H^2/K) log t + H B/K
+```
+
+solves the pulled-back Apéry equation. It remains to prove that HB/K is
+a polynomial in t of degree<p; a formal identity modulo x^p would be
+insufficient.
+
+First, K(x)K(sigma(x))=(9/8)^(p-1)=1. The map
+U -> eps*K*U(sigma(x)) is an involution on polynomials of degree<=p-1,
+and fixes H. It fixes G+eps*K*G(sigma(x)) and hence B. Thus HB/K is
+sigma-invariant, so it is a rational function of t. Both H and B are
+polynomials of degree<=p-1: clearing the linear denominator of sigma by
+K proves this even for the highest coefficient.
+
+Consequently HB/K has possible poles only at x=-1 and x=infinity,
+of order at mostp-1 at either. These are precisely the two poles of t,
+and each is simple (p does not divide2 or3). A pole at a finite t-value
+would pull back to a pole away from those two points. There is none.
+It follows that HB/K is a polynomial R(t) of degree<=p-1. Moreover
+R(0)=0 because H(0)=1 and B(0)=G(0)+eps*G(1/8)-c=0.
+
+The actual Apéry recurrence and first-block Lucas congruence imply that
+G_A has the same inhomogeneous logarithmic equation as R in degrees
+1..p-1. This follows by subtracting five times the recurrence at k
+from the recurrence at p+k and dividing by p; its k=1 extra lower
+term has coefficient p^3 and vanishes. Subtracting the constant
+multiple of F_A preserves this equation. The coefficient of the new
+unknown at degree k is k^3, nonzero for 1<=k<p. Therefore the
+normalized polynomials R and G_A agree coefficient by coefficient.
+This proves (A1) as a rational identity, with no omitted truncation tail.
+
+Finally let alpha be any root of F_A over the algebraic closure.
+A lift beta with t(beta)=alpha is finite and different from-1, so
+K(beta)!=0. The first equality of (A1) gives H(beta)=0; the second
+gives G_A(alpha)=0. This includes the ramification values, where
+F_A may have a simple singular-prefactor root. Restoring the removed
+multiple of F_A does not change the zero, so V_A(alpha)=0.
+
+The degree and pole argument is the missing substitute for a direct
+parameter deformation in Apéry. It proves only this family; neither
+Domb nor Almkvist–Zudilin is automatically promoted from a similar
+square identity without auditing its substitution and pole divisor.
+
+## 9. The remaining family boundary
+
+For Domb, Almkvist–Zudilin and the other weight-two families, the CFVZ
+square identities are important input but alone do not identify V_p.
+A differentiated expression 2BC+DF need not vanish at a simple root of
+a separate singular prefactor. The successful cube proof retains a
+parameter-independent Euler prefactor; the successful Apéry proof instead
+retains the two-sheet logarithmic companion and a pole bound that forces
+polynomial descent. Each remaining family needs one of these full audits.
+They remain OPEN here. The former Apéry obstruction is resolved by §8,
+not silently assumed away.
+
+## 10. Sources, verification, and audit
 
 - [DLMF16.12.2](https://dlmf.nist.gov/16.12.E2): classical Clausen identity.
 - [DLMF15.8.1](https://dlmf.nist.gov/15.8.E1): Euler transformation.
@@ -352,7 +463,7 @@ inference from their weight or a numerical match of singular polynomials.
   Theorems2–4: prior square-factor results for Apéry, alternating Domb,
   Almkvist–Zudilin; they do not by themselves identify V_p.
 
-The all-prime conclusions rest on §§2–7. The
+The all-prime conclusions rest on §§2–8. The
 [independent audit](../../04-computation/cm_detector_sporadic/audit_bc_20261018l/REPORT.md)
 accepts every stated all-prime conclusion, the carry and terminal-index
 checks, and the explicit singular-prime exclusions. No new mathematical
@@ -380,3 +491,26 @@ n=0..100. The existing detector's `mechanism` is exercised on the actual
 integer sequences, separately from the derived polynomial formulas.
 The theorem deliberately retains p>=7 despite the extra small-prime
 binomial checks. All source/receipt hashes are in the audit manifest.
+
+
+### Apéry supplemental audit
+
+The [supplemental independent audit](../../04-computation/cm_detector_sporadic/audit_bc_20261018l/APERY_REPORT.md)
+accepts §8 for every p>=7. It independently verifies the Franel Möbius
+covariance and the full third-order symmetric-square pullback as rational
+operator identities; the separate checker compares the entire cleared
+polynomials at all75 primes7..397 and calls the existing `mechanism()`.
+The parent checker independently reaches the same75 cases and is identical
+under `python3 -O`.
+
+```bash
+python3 04-computation/cm_detector_sporadic/apery_companion_descent_20261018l.py --bound 397 --out /tmp/apery_descent.json
+python3 04-computation/cm_detector_sporadic/apery_pullback_operators_20261018l.py
+```
+
+The first equality in(A1) is explicitly derived from the CFVZ period
+identity and Lucas. This avoids importing the apparent reciprocal-factor
+typo in the displayed proof of their Theorem2 in the HTML version: the
+required pullback is H^2/(1+x)^(p-1). No assertion from that typo is used.
+The complementary square and companion formulas are verified as rational
+identities before evaluating a ramified root.

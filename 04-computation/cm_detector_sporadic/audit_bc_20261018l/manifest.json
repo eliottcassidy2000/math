@@ -1,6 +1,11 @@
 {
   "sha256": {
-    "04-computation/cm_detector_sporadic/audit_bc_20261018l/REPORT.md": "cd8cb0e45cc498579cdbe17b7b4baddf992ab4df1ce79c62e207a21cfdb7a4cb",
+    "04-computation/cm_detector_sporadic/audit_bc_20261018l/APERY_REPORT.md": "80f4ca43ec7dbe74c16a662e084b09feea88789fa0d4f0eaa2a82dac30057ec0",
+    "04-computation/cm_detector_sporadic/audit_bc_20261018l/REPORT.md": "2e4459d88eb595d8e3237ce61f20bf9ec4a784a97c4b6e4ce57f04aa0c28a0a1",
+    "04-computation/cm_detector_sporadic/audit_bc_20261018l/apery_397.json": "87c0b2f488713075a97e42d25062dd0240ff553eb6a61eab0160cff6bd534ec3",
+    "04-computation/cm_detector_sporadic/audit_bc_20261018l/apery_operators.json": "45d998ab6c5afcf53b292631010ef3754c8296d89e7fbdb1ca5f222b13243de3",
+    "04-computation/cm_detector_sporadic/audit_bc_20261018l/audit_apery.py": "4a0ba8d4f1d7db50d9976fa6610d2161343b1666d3c44e818ab94ecbd89fc46e",
+    "04-computation/cm_detector_sporadic/audit_bc_20261018l/audit_apery_operators.py": "119ffc70f6b310e48520fadcad0a248d262690acc4ee831b1076bd3ee1c9fc1d",
     "04-computation/cm_detector_sporadic/audit_bc_20261018l/audit_identities.py": "198ff2a643ee423422cd49000ed4e26acb0f8c7661c8da7d9b37d2876ee33bc6",
     "04-computation/cm_detector_sporadic/audit_bc_20261018l/audit_zagier.py": "e6331e1963b0cf6d3c3ba88ea331cca42304eea83ecb56b442f4b3023c124a8a",
     "04-computation/cm_detector_sporadic/audit_bc_20261018l/identities_397.json": "760163d4e11b57a4e956b0cce79e674276bf32dfd3ee9f7b6739af8ef32d78d3",

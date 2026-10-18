@@ -1,6 +1,8 @@
 # Independent audit of THM-4711 and the HYP-9330 (B),(C) routes
 
-**PASSED for the explicit all-prime claims below.** Independent audit agent
+**PASSED for the explicit all-prime claims below.** The subsequent
+[Apéry supplement](APERY_REPORT.md) additionally proves Apéry zeta(3)
+carry divisibility and closes the initial obstruction recorded below. Independent audit agent
 `detector_audit`, 2026-10-18. The audit derives the identities independently,
 checks the submitted proof, and runs its own exact programs. It does not
 promote the rest of HYP-9330 or infer an all-prime statement from a finite bank.
@@ -120,8 +122,9 @@ The classical ingredients were checked in the primary reference:
   https://arxiv.org/html/2510.23298v1
 
 The CFVZ square factorization alone does not identify the carry tangent.
-For Apéry zeta(3), the specific matching deformation and its complete
-truncation law remain unproved here. A simple root of a separate singular
+The initial audit left the matching deformation and complete truncation
+law for Apéry zeta(3) unproved. The later `APERY_REPORT.md` closes the
+carry-divisibility target by reflected-companion pole descent instead. A simple root of a separate singular
 prefactor is not protected merely by an expression2BC+DF. This is a
 precise obstruction to that shortcut, not a refutation of HYP-9330(C).
 
