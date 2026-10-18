@@ -1,0 +1,3 @@
+[    3 s] recipe contact2: |A| = 10597, |C| = 10
+[   23 s] edges: A 44745, C 15, mixed 87846
+[   23 s] golden two-distance graph on A (unit edges + d-steps): -1 edges; patterns not extending: 0

@@ -92,6 +92,9 @@ related:
      - **Pointwise.** `max_N sup_d E_d(N)/N = 10.06`, at `N = 7910`, where `R^2/N = 9.08`. In the octaves
        `2^18..2^21` every profile peaks at `d = 0`.
      - **Ideal regime.** The actual `E_6/N` averages 1.693 in every octave `2^18..2^22`, matching the ideal value.
+     - **Matching.** For `d <= 6` and `N = 2^16, 2^18`, the actual `c_d` equals clock_duality's ideal
+       `K_d(t mod 3^(d+1), b(t))` at every seed except ROOT, the band-boundary seed `3^d`, and at most one other small
+       seed. The total `l2` error is at most `0.002 N` (root_transport_l2_matching_20261017.out).
      - **Shells.** `Σ_(X <= N < 2X) max_d c_d(1)^2 <= 5.20 X^2` for every octave `2^9..2^22`. This is statement 9's shell
        partial sums with the maximum inside the sum.
    - *Sibling anatomy* (octaves `2^10..2^12` in full, samples at `2^16`):

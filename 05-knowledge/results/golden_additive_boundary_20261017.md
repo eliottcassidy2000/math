@@ -113,7 +113,35 @@ So every source `A + uC + vC + eL` over `K` is the old source multiplied Cartesi
 extends, and the named target edge does not exist in this space. Together with section 3 (`v^2`), the two natural
 nonlinear moves of the golden program add no cross edges.
 
-## 4. A design loop, and what five larger sources show
+## 3c. Product coordinates: two new contact families, still additively free
+
+`golden_product_direction_census_20261017.py` repeats the census for the product coordinates `Y = ue, ve, uv, e^2`. It
+uses all four norm components in `F(s, h)`, with `d3 ∈ D(C) ∪ D(L)` (`9.1 x 10^8` differences each). Results
+(FINITE-EXACT):
+
+| `Y` | units with nonzero `Y`-part | pure `Y`-axis | cross units |
+|---|---|---|---|
+| `ve` | 26 | 26 | 0 |
+| `ue` | 26 | 26 | 0 |
+| `uv` | 36 | 26 | 10 |
+| `e^2 = -Z/conj(Z)` (an element of `F`) | 36 | 26 | 10 |
+
+`golden_product_relations_20261017.py` shows that each set of 10 cross units is one contact family, and both follow
+from clock_duality's contact `|d + u + v| = 1`:
+- **`uv`.** The family is `q (0, 1, 1, conj d)` in `(1, u, v, uv)`. Since `|u| = |v| = 1`,
+  `|u + v + conj(d) uv| = |conj(d + u + v)| = 1`: the reflected contact.
+- **`e^2`.** The family is `q (d, 1, 0, conj d)` in `(1, u, v, e^2)`. Indeed `d + u + conj(d) e^2 = Z conj(u)/conj(Z)`,
+  a unit. This coordinate lies in the degree-48 base field `F`, so it needs neither `s` nor `h`.
+
+The `e^2` family shares its `(A, u)`-step `(dq, q)` with the `v`-contact. That is the first genuinely coupled pair of
+mixed families in the golden program.
+
+`golden_forcing_search4_20261017.py` builds `A + uC + vC + e^2 C`: 54,000 addresses, 56 `v`-contact and 42
+`e^2`-contact edge patterns per layer. For these coefficient sets the census plus G5 give the complete edge set. The
+additive pre-screen still blocks **no** pattern, with or without shared coefficient colourings. Two coupled contact
+families sharing an `(A, u)`-step are absorbed by independent coefficient shifts.
+
+## 4. A design loop, and what six larger sources show
 
 `golden_forcing_search_20261017.py` builds `A' + uC' + vC'` for `A', C' ⊂ K` directly from G5: unit edges by a
 three-prime sieve plus exact norm in `K`; mixed edges combinatorially from the contact family. It then runs:
@@ -129,7 +157,8 @@ It reproduces clock_duality's source exactly: 146, 15 and 56 edges.
 | `dM`: `A' = P + M + dM` | 364 | 10 | 1139 | 15 | 2142 | 465 | 0 |
 | contact1: `A' = A + d·U(C)` | 1099 | 10 | 3794 | 15 | 5302 | 465 | 0 |
 | `dM_C2`: also `C' = C + U(C)` | 364 | 174 | 1139 | 532 | 2,297,178 | 465 | 0 |
-| `MM`, contact2 | see `golden_forcing_search_more_20261017.out` | | | | | | |
+| `MM`: `C' = M + M + pentagon` | 364 | 29 | 1139 | 73 | 72,358 | 465 | 0 |
+| contact2: two contact steps | 10,597 | 10 | 44,745 | 15 | 87,846 | (skipped) | PENDING |
 
 Here `U(C)` is the set of unit differences of `C`. With 4 x 10^4 times as many mixed edges, every pattern still extends
 additively, even with `c_1 = c_2`.

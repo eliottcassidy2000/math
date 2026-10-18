@@ -1,0 +1,10 @@
+{
+ "LIM": 4000000,
+ "seeds": 1500000,
+ "heads": 500000,
+ "pairs_checked": 250000,
+ "singletons": 750000,
+ "fibres": 1218750,
+ "fibres_with_singleton": 750000,
+ "max_fibre_len": 8
+}

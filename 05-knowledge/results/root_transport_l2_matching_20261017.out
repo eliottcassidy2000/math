@@ -1,0 +1,28 @@
+N = 2^12 d = 0: ||c_d - K_d||^2/N = 0.000977 (off ROOT 0.000000)  seeds with error: 1 []  (||c_d||^2/N = 4.8584), l1/N = 0.000488
+N = 2^12 d = 1: ||c_d - K_d||^2/N = 0.000244 (off ROOT 0.000244)  seeds with error: 1 [3]  (||c_d||^2/N = 3.3872), l1/N = 0.000244
+N = 2^12 d = 2: ||c_d - K_d||^2/N = 0.001953 (off ROOT 0.000977)  seeds with error: 2 [9]  (||c_d||^2/N = 2.5806), l1/N = 0.000977
+N = 2^12 d = 3: ||c_d - K_d||^2/N = 0.000977 (off ROOT 0.000977)  seeds with error: 1 [27]  (||c_d||^2/N = 2.1548), l1/N = 0.000488
+N = 2^12 d = 4: ||c_d - K_d||^2/N = 0.015869 (off ROOT 0.003906)  seeds with error: 2 [81]  (||c_d||^2/N = 1.9385), l1/N = 0.002686
+N = 2^12 d = 5: ||c_d - K_d||^2/N = 0.004395 (off ROOT 0.002197)  seeds with error: 2 [15]  (||c_d||^2/N = 1.8213), l1/N = 0.001465
+N = 2^12 d = 6: ||c_d - K_d||^2/N = 0.002197 (off ROOT 0.000000)  seeds with error: 1 []  (||c_d||^2/N = 1.7383), l1/N = 0.000732
+N = 2^14 d = 0: ||c_d - K_d||^2/N = 0.000000 (off ROOT 0.000000)  seeds with error: 0 []  (||c_d||^2/N = 4.8569), l1/N = 0.000000
+N = 2^14 d = 1: ||c_d - K_d||^2/N = 0.000061 (off ROOT 0.000061)  seeds with error: 1 [3]  (||c_d||^2/N = 3.3887), l1/N = 0.000061
+N = 2^14 d = 2: ||c_d - K_d||^2/N = 0.002258 (off ROOT 0.000061)  seeds with error: 2 [9]  (||c_d||^2/N = 2.5757), l1/N = 0.000427
+N = 2^14 d = 3: ||c_d - K_d||^2/N = 0.000244 (off ROOT 0.000244)  seeds with error: 1 [27]  (||c_d||^2/N = 2.1349), l1/N = 0.000122
+N = 2^14 d = 4: ||c_d - K_d||^2/N = 0.001587 (off ROOT 0.000061)  seeds with error: 2 [81]  (||c_d||^2/N = 1.8993), l1/N = 0.000366
+N = 2^14 d = 5: ||c_d - K_d||^2/N = 0.001648 (off ROOT 0.001587)  seeds with error: 3 [15, 243]  (||c_d||^2/N = 1.7946), l1/N = 0.000427
+N = 2^14 d = 6: ||c_d - K_d||^2/N = 0.000610 (off ROOT 0.000549)  seeds with error: 2 [91]  (||c_d||^2/N = 1.7632), l1/N = 0.000244
+N = 2^16 d = 0: ||c_d - K_d||^2/N = 0.000000 (off ROOT 0.000000)  seeds with error: 0 []  (||c_d||^2/N = 4.8571), l1/N = 0.000000
+N = 2^16 d = 1: ||c_d - K_d||^2/N = 0.000000 (off ROOT 0.000000)  seeds with error: 0 []  (||c_d||^2/N = 3.3884), l1/N = 0.000000
+N = 2^16 d = 2: ||c_d - K_d||^2/N = 0.000381 (off ROOT 0.000137)  seeds with error: 2 [9]  (||c_d||^2/N = 2.5756), l1/N = 0.000107
+N = 2^16 d = 3: ||c_d - K_d||^2/N = 0.000000 (off ROOT 0.000000)  seeds with error: 0 []  (||c_d||^2/N = 2.1358), l1/N = 0.000000
+N = 2^16 d = 4: ||c_d - K_d||^2/N = 0.001907 (off ROOT 0.000061)  seeds with error: 2 [81]  (||c_d||^2/N = 1.9124), l1/N = 0.000198
+N = 2^16 d = 5: ||c_d - K_d||^2/N = 0.000381 (off ROOT 0.000244)  seeds with error: 2 [243]  (||c_d||^2/N = 1.7733), l1/N = 0.000107
+N = 2^16 d = 6: ||c_d - K_d||^2/N = 0.001511 (off ROOT 0.001373)  seeds with error: 3 [91, 729]  (||c_d||^2/N = 1.7010), l1/N = 0.000229
+N = 2^18 d = 0: ||c_d - K_d||^2/N = 0.000015 (off ROOT 0.000000)  seeds with error: 1 []  (||c_d||^2/N = 4.8572), l1/N = 0.000008
+N = 2^18 d = 1: ||c_d - K_d||^2/N = 0.000000 (off ROOT 0.000000)  seeds with error: 0 []  (||c_d||^2/N = 3.3884), l1/N = 0.000000
+N = 2^18 d = 2: ||c_d - K_d||^2/N = 0.000156 (off ROOT 0.000095)  seeds with error: 2 [9]  (||c_d||^2/N = 2.5754), l1/N = 0.000034
+N = 2^18 d = 3: ||c_d - K_d||^2/N = 0.000019 (off ROOT 0.000015)  seeds with error: 2 [27]  (||c_d||^2/N = 2.1379), l1/N = 0.000011
+N = 2^18 d = 4: ||c_d - K_d||^2/N = 0.001881 (off ROOT 0.000034)  seeds with error: 2 [81]  (||c_d||^2/N = 1.9172), l1/N = 0.000095
+N = 2^18 d = 5: ||c_d - K_d||^2/N = 0.000481 (off ROOT 0.000099)  seeds with error: 3 [15, 243]  (||c_d||^2/N = 1.7701), l1/N = 0.000061
+N = 2^18 d = 6: ||c_d - K_d||^2/N = 0.001030 (off ROOT 0.000648)  seeds with error: 3 [91, 729]  (||c_d||^2/N = 1.6820), l1/N = 0.000107

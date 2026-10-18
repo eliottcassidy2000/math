@@ -250,7 +250,10 @@ def main():
     log('edges: A %d, C %d, mixed %d' % (len(EA), len(EC), len(mixed)))
     need([tuple(sorted(e)) for e in EA if max(e) < 8] == sorted(tuple(sorted(e)) for e in PORT_EDGES), 'ports literal')
     pats = patterns(8, PORT_EDGES)
-    bl_two, n_two = two_distance(len(A), EA, mixed, pats)
+    if '--no-two' in sys.argv:
+        bl_two, n_two = [], -1
+    else:
+        bl_two, n_two = two_distance(len(A), EA, mixed, pats)
     log('golden two-distance graph on A (unit edges + d-steps): %d edges; patterns not extending: %d' % (n_two, len(bl_two)))
     bl_shared = additive(len(A), len(C), EA, EC, mixed, pats, True)
     bl_free = additive(len(A), len(C), EA, EC, mixed, pats, False)

@@ -53,6 +53,13 @@ All pre-screens below run in seconds to minutes.
 `K_5` on the ports and blocks 465 of the 570 patterns. The coefficient colourings evade this by shifting the
 constraints.
 
+**Beyond the linear space.** The product coordinates `ue` and `ve` add no cross edges (census), and `e` is Cartesian
+(THM-4668). The coordinates `uv` and `e^2` add one contact family each:
+- `uv`: `q (0, 1, 1, conj d)`, the reflected contact;
+- `e^2`: `q (d, 1, 0, conj d)`, which shares the `(A, u)`-step with the `v`-contact.
+
+The coupled source `A + uC + vC + e^2 C` is still additively free (golden_forcing_search4_20261017.py).
+
 ## Tests
 
 * **Rigid coefficients.** Coefficient sets whose unit graph forbids homomorphism-like colourings (many distinct shifts

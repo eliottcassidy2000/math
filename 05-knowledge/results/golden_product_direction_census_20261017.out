@@ -1,0 +1,40 @@
+direction ve ready: |D(A)| = 1602, |D(C)| = 82, |D3| = 130 [1 s]
+prime 1021: 78 survivors [37 s]
+prime 1171: 26 survivors [37 s]
+prime 1741: 26 survivors [38 s]
+direction ve: exact units with a nonzero Y part: 26 (pure Y-axis 26, mixed 0) [40 s]
+direction ue ready: |D(A)| = 1602, |D(C)| = 82, |D3| = 130 [1 s]
+prime 1021: 90 survivors [39 s]
+prime 1171: 26 survivors [39 s]
+prime 1741: 26 survivors [39 s]
+direction ue: exact units with a nonzero Y part: 26 (pure Y-axis 26, mixed 0) [40 s]
+direction uv ready: |D(A)| = 1602, |D(C)| = 82, |D3| = 130 [1 s]
+prime 1021: 1920 survivors [59 s]
+prime 1171: 36 survivors [60 s]
+prime 1741: 36 survivors [60 s]
+direction uv: exact units with a nonzero Y part: 36 (pure Y-axis 26, mixed 10) [61 s]
+  mixed unit: dA 0, d1 10, d2 10, d3 29
+  mixed unit: dA 0, d1 13, d2 13, d3 27
+  mixed unit: dA 0, d1 34, d2 34, d3 20
+  mixed unit: dA 0, d1 36, d2 36, d3 21
+  mixed unit: dA 0, d1 41, d2 41, d3 58
+  mixed unit: dA 0, d1 42, d2 42, d3 71
+  mixed unit: dA 0, d1 47, d2 47, d3 108
+  mixed unit: dA 0, d1 49, d2 49, d3 109
+  mixed unit: dA 0, d1 70, d2 70, d3 102
+  mixed unit: dA 0, d1 73, d2 73, d3 100
+direction ee ready: |D(A)| = 1602, |D(C)| = 82, |D3| = 130 [1 s]
+prime 1021: 19080 survivors [60 s]
+prime 1171: 58 survivors [60 s]
+prime 1741: 36 survivors [60 s]
+direction ee: exact units with a nonzero Y part: 36 (pure Y-axis 26, mixed 10) [61 s]
+  mixed unit: dA 292, d1 13, d2 0, d3 27
+  mixed unit: dA 293, d1 10, d2 0, d3 29
+  mixed unit: dA 316, d1 42, d2 0, d3 71
+  mixed unit: dA 323, d1 49, d2 0, d3 109
+  mixed unit: dA 789, d1 36, d2 0, d3 21
+  mixed unit: dA 814, d1 47, d2 0, d3 108
+  mixed unit: dA 1280, d1 34, d2 0, d3 20
+  mixed unit: dA 1287, d1 41, d2 0, d3 58
+  mixed unit: dA 1310, d1 73, d2 0, d3 100
+  mixed unit: dA 1311, d1 70, d2 0, d3 102

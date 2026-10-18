@@ -233,8 +233,17 @@ point masses. So all depths can be maintained at once, by walking one path of th
    - The dissipation persists to `d = 12` but decays more slowly than geometrically (ratios 0.83-0.90 at `d = 10..12`).
      So there is no evidence of a spectral gap, and summability of the cross terms is itself OPEN.
 2. **Matching (integer clocks).** At fixed depth the actual coefficients differ from the ideal ones only near affine
-   thresholds. In `l^2`, the target is matching errors that add in quadrature. Statement 7 shows the actual `E_6/N`
-   equals the ideal value to 3 decimals in every octave `2^18..2^22`.
+   thresholds. In `l^2`, the target is matching errors that add in quadrature.
+   - `root_transport_l2_matching_20261017.py` compares the actual `c_d(t)` with clock_duality's ideal
+     `K_d(t mod 3^(d+1), b(t))` at **every** seed, for `d <= 6` and `N = 2^12..2^18`.
+   - For `N = 2^16, 2^18` the coefficients differ at **ROOT and at most two other seeds**:
+     - the seed `3^d` (9, 27, 81, 243, 729). For dyadic `N` it lies exactly on an ideal band boundary
+       `M_d N/2^b = 3^d 2^(k+2-d-b)`;
+     - occasionally one more small seed (15 at `d = 5`, 91 at `d = 6`).
+   - The total `l2` error is at most `0.002 N`. Off ROOT it is at most `0.0014 N`, and `l1` error/N falls with `N`.
+   - So at fixed depth the whole matching problem is the ROOT accumulation, i.e. the termination regime, plus `O(1)`
+     boundary seeds. This finite evidence merges items 2 and 3. Section 6b records clock_duality's P3, a uniform `l1`
+     version to `d <= m/16`.
 3. **Termination regime.** In the sampled large-current rows the late energy is ROOT-dominated;
    `Vroot[d]` is exactly a shell partial sum.
    - HYP-9288(B) implies the shell mean-square maximal inequality. The converse requires a separate bound for the

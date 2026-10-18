@@ -1,0 +1,4 @@
+A1: statements 1, 2, 3, 4, 8 (INTRA/INTER, pair shape), 9 verified exactly for 464 values of N (28835 depth checks)
+    smallest scale ratio between different blocks of one fibre carrying a nonzero cross term: 32.0013
+    largest sup_d E_d(N)/N among the tested N: 10.0627 at N = 7910 (R = 268); N = 1: 10.0000; N = 4: 9.0000; N = 7910: 10.0627
+    [70 s]
