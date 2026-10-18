@@ -1,0 +1,27 @@
+(1) C(2(ap+j),ap+j) == C(2a,a)C(2j,j)(1 + 2ap(H_2j - H_j)) mod p^2, p <= 43, 2a < p, j <= n: holds
+(2) (B1) at m =     1 (CM ): holds for all p <= 160
+(2) (B1) at m =    -8 (CM ): holds for all p <= 160
+(2) (B1) at m =    16 (CM ): holds for all p <= 160
+(2) (B1) at m =   -64 (CM ): holds for all p <= 160
+(2) (B1) at m =    64 (CM ): holds for all p <= 160
+(2) (B1) at m =   256 (CM ): holds for all p <= 160
+(2) (B1) at m =  -512 (CM ): holds for all p <= 160
+(2) (B1) at m =  4096 (CM ): holds for all p <= 160
+(2) (B1) at m =     3 (gen): fails at 29 primes, first [5, 13, 17, 19, 29, 31]
+(2) (B1) at m =     5 (gen): fails at 29 primes, first [7, 13, 17, 19, 29, 31]
+(2) (B1) at m =     7 (gen): fails at 29 primes, first [5, 11, 17, 23, 29, 31]
+(2) (B1) at m =    -3 (gen): fails at 32 primes, first [5, 7, 11, 13, 17, 19]
+(2) (B1) at m =    10 (gen): fails at 32 primes, first [7, 11, 13, 17, 19, 23]
+(3) F_(p^2) == F_p^2 mod p^2 at m =     1: holds for p <= 37
+(3) F_(p^2) == F_p^2 mod p^2 at m =    -8: holds for p <= 37
+(3) F_(p^2) == F_p^2 mod p^2 at m =    16: holds for p <= 37
+(3) F_(p^2) == F_p^2 mod p^2 at m =   -64: holds for p <= 37
+(3) F_(p^2) == F_p^2 mod p^2 at m =    64: holds for p <= 37
+(3) F_(p^2) == F_p^2 mod p^2 at m =   256: holds for p <= 37
+(3) F_(p^2) == F_p^2 mod p^2 at m =  -512: holds for p <= 37
+(3) F_(p^2) == F_p^2 mod p^2 at m =  4096: holds for p <= 37
+(3) F_(p^2) == F_p^2 mod p^2 at m =     3: fails at [5, 13, 17, 19, 29, 31]
+(3) F_(p^2) == F_p^2 mod p^2 at m =     5: fails at [7, 13, 17, 19, 29, 31]
+(3) F_(p^2) == F_p^2 mod p^2 at m =     7: fails at [5, 11, 17, 23, 29, 31]
+(3) F_(p^2) == F_p^2 mod p^2 at m =    -3: fails at [5, 7, 11, 13, 17, 19]
+(3) F_(p^2) == F_p^2 mod p^2 at m =    10: fails at [11, 13, 17, 23, 29, 31]

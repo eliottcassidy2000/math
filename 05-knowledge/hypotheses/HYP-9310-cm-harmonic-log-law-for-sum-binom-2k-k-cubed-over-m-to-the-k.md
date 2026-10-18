@@ -19,7 +19,8 @@ scripts:
   - 04-computation/experiments/cm_harmonic_log_law_20261018.py
   - 04-computation/experiments/cm_points_forms_legendre_20261018.py
   - 04-computation/experiments/cm_harmonic_log_law_extended_20261018.py
-related: [THM-4685, THM-4670, THM-4669, Sun Conjecture 29 and 36 (arXiv:2210.07238), Kibelbek-Long-Moss-Sheller-Yuan (arXiv:1210.4489), Guillera-Zudilin divergent series, Coster-van Hamme 1991]
+  - 04-computation/experiments/cm_law_lucas_block_form_20261018.py (Lucas-block form, F_(p^2) == F_p^2)
+related: [THM-4685, THM-4670, THM-4669, Beukers-Vlasenko Dwork crystals III (arXiv:2105.14841), Sun Conjecture 29 and 36 (arXiv:2210.07238), Kibelbek-Long-Moss-Sheller-Yuan (arXiv:1210.4489), Guillera-Zudilin divergent series, Coster-van Hamme 1991]
 ---
 
 # HYP-9310 — the CM harmonic log law
@@ -79,6 +80,48 @@ where `a_k = C(2k,k)/4^k`, so that `a_j^3 a_(2j) = C(2j,j)^3 C(4j,2j)/1024^j`.
     modulo `p` (zero) was re-checked for `7 <= p <= 43`.
   - Combined with `(H)` it would give `Σ_(k<=n) k C(2k,k)^3 (H_(2k) - H_k) ≡ -(F_1 - 1)/6 (mod p)`, the `-1`
     coming from the missing `k = 0` term. This consequence was confirmed numerically for `7 <= p <= 43`.
+
+## Lucas-block form (PROVED equivalent) and the Dwork-crystal route
+
+**Lemma.** For `0 <= j <= n` and `2a < p`,
+```
+C(2(ap+j), ap+j) ≡ C(2a,a) C(2j,j) (1 + 2ap(H_(2j) - H_j))   (mod p^2).
+```
+Proof: count the multiples of `p` in `(2ap+2j)!/(ap+j)!^2`; each complete residue block contributes `(p-1)!`, since
+`H_(p-1) ≡ 0`. The lemma was checked for `p <= 43`.
+
+**Block form.** With `t_k = C(2k,k)^3 m^(-k)`, the `a`-th block is
+```
+Σ_(j<=n) t_(ap+j) ≡ t_a m^(-a(p-1)) (F_m + 6ap h_m)   (mod p^2).
+```
+Hence `(L_p)` is **equivalent** to the second-order Lucas factorization of the first block,
+```
+(B1)   Σ_(k=p)^(p+n) C(2k,k)^3 m^(-k) ≡ (8/m) Σ_(k=0)^(n) C(2k,k)^3 m^(-k)   (mod p^2).
+```
+
+**Consequences of `(B1)`.**
+- Every block factors: `Σ_(j<=n) t_(ap+j) ≡ t_a F_m`.
+- `F_(p^2) ≡ F_p^2 (mod p^2)`, where `F_N = Σ_(k<N) t_k`.
+- In general `F_(p^2) - F_p^2 ≡ p (6h_m - q_p(m) F_m) Σ_(a<=n) a t_a`. So the converse holds whenever
+  `Σ_(a<=n) a t_a ≢ 0 (mod p)`.
+
+**Checks** (`cm_law_lucas_block_form_20261018.py`):
+- `(B1)` holds at all 8 CM points for `p <= 160` and fails at 29-32 primes for each of `m = 3, 5, 7, -3, 10`.
+- `F_(p^2) ≡ F_p^2` holds at the CM points for `p <= 37` and fails generically.
+
+**Route (CITED framework, not yet applied).** Beukers-Vlasenko, *Dwork crystals III: from excellent Frobenius lifts
+towards supercongruences* (IMRN 2023, arXiv:2105.14841), was read in this session.
+- Their hypercubic family with `n = 3` is exactly `F(t) = 3F2(1/2,1/2,1/2;1,1;64t^2)`, i.e. `m = 1/t^2`.
+- The excellent lift is `q^σ = γ^(p-1) q^p` in the canonical coordinate (Definition 7.14).
+- Theorem 7.3 gives the Cartier congruence modulo `p^2` under that lift.
+- Corollary 6.4 compares an arbitrary lift with `t -> t^p` through a `log(t^σ/t^p)·θ` term. At a fixed point of the
+  excellent lift this log term is `-p q_p` of the coordinate, which is the source of the `q_p(m)` in `(L_p)`.
+- Corollary 8.2 gives `C_p(1/f_0) ≡ u_0 (1/f_0) (mod p^2)` at fixed points `t_0^σ = t_0`, which are the CM points.
+- Their Conjecture 7.5, the mod-`p^(2s)` Dwork congruence (unproven for any example), would give at a fixed point and
+  `s = 1, 2`: `F_p(t_0) ≡ u_0` (known at CM points: KLMSY, Z.-H. Sun) and `F_(p^2)(t_0) ≡ u_0 F_p(t_0)`, i.e.
+  `F_(p^2) ≡ F_p^2 (mod p^2)`.
+- `(B1)` is the block refinement of that statement, so a proof of `(L_p)` should come from running the Cartier
+  argument blockwise at the CM fixed point.
 
 ## Falsifiers
 

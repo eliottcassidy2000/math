@@ -96,6 +96,19 @@ points. It is the standard bridge to the Coster-van Hamme CM theory, and is a ca
 **Archimedean analogue: REFUTED.** `Σ_k C(2k,k)^3 m^(-k) (H_(2k) - H_k) / Σ_k C(2k,k)^3 m^(-k)` is
 `0.0010, 0.0173, -0.0075` at `m = 4096, 256, -512`, against `log|m|/6` of about `1`. The law is genuinely `p`-adic.
 
+**Lucas-block form** (PROVED equivalent;
+[`cm_law_lucas_block_form_20261018.py`](../../04-computation/experiments/cm_law_lucas_block_form_20261018.py)).
+`C(2(ap+j), ap+j) ≡ C(2a,a) C(2j,j)(1 + 2ap(H_(2j) - H_j)) (mod p^2)`, and the harmonic weight `6(H_(2j) - H_j)` is
+exactly the `p`-shift of `C(2j,j)^3`. So the law is equivalent to the second-order Lucas factorization of the first
+block:
+```
+Σ_(k=p)^(p+n) C(2k,k)^3 m^(-k) ≡ (8/m) Σ_(k=0)^(n) C(2k,k)^3 m^(-k)   (mod p^2).
+```
+This forces `F_(p^2) ≡ F_p^2 (mod p^2)`. Both hold at all CM points and fail generically. This is the `s = 2` shadow of
+Beukers-Vlasenko's mod-`p^(2s)` Dwork congruence at fixed points of the excellent Frobenius lift (their Conjecture 7.5;
+the CM points are the fixed points), whose hypercubic `n = 3` family is exactly `3F2(1/2,1/2,1/2;1,1;64t^2)`. Their
+Corollary 6.4 has a `log(t^σ/t^p)` correction, which matches the `q_p(m)` here.
+
 ## 4. Literature
 
 Z.-W. Sun, *Series with summands involving harmonic numbers* (arXiv:2210.07238), was read in this session.
