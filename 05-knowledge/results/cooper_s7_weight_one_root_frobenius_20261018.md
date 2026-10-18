@@ -18,8 +18,10 @@
 - FINITE-EXACT: every proof ingredient for split `11 <= p <= 43` and inert `5 <= p <= 41`; Theorems A and B for
   `p < 110`; Theorems C, D, E for `p < 60`, `n < 3000/p`; the CM table for `5 <= p < 400`.
 - VERIFIED (numerics only): A, D and E fail modulo `p^3`; `c(np^2) ≡ c(np) (mod p^4)` in a small range.
-- OPEN: `c(np^r) ≡ c(np^(r-1)) (mod p^(2r))` for `r >= 2`; Cooper's s10, s18 and the Hadamard products of Beukers'
-  Remark 1.14(2); Chan-Cooper-Sica Conjecture 5.5 (level 11).
+- OPEN: `c(np^r) ≡ c(np^(r-1)) (mod p^(2r))` for `r >= 2`; Chan-Cooper-Sica Conjecture 5.5 (level 11).
+- PROVED in `beukers_remark114_power_structure_and_inert_cm_20261018.md`: the analogue of Theorem A for s10, s18 and
+  the Hadamard products of Beukers' Remark 1.14(2), a second proof of Theorem A, and the inert-prime complement
+  `F_p(t0) ≡ 0 (mod p^2)` of Corollary F.
 
 ## 1. Setting
 
@@ -272,7 +274,9 @@ The values `-1/8, -1/64, 1/125, -1/10648` (`D = -35, -91, -112, -427`, class num
    Conjecture 7.5 (Dwork crystals III). Iterating section 5 would need Theorem B for `G_(p^r)/G_(p^(r-1))(t^σ)` modulo
    `p^(2r)`.
 2. Theorem A modulo 27 at `p = 3`.
-3. Cooper's s10 and s18 and the Hadamard products of Beukers' Remark 1.14(2). Not attempted here.
+3. *Resolved.* Cooper's s10 and s18 and the Hadamard products of Beukers' Remark 1.14(2) are proved in
+   `beukers_remark114_power_structure_and_inert_cm_20261018.md`, which also proves `F_p(t0) ≡ 0 (mod p^2)` at inert
+   primes.
 4. **Level 11** (Chan-Cooper-Sica Conjecture 5.5, primes with `(p/11) = 1`). There the weight-one theta series has a
    single simple zero, at a fixed point of `W11` on the genus-one curve `X0(11)`, and the count of Theorem B gives a
    polynomial of degree `<= p`, one more than needed.
