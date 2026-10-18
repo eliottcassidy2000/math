@@ -61,6 +61,33 @@ constraints.
 
 The coupled source `A + uC + vC + e^2 C` is still additively free (golden_forcing_search4_20261017.py).
 
+**S42 (opus-2026-10-17-S42; golden_forcing_coupled_20261017.py, golden_reflection_forcing_20261017.py, CaDiCaL 1.9.5).**
+All three known families were put into one five-coordinate source `A' + uC' + vC' + (uv)C' + e^2 C'`:
+- the `v`-contact, the reflected contact and the `e^2` contact;
+- the `v`- and `e^2`-contacts share their `(A, u)`-step;
+- the reflected and `v`-contacts share their `(u, v)`-step.
+
+Every case below blocks **0 of 570** patterns, with shared and with independent coefficient colourings:
+
+| `A'` | `C'` | mixed patterns (`v` / reflected / `e^2`) |
+|---|---|---|
+| base | base | 112 / 16 / 84 |
+| base | MM (Eisenstein-rigid, 29 points) | 2,072 / 296 / 224 |
+| dM | MM | 144,716 / 296 / 3,488 |
+| contact1 | MM | 329,340 / 296 / 9,664 |
+
+**Subgraph caveat.** There is no census of differences with both `uv`- and `e^2`-parts, so these graphs are subgraphs
+of the unit-distance graphs on the same addresses. A block would still need certification on the full graph.
+
+**Reflection-forcing experiment.** If every proper colouring of the `uv`-layer `W` showed all five nonzero
+`conj(d)q`-differences, the reflected contact would force odd reflection (zero shifts), and the `v`-contact would
+reduce to plain 6-colouring of the two-distance graph, which blocks 465 patterns.
+- Enlarging `W` to `C' + conj(d)({0} ∪ U)` (211 points) and then once more (2,113 points, 460-896 pairs per
+  direction) still blocks 0 of 570.
+- In the solver's colourings of `W`, every direction keeps at least one difference value missing (set sizes 4-5).
+
+This adds a precise design target to the **Tests** below: a *difference-forcing* layer.
+
 ## Tests
 
 * **Rigid coefficients.** Coefficient sets whose unit graph forbids homomorphism-like colourings (many distinct shifts

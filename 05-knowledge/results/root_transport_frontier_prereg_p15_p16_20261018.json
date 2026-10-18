@@ -4,5 +4,10 @@
  "range": "every N in [2^28, 2^30)",
  "P15": "max E_1000(N)/N <= 2.08, max E_100(N)/N <= 3.0, max E_10000(N)/N <= 1.55",
  "P16": "each octave mean of E_1000/N (octaves 2^28, 2^29) lies in [0.9, 1.5] (plateau persists; no decay below 0.9)",
- "note": "kept outside the HYP-9290 file while an independent audit of that file is running; to be merged afterwards"
+ "note": "kept outside the HYP-9290 file while an independent audit of that file is running; to be merged afterwards",
+ "outcome": {
+  "P15": "PASSED: max E_1000/N = 1.333 (2^28), 1.221 (2^29); max E_100/N = 1.369, 1.196; max E_10000/N = 1.305, 1.234; invariant at every N < 2^30; 0 overflow flags",
+  "P16": "PASSED: octave means of E_1000/N = 1.183 (2^28), 1.022 (2^29)",
+  "source": "05-knowledge/results/root_transport_frontier_energy_huge_29_20261018.out"
+ }
 }
