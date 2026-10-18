@@ -5,16 +5,23 @@ status: >
   PROVED. Statements 1-3 are elementary bookkeeping. Statement 4 is an elementary residue computation along B-chains. Statement 5 is a
   valuation argument with exact field checks.
   FINITE-EXACT companions:
-  - the identities of 1-4 hold at every N < 2^27 (fap.c, fap_levels.c), and the pair ledger of 4 at every N < 2^28 (fap_lean.c),
-    with the invariant R(N) = H(4N) - H(N) checked at every N;
+  - the invariant R(N) = H(4N) - H(N) and E_0 are checked at every N < 2^28 (fap.c to 2^27, fap_lean.c to 2^28);
+  - the identities of 1 and 3 are checked at selected N (fap_levels.c: the ladder at 9 values of N; fap.c: S(π) = E_V
+    and S(0) = E+ at six dumps);
+  - audit F1 made exact independent checks of 1-4 at 30 values of N on four stopping sets, and reproduced the every-N
+    octave statistics to 2^22 (04-computation/experiments/first_arrival_20261018/audit_F1/REPORT.md);
   - the constants of 4 are derived symbolically and checked by brute force (source_ledger_constants.py);
   - the ingredients of 5 are exact arithmetic in the degree-48 field and its residue fields F_361
     (nineteen_obstruction_check.py, nineteen_places.py, diagonal_19adic_check.py).
   The inequalities suggested by the data are HYP-9325 (OPEN).
   No priority is claimed for the bookkeeping. Statement 1 is clock_duality_oct15's R6 setting enlarged by backward closure.
-  The constant 34/7 of statement 4 is KNOWN in the repo: it is the d = 0 value E_0 = 4.857143 of THM-4667's ideal energy
-  ladder (statement 6), and T_0/X^2 -> 51/7 = (3/2)(34/7) is THM-4667(7)'s observed octave-trace limit. What is new in 4
-  is the proof for the actual sources with error O(log N), the exact sibling constant 5/7, and the pair ledger.
+  The fibre description in statement 2 is THM-4667(8) (heads, tails, singletons), with the step clocks added.
+  The constant 34/7 of statement 4 is KNOWN in the repo as a numerical value:
+  - it is the d = 0 value E_0 = 4.857143 of THM-4667's ideal energy ladder (statement 6);
+  - T_0/X^2 -> 51/7 = (3/2)(34/7) is the observed octave-trace limit of THM-4667(7) and HYP-9288;
+  - HYP-9290 tabulates E_0/N = 4.857.
+  Similarly SIB(N) = -INTRA_0(N)/2 in THM-4667(8). What is new in 4 is a proof of both asymptotics for the actual sources
+  with error O(log N), the sibling constant 5/7, and the pair ledger by clock lag.
   Statement 3 carries out clock_duality's instruction to keep the literal integer clocks in the first-arrival Gram
   (root_sparse_boundary_module_20261017i.md, end of section 8).
   Renumbered from THM-4670, which is ceded to opus-2026-10-18-S43.
@@ -37,8 +44,12 @@ This uses the notation of THM-4667 and HYP-9290.
 
 - **Seeds and transport.** Seeds are odd `s` with `s ≢ 5 (mod 8)`. The transport is `P(s) = seed((3s+1)/2^a)`, where
   `a = ν_2(3s+1) ∈ {1, 2}` and the sign is `σ = (-1)^a`. Here `seed` strips `B(x) = 4x + 1`.
-- **Literal clock.** One transport step has literal clock `a + 2·(number of strips)`. This is the difference of the
-  shortcut stopping times, since a strip changes the stopping time by 2 and the step by `a`.
+- **Literal clock.** One transport step has literal clock `a + 2·(number of strips)`. Away from the ROOT this is the
+  difference of the shortcut stopping times: a strip changes the stopping time by 2, and the step by `a`.
+
+  A path that enters `u = 1` through a strip `B^j(1) -> 1` (`j >= 1`) has literal clock `st(x) - st(1) - 2`, because
+  `st(B^j(1)) = 2j + 2` (1 lies on the cycle `1 -> 2 -> 1`). The parity, hence `σ = (-1)^t`, is unaffected.
+  `h_t` and `G(D)` always use the literal clock.
 - **Sources.** Every odd `m <= 4N` carries `K_N(m) = w(m) + thr(m)[m < 2N]` and sits on its seed. Here `w(m) = 2` if
   `m ≡ 2 (mod 3)` and `-1` otherwise, and `thr = 1, -2, 1` for `m ≡ 0, 1, 2 (mod 3)`. The seed coefficient is `c_0(x)`.
 - **Stopping set.** `V` is a finite set of seeds. Each source is stopped at its first seed in `V`; every source considered
@@ -60,12 +71,16 @@ This uses the notation of THM-4667 and HYP-9290.
 
      `E^(k)(N) = Σ_(dep(y) = k) J(y)^2 + Σ_(dep(x) < k) c_0(x)^2`,
 
-     where `J(y) = Σ_(x in tree(y)) σ(x → y) c_0(x)` is the subtree current. For `y` in the ROOT basin,
-     `J(y) = f(y) R_y(N)`, with `R_y` the ROOT current restricted to the sources through `y` (HYP-9290 basin form).
+     where `J(y) = Σ_(x in tree(y)) σ(x → y) c_0(x)` is the subtree current. Here `tree(y)` is the set of sources whose
+     **stopped** path passes through `y`, so `J(u) = c_V(u)` for `u ∈ V`. For `y` in the ROOT basin,
+     `J(y) = f(y) R_y(N)`, with `R_y` the ROOT current restricted to those sources (HYP-9290 basin form).
    - `E^(0) = E_V`, and `E^(K) = E_0 := Σ_x c_0(x)^2` for `K >= max dep`.
    - Every step is a merge identity:
 
-     `E^(k) - E^(k+1) = 2 Σ_(dep(y) = k) [ Σ_(z < z' in P^(-1)(y)) σ(z)σ(z') J(z)J(z') + c_0(y) Σ_(z in P^(-1)(y)) σ(z) J(z) ]`.
+     `E^(k) - E^(k+1) = 2 Σ_(dep(y) = k) [ Σ_(z < z' in Π(y)) σ(z)σ(z') J(z)J(z') + c_0(y) Σ_(z in Π(y)) σ(z) J(z) ]`,
+
+     where `Π(y) = P^(-1)(y) ∩ {dep = k+1}`. This is all of `P^(-1)(y)` for `k >= 1`, and the ports of `y` for `k = 0`
+     (the full preimage of `V` also contains `V` itself, e.g. `P(1) = 1`).
 
 2. **Ports.** `E^(1)` is the **port-diagonal energy**
 
@@ -74,7 +89,8 @@ This uses the notation of THM-4667 and HYP-9290.
    where `p` runs over the ports `P^(-1)(V) ∖ V`. The first-arrival cross term `X(N) := E_V - E^(1)` is the level-0 merge
    term of statement 1.
 
-   The preimages of a seed `y` are described by the residues `B^j(y) ≡ y + j (mod 3)`:
+   The preimages of a seed `y` are described by the residues `B^j(y) ≡ y + j (mod 3)`. This is THM-4667(8), with step
+   clocks added:
    - if `B^j(y) ≡ 1`, there is an `a = 2` preimage `s_j = (4B^j(y) - 1)/3` with step clock `2j + 2`;
    - if `B^j(y) ≡ 2`, there is an `a = 1` preimage `(2B^j(y) - 1)/3` with step clock `2j + 1`;
    - if `B^j(y) ≡ 0`, there is none.
@@ -96,10 +112,11 @@ This uses the notation of THM-4667 and HYP-9290.
      - `S(θ) = G(0) + 2 Σ_(D>=1) (-1)^D G(D) cos(Dθ)`.
 
      So first-arrival cancellation, `E_V` small against `G(0)` and `E^+`, is a dip of the clock spectrum at `θ = π`.
-     A negative one-tick term `G(1)` produces exactly such a dip.
+     Since `S(π) = E_V` is an identity, this is a reformulation, not a mechanism. That `S` is in fact low-pass, driven by
+     a negative one-tick term `G(1)`, is a property of the data (HYP-9325).
 
 4. **Source pair ledger.** Let `SIB(N) = Σ c_0(x) c_0(2x+1)`, summed over `x ≡ 1 (mod 8)` with `2x + 1 <= 4N`. Then:
-   - `|c_0| <= 3`;
+   - `c_0 ∈ {-3, -1, 0, 2, 3}`, so `|c_0| <= 3`;
    - `E_0(N) = (34/7) N + O(log N)` and `SIB(N) = (5/7) N + O(log N)`.
 
    A sibling source pair `x`, `2x + 1` has a common image: `P(x) = P(2x+1)`, because `3(2x+1) + 1 = 2·B((3x+1)/4)`. The
@@ -109,15 +126,21 @@ This uses the notation of THM-4667 and HYP-9290.
 
    `E_V = (24/7) N + (G(0) - E_0) + 2 Γ_1 + 2 Σ_(D >= 2) G(D) + O(|V| + log N)`,
 
-   where `Γ_1 := G(1) + SIB_V` collects the lag-1 pairs other than sibling sources. `SIB_V` is `SIB` restricted to pairs
-   with a common entry, and `|SIB - SIB_V| <= 18|V|`.
+   where `Γ_1 := G(1) + SIB_V` collects the lag-1 pairs other than sibling sources. `SIB_V` is `SIB` restricted to
+   sibling pairs with **neither member in `V`**, and `|SIB - SIB_V| <= 9|V|`.
+
+   The receipts' "SIB" column (`fap.c`, `fap_lean.c`) sums over pairs with a common entry seed. That agrees with
+   `SIB_V` whenever `3 ∈ V` or `1 ∉ V`, which covers `V_100`, `V_1000` and `H_1000`. The only exception is the pair
+   `(1, 3)` when `1 ∈ V ∌ 3`: it enters 1 at clock lag 3.
    - `G(0) - E_0 = 2 Σ` (same-clock pairs of distinct sources with a common entry);
    - `G(D) = Σ` (pairs at clock lag `D`).
 
-   In words: the source energy is `34N/7`; the sibling pairs remove exactly `10N/7` of it in every stopping set; the rest
-   of the cancellation is carried by same-clock pairs, by other lag-1 pairs and by longer lags. For `V = {1}`, the ROOT
-   itself, `E_V = R(N)^2` whenever every source `<= 4N` reaches 1 (true throughout the verified Collatz range). Then
-   `R(N)^2 - 24N/7` is the sum of the non-sibling pair correlations of the full transport.
+   In words: the source energy is `34N/7 + O(log N)`. The sibling pairs remove `10N/7 + O(|V| + log N)` of it in every
+   stopping set. The rest of the cancellation is carried by same-clock pairs, by other lag-1 pairs and by longer lags.
+
+   For `V = {1}`, the ROOT itself, `E_V = R(N)^2` whenever every source `<= 4N` reaches 1 (true throughout the verified
+   Collatz range). Then `R(N)^2 - 24N/7` equals the sum of the non-sibling pair correlations of the full transport up
+   to `O(log N)`. Here the pair `(1, 3)` counts as a lag-3 pair.
 
 5. **The 19-adic obstruction to connecting coefficient copies.**
    - **Setting.** `F = Q(ζ15)(√-11)(w)`, with `w^3 + 2w^2 - 4w - 4 = 0`, is the degree-48 field of the golden contact
@@ -156,8 +179,9 @@ point of the path lies in `V^(k)`. A seed with `dep < k` receives no stopped sou
 through it meets `dep = k` first.
 
 For the merge identity:
-- `J(y) = c_0(y) + Σ_(z in P^(-1)(y)) σ(z) J(z)`.
-- As `y` runs over `{dep = k}`, the preimage sets `P^(-1)(y)` partition `{dep = k+1}`.
+- `J(y) = c_0(y) + Σ_(z in Π(y)) σ(z) J(z)` for `dep(y) = k`.
+- As `y` runs over `{dep = k}`, the sets `Π(y) = P^(-1)(y) ∩ {dep = k+1}` partition `{dep = k+1}`. For `k = 0` the full
+  preimages of `V` also contain points of `V` (`P(V) ⊆ V`), which are excluded.
 - Square, and subtract `E^(k+1)`.
 
 Basin form: `σ(x → y) = f(x) f(y)`, because `f(P(s)) = (-1)^a f(s)` and strips preserve `f` (HYP-9290). ∎
@@ -200,7 +224,7 @@ Seeds have density `3/8`, with `x mod 3` equidistributed (CRT). Tabulating:
 - If the chain ends in `[2N, 4N]`, the possible sums are `-1, -1, 2` for each `L mod 3`, so the average of `c_0^2` is 2.
 - Otherwise the average of `c_0^2` is `0, 6, 6` for `L ≡ 0, 1, 2`.
 
-Hence `|c_0| <= 3`, and
+Hence `c_0 ∈ {-3, -1, 0, 2, 3}`: `P ∈ {-3, 0, 3}` without the ending term, and `P + λ ∈ {-1, 2}` with it. And
 
 `E_0/N -> (3/8) [ 2·2·Σ_(L>=0) 4^(-L) + 4·6·Σ_(L>=1, 3∤L) 4^(-L) ] = (3/8) [16/3 + 24·(20/63)] = 34/7`.
 
@@ -208,6 +232,13 @@ For `SIB`, use `x ≡ 1 (mod 8)`, which has density `1/8`, and `2x + 1 ≡ 2r + 
 `3(2x + 1) + 1 = 2y + 2`. So:
 - (A) if `x`'s chain ends in `[2N, 4N]` at level `L`, the sibling's chain does not end there, at the same level;
 - (B) otherwise the sibling's chain ends there, at level `L - 1`.
+
+This holds for all heads `x` except at most one per level in each case. With `y = 3x + 1` and `Y = 6N + 1`:
+- (A) fails exactly when `y = ⌈Y/(2·4^(L-1))⌉ - 1`;
+- (B) fails exactly when `y = ⌈Y/4^(L-1)⌉ - 1`.
+
+For example `N = 6`, `x = 1` is an exception (audit F1, `aud_sibling_exceptions.py`). These `O(log N)` pairs are
+absorbed in the error term.
 
 Both products average 3 when `L ≢ 0 (mod 3)`, and 0 when `L ≡ 0`. Hence
 
@@ -219,13 +250,16 @@ The common image: `(3x + 1)/4 = z` gives `3(2x + 1) + 1 = 2(4z + 1) = 2B(z)`, an
 are `2 + 2·strips(z)` and `1 + 2(1 + strips(z))`.
 
 If neither sibling lies in `V`, they share the rest of the path. Their contribution to `G(1)` is
-`σσ' c_0 c_0' = -c_0(x) c_0(2x+1)`. Each seed of `V` belongs to at most two sibling pairs, so pairs split by `V` number at
-most `2|V|`, each with `|c_0 c_0'| <= 9`.
+`σσ' c_0 c_0' = -c_0(x) c_0(2x+1)`. Each seed lies in at most one sibling pair: first members are `≡ 1 (mod 8)`, second
+members `≡ 3 (mod 16)`. So at most `|V|` pairs meet `V`, each with `|c_0 c_0'| <= 9`.
 
 The displayed identity is `E_V = E_0 - 2 SIB_V + (G(0) - E_0) + 2Γ_1 + 2 Σ_(D>=2) G(D)`, rewritten with the asymptotics.
 
-The table computation is carried out symbolically in `source_ledger_constants.py`. The brute force gives
-`|E_0 - 34N/7| <= 11.2` and `|SIB - 5N/7| <= 4.9` for the listed `N <= 4,000,037`. ∎
+The table computation is carried out symbolically in `source_ledger_constants.py`.
+- At the 14 listed `N <= 4,000,037` the brute force gives `|E_0 - 34N/7| <= 11.2` and `|SIB - 5N/7| <= 4.9`.
+- Over every `N < 2^22` the maxima are 53.1 and 31.6 (audit F1, exact interval counting). The ratio to `log_2 N` is at
+  most 3.13 for `N >= 4`.
+- Up to `N = 10^29` the deviations reach about `0.9 log_2 N`. ∎
 
 **5.** Four facts, then the conclusion.
 - **Maximality at 19.** The tower order `Z[ζ15][j][w]` has discriminant supported on `{2, 3, 5, 11, 37}`; the cubic has
@@ -307,6 +341,8 @@ Prime by prime (`nineteen_places.py`):
 
   The first-arrival ledger of statement 4 is therefore THM-4667's synchronous ledger, resolved by clock, restricted to
   meets before entry, plus the unequal-depth meets. The synchronous transport never sees the latter except at ROOT.
-- **Why the denominator is 7.** The chain residues have period 3 because `B^3(x) = 64x + 21 ≡ x + 3 (mod 9)`. These are
-  the Solfeggio three-lift fibres (S42 L4). So the geometric sums run over `4^(-3k)`, and
-  `Σ_k 4^(-3k) = 64/63 = 64/(9·7)`.
+- **Why the denominator is 7.** The chain residues mod 3 have period 3 because `B(x) ≡ x + 1 (mod 3)`. So the
+  geometric sums run over `4^(-3k)`, and `Σ_k 4^(-3k) = 64/63 = 64/(9·7)`.
+
+  The Solfeggio three-lift fibres of S42 L4 are the mod-9 refinement of the same period, `B^3(x) ≡ x + 3 (mod 9)`. That
+  identification is STRUCTURAL (the same period); the mod-9 refinement is not used in the proof.

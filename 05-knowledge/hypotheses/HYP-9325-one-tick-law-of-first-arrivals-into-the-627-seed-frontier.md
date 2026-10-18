@@ -1,6 +1,6 @@
 ---
 id: HYP-9325
-title: "One-tick and pair-sign laws of first arrivals into the 627-seed frontier. In the exact pair ledger E_V = 24N/7 + (G0 - E0) + 2 Gam1 + HL (THM-4690(4)), (A) the one-tick ratio G(1)/G(0) stays in [-0.30, -0.24], (B) same-clock pairs and lag-1 pairs other than sibling sources have non-positive sums, and (C) lags >= 2 add at most 0.07N on large frontiers. Together these give E_V <= 2.6N on V_1000, the closed-frontier form of HYP-9290"
+title: "One-tick and pair-sign laws of first arrivals into the 627-seed frontier. In the exact pair ledger E_V = 24N/7 + (G0 - E0) + 2 Gam1 + HL (THM-4690(4)), (A) the one-tick ratio G(1)/G(0) stays in [-0.30, -0.24], (B) same-clock pairs and lag-1 pairs other than sibling sources have non-positive sums, and (C) lags >= 2 add at most 0.07N on large frontiers. Together these give E_V <= 2.6N + O(log N) for N >= 2^13 on V_1000, the closed-frontier form of HYP-9290"
 status: >
   OPEN (CONJECTURE). The consequences listed under "Consequences" are PROVED implications. Evidence is FINITE-EXACT, with
   the invariant R(N) = H(4N) - H(N) checked at every N: every N < 2^28 on V_1000 (627 seeds), every N < 2^26 on V_100
@@ -12,6 +12,12 @@ status: >
     but does not decay, so the cancellation is clock-structured rather than port-orthogonal. That reading is refuted and
     recorded below.
   Renumbered from HYP-9292, which is ceded to opus-2026-10-18-S43; the committed pre-registrations still say HYP-9292 / THM-4670.
+  In the L1-L7 file, "THM-4670(5)" means what is now THM-4690(4), the source ledger; THM-4690(5) is the 19-adic
+  obstruction.
+  Independently audited (audit F1, 04-computation/experiments/first_arrival_20261018/audit_F1/REPORT.md):
+  - all 221 table entries and every pre-registered outcome match the receipts;
+  - the pre-registration order is verified from git history;
+  - the octave statistics to 2^22 were reproduced by independent code.
 session: mac-mini-2026-10-18-sixcolour
 source: 05-knowledge/results/first_arrival_one_tick_coefficient_copies_gibonacci_20261018.md
 scripts:
@@ -34,8 +40,9 @@ The notation is that of THM-4690. Sources of `R(N) = H(4N) - H(N)` are stopped a
 - `h_t(u)` is the signed mass entering `u` with literal shortcut clock `t`.
 - `G(D) = Σ_u Σ_t h_t(u) h_(t+D)(u)` is the integer-clock lag Gram.
 - `E_0 = Σ_x c_0(x)^2 = 34N/7 + O(log N)` is the source energy.
-- `SIB_V = 5N/7 + O(|V| + log N)` is the sum over sibling source pairs `(x, 2x+1)`. Such a pair always arrives one tick
-  apart with opposite signs.
+- `SIB_V = 5N/7 + O(|V| + log N)` is the sum over sibling source pairs `(x, 2x+1)` with neither member in `V`. Such a
+  pair always arrives one tick apart with opposite signs. The receipts' "SIB" column sums over pairs with a common
+  entry; it equals `SIB_V` on all three frontiers used here, which contain 3.
 - `Γ_1 = G(1) + SIB_V` collects the other lag-1 pairs.
 - `HL = 2 Σ_(D>=2) G(D)` collects the longer lags.
 
@@ -60,13 +67,15 @@ For the certified frontier `V_1000` (627 seeds) and the height frontier `H_1000`
 
 ## Consequences (PROVED implications)
 
-1. **(A) + (B1) + (C) ⇒ E_V <= 2.60N + O(log N).** Indeed `E_V = (1 + 2 G(1)/G(0))·G(0) + HL`, with
+1. **(A) + (B1) + (C) ⇒ E_V <= 2.60N + O(log N) for every N >= 2^13.** Indeed `E_V = (1 + 2 G(1)/G(0))·G(0) + HL`, with
    `1 + 2G(1)/G(0) <= 0.52` and `G(0) <= E_0`. So
 
    `E_V <= 0.52·(34/7)N + 0.07N + O(log N) <= 2.60N + O(log N)`.
-2. **(B) + (C) ⇒ E_V <= (24/7 + 0.07)N + O(log N + |V|) <= 3.51N + O(log N + |V|).** This needs no ratio band.
+2. **(B) + (C) ⇒ E_V <= (24/7 + 0.07)N + O(log N + |V|) <= 3.51N + O(log N + |V|) for every N >= 2^12.** This
+   needs no ratio band.
 3. **Bound on R(N).** With clock_duality's R6.4 (`R(N)^2 <= |V| E_V(N)`), statement 1 gives
-   `|R(N)| <= sqrt(627 · 2.60 N) + o(sqrt N) ≈ 40.4 sqrt(N)`. This is HYP-9290's energy cone for the closed frontier,
+   `|R(N)| <= sqrt(627 · 2.60 N) + o(sqrt N) ≈ 40.4 sqrt(N)` for `N >= 2^13`. (Below 2^10, `E_V/N` reaches 5.60, so no
+   bound of this form holds for all N.) This is HYP-9290's energy cone for the closed frontier,
    with `C = 2.60`, reduced to three statements about pair correlations of first arrivals with their integer clocks.
 
 ## Evidence (FINITE-EXACT)
@@ -74,8 +83,11 @@ For the certified frontier `V_1000` (627 seeds) and the height frontier `H_1000`
 ### V_1000, every N < 2^28
 
 Each row is one octave `2^k <= N < 2^(k+1)` (`fap.c` to 2^26, `fap_lean.c` for 2^27; the two programs agree exactly on
-the octaves both cover). All values are divided by `N`, except the ratio `G1/G0`. `E0/N` lies within `10^-5` of 34/7,
-and `SIB/N` within `10^-5` of 5/7, from `k = 20` on.
+the octaves both cover). All values are divided by `N`, except the ratios `G1/G0` and `E_V/E+`.
+
+From `k = 20` on:
+- `E0/N` lies within `5·10^-5` of 34/7, and within `10^-5` from `k = 23`;
+- `SIB_V/N`, the receipts' common-entry sum, lies within `5·10^-4` of 5/7, and within `10^-5` from `k = 26`.
 
 | k | E_V mean / max | G0 mean | G1/G0 mean [lo, hi] | (G0-E0) mean / max | Γ1 mean / max | HL mean / max | E_V/E+ |
 |---:|---|---:|---|---|---|---|---:|
@@ -108,11 +120,11 @@ and `SIB/N` within `10^-5` of 5/7, from `k = 20` on.
 | Longer lags | -0.245 | |
 | **Total, `E_V`** | **1.095** | |
 
-Unsigned arrivals keep `E+/N ≈ 4.1-5.4` (octave means), about `E_0`. The signs `(-1)^clock` remove about three quarters of it:
+Unsigned arrivals keep `E+/N ≈ 4.1-5.4` (octave means from 2^14 on; 5.3-5.5 at 2^11-2^13), about `E_0`. The signs `(-1)^clock` remove about three quarters of it:
 `E_V/E+ ≈ 0.23-0.33` from 2^14 on. This is the Nyquist dip of the clock spectrum (THM-4690(3)).
 
-The clock spectrum `S(kπ/12)/N`, `k = 0..12`, is low-pass at all six dumps (`N = 7910` to `10^8`): it stays near 4-6
-for `θ <= π/3` and falls to about 1.2 at `θ = π`. At `N = 10^8` the values are
+The clock spectrum `S(kπ/12)/N`, `k = 0..12`, is low-pass at all six dumps (`N = 7910` to `10^8`). It stays at 4-6.3
+for `θ <= π/3` and falls to 1.18-2.13 at `θ = π`, about 1.2 at the three largest dumps. At `N = 10^8` the values are
 `4.85, 4.01, 4.11, 4.60, 4.09, 3.81, 3.63, 2.80, 2.04, 1.91, 1.52, 1.33, 1.18`. A pure one-tick model
 `S(θ) = G(0) - 2G(1) cos θ = G(0)(1 + 0.56 cos θ)` predicts `4.78, ..., 3.06, ..., 1.35`.
 
@@ -163,7 +175,7 @@ clocks, which led to T1-T4 and L1-L7.
   - L6: G0/N mean 3.079.
   - L7: E_V/E+ mean 0.248.
 
-  All passed. The theorem check also holds: `E0/N = 4.85714`, `SIB/N = 0.71428` at every N.
+  All passed. The theorem check also holds: `E0/N = 4.85714` and `SIB_V/N = 0.71428` at every N.
 
 ## Remarks
 

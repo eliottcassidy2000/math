@@ -1,0 +1,24 @@
+V=../V_closed_Y1000.txt |V|=627 max=63665 forward-closed(P(V) in V): yes (0 elements leave V)
+
+==== N = 6904411 (M = 4N = 27617644) ====
+c_0: max|c_0| = 3 ; value counts -3..3: 1095938 0 4602941 1260331 0 2301470 1095937 ; closed-form mismatches 0
+sources (seeds with c_0 != 0): 9096286 ; max depth 241 ; max clock 398
+sign(x->u) != (-1)^t(x): 0 sources
+literal clock t(x) != st(x) - st(u(x)): 5547 sources (entry u=1: 5547, other: 0; (st diff - t) = 2 in 5547 cases)
+invariant: R(N) via transport = 6466 ; H(4N)-H(N) = 6466 ; R^2/N = 6.0554
+E_V = 8222098 (1.1908 N) ; G(0) + 2 sum_{D>=1} G(D) = 8222098 ; G(0)/N = 3.3046 ; G(1)/G(0) = -0.2766 ; HL/N (direct, lags >= 2) = -0.2854
+G(D)/N, D=0..12: +3.305 -0.914 -0.093 +0.039 -0.050 +0.040 -0.040 -0.013 -0.041 +0.069 -0.024 -0.023 +0.040
+spectrum: S(pi) = 8222098 (E_V 8222098) ; S(0) = 29261202 (E+ 29261202, E+/N 4.2380, E_V/E+ 0.2810)
+spectrum: mean over 1600 angles = 3.304622 N vs G(0) = 3.304622 N ; max |S - cosine series| / G(0) = 9.80e-15
+spectrum S(k pi/12)/N, k=0..12: 4.238 4.817 5.306 4.720 4.614 3.145 3.188 3.020 2.463 1.982 1.519 1.381 1.191
+sibling case analysis: case A 575368 pairs (3 exceptions), case B 1150735 pairs (0 exceptions); max exceptions per level 1
+E_0 = 33535696, E_0 - 34N/7 = -14.571 ; SIB = 4931715, SIB - 5N/7 = -7.143 ; SIB/N = 0.714285
+sibling pairs (x = 1 mod 8, 2x+1 <= 4N): 1726103 ; meeting V: 221 (nonzero product 132) ; pairs outside V with different entry: 0, with lag != 1 or equal signs: 0
+SIB_V (common entry) = 4931056 ; SIB over pairs with neither member in V = 4931056 ; common-entry pairs meeting V: 0 ; common-entry pairs with lag != 1: 0
+|SIB - SIB_V| = 659 <= 9 * #pairs meeting V = 1188 <= 9|V| = 5643 (claimed 18|V| = 11286)
+max number of sibling pairs containing one seed of V: 1
+ledger: E_0 - 2 SIB_V + (G0 - E0) + 2 Gam1 + HL = 8222098 (E_V 8222098) ; terms /N: E0 4.85714  -2SIB_V -1.42838  G0-E0 -1.5525  2Gam1 -0.4000  HL -0.2854
+Gam1 = G1 + SIB_V = -1380847 ; lag-1 pairs other than sibling-source lag-1 pairs = -1380847
+==== N = 6904411: ALL CHECKS PASSED
+
+TOTAL FAILURES: 0

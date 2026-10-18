@@ -1,0 +1,5 @@
+aud_scan_V_closed_Y1000_K21.out vs fap_V1000_k26_ledger.out / fap_V1000_k26_full2.out: octaves [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21] compared
+aud_scan_V_closed_Y100_K21.out vs fap_V100_k25_ledger.out / fap_V100_k25_full.out: octaves [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21] compared
+aud_scan_V_height_Y1000_K21.out vs fap_H1000_k25_ledger.out / fap_H1000_k25.out: octaves [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21] compared
+fap_lean_V1000_k27.out: octaves [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21] compared (incl. E0/N and SIB_V/N ranges)
+numbers compared: 966 ; mismatches: 0

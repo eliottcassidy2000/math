@@ -28,15 +28,15 @@ renumbering still use the old numbers.
 |---|---|---|
 | 1 | Backward ladder `V^(k)`, port-diagonal energy, merge identities | PROVED (THM-4690(1-2)) |
 | 2 | Integer-clock Gram `E_V = G(0) + 2 Σ G(D)`; `E_V` is the clock spectrum at the Nyquist frequency | PROVED (THM-4690(3)) |
-| 3 | Exact source ledger: `E_0 = 34N/7` (constant KNOWN from THM-4667's ideal ladder; proved here for the actual sources), sibling-source pairs `5N/7` (one tick apart); hence `E_V = 24N/7 + (non-sibling pair sums)` for every stopping set | PROVED (THM-4690(4)) |
+| 3 | Source ledger with exact constants: `E_0 = 34N/7 + O(log N)` (the constant is KNOWN from THM-4667's ideal ladder; proved here for the actual sources), sibling-source pairs `5N/7 + O(log N)` (one tick apart); hence `E_V = 24N/7 + (non-sibling pair sums) + O(\|V\| + log N)` for every stopping set | PROVED (THM-4690(4)) |
 | 4 | Port-orthogonality (cross-port term decays): Q1, Q2, Q4, Q5 FAILED, Q3 passed | FINITE-EXACT, refuted reading |
 | 5 | One-tick law `G(1)/G(0) ≈ -0.28`: T1-T4 PASSED at 2^26 | FINITE-EXACT, HYP-9325(A) |
 | 6 | Pair-sign laws and higher-lag bound: L1-L7 PASSED at 2^27 | FINITE-EXACT, HYP-9325(B, C) |
-| 7 | (A) + (B1) + (C) ⇒ `E_V <= 2.60N`, so `|R(N)| <= 40.4 sqrt(N)` | PROVED implication; the hypotheses are OPEN |
+| 7 | (A) + (B1) + (C) ⇒ `E_V <= 2.60N + O(log N)` for `N >= 2^13`, so `\|R(N)\| <= 40.4 sqrt(N)` there | PROVED implication; the hypotheses are OPEN |
 | 8 | 19-adic obstruction: the coefficient copies, and all 49 sheets of the recipe sum, are separated for every path whose steps are integral at the eight `h ≡ 7` primes above 19, which covers every power of the contact unit `u` | PROVED (THM-4690(5)) |
 | 9 | Connector census inside `F`: no 2-step connector; no 3-step connector through 450 named directions (integral, `u`-powers, K-directions with poles above 19) | FINITE-EXACT |
 | 10 | Fibonacci from (5,1) and (7,1): values, closed forms, `Z[φ]` factorisations `φ^-4(φ^7 - 1)` and `φ^-3 √5 (φ^5 - 1)`, Cassini constants `-L_7` and `-5L_5` | KNOWN / PROVED (elementary) |
-| 11 | Solfeggio merge: the ROOT denominators 7 come from the Solfeggio three-lift period (`4^3 - 1 = 63`); mod 9, (5,1) is 4·Fibonacci (the linear part of `B`) and (7,1) is Fibonacci shifted by 9 | PROVED |
+| 11 | Solfeggio merge: the ROOT denominators 7 come from the period 3 of B-chain residues mod 3 (`4^3 - 1 = 63`), whose mod-9 refinement is the Solfeggio three-lift; mod 9, (5,1) is 4·Fibonacci (the linear part of `B`) and (7,1) is Fibonacci shifted by 9 | PROVED (mod-9 facts, the origin of 7); STRUCTURAL (the Solfeggio identification) |
 | 12 | Solfeggio prime factors against the (5,1)/(7,1) arithmetic | NUMEROLOGY (p ≈ 0.07, look-elsewhere not corrected) |
 
 ## 1. First-arrival cancellation into the 627-seed frontier
@@ -54,7 +54,9 @@ By Lemma F / R6.4, `R(N)^2 <= |V| E_V(N)`. So a bound `E_V = O(N)` is exactly HY
 Sources are aggregated on seeds with coefficient `c_0`, and keep:
 - their **port**, the last outside seed;
 - their **depth**;
-- their **literal integer clock** `t`, the difference of shortcut stopping times. The sign of an arrival is `(-1)^t`.
+- their **literal integer clock** `t`, the sum of `a + 2·strips` along the path. Away from the ROOT this is the
+  difference of shortcut stopping times; entries into 1 through a strip differ by exactly 2 (audit F1). The sign of an
+  arrival is `(-1)^t` in every case.
 
 All quantities below are computed at every `N` with the invariant `R(N) = H(4N) - H(N)` checked at every `N`:
 - `fap.c`: every `N < 2^27`, 3.5 GB;
@@ -91,11 +93,16 @@ At `N = 6,904,411`, `E^(k)/N` takes the values
 `1.19, 1.18, 1.26, 1.33, 1.38, 1.39, 1.40, 1.45, ..., 3.00 (k = 25), 3.40 (30), 4.03 (40), 4.40 (50), 4.61 (60)` and
 reaches 4.857 at the maximal depth 241.
 - The bulk, 3.2N of the total 3.7N, is removed at levels 6-60.
-- Each level from about 6 to 40 removes 0.04-0.12 N, typically 80-100% of it the sibling merge `(s, 2s+1)` at that
-  level.
+- Each level from about 6 to 40 removes 0.04-0.12 N. The sibling merge `(s, 2s+1)` at that level carries 60-106% of
+  it, typically 80-105%.
 - Levels 0, 4 and 5 remove almost nothing; levels 1-3 remove 0.05-0.08 N.
 
-At `N = 16384` the band sits at levels 0-20. **The dissipation band recedes from the frontier as N grows.** A
+At `N = 16384` the band sits at levels 0-20. **The dissipation band recedes from the frontier as N grows** (FINITE-EXACT).
+Audit F1 measured the level by which half of `E_0 - E_V` has been removed:
+- 1, 6, 8, 11, 11, 16, 18, 20, 21, 21, 21 at eleven values of `N` from `10^3` to `1.48·10^6`;
+- levels 0-5 remove `1.37N` at `N = 7910`, but only `0.13-0.27N` at `N >= 10^6`.
+
+This tracks the growth of source depth (maximum depth 43 → 241). A
 "frontier-local" mechanism, ports or a few levels, therefore cannot be the whole story. That is the reason to turn to
 the integer clocks, which see all depths at once.
 
@@ -106,7 +113,8 @@ Group arrivals at each `u` by literal clock: `h_t(u)`, with `G(D) = Σ_u Σ_t h_
 
 On V_1000, at the dump `N = 6,904,411`, the values of `G(D)/N` for `D = 0..12` are
 `3.305, -0.914, -0.093, +0.039, -0.050, +0.040, -0.040, -0.013, -0.041, +0.069, -0.024, -0.023, +0.040`.
-The Gram is essentially tridiagonal: one large negative lag-1 term and small noise.
+The Gram is dominated by one large negative lag-1 term; each lag `D >= 2` is small. Together, though, the lags `>= 2`
+contribute -0.285N at this `N` (24% of `E_V`), and -0.245N on average over the octave 2^27 (22%).
 
 The per-`N` ratio `G(1)/G(0)` stays in `[-0.288, -0.256]` for every `N` in `2^14..2^27`.
 
@@ -123,12 +131,15 @@ The per-`N` ratio `G(1)/G(0)` stays in `[-0.288, -0.256]` for every `N` in `2^14
 - the mean of `S` equal to `G(0)`.
 
 Measured:
-- `E+/N` has octave means 4.1-5.4, close to the source energy 4.857: unsigned arrivals do not cancel.
+- `E+/N` has octave means 4.1-5.4 from 2^14 on (5.3-5.5 at 2^11-2^13), close to the source energy 4.857: unsigned
+  arrivals do not cancel.
 - `E_V/E+` has octave means 0.23-0.33 from 2^14 on.
 - At `N = 10^8`, `S(kπ/12)/N` is `4.85, 4.01, 4.11, 4.60, 4.09, 3.81, 3.63, 2.80, 2.04, 1.91, 1.52, 1.33, 1.18`.
 
-**First-arrival cancellation into the 627-seed frontier is the Nyquist dip of the integer-clock spectrum.** The signs
-`(-1)^clock` evaluate a low-pass clock profile at the alternating frequency.
+**First-arrival cancellation into the 627-seed frontier reads as the Nyquist dip of the integer-clock spectrum.**
+- `S(π) = E_V` is an identity, so this is a reformulation, not a mechanism.
+- The content is in the data: the clock profile is low-pass, `E+/E_V ≈ 3-4.4` from 2^14 on, and the signs `(-1)^clock`
+  evaluate it at the alternating frequency.
 
 ### 1.5 The exact source ledger (THM-4690(4))
 
@@ -136,8 +147,9 @@ Measured:
 - Every odd `m <= 4N` lies on one B-chain `x, 4x+1, 16x+5, ...`, whose residues mod 3 advance by 1.
 - The weights are `κ = (0, -3, 3)` below `2N` and `λ = (-1, -1, 2)` on `[2N, 4N]`.
 - So `c_0(x)` depends only on `x mod 3`, the chain length mod 3, and whether the chain ends in `[2N, 4N]`, and
-  `|c_0| <= 3`.
-- Summing the geometric scales, with period 3 in the chain length because `4^3 - 1 = 63 = 9·7`:
+  `c_0 ∈ {-3, -1, 0, 2, 3}`.
+- The residues have period 3 in the chain length (`B(x) ≡ x + 1 (mod 3)`), so the geometric sums over scales run over
+  `4^(-3k)` and produce `4^3 - 1 = 63 = 9·7`:
 
   `E_0(N) = (34/7) N + O(log N)`.
 
@@ -152,8 +164,12 @@ observed the octave-trace limit `51/7 = (3/2)(34/7)`. New here: a proof for the 
 `5/7`, and the pair ledger. THM-4667's depth-1 cross term -1.4687 is, by clock lag, `-10/7` (siblings, about 97%) plus
 small depth-one co-preimage terms at lags 5, 6, 7 (+0.0179, -0.0759, +0.0179; observed to match `2/112` and `-17/224`).
 
-Both constants are derived symbolically and checked by brute force (`source_ledger_constants.py`):
-`|E_0 - 34N/7| <= 11.2` and `|SIB - 5N/7| <= 4.9` up to `N = 4·10^6`. `fap.c` reproduces them at every `N`.
+Both constants are derived symbolically and checked by brute force (`source_ledger_constants.py`).
+- At the 14 listed `N <= 4,000,037`: `|E_0 - 34N/7| <= 11.2` and `|SIB - 5N/7| <= 4.9`.
+- Over every `N < 2^22` the maxima are 53.1 (`N = 2,721,349`) and 31.6 (`N = 3,682,499`), consistent with `O(log N)`
+  (audit F1, exact interval counting).
+- `fap.c` tracks `E_0` and the common-entry `SIB_V` at every `N`.
+- `SIB(N) = -INTRA_0(N)/2` in THM-4667(8), so 5/7 is the exact asymptotic of that sibling term.
 
 **Consequence: a pair ledger valid for every stopping set,**
 
@@ -382,9 +398,13 @@ What the two new starts do in this dictionary (PROVED):
   The digits 3, 6, 9 occur exactly at `n ≡ 2 (mod 4)`.
 
   Its 24-cycle of digital roots is 5,1,6,7,4,2,6,8,5,4,9,4,4,8,3,2,5,7,3,1,4,5,9,5.
-- **The ROOT denominators 7 are Solfeggio.** The source constants `34/7` and `5/7` of section 1.5 have denominator 7
-  because the chain residues have the `B^3` period. The geometric sums run over `4^(-3k)`, and `4^3 - 1 = 63 = 9·7`.
-  This is the one place where the Solfeggio three-lift structure enters the cancellation budget exactly.
+- **The ROOT denominators 7 and the Solfeggio period.** The source constants `34/7` and `5/7` of section 1.5 have
+  denominator 7 because the B-chain residues mod 3 have period 3 (`B(x) ≡ x + 1 (mod 3)`). The geometric sums run
+  over `4^(-3k)`, and `4^3 - 1 = 63 = 9·7` (PROVED).
+
+  The Solfeggio three-lift `B^3(x) ≡ x + 3 (mod 9)` is the mod-9 refinement of the same period. Identifying the two is
+  STRUCTURAL: it is the same period, and the proof uses only the mod-3 version. This is the one place where that period
+  enters the cancellation budget exactly.
 
 **NUMEROLOGY** (recorded honestly).
 - The prime factors above 3 of the nine Solfeggio numbers are 5, 11, 13, 19, 29, 71, 107 and 139.

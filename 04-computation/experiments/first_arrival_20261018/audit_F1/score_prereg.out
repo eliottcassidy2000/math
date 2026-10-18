@@ -1,0 +1,40 @@
+Q1 V_1000 max|X|/N <= 0.10 each octave                         FAIL   observed [0.124, 0.155, 0.06]
+Q2 mean of the three maxima < 0.08                             FAIL   observed 0.113
+Q3 V_1000 max E_V/N <= 2.5                                     PASS   observed [1.328, 1.228, 1.421]
+Q4 V_100 max|X|/N <= 0.35 each octave                          FAIL   observed [0.232, 0.364, 0.435]
+Q5 V_1000 octave means of X/N in [-0.06, 0.06]                 FAIL   observed [-0.076, -0.085, 0.01]
+T1 mean G1/G0 in [-0.290, -0.265]                              PASS   observed -0.2803
+T2 every N G1/G0 in [-0.300, -0.250]                           PASS   observed (-0.2845, -0.2744)
+T3 mean G0/N in [2.85, 3.20]                                   PASS   observed 3.086
+T4 max E_V/N <= 2.5 and mean X/N in [-0.15, 0.10]              PASS   observed (1.277, -0.024)
+L1 mean G1/G0 in [-0.295,-0.265], every N in [-0.300,-0.250]   PASS   observed (-0.2823, -0.2873, -0.2773)
+L2 (G0-E0)/N < 0 every N, mean in [-1.95,-1.70]                PASS   observed (-1.778, -1.758)
+L3 Gam1/N < 0 every N, mean in [-0.25,-0.05]                   PASS   observed (-0.155, -0.137)
+L4 HL/N <= 0.07 every N                                        PASS   observed -0.134
+L5 E_V/N <= 2.0 every N, mean in [0.9,1.5]                     PASS   observed (1.095, 1.183)
+L6 mean G0/N in [2.92,3.10]                                    PASS   observed 3.079
+L7 mean E_V/E+ in [0.18,0.35]                                  PASS   observed 0.2479
+L-check E0/N within 1e-4 of 34/7, SIB_V/N within 1e-3 of 5/7   PASS   observed (4.85714, 4.85714, 0.71428, 0.71428)
+
+first_arrival_port_orthogonality_prereg_20261018.json:
+  Q1: V_1000: in each of the octaves 2^23, 2^24, 2^25 the maximum of |X(N)|/N is <= 0.10
+  Q2: V_1000: the mean of the three octave maxima of |X|/N over 2^23..2^25 is < 0.08 (continued decay)
+  Q3: V_1000: the octave maxima of E_V/N stay <= 2.5 (consistent with HYP-9290 P11)
+  Q4: V_100: in each of the octaves 2^23, 2^24, 2^25 the maximum of |X(N)|/N is <= 0.35
+  Q5: V_1000: the octave means of X/N lie in [-0.06, +0.06]
+
+first_arrival_one_tick_prereg_20261018.json:
+  T1: V_1000, octave 2^26: the octave mean of G(1)/G(0) lies in [-0.290, -0.265]
+  T2: V_1000, octave 2^26: every N has G(1)/G(0) in [-0.300, -0.250]
+  T3: V_1000, octave 2^26: the octave mean of G(0)/N lies in [2.85, 3.20] (slow decline continues, no jump)
+  T4: V_1000, octave 2^26: the octave maximum of E_V/N is <= 2.5 and the octave mean of the cross-port term (E_V - E_port)/N lies in [-0.15, +0.10]
+
+first_arrival_pair_ledger_prereg_20261018.json:
+  L1: octave 2^27: the octave mean of G1/G0 lies in [-0.295, -0.265] and every N has G1/G0 in [-0.300, -0.250]
+  L2: octave 2^27: (G0 - E0)/N < 0 at every N (same-clock sign law), and its octave mean lies in [-1.95, -1.70]
+  L3: octave 2^27: Gam1/N < 0 at every N (sign law for lag-1 pairs other than sibling sources), and its octave mean lies in [-0.25, -0.05]
+  L4: octave 2^27: HL/N <= 0.07 at every N
+  L5: octave 2^27: E_V/N <= 2.0 at every N, octave mean in [0.9, 1.5]
+  L6: octave 2^27: octave mean of G0/N in [2.92, 3.10]
+  L7: octave 2^27: octave mean of the Nyquist dip E_V/E+ in [0.18, 0.35]
+  check (theorem, not a prediction): E0/N within 1e-4 of 34/7 and SIB/N within 1e-3 of 5/7 at every N of the octave

@@ -1,0 +1,138 @@
+V=V_root.txt |V|=1 max=1 forward-closed(P(V) in V): yes (0 elements leave V)
+
+==== N = 10 (M = 4N = 40) ====
+c_0: max|c_0| = 3 ; value counts -3..3: 2 0 8 1 0 2 2 ; closed-form mismatches 0
+sources (seeds with c_0 != 0): 14 ; max depth 40 ; max clock 68
+sign(x->u) != (-1)^t(x): 0 sources
+literal clock t(x) != st(x) - st(u(x)): 13 sources (entry u=1: 13, other: 0; (st diff - t) = 2 in 13 cases)
+invariant: R(N) via transport = 0 ; H(4N)-H(N) = 0 ; R^2/N = 0.0000
+E_V = 0 (0.0000 N) ; G(0) + 2 sum_{D>=1} G(D) = 0 ; G(0)/N = 6.0000 ; G(1)/G(0) = -0.3833 ; HL/N (direct, lags >= 2) = -1.4000
+G(D)/N, D=0..12: +6.000 -2.300 +0.600 +0.300 -2.400 +2.300 -0.800 +0.600 -0.700 -0.800 +0.100 -0.400 +0.200
+spectrum: S(pi) = 0 (E_V 0) ; S(0) = 16 (E+ 16, E+/N 1.6000, E_V/E+ 0.0000)
+spectrum: mean over 280 angles = 6.000000 N vs G(0) = 6.000000 N ; max |S - cosine series| / G(0) = 2.23e-14
+spectrum S(k pi/12)/N, k=0..12: 1.600 9.690 16.794 17.071 6.300 2.315 0.000 5.060 7.300 2.929 1.206 2.535 0.000
+sibling case analysis: case A 2 pairs (0 exceptions), case B 1 pairs (0 exceptions); max exceptions per level 0
+E_0 = 52, E_0 - 34N/7 = +3.429 ; SIB = 12, SIB - 5N/7 = +4.857 ; SIB/N = 1.200000
+sibling pairs (x = 1 mod 8, 2x+1 <= 4N): 3 ; meeting V: 1 (nonzero product 1) ; pairs outside V with different entry: 0, with lag != 1 or equal signs: 0
+SIB_V (common entry) = 12 ; SIB over pairs with neither member in V = 9 ; common-entry pairs meeting V: 1 ; common-entry pairs with lag != 1: 1
+|SIB - SIB_V| = 0 <= 9 * #pairs meeting V = 9 <= 9|V| = 9 (claimed 18|V| = 18)
+max number of sibling pairs containing one seed of V: 1
+ledger: E_0 - 2 SIB_V + (G0 - E0) + 2 Gam1 + HL = 0 (E_V 0) ; terms /N: E0 5.20000  -2SIB_V -2.40000  G0-E0 +0.8000  2Gam1 -2.2000  HL -1.4000
+Gam1 = G1 + SIB_V = -11 ; lag-1 pairs other than sibling-source lag-1 pairs = -14
+basin form J(y) = f(y) R_y(N): 0 violations over 52 nodes
+ladder: nodes 52 ; max dep 40 ; E^(0) = 0 (E_V 0) ; E^(maxdep) = 52 (E_0 52) ; E^(1) = 2 , sum_V c0^2 + sum_ports J^2 = 2 (1 ports with mass)
+ladder: merge identity mismatches over k = 0..39: 0 ; J-recursion mismatches: 0 ; direct stopped simulation agreed at 9 levels
+ladder E^(k)/N: [0]0.0000 [1]0.2000 [2]1.4000 [3]2.8000 [4]4.0000 [5]5.4000 [6]4.8000 [7]5.0000 [8]5.0000 [9]5.0000 [10]5.0000 [11]5.0000 [12]5.0000 [13]5.0000 [14]5.0000 [15]5.0000 [16]5.0000 [17]5.0000 [18]5.0000 [19]5.0000 [20]5.0000 [21]5.0000 [22]5.0000 [23]5.0000 [24]5.0000 [25]5.0000 [30]5.0000 [40]5.2000
+ladder: E_0 - E_V = 5.2000 N ; first level with E^(k) >= E_V + (E_0 - E_V)/2: 3 ; E^(6)-E^(0) = 4.8000 N
+cross-port X/N = (E_V - E^(1))/N = -0.2000
+==== N = 10: ALL CHECKS PASSED
+
+==== N = 100 (M = 4N = 400) ====
+c_0: max|c_0| = 3 ; value counts -3..3: 16 0 67 19 0 33 15 ; closed-form mismatches 0
+sources (seeds with c_0 != 0): 131 ; max depth 51 ; max clock 89
+sign(x->u) != (-1)^t(x): 0 sources
+literal clock t(x) != st(x) - st(u(x)): 130 sources (entry u=1: 130, other: 0; (st diff - t) = 2 in 130 cases)
+invariant: R(N) via transport = 6 ; H(4N)-H(N) = 6 ; R^2/N = 0.3600
+E_V = 36 (0.3600 N) ; G(0) + 2 sum_{D>=1} G(D) = 36 ; G(0)/N = 5.0200 ; G(1)/G(0) = -0.2590 ; HL/N (direct, lags >= 2) = -2.0600
+G(D)/N, D=0..12: +5.020 -1.300 +0.330 +0.130 -0.190 -0.400 -0.420 +0.420 -0.470 -0.090 -0.350 +0.350 -0.590
+spectrum: S(pi) = 36 (E_V 36) ; S(0) = 16 (E+ 16, E+/N 0.1600, E_V/E+ 2.2500)
+spectrum: mean over 364 angles = 5.020000 N vs G(0) = 5.020000 N ; max |S - cosine series| / G(0) = 6.09e-14
+spectrum S(k pi/12)/N, k=0..12: 0.160 2.380 9.712 4.260 1.110 15.287 11.860 4.652 1.510 3.780 8.188 2.041 0.360
+sibling case analysis: case A 8 pairs (1 exceptions), case B 17 pairs (0 exceptions); max exceptions per level 1
+E_0 = 478, E_0 - 34N/7 = -7.714 ; SIB = 70, SIB - 5N/7 = -1.429 ; SIB/N = 0.700000
+sibling pairs (x = 1 mod 8, 2x+1 <= 4N): 25 ; meeting V: 1 (nonzero product 1) ; pairs outside V with different entry: 0, with lag != 1 or equal signs: 0
+SIB_V (common entry) = 70 ; SIB over pairs with neither member in V = 69 ; common-entry pairs meeting V: 1 ; common-entry pairs with lag != 1: 1
+|SIB - SIB_V| = 0 <= 9 * #pairs meeting V = 9 <= 9|V| = 9 (claimed 18|V| = 18)
+max number of sibling pairs containing one seed of V: 1
+ledger: E_0 - 2 SIB_V + (G0 - E0) + 2 Gam1 + HL = 36 (E_V 36) ; terms /N: E0 4.78000  -2SIB_V -1.40000  G0-E0 +0.2400  2Gam1 -1.2000  HL -2.0600
+Gam1 = G1 + SIB_V = -60 ; lag-1 pairs other than sibling-source lag-1 pairs = -61
+basin form J(y) = f(y) R_y(N): 0 violations over 210 nodes
+ladder: nodes 210 ; max dep 51 ; E^(0) = 36 (E_V 36) ; E^(maxdep) = 478 (E_0 478) ; E^(1) = 146 , sum_V c0^2 + sum_ports J^2 = 146 (3 ports with mass)
+ladder: merge identity mismatches over k = 0..50: 0 ; J-recursion mismatches: 0 ; direct stopped simulation agreed at 9 levels
+ladder E^(k)/N: [0]0.3600 [1]1.4600 [2]0.7600 [3]0.9000 [4]1.4000 [5]1.4200 [6]1.8000 [7]1.3600 [8]1.9000 [9]2.3400 [10]2.1400 [11]2.3000 [12]2.4400 [13]2.8600 [14]2.6200 [15]2.5800 [16]2.5600 [17]2.5600 [18]2.6000 [19]2.6000 [20]2.7200 [21]2.7200 [22]2.8000 [23]2.7800 [24]2.8000 [25]2.8000 [30]3.1200 [40]4.7000 [50]4.7800 [51]4.7800
+ladder: E_0 - E_V = 4.4200 N ; first level with E^(k) >= E_V + (E_0 - E_V)/2: 13 ; E^(6)-E^(0) = 1.4400 N
+cross-port X/N = (E_V - E^(1))/N = -1.1000
+==== N = 100: ALL CHECKS PASSED
+
+==== N = 1000 (M = 4N = 4000) ====
+c_0: max|c_0| = 3 ; value counts -3..3: 159 0 668 182 0 332 159 ; closed-form mismatches 0
+sources (seeds with c_0 != 0): 1318 ; max depth 86 ; max clock 148
+sign(x->u) != (-1)^t(x): 0 sources
+literal clock t(x) != st(x) - st(u(x)): 1318 sources (entry u=1: 1318, other: 0; (st diff - t) = 2 in 1318 cases)
+invariant: R(N) via transport = 40 ; H(4N)-H(N) = 40 ; R^2/N = 1.6000
+E_V = 1600 (1.6000 N) ; G(0) + 2 sum_{D>=1} G(D) = 1600 ; G(0)/N = 2.9840 ; G(1)/G(0) = -0.0627 ; HL/N (direct, lags >= 2) = -1.0100
+G(D)/N, D=0..12: +2.984 -0.187 -0.081 +0.167 +0.140 +0.031 -0.019 +0.180 -0.312 +0.015 +0.073 +0.566 -0.301
+spectrum: S(pi) = 1600 (E_V 1600) ; S(0) = 16 (E+ 16, E+/N 0.0160, E_V/E+ 100.0000)
+spectrum: mean over 600 angles = 2.984000 N vs G(0) = 2.984000 N ; max |S - cosine series| / G(0) = 7.62e-14
+spectrum S(k pi/12)/N, k=0..12: 0.016 10.491 2.763 1.493 0.421 9.614 4.500 7.368 1.267 0.079 6.141 0.103 1.600
+sibling case analysis: case A 83 pairs (0 exceptions), case B 167 pairs (0 exceptions); max exceptions per level 0
+E_0 = 4858, E_0 - 34N/7 = +0.857 ; SIB = 714, SIB - 5N/7 = -0.286 ; SIB/N = 0.714000
+sibling pairs (x = 1 mod 8, 2x+1 <= 4N): 250 ; meeting V: 1 (nonzero product 0) ; pairs outside V with different entry: 0, with lag != 1 or equal signs: 0
+SIB_V (common entry) = 714 ; SIB over pairs with neither member in V = 714 ; common-entry pairs meeting V: 1 ; common-entry pairs with lag != 1: 1
+|SIB - SIB_V| = 0 <= 9 * #pairs meeting V = 0 <= 9|V| = 9 (claimed 18|V| = 18)
+max number of sibling pairs containing one seed of V: 1
+ledger: E_0 - 2 SIB_V + (G0 - E0) + 2 Gam1 + HL = 1600 (E_V 1600) ; terms /N: E0 4.85800  -2SIB_V -1.42800  G0-E0 -1.8740  2Gam1 +1.0540  HL -1.0100
+Gam1 = G1 + SIB_V = 527 ; lag-1 pairs other than sibling-source lag-1 pairs = 527
+basin form J(y) = f(y) R_y(N): 0 violations over 2305 nodes
+ladder: nodes 2305 ; max dep 86 ; E^(0) = 1600 (E_V 1600) ; E^(maxdep) = 4858 (E_0 4858) ; E^(1) = 754 , sum_V c0^2 + sum_ports J^2 = 754 (3 ports with mass)
+ladder: merge identity mismatches over k = 0..85: 0 ; J-recursion mismatches: 0 ; direct stopped simulation agreed at 10 levels
+ladder E^(k)/N: [0]1.6000 [1]0.7540 [2]1.6980 [3]1.4860 [4]1.5540 [5]0.8840 [6]1.0140 [7]1.1820 [8]1.2500 [9]1.5680 [10]1.7120 [11]1.8120 [12]2.1220 [13]2.5060 [14]2.4480 [15]2.6220 [16]3.0160 [17]2.7240 [18]2.8220 [19]3.1140 [20]3.1180 [21]3.0900 [22]3.1960 [23]3.1860 [24]3.2180 [25]3.1680 [30]3.3860 [40]4.2520 [50]4.6820 [60]4.8240 [70]4.8560 [80]4.8580 [86]4.8580
+ladder: E_0 - E_V = 3.2580 N ; first level with E^(k) >= E_V + (E_0 - E_V)/2: 28 ; E^(6)-E^(0) = -0.5860 N
+cross-port X/N = (E_V - E^(1))/N = +0.8460
+==== N = 1000: ALL CHECKS PASSED
+
+==== N = 7910 (M = 4N = 31640) ====
+c_0: max|c_0| = 3 ; value counts -3..3: 1255 0 5275 1444 0 2635 1256 ; closed-form mismatches 0
+sources (seeds with c_0 != 0): 10421 ; max depth 112 ; max clock 192
+sign(x->u) != (-1)^t(x): 0 sources
+literal clock t(x) != st(x) - st(u(x)): 10420 sources (entry u=1: 10420, other: 0; (st diff - t) = 2 in 10420 cases)
+invariant: R(N) via transport = 268 ; H(4N)-H(N) = 268 ; R^2/N = 9.0802
+E_V = 71824 (9.0802 N) ; G(0) + 2 sum_{D>=1} G(D) = 71824 ; G(0)/N = 3.0046 ; G(1)/G(0) = -0.1395 ; HL/N (direct, lags >= 2) = +6.9140
+G(D)/N, D=0..12: +3.005 -0.419 +0.137 -0.040 -0.210 +0.523 -0.385 -0.117 +0.130 +0.077 +0.001 +0.118 -0.499
+spectrum: S(pi) = 71824 (E_V 71824) ; S(0) = 4 (E+ 4, E+/N 0.0005, E_V/E+ 17956.0000)
+spectrum: mean over 776 angles = 3.004551 N vs G(0) = 3.004551 N ; max |S - cosine series| / G(0) = 1.58e-13
+spectrum S(k pi/12)/N, k=0..12: 0.001 9.178 6.310 2.949 0.125 0.906 2.021 14.976 0.004 1.494 1.948 0.581 9.080
+sibling case analysis: case A 660 pairs (1 exceptions), case B 1318 pairs (0 exceptions); max exceptions per level 1
+E_0 = 38414, E_0 - 34N/7 = -6.000 ; SIB = 5653, SIB - 5N/7 = +3.000 ; SIB/N = 0.714665
+sibling pairs (x = 1 mod 8, 2x+1 <= 4N): 1978 ; meeting V: 1 (nonzero product 0) ; pairs outside V with different entry: 0, with lag != 1 or equal signs: 0
+SIB_V (common entry) = 5653 ; SIB over pairs with neither member in V = 5653 ; common-entry pairs meeting V: 1 ; common-entry pairs with lag != 1: 1
+|SIB - SIB_V| = 0 <= 9 * #pairs meeting V = 0 <= 9|V| = 9 (claimed 18|V| = 18)
+max number of sibling pairs containing one seed of V: 1
+ledger: E_0 - 2 SIB_V + (G0 - E0) + 2 Gam1 + HL = 71824 (E_V 71824) ; terms /N: E0 4.85638  -2SIB_V -1.42933  G0-E0 -1.8518  2Gam1 +0.5909  HL +6.9140
+Gam1 = G1 + SIB_V = 2337 ; lag-1 pairs other than sibling-source lag-1 pairs = 2337
+basin form J(y) = f(y) R_y(N): 0 violations over 18315 nodes
+ladder: nodes 18315 ; max dep 112 ; E^(0) = 71824 (E_V 71824) ; E^(maxdep) = 38414 (E_0 38414) ; E^(1) = 73494 , sum_V c0^2 + sum_ports J^2 = 73494 (5 ports with mass)
+ladder: merge identity mismatches over k = 0..111: 0 ; J-recursion mismatches: 0 ; direct stopped simulation agreed at 11 levels
+ladder E^(k)/N: [0]9.0802 [1]9.2913 [2]4.3563 [3]3.6670 [4]3.6448 [5]3.2099 [6]2.8392 [7]2.3565 [8]2.3896 [9]2.0984 [10]2.0733 [11]2.0539 [12]2.1527 [13]2.3178 [14]2.4498 [15]2.4850 [16]2.7583 [17]2.7353 [18]2.6736 [19]2.6766 [20]2.6956 [21]2.8177 [22]3.0511 [23]3.1985 [24]3.3226 [25]3.4243 [30]3.5684 [40]3.9742 [50]4.2260 [60]4.6776 [70]4.8569 [80]4.8437 [90]4.8496 [100]4.8594 [110]4.8564 [112]4.8564
+ladder: E_0 - E_V = -4.2238 N ; first level with E^(k) >= E_V + (E_0 - E_V)/2: 0 ; E^(6)-E^(0) = -6.2410 N
+cross-port X/N = (E_V - E^(1))/N = -0.2111
+==== N = 7910: ALL CHECKS PASSED
+
+==== N = 66463 (M = 4N = 265852) ====
+c_0: max|c_0| = 3 ; value counts -3..3: 10551 0 44308 12132 0 22155 10549 ; closed-form mismatches 0
+sources (seeds with c_0 != 0): 87563 ; max depth 163 ; max clock 276
+sign(x->u) != (-1)^t(x): 0 sources
+literal clock t(x) != st(x) - st(u(x)): 87563 sources (entry u=1: 87563, other: 0; (st diff - t) = 2 in 87563 cases)
+invariant: R(N) via transport = 530 ; H(4N)-H(N) = 530 ; R^2/N = 4.2264
+E_V = 280900 (4.2264 N) ; G(0) + 2 sum_{D>=1} G(D) = 280900 ; G(0)/N = 3.5198 ; G(1)/G(0) = -0.2746 ; HL/N (direct, lags >= 2) = +2.6394
+G(D)/N, D=0..12: +3.520 -0.966 +0.004 -0.534 +0.054 +0.078 +0.328 -0.434 +0.582 -0.089 -0.149 +0.261 -0.363
+spectrum: S(pi) = 280900 (E_V 280900) ; S(0) = 16 (E+ 16, E+/N 0.0002, E_V/E+ 17556.2500)
+spectrum: mean over 1112 angles = 3.519763 N vs G(0) = 3.519763 N ; max |S - cosine series| / G(0) = 1.88e-13
+spectrum S(k pi/12)/N, k=0..12: 0.000 10.603 7.888 0.179 1.035 6.834 7.871 6.357 4.905 1.353 0.091 0.105 4.226
+sibling case analysis: case A 5538 pairs (0 exceptions), case B 11078 pairs (0 exceptions); max exceptions per level 0
+E_0 = 322828, E_0 - 34N/7 = +7.714 ; SIB = 47466, SIB - 5N/7 = -7.571 ; SIB/N = 0.714172
+sibling pairs (x = 1 mod 8, 2x+1 <= 4N): 16616 ; meeting V: 1 (nonzero product 0) ; pairs outside V with different entry: 0, with lag != 1 or equal signs: 0
+SIB_V (common entry) = 47466 ; SIB over pairs with neither member in V = 47466 ; common-entry pairs meeting V: 1 ; common-entry pairs with lag != 1: 1
+|SIB - SIB_V| = 0 <= 9 * #pairs meeting V = 0 <= 9|V| = 9 (claimed 18|V| = 18)
+max number of sibling pairs containing one seed of V: 1
+ledger: E_0 - 2 SIB_V + (G0 - E0) + 2 Gam1 + HL = 280900 (E_V 280900) ; terms /N: E0 4.85726  -2SIB_V -1.42834  G0-E0 -1.3375  2Gam1 -0.5044  HL +2.6394
+Gam1 = G1 + SIB_V = -16761 ; lag-1 pairs other than sibling-source lag-1 pairs = -16761
+basin form J(y) = f(y) R_y(N): 0 violations over 153990 nodes
+ladder: nodes 153990 ; max dep 163 ; E^(0) = 280900 (E_V 280900) ; E^(maxdep) = 322828 (E_0 322828) ; E^(1) = 215292 , sum_V c0^2 + sum_ports J^2 = 215292 (6 ports with mass)
+ladder: merge identity mismatches over k = 0..162: 0 ; J-recursion mismatches: 0 ; direct stopped simulation agreed at 12 levels
+ladder E^(k)/N: [0]4.2264 [1]3.2393 [2]1.6634 [3]1.3718 [4]1.2379 [5]1.2353 [6]1.2988 [7]1.0109 [8]0.9778 [9]0.9851 [10]1.0390 [11]1.0118 [12]1.1297 [13]1.2715 [14]1.3712 [15]1.4928 [16]1.5453 [17]1.6073 [18]1.5773 [19]1.7523 [20]1.8716 [21]1.9053 [22]2.0110 [23]2.0437 [24]2.0667 [25]2.2493 [30]2.5914 [40]3.2636 [50]3.7623 [60]4.2320 [70]4.6159 [80]4.7598 [90]4.8179 [100]4.8464 [110]4.8612 [120]4.8593 [130]4.8571 [140]4.8573 [150]4.8573 [160]4.8573 [163]4.8573
+ladder: E_0 - E_V = 0.6308 N ; first level with E^(k) >= E_V + (E_0 - E_V)/2: 68 ; E^(6)-E^(0) = -2.9276 N
+cross-port X/N = (E_V - E^(1))/N = +0.9871
+==== N = 66463: ALL CHECKS PASSED
+
+TOTAL FAILURES: 0

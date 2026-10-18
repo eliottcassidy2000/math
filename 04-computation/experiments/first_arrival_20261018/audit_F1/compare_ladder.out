@@ -1,0 +1,7 @@
+N=7910: 33 ladder levels compared
+N=16384: 35 ladder levels compared
+N=65536: 37 ladder levels compared
+N=66463: 37 ladder levels compared
+N=262144: 39 ladder levels compared
+N=1048576: 43 ladder levels compared
+ladder values compared: 224 ; mismatches: 0

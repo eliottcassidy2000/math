@@ -1,0 +1,4 @@
+(1) sibling pairs x = 1 mod 8, x <= 100000000: 12500000 checked, 0 failures (common image, clocks 2+2r / 3+2r, a = 2 / 1)
+(2) seeds s <= 268435456 with P(s) <= 1000000: 1321607 brute-force preimages, 0 violate the formula/clock; predicted total 1321607; per-y count mismatches 0; structure violations 0 (over 375000 seeds y)
+    fibre of y = 1 (first elements): 1[c=2,+] 3[c=3,-] 113[c=8,+] 227[c=9,-] 7281[c=14,+] 14563[c=15,-] 466033[c=20,+] 932067[c=21,-] 
+ALL CHECKS PASSED
