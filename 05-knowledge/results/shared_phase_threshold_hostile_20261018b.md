@@ -155,6 +155,17 @@ must satisfy their joint cycle equations. Independence is valid in the former
 physical product construction and is not available merely because marginal
 direction-support sets have been computed in the latter.
 
+The subsequent incoming update `3306630583` supplies a second concrete
+consumer of these cycle equations: its G4 covers each six-way additive
+contact by 375 overlapping local congruence branches. The chosen modulo-2
+or modulo-3 increments must integrate on the original factor vertices.
+This strengthens the board's joint-support lane: preserve the selected
+branch and its literal cycle witness instead of averaging over branches.
+The colour-pair labels in `F2^2` and the arithmetic residues of a `Z/6`
+additive colouring remain different objects. Eliminating all local repairs
+of either type is still not a certificate against arbitrary six-colourings,
+and 375 local choices are not a bound on the global number of branch choices.
+
 There is a precise small-object bridge behind the shade repair. Identify the
 six colours with the six edges of `K4`, whose vertices are `F2^2`. Opposite
 edges form the three direction pairs. Vertex permutations supply24 of the48
