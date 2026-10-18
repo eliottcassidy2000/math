@@ -1,0 +1,6 @@
+[    0 s] A base |A| = 54 (146 edges); C base |C| = 10 (15 edges); unit directions 22; patterns: v-contact 112, reflected 16, e^2 84
+[    0 s] additive pre-screen (shared coefficient colourings): 13797 clauses; blocked 0 of 570 patterns [0 s]
+[    0 s] additive pre-screen (independent coefficient colourings): 14480 clauses; blocked 0 of 570 patterns [0 s]
+[    0 s] A base |A| = 54 (146 edges); C MM |C| = 29 (73 edges); unit directions 22; patterns: v-contact 2072, reflected 296, e^2 224
+[    0 s] additive pre-screen (shared coefficient colourings): 102153 clauses; blocked 0 of 570 patterns [0 s]
+[    0 s] additive pre-screen (independent coefficient colourings): 104208 clauses; blocked 0 of 570 patterns [0 s]

@@ -1,0 +1,28 @@
+{
+ "A_recipe": "base",
+ "C_recipe": "base",
+ "A": 54,
+ "C": 10,
+ "edges_A": 146,
+ "edges_C": 15,
+ "directions": 22,
+ "v_contact": 112,
+ "reflected": 16,
+ "e2_contact": 84,
+ "results": {
+  "shared": {
+   "clauses": 13797,
+   "variables": 1116,
+   "satisfiable_without_ports": true,
+   "blocked": 0,
+   "blocked_list": []
+  },
+  "independent": {
+   "clauses": 14480,
+   "variables": 1248,
+   "satisfiable_without_ports": true,
+   "blocked": 0,
+   "blocked_list": []
+  }
+ }
+}

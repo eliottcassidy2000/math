@@ -157,3 +157,14 @@ The invariant `R(N) = Σ f(u) c_Y(u)` was checked against `H(4N) - H(N)` at ever
 
 In octaves `2^26-2^27` the ROOT current reaches `R^2/N = 7.48`, close to the 9.08 record of `2^12`. Meanwhile the
 `Y = 1000` frontier energy never exceeds `1.30 N`. All ten pre-registered tests have passed.
+
+## Pre-registered P11-P12 (closed frontiers; written before the scan)
+
+clock_duality's R6 (root_sparse_boundary_module_20261017i.md) certifies forward-closed frontiers:
+- `V_100`: 74 seeds, largest 2051;
+- `V_1000`: 627 seeds, largest 63665.
+
+Stopping on first entry into `V` leaves no return kernel, and `R(N)^2 <= |V| E_V(N)`. Predictions for every `N` in
+`[2^12, 2^26)`:
+- **P11.** `max E_(V_1000)(N)/N <= 2.5`.
+- **P12.** `max E_(V_100)(N)/N <= 3.5`.
