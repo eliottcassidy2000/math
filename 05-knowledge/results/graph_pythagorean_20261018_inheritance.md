@@ -152,6 +152,14 @@ Their proof uses an `s,t` ordering, grouping the first encountered cycle
 before continuing the branching count. Parallel edges are allowed in the
 general theorem but excluded in the sharpened lemma.
 
+The color-count convention was checked directly: section 2, printed page 2,
+defines `c_k(G)`; Theorem 4's proof on page 3 gives six choices at the first
+cubic vertex, so colors are labelled. Lemma 8 on page 5 states:
+“If G is a connected cubic simple graph, then c_3(G) <= (9/4) 2^(n/2).”
+No additional 2-connectivity hypothesis occurs in that statement. Theorem
+5's proof on page 4 explains why a colorable connected regular graph is
+2-connected; the remaining case has count zero.
+
 **Proposition 3 (sharp simple-graph range, with the cited input).**
 
 ```text
@@ -180,6 +188,28 @@ of connected simple cubic graphs with order tending to infinity, including
 colorable graphs. Isosceles convergence alone cannot classify snarks. It is
 an entropy dilution effect of this normalization; only the exact endpoint
 is a colorability certificate.
+
+**A size-normalized repair (PROVED, no new geometry).** For a nonempty
+finite simple cubic graph retain its order and define
+
+```text
+r(G)=q(G)^(1/n)=C(G)^(2/n) 3^(s/n) / 6,
+```
+
+with `r=0` when `C=0`. If the graph is colorable, the free action of global
+permutations of its three colors gives `C>=6`. Since `s>=0`,
+
+```text
+r(G) >= 36^(1/n)/6 > 1/6.
+```
+
+Thus zero and colorability are separated uniformly in this derived rate;
+growing colorable graphs cannot dilute toward zero after the root is
+taken. Over disjoint union, `q` multiplies and `r` is the corresponding
+vertex-weighted geometric mean. The rate is not the original boundary
+angle or overlap: it uses the retained order to undo exponential scaling.
+It still requires the same coloring count and therefore supplies no
+shortcut to deciding colorability or proving a Petersen-minor theorem.
 
 ### An independent planar connected hostile
 
@@ -229,8 +259,11 @@ agreed with Proposition 1.
 | cube | 8 | 12 | 0 | 24 | 1/2916 | 2915/5832, 2917/5832 |
 | Petersen | 10 | 12 | 3 | 0 | 0 | 1/2, 1/2 |
 
-The session's graph experiment artifact provides the committed broader
-reproducer; the elementary prism formula above is an independent path.
+Reproduce the broader session census with
+`python 04-computation/graph_pythagorean_20261018_graph_probe.py`.
+See the [graph probe](../../04-computation/graph_pythagorean_20261018_graph_probe.py)
+and its [saved output](../../04-computation/graph_pythagorean_20261018_graph_probe.out).
+The elementary prism formula above is an independent path.
 
 There is also a literal complete-graph realization of the difference-one
 Pythagorean family, with a different map. For `K_(2r+1)`,
@@ -269,3 +302,27 @@ the prior reductions, claims the cubic Petersen-minor conclusion. This
 lane did not replay that paper's finite obligations and does not import
 them as internally proved. The paper does not settle the general
 noncubic Tutte four-flow conjecture.
+
+## 6. Independent reading of the other two lanes
+
+The [arithmetic audit](graph_pythagorean_20261018_arithmetic_audit.md) was
+read directly, including the square-shore integrality proof, the two
+different unit-gap branches, the explicit Petersen switching map, the
+Seidel spectral bounds and the full finite-field construction. The
+character-sum proof, norm/discriminant calculation, and both switched
+degree formulas check algebraically. The graph `H_t` should be described
+as a representative of a symmetric-conference switching class, rather
+than silently identified with the usual odd-order conference graph.
+
+The [graph audit](graph_pythagorean_20261018_graph_audit.md) was also read
+directly. Its five-pole support proof is exact: `5=2m_c+k_c` forces boundary
+multiplicities `(3,1,1)`; the unique internal majority-colored edge joins
+the two singleton positions; the remaining four-edge path has one forced
+alternating coloring. Thus each adjacent singleton pair contributes six
+words and two glued pentagons have coloring count `6|E(C) intersect E(D)|`.
+This makes the complementary decomposition of `E(K5)` a literal Petersen
+coloring obstruction. The flower maximum-cut proof also checks: three
+edge-disjoint odd horizontal paths enforce three uncut edges when some
+module's leaves are equal, while otherwise every module contributes one
+uncut star edge. Neither argument relies on a numerical graph invariant
+standing in for the missing extension addresses.

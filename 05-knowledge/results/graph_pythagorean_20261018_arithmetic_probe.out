@@ -1,0 +1,38 @@
+square-shore universe c<=200: integral=279, primitive_positive=32
+primitive Euclid universe m<=100: pairs=2040, unit_gap=99
+central branch: m n a b c a-b
+2 1 3 4 5 -1
+5 2 21 20 29 1
+12 5 119 120 169 -1
+29 12 697 696 985 1
+70 29 4059 4060 5741 -1
+169 70 23661 23660 33461 1
+408 169 137903 137904 195025 -1
+985 408 803761 803760 1136689 1
+parabolic unit-gap branch: m n a b c
+2 1 3 4 5
+3 2 5 12 13
+4 3 7 24 25
+5 4 9 40 41
+6 5 11 60 61
+7 6 13 84 85
+Petersen: Seidel S^2=9 I; standard GP(5,2) map verified
+Petersen switch N(v): K1 + D(K3,3); F3 map to L(K3,3) verified
+Seidel root radii: Petersen=3, K5=4, K3,3=5; 3^2+4^2=5^2
+Seidel complete/bipartite controls: all orders 2..20 and every shore split
+Paley-square conference continuation: t order degree Seidel-radius triangle clique-order bipartite-shore
+3 10 3 3 (3, 4, 5) 5 3
+5 26 10 5 (5, 12, 13) 13 7
+7 50 21 7 (7, 24, 25) 25 13
+11 122 55 11 (11, 60, 61) 61 31
+clique edge-disjointness continuation: order_c, vertex_count, degree
+5 10 3
+6 15 6
+13 78 55
+29 406 351
+clique/cut polarization controls: m n Pythagorean_defect
+2 1 0
+3 2 0
+5 2 0
+4 3 0
+ALL EXACT CHECKS PASSED

@@ -1,0 +1,36 @@
+{
+  "session": "codex-graph-pythagorean-20261018",
+  "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+  "comparison": "decoded text with universal newline normalization; SHA256 on raw bytes",
+  "records": [
+    {
+      "source": "04-computation/graph_pythagorean_20261018_arithmetic_probe.py",
+      "source_sha256": "3799de43d16faf6863965571e20ad651cf18077e88eabb3e99af170d172e830e",
+      "output": "05-knowledge/results/graph_pythagorean_20261018_arithmetic_probe.out",
+      "output_sha256": "02c4815b28815d284d36dab14468699d8a1369bd0bc520c098a9682b17f6ef4f",
+      "normal_optimized_saved_text_match": true
+    },
+    {
+      "source": "04-computation/graph_pythagorean_20261018_graph_probe.py",
+      "source_sha256": "272775917e4b49ca3397d3017965f54ee182627af46d938ae926f28142c88da0",
+      "output": "04-computation/graph_pythagorean_20261018_graph_probe.out",
+      "output_sha256": "6e64b6716cccbf543cf9e49709913a8d2b86d698734f31188a660444208d7520",
+      "normal_optimized_saved_text_match": true
+    },
+    {
+      "source": "04-computation/graph_pythagorean_20261018_independent_audit.py",
+      "source_sha256": "b94a93bd834dc1932626d544bc66b847f3894d2551fb0aa2cccb7490aa3a903d",
+      "output": "05-knowledge/results/graph_pythagorean_20261018_independent_audit.out",
+      "output_sha256": "67d6bdf719470bd0d97071edd7a0aeb81daea16d16488ac873c02f9bf87a9a90",
+      "normal_optimized_saved_text_match": true
+    }
+  ],
+  "exact_dependencies": {
+    "networkx": "3.5",
+    "sympy": "1.14.0"
+  },
+  "illustration": {
+    "04-computation\\graph_pythagorean_20261018_figure.py": "2219b51fd15f5bd258c8e1170c3a6eb223dfc1d36534eff30bec3c472617fe38",
+    "05-knowledge\\results\\graph_pythagorean_20261018_boundary.png": "f2d2accda18cb707837a794c8e7667a564337f12159773ba9b7cab6b4255db0d"
+  }
+}

@@ -1,0 +1,39 @@
+FINITE-EXACT named universe; Python integer/Fraction arithmetic
+DEPENDENCIES: NetworkX 3.5 ; SymPy 1.14.0
+GRAPH K4: n=4, m=6, planar=True, bipartite=False, 3edge_colors=6, oddness=0, perfect_matchings=3, maxcut=4, maxcut_fraction=2/3, s=2, canonical_q=1/4
+  EDGE_INTERFACE {'side': (0, 1), 'boundary': ((0, 2), (0, 3), (1, 2), (1, 3)), 'supports': (12, 12), 'masses': (12, 12), 'norms_squared': (12, 12), 'dot': 6, 'triangle_squared': (12, 36, 48), 'cosine_squared': '1/4'}; signature=(0, 1, 0, 1)
+GRAPH K3,3: n=6, m=9, planar=False, bipartite=True, 3edge_colors=12, oddness=0, perfect_matchings=6, maxcut=9, maxcut_fraction=1, s=0, canonical_q=1/324
+  EDGE_INTERFACE {'side': (0, 3), 'boundary': ((0, 4), (0, 5), (1, 3), (2, 3)), 'supports': (12, 15), 'masses': (12, 18), 'norms_squared': (12, 24), 'dot': 12, 'triangle_squared': (12, 60, 72), 'cosine_squared': '1/2'}; signature=(2, 0, 1, 1)
+  MAXCUT_INTERFACE {'side': (0, 1, 2), 'boundary': ((0, 3), (0, 4), (0, 5), (1, 3), (1, 4), (1, 5), (2, 3), (2, 4), (2, 5)), 'supports': (216, 216), 'masses': (216, 216), 'norms_squared': (216, 216), 'dot': 12, 'triangle_squared': (408, 456, 864), 'cosine_squared': '1/324'}
+GRAPH triangular_prism: n=6, m=9, planar=True, bipartite=False, 3edge_colors=6, oddness=0, perfect_matchings=4, maxcut=7, maxcut_fraction=7/9, s=2, canonical_q=1/144
+  EDGE_INTERFACE {'side': (0, 1), 'boundary': ((0, 2), (0, 3), (1, 2), (1, 4)), 'supports': (12, 12), 'masses': (12, 12), 'norms_squared': (12, 12), 'dot': 6, 'triangle_squared': (12, 36, 48), 'cosine_squared': '1/4'}; signature=(0, 1, 0, 1)
+GRAPH cube: n=8, m=12, planar=True, bipartite=True, 3edge_colors=24, oddness=0, perfect_matchings=9, maxcut=12, maxcut_fraction=1, s=0, canonical_q=1/2916
+  EDGE_INTERFACE {'side': (0, 1), 'boundary': ((0, 3), (0, 4), (1, 2), (1, 7)), 'supports': (12, 15), 'masses': (12, 30), 'norms_squared': (12, 72), 'dot': 24, 'triangle_squared': (36, 132, 168), 'cosine_squared': '2/3'}; signature=(2, 0, 3, 1)
+  MAXCUT_INTERFACE {'side': (1, 3, 4, 6), 'boundary': ((0, 1), (0, 3), (0, 4), (1, 2), (1, 7), (2, 3), (2, 6), (3, 5), (4, 5), (4, 7), (5, 6), (6, 7)), 'supports': (1296, 1296), 'masses': (1296, 1296), 'norms_squared': (1296, 1296), 'dot': 24, 'triangle_squared': (2544, 2640, 5184), 'cosine_squared': '1/2916'}
+GRAPH pentagonal_prism: n=10, m=15, planar=True, bipartite=False, 3edge_colors=30, oddness=0, perfect_matchings=11, maxcut=13, maxcut_fraction=13/15, s=2, canonical_q=25/186624
+  EDGE_INTERFACE {'side': (0, 1), 'boundary': ((0, 4), (0, 5), (1, 2), (1, 6)), 'supports': (12, 18), 'masses': (12, 36), 'norms_squared': (12, 84), 'dot': 30, 'triangle_squared': (36, 156, 192), 'cosine_squared': '25/28'}; signature=(0, 1, 2, 3)
+  MAXCUT_INTERFACE {'side': (1, 3, 4, 5, 7), 'boundary': ((0, 1), (0, 4), (0, 5), (1, 2), (1, 6), (2, 3), (2, 7), (3, 8), (4, 9), (5, 6), (5, 9), (6, 7), (7, 8)), 'supports': (2592, 2592), 'masses': (2592, 2592), 'norms_squared': (2592, 2592), 'dot': 30, 'triangle_squared': (5124, 5244, 10368), 'cosine_squared': '25/186624'}
+  C5_INTERFACE {'side': (0, 1, 2, 3, 4), 'boundary': ((0, 5), (1, 6), (2, 7), (3, 8), (4, 9)), 'supports': (30, 30), 'masses': (30, 30), 'norms_squared': (30, 30), 'dot': 30, 'triangle_squared': (0, 120, 120), 'cosine_squared': '1'}
+GRAPH Petersen: n=10, m=15, planar=False, bipartite=False, 3edge_colors=0, oddness=2, perfect_matchings=6, maxcut=12, maxcut_fraction=4/5, s=3, canonical_q=0
+  EDGE_INTERFACE {'side': (0, 1), 'boundary': ((0, 4), (0, 5), (1, 2), (1, 6)), 'supports': (12, 9), 'masses': (12, 18), 'norms_squared': (12, 36), 'dot': 0, 'triangle_squared': (48, 48, 96), 'cosine_squared': '0'}; signature=(2, 2, 0, 0)
+  MAXCUT_INTERFACE {'side': (2, 4, 5, 6), 'boundary': ((0, 4), (0, 5), (1, 2), (1, 6), (2, 3), (2, 7), (3, 4), (4, 9), (5, 7), (5, 8), (6, 8), (6, 9)), 'supports': (1296, 1728), 'masses': (1296, 1728), 'norms_squared': (1296, 1728), 'dot': 0, 'triangle_squared': (3024, 3024, 6048), 'cosine_squared': '0'}
+  C5_INTERFACE {'side': (0, 1, 2, 3, 4), 'boundary': ((0, 5), (1, 6), (2, 7), (3, 8), (4, 9)), 'supports': (30, 30), 'masses': (30, 30), 'norms_squared': (30, 30), 'dot': 0, 'triangle_squared': (60, 60, 120), 'cosine_squared': '0'}
+GRAPH Heawood: n=14, m=21, planar=False, bipartite=True, 3edge_colors=48, oddness=0, perfect_matchings=24, maxcut=21, maxcut_fraction=1, s=0, canonical_q=1/34012224
+  EDGE_INTERFACE {'side': (0, 1), 'boundary': ((0, 5), (0, 13), (1, 2), (1, 10)), 'supports': (12, 15), 'masses': (12, 72), 'norms_squared': (12, 384), 'dot': 48, 'triangle_squared': (300, 492, 792), 'cosine_squared': '1/2'}; signature=(8, 0, 4, 4)
+GRAPH dodecahedron: n=20, m=30, planar=True, bipartite=False, 3edge_colors=60, oddness=0, perfect_matchings=36, maxcut=24, maxcut_fraction=4/5, s=6, canonical_q=25/34828517376
+  EDGE_INTERFACE {'side': (0, 1), 'boundary': ((0, 10), (0, 19), (1, 2), (1, 8)), 'supports': (12, 21), 'masses': (12, 108), 'norms_squared': (12, 576), 'dot': 60, 'triangle_squared': (468, 708, 1176), 'cosine_squared': '25/48'}; signature=(4, 6, 6, 4)
+GRAPH flower_J5: n=20, m=30, planar=False, bipartite=False, 3edge_colors=0, oddness=2, perfect_matchings=32, maxcut=27, maxcut_fraction=9/10, s=3, canonical_q=0
+  EDGE_INTERFACE {'side': (0, 1), 'boundary': ((0, 2), (0, 3), (1, 5), (1, 17)), 'supports': (12, 9), 'masses': (12, 108), 'norms_squared': (12, 1296), 'dot': 0, 'triangle_squared': (1308, 1308, 2616), 'cosine_squared': '0'}; signature=(12, 12, 0, 0)
+EXACT_SPECTRUM K5: charpoly=(x - 4)*(x + 1)**4
+EXACT_SPECTRUM K3,3: charpoly=x**4*(x - 3)*(x + 3)
+EXACT_SPECTRUM Petersen: charpoly=(x - 3)*(x - 1)**5*(x + 2)**4
+FLOWER_MAXCUT J5: n=20, m=30, maxcut=27, deficit=3, ratio=9/10
+FLOWER_MAXCUT J7: n=28, m=42, maxcut=39, deficit=3, ratio=13/14
+FLOWER_MAXCUT J9: n=36, m=54, maxcut=51, deficit=3, ratio=17/18
+FLOWER_MAXCUT J11: n=44, m=66, maxcut=63, deficit=3, ratio=21/22
+FLOWER_MAXCUT J21: n=84, m=126, maxcut=123, deficit=3, ratio=41/42
+TWELVE_LABELLED_C5_GLUINGS overlap_histogram= {0: 1, 2: 5, 3: 5, 5: 1}
+PETERSEN_K5_MINOR branch_sets= [(0, 5), (1, 6), (2, 7), (3, 8), (4, 9)]
+PETERSEN_K33_SUBDIVISION shores=((2,8,9),(3,6,7)), paths= ((2, 3), (2, 1, 6), (2, 7), (8, 3), (8, 6), (8, 5, 7), (9, 4, 3), (9, 6), (9, 7))
+ALL_SIMPLE_CUBIC_GRAPHS_N_LE_7 [(4, 6, 2, '1/4', 'C~'), (6, 6, 2, '1/144', 'EtTg'), (6, 12, 0, '1/324', 'ElUg')]
+ALL CHECKS PASSED

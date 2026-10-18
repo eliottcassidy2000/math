@@ -1,0 +1,23 @@
+INDEPENDENT EXACT AUDIT: F2^2 cycle-space flow counts + exhaustive cuts
+K4 n 4 flow_count 6 maxcut 4 maximizing_cuts 3 norm_product 144 q 1/4
+K33 n 6 flow_count 12 maxcut 9 maximizing_cuts 1 norm_product 46656 q 1/324
+prism3 n 6 flow_count 6 maxcut 7 maximizing_cuts 3 norm_product 5184 q 1/144
+cube n 8 flow_count 24 maxcut 12 maximizing_cuts 1 norm_product 1679616 q 1/2916
+prism5 n 10 flow_count 30 maxcut 13 maximizing_cuts 5 norm_product 6718464 q 25/186624
+Petersen n 10 flow_count 0 maxcut 12 maximizing_cuts 5 norm_product 2239488 q 0
+Heawood n 14 flow_count 48 maxcut 21 maximizing_cuts 1 norm_product 78364164096 q 1/34012224
+all_cubic_atlas_orders_le7 3 seeded_samples 24
+triangle_expansion 0 n 4 C 6 s 2 q 1/4
+triangle_expansion 1 n 6 C 6 s 2 q 1/144
+triangle_expansion 2 n 8 C 6 s 2 q 1/5184
+triangle_expansion 3 n 10 C 6 s 3 q 1/62208
+triangle_expansion 4 n 12 C 6 s 4 q 1/746496
+triangle_expansion 5 n 14 C 6 s 4 q 1/26873856
+paley 3 field_nonsquare 2 switch_size 3 order_degree (10, 3) spectral_triple (3, 4, 5)
+paley 5 field_nonsquare 2 switch_size 10 order_degree (26, 10) spectral_triple (5, 12, 13)
+paley 7 field_nonsquare 3 switch_size 21 order_degree (50, 21) spectral_triple (7, 24, 25)
+seidel_spectrum K5 {-4: 1, 1: 4}
+seidel_spectrum K33 {-1: 5, 5: 1}
+seidel_spectrum Petersen {-3: 5, 3: 5}
+same_Seidel_spectrum_planarity_hostile K33 -> empty6
+PASS: all assertions are active under python -O too
