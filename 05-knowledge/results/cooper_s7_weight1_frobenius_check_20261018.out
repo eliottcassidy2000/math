@@ -1,0 +1,157 @@
+== S: exact identities (q-precision 440)
+S1 c7 * c7 = s7 (Cauchy square) for n <= 440: 1
+S2 F(t(q)) = theta^2: 1
+S3 G(t(q)) = theta: 1
+S4 t theta^3 = (eta1 eta7)^3: 1
+S5 s^2 = 1 - 26 t - 27 t^2: 1
+S6 q dt/dq / t = theta^2 s: 1
+S7 s(t) = sqrt(1-26t-27t^2) has integral t-coefficients: 1
+S8 s(t(q)) = s(q): 1
+S9 theta^6 (1+t)^2 = theta^6 + 2 (eta1 eta7)^3 theta^3 + (eta1 eta7)^6 (holomorphic, weight 6): 1
+
+== T: Beukers' weight-one polynomial for theta (q-precision 1500)
+p=  2 chi= 1 L=750  a  : integral polynomial of degree  0 <=  0: 1   b: integral, degree  1 <=  1, b == chi mod p: 1   a + b theta/theta(q^p) == 0 mod p^2: 1
+p=  3 chi=-1 L=500  a/s: integral polynomial of degree  0 <=  0: 1   b: integral, degree  1 <=  1, b == chi mod p: 1   a + b theta/theta(q^p) == 0 mod p^2: 1
+p=  5 chi=-1 L=300  a/s: integral polynomial of degree  0 <=  0: 1   b: integral, degree  2 <=  2, b == chi mod p: 1   a + b theta/theta(q^p) == 0 mod p^2: 1
+p= 11 chi= 1 L=136  a  : integral polynomial of degree  3 <=  3: 1   b: integral, degree  4 <=  4, b == chi mod p: 1   a + b theta/theta(q^p) == 0 mod p^2: 1
+p= 13 chi=-1 L=115  a/s: integral polynomial of degree  3 <=  3: 1   b: integral, degree  4 <=  4, b == chi mod p: 1   a + b theta/theta(q^p) == 0 mod p^2: 1
+p= 17 chi=-1 L= 88  a/s: integral polynomial of degree  4 <=  4: 1   b: integral, degree  6 <=  6, b == chi mod p: 1   a + b theta/theta(q^p) == 0 mod p^2: 1
+p= 19 chi=-1 L= 78  a/s: integral polynomial of degree  5 <=  5: 1   b: integral, degree  6 <=  6, b == chi mod p: 1   a + b theta/theta(q^p) == 0 mod p^2: 1
+p= 23 chi= 1 L= 65  a  : integral polynomial of degree  7 <=  7: 1   b: integral, degree  8 <=  8, b == chi mod p: 1   a + b theta/theta(q^p) == 0 mod p^2: 1
+p= 29 chi= 1 L= 51  a  : integral polynomial of degree  9 <=  9: 1   b: integral, degree 10 <= 10, b == chi mod p: 1   a + b theta/theta(q^p) == 0 mod p^2: 1
+p= 31 chi=-1 L= 48  a/s: integral polynomial of degree  9 <=  9: 1   b: integral, degree 10 <= 10, b == chi mod p: 1   a + b theta/theta(q^p) == 0 mod p^2: 1
+p= 37 chi= 1 L= 40  a  : integral polynomial of degree 12 <= 12: 1   b: integral, degree 12 <= 12, b == chi mod p: 1   a + b theta/theta(q^p) == 0 mod p^2: 1
+p= 41 chi=-1 L= 36  a/s: integral polynomial of degree 12 <= 12: 1   b: integral, degree 14 <= 14, b == chi mod p: 1   a + b theta/theta(q^p) == 0 mod p^2: 1
+p= 43 chi= 1 L= 34  a  : integral polynomial of degree 14 <= 14: 1   b: integral, degree 14 <= 14, b == chi mod p: 1   a + b theta/theta(q^p) == 0 mod p^2: 1
+T all: 1
+
+== A/B: Frobenius congruences, primes p < 110, p != 7, coefficients up to t^(4 p)
+[p, chi(p), v_p(F - F_p F^sigma), v_p(F - F_p F(t^p)), v_p(G-side), deg(H_p mod p^2), bound] (99 = exact zero):
+  [2, 1, 2, 2, 2, -1, -1]
+  [3, -1, 99, 2, 2, 1, 1]
+  [5, -1, 2, 1, 2, 2, 2]
+  [11, 1, 2, 1, 2, -1, -1]
+  [13, -1, 2, 1, 2, 7, 7]
+  [17, -1, 2, 1, 2, 10, 10]
+  [19, -1, 2, 1, 2, 11, 11]
+  [23, 1, 2, 1, 2, -1, -1]
+  [29, 1, 2, 1, 2, -1, -1]
+  [31, -1, 2, 1, 2, 19, 19]
+  [37, 1, 2, 1, 2, -1, -1]
+  [41, -1, 2, 1, 2, 26, 26]
+  [43, 1, 2, 1, 2, -1, -1]
+  [47, -1, 2, 1, 2, 30, 30]
+  [53, 1, 2, 1, 2, -1, -1]
+  [59, -1, 2, 1, 2, 38, 38]
+  [61, -1, 2, 1, 2, 39, 39]
+  [67, 1, 2, 1, 2, -1, -1]
+  [71, 1, 2, 1, 2, -1, -1]
+  [73, -1, 2, 1, 2, 47, 47]
+  [79, 1, 2, 1, 2, -1, -1]
+  [83, -1, 2, 1, 2, 54, 54]
+  [89, -1, 2, 1, 2, 58, 58]
+  [97, -1, 2, 1, 2, 63, 63]
+  [101, -1, 2, 1, 2, 66, 66]
+  [103, -1, 2, 1, 2, 67, 67]
+  [107, 1, 2, 1, 2, -1, -1]
+  [109, 1, 2, 1, 2, -1, -1]
+A: v(F - F_p F^sigma) >= 2 for all p: 1;  = 2 exactly except at: [3]
+A': naive lift t^p gives only v = 1 at: [5, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109]
+B: v(G-side) >= 2 for all p: 1;  inert degree bound holds: 1
+
+== C: Lucas congruences for c7 modulo p, n < 3000
+  p= 2 chi= 1  Lucas holds: 1 (first failure n = -1)  expected: 1
+  p= 3 chi=-1  Lucas holds: 0 (first failure n = 3)  expected: 0
+  p= 5 chi=-1  Lucas holds: 0 (first failure n = 5)  expected: 0
+  p= 7 chi= 0  Lucas holds: 1 (first failure n = -1)  expected: 1
+  p=11 chi= 1  Lucas holds: 1 (first failure n = -1)  expected: 1
+  p=13 chi=-1  Lucas holds: 0 (first failure n = 13)  expected: 0
+  p=17 chi=-1  Lucas holds: 0 (first failure n = 17)  expected: 0
+  p=19 chi=-1  Lucas holds: 0 (first failure n = 19)  expected: 0
+  p=23 chi= 1  Lucas holds: 1 (first failure n = -1)  expected: 1
+  p=29 chi= 1  Lucas holds: 1 (first failure n = -1)  expected: 1
+  p=31 chi=-1  Lucas holds: 0 (first failure n = 31)  expected: 0
+  p=37 chi= 1  Lucas holds: 1 (first failure n = -1)  expected: 1
+  p=41 chi=-1  Lucas holds: 0 (first failure n = 41)  expected: 0
+  p=43 chi= 1  Lucas holds: 1 (first failure n = -1)  expected: 1
+  p=47 chi=-1  Lucas holds: 0 (first failure n = 47)  expected: 0
+  p=53 chi= 1  Lucas holds: 1 (first failure n = -1)  expected: 1
+  p=59 chi=-1  Lucas holds: 0 (first failure n = 59)  expected: 0
+C: Lucas holds exactly for p = 7 and chi(p) = 1: 1
+C7 theta^6 (1+t)^2 == 1 mod 7 up to q^440: 1;  first coefficients (Sturm bound 4): [1, 14, 91, 406, 1463]
+C7 G(t) == (1+t)^2 G(t^7) mod 7 up to t^440: 1
+
+== CM: F_p(t0) mod p^2 at the nine rational CM values, split primes 5 <= p < 400
+  t0 =        -1  D =    -7: match  35 /  35   (N(gamma) = p:  35, N(gamma) = 7p:   0)  failures: []
+  t0 =       1/2  D =   -12: match  36 /  36   (N(gamma) = p:  36, N(gamma) = 7p:   0)  failures: []
+  t0 =       1/8  D =   -19: match  36 /  36   (N(gamma) = p:  36, N(gamma) = 7p:   0)  failures: []
+  t0 =      -1/8  D =   -35: match  37 /  37   (N(gamma) = p:  16, N(gamma) = 7p:  21)  failures: []
+  t0 =      1/24  D =   -27: match  36 /  36   (N(gamma) = p:  36, N(gamma) = 7p:   0)  failures: []
+  t0 =      1/27  D =   -28: match  35 /  35   (N(gamma) = p:  35, N(gamma) = 7p:   0)  failures: []
+  t0 =     -1/64  D =   -91: match  40 /  40   (N(gamma) = p:  18, N(gamma) = 7p:  22)  failures: []
+  t0 =     1/125  D =  -112: match  35 /  35   (N(gamma) = p:  16, N(gamma) = 7p:  19)  failures: []
+  t0 =  -1/10648  D =  -427: match  32 /  32   (N(gamma) = p:  14, N(gamma) = 7p:  18)  failures: []
+CM all: 1
+
+== O: the Chan-Cooper-Sica congruence c7(np) == c7(n) mod p^2, numerically (n < 3000/p)
+  p= 2 chi= 1  mod p: 1  mod p^2: 1  mod p^3: 0
+  p= 3 chi=-1  mod p: 0  mod p^2: 0  mod p^3: 0
+  p= 5 chi=-1  mod p: 0  mod p^2: 0  mod p^3: 0
+  p= 7 chi= 0  mod p: 1  mod p^2: 1  mod p^3: 0
+  p=11 chi= 1  mod p: 1  mod p^2: 1  mod p^3: 0
+  p=13 chi=-1  mod p: 0  mod p^2: 0  mod p^3: 0
+  p=17 chi=-1  mod p: 0  mod p^2: 0  mod p^3: 0
+  p=19 chi=-1  mod p: 0  mod p^2: 0  mod p^3: 0
+  p=23 chi= 1  mod p: 1  mod p^2: 1  mod p^3: 0
+  p=29 chi= 1  mod p: 1  mod p^2: 1  mod p^3: 0
+  p=31 chi=-1  mod p: 0  mod p^2: 0  mod p^3: 0
+  p=37 chi= 1  mod p: 1  mod p^2: 1  mod p^3: 0
+  p=41 chi=-1  mod p: 0  mod p^2: 0  mod p^3: 0
+  p=43 chi= 1  mod p: 1  mod p^2: 1  mod p^3: 0
+  p=47 chi=-1  mod p: 0  mod p^2: 0  mod p^3: 0
+  p=53 chi= 1  mod p: 1  mod p^2: 1  mod p^3: 0
+  p=59 chi=-1  mod p: 0  mod p^2: 0  mod p^3: 0
+
+== D: proof ingredients for c7(pn) == c7(n) mod p^2
+  p=11: (E) 1  (F) 1  (W) deg A_p =  3 <=  3: 1  (P) 1, deg(eps_p G_p mod p) =  7 <=  7, constant term 0
+  p=23: (E) 1  (F) 1  (W) deg A_p =  7 <=  7: 1  (P) 1, deg(eps_p G_p mod p) = 15 <= 15, constant term 0
+  p=29: (E) 1  (F) 1  (W) deg A_p =  9 <=  9: 1  (P) 1, deg(eps_p G_p mod p) = 19 <= 19, constant term 0
+  p=37: (E) 1  (F) 1  (W) deg A_p = 12 <= 12: 1  (P) 1, deg(eps_p G_p mod p) = 24 <= 24, constant term 0
+  p=43: (E) 1  (F) 1  (W) deg A_p = 14 <= 14: 1  (P) 1, deg(eps_p G_p mod p) = 28 <= 28, constant term 0
+D split primes 11..43 all ingredients: 1
+D7 f = theta^3 s = 1 - (7/8) A1 - (49/8) A2 (weight 3, Gamma0(7), chi_-7) to q^440: 1
+D7 U_7 f == f mod 49 to q^62: 1
+D7 theta^27 theta(q^7)^3 (t(q^7) - t^7 - 14 t^8 - 28 t^9) == 0 mod 49 to q^440 (weight 30 on Gamma0(49), Sturm bound 140): 1
+D2 theta^9 theta(q^2)^3 (t(q^2) - t^2 - 2 t^3) == 0 mod 4 to q^440 (weight 12 on Gamma0(14), Sturm bound 24): 1
+D7 eps_7 mod 7 = 4*x^2 + 2*x;  eps_7 (1+t)^2 mod 7 = 4*x^4 + 3*x^3 + x^2 + 2*x
+D2 eps_2 mod 2 = x;  G_2 = 2*x + 1
+
+== E: inert primes, twisted congruence d7(pn) == c7(n) mod p^2, where H = G/s = sum d7(n) t^n
+E0 1/s = sum u(n) t^n with u(n) = [x^n] (x^2+13x+49)^n (n <= 60) and the recurrence (n <= 440): 1 1
+  p= 2 chi= 1  d7(pn) == c7(n):  mod p: 0  mod p^2: 0  mod p^3: 0
+  p= 3 chi=-1  d7(pn) == c7(n):  mod p: 1  mod p^2: 1  mod p^3: 0
+  p= 5 chi=-1  d7(pn) == c7(n):  mod p: 1  mod p^2: 1  mod p^3: 0
+  p= 7 chi= 0  d7(pn) == c7(n):  mod p: 1  mod p^2: 0  mod p^3: 0
+  p=11 chi= 1  d7(pn) == c7(n):  mod p: 0  mod p^2: 0  mod p^3: 0
+  p=13 chi=-1  d7(pn) == c7(n):  mod p: 1  mod p^2: 1  mod p^3: 0
+  p=17 chi=-1  d7(pn) == c7(n):  mod p: 1  mod p^2: 1  mod p^3: 0
+  p=19 chi=-1  d7(pn) == c7(n):  mod p: 1  mod p^2: 1  mod p^3: 0
+  p=23 chi= 1  d7(pn) == c7(n):  mod p: 0  mod p^2: 0  mod p^3: 0
+  p=29 chi= 1  d7(pn) == c7(n):  mod p: 0  mod p^2: 0  mod p^3: 0
+  p=31 chi=-1  d7(pn) == c7(n):  mod p: 1  mod p^2: 1  mod p^3: 0
+  p=37 chi= 1  d7(pn) == c7(n):  mod p: 0  mod p^2: 0  mod p^3: 0
+  p=41 chi=-1  d7(pn) == c7(n):  mod p: 1  mod p^2: 1  mod p^3: 0
+  p=43 chi= 1  d7(pn) == c7(n):  mod p: 0  mod p^2: 0  mod p^3: 0
+  p=47 chi=-1  d7(pn) == c7(n):  mod p: 1  mod p^2: 1  mod p^3: 0
+  p=53 chi= 1  d7(pn) == c7(n):  mod p: 0  mod p^2: 0  mod p^3: 0
+  p=59 chi=-1  d7(pn) == c7(n):  mod p: 1  mod p^2: 1  mod p^3: 0
+E numerics: mod p^2 holds for every inert p < 60: 1
+  p= 5: (E) 1  (F') 1  (W') deg B_p =  0 <=  0: 1  (P') 1, deg(eps_p H_p mod p) =  2 <=  2, constant term 0
+  p=13: (E) 1  (F') 1  (W') deg B_p =  3 <=  3: 1  (P') 1, deg(eps_p H_p mod p) =  7 <=  7, constant term 0
+  p=17: (E) 1  (F') 1  (W') deg B_p =  4 <=  4: 1  (P') 1, deg(eps_p H_p mod p) = 10 <= 10, constant term 0
+  p=19: (E) 1  (F') 1  (W') deg B_p =  5 <=  5: 1  (P') 1, deg(eps_p H_p mod p) = 11 <= 11, constant term 0
+  p=31: (E) 1  (F') 1  (W') deg B_p =  9 <=  9: 1  (P') 1, deg(eps_p H_p mod p) = 19 <= 19, constant term 0
+  p=41: (E) 1  (F') 1  (W') deg B_p = 12 <= 12: 1  (P') 1, deg(eps_p H_p mod p) = 26 <= 26, constant term 0
+E inert primes 5..41 all ingredients: 1
+E3 theta^9 theta(q^3)^3 (t(q^3) - t^3) == 0 mod 9 to q^440 (weight 12 on Gamma0(21), Sturm bound 32): 1
+
