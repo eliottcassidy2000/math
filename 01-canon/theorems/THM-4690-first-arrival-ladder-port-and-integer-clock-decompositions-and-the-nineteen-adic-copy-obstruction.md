@@ -10,6 +10,9 @@ status: >
   - the ingredients of 5 are exact arithmetic in the degree-48 field (nineteen_obstruction_check.py).
   The inequalities suggested by the data are HYP-9325 (OPEN).
   No priority is claimed for the bookkeeping. Statement 1 is clock_duality_oct15's R6 setting enlarged by backward closure.
+  The constant 34/7 of statement 4 is KNOWN in the repo: it is the d = 0 value E_0 = 4.857143 of THM-4667's ideal energy
+  ladder (statement 6), and T_0/X^2 -> 51/7 = (3/2)(34/7) is THM-4667(7)'s observed octave-trace limit. What is new in 4
+  is the proof for the actual sources with error O(log N), the exact sibling constant 5/7, and the pair ledger.
   Statement 3 carries out clock_duality's instruction to keep the literal integer clocks in the first-arrival Gram
   (root_sparse_boundary_module_20261017i.md, end of section 8).
   Renumbered from THM-4670, which is ceded to opus-2026-10-18-S43.
@@ -282,6 +285,15 @@ Prime by prime (`nineteen_places.py`):
 - **Ports versus HYP-9290.** `X(N)` (statement 2) plays the role of HYP-9290's frontier terms (`MF` and the same-step
   merges), re-indexed by backward level instead of synchronous depth. The two decompositions are different bookkeeping
   and are not claimed equal.
+- **Relation to THM-4667's ideal ladder.** In the synchronous transport, every source moved one step,
+  `E_1 - E_0 = 2 Σ` over depth-one meet pairs (pairs with `P(x) = P(x')`). THM-4667(6) lists this cross term as
+  -1.4687. By clock lag it splits as follows (`pair_series_depth1.py`, `N` up to `4·10^6`):
+  - lag 1 is exactly the siblings, `-10/7 = -1.4286`, about 97% of the term;
+  - lags 5 and 7 give `+2·0.008929` each, matching `1/112` to six digits;
+  - lag 6 gives `2·(-0.037946)`, matching `-17/448`;
+  - lags 11-13 give about `10^-3` in total.
+
+  These matches are observed, not derived (FINITE-EXACT numerics).
 - **Why the denominator is 7.** The chain residues have period 3 because `B^3(x) = 64x + 21 ≡ x + 3 (mod 9)`. These are
   the Solfeggio three-lift fibres (S42 L4). So the geometric sums run over `4^(-3k)`, and
   `Σ_k 4^(-3k) = 64/63 = 64/(9·7)`.

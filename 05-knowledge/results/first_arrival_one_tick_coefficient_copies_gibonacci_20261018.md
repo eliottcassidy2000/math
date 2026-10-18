@@ -28,7 +28,7 @@ renumbering still use the old numbers.
 |---|---|---|
 | 1 | Backward ladder `V^(k)`, port-diagonal energy, merge identities | PROVED (THM-4690(1-2)) |
 | 2 | Integer-clock Gram `E_V = G(0) + 2 Σ G(D)`; `E_V` is the clock spectrum at the Nyquist frequency | PROVED (THM-4690(3)) |
-| 3 | Exact source ledger: `E_0 = 34N/7`, sibling-source pairs `5N/7` (one tick apart); hence `E_V = 24N/7 + (non-sibling pair sums)` for every stopping set | PROVED (THM-4690(4)) |
+| 3 | Exact source ledger: `E_0 = 34N/7` (constant KNOWN from THM-4667's ideal ladder; proved here for the actual sources), sibling-source pairs `5N/7` (one tick apart); hence `E_V = 24N/7 + (non-sibling pair sums)` for every stopping set | PROVED (THM-4690(4)) |
 | 4 | Port-orthogonality (cross-port term decays): Q1, Q2, Q4, Q5 FAILED, Q3 passed | FINITE-EXACT, refuted reading |
 | 5 | One-tick law `G(1)/G(0) ≈ -0.28`: T1-T4 PASSED at 2^26 | FINITE-EXACT, HYP-9325(A) |
 | 6 | Pair-sign laws and higher-lag bound: L1-L7 PASSED at 2^27 | FINITE-EXACT, HYP-9325(B, C) |
@@ -147,6 +147,11 @@ stopping set. Their correlation is
 
 `SIB(N) = Σ c_0(x) c_0(2x+1) = (5/7) N + O(log N)`.
 
+**Prior art in the repo.** `34/7 = 4.857143` is the `d = 0` value of THM-4667's ideal energy ladder. THM-4667(7)
+observed the octave-trace limit `51/7 = (3/2)(34/7)`. New here: a proof for the actual sources, the sibling constant
+`5/7`, and the pair ledger. THM-4667's depth-1 cross term -1.4687 is, by clock lag, `-10/7` (siblings, about 97%) plus
+small depth-one co-preimage terms at lags 5, 6, 7 (+0.0179, -0.0759, +0.0179; observed to match `2/112` and `-17/224`).
+
 Both constants are derived symbolically and checked by brute force (`source_ledger_constants.py`):
 `|E_0 - 34N/7| <= 11.2` and `|SIB - 5N/7| <= 4.9` up to `N = 4·10^6`. `fap.c` reproduces them at every `N`.
 
@@ -193,6 +198,20 @@ on. On V_100 they reach `+1.29N`: small frontiers keep the termination-regime cl
 
 `E_0/N` and `SIB/N` matched 34/7 and 5/7 to five digits at every `N`.
 
+**Meet-depth anatomy** (`pair_series_meets.py`, FINITE-EXACT at `N = 2^18`, V_1000, meets up to depth 16 below the
+meeting node). A pair of sources first meets at a node `y`, `k_1` and `k_2` steps above them, before first entry into `V`.
+- **Unequal-depth meets** (`k_1 ≠ k_2`) are nearly uncorrelated: each `(k_1, k_2, D)` cell is at most 0.013 in absolute
+  value, and the displayed cells sum to `+0.03`.
+- **Equal-depth meets carry the cancellation.**
+  - Lag 1: the terms are `-0.712` (siblings), `-0.307`, `-0.124`, `-0.049` at depths 1-4. They are slightly *positive*
+    at depths 6-14, `+0.005..+0.018` per level, about `+0.14` in total. So `Γ_1` shrinks as deeper levels fill in,
+    matching the observed trend. HYP-9325(B2) is expected to fail eventually; the route below does not use it.
+  - Same clock: about `-0.04..-0.06` per level at depths 2-8, decaying to about `-0.01` by depth 15.
+
+  An equal-depth, equal-clock pair has the same number of 3-divisions and the same total power of 2 on both paths. Such
+  "clock twins" sit at the same scale, so their chain parameters are locked, as for the siblings in the 34/7 and 5/7
+  derivation. This is why a residue-table computation per depth is the natural attack on (B1).
+
 **What this buys.** `E_V = (1 + 2G(1)/G(0)) G(0) + HL`. So HYP-9325(A), with ratio `<= -0.24`, together with (B1),
 `G(0) <= E_0`, and (C), `HL <= 0.07N`, gives
 
@@ -202,8 +221,8 @@ This is HYP-9290's cone for the closed frontier, reduced to sign and ratio state
 their integer clocks.
 
 **What is not proved.** None of (A), (B) or (C).
-- The weakest observed trend is `Γ_1`, which is shrinking: -0.44 at 2^13, -0.15 at 2^27. The route above does not
-  need `Γ_1 <= 0`.
+- The weakest observed trend is `Γ_1`, which is shrinking: -0.44 at 2^13, -0.15 at 2^27. The meet anatomy explains it
+  by positive deep lag-1 terms. The route above does not need `Γ_1 <= 0`.
 - `G(0)/N` decreased 3.97 → 3.08 over 2^15 → 2^27, but only by 0.007 in the last octave.
 - A proof of (B1) would be a residue-class computation of same-clock coincidences in the spirit of the 34/7 derivation.
 

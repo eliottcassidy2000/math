@@ -169,6 +169,13 @@ clocks, which led to T1-T4 and L1-L7.
 
 - **Weakest link.** `Γ_1/N` is shrinking: -0.44 at 2^13, -0.15 at 2^27. So (B2) may fail at larger N. Consequence 1
   does not use (B2).
+
+  The meet-depth anatomy (`pair_series_meets.py`, `N = 2^18`, V_1000) shows the mechanism. Equal-depth meets contribute
+  `-0.71, -0.31, -0.12, -0.05` at lag 1 for depths 1-4, but `+0.005..+0.018` per level at depths 6-14. As `N` grows and
+  deeper levels fill in, `Γ_1` drifts up. (B2) is therefore expected to FAIL eventually.
+- **Where (B1) comes from.** Same-clock pairs are mostly equal-depth "clock twins". They have the same number of
+  3-divisions and the same total power of 2, hence the same scale. They contribute about -0.04..-0.06 per level at
+  depths 2-8, decaying beyond. Unequal-depth meets are nearly uncorrelated (each cell at most 0.013 in absolute value).
 - **Is G(0) stabilising?** The decline of `G(0)/N` slowed to -0.007 between 2^26 and 2^27, and the same-clock term moved
   only from -1.771 to -1.778.
 - **Why the one-tick ratio sits near -0.28.** About 82% of `G(1)` at 2^27 is the exact sibling constant: `-5/7` of
