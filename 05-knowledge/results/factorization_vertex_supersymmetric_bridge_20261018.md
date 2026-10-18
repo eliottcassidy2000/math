@@ -405,6 +405,31 @@ algebra.
   Zagier 2009, case D.
 - The reading through the Argyres-Douglas characters was not found stated.
 
+### 4.4 CITED + OBSERVATION: CM points as attractor and rational-CFT points, and a `p`-adic detector for them
+
+- **CITED.**
+  - Moore (*Arithmetic and attractors*, hep-th/9807087): for type IIB on `K3 × T^2`, the attractor points of BPS black
+    holes are CM points.
+  - Gukov-Vafa (*Rational conformal field theories and complex multiplication*, CMP 246, 2004, hep-th/0203213): a
+    sigma model on `T^2` with complex structure `τ` and Kähler modulus `ρ` is rational exactly when `τ` and `ρ` are
+    CM points of the same imaginary quadratic field. They give analogues for K3.
+- **OBSERVATION** ([twin-class note](halfperiod_twin_classes_cm_log_law_20261018.md); THM-4686, HYP-9310, HYP-9311).
+  The four classical hypergeometric families are periods of elliptic curves and of their symmetric-square K3
+  surfaces. The second-order Lucas factorization
+  `Σ_(k=p)^(2p-1) t_k ≡ t_1 Σ_(k<p) t_k (mod p^2)`, scanned over all `0 < |m| <= 10^5`, singles out exactly their CM
+  parameters.
+  - For the `j`-line family `C(2k,k) C(3k,k) C(6k,3k)` the survivors are exactly the rational CM `j`-invariants in range.
+  - At ordinary primes the factorization holds even modulo `p^3`.
+  - For `C(2k,k)^3` the companion harmonic law is PROVED (THM-4686).
+- **ANALOGY.** Combining the two: a mod-`p^2` congruence between two blocks of a truncated period series is a `p`-adic
+  test for the complex-structure moduli at which the corresponding torus or K3 sigma model can be rational, and which
+  serve as attractor points.
+  - The heuristic of HYP-9311 makes this concrete. The tested quantity is the truncated logarithm of the mirror map
+    (the canonical coordinate). At CM points it is Teichmüller to first order (`q^(p-1) ≡ 1`): CM curves are canonical
+    lifts.
+  - The mirror map is the physical flat coordinate of the B-model.
+  - No implication is claimed beyond the cited theorems and the scan.
+
 ## 5. ANALOGY: the ROOT current as a Witten index
 
 The S42 ROOT current is `R(N) = Σ_(N < k <= 4N) w(k) f(k)`, with `f(k) = (-1)^(stopping time)`.
