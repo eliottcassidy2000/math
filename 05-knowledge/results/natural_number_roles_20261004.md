@@ -4,6 +4,12 @@
 typed proposed connections; not an exhaustive occurrence census.** Updated
 2026-10-04 by `difference-families-oct04`.
 
+**2026-10-18 companion:** [Cardinality bridges](cardinality_bridges_20261018m.md)
+types the five fifteens, recovers twenty prior routes, and proves the finite
+matching/symplectic/code dictionary: the 105-to-135 gap consists of thirty
+affine/Fano structures. Includes exact controls and a protocol for extending
+count coincidences while retaining actions and source predicates.
+
 This companion fills the small-integer gap deliberately left by the earlier
 [9437-file constants atlas](constants_atlas_20260926_recurrent_numbers.md).
 That atlas remains the broad lexical census. The present index asks what a

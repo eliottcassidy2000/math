@@ -14,6 +14,10 @@ the missing19-phase, Eisenstein torus quotients and guarded Collatz actions.
 The earlier AMM/log2(3) lead is already superseded in section4 below; its stale
 heading and results-index summary have now been synchronized with that repair.
 
+**2026-10-18 companion:** [Cardinality bridges](cardinality_bridges_20261018m.md)
+focuses on counts of objects and classifications, recovering twenty prior
+routes and the exact fifteen-to-135 symplectic/Fano/Hamming extension.
+
 Scripts: `04-computation/experiments/constants_atlas_20260926_mine.py`
 (census; JSON `constants_atlas_20260926_mine.json`) and
 `constants_atlas_20260926_context.py` (the sentence carrying each value,

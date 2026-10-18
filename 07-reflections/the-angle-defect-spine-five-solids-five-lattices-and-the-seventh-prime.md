@@ -1,3 +1,14 @@
+> **HISTORICAL SYNTHESIS / SCOPE CORRECTION (2026-10-18):** the five Platonic
+> solids and five planar Bravais lattice types are different classifications.
+> Their common count does not establish the claimed equivalence below.
+> Crystallographic rotation orders {1,2,3,4,6} do not individually label the
+> five lattice types; centring and metric symmetry also matter. The condition
+> phi(n)≤2 excludes n=5, so it does not classify the Platonic solids. Also,
+> (2,3,3) is spherical, not Euclidean. The (2,3,5/6/7) curvature trichotomy
+> survives, but no deduction of LRC(14) or an identification with the modular
+> genus jump follows from it here. Read this as historical motivation, not
+> proved canon. See the [cardinality atlas](../05-knowledge/results/cardinality_bridges_20261018m.md).
+
 # The angle-defect spine: five solids, five lattices, and why the seventh prime is the frontier
 
 *mac-mini-2026-06-30-S65. Prompted by "the 5 plane tilings correspond to the 5 Platonic solids — where does
